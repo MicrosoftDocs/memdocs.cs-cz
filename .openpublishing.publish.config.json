@@ -4,7 +4,7 @@
       "docset_name": "memdocs",
       "build_source_folder": "memdocs",
       "build_output_subfolder": "memdocs",
-      "locale": "cs-CZ",
+      "locale": "cs-cz",
       "monikers": [],
       "moniker_ranges": [],
       "open_to_public_contributors": false,
@@ -20,10 +20,11 @@
   ],
   "sync_notification_subscribers": [],
   "branches_to_filter": [
-    "live-sxs",
-    "master-sxs"
+    "live",
+    "master-sxs",
+    "master"
   ],
-  "git_repository_url_open_to_public_contributors": "https://github.com/MicrosoftDocs/memdocs",
+  "git_repository_url_open_to_public_contributors": "https://github.com/MicrosoftDocs/memdocs.cs-cz",
   "git_repository_branch_open_to_public_contributors": "master",
   "continue_with_document_error": true,
   "skip_source_output_uploading": false,
@@ -32,7 +33,7 @@
   "dependent_repositories": [
     {
       "path_to_root": "_themes",
-      "url": "https://github.com/Microsoft/templates.docs.msft.cs-CZ",
+      "url": "https://github.com/Microsoft/templates.docs.msft.cs-cz",
       "branch": "master",
       "branch_mapping": {}
     },
