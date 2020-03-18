@@ -1,0 +1,151 @@
+### YamlMime:Landing
+title: Konfigurace nastavení zařízení
+summary: Microsoft Intune zahrnuje nastavení a funkce, které můžete povolit nebo zakázat na různých zařízeních v rámci vaší organizace. Tato nastavení a funkce se přidávají do konfiguračních profilů a pomocí Intune pak můžete přiřazovat profily zařízením.
+metadata:
+  title: Konfigurace nastavení zařízení
+  description: Microsoft Intune zahrnuje nastavení a funkce, které můžete povolit nebo zakázat na různých zařízeních v rámci vaší organizace. Tato nastavení a funkce se přidávají do konfiguračních profilů a pomocí Intune pak můžete přiřazovat profily zařízením.
+  services: service
+  ms.service: microsoft-intune
+  ms.subservice: configuration
+  ms.topic: landing-page
+  ms.collection: collection
+  author: dougeby
+  ms.author: dougeby
+  ms.date: 02/18/2020
+  ms.openlocfilehash: d6404a4c77507374b5e8759ba2078e541cde35d8
+  ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+  ms.translationtype: HT
+  ms.contentlocale: cs-CZ
+  ms.lasthandoff: 03/13/2020
+  ms.locfileid: "79333868"
+landingContent:
+- title: Použití funkcí a nastavení na zařízeních
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Přehled konfigurace zařízení
+      url: device-profiles.md
+  - linkListType: quickstart
+    links:
+    - text: Vytvoření e-mailového profilu zařízení pro iOS/iPadOS
+      url: quickstart-email-profile.md
+  - linkListType: how-to-guide
+    links:
+    - text: Vytvoření profilu
+      url: device-profile-create.md
+    - text: Přiřazení profilů
+      url: device-profile-assign.md
+    - text: Monitorování profilů
+      url: device-profile-monitor.md
+- title: Nastavení pro Windows 10 a novější verze
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Použití šablon Windows 10 ke konfiguraci nastavení zásad skupiny
+      url: administrative-templates-windows.md
+    - text: Konfigurace nastavení omezení zařízení
+      url: device-restrictions-configure.md
+    - text: Nastavení optimalizace doručení
+      url: delivery-optimization-windows.md
+    - text: Přidání nastavení e-mailu do zařízení
+      url: email-settings-configure.md
+    - text: Nastavení zařízení, aby fungovalo jako vyhrazený veřejný terminál
+      url: kiosk-settings.md
+    - text: Vytvoření profilů VPN pro připojení k serverům VPN
+      url: vpn-settings-configure.md
+    - text: Přidání a použití nastavení Wi-Fi na zařízeních
+      url: wi-fi-settings-configure.md
+- title: Nastavení pro Windows Holographic for Business
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Upgrade edicí Windows 10 nebo přepnutí z režimu S
+      url: edition-upgrade-configure-windows-10.md
+    - text: Nastavení zařízení, aby fungovalo jako vyhrazený veřejný terminál
+      url: kiosk-settings.md
+    - text: Vytvoření profilů VPN pro připojení k serverům VPN
+      url: vpn-settings-configure.md
+    - text: Přidání a použití nastavení Wi-Fi na zařízeních
+      url: wi-fi-settings-configure.md
+    - text: Řízení přístupu, účtů a funkcí pro řízení spotřeby na sdílených počítačích nebo na zařízeních s více uživateli
+      url: shared-user-device-settings.md
+- title: Nastavení pro zařízení se systémem iOS/iPadOS
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Přidání nastavení funkcí zařízení se systémem iOS/iPadOS
+      url: device-features-configure.md
+    - text: Konfigurace nastavení omezení zařízení
+      url: device-restrictions-configure.md
+    - text: Přidání nastavení e-mailu do zařízení
+      url: email-settings-configure.md
+    - text: Vytvoření profilů VPN pro připojení k serverům VPN
+      url: vpn-settings-configure.md
+    - text: Vytvoření profilů VPN pro jednotlivé aplikace pro zařízení se systémem iOS/iPadOS
+      url: vpn-setting-configure-per-app.md
+    - text: Přidání a použití nastavení Wi-Fi na zařízeních
+      url: wi-fi-settings-configure.md
+- title: Nastavení pro macOS
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Přidání nastavení funkcí zařízení se systémem iOS/iPadOS
+      url: device-features-configure.md
+    - text: Konfigurace nastavení omezení zařízení
+      url: device-restrictions-configure.md
+    - text: Vytvoření profilů VPN pro připojení k serverům VPN
+      url: vpn-settings-configure.md
+    - text: Přidání a použití nastavení Wi-Fi na zařízeních
+      url: wi-fi-settings-configure.md
+    - text: Přidání rozšíření jádra pro macOS
+      url: kernel-extensions-overview-macos.md
+- title: Nastavení pro Android
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Konfigurace nastavení omezení zařízení
+      url: device-restrictions-configure.md
+    - text: Přidání nastavení e-mailu do zařízení
+      url: email-settings-configure.md
+    - text: Vytvoření profilů VPN pro připojení k serverům VPN
+      url: vpn-settings-configure.md
+    - text: Přidání a použití nastavení Wi-Fi na zařízeních
+      url: wi-fi-settings-configure.md
+    - text: Vytvoření profilu Wi-Fi s předsdíleným klíčem
+      url: wi-fi-profile-shared-key.md
+    - text: Správa zařízení Zebra pomocí rozšíření Zebra Mobility Extensions
+      url: android-zebra-mx-overview.md
+    - text: Správa zařízení s Androidem Enterprise pomocí OEMConfig
+      url: android-oem-configuration-overview.md
+- title: Nastavení pro Android Enterprise
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Konfigurace nastavení omezení zařízení
+      url: device-restrictions-configure.md
+    - text: Přidání nastavení e-mailu do zařízení
+      url: email-settings-configure.md
+    - text: Vytvoření profilů VPN pro připojení k serverům VPN
+      url: vpn-settings-configure.md
+    - text: Přidání a použití nastavení Wi-Fi na zařízeních
+      url: wi-fi-settings-configure.md
+- title: Seznamy nastavení
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Android
+      url: device-restrictions-android.md
+    - text: Android Enterprise
+      url: device-restrictions-android-for-work.md
+    - text: iOS/iPadOS
+      url: ios-device-features-settings.md
+    - text: macOS
+      url: macos-device-features-settings.md
+    - text: Windows 10 a novější
+      url: delivery-optimization-settings.md
+    - text: Windows Holographic for Business
+      url: device-restrictions-windows-holographic.md
+    - text: Windows 8.1
+      url: device-restrictions-windows-8-1.md
+    - text: Windows Phone 8.1
+      url: device-restrictions-windows-phone-8-1.md

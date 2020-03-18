@@ -1,0 +1,117 @@
+- name: Registrace v Microsoft Intune
+  href: index.yml
+- name: Přehled
+  expanded: true
+  items:
+    - name: Přehled registrace zařízení
+      href: device-enrollment.md
+      displayName: COD; BYOD; DEM; DEP; USB-SA; USB-Direct; co-management; GPO
+    - name: Možnosti správy zaregistrovaných zařízení
+      href: device-management-capabilities.md
+    - name: Možnosti registrace
+      href: enrollment-options.md
+- name: Rychlé starty
+  items:
+    - name: Nastavení automatické registrace
+      href: quickstart-setup-auto-enrollment.md
+    - name: Registrace zařízení s Windows 10
+      href: quickstart-enroll-windows-device.md
+- name: Výukové kurzy
+  items:
+    - name: Registrace zařízení s Windows pomocí Autopilotu
+      href: tutorial-use-autopilot-enroll-devices.md
+    - name: Registrace zařízení se systémem iOS/iPadOS pomocí Programu registrace zařízení
+      href: tutorial-use-device-enrollment-program-enroll-ios.md
+- name: Koncepty
+  items:
+    - name: podmínky a ujednání
+      href: terms-and-conditions-create.md
+    - name: Omezení
+      href: enrollment-restrictions-set.md
+    - name: Certifikát Apple MDM Push Certificate
+      href: apple-mdm-push-certificate-get.md
+    - name: Podnikové identifikátory
+      href: corporate-identifiers-add.md
+      displayName: COD
+    - name: Vícefaktorové ověřování
+      href: multi-factor-authentication.md
+      displayName: mfa; multifactor
+    - name: Správce registrace zařízení
+      href: device-enrollment-manager-enroll.md
+    - name: Mapování zařízení na skupiny
+      href: device-group-mapping.md
+- name: Praktičtí průvodci
+  items:
+    - name: "Nastavení registrace zařízení s\_Windows"
+      items:
+        - name: Metody registrace zařízení s Windows
+          href: windows-enrollment-methods.md
+        - name: Možnosti metody registrace
+          href: enrollment-method-capab.md
+        - name: "Registrace zařízení s\_Windows"
+          href: windows-enroll.md
+        - name: Hromadná registrace
+          href: windows-bulk-enroll.md
+        - name: Stránka stavu registrace
+          href: windows-enrollment-status.md
+        - name: Program Windows AutoPilot Deployment
+          href: enrollment-autopilot.md
+        - name: Hybridní Azure AD s Autopilotem
+          href: windows-autopilot-hybrid.md
+        - name: Konfigurace proxy pro Intune AD Connector
+          href: autopilot-hybrid-connector-proxy.md
+    - name: Nastavení registrace zařízení s Androidem
+      items:
+        - name: Nastavení registrace zařízení s Androidem
+          href: android-enroll.md
+          displayName: wpj
+        - name: Připojení Intune k Androidu Enterprise
+          href: connect-intune-android-enterprise.md
+        - name: Registrace zařízení Android Enterprise s pracovním profilem
+          href: android-work-profile-enroll.md
+        - name: Registrace dedikovaných zařízení s Androidem Enterprise
+          href: android-kiosk-enroll.md
+          displayName: gms
+        - name: Registrace plně spravovaných zařízení s Androidem Enterprise
+          href: android-fully-managed-enroll.md
+          displayName: gms
+        - name: Registrace dedikovaných nebo plně spravovaných zařízení s Androidem Enterprise
+          href: android-dedicated-devices-fully-managed-enroll.md
+        - name: Registrace správce zařízení s Androidem
+          href: android-enroll-device-administrator.md
+        - name: Správa zařízení Android Enterprise s pracovním profilem
+          href: android-enterprise-overview.md
+        - name: Registrace mobilního zařízení Samsung Knox
+          href: android-samsung-knox-mobile-enroll.md
+          displayName: kda; kme
+    - name: Nastavení registrace zařízení se systémem iOS/iPadOS
+      href: ios-enroll.md
+      items:
+        - name: Program DEP (Device Enrollment Program)
+          href: device-enrollment-program-enroll-ios.md
+        - name: Nastavení registrace uživatele pro iOS/iPadOS a iPadOS
+          href: ios-user-enrollment.md
+        - name: Podporované akce a možnosti u registrace uživatele
+          href: ios-user-enrollment-supported-actions.md
+        - name: Apple School Manager
+          href: apple-school-manager-set-up-ios.md
+        - name: Apple Configurator
+          href: apple-configurator-enroll-ios.md
+    - name: Nastavení registrace zařízení s macOS
+      href: macos-enroll.md
+      items:
+        - name: Automatická registrace zařízení
+          href: device-enrollment-program-enroll-macos.md
+    - name: Sestava nedokončených registrací
+      href: enrollment-report-company-portal-abandon.md
+    - name: Řešení potíží s registrací
+      items:
+        - name: Řešení potíží při registraci zařízení
+          href: troubleshoot-device-enrollment-in-intune.md
+          displayName: sso
+        - name: Řešení potíží s registrací zařízení se systémem iOS/iPadOS
+          href: troubleshoot-ios-enrollment-errors.md
+        - name: Řešení potíží s registrací zařízení s Windows
+          href: troubleshoot-windows-enrollment-errors.md
+        - name: Řešení potíží s registrací zařízení s Androidem
+          href: troubleshoot-android-enrollment.md
