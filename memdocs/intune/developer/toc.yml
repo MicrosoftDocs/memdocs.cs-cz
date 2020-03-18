@@ -1,0 +1,79 @@
+- name: Informace pro vývojáře
+  href: index.yml
+- name: Praktičtí průvodci
+  expanded: true
+  items:
+    - name: Ochrana aplikací pomocí sady Intune App SDK
+      href: app-sdk.md
+      items:
+        - name: Začínáme se sadou Intune App SDK
+          href: app-sdk-get-started.md
+        - name: Příprava obchodních aplikací na ochranu aplikací
+          href: apps-prepare-mobile-application-management.md
+        - name: Nástroj App Wrapping pro iOS
+          href: app-wrapper-prepare-ios.md
+        - name: Intune App SDK pro iOS
+          href: app-sdk-ios.md
+        - name: Nástroj App Wrapping pro Android
+          href: app-wrapper-prepare-android.md
+          displayName: dex
+        - name: Intune App SDK pro Android
+          href: app-sdk-android.md
+          items:
+            - name: Intune App SDK pro Android – příručka pro testování
+              href: app-sdk-android-testing-guide.md
+        - name: Xamarinové vazby sady Intune App SDK
+          href: app-sdk-xamarin.md
+    - name: Použití datového skladu Intune
+      href: reports-nav-create-intune-reports.md
+      items:
+        - name: Protokol změn pro datový sklad
+          href: reports-changelog.md
+        - name: Připojení k datovému skladu pomocí Power BI
+          href: reports-proc-get-a-link-powerbi.md
+        - name: Vytvoření sestavy z datového kanálu OData pomocí Power BI
+          href: reports-proc-create-with-odata.md
+    - name: Vykazování pomocí rozhraní API datového skladu Intune
+      href: reports-nav-intune-data-warehouse.md
+      items:
+        - name: Získání dat z rozhraní API datového skladu pomocí klienta REST
+          href: reports-proc-data-rest.md
+        - name: Koncový bod rozhraní API datového skladu
+          href: reports-api-url.md
+        - name: Ověřování v Data Warehouse pouze na úrovni aplikace
+          href: data-warehouse-app-only-auth.md
+        - name: Datový model datového skladu
+          href: reports-ref-data-model.md
+          items:
+            - name: Shromažďování dat do datového skladu
+              href: intune-data-warehouse-collections.md
+            - name: Shromažďování dat do datového skladu (beta)
+              items:
+                - name: Znázornění používání datového skladu Intune uživatelem
+                  href: reports-ref-user-timeline.md
+                - name: Referenční informace o entitách aplikací
+                  href: reports-ref-application.md
+                - name: Referenční informace pro entitu dat
+                  href: reports-ref-date.md
+                - name: Referenční informace o entitách zařízení
+                  href: reports-ref-devices.md
+                - name: Referenční informace o entitě rozšířené správy Intune
+                  href: reports-ref-intunemanagementextension.md
+                - name: Referenční informace o entitách správy mobilních aplikací (MAM)
+                  href: reports-ref-mobile-app-management.md
+                - name: Referenční informace pro entity zásad
+                  href: reports-ref-policy.md
+                - name: Referenční informace o entitě Přidružení zařízení uživatelů
+                  href: reports-ref-user-device.md
+                - name: Referenční informace pro entitu uživatele
+                  href: reports-ref-user.md
+        - name: Přesunutí dat účtu datového skladu Intune
+          href: data-warehouse-account-move.md
+    - name: Přístup k rozhraním Intune API v Microsoft Graphu
+      items:
+        - name: Používání Azure AD pro přístup k rozhraním Intune API v Microsoft Graphu
+          href: intune-graph-apis.md
+        - name: Referenční dokumentace k rozhraní Intune API
+          href: 'https://developer.microsoft.com/graph/docs/api-reference/beta/resources/intune_graph_overview'
+        - name: Rozhraní Graph API používaná ke konfiguraci zařízení
+          href: graph-apis-used-by-intune-device-configuration-windows.md

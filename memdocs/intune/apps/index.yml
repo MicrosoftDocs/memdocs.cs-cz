@@ -1,0 +1,112 @@
+### YamlMime:Landing
+title: Správa aplikací
+summary: Pomocí Microsoft Intune můžete spravovat klientské aplikace, které vaše organizace používá. Můžete konfigurovat, přidávat, přiřazovat, chránit, monitorovat, aktualizovat a vyřazovat aplikace pro různé platformy a uživatele.
+metadata:
+  title: Správa aplikací
+  description: Správa a ochrana aplikací
+  services: service
+  ms.service: microsoft-intune
+  ms.subservice: apps
+  ms.topic: landing-page
+  ms.collection: collection
+  author: erikre
+  ms.author: erikre
+  ms.manager: dougeby
+  ms.date: 09/25/2019
+  ms.openlocfilehash: 5b18568176ae4114676b20b8ca0300bc4189c3dd
+  ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+  ms.translationtype: HT
+  ms.contentlocale: cs-CZ
+  ms.lasthandoff: 03/13/2020
+  ms.locfileid: "79333902"
+landingContent:
+- title: Začínáme s aplikacemi
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Přehled správy aplikací
+      url: app-management.md
+  - linkListType: quickstart
+    links:
+    - text: Přidání a přiřazení aplikace
+      url: quickstart-add-assign-app.md
+  - linkListType: concept
+    links:
+    - text: Životní cyklus aplikace
+      url: app-lifecycle.md
+- title: Přidání aplikací
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Přehled přidávání aplikací
+      url: apps-add.md
+    - text: Aplikace chráněné službou Intune
+      url: apps-supported-intune-apps.md
+  - linkListType: how-to-guide
+    links:
+    - text: Aplikace ze Storu
+      url: store-apps-android.md
+    - text: Obchodní aplikace
+      url: lob-apps-android.md
+    - text: Správa aplikací Win32 pro samostatnou službu Intune
+      url: apps-win32-app-management.md
+    - text: Použití skriptů prostředí PowerShell na zařízeních s Windows 10
+      url: intune-management-extension.md
+    - text: Přiřazení aplikací skupinám
+      url: apps-deploy.md
+- title: Přiřazení aplikací
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Přiřazení aplikací skupinám
+      url: apps-deploy.md
+    - text: Intune a vyloučení aplikací
+      url: apps-inc-exl-assignments.md
+    - text: Nasazení aplikací systému Windows 10
+      url: apps-windows-10-app-deploy.md
+    - text: Nasazení aplikací do prostředí státní správy
+      url: apps-deploy-gcc-dod.md
+- title: Konfigurace aplikací
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Selektivní vymazání aplikací
+      url: apps-selective-wipe.md
+    - text: iOS spravovaná zařízení
+      url: app-configuration-policies-use-ios.md
+    - text: Spravovaná zařízení s Androidem Enterprise
+      url: app-configuration-policies-use-android.md
+    - text: Spravované aplikace bez registrace zařízení
+      url: app-configuration-policies-managed-app.md
+    - text: Konfigurace Managed Browseru
+      url: app-configuration-managed-browser.md
+    - text: Správa aplikací a knih zakoupených prostřednictvím programu VPP
+      url: vpp-apps.md
+- title: Ochrana aplikací
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Přehled zásad ochrany aplikací
+      url: app-protection-policy.md
+  - linkListType: how-to-guide
+    links:
+    - text: Vytvoření a přiřazení zásad ochrany aplikací
+      url: app-protection-policies.md
+    - text: Ověření zásad ochrany aplikací
+      url: app-protection-policies-validate.md
+    - text: Monitorování stavu uživatele u ochrany aplikací
+      url: app-protection-policies-monitor.md
+    - text: Vytvoření a přiřazení zásad ochrany aplikací WIP
+      url: windows-information-protection-policy-create.md
+    - text: Správa přenosu dat mezi aplikacemi pro iOS
+      url: data-transfer-between-apps-manage-ios.md
+- title: Řešení problémů
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Řešení problémů s instalací aplikací
+      url: troubleshoot-app-install.md
+    - text: Řešení potíží se správou mobilních aplikací
+      url: troubleshoot-mam.md
+    - text: Kontrola protokolů ochrany aplikace
+      url: app-protection-policy-settings-log.md
