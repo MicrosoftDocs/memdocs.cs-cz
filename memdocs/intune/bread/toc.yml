@@ -1,0 +1,36 @@
+- name: Docs
+  tocHref: /
+  topicHref: /
+  items:
+    - name: Enterprise Mobility + Security
+      tocHref: /enterprise-mobility-security/
+      topicHref: /enterprise-mobility-security/
+      items:
+        - name: Intune
+          tocHref: /intune/
+          topicHref: /intune/
+          items:
+            - name: Uživatelská nápověda k Intune
+              tocHref: /intune/user-help/
+              topicHref: /intune/user-help/
+            - name: Aplikace
+              tocHref: /intune/apps/
+              topicHref: /intune/apps/
+            - name: Základy
+              tocHref: /intune/fundamentals/
+              topicHref: /intune/fundamentals/
+            - name: Registrace
+              tocHref: /intune/enrollment/
+              topicHref: /intune/enrollment/
+            - name: Vzdálené akce
+              tocHref: /intune/remote-actions/
+              topicHref: /intune/remote-actions/
+            - name: Konfigurace
+              tocHref: /intune/configuration/
+              topicHref: /intune/configuration/
+            - name: Ochrana
+              tocHref: /intune/protect/
+              topicHref: /intune/protect/
+            - name: Vývojář
+              tocHref: /intune/developer/
+              topicHref: /intune/developer/

@@ -1,0 +1,295 @@
+- name: Ochrana dat a zařízení v Intune
+  href: index.yml
+- name: Přehled
+  expanded: true
+  items:
+    - name: Přehled ochrany zařízení
+      href: device-protect.md
+      displayName: compliant; noncompliant; mfa
+- name: Rychlé starty
+  items:
+    - name: Vytváření zásad dodržování předpisů pro zařízení
+      href: quickstart-set-password-length-android.md
+    - name: Odesílání oznámení do zařízení nesplňujících požadavky
+      href: quickstart-send-notification.md
+- name: Výukové kurzy
+  items:
+    - name: Ochrana e-mailu na spravovaných zařízeních
+      href: tutorial-protect-email-on-enrolled-devices.md
+    - name: Ochrana e-mailu na nespravovaných zařízeních
+      href: tutorial-protect-email-on-unmanaged-devices.md
+- name: Koncepty
+  items:
+    - name: Ochrana soukromí a osobní údaje
+      href: privacy-personal-data.md
+      items:
+        - name: Shromažďování dat
+          href: privacy-data-collect.md
+        - name: Ukládání a zpracovávání údajů
+          href: privacy-data-store-process.md
+        - name: Zabezpečení a sdílení údajů
+          href: privacy-data-secure-share.md
+          items:
+            - name: Data odesílaná Applem do Intune
+              href: data-apple-sends-to-intune.md
+            - name: Data odesílaná Googlem do Intune
+              href: data-google-sends-to-intune.md
+            - name: Data z Intune odesílaná Applu
+              href: data-intune-sends-to-apple.md
+            - name: Data z Intune odesílaná Googlu
+              href: data-intune-sends-to-google.md
+            - name: Informace sdílené z Jamf Pro do Intune
+              href: data-jamf-sends-to-intune.md
+        - name: Zobrazení a oprava osobních údajů
+          href: privacy-data-view-correct.md
+        - name: 'Auditování, export, odstranění'
+          href: privacy-data-audit-export-delete.md
+        - name: Windows Information Protection
+          href: windows-information-protection-configure.md
+- name: Praktičtí průvodci
+  items:
+    - name: Nastavení pravidel povolujících přístup k prostředkům u zařízení
+      items:
+        - name: Přehled dodržování předpisů
+          href: device-compliance-get-started.md
+        - name: Vytvoření zásady
+          href: create-compliance-policy.md
+        - name: Dodržování předpisů podle umístění
+          href: use-network-locations.md
+        - name: Akce při nedodržení předpisů
+          href: actions-for-noncompliance.md
+        - name: Monitorování dodržování předpisů zařízením
+          href: compliance-policy-monitor.md
+    - name: Šifrování zařízení
+      items:
+        - name: Šifrování zařízení
+          href: encrypt-devices.md
+        - name: Monitorování šifrování zařízení
+          href: encryption-monitor.md
+    - name: Podmíněný přístup
+      items:
+        - name: Přehled podmíněného přístupu
+          href: conditional-access.md
+          displayName: ca
+        - name: Běžné způsoby použití podmíněného přístupu
+          href: conditional-access-intune-common-ways-use.md
+        - name: Instalace konektoru Exchange On-Premises Connector
+          href: exchange-connector-install.md
+        - name: Vytvoření a přiřazení zásad podmíněného přístupu
+          href: conditional-access-exchange-create.md
+        - name: Zásady podmíněného přístupu podle zařízení
+          href: create-conditional-access-intune.md
+        - name: "Změna přiřazení zásad podmíněného přístupu z\_klasického portálu Intune"
+          href: conditional-access-intune-reassign.md
+        - name: Podmíněný přístup založený na aplikacích
+          href: app-based-conditional-access-intune.md
+        - name: Nastavení podmíněného přístupu založeného na aplikacích
+          href: app-based-conditional-access-intune-create.md
+        - name: ADAL a Intune
+          href: app-modern-authentication-block.md
+        - name: Integrace Jamf Pro s Intune pro dodržování předpisů
+          href: conditional-access-integrate-jamf.md
+        - name: Vynucení dodržování předpisů v počítačích Mac spravovaných aplikací Jamf Pro
+          href: conditional-access-assign-jamf.md
+    - name: Ochrana před internetovými útoky
+      items:
+        - name: Mobile Threat Defense
+          href: mobile-threat-defense.md
+          items:
+            - name: MTD na nezaregistrovaných zařízeních
+              items:
+                - name: Přidání aplikací MTD do nezaregistrovaných zařízení
+                  href: mtd-add-apps-unenrolled-devices.md
+                - name: Vytvoření zásady ochrany aplikací MTD
+                  href: mtd-app-protection-policy.md
+                - name: Povolení MTD pro nezaregistrovaná zařízení
+                  href: mtd-enable-unenrolled-devices.md
+            - name: MTD na zaregistrovaných zařízeních
+              items:
+                - name: Přidání aplikací MTD do zaregistrovaných zařízení
+                  href: mtd-apps-ios-app-configuration-policy-add-assign.md
+                - name: Vytvoření zásad dodržování předpisů zařízením MTD
+                  href: mtd-device-compliance-policy-create.md
+                - name: Povolení MTD pro zaregistrovaná zařízení
+                  href: mtd-connector-enable.md
+            - name: Aplikace MTD
+              items:
+                - name: Nastavení služby Better Mobile
+                  href: better-mobile-threat-defense-connector.md
+                  items:
+                    - name: Integrace služby Better Mobile se službou Intune
+                      href: better-mobile-mtd-connector-integration.md
+                      displayName: sso
+                - name: Nastavení Check Pointu
+                  href: checkpoint-sandblast-mobile-mobile-threat-defense-connector.md
+                  items:
+                    - name: Integrace Check Pointu a Intune
+                      href: checkpoint-sandblast-mobile-mtd-connector-integration.md
+                - name: Nastavení Lookoutu
+                  href: lookout-mobile-threat-defense-connector.md
+                  items:
+                    - name: Integrace Lookoutu a Intune
+                      href: lookout-mtd-connector-integration.md
+                - name: Nastavení služby Pradeo
+                  href: pradeo-mobile-threat-defense-connector.md
+                  items:
+                    - name: Integrace služeb Pradeo a Intune
+                      href: pradeo-mtd-connector-integration.md
+                - name: Nastavení Sophos Mobile
+                  href: sophos-mtd-connector.md
+                  items:
+                    - name: Integrace Sophos Mobile a Intune
+                      href: sophos-mtd-connector-integration.md
+                - name: Nastavení Symantecu
+                  href: skycure-mobile-threat-defense-connector.md
+                  items:
+                    - name: Integrace Symantecu a Intune
+                      href: skycure-mtd-connector-integration.md
+                - name: Nastavení řešení Wandera
+                  href: wandera-mtd-connector.md
+                  items:
+                    - name: Integrace řešení Wandera s Intune
+                      href: wandera-mtd-connector-integration.md
+                - name: Nastavení služby Zimperium
+                  href: zimperium-mobile-threat-defense-connector.md
+                  items:
+                    - name: Integrace služeb Zimperium a Intune
+                      href: zimperium-mtd-connector-integration.md
+        - name: Microsoft Defender
+          items:
+            - name: Microsoft Defender ATP
+              href: advanced-threat-protection.md
+            - name: Úlohy zabezpečení
+              href: atp-manage-vulnerabilities.md
+    - name: Základní nastavení zabezpečení
+      items:
+        - name: Základní nastavení zabezpečení
+          href: security-baselines.md
+        - name: Monitorování základního nastavení
+          href: security-baselines-monitor.md
+    - name: Ochrana koncového bodu
+      href: endpoint-protection-configure.md
+    - name: Řízení přístupu k síti
+      href: network-access-control-integrate.md
+    - name: Windows Hello
+      items:
+        - name: Windows Hello
+          href: windows-hello.md
+        - name: Ochrana identit
+          href: identity-protection-configure.md
+    - name: Certifikáty
+      items:
+        - name: Ověřování pomocí certifikátů
+          href: certificates-configure.md
+        - name: SCEP
+          items:
+            - name: Infrastruktura SCEP
+              href: certificates-scep-configure.md
+              displayName: ksp
+            - name: Profily certifikátů SCEP
+              href: certificates-profile-scep.md
+            - name: Používání certifikační autority třetí strany spolu s SCEP
+              href: certificate-authority-add-scep-overview.md
+        - name: PKCS
+          items:
+            - name: PKCS
+              href: certficates-pfx-configure.md
+              displayName: ksp
+            - name: Importované certifikáty PKCS
+              href: certificates-imported-pfx-configure.md
+            - name: Šifrování e-mailů pomocí S/MIME
+              href: certificates-s-mime-encryption-sign.md
+              displayName: csr
+        - name: Použití infrastruktury veřejných klíčů DigiCert
+          href: certificates-digicert-configure.md
+          displayName: ca; pkcs; pki; ra; registration authority
+        - name: Odebrání certifikátů SCEP a PKCS
+          href: remove-certificates.md
+    - name: Odvozené přihlašovací údaje
+      href: derived-credentials.md
+    - name: Aktualizace softwaru
+      items:
+        - name: Aktualizace Windows
+          items:
+            - name: Nastavení služby Windows Update pro firmy
+              href: windows-update-for-business-configure.md
+            - name: Sestavy dodržování předpisů služby Windows Update
+              href: windows-update-compliance-reports.md
+        - name: Zásady aktualizací pro iOS
+          href: software-updates-ios.md
+    - name: Odstraňování potíží
+      items:
+        - name: Řešení potíží se zásadami a profily
+          href: ../configuration/troubleshoot-policies-in-microsoft-intune.md?toc=/intune/protect/toc.json&bc=/protect/breadcrumb/toc.json
+        - name: Řešení potíží s podmíněným přístupem
+          href: troubleshoot-conditional-access.md
+        - name: Řešení potíží s Certificate Connectorem
+          href: troubleshoot-certificate-connector-events.md
+        - name: Řešení potíží s profily certifikátů SCEP
+          items:
+            - name: Řešení potíží s profily certifikátů SCEP
+              href: troubleshoot-scep-certificate-profiles.md
+            - name: Nasazení profilu do zařízení
+              href: troubleshoot-scep-certificate-profile-deployment.md
+            - name: Komunikace zařízení s NDES
+              href: troubleshoot-scep-certificate-device-to-ndes.md
+            - name: Operace NDES
+              href: troubleshoot-scep-certificate-ndes-policy-module.md
+            - name: Doručování certifikátů do zařízení
+              href: troubleshoot-scep-certificate-delivery.md
+            - name: Vytváření sestav pro nasazování certifikátů
+              href: troubleshoot-scep-certificate-reporting.md
+        - name: Řešení problémů s konektorem Exchange
+          items:
+            - name: Řešení problémů s konektorem Exchange
+              href: troubleshoot-exchange-connector.md
+            - name: Běžné problémy
+              href: troubleshoot-exchange-connector-common-problems.md
+            - name: Běžné chyby
+              href: troubleshoot-exchange-connector-common-errors.md
+        - name: Řešení problémů se zásadami pro nástroj BitLocker
+          href: troubleshoot-bitlocker-policies.md
+        - name: Řešení potíží s integrací aplikace Jamf Pro
+          href: troubleshoot-jamf.md
+- name: Reference
+  items:
+    - name: Rozhraní API pro přidání certifikační autority třetí strany
+      href: scep-libraries-apis.md
+    - name: Nastavení zásad dodržování předpisů
+      items:
+        - name: Základní nastavení zabezpečení
+          items:
+            - name: Windows 10 – základní nastavení MDM
+              href: security-baseline-settings-mdm-all.md
+            - name: Microsoft Defender ATP – základní nastavení
+              href: security-baseline-settings-defender-atp.md
+            - name: Nastavení standardních hodnot zabezpečení Microsoft Edge
+              href: security-baseline-settings-edge.md
+        - name: Nastavení služby Windows Update
+          href: windows-update-settings.md
+        - name: Nastavení zásad dodržování předpisů – Android
+          href: compliance-policy-create-android.md
+        - name: Nastavení zásad dodržování předpisů – Android Enterprise
+          href: compliance-policy-create-android-for-work.md
+        - name: Nastavení zásad dodržování předpisů – iOS
+          href: compliance-policy-create-ios.md
+        - name: Nastavení zásad dodržování předpisů – macOS
+          href: compliance-policy-create-mac-os.md
+        - name: Nastavení zásad dodržování předpisů – Windows 10
+          href: compliance-policy-create-windows.md
+        - name: Nastavení zásad dodržování předpisů – Windows 8.1
+          href: compliance-policy-create-windows-8-1.md
+        - name: Nastavení zásad dodržování předpisů – Windows Phone 8.1
+          href: compliance-policy-create-windows-8-1.md
+    - name: Kódy a popisy chyb
+      items:
+        - name: Chyby aktualizace softwaru
+          href: software-update-agent-error-codes.md
+- name: Příručky k implementaci scénářů
+  items:
+    - name: Ochrana Exchange Online
+      href: exchange-online-protect.md
+    - name: Zabránění neoprávněnému přístupu
+      href: data-outside-protect.md
+    - name: Zabránění únikům dat na nespravovaných zařízeních
+      href: data-leak-prevention.md

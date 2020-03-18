@@ -1,0 +1,25 @@
+### YamlMime:ZonePivotGroups
+groups:
+- id: security-baseline-settings-one
+  title: Základní nastavení zabezpečení
+  prompt: Výběr standardních hodnot zabezpečení
+  pivots:
+  - id: windows-mdm
+    title: Windows MDM
+  - id: microsoft-defender-atp
+    title: Rozšířená ochrana před internetovými útoky v programu Microsoft Defender
+- id: windows-mdm-versions
+  title: Základní verze Windows MDM
+  prompt: Zvolit verzi
+  pivots:
+  - id: mdm-may-2019
+    title: Květen 2019
+  - id: mdm-preview
+    title: Preview – říjen 2018
+metadata:
+  ms.openlocfilehash: 1b1f0e7b28dfda7ba9b4867c9641154147aa4c1f
+  ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+  ms.translationtype: MT
+  ms.contentlocale: cs-CZ
+  ms.lasthandoff: 03/13/2020
+  ms.locfileid: "79327431"

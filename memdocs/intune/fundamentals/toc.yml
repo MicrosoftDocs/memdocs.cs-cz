@@ -1,0 +1,286 @@
+- name: Základy Microsoft Intune
+  href: index.yml
+- name: Přehled
+  expanded: true
+  items:
+    - name: Přehled Microsoft Intune
+      href: what-is-intune.md
+      displayName: ems; emm; azure ad; active directory; ad
+    - name: Přehled správy zařízení
+      href: what-is-device-management.md
+      displayName: teamviewer
+    - name: Novinky
+      href: whats-new.md
+      items:
+        - name: Co je nového v uživatelském rozhraní aplikace
+          href: whats-new-app-ui.md
+        - name: Funkce ve vývoji
+          href: in-development.md
+        - name: Důležitá oznámení
+          href: 'whats-new.md#notices'
+- name: Rychlé starty
+  items:
+    - name: Vyzkoušejte si Intune zdarma
+      href: free-trial-sign-up.md
+      displayName: 'tenant; trial; get started, start; help'
+    - name: Vytvoření uživatele
+      href: quickstart-create-user.md
+    - name: Vytvoření skupiny
+      href: quickstart-create-group.md
+    - name: Vytvořit a přiřadit vlastní roli
+      href: quickstart-create-custom-role.md
+- name: Výukové kurzy
+  items:
+    - name: Seznámení se se službou Intune v Microsoft Endpoint Manageru
+      href: tutorial-walkthrough-endpoint-manager.md
+    - name: Seznámení se se službou Intune na portálu Azure Portal
+      href: tutorial-walkthrough-intune-portal.md
+- name: Koncepty
+  items:
+    - name: Co je Intune for Education?
+      href: introduction-intune-education.md
+    - name: Co je Intune for US Government?
+      href: introduction-intune-government.md
+    - name: Architektura z širší perspektivy
+      href: high-level-architecture.md
+    - name: Životní cyklus zařízení
+      href: device-lifecycle.md
+    - name: Životní cyklus aplikace
+      href: ../apps/app-lifecycle.md
+    - name: Související scénáře
+      items:
+        - name: Přehled souvisejících scénářů
+          href: guided-scenarios-overview.md
+        - name: Nasazení Microsoft Edge pro mobilní zařízení
+          href: guided-scenarios-edge.md
+        - name: Moderní desktopové prostředí spravované přes cloud
+          href: guided-scenarios-cloud-managed-pc.md
+        - name: Zabezpečené mobilních aplikací Microsoft Office
+          href: guided-scenarios-office-mobile.md
+    - name: Typické scénáře
+      href: common-scenarios.md
+    - name: Rozhodnutí o technologiích pro používání vlastních zařízení uživatelů (BYOD) pomocí řešení EMS
+      href: byod-technology-decisions.md
+    - name: Správa verzí operačního systému
+      href: manage-os-versions.md
+    - name: Správa softwaru Windows Holographic
+      href: windows-holographic-for-business.md
+- name: Praktičtí průvodci
+  items:
+    - name: Nasazení plánu
+      items:
+        - name: Průvodce plánováním
+          href: planning-guide.md
+          items:
+            - name: Určení cílů a záměrů
+              href: planning-guide-deployment-goals.md
+            - name: Identifikace scénářů
+              href: planning-guide-scenarios.md
+            - name: Určení požadavků
+              href: planning-guide-requirements.md
+            - name: Vývoj plánu nasazení
+              href: planning-guide-rollout-plan.md
+            - name: Vývoj plánu komunikace
+              href: planning-guide-communication-plan.md
+            - name: Příprava plánu podpory
+              href: planning-guide-support-plan.md
+            - name: Návrh
+              href: planning-guide-design.md
+            - name: Implementace
+              href: planning-guide-onboarding.md
+            - name: Testování a ověřování
+              href: planning-guide-test-validation.md
+            - name: Další materiály a zdroje informací
+              href: planning-guide-resources.md
+        - name: Průvodce migrací
+          href: migration-guide.md
+          items:
+            - name: Příprava Intune
+              href: migration-guide-prepare.md
+              items:
+                - name: Základní nastavení
+                  href: migration-guide-setup.md
+                - name: Konfigurace zásad pro správu zařízení a aplikací
+                  href: migration-guide-configure-policies.md
+                - name: Konfigurace zásad pro ochranu aplikací
+                  href: migration-guide-app-protection-policies.md
+                - name: Posouzení migrace
+                  href: migration-guide-considerations.md
+            - name: Kampaň migrace
+              href: migration-guide-campaign.md
+              items:
+                - name: Plán komunikace
+                  href: migration-guide-communication-plan.md
+                - name: Jak prosadit přijetí
+                  href: migration-guide-drive-adoption.md
+                - name: Typický cyklus migrace
+                  href: migration-guide-cycle.md
+        - name: Plán komunikace
+          href: migration-guide-communication-plan.md
+        - name: Informování uživatelů
+          items:
+            - name: Jak vzdělávat koncové uživatele
+              href: end-user-educate.md
+            - name: Zprávy na Portálu společnosti
+              href: end-user-company-portal-messages.md
+            - name: Ochrana aplikací v Androidu
+              href: end-user-mam-apps-android.md
+            - name: Ochrana aplikací v iOSu
+              href: end-user-mam-apps-ios.md
+            - name: Jak získat aplikace pro Android
+              href: end-user-apps-android.md
+            - name: Jak získat aplikace pro iOS/iPadOS
+              href: end-user-apps-ios.md
+            - name: Jak získat aplikace pro Windows
+              href: end-user-apps-windows.md
+            - name: Data z Intune odesílaná Applu
+              href: ../protect/data-intune-sends-to-apple.md
+            - name: Data z Intune odesílaná Googlu
+              href: ../protect/data-intune-sends-to-google.md
+            - name: Data odesílaná Applem do Intune
+              href: ../protect/data-apple-sends-to-intune.md
+            - name: Data odesílaná Googlem do Intune
+              href: ../protect/data-google-sends-to-intune.md
+    - name: Nastavení Intune
+      items:
+        - name: Postup nastavení Intune
+          href: setup-steps.md
+          displayName: fasttrack
+        - name: Podporované konfigurace
+          href: supported-devices-browsers.md
+          items:
+            - name: Konfigurace sítě
+              href: network-bandwidth-use.md
+            - name: Používání virtuálních počítačů s Windows 10 s Intune
+              href: windows-10-virtual-machines.md
+            - name: Koncové body Intune
+              href: intune-endpoints.md
+            - name: Koncové body Intune pro vládu USA
+              href: intune-us-government-endpoints.md
+        - name: Přihlášení k Intune
+          href: account-sign-up.md
+        - name: Konfigurace domén
+          href: custom-domain-name-configure.md
+        - name: Přidávání uživatelů
+          href: users-add.md
+        - name: Přidání skupin
+          href: groups-add.md
+        - name: Přiřazení licencí
+          href: licenses-assign.md
+        - name: Licence Intune
+          href: licenses.md
+        - name: Nastavení autority pro správu mobilních zařízení (MDM)
+          href: mdm-authority-set.md
+        - name: Správa rolí
+          items:
+            - name: Řízení přístupu na základě role
+              href: role-based-access-control.md
+            - name: Přiřazení role uživateli
+              href: assign-role.md
+            - name: Vytvoření vlastní role
+              href: create-custom-role.md
+            - name: Použití značek oboru
+              href: scope-tags.md
+    - name: Registrovat zařízení
+      href: ../enrollment/index.yml
+    - name: Vzdálená správa zařízení
+      href: ../remote-actions/index.yml
+    - name: Vytváření pravidel dodržování předpisů
+      href: ../protect/index.yml
+    - name: Ovládání funkcí a nastavení zařízení
+      href: ../configuration/index.yml
+    - name: Ochrana zařízení a dat
+      href: ../protect/index.yml
+    - name: Správa a ochrana aplikací
+      href: ../apps/index.yml
+    - name: Použití sad zásad
+      href: ../fundamentals/policy-sets.md
+    - name: Informace pro vývojáře
+      href: ../developer/index.yml
+    - name: Získání nápovědy a podpory
+      items:
+        - name: Stav tenanta
+          href: tenant-status.md
+        - name: Pomoc uživatelům s řešením problémů
+          href: help-desk-operators.md
+        - name: Používání dokumentace Intune
+          href: use-docs.md
+        - name: Získání podpory
+          href: get-support.md
+    - name: sestavy
+      items:
+        - name: Sestavy Intune
+          href: reports.md
+        - name: Protokoly auditu pro aktivity v Intune
+          href: monitor-audit-logs.md
+        - name: Kontrola protokolů pomocí Azure Monitoru
+          href: review-logs-using-azure-monitor.md
+- name: Reference
+  items:
+    - name: Kódy a popisy chyb
+      items:
+        - name: Řešení problémů s přístupem k prostředkům společnosti
+          href: troubleshoot-company-resource-access-problems.md
+- name: Prostředky
+  items:
+    - name: Archivovat
+      items:
+        - name: Archiv Co je nového
+          items:
+            - name: Archiv novinek (Azure Portal)
+              href: whats-new-archive.md
+            - name: Archiv novinek (klasický portál)
+              href: whats-new-archive-classic.md
+        - name: Klasické funkce Intune v Azure
+          href: ui-changes.md
+        - name: Klasické skupiny Intune
+          href: groups-get-started.md
+        - name: Nastavení vzdělávání pro iOS/iPadOS
+          items:
+            - name: iPad
+              href: education-settings-configure-ios.md
+            - name: Sdílené iPady
+              href: education-settings-configure-ios-shared.md
+        - name: Starší verze počítačového klienta Intune
+          href: intune-legacy-pc-client.md
+        - name: Správa počítačů pomocí softwarového agenta
+          href: manage-windows-pcs-with-microsoft-intune.md
+          items:
+            - name: Srovnání správy počítačů
+              href: pc-management-comparison.md
+            - name: Instalace klientského počítače
+              href: install-the-windows-pc-client-with-microsoft-intune.md
+            - name: Běžné úlohy správy počítačů
+              href: common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md
+              items:
+                - name: Zásady pro počítače
+                  href: use-policies-to-simplify-windows-pc-management.md
+                - name: Zobrazení inventáře
+                  href: view-hardware-and-software-inventory-for-windows-pcs-in-microsoft-intune.md
+                - name: Vyřazení počítačů
+                  href: retire-a-windows-pc-with-microsoft-intune.md
+                - name: Propojení počítačů s uživateli
+                  href: manage-user-device-linking-for-windows-pcs-with-microsoft-intune.md
+                - name: Vzdálená pomoc
+                  href: request-and-provide-remote-assistance-for-windows-pcs-in-microsoft-intune.md
+            - name: Zásady ochrany počítačů se systémem Windows
+              href: policies-to-protect-windows-pcs-in-microsoft-intune.md
+              items:
+                - name: Aktualizace softwaru
+                  href: keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune.md
+                - name: Brána Windows Firewall
+                  href: help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune.md
+                - name: Funkce Endpoint Protection
+                  href: help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune.md
+            - name: Přidání aplikací pro klientské počítače Intune
+              href: add-apps-for-windows-pcs-in-microsoft-intune.md
+            - name: Správa licenčních smluv
+              href: manage-license-agreements-for-windows-pc-software-in-microsoft-intune.md
+            - name: Řešení konfliktů zásad
+              href: resolve-gpo-and-microsoft-intune-policy-conflicts.md
+            - name: Řešení potíží s aktualizacemi softwaru
+              href: troubleshoot-software-updates-in-microsoft-intune.md
+            - name: Běžné chyby ochrany koncového bodu
+              href: troubleshoot-endpoint-protection-in-microsoft-intune.md
+    - name: Dokumentace pro koncové uživatele Intune
+      href: /user-help/use-managed-devices-to-get-work-done

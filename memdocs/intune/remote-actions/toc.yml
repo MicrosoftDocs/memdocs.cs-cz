@@ -1,0 +1,69 @@
+- name: Vzdálené akce
+  href: index.yml
+- name: Přehled
+  expanded: true
+  items:
+    - name: Přehled správy zařízení
+      href: device-management.md
+- name: Praktičtí průvodci
+  items:
+    - name: Zámky a hesla
+      items:
+        - name: Uzamčení zařízení
+          href: device-remote-lock.md
+        - name: Resetovat heslo
+          href: device-passcode-reset.md
+        - name: Resetování PIN kódu ve Windows 10
+          href: device-windows-pin-reset.md
+    - name: Odebrání a restartování
+      items:
+        - name: Odebrání zařízení
+          href: devices-wipe.md
+        - name: Správa funkce Začít znovu pro Windows
+          href: device-fresh-start.md
+        - name: Restartování zařízení
+          href: device-restart.md
+    - name: Akce zařízení Apple
+      items:
+        - name: Vyhledání ztracených zařízení se systémem iOS/iPadOS
+          href: device-locate.md
+        - name: Povolení režimu ztráty zařízení systému iOS/iPadOS
+          href: device-lost-mode.md
+        - name: Zapnutí dohledového režimu systému iOS/iPadOS
+          href: device-supervised-mode.md
+        - name: Vymazání zařízení s macOS
+          href: device-erase.md
+        - name: Zakázání zámku aktivace
+          href: device-activation-lock-disable.md
+    - name: Akce uživatele
+      items:
+        - name: Odhlášení aktuálního uživatele
+          href: device-logout-user.md
+        - name: Odebrání uživatele
+          href: device-remove-user.md
+        - name: Vyhledání primárního uživatele
+          href: find-primary-user.md
+    - name: Další akce
+      items:
+        - name: Přejmenování zařízení
+          href: device-rename.md
+        - name: Odesílání oznámení
+          href: custom-notifications.md
+        - name: Vzdálené řízení mobilních zařízení
+          href: teamviewer-support.md
+        - name: Synchronizace zařízení
+          href: device-sync.md
+        - name: Prozkoumání inventáře zařízení
+          href: device-inventory.md
+    - name: Hromadné akce zařízení
+      href: bulk-device-actions.md
+    - name: Odstraňování potíží
+      items:
+        - name: Řešení potíží s akcemi zařízení
+          href: troubleshoot-device-actions.md
+- name: Prostředky
+  items:
+    - name: Příručky k implementaci scénářů
+      items:
+        - name: Snížení nákladů na helpdesk
+          href: password-reset.md
