@@ -1,0 +1,88 @@
+### YamlMime:Landing
+title: Základy Microsoft Intune
+summary: Microsoft Intune je cloudová služba, která pomáhá tomu, aby vaši pracovníci byli produktivní, a současně chrání firemní data. Získejte další informace o plánování, migraci a nastavení základů pro Intune.
+metadata:
+  title: Základy Intune
+  description: Získejte další informace o plánování, migraci a nastavení základů pro Intune.
+  services: service
+  ms.service: microsoft-intune
+  ms.subservice: fundamentals
+  ms.topic: landing-page
+  ms.collection: collection
+  author: dougeby
+  ms.author: erikre
+  ms.manager: dougeby
+  ms.date: 12/05/2019
+  ms.openlocfilehash: 3ee393f220673669e831a802d28d581eb4d0b42d
+  ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+  ms.translationtype: HT
+  ms.contentlocale: cs-CZ
+  ms.lasthandoff: 03/13/2020
+  ms.locfileid: "79333834"
+landingContent:
+- title: Informace o Microsoft Intune
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Co je Intune?
+      url: what-is-intune.md
+    - text: Novinky
+      url: whats-new.md
+    - text: Funkce ve vývoji
+      url: in-development.md
+  - linkListType: tutorial
+    links:
+    - text: Seznámení se se službou Intune v Microsoft Endpoint Manageru
+      url: tutorial-walkthrough-endpoint-manager.md
+    - text: Seznámení se se službou Intune na portálu Azure Portal
+      url: tutorial-walkthrough-intune-portal.md
+  - linkListType: concept
+    links:
+    - text: Co je správa zařízení?
+      url: what-is-device-management.md
+    - text: Architektura z širší perspektivy
+      url: high-level-architecture.md
+    - text: Běžné způsoby použití Intune
+      url: common-scenarios.md
+    - text: Rozhodnutí o technologiích pro používání vlastních zařízení uživatelů (BYOD) pomocí řešení EMS
+      url: byod-technology-decisions.md
+- title: Přijetí Intune
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Plán komunikace
+      url: migration-guide-communication-plan.md
+    - text: Průvodce plánováním
+      url: planning-guide.md
+    - text: Průvodce migrací
+      url: migration-guide.md
+    - text: Sada pro přijetí Intune
+      url: https://www.microsoft.com/download/details.aspx?id=58348
+- title: Nastavení Intune
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: Vyzkoušejte si Intune zdarma
+      url: free-trial-sign-up.md
+  - linkListType: concept
+    links:
+    - text: Podporované konfigurace
+      url: supported-devices-browsers.md
+    - text: Požadavky na konfiguraci sítě
+      url: network-bandwidth-use.md
+    - text: Koncové body sítě Intune
+      url: intune-endpoints.md
+    - text: Řízení přístupu na základě role
+      url: role-based-access-control.md
+    - text: Licence Intune
+      url: licenses.md
+  - linkListType: how-to-guide
+    links:
+    - text: Postup nastavení Intune
+      url: setup-steps.md
+    - text: Přidávání uživatelů
+      url: users-add.md
+    - text: Přidání skupin
+      url: groups-add.md
+    - text: Použití značek oboru
+      url: scope-tags.md

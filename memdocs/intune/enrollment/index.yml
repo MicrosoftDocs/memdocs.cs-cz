@@ -1,0 +1,117 @@
+### YamlMime:Landing
+title: Registrace zařízení v Microsoft Intune
+summary: Zařízení pracovníků lze registrovat několika způsoby. Jednotlivé způsoby závisí na vlastnictví zařízení (osobní nebo firemní), typu zařízení (iOS, Windows, Android) a požadavcích na správu (resetování, spřažení, uzamčení).
+metadata:
+  title: Registrace v Microsoft Intune
+  description: Cílová stránka pro registraci v Microsoft Intune
+  services: service
+  ms.service: microsoft-intune
+  ms.subservice: enrollment
+  ms.topic: landing-page
+  author: dougeby
+  ms.author: dougeby
+  manager: dougeby
+  ms.date: 08/07/2019
+  ms.openlocfilehash: be5cae95460064287fa347d1ca42626ab75a2809
+  ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+  ms.translationtype: HT
+  ms.contentlocale: cs-CZ
+  ms.lasthandoff: 03/13/2020
+  ms.locfileid: "79333936"
+landingContent:
+- title: Další informace o registraci
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Co je registrace zařízení?
+      url: device-enrollment.md
+    - text: Možnosti správy zaregistrovaných zařízení
+      url: device-management-capabilities.md
+    - text: Možnosti registrace
+      url: enrollment-options.md
+- title: Registrace zařízení s Windows
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Informace o registraci zařízení s Windows
+      url: windows-enrollment-methods.md
+    - text: Možnosti metody registrace
+      url: enrollment-method-capab.md
+  - linkListType: quickstart
+    links:
+    - text: Nastavení automatické registrace zařízení s Windows 10
+      url: quickstart-setup-auto-enrollment.md
+    - text: Registrace zařízení s Windows 10
+      url: quickstart-enroll-windows-device.md
+  - linkListType: tutorial
+    links:
+    - text: Registrace zařízení s Windows pomocí Autopilotu
+      url: tutorial-use-autopilot-enroll-devices.md
+  - linkListType: how-to-guide
+    links:
+    - text: Metody registrace zařízení s Windows v Intune
+      url: windows-enrollment-methods.md
+    - text: Nastavení registrace zařízení s Windows
+      url: windows-enroll.md
+    - text: Nastavení hromadné registrace pro zařízení s Windows
+      url: windows-bulk-enroll.md
+- title: Registrace zařízení s Androidem
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Informace o registraci zařízení s Androidem
+      url: android-enroll.md
+  - linkListType: how-to-guide
+    links:
+    - text: Propojení účtu Intune se spravovaným účtem Google Play
+      url: connect-intune-android-enterprise.md
+    - text: Nastavení registrace zařízení s pracovním profilem Android Enterprise
+      url: android-work-profile-enroll.md
+    - text: Nastavení registrace zařízení s pracovním profilem Android Enterprise
+      url: android-work-profile-enroll.md
+    - text: Nastavení registrace vyhrazených zařízení s Androidem Enterprise
+      url: android-kiosk-enroll.md
+    - text: Nastavení registrace v Intune pro plně spravovaná zařízení s Androidem Enterprise (Preview)
+      url: android-fully-managed-enroll.md
+- title: Registrace zařízení se systémem iOS/iPadOS
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Informace o registraci zařízení se systémem iOS/iPadOS
+      url: ios-enroll.md
+  - linkListType: tutorial
+    links:
+    - text: Použití funkcí registrace podnikových zařízení společnosti Apple k registraci zařízení se systémem iOS/iPadOS
+      url: tutorial-use-device-enrollment-program-enroll-ios.md
+  - linkListType: how-to-guide
+    links:
+    - text: Nastavení registrace zařízení se systémem iOS/iPadOS
+      url: ios-enroll.md
+    - text: Automatická registrace zařízení se systémem iOS/iPadOS pomocí Programu registrace zařízení společnosti Apple
+      url: device-enrollment-program-enroll-ios.md
+    - text: Nastavení registrace uživatele pro iOS/iPadOS a iPadOS
+      url: ios-user-enrollment.md
+    - text: Podporované akce a možnosti u registrace uživatele
+      url: ios-user-enrollment-supported-actions.md
+    - text: Nastavení registrace zařízení se systémem iOS/iPadOS pomocí Apple School Manageru
+      url: apple-school-manager-set-up-ios.md
+    - text: Nastavení registrace zařízení se systémem iOS/iPadOS pomocí nástroje Apple Configurator
+      url: apple-configurator-enroll-ios.md
+- title: Registrace zařízení s macOSem
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Informace o registraci zařízení s macOSem
+      url: macos-enroll.md
+  - linkListType: tutorial
+    links:
+    - text: Použití funkcí registrace podnikových zařízení společnosti Apple k registraci zařízení se systémem iOS/iPadOS
+      url: tutorial-use-device-enrollment-program-enroll-ios.md
+  - linkListType: how-to-guide
+    links:
+    - text: Nastavení registrace zařízení s macOS
+      url: macos-enroll.md
+    - text: Automatická registrace zařízení s macOSem pomocí Programu registrace zařízení nebo Apple School Manageru
+      url: device-enrollment-program-enroll-macos.md
+    - text: Nastavení registrace zařízení se systémem iOS/iPadOS pomocí nástroje Apple Configurator
+      url: apple-configurator-enroll-ios.md

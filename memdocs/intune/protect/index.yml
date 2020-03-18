@@ -1,0 +1,137 @@
+### YamlMime:Landing
+title: Ochrana dat a zařízení v Intune
+summary: Intune pomáhá chránit zařízení a podniková data pomocí nástrojů, jako jsou standardní hodnoty zabezpečení, podmíněný přístup Azure AD a partneři pro ochranu před mobilními hrozbami.
+metadata:
+  title: Ochrana dat a zařízení v Intune
+  description: Intune pomáhá chránit zařízení a podniková data pomocí nástrojů, jako jsou standardní hodnoty zabezpečení, podmíněný přístup Azure AD a partneři pro ochranu před mobilními hrozbami.
+  services: service
+  ms.service: microsoft-intune
+  ms.subservice: protect
+  ms.topic: landing-page
+  ms.collection: collection
+  author: brenduns
+  ms.author: brenduns
+  ms.date: 08/20/2019
+  ms.openlocfilehash: 9d5c1c95cd5247f32fd32a77c774ec787d052e16
+  ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+  ms.translationtype: HT
+  ms.contentlocale: cs-CZ
+  ms.lasthandoff: 03/13/2020
+  ms.locfileid: "79333698"
+landingContent:
+- title: Nastavení pravidel povolujících přístup k prostředkům u zařízení
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Přehled dodržování předpisů
+      url: device-compliance-get-started.md
+  - linkListType: quickstart
+    links:
+    - text: Vytváření zásad dodržování předpisů pro zařízení
+      url: quickstart-set-password-length-android.md
+  - linkListType: tutorial
+    links:
+    - text: Ochrana e-mailu Exchange Online na spravovaných zařízeních
+      url: tutorial-protect-email-on-enrolled-devices.md
+  - linkListType: how-to-guide
+    links:
+    - text: Vytvoření zásady
+      url: create-compliance-policy.md
+    - text: Dodržování předpisů podle umístění
+      url: use-network-locations.md
+    - text: Akce při nedodržení předpisů
+      url: actions-for-noncompliance.md
+- title: Správa ochrany soukromí a osobních údajů
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Ochrana soukromí a osobní údaje
+      url: privacy-personal-data.md
+  - linkListType: concept
+    links:
+    - text: Shromažďování dat
+      url: privacy-data-collect.md
+    - text: Ukládání a zpracovávání údajů
+      url: privacy-data-store-process.md
+    - text: Zabezpečení a sdílení údajů
+      url: privacy-data-secure-share.md
+  - linkListType: how-to-guide
+    links:
+    - text: Data, která Intune sdílí
+      url: privacy-data-secure-share.md
+    - text: Auditování, export, odstranění
+      url: privacy-data-audit-export-delete.md
+    - text: Zobrazení a oprava osobních údajů
+      url: privacy-data-view-correct.md
+- title: Ochrana zařízení a sítí
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Ochrana zařízení
+      url: device-protect.md
+    - text: Mobile Threat Defense
+      url: mobile-threat-defense.md
+  - linkListType: how-to-guide
+    links:
+    - text: Microsoft Defender ATP
+      url: advanced-threat-protection.md
+    - text: Partneři Mobile Threat Defense
+      url: mtd-apps-ios-app-configuration-policy-add-assign.md
+    - text: Základní nastavení zabezpečení
+      url: security-baselines.md
+    - text: Ochrana koncového bodu
+      url: endpoint-protection-configure.md
+    - text: Řízení přístupu k síti
+      url: network-access-control-integrate.md
+    - text: Šifrování zařízení
+      url: encrypt-devices.md
+- title: Používání bezpečných metod ověřování
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Certifikáty a Intune
+      url: certificates-configure.md
+  - linkListType: how-to-guide
+    links:
+    - text: Profily certifikátů SCEP
+      url: certificates-scep-configure.md
+    - text: Profily certifikátů PKCS
+      url: certficates-pfx-configure.md
+    - text: Importované certifikáty PFX
+      url: certificates-imported-pfx-configure.md
+    - text: Windows Hello pro firmy
+      url: windows-hello.md
+- title: Správa aktualizací softwaru
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: iOS
+      url: software-updates-ios.md
+    - text: Windows
+      url: windows-update-for-business-configure.md
+- title: Používání podmíněného přístupu
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Přehled podmíněného přístupu
+      url: conditional-access.md
+    - text: Ochrana Exchange Online
+      url: exchange-online-protect.md
+  - linkListType: tutorial
+    links:
+    - text: Ochrana e-mailu na spravovaných zařízeních
+      url: tutorial-protect-email-on-enrolled-devices.md
+    - text: Ochrana e-mailu na nespravovaných zařízeních
+      url: tutorial-protect-email-on-unmanaged-devices.md
+  - linkListType: concept
+    links:
+    - text: ADAL a Intune
+      url: app-modern-authentication-block.md
+  - linkListType: how-to-guide
+    links:
+    - text: Vytvoření a přiřazení zásad podmíněného přístupu
+      url: conditional-access-exchange-create.md
+    - text: Běžné způsoby použití podmíněného přístupu
+      url: conditional-access-intune-common-ways-use.md
+    - text: Jamf Pro pro macOS
+      url: conditional-access-integrate-jamf.md
