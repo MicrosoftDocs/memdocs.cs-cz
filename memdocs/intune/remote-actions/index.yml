@@ -1,0 +1,85 @@
+### YamlMime:Landing
+title: Vzdálené spouštění akcí zařízení pomocí Intune
+summary: Intune umožňuje správcům vzdáleně spouštět akce zařízení. Pomocí těchto vzdálených akcí prováděných z portálu Intune můžete restartovat zařízení, resetovat hesla, najít ztracená nebo odcizená zařízení a provádět další úlohy.
+metadata:
+  title: Vzdálené spouštění akcí zařízení pomocí Intune
+  description: Intune umožňuje vzdálené spouštění akcí.
+  services: service
+  ms.service: microsoft-intune
+  ms.subservice: remote-actions
+  ms.topic: landing-page
+  ms.collection: collection
+  author: ErikjeMS
+  ms.author: erikje
+  ms.date: 09/13/2019
+  ms.openlocfilehash: 0c2340fffb2e3680ae4d137f9c0c944a72babf35
+  ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+  ms.translationtype: HT
+  ms.contentlocale: cs-CZ
+  ms.lasthandoff: 03/13/2020
+  ms.locfileid: "79333630"
+landingContent:
+- title: Vzdálené spouštění akcí zařízení
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Přehled správy zařízení
+      url: device-management.md
+  - linkListType: how-to-guide
+    links:
+    - text: Přejmenování zařízení
+      url: device-rename.md
+    - text: Zobrazení podrobností o zařízení
+      url: device-inventory.md
+    - text: Posílání vlastních oznámení na zařízení
+      url: custom-notifications.md
+    - text: Synchronizace zařízení
+      url: device-sync.md
+    - text: Vzdálená správa zařízení pomocí TeamVieweru
+      url: teamviewer-support.md
+    - text: Použití hromadných akcí zařízení
+      url: bulk-device-actions.md
+- title: Odebrání a restartování
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Odebrání, vymazání, vyřazení, zrušení registrace
+      url: devices-wipe.md
+    - text: Funkce Začít znovu pro Windows
+      url: device-fresh-start.md
+    - text: Restartování zařízení
+      url: device-restart.md
+- title: Akce uživatele
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Odhlášení uživatele
+      url: device-logout-user.md
+    - text: Vyhledání primárního uživatele
+      url: find-primary-user.md
+    - text: Odebrání uživatele
+      url: device-remove-user.md
+- title: Zámky a hesla
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Uzamčení zařízení
+      url: device-remote-lock.md
+    - text: Resetování hesla zařízení
+      url: device-passcode-reset.md
+    - text: Resetování PIN kódu ve Windows 10
+      url: device-lost-mode.md
+- title: Akce zařízení Apple
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Vyhledání zařízení se systémem iOS/iPadOS
+      url: device-locate.md
+    - text: Zapnutí dohledového režimu systému iOS/iPadOS
+      url: device-supervised-mode.md
+    - text: Zapnutí režimu ztráty zařízení systému iOS/iPadOS
+      url: device-lost-mode.md
+    - text: Vymazání dat ze zařízení s macOSem
+      url: device-erase.md
+    - text: Zakázání zámku aktivace
+      url: device-activation-lock-disable.md
