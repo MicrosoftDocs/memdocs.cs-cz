@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/03/2020
+ms.date: 03/13/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5d364c77266e51b3dcbc19c237e93f17e6f8d1aa
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
-ms.translationtype: HT
+ms.openlocfilehash: 7817a747a01a137fd29ee8aae117cd604da233a5
+ms.sourcegitcommit: 4815f07c8c0399c077b71721c6e6b61047c75ae6
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79329347"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79437101"
 ---
 # <a name="windows-10-and-later-settings-to-protect-devices-using-intune"></a>Nastavení Windows 10 (a novější) pro ochranu zařízení pomocí Intune
 
@@ -895,7 +895,7 @@ Z důvodu ochrany před hrozbami od skriptů zablokujte tyto akce:
   - **Blokuje** nedůvěryhodné a nepodepsané procesy, které se SPOUŠTĚJÍ z USB.  
   - **Jenom audit**  
   
-- **Spustitelné soubory, které nesplňují kritéria četnosti, stáří nebo seznamu důvěryhodných souborů**  
+- **Spustitelné soubory, které nesplňují kritéria prevalence, stáří nebo seznamu důvěryhodných souborů**  
   **Výchozí**: Nenakonfigurováno  
   Pravidlo: [zablokovat spouštění spustitelných souborů, pokud nesplňují kritéria prevalence, stáří nebo seznamu důvěryhodných](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-executable-files-from-running-unless-they-meet-a-prevalence-age-or-trusted-list-criterion)    
 
@@ -1243,7 +1243,7 @@ Pomocí těchto možností můžete konfigurovat nastavení místního zabezpeč
 
   Definujte jiný název účtu, který se má přidružit k identifikátoru zabezpečení (SID) pro účet Administrator.  
 
- #### <a name="guest"></a>Host  
+ #### <a name="guest"></a>Guest  
 
 - **Účet Guest**  
   **Výchozí**: Nenakonfigurováno  
@@ -1649,240 +1649,6 @@ Pomocí těchto možností můžete konfigurovat nastavení místního zabezpeč
   - **Zásah**
   - **Automaticky**
   - **Zabezpečen**
-
-## <a name="user-rights"></a>Uživatelská práva
-
-- **Přístup správce přihlašovacích údajů jako důvěryhodný volající**  
-  **Výchozí**: Nenakonfigurováno  
-  CSP: [UserRights/AccessCredentialManagerAsTrustedCaller](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-accesscredentialmanagerastrustedcaller)
-
-  Toto uživatelské právo používá správce přihlašovacích údajů během operací zálohování a obnovení. Pokud je toto oprávnění přiděleno jiným entitám, může dojít k ohrožení zabezpečení uložených přihlašovacích údajů uživatelů.
-  - **Nenakonfigurované**
-  - **Povoleno**
-
-- **Povolení místního přihlášení**  
-  **Výchozí**: Nenakonfigurováno  
-  CSP: [UserRights/AllowLocalLogOn](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-allowlocallogon)
-
-  Toto uživatelské právo určuje, kteří uživatelé se mohou přihlašovat k počítači.
-  - **Nenakonfigurované**
-  - **Povoleno**
-
-- **Povolení přístupu ze sítě**  
-  **Výchozí**: Nenakonfigurováno  
-  CSP: [UserRights/AccessFromNetwork](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-accessfromnetwork)
-
-  Toto uživatelské právo určuje, kteří uživatelé a skupiny budou mít povolené připojení k počítači přes síť.
-  - **Nenakonfigurované**
-  - **Povoleno**
-
-- **Jednat jako součást operačního systému**  
-  **Výchozí**: Nenakonfigurováno  
-  CSP: [UserRights/ActAsPartOfTheOperatingSystem](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-actaspartoftheoperatingsystem)
-
-  Jednat jako součást operačního systému
-  - **Nenakonfigurované**
-  - **Povoleno**  
-
-- **Zálohování souborů a adresářů**  
-  **Výchozí**: Nenakonfigurováno  
-  CSP: [UserRights/BackupFilesAndDirectories](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-backupfilesanddirectories)
-
-  Toto uživatelské právo určuje, kteří uživatelé mohou při zálohování souborů a adresářů obejít oprávnění k souborům, adresářům, registrům a dalším trvalým objektům.
-  - **Nenakonfigurované**
-  - **Povoleno**
-
-- **Změna systémového času**  
-  **Výchozí**: Nenakonfigurováno  
-  CSP: [UserRights/ChangeSystemTime](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-changesystemtime)
-
-  Toto uživatelské právo určuje, kteří uživatelé a skupiny mohou měnit čas a datum interních hodin počítače.
-  - **Nenakonfigurované**
-  - **Povoleno**
-
-- **Vytváření globálních objektů**  
-  **Výchozí**: Nenakonfigurováno  
-  CSP: [UserRights/CreateGlobalObjects](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-createglobalobjects)
-
-  Toto nastavení zabezpečení určuje, zda mohou uživatelé vytvářet globální objekty, které jsou k dispozici pro všechny relace. Uživatelé, kteří můžou vytvářet globální objekty, můžou ovlivnit procesy, které běží v relacích jiných uživatelů, což by mohlo vést k selhání aplikace nebo poškození dat.
-  - **Nenakonfigurované**
-  - **Povoleno**
-
-- **Vytvořit stránkovací soubor**  
-  **Výchozí**: Nenakonfigurováno  
-  CSP: [UserRights/CreatePageFile](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-createpagefile)
-
-  Toto uživatelské právo určuje, kteří uživatelé a skupiny mohou volat interní rozhraní API pro vytvoření a změnu velikosti stránkovacího souboru.
-  - **Nenakonfigurované**
-  - **Povoleno**
-
-- **Vytvořit trvalé sdílené objekty**  
-  **Výchozí**: Nenakonfigurováno  
-  CSP: [UserRights/CreatePermanentSharedObjects](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-createpermanentsharedobjects)
-
-  Toto uživatelské právo určuje, které účty mohou procesy použít k vytvoření objektu adresáře pomocí Správce objektů.
-  - **Nenakonfigurované**
-  - **Povoleno**
-
-- **Vytváření symbolických odkazů**  
-  **Výchozí**: Nenakonfigurováno  
-  CSP: [UserRights/CreateSymbolicLinks](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-createsymboliclinks)
-
-  Toto uživatelské právo určuje, zda uživatel může vytvořit symbolický odkaz z počítače, ke kterému jsou přihlášeni.
-  - **Nenakonfigurované**
-  - **Povoleno**
-
-- **Vytváření tokenů**  
-  **Výchozí**: Nenakonfigurováno  
-  CSP: [UserRights/okta](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-createtoken)
-
-  Toto uživatelské právo určuje, kteří uživatelé nebo skupiny můžou procesy použít k vytvoření tokenu, který pak můžete použít k získání přístupu k jakýmkoli místním prostředkům, když proces používá k vytvoření přístupového tokenu interní rozhraní API.
-  - **Nenakonfigurované**
-  - **Povoleno**
-
-- **Ladit programy**  
-  **Výchozí**: Nenakonfigurováno  
-    CSP: [UserRights/DebugPrograms](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-debugprograms)
-
-  Toto uživatelské právo určuje, kteří uživatelé mohou připojit ladicí program k jakémukoli procesu nebo k jádru.
-  - **Nenakonfigurované**
-  - **Povoleno**
-
-- **Odepřít přístup ze sítě**  
-  **Výchozí**: Nenakonfigurováno  
-  CSP: [UserRights/DenyAccessFromNetwork](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-denyaccessfromnetwork)
-
-  Toto uživatelské právo určuje, kterým uživatelům se zabrání v přístupu k počítači přes síť.
-  - **Nenakonfigurované**
-  - **Povoleno**
-
-- **Odepřít přihlášení jako služba**  
-  **Výchozí**: Nenakonfigurováno  
-  CSP: [UserRights/DenyLocalLogOn](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-denylocallogon)
-
-  Toto nastavení zabezpečení určuje, které účty služeb brání registraci procesu jako služby.
-  - **Nenakonfigurované**
-  - **Povoleno**
-
-- **Odepřít přihlášení prostřednictvím služby Vzdálená plocha**  
-  **Výchozí**: Nenakonfigurováno  
-  CSP: [UserRights/DenyRemoteDesktopServicesLogOn](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-denyremotedesktopserviceslogon)
-
-  Toto uživatelské právo určuje, kteří uživatelé a skupiny mají zakázáno přihlášení jako klient služby Vzdálená plocha.
-  - **Nenakonfigurované**
-  - **Povoleno**
-
-- **Povolit delegování**  
-  **Výchozí**: Nenakonfigurováno  
-  CSP: [UserRights/EnableDelegation](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-enabledelegation)
-
- Toto uživatelské právo určuje, kteří uživatelé mohou nastavit nastavení důvěryhodný pro delegování u objektu uživatele nebo počítače.
-  - **Nenakonfigurované**
-  - **Povoleno**
-
-- **Generování auditů zabezpečení**  
-  **Výchozí**: Nenakonfigurováno  
-  CSP: [UserRights/GenerateSecurityAudits](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-generatesecurityaudits)
-
-  Toto uživatelské právo určuje, které účty může proces použít k přidání položek do protokolu zabezpečení. Protokol zabezpečení slouží ke sledování neautorizovaného přístupu k systému.
-  - **Nenakonfigurované**
-  - **Povoleno**
-
-- **Zosobnění klienta**  
-  **Výchozí**: Nenakonfigurováno  
-  CSP: [UserRights/ImpersonateClient](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-impersonateclient)
-
-  Přiřazení tohoto uživatele uživateli umožňuje programům spuštěným jménem tohoto uživatele zosobnit klienta. Vyžadování tohoto uživatelského práva pro tento druh zosobnění brání neoprávněnému uživateli v přesvědčit klienta, aby se připojil ke službě, kterou vytvořil, a pak zosobňuje tohoto klienta, což může zvýšit oprávnění neoprávněného uživatele na administrativní nebo systémové úrovně.
-  - **Nenakonfigurované**
-  - **Povoleno**
-
-- **Zvýšit prioritu plánování**  
-  **Výchozí**: Nenakonfigurováno  
-  CSP: [UserRights/IncreaseSchedulingPriority](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-increaseschedulingpriority)
-
-  Toto uživatelské právo určuje, které účty můžou použít proces s přístupem Zapisovat vlastnosti k jinému procesu, aby se zvýšila priorita spouštění přiřazená k druhému procesu.
-  - **Nenakonfigurované**
-  - **Povoleno**
-
-- **Načtení a uvolnění ovladačů zařízení**  
-  **Výchozí**: Nenakonfigurováno  
-  CSP: [UserRights/LoadUnloadDeviceDrivers](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-loadunloaddevicedrivers)
-
-  Toto uživatelské právo určuje, kteří uživatelé mohou dynamicky načítat a uvolňovat ovladače zařízení nebo jiný kód v režimu jádra.
-  - **Nenakonfigurované**
-  - **Povoleno**
-
-- **Zamknout stránky v paměti**  
-  **Výchozí**: Nenakonfigurováno  
-  CSP: [UserRights/LockMemory](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-lockmemory)
-
-  Toto uživatelské právo určuje, které účty mohou pomocí procesu uchovávat data ve fyzické paměti, což zabrání systému v stránkování dat do virtuální paměti na disku.
-  - **Nenakonfigurované**
-  - **Povoleno**
-
-- **Správa auditování a protokolu zabezpečení**  
-  **Výchozí**: Nenakonfigurováno  
-  CSP: [UserRights/ManageAuditingAndSecurityLog](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-manageauditingandsecuritylog)
-
-  Toto uživatelské právo určuje, kteří uživatelé mohou určovat možnosti auditování přístupu k objektům pro jednotlivé prostředky, například soubory, objekty služby Active Directory a klíče registru.
-  - **Nenakonfigurované**
-  - **Povoleno**
-
-- **Provádět úlohy údržby svazku**  
-  **Výchozí**: Nenakonfigurováno  
-  CSP: [UserRights/ManageVolume](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-managevolume)
-
-  Toto uživatelské právo určuje, kteří uživatelé a skupiny mohou spouštět úlohy údržby svazku, například vzdálené defragmentace.
-  - **Nenakonfigurované**
-  - **Povoleno**
-
-- **Úprava hodnot prostředí firmwaru**  
-  **Výchozí**: Nenakonfigurováno  
-  CSP: [UserRights/ModifyFirmwareEnvironment](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-modifyfirmwareenvironment)
-
-  Toto uživatelské právo určuje, kdo může upravovat hodnoty prostředí firmwaru.
-  - **Nenakonfigurované**
-  - **Povoleno**
-
-- **Úprava popisku objektu**  
-  **Výchozí**: Nenakonfigurováno  
-  CSP: [UserRights/ModifyObjectLabel](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-modifyobjectlabel)
-
-  Toto uživatelské právo určuje, které uživatelské účty mohou měnit označení integrity objektů, jako jsou soubory, klíče registru nebo procesy vlastněné jinými uživateli.
-  - **Nenakonfigurované**
-  - **Povoleno**
-
-- **Profilovat jeden proces**  
-  **Výchozí**: Nenakonfigurováno  
-  CSP: [UserRights/ProfileSingleProcess](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-profilesingleprocess)
-
-  Toto uživatelské právo určuje, kteří uživatelé mohou pomocí nástrojů pro monitorování výkonu monitorovat výkon systémových procesů.
-  - **Nenakonfigurované**
-  - **Povoleno**
-
-- **Vzdálené vypnutí**  
-  **Výchozí**: Nenakonfigurováno  
-  CSP: [UserRights/RemoteShutdown](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-remoteshutdown)
-
-  Toto uživatelské právo určuje, kteří uživatelé mohou vypnout počítač ze vzdáleného umístění v síti. Zneužití tohoto uživatelského práva může mít za následek odepření služby.
-  - **Nenakonfigurované**
-  - **Povoleno**
-  
-- **Obnovení souborů a adresářů**  
-  **Výchozí**: Nenakonfigurováno  
-  CSP: [UserRights/RestoreFilesAndDirectories](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-restorefilesanddirectories)
-  
-  Toto uživatelské právo určuje, kteří uživatelé mohou při obnovování zálohovaných souborů a adresářů obejít oprávnění k souborům, adresářům, registrům a dalším trvalým objektům, a určí, kteří uživatelé mohou nastavit libovolný platný objekt zabezpečení jako vlastníka objektu.
-  - **Nenakonfigurované**
-  - **Povoleno**
-  
-- **Převzetí vlastnictví souborů nebo objektů**  
-  **Výchozí**: Nenakonfigurováno  
-  CSP: [UserRights/TakeOwnership](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-takeownership)
-
-  Toto uživatelské právo určuje, kteří uživatelé mohou převzít vlastnictví všech zabezpečených objektů v systému, včetně objektů služby Active Directory, souborů a složek, tiskáren, klíčů registru, procesů a vláken.
-  - **Nenakonfigurované**
-  - **Povoleno**
 
 ## <a name="next-steps"></a>Další kroky
 
