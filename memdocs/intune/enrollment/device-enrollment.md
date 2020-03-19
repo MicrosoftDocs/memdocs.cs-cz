@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8a81d0cad6e7fa985733675912ada6f446eb501d
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: c131992d4f9b736aea2653272f81d52da7021ef7
+ms.sourcegitcommit: cd2cbc23b8909df3a000d8ad4140e87052d6de5a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79331575"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79508487"
 ---
 # <a name="what-is-device-enrollment"></a>Co je registrace zařízení?
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -39,7 +39,7 @@ Standardně se do Intune můžou registrovat zařízení pro všechny platformy.
 |:---:|:---:|:---:|:---:|:---:|
 | | Zařízení se vymažou při registraci. | Jednotlivá zařízení se přidruží k uživateli.| Pokud ano, uživatelé nemůžou zrušit registraci zařízení. | |
 |**[Uživatelé s vlastním zařízením (BYOD)](#bring-your-own-device)** | Ne| Ano | Ne | [Další informace](apple-mdm-push-certificate-get.md)|
-|**[DEM](#device-enrollment-manager)**| Ne |Ne |Ne | [Další informace](device-enrollment-program-enroll-ios.md)|
+|**[DEM](#device-enrollment-manager)**| Ne |Ne |Ne | [Další informace](device-enrollment-manager-enroll.md)|
 |**[DEP](#apple-device-enrollment-program)**| Ano | Volitelné | Volitelné|[Další informace](device-enrollment-program-enroll-ios.md)|
 |**[USB-SA](#usb-sa)**| Ano | Volitelné | Ne| [Další informace](apple-configurator-enroll-ios.md)|
 |**[USB (přímo)](#usb-direct)**| Ne | Ne | Ne|[Další informace](apple-configurator-enroll-ios.md)|

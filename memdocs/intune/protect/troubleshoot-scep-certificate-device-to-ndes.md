@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 72e8f8a19ef27eee039090f146c46488ed1e1205
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 55660497751f1961c9c579ba1d800900189db782
+ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79328859"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79526457"
 ---
 # <a name="troubleshoot-device-to-ndes-server-communication-for-scep-certificate-profiles-in-microsoft-intune"></a>Řešení potíží s komunikací serveru NDES pro profily certifikátů SCEP v Microsoft Intune
 
@@ -242,6 +242,19 @@ Pokud není fond aplikací SCEP spuštěný, podívejte se na protokol událost�
   **Řešení**: Povolte **anonymní ověřování** a zakažte **ověřování systému Windows**a pak restartujte server NDES.
 
   ![Oprávnění služby IIS](../protect/media/troubleshoot-scep-certificate-device-to-ndes/iis-permissions.png)
+
+- **Příčina 4**: vypršela platnost certifikátu modulu NDESPolicy.
+
+  Protokol CAPI2 (viz řešení příčiny 2) zobrazí chyby související s certifikátem, na který odkazuje "HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\Cryptography\MSCEP\Modules\NDESPolicy\NDESCertThumbprint" mimo období platnosti certifikátu.
+
+  **Řešení**: Aktualizujte odkaz pomocí kryptografického otisku platného certifikátu.
+  1. Identifikujte náhradní certifikát:
+     - Obnovit existující certifikát
+     - Vyberte jiný certifikát s podobným vlastnosti (předmět, rozšířené použití klíče, typ a délka atd.).
+     - Registrace nového certifikátu
+  2. Exportujte klíč registru `NDESPolicy` pro zálohování aktuálních hodnot.
+  3. Nahraďte data `NDESCertThumbprint` registru hodnotou pomocí kryptografického otisku nového certifikátu, odeberete všechny prázdné znaky a text převede na malá písmena.
+  4. Z příkazového řádku se zvýšenými oprávněními restartujte fondy aplikací služby NDES IIS nebo spusťte `iisreset`.
 
 #### <a name="gatewaytimeout"></a>GatewayTimeout
 

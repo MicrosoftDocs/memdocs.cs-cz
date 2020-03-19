@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8bdfcdaf845a481a91e96ccbc3d57e6605253f97
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 211db029b681a933b1ac018a070ca3c3d55d67a9
+ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79328931"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79526491"
 ---
 # <a name="set-up-symantec-endpoint-protection-mobile-integration-with-intune"></a>Nastavení integrace Symantec Endpoint Protection Mobile s Intune
 
@@ -107,7 +107,7 @@ Služba SEP Mobile sesynchronizuje zařízení, na kterých běží její služb
 
 3. Zvolte **Vlastnosti**.
 
-4. Vedle **ID adresáře** zvolte ikonu kopírování a pak identifikátor vložte do bezpečného umístění. Tento identifikátor budete později potřebovat.
+4. Vedle **ID adresáře** zvolte ikonu kopírování a pak identifikátor vložte do bezpečného umístění. Tento identifikátor budete potřebovat v pozdějším kroku.
 
     ![Obrázek znázorňující ID adresáře na portálu Azure Portal](./media/skycure-mtd-connector-integration/symantec-azure-portal-directory-ID.png)
 

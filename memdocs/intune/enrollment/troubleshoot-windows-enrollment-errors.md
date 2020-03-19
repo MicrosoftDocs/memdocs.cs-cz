@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7cdd92948aed51eb37b4774d2521a1d28cd8245f
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: fe5fce47d6a0480596bc09d82456c7636fe84d51
+ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79327023"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79526270"
 ---
 # <a name="troubleshoot-windows-device-enrollment-problems-in-microsoft-intune"></a>Řešení potíží s registrací zařízení s Windows v Microsoft Intune
 
@@ -321,6 +321,8 @@ Chyba 0x80070774: došlo k nějaké chybě. Potvrďte, že používáte správn�
 K tomuto problému obvykle dochází předtím, než se zařízení restartuje v hybridním scénáři autopilotu služby Azure AD, když vyprší časový limit zařízení během úvodní obrazovky pro přihlášení. Znamená to, že řadič domény se nedá najít nebo se k němu úspěšně nedostal kvůli problémům s připojením. Nebo že zařízení zadalo stav, který se nemůže připojit k doméně.
 
 **Příčina:** Nejběžnější příčinou je, že se používá připojení k hybridní službě Azure AD a v profilu autopilotu je nakonfigurovaná funkce přiřadit uživatele. Při použití funkce přiřadit uživatele se v zařízení během úvodní obrazovky pro přihlášení provede připojení Azure AD, které zařízení umístí do stavu, ve kterém se nemůže připojit k místní doméně. Funkce přiřadit uživatele by proto měla být použita pouze ve standardních scénářích pro automatické pilotní připojení služby Azure AD.  Tato funkce by se neměla používat ve scénářích připojení k hybridní službě Azure AD.
+
+Další možnou příčinou této chyby je, že zařízení AzureAD přidružené k objektu autopilotu bylo odstraněno. Chcete-li tento problém vyřešit, odstraňte objekt autopilot a znovu importujte hodnotu hash, čímž vygenerujete novou.
 
 #### <a name="resolution"></a>Rozlišení
 

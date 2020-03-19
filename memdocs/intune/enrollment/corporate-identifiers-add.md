@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d57e2af03ba1d035f8285c4075d5cbc8ff6cfd38
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 26f3ec6871784a019ffcf117d17b863b05354848
+ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79331595"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79526304"
 ---
 # <a name="identify-devices-as-corporate-owned"></a>Identifikace zařízení jako vlastněných společností
 
@@ -78,7 +78,7 @@ V textovém editoru vypadá soubor .csv takhle:
 
 > [!IMPORTANT]
 > Některá zařízení s Androidem a iOS/iPadOS mají několik čísel IMEI. Intune dokáže přečíst jen jeden kód IMEI na každé zaregistrované zařízení. Pokud importujete číslo IMEI, ale nejedná se o IMEI v inventáři pomocí Intune, zařízení se klasifikuje jako osobní zařízení místo zařízení vlastněné společností. Pokud importujete více kódů IMEI pro jedno zařízení, zobrazí se u kódů, které nejsou v inventáři, stav registrace **Neznámý**.<br>
->Všimněte si také: sériová čísla jsou doporučeným formulářem identifikace pro zařízení iiOS/iPadOSOS.
+>Všimněte si také, že sériová čísla jsou doporučená forma identifikace pro zařízení se systémem iOS/iPadOSOS.
 >Sériová čísla Androidu nejsou zaručená jako jedinečná nebo současná. Pokud chcete zjistit, jestli je sériové číslo spolehlivým identifikátorem zařízení, obraťte se na dodavatele zařízení.
 >Sériová čísla, která službě Intune oznámí zařízení, se nemusí shodovat se zobrazenými identifikátory v nabídkách zařízení Nastavení/ O zařízení. Ověřte si typ sériového čísla oznámeného výrobcem zařízení.
 >Pokus o nahrání souborů se sériovými čísly, které obsahují tečky (.), způsobí selhání nahrávání. Sériová čísla s tečkami nejsou podporovaná.

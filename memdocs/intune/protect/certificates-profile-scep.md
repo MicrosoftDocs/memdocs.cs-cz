@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 387817dfcf929b985c0836779510e3d6c0f9795a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: a7e8d625505383caacbbefd67402d46c04c72c6e
+ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79329795"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79526627"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>Vytvoření a přiřazení profilů certifikátů SCEP v Intune
 
@@ -209,7 +209,7 @@ Až [nakonfigurujete infrastrukturu](certificates-scep-configure.md) pro podporu
 
    - **Kořenový certifikát**:
 
-     Vyberte *profil důvěryhodného certifikátu* , který jste předtím nakonfigurovali a přiřadili k příslušným uživatelům a zařízením pro tento profil certifikátu SCEP. Profil důvěryhodného certifikátu se používá ke zřízení uživatelů a zařízení s certifikátem důvěryhodné kořenové certifikační autority. Informace o profilu důvěryhodného certifikátu najdete v tématech [Export certifikátu důvěryhodné kořenové certifikační autority](certificates-configure.md#export-the-trusted-root-ca-certificate) a [Vytvoření profilů důvěryhodných certifikátů](certificates-configure.md#create-trusted-certificate-profiles) v tématu *použití certifikátů pro ověřování v Intune*. Pokud máte kořenovou certifikační autoritu a vydávající certifikační autoritu, vyberte profil důvěryhodných kořenových certifikátů, který je přidružený k vystavující certifikační autoritě.
+     Vyberte *profil důvěryhodného certifikátu* , který jste předtím nakonfigurovali a přiřadili k příslušným uživatelům a zařízením pro tento profil certifikátu SCEP. Profil důvěryhodného certifikátu se používá ke zřízení uživatelů a zařízení s certifikátem důvěryhodné kořenové certifikační autority. Informace o profilu důvěryhodného certifikátu najdete v tématech [Export certifikátu důvěryhodné kořenové certifikační autority](certificates-configure.md#export-the-trusted-root-ca-certificate) a [Vytvoření profilů důvěryhodných certifikátů](certificates-configure.md#create-trusted-certificate-profiles) v tématu *použití certifikátů pro ověřování v Intune*. Pokud máte kořenovou certifikační autoritu a vydávající certifikační autoritu, vyberte profil důvěryhodného kořenového certifikátu, který ověřuje vydávající certifikační autoritu.
 
    - **Rozšířené použití klíče**:
 

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: df00db079a7e6b73ba24dc612b5cb6b2250c3898
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 50c56cff5f6b58894ff1abb24dad397d7e6c2c1e
+ms.sourcegitcommit: cd2cbc23b8909df3a000d8ad4140e87052d6de5a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79325047"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79508470"
 ---
 # <a name="see-device-details-in-intune"></a>Zobrazení podrobností o zařízení v Intune
 
@@ -36,7 +36,7 @@ V tomto článku se dozvíte, jak si můžete zobrazit všechna zařízení a je
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 3. Vyberte **Zařízení** > **Všechna zařízení** > výběrem zařízení uvedeného v seznamu otevřete podrobné informace o něm:
 
-   - **Přehled** zobrazuje název zařízení a uvádí některé klíčové vlastnosti zařízení, jako je například to, jestli se jedná o zařízení s podporou vlastního zařízení (BYOD), vrácení se změnami a další. Na zařízení můžete provést následující akce:
+   - **Přehled** zobrazuje název zařízení a uvádí některé klíčové vlastnosti zařízení, například to, jestli jde o osobní nebo firemní zařízení, sériové číslo, primární uživatel a další. Na zařízení můžete provést následující akce:
       - [Vyřadit](devices-wipe.md#retire)
       - [Vymazání](devices-wipe.md#wipe)
       - [Odstranit](devices-wipe.md#delete-devices-from-the-intune-portal)
