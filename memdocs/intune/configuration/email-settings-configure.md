@@ -1,12 +1,12 @@
 ---
 title: Konfigurace nastavení e-mailu v Microsoft Intune – Azure | Microsoft Docs
 titleSuffix: ''
-description: Vytvořte e-mailový profil v Microsoft Intune a nasaďte tento profil na zařízení s Androidem Enterprise, iOS, iPadOS a Windows. Pomocí e-mailového profilu můžete na spravovaných zařízeních nakonfigurovat běžná nastavení e-mailu, například e-mailový server a metodu ověřování při připojení k firemnímu e-mailu.
+description: Vytvořte e-mailový profil v Microsoft Intune a nasaďte tento profil na zařízení s Androidem pro správce zařízení, Android Enterprise, iOS, iPadOS a Windows. Použijte e-mailové profily ke konfiguraci běžných nastavení e-mailu, včetně e-mailového serveru a metod ověřování pro připojení k firemnímu e-mailu na zařízeních,
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c3921da0032fdc0b28ff21812b99029d22fbbb27
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: fdf722acf463bf576b222e5f13da2dcaff64504e
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79333063"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086970"
 ---
 # <a name="add-email-settings-to-devices-using-intune"></a>Přidání nastavení e-mailu do zařízení pomocí Intune
 
@@ -29,7 +29,7 @@ Microsoft Intune obsahuje různá nastavení e-mailu, která můžete nasadit do
 
 E-mailové profily umožňují nakonfigurovat nastavení integrovaného e-mailu na následujících zařízeních:
 
-- Android Samsung KNOX Standard 4,0 a novější
+- Správce zařízení s Androidem na Samsung KNOX Standard 4,0 a novějších
 - Android Enterprise
 - iOS 8,0 a novější
 - iPadOS 13,0 a novější
@@ -38,35 +38,48 @@ E-mailové profily umožňují nakonfigurovat nastavení integrovaného e-mailu 
 
 V tomto článku se dozvíte, jak vytvořit e-mailový profil v Microsoft Intune. Obsahuje také odkazy na různé platformy s podrobnějším nastavením.
 
-## <a name="create-a-device-profile"></a>Vytvoření profilu zařízení
+## <a name="create-the-profile"></a>Vytvoření profilu
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Vyberte **zařízení** > **konfiguračních profilech** > **vytvořit profil**.
 3. Zadejte následující vlastnosti:
 
-    - **Název**: zadejte popisný název zásady. Své zásady pojmenujte, abyste je později mohli snadno identifikovat. Dobrý název zásady je například **Nastavení e-mailu pro všechna zařízení s Windows**.
-    - **Popis**: Zadejte popis profilu. Toto nastavení není povinné, ale doporučujeme ho zadat.
-    - **Platforma**: vyberte platformu zařízení. Možnosti:
+    - **Platforma**: vyberte platformu zařízení. Možnosti:  
 
-        - **Android** (jenom Samsung Android Knox Standard)
+        - **Správce zařízení s Androidem** (jenom Samsung Android Knox Standard)
         - **Android Enterprise**
         - **iOS/iPadOS**
-        - **Windows Phone 8.1**
         - **Windows 10 a novější**
+        - **Windows Phone 8.1**
 
-    - **Typ profilu**: vyberte **e-mail**.
+    - **Profil**: vyberte **e-mail**.
 
-4. Nastavení, která můžete konfigurovat, se liší podle zvolené platformy. Pro podrobnější nastavení vyberte platformu:
+4. Vyberte **Vytvořit**.
+5. V části **základy**zadejte následující vlastnosti:
 
-    - [Nastavení Android Samsung KNOX Standard](email-settings-android.md)
-    - [Nastavení Androidu Enterprise](email-settings-android-enterprise.md)
-    - [nastavení pro iOS/iPadOS](email-settings-ios.md)
-    - [Nastavení Windows Phone 8.1](email-settings-windows-phone-8-1.md)
-    - [Nastavení Windows 10](email-settings-windows-10.md)
+    - **Název**: zadejte popisný název zásady. Své zásady pojmenujte, abyste je později mohli snadno identifikovat. Dobrým názvem zásad je například **Windows 10: nastavení e-mailu pro všechna zařízení s Windows 10**.
+    - **Popis**: zadejte popis zásady. Toto nastavení není povinné, ale doporučujeme ho zadat.
 
-5. Až to budete mít, vyberte **OK** > **Vytvořit** a změny uložte.
+6. Vyberte **Další**.
 
-Po zadání nastavení a vytvoření profilu se tento profil zobrazí v seznamu profilů. Dále [tento profil přiřaďte některým skupinám](device-profile-assign.md).
+7. Nastavení, která můžete konfigurovat v **nastavení konfigurace**, se liší v závislosti na zvolené platformě. Pro podrobnější nastavení vyberte platformu:
+
+    - [Správce zařízení s Androidem (Samsung KNOX Standard)](email-settings-android.md)
+    - [Android Enterprise](email-settings-android-enterprise.md)
+    - [iOS/iPadOS](email-settings-ios.md)
+    - [Windows 10](email-settings-windows-10.md)
+    - [Windows Phone 8.1](email-settings-windows-phone-8-1.md)
+
+8. Vyberte **Další**.
+9. V části **značky oboru** (volitelné) přiřaďte značku pro filtrování profilu na konkrétní skupiny IT, například `US-NC IT Team` nebo `JohnGlenn_ITDepartment`. Další informace o značkách oboru naleznete v tématu [použití značek RBAC a Scope pro distribuci](../fundamentals/scope-tags.md).
+
+    Vyberte **Další**.
+
+10. V části **přiřazení**vyberte uživatele nebo skupiny, které obdrží váš profil. Další informace o přiřazování profilů najdete v tématu [přiřazení profilů uživatelů a zařízení](device-profile-assign.md).
+
+    Vyberte **Další**.
+
+11. V rámci **Revize a vytvoření**zkontrolujte nastavení. Když vyberete **vytvořit**, vaše změny se uloží a profil se přiřadí. Tato zásada se taky zobrazuje v seznamu profily.
 
 ## <a name="remove-an-email-profile"></a>Odebrání e-mailového profilu
 
@@ -104,4 +117,4 @@ Pokud provedete změny e-mailového profilu, který jste předtím přiřadili, 
 
 ## <a name="next-steps"></a>Další kroky
 
-Když je profil vytvořený, není ještě aktivní. V dalším kroku [profil přiřadíte](device-profile-assign.md).
+Když je profil vytvořený, není ještě aktivní. Dále [Přiřaďte profil](device-profile-assign.md) a [sledujte jeho stav](device-profile-monitor.md).

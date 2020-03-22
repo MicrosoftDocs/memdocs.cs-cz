@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/21/2019
+ms.date: 03/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: lacranda
-ms.openlocfilehash: cba46d5b4b203cdbb67fb5f6b6b116a21ebacb32
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: b6303d7d98e718c2a4f54b199bf90a3bd0684bf8
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79325275"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084759"
 ---
 # <a name="remove-scep-and-pkcs-certificates-in-microsoft-intune"></a>Odebrání certifikátů SCEP a PKCS v Microsoft Intune
 
@@ -91,7 +91,6 @@ Certifikáty PKCS *zůstávají* v zařízení (certifikáty se neodvolává neb
 - Správce odebere uživatele nebo skupinu z Azure AD.
 - Správce změní nebo aktualizuje profil PKCS.
 - Z přiřazení skupiny se odebere profil certifikátu.
-
 
 ## <a name="ios-devices"></a>Zařízení se systémem iOS
 
@@ -190,8 +189,8 @@ Kořenový certifikát se odebere, když:
 - Správce spustí akci [vyřazení](../remote-actions/devices-wipe.md#retire) .
 
 Certifikáty PKCS *zůstávají* v zařízení (certifikáty se neodvolává nebo odeberou) v těchto případech:
-- Uživatel ztratí licenci Intune.
 
+- Uživatel ztratí licenci Intune.
 - Správce odvolá licenci Intune.
 - Správce odebere uživatele nebo skupinu z Azure AD.
 - Správce změní nebo aktualizuje profil PKCS.
@@ -228,7 +227,23 @@ Certifikáty SCEP *zůstávají* v zařízení (certifikáty se neodvolává ani
 
 ### <a name="pkcs-certificates"></a>Certifikáty PKCS
 
-Certifikáty PKCS nejsou v macOS podporované.
+K odvoláni *a* odebrání certifikátu PKCS dojde, když:
+
+- Uživatel zruší registraci.
+- Správce spustí akci [vyřazení](../remote-actions/devices-wipe.md#retire) .
+
+Kořenový certifikát se odebere, když:
+
+- Uživatel zruší registraci.
+- Správce spustí akci [vyřazení](../remote-actions/devices-wipe.md#retire) .
+
+Certifikáty PKCS zůstávají v zařízení (certifikáty se neodvolává nebo odeberou) v těchto případech:
+
+- Uživatel ztratí licenci Intune.
+- Správce odvolá licenci Intune.
+- Z přiřazení skupiny se odebere profil certifikátu. (Profil se odebere.)
+- Správce odebere uživatele nebo skupinu z Azure AD.
+- Správce změní nebo aktualizuje profil PKCS.
 
 ## <a name="next-steps"></a>Další kroky
 

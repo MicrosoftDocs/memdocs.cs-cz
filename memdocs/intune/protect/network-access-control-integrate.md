@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e1fe46894a9905cba4267e8ff9baa949dde5709a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 5bafd916ef31bea50dabb2de5012d693039ca741
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79329139"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084825"
 ---
 # <a name="network-access-control-nac-integration-with-intune"></a>Integrace řešení pro řízení přístupu k síti (NAC) do Intune
 
@@ -65,36 +65,35 @@ Následující seznam obsahuje přehled fungování řešení pro řízení př�
 8. Jakmile je zařízení zaregistrované a odpovídá předpisům, dostane partnerské řešení NAC z Intune informaci o stavu.
 9. Připojení se úspěšně naváže, aby zařízení mělo přístup k firemním prostředkům.
 
-## <a name="use-nac-for-vpn-on-your-iosipados-devices"></a>Použití NAC pro VPN na zařízeních s iOS/iPadOS  
+## <a name="use-nac-for-vpn-on-your-iosipados-devices"></a>Použití NAC pro VPN na zařízeních s iOS/iPadOS
 
 NAC je k dispozici na následujících sítích VPN bez povolení NAC v profilu sítě VPN:
 
-  - NAC pro Cisco Legacy AnyConnect
-  - Přístup k starší verzi F5
-  - Citrix VPN
+- NAC pro Cisco Legacy AnyConnect
+- Přístup k starší verzi F5
+- Citrix VPN
 
-NAC se podporuje taky pro přístup k Cisco AnyConnect, Citrix SSO a F5. 
+NAC se podporuje taky pro přístup k Cisco AnyConnect, Citrix SSO a F5.
 
-### <a name="to-enable-nac-for-cisco-anyconnect-for-ios"></a>Povolení NAC pro Cisco AnyConnect pro iOS:
+### <a name="to-enable-nac-for-cisco-anyconnect-for-ios"></a>Povolení NAC pro Cisco AnyConnect pro iOS
 
-  - Integrujte ISE do Intune pro NAC, jak je popsáno v následujícím odkazu.
-  - Nastavte možnost **Povolit síťové Access Control (NAC)** v profilu sítě VPN na **Ano**.
+- Integrujte ISE do Intune pro NAC, jak je popsáno v následujícím odkazu.
+- Nastavte možnost **Povolit síťové Access Control (NAC)** v profilu sítě VPN na **Ano**.
 
-### <a name="to-enable-nac-for-citrix-sso"></a>Povolení NAC pro Citrix SSO:
+### <a name="to-enable-nac-for-citrix-sso"></a>Povolení NAC pro Citrix SSO
 
-  - Použijte Citrix Gateway 12.0.59 nebo vyšší.  
-  - Uživatelé musí mít nainstalované Citrix SSO 1.1.6 nebo novější.
-  - [Integrujte NetScaler do Intune pro NAC](https://docs.citrix.com/en-us/netscaler-gateway/12/microsoft-intune-integration/configuring-network-access-control-device-check-for-netscaler-gateway-virtual-server-for-single-factor-authentication-deployment.html) , jak je popsáno v dokumentaci k produktu Citrix.
-  - V profilu sítě VPN vyberte **základní nastavení** > **Povolit síťový Access Control (NAC)** **> vyberte Souhlasím**.
+- Použijte Citrix Gateway 12.0.59 nebo vyšší.  
+- Uživatelé musí mít nainstalované Citrix SSO 1.1.6 nebo novější.
+- [Integrujte NetScaler do Intune pro NAC](https://docs.citrix.com/en-us/netscaler-gateway/12/microsoft-intune-integration/configuring-network-access-control-device-check-for-netscaler-gateway-virtual-server-for-single-factor-authentication-deployment.html) , jak je popsáno v dokumentaci k produktu Citrix.
+- V profilu sítě VPN vyberte **základní nastavení** > **Povolit síťový Access Control (NAC)** **> vyberte Souhlasím**.
 
+### <a name="to-enable-nac-for-f5-access"></a>Povolení přístupu k NAC pro F5
 
-### <a name="to-enable-nac-for-f5-access"></a>Povolení přístupu k NAC pro F5:
+- Použijte F5 BIG-IP 13.1.1.5 nebo novější.
+- Integrujte BIG-IP s Intune for NAC. [Přehled: Konfigurace funkce APM pro stav zařízení pomocí příručky pro správu koncových bodů v systému](https://support.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-client-configuration-7-1-6/6.html#guid-0bd12e12-8107-40ec-979d-c44779a8cc89) F5 seznam kroků.
+- V profilu sítě VPN vyberte **základní nastavení** > **Povolit síťový Access Control (NAC)** **> vyberte Souhlasím**.
 
-  - Použijte F5 BIG-IP 13.1.1.5. BIG-IP 14 se nepodporuje.
-  - Integrujte BIG-IP s Intune for NAC. [Přehled: Konfigurace funkce APM pro stav zařízení pomocí příručky pro správu koncových bodů v systému](https://support.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-client-configuration-7-1-6/6.html#guid-0bd12e12-8107-40ec-979d-c44779a8cc89) F5 seznam kroků.
-  - V profilu sítě VPN vyberte **základní nastavení** > **Povolit síťový Access Control (NAC)** **> vyberte Souhlasím**.
-
-  Z bezpečnostních důvodů je připojení VPN odpojené každých 24 hodin. SÍŤ VPN se může okamžitě znovu připojit.
+Z bezpečnostních důvodů je připojení VPN odpojené každých 24 hodin. SÍŤ VPN se může okamžitě znovu připojit.
 
 Spolupracujeme s našimi partnery pro vydání řešení NAC pro tyto novější klienty. Až budou řešení připravena, Tento článek se aktualizuje o další informace.
 

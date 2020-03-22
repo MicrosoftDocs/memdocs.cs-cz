@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/19/2019
+ms.date: 03/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 398737a89c302031cfbed87709d031077f90fb6a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: edc3bb23097a26753a9e54b0b520e6fc22be3a69
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79329995"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80085201"
 ---
 # <a name="enforce-compliance-for-microsoft-defender-atp-with-conditional-access-in-intune"></a>Vymáhání dodržování předpisů pro Microsoft Defender ATP pomocí podmíněného přístupu v Intune
 
@@ -43,7 +43,7 @@ Následující příklad vám pomůže vysvětlit, jak tato řešení společně
 Vezměte v úvahu událost, kdy někdo pošle Wordovou přílohu s vloženým škodlivým kódem uživateli v rámci vaší organizace.
 
 - Uživatel přílohu otevře a povolí obsah.
-- Spustí se útok se zvýšenými oprávněními. Útočník ho provádí ze vzdáleného počítače na napadeném zařízení, ke kterému získal oprávnění správce.
+- Spustí se útok se zvýšenými oprávněními a útočník ze vzdáleného počítače má práva správce k zařízení oběti.
 - Z tohoto zařízení získá vzdálený přístup i k dalším zařízením uživatele. Toto porušení zabezpečení může mít dopad na celou organizaci.
 
 Ochrana ATP v programu Microsoft Defender může pomáhat vyřešit události zabezpečení, jako je tento scénář.
@@ -136,24 +136,26 @@ Po navázání připojení k Microsoft Defender ATP obdržela Intune konfigurač
 
 Zásady dodržování předpisů určují úroveň rizika, kterou považujete za přijatelné pro zařízení.
 
-### <a name="create-the-compliance-policy"></a>Vytvoření zásady dodržování předpisů
+Pokud jste se neseznámili s vytvářením zásad dodržování předpisů, v článku Vytvoření zásady *dodržování předpisů v Microsoft Intune* [postupujte podle](../protect/create-compliance-policy.md#create-the-policy) pokynů. Následující informace jsou specifické pro konfiguraci ATP v programu Defender v rámci zásad dodržování předpisů.
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **zařízení** > **zásady dodržování předpisů** > **vytvořit zásadu**.
-3. Zadejte **Název** a **Popis**.
-4. V části **Platforma** vyberte **Windows 10 a novější**.
-5. V části **Nastavení**vyberte **ATP v programu Microsoft Defender**.
-6. Nastavte **vyžadovat, aby zařízení bylo na základě skóre rizika počítače** na upřednostňované úrovni.
+
+2. Vyberte **zařízení** > **zásady dodržování předpisů** > **zásady** > **vytvořit zásadu**.
+
+3. V části **platforma** vyberte *Windows 10 a novější*a potom výběrem **vytvořit** otevřete okno vytvořit konfiguraci **zásad** .
+
+4. Na kartě **základy** zadejte **název** , který vám pomůže ho později identifikovat. Můžete také zvolit, že chcete zadat **Popis**.
+  
+5. Na kartě **Nastavení dodržování předpisů** rozbalte skupinu **ATP v programu Microsoft Defender** a nastavte možnost **vyžadovat, aby zařízení bylo na základě skóre rizika počítače** na upřednostňovanou úroveň.
 
    Klasifikace úrovně hrozeb určují služby [Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/alerts-queue).
 
-   - **Vymazat:** Tato úroveň poskytuje nejvyšší zabezpečení. Zařízení nemůže mít žádné existující hrozby a bude mít přístup k prostředkům společnosti. Pokud se najde jakákoli hrozba, zařízení se vyhodnotí jako nevyhovující. (Hodnota *zabezpečení*pro uživatele ATP v programu Microsoft Defender.)
+   - **Vymazat:** Tato úroveň poskytuje nejvyšší zabezpečení. Zařízení nemůže mít žádné existující hrozby a bude mít přístup k prostředkům společnosti. Pokud se najde jakákoli hrozba, zařízení se vyhodnotí jako nevyhovující. (Ochrana ATP v programu Microsoft Defender používá hodnotu *Secure*.)
    - **Nízká:** Zařízení se vyhodnotí jako vyhovující, pokud se v něm nacházejí jenom hrozby nízké úrovně. Zařízení se středními nebo vysokou úrovní hrozeb nejsou kompatibilní.
    - **Střední:** Zařízení vyhovuje, pokud se v něm vyskytují hrozby na střední nebo nízké úrovni. Pokud se v zařízení zjistí hrozby vysoké úrovně, vyhodnotí se jako nevyhovující.
    - **Vysoká**: Tato úroveň je nejméně bezpečná a umožňuje všechny úrovně hrozeb. To znamená, že zařízení s vysokou, střední nebo nízkou úrovní hrozeb se považují za vyhovující.
 
-7. Zvolte **OK** a pak **Vytvořit**. Tím uložíte změny a vytvoříte zásadu.
-8. [Přiřaďte zásady dodržování předpisů zařízením](create-compliance-policy.md#assign-the-policy) k příslušným skupinám.
+6. Dokončete konfiguraci zásady, včetně přiřazení zásad k příslušným skupinám.
 
 ## <a name="create-a-conditional-access-policy"></a>Vytvoření zásady podmíněného přístupu
 

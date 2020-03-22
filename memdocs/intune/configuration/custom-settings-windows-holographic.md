@@ -1,11 +1,11 @@
 ---
-title: Vlastní nastavení – Windows Holographic for Business zařízení – Microsoft Intune
+title: Vlastní nastavení – zařízení s Windows holografickým pro firmy – Microsoft Intune | Microsoft Docs
 description: Přidejte nebo vytvořte si vlastní profil, abyste mohli v Microsoft Intune použít nastavení OMA-URI pro zařízení s Windows Holographic for Business, včetně zařízení Microsoft Hololens. Můžete nakonfigurovat nastavení poskytovatele služeb konfigurace zásad (CSP) AllowFastReconnect, AllowVPN, AllowUpdateService, UpdateServiceURL, RequireUpdatesApproval, ApprovedUpdates a ApplicationLaunchRestrictions.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/18/2019
+ms.date: 03/19/2020
 ms.article: article
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e72995942ebbc9fbcd35697bc525c9af75e77d18
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 43199009740f259c6a6484e455b0205da76492ba
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79332343"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084047"
 ---
 # <a name="use-custom-settings-for-windows-holographic-for-business-devices-in-intune"></a>Použití vlastního nastavení u zařízení s Windows Holographic for Business v Intune
 
@@ -93,12 +93,12 @@ Následující nastavení jsou užitečná pro zařízení s Windows Holographic
 > |---|---|
 > |./Vendor/MSFT/Policy/Config/Settings/AllowVPN|Celé číslo<br/>0 – Nepovoluje se.<br/>1 – Povoluje se (výchozí).|
 
-### <a name="requireupdatesapproval"></a>[RequireUpdatesApproval](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-requireupdateapproval)
+### <a name="requireupdateapproval"></a>[RequireUpdateApproval](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-requireupdateapproval)
 
 > [!div class="mx-tableFixed"]
 > |OMA-URI|Datový typ|
 > |---|---|
-> |./Vendor/MSFT/Policy/Config/Update/RequireUpdateApproval|Celé číslo<br/>0 – Není nakonfigurováno. Zařízení nainstaluje všechny použitelné aktualizace.<br/>1 – Zařízení nainstaluje jenom aktualizace, které jsou použitelné a jsou také v seznamu schválených aktualizací. Pokud chce oddělení IT řídit nasazení aktualizací na zařízení, třeba když je před nasazením nutné testování, nastavte tuto zásadu na 1.|
+> |./Vendor/MSFT/Policy/Config/Update/RequireUpdateApproval|Toto nastavení je k dispozici v RS5 (Build 17763) a starší. Počínaje 19H1 (Build 18362) použijte [web Windows Update pro firmy](../protect/windows-update-for-business-configure.md).<br/><br/>Celé číslo<br/>0 – Není nakonfigurováno. Zařízení nainstaluje všechny použitelné aktualizace.<br/>1 – Zařízení nainstaluje jenom aktualizace, které jsou použitelné a jsou také v seznamu schválených aktualizací. Pokud chce oddělení IT řídit nasazení aktualizací na zařízení, třeba když je před nasazením nutné testování, nastavte tuto zásadu na 1.|
 
 ### <a name="scheduledinstalltime"></a>[ScheduledInstallTime](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-scheduledinstalltime)
 
@@ -112,7 +112,7 @@ Následující nastavení jsou užitečná pro zařízení s Windows Holographic
 > [!div class="mx-tableFixed"]
 > |OMA-URI|Datový typ|
 > |---|---|
-> |./Vendor/MSFT/Policy/Config/Update/UpdateServiceUrl|String<br/>URL – Zařízení vyhledá aktualizace na serveru WSUS na zadané adrese URL.<br/>Nenakonfigurováno – Zařízení vyhledá aktualizace ve službě Microsoft Update.|
+> |./Vendor/MSFT/Policy/Config/Update/UpdateServiceUrl|Toto nastavení je k dispozici v RS5 (Build 17763) a starší. Počínaje 19H1 (Build 18362) použijte [web Windows Update pro firmy](../protect/windows-update-for-business-configure.md).<br/><br/>String<br/>URL – Zařízení vyhledá aktualizace na serveru WSUS na zadané adrese URL.<br/>Nenakonfigurováno – Zařízení vyhledá aktualizace ve službě Microsoft Update.|
 
 ### <a name="approvedupdates"></a>[ApprovedUpdates](https://docs.microsoft.com/windows/client-management/mdm/update-csp)
 

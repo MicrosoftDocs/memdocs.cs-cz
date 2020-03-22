@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/18/2019
+ms.date: 03/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3724e425ab284d63dbe1e64dcd236509744abe10
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 50d32a76e638d88adc7a72d103c84e73544079cb
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79329403"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084895"
 ---
 # <a name="use-derived-credentials-in-microsoft-intune"></a>Použití odvozených přihlašovacích údajů v Microsoft Intune
 
@@ -106,7 +106,7 @@ Následují klíčové důležité požadavky pro každého podporovaného partn
 
 #### <a name="disa-purebred"></a>DISA purebred
 
-Zkontrolujte [pracovní postup uživatele pro DISA purebred](https://docs.microsoft.com/user-help/enroll-ios-device-disa-purebred). Mezi klíčové požadavky tohoto pracovního postupu patří:
+Zkontrolujte [pracovní postup uživatele pro DISA purebred](https://docs.microsoft.com/mem/intune/user-help/enroll-ios-device-disa-purebred). Mezi klíčové požadavky tohoto pracovního postupu patří:
 
 - Uživatelé potřebují přístup k počítači nebo veřejnému terminálu, kde můžou používat čipovou kartu k ověření vystavitele.
 
@@ -122,7 +122,7 @@ Informace o tom, jak získat a nakonfigurovat aplikaci DISA purebred, najdete v 
 
 #### <a name="entrust-datacard"></a>Entrust Datacard
 
-Zkontrolujte [pracovní postup uživatele pro Entrust Datacard](https://docs.microsoft.com/user-help/enroll-ios-device-entrust-datacard). Mezi klíčové požadavky tohoto pracovního postupu patří:
+Zkontrolujte [pracovní postup uživatele pro Entrust Datacard](https://docs.microsoft.com/mem/intune/user-help/enroll-ios-device-entrust-datacard). Mezi klíčové požadavky tohoto pracovního postupu patří:
 
 - Uživatelé potřebují přístup k počítači nebo veřejnému terminálu, kde můžou používat čipovou kartu k ověření vystavitele.
 
@@ -132,7 +132,7 @@ Zkontrolujte [pracovní postup uživatele pro Entrust Datacard](https://docs.mic
 
 #### <a name="intercede"></a>Intercede
 
-Zkontrolujte [pracovní postup uživatele pro Intercede](https://docs.microsoft.com/user-help/enroll-ios-device-intercede). Mezi klíčové požadavky tohoto pracovního postupu patří:
+Zkontrolujte [pracovní postup uživatele pro Intercede](https://docs.microsoft.com/mem/intune/user-help/enroll-ios-device-intercede). Mezi klíčové požadavky tohoto pracovního postupu patří:
 
 - Uživatelé potřebují přístup k počítači nebo veřejnému terminálu, kde můžou používat čipovou kartu k ověření vystavitele.
 
@@ -221,17 +221,34 @@ Můžete zadat **odvozená pověření** pro následující typy profilů a úč
 Použijte odvozená pověření pro ověřování pomocí certifikátů u webů a aplikací. Postup při doručování odvozených přihlašovacích údajů pro ověřování aplikací:
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+
 2. Vyberte **zařízení** > **konfiguračních profilech** > **vytvořit profil**.
-3. Zadejte následující nastavení:
 
-    - **Název**: zadejte popisný název profilu. Své profily pojmenujte, abyste je později mohli snadno identifikovat. Dobrým názvem profilu je například **odvozená pověření pro profil zařízení s iOS/iPadOS**.
-    - **Popis:** Zadejte popis, který nastavení stručně charakterizuje, a další důležité podrobnosti.
-    - **Platforma**: vyberte **iOS/iPadOS**.
-    - **Typ profilu**: vyberte **odvozené přihlašovací údaje**.
+3. Zadejte následující vlastnosti:
+   - **Platforma**: vyberte platformu zařízení, která obdrží tento profil.
+   - **Profil**: vyberte **odvozené přihlašovací údaje** .
 
-4. Výběrem **OK** uložte změny.
-5. Po dokončení vyberte **OK** > **vytvořit** a vytvořte profil Intune. Po dokončení se Váš profil zobrazí v seznamu **zařízení – konfigurační profily** .
-6. Vyberte nové > **přiřazení**profilu. Vyberte skupiny, které by měly tuto zásadu přijímat.
+4. Vyberte **Vytvořit**.
+
+5. V části **základy**zadejte následující vlastnosti:
+
+   - **Název**: zadejte popisný název profilu. Své profily pojmenujte, abyste je později mohli snadno identifikovat. Dobrým názvem profilu je například **odvozená pověření pro profil zařízení s iOS/iPadOS**.
+   - **Popis**: Zadejte popis profilu. Toto nastavení není povinné, ale doporučujeme ho zadat.
+
+6. Vyberte **Další**.
+
+7. V **nastavení konfigurace**nastavte **použít odvozená pověření pro ověřování aplikace** na **Ano**a pak vyberte **Další**.
+
+8. V části **značky oboru** (volitelné) přiřaďte značku pro filtrování profilu na konkrétní skupiny IT, například `US-NC IT Team` nebo `JohnGlenn_ITDepartment`. Další informace o značkách oboru naleznete v tématu [použití značek RBAC a Scope pro distribuci](../fundamentals/scope-tags.md).
+
+   Vyberte **Další**.
+
+9. V části **přiřazení**vyberte uživatele nebo skupiny, které obdrží váš profil. Další informace o přiřazování profilů najdete v tématu [přiřazení profilů uživatelů a zařízení](../configuration/device-profile-assign.md).
+
+    Vyberte **Další**.
+
+10. V rámci **Revize a vytvoření**zkontrolujte nastavení. Když vyberete vytvořit, vaše změny se uloží a profil se přiřadí. Tato zásada se taky zobrazuje v seznamu profily.
+
  
 Uživatelé obdrží aplikaci nebo e-mailové oznámení v závislosti na nastaveních, která jste zadali při vytváření odvozeného vystavitele přihlašovacích údajů. Oznámení informuje uživatele o spuštění Portál společnosti tak, aby bylo možné zpracovat odvozené zásady pověření.
 

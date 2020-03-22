@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7eb597aec20e8010d8694475d2af5d8033a809f0
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 9c8c78106125b45f52b45cb5fc6494b8e13b7a15
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79329571"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084952"
 ---
 # <a name="what-are-common-ways-to-use-conditional-access-with-intune"></a>Jaké jsou běžné způsoby použití podmíněného přístupu s Intune?
 
@@ -83,7 +83,7 @@ Podmíněný přístup pro počítače poskytuje podobné možnosti jako pro mob
 
 #### <a name="corporate-owned"></a>Ve vlastnictví firmy
 
-- **Připojená místní doména AD:** Tato možnost se běžně používá v organizacích, které jsou dostatečně pohodlné, jak už spravují své počítače prostřednictvím zásad skupiny služby AD nebo Configuration Manager.
+- **Připojeno k hybridní službě Azure AD:** Tato možnost se běžně používá v organizacích, které jsou dostatečně pohodlné, jak už spravují své počítače prostřednictvím zásad skupiny služby AD nebo Configuration Manager.
 
 - **Připojené k doméně Azure AD a Správa Intune:** Tento scénář je určen pro organizace, které mají být nejprve cloudové služby (tedy primárně využívají cloudové služby, s cílem snížit využití místní infrastruktury) nebo pouze Cloud (bez místní infrastruktury). Funkce připojení k Azure AD funguje dobře v hybridním prostředí a umožňuje přístup ke cloudovým i místním aplikacím a prostředkům. Zařízení se připojí k Azure AD a zaregistruje se do Intune, které se dá použít jako kritéria podmíněného přístupu při přístupu k podnikovým prostředkům.
 

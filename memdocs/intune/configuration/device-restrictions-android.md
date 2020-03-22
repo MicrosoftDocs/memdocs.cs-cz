@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/19/2019
+ms.date: 03/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a38a7a0e191990871724e217d84c6bd8babb12dc
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: db3ceb67b0ada19d1679f3bf133305214af8fd9f
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79332331"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80087060"
 ---
 # <a name="android-and-samsung-knox-standard-device-restriction-settings-lists-in-intune"></a>Seznamy nastavení omezení zařízení s Androidem a Samsung KNOX standard v Intune
 
@@ -29,6 +29,10 @@ Tento článek ukazuje všechna nastavení omezení zařízení v Microsoft Intu
 
 >[!TIP]
 >Pokud požadovaná nastavení nejsou k dispozici, možná budete moct zařízení nakonfigurovat pomocí [vlastního profilu](custom-settings-android.md).
+
+## <a name="before-you-begin"></a>Před zahájením
+
+[Vytvořte profil konfigurace zařízení](device-restrictions-configure.md).
 
 ## <a name="general"></a>Obecné
 

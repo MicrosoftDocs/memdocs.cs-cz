@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/19/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 58069b074db2d885ad63f03c4ba5877458bc7bc1
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 8bc627e7b9efb68e8d5cb777b5d8e659b06cab92
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79333011"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086808"
 ---
 # <a name="android-enterprise-device-settings-to-configure-vpn-in-intune"></a>Nastavení zařízení s Androidem Enterprise pro konfiguraci sítě VPN v Intune
 
@@ -35,7 +35,7 @@ Další informace o profilech sítě VPN v Intune najdete v tématu [Profily sí
 
 ## <a name="before-you-begin"></a>Před zahájením
 
-[Vytvořte konfigurační profil zařízení](vpn-settings-configure.md#create-a-device-profile)a vyberte **Android Enterprise**.
+[Vytvořte konfigurační profil zařízení](vpn-settings-configure.md)a vyberte **Android Enterprise**.
 
 ## <a name="device-owner-only"></a>Pouze vlastník zařízení
 

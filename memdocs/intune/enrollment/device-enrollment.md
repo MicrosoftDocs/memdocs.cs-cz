@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c131992d4f9b736aea2653272f81d52da7021ef7
-ms.sourcegitcommit: cd2cbc23b8909df3a000d8ad4140e87052d6de5a
+ms.openlocfilehash: 4aaa8bcee3684c73fa5ec3d488fd3107585dfc61
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79508487"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086177"
 ---
 # <a name="what-is-device-enrollment"></a>Co je registrace zařízení?
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -67,7 +67,7 @@ Standardně se do Intune můžou registrovat zařízení pro všechny platformy.
 
 | **Osobní** | **Metody registrace** | **Vyžadováno resetování** | **Přidružení uživatele** | **Uzamčeno** | **Podrobnosti**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|**Správce zařízení s Androidem**|**Uživatel inicioval prostřednictvím Portál společnosti** | Ne | Ano | Ne | [Další informace](https://docs.microsoft.com/user-help/enroll-device-android-company-portal)|
+|**Správce zařízení s Androidem**|**Uživatel inicioval prostřednictvím Portál společnosti** | Ne | Ano | Ne | [Další informace](https://docs.microsoft.com/mem/intune/user-help/enroll-device-android-company-portal)|
 |**Pracovní profil Android Enterprise**|**Uživatel inicioval prostřednictvím Portál společnosti**| Ne | Ano | Ne | [Další informace](android-work-profile-enroll.md)|
 
 

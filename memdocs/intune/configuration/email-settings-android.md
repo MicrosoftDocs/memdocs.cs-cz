@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/19/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 31310accbaded1e048cb3c5b574557ffcef0335c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 36e17dc12622b3bb95c35a4472556f1c4f31ccd0
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79333059"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80087013"
 ---
 # <a name="android-device-settings-to-configure-email-authentication-and-synchronization-in-intune"></a>Nastavení zařízení s Androidem pro konfiguraci e-mailu, ověřování a synchronizace v Intune
 
@@ -32,25 +32,23 @@ Další informace o e-mailových profilech v Intune najdete v tématu [Konfigura
 
 ## <a name="before-you-begin"></a>Před zahájením
 
-[Vytvořte profil konfigurace zařízení](email-settings-configure.md#create-a-device-profile).
+[Vytvořte profil konfigurace zařízení](email-settings-configure.md).
 
 ## <a name="android-samsung-knox"></a>Android (Samsung Knox)
 
 - **E-mailový server**: Zadejte název hostitele vašeho Exchange serveru. Zadejte například `outlook.office365.com`.
 - **Název účtu**: Zadejte zobrazovaný název e-mailového účtu. Tento název se zobrazuje uživatelům na jejich zařízeních.
 - **Atribut uživatelského jména z AAD**: Toto jméno je atribut, který Intune získá z Azure Active Directory (Azure AD). Intune dynamicky vygeneruje uživatelské jméno, které tento profil používá. Možnosti:
-  - **Hlavní název uživatele**: Získá jméno, například `user1` nebo `user1@contoso.com`.
-  - **Uživatelské jméno**: Získá jen jméno, například `user1`.
-  - **Název účtu SAM**: Vyžaduje doménu, například `domain\user1`. název účtu sAM se používá jenom u zařízení s Androidem.
-
-    Dále zadejte:  
+  - **Hlavní název uživatele**: Získá název, například `user1` nebo `user1@contoso.com`.
+  - **Uživatelské jméno**: získá pouze název, například `user1`.
+  - **Název účtu SAM**: Vyžaduje doménu, například `domain\user1`. název účtu sAM se používá jenom u zařízení s Androidem. Dále zadejte:  
     - **Zdroj názvu domény uživatele**: Zvolte **AAD** (Azure Active Directory) nebo **Vlastní**.
 
       Pokud se rozhodnete získat atributy ze služby **AAD**, zadejte:
-      - **Atribut názvu domény uživatele z AAD**: Zvolte, jestli se má získat atribut **Úplný název domény** nebo **Název NetBIOS** uživatele.
+      - **Atribut názvu domény uživatele z AAD**: vyberte, chcete-li získat **úplný název domény** nebo atribut **názvu NetBIOS** pro uživatele.
 
       Pokud se rozhodnete použít **Vlastní** atributy, zadejte:
-      - **Vlastní název domény, který se má použít**: Zadejte hodnotu, kterou Intune používá pro název domény, například `contoso.com` nebo `contoso`.
+      - **Vlastní název domény, který se má použít**: zadejte hodnotu, kterou Intune používá pro název domény, například `contoso.com` nebo `contoso`.
 
 - **Atribut e-mailové adresy z AAD**: Tento název je atribut e-mailu, který Intune získá z Azure AD. Intune dynamicky generuje e-mailovou adresu, kterou používá tento profil. Možnosti:
   - **Hlavní název uživatele**: jako e-mailová adresa používá úplný hlavní název, jako je například `user1@contoso.com` nebo `user1`.

@@ -17,12 +17,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 889c7ef6d45a51a4aed86bf1a76842feb6f6251a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: b5df63a14f27b657c585eb43e09b02368d969939
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79324407"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084398"
 ---
 # <a name="install-mobile-threat-defense"></a>Instalace ochrany před mobilními hrozbami   
 
@@ -79,9 +79,9 @@ Další informace o registraci zařízení najdete v tématu [registrace osobní
 Pokud se instalace nezdařila, obraťte se na pracovníky podpory IT. Pokud chcete najít kontaktní údaje vaší organizace, navštivte [web portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980) .  
 
 Můžete také odeslat protokoly aplikací vaší osobě podpory IT a poskytnout jim tak více kontextu instalace.  
-* Uživatelé Androidu: [nahrání a odeslání e-mailů protokolů](https://docs.microsoft.com/user-help/send-logs-to-your-it-admin-by-email-android) z portál společnosti.   
+* Uživatelé Androidu: [nahrání a odeslání e-mailů protokolů](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android) z portál společnosti.   
 
-* Uživatelé zařízení s iOS: [načítají a odesílají protokoly](https://docs.microsoft.com/intune/apps/manage-microsoft-edge#use-microsoft-edge-on-ios-to-access-managed-app-logs) z Microsoft Edge pro iOS.  
+* Uživatelé zařízení s iOS: [načítají a odesílají protokoly](https://docs.microsoft.com/intune/apps/manage-microsoft-edge#use-microsoft-edge-to-access-managed-app-logs) z Microsoft Edge pro iOS.  
 
 ## <a name="resolve-a-threat"></a>Vyřešení hrozby  
 Pokud hrozba překročí definovanou úroveň hrozby vaší organizace, bude vaše organizace:  

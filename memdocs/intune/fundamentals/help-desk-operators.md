@@ -17,12 +17,12 @@ ms.reviewer: sumitp
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2ec804aa200e35391c5b283d6e26ba87002e271f
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 07aceda512163513632d124d3e17d1041069b229
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79331459"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80085819"
 ---
 # <a name="use-the-troubleshooting-portal-to-help-users-at-your-company"></a>Použití portálu pro řešení potíží k poskytování pomoci uživatelům ve vaší společnosti
 
@@ -65,7 +65,7 @@ V podokně **Řešení potíží** můžete zkontrolovat informace o uživateli.
 | ---  | ---  | ---         |
 | 1.   | Stav účtu  | Zobrazuje stav aktuálního tenanta Intune, například **Aktivní** nebo **Neaktivní**.       |
 | 2.   | Výběr uživatele  | Jméno aktuálně vybraného uživatele. Kliknutím na **Změnit uživatele** zvolíte nového uživatele.       |
-| 3.   | Stav uživatele  | Zobrazí stav uživatelovy licence Intune, počet zařízení, dodržování předpisů u každého zařízení, počet aplikací a dodržování předpisů u aplikací.       |
+| 3.   | Stav uživatele  | Zobrazuje stav licence Intune uživatele, počet zařízení a dodržování předpisů pro každé zařízení.       |
 | 4.   | Informace o uživateli  | Pomocí seznamu můžete vybrat podrobnosti, které chcete v podokně zkontrolovat. <br>Můžete vybrat: <ul><li>Klientské aplikace<li>Zásady slučitelnosti<li> Zásady konfigurace<li>Zásady ochrany aplikace <li>Omezení registrace</ul>      |
 | 5.   | Členství ve skupině  | Zobrazí aktuální skupiny, ve kterých je vybraný uživatel členem.       |
 

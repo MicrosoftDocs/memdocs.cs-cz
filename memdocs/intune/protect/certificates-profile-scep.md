@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/13/2019
+ms.date: 03/20/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a7e8d625505383caacbbefd67402d46c04c72c6e
-ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
+ms.openlocfilehash: 10accc0c59dc0d97e2f3ac4739335dd1e2cd4cba
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79526627"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084966"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>Vytvoření a přiřazení profilů certifikátů SCEP v Intune
 
@@ -35,28 +35,31 @@ Až [nakonfigurujete infrastrukturu](certificates-scep-configure.md) pro podporu
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Vyberte **zařízení** > **konfigurační profil** > **vytvořit profil**.
+2. Vyberte **zařízení** > **konfigurační profily** > **vytvořit profil**.
 
 3. Zadejte následující vlastnosti:
+   - **Platforma**: vyberte platformu zařízení.
+   - **Profil**: vyberte **certifikát SCEP** .
 
-4. Zadejte **název** a **popis** profilu certifikátu SCEP.
+     Pro platformu **Android Enterprise** se *typ profilu* dělí na dvě kategorie, *jenom vlastníkem zařízení* a *pracovní profil*. Nezapomeňte vybrat správný profil certifikátu SCEP pro zařízení, která spravujete.  
 
-5. V rozevíracím seznamu **platforma** vyberte [podporovanou platformu zařízení](certificates-configure.md#supported-platforms-and-certificate-profiles) pro tento certifikát SCEP.
+     Profily certifikátů SCEP pro profil *jenom vlastníkem zařízení* mají následující omezení:
 
-6. V rozevíracím seznamu **typ profilu** vyberte **certifikát SCEP**.  
+      1. V části monitorování není oznamování certifikátů k dispozici pro profily certifikátů SCEP vlastníka zařízení.
 
-   Pro platformu **Android Enterprise** se *typ profilu* dělí na dvě kategorie, *jenom vlastníkem zařízení* a *pracovní profil*. Nezapomeňte vybrat správný profil certifikátu SCEP pro zařízení, která spravujete.  
+      2. Intune nemůžete použít k odvolání certifikátů, které se zřídily profily certifikátů SCEP pro vlastníky zařízení. Můžete spravovat odvolání prostřednictvím externího procesu nebo přímo s certifikační autoritou.
 
-   Profily certifikátů SCEP pro profil *jenom vlastníkem zařízení* mají následující omezení:
+      3. U vyhrazených zařízení s Androidem Enterprise se profily certifikátů SCEP podporují jenom v konfiguraci sítě Wi-Fi a jenom ověřování.  Profily certifikátů SCEP na vyhrazených zařízeních s Androidem Enterprise se nepodporují pro ověřování pomocí sítě VPN nebo aplikací.
 
-   1. V části monitorování není oznamování certifikátů k dispozici pro profily certifikátů SCEP vlastníka zařízení.
+4. Vyberte **Vytvořit**.
 
-   2. Intune nemůžete použít k odvolání certifikátů, které se zřídily profily certifikátů SCEP pro vlastníky zařízení. Můžete spravovat odvolání prostřednictvím externího procesu nebo přímo s certifikační autoritou. 
+5. V části **základy**zadejte následující vlastnosti:
+   - **Název**: zadejte popisný název profilu. Své profily pojmenujte, abyste je později mohli snadno identifikovat. Dobrým názvem profilu je například *profil SCEP pro celou firmu*.
+   - **Popis**: Zadejte popis profilu. Toto nastavení není povinné, ale doporučujeme ho zadat.
 
-   4. U vyhrazených zařízení s Androidem Enterprise se profily certifikátů SCEP podporují jenom v konfiguraci sítě Wi-Fi a jenom ověřování.  Profily certifikátů SCEP na vyhrazených zařízeních s Androidem Enterprise se nepodporují pro ověřování pomocí sítě VPN nebo aplikací.   
+6. Vyberte **Další**.
 
-   
-7. Vyberte **Nastavení**a pak dokončete následující konfigurace:
+7. V **nastavení konfigurace**dokončete následující konfigurace:
 
    - **Typ certifikátu**:
 
@@ -223,7 +226,21 @@ Až [nakonfigurujete infrastrukturu](certificates-scep-configure.md) pro podporu
 
      Zadejte jednu nebo více adres URL pro servery NDES, které vystavují certifikáty prostřednictvím SCEP. Zadejte například něco jako *https://ndes.contoso.com/certsrv/mscep/mscep.dll* . V případě potřeby můžete přidat další adresy URL SCEP pro vyrovnávání zatížení, protože adresy URL se v profilu náhodně přidávají do zařízení. Pokud jeden ze serverů SCEP není dostupný, požadavek SCEP selže a je možné, že u pozdějších vrácení se změnami zařízení může být žádost o certifikát vytvořená na stejném serveru, který je mimo provoz.
 
-8. Vyberte **OK**a pak vyberte **vytvořit**. Profil se vytvoří a zobrazí se v seznamu *Konfigurace zařízení – profily* .
+8. Vyberte **Další**.
+
+9. V části **značky oboru** (volitelné) přiřaďte značku pro filtrování profilu na konkrétní skupiny IT, například `US-NC IT Team` nebo `JohnGlenn_ITDepartment`. Další informace o značkách oboru naleznete v tématu [použití značek RBAC a Scope pro distribuci](../fundamentals/scope-tags.md).
+
+   Vyberte **Další**.
+
+10. V části **přiřazení**vyberte uživatele nebo skupiny, které obdrží váš profil. Další informace o přiřazování profilů najdete v tématu [přiřazení profilů uživatelů a zařízení](../configuration/device-profile-assign.md).
+
+    Vyberte **Další**.
+
+11. (*Platí jenom pro Windows 10*) V části **pravidla použitelnosti**zadejte pravidla použitelnosti pro upřesnění přiřazení tohoto profilu. Můžete vybrat, že chcete profil přiřadit nebo nepřiřadit, na základě edice nebo verze operačního systému zařízení.
+
+   Další informace najdete v tématu [pravidla použitelnosti](../configuration/device-profile-create.md#applicability-rules) v tématu *Vytvoření profilu zařízení v Microsoft Intune*.
+
+12. V rámci **Revize a vytvoření**zkontrolujte nastavení. Když vyberete vytvořit, vaše změny se uloží a profil se přiřadí. Tato zásada se taky zobrazuje v seznamu profily.
 
 ### <a name="avoid-certificate-signing-requests-with-escaped-special-characters"></a>Vyhnout se žádostem o podepsání certifikátu pomocí řídicích speciálních znaků
 

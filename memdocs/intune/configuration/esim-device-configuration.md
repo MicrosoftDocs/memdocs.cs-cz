@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/19/2019
+ms.date: 03/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,18 +16,22 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7f12282acebaa90d3afe868bb28743444d01001d
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: e4e9a37e2dbb725a06d304d345fd085dabbc5e14
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79326679"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086995"
 ---
 # <a name="configure-esim-cellular-profiles-in-intune---public-preview"></a>Konfigurace mobilních profilů eSIM v Intune – verze Public Preview
 
 Technologie eSIM je zabudovaný čip SIM, který vám na zařízení s podporou eSIM, jako je [Surface LTE Pro](https://www.microsoft.com/surface/business/surface-pro), umožňuje připojit se prostřednictvím mobilního datového připojení k internetu. Když využijete technologii eSIM, není nutné pořizovat SIM kartu od mobilního operátora. Při cestování po světě navíc můžete jednoduše přecházet mezi mobilními operátory a datovými tarify a zůstat v kontaktu se svými blízkými.
 
 Můžete mít například mobilní datový tarif pro práci a jiný datový tarif od jiného mobilního operátora pro osobní použití. Když cestujete, můžete přístup k internetu získat vyhledáním mobilních operátorů s datovými tarify v dané oblasti.
+
+Tato funkce platí pro:
+
+- Windows 10 a novější
 
 Do Intune můžete importovat jednorázové aktivační kódy poskytnuté vaším mobilním operátorem. Pokud chcete mobilní datové tarify konfigurovat na modulu eSIM, nasaďte tyto aktivační kódy do zařízení s podporou eSIM. Když Intune nainstaluje aktivační kód, hardwarový modul eSIM použije data v aktivačním kódu ke kontaktování mobilního operátora. Po dokončení se profil eSIM stáhne do zařízení a nakonfiguruje se pro připojení k mobilní síti.
 

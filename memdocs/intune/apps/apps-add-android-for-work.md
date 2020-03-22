@@ -1,12 +1,12 @@
 ---
-title: Přiřazení spravovaných aplikací Google Play k zařízením s Androidem Enterprise
+title: Přidání a přiřazení spravovaných aplikací Google Play k zařízením s Androidem Enterprise
 titleSuffix: Microsoft Intune
 description: Naučte se synchronizovat a přiřadit aplikace zařízením s Androidem Enterprise ze spravovaného Google Play Storu.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/22/2020
+ms.date: 03/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dec2b1ace9b9b8a5c27ef468969a52f05e1bdcca
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 61509f65ba43d779c1dd2006ae9ed5e0da9ba84d
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79326051"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80083398"
 ---
 # <a name="add-managed-google-play-apps-to-android-enterprise-devices-with-intune"></a>Přidání spravovaných aplikací Google Play do zařízení s Androidem Enterprise pomocí Intune
 
@@ -183,7 +183,7 @@ Pokud jste aplikaci schválili ze Storu a nevidíte ji v úloze **aplikace** , v
 
 ## <a name="assigning-a-managed-google-play-app-to-android-enterprise-work-profile-devices"></a>Přiřazení spravované aplikace Google Play k zařízením s pracovním profilem v systému Android Enterprise
 
-Když se aplikace zobrazí v uzlu **licence aplikace** podokna úloh **aplikace** , můžete [ji přiřadit stejně jako jakoukoli jinou aplikaci](/intune-azure/manage-apps/deploy-apps) , a to tak, že aplikaci přiřadíte skupinám uživatelů.
+Když se aplikace zobrazí v uzlu **licence aplikace** podokna úloh **aplikace** , můžete [ji přiřadit stejně jako jakoukoli jinou aplikaci](/mem/intune/apps/apps-deploy) , a to tak, že aplikaci přiřadíte skupinám uživatelů.
 
 Po přiřazení aplikace je nainstalovaná (nebo dostupná pro instalaci) na zařízeních uživatelů, na které jste cíleni. Uživatel zařízení nebude požádán o schválení instalace. Další informace o zařízeních s pracovním profilem Android Enterprise najdete v tématu [Nastavení registrace zařízení s pracovním profilem v Androidu Enterprise](../enrollment/android-work-profile-enroll.md). 
 

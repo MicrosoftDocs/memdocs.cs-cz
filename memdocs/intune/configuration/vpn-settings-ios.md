@@ -1,11 +1,11 @@
 ---
 title: Konfigurace nastavení sítě VPN pro zařízení s iOS nebo iPadOS v Microsoft Intune – Azure | Microsoft Docs
-description: Přidejte nebo vytvořte konfigurační profil sítě VPN pomocí nastavení konfigurace virtuální privátní sítě (VPN), včetně podrobností o připojení, metod ověřování a rozděleného tunelování v základní nastavení. vlastní nastavení sítě VPN s identifikátorem a páry klíč-hodnota; nastavení sítě VPN pro jednotlivé aplikace, která zahrnují adresy URL Safari, a sítě VPN na vyžádání se servery SSID nebo doménami hledání DNS. a nastavení proxy serveru pro zahrnutí konfiguračního skriptu, adresy IP nebo plně kvalifikovaného názvu domény a portu TCP v Microsoft Intune na zařízeních se systémem iOS/iPadOS.
+description: Přidejte nebo vytvořte profil konfigurace sítě VPN na zařízeních s iOS/iPadOS pomocí nastavení konfigurace virtuální privátní sítě (VPN). Nakonfigurujte podrobnosti připojení, metody ověřování, dělené tunelové propojení, vlastní nastavení sítě VPN s páry identifikátor, klíč-hodnota, nastavení sítě VPN pro jednotlivé aplikace, které zahrnují adresy URL Safari, a sítě VPN na vyžádání, které budou zahrnovat nastavení proxy serveru. konfigurační skript, adresa IP nebo plně kvalifikovaný název domény a port TCP v Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/17/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 80ff24193c607003889c2246bb9199db795f1623
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 74e889419dcaaa75c2a31fe16931dddd84d1a967
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79331899"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086539"
 ---
 # <a name="add-vpn-settings-on-ios-and-ipados-devices-in-microsoft-intune"></a>Přidání nastavení sítě VPN v zařízeních s iOS a iPadOS v Microsoft Intune
 
@@ -82,10 +82,10 @@ Nastavení, která jsou v následujícím seznamu, jsou ovlivněná zvoleným ty
 
 - **Povolit řízení přístupu k síti (NAC)** (Cisco AnyConnect, Citrix SSO, F5 Access): když zvolíte **Souhlasím, ID**zařízení je zahrnuté v profilu sítě VPN. Toto ID se dá použít k ověřování sítě VPN pro povolení nebo zákaz přístupu k síti.
 
-    **Při použití Cisco AnyConnect s ISE**nezapomeňte:
+  **Při použití Cisco AnyConnect s ISE**nezapomeňte:
 
-    - Pokud jste to ještě neudělali, Integrujte ISE do Intune pro NAC, jak je popsáno v části **konfigurace Microsoft Intune jako MDM Server** v [příručce pro správce modulu Cisco identity Services](https://www.cisco.com/c/en/us/td/docs/security/ise/2-1/admin_guide/b_ise_admin_guide_21/b_ise_admin_guide_20_chapter_01000.html).
-    - Povolí NAC v profilu sítě VPN.
+  - Pokud jste to ještě neudělali, Integrujte ISE do Intune pro NAC, jak je popsáno v tématu **konfigurace Microsoft Intune jako MDM Server** v [příručce pro správce služby Cisco identity Services Engine](https://www.cisco.com/c/en/us/td/docs/security/ise/2-1/admin_guide/b_ise_admin_guide_21/b_ise_admin_guide_20_chapter_01000.html).
+  - Povolí NAC v profilu sítě VPN.
 
   **Při použití jednotného přihlašování pro Citrix s bránou**nezapomeňte:
 
@@ -107,6 +107,34 @@ Nastavení, která jsou v následujícím seznamu, jsou ovlivněná zvoleným ty
 ## <a name="ikev2-settings"></a>Nastavení IKEv2
 
 Tato nastavení se použijí, když zvolíte **Typ připojení** > **IKEv2**.
+
+- **Vždycky zapnutá síť VPN**: **Povolit** nastaví klienta VPN tak, aby se automaticky připojoval a znovu připojil k síti VPN. Neustále aktivní připojení VPN zůstávají ve spojení nebo se ihned připojí, jakmile uživatel zamkne zařízení, zařízení se restartuje nebo se změní bezdrátová síť. Pokud je nastavené na **Zakázat** (výchozí), je vždycky zapnutá síť VPN pro všechny klienty VPN. Pokud je tato možnost povolená, nakonfigurujte taky:
+
+  - **Síťové rozhraní**: všechna nastavení IKEv2 se vztahují jenom na síťové rozhraní, které zvolíte. Možnosti:
+    - **Wi-Fi a mobilní síť** (výchozí): nastavení IKEv2 se vztahuje na rozhraní Wi-Fi a mobilní rozhraní v zařízení.
+    - **Mobilní**: nastavení IKEv2 se vztahuje jenom na mobilní rozhraní na zařízení. Tuto možnost vyberte, pokud nasazujete do zařízení s vypnutým nebo odebraným rozhraním Wi-Fi.
+    - **Wi-Fi**: nastavení IKEv2 se vztahuje jenom na rozhraní Wi-Fi na zařízení.
+  - **Uživatel, který zakáže konfiguraci sítě VPN**: **možnost Povolit** umožňuje uživatelům vypnout funkci Always On VPN. **Disable** (výchozí) zabrání uživatelům v jeho vypnutí. Výchozí hodnota tohoto nastavení je nejbezpečnější možnost.
+  - **Hlasová pošta**: vyberte, co se stane s přenosem pomocí hlasové pošty, pokud je povolená možnost vždycky zapnuto Možnosti:
+    - **Vynutit síťový provoz prostřednictvím sítě VPN** (výchozí nastavení): Toto nastavení představuje nejbezpečnější možnost.
+    - **Povolení předávání síťového provozu mimo VPN**
+    - **Odpojit síťový provoz**
+  - Postup **tisku**: vyberte, co se stane s přenosem v provozu, pokud je povolená možnost vždycky zapnutá síť VPN. Možnosti:
+    - **Vynutit síťový provoz prostřednictvím sítě VPN** (výchozí nastavení): Toto nastavení představuje nejbezpečnější možnost.
+    - **Povolení předávání síťového provozu mimo VPN**
+    - **Odpojit síťový provoz**
+  - **Mobilní služby**: v iOS 13.0 + vyberte, co se stane s mobilními přenosy, pokud je povolená možnost vždycky zapnutá síť VPN. Možnosti:
+    - **Vynutit síťový provoz prostřednictvím sítě VPN** (výchozí nastavení): Toto nastavení představuje nejbezpečnější možnost.
+    - **Povolení předávání síťového provozu mimo VPN**
+    - **Odpojit síťový provoz**
+  - **Povolení provozu z nenativních bezplatných síťových aplikací k předávání mimo síť VPN: v neintegrované**síti se obvykle nachází v restauracích a hotelových sítích Wi-Fi. Možnosti:
+    - **Ne**: vynucuje provoz všech nedobrovolných síťových přenosů (CN) prostřednictvím tunelového připojení VPN.
+    - **Ano, všechny aplikace**: umožňuje, aby všechny přenosy aplikace propojené sítě VPN nepoužívaly.
+    - **Ano, konkrétní aplikace**: **přidá** seznam aplikací propojené sítě, jejichž provoz může obejít síť VPN. Zadejte identifikátory sady prostředků aplikace CN. Zadejte například `com.contoso.app.id.package`.
+
+  - **Provoz z neobsluhované aplikace weblist, který se má předat mimo VPN**: vestavěný weblist je integrovaný webový prohlížeč, který zpracovává přihlašovacího přihlášení. Při použití této **možnost povolíte** , aby aplikace prohlížeče mohla obejít síť VPN. **Disable** (výchozí) vynutí provoz na weblist, aby používal síť VPN Always On. Výchozí hodnota je nejbezpečnější možnost.
+  - **Interval kontroly udržení adres (NAT)** (v sekundách): Pokud chcete zůstat připojení k síti VPN, zařízení zachová aktivní síťové pakety. Zadejte hodnotu v sekundách, jak často se tyto pakety odesílají, od 20-1440. Zadejte například hodnotu `60` pro odeslání síťových paketů do sítě VPN každých 60 sekund. Ve výchozím nastavení je tato hodnota nastavená na `110` sekund.
+  - Přesměrovat nastavení protokolu **NAT na hardware, když je zařízení v režimu spánku**: když je zařízení v režimu spánku, **Povolit** (výchozí) NAT nepřetržitě odesílá pakety Keep-Alive, takže zařízení zůstane připojené k síti VPN. **Disable** tuto funkci vypne.
 
 - **Vzdálený identifikátor**: zadejte síťovou IP adresu, plně kvalifikovaný název domény, USERFQDN nebo ASN1DN serveru IKEv2. Zadejte například `10.0.0.3` nebo `vpn.contoso.com`. Obvykle zadáváte stejnou hodnotu jako [**název připojení**](#base-vpn-settings) (v tomto článku). Ale závisí na nastavení serveru IKEv2.
 
@@ -194,7 +222,7 @@ Tato nastavení se použijí, když zvolíte **Typ připojení** > **IKEv2**.
   - **Test řetězce adresy URL**: Toto nastavení je volitelné. Zadejte adresu URL, kterou pravidlo použije pro účely testování. Pokud zařízení přistupuje k této adrese URL bez přesměrování, spustí se připojení VPN. A zařízení se připojí k cílové adrese URL. Uživatel neuvidí testovací web řetězce adresy URL.
 
     Například test řetězce adresy URL je audit URL webového serveru, který kontroluje dodržování předpisů zařízením před připojením k síti VPN. Adresa URL taky testuje schopnost sítě VPN připojit se k lokalitě předtím, než se zařízení připojí k cílové adrese URL prostřednictvím sítě VPN.
-.
+
   - **Akce domény**: Zvolte jednu z následujících možností:
     - Připojit v případě potřeby
     - Nepřipojovat

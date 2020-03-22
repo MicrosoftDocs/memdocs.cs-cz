@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/22/2020
+ms.date: 03/12/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3fc6b9fc427ab6e0dc0488061378e78060527676
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: b30d2a3ef7c85557222aa39740417a1a6fd463f1
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79332367"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084129"
 ---
 # <a name="add-web-apps-to-microsoft-intune"></a>Přidání webových aplikací do Microsoft Intune
 
@@ -37,9 +37,10 @@ Intune vytvoří zástupce webové aplikace na zařízení uživatele. Pro zař�
 
 > [!Note]
 > Aby bylo možné spouštět webové aplikace, musí být na zařízení uživatele nainstalován prohlížeč. 
-
-> [!Note]
-> Pro zařízení s Androidem Enterprise najdete informace v tématu [spravované Google Play webové odkazy](apps-add-android-for-work.md#managed-google-play-web-links) .
+> 
+> Pro zařízení s Androidem Enterprise najdete informace v tématu [spravované Google Play webové odkazy](apps-add-android-for-work.md#managed-google-play-web-links).
+> 
+> V případě zařízení se systémem iOS se nové webové klipy (připnuté webové aplikace) otevřou v Microsoft Edge místo Intune Managed Browser, pokud je to potřeba pro otevření v chráněném prohlížeči. U starších webových klipů pro iOS je nutné tyto webové klipy změnit na místo toho, aby je bylo možné otevřít v Microsoft Edge, Managed Browser.
 
 ## <a name="add-a-web-app-to-intune"></a>Přidání webové aplikace do Intune
 Pokud chcete přidat aplikaci do Intune v podobě zástupce aplikace na webu, postupujte takto:

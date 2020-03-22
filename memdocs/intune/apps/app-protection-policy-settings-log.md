@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/09/2020
+ms.date: 03/17/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,21 +18,21 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fe508dac691f922ec638709e04d6d4dd9f47f078
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: f58c20731395c95e532e28165553743fdef701e9
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79326127"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80083560"
 ---
 # <a name="review-client-app-protection-logs"></a>Kontrola protokolů ochrany klientské aplikace
 
 Přečtěte si informace o nastaveních, která můžete zkontrolovat v protokolech ochrany aplikace. Přístup k protokolům tím, že povolíte diagnostiku Intune v mobilním klientovi. 
 
 Proces povolení a shromažďování protokolů se u jednotlivých platforem liší:
-- **zařízení se systémem iOS/iPadOS** – ke shromažďování protokolů použijte Microsoft Edge pro iOS/iPadOS. Podrobnosti najdete v tématu [Správa webového přístupu pomocí Microsoft Edge s Microsoft Intune](manage-microsoft-edge.md#use-microsoft-edge-on-ios-to-access-managed-app-logs). 
+- **zařízení se systémem iOS/iPadOS** – ke shromažďování protokolů použijte Microsoft Edge pro iOS/iPadOS. Podrobnosti najdete v tématu [Správa webového přístupu pomocí Microsoft Edge s Microsoft Intune](manage-microsoft-edge.md#use-microsoft-edge-to-access-managed-app-logs). 
 - **Zařízení s Windows 10** – použijte *MDMDiag* a protokoly událostí. Podívejte se na téma [Diagnostika chyb MDM ve Windows 10](https://docs.microsoft.com/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10) v obsahu správy klientů Windows a v blogu [řešení potíží s chybami zásad Windows 10 Intune](https://blogs.technet.microsoft.com/configmgrdogs/2018/08/09/troubleshooting-windows-10-intune-policy-failures/).
-- **Zařízení s Androidem** – žádná diagnostická data pro zásady ochrany aplikací (aplikace) na zařízeních s Androidem.
+- **Zařízení s Androidem** – k shromažďování protokolů použijte Microsoft Edge pro Android. Podrobnosti najdete v tématu [Správa webového přístupu pomocí Microsoft Edge s Microsoft Intune](manage-microsoft-edge.md#use-microsoft-edge-to-access-managed-app-logs). 
 
 Následující tabulka uvádí název nastavení zásad ochrany aplikací a podporované hodnoty, které jsou zaznamenány v protokolu. Kromě toho každé nastavení určuje nastavení zásad, které najdete v rámci portálu Microsoft Endpoint Manager. Podrobné informace o jednotlivých nastaveních najdete v tématu [nastavení zásad ochrany aplikací pro iOS/iPadOS](app-protection-policy-settings-ios.md).
 

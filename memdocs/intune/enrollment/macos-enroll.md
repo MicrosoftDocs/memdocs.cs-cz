@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1066e2d86a2c3be4ad4d55a0fd2bbbac03066cc6
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 7538cce4b116098db21e89d491476e8e0cd7f4e5
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79332831"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086080"
 ---
 # <a name="set-up-enrollment-for-macos-devices-in-intune"></a>Nastavení registrace pro zařízení s macOSem v Intune
 
@@ -51,7 +51,7 @@ Uživatelům můžete umožnit registraci vlastních osobních zařízení do sp
 - přechodem na [web Portál společnosti](https://portal.manage.microsoft.com) nebo
 - Stahuje se aplikace Portál společnosti Mac na adrese [aka.MS/EnrollMyMac](https://aka.ms/EnrollMyMac).
 
-Uživatelům můžete také poslat odkaz na postup online registrace: [registrace zařízení MacOS v Intune](https://docs.microsoft.com/user-help/enroll-your-device-in-intune-macos).
+Uživatelům můžete také poslat odkaz na postup online registrace: [registrace zařízení MacOS v Intune](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-in-intune-macos-cp).
 
 Informace o dalších úlohách koncových uživatelů najdete v článcích:
 

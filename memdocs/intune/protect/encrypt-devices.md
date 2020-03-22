@@ -17,12 +17,12 @@ ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: ab825416226ef0b395862ae26a934013136ca61b
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: ac81ceced473eacc32a3fca566f7c36eb7a262e2
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79329379"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084878"
 ---
 # <a name="use-device-encryption-with-intune"></a>Použití šifrování zařízení s Intune
 
@@ -97,7 +97,7 @@ Jakmile Intune zašifruje zařízení macOS s trezorem souborů, můžete si z w
 
 ### <a name="retrieve-personal-recovery-key-from-mem-encrypted-macos-devices"></a>Načtení osobního obnovovacího klíče ze zařízení s macOS šifrovaným zařízením MEM
 
-Koncoví uživatelé načtou svůj osobní obnovovací klíč (klíč trezoru) pomocí aplikace Portál společnosti pro iOS. Zařízení, které má osobní obnovovací klíč, musí být zaregistrované v Intune a zašifrované pomocí trezoru služby prostřednictvím Intune. Pomocí aplikace Portál společnosti pro iOS může koncový uživatel otevřít webovou stránku, která obsahuje klíč pro osobní obnovení trezoru souborů. Obnovovací klíč můžete z Intune načíst taky tak, že vyberete **zařízení** > *šifrovaných a zaregistrovaných zařízení MacOS* > **získat obnovovací klíč**. 
+Koncoví uživatelé mohou načíst svůj osobní obnovovací klíč (klíč trezoru) pomocí aplikace Portál společnosti pro iOS, aplikace pro Android Portál společnosti nebo prostřednictvím aplikace Intune pro Android. Zařízení, které má osobní obnovovací klíč, musí být zaregistrované v Intune a zašifrované pomocí trezoru služby prostřednictvím Intune. Pomocí aplikace Portál společnosti pro iOS, aplikace pro Android Portál společnosti, aplikace Intune pro Android nebo webu Portál společnosti může koncový uživatel zobrazit obnovovací klíč **trezoru úložiště** , který je potřebný pro přístup k zařízením Mac. Koncoví uživatelé můžou vybrat **zařízení** > *šifrovaných a zaregistrovaných zařízení MacOS* > **získat obnovovací klíč**. V prohlížeči se zobrazí webová Portál společnosti a zobrazí se obnovovací klíč. 
 
 ## <a name="bitlocker-encryption-for-windows-10"></a>Šifrování BitLockeru pro Windows 10
 

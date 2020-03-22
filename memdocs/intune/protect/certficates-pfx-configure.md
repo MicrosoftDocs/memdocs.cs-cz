@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/25/2020
+ms.date: 03/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: caeeb332f4a7c8c124e40537041b8aef8d219240
-ms.sourcegitcommit: b5a9ce31de743879d2a6306cea76be3a093976bb
+ms.openlocfilehash: 94e170e01a1ede01a94b2ca3f09d8530f97335a3
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79372615"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80085008"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>Konfigurace a používání certifikátů PKCS pomocí Intune
 
@@ -175,27 +175,42 @@ K ověření zařízení pomocí sítě VPN, Wi-Fi nebo jiných prostředků pot
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Vyberte **zařízení** > **konfiguračních profilech** > **vytvořit profil**.
-
-   ![Přejděte na Intune a vytvořte nový profil důvěryhodného certifikátu.](./media/certficates-pfx-configure/certificates-pfx-configure-profile-new.png)
+2. Vyberte **zařízení** > **konfigurační profily** > **vytvořit profil**.
 
 3. Zadejte následující vlastnosti:
+   - **Platforma**: vyberte platformu zařízení, která obdrží tento profil.
+   - **Profil**: vyberte **důvěryhodný certifikát** .
+  
+4. Vyberte **Vytvořit**.
 
-    - Zadejte **Název** profilu.
-    - Volitelně můžete nastavit popis.
-    - Zadejte **Platformu**, na kterou se má profil nasadit.
-    - Nastavte **Typ profilu** na **Důvěryhodný certifikát**.
+5. V části **základy**zadejte následující vlastnosti:
+   - **Název**: zadejte popisný název profilu. Své profily pojmenujte, abyste je později mohli snadno identifikovat. Dobrým názvem profilu je například *profil důvěryhodného certifikátu pro celou firmu*.
+   - **Popis**: Zadejte popis profilu. Toto nastavení není povinné, ale doporučujeme ho zadat.
 
-4. Vyberte **Nastavení**a zadejte soubor. cer kořenový certifikát certifikační autority, který jste předtím exportovali.
+6. Vyberte **Další**.
+
+7. V části **nastavení konfigurace**zadejte soubor. cer kořenový certifikát certifikační autority, který jste předtím exportovali.
 
    > [!NOTE]
-   > V závislosti na platformě, kterou jste zvolili v **kroku 2**, můžete nebo nemusíte mít možnost vybrat **cílové úložiště** certifikátu.
+   > V závislosti na platformě, kterou jste zvolili v **kroku 3**, můžete nebo nemusíte mít možnost vybrat **cílové úložiště** certifikátu.
 
    ![Vytvoření profilu a nahrání důvěryhodného certifikátu](./media/certficates-pfx-configure/certificates-pfx-configure-profile-fill.png)
 
-5. Vyberte **OK** > **Vytvořit** a profil uložte.
+8. Vyberte **Další**.
 
-6. Informace o přiřazení nového profilu jednomu nebo více zařízením najdete v článku o [přiřazení profilů zařízení v Microsoft Intune](../configuration/device-profile-assign.md).
+9. V části **značky oboru** (volitelné) přiřaďte značku pro filtrování profilu na konkrétní skupiny IT, například `US-NC IT Team` nebo `JohnGlenn_ITDepartment`. Další informace o značkách oboru naleznete v tématu [použití značek RBAC a Scope pro distribuci](../fundamentals/scope-tags.md).
+
+   Vyberte **Další**.
+
+10. V části **přiřazení**vyberte uživatele nebo skupiny, které obdrží váš profil. Další informace o přiřazování profilů najdete v tématu [přiřazení profilů uživatelů a zařízení](../configuration/device-profile-assign.md).
+
+    Vyberte **Další**.
+
+11. (*Platí jenom pro Windows 10*) V části **pravidla použitelnosti**zadejte pravidla použitelnosti pro upřesnění přiřazení tohoto profilu. Můžete vybrat, že chcete profil přiřadit nebo nepřiřadit, na základě edice nebo verze operačního systému zařízení.
+
+  Další informace najdete v tématu [pravidla použitelnosti](../configuration/device-profile-create.md#applicability-rules) v tématu *Vytvoření profilu zařízení v Microsoft Intune*.
+
+12. V rámci **Revize a vytvoření**zkontrolujte nastavení. Když vyberete vytvořit, vaše změny se uloží a profil se přiřadí. Tato zásada se taky zobrazuje v seznamu profily.
 
 ## <a name="create-a-pkcs-certificate-profile"></a>Vytvoření profilu certifikátu PKCS
 
@@ -204,13 +219,25 @@ K ověření zařízení pomocí sítě VPN, Wi-Fi nebo jiných prostředků pot
 2. Vyberte **zařízení** > **konfigurační profily** > **vytvořit profil**.
 
 3. Zadejte následující vlastnosti:
+   - **Platforma**: vyberte platformu zařízení. Možnosti:
+     - Správce zařízení s Androidem
+     - Jenom Android Enterprise > vlastník zařízení
+     - Jenom pracovní profil pro Android Enterprise >
+     - iOS/iPadOS
+     - macOS
+     - Windows 10 a novější
+   - **Profil**: vyberte **certifikát PKCS** .
 
-    - Zadejte **Název** profilu.
-    - Volitelně můžete nastavit popis.
-    - Zadejte **Platformu**, na kterou se má profil nasadit.
-    - Nastavte **Typ profilu** na **Certifikát PKCS**.
+   > [!NOTE]
+   > V zařízeních s profilem podnikového systému Android nejsou v zařízení vidět certifikáty nainstalované pomocí profilu certifikátu PKCS. Pokud chcete potvrdit úspěšné nasazení certifikátu, zkontrolujte stav profilu v konzole Intune.
+4. Vyberte **Vytvořit**.
 
-4. Vyberte **Nastavení**a nakonfigurujte vlastnosti, které se vztahují na vybranou platformu:
+5. V části **základy**zadejte následující vlastnosti:
+   - **Název**: zadejte popisný název profilu. Své profily pojmenujte, abyste je později mohli snadno identifikovat. Dobrým názvem profilu je například *profil PKCS pro celou firmu*.
+   - **Popis**: Zadejte popis profilu. Toto nastavení není povinné, ale doporučujeme ho zadat.
+
+6. Vyberte **Další**.
+7. Nastavení, která můžete konfigurovat v **nastavení konfigurace**, se liší v závislosti na zvolené platformě. Pro podrobnější nastavení vyberte vaši platformu: – Správce zařízení s Androidem – Android Enterprise – iOS/iPadOS-Windows 10
    
    |Nastavení     | Platforma     | Podrobnosti   |
    |------------|------------|------------|
@@ -227,12 +254,18 @@ K ověření zařízení pomocí sítě VPN, Wi-Fi nebo jiných prostředků pot
    |**Povolí všem aplikacím přístup k privátnímu klíči.** |<ul><li>macOS  |Nastavením této vlastnosti **povolíte** aplikacím, které jsou nakonfigurované pro přidružené zařízení Mac, přístup k privátnímu klíči certifikátů PKCS. <br><br> Další informace o tomto nastavení najdete v tématu *AllowAllAppsAccess* v části referenční část certifikátu [konfiguračního profilu](https://developer.apple.com/business/documentation/Configuration-Profile-Reference.pdf) v dokumentaci pro vývojáře Apple. |
    |**Kořenový certifikát**             |<ul><li>Správce zařízení s Androidem </li><li>Android Enterprise (*vlastník zařízení*, *pracovní profil*) |Vyberte profil certifikátu od kořenové certifikační autority, který byl dříve přiřazen. |
 
-5. Vyberte **OK** > **Vytvořit** a profil uložte.
+8. Vyberte **Další**.
 
-6. Informace o přiřazení nového profilu jednomu nebo více zařízením najdete v článku o [přiřazení profilů zařízení v Microsoft Intune](../configuration/device-profile-assign.md).
+9. V části **značky oboru** (volitelné) přiřaďte značku pro filtrování profilu na konkrétní skupiny IT, například `US-NC IT Team` nebo `JohnGlenn_ITDepartment`. Další informace o značkách oboru naleznete v tématu [použití značek RBAC a Scope pro distribuci](../fundamentals/scope-tags.md).
 
-   > [!NOTE]
-   > V zařízeních s profilem podnikového systému Android nejsou v zařízení vidět certifikáty nainstalované pomocí profilu certifikátu PKCS. Pokud chcete potvrdit úspěšné nasazení certifikátu, zkontrolujte stav profilu v konzole Intune.
+   Vyberte **Další**.
+
+10. V části **přiřazení**vyberte uživatele nebo skupiny, které obdrží váš profil. Další informace o přiřazování profilů najdete v tématu [přiřazení profilů uživatelů a zařízení](../configuration/device-profile-assign.md).
+
+    Vyberte **Další**.
+
+11. V rámci **Revize a vytvoření**zkontrolujte nastavení. Když vyberete vytvořit, vaše změny se uloží a profil se přiřadí. Tato zásada se taky zobrazuje v seznamu profily.
+
 
 ### <a name="subject-name-format"></a>Formát názvu subjektu
 

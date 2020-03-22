@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic;seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3a38664640b448d6770d4728a9a9918e251c37e3
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 93fba17973571a9981269eb0b9fc98dae20cb920
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79327051"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80085863"
 ---
 # <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>Řešení potíží při registraci zařízení v Microsoft Intune
 
@@ -47,8 +47,8 @@ Můžete také zkontrolovat správné nastavení času a data na zařízení už
 
 Uživatelé spravovaných zařízení můžou pro vaši potřebu shromažďovat protokoly registrace a diagnostiky. Pokyny pro uživatele ke shromažďování protokolů najdete tady:
 
-- [Odeslání chyb registrace zařízení s Androidem správci IT](https://docs.microsoft.com/user-help/send-enrollment-errors-to-your-it-admin-android)
-- [Odeslání chyb iOS/iPadOS správci IT](https://docs.microsoft.com/user-help/send-errors-to-your-it-admin-ios)
+- [Odeslání chyb registrace zařízení s Androidem správci IT](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-using-cable-android)
+- [Odeslání chyb iOS/iPadOS správci IT](https://docs.microsoft.com/mem/intune/user-help/send-errors-to-your-it-admin-ios)
 
 
 ## <a name="general-enrollment-issues"></a>Obecné problémy s registrací

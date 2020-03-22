@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/18/2019
+ms.date: 03/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 65f2fa658069b9ff9ac99026adbb8b56d955727b
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 627fb13554f8f379f75f08c27d18cdd0b1106028
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79329151"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084848"
 ---
 # <a name="add-and-assign-mobile-threat-defense-mtd-apps-with-intune"></a>Přidání a přiřazení aplikací pro ochranu před mobilními hrozbami (MTD) pomocí Intune
 
@@ -34,7 +34,7 @@ Pomocí Intune můžete přidávat a nasazovat aplikace pro ochranu před mobiln
 
 ## <a name="before-you-begin"></a>Před zahájením
 
-V Intune proveďte následující kroky. Ověřte si, že jste seznámení s těmito postupy:
+V Intune proveďte následující kroky. Ujistěte se, že jste obeznámeni s procesem:
 
 - [Přidání aplikace do služby Intune](../apps/apps-add.md)
 - [Přidání zásad konfigurace aplikace pro iOS do služby Intune](../apps/app-configuration-policies-use-ios.md)
@@ -224,7 +224,7 @@ Pokud chcete přidat zásady konfigurace aplikace Better Mobile pro iOS, přečt
 
 ### <a name="sophos-mobile-app-configuration-policy"></a>Zásady konfigurace mobilních aplikací pro Sophos
 
-Vytvořte zásady konfigurace aplikace pro iOS, jak je popsáno v článku [použití zásad konfigurace aplikace pro iOS](../apps/app-configuration-policies-use-ios.md) .
+Vytvořte zásady konfigurace aplikace pro iOS, jak je popsáno v článku [použití zásad konfigurace aplikace pro iOS](../apps/app-configuration-policies-use-ios.md) . Další informace najdete v tématu [Sophos zachytit X pro mobilní zařízení iOS – dostupné spravované nastavení](https://community.sophos.com/kb/133963) ve znalostní bázi Sophos Knowledge Base.
 
 ### <a name="wandera-app-configuration-policy"></a>Zásady konfigurace aplikace Wandera
 

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/17/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 48f890888d9bdb9d1df67596fb9125534e90a4d2
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: c0f1552d2edc6bfa5f6bdb255f156bcfb77a4990
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79328723"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084100"
 ---
 # <a name="add-ios-ipados-or-macos-device-feature-settings-in-intune"></a>Přidání nastavení funkcí zařízení se systémem iOS, iPadOS nebo macOS v Intune
 
@@ -149,12 +149,12 @@ Platí pro:
 
 ## <a name="single-sign-on-app-extension"></a>Rozšíření aplikace s jednotným přihlašováním
 
-Tato nastavení konfigurují rozšíření aplikace, které umožňuje jednotné přihlašování (SSO) pro zařízení s iOS, iPadOS a macOS. Většina obchodních aplikací a webů organizace vyžaduje určitou úroveň zabezpečeného ověřování uživatelů. V mnoha případech ověřování vyžaduje, aby uživatelé opakovaně zadali stejné přihlašovací údaje. Jednotné přihlašování umožňuje uživatelům přístup k aplikacím a webům po zadání přihlašovacích údajů jednou. Po přihlášení uživatelé budou mít přístup k aplikacím a webům automaticky, nebo k získání přístupu použít ID obličeje, dotykové ID nebo Apple heslo.
+Tato nastavení konfigurují rozšíření aplikace, které umožňuje jednotné přihlašování (SSO) pro zařízení s iOS, iPadOS a macOS. Většina obchodních aplikací a webů organizace vyžaduje určitou úroveň zabezpečeného ověřování uživatelů. V mnoha případech ověřování vyžaduje, aby uživatelé opakovaně zadali stejné přihlašovací údaje. Jednotné přihlašování umožňuje uživatelům přístup k aplikacím a webům po zadání přihlašovacích údajů jednou. Jednotné přihlašování také nabízí lepší možnosti ověřování pro uživatele a snižuje počet opakovaných výzev k zadání přihlašovacích údajů.
 
-Pomocí těchto nastavení můžete v Intune nakonfigurovat rozšíření přístupového bodu jednotného přihlašování, které vytvořila vaše organizace, zprostředkovatel identity nebo Apple. Rozšíření aplikace jednotného přihlašování zpracovává ověřování pro vaše uživatele. Tato nastavení konfigurují rozšíření aplikace jednotného přihlašování pro typ přesměrování a přihlašovací údaje.
+Pomocí těchto nastavení můžete v Intune nakonfigurovat rozšíření aplikace jednotného přihlašování vytvořené vaší organizací, vaším poskytovatelem identity, Microsoftem nebo společností Apple. Rozšíření aplikace jednotného přihlašování zpracovává ověřování pro vaše uživatele. Tato nastavení konfigurují rozšíření aplikace jednotného přihlašování pro typ přesměrování a přihlašovací údaje.
 
-- Typ přesměrování je navržený pro moderní protokoly ověřování, jako je OAuth a typu Saml2.
-- Typ přihlašovacích údajů je určený pro toky ověřování typu Challenge a Response. Můžete si vybrat z rozšíření přihlašovací údaje specifického pro protokol Kerberos, které poskytuje Apple, a obecné rozšíření přihlašovacích údajů.
+- Typ přesměrování je navržený pro moderní ověřovací protokoly, jako je například OAuth a typu Saml2. Microsoft má rozšíření aplikace jednotného přihlašování Azure AD typu iOS/iPadOS, které se dá povolit s nastavením rozšíření aplikace jednotného přihlašování.
+- Typ přihlašovacích údajů je určený pro toky ověřování typu Challenge a Response. Můžete si vybrat rozšíření přihlašovací údaje specifické pro protokol Kerberos, které poskytuje společnost Apple, nebo obecné rozšíření přihlašovacích údajů.
 
 Seznam nastavení, která můžete nakonfigurovat v Intune, najdete v tématu [rozšíření aplikace pro iOS/IPADOS SSO](ios-device-features-settings.md#single-sign-on-app-extension) a [rozšíření aplikace MacOS SSO](macos-device-features-settings.md#single-sign-on-app-extension).
 
@@ -167,7 +167,7 @@ Další informace o vývoji rozšíření aplikace jednotného přihlašování 
 >
 > - Nastavení **rozšíření aplikace s jednotným přihlašováním** definuje rozšíření pro použití poskytovateli identity nebo organizacemi k zajištění bezproblémového podnikového přihlašování. Nastavení **jednotného přihlašování** definuje informace o účtu Kerberos pro přístup uživatelů k serverům nebo aplikacím.
 >
-> - **Rozšíření aplikace jednotného přihlašování** používá k ověření operační systém Apple. Proto může poskytovat prostředí koncového uživatele, které je lepší než **jednotné přihlašování**.
+> - **Rozšíření aplikace jednotného přihlašování** používá k ověření operační systém Apple. Může tak poskytnout prostředí koncového uživatele, které je lepší než **jednotné přihlašování**.
 >
 > - Z perspektivy vývoje s použitím **rozšíření aplikace s jednotným přihlašováním**můžete použít libovolný typ přesměrované ověřování SSO nebo přihlašovacích údajů jednotného přihlašování. S **jednotným přihlašováním**můžete použít jenom ověřování pomocí protokolu Kerberos SSO.
 >
@@ -194,7 +194,7 @@ Platí pro:
 
 ## <a name="web-content-filter"></a>Filtr webového obsahu
 
-Tato nastavení mohou použít vestavěný algoritmus automatického filtru společnosti Apple k vyhodnocení webových stránek a k blokování obsahu pro dospělé a pro dospělého. Můžete také vytvořit seznam povolených webových odkazů a omezených webových odkazů. Můžete například dovolit, aby se otevíraly jenom `contoso` weby.
+Tato nastavení využívají vestavěný algoritmus automatického filtru od společnosti Apple k vyhodnocení webových stránek a blokují obsah pro dospělé a jazyk pro dospělé. Můžete také vytvořit seznam povolených webových odkazů a omezených webových odkazů. Můžete například dovolit, aby se otevíraly jenom `contoso` weby.
 
 Seznam nastavení, která můžete v Intune nakonfigurovat, najdete v tématu [Filtr webového obsahu v systému iOS/iPadOS](ios-device-features-settings.md#web-content-filter).
 

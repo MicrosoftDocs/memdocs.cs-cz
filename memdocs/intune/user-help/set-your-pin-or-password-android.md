@@ -19,12 +19,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: ec617d76ec2fe4d59de7715daec76351798bd460
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: bfb12125998225479281a981f05bc1af23e0f6f5
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79324427"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084353"
 ---
 # <a name="set-your-pin-or-password"></a>Nastavení PINu nebo hesla
 
@@ -36,6 +36,6 @@ K nastavení kódu PIN a hesla použijte následující postup.
 
 2. Zvolte a potvrďte nové heslo.
 
-Pro určitá zařízení musíte kromě hesla obrazovky nastavit spouštěcí kód PIN. Můžete tento problém zkusit vyřešit tak, že v aplikaci nastavení najdete umístění k povolení této možnosti. Třeba na Samsungu Galaxy S7 můžete zabezpečené spuštění povolit tak, že přejdete do **Nastavení** > **Zamykací obrazovka a zabezpečení** > **Zabezpečené spuštění**. Další informace najdete [tady](/user-help/your-device-appears-encrypted-but-cp-says-otherwise-android). 
+Pro určitá zařízení musíte kromě hesla obrazovky nastavit spouštěcí kód PIN. Můžete tento problém zkusit vyřešit tak, že v aplikaci nastavení najdete umístění k povolení této možnosti. Třeba na Samsungu Galaxy S7 můžete zabezpečené spuštění povolit tak, že přejdete do **Nastavení** > **Zamykací obrazovka a zabezpečení** > **Zabezpečené spuštění**. Další informace najdete [tady](/mem/intune/user-help/your-device-appears-encrypted-but-cp-says-otherwise-android). 
 
 Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).

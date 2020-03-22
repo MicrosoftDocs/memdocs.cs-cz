@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/04/2019
+ms.date: 03/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,16 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eaaa9095becbcac7840d5babc2a099e7ec84af03
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: dbb8e5644390c589756af5a69f2fdd5a829866a1
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79332379"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084009"
 ---
 # <a name="use-and-manage-zebra-devices-with-zebra-mobility-extensions-in-microsoft-intune"></a>Používání a Správa zařízení Zebra s rozšířeními mobility Zebra v Microsoft Intune
-
-
 
 Intune obsahuje bohatou sadu funkcí, včetně správy aplikací a konfigurace nastavení zařízení. Tyto integrované funkce a nastavení spravují zařízení s Androidem vyráběná technologiemi Zebra, označovaná také jako "Zebra zařízení".
 
@@ -36,7 +34,9 @@ V tomto článku se dozvíte, jak používat rozšíření Zebra mobility (MX) n
 
 Tato funkce platí pro:
 
-- Android
+- Správce zařízení s Androidem
+
+Pro zařízení s Androidem Enterprise použijte [OEMConfig](android-oem-configuration-overview.md).
 
 Vaše společnost může používat zařízení Zebra pro maloobchodní prodej, v produkčním patře a dalších. Například jste maloobchodníka a vaše prostředí zahrnuje tisíce Zebrach mobilních zařízení, která používá Sales Associates. Intune může pomáhat spravovat tato zařízení jako součást řešení správy mobilních zařízení (MDM).
 
@@ -139,7 +139,7 @@ V Intune vytvořte profil konfigurace zařízení:
 
     - **Název**: Zadejte popisný název nového profilu.
     - **Popis**: Zadejte popis profilu. Toto nastavení není povinné, ale doporučujeme ho zadat.
-    - **Platforma**: vyberte **Android**.
+    - **Platforma**: vyberte **Správce zařízení s Androidem**.
     - **Typ profilu**: vyberte možnost **profil MX (jenom Zebra)** .
 
 4. V **profilu MX ve formátu. XML**přidejte soubor profilu XML, [který jste exportovali z StageNow](#step-4-create-a-device-management-profile-in-stagenow) (v tomto článku).

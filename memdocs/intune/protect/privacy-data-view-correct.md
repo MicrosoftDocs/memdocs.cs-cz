@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6c2bacea3e1e87e6bd1a14c14b22bd6f4c2870fd
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: d6cddd94400874c508a31b11b22fa4417798e2da
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79325307"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084777"
 ---
 # <a name="view-and-correct-personal-data"></a>Zobrazení a oprava osobních údajů
 
@@ -34,10 +34,10 @@ Správci Intune mohou na základě svých přístupových oprávnění zobrazit 
 
 ## <a name="view-personal-data"></a>Zobrazení osobních údajů
 
-Správcům se osobní údaje koncových uživatelů zobrazují na různých listech uživatelského rozhraní služby Intune. V článcích níže se dozvíte, k jakým informacím správci mají, nebo naopak nemají přístup:
-- Článek [Zobrazení podrobností o zařízení v Intune](../remote-actions/device-inventory.md) vysvětluje, jak zobrazit podrobnosti o zařízení koncového uživatele.
-- Článek [Monitorování informací a přiřazení aplikace](../apps/apps-monitor.md) vysvětluje, jak zobrazit podrobnosti o aplikacích nainstalovaných na zařízení koncového uživatele.
-- Článek [Jaké informace moje společnost uvidí, když si zaregistruji zařízení](https://docs.microsoft.com/user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune) obsahuje seznam údajů, které společnost koncového uživatele vidí nebo nevidí. Nejvhodnější je srozumitelně sdělit uživatelům, jaká data shromažďujete a proč to děláte. Prvním krokem vstříc transparentnosti může být právě tento článek.
+Správcům se osobní údaje koncových uživatelů zobrazují na různých listech uživatelského rozhraní služby Intune. Následující články vysvětlují, co Správci informací dělají a nemají přístup k těmto akcím:
+- V [části Podrobnosti o zařízení](../remote-actions/device-inventory.md) v Intune se dozvíte, jak můžete zkontrolovat podrobnosti o zařízení koncového uživatele.
+- [Monitorování informací a přiřazení aplikace](../apps/apps-monitor.md) vysvětluje, jak zobrazit podrobnosti o aplikacích nainstalovaných na zařízení koncového uživatele.
+- [Jaké informace může moje společnost vidět po registraci zařízení? článek](https://docs.microsoft.com/mem/intune/user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune) poskytuje koncovým uživatelům seznam dat, která jejich společnost uvidí a neuvidí. Je vhodné jasně říct uživatelům, jaký druh dat shromažďujete a proč je shromažďujete. Prvním krokem vstříc transparentnosti může být právě tento článek.
 
 ### <a name="who-can-view-the-data"></a>Kdo může zobrazit údaje?
 
@@ -49,7 +49,7 @@ Další informace o tom, jak Microsoft pracuje s údaji, jsou k dispozici v Podm
 
 ## <a name="correct-end-user-personal-data"></a>Oprava osobních údajů koncových uživatelů
 
-Správci nemohou aktualizovat informace specifické pro konkrétní zařízení nebo aplikaci. Pokud si koncový uživatel přeje opravit jakékoli osobní údaje (například název zařízení), musí to provést přímo na svém zařízení. Změny se synchronizují při příštím připojení ke službě Intune.
+Správci nemůžou aktualizovat informace specifické pro zařízení nebo aplikace. Pokud si koncový uživatel přeje opravit jakékoli osobní údaje (například název zařízení), musí to provést přímo na svém zařízení. Změny se synchronizují při příštím připojení ke službě Intune.
 
 
 ## <a name="next-steps"></a>Další kroky

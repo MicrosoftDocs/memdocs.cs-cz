@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/19/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,16 +16,14 @@ search.appverid: MET150
 ms.reviewer: tycast
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 26f2998c6b166e1f45c839d7006551867b8deb80
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 8d2f671e88b1221961e978d1945e28c7cec474cb
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79333015"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086510"
 ---
 # <a name="windows-10-and-windows-holographic-device-settings-to-add-vpn-connections-using-intune"></a>Nastavení zařízení s Windows 10 a Windows holografické pro přidání připojení k síti VPN pomocí Intune
-
-
 
 Pomocí Microsoft Intune můžete přidat a nakonfigurovat připojení k síti VPN pro zařízení. Tento článek obsahuje seznam a popisuje běžně používaná nastavení a funkce při vytváření virtuálních privátních sítí (VPN). Tato nastavení a funkce sítě VPN se používají v profilech konfigurace zařízení v Intune, která jsou vložená nebo nasazená do zařízení.
 
@@ -46,11 +44,11 @@ V závislosti na tom, jaká nastavení zvolíte, nemusí být všechny uvedené 
 
 - **Název připojení**: zadejte název tohoto připojení. Tento název uživatelé vidí, když na svém zařízení procházejí seznamem dostupných připojení VPN.
 - **Servery**: přidejte minimálně jeden VPN server, ke kterému se budou zařízení připojovat. Při přidání serveru zadáváte tyto informace:
-  - **Popis**: zadejte popisný název serveru, třeba **VPN server Contoso**
-  - **IP adresa nebo plně kvalifikovaný**název domény: zadejte IP adresu nebo plně kvalifikovaný název domény (FQDN) serveru VPN, ke kterému se zařízení připojují, například **192.168.1.1** nebo **VPN.contoso.com** .
+  - **Popis**: zadejte popisný název serveru, jako je **Contoso VPN server**.
+  - **IP adresa nebo plně kvalifikovaný**název domény: zadejte IP adresu nebo plně kvalifikovaný název domény (FQDN) serveru VPN, ke kterému se zařízení připojují, například **192.168.1.1** nebo **VPN.contoso.com**.
   - **Výchozí server**: povolí tento server jako výchozí server, který budou zařízení používat k navázání připojení. Jako výchozí server nastavte jenom jeden server.
   - **Importovat**: vyhledejte soubor, který obsahuje seznam serverů oddělených čárkami ve formátu popis, IP adresa nebo plně kvalifikovaný název domény, výchozí server. Pomocí **OK** servery naimportujte do seznamu **Servery**.
-  - **Exportovat**: exportuje seznam serverů do textového souboru s oddělovači (CSV).
+  - **Export**: exportuje seznam serverů do souboru s hodnotami oddělenými čárkami (CSV).
 
 - **Zaregistrovat IP adresy v interní službě DNS**: výběrem možnosti **Povolit** nakonfigurujete profil sítě VPN s Windows 10 tak, aby dynamicky registroval IP adresy přiřazené k rozhraní sítě VPN pomocí interní služby DNS. Pokud vyberete možnost **Zakázat**, IP adresy se nebudou dynamicky registrovat.
 
@@ -68,10 +66,10 @@ V závislosti na tom, jaká nastavení zvolíte, nemusí být všechny uvedené 
   - **PPTP**
 
   Když zvolíte typ připojení VPN, můžete být také vyzváni k zadání těchto nastavení:  
-  - **Always On**: vyberte **Povolit** pro automatické připojení k připojení VPN, když dojde k následujícím událostem: 
+  - **Always On**: vyberte **Povolit** pro automatické připojení k připojení VPN, když dojde k následujícím událostem:
     - Při přihlášení uživatelů do zařízení
     - Při změně sítě na zařízení
-    - Při opětovném zapnutí obrazovky na zařízení po vypnutí 
+    - Při opětovném zapnutí obrazovky na zařízení po vypnutí
 
   - **Metoda ověřování**: vyberte, jak chcete, aby se uživatelé vůči serveru VPN ověřovali. Používání **certifikátů** nabízí rozšířené funkce, třeba bezobslužné prostředí, VPN na vyžádání a VPN pro aplikaci.
   - **Zapamatovat si přihlašovací údaje při každém přihlášení**: při zvolení této možnosti se přihlašovací údaje uloží do mezipaměti.

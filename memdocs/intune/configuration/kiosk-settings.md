@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/04/2019
+ms.date: 03/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5f8d7a2f8944535cb16f6cd01c117799a3c92904
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: c3821017b0fe15df8a0329000aa74272e4d9477e
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79326647"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086886"
 ---
 # <a name="windows-10-and-windows-holographic-for-business-device-settings-to-run-as-a-dedicated-kiosk-using-intune"></a>Nastavení zařízení s Windows 10 a Windows holografickým pro firmy, která se mají používat jako vyhrazené veřejné terminály pomocí Intune
 
@@ -54,7 +54,7 @@ V tomto článku se dozvíte, jak vytvořit profil konfigurace zařízení. Sezn
     - **Beznabídkový režim na celou obrazovku s jednou aplikací**: Zařízení se spustí jako účet jednoho uživatele a uzamkne ho pro jednu aplikaci pro Store. Když se uživatel přihlásí, spustí se daná aplikace. Tento režim zároveň brání uživateli v otevírání nových aplikací nebo změně spuštěné aplikace.
     - **Veřejný terminál s více aplikacemi**: Zařízení spustí více aplikací pro Store, aplikací Win32 nebo vnitřních aplikací pro Windows pomocí ID uživatele aplikace (AUMID). Na zařízení jsou dostupné pouze aplikace, které přidáte.
 
-        Veřejný terminál s více aplikacemi, neboli zařízení s pevně stanoveným účelem, umožňuje poskytovat přehledné prostředí uživatelům, protože jim povoluje přístup pouze k aplikacím, které potřebují. Nezobrazuje jim aplikace, které nepotřebují.
+        Veřejný terminál s více aplikacemi, neboli zařízení s pevně stanoveným účelem, umožňuje poskytovat přehledné prostředí uživatelům, protože jim povoluje přístup pouze k aplikacím, které potřebují. A také z jejich zobrazení z pohledu aplikací, které nepotřebují.
 
     Seznam všech nastavení a o tom, co dělají, najdete v těchto tématech:
       - [Nastavení veřejného terminálu Windows 10](kiosk-settings-windows.md)
@@ -69,7 +69,7 @@ Profil se vytvoří a zobrazí se v seznamu profily. Dále [přiřaďte](device-
 [Přiřaďte profil](device-profile-assign.md) a [monitorujte jeho stav](device-profile-monitor.md).
 
 Pro zařízení s následujícími platformami můžete vytvořit profily na veřejném terminálu:
-- [Androidemem](device-restrictions-android.md#kiosk)
+- [Správce zařízení s Androidem](device-restrictions-android.md#kiosk)
 - [Android Enterprise](device-restrictions-android-for-work.md#dedicated-device-settings)
 - [Windows 10 a novější](kiosk-settings-windows.md)
 - [Windows Holographic for Business](kiosk-settings-holographic.md)

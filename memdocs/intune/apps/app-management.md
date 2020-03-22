@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/05/2020
+ms.date: 03/17/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 98eba2cd2905a70157cfb50299bb9b11a6319fcc
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 5acf0db721accf058a10dafcf8165abeddafe7c7
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79326323"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80083740"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Co je správa aplikací v Microsoft Intune?
 
@@ -118,7 +118,7 @@ Následující položky v konzole poskytují funkce související s aplikacemi:
 - **Klíče pro instalaci bokem ve Windows**: Přidejte klíč pro instalaci bokem ve Windows, který lze použít k instalaci aplikace přímo do zařízení (místo publikování aplikace a jejího stahování z Windows Storu). Další informace najdete v části [strana načítající aplikaci pro Windows](app-sideload-windows.md).
 - **Tokeny programu Apple VPP**: použít a zobrazit licence VPP (Volume purchase program) pro iOS/iPadOS. Další informace najdete v tématu [hromadně zakoupené aplikace pro iOS/iPadOS](vpp-apps-ios.md).
 - **Managed Google Play**: spravovaná Google Play je podniková aplikace pro Google Store a výhradně zdroj aplikací pro Android Enterprise. Další informace najdete v tématu [Přidání spravovaných Google Play aplikací do zařízení s Androidem Enterprise pomocí Intune](apps-add-android-for-work.md).
-- **Branding a přizpůsobení**: přizpůsobte portál společnosti, abyste mu poskytovali značku vaší společnosti. Další informace najdete v tématu [konfigurace portál společnosti](company-portal-app.md).
+- **Přizpůsobení**: přizpůsobte portál společnosti, abyste mu poskytovali značku vaší společnosti. Další informace najdete v tématu [konfigurace portál společnosti](company-portal-app.md).
 
 ## <a name="next-steps"></a>Další kroky
 

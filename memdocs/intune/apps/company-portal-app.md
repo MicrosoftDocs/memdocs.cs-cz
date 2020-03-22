@@ -1,135 +1,121 @@
 ---
-title: Konfigurace aplikace Portál společnosti
+title: Přizpůsobení aplikací Portál společnosti Intune, Portál společnosti webu a Intune
 titleSuffix: Microsoft Intune
-description: Přečtěte si, jak můžete v aplikaci Portál společnosti Intune použít branding pro konkrétní společnosti.
+description: Přečtěte si, jak můžete použít branding pro konkrétní společnosti pro aplikace Portál společnosti Intune, Portál společnosti web a Intune.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/24/2020
+ms.date: 03/16/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: dec6f258-ee1b-4824-bf66-29053051a1ae
-ms.reviewer: mghadial
+ms.reviewer: esthermsft
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 36d26eb7f644731082407e816358b74c515333cb
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: c1ec6d4ebe860a1c20ad1a11bd7e63086858a82c
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79325655"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084211"
 ---
-# <a name="how-to-configure-the-microsoft-intune-company-portal-app"></a>Konfigurace aplikace Portál společnosti služby Microsoft Intune
+# <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>Přizpůsobení aplikací Portál společnosti Intune, Portál společnosti webu a Intune
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+Aplikace Portál společnosti, Portál společnosti web a Intune v Androidu jsou místo, kde uživatelé přistupují k podnikovým datům a můžou provádět běžné úkoly. Běžný úkol může zahrnovat registraci zařízení, instalaci aplikací a hledání informací (například pomoc z vašeho oddělení IT). Kromě toho umožňují uživatelům zabezpečený přístup k prostředkům společnosti. Činnost koncového uživatele poskytuje několik různých stránek, jako jsou domů, aplikace, podrobnosti o aplikaci, zařízení a podrobnosti o zařízení. K rychlému vyhledání aplikací v rámci Portál společnosti můžete aplikace filtrovat na stránce aplikace.
 
-Portál společnosti v Microsoft Intune je místo, odkud mají uživatelé přístup k firemním datům a kde můžou dělat běžné úkoly, jako je registrace zařízení, instalace aplikací nebo vyhledání informací pro oddělení IT v případě žádosti o podporu. Kromě toho aplikace Portál společnosti umožňuje uživateli zabezpečený přístup k prostředkům společnosti. Aplikace Portál společnosti poskytuje několik různých stránek, například domů, aplikace, podrobnosti o aplikaci, zařízení a podrobnosti o zařízení. K rychlému vyhledání aplikací v rámci Portál společnosti můžete aplikace filtrovat na stránce aplikace.
+## <a name="customizing-the-user-experience"></a>Přizpůsobení uživatelského prostředí
 
-> [!IMPORTANT]
-> Aby bylo možné podporovat Firebase Cloud Messaging (FCM) Google, musíte aplikaci pro Android Portál společnosti aktualizovat na nejnovější verzi.  
+Přizpůsobením prostředí pro koncové uživatele umožníte vašim koncovým uživatelům získat známé a užitečné možnosti. Provedete to tak, že přejdete do [centra pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431), vyberete **Správa tenanta** > **přizpůsobení**a pak nakonfigurujete požadovaná nastavení. Tato nastavení se použijí pro aplikace Portál společnosti, Portál společnosti webu a Intune v Androidu.
 
-> [!Tip]
-> Když si portál společnosti přizpůsobíte, bude se vaše konfigurace vztahovat na web portálu společnosti i na aplikace Portál společnosti. Všimněte si, že uživatelé musí mít přiřazenou licenci Intune pro přístup k webu Portál společnosti.
+## <a name="branding"></a>Branding
 
-Přizpůsobením Portál společnosti umožníte vašim koncovým uživatelům známé a užitečné možnosti. Provedete to tak, že přejdete do [centra pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431), vyberete **Správa tenanta** > **branding a přizpůsobení**a pak nakonfigurujete požadovaná nastavení.
+Následující tabulka uvádí podrobnosti přizpůsobení značky pro činnost koncového uživatele:
 
-Když uživatel instaluje aplikaci pro iOS/iPadOS z Portál společnosti, zobrazí se výzva. K tomu dochází, když je aplikace pro iOS/iPadOS propojená s obchodem s aplikacemi, která je propojená s programem Volume purchase program (VPP), nebo propojená s obchodní aplikací (LOB). Tato výzva umožní uživatelům přijmout akci nebo povolit správu aplikace. Výzva zobrazí název vaší společnosti, nebo pokud název vaší společnosti není k dispozici, zobrazí se **portál společnosti** . 
+| Název pole | Další informace |
+|---|---|---|
+| **Název organizace** | Tento název se zobrazí v rámci zasílání zpráv v prostředí koncového uživatele. Můžete ji nastavit tak, aby se zobrazila v hlavičkách i v nastavení **Zobrazit v hlavičce** . Maximální délka je 40 znaků. |
+| **Barevných** | Vyberte možnost **Standard** pro výběr z pěti standardních barev. Zvolte **vlastní** pro výběr konkrétní barvy na základě hexadecimální hodnoty kódu. |
+| **Barva motivu** | Nastavením barvy motivu zobrazíte činnost koncového uživatele. Barva textu automaticky nastavíme na černou nebo bílou, aby se zobrazila nad vybranou barvou motivu. |
+| **Zobrazit v záhlaví** | Vyberte, jestli má záhlaví v prostředí koncových uživatelů zobrazovat **logo a název společnosti**, **jenom logo společnosti**, nebo **jenom název společnosti**. Níže uvedená pole pro náhled budou zobrazovat pouze loga, nikoli název.  |
+| **Nahrát logo pro barvu motivu na pozadí** | Nahrajte logo, které chcete zobrazit, nad vybranou barvou motivu. Pro nejlepší vzhled nahrajte logo s průhledným pozadím. Uvidíte, jak se bude zobrazovat v poli Náhled pod nastavením.<p>Maximální velikost obrázku: 400 × 400 px<br>Maximální velikost souboru: 750 KB<br>Typ souboru: PNG, JPG nebo JPEG |
+| **Nahrát logo pro bílé nebo světlé pozadí** | Nahrajte logo, které chcete zobrazit na bílých nebo lehkých pozadích. Pro nejlepší vzhled nahrajte logo s průhledným pozadím. Můžete vidět, jak se bude zobrazovat na bílém pozadí v poli Náhled pod nastavením.<p>Maximální velikost obrázku: 400 × 400 px<br>Maximální velikost souboru: 750 kB<br>Typ souboru: PNG, JPG nebo JPEG |
+| **Nahrát obrázek značky** | Nahrajte obrázek, který odráží značku vaší organizace.<p><ul><li>Doporučená šířka obrázku: větší než 1125 px (musí být aspoň 650 px)</li><li>Maximální velikost obrázku: 1,3 MB</li><li>Typ souboru: PNG, JPG nebo JPEG</li><li>Zobrazuje se v těchto umístěních:</li><ul><li>iOS/iPadOS Portál společnosti: obrázek na pozadí na stránce profilu uživatele.</li><li>Portál společnosti web: obrázek na pozadí na stránce profilu uživatele.</li><li>Aplikace Intune pro Android: v zásuvce a jako obrázek na pozadí na stránce profilu uživatele.</li></ul></ul> |
 
-> [!Note]
-> Pokud používáte Azure Government, nabízí se protokoly aplikace koncovým uživatelům, aby se rozhodli o způsobu sdílení po inicializaci procesu získání pomoci s problémem. Pokud ale Azure Government nepoužíváte, Portál společnosti pro Windows 10 bude odesílat protokoly aplikace přímo Microsoftu, když uživatel iniciuje proces pro získání pomoci s problémem. Odesílání protokolů aplikace do Microsoftu usnadní řešení problémů. 
+> [!NOTE]
+> Když uživatel instaluje aplikaci pro iOS/iPadOS z Portál společnosti, zobrazí se výzva. K tomu dochází, když je aplikace pro iOS/iPadOS propojená s obchodem s aplikacemi, která je propojená s programem Volume purchase program (VPP), nebo propojená s obchodní aplikací (LOB). Tato výzva umožní uživatelům přijmout akci nebo povolit správu aplikace. Výzva zobrazí název vaší společnosti, nebo pokud název vaší společnosti není k dispozici, zobrazí se **portál společnosti** .
 
-## <a name="company-information-and-privacy-statement"></a>Informace o společnosti a prohlášení o zásadách ochrany osobních údajů
-Název společnosti je zobrazen v záhlaví okna Portálu společnosti. Prohlášení o ochraně osobních údajů se zobrazí po kliknutí na odkaz na zásady ochrany osobních údajů.
+### <a name="brand-image-best-practices"></a>Osvědčené postupy pro obrázky značky
+
+Správný obrázek značky může vylepšit důvěryhodnost uživatele tím, že prezentuje silný smysl značky vaší organizace. Tady je několik tipů, které můžete zvážit pro získání, výběr a optimalizaci obrázku pro zobrazovaná místa.
+
+- Obraťte se na marketingové nebo kreativní oddělení. Můžou už mít schválenou sadu imagí značky. Mohli by vám také pomoci při optimalizaci obrázků.
+- Zvažte kompozici v orientaci jak na šířku, tak i na výšku. Ústřední bod obrázku by mělo obklopovat dostatečně velké pozadí. Obrázek může být oříznutý odlišně na základě velikosti zařízení, orientace a platformy.
+- Nepoužívejte obecné obrázky převzaté z fotobanky. Image by měla odrážet značku vaší organizace a znát uživatele. Pokud žádný obrázek nemáte, je lepší nepoužívat žádný, než použít obecný, který pro uživatele nemá žádný význam.
+- Odeberte nepotřebná metadata. Soubor obrázku může obsahovat metadata, jako jsou profil fotoaparátu, zeměpisná poloha, název, popisek a další. Pomocí nástroje pro optimalizaci obrázků tyto informace odstraňte, abyste zachovali kvalitu, ale vešli se do velikostního limitu souboru.
+
+### <a name="brand-image-examples"></a>Příklady obrázků značky
+
+Následující obrázek ukazuje příklad obrázku značky na iPhonu:
+
+<img alt="Screenshot of example iPhone branding image" src="./media/company-portal-app/company-portal-app-01.png" width="250">
+
+Níže vidíte příklad obrázku značky v aplikaci Intune pro Android:
+
+<img alt="Screenshot of example #1 for Intune app for Android branding image" src="./media/company-portal-app/company-portal-app-02.png" width="250">
+
+<img alt="Screenshot of example #2 for Intune app for Android branding image" src="./media/company-portal-app/company-portal-app-03.png" width="250">
+
+## <a name="support-information"></a>Informace o podpoře
+
+Zadejte informace o podpoře vaší organizace, aby se zaměstnanci mohli obrátit na otázky. Tyto informace o podpoře se budou zobrazovat na **podporu**, **pomáhat & podpoře**a stránkách **helpdesku** v rámci prostředí koncových uživatelů.
 
 | Název pole | Maximální délka | Další informace |
-|---|---|---|
-|**Název společnosti**| 40 | Tento název se zobrazí v záhlaví okna Portálu společnosti a bude se zobrazovat jako text během činnosti koncového uživatele Intune. |
-| **Adresa URL prohlášení o zásadách ochrany osobních údajů** |     79     | Můžete přidat vlastní prohlášení o zásadách ochrany osobních údajů společnosti, které se uživatelům zobrazí po kliknutí na příslušné odkazy v Portálu společnosti. Musíte zadat platnou adresu URL ve formátu `<https://www.contoso.com>`. |
+|------------------------|----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Jméno kontaktu | 40 | Tento název se bude uživatelům přistihnout při kontaktování podpory. |
+| Telefonní číslo | 20 | Toto číslo umožňuje uživatelům zavolat na podporu. |
+| E-mailová adresa | 40 | Tato e-mailová adresa umožňuje uživatelům odesílat e-maily pro podporu. Je potřeba zadat platnou e-mailovou adresu ve formátu `alias@domainname.com`. |
+| Název webu | 40 | Toto je popisný název, který se zobrazí v některých umístěních pro adresu URL webu podpory. Pokud zadáte adresu URL webu podpory bez popisného názvu, zobrazí se tato adresa URL v prostředí koncového uživatele.  |
+| Adresa URL webu | 150 | Web podpory, který uživatelé mají použít. Adresa URL musí být ve formátu `https://www.contoso.com`.  |
+| Další informace | 120 | Sem Zahrňte všechny další zprávy týkající se podpory pro uživatele. |
+
+## <a name="configuration"></a>Konfigurace
+
+Následující tabulka poskytuje další podrobnosti o konfiguraci:
+
+| Název pole | Maximální délka | Další informace |
+|------------------------------------------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Adresa URL prohlášení o zásadách ochrany osobních údajů | 79 | Nastavte prohlášení o zásadách ochrany osobních údajů ve vaší organizaci, které se zobrazí, když uživatel klikne na odkazy na soukromí Musíte zadat platnou adresu URL ve formátu `https://www.contoso.com`. |
+| Zpráva o ochraně osobních údajů v Portál společnosti pro iOS/iPadOS | 520 | Ponechte výchozí nebo nastavte vlastní zprávu tak, aby vynechala seznam položek, které vaše organizace může nebo nemůže zobrazit na spravovaných zařízeních se systémem iOS/iPadOS. Pomocí Markdownu můžete přidat odrážky, tučné písmo, kurzívu a odkazy. |
+| Registrace zařízení | NEUŽÍVÁ SE. | Určete, jestli a jak se má uživatelům zobrazit výzva k registraci do správy mobilních zařízení. Podrobnosti níže. |
+
+### <a name="device-enrollment-setting-options"></a>Možnosti nastavení registrace zařízení
+
+> [!NOTE]
+> Podpora nastavení registrace zařízení vyžaduje, aby koncoví uživatelé měli tyto Portál společnosti verze:
+> - Portál společnosti v systému iOS/iPadOS: verze 4,4 nebo novější
+> - Portál společnosti na Androidu: verze 5.0.4715.0 nebo novější 
+
+|    Možnosti registrace zařízení    |    Popis    |    Výzvy kontrolního seznamu    |    Oznámení    |    Stav podrobnosti o zařízení    |    Podrobnosti o stavu aplikace (aplikace, která vyžaduje registraci)    |
+|-----------------------------------|-------------------------------------------------------------------------------------------------------------------------|-------------------------|--------------------|-----------------------------|--------------------------------------------------------------------|
+|    K dispozici, s výzvami    |    Výchozí prostředí s výzvou k registraci ve všech možných umístěních.    |    Ano    |    Ano    |    Ano    |    Ano    |
+|    K dispozici, žádné výzvy    |    Uživatel se může zaregistrovat přes stav v podrobnostech o zařízení pro svoje aktuální zařízení nebo aplikace, které vyžadují registraci.    |    Ne    |    Ne    |    Ano    |    Ano    |
+|    Nedostupný    |    Pro uživatele neexistuje žádný způsob, jak ho zaregistrovat.    |    Ne    |    Ne    |    Ne    |    Ne<sup>(1)</sup>    |
+
+<sup>(1)</sup> **známý problém:** Pokud nakonfigurujete aplikace, aby vyžadovaly registraci pro instalaci, a také nastavení registrace zařízení na "nedostupné", aplikace Portál společnosti v Androidu pořád budou uživatele registrovat. Tato akce bude brzy odebrána.
+
+> [!NOTE]
+> Pokud používáte Azure Government, nabízí se protokoly aplikace koncovým uživatelům, aby se rozhodli o způsobu sdílení po inicializaci procesu získání pomoci s problémem. Pokud však Azure Government nepoužíváte, Portál společnosti pošle protokoly aplikací přímo společnosti Microsoft, když uživatel zahájí proces, aby získal pomoc s problémem. Odesílání protokolů aplikace do Microsoftu usnadní řešení problémů.
 
 > [!NOTE]
 > V souladu se zásadami Microsoftu a Apple nebudeme z jakéhokoli důvodu prodávat žádná data shromážděná naší službou žádným třetím stranám.
 
-## <a name="support-information"></a>Informace o podpoře
-Zadejte informace o podpoře vaší společnosti a poskytněte tak vašemu zaměstnanci kontakt na otázky související s Intune.
-
-|Název pole|Maximální délka|Další informace|
-|---|---|---|
-|**Jméno kontaktu** | 40 | Tento název se zobrazí na stránce **pomoc a podpora** . |
-|**Telefonní číslo** | 20 | Toto kontaktní číslo se zobrazí na stránce **pomoc a podpora** , aby se zaměstnanci mohli obrátit na podporu. |
-|**E-mailová adresa**| 40 | Tato kontaktní adresa se zobrazí na stránce **pomoc a podpora** . Je potřeba zadat platnou e-mailovou adresu ve formátu `alias@domainname.com`. |
-|**Název webu**| 40 | Toto je popisný název, který se zobrazí pro adresu URL webu podpory. Pokud zadáte adresu URL webu podpory bez popisného názvu, zobrazí se na stránce **pomoc a podpora** v portál společnosti adresa přejít na web IT. |
-|**Adresa URL webu**| 150 | Pokud máte web podpory, který chcete, aby uživatelé používali, zadejte jeho adresu URL sem. Adresa URL musí být ve formátu `https://www.contoso.com`. Pokud adresu URL nezadáte, nezobrazí se na stránce pomoc **a podpora** v portál společnosti žádné informace o webu podpory. |
-| **Další informace**| 120 | Zobrazí se na stránce **pomoc a podpora** . |
-
-
-## <a name="company-identity-branding-customization"></a>Přizpůsobení brandingu firemní identity
-Portál své společnosti si můžete přizpůsobit – můžete na něj umístit logo své společnosti, uvést na něm název své společnosti a použít na něm barevný motiv a pozadí podle svých představ.
-
-### <a name="theme-color-and-logo-in-the-company-portal"></a>Barva motivu a logo na Portálu společnosti
-Přiřaďte barvu motivu pro Portál společnosti. Vyberte standardní barvu nebo zadejte šestimístný šestnáctkový kód pro vlastní barvu.
-
-|Název pole|Další informace|
-|---|---|
-|**Vyberte standardní barvu, nebo zadejte šestičíselný šestnáctkový kód**| Zvolte možnost **Standard** pro vizuální výběr barvy. Zvolte **Vlastní**, pokud chcete vybrat konkrétní barvu podle hodnoty šestnáctkového kódu.|
-|**Zvolit barvu motivu**| Vyberte barvu motivu, kterou chcete použít pro Portál společnosti. Můžete ji vybrat ze standardní barvy nebo zadat konkrétní šestnáctkový kód. |
-|**Zobrazení**| Vyberte, zda chcete zobrazit **Logo a název firmy**, **Jen logo firmy** nebo **Jen název firmy**. |
-|**Nahrát firemní logo**|Tato možnost vám umožní nahrát vlastní firemní logo, které se bude zobrazovat na Portálu společnosti. Všimněte si, že barva textu se automaticky zvolí tak, aby byl zajištěn nejvyšší kontrast. Pokud chcete dosáhnout nejlepšího vzhledu, nahrajte logo s transparentním pozadím.<p><ul><li>Maximální velikost obrázku: 400 px × 400 px</li><li>Maximální velikost souboru: 750 kB</li><li>Typ souboru: PNG, JPG nebo JPEG</li></ul>|
-
-Po nahrání loga se v oblasti náhledu zobrazí logo s barvou motivu. Pokud jste si zvolili zobrazení názvu firmy, zobrazí se název na Portálu společnosti v černé nebo bílé barvě. Barva se zvolí automaticky tak, aby byl zajištěn nejvyšší kontrast s ohledem na barvu motivu. V oblasti náhledu na obrazovce se nezobrazuje název vaší společnosti. 
-
-### <a name="logo-to-use-on-white-or-light-backgrounds"></a>Logo, které se použije na bílých nebo světlých pozadích
-Zvolte logo, které bude nejlépe vypadat na bílých nebo světlých pozadích.
-
-|Název pole|Další informace|
-|---|---|
-|**Nahrát logo**| Tato možnost je dostupná, pokud jste zvolili zobrazení loga společnosti. Pokud chcete dosáhnout nejlepšího vzhledu, nahrajte logo s transparentním pozadím.<p><ul><li>Maximální velikost obrázku: 400 px × 400 px</li><li>Maximální velikost souboru: 750 kB</li><li>Typ souboru: PNG, JPG nebo JPEG</li></ul>|
-
-### <a name="brand-image-for-company-portal"></a>Firemní logo pro Portál společnosti
-
-Zobrazte si firemní logo, které odráží značku vaší společnosti. Po uložení změn můžete zvolit možnost **Zobrazit náhled nastavení** na webovém portálu Intune v horní části podokna a zjistit, jak budou vaše konfigurace vypadat. Všimněte si, že budete moct zobrazit náhled obrázku značky jenom na zařízení s iOS/iPadOS, ne na webovém portálu Intune. 
-
-|Název pole|Další informace|
-|---|---|
-|**Nahrát firemní logo**| Tato možnost umožňuje zobrazit obrázek značky. V Portál společnosti pro iOS/iPadOS se na stránce profilu uživatele zobrazuje jako obrázek na pozadí.<p><ul><li>Doporučená šířka obrázku: větší než 1125px (musí být aspoň 650 px)</li><li>Maximální velikost obrázku: 1,3 MB</li><li>Typ souboru: PNG, JPG nebo JPEG</li></ul>|
-
-Správný obrázek značky může vylepšit důvěryhodnost uživatele v Portál společnosti tím, že prezentuje silný smysl firemních značek. Nabízíme vám několik tipů, nad kterými byste se mohli zamyslet při pořizování, výběru a optimalizaci loga pro Portál společnosti. 
-
-- Obraťte se na marketingové nebo kreativní oddělení. Můžou už mít schválenou sadu imagí značky. Mohli by vám také pomoci při optimalizaci obrázků. 
-
-- Zvažte kompozici v orientaci jak na šířku, tak i na výšku. Ústřední bod obrázku by mělo obklopovat dostatečně velké pozadí. Obrázek může být oříznutý odlišně na základě velikosti zařízení, orientace a platformy. 
-
-- Nepoužívejte obecné obrázky převzaté z fotobanky. Image by měla odrážet značku vaší společnosti a znát uživatele. Pokud ho ještě nemáte, je lepší nepoužívat ho, než použijte obecný, který nemá žádný význam pro uživatele. 
-
-- Odeberte nepotřebná metadata. Soubor obrázku může obsahovat metadata, jako jsou profil fotoaparátu, zeměpisná poloha, název, popisek a další. Pomocí nástroje pro optimalizaci obrázků tyto informace odstraňte, abyste zachovali kvalitu, ale vešli se do velikostního limitu souboru. 
-
-Po přidání nebo změně obrázku značky v Intune nemusí koncový uživatel na zařízení se systémem iOS nebo iPadOS vidět změnu, dokud Portál společnosti nerozpoznali změnu při spuštění, a pak se restartoval, aby zobrazila obrázek značky. 
-
-### <a name="brand-image-examples"></a>Příklady obrázků značky
-
-Následující obrázek ukazuje příklad obrázku na základě značky pro iPad:
-
-![Snímek obrazovky s ukázkovým obrázkem o značce iPhone](./media/company-portal-app/company-portal-app-03.png)
-
-Následující obrázek ukazuje příklad obrázku iPhone s brandingem:
-
-![Snímek obrazovky s ukázkovým obrázkem značky pro iPad](./media/company-portal-app/company-portal-app-02.png)
-
-## <a name="privacy-statement-customization"></a>Přizpůsobení prohlášení o zásadách ochrany osobních údajů
-
-Prohlášení o zásadách ochrany osobních údajů, které se zobrazí pro vaši organizaci, můžete přizpůsobit na spravovaných zařízeních se systémem iOS/iPadOS. Tato zpráva obsahuje seznam položek, které vaše organizace nemůže zobrazit nebo dělat na spravovaných zařízeních se systémem iOS/iPadOS.
-
-V části **portál společnosti přizpůsobení** > **Správa zařízení a zpráva o ochraně osobních údajů**můžete:
-
-- Přijměte **výchozí hodnotu** pro použití seznamu, jak je uvedeno níže.
-- Zvolením možnosti **vlastní** upravíte seznam položek, které vaše organizace nemůže zobrazit nebo dělat na spravovaných zařízeních se systémem iOS/iPadOS. Pomocí [Markdownu](https://daringfireball.net/projects/markdown/) můžete přidat odrážky, tučné písmo, kurzívu a odkazy.
-
-## <a name="company-portal-derived-credentials-for-ios-devices"></a>Portál společnosti odvozené přihlašovací údaje pro zařízení s iOS
+## <a name="company-portal-derived-credentials-for-iosipados-devices"></a>Portál společnosti odvozené přihlašovací údaje pro zařízení s iOS/iPadOS
 
 Intune podporuje ověřování osobních identit (PIV) a služby Common Access Card (CAC) odvozené přihlašovací údaje v partnerství s poskytovateli přihlašovacích údajů DISA purebred, Entrust Datacard a Intercede. Koncoví uživatelé procházejí dalšími kroky po registraci zařízení s iOS/iPadOS a ověřují jejich identitu v aplikaci Portál společnosti. Odvozená pověření budou pro uživatele povolena tím, že nejprve nastaví poskytovatele pověření pro vašeho tenanta a pak zacílíte na profil, který používá odvozená pověření pro uživatele nebo zařízení.
 
@@ -138,9 +124,9 @@ Intune podporuje ověřování osobních identit (PIV) a služby Common Access C
 
 Další informace o odvozených přihlašovacích údajích pro zařízení s iOS/iPadOS najdete v tématu [použití odvozených přihlašovacích údajů v Microsoft Intune](../protect/derived-credentials.md).
 
-## <a name="dark-mode-for-ios-company-portal"></a>Tmavý režim pro iOS Portál společnosti
+## <a name="dark-mode-for-iosipados-company-portal"></a>Tmavý režim pro iOS/iPadOS Portál společnosti
 
-Pro iOS Portál společnosti je k dispozici tmavý režim. Uživatelé můžou stahovat firemní aplikace, spravovat jejich zařízení a získávat v nich podporu v barevném schématu podle nastavení zařízení. Portál společnosti pro iOS bude automaticky odpovídat nastavení zařízení koncového uživatele pro tmavý nebo lehký režim.
+Pro iOS/iPadOS Portál společnosti je k dispozici tmavý režim. Uživatelé můžou stahovat aplikace, spravovat jejich zařízení a získávat v nich podporu v barevném schématu podle nastavení zařízení. Portál společnosti iOS/iPadOS bude automaticky odpovídat nastavení zařízení koncového uživatele pro tmavý nebo lehký režim.
 
 ## <a name="windows-company-portal-keyboard-shortcuts"></a>Klávesové zkratky v Portálu společnosti pro Windows
 
@@ -168,13 +154,14 @@ V aplikaci Portál společnosti pro Windows jsou k dispozici následující klá
 
 Koncoví uživatelé budou také moci zobrazit dostupné zkratky v aplikaci pro Windows Portál společnosti.
 
-![Snímek obrazovky s dostupnými zástupci ve Windows Portál společnosti](./media/company-portal-app/company-portal-app-01.png)
+![Snímek obrazovky s dostupnými zástupci ve Windows Portál společnosti](./media/company-portal-app/company-portal-app-04.png)
 
 ## <a name="user-self-service-device-actions-from-the-company-portal"></a>Akce zařízení Samoobslužná služba uživatele z Portál společnosti
 
-Uživatelé můžou na svých místních nebo vzdálených zařízeních provádět akce pomocí Portál společnosti aplikace nebo webu. Akce, které může uživatel provádět, se liší v závislosti na platformě a konfiguraci zařízení. Ve všech případech můžou akce se vzdáleným zařízením provádět jenom primární uživatel zařízení.
+Uživatelé můžou na svých místních nebo vzdálených zařízeních provádět akce pomocí Portál společnosti aplikace nebo webu nebo aplikace Intune v Androidu. Akce, které může uživatel provádět, se liší v závislosti na platformě a konfiguraci zařízení. Ve všech případech můžou akce se vzdáleným zařízením provádět jenom primární uživatel zařízení.
+
 - **Vyřadit** – odebere zařízení ze správy Intune. V aplikaci Portál společnosti a na webu se zobrazuje jako **Remove (odebrat**).
-- **Vymazat** – Tato akce zahájí resetování zařízení. Na webu portál společnosti se zobrazuje jako **resetování**nebo **obnovení továrního nastavení** v aplikaci Portál společnosti pro iOS.
+- **Vymazat** – Tato akce zahájí resetování zařízení. Na webu portál společnosti se zobrazuje jako **resetování**nebo **obnovení továrního nastavení** v aplikaci pro iOS/iPadOS portál společnosti.
 - **Přejmenovat** – Tato akce změní název zařízení, které může uživatel vidět v portál společnosti. Nemění název místního zařízení, pouze výpis v Portál společnosti.
 - **Synchronizovat** – Tato akce zahájí vrácení se změnami zařízení se službou Intune. Zobrazí se jako **stav kontroly** v portál společnosti.
 - **Remote Lock** – zablokuje zařízení a vyžaduje ho k odemknutí.
@@ -199,10 +186,10 @@ Některé platformy a konfigurace neumožňují akce zařízení samoobslužné 
 <sup>(2)</sup> **obnovení klíče** pro MacOS je dostupné jenom přes webový portál.<br>
 <sup>(3)</sup> Pokud používáte registraci správce registrace zařízení, jsou všechny vzdálené akce zakázané.<br>
 <sup>(4)</sup> **přejmenování** změní pouze název zařízení v portál společnosti aplikaci nebo webovém portálu, nikoli na zařízení.<br>
-<sup>(5)</sup> **vymazání** není k dispozici na uživatelem zaregistrovaných zařízeních iOS.<br>
+<sup>(5)</sup> **vymazání** není k dispozici pro uživatele zaregistrovaná zařízení se systémem iOS/iPadOS.<br>
 <sup>(6)</sup> **resetování hesla** není podporované u některých konfigurací pro Android a Android Enterprise. Další informace najdete v tématu [resetování nebo odebrání hesla zařízení v Intune](../remote-actions/device-passcode-reset.md).<br>
 <sup>(7)</sup> **vyřazení** a **vymazání** nejsou k dispozici ve scénářích pro vlastníky zařízení s Androidem Enterprise (odolat, Cobo, COSU).<br> 
-<sup>(8)</sup> **resetování hesla** není u zaregistrovaných zařízení se systémem iOS podporované uživatelem.
+<sup>(8)</sup> **resetování hesla** není podporované uživatelem zaregistrovanými zařízeními iOS/iPadOS.
 
 ## <a name="next-steps"></a>Další kroky
 

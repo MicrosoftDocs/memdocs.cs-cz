@@ -5,28 +5,28 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/20/2020
+ms.date: 03/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
-ms.reviewer: karthib
+ms.reviewer: mikedano
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ade4842564188c457af94a22fe49d3d18d791ebb
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 420340e18eb4e638ed7bde049e6b548037c54f87
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79332335"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80087097"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Použití funkcí a nastavení v zařízeních pomocí profilů zařízení v Microsoft Intune
 
-Microsoft Intune zahrnuje nastavení a funkce, které můžete povolit nebo zakázat na různých zařízeních v rámci vaší organizace. Tato nastavení a funkce se přidají do části "konfigurační profily". Můžete vytvářet profily pro různá zařízení a různé platformy, včetně iOS/iPadOS, Androidu a Windows. Pak pomocí Intune aplikujte nebo přiřadíte profil k zařízením.
+Microsoft Intune zahrnuje nastavení a funkce, které můžete povolit nebo zakázat na různých zařízeních v rámci vaší organizace. Tato nastavení a funkce se přidají do části "konfigurační profily". Můžete vytvářet profily pro různá zařízení a různé platformy, včetně iOS/iPadOS, Správce zařízení s Androidem, Androidu Enterprise a Windows. Pak pomocí Intune aplikujte nebo přiřadíte profil k zařízením.
 
 Jako součást řešení správy mobilních zařízení (MDM) použijte tyto konfigurační profily k dokončení různých úloh. Například:
 
@@ -55,7 +55,7 @@ Tato funkce podporuje:
 
 Tato funkce podporuje: 
 
-- Android
+- Správce zařízení s Androidem
 - Android Enterprise
 - iOS/iPadOS
 - macOS
@@ -69,7 +69,7 @@ Tato funkce podporuje:
 
 Tato funkce podporuje:
 
-- Android
+- Správce zařízení s Androidem
 - Android Enterprise
 - iOS/iPadOS
 - macOS
@@ -108,7 +108,7 @@ Tato funkce podporuje:
 
 Tato funkce podporuje:
 
-- Android
+- Správce zařízení s Androidem
 - Android Enterprise
 - iOS/iPadOS
 - macOS
@@ -143,7 +143,7 @@ Tato funkce podporuje:
 
 Tato funkce podporuje: 
 
-- Android
+- Správce zařízení s Androidem
 - Android Enterprise
 - iOS/iPadOS
 - Wvdows Phone 8.1
@@ -241,7 +241,7 @@ Virtuální privátní sítě (VPN) umožňují uživatelům zabezpečený vzdá
 
 Tato funkce podporuje: 
 
-- Android
+- Správce zařízení s Androidem
 - Android Enterprise
 - iOS/iPadOS
 - macOS
@@ -255,7 +255,7 @@ Tato funkce podporuje:
 
 Tato funkce podporuje: 
 
-- Android
+- Správce zařízení s Androidem
 - Android Enterprise
 - iOS/iPadOS
 - macOS
@@ -276,7 +276,7 @@ Tato funkce podporuje:
 
 Tato funkce podporuje:
 
-- Android (rozšíření mobility)
+- Správce zařízení s Androidem (rozšíření mobility)
 
 ## <a name="manage-and-troubleshoot"></a>Správa a řešení problémů
 

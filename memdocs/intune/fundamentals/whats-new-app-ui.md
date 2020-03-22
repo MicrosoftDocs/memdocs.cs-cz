@@ -6,7 +6,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 02/07/2020
+ms.date: 03/05/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 767d3671d796299d802fe950d443a152d8e2d645
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: ba2b8e407b4c81f74df7c86e7101461b30a0d8e0
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79330087"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80087149"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Aktualizace uživatelského rozhraní pro aplikace Intune pro koncové uživatele
 
@@ -32,10 +32,19 @@ Přečtěte si o nejnovějších aktualizacích aplikace Microsoft Intune. Pravi
 * Upozorněte studenty a zaměstnance na změny aplikace a registrace.
 * Aktualizujte dokumentaci vaší organizace nebo postupy helpdesku.  
 
-Pokud jste zaměstnancem nebo studentem, nezapomeňte se podívat na snímky obrazovky a odkazy na Portál společnosti dokumentaci k nápovědě. Další informace o tom, jak používat aplikaci Portál společnosti, najdete v [dokumentaci k nápovědě pro uživatele portál společnosti](https://docs.microsoft.com/user-help/).  
+Pokud jste zaměstnancem nebo studentem, nezapomeňte se podívat na snímky obrazovky a odkazy na Portál společnosti dokumentaci k nápovědě. Další informace o tom, jak používat aplikaci Portál společnosti, najdete v [dokumentaci k nápovědě pro uživatele portál společnosti](https://docs.microsoft.com/mem/intune/user-help/use-managed-devices-to-get-work-done).  
 
-<!---End-user messaging for accounts 1573558, 1712; changes to be made for other platforms for 1801 Users of the Company Portal website, will be blocked from taking actions that require write access to your tenant. They will see appropriate error messaging explaining that their account is under maintenance. Similar changes are coming to the Company Portal apps for Android, iOS, macOS, and Windows soon. ![Error message that occurs during account move](./media/whats-new-app-ui/account-move-rom-iwp-user-1712.png)--->
 
+
+## <a name="week-of-march-2-2020"></a>Týden od 2. března 2020   
+### <a name="improved-sign-in-experience-in-company-portal-for-android"></a>Vylepšené prostředí pro přihlašování v Portál společnosti pro Android   
+Aktualizovali jsme rozložení několika přihlašovacích obrazovek v aplikaci Portál společnosti pro Android, aby bylo prostředí pro uživatele užitečnější, jednoduché a čisté. Pokud chcete zobrazit všechny Portál společnosti pokyny k registraci Androidu, přejděte k tématu [registrace zařízení s Androidem](../user-help/enroll-device-android-company-portal.md) nebo [registrace pomocí pracovního profilu Androidu](../user-help/enroll-device-android-work-profile.md).   
+
+
+|Datum aktualizace|Předchozí|   
+|---|---|   
+|![Příklad obrázku nové obrazovky pro přihlášení Portál společnosti, tlačítko Přihlásit se](./media/whats-new-app-ui/intune-company-portal-sign-in-2003.png)|![Příklad obrázku předchozí Portál společnosti přihlašovací stránka, která zobrazuje návrh vytíženější](./media/whats-new-app-ui/intune-company-portal-sign-in-2002.png)| 
+|![Příklad obrázku nové obrazovky průběh přihlašování, která zobrazuje jeden indikátor průběhu.](./media/whats-new-app-ui/intune-company-portal-signing-in-2003.png)|![Příklad obrázku předchozího procesu přihlašování, který zobrazuje návrh vytíženější](./media/whats-new-app-ui/intune-company-portal-signing-in-2002.png)|  
 ## <a name="week-of-february-3-2020"></a>Týden od 3. února 2020
 
 ### <a name="screen-removed-from-company-portal-android-work-profile-enrollment---6103987---"></a>Obrazovka, která se odebrala z Portál společnosti, registrace pracovních profilů Android <!--6103987 -->
@@ -142,7 +151,7 @@ Portál společnosti na obrazovkách a krocích pro registraci zařízení s iOS
 * Otevřete aplikaci nastavení a nainstalujte na jejich zařízení profil správy.  
 * Vraťte se do aplikace Portál společnosti, abyste mohli dokončit registraci.  
 
-Aktualizované kroky a obrazovky registrace najdete v tématu [registrace zařízení se systémem iOS v Intune](https://docs.microsoft.com/user-help/enroll-your-device-in-intune-ios).  
+Aktualizované kroky a obrazovky registrace najdete v tématu [registrace zařízení se systémem iOS v Intune](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-in-intune-ios).  
 
 ### <a name="user-experience-update-for-the-company-portal-app-for-ios----2536024---"></a>Aktualizace uživatelského prostředí pro aplikaci Portál společnosti pro iOS <!-- 2536024 -->
 Změnila se Domovská stránka aplikace Portál společnosti pro zařízení s iOS. Tato změna způsobí, že se Domovská stránka bude lépe řídit vzorci uživatelského rozhraní iOS a zároveň poskytuje vylepšenou zjistitelnost pro aplikace a e-knihy.  
@@ -166,7 +175,7 @@ Správce služby Microsoft Intune může nahrát obrázek vlastní značky, kter
 ## <a name="week-of-august-27-2018"></a>Týden od 27. srpna 2018  
 
 ### <a name="new-user-experience-update-for-the-company-portal-website---2000968---"></a>Nová aktualizace uživatelského prostředí pro Portál společnosti web <!--2000968 -->  
-Do Portál společnosti webu jsme přidali nové funkce založené na zpětné vazbě od zákazníků. Na svých zařízeních si všimnete značného vylepšení stávající funkčnosti a použitelnosti. Konkrétní oblasti webu, jako jsou podrobnosti o zařízení, názory a podpora a přehledy zařízení, teď mají nový, moderní a reagující návrh. Aktualizovali jsme [dokumentaci na Portálu společnosti Intune](https://docs.microsoft.com/user-help/using-the-intune-company-portal-website), aby tyto změny reflektovala.   
+Do Portál společnosti webu jsme přidali nové funkce založené na zpětné vazbě od zákazníků. Na svých zařízeních si všimnete značného vylepšení stávající funkčnosti a použitelnosti. Konkrétní oblasti webu, jako jsou podrobnosti o zařízení, názory a podpora a přehledy zařízení, teď mají nový, moderní a reagující návrh. Aktualizovali jsme [dokumentaci na Portálu společnosti Intune](https://docs.microsoft.com/mem/intune/user-help/using-the-intune-company-portal-website), aby tyto změny reflektovala.   
 
 Mezi nové aktualizace patří:  
 

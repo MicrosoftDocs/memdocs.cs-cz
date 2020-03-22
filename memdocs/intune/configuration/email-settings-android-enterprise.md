@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/19/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,16 +16,14 @@ search.appverid: MET150
 ms.reviewer: maholdaa
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: befd2ba9894d8b5d4f7fac32a96d4ed4cae6337a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: ab544d285e49fd3914a8e9867c35ad9ed97f5fe8
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79333067"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80087035"
 ---
 # <a name="android-enterprise-device-settings-to-configure-email-authentication-and-synchronization-in-intune"></a>Nastavení zařízení s Androidem Enterprise pro konfiguraci e-mailu, ověřování a synchronizace v Intune
-
-
 
 Tento článek obsahuje seznam a popis různých nastavení e-mailů, která můžete řídit na zařízeních s Androidem Enterprise. Jako součást řešení správy mobilních zařízení pomocí těchto nastavení můžete nakonfigurovat e-mailový server, použijte protokol SSL k šifrování e-mailů a další.
 
@@ -35,16 +33,16 @@ Další informace o e-mailových profilech v Intune najdete v tématu [Konfigura
 
 ## <a name="before-you-begin"></a>Před zahájením
 
-Vytvořte [profil konfigurace zařízení](email-settings-configure.md#create-a-device-profile) (vyberte pracovní profil) nebo vytvořte [zásadu konfigurace aplikace](../apps/app-configuration-policies-use-android.md).
+Vytvořte [profil konfigurace zařízení](email-settings-configure.md) (vyberte pracovní profil) nebo vytvořte [zásadu konfigurace aplikace](../apps/app-configuration-policies-use-android.md).
 
 ## <a name="android-enterprise"></a>Android Enterprise
 
-- **E-mailová aplikace**: Vyberte **Gmail** nebo **Nine Work**.
-- **E-mailový server**: Název hostitele vašeho Exchange serveru. Zadejte například `outlook.office365.com`.
+- **E-mailová aplikace**: vyberte **Gmail** nebo **devět Work**.
+- **E-mailový server**: Zadejte název hostitele vašeho Exchange serveru. Zadejte například `outlook.office365.com`.
 - **Atribut uživatelského jména z AAD**: Toto jméno je atribut, který Intune získá z Azure Active Directory (Azure AD). Intune dynamicky vygeneruje uživatelské jméno, které tento profil používá. Možnosti:
 
-  - **Hlavní název uživatele**: Získá jméno, například `user1` nebo `user1@contoso.com`.
-  - **Uživatelské jméno**: Získá jen jméno, například `user1`.
+  - **Hlavní název uživatele**: Získá název, například `user1` nebo `user1@contoso.com`.
+  - **Uživatelské jméno**: získá pouze název, například `user1`.
 
 - **Atribut e-mailové adresy z AAD**: Tento název je atribut e-mailu, který Intune získá z Azure AD. Intune dynamicky generuje e-mailovou adresu, kterou používá tento profil. Možnosti:
   - **Hlavní název uživatele**: jako e-mailová adresa používá úplný hlavní název, jako je například `user1@contoso.com` nebo `user1`.

@@ -1,27 +1,27 @@
 ---
 title: Vytvoření profilu Wi-Fi pro zařízení v Microsoft Intune – Azure | Microsoft Docs
-description: Projděte si postup vytvoření konfiguračního profilu zařízení v Microsoft Intune. Vytvářejte profily pro Android, Android Enterprise, Android webceloobrazovkový, iOS, iPadOS, macOS, Windows 10 a novější a Windows Holografick pro firmy. Pomocí těchto profilů můžete vytvořit připojení Wi-Fi pro použití certifikátů, volbu typu protokolu EAP, výběr metody ověřování, povolení proxy a další.
+description: Projděte si postup vytvoření konfiguračního profilu zařízení v Microsoft Intune. Vytvářejte profily pro správce zařízení s Androidem, Android Enterprise, iOS pro Android, iOS, iPadOS, macOS, Windows 10 a novější a Windows Holografick pro firmy. Pomocí těchto profilů můžete vytvořit připojení Wi-Fi pro použití certifikátů, volbu typu protokolu EAP, výběr metody ověřování, povolení proxy a další.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
 ms.technology: ''
-ms.reviewer: tycast
+ms.reviewer: maholdaa
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5297f87dd3aad6b88281b491ccb7c1f0878ffc1e
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 235f5517c9968ba63b04fefa03d9486e5bd6e52d
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79326567"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086397"
 ---
 # <a name="add-and-use-wi-fi-settings-on-your-devices-in-microsoft-intune"></a>Přidání a použití nastavení Wi-Fi na zařízeních v Microsoft Intune
 
@@ -31,7 +31,7 @@ Můžete třeba nainstalovat novou Wi-Fi síť nazvanou Contoso Wi-Fi. Pak budet
 
 1. Vytvořte profil sítě Wi-Fi, který obsahuje nastavení, která se připojují k bezdrátové síti Contoso Wi-Fi.
 2. Přiřaďte profil ke skupině, která obsahuje všechny uživatele zařízení se systémem iOS/iPadOS.
-3. Uživatelé najdou novou síť Contoso Wi-Fi v seznamu bezdrátových sítí na svém zařízení. Potom se mohou k této síti připojit s využitím metody ověřování, kterou zvolíte.
+3. Na svých zařízeních uživatelé naleznou novou síť Contoso Wi-Fi v seznamu bezdrátových sítí. Potom se mohou k této síti připojit s využitím metody ověřování, kterou zvolíte.
 
 Tento článek obsahuje seznam kroků pro vytvoření profilu sítě Wi-Fi. Obsahuje také odkazy, které popisují různá nastavení pro jednotlivé platformy.
 
@@ -49,42 +49,54 @@ Profily Wi-Fi podporují zařízení s následujícími platformami:
 > [!NOTE]
 > Pro zařízení s Windows 8.1 můžete importovat konfiguraci Wi-Fi, kterou předtím vyexportujete z jiného zařízení.
 
-## <a name="create-a-device-profile"></a>Vytvoření profilu zařízení
+## <a name="create-the-profile"></a>Vytvoření profilu
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Vyberte **zařízení** > **konfiguračních profilech** > **vytvořit profil**.
 3. Zadejte následující vlastnosti:
 
-    - **Název**: zadejte popisný název profilu. Své profily pojmenujte, abyste je později mohli snadno identifikovat. Dobrým názvem profilu je například **profil WiFi pro celou firmu**.
-    - **Popis**: Zadejte popis profilu. Toto nastavení není povinné, ale doporučujeme ho zadat.
     - **Platforma**: vyberte platformu zařízení. Možnosti:
 
-      - **Androidemem**
+      - **Správce zařízení s Androidem**
       - **Android Enterprise**
       - **iOS/iPadOS**
       - **macOS**
-      - **Windows 8.1 a novější**
       - **Windows 10 a novější**
+      - **Windows 8.1 a novější**
 
-    - **Typ profilu**: vyberte **Wi-Fi**.
+    - **Profil**: vyberte **Wi-Fi**.
 
       > [!TIP]
       >
       > - Pro zařízení s **Androidem Enterprise** spuštěná jako vyhrazené zařízení (beznabídkový režim) vyberte **pouze vlastník zařízení** > **Wi-Fi**.
       > - U **Windows 8.1 a novějších verzí** můžete zvolit **Import Wi-Fi**. Tato možnost umožňuje importovat nastavení Wi-Fi jako soubor XML, který jste předtím vyexportovali z jiného zařízení.
 
-4. Některá nastavení Wi-Fi se u jednotlivých platforem liší. Pokud chcete zobrazit nastavení pro konkrétní platformu, vyberte svou platformu:
+4. Vyberte **Vytvořit**.
+5. V části **základy**zadejte následující vlastnosti:
 
-    - [Androidemem](wi-fi-settings-android.md)
+    - **Název**: zadejte popisný název profilu. Své profily pojmenujte, abyste je později mohli snadno identifikovat. Dobrým názvem profilu je například **profil WiFi pro celou firmu**.
+    - **Popis**: Zadejte popis profilu. Toto nastavení není povinné, ale doporučujeme ho zadat.
+
+6. Vyberte **Další**.
+7. Nastavení, která můžete konfigurovat v **nastavení konfigurace**, se liší v závislosti na zvolené platformě. Pro podrobnější nastavení vyberte svou platformu:
+
+    - [Správce zařízení s Androidem](wi-fi-settings-android.md)
     - [Android Enterprise](wi-fi-settings-android-enterprise.md), včetně vyhrazených zařízení
     - [iOS/iPadOS](wi-fi-settings-ios.md)
     - [macOS](wi-fi-settings-macos.md)
     - [Windows 10 a novější](wi-fi-settings-windows.md)
     - [Windows 8.1 a novější](wi-fi-settings-import-windows-8-1.md) (včetně Windows Holographic for Business)
 
-5. Až budete hotovi, vyberte **vytvořit profil** > **vytvořit**.
+8. Vyberte **Další**.
+9. V části **značky oboru** (volitelné) přiřaďte značku pro filtrování profilu na konkrétní skupiny IT, například `US-NC IT Team` nebo `JohnGlenn_ITDepartment`. Další informace o značkách oboru naleznete v tématu [použití značek RBAC a Scope pro distribuci](../fundamentals/scope-tags.md).
 
-Profil se vytvoří a zobrazí se v seznamu profilů (**Konfigurace zařízení** > **profily**).
+    Vyberte **Další**.
+
+10. V části **přiřazení**vyberte uživatele nebo skupiny, které obdrží váš profil. Další informace o přiřazování profilů najdete v tématu [přiřazení profilů uživatelů a zařízení](device-profile-assign.md).
+
+    Vyberte **Další**.
+
+11. V rámci **Revize a vytvoření**zkontrolujte nastavení. Když vyberete **vytvořit**, vaše změny se uloží a profil se přiřadí. Tato zásada se taky zobrazuje v seznamu profily.
 
 ## <a name="next-steps"></a>Další kroky
 

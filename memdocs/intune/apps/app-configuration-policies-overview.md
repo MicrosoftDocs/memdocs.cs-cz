@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f7d58d2766444be924bd525b5aff20e17a302d56
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 8e5abdfe69d5553be420d96da60f34df93a6b2f4
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79326379"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80083674"
 ---
 # <a name="app-configuration-policies-for-microsoft-intune"></a>Zásady konfigurace aplikací v Microsoft Intune
 
@@ -93,7 +93,7 @@ Zásady konfigurace aplikací můžete ověřit pomocí následujících tří m
 
 ### <a name="iosipados-configuration-on-unmanaged-devices"></a>Konfigurace iOS/iPadOS na nespravovaných zařízeních
 
-Konfiguraci iOS/iPadOS můžete ověřit pomocí **diagnostického protokolu Intune** na nespravovaných zařízeních pro konfiguraci spravované aplikace. Kromě následujících kroků můžete získat přístup k protokolům spravovaných aplikací pomocí Microsoft Edge. Další informace najdete v tématu [použití Microsoft Edge v systému iOS/iPadOS pro přístup k protokolům spravovaných aplikací](manage-microsoft-edge.md#use-microsoft-edge-on-ios-to-access-managed-app-logs).
+Konfiguraci iOS/iPadOS můžete ověřit pomocí **diagnostického protokolu Intune** na nespravovaných zařízeních pro konfiguraci spravované aplikace. Kromě následujících kroků můžete získat přístup k protokolům spravovaných aplikací pomocí Microsoft Edge. Další informace najdete v tématu [použití Microsoft Edge v systému iOS/iPadOS pro přístup k protokolům spravovaných aplikací](manage-microsoft-edge.md#use-microsoft-edge-to-access-managed-app-logs).
 
 1. Pokud na zařízení ještě není nainstalovaná, Stáhněte si a nainstalujte **Microsoft Edge** z App Storu. Další informace najdete v tématu [Microsoft Intune Protected Apps](apps-supported-intune-apps.md).
 2. Spusťte **Microsoft Edge** a na navigačním panelu vyberte **o** > **intunehelp** .

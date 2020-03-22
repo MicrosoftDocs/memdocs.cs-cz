@@ -1,11 +1,11 @@
 ---
 title: nastavení funkcí zařízení s iOS/iPadOS v Microsoft Intune – Azure | Microsoft Docs
-description: Podívejte se na všechna nastavení a nakonfigurujte zařízení s iOS a iPadOS pro účely tisku, rozložení domovské obrazovky, oznámení aplikací, sdílené zařízení, jednotné přihlašování a nastavení filtru webového obsahu v Microsoft Intune. Pomocí těchto nastavení v profilu konfigurace zařízení můžete nakonfigurovat zařízení se systémem iOS/iPadOS, aby tyto funkce společnosti Apple používala ve vaší organizaci.
+description: Podívejte se na všechna nastavení pro konfiguraci zařízení se systémy iOS a iPadOS pro, rozložení domovské obrazovky, oznámení aplikací, sdílená zařízení, jednotné přihlašování a nastavení filtru webového obsahu v Microsoft Intune. Pomocí těchto nastavení v profilu konfigurace zařízení můžete nakonfigurovat zařízení se systémem iOS/iPadOS, aby tyto funkce společnosti Apple používala ve vaší organizaci.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/09/2020
+ms.date: 03/17/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 351c6ade59d98ce620b939c5ff6238e650390a5f
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: fafca25fb0e374d281f8ef593cb5fa7f35d82979
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79332091"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086964"
 ---
 # <a name="ios-and-ipados-device-settings-to-use-common-iosipados-features-in-intune"></a>nastavení zařízení s iOS a iPadOS pro použití běžných funkcí iOS/iPadOS v Intune
 
-Intune obsahuje některá vestavěná nastavení, která uživatelům iOS/iPadOS můžou na svých zařízeních používat jiné funkce společnosti Apple. Správci můžou například řídit, jak uživatelé systému iOS/iPadOS používají tiskárny pro průchozí zařízení, přidávat aplikace a složky do Docku a stránky na domovské obrazovce, zobrazovat oznámení aplikací, zobrazit podrobnosti o značce assetu na zamykací obrazovce, používat ověřování pomocí jednotného přihlašování a ověřovat uživatele pomocí certifikátů.
+Intune obsahuje některá vestavěná nastavení, která uživatelům iOS/iPadOS můžou na svých zařízeních používat jiné funkce společnosti Apple. Můžete například ovládat tiskárny pro víceúčelové tiskárny, přidávat aplikace a složky na stránky Dock a Home screen, zobrazovat oznámení aplikací, zobrazit podrobnosti o značce assetu na zamykací obrazovce, používat ověřování pomocí jednotného přihlašování a používat ověřování certifikátů.
 
 Pomocí těchto funkcí můžete řídit zařízení s iOS/iPadOS jako součást řešení správy mobilních zařízení (MDM).
 
@@ -48,7 +48,7 @@ Tento článek uvádí tato nastavení a popisuje, co jednotlivé nastavení dě
 - **IP adresa**: zadejte adresu IPv4 nebo IPv6 tiskárny. Pokud k identifikaci tiskáren používáte názvy hostitelů, můžete získat IP adresu tím, že v terminálu otestujete tiskárnu. Další podrobnosti najdete v článku získání IP adresy a cesty (v tomto článku).
 - **Cesta**: cesta je obvykle `ipp/print` pro tiskárny v síti. Další podrobnosti najdete v článku získání IP adresy a cesty (v tomto článku).
 - **Port**: zadejte port naslouchání cíle přenosu. Pokud necháte tuto vlastnost prázdnou, použije se při tisku výchozí port. K dispozici v iOS 11.0 + a iPadOS 13.0 +.
-- **TLS**: vyberte **Povolit** a zabezpečte připojení přes tisk přes protokol TLS (Transport Layer Security). K dispozici v iOS 11.0 + a iPadOS 13.0 +.
+- **TLS**: **Povolte** zabezpečená připojení k tisku pomocí protokolu TLS (Transport Layer Security). K dispozici v iOS 11.0 + a iPadOS 13.0 +.
 
 Pokud chcete přidat servery pro tisk přes mosty, můžete:
 
@@ -81,7 +81,7 @@ Tato funkce platí pro:
 
 ### <a name="dock"></a>Vyjměte
 
-Pomocí nastavení **Dock** přidejte až šest položek nebo složek do Docku obrazovky pro iOS/iPadOS. Mnoho zařízení podporuje méně položek. Například zařízení iPhone podporují až čtyři položky. V takovém případě se na zařízení zobrazí jenom první čtyři položky, které přidáte.
+Pomocí nastavení **Dock** přidejte až šest položek nebo složek do Docku na obrazovce. Mnoho zařízení podporuje méně položek. Například zařízení iPhone podporují až čtyři položky. V takovém případě se na zařízení zobrazí jenom první čtyři položky, které přidáte.
 
 Pro Dock zařízení můžete přidat až **šest** položek (kombinované aplikace a složky).
 
@@ -283,8 +283,32 @@ Tato funkce platí pro:
 - **Typ rozšíření aplikace jednotného přihlašování**: Vyberte typ rozšíření aplikace jednotného přihlašování. Možnosti:
 
   - **Nenakonfigurováno**: rozšíření aplikací se nepoužívají. Pokud chcete zakázat rozšíření aplikace, můžete změnit typ rozšíření aplikace jednotného přihlašování na **Nenakonfigurováno**.
-  - **Přesměrování**: pomocí obecného přizpůsobitelné přípony aplikace pro přesměrování provede jednotné přihlašování s moderními toky ověřování. Ujistěte se, že znáte ID rozšíření pro rozšíření aplikace vaší organizace.
-  - **Přihlašovací údaje**: pomocí obecného rozšíření aplikace s přizpůsobitelnými přihlašovacími údaji můžete provádět jednotné přihlašování s toky ověřování typu výzva a odpověď. Ujistěte se, že znáte ID rozšíření pro rozšíření aplikace vaší organizace.
+  - **Přesměrování**: k použití jednotného přihlašování s moderními toky ověřování použijte obecné a přizpůsobitelné rozšíření aplikace pro přesměrování. Ujistěte se, že znáte ID rozšíření pro rozšíření aplikace vaší organizace.
+
+    V zařízeních se systémem iOS/iPadOS 13.0 a můžete nakonfigurovat **rozšíření aplikace Microsoft Azure AD SSO** pomocí tohoto typu rozšíření aplikace jednotného přihlašování. Rozšíření Microsoft Azure AD umožňuje jednotné přihlašování mezi aplikacemi Microsoftu a aplikacemi organizace, které používají Azure AD k ověřování. Rozšíření Azure AD funguje jako zprostředkovatel pokročilého ověřování, který nabízí vylepšení pro zabezpečení a činnost koncového uživatele. Všechny aplikace, které dřív používaly zprostředkované ověřování pomocí aplikace Microsoft Authenticator, budou i nadále získávat jednotné přihlašování s příponou jednotného přihlašování. Rozšíření jednotného přihlašování pro Azure AD ještě nepodporuje jednotné přihlašování prohlížeče. Další informace o jednotném přihlašování a zprostředkovateli ověřování iOS/iPadOS najdete v tématu [Konfigurace jednotného přihlašování v MacOS a iOS/iPadOS](https://docs.microsoft.com/azure/active-directory/develop/single-sign-on-macos-ios).  
+
+    **Konfigurace rozšíření iOS Microsoft Azure AD:**
+
+    1. Nastavte **typ rozšíření aplikace jednotného přihlašování** na **přesměrování**.
+    2. Nastavte **ID rozšíření** na `com.microsoft.azureauthenticator.ssoextension`.
+    3. Nastavte **ID týmu** na `SGGM6D27TK`.
+    4. V nastavení **adresy URL** zadejte následující adresy URL:
+
+        - `https://login.microsoftonline.com`
+        - `https://login.windows.net`
+        - `https://login.microsoft.com`
+        - `https://sts.windows.net`
+        - `https://login.partner.microsoftonline.cn`
+        - `https://login.chinacloudapi.cn`
+        - `https://login.microsoftonline.de`
+        - `https://login.microsoftonline.us`
+        - `https://login.usgovcloudapi.net`
+        - `https://login-us.microsoftonline.com`
+
+    > [!IMPORTANT]
+    > K zajištění jednotného přihlašování pomocí rozšíření iOS/iPadOS Microsoft Azure AD nejdřív nainstalujte na zařízení Microsoft Authenticator aplikaci pro iOS/iPadOS. Ověřovatel zajišťuje rozšíření Azure AD na zařízení a nastavení rozšíření aplikace pro jednotné přihlašování (MDM) aktivuje rozšíření Azure AD. Po nainstalování ověřovacích dat a profilu rozšíření aplikace jednotného přihlašování do zařízení musí uživatelé zadat své přihlašovací údaje, aby se přihlásili a navázali relaci. Tato relace se pak použije v různých aplikacích, aniž by se museli uživatelé znovu ověřovat.
+
+  - **Přihlašovací údaje**: pomocí obecného rozšíření aplikace s přizpůsobitelnou přihlašovacími údaji můžete používat jednotné přihlašování s toky ověřování typu Challenge a Response. Ujistěte se, že znáte ID rozšíření pro rozšíření aplikace vaší organizace.
   - **Kerberos**: použijte integrované rozšíření protokolu Kerberos společnosti Apple, které je součástí iOS 13.0 + a iPadOS 13.0 +. Tato možnost je verze rozšíření **přihlašovacích údajů** specifická pro Kerberos.
 
   > [!TIP]
@@ -303,7 +327,7 @@ Tato funkce platí pro:
   - Všechny domény v profilech služby Intune, které mají rozšíření pro aplikace jednotného přihlašování, musí být jedinečné. Doménu nemůžete opakovat v žádném profilu rozšíření aplikace pro přihlášení, i když používáte různé typy rozšíření aplikace jednotného přihlašování.
   - U těchto domén se nerozlišují velká a malá písmena.
 
-- **Adresy URL** (pouze přesměrované): zadejte PŘEDPONY adresy URL vašich zprostředkovatelů identity, na jejichž základě provede rozšíření přesměrování aplikace, které provádí jednotné přihlašování. Když se uživatel přesměruje na tyto adresy URL, rozšíření aplikace jednotného přihlašování se zachová a zobrazí výzvu k přihlášení SSO.
+- **Adresy URL** (pouze přesměrované): zadejte PŘEDPONY adresy URL vašich zprostředkovatelů identity, na jejichž základě rozšíření pro přesměrování aplikace používá jednotné přihlašování. Když budou uživatelé přesměrováni na tyto adresy URL, rozšíření aplikace jednotného přihlašování se zasáhne a zobrazí výzvu k přihlášení SSO.
 
   - Všechny adresy URL v profilech rozšíření aplikace jednotného přihlašování Intune musí být jedinečné. Doménu nejde opakovat v žádném profilu rozšíření aplikace jednotného přihlašování, a to ani v případě, že používáte různé typy rozšíření aplikace jednotného přihlašování.
   - Adresy URL musí začínat na http://nebo https://.
@@ -320,7 +344,7 @@ Tato funkce platí pro:
 
   - **Přidat**: vyberte, pokud chcete přidat konfigurační klíče.
 
-- **Použití řetězce klíčů** (jenom Kerberos): vyberte **blok** , aby se zabránilo ukládání a ukládání hesel do řetězce klíčů. Pokud se uživatel zablokuje, nezobrazí se výzva k uložení hesla a po vypršení platnosti lístku Kerberos je potřeba znovu zadat heslo. **Nenakonfigurováno** (výchozí) umožňuje ukládat a ukládat hesla do řetězce klíčů. Uživatelé nejsou po vypršení platnosti lístku vyzváni k opětovnému zadání hesla.
+- **Použití řetězce klíčů** (jenom Kerberos): vyberte **blok** , aby se zabránilo ukládání a ukládání hesel do řetězce klíčů. Pokud je blokováno, uživatelé nebudou vyzváni k uložení hesla a po vypršení platnosti lístku protokolu Kerberos je nutné znovu zadat heslo. **Nenakonfigurováno** (výchozí) umožňuje ukládat a ukládat hesla do řetězce klíčů. Uživatelům se po vypršení platnosti lístku nezobrazí výzva k zadání hesla.
 - **ID obličeje, dotykové ID nebo heslo** (jenom Kerberos): **vyžaduje** , aby uživatelé při aktualizaci lístku Kerberos zadali své ID a dotykové jméno a heslo zařízení. **Nenakonfigurováno** (výchozí) nevyžaduje, aby uživatelé k aktualizaci lístku Kerberos používali biometrika nebo heslo zařízení. Pokud je **použití řetězce klíčů** blokované, pak toto nastavení neplatí.
 - **Výchozí sféra** (pouze Kerberos): Chcete-li nastavit hodnotu **sféry** , kterou jste zadali jako výchozí sféru, vyberte možnost **Povolit** . **Nenakonfigurováno** (výchozí) nenastavuje výchozí sféru.
 

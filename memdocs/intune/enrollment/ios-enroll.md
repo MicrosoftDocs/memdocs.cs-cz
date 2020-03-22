@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d4d5fe8ed78aa5537552ecf3db12eabd2bb6fbde
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 79bb7e627043e439c7438c2fc4afcfdee5a44406
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79331539"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086114"
 ---
 # <a name="enroll-iosipados-devices-in-intune"></a>Registrace zařízení s iOS/iPadOS v Intune
 
@@ -46,7 +46,7 @@ Uživatelům můžete umožnit, aby si zaregistrovali svoje osobní zařízení 
 - Registrace zařízení je to, co si můžete představit jako typické registraci BYOD. Poskytuje správcům široké spektrum možností správy.
 - Registrace uživatele je efektivnější proces registrace, který poskytuje správcům podmnožinu možností správy zařízení. Tato funkce je aktuálně ve verzi Preview. 
 
-Po dokončení požadavků a přiřazení uživatelských licencí si uživatelé můžou aplikaci Portál společnosti Intune stáhnout z App Storu a podle pokynů v aplikaci. Portál společnosti prohlášení o zásadách ochrany osobních údajů na zařízeních s iOS/iPadOS můžete přizpůsobit, jak je popsáno v [tématu přizpůsobení prohlášení o ochraně osobních údajů](../apps/company-portal-app.md#privacy-statement-customization).
+Po dokončení požadavků a přiřazení uživatelských licencí si uživatelé můžou aplikaci Portál společnosti Intune stáhnout z App Storu a podle pokynů v aplikaci. Portál společnosti prohlášení o zásadách ochrany osobních údajů na zařízeních s iOS/iPadOS můžete přizpůsobit, jak je vysvětleno v tématu [jak přizpůsobit portál společnosti Intune aplikace, portál společnosti web a aplikaci Intune](../apps/company-portal-app.md#configuration).
 
 ## <a name="company-owned-iosipados-devices"></a>Zařízení s iOS/iPadOS vlastněná společností
 

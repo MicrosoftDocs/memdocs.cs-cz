@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6ba140f9d49cbdfbada0cb992b333a690cbb4a85
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 235fabd5f184117e680c44b87e5eab4334596e1c
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79328759"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80083895"
 ---
 # <a name="use-update-channel-and-target-version-settings-to-update-office-365-with-microsoft-intune-administrative-templates"></a>Pomocí nastavení aktualizace kanálu a cílové verze aktualizujte Office 365 pomocí Microsoft Intune Šablony pro správu
 
@@ -53,7 +53,7 @@ Nezapomeňte u aplikací Office [Povolit funkci Office 365 ProPlus automatické 
 2. Nezapomeňte [tuto zásadu přiřadit](device-profile-assign.md) k zařízením s Windows 10. Pokud chcete zásady testovat dřív, můžete taky tuto zásadu synchronizovat:
 
     - [Synchronizace zásad v Intune](../remote-actions/device-sync.md)
-    - [Ruční synchronizace zásad na zařízení](https://docs.microsoft.com/user-help/sync-your-device-manually-windows#sync-from-settings-app)
+    - [Ruční synchronizace zásad na zařízení](https://docs.microsoft.com/mem/intune/user-help/sync-your-device-manually-windows#sync-from-settings-app)
 
 ## <a name="check-the-intune-registry-keys"></a>Podívejte se na klíče registru Intune.
 

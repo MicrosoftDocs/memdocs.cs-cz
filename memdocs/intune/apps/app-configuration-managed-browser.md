@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/28/2020
+ms.date: 03/12/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0733ac48aa39f611db43164137d129a3248f13d4
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 936dc5d4167252fcb2280ca3c9aa8b450a924a98
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79326471"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80083637"
 ---
 # <a name="manage-web-access-using-a-microsoft-intune-policy-protected-browser"></a>Správa webového přístupu pomocí Microsoft Intune prohlížeče chráněného zásadami
 
@@ -88,6 +88,9 @@ Pokud nejsou aplikace Managed Browser nebo Microsoft Edge spravované službou I
 ## <a name="conditional-access-for-protected-browsers"></a>Podmíněný přístup pro chráněné prohlížeče
 
 Managed Browser je nově schválenou klientskou aplikací pro podmíněný přístup. To znamená, že můžete omezit přístup mobilních prohlížečů k webovým aplikacím připojeným ke službě Azure AD tak, aby uživatelé mohli používat jenom Managed Browser, a blokovat přístup ze všech ostatních nechráněných prohlížečů, například Safari nebo Chrome. Tato ochrana se dá použít na prostředky Azure, jako je Exchange Online a SharePoint Online, centrum pro správu Microsoft 365 a dokonce i místní weby, které jste nastavili pro externí uživatele prostřednictvím [Azure proxy aplikací služby AD](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started). 
+
+> [!NOTE]
+> Nové webové klipy (připnuté webové aplikace) na zařízeních se systémem iOS se otevřou v Microsoft Edge místo Intune Managed Browser, pokud je to potřeba pro otevření v chráněném prohlížeči. U starších webových klipů pro iOS je nutné tyto webové klipy změnit na místo toho, aby je bylo možné otevřít v Microsoft Edge, Managed Browser.
 
 Pokud chcete webovým aplikacím připojeným ke službě Azure AD omezit možnost používání aplikace Intune Managed Browser na mobilních platformách, můžete vytvořit zásadu podmíněného přístupu, která vyžaduje schválené klientské aplikace. 
 

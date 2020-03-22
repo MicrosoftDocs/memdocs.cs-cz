@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4354d4b5aeb0957790d469a2a3fd5c6787aa93eb
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 367a632b082ad5d58221f33ca9a191fb229f8f66
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79332919"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086336"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Microsoft Intune App SDK pro Android – Příručka pro vývojáře
 
@@ -297,7 +297,7 @@ Kromě základních tříd mají povinné ekvivalenty MAM i některé třídy, k
 | android.preference.PreferenceActivity | MAMPreferenceActivity |
 | android.support.multidex.MultiDexApplication | MAMMultiDexApplication |
 | android.widget.TextView | MAMTextView |
-| android.widget.AutoCompleteTextView | MAMAutoCompleteTextView |
+| android.widget.AutoCompleteTextView |    MAMAutoCompleteTextView |
 | android.widget.CheckedTextView | MAMCheckedTextView |
 | android.widget.EditText | MAMEditText |
 | android.inputmethodservice.ExtractEditText | MAMExtractEditText |
@@ -324,7 +324,7 @@ Kromě základních tříd mají povinné ekvivalenty MAM i některé třídy, k
 |--|--|
 | android.support.v7.app.AlertDialog.Builder | MAMAlertDialogBuilder |
 | android.support.v7.app.AppCompatActivity | MAMAppCompatActivity |
-| android.support.v7.widget.AppCompatAutoCompleteTextView | MAMAppCompatAutoCompleteTextView |
+| android.support.v7.widget.AppCompatAutoCompleteTextView |    MAMAppCompatAutoCompleteTextView |
 | android.support.v7.widget.AppCompatCheckedTextView | MAMAppCompatCheckedTextView |
 | android.support.v7.widget.AppCompatEditText | MAMAppCompatEditText |
 | android.support.v7.widget.AppCompatMultiAutoCompleteTextView | MAMAppCompatMultiAutoCompleteTextView |
@@ -596,7 +596,7 @@ Parametr `service` musí být jedna z následujících `SaveLocation` hodnot:
 
 `username` by měl být hlavní název uživatele (UPN)/uživatelské jméno/e-mail, který je přidružený ke cloudové službě, na kterou se ukládá (*nemusí* nutně být stejný jako uživatel, který je vlastníkem ukládaného dokumentu). Pokud mapování mezi hlavním názvem uživatele služby AAD a uživatelským jménem cloudové služby neexistuje nebo není známo uživatelské jméno, použijte hodnotu null. `SaveLocation.LOCAL` není cloudová služba, takže by měla být vždy použita s parametrem `null` username.
 
-Dříve se pro určování, jestli zásady uživatele umožňují ukládání dat do různých umístění, využívala funkce `getIsSaveToPersonalAllowed()` ze stejné třídy **AppPolicy**. Ta je teď **zastaralá** a neměla by se používat. Vyvolání ekvivalentní k funkci `getIsSaveToPersonalAllowed()` vidíte níže:
+Předchozí metoda určení, zda zásady uživatele povolila ukládání dat do různých umístění, bylo `getIsSaveToPersonalAllowed()` v rámci stejné třídy **AppPolicy** . Ta je teď **zastaralá** a neměla by se používat. Vyvolání ekvivalentní k funkci `getIsSaveToPersonalAllowed()` vidíte níže:
 
 ```java
 MAMPolicyManager.getPolicy(currentActivity).getIsSaveToLocationAllowed(SaveLocation.LOCAL, null);
@@ -1079,7 +1079,7 @@ Metoda `getComplianceStatus()` vrátí výsledek pokusu o nápravu kompatibility
 | PENDING | Pokus o nápravu dodržování předpisů se nezdařil, protože při překročení časového limitu nebyla od služby přijata odpověď na stav. Aplikace by se měla znovu pokusit o získání tokenu později. |
 | COMPANY_PORTAL_REQUIRED | Aby bylo možné úspěšně provést nápravu dodržování předpisů, musí být na zařízení nainstalovaná Portál společnosti.  Pokud je už Portál společnosti na zařízení nainstalovaná, je potřeba restartovat aplikaci.  V takovém případě se zobrazí dialogové okno s výzvou, aby uživatel aplikaci restartoval. |
 
-Pokud je stav dodržování předpisů `MAMCAComplianceStatus.COMPLIANT`, aplikace by měla znovu iniciovat původní pořízení tokenu (pro svůj vlastní prostředek). Pokud se pokus o nápravu kompatibility nepovede, metody `getComplianceErrorTitle()` a `getComplianceErrorMessage()` vrátí lokalizované řetězce, které může aplikace zobrazit koncovému uživateli, pokud se rozhodne.  Většina chybových případů není aplikací remediable, takže v případě obecného případu může být nejlepším řešením selhání při vytváření nebo přihlašování účtů a umožnit uživateli opakovat akci později.  Pokud je chyba trvalá, může vám protokol MAM určit příčinu.  Koncový uživatel může protokoly odeslat pomocí pokynů, které najdete [tady](https://docs.microsoft.com/user-help/send-logs-to-your-it-admin-by-email-android "Posílání protokolů e-mailem firemní podpoře").
+Pokud je stav dodržování předpisů `MAMCAComplianceStatus.COMPLIANT`, aplikace by měla znovu iniciovat původní pořízení tokenu (pro svůj vlastní prostředek). Pokud se pokus o nápravu kompatibility nepovede, metody `getComplianceErrorTitle()` a `getComplianceErrorMessage()` vrátí lokalizované řetězce, které může aplikace zobrazit koncovému uživateli, pokud se rozhodne.  Většina chybových případů není aplikací remediable, takže v případě obecného případu může být nejlepším řešením selhání při vytváření nebo přihlašování účtů a umožnit uživateli opakovat akci později.  Pokud je chyba trvalá, může vám protokol MAM určit příčinu.  Koncový uživatel může protokoly odeslat pomocí pokynů, které najdete [tady](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android "Posílání protokolů e-mailem firemní podpoře").
 
 Vzhledem k tomu, že `MAMComplianceNotification` rozšiřuje `MAMUserNotification`, je k dispozici také identita uživatele, u kterého došlo k pokusu o nápravu.
 
@@ -1206,7 +1206,7 @@ Třída BackupAgent umožňuje explicitnější určení zálohovaných dat. Pro
 
 **Obnova více identit:**
 
-V části [Rozšíření třídy BackupAgent](https://developer.android.com/guide/topics/data/keyvaluebackup.html#BackupAgent) příručky zálohování dat najdete obecný algoritmus pro obnovu dat vaší aplikace a ukázku kódu. Pokud má obnova více identit proběhnout úspěšně, je potřeba dodržet obecnou strukturu danou tímto vzorovým kódem a věnovat zvláštní pozornost těmto bodům:
+Příručka pro zálohování dat určuje obecný algoritmus pro obnovení dat vaší aplikace a poskytuje ukázku kódu v části [rozšíření třídy backupagent](https://developer.android.com/guide/topics/data/keyvaluebackup.html#BackupAgent) . Pokud má obnova více identit proběhnout úspěšně, je potřeba dodržet obecnou strukturu danou tímto vzorovým kódem a věnovat zvláštní pozornost těmto bodům:
 
 1. Abyste mohli projít entity zálohování, musíte použít smyčku `while(data.readNextHeader())`. V předchozím kódu je `data` název místní proměnné pro **MAMBackupDataInput** , který se předá do vaší aplikace při obnovení.
 
@@ -1343,7 +1343,7 @@ Pokud nepřepíšete `onSwitchMAMIdentityComplete` (nebo zavoláte metodu `super
 Kromě schopnosti aplikace nastavit identitu se může vlákno nebo identita objektu Context změnit na základě příchozího přenosu dat z jiné aplikace spravované prostřednictvím Intune, která používá zásady ochrany aplikací.
 
 #### <a name="examples"></a>Příklady
-1. Pokud se aktivita spustí ze `Intent` odeslaného jinou aplikací MAM, nastaví se identita aktivity podle účinné identity v jiné aplikaci v místě odeslání `Intent`.
+1. Pokud se aktivita spustí z `Intent` odesílaného jinou aplikací MAM, nastaví se identita aktivity na základě efektivní identity v jiné aplikaci v bodě odeslání `Intent`.
 
 2. U služeb se identita vlákna nastaví podobně po dobu volání `onStart` nebo `onBind`. Volání do třídy `Binder` vrácená z `onBind` také dočasně nastaví identitu vlákna.
 
@@ -1457,12 +1457,12 @@ public final class MAMFileProtectionManager {
     * this method will silently do nothing.
     *
     * @param identity
-    *       Identity to set.
+    *         Identity to set.
     * @param file
-    *       File to protect.
+    *         File to protect.
     *
     * @throws IOException
-    *       If the file cannot be protected.
+    *         If the file cannot be protected.
     */
    public static void protect(final File file, final String identity) throws IOException;
 
@@ -1864,7 +1864,7 @@ Intune SDK udržuje kontrakt poskytovaný rozhraním Android API, i když podmí
 Sada Intune App SDK pro Android neřídí shromažďování dat z vaší aplikace. Aplikace Portál společnosti ve výchozím nastavení protokoluje data generovaná systémem. Tato data se odešlou do Microsoft Intune. V rámci zásad Microsoftu neshromažďujeme žádné osobní údaje.
 
 > [!NOTE]
-> Pokud se koncoví uživatelé rozhodnou tato data neodesílat, musí v nastavení aplikace Portál společnosti vypnout telemetrii. Další informace najdete v článku [Vypnutí shromažďování dat Microsoftu o využití](https://docs.microsoft.com/user-help/turn-off-microsoft-usage-data-collection-android). 
+> Pokud se koncoví uživatelé rozhodnou tato data neodesílat, musí v nastavení aplikace Portál společnosti vypnout telemetrii. Další informace najdete v článku [Vypnutí shromažďování dat Microsoftu o využití](https://docs.microsoft.com/mem/intune/user-help/turn-off-microsoft-usage-data-collection-android). 
 
 ## <a name="recommended-android-best-practices"></a>Doporučené osvědčené postupy pro Android
 

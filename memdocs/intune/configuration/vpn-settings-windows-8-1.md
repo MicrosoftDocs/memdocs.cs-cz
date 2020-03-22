@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/19/2019
+ms.date: 03/19/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,20 +15,22 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 76813e4634e55651b44712fb486e0b1babcfba09
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 2c80bf57b195d7e97308ba423c9e5b53f7e29c74
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79331883"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086473"
 ---
 # <a name="add-vpn-settings-on-windows-81-devices-in-microsoft-intune"></a>Přidat nastavení sítě VPN na zařízeních Windows 8.1 v Microsoft Intune
-
-
 
 Tento článek popisuje, jaká nastavení můžete v Intune použít ke konfiguraci připojení VPN na zařízeních s Windows 8.1.
 
 V závislosti na tom, jaká nastavení zvolíte, nebudou v následujícím seznamu konfigurovatelné všechny hodnoty.
+
+## <a name="before-you-begin"></a>Před zahájením
+
+[Vytvořte profil konfigurace zařízení](vpn-settings-configure.md).
 
 ## <a name="base-vpn-settings"></a>Základní nastavení sítě VPN
 
@@ -48,7 +50,7 @@ V závislosti na tom, jaká nastavení zvolíte, nebudou v následujícím sezna
   - **F5 Edge Client**
   - **Pulse Secure**
 
-<!--- **Fingerprint** (Check Point Capsule VPN only): Specify a string (for example, "Contoso Fingerprint Code") that will be used to verify that the VPN server can be trusted. A fingerprint can be sent to the client so it knows to trust any server that presents the same fingerprint when connecting. If the device doesn’t already have the fingerprint, it will prompt the user to trust the VPN server that they are connecting to while showing the fingerprint. (The user manually verifies the fingerprint and chooses **trust** to connect.) --->
+<!--- **Fingerprint** (Check Point Capsule VPN only): Specify a string (for example, "Contoso Fingerprint Code") that will be used to verify that the VPN server can be trusted. A fingerprint can be sent to the client so it knows to trust any server that presents the same fingerprint when connecting. If the device doesn't already have the fingerprint, it will prompt the user to trust the VPN server that they are connecting to while showing the fingerprint. (The user manually verifies the fingerprint and chooses **trust** to connect.) --->
 
 - **Doména nebo skupina přihlášení** (jenom SonicWALL Mobile Connect): zadejte název přihlašovací skupiny nebo domény, ke které se chcete připojit.
 
@@ -83,6 +85,8 @@ V závislosti na tom, jaká nastavení zvolíte, nebudou v následujícím sezna
   ```
 
   Další informace o tom, jak psát vlastní příkazy XML, najdete v dokumentaci k síti VPN od výrobce.
+
+- **Dělené tunelové propojení**: **Povolit** umožňuje zařízením rozhodnout, které připojení se má použít v závislosti na provozu. Uživatel v hotelu například pro přístup k pracovním souborům použije připojení VPN, ale pro běžné procházení webu bude používat standardní síť hotelu. Pokud chcete, aby všechny přenosy používaly tunel VPN v případě, že je připojení VPN aktivní, nastavte ho jako **zakázaný**.
 
 ## <a name="proxy-settings"></a>Nastavení proxy serveru
 

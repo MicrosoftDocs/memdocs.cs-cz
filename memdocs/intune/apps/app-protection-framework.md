@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cfb0012dfc2cedb72c64a54c16b567dffff84c9e
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: cd6956a9bdb19f25e39dd8cfb8e7e685d60f7b8c
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79326311"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80083555"
 ---
 # <a name="data-protection-framework-using-app-protection-policies"></a>Architektura ochrany dat pomocí zásad ochrany aplikací 
 
@@ -55,7 +55,7 @@ Jak uvádí výše uvedená tabulka, všechny změny zásad ochrany aplikací by
 
 Při testování změn v aplikaci mějte na paměti [časování doručování](app-protection-policy-delivery.md). Stav doručování aplikace pro daného uživatele může být monitorován. Další informace najdete v tématu [jak monitorovat zásady ochrany aplikací](app-protection-policies-monitor.md).
 
-Jednotlivá nastavení aplikací pro každou aplikaci je možné ověřit na zařízeních pomocí Edge a adresy URL *o: Intunehelp*. Další informace najdete v tématech [Kontrola protokolů ochrany klientských aplikací](app-protection-policy-settings-log.md) a [Správa webového přístupu pomocí Microsoft Edge s Microsoft Intune](manage-microsoft-edge.md#use-microsoft-edge-on-ios-to-access-managed-app-logs).
+Jednotlivá nastavení aplikací pro každou aplikaci je možné ověřit na zařízeních pomocí Edge a adresy URL *o: Intunehelp*. Další informace najdete v tématech [Kontrola protokolů ochrany klientských aplikací](app-protection-policy-settings-log.md) a [Správa webového přístupu pomocí Microsoft Edge s Microsoft Intune](manage-microsoft-edge.md#use-microsoft-edge-to-access-managed-app-logs).
 
 ## <a name="app-data-protection-framework-settings"></a>Nastavení architektury aplikace Data Protection
 

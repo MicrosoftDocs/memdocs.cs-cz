@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 17fa979f9563eb0735a68d2cc0ed82d800f8816f
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 0b2bb9a6220a599cc0e403e6c71f3b8907bbab0e
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79330139"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80085831"
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Novinky v Microsoft Intune – předchozí měsíce
 
@@ -255,7 +255,7 @@ Další informace o těchto vylepšeních najdete v [blogovém příspěvku o ú
 ### <a name="app-management"></a>Správa aplikací
 
 #### <a name="managed-google-play-private-lob-apps---1464182----"></a>Spravované Google Play soukromé obchodní aplikace<!-- 1464182  -->tokenu prostředku
-Intune teď umožňuje správcům IT publikovat soukromé obchodní aplikace pro Android do spravovaných Google Play prostřednictvím IFRAME vloženého v konzole nTune.  Dříve museli správci IT publikovat obchodní aplikace přímo do konzoly pro publikování Google, která vyžadovala několik kroků a byla časově náročná. Tato nová funkce umožňuje snadno publikovat obchodní aplikace s minimální sadou kroků, aniž byste museli opustit konzolu Intune.  Správci už nebudou muset ručně registrovat jako vývojáře s Google a nebude už muset platit poplatek za registraci Google $25.  Tato funkce může využít některý ze scénářů správy Android Enterprise, které používají spravované Google Play (pracovní profil, vyhrazená, plně spravovaná a neregistrovaná zařízení). V Intune vyberte **klientské aplikace** > **aplikace** > **Přidat**. Pak v seznamu **Typ aplikace** vyberte **spravovaná Google Play** . Další informace o spravovaných aplikacích Google Play najdete v tématu [Přidání spravovaných Google Play aplikací do zařízení s Androidem Enterprise v Intune](../apps/apps-add-android-for-work.md).
+Intune teď umožňuje správcům IT publikovat soukromé obchodní aplikace pro Android do spravovaných Google Play prostřednictvím IFRAME vloženého v konzole Intune.  Dříve museli správci IT publikovat obchodní aplikace přímo do konzoly pro publikování Google, která vyžadovala několik kroků a byla časově náročná. Tato nová funkce umožňuje snadno publikovat obchodní aplikace s minimální sadou kroků, aniž byste museli opustit konzolu Intune.  Správci už nebudou muset ručně registrovat jako vývojáře s Google a nebude už muset platit poplatek za registraci Google $25.  Tato funkce může využít některý ze scénářů správy Android Enterprise, které používají spravované Google Play (pracovní profil, vyhrazená, plně spravovaná a neregistrovaná zařízení). V Intune vyberte **klientské aplikace** > **aplikace** > **Přidat**. Pak v seznamu **Typ aplikace** vyberte **spravovaná Google Play** . Další informace o spravovaných aplikacích Google Play najdete v tématu [Přidání spravovaných Google Play aplikací do zařízení s Androidem Enterprise v Intune](../apps/apps-add-android-for-work.md).
 
 #### <a name="windows-company-portal-experience---1473353-3598357---"></a>Prostředí Windows Portál společnosti<!-- 1473353, 3598357 -->
 Probíhá aktualizace Windows Portál společnosti. Na stránce aplikace v rámci Windows Portál společnosti budete moct používat víc filtrů. Stránka s podrobnostmi o zařízení se taky aktualizuje s vylepšeným uživatelským prostředím. Právě probíhá zavádění těchto aktualizací pro všechny zákazníky a očekává se dokončení na konci příštího týdne.
@@ -294,7 +294,7 @@ Microsoft Intune aplikace pro Android se aktualizovala s následujícími vylep�
 - Přidali jsme zobrazení vlastních nabízených oznámení a zarovnejte aplikaci s podporou, která byla nedávno přidaná v aplikaci Portál společnosti pro iOS a Android. Další informace najdete v tématu [odesílání vlastních oznámení v Intune](../remote-actions/custom-notifications.md).
 ""
 #### <a name="for-ios-devices-customize-the-enrollment-process-privacy-screen-of-the-company-portal---4394993---"></a>Pro zařízení s iOS si Přizpůsobte obrazovku ochrana osobních údajů procesu registrace Portál společnosti<!-- 4394993 -->
-Pomocí Markdownu můžete přizpůsobit obrazovku osobních údajů Portál společnosti, kterou koncoví uživatelé uvidí během registrace iOS. Konkrétně budete moct přizpůsobit seznam věcí, které vaše organizace nemůže zobrazit nebo dělat na zařízení. Další informace najdete v tématu [Konfigurace aplikace Portál společnosti Intune](../apps/company-portal-app.md#privacy-statement-customization).
+Pomocí Markdownu můžete přizpůsobit obrazovku osobních údajů Portál společnosti, kterou koncoví uživatelé uvidí během registrace iOS. Konkrétně budete moct přizpůsobit seznam věcí, které vaše organizace nemůže zobrazit nebo dělat na zařízení. Další informace najdete v tématu [Konfigurace aplikace Portál společnosti Intune](../apps/company-portal-app.md#configuration).
 
 
 
@@ -316,7 +316,7 @@ Platí pro:
 
 V Intune vytvoříte profily pro zařízení s iOS a macOS (**Konfigurace zařízení** > **profily** > **vytvořit profil** > **iOS** nebo **MacOS** pro **funkce zařízení**>, **omezení zařízení**nebo **rozšíření** pro typ profilu). 
 
-V této části "ktualizovat" jsou dostupná nastavení na portálu Intune zařazená do kategorie podle typu registrace, na který se vztahují:
+V této aktualizaci jsou dostupná nastavení na portálu Intune zařazená do kategorie podle typu registrace, na který se vztahují:
 
 - iOS
   - Zápis uživatele ""
@@ -1094,7 +1094,7 @@ Portál společnosti na obrazovkách a krocích pro registraci zařízení s iOS
 * Otevřete aplikaci nastavení a nainstalujte na jejich zařízení profil správy.
 * Vraťte se do aplikace Portál společnosti, abyste mohli dokončit registraci.  
 
-Aktualizované kroky a obrazovky registrace najdete v tématu [registrace zařízení se systémem iOS v Intune](https://docs.microsoft.com/user-help/enroll-your-device-in-intune-ios).
+Aktualizované kroky a obrazovky registrace najdete v tématu [registrace zařízení se systémem iOS v Intune](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-in-intune-ios).
 
 #### <a name="openssl-encryption-for-android-app-protection-policies---3747362---"></a>OpenSSL šifrování pro zásady ochrany aplikací pro Android<!-- 3747362 -->
 Zásady ochrany aplikací Intune (aplikace) na zařízeních s Androidem teď používají knihovnu šifrování OpenSSL, která je kompatibilní se standardem FIPS 140-2. Další informace najdete v části [šifrování](../apps/app-protection-policy-settings-android.md#encryption) [v tématu Nastavení zásad ochrany aplikací pro Android v Microsoft Intune](../apps/app-protection-policy-settings-android.md).
@@ -1390,7 +1390,7 @@ K dispozici jsou nové zprávy o chybách instalace aplikací, které souvisejí
 V Intune vyberte **klientské aplikace** > **aplikací** > název aplikace > **stav instalace zařízení**. Ve sloupci **Podrobnosti o stavu** budou k dispozici nové chybové zprávy.
 
 #### <a name="new-app-categories-screen-in-the-company-portal-app-for-windows-10---3834780----"></a>Obrazovka nové kategorie aplikací v aplikaci Portál společnosti pro Windows 10<!-- 3834780  -->
-Přidala se nová obrazovka s názvem **kategorie aplikací** , která vylepšuje možnosti procházení a výběru aplikací v portál společnosti pro Windows 10. Uživatelé teď uvidí své aplikace seřazené pod kategoriemi, jako jsou **Doporučené**, **vzdělávání**a **produktivita**. Tato změna se zobrazí v Portál společnosti verzích 10.3.3451.0 a novějším. Pokud si chcete zobrazit novou obrazovku, přečtěte si téma [co je nového v uživatelském rozhraní aplikace](whats-new-app-ui.md). Další informace o aplikacích v Portál společnosti najdete v tématu [instalace a sdílení aplikací na vašem zařízení](https://docs.microsoft.com/user-help/install-apps-cpapp-windows).  
+Přidala se nová obrazovka s názvem **kategorie aplikací** , která vylepšuje možnosti procházení a výběru aplikací v portál společnosti pro Windows 10. Uživatelé teď uvidí své aplikace seřazené pod kategoriemi, jako jsou **Doporučené**, **vzdělávání**a **produktivita**. Tato změna se zobrazí v Portál společnosti verzích 10.3.3451.0 a novějším. Pokud si chcete zobrazit novou obrazovku, přečtěte si téma [co je nového v uživatelském rozhraní aplikace](whats-new-app-ui.md). Další informace o aplikacích v Portál společnosti najdete v tématu [instalace a sdílení aplikací na vašem zařízení](https://docs.microsoft.com/mem/intune/user-help/install-apps-cpapp-windows).  
 
 #### <a name="power-bi-compliance-app---1455231-doc-work-item---"></a>Aplikace Power BI dodržování předpisů<!-- 1455231 doc-work-item -->
 Přístup k datovému skladu Intune v Power BI online pomocí aplikace [Intune pro dodržování předpisů (datový sklad)](https://aka.ms/intune/datawarehouseapi/getpowerbiapp) . Pomocí této Power BI aplikace teď můžete přistupovat k předem vytvořeným sestavám a sdílet je bez jakéhokoli nastavení a bez nutnosti opustit webový prohlížeč. Další informace najdete v tématu [Změna aplikace pro dodržování předpisů Power BIm protokolu](../developer/reports-changelog.md#power-bi-compliance-app).
@@ -2284,7 +2284,7 @@ Do Portál společnosti webu jsme přidali nové funkce založené na zpětné v
 - Vylepšený výkon u velkých katalogů aplikací
 - Lepší přístupnost pro všechny uživatele  
 
-Aktualizovali jsme [dokumentaci na Portálu společnosti Intune](https://docs.microsoft.com/user-help/using-the-intune-company-portal-website), aby tyto změny reflektovala. Pokud si chcete prohlédnout ukázku vylepšených aplikací, přejděte na článek [Aktualizace uživatelského rozhraní pro aplikace Intune pro koncové uživatele](whats-new-app-ui.md).  
+Aktualizovali jsme [dokumentaci na Portálu společnosti Intune](https://docs.microsoft.com/mem/intune/user-help/using-the-intune-company-portal-website), aby tyto změny reflektovala. Pokud si chcete prohlédnout ukázku vylepšených aplikací, přejděte na článek [Aktualizace uživatelského rozhraní pro aplikace Intune pro koncové uživatele](whats-new-app-ui.md).  
 
 ### <a name="monitor-and-troubleshoot"></a>Monitorování a odstraňování potíží
 

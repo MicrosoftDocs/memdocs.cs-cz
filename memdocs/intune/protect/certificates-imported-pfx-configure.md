@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/04/2020
+ms.date: 03/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8bdb45edb1bcd518b4e55da40f179fb87cefb07c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 7a49c71705755f82dcf33c63971ed6f11ffc849f
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79329811"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084972"
 ---
 # <a name="configure-and-use-imported-pkcs-certificates-with-intune"></a>Konfigurace a používání importovaných certifikátů PKCS pomocí Intune
 
@@ -45,8 +45,8 @@ Intune podporuje import certifikátů PFX pro následující platformy:
 - Android – Správce zařízení
 - Android Enterprise – plně spravovaná
 - Android Enterprise – pracovní profil
-- iOS
-- Mac
+- iOS/iPadOS
+- macOS
 - Windows 10
 
 ## <a name="requirements"></a>Požadavky
@@ -213,28 +213,53 @@ Po importování certifikátů do Intune vytvořte profil **importovaného certi
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Vyberte **zařízení** > **konfigurační profil** > **vytvořit profil**.
+2. Vyberte **zařízení** > **konfigurační profily** > **vytvořit profil**.
 
 3. Zadejte následující vlastnosti:
+   - **Platforma**: vyberte platformu zařízení.
+   - **Profil**: vyberte **importovaný certifikát PKCS** .
 
-   - Zadejte **Název** profilu.
-   - Volitelně můžete nastavit popis.
-   - Zadejte **Platformu**, na kterou se má profil nasadit.
-   - Nastavte **Typ profilu** na **Importovaný certifikát PKCS**.
+4. Vyberte **Vytvořit**.
 
-4. Vyberte **Nastavení**a zadejte následující vlastnosti:
+5. V části **základy**zadejte následující vlastnosti:
+   - **Název**: zadejte popisný název profilu. Své profily pojmenujte, abyste je později mohli snadno identifikovat. Dobrým názvem profilu je například *Profil certifikátu importovaný přes PKCS pro celou firmu*.
+   - **Popis**: Zadejte popis profilu. Toto nastavení není povinné, ale doporučujeme ho zadat.
+
+6. Vyberte **Další**.
+
+7. V **nastavení konfigurace**zadejte následující vlastnosti:
 
    - **Zamýšlený účel**: Určete zamýšlený účel certifikátů, které jsou importované pro tento profil. Správci mohou importovat certifikáty s různými zamýšlenými účely (například podepisování S/MIME nebo šifrování S/MIME). Zamýšlený účel vybraný v profilu certifikátu odpovídá profilu certifikátu se správně importovanými certifikáty. Zamýšlený účel je značka pro seskupení importovaných certifikátů společně a nezaručuje, že certifikáty importované s touto značkou budou vyhovovat zamýšlenému účelu.  
-   - **Období platnosti certifikátu**: Pokud se v šabloně certifikátu nezměnila doba platnosti, tato možnost je ve výchozím nastavení nastavená na jeden rok.
+
+   <!-- Not in new UI:
+   - **Certificate validity period**: Unless the validity period was changed in the certificate template, this option defaults to one year.
+   -->
    - **Zprostředkovatel úložiště klíčů (KSP):** U systému Windows vyberte, kde na zařízení se mají klíče ukládat.
 
-5. Vyberte **OK** > **Vytvořit** a profil uložte.
+8. Vyberte **Další**.
+
+9. V části **značky oboru** (volitelné) přiřaďte značku pro filtrování profilu na konkrétní skupiny IT, například `US-NC IT Team` nebo `JohnGlenn_ITDepartment`. Další informace o značkách oboru naleznete v tématu [použití značek RBAC a Scope pro distribuci](../fundamentals/scope-tags.md).
+
+   Vyberte **Další**.
+
+10. V části **přiřazení**vyberte uživatele nebo skupiny, které obdrží váš profil. Další informace o přiřazování profilů najdete v tématu [přiřazení profilů uživatelů a zařízení](../configuration/device-profile-assign.md).
+
+    Vyberte **Další**.
+
+11. (*Platí jenom pro Windows 10*) V části **pravidla použitelnosti**zadejte pravidla použitelnosti pro upřesnění přiřazení tohoto profilu. Můžete vybrat, že chcete profil přiřadit nebo nepřiřadit, na základě edice nebo verze operačního systému zařízení.
+
+    Další informace najdete v tématu [pravidla použitelnosti](../configuration/device-profile-create.md#applicability-rules) v tématu *Vytvoření profilu zařízení v Microsoft Intune*.
+
+    Vyberte **Další**.
+
+12. V rámci **Revize a vytvoření**zkontrolujte nastavení. Když vyberete vytvořit, vaše změny se uloží a profil se přiřadí. Tato zásada se taky zobrazuje v seznamu profily.
 
 ## <a name="support-for-third-party-partners"></a>Podpora pro partnery třetích stran
 
 Následující partneři poskytují podporované metody nebo nástroje, které můžete použít k importování certifikátů PFX do Intune.
 
 ### <a name="digicert"></a>DigiCert
+
 Pokud používáte službu DigiCert PKI, můžete k importu certifikátů PFX do Intune použít **Nástroj pro import DigiCert pro certifikáty Intune S/MIME** . Použití tohoto nástroje nahrazuje pokyny v části [Import certifikátů PFX do Intune](#import-pfx-certificates-to-intune) , které jsou popsané dříve v tomto článku.
 
 Další informace o nástroji pro import DigiCert, včetně toho, jak tento nástroj získat, najdete v tématu https://knowledge.digicert.com/tutorials/microsoft-intune.html ve znalostní bázi DigiCert.

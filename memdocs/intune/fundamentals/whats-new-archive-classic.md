@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: edc5cd2926f85ebf2f81d681646be7973e6ba444
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: e838ab0123058b90f06814d5a1266072bd95385e
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79330059"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80085781"
 ---
 # <a name="whats-new-in-the-intune-classic-portal---previous-months"></a>Co je nového na klasickém portálu Intune – předchozí měsíce
 
@@ -320,7 +320,7 @@ Pokud správce IT neoznačí nová zařízení jako vlastněná podnikem, Intune
 ### <a name="notices"></a>Oznámení
 
 __Multi-Factor Authentication při registraci se přesouvá do Azure Portal__ <!--VSO 750545-->
-Dříve by správci při nastavování vícefaktorového ověřování pro registrace Intune přešli do konzoly Intune nebo do konzoly Configuration Manageru (verze dřívější než z října 2016). S touto aktualizovanou funkcí se teď budete pomocí přihlašovacích údajů Intune přihlašovat na [Microsoft Azure Portal](https://manage.windowsazure.com) a nakonfigurujete nastavení MFA pomocí služby Azure AD. Další informace o tom najdete [tady](https://aka.ms/mfa_ad).
+Dříve by správci při nastavování vícefaktorového ověřování pro registrace Intune přešli do konzoly Intune nebo do konzoly Configuration Manageru (verze dřívější než z října 2016). S touto aktualizovanou funkcí se teď budete pomocí přihlašovacích údajů Intune přihlašovat na [Microsoft Azure Portal](https://manage.windowsazure.com) a nakonfigurujete nastavení MFA pomocí služby Azure AD. Další informace o tom najdete [tady](/azure/active-directory/authentication/howto-mfa-mfasettings).
 
 __Aplikace Portál společnosti pro Android je teď dostupná v číně__ <!--VSO 658093-->
 Publikujeme aplikaci Portál společnosti pro Android pro stahování v Číně. Z důvodu absence Obchod Google Play v Číně musí zařízení s Androidem získávat aplikace z čínských Marketplace aplikací. Aplikace Portál společnosti pro Android bude dostupná ke stažení v těchto obchodech:

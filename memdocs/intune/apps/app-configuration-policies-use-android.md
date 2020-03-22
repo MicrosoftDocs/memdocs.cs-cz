@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f49d1e419eb7199d2a7cf20f03959689a5f5fa44
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: d16d85beea637cf1e756e5068c0ed8d0106b2902
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79326371"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80083611"
 ---
 # <a name="add-app-configuration-policies-for-managed-android-enterprise-devices"></a>Přidání zásad konfigurace aplikací pro spravovaná zařízení s Androidem Enterprise
 
@@ -110,7 +110,7 @@ Pro zařízení s Androidem použijte následující dvojice klíč/hodnota:
 | **Hodnoty** | <ul><li>Jeden nebo více hlavních názvů uživatele (UPN) oddělených <code>;</code>.</li><li>Jediné povolené účty jsou spravované uživatelské účty definované pomocí tohoto klíče.</li><li> Pro zařízení zaregistrovaná v Intune se může použít token <code>{{userprincipalname}}</code>, aby představoval účet zaregistrovaného uživatele.</li></ul> |
 
    > [!NOTE]
-   > Pokud chcete povolit jenom nakonfigurované účty organizace s více identitami, musíte použít Outlook pro Android 2.2.222 a novější, Word, Excel, PowerPoint pro Android 16.0.9327.1000 a novější nebo OneDrive pro Android 5,28 a novější.<p></p>
+   > Pro Android 2.2.222 a novější, Office, Word, Excel, PowerPoint pro Android 16.0.9327.1000 a novější verze nebo OneDrive pro Android 5,28 a novější je potřeba použít Outlook, když povolíte jenom nakonfigurované účty organizace s více identitami.<p></p>
    > Jako správce Microsoft Intune můžete určit, které uživatelské účty se přidají do systém Microsoft Office aplikací na spravovaných zařízeních. Můžete omezit přístup jenom na povolené uživatelské účty organizace a zablokovat osobní účty zaregistrovaných zařízení. Podpůrné aplikace zpracují konfiguraci aplikace a odeberou a zablokují neschválené účty.<p></p>
 
 ## <a name="enter-json-data"></a>Zadat data JSON

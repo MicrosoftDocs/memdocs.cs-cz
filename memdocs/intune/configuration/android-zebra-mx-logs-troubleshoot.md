@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d8c7c60b4d9d1831aaabb9886345865234ce6351
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 607e2303cbec9ec7fc069db602d51684b71e6575
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79333179"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80083832"
 ---
 # <a name="troubleshoot-and-see-potential-issues-on-android-zebra-devices-in-microsoft-intune"></a>Řešení potíží a zobrazení potenciálních problémů na zařízeních s Androidem Zebra v Microsoft Intune
 
@@ -57,7 +57,7 @@ Pokud chcete získat protokoly, až bude profil už nasazený pomocí Intune, p�
 V zařízení jsou protokoly uložené v `/sdcard/Android/data/com.microsoft.windowsintune.companyportal/files`
 
 ### <a name="get-logs-from-email"></a>Získat protokoly z e-mailu
-Aby se protokoly dostaly po nasazení profilu s Intune, můžou koncoví uživatelé odeslat e-mailem protokoly pomocí e-mailové aplikace na zařízení. Na zařízení Zebra otevřete aplikaci Portál společnosti a [odešlete protokoly](https://docs.microsoft.com/user-help/send-logs-to-your-it-admin-by-email-android). Pomocí funkce Odeslat protokoly vytvoří také ID incidentu PowerLift, na které můžete odkazovat, pokud se obrátíte na podporu Microsoftu.
+Aby se protokoly dostaly po nasazení profilu s Intune, můžou koncoví uživatelé odeslat e-mailem protokoly pomocí e-mailové aplikace na zařízení. Na zařízení Zebra otevřete aplikaci Portál společnosti a [odešlete protokoly](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android). Pomocí funkce Odeslat protokoly vytvoří také ID incidentu PowerLift, na které můžete odkazovat, pokud se obrátíte na podporu Microsoftu.
 
 ## <a name="read-the-logs"></a>Přečtěte si protokoly
 

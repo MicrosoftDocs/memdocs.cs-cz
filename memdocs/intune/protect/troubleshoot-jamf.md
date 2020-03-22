@@ -17,12 +17,12 @@ ms.reviewer: ''
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 335841a8642429e36c277673fd8a238d486366c9
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: f685f1f3d009d7ba7a1dc061ec3025b2f8c96b5f
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79328871"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084639"
 ---
 # <a name="troubleshoot-integration-of-jamf-pro-with-microsoft-intune"></a>Řešení potíží s integrací Jamf pro s Microsoft Intune
 
@@ -89,8 +89,8 @@ Když nakonfigurujete integraci Intune a Jamf pro a nasadíte zásady podmíněn
 Například při otevření Microsoft Teams se zobrazí výzva s textem podobným následujícímu příkladu:
 
 ``` 
-  Microsoft Teams wants to sign using key “Microsoft Workplace Join Key” in your keychain.  
-  To allow this, enter the “login” keychain password 
+  Microsoft Teams wants to sign using key "Microsoft Workplace Join Key" in your keychain.  
+  To allow this, enter the "login" keychain password 
 ```
 
 **Příčina**: tyto výzvy vygeneruje Jamf pro pro každou platnou aplikaci, která vyžaduje registraci Azure AD. 
@@ -156,7 +156,7 @@ V aplikaci Portál společnosti se uživateli může zobrazit **`Not registered`
 
 **Rozhodnutí**  
 Změna zdroje registrace z Intune na Jamf:
-1. Zruší [registraci zařízení MacOS v Intune](https://docs.microsoft.com/user-help/unenroll-your-device-from-intune-macos). Aby nedocházelo k dalším komplikacím u zařízení, která nejsou úplně odebrána z Intune, přečtěte si část [*Příčina 6*](#cause-6) v tomto seznamu příčin.  
+1. Zruší [registraci zařízení MacOS v Intune](https://docs.microsoft.com/mem/intune/user-help/unenroll-your-device-from-intune-macos). Aby nedocházelo k dalším komplikacím u zařízení, která nejsou úplně odebrána z Intune, přečtěte si část [*Příčina 6*](#cause-6) v tomto seznamu příčin.  
 
 2. V zařízení pomocí samoobslužné služby Jamf otevřete aplikaci Portál společnosti a pak zařízení Zaregistrujte v Intune. Tato úloha vyžaduje, abyste [použili Jamf k nasazení aplikace Portál společnosti pro MacOS](conditional-access-assign-jamf.md#deploy-the-company-portal-app-for-macos-in-jamf-pro)a [vytvořili zásadu v Jamf pro, která zaregistruje zařízení uživatelů do služby Azure AD](conditional-access-assign-jamf.md#create-a-policy-in-jamf-pro-to-have-users-register-their-devices-with-azure-active-directory).  
 
@@ -186,7 +186,7 @@ Server Jamf pro pošle pulsi serverům Intune, když je vypnutá integrace, kter
 Znovu povolit integraci Intune v Jamf pro. Viz [Konfigurace integrace Microsoft Intune v Jamf pro](conditional-access-integrate-jamf.md#enable-intune-to-integrate-with-jamf-pro).
 
 
-#### <a name="cause-6"></a>Příčina 6  
+#### <a name="cause-6"></a><a name="cause-6"></a>Příčina 6  
 
 **Zařízení bylo dřív zaregistrované v Intune nebo se uživatel pokusil zaregistrovat zařízení víckrát.**
 
@@ -242,9 +242,9 @@ Pokud je zařízení odregistrované z Jamf, ale není správně odebrané z Int
 Během registrace obdrží uživatel zařízení macOS následující výzvu, aby JamfAAD přístup k klíči ze svého řetězce klíčů: 
 
 ```
-   JamfAAD wants to access key “Microsoft Workplace Join Key" in your keychain. 
+   JamfAAD wants to access key "Microsoft Workplace Join Key" in your keychain. 
     
-   To allow this, enter the “login” keychain password
+   To allow this, enter the "login" keychain password
 ```
 
 **Rozhodnutí**  

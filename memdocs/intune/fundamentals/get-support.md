@@ -6,24 +6,24 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/22/2019
+ms.date: 03/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 7fc95d17-098e-4da5-8a09-a96476569dd9
-ms.reviewer: srik
+ms.reviewer: crisk
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b746317ef15065af246cfd977f6e9d745ef4dea7
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: cf732907b9123dfe8cbd72970556ecfbb5380733
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79332583"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086026"
 ---
 # <a name="how-to-get-support-for-microsoft-intune"></a>Jak získat podporu pro Microsoft Intune
 
@@ -35,7 +35,6 @@ Jako správce Intune můžete použít možnost **pomoc a podpora** k zavedení 
 > Pokud potřebujete technickou podporu k produktům třetích stran, které fungují s Intune (jako je Saaswedo, Cisco nebo Lookout), obraťte se nejdřív na dodavatele konkrétního produktu. Než otevřete žádost o podporu Intune, zkontrolujte, jestli máte produkt správně nakonfigurovaný.
 >
 > Informace o řešení potíží souvisejících s Microsoft Intune najdete v dokumentaci k Intune v části týkající se [řešení potíží](help-desk-operators.md).
-
 
 ## <a name="help-and-support-experience"></a>Prostředí pro pomoc a podporu
 
@@ -52,10 +51,9 @@ Při použití nově vytvořeného tenanta pro Intune je možné, že se nepoved
 
 - *Došlo k neznámému problému. Aktualizujte prosím stránku, ale pokud potíže potrvají, vytvořte si prosím případ prostřednictvím [centra pro správu M365](https://admin.microsoft.com) a Projděte si informace o zadaném ID relace.*
 
-Podrobnosti o chybě zahrnují *ID relace*, podrobnosti *rozšíření* a další. 
- 
-K tomuto problému dochází, když jste svůj nový účet tenanta ještě neověřili prostřednictvím **centra pro správu M365** na https://admin.microsoft.comnebo na **portálu Office 365** na https://portal.office.com. Pokud chcete tento problém vyřešit, vyberte odkaz pro *Centrum pro správu M365* ve zprávě nebo navštivte https://portal.office.coma přihlaste se. Po ověření v obou lokalitách bude k dispozici *pomoc a podpora* služby Intune.
+Podrobnosti o chybě zahrnují *ID relace*, podrobnosti *rozšíření* a další.
 
+K tomuto problému dochází, když jste svůj nový účet tenanta neověřili prostřednictvím **centra pro správu M365** na https://admin.microsoft.comnebo na **portálu Office 365** na https://portal.office.com. Pokud chcete tento problém vyřešit, vyberte odkaz pro *Centrum pro správu M365* ve zprávě nebo navštivte https://portal.office.coma přihlaste se. Po ověření v obou lokalitách bude k dispozici *pomoc a podpora* služby Intune.
 
 **Přístup k nápovědě a podpoře**:
 
@@ -67,18 +65,28 @@ K tomuto problému dochází, když jste svůj nový účet tenanta ještě neov
   > Pokud je vaše instance Intune hostovaná v privátním cloudu pro státní správu, označovaná také jako svrchovaná Cloud, jako je Azure Government, přečtěte si část [Podpora služby Intune pro privátní cloud pro státní](#intune-support-for-private-cloud-for-government)správu dále v tomto článku. Prostředí pro správu *a podporu* Intune nebude k dispozici v privátním cloudu pro státní správu až do příštího roku.
 
 - **Z centra pro správu Microsoft Endpoint Manageru**
-  - Po výběru oblasti funkcí pro Intune vyberte možnost **nápovědu a podpora**.
-  - Z libovolného uzlu v centru pro správu Microsoft Endpoint Manageru vyberte **?** v pravém horním rohu portálu a pak pomocí rozevírací nabídky vyberte službu, se kterou chcete získat informace. **?** ikona v centru pro správu Microsoft Endpoint Manager podporuje několik služeb a musíte vybrat konkrétní službu, pro kterou chcete pomoc.  
 
-    ![Výběr služby](./media/get-support/select-a-service.png)
+  - Z libovolného uzlu v centru pro správu Microsoft Endpoint Manageru vyberte **?** v pravém horním rohu portálu a pak pomocí rozevíracího seznamu vyberte typ správy, ke kterému chcete získat informace. Centrum pro správu Microsoft Endpoint Manageru podporuje následující typy správy a Vy musíte vybrat tu, na kterou chcete pomoct, jako je Intune:
 
-    Po výběru služby uvidíte stránku *pomoc a podpora* pro tuto službu, kde můžete zadat podrobnosti pro [hledání řešení](#find-solutions) pro konkrétní problém.
+    - Správce konfigurace (zahrnuje analýzu stolního počítače)
+    - Intune
+    - Spoluspráva  
 
-    Pokud výsledky hledání nevypadají podle očekávání pro vaši službu, zkontrolujte, zda byla vybrána správná služba. Výběr služby se zobrazí hned po *pomoci a podpoře*.  Pokud není vybraná správná služba, klikněte na *Vybrat službu* , kterou chcete vrátit do rozevíracího seznamu pro výběr služby.
+    > [!div class="mx-imgBorder"]
+    > ![vyberte typ správy](./media/get-support/select-management-type.png)
 
-    ![Potvrzení služby](./media/get-support/confirm-your-service-selection.png)
+    Po výběru typu správy se otevře stránka pro *nápovědu a podporu* , kde můžete zadat podrobnosti pro [hledání řešení](#find-solutions) pro konkrétní problém. Podrobnosti se filtrují podle typu vybrané správy.
 
-###  <a name="the-support-experience"></a>Prostředí podpory
+     Pokud není vybraný správný typ správy **(1)** , klikněte na *Vybrat typ správy* **(2)** , který se vrátí do rozevíracího seznamu pro výběr typu správy:
+
+    > [!div class="mx-imgBorder"]
+    > ![potvrdit typ správy](./media/get-support/confirm-management-selection.png)
+
+  - Pokud otevřete pomoc a podporu **při řešení problémů** a podpoře > **nápovědě a podpoře**, neuvidíte vybraný typ správy uvedený níže v části *pomoc a podpora*.
+
+  - Pokud přejdete na jakýkoli jiný uzel, třeba na *zařízení*, *aplikace*nebo *uživatele*, a pak vyberte možnost *pomoc a podpora*, nebudete mít možnost vybrat typ správy, ani se nezobrazí zobrazení typu pod možností *pomoc a podpora*. V takovém případě se předpokládá použití služby *Intune* . Pokud nechcete, aby byl kontext Intune, použijte **?** možnost, abyste mohli vybrat jiný typ správy.
+
+### <a name="the-support-experience"></a>Prostředí podpory
 
   Po otevření okna pro pomoc a podporu se na portálu zobrazí okno **Potřebuji pomoc?** :
 
@@ -144,8 +152,7 @@ Výběrem závažnosti **a** nebo **kritického** problému omezíte případ po
 Pokud se vaše předplatné nepoužívá v *Help + support* privátním cloudu pro státní správu, nebudete už moct získat pomoc s Intune.
 Pokud vaše instance Intune neběží na privátním cloudu pro státní správu, navigace prostřednictvím Azure *help + support* vás přesměruje na *nápovědu a podporu* služby Intune, kde můžete vytvářet a spravovat incidenty podpory:
 
-Když použijete levé navigační podokno, získáte **pomoc a podporu**, nebo použijte **?** Chcete-li otevřít podokno pro *pomoc* a pak vybrat možnost **help + podpora**, otevřete stránku Azure *help + support* . 
-
+Když použijete levé navigační podokno, získáte **pomoc a podporu**, nebo použijte **?** Chcete-li otevřít podokno pro *pomoc* a pak vybrat možnost **help + podpora**, otevřete stránku Azure *help + support* .
 
 Na této stránce vyberte **+ Nová žádost o podporu** a otevřete tak kartu *základy* na stránce *pomoc a podpora a nová žádost o podporu* .
 
@@ -159,7 +166,6 @@ Na této stránce:
   Pak se zobrazí odkaz, který vás přesměruje na [stránku pomoci a podpory pro Intune](https://aka.ms/intunehelpsupport).
   
   ![Nová žádost o podporu](./media/get-support/new-request.png)
-
 
 ## <a name="intune-support-for-private-cloud-for-government"></a>Podpora pro privátní cloud pro státní správu v Intune
 

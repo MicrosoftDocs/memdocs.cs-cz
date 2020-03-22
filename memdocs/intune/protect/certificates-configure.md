@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/22/2019
+ms.date: 03/20/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 700e255c55db1f216d605f5c54aa0c474e7f48b5
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 2ab229e0ef0d2cdefe41f991efc8c45c988979db
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79329831"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80085044"
 ---
 # <a name="use-certificates-for-authentication-in-microsoft-intune"></a>Použití certifikátů pro ověřování v Microsoft Intune
 
@@ -107,31 +107,47 @@ Vytvořte samostatný profil důvěryhodného certifikátu pro každou platformu
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Vyberte **zařízení** > **konfiguračních profilech** > **vytvořit profil**.
+2. Vyberte **zařízení** > **konfigurační profily** > **vytvořit profil**.
 
-   ![Přejděte na Intune a vytvořte nový profil důvěryhodného certifikátu.](./media/certficates-pfx-configure/certificates-pfx-configure-profile-new.png)
+   ![Přejděte na Intune a vytvořte nový profil důvěryhodného certifikátu.](./media/certificates-configure/certificates-configure-profile-new.png)
 
 3. Zadejte následující vlastnosti:
+   - **Platforma**: vyberte platformu zařízení, která obdrží tento profil.
+   - **Profil**: vyberte **důvěryhodný certifikát** .
+  
+4. Vyberte **Vytvořit**.
 
-   - Zadejte **Název** profilu.
-   - Volitelně můžete nastavit **Popis** .
-   - Zadejte **Platformu**, na kterou se má profil nasadit.
-   - Nastavte **Typ profilu** na **Důvěryhodný certifikát**.
+5. V části **základy**zadejte následující vlastnosti:
+   - **Název**: zadejte popisný název profilu. Své profily pojmenujte, abyste je později mohli snadno identifikovat. Dobrým názvem profilu je například *profil důvěryhodného certifikátu pro celou firmu*.
+   - **Popis**: Zadejte popis profilu. Toto nastavení není povinné, ale doporučujeme ho zadat.
 
-4. Vyberte **Nastavení**a pak vyhledejte soubor. CER certifikátu důvěryhodné kořenové certifikační autority, který jste exportovali pro použití s tímto profilem certifikátu, a pak vyberte **OK**.
+6. Vyberte **Další**.
 
-5. Jenom pro zařízení s Windows 8.1 a Windows 10 vyberte **cílové úložiště** pro důvěryhodný certifikát z těchto možností:
+7. V **nastavení konfigurace**určete soubor. cer pro certifikát důvěryhodné kořenové certifikační autority, který jste předtím exportovali. 
+
+   Jenom pro zařízení s Windows 8.1 a Windows 10 vyberte **cílové úložiště** pro důvěryhodný certifikát z těchto možností:
 
    - **Úložiště počítačových certifikátů – kořenové**
    - **Úložiště počítačových certifikátů – zprostředkující**
    - **Úložiště uživatelských certifikátů – zprostředkující**
 
-6. Až to budete mít, zvolte **OK**, vraťte se zpět do podokna **Vytvořit profil** a vyberte **Vytvořit**.
+   ![Vytvoření profilu a nahrání důvěryhodného certifikátu](./media/certificates-configure/certificates-configure-profile-fill.png)
 
-Profil se zobrazí v seznamu profilů v okně *zařízení – konfigurační profily* s typem profilu **důvěryhodného certifikátu**. Nezapomeňte tento profil přiřadit k zařízením, která budou používat certifikáty SCEP nebo PKCS. Pokud chcete přiřadit tento profil ke skupinám, přečtěte si téma [přiřazení profilů zařízení](../configuration/device-profile-assign.md).
+8. Vyberte **Další**.
 
-> [!NOTE]
-> V zařízeních s Androidem se může zobrazit zpráva, že třetí strana nainstalovala důvěryhodný certifikát.
+9. V části **značky oboru** (volitelné) přiřaďte značku pro filtrování profilu na konkrétní skupiny IT, například `US-NC IT Team` nebo `JohnGlenn_ITDepartment`. Další informace o značkách oboru naleznete v tématu [použití značek RBAC a Scope pro distribuci](../fundamentals/scope-tags.md).
+
+   Vyberte **Další**.
+
+10. V části **přiřazení**vyberte uživatele nebo skupiny, které obdrží váš profil. Další informace o přiřazování profilů najdete v tématu [přiřazení profilů uživatelů a zařízení](../configuration/device-profile-assign.md).
+
+    Vyberte **Další**.
+
+11. (*Platí jenom pro Windows 10*) V části **pravidla použitelnosti**zadejte pravidla použitelnosti pro upřesnění přiřazení tohoto profilu. Můžete vybrat, že chcete profil přiřadit nebo nepřiřadit, na základě edice nebo verze operačního systému zařízení.
+
+  Další informace najdete v tématu [pravidla použitelnosti](../configuration/device-profile-create.md#applicability-rules) v tématu *Vytvoření profilu zařízení v Microsoft Intune*.
+
+12. V rámci **Revize a vytvoření**zkontrolujte nastavení. Když vyberete vytvořit, vaše změny se uloží a profil se přiřadí. Tato zásada se taky zobrazuje v seznamu profily.
 
 ## <a name="additional-resources"></a>Další materiály a zdroje informací
 

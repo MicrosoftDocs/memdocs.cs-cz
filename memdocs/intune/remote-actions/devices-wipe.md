@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 227d18a73ac33cfc277ec4c91935002e159da553
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 2219dae6de9814e7eacebe507095c46c598f932f
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79328351"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084709"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>Odebrání zařízení vymazáním, vyřazením nebo ručním zrušením registrace
 
@@ -188,7 +188,7 @@ Pokud chcete zařízení Apple DEP zcela odebrat ze systému správy Intune, pos
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Zvolte **Zařízení** > **Všechna zařízení** > vyberte požadované zařízení > **Vyřazení**.
 ![Snímek obrazovky s akcí vyřazení](./media/devices-wipe/retire.png)
-3. Přejděte na [deploy.apple.com](http://deploy.apple.com) a vyhledejte zařízení podle sériového čísla.
+3. Navštivte [Business.Apple.com](http://business.apple.com) a vyhledejte zařízení podle jeho sériového čísla.
 4. V nabídce **Přiřazeno** zvolte **Nepřiřazeno**.
 
 5. Zvolte **Znovu přiřadit**.

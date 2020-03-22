@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/19/2019
+ms.date: 03/19/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,16 +15,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fcaa3d4dc27f1791db77b70513968eeda51c668d
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: df05c4b1a7a5ee3f30d33e40620a8a116f508333
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79332959"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086482"
 ---
 # <a name="add-vpn-settings-on-windows-phone-81-devices-in-microsoft-intune"></a>Přidat nastavení sítě VPN v zařízeních Windows Phone 8,1 v Microsoft Intune
-
-
 
 Tento článek popisuje, jaká nastavení můžete v Intune použít ke konfiguraci připojení VPN na zařízeních s Windows Phone 8.1. 
 
@@ -32,6 +30,10 @@ V závislosti na tom, jaká nastavení zvolíte, nebudou v následujícím sezna
 
 >[!IMPORTANT]
 >Pro zařízení s Windows 10 se taky používají profily sítě VPN Windows Phone 8,1.
+
+## <a name="before-you-begin"></a>Před zahájením
+
+[Vytvořte profil konfigurace zařízení VPN](vpn-settings-configure.md).
 
 ## <a name="base-vpn-settings"></a>Základní nastavení sítě VPN
 
@@ -51,7 +53,7 @@ V závislosti na tom, jaká nastavení zvolíte, nebudou v následujícím sezna
 - **Obejít síť VPN v podnikové síti Wi-Fi**: tuto možnost povolte, pokud chcete zadat, že se připojení VPN nepoužijí, když je zařízení připojené k podnikové síti Wi-Fi.
 - **Obejít síť VPN v domácí síti Wi-Fi**: tuto možnost povolte, pokud chcete zadat, že se připojení VPN nebude používat při připojení zařízení k domácí síti Wi-Fi.
 
-- **Typ připojení**: z následujícího seznamu dodavatelů vyberte typ připojení VPN:
+- **Typ připojení**: Vyberte typ připojení VPN. Možnosti:
   - **Check Point Capsule VPN**
   - **SonicWall Mobile Connect**
   - **F5 Edge Client**
@@ -91,7 +93,7 @@ V závislosti na tom, jaká nastavení zvolíte, nebudou v následujícím sezna
 
   Další informace o tom, jak psát vlastní příkazy XML, najdete v dokumentaci k síti VPN od výrobce.
 
-- **Dělené tunelové propojení**: **povolí** nebo **zakáže** tuto možnost, která umožňuje zařízením rozhodnout, které připojení se má použít v závislosti na provozu. Uživatel v hotelu například pro přístup k pracovním souborům použije připojení VPN, ale pro běžné procházení webu bude používat standardní síť hotelu.
+- **Dělené tunelové propojení**: **Povolit** umožňuje zařízením rozhodnout, které připojení se má použít v závislosti na provozu. Uživatel v hotelu například pro přístup k pracovním souborům použije připojení VPN, ale pro běžné procházení webu bude používat standardní síť hotelu. Pokud chcete, aby všechny přenosy používaly tunel VPN v případě, že je připojení VPN aktivní, nastavte ho jako **zakázaný**.
 
 ## <a name="proxy-settings"></a>Nastavení proxy serveru
 

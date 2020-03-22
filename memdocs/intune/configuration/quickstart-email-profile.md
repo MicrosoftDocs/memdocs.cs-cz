@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/20/2020
 ms.topic: quickstart
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7a6345afe4258ff7141228a7284932f083791c70
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 6bc170c5260dc099d0a2b4109ed119572e0dbaff
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79332215"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086851"
 ---
 # <a name="quickstart-create-an-email-device-profile-for-iosipados"></a>Rychlý Start: vytvoření profilu e-mailového zařízení pro iOS/iPadOS
 
@@ -37,39 +37,47 @@ Přihlaste se k [centru pro správu Microsoft Endpoint Manageru](https://go.micr
 
 ## <a name="create-an-iosipados-email-profile"></a>Vytvoření e-mailového profilu pro iOS/iPadOS
 
-1. Vyberte **zařízení** > **konfiguračních profilech** > **vytvořit profil**.
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-   ![Vytvoření e-mailového profilu pro iOS/iPadOS v Intune](./media/quickstart-email-profile/ios-create-profile.png)
+2. Vyberte **zařízení** > **konfigurační profily** > **vytvořit profil**.
+   ![vytvoření e-mailového profilu pro iOS/iPadOS v Intune](./media/quickstart-email-profile/ios-create-profile.png)
 
-2. Do pole **Název** zadejte popisný název nového profilu. Pro účely tohoto příkladu zadejte **Vyžadovat pracovní e-mail pro iOS**.
-3. Zadejte následující informace o profilu:
-    - Jako **Popis**zadejte **vyžadovat, aby zařízení s iOS/iPadOS používala pracovní e-mail**.
-    - V případě **platformy**vyberte **iOS/iPadOS**.
-    - U možnosti **Typ profilu** vyberte **E-mail**.
+3. Zadejte následující vlastnosti:
+   - **Platforma**: vyberte **iOS/iPadOS**
+   - **Profil**: vyberte **e-mail** .
+  
+4. Vyberte **Vytvořit**.
+
+5. V části **základy**zadejte následující vlastnosti:
+   - **Název**: Zadejte popisný název nového profilu. Pro účely tohoto příkladu zadejte **Vyžadovat pracovní e-mail pro iOS**.
+   - **Popis**: zadejte **, aby zařízení s iOS/iPadOS používala pracovní e-mail** .
+
 
         ![Vytvoření e-mailového profilu pro použití se zařízeními s iOS/iPadOS v Intune](./media/quickstart-email-profile/ios-email-profile-name.png)
 
-4. Vyberte **Nastavení** a zadejte následující nastavení (u dalších nastavení ponechejte výchozí hodnoty):
+6. Vyberte **Další**.
+
+7. V **nastavení konfigurace**zadejte následující nastavení (ponechte výchozí nastavení):
    - **E-mailový server**: Pro účely tohoto rychlého startu zadejte **outlook.office365.com**. Toto nastavení určuje umístění Exchange (URL) e-mailového serveru, který bude aplikace pro iOS/iPadOS mail používat pro připojení k e-mailu.
    - **Název účtu**: Zadejte **Firemní e-mail**.
    - **Atribut uživatelského jména z AAD**: Toto jméno je atribut, který Intune získá z Azure Active Directory (Azure AD). Pomocí tohoto jména Intune dynamicky vygeneruje uživatelské jméno pro tento profil. Pro účely tohoto rychlého startu předpokládáme, že chceme použít **hlavní název uživatele (UPN** ), který se použije jako uživatelské jméno pro profil (například user1@contoso.com).
    - **Atribut e-mailové adresy z AAD**: Toto nastavení je e-mailová adresa z Azure AD, která se použije pro přihlášení k serveru Exchange. Pro účely tohoto rychlého startu vyberte **Hlavní název uživatele (UPN)** .
    - **Metoda ověřování**: Pro účely tohoto rychlého startu vyberte možnost **Uživatelské jméno a heslo**. ( **Certifikát** můžete zvolit i v případě, že jste už nastavili certifikát pro Intune.)
 
-        ![Vytvoření e-mailového profilu pro iOS/iPadOS use](./media/quickstart-email-profile/ios-email-profile.png)
+8. Vyberte **Další**.
 
-5. Vyberte **OK** > **vytvořit**. Nový profil se zobrazí v seznamu profily se zobrazeným řídicím panelem, abyste mohli sledovat, jak byl profil přiřazený zařízením se systémem iOS/iPadOS a uživatelům iOS/iPadOS.
-6. Zvolte **Přiřazení**.
-7. Vyberte kartu **Zahrnout** a pak vyberte **Všichni uživatelé a všechna zařízení**. 
-8. Vyberte **Uložit**.
+9. V **oblasti značky oboru** (volitelné) vyberte **Další**. Pro tento profil nepoužíváme značku oboru.
+
+10. V části **přiřazení**použijte rozevírací nabídku **přiřadit k** a vyberte **Všichni uživatelé a všechna zařízení**.  Pak vyberte **Další**.
+
+11. V rámci **Revize a vytvoření**zkontrolujte nastavení. Když vyberete **vytvořit**, vaše změny se uloží a profil se přiřadí. 
 
 ## <a name="clean-up-resources"></a>Vyčištění prostředků
 
 Pokud nechcete používat profil, který jste vytvořili pro další kurzy nebo testování, můžete ho teď odstranit.
 
-1. V Intune vyberte **Konfigurace zařízení** a pak **Profily**.
-2. Vyberte profil testu, který jste vytvořili, **iOS/iPadOS vyžaduje pracovní e-mail**.
-3. Vyberte tři tečky ( **...** ) vedle tohoto profilu a pak vyberte **Odstranit**.
+1. V Intune vyberte**zařízení** > **Konfigurace zařízení**.
+2. Vyberte profil testu, který jste vytvořili, **iOS/iPadOS vyžadovat pracovní e-mail**a pak vyberte **Odstranit**. 
 
 ## <a name="next-steps"></a>Další kroky
 

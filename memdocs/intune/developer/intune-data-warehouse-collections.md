@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/04/2019
+ms.date: 03/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7d3fbfa5ebd8e9ba54d5725cd650cba9c31b3537
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 9b8ffa656aa468b50569518aaff503fec1d21027
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79331847"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086241"
 ---
 # <a name="intune-data-warehouse-collections"></a>Shromažďování dat do datového skladu
 
@@ -222,6 +222,7 @@ Entita **device** obsahuje seznam všech zaregistrovaných zařízení ve správ
 | DeviceRegistrationState    | Klíč atributu stavu registrace klienta pro toto zařízení                                                                                                                      |
 | OwnerTypeKey               | Klíč atributu typu vlastníka pro toto zařízení: podnikový, osobní nebo neznámý                                                                                                    |
 | EnrolledDateTime           | Datum a čas, kdy se zařízení zaregistrovalo.                                                                                                                                         |
+| EthernetMacAddress           | Jedinečný identifikátor sítě tohoto zařízení.                                                                                                                                        |
 | LastSyncDateTime           | Poslední známé přihlášení zařízení k Intune.                                                                                                                                              |
 | ManagementAgentKey         | Klíč agenta správy, který je k tomuto zařízení přidružený.                                                                                                                             |
 | ManagementStateKey         | Klíč stavu správy, který je přidružený k tomuto zařízení a který udává poslední stav vzdálené akce nebo informaci, jestli jde o zařízení s jailbreakem nebo rootem.                                                |
@@ -242,14 +243,17 @@ Entita **device** obsahuje seznam všech zaregistrovaných zařízení ve správ
 | AndroidSecurityPatchLevel  | Úroveň opravy zabezpečení Androidu                                                                                                                                                           |
 | MEID                       | MEID                                                                                                                                                                                   |
 | isSupervised               | Stav dohledu zařízení                                                                                                                                                               |
-| FreeStorageSpaceInBytes    | Volné místo úložiště v bajtech                                                                                                                                                                 |
-| TotalStorageSpaceInBytes   | Celková velikost úložiště v bajtech                                                                                                                                                                |
+| FreeStorageSpaceInBytes    | Volné úložiště v bajtech                                                                                                                                                                 |
+| TotalStorageSpaceInBytes   | Celková kapacita úložiště v bajtech                                                                                                                                                                |
 | EncryptionState            | Stav šifrování zařízení                                                                                                                                                      |
 | SubscriberCarrier          | Poskytovatel předplatného na zařízení                                                                                                                                                       |
 | PhoneNumber                | Telefonní číslo zařízení                                                                                                                                                             |
 | IMEI                       | IMEI                                                                                                                                                                                   |
 | CellularTechnology         | Mobilní technologie zařízení                                                                                                                                                    |
 | WiFiMacAddress             | Wi-Fi MAC                                                                                                                                                                              |
+| Model                      | Model zařízení.                                                                                                                                                                      |
+| Office365Version           | Verze Office 365, která je na zařízení nainstalovaná.                                                                                                                             |
+| PhysicalMemoryInBytes      | Fyzická paměť v bajtech.                                                                                                                                                          |
 
 
 ## <a name="devicetypes"></a>deviceTypes

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 842b262c2ae19a7a026d87600df5ffb0e80cf9b8
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 969dbcbe3fe1b1a155769bec6403b889b3d326bc
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79331523"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086101"
 ---
 # <a name="set-up-iosipados-and-ipados-user-enrollment-preview"></a>Nastavení zápisu pro iOS/iPadOS a iPadOS uživatele (Preview)
 
@@ -59,7 +59,7 @@ Registrační profil definuje nastavení použité pro skupinu zařízení běhe
 
     - **Registrace zařízení**: všichni uživatelé v tomto profilu budou používat registraci zařízení.
     - **Zápis uživatele**: všichni uživatelé v tomto profilu použijí zápis uživatele.
-    - **Určení podle výběru uživatele**: všichni uživatelé v této skupině budou mít možnost zvolit typ registrace, který se má použít. Když si uživatelé zaregistrují svá zařízení, uvidí možnost vybrat si **vlastní** zařízení a zařízení **(společnosti)** , které je vlastníkem tohoto zařízení. Pokud si tyto možnosti zvolí, zařízení se zaregistruje pomocí registrace zařízení. Pokud uživatel zvolí **Toto zařízení jako vlastní**, získá další možnost zabezpečení celého zařízení nebo pouze zabezpečené aplikace a data související s prací. Výběr, který typ registrace je implementován na zařízení, určí koncový uživatel, který vlastní zařízení. Tato volba uživatele se taky odráží v atributu vlastnictví zařízení v Intune. Další informace o uživatelském prostředí najdete v tématu [nastavení přístupu zařízení s iOS/iPadOS k prostředkům společnosti](https://docs.microsoft.com/user-help/enroll-your-device-in-intune-ios).
+    - **Určení podle výběru uživatele**: všichni uživatelé v této skupině budou mít možnost zvolit typ registrace, který se má použít. Když si uživatelé zaregistrují svá zařízení, uvidí možnost vybrat si **vlastní** zařízení a zařízení **(společnosti)** , které je vlastníkem tohoto zařízení. Pokud si tyto možnosti zvolí, zařízení se zaregistruje pomocí registrace zařízení. Pokud uživatel zvolí **Toto zařízení jako vlastní**, získá další možnost zabezpečení celého zařízení nebo pouze zabezpečené aplikace a data související s prací. Výběr, který typ registrace je implementován na zařízení, určí koncový uživatel, který vlastní zařízení. Tato volba uživatele se taky odráží v atributu vlastnictví zařízení v Intune. Další informace o uživatelském prostředí najdete v tématu [nastavení přístupu zařízení s iOS/iPadOS k prostředkům společnosti](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-in-intune-macos-cp).
     
 5. Vyberte **Další**.
 

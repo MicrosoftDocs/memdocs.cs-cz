@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4b706ea076ebcc239904a9ae918389ccafa287ec
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 462f9ca9618d16c0291792f86d00c46f641c6cc8
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79325591"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084063"
 ---
 # <a name="create-a-device-profile-in-microsoft-intune"></a>Vytvořte profil zařízení v Microsoft Intune
 
@@ -52,7 +52,7 @@ V tomto článku najdete:
    - **Popis**: Zadejte popis profilu. Toto nastavení není povinné, ale doporučujeme ho zadat.
    - **Platforma**: vyberte platformu zařízení. Možnosti:  
 
-       - **Androidemem**
+       - **Správce zařízení s Androidem**
        - **Android Enterprise**
        - **iOS/iPadOS**
        - **macOS**
@@ -68,12 +68,14 @@ V tomto článku najdete:
        - [Optimalizace doručení](delivery-optimization-windows.md)
        - [Funkce zařízení](device-features-configure.md)
        - [Omezení zařízení](device-restrictions-configure.md)
+       - [Připojení k doméně](domain-join-configure.md)
        - [Upgrade edice a přepínač režimu](edition-upgrade-configure-windows-10.md)
        - [Školení](education-settings-configure.md)
        - [E-mail](email-settings-configure.md)
        - [Endpoint Protection](../protect/endpoint-protection-configure.md)
        - [Ochrana identit](../protect/identity-protection-configure.md)  
        - [Veřejný terminál](kiosk-settings.md)
+       - [ATP v programu Microsoft Defender](../protect/advanced-threat-protection.md)
        - [Certifikát PKCS](../protect/certficates-pfx-configure.md)
        - [Importovaný certifikát PKCS](../protect/certificates-imported-pfx-configure.md)
        - [Soubor předvoleb](preference-file-settings-macos.md)
@@ -82,12 +84,12 @@ V tomto článku najdete:
        - [Aktualizovat zásady](../protect/software-updates-ios.md)
        - [VPN](vpn-settings-configure.md)
        - [Wi-Fi](wi-fi-settings-configure.md)
-       - [ATP v programu Microsoft Defender](../protect/advanced-threat-protection.md)
        - [Windows Information Protection](../protect/windows-information-protection-configure.md)
 
      Pokud třeba pro platformu vyberete **iOS/iPadOS** , možnosti typu vašeho profilu vypadají podobně jako v následujícím profilu:
 
-     ![Vytvoření profilu iOS/iPadOS v Intune](./media/device-profile-create/create-device-profile.png)
+     > [!div class="mx-imgBorder"]
+     > ![vytvořit profil iOS/iPadOS v Intune](./media/device-profile-create/create-device-profile.png)
 
 4. Po dokončení vyberte **OK** > **vytvořit** a uložte provedené změny. Profil se vytvoří a zobrazí se v seznamu.
 
@@ -138,7 +140,8 @@ Když přiřadíte profil ke skupinám, budou pravidla použitelnosti fungovat j
 
 1. Vyberte **pravidla použitelnosti**. Můžete zvolit **pravidlo**, **vlastnost**a **edici OS**:
 
-    ![Přidání pravidla použitelnosti do konfiguračního profilu zařízení v Microsoft Intune](./media/device-profile-create/applicability-rules.png)
+    > [!div class="mx-imgBorder"]
+    > ![přidat pravidlo použitelnosti do konfiguračního profilu zařízení v Microsoft Intune](./media/device-profile-create/applicability-rules.png)
 
 2. V možnosti **pravidlo**vyberte, jestli chcete zahrnout nebo vyloučit uživatele nebo skupiny. Možnosti:
 
@@ -184,7 +187,8 @@ Při vytváření profilů Vezměte v úvahu následující doporučení:
 
   Následující obrázek ukazuje příklad nastavení, které se může vztahovat na uživatele nebo použít na zařízení:
 
-  ![Šablona správce Intune, která se vztahuje na uživatele a zařízení](./media/device-profile-create/setting-applies-to-user-and-device.png)
+  > [!div class="mx-imgBorder"]
+  > ![šablonu správce Intune, která se vztahuje na uživatele a zařízení](./media/device-profile-create/setting-applies-to-user-and-device.png)
 
 - Pokaždé, když vytvoříte omezující zásadu, sdělte tuto změnu vašim uživatelům. Pokud například měníte požadavek na přístupový kód ze 4 znaků na 6 znaků, dejte uživatelům informace o tom, než zásadu přiřadíte.
 

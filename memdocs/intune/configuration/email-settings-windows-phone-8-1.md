@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 3/6/2018
+ms.date: 3/19/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,42 +16,58 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a0dd12ea12e2127c678f8805f3d50b2b24f37c11
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 369e856b26ecbf8a7d6d7f8c0a87a9bfdf69e318
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79326699"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086931"
 ---
 # <a name="email-profile-settings-in-microsoft-intune-for-devices-running-windows-phone-81"></a>Nastavení e-mailového profilu v Microsoft Intune pro zařízení s Windows Phone 8.1
-
-
 
 Tento článek ukazuje nastavení e-mailového profilu, která můžete konfigurovat pro zařízení s Windows Phone 8.1.
 
 >[!IMPORTANT]
 >Pro zařízení s Windows 10 se taky používají e-mailové profily Windows Phone 8,1.
 
-- **E-mailový server** – Název hostitele vašeho Exchange serveru.
-- **Název účtu** – Zobrazovaný název e-mailového účtu tak, jak ho uvidí uživatelé na svých zařízeních.
-- **Atribut uživatelského jména z AAD** – Toto je atribut v Active Directory (AD) nebo Azure AD, který se použije k vygenerování uživatelského jména pro tento e-mailový profil. Vyberte **Primární adresa SMTP**, třeba **user1@contoso.com** , nebo **Hlavní název uživatele**, třeba **uživatel1** nebo **user1@contoso.com** .
-- **Atribut e-mailové adresy z AAD** – Způsob generování e-mailové adresy pro uživatele na každém zařízení. Pokud chcete k přihlášení do systému Exchange použít primární adresu SMTP, vyberte **Primární adresa SMTP**. Pokud chcete jako e-mailovou adresu používat celý hlavní název, vyberte **Hlavní název uživatele**.
+## <a name="before-you-begin"></a>Před zahájením
 
+[Vytvořte e-mailový profil Windows Phone 8,1](email-settings-configure.md).
+
+## <a name="email-settings"></a>Nastavení e-mailu
+
+- **E-mailový server**: Zadejte název hostitele vašeho Exchange serveru. Zadejte například `outlook.office365.com`.
+- **Název účtu**: Zadejte zobrazovaný název e-mailového účtu. Tento název se zobrazuje uživatelům na jejich zařízeních.
+- **Atribut uživatelského jména z AAD**: Toto jméno je atribut, který Intune získá od služby Azure Active Directory (AAD). Intune dynamicky vygeneruje uživatelské jméno, které tento profil používá. Možnosti:
+  - **Hlavní název uživatele**: Získá název, například `user1` nebo `user1@contoso.com`.
+  - **Primární adresa SMTP**: Získá název ve formátu e-mailové adresy, například `user1@contoso.com`.
+  - **Název účtu SAM**: Vyžaduje doménu, například `domain\user1`. Dále zadejte:
+    - **Zdroj názvu domény uživatele**: vaše možnosti:
+      - **AAD** (Azure Active Directory): zadejte **atribut názvu domény uživatele z AAD**. Vyberte, chcete-li získat **úplný název domény** nebo atribut **názvu rozhraní NetBIOS** uživatele.
+      - **Vlastní**: zadejte **název vlastní domény, který se má použít**. Zadejte hodnotu, kterou Intune používá pro název domény, například `contoso.com` nebo `contoso`.
+
+- **Atribut e-mailové adresy z AAD**: Intune získá tento atribut z Azure Active Directory (AAD). Vyberte způsob generování e-mailové adresy uživatele. Možnosti:
+  - **Hlavní název uživatele**: jako e-mailová adresa používá úplný hlavní název, například `user1@contoso.com` nebo `user1`.
+  - **Primární adresa SMTP**: používá primární adresu SMTP pro přihlášení k Exchangi, například `user1@contoso.com`.
 
 ## <a name="security-settings"></a>Nastavení zabezpečení
 
-- **SSL** – Při posílání a přijímání e-mailů a komunikaci se serverem Exchange se použije komunikace SSL (Secure Sockets Layer).
-
-
+- **SSL**: Při volbě **Povolit** se při posílání a přijímání e-mailů a komunikaci se serverem Exchange používá komunikace SSL (Secure Sockets Layer). **Disable** NEPOTŘEBUJE protokol SSL.
 
 ## <a name="synchronization-settings"></a>Nastavení synchronizace
 
-- **Počet e-mailů k synchronizaci** – Zvolte počet dní, za které se mají e-maily synchronizovat, nebo vyberte **Bez omezení**, pokud chcete synchronizovat všechny dostupné e-maily.
-- **Plán synchronizace** – Vyberte plán, podle kterého zařízení synchronizují data z Exchange Serveru. Můžete také vybrat **Při doručování zpráv**, aby se data synchronizovala hned po doručení, nebo **Ruční**, aby musel synchronizaci zahájit uživatel zařízení.
+- **Počet e-mailů k synchronizaci**: Zvolte počet dní, za které se mají e-maily synchronizovat. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Pokud chcete synchronizovat všechny dostupné e-maily, vyberte **neomezeno** .
+- **Plán synchronizace**: Vyberte plán, podle kterého zařízení synchronizují data z Exchange serveru. Můžete také vybrat možnost **při doručování zpráv**, která synchronizuje data hned po doručení. Případně vyberte možnost **ručně** , aby uživatel zařízení spustil synchronizaci.
 
 ## <a name="content-sync-settings"></a>Nastavení synchronizace obsahu
 
-- **Typ obsahu k synchronizaci** – Vyberte typy obsahu, které se mají na zařízeních synchronizovat:
-  - **Kontakty**
-  - **Kalendář**
-  - **Úkoly**
+- **Typ obsahu, který se má synchronizovat**: Vyberte typy obsahu, které chcete synchronizovat do zařízení:
+  - **Kontakty**: **v** synchronizaci kontaktů. **Off** nesynchronizuje automaticky kontakty. Uživatelé se ručně synchronizují.
+  - **Kalendář**: **v** synchronizaci kalendáře. **Off** nesynchronizuje automaticky kontakty. Uživatelé se ručně synchronizují.
+  - **Úkoly**: **v** synchronizaci úloh. **Vypnuto** automaticky nesynchronizuje úlohy. Uživatelé se ručně synchronizují.
+
+## <a name="next-steps"></a>Další kroky
+
+Můžete také nakonfigurovat nastavení e-mailu pro [Android](email-settings-android.md), [Android Enterprise](email-settings-android-enterprise.md), [iOS/iPadOS](email-settings-ios.md)a [Windows 10](email-settings-windows-10.md).
+
+[Nakonfigurujte nastavení e-mailu v Intune](email-settings-configure.md).

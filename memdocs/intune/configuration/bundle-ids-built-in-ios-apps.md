@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 99ba07c5895c5a299a2e0b55b0ff16dcbcb2913f
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: c7de0b978c24f28988c62854a249505a0598db95
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79325583"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084083"
 ---
 # <a name="bundle-ids-for-built-in-ios-and-ipados-apps-you-can-use-in-intune"></a>ID sady prostředků pro integrované aplikace pro iOS a iPadOS, které můžete použít v Intune
 
@@ -32,6 +32,7 @@ Když konfigurujete funkce na zařízeních s iOS/iPadOS, můžete taky přidat 
 | ID sady prostředků                   | Název aplikace     | Vydavatel |
 |-----------------------------|--------------|-----------|
 | com.apple.AppStore          | App Store    | Apple     |
+| com. Apple. Store. Jolly       | Apple Store  | Apple     |
 | com.apple.calculator        | Kalkulačka   | Apple     |
 | com.apple.mobilecal         | Kalendář     | Apple     |
 | com.apple.camera            | Fotoaparát       | Apple     |

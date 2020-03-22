@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/27/2020
+ms.date: 03/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0f475f6f204225e00424e08afb8c69e20e21e815
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 94916362fd9c2fd8dfdfdc3f586940d108cdabae
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79326227"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80083689"
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>Vytvoření a přiřazení zásad ochrany aplikací
 
@@ -123,7 +123,7 @@ Aby se změny projevily hned, musí se koncový uživatel odhlásit od aplikace 
     
     | Hodnota/možnost | Popis |
     |-------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-    | Cíl pro aplikace na všech typech zařízení | Tuto možnost použijte, pokud chcete zásady zaměřit na aplikace na zařízeních libovolného stavu správy. Pokud chcete cílit aplikace na konkrétní typy zařízení, vyberte **ne** . Informace najdete v tématu [cílení zásad ochrany aplikací na základě stavu správy zařízení](#target-app-protection-policies-based-on-device-management-state) . |
+    | Cíl pro aplikace na všech typech zařízení | Tuto možnost použijte, pokud chcete zásady zaměřit na aplikace na zařízeních libovolného stavu správy. Pokud chcete cílit aplikace na konkrétní typy zařízení, vyberte **ne** . Pro toto nastavení může být vyžadována další konfigurace aplikace. Podrobnosti najdete v tématu [Cílení zásad ochrany aplikací na základě stavu správy zařízení](#target-app-protection-policies-based-on-device-management-state). |
     |     Typy zařízení | Tuto možnost použijte, pokud chcete určit, jestli se tato zásada vztahuje na zařízení spravovaná MDM nebo na nespravovaná zařízení. V případě zásad aplikací pro iOS/iPadOS vyberte možnost z **nespravovaných** a **spravovaných** zařízení. V případě zásad aplikací pro Android vyberte z **nespravovaného**, **Správce zařízení s Androidem**a **Android Enterprise**.  |
     | Veřejné aplikace | Klikněte na **Vybrat veřejné aplikace** a vyberte aplikace, které se mají cílit. |
     | Vlastní aplikace | Klikněte na **Vybrat vlastní aplikace** a vyberte vlastní aplikace, které chcete cílit na základě ID sady prostředků. |
@@ -178,10 +178,9 @@ Pokud chcete vytvořit tyto zásady, přejděte do části **aplikace** > **Zás
 - **Správce zařízení s Androidem**: zařízení spravovaná přes Intune, která používají rozhraní API pro správu zařízení s Androidem.
 - **Android Enterprise**: zařízení spravovaná pomocí Intune s využitím podnikových profilů Androidu nebo úplné správy zařízení s Androidem Enterprise.
 
-> [!NOTE]
-> Zařízení s Androidem se zobrazí výzva k instalaci aplikace Portál společnosti Intune bez ohledu na to, který typ zařízení je zvolený. Pokud například vyberete možnost Android Enterprise, budou se stále zobrazovat uživatelé s nespravovanými zařízeními s Androidem.
+V Androidu se zařízení s Androidem zobrazí výzva k instalaci aplikace Portál společnosti Intune bez ohledu na to, který typ zařízení zvolíte. Pokud například vyberete možnost Android Enterprise, budou se stále zobrazovat uživatelé s nespravovanými zařízeními s Androidem.
 
-Pro iOS/iPadOS se pro nastavení zásad ochrany aplikací na aplikace na zaregistrovaných zařízeních v Intune vyžaduje další nastavení konfigurace aplikace:
+Pro iOS/iPadOS se pro výběr typu zařízení vynutilo nespravované zařízení, vyžaduje se další nastavení konfigurace aplikace. Tyto konfigurace budou komunikovat se službou APP Service, že konkrétní aplikace je spravovaná a že nastavení aplikace nebudou platit:
 
 - **IntuneMAMUPN** musí být nakonfigurované pro všechny aplikace spravované pomocí správy mobilních zařízení (MDM). Další informace najdete v tématu [Správa přenosu dat mezi aplikacemi pro iOS/iPadOS v Microsoft Intune](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm).
 - **IntuneMAMDeviceID** musí být nakonfigurované pro všechny aplikace spravované pro správu MDM od třetích stran. **IntuneMAMDeviceID** by mělo být nakonfigurované na token ID zařízení. Například `key=IntuneMAMDeviceID, value={{deviceID}}`. Další informace najdete v tématu [Přidání zásad konfigurace aplikací pro spravovaná zařízení s iOS/iPadOS](app-configuration-policies-use-ios.md).

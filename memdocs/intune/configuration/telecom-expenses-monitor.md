@@ -1,12 +1,12 @@
 ---
 title: Nastavení služby pro správu telekomunikačních výdajů v Microsoft Intune – Azure | Microsoft Docs
 titleSuffix: ''
-description: Integrujte Microsoft Intune se službou Saaswedo Telecom výdaje za sledování využití dat a nastavení prahových hodnot nebo omezení pro zařízení s Androidem, iOS a iPadOS.
+description: Integrujte Microsoft Intune se službou Saaswedo Telecom nákladů pro sledování využití dat a nastavte prahové hodnoty nebo omezení pro správce zařízení s Androidem, iOS a zařízení iPadOS.
 keywords: Saaswedo
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -18,22 +18,23 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7a11151b874e34d12b71b3429f55603d5e6f2a11
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 62fe18a086630a768976220b8de7469f53f25cc4
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79332231"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086948"
 ---
 # <a name="set-up-a-telecom-expense-management-service-in-intune"></a>Nastavení služby TEM (Telecom Expense Management) v Intune
 
-Pomocí Intune můžete spravovat telekomunikační výdaje ze využívání dat na mobilních zařízeních vlastněných organizací. Intune se integruje se [správou telekomunikačních výdajů Datalert](http://datalert.biz/get-started)v Saaswedo. Datalert je řešení pro správu telekomunikačních výdajů v reálném čase, které spravuje využití telekomunikačních dat. Může vám to zabránit nákladným a neočekávaným datům a poplatkům za roaming pro vaše zařízení spravovaná pomocí Intune.
+Pomocí Intune můžete spravovat telekomunikační výdaje ze využívání dat na mobilních zařízeních vlastněných organizací. Intune se integruje se [správou telekomunikačních výdajů Datalert](http://datalert.biz/get-started)v Saaswedo. Datalert je řešení pro správu telekomunikačních výdajů v reálném čase, které spravuje využití telekomunikačních dat. Může vám to zabránit neočekávaným datům a poplatkům za roaming pro vaše zařízení spravovaná pomocí Intune.
 
-Integrace s Datalert může nastavovat, monitorovat a vymáhat limity využití roamingu a domácích dat. Když limity překročí definované prahové hodnoty, výstrahy se automaticky aktivují. Službu můžete také nakonfigurovat tak, aby se nakonfigurovali různé akce, jako je například zákaz roamingu nebo překročení prahové hodnoty jednotlivcům nebo skupinám. Konzola pro správu Datalert obsahuje sestavy, které zobrazují informace o využití a monitorování dat.
+Integrace s Datalert může nastavovat, monitorovat a vymáhat limity využití roamingu a domácích dat. Pokud limity překračují vaše prahové hodnoty, automaticky se aktivují výstrahy. Službu můžete také nakonfigurovat tak, aby u uživatelů nebo skupin mohla používat různé akce, jako je například zakázat roaming nebo překročit prahovou hodnotu. Konzola pro správu Datalert obsahuje sestavy, které zobrazují informace o využití a monitorování dat.
 
 Následující obrázek ukazuje, jak se Intune integruje s Datalert:
 
-  ![Schéma integrace Intune a Datalertu](./media/telecom-expenses-monitor/tem-datalert-intune-solution-diagram.png)
+> [!div class="mx-imgBorder"]
+> ![diagram](./media/telecom-expenses-monitor/tem-datalert-intune-solution-diagram.png) integrace Intune a Datalert
 
 Pokud chcete používat službu Datalert s Intune, je k dispozici několik nastavení konfigurace v Datalert a Intune. V tomto článku se dozvíte, jak:
 
@@ -44,7 +45,7 @@ Pokud chcete používat službu Datalert s Intune, je k dispozici několik nasta
 
 ## <a name="supported-platforms"></a>Podporované platformy
 
-- Android 4,4 a novější zařízení, která podporují Knox (Samsung)
+- Správce zařízení s Androidem 4,4 a novější zařízení, která podporují Knox (Samsung)
 
   [Verze Androidu, které podporují Knox](https://seap.samsung.com/faq/what-versions-android-support-knox-standard-and-knox-premium-sdks-0) (otevře web Samsung), uvádí podporované verze Knox.
 
@@ -84,7 +85,8 @@ Intune se integruje s následujícím poskytovatelem pro správu telekomunikačn
 
     Na následujícím obrázku jsou po úspěšném připojení zobrazeny zelené značky zaškrtnutí:
 
-      ![Stránka Datalert zobrazující úspěšné připojení](./media/telecom-expenses-monitor/tem-datalert-connection.png)
+      > [!div class="mx-imgBorder"]
+      > Stránka ![Datalert ukazující úspěšné připojení](./media/telecom-expenses-monitor/tem-datalert-connection.png)
 
 7. V části **Datalert App/ADAL souhlasu**nastavte přepínač na **zapnuto**. Na ověřovací stránce Microsoft vyberte **Přijmout**.
 
@@ -92,7 +94,8 @@ Intune se integruje s následujícím poskytovatelem pro správu telekomunikačn
 
     Na následujícím obrázku jsou po úspěšném připojení zobrazeny zelené značky zaškrtnutí:
 
-      ![Stránka Datalert zobrazující úspěšné připojení](./media/telecom-expenses-monitor/tem-datalert-adal-consent.png)
+      > [!div class="mx-imgBorder"]
+      > Stránka ![Datalert ukazující úspěšné připojení](./media/telecom-expenses-monitor/tem-datalert-adal-consent.png)
 
 8. V části **Správa profilů MDM (volitelné)** nastavte přepínač na **zapnuto**. Toto nastavení umožňuje Datalert načíst dostupné profily v Intune, které vám pomůžou nastavit zásady. 
 
@@ -102,7 +105,8 @@ Intune se integruje s následujícím poskytovatelem pro správu telekomunikačn
 
     Na následujícím obrázku jsou po úspěšném připojení zobrazeny zelené značky zaškrtnutí:
 
-   ![Stránka Datalert zobrazující úspěšné připojení](./media/telecom-expenses-monitor/tem-datalert-mdm-profiles.png)
+    > [!div class="mx-imgBorder"]
+    > Stránka ![Datalert ukazující úspěšné připojení](./media/telecom-expenses-monitor/tem-datalert-mdm-profiles.png)
 
 ### <a name="step-2-confirm-telecom-expense-management-is-active-in-intune"></a>Krok 2: potvrďte, že je Správa telekomunikačních výdajů aktivní v Intune
 
@@ -112,7 +116,8 @@ Po dokončení kroku 1 se připojení automaticky povolí. V Intune se zobrazuje
 
 2. Vyberte možnost **Správa tenanta** > **konektory a tokeny** > **správu telekomunikačních výdajů**. Vyhledejte stav **aktivního** připojení:
 
-   ![Stránka Intune zobrazující aktivní stav připojení Datalertu](./media/telecom-expenses-monitor/tem-azure-portal-enable-service.png)
+    > [!div class="mx-imgBorder"]
+    > Stránka Intune, na které se zobrazuje stav připojení datalert aktivní](./media/telecom-expenses-monitor/tem-azure-portal-enable-service.png) ![
 
 ### <a name="step-3-deploy-the-datalert-app-to-devices"></a>Krok 3: nasazení aplikace Datalert do zařízení
 
@@ -131,7 +136,8 @@ Informace o vytváření kategorií zařízení v Intune najdete v tématu [mapo
 
 Tyto kategorie se uživatelům zobrazí během registrace ([registrace zařízení s Androidem](../enrollment/android-enroll.md)). V závislosti na tom, jakou kategorii uživatelé zvolí, se zaregistrované zařízení přesune do příslušné skupiny zařízení.
 
-  ![Snímek obrazovky s podoknem Přidat zásadu](./media/telecom-expenses-monitor/tem-dynamic-membership-rules.png)
+> [!div class="mx-imgBorder"]
+> ![snímku obrazovky](./media/telecom-expenses-monitor/tem-dynamic-membership-rules.png) podokna přidat zásadu
 
 #### <a name="add-the-datalert-app-to-intune"></a>Přidání aplikace Datalert do Intune
 
@@ -145,11 +151,13 @@ V následujících krocích se přidá aplikace Datalert. Jako příklad se pou�
 
 4. Zvolte aplikaci **Datalert** > **Vyberte**:
 
-   ![Přidání aplikace datalert z App Storu do klientských aplikací Intune](./media/telecom-expenses-monitor/tem-select-app-from-apple-app-store.png)
+    > [!div class="mx-imgBorder"]
+    > ![přidat aplikaci datalert z App Storu do klientských aplikací Intune](./media/telecom-expenses-monitor/tem-select-app-from-apple-app-store.png)
 
 5. Zadejte jakékoli další vlastnosti, například informace o aplikaci a značky oboru:
 
-   ![Zadejte vlastnosti aplikace, včetně názvu, popisu, výběru operačního systému a dalších nastavení aplikace v Intune.](./media/telecom-expenses-monitor/tem-steps-to-create-the-app.png)
+    > [!div class="mx-imgBorder"]
+    > ![zadejte vlastnosti aplikace, včetně názvu, popisu, výběru operačního systému a dalších nastavení aplikace v Intune](./media/telecom-expenses-monitor/tem-steps-to-create-the-app.png)
 
 6. Vyberte **OK** > **Přidat** a uložte provedené změny. V seznamu se zobrazí aplikace Datalert.
 
@@ -161,15 +169,17 @@ V následujících krocích se přidá aplikace Datalert. Jako příklad se pou�
 
     V tomto postupu se rozhodnete nastavit, aby byla instalace aplikace povinná nebo volitelná pro skupinu. Následující příklad znázorňuje instalaci podle potřeby. V případě potřeby si uživatelé musí po registraci svého zařízení nainstalovat aplikaci Datalert.
 
-   ![Snímek obrazovky s podoknem Přidat zásadu](./media/telecom-expenses-monitor/tem-assign-datalert-app-to-device-group.png)
+    > [!div class="mx-imgBorder"]
+    > ![snímku obrazovky](./media/telecom-expenses-monitor/tem-assign-datalert-app-to-device-group.png) podokna přidat zásadu
 
 ### <a name="step-4-add-organization-phone-lines-to-the-datalert-console"></a>Krok 4: Přidání telefonních linek organizace do konzoly Datalert
 
-Služby Intune a Datalert jsou teď nakonfigurované tak, aby vzájemně komunikovaly. Potom do konzoly Datalert přidejte své organizace placené telefonní linky. A zadejte prahové hodnoty a akce pro jakékoli narušení mobilního nebo roamingového použití. Do konzoly Datalert můžete ručně přidat firemní placené telefonní linky nebo je automaticky přidat po registraci zařízení v Intune.
+Služby Intune a Datalert jsou teď nakonfigurované tak, aby vzájemně komunikovaly. Potom do konzoly Datalert přidejte své organizace placené telefonní linky. Zadejte prahové hodnoty a akce pro jakékoli porušení mobilního nebo roamingového používání. Do konzoly Datalert můžete ručně přidat firemní placené telefonní linky nebo je automaticky přidat po registraci zařízení v Intune.
 
 Chcete-li nastavit tyto položky, přejít na [Datalert instalační program pro Microsoft Intune](http://www.datalert.fr/microsoft-intune/intune-setup) (otevře web Datalert). Na kartě **Nastavení** postupujte podle pokynů v Průvodci instalací nástroje.
 
-  ![Snímek obrazovky s podoknem Přidat zásadu](./media/telecom-expenses-monitor/tem-add-phone-lines-to-datalert-console.png)
+> [!div class="mx-imgBorder"]
+> ![snímku obrazovky](./media/telecom-expenses-monitor/tem-add-phone-lines-to-datalert-console.png) podokna přidat zásadu
 
 Služba Datalert je teď aktivní. Spustí monitorování využití dat a zakáže mobilní a roamingová data na zařízeních, která překračují nakonfigurovaná omezení využití.
 
@@ -177,8 +187,8 @@ Služba Datalert je teď aktivní. Spustí monitorování využití dat a zaká�
 
 Pro činnost koncového uživatele mohou následující články pomáhat:
 
-- [Registrace zařízení se systémem iOS/iPadOS ve správě telekomunikačních výdajů](https://docs.microsoft.com/user-help/enroll-your-device-with-telecom-expense-management-ios)
-- [Registrace zařízení s Androidem ve službě TEM (Telecom Expense Management)](https://docs.microsoft.com/user-help/enroll-your-device-with-telecom-expense-management-android)
+- [Registrace zařízení se systémem iOS/iPadOS ve správě telekomunikačních výdajů](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-with-telecom-expense-management-ios)
+- [Registrace zařízení s Androidem ve službě TEM (Telecom Expense Management)](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-with-telecom-expense-management-android)
 
 ## <a name="turn-off-the-datalert-service"></a>Vypnutí služby Datalert
 

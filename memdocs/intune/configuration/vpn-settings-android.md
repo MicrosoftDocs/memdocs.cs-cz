@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/19/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d31d83aff2bc2dc6c0c62c46220bf73b430a912c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 8b43b9671767a2d67bb98db6150799d266fe9fa6
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79331903"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086554"
 ---
 # <a name="android-device-settings-to-configure-vpn-in-intune"></a>Nastavení zařízení s Androidem pro konfiguraci sítě VPN v Intune
 
@@ -32,7 +32,7 @@ Další informace o profilech sítě VPN v Intune najdete v tématu [Profily sí
 
 ## <a name="before-you-begin"></a>Před zahájením
 
-[Vytvořte profil konfigurace zařízení](vpn-settings-configure.md#create-a-device-profile)a vyberte **Android**.
+[Vytvořte konfigurační profil zařízení](vpn-settings-configure.md)a vyberte **Správce zařízení s Androidem**.
 
 ## <a name="base-vpn"></a>Základní síť VPN
 
@@ -53,7 +53,7 @@ Další informace o profilech sítě VPN v Intune najdete v tématu [Profily sí
   - **Pulse Secure**
   - **Citrix SSO**
 
-- **Otisk prstu** (pouze Check Point Capsule VPN): Zadejte řetězec, například **Kód otisku prstu Contoso**, který se použije k ověření, že serveru VPN je možné důvěřovat. Do klienta se pošle otisk prstu, aby klient věděl, že bude důvěřovat jakémukoli serveru, který má stejný otisk prstu. Pokud zařízení otisk prstu nemá, vyzve uživatele, aby danému serveru VPN důvěřoval. Současně přitom zobrazuje otisk prstu. Uživatel ručně ověří otisk prstu a rozhodne se důvěřovat pro připojení.
+- **Otisk prstu** (pouze Check Point Capsule VPN): Zadejte řetězec, například **Kód otisku prstu Contoso**, který se použije k ověření, že serveru VPN je možné důvěřovat. Do klienta se pošle otisk prstu, aby klient věděl, že bude důvěřovat jakémukoli serveru, který má stejný otisk prstu. Pokud zařízení otisk prstu nemá, vyzve uživatele, aby při zobrazování otisku prstu důvěřoval serveru VPN. Uživatel ručně ověří otisk prstu a rozhodne se důvěřovat pro připojení.
 - **Zadejte páry klíč-hodnota pro atributy Citrix VPN** (pouze Citrix): Zadejte páry klíče a hodnoty, které poskytl Citrix. Tyto hodnoty nakonfigurují vlastnosti připojení VPN. 
 
   Soubor hodnot oddělených čárkami (. csv) můžete také **importovat** s páry klíče a hodnoty. Nezapomeňte zkontrolovat, že **data obsahují záhlaví** a vlastnosti **klíče** .

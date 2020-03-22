@@ -1,11 +1,11 @@
 ---
 title: Omezení funkcí zařízení pomocí zásad v Microsoft Intune – Azure | Microsoft Docs
-description: Přidejte profil zařízení, který omezí funkce na zařízeních s Androidem, macOS, iOS, iPadOS, Windows Phone a Windows 10 v Microsoft Intune
+description: Přidejte profil zařízení, který omezí funkce pro správce zařízení s Androidem, Android Enterprise, macOS, iOS, iPadOS, Windows Phone a zařízení s Windows 10 v Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,16 +15,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 28cf0b8bffc06a0b5a56165c1e9eeab780c453c7
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 7f1e421a344122dbd4cf59a49ea56ef0ba2bb125
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79332319"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80087084"
 ---
 # <a name="configure-device-restriction-settings-in-microsoft-intune"></a>Konfigurace nastavení omezení zařízení v Microsoft Intune
-
-
 
 Intune zahrnuje zásady omezení zařízení, které správcům pomůžou řídit zařízení se systémem Android, iOS/iPadOS, macOS a Windows. Tato omezení umožňují řídit široké spektrum nastavení a funkcí pro ochranu prostředků vaší organizace. Správci můžou například:
 
@@ -48,7 +46,7 @@ V tomto článku se dozvíte, jak vytvořit profil omezení pro zařízení. Mů
     - **Popis**: zadejte popis zásady. Toto nastavení není povinné, ale doporučujeme ho zadat.
     - **Platforma**: vyberte platformu zařízení. Možnosti:  
 
-        - **Androidemem**
+        - **Správce zařízení s Androidem**
         - **Android Enterprise**
         - **iOS/iPadOS**
         - **macOS**
@@ -62,7 +60,7 @@ V tomto článku se dozvíte, jak vytvořit profil omezení pro zařízení. Mů
 
 4. Nastavení, která můžete konfigurovat, se liší podle zvolené platformy. Pro podrobnější nastavení vyberte platformu:
 
-    - [Nastavení Androidu](device-restrictions-android.md)
+    - [Nastavení správce zařízení s Androidem](device-restrictions-android.md)
     - [Nastavení Androidu Enterprise](device-restrictions-android-for-work.md)
     - [nastavení pro iOS/iPadOS](device-restrictions-ios.md)
     - [Nastavení macOS](device-restrictions-macos.md)
