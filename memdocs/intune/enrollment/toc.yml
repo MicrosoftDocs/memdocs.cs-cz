@@ -81,6 +81,8 @@
           href: android-enroll-device-administrator.md
         - name: Správa zařízení Android Enterprise s pracovním profilem
           href: android-enterprise-overview.md
+        - name: Přesunutí zařízení správce zařízení do správy pracovních profilů
+          href: android-move-device-admin-work-profile.md
         - name: Registrace mobilního zařízení Samsung Knox
           href: android-samsung-knox-mobile-enroll.md
           displayName: kda; kme

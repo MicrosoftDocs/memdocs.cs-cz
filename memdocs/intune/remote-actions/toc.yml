@@ -49,7 +49,9 @@
           href: device-rename.md
         - name: Odesílání oznámení
           href: custom-notifications.md
-        - name: Vzdálené řízení mobilních zařízení
+        - name: Vzdálená správa mobilních zařízení
+          href: remote-assist-mobile-devices.md
+        - name: Vzdálená správa pomocí TeamVieweru
           href: teamviewer-support.md
         - name: Synchronizace zařízení
           href: device-sync.md

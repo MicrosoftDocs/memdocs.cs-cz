@@ -16,6 +16,7 @@
 #### [Registrace zařízení s Androidem](enroll-device-android-company-portal.md)  
 #### [Registrace zařízení s pracovním profilem Androidu](enroll-device-android-work-profile.md)
 #### [Registrace pomocí aplikace Microsoft Intune](enroll-device-android-microsoft-intune-app.md)
+### [Přechod do nastavení správy nového zařízení](move-to-new-device-management-setup.md)
 ### [Použití spravovaných aplikací na zařízení](use-managed-apps-on-your-device-android.md)
 ### [Zašifrování zařízení](encrypt-your-device-android.md)
 ### [Nastavení PIN kódu nebo hesla](set-your-pin-or-password-android.md)

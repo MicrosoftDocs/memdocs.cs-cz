@@ -265,6 +265,12 @@
               href: security-baseline-settings-defender-atp.md
             - name: Nastavení standardních hodnot zabezpečení Microsoft Edge
               href: security-baseline-settings-edge.md
+        - name: Nastavení zásad antivirové ochrany
+          items:
+            - name: Nastavení antivirové ochrany v Microsoft Defenderu pro macOS
+              href: antivirus-microsoft-defender-settings-macos.md
+            - name: Nastavení antivirové ochrany v Microsoft Defenderu pro Windows 10
+              href: antivirus-microsoft-defender-settings-windows.md
         - name: Nastavení služby Windows Update
           href: windows-update-settings.md
         - name: Nastavení zásad dodržování předpisů – Android
