@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d40c4f352d3e7b94ef6e6c2f16a28d188c4e9ad1
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: dec3087ea4dab1e79cf85d43bdea0d18b13f17ff
+ms.sourcegitcommit: e37d5d3f5bdb39a8f89ba0376b31c06aaf3c5d27
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79325415"
+ms.lasthandoff: 03/22/2020
+ms.locfileid: "80117336"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-device-enrollment-program"></a>Automatická registrace zařízení se systémem iOS/iPadOS pomocí Programu registrace zařízení společnosti Apple
 
@@ -72,7 +72,7 @@ K vytvoření tokenu použijete portál Apple Business Manager nebo Apple School
 > [!NOTE]
 > Když token odstraníte z klasického portálu Intune před migrací do Azure, může Intune obnovit odstraněný token DEP Apple. Token DEP můžete z portálu Azure Portal znovu odstranit.
 
-### <a name="step-1-download-the-intune-public-key-certificate-required-to-create-the-token"></a>Krok 1: Stáhněte si certifikát veřejného klíče Intune, který je potřebný k vytvoření tokenu.
+### <a name="step-1-download-the-intune-public-key-certificate-required-to-create-the-token"></a>Krok 1. Stáhněte si certifikát veřejného klíče Intune, který je potřebný k vytvoření tokenu.
 
 1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **iOS** > **registrace** zařízení s iOS > **tokeny programu registrace** > **Přidat**.
 
@@ -88,7 +88,7 @@ K vytvoření tokenu použijete portál Apple Business Manager nebo Apple School
 3. Vyberte **Stáhnout veřejný klíč** a stáhněte si a místně uložte soubor šifrovacího klíče (.pem). Soubor .pem slouží k vyžádání certifikátu vztahu důvěryhodnosti z portálu Apple Device Enrollment Program.
 
 
-### <a name="step-2-use-your-key-to-download-a-token-from-apple"></a>Krok 2: Pomocí klíče si stáhněte token od společnosti Apple.
+### <a name="step-2-use-your-key-to-download-a-token-from-apple"></a>Krok 2. Pomocí klíče si stáhněte token od společnosti Apple.
 
 1. Pokud chcete otevřít portál Programu registrace zařízení Apple (DEP), zvolte **Vytvořit token pro Program registrace zařízení Apple** a přihlaste se pomocí firemního Apple ID. Toto Apple ID můžete použít k obnovení tokenu DEP.
 2. Na [portálu společnosti Apple pro nasazení programů](https://deploy.apple.com) vyberte **Začínáme**. Otevře se **Program registrace zařízení**.
@@ -110,7 +110,7 @@ K vytvoření tokenu použijete portál Apple Business Manager nebo Apple School
 
    Na portálu Apple přejděte do části **programy pro nasazení** &gt; **program registrace zařízení** &gt; **Zobrazit historii přiřazení** a zobrazte tak seznam zařízení a jejich přiřazení k serveru MDM.
 
-### <a name="step-3-save-the-apple-id-used-to-create-this-token"></a>Krok 3: Uložte si Apple ID, které jste použili k vytvoření tohoto tokenu.
+### <a name="step-3-save-the-apple-id-used-to-create-this-token"></a>Krok 3. Uložte si Apple ID, které jste použili k vytvoření tohoto tokenu.
 
 V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)zadejte Apple ID pro budoucí referenci.
 
@@ -278,6 +278,10 @@ Povolili jste správu a synchronizaci mezi společností Apple a Intune a přiř
 Další informace najdete [v tématu Registrace zařízení se systémem iOS/iPadOS v Intune pomocí program registrace zařízení](../user-help/enroll-your-device-dep-ios.md).
 
 ## <a name="renew-a-dep-token"></a>Obnovení tokenu DEP  
+
+> [!NOTE]
+> Kromě každoročního prodloužení platnosti tokenu DEP budete muset obnovit token programu registrace v Intune a Apple Business Manageru, když se změní heslo spravovaného Apple ID pro uživatele, který tento token nastavil v Apple Business Manageru, nebo když ho uživatel opustí. Organizace Apple Business Manageru.
+
 1. Přejděte na deploy.apple.com.  
 2. V části **Manage Servers** (Spravovat servery) zvolte server MDM přidružený k souboru tokenu, který chcete obnovit.
 3. Zvolte **Generate New Token** (Vygenerovat nový token).

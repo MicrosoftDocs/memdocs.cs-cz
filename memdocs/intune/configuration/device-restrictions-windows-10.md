@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eb7bce7be4742b97c2c540147d6be158a90c3660
-ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
+ms.openlocfilehash: de11883a852bab3b0e47153c96ad718699dcfcec
+ms.sourcegitcommit: e37d5d3f5bdb39a8f89ba0376b31c06aaf3c5d27
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79526406"
+ms.lasthandoff: 03/22/2020
+ms.locfileid: "80117317"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Nastavení zařízení s Windows 10 (a novějším) pro povolení nebo omezení funkcí pomocí Intune
 
@@ -500,7 +500,7 @@ Můžete přidat aplikace, které by měly mít jiné chování ochrany osobníc
 - **Zpětná vazba a diagnostika**: Definujte, jestli tato aplikace bude mít přístup k diagnostickým informacím.
 - **Synchronizovat se zařízeními**: Určete, jestli tato aplikace může automaticky sdílet a synchronizovat informace s bezdrátovými zařízeními, která se neexplicitně spárují se zařízením.
 
-## <a name="personalization"></a>Přizpůsobení
+## <a name="personalization"></a>Personalizace
 
 Tato nastavení používají [zprostředkovatele kryptografických služeb v zásadách přizpůsobení](https://docs.microsoft.com/windows/client-management/mdm/personalization-csp), který obsahuje taky podporované edice Windows.
 
@@ -595,7 +595,7 @@ Tato nastavení používají [CSP v zásadách hledání](https://docs.microsoft
   - **Střední**: mírné filtrování obsahu pro dospělé. Platné výsledky hledání nejsou filtrovány.
 - **Zobrazit výsledky webu v hledání**: když se nastaví **blokování**, uživatelé nemůžou vyhledávat a výsledky webu nejsou zobrazené ve vyhledávání. **Nenakonfigurováno** (výchozí) umožňuje uživatelům vyhledávat na webu a výsledky se zobrazí na zařízení.
 
-## <a name="start"></a>Začátek
+## <a name="start"></a>Spustit
 
 Tato nastavení používají [zprostředkovatele CSP zásad spuštění](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-start), který také uvádí podporované edice systému Windows.  
 
@@ -898,6 +898,10 @@ Tato nastavení používají [zprostředkovatele CSP v zásadách Defenderu](htt
   [Defender/ThreatSeverityDefaultAction CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-threatseveritydefaultaction)
 
 ### <a name="microsoft-defender-antivirus-exclusions"></a>Vyloučení antivirové ochrany v programu Microsoft Defender
+Některé soubory můžete z kontroly antivirové ochrany v programu Windows Defender vyloučit úpravou seznamů vyloučení. **Obecně platí, že nebudete muset použít vyloučení**. Antivirová ochrana v programu Windows Defender zahrnuje řadu automatických vyloučení na základě známých chování operačního systému a typických souborů pro správu, jako jsou například ty, které se používají v podnikovém řízení, správě databází a dalších podnikových scénářích a situacích.
+
+> [!WARNING]
+> **Definování vyloučení sníží ochranu, kterou nabízí antivirová ochrana v programu Windows Defender**. Vždy byste měli vyhodnotit rizika spojená s implementací vyloučení a měli byste vyloučit pouze soubory, které jste si jisti, že nejsou škodlivé.
 
 - **Soubory a složky, které se mají vyloučit z kontrol a ochrany v reálném**čase: přidá do seznamu vyloučení jeden nebo víc souborů a složek, jako je **c:\Cesta** nebo **%ProgramFiles%\cesta\soubor.exe** . Tyto soubory a složky nejsou zahrnuté do kontrol probíhajících v reálném čase ani do plánovaných kontrol.
 - **Přípony souborů, které se mají vyloučit z kontrol a ochrany v reálném čase**: do seznamu vyloučení přidejte jednu nebo víc přípon souborů, jako je **jpg** nebo **txt** . Všechny soubory s těmito příponami nejsou zahrnuté do kontrol probíhajících v reálném čase ani do plánovaných kontrol.

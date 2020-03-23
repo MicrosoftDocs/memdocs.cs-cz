@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 61509f65ba43d779c1dd2006ae9ed5e0da9ba84d
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: b6dab926a59e69f5afb6c2f40ea7e315afed49f8
+ms.sourcegitcommit: e37d5d3f5bdb39a8f89ba0376b31c06aaf3c5d27
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80083398"
+ms.lasthandoff: 03/22/2020
+ms.locfileid: "80117293"
 ---
 # <a name="add-managed-google-play-apps-to-android-enterprise-devices-with-intune"></a>Přidání spravovaných aplikací Google Play do zařízení s Androidem Enterprise pomocí Intune
 
@@ -33,7 +33,7 @@ Abychom vám usnadnili konfiguraci a používání správy Android Enterprise ma
 
 - **[Microsoft Intune](https://play.google.com/store/apps/details?id=com.microsoft.intune)** – používá se pro plně spravované scénáře pro Android Enterprise. Tato aplikace se automaticky nainstaluje do plně spravovaných zařízení během procesu registrace zařízení.
 - **[Microsoft Authenticator](https://play.google.com/store/apps/details?id=com.azure.authenticator)** – vám pomůže se přihlašovat k vašim účtům, pokud použijete dvojúrovňové ověřování. Tato aplikace se automaticky nainstaluje do plně spravovaných zařízení během procesu registrace zařízení.
-- **[Portál společnosti Intune](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal)** – používá se pro scénáře zásad ochrany aplikací (App) a Android Enterprise Work Profile.
+- **[Portál společnosti Intune](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal)** – používá se pro scénáře zásad ochrany aplikací (App) a Android Enterprise Work Profile. Tato aplikace se automaticky nainstaluje do plně spravovaných zařízení během procesu registrace zařízení.
 - **[Spravovaná Domovská obrazovka](https://play.google.com/store/apps/details?id=com.microsoft.launcher.enterprise)** – používá se pro veřejné terminály s více aplikacemi pro Android Enterprise. Správci IT by měli vytvořit přiřazení pro instalaci této aplikace na vyhrazená zařízení, která se budou používat ve scénářích veřejného terminálu s více aplikacemi.
 
 >[!NOTE]
@@ -194,10 +194,10 @@ Po přiřazení aplikace je nainstalovaná (nebo dostupná pro instalaci) na za�
 
 [Zařízení se systémem Android Enterprise standarded](../enrollment/android-fully-managed-enroll.md) jsou zařízení vlastněná společností, která jsou přidružená k jednomu uživateli a používána výhradně pro práci a nikoli pro osobní použití. Uživatelé na plně spravovaných zařízeních můžou z spravované aplikace Google Play na svém zařízení získat své dostupné firemní aplikace.
 
-Ve výchozím nastavení zařízení s plně spravovaným podnikem v Androidu neumožní zaměstnancům instalovat žádné aplikace, které organizace neschválila. Zaměstnanci také nebudou moci odebrat žádné nainstalované aplikace proti zásadám. Pokud chcete, aby uživatelé měli přístup k úplnému Google Play Storu pro instalaci aplikací, a ne jenom přístup ke schváleným aplikacím ve spravovaném Google Play Storu, můžete nastavit možnost **Povolení přístupu ke všem aplikacím v Google Play Storu** . S tímto nastavením může uživatel přistupovat ke všem aplikacím v Google Play Storu pomocí svého podnikového účtu, ale nákupy můžou být omezené. Omezení počtu omezení nákupu můžete odebrat tak, že uživatelům na zařízení přidáte nové účty. Tím umožníte, aby koncoví uživatelé měli možnost nakupovat aplikace z Google Play Storu pomocí osobních účtů a provádět nákupy v aplikaci. Další informace najdete v tématu [nastavení zařízení s Androidem Enterprise a povolení nebo omezení funkcí v Intune](../configuration/device-restrictions-android-for-work.md). 
+Ve výchozím nastavení zařízení s plně spravovaným podnikem v Androidu neumožní zaměstnancům instalovat žádné aplikace, které organizace neschválila. Zaměstnanci také nebudou moci odebrat žádné nainstalované aplikace proti zásadám. Pokud chcete, aby uživatelé měli přístup k úplnému Google Play Storu pro instalaci aplikací, a ne jenom přístup ke schváleným aplikacím ve spravovaném Google Play Storu, můžete nastavit možnost **Povolení přístupu ke všem aplikacím v Google Play Storu** . **Allow** S tímto nastavením může uživatel přistupovat ke všem aplikacím v Google Play Storu pomocí svého podnikového účtu, ale nákupy můžou být omezené. Omezení počtu omezení nákupu můžete odebrat tak, že uživatelům na zařízení přidáte nové účty. Tím umožníte, aby koncoví uživatelé měli možnost nakupovat aplikace z Google Play Storu pomocí osobních účtů a provádět nákupy v aplikaci. Další informace najdete v tématu [nastavení zařízení s Androidem Enterprise a povolení nebo omezení funkcí v Intune](../configuration/device-restrictions-android-for-work.md). 
 
 > [!NOTE]
-> Aplikace Microsoft Intune a aplikace Microsoft Authenticator se v průběhu připojování nainstalují jako požadované aplikace do všech plně spravovaných zařízení. Automatické instalace těchto aplikací poskytuje podporu podmíněného přístupu a Microsoft Intune uživatelé aplikací můžou zobrazit a vyřešit problémy s dodržováním předpisů. 
+> Aplikace Microsoft Intune, aplikace Microsoft Authenticator a aplikace Portál společnosti budou v průběhu připojování nainstalovány jako požadované aplikace do všech plně spravovaných zařízení. Automatické instalace těchto aplikací poskytuje podporu podmíněného přístupu a Microsoft Intune uživatelé aplikací můžou zobrazit a vyřešit problémy s dodržováním předpisů. 
 
 ## <a name="manage-android-enterprise-app-permissions"></a>Správa oprávnění pro podnikovou aplikaci Android
 Android Enterprise vyžaduje, abyste před synchronizací s Intune schválili aplikace ve webové konzoli spravované Google Play a přiřadili je uživatelům. Vzhledem k tomu, že Android Enterprise umožňuje bez tichého a automatického vkládání aplikací do zařízení uživatelů, musíte přijmout oprávnění aplikace jménem všech uživatelů. Uživatelé neuvidí při instalaci žádná oprávnění aplikací, takže je důležité, abyste těmto oprávněním porozuměli.
