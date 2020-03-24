@@ -32,8 +32,18 @@
     "externalReference": [],
     "globalMetadata": {
       "breadcrumb_path": "/mem/breadcrumb/toc.json",
+      "feedback_system": "GitHub",
+      "feedback_github_repo": "MicrosoftDocs/memdocs.cs-cz",
+      "feedback_product_url": "",  
       "brand": "Intune",
       "searchScope": ["Intune"]
+      ,
+      "disable_contribution_on_translation_quality": [
+        "MT",
+        "MTE75",
+        "MTE95",
+        "Blank"
+      ]
     },
     "fileMetadata": {
       "featureFlags": {
