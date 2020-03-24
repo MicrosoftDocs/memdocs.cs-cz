@@ -7,7 +7,7 @@
       "locale": "cs-cz",
       "monikers": [],
       "moniker_ranges": [],
-      "open_to_public_contributors": false,
+      "open_to_public_contributors": true,
       "type_mapping": {
         "Conceptual": "Content"
       },
@@ -25,7 +25,7 @@
     "master"
   ],
   "git_repository_url_open_to_public_contributors": "https://github.com/MicrosoftDocs/memdocs.cs-cz",
-  "git_repository_branch_open_to_public_contributors": "master",
+  "git_repository_branch_open_to_public_contributors": "live",
   "continue_with_document_error": true,
   "skip_source_output_uploading": false,
   "need_preview_pull_request": true,
@@ -53,8 +53,12 @@
       }
     }
   ],
-  "branch_target_mapping": {
+ "branch_target_mapping": {
     "live": [
+      "Publish",
+      "Pdf"
+    ],
+    "live-sxs": [
       "Publish",
       "Pdf"
     ]
