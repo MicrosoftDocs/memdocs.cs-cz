@@ -283,4 +283,4 @@
             - name: Běžné chyby ochrany koncového bodu
               href: troubleshoot-endpoint-protection-in-microsoft-intune.md
     - name: Dokumentace pro koncové uživatele Intune
-      href: /user-help/use-managed-devices-to-get-work-done
+      href: ../user-help/use-managed-devices-to-get-work-done.md
