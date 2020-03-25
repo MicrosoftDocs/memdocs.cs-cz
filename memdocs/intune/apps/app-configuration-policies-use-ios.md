@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9a110b268c31f4e1ee5dada6554215b648449f01
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 28ce4e7d80e79f752bded8f0cdf03494aa629e1b
+ms.sourcegitcommit: 670c90a2e2d3106048f53580af76cabf40fd9197
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79326351"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80233446"
 ---
 # <a name="add-app-configuration-policies-for-managed-iosipados-devices"></a>Přidání zásad konfigurace aplikací pro spravovaná zařízení s iOS nebo iPadOS
 
@@ -106,7 +106,7 @@ Znaky \{\{ a \}\} se používají jenom pro typy tokenů a nesmí se používat 
 
 ### <a name="allow-only-configured-organization-accounts-in-multi-identity-apps"></a>Povolte jenom nakonfigurované účty organizace v aplikacích s více identitami 
 
-Pro zařízení s iOS/iPadOS použijte následující páry klíč/hodnota:
+Jako správce Microsoft Intune můžete určit, které uživatelské účty se přidají do aplikací Microsoftu na spravovaných zařízeních. Můžete omezit přístup jenom na povolené uživatelské účty organizace a zablokovat osobní účty zaregistrovaných zařízení. Pro zařízení s iOS/iPadOS použijte následující páry klíč/hodnota:
 
 | **Klíč** | **Hodnoty** |
 |----|----|
@@ -114,7 +114,10 @@ Pro zařízení s iOS/iPadOS použijte následující páry klíč/hodnota:
 | IntuneMAMUPN | <ul><li>Hlavní název uživatele (UPN) účtu, kterému se povoluje přihlašovat k aplikaci</li><li> Pro zařízení zaregistrovaná v Intune se může použít token <code>{{userprincipalname}}</code>, aby představoval účet zaregistrovaného uživatele.</li></ul>  |
 
    > [!NOTE]
-   > Je nutné použít OneDrive pro iOS 10,34 nebo novější, Outlook pro iOS 2.99.0 nebo novější nebo Edge pro iOS 44.8.7 nebo novější a aplikace musí být cílem [zásad ochrany aplikací Intune](app-protection-policy.md) , když se povolují jenom nakonfigurované účty organizace s více identitami.
+   > Následující aplikace zpracovávají výše uvedenou konfiguraci aplikace a povolují jenom účty organizace:
+   > - Edge pro iOS (44.8.7 a novější)
+   > - OneDrive pro iOS (10,34 a novější)
+   > - Outlook pro (iOS 2.99.0 nebo novější)
 
 ## <a name="enter-xml-data"></a>Zadání XML dat
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 94916362fd9c2fd8dfdfdc3f586940d108cdabae
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 4b8de67a77b2122c5db4dddbb82a4966c20e1936
+ms.sourcegitcommit: 670c90a2e2d3106048f53580af76cabf40fd9197
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80083689"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80233526"
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>Vytvoření a přiřazení zásad ochrany aplikací
 
@@ -58,7 +58,7 @@ Když vytvoříte zásady ochrany aplikací pro iOS/iPadOS a aplikace pro Androi
 
     Hodnota **platformy** je nastavená na základě výše zvolené možnosti.
 
-    ![Snímek stránky základy v podokně vytvořit zásadu](/media/app-protection-policies/app-protection-add-policies-01.png)
+    ![Snímek stránky základy v podokně vytvořit zásadu](./media/app-protection-policies/app-protection-add-policies-01.png)
 
 5. Kliknutím na **Další** zobrazte stránku **aplikace** .<br>
     Stránka **aplikace** umožňuje zvolit, jak chcete tyto zásady použít pro aplikace na různých zařízeních. Musíte přidat alespoň jednu aplikaci.<p>

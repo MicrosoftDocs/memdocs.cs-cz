@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/23/2020
 ms.topic: tutorial
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 936634a26dee315c7ad452ac408f9cc0eac00dfe
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 5988da854eecd528119a7e2591fc083dcdbc29bf
+ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79326611"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80220217"
 ---
 # <a name="tutorial-use-the-cloud-to-configure-group-policy-on-windows-10-devices-with-admx-templates-and-microsoft-intune"></a>Kurz: použití cloudu ke konfiguraci zásad skupiny na zařízeních s Windows 10 s šablonami ADMX a Microsoft Intune
 
@@ -101,7 +101,7 @@ Tato funkce platí pro:
 ## <a name="open-the-endpoint-manager-admin-center"></a>Otevřete centrum pro správu Správce koncových bodů.
 
 1. Otevřete webový prohlížeč Chromu, například Microsoft Edge verze 77 nebo novější.
-2. Přejít do [centra pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431) (https://devicemanagement.microsoft.com). Přihlaste se s následujícím účtem:
+2. Přejít do [centra pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431). Přihlaste se s následujícím účtem:
 
     **Uživatel**: zadejte účet správce předplatného tenanta Microsoft 365.  
     **Heslo**: zadejte jeho heslo.
@@ -146,7 +146,7 @@ V těchto dalších krocích vytvoříte skupiny zabezpečení a přidáte uživ
     - **Typ skupiny**: vyberte **zabezpečení**.
     - **Název skupiny**: zadejte **všechna zařízení se systémem Windows**.
     - **Typ členství**: vyberte **dynamické zařízení**.
-    - **Dynamické členy zařízení**: Nakonfigurujte dotaz:
+    - **Dynamické členy zařízení**: vyberte **Přidat dynamický dotaz**a nakonfigurujte dotaz:
 
         - **Vlastnost**: vyberte **deviceOSType**.
         - **Operátor**: vyberte **Equals**.
@@ -166,7 +166,7 @@ V těchto dalších krocích vytvoříte skupiny zabezpečení a přidáte uživ
     - **Typ skupiny**: vyberte **zabezpečení**.
     - **Název skupiny**: zadejte **všechny učitele**.
     - **Typ členství**: vyberte možnost **dynamický uživatel**.
-    - **Dynamické členy uživatele**: Nakonfigurujte dotaz:
+    - **Dynamické členy uživatele**: vyberte **Přidat dynamický dotaz**a nakonfigurujte dotaz:
 
       - **Vlastnost**: vyberte **oddělení**.
       - **Operátor**: vyberte **Equals**.
@@ -225,12 +225,17 @@ V této části vytvoříme v Intune šablonu pro správu, podíváme se na něk
 1. V centru pro správu Správce koncových bodů vyberte **zařízení** > **konfigurační profily** > **vytvořit profil**.
 2. Zadejte následující vlastnosti:
 
+    - **Platforma**: vyberte **Windows 10 a novější**.
+    - **Profil**: vyberte **šablony pro správu**.
+
+3. Vyberte **Vytvořit**.
+4. V části **základy**zadejte následující vlastnosti:
+
     - **Název**: zadejte popisný název profilu. Své profily pojmenujte, abyste je později mohli snadno identifikovat. Například zadejte **šablonu pro správu – zařízení s Windows 10 student**.
     - **Popis**: Zadejte popis profilu. Toto nastavení není povinné, ale doporučujeme ho zadat.
-    - **Platforma**: vyberte **Windows 10 a novější**.
-    - **Typ profilu**: vyberte **šablony pro správu**.
 
-3. Vyberte **Vytvořit**. V rozevíracím seznamu **Vybrat kategorii** vyberte možnost **všechny produkty**. Zobrazí se všechna nastavení. V těchto nastaveních si všimněte následujících vlastností:
+5. Vyberte **Další**.
+6. V **nastavení konfigurace**vyberte v rozevíracím seznamu možnost **všechny produkty**. Zobrazí se všechna nastavení. V těchto nastaveních si všimněte následujících vlastností:
 
     - **Cesta** k zásadě je stejná jako zásady skupiny Management nebo gpedit.
     - Nastavení platí pro uživatele nebo zařízení.
@@ -263,7 +268,7 @@ V této části uvádíme zásadu v Intune a odpovídající zásady v Editor pr
     > [!div class="mx-imgBorder"]
     > ![zobrazí možnosti nastavení konfigurace počítače v zásadách skupiny](./media/tutorial-walkthrough-administrative-templates/prevent-enabling-lock-screen-camera-admx-policy.png)
 
-5. V centru pro správu správy zařízení přejdete na šablonu **správce – šablona zařízení s Windows 10 Students** .
+5. V centru pro správu Správce koncových bodů můžete přejít na šablonu **správce – šablona zařízení s Windows 10 Students** .
 6. V rozevíracím seznamu vyberte **všechny produkty** a vyhledejte **přizpůsobení**:
 
     > [!div class="mx-imgBorder"]
@@ -290,7 +295,7 @@ V této části uvádíme zásadu v Intune a odpovídající zásady v Editor pr
 
 #### <a name="compare-an-edge-policy"></a>Porovnání hraničních zásad
 
-1. V centru pro správu správy zařízení přejdete na šablonu **správce – šablona zařízení s Windows 10 Students** .
+1. V centru pro správu Správce koncových bodů můžete přejít na šablonu **správce – šablona zařízení s Windows 10 Students** .
 2. Z rozevíracího seznamu vyberte **Edge verze 77 a novější** .
 3. Vyhledejte **spuštění**. Všimněte si dostupných nastavení.
 4. V Editor pro správu zásad skupiny Najděte tato nastavení:
@@ -338,17 +343,16 @@ V této šabloně nakonfigurujeme některá nastavení aplikace Internet Explore
 
 ### <a name="assign-your-template"></a>Přiřazení šablony
 
-1. V šabloně vyberte **přiřazení**. Možná budete muset šablonu zavřít a pak ji vybrat ze seznamu **zařízení – konfigurační profily** :
+1. V šabloně vyberte **přiřazení** > **Vybrat skupiny, které chcete zahrnout**:
 
     > [!div class="mx-imgBorder"]
     > ![v seznamu profily konfigurace zařízení v Microsoft Intune vyberte profil šablony pro správu](./media/tutorial-walkthrough-administrative-templates/filter-administrative-template-device-configuration-profiles-list.png)
 
-2. Zvolte **Vybrat skupiny, které chcete zahrnout**. Zobrazí se seznam existujících uživatelů a skupin.
-3. Vyberte skupinu **všechna zařízení s Windows 10 Students** , kterou jste vytvořili dříve, > **Vybrat**.
+2. Zobrazí se seznam existujících uživatelů a skupin. Vyberte skupinu **všechna zařízení s Windows 10 Students** , kterou jste vytvořili dříve, > **Vybrat**.
 
     Pokud tento kurz používáte v produkčním prostředí, zvažte přidání prázdných skupin. Cílem je postup přiřazení šablony.
 
-4. **Uložte** provedené změny.
+3. Vyberte možnost **Další** na kartě **Revize + vytvořit** . Pokud chcete změny uložit, vyberte **vytvořit** .
 
 Jakmile se profil uloží, vztahuje se na zařízení při vrácení se změnami pomocí Intune. Pokud jsou zařízení připojená k Internetu, může k ní dojít hned. Další informace o časech aktualizace zásad najdete v tématu [Jak dlouho trvá, než zařízení dostanou zásady, profil nebo aplikaci po jejich přiřazení](device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned).
 
@@ -366,14 +370,17 @@ V této části vytvoříte v Intune šablonu správce OneDrivu, abyste mohli ř
 
 2. Zadejte následující vlastnosti:
 
-    - **Název**: zadejte **šablonu správce – zásady OneDrivu, které se vztahují na všechny uživatele Windows 10**.
-    - **Popis**: Zadejte popis profilu. Toto nastavení není povinné, ale doporučujeme ho zadat.
     - **Platforma**: vyberte **Windows 10 a novější**.
-    - **Typ profilu**: vyberte **šablony pro správu**.
+    - **Profil**: vyberte **šablony pro správu**.
 
 3. Vyberte **Vytvořit**.
-4. V rozevíracím seznamu vyberte **Office** .
-5. **Povolte** následující nastavení. Nezapomeňte vybrat **OK** , aby se změny uložily.
+4. V části **základy**zadejte následující vlastnosti:
+
+    - **Název**: zadejte **šablonu správce – zásady OneDrivu, které se vztahují na všechny uživatele Windows 10**.
+    - **Popis**: Zadejte popis profilu. Toto nastavení není povinné, ale doporučujeme ho zadat.
+
+5. Vyberte **Další**.
+6. V **nastavení konfigurace**v rozevíracím seznamu vyberte možnost **Office** . **Povolte** následující nastavení. Nezapomeňte vybrat **OK** , aby se změny uložily.
 
     - **Tiché přihlášení uživatelů do synchronizačního klienta OneDrivu s přihlašovacími údaji Windows**
     - **Použití souborů OneDrive na vyžádání**
@@ -388,13 +395,12 @@ Další informace o nastavení klienta OneDrive najdete v tématu [použití zá
 
 ### <a name="assign-your-template"></a>Přiřazení šablony
 
-1. V šabloně vyberte **přiřazení**.
-2. Zvolte **Vybrat skupiny, které chcete zahrnout**. Zobrazí se seznam existujících uživatelů a skupin.
-3. Vyberte skupinu **všechna zařízení se systémem Windows** , kterou jste vytvořili dříve, > **Vybrat**.
+1. V šabloně vyberte **přiřazení** > **Vybrat skupiny, které chcete zahrnout** .
+2. Zobrazí se seznam existujících uživatelů a skupin. Vyberte skupinu **všechna zařízení se systémem Windows** , kterou jste vytvořili dříve, > **Vybrat**.
 
     Pokud tento kurz používáte v produkčním prostředí, zvažte přidání prázdných skupin. Cílem je postup přiřazení šablony.
 
-4. **Uložte** provedené změny.
+3. Vyberte možnost **Další** na kartě **Revize + vytvořit** . Pokud chcete změny uložit, vyberte **vytvořit** .
 
 V tuto chvíli jste vytvořili některé šablony pro správu a přiřadili je skupinám, které jste vytvořili. Dalším krokem je vytvoření šablony pro správu pomocí prostředí Windows PowerShell a rozhraní Microsoft Graph API pro Intune.
 

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/19/2019
+ms.date: 03/23/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0546b280f6a04b6bc396b39a9a04031ee9800172
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: a3e6679e27e7d373243874ea40c2d028ff25d3e9
+ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79332339"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80220111"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Nastavení zařízení s androidem Enterprise k povolení nebo zakázání funkcí pomocí Intune
 
@@ -316,7 +316,7 @@ Tato nastavení se vztahují na typy registrace Androidu Enterprise, kde Intune 
 - **Minimální délka hesla**: zadejte minimální počet znaků, které uživatelské heslo musí obsahovat, **4**-**16**.
 - **Maximální doba neaktivity v minutách, než se pracovní profil zamkne**: umožňuje vybrat dobu, po které se pracovní profil zamkne. Potom musí uživatel zadat svoje přihlašovací údaje znovu, když bude chtít získat přístup.
 - **Počet neúspěšných přihlášení před vymazáním obsahu zařízení**: zadejte, kolikrát může uživatel zadat nesprávné heslo, než se pracovní profil ze zařízení vymaže.
-- **Konec platnosti hesla (dny)** : zadejte počet dnů, po kterém uživatel bude muset změnit heslo (**1**-**255**).
+- **Vypršení platnosti hesla (dny)** : zadejte počet dní, než bude nutné změnit heslo koncového uživatele (od **1**-**365**).
 - **Požadovaný typ hesla**: vyberte typ hesla, které musí být na zařízení nastaveno. Vybírejte z těchto možností:
   - **Výchozí ze zařízení**
   - **Biometrika s nízkým zabezpečením**
@@ -337,7 +337,7 @@ Tato nastavení hesla platí pro osobní profilů na zařízeních používajíc
 - **Minimální délka hesla**: zadejte minimální počet znaků, které uživatelské heslo musí obsahovat, **4**-**14**.
 - **Maximální počet minut nečinnosti, po kterém se zamkne obrazovka**: umožňuje vybrat dobu, po které neaktivní zařízení automaticky zamkne.
 - **Počet neúspěšných přihlášení před vymazáním obsahu zařízení**: zadejte, kolikrát může uživatel zadat nesprávné heslo, než se pracovní profil ze zařízení vymaže.
-- **Konec platnosti hesla (dny)** : zadejte počet dnů, po kterém uživatel bude muset změnit heslo (**1**-**255**).
+- **Vypršení platnosti hesla (dny)** : zadejte počet dní, než bude nutné změnit heslo koncového uživatele (od **1**-**365**).
 - **Požadovaný typ hesla**: vyberte typ hesla, které musí být na zařízení nastaveno. Vybírejte z těchto možností:
   - **Výchozí ze zařízení**
   - **Biometrika s nízkým zabezpečením**

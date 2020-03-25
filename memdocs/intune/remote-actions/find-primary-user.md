@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 16b0a07837eee0f44a1f66fe9751e578b5475734
-ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
+ms.openlocfilehash: 06d5e2163303b9766d41bcb0bd7581dc41bf6980
+ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79526389"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80219822"
 ---
 # <a name="find-the-primary-user-of-an-intune-device"></a>Vyhledání primárního uživatele zařízení v Intune
 
@@ -43,8 +43,11 @@ Primárního uživatele zařízení je možné aktualizovat pro zařízení s Wi
 3. Vyberte nového uživatele a zvolte **Vybrat**.
 
 Až se primární uživatel aktualizuje, aktualizuje se taky v okně Intune a na Azure AD Device Blade.
-
-Primárního uživatele nejde změnit na spoluspravovaných zařízeních s Windows 10.
+>[!NOTE]
+>1. Aktualizace primárního uživatele napříč správcem koncových bodů a Azure AD může trvat až 10 minut, než se odrážejí.
+>2. Primární uživatel se aktuálně nemůže změnit na spoluspravovaných zařízeních s Windows 10. 
+>3. Změna primárního uživatele zařízení neprovede žádné změny členství v místní skupině, jako je přidání nebo odebrání uživatelů z místní skupiny Administrators.
+>4. Změna primárního uživatele nemění uživatele zaregistrovaného uživatelem. 
 
 
 ## <a name="what-is-the-primary-user"></a>Co je primární uživatel?

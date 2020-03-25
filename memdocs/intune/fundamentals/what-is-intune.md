@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c567cdeb6cd4e91d40068ba642be4f3838e41d3f
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: c8fce5e8d7a92922d6061c33655bc4e83b3a1a95
+ms.sourcegitcommit: 670c90a2e2d3106048f53580af76cabf40fd9197
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79330103"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80233481"
 ---
 # <a name="microsoft-intune-is-an-mdm-and-mam-provider-for-your-devices"></a>Microsoft Intune je poskytovatel MDM a MAM pro vaše zařízení.
 
@@ -107,7 +107,7 @@ Intune se používá v mnoha odvětvích, včetně [státní správy](https://do
 
 ## <a name="next-steps"></a>Další kroky
 
-- Přečtěte si některé [běžné obchodní problémy, které Intune pomáhá vyřešit](https://docs.microsoft.com/intune/common-scenarios).
+- Přečtěte si některé [běžné obchodní problémy, které Intune pomáhá vyřešit](common-scenarios.md).
 - Začněte s [30denní zkušební verzí Intune](free-trial-sign-up.md).
 - Naplánujte [migraci do Intune](migration-guide.md).
 - Pomocí bezplatné zkušební verze nebo předplatného můžete procházet krok [rychlý Start: vytvoření profilu e-mailového zařízení pro iOS](../configuration/quickstart-email-profile.md).

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2d7ec41361571647cc417dc34ad29522d50477eb
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: b530e4590d50190160695049e2b72f03a0384131
+ms.sourcegitcommit: 670c90a2e2d3106048f53580af76cabf40fd9197
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79325471"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80233592"
 ---
 # <a name="automatically-enroll-android-devices-by-using-samsungs-knox-mobile-enrollment"></a>Automatická registrace zařízení s Androidem pomocí technologie Knox Mobile Enrollment od Samsungu
 
@@ -61,7 +61,7 @@ Když se vaše společnost úspěšně zaregistruje, můžete na portálu Knox p
 - Pokud chcete vytvořit profil MDM pro Android, vyberte jako typ profilu na portálu Knox možnost **Správce zařízení** . 
 - Pokud chcete vytvořit profil MDM pro Android Enterprise, vyberte jako typ profilu na portálu Knox možnost **vlastník zařízení** .  
 
-### <a name="for-android"></a>Pro Android
+### <a name="for-android-enterprise"></a>Android Enterprise
 
 | Pole profilu MDM| Požadované? | Hodnoty | 
 |-------------------|-----------|-------| 
@@ -78,7 +78,7 @@ Když se vaše společnost úspěšně zaregistruje, můžete na portálu Knox p
 
 \* toto pole není vyžadováno k dokončení vytváření profilu na portálu Knox. Intune ale vyžaduje, aby toto pole bylo vyplněné, aby mohl profil úspěšně zaregistrovat zařízení v Intune.
 
-### <a name="for-android-enterprise"></a>Android Enterprise
+### <a name="for-android"></a>Pro Android
 
 Podrobné pokyny najdete v pokynech k [vytváření profilů společnosti Samsung](https://docs.samsungknox.com/KME-Getting-Started/Content/create-profiles.htm) .
 

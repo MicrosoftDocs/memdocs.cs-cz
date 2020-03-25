@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d16d85beea637cf1e756e5068c0ed8d0106b2902
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 691da0c74ceddb34a48bfdf01e19dadaed444e45
+ms.sourcegitcommit: 670c90a2e2d3106048f53580af76cabf40fd9197
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80083611"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80233477"
 ---
 # <a name="add-app-configuration-policies-for-managed-android-enterprise-devices"></a>Přidání zásad konfigurace aplikací pro spravovaná zařízení s Androidem Enterprise
 
@@ -103,15 +103,18 @@ Pokud jako typ hodnoty zvolíte proměnnou, můžete vybírat z následujících
 
 ### <a name="allow-only-configured-organization-accounts-in-multi-identity-apps"></a>Povolte jenom nakonfigurované účty organizace v aplikacích s více identitami 
 
-Pro zařízení s Androidem použijte následující dvojice klíč/hodnota:
+Jako správce Microsoft Intune můžete určit, které uživatelské účty se přidají do aplikací Microsoftu na spravovaných zařízeních. Můžete omezit přístup jenom na povolené uživatelské účty organizace a zablokovat osobní účty zaregistrovaných zařízení. Pro zařízení s Androidem použijte následující dvojice klíč/hodnota:
 
 | **Klíč** | com.microsoft.intune.mam.AllowedAccountUPNs |
 |---|---|
 | **Hodnoty** | <ul><li>Jeden nebo více hlavních názvů uživatele (UPN) oddělených <code>;</code>.</li><li>Jediné povolené účty jsou spravované uživatelské účty definované pomocí tohoto klíče.</li><li> Pro zařízení zaregistrovaná v Intune se může použít token <code>{{userprincipalname}}</code>, aby představoval účet zaregistrovaného uživatele.</li></ul> |
 
    > [!NOTE]
-   > Pro Android 2.2.222 a novější, Office, Word, Excel, PowerPoint pro Android 16.0.9327.1000 a novější verze nebo OneDrive pro Android 5,28 a novější je potřeba použít Outlook, když povolíte jenom nakonfigurované účty organizace s více identitami.<p></p>
-   > Jako správce Microsoft Intune můžete určit, které uživatelské účty se přidají do systém Microsoft Office aplikací na spravovaných zařízeních. Můžete omezit přístup jenom na povolené uživatelské účty organizace a zablokovat osobní účty zaregistrovaných zařízení. Podpůrné aplikace zpracují konfiguraci aplikace a odeberou a zablokují neschválené účty.<p></p>
+   > Následující aplikace zpracovávají výše uvedenou konfiguraci aplikace a povolují jenom účty organizace:
+   > - Edge pro Android (42.0.4.4048 a novější)
+   > - Office, Word, Excel, PowerPoint pro Android (16.0.9327.1000 a novější)
+   > - OneDrive pro Android (5,28 a novější)
+   > - Outlook pro Android (2.2.222 a novější)
 
 ## <a name="enter-json-data"></a>Zadat data JSON
 

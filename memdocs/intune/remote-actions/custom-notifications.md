@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 79bcfe4adead40e8a38d7f84af52406af320a394
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 4b79c7a9cdc740984e1ace90b37bdea8dbdc70de
+ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79325063"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80220247"
 ---
 # <a name="send-custom-notifications-in-intune"></a>Odesílání vlastních oznámení v Intune
 
@@ -73,7 +73,6 @@ Pokud máte aplikaci Portál společnosti otevřenou na zařízení s Androidem,
 - Pokud chcete vytvořit zprávu, použijte účet, ke kterému je přiřazená role Intune, která obsahuje správné oprávnění, jak je popsané v předchozí části *oprávnění* . Postup přiřazení oprávnění uživateli najdete v tématu [přiřazení rolí](../fundamentals/role-based-access-control.md#role-assignments).
 - Vlastní oznámení jsou omezená na 50 znaků a zprávy 500-Character.  
 - Intune neukládá text z dříve odeslaných vlastních oznámení. Chcete-li znovu odeslat zprávu, je nutné tuto zprávu znovu vytvořit.  
-- Do skupin za hodinu můžete poslat až 25 zpráv. Toto omezení je na úrovni tenanta. Toto omezení se nevztahuje na odesílání oznámení na jednotlivá zařízení.
 - Do skupin za hodinu můžete poslat až 25 zpráv. Toto omezení je na úrovni tenanta. Toto omezení se nevztahuje na odesílání oznámení jednotlivcům.
 - Když odesíláte zprávy do jednotlivých zařízení, můžete do stejného zařízení poslat až 10 zpráv za hodinu.
 - Můžete odesílat oznámení uživatelům ve skupinách. Při odesílání oznámení do skupin může každé oznámení směrovat přímo na 25 skupin. Vnořené skupiny se do tohoto součtu nepočítají. Při odesílání oznámení do skupiny se zprávy zaměřují jenom na uživatele ve skupině a odesílají se do každého zařízení s iOS/iPadOS nebo Androidem, které uživatel zaregistroval. Zařízení ve skupině budou při cílení na oznámení ignorována.

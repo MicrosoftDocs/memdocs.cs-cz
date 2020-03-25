@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b01f9444cf70c447c916d3d0a550a8cf46efc28a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 5cb4631b31d33e53b6ef172f142735d24a5c3cb6
+ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79330659"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80220162"
 ---
 # <a name="role-based-access-control-rbac-with-microsoft-intune"></a>Řízení přístupu na základě role (RBAC) s Microsoft Intune
 
@@ -72,10 +72,6 @@ Můžete vytvořit vlastní role s vlastními oprávněními. Další informace 
 
 > [!TIP]
 > Intune také ukazuje tři rozšíření Azure AD: **Uživatelé**, **skupiny**a **podmíněný přístup**, které se řídí pomocí Azure AD RBAC. **Správce uživatelských účtů** navíc provádí jenom aktivity uživatele nebo skupiny AAD a nemá úplná oprávnění provádět všechny aktivity v Intune. Další informace najdete v tématu [RBAC s Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles).
-### <a name="roles-created-in-the-intune-classic-portal"></a>Role vytvořené na klasickém portálu Intune
-Z klasického portálu Intune se do Intune na Azure Portalu migrují jenom **správci služeb** Intune s úplnými oprávněními. Musíte znovu přiřadit role **správců služby** Intune s přístupem "jen pro čtení" nebo "helpdesk" do rolí Intune v Azure Portal a odebrat je z portálu Classic.
-> [!IMPORTANT]
-> Pokud budou vaši správci dál potřebovat přístup ke správě počítačů pomocí Intune, může být potřeba zachovat přístup správce služby Intune na klasickém portálu.
 
 ## <a name="role-assignments"></a>Přiřazení rolí
 Přiřazení role definuje:

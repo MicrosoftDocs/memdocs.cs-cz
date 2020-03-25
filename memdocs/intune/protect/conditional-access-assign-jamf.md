@@ -6,24 +6,24 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/18/2019
+ms.date: 3/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: c87fd2bd-7f53-4f1b-b985-c34f2d85a7bc
-ms.reviewer: elocholi
+ms.reviewer: arnab
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9760029effc873b510bf37b779c054c9a0574a20
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 6ab840653d7090ed925af0db08f410e236392234
+ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79329651"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80219839"
 ---
 # <a name="enforce-compliance-on-macs-managed-with-jamf-pro"></a>Vynucení dodržování předpisů v počítačích Mac spravovaných aplikací Jamf Pro
 
@@ -41,7 +41,10 @@ Postupy v tomto článku vyžadují přístup ke konzolám Intune i Jamf pro.
 
 2. Vyberte **zařízení** > **zásady dodržování předpisů**. Pokud používáte dříve vytvořenou zásadu, vyberte tuto zásadu v konzole nástroje a pak se pokuste přejít k dalšímu kroku tohoto postupu. Pokud chcete vytvořit novou zásadu, vyberte **vytvořit zásadu** a pak zadejte podrobnosti zásady s *platformou* **MacOS**. Nakonfigurujte *Nastavení* a *Akce při nedodržení předpisů* , aby splňovaly požadavky vaší organizace, a pak vyberte **vytvořit** a zásadu uložte.
 
-3. V podokně *Přehled* zásad vyberte **přiřazení**. Pomocí dostupných možností můžete nakonfigurovat, které Azure Active Directory (Azure AD) a skupiny zabezpečení obdrží tyto zásady. Integrace Jamf s Intune nepodporuje zásady dodržování předpisů, které cílí na skupiny zařízení.
+3. V podokně *Přehled* zásad vyberte **přiřazení**. Pomocí dostupných možností můžete nakonfigurovat, které Azure Active Directory (Azure AD) a skupiny zabezpečení obdrží tyto zásady. **Integrace Jamf s Intune nepodporuje zásady dodržování předpisů, které cílí na skupiny zařízení.**
+
+> [!NOTE]
+> Integrace Jamf s Intune podporuje jenom skupiny uživatelů AAD. Zásady dodržování předpisů zařízením, které cílí na skupiny zařízení, se nepoužijí.
 
 4. Když vyberete **Save (Uložit**), zásada se nasadí uživatelům.  
 
