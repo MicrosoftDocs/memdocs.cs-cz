@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 67ea2757e066b70154baea9f87a95a12dd2fe632
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 631f62d6dfa677bbfc805488ec2d66c7dc2e8afe
+ms.sourcegitcommit: fe7484e86ec8a109fa5f54fe9cceef8aac94bd9f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79327819"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80274944"
 ---
 # <a name="sync-your-ios-device-manually"></a>Ruční synchronizace zařízení s iOSem
 
@@ -34,13 +34,13 @@ Někdy může stažení aplikace z Portálu společnosti trvat příliš dlouho.
 
 2. Klepněte na **Zařízení**. Pokud máte více zařízení, zobrazí se jejich seznam. Zvolte zařízení, které právě používáte. Pokud máte jenom jedno zařízení, přejdete přímo na stránku s podrobnostmi o zařízení.
 
-    ![Snímek obrazovky Zařízení se dvěma zařízeními; u horního zařízení je text „Toto je zařízení iPhone 6, které v tuto chvíli používáte“](/user-help/media/ios_sync_1_CP_after_1804.png)
+    ![Snímek obrazovky Zařízení se dvěma zařízeními; u horního zařízení je text „Toto je zařízení iPhone 6, které v tuto chvíli používáte“](./media/ios_sync_1_CP_after_1804.png)
 
 3. Pokud chcete zařízení synchronizovat, klepněte na **Zkontrolovat nastavení**. Dokud synchronizace neskončí, uvidíte na obrazovce načítací pruh.
 
-    ![Snímek obrazovky s podrobnostmi o zařízení, časem posledního vrácení se změnami a odkazem Zkontrolovat nastavení](/user-help/media/ios_sync_2_CP_after_1804.png)  
+    ![Snímek obrazovky s podrobnostmi o zařízení, časem posledního vrácení se změnami a odkazem Zkontrolovat nastavení](./media/ios_sync_2_CP_after_1804.png)  
 
-   ![Snímek obrazovky s podrobnostmi o zařízení a načítacím pruhem, když uživatel klikl na Zkontrolovat nastavení](/user-help/media/ios_sync_3_CP-after_1804.png)
+   ![Snímek obrazovky s podrobnostmi o zařízení a načítacím pruhem, když uživatel klikl na Zkontrolovat nastavení](./media/ios_sync_3_CP-after_1804.png)
 
 Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).
 

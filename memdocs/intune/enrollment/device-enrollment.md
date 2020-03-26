@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4aaa8bcee3684c73fa5ec3d488fd3107585dfc61
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 8f91b71d96c936e9808973df145862654f0e516a
+ms.sourcegitcommit: 71f26a0756fd40c1a06f885f3d31e49734fe97fe
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80086177"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80256636"
 ---
 # <a name="what-is-device-enrollment"></a>Co je registrace zařízení?
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -40,7 +40,7 @@ Standardně se do Intune můžou registrovat zařízení pro všechny platformy.
 | | Zařízení se vymažou při registraci. | Jednotlivá zařízení se přidruží k uživateli.| Pokud ano, uživatelé nemůžou zrušit registraci zařízení. | |
 |**[Uživatelé s vlastním zařízením (BYOD)](#bring-your-own-device)** | Ne| Ano | Ne | [Další informace](apple-mdm-push-certificate-get.md)|
 |**[DEM](#device-enrollment-manager)**| Ne |Ne |Ne | [Další informace](device-enrollment-manager-enroll.md)|
-|**[DEP](#apple-device-enrollment-program)**| Ano | Volitelné | Volitelné|[Další informace](device-enrollment-program-enroll-ios.md)|
+|**[ADE](#apple-automated-device-enrollment)**| Ano | Volitelné | Volitelné|[Další informace](device-enrollment-program-enroll-ios.md)|
 |**[USB-SA](#usb-sa)**| Ano | Volitelné | Ne| [Další informace](apple-configurator-enroll-ios.md)|
 |**[USB (přímo)](#usb-direct)**| Ne | Ne | Ne|[Další informace](apple-configurator-enroll-ios.md)|
 
@@ -49,7 +49,7 @@ Standardně se do Intune můžou registrovat zařízení pro všechny platformy.
 |:---:|:---:|:---:|:---:|:---:|
 |**[Uživatelé s vlastním zařízením (BYOD)](#bring-your-own-device)** | Ne| Ano | Ne | [Další informace](macos-enroll.md)|
 |**[DEM](#device-enrollment-manager)**| Ne |Ne |Ne  | [Další informace](device-enrollment-manager-enroll.md)|
-|**[DEP](#apple-device-enrollment-program)**| Ano | Volitelné | Volitelné|[Další informace](device-enrollment-program-enroll-macos.md)|
+|**[ADE](#apple-automated-device-enrollment)**| Ano | Volitelné | Volitelné|[Další informace](device-enrollment-program-enroll-macos.md)|
 
 ## <a name="windows-enrollment-methods"></a>Metody registrace zařízení s Windows
 
@@ -84,15 +84,15 @@ Standardně se do Intune můžou registrovat zařízení pro všechny platformy.
 Přineste si vlastní zařízení (BYOD), včetně telefonů, tabletů a počítačů vlastněných osobně. Kvůli registraci vlastního zařízení uživatelé nainstalují a používají aplikaci Portál společnosti. Tento program umožňuje uživatelům přístup k firemním prostředkům, jako je třeba e-mail.
 
 ## <a name="corporate-owned-device"></a>Zařízení vlastněná společností
-[Mezi zařízení vlastněná společností](corporate-identifiers-add.md) patří telefony, tablety a počítače ve vlastnictví organizace, které se přidělují zaměstnancům. Registrace zařízení vlastněných společností umožňuje různé způsoby správy, například v podobě automatické registrace, sdílených zařízení nebo předem autorizovaných požadavků na registraci. Správce nebo manažer používá k registraci takových zařízení nejčastěji Správce registrace zařízení (DEM). zařízení s iOS/iPadOS se dají registrovat přímo prostřednictvím nástrojů Program registrace zařízení (DEP), které poskytuje společnost Apple. Zařízení s číslem IMEI se také dají identifikovat a označit jako vlastněné firmou.
+[Mezi zařízení vlastněná společností](corporate-identifiers-add.md) patří telefony, tablety a počítače ve vlastnictví organizace, které se přidělují zaměstnancům. Registrace zařízení vlastněných společností umožňuje různé způsoby správy, například v podobě automatické registrace, sdílených zařízení nebo předem autorizovaných požadavků na registraci. Správce nebo manažer používá k registraci takových zařízení nejčastěji Správce registrace zařízení (DEM). zařízení s iOS/iPadOS se dají registrovat přímo prostřednictvím nástrojů ADE, které poskytuje Apple. Zařízení s číslem IMEI se také dají identifikovat a označit jako vlastněné firmou.
 
 ### <a name="device-enrollment-manager"></a>Správce registrace zařízení
 Správce registrace zařízení (DEM) je zvláštní uživatelský účet, který se používá k registraci a správě více zařízení vlastněných společností. Správci pak mohou nainstalovat aplikaci Portál společnosti a zaregistrovat velký počet zařízení bez uživatele. Tyto typy zařízení se hodí například pro aplikace POS a jednoúčelové aplikace, ale nehodí se pro uživatele, kteří potřebují přístup k e-mailu nebo k prostředkům společnosti. Přečtěte si další informace o [DEM](device-enrollment-manager-enroll.md).
 
-### <a name="apple-device-enrollment-program"></a>Program Apple Device Enrollment Program
-Správa pomocí Apple Program registrace zařízení (DEP) umožňuje vytvářet a nasazovat zásady "přes Air" na zařízení s iOS/iPadOS a macOS, která jsou zakoupená a spravovaná pomocí programu DEP. Zařízení se zaregistruje při prvním zapnutí zařízení uživatelem a spustí se Pomocník s nastavením. Tato metoda podporuje režim iOS/iPadOS pod dohledem, který umožňuje konfigurovat zařízení s konkrétními funkcemi.
+### <a name="apple-automated-device-enrollment"></a>Apple automatizované registrace zařízení
+Správa pomocí programu Apple automatizovaného zápisu zařízení (ADE) umožňuje vytvářet a nasazovat zásady "Air" na zařízení s iOS/iPadOS a macOS zakoupená a spravovaná pomocí ADE. Zařízení se zaregistruje při prvním zapnutí zařízení uživatelem a spustí se Pomocník s nastavením. Tato metoda podporuje režim iOS/iPadOS pod dohledem, který umožňuje konfigurovat zařízení s konkrétními funkcemi.
 
-Další informace o registraci zařízení se systémem iOS/iPadOS DEP:
+Další informace o registraci pro iOS/iPadOS ADE:
 
 - [Volba způsobu registrace zařízení se systémem iOS/iPadOS](ios-enroll.md)
 - [Registrace zařízení s iOS/iPadOS pomocí Program registrace zařízení](device-enrollment-program-enroll-ios.md)

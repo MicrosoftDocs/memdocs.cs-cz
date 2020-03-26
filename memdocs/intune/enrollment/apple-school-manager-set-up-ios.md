@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d201bb3b15c0debb724f974d519a77994aae8e7f
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: f126e2d14623d7dd2a80416c474cc3ad1e460dc1
+ms.sourcegitcommit: 71f26a0756fd40c1a06f885f3d31e49734fe97fe
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79331619"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80256840"
 ---
 # <a name="set-up-iosipados-device-enrollment-with-apple-school-manager"></a>Nastavení registrace zařízení se systémem iOS/iPadOS pomocí Apple School Manageru
 
@@ -31,7 +31,7 @@ ms.locfileid: "79331619"
 
 Můžete nastavit Intune pro registraci zařízení se systémem iOS/iPadOS zakoupených prostřednictvím programu [Apple School Manager](https://school.apple.com/) . Pomocí Intune s Apple School Managerem můžete registrovat velké počty zařízení s iOS/iPadOS, aniž byste je museli dotýkat. Když student nebo učitel zařízení zapne, Pomocník s nastavením provede předem nakonfigurovaná nastavení a zařízení se zaregistruje ke správě.
 
-Při povolení registrace přes Apple School Manager budete používat portál Intune i portál Apple School Manager. Abyste mohli zařízení přiřadit do Intune ke správě, potřebujete seznam sériových čísel nebo čísla nákupních objednávek. Vytvoříte registrační profily DEP obsahující nastavení aplikovaná na zařízení během registrace.
+Při povolení registrace přes Apple School Manager budete používat portál Intune i portál Apple School Manager. Abyste mohli zařízení přiřadit do Intune ke správě, potřebujete seznam sériových čísel nebo čísla nákupních objednávek. Vytvoříte profily zápisu automatizovaného zápisu zařízení (ADE), které obsahují nastavení, která se v zařízeních při registraci používala.
 
 Registraci přes Apple School Manager nejde používat s [programem registrace zařízení (DEP) společnosti Apple](device-enrollment-program-enroll-ios.md) ani se [správcem registrace zařízení](device-enrollment-manager-enroll.md).
 
@@ -106,7 +106,7 @@ Po nainstalování tokenu můžete vytvořit registrační profil pro zařízen�
     > Ty nejsou podporované při ověřování pomocí Pomocníka s nastavením Apple.
 
 6. Vyberte **Nastavení správy zařízení** a vyberte, jestli chcete, aby byla zařízení, která používají tento profil, pod dohledem.
-    U zařízení **pod dohledem** je ve výchozím nastavení víc možností správy a je zakázaný zámek aktivace. Microsoft doporučuje používat DEP jako mechanismus pro povolení režimu pod dohledem, zejména pro organizace, které nasazují velký počet zařízení s iOS/iPadOS.
+    U zařízení **pod dohledem** je ve výchozím nastavení víc možností správy a je zakázaný zámek aktivace. Microsoft doporučuje použití ADE jako mechanismu pro povolení režimu pod dohledem, zejména u organizací, které nasazují velký počet zařízení s iOS/iPadOS.
 
     Uživatelé se dozvědí, že jejich zařízení jsou pod dohledem, dvěma způsoby:
 

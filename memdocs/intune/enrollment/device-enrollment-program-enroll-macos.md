@@ -18,16 +18,17 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 427907b3b24556be15958707bf55f4dc9b190d94
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 0bfd781740459821c6f0d65b3f5f1e12e0fc6b08
+ms.sourcegitcommit: 71f26a0756fd40c1a06f885f3d31e49734fe97fe
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79332935"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80256738"
 ---
 # <a name="automatically-enroll-macos-devices-with-the-apple-business-manager-or-apple-school-manager"></a>Automatická registrace zařízení macOS pomocí Apple Business Manageru nebo Apple School Manageru
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+> [!IMPORTANT]
+> Apple se nedávno změnil z použití programu Apple Program registrace zařízení (DEP) na Apple Automated Device Enrollment (ADE). Intune je v procesu aktualizace uživatelského rozhraní Intune, aby odrážel. Dokud tyto změny nedokončíte, budete na portálu Intune dál zobrazovat *program registrace zařízení* . Všude, kde se zobrazuje, teď používá automatický zápis zařízení.
 
 Můžete nastavit registraci v Intune pro zařízení macOS zakoupená prostřednictvím [Apple Business Manageru](https://business.apple.com/) nebo [Apple School Manageru](https://school.apple.com/). Některé z těchto registrací můžete použít pro velká množství zařízení bezkontaktně nikdy. Tato zařízení s macOS můžete dát rovnou uživatelům. Když uživatel zařízení zapne, Průvodce nastavením spustí předem nakonfigurovaná nastavení a zařízení se zaregistruje do správy v Intune.
 
@@ -50,9 +51,9 @@ Pomocí [správce registrace zařízení](device-enrollment-manager-enroll.md)ne
 - [Autorita pro správu mobilních zařízení (MDM)](../fundamentals/mdm-authority-set.md)
 - [Certifikát Apple MDM Push Certificate](../enrollment/apple-mdm-push-certificate-get.md)
 
-## <a name="get-an-apple-dep-token"></a>Získání tokenu DEP Apple
+## <a name="get-an-apple-ade-token"></a>Získání tokenu Apple ADE
 
-Než budete moct registrovat zařízení s macOS pomocí programu DEP nebo Apple School Manageru, budete potřebovat soubor DEP tokenu (.p7m) od společnosti Apple. Tento token umožňuje Intune synchronizovat informace o zařízení, které vaše organizace vlastní. Umožňuje také Intune nahrát profily registrace do Applu a přiřadit tyto profily zařízením.
+Než budete moct zaregistrovat zařízení macOS pomocí ADE nebo Apple School Manageru, budete potřebovat soubor tokenu (. p7m) od společnosti Apple. Tento token umožňuje Intune synchronizovat informace o zařízení, které vaše organizace vlastní. Umožňuje také Intune nahrát profily registrace do Applu a přiřadit tyto profily zařízením.
 
 Na portálu Apple použijete k vytvoření tokenu. Použijete také na portálu společnosti Apple k přiřazení zařízení do Intune pro správu.
 
@@ -115,7 +116,7 @@ Teď, když jste nainstalovali svůj token, můžete vytvořit registrační pro
 4. Jako **platformu** zvolte **macOS**.
 
 5. V části **Přidružení uživatele** vyberte, jestli zařízení s tímto profilem musí mít při registraci přiřazeného uživatele.
-    - **Zaregistrovat s přidružením uživatele** – tuto možnost vyberte u zařízení patřících uživatelům, kteří chtějí aplikaci Portál společnosti používat pro služby, jako je instalace aplikací. Při použití ADFS vyžaduje přidružení uživatelů [koncový bod WS-Trust 1.3 Username/Mixed](https://technet.microsoft.com/library/adfs2-help-endpoints). [Další informace](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint). Vícefaktorové ověřování nepodporují zařízení s macOS a přidružením uživatele zaregistrovaná v programu DEP.
+    - **Zaregistrovat s přidružením uživatele** – tuto možnost vyberte u zařízení patřících uživatelům, kteří chtějí aplikaci Portál společnosti používat pro služby, jako je instalace aplikací. Při použití ADFS vyžaduje přidružení uživatelů [koncový bod WS-Trust 1.3 Username/Mixed](https://technet.microsoft.com/library/adfs2-help-endpoints). [Další informace](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint) Vícefaktorové ověřování se nepodporuje u zařízení macOS ADE s přidružením uživatele.
 
     - **Zaregistrovat bez přidružení uživatele** – Tuto možnost zvolte pro zařízení nespojená s jedním uživatelem. Použijte ji pro zařízení určená k plnění úkolů, u kterých není potřeba přístup k místním uživatelským datům. Aplikace, jako je aplikace Portál společnosti, nefungují.
 
@@ -168,7 +169,7 @@ Teď, když má Intune oprávnění spravovat vaše zařízení, můžete synchr
 1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **MacOS** > **registrace MacOS** > **tokeny programu registrace** > v seznamu > **zařízení** > **synchronizaci**vyberte token. ![snímek obrazovky s vybraným uzlem zařízení programu registrace a vybraným odkazem pro synchronizaci.](./media/device-enrollment-program-enroll-macos/image06.png)
 
    Kvůli dodržení podmínek společnosti Apple, které se týkají přijatelných přenosů při registraci v programu, platí v Intune následující omezení:
-   - Úplná synchronizace se nesmí pouštět častěji než jednou za sedm dní. Během úplné synchronizace načte Intune úplný aktualizovaný seznam sériových čísel přiřazených k serveru Apple MDM připojenému k Intune. Pokud se zařízení v rámci programu registrace odstraní z portálu Intune, aniž by se zrušilo jeho přiřazení ze serveru MDM Apple na portálu DEP, nebude možné ho do Intune znovu naimportovat, dokud neproběhne úplná synchronizace.   
+   - Úplná synchronizace se nesmí pouštět častěji než jednou za sedm dní. Během úplné synchronizace načte Intune úplný aktualizovaný seznam sériových čísel přiřazených k serveru Apple MDM připojenému k Intune. Po odstranění zařízení programu registrace z portálu Intune bez jeho přiřazení ze serveru Apple MDM na portálu Apple se nebude znovu naimportovat do Intune, dokud se nespustí Úplná synchronizace.   
    - Synchronizace se spouští automaticky každých 24 hodin. Můžete ji také spustit kliknutím na tlačítko **Synchronizovat** (ne častěji než jednou za 15 minut). Každá žádost o synchronizaci má 15 minut na dokončení. Tlačítko **Synchronizovat** bude deaktivované, dokud se synchronizace nedokončí. Při synchronizaci se zaktualizuje stav existujících zařízení a naimportují se nová zařízení přiřazená k serveru Apple MDM.
 
 ## <a name="assign-an-enrollment-profile-to-devices"></a>Přiřazení profilu registrace zařízením
@@ -190,7 +191,7 @@ Můžete vybrat výchozí macOS a profil iOS/iPadOS, který se použije na všec
 
 Povolili jste správu a synchronizaci mezi společností Apple a Intune a přiřadili jste profil, aby vaše zařízení zaregistrovat. Teď můžete zařízení rozdělit mezi uživatele. U zařízení s přidruženými uživateli je potřeba, aby měl každý uživatel přiřazenu licenci Intune. Zařízení bez přidružení uživatele vyžadují licenci zařízení. Aktivované zařízení nemůže použít profil registrace, dokud se zařízení nevymaže.
 
-## <a name="renew-a-dep-token"></a>Obnovení tokenu DEP
+## <a name="renew-an-ade-token"></a>Prodloužit platnost tokenu ADE
 
 1. Přejděte na deploy.apple.com.  
 2. V části **Manage Servers** (Spravovat servery) zvolte server MDM přidružený k souboru tokenu, který chcete obnovit.

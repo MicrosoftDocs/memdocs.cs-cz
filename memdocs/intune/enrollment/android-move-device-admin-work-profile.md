@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b66777e9c108ab4a6b84e4d4fa0942532685912f
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 7126d3d3a8567a2567afc116037d67ffa1a6c8b2
+ms.sourcegitcommit: fe7484e86ec8a109fa5f54fe9cceef8aac94bd9f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80115225"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80274690"
 ---
 # <a name="move-android-devices-from-device-administrator-to-work-profile-management"></a>Přesunutí zařízení s Androidem ze Správce zařízení do správy pracovního profilu
 
@@ -40,7 +40,7 @@ Když uživatelé uvidí, že z tohoto důvodu nejsou v souladu s předpisy, mů
 - Nastavte správu pracovního profilu Androidu [připojením účtu tenanta Intune k vašemu účtu Android Enterprise](connect-intune-android-enterprise.md).
 - [Nastavte registraci pracovního profilu Android Enterprise](android-work-profile-enroll.md) pro skupinu uživatelů, kteří přesunou na pracovní profil Android.
 - Zvažte zvýšení omezení vašich uživatelských zařízení. Při rušení registrace zařízení ze správy správců zařízení nemusí být záznamy zařízení okamžitě odebrány. Aby bylo možné během této doby poskytnout polštář, možná budete muset zvýšit kapacitu omezení počtu zařízení, aby se uživatelé mohli zaregistrovat do správy pracovního profilu.
-  - [Nakonfigurujte Azure Active Directory nastavení zařízení](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal.md#configure-device-settings) pro maximální počet zařízení na uživatele.
+  - [Nakonfigurujte Azure Active Directory nastavení zařízení](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal#configure-device-settings) pro maximální počet zařízení na uživatele.
   - Nastavením limitu zařízení nastavte [omezení počtu zařízení v Intune](enrollment-restrictions-set.md#create-a-device-limit-restriction) . 
 
 ## <a name="create-device-compliance-policy"></a>Vytvoření zásad dodržování předpisů pro zařízení
@@ -71,6 +71,7 @@ Když uživatelé uvidí, že z tohoto důvodu nejsou v souladu s předpisy, mů
     > [!NOTE]
     > - Samozřejmě můžete použít uživatelsky přívětivý text Hyper-v propojeních ve vaší komunikaci s uživateli. Nepoužívejte však zkrácení adres URL, protože odkazy nemusí fungovat, pokud se tímto způsobem změní.
     > - Pokud je Android Portál společnosti otevřený a na pozadí, když uživatel klepne na odkaz, může místo toho přejít na poslední stránku, kterou otevřeli.
+    > - Uživatelé musí klepnout na odkaz na zařízení s Androidem. Pokud je místo toho vložíte do prohlížeče, nespustí se Portál společnosti pro Android. 
 
     Vyberte **Další**.
 
@@ -80,7 +81,7 @@ Když uživatelé uvidí, že z tohoto důvodu nejsou v souladu s předpisy, mů
 
 ## <a name="troubleshooting"></a>Odstraňování potíží
 
-[Tok koncového uživatele, který se má přesunout do nového nastavení správy zařízení](https://docs.microsoft.com/mem/intune/user-help/move-to-new-device-management-setup.md) , provede uživatele tím, že zruší registraci ze správy Správce zařízení a nastavuje se pomocí správy pracovního profilu. Uživatelé musí mít [zařízení zaregistrovaná správcem zařízení](android-enroll-device-administrator.md) s androidem portál společnosti verze 5.0.4720.0 nebo novější.
+[Tok koncového uživatele, který se má přesunout do nového nastavení správy zařízení](../user-help/move-to-new-device-management-setup.md) , provede uživatele tím, že zruší registraci ze správy Správce zařízení a nastavuje se pomocí správy pracovního profilu. Uživatelé musí mít [zařízení zaregistrovaná správcem zařízení](android-enroll-device-administrator.md) s androidem portál společnosti verze 5.0.4720.0 nebo novější.
 
 ### <a name="user-sees-an-error-after-tapping-resolve"></a>Uživatel uvidí chybu po klepnutí na vyřešit.
 Pokud se uživatelům po klepnutí na tlačítko **vyřešit** zobrazí chyba, je pravděpodobně příčinou jednoho z následujících důvodů:
@@ -103,8 +104,5 @@ Uživatelům se v prohlížeči může zobrazit chybová stránka, když klepnou
 - Zařízení s Androidem používá Android 6 nebo starší. 
 
 ## <a name="next-steps"></a>Další kroky
-[Zobrazit tok koncového uživatele](https://docs.microsoft.com/mem/intune/user-help/move-to-new-device-management-setup.md)
-
+[Podívejte se na tok koncového uživatele](../user-help/move-to-new-device-management-setup.md)
 [Správa zařízení s pracovním profilem Androidu pomocí Intune](android-enterprise-overview.md)
-
-

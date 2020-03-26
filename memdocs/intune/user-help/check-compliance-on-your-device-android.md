@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/28/2019
+ms.date: 03/25/2020
 ms.topic: article
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -18,19 +18,29 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 2806ca94b474ddea35d286fa9ee9a2ca626100a8
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 5078f41e08f78063fac3e355301d285d1bdf6ff2
+ms.sourcegitcommit: fe7484e86ec8a109fa5f54fe9cceef8aac94bd9f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79324943"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80274961"
 ---
-# <a name="check-compliance-on-your-android-device"></a>Kontrola dodržování předpisů na zařízení s Androidem
+# <a name="check-compliance-on-your-android-device"></a>Kontrola dodržování předpisů na zařízení s Androidem  
+Ručně spusťte vrácení se změnami zařízení z Portál společnosti do:
 
-Pokud se vaše zařízení už po nějakou dobu nepřipojilo k Intune, může se stát, že nebude mít přístup ke školním nebo firemním prostředkům. Zkuste znovu získat přístup podle těchto kroků.  
+* Aktualizace stavu zařízení 
+* Opětovné získání přístupu k pracovním nebo školním prostředkům 
+
+Při vrácení se změnami Portál společnosti potvrdí, že nastavení na vašem zařízení splňují požadavky zásad vaší organizace.  Vaše organizace může omezit nebo omezit přístup k pracovním nebo školním prostředkům, dokud se nevrátíte se změnami.  
+
+Pokud jste nedávno provedli změny v nastavení zařízení, možná budete muset ručně vrátit se změnami, abyste tyto změny zaregistrovali pomocí Portál společnosti. 
 
 1. Otevřete aplikaci Portál společnosti pro Android na svém zařízení.  
 
-2. Klepněte na **kontrolovat nastavení zařízení**.   
+2. Klepněte na **zařízení** a pak vyberte své zařízení.  
 
-Pokud se vám ztracené nebo ukradené zařízení nedaří resetovat, požádejte svou firemní podporu, aby to udělala za vás. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).  
+3. V části **stav nastavení zařízení**klepněte na **kontrolovat nastavení zařízení**. Portál společnosti zkontroluje vaše zařízení a potvrdí, že splňuje požadavky na zásady vaší organizace. 
+
+4. Po kontrole bude stav nastavení zařízení buď přečtený, **v souladu s předpisy** , nebo **nedodržuje předpisy**. Pokud potřebujete provést nějaké změny, zobrazí se v horní části obrazovky zpráva. Další podrobnosti získáte klepnutím na ni. 
+
+Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).  

@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic;seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 93fba17973571a9981269eb0b9fc98dae20cb920
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 8545614baa180f59475b1f28e6675156ee475464
+ms.sourcegitcommit: 71f26a0756fd40c1a06f885f3d31e49734fe97fe
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80085863"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80256772"
 ---
 # <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>Řešení potíží při registraci zařízení v Microsoft Intune
 
@@ -286,9 +286,9 @@ Pokud chcete problém opravit, musíte vybrat tlačítko **Nastavit**, které se
 Po registraci se zařízení vrátí do stavu správné funkce a znovu získá přístup k podnikovým prostředkům.
 
 ### <a name="verify-ws-trust-13-is-enabled"></a>Ověření, že koncový bod WS-Trust 1.3 je povolený
-**Problém** Program registrace zařízení (DEP) zařízení s iOS/iPadOS nejde zaregistrovat.
+**Problém** Automatické registrace zařízení (ADE) zařízení s iOS/iPadOS nejde zaregistrovat.
 
-Registrace zařízení s programem DEP s přidružením uživatele vyžaduje aktivaci koncového bodu WS-Trust 1.3 Username/Mixed, aby bylo možné požádat o token uživatele. Active Directory má tento koncový bod ve výchozím nastavení povolený. Seznam povolených koncových bodů získáte použitím rutiny PowerShellu Get-AdfsEndpoint a vyhledáním koncového bodu trust/13/UsernameMixed. Příklad:
+Registrace zařízení ADE s přidružením uživatele vyžaduje, aby bylo povoleno zadání uživatelského jména/smíšeného koncového bodu WS-Trust 1,3, aby bylo možné žádat o tokeny uživatelů. Active Directory má tento koncový bod ve výchozím nastavení povolený. Seznam povolených koncových bodů získáte použitím rutiny PowerShellu Get-AdfsEndpoint a vyhledáním koncového bodu trust/13/UsernameMixed. Příklad:
 
       Get-AdfsEndpoint -AddressPath "/adfs/services/trust/13/UsernameMixed"
 

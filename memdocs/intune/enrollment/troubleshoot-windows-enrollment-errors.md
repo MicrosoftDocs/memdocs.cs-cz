@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fe5fce47d6a0480596bc09d82456c7636fe84d51
-ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
+ms.openlocfilehash: 128b63f2b7b789fdd6a11fb196c4d92b14a88cf0
+ms.sourcegitcommit: fe7484e86ec8a109fa5f54fe9cceef8aac94bd9f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79526270"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80274825"
 ---
 # <a name="troubleshoot-windows-device-enrollment-problems-in-microsoft-intune"></a>Řešení potíží s registrací zařízení s Windows v Microsoft Intune
 
@@ -41,7 +41,7 @@ Shromážděte následující informace o problému:
 - Kolika uživatelů se to týká? Ovlivnili všichni uživatelé nebo jen některé?
 - Kolik zařízení je ovlivněno? Jsou všechna zařízení ovlivněná nebo jenom některá?
 - Co je Autorita MDM?
-- Jak se provádí registrace? Přináší vaše vlastní zařízení (BYOD) nebo Apple Program registrace zařízení (DEP) pomocí profilů zápisu?
+- Jak se provádí registrace? Znamená to, že vlastní zařízení (BYOD) nebo Apple automatického zápisu zařízení (ADE) pomocí registračních profilů?
 
 ## <a name="error-messages"></a>Chybovými zprávami
 
@@ -141,7 +141,7 @@ Přiřaďte uživateli platnou licenci Intune a pak zařízení zaregistrujte.
 Chcete-li tento problém vyřešit, použijte jednu z následujících metod: 
  
 ##### <a name="assign-a-valid-license-to-the-user"></a>Přiřadit uživateli platnou licenci
-Otevřete centrum pro [správu Microsoft 365](https://portal.office.com/adminportal/home)a přiřaďte uživateli buď licenci Intune, nebo Office 365.
+Otevřete centrum pro [správu Microsoft 365](https://admin.microsoft.com)a přiřaďte uživateli buď licenci Intune, nebo Office 365.
 
 ##### <a name="correct-the-mdm-terms-of-use-url"></a>Opravte adresu URL podmínek použití MDM.
   1. Přihlaste se k [Azure Portal](https://portal.azure.com/)a pak vyberte **Azure Active Directory**.    

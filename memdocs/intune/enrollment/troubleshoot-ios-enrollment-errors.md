@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ad456ef7cc88ccb24079010479bd8f27292eb73d
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 7e4d3e150e8e4ed890de4717c6093104e2b49d1f
+ms.sourcegitcommit: fe7484e86ec8a109fa5f54fe9cceef8aac94bd9f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79332763"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80274876"
 ---
 # <a name="troubleshoot-iosipados-device-enrollment-problems-in-microsoft-intune"></a>Řešení potíží s registrací zařízení s iOS nebo iPadOS v Microsoft Intune
 
@@ -41,7 +41,7 @@ Shromážděte následující informace o problému:
 - Kolika uživatelů se to týká? Ovlivnili všichni uživatelé nebo jen některé?
 - Kolik zařízení je ovlivněno? Jsou všechna zařízení ovlivněná nebo jenom některá?
 - Co je Autorita MDM?
-- Jak se provádí registrace? Přináší vaše vlastní zařízení (BYOD) nebo Apple Program registrace zařízení (DEP) pomocí profilů zápisu?
+- Jak se provádí registrace? Znamená to, že vlastní zařízení (BYOD) nebo Apple automatického zápisu zařízení (ADE) pomocí registračních profilů?
 
 ## <a name="error-messages"></a>Chybovými zprávami
 
@@ -106,7 +106,7 @@ Pokud vaše společnost používá více domén pro přihlašovací údaje uživ
 **Příčina:** Uživatel, který se pokouší zaregistrovat zařízení, nemá licenci Microsoft Intune.
 
 #### <a name="resolution"></a>Rozlišení
-1. Přejít do [centra pro správu Office 365](https://portal.office.com/adminportal/home#/homepage)a pak zvolte **Uživatelé > aktivní uživatelé**.
+1. Přejít do [centra pro správu Office 365](https://admin.microsoft.com)a pak zvolte **Uživatelé > aktivní uživatelé**.
 2. Vyberte uživatelský účet, kterému chcete přiřadit uživatelskou licenci pro Intune, a pak zvolte licence na **produkty > upravit**.
 3. Přepněte přepínač **na pozici pro** licenci, kterou chcete tomuto uživateli přiřadit, a pak zvolte **Uložit**.
 4. Zařízení znovu zaregistrujte.
@@ -157,7 +157,7 @@ Pokud vaše společnost používá více domén pro přihlašovací údaje uživ
 **Příčina:** Uživatel, který se pokouší zaregistrovat zařízení, nemá platnou licenci Intune.
 
 #### <a name="resolution"></a>Rozlišení
-1. Otevřete centrum pro [správu Microsoft 365](https://portal.office.com/adminportal/home#/homepage)a pak zvolte **Uživatelé** > **aktivní uživatelé**.
+1. Otevřete centrum pro [správu Microsoft 365](https://admin.microsoft.com)a pak zvolte **Uživatelé** > **aktivní uživatelé**.
 2. Vyberte ovlivněný uživatelský účet > **licence k produktům** > **Upravit**.
 3. Ověřte, jestli se tomuto uživateli přiřadí platná licence Intune.
 4. Zařízení znovu zaregistrujte.
@@ -166,7 +166,7 @@ Pokud vaše společnost používá více domén pro přihlašovací údaje uživ
 
 **Příčina:** Uživatel, který se pokouší zaregistrovat zařízení, nemá platnou licenci Intune.
 
-1. Otevřete centrum pro [správu Microsoft 365](https://portal.office.com/adminportal/home#/homepage)a pak zvolte **Uživatelé** > **aktivní uživatelé**.
+1. Otevřete centrum pro [správu Microsoft 365](https://admin.microsoft.com)a pak zvolte **Uživatelé** > **aktivní uživatelé**.
 2. Vyberte příslušný účet uživatele a pak zvolte licence na **produkty** > **Upravit**.
 3. Ověřte, jestli se tomuto uživateli přiřadí platná licence Intune.
 4. Zařízení znovu zaregistrujte.
@@ -203,7 +203,7 @@ Obnovte certifikát APNs a pak zařízení znovu zaregistrujte.
 
 ### <a name="xpc_type_error-connection-invalid"></a>Neplatné připojení XPC_TYPE_ERROR
 
-Když zapnete zařízení spravované pomocí programu DEP, které má přiřazený profil registrace, registrace se nepovede a zobrazí se tato chybová zpráva:
+Když zapnete zařízení spravované přes ADE, které má přiřazený profil registrace, registrace se nepovede a zobrazí se tato chybová zpráva:
 
 ```
 asciidoc
@@ -213,7 +213,7 @@ iPhone com.apple.accessibility.AccessibilityUIServer(MobileAsset)[288] <Notice>:
 iPhone mobileassetd[83] <Notice>: 0x1a49aebc0 Client connection: XPC_TYPE_ERROR Connection invalid <error: 0x1a49aebc0> { count = 1, transaction: 0, voucher = 0x0, contents = "XPCErrorDescription" => <string: 0x1a49aee18> { length = 18, contents = "Connection invalid" }
 ```
 
-**Příčina:** Mezi zařízením a službou Apple DEP dojde k problému s připojením.
+**Příčina:** Mezi zařízením a službou Apple ADE dojde k problému s připojením.
 
 #### <a name="resolution"></a>Rozlišení
 Opravte problém s připojením nebo použijte k registraci zařízení jiné síťové připojení. Pokud se problém opakuje, může se také stát, že budete muset kontaktovat společnost Apple.
@@ -221,20 +221,20 @@ Opravte problém s připojením nebo použijte k registraci zařízení jiné s�
 
 ## <a name="other-issues"></a>Další problémy
 
-### <a name="dep-enrollment-doesnt-start"></a>Registrace DEP se nespustí.
-Když zapnete zařízení spravované pomocí programu DEP, které má přiřazený profil registrace, proces registrace Intune se iniciuje.
+### <a name="ade-enrollment-doesnt-start"></a>Registrace ADE se nespustí.
+Když zapnete zařízení spravované přes ADE, které má přiřazený profil registrace, proces registrace Intune se iniciuje.
 
-**Příčina:** Profil registrace se vytvoří před nahráním tokenu DEP do Intune.
+**Příčina:** Profil registrace se vytvoří před nahráním tokenu ADE do Intune.
 
 #### <a name="resolution"></a>Rozlišení
 
 1. Upravte registrační profil. V profilu můžete provádět změny. Účelem je aktualizovat čas změny profilu.
-2. Synchronizace zařízení spravovaných programem DEP: v [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **iOS** > **Registrace iOS** > **tokeny programu** > vyberte token, který se teď má > **synchronizovat**. Žádost o synchronizaci se pošle společnosti Apple.
+2. Synchronizovat zařízení spravovaná přes ADE: v [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **iOS** > **Registrace iOS** > **tokeny programu** > vyberte token, který se teď má > **synchronizovat**. Žádost o synchronizaci se pošle společnosti Apple.
 
-### <a name="dep-enrollment-stuck-at-user-login"></a>Registrace DEP zablokování při přihlášení uživatele
-Když zapnete zařízení spravované pomocí programu DEP, kterému je přiřazený profil registrace, počáteční nastavení po zadání přihlašovacích údajů.
+### <a name="ade-enrollment-stuck-at-user-login"></a>Registrace ADE zablokovaná při přihlášení uživatele
+Když zapnete zařízení spravované přes ADE, které má přiřazený profil registrace, počáteční nastavení po zadání přihlašovacích údajů se vytvoří.
 
-**Příčina:** Multi-Factor Authentication (MFA) je povolené. V tuto chvíli MFA nefunguje během registrace na zařízeních DEP.
+**Příčina:** Multi-Factor Authentication (MFA) je povolené. V současné době MFA nefunguje během registrace na zařízeních ADE.
 
 #### <a name="resolution"></a>Rozlišení
 Zakažte MFA a pak zařízení znovu zaregistrujte.

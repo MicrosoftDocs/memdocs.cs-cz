@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 79bb7e627043e439c7438c2fc4afcfdee5a44406
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: e7d7f35d6d6b11875c722d4969f5776040ca0dfc
+ms.sourcegitcommit: 71f26a0756fd40c1a06f885f3d31e49734fe97fe
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80086114"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80256449"
 ---
 # <a name="enroll-iosipados-devices-in-intune"></a>Registrace zařízení s iOS/iPadOS v Intune
 
@@ -52,23 +52,23 @@ Po dokončení požadavků a přiřazení uživatelských licencí si uživatel�
 
 V organizacích, které si kupují zařízení pro své uživatele, podporuje Intune následující metody registrace zařízení, které vlastní společnost pro iOS/iPadOS:
 
-- Program registrace zařízení (DEP) společnosti Apple
+- Automatický zápis zařízení (ADE) společnosti Apple
 - Apple School Manager
 - Registrace Průvodce nastavením s Apple Configuratorem
 - Přímá registrace pomocí Apple Configuratoru
 
 Zařízení s iOS/iPadOS vlastněná společností můžete také zaregistrovat pomocí účtu [správce registrace zařízení](device-enrollment-manager-enroll.md) .
 
-## <a name="device-enrollment-program"></a>Program DEP (Device Enrollment Program)
+## <a name="automated-device-enrollment"></a>Automatická registrace zařízení
 
-Organizace si můžou zařízení s iOS/iPadOS koupit prostřednictvím programu Apple Program registrace zařízení (DEP). DEP umožňuje nasadit registrační profil přes Air, aby se zařízení mohla spravovat. Další informace najdete v tématu [program registrace zařízení](device-enrollment-program-enroll-ios.md).
+Organizace si můžou koupit zařízení s iOS/iPadOS prostřednictvím automatického zápisu zařízení (ADE) společnosti Apple. ADE umožňuje nasadit registrační profil přes Air, aby bylo možné zařízení spravovat. Další informace najdete v tématu [program registrace zařízení](device-enrollment-program-enroll-ios.md).
 
 ## <a name="user-enrollment"></a>Registrace uživatele
 Registrace uživatele umožňuje správcům podmnožinu možností správy ve srovnání s jinými metodami registrace. Další informace najdete v tématech [podporované akce při registraci uživatelů, hesla a další možnosti](ios-user-enrollment-supported-actions.md) a [Nastavení registrace uživatelů pro iOS/iPadOS a iPadOS](ios-user-enrollment.md).
 
 ## <a name="apple-school-manager"></a>Apple School Manager
 
-Apple School Manager je program nákupu a registrace zařízení pro školy. Stejně jako u programu DEP máte možnost nasadit profil pro registraci zařízení pro účely správy. Další informace o [Apple School Manageru](apple-school-manager-set-up-ios.md).
+Apple School Manager je program nákupu a registrace zařízení pro školy. Podobně jako ADE můžete nasadit profil pro registraci zařízení v rámci správy. Další informace o [Apple School Manageru](apple-school-manager-set-up-ios.md).
 
 ## <a name="apple-configurator"></a>Apple Configurator
 
@@ -79,7 +79,7 @@ Můžete zaregistrovat zařízení s iOS/iPadOS pomocí Apple Configuratoru spu�
 
 Přečtěte si další informace o [registraci pomocí Apple Configuratoru](apple-configurator-enroll-ios.md).
 
-## <a name="use-the-company-portal-on-dep-enrolled-or-apple-configurator-enrolled-devices"></a>Použití služby Portálu společnosti v zařízeních zaregistrovaných pomocí Programu registrace zařízení nebo nástroje Apple Configurator
+## <a name="use-the-company-portal-on-ade-enrolled-or-apple-configurator-enrolled-devices"></a>Použití Portál společnosti na zařízeních zaregistrovaných v ADE nebo Apple Configuratoru
 
 Zařízení nakonfigurovaná s přidružením uživatele umožňují instalaci a spuštění aplikace Portál společnosti, která slouží ke stahování aplikací a správě zařízení. Když uživatelé obdrží zařízení, musí provést určitý počet dodatečných kroků, aby dokončili postup Pomocníka s nastavením a nainstalovali aplikaci Portál společnosti.
 

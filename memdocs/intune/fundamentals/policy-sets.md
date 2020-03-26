@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1598be8f5f54f1f509194aed0232730bd821624b
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: efd9b064e4ca6c3c375be227af7414544f4692a9
+ms.sourcegitcommit: fe7484e86ec8a109fa5f54fe9cceef8aac94bd9f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79330871"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80274995"
 ---
 # <a name="use-policy-sets-to-group-collections-of-management-objects"></a>Použití sad zásad k seskupení kolekcí objektů pro správu
 
@@ -63,7 +63,7 @@ Při vytváření sady zásad můžete vytvořit jednu jednotku přiřazení a s
     - **Název sady zásad** – zadejte název pro tuto sadu zásad.
     - **Popis** – Volitelně můžete zadat popis sady zásad.
    <p>
-   <img alt="Create policy set - Basics" src="/media/policy-sets/policy-sets-01.png">
+      <img alt="Create policy set - Basics" src="./media/policy-sets/policy-sets-01.png">
 
 4. Klikněte na **Další: Správa aplikací**.<br>
    Na stránce **Správa aplikací** můžete volitelně přidat do sady zásad [aplikace](../apps/apps-add.md), [zásady konfigurace aplikací](../apps/app-configuration-policies-overview.md)a [Zásady ochrany aplikací](../apps/app-protection-policy.md) . Informace o správě aplikací najdete v tématu [co je Správa aplikací Microsoft Intune?](../apps/app-management.md).

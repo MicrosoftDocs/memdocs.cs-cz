@@ -1,12 +1,12 @@
 ---
 title: Zásady ochrany aplikací pro Windows Information Protection (NV)
 titleSuffix: Microsoft Intune
-description: Vytvoření a nasazení zásady ochrany aplikací WIP (Windows Information Protection) u Microsoft Intune
+description: Vytvoření a nasazení zásad Windows Information Protection (NV) pomocí Microsoft Intune
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/26/2020
+ms.date: 03/25/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4ea664594744facd36f3f92900a1e80c48053904
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 88e26a023b745e96926b9611d7bcab41faac261c
+ms.sourcegitcommit: fe7484e86ec8a109fa5f54fe9cceef8aac94bd9f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79327355"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80274723"
 ---
-# <a name="create-and-deploy-windows-information-protection-wip-app-protection-policy-with-intune"></a>Vytvoření a nasazení zásady ochrany aplikací WIP (Windows Information Protection) u Intune
+# <a name="create-and-deploy-windows-information-protection-wip-policy-with-intune"></a>Vytvoření a nasazení zásad Windows Information Protection (NV) pomocí Intune
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Zásady ochrany aplikací u Windows 10 můžete používat k ochraně aplikací bez registrace zařízení.
+Zásady pro Windows Information Protection (nedokončené výroby) s aplikacemi pro Windows 10 můžete použít k ochraně aplikací bez registrace zařízení.
 
 ## <a name="before-you-begin"></a>Před zahájením
 
@@ -49,10 +49,10 @@ Musíte porozumět několika konceptům při přidání zásady WIP:
 
 ## <a name="prerequisites"></a>Požadavky
 
-Abyste mohli vytvořit zásadu ochrany aplikací WIP, musíte nejdříve nakonfigurovat poskytovatele MAM. Přečtěte si další informace o tom, [jak nakonfigurovat poskytovatele MAM u Intune](app-protection-policies-configure-windows-10.md).  
+Než budete moct vytvořit zásady nedokončené výroby, musíte nakonfigurovat poskytovatele MAM. Přečtěte si další informace o tom, [jak nakonfigurovat poskytovatele MAM u Intune](app-protection-policies-configure-windows-10.md).  
 
 > [!IMPORTANT]
-> WIP nepodporuje víc identit. Vždy může existovat jenom jedna spravovaná identita.
+> WIP nepodporuje víc identit. Vždy může existovat jenom jedna spravovaná identita. Další informace o možnostech a omezeních nedokončené výroby najdete v tématu [Ochrana podnikových dat pomocí Information Protection Windows (NV)](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip).
 
 Navíc musíte mít následující licenci a aktualizaci:
 
@@ -63,7 +63,7 @@ Navíc musíte mít následující licenci a aktualizaci:
 
 
 
-## <a name="to-add-a-wip-app-protection-policy"></a>Přidání zásady ochrany aplikací WIP
+## <a name="to-add-a-wip-policy"></a>Přidání zásady WIP
 
 Pokud už máte v organizaci nastavenou službu Intune, můžete vytvořit zásadu specifickou pro WIP.
 
@@ -76,7 +76,7 @@ Pokud už máte v organizaci nastavenou službu Intune, můžete vytvořit zása
 3. Přidejte následující hodnoty:
     - **Název:** Zadejte název nové zásady (povinné).
     - **Popis:** Volitelně zadejte popis.
-    - **Platforma:** Jako podporovanou platformu pro vaši zásadu ochrany aplikací zvolte **Windows 10**.
+    - **Platforma:** Jako podporovanou platformu pro vaši zásadu nedokončené výroby vyberte **Windows 10** .
     - **Stav registrace:** Jako stav registrace pro vaši zásadu zvolte **Bez registrace**.
 4. Zvolte **Vytvořit**. Zásada se vytvoří a zobrazí se v tabulce v podokně **Zásady ochrany aplikací** .
 
