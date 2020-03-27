@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 07dd2269b35310b2d312031e1f6c38e0d813b37a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 7d6fdb0e019c4c61a83beed63c6d2470a0ed04b1
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79333199"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326052"
 ---
 # <a name="use-and-manage-android-enterprise-devices-with-oemconfig-in-microsoft-intune"></a>Používání a Správa zařízení s Androidem Enterprise pomocí OEMConfig v Microsoft Intune
 
@@ -153,7 +153,6 @@ V porovnání se standardními aplikacemi aplikace OEMConfig rozšiřují opráv
 | --- | --- | ---|
 | Samsung | com.samsung.android.knox.kpu | [Příručka pro správce modulů plug-in služby Knox](https://docs.samsungknox.com/knox-service-plugin/admin-guide/index.htm) |
 | Zebra technologie | com. zebra. oemconfig. Common | [Zebra OEMConfig – přehled](http://techdocs.zebra.com/oemconfig ) |
-| Datalogic | com. Datalogic. oemconfig | [Dokumentace uživatele pro Datalogic OEMConfig](https://datalogic.github.io/oemconfig/) |
 | Honeywell | com. Honeywell. oemconfig |  |
 | Tiskárny | JP. Kyocera. enterprisedeviceconfig |  |
 | Spectralink – čárové kódy | com. Spectralink. čárový kód. Service |  |

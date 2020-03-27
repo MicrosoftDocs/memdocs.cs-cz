@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3cec45dae7e0596428b2d7ab5c925889c183d465
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: c84c8f044fe5a1554a8e156a5c7c0a7087d98224
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79333171"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326150"
 ---
 # <a name="use-custom-settings-for-ios-and-ipados-devices-in-microsoft-intune"></a>Použití vlastních nastavení pro zařízení s iOS a iPadOS v Microsoft Intune
 
@@ -38,7 +38,7 @@ Tento článek obsahuje pokyny k používání Apple Configuratoru a Apple Profi
 
 ## <a name="before-you-begin"></a>Před zahájením
 
-[Vytvořte profil](device-profile-create.md).
+[Vytvořte profil](custom-settings-configure.md).
 
 ## <a name="what-you-need-to-know"></a>Co je potřeba vědět
 

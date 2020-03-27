@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/18/2020
+ms.date: 03/26/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d57c852784d882a0e608d1ada3730b20a3f2172a
-ms.sourcegitcommit: fe7484e86ec8a109fa5f54fe9cceef8aac94bd9f
+ms.openlocfilehash: 4a2bd111b3e0dc172dbe4c3e9605a1b4451e2b39
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80274366"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327414"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Použití funkcí a nastavení v zařízeních pomocí profilů zařízení v Microsoft Intune
 
@@ -53,7 +53,7 @@ Tato funkce podporuje:
 
 [Certifikáty](../protect/certificates-configure.md) konfigurují certifikáty Trusted, SCEP a PKCS, které jsou přiřazené k zařízením. Tyto certifikáty ověřují profily Wi-Fi, VPN a e-mailu.
 
-Tato funkce podporuje: 
+Tato funkce podporuje:
 
 - Správce zařízení s Androidem
 - Android Enterprise
@@ -84,6 +84,15 @@ Pomocí těchto nastavení můžete řídit, jak se aktualizace softwaru stahuj�
 Tato funkce podporuje:
 
 - Windows 10 a novější
+
+## <a name="derived-credential"></a>Odvozené přihlašovací údaje
+
+[Odvozené přihlašovací údaje](../protect/derived-credentials.md) jsou certifikáty na čipových kartách, které umožňují ověřování, podepisování a šifrování. V Intune můžete vytvořit profily s těmito přihlašovacími údaji pro použití v aplikacích, e-mailových profilech, připojení k síti VPN, S/MIME a Wi-Fi.
+
+Tato funkce podporuje:
+
+- Android Enterprise
+- iOS/iPadOS
 
 ## <a name="device-features"></a>Funkce zařízení
 
@@ -141,7 +150,7 @@ Tato funkce podporuje:
 
 [Nastavení e-mailu](email-settings-configure.md) vytvoří, přiřadí a monitoruje nastavení e-mailů Exchange ActiveSync na zařízeních. E-mailové profily vám pomůžou s konzistencí, omezit volání podpory a umožnit koncovým uživatelům přístup k firemnímu e-mailu na svých osobních zařízeních, aniž by museli nastavovat. 
 
-Tato funkce podporuje: 
+Tato funkce podporuje:
 
 - Správce zařízení s Androidem
 - Android Enterprise
@@ -151,12 +160,13 @@ Tato funkce podporuje:
 
 ## <a name="endpoint-protection"></a>Ochrana koncových bodů
 
-[Nastavení ochrany koncového bodu pro Windows 10](../protect/endpoint-protection-windows-10.md) konfiguruje nastavení BitLockeru a programu Microsoft Defender pro zařízení s Windows 10.
+[Endpoint Protection](../protect/endpoint-protection-configure.md) konfiguruje nastavení BitLockeru a programu Microsoft Defender pro zařízení s Windows 10. A nakonfigurujte bránu firewall, bránu a další prostředky na zařízeních macOS.
 
 Informace o připojení rozšířené ochrany před internetovými útoky přes Microsoft Defender (rozšířená) s Microsoft Intune najdete v tématu [Konfigurace koncových bodů pomocí nástrojů pro správu mobilních zařízení (MDM)](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-mdm).
 
 Tato funkce podporuje:
 
+- macOS
 - Windows 10 a novější
 
 ## <a name="esim-cellular---public-preview"></a>Mobilní profily eSIM ve verzi Public Preview
@@ -194,6 +204,14 @@ Tato funkce podporuje:
 
 Nastavení veřejného terminálu je dostupné taky jako omezení zařízení pro [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#dedicated-device-settings)a [iOS/iPadOS](device-restrictions-ios.md#kiosk).
 
+## <a name="microsoft-defender-atp"></a>Microsoft Defender ATP
+
+[Microsoft Defender Advanced Threat Protection (ATP)](../protect/advanced-threat-protection.md) se integruje s Intune, aby monitoroval a chránil zařízení. Nastavíte úrovně rizika a určíte, co se stane, když zařízení překročí tuto úroveň. V kombinaci s podmíněným přístupem můžete přispět k tomu, abyste zabránili škodlivé aktivitě ve vaší organizaci.
+
+Tato funkce podporuje:
+
+- Windows 10 a novější
+
 ## <a name="oemconfig"></a>OEMConfig
 
 [OEMConfig](android-oem-configuration-overview.md) je standard, který umožňuje výrobcům OEM (Original Equipment Manufacturer) a žádnou Emms (Enterprise Mobility Management) vytvářet a podporovat funkce specifické pro výrobce OEM standardizovaným způsobem na zařízeních s Androidem Enterprise. Pomocí OEMConfig vytvoří výrobce OEM schéma, které definuje funkce pro správu specifické pro výrobce OEM, a vloží je do aplikace nahrané do Google Play. Intune čte schéma z aplikace, umožňuje správcům Intune konfigurovat nastavení ve schématu.
@@ -206,11 +224,18 @@ Tato funkce podporuje:
 
 [Skripty PowerShellu na zařízeních s Windows 10](../apps/intune-management-extension.md) používají rozšíření pro správu Intune k nahrání skriptů PowerShellu v Intune a pak tyto skripty na svých zařízeních spustíte. Podívejte se také na to, co je potřeba k používání tohoto rozšíření, jak je přidat do Intune a další důležité informace.
 
-
 Tato funkce podporuje:
 
 - Windows 10 a novější
 - Windows Holographic for Business
+
+## <a name="preference-file"></a>Soubor předvoleb
+
+[Soubory předvoleb](preference-file-settings-macos.md) na zařízeních MacOS obsahují informace o aplikacích. Soubory předvoleb můžete například použít k řízení nastavení webového prohlížeče, přizpůsobení aplikací a dalším možnostem.
+
+Tato funkce podporuje:
+
+- macOS
 
 ## <a name="shared-multi-user-device"></a>Sdílené zařízení s více uživateli
 
@@ -260,14 +285,6 @@ Tato funkce podporuje:
 - iOS/iPadOS
 - macOS
 - Windows 8.1 (pouze import)
-- Windows 10 a novější
-
-## <a name="windows-information-protection-profile"></a>Profil Windows Information Protection
-
-[Služba Windows Information Protection](../protect/windows-information-protection-configure.md) pomáhá chránit před únikem dat, aniž by zasahovala do možností zaměstnanců. Pomáhá také chránit podnikové aplikace a data před náhodnými úniky dat na zařízeních ve vlastnictví podniku a na osobních zařízeních, která zaměstnanci používají v práci. Použití Windows Information Protection nevyžaduje změny v prostředí nebo jiných aplikacích.
-
-Tato funkce podporuje:
-
 - Windows 10 a novější
 
 ## <a name="zebra-mobility-extensions-mx"></a>Zebra mobility Extensions (MX)

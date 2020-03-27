@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: acb8a7d4c5ab73cde7f50365e91ef985fdaf341f
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 3cf638ba82d1b6e91e3c4c24d5cfd3433df3b010
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79328399"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326530"
 ---
 # <a name="enable-lost-mode-on-iosipados-devices-with-intune"></a>Povolení režimu ztráty na zařízeních s iOS/iPadOS pomocí Intune
 

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: microsoft-intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0005136193048bac7d9d24311646bf3406a6c800
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 756d835a54a9b020be50a83d95d1925334fda8f1
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79330115"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326647"
 ---
 # <a name="device-management-overview"></a>Přehled správy zařízení
 

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/18/2020
+ms.date: 03/26/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 462f9ca9618d16c0291792f86d00c46f641c6cc8
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: c2031ba23b49bda4890d2638272e3b808b4bf5a9
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80084063"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327441"
 ---
 # <a name="create-a-device-profile-in-microsoft-intune"></a>Vytvořte profil zařízení v Microsoft Intune
 
@@ -37,73 +37,64 @@ V tomto článku najdete:
 
 ## <a name="create-the-profile"></a>Vytvoření profilu
 
-1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+Profily se vytvářejí v [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431). V tomto centru pro správu vyberte **zařízení**. Máte následující možnosti:
 
-2. Vyberte **zařízení** > **konfigurační profily**. Máte následující možnosti:
+- **Přehled**: zobrazuje stav profilů a poskytuje další podrobnosti o profilech, které jste přiřadili uživatelům a zařízením.
+- **Monitorování**: Zkontrolujte stav vašich profilů pro úspěch nebo neúspěch a také si prohlédněte protokoly v profilech.
+- **Podle platformy**: vytváření a zobrazování zásad a profilů podle vaší platformy. Toto zobrazení může také zobrazovat funkce specifické pro platformu. Vyberte například **Windows**. Uvidíte funkce specifické pro systém Windows, jako jsou **aktualizační kanály Windows 10** a **skripty PowerShellu**.
+- **Zásady**: Vytvořte profily zařízení, nahrajte vlastní [skripty PowerShellu](../apps/intune-management-extension.md) , které se spustí na zařízeních, a přidejte do zařízení datové tarify pomocí [eSIM karty](esim-device-configuration.md).
 
-    - **Přehled**: zobrazuje stav profilů a poskytuje další podrobnosti o profilech, které jste přiřadili uživatelům a zařízením.
-    - **Správa**: vytváření profilů zařízení, nahrávání vlastních [skriptů PowerShellu](../apps/intune-management-extension.md) , které se mají spustit v rámci profilu, a Přidání datových plánů do zařízení pomocí [eSIM karty](esim-device-configuration.md).
-    - **Monitorování**: Zkontrolujte stav profilu pro úspěch nebo neúspěch a také si prohlédněte protokoly v profilech.
-    - **Nastavení**: přidejte certifikační autoritu SCEP nebo PFX nebo povolte [správu telekomunikačních výdajů](telecom-expenses-monitor.md) v profilu.
+Když vytváříte profil (**konfigurační profily** > **vytvořit profil**), vyberte svou platformu:
 
-3. Vyberte **vytvořit profil**. Zadejte následující vlastnosti:
+- **Správce zařízení s Androidem**
+- **Android Enterprise**
+- **iOS/iPadOS**
+- **macOS**
+- **Windows 10 a novější**
+- **Windows 8.1 a novější**
+- **Windows Phone 8.1**
 
-   - **Název**: zadejte popisný název profilu. Své profily pojmenujte, abyste je později mohli snadno identifikovat. Dobrým názvem profilu je například **e-mailový profil WP pro celou firmu**.
-   - **Popis**: Zadejte popis profilu. Toto nastavení není povinné, ale doporučujeme ho zadat.
-   - **Platforma**: vyberte platformu zařízení. Možnosti:  
+Pak zvolte typ profilu. Nastavení, která můžete konfigurovat, se liší podle zvolené platformy. Následující články popisují nastavení pro různé typy profilů:
 
-       - **Správce zařízení s Androidem**
-       - **Android Enterprise**
-       - **iOS/iPadOS**
-       - **macOS**
-       - **Windows Phone 8.1**
-       - **Windows 8.1 a novější**
-       - **Windows 10 a novější**
+- [Šablony pro správu (Windows)](administrative-templates-windows.md)
+- [Vlastní](custom-settings-configure.md)
+- [Optimalizace doručení (Windows)](delivery-optimization-windows.md)
+- [Odvozené přihlašovací údaje (Android Enterprise, iOS, iPadOS)](../protect/derived-credentials.md)
+- [Funkce zařízení (macOS, iOS, iPadOS)](device-features-configure.md)
+- [Firmware zařízení (Windows)](device-firmware-configuration-interface-windows.md)
+- [Omezení zařízení](device-restrictions-configure.md)
+- [Připojení k doméně (Windows)](domain-join-configure.md)
+- [Upgrade edice a přepínač režimu (Windows)](edition-upgrade-configure-windows-10.md)
+- [Vzdělávání (iOS, iPadOS)](../fundamentals/education-settings-configure-ios.md)
+- [E-mail](email-settings-configure.md)
+- [Endpoint Protection (macOS, Windows)](../protect/endpoint-protection-configure.md)
+- [Rozšíření (macOS)](kernel-extensions-overview-macos.md)
+- [Identity Protection (Windows)](../protect/identity-protection-configure.md)
+- [Veřejný terminál](kiosk-settings.md)
+- [ATP v programu Microsoft Defender (Windows)](../protect/advanced-threat-protection.md)
+- [Profil pro rozšíření mobility (MX) (Správce zařízení s Androidem)](android-zebra-mx-overview.md)
+- [OEMConfig (Android Enterprise)](android-oem-configuration-overview.md)
+- [Certifikát PKCS](../protect/certficates-pfx-configure.md)
+- [Importovaný certifikát PKCS](../protect/certificates-imported-pfx-configure.md)
+- [Soubor předvoleb (macOS)](preference-file-settings-macos.md)
+- [Certifikát SCEP](../protect/certificates-scep-configure.md)
+- [Zabezpečení hodnocení (vzdělávání) (Windows)](education-settings-configure.md)
+- [Sdílené zařízení s více uživateli (Windows)](shared-user-device-settings.md)
+- [Telekomunikační výdaje (Správce zařízení s Androidem, iOS, iPadOS)](telecom-expenses-monitor.md)
+- [Důvěryhodný certifikát](../protect/certificates-configure.md)
+- [VPN](vpn-settings-configure.md)
+- [Wi-Fi](wi-fi-settings-configure.md)
 
-   - **Typ profilu**: Vyberte typ nastavení, které chcete vytvořit. Zobrazený seznam závisí na zvolené **platformě** .
-   - **Nastavení**: následující články popisují nastavení pro jednotlivé typy profilů:
+Pokud třeba pro platformu vyberete **iOS/iPadOS** , možnosti typu vašeho profilu vypadají podobně jako v následujícím profilu:
 
-       - [Šablony pro správu](administrative-templates-windows.md)
-       - [Vlastní](custom-settings-configure.md)
-       - [Optimalizace doručení](delivery-optimization-windows.md)
-       - [Funkce zařízení](device-features-configure.md)
-       - [Omezení zařízení](device-restrictions-configure.md)
-       - [Připojení k doméně](domain-join-configure.md)
-       - [Upgrade edice a přepínač režimu](edition-upgrade-configure-windows-10.md)
-       - [Školení](education-settings-configure.md)
-       - [E-mail](email-settings-configure.md)
-       - [Endpoint Protection](../protect/endpoint-protection-configure.md)
-       - [Ochrana identit](../protect/identity-protection-configure.md)  
-       - [Veřejný terminál](kiosk-settings.md)
-       - [ATP v programu Microsoft Defender](../protect/advanced-threat-protection.md)
-       - [Certifikát PKCS](../protect/certficates-pfx-configure.md)
-       - [Importovaný certifikát PKCS](../protect/certificates-imported-pfx-configure.md)
-       - [Soubor předvoleb](preference-file-settings-macos.md)
-       - [Certifikát SCEP](../protect/certificates-scep-configure.md)
-       - [Důvěryhodný certifikát](../protect/certificates-configure.md)
-       - [Aktualizovat zásady](../protect/software-updates-ios.md)
-       - [VPN](vpn-settings-configure.md)
-       - [Wi-Fi](wi-fi-settings-configure.md)
-       - [Windows Information Protection](../protect/windows-information-protection-configure.md)
-
-     Pokud třeba pro platformu vyberete **iOS/iPadOS** , možnosti typu vašeho profilu vypadají podobně jako v následujícím profilu:
-
-     > [!div class="mx-imgBorder"]
-     > ![vytvořit profil iOS/iPadOS v Intune](./media/device-profile-create/create-device-profile.png)
-
-4. Po dokončení vyberte **OK** > **vytvořit** a uložte provedené změny. Profil se vytvoří a zobrazí se v seznamu.
+> [!div class="mx-imgBorder"]
+> ![vytvořit profil iOS/iPadOS v Intune](./media/device-profile-create/create-device-profile.png)
 
 ## <a name="scope-tags"></a>Značky oboru
 
-Po přidání nastavení můžete do profilu přidat také značku oboru. Značky oboru vyfiltrují profily na konkrétní IT skupiny, například `US-NC IT Team` nebo `JohnGlenn_ITDepartment`.
+Po přidání nastavení můžete do profilu přidat také značku oboru. Značky oboru vyfiltrují profily na konkrétní IT skupiny, například `US-NC IT Team` nebo `JohnGlenn_ITDepartment`. A se používají v distribuovaném IT.
 
 Další informace o značkách oboru a o tom, co můžete dělat, najdete v tématu [použití značek RBAC a Scope pro distribuci](../fundamentals/scope-tags.md).
-
-### <a name="add-a-scope-tag"></a>Přidat značku oboru
-
-1. Vyberte **obor (značky)** .
-2. Vyberte **Přidat** a vytvořte novou značku oboru. Nebo vyberte ze seznamu existující značku oboru.
-3. Výběrem **OK** uložte změny.
 
 ## <a name="applicability-rules"></a>Pravidla použitelnosti
 
@@ -183,7 +174,7 @@ Při vytváření profilů Vezměte v úvahu následující doporučení:
 
 - Samostatné zásady uživatele ze zásad zařízení.
 
-  Například [šablony pro správu v Intune](administrative-templates-windows.md) mají stovky nastavení ADMX. Tyto šablony ukazují, jestli se nastavení vztahují na uživatele nebo zařízení. Při vytváření šablon pro správu přiřaďte nastavení uživatelů ke skupině uživatelů a přiřaďte nastavení zařízení ke skupině zařízení.
+  Například [šablony pro správu v Intune](administrative-templates-windows.md) mají stovky nastavení ADMX. Tyto šablony ukazují, jestli se nastavení vztahuje na uživatele nebo zařízení. Při vytváření šablon pro správu přiřaďte nastavení uživatelů ke skupině uživatelů a přiřaďte nastavení zařízení ke skupině zařízení.
 
   Následující obrázek ukazuje příklad nastavení, které se může vztahovat na uživatele nebo použít na zařízení:
 

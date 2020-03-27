@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 98cff5540c6eaf571cc6b542a92dffb433820f4c
-ms.sourcegitcommit: fe7484e86ec8a109fa5f54fe9cceef8aac94bd9f
+ms.openlocfilehash: e7dcad93f836ee564e973555bebe1a1f5d7ba3c3
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80274383"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80323696"
 ---
 # <a name="get-ready-for-windows-information-protection-in-windows-10"></a>Příprava pro Windows Information Protection ve Windows 10 
 

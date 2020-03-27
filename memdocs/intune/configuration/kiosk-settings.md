@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/18/2020
+ms.date: 03/26/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,21 +15,23 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c3821017b0fe15df8a0329000aa74272e4d9477e
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 778ce3e6d069347522a98977da65d651e059e41c
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80086886"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327399"
 ---
 # <a name="windows-10-and-windows-holographic-for-business-device-settings-to-run-as-a-dedicated-kiosk-using-intune"></a>Nastavení zařízení s Windows 10 a Windows holografickým pro firmy, která se mají používat jako vyhrazené veřejné terminály pomocí Intune
 
 V zařízeních s Windows 10 můžete pomocí Intune spouštět zařízení jako veřejný terminál, někdy označovaný jako vyhrazené zařízení. Zařízení v celoobrazovkovém režimu může spouštět jednu aplikaci nebo spouštět mnoho aplikací. Můžete zobrazit a přizpůsobit nabídku Start, přidat různé aplikace, včetně aplikací Win32, přidat konkrétní domovskou stránku do webového prohlížeče a další. 
 
-Tato funkce se vztahuje na zařízení se systémem:
+Tato funkce platí pro:
 
 - Windows 10 a novější
 - Windows Holographic for Business
+
+Pokud chcete vytvořit profily na veřejném terminálu pro jiné platformy, přečtěte si téma [Správce zařízení s Androidem](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#dedicated-device-settings)a [iOS/iPadOS](device-restrictions-ios.md#kiosk).
 
 Intune podporuje jeden profil beznabídkového režimu v jednom zařízení. Pokud potřebujete více profilů beznabídkového režimu, můžete použít [vlastní OMA-URI](custom-settings-windows-10.md).
 
@@ -69,7 +71,9 @@ Profil se vytvoří a zobrazí se v seznamu profily. Dále [přiřaďte](device-
 [Přiřaďte profil](device-profile-assign.md) a [monitorujte jeho stav](device-profile-monitor.md).
 
 Pro zařízení s následujícími platformami můžete vytvořit profily na veřejném terminálu:
+
 - [Správce zařízení s Androidem](device-restrictions-android.md#kiosk)
 - [Android Enterprise](device-restrictions-android-for-work.md#dedicated-device-settings)
+- [iOS/iPadOS](device-restrictions-ios.md#kiosk)
 - [Windows 10 a novější](kiosk-settings-windows.md)
 - [Windows Holographic for Business](kiosk-settings-holographic.md)

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5d9b147a9a2c201cde798abcee30a212176cf268
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: da03bb3fdf1f0d67639f7719215d756b7d598d7c
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79325003"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80325077"
 ---
 # <a name="turn-on-iosipados-supervised-mode"></a>Zapnutí dohledového režimu systému iOS/iPadOS
 

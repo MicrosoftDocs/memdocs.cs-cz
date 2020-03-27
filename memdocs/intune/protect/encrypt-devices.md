@@ -17,12 +17,12 @@ ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: ac81ceced473eacc32a3fca566f7c36eb7a262e2
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: d79f97da88a939d95b68a9ef747da87cf3844598
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80084878"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80322480"
 ---
 # <a name="use-device-encryption-with-intune"></a>Použití šifrování zařízení s Intune
 
@@ -43,7 +43,7 @@ Pro práci s úložištěm na zařízení se vyžaduje registrace zařízení sc
 
 Trezor úložišť je program pro šifrování celého disku, který je součástí macOS. Intune můžete použít ke konfiguraci trezoru úložišť na zařízeních, na kterých běží **macOS 10,13 nebo novější**.
 
-Pro konfiguraci trezoru úložišť vytvořte [profil konfigurace zařízení](../configuration/device-profile-create.md) pro službu Endpoint Protection pro platformu MacOS. Nastavení trezoru úložiště je jednou z dostupných kategorií nastavení pro macOS Endpoint Protection.
+Pro konfiguraci trezoru úložišť vytvořte [profil konfigurace zařízení](endpoint-protection-configure.md) pro službu Endpoint Protection pro platformu MacOS. Nastavení trezoru úložiště je jednou z dostupných kategorií nastavení pro macOS Endpoint Protection.
 
 Když vytvoříte zásadu pro šifrování zařízení pomocí trezoru, zásada se použije na zařízení ve dvou fázích. Nejdřív je zařízení připravené k tomu, aby Intune mohl načíst a zálohovat obnovovací klíč. Tato akce se označuje jako v úschově. Po uloží klíče se může šifrování disku spustit.
 
@@ -105,7 +105,7 @@ Pomocí Intune můžete nakonfigurovat nástroj BitLocker Drive Encryption na za
 
 BitLocker je k dispozici na zařízeních se **systémem Windows 10 nebo novějším**.
 
-Nakonfigurujte BitLocker při vytváření [profilu konfigurace zařízení](../configuration/device-profile-create.md) pro službu Endpoint Protection pro platformu Windows 10 nebo novější. Nastavení BitLockeru jsou v kategorii nastavení šifrování Windows pro Endpoint Protection pro Windows 10.
+Nakonfigurujte BitLocker při vytváření [profilu konfigurace zařízení](endpoint-protection-configure.md) pro službu Endpoint Protection pro platformu Windows 10 nebo novější. Nastavení BitLockeru jsou v kategorii nastavení šifrování Windows pro Endpoint Protection pro Windows 10.
 
 ![Nastavení BitLockeru](./media/encrypt-devices/bitlocker-settings.png)
 

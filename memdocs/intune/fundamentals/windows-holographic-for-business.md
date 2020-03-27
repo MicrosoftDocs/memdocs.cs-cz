@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/13/2019
+ms.date: 03/26/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6f8a15199f599cf0fd4f90ea965bcc3e668f3b27
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 44cae6e1e7fdd310a6053cbcb6f19371263d0161
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79330039"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326621"
 ---
 # <a name="manage-and-use-different-device-management-features-on-windows-holographic-and-hololens-devices-with-intune"></a>Spravovat a využívat funkce správy různých zařízení na Windows Holographic a zařízení HoloLens s Intune
 
@@ -58,7 +58,7 @@ Pomocí aplikace Portál společnosti můžete také provádět následující a
 
 **[Vytvoření zásady dodržování předpisů pro zařízení](../protect/compliance-policy-create-windows.md)**
 
-Zásady dodržování předpisů jsou pravidla a nastavení, která musí zařízení dodržovat, aby vyhovovala. Pomocí těchto zásad s podmíněným přístupem Zablokujte přístup k prostředkům společnosti pro zařízení, která nedodržují předpisy. V Intune můžete vytvářet zásady dodržování předpisů, které povolí nebo zablokují přístup zařízením s Windows Holographic for Business. Můžete třeba vytvořit zásadu, která vyžaduje zapnutý Bitlocker.
+Zásady dodržování předpisů jsou pravidla a nastavení, která musí zařízení dodržovat, aby vyhovovala. Pomocí těchto zásad s podmíněným přístupem Zablokujte přístup k prostředkům společnosti pro zařízení, která nedodržují předpisy. V Intune můžete vytvářet zásady dodržování předpisů, které povolí nebo zablokují přístup zařízením s Windows Holographic for Business. Můžete například vytvořit zásadu, která vyžaduje, aby byl povolen nástroj BitLocker.
 
 Další informace najdete v tématu **[Začínáme se zásadami dodržování předpisů](../protect/device-compliance-get-started.md)** .
 
@@ -107,7 +107,7 @@ V Intune můžete vytvářet kategorie zařízení, abyste podle nich mohli zař
 
 ## <a name="device-configuration-profiles"></a>Konfigurační profily zařízení
 
-**[Začínáme s konfiguračními profily](../configuration/device-profiles.md) a [vytvoření vlastního profilu](../configuration/device-profile-create.md)**
+**[Začínáme s konfiguračními profily](../configuration/device-profiles.md)a [Přehled profilů](../configuration/device-profile-create.md)**
 
 Intune obsahuje nastavení a funkce, které můžete různým zařízením v organizaci povolit nebo zakázat. Tato nastavení a funkce se spravují pomocí profilů. Můžete například vytvořit profil, který umožňuje Cortana nebo na zařízeních s Windows holografickým pro firmy používat inteligentní obrazovku Microsoft Defenderu.
 

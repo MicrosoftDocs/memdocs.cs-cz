@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8c50f5495aa593dc8904fe6a9120ecd29de693ee
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 5f33198e71fd4250ee93207e571bc535abd1c95f
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79328419"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80325371"
 ---
 # <a name="use-bulk-device-actions"></a>Použití hromadných akcí zařízení
 

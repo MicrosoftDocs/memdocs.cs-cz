@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 16c6f57bd12713135244b2096f9eda4d8a802f32
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 3c25177b838b9a720ec51930c3ab9c069696067d
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79332107"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326175"
 ---
 # <a name="use-custom-settings-for-macos-devices-in-microsoft-intune"></a>Použití vlastního nastavení u zařízení s macOS v Microsoft Intune
 
@@ -38,7 +38,7 @@ Tento článek obsahuje pokyny k používání Apple Configuratoru a Apple Profi
 
 ## <a name="before-you-begin"></a>Před zahájením
 
-[Vytvořte profil](device-profile-create.md).
+[Vytvořte profil](custom-settings-configure.md).
 
 ## <a name="what-you-need-to-know"></a>Co je potřeba vědět
 
