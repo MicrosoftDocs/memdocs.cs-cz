@@ -15,36 +15,20 @@
       href: tutorial-walkthrough-administrative-templates.md
 - name: Praktičtí průvodci
   items:
-    - name: Vytvoření profilu
+    - name: Přehled
       href: device-profile-create.md
-    - name: Šablony pro správu ve Windows
-      items:
-        - name: Šablony pro správu ve Windows
-          href: administrative-templates-windows.md
-        - name: Aktualizace Office pomocí šablon pro správu
-          href: administrative-templates-update-office.md
-      displayName: 'ADMX, GPO, group policy'
-    - name: Funkce zařízení v systémech iOS/iPadOS a macOS
-      href: device-features-configure.md
+    - name: Vlastní nastavení zařízení
+      href: custom-settings-configure.md
+      displayName: oma-uri
     - name: Omezení nastavení a funkcí zařízení
       href: device-restrictions-configure.md
-      displayName: Device restrictions
-    - name: Aktualizace Windows
-      href: delivery-optimization-windows.md
-      displayName: delivery optimization; updates
-    - name: Nastavení systému BIOS ve Windows
-      href: device-firmware-configuration-interface-windows.md
-      displayName: 'DFCI, firmware'
-    - name: Připojení k doméně ve Windows
-      href: domain-join-configure.md
-    - name: Upgrade systému Windows a systému Windows v režimu S
-      href: edition-upgrade-configure-windows-10.md
+      displayName: device restrictions
     - name: E-mailu
-      href: email-settings-configure.md
-    - name: Veřejné terminály a vyhrazená zařízení
-      href: kiosk-settings.md
-    - name: Sdílená zařízení s více uživateli
-      href: shared-user-device-settings.md
+      items:
+        - name: Konfigurace e-mailu
+          href: email-settings-configure.md
+        - name: Problémy a řešení
+          href: troubleshoot-email-profiles-in-microsoft-intune.md
     - name: Síť VPN
       href: vpn-settings-configure.md
       items:
@@ -54,46 +38,82 @@
           href: vpn-setting-configure-per-app.md
     - name: Síť Wi-Fi
       href: wi-fi-settings-configure.md
-      displayName: wifi
+      displayName: 'wifi, wireless'
       items:
         - name: Wi-Fi s předsdíleným klíčem
           href: wi-fi-profile-shared-key.md
+          displayName: 'psk, oma-uri, eap'
         - name: Odstraňování potíží s Wi-Fi
           href: troubleshoot-wi-fi-profiles.md
+    - name: Šablony pro správu ve Windows
+      displayName: 'admx, gpo, group policy'
+      items:
+        - name: Šablony pro správu
+          href: administrative-templates-windows.md
+        - name: Aktualizace Office pomocí šablon pro správu
+          href: administrative-templates-update-office.md
+    - name: Nastavení systému BIOS ve Windows
+      href: device-firmware-configuration-interface-windows.md
+      displayName: 'dfci, firmware'
+    - name: Připojení k doméně ve Windows
+      href: domain-join-configure.md
+      displayName: 'enrollment, active directory, azure ad joined, join domain'
+    - name: Aktualizace Windows
+      href: delivery-optimization-windows.md
+      displayName: 'delivery optimization, windows updates'
+    - name: Upgrade systému Windows a systému Windows v režimu S
+      href: edition-upgrade-configure-windows-10.md
+    - name: Funkce zařízení v systémech iOS/iPadOS a macOS
+      href: device-features-configure.md
+      displayName: 'airprint, home screen, lock screen, sso, single sign-on'
     - name: Rozšíření v macOS
       href: kernel-extensions-overview-macos.md
-    - name: Aplikace Zkuste si test ve vzdělávacím profilu
-      href: education-settings-configure.md
+      displayName: 'kernel extensions, system extensions'
+    - name: Soubor předvoleb v macOS
+      href: preference-file-settings-macos.md
+      displayName: 'property list files, plist'
     - name: Funkce Mobility Extension (MX) na zařízeních Zebra
-      href: android-zebra-mx-overview.md
-      displayName: mx
+      displayName: 'mx, android, stagenow'
+      items:
+        - name: Mobility Extensions (MX) pro správce zařízení s Androidem
+          href: android-zebra-mx-overview.md
+        - name: Protokoly StageNow a běžné problémy
+          href: android-zebra-mx-logs-troubleshoot.md
     - name: OEMConfig na Androidu Enterprise
       href: android-oem-configuration-overview.md
+      displayName: 'original equipment manufacturers, schema'
+    - name: Veřejné terminály a vyhrazená zařízení
+      href: kiosk-settings.md
+      displayName: 'single app, multi app'
+    - name: Sdílená zařízení s více uživateli
+      href: shared-user-device-settings.md
+      displayName: 'shared pc, education'
+    - name: Aplikace Zkuste si test ve vzdělávacím profilu
+      href: education-settings-configure.md
     - name: Mobilní data přes eSIM ve Windows
       href: esim-device-configuration.md
+      displayName: embedded sim
     - name: 'Výdaje na telekomunikaci v systémech Android, iOS/iPadOS'
       href: telecom-expenses-monitor.md
-    - name: Vlastní nastavení zařízení
-      href: custom-settings-configure.md
-    - name: Přiřazení profilů
-      href: device-profile-assign.md
-    - name: Monitorování profilů
-      href: device-profile-monitor.md
+      displayName: saaswedo datalert
+    - name: Nasazení a monitorování
+      items:
+        - name: Přiřazení profilů
+          href: device-profile-assign.md
+          displayName: 'deploy, push'
+        - name: Monitorování profilů
+          href: device-profile-monitor.md
     - name: Odstraňování potíží
       items:
         - name: Řešení potíží se zásadami a profily
           href: troubleshoot-policies-in-microsoft-intune.md
-        - name: Problémy s e-mailovými profily a jejich řešení
-          href: troubleshoot-email-profiles-in-microsoft-intune.md
-        - name: Protokoly StageNow a běžné problémy
-          href: android-zebra-mx-logs-troubleshoot.md
         - name: Běžné otázky a odpovědi
           href: device-profile-troubleshoot.md
 - name: Reference
   items:
     - name: Nastavení konfiguračního profilu
       items:
-        - name: Android
+        - name: Správce zařízení s Androidem
           items:
             - name: Omezení zařízení
               href: device-restrictions-android.md
@@ -146,8 +166,6 @@
               href: ../protect/endpoint-protection-macos.md?toc=/intune/configuration/toc.json&bc=/intune/configuration/breadcrumb/toc.json
             - name: Rozšíření
               href: kernel-extensions-settings-macos.md
-            - name: Soubor předvoleb
-              href: preference-file-settings-macos.md
             - name: Síť VPN
               href: vpn-settings-macos.md
             - name: Wi-Fi

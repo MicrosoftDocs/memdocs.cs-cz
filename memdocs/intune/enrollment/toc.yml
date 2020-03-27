@@ -5,7 +5,7 @@
   items:
     - name: Přehled registrace zařízení
       href: device-enrollment.md
-      displayName: COD; BYOD; DEM; DEP; USB-SA; USB-Direct; co-management; GPO
+      displayName: COD; BYOD; DEM; ADE; USB-SA; USB-Direct; co-management; GPO
     - name: Možnosti správy zaregistrovaných zařízení
       href: device-management-capabilities.md
     - name: Možnosti registrace
@@ -20,7 +20,7 @@
   items:
     - name: Registrace zařízení s Windows pomocí Autopilotu
       href: tutorial-use-autopilot-enroll-devices.md
-    - name: Registrace zařízení se systémem iOS/iPadOS pomocí Programu registrace zařízení
+    - name: Registrace zařízení se systémem iOS/iPadOS pomocí ADE (Azure Disk Encryption)
       href: tutorial-use-device-enrollment-program-enroll-ios.md
 - name: Koncepty
   items:
