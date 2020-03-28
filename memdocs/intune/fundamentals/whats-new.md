@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 03/23/2020
+ms.date: 03/24/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b33b33415628dab471d1d4951e141c2ce718eaa0
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 9632f47d3ab5582365a059b888892c2e0fe6ec8e
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 03/27/2020
-ms.locfileid: "80326666"
+ms.locfileid: "80358725"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového ve Microsoft Intune
 
@@ -55,6 +55,46 @@ Podívejte se, co je nového v jednom týdnu v Microsoft Intune v [centru pro sp
 -->  
 
 <!-- ########################## -->
+## <a name="week-of-march-24-2020"></a>Týden od 24. března 2020
+
+### <a name="improved-user-interface-experience-when-creating-device-restrictions-profiles-on-android-and-android-enterprise-devices---5841361---"></a>Vylepšené uživatelské rozhraní při vytváření profilů omezení zařízení pro zařízení s Androidem a Androidem Enterprise<!-- 5841361 -->
+
+Když vytvoříte profil pro zařízení s Androidem nebo Androidem Enterprise, bude se aktualizovat prostředí v centru pro správu správy koncových bodů. Tato změna má vliv na následující konfigurační profily zařízení (**zařízení** > **konfiguračních** profilech > **Vytvoření profilu** > **Správce zařízení s Androidem** nebo **Android Enterprise** for Platform):
+
+- Omezení zařízení: Správce zařízení s Androidem
+- Omezení zařízení: vlastník zařízení se systémem Android Enterprise
+- Omezení zařízení: pracovní profil Android Enterprise
+
+Další informace o omezeních zařízení, která můžete konfigurovat, najdete v tématu [Správce zařízení s Androidem](../configuration/device-restrictions-android.md) a [Android Enterprise](../configuration/device-restrictions-android-for-work.md).
+
+### <a name="improved-user-interface-experience-when-creating-configuration-profiles-on-iosipados-and-macos-devices---5569002-5568997---"></a>Vylepšené prostředí uživatelského rozhraní při vytváření konfiguračních profilů na zařízeních s iOS/iPadOS a macOS<!-- 5569002 5568997 -->
+
+Když vytváříte profil pro zařízení se systémem iOS nebo macOS, prostředí v centru pro správu správy koncových bodů se aktualizuje. Tato změna má vliv na následující konfigurační profily zařízení (**zařízení** > **konfiguračních profilech** > **Vytvoření profilu** > **iOS/iPadOS** nebo **MacOS** pro platformu):
+
+- Vlastní: iOS/iPadOS, macOS
+- Funkce zařízení: iOS/iPadOS, macOS
+- Omezení zařízení: iOS/iPadOS, macOS
+- Ochrana koncového bodu: macOS
+- Rozšíření: macOS
+- Soubor předvoleb: macOS
+
+### <a name="hide-from-user-configuration-setting-in-device-features-on-macos-devices---6524869---"></a>Skrytí nastavení konfigurace uživatele ve funkcích zařízení na zařízeních macOS<!-- 6524869 -->
+
+Když vytváříte profil konfigurace funkcí zařízení na zařízeních macOS, je k dispozici nová možnost **Skrýt z nastavení konfigurace uživatele** (**zařízení** > **konfigurační profily** > **vytvořit profil** > **MacOS** pro **funkce zařízení** > pro profily > pro položky profilu **přihlašovací položky**).
+
+Tato funkce nastaví zaškrtnutí skryté aplikace v seznamu **uživatelé & skupiny** přihlášení k aplikacím na zařízeních MacOS. Existující profily ukazují toto nastavení v seznamu jako nenakonfigurované. Pro konfiguraci tohoto nastavení můžou správci aktualizovat existující profily.
+
+Když je tato možnost nastavená na hodnotu **Skrýt**, pro aplikaci se kontroluje zaškrtávací políčko Skrýt a uživatelé je nemůžou změnit. Po přihlášení uživatelů ke svým zařízením taky aplikaci uživatelům skryje.
+
+> [!div class="mx-imgBorder"]
+> ![skrýt aplikace na zařízeních macOS po přihlášení uživatelů k zařízení v Microsoft Intune a v nástroji Endpoint Manager](./media/whats-new/macos-hide-checkmark-users-groups-login-items-apps-list.png)
+
+Další informace o nastavení, které můžete nakonfigurovat, najdete v tématu [Nastavení funkcí zařízení MacOS](../configuration/macos-device-features-settings.md).
+
+Tato funkce platí pro:
+
+- macOS
+
 ## <a name="week-of-march-16-2020-2003-service-release"></a>Týden od 16. března 2020 (2003 vydání služby)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -295,7 +335,11 @@ Před instalací této aktualizace si přečtěte [článek o Configuration Mana
 Nyní můžete vydávat hromadné příkazy pro následující vzdálené akce: restart, přejmenování, autopilot resetování, vymazání a odstranění. Pokud chcete zobrazit nové hromadné akce, přejděte do [centra pro správu Microsoft Endpoint manageru](https://go.microsoft.com/fwlink/?linkid=2109431) > **zařízení** > **všechna zařízení** > **hromadných akcí**.
 
 #### <a name="all-devices-list-improved-search-sort-and-filter--6179023--"></a>Seznam všech zařízení Vylepšené vyhledávání, řazení a filtrování<!--6179023-->
-Seznam všechna zařízení byl vylepšen pro lepší výkon, vyhledávání, řazení a filtrování. Další informace najdete v [tomto popisu podpory](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-changes-in-all-devices-list-and-reporting-in-intune/ba-p/1220946).
+Seznam všechna zařízení byl vylepšen pro lepší výkon, vyhledávání, řazení a filtrování. Další informace najdete v [tomto popisu podpory](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-changes-in-all-devices-list-and-reporting-in-intune/ba-p/1220946).  
+
+### <a name="app-management"></a>Správa aplikací  
+####  <a name="improved-sign-in-experience-in-company-portal-for-android"></a>Vylepšené prostředí pro přihlašování v Portál společnosti pro Android    
+Aktualizovali jsme rozložení několika přihlašovacích obrazovek v aplikaci Portál společnosti pro Android, aby bylo prostředí pro uživatele užitečnější, jednoduché a čisté. Pokud se chcete podívat na vylepšení, přečtěte si téma [co je nového v uživatelském rozhraní aplikace](https://docs.microsoft.com/mem/intune/fundamentals/whats-new-app-ui).
 
 <!-- ########################## -->
 ## <a name="week-of-february-24-2020"></a>Týden od 24. února 2020
@@ -845,7 +889,7 @@ Instance Intune, které jsou hostované na *Microsoft Azure Government* , teď m
 ## <a name="whats-new-archive"></a>Archiv co je nového
 V předchozích měsících se podívejte do [archivu co je nového](whats-new-archive.md).
 
-## <a name="notices"></a>Oznámení
+## <a name="notices"></a>Sdělení
 
 [!INCLUDE [Intune notices](../includes/intune-notices.md)]
 

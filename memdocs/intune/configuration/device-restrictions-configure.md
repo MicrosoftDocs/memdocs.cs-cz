@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/18/2020
+ms.date: 03/24/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,22 +15,22 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7f1e421a344122dbd4cf59a49ea56ef0ba2bb125
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 470ca47aa92b30acacc8a251c6d7d1741513bdf1
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80087084"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359217"
 ---
 # <a name="configure-device-restriction-settings-in-microsoft-intune"></a>Konfigurace nastavení omezení zařízení v Microsoft Intune
 
 Intune zahrnuje zásady omezení zařízení, které správcům pomůžou řídit zařízení se systémem Android, iOS/iPadOS, macOS a Windows. Tato omezení umožňují řídit široké spektrum nastavení a funkcí pro ochranu prostředků vaší organizace. Správci můžou například:
 
-- Povolí nebo zablokuje fotoaparát zařízení.
-- Řízení přístupu k Google Play, obchodům s aplikacemi, zobrazování dokumentů a hraní her
-- Zablokovat integrované aplikace nebo vytvořit seznam aplikací, které jsou povolené nebo zakázané
-- Povolení nebo prevence zálohování souborů do účtů cloudu a úložiště
-- Nastavit minimální délku hesla a zablokovat jednoduchá hesla
+- Povolí nebo blokuje fotoaparát zařízení.
+- Řízení přístupu k Google Play, obchodům s aplikacemi, zobrazování dokumentů a hraní her.
+- Zablokuje integrované aplikace nebo vytvoří seznam aplikací, které jsou povolené nebo zakázané.
+- Povolí nebo zakáže zálohování souborů do účtů cloudu a úložiště.
+- Nastavte minimální délku hesla a zablokujte jednoduchá hesla.
 
 Tyto funkce jsou dostupné v Intune a správce je může nakonfigurovat. Intune používá konfigurační profily k vytvoření a přizpůsobení těchto nastavení potřebám vaší organizace. Po přidání těchto funkcí do profilu můžete profil nainstalovat nebo nasadit do zařízení ve vaší organizaci.
 
@@ -42,37 +42,50 @@ V tomto článku se dozvíte, jak vytvořit profil omezení pro zařízení. Mů
 2. Vyberte **zařízení** > **konfiguračních profilech** > **vytvořit profil**.
 3. Zadejte následující vlastnosti:
 
-    - **Název**: zadejte popisný název zásady. Své zásady pojmenujte, abyste je později mohli snadno identifikovat. Dobrým názvem zásad je například **iOS/iPadOS: zablokovat kameru na zařízeních**.
-    - **Popis**: zadejte popis zásady. Toto nastavení není povinné, ale doporučujeme ho zadat.
     - **Platforma**: vyberte platformu zařízení. Možnosti:  
 
         - **Správce zařízení s Androidem**
         - **Android Enterprise**
         - **iOS/iPadOS**
         - **macOS**
-        - **Windows Phone 8.1**
-        - **Windows 8.1 a novější**
         - **Windows 10 a novější**
+        - **Windows 8.1 a novější**
+        - **Windows Phone 8.1**
 
-    - **Typ profilu**: vyberte **omezení zařízení**.
+    - **Profil**: vyberte **omezení zařízení**.
 
         Pokud chcete vytvořit profil omezení zařízení pro zařízení s Windows 10 Team, jako je například Surface Hub, zvolte **omezení zařízení (Windows 10 Team)** .
 
-4. Nastavení, která můžete konfigurovat, se liší podle zvolené platformy. Pro podrobnější nastavení vyberte platformu:
+4. Vyberte **Vytvořit**.
+5. V části **základy**zadejte následující vlastnosti:
 
-    - [Nastavení správce zařízení s Androidem](device-restrictions-android.md)
-    - [Nastavení Androidu Enterprise](device-restrictions-android-for-work.md)
-    - [nastavení pro iOS/iPadOS](device-restrictions-ios.md)
-    - [Nastavení macOS](device-restrictions-macos.md)
-    - [Nastavení Windows Phone 8.1](device-restrictions-windows-phone-8-1.md)
+    - **Název**: zadejte popisný název zásady. Své zásady pojmenujte, abyste je později mohli snadno identifikovat. Dobrým názvem zásad je například **iOS/iPadOS: zablokovat kameru na zařízeních**.
+    - **Popis**: zadejte popis zásady. Toto nastavení není povinné, ale doporučujeme ho zadat.
+
+6. Vyberte **Další**.
+
+7. Nastavení, která můžete konfigurovat v **nastavení konfigurace**, se liší v závislosti na zvolené platformě. Pro podrobnější nastavení vyberte platformu:
+
+    - [Správce zařízení s Androidem](device-restrictions-android.md)
+    - [Android Enterprise](device-restrictions-android-for-work.md)
+    - [iOS/iPadOS](device-restrictions-ios.md)
+    - [macOS](device-restrictions-macos.md)
+    - [Windows Phone 8.1](device-restrictions-windows-phone-8-1.md)
     - [Windows 8.1](device-restrictions-windows-8-1.md)
-    - [Nastavení Windows 10](device-restrictions-windows-10.md)
-    - [Nastavení Windows 10 Team](device-restrictions-windows-10-teams.md)
-    - [Nastavení Windows Holographic for Business](device-restrictions-windows-holographic.md)
+    - [Windows 10 a novější](device-restrictions-windows-10.md)
+    - [Windows 10 Team](device-restrictions-windows-10-teams.md)
+    - [Windows Holographic for Business](device-restrictions-windows-holographic.md)
 
-5. Až to budete mít, vyberte **OK** > **Vytvořit** a změny uložte.
+8. Vyberte **Další**.
+9. V části **značky oboru** (volitelné) přiřaďte značku pro filtrování profilu na konkrétní skupiny IT, například `US-NC IT Team` nebo `JohnGlenn_ITDepartment`. Další informace o značkách oboru naleznete v tématu [použití značek RBAC a Scope pro distribuci](../fundamentals/scope-tags.md).
 
-Profil se vytvoří a zobrazí se v seznamu profily.
+    Vyberte **Další**.
+
+10. V části **přiřazení**vyberte uživatele nebo skupiny, které obdrží váš profil. Další informace o přiřazování profilů najdete v tématu [přiřazení profilů uživatelů a zařízení](device-profile-assign.md).
+
+    Vyberte **Další**.
+
+11. V rámci **Revize a vytvoření**zkontrolujte nastavení. Když vyberete **vytvořit**, vaše změny se uloží a profil se přiřadí. Tato zásada se taky zobrazuje v seznamu profily.
 
 ## <a name="next-steps"></a>Další kroky
 

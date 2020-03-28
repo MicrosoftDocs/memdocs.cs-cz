@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/02/2019
+ms.date: 03/24/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,16 +15,20 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8ef60333b53e03b3a6a8d736817ef27df9a182f1
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 5e857cdd7028851f14f607739ba7e37c744fa2f1
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79329319"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359456"
 ---
-# <a name="macos-endpoint-protection-settings-in-intune"></a>Nastavení ochrany koncových bodů MacOS v Intune  
+# <a name="macos-endpoint-protection-settings-in-intune"></a>Nastavení ochrany koncových bodů macOS v Intune  
 
 Tento článek ukazuje nastavení ochrany koncových bodů, která můžete nakonfigurovat pro zařízení s macOS. Tato nastavení nakonfigurujete pomocí profilu konfigurace zařízení macOS pro [Endpoint Protection](endpoint-protection-configure.md) v Intune.  
+
+## <a name="before-you-begin"></a>Před zahájením
+
+[Vytvořte profil ochrany koncového bodu MacOS](endpoint-protection-configure.md).
 
 ## <a name="gatekeeper"></a>Gatekeeper  
 
@@ -97,7 +101,7 @@ Další informace o nastaveních úložišť Apple najdete v tématu [FDEFileVau
     Pro zařízení se vytvoří klíče pro obnovení *osobních klíčů* . Pro osobní klíč nakonfigurujte následující nastavení.  
 
     - **Umístění klíče pro osobní obnovení** – zadejte krátkou zprávu pro uživatele, která vysvětluje, jak a kde mohou načíst svůj osobní obnovovací klíč. Tento text se vloží do zprávy, kterou uživatel uvidí na přihlašovací obrazovce, když se zobrazí výzva k zadání osobního obnovovacího klíče, pokud je zapomenuté heslo.  
-      
+
     - **Střídání osobních obnovovacích klíčů** – určete, jak často se má otočit osobní obnovovací klíč pro zařízení. Můžete vybrat výchozí nastavení **není nakonfigurováno**nebo hodnota **1** až **12** měsíců.  
 
   - **Zakázat výzvu při odhlášení**  
@@ -118,3 +122,8 @@ Další informace o nastaveních úložišť Apple najdete v tématu [FDEFileVau
 
 Další informace o trezoru s Intune najdete v tématu [klíče pro obnovení trezoru](encryption-monitor.md#filevault-recovery-keys).
 
+## <a name="next-steps"></a>Další kroky
+
+[Přiřaďte profil](../configuration/device-profile-assign.md) a [monitorujte jeho stav](../configuration/device-profile-monitor.md).
+
+Službu Endpoint Protection můžete také nakonfigurovat na [zařízeních s Windows 10 a novějším](endpoint-protection-windows-10.md).

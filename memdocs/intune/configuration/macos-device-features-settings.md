@@ -5,27 +5,27 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/09/2020
+ms.date: 03/25/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
 ms.technology: ''
-ms.reviewer: ''
+ms.reviewer: kakyker; annovich
 ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2e143530c5e9965a3717c632c1af7fcbc28a664f
-ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
+ms.openlocfilehash: a4ed859078f7cc6be5a91b303de45f7247248203
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79526287"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359196"
 ---
 # <a name="macos-device-feature-settings-in-intune"></a>nastavení funkcí zařízení macOS v Intune
 
-Intune obsahuje některá vestavěná nastavení pro přizpůsobení funkcí na zařízeních macOS. Správci můžou například přidat tiskárny pro průchozí tisk, zvolit způsob, jakým se uživatelé přihlásí, konfigurovat řízení spotřeby, používat ověřování pomocí jednotného přihlašování a další.
+Intune obsahuje vestavěná nastavení pro přizpůsobení funkcí na zařízeních macOS. Správci můžou například přidat tiskárny pro průchozí tisk, zvolit způsob, jakým se uživatelé přihlásí, konfigurovat řízení spotřeby, používat ověřování pomocí jednotného přihlašování a další.
 
 Pomocí těchto funkcí můžete řídit zařízení macOS jako součást řešení správy mobilních zařízení (MDM).
 
@@ -40,7 +40,7 @@ Tento článek uvádí tato nastavení a popisuje, co jednotlivé nastavení dě
 
 ## <a name="airprint"></a>AirPrint
 
-### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Nastavení platí pro: registrace zařízení a automatický zápis zařízení 
+### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Nastavení platí pro: registrace zařízení a automatický zápis zařízení
 
 - **IP adresa**: zadejte adresu IPv4 nebo IPv6 tiskárny. Pokud k identifikaci tiskáren používáte názvy hostitelů, můžete získat IP adresu pomocí příkazového testu tiskárny v aplikaci Terminal. Další podrobnosti najdete v článku [získání IP adresy a cesty](#get-the-ip-address-and-path) (v tomto článku).
 - **Cesta**: zadejte cestu k tiskárně. Cesta je obvykle `ipp/print` pro tiskárny v síti. Další podrobnosti najdete v článku [získání IP adresy a cesty](#get-the-ip-address-and-path) (v tomto článku).
@@ -70,7 +70,7 @@ Chcete-li přidat servery s modulem pro tisk, budete potřebovat IP adresu tisk�
 
 ### <a name="settings-apply-to-all-enrollment-types"></a>Nastavení platí pro: všechny typy registrace
 
-- **Soubory, složky a vlastní aplikace**: **přidejte** cestu k souboru, složce, vlastní aplikaci nebo systémové aplikaci, kterou chcete otevřít, když se uživatel přihlásí k zařízení. Systémové aplikace nebo aplikace sestavené nebo přizpůsobené pro vaši organizaci jsou obvykle ve složce `Applications` s cestou podobnou `/Applications/AppName.app`. 
+- **Soubory, složky a vlastní aplikace**: **přidejte** cestu k souboru, složce, vlastní aplikaci nebo systémové aplikaci, kterou chcete otevřít, když se uživatelé přihlásí ke svým zařízením. Systémové aplikace nebo aplikace sestavené nebo přizpůsobené pro vaši organizaci jsou obvykle ve složce `Applications` s cestou podobnou `/Applications/AppName.app`. 
 
   Můžete přidat mnoho souborů, složek a aplikací. Zadejte například:  
   
@@ -79,7 +79,9 @@ Chcete-li přidat servery s modulem pro tisk, budete potřebovat IP adresu tisk�
   - `/Applications/Microsoft Office/root/Office16/winword.exe`
   - `/Users/UserName/music/itunes.app`
   
-  Při přidávání libovolné aplikace, složky nebo souboru Nezapomeňte zadat správnou cestu. Ne všechny položky jsou ve složce `Applications`. Pokud uživatel přesune položku z jednoho umístění do druhé, cesta se změní. Tato přesunutá položka nebude otevřena, když se uživatel přihlásí.
+  Při přidávání libovolné aplikace, složky nebo souboru Nezapomeňte zadat správnou cestu. Ne všechny položky jsou ve složce `Applications`. Pokud uživatel přesune položku z jednoho umístění do jiného, pak se cesta změní. Tato přesunutá položka nebude otevřena, když se uživatel přihlásí.
+
+- **Skrýt z konfigurace uživatele**: při **skrytí** se aplikace nezobrazuje v seznamu Uživatelé & skupiny přihlášení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení OS zobrazuje položku, kterou spustíte při přihlášení, v seznamu Uživatelé & skupiny přihlášení skupin s možností skrýt nezaškrtnuto.
 
 ## <a name="login-window"></a>Přihlašovací okno
 
@@ -87,37 +89,37 @@ Chcete-li přidat servery s modulem pro tisk, budete potřebovat IP adresu tisk�
 
 #### <a name="window-layout"></a>Rozložení okna
 
-- **Zobrazit další informace v řádku nabídek**: když je vybraná časová oblast na řádku **nabídek, možnost** Zobrazit zobrazí název hostitele a verzi MacOS. **Nenakonfigurováno** (výchozí) nezobrazuje tyto informace na řádku nabídek.
-- **Banner**: zadejte zprávu, která se zobrazí na přihlašovací obrazovce zařízení. Zadejte například informace o vaší organizaci, uvítací zprávu, ztracené a zjištěné informace atd.
-- **Zvolit formát přihlášení**: Vyberte způsob, jakým se uživatelé přihlašují k zařízení. Možnosti:
+- **Zobrazit další informace v řádku nabídek**: když je vybraná časová oblast na řádku **nabídek, možnost** Zobrazit zobrazí název hostitele a verzi MacOS. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení operační systém nemusí tyto informace na řádku nabídek zobrazit.
+- **Banner**: zadejte zprávu, která se zobrazí na přihlašovací obrazovce na zařízeních. Zadejte například informace o vaší organizaci, uvítací zprávu, ztracené a zjištěné informace atd.
+- **Vyberte formát přihlášení**: vyberte, jak se uživatelé přihlašují k zařízením. Možnosti:
   - **Vyzvat k zadání uživatelského jména a hesla** (výchozí): vyžaduje, aby uživatelé zadali uživatelské jméno a heslo.
   - **Seznam všech uživatelů, výzva k zadání hesla**: vyžaduje, aby uživatelé vybrali své uživatelské jméno ze seznamu uživatelů a pak zadali heslo. Také konfigurovat:
 
-    - **Místní uživatelé**: **Skrýt** nezobrazuje místní uživatelské účty v seznamu uživatelů, které mohou zahrnovat účty Standard a admin. Zobrazují se jenom účty uživatelů sítě a systému. **Nenakonfigurováno** (výchozí) zobrazí místní uživatelské účty v seznamu uživatelů.
-    - **Mobilní účty**: **Skrýt** nezobrazuje mobilní účty v seznamu uživatelů. **Nenakonfigurováno** (výchozí) zobrazí mobilní účty v seznamu uživatelů. Některé mobilní účty se můžou zobrazovat jako síťoví uživatelé.
-    - **Uživatelé sítě**: výběrem **Zobrazit zobrazíte** seznam uživatelů v síti v seznamu uživatelů. **Nenakonfigurováno** (výchozí) nezobrazuje účty uživatelů sítě v seznamu uživatelů.
-    - **Uživatelé s oprávněními**správce: **Skrýt** v seznamu uživatelů nezobrazují uživatelské účty správců. **Nenakonfigurováno** (výchozí) zobrazuje účty uživatelů správce v seznamu uživatelů.
-    - **Jiní uživatelé**: výběrem **Zobrazit** můžete v seznamu uživatelů vybrat **Další seznam.** **Nenakonfigurováno** (výchozí) nezobrazuje ostatní uživatelské účty v seznamu uživatelů.
+    - **Místní uživatelé**: **Skrýt** nezobrazuje místní uživatelské účty v seznamu uživatelů, které mohou zahrnovat účty Standard a admin. Zobrazují se jenom účty uživatelů sítě a systému. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém v seznamu uživatelů zobrazovat místní uživatelské účty.
+    - **Mobilní účty**: **Skrýt** nezobrazuje mobilní účty v seznamu uživatelů. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém zobrazit mobilní účty v seznamu uživatelů. Některé mobilní účty se můžou zobrazovat jako síťoví uživatelé.
+    - **Uživatelé sítě**: výběrem **Zobrazit zobrazíte** seznam uživatelů v síti v seznamu uživatelů. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení operační systém nemusí v seznamu uživatelů zobrazovat síťové uživatelské účty.
+    - **Uživatelé s oprávněními**správce: **Skrýt** v seznamu uživatelů nezobrazují uživatelské účty správců. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém zobrazit uživatelské účty správce v seznamu uživatelů.
+    - **Jiní uživatelé**: výběrem **Zobrazit** můžete v seznamu uživatelů vybrat **Další seznam.** Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení operační systém nemusí v seznamu uživatelů zobrazovat jiné uživatelské účty.
 
 #### <a name="login-screen-power-settings"></a>Nastavení napájení přihlašovací obrazovky
 
-- **Tlačítko vypnout**: **Skrýt** na přihlašovací obrazovce nezobrazuje tlačítko vypnout. **Nenakonfigurováno** (výchozí) zobrazí tlačítko vypnout.
-- **Tlačítko restartovat**: **Skrýt** na přihlašovací obrazovce nezobrazuje tlačítko restartovat. **Nenakonfigurováno** (výchozí) zobrazí tlačítko restartovat.
-- **Tlačítko režimu spánku**: **Skrýt** nezobrazuje na přihlašovací obrazovce tlačítko režimu spánku. **Nenakonfigurováno** (výchozí) zobrazí tlačítko režimu spánku.
+- **Tlačítko vypnout**: **Skrýt** na přihlašovací obrazovce nezobrazuje tlačítko vypnout. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém zobrazit tlačítko vypnout.
+- **Tlačítko restartovat**: **Skrýt** na přihlašovací obrazovce nezobrazuje tlačítko restartovat. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém zobrazit tlačítko restartovat.
+- **Tlačítko režimu spánku**: **Skrýt** nezobrazuje na přihlašovací obrazovce tlačítko režimu spánku. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém zobrazit tlačítko režimu spánku.
 
 #### <a name="other"></a>Další
 
-- **Zakázat přihlášení uživatele z konzoly**: **Disable zakáže** a skryje příkaz MacOS, který se používá pro přihlášení. V případě typických uživatelů toto nastavení **zakažte** . **Nenakonfigurováno** (výchozí) umožňuje pokročilým uživatelům přihlašovat se pomocí příkazového řádku MacOS. Chcete-li přejít do režimu konzoly, uživatelé zadají `>console` do pole uživatelské jméno a musí se ověřit v okně konzoly.
+- **Zakázat přihlášení uživatele z konzoly**: **Disable zakáže** a skryje příkaz MacOS, který se používá pro přihlášení. V případě typických uživatelů toto nastavení **zakažte** . Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém uživatelům dovolit, aby se přihlásili pomocí příkazového řádku macOS. Chcete-li přejít do režimu konzoly, uživatelé zadají `>console` do pole uživatelské jméno a musí se ověřit v okně konzoly.
 
 #### <a name="apple-menu"></a>Nabídka Apple
 
 Až se uživatelé přihlásí k zařízením, následující nastavení budou mít vliv na to, co můžou dělat.
 
-- **Zakázat možnost vypnout**: **Zakázat** umožňuje uživatelům vybrat možnost **vypnutí** po přihlášení uživatele. **Nenakonfigurováno** (výchozí) umožňuje uživatelům vybrat položku nabídky **vypnutí** na zařízení.
-- **Zakázat restart**: **Disable** znemožní uživatelům vybrat možnost **restartování** po přihlášení uživatele. **Nenakonfigurováno** (výchozí) umožňuje uživatelům vybrat položku nabídky **restartovat** na zařízení.
-- **Zakázat**vypnutí: **Zakázat** umožňuje uživatelům **vybrat možnost vypnutí** po přihlášení uživatele. **Nenakonfigurováno** (výchozí) umožňuje uživatelům vybrat položku nabídky **napájení** v zařízení.
-- **Zakázat možnost Odhlásit** se (MacOS 10,13 a novější): **Disable** znemožní uživatelům vybrat možnost **Odhlásit** se po přihlášení uživatele. **Nenakonfigurováno** (výchozí) umožňuje uživatelům vybrat položku nabídky **Odhlásit** se na zařízení.
-- **Zakázat zamykací obrazovku** (MacOS 10,13 a novější): možnost **Zakázat** znemožní uživatelům vybrat možnost **zamykací obrazovky** po přihlášení uživatele. **Nenakonfigurováno** (výchozí) umožňuje uživatelům vybrat položku nabídky **zamykací obrazovky** na zařízení.
+- **Zakázat možnost vypnout**: **Zakázat** umožňuje uživatelům vybrat možnost **vypnutí** po přihlášení uživatele. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém uživatelům dovolit, aby na zařízeních vybrali položku nabídky pro **vypnutí** .
+- **Zakázat restart**: **Disable** znemožní uživatelům vybrat možnost **restartování** po přihlášení uživatele. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém uživatelům dovolit vybrat položku nabídky **restartovat** na zařízeních.
+- **Zakázat**vypnutí: **Zakázat** umožňuje uživatelům **vybrat možnost vypnutí** po přihlášení uživatele. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém uživatelům dovolit vybrat položku nabídky **napájení** v zařízeních.
+- **Zakázat možnost Odhlásit** se (MacOS 10,13 a novější): **Disable** znemožní uživatelům vybrat možnost **Odhlásit** se po přihlášení uživatele. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém uživatelům dovolit vybrat položku nabídky **Odhlásit** se na zařízeních.
+- **Zakázat zamykací obrazovku** (MacOS 10,13 a novější): možnost **Zakázat** znemožní uživatelům vybrat možnost **zamykací obrazovky** po přihlášení uživatele. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém uživatelům dovolit vybrat položku nabídky **zamykací obrazovka** na zařízeních.
 
 ## <a name="single-sign-on-app-extension"></a>Rozšíření aplikace s jednotným přihlašováním
 
@@ -130,8 +132,8 @@ Tato funkce platí pro:
 - **Typ rozšíření aplikace jednotného přihlašování**: Vyberte typ rozšíření aplikace jednotného přihlašování. Možnosti:
 
   - **Nenakonfigurováno**: rozšíření aplikací se nepoužívají. Pokud chcete rozšíření aplikace zakázat, přepněte typ rozšíření aplikace jednotného přihlašování na **Nenakonfigurováno**.
-  - **Přesměrování**: pomocí obecného přizpůsobitelné přípony aplikace pro přesměrování provede jednotné přihlašování s moderními toky ověřování. Ujistěte se, že znáte rozšíření a ID týmu pro rozšíření aplikace vaší organizace.
-  - **Přihlašovací údaje**: pomocí obecného rozšíření aplikace s přizpůsobitelnými přihlašovacími údaji můžete provádět jednotné přihlašování s toky ověřování typu výzva a odpověď. Ujistěte se, že znáte ID rozšíření a ID týmu pro rozšíření aplikace jednotného přihlašování ve vaší organizaci.  
+  - **Přesměrování**: k použití jednotného přihlašování s moderními toky ověřování použijte obecné a přizpůsobitelné rozšíření aplikace pro přesměrování. Ujistěte se, že znáte rozšíření a ID týmu pro rozšíření aplikace vaší organizace.
+  - **Přihlašovací údaje**: pomocí obecného rozšíření aplikace s přizpůsobitelnou přihlašovacími údaji můžete používat jednotné přihlašování s toky ověřování typu Challenge a Response. Ujistěte se, že znáte ID rozšíření a ID týmu pro rozšíření aplikace jednotného přihlašování ve vaší organizaci.  
   - **Kerberos**: použijte integrované rozšíření protokolu Kerberos společnosti Apple, které je součástí macOS Catalina 10,15 a novějších. Tato možnost je verze rozšíření **přihlašovacích údajů** specifická pro Kerberos.
 
   > [!TIP]
@@ -149,7 +151,7 @@ Tato funkce platí pro:
   - Všechny domény v profilech služby Intune, které mají rozšíření pro aplikace jednotného přihlašování, musí být jedinečné. Doménu nemůžete opakovat v žádném profilu rozšíření aplikace pro přihlášení, i když používáte různé typy rozšíření aplikace jednotného přihlašování.
   - U těchto domén se nerozlišují velká a malá písmena.
 
-- **Adresy URL** (pouze přesměrované): zadejte PŘEDPONY adresy URL vašich zprostředkovatelů identity, na jejichž základě provede rozšíření přesměrování aplikace, které provádí jednotné přihlašování. Když se uživatel přesměruje na tyto adresy URL, rozšíření aplikace jednotného přihlašování se zachová a zobrazí výzvu k přihlášení SSO.
+- **Adresy URL** (pouze přesměrované): zadejte PŘEDPONY adresy URL vašich zprostředkovatelů identity, na jejichž základě rozšíření pro přesměrování aplikace používá jednotné přihlašování. Když budou uživatelé přesměrováni na tyto adresy URL, rozšíření aplikace jednotného přihlašování se zasáhne a zobrazí výzvu k přihlášení SSO.
 
   - Všechny adresy URL v profilech rozšíření aplikace jednotného přihlašování Intune musí být jedinečné. Doménu nejde opakovat v žádném profilu rozšíření aplikace jednotného přihlašování, a to ani v případě, že používáte různé typy rozšíření aplikace jednotného přihlašování.
   - Adresy URL musí začínat na http://nebo https://.
@@ -158,7 +160,7 @@ Tato funkce platí pro:
   - **Klíč**: zadejte název položky, kterou chcete přidat, například `user name`.
   - **Typ**: zadejte typ dat. Možnosti:
 
-    - String
+    - Řetězec
     - Boolean: v **hodnotě konfigurace**zadejte `True` nebo `False`.
     - Integer: v **hodnotě konfigurace**zadejte číslo.
     
@@ -166,25 +168,25 @@ Tato funkce platí pro:
   
   - **Přidat**: vyberte, pokud chcete přidat konfigurační klíče.
 
-- **Použití řetězce klíčů** (jenom Kerberos): vyberte **blok** , aby se zabránilo ukládání a ukládání hesel do řetězce klíčů. Pokud se uživatel zablokuje, nezobrazí se výzva k uložení hesla a po vypršení platnosti lístku Kerberos je potřeba znovu zadat heslo. **Nenakonfigurováno** (výchozí) umožňuje ukládat a ukládat hesla do řetězce klíčů. Uživatelé nejsou po vypršení platnosti lístku vyzváni k opětovnému zadání hesla.
-- **ID obličeje, dotykové ID nebo heslo** (jenom Kerberos): **vyžaduje** , aby uživatelé při aktualizaci lístku Kerberos zadali své ID a dotykové jméno a heslo zařízení. **Nenakonfigurováno** (výchozí) nevyžaduje, aby uživatelé k aktualizaci lístku Kerberos používali biometrika nebo heslo zařízení. Pokud je **použití řetězce klíčů** blokované, pak toto nastavení neplatí.
-- **Výchozí sféra** (pouze Kerberos): Chcete-li nastavit hodnotu **sféry** , kterou jste zadali jako výchozí sféru, vyberte možnost **Povolit** . **Nenakonfigurováno** (výchozí) nenastavuje výchozí sféru.
+- **Použití řetězce klíčů** (jenom Kerberos): vyberte **blok** , aby se zabránilo ukládání a ukládání hesel do řetězce klíčů. Pokud je blokováno, uživatelé nebudou vyzváni k uložení hesla a po vypršení platnosti lístku protokolu Kerberos je nutné znovu zadat heslo. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém ukládat hesla a uložit je do řetězce klíčů. Uživatelům se po vypršení platnosti lístku nezobrazí výzva k zadání hesla.
+- **ID obličeje, dotykové ID nebo heslo** (jenom Kerberos): **vyžaduje** , aby uživatelé při aktualizaci lístku Kerberos zadali své ID a dotykové jméno a heslo zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení operační systém nemusí vyžadovat, aby uživatelé pomocí biometrika nebo hesla zařízení aktualizovali lístek protokolu Kerberos. Pokud je **použití řetězce klíčů** blokované, pak toto nastavení neplatí.
+- **Výchozí sféra** (pouze Kerberos): Chcete-li nastavit hodnotu **sféry** , kterou jste zadali jako výchozí sféru, vyberte možnost **Povolit** . Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení operační systém nemusí nastavit výchozí sféru.
 
   > [!TIP]
   > - Toto nastavení **Povolte** , pokud konfigurujete více rozšíření aplikace pro jednotné přihlašování pomocí protokolu Kerberos ve vaší organizaci.
   > - Toto nastavení **Povolte** , pokud používáte více sfér. Nastaví hodnotu **sféry** , kterou jste zadali jako výchozí sféru.
   > - Pokud máte pouze jednu sféru, ponechte ji **nenakonfigurovanou** (výchozí).
 
-- **Automatická konfigurace** (jenom Kerberos): Pokud je nastavená na **blokovat**, nebude rozšíření protokolu Kerberos automaticky používat LDAP a DNS k určení jeho názvu lokality Active Directory. **Nenakonfigurováno** (výchozí) umožňuje rozšíření automaticky najít název lokality služby Active Directory.
-- **Změny hesla** (jenom Kerberos): **blok** znemožní uživatelům měnit hesla, která používají pro přihlášení k doménám, které jste zadali. **Nenakonfigurováno** (výchozí) povolí změny hesla.  
-- **Synchronizace hesel** (jenom Kerberos): Pokud chcete synchronizovat místní hesla uživatelů do Azure AD, vyberte **Povolit** . **Nenakonfigurováno** (výchozí) zakáže synchronizaci hesla do služby Azure AD. Toto nastavení použijte jako alternativu nebo zálohu k jednotnému přihlašování. Toto nastavení nefunguje, pokud jsou uživatelé přihlášení pomocí mobilního účtu Apple.
-- **Složitost hesla služby Active Directory systému Windows Server** (pouze Kerberos): vyberte možnost **vyžadovat** , pokud chcete vynutit uživatelská hesla pro splnění požadavků na složitost hesla služby Active Directory. Další informace najdete v tématu [heslo musí splňovat požadavky na složitost](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/password-must-meet-complexity-requirements) . **Nenakonfigurováno** (výchozí) nevyžaduje, aby uživatelé splnili požadavky na heslo služby Active Directory.
-- **Minimální délka hesla** (jenom Kerberos): zadejte minimální počet znaků, které můžou vytvořit heslo uživatele. **Nenakonfigurováno** (výchozí) neuplatňuje pro uživatele minimální délku hesla.
-- **Omezení opakovaného použití hesla** (jenom Kerberos): zadejte počet nových hesel, od 1-24, které se musí použít, až bude možné znovu použít předchozí heslo v doméně. **Nenakonfigurováno** (výchozí) neuplatňuje limit opakovaného použití hesla.
-- **Minimální stáří hesla** (jenom Kerberos): zadejte počet dní, po které se musí heslo v doméně používat, než ho uživatel může změnit. **Nenakonfigurováno** (výchozí) neuplatňuje minimální stáří hesla, než bude možné je změnit.
-- **Oznámení vypršení platnosti hesla** (jenom Kerberos): zadejte počet dní, než heslo vyprší, uživatelé obdrží oznámení o vypršení platnosti hesla. **Nenakonfigurováno** (výchozí) používá `15` dnů.
-- **Vypršení platnosti hesla** (pouze Kerberos): zadejte počet dní, než bude nutné změnit heslo zařízení. **Nenakonfigurováno** (výchozí) znamená, že uživatelská hesla nikdy nevyprší.
-- **Adresa URL pro změnu hesla** (jenom Kerberos): zadejte adresu URL, která se spustí, když uživatel zahájí změnu hesla protokolu Kerberos.
+- **Automatická konfigurace** (jenom Kerberos): Pokud je nastavená na **blokovat**, nebude rozšíření protokolu Kerberos automaticky používat LDAP a DNS k určení jeho názvu lokality Active Directory. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém způsobit, že rozšíření automaticky nalezne název lokality služby Active Directory.
+- **Změny hesla** (jenom Kerberos): **blok** znemožní uživatelům měnit hesla, která používají pro přihlášení k doménám, které jste zadali. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém způsobit změny hesla.  
+- **Synchronizace hesel** (jenom Kerberos): Pokud chcete synchronizovat místní hesla uživatelů do Azure AD, vyberte **Povolit** . Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém zakázat synchronizaci hesel do služby Azure AD. Toto nastavení použijte jako alternativu nebo zálohu k jednotnému přihlašování. Toto nastavení nefunguje, pokud jsou uživatelé přihlášení pomocí mobilního účtu Apple.
+- **Složitost hesla služby Active Directory systému Windows Server** (pouze Kerberos): vyberte možnost **vyžadovat** , pokud chcete vynutit uživatelská hesla pro splnění požadavků na složitost hesla služby Active Directory. Další informace najdete v tématu [heslo musí splňovat požadavky na složitost](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/password-must-meet-complexity-requirements). Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení operační systém nemusí vyžadovat, aby uživatelé splnili požadavky na heslo služby Active Directory.
+- **Minimální délka hesla** (jenom Kerberos): zadejte minimální počet znaků, které můžou vytvářet hesla uživatelů. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení operační systém nemusí pro uživatele vymáhat minimální délku hesla.
+- **Omezení opakovaného použití hesla** (jenom Kerberos): zadejte počet nových hesel, od 1-24, které se musí použít, až bude možné znovu použít předchozí heslo v doméně. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení operační systém nemusí vynutilit omezení opakovaného použití hesla.
+- **Minimální stáří hesla** (pouze Kerberos): zadejte počet dní, po které musí být heslo v doméně použito, než je může uživatel změnit. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení operační systém nemusí vyhovět minimálnímu stáří hesla, aby bylo možné je změnit.
+- **Oznámení vypršení platnosti hesla** (jenom Kerberos): zadejte počet dní, než heslo vyprší, uživatelé obdrží oznámení o vypršení platnosti hesla. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém používat `15` dnů.
+- **Vypršení platnosti hesla** (pouze Kerberos): zadejte počet dní, než bude nutné změnit heslo zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém nikdy vypršení platnosti hesel.
+- **Adresa URL pro změnu hesla** (jenom Kerberos): zadejte adresu URL, která se otevře, když uživatelé spustí změnu hesla protokolu Kerberos.
 - **Hlavní název** (jenom Kerberos): zadejte uživatelské jméno objektu zabezpečení protokolu Kerberos. Nemusíte zahrnovat název sféry. Například v `user@contoso.com``user` je hlavní název a `contoso.com` je název sféry.
 
   > [!TIP]
@@ -194,7 +196,7 @@ Tato funkce platí pro:
 - **Kód lokality služby Active Directory** (pouze Kerberos): zadejte název lokality služby Active Directory, kterou má rozšíření protokolu Kerberos použít. Tuto hodnotu pravděpodobně nebudete muset měnit, protože rozšíření protokolu Kerberos může automaticky najít kód lokality služby Active Directory.
 - **Název mezipaměti** (jenom Kerberos): zadejte název obecné služby zabezpečení (GSS) mezipaměti protokolu Kerberos. Tuto hodnotu pravděpodobně nemusíte nastavovat.  
 - **Zpráva požadavky na heslo** (jenom Kerberos): zadejte textovou verzi požadavků na heslo vaší organizace, které se zobrazují uživatelům. Zpráva se zobrazí, pokud nepožadujete požadavky na složitost hesla služby Active Directory nebo nezadáte minimální délku hesla.  
-- **ID sady prostředků aplikace** (jenom Kerberos): **přidejte** identifikátory sady prostředků aplikace, které by měly na svých zařízeních používat jednotné přihlašování. Těmto aplikacím je udělen přístup k lístku pro udělení lístku protokolu Kerberos, ověřovacímu lístku a ověřování uživatelů pro služby, kterým mají oprávnění k přístupu.
+- **ID sady prostředků aplikace** (jenom Kerberos): **přidejte** identifikátory sady prostředků aplikace, které by měly na svých zařízeních používat jednotné přihlašování. Těmto aplikacím je udělen přístup k lístku pro udělení lístku protokolu Kerberos a ověřovacímu lístku. Aplikace také ověřují uživatele pro služby, kterým má oprávnění k přístupu.
 - **Mapování sféry domény** (jenom Kerberos): **přidejte** přípony DNS domény, které by se měly namapovat do vaší sféry. Toto nastavení použijte, pokud názvy DNS hostitelů neodpovídají názvu sféry. Pravděpodobně nemusíte vytvářet vlastní mapování domén na sféru.
 - **PKINIT certifikát** (jenom Kerberos): **Vyberte** certifikát kryptografie s veřejným klíčem pro počáteční ověřování (PKINIT), který se dá použít pro ověřování protokolem Kerberos. Můžete si vybrat z certifikátů [PKCS](../protect/certficates-pfx-configure.md) nebo [SCEP](../protect/certificates-scep-configure.md) , které jste přidali v Intune. Další informace o certifikátech najdete v tématu [použití certifikátů k ověřování v Microsoft Intune](../protect/certificates-configure.md).
 

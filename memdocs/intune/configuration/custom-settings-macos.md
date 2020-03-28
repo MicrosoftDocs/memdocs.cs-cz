@@ -6,22 +6,23 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/24/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
 ms.technology: ''
+ms.reviewer: kakyker
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3c25177b838b9a720ec51930c3ab9c069696067d
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 2e900252392f1e6f057561d8d07f6e764dc0aafc
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 03/27/2020
-ms.locfileid: "80326175"
+ms.locfileid: "80359363"
 ---
 # <a name="use-custom-settings-for-macos-devices-in-microsoft-intune"></a>Použití vlastního nastavení u zařízení s macOS v Microsoft Intune
 
@@ -64,10 +65,8 @@ Tento článek obsahuje pokyny k používání Apple Configuratoru a Apple Profi
   > [!NOTE]
   > Proměnné nejsou v uživatelském rozhraní ověřeny a rozlišují se velká a malá písmena. V důsledku toho mohou být profily uloženy s nesprávným vstupem. Pokud například zadáte `{{DeviceID}}` místo `{{deviceid}}`, zobrazí se místo jedinečného IDENTIFIKÁTORu řetězec literálu. Nezapomeňte zadat správné informace.
 
-Vyberte **OK** > **Vytvořit** a změny uložte. Profil se vytvoří a zobrazí se v seznamu profily.
-
 ## <a name="next-steps"></a>Další kroky
 
-Profil je vytvořený, ale zatím se nepoužívá. V dalším kroku [profil přiřadíte](device-profile-assign.md).
+Profil se vytvoří, ale nemusí ještě nic dělat. Dále [Přiřaďte profil](device-profile-assign.md) a [sledujte jeho stav](device-profile-monitor.md).
 
-Podívejte se, jak [vytvořit profil na zařízeních s iOS/iPadOS](custom-settings-ios.md).
+Vytvořte si [vlastní profil na zařízeních s iOS/iPadOS](custom-settings-ios.md).

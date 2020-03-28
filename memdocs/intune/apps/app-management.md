@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1c532ba774305f0597b07c0830740f8de0d523e9
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 185cfbf49c9a6623559a2b50f0184980286e03eb
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 03/27/2020
-ms.locfileid: "80323889"
+ms.locfileid: "80358706"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Co je správa aplikací v Microsoft Intune?
 
@@ -71,7 +71,7 @@ Intune nabízí celou řadu funkcí, které vám pomůžou dostat požadované a
 <sup>1</sup> Při ochraně aplikací na zařízeních s Windows 10 uvažujte o použití funkce [Windows Information Protection](../protect/windows-information-protection-configure.md).<br>
 <sup>2</sup> Platí jen pro zařízení spravovaná přes Intune.<br>
 <sup>3</sup> Intune podporuje dostupné aplikace ze spravovaného Google Play Storu na zařízeních s Androidem Enterprise.<br>
-<sup>4</sup> Intune neposkytuje instalaci zástupce aplikace jako webového odkazu na standardní zařízení s Androidem Enterprise. Podpora webových odkazů je ale k dispozici pro [vyhrazená podniková zařízení s Androidem pro více aplikací](../configuration/device-restrictions-android-for-work.md#dedicated-device-settings). 
+<sup>4</sup> Intune neposkytuje instalaci zástupce aplikace jako webového odkazu na standardní zařízení s Androidem Enterprise. Podpora webových odkazů je ale k dispozici pro [vyhrazená podniková zařízení s Androidem pro více aplikací](../configuration/device-restrictions-android-for-work.md#dedicated-devices). 
 
 
 ## <a name="get-started"></a>Začínáme

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4a2bd111b3e0dc172dbe4c3e9605a1b4451e2b39
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 386e59fe3a7156a8bb74ed39a1b2fcad6ad91dad
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 03/27/2020
-ms.locfileid: "80327414"
+ms.locfileid: "80359302"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Použití funkcí a nastavení v zařízeních pomocí profilů zařízení v Microsoft Intune
 
@@ -158,7 +158,7 @@ Tato funkce podporuje:
 - Wvdows Phone 8.1
 - Windows 10 a novější
 
-## <a name="endpoint-protection"></a>Ochrana koncových bodů
+## <a name="endpoint-protection"></a>Ochrana koncového bodu
 
 [Endpoint Protection](../protect/endpoint-protection-configure.md) konfiguruje nastavení BitLockeru a programu Microsoft Defender pro zařízení s Windows 10. A nakonfigurujte bránu firewall, bránu a další prostředky na zařízeních macOS.
 
@@ -194,7 +194,7 @@ Tato funkce podporuje:
 - Windows 10 a novější
 - Windows Holographic for Business  
 
-## <a name="kiosk"></a>Veřejný terminál
+## <a name="kiosk"></a>Kiosk
 
 Profil [Nastavení veřejného terminálu](kiosk-settings.md) nakonfiguruje zařízení, aby spouštělo jednu aplikaci nebo spustilo spoustu aplikací. Na svém veřejném terminálu si můžete přizpůsobit i další funkce, například úvodní nabídku a webový prohlížeč.
 
@@ -202,7 +202,7 @@ Tato funkce podporuje:
 
 - Windows 10 a novější
 
-Nastavení veřejného terminálu je dostupné taky jako omezení zařízení pro [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#dedicated-device-settings)a [iOS/iPadOS](device-restrictions-ios.md#kiosk).
+Nastavení veřejného terminálu je dostupné taky jako omezení zařízení pro [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#dedicated-devices)a [iOS/iPadOS](device-restrictions-ios.md#kiosk).
 
 ## <a name="microsoft-defender-atp"></a>Microsoft Defender ATP
 

@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0b2bb9a6220a599cc0e403e6c71f3b8907bbab0e
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 48c88c037a305f2e7f8ba8ab4be5a1accc9680e8
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80085831"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359270"
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Novinky v Microsoft Intune – předchozí měsíce
 
@@ -527,7 +527,7 @@ V této aktualizaci se přidávají následující funkce:
 - **Vyhrazená zařízení** > **více aplikacemi**: **ovládání hlasitosti médií** umožňuje uživatelům řídit hlasitost média zařízení pomocí posuvníku. 
 - **Vyhrazená zařízení** > **více aplikacemi**: **Povolte šetřič obrazovky**, nahrajte vlastní obrázek a ovládací prvek, když se zobrazí spořič obrazovky.
 
-Pokud chcete zobrazit aktuální nastavení, přejděte na [nastavení zařízení s Androidem Enterprise a povolte nebo omezte funkce pomocí Intune](../configuration/device-restrictions-android-for-work.md#dedicated-device-settings).
+Pokud chcete zobrazit aktuální nastavení, přejděte na [nastavení zařízení s Androidem Enterprise a povolte nebo omezte funkce pomocí Intune](../configuration/device-restrictions-android-for-work.md#dedicated-devices).
 
 Platí pro:
 
@@ -1461,7 +1461,7 @@ Platí pro:
 #### <a name="kiosk-devices-are-now-called-dedicated-devices-on-android-enterprise-devices---3598402-----"></a>Zařízení s veřejným veřejným zařízením se teď na zařízeních s Androidem Enterprise označují jako vyhrazená zařízení.<!-- 3598402   -->
 Pro zarovnávání s terminologií pro Android se veřejné **terminály** změní na **vyhrazená zařízení** pro zařízení s Androidem enterprise (**Konfigurace zařízení** > **profily** > **vytvořit profil** > * * Android Enterprise for Platform > **Owner jenom** > **omezení zařízení** > **vyhrazená zařízení**).
 
-Dostupná nastavení zobrazíte tak, že přejdete na [nastavení zařízení a povolíte nebo zakážete funkce](../configuration/device-restrictions-android-for-work.md#dedicated-device-settings).
+Dostupná nastavení zobrazíte tak, že přejdete na [nastavení zařízení a povolíte nebo zakážete funkce](../configuration/device-restrictions-android-for-work.md#dedicated-devices).
 
 Platí pro:  
 Android Enterprise
@@ -2398,7 +2398,7 @@ Přečtěte si další informace o [správě konfiguračních profilů](../confi
 #### <a name="new-status-for-devices-in-device-compliance---2308882---"></a>Nový stav pro zařízení v dodržování předpisů zařízením<!-- 2308882 -->
 Na stránku **Dodržování předpisů zařízením** > **Zásady** > vyberte zásadu > **Přehled** jsou přidané následující nové stavy:
 - Úspěšné
-- chyba
+- Chyba
 - Konflikt
 - Čeká se na zadání
 - Nepoužitelné Také se zobrazí obrázek, který ukazuje počet zařízení s jinou platformou. Když se třeba díváte na profil iOSu, na nové dlaždici se zobrazí počet zařízení s jiným systémem než iOS, která jsou také přiřazená k tomuto profilu. Viz [Zásady dodržování předpisů zařízením](../protect/compliance-policy-monitor.md#view-status-of-device-policies).
@@ -3027,7 +3027,7 @@ Uživatelé teď můžou používat Správce registrace zařízení při registr
 
 Klíčem ke správě počítačů s Windows je pochopení stavu programu Windows Defender.  Touto aktualizací Intune přidá do stavu agenta Windows Defender nové sestavy a akce. Pomocí souhrnné sestavy stavu v [úloze dodržování předpisů zařízením](../protect/compliance-policy-monitor.md) zjistíte, která zařízení vyžadují:
 - aktualizaci signatur,
-- Restartovat
+- Restart
 - ruční zásah,
 - úplnou kontrolu,
 - stavy ostatních agentů vyžadujících zásah.
@@ -3546,8 +3546,8 @@ Můžete definovat podnikové cloudové prostředky, rozsahy IP adres a interní
 
 | | |
 |---|---|
-| Nenakonfigurované | Nastavení **Nenakonfigurováno** používá výchozí úroveň blokování Antivirové ochrany v programu Windows Defender a zajišťuje silnou detekci bez zvýšeného rizika detekování legitimních souborů. |
-| Vysoký | Nastavení **Vysoká** aplikuje silnou úroveň zjišťování.
+| Nenakonfigurováno | Nastavení **Nenakonfigurováno** používá výchozí úroveň blokování Antivirové ochrany v programu Windows Defender a zajišťuje silnou detekci bez zvýšeného rizika detekování legitimních souborů. |
+| Vysoká | Nastavení **Vysoká** aplikuje silnou úroveň zjišťování.
 | Vysoká +  | Nastavení **Vysoká +** poskytuje vysokou úroveň s dalšími ochrannými opatřeními, která můžou mít vliv na výkon klienta.
 | Žádná tolerance  | Nastavení **Žádná tolerance** blokuje všechny neznámé spustitelné soubory. |
 
@@ -4237,7 +4237,7 @@ K dispozici jsou teď dvě nová nastavení aplikací, která vám pomůžou se 
 
   Seznam podporovaných služeb umístění úložiště:
 
-  - OneDrivu
+  - OneDrive
   - Business SharePoint Online
   - Místní úložiště
 

@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 778ce3e6d069347522a98977da65d651e059e41c
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 60a4ac793500cd4d31df2188344e2b5f4e1094a4
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 03/27/2020
-ms.locfileid: "80327399"
+ms.locfileid: "80359150"
 ---
 # <a name="windows-10-and-windows-holographic-for-business-device-settings-to-run-as-a-dedicated-kiosk-using-intune"></a>Nastavení zařízení s Windows 10 a Windows holografickým pro firmy, která se mají používat jako vyhrazené veřejné terminály pomocí Intune
 
@@ -31,7 +31,7 @@ Tato funkce platí pro:
 - Windows 10 a novější
 - Windows Holographic for Business
 
-Pokud chcete vytvořit profily na veřejném terminálu pro jiné platformy, přečtěte si téma [Správce zařízení s Androidem](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#dedicated-device-settings)a [iOS/iPadOS](device-restrictions-ios.md#kiosk).
+Pokud chcete vytvořit profily na veřejném terminálu pro jiné platformy, přečtěte si téma [Správce zařízení s Androidem](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#dedicated-devices)a [iOS/iPadOS](device-restrictions-ios.md#kiosk).
 
 Intune podporuje jeden profil beznabídkového režimu v jednom zařízení. Pokud potřebujete více profilů beznabídkového režimu, můžete použít [vlastní OMA-URI](custom-settings-windows-10.md).
 
@@ -73,7 +73,6 @@ Profil se vytvoří a zobrazí se v seznamu profily. Dále [přiřaďte](device-
 Pro zařízení s následujícími platformami můžete vytvořit profily na veřejném terminálu:
 
 - [Správce zařízení s Androidem](device-restrictions-android.md#kiosk)
-- [Android Enterprise](device-restrictions-android-for-work.md#dedicated-device-settings)
-- [iOS/iPadOS](device-restrictions-ios.md#kiosk)
+- [Android Enterprise](device-restrictions-android-for-work.md#dedicated-devices)
 - [Windows 10 a novější](kiosk-settings-windows.md)
 - [Windows Holographic for Business](kiosk-settings-holographic.md)

@@ -6,26 +6,25 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/10/2019
+ms.date: 03/24/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
 ms.technology: ''
+ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aa471beb5929a6c5b39267871518f560fe6978f6
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 2e18fad8f1112681a62bcdacd63c652cfd4ad3ac
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79326659"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359296"
 ---
 # <a name="macos-device-settings-to-configure-and-use-kernel-extensions-in-intune"></a>nastavení zařízení macOS pro konfiguraci a používání rozšíření jádra v Intune
-
-
 
 Tento článek obsahuje seznam a popis různých nastavení rozšíření jádra, která můžete řídit na zařízeních macOS. Jako součást řešení správy mobilních zařízení (MDM) můžete pomocí těchto nastavení přidat a spravovat rozšíření jádra na svých zařízeních.
 
@@ -44,7 +43,7 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
 
 ### <a name="settings-apply-to-user-approved-automated-device-enrollment"></a>Nastavení platí pro: schváleno uživatelem, automatický zápis zařízení
 
-- **Povolit přepsání uživatelem**: **Povolit** umožní uživatelům schvalovat rozšíření jádra, která nejsou součástí konfiguračního profilu. **Nenakonfigurováno** (výchozí) znemožní uživatelům povolit rozšíření nezahrnutá do konfiguračního profilu. To znamená, že jsou povoleny pouze rozšíření, která jsou součástí konfiguračního profilu.
+- **Povolit přepsání uživatelem**: **Povolit** umožní uživatelům schvalovat rozšíření jádra, která nejsou součástí konfiguračního profilu. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém zabránit uživatelům v povolení rozšíření, která nejsou součástí konfiguračního profilu. To znamená, že jsou povoleny pouze rozšíření, která jsou součástí konfiguračního profilu.
 
   Další informace o této funkci najdete v tématu [načítání rozšíření jádra pro uživatele](https://developer.apple.com/library/archive/technotes/tn2459/_index.html) (otevření webu společnosti Apple).
 

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/17/2020
+ms.date: 03/25/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fafca25fb0e374d281f8ef593cb5fa7f35d82979
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 69ca92125728ec8fdac27c229f8aacc5c0ef29c0
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80086964"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359398"
 ---
 # <a name="ios-and-ipados-device-settings-to-use-common-iosipados-features-in-intune"></a>nastavení zařízení s iOS a iPadOS pro použití běžných funkcí iOS/iPadOS v Intune
 
@@ -33,7 +33,7 @@ Tento článek uvádí tato nastavení a popisuje, co jednotlivé nastavení dě
 
 ## <a name="before-you-begin"></a>Před zahájením
 
-[Vytvořte konfigurační profil zařízení s iOS/iPadOS](device-features-configure.md).
+[Vytvořte profil funkcí zařízení s iOS/iPadOS](device-features-configure.md).
 
 > [!NOTE]
 > Tato nastavení platí pro různé typy registrace s některými nastaveními, která platí pro všechny možnosti registrace. Další informace o různých typech registrace najdete v tématu Registrace zařízení se [systémem iOS/iPadOS](../enrollment/ios-enroll.md).
@@ -81,11 +81,11 @@ Tato funkce platí pro:
 
 ### <a name="dock"></a>Vyjměte
 
-Pomocí nastavení **Dock** přidejte až šest položek nebo složek do Docku na obrazovce. Mnoho zařízení podporuje méně položek. Například zařízení iPhone podporují až čtyři položky. V takovém případě se na zařízení zobrazí jenom první čtyři položky, které přidáte.
+Pomocí nastavení **Dock** přidejte až šest položek nebo složek do Docku na obrazovce. Mnoho zařízení podporuje méně položek. Například zařízení iPhone podporují až čtyři položky. V takovém případě se na zařízeních zobrazí jenom první čtyři položky, které přidáte.
 
 Pro Dock zařízení můžete přidat až **šest** položek (kombinované aplikace a složky).
 
-- **Přidat**: přidá aplikace nebo složky do Docku na zařízení.
+- **Přidat**: přidá aplikace nebo složky do Docku na zařízeních.
 - **Zadejte**: přidat **aplikaci** nebo **složku**:
 
   - **Aplikace**: tuto možnost vyberte, pokud chcete přidat aplikace do Dock na obrazovce. Zadejte:
@@ -113,13 +113,15 @@ Pro Dock zařízení můžete přidat až **šest** položek (kombinované aplik
 
 V následujícím příkladu se zobrazí docká obrazovka jenom aplikace Safari, pošta a akcie. Aplikace Pošta je vybrána k zobrazení vlastností:
 
-![Ukázka nastavení pro iOS/iPadOS Dock](./media/ios-device-features-settings/FfFiUcP.png)
+> [!div class="mx-imgBorder"]
+> ![nastavení pro iOS/iPadOS Dock](./media/ios-device-features-settings/FfFiUcP.png)
 
 Když přiřadíte zásady k iPhonu, bude Dock vypadat podobně jako na následujícím obrázku:
 
-![Ukázka rozložení zařízení s iOS/iPadOS Dock na iPhonu](./media/ios-device-features-settings/bAgCe8F.png)
+> [!div class="mx-imgBorder"]
+> ![ukázkové rozložení iOS/iPadOS Dock na iPhonu](./media/ios-device-features-settings/bAgCe8F.png)
 
-### <a name="pages"></a>Stránky
+### <a name="pages"></a>Pages
 
 Přidejte stránky, které chcete zobrazit na domovské obrazovce, a aplikace, které chcete zobrazit na jednotlivých stránkách. Aplikace, které přidáte na stránku, jsou seřazené zleva doprava ve stejném pořadí jako seznam. Pokud přidáte více aplikací, než se vejde na stránku, přesunou se aplikace na jinou stránku.
 
@@ -134,7 +136,7 @@ Na zařízení můžete přidat až **40** stránek.
 
   Do zařízení můžete přidat až **60** položek (sloučené aplikace a složky).
 
-  - **Přidat**: přidá aplikace nebo složky na stránku na zařízení.
+  - **Přidat**: přidá aplikace nebo složky na stránku na zařízeních.
 
     - **Zadejte**: přidat **aplikaci** nebo **složku**:
 
@@ -147,7 +149,7 @@ Na zařízení můžete přidat až **40** stránek.
 
         Aplikace, které přidáte na stránku ve složce, jsou seřazené zleva doprava a ve stejném pořadí jako seznam. Pokud přidáte více aplikací, než se vejde na stránku, přesunou se aplikace na jinou stránku.
 
-        - **Název složky**: zadejte název složky. Tento název se zobrazí uživatelům na zařízení.
+        - **Název složky**: zadejte název složky. Tento název se zobrazí uživatelům na zařízeních.
         - **Přidat**: přidá stránky do složky. Zadejte také následující vlastnosti:
 
           - **Název stránky**: zadejte název stránky. Tento název se používá pro váš odkaz v centru pro správu Microsoft Endpoint Manager. Nezobrazuje *se* na zařízení iOS/iPadOS.
@@ -158,11 +160,13 @@ Na zařízení můžete přidat až **40** stránek.
 
 V následujícím příkladu je přidána nová stránka s názvem **Contoso** . Na stránce se zobrazí aplikace najít přátele a nastavení. Vybraná aplikace nastavení zobrazuje vlastnosti:
 
-![Příklad nastavení domovské obrazovky pro iOS/iPadOS v Intune](./media/ios-device-features-settings/Jc2OxyX.png)
+> [!div class="mx-imgBorder"]
+> ![příklad nastavení domovské obrazovky pro iOS nebo iPadOS v Intune](./media/ios-device-features-settings/Jc2OxyX.png)
 
 Když přiřadíte zásady k iPhonu, stránka bude vypadat podobně jako na následujícím obrázku:
 
-![zařízení s iOS/iPadOS s upravenou domovskou obrazovkou v Intune](./media/ios-device-features-settings/Bd37PHa.png)
+> [!div class="mx-imgBorder"]
+> ![zařízení s iOS/iPadOS se změněnou domovskou obrazovkou v Intune](./media/ios-device-features-settings/Bd37PHa.png)
 
 ## <a name="app-notifications"></a>Oznámení aplikací
 
@@ -170,18 +174,19 @@ Když přiřadíte zásady k iPhonu, stránka bude vypadat podobně jako na nás
 
 - **Přidat**: Přidat oznámení pro aplikace:
 
-    ![Přidání oznámení aplikace v profilu iOS/iPadOS v Intune](./media/ios-device-features-settings/ios-macos-app-notifications.png)
+  > [!div class="mx-imgBorder"]
+  > ![přidat oznámení aplikace v profilu iOS/iPadOS v Intune](./media/ios-device-features-settings/ios-macos-app-notifications.png)
 
   - **ID sady prostředků aplikace**: zadejte **ID sady prostředků** aplikace, kterou chcete přidat. Některé příklady najdete v tématu [ID sady pro integrované aplikace pro iOS/iPadOS](bundle-ids-built-in-ios-apps.md) .
-  - **Název aplikace**: zadejte název aplikace, kterou chcete přidat. Tento název se používá pro váš odkaz v centru pro správu Microsoft Endpoint Manager. Nezobrazuje *se* na zařízení.
-  - **Vydavatel**: zadejte vydavatele aplikace, kterou přidáváte. Tento název se používá pro váš odkaz v centru pro správu Microsoft Endpoint Manager. Nezobrazuje *se* na zařízení.
+  - **Název aplikace**: zadejte název aplikace, kterou chcete přidat. Tento název se používá pro váš odkaz v centru pro správu Microsoft Endpoint Manager. Nezobrazuje *se* na zařízeních.
+  - **Vydavatel**: zadejte vydavatele aplikace, kterou přidáváte. Tento název se používá pro váš odkaz v centru pro správu Microsoft Endpoint Manager. Nezobrazuje *se* na zařízeních.
   - **Oznámení**: **povolí** nebo **zakáže** aplikaci odesílat oznámení do zařízení.
     - **Zobrazit v centru oznámení**: **Povolit** aplikaci umožní zobrazovat oznámení v centru oznámení zařízení. **Disable** zabrání aplikaci v zobrazování oznámení v centru oznámení.
-    - **Zobrazit na zamykací obrazovce**: výběrem **Povolit** zobrazíte oznámení z aplikace na zamykací obrazovce zařízení. **Disable** zabrání aplikaci zobrazovat oznámení na zamykací obrazovce.
-    - **Typ výstrahy**: když se zařízení odemkne, vyberte, jak se má oznámení zobrazit. Možnosti:
+    - **Zobrazit na zamykací obrazovce**: **Povolit** zobrazí na zamykací obrazovce zařízení oznámení aplikací. **Disable** zabrání aplikaci zobrazovat oznámení na zamykací obrazovce.
+    - **Typ výstrahy**: po odemčení zařízení vyberte, jak se má oznámení zobrazovat. Možnosti:
       - **Žádné**: nezobrazuje se žádné oznámení.
       - **Banner**: krátce se zobrazí zpráva s oznámením.
-      - **Modální**: zobrazí se oznámení a uživatel ho musí před pokračováním v používání tohoto zařízení zavřít ručně.
+      - **Modální**: zobrazuje se oznámení a uživatelé je musí před pokračováním v používání zařízení zavřít ručně.
     - Ikona příznaku **u aplikace**: výběrem **Povolit** přidejte do ikony aplikace badge. BADGE znamená, že aplikace odeslala oznámení.
     - **Zvuky**: výběrem **Povolit zapnete** zvuk, když se doručí oznámení.
 
@@ -196,7 +201,7 @@ Tato funkce platí pro:
 
 - Informace o inventárním **štítku**: zadejte informace o inventárním štítku zařízení. Zadejte například `Owned by Contoso Corp` nebo `Serial Number: {{serialnumber}}`.
 
-  Text, který zadáte, se zobrazí v okně přihlášení a na zamykací obrazovce zařízení.
+  Text, který zadáte, se zobrazí v okně přihlášení a zamykací obrazovka na zařízeních.
 
 - **Poznámka pod čarou na zamykací obrazovce**: Pokud dojde ke ztrátě nebo odcizení zařízení, zadejte poznámku, která může přispět k vrácení zařízení zpět. Můžete zadat libovolný text, který chcete. Zadejte třeba `If found, call Contoso at ...`.
 
@@ -209,15 +214,16 @@ Tato funkce platí pro:
 
 ### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Nastavení platí pro: registrace zařízení, automatický zápis zařízení (pod dohledem)
 
-- **Atribut uživatelského jména z AAD:** Pro každého uživatele v Azure AD vyhledá Intune tento atribut. Před vygenerováním XML, který se na zařízení nainstaluje, Intune pak naplní příslušné pole (například hlavní název uživatele (UPN)). Možnosti:
+- **Atribut uživatelského jména z AAD:** Pro každého uživatele v Azure AD vyhledá Intune tento atribut. Intune pak před generováním XML, který se nainstaluje na zařízení, naplní příslušné pole (například hlavní název uživatele (UPN)). Možnosti:
 
   - **Hlavní název uživatele**: hlavní název uživatele (UPN) se analyzuje následujícím způsobem:
 
-    ![iOS/iPadOS – atribut jednotného přihlašování pro uživatele v Intune](./media/ios-device-features-settings/User-name-attribute.png)
+    > [!div class="mx-imgBorder"]
+    > ![atributu pro jednotné přihlašování uživatele pro iOS nebo iPadOS v Intune](./media/ios-device-features-settings/User-name-attribute.png)
 
     Sféru také můžete přepsat textem, který zadáte do textového pole **Sféra**.
 
-    Například contoso má několik oblastí, včetně Evropy, Asie a Severní Amerika. Společnost Contoso chce, aby uživatelé Asie používali jednotné přihlašování a aplikace vyžaduje hlavní název uživatele (UPN) ve formátu `username@asia.contoso.com`. Když vyberete **hlavní název uživatele**, vyřadí se sféra pro každého uživatele ze služby Azure AD, která je `contoso.com`. Takže pro uživatele v Asii vyberte **hlavní název uživatele**a zadejte `asia.contoso.com`. Hlavní název uživatele (UPN) koncového uživatele se místo `username@contoso.com``username@asia.contoso.com`.
+    Například contoso má několik oblastí, včetně Evropy, Asie a Severní Amerika. Společnost Contoso chce, aby uživatelé Asie používali jednotné přihlašování a aplikace vyžaduje hlavní název uživatele (UPN) ve formátu `username@asia.contoso.com`. Když vyberete **hlavní název uživatele**, vyřadí se sféra pro každého uživatele ze služby Azure AD, která je `contoso.com`. Takže pro uživatele v Asii vyberte **hlavní název uživatele**a zadejte `asia.contoso.com`. Hlavní název uživatele (UPN) se místo `username@contoso.com``username@asia.contoso.com`.
 
   - **ID zařízení v Intune**: Intune automaticky vybere ID zařízení v Intune.
 
@@ -231,7 +237,7 @@ Tato funkce platí pro:
 - **Sféra**: zadejte část domény adresy URL. Zadejte například `contoso.com`.
 - **Předpony adres URL, které použijí jednotné přihlašování**: **Přidejte** všechny adresy URL vaší organizace, které k ověření uživatelů používají jednotné přihlašování.
 
-  Když se například uživatel připojí k některé z těchto webů, zařízení s iOS/iPadOS používá přihlašovací údaje jednotného přihlašování. Uživatel nemusí zadávat další přihlašovací údaje. Je-li povoleno ověřování Multi-Factor Authentication, je nutné, aby uživatel zadal druhé ověření.
+  Když se například uživatel připojí k některé z těchto webů, zařízení s iOS/iPadOS používá přihlašovací údaje jednotného přihlašování. Uživatelé nemusejí zadávat žádné další přihlašovací údaje. Je-li povoleno ověřování Multi-Factor Authentication, je nutné, aby uživatel zadal druhé ověření.
 
   > [!NOTE]
   > V těchto adresách URL se musí používat správně naformátovaný plně kvalifikovaný název domény. Apple vyžaduje, aby byly ve formátu `http://<yourURL.domain>`.
@@ -240,7 +246,7 @@ Tato funkce platí pro:
 
   Vzory `http://.com` a `https://.com` odpovídají všem adresám URL protokolu HTTP a HTTPS v uvedeném pořadí.
 
-- **Aplikace, které použijí jednotné přihlašování:** **Přidá** do zařízení koncových uživatelů aplikace, které můžou používat jednotné přihlašování.
+- **Aplikace, které budou používat jednotné přihlašování**: **Přidat** aplikace na zařízení uživatelů, která můžou používat jednotné přihlašování
 
   Pole `AppIdentifierMatches` musí zahrnovat řetězce, které odpovídají ID sady prostředků aplikace. Tyto řetězce můžou být přesné shody, například `com.contoso.myapp`, nebo zadat shodu předpony u ID sady prostředků pomocí zástupného znaku \*. Zástupný znak musí být uveden za znakem tečky (.) a může se objevit pouze jednou, na konci řetězce, například `com.contoso.*`. Při použití zástupného znaku se udělí přístup k účtu všem aplikacím, jejichž ID sady prostředků začíná příslušnou předponou.
 
@@ -263,13 +269,13 @@ Tato funkce platí pro:
 
     - **Blokované adresy URL**: **přidejte** adresy URL, které chcete ukončit otevírání bez ohledu na nastavení webového filtru Apple.
 
-  - **Jenom konkrétní weby** (jenom pro webový prohlížeč Safari): tyto adresy URL se přidají do záložek prohlížeče Safari. Uživatel smí navštívit **jenom** tyto weby. žádné jiné weby nelze otevřít. Tuto možnost použijte jenom v případě, že znáte přesný seznam adres URL, ke kterým mají uživatelé přístup.
+  - **Jenom konkrétní weby** (jenom pro webový prohlížeč Safari): tyto adresy URL se přidají do záložek prohlížeče Safari. Uživatelé můžou navštěvovat **jenom** tyto weby. žádné jiné weby nelze otevřít. Tuto možnost použijte jenom v případě, že znáte přesný seznam adres URL, ke kterým mají uživatelé přístup.
 
     - **Adresa URL**: zadejte adresu URL webu, který chcete udělit. Zadejte například `https://www.contoso.com`.
     - **Cesta záložky**: Apple toto nastavení změnil. Všechny záložky přecházejí do složky **schválené weby** . Záložky nejdou do cesty záložky, kterou zadáte.
     - **Title**: zadejte popisný název záložky.
 
-    Pokud nezadáte žádné adresy URL, koncoví uživatelé nebudou mít přístup k žádným webům s výjimkou `microsoft.com`, `microsoft.net`a `apple.com`. Tyto adresy URL jsou automaticky povolené službou Intune.
+    Pokud nezadáte žádné adresy URL, uživatelé nebudou mít přístup k žádným webům s výjimkou `microsoft.com`, `microsoft.net`a `apple.com`. Tyto adresy URL jsou automaticky povolené službou Intune.
 
 ## <a name="single-sign-on-app-extension"></a>Rozšíření aplikace s jednotným přihlašováním
 
@@ -282,10 +288,10 @@ Tato funkce platí pro:
 
 - **Typ rozšíření aplikace jednotného přihlašování**: Vyberte typ rozšíření aplikace jednotného přihlašování. Možnosti:
 
-  - **Nenakonfigurováno**: rozšíření aplikací se nepoužívají. Pokud chcete zakázat rozšíření aplikace, můžete změnit typ rozšíření aplikace jednotného přihlašování na **Nenakonfigurováno**.
+  - **Nenakonfigurováno**: Intune toto nastavení nemění ani neaktualizuje. Ve výchozím nastavení operační systém nemusí používat rozšíření aplikací. Pokud chcete zakázat rozšíření aplikace, můžete změnit typ rozšíření aplikace jednotného přihlašování na **Nenakonfigurováno**.
   - **Přesměrování**: k použití jednotného přihlašování s moderními toky ověřování použijte obecné a přizpůsobitelné rozšíření aplikace pro přesměrování. Ujistěte se, že znáte ID rozšíření pro rozšíření aplikace vaší organizace.
 
-    V zařízeních se systémem iOS/iPadOS 13.0 a můžete nakonfigurovat **rozšíření aplikace Microsoft Azure AD SSO** pomocí tohoto typu rozšíření aplikace jednotného přihlašování. Rozšíření Microsoft Azure AD umožňuje jednotné přihlašování mezi aplikacemi Microsoftu a aplikacemi organizace, které používají Azure AD k ověřování. Rozšíření Azure AD funguje jako zprostředkovatel pokročilého ověřování, který nabízí vylepšení pro zabezpečení a činnost koncového uživatele. Všechny aplikace, které dřív používaly zprostředkované ověřování pomocí aplikace Microsoft Authenticator, budou i nadále získávat jednotné přihlašování s příponou jednotného přihlašování. Rozšíření jednotného přihlašování pro Azure AD ještě nepodporuje jednotné přihlašování prohlížeče. Další informace o jednotném přihlašování a zprostředkovateli ověřování iOS/iPadOS najdete v tématu [Konfigurace jednotného přihlašování v MacOS a iOS/iPadOS](https://docs.microsoft.com/azure/active-directory/develop/single-sign-on-macos-ios).  
+    V zařízeních se systémem iOS/iPadOS 13.0 a můžete nakonfigurovat **rozšíření aplikace Microsoft Azure AD SSO** pomocí tohoto typu rozšíření aplikace jednotného přihlašování. Rozšíření Microsoft Azure AD umožňuje jednotné přihlašování mezi aplikacemi Microsoftu a aplikacemi organizace, které používají Azure AD k ověřování. Rozšíření Azure AD funguje jako zprostředkovatel pokročilého ověřování, který nabízí vylepšení zabezpečení a uživatelského prostředí. Všechny aplikace, které dřív používaly zprostředkované ověřování pomocí aplikace Microsoft Authenticator, budou i nadále získávat jednotné přihlašování s příponou jednotného přihlašování. Rozšíření jednotného přihlašování pro Azure AD ještě nepodporuje jednotné přihlašování prohlížeče. Další informace o jednotném přihlašování a zprostředkovateli ověřování iOS/iPadOS najdete v tématu [Konfigurace jednotného přihlašování v MacOS a iOS/iPadOS](https://docs.microsoft.com/azure/active-directory/develop/single-sign-on-macos-ios).  
 
     **Konfigurace rozšíření iOS Microsoft Azure AD:**
 
@@ -306,7 +312,7 @@ Tato funkce platí pro:
         - `https://login-us.microsoftonline.com`
 
     > [!IMPORTANT]
-    > K zajištění jednotného přihlašování pomocí rozšíření iOS/iPadOS Microsoft Azure AD nejdřív nainstalujte na zařízení Microsoft Authenticator aplikaci pro iOS/iPadOS. Ověřovatel zajišťuje rozšíření Azure AD na zařízení a nastavení rozšíření aplikace pro jednotné přihlašování (MDM) aktivuje rozšíření Azure AD. Po nainstalování ověřovacích dat a profilu rozšíření aplikace jednotného přihlašování do zařízení musí uživatelé zadat své přihlašovací údaje, aby se přihlásili a navázali relaci. Tato relace se pak použije v různých aplikacích, aniž by se museli uživatelé znovu ověřovat.
+    > K zajištění jednotného přihlašování pomocí rozšíření iOS/iPadOS Microsoft Azure AD nejdřív nainstalujte aplikaci Microsoft Authenticator pro iOS/iPadOS na zařízení. Ověřovatel zajišťuje rozšíření Azure AD na zařízení a nastavení rozšíření aplikace pro jednotné přihlašování (MDM) aktivuje rozšíření Azure AD. Po nainstalování ověřovacích dat a profilu rozšíření aplikace jednotného přihlašování do zařízení musí uživatelé zadat své přihlašovací údaje, aby se přihlásili a navázali relaci. Tato relace se pak použije v různých aplikacích, aniž by se museli uživatelé znovu ověřovat.
 
   - **Přihlašovací údaje**: pomocí obecného rozšíření aplikace s přizpůsobitelnou přihlašovacími údaji můžete používat jednotné přihlašování s toky ověřování typu Challenge a Response. Ujistěte se, že znáte ID rozšíření pro rozšíření aplikace vaší organizace.
   - **Kerberos**: použijte integrované rozšíření protokolu Kerberos společnosti Apple, které je součástí iOS 13.0 + a iPadOS 13.0 +. Tato možnost je verze rozšíření **přihlašovacích údajů** specifická pro Kerberos.
@@ -336,7 +342,7 @@ Tato funkce platí pro:
   - **Klíč**: zadejte název položky, kterou chcete přidat, například `user name`.
   - **Typ**: zadejte typ dat. Možnosti:
 
-    - String
+    - Řetězec
     - Boolean: v **hodnotě konfigurace**zadejte `True` nebo `False`.
     - Integer: v **hodnotě konfigurace**zadejte číslo.
     
@@ -344,9 +350,9 @@ Tato funkce platí pro:
 
   - **Přidat**: vyberte, pokud chcete přidat konfigurační klíče.
 
-- **Použití řetězce klíčů** (jenom Kerberos): vyberte **blok** , aby se zabránilo ukládání a ukládání hesel do řetězce klíčů. Pokud je blokováno, uživatelé nebudou vyzváni k uložení hesla a po vypršení platnosti lístku protokolu Kerberos je nutné znovu zadat heslo. **Nenakonfigurováno** (výchozí) umožňuje ukládat a ukládat hesla do řetězce klíčů. Uživatelům se po vypršení platnosti lístku nezobrazí výzva k zadání hesla.
-- **ID obličeje, dotykové ID nebo heslo** (jenom Kerberos): **vyžaduje** , aby uživatelé při aktualizaci lístku Kerberos zadali své ID a dotykové jméno a heslo zařízení. **Nenakonfigurováno** (výchozí) nevyžaduje, aby uživatelé k aktualizaci lístku Kerberos používali biometrika nebo heslo zařízení. Pokud je **použití řetězce klíčů** blokované, pak toto nastavení neplatí.
-- **Výchozí sféra** (pouze Kerberos): Chcete-li nastavit hodnotu **sféry** , kterou jste zadali jako výchozí sféru, vyberte možnost **Povolit** . **Nenakonfigurováno** (výchozí) nenastavuje výchozí sféru.
+- **Použití řetězce klíčů** (jenom Kerberos): **blok** zabraňuje ukládání a ukládání hesel do řetězce klíčů. Pokud je blokováno, uživatelé nebudou vyzváni k uložení hesla a po vypršení platnosti lístku protokolu Kerberos je nutné znovu zadat heslo. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém ukládat hesla a uložit je do řetězce klíčů. Uživatelům se po vypršení platnosti lístku nezobrazí výzva k zadání hesla.
+- **ID obličeje, dotykové ID nebo heslo** (jenom Kerberos): **vyžaduje** , aby uživatelé při aktualizaci lístku Kerberos zadali své ID a dotykové jméno a heslo zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení operační systém nemusí vyžadovat, aby uživatelé pomocí biometrika nebo hesla zařízení aktualizovali lístek protokolu Kerberos. Pokud je **použití řetězce klíčů** blokované, pak toto nastavení neplatí.
+- **Výchozí sféra** (pouze Kerberos): **Enable** nastaví hodnotu **sféry** , kterou jste zadali jako výchozí sféru. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení operační systém nemusí nastavit výchozí sféru.
 
   > [!TIP]
   > - Toto nastavení **Povolte** , pokud konfigurujete více rozšíření aplikace pro jednotné přihlašování pomocí protokolu Kerberos ve vaší organizaci.
@@ -371,8 +377,8 @@ Pokud se zařízením s existující imagí nepřiřazuje profil bez obrázku, m
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Nastavení platí pro: automatický zápis zařízení (pod dohledem)
 
-- **Umístění zobrazení tapety**: vyberte umístění na zařízení pro zobrazení obrázku. Možnosti:
-  - **Nenakonfigurováno**: do zařízení se nepřidá vlastní image. Zařízení používá výchozí operační systém.
+- **Umístění zobrazení tapety**: vyberte umístění na zařízeních k zobrazení obrázku. Možnosti:
+  - **Nenakonfigurováno**: Intune toto nastavení nemění ani neaktualizuje. Vlastní image se do zařízení nepřidá. Ve výchozím nastavení může operační systém nastavit vlastní obrázek.
   - **Zamykací obrazovka**: Přidá obrázek na zamykací obrazovku.
   - **Domovská obrazovka**: Přidá obrázek na domovskou obrazovku.
   - **Zamykací obrazovka a Domovská obrazovka**: používá stejnou bitovou kopii na zamykací obrazovce a na domovské obrazovce.

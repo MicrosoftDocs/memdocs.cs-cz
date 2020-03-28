@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/17/2020
+ms.date: 03/24/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c0f1552d2edc6bfa5f6bdb255f156bcfb77a4990
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 30bf5ba078029e35988d3531ee510d9db6c6cdb8
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80084100"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359478"
 ---
 # <a name="add-ios-ipados-or-macos-device-feature-settings-in-intune"></a>Přidání nastavení funkcí zařízení se systémem iOS, iPadOS nebo macOS v Intune
 
@@ -203,30 +203,45 @@ Platí pro:
 - iOS 7,0 a novější
 - iPadOS 13,0 a novější
 
-## <a name="create-a-device-profile"></a>Vytvoření profilu zařízení
+## <a name="create-the-profile"></a>Vytvoření profilu
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Vyberte **zařízení** > **konfiguračních profilech** > **vytvořit profil**.
 3. Zadejte následující vlastnosti:
 
-    - **Název**: zadejte popisný název zásady. Své zásady pojmenujte, abyste je později mohli snadno identifikovat. Dobrý název zásady je například **MacOS: konfiguruje přihlašovací obrazovku**.
-    - **Popis**: Zadejte popis profilu. Toto nastavení není povinné, ale doporučujeme ho zadat.
     - **Platforma**: vyberte platformu zařízení. Možnosti:  
+
         - **iOS/iPadOS**
         - **macOS**
-    - **Typ profilu**: Vyberte **Funkce zařízení**.
 
-4. Nastavení, která můžete konfigurovat, se liší podle zvolené platformy. Pro podrobnější nastavení vyberte platformu:
+    - **Profil**: vyberte **funkce zařízení**.
+
+4. Vyberte **Vytvořit**.
+5. V části **základy**zadejte následující vlastnosti:
+
+    - **Název**: zadejte popisný název zásady. Své zásady pojmenujte, abyste je později mohli snadno identifikovat. Dobrý název zásady je například **MacOS: konfiguruje přihlašovací obrazovku**.
+    - **Popis**: zadejte popis zásady. Toto nastavení není povinné, ale doporučujeme ho zadat.
+
+6. Vyberte **Další**.
+
+7. Nastavení, která můžete konfigurovat v **nastavení konfigurace**, se liší v závislosti na zvolené platformě. Pro podrobnější nastavení vyberte platformu:
 
     - [iOS/iPadOS](ios-device-features-settings.md)
     - [macOS](macos-device-features-settings.md)
 
-5. Až to budete mít, vyberte **OK** > **Vytvořit** a změny uložte.
+8. Vyberte **Další**.
+9. V části **značky oboru** (volitelné) přiřaďte značku pro filtrování profilu na konkrétní skupiny IT, například `US-NC IT Team` nebo `JohnGlenn_ITDepartment`. Další informace o značkách oboru naleznete v tématu [použití značek RBAC a Scope pro distribuci](../fundamentals/scope-tags.md).
 
-Profil se vytvoří a zobrazí se v seznamu profily. Nezapomeňte [profil přiřadit](device-profile-assign.md) a [monitorovat jeho stav](device-profile-monitor.md).
+    Vyberte **Další**.
+
+10. V části **přiřazení**vyberte uživatele nebo skupiny, které obdrží váš profil. Další informace o přiřazování profilů najdete v tématu [přiřazení profilů uživatelů a zařízení](device-profile-assign.md).
+
+    Vyberte **Další**.
+
+11. V rámci **Revize a vytvoření**zkontrolujte nastavení. Když vyberete **vytvořit**, vaše změny se uloží a profil se přiřadí. Tato zásada se taky zobrazuje v seznamu profily.
 
 ## <a name="next-steps"></a>Další kroky
 
-Profil je po vytvoření připravený k přiřazení. Dále [Přiřaďte profil](device-profile-assign.md) a [sledujte jeho stav](device-profile-monitor.md).
+Profil se vytvoří, ale nemusí ještě nic dělat. Dále [Přiřaďte profil](device-profile-assign.md) a [sledujte jeho stav](device-profile-monitor.md).
 
 Zobrazí všechna nastavení funkcí zařízení pro zařízení s [iOS/iPadOS](ios-device-features-settings.md) a [MacOS](macos-device-features-settings.md) .

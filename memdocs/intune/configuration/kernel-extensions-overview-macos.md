@@ -6,22 +6,23 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/25/2020
+ms.date: 03/24/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
 ms.technology: ''
+ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 191b2cdfa8fd99078bccee8edf99eb9b0cb275ee
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 5937cd09a5224933004233b8d4efe8a0e47155f3
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79332055"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359377"
 ---
 # <a name="add-macos-kernel-extensions-in-intune"></a>Přidání rozšíření jádra macOS v Intune
 
@@ -74,17 +75,31 @@ V tomto článku se dozvíte, jak vytvořit profil konfigurace zařízení pomoc
 2. Vyberte **zařízení** > **konfiguračních profilech** > **vytvořit profil**.
 3. Zadejte následující vlastnosti:
 
-    - **Název**: Zadejte popisný název nového profilu.
-    - **Popis**: Zadejte popis profilu. Toto nastavení není povinné, ale doporučujeme ho zadat.
     - **Platforma**: vyberte **MacOS**
-    - **Typ profilu**: vyberte **rozšíření**.
-    - **Nastavení**: Zadejte nastavení, které chcete konfigurovat. Seznam všech nastavení a o tom, co dělají, najdete v těchto tématech:
+    - **Profil**: vyberte **rozšíření**.
 
-        - [macOS](kernel-extensions-settings-macos.md)
+4. Vyberte **Vytvořit**.
+5. V části **základy**zadejte následující vlastnosti:
 
-4. Až to budete mít, vyberte **OK** > **Vytvořit** a změny uložte.
+    - **Název**: zadejte popisný název zásady. Své zásady pojmenujte, abyste je později mohli snadno identifikovat. Dobrým názvem zásad je například **MacOS: Přidání rozšíření jádra do zařízení**.
+    - **Popis**: zadejte popis zásady. Toto nastavení není povinné, ale doporučujeme ho zadat.
 
-Profil se vytvoří a zobrazí se v seznamu. Nezapomeňte [profil přiřadit](device-profile-assign.md) a [monitorovat jeho stav](device-profile-monitor.md).
+6. Vyberte **Další**.
+
+7. V **nastavení konfigurace**nakonfigurujte nastavení:
+
+    - [macOS](kernel-extensions-settings-macos.md)
+
+8. Vyberte **Další**.
+9. V části **značky oboru** (volitelné) přiřaďte značku pro filtrování profilu na konkrétní skupiny IT, například `US-NC IT Team` nebo `JohnGlenn_ITDepartment`. Další informace o značkách oboru naleznete v tématu [použití značek RBAC a Scope pro distribuci](../fundamentals/scope-tags.md).
+
+    Vyberte **Další**.
+
+10. V části **přiřazení**vyberte uživatele nebo skupiny, které obdrží váš profil. Další informace o přiřazování profilů najdete v tématu [přiřazení profilů uživatelů a zařízení](device-profile-assign.md).
+
+    Vyberte **Další**.
+
+11. V rámci **Revize a vytvoření**zkontrolujte nastavení. Když vyberete **vytvořit**, vaše změny se uloží a profil se přiřadí. Tato zásada se taky zobrazuje v seznamu profily.
 
 ## <a name="next-steps"></a>Další kroky
 

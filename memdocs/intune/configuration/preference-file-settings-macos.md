@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e347b91b1b86bbc54d8bb5727b4737b01c721746
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 2e83077561ec4492feaf14789cf339e0b3ee86e2
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 03/27/2020
-ms.locfileid: "80327381"
+ms.locfileid: "80359319"
 ---
 # <a name="add-a-property-list-file-to-macos-devices-using-microsoft-intune"></a>Přidání souboru se seznamem vlastností do zařízení macOS pomocí Microsoft Intune
 
@@ -33,7 +33,7 @@ Tato funkce platí pro:
 
 Soubory seznamu vlastností obsahují informace o aplikacích macOS. Další informace najdete v tématu [informace o souborech se seznamem vlastností](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/AboutInformationPropertyListFiles.html) (Web společnosti Apple) a [Nastavení vlastních datových částí](https://support.apple.com/guide/mdm/custom-mdm9abbdbe7/1/web/1).
 
-Tento článek obsahuje seznam a popis různých nastavení souboru seznamu vlastností, které můžete přidat do zařízení macOS. Jako součást řešení správy mobilních zařízení (MDM) pomocí těchto nastavení přidejte ID sady prostředků aplikace (`com.company.application`) a přidejte jeho soubor. plist.
+Tento článek obsahuje seznam a popis různých nastavení souboru seznamu vlastností, které můžete přidat do zařízení macOS. Jako součást řešení správy mobilních zařízení (MDM) pomocí těchto nastavení přidejte ID sady prostředků aplikace (`com.company.application`) a přidejte soubor. plist aplikace.
 
 Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a pak se přiřadí nebo nasadí do zařízení macOS.
 
@@ -47,16 +47,21 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
 ## <a name="create-the-profile"></a>Vytvoření profilu
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-
 2. Vyberte **zařízení** > **konfiguračních profilech** > **vytvořit profil**.
 3. Zadejte následující vlastnosti:
 
-   - **Název**: zadejte popisný název profilu. Své profily pojmenujte, abyste je později mohli snadno identifikovat. Dobrým názvem profilu je například **MacOS: soubor předvoleb, který používá soubor plist ke konfiguraci ATP programu Microsoft Defender**.
-   - **Popis**: Zadejte popis profilu. Toto nastavení není povinné, ale doporučujeme ho zadat.
-   - **Platforma**: vyberte **MacOS**.
-   - **Typ profilu**: vyberte **soubor předvoleb**.
+    - **Platforma**: vyberte **MacOS**
+    - **Profil**: vyberte **soubor předvoleb**.
 
-4. V části **Nastavení**nakonfigurujte následující vlastnosti:
+4. Vyberte **Vytvořit**.
+5. V části **základy**zadejte následující vlastnosti:
+
+    - **Název**: zadejte popisný název zásady. Své zásady pojmenujte, abyste je později mohli snadno identifikovat. Dobrý název zásady je například **MacOS: přidejte soubor předvolby, který KONFIGURUJE ATP programu Microsoft Defender na zařízeních**.
+    - **Popis**: zadejte popis zásady. Toto nastavení není povinné, ale doporučujeme ho zadat.
+
+6. Vyberte **Další**.
+
+7. V **nastavení konfigurace**nakonfigurujte nastavení:
 
     - **Název domény předvolby**: soubory seznamu vlastností se obvykle používají pro webové prohlížeče (Microsoft Edge), [rozšířené ochrany před internetovými útoky v programu Microsoft Defender](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac)a vlastní aplikace. Když vytvoříte doménu předvolby, vytvoří se také ID sady prostředků. Zadejte ID sady prostředků, například `com.company.application`. Zadejte například `com.Contoso.applicationName`, `com.Microsoft.Edge`nebo `com.microsoft.wdav`.
     - **Soubor seznamu vlastností**: vyberte soubor seznamu vlastností přidružený k vaší aplikaci. Ujistěte se, že se jedná o soubor `.plist` nebo `.xml`. Například nahrajte soubor `YourApp-Manifest.plist` nebo `YourApp-Manifest.xml`.
@@ -72,7 +77,16 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
     ...
     ```
 
-5. Po dokončení vyberte **OK** > **vytvořit** a uložte provedené změny. Profil se vytvoří a zobrazí se v seznamu profily.
+8. Vyberte **Další**.
+9. V části **značky oboru** (volitelné) přiřaďte značku pro filtrování profilu na konkrétní skupiny IT, například `US-NC IT Team` nebo `JohnGlenn_ITDepartment`. Další informace o značkách oboru naleznete v tématu [použití značek RBAC a Scope pro distribuci](../fundamentals/scope-tags.md).
+
+    Vyberte **Další**.
+
+10. V části **přiřazení**vyberte uživatele nebo skupiny, které obdrží váš profil. Další informace o přiřazování profilů najdete v tématu [přiřazení profilů uživatelů a zařízení](device-profile-assign.md).
+
+    Vyberte **Další**.
+
+11. V rámci **Revize a vytvoření**zkontrolujte nastavení. Když vyberete **vytvořit**, vaše změny se uloží a profil se přiřadí. Tato zásada se taky zobrazuje v seznamu profily.
 
 ## <a name="next-steps"></a>Další kroky
 
