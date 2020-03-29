@@ -15,9 +15,9 @@
       href: tutorial-walkthrough-administrative-templates.md
 - name: Praktičtí průvodci
   items:
-    - name: Přehled
+    - name: Přehled profilu
       href: device-profile-create.md
-    - name: Vlastní nastavení zařízení
+    - name: Vlastní nastavení
       href: custom-settings-configure.md
       displayName: oma-uri
     - name: Omezení nastavení a funkcí zařízení
@@ -30,16 +30,18 @@
         - name: Problémy a řešení
           href: troubleshoot-email-profiles-in-microsoft-intune.md
     - name: Síť VPN
-      href: vpn-settings-configure.md
       items:
+        - name: Konfigurace sítě VPN
+          href: vpn-settings-configure.md
         - name: VPN pro aplikaci pro Android
           href: android-pulse-secure-per-app-vpn.md
         - name: VPN pro aplikaci pro iOS/iPadOS
           href: vpn-setting-configure-per-app.md
-    - name: Síť Wi-Fi
-      href: wi-fi-settings-configure.md
-      displayName: 'wifi, wireless'
+    - name: Wi-Fi
       items:
+        - name: Konfigurace Wi-Fi
+          href: wi-fi-settings-configure.md
+          displayName: 'wifi, wireless'
         - name: Wi-Fi s předsdíleným klíčem
           href: wi-fi-profile-shared-key.md
           displayName: 'psk, oma-uri, eap'
@@ -48,7 +50,7 @@
     - name: Šablony pro správu ve Windows
       displayName: 'admx, gpo, group policy'
       items:
-        - name: Šablony pro správu
+        - name: Vytvoření šablon pro správu
           href: administrative-templates-windows.md
         - name: Aktualizace Office pomocí šablon pro správu
           href: administrative-templates-update-office.md
@@ -75,7 +77,7 @@
     - name: Funkce Mobility Extension (MX) na zařízeních Zebra
       displayName: 'mx, android, stagenow'
       items:
-        - name: Mobility Extensions (MX) pro správce zařízení s Androidem
+        - name: Konfigurace Mobility Extensions (MX) pro správce zařízení s Androidem
           href: android-zebra-mx-overview.md
         - name: Protokoly StageNow a běžné problémy
           href: android-zebra-mx-logs-troubleshoot.md
@@ -115,6 +117,12 @@
       items:
         - name: Správce zařízení s Androidem
           items:
+            - name: Vlastní
+              items:
+                - name: Vlastní nastavení
+                  href: custom-settings-android.md
+                - name: Povolení a blokování aplikací pro Samsung Knox Standard
+                  href: samsung-knox-apps-allow-block.md
             - name: Omezení zařízení
               href: device-restrictions-android.md
             - name: E-mailu
@@ -123,13 +131,10 @@
               href: vpn-settings-android.md
             - name: Wi-Fi
               href: wi-fi-settings-android.md
-            - name: Vlastní
-              href: custom-settings-android.md
-              items:
-                - name: Povolení a blokování aplikací pro Samsung Knox Standard
-                  href: samsung-knox-apps-allow-block.md
         - name: Android Enterprise
           items:
+            - name: Vlastní
+              href: custom-settings-android-for-work.md
             - name: Omezení zařízení
               href: device-restrictions-android-for-work.md
             - name: E-mailu
@@ -138,10 +143,10 @@
               href: vpn-settings-android-enterprise.md
             - name: Wi-Fi
               href: wi-fi-settings-android-enterprise.md
-            - name: Vlastní
-              href: custom-settings-android-for-work.md
         - name: iOS/iPadOS
           items:
+            - name: Vlastní
+              href: custom-settings-ios.md
             - name: Funkce zařízení
               href: ios-device-features-settings.md
             - name: Omezení zařízení
@@ -152,12 +157,12 @@
               href: vpn-settings-ios.md
             - name: Wi-Fi
               href: wi-fi-settings-ios.md
-            - name: Vlastní
-              href: custom-settings-ios.md
             - name: ID sad pro integrované aplikace
               href: bundle-ids-built-in-ios-apps.md
         - name: macOS
           items:
+            - name: Vlastní
+              href: custom-settings-macos.md
             - name: Funkce zařízení
               href: macos-device-features-settings.md
             - name: Omezení zařízení
@@ -170,10 +175,10 @@
               href: vpn-settings-macos.md
             - name: Wi-Fi
               href: wi-fi-settings-macos.md
-            - name: Vlastní
-              href: custom-settings-macos.md
         - name: Windows 10 a novější
           items:
+            - name: Vlastní
+              href: custom-settings-windows-10.md
             - name: Optimalizace doručení
               href: delivery-optimization-settings.md
             - name: Omezení zařízení
@@ -190,28 +195,26 @@
               href: ../protect/identity-protection-windows-settings.md?toc=/intune/configuration/toc.json&bc=/intune/configuration/breadcrumb/toc.json
             - name: Kiosk
               href: kiosk-settings-windows.md
-            - name: Síť VPN
-              href: vpn-settings-windows-10.md
-            - name: Wi-Fi
-              href: wi-fi-settings-windows.md
             - name: Secure Assessment
               href: education-settings-windows.md
             - name: Sdílené zařízení s více uživateli
               href: shared-user-device-settings-windows.md
-            - name: Vlastní
-              href: custom-settings-windows-10.md
+            - name: Síť VPN
+              href: vpn-settings-windows-10.md
+            - name: Wi-Fi
+              href: wi-fi-settings-windows.md
         - name: Windows Holographic for Business
           items:
+            - name: Vlastní
+              href: custom-settings-windows-holographic.md
             - name: Omezení zařízení
               href: device-restrictions-windows-holographic.md
-            - name: Sdílené zařízení s více uživateli
-              href: shared-user-device-settings-windows-holographic.md
             - name: Upgrade edice a přepínač režimů
               href: holographic-upgrade.md
             - name: Kiosk
               href: kiosk-settings-holographic.md
-            - name: Vlastní
-              href: custom-settings-windows-holographic.md
+            - name: Sdílené zařízení s více uživateli
+              href: shared-user-device-settings-windows-holographic.md
         - name: "Windows\_8.1"
           items:
             - name: Omezení zařízení
@@ -222,11 +225,11 @@
               href: wi-fi-settings-import-windows-8-1.md
         - name: Windows Phone 8.1
           items:
+            - name: Vlastní
+              href: custom-settings-windows-phone-8-1.md
             - name: Omezení zařízení
               href: device-restrictions-windows-phone-8-1.md
             - name: E-mailu
               href: email-settings-windows-phone-8-1.md
             - name: Síť VPN
               href: vpn-settings-windows-phone-8-1.md
-            - name: Vlastní
-              href: custom-settings-windows-phone-8-1.md
