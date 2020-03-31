@@ -96,6 +96,8 @@
               href: apps-advanced-threat-protection-macos.md
         - name: Skripty prostředí PowerShell
           href: intune-management-extension.md
+        - name: skripty prostředí macOS
+          href: macos-shell-scripts.md
     - name: Přiřazení aplikací
       items:
         - name: Přiřazení aplikací skupinám
