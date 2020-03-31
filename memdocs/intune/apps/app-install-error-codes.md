@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 98567612b31604f79339a550275e274a2c90c3a4
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 431d2753b04269e9aacd7ef951ef3f45a076df60
+ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79326347"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80407903"
 ---
 # <a name="intune-app-installation-error-reference"></a>Reference k chybě instalace aplikace Intune
 
@@ -92,6 +92,8 @@ Následující chybové zprávy a popisy poskytují podrobné informace o chybá
 | 0x87D13B77 | -2016330889 | Zabezpečené připojení selhalo.  | Ověření manifestu aplikace se nezdařilo z důvodu připojení k síti (zabezpečené připojení selhalo). |
 | 0x87D13B80 | -2016330880 | CannotConnectToITunesStoreError | Instalace aplikace se nezdařila z důvodu neúspěšného připojení k obchodu ITunes |
 | 0x87D13B9F  | -2016330849 | Aplikace VPP má k dispozici aktualizaci. | Tento kód se vrátí, když je nainstalována aplikace VPP, ale je k dispozici novější verze. |
+| 0x87D13B9E | 2016330850 | Nejde vyhovět nastavení odinstalace aplikace. Zkuste aplikaci znovu nainstalovat. | Aplikace je už na zařízení nainstalovaná, ale nastavení odinstalovat při vyřazení se neshoduje s konfigurovanou hodnotou. Informujte uživatele, aby požádal o instalaci aplikace z Portál společnosti k pokusu o použití nastavení odinstalovat při vyřazení. |
+
 
 ## <a name="other-installation-errors"></a>Další chyby instalace
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7781eba9e2115b37dd6590733b89130203da0365
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: b25d5439aa9d0842cbbee24b5e8759d00f371d4b
+ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80323957"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80407721"
 ---
 # <a name="manage-web-access-by-using-microsoft-edge-with-microsoft-intune"></a>Správa webového přístupu pomocí Microsoft Edge s Microsoft Intune
 
@@ -209,8 +209,8 @@ Pak použijte následující páry klíč/hodnota, které přidělí vaší orga
 
 |    Klíč    |    Hodnota    |
 |--------------------------------------------------------------------|------------|
-|    com. Microsoft. Intune. mam. managedbrowser. NewTabPage. BrandLogo    |    True    |
-|    com. Microsoft. Intune. mam. managedbrowser. NewTabPage. BrandColor    |    True    |
+|    com. Microsoft. Intune. mam. managedbrowser. NewTabPage. BrandLogo    |    True (Pravda)    |
+|    com. Microsoft. Intune. mam. managedbrowser. NewTabPage. BrandColor    |    True (Pravda)    |
 
 ## <a name="display-relevant-industry-news-on-new-tab-pages"></a>Zobrazit relevantní novinky v odvětví na nových stránkách karty
 
@@ -283,7 +283,7 @@ K vytvoření seznamu povolených a blokovaných webů můžete použít různé
   - Port 443 pro protokol HTTPS
 - Použití zástupných znaků pro číslo portu **není podporováno.** Například `http://www.contoso.com:*` a `http://www.contoso.com:*/` podporované nejsou. 
 
-    |    URL    |    Podrobnosti    |    Odpovídá    |    Neodpovídá    |
+    |    Adresa URL    |    Podrobnosti    |    Odpovídá    |    Neodpovídá    |
     |-------------------------------------------|--------------------------------------------------------|-------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------|
     |    `http://www.contoso.com`    |    Odpovídá jediné stránce    |    `www.contoso.com`    |    `host.contoso.com`<br>`www.contoso.com/images`<br>`contoso.com/`    |
     |    `http://contoso.com`    |    Odpovídá jediné stránce    |    `contoso.com/`    |    `host.contoso.com`<br>`www.contoso.com/images`<br>`www.contoso.com`    |
@@ -343,7 +343,7 @@ Ve výchozím nastavení vyzve Microsoft Edge uživatele k shromažďování dat
 
 |    Klíč    |    Hodnota    |
 |----------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|     `com.microsoft.intune.man.managedbrowser.disableShareBrowsingHistory`    |     **hodnota true** zakáže zobrazení této výzvy koncovým uživatelům.     |
+|     `com.microsoft.intune.mam.managedbrowser.disableShareBrowsingHistory`    |     **hodnota true** zakáže zobrazení této výzvy koncovým uživatelům.     |
 
 ### <a name="disable-prompts-that-offer-to-save-passwords"></a>Zakázat výzvy, které umožňují uložit hesla
 

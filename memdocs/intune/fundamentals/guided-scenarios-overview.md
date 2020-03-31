@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b833e5265387637a35bfcdf79f4ae5f37558de61
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: dc536d4c2c0d06a768d42d4a796ec56cf80c0d66
+ms.sourcegitcommit: e7fb8cf2ffce29548b4a33b2a0c33a3a227c6bc4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79326823"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80401443"
 ---
 # <a name="intune-guided-scenarios-overview"></a>Přehled scénářů s asistencí pro Intune 
 
@@ -46,7 +46,7 @@ Scénáře s asistencí nabízejí konkrétní funkce. Následující podrobnost
 
 ### <a name="launching"></a>Spouštění  
 
-Všechny scénáře s asistencí jsou k dispozici na **[portálu pro správu zařízení](https://devicemanagement.microsoft.com)**  > **řešení potíží + podpora** **scénářů s asistencí** > . 
+Všechny scénáře s asistencí jsou k dispozici na **[portálu pro správu zařízení](https://endpoint.microsoft.com)**  > **řešení potíží + podpora** **scénářů s asistencí** > . 
 
 Scénář s asistencí začíná úvodem, který vysvětluje účel scénáře a všechny nezbytné součásti potřebné k dokončení instalace. V tomto okamžiku se kontrolují vaše oprávnění správce, aby se ověřilo, že máte všechna potřebná oprávnění k dokončení tohoto scénáře.  
 

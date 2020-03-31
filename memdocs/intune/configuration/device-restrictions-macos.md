@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/24/2020
+ms.date: 03/30/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7054cb658314d00c3e10388c50c2309038c8a15b
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.openlocfilehash: 50dd3d245b9a89836e3858d71a7ad124189e0973
+ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80359126"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80407850"
 ---
 # <a name="macos-device-settings-to-allow-or-restrict-features-using-intune"></a>macOS nastavení zařízení pro povolení nebo omezení funkcí pomocí Intune
 
@@ -117,6 +117,9 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
 
 - **Blokovat automatické vyplňování prohlížeče Safari**: **blok** zakáže funkci automatického vyplňování v prohlížeči Safari na zařízeních. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém uživatelům dovolit změnit nastavení automatického dokončování ve webovém prohlížeči.
 - **Block Camera**: **Block** zabrání přístupu ke kameře na zařízeních. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém umožňovat přístup k kameře zařízení.
+
+  Intune spravuje jenom přístup k kameře zařízení. Nemá přístup k obrázkům a videím.
+
 - **Block Apple Music**: **Block** vrátí aplikaci v hudbě do klasického režimu a zakáže hudební službu. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém umožňovat použití aplikace Apple Music.
 - **Zablokovat výsledky hledání na internetu**: **blok** zastaví vracení všech výsledků z Internetu hledáním. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém umožňovat připojení Spotlightu k Internetu a získání výsledků hledání.
 - **Blokovat přenos souborů pomocí iTunes**: **blokování** zakáže služby pro sdílení souborů aplikací. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém umožňovat služby sdílení souborů aplikací.

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eee407f19d92ea994da20acdf7a6f7dd7b774cab
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 4c08e0a967d18aaa7defb8e7b180a60f68c1b92c
+ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80324548"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80407802"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Samostatná verze Intune – Správa aplikací Win32
 
@@ -35,7 +35,7 @@ ms.locfileid: "80324548"
 > [!IMPORTANT]
 > Při nasazování aplikací Win32 zvažte použití [rozšíření pro správu Intune](../apps/intune-management-extension.md) , zejména pokud máte k dispozici instalační program aplikace pro více souborů Win32. Pokud během registrace automatického pilotního nasazení kombinujete instalaci aplikací Win32 a obchodních aplikací, může instalace aplikace selhat.  
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 Pokud chcete používat správu aplikací Win32, ujistěte se, že splňujete následující kritéria:
 
@@ -57,7 +57,7 @@ K předběžnému zpracování aplikací pro Windows Classic (Win32) použijte [
 
 ### <a name="process-flow-to-create-intunewin-file"></a>Tok procesu pro vytvoření souboru. intunewin
 
-   <img alt="Process flow to create a .intunewin file" src="./media/apps-win32-app-management/prepare-win32-app.svg" width="700">
+   <img alt="Process flow to create a .intunewin file" src="./media/apps-win32-app-management/prepare-win32-app.png" width="700">
 
 ### <a name="run-the-microsoft-win32-content-prep-tool"></a>Spuštění nástroje pro přípravu obsahu Microsoft Win32
 

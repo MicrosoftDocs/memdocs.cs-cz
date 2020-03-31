@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/24/2020
+ms.date: 03/30/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 34ebee933d562404022d9b0bd9358896fd854256
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.openlocfilehash: bf2c3c09ca957b0355669edc536dfd1f0d0e3226
+ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80359172"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80407890"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Nastavení zařízení s androidem Enterprise k povolení nebo zakázání funkcí pomocí Intune
 
@@ -39,6 +39,9 @@ Tato nastavení se vztahují na typy registrace Androidu Enterprise, kde Intune 
 
 - **Snímek obrazovky**: **Block** zabraňuje tomu, aby se snímky obrazovky nebo obrazovka na zařízení nasnímání. Brání tím také zobrazení obsahu na zobrazovacích zařízeních, která nemají bezpečný výstup videa. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém uživatelům umožnit zachytit obsah obrazovky v podobě obrázku.
 - **Kamera**: **Block** zabrání přístupu k fotoaparátu na zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém umožňovat přístup k fotoaparátu.
+
+  Intune spravuje jenom přístup k kameře zařízení. Nemá přístup k obrázkům a videím.
+
 - **Výchozí zásady oprávnění**: Toto nastavení definuje výchozí zásady oprávnění pro žádosti o oprávnění za běhu. Vaše možnosti
   - **Výchozí ze zařízení**: Použije se výchozí nastavení zařízení.
   - **Výzva**: uživatelům se zobrazí výzva ke schválení oprávnění.

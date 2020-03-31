@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ce6e6fd9c1a26762a0eb3081fde09ad9b05530a2
-ms.sourcegitcommit: fe7484e86ec8a109fa5f54fe9cceef8aac94bd9f
+ms.openlocfilehash: e4bec3347ec45f020fd4c8e128278dc619335442
+ms.sourcegitcommit: e7fb8cf2ffce29548b4a33b2a0c33a3a227c6bc4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80274842"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80401449"
 ---
 # <a name="sign-up-or-sign-in-to-microsoft-intune"></a>Registrace nebo přihlášení k Microsoft Intune
 
@@ -62,7 +62,7 @@ Pokud chcete udělit přístup ke správě služby pro uživatele s dalšími op
 
 ### <a name="intune-admin-portal-url"></a>Adresa URL portálu pro správu Intune
 
-Centrum pro správu Microsoft Endpoint Manager: https://devicemanagement.microsoft.com
+Centrum pro správu Microsoft Endpoint Manager: https://endpoint.microsoft.com
 
 Azure Portal Intune: https://portal.azure.com/#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade
 

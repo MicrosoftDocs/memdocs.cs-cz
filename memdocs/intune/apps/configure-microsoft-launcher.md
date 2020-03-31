@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/26/2020
+ms.date: 03/30/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bde1a743c4f2e16994f7fc74a467fc5ece9fb255
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 0711b407b185b3a9621ff80a371bd3aaa5032ead
+ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80324266"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80407732"
 ---
 # <a name="configure-microsoft-launcher"></a>Konfigurace Microsoft Launcheru
 
@@ -33,7 +33,7 @@ Na zařízeních s plnou správou Androidu Enterprise umožňuje spouštěč pod
 
 ## <a name="how-to-configure-the-microsoft-launcher-app"></a>Konfigurace aplikace spouštěče Microsoft 
 
-Přejděte do [centra pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431) a vyberte **aplikace** **zásady konfigurace aplikací** > . Přidejte zásady konfigurace pro **spravovaná zařízení** s **Androidem** a jako přidruženou aplikaci vyberte **spouštěč Microsoftu** . Kliknutím na **nastavení konfigurace** můžete nakonfigurovat různá dostupná nastavení spouštěče Microsoftu. 
+Po přidání aplikace spouštěče Microsoft [do Intune](../apps/apps-add.md)přejděte do [centra pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431) a vyberte **aplikace** **zásady konfigurace aplikací** > . Přidejte zásady konfigurace pro **spravovaná zařízení** s **Androidem** a jako přidruženou aplikaci vyberte **spouštěč Microsoftu** . Kliknutím na **nastavení konfigurace** můžete nakonfigurovat různá dostupná nastavení spouštěče Microsoftu. 
 
 ## <a name="choosing-a-configuration-settings-format"></a>Výběr formátu nastavení konfigurace 
 
@@ -47,6 +47,9 @@ Pokud přidáte vlastnosti pomocí **Návrháře konfigurace**, můžete tyto vl
 
    ![Formát nastavení konfigurace – použít návrháře konfigurace](./media/configure-microsoft-launcher/configure-microsoft-launcher-01.png)
 
+   > [!NOTE]
+   > Po nakonfigurování vlastností pomocí návrháře konfigurace budou data JSON aktualizována také tak, aby odrážela tyto vlastnosti. K přidání dalších konfiguračních klíčů do dat JSON použijte [Příklad skriptu JSON](../apps/configure-microsoft-launcher.md#microsoft-launcher-configuration-example) ke zkopírování potřebných řádků pro každý konfigurační klíč. 
+
 ## <a name="using-configuration-designer"></a>Použití návrháře konfigurace
 
 Návrhář konfigurace umožňuje vybrat předem vyplněná nastavení a jejich přidružené hodnoty.
@@ -57,13 +60,17 @@ V následující tabulce jsou uvedeny dostupné konfigurační klíče pro spou�
 
 |    Konfigurační klíč    |    Typ hodnoty    |    Výchozí hodnota    |    Popis     |
 |---------------------------------------------------|------------------|---------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    Typ registrace    |    String     |    Výchozí    |    Umožňuje nastavit typ registrace, na kterou by tyto zásady měly platit. V současné době **výchozí** hodnota odkazuje na **CorporateOwnedBuisnessOnly**. K dispozici nejsou žádné další podporované typy registrace.        Název klíče JSON: management_mode_key        |
-|    Změna uživatele v pořadí aplikace domovské obrazovky povolena    |    Logická hodnota    |    True    |    Umožňuje určit, zda je možné změnit nastavení **pořadí aplikace domovské obrazovky** koncovým uživatelem.<ul><li>Pokud je nastavená **hodnota true**, pořadí aplikací definované v zásadě se vynutilo jenom pro počáteční nasazení. Následně se zásada neuplatní, aby se projevily změny, které uživatel mohl udělat.</li><li>Pokud je nastavená **hodnota false**, bude se při každé synchronizaci vyžadovat pořadí aplikací.</li></ul><br>**Poznámka:** Pořadí aplikace domovské obrazovky lze nakonfigurovat pouze pomocí editoru JSON.<br><br>Název klíče JSON:<br>`com.microsoft.launcher.HomeScreen.AppOrder.UserChangeAllowed`    |
-|    Nastavit velikost mřížky    |    String    |    Autom.    |    Umožňuje nastavit velikost mřížky pro aplikace, které mají být umístěny na domovské obrazovce. Počet řádků a sloupců aplikace můžete nastavit tak, aby se definovala velikost mřížky v následujícím formátu: `columns;rows`. Pokud definujete velikost mřížky, maximální počet aplikací, které se zobrazí na řádku na domovské obrazovce, bude počet řádků, které jste nastavili, a maximální počet aplikací, které se zobrazí ve sloupci na domovské obrazovce, bude počet sloupců, které jste nastavili.<br><br>        Název klíče JSON:<br>`com.microsoft.launcher.HomeScreen.GridSize`    |
-|    Nastavit tapetu zařízení    |    String    |    Null    |    Umožňuje nastavit tapetu podle vlastního výběru zadáním adresy URL obrázku, který chcete nastavit jako tapetu.<br><br>Název klíče JSON:<br>`com.microsoft.launcher.Wallpaper.URL`    |
-|    Nastavit, aby se změna uživatele na tapetě zařízení povolila    |    Logická hodnota    |    True    |    Umožňuje určit, zda může koncový uživatel změnit nastavení tapety zařízení.<ul><li>Pokud je nastavená **hodnota true**, Tapeta v zásadách se vynutila jenom při počátečním nasazení. Následně se zásada neuplatní, aby se projevily změny, které uživatel mohl udělat.</li><li>Pokud je nastavena **hodnota false**, bude při každé synchronizaci vynutila tapeta.</li></ul><br>Název klíče JSON:<br>`com.microsoft.launcher.Wallpaper.URL.UserChangeAllowed`        |
-|    Povolení informačního kanálu    |    Logická hodnota    |    True    |    Umožňuje povolit informační kanál spouštěče zařízení v případě, že uživatel přetáhne přímo na domovské obrazovce.<ul><li>Pokud je nastaveno na **true**, kanál bude povolen.</li><li>Pokud je hodnota nastavena na **false**, kanál bude zakázán.</li></ul><br>Název klíče JSON:<br>`com.microsoft.launcher.Feed.Enabled`    |
-|    Povolit změnu uživatele v informačním kanálu povolen    |    Logická hodnota    |    True    |     Umožňuje určit, jestli může koncový uživatel změnit nastavení **Povolení kanálu** .<ul><li>Pokud je nastavená **hodnota true**, informační kanál se vynutil jenom pro počáteční nasazení. Následně se zásada neuplatní, aby se projevily změny, které uživatel mohl udělat.</li><li>Pokud je nastavená **hodnota false**, bude se při každé synchronizaci vyžadovat informační kanál.</li></ul><br>Název klíče JSON:`com.microsoft.launcher.Feed.Enabled.UserChangeAllowed`    |
+|    Typ registrace    |    Řetězec     |    Výchozí    |    Umožňuje nastavit typ registrace, na kterou by tyto zásady měly platit. V současné době **výchozí** hodnota odkazuje na **CorporateOwnedBuisnessOnly**. K dispozici nejsou žádné další podporované typy registrace.        Název klíče JSON: management_mode_key        |
+|    Změna uživatele v pořadí aplikace domovské obrazovky povolena    |    Logická hodnota    |    True (Pravda)    |    Umožňuje určit, zda je možné změnit nastavení **pořadí aplikace domovské obrazovky** koncovým uživatelem.<ul><li>Pokud je nastavená **hodnota true**, pořadí aplikací definované v zásadě se vynutilo jenom pro počáteční nasazení. Následně se zásada neuplatní, aby se projevily změny, které uživatel mohl udělat.</li><li>Pokud je nastavená **hodnota false**, bude se při každé synchronizaci vyžadovat pořadí aplikací.</li></ul><br>**Poznámka:** Pořadí aplikace domovské obrazovky lze nakonfigurovat pouze pomocí editoru JSON.<br><br>Název klíče JSON:<br>`com.microsoft.launcher.HomeScreen.AppOrder.UserChangeAllowed`    |
+|    Nastavit velikost mřížky    |    Řetězec    |    Autom.    |    Umožňuje nastavit velikost mřížky pro aplikace, které mají být umístěny na domovské obrazovce. Počet řádků a sloupců aplikace můžete nastavit tak, aby se definovala velikost mřížky v následujícím formátu: `columns;rows`. Pokud definujete velikost mřížky, maximální počet aplikací, které se zobrazí na řádku na domovské obrazovce, bude počet řádků, které jste nastavili, a maximální počet aplikací, které se zobrazí ve sloupci na domovské obrazovce, bude počet sloupců, které jste nastavili.<br><br>        Název klíče JSON:<br>`com.microsoft.launcher.HomeScreen.GridSize`    |
+|    Nastavit tapetu zařízení    |    Řetězec    |    Null    |    Umožňuje nastavit tapetu podle vlastního výběru zadáním adresy URL obrázku, který chcete nastavit jako tapetu.<br><br>Název klíče JSON:<br>`com.microsoft.launcher.Wallpaper.URL`    |
+|    Nastavit, aby se změna uživatele na tapetě zařízení povolila    |    Logická hodnota    |    True (Pravda)    |    Umožňuje určit, zda může koncový uživatel změnit nastavení tapety zařízení.<ul><li>Pokud je nastavená **hodnota true**, Tapeta v zásadách se vynutila jenom při počátečním nasazení. Následně se zásada neuplatní, aby se projevily změny, které uživatel mohl udělat.</li><li>Pokud je nastavena **hodnota false**, bude při každé synchronizaci vynutila tapeta.</li></ul><br>Název klíče JSON:<br>`com.microsoft.launcher.Wallpaper.URL.UserChangeAllowed`        |
+|    Povolení informačního kanálu    |    Logická hodnota    |    True (Pravda)    |    Umožňuje povolit informační kanál spouštěče zařízení v případě, že uživatel přetáhne přímo na domovské obrazovce.<ul><li>Pokud je nastaveno na **true**, kanál bude povolen.</li><li>Pokud je hodnota nastavena na **false**, kanál bude zakázán.</li></ul><br>Název klíče JSON:<br>`com.microsoft.launcher.Feed.Enabled`    |
+|    Povolit změnu uživatele v informačním kanálu povolen    |    Logická hodnota    |    True (Pravda)    |     Umožňuje určit, jestli může koncový uživatel změnit nastavení **Povolení kanálu** .<ul><li>Pokud je nastavená **hodnota true**, informační kanál se vynutil jenom pro počáteční nasazení. Následně se zásada neuplatní, aby se projevily změny, které uživatel mohl udělat.</li><li>Pokud je nastavená **hodnota false**, bude se při každé synchronizaci vyžadovat informační kanál.</li></ul><br>Název klíče JSON:`com.microsoft.launcher.Feed.Enabled.UserChangeAllowed`    |
+|    Umístění panelu hledání   |    Řetězec    |    Dolní    |  Umožňuje určit **umístění panelu hledání** na domovské obrazovce. <ul><li>Pokud je nastavené na **konec**, panel hledání se umístí do dolní části domovské obrazovky.</li><li>Pokud je nastaveno na **začátek**, panel hledání bude umístěn v horní části domovské obrazovky.</li><li>Pokud je nastavené na hodnotu **Skrýt**, panel hledání se odebere z domovské obrazovky.</li></ul><br>Název klíče JSON:<br>`com.microsoft.launcher.Search.SearchBar.Placement`    |
+|    Umístění panelu hledání povolených změn uživatele   |    Logická hodnota    |    True (Pravda)    |  Umožňuje určit, jestli může koncový uživatel změnit nastavení **umístění panelu hledání** . <ul><li>Pokud je nastavená **hodnota true**, umístění panelu hledání se vynutilo jenom při počátečním nasazení. Následně se zásada neuplatní, aby se projevily změny, které uživatel mohl udělat.</li><li>Pokud je nastavena **hodnota false**, bude při každé synchronizaci vyhledáno umístění panelu hledání.</li></ul><br>Název klíče JSON:<br>`com.microsoft.launcher.Search.SearchBar.Placement.UserChangeAllowed`    |
+|    Režim Dock  |    Řetězec    |    Zobrazit    | Umožňuje zapnout Docker na zařízení, když uživatel potáhne přímo na domovské obrazovce.<ul><li>Pokud je nastaveno na hodnotu **Zobrazit**, Dock bude povolen.</li><li>Pokud je tato možnost nastavená na hodnotu **Skrýt**, Docker se skryje z domovské obrazovky, ale uživatel ji může zobrazit, když je to potřeba.</li><li>Pokud je nastavené na **zakázáno**, Dock se zakáže.</li></ul><br>Název klíče JSON:<br>`com.microsoft.launcher.Dock.Mode`    |
+|   Změna uživatele režimu Dock Mode povolena   |    Řetězec    |    True (Pravda)    |  Umožňuje určit, zda může být nastavení režimu Docker změněno koncovým uživatelem.<ul><li>Pokud je nastavená **hodnota true**, nastaví se nastavení režimu Docker jenom pro počáteční nasazení. Následně se zásada neuplatní, aby se projevily změny, které uživatel mohl udělat.</li><li>Pokud je nastavena **hodnota false**, bude nastavení režimu Docker při každé synchronizaci vynutilo.</li></ul><br>Název klíče JSON:<br>`com.microsoft.launcher.Dock.Mode.UserChangeAllowed`    |
 
 ## <a name="enter-json-data"></a>Zadat data JSON
 
@@ -76,7 +83,9 @@ Kromě seznamu konfigurovatelných nastavení uvedených v tabulce návrháře k
 |    Konfigurační klíč    |    Typ hodnoty    |    Výchozí hodnota    |    Popis     |
 |----------------------------------------------------------------------------------------------------|-------------------|-------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    Nastavit povolené aplikace v seznamu<br>Klíč JSON:`com.microsoft.launcher.HomeScreen.Applications`    |    BundleArray    | Viz: [Nastavení povolených aplikací](configure-microsoft-launcher.md#set-allow-listed-applications)</sup>    |    Umožňuje definovat sadu aplikací, které jsou viditelné na domovské obrazovce z aplikací nainstalovaných v zařízení. Aplikace můžete definovat tak, že zadáte název balíčku aplikace pro aplikace, které chcete zobrazit, například `com.android.settings` by nastavení mělo být dostupné na domovské obrazovce. Aplikace, které povolíte – seznam v této části, by už měly být na zařízení nainstalované, aby je bylo možné zobrazit na domovské obrazovce.<p>Vlastnosti<ul><li>**Balíček:** Název balíčku aplikace</li><li>**Třída:** Aktivita aplikace, která je specifická pro určitou stránku aplikace. Použije výchozí stránku aplikace, pokud je tato hodnota prázdná.</li></ul>      |
-|    Pořadí aplikací pro domovskou obrazovku<br>Klíč JSON: `com.microsoft.launcher.HomeScreen.AppOrder`    |    BundleArray    |    Viz: [pořadí aplikací domovské obrazovky](configure-microsoft-launcher.md#home-screen-app-order)      |    Umožňuje zadat pořadí aplikace na domovské obrazovce.<p>Vlastnosti<br><ul><li>**Zadejte:** Jediným podporovaným typem je `application`.</li><li>**Pozice:** Pozice ikony aplikace na domovské obrazovce Začíná od pozice 1 vlevo nahoře a bude zleva doprava, shora dolů.</li><li>**Balíček:** Název balíčku aplikace</li><li>**Třída:** Aktivita aplikace, která je specifická pro určitou stránku aplikace. Výchozí stránka aplikace se použije, pokud je tato hodnota prázdná.</li></ul>    |
+|    Pořadí aplikací pro domovskou obrazovku<br>Klíč JSON: `com.microsoft.launcher.HomeScreen.AppOrder`    |    BundleArray    |    Viz: [pořadí aplikací domovské obrazovky](configure-microsoft-launcher.md#home-screen-app-order)      |    Umožňuje zadat pořadí aplikace na domovské obrazovce.<p>Vlastnosti<br><ul><li>**Zadejte:** Pokud chcete určit pozice aplikací, je `application`jenom podporovaný typ TNelze načíst. Chcete-li zadat pozice webových odkazů, je typ `weblink`.</li><li>**Pozice:** Toto určuje pozici ikony aplikace na domovské obrazovce. Začíná od pozice 1 vlevo nahoře a bude zleva doprava, shora dolů.</li><li>**Balíček:** Toto je název balíčku aplikace, který se používá k zadání pořadí aplikací.</li><li>**Třída:** Je aktivita aplikace, která je specifická pro určitou stránku aplikace. Výchozí stránka aplikace se použije, pokud je tato hodnota prázdná. Tato vlastnost se používá pro aplikaci.</li><li>**Popisek:** Je aktivita aplikace, která je specifická pro určitou stránku aplikace. Výchozí stránka aplikace se použije, pokud je tato hodnota prázdná. Tato vlastnost se používá pro aplikaci.</li><li>**Odkaz:** Adresa URL, která se má spustit poté, co koncový uživatel klikne na ikonu webového odkazu Tato vlastnost se používá pro webový odkaz.</li></ul>    |
+|    Nastavit připnuté webové odkazy<br>Klíč JSON: `com.microsoft.launcher.HomeScreen.WebLinks`    |    BundleArray    |    Viz: [Nastavení připnutých webových odkazů](configure-microsoft-launcher.md#set-pinned-web-link)      |    Tento klíč vám umožní připnout web na domovskou obrazovku jako ikonu snadného spuštění. Tímto způsobem se můžete ujistit, že koncový uživatel může mít rychlý a snadný přístup k základním webům. V konfiguraci pořadí aplikací pro domovskou obrazovku můžete změnit umístění každé ikony webového odkazu.<p>Vlastnosti<br><ul><li>**• Popisek:** Název Weblink zobrazený na domovské obrazovce spouštěče MS</li><li>**Odkaz:** Adresa URL, která se má spustit poté, co koncový uživatel klikne na ikonu webového odkazu</li></ul>    |
+
 
 ### <a name="set-allow-listed-applications"></a>Nastavit povolené aplikace v seznamu
 
@@ -131,6 +140,57 @@ Kromě seznamu konfigurovatelných nastavení uvedených v tabulce návrháře k
     ]
 }
 ```
+
+### <a name="set-pinned-web-link"></a>Nastavit připnutý webový odkaz
+
+```JSON
+{ 
+    "key": "com.microsoft.launcher.HomeScreen.WebLinks",  
+    "valueBundleArray": [ 
+        { 
+            "managedProperty": [ 
+                { 
+                    "key": "label",
+                    "valueString": "" 
+                },  
+                { 
+                    "key": "link", 
+                    "valueString": "" 
+                } 
+            ] 
+        }
+    ] 
+},
+{ 
+    "key": "com.microsoft.launcher.HomeScreen.AppOrder",  
+    "valueBundleArray": [ 
+        { 
+            "managedProperty": [ 
+                { 
+                    "key": "type",  
+                    "valueString": "" 
+                },  
+                { 
+                    "key": "position",  
+                    "valueInteger": 
+                },  
+                { 
+                    "key": "label",  
+                    "valueString": "" 
+                },  
+                { 
+                    "key": "link",  
+                    "valueString": "" 
+                } 
+            ] 
+        }
+    ] 
+}
+```
+
+
+
+### <a name="microsoft-launcher-configuration-example"></a>Příklad konfigurace spouštěče Microsoft
 
 Následující příklad obsahuje ukázkový skript JSON se všemi dostupnými konfiguračními klíči:
 
@@ -204,6 +264,23 @@ Následující příklad obsahuje ukázkový skript JSON se všemi dostupnými k
                 }
             ]
         }, 
+        { 
+            "key": "com.microsoft.launcher.HomeScreen.WebLinks",  
+            "valueBundleArray": [ 
+                { 
+                    "managedProperty": [ 
+                        { 
+                            "key": "label",
+                            "valueString": "News" 
+                        },  
+                        { 
+                            "key": "link", 
+                            "valueString": "https://www.bbc.com" 
+                        } 
+                    ] 
+                }
+            ] 
+        },
         {
             "key": "com.microsoft.launcher.HomeScreen.AppOrder.UserChangeAllowed", 
             "valueBool": false
@@ -270,11 +347,32 @@ Následující příklad obsahuje ukázkový skript JSON se všemi dostupnými k
                             "valueString": ""
                         }
                     ]
+                },
+                {
+                    "managedProperty": [
+                        {
+                            "key": "type", 
+                            "valueString": "weblink"
+                        }, 
+                        {
+                            "key": "position", 
+                            "valueInteger": 20
+                        }, 
+                        {
+                            "key": "label", 
+                            "valueString": "News"
+                        }, 
+                        {
+                            "key": "link", 
+                            "valueString": "https://www.bbc.com"
+                        }
+                    ]
                 }
             ]
         }
     ]
 }
+
 ```
 
 ## <a name="next-steps"></a>Další kroky

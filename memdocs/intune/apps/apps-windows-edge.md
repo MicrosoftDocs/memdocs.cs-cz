@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4635c0e09bea54dd5a22dcb370154e4153bf217c
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 687ef14791d1ae0df60d28802d27b99dd9547423
+ms.sourcegitcommit: e7fb8cf2ffce29548b4a33b2a0c33a3a227c6bc4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80324242"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80401335"
 ---
 # <a name="add-microsoft-edge-for-windows-10-to-microsoft-intune"></a>Přidejte Microsoft Edge pro Windows 10 a Microsoft Intune
 
@@ -36,9 +36,9 @@ Než budete moct nasadit, nakonfigurovat, monitorovat nebo chránit aplikace, mu
 >
 > Nemůžete použít integrované nasazení aplikace Microsoft Edge pro počítače připojení k síti na pracovišti. Integrované nasazení aplikací vyžaduje rozšíření pro správu Intune, které existuje jenom pro zařízení připojená k AAD. Verzi Microsoft Edge *77 a novější* můžete nasadit pomocí souboru *. msi* nahraného do **aplikací**. Přečtěte si téma [Přidání obchodní aplikace pro Windows do Microsoft Intune](lob-apps-windows.md).
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
-- Vyžaduje se Windows 10 RS2 a vyšší.
+- Windows 10 verze 1703 nebo novější.
 - Všechny předinstalované verze Microsoft Edge *verze 77 a novější* pro všechny kanály v uživatelském kontextu budou přepsány s hranou nainstalovanými v kontextu systému.
 
 ## <a name="configure-the-app-in-intune"></a>Konfigurace aplikace v Intune

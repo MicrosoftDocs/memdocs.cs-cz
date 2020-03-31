@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 48c88c037a305f2e7f8ba8ab4be5a1accc9680e8
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.openlocfilehash: c047c0f54e64dbe17b6bd9e9082272e80fe7566c
+ms.sourcegitcommit: e7fb8cf2ffce29548b4a33b2a0c33a3a227c6bc4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80359270"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80401477"
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Novinky v Microsoft Intune – předchozí měsíce
 
@@ -229,7 +229,7 @@ Když použijete [Graph API Intune](https://docs.microsoft.com/graph/api/resourc
 ### <a name="microsoft-365-device-management"></a>Správa zařízení Microsoft 365
 
 #### <a name="improved-administration-experience-in-microsoft-365-device-management---5551239---"></a>Vylepšené možnosti správy v Microsoft 365 správě zařízení<!-- 5551239 -->
-Aktualizované a zjednodušené prostředí pro správu je teď všeobecně dostupné v pracovním prostoru specialista správy zařízení Microsoft 365 v [https://devicemanagement.microsoft.com](https://devicemanagement.microsoft.com), včetně těchto:
+Aktualizované a zjednodušené prostředí pro správu je teď všeobecně dostupné v pracovním prostoru specialista správy zařízení Microsoft 365 v [https://endpoint.microsoft.com](https://endpoint.microsoft.com), včetně těchto:
 
 - **Aktualizovaná navigace**: najdou se Zjednodušená navigace na první úrovni, která logicky seskupuje funkce.
 - **Nové filtry platformy**: můžete vybrat jednu platformu, která na stránkách zařízení a aplikace zobrazuje jenom zásady a aplikace pro vybranou platformu.
@@ -238,7 +238,7 @@ Další informace o těchto vylepšeních najdete v [blogovém příspěvku Ente
 
 #### <a name="introducing-endpoint-security-node-in-microsoft-365-device-management---5630102---"></a>Představujeme uzel zabezpečení koncového bodu v Microsoft 365 správě zařízení<!-- 5630102 -->
 
-Uzel **zabezpečení koncového bodu** je teď v https://devicemanagement.microsoft.comvšeobecně dostupný v Microsoft 365 pracovní prostor pro správu zařízení, který seskupuje možnosti pro zabezpečení koncových bodů, jako jsou:
+Uzel **zabezpečení koncového bodu** je teď v https://endpoint.microsoft.comvšeobecně dostupný v Microsoft 365 pracovní prostor pro správu zařízení, který seskupuje možnosti pro zabezpečení koncových bodů, jako jsou:
 
 - Směrné plány zabezpečení: Pre'configured skupina nastavení, která vám pomůžou použít známou skupinu nastavení a výchozí hodnoty, které Microsoft doporučuje.
 - Úkoly zabezpečení: Využijte výhod správy hrozeb a ohrožení zabezpečení ATPs v programu Microsoft Defender a použijte Intune k nápravě slabých míst koncových bodů.
@@ -2106,7 +2106,7 @@ Když Intune nainstaluje Office na počítače koncových uživatelů, získají
 ### <a name="monitor-and-troubleshoot"></a>Monitorování a odstraňování potíží
 
 #### <a name="new-intune-support-experience-in-the-microsoft-365-device-management-portal---3076965---"></a>Nové prostředí podpory Intune na portálu pro správu zařízení Microsoft 365<!-- 3076965 -->
-Na [portálu Správa zařízení Microsoft 365]( https://devicemanagement.microsoft.com) zavádíme nové prostředí pro nápovědu a podporu Intune. Nové prostředí vám umožňuje popsat problém vlastními slovy a získat přehled možností řešení potíží a postupy z webu, jak problém opravit. Tato řešení jsou nabízena prostřednictvím algoritmů strojového učení založeného na pravidlech, které se řídí dotazy uživatelů.  
+Na [portálu Správa zařízení Microsoft 365]( https://endpoint.microsoft.com) zavádíme nové prostředí pro nápovědu a podporu Intune. Nové prostředí vám umožňuje popsat problém vlastními slovy a získat přehled možností řešení potíží a postupy z webu, jak problém opravit. Tato řešení jsou nabízena prostřednictvím algoritmů strojového učení založeného na pravidlech, které se řídí dotazy uživatelů.  
 
 Kromě pokynů ke konkrétnímu problému můžete také využít nového pracovního postupu vytváření případů a otevřít případ podpory e-mailem nebo telefonicky.  
 
@@ -2148,7 +2148,7 @@ Pokud máte některé z níže uvedených zařízení nebo chcete některé z t�
 ### <a name="device-management"></a>Správa zařízení
 
 #### <a name="microsoft-365-device-management-administration-center---3078424---"></a>Centrum pro správu správy zařízení Microsoft 365<!-- 3078424 -->
-Jednou z příslibů Microsoft 365 je zjednodušená správa a za rok jsme Microsoft 365 služby back-endu integrovaly do back-endové služby, které poskytují ucelené scénáře, jako je Intune a podmíněný přístup Azure AD. Nové [centrum pro správu Microsoft 365](https://devicemanagement.microsoft.com) je místem, kde můžete konsolidovat, zjednodušovat a integrovat prostředí pro správu. Pracovní prostor pro specialisty na správu zařízení poskytuje snadný přístup ke všem úkolům a informacím o správě zařízení a aplikací a úloh, které vaše organizace potřebuje. Očekáváme, že se stane primárním pracovním prostorem na cloudu pro výpočetní týmy koncových uživatelů organizací.
+Jednou z příslibů Microsoft 365 je zjednodušená správa a za rok jsme Microsoft 365 služby back-endu integrovaly do back-endové služby, které poskytují ucelené scénáře, jako je Intune a podmíněný přístup Azure AD. Nové [centrum pro správu Microsoft 365](https://endpoint.microsoft.com) je místem, kde můžete konsolidovat, zjednodušovat a integrovat prostředí pro správu. Pracovní prostor pro specialisty na správu zařízení poskytuje snadný přístup ke všem úkolům a informacím o správě zařízení a aplikací a úloh, které vaše organizace potřebuje. Očekáváme, že se stane primárním pracovním prostorem na cloudu pro výpočetní týmy koncových uživatelů organizací.
 
 
 <!-- ########################## -->

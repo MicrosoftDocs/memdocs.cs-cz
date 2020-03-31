@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c1ec6d4ebe860a1c20ad1a11bd7e63086858a82c
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: e6a3152966dee507cde690d9be8f5a7e210c7945
+ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80084211"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80407758"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>Přizpůsobení aplikací Portál společnosti Intune, Portál společnosti webu a Intune
 
@@ -56,7 +56,7 @@ Správný obrázek značky může vylepšit důvěryhodnost uživatele tím, že
 
 - Obraťte se na marketingové nebo kreativní oddělení. Můžou už mít schválenou sadu imagí značky. Mohli by vám také pomoci při optimalizaci obrázků.
 - Zvažte kompozici v orientaci jak na šířku, tak i na výšku. Ústřední bod obrázku by mělo obklopovat dostatečně velké pozadí. Obrázek může být oříznutý odlišně na základě velikosti zařízení, orientace a platformy.
-- Nepoužívejte obecné obrázky převzaté z fotobanky. Image by měla odrážet značku vaší organizace a znát uživatele. Pokud žádný obrázek nemáte, je lepší nepoužívat žádný, než použít obecný, který pro uživatele nemá žádný význam.
+- Nepoužívejte obecné obrázky převzaté z fotobanky. Image by měla odrážet značku vaší organizace a znát uživatele. Pokud ho ještě nemáte, je lepší nepoužívat ho, než použijte obecný, který nemá žádný význam pro uživatele.
 - Odeberte nepotřebná metadata. Soubor obrázku může obsahovat metadata, jako jsou profil fotoaparátu, zeměpisná poloha, název, popisek a další. Pomocí nástroje pro optimalizaci obrázků tyto informace odstraňte, abyste zachovali kvalitu, ale vešli se do velikostního limitu souboru.
 
 ### <a name="brand-image-examples"></a>Příklady obrázků značky
@@ -92,7 +92,7 @@ Následující tabulka poskytuje další podrobnosti o konfiguraci:
 |------------------------------------------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Adresa URL prohlášení o zásadách ochrany osobních údajů | 79 | Nastavte prohlášení o zásadách ochrany osobních údajů ve vaší organizaci, které se zobrazí, když uživatel klikne na odkazy na soukromí Musíte zadat platnou adresu URL ve formátu `https://www.contoso.com`. |
 | Zpráva o ochraně osobních údajů v Portál společnosti pro iOS/iPadOS | 520 | Ponechte výchozí nebo nastavte vlastní zprávu tak, aby vynechala seznam položek, které vaše organizace může nebo nemůže zobrazit na spravovaných zařízeních se systémem iOS/iPadOS. Pomocí Markdownu můžete přidat odrážky, tučné písmo, kurzívu a odkazy. |
-| Registrace zařízení | NEUŽÍVÁ SE. | Určete, jestli a jak se má uživatelům zobrazit výzva k registraci do správy mobilních zařízení. Podrobnosti níže. |
+| Registrace zařízení | Není k dispozici | Určete, jestli a jak se má uživatelům zobrazit výzva k registraci do správy mobilních zařízení. Podrobnosti níže. |
 
 ### <a name="device-enrollment-setting-options"></a>Možnosti nastavení registrace zařízení
 
@@ -134,7 +134,7 @@ Koncoví uživatelé mohou aktivovat akce navigace, aplikace a zařízení ve Wi
 
 V aplikaci Portál společnosti pro Windows jsou k dispozici následující klávesové zkratky.
 
-| Plošný | Popis | Klávesová zkratka |
+| Oblast | Popis | Klávesová zkratka |
 |:------------------:|:--------------:|:-----------------:|
 | Navigační nabídka | Navigace | ALT + M |
 |  | Domů | ALT + H |
@@ -146,10 +146,10 @@ V aplikaci Portál společnosti pro Windows jsou k dispozici následující klá
 | Úvodní stránka – dlaždice Zařízení | Přejmenovat | F2 |
 |  | Odebrat | Ctrl+D nebo Delete |
 |  | Zkontrolovat přístup | Ctrl+M nebo F9 |
-| Podrobnosti zařízení | Přejmenovat | F2 |
+| Podrobnosti o zařízení | Přejmenovat | F2 |
 |  | Odebrat | Ctrl+D nebo Delete |
 |  | Zkontrolovat přístup | Ctrl+M nebo F9 |
-| Podrobnosti aplikace | Nainstalovat | Ctrl+I |
+| Podrobnosti aplikace | Install | Ctrl+I |
 | Zařízení | K dispozici | CTRL+D |
 
 Koncoví uživatelé budou také moci zobrazit dostupné zkratky v aplikaci pro Windows Portál společnosti.
@@ -193,4 +193,4 @@ Některé platformy a konfigurace neumožňují akce zařízení samoobslužné 
 
 ## <a name="next-steps"></a>Další kroky
 
-- [Ruční přidání aplikace Portál společnosti pro Windows 10 pomocí Microsoft Intune](company-portal-app.md)
+- [Přidání aplikací](apps-add.md)

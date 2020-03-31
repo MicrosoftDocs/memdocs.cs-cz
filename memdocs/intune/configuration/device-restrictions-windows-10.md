@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/23/2020
+ms.date: 03/30/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 71e8b874e50fc1300124d748dfb70963acae089b
-ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
+ms.openlocfilehash: 237e281b88492ff7b7e1b5614600662e15761935
+ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80220094"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80407831"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Nastavení zařízení s Windows 10 (a novějším) pro povolení nebo omezení funkcí pomocí Intune
 
@@ -208,7 +208,9 @@ Tato nastavení používají [poskytovatele cloudových zásad](https://docs.mic
   Nastavení této zásady se nepoužije, pokud je počítač připojený k Azure AD a je povolená Automatická registrace.
 
 - **Ruční instalace kořenového certifikátu** (jenom mobilní zařízení): **blok** brání koncovým uživatelům v ruční instalaci kořenových certifikátů a zprostředkujících certifikátů Cap. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
-- **Kamera**: **Block** znemožní koncovým uživatelům používat fotoaparát na zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
+- **Kamera**: **Block** znemožní koncovým uživatelům používat fotoaparát na zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém umožňovat přístup k kameře zařízení.
+
+  Intune spravuje jenom přístup k kameře zařízení. Nemá přístup k obrázkům a videím.
 
   [CSP pro kameru](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-camera)
 
@@ -595,7 +597,7 @@ Tato nastavení používají [CSP v zásadách hledání](https://docs.microsoft
   - **Střední**: mírné filtrování obsahu pro dospělé. Platné výsledky hledání nejsou filtrovány.
 - **Zobrazit výsledky webu v hledání**: když se nastaví **blokování**, uživatelé nemůžou vyhledávat a výsledky webu nejsou zobrazené ve vyhledávání. **Nenakonfigurováno** (výchozí) umožňuje uživatelům vyhledávat na webu a výsledky se zobrazí na zařízení.
 
-## <a name="start"></a>Začátek
+## <a name="start"></a>Spustit
 
 Tato nastavení používají [zprostředkovatele CSP zásad spuštění](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-start), který také uvádí podporované edice systému Windows.  
 

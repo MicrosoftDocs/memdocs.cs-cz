@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 83107121b05b2126e4c6b2b377baf57ee069f917
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 893981700ede9587a980faa0e4d6b0384c24e3d4
+ms.sourcegitcommit: e7fb8cf2ffce29548b4a33b2a0c33a3a227c6bc4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79326831"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80401487"
 ---
 # <a name="quickstart-try-microsoft-intune-for-free"></a>Rychlý start: Bezplatné vyzkoušení Microsoft Intune
 
@@ -31,7 +31,7 @@ Microsoft Intune slouží ke správě zařízení a aplikací, a pomáhá tak ch
 
 Intune poskytuje správu mobilních zařízení (MDM) a správu mobilních aplikací (MAM) ze zabezpečené cloudové služby spravované pomocí centra pro správu Microsoft Endpoint Manageru. S Intune máte jistotu, že máte firemní prostředky svých pracovníků (data, zařízení a aplikace) správně nakonfigurované, přístupné a aktualizované a že odpovídají firemním zásadám a požadavkům souvisejícím s dodržováním předpisů.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 Než budete nastavovat Microsoft Intune, projděte si následující požadavky:
 
 - [Podporované operační systémy a prohlížeče](supported-devices-browsers.md)
@@ -64,7 +64,7 @@ Intune si můžete zdarma vyzkoušet. Zkušební doba je 30 dní. Pokud už mát
 
 Pokud ještě nejste přihlášení k portálu, proveďte následující kroky:
 
-1. Otevřete nové okno prohlížeče a do adresního řádku zadejte **https://devicemanagement.microsoft.com** . 
+1. Otevřete nové okno prohlížeče a do adresního řádku zadejte **https://endpoint.microsoft.com** . 
 2. Přihlaste se pomocí ID uživatele, které jste provedli v krocích uvedených výše ( *yourID@yourdomain* . onmicrosoft.com).
 
     ![Obrázek přihlašovací stránky portálu](./media/free-trial-sign-up/azure-portal-signin.png)
@@ -126,7 +126,7 @@ Jak je uvedeno výše, pokud má vaše organizace vlastní doménu, kterou chcet
 ## <a name="admin-experiences"></a>Prostředí pro správu
 
 K dispozici jsou dva portály, které budete používat nejčastěji:
-- Centrum pro správu Microsoft Endpoint Manageru ([https://devicemanagement.microsoft.com/](https://devicemanagement.microsoft.com/)) je tam, kde můžete prozkoumat [Možnosti Intune](what-is-intune.md). V takovém případě bude správce spolupracovat s Intune.
+- Centrum pro správu Microsoft Endpoint Manageru ([https://endpoint.microsoft.com/](https://endpoint.microsoft.com/)) je tam, kde můžete prozkoumat [Možnosti Intune](what-is-intune.md). V takovém případě bude správce spolupracovat s Intune.
 - Pokud pro tuto možnost nepoužíváte Azure Active Directory, můžete přidat a spravovat uživatele v centru pro správu Microsoft 365 ([https://admin.microsoft.com](https://admin.microsoft.com)). Můžete také spravovat další oblasti svého účtu, včetně fakturace a podpory.
 
 ## <a name="next-steps"></a>Další kroky
