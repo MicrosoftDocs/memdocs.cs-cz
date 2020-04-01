@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/29/2020
+ms.date: 03/31/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,12 +15,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 19f9d21afd46abccf36dbb3d50f81b16e854e92d
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: c156e0d1b627d285c6654994d6114920f86b2bab
+ms.sourcegitcommit: d601f4e08268d139028f720c0a96dadecc7496d5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80325391"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80488070"
 ---
 # <a name="manage-windows-10-software-updates-in-intune"></a>Správa aktualizací softwaru Windows 10 v Intune
 
@@ -209,7 +209,7 @@ Když zařízení obdrží zásadu aktualizace funkcí Windows 10:
 
 Aby bylo možné v Intune používat aktualizace funkcí Windows 10, musí být splněné následující požadavky.
 
-- Zařízení musí být zaregistrovaná v Intune MDM a připojeném službě Azure AD nebo v registraci Azure AD.
+- Zařízení musí být zaregistrovaná v Intune MDM a musí být připojená k hybridní službě AD, připojená k Azure AD nebo registrovaná služba Azure AD.
 - Pokud chcete používat zásady aktualizací funkcí v Intune, musí mít zařízení zapnutou telemetrii s minimálním nastavením [*Basic*](../configuration/device-restrictions-windows-10.md#reporting-and-telemetry). Telemetrie se konfiguruje v rámci *vytváření sestav a telemetrie* jako součást [zásad omezení zařízení](../configuration/device-restrictions-configure.md).
   
   Zařízení, která dostanou zásadu aktualizace funkcí a mají nastavenou telemetrii jako *nenakonfigurovaná*, může být vypnutá, může nainstalovat novější verzi Windows, než je definovaná v zásadách aktualizace funkcí. Předpokladem pro vyžadování telemetrie je kontrola, že tato funkce přechází k všeobecné dostupnosti.

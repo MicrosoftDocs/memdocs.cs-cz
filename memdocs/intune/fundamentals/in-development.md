@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 03/21/2020
+ms.date: 03/30/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -16,14 +16,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 18b42dffc2c34adea1f70c4587b5eb5384d0a778
-ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
+ms.openlocfilehash: 2a807a90cdca18d79e7b92b4efeb56d341da2596
+ms.sourcegitcommit: 6a6a713fc1090e03893d80f4259dc7300fb1d5ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80220128"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80438717"
 ---
-# <a name="in-development-for-microsoft-intune---march-2020"></a>Vývoj pro Microsoft Intune – březen 2020
+# <a name="in-development-for-microsoft-intune---april-2020"></a>Ve vývoji Microsoft Intune – duben 2020
 
 Tato stránka vám umožní v rámci připravenosti a plánování vypsat aktualizace uživatelského rozhraní Intune a funkce, které jsou ve vývoji, ale ještě nejsou vydané. Kromě informací na této stránce: 
 
@@ -58,11 +58,26 @@ Tato stránka vám umožní v rámci připravenosti a plánování vypsat aktual
 <!-- ***********************************************-->
 ## <a name="app-management"></a>Správa aplikací
 
-### <a name="company-portal-for-ios-to-support-landscape-mode--6048329----"></a>Portál společnosti pro iOS pro podporu režimu na šířku<!--6048329  -->
-Uživatelé budou moct zaregistrovat svoje zařízení, Hledat aplikace a získat podporu na základě orientace obrazovky podle jejich výběru. Aplikace bude automaticky rozpoznávat a upravovat obrazovky, aby odpovídaly režimu na výšku nebo na šířku, pokud uživatelé nezamkne obrazovku v režimu na výšku.
+### <a name="update-to-android-app-configuration-policies---6113334----"></a>Aktualizace zásad konfigurace aplikací pro Android<!-- 6113334  -->
+Zásady konfigurace aplikací pro Android se aktualizují tak, aby správcům při vytváření konfiguračního profilu aplikace mohli vybrat typ registrace zařízení. Tato funkce je přidávána do účtu pro profily certifikátů, které jsou založeny na typu registrace (pracovní profil nebo vlastník zařízení).  Při vydaných verzích dojde k následujícímu:
 
-### <a name="improved-sign-in-experience-in-company-portal-for-android---6103997----"></a>Vylepšené prostředí pro přihlašování v Portál společnosti pro Android<!-- 6103997  -->
-Aktualizujeme rozložení několika přihlašovacích obrazovek v aplikaci Portál společnosti pro Android, aby bylo prostředí pro uživatele užitečnější, jednoduché a čisté.
+- Stávající zásady vytvořené před vydáním této funkce, které nemají žádné profily certifikátů přidružené k zásadám, budou ve výchozím nastavení profil pracovního profilu a vlastníka zařízení pro typ registrace zařízení.
+- Stávající zásady vytvořené před vydáním této funkce, které mají přidružené profily certifikátů, budou mít výchozí jenom pracovní profil.
+- Pokud je vytvořený nový profil a pro typ registrace zařízení je vybraný profil pracovního profilu a vlastníka zařízení, nebudete moct k zásadě konfigurace aplikace přidružit profil certifikátu.
+- Pokud je vytvořen nový profil a je vybrán pouze pracovní profil, mohou být využívány Zásady certifikátů pracovního profilu vytvořené v části Konfigurace zařízení.
+- Pokud je vytvořen nový profil a je vybrán pouze vlastník zařízení, může být využita zásada certifikátu vlastníka zařízení vytvořená v části Konfigurace zařízení.
+
+Stávající zásady nebudou opravovat ani vydávat nové certifikáty.
+
+Kromě toho přidáváme e-mailové profily gmail a devět e-mailů, které budou fungovat pro typy registrace pracovní profil i vlastník zařízení, včetně použití profilů certifikátů v obou typech konfigurace e-mailu.  Všechny zásady Gmail nebo devět, které jste vytvořili v části Konfigurace zařízení pro pracovní profily, se budou i nadále používat pro zařízení a není nutné je přesouvat do zásad konfigurace aplikací.
+
+V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)můžete najít zásady konfigurace aplikací tak, že vyberete **aplikace** > zásady **Konfigurace aplikací**. Další informace o zásadách konfigurace aplikací najdete v tématu [zásady konfigurace aplikací pro Microsoft Intune](../apps/app-configuration-policies-overview.md).
+
+### <a name="microsoft-teams-is-now-included-in-the-office-365-suite-for-macos---5903936----"></a>Microsoft Teams je teď součástí sady Office 365 pro macOS<!-- 5903936  -->
+Uživatelům, kteří jsou přiřazeni systém Microsoft Office pro macOS ve službě Microsoft Endpoint Manager, teď budou kromě stávajících aplikací systém Microsoft Office (Word, Excel, PowerPoint, Outlook a OneNote) dostávat i týmy Microsoftu. Intune rozpozná existující zařízení Mac, na kterých je nainstalovaný jiný Office pro aplikace macOS, a pokusí se nainstalovat Microsoft Teams při příštím ověření zařízení v Intune. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)můžete najít **sadu Office 365 Suite** pro MacOS, a to tak, že vyberete **aplikace** > **MacOS** > **Přidat**. Další informace najdete v tématu [přiřazení Office 365 k MacOS zařízením pomocí Microsoft Intune](../apps/apps-add-office365-macos.md).
+
+### <a name="group-targeting-support-for-customization-pane----4722837----"></a>Podpora pro podokno přizpůsobení pro skupinu <!-- 4722837  -->
+Nastavení můžete cílit v podokně přizpůsobení na skupiny uživatelů. Na portálu Intune vyberte **klientské aplikace** > **přizpůsobení**. Další informace najdete v tématu [postup přizpůsobení aplikací Portál společnosti Intune, Portál společnosti webu a Intune App] (společnost-portál-app.md].
 
 <!-- ***********************************************-->
 ## <a name="device-configuration"></a>Konfigurace zařízení
@@ -83,14 +98,8 @@ Když vytváříte profil pro zařízení s iOS/iPadOS nebo macOS, bude se aktua
 - Rozšíření: macOS
 - Soubor předvoleb: macOS
 
-### <a name="improved-user-interface-experience-when-creating-oemconfig-configuration-profiles-on-android-enterprise-devices---5568645-----"></a>Vylepšené uživatelské rozhraní při vytváření OEMConfig konfigurací profilů na zařízeních s Androidem Enterprise<!-- 5568645   -->
-Když vytváříte nebo upravujete profil OEMConfig pro zařízení s Androidem Enterprise, bude se aktualizovat prostředí v centru pro správu správy koncových bodů. Aktualizované prostředí vám poskytne přehled o nastaveních, která jste nakonfigurovali na první pohled. Tato změna má vliv na konfigurační profil zařízení OEMConfig (**zařízení** > **konfiguračních profilů** > **vytvořit profil** > **Android Enterprise** for Platform > **OEMConfig** pro typ profilu).
-
-Tato funkce platí pro:
-- Android Enterprise 
-
 ### <a name="device-configuration-profile-settings-and-values-will-be-updated-for-windows-platforms---4091122---"></a>Nastavení a hodnoty konfiguračního profilu zařízení se aktualizují pro platformy Windows.<!-- 4091122 -->
-Když vytváříte profily konfigurace zařízení pro platformy Windows (**zařízení** > **konfigurační profily** > **vytvořit profil** > libovolnou možnost **Windows** pro platformu), některá nastavení a jejich hodnoty se liší od CSP a můžou být matoucí. Názvy nastavení a jejich hodnoty budou aktualizovány, aby byly lépe jasné.
+Když vytváříte profily konfigurace zařízení pro platformy Windows (**zařízení** > **konfigurační profily** > **vytvořit profil** > libovolnou možnost **Windows** pro platformu), některá nastavení a jejich hodnoty se liší od CSP a můžou být matoucí. Názvy nastavení a jejich hodnoty se aktualizují tak, aby byly jasné.
 
 Platí pro:
 
@@ -98,15 +107,6 @@ Platí pro:
 - Konfigurační profily zařízení ve Windows Holografick pro firmy
 - Windows 8.1 konfigurační profily zařízení
 - Profily konfigurace zařízení Windows Phone 8,1
-
-### <a name="improved-user-interface-experience-when-creating-device-restrictions-profiles-on-android-and-android-enterprise-devices---5841361---"></a>Vylepšené uživatelské rozhraní při vytváření profilů omezení zařízení pro zařízení s Androidem a Androidem Enterprise<!-- 5841361 -->
-Když vytvoříte profil pro zařízení s Androidem nebo Androidem Enterprise, bude se aktualizovat prostředí v centru pro správu správy koncových bodů. Tato změna má vliv na následující konfigurační profily zařízení (**zařízení** > **konfiguračních** profilech > **Vytvoření profilu** > **Správce zařízení s Androidem** nebo **Android Enterprise** for Platform):
-
-- Omezení zařízení: Správce zařízení s Androidem
-- Omezení zařízení: vlastník zařízení se systémem Android Enterprise
-- Omezení zařízení: pracovní profil Android Enterprise
-
-Další informace o omezeních zařízení, která můžete konfigurovat, najdete v tématu [Správce zařízení s Androidem](../configuration/device-restrictions-android.md) a [Android Enterprise](../configuration/device-restrictions-android-for-work.md).
 
 ### <a name="configure-the-microsoft-defender-atp-app-for-macos-----5520115----"></a>Konfigurace aplikace Microsoft Defender ATP pro macOS  <!-- 5520115  -->
 Brzy budete moct nakonfigurovat [Nastavení](../protect/endpoint-protection-macos.md) pro aplikaci Microsoft Defender ATP pro zařízení, která používají MacOS jako součást konfiguračního profilu zařízení ochrany koncových bodů (**zařízení** > **konfiguračních** profilech > **vytvořit profil**, vyberte pro *platformu* **MacOS** a pak jako *typ profilu* **Endpoint Protection** ). Pro konfiguraci zařízení macOS bude k dispozici osm nastavení. 
@@ -118,29 +118,46 @@ Do kategorie trezoru úložišť přidáváme nové nastavení v rámci šablony
 
 Toto nastavení nebude k dispozici v dříve vytvořených zásadách. Abyste mohli nakonfigurovat toto nastavení tak, aby ho bylo možné používat, budete muset znovu vytvořit zásady trezoru úložišť. 
 
-### <a name="configure-delivery-optimization-agent-when-downloading-win32-app-content---5410945----"></a>Konfigurovat agenta Optimalizace doručení při stahování obsahu aplikace Win32<!-- 5410945  -->
-Agent pro optimalizaci doručení budete moct nakonfigurovat tak, aby stahoval obsah aplikace Win32 buď v režimu pozadí, nebo v režimu popředí na základě přiřazení. U stávajících aplikací Win32 bude obsah dál stahovat v režimu pozadí. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **aplikace** > **všechny aplikace** > *Vyberte vlastnosti aplikace Win32* > **Properties**. V poli **přiřazení**vyberte **Upravit** .  Upravte přiřazení výběrem možnosti **Zahrnout** do **režimu** v **požadované** části.  V části **nastavení aplikace** najdete nové nastavení, když bude k dispozici. Další informace o optimalizaci doručení najdete v tématu [Správa aplikací Win32 – Optimalizace doručení](../apps/apps-win32-app-management.md#delivery-optimization).
+### <a name="send-push-notifications-as-an-action-for-non-compliance----1733150-----"></a>Odeslání nabízených oznámení jako akce při nedodržení předpisů <!-- 1733150   -->
+V případě platforem iOS a Android přidáváme novou akci při nedodržení předpisů, která odešle nabízené oznámení v aplikaci Portál společnosti. Uživatelé můžou kliknout na oznámení, která spustí aplikaci Portál společnosti, která pak zobrazí důvod, proč nedodržují předpisy. Správci budou moct tuto novou akci nakonfigurovat pro nedodržování předpisů v centru pro správu Microsoft Endpoint Manageru, a to tak, že přejdete na **zařízení** > **zásady dodržování předpisů** > **vytvořit zásadu**a pak vyberete *akci* pro odeslání nabízeného oznámení aplikace.
+
+### <a name="pre-release-testing-for-managed-google-play-apps---2681933----"></a>Předběžné vydání testování pro spravované aplikace Google Play<!-- 2681933  -->
+Organizace, které používají [ukončené testy testů Google Play pro předběžné vydání aplikací](https://support.google.com/googleplay/android-developer/answer/3131213) , budou moci spravovat tyto stopy v Intune. Budete moci selektivně přiřadit obchodní aplikace, které jsou publikovány do předprodukčních běhů Google Play do pilotních skupin, aby bylo možné provádět testování. V Intune také budete moct zjistit, jestli aplikace obsahuje předprodukční záznam testovacího sestavení, který je v něm publikovaný, a taky umožnit přiřazení této stopy ke skupinám uživatelů a zařízení AAD. Tato funkce je k dispozici pro všechny aktuálně podporované podnikové scénáře Androidu (pracovní profil, plně spravované a vyhrazené). V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)můžete přidat spravované aplikace Google Play výběrem možnosti **aplikace** > **Android** > **Přidat**. Další informace najdete v tématu [Přidání spravovaných Google Play aplikací do zařízení s Androidem Enterprise pomocí Intune](../apps/apps-add-android-for-work.md).
+
+### <a name="manage-smime-settings-for-outlook-on-android---6517085-----"></a>Správa nastavení S/MIME pro Outlook v Androidu<!-- 6517085   -->
+Zásady konfigurace aplikací budete moct použít ke správě nastavení S/MIME pro Outlook na zařízeních, na kterých běží Android Enterprise. Budete také moci zvolit, zda povolit uživatelům zařízení povolit nebo zakázat nastavení S/MIME v aplikaci Outlook. Pokud chcete použít zásady konfigurace aplikací pro Android, v [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431) přejít na **aplikace** > **zásady konfigurace aplikací** > **Přidat** > **spravovaná zařízení**.
+
+### <a name="additional-options-in-sso-and-sso-app-extension-profiles-on-iosipados-devices---6504155----"></a>Další možnosti v profilech jednotného přihlašování a rozšíření aplikace jednotného přihlašování na zařízeních s iOS/iPadOS<!-- 6504155  -->
+Na zařízeních s iOS/iPadOS můžete:
+
+- V části profily jednotného přihlašování (**zařízení** > **konfigurační profily** > **vytvořit profil** > **iOS/iPadOS** pro **funkce zařízení** > pro profil > **jednotné přihlašování**) nastavte hlavní název protokolu Kerberos jako název účtu správce zabezpečení účtů (SAM) v profilech jednotného přihlašování. 
+- V profilech rozšíření aplikace jednotného přihlašování (**zařízení** > **konfigurační profily** > **vytvořit profil** > **iOS/iPadOS** pro **funkce zařízení** > pro profil > **rozšíření aplikace jednotného přihlašování**, nakonfigurujte rozšíření iOS/IPADOS Microsoft Azure AD s menším počtem kliknutí pomocí nového typu rozšíření aplikace jednotného přihlašování. Můžete povolit rozšíření Azure AD pro sdílená zařízení a odeslat data specifická pro rozšíření do rozšíření.
+
+Platí pro:
+- iOS/iPadOS 13.0 +
+
+Další informace o použití jednotného přihlašování na zařízeních s iOS/iPadOS najdete v tématu [Přehled rozšíření aplikace jednotného přihlašování](../configuration/device-features-configure.md#single-sign-on-app-extension) a [seznam nastavení jednotného přihlašování](../configuration/ios-device-features-settings.md#single-sign-on-app-extension).
 
 <!-- ***********************************************-->
-<!--## Device enrollment-->
+## <a name="device-enrollment"></a>Registrace zařízení
+
+### <a name="bring-your-own-devices-can-use-vpn-to-deploy--5015344---"></a>Vlastní zařízení můžou používat k nasazení sítě VPN.<!--5015344 -->
+Nový profil pro **přeskočení kontroly připojení k doméně** pomocí nového profilu autopilotu přeskočit přepínač umožňuje nasadit hybridní zařízení služby Azure AD join bez přístupu k podnikové síti pomocí vašeho vlastního klienta Win32 VPN od jiného výrobce. Pokud se chcete podívat na nový přepínač, přejděte do [centra pro správu Microsoft Endpoint manageru](https://go.microsoft.com/fwlink/?linkid=2109431) > **zařízení**  > **Windows** > **windows** > **profily nasazení** > **vytvořit profil** > spouštěné **v počátečním prostředí**.
 
 <!-- ***********************************************-->
 ## <a name="device-management"></a>Správa zařízení
 
-### <a name="change-primary-user-for-windows-devices----3794742---"></a>Změna primárního uživatele pro zařízení s Windows <!-- 3794742 -->
-Můžete změnit primárního uživatele pro zařízení s Windows Hybrid a připojená k Azure AD. Provedete to tak, že přejdete na **zařízení** > **Intune** > **všechna zařízení** > vyberte zařízení > **vlastnosti** > **primární uživatel**.
-
 ### <a name="powershell-scripts-support-for-byod-devices---1862833----"></a>Podpora skriptů PowerShellu pro zařízení BYOD<!-- 1862833  -->
 PowerShellové skripty budou podporovat registrovaná zařízení Azure AD v Intune. Další informace o PowerShellu najdete [v tématu použití skriptů PowerShellu na zařízeních s Windows 10 v Intune](../apps/intune-management-extension.md). Tato funkce nepodporuje zařízení s Windows 10 Home Edition.
 
-### <a name="new-information-in-device-details---5604099---"></a>Podrobnosti o nových informacích o zařízení<!-- 5604099 -->
-Na stránce **Přehled** pro zařízení se zobrazí následující informace:
-
-- Kapacita úložiště (množství fyzického úložiště v zařízení)
-- Kapacita paměti (množství fyzické paměti v zařízení)
-
 ### <a name="script-support-for-macos-devices---4280361----"></a>Podpora skriptů pro zařízení macOS<!-- 4280361  -->
 Budete moct přidávat a nasazovat skripty pro zařízení macOS. Tato podpora rozšiřuje vaši schopnost nakonfigurovat zařízení macOS nad rámec toho, co je možné na zařízeních macOS využít nativní možnosti MDM.
+
+### <a name="log-analytics-will-include-device-details-log--6014987----"></a>Log Analytics bude zahrnovat protokol podrobností o zařízení.<!--6014987  -->
+Protokoly podrobností o zařízeních v Intune budou dostupné v **Sestavách** > **Log Analytics**. Můžete korelovat podrobnosti o zařízení a vytvářet vlastní dotazy a sešity Azure.
+
+### <a name="push-notification-when-device-ownership-type-is-changed---5575875----"></a>Nabízené oznámení, když se změní typ vlastnictví zařízení<!-- 5575875  -->
+Můžete nakonfigurovat nabízená oznámení, která se budou posílat uživatelům s Androidem i iOS Portál společnosti, když se jejich typ vlastnictví zařízení změní z možnosti osobní na podnik jako na základě ochrany osobních údajů. Toto nastavení najdete v Microsoft Endpoint Manageru tak, že vyberete možnost **Správa tenanta** > **přizpůsobení**. Další informace o tom, jak vlastnictví zařízení ovlivňuje koncové uživatele, najdete v tématu [Změna vlastnictví zařízení](../enrollment/corporate-identifiers-add.md#change-device-ownership).
 
 <!-- ***********************************************-->
 <!--## Intune apps-->
@@ -183,3 +200,6 @@ Nastavení podporovaná v Intune se nemění. Toto je pouze aktualizace textu u�
 ## <a name="see-also"></a>Viz také
 
 Podrobnosti o posledním vývoji najdete v tématu [co je nového v Microsoft Intune](whats-new.md).
+
+
+

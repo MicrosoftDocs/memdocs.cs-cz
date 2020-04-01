@@ -17,12 +17,12 @@ ms.reviewer: spshumwa
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7f102daeab975bbbf0a618d1a5d642c84f52edba
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 077d7c4dd345b9b16677d61269b9f331dedb4dbb
+ms.sourcegitcommit: d601f4e08268d139028f720c0a96dadecc7496d5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79326987"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80488079"
 ---
 # <a name="bulk-enrollment-for-windows-devices"></a>Hromadná registrace pro zařízení s Windows
 
@@ -61,11 +61,13 @@ Uživatelé Azure AD jsou na těchto zařízeních standardními uživateli a ob
 7. Zadejte přihlašovací údaje k Azure AD, abyste získali hromadný token.
    ![Snímek obrazovky s přihlášením do aplikace Windows Configuration Designer](./media/windows-bulk-enroll/bulk-enroll-cred.png)
 
-8. Když se **Bulk Token** (Hromadný token) úspěšně načte, klikněte na **Next** (Další).
+8. V části **použít tento účet všude na této stránce zařízení** vyberte **jenom tuto aplikaci**.
 
-9. Volitelně můžete **Add applications** (Přidat aplikace) a **Add certificates** (Přidat certifikáty). Tyto aplikace a certifikáty se zřídí v zařízení.
+9. Když se **Bulk Token** (Hromadný token) úspěšně načte, klikněte na **Next** (Další).
 
-10. Volitelně můžete zřizovací balíček ochránit heslem.  Klikněte na **Vytvořit**.
+10. Volitelně můžete **Add applications** (Přidat aplikace) a **Add certificates** (Přidat certifikáty). Tyto aplikace a certifikáty se zřídí v zařízení.
+
+11. Volitelně můžete zřizovací balíček ochránit heslem.  Klikněte na **Vytvořit**.
     ![Snímek obrazovky s ochranou balíčku v aplikaci Windows Configuration Designer](./media/windows-bulk-enroll/bulk-enroll-create.png)
 
 ## <a name="provision-devices"></a>Zřízení zařízení

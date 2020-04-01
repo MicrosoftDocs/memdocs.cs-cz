@@ -5,623 +5,861 @@ description: Nastavení standardních hodnot zabezpečení, které Intune podpor
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/05/2019
+ms.date: 03/31/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: ''
-ms.reviewer: shpate
+ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7ebea853ac536b182a9cfe35e8b291aea3a776f0
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 897b232e841c59fd85d132d1fa9b720c24ac1c9a
+ms.sourcegitcommit: d601f4e08268d139028f720c0a96dadecc7496d5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79329051"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80488030"
 ---
 # <a name="microsoft-defender-advanced-threat-protection-baseline-settings-for-intune"></a>Základní nastavení pro Intune v programu Microsoft Defender Advanced Threat Protection
 
-Podívejte se na základní nastavení služby Microsoft Defender Advanced Threat Protection (dříve v programu Windows Defender Advanced Threat Protection), které podporuje Microsoft Intune. Výchozí hodnoty standardních hodnot rozšířené ochrany před internetovými útoky (ATP) znázorňují doporučenou konfiguraci ATP a nemusí odpovídat výchozím hodnotám pro jiné standardní hodnoty zabezpečení.  
+Zobrazit základní nastavení nástroje Microsoft Defender Advanced Threat Protection, která jsou podporována nástrojem Microsoft Intune. Výchozí hodnoty standardních hodnot rozšířené ochrany před internetovými útoky (ATP) znázorňují doporučenou konfiguraci ATP a nemusí odpovídat výchozím hodnotám pro jiné standardní hodnoty zabezpečení.
 
-Směrný plán rozšířené ochrany před internetovými útoky v programu Microsoft Defender je dostupný, když vaše prostředí splňuje požadavky na používání [rozšířené ochrany před internetovými útoky v programu Microsoft Defender](advanced-threat-protection.md#prerequisites). 
+Podrobnosti v tomto článku se týkají verze 3 standardních hodnot ATP v programu Microsoft Defender, který byl vydán 1. března 2020.
+
+Směrný plán rozšířené ochrany před internetovými útoky v programu Microsoft Defender je dostupný, když vaše prostředí splňuje požadavky na používání [rozšířené ochrany před internetovými útoky v programu Microsoft Defender](advanced-threat-protection.md#prerequisites).
 
 Tato standardní hodnota je optimalizovaná pro fyzická zařízení a v tuto chvíli se nedoporučuje používat na virtuálních počítačích (VM) nebo koncových bodech VDI. Určitá nastavení standardních hodnot můžou mít vliv na vzdálené interaktivní relace ve virtualizovaných prostředích. Další informace najdete v dokumentaci k Windows v tématu [zvýšení dodržování předpisů pro základní hodnoty zabezpečení služby Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) .
 
-## <a name="application-guard"></a>Ochrana Application Guard  
+## <a name="application-guard"></a>Ochrana Application Guard
+
 Další informace najdete v tématu [WINDOWSDEFENDERAPPLICATIONGUARD CSP](https://docs.microsoft.com/windows/client-management/mdm/windowsdefenderapplicationguard-csp) v dokumentaci k systému Windows.  
 
 Při používání Microsoft Edge Aplikace Microsoft Defender Application Guard chrání vaše prostředí od webů, které nedůvěřují vaší organizaci. Když uživatelé navštíví weby, které nejsou uvedené ve vaší izolované síti, lokality se otevřou v rámci virtuální relace procházení technologie Hyper-V. Důvěryhodné lokality jsou definovány pomocí hranice sítě.  
 
-- **Application Guard** - *Nastavení/AllowWindowsDefenderApplicationGuard*  
-  Pokud chcete tuto funkci zapnout, vyberte *Ano* . tím se otevřou nedůvěryhodné weby v kontejneru procházení virtualizované technologie Hyper-V. Pokud je nastavená na *nenakonfigurovaná*, v zařízení se otevře libovolná lokalita (důvěryhodná a nedůvěryhodná), a ne v virtualizovaném kontejneru.  
-
-  **Výchozí**: Ano
- 
-  - **Externí obsah na podnikových webech** - *Nastavení/BlockNonEnterpriseContent*  
-    Vyberte *Ano* , pokud chcete zablokovat obsah před načtením z neschválených webů. Pokud je nastavené na *není nakonfigurované*, můžou se v zařízení otevřít nepodnikové lokality. 
- 
-    **Výchozí**: Ano
-
-  - **Chování schránky** - *Nastavení/ClipboardSettings*  
-    Vyberte, které akce kopírování a vkládání jsou povolené mezi místním počítačem a virtuálním prohlížečem Application Guard.  Vaše možnosti jsou:
-    - Nenakonfigurované  
-    - Blokuje kopírování a vkládání mezi počítačem a prohlížečem – blok obojího. Data se nemůžou přenášet mezi počítačem a virtuálním prohlížečem.  
-    - Povolení kopírování a vkládání z prohlížeče pouze do počítačů – data nelze přenést z počítače do virtuálního prohlížeče.
-    - Povolení kopírování a vkládání z počítače jenom do prohlížeče – data se nemůžou přenášet z virtuálního prohlížeče na hostitelský počítač.
-    - Povoluje kopírování a vkládání mezi počítačem a prohlížečem – neexistuje žádný blok pro obsah.  
-
-    **Výchozí**: blokovat kopírování a vkládání mezi počítačem a prohlížečem  
-
-- **Zásady izolace sítě Windows – názvy podnikových síťových domén**  
-  Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – NetworkIsolation](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-networkisolation) .
+- **Zapnout ochranu Application Guard pro Edge (možnosti)**  
+  CSP: [Nastavení/AllowWindowsDefenderApplicationGuard](https://go.microsoft.com/fwlink/?linkid=872350)
   
-  Zadejte seznam podnikových prostředků jako domény, rozsahy IP adres a hranice sítě, které jsou hostované v cloudu, který Application Guard považuje za podnikové lokality.  
-
-  **Výchozí**: SecurityCenter.Windows.com
-
-## <a name="application-reputation"></a>Reputace aplikace  
-
-Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – filtr](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-smartscreen) .
-
-- **Zablokovat provádění neověřených souborů**  
-    Zablokuje uživateli spouštění neověřených souborů. Pokud je nastavení nastaveno na *Nenakonfigurováno*, zaměstnanci můžou ignorovat upozornění filtru SmartScreen a spouštět škodlivé soubory. Nastavte na *Ano* , aby zaměstnanci nemohli ignorovat upozornění filtru SmartScreen a spouštět škodlivé soubory.  
+  - **Povoleno pro Edge** (*výchozí*) – Application Guard otevírá neschválené weby v kontejneru procházení virtualizované technologie Hyper-V.
+  - **Nenakonfigurováno** – v zařízení se otevře žádná lokalita (důvěryhodná a nedůvěryhodná) a ne v virtualizovaném kontejneru.  
   
-    **Výchozí**: Ano
+  Když nastavíte možnost *Povolit pro Edge*, můžete nakonfigurovat *blokování externího obsahu od neschválených webů* a chování ve *schránce*od jiných organizací.
 
-- **Vyžadovat filtr SmartScreen pro aplikace a soubory**  
-  Nastavte na *Ano* , pokud chcete povolit filtr SmartScreen pro Windows.  
+  - **Zablokovat externí obsah od nepodnikových lokalit, které byly schváleny**  
+    CSP: [Nastavení/BlockNonEnterpriseContent](https://go.microsoft.com/fwlink/?linkid=872352)
 
-  **Výchozí**: Ano
+    - **Ano** (*výchozí*) – zablokuje načítání obsahu z neschválených webů.
+    - **Nenakonfigurováno** – na zařízení můžou být otevřené nepodnikové weby.
 
-## <a name="attack-surface-reduction"></a>Omezení možností útoku  
+  - **Chování schránky**  
+    CSP: [Nastavení/ClipboardSettings](https://go.microsoft.com/fwlink/?linkid=872351)
 
-- **Typ podřízeného procesu, který spouští aplikace Office**  
-  [Pravidlo pro omezení možností útoku](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) – Pokud je tato možnost nastavená na *blokovat*, nebudou moct aplikace Office vytvářet podřízené procesy. Aplikace Office zahrnují Word, Excel, PowerPoint, OneNote a Access. Vytvoření podřízeného procesu je typické chování při malwaru, zejména u útoků založených na makrech, které se pokoušejí použít aplikace Office ke spouštění nebo stahování škodlivých spustitelných souborů.  
+    Vyberte, které akce kopírování a vkládání jsou povolené mezi místním počítačem a virtuálním prohlížečem Application Guard. Vaše možnosti jsou:
+    - **Není nakonfigurováno**  
+    - **Zablokovat kopírování a vkládání mezi počítačem a prohlížečem** (*výchozí*) – zablokuje obojí. Data se nemůžou přenášet mezi počítačem a virtuálním prohlížečem.
+    - **Povolení kopírování a vkládání z prohlížeče pouze do počítačů** – data nelze přenést z počítače do virtuálního prohlížeče.
+    - **Povolení kopírování a vkládání z počítače jenom do prohlížeče** – data se nemůžou přenášet z virtuálního prohlížeče na hostitelský počítač.
+    - **Povoluje kopírování a vkládání mezi počítačem a prohlížečem** – neexistuje žádný blok pro obsah.
 
-  **Výchozí**: blok
+- **Zásady izolace sítě systému Windows**  
+  CSP: [zásady CSP – NetworkIsolation](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-networkisolation)
 
-- **Typ spuštění datové části staženého skriptu**  
-  [Defender/PUAProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection) – určete úroveň detekce potenciálně nežádoucích aplikací, které se stahují nebo pokoušejí nainstalovat.  
+  Zadejte seznam *domén sítě*, což jsou podnikové prostředky hostované v cloudu, které Application Guard považuje za podnikové lokality.
+  - **Konfigurace** (*výchozí*)
+  - **Nenakonfigurované**
 
-  **Výchozí**: blok 
+  Po nastavení *Konfigurace* můžete definovat *síťové domény*.
 
-- **Zabránit krádeži pověření typu**  
-  Nastavením této možnost *povolíte* [ochranu odvozených přihlašovacích údajů domény s ochranou přihlašovacích údajů](https://docs.microsoft.com/windows/security/identity-protection/credential-guard/credential-guard). Ochrana přihlašovacích údajů v programu Microsoft Defender používá zabezpečení na základě virtualizace k izolaci tajných kódů, aby k nim měli přístup jenom privilegovaný systémový software. Neoprávněný přístup k těmto tajným klíčům může vést k útokům krádeže přihlašovacích údajů, jako je například pass-the-hash nebo Pass-The-Ticket. Ochrana přihlašovacích údajů v programu Microsoft Defender brání těmto útokům ochranou hodnot hash hesla NTLM, lístků pro udělení lístku Kerberos a přihlašovacích údajů uložených aplikacemi jako přihlašovací údaje domény.  
+  - **Síťové domény**  
+    Vyberte **Přidat** a zadejte domény, rozsahy IP adres a síťové hranice. Ve výchozím nastavení je *SecurityCenter.Windows.com* nakonfigurovaný.
 
-  **Výchozí**: Povolit
+## <a name="bitlocker"></a>BitLocker
 
-- **Zpracování obsahu e-mailu**  
-  [Pravidlo pro omezení možností útoku](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) – Pokud je nastaveno na *blokovat*, toto pravidlo blokuje spouštění nebo spouštění těchto typů souborů z e-mailu, který se zobrazuje v aplikaci Microsoft Outlook nebo webové pošty (například Gmail.com nebo Outlook.com):  
+Další informace najdete v dokumentaci k Windows v části [nastavení zásady skupiny BitLockeru](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-group-policy-settings) .
 
-  - Spustitelné soubory (například. exe,. dll nebo. scr)  
-  - Soubory skriptu (například PowerShell. PS, VisualBasic. vbs nebo JavaScript. js)  
-  - Soubory archivu skriptu  
+- **Vyžadovat šifrování paměťových karet (jenom mobilní zařízení)**  
+  CSP: [RequireStorageCardEncryption](https://go.microsoft.com/fwlink/?linkid=872524)
 
-  **Výchozí**: blok
+  Toto nastavení platí pouze pro zařízení se systémem Windows Mobile a Mobile Enterprise SKU.
+  - **Ano** (*výchozí*) – pro mobilní zařízení se vyžadují šifrování u paměťových karet.
+  - **Nenakonfigurováno** – nastavení se vrátí k VÝCHOZÍmu operačnímu systému, což nepožaduje šifrování paměťové karty.
 
-- **Spuštění aplikace Adobe Reader v podřízeném procesu**  
-  [Pravidlo pro omezení možností útoku](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) – *Povolit* tomuto pravidlu blokovat vytváření podřízeného procesu aplikaci Adobe Reader. Prostřednictvím sociálního inženýrství nebo zneužití může malware stahovat a spouštět další datové části a přerušit z aplikace Adobe Reader.  
+- **Povolení úplného šifrování disku pro operační systém a pevné datové jednotky**  
+  CSP: [RequireDeviceEncryption](https://go.microsoft.com/fwlink/?linkid=872523)
 
-  **Výchozí**: Povolit
+  Pokud byla jednotka zašifrovaná předtím, než se tato zásada použila, neprovádí se žádná další akce. Pokud metoda šifrování a možnosti odpovídají této zásadě, měla by konfigurace vrátit úspěch. Pokud možnost místní konfigurace BitLockeru neodpovídá těmto zásadám, konfigurace nejspíš vrátí chybu.
+  
+  Pokud chcete tuto zásadu použít na disk, který je už zašifrovaný, dešifrujte jednotku a znovu použijte zásady MDM. Výchozí nastavení systému Windows není vyžadovat nástroj BitLocker Drive Encryption, ale při připojení ke službě Azure AD a automatickém šifrování účtu Microsoft (MSA) se může povolit BitLocker při použití šifrování XTS-AES 128-bit.
 
-- **Skript zakódováného kódu makra**  
-  [Pravidlo pro omezení možností útoku](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) – malware a další hrozby se mohou pokusit dekódovat nebo skrýt škodlivý kód v některých souborech skriptu. Toto pravidlo zabrání spuštění skriptů, které se jeví jako nepoužívané.  
-    
-  **Výchozí**: blok
+  - **Ano** (*výchozí*) – vynutilo použití BitLockeru.
+  - **Nenakonfigurováno** – žádné vynucení BitLockeru neproběhne.
 
-- **Nedůvěryhodný proces USB**  
-  [Pravidlo pro omezení možností útoku](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) – když se nastaví *blokování*, nepodepsané nebo nedůvěryhodné spustitelné soubory z vyměnitelných jednotek USB a karty SD nejdou spustit.
+- **Zásada systémové jednotky BitLockeru**  
+  [Nastavení Zásady skupiny BitLockeru](https://go.microsoft.com/fwlink/?linkid=2067025)
 
-  Mezi spustitelné soubory patří:
-  - Spustitelné soubory (například. exe,. dll nebo. scr)
-  - Soubory skriptu (například PowerShell. PS, VisualBasic. vbs nebo JavaScript. js)  
+  - **Konfigurace** (*výchozí*)
+  - **Nenakonfigurované**
 
-  **Výchozí**: blok
+  Po nastavení *Konfigurace*můžete nakonfigurovat *metodu šifrování pro jednotky operačního systému*.
 
-- **Vkládání dalších procesů v aplikacích Office**  
-  [Pravidlo pro omezení možností útoku](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) – když se nastaví *blokování*, aplikace Office, včetně Wordu, Excelu, PowerPointu a OneNotu, nejde vložit kód do jiných procesů. Vkládání kódu obvykle používá malware ke spouštění škodlivého kódu při pokusu o skrytí aktivity z skenovacích modulů antivirového programu.  
+  - **Konfigurace metody šifrování pro jednotky operačního systému**  
+    CSP: [EncryptionMethodByDriveType](https://go.microsoft.com/fwlink/?linkid=872526)  
+    Toto nastavení je k dispozici, když je *zásada systémové jednotky nástroje BitLocker* nastavena na hodnotu *Konfigurovat*.  
 
-  **Výchozí**: blok
+    Nakonfigurujte metodu šifrování a sílu šifrování pro systémové jednotky.  *XTS-AES 128-bit* je výchozí metodou šifrování Windows a doporučenou hodnotou.
 
-- **Kód makra Office Allow importy Win32**  
-  [Pravidlo pro omezení možností útoku](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) – Pokud je nastaveno na *blokovat*, toto pravidlo se pokusí blokovat soubory Office, které obsahují kód makra, který může importovat knihovny DLL Win32. Soubory Office zahrnují Word, Excel, PowerPoint a OneNote. Malware může pomocí kódu makra v souborech Office importovat a načítat knihovny DLL Win32, které se pak používají k umožnění dalších infekcí v celém systému v rámci volání rozhraní API.  
+    - **Nenakonfigurováno** (*výchozí*)
+    - **128bit CBC AES**
+    - **256bit CBC AES**
+    - **128bit XTS AES**
+    - **256bit XTS AES**
 
-  **Výchozí**: blok
+- **Zásady pevné jednotky BitLockeru**  
+  [Nastavení Zásady skupiny BitLockeru](https://go.microsoft.com/fwlink/?linkid=2067018)
 
-- **Aplikace Office Communications se spouští v podřízeném procesu**  
-  [Pravidlo pro omezení možností útoku](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) – Pokud je nastaveno na *Povolit*, toto pravidlo zabrání aplikaci Outlook v vytváření podřízených procesů. Blokováním vytvoření podřízeného procesu toto pravidlo chrání proti útokům prostřednictvím sociálního inženýrství a brání zneužití kódu v aplikaci Outlook k zneužití ohrožení zabezpečení.  
+  - **Konfigurace** (*výchozí*)
+  - **Nenakonfigurované**
 
-  **Výchozí**: Povolit
+  Když nastavíte *konfiguraci*, můžete nakonfigurovat *přístup zablokování na pevné datové jednotky, které nechrání BitLocker* , a *nakonfigurovat metodu šifrování pro pevné datové jednotky*.
 
-- **Vytvoření nebo spuštění spustitelného obsahu aplikací Office**  
-  [Pravidlo pro omezení možností útoku](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) – Pokud je nastavené *blokování*, aplikace Office nemůžou vytvářet spustitelný obsah. Aplikace Office zahrnují Word, Excel, PowerPoint, OneNote a Access.  
+  - **Blokovat přístup pro zápis na pevné datové jednotky, které nechrání BitLocker**  
+    CSP: [FixedDrivesRequireEncryption](https://go.microsoft.com/fwlink/?linkid=872534)  
+    Toto nastavení je k dispozici, když je *zásada pevná jednotka nástroje BitLocker* nastavená na hodnotu *Konfigurovat*.
 
-  Toto pravidlo cílí na typické chování používané podezřelými a zlomyslnými doplňky a skripty (rozšíření), které vytvářejí nebo spouštějí spustitelné soubory. Toto je typická antimalwarová technika. Používání rozšíření je pro aplikace Office blokované. Tato rozšíření obvykle používají skripty Windows Scripting Host (soubory. WSH) ke spouštění skriptů, které automatizují určité úlohy nebo poskytují uživatelsky vytvořené funkce doplňku.
+    - **Nenakonfigurováno** (*výchozí*) – data je možné zapsat na nešifrované pevné jednotky.
+    - **Ano** – Windows nebude umožňovat zápis jakýchkoli dat na pevné jednotky, které nejsou chráněné bitlockerem. Pokud pevná jednotka není šifrovaná, bude uživatel muset před udělením přístupu pro zápis dokončit průvodce nastavením BitLockeru jednotky.
 
-  **Výchozí**: blok
+  - **Konfigurace metody šifrování pro pevné datové jednotky**  
+    CSP: [EncryptionMethodByDriveType](h https://go.microsoft.com/fwlink/?linkid=872526)  
+    Toto nastavení je k dispozici, když je *zásada pevná jednotka nástroje BitLocker* nastavená na hodnotu *Konfigurovat*.
 
-## <a name="bitlocker"></a>BitLocker  
+    Nakonfigurujte metodu šifrování a sílu šifrování pro disky s pevnými datovými jednotkami. *XTS-AES 128-bit* je výchozí metodou šifrování Windows a doporučenou hodnotou.
 
-Další informace najdete v dokumentaci k Windows v části [nastavení zásady skupiny BitLockeru](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-group-policy-settings) .  
+    - **Nenakonfigurováno** (*výchozí*)
+    - **128bit CBC AES**
+    - **256bit CBC AES**
+    - **128bit XTS AES**
+    - **256bit XTS AES**
 
-- **Šifrovat zařízení**  
-  Vyberte *Ano* , pokud chcete povolit šifrování zařízení nástrojem BitLocker. V závislosti na hardwaru zařízení a verzi Windows můžou být uživatelé zařízení požádáni o potvrzení, že zařízení nemá žádné šifrování třetích stran. Zapnutí šifrování Windows, když je aktivní šifrování třetích stran, vykreslí nestabilní zařízení.  
+- **Zásada pro vyměnitelné jednotky BitLockeru**  
+  [Nastavení Zásady skupiny BitLockeru](https://go.microsoft.com/fwlink/?linkid=2067140)
 
-   **Výchozí**: Ano
+  - **Konfigurace** (*výchozí*)
+  - **Nenakonfigurované**
 
-- **Zásada pro vyměnitelné jednotky služby bit Lock**  
-  Hodnoty pro tuto zásadu určují sílu šifry, kterou BitLocker používá k šifrování vyměnitelných jednotek. Podniky řídí úroveň šifrování pro zvýšené zabezpečení (AES-256 je silnější než AES-128). Pokud pro povolení tohoto nastavení vyberete *Ano* , můžete nakonfigurovat šifrovací algoritmus a složitost klíče pro pevné datové jednotky, jednotky operačního systému a vyměnitelné datové jednotky jednotlivě. U pevných jednotek operačního systému doporučujeme použít algoritmus XTS-AES. U vyměnitelných jednotek byste měli použít algoritmus AES-CBC 128-bit nebo AES-CBC 256-bit, pokud se jednotka používá v jiných zařízeních, na kterých běží Windows 10, verze 1511 nebo novější. Změna metody šifrování nemá žádný vliv, pokud je jednotka již zašifrovaná nebo pokud probíhá šifrování. V těchto případech se nastavení této zásady ignoruje. 
+  Po nastavení *Konfigurace*můžete nakonfigurovat *metodu šifrování pro vyměnitelné datové jednotky* a *zablokovat přístup pro zápis na vyměnitelné datové jednotky, které nechrání BitLocker*.
 
-  V případě zásad vyměnitelného disku pro službu bit Lock nakonfigurujte následující nastavení:
+  - **Konfigurace metody šifrování pro vyměnitelné datové jednotky**  
+    CSP: [EncryptionMethodByDriveType](https://go.microsoft.com/fwlink/?linkid=872526)  
+    Toto nastavení je dostupné, když je *zásada vyměnitelné jednotky BitLockeru* nastavená na *Konfigurovat*.
 
-  - **Vyžadovat šifrování pro přístup pro zápis**  
-    **Výchozí**: Ano
+    Nakonfigurujte metodu šifrování a sílu šifrování pro disky vyměnitelných datových jednotek. *XTS-AES 128-bit* je výchozí metodou šifrování Windows a doporučenou hodnotou.
 
-  - **Metoda šifrování**  
-    **Výchozí**: AES 128bit CBC
+    - **Nenakonfigurované**
+    - **128bit CBC AES**
+    - **AES 256BIT CBC** (*výchozí*)
+    - **128bit XTS AES**
+    - **256bit XTS AES**
 
-- **Šifrování paměťové karty (jenom mobilní zařízení)** Vyberete-li možnost *Ano* , bude zašifrována paměťová karta mobilního zařízení.  
+  - **Zablokovat přístup pro zápis na vyměnitelné datové jednotky, které nechrání BitLocker**  
+    CSP: [RemovableDrivesRequireEncryption](https://go.microsoft.com/fwlink/?linkid=872540)  
+    Toto nastavení je dostupné, když je *zásada vyměnitelné jednotky BitLockeru* nastavená na *Konfigurovat*.
 
-   **Výchozí**: Ano
+    - **Nenakonfigurováno** (*výchozí*) – data je možné zapsat na nešifrované vyměnitelné jednotky.  
+    - **Ano** – Windows neumožní zapsat žádná data na vyměnitelné jednotky, které nejsou chráněné bitlockerem. Pokud není vyměnitelná jednotka šifrovaná, musí uživatel před udělením přístupu pro zápis dokončit průvodce nastavením BitLockeru jednotky.
 
-- **Zásada pro pevný disk pro nastavení bitových zámků**  
-  Hodnoty pro tuto zásadu určují sílu šifry, kterou BitLocker používá k šifrování pevných jednotek. Podniky můžou řídit úroveň šifrování pro zvýšené zabezpečení (AES-256 je silnější než AES-128). Pokud povolíte toto nastavení, můžete nakonfigurovat šifrovací algoritmus a složitost klíče pro pevné datové jednotky, jednotky operačního systému a vyměnitelné datové jednotky. U pevných jednotek operačního systému doporučujeme použít algoritmus XTS-AES. U vyměnitelných jednotek byste měli použít algoritmus AES-CBC 128-bit nebo AES-CBC 256-bit, pokud se jednotka používá v jiných zařízeních, na kterých běží Windows 10, verze 1511 nebo novější. Změna metody šifrování nemá žádný vliv, pokud je jednotka již zašifrovaná nebo pokud probíhá šifrování. V těchto případech se nastavení této zásady ignoruje.
+## <a name="browser"></a>Prohlížeč
 
-  U zásad pevného disku pro pevný zámek nakonfigurujte následující nastavení:
+- **Vyžadovat filtr SmartScreen pro Microsoft Edge**  
+  CSP: [browser/AllowSmartScreen](https://go.microsoft.com/fwlink/?linkid=2067029)
 
-  - **Vyžadovat šifrování pro přístup pro zápis**  
-    **Výchozí**: Ano
+  - **Ano** (*výchozí*) – pomocí filtru SmartScreen ochráníte uživatele před potenciálními podvodnými zprávami a škodlivým softwarem.
+  - **Nenakonfigurované**
 
-  - **Metoda šifrování**  
-    **Výchozí**: AES 128bit XTS
+- **Blokovat přístup ke škodlivému webu**  
+  CSP: [browser/PreventSmartScreenPromptOverride](https://go.microsoft.com/fwlink/?linkid=2067040)  
 
-- **Zásady systémových jednotek systému bitových zámků**  
-  Hodnoty pro tuto zásadu určují sílu šifry, kterou BitLocker používá k šifrování systémové jednotky. Podniky můžou chtít řídit úroveň šifrování pro zvýšené zabezpečení (AES-256 je silnější než AES-128). Pokud povolíte toto nastavení, můžete nakonfigurovat šifrovací algoritmus a složitost klíče pro pevné datové jednotky, jednotky operačního systému a vyměnitelné datové jednotky. U pevných jednotek operačního systému doporučujeme použít algoritmus XTS-AES. U vyměnitelných jednotek byste měli použít algoritmus AES-CBC 128-bit nebo AES-CBC 256-bit, pokud se jednotka používá v jiných zařízeních, na kterých běží Windows 10, verze 1511 nebo novější. Změna metody šifrování nemá žádný vliv, pokud je jednotka již zašifrovaná nebo pokud probíhá šifrování. V těchto případech se nastavení této zásady ignoruje.  
+  - **Ano** (*výchozí*) – zablokuje uživatelům ignorovat upozornění filtru SmartScreen v programu Microsoft Defender a zablokuje jejich přesun na web.
+  - **Nenakonfigurované**
 
-  U zásad systémových jednotek systému bitových zámků nakonfigurujte následující nastavení:  
+- **Blokovat stahování neověřených souborů**  
+  CSP: [browser/PreventSmartScreenPromptOverrideForFiles](https://go.microsoft.com/fwlink/?linkid=2067023)  
 
-  - **Metoda šifrování**  
-    **Výchozí**: AES 128bit XTS
+  - **Ano** (*výchozí*) – zablokuje uživatelům ignorovat upozornění filtru SmartScreen v programu Microsoft Defender a zablokuje stahování neověřených souborů.
+  - **Nenakonfigurované**
 
-## <a name="device-control"></a>Řízení zařízení  
-
-- **Kontrolovat vyměnitelné jednotky během úplného prohledávání**  
-  [Defender/AllowFullScanRemovableDriveScanning](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowfullscanremovabledrivescanning) – Pokud je tato hodnota nastavená na *Ano*, Defender při úplné kontrole vyhledává škodlivý a nežádoucí software ve vyměnitelných jednotkách, jako jsou jednotky Flash. Antivirová ochrana v programu Defender kontroluje všechny soubory na zařízeních USB předtím, než je možné spustit soubory na zařízení USB.
-
-  Související nastavení v tomto seznamu: *Defender/AllowFullScanOnMappedNetworkDrives*  
-
-  **Výchozí**: Ano
-
-- **Výčet externích zařízení nekompatibilních s režimem ochrany DMA v jádře**  
-   Viz *DmaGuard/DeviceEnumerationPolicy* v [zásadách CSP – DmaGuard](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dmaguard#dmaguard-deviceenumerationpolicy)
-
-  Tato zásada poskytuje další zabezpečení proti externímu zařízení podporujícím technologii DMA. Umožňuje lepší kontrolu nad výčtem externích zařízení podporujících technologii DMA, která nejsou kompatibilní s izolací paměti zařízení DMA a sandboxing.
-
-  Tato zásada se projeví jenom v případě, že je ochrana DMA pro jádro podporovaná a povolená systémovým firmwarem. Ochrana před/s rozhraním DMA je funkce platformy, kterou nemůže řídit zásada ani uživatel zařízení. Musí být podporovaný systémem v době výroby. 
-
-  Chcete-li zkontrolovat, zda systém podporuje ochranu před režimem DMA, spusťte příkaz MSINFO32. exe v systému a na stránce Souhrn zkontrolujte pole *ochrana jádra DMA* .  
-
-  Vaše možnosti jsou: 
-  - *Výchozí nastavení zařízení* – po přihlášení nebo odemknutí obrazovky se můžou kdykoli zobrazit výčet zařízení s přemapováním DMA na kompatibilní ovladače. Zařízení s přemapováním DMA na nekompatibilní ovladače se zobrazí jenom poté, co uživatel odemkne obrazovku.
-  - Možnost *povolení všech* externích zařízení s podporou přímého přístupu do paměti (DMA) se v každém okamžiku vyčíslí.
-  - *Blokování všech* zařízení s přemapováním DMA kompatibilních ovladačů se smí kdykoli zobrazit. Zařízení s přemapováním DMA na nekompatibilní ovladače nikdy nebudou moct spouštět a používat DMA kdykoli.
-
-  **Výchozí**: výchozí nastavení zařízení
-
-- **Instalace hardwarových zařízení podle identifikátorů zařízení**  
-  [DeviceInstallation/PreventInstallationOfMatchingDeviceIDs](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deviceinstallation#deviceinstallation-preventinstallationofmatchingdeviceids) – pomocí této zásady určíte seznam technologie Plug and Play ID hardwaru a kompatibilní ID pro zařízení, na která se systém Windows brání v instalaci. Nastavení této zásady má přednost před jinými nastaveními zásad, která umožňují systému Windows nainstalovat zařízení. Pokud toto nastavení zásad povolíte (nastavíte k *blokování instalace hardwarového zařízení*), Windows se znemožní nainstalovat zařízení, jehož ID hardwaru nebo kompatibilní ID se zobrazí v seznamu, který vytvoříte. Pokud nastavení této zásady povolíte na vzdáleném počítači, zásada má vliv na přesměrování zadaných zařízení z klienta vzdálené plochy na server vzdálené plochy. Pokud nastavení této zásady zakážete nebo nenakonfigurujete (nastavíte možnost *Povolit instalaci hardwarového zařízení*), zařízení mohou instalovat a aktualizovat, jak je povoleno nebo zakázáno jinými nastaveními zásad.  
-
-  **Výchozí**: blokovat instalaci hardwarového zařízení  
-
-  Když je vybraná možnost *blokovat instalaci hardwarového zařízení* , jsou k dispozici následující nastavení.
-  - **Odebrat shodná hardwarová zařízení**  
-    Toto nastavení je dostupné, jenom když je *Instalace hardwarového zařízení podle identifikátorů zařízení* nastavená tak, aby *blokovala instalaci hardwarového zařízení*.  
-
-    **Výchozí**: Ano
-
-  - **Blokované identifikátory hardwarových zařízení**  
-    Toto nastavení je dostupné, jenom když je *Instalace hardwarového zařízení podle identifikátorů zařízení* nastavená tak, aby *blokovala instalaci hardwarového zařízení*. Pokud chcete nakonfigurovat toto nastavení, rozbalte možnost, vyberte **+ Přidat**a pak zadejte identifikátor hardwarového zařízení, který chcete blokovat.  
-
-    **Výchozí**: PCI \ CC_0C0A
+## <a name="data-protection"></a>Data Protection
 
 - **Zablokovat přímý přístup do paměti**  
-  [DataProtection/AllowDirectMemoryAccess](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dataprotection#dataprotection-allowdirectmemoryaccess) – pomocí tohoto nastavení zásad můžete zablokovat přímý přístup do paměti (DMA) pro všechny horké porty PCI pro příjem dat na zařízení, dokud se uživatel nepřipojí do Windows. Jakmile se uživatel přihlásí, Windows Vypíše zařízení PCI připojená k portům plug-in hostitele PCI. Pokaždé, když uživatel zamkne počítač, je přímý přístup do zásuvky na konektorech PCI bez podřízených zařízení blokovaný, dokud se uživatel znovu nepřipojí. Zařízení, která už jsou ve výčtu, když se počítač odemkne, bude dál fungovat, dokud nebude odpojený. 
+  CSP: [DataProtection/AllowDirectMemoryAccess](https://go.microsoft.com/fwlink/?linkid=2067031)  
 
-  Nastavení této zásady se vynutilo jenom v případě, že je povolené BitLocker nebo šifrování zařízení.  
+  Nastavení této zásady se vynutilo jenom v případě, že je povolené BitLocker nebo šifrování zařízení.
 
-  **Výchozí**: Ano
+  - **Ano** (*výchozí*) – zablokuje přímý přístup do paměti (DMA) pro všechny horké porty PCI pro příjem po dobu, kdy se uživatel do Windows přihlásí. Jakmile se uživatel přihlásí, systém Windows zobrazí zařízení PCI připojená k portům plug-in hostitele. Pokaždé, když uživatel zamkne počítač, je přímý přístup do zásuvky na konektorech PCI bez podřízených zařízení blokovaný, dokud se uživatel znovu nepřipojí. Zařízení, která už jsou ve výčtu, když se počítač odemkne, bude dál fungovat, dokud nebude odpojený.
+  - **Nenakonfigurované**
 
+## <a name="device-guard"></a>Ochrana zařízení  
 
-- **Instalace hardwarových zařízení pomocí tříd instalace**  
-  [DeviceInstallation/AllowInstallationOfMatchingDeviceSetupClasses](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deviceinstallation#deviceinstallation-allowinstallationofmatchingdevicesetupclasses) – pomocí této zásady můžete zadat seznam globálně jedinečných identifikátorů (GUID) třídy nastavení zařízení pro ovladače zařízení, které systém Windows znemožňuje nainstalovat. Nastavení této zásady má přednost před jinými nastaveními zásad, která umožňují systému Windows nainstalovat zařízení. Pokud toto nastavení zásad povolíte (nastavíte k *blokování instalace hardwarového zařízení*), systém Windows znemožní instalaci nebo aktualizaci ovladačů zařízení, jejichž identifikátory GUID třídy nastavení zařízení se zobrazí v seznamu, který vytvoříte. Pokud nastavení této zásady povolíte na vzdáleném počítači, nastavení zásad bude mít vliv na přesměrování zadaných zařízení z klienta vzdálené plochy na server vzdálené plochy. Pokud nastavení této zásady zakážete nebo nenakonfigurujete (nastavíte možnost *Povolit instalaci hardwarového zařízení*), může systém Windows instalovat a aktualizovat zařízení podle povolených nebo zabránících jiným nastavením zásad.  
+- **Zapnout ochranu Credential Guard**  
+  CSP: [DeviceGuard/ConfigureSystemGuardLaunch](https://go.microsoft.com/fwlink/?linkid=872424)
 
-  **Výchozí**: blokovat instalaci hardwarového zařízení
+  Credential Guard používá hypervisor Windows k poskytování ochrany, která vyžaduje ochranu pomocí zabezpečeného spouštění a ochrany DMA, což vyžaduje splnění požadavků na hardware.
 
-  Když je vybraná možnost *blokovat instalaci hardwarového zařízení* , jsou k dispozici následující nastavení.  
+  - **Nenakonfigurováno** – zakažte použití Credential Guard, což je výchozí nastavení systému Windows.
+  - **Povolit s zámkem UEFI** (*výchozí*) – povolí ochranu přihlašovacích údajů a neumožní její vzdálené zakázání, protože konfiguraci rozhraní UEFI trvalá musí být ručně smazána.
+  - **Povolit bez zámku UEFI** – povolí ochranu přihlašovacích údajů a povolí, aby bylo vypnuté bez fyzického přístupu k počítači.
 
-  - **Odebrat shodná hardwarová zařízení**  
-    Toto nastavení je dostupné, jenom když je *Instalace hardwarového zařízení podle instalačních tříd* nastavená tak, aby *blokovala instalaci hardwarového zařízení*.  
- 
-    **Výchozí**: Ano  
+## <a name="device-installation"></a>Instalace zařízení
+
+- **Instalace hardwarových zařízení podle identifikátorů zařízení**  
+  [DeviceInstallation/PreventInstallationOfMatchingDeviceIDs](h https://go.microsoft.com/fwlink/?linkid=2066794)  
+  
+  Toto nastavení zásad umožňuje zadat seznam technologie Plug and Play ID hardwaru a kompatibilní ID pro zařízení, na která systém Windows znemožňuje instalaci. Nastavení této zásady má přednost před jinými nastaveními zásad, která umožňují systému Windows nainstalovat zařízení.  Pokud nastavení této zásady povolíte na vzdáleném počítači, nastavení zásad bude mít vliv na přesměrování zadaných zařízení z klienta vzdálené plochy na server vzdálené plochy.
+
+  - **Nenakonfigurované**
+  - **Povolit instalaci hardwarového zařízení** – zařízení je možné nainstalovat a aktualizovat tak, aby byla povolená nebo zabrání jiným nastavením zásad.
+  - **Blokovat instalaci hardwarového zařízení** (*výchozí*) – systému Windows se znemožní nainstalovat zařízení, jehož ID hardwaru nebo kompatibilní ID se zobrazí v seznamu, který definujete.
+
+  Pokud je nastavená možnost *blokovat instalaci hardwarového zařízení* , můžete nakonfigurovat *Odebrání odpovídající hardwarových zařízení* a *identifikátorů hardwarových zařízení, které jsou blokované*.
+
+  - **Odebrat shodná hardwarová zařízení**
+
+    Toto nastavení je dostupné, jenom když je *Instalace hardwarového zařízení podle identifikátorů zařízení* nastavená tak, aby *blokovala instalaci hardwarového zařízení*.
+    - **Ano**
+    - **Nenakonfigurované**
 
   - **Blokované identifikátory hardwarových zařízení**  
-    Toto nastavení je dostupné, jenom když je instalace hardwarového zařízení podle instalačních tříd nastavená tak, aby blokovala instalaci hardwarového zařízení. Pokud chcete nakonfigurovat toto nastavení, rozbalte možnost, vyberte **+ Přidat**a pak zadejte identifikátor hardwarového zařízení, který chcete blokovat.  
- 
-    **Výchozí**: {D48179BE-EC20-11D1-B6B8-00C04FA372A7}
+    
+    Toto nastavení je dostupné, jenom když je *Instalace hardwarového zařízení podle identifikátorů zařízení* nastavená tak, aby *blokovala instalaci hardwarového zařízení*.
 
-## <a name="endpoint-detection-and-response"></a>Zjištění a odpověď koncového bodu  
-Další informace najdete v tématu [WINDOWSADVANCEDTHREATPROTECTION CSP](https://docs.microsoft.com/windows/client-management/mdm/windowsadvancedthreatprotection-csp) v dokumentaci k systému Windows.  
+    Vyberte **Přidat**a pak zadejte identifikátor hardwarového zařízení, který chcete blokovat.
 
-- **Urychlení četnosti hlášení telemetrie** - *Konfigurace/TelemetryReportingFrequency*
+- **Instalace hardwarových zařízení pomocí tříd instalace**  
+  CSP: [DeviceInstallation/AllowInstallationOfMatchingDeviceSetupClasses](https://go.microsoft.com/fwlink/?linkid=2067048)  
+  
+  Nastavení této zásady umožňuje zadat seznam globálně jedinečných identifikátorů (GUID) třídy nastavení zařízení pro ovladače zařízení, které systém Windows znemožňuje nainstalovat. Nastavení této zásady má přednost před jinými nastaveními zásad, která umožňují systému Windows nainstalovat zařízení. Pokud nastavení této zásady povolíte na vzdáleném počítači, nastavení zásad bude mít vliv na přesměrování zadaných zařízení z klienta vzdálené plochy na server vzdálené plochy.
+
+  - **Nenakonfigurované**
+  - **Povolit instalaci hardwarového zařízení** – systém Windows může nainstalovat a aktualizovat zařízení podle povolených nebo zabránících jiným nastavením zásad.
+  - **Zablokovat instalaci hardwarového zařízení** (*výchozí*) – systém Windows znemožní instalaci zařízení, jejichž identifikátory GUID třídy nastavení se zobrazí v seznamu, který definujete.
+
+  Pokud je nastavená možnost *blokovat instalaci hardwarového zařízení* , můžete nakonfigurovat *Odebrání odpovídající hardwarových zařízení* a *identifikátorů hardwarových zařízení, které jsou blokované*.
+
+  - **Odebrat shodná hardwarová zařízení**
+
+    Toto nastavení je dostupné, jenom když je *Instalace hardwarového zařízení podle identifikátorů zařízení* nastavená tak, aby *blokovala instalaci hardwarového zařízení*.
+    - **Ano**
+    - **Nenakonfigurované**
+
+  - **Blokované identifikátory hardwarových zařízení**
+
+    Toto nastavení je dostupné, jenom když je *Instalace hardwarového zařízení podle identifikátorů zařízení* nastavená tak, aby *blokovala instalaci hardwarového zařízení*.
+
+    Vyberte **Přidat**a pak zadejte identifikátor hardwarového zařízení, který chcete blokovat.
+
+## <a name="dma-guard"></a>Ochrana DMA
+
+- **Výčet externích zařízení nekompatibilních s režimem ochrany DMA v jádře**  
+  CSP: [DmaGuard/DeviceEnumerationPolicy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dmaguard#dmaguard-deviceenumerationpolicy)
+
+  Tato zásada může poskytovat další zabezpečení proti externímu zařízení podporujícím technologii DMA. Umožňuje lepší kontrolu nad výčtem externích zařízení s technologií DMA, která nejsou kompatibilní s přemapováním DMA/izolací paměti zařízení a sandboxing.
+  
+  Tato zásada se projeví jenom v případě, že je ochrana DMA pro jádro podporovaná a povolená systémovým firmwarem. Ochrana pomocí rozhraní DMA pro jádro je funkce platformy, kterou musí systém podporovat v době výroby. Pokud chcete zjistit, jestli systém podporuje ochranu před nejenom jádrem, na stránce Souhrn v souboru MSINFO32. exe se podívejte na pole ochrana pro jádro DMA.
+
+  - **Nenakonfigurováno** – (*výchozí*)
+  - **Blokovat vše**
+  - **Povolení všech**
+
+## <a name="endpoint-detection-and-response"></a>Zjištění a odpověď koncového bodu
+
+Další informace o následujících nastaveních najdete v tématu [WindowsAdvancedThreatProtection](https://docs.microsoft.com/windows/client-management/mdm/windowsadvancedthreatprotection-csp) CSP v dokumentaci k systému Windows.
+
+- **Sdílení ukázky pro všechny soubory**  
+  CSP: [Configuration/SampleSharing](https://docs.microsoft.com/windows/client-management/mdm/windowsadvancedthreatprotection-csp)
+
+  Vrátí nebo nastaví parametr konfigurace sdílení ukázky rozšířené ochrany před internetovými útoky v programu Microsoft Defender.  
+  
+  - **Ano** (*výchozí*)
+  - **Nenakonfigurované**
+
+- **Urychlení četnosti vytváření sestav telemetrie**  
+  CSP: [Configuration/TelemetryReportingFrequency](https://docs.microsoft.com/windows/client-management/mdm/windowsadvancedthreatprotection-csp)
 
   Urychlení generování sestav telemetrie rozšířené ochrany před internetovými útoky v programu Microsoft Defender  
 
-  **Výchozí**: Ano
+  - **Ano** (*výchozí*)
+  - **Nenakonfigurované**
 
-- **Sdílení ukázky pro všechny soubory** - *Configuration/SampleSharing* 
+## <a name="firewall"></a>Brána firewall
 
-  Vrátí nebo nastaví parametr konfigurace sdílení ukázky rozšířené ochrany před internetovými útoky v programu Microsoft Defender.  
-
-  **Výchozí**: Ano
-
-## <a name="exploit-protection"></a>Ochrana před zneužitím  
-
-- **XML ochrany před zneužitím**  
-  Další informace najdete v tématu [Import, export a nasazení konfigurací ochrany před zneužitím](/windows/security/threat-protection/microsoft-defender-atp/import-export-exploit-protection-emet-xml) v dokumentaci k Windows.  
-
-  Umožňuje správci IT nabízet konfiguraci, která představuje požadované možnosti zmírnění systému a aplikace pro všechna zařízení v organizaci. Konfigurace je reprezentovaná kódem XML. 
-
-  Použití ochrany před zneužitím pomáhá chránit zařízení před malwarem, který využívá zneužití k rozšíření a nakazit. Pomocí aplikace zabezpečení systému Windows nebo PowerShellu vytvoříte sadu zmírnění hrozeb (označované jako konfigurace). Tuto konfiguraci pak můžete exportovat jako soubor XML a sdílet ho s více počítači ve vaší síti, aby všichni měli stejnou sadu nastavení pro zmírnění rizik.
- 
-  Existující konfigurační soubor XML nástroje EMET můžete také převést a importovat do konfiguračního souboru XML ochrany před zneužitím.
-
-- **Přepsat ochranu před zneužitím blokování**  
-  [WindowsDefenderSecurityCenter/DisallowExploitProtectionOverride](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#windowsdefendersecuritycenter-disallowexploitprotectionoverride) – nastavte na *hodnotu Ano* , pokud chcete uživatelům zabránit v provádění změn v oblasti nastavení ochrany před zneužitím v Security Center programu Microsoft Defender. Pokud toto nastavení zakážete nebo nenakonfigurujete, místní uživatelé mohou provádět změny v oblasti nastavení ochrany před zneužitím.  
-  **Výchozí**: Ano  
-
-## <a name="microsoft-defender-antivirus"></a>Antivirová ochrana v programu Microsoft Defender  
-
-Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Defender](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender) .
-
-- **Kontrolovat skripty načtené do webových prohlížečů Microsoftu**  
-  [Defender/AllowScriptScanning](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowscriptscanning) – nastavte na *Ano* , pokud chcete, aby se povolily funkce prohledávání skriptů v programu Microsoft Defender.  
-
-  **Výchozí**: Ano
-
-- **Kontrolovat příchozí e-mailové zprávy**  
-  [Defender/AllowEmailScanning](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowemailscanning) – nastavte na *Ano* , pokud chcete, aby Microsoft Defender mohl kontrolovat e-maily.  
-
-  **Výchozí**: Ano
-
-- **Souhlas s odesláním ukázky v programu Defender**  
-  [Defender/SubmitSamplesConsent](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-submitsamplesconsent) -kontroluje úroveň souhlasu uživatele v programu Microsoft Defender pro odesílání dat. Pokud je požadovaný souhlas již udělen, Microsoft Defender je odešle. Pokud ne (a pokud si uživatel není nikdy požádán), uživatelské rozhraní se spustí, aby požádalo o souhlas uživatele (při nastavení ochrany před odesláním *cloudu* na *Ano*).  
-
-  **Výchozí**: automaticky odesílat bezpečné vzorky
-
-- **Systém kontroly sítě (NIS)**  
-  [Defender/EnableNetworkProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection) – blokování škodlivého provozu zjištěného signaturami ve službě systém kontroly sítě (NIS).  
- 
-  **Výchozí**: Ano
-
-- **Interval aktualizace podpisu (v hodinách)**  
-  [Defender/SignatureUpdateInterval](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-signatureupdateinterval) – zadejte v hodinách, jak často bude zařízení kontrolovat nové aktualizace signatury Defenderu.  
- 
-  **Výchozí**: 4
-
-- **Konfigurace nízké priority procesoru pro naplánovaná prohledávání**  
-  [Defender/EnableLowCPUPriority](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-enablelowcpupriority) – Pokud je nastavená hodnota *Ano*, priorita procesoru pro kontroly je nastavena na hodnotu Nízká. Pokud *není nakonfigurováno*, nebudou provedeny žádné změny priority procesoru pro naplánovaná prohledávání.  
-
-    **Výchozí**: Ano
-
-- **Blok aplikace Defender při ochraně přístupu**  
-  [Defender/AllowOnAccessProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowonaccessprotection) – Pokud je nastavená hodnota *Ano*, je povolená možnost Microsoft Defender on Access Protection.  
-
-  **Výchozí**: Ano
-
-- **Typ Systémové kontroly, který se má provést**  
-  Typ vyhledávání [Defender/ScanParameter](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-scanparameter) -Defender  
-
-  **Výchozí**: Rychlá kontrola
-
-- **Kontrolovat všechny stahované soubory**  
-  [Defender/AllowIOAVProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowioavprotection) – Pokud je tato hodnota nastavená na *Ano*, Defender zkontroluje všechny stažené soubory a přílohy.  
-
-  **Výchozí**: Ano
-
-- **Dny před odstraněním malwaru v karanténě**  
-  [Defender/DaysToRetainCleanedMalware](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-daystoretaincleanedmalware) – určuje počet dní, po které se mají zachovat položky v karanténě v systému, než se automaticky odstraní. Pokud nastavíte hodnotu nula, položky v karanténě se nikdy automaticky neodstraní.  
-
-  **Výchozí hodnota**: 0
-
-- **Čas zahájení naplánované kontroly**  
-  [Defender/ScheduleScanTime](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-schedulescantime) – Naplánujte denní dobu, po kterou Defender bude kontrolovat zařízení. 
-  
-  Související možnost v tomto seznamu: *Defender/ScheduleScanDay*   
-
-  **Výchozí**: 2 dop.
-
-- **Ochrana Doručená v cloudu**  
-  [Defender/AllowCloudProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection) – Pokud je tato hodnota nastavená na *Ano*, Microsoft Defender pošle společnosti Microsoft informace o všech problémech, které najde. Microsoft bude tyto informace analyzovat, získat další informace o problémech, které mají vliv na vás a jiné zákazníky, a nabízí Vylepšená řešení.
-
-  Pokud je tato zásada nastavená na *hodnotu Ano*, můžete k tomu, aby uživatelé mohli řídit odesílání informací ze svého zařízení, použít *typ souhlasu ukázka odeslání ukázky* v programu Defender.  
-
-  **Výchozí**: Ano
-
-- **Akce potenciálně nežádoucí aplikace v Defenderu**  
-  [Defender/PUAProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection) – antivirová ochrana v programu Microsoft Defender může identifikovat a blokovat *potenciálně nežádoucí aplikace* (PUAs) ze stahování a instalace na koncových bodech ve vaší síti. 
- 
-  - Když se nastaví *blokování*, Microsoft Defender blokuje PUAs a uvádí je v historii spolu s dalšími hrozbami.
-  - Když se nastaví *audit*, Microsoft Defender detekuje PUAs, ale neblokuje je. Informace o aplikacích, které v programu Microsoft Defender převzaly, je možné najít tak, že vyhledá události, které vytvořil program Microsoft Defender, v Prohlížeč událostí.  
-  - Když se nastaví na *výchozí nastavení zařízení*, ochrana PUA je vypnutá.  
- 
-  **Výchozí**: blok
-
-- **Rozšířený časový limit pro Cloud Defenderu**  
-  [Defender/CloudExtendedTimeout](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-cloudextendedtimeout) – určete maximální dobu, po kterou by antivirová ochrana v programu Microsoft Defender měla blokovat soubor při čekání na výsledek z cloudu. Základní doba, po kterou bude Microsoft Defender čekat, je 10 sekund. Do těchto 10 sekund se přidá každý další čas, který zde zadáte (až 50 sekund). Ve většině případů hledání trvá méně času než maximum. Prodloužení doby umožňuje, aby cloud podezřelé soubory důkladně prozkoumal.  
-
-  Ve výchozím nastavení je rozšířená hodnota času 0 (zakázáno). Intune doporučuje povolit toto nastavení a zadat aspoň 20 dalších sekund.  
- 
-  **Výchozí hodnota**: 0
-
-- **Prohledat archivní soubory**  
-  [Defender/AllowArchiveScanning](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowarchivescanning) – nastavte na *Ano* , pokud chcete, aby program Microsoft Defender kontroloval archivní soubory.  
-
-  **Výchozí**: Ano
-
-- **Plán kontroly systémových úloh Defenderu**  
-  [Defender/ScheduleScanDay](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-schedulescanday) – naplánování, který den v Defenderu prohledává zařízení. 
- 
-  Související možnost v tomto seznamu: *Defender/ScheduleScanTime*
-
-  **Výchozí**: uživatelsky definované
-
-- **Monitorování chování**  
-  [Defender/AllowBehaviorMonitoring](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowbehaviormonitoring) – nastavte na *Ano* , pokud chcete zapnout funkci monitorování chování v programu Microsoft Defender. Ve Windows 10 se v programu Microsoft Defender monitorují senzory, které sledují a zpracovávají signály z operačního systému a odesílají tato data ze senzorů do vaší privátní a izolované cloudové instance ATP v programu Microsoft Defender.  
-
-  **Výchozí**: Ano
-
-- **Kontrolovat soubory otevřené ze síťových složek**  
-  [Defender/AllowScanningNetworkFiles](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowscanningnetworkfiles) – nastavte na *Ano* , pokud chcete, aby Microsoft Defender kontroloval soubory v síti. Uživatel nebude moct odebrat zjištěný malware ze souborů jen pro čtení.  
-
-  **Výchozí**: Ano
-
-- **Úroveň blokování cloudu Defenderu**  
-  [Defender/CloudBlockLevel](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-cloudblocklevel) – pomocí této zásady můžete určit, jak agresivní antivirová ochrana v programu Microsoft Defender blokuje a kontroluje podezřelé soubory. Vaše možnosti jsou:
-
-  - Vysoce agresivní blokování neznámých souborů při optimalizaci výkonu klienta (větší šance na falešně pozitivní)
-  - Vysoká plus – agresivní blokování neznámých souborů a uplatnění dalších ochranných opatření (může ovlivnit výkon klienta)
-  - Nulová tolerance – blokování všech neznámých spustitelných souborů
-
-  **Výchozí**: Nenakonfigurováno
-
-- **Sledování v reálném čase**  
-  [Defender/AllowRealtimeMonitoring](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring) – nastavte na *Ano* , pokud chcete, aby monitorování v reálném čase programu Microsoft Defender bylo povolené.  
-
-  **Výchozí**: Ano
-
-- **Limit využití procesoru při kontrole**  
-  [Defender/AvgCPULoadFactor](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-avgcpuloadfactor) – zadejte maximální průměrné využití procesoru%, které může program Microsoft Defender při kontrole použít.  
-
-  **Výchozí**: 50
-
-- **Při úplné kontrole kontrolovat namapované síťové jednotky**  
-  [Defender/AllowFullScanOnMappedNetworkDrives](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowfullscanonmappednetworkdrives) – nastavte na *Ano* , pokud chcete, aby Microsoft Defender kontroloval soubory v síti. Uživatel nemůže odebrat zjištěný malware ze souborů, které jsou jen pro čtení,
-
-  Související nastavení v tomto seznamu: *Defender/AllowScanningNetworkFiles*
-
-  **Výchozí**: Ano
-
-- **Zablokovat přístup koncovým uživatelům k programu Defender**  
-  [Defender/AllowUserUIAccess](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowuseruiaccess) – nastavte na *Ano* , pokud chcete zablokovat přístup koncových uživatelů k uživatelskému rozhraní Microsoft Defenderu na svém zařízení.  
-
-  **Výchozí**: Ano
-
-- **Čas zahájení rychlé kontroly**  
-  [Defender/ScheduleQuickScanTime](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-schedulequickscantime) – naplánování denního času pro spuštění rychlé kontroly v programu Defender  
-
-  **Výchozí**: 2 dop.
-
-## <a name="microsoft-defender-firewall"></a>Firewall v programu Microsoft Defender
 Další informace najdete v dokumentaci k Windows v tématu [zprostředkovatel CSP brány firewall](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp) .
 
-- **Doba nečinnosti přidružení zabezpečení před odstraněním** - *MdmStore/globální/SaIdleTime*   
-  Přidružení zabezpečení se odstraní, jakmile se síťový provoz nezobrazuje po tento počet sekund.  
-  **Výchozí**: 300
+- **Zakázat stavovou protokol FTP (File Transfer Protocol) (FTP)**  
+  CSP: [MdmStore/Global/DisableStatefulFtp](https://go.microsoft.com/fwlink/?linkid=872536)  
 
-- **Protokol FTP (File Transfer Protocol)**  - *MdmStore/globální/DisableStatefulFtp*   
-  Blokuje stavovou protokol FTP (File Transfer Protocol) (FTP).  
-  **Výchozí**: Ano
+  - **Ano** (*výchozí*)
+  - **Nenakonfigurováno** – brána firewall bude používat protokol FTP pro kontrolu a filtrování sekundárních síťových připojení, což by mohlo způsobit ignorování pravidel brány firewall.
 
-- **Řízení front paketů** - *MdmStore/Global/EnablePacketQueue*    
-  Určete, jak se má pro daný software na straně příjmu Povolit šifrované přijímání a prostý text před scénářem brány IPsec pro tunelové připojení. Tím se zajistí zachování pořadí paketů.  
-  **Výchozí**: výchozí nastavení zařízení
+- **Počet sekund, po které může být přidružení zabezpečení nečinné, než se odstraní**  
+CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539)
 
-- **Doména profilu brány Firewall** - *FirewallRules/FirewallRuleName/Profiles*  
-  Určuje profily, do kterých pravidlo patří: doména, soukromá, veřejná. Tato hodnota představuje profil pro sítě, které jsou připojené k doménám.  
+  Zadejte, jak dlouho se přidružení zabezpečení uchovávají po skončení síťového provozu. Pokud není nakonfigurováno, systém odstraní přidružení zabezpečení poté, co je nečinné po *300* sekund (výchozí nastavení).
+  
+  Číslo musí být od **300** do **3600** sekund.
 
-  Dostupná nastavení:  
-  - **Vyžadují se jednosměrové odpovědi na všesměrová vysílání vícesměrového vysílání.**  
-    **Výchozí**: Ano
+- **Kódování předsdíleného klíče**  
+  CSP: [MdmStore/Global/PresharedKeyEncoding](https://go.microsoft.com/fwlink/?linkid=872541)
 
-  - **Pravidla autorizovaných aplikací ze sloučených zásad skupiny**  
-    **Výchozí**: Ano
+   Pokud nepotřebujete UTF-8, předsdílené klíče se zpočátku zakódují pomocí kódování UTF-8. Pak uživatelé zařízení můžou zvolit jinou metodu kódování.
 
-  - **Blokovaná příchozí oznámení**  
-    **Výchozí**: Ano
+  - **Nenakonfigurované**
+  - **Žádné**
+  - **UTF8** (*výchozí*)
 
-  - **Globální pravidla portů ze sloučených zásad skupiny**  
-    **Výchozí**: Ano
+- **Ověření seznamu odvolaných certifikátů (CRL)**  
+  CSP: [MdmStore/Global/CRLcheck](https://go.microsoft.com/fwlink/?linkid=872548)
 
-  - **Zakázaný neviditelný režim**  
-    **Výchozí**: Ano
+  Určete, jak se vynutilo ověřování seznamu odvolaných certifikátů (CRL).  
 
-  - **Povolená brána firewall**  
-    **Výchozí**: povoleno
+  - **Nenakonfigurováno** (*výchozí*)-ověření seznamu CRL je zakázané.
+  - **Žádné**
+  - **Byl**
+  - **Žádá**
 
-  - **Pravidla zabezpečení připojení ze zásad skupiny nejsou sloučena.**  
-    **Výchozí**: Ano
+- **Řízení front paketů**  
+  CSP: [MdmStore/Global/EnablePacketQueue](https://go.microsoft.com/fwlink/?linkid=872551)
 
-  - **Pravidla zásad ze zásad skupiny nejsou sloučena.**  
-    **Výchozí**: Ano
+  Určete, jak se má pro daný software na straně příjmu Povolit šifrované přijímání a prostý text před scénářem brány IPsec pro tunelové připojení. Toto nastavení zajistí, aby bylo zachováno pořadí paketů.
 
-- **Profil brány firewall public** - *FirewallRules/FirewallRuleName/Profiles*  
-  Určuje profily, do kterých pravidlo patří: doména, soukromá, veřejná. Tato hodnota představuje profil pro veřejné sítě. Tyto sítě jsou klasifikovány jako veřejné správci v hostiteli serveru. Klasifikace proběhne při prvním připojení hostitele k síti. Tyto sítě jsou obvykle na letištích, v kavárnách a na jiných veřejných místech, kde nejsou důvěryhodní partneři v síti nebo správci sítě.  
+  - **Nenakonfigurováno** (*výchozí*) – služba Packet Queuing vrátí do výchozího nastavení klienta, což je zakázané.
+  - **Zabezpečen**
+  - **Příchozí fronta**
+  - **Odchozí fronta**
+  - **Zařadit do fronty**
 
-  Dostupná nastavení:
+- **Profil brány firewall Private**  
+  [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlink/?linkid=2067041)
 
-  - **Blokovaná příchozí připojení**  
-    **Výchozí**: Ano 
+  - **Konfigurace** (*výchozí*)
+  - **Nenakonfigurované**
 
-  - **Vyžadují se jednosměrové odpovědi na všesměrová vysílání vícesměrového vysílání.**  
-    **Výchozí**: Ano  
-
-  - **Je vyžadován neviditelný režim.**  
-    **Výchozí**: Ano 
- 
-  - **Vyžadují se odchozí připojení.**  
-    **Výchozí**: Ano  
-
-  - **Pravidla autorizovaných aplikací ze sloučených zásad skupiny**  
-    **Výchozí**: Ano  
-
-  - **Blokovaná příchozí oznámení**  
-    **Výchozí**: Ano  
-
-  - **Globální pravidla portů ze sloučených zásad skupiny**  
-    **Výchozí**: Ano
-
-  - **Zakázaný neviditelný režim**  
-    **Výchozí**: Ano
-
-  - **Povolená brána firewall**  
-    **Výchozí**: povoleno  
-
-  - **Pravidla zabezpečení připojení ze zásad skupiny nejsou sloučena.**  
-    **Výchozí**: Ano  
-
-  - **Vyžaduje se příchozí provoz**  
-    **Výchozí**: Ano
-
-  - **Pravidla zásad ze zásad skupiny nejsou sloučena.**  
-    **Výchozí**: Ano  
-
-- **Profil brány firewall privátní** - *FirewallRules/FirewallRuleName/profily*  
-  Určuje profily, do kterých pravidlo patří: doména, soukromá, veřejná. Tato hodnota představuje profil privátních sítí.  
-
-  Dostupná nastavení: 
+  Po nastavení *Konfigurace*můžete nakonfigurovat následující další nastavení.
 
   - **Blokovaná příchozí připojení**  
-    **Výchozí**: Ano
+    CSP: [/DefaultInboundAction](https://go.microsoft.com/fwlink/?linkid=872564)
+
+    - **Ano** (*výchozí*)
+    - **Nenakonfigurované**
 
   - **Vyžadují se jednosměrové odpovědi na všesměrová vysílání vícesměrového vysílání.**  
-    **Výchozí**: Ano
+    CSP: [/DisableUnicastResponsesToMulticastBroadcast](https://go.microsoft.com/fwlink/?linkid=872562)
+
+    - **Ano** (*výchozí*)
+    - **Nenakonfigurované**
 
   - **Je vyžadován neviditelný režim.**  
-    **Výchozí**: Ano
+    CSP: [/DisableStealthMode](https://go.microsoft.com/fwlink/?linkid=872559)
+
+    - **Ano** (*výchozí*)
+    - **Nenakonfigurované**
 
   - **Vyžadují se odchozí připojení.**  
-    **Výchozí**: Ano
+    CSP: [/DefaultOutboundAction](https://aka.ms/intune-firewall-outboundaction)
+
+    - **Ano** (*výchozí*)
+    - **Nenakonfigurované**
 
   - **Blokovaná příchozí oznámení**  
-    **Výchozí**: Ano
+    CSP: [/DisableInboundNotifications](https://go.microsoft.com/fwlink/?linkid=872563)
+
+    - **Ano** (*výchozí*)
+    - **Nenakonfigurované**
 
   - **Globální pravidla portů ze sloučených zásad skupiny**  
-    **Výchozí**: Ano
+    CSP: [/GlobalPortsAllowUserPrefMerge](https://go.microsoft.com/fwlink/?linkid=872566)
+
+    - **Ano** (*výchozí*)
+    - **Nenakonfigurované**
 
   - **Zakázaný neviditelný režim**  
-    **Výchozí**: Ano  
+    CSP: [/DisableStealthMode](https://go.microsoft.com/fwlink/?linkid=872559)
+
+    - **Ano** (*výchozí*)
+    - **Nenakonfigurované**
 
   - **Povolená brána firewall**  
-    **Výchozí**: povoleno
+    CSP: [/EnableFirewall](https://go.microsoft.com/fwlink/?linkid=872558)
+
+    - **Nenakonfigurované**
+    - **Blokováno**
+    - **Povoleno** (*výchozí*)
 
   - **Pravidla autorizovaných aplikací ze zásad skupiny nejsou sloučena.**  
-    **Výchozí**: Ano
+    CSP: [/AuthAppsAllowUserPrefMerge](https://go.microsoft.com/fwlink/?linkid=872565)
+
+    - **Ano** (*výchozí*)
+    - **Nenakonfigurované**
 
   - **Pravidla zabezpečení připojení ze zásad skupiny nejsou sloučena.**  
-    **Výchozí**: Ano
+    CSP: [/AllowLocalIpsecPolicyMerge](https://go.microsoft.com/fwlink/?linkid=872568)
+
+    - **Ano** (*výchozí*)
+    - **Nenakonfigurované**
 
   - **Vyžaduje se příchozí provoz**  
-    **Výchozí**: Ano
+    CSP: [/Shielded](https://go.microsoft.com/fwlink/?linkid=872561)
+
+    - **Ano** (*výchozí*)
+    - **Nenakonfigurované**
 
   - **Pravidla zásad ze zásad skupiny nejsou sloučena.**  
-    **Výchozí**: Ano  
+    CSP: [/AllowLocalPolicyMerge](https://go.microsoft.com/fwlink/?linkid=872567)
 
-- **Metoda kódování předsdíleného klíče brány firewall**  
-  **Výchozí**: UTF8
+    - **Ano** (*výchozí*)
+    - **Nenakonfigurované**
 
-- **Ověření seznamu odvolaných certifikátů**  
-  **Výchozí**: výchozí nastavení zařízení
+- **Veřejný profil brány firewall**  
+  [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlink/?linkid=2067143)
 
-## <a name="web--network-protection"></a>Ochrana webového & sítě  
+  - **Konfigurace** (*výchozí*)
+  - **Nenakonfigurované**
 
-- **Typ ochrany sítě**  
-  [Defender/EnableNetworkProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection) – tato zásada vám umožní zapnout nebo vypnout ochranu sítě v programu Microsoft Defender zneužití Guard. Ochrana sítě je funkcí ochrany před zneužitím v programu Microsoft Defender, která chrání zaměstnance pomocí libovolné aplikace v přístupu k podvodným podvodům, webům pro zneužití a škodlivému obsahu na internetu. To zahrnuje prevenci prohlížeče třetích stran v připojení k nebezpečným webům.  
+  Po nastavení *Konfigurace*můžete nakonfigurovat následující další nastavení.
 
-  Když nastavíte režim *Povolit* nebo *audit*, uživatelé nemůžou vypnout ochranu sítě a k zobrazení informací o pokusůch o připojení můžete použít Security Center programu Microsoft Defender.  
- 
-  - Při *Povolení* bude zablokováno uživatelům a aplikacím v připojení k nebezpečným doménám.  
-  - *Režim auditování* neblokuje uživatelům a aplikacím připojení k nebezpečným doménám.  
+  - **Blokovaná příchozí připojení**  
+    CSP: [/DefaultInboundAction](https://go.microsoft.com/fwlink/?linkid=872564)
 
-  Když nastavíte *uživatelsky definovaného uživatele*, uživatelé a aplikace se nebudou moci připojit k nebezpečným doménám a informace o připojeních nejsou k dispozici v programu Microsoft Defender Security Center.  
+    - **Ano** (*výchozí*)
+    - **Nenakonfigurované**
 
-  **Výchozí**: režim auditu
+  - **Vyžadují se jednosměrové odpovědi na všesměrová vysílání vícesměrového vysílání.**  
+    CSP: [/DisableUnicastResponsesToMulticastBroadcast](https://go.microsoft.com/fwlink/?linkid=872562)
 
-- **Vyžadovat filtr SmartScreen pro Microsoft Edge**  
-  [Browser/AllowSmartScreen](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen) – Microsoft Edge používá filtr SmartScreen v programu Microsoft Defender (zapnutý) k ochraně uživatelů před potenciálními podvodnými zprávami a škodlivým softwarem ve výchozím nastavení. Ve výchozím nastavení je tato zásada povolená (nastavená na *Ano*) a pokud je tato možnost povolena, znemožní uživatelům vypnutí filtru SmartScreen v programu Microsoft Defender.  Pokud jsou platné zásady pro zařízení rovny nenakonfigurovaným, můžou uživatelé vypnout filtr SmartScreen v programu Microsoft Defender, který zůstane bez ochrany zařízení.  
+    - **Ano** (*výchozí*)
+    - **Nenakonfigurované**
 
-  **Výchozí**: Ano
+  - **Je vyžadován neviditelný režim.**  
+    CSP: [/DisableStealthMode](https://go.microsoft.com/fwlink/?linkid=872559)
+
+    - **Ano** (*výchozí*)
+    - **Nenakonfigurované**
+
+  - **Vyžadují se odchozí připojení.**  
+    CSP: [/DefaultOutboundAction](https://aka.ms/intune-firewall-outboundaction)
+
+    - **Ano** (*výchozí*)
+    - **Nenakonfigurované**
+
+  - **Pravidla autorizovaných aplikací ze zásad skupiny nejsou sloučena.**  
+    CSP: [/AuthAppsAllowUserPrefMerge](https://go.microsoft.com/fwlink/?linkid=872565)
+
+    - **Ano** (*výchozí*)
+    - **Nenakonfigurované**
+
+  - **Blokovaná příchozí oznámení**  
+    CSP: [/DisableInboundNotifications](https://go.microsoft.com/fwlink/?linkid=872563)
+
+    - **Ano** (*výchozí*)
+    - **Nenakonfigurované**
+
+  - **Globální pravidla portů ze sloučených zásad skupiny**  
+    CSP: [/GlobalPortsAllowUserPrefMerge](https://go.microsoft.com/fwlink/?linkid=872566)
+
+    - **Ano** (*výchozí*)
+    - **Nenakonfigurované**
+
+  - **Zakázaný neviditelný režim**  
+    CSP: [/DisableStealthMode](https://go.microsoft.com/fwlink/?linkid=872559)
+
+    - **Ano** (*výchozí*)
+    - **Nenakonfigurované**
+
+  - **Povolená brána firewall**  
+    CSP: [/EnableFirewall](https://go.microsoft.com/fwlink/?linkid=872558)
+
+    - **Nenakonfigurované**
+    - **Blokováno**
+    - **Povoleno** (*výchozí*)
+
+  - **Pravidla zabezpečení připojení ze zásad skupiny nejsou sloučena.**  
+    CSP: [/AllowLocalIpsecPolicyMerge](https://go.microsoft.com/fwlink/?linkid=872568)
+
+    - **Ano** (*výchozí*)
+    - **Nenakonfigurované**
+
+  - **Vyžaduje se příchozí provoz**  
+    CSP: [/Shielded](https://go.microsoft.com/fwlink/?linkid=872561)
+
+    - **Ano** (*výchozí*)
+    - **Nenakonfigurované**
+
+  - **Pravidla zásad ze zásad skupiny nejsou sloučena.**  
+    CSP: [/AllowLocalPolicyMerge](https://go.microsoft.com/fwlink/?linkid=872567)
+
+    - **Ano** (*výchozí*)
+    - **Nenakonfigurované**
+
+- **Doména profilu brány firewall**  
+  CSP: [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlink/?linkid=2066796)
+
+  - **Vyžadují se jednosměrové odpovědi na všesměrová vysílání vícesměrového vysílání.**  
+    CSP: [/DisableUnicastResponsesToMulticastBroadcast](https://go.microsoft.com/fwlink/?linkid=872562)
+
+  - **Pravidla autorizovaných aplikací ze zásad skupiny nejsou sloučena.**  
+    CSP: [/AuthAppsAllowUserPrefMerge](https://go.microsoft.com/fwlink/?linkid=872565)
+
+    - **Ano** (*výchozí*)
+    - **Nenakonfigurované**  
+
+  - **Blokovaná příchozí oznámení**  
+    CSP: [/DisableInboundNotifications](https://go.microsoft.com/fwlink/?linkid=872563)
+
+    - **Ano** (*výchozí*)
+    - **Nenakonfigurované**
+
+  - **Globální pravidla portů ze sloučených zásad skupiny**  
+    CSP: [/GlobalPortsAllowUserPrefMerge](https://go.microsoft.com/fwlink/?linkid=872566)
+
+    - **Ano** (*výchozí*)
+    - **Nenakonfigurované**
+
+  - **Zakázaný neviditelný režim**  
+    CSP: [/DisableStealthMode](https://go.microsoft.com/fwlink/?linkid=872559)
+
+    - **Ano** (*výchozí*)
+    - **Nenakonfigurované**
+
+  - **Povolená brána firewall**  
+    CSP: [/EnableFirewall](https://go.microsoft.com/fwlink/?linkid=872558)
+
+    - **Nenakonfigurované**
+    - **Blokováno**
+    - **Povoleno** (*výchozí*)
+
+  - **Pravidla zabezpečení připojení ze zásad skupiny nejsou sloučena.**  
+    CSP: [/AllowLocalIpsecPolicyMerge](https://go.microsoft.com/fwlink/?linkid=872568)
+
+    - **Ano** (*výchozí*)
+    - **Nenakonfigurované**
+
+  - **Pravidla zásad ze zásad skupiny nejsou sloučena.**  
+    CSP: [/AllowLocalPolicyMerge](https://go.microsoft.com/fwlink/?linkid=872567)
+
+    - **Ano** (*výchozí*)
+    - **Nenakonfigurované**
+
+## <a name="microsoft-defender"></a>Microsoft Defender
+
+- **Spustit každodenní rychlou kontrolu v**  
+  CSP: [Defender/ScheduleQuickScanTime](https://go.microsoft.com/fwlink/?linkid=2114053&clcid=0x409)
   
-- **Blokovat přístup ke škodlivému webu**  
-  [Prohlížeč/PreventSmartScreenPromptOverride](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride) – ve výchozím nastavení umožňuje Microsoft Edge uživatelům vynechat upozornění filtru SmartScreen v programu Microsoft Defender týkající se potenciálně škodlivých webů a umožnit tak uživatelům pokračovat v lokalitě. Když je tato zásada povolená (nastavená na *Ano*), Microsoft Edge znemožní uživatelům obejít upozornění a zablokuje jejich pokračování na webu.  
+   Nakonfigurujte čas, kdy se každodenní Rychlá kontrola spouští. Ve výchozím nastavení je spuštění skenování nastaveno na **2 dop**.
 
-  **Výchozí**: Ano
+- **Čas zahájení naplánované kontroly**  
+  
+  Ve výchozím nastavení je tato hodnota nastavená na **2 dop**.
 
-- **Blokovat stahování neověřených souborů**  
-  [Prohlížeč/PreventSmartScreenPromptOverrideForFiles](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles) – ve výchozím nastavení umožňuje Microsoft Edge uživatelům vynechat upozornění filtru SmartScreen v programu Microsoft Defender týkající se potenciálně škodlivých souborů. to jim umožní pokračovat v stahování neověřených souborů. Když je tato zásada povolená (nastavená na *Ano*), uživatelům se zabrání v obcházení upozornění a nemůžou stahovat neověřené soubory.  
+- **Konfigurace nízké priority procesoru pro naplánovaná prohledávání**  
+  CSP: [Defender/EnableLowCPUPriority](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-enablelowcpupriority)  
 
-  **Výchozí**: Ano
+  -**Ano** (*výchozí*)
+  - **Nenakonfigurované**
 
-## <a name="windows-hello-for-business"></a>Windows Hello pro firmy  
+- **Blokování aplikací pro komunikaci Office z vytváření podřízených procesů**  
+  [Chránit zařízení před zneužitím](https://go.microsoft.com/fwlink/?linkid=874499)  
+
+  Toto pravidlo ASR se řídí pomocí následujícího identifikátoru GUID: 26190899-1602-49e8-8b27-eb1d0a1ce869.
+  - **Nenakonfigurováno** – obnoví se výchozí nastavení systému Windows, není blokováno vytváření podřízených procesů.
+  - **Definováno uživatelem**
+  - **Povolit** (*výchozí*) – komunikační aplikace Office jsou blokované pro vytváření podřízených procesů.
+  - **Režim auditu** – místo blokování podřízených procesů jsou vyvolány události systému Windows.
+
+- **Blokovat Adobe Reader v vytváření podřízených procesů**  
+  [Omezení ploch útoku pomocí pravidel pro omezení možností útoku](https://go.microsoft.com/fwlink/?linkid=853979)  
+
+  - **Nenakonfigurováno** – obnoví se výchozí nastavení systému Windows, není blokováno vytváření podřízených procesů.
+  - **Definováno uživatelem**
+  - **Povolit** (*výchozí*) – Adobe Reader se zablokuje při vytváření podřízených procesů.
+  - **Režim auditu** – místo blokování podřízených procesů jsou vyvolány události systému Windows.
+
+- **Kontrolovat příchozí e-mailové zprávy**  
+  CSP: [Defender/AllowEmailScanning](https://go.microsoft.com/fwlink/?linkid=2114052&clcid=0x409)
+
+  - **Ano** (*výchozí*) – prohledají se e-mailové poštovní schránky a poštovní soubory, například PST, dbx, mnx, MIME a BinHex.
+  - **Nenakonfigurováno** – nastavení se vrátí k výchozímu nastavení klienta e-mailových souborů, které nejsou prohledávány.
+
+- **Zapnout ochranu v reálném čase**  
+  CSP: [Defender/AllowRealtimeMonitoring](https://go.microsoft.com/fwlink/?linkid=2114050&clcid=0x409)
+
+  - **Ano** (*výchozí*) – vynutilo se monitorování v reálném čase a uživatel ho nemůže zakázat.
+  - **Nenakonfigurováno** – nastavení se vrátí do výchozího nastavení klienta, které je zapnuté, ale uživatel ho může změnit. Pokud chcete zakázat monitorování v reálném čase, použijte vlastní identifikátor URI.
+
+- **Počet dní (0-90) pro udržení malwaru v karanténě**  
+  CSP: [Defender/DaysToRetainCleanedMalware](https://go.microsoft.com/fwlink/?linkid=2114055&clcid=0x409)
+
+  Nakonfigurujte počet dní, po které se mají položky uchovávat ve složce karantény, než se odeberou. Výchozí hodnota je nula (**0**), což vede k tomu, že se soubory v karanténě nikdy neodstraňují.
+
+- **Plán kontroly systémových úloh Defenderu**  
+  CSP: [Defender/ScheduleScanDay](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-schedulescanday)
+
+  Naplánujte, který den v Defenderu prohledává zařízení. Ve výchozím nastavení je vyhledávání **definováno uživatelem** , ale může být nastaveno *na každý den v týdnu*nebo na možnost *bez naplánovaného prohledávání*.
+
+- **Dodatečné množství času (0-50 sekund) pro prodloužení časového limitu ochrany cloudu**  
+  CSP: [Defender/CloudExtendedTimeout](https://go.microsoft.com/fwlink/?linkid=2113940&clcid=0x409)
+
+  Antivirová ochrana automaticky blokuje podezřelé soubory po dobu 10 sekund, takže může zkontrolovat soubory v cloudu a ujistit se, že jsou bezpečné. Pomocí tohoto nastavení můžete tomuto časovému limitu přidat až 50 dalších sekund.  Ve výchozím nastavení je časový limit nastaven na hodnotu nula (**0**).
+
+- **Při úplné kontrole kontrolovat namapované síťové jednotky**  
+  CSP: [Defender/AllowFullScanOnMappedNetworkDrives](https://go.microsoft.com/fwlink/?linkid=2113945&clcid=0x409)
+
+  - **Ano** (*výchozí*) – při úplné kontrole jsou zahrnuty mapované síťové jednotky.
+  - **Nenakonfigurováno** – klient se vrátí k výchozímu, což zakáže kontrolu mapovaných síťových jednotek.
+
+- **Zapnout ochranu sítě**  
+  CSP: [Defender/EnableNetworkProtection](https://go.microsoft.com/fwlink/?linkid=2113939&clcid=0x409)
+  
+  - **Ano** (*výchozí*) – blokování škodlivých přenosů zjištěných signaturami ve službě systém kontroly sítě (NIS).
+  - **Nenakonfigurované**
+
+- **Prohledat všechny stažené soubory a přílohy**  
+  CSP: [Defender/AllowIOAVProtection](https://go.microsoft.com/fwlink/?linkid=2113934&clcid=0x409)
+
+  - **Ano** (*výchozí*) – prohledají se všechny stažené soubory a přílohy. Nastavení se vrátí do výchozího nastavení klienta, které je zapnuté, ale uživatel ho může změnit. Pokud chcete toto nastavení zakázat, použijte vlastní identifikátor URI.
+  - **Nenakonfigurováno** – nastavení se vrátí do výchozího nastavení klienta, které je zapnuté, ale uživatel ho může změnit. Pokud chcete toto nastavení zakázat, použijte vlastní identifikátor URI.
+
+- **Blokovat ochranu přístupu**  
+  CSP: [Defender/AllowOnAccessProtection](https://go.microsoft.com/fwlink/?linkid=2113935&clcid=0x409)
+
+  - **Ano** (*výchozí*)
+  - **Nenakonfigurované**
+
+- **Kontrolovat skripty v prohlížeči**  
+  CSP: [Defender/AllowScriptScanning](https://go.microsoft.com/fwlink/?linkid=2114054&clcid=0x409)
+
+  - **Ano** (*výchozí*) – vynutila se funkce kontroly skriptů v programu Microsoft Defender a uživatel je nemůže vypnout.
+  - **Nenakonfigurováno** – nastavení se vrátí do výchozího nastavení klienta, což znamená povolit kontrolu skriptů, ale uživatel ho může vypnout.
+
+- **Zablokovat přístup uživatelů k aplikaci Microsoft Defender**  
+  CSP: [Defender/AllowUserUIAccess](https://go.microsoft.com/fwlink/?linkid=2114043&clcid=0x409)
+
+  - **Ano** (*výchozí*) – uživatelské rozhraní (UI) programu Microsoft Defender je nedostupné a oznámení jsou překvapena
+  - **Není nakonfigurováno** Pokud nastavíte Ano, uživatelské rozhraní (UI) programu Windows Defender nebude dostupné a oznámení budou překvapena. Pokud je nastavené na Nenakonfigurováno, nastavení se vrátí do výchozího nastavení klienta, ve kterém bude uživatelské rozhraní a oznámení povolené.
+
+- **Maximální povolené využití CPU (0-100 procent) na jednu kontrolu**  
+  CSP: [Defender/AvgCPULoadFactor](https://go.microsoft.com/fwlink/?linkid=2114046&clcid=0x409)
+
+  Zadejte procento maximálního počtu PROCESORů, které se má pro kontrolu použít. Výchozí hodnota je **50**.
+
+- **Typ kontroly**  
+  CSP: [Defender/ScanParameter](https://go.microsoft.com/fwlink/?linkid=2114045&clcid=0x409)
+
+  - **Definováno uživatelem**
+  - **Zabezpečen**
+  - **Rychlá kontrola** (*výchozí*)
+  - **Úplná kontrola**
+
+- **Zadejte, jak často (0-24 hodin) se mají kontrolovat aktualizace služby Security Intelligence.**  
+  CSP: [Defender/SignatureUpdateInterval](https://go.microsoft.com/fwlink/?linkid=2113936&clcid=0x409)
+
+  Určete, jak často se mají kontrolovat aktualizované podpisy v hodinách. Například hodnota 1 bude kontrolovat každou hodinu. Hodnota 2 bude kontrolovat každé dvě hodiny atd.
+
+  Pokud není definovaná žádná hodnota, zařízení použije výchozí nastavení klienta na **8** hodin.
+
+- **Souhlas s odesláním ukázky v programu Defender**  
+  CSP: [Defender/SubmitSamplesConsent](https://go.microsoft.com/fwlink/?linkid=2067131)
+
+  Kontroluje, jestli se na úrovni souhlasu uživatele v programu Microsoft Defender odesílají data. Pokud je požadovaný souhlas již udělen, Microsoft Defender je odešle. Pokud ne (a pokud si uživatel není nikdy požádán), uživatelské rozhraní se spustí, aby požádalo o souhlas uživatele (při nastavení ochrany před odesláním *cloudu* na *Ano*).
+
+  - **Posílat bezpečné vzorky automaticky** (*výchozí*)
+  - **Vždycky se zeptat**
+  - **Nikdy Neodesílat**
+  - **Posílat všechny vzorky automaticky**
+
+- **Úroveň ochrany v cloudu**  
+  CSP: [CloudBlockLevel](https://go.microsoft.com/fwlink/?linkid=2113942)
+
+  Nakonfigurujte, jak agresivní antivirová antivirová ochrana blokuje a kontroluje podezřelé soubory.
+  - **Nenakonfigurováno** (*výchozí*) – výchozí úroveň blokování v programu Defender.
+  - **Vysoce** agresivní blokování neznámých během optimalizace výkonu klienta, což zahrnuje větší šanci falešně pozitivních hodnot.
+  - **Vysoké plus** – neznámy neznámé a používají další ochranné míry, které by mohly mít vliv na výkon klienta.
+  - **Nulová tolerance** – zablokuje všechny neznámé spustitelné soubory.
+
+- **Prohledat archivní soubory**  
+  CSP: [Defender/AllowArchiveScanning](https://go.microsoft.com/fwlink/?linkid=2114047&clcid=0x409)
+
+  - **Ano** (*výchozí*) – vynutila se kontrola souborů archivu, jako jsou soubory ZIP nebo CAB.
+  - **Nenakonfigurováno** – nastavení se vrátí zpátky do výchozího nastavení klienta, což znamená skenování archivovaných souborů, ale uživatel může kontrolu zakázat.
+
+- **Zapnout monitorování chování**  
+  CSP: [Defender/AllowBehaviorMonitoring](https://go.microsoft.com/fwlink/?linkid=2114048&clcid=0x409)
+
+  - **Ano** (*výchozí*) – vynutilo se monitorování chování a uživatel ho nemůže zakázat.
+  - **Nenakonfigurováno** – nastavení se vrátí do výchozího nastavení klienta, které je zapnuté, ale uživatel ho může změnit. Pokud chcete zakázat monitorování v reálném čase, použijte vlastní identifikátor URI.
+  
+- **Kontrolovat vyměnitelné jednotky při úplné kontrole**  
+  CSP: [Defender/AllowFullScanRemovableDriveScanning](https://go.microsoft.com/fwlink/?linkid=2113946&clcid=0x409)
+
+  - **Ano** (*výchozí*) – při úplné kontrole se prohledají vyměnitelné jednotky (například jednotky USB Flash).
+  - **Nenakonfigurováno** – nastavení se vrátí do výchozího nastavení klienta, které kontroluje vyměnitelné jednotky, ale uživatel může tuto kontrolu zakázat.
+  
+- **Prohledat síťové soubory**  
+  CSP: [Defender/AllowScanningNetworkFiles](https://go.microsoft.com/fwlink/?linkid=2114049&clcid=0x409)
+
+  - **Ano** (*výchozí*) – Microsoft Defender prohledává síťové soubory.
+  - **Nenakonfigurováno** – klient se vrátí k výchozímu, což zakáže kontrolu síťových souborů.
+  
+- **Akce potenciálně nežádoucí aplikace v Defenderu**  
+  CSP: [Defender/PUAProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)
+
+  Zadejte úroveň detekce potenciálně nežádoucích aplikací (PUAs). Program Defender upozorní uživatele, když se stahuje potenciálně nežádoucí software nebo se pokouší o instalaci na zařízení.
+  - **Výchozí ze zařízení**
+  - **Blok** (*výchozí*) – zjištěné položky jsou blokované a zobrazují se v historii spolu s dalšími hrozbami.
+  - **Audit** -Defender detekuje potenciálně nežádoucí aplikace, ale neprovede žádnou akci. Můžete zkontrolovat informace o aplikacích, které Defender přijal, pomocí hledání událostí, které vytvořil Defender v Prohlížeč událostí.
+
+- **Zapnutí ochrany poskytované cloudem**  
+  CSP: [AllowCloudProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection)
+
+  Ve výchozím nastavení Defender v zařízeních s Windows 10 Desktop odesílá společnosti Microsoft informace o případných problémech, které najde. Microsoft analyzuje tyto informace, aby se dozvěděly Další informace o problémech, které se týkají vás a dalších zákazníků, a nabízí Vylepšená řešení.
+
+  - **Ano** (*výchozí*) – je zapnutá ochrana s doručováním cloudu.  Uživatelé zařízení nemůžou toto nastavení změnit.
+  - **Nenakonfigurováno** – nastavení se obnoví do výchozího nastavení systému.
+
+- **Blokovat aplikacím Office vkládání kódu do jiných procesů**  
+  [Chránit zařízení před zneužitím](https://go.microsoft.com/fwlink/?linkid=872974)
+
+  Toto pravidlo ASR se ovládá pomocí následujícího identifikátoru GUID: 75668C1F-73B5-4CF0-BB93-3ECF5CB7CC84
+  - **Nenakonfigurováno** – nastavení se vrátí do výchozího nastavení systému Windows, které je vypnuté.
+  - **Blok** (*výchozí*) – aplikace Office jsou blokované pro vkládání kódu do jiných procesů.
+  - **Režim auditu** – místo blokování se vyvolají události systému Windows.
+
+- **Blokovat aplikacím Office vytváření spustitelného obsahu**  
+  [Chránit zařízení před zneužitím](https://go.microsoft.com/fwlink/?linkid=872975)
+
+  Toto pravidlo ASR se řídí pomocí následujícího identifikátoru GUID: 3B576869-A4EC-4529-8536-B80A7769E899
+  - **Nenakonfigurováno** – nastavení se vrátí do výchozího nastavení systému Windows, které je vypnuté.
+  - **Blok** (*výchozí*) – aplikace Office jsou blokované z vytváření spustitelného obsahu.
+  - **Režim auditu** – místo blokování se vyvolají události systému Windows.
+  
+- **Blokování spouštění staženého spustitelného obsahu pomocí JavaScriptu nebo VBScript**  
+  [Chránit zařízení před zneužitím](https://go.microsoft.com/fwlink/?linkid=872979)
+
+   Toto pravidlo ASR se ovládá pomocí následujícího identifikátoru GUID: D3E037E1-3EB8-44C8-A917-57927947596D
+  - **Nenakonfigurováno** – nastavení se vrátí do výchozího nastavení systému Windows, které je vypnuté.
+  - **Blok** (*výchozí*) – Defender blokuje soubory JavaScript nebo VBScript stažené z Internetu ze spouštění.
+  - **Režim auditu** – místo blokování se vyvolají události systému Windows.
+  
+- **Povolit ochranu sítě**  
+  CSP: [Defender/EnableNetworkProtection](https://go.microsoft.com/fwlink/?linkid=872618)
+
+  - **Nenakonfigurováno** – nastavení se vrátí k výchozímu systému Windows, který je zakázaný.
+  - **Definováno uživatelem**
+  - **Povolit** – Ochrana sítě je povolená pro všechny uživatele systému.
+  - **Režim auditování** (*výchozí*) – uživatelé nejsou zablokovaných z nebezpečných domén a místo toho se vyvolají události Windows.
+
+- **Zablokovat nedůvěryhodné a nepodepsané procesy, které se spouštějí z USB**  
+  [Chránit zařízení před zneužitím](https://go.microsoft.com/fwlink/?linkid=874502)
+
+  Toto pravidlo ASR se ovládá pomocí následujícího identifikátoru GUID: b2b3f03d-6a65-4f7b-a9c7-1c7ef74a9ba4
+  - **Nenakonfigurováno** – nastavení se vrátí do výchozího nastavení systému Windows, které je vypnuté.
+  - **Blokovat** (*výchozí*) – nedůvěryhodné a nepodepsané procesy, které se spouštějí z USB jednotky, jsou blokovány.
+  - **Režim auditu** – místo blokování se vyvolají události systému Windows.
+
+- **Blokovat odcizení přihlašovacích údajů ze subsystému místního úřadu zabezpečení systému Windows (Lsass. exe)**  
+  [Chránit zařízení před zneužitím](https://go.microsoft.com/fwlink/?linkid=874499)
+
+  Toto pravidlo ASR se ovládá pomocí následujícího identifikátoru GUID: 9e6c4e1f-7d60-472f-ba1a-a39ef669e4b2
+  - **Nenakonfigurováno** – nastavení se vrátí do výchozího nastavení systému Windows, které je vypnuté.
+  - **Definováno uživatelem**
+  - **Povolit** (*výchozí*) – pokusy o odcizení přihlašovacích údajů prostřednictvím Lsass. exe jsou blokované.
+  - **Režim auditu** – uživatelé nejsou zablokovaných z nebezpečných domén a místo toho se vyvolají události Windows.
+
+- **Blokovat stahování spustitelného obsahu z e-mailu a klientů webové pošty**  
+  [Chránit zařízení před zneužitím](https://go.microsoft.com/fwlink/?linkid=872980)
+
+  - **Nenakonfigurováno** – nastavení se vrátí do výchozího nastavení systému Windows, které je vypnuté.
+  - **Blokovat** (*výchozí*) – spustitelný obsah stažený z e-mailu a klientů webmailu je blokovaný.
+  - **Režim auditu** – místo blokování se vyvolají události systému Windows.
+
+- **Zablokovat všechny aplikace Office z vytváření podřízených procesů**  
+  [Chránit zařízení před zneužitím](https://go.microsoft.com/fwlink/?linkid=872976)
+
+  Toto pravidlo ASR se ovládá pomocí následujícího identifikátoru GUID: D4F940AB-401B-4EFC-AADC-AD5F3C50688A
+  - **Nenakonfigurováno** – nastavení se vrátí do výchozího nastavení systému Windows, které je vypnuté.
+  - **Blok** (*výchozí*)
+  - **Režim auditu** – místo blokování se vyvolají události systému Windows.
+
+- **Zablokovat provádění potenciálně zablokovaných skriptů (js/vbs/PS)**  
+  [Chránit zařízení před zneužitím](https://go.microsoft.com/fwlink/?linkid=872978)
+
+  Toto pravidlo ASR se ovládá pomocí následujícího identifikátoru GUID: 5BEB7EFE-FD9A-4556-801D-275E5FFC04CC
+  - **Nenakonfigurováno** – nastavení se vrátí do výchozího nastavení systému Windows, které je vypnuté.
+  - **Blok** (*výchozí*) – Defender bude blokovat provádění zavedených skriptů.
+  - **Režim auditu** – místo blokování se vyvolají události systému Windows.
+
+- **Blokování volání Win32 API z makra Office**  
+  [Chránit zařízení před zneužitím](https://go.microsoft.com/fwlink/?linkid=872977)
+
+  Toto pravidlo ASR se řídí pomocí následujícího identifikátoru GUID: 92E97FA1-2EDF-4476-BDD6-9DD0B4DDDC7B
+  - **Nenakonfigurováno** – nastavení se vrátí do výchozího nastavení systému Windows, které je vypnuté.
+  - **Blok** (*výchozí*) – pro makro Office se zablokuje použití volání Win32 API.
+  - **Režim auditu** – místo blokování se vyvolají události systému Windows.
+
+## <a name="microsoft-defender-security-center"></a>Security Center programu Microsoft Defender
+
+- **Zablokuje uživatelům úpravy rozhraní zneužití ochrany před zneužitím.**  
+  CSP: [WindowsDefenderSecurityCenter/DisallowExploitProtectionOverride](https://go.microsoft.com/fwlink/?linkid=2067239)
+
+  - **Ano** (*výchozí*) – zabrání uživatelům v provádění změn v oblasti nastavení ochrany před zneužitím v programu Microsoft Defender Security Center.
+  - **Nenakonfigurováno** – místní uživatelé mohou provádět změny v oblasti nastavení ochrany před zneužitím.
+
+## <a name="smart-screen"></a>Smart Screen
+
+- **Zablokovat uživatelům ignorovat upozornění filtru SmartScreen**  
+  CSP: [SmartScreen/PreventOverrideForFilesInShell](https://go.microsoft.com/fwlink/?linkid=872783)
+
+   Toto nastavení vyžaduje, aby bylo povolené nastavení vynutí filtr SmartScreen pro aplikace a soubory.
+  - **Ano** (*výchozí*) – filtr SmartScreen nenabídne možnost pro uživateli ignorovat upozornění a spustit aplikaci. Zobrazí se upozornění, ale uživatel ji bude moci obejít.
+  - **Nenakonfigurováno** – vrátí nastavení do výchozího nastavení systému Windows, které umožňuje přepsání uživatelem.
+
+- **Vyžadovat pouze aplikace ze Storu**  
+
+  - **Ano** (*výchozí*)
+  - **Nenakonfigurované**
+
+- **Zapnout filtr Windows SmartScreen**  
+  CSP: [SmartScreen/EnableSmartScreenInShell](https://go.microsoft.com/fwlink/?linkid=872784)
+
+  - **Ano** (*výchozí*) – vynutilo použití filtru SmartScreen pro všechny uživatele.
+  - **Nenakonfigurováno** – vrátí nastavení do výchozího nastavení systému Windows, což znamená Povolit filtr SmartScreen, ale uživatelé můžou toto nastavení změnit. Chcete-li zakázat filtr SmartScreen, použijte vlastní identifikátor URI.
+
+## <a name="windows-hello-for-business"></a>Windows Hello pro firmy
 
 Další informace najdete v tématu [PASSPORTFORWORK CSP](https://docs.microsoft.com/windows/client-management/mdm/passportforwork-csp) v dokumentaci k systému Windows.
 
-- **Konfigurace Windows Hello pro firmy** - *TenantId/policies/UsePassportForWork*    
-  Windows Hello pro firmy je alternativní metoda pro přihlašování do systému Windows tím, že nahrazujete hesla, čipové karty a virtuální čipové karty.  
+- **Blokovat Windows Hello pro firmy**  
 
+   Windows Hello pro firmy je alternativní metoda pro přihlašování do systému Windows tím, že nahrazujete hesla, čipové karty a virtuální čipové karty.
 
-  > [!IMPORTANT]
-  > Možnosti pro toto nastavení se obrátí z předpokládaných významů. V opačném případě hodnota *Ano* nepovoluje Windows Hello a místo toho je považována za *nenakonfigurovanou*. Pokud je toto nastavení nastavené na *Nenakonfigurováno*, je Windows Hello zapnuto na zařízeních, která tyto standardní hodnoty obdrží.
-  >
-  > Následující popisy byly revidovány, aby odrážely toto chování. V budoucí aktualizaci tohoto směrného plánu zabezpečení bude záměna nastavení opravena.
+  - **Nenakonfigurováno** – zařízení, která používají Windows Hello pro firmy, je ve výchozím nastavení Windows.
+  - **Zakázáno** (*výchozí*) – zařízení zřídí Windows Hello pro firmy.
+  - **Povoleno** – zařízení nezřídí pro žádného uživatele Windows Hello pro firmy.
 
-  - Pokud je nastavené na *není nakonfigurované*, Windows Hello je povolené a zařízení se zřídí ve Windows Hello pro firmy.
-  - Pokud je nastaveno na *Ano*, standardní hodnoty nebudou mít vliv na nastavení zásad daného zařízení. To znamená, že pokud je Windows Hello pro firmy v zařízení zakázané, zůstane zakázané. Pokud je povolená, zůstane povolený.
-  <!-- expected behavior 
-  - When set to *Yes*, you  enable this policy and the device provisions Windows Hello for Business.  
-  - When set to *Not configured*, the baseline does not affect the policy setting of the device. This means that if Windows Hello for Business is disabled on a device, it remains disabled. If its enabled, it remains enabled. 
-  -->
+  Pokud je nastavené na *zakázáno*, můžete nakonfigurovat následující nastavení:
 
-  Nemůžete zakázat Windows Hello pro firmy prostřednictvím tohoto směrného plánu. Windows Hello pro firmy můžete zakázat při konfiguraci [registrace systému Windows](windows-hello.md)nebo jako součást profilu konfigurace zařízení pro [ochranu identity](identity-protection-configure.md).  
+  - **Malá písmena v PIN kódu**  
+    - **Není povoleno**
+    - **Požadováno**
+    - **Povoleno** (*výchozí*)
 
-Windows Hello pro firmy je alternativní metoda pro přihlašování do systému Windows tím, že nahrazujete hesla, čipové karty a virtuální čipové karty.  
+  - **Speciální znaky v PIN kódu**
+    - **Není povoleno**
+    - **Požadováno**
+    - **Povoleno** (*výchozí*)
 
-  Pokud nastavení této zásady povolíte nebo nenakonfigurujete, zařízení zřídí Windows Hello pro firmy. Pokud nastavení této zásady zakážete, zařízení nezřídí Windows Hello pro firmy pro žádného uživatele.
-
-  Intune nepodporuje zakázání Windows Hello. Místo toho můžete nakonfigurovat zásady, které povolí Windows Hello pro firmy (Ano), nebo nemusíte konfigurovat Windows Hello přímo (není nakonfigurované). Pokud není nakonfigurováno, může zařízení přijmout konfiguraci prostřednictvím jiných zásad, které tuto funkci můžou povolit nebo zakázat.  
-
-  **Výchozí**: Ano  
-
-- **Vyžadovat v PIN kódu malá písmena** - *TenantId/policies/PINComplexity/LowercaseLetters*  
-  **Výchozí**: povoleno  
-
-- **Vyžadovat speciální znaky v PIN kódu** - *TenantId/policies/PINComplexity/SpecialCharacters*  
-  **Výchozí**: povoleno  
-
-- **Vyžadovat v PIN kódu velká písmena** - *TenantId/policies/PINComplexity/UppercaseLetters*   
-  **Výchozí**: povoleno  
-
+  - **Velká písmena v PIN kódu**
+    - **Není povoleno**
+    - **Požadováno**
+    - **Povoleno** (*výchozí*)

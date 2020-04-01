@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1afbd444f46d14bb272410da54d43c5a5f8207d0
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 8e44fa26c84537fdcf801192ce8cc22790f320b9
+ms.sourcegitcommit: 6a6a713fc1090e03893d80f4259dc7300fb1d5ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80327334"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80438799"
 ---
 # <a name="android-device-administrator-enrollment"></a>Registrace správce zařízení s Androidem
 
@@ -32,8 +32,6 @@ Správce zařízení s Androidem (někdy označovaný jako "starší verze" spr�
 Proto doporučujeme, abyste zabránili zaregistrování nových zařízení pomocí procesu Správce zařízení popsaného níže.
 
 Ze stejných důvodů doporučujeme, abyste v případě, že se zařízení aktualizují na Android 10, migrovali zařízení mimo správu Správce zařízení. 
-
-Další informace o podpoře Intune pro podporu Správce zařízení s Androidem najdete v [části oznámení](../fundamentals/whats-new.md#decreasing-support-for-android-device-administrator).
 
 Pokud se přesto rozhodnete, že mají uživatelé zaregistrovat svoje zařízení s Androidem pomocí správy Správce zařízení, pokračujte k další části.  
 
