@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c96de75557a4817f4e5f034689faecf7374cfe3f
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.openlocfilehash: feb211b1de15aa0400e9ff71b428e2db02ef4b03
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80359429"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551370"
 ---
 # <a name="create-a-profile-with-custom-settings-in-intune"></a>Vytvoření profilu s vlastním nastavením v Intune
 
@@ -31,6 +31,9 @@ Vlastní nastavení se konfigurují pro každou platformu jinak. Třeba k ovlád
 Další informace o konfiguračních profilech najdete v tématu [Co jsou profily zařízení v Microsoft Intune?](device-profiles.md)
 
 V tomto článku se dozvíte, jak vytvořit vlastní profil pro správce zařízení s Androidem, Android Enterprise, iOS/iPadOS, macOS a Windows. Můžete si také prohlédnout všechna dostupná nastavení pro různé platformy.
+
+> [!NOTE]
+> Uživatelské rozhraní (UI) Intune se aktualizuje na celé obrazovce a může trvat několik týdnů. Až do chvíle, kdy váš tenant obdrží tuto aktualizaci, budete mít při vytváření nebo úpravách nastavení popsaných v tomto článku mírně odlišný pracovní postup.
 
 ## <a name="create-the-profile"></a>Vytvoření profilu
 

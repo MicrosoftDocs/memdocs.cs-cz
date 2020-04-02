@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 211db029b681a933b1ac018a070ca3c3d55d67a9
-ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
+ms.openlocfilehash: 0810205e1b1e8b349d074560ec589b10e85443f1
+ms.sourcegitcommit: 012947b2095979ceb4e9c9f698e9c32f46baa7d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79526491"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80525225"
 ---
 # <a name="set-up-symantec-endpoint-protection-mobile-integration-with-intune"></a>Nastavení integrace Symantec Endpoint Protection Mobile s Intune
 
@@ -40,7 +40,7 @@ Pomocí následujících kroků integrujete řešení Symantec Endpoint Protecti
 - K provedení integrace musí být účet Azure AD účtem globálního správce.
 ### <a name="network-setup"></a>Nastavení sítě
 
-Můžete zajistit, aby byla síť správně nakonfigurovaná pro integraci s nastavením nástroje SEP Mobile, a to odkazem na článek od Symantecu s [konfigurací Správce SEP po instalaci](http://techdocs.broadcom.com/content/broadcom/techdocs/us/en/symantec-security-software/endpoint-security-and-management/endpoint-protection/14-2-x/Getting_Started_with_Symantec_Endpoint_Protection__1/installing-with-a-custom-configuration-v116874998-d3814e1541.html).
+Můžete zajistit, aby byla síť správně nakonfigurovaná pro integraci s nastavením nástroje SEP Mobile, a to odkazem na článek od Symantecu s [konfigurací Správce SEP po instalaci](http://techdocs.broadcom.com/content/broadcom/techdocs/us/en/symantec-security-software/endpoint-security-and-management/endpoint-protection/all/Managing_a_Custom_Installation_3/Planning_the_Installation_0/network-architecture-considerations-v19543152-d23e65.html).
 
 ### <a name="full-integration-vs-read-only"></a>Úplná integrace vs. jen pro čtení
 

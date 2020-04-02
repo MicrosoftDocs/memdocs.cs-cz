@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 388630712b398ef82e78e55efa63418e95187681
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 35c125327755a184758b9f9356b9aa4d87a4b886
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79329047"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551715"
 ---
 # <a name="windows-mdm-security-baseline-settings-for-intune"></a>Nastavení standardních hodnot zabezpečení Windows MDM pro Intune
 
@@ -2162,3 +2162,9 @@ Následující nastavení:
 - **Vyžadovat v PIN kódu velká písmena**
 
 ::: zone-end
+
+## <a name="next-steps"></a>Další kroky
+
+- [Další informace o standardních hodnotách zabezpečení](security-baselines.md)
+- [Vyhnout se konfliktům](security-baselines.md#avoid-conflicts)
+- [Řešení potíží se zásadami a profily v Intune](../configuration/troubleshoot-policies-in-microsoft-intune.md)

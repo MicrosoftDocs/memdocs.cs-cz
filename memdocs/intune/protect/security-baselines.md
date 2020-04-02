@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/31/2020
+ms.date: 04/01/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.reviewer: shpate
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c810b6caa47596967cf9e1f2ad4cb3f772064f30
-ms.sourcegitcommit: d601f4e08268d139028f720c0a96dadecc7496d5
+ms.openlocfilehash: 618ed802d33f2c50a567f1e18da4689855bbf016
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80488052"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551688"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Konfigurace zařízení s Windows 10 v Intune pomocí směrných plánů zabezpečení
 
@@ -62,11 +62,20 @@ Když vytvoříte *profil*standardních hodnot zabezpečení, profil automaticky
 
 Můžete zvolit [změnu verze](#change-the-baseline-version-for-a-profile) směrného plánu, který se používá s daným profilem. To znamená, že když se objeví nová verze, nemusíte vytvářet nový základní profil, abyste ho mohli využít. Až budete připraveni, můžete vybrat profil standardních hodnot a potom pomocí předdefinované možnosti změnit verzi instance pro tento profil na nový.
 
+## <a name="avoid-conflicts"></a>Vyhnout se konfliktům
+
+V prostředí Intune můžete současně použít jeden nebo více dostupných směrných plánů. Můžete také použít více instancí stejných standardních hodnot zabezpečení, které mají různá přizpůsobení.
+
+Pokud používáte více směrných plánů zabezpečení, Projděte si nastavení v každém z nich, abyste identifikovali, kdy různé základní konfigurace zavádějí do stejného nastavení konfliktní hodnoty. Vzhledem k tomu, že můžete nasadit standardní hodnoty zabezpečení, které jsou navrženy pro různé záměry, a nasadit více instancí stejného směrného plánu, který obsahuje vlastní nastavení, můžete vytvořit konflikty konfigurace pro zařízení, která musí být prověřená a vyřešená.
+
+Standardní hodnoty zabezpečení často spravují stejná nastavení, která můžete nastavit pomocí [profilů konfigurace zařízení](../configuration/device-profiles.md) nebo jiných typů zásad. Proto si zamyslete na dalších zásadách a profilech pro nastavení při hledání, abyste se vyhnuli nebo vyřešili konflikty.
+
+Pomocí informací na následujících odkazech můžete identifikovat a vyřešit konflikty:
+
+- [Řešení potíží se zásadami a profily v Intune](../configuration/troubleshoot-policies-in-microsoft-intune.md)
+- [Monitorování standardních hodnot zabezpečení](security-baselines-monitor.md#troubleshoot-using-per-setting-status)
+
 ## <a name="available-security-baselines"></a>Dostupné standardní hodnoty zabezpečení
-
- V prostředí Intune můžete současně použít jeden nebo více dostupných směrných plánů. Můžete také použít více instancí stejných standardních hodnot zabezpečení, které mají různá přizpůsobení.
-
-Pokud používáte více směrných plánů zabezpečení, Projděte si nastavení v každém z nich, abyste identifikovali, kdy různé směrné plány představují konfliktní hodnoty pro stejné nastavení. Vzhledem k tomu, že můžete nasadit standardní hodnoty zabezpečení, které jsou navrženy pro různé záměry, a nasadit více instancí stejného směrného plánu, který obsahuje vlastní nastavení, můžete vytvořit [konflikty konfigurace pro zařízení, která musí být prověřená a vyřešená](security-baselines-monitor.md#troubleshoot-using-per-setting-status).  Také si pamatujte na [profily konfigurace zařízení](../configuration/device-profiles.md), které můžou nakonfigurovat mnoho stejných nastavení jako standardní hodnoty zabezpečení.
 
 Následující instance standardních hodnot zabezpečení jsou k dispozici pro použití s Intune. Pomocí odkazů můžete zobrazit nastavení nejaktuálnější instance každého směrného plánu.
 
@@ -95,7 +104,7 @@ Mezi běžné úlohy při práci se standardními hodnotami zabezpečení patř�
 - [Odebrání přiřazení standardních hodnot](#remove-a-security-baseline-assignment) – Zjistěte, co se stane, když zastavíte správu nastavení se směrným plánem zabezpečení.
 
 
-### <a name="prerequisites"></a>Požadavky
+### <a name="prerequisites"></a>Předpoklady
 
 - Aby bylo možné spravovat směrné plány v Intune, musí mít váš účet předdefinovanou roli [správce zásad a profilů](../fundamentals/role-based-access-control.md#built-in-roles) .
 

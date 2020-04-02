@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5937cd09a5224933004233b8d4efe8a0e47155f3
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.openlocfilehash: 8f9212d275b17db6a40e3133b5363cd13c9d13d6
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80359377"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551430"
 ---
 # <a name="add-macos-kernel-extensions-in-intune"></a>Přidání rozšíření jádra macOS v Intune
 
@@ -68,6 +68,9 @@ V tomto článku se dozvíte, jak vytvořit profil konfigurace zařízení pomoc
 >
 > - [Notarizing aplikaci před distribucí](https://developer.apple.com/documentation/security/notarizing_your_app_before_distribution) (otevře web společnosti Apple) 
 > - [Příprava na změny rozšíření jádra v MacOS High Sierra](https://support.apple.com/en-us/HT208019) (otevře web společnosti Apple)
+
+> [!NOTE]
+> Uživatelské rozhraní (UI) Intune se aktualizuje na celé obrazovce a může trvat několik týdnů. Až do chvíle, kdy váš tenant obdrží tuto aktualizaci, budete mít při vytváření nebo úpravách nastavení popsaných v tomto článku mírně odlišný pracovní postup.
 
 ## <a name="create-the-profile"></a>Vytvoření profilu
 

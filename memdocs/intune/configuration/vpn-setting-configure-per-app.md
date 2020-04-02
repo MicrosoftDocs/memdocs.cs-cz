@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 04/01/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1e088af5687b5708754869614a431e80f9497b3c
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 97d3c4ee2e1ad173b8fff238f072b1b36c3ed1cb
+ms.sourcegitcommit: 0907ee1137773f0482b1d2b9bb344e206d05aede
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80086822"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80536897"
 ---
 # <a name="set-up-per-app-virtual-private-network-vpn-for-iosipados-devices-in-intune"></a>Nastavení virtuální privátní sítě (VPN) pro jednotlivé aplikace v Intune pro zařízení s iOS/iPadOS
 
@@ -44,7 +44,7 @@ Některé sítě VPN umožňují ověřování uživatelského jména a hesla u 
 
 ## <a name="per-app-vpn-with-zscaler"></a>SÍŤ VPN pro jednotlivé aplikace s Zscaler
 
-Zscaler Private Access (ZPA) se integruje s Azure Active Directory (Azure AD) pro ověřování. Pokud používáte ZPA, nepotřebujete profily [](#create-a-trusted-certificate-profile) [certifikátů SCEP nebo PKCS](#create-a-scep-or-pkcs-certificate-profile) (popsané v tomto článku). Pokud máte nastaven profil sítě VPN pro jednotlivé aplikace pro Zscaler, otevření jedné z přidružených aplikací se automaticky nepřipojí k ZPA. Místo toho se uživatel musí nejdřív přihlašovat do aplikace Zscaler. Vzdálený přístup je pak omezen na přidružené aplikace.
+Zscaler Private Access (ZPA) se integruje s Azure Active Directory (Azure AD) pro ověřování. Pokud používáte ZPA, nepotřebujete profily [trusted certificate](#create-a-trusted-certificate-profile) [certifikátů SCEP nebo PKCS](#create-a-scep-or-pkcs-certificate-profile) (popsané v tomto článku). Pokud máte nastaven profil sítě VPN pro jednotlivé aplikace pro Zscaler, otevření jedné z přidružených aplikací se automaticky nepřipojí k ZPA. Místo toho se uživatel musí nejdřív přihlašovat do aplikace Zscaler. Vzdálený přístup je pak omezen na přidružené aplikace.
 
 ## <a name="prerequisites-for-per-app-vpn"></a>Předpoklady pro síť VPN pro jednotlivé aplikace
 

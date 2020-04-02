@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 67a26a42efb56c75d9538d9e7fcd2d726327d26d
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: b437a72a2380fea215746aa76b35898c6fc60b16
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80322992"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551388"
 ---
 # <a name="create-a-compliance-policy-in-microsoft-intune"></a>Vytvoření zásady dodržování předpisů v Microsoft Intune
 
@@ -58,6 +58,9 @@ Pokud chcete používat zásady dodržování předpisů zařízením, ujistěte
 - Registrace zařízení v Intune (vyžaduje se pro zobrazení stavu dodržování předpisů)
 
 - Zaregistrujte zařízení jednomu uživateli nebo se zaregistrujte bez primárního uživatele. Zařízení zaregistrovaná pro více uživatelů nejsou podporovaná.
+
+> [!NOTE]
+> Uživatelské rozhraní (UI) Intune se aktualizuje na celé obrazovce a může trvat několik týdnů. Až do chvíle, kdy váš tenant obdrží tuto aktualizaci, budete mít při vytváření nebo úpravách nastavení popsaných v tomto článku mírně odlišný pracovní postup.
 
 ## <a name="create-the-policy"></a>Vytvoření zásady
 
@@ -163,7 +166,7 @@ Pokud má nějaké zařízení několik zásad dodržování předpisů a pro dv
 |---------|---------|
 |Neznámé     |1|
 |Neužívá se     |2|
-|Kompatibilní|3|
+|Vyhovuje|3|
 |V období odkladu|4|
 |Nevyhovující předpisům|5|
 |Chyba|6|

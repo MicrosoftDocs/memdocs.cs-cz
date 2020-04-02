@@ -15,12 +15,12 @@ ms.technology: ''
 ms.assetid: 82872ba6-80f8-4cc9-adf4-0ccd8ff26dd2
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f8a38ad4cf8aa9186bfbd061c5463d36e93c116c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 1d08b058303d70188c89d3ded989d4d3864b318f
+ms.sourcegitcommit: 012947b2095979ceb4e9c9f698e9c32f46baa7d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79329131"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80525212"
 ---
 # <a name="integrate-pradeo-mobile-threat-defense-with-intune"></a>Integrace ochrany před mobilními hrozbami Pradeo pomocí Intune
 
@@ -44,7 +44,7 @@ Před zahájením procesu integrace řešení Pradeo a Intune zkontrolujte, že 
 
   - Přístup k adresáři jako přihlášený uživatel
 
-  - Číst data z adresáře
+  - Čtení dat z adresáře
 
   - Odeslání informací o zařízení do Intune
 
@@ -64,7 +64,7 @@ Postup autorizace aplikace Pradeo:
 
 ## <a name="to-set-up-pradeo-integration"></a>Nastavení integrace služby Pradeo
 
-1. Přejděte do [konzoly Pradeo Security](https://www.apps-security.com) a přihlaste se pomocí přihlašovacích údajů.
+1. Přejděte do [konzoly Pradeo Security](https://www.pradeo-security.com) a přihlaste se pomocí přihlašovacích údajů.
 
 2. Z nabídky vyberte **Administration – Enterprise Mobility Management**.
 

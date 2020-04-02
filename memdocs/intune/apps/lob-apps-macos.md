@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/23/2020
+ms.date: 03/31/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5e798d579341a841d25bea9abb416367fac15c2b
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 6dad4dffba0efadcca0ea5eb7d61960bec1b3f8e
+ms.sourcegitcommit: 0907ee1137773f0482b1d2b9bb344e206d05aede
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80324051"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80536839"
 ---
 # <a name="how-to-add-macos-line-of-business-lob-apps-to-microsoft-intune"></a>Přidání obchodních aplikací pro macOS do Microsoft Intune
 
@@ -65,8 +65,8 @@ Musíte si stáhnout externí nástroj, označit stažený nástroj jako spustit
     - `IntuneAppUtil -h`<br>
     Tento příkaz zobrazí informace o využití nástroje.
     
-    - `IntuneAppUtil -c <source_file> -o <output_file> [-v]`<br>
-    Tento příkaz zabalí soubor obchodní aplikace *.pkg* do souboru *.intunemac*.
+    - `IntuneAppUtil -c <source_file> -o <output_directory_path> [-v]`<br>
+    Tento příkaz zalomí soubor aplikace LOB *. pkg* , který je součástí `<source_file>`, do souboru *. intunemac* se stejným názvem a umístí ho do složky, na kterou odkazuje `<output_directory_path>`.
     
     - `IntuneAppUtil -r <filename.intunemac> [-v]`<br>
     Tento příkaz extrahuje zjištěné parametry a verze vytvořeného souboru *.intunemac*.

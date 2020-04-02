@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2e83077561ec4492feaf14789cf339e0b3ee86e2
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.openlocfilehash: 9cb8cea30b53c5619580b289f73529668d71e909
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80359319"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551496"
 ---
 # <a name="add-a-property-list-file-to-macos-devices-using-microsoft-intune"></a>Přidání souboru se seznamem vlastností do zařízení macOS pomocí Microsoft Intune
 
@@ -43,6 +43,9 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
 - Pokud si nejste jistí, jak zadat klíč aplikace, změňte nastavení v rámci aplikace. Pak zkontrolujte soubor předvoleb aplikace pomocí [Xcode](https://developer.apple.com/xcode/) a podívejte se, jak je nastavení nakonfigurované. Apple doporučuje před importem souboru odebrat nespravovatelná nastavení pomocí Xcode.
 - Pouze některé aplikace pracují se spravovanými preferencemi a nemusí spravovat všechna nastavení.
 - Ujistěte se, že jste nahráli soubory seznamu vlastností, které cílí na nastavení kanálu zařízení, ne na nastavení kanálu uživatele. Soubory seznamu vlastností cílí na celé zařízení.
+
+> [!NOTE]
+> Uživatelské rozhraní (UI) Intune se aktualizuje na celé obrazovce a může trvat několik týdnů. Až do chvíle, kdy váš tenant obdrží tuto aktualizaci, budete mít při vytváření nebo úpravách nastavení popsaných v tomto článku mírně odlišný pracovní postup.
 
 ## <a name="create-the-profile"></a>Vytvoření profilu
 

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/27/2020
+ms.date: 04/01/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b877587e8eb50019086e2296d7cc5b7e900da62a
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: f77fb3b93c2600bf422aa95af267abc3e64ae7ee
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80323791"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551352"
 ---
 # <a name="selectively-wipe-data-using-app-protection-policy-conditional-launch-actions-in-intune"></a>Selektivní vymazání dat pomocí zásad ochrany aplikací s podmíněnými spouštěcími akcemi v Intune
 
@@ -59,7 +59,7 @@ Pro iOS/iPadOS budete moct nakonfigurovat akce pro následující nastavení pom
 - Modely zařízení
 - Maximální povolená úroveň hrozby pro zařízení
 
-Pokud chcete použít nastavení **modelů zařízení** , zadejte středníkem oddělený seznam identifikátorů modelů iOS/iPadOS. U těchto hodnot se nerozlišují velká a malá písmena. Kromě v Intune vytváření sestav pro vstup modelů zařízení můžete najít identifikátor modelu iOS/iPadOS ve sloupci Typ zařízení v [dokumentaci podpory HockeyApp](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/ios-device-types) nebo v tomto [úložišti GitHub třetí strany](https://gist.github.com/adamawolf/3048717).<br>
+Pokud chcete použít nastavení **modelů zařízení** , zadejte středníkem oddělený seznam identifikátorů modelů iOS/iPadOS. U těchto hodnot se nerozlišují velká a malá písmena. Kromě v Intune vytváření sestav pro vstup modelů zařízení můžete v tomto [úložišti GitHubu třetích stran](https://gist.github.com/adamawolf/3048717)najít identifikátor modelu iOS/iPadOS.<br>
 Příklad zadání: *iPhone5,2;iPhone5,3*
 
 Na zařízeních koncových uživatelů by klient Intune provedl akci založenou na jednoduché shodě řetězců modelu zařízení zadaných v okně Intune pro zásady ochrany aplikací. Párování zcela závisí na tom, co zařízení ohlásí. Jako správci IT vám doporučujeme toto nastavení otestovat na zařízeních od různých výrobcích a na různých modelech zařízení u malé skupiny uživatelů, abyste si ověřili, že se nastavení chová, jak má. Výchozí hodnotou je **Nenakonfigurováno**.<br>
