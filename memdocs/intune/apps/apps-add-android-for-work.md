@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 04/02/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ba5aebca04a93198e7694d52085225284c88027c
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: a6855abaf09a89303bfadd1a973dd1e1761346af
+ms.sourcegitcommit: 954b3aae7916ad14065e6e86a577c5205103a50e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80325020"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80624893"
 ---
 # <a name="add-managed-google-play-apps-to-android-enterprise-devices-with-intune"></a>Přidání spravovaných aplikací Google Play do zařízení s Androidem Enterprise pomocí Intune
 
@@ -224,6 +224,8 @@ V případě potřeby můžete z Microsoft Intune odstranit spravované aplikace
 
 > [!NOTE]
 > Pokud je aplikace neschválená nebo Odstraněná ze spravovaného úložiště Google Play, nebude odebrána ze seznamu klientských aplikací Intune. To vám umožní pořád cílit zásady odinstalace na uživatele, i když je aplikace neschválená.
+> 
+> Pokud chcete vypnout registraci a správu Androidu Enterprise, přečtěte si téma [Odpojení účtu správce Android Enterprise](../enrollment/connect-intune-android-enterprise.md#disconnect-your-android-enterprise-administrative-account).
 
 ## <a name="android-enterprise-system-apps"></a>Systémové aplikace typu Android Enterprise
 

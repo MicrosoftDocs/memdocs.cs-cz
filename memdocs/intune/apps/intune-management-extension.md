@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/26/2020
+ms.date: 04/02/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d424163df07dbe6add74bbdab9ec36a7b220b655
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 3cb71634194cee7b542ebe3c661c5a62d3d80ead
+ms.sourcegitcommit: 9145a5b3b39c111993e8399a4333dd82d3fe413c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80324234"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80620599"
 ---
 # <a name="use-powershell-scripts-on-windows-10-devices-in-intune"></a>Použití skriptů PowerShellu na zařízeních s Windows 10 v Intune
 
@@ -31,6 +31,9 @@ Rozšíření pro správu Microsoft Intune slouží k nahrání skriptů PowerSh
 Tato funkce platí pro:
 
 - Windows 10 a novější
+
+> [!NOTE]
+> Po splnění požadavků rozšíření správy Intune se automaticky nainstaluje rozšíření pro správu Intune, když se k uživateli nebo zařízení přiřadí skript prostředí PowerShell nebo aplikace Win32. Další informace najdete v tématu [požadavky](../apps/intune-management-extension.md#prerequisites)rozšíření pro správu Intune.
 
 ## <a name="move-to-modern-management"></a>Přechod na moderní správu
 

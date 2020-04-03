@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2c8c521dc0899b3429de85e95116a6277d724771
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 6f16c39ff0af44918099863be5d23ec9fe564493
+ms.sourcegitcommit: 954b3aae7916ad14065e6e86a577c5205103a50e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80327280"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80624913"
 ---
 # <a name="move-android-devices-from-device-administrator-to-work-profile-management"></a>Přesunutí zařízení s Androidem ze Správce zařízení do správy pracovního profilu
 
@@ -65,8 +65,8 @@ Když uživatelé uvidí, že z tohoto důvodu nejsou v souladu s předpisy, mů
 
 
     Do e-mailu můžete do zprávy přidat níže uvedenou adresu URL pro uživatele. Adresa URL spustí Portál společnosti pro Android na stránce **aktualizovat nastavení zařízení** . Tato stránka spustí svůj tok pro přesun do správy pracovního profilu.
-    - [https://portal.manage.microsoft.com/UpdateSettings.aspx](https://portal.manage.microsoft.com/UpdateSettings.aspx).
-    - Pro státní správu USA můžete místo toho použít tento odkaz: [https://portal.manage.microsoft.us/UpdateSettings.aspx](https://portal.manage.microsoft.us/UpdateSettings.aspx).
+    - `https://portal.manage.microsoft.com/UpdateSettings.aspx`.
+    - Pro státní správu USA můžete místo toho použít tento odkaz: `https://portal.manage.microsoft.us/UpdateSettings.aspx`.
   
     > [!NOTE]
     > - Samozřejmě můžete použít uživatelsky přívětivý text Hyper-v propojeních ve vaší komunikaci s uživateli. Nepoužívejte však zkrácení adres URL, protože odkazy nemusí fungovat, pokud se tímto způsobem změní.

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, get-started, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c57a201d71d3a8278499636c6ca794b437e11e9a
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 672c978a7e590e8e26f676733bd2903d3684e978
+ms.sourcegitcommit: db511e03f14e6120968b60def8990485eb42529b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80083809"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80611738"
 ---
 # <a name="app-protection-policies-overview"></a>Přehled zásad ochrany aplikací
 
@@ -135,7 +135,7 @@ Existují však určitá omezení, o kterých byste měli vědět, například:
 
 Všechny aplikace, které jsou integrované se sadou [Intune SDK](../developer/app-sdk.md) nebo zabalené pomocí [Nástroje pro zabalení aplikace Intune](../developer/apps-prepare-mobile-application-management.md) , je možné spravovat pomocí zásad ochrany aplikací Intune. Podívejte se na oficiální seznam [Microsoft Intune chráněných aplikací](apps-supported-intune-apps.md) , které jsou sestavené pomocí těchto nástrojů a jsou k dispozici pro veřejné použití.
 
-Vývojový tým sady Intune SDK aktivně testuje a udržuje podporu pro aplikace vytvořené s nativními platformami Android, iOS/iPadOS (obj-C, SWIFT), Xamarin, Xamarin. Forms a Cordova. I když se někteří zákazníci dokončí s integrací sady Intune SDK s jinými platformami, jako je například reakce nativních a NativeScript, neposkytujeme explicitní pokyny ani moduly plug-in pro vývojáře aplikací, kteří používají jinou než naše podporované platformy.
+Vývojový tým sady Intune SDK aktivně testuje a udržuje podporu pro aplikace vytvořené s nativními platformami Android, iOS/iPadOS (obj-C, SWIFT), Xamarin a Xamarin. Forms. I když se někteří zákazníci dokončí s integrací sady Intune SDK s jinými platformami, jako je například reakce nativních a NativeScript, neposkytujeme explicitní pokyny ani moduly plug-in pro vývojáře aplikací, kteří používají jinou než naše podporované platformy.
 
 [Sada Intune SDK](../developer/app-sdk.md) používá některé pokročilé možnosti moderního ověřování z[knihoven Azure Active Directory Authentication](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-libraries) Library (ADAL) pro obě strany sady SDK a verze třetích stran. [Knihovna Microsoft Authentication Library](https://docs.microsoft.com/azure/active-directory/develop/reference-v2-libraries) (MSAL) ale nefunguje dobře s mnoha našimi základními scénáři, jako je například ověřování do služby Intune App Protection a podmíněné spuštění. Vzhledem k tomu, že celkový návod od týmu identity společnosti Microsoft je přepnout na MSAL pro všechny systém Microsoft Office aplikace, [Intune SDK](../developer/app-sdk.md) bude nakonec potřebovat podporu, ale ještě neexistují žádné plány.
 

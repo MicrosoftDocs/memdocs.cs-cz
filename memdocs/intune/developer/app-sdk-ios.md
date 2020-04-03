@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/02/2020
+ms.date: 04/02/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -17,17 +17,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 55cee62704660a3cf51fea88c2b8b877aa9ce6ef
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 172d76b8d6f196a40fc66eeaba91b7bb32228ccc
+ms.sourcegitcommit: 9145a5b3b39c111993e8399a4333dd82d3fe413c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79327335"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80620509"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Microsoft Intune App SDK pro iOS – Příručka pro vývojáře
 
 > [!NOTE]
 > Doporučujeme přečíst si článek s pokyny, [jak začít se sadou Intune App SDK](app-sdk-get-started.md), který vysvětluje, jak se připravit na integraci na jednotlivých podporovaných platformách.
+>
+> Chcete-li stáhnout sadu SDK, přečtěte si téma [Stažení souborů sady SDK](../developer/app-sdk-get-started.md#download-the-sdk-files).
 
 Sada Microsoft Intune App SDK pro iOS umožňuje začlenit do vaší nativní aplikace pro iOS zásady ochrany aplikací Intune (označované také jako zásady APP nebo MAM). Aplikace s povolenou funkcí MAM je integrovaná se sadou Intune App SDK. Správci IT můžou zásady ochrany aplikací nasadit do vaší mobilní aplikace, když Intune tuto aplikaci aktivně spravuje.
 

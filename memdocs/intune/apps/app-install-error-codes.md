@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/27/2020
+ms.date: 04/02/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 431d2753b04269e9aacd7ef951ef3f45a076df60
-ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
+ms.openlocfilehash: bdf779e35125d8da7093e67702e064cff362d6ed
+ms.sourcegitcommit: 9145a5b3b39c111993e8399a4333dd82d3fe413c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80407903"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80620539"
 ---
 # <a name="intune-app-installation-error-reference"></a>Reference k chybě instalace aplikace Intune
 
@@ -59,6 +59,7 @@ Následující chybové zprávy a popisy poskytují podrobné informace o chybá
 |--------------------|------------------|------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 0x87D12906 | -2016335610 | Chyba agenta Apple MDM: příkaz instalace aplikace se nezdařil bez zadání důvodu chyby. Zkuste instalaci aplikace znovu. | Agent Apple MDM vrátil oznámení, že instalační příkaz selhal. |
 | 0x87D1313C | -2016333508 | Síťové připojení na klientovi bylo ztraceno nebo přerušeno. Pozdější pokusy by měly být úspěšné v lepším síťovém prostředí. | Při odesílání aktualizované adresy URL služby stažení do zařízení došlo ke ztrátě síťového připojení. Konkrétně se nepodařilo najít server s určeným názvem hostitele. |
+| 0x87D1313D | -2016333507 | Nepovedlo se načíst licenci pro aplikaci s ID obchodu iTunes. | Synchronizujte přidružený token VPP a pak synchronizujte zařízení s Intune. Pokud se problém nevyřeší, odeberte přiřazení skupiny a znovu přiřaďte aplikaci VPP jako licencované zařízení. Pokud problém pořád přetrvává, Odvolejte licenci aplikace ze zařízení tak, že přejdete na **aplikace** > **iOS** > vyberte možnost zařízení *aplikace VPP* > **licence** k aplikacím > *Vybrat zařízení*. Pak Odvolejte licenci a zkuste aplikaci znovu přiřadit ke skupině uživatelů nebo zařízení. Pokud se problém opakuje, Odvolejte všechny licence VPP pro toto zařízení, a to tak, že na **zařízeních** > **iOS** > *vyberete* > **Přehled** zařízení > **odvoláte licence**a pak zařízení vyřadíte a znovu zaregistrujete do Intune.
 | 0x87D11388 | -2016341112 | zařízení s iOS/iPadOS je momentálně zaneprázdněné.  | Zařízení s iOS/iPadOS bylo zaneprázdněné, což vedlo k chybě. Zařízení bylo uzamčené. Uživatel musí zařízení odemknout, aby se nainstalovala aplikace. |
 | 0x87D13B64 | -2016330908 | Instalace aplikace se nezdařila.  | Došlo k chybě instalace aplikace. k odstranění této chyby je potřeba protokol konzoly iOS/iPadOS. |
 | 0x87D13B66 | -2016330906 | Aplikace je spravovaná, ale její platnost vypršela nebo odebrala uživatel.  | Buď uživatel explicitně odinstaloval aplikaci, nebo vypršela platnost aplikace, ale stahování se nepovedlo, nebo se detekce aplikace neshoduje s odpovědí ze zařízení.   K této chybě může dojít také v závislosti na chybě platformy iOS/iPadOS 9.2.2. |

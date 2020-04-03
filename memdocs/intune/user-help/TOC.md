@@ -12,6 +12,7 @@
 
 ## Použití zařízení s Androidem
 ### [Proč registrovat vaše zařízení s Androidem](why-enroll-android-device.md)
+### [Instalace aplikace Portál společnosti v Číně](install-company-portal-android-china.md)
 ### Registrovat zařízení
 #### [Registrace zařízení s Androidem](enroll-device-android-company-portal.md)  
 #### [Registrace zařízení s pracovním profilem Androidu](enroll-device-android-work-profile.md)

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 59ec9f899991e63b9a652e55e3253a07dee0cc15
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 7a533344b72952098403fae0ebcabbcad473684a
+ms.sourcegitcommit: db511e03f14e6120968b60def8990485eb42529b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79332131"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80611725"
 ---
 # <a name="frequently-asked-questions-about-mam-and-app-protection"></a>Časté otázky ke správě mobilních aplikací (MAM) a ochraně aplikací
 
@@ -75,7 +75,7 @@ Zásadami ochrany aplikací Intune se dá spravovat každá aplikace integrovan�
 
 **Co když chci povolit aplikaci s Intune App Protection, ale nepoužíváte podporovanou platformu pro vývoj aplikací?**
 
-Vývojový tým sady Intune SDK aktivně testuje a udržuje podporu pro aplikace vytvořené s nativními platformami Android, iOS/iPadOS (obj-C, SWIFT), Xamarin, Xamarin. Forms a Cordova. I když se někteří zákazníci dokončí s integrací sady Intune SDK s jinými platformami, jako je například reakce nativních a NativeScript, neposkytujeme explicitní pokyny ani moduly plug-in pro vývojáře aplikací, kteří používají jinou než naše podporované platformy.
+Vývojový tým sady Intune SDK aktivně testuje a udržuje podporu pro aplikace vytvořené s nativními platformami Android, iOS/iPadOS (obj-C, SWIFT), Xamarin a Xamarin. Forms. I když se někteří zákazníci dokončí s integrací sady Intune SDK s jinými platformami, jako je například reakce nativních a NativeScript, neposkytujeme explicitní pokyny ani moduly plug-in pro vývojáře aplikací, kteří používají jinou než naše podporované platformy.
 
 **Podporuje sada Intune App SDK knihovnu MSAL (Microsoft Authentication Library) nebo účty sociálních sítí?**<br></br>
 Sada Intune App SDK používá některé pokročilé možnosti ADAL (Active Directory Authentication Library) pro výchozí verze sady SDK i pro verze třetích stran. Proto knihovna MSAL příliš dobře nespolupracuje s mnoha našimi hlavními scénáři, jako je ověřování ve službě Intune App Protection nebo podmíněné spuštění. Vzhledem k tomu, že celkový návod od týmu identity společnosti Microsoft je přepnout na MSAL pro všechny systém Microsoft Office aplikace, Intune SDK bude nakonec potřebovat podporu, ale ještě neexistují žádné plány.
