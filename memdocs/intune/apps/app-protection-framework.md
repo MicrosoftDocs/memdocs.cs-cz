@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cd6956a9bdb19f25e39dd8cfb8e7e685d60f7b8c
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 635804a9ad5cd76d104f16bcd204df1daa28b114
+ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80083555"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80696505"
 ---
 # <a name="data-protection-framework-using-app-protection-policies"></a>Architektura ochrany dat pomocí zásad ochrany aplikací 
 
@@ -37,7 +37,7 @@ Konfigurační rozhraní ochrany dat aplikace je rozdělené do tří různých 
 
 - Level 2 Enterprise Enhanced Data Protection – Microsoft doporučuje tuto konfiguraci pro zařízení, kde uživatelé přistupují k citlivým nebo důvěrným informacím. Tato konfigurace platí pro většinu mobilních uživatelů, kteří přistupují k pracovním nebo školním datům. Některé ovládací prvky mohou ovlivnit činnost koncového uživatele.
 
-- Level 3 Enterprise high data Protection – Microsoft doporučuje tuto konfiguraci pro zařízení spuštěná organizací s větším nebo výkonnějším bezpečnostním týmem nebo pro konkrétní uživatele nebo skupiny, kteří mají jednoznačně vysoké riziko (jako je třeba jedna organizace). identifikují uživatelé, kteří zpracovávají data, jejichž odcizení by přímo a vážně ovlivnily svou cenu za akcie. Organizace, která bude pravděpodobně cílena prostřednictvím dobře financované a sofistikované nežádoucí osoby, by měla snažíme na tuto konfiguraci.
+- Level 3 Enterprise high data Protection – Microsoft doporučuje tuto konfiguraci pro zařízení spuštěná v organizaci s větším nebo výkonnějším bezpečnostním týmem nebo pro konkrétní uživatele nebo skupiny, které mají jednoznačně vysoké riziko (jako jeden příklad, jedna organizace identifikovala uživatele, kteří zpracovávají data, jejichž krádež by přímo a vážně ovlivnily svou cenu akcií). Organizace, která bude pravděpodobně cílena prostřednictvím dobře financované a sofistikované nežádoucí osoby, by měla snažíme na tuto konfiguraci.
 
 ## <a name="app-data-protection-framework-deployment-methodology"></a>Metodologie nasazení architektury APP data Protection
 
@@ -62,6 +62,9 @@ Jednotlivá nastavení aplikací pro každou aplikaci je možné ověřit na za�
 Tato nastavení zásad ochrany aplikací by měla být povolená pro příslušné aplikace a přiřazená všem mobilním uživatelům. Další informace o jednotlivých nastaveních zásad najdete v tématu nastavení [zásad ochrany aplikací pro iOS](app-protection-policy-settings-ios.md) a [nastavení zásad ochrany aplikací pro Android](app-protection-policy-settings-android.md).
 
 Společnost Microsoft doporučuje kontrolu a kategorizaci scénářů používání a následně konfiguraci uživatelů pomocí doporučených pokynů pro danou úroveň. Stejně jako u všech platforem může být potřeba upravit nastavení v odpovídající úrovni v závislosti na potřebách organizace, protože ochrana dat musí vyhodnocovat hrozby, později rizika a dopad na použitelnost.  
+
+### <a name="conditional-access-policies"></a>Zásady podmíněného přístupu
+Aby se zajistilo, že pouze aplikace, které podporují zásady ochrany aplikací Azure Active Directory, mají přístup k datům v pracovním nebo školním účtu, jsou vyžadovány zásady podmíněného přístupu Viz **scénář 1: aplikace Office 365 vyžadují schválené aplikace se zásadami ochrany aplikací** v tématu [vyžadování zásad ochrany aplikací pro cloudovou aplikaci přístup pomocí podmíněného přístupu](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access) pro kroky pro implementaci konkrétních zásad.
 
 ### <a name="apps-to-include-in-the-app-protection-policies"></a>Aplikace, které se mají zahrnout do zásad ochrany aplikací  
 

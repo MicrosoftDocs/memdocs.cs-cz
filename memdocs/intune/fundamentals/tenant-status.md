@@ -6,26 +6,27 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/05/2019
+ms.date: 04/06/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
 ms.assetid: 7954a686-25dc-4fce-b395-324816f46d3b
+ms.reviewer: crisk
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 99a34167f8616c6bbf2e441628de0d73aba080c3
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: d309b295281c88dff717c5f609905b3e541e3fed
+ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79330495"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80696441"
 ---
 # <a name="use-the-intune-tenant-status-page"></a>Použití stránky stavu tenanta Intune
 Stránka stav tenanta Microsoft Intune je centralizované centrum, kde si můžete zobrazit aktuální a důležité podrobnosti o vašem tenantovi. Podrobnosti zahrnují dostupnost a používání licencí, stav konektoru a důležitou komunikaci týkající se služby Intune.  
 
-Pokud chcete zobrazit řídicí panel, přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) a pak vyberte **stav tenanta**.  *Stav tenanta* se zobrazí v části **pomoc a podpora**.  
+Řídicí panel zobrazíte tak, že se přihlásíte do [centra pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431) , přejdete na **Správa tenanta**a pak vyberete **stav tenanta**.
 
 Stránka je rozdělena na tři karty:
 

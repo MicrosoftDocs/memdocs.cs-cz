@@ -5,7 +5,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 02/27/2020
+ms.date: 03/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f5f32ffb864f40d8cb5402f7d4488b3870686d1a
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: ed5ff548d28a5bc973c43c84861b9b256b41a203
+ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80322522"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80696291"
 ---
 # <a name="see-device-details-in-intune"></a>Zobrazení podrobností o zařízení v Intune
 
@@ -41,20 +41,26 @@ V tomto článku se dozvíte, jak si můžete zobrazit všechna zařízení a je
       - [Vymazání](devices-wipe.md#wipe)
       - [Odstranit](devices-wipe.md#delete-devices-from-the-intune-portal)
       - [Vzdálené uzamčení](device-remote-lock.md)
-      - [Synchronizace](device-sync.md)
+      - [Synchronizovat](device-sync.md)
       - [Resetovat heslo](device-passcode-reset.md)
       - [Restartovat](device-restart.md) (jenom Windows)
       - [Začít znovu](device-fresh-start.md) (jenom Windows)
       - [Resetování autopilotu](/windows/deployment/windows-autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset) (jenom Windows)
       - [Rychlá kontrola](../configuration/device-restrictions-windows-10.md) (jenom Windows 10)
       - [Úplná kontrola](../configuration/device-restrictions-windows-10.md) (jenom Windows 10)
-       - [Přejmenování zařízení](device-rename.md)
-      - Spustit relaci vzdálené pomoci
+      - Aktualizace funkce Security Intelligence v programu Windows Defender
+      - [Střídání klíčů BitLockeru](https://docs.microsoft.com/mem/intune/protect/encrypt-devices#to-rotate-the-bitlocker-recovery-key)
+      - [Přejmenování zařízení](device-rename.md)
+      - [Nová relace vzdálené pomoci](https://docs.microsoft.com/mem/intune/remote-actions/teamviewer-support)
    - Pomocí **vlastností** můžete zařízení přiřadit [kategorii, kterou vytvoříte](../enrollment/device-group-mapping.md), a upravit jeho vlastnictví na osobní nebo podnikové.
    - **Hardware** obsahuje mnoho podrobností o zařízení, jako je ID zařízení, operační systém a verze, prostor úložiště a další podrobnosti.
    - V části **Zjištěné aplikace** se zobrazuje seznam všech nainstalovaných aplikací, které služba Intune v zařízení našla, včetně jejich verzí. Další informace najdete v tématu [zjištěné aplikace Intune](../apps/app-discovered-apps.md).
    - V části **Dodržování předpisů zařízení** najdete všechny přiřazené zásady dodržování předpisů a informaci, jestli je zařízení splňuje.
    - Část **Konfigurace zařízení** obsahuje všechny zásady konfigurace přiřazené zařízení a informaci, jestli byly zásady úspěšné.
+   - **Konfigurace aplikace** 
+   - **Konfigurace zabezpečení koncového bodu**
+   - **Klíče pro obnovení** zobrazují dostupné klíče BitLockeru pro zařízení.
+   - **Spravované aplikace** zobrazí seznam všech spravovaných aplikací, které Intune nakonfigurovali a nasadily do zařízení. 
 
 ## <a name="hardware-device-details"></a>Podrobnosti o hardwarovém zařízení
 V závislosti na tom, jaký dopravce zařízení používá, se nemusí shromažďovat všechny podrobnosti.

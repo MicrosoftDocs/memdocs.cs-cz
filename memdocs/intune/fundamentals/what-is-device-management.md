@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: microsoft-intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 756d835a54a9b020be50a83d95d1925334fda8f1
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 32e5d053b6dd579aad25a268604248d4fb5a6072
+ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80326647"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80696477"
 ---
 # <a name="device-management-overview"></a>Přehled správy zařízení
 
@@ -76,7 +76,7 @@ Hlavní úlohou řešení správy zařízení je poskytování zabezpečení a o
 
 Existuje několik způsobů přístupu ke správě zařízení. Nejdřív můžete spravovat různé aspekty zařízení pomocí funkcí integrovaných do Intune. Tento přístup se nazývá **Správa mobilních zařízení (MDM)** . Uživatelé si zaregistrují svá zařízení a používají certifikáty ke komunikaci s Intune. Jako správce IT můžete nabízet aplikace na zařízeních, omezovat zařízení na konkrétní operační systém, blokovat osobní zařízení a další. Pokud dojde ke ztrátě nebo odcizení zařízení, můžete také odebrat všechna data ze zařízení.
 
-U druhého způsobu spravujete aplikace na zařízeních. Tento přístup se nazývá **Správa mobilních aplikací (MAM)** . Uživatelé můžou k přístupu k prostředkům organizace používat svoje osobní zařízení. Při otevření aplikace, jako je e-mail nebo SharePoint, se uživatelům zobrazí výzva k dalšímu ověření. Pokud dojde ke ztrátě nebo odcizení zařízení, můžete odebrat všechna data organizace ze zařízení.
+U druhého způsobu spravujete aplikace na zařízeních. Tento přístup se nazývá **Správa mobilních aplikací (MAM)** . Uživatelé můžou k přístupu k prostředkům organizace používat svoje osobní zařízení. Při otevření aplikace, jako je e-mail nebo SharePoint, se uživatelům zobrazí výzva k dalšímu ověření. Pokud dojde ke ztrátě nebo odcizení zařízení, můžete odebrat všechna firemní data z aplikací spravovaných pomocí Intune.
 
 Můžete také použít společně kombinaci [MDM a MAM](byod-technology-decisions.md).
 
@@ -99,7 +99,7 @@ V centru pro správu správy zařízení můžete:
   - [Správa aktualizací Windows 10](../protect/windows-update-for-business-configure.md)  
   - [Správa aktualizací pro iOS/iPadOS](../protect/software-updates-ios.md)  
 - [Azure Active Directory](https://docs.microsoft.com/azure/active-directory)  
-- [Správa uživatelů](https://docs.microsoft.com/azure/active-directory/fundamentals/add-users-azure-active-directory)
+- [Spravovat uživatele](https://docs.microsoft.com/azure/active-directory/fundamentals/add-users-azure-active-directory)
 - [Správa skupin a členů](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-manage-groups)
 - [Řešení problémů](help-desk-operators.md)
 

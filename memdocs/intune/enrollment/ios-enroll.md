@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e7d7f35d6d6b11875c722d4969f5776040ca0dfc
-ms.sourcegitcommit: 71f26a0756fd40c1a06f885f3d31e49734fe97fe
+ms.openlocfilehash: 1f3964ec67c9c78e5aedc70ff4f328a66c59c04b
+ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80256449"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80696531"
 ---
 # <a name="enroll-iosipados-devices-in-intune"></a>Registrace zařízení s iOS/iPadOS v Intune
 
@@ -37,7 +37,7 @@ Předtím, než budete moci povolit zařízení se systémem iOS/iPadOS, proveď
 
 - Ujistěte [se, že vaše zařízení má nárok na registraci zařízení Apple](https://support.apple.com/en-us/HT204142#eligibility).
 - [Nastavení Intune](../fundamentals/setup-steps.md) – tento postup slouží k nastavení infrastruktury Intune. Registrace zařízení vyžaduje zejména [nastavení autority MDM](../fundamentals/mdm-authority-set.md).
-- [Získání certifikátu Apple MDM push Certificate](apple-mdm-push-certificate-get.md) – Apple vyžaduje certifikát, aby bylo možné povolit správu zařízení IOiOS/IPadOS a MacOS.
+- [Získání certifikátu Apple MDM push Certificate](apple-mdm-push-certificate-get.md) – Apple vyžaduje certifikát, aby bylo možné povolit správu zařízení se systémem iOS/IPadOS a MacOS.
 
 ## <a name="user-owned-iosipados-and-ipados-devices-byod"></a>Zařízení s iOS/iPadOS a iPadOS vlastněná uživatelem (BYOD)
 

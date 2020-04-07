@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/19/2019
+ms.date: 03/31/2020
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,63 +15,79 @@ ms.assetid: d4430e92-04cc-48e9-a77a-81b95a90b6b3
 searchScope:
 - User help
 ROBOTS: ''
-ms.reviewer: arnab
+ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: ee2d220e308b406251f049e1c17422f89ee36534
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: d9e074def368927504c3f3c1761ec21b3ab62d22
+ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79328307"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80696266"
 ---
 # <a name="encrypting-your-android-device"></a>Šifrování zařízení s Androidem
 
-Šifrování zařízení chrání soubory a složky před neoprávněným přístupem v případě ztráty nebo odcizení zařízení. Když zapnete šifrování zařízení, přihlaste se k zařízení jenom jednotlivcům se správným heslem nebo PIN kódem. 
+Šifrování zařízení chrání soubory a složky před neoprávněným přístupem v případě ztráty nebo odcizení zařízení. Data v zařízení jsou nepřístupná a nečitelná pro uživatele bez hesla. 
 
-Než budete moct získat přístup k školním nebo pracovním prostředkům, může vaše organizace vyžadovat, abyste svoje zařízení s Androidem zašifroval. Některá novější zařízení s Androidem jsou ve výchozím nastavení zašifrována.  
+Než budete moct přistupovat do školních nebo pracovních prostředků, vaše organizace může vyžadovat:
 
-## <a name="turn-on-encryption"></a>Zapnout šifrování
-
-Pokud Portál společnosti nebo aplikace Microsoft Intune vyzve k zašifrování zařízení, proveďte následující kroky. 
+* [Zašifrování zařízení](#encrypt-device)
+* [Povolit zabezpečené spuštění](#enable-secure-startup)
+* [Nastavení spouštěcího hesla, kódu PIN nebo jiné metody ověřování](#set-startup-passcode)  
 
 > [!Note]
-> Některá zařízení s Androidem z Huawei, vivo a OPPO se nedají šifrovat. Další informace najdete [tady](your-device-appears-encrypted-but-cp-says-otherwise-android.md).  
+> Některá zařízení s Androidem z Huawei, vivo a OPPO se nedají šifrovat. Další informace najdete v tématu [šifrování zařízení, ale aplikace říká jinak](your-device-appears-encrypted-but-cp-says-otherwise-android.md).  
 
-1. Nastavte zámek obrazovky zařízení.  
-    a. Přejít na **nastavení** > **zamykací obrazovka a zabezpečení** > **Typ zámku obrazovky**.  
-    b. Vyberte možnost **připnout**, **heslo**nebo **vzor**.  
-    c. Při konfiguraci zámku obrazovky postupujte podle pokynů na obrazovce.  
+## <a name="encrypt-device"></a>Šifrovat zařízení
 
-2. Vraťte se na **zamykací obrazovku a zabezpečení** a vyberte **zabezpečené spuštění**.
-3. Vyberte **vyžadovat připnutí, když se zařízení zapne** > **OK**.
-4. Zadejte svůj PIN kód a potvrďte a Zašifrujte své zařízení.
-5. Otevřete Portál společnosti nebo Microsoft Intune aplikaci.
+Pomocí těchto kroků Zašifrujte své zařízení. Vaše zařízení se může několikrát restartovat. 
+
+Název a umístění možnosti šifrování se budou lišit v závislosti na výrobci zařízení a verzi Androidu. 
+
+1. Otevřete aplikaci **Nastavení** .
+2. Zadejte **zabezpečení** nebo **Zašifrujte** na panelu hledání aplikace a vyhledejte související nastavení.
+3. Klepněte na možnost k zašifrování zařízení. Postupujte podle pokynů na obrazovce.  
+4. Po zobrazení výzvy nastavte heslo zamykací obrazovky, kód PIN nebo jinou metodu ověřování (pokud to vaše organizace dovoluje). 
+5. Chcete-li znovu kontrolovat nastavení, otevřete Portál společnosti nebo Microsoft Intune aplikaci.
+    * Portál společnosti uživatelé: Vyberte zařízení a klepněte na **kontrolovat nastavení zařízení**. 
+    * Microsoft Intune uživatelé: budete muset počkat, dokud se stránka neaktualizuje, ale v případě, že se váš stav šifrování změní na kompatibilní. 
+
+## <a name="enable-secure-startup"></a>Povolit zabezpečené spuštění
+
+Vaše organizace může vyžadovat, abyste v rámci svých zásad šifrování povolili zabezpečené spouštění. Tato funkce dále chrání vaše zařízení tím, že vyžaduje, abyste před zahájením telefonu zadali heslo nebo PIN kód. Mnoho dalších možností ověřování se liší, ale bude se lišit podle toho, co vaše organizace povoluje. 
+
+Název a umístění možnosti zabezpečeného spuštění se budou lišit v závislosti na výrobci zařízení a verzi Androidu. V některých zařízeních se toto nastavení může volat jako **silná ochrana**. 
+
+1. Otevřete aplikaci **Nastavení** .
+2. Zadejte **zabezpečené spuštění** na panelu hledání aplikace.
+3. Klepněte na **zabezpečený start** > **při zapnutí zařízení vyžadovat kód PIN**.
+4. Po zobrazení výzvy zadejte PIN kód zařízení.   
+5. Chcete-li znovu kontrolovat nastavení, otevřete Portál společnosti nebo Microsoft Intune aplikaci.
     * Portál společnosti uživatelé: Vyberte zařízení a klepněte na **kontrolovat nastavení zařízení**. 
     * Microsoft Intune uživatelé: budete muset počkat, dokud se stránka neaktualizuje, ale v případě, že se váš stav šifrování změní na kompatibilní.  
 
-Zařízení se systémem Android 4,4 a starším nemusí mít možnost **zabezpečeného spuštění** . V takovém případě proveďte následující kroky k zašifrování zařízení.
 
-1. Přejít na **nastavení** > **zabezpečení** > **šifrování zařízení**. Mezi zařízeními s Androidem se liší popisky na obrazovce. Pokud nevidíte možnost **Šifrovat zařízení** , vraťte se změnami:
-    * **Šifrování** **úložiště > úložiště**
-    * **Úložiště** > **zamykací obrazovce a zabezpečení** > **Další nastavení zabezpečení** 
+## <a name="set-startup-passcode"></a>Nastavit spouštěcí heslo   
+Když [zařízení zašifrujete](#encrypt-device) a [povolíte zabezpečené spouštění](#enable-secure-startup), budete VYZVÁNI k nastavení PIN kódu zařízení, hesla nebo jiné metody ověřování (pokud to vaše organizace dovoluje). Nejsou potřeba žádné další kroky. 
 
-2. Postupujte podle pokynů na obrazovce. Během šifrování se zařízení může několikrát restartovat.
-3. Otevřete Portál společnosti nebo Microsoft Intune aplikaci.
-    * Portál společnosti uživatelé: Vyberte zařízení a klepněte na **kontrolovat nastavení zařízení**.  
-    * Microsoft Intune uživatelé: budete muset počkat, dokud se stránka neaktualizuje, ale v případě, že se váš stav šifrování změní na kompatibilní.
+Chcete-li zvolit nebo změnit typ zamykací obrazovky:
 
-## <a name="troubleshoot"></a>Řešení problémů  
-**Problém**: zařízení jste už zašifrovali a
+1. Otevřete aplikaci **Nastavení** .
+2. Na panelu hledání aplikace zadejte **Zámek obrazovky** .
+3. Klepněte na **Typ zámku obrazovky**.
+4. Klepněte na typ zámku obrazovky, který chcete použít, a postupujte podle pokynů na obrazovce.  
 
-- Tlačítko pro šifrování je zakázané.
-- Zobrazí se zpráva s informacemi o tom, že je stále nutné nastavit šifrování.
-- Při pokusu o použití aplikace Portál společnosti nebo Microsoft Intune se zobrazí chyby.
+## <a name="troubleshoot"></a>Řešení problémů    
+**Problém**: tlačítko šifrování je zakázané.   
 
-**Možná řešení**
+**Můžete vyzkoušet**: 
+* Ujistěte se, že je zařízení plně účtované a připojené. Šifrování může chvíli trvat a vyžaduje plnou baterii.   
 
-- Ujistěte se, že je zařízení nabité a připojené k nabíječce.  
-- Zkontrolujte, že jste na zařízení nastavili PIN kód nebo heslo.  
+**Problém**: zobrazí se zpráva oznamující, že pořád potřebujete šifrovat vaše zařízení.  
+
+**Možná řešení**:
+   *  Nastavte na svém zařízení [zamykací obrazovku](#set-startup-passcode) . 
+   * [Povolit zabezpečené spuštění](#enable-secure-startup).
 
 Potřebujete ještě další pomoc? Obraťte se na svou firemní podporu (kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980)) nebo napište <a href="mailto:wintunedroidfbk@microsoft.com?subject=I'm having trouble with encryption on my Android device&body=Describe the issue you're experiencing here.">týmu Microsoft Android</a>.  

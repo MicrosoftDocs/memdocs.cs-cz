@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b25d5439aa9d0842cbbee24b5e8759d00f371d4b
-ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
+ms.openlocfilehash: 58e651849632fd06f962edfc90649ad14eeaeda0
+ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80407721"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80696545"
 ---
 # <a name="manage-web-access-by-using-microsoft-edge-with-microsoft-intune"></a>Správa webového přístupu pomocí Microsoft Edge s Microsoft Intune
 
@@ -209,8 +209,8 @@ Pak použijte následující páry klíč/hodnota, které přidělí vaší orga
 
 |    Klíč    |    Hodnota    |
 |--------------------------------------------------------------------|------------|
-|    com. Microsoft. Intune. mam. managedbrowser. NewTabPage. BrandLogo    |    True (Pravda)    |
-|    com. Microsoft. Intune. mam. managedbrowser. NewTabPage. BrandColor    |    True (Pravda)    |
+|    com. Microsoft. Intune. mam. managedbrowser. NewTabPage. BrandLogo    |    True    |
+|    com. Microsoft. Intune. mam. managedbrowser. NewTabPage. BrandColor    |    True    |
 
 ## <a name="display-relevant-industry-news-on-new-tab-pages"></a>Zobrazit relevantní novinky v odvětví na nových stránkách karty
 
@@ -283,7 +283,7 @@ K vytvoření seznamu povolených a blokovaných webů můžete použít různé
   - Port 443 pro protokol HTTPS
 - Použití zástupných znaků pro číslo portu **není podporováno.** Například `http://www.contoso.com:*` a `http://www.contoso.com:*/` podporované nejsou. 
 
-    |    Adresa URL    |    Podrobnosti    |    Odpovídá    |    Neodpovídá    |
+    |    URL    |    Podrobnosti    |    Odpovídá    |    Neodpovídá    |
     |-------------------------------------------|--------------------------------------------------------|-------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------|
     |    `http://www.contoso.com`    |    Odpovídá jediné stránce    |    `www.contoso.com`    |    `host.contoso.com`<br>`www.contoso.com/images`<br>`contoso.com/`    |
     |    `http://contoso.com`    |    Odpovídá jediné stránce    |    `contoso.com/`    |    `host.contoso.com`<br>`www.contoso.com/images`<br>`www.contoso.com`    |
@@ -367,14 +367,14 @@ Pokud vaše organizace funguje v vysoce regulovaném odvětví nebo používá s
 
 |    Klíč    |    Hodnota    |
 |-----------|-------------|
-|    `com.microsoft.intune.mam.managedbrowser.disableFeatures`    |    Služba **InPrivate** vypíná procházení InPrivate.   |
+|    `com.microsoft.intune.mam.managedbrowser.disabledFeatures`    |    Služba **InPrivate** vypíná procházení InPrivate.   |
 
 ### <a name="restrict-microsoft-edge-use-to-allowed-accounts-only"></a>Omezit použití Microsoft Edge jenom na povoleno – účty
 
 Kromě blokování procházení InPrivate a MSA můžete použít Microsoft Edge jenom v případě, že je uživatel přihlášený pomocí svého účtu AAD. Tato funkce je dostupná jenom pro uživatele zaregistrované v MDM. Další informace o konfiguraci tohoto nastavení najdete tady:
 
 >[!NOTE]
-> `com.microsoft.intune.mam.managedbrowser.disableFeatures` lze použít k zákazu více funkcí současně. Pokud například chcete zakázat InPrivate a heslo, použijte `inprivate| password`.
+> `com.microsoft.intune.mam.managedbrowser.disabledFeatures` lze použít k zákazu více funkcí současně. Pokud například chcete zakázat InPrivate a heslo, použijte `inprivate|password`.
 
 ## <a name="configure-microsoft-edge-as-a-kiosk-app-on-android-devices"></a>Konfigurace Microsoft Edge jako aplikace veřejného terminálu na zařízeních s Androidem
 

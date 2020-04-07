@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 73b471d7eefa8e696b17a949756ce1395530c5f7
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: fadd5817ccd4e591fe92c11cb30041296ac85d61
+ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80323201"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80696436"
 ---
 # <a name="set-up-app-based-conditional-access-policies-with-intune"></a>Nastavení zásad podmíněného přístupu na základě aplikace v Intune
 
@@ -32,7 +32,7 @@ Nastavte zásady podmíněného přístupu na základě aplikací pro aplikace, 
 Než budete moct používat zásady podmíněného přístupu na základě aplikace, musíte mít ve svých aplikacích použité [Zásady ochrany aplikací Intune](../apps/app-protection-policies.md) .
 
 > [!IMPORTANT]
-> Tento článek vás provede jednotlivými kroky přidání zásady podmíněného přístupu na základě aplikace. Stejný postup použijte, když ze seznamu schválených aplikací přidáváte aplikace, jako je SharePoint Online, Microsoft Teams nebo Microsoft Exchange Online.
+> Tento článek vás provede jednotlivými kroky přidání jednoduchých zásad podmíněného přístupu na základě aplikace. Stejný postup můžete použít pro jiné cloudové aplikace. Další informace najdete v tématu [Plánování nasazení podmíněného přístupu](https://docs.microsoft.com/azure/active-directory/conditional-access/plan-conditional-access) .
 
 ## <a name="create-app-based-conditional-access-policies"></a>Vytvoření zásad podmíněného přístupu na základě aplikace
 
@@ -48,7 +48,7 @@ Než budete moct vytvořit zásady podmíněného přístupu z centra pro správ
 
 3. Zadejte **název**zásady a potom v části *přiřazení*vyberte **Uživatelé a skupiny**. Pomocí možností Zahrnout a Vyloučit vyberte požadované skupiny pro nasazení zásady a zvolte **Hotovo**.
 
-4. Vyberte **cloudové aplikace nebo akce**a vyberte aplikace, které chcete chránit. Zvolte například **Vybrat aplikace** a pak vyberte **Office 365 SharePoint Online** a **Office 365 Exchange Online**.
+4. Vyberte **cloudové aplikace nebo akce**a vyberte aplikace, které chcete chránit. Zvolte například **možnost vybrat aplikace**a vyberte možnost **Office 365 (Preview)** .
 
    Zvolením možnosti **Hotovo** uložte změny.
 
@@ -56,7 +56,7 @@ Než budete moct vytvořit zásady podmíněného přístupu z centra pro správ
 
    Zvolením možnosti **Hotovo** uložte změny.
 
-6. V části *řízení přístupu*vyberte **udělit** pro použití podmíněného přístupu na základě dodržování předpisů zařízením. Zvolte například **Udělit přístup** > **Vyžadovat, aby zařízení bylo označené jako vyhovující**.
+6. V části *řízení přístupu*vyberte **udělit** pro použití podmíněného přístupu na základě dodržování předpisů zařízením. Vyberte například **udělit přístup** > **vyžadovat schválenou klientskou aplikaci** a **vyžadovat zásadu ochrany aplikací (Preview)** a pak vyberte **vyžadovat jeden z vybraných ovládacích prvků** .
 
    Zvolením možnosti **Vybrat** uložte změny.
 

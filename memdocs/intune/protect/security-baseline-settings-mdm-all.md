@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 35c125327755a184758b9f9356b9aa4d87a4b886
-ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
+ms.openlocfilehash: 5b40ed9dff0d83639015e70889bf7008e8e68173
+ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80551715"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80696491"
 ---
 # <a name="windows-mdm-security-baseline-settings-for-intune"></a>Nastavení standardních hodnot zabezpečení Windows MDM pro Intune
 
@@ -1583,6 +1583,9 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Def
 ::: zone pivot="mdm-may-2019"
 
 - **Spuštění aplikace Adobe Reader v podřízeném procesu**:  
+Toto pravidlo zabraňuje útokům blokováním aplikace Adobe Reader v vytváření dalších procesů. Prostřednictvím sociálního inženýrství nebo zneužití může malware stahovat a spouštět další datové části a přerušit z aplikace Adobe Reader. Blokováním podřízených procesů, které jsou vygenerovány aplikací Adobe Reader, se pokus o použití malwaru jako vektoru zabrání v rozprostření.
+[Další informace](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
+
   **Výchozí**: Povolit
 
 ::: zone-end
