@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 03/30/2020
+ms.date: 04/06/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 677f85874ddf206b716e70a0cc6c659e10b99fef
-ms.sourcegitcommit: 6a6a713fc1090e03893d80f4259dc7300fb1d5ff
+ms.openlocfilehash: 00faad5cccf8b2ed3198542868a36cb4699299b8
+ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80438807"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80808207"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového ve Microsoft Intune
 
@@ -55,14 +55,29 @@ Podívejte se, co je nového v jednom týdnu v Microsoft Intune v [centru pro sp
 -->  
 
 <!-- ########################## -->
+## <a name="week-of-april-6-2020"></a>Týden od 6. dubna 2020
+
+#### <a name="new-shell-script-settings-for-macos-devices---6884363---"></a>Nové nastavení skriptu prostředí pro zařízení macOS<!-- 6884363 -->
+Při konfiguraci skriptů prostředí pro zařízení macOS můžete teď nakonfigurovat tato nová nastavení: 
+- Skrytí oznámení skriptu na zařízeních
+- Frekvence skriptu
+- Maximální počet pokusů o opakování při chybě skriptu
+
+Další informace najdete v tématu [použití skriptů prostředí v zařízeních MacOS v Intune](../apps/macos-shell-scripts.md).
+
+<!-- ########################## -->
 ## <a name="week-of-march-30-2020"></a>Týden od 30. března 2020
 
 ### <a name="new-url-for-the-microsoft-endpoint-manager-admin-center---3704810---"></a>Nová adresa URL centra pro správu služby Microsoft Endpoint Manager<!-- 3704810 -->
 Pro zarovnávání s oznámením Microsoft Endpoint Manageru v Ignite minulý rok jsme změnili adresu URL centra pro správu Microsoft Endpoint Manageru (dříve Microsoft 365 správu zařízení) na [https://endpoint.microsoft.com](https://endpoint.microsoft.com). Stará adresa URL centra pro správu ([https://devicemanagement.microsoft.com](https://devicemanagement.microsoft.com)) bude i nadále fungovat, ale doporučujeme vám začít přistoupit k centru pro správu Microsoft Endpoint Manageru pomocí nové adresy URL.
 
-Další informace najdete v tématu [zjednodušení IT úloh pomocí centra pro správu služby Microsoft Endpoint Manager](what-is-device-management.md#simplify-it-tasks-using-the-device-management-admin-center).
+Další informace najdete v tématu [zjednodušení IT úloh pomocí centra pro správu služby Microsoft Endpoint Manager](what-is-device-management.md#simplify-it-tasks-using-the-device-management-admin-center).  
 
-### <a name="app-management"></a>Správa aplikací
+
+### <a name="app-management"></a>Správa aplikací  
+
+#### <a name="company-portal-for-ios-supports-landscape-mode--6048329-wnready---"></a>Portál společnosti pro iOS podporuje režim na šířku<!--6048329 wnready -->   
+Uživatelé teď můžou zaregistrovat svoje zařízení, Hledat aplikace a získat podporu na základě orientace obrazovky podle jejich výběru. Aplikace bude automaticky rozpoznávat a upravovat obrazovky, aby odpovídaly režimu na výšku nebo na šířku, pokud uživatelé nezamkne obrazovku v režimu na výšku.  
 
 #### <a name="script-support-for-macos-devices-public-preview---4280361-wnready---"></a>Podpora skriptů pro zařízení macOS (Public Preview)<!-- 4280361 wnready -->
 Můžete přidávat a nasazovat skripty pro zařízení macOS. Tato podpora rozšiřuje vaši schopnost nakonfigurovat zařízení macOS nad rámec toho, co je možné na zařízeních macOS využít nativní možnosti MDM. Další informace najdete v tématu [použití skriptů prostředí v zařízeních MacOS v Intune](../apps/macos-shell-scripts.md).
@@ -71,6 +86,9 @@ Můžete přidávat a nasazovat skripty pro zařízení macOS. Tato podpora roz�
 ## <a name="week-of-march-24-2020"></a>Týden od 24. března 2020
 
 ### <a name="improved-user-interface-experience-when-creating-device-restrictions-profiles-on-android-and-android-enterprise-devices---5841361---"></a>Vylepšené uživatelské rozhraní při vytváření profilů omezení zařízení pro zařízení s Androidem a Androidem Enterprise<!-- 5841361 -->
+
+> [!NOTE] 
+> Uživatelské rozhraní Intune se aktualizuje na celou obrazovku a může trvat několik týdnů. Až do chvíle, kdy váš tenant obdrží tuto aktualizaci, budete mít při vytváření nebo úpravách nastavení mírně odlišný pracovní postup.
 
 Když vytvoříte profil pro zařízení s Androidem nebo Androidem Enterprise, bude se aktualizovat prostředí v centru pro správu správy koncových bodů. Tato změna má vliv na následující konfigurační profily zařízení (**zařízení** > **konfiguračních** profilech > **Vytvoření profilu** > **Správce zařízení s Androidem** nebo **Android Enterprise** for Platform):
 
@@ -82,6 +100,9 @@ Další informace o omezeních zařízení, která můžete konfigurovat, najdet
 
 ### <a name="improved-user-interface-experience-when-creating-configuration-profiles-on-iosipados-and-macos-devices---5569002-5568997---"></a>Vylepšené prostředí uživatelského rozhraní při vytváření konfiguračních profilů na zařízeních s iOS/iPadOS a macOS<!-- 5569002 5568997 -->
 
+> [!NOTE]
+> Uživatelské rozhraní Intune se aktualizuje na celou obrazovku a může trvat několik týdnů. Až do chvíle, kdy váš tenant obdrží tuto aktualizaci, budete mít při vytváření nebo úpravách nastavení mírně odlišný pracovní postup.
+
 Když vytváříte profil pro zařízení se systémem iOS nebo macOS, prostředí v centru pro správu správy koncových bodů se aktualizuje. Tato změna má vliv na následující konfigurační profily zařízení (**zařízení** > **konfiguračních profilech** > **Vytvoření profilu** > **iOS/iPadOS** nebo **MacOS** pro platformu):
 
 - Vlastní: iOS/iPadOS, macOS
@@ -92,6 +113,9 @@ Když vytváříte profil pro zařízení se systémem iOS nebo macOS, prostřed
 - Soubor předvoleb: macOS
 
 ### <a name="hide-from-user-configuration-setting-in-device-features-on-macos-devices---6524869---"></a>Skrytí nastavení konfigurace uživatele ve funkcích zařízení na zařízeních macOS<!-- 6524869 -->
+
+> [!NOTE]
+> Tato změna se bude zavádět všem zákazníkům za několik dalších týdnů.
 
 Když vytváříte profil konfigurace funkcí zařízení na zařízeních macOS, je k dispozici nová možnost **Skrýt z nastavení konfigurace uživatele** (**zařízení** > **konfigurační profily** > **vytvořit profil** > **MacOS** pro **funkce zařízení** > pro profily > pro položky profilu **přihlašovací položky**).
 
@@ -187,6 +211,10 @@ Pokud chcete zobrazit nastavení, která můžete omezit, přejděte na [nastave
 Ikona oznámení pro nedokončené zásady MAM v okně Poradce při potížích se změnila na informační ikonu.
 
 ####  <a name="ui-update-when-configuring-compliance-policy---3961639------"></a>Aktualizace uživatelského rozhraní při konfiguraci zásad dodržování předpisů<!-- 3961639    -->
+
+> [!NOTE]
+> Uživatelské rozhraní Intune se aktualizuje na celou obrazovku a může trvat několik týdnů. Až do chvíle, kdy váš tenant obdrží tuto aktualizaci, budete mít při vytváření nebo úpravách nastavení mírně odlišný pracovní postup.
+
 Aktualizovali jsme uživatelské rozhraní pro [vytváření zásad dodržování předpisů](../protect/create-compliance-policy.md#create-the-policy) v Microsoft Endpoint Manageru (**zařízení** > **zásady dodržování předpisů** > **zásady** > **vytvořit zásadu**). Nové uživatelské prostředí obsahuje stejné nastavení a podrobnosti, které jste použili dříve. Nové prostředí se řídí procesem podobným průvodci při vytváření zásad dodržování předpisů a zahrnuje stránku, kde můžete přidat *přiřazení* pro zásadu a stránku *recenze + vytvořit* , kde můžete před vytvořením zásady zkontrolovat konfiguraci.
 
 #### <a name="retire-noncompliant-devices---1827291---------"></a>Vyřazení zařízení nesplňujících požadavky<!-- 1827291       -->

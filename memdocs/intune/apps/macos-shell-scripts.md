@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/26/2020
+ms.date: 04/06/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 36936976528b5ea9c3fff1f77ec11223a4e4e63d
-ms.sourcegitcommit: e7fb8cf2ffce29548b4a33b2a0c33a3a227c6bc4
+ms.openlocfilehash: ba099e3614c11e10ce4cd9ae94668a1648bfc150
+ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80401770"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80808059"
 ---
 # <a name="use-shell-scripts-on-macos-devices-in-intune-public-preview"></a>Použití skriptů prostředí v zařízeních macOS v Intune (Public Preview)
 
@@ -31,7 +31,7 @@ ms.locfileid: "80401770"
 
 Používejte skripty prostředí pro rozšiřování možností správy zařízení v Intune nad rámec toho, co podporuje operační systém macOS. 
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 Při sestavování skriptů prostředí a jejich přiřazení k zařízením macOS se ujistěte, že jsou splněné následující předpoklady. 
  - Na zařízeních běží macOS 10,12 nebo novější.
  - Zařízení se spravují přes Intune. 
@@ -55,6 +55,9 @@ Při sestavování skriptů prostředí a jejich přiřazení k zařízením mac
 4. V **nastavení skriptu**zadejte následující vlastnosti a vyberte **Další**:
    - **Nahrát skript**: přejděte do skriptu prostředí. Velikost souboru skriptu musí být menší než 200 KB.
    - **Spustit skript jako přihlášený uživatel**: vyberte **Ano** a spusťte skript s přihlašovacími údaji uživatele v zařízení. Pokud chcete spustit skript jako kořenový uživatel, vyberte **ne** (výchozí). 
+   - **Skrýt oznámení skriptu na zařízeních:** Ve výchozím nastavení se pro každý spuštěný skript zobrazují oznámení skriptu. Koncoví uživatelé uvidí *konfiguraci* oznámení o počítači z Intune na zařízeních MacOS.
+   - **Frekvence skriptu:** Vyberte, jak často se má skript spouštět. Pokud chcete spustit skript jenom jednou, vyberte **nenakonfigurované** (výchozí).
+   - **Maximální počet pokusů o opakování, pokud se skript nezdařil:** Vyberte, kolikrát se má skript spustit, pokud vrátí nenulový ukončovací kód (nula znamená úspěch). Pokud dojde k chybě skriptu, vyberte možnost **Nenakonfigurováno** (výchozí).
 5. V části **značky oboru**Volitelně přidejte značky oboru pro skript a vyberte **Další**. Pomocí značek Scope můžete určit, kdo může v Intune zobrazovat skripty. Úplné podrobnosti o značkách oboru najdete v tématu [použití značek řízení přístupu na základě role a rozsahu pro distribuci IT](../fundamentals/scope-tags.md).
 6. Vyberte **přiřazení** > **Vybrat skupiny, které chcete zahrnout**. Zobrazí se existující seznam skupin Azure AD. Vyberte jednu nebo více skupin zařízení, které zahrnují uživatele, jejichž zařízení macOS mají přijmout skript. Zvolte **Vybrat**. Skupiny, které vyberete, se zobrazí v seznamu a budou dostávat vaše zásady pro skripty.
    > [!NOTE]
@@ -103,9 +106,17 @@ Vaše přiřazená role Intune vyžaduje **Konfigurace zařízení** oprávněn�
  - Před vrácením se změnami pro příjem skriptů prostředí pro zařízení macOS se agent tiše ověřuje pomocí služeb Intune.
  - Agent obdrží přiřazené skripty prostředí a spustí skripty na základě nakonfigurovaného plánu, pokusů o opakování, nastavení oznámení a dalších nastavení nastavených správcem.
  - Agent kontroluje nové nebo aktualizované skripty se službami Intune obvykle každých 8 hodin. Tato operace vrácení se změnami je nezávislá na vrácení se změnami MDM. 
+ 
+ ### <a name="how-can-i-manually-initiate-an-agent-check-in-from-a-mac"></a>Jak mohu ručně iniciovat agenty vrácení se změnami z počítače Mac?
+Na spravovaném počítači Mac s nainstalovaným agentem otevřete **terminál**, spuštěním příkazu `sudo killall IntuneMdmAgent` ukončete proces `IntuneMdmAgent`. Proces `IntuneMdmAgent` se okamžitě restartuje, čímž se zahájí vrácení se změnami s Intune.
 
- >[!NOTE]
- > Akce **kontroly nastavení** v portál společnosti vynutí pouze vrácení se změnami MDM. Neexistují žádné ruční akce pro kontrolu agenta.
+Případně můžete provést následující akce:
+1. Otevřete **sledování aktivity** > **zobrazení** > *vybrat **všechny procesy**.* 
+2. Vyhledejte procesy s názvem `IntuneMdmAgent`. 
+3. Ukončete proces spuštěný pro uživatele **root** . 
+
+> [!NOTE]
+> Akce **kontroly nastavení** v portál společnosti a akce **synchronizace** pro zařízení v konzole pro správu služby Microsoft Endpoint Manager iniciují kontrolu MDM a nevynutí vrácení se změnami agenta.
 
  ### <a name="when-is-the-agent-removed"></a>Kdy je agent odebrán?
  Existuje několik podmínek, které mohou způsobit odebrání agenta ze zařízení, například:

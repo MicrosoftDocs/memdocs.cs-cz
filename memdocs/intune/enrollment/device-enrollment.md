@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8f91b71d96c936e9808973df145862654f0e516a
-ms.sourcegitcommit: 71f26a0756fd40c1a06f885f3d31e49734fe97fe
+ms.openlocfilehash: e3636314ee21823b76a09120f92aca45965437d3
+ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80256636"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80808188"
 ---
 # <a name="what-is-device-enrollment"></a>Co je registrace zařízení?
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -77,7 +77,7 @@ Standardně se do Intune můžou registrovat zařízení pro všechny platformy.
 |**Správce zařízení s Androidem**|**(Předem deklarované IMEI nebo SN) Uživatel inicioval prostřednictvím Portál společnosti**| Ne | Ano | Ne | [Další informace](corporate-identifiers-add.md)|
 |**Správce zařízení s Androidem s rozšířeními mobility Zebra**|**Uživatel nebo [DEM](#device-enrollment-manager) iniciované prostřednictvím portál společnosti**| Ne | Ano, pokud se uživatel inicioval, ne při zahájení [DEM](#device-enrollment-manager) | Ne | [Další informace](../configuration/android-zebra-mx-overview.md)|
 |**Vyhrazená Enterprise v Androidu**|**NFC, token, kód QR, nulové dotykové ovládání**| Ano | Ne | Konfigurovatelné prostřednictvím zásad | [Další informace](android-kiosk-enroll.md)|
-|**Plně spravovaná platforma Android Enterprise**|**NFC, token, kód QR, nulové dotykové ovládání**| Ano | Ano | Konfigurovatelné prostřednictvím zásad | [Další informace](android-dedicated-devices-fully-managed-enroll.md)|
+|**Plně spravovaná platforma Android Enterprise**|**NFC, token, kód QR, nulové dotykové ovládání**| Ano | Odpoví Ne, pokud je zahájeno [DEM](device-enrollment.md#device-enrollment-manager) | Konfigurovatelné prostřednictvím zásad | [Další informace](android-dedicated-devices-fully-managed-enroll.md)|
 
 
 ## <a name="bring-your-own-device"></a>Přineste si vlastní zařízení

@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 03/30/2020
+ms.date: 04/06/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2a807a90cdca18d79e7b92b4efeb56d341da2596
-ms.sourcegitcommit: 6a6a713fc1090e03893d80f4259dc7300fb1d5ff
+ms.openlocfilehash: 3f53096f25b4bb05b80d11246ac2fa01486f6e42
+ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80438717"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80808159"
 ---
 # <a name="in-development-for-microsoft-intune---april-2020"></a>Ve vývoji Microsoft Intune – duben 2020
 
@@ -87,16 +87,6 @@ Bude k dispozici nový profil konfigurace zařízení macOS, který konfiguruje 
 
 Platí pro:
 - macOS
-
-### <a name="improved-user-interface-experience-when-creating-configuration-profiles-on-iosipados-and-macos-devices---5569008-5569039-5569057-5569110-5569116-5569131-5569139-5569153-5859984----"></a>Vylepšené prostředí uživatelského rozhraní při vytváření konfiguračních profilů na zařízeních s iOS/iPadOS a macOS<!-- 5569008-5569039-5569057-5569110-5569116-5569131-5569139-5569153-5859984  -->
-Když vytváříte profil pro zařízení s iOS/iPadOS nebo macOS, bude se aktualizovat prostředí v centru pro správu správy koncových bodů. Tato změna má vliv na následující konfigurační profily zařízení (**zařízení** > **konfiguračních profilech** > **Vytvoření profilu** > **iOS** nebo **MacOS** pro platformu):
-
-- Vlastní: iOS/iPadOS, macOS
-- Funkce zařízení: iOS/iPadOS, macOS
-- Omezení zařízení: iOS/iPadOS, macOS
-- Ochrana koncového bodu: macOS
-- Rozšíření: macOS
-- Soubor předvoleb: macOS
 
 ### <a name="device-configuration-profile-settings-and-values-will-be-updated-for-windows-platforms---4091122---"></a>Nastavení a hodnoty konfiguračního profilu zařízení se aktualizují pro platformy Windows.<!-- 4091122 -->
 Když vytváříte profily konfigurace zařízení pro platformy Windows (**zařízení** > **konfigurační profily** > **vytvořit profil** > libovolnou možnost **Windows** pro platformu), některá nastavení a jejich hodnoty se liší od CSP a můžou být matoucí. Názvy nastavení a jejich hodnoty se aktualizují tak, aby byly jasné.

@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/02/2020
+ms.date: 04/06/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3cb71634194cee7b542ebe3c661c5a62d3d80ead
-ms.sourcegitcommit: 9145a5b3b39c111993e8399a4333dd82d3fe413c
+ms.openlocfilehash: 6c8e1551b49fce5074bd2e88d1d8802f62cca2bb
+ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80620599"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80808098"
 ---
 # <a name="use-powershell-scripts-on-windows-10-devices-in-intune"></a>Použití skriptů PowerShellu na zařízeních s Windows 10 v Intune
 
@@ -124,7 +124,34 @@ Rozšíření pro správu Intune má následující požadavky. Po splnění po�
 
 - Koncoví uživatelé se nemusí přihlašovat k zařízení, aby mohli spouštět skripty PowerShellu.
 
-- Klient rozšíření pro správu Intune kontroluje v Intune každou hodinu a po každém restartování pro všechny nové skripty nebo změny. Po přiřazení zásad ke skupinám Azure AD se powershellový skript spustí a zobrazí se výsledky spuštění. Jakmile se skript spustí, znovu se spustí, pokud nedojde ke změně skriptu nebo zásad.
+- Agent rozšíření pro správu Intune kontroluje v Intune každou hodinu a po každém restartování pro všechny nové skripty nebo změny. Po přiřazení zásad ke skupinám Azure AD se powershellový skript spustí a zobrazí se výsledky spuštění. Jakmile se skript spustí, znovu se spustí, pokud nedojde ke změně skriptu nebo zásad. Pokud se skript nepovede, Agent rozšíření pro správu Intune se pokusí znovu spustit skript třikrát po dalších 3 po sobě jdoucích agentů rozšíření pro správu Intune.
+
+### <a name="failure-to-run-script-example"></a>Nepovedlo se spustit příklad skriptu.
+8 DOP.
+  -  Vrátit se změnami
+  -  Spustit skript **ConfigScript01**
+  -  Skript selhává
+
+9:00
+  -  Vrátit se změnami
+  -  Spustit skript **ConfigScript01**
+  -  Skript se nezdařil (počet opakování = 1)
+
+10:00
+  -  Vrátit se změnami
+  -  Spustit skript **ConfigScript01**
+  -  Skript se nezdařil (počet opakování = 2)
+  
+11:00
+  -  Vrátit se změnami
+  -  Spustit skript **ConfigScript01**
+  -  Skript se nezdařil (počet opakování = 3)
+
+24:00
+  -  Vrátit se změnami
+  - Neudělaly se žádné další pokusy o spuštění skriptu **ConfigScript01**.
+  - Pokud se ve skriptu nebudou provádět žádné další změny, nebudou provedeny žádné další pokusy o spuštění skriptu.
+
 
 ## <a name="monitor-run-status"></a>Monitorovat stav spuštění
 

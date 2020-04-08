@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/28/2020
+ms.date: 04/07/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 691da0c74ceddb34a48bfdf01e19dadaed444e45
-ms.sourcegitcommit: 670c90a2e2d3106048f53580af76cabf40fd9197
+ms.openlocfilehash: 2e5a9db094163bcf4f987b881c83d98be655acfd
+ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80233477"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80808088"
 ---
 # <a name="add-app-configuration-policies-for-managed-android-enterprise-devices"></a>Přidání zásad konfigurace aplikací pro spravovaná zařízení s Androidem Enterprise
 
@@ -47,7 +47,7 @@ Zásady konfigurace aplikací v Microsoft Intune poskytují nastavení spravovan
 8. Kliknutím na tlačítko **Přidat** zobrazte podokno **Přidat oprávnění** .
 9. Klikněte na oprávnění, která chcete přepsat. Udělená oprávnění přepíšou u vybraných aplikací zásadu výchozí oprávnění aplikace.
 10. Nastavte **stav oprávnění** pro každé oprávnění. Můžete si vybrat z **příkazového řádku**, **automatického udělení**nebo **automaticky odepřít**. Další informace o oprávněních najdete v tématu [nastavení pro Android Enterprise a označení zařízení jako kompatibilních nebo nekompatibilních s Intune](../protect/compliance-policy-create-android-for-work.md).
-11. V rozevíracím seznamu vyberte **formát nastavení konfigurace**. Chcete-li přidat informace o konfiguraci, vyberte jednu z následujících metod:
+11. Pokud spravovaná aplikace podporuje nastavení konfigurace, vyberte v rozevíracím seznamu **formát nastavení konfigurace**. Chcete-li přidat informace o konfiguraci, vyberte jednu z následujících metod:
     - **Použití návrháře konfigurace**
     - **Zadat data JSON**<br><br>
     Podrobnosti o používání návrháře konfigurace najdete v části [Použití návrháře konfigurace](#use-the-configuration-designer). Podrobnosti o zadávání dat XML naleznete v tématu [ENTER data JSON](#enter-json-data).
