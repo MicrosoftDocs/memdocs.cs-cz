@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 04/07/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 58e651849632fd06f962edfc90649ad14eeaeda0
-ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
+ms.openlocfilehash: 44cbde7eb7de9c50db488dabcb3bf5841b7248f7
+ms.sourcegitcommit: 10578b5a631f9148e59389a1ce4e7d4892f772a0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80696545"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80979235"
 ---
 # <a name="manage-web-access-by-using-microsoft-edge-with-microsoft-intune"></a>Správa webového přístupu pomocí Microsoft Edge s Microsoft Intune
 
@@ -39,8 +39,8 @@ Zásady ochrany Microsoft Intune pro Microsoft Edge usnadňují ochranu dat a pr
 ## <a name="getting-started"></a>Začínáme
 
 Vy a vaši koncoví uživatelé si můžete stáhnout Microsoft Edge z veřejných obchodů s aplikacemi pro použití ve svých organizacích. Požadavky na operační systém pro zásady prohlížeče jsou některé z těchto možností:
-- Android 4 a novější
-- iOS 8.0 a novější
+- Android 5 a novější
+- iOS 12,0 a novější
 
 ## <a name="application-protection-policies-for-microsoft-edge"></a>Zásady ochrany aplikací pro Microsoft Edge
 
@@ -129,7 +129,7 @@ Nastavení přiřadíte skupinám uživatelů ve službě Azure AD. Pokud má da
 
 ## <a name="direct-users-to-microsoft-edge-instead-of-the-intune-managed-browser"></a>Přímé nasměrování uživatelů na Microsoft Edge místo Intune Managed Browser 
 
-Intune Managed Browser i Microsoft Edge se dají používat jako prohlížeče chráněné zásadami. Aby bylo zajištěno, že budou vaši uživatelé směrováni na používání správné aplikace v prohlížeči, zaměřte se na všechny aplikace spravované přes Intune (například Outlook, OneDrive a SharePoint) s následujícím nastavením konfigurace:
+Microsoft Edge se dá použít jako prohlížeč chráněný zásadami. Aby bylo zajištěno, že budou vaši uživatelé směrováni na používání správné aplikace v prohlížeči, zaměřte se na všechny aplikace spravované přes Intune (například Outlook, OneDrive a SharePoint) s následujícím nastavením konfigurace:
 
 |    Klíč    |    Hodnota    |
 |------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -209,8 +209,8 @@ Pak použijte následující páry klíč/hodnota, které přidělí vaší orga
 
 |    Klíč    |    Hodnota    |
 |--------------------------------------------------------------------|------------|
-|    com. Microsoft. Intune. mam. managedbrowser. NewTabPage. BrandLogo    |    True    |
-|    com. Microsoft. Intune. mam. managedbrowser. NewTabPage. BrandColor    |    True    |
+|    com. Microsoft. Intune. mam. managedbrowser. NewTabPage. BrandLogo    |    True (Pravda)    |
+|    com. Microsoft. Intune. mam. managedbrowser. NewTabPage. BrandColor    |    True (Pravda)    |
 
 ## <a name="display-relevant-industry-news-on-new-tab-pages"></a>Zobrazit relevantní novinky v odvětví na nových stránkách karty
 
@@ -283,7 +283,7 @@ K vytvoření seznamu povolených a blokovaných webů můžete použít různé
   - Port 443 pro protokol HTTPS
 - Použití zástupných znaků pro číslo portu **není podporováno.** Například `http://www.contoso.com:*` a `http://www.contoso.com:*/` podporované nejsou. 
 
-    |    URL    |    Podrobnosti    |    Odpovídá    |    Neodpovídá    |
+    |    Adresa URL    |    Podrobnosti    |    Odpovídá    |    Neodpovídá    |
     |-------------------------------------------|--------------------------------------------------------|-------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------|
     |    `http://www.contoso.com`    |    Odpovídá jediné stránce    |    `www.contoso.com`    |    `host.contoso.com`<br>`www.contoso.com/images`<br>`contoso.com/`    |
     |    `http://contoso.com`    |    Odpovídá jediné stránce    |    `contoso.com/`    |    `host.contoso.com`<br>`www.contoso.com/images`<br>`www.contoso.com`    |
@@ -415,7 +415,7 @@ Informace o tom, jak zobrazit protokoly na zařízeních s Androidem, najdete v 
 
 Níže jsou uvedené další požadavky na zabezpečení a ochranu osobních údajů pro Microsoft Edge:
 
-- Microsoft Edge nevyužívá nastavení, která uživatelé nastavili pro nativní prohlížeč https://docs.microsoft.com/en-us/intune/apps/app-configuration-policies-use-android#allow-only-configured-organization-accounts-in-multi-identity-apps na svých zařízeních, protože Microsoft Edge nemá k těmto nastavením přístup.
+- Microsoft Edge nevyužívá nastavení, která uživatelé nastavili pro nativní prohlížeč na svých zařízeních, protože Microsoft Edge nemá k těmto nastavením přístup.
 - Můžete nakonfigurovat možnost **vyžadovat pro přístup jednoduchý kód PIN** nebo **vyžadovat pro přístup podnikové přihlašovací údaje** v zásadách ochrany aplikací přidružených k Microsoft Edge. Pokud uživatel na stránce ověřování vybere odkaz na odkaz, může procházet libovolné internetové weby bez ohledu na to, zda byly přidány do blokovaného seznamu v zásadě.
 - Microsoft Edge může blokovat přístup k webům jenom v případě, že se k nim přistupuje přímo. Neblokuje přístup, pokud uživatelé k přístupu k webu použijí zprostředkující služby (třeba překladatelské služby).
 - Pokud chcete povolení ověřování a přístup k dokumentaci k Intune, * **. Microsoft.com** se vyloučí z nastavení povoleného a blokovaného seznamu. Je vždycky povolená.

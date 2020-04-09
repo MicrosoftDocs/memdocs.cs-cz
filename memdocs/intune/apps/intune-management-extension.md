@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6c8e1551b49fce5074bd2e88d1d8802f62cca2bb
-ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
+ms.openlocfilehash: a773c449b0b6d60b9cf7bf6a280cc371d9c4cf03
+ms.sourcegitcommit: 10578b5a631f9148e59389a1ce4e7d4892f772a0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80808098"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80979218"
 ---
 # <a name="use-powershell-scripts-on-windows-10-devices-in-intune"></a>Použití skriptů PowerShellu na zařízeních s Windows 10 v Intune
 
@@ -43,7 +43,7 @@ Služby MDM, například Microsoft Intune, můžou spravovat mobilní a desktopo
 
 Rozšíření pro správu Intune doplňují součásti Windows 10 MDM v krabicích. Můžete vytvořit PowerShellové skripty pro spouštění na zařízeních s Windows 10. Například vytvořte skript PowerShellu, který provede pokročilé konfigurace zařízení. Pak tento skript nahrajte do Intune, přiřaďte ho ke skupině Azure Active Directory (AD) a spusťte skript. Pak můžete monitorovat stav spuštění skriptu od začátku do konce.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 Rozšíření pro správu Intune má následující požadavky. Po splnění požadavků se rozšíření pro správu Intune nainstaluje automaticky, když se k uživateli nebo zařízení přiřadí skript prostředí PowerShell nebo aplikace Win32.
 
@@ -52,6 +52,9 @@ Rozšíření pro správu Intune má následující požadavky. Po splnění po�
 - Zařízení připojená k Azure Active Directory (AD), včetně:  
   
   - Připojení k hybridní službě Azure AD: zařízení připojená k Azure Active Directory (AD) a také připojená k místní službě Active Directory (AD). Pokyny najdete v tématu [Plánování implementace služby hybrid Azure Active Directory JOIN](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan) .
+  
+  > [!TIP]
+  > Ujistěte se, že jsou zařízení [připojená](https://docs.microsoft.com/azure/active-directory/user-help/user-help-join-device-on-network) k Azure AD. Zařízení, která jsou [registrována](https://docs.microsoft.com/azure/active-directory/user-help/user-help-register-device-on-network) pouze ve službě Azure AD, nebudou přijímat vaše skripty.  
 
 - Zařízení zaregistrovaná v Intune, včetně:
 
@@ -71,8 +74,8 @@ Rozšíření pro správu Intune má následující požadavky. Po splnění po�
     - [Zatížení klientských aplikací](https://docs.microsoft.com/configmgr/comanage/workloads#client-apps)
     - [Postup přepnutí úloh Configuration Manager do Intune](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads)
   
-> [!TIP]
-> Ujistěte se, že jsou zařízení [připojená](https://docs.microsoft.com/azure/active-directory/user-help/user-help-join-device-on-network) k Azure AD. Zařízení, která jsou [registrována](https://docs.microsoft.com/azure/active-directory/user-help/user-help-register-device-on-network) pouze ve službě Azure AD, nebudou přijímat vaše skripty.
+> [!NOTE]
+> Informace o používání virtuálních počítačů s Windows 10 najdete v tématu [používání virtuálních počítačů s Windows 10 s Intune](../fundamentals/windows-10-virtual-machines.md).
 
 ## <a name="create-a-script-policy-and-assign-it"></a>Vytvoření zásady skriptu a její přiřazení
 
@@ -125,6 +128,8 @@ Rozšíření pro správu Intune má následující požadavky. Po splnění po�
 - Koncoví uživatelé se nemusí přihlašovat k zařízení, aby mohli spouštět skripty PowerShellu.
 
 - Agent rozšíření pro správu Intune kontroluje v Intune každou hodinu a po každém restartování pro všechny nové skripty nebo změny. Po přiřazení zásad ke skupinám Azure AD se powershellový skript spustí a zobrazí se výsledky spuštění. Jakmile se skript spustí, znovu se spustí, pokud nedojde ke změně skriptu nebo zásad. Pokud se skript nepovede, Agent rozšíření pro správu Intune se pokusí znovu spustit skript třikrát po dalších 3 po sobě jdoucích agentů rozšíření pro správu Intune.
+
+- Pro sdílená zařízení se PowerShellový skript spustí pro každého nového uživatele, který se přihlásí.
 
 ### <a name="failure-to-run-script-example"></a>Nepovedlo se spustit příklad skriptu.
 8 DOP.

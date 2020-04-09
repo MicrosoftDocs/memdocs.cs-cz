@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, get-started, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 672c978a7e590e8e26f676733bd2903d3684e978
-ms.sourcegitcommit: db511e03f14e6120968b60def8990485eb42529b
+ms.openlocfilehash: 7441cd36a05e94140b46d322840346872b94b64f
+ms.sourcegitcommit: 441d0958721b6f9b6694dfffbec77c9a49929dd3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80611738"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80863158"
 ---
 # <a name="app-protection-policies-overview"></a>Přehled zásad ochrany aplikací
 
@@ -300,7 +300,7 @@ Pokud uživatel aplikaci používá při zahájení selektivního vymazání, [I
 Ochrana aplikací Intune závisí na identitě uživatele, aby byla konzistentní mezi aplikací a [sadou Intune SDK](../developer/app-sdk.md). Jediná cesta, která to může zaručit, je moderní ověřování. Jsou situace, kdy aplikace můžou fungovat s místní konfigurací, ale nejsou konzistentní ani nic nezaručují.
 
 **Zabezpečený způsob, jak otevírat webové odkazy ze spravovaných aplikací**<br>
-Správce IT může nasadit a nastavit zásadu ochrany aplikace pro [aplikaci Intune Managed Browser](app-configuration-managed-browser.md), což je webový prohlížeč vyvinutý týmem Microsoft Intune, který se dá snadno spravovat přes Intune. Správce IT může vyžadovat, aby se všechny webové odkazy v aplikacích spravovaných přes Intune otvíraly v aplikaci Managed Browser.
+Správce IT může nasazovat a nastavovat zásady ochrany aplikací pro [Microsoft Edge](app-configuration-managed-browser.md), webový prohlížeč, který se dá snadno spravovat pomocí Intune. Správce IT může vyžadovat, aby se všechny webové odkazy v aplikacích spravovaných přes Intune otvíraly v aplikaci Managed Browser.
 
 ## <a name="app-protection-experience-for-ios-devices"></a>Prostředí ochrany aplikací pro zařízení s iOS
 

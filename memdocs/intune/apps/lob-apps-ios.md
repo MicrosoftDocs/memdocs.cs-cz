@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/23/2020
+ms.date: 04/07/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f5caa8b23950e3ce87f66d6804961a9a2a3e21c6
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 90f943c7eca95a5311023b03e769e4e18ada9249
+ms.sourcegitcommit: 441d0958721b6f9b6694dfffbec77c9a49929dd3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80324079"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80863090"
 ---
 # <a name="add-an-ios-line-of-business-app-to-microsoft-intune"></a>Přidání obchodní aplikace pro iOS do Microsoft Intune
 
@@ -34,7 +34,7 @@ Informace v tomto článku vám pomůžou přidat do Microsoft Intune obchodní 
 > [!NOTE]
 > Uživatelé iOS zařízení můžou odebrat některé výchozí aplikace pro iOS, například Akcie nebo Mapy. Intune je ale neumožňuje znovu nasadit. Pokud uživatel tyto aplikace odstraní, musí si je znovu nainstalovat z App Storu.
 >
-> obchodní aplikace pro iOS mají maximální velikost 4 GB na aplikaci.
+> obchodní aplikace pro iOS mají maximální velikost 2 GB na aplikaci.
 
 > [!NOTE]
 > Identifikátory sady prostředků (například *com. contoso. app*) mají být jedinečné identifikátory aplikace. Například pokud chcete pro účely testování nainstalovat beta verzi obchodní aplikace v rámci produkční verze, beta verze musí mít jiný jedinečný identifikátor (například *com. contoso. app-beta*). V opačném případě se beta verze překryje s produkčním prostředím a bude se považovat za upgrade. Přejmenování souboru. ipa nemá žádný vliv na toto chování.
@@ -80,7 +80,7 @@ Pomocí značek Scope můžete určit, kdo může v Intune zobrazit informace o 
 
 ## <a name="step-3---assignments"></a>Krok 3 – přiřazení
 
-1. Vyberte **požadované**, **dostupné pro zaregistrovaná zařízení**nebo **odinstalujte** přiřazení skupin pro aplikaci. Další informace najdete v tématech [Přidání skupin pro uspořádání uživatelů a zařízení](../fundamentals/groups-add.md) a [přiřazení aplikací do skupin pomocí Microsoft Intune](apps-deploy.md).
+1. Vyberte **požadované**, **dostupné pro zaregistrovaná zařízení**, **k dispozici v registraci nebo bez registrace**nebo **odinstalujte** přiřazení skupin pro aplikaci. Další informace najdete v tématech [Přidání skupin pro uspořádání uživatelů a zařízení](../fundamentals/groups-add.md) a [přiřazení aplikací do skupin pomocí Microsoft Intune](apps-deploy.md).
 2. Kliknutím na **Další** zobrazte stránku **Revize + vytvořit** .
 
 ## <a name="step-4---review--create"></a>Krok 4 – přezkoumání a vytvoření

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c5dbe2abf7a23be9f9e0051a2ff26590e749f98c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 0acd9edec84daaebdb8ed93b33c68ed8cebb4e47
+ms.sourcegitcommit: 441d0958721b6f9b6694dfffbec77c9a49929dd3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79326199"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80863039"
 ---
 # <a name="android-app-protection-policy-settings-in-microsoft-intune"></a>Nastavení zásad ochrany aplikací pro Android v Microsoft Intune
 Tento článek popisuje nastavení zásad ochrany aplikací pro zařízení s Androidem. Popsaná nastavení zásad lze [nakonfigurovat](app-protection-policies.md) pro zásady ochrany aplikací v podokně **Nastavení** v Azure Portal.
@@ -31,6 +31,8 @@ Existují tři kategorie nastavení zásad: nastavení ochrany dat, požadavky n
 
 > [!IMPORTANT]
 > Na zařízení se vyžaduje Portál společnosti Intune pro příjem zásad ochrany aplikací pro zařízení s Androidem. Další informace najdete v tématu [požadavky aplikace Portál společnosti Intune Access](../fundamentals/end-user-mam-apps-android.md).
+>
+> Intune Managed Browser bylo vyřazeno. Využijte [Microsoft Edge](../apps/manage-microsoft-edge.md) pro vaše chráněné prostředí Intune Browser. 
 
 ## <a name="data-protection"></a>Ochrana dat 
 ### <a name="data-transfer"></a>Přenos dat
@@ -86,7 +88,7 @@ U některých aplikací a služeb platformy, které mají výjimku, můžou zás
   | com.android.providers.settings | Nastavení systému Android |
   | com.android.settings | Nastavení systému Android |
   | com.azure.authenticator | Aplikace Azure Authenticator, která je nutná k úspěšnému ověřování v mnoha situacích |
-  | com.microsoft.windowsintune.companyportal | Portál společnosti Intune|
+  | com.microsoft.windowsintune.companyportal | Intune Portál společnosti|
 
 ### <a name="conditional-exemptions"></a>Podmíněné výjimky
   Tyto aplikace můžou přenášet data do aplikací spravovaných službou Intune a z nich za určitých podmínek.

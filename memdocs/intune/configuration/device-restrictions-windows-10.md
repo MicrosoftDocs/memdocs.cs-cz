@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/30/2020
+ms.date: 04/08/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 237e281b88492ff7b7e1b5614600662e15761935
-ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
+ms.openlocfilehash: 331679511aec17d271bdf8774e16c8809ad4fc27
+ms.sourcegitcommit: 9908de7d30991ee499cc462d2eb730e1e4fd75a9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80407831"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80900503"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Nastavení zařízení s Windows 10 (a novějším) pro povolení nebo omezení funkcí pomocí Intune
 
@@ -81,11 +81,13 @@ Tato nastavení používají [zprostředkovatele CSP zásad ApplicationManagemen
 
   [CSP ApplicationManagement/AllowGameDVR](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-allowgamedvr)
 
-- **Jenom aplikace ze Storu**: Toto nastavení určuje uživatelské prostředí, když uživatelé nainstalují aplikace z jiných míst než z Microsoft Store. Možnosti:
+- **Jenom aplikace ze Storu**: Toto nastavení určuje uživatelské prostředí, když uživatelé nainstalují aplikace z jiných míst než z Microsoft Store. Nebrání instalaci obsahu ze zařízení USB, síťových sdílených složek ani jiných zdrojů, které nejsou v Internetu. Pomocí důvěryhodného prohlížeče můžete zajistit, aby tato ochrana fungovala podle očekávání.
+
+  Možnosti:
 
   - **Nenakonfigurováno** (výchozí): Intune toto nastavení nemění ani neaktualizuje. Ve výchozím nastavení může operační systém koncovým uživatelům dovolit instalovat aplikace z jiných míst než z Microsoft Store, včetně aplikací definovaných v jiných nastaveních zásad.  
   - **Odkudkoli**: vypne doporučení pro aplikace a umožní uživatelům instalovat aplikace z libovolného místa.  
-  - **Pouze úložiště**: vynutí koncové uživatele instalovat pouze aplikace z Microsoft Store.
+  - **Pouze úložiště**: záměrem je zabránit škodlivému obsahu, který by ovlivnil vaše uživatelská zařízení při stahování spustitelného obsahu z Internetu. Když se uživatelé pokusí nainstalovat aplikace z Internetu, instalace je blokovaná. Uživatelům se zobrazí zpráva, která doporučuje stahovat aplikace z Microsoft Store.
   - **Doporučení**: při instalaci aplikace z webu, který je k dispozici v Microsoft Store, se uživatelům zobrazí zpráva doporučující si ji stáhnout ze Storu.  
   - **Preferovat Store**: upozorní uživatele, když instalují aplikace z jiných míst než z Microsoft Store.
 

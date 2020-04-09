@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a09b103f87b99e5ce7df3ec68760f1b55a9033bd
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: eda210408adbb15d82d6bfc31bef2f225f53bc6f
+ms.sourcegitcommit: 441d0958721b6f9b6694dfffbec77c9a49929dd3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79326175"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80863073"
 ---
 # <a name="ios-app-protection-policy-settings"></a>Nastavení zásad ochrany aplikací pro iOS
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -31,6 +31,9 @@ ms.locfileid: "79326175"
 Tento článek popisuje nastavení zásad ochrany aplikací pro zařízení s iOS/iPadOS. Popsaná nastavení zásad lze [nakonfigurovat](app-protection-policies.md) pro zásady ochrany aplikací v podokně **Nastavení** v Azure Portal při vytváření nové zásady.
 
 Existují tři kategorie nastavení zásad: *přemístění dat*, *požadavky na přístup* a *podmíněné spouštění*. Termín ***aplikace spravované podle zásad*** v tomto článku označuje aplikace, které mají nakonfigurované zásady ochrany aplikací.
+
+> [!IMPORTANT]
+> Intune Managed Browser bylo vyřazeno. Využijte [Microsoft Edge](../apps/manage-microsoft-edge.md) pro vaše chráněné prostředí Intune Browser. 
 
 ## <a name="data-protection"></a>Ochrana dat
 

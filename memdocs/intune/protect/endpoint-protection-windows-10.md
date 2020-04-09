@@ -1,6 +1,6 @@
 ---
 title: Nastavení ochrany pro zařízení s Windows 10 v Microsoft Intune – Azure | Microsoft Docs
-description: V zařízeních s Windows 10 můžete použít nebo nakonfigurovat nastavení ochrany koncových bodů a povolit funkce programu Microsoft Defender, včetně ochrany Application Guard, brány firewall, filtru SmartScreen, šifrování a BitLockeru, zneužití ochrany, řízení aplikací, Security Center a zabezpečení na místní zařízení v Microsoft Intune.
+description: Na zařízeních s Windows 10 můžete použít nebo nakonfigurovat nastavení ochrany koncových bodů, abyste povolili funkce programu Microsoft Defender, včetně ochrany Application Guard, brány firewall, filtru SmartScreen, šifrování a BitLockeru, zneužití ochrany, řízení aplikací, Security Center a zabezpečení na místních zařízeních v Microsoft Intune.
 keywords: ''
 author: brenduns
 ms.author: brenduns
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aaec456a5ff9864fedf5e95f317bc484ddfc4d82
-ms.sourcegitcommit: fe7484e86ec8a109fa5f54fe9cceef8aac94bd9f
+ms.openlocfilehash: 08a9656328c6de29441a0d8b0b5e2526836cdb9b
+ms.sourcegitcommit: 441d0958721b6f9b6694dfffbec77c9a49929dd3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80275063"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80863192"
 ---
 # <a name="windows-10-and-later-settings-to-protect-devices-using-intune"></a>Nastavení Windows 10 (a novější) pro ochranu zařízení pomocí Intune
 
@@ -215,7 +215,7 @@ Následující nastavení jsou uvedena v tomto článku v jednom okamžiku, ale 
   Tato možnost je ignorována, pokud je *režim utajení* nastaven na možnost *blokovat*.  
 
   - **Nenakonfigurované**  
-  - Zabezpečené pakety protokolu IPSec nezískají výjimky.  
+  - **Block** Zabezpečené pakety protokolu IPSec nezískají výjimky.  
   - **Povolit** – povolit výjimky. Režim utajení brány firewall nesmí bránit hostitelskému počítači v reakci na nevyžádaný síťový provoz zabezpečený protokolem IPsec.  
 
 - **Stíněné**  
@@ -942,6 +942,9 @@ Z důvodu ochrany před e-mailovými hrozbami zablokujte tuto akci:
 > **Na klientských počítačích x86**:  
 > *C:\Program Files\Microsoft Intune Management Extension\Content*  
 > *C:\windows\IMECache*  
+>
+> Další informace najdete v tématu [doporučení pro kontrolu virů pro podnikové počítače, na kterých běží aktuálně podporované verze Windows](https://support.microsoft.com/help/822158/virus-scanning-recommendations-for-enterprise-computers).
+
 
 ### <a name="controlled-folder-access"></a>Řízený přístup ke složkám  
 
@@ -1243,7 +1246,7 @@ Pomocí těchto možností můžete konfigurovat nastavení místního zabezpeč
 
   Definujte jiný název účtu, který se má přidružit k identifikátoru zabezpečení (SID) pro účet Administrator.  
 
- #### <a name="guest"></a>Host  
+ #### <a name="guest"></a>Guest  
 
 - **Účet Guest**  
   **Výchozí**: Nenakonfigurováno  

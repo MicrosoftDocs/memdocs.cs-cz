@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 633adc8fa28f422c4b21958675efb53cb2571d39
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: ee88de19a34383cc759e6a11212393f642fc38d5
+ms.sourcegitcommit: 441d0958721b6f9b6694dfffbec77c9a49929dd3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80324747"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80863056"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>Přidání aplikací do Microsoft Intune 
 
@@ -37,7 +37,7 @@ Uživatelé aplikací a zařízení ve vaší společnosti (pracovníci vaší s
 
 Intune podporuje širokou škálu typů aplikací. Dostupné možnosti se pro jednotlivé typy aplikací liší. Intune umožňuje přidat a přiřadit tyto typy aplikací:
 
-| Typy aplikací | Instalace | Aktualizace |
+| Typy aplikací | Instalace | Updates |
 |---|---|---|
 | Aplikace pocházející ze Storu (aplikace ze Storu) | Intune nainstaluje aplikaci na zařízení.  | Aplikace se aktualizují automaticky. |
 | Interně napsané aplikace (obchodní) | Intune nainstaluje aplikaci na zařízení (vy dodáte instalační soubor). | Aplikaci musíte aktualizovat sami. |
@@ -121,7 +121,7 @@ Další informace o typech aplikací, které vaše organizace potřebuje, najdet
 Intune vám umožňuje upravit funkce nasazovaných aplikací tak, aby byly v souladu se zásadami dodržování předpisů a zabezpečení vaší společnosti. Tento řídicí mechanismus vám umožňuje určit, jak jsou data vaší společnosti chráněná. Aplikace spravované přes Intune jsou povolené s bohatou sadou zásad ochrany mobilních aplikací, jako jsou:
 
 - Omezení funkcí kopírování a vkládání a uložení jako
-- Konfigurace webových odkazů tak, aby se otevíraly v aplikaci Intune Managed Browser
+- Konfigurace webových odkazů, které se otevřou v aplikaci Microsoft Edge.
 - Povolení použití více identit a podmíněného přístupu na úrovni aplikace.
 
 Aplikace spravované přes Intune můžou také povolit ochranu aplikací bez nutnosti registrace, čímž vám umožňují použít zásady ochrany před únikem informací bez správy uživatelských zařízení. Pomocí sady Intune App SDK a nástroje App Wrapping můžete dále do mobilních a obchodních aplikací začlenit i správu mobilních aplikací. Další informace o těchto nástrojích najdete v článku [Přehled sady Intune App SDK](../developer/app-sdk.md).
