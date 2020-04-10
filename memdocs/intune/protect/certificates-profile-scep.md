@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a775171a72de32af98d8089311b5fe467e560515
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: e8838606a6f36ccbbbdee2e081f242035f4f3b61
+ms.sourcegitcommit: b36badbbfb86255948e8d5cdda787c7291b09e05
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80323148"
+ms.lasthandoff: 04/10/2020
+ms.locfileid: "81007738"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>Vytvoření a přiřazení profilů certifikátů SCEP v Intune
 
@@ -95,7 +95,8 @@ Až [nakonfigurujete infrastrukturu](certificates-scep-configure.md) pro podporu
        - **Sériové číslo**
        - **Vlastní**: Když vyberete tuto možnost, zobrazí se také textové pole **Vlastní**. V tomto poli můžete zadat vlastní formát názvu subjektu, včetně proměnných. Vlastní formát podporuje dvě proměnné: **Běžný název (CN)** a **E-mail (E)** . **Běžný název (CN)** můžete nastavit na některou z těchto proměnných:
 
-         - **CN = {{username}}** : hlavní název uživatele (UPN), například janedoe@contoso.com.
+         - **CN = {{username}}** : uživatelské jméno uživatele, například janedoe.
+         - **CN = {{userPrincipalName}}** : hlavní název uživatele, například janedoe@contoso.com.\*
          - **CN={{AAD_Device_ID}}** : ID přiřazené při registraci zařízení ve službě AD (Azure Active Directory). Toto ID se obvykle používá k ověření ve službě Azure AD.
          - **CN = {{sériové}}** : jedinečné sériové číslo (SN) obvykle používané výrobcem k identifikaci zařízení.
          - **CN = {{IMEINumber}}** : jedinečné číslo IMEI (International Mobile Equipment Identity), které se používá k identifikaci mobilního telefonu.
@@ -111,6 +112,8 @@ Až [nakonfigurujete infrastrukturu](certificates-scep-configure.md) pro podporu
          - **CN={{UserName}},E={{EmailAddress}},OU=Mobile,O=Finance Group,L=Redmond,ST=Washington,C=US**
 
          Tento příklad zahrnuje formát názvu subjektu, který používá proměnné CN a E a řetězce pro hodnoty organizační jednotky, organizace, umístění, stav a země. Článek [Funkce CertStrToName](https://msdn.microsoft.com/library/windows/desktop/aa377160.aspx) popisuje tuto funkci a její podporované řetězce.
+         
+         v případě profilů jenom pro vlastníka zařízení s Androidem nebude nastavení **CN = {{userPrincipalName}}** fungovat. \* Profily jenom pro vlastníka zařízení s Androidem se dají použít pro zařízení bez uživatele, takže tento profil nebude moct získat hlavní název uživatele (UPN). Pokud tuto možnost pro zařízení s uživateli opravdu potřebujete, můžete použít alternativní řešení: **CN = {{username}}@contoso.com** poskytne uživatelské jméno a doménu, kterou jste přidali ručně, například janedoe@contoso.com
 
       - **Typ certifikátu zařízení**
 
@@ -259,7 +262,7 @@ Pokud název předmětu obsahuje jeden ze speciálních znaků, použijte k vyř
 
 Máte **například**název subjektu, který se zobrazí jako *testovací uživatel (TestCompany, LLC)* .  ZÁSTUPCE, který obsahuje CN s čárkou mezi *TestCompany* a *LLC* , představuje problém.  Problém se může vyhnout vložením nabídek kolem celé propojené sítě nebo odebráním čárky z *TestCompany* a *LLC*:
 
-- **Přidat uvozovky**: *CN =* "testovací uživatel (TestCompany, LLC)", OU = UserAccounts, DC = Corp, DC = contoso, DC = com *
+- **Přidat uvozovky**: *CN = "testovací uživatel (TestCompany, LLC)", OU = UserAccounts, DC = Corp, DC = contoso, DC = com*
 - **Odebrat čárku**: *CN = testovací uživatel (TestCompany LLC), OU = UserAccounts, DC = Corp, DC = contoso, DC = com*
 
  Pokusy o odložení čárky pomocí zpětného lomítka se však nezdaří s chybou v protokolech CRP:

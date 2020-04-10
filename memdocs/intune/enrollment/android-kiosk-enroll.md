@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ae24c8cad5ccee06444ffec6a4cd8b39b3371b49
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 04d9856242336c4a8c1fbd9bef0afb539054c904
+ms.sourcegitcommit: b36badbbfb86255948e8d5cdda787c7291b09e05
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80327294"
+ms.lasthandoff: 04/10/2020
+ms.locfileid: "81007755"
 ---
 # <a name="set-up-intune-enrollment-of-android-enterprise-dedicated-devices"></a>Nastavení registrace Intune pro vyhrazená podniková zařízení s Androidem
 
@@ -39,7 +39,7 @@ Zařízení, která se spravují tímto způsobem, jsou v Intune zaregistrovaná
 
 Zařízení musí splňovat tyto požadavky, aby je bylo možné spravovat jako vyhrazené zařízení se systémem Android Enterprise:
 
-- Verze operačního systému Android 5.1 a vyšší
+- Operační systém Android verze 6,0 a vyšší.
 - Zařízení musí používat distribuci Androidu s připojením ke službě GMS (Google Mobile Services). Zařízení musí mít dostupnou službu GMS a musí být schopna se k této službě připojit.
 
 ## <a name="set-up-android-enterprise-dedicated-device-management"></a>Nastavení správy vyhrazených zařízení s Androidem Enterprise

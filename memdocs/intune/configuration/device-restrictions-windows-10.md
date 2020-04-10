@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/08/2020
+ms.date: 04/09/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 331679511aec17d271bdf8774e16c8809ad4fc27
-ms.sourcegitcommit: 9908de7d30991ee499cc462d2eb730e1e4fd75a9
+ms.openlocfilehash: 0e5726ec06ac5b315937bd30e9a2e2680c0030be
+ms.sourcegitcommit: b36badbbfb86255948e8d5cdda787c7291b09e05
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80900503"
+ms.lasthandoff: 04/10/2020
+ms.locfileid: "81007704"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Nastavení zařízení s Windows 10 (a novějším) pro povolení nebo omezení funkcí pomocí Intune
 
@@ -142,10 +142,15 @@ Tato nastavení používají [poskytovatele zásad Bluetooth](https://docs.micro
 
 Tato nastavení používají [CSP v zásadách účtů](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-accounts); Zobrazuje se taky podporované edice Windows.
 
-- **Účet Microsoft**: **blok** brání koncovým uživatelům v přidružení účet Microsoft k zařízení. **Nenakonfigurováno** (výchozí) umožňuje přidání a použití účet Microsoft.
+- **Účet Microsoft**: **blok** brání koncovým uživatelům v přidružení účet Microsoft k zařízení. **Blok** může mít také vliv na některé scénáře registrace, které se spoléhají na to, že uživatelé dokončí proces registrace.
+
+  **Nenakonfigurováno** (výchozí) umožňuje přidání a použití účet Microsoft.
+
 - **Bez účet Microsoft**: **blok** brání koncovým uživatelům v přidávání účtů mimo Microsoft pomocí uživatelského rozhraní. **Nenakonfigurováno** (výchozí) umožňuje uživatelům přidávat e-mailové účty, které nejsou přidružené k účet Microsoft.
 - **Synchronizace nastavení pro účet Microsoft**: **Nenakonfigurováno** (výchozí) povolí synchronizaci nastavení zařízení a aplikací přidružených k účet Microsoftu mezi zařízeními. **Blok** zabraňuje této synchronizaci.
-- **Pomocník pro přihlášení k účtu Microsoft**: Pokud je nastavené na **Nenakonfigurováno** (výchozí), koncoví uživatelé můžou spustit a zastavit službu **Microsoft account Signing Assistant** (wlidsvc). Tato služba operačního systému umožňuje uživatelům přihlašovat se k jejich účet Microsoft. **Disable** znemožní koncovým uživatelům řídit službu pomocníka pro přihlášení k Microsoftu (wlidsvc).
+- **Pomocník pro přihlášení k účtu Microsoft**: Pokud je nastavené na **Nenakonfigurováno** (výchozí), koncoví uživatelé můžou spustit a zastavit službu **Microsoft account Signing Assistant** (wlidsvc). Tato služba operačního systému umožňuje uživatelům přihlašovat se k jejich účet Microsoft. **Disable** nakonfiguruje službu pomocníka pro přihlašování Microsoftu (wlidsvc) na zakázanou a zabrání koncovým uživatelům v ručním spuštění.
+
+  **Zakažte** také může mít vliv na některé scénáře registrace, které se spoléhají na to, že uživatelé dokončí registraci. Například používáte [šetrnější pro Autopilotu](https://docs.microsoft.com/windows/deployment/windows-autopilot/white-glove). Uživatelům se obvykle zobrazuje okno pro přihlášení k Azure AD. Pokud je nastavené na **Zakázat**, možnost přihlášení k Azure AD se nemusí zobrazit. Místo toho se uživatelům zobrazí výzva k přijetí smlouvy EULA a vytvoření místního účtu, který nemusí být požadovaný.
 
 ## <a name="cloud-printer"></a>Cloudová tiskárna
 
@@ -599,7 +604,7 @@ Tato nastavení používají [CSP v zásadách hledání](https://docs.microsoft
   - **Střední**: mírné filtrování obsahu pro dospělé. Platné výsledky hledání nejsou filtrovány.
 - **Zobrazit výsledky webu v hledání**: když se nastaví **blokování**, uživatelé nemůžou vyhledávat a výsledky webu nejsou zobrazené ve vyhledávání. **Nenakonfigurováno** (výchozí) umožňuje uživatelům vyhledávat na webu a výsledky se zobrazí na zařízení.
 
-## <a name="start"></a>Spustit
+## <a name="start"></a>Začátek
 
 Tato nastavení používají [zprostředkovatele CSP zásad spuštění](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-start), který také uvádí podporované edice systému Windows.  
 

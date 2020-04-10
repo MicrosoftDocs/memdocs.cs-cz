@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c3b9497d80fad3a0abd7e7b14b1b8ac02b249c77
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 73d8136ff1e03b00232a58c1b0687f9e193297e1
+ms.sourcegitcommit: b36badbbfb86255948e8d5cdda787c7291b09e05
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79325559"
+ms.lasthandoff: 04/10/2020
+ms.locfileid: "81007721"
 ---
 # <a name="enroll-your-android-enterprise-dedicated-devices-or-fully-managed-devices"></a>Registrace vyhrazených zařízení s Androidem Enterprise nebo plně spravovaných zařízení
 
@@ -31,7 +31,7 @@ Po nastavení [podnikových vyhrazených zařízení s Androidem](android-kiosk-
 
 | Způsob registrace | Minimální verze operačního systému Android pro vyhrazená a plně spravovaná zařízení |
 | ----- | ----- |
-| Bezkontaktní komunikace (NFC) | 5.1 |
+| Bezkontaktní komunikace (NFC) | 6.0 |
 | Zadání tokenu | 6.0 |
 | Kód QR | 7.0 |
 | Zero Touch  | 8,0\* |
@@ -40,7 +40,7 @@ Po nastavení [podnikových vyhrazených zařízení s Androidem](android-kiosk-
 
 ## <a name="enroll-by-using-near-field-communication-nfc"></a>Registrace pomocí bezkontaktní komunikace (NFC)
 
-Pro zařízení, která podporují NFC, můžete zařízení zřídit vytvořením speciálně formátované značky NFC. Můžete použít svou vlastní aplikaci nebo nástroj pro vytváření značek NFC. Další informace najdete v dokumentaci k [registraci zařízení se systémem Android Enterprise v jazyce C s Microsoft Intune](https://blogs.technet.microsoft.com/cbernier/2018/10/15/nfc-based-android-enterprise-device-enrollment-with-microsoft-intune/) a v [dokumentaci k rozhraní API pro správu Androidu](https://developers.google.com/android/management/provision-device#nfc_method).
+U zařízení 6 a novějších, která podporují NFC, můžete zařízení zřídit vytvořením speciálně formátované značky NFC. Můžete použít svou vlastní aplikaci nebo nástroj pro vytváření značek NFC. Další informace najdete v dokumentaci k [registraci zařízení se systémem Android Enterprise v jazyce C s Microsoft Intune](https://blogs.technet.microsoft.com/cbernier/2018/10/15/nfc-based-android-enterprise-device-enrollment-with-microsoft-intune/) a v [dokumentaci k rozhraní API pro správu Androidu](https://developers.google.com/android/management/provision-device#nfc_method).
 
 ## <a name="enroll-by-using-a-token"></a>Registrace pomocí tokenu
 
