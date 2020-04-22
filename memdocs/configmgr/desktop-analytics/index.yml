@@ -1,0 +1,54 @@
+### YamlMime:Landing
+title: Dokumentace k Desktop Analytics
+summary: Desktop Analytics je cloudová služba, která se integruje s Configuration Managerem. Poskytuje analytické informace, které vám usnadní aktualizaci klientů Windows.
+metadata:
+  title: Dokumentace k Desktop Analytics
+  titleSuffix: Configuration Manager
+  description: Desktop Analytics je cloudová služba, která se integruje s Configuration Managerem. Poskytuje analytické informace, které vám usnadní aktualizaci klientů Windows.
+  ms.prod: configuration-manager
+  ms.technology: configmgr-analytics
+  ms.topic: landing-page
+  author: aczechowski
+  ms.author: aaroncz
+  ms.date: 01/28/2020
+  ms.openlocfilehash: 1c0aa1c481acb18fadeebbdecdcd4759568d2242
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: cs-CZ
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81741404"
+landingContent:
+- title: O portálu Desktop Analytics
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Co je Desktop Analytics?
+      url: overview.md
+    - text: Novinky
+      url: whats-new.md
+  - linkListType: tutorial
+    links:
+    - text: Pilotní nasazení – Windows 10
+      url: tutorial-windows10.md
+- title: Začínáme
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Nastavení portálu Desktop Analytics
+      url: set-up.md
+    - text: Připojení Configuration Manageru
+      url: connect-configmgr.md
+    - text: Registrovat zařízení
+      url: enroll-devices.md
+- title: Prostředky
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Časté otázky k Desktop Analytics
+      url: faq.md
+    - text: Povolení sdílení dat
+      url: enable-data-sharing.md
+    - text: Monitorování stavu připojení
+      url: monitor-connection-health.md
+    - text: Řešení potíží s Desktop Analytics
+      url: troubleshooting.md

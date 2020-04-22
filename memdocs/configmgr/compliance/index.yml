@@ -1,0 +1,66 @@
+### YamlMime:Landing
+title: Dokumentace k dodržování předpisů u zařízení
+summary: Configuration Manager poskytuje nástroje a prostředky, které potřebujete ke správě konfigurace a dodržování předpisů u zařízení ve vaší organizaci.
+metadata:
+  title: Dokumentace k dodržování předpisů u zařízení
+  titleSuffix: Configuration Manager
+  description: Configuration Manager poskytuje nástroje a prostředky, které potřebujete ke správě konfigurace a dodržování předpisů u zařízení ve vaší organizaci.
+  ms.product: configuration-manager
+  ms.technology: configmgr-compliance
+  ms.topic: landing-page
+  author: mestew
+  ms.author: mstewart
+  ms.date: 01/25/2020
+  ms.openlocfilehash: 7b66409e8f4082927225246bb5144efb8b65d567
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: cs-CZ
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81741098"
+landingContent:
+- title: O dodržování předpisů u zařízení
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Úvod do dodržování předpisů u zařízení
+      url: understand/ensure-device-compliance.md
+    - text: Začínáme s nastavením dodržování předpisů
+      url: get-started/get-started-with-compliance-settings.md
+  - linkListType: architecture
+    links:
+    - text: Plánování a konfigurace nastavení dodržování předpisů
+      url: plan-design/plan-for-and-configure-compliance-settings.md
+- title: Začínáme
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: Běžné úlohy správy dodržování předpisů
+      url: plan-design/common-tasks-for-managing-compliance-on-devices-with-the-client.md
+    - text: Vytváření položek konfigurace pro zařízení s Windows 10
+      url: deploy-use/create-configuration-items-for-windows-10-devices-managed-with-the-client.md
+    - text: Vytváření standardních hodnot konfigurace
+      url: deploy-use/create-configuration-baselines.md
+  - linkListType: deploy
+    links:
+    - text: Nasazení standardních hodnot konfigurace
+      url: deploy-use/deploy-configuration-baselines.md
+  - linkListType: how-to-guide
+    links:
+    - text: Monitorování nastavení dodržování předpisů
+      url: deploy-use/monitor-compliance-settings.md
+- title: Hlavní úkoly
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Vytváření vlastních položek konfigurace
+      url: deploy-use/create-custom-configuration-items-for-windows-desktop-and-server-computers-managed-with-the-client.md
+    - text: Vytváření profilů vzdáleného připojení
+      url: deploy-use/create-remote-connection-profiles.md
+    - text: Vytváření položek konfigurace profilů a dat uživatelů
+      url: deploy-use/create-user-data-and-profiles-configuration-items.md
+  - linkListType: concept
+    links:
+    - text: Profily OneDrivu pro firmy
+      url: deploy-use/onedrive-profile.md
+    - text: Správa konfiguračních dat
+      url: deploy-use/management-tasks-for-configuration-data.md

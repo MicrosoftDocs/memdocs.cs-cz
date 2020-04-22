@@ -1,0 +1,56 @@
+### YamlMime:Landing
+title: Dokumentace ke spolusprávě
+summary: Zařízení s Windows 10 můžete pomocí Configuration Manageru a Microsoft Intune spravovat souběžně – a to formou spolusprávy.
+metadata:
+  title: Dokumentace ke spolusprávě
+  titleSuffix: Configuration Manager
+  description: Zařízení s Windows 10 můžete pomocí Configuration Manageru a Microsoft Intune spravovat souběžně – a to formou spolusprávy.
+  ms.product: configuration-manager
+  ms.technology: configmgr-comanage
+  ms.topic: landing-page
+  author: mestew
+  ms.author: mstewart
+  ms.date: 01/10/2020
+  ms.openlocfilehash: bc1bf65ecaf77ded325fcdae19a0d318052b1cc9
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: cs-CZ
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81740996"
+landingContent:
+- title: O spolusprávě
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Co je spoluspráva?
+      url: overview.md
+    - text: Cesty ke spolusprávě
+      url: quickstart-paths.md
+  - linkListType: video
+    links:
+    - text: Podmíněný přístup se spolusprávou
+      url: https://channel9.msdn.com/Series/Endpoint-Zone/The-Security-Benefits-of-Conditional-Access/player
+- title: Začínáme
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: Povolení spolusprávy pro existující klienty nástroje Configuration Manager
+      url: tutorial-co-manage-clients.md
+    - text: Povolení spolusprávy pro nová internetová zařízení
+      url: tutorial-co-manage-new-devices.md
+  - linkListType: video
+    links:
+    - text: Upgrade na Windows 10 pro spolusprávu
+      url: https://channel9.msdn.com/Series/Endpoint-Zone/Upgrading-to-Windows-10-to-Enable-Co-Management/player
+- title: Hlavní úkoly
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Přepnutí úloh Configuration Manageru do Intune
+      url: how-to-switch-workloads.md
+    - text: Monitorování spolusprávy v Configuration Manageru
+      url: how-to-monitor.md
+  - linkListType: video
+    links:
+    - text: Windows Autopilot se spolusprávou
+      url: https://channel9.msdn.com/Series/Endpoint-Zone/Using-Windows-Autopilot-with-Co-Management/player

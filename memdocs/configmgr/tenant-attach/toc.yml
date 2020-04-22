@@ -1,0 +1,8 @@
+- name: Dokumentace k připojení tenanta
+  href: index.yml
+- name: Nasazení a používání
+  items:
+    - name: Povolení připojení tenanta
+      href: device-sync-actions.md
+    - name: Řešení potíží s akcemi zařízení
+      href: technical-reference.md

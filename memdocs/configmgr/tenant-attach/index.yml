@@ -1,0 +1,30 @@
+### YamlMime:Landing
+title: Dokumentace k připojení tenanta
+summary: Nahrajte si zařízení v Configuration Manageru do cloudové služby, abyste u nich mohli provádět akce.
+metadata:
+  title: Dokumentace k připojení tenanta
+  titleSuffix: Configuration Manager
+  description: Nahrajte si zařízení v Configuration Manageru do cloudové služby, abyste u nich mohli provádět akce.
+  ms.product: configuration-manager
+  ms.technology: configmgr-core
+  ms.topic: landing-page
+  author: mestew
+  ms.author: mstewart
+  ms.date: 04/01/2020
+  ms.openlocfilehash: 282a213e680231ad1d88323f8a4e34380e58672d
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: cs-CZ
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81741353"
+landingContent:
+- title: O připojení tenanta
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Povolení připojení tenanta
+      url: device-sync-actions.md
+  - linkListType: reference
+    links:
+    - text: Odstraňování potíží s připojením tenanta
+      url: technical-reference.md

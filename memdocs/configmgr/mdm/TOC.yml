@@ -1,0 +1,48 @@
+- name: Dokumentace MDM
+  href: index.yml
+- name: Místní správa MDM
+  items:
+    - name: Co je místní správa MDM
+      href: understand/manage-mobile-devices-with-on-premises-infrastructure.md
+    - name: Plánování místní správy MDM
+      href: plan-design/plan-on-premises-mdm.md
+    - name: Nastavení
+      items:
+        - name: Instalace místních rolí
+          href: get-started/install-site-system-roles-for-on-premises-mdm.md
+        - name: Nastavení certifikátů
+          href: get-started/set-up-certificates-on-premises-mdm.md
+        - name: Nastavení pro registraci
+          href: get-started/set-up-device-enrollment-on-premises-mdm.md
+    - name: Registrovat zařízení
+      items:
+        - name: Registrace – přehled
+          href: deploy-use/enroll-devices-on-premises-mdm.md
+        - name: Registrace uživatele
+          href: deploy-use/user-enroll-devices-on-premises-mdm.md
+        - name: Hromadný zápis
+          href: deploy-use/bulk-enroll-devices-on-premises-mdm.md
+    - name: Správa zařízení a ochrana dat
+      href: deploy-use/wipe-lock-reset-devices.md
+    - name: Správa aplikací
+      href: deploy-use/management-tasks-applications.md
+    - name: Správa nastavení konfigurace
+      href: deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md
+    - name: Správa přístup k prostředků
+      items:
+        - name: Vytváření profilů certifikátů PFX
+          href: deploy-use/create-pfx-certificate-profiles.md
+        - name: Import profilů certifikátů PFX
+          href: deploy-use/import-pfx-certificate-profiles.md
+        - name: Profily sítě Wi-Fi
+          href: ../protect/deploy-use/create-wifi-profiles.md?toc=/configmgr/mdm/toc.json&bc=/configmgr/mdm/breadcrumb/toc.json
+        - name: Profily sítě VPN
+          href: ../protect/deploy-use/vpn-profiles.md?toc=/configmgr/mdm/toc.json&bc=/configmgr/mdm/breadcrumb/toc.json
+- name: konektor systému Exchange Server
+  items:
+    - name: Správa zařízení pomocí Exchange
+      href: deploy-use/manage-mobile-devices-with-exchange-activesync.md
+    - name: Instalace konektoru Exchange Connector
+      href: deploy-use/install-configure-exchange-connector.md
+- name: Co se stalo s hybridní správou MDM?
+  href: understand/what-happened-to-hybrid.md

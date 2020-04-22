@@ -1,0 +1,54 @@
+- name: Dokumentace ke spolusprávě
+  href: index.yml
+- name: Přehled
+  items:
+    - name: Co je spoluspráva?
+      href: overview.md
+- name: Rychlé starty
+  items:
+    - name: Rychlé starty – přehled
+      href: quickstarts.md
+    - name: Okamžitá hodnota
+      items:
+        - name: Podmíněný přístup
+          href: quickstart-conditional-access.md
+        - name: Vzdálené akce ze služby Intune
+          href: quickstart-remote-actions.md
+        - name: Stav klienta
+          href: quickstart-client-health.md
+        - name: Hybridní služba Azure AD
+          href: quickstart-hybrid-aad.md
+        - name: Windows Autopilot
+          href: quickstart-autopilot.md
+    - name: Začínáme
+      items:
+        - name: Cesty ke spolusprávě
+          href: quickstart-paths.md
+        - name: Nastavení hybridní služby Azure AD
+          href: quickstart-setup-hybrid-aad.md
+        - name: Upgrade na Windows 10
+          href: quickstart-upgrade-win10.md
+        - name: Získejte pomoc od týmu FastTrack
+          href: quickstart-fasttrack.md
+- name: Výukové kurzy
+  items:
+    - name: Povolení spolusprávy pro klienty nástroje Configuration Manager
+      href: tutorial-co-manage-clients.md
+    - name: Povolení spolusprávy pro internetová zařízení
+      href: tutorial-co-manage-new-devices.md
+- name: Koncepty
+  items:
+    - name: Úlohy
+      href: workloads.md
+    - name: Koexistence MDM třetích stran
+      href: coexistence.md
+- name: Praktičtí průvodci
+  items:
+    - name: Povolení spolusprávy
+      href: how-to-enable.md
+    - name: Příprava zařízení připojených k internetu
+      href: how-to-prepare-Win10.md
+    - name: Přepnutí úloh do Intune
+      href: how-to-switch-workloads.md
+    - name: Sledování spolusprávy
+      href: how-to-monitor.md

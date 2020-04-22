@@ -1,0 +1,84 @@
+### YamlMime:Landing
+title: Dokumentace k základní infrastruktuře
+summary: Základní informace o produktu Configuration Manager, včetně informací o serverech lokalit a jejich klientech
+metadata:
+  title: Dokumentace k základní infrastruktuře
+  titleSuffix: Configuration Manager
+  description: Základní informace o produktu Configuration Manager, včetně informací o serverech lokalit a jejich klientech
+  ms.prod: configuration-manager
+  ms.technology: configmgr-core
+  ms.topic: landing-page
+  author: aczechowski
+  ms.author: aaroncz
+  ms.date: 01/30/2020
+  ms.openlocfilehash: 2816bb6b4685cdd6e7ce56b981fc9e0ffbd89ac3
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: cs-CZ
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81741438"
+landingContent:
+- title: O základní infrastruktuře
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Co je Configuration Manager?
+      url: understand/introduction.md
+    - text: Časté otázky k Microsoft Endpoint Configuration Manageru
+      url: understand/microsoft-endpoint-manager-faq.md
+    - text: Novinky
+      url: plan-design/changes/whats-new-incremental-versions.md
+    - text: Technical Preview
+      url: get-started/technical-preview.md
+  - linkListType: get-started
+    links:
+    - text: Použití konzoly
+      url: servers/manage/admin-console.md
+    - text: Použití Centra softwaru
+      url: understand/software-center.md
+    - text: Použití dokumentace
+      url: understand/use-docs.md
+    - text: Hledání nápovědy
+      url: understand/find-help.md
+- title: Začínáme
+  linkLists:
+  - linkListType: architecture
+    links:
+    - text: Podporované konfigurace
+      url: plan-design/configs/supported-configurations.md
+    - text: Podpora pro Windows 10
+      url: plan-design/configs/support-for-windows-10.md
+    - text: Požadavky na lokalitu
+      url: plan-design/configs/site-and-site-system-prerequisites.md
+  - linkListType: deploy
+    links:
+    - text: Aktualizace a obsluha
+      url: servers/manage/updates.md
+    - text: Instalace konzolových aktualizací
+      url: servers/manage/install-in-console-updates.md
+    - text: Nasazení klientů
+      url: clients/deploy/deploy-clients-to-windows-computers.md
+    - text: Migrace mezi hierarchiemi
+      url: migration/migrate-data-between-hierarchies.md
+- title: Hlavní úkoly
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Povolení protokolu TLS 1.2
+      url: plan-design/security/enable-tls-1-2.md
+    - text: CMPivot
+      url: servers/manage/cmpivot.md
+    - text: Plánování CMG
+      url: clients/manage/cmg/plan-cloud-management-gateway.md
+    - text: Vylepšený protokol HTTP
+      url: plan-design/hierarchy/enhanced-http.md
+  - linkListType: reference
+    links:
+    - text: Soubory protokolů
+      url: plan-design/hierarchy/about-log-files.md
+    - text: Porty
+      url: plan-design/hierarchy/ports.md
+    - text: Nastavení klienta
+      url: clients/deploy/about-client-settings.md
+    - text: Nástroje
+      url: support/tools.md

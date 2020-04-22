@@ -1,0 +1,7 @@
+- name: Configuration Manager
+  tocHref: /azure/azure-monitor/
+  topicHref: /sccm/index
+  items:
+    - name: Základní infrastruktura
+      tocHref: /azure/azure-monitor/platform/
+      topicHref: /sccm/core/understand/introduction

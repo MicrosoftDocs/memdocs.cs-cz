@@ -1,0 +1,62 @@
+- name: Dokumentace k dodržování předpisů u zařízení
+  href: index.yml
+- name: Porozumění a prozkoumávání
+  items:
+    - name: Zajištění dodržování předpisů pro zařízení
+      href: understand/ensure-device-compliance.md
+- name: Začínáme
+  items:
+    - name: Začínáme s nastavením dodržování předpisů
+      href: get-started/get-started-with-compliance-settings.md
+- name: Plánování a návrh
+  items:
+    - name: Plánování a konfigurace nastavení dodržování předpisů
+      href: plan-design/plan-for-and-configure-compliance-settings.md
+    - name: Úlohy správy dodržování předpisů
+      items:
+        - name: Běžné úlohy správy dodržování předpisů
+          href: plan-design/common-tasks-for-managing-compliance.md
+        - name: Zařízení s klientem nástroje Configuration Manager
+          href: plan-design/common-tasks-for-managing-compliance-on-devices-with-the-client.md
+        - name: Vytvoření a nasazení standardních hodnot konfigurace
+          href: plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md
+    - name: Zabezpečení a ochrana osobních údajů
+      href: plan-design/security-and-privacy-for-compliance-settings.md
+- name: Nasazení a používání
+  items:
+    - name: Vytváření položek konfigurace
+      items:
+        - name: Vytváření položek konfigurace – přehled
+          href: deploy-use/create-configuration-items.md
+        - name: Zařízení spravovaná pomocí klienta nástroje Configuration Manager
+          items:
+            - name: Windows 10
+              href: deploy-use/create-configuration-items-for-windows-10-devices-managed-with-the-client.md
+            - name: Mac OS X
+              href: deploy-use/create-configuration-items-for-mac-os-x-devices-managed-with-the-client.md
+            - name: Stolní počítače a servery s Windows (vlastní)
+              href: deploy-use/create-custom-configuration-items-for-windows-desktop-and-server-computers-managed-with-the-client.md
+    - name: Vytváření podřízených položek konfigurace
+      href: deploy-use/create-child-configuration-items.md
+    - name: Vytváření standardních hodnot konfigurace
+      href: deploy-use/create-configuration-baselines.md
+    - name: Nasazení standardních hodnot konfigurace
+      href: deploy-use/deploy-configuration-baselines.md
+    - name: Správa konfiguračních dat
+      items:
+        - name: Správa konfiguračních dat
+          href: deploy-use/management-tasks-for-configuration-data.md
+        - name: Import konfiguračních dat
+          href: deploy-use/import-configuration-data.md
+    - name: Vytváření položek konfigurace profilů a dat uživatelů
+      href: deploy-use/create-user-data-and-profiles-configuration-items.md
+    - name: Profily OneDrivu pro firmy
+      href: deploy-use/onedrive-profile.md
+    - name: Vytváření profilů vzdáleného připojení
+      href: deploy-use/create-remote-connection-profiles.md
+    - name: Upgrade zařízení s Windows na novou edici
+      href: deploy-use/upgrade-windows-version.md
+    - name: Konfigurace nastavení Microsoft Edge
+      href: deploy-use/browser-profiles.md
+    - name: Monitorování nastavení dodržování předpisů
+      href: deploy-use/monitor-compliance-settings.md

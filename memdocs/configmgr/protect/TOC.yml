@@ -1,0 +1,144 @@
+- name: Dokumentace k ochraně dat a infrastruktury
+  href: index.yml
+- name: Porozumění a prozkoumávání
+  items:
+    - name: Přehled
+      href: understand\protect-data-and-site-infrastructure.md
+- name: Plánování a návrh
+  items:
+    - name: Plánování služby Endpoint Protection
+      href: plan-design/planning-for-endpoint-protection.md
+    - name: Plánování správy nástroje BitLocker
+      href: plan-design/bitlocker-management.md
+    - name: Plánování profilů certifikátů
+      items:
+        - name: Požadavky na profily certifikátů
+          href: plan-design/prerequisites-for-certificate-profiles.md
+        - name: Oprávnění šablon certifikátů pro profily certifikátů
+          href: plan-design/planning-for-certificate-template-permissions.md
+    - name: Požadavky na profily sítí Wi-Fi a VPN
+      href: plan-design/prerequisites-for-wifi-vpn-profiles.md
+    - name: Zabezpečení a ochrana osobních údajů
+      items:
+        - name: Profily sítě Wi-Fi a VPN
+          href: plan-design/security-and-privacy-for-wifi-vpn-profiles.md
+        - name: Profily certifikátů
+          href: plan-design/security-and-privacy-for-certificate-profiles.md
+- name: Nasazení a používání
+  items:
+    - name: Funkce Endpoint Protection
+      items:
+        - name: Endpoint Protection – přehled
+          href: deploy-use/endpoint-protection.md
+        - name: Konfigurace služby Endpoint Protection
+          items:
+            - name: Jak nakonfigurovat Endpoint Protection
+              href: deploy-use/endpoint-protection-configure.md
+            - name: Role systému lokality
+              href: deploy-use/endpoint-protection-site-role.md
+            - name: Výstrahy
+              href: deploy-use/endpoint-configure-alerts.md
+            - name: Aktualizace definic
+              items:
+                - name: Aktualizace definic – přehled
+                  href: deploy-use/endpoint-definition-updates.md
+                - name: Aktualizace nástroje ConfigMgr
+                  href: deploy-use/endpoint-definitions-configmgr.md
+                - name: Aktualizace služby WSUS
+                  href: deploy-use/endpoint-definitions-wsus.md
+                - name: Aktualizace Microsoft
+                  href: deploy-use/endpoint-definitions-microsoft-updates.md
+                - name: Centrum pro ochranu před škodlivým softwarem
+                  href: deploy-use/endpoint-definitions-protection-center.md
+                - name: Aktualizace sdílené síťové složky
+                  href: deploy-use/endpoint-definitions-network.md
+            - name: Nasazení zásad
+              href: deploy-use/endpoint-antimalware-policies.md
+            - name: Konfigurace klienta
+              href: deploy-use/endpoint-protection-configure-client.md
+        - name: Zásady brány Windows Firewall
+          href: deploy-use/create-windows-firewall-policies.md
+        - name: Rozšířená ochrana před internetovými útoky v programu Microsoft Defender
+          href: deploy-use/windows-defender-advanced-threat-protection.md
+        - name: Vytvoření a nasazení zásad ochrany Exploit Guard
+          href: deploy-use/create-deploy-exploit-guard-policy.md
+        - name: Vytvoření a nasazení zásad ochrany Application Guard
+          href: deploy-use/create-deploy-application-guard-policy.md
+        - name: Nastavení Řízení aplikací programu Windows Defender
+          href: deploy-use/use-device-guard-with-configuration-manager.md
+        - name: "Antimalwarové zásady a\_zásady brány firewall"
+          href: deploy-use/endpoint-antimalware-firewall.md
+        - name: Scénář služby Endpoint Protection
+          href: deploy-use/scenarios-endpoint-protection.md
+        - name: Nápověda klienta služby Endpoint Protection
+          href: deploy-use/endpoint-protection-client-help.md
+        - name: Řešení potíží s klientem
+          href: deploy-use/troubleshoot-endpoint-client.md
+        - name: Nejčastější dotazy k Windows Defenderu
+          href: deploy-use/endpoint-protection-client-faq.md
+    - name: Správa nástroje BitLocker
+      items:
+        - name: Šifrování dat pro obnovení
+          href: deploy-use/bitlocker/encrypt-recovery-data.md
+        - name: Nasazení správy nástroje BitLocker
+          href: deploy-use/bitlocker/deploy-management-agent.md
+        - name: Nastavení portálů nástroje BitLocker
+          href: deploy-use/bitlocker/setup-websites.md
+        - name: Přizpůsobení samoobslužného portálu
+          href: deploy-use/bitlocker/customize-self-service-portal.md
+        - name: Zobrazení sestav nástroje BitLocker
+          href: deploy-use/bitlocker/view-reports.md
+        - name: Web pro správu a monitorování
+          href: deploy-use/bitlocker/helpdesk-portal.md
+        - name: Samoobslužný portál
+          href: deploy-use/bitlocker/self-service-portal.md
+    - name: Nastavení Windows Hello pro firmy
+      href: deploy-use/windows-hello-for-business-settings.md
+    - name: Profily certifikátů
+      items:
+        - name: Úvod do profilů certifikátů
+          href: deploy-use/introduction-to-certificate-profiles.md
+        - name: Vytváření profilů certifikátů
+          href: deploy-use/create-certificate-profiles.md
+        - name: Konfigurace infrastruktury certifikátu
+          href: deploy-use/certificate-infrastructure.md
+    - name: Profily sítě Wi-Fi
+      items:
+        - name: Vytváření profilů sítě Wi-Fi
+          href: deploy-use/create-wifi-profiles.md
+    - name: Profily sítě VPN
+      items:
+        - name: Profily sítě VPN
+          href: deploy-use/vpn-profiles.md
+        - name: Vytváření profilů sítě VPN
+          href: deploy-use/create-vpn-profiles.md
+        - name: Vyhledání identity aplikace pro sítě VPN jednotlivých aplikací
+          href: deploy-use/find-a-pfn-for-per-app-vpn.md
+    - name: 'Nasazení profilů sítí Wi-Fi a VPN, e-mailů a certifikátů'
+      href: deploy-use/deploy-wifi-vpn-email-cert-profiles.md
+    - name: "Nastavení podmínek a\_ujednání"
+      href: ../mdm/understand/what-happened-to-hybrid.md?toc=/sccm/protect/toc.json&bc=/sccm/protect/breadcrumb/toc.json
+    - name: Monitorování ochrany
+      items:
+        - name: Monitorování profilů sítí Wi-Fi a VPN a e-mailových profilů
+          href: deploy-use/monitor-wifi-email-vpn-profiles.md
+        - name: Monitorování profilů certifikátů
+          href: deploy-use/monitor-certificate-profiles.md
+        - name: Monitorování služby Endpoint Protection
+          href: deploy-use/monitor-endpoint-protection.md
+- name: Technické reference
+  items:
+    - name: Správa nástroje BitLocker
+      items:
+        - name: Reference k nastavením
+          href: tech-ref/bitlocker/settings.md
+        - name: Řešení potíží s nástrojem BitLocker
+          href: tech-ref/bitlocker/troubleshoot.md
+        - name: Protokoly událostí nástroje BitLocker
+          href: tech-ref/bitlocker/about-event-logs.md
+        - name: Protokoly klientských událostí
+          href: tech-ref/bitlocker/client-event-logs.md
+        - name: Protokoly serverových událostí
+          href: tech-ref/bitlocker/server-event-logs.md
+        - name: Kódy nedodržování předpisů
+          href: tech-ref/bitlocker/non-compliance-codes.md

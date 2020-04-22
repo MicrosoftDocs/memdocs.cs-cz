@@ -1,0 +1,100 @@
+### YamlMime:Landing
+title: Dokumentace k ochraně dat a infrastruktury
+summary: Pomocí Configuration Manageru můžete před nebezpečnými útoky chránit svoji infrastrukturu i data.
+metadata:
+  title: Dokumentace k ochraně dat a infrastruktury
+  titleSuffix: Configuration Manager
+  description: Pomocí Configuration Manageru můžete před nebezpečnými útoky chránit svoji infrastrukturu i data.
+  ms.product: configuration-manager
+  ms.technology: configmgr-protect
+  ms.topic: landing-page
+  author: mestew
+  ms.author: mstewart
+  ms.date: 01/10/2020
+  ms.openlocfilehash: 44481f1b0fb304ed12a40d100352a9f7a6d8dd39
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: cs-CZ
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81741846"
+landingContent:
+- title: Správa nástroje BitLocker Drive Encryption (BDE)
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: Plánování správy nástroje BitLocker
+      url: plan-design/bitlocker-management.md
+  - linkListType: deploy
+    links:
+    - text: Nasazení správy nástroje BitLocker
+      url: deploy-use/bitlocker/deploy-management-agent.md
+    - text: Nastavení portálů nástroje BitLocker
+      url: deploy-use/bitlocker/setup-websites.md
+  - linkListType: how-to-guide
+    links:
+    - text: Zobrazení sestav nástroje BitLocker
+      url: deploy-use/bitlocker/view-reports.md
+    - text: Použití webu pro správu a monitorování pomocí nástroje BitLocker
+      url: deploy-use/bitlocker/helpdesk-portal.md
+- title: Profily certifikátů
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Úvod do profilů certifikátů
+      url: deploy-use/introduction-to-certificate-profiles.md
+  - linkListType: get-started
+    links:
+    - text: Plánování oprávnění šablon certifikátů pro profily certifikátů
+      url: plan-design/planning-for-certificate-template-permissions.md
+    - text: Požadavky na profily certifikátů
+      url: plan-design/prerequisites-for-certificate-profiles.md
+  - linkListType: deploy
+    links:
+    - text: Konfigurace infrastruktury certifikátu
+      url: deploy-use/certificate-infrastructure.md
+    - text: Vytváření profilů certifikátů
+      url: deploy-use/endpoint-configure-alerts.md
+    - text: Nasazování profilů přístupu k prostředkům
+      url: deploy-use/endpoint-definition-updates.md
+- title: Hlavní úkoly
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Zprovoznění Rozšířené ochrany před internetovými útoky v programu Microsoft Defender
+      url: deploy-use/windows-defender-advanced-threat-protection.md
+    - text: Řešení potíží s programem Windows Defender nebo klientem Endpoint Protection
+      url: deploy-use/troubleshoot-endpoint-client.md
+    - text: Správa antimalwarových zásad a nastavení brány firewall
+      url: deploy-use/endpoint-antimalware-firewall.md
+    - text: Správa Řízení aplikací v programu Windows Defender
+      url: deploy-use/use-device-guard-with-configuration-manager.md
+    - text: Vytvoření a nasazení Ochrany Application Guard v programu Windows Defender
+      url: deploy-use/create-deploy-application-guard-policy.md
+    - text: Nastavení Windows Hello pro firmy
+      url: deploy-use/windows-hello-for-business-settings.md
+- title: Funkce Endpoint Protection
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Endpoint Protection – přehled
+      url: deploy-use/endpoint-protection.md
+  - linkListType: get-started
+    links:
+    - text: Plánování služby Endpoint Protection
+      url: plan-design/planning-for-endpoint-protection.md
+  - linkListType: deploy
+    links:
+    - text: Vytvoření role systému lokality bodu Endpoint Protection
+      url: deploy-use/endpoint-protection-site-role.md
+    - text: Konfigurace výstrah pro službu Endpoint Protection
+      url: deploy-use/endpoint-configure-alerts.md
+    - text: Konfigurace aktualizací definic pro službu Endpoint Protection
+      url: deploy-use/endpoint-definition-updates.md
+  - linkListType: how-to-guide
+    links:
+    - text: Vytvoření a nasazení antimalwarových zásad pro Endpoint Protection
+      url: deploy-use/endpoint-antimalware-policies.md
+    - text: Konfigurace vlastních nastavení klienta pro bod Endpoint Protection
+      url: deploy-use/endpoint-protection-configure-client.md
+    - text: Monitorování stavu služby Endpoint Protection
+      url: deploy-use/monitor-endpoint-protection.md

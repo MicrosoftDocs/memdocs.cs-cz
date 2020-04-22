@@ -1,0 +1,879 @@
+- name: Dokumentace k základní infrastruktuře
+  href: index.yml
+- name: Porozumění a prozkoumávání
+  items:
+    - name: Co je Configuration Manager?
+      href: understand/introduction.md
+    - name: Časté otázky k Microsoft Endpoint Configuration Manageru
+      href: understand/microsoft-endpoint-manager-faq.md
+    - name: Co se stalo s SCCM?
+      href: understand/what-happened-to-sccm.md
+    - name: Úvod
+      items:
+        - name: Hledání pomoci při používání nástroje Configuration Manager
+          href: understand/find-help.md
+        - name: Jak používat dokumentaci
+          href: understand/use-docs.md
+        - name: Jak používat tuto konzolu
+          href: servers/manage/admin-console.md
+        - name: Funkce pro usnadnění přístupu
+          href: understand/accessibility-features.md
+        - name: Uživatelská příručka Centra softwaru
+          href: understand/software-center.md
+    - name: Základy
+      items:
+        - name: Configuration Manager – základy
+          href: understand/fundamentals.md
+        - name: Lokality a hierarchie
+          href: understand/fundamentals-of-sites-and-hierarchies.md
+        - name: 'O upgradu, aktualizaci a instalaci'
+          href: understand/upgrade-update-install.md
+        - name: Správa zařízení
+          href: understand/fundamentals-of-managing-devices.md
+        - name: Správa klientů
+          href: understand/fundamentals-of-client-management-tasks.md
+        - name: Zabezpečení
+          href: understand/fundamentals-of-security.md
+        - name: Správa na základě rolí
+          href: understand/fundamentals-of-role-based-administration.md
+    - name: Configuration Manager a Windows jako služba
+      href: understand/configuration-manager-and-windows-as-service.md
+    - name: Použití cloudových služeb
+      items:
+        - name: Cloudové služby – přehled
+          href: understand/use-cloud-services.md
+        - name: Configuration Manager v Azure
+          href: understand/configuration-manager-on-azure.md
+    - name: Nejčastější dotazy týkající se výkonu a nastavení velikosti webu
+      href: understand/site-size-performance-faq.md
+    - name: Nejčastější dotazy k produktu a licencování
+      href: understand/product-and-licensing-faq.md
+    - name: Kterou větev nástroje Configuration Manager mám použít?
+      href: understand/which-branch-should-i-use.md
+    - name: Licencování a větve
+      href: understand/learn-more-editions.md
+    - name: Klient s rozšířenou vzájemnou funkční spoluprací
+      href: understand/interoperability-client.md
+    - name: Long-Term Servicing Branch
+      items:
+        - name: Long-Term Servicing Branch – přehled
+          href: understand/introduction-to-the-ltsb.md
+        - name: Podporované konfigurace pro LTSB
+          href: understand/supported-configurations-for-ltsb.md
+        - name: Instalace LTSB
+          href: understand/install-the-ltsb.md
+        - name: Správa LTSB
+          href: understand/manage-the-ltsb.md
+        - name: Upgrade LTSB na aktuální větev
+          href: understand/convert-to-current-branch.md
+- name: Plánování a návrh
+  items:
+    - name: Příprava pro Configuration Manager
+      href: plan-design/get-ready.md
+    - name: Změny produktu
+      items:
+        - name: Funkce a možnosti
+          href: plan-design/changes/features-and-capabilities.md
+        - name: Novinky v přírůstkových verzích
+          href: plan-design/changes/whats-new-incremental-versions.md
+        - name: Novinky ve verzi 2002
+          href: plan-design/changes/whats-new-in-version-2002.md
+        - name: Novinky ve verzi 1910
+          href: plan-design/changes/whats-new-in-version-1910.md
+        - name: Novinky ve verzi 1906
+          href: plan-design/changes/whats-new-in-version-1906.md
+        - name: Novinky ve verzi 1902
+          href: plan-design/changes/whats-new-in-version-1902.md
+        - name: Novinky ve verzi 1810
+          href: plan-design/changes/whats-new-in-version-1810.md
+        - name: Co se změnilo od Configuration Manageru 2012
+          href: plan-design/changes/what-has-changed-from-configuration-manager-2012.md
+        - name: Odebrané a zastaralé
+          items:
+            - name: Odebrané a zastaralé – přehled
+              href: plan-design/changes/deprecated/removed-and-deprecated.md
+            - name: Odebrané a zastaralé funkce
+              href: plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md
+            - name: Odebrané a zastaralé funkce pro servery lokality
+              href: plan-design/changes/deprecated/removed-and-deprecated-server.md
+            - name: Odebrané a zastaralé funkce pro klienty
+              href: plan-design/changes/deprecated/removed-and-deprecated-client.md
+    - name: Podporované konfigurace
+      items:
+        - name: Podporované konfigurace
+          href: plan-design/configs/supported-configurations.md
+        - name: Dimenzování a škálování
+          href: plan-design/configs/size-and-scale-numbers.md
+        - name: Požadavky na lokality a systémy lokalit
+          href: plan-design/configs/site-and-site-system-prerequisites.md
+        - name: Pokyny pro výkon a velikost webu
+          href: plan-design/configs/site-size-performance-guidelines.md
+        - name: Podporované operační systémy pro servery systému lokality
+          href: plan-design/configs/supported-operating-systems-for-site-system-servers.md
+        - name: Podporované operační systémy pro klienty a zařízení
+          href: plan-design/configs/supported-operating-systems-for-clients-and-devices.md
+        - name: Podpora Windows 10 jako klienta
+          href: plan-design/configs/support-for-windows-10.md
+        - name: Podporované operační systémy konzol
+          href: plan-design/configs/supported-operating-systems-consoles.md
+        - name: Doporučený hardware
+          href: plan-design/configs/recommended-hardware.md
+        - name: Podpora verzí SQL Serveru
+          href: plan-design/configs/support-for-sql-server-versions.md
+        - name: Podpora domén služby Active Directory
+          href: plan-design/configs/support-for-active-directory-domains.md
+        - name: Podpora pro funkce Windows a sítě
+          href: plan-design/configs/support-for-windows-features-and-networks.md
+        - name: Podpora virtualizovaných prostředí
+          href: plan-design/configs/support-for-virtualization-environments.md
+    - name: Výběr řešení správy zařízení
+      href: plan-design/choose-a-device-management-solution.md
+    - name: Návrh hierarchie lokalit
+      items:
+        - name: Návrh hierarchie
+          href: plan-design/hierarchy/design-a-hierarchy-of-sites.md
+        - name: Plánování poskytovatele serveru SMS
+          href: plan-design/hierarchy/plan-for-the-sms-provider.md
+        - name: Plánování databáze lokality
+          href: plan-design/hierarchy/plan-for-the-site-database.md
+        - name: Plánování serverů systému lokality
+          href: plan-design/hierarchy/plan-for-site-system-servers-and-site-system-roles.md
+        - name: Základní koncepty správy obsahu
+          items:
+            - name: Správa obsahu – základy
+              href: plan-design/hierarchy/fundamental-concepts-for-content-management.md
+            - name: Použití cloudového distribučního bodu
+              href: plan-design/hierarchy/use-a-cloud-based-distribution-point.md
+            - name: Použití distribučního bodu pro vyžádání obsahu
+              href: plan-design/hierarchy/use-a-pull-distribution-point.md
+            - name: Knihovna obsahu
+              href: plan-design/hierarchy/the-content-library.md
+            - name: Vývojový diagram – správa knihovny obsahu
+              href: plan-design/hierarchy/manage-content-library-flowchart.md
+            - name: Content Library Cleanup Tool
+              href: plan-design/hierarchy/content-library-cleanup-tool.md
+            - name: Sdílená mezipaměť pro klienty nástroje Configuration Manager
+              href: plan-design/hierarchy/client-peer-cache.md
+            - name: Správce přenosu balíčků
+              href: plan-design/hierarchy/package-transfer-manager.md
+            - name: Správa šířky pásma sítě pro správu obsahu
+              href: plan-design/hierarchy/manage-network-bandwidth.md
+            - name: Zabezpečení a ochrana osobních údajů při správě obsahu
+              href: plan-design/hierarchy/security-and-privacy-for-content-management.md
+        - name: Přenos dat mezi lokalitami
+          items:
+            - name: Typy přenosu dat
+              href: plan-design/hierarchy/data-transfers-between-sites.md
+            - name: Replikace na základě souborů
+              href: plan-design/hierarchy/file-based-replication.md
+            - name: Replikace databáze
+              href: plan-design/hierarchy/database-replication.md
+        - name: 'Způsob, jak klienti vyhledávají prostředky a služby'
+          href: plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md
+        - name: Zabezpečení a ochrana osobních údajů pro správu lokalit
+          href: plan-design/hierarchy/security-and-privacy-for-site-administration.md
+    - name: Plánování síťové infrastruktury
+      items:
+        - name: Aspekty síťové infrastruktury
+          href: plan-design/network/configure-firewalls-ports-domains.md
+        - name: Porty
+          href: plan-design/hierarchy/ports.md
+        - name: Podpora proxy serveru
+          href: plan-design/network/proxy-server-support.md
+        - name: Požadavky na přístup k internetu
+          href: plan-design/network/internet-endpoints.md
+        - name: Schéma Active Directory
+          items:
+            - name: Příprava schématu Active Directory
+              href: plan-design/network/extend-the-active-directory-schema.md
+            - name: Rozšíření schématu
+              href: plan-design/network/schema-extensions.md
+        - name: Příprava serverů Windows na podporu systémů lokalit
+          href: plan-design/network/prepare-windows-servers.md
+        - name: Weby pro servery systému lokality
+          href: plan-design/network/websites-for-site-system-servers.md
+        - name: Přehled certifikátů CNG
+          href: plan-design/network/cng-certificates-overview.md
+        - name: Požadavky na certifikát PKI
+          href: plan-design/network/pki-certificate-requirements.md
+        - name: Příklad nasazení certifikátu PKI
+          href: plan-design/network/example-deployment-of-pki-certificates.md
+    - name: Data o využití a diagnostika
+      items:
+        - name: Přehled dat o využití a diagnostiky
+          href: plan-design/diagnostics/diagnostics-and-usage-data.md
+        - name: Jak Microsoft používá data o využití a diagnostiku
+          href: plan-design/diagnostics/how-diagnostics-and-usage-data-is-used.md
+        - name: Jak Configuration Manager shromažďuje data
+          href: plan-design/diagnostics/how-diagnostics-and-usage-data-is-collected.md
+        - name: Jak zobrazit data o využití a diagnostiku
+          href: plan-design/diagnostics/view-diagnostics-and-usage-data.md
+        - name: Úrovně dat o využití a diagnostiky
+          items:
+            - name: Přehled úrovní
+              href: plan-design/diagnostics/levels-overview.md
+            - name: Data pro verzi 2002
+              href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-2002.md
+            - name: Data pro verzi 1910
+              href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1910.md
+            - name: Data pro verzi 1906
+              href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1906.md
+            - name: Data pro verzi 1902
+              href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1902.md
+            - name: Data pro verzi 1810
+              href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1810.md
+        - name: Nejčastější dotazy
+          href: plan-design/diagnostics/frequently-asked-questions.md
+    - name: Zabezpečení a ochrana osobních údajů v nástroji Configuration Manager
+      items:
+        - name: Zabezpečení a ochrana osobních údajů – přehled
+          href: plan-design/security/security-and-privacy.md
+        - name: Plánování zabezpečení
+          href: plan-design/security/plan-for-security.md
+        - name: Osvědčené postupy zabezpečení a ochrany osobních údajů
+          href: plan-design/security/security-best-practices-and-privacy-information.md
+        - name: Prohlášení o zásadách ochrany osobních údajů – knihovna rutin Configuration Manageru
+          href: plan-design/security/privacy-statement-cmdlet-library.md
+        - name: Další informace o ochraně osobních údajů
+          href: plan-design/security/additional-privacy.md
+        - name: Konfigurace zabezpečení
+          href: plan-design/security/configure-security.md
+        - name: "Technické informace o\_kryptografických ovládacích prvcích"
+          href: plan-design/security/cryptographic-controls-technical-reference.md
+        - name: Povolení protokolu TLS 1.2
+          items:
+            - name: Informace o povolování protokolu TLS 1.2
+              href: plan-design/security/enable-tls-1-2.md
+            - name: Povolení protokolu TLS 1.2 na klientech
+              href: plan-design/security/enable-tls-1-2-client.md
+            - name: Povolení protokolu TLS 1.2 na serverech lokality a ve vzdálených systémech lokality
+              href: plan-design/security/enable-tls-1-2-server.md
+            - name: Běžné problémy při povolování protokolu TLS 1.2
+              href: plan-design/security/enable-tls-1-2-troubleshoot.md
+- name: Začínáme
+  items:
+    - name: Hodnocení nástroje Configuration Manager v testovacím prostředí
+      items:
+        - name: Testovací prostředí – přehled
+          href: get-started/evaluate-with-lab-environment.md
+        - name: Nastavení testovacího prostředí
+          href: get-started/set-up-your-lab.md
+        - name: Vytvoření testovacího prostředí v Azure
+          href: get-started/azure-template.md
+    - name: Technical Preview
+      items:
+        - name: Technical Preview – přehled
+          href: get-started/technical-preview.md
+        - name: Funkce ve verzi 2003
+          href: get-started/2020/technical-preview-2003.md
+        - name: Funkce ve verzi 2002.2
+          href: get-started/2020/technical-preview-2002-2.md
+        - name: Funkce ve verzi 2002
+          href: get-started/2020/technical-preview-2002.md
+        - name: Funkce ve verzi 2001.2
+          href: get-started/2020/technical-preview-2001-2.md
+        - name: Funkce ve verzi 2001
+          href: get-started/2020/technical-preview-2001.md
+        - name: Funkce ve verzi 1912
+          href: get-started/2019/technical-preview-1912.md
+    - name: Migrace dat mezi hierarchiemi
+      items:
+        - name: Migrace – přehled
+          href: migration/migrate-data-between-hierarchies.md
+        - name: Plánování migrace
+          items:
+            - name: Plánování migrace
+              href: migration/planning-for-migration.md
+            - name: Požadavky pro migraci
+              href: migration/prerequisites-for-migration.md
+            - name: Kontrolní seznamy pro migraci
+              href: migration/administrator-checklists-for-migration-planning.md
+            - name: 'Určení, zda se mají migrovat data'
+              href: migration/determine-whether-to-migrate-data.md
+            - name: Plánování zdrojové hierarchie
+              href: migration/planning-a-source-hierarchy-strategy.md
+            - name: Plánování úloh migrace
+              href: migration/planning-a-migration-job-strategy.md
+            - name: Plánování migrace klientů
+              href: migration/planning-a-client-migration-strategy.md
+            - name: Plánování nasazení obsahu
+              href: migration/planning-a-content-deployment-migration-strategy.md
+            - name: Plánování migrace objektů
+              href: migration/planning-for-the-migration-of-objects.md
+            - name: Plánování monitorování migrace
+              href: migration/planning-to-monitor-migration-activity.md
+            - name: Plánování dokončení migrace
+              href: migration/planning-to-complete-migration.md
+        - name: Konfigurace zdrojových hierarchií a zdrojových lokalit
+          href: migration/configuring-source-hierarchies-and-source-sites-for-migration.md
+        - name: Operace migrace
+          href: migration/operations-for-migration.md
+        - name: Zabezpečení a ochrana osobních údajů při migraci
+          href: migration/security-and-privacy-for-migration.md
+- name: Nasazení serverů a rolí
+  items:
+    - name: Nasazení serverů a rolí
+      href: servers/deploy/start-using.md
+    - name: Instalace infrastruktury
+      items:
+        - name: Získání instalačního média
+          href: servers/deploy/install/get-install-media.md
+        - name: Před spuštěním instalace
+          items:
+            - name: Referenční informace o instalaci
+              href: servers/deploy/install/setup-reference.md
+            - name: Nástroj pro stažení instalačního programu
+              href: servers/deploy/install/setup-downloader.md
+            - name: Modul pro kontrolu požadovaných součástí
+              href: servers/deploy/install/prerequisite-checker.md
+            - name: Kontroly požadovaných součástí
+              href: servers/deploy/install/list-of-prerequisite-checks.md
+        - name: Instalace lokalit
+          items:
+            - name: Příprava instalace lokalit – přehled
+              href: servers/deploy/install/installing-sites.md
+            - name: Příprava instalace lokalit
+              href: servers/deploy/install/prepare-to-install-sites.md
+            - name: Předpoklady pro instalaci lokalit
+              href: servers/deploy/install/prerequisites-for-installing-sites.md
+            - name: Použití průvodce instalací
+              href: servers/deploy/install/use-the-setup-wizard-to-install-sites.md
+            - name: Použití příkazového řádku
+              items:
+                - name: Příkazový řádek – přehled
+                  href: servers/deploy/install/use-a-command-line-to-install-sites.md
+                - name: Možnosti příkazového řádku
+                  href: servers/deploy/install/command-line-options-for-setup.md
+            - name: Instalace konzol
+              href: servers/deploy/install/install-consoles.md
+            - name: Upgrade zkušební instalace
+              href: servers/deploy/install/upgrade-an-evaluation-install-to-a-full-install.md
+            - name: Upgrade na Configuration Manager
+              href: servers/deploy/install/upgrade-to-configuration-manager.md
+            - name: Scénáře zjednodušení instalace
+              href: servers/deploy/install/scenarios-to-streamline-your-installation.md
+    - name: Konfigurace lokalit a hierarchií
+      items:
+        - name: Konfigurace lokalit a hierarchií – přehled
+          href: servers/deploy/configure/configure-sites-and-hierarchies.md
+        - name: Přidání rolí systému lokality
+          items:
+            - name: Přidání rolí systému lokality – přehled
+              href: servers/deploy/configure/add-site-system-roles.md
+            - name: Instalace rolí systému lokality
+              href: servers/deploy/configure/install-site-system-roles.md
+            - name: Instalace cloudových distribučních bodů
+              href: servers/deploy/configure/install-cloud-based-distribution-points-in-microsoft-azure.md
+            - name: O spojovacím bodu služby
+              href: servers/deploy/configure/about-the-service-connection-point.md
+            - name: Možnosti konfigurace pro role systému lokality
+              href: servers/deploy/configure/configuration-options-for-site-system-roles.md
+            - name: Repliky databáze pro body správy
+              href: servers/deploy/configure/database-replicas-for-management-points.md
+        - name: Součásti lokality
+          href: servers/deploy/configure/site-components.md
+        - name: Publikování dat lokalit
+          href: servers/deploy/configure/publish-site-data.md
+        - name: Správa obsahu a infrastruktury obsahu
+          items:
+            - name: Infrastruktura obsahu – přehled
+              href: servers/deploy/configure/manage-content-and-content-infrastructure.md
+            - name: Instalace a konfigurace distribučních bodů
+              href: servers/deploy/configure/install-and-configure-distribution-points.md
+            - name: Nasazení a správa obsahu
+              href: servers/deploy/configure/deploy-and-manage-content.md
+            - name: Monitorování obsahu
+              href: servers/deploy/configure/monitor-content-you-have-distributed.md
+            - name: Microsoft Connected Cache
+              href: plan-design/hierarchy/microsoft-connected-cache.md
+            - name: Řešení potíží se službou Microsoft Connected Cache
+              href: servers/deploy/configure/troubleshoot-microsoft-connected-cache.md
+        - name: Spuštění zjišťování
+          items:
+            - name: Metody zjišťování – přehled
+              href: servers/deploy/configure/run-discovery.md
+            - name: Informace o metodách zjišťování
+              href: servers/deploy/configure/about-discovery-methods.md
+            - name: Výběr metod zjišťování
+              href: servers/deploy/configure/select-discovery-methods-to-use.md
+            - name: Konfigurace metod zjišťování
+              href: servers/deploy/configure/configure-discovery-methods.md
+        - name: Hranice lokality a hraniční skupiny
+          items:
+            - name: Hranice lokality a hraniční skupiny – přehled
+              href: servers/deploy/configure/define-site-boundaries-and-boundary-groups.md
+            - name: Hranice
+              href: servers/deploy/configure/boundaries.md
+            - name: Skupiny hranic
+              href: servers/deploy/configure/boundary-groups.md
+            - name: Postupy pro skupiny hranic
+              href: servers/deploy/configure/boundary-group-procedures.md
+        - name: Vysoká dostupnost
+          items:
+            - name: Možnosti vysoké dostupnosti
+              href: servers/deploy/configure/high-availability-options.md
+            - name: Vysoká dostupnost serveru lokality
+              href: servers/deploy/configure/site-server-high-availability.md
+            - name: Vývojový diagram – nastavení pasivního serveru lokality
+              href: servers/deploy/configure/passive-site-server-flowchart.md
+            - name: Vývojový diagram – zvýšení úrovně serveru lokality (plánované)
+              href: servers/deploy/configure/promote-site-server-flowchart.md
+            - name: Vývojový diagram – zvýšení úrovně serveru lokality (neplánované)
+              href: servers/deploy/configure/promote-site-server-unplanned-flowchart.md
+            - name: Příprava na použití AlwaysOn SQL Serveru
+              href: servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md
+            - name: Konfigurace AlwaysOn SQL Serveru
+              href: servers/deploy/configure/configure-aoag.md
+            - name: Použití clusteru SQL Serveru
+              href: servers/deploy/configure/use-a-sql-server-cluster-for-the-site-database.md
+        - name: Vlastní umístění databázových souborů
+          href: servers/deploy/configure/custom-locations-for-site-database-files.md
+        - name: Konfigurace správy na základě rolí
+          href: servers/deploy/configure/configure-role-based-administration.md
+        - name: Konfigurace služeb Azure
+          href: servers/deploy/configure/azure-services-wizard.md
+    - name: Odinstalaci a odebrání
+      items:
+        - name: 'Odinstalace rolí, lokalit a hierarchií'
+          href: servers/deploy/install/uninstall-sites-and-hierarchies.md
+        - name: Odebrání CAS
+          href: servers/deploy/install/remove-central-administration-site.md
+    - name: Technické reference
+      items:
+        - name: Účty
+          href: plan-design/hierarchy/accounts.md
+        - name: Komunikace mezi koncovými body
+          href: plan-design/hierarchy/communications-between-endpoints.md
+        - name: Vylepšené systémy lokality protokolu HTTP
+          href: plan-design/hierarchy/enhanced-http.md
+        - name: Nástroj Údržba hierarchie
+          href: servers/manage/hierarchy-maintenance-tool-preinst.exe.md
+        - name: Mezinárodní podpora
+          href: plan-design/hierarchy/international-support.md
+        - name: Interoperabilita různých verzí
+          href: plan-design/hierarchy/interoperability-between-different-versions.md
+        - name: Jazykové sady
+          href: servers/deploy/install/language-packs.md
+        - name: Informace o souborech protokolu
+          href: plan-design/hierarchy/about-log-files.md
+        - name: Referenční informace k protokolům
+          href: plan-design/hierarchy/log-files.md
+        - name: "Poznámky k\_verzi"
+          href: servers/deploy/install/release-notes.md
+        - name: Stavové zprávy
+          href: plan-design/hierarchy/state-messaging-system-center-configuration-manager.md
+        - name: Podpora kódování Unicode a ASCII
+          href: plan-design/hierarchy/unicode-and-ascii-support.md
+- name: Správa infrastruktury
+  items:
+    - name: Přehledy správy
+      href: servers/manage/management-insights.md
+    - name: CMPivot
+      items:
+        - name: CMPivot – použití
+          href: servers/manage/cmpivot.md
+        - name: Odstraňování potíží s CMPivotem
+          href: servers/manage/cmpivot-tsg.md
+    - name: Úlohy údržby
+      items:
+        - name: Úlohy údržby – přehled
+          href: servers/manage/maintenance-tasks.md
+        - name: Referenční informace k úlohám údržby
+          href: servers/manage/reference-for-maintenance-tasks.md
+    - name: Změna infrastruktury
+      items:
+        - name: Změna infrastruktury
+          href: servers/manage/modify-your-infrastructure.md
+        - name: Složka CD.Latest
+          href: servers/manage/the-cd.latest-folder.md
+    - name: Upgrade místní infrastruktury
+      href: servers/manage/upgrade-on-premises-infrastructure.md
+    - name: Aktualizace pro Configuration Manager – přehled
+      items:
+        - name: Aktualizace pro Configuration Manager
+          href: servers/manage/updates.md
+        - name: Konzolové aktualizace
+          items:
+            - name: Instalace konzolových aktualizací
+              href: servers/manage/install-in-console-updates.md
+            - name: Nástroj pro resetování aktualizací
+              href: servers/manage/update-reset-tool.md
+            - name: Testování upgradu databáze
+              href: servers/manage/test-database-upgrade.md
+            - name: Vývojový diagram – stahování aktualizací
+              href: servers/manage/download-updates-flowchart.md
+            - name: Vývojový diagram – replikace aktualizací
+              href: servers/manage/update-replication-flowchart.md
+        - name: Předběžné verze funkcí
+          href: servers/manage/pre-release-features.md
+        - name: Časové intervaly pro správu a údržbu serverů lokality
+          href: servers/manage/service-windows.md
+        - name: Použití nástroje pro připojení služby
+          href: servers/manage/use-the-service-connection-tool.md
+        - name: Použití nástroje pro registraci aktualizací
+          href: servers/manage/use-the-update-registration-tool-to-import-hotfixes.md
+        - name: Použití instalačního programu oprav hotfix
+          href: servers/manage/use-the-hotfix-installer-to-install-updates.md
+        - name: Kontrolní seznam pro instalaci aktualizace 2002
+          href: servers/manage/checklist-for-installing-update-2002.md
+        - name: Kontrolní seznam pro instalaci aktualizace 1910
+          href: servers/manage/checklist-for-installing-update-1910.md
+        - name: Kontrolní seznam pro instalaci aktualizace 1906
+          href: servers/manage/checklist-for-installing-update-1906.md
+        - name: Kontrolní seznam pro instalaci aktualizace 1902
+          href: servers/manage/checklist-for-installing-update-1902.md
+        - name: Kontrolní seznam pro instalaci aktualizace 1810
+          href: servers/manage/checklist-for-installing-update-1810.md
+        - name: Podpora aktuálních verzí větve
+          href: servers/manage/current-branch-versions-supported.md
+    - name: Zálohování a obnova
+      items:
+        - name: Zálohování lokalit
+          href: servers/manage/backup-and-recovery.md
+        - name: Obnovení lokalit
+          href: servers/manage/recover-sites.md
+        - name: Bezobslužné obnovení lokality
+          href: servers/manage/unattended-recovery.md
+    - name: Dopady selhání lokality
+      href: servers/manage/site-failure-impacts.md
+    - name: Monitorování infrastruktury
+      items:
+        - name: Monitorování hierarchie
+          href: servers/manage/monitor-hierarchy.md
+        - name: Použití výstrah a stavového systému
+          href: servers/manage/use-alerts-and-the-status-system.md
+        - name: Ověření stavu
+          href: servers/manage/health-attestation.md
+        - name: Infrastruktura replikace
+          items:
+            - name: Monitorování replikace
+              href: servers/manage/monitor-replication.md
+            - name: Řešení potíží s replikací SQL
+              items:
+                - name: Řešení potíží s replikací SQL
+                  href: servers/manage/replication/overview.md
+                - name: Replikace SQL
+                  href: servers/manage/replication/sql-replication.md
+                - name: Konfigurace SQL
+                  href: servers/manage/replication/sql-configuration.md
+                - name: Výkon SQL
+                  href: servers/manage/replication/sql-performance.md
+                - name: Opětovná inicializace replikace SQL
+                  href: servers/manage/replication/sql-replication-reinit.md
+                - name: Opětovná inicializace globálních dat
+                  href: servers/manage/replication/global-data-reinit.md
+                - name: Opětovná inicializace dat webu
+                  href: servers/manage/replication/site-data-reinit.md
+                - name: Chybějící zpráva k opětovné inicializaci
+                  href: servers/manage/replication/reinit-missing-message.md
+        - name: Dotazy
+          items:
+            - name: Úvod do dotazů
+              href: servers/manage/introduction-to-queries.md
+            - name: Správa dotazů
+              href: servers/manage/manage-queries.md
+            - name: Vytváření dotazů
+              href: servers/manage/create-queries.md
+            - name: Zabezpečení a ochrana osobních údajů pro dotazy
+              href: servers/manage/security-and-privacy-for-queries.md
+        - name: Generování sestav
+          items:
+            - name: Úvod do vytváření sestav
+              href: servers/manage/introduction-to-reporting.md
+            - name: Integrace se Serverem sestav Power BI
+              href: servers/manage/powerbi-report-server.md
+            - name: Plánování vytváření sestav
+              items:
+                - name: Plánování vytváření sestav
+                  href: servers/manage/planning-for-reporting.md
+                - name: Požadavky vytváření sestav
+                  href: servers/manage/prerequisites-for-reporting.md
+                - name: Seznam sestav
+                  href: servers/manage/list-of-reports.md
+            - name: Konfigurace vytváření sestav
+              href: servers/manage/configuring-reporting.md
+            - name: Operace a údržba pro vytváření sestav
+              href: servers/manage/operations-and-maintenance-for-reporting.md
+            - name: Vytváření vlastních modelů sestav
+              href: servers/manage/creating-custom-report-models-in-sql-server-reporting-services.md
+        - name: Datový sklad
+          href: servers/manage/data-warehouse.md
+    - name: Support Center
+      href: support/support-center.md
+      items:
+        - name: Support Center – přehled
+          href: support/support-center.md
+        - name: Příručka Rychlý start
+          href: support/support-center-quickstart.md
+        - name: Usnadnění
+          href: support/support-center-accessibility.md
+        - name: Referenční informace k uživatelskému rozhraní
+          href: support/support-center-ui-reference.md
+        - name: Vlastní nastavení
+          href: support/support-center-customize.md
+        - name: Support Center OneTrace (Preview)
+          href: support/support-center-onetrace.md
+    - name: Configuration Manager – nástroje
+      items:
+        - name: Nástroje – přehled
+          href: support/tools.md
+        - name: CMTrace
+          href: support/cmtrace.md
+        - name: Klientský Spy
+          href: support/clispy.md
+        - name: Nástroj pro monitorování nasazení
+          href: support/deployment-monitoring-tool.md
+        - name: Spy pro zásady
+          href: support/policy-spy.md
+        - name: Nástroj Power View
+          href: support/power-viewer-tool.md
+        - name: Nástroj pro odeslání plánu
+          href: support/send-schedule-tool.md
+        - name: Správce fronty úloh DP
+          href: support/dp-job-manager.md
+        - name: Prohlížeč hodnocení kolekce
+          href: support/ceviewer.md
+        - name: Průzkumník knihovny obsahu
+          href: support/content-library-explorer.md
+        - name: Přenos knihovny obsahu
+          href: support/content-library-transfer.md
+        - name: Nástroj pro vlastnictví obsahu
+          href: support/content-ownership-tool.md
+        - name: Rozšíření a migrace do Microsoft Azure
+          href: support/azure-migration-tool.md
+        - name: Nástroj pro správu a auditování na základě rolí
+          href: support/rbaviewer.md
+        - name: Spuštění nástroje pro souhrn měřiče
+          href: support/run-meter-summ.md
+    - name: Správa nasazení s vysokým rizikem
+      href: servers/manage/settings-to-manage-high-risk-deployments.md
+- name: Nasazení klientů
+  items:
+    - name: Plánování nasazení klientů
+      items:
+        - name: Metody instalace klienta
+          href: clients/deploy/plan/client-installation-methods.md
+        - name: Požadavky pro nasazení klientů do počítačů s Windows
+          items:
+            - name: Požadavky pro nasazení klientů
+              href: clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.md
+            - name: Nastavení brány Windows Firewall a portů pro klienty
+              href: clients/deploy/windows-firewall-and-port-settings-for-clients.md
+        - name: Určení rolí systému lokality pro klienty
+          href: clients/deploy/plan/determine-the-site-system-roles-for-clients.md
+        - name: Zabezpečení a ochrana osobních údajů pro klienty
+          href: clients/deploy/plan/security-and-privacy-for-clients.md
+        - name: Osvědčené postupy nasazení klientů
+          href: clients/deploy/plan/best-practices-for-client-deployment.md
+        - name: Určení možnosti blokování klientů
+          href: clients/deploy/plan/determine-whether-to-block-clients.md
+        - name: Plánování nasazení klienta na počítače se systémy Linux a UNIX
+          href: clients/deploy/plan/planning-for-client-deployment-to-linux-and-unix-computers.md
+        - name: Plánování nasazení klientů na počítače Mac
+          href: clients/deploy/plan/planning-for-client-deployment-to-mac-computers.md
+        - name: Nasazení klientů na zařízení s Windows Embedded
+          items:
+            - name: Plánování nasazení klientů na zařízení s Windows Embedded
+              href: clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices.md
+            - name: Ukázkový scénář
+              href: clients/deploy/example-scenario-for-deploying-and-managing-clients-on-windows-embedded-devices.md
+        - name: Plánování probuzení klientů
+          href: clients/deploy/plan/plan-wake-up-clients.md
+        - name: Správa klientů VDI
+          href: clients/deploy/plan/considerations-for-managing-clients-in-a-vdi.md
+    - name: Úlohy nasazení klienta
+      items:
+        - name: Postup konfigurace portů pro komunikaci klientů
+          href: clients/deploy/configure-client-communication-ports.md
+        - name: Konfigurace klientů na používání publikování DNS
+          href: clients/deploy/configure-client-computers-to-find-management-points-by-using-dns-publishing.md
+        - name: Konfigurace nastavení klientů
+          items:
+            - name: Postup konfigurace nastavení klienta
+              href: clients/deploy/configure-client-settings.md
+            - name: O nastavení klientů
+              href: clients/deploy/about-client-settings.md
+        - name: Oznámení o restartování zařízení
+          href: clients/deploy/device-restart-notifications.md
+        - name: Postup konfigurace funkce Wake On LAN
+          href: clients/deploy/configure-wake-on-lan.md
+        - name: Nasazení klientů na počítače s Windows
+          items:
+            - name: Postup nasazení klientů na počítače s Windows
+              href: clients/deploy/deploy-clients-to-windows-computers.md
+            - name: Instalace klientů pomocí Azure AD
+              href: clients/deploy/deploy-clients-cmg-azure.md
+            - name: Ověřování na základě tokenů pro CMG
+              href: clients/deploy/deploy-clients-cmg-token.md
+            - name: Vlastnosti instalace klienta
+              href: clients/deploy/about-client-installation-properties.md
+            - name: Vlastnosti instalace klienta publikované do AD
+              href: clients/deploy/about-client-installation-properties-published-to-active-directory-domain-services.md
+        - name: Nasazení klientů na servery se systémy UNIX a Linux
+          items:
+            - name: Nasazení klientů na servery se systémy UNIX a Linux
+              href: clients/deploy/deploy-clients-to-unix-and-linux-servers.md
+            - name: Příkazy klientů Linux a UNIX
+              href: clients/deploy/linux-and-unix-clients-technical-reference.md
+        - name: Příprava na nasazení klientů na počítače Mac
+          href: clients/deploy/prepare-to-deploy-mac-clients.md
+        - name: Postup nasazení klientů na počítače Mac
+          href: clients/deploy/deploy-clients-to-macs.md
+        - name: "Přiřazení klientů k\_lokalitě"
+          href: clients/deploy/assign-clients-to-a-site.md
+        - name: Postup konfigurace stavu klienta
+          href: clients/deploy/configure-client-status.md
+        - name: Postup monitorování stavu nasazení klienta
+          href: clients/deploy/monitor-client-deployment-status.md
+- name: Správa klientů
+  items:
+    - name: Správa klientů – přehled
+      href: clients/manage/monitor-and-manage-clients.md
+    - name: Sledování a správa klientů
+      items:
+        - name: Postup sledování klientů
+          href: clients/manage/monitor-clients.md
+        - name: Postup monitorování klientů Linux a UNIX
+          href: clients/manage/monitor-clients-for-linux-and-unix-servers.md
+        - name: Správa klientů
+          href: clients/manage/manage-clients.md
+        - name: Klientské oznámení
+          href: clients/manage/client-notification.md
+        - name: Postup při správě klientů Linux a UNIX
+          href: clients/manage/manage-clients-for-linux-and-unix-servers.md
+        - name: Synchronizace dat s Azure Monitorem
+          href: 'https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm?context=sccm/core/context/core-context'
+        - name: Údržba klientů Mac
+          href: clients/manage/maintain-mac-clients.md
+        - name: Řídicí panel zařízení Surface
+          href: clients/manage/surface-device-dashboard.md
+    - name: Správa klientů na internetu
+      items:
+        - name: Správa klientů na internetu – přehled
+          href: clients/manage/manage-clients-internet.md
+        - name: Brána pro správu cloudu
+          items:
+            - name: Plánování brány pro správu cloudu
+              href: clients/manage/cmg/plan-cloud-management-gateway.md
+            - name: Zabezpečení a ochrana brány pro správu cloudu
+              href: clients/manage/cmg/security-and-privacy-for-cloud-management-gateway.md
+            - name: Nejčastější dotazy k bráně pro správu cloudu
+              href: clients/manage/cmg/cloud-management-gateway-faq.md
+            - name: Certifikáty brány pro správu cloudu
+              href: clients/manage/cmg/certificates-for-cloud-management-gateway.md
+            - name: Instalace brány pro správu cloudu
+              href: clients/manage/cmg/setup-cloud-management-gateway.md
+            - name: Monitorování klientů u brány pro správu cloudu
+              href: clients/manage/cmg/monitor-clients-cloud-management-gateway.md
+        - name: Plánování internetové správy klientů
+          href: clients/manage/plan-internet-based-client-management.md
+        - name: Pracovní postup ověřování v Azure AD
+          href: clients/manage/azure-ccmsetup.md
+    - name: Kolekce
+      items:
+        - name: Úvod do kolekcí
+          href: clients/manage/collections/introduction-to-collections.md
+        - name: Požadavky na kolekce
+          href: clients/manage/collections/prerequisites-for-collections.md
+        - name: Osvědčené postupy pro kolekce
+          href: clients/manage/collections/best-practices-for-collections.md
+        - name: Vytváření kolekcí
+          href: clients/manage/collections/create-collections.md
+        - name: Správa kolekcí
+          href: clients/manage/collections/manage-collections.md
+        - name: Použití časových období údržby
+          href: clients/manage/collections/use-maintenance-windows.md
+        - name: Jak automaticky kategorizovat zařízení do kolekcí
+          href: clients/manage/collections/automatically-categorize-devices-into-collections.md
+        - name: Zabezpečení a ochrana osobních údajů pro kolekce
+          href: clients/manage/collections/security-and-privacy-for-collections.md
+    - name: Inventář hardwaru
+      items:
+        - name: Úvod do inventáře hardwaru
+          href: clients/manage/inventory/introduction-to-hardware-inventory.md
+        - name: Postup rozšíření inventáře hardwaru
+          href: clients/manage/inventory/extend-hardware-inventory.md
+        - name: Postup konfigurace inventáře hardwaru
+          href: clients/manage/inventory/configure-hardware-inventory.md
+        - name: Použití Průzkumníka prostředků k zobrazení inventáře hardwaru
+          href: clients/manage/inventory/use-resource-explorer-to-view-hardware-inventory.md
+        - name: Výchozí třídy Průzkumníka prostředků
+          href: clients/manage/inventory/resource-explorer-classes.md
+        - name: Inventář hardwaru pro Linux a UNIX
+          href: clients/manage/inventory/hardware-inventory-for-linux-and-unix.md
+        - name: Zabezpečení a ochrana osobních údajů pro inventář hardwaru
+          href: clients/manage/inventory/security-and-privacy-for-hardware-inventory.md
+    - name: Inventář softwaru
+      items:
+        - name: Úvod do inventáře softwaru
+          href: clients/manage/inventory/introduction-to-software-inventory.md
+        - name: Postup konfigurace inventáře softwaru
+          href: clients/manage/inventory/configure-software-inventory.md
+        - name: Použití Průzkumníka prostředků k zobrazení inventáře softwaru
+          href: clients/manage/inventory/use-resource-explorer-to-view-software-inventory.md
+        - name: Zabezpečení a ochrana osobních údajů pro inventář softwaru
+          href: clients/manage/inventory/security-and-privacy-for-software-inventory.md
+    - name: Funkce Asset Intelligence
+      items:
+        - name: Úvod
+          href: clients/manage/asset-intelligence/introduction-to-asset-intelligence.md
+        - name: Požadované součásti
+          href: clients/manage/asset-intelligence/prerequisites-for-asset-intelligence.md
+        - name: Konfigurace funkce Asset Intelligence
+          href: clients/manage/asset-intelligence/configuring-asset-intelligence.md
+        - name: Použití funkce Asset Intelligence
+          href: clients/manage/asset-intelligence/operations-for-asset-intelligence.md
+        - name: Zabezpečení a ochrana osobních údajů
+          href: clients/manage/asset-intelligence/security-and-privacy-for-asset-intelligence.md
+        - name: Příklad přechodů mezi stavy ověření
+          href: clients/manage/asset-intelligence/example-validation-state-transitions-for-asset-intelligence.md
+        - name: Příklad souboru importu obecné licence
+          href: clients/manage/asset-intelligence/example-asset-intelligence-general-license-import.md
+        - name: Použití řídicího panelu pro životní cyklus produktů
+          href: clients/manage/asset-intelligence/product-lifecycle-dashboard.md
+    - name: Vzdálené řízení
+      items:
+        - name: Úvod do vzdáleného řízení
+          href: clients/manage/remote-control/introduction-to-remote-control.md
+        - name: Předpoklady pro vzdálené řízení
+          href: clients/manage/remote-control/prerequisites-for-remote-control.md
+        - name: Konfigurace vzdáleného řízení
+          href: clients/manage/remote-control/configuring-remote-control.md
+        - name: Vzdálená správa klientského počítače se systémem Windows
+          href: clients/manage/remote-control/remotely-administer-a-windows-client-computer.md
+        - name: Audit využití vzdáleného řízení
+          href: clients/manage/remote-control/audit-remote-control-usage.md
+        - name: Zabezpečení a ochrana osobních údajů pro vzdálené řízení
+          href: clients/manage/remote-control/security-and-privacy-for-remote-control.md
+    - name: Řízení spotřeby
+      items:
+        - name: Úvod do řízení spotřeby
+          href: clients/manage/power/introduction-to-power-management.md
+        - name: Požadavky řízení spotřeby
+          href: clients/manage/power/prerequisites-for-power-management.md
+        - name: Osvědčené postupy pro řízení spotřeby
+          href: clients/manage/power/best-practices-for-power-management.md
+        - name: Kontrolní seznam správce pro řízení spotřeby
+          href: clients/manage/power/administrator-checklist-for-power-management.md
+        - name: Konfigurování řízení spotřeby
+          href: clients/manage/power/configuring-power-management.md
+        - name: Vytvoření a použití schémat napájení
+          href: clients/manage/power/create-and-apply-power-plans.md
+        - name: Postupy pro monitorování a plánování řízení spotřeby
+          href: clients/manage/power/monitor-and-plan-for-power-management.md
+        - name: Zabezpečení a ochrana osobních údajů při řízení spotřeby
+          href: clients/manage/power/security-and-privacy-for-power-management.md
+    - name: Upgradujte klienty.
+      items:
+        - name: Jak upgradovat klienty
+          href: clients/manage/upgrade/upgrade-clients.md
+        - name: Testování upgradů klienta v předprodukční kolekci
+          href: clients/manage/upgrade/test-client-upgrades.md
+        - name: Vyloučení klientů Windows z upgradů
+          href: clients/manage/upgrade/exclude-clients-windows.md
+        - name: Upgrade klientů Windows
+          href: clients/manage/upgrade/upgrade-clients-for-windows-computers.md
+        - name: Upgrade klientů Linux a UNIX
+          href: clients/manage/upgrade/upgrade-clients-for-linux-and-unix-servers.md
+        - name: Upgrade klientů Mac
+          href: clients/manage/upgrade/upgrade-clients-on-mac-computers.md

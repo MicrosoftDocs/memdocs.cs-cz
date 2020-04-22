@@ -1,0 +1,95 @@
+- name: Dokumentace ke správě aktualizací softwaru
+  href: index.yml
+- name: Porozumění a prozkoumávání
+  items:
+    - name: Úvod do aktualizací softwaru
+      href: understand/software-updates-introduction.md
+    - name: Ikony používané pro aktualizace softwaru
+      href: understand/software-updates-icons.md
+- name: Plánování a návrh
+  items:
+    - name: Plánování aktualizací softwaru
+      href: plan-design/plan-for-software-updates.md
+    - name: Předpoklady pro aktualizace softwaru
+      href: plan-design/prerequisites-for-software-updates.md
+    - name: Osvědčené postupy pro aktualizace softwaru
+      href: plan-design/software-updates-best-practices.md
+    - name: Zabezpečení a ochrana osobních údajů pro aktualizace softwaru
+      href: plan-design/security-and-privacy-for-software-updates.md
+- name: Začínáme
+  items:
+    - name: Příprava na správu aktualizací softwaru
+      href: get-started/prepare-for-software-updates-management.md
+    - name: Instalace bodu aktualizace softwaru
+      href: get-started/install-a-software-update-point.md
+    - name: Synchronizace aktualizací softwaru
+      href: get-started/synchronize-software-updates.md
+    - name: Konfigurace klasifikací a produktů
+      href: get-started/configure-classifications-and-products.md
+    - name: Správa nastavení pro aktualizace softwaru
+      href: get-started/manage-settings-for-software-updates.md
+    - name: Synchronizace aktualizací softwaru v odpojených prostředích
+      items:
+        - name: "Synchronizace aktualizací softwaru z\_odpojeného bodu aktualizace softwaru"
+          href: get-started/synchronize-software-updates-disconnected.md
+        - name: "Synchronizace aktualizací Office 365 z\_odpojeného bodu aktualizace softwaru"
+          href: get-started/synchronize-office-updates-disconnected.md
+- name: Nasazení a používání
+  items:
+    - name: Stažení aktualizací softwaru
+      href: deploy-use/download-software-updates.md
+    - name: Přidání aktualizací softwaru do skupiny aktualizací
+      href: deploy-use/add-software-updates-to-an-update-group.md
+    - name: Nasazení aktualizací softwaru
+      href: deploy-use/deploy-software-updates.md
+      items:
+        - name: Ruční nasazení aktualizací softwaru
+          href: deploy-use/manually-deploy-software-updates.md
+        - name: Automatické nasazení aktualizací softwaru
+          href: deploy-use/automatically-deploy-software-updates.md
+        - name: Vytvoření postupného nasazení
+          href: ../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json
+    - name: Monitorování aktualizací softwaru
+      href: deploy-use/monitor-software-updates.md
+      items:
+        - name: Správa a sledování postupných nasazení
+          href: ../osd/deploy-use/manage-monitor-phased-deployments.md?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json
+    - name: Údržba aktualizací softwaru
+      href: deploy-use/software-updates-maintenance.md
+    - name: Skupiny orchestrace
+      href: deploy-use/orchestration-groups.md
+    - name: Údržba skupiny serverů
+      href: deploy-use/service-a-server-group.md
+    - name: Řídicí panel pro správu klienta Office 365
+      href: deploy-use/office-365-dashboard.md
+    - name: Správa aktualizací Office 365 ProPlus
+      href: deploy-use/manage-office-365-proplus-updates.md
+    - name: Optimalizace doručování aktualizací Windows 10
+      href: deploy-use/optimize-windows-10-update-delivery.md
+    - name: Správa souborů expresní instalace pro aktualizace Windows 10
+      href: deploy-use/manage-express-installation-files-for-windows-10-updates.md
+    - name: Integrace s Windows Update for Business ve Windows 10
+      href: deploy-use/integrate-windows-update-for-business-windows-10.md
+    - name: Aktualizace softwaru třetích stran
+      href: deploy-use/third-party-software-updates.md
+    - name: Ukázkový scénář nasazení aktualizací zabezpečení
+      href: deploy-use/example-scenario-deploy-monitor-monthly-security-updates.md
+- name: System Center aktualizuje Publisher 2011
+  href: tools/updates-publisher.md
+  items:
+    - name: Install
+      href: tools/install-updates-publisher.md
+    - name: Konfigurace možností
+      href: tools/updates-publisher-options.md
+    - name: Správa katalogů
+      href: tools/updates-publisher-catalogs.md
+    - name: Správa aktualizací
+      href: tools/manage-updates-with-updates-publisher.md
+    - name: Správa publikací
+      href: tools/updates-publisher-publications.md
+    - name: Vytváření nových aktualizací
+      href: tools/create-updates-with-updates-publisher.md
+    - name: Pravidla použitelnosti
+      href: tools/updates-publisher-applicability-rules.md
+    - name: Certifikáty a zabezpečení
+      href: tools/updates-publisher-security.md

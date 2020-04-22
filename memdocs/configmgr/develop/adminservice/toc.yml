@@ -1,0 +1,16 @@
+- name: Dokumentace ke službě pro správu
+  href: index.yml
+- name: Co je služba pro správu?
+  href: overview.md
+- name: Praktičtí průvodci
+  items:
+    - name: Jak nastavit
+      href: set-up.md
+    - name: Způsob použití
+      href: usage.md
+- name: Reference
+  items:
+    - name: Nejčastější dotazy
+      href: faq.md
+    - name: "Poznámky k\_verzi"
+      href: release-notes.md

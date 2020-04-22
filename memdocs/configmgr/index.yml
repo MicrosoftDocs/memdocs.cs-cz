@@ -1,0 +1,235 @@
+### YamlMime:Hub
+title: Dokumentace k produktu Microsoft Endpoint Configuration Manager
+summary: 'Oficiální dokumentace k následujícím komponentám produktu Microsoft Endpoint Configuration Manager: Configuration Manager, spoluspráva a Desktop Analytics'
+metadata:
+  ms.topic: hub-page
+  ms.openlocfilehash: b890572e652528e1446f1dd2e194d933c27938dd
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: cs-CZ
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81741472"
+highlightedContent:
+  items:
+  - title: Novinky
+    itemType: learn
+    url: ./core/plan-design/changes/whats-new-incremental-versions.md
+  - title: Podporované konfigurace
+    itemType: architecture
+    url: ./core/plan-design/configs/supported-configurations.md
+  - title: Aktualizace a údržba
+    itemType: deploy
+    url: ./core/servers/manage/updates.md
+  - title: Soubory protokolů
+    itemType: learn
+    url: ./core/plan-design/hierarchy/log-files.md
+  - title: Porty
+    itemType: learn
+    url: ./core/plan-design/hierarchy/ports.md
+  - title: Technical Preview
+    itemType: get-started
+    url: ./core/get-started/technical-preview.md
+conceptualContent:
+  items:
+  - title: Správa s připojením ke cloudu
+    links:
+    - text: Správa klientů na internetu
+      url: ./core/clients/manage/manage-clients-internet.md
+      itemType: overview
+    - text: Plán pro Azure AD
+      url: ./core/plan-design/security/plan-for-security.md#bkmk_planazuread
+      itemType: architecture
+    - text: Služby Azure
+      url: ./core/servers/deploy/configure/azure-services-wizard.md
+      itemType: how-to-guide
+  - title: Spoluspráva
+    links:
+    - text: Rychlé starty
+      url: ./comanage/quickstarts.md
+      itemType: quickstart
+    - text: Kurz
+      url: ./comanage/tutorial-co-manage-clients.md
+      itemType: tutorial
+    - text: Úlohy
+      url: ./comanage/workloads.md
+      itemType: overview
+    footerLink:
+      text: Další informace
+      url: ./comanage/index.yml
+  - title: Správa v reálném čase
+    links:
+    - text: CMPivot
+      url: ./core/servers/manage/cmpivot.md
+      itemType: get-started
+    - text: Spouštění skriptů prostředí PowerShell
+      url: ./apps/deploy-use/create-deploy-scripts.md
+      itemType: how-to-guide
+  - title: Desktop Analytics
+    links:
+    - text: Přehled
+      url: ./desktop-analytics/overview.md
+      itemType: overview
+    - text: Pilotní nasazení Windows 10
+      url: ./desktop-analytics/tutorial-windows10.md
+      itemType: tutorial
+    - text: Nastavení portálu Desktop Analytics
+      url: ./desktop-analytics/set-up.md
+      itemType: how-to-guide
+    - text: Řídicí panel Office 365
+      url: ./sum/deploy-use/office-365-dashboard.md
+      itemType: learn
+    footerLink:
+      text: Další informace
+      url: ./desktop-analytics/index.yml
+  - title: Zjednodušení infrastruktury
+    links:
+    - text: Vysoká dostupnost serveru lokality
+      url: ./core/servers/deploy/configure/site-server-high-availability.md
+      itemType: deploy
+    - text: Změna přiřazení distribučního bodu
+      url: ./core/servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_reassign
+      itemType: how-to-guide
+    - text: Configuration Manager v Azure
+      url: ./core/understand/configuration-manager-on-azure.md
+      itemType: learn
+  - title: Základní infrastruktura
+    links:
+    - text: Použití konzoly
+      url: ./core/servers/manage/admin-console.md
+      itemType: how-to-guide
+    - text: Nasazení klientů
+      url: ./core/clients/deploy/deploy-clients-to-windows-computers.md
+      itemType: deploy
+    - text: Aktuální přehled o nástroji ConfigMgr a Windows 10
+      url: ./core/understand/configuration-manager-and-windows-as-service.md
+      itemType: learn
+    footerLink:
+      text: Další informace
+      url: ./core/index.yml
+  - title: Správa aplikací
+    links:
+    - text: Vytváření aplikací
+      url: ./apps/get-started/create-and-deploy-an-application.md
+      itemType: how-to-guide
+    - text: Nasazování aplikací
+      url: ./apps/deploy-use/deploy-applications.md
+      itemType: deploy
+    - text: Plánování Centra softwaru
+      url: ./apps/plan-design/plan-for-software-center.md
+      itemType: architecture
+    - text: Správa Microsoft Edge
+      url: ./apps/deploy-use/deploy-edge.md
+      itemType: how-to-guide
+    footerLink:
+      text: Další informace
+      url: ./apps/index.yml
+  - title: Nasazení operačního systému
+    links:
+    - text: Upgrade na Windows 10
+      url: ./osd/deploy-use/upgrade-windows-to-the-latest-version.md
+      itemType: overview
+    - text: Postupná nasazení
+      url: ./osd/deploy-use/create-phased-deployment-for-task-sequence.md
+      itemType: how-to-guide
+    - text: Kroky pořadí úkolů
+      url: ./osd/understand/task-sequence-steps.md
+      itemType: learn
+    footerLink:
+      text: Další informace
+      url: ./osd/index.yml
+  - title: Aktualizace softwaru
+    links:
+    - text: Plánování aktualizací softwaru
+      url: ./sum/plan-design/plan-for-software-updates.md
+      itemType: architecture
+    - text: Nasazení aktualizací softwaru
+      url: ./sum/deploy-use/deploy-software-updates.md
+      itemType: deploy
+    - text: Optimalizace aktualizací Windows 10
+      url: ./sum/deploy-use/optimize-windows-10-update-delivery.md
+      itemType: learn
+    - text: Aktualizace Office 365
+      url: ./sum/deploy-use/manage-office-365-proplus-updates.md
+      itemType: how-to-guide
+    footerLink:
+      text: Další informace
+      url: ./sum/index.yml
+  - title: Dodržování předpisů zařízení
+    links:
+    - text: Vytváření položek konfigurace
+      url: ./compliance/deploy-use/create-configuration-items.md
+      itemType: how-to-guide
+    - text: Nastavení Microsoft Edge
+      url: ./compliance/deploy-use/browser-profiles.md
+      itemType: how-to-guide
+    - text: Upgrade edice Windows
+      url: ./compliance/deploy-use/upgrade-windows-version.md
+      itemType: how-to-guide
+    footerLink:
+      text: Další informace
+      url: ./compliance/index.yml
+  - title: Ochrana
+    links:
+    - text: Windows Defender
+      url: ./protect/deploy-use/endpoint-protection.md
+      itemType: overview
+    - text: WDATP
+      url: ./protect/deploy-use/windows-defender-advanced-threat-protection.md
+      itemType: how-to-guide
+    - text: Správa nástroje BitLocker
+      url: ./protect/plan-design/bitlocker-management.md
+      itemType: overview
+    footerLink:
+      text: Další informace
+      url: ./protect/index.yml
+additionalContent:
+  sections:
+  - title: Komunita a podpora nástroje Configuration Manager
+    items:
+    - title: Blog věnovaný Configuration Manageru
+      summary: Zprávy a oznámení
+      url: https://techcommunity.microsoft.com/t5/Configuration-Manager-Blog/bg-p/ConfigurationManagerBlog
+    - title: 'Twitter: #ConfigMgr'
+      summary: Aktuální přehled díky aktivní komunitě na Twitteru
+      url: https://twitter.com/hashtag/configmgr
+    - title: Fóra k nástroji Configuration Manager
+      summary: Prostor pro technické dotazy na produktových fórech
+      url: https://social.technet.microsoft.com/Forums/home?forum=ConfigMgrCBGeneral%2CConfigMgrDeployment%2CConfigMgrMDM%2CConfigMgrMigration%2CConfigMgrCompliance%2CConfigMgrAppManagement%2CConfigMgrPowerShell%2CConfigMgrCBOSD&filter=alltypes&sort=lastpostdesc
+    - title: Poskytnutí názoru na produkt přes UserVoice
+      summary: Sdílení nápadů k produktům s technickým týmem
+      url: https://configurationmanager.uservoice.com/forums/300492-ideas
+    - title: Podpora produktu
+      summary: Získání profesionální podpory z Microsoftu
+      url: https://aka.ms/cmcbsupport
+    - title: System Center 2012 R2 Configuration Manager
+      summary: Dokumentace k předchozí verzi produktu Configuration Manager
+      url: https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg682144(v=technet.10)
+  - title: Další obsah
+    items:
+    - title: Vývoj
+      links:
+      - url: https://docs.microsoft.com/powershell/sccm/overview?view=sccm-ps
+        text: PowerShell
+      - url: ./develop/index.yml
+        text: Sada SDK (Software Development Kit)
+      - url: ./develop/adminservice/index.yml
+        text: Rozhraní REST API služby pro správu
+      - url: ./develop/core/understand/sqlviews/create-custom-reports-using-sql-server-views.md
+        text: Zobrazení jazyka SQL
+    - title: Nástroje
+      links:
+      - url: ./core/support/support-center.md
+        text: Support Center
+      - url: ./mdt/index.yml
+        text: MDT
+      - url: ./apps/pcm/package-conversion-manager.md
+        text: Package Conversion Manager
+      - url: ./core/support/tools.md
+        text: Další informace >
+    - title: Další komunitní weby
+      links:
+      - url: https://www.reddit.com/r/sccm
+        text: ConfigMgr na Redditu
+      - url: https://www.facebook.com/groups/ConfigMgr2012
+        text: Skupina ConfigMgr Professionals na Facebooku
+  footer: Narazili jste na našem webu na problém? [Dejte nám o něm vědět](./core/understand/use-docs.md#bkmk_docfeedback)!

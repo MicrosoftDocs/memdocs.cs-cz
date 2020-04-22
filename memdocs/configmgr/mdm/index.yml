@@ -1,0 +1,58 @@
+### YamlMime:Landing
+title: Dokumentace správy mobilních zařízení (MDM)
+summary: Microsoft Endpoint Manager umožňuje správu mobilních zařízení ve vaší organizaci, a to místní i cloudovou.
+metadata:
+  title: Správa mobilních zařízení
+  titleSuffix: Configuration Manager
+  description: Microsoft Endpoint Manager umožňuje správu mobilních zařízení ve vaší organizaci, a to místní i cloudovou.
+  ms.prod: configuration-manager
+  ms.technology: configmgr-mdm
+  ms.topic: landing-page
+  author: aczechowski
+  ms.author: aaroncz
+  ms.date: 12/31/2019
+  ms.openlocfilehash: d9e3c95272c9e0d6596d214f73ea53f572b54c6b
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: cs-CZ
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81741795"
+landingContent:
+- title: O místní správě MDM
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Co je místní správa MDM?
+      url: understand/manage-mobile-devices-with-on-premises-infrastructure.md
+    - text: Plánování místní správy MDM
+      url: plan-design/plan-on-premises-mdm.md
+  - linkListType: how-to-guide
+    links:
+    - text: Instalace rolí
+      url: get-started/install-site-system-roles-for-on-premises-mdm.md
+    - text: Registrovat zařízení
+      url: deploy-use/enroll-devices-on-premises-mdm.md
+    - text: Správa zařízení
+      url: deploy-use/wipe-lock-reset-devices.md
+- title: Připojení nástrojů ConfigMgr a Exchange
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Správa zařízení pomocí Exchange
+      url: deploy-use/manage-mobile-devices-with-exchange-activesync.md
+  - linkListType: how-to-guide
+    links:
+    - text: Instalace konektoru Exchange Connector
+      url: deploy-use/install-configure-exchange-connector.md
+- title: Použití cloudové služby Intune
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Co je Intune?
+      url: https://docs.microsoft.com/intune/fundamentals/what-is-intune
+    - text: Přehled správy zařízení
+      url: https://docs.microsoft.com/intune/fundamentals/what-is-device-management
+  - linkListType: tutorial
+    links:
+    - text: Seznámení se se službou Intune v Microsoft Endpoint Manageru
+      url: https://docs.microsoft.com/intune/fundamentals/tutorial-walkthrough-endpoint-manager

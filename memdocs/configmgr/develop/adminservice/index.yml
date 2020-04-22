@@ -1,0 +1,32 @@
+### YamlMime:Landing
+title: Dokumentace ke službě pro správu
+summary: Dokumentace pro vývojáře k rozhraní REST API pro Configuration Manager
+metadata:
+  title: Dokumentace ke službě pro správu
+  titleSuffix: Configuration Manager
+  description: Nahrajte si zařízení v Configuration Manageru do cloudové služby, abyste u nich mohli provádět akce.
+  ms.product: configuration-manager
+  ms.technology: configmgr-sdk
+  ms.topic: landing-page
+  author: aczechowski
+  ms.author: aaroncz
+  ms.date: 04/01/2020
+  ms.openlocfilehash: c6c2e97491982f39db4c149ac0bc38266bc2ea27
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: cs-CZ
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81741676"
+landingContent:
+- title: O službě pro správu
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Co je služba pro správu?
+      url: overview.md
+  - linkListType: how-to-guide
+    links:
+    - text: Jak nastavit
+      url: set-up.md
+    - text: Způsob použití
+      url: usage.md

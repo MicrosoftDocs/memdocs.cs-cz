@@ -1,0 +1,62 @@
+### YamlMime:Landing
+title: Dokumentace k nasazení operačního systému
+summary: Configuration Manager usnadňuje nasazování Windows prostřednictvím různých metod a s automatizací úloh.
+metadata:
+  title: Dokumentace k nasazení operačního systému
+  titleSuffix: Configuration Manager
+  description: Configuration Manager usnadňuje nasazování Windows prostřednictvím různých metod a s automatizací úloh.
+  ms.prod: configuration-manager
+  ms.technology: configmgr-osd
+  ms.topic: landing-page
+  author: aczechowski
+  ms.author: aaroncz
+  ms.date: 01/28/2020
+  ms.openlocfilehash: 5c56cef287ee16a8899c16af72d4734c9d1f4bad
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: cs-CZ
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81741948"
+landingContent:
+- title: O nasazení operačního systému
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Úvod do nasazení operačního systému
+      url: understand/introduction-to-operating-system-deployment.md
+    - text: Požadavky na infrastrukturu
+      url: plan-design/infrastructure-requirements-for-operating-system-deployment.md
+  - linkListType: concept
+    links:
+    - text: Příprava nasazení operačního systému
+      url: get-started/prepare-for-operating-system-deployment.md
+    - text: Scénáře nasazení operačního systému
+      url: deploy-use/scenarios-to-deploy-enterprise-operating-systems.md
+    - text: Metody nasazení operačních systémů
+      url: deploy-use/methods-to-deploy-enterprise-operating-systems.md
+- title: Začínáme
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Správa pořadí úkolů
+      url: deploy-use/manage-task-sequences-to-automate-tasks.md
+    - text: Vytvoření pořadí úkolů při upgradu operačního systému
+      url: deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md
+    - text: Vytvoření postupného nasazení
+      url: deploy-use/create-phased-deployment-for-task-sequence.md
+    - text: Nasazení pořadí úkolů
+      url: deploy-use/deploy-a-task-sequence.md
+    - text: Ladění pořadí úkolů
+      url: deploy-use/debug-task-sequence.md
+- title: Technické reference
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Použití editoru pořadí úloh
+      url: understand/task-sequence-editor.md
+    - text: O krocích pořadí úkolů
+      url: understand/task-sequence-steps.md
+    - text: Jak používat proměnné pořadí úkolů
+      url: understand/using-task-sequence-variables.md
+    - text: Reference k proměnným pořadí úkolů
+      url: understand/task-sequence-variables.md

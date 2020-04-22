@@ -1,0 +1,68 @@
+### YamlMime:Landing
+title: Dokumentace ke správě aplikací
+summary: Configuration Manager umožňuje správu a nasazování aplikací, skriptů a balíčků. Automatizuje nasazení nebo umožňuje uživatelům instalaci aplikací z Centra softwaru.
+metadata:
+  title: Dokumentace ke správě aplikací
+  titleSuffix: Configuration Manager
+  description: Configuration Manager umožňuje správu a nasazování aplikací, skriptů a balíčků. Automatizuje nasazení nebo umožňuje uživatelům instalaci aplikací z Centra softwaru.
+  ms.prod: configuration-manager
+  ms.technology: configmgr-app
+  ms.topic: landing-page
+  author: aczechowski
+  ms.author: aaroncz
+  ms.date: 01/28/2020
+  ms.openlocfilehash: 7fccbe98c6199543554b48f28325b6531d0092c3
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: cs-CZ
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81740894"
+landingContent:
+- title: O správě aplikací
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Úvod do správy aplikací
+      url: understand/introduction-to-application-management.md
+    - text: Plánování správy aplikací
+      url: plan-design/plan-for-and-configure-application-management.md
+    - text: Plánování Centra softwaru
+      url: plan-design/plan-for-software-center.md
+  - linkListType: tutorial
+    links:
+    - text: Vytvoření a nasazení aplikace
+      url: get-started/create-and-deploy-an-application.md
+- title: Začínáme
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Vytváření aplikací
+      url: deploy-use/create-applications.md
+    - text: Vytváření a spouštění powershellových skriptů
+      url: deploy-use/create-deploy-scripts.md
+  - linkListType: deploy
+    links:
+    - text: Nasazování aplikací
+      url: deploy-use/deploy-applications.md
+    - text: Nasazení a aktualizace Microsoft Edge
+      url: deploy-use/deploy-edge.md
+- title: Hlavní úkoly
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Vytváření skupin aplikací
+      url: deploy-use/create-app-groups.md
+    - text: Schvalování aplikací
+      url: deploy-use/app-approval.md
+    - text: Instalace aplikací pro zařízení
+      url: deploy-use/install-app-for-device.md
+    - text: Spřažení uživatelských zařízení
+      url: deploy-use/link-users-and-devices-with-user-device-affinity.md
+    - text: Sledování využití aplikací pomocí monitorování míry využívání softwaru
+      url: deploy-use/monitor-app-usage-with-software-metering.md
+  - linkListType: reference
+    links:
+    - text: Řešení problémů s nasazením aplikací
+      url: understand/app-deployment-technical-reference.md
+    - text: Balíčky a programy
+      url: deploy-use/packages-and-programs.md

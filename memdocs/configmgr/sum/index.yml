@@ -1,0 +1,66 @@
+### YamlMime:Landing
+title: Dokumentace ke správě aktualizací softwaru
+summary: Configuration Manager usnadňuje správu složité úlohy sledování a nasazování aktualizací softwaru v klientech ve vaší organizaci.
+metadata:
+  title: Dokumentace ke správě aktualizací softwaru
+  titleSuffix: Configuration Manager
+  description: Configuration Manager usnadňuje správu složité úlohy sledování a nasazování aktualizací softwaru v klientech ve vaší organizaci.
+  ms.product: configuration-manager
+  ms.technology: configmgr-sum
+  ms.topic: landing-page
+  author: mestew
+  ms.author: mstewart
+  ms.date: 01/10/2020
+  ms.openlocfilehash: aa421de09ee69713097a5efe78b0a9b2a1a71856
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: cs-CZ
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81741166"
+landingContent:
+- title: O správě aktualizací softwaru
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Úvod do aktualizací softwaru
+      url: understand/software-updates-introduction.md
+    - text: Příklad nasazení a monitorování měsíčních aktualizací softwaru
+      url: deploy-use/example-scenario-deploy-monitor-monthly-security-updates.md
+  - linkListType: architecture
+    links:
+    - text: Plánování aktualizací softwaru
+      url: plan-design/plan-for-software-updates.md
+    - text: Osvědčené postupy pro aktualizace softwaru
+      url: plan-design/software-updates-best-practices.md
+- title: Začínáme
+  linkLists:
+  - linkListType: deploy
+    links:
+    - text: Instalace bodu aktualizace softwaru
+      url: get-started/install-a-software-update-point.md
+    - text: Konfigurace klasifikací a produktů
+      url: get-started/configure-classifications-and-products.md
+    - text: Synchronizace aktualizací softwaru
+      url: get-started/synchronize-software-updates.md
+  - linkListType: how-to-guide
+    links:
+    - text: Automatické nasazení aktualizací softwaru
+      url: deploy-use/automatically-deploy-software-updates.md
+    - text: Monitorování aktualizací softwaru
+      url: deploy-use/monitor-software-updates.md
+- title: Hlavní úkoly
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Správa aktualizací Office 365 ProPlus
+      url: deploy-use/manage-office-365-proplus-updates.md
+    - text: Povolení aktualizací třetích stran
+      url: deploy-use/third-party-software-updates.md
+    - text: Správa nastavení pro aktualizace softwaru
+      url: get-started/manage-settings-for-software-updates.md
+  - linkListType: concept
+    links:
+    - text: Optimalizace doručování aktualizací Windows 10
+      url: deploy-use/optimize-windows-10-update-delivery.md
+    - text: Údržba aktualizací softwaru
+      url: deploy-use/software-updates-maintenance.md

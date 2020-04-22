@@ -1,0 +1,148 @@
+- name: Dokumentace k nasazení operačního systému
+  href: index.yml
+- name: Principy
+  items:
+    - name: Úvod do nasazení operačního systému
+      href: understand/introduction-to-operating-system-deployment.md
+- name: Plánování a návrh
+  items:
+    - name: Požadavky na infrastrukturu pro nasazení operačního systému
+      href: plan-design/infrastructure-requirements-for-operating-system-deployment.md
+    - name: Aspekty plánování pro automatizaci úloh
+      href: plan-design/planning-considerations-for-automating-tasks.md
+    - name: Scénáře nasazení podnikových operačních systémů
+      items:
+        - name: Scénáře nasazení operačních systémů – přehled
+          href: deploy-use/scenarios-to-deploy-enterprise-operating-systems.md
+        - name: Upgrade systému Windows na nejnovější verzi
+          href: deploy-use/upgrade-windows-to-the-latest-version.md
+        - name: Windows Autopilot pro existující zařízení
+          href: deploy-use/windows-autopilot-for-existing-devices.md
+        - name: Aktualizace existujícího počítače na novou verzi Windows
+          href: deploy-use/refresh-an-existing-computer-with-a-new-version-of-windows.md
+        - name: Instalace nové verze Windows do nového počítače (holý počítač)
+          href: deploy-use/install-new-windows-version-new-computer-bare-metal.md
+        - name: Nahrazení existujícího počítače a nastavení přenosu
+          href: deploy-use/replace-an-existing-computer-and-transfer-settings.md
+    - name: Metody nasazení podnikových operačních systémů
+      items:
+        - name: Metody nasazení operačních systémů
+          href: deploy-use/methods-to-deploy-enterprise-operating-systems.md
+        - name: Použití technologie PXE k nasazení Windows přes síť
+          href: deploy-use/use-pxe-to-deploy-windows-over-the-network.md
+        - name: Použití Centra softwaru k nasazení Windows přes síť
+          href: deploy-use/use-software-center-to-deploy-windows-over-the-network.md
+        - name: Použití spouštěcího média k nasazení Windows přes síť
+          href: deploy-use/use-bootable-media-to-deploy-windows-over-the-network.md
+        - name: Nasazení Windows pomocí samostatného média bez použití sítě
+          href: deploy-use/use-stand-alone-media-to-deploy-windows-without-using-the-network.md
+        - name: Použití vícesměrového vysílání k nasazení Windows přes síť
+          href: deploy-use/use-multicast-to-deploy-windows-over-the-network.md
+        - name: Vytvoření image pro výrobce OEM v továrně nebo místním úložišti
+          href: deploy-use/create-an-image-for-an-oem-in-factory-or-a-local-depot.md
+    - name: Zabezpečení a ochrana osobních údajů pro nasazení operačního systému
+      href: plan-design/security-and-privacy-for-operating-system-deployment.md
+    - name: Plánování interoperability nasazení operačního systému
+      href: plan-design/planning-for-operating-system-deployment-interoperability.md
+- name: Začínáme
+  items:
+    - name: Příprava rolí systému webového serveru pro nasazení operačního systému
+      href: get-started/prepare-site-system-roles-for-operating-system-deployments.md
+    - name: Příprava nasazení operačního systému
+      items:
+        - name: Příprava nasazení operačního systému
+          href: get-started/prepare-for-operating-system-deployment.md
+        - name: Spouštěcí image
+          items:
+            - name: Správa spouštěcích imagí
+              href: get-started/manage-boot-images.md
+            - name: Přizpůsobení spouštěcích imagí
+              href: get-started/customize-boot-images.md
+        - name: Image operačního systému
+          items:
+            - name: Správa imagí operačního systému
+              href: get-started/manage-operating-system-images.md
+            - name: Přizpůsobení imagí operačního systému
+              href: get-started/customize-operating-system-images.md
+        - name: Správa balíčků s upgradem operačního systému
+          href: get-started/manage-operating-system-upgrade-packages.md
+        - name: Správa ovladačů
+          href: get-started/manage-drivers.md
+        - name: Správa stavu uživatele
+          href: get-started/manage-user-state.md
+        - name: Příprava pro nasazení do neznámých počítačů
+          href: get-started/prepare-for-unknown-computer-deployments.md
+        - name: Spojení uživatelů s cílovým počítačem
+          href: get-started/associate-users-with-a-destination-computer.md
+    - name: Příprava sdílené mezipaměti prostředí Windows PE pro omezení provozu v síti WAN
+      href: get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md
+- name: Nasazení a používání
+  items:
+    - name: Správa a vytváření pořadí úkolů
+      href: deploy-use/manage-task-sequences-to-automate-tasks.md
+    - name: Vytvoření pořadí úkolů pro automatizaci úloh
+      items:
+        - name: Vytvoření pořadí úkolů pro instalaci operačního systému
+          href: deploy-use/create-a-task-sequence-to-install-an-operating-system.md
+        - name: Vytvoření pořadí úkolů pro upgrade operačního systému
+          href: deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md
+        - name: Kroky pořadí úloh pro správu převodu systému BIOS na UEFI
+          href: deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md
+        - name: Vytvoření pořadí úkolů pro zachycení image operačního systému
+          href: deploy-use/create-a-task-sequence-to-capture-an-operating-system.md
+        - name: Vytvoření pořadí úkolů pro zachycení a obnovení stavu uživatele
+          href: deploy-use/create-a-task-sequence-to-capture-and-restore-user-state.md
+        - name: Vytvoření vlastního pořadí úkolů
+          href: deploy-use/create-a-custom-task-sequence.md
+        - name: Vytvoření pořadí úkolů pro nasazení jiného softwaru než operačního systému
+          href: deploy-use/create-a-task-sequence-for-non-operating-system-deployments.md
+    - name: Nasazení pořadí úkolů
+      href: deploy-use/deploy-a-task-sequence.md
+    - name: Vytvoření postupného nasazení
+      href: deploy-use/create-phased-deployment-for-task-sequence.md
+    - name: Správa a sledování postupných nasazení
+      href: deploy-use/manage-monitor-phased-deployments.md
+    - name: Správa Windows jako služby
+      href: deploy-use/manage-windows-as-a-service.md
+    - name: Nasazení funkce Windows to Go
+      href: deploy-use/deploy-windows-to-go.md
+    - name: Monitorování nasazení operačního systému
+      href: deploy-use/monitor-operating-system-deployments.md
+    - name: Ladění pořadí úkolů
+      href: deploy-use/debug-task-sequence.md
+    - name: Konfigurace obsahu předběžné mezipaměti
+      href: deploy-use/configure-precache-content.md
+    - name: Vytvoření média pořadí úkolů
+      items:
+        - name: Médium pořadí úkolů – přehled
+          href: deploy-use/create-task-sequence-media.md
+        - name: Vytvoření samostatného média
+          href: deploy-use/create-stand-alone-media.md
+        - name: Vytvoření předzpracovaného média
+          href: deploy-use/create-prestaged-media.md
+        - name: Vytvoření spouštěcího média
+          href: deploy-use/create-bootable-media.md
+        - name: Vytvoření záznamového média
+          href: deploy-use/create-capture-media.md
+- name: Technické reference
+  items:
+    - name: Použití editoru pořadí úloh
+      href: understand/task-sequence-editor.md
+    - name: Uživatelská prostředí pro nasazení operačního systému
+      href: understand/user-experience.md
+    - name: Kroky pořadí úkolů
+      items:
+        - name: O krocích pořadí úkolů
+          href: understand/task-sequence-steps.md
+        - name: Instalovat aktualizace softwaru
+          href: understand/install-software-updates.md
+        - name: Předběžné zřízení nástroje BitLocker ve Windows PE
+          href: deploy-use/preprovision-bitlocker-in-windows-pe.md
+    - name: Jak používat proměnné pořadí úkolů
+      href: understand/using-task-sequence-variables.md
+    - name: Proměnné pořadí úkolů
+      href: understand/task-sequence-variables.md
+    - name: Příkazy před zahájením pro médium pořadí úkolů
+      href: understand/prestart-commands-for-task-sequence-media.md
+    - name: Režim zřizování
+      href: understand/provisioning-mode.md
