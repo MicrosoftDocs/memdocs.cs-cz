@@ -13,10 +13,10 @@ metadata:
   ms.author: dougeby
   ms.date: 02/18/2020
   ms.openlocfilehash: d6404a4c77507374b5e8759ba2078e541cde35d8
-  ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+  ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
   ms.translationtype: HT
   ms.contentlocale: cs-CZ
-  ms.lasthandoff: 03/13/2020
+  ms.lasthandoff: 04/21/2020
   ms.locfileid: "79333868"
 landingContent:
 - title: Použití funkcí a nastavení na zařízeních
@@ -145,7 +145,7 @@ landingContent:
       url: delivery-optimization-settings.md
     - text: Windows Holographic for Business
       url: device-restrictions-windows-holographic.md
-    - text: Windows 8.1
+    - text: Windows 8.1
       url: device-restrictions-windows-8-1.md
     - text: Windows Phone 8.1
       url: device-restrictions-windows-phone-8-1.md

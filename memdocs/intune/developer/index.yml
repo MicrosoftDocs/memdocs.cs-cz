@@ -14,10 +14,10 @@ metadata:
   ms.manager: dougeby
   ms.date: 09/23/2019
   ms.openlocfilehash: bbca62d21c03fe8abd51eff3cb512ec5ed2d791f
-  ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+  ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
   ms.translationtype: HT
   ms.contentlocale: cs-CZ
-  ms.lasthandoff: 03/13/2020
+  ms.lasthandoff: 04/21/2020
   ms.locfileid: "79333528"
 landingContent:
 - title: Ochrana aplikací pomocí sady Intune App SDK

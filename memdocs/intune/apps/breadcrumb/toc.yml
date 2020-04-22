@@ -14,9 +14,9 @@
               tocHref: /mem/intune/
               topicHref: /mem/intune/
               items:
-                - name: Aplikace
+                - name: Apps
                   tocHref: /mem/intune/fundamentals/
                   topicHref: /mem/intune/apps/
-                - name: Aplikace
+                - name: Apps
                   tocHref: /mem/intune/protect/
                   topicHref: /mem/intune/apps/

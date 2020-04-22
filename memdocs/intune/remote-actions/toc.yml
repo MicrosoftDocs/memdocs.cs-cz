@@ -1,6 +1,6 @@
 - name: Vzdálené akce
   href: index.yml
-- name: Přehled
+- name: Overview
   expanded: true
   items:
     - name: Přehled správy zařízení
@@ -63,7 +63,7 @@
       items:
         - name: Řešení potíží s akcemi zařízení
           href: troubleshoot-device-actions.md
-- name: Prostředky
+- name: Zdroje informací
   items:
     - name: Příručky k implementaci scénářů
       items:
