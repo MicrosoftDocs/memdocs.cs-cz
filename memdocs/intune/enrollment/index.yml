@@ -12,12 +12,12 @@ metadata:
   ms.author: dougeby
   manager: dougeby
   ms.date: 08/07/2019
-  ms.openlocfilehash: be5cae95460064287fa347d1ca42626ab75a2809
-  ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+  ms.openlocfilehash: 468bf56722f17fded75c18a722b15e5e55113eec
+  ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
   ms.translationtype: HT
   ms.contentlocale: cs-CZ
-  ms.lasthandoff: 03/13/2020
-  ms.locfileid: "79333936"
+  ms.lasthandoff: 04/23/2020
+  ms.locfileid: "82077950"
 landingContent:
 - title: Další informace o registraci
   linkLists:
@@ -87,7 +87,7 @@ landingContent:
     links:
     - text: Nastavení registrace zařízení se systémem iOS/iPadOS
       url: ios-enroll.md
-    - text: Automatická registrace zařízení se systémem iOS/iPadOS pomocí Programu registrace zařízení společnosti Apple
+    - text: Automatická registrace zařízení se systémem iOS/iPadOS pomocí Automatické registrace zařízení společnosti Apple
       url: device-enrollment-program-enroll-ios.md
     - text: Nastavení registrace uživatele pro iOS/iPadOS a iPadOS
       url: ios-user-enrollment.md
@@ -111,7 +111,7 @@ landingContent:
     links:
     - text: Nastavení registrace zařízení s macOS
       url: macos-enroll.md
-    - text: Automatická registrace zařízení s macOSem pomocí Programu registrace zařízení nebo Apple School Manageru
+    - text: Automatická registrace zařízení s macOS pomocí Automatické registrace zařízení nebo Apple School Manageru
       url: device-enrollment-program-enroll-macos.md
     - text: Nastavení registrace zařízení se systémem iOS/iPadOS pomocí nástroje Apple Configurator
       url: apple-configurator-enroll-ios.md
