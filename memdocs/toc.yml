@@ -1,0 +1,7 @@
+- name: Microsoft Endpoint Manager
+  href: index.yml
+- name: Přehled
+  expanded: true
+  items:
+    - name: Přehled k produktu Microsoft Endpoint Manager
+      href: endpoint-manager-overview.md

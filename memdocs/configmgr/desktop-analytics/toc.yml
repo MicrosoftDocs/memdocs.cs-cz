@@ -1,0 +1,60 @@
+- name: Dokumentace k Desktop Analytics
+  href: index.yml
+- name: Přehled
+  items:
+    - name: Co je Desktop Analytics?
+      href: overview.md
+    - name: Novinky
+      href: whats-new.md
+- name: Výukové kurzy
+  items:
+    - name: Pilotní nasazení – Windows 10
+      href: tutorial-windows10.md
+- name: Koncepty
+  items:
+    - name: Plány nasazení
+      href: about-deployment-plans.md
+    - name: Prostředky
+      href: about-assets.md
+    - name: Aktualizace funkcí a aktualizace pro zvýšení kvality
+      href: about-updates.md
+    - name: Posouzení kompatibility
+      href: compat-assessment.md
+    - name: Monitorování stavu
+      href: health-status-monitoring.md
+- name: Praktičtí průvodci
+  items:
+    - name: Nastavení portálu Desktop Analytics
+      href: set-up.md
+    - name: Připojení Configuration Manageru
+      href: connect-configmgr.md
+    - name: Registrovat zařízení
+      href: enroll-devices.md
+    - name: Vytvoření plánů nasazení
+      href: create-deployment-plans.md
+    - name: Pilotní nasazení
+      href: deploy-pilot.md
+    - name: Nasazení do produkčního prostředí
+      href: deploy-prod.md
+    - name: Resetování vašeho účtu
+      href: account-reset.md
+    - name: Zavření vašeho účtu
+      href: account-close.md
+- name: Reference
+  items:
+    - name: Povolení sdílení dat
+      href: enable-data-sharing.md
+    - name: Ochrana osobních údajů
+      href: privacy.md
+    - name: Odstraňování potíží
+      href: troubleshooting.md
+    - name: Kolektor protokolů
+      href: log-collector.md
+    - name: Monitorování stavu připojení
+      href: monitor-connection-health.md
+    - name: Nastavení zásad skupiny
+      href: group-policy-settings.md
+    - name: Nejčastější dotazy
+      href: faq.md
+    - name: Získání podpory
+      href: get-support.md
