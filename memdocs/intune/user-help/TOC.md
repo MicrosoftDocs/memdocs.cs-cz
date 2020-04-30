@@ -54,12 +54,11 @@
 #### [Nepodporovaná oprava zabezpečení](you-need-to-update-your-device-OS-security-patch-android.md)
 #### [Zařízení s chybami šifrování](your-device-appears-encrypted-but-cp-says-otherwise-android.md)
 
-### Mobile Threat Defense
-#### [Instalace aplikace Mobile Threat Defense](you-are-prompted-to-install-mtd-android.md)
-##### [Instalace aplikace Lookout for Work](you-are-prompted-to-install-lookout-for-work-android.md)
-##### [Instalace aplikace Symantec Endpoint Protection Mobile](you-are-prompted-to-install-skycure-android.md)
-##### [Instalace aplikace SandBlast Mobile Protect](you-are-prompted-to-install-sandblast-android.md)
-##### [Instalace aplikace Zimperium zIPS](you-are-prompted-to-install-zips-android.md)
+### Aplikace Mobile Threat Defense 
+#### [Instalace aplikace Lookout for Work](you-are-prompted-to-install-lookout-for-work-android.md)
+#### [Instalace aplikace Symantec Endpoint Protection Mobile](you-are-prompted-to-install-skycure-android.md)
+#### [Instalace aplikace SandBlast Mobile Protect](you-are-prompted-to-install-sandblast-android.md)
+#### [Instalace aplikace Zimperium zIPS](you-are-prompted-to-install-zips-android.md)
 #### [Vyřešení hrozby](you-need-to-resolve-a-threat-found-by-mtd-android.md)
 ##### [Použití aplikace Lookout for Work](you-need-to-resolve-a-threat-found-by-lookout-for-work-android.md)
 ##### [Použití aplikace Symantec Endpoint Protection Mobile](you-need-to-resolve-a-threat-found-by-skycure-android.md)
@@ -99,12 +98,11 @@
 #### [Aktualizace vašeho zařízení za účelem instalace Outlooku](update-device-outlook-ios.md)
 #### [Moje verze iOSu ještě není podporovaná](your-ios-version-isnt-yet-supported.md)
 
-### Mobile Threat Defense
-#### [Instalace aplikace Mobile Threat Defense](you-are-prompted-to-install-mtd-ios.md)
-##### [Instalace aplikace Lookout for Work](you-are-prompted-to-install-lookout-for-work-ios.md)
-##### [Instalace aplikace Symantec Endpoint Protection Mobile](you-are-prompted-to-install-skycure-ios.md)
-##### [Instalace aplikace SandBlast Mobile Protect](you-are-prompted-to-install-sandblast-ios.md)
-##### [Instalace aplikace Zimperium zIPS](you-are-prompted-to-install-zips-ios.md)
+### Aplikace Mobile Threat Defense
+#### [Instalace aplikace Lookout for Work](you-are-prompted-to-install-lookout-for-work-ios.md)
+#### [Instalace aplikace Symantec Endpoint Protection Mobile](you-are-prompted-to-install-skycure-ios.md)
+#### [Instalace aplikace SandBlast Mobile Protect](you-are-prompted-to-install-sandblast-ios.md)
+#### [Instalace aplikace Zimperium zIPS](you-are-prompted-to-install-zips-ios.md)
 #### [Vyřešení hrozby](you-need-to-resolve-a-threat-found-by-mtd-ios.md)
 ##### [Použití aplikace Lookout for Work](you-need-to-resolve-a-threat-found-by-lookout-for-work-ios.md)
 ##### [Použití aplikace Symantec Endpoint Protection Mobile](you-need-to-resolve-a-threat-found-by-skycure-ios.md)
