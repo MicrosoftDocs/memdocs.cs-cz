@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: ce008c21cefeb3920182a09547db091547681401
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79326551"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-testing-guide"></a>Průvodce testováním Microsoft Intune App SDK pro Android
@@ -49,7 +49,7 @@ Následující testovací případy poskytují kroky konfigurace a potvrzení. T
 
 ### <a name="required-pin-and-corporate-credentials"></a>Požadované PIN a firemní přihlašovací údaje
 
-Pro přístup k firemním prostředkům můžete vyžadovat PIN kód. Můžete taky vymáhat podnikové ověřování, aby mohli uživatelé používat spravované aplikace. Tady je postup:
+Pro přístup k firemním prostředkům můžete vyžadovat PIN kód. Můžete taky vymáhat podnikové ověřování, aby mohli uživatelé používat spravované aplikace. Zde je uveden postup:
 
 1. Nastavte **vyžadovat pro přístup kód PIN** a pro přístup k **Ano** **vyžadovat podnikové přihlašovací údaje** . Další informace najdete v tématu [nastavení zásad ochrany aplikací pro Android v Microsoft Intune](../apps/app-protection-policy-settings-android.md#access-requirements).
 2. Potvrďte následující podmínky:
@@ -99,16 +99,16 @@ Zálohování aplikací můžete řídit následujícím způsobem:
     - Zálohy jsou omezené.
 
 ### <a name="unenrollment"></a>Zrušení registrace
-Spravované aplikace můžete vzdáleně vymazat z obsahujícího podnikového e-mailu a dokumentů a osobní údaje se dešifrují, když už se nespravuje. Tady je postup:
+Spravované aplikace můžete vzdáleně vymazat z obsahujícího podnikového e-mailu a dokumentů a osobní údaje se dešifrují, když už se nespravuje. Zde je uveden postup:
 
 1. Z Azure Portal [vydejte vymazání](../apps/apps-selective-wipe.md).
 2. Pokud se vaše aplikace neregistruje pro žádné obslužné rutiny vymazání, potvrďte následující podmínky:
     - Dojde k úplnému vymazání aplikace.
-3. Pokud je vaše aplikace zaregistrovaná pro `WIPE_USER_DATA` nebo `WIPE_USER_AUXILARY_DATA`, potvrďte následující podmínky:
+3. Pokud se vaše aplikace zaregistrovala `WIPE_USER_DATA` pro `WIPE_USER_AUXILARY_DATA`nebo, potvrďte následující podmínky:
     - Spravovaný obsah se z aplikace odebere. Další informace najdete v tématu [sada Intune App SDK pro Android Developer Guide – selektivní vymazání](app-sdk-android.md#selective-wipe).
 
 ### <a name="multi-identity-support"></a>Podpora více identit
-Integrace [podpory více identit](app-sdk-android.md#multi-identity-optional) je vysoce riziková změna, kterou je třeba důkladně otestovat. K nejběžnějším problémům dochází z důvodu nesprávného nastavení identity (kontextu vs. hrozby) a sledovacích souborů (`MAMFileProtectionManager`).
+Integrace [podpory více identit](app-sdk-android.md#multi-identity-optional) je vysoce riziková změna, kterou je třeba důkladně otestovat. K nejběžnějším problémům dochází kvůli nesprávně nastavování identity (kontext vs. úroveň ohrožení) a sledovacích souborů (`MAMFileProtectionManager`).
 
 Minimální, potvrďte, že:
 

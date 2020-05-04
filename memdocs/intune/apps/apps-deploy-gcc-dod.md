@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 5d37bf060f11be9e295a9ef2743fa0ba33844df7
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79325887"
 ---
 # <a name="deploying-apps-using-intune-on-the-gcc-high-and-dod-environments"></a>Nasazení aplikací pomocí Intune pro prostředí RSZ s vysokým a DoD 
@@ -41,10 +41,10 @@ Pokud chcete přidat obchodní aplikaci, která je určená pro prostředí RSZ 
 Pokud potřebujete [stáhnout offline aplikaci licencovanou](https://docs.microsoft.com/microsoft-store/distribute-offline-apps#download-an-offline-licensed-app) z Microsoft Store pro firmy, postupujte podle těchto kroků a stáhněte aplikaci: 
 
 1. Přihlaste se ke [Storu pro firmy](https://businessstore.microsoft.com/).
-2. Vyberte **spravovat** > **Nastavení**.
+2. Vyberte **Spravovat** > **Nastavení**.
 3. V části **možnosti nákupu**nastavte **Zobrazit offline aplikace** na **zapnuto**.
 
-Pokud je v případě, že je k dispozici offline verze, při nákupu pro aplikace, můžete zvolit možnost změnit typ licence na offline. Po získání aplikace ji můžete spravovat tak, že vyberete **spravovat** > **Products & Services** ve [Storu pro firmy](https://businessstore.microsoft.com/). Navíc můžete stáhnout aplikaci a její závislosti. Pak můžete tuto staženou aplikaci (a její závislosti) nasadit uživatelům pomocí Intune.  
+Pokud je v případě, že je k dispozici offline verze, při nákupu pro aplikace, můžete zvolit možnost změnit typ licence na offline. Po získání aplikace ji můžete spravovat tak, že vyberete **Spravovat** > **produkty & služby** ve [Storu pro firmy](https://businessstore.microsoft.com/). Navíc můžete stáhnout aplikaci a její závislosti. Pak můžete tuto staženou aplikaci (a její závislosti) nasadit uživatelům pomocí Intune.  
 
 ## <a name="syncing-intune-to-the-store-for-business"></a>Synchronizuje se Intune s Storem pro firmy. 
 

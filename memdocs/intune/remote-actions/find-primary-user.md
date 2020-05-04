@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: dc4580c1debec3f8583a68305438443a211f9243
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80326179"
 ---
 # <a name="find-the-primary-user-of-an-intune-device"></a>Vyhledání primárního uživatele zařízení v Intune
@@ -39,7 +39,7 @@ Primární uživatel, označovaný také jako spřažení uživatelských zaří
 Primárního uživatele zařízení je možné aktualizovat pro zařízení s Windows 10, která jsou připojená k Azure AD nebo je připojená k hybridní službě Azure AD.
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **zařízení** > **všechna zařízení** > vyberte **vlastnosti** > zařízení > **změnit primárního uživatele**.
+2. Vyberte **zařízení** > **všechna zařízení** > vyberte zařízení > **vlastnosti** > **změnit primárního uživatele**.
 3. Vyberte nového uživatele a zvolte **Vybrat**.
 
 Až se primární uživatel aktualizuje, aktualizuje se taky v okně Intune a na Azure AD Device Blade.
@@ -79,13 +79,13 @@ Intune automaticky přidá primárního uživatele do zařízení během nebo po
 | Windows | Zaregistrovat jenom v MDM | Registrace uživatele | Během registrace | 
 | Windows | Objekt zásad skupiny Hybrid AADJ + automatický zápis | První uživatel, který se přihlásí k Windows | Když se první uživatel přihlásí k Windows| 
 | Windows | Spoluspráva | První uživatel, který se přihlásí k Windows | Když se první uživatel přihlásí k Windows | 
-| Windows | Připojení k Azure AD (token hromadného zápisu) | Žádné | Není k dispozici | 
-| Windows | Připojení k Azure AD (režim automatického nasazení autopilotu) | Žádné | Není k dispozici | 
-| Pro různé platformy | Registrace řízená uživatelem v aplikaci Portál společnosti | Registrace uživatele | Během registrace |
-| Pro různé platformy | Správce registrace zařízení (DEM) | Registrace uživatele DEM | Během registrace |
+| Windows | Připojení k Azure AD (token hromadného zápisu) | Žádná | Neuvedeno | 
+| Windows | Připojení k Azure AD (režim automatického nasazení autopilotu) | Žádná | Neuvedeno | 
+| Různé platformy | Registrace řízená uživatelem v aplikaci Portál společnosti | Registrace uživatele | Během registrace |
+| Různé platformy | Správce registrace zařízení (DEM) | Registrace uživatele DEM | Během registrace |
 | iOS/iPadOS, macOS | Apple automatizované registrace zařízení (DEP s přidružením uživatele) | Registrace uživatele | Během registrace |
-| iOS/iPadOS, macOS | Apple automatizované registrace zařízení (DEP bez přidružení uživatele) | Žádné | Není k dispozici |
-| Android | Zařízení se systémem Android, která jsou ve vlastnictví společnosti, vyhrazena | Žádné | Není k dispozici |
+| iOS/iPadOS, macOS | Apple automatizované registrace zařízení (DEP bez přidružení uživatele) | Žádná | Neuvedeno |
+| Android | Zařízení se systémem Android, která jsou ve vlastnictví společnosti, vyhrazena | Žádná | Neuvedeno |
 
 ## <a name="primary-user-and-azure-ad-device-owner"></a>Vlastník zařízení s primárním uživatelem a Azure AD
 V některých případech se primární uživatel Intune může lišit od vlastnosti **vlastníka** zařízení Azure AD (zobrazitelné v **zařízeních** > **Azure AD**). Vlastník zařízení Azure AD se přidá během registrace zařízení do Azure Active Directory.

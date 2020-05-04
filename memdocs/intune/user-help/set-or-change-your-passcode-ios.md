@@ -18,10 +18,10 @@ ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 790aa9e73d990ec3996d4357cbda0e1ddcbf9de9
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79324355"
 ---
 # <a name="set-or-change-your-passcode"></a>Nastavení nebo změna vašeho přístupového kódu
@@ -35,13 +35,13 @@ Pokud máte potíže při vytváření nebo změně hesla, obraťte se na pracov
 
 ## <a name="set-your-passcode"></a>Nastavení přístupového kódu
 
-1. Klepněte na **Nastavení** > **Touch ID a kódový zámek**.
-2. V nabídce **Touch ID a kódový zámek** klepněte na **Zapnout kódový zámek**.
+1. Klepněte na **Nastavení** > **Touch ID & heslo**.
+2. V nabídce **Touch ID & heslo** klepněte na **zapnout heslo**.
 3. Zadejte nový přístupový kód, který splňuje požadavky firemní podpory, a potom ho opětovným zadáním ověřte.
 
 ## <a name="change-your-passcode"></a>Změna přístupového kódu
 
-1. Klepněte na **Nastavení** > **Touch ID a kódový zámek**.
+1. Klepněte na **Nastavení** > **Touch ID & heslo**.
 2. Zadejte přístupový kód. Otevře se nabídka **Touch ID a kódový zámek**.
 2. Klepněte na **Změnit přístupový kód** a zadejte svoje staré heslo.
 3. Zadejte nový přístupový kód, který splňuje požadavky firemní podpory, a potom ho opětovným zadáním ověřte.

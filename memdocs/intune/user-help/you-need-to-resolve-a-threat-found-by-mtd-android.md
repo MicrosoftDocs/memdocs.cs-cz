@@ -18,10 +18,10 @@ ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 68bc48461f6bac9fc7a220642e8867178ee3999c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79324015"
 ---
 # <a name="resolve-a-threat-found-by-a-mobile-threat-defense-app"></a>Vyřešení hrozby, kterou zjistila aplikace Mobile Threat Defense
@@ -32,7 +32,7 @@ Hrozby se zobrazují na Portálu společnosti jako nevyřešené problémy nevyh
 
 * Připojování k firemnímu e-mailu
 * Připojování k firemní Wi-Fi
-* Připojování k SharePointu Online
+* Připojení k SharePointu Online
 * Synchronizace firemních souborů s OneDrivem
 * Přístup k firemním aplikacím
 
@@ -43,6 +43,6 @@ Níže najdete seznam služeb Mobile Threat Defense pro Android, které mohla va
 * [SandBlast Mobile Protect](you-need-to-resolve-a-threat-found-by-checkpoint-android.md)
 * [Zimperium zIPS](you-need-to-resolve-a-threat-found-by-zips-android.md)  
 
-  Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).  
+  Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní informace najdete na [webu portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980) .  
 
 

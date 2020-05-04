@@ -19,17 +19,17 @@ search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 901064b4902ad9a0de490596d10f99a7507fa5e2
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79330699"
 ---
 # <a name="request-and-provide-remote-assistance-for-windows-pcs"></a>Žádost a poskytnutí vzdálené pomoci na počítačích s Windows
 
 [!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
-Informace v tomto tématu se vztahují jenom na desktopové systémy Windows, které spravujete jako počítače pomocí softwarového klienta Intune.
+Informace v tomto tématu se vztahují jenom na desktopové systémy Windows, které spravujete jako počítače (PC) pomocí softwarového klienta Intune.
 
 Microsoft Intune může využívat software [TeamViewer](https://www.teamviewer.com), který se kupuje zvlášť. Díky tomu vám umožní poskytovat vzdálenou pomoc uživatelům, kteří používají softwarového klienta Intune. Když si uživatel vyžádá pomoc od centra Microsoft Intune Center, budete o tom informováni prostřednictvím výstrahy. Můžete tuto žádost přijmout a potom poskytnout pomoc. Tato funkce nahrazuje stávající funkci Vzdálená pomoc pro Windows v Intune.
 
@@ -80,9 +80,9 @@ V nabídce **Akce** v okně **TeamViewer** zvolte **Ukončit relaci**.
 ## <a name="remotely-restart-a-windows-pc"></a>Vzdálené restartování počítače s Windows
 Při pomáhání uživatelům s problémy můžete občas potřebovat vzdáleně restartovat jejich počítač. Počítač s Windows můžete vzdáleně restartovat pomocí následujícího postupu.
 
-1. V [konzole pro správu Microsoft Intune](https://manage.microsoft.com/)vyberte **skupiny** &gt; **všechna zařízení** (nebo jinou skupinu obsahující počítač, který chcete restartovat).
+1. V [konzole pro správu Microsoft Intune](https://manage.microsoft.com/) zvolte **Skupiny** &gt; **Všechna zařízení** (nebo jinou skupinu obsahující počítač, který chcete restartovat).
 
-2. Vyberte jeden nebo více počítačů a pak zvolte **vzdálené úlohy** &gt; **restartovat počítač**.
+2. Vyberte jeden nebo více počítačů a zvolte **Vzdálené úlohy** &gt; **Restartovat počítač**.
 
 3. Pokud chcete zobrazit stav úlohy, v pravém dolním rohu stránky zvolte **Vzdálené úlohy**.
 

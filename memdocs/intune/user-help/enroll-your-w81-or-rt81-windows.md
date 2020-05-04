@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 00f3b217140b1d5f46b68409b38ca2db76c45406
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79324631"
 ---
 # <a name="how-to-enroll-your-windows-81-or-windows-rt-81-device-in-intune"></a>Registrace zařízení s Windows 8.1 nebo Windows RT 8.1 v Intune  
@@ -33,11 +33,11 @@ Pokud vaše společnost nebo škola používá Microsoft Intune, můžete svá z
 
 Registrace zařízení s Windows 8.1 nebo Windows RT 8.1:  
 
-1. V zařízení klepněte na **nastavení** &gt; **nastavení počítače** &gt; **síť** &gt; **pracoviště**.  
+1. V zařízení klepněte na **Nastavení** &gt; **Nastavení** &gt; počítače **síť** &gt; **pracoviště**.  
 
     ![nav-to-workplace](./media/W81-1-workplacejoin.png)  
 
-2. Zadejte e-mailovou adresu svého pracovního nebo školního účtu pro dané ID uživatele, pokud je to potřeba, a klepněte na **Připojit se**. Pokud vaše ID uživatele není nutné, použije se e-mailová adresa, kterou jste zadali při přihlášení k tomuto zařízení.  
+2. V případě potřeby zadejte svůj pracovní nebo školní e-mail pro ID uživatele a pak klepněte na **připojit**. Pokud vaše ID uživatele není nutné, použije se e-mailová adresa, kterou jste zadali při přihlášení k tomuto zařízení.  
 
 3. Zadejte heslo pracovního nebo školního e-mailu.  
 
@@ -61,11 +61,11 @@ Registrace zařízení s Windows 8.1 nebo Windows RT 8.1:
 
 Doporučujeme také nainstalovat aplikaci Portál společnosti, která vám umožní snadno identifikovat a instalovat podnikové aplikace, které jsou relevantní pro vás i vaši roli. V závislosti na tom, jak vaše firma službu Intune nastavila, se aplikace Portál společnosti mohla nainstalovat jako součást procesu registrace. Pokud chcete zjistit, jestli aplikaci máte, hledejte v seznamu aplikací aplikaci **Portál společnosti**. Pokud aplikaci Portál společnosti v seznamu nenajdete, nainstalujte ji podle následujícího postupu.
 
-1. Klepněte na **Start** &gt; **Store**.  
+1. Klepněte na **Start** &gt; **Store**(spustit).  
 
 2. Klepněte na **Hledat** a napište **portál společnosti**.  
 
-3. V seznamu výsledků klepněte na **Portál společnosti**.  
+3. V seznamu výsledků klepněte na **portál společnosti**.  
 
 4. Klepněte buď na **Instalovat**, nebo na **Zdarma**. Zobrazená možnost závisí na tom, jak vaše firma tuto aplikaci nastavila.  
 

@@ -1,5 +1,5 @@
 ---
-title: Nastavení Microsoft Intune
+title: Nastavit Microsoft Intune
 description: Požadavky a předpoklady k tomu, abyste se vaše předplatné Intune dalo začít používat
 keywords: ''
 author: ErikjeMS
@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 53a6d38212433b786719379c0916129ea5304c21
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79330603"
 ---
 # <a name="set-up-intune"></a>Nastavení Intune
@@ -35,13 +35,13 @@ Pokud ke správě počítačů a serverů aktuálně používáte Microsoft Endp
 >[!TIP]
 >Pokud zakoupíte aspoň 150 licencí v rámci opravňujícího plánu Intune, můžete využít *zvýhodnění centra FastTrack*. Tato služba vám poskytne spolupráci se specialisty Microsoftu na připravení prostředí pro službu Intune. Přečtěte si téma [Zvýhodnění centra FastTrack pro Enterprise Mobility + Security (EMS)](https://docs.microsoft.com/enterprise-mobility-security/Solutions/enterprise-mobility-fasttrack-program).
 
-| Kroky | Stav  |
+| Kroky | Status  |
 |---|---|
 |   1   | [Podporované konfigurace](supported-devices-browsers.md) – všechno, co potřebujete vědět, než začnete. Sem patří podporované konfigurace a požadavky na síť.|
 |   2   |  [Přihlášení do Intune](account-sign-up.md) – přihlaste se ke zkušebnímu předplatnému nebo si vytvořte nové předplatné Intune. |
-|   3   | [Konfigurace názvu domény](custom-domain-name-configure.md) – nastavte registraci DNS pro připojení k názvu domény vaší firmy pomocí Intune. Při připojování k Intune a využívání prostředků pak budou uživatelé používat známou doménu. |
+|   3   | [Konfigurace názvu domény](custom-domain-name-configure.md) – nastaví registraci DNS pro připojení názvu domény vaší společnosti k Intune. Při připojování k Intune a využívání prostředků pak budou uživatelé používat známou doménu. |
 |   4   | [Přidání uživatelů](users-add.md) a [skupin](groups-add.md) – přidání uživatelů a skupin nebo připojení služby Active Directory k synchronizaci s Intune. Vyžaduje se, pokud vaše zařízení nepatří mezi veřejné terminály bez uživatelů. Skupiny se používají k přiřazování aplikací, nastavení a jiných prostředků.|
-|   5   | [Přiřazení licencí ](licenses-assign.md) – dejte uživatelům oprávnění k používání služby Intune. Každé zařízení (s uživateli nebo bez uživatelů) vyžaduje licenci Intune, aby mělo k této službě přístup. |
+|   5   | [Přiřazení licencí](licenses-assign.md) – Poskytněte uživatelům oprávnění k používání Intune. Každé zařízení (s uživateli nebo bez uživatelů) vyžaduje licenci Intune, aby mělo k této službě přístup. |
 |   6   | [Nastavení autority MDM](mdm-authority-set.md) – pomocí skupin uživatelů a zařízení Zjednodušte úlohy správy. Skupiny se používají k přiřazování aplikací, nastavení a jiných prostředků. |
 |   7   | [Přidání aplikací](../apps/apps-add.md) – aplikace je možné přiřadit ke skupinám a automaticky nebo volitelně nainstalovat. |
 |   8   | [Konfigurace zařízení](../configuration/device-profiles.md) – nastavte profily, které slouží ke správě nastavení zařízení. Profily zařízení umožňují předem nakonfigurovat nastavení e-mailu, VPN, Wi-Fi a funkcí zařízení. Dokážou zařízení rovněž omezit, což pomůže chránit samotná zařízení i data. |

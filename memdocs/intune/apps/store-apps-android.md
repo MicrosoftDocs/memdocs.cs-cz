@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: a0e46e0578205c57c91680154112c917876fba4a
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80325951"
 ---
 # <a name="add-android-store-apps-to-microsoft-intune"></a>Přidání aplikací z obchodu pro Android do Microsoft Intune
@@ -31,7 +31,7 @@ ms.locfileid: "80325951"
 
 Před přiřazením aplikace k zařízení nebo skupině uživatelů je nejprve potřeba danou aplikaci přidat do Microsoft Intune. 
 
-## <a name="add-an-app"></a>Přidání aplikace
+## <a name="add-an-app"></a>Přidat aplikaci
 
 Aplikaci z obchodu pro Android můžete přidat do Intune z portálu Azure Portal následujícím postupem:
 
@@ -44,7 +44,7 @@ Aplikaci z obchodu pro Android můžete přidat do Intune z portálu Azure Porta
 6. Na stránce **informace o aplikaci** přidejte podrobnosti o aplikaci:
     - **Název**: Zadejte název aplikace, který se zobrazí na Portálu společnosti. Ujistěte se, že používaný název aplikace je jedinečný. Pokud je název aplikace duplicitní, zobrazí se uživatelům na Portálu společnosti pouze jeden název.
     - **Popis**: Zadejte popis aplikace. Tento popis se uživatelům zobrazí na Portálu společnosti.
-    - **Vydavatel**: Zadejte název vydavatele aplikace.
+    - **Vydavatel**: zadejte název vydavatele aplikace.
     - **Adresa URL v obchodu s aplikacemi**: Zadejte adresu URL v obchodu s aplikacemi pro aplikaci, kterou chcete vytvořit. Pokud se ve Storu zobrazí podrobnosti o aplikaci, použijte adresu URL stránky aplikace.
     - **Minimální operační systém**: V seznamu vyberte nejstarší verzi operačního systému, na kterou je možné aplikaci nainstalovat. Pokud aplikaci přiřadíte k zařízení se starším operačním systémem, nenainstaluje se.
     - **Kategorie**: Volitelně můžete vybrat jednu nebo několik předdefinovaných kategorií aplikací nebo kategorii, kterou jste vytvořili. Uživatelé tak při procházení Portálu společnosti najdou aplikaci snadněji.

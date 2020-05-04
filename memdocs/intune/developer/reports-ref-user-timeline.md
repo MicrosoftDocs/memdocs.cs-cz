@@ -2,7 +2,7 @@
 title: Časová osa entity uživatele datového skladu
 titleSuffix: Microsoft Intune
 description: Přečtěte si, jak Microsoft Intune datový sklad představuje uživatele na časové ose.
-keywords: Datový sklad Intune
+keywords: Intune Data Warehouse
 author: Erikre
 ms.author: erikre
 manager: dougeby
@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 7b339941da247cf6bc5efd9f3fa9c598415ed0e9
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79325575"
 ---
 # <a name="user-lifetime-representation-in-the-microsoft-intune-data-warehouse"></a>Znázornění životnosti uživatele v datovém skladu Microsoft Intune
@@ -39,14 +39,14 @@ Představte si uživatele **Jan Macek**, který získá licenci na 1.6.2017. V t
  
 | DisplayName | IsDeleted | StartDateInclusiveUTC | EndDateExclusiveUTC | IsCurrent 
 | -- | -- | -- | -- | -- |
-| Jan Macek | CHYBNÉ | 1\.6.2017 | 31.12.9999 | PRAVDA
+| Jan Macek | FALSE | 1.6.2017 | 31.12.9999 | TRUE
  
 Jan Macek vrací licenci 25.7.2017. Tabulka **Uživatel** obsahuje následující položky. Změny v existujících záznamech jsou `marked`. 
 
 | DisplayName | IsDeleted | StartDateInclusiveUTC | EndDateExclusiveUTC | IsCurrent 
 | -- | -- | -- | -- | -- |
-| Jan Macek | CHYBNÉ | 1\.6.2017 | `07/26/2017` | `FALSE` 
-| Jan Macek | PRAVDA | 26.7.2017 | 31.12.9999 | PRAVDA 
+| Jan Macek | FALSE | 1.6.2017 | `07/26/2017` | `FALSE` 
+| Jan Macek | TRUE | 26.7.2017 | 31.12.9999 | TRUE 
 
 První řádek označuje, že Jan Macek existoval v Intune od 1.6.2017 do 25.7.2017. Druhý záznam označuje, že uživatel byl 25.7.2017 odstraněn a již není v Intune k dispozici.
 
@@ -54,9 +54,9 @@ Nyní si představte, že uživatel Jan Macek získá novou licenci dne 31.8.201
  
 | DisplayName | IsDeleted | StartDateInclusiveUTC | EndDateExclusiveUTC | IsCurrent 
 | -- | -- | -- | -- | -- |
-| Jan Macek | CHYBNÉ | 1\.6.2017 | 26.7.2017 | CHYBNÉ 
-| Jan Macek | PRAVDA | 26.7.2017 | `08/31/2017` | `FALSE` 
-| Jan Macek | CHYBNÉ | 08/31/2017 | 31.12.9999 | PRAVDA 
+| Jan Macek | FALSE | 1.6.2017 | 26.7.2017 | FALSE 
+| Jan Macek | TRUE | 26.7.2017 | `08/31/2017` | `FALSE` 
+| Jan Macek | FALSE | 08/31/2017 | 31.12.9999 | TRUE 
  
 Osoba, která chce zobrazit aktuální stav všech uživatelů, musí použít filtr `IsCurrent = TRUE`. 
  

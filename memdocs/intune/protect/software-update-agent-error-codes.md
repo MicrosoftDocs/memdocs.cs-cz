@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: e762106a13bb42be11771276f38a37e46ae24662
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79325267"
 ---
 # <a name="software-update-agent-error-codes-and-descriptions-in-microsoft-intune"></a>Kódy a popisy chyb agenta aktualizace softwaru v Microsoft Intune
@@ -32,7 +32,7 @@ Kódy chyb agenta Intune **Update Agent** jsou uvedené v následující tabulce
 |Kód chyby|Symbolický název|Další informace|
 |--------------|-----------------|--------------------|
 |**0x00cf0001**|OM_S_SERVICE_STOP|Agenta se povedlo zastavit.|
-|**0x00cf0003**|OM_S_UPDATE_ERROR|Opraci se povedlo dokončit, ale nastaly chyby během použití aktualizací.|
+|**0x00cf0003**|OM_S_UPDATE_ERROR|Operaci se povedlo dokončit, ale nastaly chyby během použití aktualizací.|
 |**0x00cf0004**|OM_S_MARKED_FOR_DISCONNECT|Zpětné volání bylo označeno pro pozdější odpojení, protože žádost o odpojení operace přišla v průběhu provádění zpětného volání.|
 |**0x00cf0005**|OM_S_REBOOT_REQUIRED|Aby bylo možné instalaci aktualizace dokončit, musí se restartovat systém.|
 |**0x00cf0006**|OM_S_ALREADY_INSTALLED|Aktualizace, která se má nainstalovat, je v systému už nainstalovaná.|
@@ -108,7 +108,7 @@ Kódy chyb agenta Intune **Update Agent** jsou uvedené v následující tabulce
 |**0x80cf0440**|OM_E_PT_ENDPOINT_DISCONNECTED|Připojení ke koncovému bodu služby bylo ukončeno.|
 |**0x80cf0441**|OM_E_PT_INVALID_OPERATION|Operace není platná, protože mluvčí protokolu je v nevhodném stavu.|
 |**0x80cf0FFF**|OM_E_UNEXPECTED|Operace se nepovedla kvůli důvodům, které nevysvětluje jiný kód chyby.|
-|**0x80cf1001**|OM_E_MSI_WRONG_VERSION|Při hledání se asi nenašly některé aktualizace, protože verze Instalační služby Windows je starší než 3.1.|
+|**0x80cf1001**|OM_E_MSI_WRONG_VERSION|Při hledání se asi nenašly některé aktualizace, protože verze Instalační služby Windows je starší než 3.1.|
 |**0x80cf1002**|OM_E_MSI_NOT_CONFIGURED|Při hledání se asi nenašly některé aktualizace, protože Instalační služba Windows není nakonfigurovaná.|
 |**0x80cf1003**|OM_E_MSP_DISABLED|Při hledání se asi nenašly některé aktualizace, protože zásady zakázaly použití dílčích oprav Instalační služby Windows.|
 |**0x80cf1004**|OM_E_MSI_WRONG_APP_CONTEXT|Aktualizaci nešlo použít, protože aplikace je nainstalovaná pro jednotlivé uživatele.|
@@ -136,7 +136,7 @@ Kódy chyb agenta Intune **Update Agent** jsou uvedené v následující tabulce
 |**0x80cf3FFD**|OM_E_NON_UI_MODE|V režimu bez uživatelského rozhraní nejde zobrazit uživatelské rozhraní. Nejspíš nejsou nainstalované moduly uživatelského rozhraní klienta služby Windows Update.|
 |**0x80cf3FFE**|OM_E_WUCLTUI_UNSUPPORTED_VERSION|Tato verze exportovaných funkcí uživatelského rozhraní klienta služby WU není podporovaná.|
 |**0x80cf3FFF**|OM_E_AUCLIENT_UNEXPECTED|Došlo k chybě uživatelského rozhraní, která není předmětem jiného kódu chyby OM_E_AUCLIENT_&#42;.|
-|**0x80cf4007**|OM_E_PT_SOAPCLIENT_SOAPFAULT|Stejné jako **SOAPCLIENT_SOAPFAULT**. V klientovi SOAP došlo k chybě, protože nastala chyba protokolu SOAP s kódem chyby typu **OM_E_PT_SOAP_&#42;** .|
+|**0x80cf4007**|OM_E_PT_SOAPCLIENT_SOAPFAULT|Stejné jako **SOAPCLIENT_SOAPFAULT**. V klientovi SOAP došlo k chybě, protože nastala chyba protokolu SOAP s kódem chyby typu **OM_E_PT_SOAP_&#42;**.|
 |**0x80cf4008**|OM_E_PT_SOAPCLIENT_PARSEFAULT|Stejné jako **SOAPCLIENT_PARSEFAULT_ERROR**.  Klientovi SOAP se nepovedlo analyzovat chybu protokolu SOAP.|
 |**0x80cf400A**|OM_E_PT_SOAPCLIENT_PARSE|Stejné jako **SOAPCLIENT_PARSE_ERROR**.  Klientovi SOAP se nepovedlo analyzovat odpověď ze serveru.|
 |**0x80cf400B**|OM_E_PT_SOAP_VERSION|Stejné jako **SOAP_E_VERSION_MISMATCH**. Klient SOAP zjistil nerozpoznatelný obor názvů pro obálku protokolu SOAP.|
@@ -155,7 +155,7 @@ Kódy chyb agenta Intune **Update Agent** jsou uvedené v následující tabulce
 |**0x80cf401B**|OM_E_PT_HTTP_STATUS_PROXY_AUTH_REQ|Stejné jako **stav HTTP 407**. Požaduje se ověření proxy serverem.|
 |**0x80cf401C**|OM_E_PT_HTTP_STATUS_REQUEST_TIMEOUT|Stejné jako **stav HTTP 408**. Časový limit čekání serveru na žádost vypršel.|
 |**0x80cf401D**|OM_E_PT_HTTP_STATUS_CONFLICT|Stejné jako **stav HTTP 409**. Žádost se kvůli konfliktu s aktuálním stavem prostředku nedokončila.|
-|**0x80cf401E**|OM_E_PT_HTTP_STATUS_GONE|Stejné jako **stav HTTP 410**. Požadovaný prostředek už není na serveru dostupný.|
+|**0x80cf401E**|OM_E_PT_HTTP_STATUS_GONE|Stejné jako **stav HTTP 410**. Požadovaný prostředek už na serveru není dostupný.|
 |**0x80cf401F**|OM_E_PT_HTTP_STATUS_SERVER_ERROR|Stejné jako **stav HTTP 500**. Splnění žádosti zabránila vnitřní chyba serveru.|
 |**0x80cf4020**|OM_E_PT_HTTP_STATUS_NOT_SUPPORTED|Stejné jako **stav HTTP 500**. Server nepodporuje funkci, která je nutná ke splnění žádosti.|
 |**0x80cf4021**|OM_E_PT_HTTP_STATUS_BAD_GATEWAY|Stejné jako **stav HTTP 502**. V době, kdy server fungoval jako brána nebo proxy server, dostal neplatnou odpověď od nadřazeného serveru, ke kterému získával přístup, když se snažil splnit žádost.|
@@ -167,7 +167,7 @@ Kódy chyb agenta Intune **Update Agent** jsou uvedené v následující tabulce
 |**0x80cf4028**|OM_E_PT_NO_AUTH_COOKIES_CREATED|Agentovi se nepovedlo vytvořit žádné platné ověřovací soubory cookie.|
 |**0x80cf4029**|OM_E_PT_INVALID_CONFIG_PROP|Hodnota vlastnosti konfigurace byla špatná.|
 |**0x80cf402A**|OM_E_PT_CONFIG_PROP_MISSING|Hodnota vlastnosti konfigurace chyběla.|
-|**0x80cf402B**|OM_E_PT_HTTP_STATUS_NOT_MAPPED|Požadavek HTTP se nemohl být dokončit a důvod neodpovídá žádnému kódu chyby **OM_E_PT_HTTP_&#42;** .|
+|**0x80cf402B**|OM_E_PT_HTTP_STATUS_NOT_MAPPED|Požadavek HTTP se nemohl být dokončit a důvod neodpovídá žádnému kódu chyby **OM_E_PT_HTTP_&#42;**.|
 |**0x80cf402C**|OM_E_PT_WINHTTP_NAME_NOT_RESOLVED|Stejné jako **ERROR_WINHTTP_NAME_NOT_RESOLVED**. Název proxy serveru nebo cílového serveru nejde přeložit.|
 |**0x80cf402F**|OM_E_PT_ECP_SUCCEEDED_WITH_ERRORS|Zpracování externích souborů .cab bylo dokončeno s několika chybami.|
 |**0x80cf4030**|OM_E_PT_ECP_INIT_FAILED|Inicializace procesoru externích souborů .cab nebyla dokončena.|
@@ -176,7 +176,7 @@ Kódy chyb agenta Intune **Update Agent** jsou uvedené v následující tabulce
 |**0x80cf4033**|OM_E_PT_ECP_FAILURE_TO_EXTRACT_DIGEST|Z externího souboru .cab nešlo extrahovat hodnotu hash souboru.|
 |**0x80cf4034**|OM_E_PT_ECP_FAILURE_TO_DECOMPRESS_CAB_FILE|Externí soubor .cab nešlo dekomprimovat.|
 |**0x80cf4035**|OM_E_PT_ECP_FILE_LOCATION_ERROR|Procesoru externích souborů .cab se nepovedlo načíst umístění souborů.|
-|**0x80cf4FFF**|OM_E_PT_UNEXPECTED|Došlo k chybě komunikace, která není předmětem jiného kódu chyby **OM_E_PT_&#42;** .|
+|**0x80cf4FFF**|OM_E_PT_UNEXPECTED|Došlo k chybě komunikace, která není předmětem jiného kódu chyby **OM_E_PT_&#42;**.|
 |**0x80cf6001**|OM_E_DM_URLNOTAVAILABLE|Operaci správce stahování nešlo dokončit, protože požadovaný soubor nemá adresu URL.|
 |**0x80cf6002**|OM_E_DM_INCORRECTFILEHASH|Operaci správce stahování nešlo dokončit, protože nebyla rozpoznána hodnota hash souboru.|
 |**0x80cf6003**|OM_E_DM_UNKNOWNALGORITHM|Operaci správce stahování nešlo dokončit, protože metadata souboru požadovala nerozpoznaný hashovací algoritmus.|
@@ -186,7 +186,7 @@ Kódy chyb agenta Intune **Update Agent** jsou uvedené v následující tabulce
 |**0x80cf6009**|OM_E_DM_BITSTRANSFERERROR|Operace správce stahování se nepovedla, protože došlo k nespecifikované chybě přenosu služby BITS (Background Intelligent Transfer Service).|
 |**0x80cf600a**|OM_E_DM_DOWNLOADLOCATIONCHANGED|Stahování se musí restartovat, protože se změnilo umístění zdroje tohoto stahování.|
 |**0x80cf600B**|OM_E_DM_CONTENTCHANGED|Stahování se musí restartovat, protože se v nové revizi změnil obsah aktualizace.|
-|**0x80cf6FFF**|OM_E_DM_UNEXPECTED|Došlo k chybě správce stahování, která není předmětem jiného kódu chyby **OM_E_DM_&#42;** .|
+|**0x80cf6FFF**|OM_E_DM_UNEXPECTED|Došlo k chybě správce stahování, která není předmětem jiného kódu chyby **OM_E_DM_&#42;**.|
 |**0x80cf7003**|OM_E_INVALID_EVENT_PAYLOAD|Byla zadána neplatná datová část události.|
 |**0x80cf7004**|OM_E_INVALID_EVENT_PAYLOADSIZE|Velikost odeslané datové části události není platná.|
 |**0x80cf7005**|OM_E_SERVICE_NOT_REGISTERED|Služba není zaregistrovaná.|
@@ -218,13 +218,13 @@ Kódy chyb agenta Intune **Update Agent** jsou uvedené v následující tabulce
 |**0x80cf801B**|OM_E_DS_SCHEMAMISMATCH|Schéma aktuálního úložiště dat a schéma tabulky v záložním dokumentu XML se neshodují.|
 |**0x80cf801C**|OM_E_DS_RESETREQUIRED|Úložiště dat vyžaduje resetování relace. Uvolněte relaci a zkuste to znova s novou relací.|
 |**0x80cf801D**|OM_E_DS_IMPERSONATED|Operaci úložiště dat nešlo dokončit, protože byla vyžádána se zosobněnou identitou.|
-|**0x80cf8FFF**|OM_E_DS_UNEXPECTED|Došlo k chybě úložiště dat, která není předmětem jiného kódu **OM_E_DS_&#42;** .|
+|**0x80cf8FFF**|OM_E_DS_UNEXPECTED|Došlo k chybě úložiště dat, která není předmětem jiného kódu **OM_E_DS_&#42;**.|
 |**0x80cfA000**|OM_E_AU_NOSERVICE|Funkce Automatické aktualizace nemohla zpracovat příchozí žádosti.|
 |**0x80cfA004**|OM_E_AU_PAUSED|Funkce Automatické aktualizace nemohla zpracovat příchozí žádosti, protože byla pozastavena.|
 |**0x80cfA005**|OM_E_AU_NO_REGISTERED_SERVICE|Ve funkci Automatické aktualizace není zaregistrovaná žádná nespravovaná služba.|
 |**0x80cfA006**|OM_E_AU_DETECT_SVCID_MISMATCH|Výchozí služba zaregistrovaná ve funkci Automatické aktualizace se během hledání změnila.|
-|**0x80cfA007**|OM_E_AU_ALREADY_PROMPTING_FOR_REBOOT|Funkce Automatické aktualizace už uživateli zobrazuje výzvu k restarování.|
-|**0x80cfAFFF**|OM_E_AU_UNEXPECTED|Došlo k chybě funkce Automatické aktualizace, která není předmětem jiného kódu **OM_E_AU &#42;** .|
+|**0x80cfA007**|OM_E_AU_ALREADY_PROMPTING_FOR_REBOOT|Funkce Automatické aktualizace už uživateli zobrazuje výzvu k restartování.|
+|**0x80cfAFFF**|OM_E_AU_UNEXPECTED|Došlo k chybě funkce Automatické aktualizace, která není předmětem jiného kódu **OM_E_AU &#42;**.|
 |**0x80cfE001**|OM_E_EE_UNKNOWN_EXPRESSION|Operaci vyhodnocovacího filtru výrazů nešlo kvůli nerozpoznanému výrazu dokončit.|
 |**0x80cfE002**|OM_E_EE_INVALID_EXPRESSION|Operaci vyhodnocovacího filtru výrazů nešlo kvůli neplatnému výrazu dokončit.|
 |**0x80cfE003**|OM_E_EE_MISSING_METADATA|Operaci vyhodnocovacího filtru výrazů nešlo dokončit, protože výraz obsahuje nesprávný počet uzlů metadat.|
@@ -232,7 +232,7 @@ Kódy chyb agenta Intune **Update Agent** jsou uvedené v následující tabulce
 |**0x80cfE005**|OM_E_EE_NOT_INITIALIZED|Vyhodnocovací filtr výrazů nešlo inicializovat.|
 |**0x80cfE006**|OM_E_EE_INVALID_ATTRIBUTEDATA|Operaci vyhodnocovacího filtru výrazů nešlo kvůli neplatnému atributu dokončit.|
 |**0x80cfE007**|OM_E_EE_CLUSTER_ERROR|Operaci vyhodnocovacího filtru výrazů nešlo dokončit, protože se nedal zjistit stav clusteru počítače.|
-|**0x80cfEFFF**|OM_E_EE_UNEXPECTED|Došlo k chybě vyhodnocovacího filtru výrazů, která není předmětem jiného kódu chyby **OM_E_EE_&#42;** .|
+|**0x80cfEFFF**|OM_E_EE_UNEXPECTED|Došlo k chybě vyhodnocovacího filtru výrazů, která není předmětem jiného kódu chyby **OM_E_EE_&#42;**.|
 |**0x80cfF001**|OM_E_REPORTER_EVENTCACHECORRUPT|Soubor mezipaměti událostí byl poškozený.|
 |**0x80cfF002**|OM_E_REPORTER_EVENTNAMESPACEPARSEFAILED|Kód XML v popisovači oboru názvů událostí nešlo analyzovat.|
 |**0x80cfF003**|OM_E_INVALID_EVENT|Kód XML v popisovači oboru názvů událostí není platný.|

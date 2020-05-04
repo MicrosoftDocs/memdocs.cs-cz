@@ -21,10 +21,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 4e2c16a4002d807ba7665e53eea7347d498f8981
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79327787"
 ---
 # <a name="you-need-to-update-your-ios-device-to-install-the-outlook-app"></a>Abyste si mohli nainstalovat aplikaci Outlook, musíte si aktualizovat zařízení s iOSem
@@ -32,10 +32,10 @@ ms.locfileid: "79327787"
 Díky aplikaci Outlook si můžou miliony uživatelů na zařízeních s [iOSem](https://itunes.apple.com/app/microsoft-outlook-email-calendar/id951937596) připojit všechny svoje e-mailové účty, kalendáře a soubory pohodlně do jednoho místa.
 
 >[!NOTE]
-> Hledáte pokyny pro zařízení s Androidem? [Přečtěte si další informace](update-device-outlook-android.md).
+> Hledáte pokyny pro zařízení s Androidem? [Další informace](update-device-outlook-android.md).
 
 Někdy se může stát, že se instalace aplikace nezdaří, třeba v případě, že zařízení není v aktuálním stavu. 
 
-Aktualizaci spustíte tak, že klepnete na **Nastavení** > **Obecné** > **Aktualizace softwaru**.
+Chcete-li aktualizovat, klepněte na **Nastavení** > **Obecné** > **aktualizace softwaru**.
 
 Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).

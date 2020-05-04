@@ -16,10 +16,10 @@ search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 60a4ac793500cd4d31df2188344e2b5f4e1094a4
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80359150"
 ---
 # <a name="windows-10-and-windows-holographic-for-business-device-settings-to-run-as-a-dedicated-kiosk-using-intune"></a>Nastavení zařízení s Windows 10 a Windows holografickým pro firmy, která se mají používat jako vyhrazené veřejné terminály pomocí Intune
@@ -42,15 +42,15 @@ V tomto článku se dozvíte, jak vytvořit profil konfigurace zařízení. Sezn
 ## <a name="create-the-profile"></a>Vytvoření profilu
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **zařízení** > **konfiguračních profilech** > **vytvořit profil**.
-3. Zadejte následující vlastnosti:
+2. Vyberte **Konfigurace zařízení** > **profily** > konfigurace**vytvořit profil**.
+3. Zadejte tyto vlastnosti:
 
    - **Název**: Zadejte popisný název nového profilu.
    - **Popis**: Zadejte popis profilu. Toto nastavení není povinné, ale doporučujeme ho zadat.
    - **Platforma**: Vyberte **Windows 10 a novější**.
    - **Typ profilu**: Vyberte veřejný **terminál** .
 
-4. V **Nastavení**vyberte **celoobrazovkový režim**. **Beznabídkový režim** určuje typ režimu veřejného terminálu podporovaného zásadami. Vaše možnosti jsou:
+4. V **Nastavení**vyberte **celoobrazovkový režim**. **Beznabídkový režim** určuje typ režimu veřejného terminálu podporovaného zásadami. Mezi možnosti patří:
 
     - **Není konfigurováno** (výchozí): Zásady nepovolují režim veřejného terminálu.
     - **Beznabídkový režim na celou obrazovku s jednou aplikací**: Zařízení se spustí jako účet jednoho uživatele a uzamkne ho pro jednu aplikaci pro Store. Když se uživatel přihlásí, spustí se daná aplikace. Tento režim zároveň brání uživateli v otevírání nových aplikací nebo změně spuštěné aplikace.
@@ -59,10 +59,10 @@ V tomto článku se dozvíte, jak vytvořit profil konfigurace zařízení. Sezn
         Veřejný terminál s více aplikacemi, neboli zařízení s pevně stanoveným účelem, umožňuje poskytovat přehledné prostředí uživatelům, protože jim povoluje přístup pouze k aplikacím, které potřebují. A také z jejich zobrazení z pohledu aplikací, které nepotřebují.
 
     Seznam všech nastavení a o tom, co dělají, najdete v těchto tématech:
-      - [Nastavení veřejného terminálu Windows 10](kiosk-settings-windows.md)
+      - [Nastavení beznabídkového režimu Windows 10](kiosk-settings-windows.md)
       - [Nastavení veřejného terminálu pro Windows Holografick pro firmy](kiosk-settings-holographic.md)
 
-5. Až to budete mít, vyberte **OK** > **Vytvořit** a změny uložte.
+5. Až budete hotovi, vyberte **OK** > **a uložte** změny.
 
 Profil se vytvoří a zobrazí se v seznamu profily. Dále [přiřaďte](device-profile-assign.md) profil.
 

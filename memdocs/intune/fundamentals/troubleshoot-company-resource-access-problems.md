@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 91a0f717a8ed3d5574b731fe2f20a40c5494a160
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79330459"
 ---
 # <a name="common-error-codes-and-descriptions-in-microsoft-intune"></a>Běžné kódy chyb a popisy v Microsoft Intune
@@ -32,7 +32,7 @@ Pokud potřebujete pomoc, přečtěte si téma [získání podpory pro Microsoft
 
 ## <a name="status-codes-for-mdm-managed-windows-devices"></a>Stavové kódy pro zařízení s Windows spravovaná systémem MDM
 
-|Stavový kód|Chybová zpráva|Co dělat|
+|Kód stavu|Chybová zpráva|Co dělat|
 |---------------|-----------------|--------------|
 |10 (APP_CI_ENFORCEMENT_IN_PROGRESS)|Probíhá instalace||
 |20 (APP_CI_ENFORCEMENT_IN_PROGRESS_WAITING_CONTENT)|Čeká se na obsah||
@@ -47,11 +47,11 @@ Pokud potřebujete pomoc, přečtěte si téma [získání podpory pro Microsoft
 |110 (APP_CI_ENFORCEMENT_ERROR)|Neshoda algoritmu hash obsahu||
 |120 (APP_CI_ENFORCEMENT_ERROR)|SLK / zkušební načítání se nepovoluje||
 |130 (APP_CI_ENFORCEMENT_ERROR)|Instalace licence MSADP se nepodařila||
-|Bez stavu (APP_CI_ENFORCEMENT_UNKNOWN)|není k dispozici|Stav je momentálně neznámý.|
+|Bez stavu (APP_CI_ENFORCEMENT_UNKNOWN)|neuvedeno|Stav je momentálně neznámý.|
 
 ## <a name="company-resource-access-common-errors"></a>Přístup k prostředkům společnosti (běžné chyby)
 
-|Stavový kód|Šestnáctkový kód chyby|Chybová zpráva|
+|Kód stavu|Šestnáctkový kód chyby|Chybová zpráva|
 |---------------|--------------------------|-----------------|
 |-2016281101|0x87D1FDF3|Nenašla se žádost MDM CRP.|
 |-2016281102|0x87D1FDF2|Nenašla se adresa URL služby NDES.|
@@ -87,12 +87,12 @@ Pokud potřebujete pomoc, přečtěte si téma [získání podpory pro Microsoft
 |__Vnitřní chyba serveru__ <br>Vypadá to, že nám se nám nepovedlo kontaktovat kvůli vnitřní chybě na našem serveru. Zkuste to znovu, a pokud s tím budou problémy dál, obraťte se na správce.|Chyba 500|Tato chyba je pravděpodobně způsobena problémem ve službě Intune. Problém by se měl řešit na straně služby Intune a není způsobený potížemi na straně zákazníka.|
 |__Dočasně nedostupné__ <br>Vypadá to, že se nám nepovedlo kontaktovat, protože naše služba je dočasně nedostupná. Zkuste to znovu, a pokud s tím budou problémy dál, obraťte se na správce.|Chyba 503|Jedná se pravděpodobně o dočasný problém se službou Intune, může například probíhat údržba služby. Problém by se měl řešit na straně služby Intune a není způsobený potížemi na straně zákazníka.|
 |__Nejde se připojit k serveru__ <br>Vypadá to, že se nám nepovedlo kontaktovat. Zkuste to znovu, a pokud s tím budou problémy dál, obraťte se na správce.|Není přidružen stavový kód HTTP|Nepovedlo se navázat zabezpečené připojení k serveru, pravděpodobně kvůli problému s certifikáty, které používá protokol SSL. K tomuto problému může dojít kvůli tomu, že konfigurace zákazníka nejsou v souladu s požadavky společnosti Apple na ATS (App Transport Security).|
-|__Něco se nepovedlo__ <br>Klient Portál společnosti se nedal načíst. Zkuste to znovu, a pokud s tím budou problémy dál, obraťte se na správce.|Chyba 400|Všechny chyby se stavovým kódem HTTP obsahující 400, které nemají podrobnější chybovou zprávu, zobrazí toto. Toto je chyba na straně klienta, která se děje v aplikaci Portál společnosti pro iOS/iPadOS.|
+|__Něco se pokazilo.__ <br>Klient Portál společnosti se nedal načíst. Zkuste to znovu, a pokud s tím budou problémy dál, obraťte se na správce.|Chyba 400|Všechny chyby se stavovým kódem HTTP obsahující 400, které nemají podrobnější chybovou zprávu, zobrazí toto. Toto je chyba na straně klienta, která se děje v aplikaci Portál společnosti pro iOS/iPadOS.|
 |__Nejde kontaktovat server__ <br>Vypadá to, že se nám nepovedlo kontaktovat. Zkuste to znovu, a pokud s tím budou problémy dál, obraťte se na správce.|Chyba 500|Všechny chyby se stavovým kódem HTTP obsahující 500, které nemají podrobnější chybovou zprávu, zobrazí toto. Jedná se o chybu služby Intune, ke které dochází na straně služby.|
 
 ### <a name="service-errors"></a>Chyby služby
 
-|Stavový kód|Šestnáctkový kód chyby|Chybová zpráva|
+|Kód stavu|Šestnáctkový kód chyby|Chybová zpráva|
 |---------------|--------------------------|-----------------|
 |-2016299111|0x87D1B799|Vnitřní chyba|
 |-2016299112|0x87D1B798|Vnitřní chyba|
@@ -177,7 +177,7 @@ Pokud potřebujete pomoc, přečtěte si téma [získání podpory pro Microsoft
 |-2016323108|0x87D159DC|13004:Nejde nastavit protokol EAP.|
 |-2016323109|0x87D159DB|13003:Nejde vytvořit konfiguraci připojení WiFi.|
 |-2016323110|0x87D159DA|13002:Heslo je povinné.|
-|-2016323111|0x87D159D9|13001:Uživatelské jméno je povinné.|
+|-2016323111|0x87D159D9| 13001:Uživatelské jméno je povinné.|
 |-2016323112|0x87D159D8|13000:Nejde nainstalovat.|
 |-2016324070|0x87D1561A|12042:Neznámý kód národního prostředí|
 |-2016324071|0x87D15619|12041:Neznámý kód jazyka|
@@ -287,7 +287,7 @@ Pokud potřebujete pomoc, přečtěte si téma [získání podpory pro Microsoft
 |-2016334109|0x87D12EE3|2003:Chybný datový typ v poli|
 |-2016334110|0x87D12EE2|2002:Chybí hodnota v povinném poli.|
 |-2016334111|0x87D12EE1|2001:Nepodporovaná verze datové části|
-|-2016334112|0x87D12EE0|2000:Chybně vytvořená datová část|
+|-2016334112|0x87D12EE0|2000:Chybně vytvořená datová část |
 |-2016335102|0x87D12B02|1010:Nepodporovaná hodnota pole|
 |-2016335103|0x87D12B01|1009:Selhání instalace profilu|
 |-2016335104|0x87D12B00|1008:Nejedinečné identifikátory datové části|
@@ -302,7 +302,7 @@ Pokud potřebujete pomoc, přečtěte si téma [získání podpory pro Microsoft
 
 ## <a name="oma-response-codes"></a>Kódy odpovědí OMA
 
-|Stavový kód|Šestnáctkový kód chyby|Chybová zpráva|
+|Kód stavu|Šestnáctkový kód chyby|Chybová zpráva|
 |---------------|--------------------------|-----------------|
 |-2016344008|0x87D10838|(1404): Přístup k certifikátu zamítnut|
 |-2016344009|0x87D10837|(1403): Certifikát nebyl nalezen|

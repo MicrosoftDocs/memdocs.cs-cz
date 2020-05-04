@@ -18,10 +18,10 @@ ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: d033c83865c19638ab9b1d34b9b77ae146d28133
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79331299"
 ---
 # <a name="configure-app-protection-policies-optional"></a>Konfigurace zásad ochrany aplikací (volitelné)
@@ -52,8 +52,8 @@ Když zapnete podmíněný přístup ve starém poskytovateli MDM, můžou uživ
 
 ## <a name="task-list-for-app-protection-policies"></a>Seznam kroků pro zásady ochrany aplikací
 
-- [Vytvoření a přiřazení zásad ochrany aplikací](../apps/app-protection-policies.md)
+- [Jak vytvářet a přiřazovat zásady ochrany aplikací](../apps/app-protection-policies.md)
 
 ## <a name="next-steps"></a>Další kroky
 
-[Speciální aspekty migrace](migration-guide-considerations.md)
+[Zvláštní stránky migrace](migration-guide-considerations.md)

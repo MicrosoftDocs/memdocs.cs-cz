@@ -19,10 +19,10 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.collection: ''
 ms.openlocfilehash: 398720e2f491fa8b69d80cbc2f2783123b965723
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79324399"
 ---
 # <a name="fix-common-issues-with-your-samsung-knox-device"></a>Řešení nejčastějších problémů se zařízením se zabezpečením Samsung Knox

@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: d41dec48ff1f357733882ebe99bcad670e676675
-ms.sourcegitcommit: d601f4e08268d139028f720c0a96dadecc7496d5
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80488008"
 ---
 # <a name="how-to-validate-your-app-protection-policy-setup-in-microsoft-intune"></a>Ověření nastavení zásad ochrany aplikací v Microsoft Intune
@@ -44,7 +44,7 @@ Pokud se při testování ukáže, že chování zásad ochrany aplikací nefung
 
 ### <a name="user-app-protection-status"></a>Stav uživatele ochrany aplikací
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-3. Vyberte **aplikace** > **monitor** >  **stav ochrany aplikací**a pak vyberte dlaždici **přiřazení uživatelé** . 
+3. Vyberte **aplikace** > **monitor** >  **stav ochrany aplikace**a pak vyberte dlaždici **přiřazení uživatelé** . 
 4. Na stránce **vytváření sestav aplikací** vyberte **Vybrat uživatele** a zobrazte seznam uživatelů a skupin. 
 5. Vyhledejte a vyberte uživatele ze seznamu a pak zvolte **Vybrat uživatele**. V horní části podokna **vytváření sestav aplikace** uvidíte, jestli má uživatel licenci k ochraně aplikací. Můžete také zjistit, jestli má uživatel licenci pro O365 a stav aplikace pro všechna zařízení uživatele.
 
@@ -61,6 +61,6 @@ Postupujte podle stavu uživatele:
 - [Co jsou zásady ochrany aplikací Intune?](app-protection-policies.md)
 - [Licence, které zahrnují Intune](../fundamentals/licenses.md)
 - [Přiřazení licencí uživatelům, aby mohli zaregistrovat zařízení v Intune](../fundamentals/licenses-assign.md)
-- [Ověření nastavení zásad ochrany aplikací](app-protection-policies-validate.md)
+- [Jak ověřit nastavení zásad ochrany aplikací](app-protection-policies-validate.md)
 - [Jak monitorovat zásady ochrany aplikací](app-protection-policies-monitor.md)
 

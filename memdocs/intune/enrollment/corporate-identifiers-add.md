@@ -1,7 +1,7 @@
 ---
 title: Přidání podnikových identifikátorů do Intune
 titleSuffix: ''
-description: Zjistěte, jak přidat podnikové identifikátory (způsob registrace, IMEI a sériová čísla) do Microsoft Intune.
+description: Přečtěte si, jak přidat podnikové identifikátory (metodu registrace, IMEI a sériová čísla) do Microsoft Intune.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 483f82e67c3f5d8ad3b4e55fba73e21eba85d49d
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 03df52662aaced80280192b9096c6d169020b55d
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80327150"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81615443"
 ---
 # <a name="identify-devices-as-corporate-owned"></a>Identifikace zařízení jako vlastněných společností
 
@@ -49,10 +49,10 @@ Tato funkce je podporovaná pro následující platformy:
 
 | Platforma | Čísla IMEI | Sériová čísla |
 |---|---|---|
-| Windows | Podporováno (Windows Phone) | Není podporované |
-| iOS/macOS | Není podporované | Podporuje se |
-| V10 za účelem spravovaného operačního systému Android pro správu zařízení | Není podporované | Není podporované |
-| Ostatní systémy Android | Není podporované | Podporuje se |
+| Windows | Podporováno (Windows Phone) | Nepodporuje se |
+| iOS/macOS | Nepodporuje se | Podporuje se |
+| V10 za účelem spravovaného operačního systému Android pro správu zařízení | Nepodporuje se | Nepodporuje se |
+| Ostatní systémy Android | Nepodporuje se | Podporuje se |
 
 <!-- When you upload serial numbers for corporate-owned iOS/iPadOS devices, they must be paired with a corporate enrollment profile. Devices must then be enrolled using either Apple's Automated Device Enrollment or Apple Configurator to have them appear as corporate-owned. -->
 
@@ -85,9 +85,9 @@ V textovém editoru vypadá soubor .csv takhle:
 
 ### <a name="upload-a-csv-list-of-corporate-identifiers"></a>Nahrání seznamu podnikových identifikátorů ve formátu .csv
 
-1. Přihlaste se do [centra pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431), vyberte **zařízení** > **registrace zařízení** > **identifikátory podnikových zařízení** > **přidejte** > **nahrát soubor CSV**.
+1. Přihlaste se do [centra pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431), vyberte **zařízení** > **Registrovat zařízení** > **identifikátory** > podnikových zařízení**Přidat** > **Odeslat soubor CSV**.
 
-2. V okně **Přidat identifikátory** zadejte typ identifikátoru: **IMEI** nebo **Sériové**.
+2. V okně **Přidat identifikátory** zadejte typ identifikátoru: **IMEI** nebo **sériové**.
 
 3. Klikněte na ikonu složky a určete cestu k seznamu, který chcete importovat. Přejděte do souboru .csv a zvolte **Přidat**. 
 
@@ -95,9 +95,9 @@ V textovém editoru vypadá soubor .csv takhle:
 
 ## <a name="manually-enter-corporate-identifiers"></a>Ruční zadání podnikových identifikátorů
 
-1. Přihlaste se do [centra pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431), vyberte **zařízení** > **registrace zařízení** > **identifikátory podnikových zařízení** > **přidejte** > **zadat ručně**.
+1. Přihlaste se [do centra pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)a vyberte **zařízení** > **Registrovat zařízení** > **identifikátory** > podnikových zařízení**Přidat** > **ENTER ručně**.
 
-2. V okně **Přidat identifikátory** zadejte typ identifikátoru: **IMEI** nebo **Sériové**.
+2. V okně **Přidat identifikátory** zadejte typ identifikátoru: **IMEI** nebo **sériové**.
 
 3. Zadejte **identifikátor** a **Podrobnosti** pro každý identifikátor, který chcete přidat. Až zadávání identifikátorů dokončíte, zvolte **Přidat**.
 
@@ -109,7 +109,7 @@ Importovaná zařízení nemusí být nutně zaregistrovaná. Zařízení můžo
 
 ## <a name="delete-corporate-identifiers"></a>Odstranění podnikových identifikátorů
 
-1. Přihlaste se do [centra pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)a vyberte **zařízení** > **registrace zařízení** > **identifikátory podnikových zařízení**.
+1. Přihlaste se [do centra pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)a vyberte **zařízení** > **registrace zařízení** > **identifikátory podnikových zařízení**.
 2. Vyberte identifikátory zařízení, které chcete odstranit, a zvolte **Odstranit**.
 3. Potvrďte odstranění.
 
@@ -123,8 +123,14 @@ Podrobné specifikace o číslech IMEI najdete na stránce [3GGPP TS 23.003](ht
 U každého záznamu zařízení v Intune se ve vlastnostech zařízení zobrazuje **Vlastnictví**. Jako správce můžete zařízení označit jako **Osobní** nebo **Firemní**. Když se typ vlastnictví zařízení změní z firemní na osobní, Intune odstraní všechny informace o aplikaci dříve shromážděné z tohoto zařízení do 7 dnů. V případě potřeby bude Intune také odstraňovat telefonní číslo na záznamu. 
 
 **Vlastnictví zařízení změníte takto:**
-1. Přihlaste se do [centra pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431), vyberte **zařízení** > **všechna zařízení** > vyberte zařízení.
-2. Zvolte **Vlastnosti**.
+1. Přihlaste se do [centra pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431), vyberte **zařízení** > **všechna zařízení** > zvolit zařízení.
+2. Zvolte **Properties** (Vlastnosti).
 3. Určete **Vlastnictví zařízení** jako **Osobní** nebo **Firemní**.
 
    ![Vlastnosti zařízení s možnostmi Kategorie zařízení a Vlastnictví zařízení](./media/corporate-identifiers-add/device-properties.png)
+
+Můžete nakonfigurovat nabízená oznámení, která se budou posílat uživatelům s Androidem i iOS Portál společnosti, když se jejich typ vlastnictví zařízení změní z **osobních** na **firemní** , protože se mu připadá ochrana osobních údajů. 
+
+Když se typ vlastnictví zařízení změní z firemní na osobní, Intune odstraní všechny informace o aplikaci dříve shromážděné z tohoto zařízení do 7 dnů. V případě potřeby bude Intune také odstraňovat telefonní číslo na záznamu. Intune bude dál shromažďovat inventář aplikací nainstalovaných správcem IT na zařízení a bude i po označení osobních údajů zařízení shromažďovat i částečné telefonní číslo.
+
+Toto nastavení najdete v Microsoft Endpoint Manageru tak, že vyberete > **vlastní nastavení** **správy tenanta**. Další informace najdete v tématu [portál společnosti-Configuration](../apps/company-portal-app.md#configuration).

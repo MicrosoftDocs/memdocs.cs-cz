@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: a731769a7fa3118170119ae935478eb7dd67e06b
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80326566"
 ---
 # <a name="logout-the-current-user-on-intune-managed-iosipados-devices"></a>Odhlášení aktuálního uživatele na zařízeních s iOS nebo iPadOS spravovaných přes Intune
@@ -42,7 +42,7 @@ Akce **Odhlásit aktuálního uživatele** odhlásí aktuálního uživatele na 
 ## <a name="how-to-log-out-the-current-user"></a>Odhlášení aktuálního uživatele
 
 1. Přihlaste se do [centra pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431) a vyberte **zařízení** > **všechna zařízení**.
-2. Vyberte zařízení s iOS/iPadOS > **...**  > **Odhlásit aktuálního uživatele**.
+2. Vyberte zařízení s iOS/iPadOS > **...**  >  **Odhlášení aktuálního uživatele**
 
 ## <a name="next-steps"></a>Další kroky
 

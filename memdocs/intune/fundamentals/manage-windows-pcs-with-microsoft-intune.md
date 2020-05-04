@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: e4e917ca63bb671e8dfa46b280a4130051e75ef0
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79326499"
 ---
 # <a name="manage-windows-pcs-as-computers-via-intune-software-client"></a>Správa počítačů s Windows jako počítačů prostřednictvím softwarového klienta Intune
@@ -46,7 +46,7 @@ S využitím tohoto softwarového klienta můžete přes Intune spravovat až 7�
 
 ## <a name="requirements-for-intune-pc-client-management"></a>Požadavky na správu počítačového klienta Intune
 
-**Hardware:** :  
+**Hardware**:  
 Níže jsou uvedené minimální požadavky na hardware pro instalaci klientského softwaru Intune:
 
 |Požadavek|Další informace|
@@ -73,14 +73,14 @@ Ve většině scénářů si svoje zařízení zaregistrujete v Microsoft Intune
 
 - **[Správa aktualizací softwaru](keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune.md)** – Počítače můžete udržovat stále aktuální a můžete rozhodnout, kdy se mají aktualizace instalovat.
 
-- **[Zásady brány Windows Firewall](help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune.md)** – Tyto zásady pomáhají zajistit, že v žádném počítači používaném ve vaší společnosti není neaktivní nebo nesprávně nakonfigurovaná brána Windows Firewall.
+- **[Zásady brány Windows Firewall](help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune.md)** – díky tomu je možné zajistit, že žádný počítač, který se používá ve vaší společnosti, nemá neaktivní nebo nesprávně nakonfigurovanou bránu Windows Firewall.
 
-- **[Ochrana proti malwaru](help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune.md)** – Součástí Intune je služba Endpoint Protection, která pomáhá chránit počítače před malwarem.
+- **[Ochrana proti malwaru](help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune.md)** – Intune zahrnuje Endpoint Protection, což pomáhá chránit počítače před malwarem.
 
 - **[Vzdálená pomoc](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)** – Intune umožňuje uživatelům kontaktovat pracovníky technické podpory, kteří jim pak můžou pomoct prostřednictvím funkce vzdálené plochy, která je součástí Intune (vyžaduje software TeamViewer).
 
-- **[Správa licencí na software](manage-license-agreements-for-windows-pc-software-in-microsoft-intune.md)** – Můžete sledovat, kolik licencí softwaru je dostupných a kolik z nich se právě používá.
-- **[Nasazení aplikací](add-apps-for-windows-pcs-in-microsoft-intune.md)** – Do počítačů, které spravujete, můžete nasadit software. Pokud ke správě počítačů použijete softwarového klienta, některé funkce správy nejsou dostupné.
+- **[Správa licencí na software](manage-license-agreements-for-windows-pc-software-in-microsoft-intune.md)** – Sledujte, kolik licencí softwaru je dostupných a kolik dostupných licencí se používá.
+- **[Nasazení aplikací](add-apps-for-windows-pcs-in-microsoft-intune.md)** – nasaďte software do počítačů, které spravujete. Pokud ke správě počítačů použijete softwarového klienta, některé funkce správy nejsou dostupné.
 
 <!-- - **Compliance settings reporting** -->
 

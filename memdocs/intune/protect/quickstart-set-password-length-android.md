@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: b2e2d5fb2f698d7e0b544dbdbd4ab05f2b94b7ea
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80325461"
 ---
 # <a name="quickstart-create-a-password-compliance-policy-for-android-devices"></a>Rychlý start: Vytvoření zásady dodržování předpisů pro hesla pro zařízení s Androidem
@@ -44,7 +44,7 @@ Přihlaste se k [centru pro správu Microsoft Endpoint Manageru](https://go.micr
 
 Vytvořte zásadu dodržování předpisů pro zařízení, která bude vyžadovat, aby uživatelé v Androidu mohli zadat heslo určité délky předtím, než se udělí přístup k informacím v jejich zařízeních s Androidem.
 
-1. V Intune vyberte **zařízení** > **zásady dodržování předpisů** > **vytvořit zásadu**.
+1. V Intune vyberte **zařízení** > **zásady** > dodržování předpisů**vytvořit zásadu**.
 
 2. Jako **Název** přidejte **Dodržování předpisů v Androidu**. Přidejte také **Popis**.
 
@@ -52,7 +52,7 @@ Vytvořte zásadu dodržování předpisů pro zařízení, která bude vyžadov
 
 4. Jako **typ profilu**vyberte **pracovní profil**.
 
-5. Vyberte **Nastavení** > **Zabezpečení systému** a zobrazte okno **Zabezpečení systému** Androidu.
+5. Vyberte **Nastavení** > **zabezpečení systému** , aby se zobrazilo okno **zabezpečení systému** Android.
 
 6. U možnosti **Vyžadovat heslo k odemknutí mobilních zařízení** vyberte **Vyžadovat**.
 
@@ -62,7 +62,7 @@ Vytvořte zásadu dodržování předpisů pro zařízení, která bude vyžadov
 
     ![Snímek obrazovky s vytvořením skupiny v Microsoft Intune](./media/quickstart-set-password-length-android/quickstart-set-password-length-android-01.png)
 
-9. Až to budete mít, vyberte **ok** ** > v** > **vytvořit** vytvořte zásadu.
+9. Až budete hotovi, vyberte **OK** > **OK** > **vytvořit** a vytvořte zásadu.
 
 Po úspěšném vytvoření zásady se zobrazí v seznamu zásad complice zařízení.
 

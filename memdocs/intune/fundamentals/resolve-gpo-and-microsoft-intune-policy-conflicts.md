@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 9a159d9d2cb31090fdb38ef2fc692f6af0297166
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79330683"
 ---
 # <a name="resolve-group-policy-objects-gpo-and-microsoft-intune-policy-conflicts"></a>Řešení konfliktů objektů zásad skupiny (GPO) a zásad Microsoft Intune
@@ -30,7 +30,7 @@ ms.locfileid: "79330683"
 [!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 > [!NOTE]
-> Informace v tomto tématu se vztahují jenom na desktopové systémy Windows, které spravujete jako počítače pomocí softwarového klienta Intune.
+> Informace v tomto tématu se vztahují jenom na desktopové systémy Windows, které spravujete jako počítače (PC) pomocí softwarového klienta Intune.
 
 Intune používá zásady, které vám pomůžou spravovat nastavení na počítačích s Windows. Pomocí zásad můžete třeba na počítačích řídit nastavení brány Windows Firewall. Mnohá nastavení služby Intune se podobají nastavením, která nejspíš konfigurujete pomocí zásad skupiny Windows. Někdy se ale může stát, že se tyto dvě metody dostanou vzájemně do konfliktu.
 
@@ -114,7 +114,7 @@ WMI filters selectively apply GPOs to computers that satisfy the conditions of a
 For more information about how to apply WMI filters in Group Policy, see the blog post [Security Filtering, WMI Filtering, and Item-level Targeting in Group Policy Preferences](https://go.microsoft.com/fwlink/?LinkId=177883). --->
 
 
-Můžete použít objekty zásad skupiny jenom na skupiny zabezpečení, které jsou pro vybraný objekt zásad skupiny zadané v oblasti **Filtrování zabezpečení** konzoly pro správu zásad skupiny. Objekty zásad skupiny se ve výchozím nastavení používají pro skupinu *Authenticated Users*.
+Můžete použít objekty zásad skupiny jenom na skupiny zabezpečení, které jsou pro vybraný objekt zásad skupiny zadané v oblasti **Filtrování zabezpečení** konzoly pro správu zásad skupiny. Objekty zásad skupiny se ve výchozím nastavení používají u skupiny *Authenticated Users*.
 
 - V modulu snap-in **Uživatelé a počítače služby Active Directory** vytvořte novou skupinu zabezpečení obsahující účty počítačů a uživatelské účty, které nechcete spravovat pomocí Intune. Vaši skupinu můžete třeba pojmenovat *Není v Microsoft Intune*.
 

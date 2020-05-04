@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 3cf638ba82d1b6e91e3c4c24d5cfd3433df3b010
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80326530"
 ---
 # <a name="enable-lost-mode-on-iosipados-devices-with-intune"></a>Povolení režimu ztráty na zařízeních s iOS/iPadOS pomocí Intune
@@ -36,7 +36,7 @@ Akce zařízení v **režimu ztráty** vám pomůže zapnout režim ztráty u zt
 
 Tato funkce není podporovaná pro: 
 - Windows
-- Windows Phone
+- telefon se systémem Windows
 - macOS
 - Android
 
@@ -44,7 +44,7 @@ Tato funkce není podporovaná pro:
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 3. Vyberte **Zařízení** a potom **Všechna zařízení**.
-4. V seznamu zařízení, která spravujete, zvolte zařízení s iOS/iPadOS a pak zvolte **režim ztráty (jenom pod dohledem)** .
+4. V seznamu zařízení, která spravujete, zvolte zařízení s iOS/iPadOS a pak zvolte **režim ztráty (jenom pod dohledem)**.
 5. V části **režim ztráty**vyberte **Povolit**.
 6. Ve **zprávě, která se má zobrazit na zamykací obrazovce**zadejte zprávu, která se zobrazí na zamykací obrazovce zařízení.
 7. Volitelně můžete zadat telefonní číslo do pole **telefonní číslo, které se má zobrazit** .

@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 98451e7ffd6aef9e5fb298af96b91074f39c383e
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80325266"
 ---
 # <a name="what-is-microsoft-intune-device-management"></a>Co je správa zařízení v Microsoft Intune?
@@ -61,7 +61,7 @@ Dostupné akce se liší podle platformy zařízení a jeho konfigurace.
   - [Střídání klíčů BitLockeru](../protect/encrypt-devices.md#rotate-bitlocker-recovery-keys) (jenom Windows)
   - [Odstranit](devices-wipe.md#delete-devices-from-the-intune-portal)
   - [Zakázat zámek aktivace](device-activation-lock-disable.md) (jenom iOS)
-  - [Začít znovu](device-fresh-start.md) (jenom Windows)
+  - [Nový start](device-fresh-start.md) (jenom Windows)
   - [Úplná kontrola](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus) (jenom Windows 10)
   - [Najít zařízení](device-locate.md) (jenom iOS)
   - [Režim ztráty](device-lost-mode.md) (jenom iOS)
@@ -73,7 +73,7 @@ Dostupné akce se liší podle platformy zařízení a jeho konfigurace.
   - [Restartovat](device-restart.md) (jenom Windows)
   - [Vyřadit](devices-wipe.md#retire)
   - [Aktualizace funkce Security Intelligence v programu Windows Defender](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-antivirus/manage-protection-updates-windows-defender-antivirus)
-  - [Resetovat PIN kód ve Windows 10](device-windows-pin-reset.md)
+  - [Resetování PIN kódu ve Windows 10](device-windows-pin-reset.md)
   - [Vymazání](devices-wipe.md#wipe)
   - [Poslat vlastní oznámení](custom-notifications.md#send-a-custom-notification-to-a-single-device) (Android, iOS/iPadOS)
   - [Synchronizace zařízení](device-sync.md)

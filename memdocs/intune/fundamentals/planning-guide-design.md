@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: d29294f1d9556f195fe70f0e2cb36cc8c9ddcfba
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79331059"
 ---
 # <a name="create-a-design"></a>Vytvoření návrhu
@@ -94,11 +94,11 @@ Vaše současné prostředí může ovlivnit rozhodování o návrhu a mělo by 
 
 Při popisu současného prostředí MDM nezapomeňte zaznamenat všechny projekty nebo jakékoli jiné plány, které by mohly vaše prostředí ovlivnit. Následující příklad ukazuje, jak při vytváření návrhu Intune můžete popsat současné prostředí:
 
-| **Oblast řešení** | **Současné prostředí** | **Komentář** |
+| **Oblast řešení** | **Současné prostředí** | **Komentáře** |
 |---|---|---|
 | **Identita** | Azure AD, Azure AD Connect, nefederované, bez MFA | Probíhá projekt, který umožní koncem roku začít používat MFA. |                 
 | **Prostředí e-mailu** | Místní Exchange, Exchange Online | V současnosti se místní Exchange migruje na Exchange Online. Už je migrovaných 75 % poštovních schránek. Zbývajících 25 % bude migrováno do začátku pilotního nasazení Intune. |                
-| **SharePoint** | Místní SharePoint | Plány přechodu na SharePoint Online neexistují. |  
+| **SharePoint** | SharePoint v místním prostředí | Plány přechodu na SharePoint Online neexistují. |  
 | **Současné řešení MDM** | Exchange ActiveSync |  |
 | **Řešení pro certifikáty** | Microsoft Server 2012 R2, AD Certificate Services | Infrastruktura veřejných klíčů se používá jen pro webové servery. |
 | **Správa systému** | Configuration Manager aktuální větev | Chcete prozkoumat řešení spolusprávy |
@@ -138,7 +138,7 @@ Identita představuje způsob identifikace uživatelů, kteří patří do organ
 
 Přečtěte si další informace o následujících požadavcích na identitu Intune:
 
-- [Požadavky na identitu](https://docs.microsoft.com/azure/active-directory/understand-azure-identity-solutions)
+- [Požadavky na identitu](https://docs.microsoft.com/azure/active-directory/understand-azure-identity-solutions).
 
 - [Požadavky na synchronizaci adresáře](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect)
 
@@ -161,11 +161,11 @@ Pokud plánujete, že budete v Intune používat certifikáty s profily VPN, Wi-
 
 Kromě toho, pokud budou použity profily certifikátů SCEP, je nutné určit, který server bude hostovat funkci služby zápisu síťových zařízení (NDES) a jak bude provedena komunikace.
 
-Další informace pro:
+Další informace:
 
 - [Jak konfigurovat profily certifikátů Intune](../protect/certificates-configure.md)
 
-- [Jak konfigurovat infrastrukturu certifikátů pro SCEP](../protect/certificates-scep-configure.md)
+- [Postup konfigurace infrastruktury certifikátů pro SCEP](../protect/certificates-scep-configure.md)
 
 - [Jak konfigurovat infrastrukturu certifikátů pro PFX](../protect/certficates-pfx-configure.md)
 
@@ -242,7 +242,7 @@ Musíte určit, jestli jsou zásady pro podmínky a ujednání potřeba. Pokud t
 | **Název podmínek a ujednání** | **Případ použití** | **Cílová skupina** |
 |:---:|:---:|:---:|
 | Firemní podmínky a ujednání | Firemní | Firemní uživatelé |                 
-| Podmínky a ujednání pro uživatele s vlastním zařízením | UŽIVATELÉ S VLASTNÍM ZAŘÍZENÍM (BYOD) | Uživatelé s vlastním zařízením |                
+| Podmínky a ujednání pro uživatele s vlastním zařízením | BYOD | Uživatelé s vlastním zařízením |                
 
 
 Můžete si [stáhnout šablonu výše uvedené tabulky](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) a namapovat podmínky a ujednání na své skupiny uživatelů.
@@ -269,11 +269,11 @@ Profily pomáhají koncovému uživateli připojit se k firemním datům. Intune
 
 - Profily certifikátů
 
-- Profil Wi-Fi
+- Wi-Fi profil
 
 - Profil VPN
 
-- E-mailový profil
+- e-mailový profil
 
 Pojďme si podrobnější přehled o jednotlivých typech profilů.
 
@@ -302,7 +302,7 @@ Tady je příklad, jak můžete certifikáty zdokumentovat během návrhu:
 
 Můžete si [stáhnout šablonu výše uvedené tabulky](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) a identifikovat potřeby pro vlastní profily certifikátů.
 
-#### <a name="wi-fi-profile"></a>Profil Wi-Fi
+#### <a name="wi-fi-profile"></a>Wi-Fi profil
 
 Profily Wi-Fi se používají k automatickému připojení mobilního zařízení k bezdrátové síti. Intune podporuje nasazení profilů Wi-Fi pro všechny podporované platformy. Přečtěte si další informace o tom, [jak Intune podporuje profily Wi-Fi.](../configuration/wi-fi-settings-configure.md)
 
@@ -328,7 +328,7 @@ Tady je příklad, jak dokumentovat návrh profilu VPN.
 
 Můžete si [stáhnout šablonu výše uvedené tabulky](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) a identifikovat potřeby pro vlastní profily VPN.
 
-#### <a name="email-profile"></a>E-mailový profil
+#### <a name="email-profile"></a>e-mailový profil
 
 E-mailové profily umožňují automatické nastavení e-mailového klienta pomocí informací o připojení a konfigurace e-mailu. Intune podporuje e-mailové profily jen na některých zařízeních. Přečtěte si další informace o [e-mailových profilech a podporovaných platformách](../configuration/email-settings-configure.md).
 
@@ -336,13 +336,13 @@ Tady je příklad, jak dokumentovat návrh e-mailových profilů:
 
 | **Typ** | **Název profilu** | **Platforma zařízení** | **Případy použití** |
 |:---:|:---:|:---:|:---:|
-| E-mailový profil | E-mailový profil pro iOS | iOS | Firemní – informatik (uživatel s vlastním zařízením) |
-| E-mailový profil | E-mailový profil pro Android Knox | Android Knox | UŽIVATELÉ S VLASTNÍM ZAŘÍZENÍM (BYOD) |
+| e-mailový profil | E-mailový profil pro iOS | iOS | Firemní – informatik (uživatel s vlastním zařízením) |
+| e-mailový profil | E-mailový profil pro Android Knox | Android Knox | BYOD |
 
 Můžete si [stáhnout šablonu výše uvedené tabulky](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) a identifikovat potřeby pro vlastní e-mailové profily.
 ### <a name="apps"></a>Aplikace
 
-Intune můžete použít k několika způsobům doručování aplikací uživatelům nebo zařízením. Mezi typy aplikací patří instalační aplikace softwaru, aplikace z veřejného obchodu s aplikacemi, externí odkazy nebo spravované aplikace pro iOS. Kromě nasazení individuálních aplikací můžete spravovat a nasazovat také hromadně nakoupené aplikace pořízené prostřednictvím programů hromadného nákupu pro iOS a Windows. Další informace pro:
+Intune můžete použít k několika způsobům doručování aplikací uživatelům nebo zařízením. Mezi typy aplikací patří instalační aplikace softwaru, aplikace z veřejného obchodu s aplikacemi, externí odkazy nebo spravované aplikace pro iOS. Kromě nasazení individuálních aplikací můžete spravovat a nasazovat také hromadně nakoupené aplikace pořízené prostřednictvím programů hromadného nákupu pro iOS a Windows. Další informace:
 
 - [Typy aplikací, které můžete doručovat](../apps/app-management.md)
 
@@ -371,14 +371,14 @@ Protože aplikace můžete nasazovat uživatelům a zařízením, doporučujeme,
 
 Zásady ochrany aplikace minimalizují ztrátu dat tím, že definují, jak aplikace spravuje firemní data. Intune podporuje zásady ochrany pro každou aplikaci vytvořenou tak, aby fungovala se správou mobilních aplikací. Při návrhu zásad ochrany aplikací se musíte rozhodnout, jaká omezení chcete uplatnit na firemní data v dané aplikaci. Doporučujeme vám prostudovat, jak [zásady ochrany aplikací](../apps/app-protection-policy.md) fungují. Tady je příklad, jak dokumentovat stávající aplikace a jakou ochranu potřebují.
 
-| **Aplikace** | **Účel** | **Platformy** | **Případ použití** | **Zásada ochrany aplikace** |
+| **Aplikace** | **Účel** | **Platformy** | **Případ použití** | **zásady ochrany aplikací** |
 |:---:|:---:|:---:|:---:|:---:|
-| Outlook Mobile  | K dispozici | iOS | Firemní – vedení | Nelze provést jailbreak, šifrování souborů |                                                         
-| Word | K dispozici | iOS/iPadOS, Android – Samsung KNOX, non-KNOX, Windows 10 Mobile | Firemní zařízení, vlastní zařízení uživatelů | Nelze provést jailbreak, šifrování souborů |                                                         
+| Outlook Mobile  | K dispozici. | iOS | Firemní – vedení | Nelze provést jailbreak, šifrování souborů |                                                         
+| Word | K dispozici. | iOS/iPadOS, Android – Samsung KNOX, non-KNOX, Windows 10 Mobile | Firemní zařízení, vlastní zařízení uživatelů | Nelze provést jailbreak, šifrování souborů |                                                         
 
 
 Můžete si [stáhnout šablonu výše uvedené tabulky](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) a identifikovat potřeby pro vlastní zásady ochrany aplikací.
-#### <a name="compliance-policies"></a>Zásady slučitelnosti
+#### <a name="compliance-policies"></a>Compliance zásady
 
 Zásady dodržování předpisů určují, zda zařízení vyhovuje určitým požadavkům. Služba Intune používá zásady dodržování předpisů k tomu, aby zjistila, jestli zařízení vyhovuje nebo nevyhovuje. Stav dodržování předpisů je pak možné použít k zakázání nebo povolení přístupu k firemním prostředkům. Pokud se vyžaduje podmíněný přístup, doporučujeme navrhnout [zásadu dodržování předpisů pro zařízení](../protect/device-compliance-get-started.md).
 
@@ -394,7 +394,7 @@ Tady je příklad návrhu zásad dodržování předpisů:
 Můžete si [stáhnout šablonu výše uvedené tabulky](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) a identifikovat potřeby pro vlastní zásady dodržování předpisů.
 #### <a name="conditional-access-policies"></a>Zásady podmíněného přístupu
 
-Podmíněný přístup slouží k povolení přístupu k e-mailu a dalším prostředkům společnosti jenom vyhovujícím zařízením. Při řízení přístupu k firemním prostředkům spolupracuje Intune s řešením Enterprise Mobility + Security (EMS). Rozhodněte, jestli požadujete podmíněný přístup a co musí být zabezpečené. Další informace o [podmíněném přístupu](../protect/conditional-access.md).
+Podmíněný přístup slouží k povolení přístupu k e-mailu a dalším prostředkům společnosti jenom vyhovujícím zařízením. Při řízení přístupu k firemním prostředkům spolupracuje Intune s řešením Enterprise Mobility + Security (EMS). Rozhodněte, jestli požadujete podmíněný přístup a co musí být zabezpečené. Přečtěte si další informace o [podmíněném přístupu](../protect/conditional-access.md).
 
 V případě online přístupu rozhodněte, které platformy a skupiny uživatelů budete cílit podle zásad podmíněného přístupu. Také určete, jestli potřebujete nainstalovat nebo nakonfigurovat konektor Intune pro místní Exchange: 
 
@@ -402,7 +402,7 @@ V případě online přístupu rozhodněte, které platformy a skupiny uživatel
 
 Tady je příklad, jak dokumentovat zásady podmíněného přístupu:
 
-| **Služba** | **Platformy moderního ověřování** | **Základní ověřování** | **Případy použití** |
+| **Služba** | **Platformy moderního ověřování** | **Základní ověření** | **Případy použití** |
 |:---:|:---:|:---:|:---:|
 | Exchange Online | iOS/iPadOS, Android | Blokování nevyhovujících zařízení na platformách podporovaných službou Intune | Firemní zařízení, vlastní zařízení uživatelů |
 | SharePoint Online | iOS/iPadOS, Android |  | Firemní zařízení, vlastní zařízení uživatelů |

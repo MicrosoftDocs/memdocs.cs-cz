@@ -18,10 +18,10 @@ ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: e50d518c3709d71085a57ad9a430444564c24cb9
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79331007"
 ---
 # <a name="additional-resources-for-planning-your-intune-deployment"></a>Další zdroje informací pro plánování nasazení Intune
@@ -34,19 +34,19 @@ Tady je seznam šablon tabulek pro každý oddíl.
 
 |Plánování nasazení  |Návrh a implementace   |Testování a ověřování |
 |-----|----- |------|
-| Cíle nasazení |Současné prostředí|Ověřovací testování funkcí|
+| Cíle nasazení |Současné prostředí|Ověřovací testování funkčnosti|
 | Úkoly nasazení |Zařízení|Ověřovací testování scénářů správce IT|
 | Aspekty nasazení |Podmínky a ujednání|Testování platnosti scénářů koncového uživatele|
 | Scénáře použití |Zásady konfigurace| |
 | Požadavky na scénář použití |profil certifikátu| |
-| Plán nasazení |Profil Wi-Fi| |
+| Plán nasazení |Wi-Fi profil| |
 | Plán komunikace při nasazení|Profil VPN| |
 | |  E-mailový profil | |
 | | Aplikace | |
 | | zásady dodržování předpisů | |
-| | Zásada podmíněného přístupu|-|
+| | Zásady podmíněného přístupu|-|
 
-## <a name="further-reading"></a>Další informace
+## <a name="further-reading"></a>Další čtení
 
 Další informace, které mohou být užitečné při plánování nasazení řešení Intune, jeho návrhu a implementaci, najdete v těchto zdrojích.
 

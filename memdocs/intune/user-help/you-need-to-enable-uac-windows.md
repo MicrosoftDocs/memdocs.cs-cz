@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 3ff737d99a5d57e8e4a1f090e65e787f9b57c5e3
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79324035"
 ---
 # <a name="how-to-enable-user-access-control"></a>Povolení nástroje Řízení uživatelských účtů
@@ -33,7 +33,7 @@ Vaše firma nebo škola potřebuje zajistit, aby zařízení přistupující k j
 Tady je postup, jak můžete změnit nastavení nástroje Řízení uživatelských účtů:
 
 1. Přejděte na **Start** a otevřete **Ovládací panely**.
-2. Otevřete **Zabezpečení a údržba** > **Změnit nastavení nástroje Řízení uživatelských účtů**.
+2. Otevřete **zabezpečení a údržba** > **Změna nastavení řízení uživatelských účtů**.
 3. Na stránce **Nastavit upozorňování na změny v počítači** přesuňte posuvník na jednu z prvních dvou pozic, které jsou nejblíže možnosti **Vždy upozornit**.
 
 Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).

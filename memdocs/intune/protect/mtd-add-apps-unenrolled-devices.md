@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: c85816c36427727416f531effa695e7d2eec66aa
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79325375"
 ---
 # <a name="add-mobile-threat-defense-apps-to-unenrolled-devices"></a>Přidání aplikací ochrany před mobilními hrozbami do neregistrovaných zařízení
@@ -62,7 +62,7 @@ Pokud ale chcete, aby byla aplikace k dispozici koncovým uživatelům prostřed
 
 ### <a name="making-lookout-for-work-available-to-end-users"></a>Umožnění Lookout for Work k dispozici koncovým uživatelům
 
-- **Androidemem**  
+- **Android**  
   - Přečtěte si pokyny pro [přidávání aplikací z Android Storu do Microsoft Intune](../apps/store-apps-android.md). Tuto [adresu URL Lookout for Work-obchod Play](https://play.google.com/store/apps/details?id=com.lookout.enterprise) použijte při dokončování části **Konfigurace informací o aplikaci** .
 
 - **iOS**
@@ -84,7 +84,7 @@ Pokud ale chcete, aby byla aplikace k dispozici koncovým uživatelům prostřed
 
 ### <a name="making-zimperium-available-to-end-users"></a>Zpřístupnění Zimperium koncovým uživatelům
 
-- **Androidemem**
+- **Android**
   - Přečtěte si pokyny pro [přidávání aplikací z Android Storu do Microsoft Intune](../apps/store-apps-android.md). Při dokončování části **Konfigurace informací o aplikaci** použijte tuto [adresu Zimperium obchod Play](https://play.google.com/store/apps/details?id=com.zimperium.zips&hl=en) .
 - **iOS**
   - Přečtěte si pokyny pro [přidávání aplikací z iOS Storu do Microsoft Intune](../apps/store-apps-ios.md). Tuto [adresu URL obchodu s aplikacemi Zimperium](https://itunes.apple.com/us/app/zimperium-zips/id1030924459?mt=8) použijte při dokončování části **Konfigurace informací o aplikaci** .
@@ -98,7 +98,7 @@ Pokud ale chcete, aby byla aplikace k dispozici koncovým uživatelům prostřed
 
 ### <a name="making-better-mobile-available-to-end-users"></a>Zpřístupnění lepšího mobilního telefonu koncovým uživatelům
 
-- **Androidemem**
+- **Android**
   - Přečtěte si pokyny pro [přidávání aplikací z Android Storu do Microsoft Intune](../apps/store-apps-android.md). Tuto [aktivní adresu URL ochrany obchod Play](https://play.google.com/store/apps/details?id=com.better.active.shield.enterprise) použijte při dokončování části **Konfigurace informací o aplikaci** .
 
 <!-- - **iOS**

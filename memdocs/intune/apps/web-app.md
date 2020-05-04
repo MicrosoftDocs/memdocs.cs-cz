@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: e6d4fd6022e7d772c70a2147e0e25bd7dad0775c
-ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/31/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80407695"
 ---
 # <a name="add-web-apps-to-microsoft-intune"></a>Přidání webových aplikací do Microsoft Intune
@@ -52,7 +52,7 @@ Pokud chcete přidat aplikaci do Intune v podobě zástupce aplikace na webu, po
 3. V podokně **Vybrat typ aplikace** vyberte v části dostupné **jiné** typy možnost **webový odkaz**.
 4. Klikněte na **Vybrat**. Zobrazí se kroky **Přidání aplikace** .
 5. Na stránce **informace o aplikaci** přidejte následující informace:
-    - **Název**: Zadejte název aplikace, který se zobrazí na Portálu společnosti. 
+    - **Název**: zadejte název aplikace, který se zobrazí na portálu společnosti. 
 
         > [!NOTE]
         > Pokud po nasazení a instalaci aplikace změníte název aplikace pomocí Intune na portálu Azure Portal, nebude už možné na tuto aplikaci cílit příkazy.

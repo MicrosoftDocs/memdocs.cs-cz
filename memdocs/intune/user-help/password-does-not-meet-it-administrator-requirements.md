@@ -18,10 +18,10 @@ ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 695ef28063d44aeba1bb91b63d79085717822912
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79324531"
 ---
 # <a name="device-password-requirements-for-enrolled-devices"></a>Požadavky na heslo zařízení pro zaregistrovaná zařízení
@@ -38,45 +38,45 @@ Pokud potřebujete další pomoc nebo zjistit konkrétní požadavky vaší orga
 
 ## <a name="windows-10-password-requirements"></a>Požadavky na heslo pro Windows 10
 
-| Zpráva | Jak opravit |
+| Zpráva | Jak problém vyřešit |
 |-----------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Heslo je povinné. | Nastavte heslo. Vaše organizace vyžaduje, abyste zadali heslo k odemknutí zařízení. |
 | Heslo je příliš jednoduché. |  Ujistěte se, že heslo neobsahuje sekvenční ani opakující se čísla, například 1234 nebo 1111. |
 | Heslo je příliš krátké.| Aktualizujte nebo nastavte heslo o více znaků. Vaše organizace vyžaduje, aby vaše heslo bylo určitou délkou. To, co se ve skutečnosti zvolí, se liší, ale minimální délka, kterou může vyžadovat, je 4 znaky a maximální hodnota je 16. |
 | Heslo může obsahovat pouze čísla. | Nastavte heslo, které obsahuje pouze čísla.|
 | Heslo může obsahovat jenom alfanumerické znaky. | Nastavte heslo, které obsahuje kombinaci čísel a písmen.|
-| Heslo musí obsahovat složité znaky. | Přidejte složité znaky, jako jsou čísla, Velká písmena a symboly, jako jsou `$`, `%`a `#`. Vaše organizace vyžaduje kombinaci písmen, číslic a jiných než alfanumerických znaků, aby ji ostatní mohli uhodnout a heslo.|  
+| Heslo musí obsahovat složité znaky. | Přidejte složité znaky, jako jsou čísla, Velká písmena a symboly jako `$`, `%`a `#`. Vaše organizace vyžaduje kombinaci písmen, číslic a jiných než alfanumerických znaků, aby ji ostatní mohli uhodnout a heslo.|  
 | Platnost hesla vypršela. | Nastavte nové heslo. Vaše organizace vyžaduje, abyste po určitém počtu dnů změnili heslo. |
-| Heslo bylo použito příliš nedávno. | Vyberte heslo, které jste předtím nepoužili. Vaše organizace vyžaduje, abyste před opětovným použitím hesla prošli určitou dobu. |
+| Heslo bylo použito v nedávné době. | Vyberte heslo, které jste předtím nepoužili. Vaše organizace vyžaduje, abyste před opětovným použitím hesla prošli určitou dobu. |
 
 ## <a name="ios-passcode-requirements"></a>požadavky na přístupový kód pro iOS
 
-| Zpráva | Jak opravit |
+| Zpráva | Jak problém vyřešit |
 |-----------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Heslo je povinné.| Nastavte heslo. Vaše organizace vyžaduje, abyste zadali heslo k odemknutí zařízení. |
 | Heslo je příliš jednoduché. |  Ujistěte se, že heslo neobsahuje sekvenční ani opakující se čísla, například 1234 nebo 1111. |
 | Heslo je příliš krátké. | Aktualizujte nebo nastavte heslo s více znaky. Vaše organizace vyžaduje, aby váš přístupový kód měl určitou délku. To, co se ve skutečnosti zvolí, se liší, ale minimální délka, kterou může vyžadovat, je 4 znaky a maximální hodnota je 14. Když změníte heslo, může se zobrazit výzva od společnosti Apple, která oznamuje, že chcete zadat 6 nebo více znaků. Tato zpráva je doporučení systému Apple. Pokud vaše organizace vyžaduje jenom heslo, které má 4 nebo 5 znaků, nemusíte zadávat heslo s číslicí 6.|  
 | Heslo musí obsahovat jenom číslice. | Nastavte heslo, které obsahuje pouze čísla.|
 | Heslo může obsahovat jenom alfanumerické znaky.| Nastavte heslo, které obsahuje kombinaci čísel a písmen.|
-| Heslo musí obsahovat jiné než alfanumerické znaky. | Přidejte speciální znaky, například `&`, `!`, `$`, `%`a `#`. Vaše organizace vyžaduje kombinaci písmen, číslic a jiných než alfanumerických znaků, aby ji ostatní mohli uhodnout a heslo.|
+| Heslo musí obsahovat jiné než alfanumerické znaky. | `&`Přidejte speciální znaky, jako například `!`, `$`, `%`, a `#`. Vaše organizace vyžaduje kombinaci písmen, číslic a jiných než alfanumerických znaků, aby ji ostatní mohli uhodnout a heslo.|
 | Platnost hesla vypršela. | Nastavte nové heslo. Vaše organizace vyžaduje, abyste po určitém počtu dnů změnili heslo. |
 | Vaše heslo bylo použito příliš nedávno.| Vyberte si heslo, které jste předtím nepoužili. Vaše organizace vyžaduje, abyste před opětovným použitím hesla prošli určitou dobu. |
 |Vyžaduje se ověření dotykového ID nebo ID obličeje. | Nastavte Touch ID nebo ID obličeje. Vaše organizace vyžaduje, abyste před použitím automatického vyplňování hesel nebo informací o kreditních kartách ověřili jednu z těchto metod. | 
 
 ## <a name="macos-password-requirements"></a>macOS požadavky na heslo
-| Zpráva | Jak opravit |
+| Zpráva | Jak problém vyřešit |
 |-----------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Heslo je povinné. | Nastavte heslo. Vaše organizace vyžaduje, abyste zadali heslo k odemknutí zařízení. |
 | Heslo je příliš jednoduché.|  Ujistěte se, že heslo neobsahuje sekvenční ani opakující se čísla, například 1234 nebo 1111. |
 | Heslo je příliš krátké. | Aktualizujte nebo nastavte heslo o více znaků. Vaše organizace vyžaduje, aby vaše heslo bylo určitou délkou.|
 | Heslo může obsahovat pouze čísla. | Nastavte heslo, které obsahuje pouze čísla.|
 | Heslo může obsahovat jenom alfanumerické znaky. | Nastavte heslo, které obsahuje kombinaci čísel a písmen.|
-| Heslo musí obsahovat jiné než alfanumerické znaky. | Přidejte speciální znaky, například `&`, `!`, `$`, `%`a `#`. Vaše organizace vyžaduje kombinaci písmen, číslic a jiných než alfanumerických znaků, aby ji ostatní mohli uhodnout a heslo.|
+| Heslo musí obsahovat jiné než alfanumerické znaky. | `&`Přidejte speciální znaky, jako například `!`, `$`, `%`, a `#`. Vaše organizace vyžaduje kombinaci písmen, číslic a jiných než alfanumerických znaků, aby ji ostatní mohli uhodnout a heslo.|
 | Platnost hesla vypršela. | Nastavte nové heslo. Vaše organizace vyžaduje, abyste po určitém počtu dnů změnili heslo. |
-| Heslo bylo použito příliš nedávno. | Vyberte heslo, které jste předtím nepoužili. Vaše organizace vyžaduje, abyste před opětovným použitím hesla prošli určitou dobu. |
+| Heslo bylo použito v nedávné době. | Vyberte heslo, které jste předtím nepoužili. Vaše organizace vyžaduje, abyste před opětovným použitím hesla prošli určitou dobu. |
 
 ## <a name="android-password-requirements"></a>Požadavky na heslo pro Android
-| Zpráva | Jak opravit |
+| Zpráva | Jak problém vyřešit |
 |-----------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Heslo je povinné. | Nastavte heslo nebo PIN kód. Vaše organizace vyžaduje, abyste zadali heslo k odemknutí zařízení. |
 | Heslo je příliš jednoduché. |  Ujistěte se, že vaše heslo nebo PIN kód neobsahuje pořadové ani opakující se číslo, například 1234 nebo 1111. |
@@ -84,10 +84,10 @@ Pokud potřebujete další pomoc nebo zjistit konkrétní požadavky vaší orga
 | Heslo musí obsahovat čísla. | Nastavte heslo nebo PIN kód, který obsahuje čísla.|
 | Heslo musí obsahovat písmena. | Nastavte heslo obsahující písmena z abecedy.|
 | Heslo musí obsahovat alfanumerické znaky. | Nastavte heslo, které obsahuje kombinaci čísel a písmen.|
-| Heslo musí obsahovat alfanumerické znaky a symboly. | Nastavte heslo, které obsahuje kombinaci písmen, číslic a speciálních znaků, například `&`, `!`, `$`, `%`a `#`. |
+| Heslo musí obsahovat alfanumerické znaky a symboly. | Nastavte heslo, které obsahuje kombinaci písmen, číslic a speciálních znaků `&`, například, `!`, `$` `%`, a. `#` |
 | Heslo musí používat biometrickou technologii.| Nastavte si zařízení pro použití biometrického ověřování, jako je otisk prstu nebo rozpoznávání obličeje.
 | Platnost hesla vypršela. | Nastavte nové heslo. Vaše organizace vyžaduje, abyste po určitém počtu dnů změnili heslo. |
-| Heslo bylo použito příliš nedávno. | Vyberte heslo, které jste předtím nepoužili. Vaše organizace vyžaduje, abyste před opětovným použitím hesla prošli určitou dobu. |
+| Heslo bylo použito v nedávné době. | Vyberte heslo, které jste předtím nepoužili. Vaše organizace vyžaduje, abyste před opětovným použitím hesla prošli určitou dobu. |
 
 ## <a name="next-steps"></a>Další kroky
 

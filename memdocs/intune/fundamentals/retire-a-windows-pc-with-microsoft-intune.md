@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: e7d88b5ba8f5071821d1a9901a26bfb4a5a6fbd3
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79330675"
 ---
 # <a name="retire-a-windows-pc"></a>Vyřazení počítače s Windows
@@ -31,9 +31,9 @@ ms.locfileid: "79330675"
 
 Následujícím postupem můžete vyřadit počítače, které spravujete tak, že na nich běží klientský software Intune. Při vyřazení počítače se daný počítač odebere ze správy Intune. Počítač nelze obnovit do původního továrního nastavení vymazáním z Intune.
 
-1. V [konzole pro správu Microsoft Intune](https://manage.microsoft.com/)vyberte **skupiny** &gt; **všechna zařízení** (nebo jinou skupinu obsahující počítač, který chcete vyřadit).
+1. V [konzole pro správu Microsoft Intune](https://manage.microsoft.com/) zvolte **Skupiny** &gt; **Všechna zařízení** (nebo jinou skupinu obsahující počítač, který chcete vyřadit).
 
-2. Vyberte zařízení, která chcete vyřadit, a potom zvolte **Vyřadit z provozu či vymazat**.
+2. Vyberte zařízení, která chcete vyřadit, a potom zvolte **vyřadit z provozu nebo vymazat**.
 
 Když budete chtít počítač do Intune znovu zaregistrovat, nainstalujte na počítači znovu klientský software, a to podle pokynů uvedených v tématu [Instalace klienta na počítači s Windows pomocí Microsoft Intune](install-the-windows-pc-client-with-microsoft-intune.md).
 

@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 700a06fd876705a14f661a71d6d97419f13a13c6
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79324831"
 ---
 # <a name="enroll-your-corporate-device-with-the-microsoft-intune-app"></a>Registrace podnikového zařízení pomocí aplikace Microsoft Intune
@@ -33,7 +33,7 @@ Zaregistrujte svoje zařízení s Androidem vlastněné společností, abyste z�
 Existují čtyři způsoby, jak se zaregistrovat. Vaše organizace by vám měla sdělit, kterou možnost použít.
  
 * Bezkontaktní komunikace (NFC)  
-* Token  
+* Podpisový  
 * Kód QR   
 * Google Zero Touch  
 
@@ -58,11 +58,11 @@ Provedením těchto kroků nastavíte a zaregistrujete své zařízení.
  
        ![Příklad obrázku obrazovky s podmínkami pro Google, který vidíte, pokud používáte Google Zero Touch, zvýrazňování tlačítka přijmout & pokračovat.](./media/google-zero-touch-intune-app-01.png)   
    
-4. Zkontrolujte výrazy Google. Pak klepněte na **přijmout &AMP; pokračovat**.  
+4. Zkontrolujte výrazy Google. Pak klepněte na **přijmout & pokračovat**.  
 
       ![Příklad obrázku obrazovky podmínek Google, zvýrazňování tlačítka přijmout & pokračování](./media/fully-managed-intune-app-04.png)   
 
-6. Kontrola podmínek služby v Chrome. Pak klepněte na **přijmout &AMP; pokračovat**.  
+6. Kontrola podmínek služby v Chrome. Pak klepněte na **přijmout & pokračovat**.  
 
    ![Příklad obrázku obrazovky s podmínkami služby Chrome, zvýraznění tlačítko přijmout & pokračovat](./media/fully-managed-intune-app-06.png)   
 
@@ -119,7 +119,7 @@ V této části zadáte svůj token poskytovaný společností. Až budete hotov
 
 4. Vyberte **zadat kód**.  
 
-5. Na obrazovce **Kontrola nebo zadání kódu** zadejte kód, který vám vaše organizace poskytla.  Poté klikněte na **Další**.  
+5. Na obrazovce **Kontrola nebo zadání kódu** zadejte kód, který vám vaše organizace poskytla.  Pak klikněte na **Další**.  
 
    ![Příklad obrázku skenování nebo zadání kódu obrazovky, zvýraznění tlačítka Další](./media/token-intune-app-04.png)  
 
@@ -128,4 +128,4 @@ V této části zadáte svůj token poskytovaný společností. Až budete hotov
 
 
 ## <a name="next-steps"></a>Další kroky   
-Potřebujete ještě další pomoc? Obraťte se na svou firemní podporu (kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980)) nebo napište <a href="mailto:wintunedroidfbk@microsoft.com?subject=I'm having trouble with enrolling my Android device&body=Describe the issue you're experiencing here.">týmu Microsoft Android</a>.  
+Potřebujete ještě další pomoc? Obraťte se na firemní podporu (kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980)) nebo napište <a href="mailto:wintunedroidfbk@microsoft.com?subject=I'm having trouble with enrolling my Android device&body=Describe the issue you're experiencing here.">týmu Microsoft Android</a>.  

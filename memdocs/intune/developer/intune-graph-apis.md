@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: b6306f89f1e8ed2aefadd2691df4b3b21e2edafe
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79327191"
 ---
 # <a name="how-to-use-azure-ad-to-access-the-intune-apis-in-microsoft-graph"></a>Používání Azure AD pro přístup k rozhraním Intune API v Microsoft Graphu
@@ -41,7 +41,7 @@ Přístup k rozhraním Intune API v Microsoft Graphu vyžaduje:
 
 - Koncový uživatel musí udělit dané aplikaci oprávnění k provádění úloh aplikací pro jejich tenanta Azure.
 
-V tomto článku najdete:
+Tento článek:
 
 - Postup pro registraci aplikace s přístupem k rozhraní Microsoft Graph API a příslušnými oprávněními rolí
 
@@ -51,11 +51,11 @@ V tomto článku najdete:
 
 - Popisuje postup pro podporu více tenantů.
 
-Další informace naleznete v tématu:
+Další informace naleznete v tématu:
 
-- [Autorizace přístupu k webovým aplikacím pomocí OAuth 2.0 a Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-protocols-oauth-code)
+- [Autorizace přístupu k webovým aplikacím s použitím OAuth 2.0 a Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-protocols-oauth-code)
 - [Začínáme s ověřováním Azure AD](https://www.visualstudio.com/docs/integrate/get-started/auth/oauth)
-- [Integrace aplikací s Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications)
+- [Integrace aplikací se službou Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications)
 - [Principy OAuth 2.0](https://oauth.net/2/)
 
 ## <a name="register-apps-to-use-the-microsoft-graph-api"></a>Registrace aplikací k používání rozhraní Microsoft Graph API
@@ -68,7 +68,7 @@ Postup pro registraci aplikace k používání rozhraní Microsoft Graph API:
     - Účet správce tenanta
     - Uživatelský účet tenanta se zapnutou možností **Uživatelé můžou registrovat aplikace**
 
-2. V nabídce vyberte **Azure Active Directory** &gt; **Registrace aplikací**.
+2. V nabídce zvolte **Azure Active Directory** &gt; **Registrace aplikací**.
 
     <img src="../media/azure-ad-app-reg.png" width="157" height="170" alt="The App registrations menu command" />
 
@@ -90,15 +90,15 @@ Postup pro registraci aplikace k používání rozhraní Microsoft Graph API:
 
     1. Všimněte si hodnoty **ID aplikace**.
 
-    2. Vyberte **nastavení** &gt; **přístup k rozhraní API** &gt; **požadovaná oprávnění**.
+    2. Zvolte **Nastavení** &gt; **Přístup přes rozhraní API** &gt; **Požadovaná oprávnění**.
 
     <img src="../media/azure-ad-req-perm.png" width="483" height="186" alt="The Required permissions setting" />
 
-6. V okně **požadovaná oprávnění** zvolte **Přidat** &gt; **přidat přístup k rozhraní API** &gt; **Vyberte rozhraní API**.
+6. V okně **Požadovaná oprávnění** zvolte **Přidat** &gt; **Přidat přístup přes rozhraní API** &gt; **Vyberte rozhraní API**.
 
     <img src="../media/azure-ad-add-graph.png" width="436" height="140" alt="The Microsoft Graph setting" />
 
-7. V okně **Vybrat rozhraní API** zvolte **Microsoft Graph** &gt; **Vybrat**.  Otevře se okno **Povolit přístup**, které obsahuje obory oprávnění dostupné pro aplikaci.
+7. V okně **Vyberte rozhraní API** zvolte **Microsoft Graph** &gt; **Vybrat**.  Otevře se okno **Povolit přístup**, které obsahuje obory oprávnění dostupné pro aplikaci.
 
     <img src="../media/azure-ad-perm-scopes.png" width="489" height="248" alt="Intune Graph API permission scopes" />
 
@@ -144,15 +144,15 @@ Když udělujete oprávnění pro Microsoft Graph, můžete určit následujíc�
 
 Nastavení _Povolit přístup_ | Název oboru
 :--|:--
-__Provádění vzdálených akcí s dopadem na uživatele na zařízeních v Microsoft Intune__ | [DeviceManagementManagedDevices.PrivilegedOperations.All](#mgd-po)
-__Čtení a zápis do zařízení v Microsoft Intune__ | [DeviceManagementManagedDevices.ReadWrite.All](#mgd-rw)
+__Provádění vzdálených akcí s dopadem na uživatele na zařízeních v Microsoft Intune__ | [DeviceManagementManagedDevices. PrivilegedOperations. All](#mgd-po)
+__Čtení a zápis do zařízení v Microsoft Intune__ | [DeviceManagementManagedDevices.. All](#mgd-rw)
 __Čtení zařízení v Microsoft Intune__ | [DeviceManagementManagedDevices.Read.All](#mgd-ro)
 __Čtení a zápis nastavení RBAC v Microsoft Intune__ | [DeviceManagementRBAC.ReadWrite.All](#rac-rw)
 __Čtení nastavení RBAC v Microsoft Intune__ | DeviceManagementRBAC.Read.All
 __Čtení a zápis aplikací v Microsoft Intune__ | [DeviceManagementApps.ReadWrite.All](#app-rw)
 __Čtení aplikací v Microsoft Intune__ | [DeviceManagementApps.Read.All](#app-ro)
-__Čtení a zápis konfigurace a zásad zařízení v Microsoft Intune__ | DeviceManagementConfiguration. All
-__Čtení konfigurace a zásad zařízení v Microsoft Intune__ | [DeviceManagementConfiguration.Read.All](#cfg-ro)
+__Čtení a zápis konfigurace a zásad zařízení v Microsoft Intune__ | DeviceManagementConfiguration.ReadWrite.All
+__Čtení konfigurace a zásad zařízení v Microsoft Intune__ | [DeviceManagementConfiguration. Read. All](#cfg-ro)
 __Čtení a zápis konfigurace v Microsoft Intune__ | [DeviceManagementServiceConfig.ReadWrite.All](#svc-rw)
 __Čtení konfigurace v Microsoft Intune__ | DeviceManagementServiceConfig.Read.All
 
@@ -160,7 +160,7 @@ Tabulka uvádí seznam nastavení v pořadí, ve kterém se zobrazují na portá
 
 V současné době všechny obory oprávnění Intune vyžadují přístup správce.  To znamená, že ke spouštění aplikací nebo skriptů přistupujících k prostředkům s rozhraním Intune API se vyžadují odpovídající pověření.
 
-### <a name="app-ro"></a>DeviceManagementApps.Read.All
+### <a name="devicemanagementappsreadall"></a><a name="app-ro"></a>DeviceManagementApps.Read.All
 
 - Nastavení **Povolit přístup**: __Čtení aplikací v Microsoft Intune__
 
@@ -170,7 +170,7 @@ V současné době všechny obory oprávnění Intune vyžadují přístup sprá
   - Zásady ochrany aplikací
   - Konfigurace aplikací
 
-### <a name="app-rw"></a>DeviceManagementApps.ReadWrite.All
+### <a name="devicemanagementappsreadwriteall"></a><a name="app-rw"></a>DeviceManagementApps.ReadWrite.All
 
 - Nastavení **Povolit přístup**: __Čtení a zápis aplikací v Microsoft Intune__
 
@@ -183,7 +183,7 @@ V současné době všechny obory oprávnění Intune vyžadují přístup sprá
   - Zásady ochrany aplikací
   - Konfigurace aplikací
 
-### <a name="cfg-ro"></a>DeviceManagementConfiguration.Read.All
+### <a name="devicemanagementconfigurationreadall"></a><a name="cfg-ro"></a>DeviceManagementConfiguration.Read.All
 
 - Nastavení **Povolit přístup**: __Čtení konfigurace a zásad zařízení v Microsoft Intune__
 
@@ -192,7 +192,7 @@ V současné době všechny obory oprávnění Intune vyžadují přístup sprá
   - Zásady dodržování předpisů pro zařízení
   - Oznamovací zprávy
 
-### <a name="cfg-ra"></a>DeviceManagementConfiguration.ReadWrite.All
+### <a name="devicemanagementconfigurationreadwriteall"></a><a name="cfg-ra"></a>DeviceManagementConfiguration.ReadWrite.All
 
 - Nastavení **Povolit přístup**: __Čtení a zápis konfigurace a zásad zařízení v Microsoft Intune__
 
@@ -203,21 +203,21 @@ V současné době všechny obory oprávnění Intune vyžadují přístup sprá
   - Zásady dodržování předpisů pro zařízení
   - Oznamovací zprávy
 
-### <a name="mgd-po"></a>DeviceManagementManagedDevices.PrivilegedOperations.All
+### <a name="devicemanagementmanageddevicesprivilegedoperationsall"></a><a name="mgd-po"></a>DeviceManagementManagedDevices.PrivilegedOperations.All
 
 - Nastavení **Povolit přístup**: __Provádění vzdálených akcí s dopadem na uživatele na zařízeních v Microsoft Intune__
 
 - Povoluje na spravovaném zařízení následující vzdálené akce:
-  - Vyřadit
+  - Vyřazení
   - Vymazání
   - Resetování nebo obnovení hesla
   - Vzdálené uzamčení
   - Povolení nebo zakázání režimu ztráty
   - Vyčistění počítače
-  - Restartovat
+  - Restartování
   - Odstranění uživatele ze sdíleného zařízení
 
-### <a name="mgd-ro"></a>DeviceManagementManagedDevices.Read.All
+### <a name="devicemanagementmanageddevicesreadall"></a><a name="mgd-ro"></a>DeviceManagementManagedDevices.Read.All
 
 - Nastavení **Povolit přístup**: __Čtení zařízení v Microsoft Intune__
 
@@ -228,7 +228,7 @@ V současné době všechny obory oprávnění Intune vyžadují přístup sprá
   - Vzdálené akce
   - Informace o malwaru
 
-### <a name="mgd-rw"></a>DeviceManagementManagedDevices.ReadWrite.All
+### <a name="devicemanagementmanageddevicesreadwriteall"></a><a name="mgd-rw"></a>DeviceManagementManagedDevices.ReadWrite.All
 
 - Nastavení **Povolit přístup**: __Čtení a zápis zařízení v Microsoft Intune__
 
@@ -243,7 +243,7 @@ V současné době všechny obory oprávnění Intune vyžadují přístup sprá
   - Zakázání zámku aktivace
   - Požádat o vzdálenou pomoc
 
-### <a name="rac-ro"></a>DeviceManagementRBAC.Read.All
+### <a name="devicemanagementrbacreadall"></a><a name="rac-ro"></a>DeviceManagementRBAC.Read.All
 
 - Nastavení **Povolit přístup**: __Čtení nastavení RBAC v Microsoft Intune__
 
@@ -252,7 +252,7 @@ V současné době všechny obory oprávnění Intune vyžadují přístup sprá
   - Definice rolí
   - Operace prostředků
 
-### <a name="rac-rw"></a>DeviceManagementRBAC.ReadWrite.All
+### <a name="devicemanagementrbacreadwriteall"></a><a name="rac-rw"></a>DeviceManagementRBAC.ReadWrite.All
 
 - Nastavení **Povolit přístup**: __Čtení a zápis nastavení RBAC v Microsoft Intune__
 
@@ -262,7 +262,7 @@ V současné době všechny obory oprávnění Intune vyžadují přístup sprá
   - Přiřazení rolí
   - Definice rolí
 
-### <a name="svc-ro"></a>DeviceManagementServiceConfig.Read.All
+### <a name="devicemanagementserviceconfigreadall"></a><a name="svc-ro"></a>DeviceManagementServiceConfig.Read.All
 
 - Nastavení **Povolit přístup**: __Čtení konfigurace v Microsoft Intune__
 
@@ -271,14 +271,14 @@ V současné době všechny obory oprávnění Intune vyžadují přístup sprá
   - Certifikát pro službu Apple Push Notification Service
   - Program Apple Device Enrollment Program
   - Apple Volume Purchase Program
-  - Exchange Connector
+  - Součást Exchange Connector
   - Podmínky a ujednání
   - Služba TEM (Telecom Expense Management)
   - Cloudová infrastruktura veřejných klíčů
   - Branding
   - Mobile Threat Defense
 
-### <a name="svc-rw"></a>DeviceManagementServiceConfig.ReadWrite.All
+### <a name="devicemanagementserviceconfigreadwriteall"></a><a name="svc-rw"></a>DeviceManagementServiceConfig.ReadWrite.All
 
 - Nastavení **Povolit přístup**: __Čtení a zápis konfigurace v Microsoft Intune__
 
@@ -289,7 +289,7 @@ V současné době všechny obory oprávnění Intune vyžadují přístup sprá
   - Certifikát pro službu Apple Push Notification Service
   - Program Apple Device Enrollment Program
   - Apple Volume Purchase Program
-  - Exchange Connector
+  - Součást Exchange Connector
   - Podmínky a ujednání
   - Služba TEM (Telecom Expense Management)
   - Cloudová infrastruktura veřejných klíčů
@@ -344,7 +344,7 @@ Tento příklad ukazuje, jak pomocí C# načíst seznam zařízení přidružen�
 3. Pomocí Průzkumníka řešení do projektu přidejte balíček NuGet pro Microsoft ADAL.
 
     1. Klikněte pravým tlačítkem myši na Průzkumníka řešení.
-    2. Zvolte **Spravovat balíčky NuGet** &gt; **Procházet**.
+    2. Zvolte **Spravovat balíčky NuGet** &gt;**Procházet**.
     3. Vyberte `Microsoft.IdentityModel.Clients.ActiveDirectory` a pak zvolte **Nainstalovat**.
 
     <img src="../media/aad-auth-cpp-install-package.png" width="624" height="458" alt="Selecting the Azure AD identity model module" />
@@ -588,7 +588,7 @@ Po vytvoření relace (nebo přijetí pozvánky) přidejte daný uživatelský �
 
 Nezapomeňte uživatele přidat podle potřeby k dalším rolím. Například aby uživatel mohl spravovat nastavení Intune, musí mít roli **Globální správce** nebo **Správce služby Intune**.
 
-Také:
+Navíc:
 
 - Pomocí webu https://admin.microsoft.com přiřaďte licenci pro Intune k vašemu uživatelskému účtu.
 

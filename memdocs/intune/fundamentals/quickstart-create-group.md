@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: d7adb23f4709bf3ead07a01cb00d1b38fcb23c40
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79330807"
 ---
 # <a name="quickstart-create-a-group-to-manage-users"></a>Rychlý start: Vytvoření skupiny pro správu uživatelů
@@ -56,7 +56,7 @@ Vytvoříte skupinu, kterou použijete později v tomto seriálu rychlých start
 
     ![Snímek obrazovky s vytvořením skupiny v Microsoft Intune](./media/quickstart-create-group/quickstart-use-groups-01.png)
 
-7. Klikněte na **Vybrat** > **Vytvořit**.
+7. Klikněte na **Vybrat** > **vytvořit**.
 
 Po úspěšném vytvoření se skupina zobrazí v seznamu **Všechny skupiny**. 
 

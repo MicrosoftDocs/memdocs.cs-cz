@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 433bea6442ef52cd970513213d1623faf8aae2ca
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80327484"
 ---
 # <a name="locate-lost-or-stolen-iosipados-devices-with-intune"></a>Vyhledání ztracených nebo odcizených zařízení s iOS/iPadOS pomocí Intune
@@ -35,7 +35,7 @@ Pokud chcete zjistit umístění ztraceného nebo odcizeného zařízení s iOS/
 
 Tato funkce není podporovaná pro tyto systémy: 
 - Windows
-- Windows Phone
+- telefon se systémem Windows
 - macOS
 - Android
 
@@ -52,7 +52,7 @@ Tato funkce není podporovaná pro tyto systémy:
 
 Pokud někdo ztratil zařízení se systémem iOS/iPadOS 9,3 nebo novějším, můžete zařízení vzdáleně aktivovat a přehrát zvuk, aby ho uživatel mohl najít. Zařízení musí být v [režimu ztráty](device-lost-mode.md).
 
-V [Intune v Azure Portal](https://aka.ms/intuneportal)zvolte **zařízení** > **všechna zařízení** > vyberte zařízení s iOS/IPadOS > **Přehled** > **více** > **Přehrát zvuk režimu ztráty (jenom pod dohledem)** .
+V [Intune v Azure Portal](https://aka.ms/intuneportal)zvolte **zařízení** > **všechna zařízení** > vybrat zařízení se systémem iOS/iPadOS > **Přehled** > **dalšího** > **přehrání zvuku režimu ztráty (jenom pod dohledem)**.
 
 Zvuk se bude přehrávat, dokud ho uživatel na zařízení nedeaktivuje nebo se zařízení neodebere z režimu ztráty.
 

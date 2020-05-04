@@ -18,19 +18,19 @@ ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: bad48ac27aac60e91076ae1fef737f597154f3fc
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79324023"
 ---
 # <a name="resolve-a-threat-found-by-sandblast-mobile-protect"></a>Vyřešení hrozby, kterou objevila aplikace SandBlast Mobile Protect
 
-Aplikace SandBlast Mobile Protect je mobilní služba ochrany před hrozbami, která na zařízeních s Androidem rozpoznává potenciální hrozby. Hrozby, které ohlásí, si následně můžete prohlédnout v aplikaci Portál společnosti. Zde se zobrazují jako nevyřešené problémy nevyhovující předpisům. Dokud hrozby neodstraníte, možná nebudete moci provádět tyto akce:   
+Aplikace SandBlast Mobile Protect je mobilní služba ochrany před hrozbami, která na zařízeních s Androidem rozpoznává potenciální hrozby. Hrozby, které ohlásí, si následně můžete prohlédnout v aplikaci Portál společnosti. Zobrazují se zde jako nevyřešené problémy nevyhovující předpisům. Dokud hrozby neodstraníte, možná nebudete moci provádět tyto akce:   
 
 * Připojování k firemnímu e-mailu
 * Připojování k firemní Wi-Fi
-* Připojování k SharePointu Online
+* Připojení k SharePointu Online
 * Synchronizace firemních souborů s OneDrivem
 * Přístup k firemním aplikacím
 

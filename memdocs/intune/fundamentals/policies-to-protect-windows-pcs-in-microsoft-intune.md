@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 100df6e3e6be4a08e96529b472b766fa424b4a30
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79330895"
 ---
 # <a name="use-policies-to-help-protect-windows-pcs-that-run-the-intune-client-software"></a>Použijte zásady k ochraně počítačů s Windows, na nichž běží klientský software Intune.
@@ -39,7 +39,7 @@ Intune umožňuje snadnou [aktualizaci spravovaných počítačů s Windows](kee
 
 Brána Windows Firewall pomáhá chránit počítače s Windows proti hackerům, malwaru a dalším hrozbám. S Intune můžete [spravovat nastavení a funkce pro bránu Windows Firewall](help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune.md) na všech počítačích, které spravujete.
 
-## <a name="endpoint-protection"></a>Endpoint Protection
+## <a name="endpoint-protection"></a>Funkce Endpoint Protection
 
 Jedna z vašich nejdůležitějších priorit jako správce IT je [udržovat počítače, které spravujete, bez malwaru a virů](help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune.md). Intune se integruje s Endpoint Protection a poskytuje ochranu proti hrozbám malwaru v reálném čase, udržuje aktualizované definiční soubory malwaru a automaticky kontroluje počítače. Endpoint Protection také poskytuje nástroje, které pomáhají se správou a monitorováním malwarových útoků.
 

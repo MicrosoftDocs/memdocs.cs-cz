@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: e4bec3347ec45f020fd4c8e128278dc619335442
-ms.sourcegitcommit: e7fb8cf2ffce29548b4a33b2a0c33a3a227c6bc4
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/30/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80401449"
 ---
 # <a name="sign-up-or-sign-in-to-microsoft-intune"></a>Registrace nebo přihlášení k Microsoft Intune
@@ -62,20 +62,20 @@ Pokud chcete udělit přístup ke správě služby pro uživatele s dalšími op
 
 ### <a name="intune-admin-portal-url"></a>Adresa URL portálu pro správu Intune
 
-Centrum pro správu Microsoft Endpoint Manager: https://endpoint.microsoft.com
+Centrum pro správu Microsoft Endpoint Manageru:https://endpoint.microsoft.com
 
-Azure Portal Intune: https://portal.azure.com/#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade
+Azure Portal Intune:https://portal.azure.com/#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade
 
-Intune for Education: https://intuneeducation.portal.azure.com
+Intune for Education:https://intuneeducation.portal.azure.com
 
-Klasický portál Intune: https://manage.microsoft.com klasický portál Intune se používá jenom pro správu zařízení zaregistrovaných pomocí klientského softwaru Intune pro počítače.
+Klasický portál Intune: https://manage.microsoft.com klasický portál Intune se používá jenom ke správě zařízení zaregistrovaných pomocí klientského počítačového softwaru Intune.
 
 ### <a name="urls-for-intune-services-provided-by-office-365"></a>Adresy URL pro služby Intune poskytované sadou Office 365
 
-Microsoft 365 Business: https://portal.microsoft.com/adminportal
+Microsoft 365 Business:https://portal.microsoft.com/adminportal
 
-Správa mobilních zařízení s Office 365: https://admin.microsoft.com/adminportal/home#/MifoDevices
+Správa mobilních zařízení Office 365:https://admin.microsoft.com/adminportal/home#/MifoDevices
 
 ## <a name="see-also"></a>Viz také
 
-[Nemůžete se přihlásit k Office 365, Azure nebo Intune.](https://support.microsoft.com/help/2412085)
+[Nejde se přihlásit k Office 365, Azure nebo Intune](https://support.microsoft.com/help/2412085)

@@ -16,10 +16,10 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.openlocfilehash: ea67d432f3f418b4ecc592462d93e7d4da3676f6
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79327407"
 ---
 # <a name="application-protection-policies-and-work-profiles-on-android-enterprise-devices-in-intune"></a>Zásady ochrany aplikací a pracovní profily na zařízeních s Androidem Enterprise v Intune
@@ -59,7 +59,7 @@ Pokud chcete zobrazit seznam aplikací povolených pro aplikaci, přečtěte si 
 
 Tato část popisuje důležité charakteristiky scénářů nasazení pracovních profilů pro aplikace a Android Enterprise.
 
-### <a name="app-we"></a>APP-WE
+### <a name="app-we"></a>APP – WE
 
 APLIKACE – nasazení (zásady ochrany aplikací bez registrace) definuje zásady pro aplikace, ne zařízení. V tomto scénáři zařízení obvykle nejsou zaregistrovaná nebo spravovaná autoritou MDM, jako je třeba Intune. Aby mohli správci chránit aplikace a přistupovat k datům organizace, používají aplikace spravované aplikací a pro tyto aplikace platí zásady ochrany dat.
 
@@ -102,7 +102,7 @@ Vyžadujete například, aby koncoví uživatelé při otevírání pracovní ap
 
 ### <a name="control-multi-identity-behavior-in-work-profiles"></a>Řízení chování více identit v pracovních profilech
 
-Aplikace Office, jako je například Outlook a OneDrive, mají chování s více identitami. V rámci jedné instance aplikace může koncový uživatel přidat připojení k více jedinečným účtům nebo umístěním cloudového úložiště. V rámci aplikace lze data získaná z těchto umístění oddělit nebo sloučit. A uživatel může kontext přepnout mezi osobními identitami (user@outlook.com) a identitami organizace (user@contoso.com).
+Aplikace Office, jako je například Outlook a OneDrive, mají chování s více identitami. V rámci jedné instance aplikace může koncový uživatel přidat připojení k více jedinečným účtům nebo umístěním cloudového úložiště. V rámci aplikace lze data získaná z těchto umístění oddělit nebo sloučit. A uživatel může kontext přepnout mezi osobními identitami (user@outlook.com) a identitami organizaceuser@contoso.com().
 
 Pokud používáte pracovní profily, možná budete chtít zakázat toto chování s více identitami. Když ho zakážete, budou se s označením instance aplikace v pracovním profilu moct konfigurovat jenom s identitou organizace. Použijte nastavení konfigurace aplikace povolených účtů pro podporu aplikací Office pro Android.
 

@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: aa78178f6649e0199aa2de96bac2725ba55208ae
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79331531"
 ---
 # <a name="intune-actions-and-options-supported-with-apple-user-enrollment"></a>Akce a možnosti Intune podporované při registraci uživatele Apple
@@ -43,10 +43,10 @@ Například nakonfigurujete nastavení **vypršení platnosti hesla** a tuto zá
 
 ## <a name="administrator-remote-device-actions-and-options"></a>Akce a možnosti vzdáleného zařízení pro správu
 Správci můžou na zařízeních pro zápis uživatelů provádět následující akce a možnosti:
-- Vyřadit
+- Vyřazení
 - Odstranit
 - Vzdálené uzamčení
-- Synchronizovat
+- Sync
 
 Všechny ostatní akce nejsou podporovány.
 
@@ -67,7 +67,7 @@ Na zařízeních pro zápis uživatelů se dají nasadit následující typy apl
 
 V Intune se podporují následující možnosti pro zařízení zaregistrovaná pomocí registrace uživatele Apple:
 - SÍŤ VPN pro jednotlivé aplikace Tato podpora vyloučí domény Safari, protože zápis uživatele nepodporuje konfiguraci nastavení Safari.
-- Wi-Fi 
+- WiFi 
 - Odebrání podnikové aplikace při zrušení registrace
 - Detekce jailbreaků
 
@@ -118,4 +118,4 @@ V zařízeních zaregistrovaných pomocí zápisu uživatelů nejsou podporován
 
 ## <a name="next-steps"></a>Další kroky
 
-[Nastavení registrace uživatelů pro iOS/iPadOS a iPadOS](ios-user-enrollment.md)
+[Nastavení registrace uživatele pro iOS/iPadOS a iPadOS](ios-user-enrollment.md)

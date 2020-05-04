@@ -2,7 +2,7 @@
 title: Protokol změn v datovém skladu Intune
 titleSuffix: Microsoft Intune
 description: Toto téma poskytuje seznam změn pro Microsoft Intune rozhraní API datového skladu.
-keywords: Datový sklad Intune
+keywords: Intune Data Warehouse
 author: Erikre
 ms.author: erikre
 manager: dougeby
@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 632f3bf16fd062acf05c7bd4e269069468df42a3
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79331823"
 ---
 # <a name="change-log-for-the-intune-data-warehouse-api"></a>Protokol změn pro rozhraní API datového skladu Intune
@@ -38,19 +38,19 @@ _Vydáno v dubnu 2019_
 
 V následující tabulce je uveden seznam nedávných odebraných kolekcí a kolekcí nahrazení v datovém skladu Intune.
 
-|    Kolekce                          |    Změna     |    Další informace                                                                                                                                                                                                                                                                                                                                                                 |
+|    Kolekce                          |    Změnit     |    Další informace                                                                                                                                                                                                                                                                                                                                                                 |
 |----------------------------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    mobileAppDeviceUserInstallStatus    |    Odebrané    |    Místo toho použijte [mobileAppInstallStatusCounts](intune-data-warehouse-collections.md#mobileappinstallstatuscounts) .                                                                                                                                                                                                                                                                     |
-|    Entita enrollmenttypes                     |    Odebrané    |    Místo toho použijte [deviceEnrollmentTypes](intune-data-warehouse-collections.md#deviceenrollmenttypes) .                                                                                                                                                                                                                                                                                      |
-|    mdmStatuses                         |    Odebrané    |    Místo toho použijte [complianceStates](intune-data-warehouse-collections.md#compliancestates) .                                                                                                                                                                                                                                                                                               |
-|    workPlaceJoinStateTypes             |    Odebrané    |    Místo toho použijte vlastnost `azureAdRegistered` v kolekcích [zařízení](intune-data-warehouse-collections.md#devices) a [devicePropertyHistories](intune-data-warehouse-collections.md#devicepropertyhistories) .                                                                                                                                                                                                             |
-|    clientRegistrationStateTypes        |    Odebrané    |    Místo toho použijte [deviceRegistrationStates](intune-data-warehouse-collections.md#deviceregistrationstates) .                                                                                                                                                                                                                                                                             |
-|    currentUser                         |    Odebrané    |    Místo toho použijte kolekci [uživatelů](intune-data-warehouse-collections.md#users) .                                                                                                                                                                                                                                                                                                      |
-|    mdmDeviceInventoryHistories         |    Odebrané    |    Mnohé z vlastností byly redundantní nebo se teď dají najít v kolekcích [devicePropertyHistories](intune-data-warehouse-collections.md#devicepropertyhistories) nebo [Devices](intune-data-warehouse-collections.md#devices) . Všechny vlastnosti **mdmDeviceInventoryHistories** , které již nejsou uvedeny s těmito dvěma kolekcemi, již nejsou k dispozici. Níže najdete podrobnosti.    |
+|    mobileAppDeviceUserInstallStatus    |    Odebráno    |    Místo toho použijte [mobileAppInstallStatusCounts](intune-data-warehouse-collections.md#mobileappinstallstatuscounts) .                                                                                                                                                                                                                                                                     |
+|    Entita enrollmenttypes                     |    Odebráno    |    Místo toho použijte [deviceEnrollmentTypes](intune-data-warehouse-collections.md#deviceenrollmenttypes) .                                                                                                                                                                                                                                                                                      |
+|    mdmStatuses                         |    Odebráno    |    Místo toho použijte [complianceStates](intune-data-warehouse-collections.md#compliancestates) .                                                                                                                                                                                                                                                                                               |
+|    workPlaceJoinStateTypes             |    Odebráno    |    Místo toho `azureAdRegistered` použijte vlastnost v [devicePropertyHistories](intune-data-warehouse-collections.md#devicepropertyhistories) kolekcích [zařízení](intune-data-warehouse-collections.md#devices) .                                                                                                                                                                                                             |
+|    clientRegistrationStateTypes        |    Odebráno    |    Místo toho použijte [deviceRegistrationStates](intune-data-warehouse-collections.md#deviceregistrationstates) .                                                                                                                                                                                                                                                                             |
+|    currentUser                         |    Odebráno    |    Místo toho použijte kolekci [uživatelů](intune-data-warehouse-collections.md#users) .                                                                                                                                                                                                                                                                                                      |
+|    mdmDeviceInventoryHistories         |    Odebráno    |    Mnohé z vlastností byly redundantní nebo se teď dají najít v kolekcích [devicePropertyHistories](intune-data-warehouse-collections.md#devicepropertyhistories) nebo [Devices](intune-data-warehouse-collections.md#devices) . Všechny vlastnosti **mdmDeviceInventoryHistories** , které již nejsou uvedeny s těmito dvěma kolekcemi, již nejsou k dispozici. Níže najdete podrobnosti.    |
 
 V následující tabulce jsou uvedeny staré vlastnosti dříve nalezené v kolekci **mdmDeviceInventoryHistories** a změna nebo nahrazení. Všechny vlastnosti, které byly v **mdmDeviceInventoryHistories** , ale nejsou uvedené níže, se odebraly.
 
-|    Stará vlastnost                |    Změnit nebo nahradit                                                           |
+|    Původní vlastnost                |    Změnit nebo nahradit                                                           |
 |--------------------------------|---------------------------------------------------------------------------------|
 |    cellularTechnology          |    cellularTechnology v kolekci zařízení                                     |
 |    deviceClientId              |    ID zařízení v kolekci                                               |
@@ -71,7 +71,7 @@ V následující tabulce jsou uvedeny staré vlastnosti dříve nalezené v kole
 |    osName                      |    deviceTypeKey v kolekci zařízení, odkazování na kolekci deviceTypes    |
 |    phoneNumber                 |    kolekce phoneNumber v zařízeních                                            |
 |    platformType                |    model v kolekci zařízení                                                  |
-|    produkt                     |    deviceTypeKey v kolekci zařízení                                          |
+|    product                     |    deviceTypeKey v kolekci zařízení                                          |
 |    productVersion              |    osVersion v kolekci devicePropertyHistories                              |
 |    serialNumber                |    Sériové v kolekci zařízení                                           |
 |    storageFree                 |    vlastnost freeStorageSpaceInBytes v kolekci zařízení                   |
@@ -81,68 +81,68 @@ V následující tabulce jsou uvedeny staré vlastnosti dříve nalezené v kole
 
 V následující tabulce jsou uvedeny změny vlastností nalezené v kolekci [devicePropertyHistories](intune-data-warehouse-collections.md#devicepropertyhistories) : 
 
-|    Stará vlastnost                  |    Změnit nebo nahradit                                               |
+|    Původní vlastnost                  |    Změnit nebo nahradit                                               |
 |----------------------------------|---------------------------------------------------------------------|
 |    KódKategorie                    |    deviceCategoryKey, odkazování na kolekci deviceCategories       |
-|    certExpirationDate            |    Odebrané                                                          |
+|    certExpirationDate            |    Odebráno                                                          |
 |    clientRegistrationStateKey    |    deviceRegistrationStateKey                                       |
-|    CreatedDate                   |    enrolledDateTime v kolekci zařízení                           |
+|    createdDate                   |    enrolledDateTime v kolekci zařízení                           |
 |    deviceTypeKey                 |    deviceTypeKey v kolekci zařízení                              |
 |    easID                         |    easDeviceId v kolekci zařízení                                |
 |    enrolledByUser                |    kolekce userId v zařízeních                                     |
 |    enrollmentTypeKey             |    deviceEnrollmentTypeKey v kolekci zařízení                    |
-|    graphDeviceIsCompliant        |    Odebrané                                                          |
-|    graphDeviceIsManaged          |    Odebrané                                                          |
+|    graphDeviceIsCompliant        |    Odebráno                                                          |
+|    graphDeviceIsManaged          |    Odebráno                                                          |
 |    lastContact                   |    lastSyncDateTime v kolekci zařízení                           |
-|    lastContactNotification       |    Odebrané                                                          |
-|    lastContactWorkplaceJoin      |    Odebrané                                                          |
-|    lastExchangeStatusUtc         |    Odebrané                                                          |
-|    lastModifiedDateTimeUTC       |    Odebrané                                                          |
-|    lastPolicyUpdateUtc           |    Odebrané                                                          |
+|    lastContactNotification       |    Odebráno                                                          |
+|    lastContactWorkplaceJoin      |    Odebráno                                                          |
+|    lastExchangeStatusUtc         |    Odebráno                                                          |
+|    lastModifiedDateTimeUTC       |    Odebráno                                                          |
+|    lastPolicyUpdateUtc           |    Odebráno                                                          |
 |    managementAgentKey            |    managementStateKey                                               |
 |    manufacturer                  |    výrobce v kolekci zařízení                               |
 |    mdmStatusKey                  |    complianceStateKey, odkazování na kolekci complianceStates    |
 |    model                         |    model v kolekci zařízení                                      |
 |    Atribut                      |    operatingSystem v kolekci zařízení                            |
 |    osRevisionNumber              |    kolekce osVersion v zařízeních                                  |
-|    processorArchitecture         |    Odebrané                                                          |
+|    processorArchitecture         |    Odebráno                                                          |
 |    referenceId                   |    azureAdDeviceId v kolekci zařízení                            |
 |    serialNumber                  |    Sériové v kolekci zařízení                               |
 |    workplaceJoinStateKey         |    azureAdRegistered                                                |
 
 V následující tabulce jsou uvedeny změny vlastností nalezené v kolekci [zařízení](intune-data-warehouse-collections.md#devices) : 
 
-|    Stará vlastnost                  |    Změnit nebo nahradit                                               |
+|    Původní vlastnost                  |    Změnit nebo nahradit                                               |
 |----------------------------------|---------------------------------------------------------------------|
 |    KódKategorie                    |    deviceCategoryKey, odkazování na kolekci deviceCategories       |
-|    certExpirationDate            |    Odebrané                                                          |
+|    certExpirationDate            |    Odebráno                                                          |
 |    clientRegistrationStateKey    |    deviceRegistrationStateKey                                       |
-|    CreatedDate                   |    enrolledDateTime                                                 |
+|    createdDate                   |    enrolledDateTime                                                 |
 |    easId                         |    easDeviceId                                                      |
 |    enrolledByUser                |    userId                                                           |
 |    enrollmentTypeKey             |    deviceEnrollmentTypeKey                                          |
-|    graphDeviceIsCompliant        |    Odebrané                                                          |
-|    graphDeviceIsManaged          |    Odebrané                                                          |
+|    graphDeviceIsCompliant        |    Odebráno                                                          |
+|    graphDeviceIsManaged          |    Odebráno                                                          |
 |    lastContact                   |    lastSyncDateTime                                                 |
-|    lastContactNotification       |    Odebrané                                                          |
-|    lastContactWorkplaceJoin      |    Odebrané                                                          |
-|    lastExchangeStatusUtc         |    Odebrané                                                          |
-|    lastPolicyUpdateUtc           |    Odebrané                                                          |
+|    lastContactNotification       |    Odebráno                                                          |
+|    lastContactWorkplaceJoin      |    Odebráno                                                          |
+|    lastExchangeStatusUtc         |    Odebráno                                                          |
+|    lastPolicyUpdateUtc           |    Odebráno                                                          |
 |    mdmStatusKey                  |    complianceStateKey, odkazování na kolekci complianceStates    |
 |    Atribut                      |    operatingSystem                                                  |
-|    processorArchitecture         |    Odebrané                                                          |
+|    processorArchitecture         |    Odebráno                                                          |
 |    referenceId                   |    azureAdDeviceId                                                  |
 |    workplaceJoinStateKey         |    azureAdRegistered                                                |
 
 V následující tabulce jsou uvedeny změny vlastností nalezené v kolekci [enrollmentActivities](intune-data-warehouse-collections.md#enrollmentactivities) : 
 
-|    Stará vlastnost         |    Změnit nebo nahradit         |
+|    Původní vlastnost         |    Změnit nebo nahradit         |
 |-------------------------|-------------------------------|
 |    enrollmentTypeKey    |    deviceEnrollmentTypeKey    |
 
 V následující tabulce jsou uvedeny změny vlastností nalezené v kolekci [mamApplications](intune-data-warehouse-collections.md#mamapplications) : 
 
-|    Stará vlastnost       |    Změnit nebo nahradit    |
+|    Původní vlastnost       |    Změnit nebo nahradit    |
 |-----------------------|--------------------------|
 |    applicationKey     |    mamApplicationKey     |
 |    applicationName    |    mamApplicationName    |
@@ -150,7 +150,7 @@ V následující tabulce jsou uvedeny změny vlastností nalezené v kolekci [ma
 
 V následující tabulce jsou uvedeny změny vlastností nalezené v kolekci [mamApplicationInstances](intune-data-warehouse-collections.md#mamapplicationinstances) : 
 
-|    Stará vlastnost     |    Změnit nebo nahradit    |
+|    Původní vlastnost     |    Změnit nebo nahradit    |
 |---------------------|--------------------------|
 |    applicationId    |    mamApplicationId      |
 |    deviceId         |    mamDeviceId           |
@@ -159,17 +159,17 @@ V následující tabulce jsou uvedeny změny vlastností nalezené v kolekci [ma
 
 V následující tabulce jsou uvedeny změny vlastností nalezené v kolekci [mamCheckins](intune-data-warehouse-collections.md#mamcheckins) : 
 
-|    Stará vlastnost      |    Změnit nebo nahradit    |
+|    Původní vlastnost      |    Změnit nebo nahradit    |
 |----------------------|--------------------------|
 |    applicationKey    |    mamApplicationKey     |
 
 V následující tabulce jsou uvedeny změny vlastností nalezené v kolekci [uživatelů](intune-data-warehouse-collections.md#users) : 
 
-|    Stará vlastnost             |    Změnit nebo nahradit    |
+|    Původní vlastnost             |    Změnit nebo nahradit    |
 |-----------------------------|--------------------------|
-|    StartDateInclusiveUtc    |    Odebrané               |
-|    endDateInclusiveUtc      |    Odebrané               |
-|    Aktuální                |    Odebrané               |
+|    startDateInclusiveUtc    |    Odebráno               |
+|    endDateInclusiveUtc      |    Odebráno               |
+|    Aktuální                |    Odebráno               |
 
 ## <a name="1903"></a>1903
 _Vydáno v březnu 2019_
@@ -237,7 +237,7 @@ Můžete nastavit aplikaci pomocí Azure Active Directory (Azure AD) a ověřit 
 
 Jako parametr dotazu OData můžete použít <code>$select</code>. Aktuální verze podporuje tyto parametry dotazu OData: <code>$filter</code>, <code>$orderby</code>, <code>$select</code>, <code>$skip</code> a <code>$top</code>. Další informace najdete v tématu [Možnosti dotazu OData](reports-api-url.md#odata-query-options).
 
-### <a name="new-entities-in-the-in-data-warehouse-data-model----2077804---"></a>Nové entity v datovém modelu datového skladu <!-- 2077804 -->
+### <a name="new-entities-in-the-in-data-warehouse-data-model----2077804---"></a>Nové entity v datovém modelu datového skladu  <!-- 2077804 -->
 
 - Byla přidána entita [**MobileAppDeviceuserInstallStatus**](reports-ref-application.md). **MobileAppDeviceUserInstallStatus** představuje stav instalace mobilní aplikace pro dané zařízení a uživatele.
 - Entita, [**MobileAppInstallStates**](reports-ref-application.md#mobileappinstallstates), byla přidána. Entita **MobileAppInstallState** představuje stav instalace mobilní aplikace po jejím přiřazení do skupiny obsahující zařízení, uživatele, nebo obě tyto možnosti. 
@@ -245,7 +245,7 @@ Jako parametr dotazu OData můžete použít <code>$select</code>. Aktuální ve
 ## <a name="1710"></a>1710
 _Vydáno v listopadu 2017_
 
-### <a name="a-new-entity-collection-named-current-user-is-limited-to-currently-active-user-data----1544273---"></a>Nová kolekce entit s názvem aktuální uživatel je omezena na aktuálně aktivní uživatelská data. <!-- 1544273 -->
+### <a name="a-new-entity-collection-named-current-user-is-limited-to-currently-active-user-data----1544273---"></a>Nová kolekce entit z názvem Aktuální uživatel se omezuje na data aktuálně aktivních uživatelů  <!-- 1544273 -->
 
 Kolekce entit **Uživatelé** obsahuje všechny uživatele Azure Active Directory (Azure AD), kteří mají v podniku přiřazené licence. Tyto záznamy zahrnují stavy uživatelů za dobu shromažďování dat i v případě odebrání uživatele. Uživatel například může být přidaný do Intune a potom v průběhu posledního měsíce dojde k jeho odebrání. Přestože tento uživatel není v době vytvoření sestavy přítomen, existují data o uživateli a stavu. Můžete vytvořit sestavu, která ukazuje trvání historické přítomnosti uživatele ve vašich datech.
 
@@ -258,7 +258,7 @@ _Vydáno: říjen 2017_
 
 Pomocí informací o přidružení uživatelů a zařízení, které přidružují kolekce entit uživatelů a zařízení, teď můžete vytvářet sestavy a vizualizace dat. Tento datový model lze zpřístupnit přes soubor Power BI (PBIX) načtený ze stránky Datový sklad v Intune, přes koncový bod OData nebo vývojem vlastního klienta. Další informace najdete v tématu [Přidružení zařízení uživatele](reports-ref-user-device.md).
 
-### <a name="new-entities-in-the-in-data-warehouse-data-model----1479526--------"></a>Nové entity v datovém modelu datového skladu <!-- 1479526 --><!-- -->
+### <a name="new-entities-in-the-in-data-warehouse-data-model----1479526--------"></a>Nové entity v datovém modelu datového skladu  <!-- 1479526 --><!-- -->
 
 - Přidali jsme entitu [**UserDeviceAssociation**](reports-ref-user-device.md). **UserDeviceAssociation** obsahuje přidružení zařízení uživatelů ve vaší organizaci. Pomocí informací o přidružení uživatelů a zařízení, které přidružují kolekce entit uživatelů a zařízení, teď můžete vytvářet sestavy a vizualizace dat.  
 - Přidali jsme entitu [**IntuneManagementExtension**](reports-ref-intunemanagementextension.md). **IntuneManagementExtension** obsahuje entity pro mobilní zařízení, které sledují informace, jako je verze a stav instalace.

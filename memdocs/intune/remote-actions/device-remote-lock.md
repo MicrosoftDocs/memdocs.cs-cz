@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 29b30d46fc5998c69059c743c3f469e198cee1ef
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80325141"
 ---
 # <a name="remotely-lock-devices-with-intune"></a>Vzdálené uzamčení zařízení přes Intune
@@ -34,12 +34,12 @@ Akce zařízení **Vzdálené uzamčení** uzamkne zařízení. Vlastník zaří
 **Vzdálené uzamčení** je podporované u těchto platforem:
 
 - Android
-- Zařízení s Androidem Enterprise v beznabídkovém režimu
+- Zařízení s beznabídkovým režimem Androidu Enterprise
 - Zařízení Android Enterprise s pracovním profilem
 - iOS
 - macOS
 - Windows 10 Mobile
-- Windows Phone 8.1 a novější
+- Windows Phone 8.1 nebo novější
 
 **Vzdálené uzamčení** není podporované pro:
 - Stolní počítač s Windows 10
@@ -50,10 +50,10 @@ Akce zařízení **Vzdálené uzamčení** uzamkne zařízení. Vlastník zaří
 ## <a name="remote-lock-a-device"></a>Vzdáleně uzamknout zařízení
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-3. Vyberte **Zařízení** > **Všechna zařízení**.
+3. Vyberte **zařízení** > **všechna zařízení**.
 4. V seznamu zařízení vyberte zařízení a pak vyberte akci **Vzdálené uzamčení**.
 
 ## <a name="next-steps"></a>Další kroky
 
-- Pokud chcete zobrazit stav akce, vyberte **Microsoft Intune** > **Zařízení** > **Akce zařízení**. 
+- Chcete-li zobrazit stav této akce, vyberte možnost **Microsoft Intune** > **zařízení** > **Akce zařízení**. 
 - Další akce, které vám můžou pomoct se správou zařízení, najdete v tématu [Dostupné akce](device-management.md).

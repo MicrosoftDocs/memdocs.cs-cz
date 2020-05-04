@@ -1,6 +1,6 @@
 ---
 title: Funkce a nastavení zařízení v Microsoft Intune – Azure | Microsoft Docs
-description: Přehled různých profilů zařízení Microsoft Intune. Získejte informace o funkcích, omezeních, e-mailu, Wi-Fi, VPN, vzdělávání, certifikátech, upgradu Windows 10, BitLockeru a programu Microsoft Defender, Windows Information Protection, šablonách pro správu a vlastním nastavení konfigurace zařízení ve společnosti Microsoft. Centrum pro správu Správce koncových bodů. Pomocí těchto profilů můžete spravovat a chránit data a zařízení ve vaší společnosti.
+description: Přehled různých profilů zařízení Microsoft Intune. Získejte informace o funkcích, omezeních, e-mailu, Wi-Fi, VPN, vzdělávání, certifikátech, upgradu Windows 10, BitLockeru a programu Microsoft Defender, Windows Information Protection, šablonách pro správu a vlastním nastavení konfigurace zařízení v centru pro správu Microsoft Endpoint Manageru. Pomocí těchto profilů můžete spravovat a chránit data a zařízení ve vaší společnosti.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 386e59fe3a7156a8bb74ed39a1b2fcad6ad91dad
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80359302"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Použití funkcí a nastavení v zařízeních pomocí profilů zařízení v Microsoft Intune
@@ -59,8 +59,8 @@ Tato funkce podporuje:
 - Android Enterprise
 - iOS/iPadOS
 - macOS
-- Wvdows Phone 8.1
-- Windows 8.1
+- Windows Phone 8.1
+- Windows 8.1
 - Windows 10 a novější
 
 ## <a name="custom-profile"></a>Profil Vlastní
@@ -73,11 +73,11 @@ Tato funkce podporuje:
 - Android Enterprise
 - iOS/iPadOS
 - macOS
-- Wvdows Phone 8.1
+- Windows Phone 8.1
 
 ## <a name="delivery-optimization"></a>Optimalizace doručení
 
-[Optimalizace doručování](delivery-optimization-windows.md) nabízí lepší možnosti doručování aktualizací softwaru. Tato nastavení nahrazují **aktualizace softwaru** > nastavení **Windows 10 Update Ring** .
+[Optimalizace doručování](delivery-optimization-windows.md) nabízí lepší možnosti doručování aktualizací softwaru. Tato nastavení nahrazují nastavení aktualizace **softwaru** > nastavení**vyzvánění pro Windows 10** .
 
 Pomocí těchto nastavení můžete řídit, jak se aktualizace softwaru stahují do zařízení ve vaší organizaci. Můžete například umožnit uživatelům získávat vlastní aktualizace nebo získávat aktualizace pomocí cloudových služeb Optimalizace doručení v profilu zařízení.
 
@@ -140,13 +140,13 @@ Tato funkce podporuje:
 
 - Windows 10 a novější
 
-## <a name="education"></a>Vzdělávání
+## <a name="education"></a>Education
 
 [Nastavení vzdělávání – Windows 10](education-settings-configure.md) konfiguruje možnosti pro [aplikaci Windows Zkuste si test](https://docs.microsoft.com/education/windows/take-tests-in-windows-10). Když tyto možnosti nakonfigurujete, žádnou jinou aplikaci nepůjde na zařízení spustit, dokud nebude test dokončen.
 
 [Nastavení vzdělávání – iOS/iPadOS](../fundamentals/education-settings-configure-ios-shared.md) používá aplikaci učebny pro iOS/iPadOS k seznámení s učením a řízení zařízení studenta v učebně. Můžete nakonfigurovat zařízení iPad, aby mohli několik studentů sdílet jedno zařízení.
 
-## <a name="email"></a>E-mail
+## <a name="email"></a>E-mailu
 
 [Nastavení e-mailu](email-settings-configure.md) vytvoří, přiřadí a monitoruje nastavení e-mailů Exchange ActiveSync na zařízeních. E-mailové profily vám pomůžou s konzistencí, omezit volání podpory a umožnit koncovým uživatelům přístup k firemnímu e-mailu na svých osobních zařízeních, aniž by museli nastavovat. 
 
@@ -155,7 +155,7 @@ Tato funkce podporuje:
 - Správce zařízení s Androidem
 - Android Enterprise
 - iOS/iPadOS
-- Wvdows Phone 8.1
+- Windows Phone 8.1
 - Windows 10 a novější
 
 ## <a name="endpoint-protection"></a>Ochrana koncového bodu
@@ -270,8 +270,8 @@ Tato funkce podporuje:
 - Android Enterprise
 - iOS/iPadOS
 - macOS
-- Wvdows Phone 8.1
-- Windows 8.1
+- Windows Phone 8.1
+- Windows 8.1
 - Windows 10 a novější
 
 ## <a name="wi-fi"></a>Wi-Fi
@@ -295,7 +295,7 @@ Tato funkce podporuje:
 
 - Správce zařízení s Androidem (rozšíření mobility)
 
-## <a name="manage-and-troubleshoot"></a>Správa a řešení problémů
+## <a name="manage-and-troubleshoot"></a>Správa a řešení potíží
 
 [Při správě profilů](device-profile-monitor.md) můžete zjistit stav zařízení a přiřazené profily. Také vám pomůžou vyřešit konflikty tím, že se zobrazí nastavení, které způsobuje konflikt, a profily, které obsahují tato nastavení. [Běžné problémy a řešení](device-profile-troubleshoot.md) pomáhají správcům pracovat s profily. Popisuje, co se stane při odstraňování profilu, což způsobí, že se oznámení odesílají do zařízení a další.
 

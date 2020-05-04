@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 237f2e5d1a0d6ae6a58ceb8e5f4afb5a27031195
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80326422"
 ---
 # <a name="remove-a-user-from-a-shared-iosipados-device"></a>Odebrání uživatele ze sdíleného zařízení s iOS/iPadOS
@@ -42,7 +42,7 @@ Akce **Odebrat uživatele** odstraní vybraného uživatele z místní mezipamě
 ## <a name="remove-a-user"></a>Odebrání uživatele
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **Zařízení** > **Všechna zařízení**.
+2. Vyberte **zařízení** > **všechna zařízení**.
 3. V seznamu zařízení, která spravujete, vyberte zařízení s iOS/iPadOS.
 4. V podokně pro zařízení vyberte **Uživatelé**.
 5. V seznamu klikněte pravým tlačítkem na uživatele, kterého chcete odebrat, a pak zvolte **Odebrat uživatele**.

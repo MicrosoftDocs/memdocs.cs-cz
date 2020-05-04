@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: af0e541a21a07c60cde84affca5bfc5a16989d65
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79326267"
 ---
 # <a name="how-to-create-exceptions-to-the-intune-app-protection-policy-app-data-transfer-policy"></a>Jak vytvořit výjimky zásad pro přenos dat zásad Intune App Protection (APP)
@@ -53,11 +53,11 @@ U zásad cílících na Android můžete nakonfigurovat výjimky přenosu dat po
 ### <a name="example"></a>Příklad
 Po přidání balíčku **Webex** jako výjimky k zásadám přenosu dat MAM se budou moct odkazy Webex v e-mailové zprávě spravovaného Outlooku otevírat přímo v aplikaci Webex. V ostatních nespravovaných aplikacích bude přenos dat i nadále omezený.
 
-- Příklad **WebEx** pro iOS/iPadOS: Pokud chcete aplikaci **WebEx** vyloučit, aby ji mohly vyvolávat spravované aplikace Intune, musíte přidat výjimku přenosu dat pro tento řetězec: <code>wbx</code>
+- Příklad **WebEx** pro iOS/iPadOS: Pokud chcete aplikaci **WebEx** vyloučit, aby ji mohly vyvolávat spravované aplikace Intune, musíte přidat výjimku přenosu dat pro následující řetězec:<code>wbx</code>
     
-- Příklad **mapování** pro iOS/iPadOS: Pokud chcete určit výjimku pro nativní aplikaci **Maps** , aby ji mohly vyvolávat spravované aplikace Intune, je nutné přidat výjimku přenosu dat pro následující řetězec: <code>maps</code>
+- Příklad **map** pro iOS/iPadOS: Pokud chcete určit výjimku pro nativní aplikaci **Maps** , aby ji mohly vyvolávat spravované aplikace Intune, je nutné přidat výjimku přenosu dat pro následující řetězec:<code>maps</code>
 
-- Příklad **WebEx** pro Android: Pokud chcete určit výjimku pro aplikaci **WebEx** , aby ji mohly vyvolávat spravované aplikace Intune, je nutné přidat výjimku přenosu dat pro následující řetězec: <code>com.cisco.webex.meetings</code>
+- Příklad **WebEx** pro Android: Pokud chcete určit výjimku pro aplikaci **WebEx** , aby ji mohly vyvolávat spravované aplikace Intune, je nutné přidat výjimku přenosu dat pro následující řetězec:<code>com.cisco.webex.meetings</code>
     
 - Příklad **SMS** pro Android: Pokud chcete určit výjimku pro nativní aplikaci **SMS** , aby ji mohly vyvolávat spravované aplikace Intune v různých aplikacích pro zasílání zpráv a zařízeních s Androidem, musíte přidat výjimky přenosu dat pro následující řetězce: 
     <code>com.google.android.apps.messaging</code>

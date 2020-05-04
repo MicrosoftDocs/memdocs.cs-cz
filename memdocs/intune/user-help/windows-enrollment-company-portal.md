@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 1956db4b044faffdd5e010ed66de2dfbc6738419
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79324099"
 ---
 # <a name="windows-device-enrollment-in-intune-company-portal"></a>Registrace zařízení s Windows v Portál společnosti Intune  
@@ -39,7 +39,7 @@ V zařízení už možná máte nainstalovanou aplikaci Portál společnosti. Ov
 
 2. Do **vyhledávacího** pole zadejte **portál společnosti**.
 
-3. V seznamu výsledků vyberte **Portál společnosti** > **Instalovat**.
+3. V seznamu výsledků vyberte **portál společnosti** > **nainstalovat**.
 
 4. Vyberte buď **Instalovat**, nebo **Zdarma**. Mezi těmito dvěma možnostmi není žádný rozdíl; slova se zobrazí v závislosti na tom, jak vaše organizace tuto aplikaci nastavila.  
 
@@ -62,18 +62,18 @@ Postup registrace se liší u různých verzí zařízení s Windows 10. Násled
 
 4. Pokud je vaše verze  
 
-    * __1607 nebo novější__: Zaregistrujte zařízení podle [ **Nastavení** > **účet** > **přístup k pracovnímu nebo školnímu** postupu](enroll-windows-10-device.md#enroll-windows-10-version-1607-and-later-device).   
-    * __1511 nebo starší__: Zaregistrujte zařízení podle [ **Nastavení** > **účtu** > trasy **k vašim účtům** ](enroll-windows-10-device.md#enroll-windows-10-version-1511-and-earlier-device).  
+    * __1607 nebo novější__: Zaregistrujte zařízení pomocí [ **Settings** > **účtu** > nastavení**přístup k pracovnímu nebo školnímu** postupu](enroll-windows-10-device.md#enroll-windows-10-version-1607-and-later-device).   
+    * __1511 nebo starší__: Zaregistrujte zařízení pomocí [ **Settings** > **účtu** > nastavení, na který**vaše účty** směrují](enroll-windows-10-device.md#enroll-windows-10-version-1511-and-earlier-device).  
 
 ### <a name="windows-10-mobile-devices"></a>Zařízení s Windows 10 Mobile
 
 1. Přejít na __všechny aplikace__ a vybrat aplikaci __Nastavení__ .
-2. Vyberte __Systém__ > __O systému__.
+2. Vyberte __systém__ > __o produktu__.
 3. V části __informace o zařízení__vyhledejte __verzi__.  
 4. Pokud je vaše verze  
 
-    * __1607 nebo novější__: Zaregistrujte své zařízení pomocí [ **Nastavení** > **přístup k pracovnímu nebo školnímu** postupu](enroll-windows-10-device.md#enroll-windows-10-version-1607-and-later-device).   
-    * __1511 nebo starší__: Zaregistrujte zařízení pomocí [ **Nastavení** > trasy **účtů** ](enroll-windows-10-device.md#enroll-windows-10-version-1511-and-earlier-device).  
+    * __1607 nebo novější__: Zaregistrujte své zařízení pomocí [ **Nastavení** > **přístup do pracovní nebo školní** trasy](enroll-windows-10-device.md#enroll-windows-10-version-1607-and-later-device).   
+    * __1511 nebo starší__: Zaregistrujte své zařízení pomocí [ **Nastavení** > trasa**účty** ](enroll-windows-10-device.md#enroll-windows-10-version-1511-and-earlier-device).  
 
 ## <a name="enroll-non-windows-10-devices"></a>Registrace zařízení bez Windows 10  
 Následující články použijte k registraci dalších podporovaných zařízení s Windows prostřednictvím webu Portál společnosti:   
@@ -89,6 +89,6 @@ Teď, když znáte podporovaná zařízení a číslo verze Windows 10, přejdě
 Další informace o správě zařízení, Portál společnosti a způsobu použití obou škol a v práci najdete v následujících článcích:  
 * [Použití spravovaných zařízení pro přístup k pracovnímu nebo školnímu prostředku](use-managed-devices-to-get-work-done.md)  
 * [Co se stane po registraci zařízení v Intune](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md)  
-* [Jaké informace může moje organizace zobrazit při registraci zařízení?](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)  
+* [Jaké informace moje organizace uvidí, když zaregistruji své zařízení?](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)  
 
 Potřebujete pomoc? Obraťte se na podporu ve vaší společnosti. Pokud chcete najít kontaktní informace oddělení IT, [navštivte web portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980) .  

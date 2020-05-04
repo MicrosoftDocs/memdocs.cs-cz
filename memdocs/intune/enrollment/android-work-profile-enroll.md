@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 25ccf224b2ed9371ad5795b8f5c91ea725ea8c84
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79331663"
 ---
 # <a name="set-up-enrollment-of-android-enterprise-work-profile-devices"></a>Nastavení registrace zařízení s pracovním profilem Android Enterprise
@@ -36,7 +36,7 @@ Pokud chcete nastavit správu pracovních profilů pro Android Enterprise, postu
 1. [Připojte svůj účet tenanta Intune ke svému účtu Android Enterprise](connect-intune-android-enterprise.md).
 2. Zadejte nastavení registrace pracovního profilu Android Enterprise. Pracovní profily Android Enterprise jsou [podporované jenom na určitých zařízeních s Androidem](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012%20style=%22target=new_window%22). Každé zařízení, které podporuje pracovní profily Android Enterprise, podporuje také správu Správce zařízení s Androidem. Intune umožňuje určit, jak se mají zařízení, která podporují pracovní profily Android Enterprise, spravovat z [omezení registrace](enrollment-restrictions-set.md).
     - **Blokování**: všechna zařízení s Androidem, včetně zařízení, která podporují pracovní profily Android Enterprise, se zaregistrují jako zařízení s Androidem pro správce zařízení, pokud se nezablokuje i registrace Správce zařízení s Androidem. 
-    - **Povolené (výchozí nastavení)** : všechna zařízení, která podporují pracovní profily Android Enterprise, se zaregistrují jako zařízení s Androidem Enterprise Work Profiling. Zařízení s Androidem, které nepodporuje firemní pracovní profily Androidu, se zaregistruje jako zařízení s Androidem pro správce zařízení, pokud není zablokované zápis Správce zařízení s Androidem. 
+    - **Povolené (výchozí nastavení)**: všechna zařízení, která podporují pracovní profily Android Enterprise, se zaregistrují jako zařízení s Androidem Enterprise Work Profiling. Zařízení s Androidem, které nepodporuje firemní pracovní profily Androidu, se zaregistruje jako zařízení s Androidem pro správce zařízení, pokud není zablokované zápis Správce zařízení s Androidem. 
 > [!NOTE]
 > Výchozí nastavení **povoleno** platí pro nové klienty od července 2019. U všech předchozích tenantů se neprojeví žádná změna v omezeních registrace a zobrazí se všechny zásady, které nastavily v omezeních registrace. Pro předchozí klienty, u kterých se nikdy nezměnila omezení registrace, bude pro pracovní profily Android Enterprise stále výchozí **blok** .
 

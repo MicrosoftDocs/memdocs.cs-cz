@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/20/2019
+ms.date: 04/17/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e05577967d874ea8e3cd5e4bdd5e20e204158921
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: eb5a04b8db382345cbf8f3e86feab8b3cea9efd9
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80325442"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81615689"
 ---
 # <a name="create-mobile-threat-defense-mtd-device-compliance-policy-with-intune"></a>Vytvoření zásad dodržování předpisů pro ochranu zařízení před mobilními hrozbami (MTD) v Intune
 
@@ -44,7 +44,7 @@ Předpoklady zásad dodržování předpisů zařízením pro MTD:
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Vyberte **zařízení** > **zásady dodržování předpisů** > **vytvořit zásadu**.
+2. Vyberte > **zásady dodržování předpisů** **zařízením** > **vytvořit zásadu**.
 
 3. Zadejte **název**zásady dodržování předpisů pro zařízení, **Popis**, vyberte **platformu**a potom v části **Nastavení** vyberte **Konfigurovat** .
 
@@ -60,6 +60,11 @@ Předpoklady zásad dodržování předpisů zařízením pro MTD:
 
    - **Vysoká:** Tato úroveň poskytuje nejnižší zabezpečení. Tato možnost povoluje všechny úrovně hrozeb, protože používá ochranu před mobilními hrozbami jenom ke generování sestav. Při tomto nastavení musejí mít zařízení aplikaci pro ochranu před mobilními hrozbami aktivovanou.
 
+   > [!IMPORTANT]
+   > Pro vlastníka zařízení s Androidem Enterprise: po vytvoření a uložení zásady ho později nemůžete upravit a upravovat úroveň hrozeb. Úpravy Změna úrovně hrozby pro zařízení Stav zařízení nastavení **vyžaduje, aby zařízení bylo na úrovni hrozby pro zařízení nebo pod** tím, že se neprojeví. Pokud chcete změnit hodnotu úrovně hrozby, musíte odstranit aktuální zásadu a vytvořit novou zásadu, která nastaví požadovanou úroveň hrozeb.
+   >
+   > Jedná se o známý problém, který bude vyřešen v budoucí aktualizaci Intune.
+
 6. Dvakrát klikněte na **OK** a pak vyberte **vytvořit** a vytvořte zásadu.
 
 > [!IMPORTANT]
@@ -71,7 +76,7 @@ Postup přiřazení zásad dodržování předpisů zařízením uživatelům:
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Vyberte **zařízení** > **zásady dodržování předpisů**.
+2. Vyberte **Device** > **zásady dodržování předpisů**pro zařízení.
 
 3. Vyberte zásadu, kterou chcete přiřadit uživatelům, a pak vyberte **přiřazení**. Pomocí dostupných možností můžete *Zahrnout* a *vyloučit* skupiny pro příjem těchto zásad.  
 

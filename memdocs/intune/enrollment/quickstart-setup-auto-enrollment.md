@@ -16,10 +16,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 1bcfab31d6efc2ff43451b3193848060c6f178a8
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79327135"
 ---
 # <a name="quickstart-set-up-automatic-enrollment-for-windows-10-devices"></a>Rychlý start: Nastavení automatické registrace zařízení s Windows 10
@@ -41,13 +41,13 @@ Přihlaste se k [centru pro správu Microsoft Endpoint Manageru](https://go.micr
 
 V tomto příkladu použijete registraci MDM, aby byla možná automatická registrace firemních zařízení i vlastních zařízení uživatelů. Zaregistrujete si bezplatné předplatné Azure Active Directory verze Premium.
 
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **všechny služby** > **M365 Azure Active Directory** > **Azure Active Directory** > **mobilita (MDM a mam)** .
-2. Vyberte možnost **Abyste mohli použít tuto funkci, získejte bezplatnou zkušební verzi Premium**. Její výběr vám umožní automatickou registraci pomocí bezplatné zkušební verze Premium služby Azure Active Directory. 
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **všechny služby** > **M365 Azure Active Directory** > **Azure Active Directory** > **mobilita (MDM a mam)**.
+2. Vyberte **Abyste mohli použít tuto funkci, pořiďte si bezplatnou zkušební verzi Premium**. Její výběr vám umožní automatickou registraci pomocí bezplatné zkušební verze Premium služby Azure Active Directory. 
 
     ![Výběr bezplatné zkušební verze Premium služby Azure Active Directory](./media/quickstart-setup-auto-enrollment/quickstart-setup-auto-enrollment-01.png)
 
 3. Zvolte možnost bezplatné zkušební verze **Enterprise Mobility + Security E5**. 
-4. Klikněte na **bezplatná zkušební verze** > **aktivovat** bezplatnou zkušební verzi.
+4. Kliknutím na **bezplatnou zkušební verzi** > **aktivujte** bezplatnou zkušební verzi.
 
     ![Volba bezplatné zkušební verze Enterprise Mobility + Security E5](./media/quickstart-setup-auto-enrollment/quickstart-setup-auto-enrollment-02.png)
 
@@ -62,7 +62,7 @@ V tomto příkladu použijete registraci MDM, aby byla možná automatická regi
 
     ![Výběr možnosti Někteří v seznamu konfigurace](./media/quickstart-setup-auto-enrollment/quickstart-setup-auto-enrollment-04.png)
 
-5. Klikněte na **Vybrat skupiny** > **Contoso testery** > **Vyberte** jako přiřazenou skupinu.
+5. Klikněte na **Vybrat skupiny** > **Contoso testery** > **Vybrat** jako přiřazenou skupinu.
 
     ![Výběr skupiny k registraci](./media/quickstart-setup-auto-enrollment/quickstart-setup-auto-enrollment-05.png)
 
@@ -70,9 +70,9 @@ V tomto příkladu použijete registraci MDM, aby byla možná automatická regi
 
     ![Výběr skupiny k registraci](./media/quickstart-setup-auto-enrollment/quickstart-setup-auto-enrollment-06.png)
 
-7. Jako přiřazenou skupinu zvolte **Vybrat skupiny** > **Testeři Contoso** > **Vybrat**. 
+7. Zvolte **Vybrat skupiny** > **Contoso testery** > **Vybrat** jako přiřazenou skupinu. 
 8. Pro zbývající konfigurační hodnoty použijte výchozí hodnoty.
-9. Zvolte **Uložit**.
+9. Klikněte na tlačítko **Uložit**.
 
 ## <a name="clean-up-resources"></a>Vyčištění prostředků
 

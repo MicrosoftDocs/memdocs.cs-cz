@@ -18,10 +18,10 @@ ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: aeca72af3eadf55174f1ad97c1e294f48f131801
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79330907"
 ---
 # <a name="intune-testing-and-validation"></a>Testování a ověřování Intune
@@ -54,13 +54,13 @@ Při testování a ověřování se mohou vyskytnout problémy, které vyžaduj�
 
 - [Informace o tom, jak získat podporu pro Intune](get-support.md)
 
-- [Kontakt na odbornou telefonickou podporu Microsoft Intune](get-support.md)
+- [Kontaktujte telefonickou podporu s asistencí pro Microsoft Intune](get-support.md)
 
-## <a name="functional-validation-testing"></a>Ověřovací testování funkcí
+## <a name="functional-validation-testing"></a>Ověřovací testování funkčnosti
 
 Ověřování funkčnosti spočívá v testování každé součásti a konfigurace, abyste zjistili, jestli fungují správně. Příklad testování a ověřování je v následující tabulce.
 
-![9\. část – tabulka 1](./media/planning-guide-test-validation/section-9-image-1-table.PNG)
+![9. část – tabulka 1](./media/planning-guide-test-validation/section-9-image-1-table.PNG)
 
 ## <a name="use-case-validation-testing"></a>Ověřovací testování případů použití
 
@@ -70,13 +70,13 @@ Ověřovací testování případů použití se provádí, aby se ověřilo, zd
 
 Ověřovací testování správce IT se provádí, aby se ověřilo správné fungování akcí při správě zařízení nebo uživatelů. Následující příklad obsahuje scénář koncového ověřování, které provádí správce IT.
 
-![9\. část – tabulka 2](./media/planning-guide-test-validation/section-9-image-2-table.PNG)
+![9. část – tabulka 2](./media/planning-guide-test-validation/section-9-image-2-table.PNG)
 
 ### <a name="end-user"></a>koncový uživatel
 
 Ověřovací testování koncového uživatele se provádí, aby se ověřilo, jestli pracovní prostředí koncového uživatele funguje očekávaným způsobem a je správně prezentované při veškeré komunikaci uživatele. Je důležité k ověření, jestli má uživatel k dispozici funkce, které potřebuje. Pokud se vám ověření nepodaří, může se snížit míra přijetí a zvýšit objem volání na helpdesk.
 
-![9\. část – tabulka 3](./media/planning-guide-test-validation/section-9-image-3-table.PNG)
+![9. část – tabulka 3](./media/planning-guide-test-validation/section-9-image-3-table.PNG)
 
 ## <a name="next-steps"></a>Další kroky
 

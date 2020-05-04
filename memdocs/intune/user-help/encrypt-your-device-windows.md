@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: be5611b9761598ef2856e06fd073f9d66c864f0c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79324895"
 ---
 # <a name="how-to-protect-your-windows-device-using-encryption"></a>Jak chránit zařízení s Windows pomocí šifrování
@@ -38,7 +38,7 @@ Pokud máte telefon s Windows a zaregistrovali jste si ho, zařízení se zašif
 
 Pokud máte stolní zařízení, je jeho zašifrování popsané v následujících pokynech.
 
-1. Vyhledejte a spusťte aplikaci **Spravovat nástroj BitLocker**.
+1. Vyhledejte a pak spusťte aplikaci **Správa nástroje BitLocker** .
 
 2. Zvolte **Zapnout nástroj BitLocker** a pak podle zobrazených pokynů zašifrujte jednotlivé jednotky.
 

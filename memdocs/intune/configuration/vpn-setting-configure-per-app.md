@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 97d3c4ee2e1ad173b8fff238f072b1b36c3ed1cb
-ms.sourcegitcommit: 0907ee1137773f0482b1d2b9bb344e206d05aede
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80536897"
 ---
 # <a name="set-up-per-app-virtual-private-network-vpn-for-iosipados-devices-in-intune"></a>Nastavení virtuální privátní sítě (VPN) pro jednotlivé aplikace v Intune pro zařízení s iOS/iPadOS
@@ -71,8 +71,8 @@ Vytvořte nebo vyberte existující skupinu v Azure Active Directory (Azure AD) 
 Kořenový certifikát serveru VPN vystavený certifikační autoritou naimportujte do profilu vytvořeného v Intune. Profil důvěryhodného certifikátu instruuje zařízení iOS/iPadOS, aby automaticky důvěřovalo certifikační autoritě, kterou server VPN prezentuje.
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **zařízení** > **konfiguračních profilech** > **vytvořit profil**.
-3. Zadejte následující vlastnosti:
+2. Vyberte **Konfigurace zařízení** > **profily** > konfigurace**vytvořit profil**.
+3. Zadejte tyto vlastnosti:
 
     - **Platforma**: vyberte **iOS/iPadOS**.
     - **Typ profilu**: vyberte **důvěryhodný certifikát**.
@@ -88,7 +88,7 @@ Kořenový certifikát serveru VPN vystavený certifikační autoritou naimportu
 8. Vyberte **Další**a pokračujte v vytváření profilu. Další informace najdete v tématu [Vytvoření profilu sítě VPN](vpn-settings-configure.md#create-the-profile).
 
     > [!div class="mx-imgBorder"]
-    > ![vytvořit profil důvěryhodného certifikátu pro zařízení s iOS/iPadOS v Microsoft Intune](./media/vpn-setting-configure-per-app/vpn-per-app-create-trusted-cert.png)
+    > ![Vytvoření profilu důvěryhodného certifikátu pro zařízení s iOS/iPadOS v Microsoft Intune](./media/vpn-setting-configure-per-app/vpn-per-app-create-trusted-cert.png)
 
 ## <a name="create-a-scep-or-pkcs-certificate-profile"></a>Vytvoření profilu certifikátu SCEP nebo PKCS
 
@@ -102,15 +102,15 @@ Pokud chcete nakonfigurovat a přiřadit certifikát pro ověřování klientů,
 Nezapomeňte nakonfigurovat certifikát pro ověřování klientů. Ověřování klienta můžete nastavit přímo v profilech certifikátů SCEP (seznam**použití rozšířeného klíče** > **ověřování klientů**). V případě PKCS nastavte ověřování klientů v šabloně certifikátu v certifikační autoritě (CA).
 
 > [!div class="mx-imgBorder"]
-> ![vytvořit profil certifikátu SCEP v Microsoft Intune, včetně formátu názvu subjektu, použití klíče, rozšířeného použití klíče a dalších](./media/vpn-setting-configure-per-app/vpn-per-app-create-scep-cert.png)
+> ![Vytvoření profilu certifikátu SCEP v Microsoft Intune, včetně formátu názvu subjektu, použití klíče, rozšířeného použití klíče a dalších](./media/vpn-setting-configure-per-app/vpn-per-app-create-scep-cert.png)
 
 ## <a name="create-a-per-app-vpn-profile"></a>Vytvoření profilu sítě VPN pro jednotlivé aplikace
 
 Profil VPN obsahuje certifikát SCEP nebo PKCS s přihlašovacími údaji klienta, informace o připojení VPN a příznak sítě VPN pro jednotlivé aplikace, který umožňuje použití sítě VPN pro jednotlivé aplikace, kterou používá aplikace pro iOS/iPadOS.
 
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **konfigurační profily** > **vytvořit profil**.
-2. Vyberte **zařízení** > **konfiguračních profilech** > **vytvořit profil**.
-3. Zadejte následující vlastnosti:
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **Konfigurace profily** > **vytvořit profil**.
+2. Vyberte **Konfigurace zařízení** > **profily** > konfigurace**vytvořit profil**.
+3. Zadejte tyto vlastnosti:
 
     - **Platforma**: vyberte **iOS/iPadOS**.
     - **Typ profilu**: vyberte **VPN**.
@@ -131,14 +131,14 @@ Profil VPN obsahuje certifikát SCEP nebo PKCS s přihlašovacími údaji klient
       - **Dělené tunelové propojení**: Pokud vyberete **Zakázat** , vynutí se použití tunelu VPN v případě, že je připojení VPN aktivní. 
 
       > [!div class="mx-imgBorder"]
-      > ![v profilu sítě VPN pro jednotlivé aplikace zadejte připojení, IP adresu nebo plně kvalifikovaný název domény, metodu ověřování a dělené tunelové propojení v Microsoft Intune](./media/vpn-setting-configure-per-app/vpn-per-app-create-vpn-profile.png)
+      > ![V profilu sítě VPN pro jednotlivé aplikace zadejte připojení, IP adresu nebo plně kvalifikovaný název domény, metodu ověřování a dělené tunelové propojení v Microsoft Intune](./media/vpn-setting-configure-per-app/vpn-per-app-create-vpn-profile.png)
 
     Informace o dalších nastaveních najdete v tématu [nastavení sítě VPN pro iOS/iPadOS](vpn-settings-ios.md).
 
-    - **Automatický** typ VPN > **automatické** připojení VPN > **pro aplikaci**
+    - **Automatický** > **typ** > sítě VPN automatické sítě VPN**pro jednotlivé aplikace**
 
       > [!div class="mx-imgBorder"]
-      > ![v Intune nastavte pro zařízení s iOS/iPadOS automatické připojení VPN na jednu aplikaci](./media/vpn-setting-configure-per-app/vpn-per-app-automatic.png)
+      > ![V Intune nastavte pro zařízení s iOS/iPadOS automatickou síť VPN na síť VPN pro jednotlivé aplikace.](./media/vpn-setting-configure-per-app/vpn-per-app-automatic.png)
 
 7. Vyberte **Další**a pokračujte v vytváření profilu. Další informace najdete v tématu [Vytvoření profilu sítě VPN](vpn-settings-configure.md#create-the-profile).
 
@@ -149,11 +149,11 @@ Po přidání profilu sítě VPN přidružte aplikaci a skupinu služby Azure AD
 1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **aplikace** > **všechny aplikace**.
 2. Vyberte aplikaci ze seznamu > **vlastnosti** > **přiřazení** > **Přidat skupinu**.
 3. V **typu přiřazení**vyberte možnost **požadováno** nebo **k dispozici pro zaregistrovaná zařízení**.
-4. Vyberte **zahrnuté skupiny** > **Vybrat skupiny, které chcete zahrnout** > vyberte skupinu [, kterou jste vytvořili](#create-a-group-for-your-vpn-users) (v tomto článku) > **Vybrat**.
+4. Vyberte **zahrnuté skupiny** > **Vybrat skupiny, které se mají zahrnout** > vyberte skupinu [, kterou jste vytvořili](#create-a-group-for-your-vpn-users) (v tomto článku) > **Vybrat**.
 5. V části **sítě VPN**vyberte profil sítě VPN pro jednotlivé aplikace [, který jste vytvořili](#create-a-per-app-vpn-profile) (v tomto článku).
 
     > [!div class="mx-imgBorder"]
-    > ![přiřadit aplikaci k profilu sítě VPN pro jednotlivé aplikace v Microsoft Intune](./media/vpn-setting-configure-per-app/vpn-per-app-app-to-vpn.png)
+    > ![Přiřaďte aplikaci k profilu sítě VPN pro jednotlivé aplikace v Microsoft Intune](./media/vpn-setting-configure-per-app/vpn-per-app-app-to-vpn.png)
 
 6. Vyberte **OK** > **Uložit**.
 

@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 4088185da2c01cfa7fd343203f7452d2796c4466
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79324319"
 ---
 # <a name="sign-in-to-company-portal"></a>Přihlášení k Portál společnosti  
@@ -60,7 +60,7 @@ Tato možnost přihlášení se zobrazí jenom v případě, že vaše organizac
 
 1. Na svém zařízení otevřete aplikaci Portál společnosti.  
 
-2. Zadejte svůj **Pracovní nebo školní účet**.  
+2. Zadejte svůj **pracovní nebo školní účet**.  
 
 3. Klepněte na odkaz **Přihlásit se pomocí certifikátu**.  
 
@@ -80,7 +80,7 @@ Pokud vaše společnost používá pro přístup k počítačům čipové karty,
 
    ![Zobrazí se pokyny, abyste ze svého pracovního počítače přešli na stránku https://microsoft.com/devicelogin, kde najdete jedinečný přístupový kód, a ten pak použili k přihlášení.](./media/cp_ios_aad_signin_after_1804_006.png)
 
-3. Na svém jiném zařízení (ten, který používáte k ověřování) otevřete prohlížeč a přejít na [https://microsoft.com/devicelogin](https://microsoft.com/devicelogin). Zadejte nebo vložte kód.  
+3. Na svém jiném zařízení (ten, který používáte k ověřování) otevřete prohlížeč a pokračujte na [https://microsoft.com/devicelogin](https://microsoft.com/devicelogin). Zadejte nebo vložte kód.  
 
    ![Obrázek uživatelova prohlížeče na pracovním počítači místo aplikace Portál společnosti. Zobrazená stránka „Přihlášení na zařízení“ uživatele vyzve k zadání kódu, který dostal v aplikaci Portál společnosti.](../fundamentals/media/whats-new-app-ui/cp_ios_aad_signin_from_another_device_after_1704_004.png)
 

@@ -1,7 +1,7 @@
 ---
 title: nastavení zařízení macOS v Microsoft Intune – Azure | Microsoft Docs
 titleSuffix: ''
-description: Přidání, konfigurace nebo vytvoření nastavení na zařízeních macOS, abyste omezili funkce, včetně nastavení požadavků na heslo, řízení uzamčené obrazovky, používání integrovaných aplikací, přidávání omezených nebo schválených aplikací, zpracování zařízení Bluetooth, připojení ke cloudu pro zálohování a úložiště, povolit celoobrazovkový režim, přidat domény a řídit, jak uživatelé pracují s webovým prohlížečem Safari v Microsoft Intune.
+description: Přidávání, nastavování nebo vytváření nastavení na zařízeních macOS, aby se omezily funkce, včetně nastavení požadavků na heslo, řízení uzamčené obrazovky, používání integrovaných aplikací, přidávání omezených nebo schválených aplikací, zpracování zařízení Bluetooth, připojení ke cloudu pro zálohování a ukládání, povolení celoobrazovkového režimu, přidávání domén a řízení způsobu interakce uživatelů s webovým prohlížečem Safari v Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 50dd3d245b9a89836e3858d71a7ad124189e0973
-ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/31/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80407850"
 ---
 # <a name="macos-device-settings-to-allow-or-restrict-features-using-intune"></a>macOS nastavení zařízení pro povolení nebo omezení funkcí pomocí Intune
@@ -89,12 +89,12 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
     Tato funkce platí pro:  
     - macOS 10.10.3 a novější
 
-  - **Počet nealfanumerických znaků v hesle**: zadejte počet složitých znaků vyžadovaných v hesle, od 0-4. Složitý znak je symbol, například `?`
+  - **Počet nealfanumerických znaků v hesle**: zadejte počet složitých znaků vyžadovaných v hesle, od 0-4. Složitý znak je symbol, například`?`
   - **Minimální délka hesla**: zadejte minimální délku hesla, která musí být delší než 4-16 znaků.
-  - **Jednoduchá hesla**: umožňuje používat jednoduchá hesla, například `0000` nebo `1234`.
+  - **Jednoduchá hesla**: povolí použití jednoduchých hesel, jako je `0000` například `1234`nebo.
   - **Maximální počet minut po uzamčení obrazovky, než se požaduje heslo**: zadejte dobu, po kterou musí být zařízení neaktivní, než bude nutné heslo odemknout. Když je hodnota prázdná nebo nastavená na **nenakonfigurovaná**, Intune se nezmění ani neaktualizuje.
   - **Maximální počet minut nečinnosti, po kterém se zamkne obrazovka**: zadejte dobu, po kterou musí být zařízení nečinné, než se obrazovka automaticky zamkne. Zadejte například hodnotu 5 pro uzamčení zařízení po 5 minutách nečinnosti. Když je hodnota prázdná nebo nastavená na **nenakonfigurovaná**, Intune se nezmění ani neaktualizuje.
-  - **Vypršení platnosti hesla (dny)** : zadejte počet dní, než bude nutné změnit heslo zařízení, od 1-65535. Zadejte například `90` vypršení platnosti hesla po 90 dnech. Po vypršení platnosti hesla se uživatelům zobrazí výzva k vytvoření nového hesla. Pokud je hodnota prázdná, Intune se nezmění ani neaktualizuje.
+  - **Vypršení platnosti hesla (dny)**: zadejte počet dní, než bude nutné změnit heslo zařízení, od 1-65535. Zadejte `90` například platnost hesla po 90 dnech. Po vypršení platnosti hesla se uživatelům zobrazí výzva k vytvoření nového hesla. Pokud je hodnota prázdná, Intune se nezmění ani neaktualizuje.
   - **Zakázat opakované použití předchozích hesel**: pomocí tohoto nastavení můžete uživatelům zabránit ve vytváření hesel, která používali dřív. Zadejte počet dříve použitých hesel, která se nedají použít, od 1-24. Zadejte například hodnotu 5, aby uživatelé nemohli nastavit nové heslo, nebo některá z předchozích čtyř hesel. Pokud je hodnota prázdná, Intune se nezmění ani neaktualizuje.
 
 - **Zablokovat uživateli změnu hesla**: **blok** zastaví změnu hesla, přidání nebo odebrání hesla. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém přidat, změnit nebo odebrat hesla.
@@ -171,7 +171,7 @@ Pokud chcete do těchto seznamů přidat aplikace, můžete:
   Tato funkce platí pro:  
   - macOS 10,15 a novější
 
-## <a name="domains"></a>Domains
+## <a name="domains"></a>Domény
 
 ### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Nastavení platí pro: registrace zařízení a automatický zápis zařízení
 

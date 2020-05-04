@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 569a80d21efd82b6008c7aa7a613c089a10c6ff3
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79331111"
 ---
 # <a name="intune-network-configuration-requirements-and-bandwidth"></a>Šířka pásma a požadavky na konfiguraci sítě Intune
@@ -38,18 +38,18 @@ Tabulka uvádí přibližnou velikost a četnost u nejčastějšího obsahu pře
 
 |Typ obsahu|Přibližná velikost|Četnost a podrobnosti|
 |----------------|--------------------|-------------------------|
-|Instalace klienta Intune<br /><br />**K instalaci klienta Intune se přidávají ještě tyto požadavky**|125 MB|**Jednou**<br /><br />Velikost souborů klienta ke stažení se liší podle operačního systému klientského počítače.|
-|Registrační balíček klienta|15 MB|**Jednou**<br /><br />Další stahování je možné, pokud jsou pro tento typ obsahu dostupné aktualizace.|
-|Agent Endpoint Protection|65 MB|**Jednou**<br /><br />Další stahování je možné, pokud jsou pro tento typ obsahu dostupné aktualizace.|
-|Agent Operations Manageru|11 MB|**Jednou**<br /><br />Další stahování je možné, pokud jsou pro tento typ obsahu dostupné aktualizace.|
-|Agent zásad|3 MB|**Jednou**<br /><br />Další stahování je možné, pokud jsou pro tento typ obsahu dostupné aktualizace.|
-|Agent Vzdálené pomoci prostřednictvím nástroje Microsoft Easy Assist|6 MB|**Jednou**<br /><br />Další stahování je možné, pokud jsou pro tento typ obsahu dostupné aktualizace.|
-|Denní operace klienta|6 MB|**Denně**<br /><br />Klient Intune pravidelně komunikuje se službou Intune a kontroluje aktualizace a zásady a oznamuje službě stav klienta.|
-|Aktualizace definicí malwaru Endpoint Protection|Je to různé.<br /><br />Obvykle 40 KB až 2 MB|**Denně**<br /><br />Až třikrát denně|
-|Aktualizace modulu Endpoint Protection|5 MB|**Měsíčně**|
-|Aktualizace softwaru|Je to různé.<br /><br />Velikost závisí na nasazených aktualizacích.|**Měsíčně**<br /><br />Aktualizace softwaru se obvykle vydávají k druhému úterý v měsíci.<br /><br />Nově zaregistrovaný nebo nasazený počítač může používat větší šířku pásma sítě při stahování celé sady dříve vydaných aktualizací.|
-|Aktualizace Service Pack|Je to různé.<br /><br />Velikost se liší u každé nasazené aktualizace Service Pack.|**Je to různé.**<br /><br />Závisí na tom, kdy aktualizace Service Pack nasadíte.|
-|Distribuce softwaru|Je to různé.<br /><br />Velikost závisí na nasazeném softwaru.|**Je to různé.**<br /><br />Závisí na tom, kdy software nasadíte.|
+|Instalace klienta Intune<br /><br />**K instalaci klienta Intune se přidávají ještě tyto požadavky**|125 MB|**Jednorázový**<br /><br />Velikost souborů klienta ke stažení se liší podle operačního systému klientského počítače.|
+|Registrační balíček klienta|15 MB|**Jednorázový**<br /><br />Další stahování je možné, pokud jsou pro tento typ obsahu dostupné aktualizace.|
+|Agent Endpoint Protection|65 MB|**Jednorázový**<br /><br />Další stahování je možné, pokud jsou pro tento typ obsahu dostupné aktualizace.|
+|Agent Operations Manageru|11 MB|**Jednorázový**<br /><br />Další stahování je možné, pokud jsou pro tento typ obsahu dostupné aktualizace.|
+|Agent zásad|3 MB|**Jednorázový**<br /><br />Další stahování je možné, pokud jsou pro tento typ obsahu dostupné aktualizace.|
+|Agent Vzdálené pomoci prostřednictvím nástroje Microsoft Easy Assist|6 MB|**Jednorázový**<br /><br />Další stahování je možné, pokud jsou pro tento typ obsahu dostupné aktualizace.|
+|Denní operace klienta|6 MB|**denně**<br /><br />Klient Intune pravidelně komunikuje se službou Intune a kontroluje aktualizace a zásady a oznamuje službě stav klienta.|
+|Aktualizace definicí malwaru Endpoint Protection|Různé<br /><br />Obvykle 40 KB až 2 MB|**denně**<br /><br />Až třikrát denně|
+|Aktualizace modulu Endpoint Protection|5 MB|**Nadpis**|
+|Aktualizace softwaru|Různé<br /><br />Velikost závisí na nasazených aktualizacích.|**Nadpis**<br /><br />Aktualizace softwaru se obvykle vydávají k druhému úterý v měsíci.<br /><br />Nově zaregistrovaný nebo nasazený počítač může používat větší šířku pásma sítě při stahování celé sady dříve vydaných aktualizací.|
+|Aktualizace Service Pack|Různé<br /><br />Velikost se liší u každé nasazené aktualizace Service Pack.|**Různé**<br /><br />Závisí na tom, kdy aktualizace Service Pack nasadíte.|
+|Distribuce softwaru|Různé<br /><br />Velikost závisí na nasazeném softwaru.|**Různé**<br /><br />Závisí na tom, kdy software nasadíte.|
 
 ## <a name="ways-to-reduce-network-bandwidth-use"></a>Způsob snížení využití šířky pásma sítě
 
@@ -95,9 +95,9 @@ Optimalizace doručení vám umožní používat Intune k omezení spotřeby š�
 
 Klienti Intune můžou díky BranchCache omezit přenos v síti WAN. BranchCache podporují následující operační systémy:
 
-- Windows 7
+- Windows 7
 - Windows 8.0
-- Windows 8.1
+- Windows 8.1
 - Windows 10
 
 Abyste mohli BranchCache používat, musíte na klientském počítači povolit BranchCache a pak ho nakonfigurovat pro **režim distribuované mezipaměti**.

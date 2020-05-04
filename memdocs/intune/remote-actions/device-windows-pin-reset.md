@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 7107669b3a87f0ca7488f2fdd5203c6052beffad
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80326276"
 ---
 # <a name="reset-the-passcode-on-windows-devices-using-intune"></a>Resetování hesla na zařízeních s Windows pomocí Intune
@@ -53,7 +53,7 @@ Abyste mohli heslo zařízení s Windows resetovat, zaveďte do svého tenanta I
 
 Pokud chcete nakonfigurovat resetování kódu PIN na zařízeních s Windows, která spravujete, použijte [vlastní zásady zařízení s Windows 10 v Intune](../configuration/custom-settings-windows-10.md). Zásady nakonfigurujte pomocí následujících poskytovatelů konfiguračních služeb (CSP) pro zásady Windows:
 
-**Použijte zásadu zařízení** - `./Device/Vendor/MSFT/PassportForWork/*tenant ID*/Policies/EnablePinRecovery`
+**Použití zásad zařízení** - `./Device/Vendor/MSFT/PassportForWork/*tenant ID*/Policies/EnablePinRecovery`
 
 Místo *tenant ID* použijte své ID adresáře Azure, které je uvedené ve **Vlastnostech** Azure Active Directory na portálu [Azure Portal](https://portal.azure.com).
 
@@ -67,7 +67,7 @@ Nastavte hodnotu pro tohoto poskytovatele konfiguračních služeb na **True**.
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431). 
 2. Vyberte **Zařízení** a potom **Všechna zařízení**.
 3. Vyberte zařízení, jehož heslo chcete resetovat. Ve vlastnostech zařízení vyberte **resetovat heslo**.
-4. Vyberte **Ano**. Tím akci potvrdíte. Vygeneruje se heslo, které zůstane na portálu zobrazeno dalších sedm dní.
+4. Výběrem **Ano** potvrďte. Vygeneruje se heslo, které zůstane na portálu zobrazeno dalších sedm dní.
 
 ## <a name="next-step"></a>Další krok
 

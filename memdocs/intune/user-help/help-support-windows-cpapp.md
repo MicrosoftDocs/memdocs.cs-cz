@@ -19,10 +19,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 1fcf4d98504f23f5fa19a099d61e7534e4df4571
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79324603"
 ---
 # <a name="get-help-and-support-in-company-portal-for-windows-10"></a>Získání pomoci a podpory v Portál společnosti pro Windows 10
@@ -40,7 +40,7 @@ Pomoc **& podpoře** vám umožní:
 
 ## <a name="get-help-with-app-problems"></a>Získat pomoc s problémy s aplikacemi
 
-Pošlete organizaci e-mail o všech problémech, se kterými se setkáte Portál společnosti. Vyberte **získat nápovědu** a začněte popisem problému. Vaše organizace použije informace, které poskytnete k řešení problému. Pokud k určení problému potřebujete další pomoc, bude vaše organizace používat ID diagnostiky&ndash;automaticky zahrnutá v e-mailu&ndash;, aby se mohl obrátit na tým podpory Microsoftu.  
+Pošlete organizaci e-mail o všech problémech, se kterými se setkáte Portál společnosti. Vyberte **získat nápovědu** a začněte popisem problému. Vaše organizace použije informace, které poskytnete k řešení problému. Pokud k určení problému potřebujete další pomoc, bude vaše organizace používat ID&ndash;diagnostiky automaticky zahrnuté v e-mailu&ndash;, aby se mohli obrátit na tým podpory Microsoftu.  
 
 Podrobný postup najdete v tématu [odeslání protokolů firemní podpoře z aplikace Portál společnosti pro Windows 10](send-logs-to-your-it-admin-cp-windows.md).  
 

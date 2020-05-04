@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: b0df9499d79ff7773266326d5b0e1347413f88dd
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79327887"
 ---
 # <a name="email-your-company-support-about-problem-from-company-portal-for-windows"></a>Poslat e-mail firemní podpoře o problému z Portál společnosti pro Windows
@@ -45,8 +45,8 @@ Události a chyby, ke kterým dochází v aplikaci Portál společnosti, se ulo�
 
 ## <a name="steps-to-get-help"></a>Postup získání nápovědu  
 
-1. Otevřete aplikaci **Portál společnosti**.
-2. Vyberte **nápověda & podpora** > **získat nápovědu**.  
+1. Otevřete aplikaci **portál společnosti** .
+2. Vyberte **Nápověda & podpora** > **získat nápovědu**.  
 
    ![Snímek obrazovky se stránkou podpory & pro nápovědu, zvýraznění levého navigačního panelu a získání oddílu s nápovědu](./media/1812_UCP_Help_Support_Get_Help_Logs.png)    
 

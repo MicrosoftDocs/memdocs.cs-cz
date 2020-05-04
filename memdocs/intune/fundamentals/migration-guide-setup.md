@@ -17,10 +17,10 @@ ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 3b7784d4ad86e3418259f85ca1c4577d2289dc86
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79331191"
 ---
 # <a name="basic-setup"></a>Základní nastavení
@@ -31,9 +31,9 @@ Po vyhodnocení prostředí je čas nastavit Microsoft Intune.
 
 ### <a name="identity"></a>Identita
 
-Intune vyžaduje, aby identitu a seskupování uživatelů poskytovala služba Azure Active Directory (AAD). Další informace pro:
+Intune vyžaduje, aby identitu a seskupování uživatelů poskytovala služba Azure Active Directory (AAD). Další informace:
 
-- [Požadavky na identity](https://docs.microsoft.com/azure/active-directory/active-directory-hybrid-identity-design-considerations-overview#design-considerations-overview)
+- [Požadavky na identitu](https://docs.microsoft.com/azure/active-directory/active-directory-hybrid-identity-design-considerations-overview#design-considerations-overview)
 
 - [Požadavky na synchronizaci adresáře](https://docs.microsoft.com/azure/active-directory/active-directory-hybrid-identity-design-considerations-directory-sync-requirements)
 
@@ -49,9 +49,9 @@ Pokud už používá organizace Office 365, musí služba Intune používat stej
 
 Pokud plánujete používat ověřování pomocí certifikátů pro profily sítě VPN, Wi-Fi nebo e-mailové profily s Intune, musíte zajistit, aby byla k dispozici podporovaná [Infrastruktura PKI](../protect/certificates-configure.md), připravena k vytváření a nasazování profilů certifikátů. Další informace o konfiguraci certifikátů v Intune:
 
-- [Jak konfigurovat infrastrukturu certifikátů pro SCEP](/intune/certificates-scep-configure)
+- [Postup konfigurace infrastruktury certifikátů pro SCEP](/intune/certificates-scep-configure)
 
-- [Jak konfigurovat infrastrukturu certifikátů pro PFX](/intune/certficates-pfx-configure)
+- [Postup konfigurace infrastruktury certifikátů pro PFX](/intune/certficates-pfx-configure).
 
 ## <a name="task-list-for-an-intune-setup"></a>Seznam kroků instalace Intune
 

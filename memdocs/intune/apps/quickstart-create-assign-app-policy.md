@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: fb8b5eae3c88664caff76da597fc3ab9111f989c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79326791"
 ---
 # <a name="quickstart-create-and-assign-an-app-protection-policy"></a>Rychlý start: Vytvoření a přiřazení zásady ochrany aplikací
@@ -39,25 +39,25 @@ Pokud nemáte předplatné Intune, [Zaregistrujte si bezplatný zkušební úče
 
 Přihlaste se k [Intune](https://aka.ms/intuneportal) jako [globální správce nebo jako správce služby Intune](../fundamentals/users-add.md#types-of-administrators). Pokud jste vytvořili zkušební předplatné Intune, účet, z něhož jste toto předplatné vytvořili, je globálním správcem.
 
-## <a name="create-an-app-protection-policy"></a>Vytvoření zásady ochrany aplikací
+## <a name="create-an-app-protection-policy"></a>Vytvoření zásad ochrany aplikací
 
 Zásady ochrany aplikací vytvoříte pomocí následujících kroků:
 
-1. V [Intune](https://aka.ms/intuneportal)vyberte **aplikace** > **Zásady ochrany aplikací** > **vytvořit zásadu**. 
+1. V [Intune](https://aka.ms/intuneportal)vyberte **aplikace** > **zásady** > ochrany aplikací**vytvořit zásadu**. 
 2. Zadejte následující podrobnosti:
 
-    - **Název:** *Ochrana obsahu pro Windows 10*
-    - **Popis:** *Uživatelé přidružení k této zásadě nebudou moci vyjímat, kopírovat ani vkládat žádný obsah mezi přiřazenou aplikací a jinými nespravovanými aplikacemi v zařízení.*
-    - **Platforma:** *Windows 10*
-    - **Stav registrace:** *S registrací*
+    - **Název:***Ochrana obsahu pro Windows 10*
+    - **Popis:***Uživatelé přidružení k této zásadě nebudou moci vyjímat, kopírovat ani vkládat žádný obsah mezi přiřazenou aplikací a jinými nespravovanými aplikacemi v zařízení.*
+    - **Platforma:***Windows 10*
+    - **Stav registrace:***S registrací*
 
 3. Vyberte **Chráněné aplikace** a zvolte aplikace, které musí tuto zásadu dodržovat.
 4. Klikněte na **Přidat aplikace**.
 5. V oblasti **Doporučené aplikace** vyberte **Word Mobile**.
-5. Klikněte na **OK** > **OK**. 
+5. Klikněte na **OK** > **.** 
 6. Vyberte **Požadovaná nastavení** a nakonfigurujte tuto aplikaci.
 7. Kliknutím na **Povolit potlačení** nastavte režim Windows Information Protection. Výběr této možnosti znemožní únik podnikových dat z chráněné aplikace.
-8. Klikněte na **OK** > **Vytvořit**.
+8. Klikněte na tlačítko **OK** > **vytvořit**.
 
 V Intune se teď zobrazí zásady ochrany aplikací.
 
@@ -67,12 +67,12 @@ Po vytvoření zásady ochrany aplikací v Intune ji můžete přiřadit ke skup
 
 K přiřazení zásady ochrany aplikací použijte následující postup:
 
-1. V [Intune](https://aka.ms/intuneportal)vyberte **Intune** > **aplikace** > **Zásady ochrany aplikací**. 
+1. V [Intune](https://aka.ms/intuneportal)vyberte**aplikace** >  **Intune** > aplikace**Zásady ochrany aplikací**. 
 2. Vyberte dříve vytvořenou zásadu ochrany aplikací. V tomto rychlém startu je to zásada **Ochrana obsahu pro Windows 10**.
-3. Zvolte **Přiřazení**.
+3. Vyberte **přiřazení**.
 4. Na kartě **Zahrnout** klikněte na **Vybrat skupiny, které se zahrnou**.
 5. Jako skupinu, která se zahrne, vyberte **Testeři Contoso**.
-6. Klikněte na **vybrat** > **Uložit**. 
+6. Klikněte na **Vybrat** > **Uložit**. 
 
 Právě jste přiřadili zásadu ochrany aplikací.
 

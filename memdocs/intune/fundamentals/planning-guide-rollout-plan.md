@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 7aa18316ad1b4473ac70399e1370bfececadbfaf
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79330971"
 ---
 # <a name="develop-a-rollout-plan"></a>Vývoj plánu nasazení
@@ -56,7 +56,7 @@ Po úspěšném pilotním projektu jste připraveni začít s úplnými provozn�
 
 - **Oddělení** <br/>Fáze nasazení se může účastnit každé oddělení. Zaměříte se vždy jen na jedno oddělení. Při tomto typu nasazení je větší pravděpodobnost, že uživatelé budou v každém oddělení používat mobilní zařízení stejným způsobem a budou přistupovat ke stejným aplikacím. Uživatelé také budou mít stejné typy zásad.
 
-- **Zeměpisná oblast** <br/>V tomto postupu nasadíte pro všechny uživatele v konkrétní zeměpisné oblasti, ať už se jedná o stejný kontinent, zemi nebo oblast nebo budova stejné společnosti. Tento typ postupného nasazení umožňuje zaměřit se na uživatele, kteří jsou na určitém místě. Takový přístup je [šetrnější](#user-assisted-enrollment), protože počet míst, kde se Intune současně nasazuje, je menší. Na jednom místě budou pravděpodobně různá oddělení nebo různé způsoby použití, a proto mohou být současně nasazovány různé způsoby použití.
+- **Geografické** <br/>V tomto postupu nasadíte pro všechny uživatele v konkrétní zeměpisné oblasti, ať už se jedná o stejný kontinent, zemi nebo oblast nebo budova stejné společnosti. Tento typ postupného nasazení umožňuje zaměřit se na uživatele, kteří jsou na určitém místě. Takový přístup je [šetrnější](#user-assisted-enrollment), protože počet míst, kde se Intune současně nasazuje, je menší. Na jednom místě budou pravděpodobně různá oddělení nebo různé způsoby použití, a proto mohou být současně nasazovány různé způsoby použití.
 
 - **Platforma** <br/>Tento typ nasazení spočívá v současném nasazení podobných platforem. Příkladem může být všechna zařízení se systémem iOS/iPadOS první měsíc a potom Androidem a systémem Windows. Tento typ postupného nasazení zjednodušuje podporu helpdesku, protože se podpora týká vždy jen jedné platformy.
 
@@ -66,9 +66,9 @@ Tady je příklad plánu zavedení Intune, který obsahuje cílové skupiny a č
 |:---:|:---:|:---:|:---:|:---:|
 | Omezené pilotní nasazení | IT (50 uživatelů) |  |  |  |                                                         
 | Rozšířené pilotní nasazení | IT (200 uživatelů), vedení IT (10 uživatelů) |  |  |  |                                                         
-| 1\. fáze nasazení v ostrém provozu |  | Prodej a marketing (2000 uživatelů) |  |  |
-| 2\. fáze nasazení v ostrém provozu |  |  | Maloobchod (1000 uživatelů) |  |
-| 3\. fáze nasazení v ostrém provozu |  |  |  | Personalistika (50 uživatelů), finance (40 uživatelů), vedení (30 uživatelů) |
+| 1. fáze nasazení v ostrém provozu |  | Prodej a marketing (2000 uživatelů) |  |  |
+| 2. fáze nasazení v ostrém provozu |  |  | Maloobchod (1000 uživatelů) |  |
+| 3. fáze nasazení v ostrém provozu |  |  |  | Personalistika (50 uživatelů), finance (40 uživatelů), vedení (30 uživatelů) |
 
 Můžete [si stáhnout šablonu výše uvedené tabulky](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) a zadat fáze zavedení vaší organizace.
 ## <a name="match-rollout-groups-to-enrollment-approaches"></a>Sladění skupin a přístupů při nasazení
@@ -99,12 +99,12 @@ Tady je aktualizovaný příklad plánu zavedení Intune, který zahrnuje přís
 | Rozšířené pilotní nasazení |  |  |  |  |
 | Samoobslužné | IT |  |  |  |
 | Šetrný způsob | Vedení IT |  |  |  |
-| 1\. fáze nasazení v ostrém provozu |  | Prodej, marketing |  |  |
+| 1. fáze nasazení v ostrém provozu |  | Prodej, marketing |  |  |
 | Samoobslužné |  | Prodej a marketing |  |  |
-| 2\. fáze nasazení v ostrém provozu |  |  | Maloobchod |  |
+| 2. fáze nasazení v ostrém provozu |  |  | Maloobchod |  |
 | Samoobslužné |  |  | Maloobchod |  |
-| 3\. fáze nasazení v ostrém provozu |  |  |  | Vedoucí pracovníci, personální oddělení, finance |
-| Samoobslužné |  |  |  | Personální, finanční oddělení |
+| 3. fáze nasazení v ostrém provozu |  |  |  | Vedoucí pracovníci, personální oddělení, finance |
+| Samoobslužné |  |  |  | Personalistika, finance |
 | Šetrný způsob |  |  |  | Vedení |
 
 ## <a name="next-steps"></a>Další kroky

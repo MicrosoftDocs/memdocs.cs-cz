@@ -2,7 +2,7 @@
 title: Koncový bod rozhraní API datového skladu Intune
 titleSuffix: Microsoft Intune
 description: Toto referenční téma popisuje Microsoft Intune strukturu adres URL rozhraní API datového skladu. Jsou k dispozici příklady filtru.
-keywords: Datový sklad Intune
+keywords: Intune Data Warehouse
 author: Erikre
 ms.author: erikre
 manager: dougeby
@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 04521681ee6e262f4634cfc96560a5922ce1b8c0
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79331831"
 ---
 # <a name="intune-data-warehouse-api-endpoint"></a>Koncový bod rozhraní API datového skladu Intune
@@ -33,7 +33,7 @@ Rozhraní API datového skladu Intune můžete použít s účtem s řízením p
 
 ## <a name="authorization"></a>Autorizace
 
-Azure Active Directory (Azure AD) používá standard OAuth 2.0 za účelem umožnění autorizace přístupu k webovým aplikacím a webovým rozhraním API v tenantovi Azure AD. Tato příručka je nezávislá na jazyce a popisuje, jak posílat a přijímat zprávy HTTP bez použití knihoven open-source. Tok autorizačního kódu OAuth 2.0 je popsán v [části 4.1](https://tools.ietf.org/html/rfc6749#section-4.1) specifikace standardu OAuth 2.0.
+Azure Active Directory (Azure AD) používá standard OAuth 2.0 za účelem umožnění autorizace přístupu k webovým aplikacím a webovým rozhraním API v tenantovi Azure AD. Tato příručka je nezávislá na jazyce a popisuje, jak posílat a přijímat zprávy HTTP bez použití knihoven open-source. Tok autorizačního kódu OAuth 2,0 je popsaný v [části 4,1](https://tools.ietf.org/html/rfc6749#section-4.1) specifikace OAuth 2,0.
 
 Další informace najdete v tématu [Autorizace přístupu k webovým aplikacím pomocí OAuth 2.0 a Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-protocols-oauth-code).
 
@@ -51,7 +51,7 @@ Adresa URL obsahuje následující prvky:
 
 | Prvek | Příklad | Popis |
 |-------------------|------------|--------------------------------------------------------------------------------------------------------------------|
-| umístění | msua06 | Základní adresu URL můžete najít zobrazením okna rozhraní API datového skladu na webu Azure Portal. |
+| location | msua06 | Základní adresu URL můžete najít zobrazením okna rozhraní API datového skladu na webu Azure Portal. |
 | kolekce-entit | devicePropertyHistories | Název kolekce entit OData Další informace o kolekcích a entitách v datovém modelu najdete v tématu [Datový model](reports-ref-data-model.md). |
 | verze-api | beta | Verze je verzí rozhraní API, ke kterému přistupujete. Další informace najdete v tématu [Verze](reports-api-url.md#api-version-information). |
 | maxhistorydays | 7 | (Volitelné) Maximální počet dní, pro které se načte historie. Tento parametr lze zadat pro jakoukoli kolekci, ale bude mít účinek jenom u kolekcí, jejichž klíčová vlastnost zahrnuje `dateKey`. Další informace najdete v části [Filtry rozsahu DateKey](reports-api-url.md#datekey-range-filters). |
@@ -64,7 +64,7 @@ Nejnovější funkce datového skladu můžete vyzkoušet pomocí beta verze. Po
 
 ## <a name="odata-query-options"></a>Možnosti dotazu OData
 
-Aktuální verze podporuje tyto parametry dotazu OData: `$filter`, `$select`, `$skip,` a `$top`. V `$filter`může být podporován pouze `DateKey` nebo `RowLastModifiedDateTimeUTC`, pokud jsou sloupce použity a další vlastnosti budou aktivovat chybný požadavek.
+Aktuální verze podporuje tyto parametry dotazu OData `$filter`:, `$select`, `$skip,` a. `$top` V `$filter`, nebo `DateKey` `RowLastModifiedDateTimeUTC` může být podporován pouze v případě, že jsou sloupce použity a další vlastnosti by aktivovaly chybný požadavek.
 
 ## <a name="datekey-range-filters"></a>Filtry rozsahu DateKey
 
@@ -80,8 +80,8 @@ Filtry rozsahu `DateKey` se dají použít k omezení množství dat ke stažen�
 
 |                             Filtr                             |           Optimalizace výkonu           |                                          Popis                                          |
 |:--------------------------------------------------------------:|:--------------------------------------------:|:---------------------------------------------------------------------------------------------:|
-|    `maxhistorydays=7`                                            |    Úplný                                      |    Vrátí data s hodnotou `DateKey` mezi 20180214 a 20180221.                                     |
-|    `$filter=DateKey eq 20180214`                                 |    Úplný                                      |    Vrátí data s hodnotou `DateKey` rovnající se 20180214.                                                    |
-|    `$filter=DateKey ge 20180214 and DateKey lt 20180221`         |    Úplný                                      |    Vrátí data s hodnotou `DateKey` mezi 20180214 a 20180220.                                     |
-|    `maxhistorydays=7&$filter=DateKey eq 20180214`                |    Úplný                                      |    Vrátí data s hodnotou `DateKey` rovnající se 20180214. `maxhistorydays` se ignoruje.                            |
-|    `$filter=RowLastModifiedDateTimeUTC ge 2018-02-21T23:18:51.3277273Z`                                |    Úplný                                       |    Vrácení dat pomocí `RowLastModifiedDateTimeUTC` je větší nebo rovno `2018-02-21T23:18:51.3277273Z`                             |
+|    `maxhistorydays=7`                                            |    Do bloku                                      |    Vrátí data s hodnotou `DateKey` mezi 20180214 a 20180221.                                     |
+|    `$filter=DateKey eq 20180214`                                 |    Do bloku                                      |    Vrátí data s hodnotou `DateKey` rovnající se 20180214.                                                    |
+|    `$filter=DateKey ge 20180214 and DateKey lt 20180221`         |    Do bloku                                      |    Vrátí data s hodnotou `DateKey` mezi 20180214 a 20180220.                                     |
+|    `maxhistorydays=7&$filter=DateKey eq 20180214`                |    Do bloku                                      |    Vrátí data s hodnotou `DateKey` rovnající se 20180214. `maxhistorydays` se ignoruje.                            |
+|    `$filter=RowLastModifiedDateTimeUTC ge 2018-02-21T23:18:51.3277273Z`                                |    Do bloku                                       |    Vrácení dat s `RowLastModifiedDateTimeUTC` je větší než nebo rovno`2018-02-21T23:18:51.3277273Z`                             |

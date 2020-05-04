@@ -16,10 +16,10 @@ search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: a1641efe6899c46a797a8ccf7979b533cb620d19
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79331439"
 ---
 # <a name="install-the-intune-software-client-on-windows-pcs"></a>Instalace klientského softwaru Intune na počítače se systémem Windows
@@ -57,7 +57,7 @@ Všechny způsoby (s výjimkou toho, kdy si uživatelé instalují klientský so
 3. Extrahujte obsah instalačního balíčku do zabezpečeného umístění v síti.
 
     > [!IMPORTANT]
-    > Extrahovaný soubor **ACCOUNTCERT** nepřejmenovávejte ani neodebírejte, jinak se instalace klientského softwaru nezdaří.
+    > Neodstraňujte ani neodstraňujte extrahovaný soubor **accountcert** nebo instalace klientského softwaru se nezdaří.
 
 ## <a name="deploy-the-client-software-manually"></a>Ruční nasazení klientského softwaru
 
@@ -86,7 +86,7 @@ Na počítačích, kam se bude klientský software instalovat, přejděte do slo
 ## <a name="deploy-the-client-software-as-part-of-an-image"></a>Nasazení klientského softwaru jako součásti image
 Klientský software Intune můžete do počítače nasadit jako součást image operačního systému. Jako příklad poslouží tento postup:
 
-1. Zkopírujte instalační soubory klienta, **Microsoft_Intune_Setup.exe** a **Microsoft_Intune_Setup.exe** do složky **%Systemdrive%\Temp\Microsoft_Intune_Setup** na referenčním počítači.
+1. Zkopírujte instalační soubory klienta **Microsoft_Intune_Setup. exe** a **MicrosoftIntune. accountcert**do složky **%systemdrive%\temp\ Microsoft_Intune_Setup** na referenčním počítači.
 
 2. Vytvořte položku registru **WindowsIntuneEnrollPending** přidáním následujícího příkazu do skriptu **SetupComplete.cmd** :
 
@@ -108,7 +108,7 @@ Klientský software Intune můžete do počítače nasadit jako součást image 
 
 5. Vytvořte bitovou kopii referenčního počítače a pak ji nasaďte do cílových počítačů.
 
-    Když se cílový počítač po dokončení instalačního programu systému Windows restartuje, vytvoří se klíč registru **WindowsIntuneEnrollPending**. Registrační balíček ověří, jestli je počítač zaregistrovaný. Pokud je počítač zaregistrovaný, neprovede se žádná další akce. Pokud není počítač registrovaný, registrační balíček vytvoří úlohu automatické registrace Microsoft Intune.
+    Když se cílový počítač po dokončení instalačního programu systému Windows restartuje, vytvoří se klíč registru **WindowsIntuneEnrollPending** . Registrační balíček ověří, jestli je počítač zaregistrovaný. Pokud je počítač zaregistrovaný, neprovede se žádná další akce. Pokud není počítač registrovaný, registrační balíček vytvoří úlohu automatické registrace Microsoft Intune.
 
     Když je úloha automatické registrace spuštěná v příští naplánovanou dobu, zkontroluje existenci hodnoty registru **WindowsIntuneEnrollPending** a pokusí se registrovat cílový počítač v Intune. Pokud se registrace z jakéhokoli důvodu nezdaří, při dalším spuštění úlohy se pokus o registraci opakuje. Opakované pokusy pokračují po dobu jednoho měsíce.
 
@@ -172,7 +172,7 @@ Pomocí některého z následujících postupů můžete sledovat a ověřit ús
 
 ### <a name="to-verify-the-installation-of-the-client-software-from-the-microsoft-intune-administrator-console"></a>Ověření instalace klientského softwaru v konzole správce Microsoft Intune
 
-1. V [konzole pro správu Microsoft Intune](https://manage.microsoft.com/)klikněte na **skupiny** &gt; **všechna zařízení** &gt; **všech počítačích**.
+1. V [konzole pro správu Microsoft Intune](https://manage.microsoft.com/) klikněte na **Skupiny** &gt; **Všechna zařízení** &gt; **Všechny počítače**.
 
 2. V seznamu vyhledejte počítače, které komunikují s Intune, nebo vyhledejte konkrétní spravovaný počítač po zadání názvu počítače (nebo libovolné části názvu) do pole **Hledat zařízení**.
 
@@ -180,7 +180,7 @@ Pomocí některého z následujících postupů můžete sledovat a ověřit ús
 
 ### <a name="to-create-a-computer-inventory-report-to-display-all-enrolled-computers"></a>Vytvoření sestavy inventáře počítače pro zobrazení všech zaregistrovaných počítačů
 
-1. V [konzole pro správu Microsoft Intune](https://manage.microsoft.com/)klikněte na **sestavy** &gt; **sestavy inventáře počítače**.
+1. V [konzole pro správu Microsoft Intune](https://manage.microsoft.com/) klikněte na **Sestavy** &gt; **Sestavy inventáře počítače**.
 
 2. Na stránce **Vytvořit novou sestavu** nechejte ve všech polích výchozí hodnoty (pokud nechcete použít filtry) a klikněte na **Zobrazit sestavu**.
 
@@ -198,7 +198,7 @@ Existují dva způsoby, jak zrušit registraci klientského softwaru Windows:
 
 ### <a name="unenroll-by-using-the-intune-admin-console"></a>Zrušení registrace pomocí konzoly pro správu Intune
 
-Pokud chcete registraci softwarového klienta zrušit pomocí konzoly pro správu Intune, přejděte na **Skupiny** > **Všechny počítače** > **Zařízení**. Klikněte pravým tlačítkem na klienta a vyberte **Vyřadit/vymazat**.
+Pokud chcete zrušit registraci softwarového klienta pomocí konzoly pro správu Intune, klikněte na **skupiny** > **všechny počítače** > **zařízení**. Klikněte pravým tlačítkem na klienta a vyberte **Vyřadit/vymazat**.
 
 ### <a name="unenroll-by-using-a-command-prompt-on-the-client"></a>Zrušení registrace pomocí příkazového řádku v klientovi
 
@@ -253,7 +253,7 @@ Zkontrolujte cestu %ProgramFiles%\Microsoft\OnlineManagement a ujistěte se, že
 - AgentInstaller
 - Protokoly
 - Aktualizace
-- Common
+- Společné
 
 ### <a name="remove-the-onlinemanagement-folder"></a>Odebrání složky OnlineManagement
 

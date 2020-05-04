@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 6b5fe7c97b42c4863fbad8e7341b64fa847b8563
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79324191"
 ---
 # <a name="remove-your-ios-device-from-intune"></a>Odebrání zařízení s iOSem z Intune
@@ -71,9 +71,9 @@ Aplikace Portál společnosti ukládá v zařízení data na třech místech.
 
 - **Protokoly s informacemi**: Standardní data o aktivitě aplikací, která shromažďuje Microsoft, třeba jak dlouho byla aplikace otevřena nebo jestli havarovala, se vymažou automaticky při odebrání zařízení z webu Portál společnosti.
 
-- **Analýza Apple**: Standardní data o havarovaných aplikacích, která shromažďuje Apple. Tyto informace můžete odebrat, jen když zařízení obnovíte zpět do továrního nastavení. Tím vymažete všechny osobní informace. Pokud chcete obnovit tovární nastavení, otevřete **Nastavení** > **Obecné** > **Obnovit** > **Smazat data a nastavení**.
+- **Analýza Apple**: Standardní data o havarovaných aplikacích, která shromažďuje Apple. Tyto informace můžete odebrat, jen když zařízení obnovíte zpět do továrního nastavení. Tím vymažete všechny osobní informace. Provedete to tak, že otevřete **Nastavení** > **Obecné** > **obnovit** > **vymazat veškerý obsah a nastavení**.
 
-- **Řetězce klíčů**: Zařízení do řetězců klíčů ukládá hesla a další informace používané k přihlášení. Aplikace Microsoftu sdílejí přihlašovací údaje mezi všemi aplikacemi, které vyvíjí Microsoft a jsou na zařízení, včetně aplikací Microsoft Outlook a Microsoft Authenticator. Stejně jako analýzu Apple můžete tyto informace odebrat jenom vrácením (tj. resetováním) zařízení zpět do továrního nastavení. Tím vymažete všechny osobní informace. Pokud chcete obnovit tovární nastavení, otevřete **Nastavení** > **Obecné** > **Obnovit** > **Smazat data a nastavení**.
+- **Řetězce klíčů**: Zařízení do řetězců klíčů ukládá hesla a další informace používané k přihlášení. Aplikace Microsoftu sdílejí přihlašovací údaje mezi všemi aplikacemi, které vyvíjí Microsoft a jsou na zařízení, včetně aplikací Microsoft Outlook a Microsoft Authenticator. Stejně jako analýzu Apple můžete tyto informace odebrat jenom vrácením (tj. resetováním) zařízení zpět do továrního nastavení. Tím vymažete všechny osobní informace. Provedete to tak, že otevřete **Nastavení** > **Obecné** > **obnovit** > **vymazat veškerý obsah a nastavení**.
 
 
 Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).
