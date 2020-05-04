@@ -8,8 +8,9 @@
         ],
         "exclude": [
           "**/obj/**",
-          "intune-azure/**",
-          "**/includes/**"
+         
+	  "**/includes/**",
+          "sccm/**"   
         ]
       }
     ],
@@ -18,24 +19,24 @@
         "files": [
           "**/media/**",
           "**/*.png",
+	  "**/*.jpg",
           "**/*.gif",
-          "**/*.jpg"
+          "**/*.svg"
         ],
         "exclude": [
           "**/obj/**",
-          "intune-azure/**",
-          "**/includes/**"
+          "**/includes/**",
+          "sccm/**"
         ]
       }
-    ],
+          ],
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
       "breadcrumb_path": "/mem/breadcrumb/toc.json",
       "feedback_system": "GitHub",
       "feedback_github_repo": "MicrosoftDocs/memdocs.cs-cz",
-      "feedback_product_url": "",  
-      "brand": "Intune",
+       "brand": "Microsoft Endpoint Manager",
       "searchScope": ["Intune"]
       ,
       "disable_contribution_on_translation_quality": [
@@ -46,14 +47,27 @@
       ]
     },
     "fileMetadata": {
+     "feedback_product_url": {
+        "configmgr/**/*.md": "https://configurationmanager.uservoice.com/",
+        "intune/**/*.md": "https://microsoftintune.uservoice.com/"
+      },
+      "searchScope": {
+        "configmgr/**/*.md": ["ConfigMgr"],
+        "configmgr/core/**/*.md": ["ConfigMgr"]        
+      }, 
+      
       "featureFlags": {
         "*.md" : [
           "show_binary_rating"
         ]
+    
+          },
+      "feedback_system": {
+        "configmgr/core/misc/**/*": "None"
       }
     },
     "template": [],
-    "dest": "intune-azure",
+    "dest": "memdocs",
     "markdownEngineName": "markdig"
   }
 }
