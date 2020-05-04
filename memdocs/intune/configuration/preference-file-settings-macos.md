@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 9cb8cea30b53c5619580b289f73529668d71e909
-ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/02/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80551496"
 ---
 # <a name="add-a-property-list-file-to-macos-devices-using-microsoft-intune"></a>Přidání souboru se seznamem vlastností do zařízení macOS pomocí Microsoft Intune
@@ -50,8 +50,8 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
 ## <a name="create-the-profile"></a>Vytvoření profilu
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **zařízení** > **konfiguračních profilech** > **vytvořit profil**.
-3. Zadejte následující vlastnosti:
+2. Vyberte **Konfigurace zařízení** > **profily** > konfigurace**vytvořit profil**.
+3. Zadejte tyto vlastnosti:
 
     - **Platforma**: vyberte **MacOS**
     - **Profil**: vyberte **soubor předvoleb**.
@@ -66,11 +66,11 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
 
 7. V **nastavení konfigurace**nakonfigurujte nastavení:
 
-    - **Název domény předvolby**: soubory seznamu vlastností se obvykle používají pro webové prohlížeče (Microsoft Edge), [rozšířené ochrany před internetovými útoky v programu Microsoft Defender](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac)a vlastní aplikace. Když vytvoříte doménu předvolby, vytvoří se také ID sady prostředků. Zadejte ID sady prostředků, například `com.company.application`. Zadejte například `com.Contoso.applicationName`, `com.Microsoft.Edge`nebo `com.microsoft.wdav`.
-    - **Soubor seznamu vlastností**: vyberte soubor seznamu vlastností přidružený k vaší aplikaci. Ujistěte se, že se jedná o soubor `.plist` nebo `.xml`. Například nahrajte soubor `YourApp-Manifest.plist` nebo `YourApp-Manifest.xml`.
+    - **Název domény předvolby**: soubory seznamu vlastností se obvykle používají pro webové prohlížeče (Microsoft Edge), [rozšířené ochrany před internetovými útoky v programu Microsoft Defender](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac)a vlastní aplikace. Když vytvoříte doménu předvolby, vytvoří se také ID sady prostředků. Zadejte ID sady prostředků, například `com.company.application`. Zadejte `com.Contoso.applicationName`například, `com.Microsoft.Edge`nebo. `com.microsoft.wdav`
+    - **Soubor seznamu vlastností**: vyberte soubor seznamu vlastností přidružený k vaší aplikaci. Ujistěte se, že se `.plist` jedná `.xml` o soubor nebo. Například odešlete soubor `YourApp-Manifest.plist` nebo `YourApp-Manifest.xml` .
     - **Obsah souboru**: zobrazí se informace o klíči v souboru seznamu vlastností. Pokud potřebujete změnit klíčové informace, otevřete seznam souborů v jiném editoru a pak tento soubor znovu nahrajte do Intune.
 
-    Ujistěte se, že je soubor správně naformátovaný. Soubor by měl mít jenom páry klíč-hodnota a neměl by být zabalené do `<dict>`, `<plist>`nebo značek `<xml>`. Například váš soubor seznamu vlastností by měl vypadat podobně jako v následujícím souboru:
+    Ujistěte se, že je soubor správně naformátovaný. Soubor by měl obsahovat pouze páry klíč-hodnota a neměl by být zabalen `<dict>`do `<plist>`značek, `<xml>` nebo. Například váš soubor seznamu vlastností by měl vypadat podobně jako v následujícím souboru:
 
     ```xml
     <key>SomeKey</key>
@@ -81,7 +81,7 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
     ```
 
 8. Vyberte **Další**.
-9. V části **značky oboru** (volitelné) přiřaďte značku pro filtrování profilu na konkrétní skupiny IT, například `US-NC IT Team` nebo `JohnGlenn_ITDepartment`. Další informace o značkách oboru naleznete v tématu [použití značek RBAC a Scope pro distribuci](../fundamentals/scope-tags.md).
+9. V části **značky oboru** (volitelné) přiřaďte značku pro filtrování profilu pro konkrétní IT skupiny, například `US-NC IT Team` nebo. `JohnGlenn_ITDepartment` Další informace o značkách oboru naleznete v tématu [použití značek RBAC a Scope pro distribuci](../fundamentals/scope-tags.md).
 
     Vyberte **Další**.
 

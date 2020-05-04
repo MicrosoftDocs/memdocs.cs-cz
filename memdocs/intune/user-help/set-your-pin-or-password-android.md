@@ -20,22 +20,22 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: fa069eea0fc8dcc7b2c98c261f3f7527b802da6e
-ms.sourcegitcommit: 670c90a2e2d3106048f53580af76cabf40fd9197
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80233434"
 ---
-# <a name="set-your-pin-or-password"></a>Nastavení PINu nebo hesla
+# <a name="set-your-pin-or-password"></a>Nastavení PIN kódu nebo hesla
 
 Pokud Intune používáte pro přístup k pracovním nebo školním datům, může vaše firemní podpora vyžadovat, abyste na zařízení s Androidem nastavili PIN kód nebo heslo. Mohou se také zobrazit zprávy, které vyžadují, abyste kvůli větší bezpečnosti zadali delší nebo složitější PIN nebo heslo. Tato hesla slouží například k přístupu k zařízení ze zamykací obrazovky.
 
 K nastavení kódu PIN a hesla použijte následující postup.
 
-1. Klepněte na **Nastavení** > **Zabezpečení** > **Zamykací obrazovka** > **Heslo**.
+1. Klepněte na **Nastavení** > **zabezpečení** > **zamykací** > obrazovka**heslo**.
 
 2. Zvolte a potvrďte nové heslo.
 
-Pro určitá zařízení musíte kromě hesla obrazovky nastavit spouštěcí kód PIN. Můžete tento problém zkusit vyřešit tak, že v aplikaci nastavení najdete umístění k povolení této možnosti. Třeba na Samsungu Galaxy S7 můžete zabezpečené spuštění povolit tak, že přejdete do **Nastavení** > **Zamykací obrazovka a zabezpečení** > **Zabezpečené spuštění**. Další informace najdete [tady](your-device-appears-encrypted-but-cp-says-otherwise-android.md). 
+Pro určitá zařízení musíte kromě hesla obrazovky nastavit spouštěcí kód PIN. Můžete tento problém zkusit vyřešit tak, že v aplikaci nastavení najdete umístění k povolení této možnosti. Například na rozhraní Samsung Galaxy S7 můžete povolit zabezpečené spouštění tak, že na **Nastavení** > **zamykací obrazovka a zabezpečení** > **zabezpečeného spuštění**. Další informace najdete [tady](your-device-appears-encrypted-but-cp-says-otherwise-android.md). 
 
 Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).

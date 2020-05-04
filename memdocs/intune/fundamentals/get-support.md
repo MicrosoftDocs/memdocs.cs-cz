@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 2fbb82123f28c5049a60d60572aadcb3d03777b7
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80326947"
 ---
 # <a name="how-to-get-support-for-microsoft-intune"></a>Jak získat podporu pro Microsoft Intune
@@ -53,7 +53,7 @@ Při použití nově vytvořeného tenanta pro Intune je možné, že se nepoved
 
 Podrobnosti o chybě zahrnují *ID relace*, podrobnosti *rozšíření* a další.
 
-K tomuto problému dochází, když jste svůj nový účet tenanta neověřili prostřednictvím **centra pro správu M365** na https://admin.microsoft.comnebo na **portálu Office 365** na https://portal.office.com. Pokud chcete tento problém vyřešit, vyberte odkaz pro *Centrum pro správu M365* ve zprávě nebo navštivte https://portal.office.coma přihlaste se. Po ověření v obou lokalitách bude k dispozici *pomoc a podpora* služby Intune.
+K tomuto problému dochází, když jste svůj nový účet tenanta neověřili prostřednictvím **centra pro správu M365** na https://admin.microsoft.comportálu nebo na **portálu Office 365** na adrese https://portal.office.com. Pokud chcete tento problém vyřešit, vyberte odkaz pro *Centrum pro správu M365* ve zprávě, nebo navštivte https://portal.office.comstránku a přihlaste se. Po ověření v obou lokalitách bude k dispozici *pomoc a podpora* služby Intune.
 
 **Přístup k nápovědě a podpoře**:
 
@@ -73,16 +73,16 @@ K tomuto problému dochází, když jste svůj nový účet tenanta neověřili 
     - Spoluspráva  
 
     > [!div class="mx-imgBorder"]
-    > ![vyberte typ správy](./media/get-support/select-management-type.png)
+    > ![Vyberte typ správy.](./media/get-support/select-management-type.png)
 
     Po výběru typu správy se otevře stránka pro *nápovědu a podporu* , kde můžete zadat podrobnosti pro [hledání řešení](#find-solutions) pro konkrétní problém. Podrobnosti se filtrují podle typu vybrané správy.
 
-     Pokud není vybraný správný typ správy **(1)** , klikněte na *Vybrat typ správy* **(2)** , který se vrátí do rozevíracího seznamu pro výběr typu správy:
+     Pokud není vybraný správný typ správy **(1)**, klikněte na *Vybrat typ správy* **(2)** , který se vrátí do rozevíracího seznamu pro výběr typu správy:
 
     > [!div class="mx-imgBorder"]
-    > ![potvrdit typ správy](./media/get-support/confirm-management-selection.png)
+    > ![Potvrďte typ správy](./media/get-support/confirm-management-selection.png)
 
-  - Pokud otevřete pomoc a podporu **při řešení problémů** a podpoře > **nápovědě a podpoře**, neuvidíte vybraný typ správy uvedený níže v části *pomoc a podpora*.
+  - Pokud otevřete pomoc a podporu pro **řešení problémů** > **a podporu a**podporu podpory, neuvidíte vybraný typ správy uvedený níže v části *pomoc a podpora*.
 
   - Pokud přejdete na jakýkoli jiný uzel, třeba na *zařízení*, *aplikace*nebo *uživatele*, a pak vyberte možnost *pomoc a podpora*, nebudete mít možnost vybrat typ správy, ani se nezobrazí zobrazení typu pod možností *pomoc a podpora*. V takovém případě se předpokládá použití služby *Intune* . Pokud nechcete, aby byl kontext Intune, použijte **?** možnost, abyste mohli vybrat jiný typ správy.
 
@@ -94,7 +94,7 @@ K tomuto problému dochází, když jste svůj nový účet tenanta neověřili 
 
   V levém horním rohu jsou tři ikony, které můžete vybrat pro otevření různých podoken v okně *Potřebuji Help?* . Podokno zobrazené v podokně je označeno podtržením.
 
-  Zákazníci se smlouvou o podpoře **Premier** nebo **Unified** mají [Další možnosti](#premier-and-unified-support-customers) pro podporu a v nápisu *potřebujete pomoc?* který se podobá následujícímu obrázku: ![Premier banner](./media/get-support/premier-banner.png)
+  Zákazníci se smlouvou o podpoře **Premier** nebo **Unified** mají [Další možnosti](#premier-and-unified-support-customers) pro podporu a v nápisu *potřebujete pomoc* , který se podobá následujícímu obrázku: ![banner Premier](./media/get-support/premier-banner.png)
 
   *Potřebujete tuto podporu?* Otevře se podokno *najít řešení* . Pokud ale máte aktivní případ podpory, otevře se okno v podokně *žádosti o služby* , kde můžete zobrazit podrobnosti o aktivních a uzavřených případech podpory.
 
@@ -110,7 +110,7 @@ Můžete například zadat **chyby synchronizace hesel**. Výsledky zahrnují po
 
 ![Zobrazit přehledy řešení potíží](./media/get-support/troubleshooting-insights.png)
 
-#### <a name="contact-support"></a>Kontaktujte podporu
+#### <a name="contact-support"></a>Kontaktování podpory
 
 ![Vyberte podokno podpora kontaktů.](./media/get-support/contact-support.png)
 
@@ -190,7 +190,7 @@ Když se vaše předplatné Intune hostuje v privátním cloudu pro vládu, kter
 
 3. Na kartě **základy** pro většinu problémů technické podpory Intune vyberte tyto možnosti:
    - **Typ problému**: **Technický**
-   - **Předplatné**: <*vaše předplatné*>
+   - **Předplatné**: <*vaše předplatné* .>
    - **Služba**: **Microsoft Intune**
    - **Typ problému**: z rozevírací nabídky vyberte typ problému.
    - **Typ problému**: z rozevírací nabídky vyberte podtyp problému.
@@ -223,8 +223,8 @@ Když se vaše předplatné Intune hostuje v privátním cloudu pro vládu, kter
    > [!IMPORTANT]  
    > Privátní cloud pro zákazníky státní správy může zobrazit jenom číslo případu podpory na 15 číslicích a stav incidentu. Všechna případná komunikace a sledování práce nebo upozornění se odesílají e-mailem a odkazují na 8bitové číslo případu podpory, které se vytvoří jako zrcadlo případu podpory otevřeného v konzole Intune.
 
-## <a name="additional-resources"></a>Další materiály a zdroje informací  
+## <a name="additional-resources"></a>Další zdroje  
 
-- [Podpora správy fakturace a předplatného](https://support.office.com/article/Contact-Office-365-for-business-support-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b)
-- [Multilicence](https://go.microsoft.com/fwlink/p/?LinkID=282015)
+- [Podpora pro správu fakturace a předplatného](https://support.office.com/article/Contact-Office-365-for-business-support-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b)
+- [Multilicenční služby](https://go.microsoft.com/fwlink/p/?LinkID=282015)
 - [Řešení potíží s Intune](help-desk-operators.md)

@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 1dfac34615c208328cab06a3fd047d3a9b99c794
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79329879"
 ---
 # <a name="add-partner-certification-authority-in-intune-using-scep"></a>Přidání partnerské certifikační autority pomocí protokolu SCEP do Intune
@@ -58,7 +58,7 @@ Následující kroky poskytují přehled použití protokolu SCEP pro certifiká
 Následující diagram znázorňuje podrobný tok integrace externího serveru SCEP s Intune:
 
 > [!div class="mx-imgBorder"]
-> ![, jak se protokol SCEP certifikační autority od jiných výrobců integruje s Microsoft Intune](./media/certificate-authority-add-scep-overview/scep-certificate-vendor-integration.png)
+> ![Způsob integrace externí certifikační autority SCEP s Microsoft Intune](./media/certificate-authority-add-scep-overview/scep-certificate-vendor-integration.png)
 
 ## <a name="set-up-third-party-ca-integration"></a>Nastavení integrace externí certifikační autority
 
@@ -74,7 +74,7 @@ Ujistěte se, že máte k registraci aplikace Azure AD potřebná oprávnění. 
 
 #### <a name="create-an-application-in-azure-active-directory"></a>Vytvoření aplikace v Azure Active Directory  
 
-1. V [Azure Portal](https://portal.azure.com)přejít na **Azure Active Directory** > **Registrace aplikací**a vyberte **Nová registrace**.  
+1. V [Azure Portal](https://portal.azure.com)klikněte na registrace **Azure Active Directory** > **aplikace**a pak vyberte **Nová registrace**.  
 
 2. Na stránce **zaregistrovat aplikaci** zadejte následující podrobnosti:  
    - V části **název** zadejte smysluplný název aplikace.  
@@ -89,7 +89,7 @@ Ujistěte se, že máte k registraci aplikace Azure AD potřebná oprávnění. 
    > [!IMPORTANT]  
    > Než tuto stránku opustíte, zkopírujte hodnotu pro tajný klíč klienta a zaznamenejte ho pro pozdější použití s implementací CA třetí strany. Tato hodnota se znovu nezobrazí. Nezapomeňte si projít doprovodné materiály k vaší certifikační autoritě od třetí strany, jak si přeje nakonfigurovat ID aplikace, ověřovací klíč a ID tenanta.  
 
-6. Poznamenejte si **ID tenanta**. ID tenanta je text domény po přihlášení @ účtu. Pokud je váš účet například *admin@name.onmicrosoft.com* , je vaše ID tenanta **Name.onmicrosoft.com**.  
+6. Poznamenejte si **ID tenanta**. ID tenanta je text domény za znakem @ při přihlašování k účtu. Pokud je *admin@name.onmicrosoft.com*váš účet například, vaše ID tenanta je **Name.onmicrosoft.com**.  
 
 7. V navigačním podokně aplikace otevřete v nabídce **Spravovat** **oprávnění rozhraní API** a pak vyberte **Přidat oprávnění**.  
 
@@ -136,6 +136,6 @@ Pokud jste externí certifikační autoritou a máte zájem o integraci svého p
 
 ## <a name="see-also"></a>Viz také
 
-- [Konfigurace a používání certifikátů SCEP s Intune](certificates-scep-configure.md)
+- [Konfigurace profilů certifikátů](certificates-scep-configure.md)
 - [Úložiště GitHub rozhraní Intune SCEP API](https://github.com/Microsoft/Intune-Resource-Access/tree/develop/src/CsrValidation)
 - [Pokyny pro externí certifikační autority k rozhraní Intune SCEP API](scep-libraries-apis.md)

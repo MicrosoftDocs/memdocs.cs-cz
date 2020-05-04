@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 95f9677b95dc9dde4b12e60e3006b4cee5081471
-ms.sourcegitcommit: 670c90a2e2d3106048f53580af76cabf40fd9197
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80233425"
 ---
 # <a name="what-is-device-enrollment"></a>Co je registrace zařízení?
@@ -63,19 +63,19 @@ Pomocí Portál společnosti můžete zaregistrovat následující zařízení:
 - Zařízení s Windows
   - Windows 10 Mobile
   - Windows 10 Desktop
-  - Wvdows Phone 8.1
-  - Windows 8.1
+  - Windows Phone 8.1
+  - Windows 8.1
 - Zařízení Apple
     - iOS
     - macOS
-- Zařízení se systémem Android
+- Zařízení s Androidem
 
 
 ## <a name="what-kind-of-devices-can-you-enroll-with-the-microsoft-intune-app"></a>Jaký druh zařízení je možné zaregistrovat v aplikaci Microsoft Intune?  
 Můžete zaregistrovat zařízení s Androidem vlastněná společností, která vaše organizace nastavila pro použití s aplikací. Aplikace podporuje Android 6,0 a novější. 
 
 ## <a name="can-you-remove-a-device-from-the-company-portal"></a>Můžete odebrat zařízení z Portál společnosti?
-Zařízení můžete ze Portál společnosti odebrat nebo resetovat. Mezi **odebráním** a **obnovením** je rozdíl.
+Zařízení můžete ze Portál společnosti odebrat nebo resetovat. Mezi **odebráním** a **resetováním**je rozdíl.
 
 Při odebrání zařízení Portál společnosti zruší registraci a zrušení registrace zařízení. Toto zařízení ztratí přístup k Portál společnosti. Můžete také odebrat pracovní nebo školní data. 
 
@@ -92,7 +92,7 @@ V aplikaci Microsoft Intune se zobrazí pouze zařízení, které právě použ�
 ## <a name="where-else-can-i-go-for-help"></a>Kde jinde ještě můžu požádat o pomoc?  
 Pokud chcete řešit běžné problémy, podívejte se na tyto dokumentace pro konkrétní platformu:  
 
-- [Řešení běžných problémů se zařízením s Androidem](check-compliance-on-your-device-android.md)  
+- [Řešení běžných potíží se zařízením s Androidem](check-compliance-on-your-device-android.md)  
 - [Řešení běžných problémů se zařízením s iOSem](troubleshoot-your-device-ios.md)
 - [Řešení běžných problémů se zařízením s macOS](troubleshoot-your-device-macos.md)
 - [Řešení běžných problémů se zařízením s Windows](troubleshoot-your-device-windows.md)

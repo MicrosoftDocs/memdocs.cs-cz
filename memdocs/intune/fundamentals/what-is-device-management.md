@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: microsoft-intune
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 32e5d053b6dd579aad25a268604248d4fb5a6072
-ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80696477"
 ---
 # <a name="device-management-overview"></a>Přehled správy zařízení
@@ -74,9 +74,9 @@ Hlavní úlohou řešení správy zařízení je poskytování zabezpečení a o
 
 ## <a name="choose-the-device-management-solution-thats-right-for-you"></a>Výběr správného řešení pro správu zařízení
 
-Existuje několik způsobů přístupu ke správě zařízení. Nejdřív můžete spravovat různé aspekty zařízení pomocí funkcí integrovaných do Intune. Tento přístup se nazývá **Správa mobilních zařízení (MDM)** . Uživatelé si zaregistrují svá zařízení a používají certifikáty ke komunikaci s Intune. Jako správce IT můžete nabízet aplikace na zařízeních, omezovat zařízení na konkrétní operační systém, blokovat osobní zařízení a další. Pokud dojde ke ztrátě nebo odcizení zařízení, můžete také odebrat všechna data ze zařízení.
+Existuje několik způsobů přístupu ke správě zařízení. Nejdřív můžete spravovat různé aspekty zařízení pomocí funkcí integrovaných do Intune. Tento přístup se nazývá **Správa mobilních zařízení (MDM)**. Uživatelé si zaregistrují svá zařízení a používají certifikáty ke komunikaci s Intune. Jako správce IT můžete nabízet aplikace na zařízeních, omezovat zařízení na konkrétní operační systém, blokovat osobní zařízení a další. Pokud dojde ke ztrátě nebo odcizení zařízení, můžete také odebrat všechna data ze zařízení.
 
-U druhého způsobu spravujete aplikace na zařízeních. Tento přístup se nazývá **Správa mobilních aplikací (MAM)** . Uživatelé můžou k přístupu k prostředkům organizace používat svoje osobní zařízení. Při otevření aplikace, jako je e-mail nebo SharePoint, se uživatelům zobrazí výzva k dalšímu ověření. Pokud dojde ke ztrátě nebo odcizení zařízení, můžete odebrat všechna firemní data z aplikací spravovaných pomocí Intune.
+U druhého způsobu spravujete aplikace na zařízeních. Tento přístup se nazývá **Správa mobilních aplikací (MAM)**. Uživatelé můžou k přístupu k prostředkům organizace používat svoje osobní zařízení. Při otevření aplikace, jako je e-mail nebo SharePoint, se uživatelům zobrazí výzva k dalšímu ověření. Pokud dojde ke ztrátě nebo odcizení zařízení, můžete odebrat všechna firemní data z aplikací spravovaných pomocí Intune.
 
 Můžete také použít společně kombinaci [MDM a MAM](byod-technology-decisions.md).
 
@@ -89,11 +89,11 @@ Při nastavení Intune se také rozhodujete, jestli ke správě zařízení bude
 V centru pro správu správy zařízení můžete:
 
 - [Registrovat zařízení](../enrollment/device-enrollment.md)
-- [Nastavení dodržování předpisů zařízením](../protect/device-compliance-get-started.md)
+- [Nastavit dodržování předpisů zařízením](../protect/device-compliance-get-started.md)
 - [Správa zařízení](../remote-actions/device-management.md)
 - [Správa aplikací](../apps/app-management.md)  
 - [E-knihy pro iOS](../apps/vpp-ebooks-ios.md)  
-- [Instalace konektoru On-Premises Connector](../protect/exchange-connector-install.md)  
+- [Instalace konektoru Exchange On-Premises Connector](../protect/exchange-connector-install.md)  
 - [Správa rolí](role-based-access-control.md)  
 - Správa aktualizací softwaru
   - [Správa aktualizací Windows 10](../protect/windows-update-for-business-configure.md)  
@@ -101,7 +101,7 @@ V centru pro správu správy zařízení můžete:
 - [Azure Active Directory](https://docs.microsoft.com/azure/active-directory)  
 - [Spravovat uživatele](https://docs.microsoft.com/azure/active-directory/fundamentals/add-users-azure-active-directory)
 - [Správa skupin a členů](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-manage-groups)
-- [Řešení problémů](help-desk-operators.md)
+- [Řešení potíží](help-desk-operators.md)
 
 ## <a name="next-steps"></a>Další kroky
 

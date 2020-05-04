@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 07c29f45c2d9356bda78e021d3baf9647aa03397
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 6633682a9572ba36f41f42e77c5aa64403e0e209
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80326796"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81440573"
 ---
 # <a name="create-a-custom-role-in-intune"></a>Vytvoření vlastní role v Intune
 
@@ -34,13 +34,13 @@ Abyste mohli vytvářet, upravovat nebo přiřazovat role, váš účet musí m�
 
 ## <a name="to-create-a-custom-role"></a>Jak vytvořit vlastní roli
 
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte možnost **Správa tenanta** > **role** > **všechny role** > **vytvořit**.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte**role** >  **pro správu** > klientů**všechny role** > **vytvořit**.
 
 2. Na stránce **základy** zadejte název a popis nové role a pak zvolte **Další**.
 
 3. Na stránce **oprávnění** vyberte oprávnění, která chcete u této role použít.
 
-4. Na stránce **obor (značky)** vyberte značky pro tuto roli. Tato role má přístup k prostředkům, které mají také tyto značky. Vyberte **Další**.
+4. Na stránce **obor (značky)** vyberte značky pro tuto roli. Když je tato role přiřazena uživateli, má tento uživatel přístup k prostředkům, které mají tyto značky také. Zvolte **Další**.
 
 5. Po dokončení na stránce **Revize + vytvořit** klikněte na **vytvořit**. Nová role se zobrazí v seznamu v okně **role Intune – všechny role** .
 
@@ -48,11 +48,11 @@ Abyste mohli vytvářet, upravovat nebo přiřazovat role, váš účet musí m�
 
 Můžete také zkopírovat existující roli.
 
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)zvolte **Správa tenanta** > **role** > **všechny role** > zaškrtněte políčko u role v seznamu > **duplikujte**.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)zvolte**role** >  **správy** > tenanta**všechny role** > zaškrtněte políčko u role v seznamu > **duplicitní**.
 
 2. Na stránce **základy** zadejte název. Ujistěte se, že používáte jedinečný název.
 
-3. Všechna oprávnění a značky oboru z původní role budou již vybrány. Následně můžete změnit **název**, **Popis**, **oprávnění**a obor duplicitní role **(značky)** .
+3. Všechna oprávnění a značky oboru z původní role budou již vybrány. Následně můžete změnit **název**, **Popis**, **oprávnění**a obor duplicitní role **(značky)**.
 
 4. Až provedete všechny požadované změny, klikněte na tlačítko **Další** a dostanete se na stránku **Kontrola a vytvoření** . Vyberte **Vytvořit**. 
 

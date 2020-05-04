@@ -1,6 +1,6 @@
 ---
 title: Nastavení e-mailu Androidu v Microsoft Intune – Azure | Microsoft Docs
-description: Vytvoření zařízení konfigurace e-mailové profily, které používají servery Exchange a načtení atributů z Azure Active Directory. Povolte SSL nebo SMIME, ověřte uživatele pomocí certifikátů nebo uživatelského jména a hesla a synchronizujte e-maily a plány na zařízeních se systémem Android Samsung KNOX pomocí Microsoft Intune.
+description: Vytvořte e-mailové profily konfigurace zařízení, které používají Exchange servery, a načtěte atributy z Azure Active Directory. Povolte SSL nebo SMIME, ověřte uživatele pomocí certifikátů nebo uživatelského jména a hesla a synchronizujte e-maily a plány na zařízeních se systémem Android Samsung KNOX pomocí Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -16,15 +16,15 @@ search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 36e17dc12622b3bb95c35a4472556f1c4f31ccd0
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80087013"
 ---
 # <a name="android-device-settings-to-configure-email-authentication-and-synchronization-in-intune"></a>Nastavení zařízení s Androidem pro konfiguraci e-mailu, ověřování a synchronizace v Intune
 
-Tento článek obsahuje seznam a popis různých nastavení e-mailů, které můžete řídit v zařízeních se systémem Android Samsung KNOX v Intune. Jako součást řešení správy mobilních zařízení pomocí těchto nastavení můžete nakonfigurovat e-mailový server, použijte protokol SSL k šifrování e-mailů a další.
+Tento článek obsahuje seznam a popis různých nastavení e-mailů, které můžete řídit v zařízeních se systémem Android Samsung KNOX v Intune. V rámci řešení pro správu mobilních zařízení (MDM) použijte Tato nastavení ke konfiguraci e-mailového serveru, k šifrování e-mailů použijte protokol SSL a další informace.
 
 Jako správce Intune můžete vytvořit a přiřadit nastavení e-mailu pro zařízení se systémem Android Samsung KNOX Standard.
 
@@ -39,8 +39,8 @@ Další informace o e-mailových profilech v Intune najdete v tématu [Konfigura
 - **E-mailový server**: Zadejte název hostitele vašeho Exchange serveru. Zadejte například `outlook.office365.com`.
 - **Název účtu**: Zadejte zobrazovaný název e-mailového účtu. Tento název se zobrazuje uživatelům na jejich zařízeních.
 - **Atribut uživatelského jména z AAD**: Toto jméno je atribut, který Intune získá z Azure Active Directory (Azure AD). Intune dynamicky vygeneruje uživatelské jméno, které tento profil používá. Možnosti:
-  - **Hlavní název uživatele**: Získá název, například `user1` nebo `user1@contoso.com`.
-  - **Uživatelské jméno**: získá pouze název, například `user1`.
+  - **Hlavní název uživatele**: Získá název, například `user1` nebo. `user1@contoso.com`
+  - **Uživatelské jméno**: Získá jenom název, třeba `user1`.
   - **Název účtu SAM**: Vyžaduje doménu, například `domain\user1`. název účtu sAM se používá jenom u zařízení s Androidem. Dále zadejte:  
     - **Zdroj názvu domény uživatele**: Zvolte **AAD** (Azure Active Directory) nebo **Vlastní**.
 
@@ -48,18 +48,18 @@ Další informace o e-mailových profilech v Intune najdete v tématu [Konfigura
       - **Atribut názvu domény uživatele z AAD**: vyberte, chcete-li získat **úplný název domény** nebo atribut **názvu NetBIOS** pro uživatele.
 
       Pokud se rozhodnete použít **Vlastní** atributy, zadejte:
-      - **Vlastní název domény, který se má použít**: zadejte hodnotu, kterou Intune používá pro název domény, například `contoso.com` nebo `contoso`.
+      - **Vlastní název domény, který se má použít**: zadejte hodnotu, kterou Intune používá pro název domény, `contoso.com` například `contoso`nebo.
 
 - **Atribut e-mailové adresy z AAD**: Tento název je atribut e-mailu, který Intune získá z Azure AD. Intune dynamicky generuje e-mailovou adresu, kterou používá tento profil. Možnosti:
-  - **Hlavní název uživatele**: jako e-mailová adresa používá úplný hlavní název, jako je například `user1@contoso.com` nebo `user1`.
-  - **Primární adresa SMTP**: pomocí primární adresy SMTP, jako je `user1@contoso.com`, se přihlaste k Exchangi.
+  - **Hlavní název uživatele**: používá jako e-mailovou adresu úplný `user1@contoso.com` hlavní `user1`název, jako je například nebo.
+  - **Primární adresa SMTP**: pomocí primární adresy SMTP, například `user1@contoso.com`, se přihlaste k Exchangi.
 
 - **Metoda ověřování**: Jako metodu ověřování používanou e-mailovým profilem vyberte buď **Uživatelské jméno a heslo**, nebo **Certifikáty**.
   - Pokud vyberete **Certifikát**, vyberte profil certifikátu SCEP nebo PKCS klienta, který jste dříve vytvořili za účelem ověřování připojení Exchange.
 
 ### <a name="security-settings"></a>Nastavení zabezpečení
 
-- **SSL**: Při posílání a přijímání e-mailů a komunikaci se serverem Exchange se použije komunikace SSL (Secure Sockets Layer).
+- **SSL**: Při posílání a přijímání e-mailů a komunikaci se serverem Exchange se použije komunikace přes protokol SSL (Secure Sockets Layer).
 - **S/MIME**: Odchozí e-maily se budou posílat s využitím šifrování S/MIME.
   - Pokud vyberete **Certifikát**, vyberte profil certifikátu SCEP nebo PKCS klienta, který jste dříve vytvořili za účelem ověřování připojení Exchange.
 

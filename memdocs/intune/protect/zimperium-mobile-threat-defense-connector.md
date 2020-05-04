@@ -19,17 +19,17 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: ed623abeb602e599866af7b7249756edd87d5a29
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79328435"
 ---
 # <a name="zimperium-mobile-threat-defense-connector-with-intune"></a>Konektor Zimperium Mobile Threat Defense s Intune
 
 Přístup mobilních zařízení k podnikovým prostředkům můžete řídit pomocí podmíněného přístupu na základě posouzení rizik, které provádí Zimperium, řešení ochrany před mobilními hrozbami (MTD), které se integruje s Microsoft Intune. Riziko se posuzuje na základě telemetrie, která se shromažďuje ze zařízení, na kterých aplikace Zimperium běží.
 
-Zásady podmíněného přístupu můžete nakonfigurovat na základě posouzení rizik, které je povolené, pomocí zásad dodržování předpisů zařízení v Intune pro zaregistrovaná zařízení, která můžete použít k povolení nebo blokování zařízení nesplňujících požadavky pro přístup k podnikovým prostředkům na základě zjištěných nejnovější. U neregistrovaných zařízení můžete zásady ochrany aplikací použít k vykonání bloku nebo selektivního vymazání na základě zjištěných hrozeb.
+Zásady podmíněného přístupu můžete nakonfigurovat na základě posouzení rizik, které je povolené, pomocí zásad dodržování předpisů zařízení v Intune pro zaregistrovaná zařízení, která můžete použít k povolení nebo blokování zařízení nesplňujících požadavky pro přístup k podnikovým prostředkům na základě zjištěných hrozeb. U neregistrovaných zařízení můžete zásady ochrany aplikací použít k vykonání bloku nebo selektivního vymazání na základě zjištěných hrozeb.
 
 ## <a name="supported-platforms"></a>Podporované platformy
 
@@ -78,52 +78,52 @@ Když se na zařízeních zjistí přítomnost škodlivých aplikací (třeba ma
 *Zablokování při zjištění přítomnosti škodlivých aplikací:*
 
 > [!div class="mx-imgBorder"]
-> byl zjištěn ![koncepční obrázek škodlivých aplikací](./media/zimperium-mobile-threat-defense-connector/Maliciousapps-blocked-zimperium.png)
+> ![Zjistila se koncepční bitová kopie škodlivých aplikací.](./media/zimperium-mobile-threat-defense-connector/Maliciousapps-blocked-zimperium.png)
 
-*Přístup udělený po nápravě:*
+*Přístup po nápravě udělen:*
 
 > [!div class="mx-imgBorder"]
-> ![koncepční bitovou kopii přístupu uděleného po opravě](./media/zimperium-mobile-threat-defense-connector/maliciousapps-unblocked-zimperium.png)
+> ![Koncepční bitová kopie přístupu udělená po nápravě](./media/zimperium-mobile-threat-defense-connector/maliciousapps-unblocked-zimperium.png)
 
 ### <a name="control-access-based-on-threat-to-network"></a>Řízení přístupu na základě ohrožení sítě
 
 Zjišťuje hrozby v síti, například **útoky prostředníkem**, a chrání přístup k sítím Wi-Fi na základě rizika zařízení.
 
-*Zablokování přístupu k síti prostřednictvím sítě Wi-Fi:*
+*Blokovat přístup k síti přes Wi-Fi:*
 
 > [!div class="mx-imgBorder"]
-> ![blokovat přístup k síti přes Wi-Fi](./media/zimperium-mobile-threat-defense-connector/network-wifi-blocked-zimperium.png)
+> ![Blokovat přístup k síti přes Wi-Fi](./media/zimperium-mobile-threat-defense-connector/network-wifi-blocked-zimperium.png)
 
-*Přístup udělený po nápravě:*
+*Přístup po nápravě udělen:*
 
 > [!div class="mx-imgBorder"]
-> ![přístup udělen při nápravě](./media/zimperium-mobile-threat-defense-connector/network-wifi-unblocked-zimperium.png)
+> ![Přístup udělen při nápravě](./media/zimperium-mobile-threat-defense-connector/network-wifi-unblocked-zimperium.png)
 
 ### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>Řízení přístupu k SharePointu Online na základě ohrožení sítě
 
 Zjišťuje hrozby v síti, například **útoky prostředníkem**, a zabraňuje synchronizaci podnikových souborů na základě rizika zařízení.
 
-*Zablokování SharePointu Online v případě, že se zjistí ohrožení sítě:*
+*Zablokovat SharePoint Online, když jsou zjištěny hrozby sítě:*
 
 > [!div class="mx-imgBorder"]
-> ![zablokovat SharePoint Online, když jsou zjištěny hrozby sítě](./media/zimperium-mobile-threat-defense-connector/network-spo-blocked-zimperium.png)
+> ![Zablokování SharePointu Online v případě zjištění ohrožení sítě](./media/zimperium-mobile-threat-defense-connector/network-spo-blocked-zimperium.png)
 
-*Přístup udělený po nápravě:*
+*Přístup po nápravě udělen:*
 
 > [!div class="mx-imgBorder"]
-> ![přístupu uděleného při nápravě pro SharePoint – ukázka](./media/zimperium-mobile-threat-defense-connector/network-spo-unblocked-zimperium.png)
+> ![Sharepointový příklad přístupu uděleného po nápravě](./media/zimperium-mobile-threat-defense-connector/network-spo-unblocked-zimperium.png)
 
 ### <a name="control-access-on-unenrolled-devices-based-on-threats-from-malicious-apps"></a>Řízení přístupu na nezaregistrovaných zařízeních na základě hrozeb ze škodlivých aplikací
 
 Když řešení ochrany před mobilními hrozbami Zimperium považuje zařízení za infikované:
 
 > [!div class="mx-imgBorder"]
-> ![bloky zásad ochrany aplikací z důvodu zjištěného malwaru](./media/zimperium-mobile-threat-defense-connector/zimperium-mobile-app-policy-block.png)
+> ![Blokování zásad ochrany aplikací z důvodu zjištěného malwaru](./media/zimperium-mobile-threat-defense-connector/zimperium-mobile-app-policy-block.png)
 
 Přístup se udělí při nápravě:
 
 > [!div class="mx-imgBorder"]
-> k nápravě pro zásady ochrany aplikací je udělený přístup ![](./media/zimperium-mobile-threat-defense-connector/zimperium-mobile-app-policy-remediated.png)
+> ![Pro zásady ochrany aplikací se udělí přístup k nápravě.](./media/zimperium-mobile-threat-defense-connector/zimperium-mobile-app-policy-remediated.png)
 
 ## <a name="next-steps"></a>Další kroky
 

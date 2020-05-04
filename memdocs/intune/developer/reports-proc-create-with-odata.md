@@ -2,7 +2,7 @@
 title: Vytvoření sestavy Intune z datového kanálu OData pomocí Power BI
 titleSuffix: Microsoft Intune
 description: Vytvořte vizualizaci mapy stromové struktury pomocí Power BI Desktopu s interaktivním filtrem z rozhraní API datového skladu Intune.
-keywords: Datový sklad Intune
+keywords: Intune Data Warehouse
 author: Erikre
 ms.author: erikre
 manager: dougeby
@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 87c1a63ffdfc0b923f636159536f6d6cf6420db9
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79331763"
 ---
 # <a name="create-an-intune-report-from-the-odata-feed-with-power-bi"></a>Vytvoření sestavy Intune z datového kanálu OData pomocí Power BI
@@ -56,11 +56,11 @@ Nainstalujte si nejnovější verzi aplikace Power BI Desktop. Power BI Desktop 
 
 1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Otevřete podokno **datový sklad Intune** tak, že v části **Další úkoly** na pravé straně okna **Microsoft Intune-přehled** vyberete odkaz datový sklad.
-3. Zkopírujte adresu URL vlastního kanálu. Například: `https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService?api-version=beta`
+3. Zkopírujte adresu URL vlastního kanálu. Příklad: `https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService?api-version=beta`
 4. Otevřete Power BI Desktop.
-5. V řádku nabídek vyberte **soubor** > **získat data** > datový **kanál OData**.
+5. V řádku nabídek vyberte **soubor** > **získat data datový** > **kanál OData**.
 6. Vložte adresu URL vlastního informačního kanálu, kterou jste zkopírovali v předchozím kroku, do pole Adresa URL v okně datového **kanálu OData** .
-7. Vyberte **Základní**.
+7. Vyberte **Basic**.
 
     ![Kanál OData pro datový sklad Intune pro vašeho tenanta](./media/reports-proc-create-with-odata/reports-create-01-odatafeed.png)
 
@@ -69,7 +69,7 @@ Nainstalujte si nejnovější verzi aplikace Power BI Desktop. Power BI Desktop 
 
     ![Přihlašovací údaje pro účet organizace](./media/reports-proc-create-with-odata/reports-create-02-org-account.png)
 
-10. Vyberte **Připojit**. Otevře se Navigátor se seznamem tabulek v datovém skladu Intune.
+10. Vyberte **Connect** (Připojit). Otevře se Navigátor se seznamem tabulek v datovém skladu Intune.
 
     ![Snímek obrazovky navigátoru – seznam tabulek datového skladu](./media/reports-proc-create-with-odata/reports-create-02-loadentities.png)
 
@@ -93,10 +93,10 @@ Graf stromové struktury zobrazuje hierarchická data jako pole v rámečcích. 
 ![Power BI vizualizace stromové struktury](./media/reports-proc-create-with-odata/reports-create-03-treemap.png)
 
 1. V podokně **vizualizace** vyhledejte a vyberte **mapu stromové**struktury. Graf **stromové** struktury bude přidán na plátno sestavy.
-2. V podokně **pole** Najděte `devices` tabulce.
-3. Rozbalte tabulku `devices` a vyberte pole `manufacturer` data.
-4. Přetáhněte datové pole `manufacturer` na plátno pro sestavy a umístěte ho do grafu **mapy stromové** struktury.
-5. Přetáhněte datové pole `deviceKey` z tabulky `devices` do podokna **vizualizace** a přetáhněte je do části **Values (hodnoty** ) v poli **přidat datová pole**.  
+2. V podokně **pole** Najděte `devices` tabulku.
+3. Rozbalte `devices` tabulku a vyberte `manufacturer` datová pole.
+4. Přetáhněte `manufacturer` datové pole na plátno sestavy a umístěte ho do grafu **mapy stromové** struktury.
+5. `deviceKey` Přetáhněte datové pole z `devices` tabulky do podokna **vizualizace** a přetáhněte je do části **Values (hodnoty** ) v poli s názvem **přidat datová pole**.  
 
 Teď máte vizuál, který znázorňuje rozdělení výrobců zařízení v rámci vaší organizace.
 
@@ -106,12 +106,12 @@ Teď máte vizuál, který znázorňuje rozdělení výrobců zařízení v rám
 
 Do mapy stromové struktury můžete přidat filtr, který vám pomocí vaší aplikace umožní zodpovědět další otázky.
 
-1. Pokud chcete přidat filtr, vyberte plátno pro sestavy a vyberte **ikonu průřezu** (![stromovou mapu s datovým modelem a podporovanými relacemi](./media/reports-proc-create-with-odata/reports-create-slicer.png)) v části **vizualizace**. Na plátně se zobrazí prázdná vizualizace **průřezu** .
-2. V podokně **pole** Najděte `ownerTypes` tabulce.
-3. Rozbalte tabulku `ownerTypes` a vyberte pole `ownerTypeName` data.
-4. Přetáhněte datové pole `onwerTypeName` z tabulky `ownerTypes` do podokna **filtry** a přetáhněte ho do části **filtry na této stránce** v poli **přidat datová pole**.  
+1. Pokud chcete přidat filtr, vyberte plátno pro sestavy a v části **vizualizace**vyberte **ikonu průřezu** (![mapa stromové struktury s](./media/reports-proc-create-with-odata/reports-create-slicer.png)datovým modelem a podporovanými vztahy). Na plátně se zobrazí prázdná vizualizace **průřezu** .
+2. V podokně **pole** Najděte `ownerTypes` tabulku.
+3. Rozbalte `ownerTypes` tabulku a vyberte `ownerTypeName` datová pole.
+4. `onwerTypeName` Přetáhněte datové pole z `ownerTypes` tabulky do podokna **filtry** a přetáhněte ho do části **filtry na této stránce** v poli **přidat datová pole sem**.  
 
-   Pod `OwnerTypes` tabulkou se nachází datové pole s názvem `OwnerTypeKey`, které obsahuje data pro to, jestli je zařízení ve vlastnictví společnosti nebo osobní. Vzhledem k tomu, že byste chtěli v tomto filtru Zobrazit popisné názvy, vyhledejte `ownerTypes` tabulku a přetáhněte **ownerTypeName** do průřezu. Tento příklad ukazuje, jak datový model podporuje relace mezi tabulkami.
+   V `OwnerTypes` tabulce je k dispozici datové pole s názvem `OwnerTypeKey`, které obsahuje data o tom, zda je zařízení ve vlastnictví společnosti nebo osobní. Vzhledem k tomu, že byste chtěli v tomto filtru Zobrazit popisné názvy, vyhledejte `ownerTypes` tabulku a přetáhněte **ownerTypeName** do průřezu. Tento příklad ukazuje, jak datový model podporuje relace mezi tabulkami.
 
 ![Mapa stromové struktury s filtrem – podporuje relace mezi tabulkami](./media/reports-proc-create-with-odata/reports-create-08_ownertype.png)
 

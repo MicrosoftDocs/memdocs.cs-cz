@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: get-started
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: de046af66989551a58d6f4f549a71a7c33e6fad8
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79332607"
 ---
 # <a name="how-to-educate-your-end-users-about-microsoft-intune"></a>Co říct koncovým uživatelům o Microsoft Intune
@@ -63,7 +63,7 @@ Přečtěte si následující seznam tipů, jak usnadnit nasazení Intune v orga
 
 * __Buďte vnímaví.__ Uživatelské prostředí Intune má dopad také na vaši produktivitu. Důkladná znalost uživatelského prostředí vám usnadní řešení problémů se zařízeními a uživateli. Můžete například zjistit a pochopit, jak uživatelé získávají svoje aplikace. Když tyto informace máte předem, usnadní a urychlí vám to diagnostiku a opravy problémů.
 
-* **Androidemem**
+* **Android**
   * [Používání zařízení s Androidem s Intune](../user-help/why-enroll-android-device.md)
   * [Jak uživatelé s Androidem získávají svoje aplikace](end-user-apps-android.md)
 

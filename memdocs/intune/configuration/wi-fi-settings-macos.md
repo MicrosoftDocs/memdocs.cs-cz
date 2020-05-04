@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 0e878294a9af6b80358aa495aa4d10ac6ed93404
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80086350"
 ---
 # <a name="add-wi-fi-settings-for-macos-devices-in-microsoft-intune"></a>Přidání nastavení Wi-Fi pro zařízení s macOS v Microsoft Intune
@@ -33,7 +33,7 @@ Těmito nastaveními se zabývá tento článek.
 
 ## <a name="before-you-begin"></a>Před zahájením
 
-[Vytvořte profil zařízení v Microsoft Intune](wi-fi-settings-configure.md).
+[Vytvořte profil zařízení](wi-fi-settings-configure.md).
 
 > [!NOTE]
 > Tato nastavení jsou k dispozici pro všechny typy registrace. Další informace o typech registrace najdete v tématu [registrace MacOS](../enrollment/macos-enroll.md).
@@ -65,9 +65,9 @@ Těmito nastaveními se zabývá tento článek.
 
 - **Typ EAP**: Zvolte typ protokolu EAP (Extensible Authentication Protocol) pro ověřování zabezpečených bezdrátových připojení. Možnosti:
 
-  - **EAP-FAST**: Zadejte **nastavení PAC (Protected Access Credential)** . Tato možnost používá přihlašovací údaje chráněného přístupu k vytvoření ověřeného tunelového propojení mezi klientem a serverem ověřování. Možnosti:
+  - **EAP-FAST**: Zadejte **nastavení PAC (Protected Access Credential)**. Tato možnost používá přihlašovací údaje chráněného přístupu k vytvoření ověřeného tunelového propojení mezi klientem a serverem ověřování. Možnosti:
     - **Nepoužívat (PAC)**
-    - **Používat (PAC)** : Pokud existuje soubor PAC, použijte ho.
+    - **Používat (PAC)**: Pokud existuje soubor PAC, použijte ho.
     - **Používat a zřídit PAC**: Vytvoří a přidá soubor PAC do zařízení.
     - **Používat a zřídit PAC anonymně**: Vytvoří a přidá soubor PAC do zařízení bez ověřování na serveru.
 
@@ -75,32 +75,32 @@ Těmito nastaveními se zabývá tento článek.
 
   - **EAP-TLS**: Dále zadejte:
 
-    - **Vztah důvěryhodnosti serveru** –  - Názvy certifikačních serverů **:** Přidejte** minimálně jeden název použitý v certifikátech, které vystavuje vaše důvěryhodná certifikační autorita. Když tento údaj zadáte, můžete obejít okno dynamického vztahu důvěryhodnosti, které se zobrazí na zařízeních uživatelů při připojování k Wi-Fi síti.
+    - **Názvy důvěryhodných** - **certifikátů**serveru: **přidejte** jeden nebo více běžných názvů používaných v certifikátech vydaných vaší důvěryhodnou certifikační autoritou (CA). Když tento údaj zadáte, můžete obejít okno dynamického vztahu důvěryhodnosti, které se zobrazí na zařízeních uživatelů při připojování k Wi-Fi síti.
     - **Kořenový certifikát pro ověřování serveru**: Zvolte existující profil důvěryhodného kořenového certifikátu. Tento certifikát se předloží serveru při připojení klienta k síti a slouží k ověření připojení.
 
-    - **Ověřování klientů** –  - Klientský certifikát pro ověření klienta (certifikát identity) **: Zvolte profil klientského certifikátu SCEP nebo PKCS, který je také nasazený na zařízení. Tento certifikát představuje identitu, kterou zařízení předloží serveru pro ověření připojení.
+    - **Client Authentication** - **Klientský certifikát pro ověření klienta pro ověření klienta (certifikát identity)**: vyberte profil certifikátu klienta SCEP nebo PKCS, který je také nasazený do zařízení. Tento certifikát představuje identitu, kterou zařízení předloží serveru pro ověření připojení.
 
   - **EAP-TTLS**: Dále zadejte:
 
-    - **Vztah důvěryhodnosti serveru** –  - Názvy certifikačních serverů **:** Přidejte** minimálně jeden název použitý v certifikátech, které vystavuje vaše důvěryhodná certifikační autorita. Když tento údaj zadáte, můžete obejít okno dynamického vztahu důvěryhodnosti, které se zobrazí na zařízeních uživatelů při připojování k Wi-Fi síti.
+    - **Názvy důvěryhodných** - **certifikátů**serveru: **přidejte** jeden nebo více běžných názvů používaných v certifikátech vydaných vaší důvěryhodnou certifikační autoritou (CA). Když tento údaj zadáte, můžete obejít okno dynamického vztahu důvěryhodnosti, které se zobrazí na zařízeních uživatelů při připojování k Wi-Fi síti.
     - **Kořenový certifikát pro ověřování serveru**: Zvolte existující profil důvěryhodného kořenového certifikátu. Tento certifikát se předloží serveru při připojení klienta k síti a slouží k ověření připojení.
 
     - **Ověřování klientů**: Zvolte **metodu ověřování**. Možnosti:
 
       - **Uživatelské jméno a heslo**: Zobrazí uživateli výzvu k zadání uživatelského jména a hesla pro ověření připojení. Dále zadejte:
-        - **Metoda bez protokolu EAP (vnitřní identita)** : Zvolte, jak chcete připojení ověřovat. Nezapomeňte vybrat stejný protokol, který je nakonfigurovaný u sítě Wi-Fi.
+        - **Metoda bez protokolu EAP (vnitřní identita)**: Zvolte, jak chcete připojení ověřovat. Nezapomeňte vybrat stejný protokol, který je nakonfigurovaný u sítě Wi-Fi.
 
-          Máte tyto možnosti: **Nešifrované heslo (PAP)** , **CHAP (Challenge Handshake Authentication Protocol)** , **Microsoft CHAP (MS-CHAP)** nebo **Microsoft CHAP verze 2 (MS-CHAP v2)** .
+          Máte tyto možnosti: **Nešifrované heslo (PAP)**, **CHAP (Challenge Handshake Authentication Protocol)**, **Microsoft CHAP (MS-CHAP)** nebo **Microsoft CHAP verze 2 (MS-CHAP v2)**.
 
       - **Certifikáty**: Zvolte profil klientského certifikátu SCEP nebo PKCS, který je také nasazený na zařízení. Tento certifikát představuje identitu, kterou zařízení předloží serveru pro ověření připojení.
 
-      - **Ochrana identity (vnější identita)** : Zadejte text odeslaný v odpovědi na žádost o identitu EAP. Tento text může být libovolná hodnota, například `anonymous`. Při ověřování se nejdřív pošle tato anonymní identita a po ní následuje skutečná identifikace poslaná přes zabezpečené tunelové propojení.
+      - **Ochrana identity (vnější identita)**: Zadejte text odeslaný v odpovědi na žádost o identitu EAP. Tento text může být libovolná hodnota, například `anonymous`. Při ověřování se nejdřív pošle tato anonymní identita a po ní následuje skutečná identifikace poslaná přes zabezpečené tunelové propojení.
 
   - **LEAP**
 
   - **PEAP**: Dále zadejte:
 
-    - **Vztah důvěryhodnosti serveru** –  - Názvy certifikačních serverů **:** Přidejte** minimálně jeden název použitý v certifikátech, které vystavuje vaše důvěryhodná certifikační autorita. Když tento údaj zadáte, můžete obejít okno dynamického vztahu důvěryhodnosti, které se zobrazí na zařízeních uživatelů při připojování k Wi-Fi síti.
+    - **Názvy důvěryhodných** - **certifikátů**serveru: **přidejte** jeden nebo více běžných názvů používaných v certifikátech vydaných vaší důvěryhodnou certifikační autoritou (CA). Když tento údaj zadáte, můžete obejít okno dynamického vztahu důvěryhodnosti, které se zobrazí na zařízeních uživatelů při připojování k Wi-Fi síti.
     - **Kořenový certifikát pro ověřování serveru**: Zvolte existující profil důvěryhodného kořenového certifikátu. Tento certifikát se předloží serveru při připojení klienta k síti a slouží k ověření připojení.
 
     - **Ověřování klientů**: Zvolte **metodu ověřování**. Možnosti:
@@ -109,7 +109,7 @@ Těmito nastaveními se zabývá tento článek.
 
       - **Certifikáty**: Zvolte profil klientského certifikátu SCEP nebo PKCS, který je také nasazený na zařízení. Tento certifikát představuje identitu, kterou zařízení předloží serveru pro ověření připojení.
 
-      - **Ochrana identity (vnější identita)** : Zadejte text odeslaný v odpovědi na žádost o identitu EAP. Tento text může být libovolná hodnota, například `anonymous`. Při ověřování se nejdřív pošle tato anonymní identita a po ní následuje skutečná identifikace poslaná přes zabezpečené tunelové propojení.
+      - **Ochrana identity (vnější identita)**: Zadejte text odeslaný v odpovědi na žádost o identitu EAP. Tento text může být libovolná hodnota, například `anonymous`. Při ověřování se nejdřív pošle tato anonymní identita a po ní následuje skutečná identifikace poslaná přes zabezpečené tunelové propojení.
 
 - **Nastavení proxy**: Máte tyto možnosti:
   - **Žádné:** nenakonfiguruje se žádné nastavení proxy.

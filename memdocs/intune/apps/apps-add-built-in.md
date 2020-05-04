@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 74db26a3d5f80a0192e996913177745c0b438ac6
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80324936"
 ---
 # <a name="add-built-in-apps-to-microsoft-intune"></a>Přidání integrovaných aplikací do Microsoft Intune
@@ -32,7 +32,7 @@ ms.locfileid: "80324936"
 Ve starších verzích konzoly Intune bylo v Intune několik výchozích spravovaných aplikací Office 365, jako je Outlook a OneDrive. Typ aplikace se u těchto spravovaných aplikací označoval jako *Spravovaná aplikace z obchodu pro iOS* nebo *Spravovaná aplikace z obchodu pro Android*. Místo těchto aplikací doporučujeme použít integrovaný typ aplikace. Tyto aplikace poskytují větší flexibilitu pro úpravy a odstraňování aplikací Office 365.
 
 >[!NOTE]
->Výchozí aplikace Office 365, které jsou označené jako *Spravovaná aplikace z obchodu pro iOS* a *Spravovaná aplikace z obchodu pro Android*, se při odstranění všech přiřazení ze seznamu aplikací odeberou.
+>Výchozí aplikace Office 365, které jsou označené jako *spravované úložiště pro iOS* a *spravovaná aplikace pro Android* , se ze seznamu aplikací odeberou, když se odstraní všechna přiřazení.
 
 ## <a name="add-a-built-in-app"></a>Přidání integrované aplikace
 
@@ -63,13 +63,13 @@ Informace o integrované aplikaci můžete upravit. Tyto informace vám pomůžo
 4. V podokně **Informace o aplikaci** je možné upravit následující údaje:
     - **Název**: Zadejte název integrované aplikace, který se zobrazí na portálu společnosti. Všechny používané názvy musí být jedinečné. Pokud stejný název aplikace existuje dvakrát, zobrazí se na portálu společnosti uživatelům jenom jedna z aplikací.
     - **Popis**: Zadejte popis aplikace. 
-    - **Vydavatel**: Zadejte název vydavatele aplikace.
+    - **Vydavatel**: zadejte název vydavatele aplikace.
     - **Kategorie**: Volitelně vyberte jednu nebo více kategorií integrovaných aplikací. Nastavením této možnosti uživatelům usnadníte vyhledání aplikace při procházení portálu společnosti.
     - **Zobrazit tuto aplikaci jako doporučenou aplikaci na portálu společnosti**: když uživatelé vyhledávají aplikace, zobrazí se na hlavní stránce portálu společnosti výrazně.
     - **Adresa URL informací**: Volitelně můžete zadat adresu URL webu, který obsahuje informace o této aplikaci. Adresa URL se zobrazí uživatelům na portálu společnosti.
     - **Adresa URL informací o ochraně osobních údajů**: Volitelně zadejte adresu URL webu, který obsahuje informace o ochraně osobních údajů v této aplikaci. Adresa URL se zobrazí uživatelům na portálu společnosti.
     - **Vývojář**: Volitelně zadejte jméno vývojáře aplikace.
-    - **Vlastník**: Volitelně zadejte vlastníka aplikace, například *Personální oddělení*.
+    - **Vlastník**: Volitelně zadejte jméno vlastníka této aplikace (například *personální oddělení*).
     - **Poznámky**: Zadejte jakékoli poznámky, které chcete k aplikaci přidružit.
     - **Nahrát ikonu**: Nahrajte ikonu, která se zobrazí u aplikace, když uživatelé procházejí portál společnosti.
 5. Kliknutím na tlačítko **Revize + Uložit** zobrazte stránku **Revize + vytvořit** . Zkontrolujte hodnoty a nastavení, které jste zadali pro aplikaci.

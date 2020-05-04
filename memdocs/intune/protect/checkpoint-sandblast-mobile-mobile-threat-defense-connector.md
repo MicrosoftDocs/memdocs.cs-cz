@@ -1,5 +1,5 @@
 ---
-title: Nastavení Check Point SandBlast MTD
+title: Nastavení kontrolního bodu SandBlast MTD
 titleSuffix: Microsoft Intune
 description: Přečtěte si o integraci Intune se službou Check Point SandBlast Mobile Threat Defense za účelem regulace přístupu mobilních zařízení k firemním prostředkům.
 keywords: ''
@@ -19,17 +19,17 @@ search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: afd3f7a7c92fba23fc28903b328bc95f8555ba3d
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79329755"
 ---
 # <a name="check-point-sandblast-mobile-threat-defense-connector-with-intune"></a>Konektor Check Point SandBlast Mobile Threat Defense s Intune
 
 Přístup mobilních zařízení k podnikovým prostředkům můžete řídit pomocí podmíněného přístupu na základě posouzení rizik, které provádí služba Check Point SandBlast Mobile, řešení ochrany před mobilními hrozbami, které se integruje s Microsoft Intune. Riziko se posuzuje na základě telemetrie, která se shromažďuje ze zařízení, na kterých běží služba Check Point SandBlast Mobile.
 
-Zásady podmíněného přístupu můžete nakonfigurovat na základě služby Check Point SandBlast pro vyhodnocování mobilních rizik povolených prostřednictvím zásad dodržování předpisů zařízením Intune, které můžete použít k povolení nebo blokování zařízení nesplňujících požadavky pro přístup k podnikovým prostředkům na základě zjištěných nejnovější.
+Zásady podmíněného přístupu můžete nakonfigurovat na základě služby Check Point SandBlast pro vyhodnocování mobilních rizik povolených prostřednictvím zásad dodržování předpisů zařízením v Intune, které můžete použít k povolení nebo blokování zařízení nesplňujících požadavky pro přístup k podnikovým prostředkům na základě zjištěných hrozeb.
 
 > [!NOTE]
 > Tento dodavatel ochrany před mobilními hrozbami není u neregistrovaných zařízení podporován.
@@ -70,40 +70,40 @@ Když se na zařízeních zjistí přítomnost škodlivých aplikací (třeba ma
 *Zablokování při zjištění přítomnosti škodlivých aplikací:*
 
 > [!div class="mx-imgBorder"]
-> ![blok Check Point MTD, když se zjistí škodlivé aplikace](./media/checkpoint-sandblast-mobile-mobile-threat-defense-connector/checkpoint-mtd-2.PNG)
+> ![Check Point MTD – zablokování při zjištění škodlivých aplikací](./media/checkpoint-sandblast-mobile-mobile-threat-defense-connector/checkpoint-mtd-2.PNG)
 
-*Přístup udělený po nápravě:*
+*Přístup po nápravě udělen:*
 
 > [!div class="mx-imgBorder"]
-> ![přístup k kontrolnímu bodu MTD udělen](./media/checkpoint-sandblast-mobile-mobile-threat-defense-connector/checkpoint-mtd-3.PNG)
+> ![Check Point MTD – udělení přístupu](./media/checkpoint-sandblast-mobile-mobile-threat-defense-connector/checkpoint-mtd-3.PNG)
 
 ### <a name="control-access-based-on-threat-to-network"></a>Řízení přístupu na základě ohrožení sítě
 
 Zjišťuje hrozby v síti, například **útoky prostředníkem**, a chrání přístup k sítím Wi-Fi na základě rizika zařízení.
 
-*Zablokování přístupu k síti prostřednictvím sítě Wi-Fi:*
+*Blokovat přístup k síti přes Wi-Fi:*
 
 > [!div class="mx-imgBorder"]
-> ![Check Point MTD blokuje přístup k síti přes Wi-Fi](./media/checkpoint-sandblast-mobile-mobile-threat-defense-connector/checkpoint-mtd-4.PNG)
+> ![Check Point MTD – zablokování přístupu k síti přes Wi-Fi](./media/checkpoint-sandblast-mobile-mobile-threat-defense-connector/checkpoint-mtd-4.PNG)
 
-*Přístup udělený po nápravě:*
+*Přístup po nápravě udělen:*
 
 > [!div class="mx-imgBorder"]
-> ![přístup k síti Wi-Fi MTD Check Point](./media/checkpoint-sandblast-mobile-mobile-threat-defense-connector/checkpoint-mtd-5.PNG)
+> ![Check Point MTD – udělení přístupu přes Wi-Fi](./media/checkpoint-sandblast-mobile-mobile-threat-defense-connector/checkpoint-mtd-5.PNG)
 
 ### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>Řízení přístupu k SharePointu Online na základě ohrožení sítě
 
 Zjišťuje hrozby v síti, například **útoky prostředníkem**, a zabraňuje synchronizaci podnikových souborů na základě rizika zařízení.
 
-*Zablokování SharePointu Online v případě, že se zjistí ohrožení sítě:*
+*Zablokovat SharePoint Online, když jsou zjištěny hrozby sítě:*
 
 > [!div class="mx-imgBorder"]
-> ![Check Point MTD blok](./media/checkpoint-sandblast-mobile-mobile-threat-defense-connector/checkpoint-mtd-6.PNG) přístup k SharePointu Online
+> ![Check Point MTD – zablokování přístupu SharePointu Online](./media/checkpoint-sandblast-mobile-mobile-threat-defense-connector/checkpoint-mtd-6.PNG)
 
-*Přístup udělený po nápravě:*
+*Přístup po nápravě udělen:*
 
 > [!div class="mx-imgBorder"]
-> ![oprávnění Check Point MTD SharePoint Online Access uděleno](./media/checkpoint-sandblast-mobile-mobile-threat-defense-connector/checkpoint-mtd-7.PNG)
+> ![Check Point MTD – udělení přístupu SharePointu Online](./media/checkpoint-sandblast-mobile-mobile-threat-defense-connector/checkpoint-mtd-7.PNG)
 
 <!-- ### Control access on unenrolled devices based on threats from malicious apps
 

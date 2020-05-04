@@ -2,7 +2,7 @@
 title: Rozhraní API datového skladu Intune
 titleSuffix: Microsoft Intune
 description: Rozhraní API datového skladu Intune můžete používat k vytváření sestav poskytujících přehled o podnikovém mobilním prostředí.
-keywords: Datový sklad Intune
+keywords: Intune Data Warehouse
 author: Erikre
 ms.author: erikre
 manager: dougeby
@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 576080bca172b25292954c7bfac592273cacb660
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79331795"
 ---
 # <a name="microsoft-intune-data-warehouse-api"></a>Rozhraní API datového skladu Microsoft Intune
@@ -35,7 +35,7 @@ Rozhraní API datového skladu Intune umožňuje přistupovat k datům Intune ve
 - Konvence URL
 - Typy médií
 - Formáty datových částí
-- Možnosti dotazu
+- Možnosti proxy
 
 OData (Open Data Protocol) je standard organizace OASIS (Organization for the Advancement of Structured Standards), který definuje osvědčené postupy pro vytváření a využívání rozhraní API RESTful. Datový sklad Intune používá OData verze 4.0.
 
@@ -46,9 +46,9 @@ Tato část s referenčními informacemi obsahuje přehled koncových bodů, pod
 
 ## <a name="odata-custom-client"></a>Vlastní klient OData
 
-K datovému modelu datového skladu Intune máte přístup přes koncové body RESTful. Aby váš klient získal přístup k datům, musí se vůči službě Azure Active Directory (Azure AD) autorizovat protokolem OAuth 2.0. Nejprve nastavíte webovou aplikaci a klientskou aplikaci v Azure a udělíte oprávnění klientovi. Když místní klient získá autorizaci, může komunikovat s koncovými body datového skladu.
+Datový model datového skladu Intune můžete zpřístupnit přes koncové body RESTful. Aby váš klient získal přístup k datům, musí se vůči službě Azure Active Directory (Azure AD) autorizovat protokolem OAuth 2.0. Nejprve nastavíte webovou aplikaci a klientskou aplikaci v Azure a udělíte oprávnění klientovi. Když místní klient získá autorizaci, může komunikovat s koncovými body datového skladu.
 
-Další informace najdete v článku [Získání dat z rozhraní API datového skladu pomocí klienta REST](reports-proc-data-rest.md).
+Další informace najdete v tématu [získání dat z rozhraní API datového skladu pomocí klienta REST](reports-proc-data-rest.md) .
 
 > [!Note]  
 > Ukázky kódu najdete v [úložišti datového skladu Intune](https://github.com/Microsoft/Intune-Data-Warehouse) na GitHubu.

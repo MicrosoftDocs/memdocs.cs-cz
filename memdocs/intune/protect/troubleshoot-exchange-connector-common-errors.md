@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: cb35fdc400c89c64b689f4695a48d201e50fc617
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79328883"
 ---
 # <a name="resolve-common-errors-for-the-intune-exchange-connector"></a>Řešení běžných chyb pro Intune Exchange Connector
@@ -30,7 +30,7 @@ Tento článek vám může pomáhat správci Intune vyřešit konkrétní chyby 
 
 ## <a name="configuration-failed-and-returned-error-code-0x0000001"></a>Konfigurace se nezdařila a vrátila kód chyby 0x0000001
 
-**Problém**:  
+**Problém:**  
 Při pokusu o konfiguraci Microsoft Intune Exchange Connector se zobrazí následující chybová zpráva:
 
 ```
@@ -42,7 +42,7 @@ Při pokusu o konfiguraci Microsoft Intune Exchange Connector se zobrazí násle
 
 K tomuto problému může dojít, pokud jsou nastavení internetového proxy serveru chybně nakonfigurované.
 
-**Řešení:**  
+**Řešení**:  
 Konfigurovat nastavení proxy serveru:
 1. Obraťte se na správce místní sítě, abyste se ujistili, že je správně nakonfigurované nastavení proxy serveru. 
 2. Pomocí příkazu **netsh WinHTTP** Nakonfigurujte proxy server a přidejte požadovaný seznam vyloučení. Příklad:  
@@ -53,7 +53,7 @@ Konfigurovat nastavení proxy serveru:
 
 ## <a name="configuration-failed-and-returned-error-code-0x000000b"></a>Konfigurace se nezdařila a vrátila kód chyby 0x000000b   
 
-**Problém**:  
+**Problém:**  
 Při pokusu o konfiguraci Microsoft Intune Exchange Connector se zobrazí následující chybová zpráva:  
 
 ```
@@ -64,12 +64,12 @@ Při pokusu o konfiguraci Microsoft Intune Exchange Connector se zobrazí násle
 ```
 K tomuto problému může dojít, pokud účet, který jste použili k přihlášení do Intune, není účet globálního správce Intune.
 
-**Řešení:**  
+**Řešení**:  
 Přihlaste se k Intune pomocí účtu, který je globálním správcem, nebo přidejte svůj účet do globální skupiny správců. Další informace najdete v tématu [řízení správy na základě rolí (RBAC) s Microsoft Intune](../fundamentals/role-based-access-control.md).
 
 ## <a name="configuration-failed-and-returned-error-code-0x0000006"></a>Konfigurace se nezdařila a vrátila kód chyby 0x0000006
 
-**Problém**:  
+**Problém:**  
 Při pokusu o konfiguraci Microsoft Intune Exchange Connector se zobrazí následující chybová zpráva:  
 
 ```  
@@ -79,7 +79,7 @@ Při pokusu o konfiguraci Microsoft Intune Exchange Connector se zobrazí násle
 ```  
 K této chybě může dojít, pokud proxy server slouží k připojení k Internetu a blokuje provoz do služby Intune. Pokud chcete zjistit, jestli se proxy používá, přejděte na **Ovládací panely** > **Možnosti Internetu**, vyberte kartu **připojení** a pak klikněte na **Nastavení místní sítě**.
 
-**Řešení:**  
+**Řešení**:  
 
 - **Možnost 1** – odeberte nastavení proxy serveru, aby se počítač mohl připojit k Internetu bez průchodu proxy serverem.  
 
@@ -89,7 +89,7 @@ K této chybě může dojít, pokud proxy server slouží k připojení k Intern
 
 ## <a name="event-7000-or-7041-microsoft-intune-exchange-connector-service-wont-start"></a>Událost 7000 nebo 7041: Služba Microsoft Intune Exchange Connector se nespustí
 
-**Problém**:  
+**Problém:**  
 Nepovedlo se zaregistrovat zařízení s iOS v Intune a vygeneruje se jedna z těchto chybových zpráv:  
 
 ```  
@@ -125,14 +125,14 @@ Nepovedlo se zaregistrovat zařízení s iOS v Intune a vygeneruje se jedna z t�
 ```
 K tomuto problému může dojít, pokud účet **WIEC_User** nemá uživatelské právo **Přihlásit se jako služba** v místních zásadách.
 
-**Řešení:**  
+**Řešení**:  
 V počítači, na kterém běží Intune Exchange Connector, přiřaďte uživatelské právo **Přihlásit se jako služba** k účtu služby **WIEC_User** . Pokud je počítač uzlem v clusteru, nezapomeňte účtu Clusterové služby na všech uzlech v clusteru přiřadit uživatelské právo *Přihlásit se jako služba* .  
 
 Chcete-li přiřadit uživatelské právo **Přihlásit se jako služba** k účtu služby **WIEC_User** v počítači, postupujte podle následujících kroků:
 
 1. Přihlaste se k počítači jako správce nebo jako člen skupiny Administrators.
 2. Spusťte **secpol. msc** a otevřete tak místní zásady zabezpečení.
-3. V **nastavení zabezpečení** > **místní zásady**a potom vyberte **přiřazení uživatelských práv**.
+3. Přejít na **Nastavení** > zabezpečení**místní zásady**a potom vyberte **přiřazení uživatelských práv**.
 4. V pravém podokně klikněte dvakrát na možnost **Přihlásit se jako služba**.
 5. Vyberte **Přidat uživatele nebo skupinu**, přidejte **WIEC_USER** k zásadě a pak vyberte **OK** dvakrát.
 

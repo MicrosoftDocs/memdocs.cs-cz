@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 5c1ebf73dde1423f618d58d06cddc96162f725be
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79327911"
 ---
 # <a name="submit-errors-to-the-right-people-for-your-managed-macos-device"></a>Odeslání chyb správným osobám pro vaše spravované zařízení s macOS
@@ -38,7 +38,7 @@ Odeslání podrobností o chybě v aplikaci Portál společnosti:
 
 - Klikněte na nabídku **Nápověda** > **Uložit diagnostickou sestavu**. Vyberte umístění pro uložení tohoto souboru. Pak soubor zašlete e-mailem nebo nahrajte pracovníkovi firemní podpory.
 
-- Pokud je vaše e-mailová aplikace nakonfigurovaná, můžete diagnostickou sestavu odeslat tak, že přejdete na **Nápověda** > **Poslat diagnostickou sestavu**. Po nahrání protokolů klikněte na **Poslat podrobnosti e-mailem**.
+- Pokud je vaše e-mailová aplikace nakonfigurovaná, můžete zprávu diagnostiky odeslat tak, že v **nápovědě** > **odešlete diagnostickou zprávu**. Po nahrání protokolů klikněte na **Poslat podrobnosti e-mailem**.
 
 ## <a name="send-errors-to-the-company-portal-developers-for-macos-devices"></a>Odeslání chyb vývojářům Portálu společnosti pro zařízení s macOS
 

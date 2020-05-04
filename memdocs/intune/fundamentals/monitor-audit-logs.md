@@ -15,33 +15,33 @@ ms.assetid: 6ee841cc-5694-4ba1-8f66-1d58edec30a4
 search.appverid: MET150
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 5b271c05f71cdd166533d837e46c1396bf66c06c
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80326736"
 ---
 # <a name="use-audit-logs-to-track-and-monitor-events-in-microsoft-intune"></a>Sledování a monitorování událostí v Microsoft Intune pomocí protokolů auditu
 
-Protokoly auditu obsahují záznam aktivit, které generují změnu v Microsoft Intune. Vytváření, aktualizace (úpravy), odstraňování, přiřazování a vzdálené akce všechny události vytváření auditu, které můžou správci zkontrolovat pro většinu úloh Intune. Ve výchozím nastavení je auditování povolené pro všechny zákazníky. Nedá se zakázat.
+Protokoly auditu obsahují záznam aktivit, které generují změnu v Microsoft Intune. Vytváření, aktualizace (úpravy), odstraňování, přiřazování a vzdálené akce všechny události vytváření auditu, které můžou správci zkontrolovat pro většinu úloh Intune. Ve výchozím nastavení je auditování povolené pro všechny zákazníky. Tuto funkci nelze zakázat.
 
 > [!NOTE]
 > Události auditu se zahájily zaznamenáváním do vydání funkce prosince 2017. Předchozí události nejsou k dispozici.
 
-## <a name="who-can-access-the-data"></a>Kdo má k těmto datům přístup?
+## <a name="who-can-access-the-data"></a>Kdo má přístup k datům?
 
 Protokoly auditu mohou kontrolovat uživatelé s tímto oprávněním:
 
 - Globální správce
 - Správce služby Intune
-- Správci s přiřazenou rolí Intune a oprávněními pro **data auditu** - **čtení**.
+- Správci přiřazení k roli Intune s oprávněním**ke čtení** **dat** - pro audit
 
 ## <a name="audit-logs-for-intune-workloads"></a>Protokoly auditu pro úlohy Intune
 
 Protokoly auditu můžete zkontrolovat ve skupině monitorování pro každou úlohu Intune:
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte možnost **Správa tenanta** > **protokoly auditu**.
+2. Vyberte > **protokoly auditu** **správy tenanta**.
 3. Pokud chcete filtrovat výsledky, vyberte **filtrovat** a upřesněte výsledky pomocí následujících možností.
     - **Kategorie**: například **dodržování předpisů**, **zařízení**a **role**.
     - **Aktivita**: níže uvedené možnosti jsou omezeny možností vybranými v **kategorii kategorie**.

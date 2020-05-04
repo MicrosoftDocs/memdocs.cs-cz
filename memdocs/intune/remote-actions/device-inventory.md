@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: ed5ff548d28a5bc973c43c84861b9b256b41a203
-ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80696291"
 ---
 # <a name="see-device-details-in-intune"></a>Zobrazení podrobností o zařízení v Intune
@@ -34,7 +34,7 @@ V tomto článku se dozvíte, jak si můžete zobrazit všechna zařízení a je
 ## <a name="view-the-device-details"></a>Zobrazení podrobností o zařízení
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-3. Vyberte **Zařízení** > **Všechna zařízení** > výběrem zařízení uvedeného v seznamu otevřete podrobné informace o něm:
+3. Vyberte **zařízení** > **všechna zařízení** > výběrem jednoho ze zařízení v seznamu otevřete jeho podrobnosti:
 
    - **Přehled** zobrazuje název zařízení a uvádí některé klíčové vlastnosti zařízení, například to, jestli jde o osobní nebo firemní zařízení, sériové číslo, primární uživatel a další. Na zařízení můžete provést následující akce:
       - [Vyřadit](devices-wipe.md#retire)
@@ -44,7 +44,7 @@ V tomto článku se dozvíte, jak si můžete zobrazit všechna zařízení a je
       - [Synchronizovat](device-sync.md)
       - [Resetovat heslo](device-passcode-reset.md)
       - [Restartovat](device-restart.md) (jenom Windows)
-      - [Začít znovu](device-fresh-start.md) (jenom Windows)
+      - [Nový start](device-fresh-start.md) (jenom Windows)
       - [Resetování autopilotu](/windows/deployment/windows-autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset) (jenom Windows)
       - [Rychlá kontrola](../configuration/device-restrictions-windows-10.md) (jenom Windows 10)
       - [Úplná kontrola](../configuration/device-restrictions-windows-10.md) (jenom Windows 10)
@@ -68,7 +68,7 @@ V závislosti na tom, jaký dopravce zařízení používá, se nemusí shromaž
 > [!Note]  
 > Inventář hardwaru a softwaru se ve službě Intune aktualizuje každých 7 dní.
 
-|Údaj|Popis|Platforma| 
+|Podrobnosti|Popis|Platforma| 
 |--------------|----------------------|----|  
 |Název|Název zařízení|Windows, iOS|
 |Název správy|Název zařízení používaný jenom v konzole. Změnou tohoto názvu nedojde ke změně názvu v zařízení.|Windows, iOS|
@@ -96,7 +96,7 @@ V závislosti na tom, jaký dopravce zařízení používá, se nemusí shromaž
 |Datum zápisu|Datum a čas, kdy se zařízení zaregistrovalo v Intune|Windows, iOS/iPadOS, Android|
 |Poslední kontakt|Datum a čas posledního připojení zařízení k Intune|Windows, iOS/iPadOS, Android|
 |Kód pro obejití zámku aktivace|Kód, který lze použít k zakázání zámku aktivace.|iOS|
-|Registrované v Azure AD|Pokud **Ano**, zařízení je registrované v Azure Active Directory|Windows, iOS/iPadOS, Android|
+|Registrováno v Azure AD|Pokud **Ano**, zařízení je registrované v Azure Active Directory|Windows, iOS/iPadOS, Android|
 |Intune je zaregistrované.|Pokud **Ano**, zařízení je zaregistrované v Intune.|Windows, iOS/iPadOS, Android|
 |Dodržování předpisů|Stav dodržování předpisů zařízení|Windows, iOS/iPadOS, Android|
 |EAS aktivované|Pokud **Ano**, pak je zařízení synchronizované s poštovní schránkou Exchange|Windows, iOS/iPadOS, Android|

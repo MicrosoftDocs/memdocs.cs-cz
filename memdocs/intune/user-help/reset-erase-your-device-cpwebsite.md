@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: f7f86f595adf8b06f9a3d9da198d89b263e00574
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79327959"
 ---
 # <a name="reset-device-from-company-portal-website"></a>Resetování zařízení z Portál společnosti webu
@@ -43,7 +43,7 @@ Resetování zařízení v Portál společnosti není k dispozici pro všechna z
 
     ![Snímek obrazovky se stránkou zařízení se dvěma dlaždicemi, které zobrazují neidentifikované a obecně pojmenovaná zařízení. Šedý banner se nachází přímo pod zařízením a vyzve uživatele k identifikaci zařízení, které používají, nebo přidání nového.](./media/rename-reset-device-step2-1808.png)  
 
-3. Vyberte **Resetovat**. Pokud se v horní části stránky možnost Resetovat nezobrazuje, vyberte **Více (…)**  > **Resetovat**.  
+3. Vyberte **Resetovat**. Pokud možnost Reset není v horní části stránky zobrazená, vyberte **Další (...)** .  >  **Resetovat**.  
 
      ![Stránka podrobností o zařízení pro vybrané zařízení na webu Portál společnosti. V horní části stránky se nacházejí odkazy Přejmenovat, Odebrat, Resetovat zařízení, Resetovat heslo a Vzdálené uzamčení. ](./media/rename-reset-device-1808.png)  
 

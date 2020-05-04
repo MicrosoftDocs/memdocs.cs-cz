@@ -18,17 +18,17 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: c2031ba23b49bda4890d2638272e3b808b4bf5a9
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80327441"
 ---
 # <a name="create-a-device-profile-in-microsoft-intune"></a>Vytvořte profil zařízení v Microsoft Intune
 
 Profily zařízení umožňují přidat a nakonfigurovat nastavení a potom tato nastavení nasdílet do zařízení ve vaší organizaci. Použití [funkcí a nastavení na vašich zařízeních pomocí profilů zařízení](device-profiles.md) obsahuje více podrobností, včetně toho, co můžete dělat.
 
-V tomto článku najdete:
+Tento článek:
 
 - Seznam kroků pro vytvoření profilu.
 - Ukazuje, jak přidat značku oboru do "Filter" Profile.
@@ -44,14 +44,14 @@ Profily se vytvářejí v [centru pro správu Microsoft Endpoint Manageru](https
 - **Podle platformy**: vytváření a zobrazování zásad a profilů podle vaší platformy. Toto zobrazení může také zobrazovat funkce specifické pro platformu. Vyberte například **Windows**. Uvidíte funkce specifické pro systém Windows, jako jsou **aktualizační kanály Windows 10** a **skripty PowerShellu**.
 - **Zásady**: Vytvořte profily zařízení, nahrajte vlastní [skripty PowerShellu](../apps/intune-management-extension.md) , které se spustí na zařízeních, a přidejte do zařízení datové tarify pomocí [eSIM karty](esim-device-configuration.md).
 
-Když vytváříte profil (**konfigurační profily** > **vytvořit profil**), vyberte svou platformu:
+Když vytváříte profil (**konfigurační profily** > **vytvoří profil**), vyberte svou platformu:
 
 - **Správce zařízení s Androidem**
 - **Android Enterprise**
 - **iOS/iPadOS**
 - **macOS**
 - **Windows 10 a novější**
-- **Windows 8.1 a novější**
+- **Windows 8.1 a vyšší**
 - **Windows Phone 8.1**
 
 Pak zvolte typ profilu. Nastavení, která můžete konfigurovat, se liší podle zvolené platformy. Následující články popisují nastavení pro různé typy profilů:
@@ -66,11 +66,11 @@ Pak zvolte typ profilu. Nastavení, která můžete konfigurovat, se liší podl
 - [Připojení k doméně (Windows)](domain-join-configure.md)
 - [Upgrade edice a přepínač režimu (Windows)](edition-upgrade-configure-windows-10.md)
 - [Vzdělávání (iOS, iPadOS)](../fundamentals/education-settings-configure-ios.md)
-- [E-mail](email-settings-configure.md)
+- [E-mailu](email-settings-configure.md)
 - [Endpoint Protection (macOS, Windows)](../protect/endpoint-protection-configure.md)
 - [Rozšíření (macOS)](kernel-extensions-overview-macos.md)
 - [Identity Protection (Windows)](../protect/identity-protection-configure.md)
-- [Veřejný terminál](kiosk-settings.md)
+- [Kiosk](kiosk-settings.md)
 - [ATP v programu Microsoft Defender (Windows)](../protect/advanced-threat-protection.md)
 - [Profil pro rozšíření mobility (MX) (Správce zařízení s Androidem)](android-zebra-mx-overview.md)
 - [OEMConfig (Android Enterprise)](android-oem-configuration-overview.md)
@@ -88,17 +88,17 @@ Pak zvolte typ profilu. Nastavení, která můžete konfigurovat, se liší podl
 Pokud třeba pro platformu vyberete **iOS/iPadOS** , možnosti typu vašeho profilu vypadají podobně jako v následujícím profilu:
 
 > [!div class="mx-imgBorder"]
-> ![vytvořit profil iOS/iPadOS v Intune](./media/device-profile-create/create-device-profile.png)
+> ![Vytvoření profilu iOS/iPadOS v Intune](./media/device-profile-create/create-device-profile.png)
 
 ## <a name="scope-tags"></a>Značky oboru
 
-Po přidání nastavení můžete do profilu přidat také značku oboru. Značky oboru vyfiltrují profily na konkrétní IT skupiny, například `US-NC IT Team` nebo `JohnGlenn_ITDepartment`. A se používají v distribuovaném IT.
+Po přidání nastavení můžete do profilu přidat také značku oboru. Značky oboru vyfiltrují profily na konkrétní IT skupiny, `US-NC IT Team` například `JohnGlenn_ITDepartment`nebo. A se používají v distribuovaném IT.
 
 Další informace o značkách oboru a o tom, co můžete dělat, najdete v tématu [použití značek RBAC a Scope pro distribuci](../fundamentals/scope-tags.md).
 
 ## <a name="applicability-rules"></a>Pravidla použitelnosti
 
-Platí pro:
+To platí pro:
 
 - Windows 10 a novější
 
@@ -111,7 +111,7 @@ Chcete-li provést tuto úlohu, vytvořte **pravidlo použitelnosti**. Tato prav
 
 Pro přístup k těmto scénářům máte tyto možnosti:
 
-- Vytvořte skupinu zařízení, která zahrnuje všechna zařízení na Bellows škole. V profilu přidejte pravidlo použitelnosti, aby se naplatilo, pokud je minimální verze operačního systému `16299` a že je `17134`maximální verze. Přiřaďte tento profil ke skupině zařízení Bellows školy.
+- Vytvořte skupinu zařízení, která zahrnuje všechna zařízení na Bellows škole. V profilu přidejte pravidlo použitelnosti, aby se naplatilo, pokud je `16299` minimální verze operačního systému a maximální verze `17134`. Přiřaďte tento profil ke skupině zařízení Bellows školy.
 
   Po přiřazení se profil vztahuje na zařízení mezi minimální a maximální verzí, které zadáte. U zařízení, která nepatří mezi minimální a maximální verze, které zadáte, se jejich stav zobrazuje jako **nepoužitý**.
 
@@ -127,12 +127,12 @@ Pro přístup k těmto scénářům máte tyto možnosti:
 
 Když přiřadíte profil ke skupinám, budou pravidla použitelnosti fungovat jako filtr a budou cílit jenom na zařízení, která splňují vaše kritéria.
 
-### <a name="add-a-rule"></a>Přidat pravidlo
+### <a name="add-a-rule"></a>Přidání pravidla
 
 1. Vyberte **pravidla použitelnosti**. Můžete zvolit **pravidlo**, **vlastnost**a **edici OS**:
 
     > [!div class="mx-imgBorder"]
-    > ![přidat pravidlo použitelnosti do konfiguračního profilu zařízení v Microsoft Intune](./media/device-profile-create/applicability-rules.png)
+    > ![Přidání pravidla použitelnosti do konfiguračního profilu zařízení v Microsoft Intune](./media/device-profile-create/applicability-rules.png)
 
 2. V možnosti **pravidlo**vyberte, jestli chcete zahrnout nebo vyloučit uživatele nebo skupiny. Možnosti:
 
@@ -144,7 +144,7 @@ Když přiřadíte profil ke skupinám, budou pravidla použitelnosti fungovat j
     - **Edice OS**: v seznamu vyhledejte edice Windows 10, které chcete zahrnout (nebo vyloučit) ve vašem pravidle.
     - **Verze operačního systému**: zadejte **minimální** a **maximální** číslo verze Windows 10, které chcete zahrnout (nebo vyloučit) ve vašem pravidle. Obě hodnoty jsou povinné.
 
-      Můžete například zadat `10.0.16299.0` (RS3 nebo 1709) pro minimální verzi a `10.0.17134.0` (RS4 nebo 1803) pro maximální verzi. Nebo můžete být přesnější a zadat `10.0.16299.001` pro minimální verzi a `10.0.17134.319` pro maximální verzi.
+      Můžete například zadat `10.0.16299.0` (RS3 nebo 1709) pro minimální verzi a `10.0.17134.0` (RS4 nebo 1803) pro maximální verzi. Nebo můžete být přesnější a zadat `10.0.16299.001` minimální `10.0.17134.319` a maximální verzi.
 
 4. Pokud chcete změny uložit, vyberte **Přidat** .
 
@@ -163,10 +163,10 @@ Při vytváření profilů Vezměte v úvahu následující doporučení:
   Mezi příklady konfiguračních profilů patří:
 
   **Název profilu**: Šablona správce – konfigurační profil OneDrivu pro všechny uživatele Windows 10  
-  **Popis profilu**: Profil šablony správce OneDrivu, který obsahuje minimální a základní nastavení pro všechny uživatele Windows 10. Vytvořeno pomocí user@contoso.com, aby uživatelé nemohli sdílet data organizace s osobními účty OneDrive.
+  **Popis profilu**: Profil šablony správce OneDrivu, který obsahuje minimální a základní nastavení pro všechny uživatele Windows 10. Vytvoří user@contoso.com se, aby uživatelé nemohli sdílet data organizace s osobními účty OneDrive.
 
   **Název profilu**: profil VPN pro všechny uživatele iOS/iPadOS  
-  **Popis profilu**: profil VPN, který obsahuje minimální a základní nastavení pro všechny uživatele iOS/iPadOS pro připojení k síti Contoso VPN. Vytvořeno pomocí user@contoso.com, aby se uživatelé k síti VPN automaticky ověřovali a místo toho byli vyzváni k zadání uživatelského jména a hesla.
+  **Popis profilu**: profil VPN, který obsahuje minimální a základní nastavení pro všechny uživatele iOS/iPadOS pro připojení k síti Contoso VPN. Vytvoří se user@contoso.com tak, že se uživatelé automaticky ověřují v síti VPN a nežádají uživatele o zadání uživatelského jména a hesla.
 
 - Vytvořte svůj profil podle úkolu, jako je konfigurace nastavení Microsoft Edge, povolení ochrany proti virům v programu Microsoft Defender, blokování zařízení s iOS/iPadOS s jailbreakem a tak dále.
 
@@ -179,7 +179,7 @@ Při vytváření profilů Vezměte v úvahu následující doporučení:
   Následující obrázek ukazuje příklad nastavení, které se může vztahovat na uživatele nebo použít na zařízení:
 
   > [!div class="mx-imgBorder"]
-  > ![šablonu správce Intune, která se vztahuje na uživatele a zařízení](./media/device-profile-create/setting-applies-to-user-and-device.png)
+  > ![Šablona správce Intune, která se vztahuje na uživatele a zařízení](./media/device-profile-create/setting-applies-to-user-and-device.png)
 
 - Pokaždé, když vytvoříte omezující zásadu, sdělte tuto změnu vašim uživatelům. Pokud například měníte požadavek na přístupový kód ze 4 znaků na 6 znaků, dejte uživatelům informace o tom, než zásadu přiřadíte.
 

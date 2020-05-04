@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic; get-started; seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: a9622a89b8b689dab7ea2d6d332d1d29c38f5668
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80085739"
 ---
 # <a name="supported-operating-systems-and-browsers-in-intune"></a>Podporované operační systémy a prohlížeče v Intune
@@ -93,7 +93,7 @@ Modely zařízení Samsung v následujícím seznamu nepodporují Knox. Aplikace
 Jako alternativní metodu registrace jde na počítače s Windows nasadit a nainstalovat [softwarového klienta Intune](manage-windows-pcs-with-microsoft-intune.md). Tato funkce je dostupná jen při používání klasického portálu Intune. Softwarového klienta Intune můžete použít ke správě 10 a novějších počítačů s výjimkou Windows 10 Home Edition.
 
 > [!Note]
-> Společnost Microsoft oznámila, že podpora Windows 7 končí od ledna 14 2020. K tomuto datu přestane také Intune podporovat zařízení s Windows 7.
+> Microsoft oznámil, že podpora Windows 7 končí 14 ledna 2020. K tomuto datu přestane také Intune podporovat zařízení s Windows 7.
 >
 > Další informace najdete v tématu [plán pro změny v Intune: konec podpory pro Windows 7](whats-new.md#windows-7-ends-extended-support).
 >
@@ -109,13 +109,13 @@ You can manage [Exchange ActiveSync devices](../enrollment/device-enrollment.md#
 
 Různé úlohy správy vyžadují, abyste použili některý z následujících webů pro správu.
 
-- [Centrum pro správu Microsoft 365](https://go.microsoft.com/fwlink/p/?LinkId=698854)
-- [Azure Portal](https://portal.azure.com/)
+- [Centrum pro správu služby Microsoft 365](https://go.microsoft.com/fwlink/p/?LinkId=698854)
+- [portál Azure](https://portal.azure.com/)
 
 Portály podporují následující prohlížeče:
 
 - Microsoft Edge (nejnovější verze)
-- Microsoft Internet Explorer 11
+- Aplikace Microsoft Internet Explorer 11
 - Safari (nejnovější verze, jen Mac)
 - Chrome (nejnovější verze)
 - Firefox (nejnovější verze)
@@ -126,7 +126,7 @@ Klasický portál Intune se používá jenom ke správě zařízení zaregistrov
 
 Konzolu Intune podporují následující prohlížeče vybavené technologií Silverlight:
 
-- Internet Explorer 10 nebo novější
+- Internet Explorer 10 nebo novější
 - Google Chrome (verze starší než verze 42)
 - Mozilla Firefox s povoleným programem Silverlight (verze starší než verze 56)
 

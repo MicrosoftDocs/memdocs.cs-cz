@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 77f0df858f94f3d0b8d6c3a4ee2b251e6b917da6
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79333175"
 ---
 # <a name="use-custom-settings-for-android-devices-in-microsoft-intune"></a>Použití vlastních nastavení u zařízení s Androidem v Microsoft Intune
@@ -44,7 +44,7 @@ V tomto článku si ukážeme, jak vytvořit vlastní profil pro zařízení s A
 ## <a name="create-the-profile"></a>Vytvoření profilu
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **zařízení** > **konfiguračních profilech** > **vytvořit profil**.
+2. Vyberte **Konfigurace zařízení** > **profily** > konfigurace**vytvořit profil**.
 3. Zadejte následující nastavení:
 
     - **Název**: zadejte popisný název profilu. Své profily pojmenujte, abyste je později mohli snadno identifikovat. Dobrým názvem profilu je například **vlastní profil Android**.
@@ -59,11 +59,11 @@ V tomto článku si ukážeme, jak vytvořit vlastní profil pro zařízení s A
     - **OMA-URI:** Zadejte nastavení OMA-URI, které chcete použít.
     - **Datový typ**: vyberte datový typ, který budete používat pro toto nastavení OMA-URI. Možnosti:
 
-      - String
+      - Řetězec
       - Řetězec (soubor XML)
       - Datum a čas
-      - Celé číslo
-      - Číslo s plovoucí desetinnou čárkou
+      - Integer
+      - Plovoucí desetinná čárka
       - Logická hodnota
       - Base64 (soubor)
 

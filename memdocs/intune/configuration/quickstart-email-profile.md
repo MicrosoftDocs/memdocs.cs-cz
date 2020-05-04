@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: af7657eb89df14e8429a81616e76d81a5a9ac5c1
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80327429"
 ---
 # <a name="quickstart-create-an-email-device-profile-for-iosipados"></a>Rychlý Start: vytvoření profilu e-mailového zařízení pro iOS/iPadOS
@@ -39,10 +39,10 @@ Přihlaste se k [centru pro správu Microsoft Endpoint Manageru](https://go.micr
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Vyberte **zařízení** > **konfigurační profily** > **vytvořit profil**.
-   ![vytvoření e-mailového profilu pro iOS/iPadOS v Intune](./media/quickstart-email-profile/ios-create-profile.png)
+2. Vyberte a přejdete na konfigurace **zařízení** > **profily** > **vytvořit profil**.
+   ![Vytvoření e-mailového profilu pro iOS/iPadOS v Intune](./media/quickstart-email-profile/ios-create-profile.png)
 
-3. Zadejte následující vlastnosti:
+3. Zadejte tyto vlastnosti:
    - **Platforma**: vyberte **iOS/iPadOS**
    - **Profil**: vyberte **e-mail** .
   
@@ -60,8 +60,8 @@ Přihlaste se k [centru pro správu Microsoft Endpoint Manageru](https://go.micr
 7. V **nastavení konfigurace**zadejte následující nastavení (ponechte výchozí nastavení):
    - **E-mailový server**: Pro účely tohoto rychlého startu zadejte **outlook.office365.com**. Toto nastavení určuje umístění Exchange (URL) e-mailového serveru, který bude aplikace pro iOS/iPadOS mail používat pro připojení k e-mailu.
    - **Název účtu**: Zadejte **Firemní e-mail**.
-   - **Atribut uživatelského jména z AAD**: Toto jméno je atribut, který Intune získá z Azure Active Directory (Azure AD). Pomocí tohoto jména Intune dynamicky vygeneruje uživatelské jméno pro tento profil. Pro účely tohoto rychlého startu předpokládáme, že chceme použít **hlavní název uživatele (UPN** ), který se použije jako uživatelské jméno pro profil (například user1@contoso.com).
-   - **Atribut e-mailové adresy z AAD**: Toto nastavení je e-mailová adresa z Azure AD, která se použije pro přihlášení k serveru Exchange. Pro účely tohoto rychlého startu vyberte **Hlavní název uživatele (UPN)** .
+   - **Atribut uživatelského jména z AAD**: Toto jméno je atribut, který Intune získá z Azure Active Directory (Azure AD). Pomocí tohoto jména Intune dynamicky vygeneruje uživatelské jméno pro tento profil. Pro účely tohoto rychlého startu předpokládáme, že chceme použít **hlavní název uživatele (UPN** user1@contoso.com), který se použije jako uživatelské jméno pro profil (například).
+   - **Atribut e-mailové adresy z AAD**: Toto nastavení je e-mailová adresa z Azure AD, která se použije pro přihlášení k serveru Exchange. Pro účely tohoto rychlého startu vyberte **Hlavní název uživatele (UPN)**.
    - **Metoda ověřování**: Pro účely tohoto rychlého startu vyberte možnost **Uživatelské jméno a heslo**. ( **Certifikát** můžete zvolit i v případě, že jste už nastavili certifikát pro Intune.)
 
 8. Vyberte **Další**.

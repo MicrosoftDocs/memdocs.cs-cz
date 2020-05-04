@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: ''
 ms.openlocfilehash: a6b45cef3cc13357638753efd5b8179c5ce41f6c
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80085699"
 ---
 # <a name="intune-enrollment-methods-for-windows-devices"></a>Metody registrace zařízení s Windows v Intune

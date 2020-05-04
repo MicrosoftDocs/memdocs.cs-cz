@@ -1,6 +1,6 @@
 ---
 title: Vytvoření zásad dodržování předpisů pro zařízení v Microsoft Intune – Azure | Microsoft Docs
-description: Vytvoření zásad dodržování předpisů pro zařízení, Přehled stavů a úrovní závažnosti, použití stavu V období odkladu, práce s podmíněným přístupem, zpracování zařízení bez přiřazené zásady a rozdíly v dodržování předpisů na portálu Azure Portal a Classic v nástroji Microsoft Intune
+description: Vytvoření zásad dodržování předpisů pro zařízení, Přehled stavů a úrovní závažnosti, použití stavu V období odkladu, práce s podmíněným přístupem, zpracování zařízení bez přiřazené zásady a rozdíly v dodržování předpisů na Azure Portal a klasickém portálu v Microsoft Intune
 keywords: ''
 author: brenduns
 ms.author: brenduns
@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: b437a72a2380fea215746aa76b35898c6fc60b16
-ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/02/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80551388"
 ---
 # <a name="create-a-compliance-policy-in-microsoft-intune"></a>Vytvoření zásady dodržování předpisů v Microsoft Intune
@@ -29,7 +29,7 @@ Zásady dodržování předpisů pro zařízení jsou klíčovou funkcí Intune,
 
 Můžete také provést akce při nedodržení předpisů, jako je například odeslání e-mailu s oznámením uživateli. Základní informace o tom, jaké zásady dodržování předpisů dělají a jak se používají, najdete v tématu [Začínáme s dodržováním předpisů zařízením](device-compliance-get-started.md).
 
-V tomto článku najdete:
+Tento článek:
 
 - Obsahuje seznam požadavků a kroků pro vytvoření zásady dodržování předpisů.
 - Ukazuje, jak přiřadit zásady vašim skupinám uživatelů a zařízení.
@@ -52,8 +52,8 @@ Pokud chcete používat zásady dodržování předpisů zařízením, ujistěte
   - iOS
   - macOS
   - Windows 10
-  - Windows 8.1
-  - Wvdows Phone 8.1
+  - Windows 8.1
+  - Windows Phone 8.1
 
 - Registrace zařízení v Intune (vyžaduje se pro zobrazení stavu dodržování předpisů)
 
@@ -66,7 +66,7 @@ Pokud chcete používat zásady dodržování předpisů zařízením, ujistěte
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Vyberte **zařízení** > **zásady dodržování předpisů** > **zásady** > **vytvořit zásadu**.
+2. Vyberte **zařízení** >  > **Policies**zásady > **zásad dodržování předpisů****vytvořit zásadu**.
 
 3. Vyberte **platformu** pro tuto zásadu z následujících možností:
    - *Správce zařízení s Androidem*
@@ -74,7 +74,7 @@ Pokud chcete používat zásady dodržování předpisů zařízením, ujistěte
    - *iOS/iPadOS*
    - *macOS*
    - *Windows Phone 8.1*
-   - *Windows 8.1 a novější*
+   - *Windows 8.1 a vyšší*
    - *Windows 10 a novější*
 
     Pro *Android Enterprise*vyberete také **Typ zásady**:
@@ -107,7 +107,7 @@ Pokud chcete používat zásady dodržování předpisů zařízením, ujistěte
 
    Další příklad obsahuje umístění, kam přidáte alespoň jedno umístění k zásadě dodržování předpisů. V takovém případě se výchozí akce při nedodržení předpisů použije, když vyberete aspoň jedno umístění. Pokud zařízení není připojené k žádnému z vybraných umístění, považuje se za nevyhovující. Plán můžete nakonfigurovat tak, aby uživatelům poskytl období odkladu, například jeden den.
 
-8. Na kartě **značky oboru** vyberte značky, které vám pomůžou filtrovat zásady na konkrétní skupiny, například `US-NC IT Team` nebo `JohnGlenn_ITDepartment`. Po přidání nastavení můžete také přidat značku oboru do zásad dodržování předpisů. 
+8. Na kartě **obor značek** vyberte značky, které vám pomůžou filtrovat zásady na konkrétní skupiny, například `US-NC IT Team` nebo `JohnGlenn_ITDepartment`. Po přidání nastavení můžete také přidat značku oboru do zásad dodržování předpisů. 
 
    Informace o použití značek oboru najdete v tématu [použití značek oboru k filtrování zásad](../fundamentals/scope-tags.md).
 
@@ -152,9 +152,9 @@ V následující tabulce najdete souhrnný přehled těchto bodů:
 
 |Skutečný stav dodržování předpisů|Hodnota přiřazeného období odkladu|Účinný stav dodržování předpisů|
 |---------|---------|---------|
-|Nevyhovující předpisům |Bez přiřazeného období odkladu |Nevyhovující předpisům |
-|Nevyhovující předpisům |Včerejší datum|Nevyhovující předpisům|
-|Nevyhovující předpisům |Zítřejší datum|V období odkladu|
+|NonCompliant |Bez přiřazeného období odkladu |NonCompliant |
+|NonCompliant |Včerejší datum|NonCompliant|
+|NonCompliant |Zítřejší datum|V období odkladu|
 
 Další informace o monitorování zásad dodržování předpisů zařízením najdete v článku [Monitorování zásad dodržování předpisů zařízením v Intune](compliance-policy-monitor.md).
 
@@ -162,13 +162,13 @@ Další informace o monitorování zásad dodržování předpisů zařízením 
 
 Pokud má nějaké zařízení několik zásad dodržování předpisů a pro dvě nebo více z nich má různé stavy dodržování předpisů, přiřadí se mu jediný výsledný stav dodržování předpisů. Toto přiřazení vychází z koncepční úrovně závažnosti přiřazené jednotlivých stavům dodržování předpisů. Jednotlivé stavy dodržování předpisů mají následující úroveň závažnosti:
 
-|Stav  |Závažnost  |
+|Status  |Severity  |
 |---------|---------|
-|Neznámé     |1|
-|Neužívá se     |2|
-|Vyhovuje|3|
+|Není známo     |1|
+|NotApplicable     |2|
+|Odpovídající|3|
 |V období odkladu|4|
-|Nevyhovující předpisům|5|
+|NonCompliant|5|
 |Chyba|6|
 
 Pokud má zařízení více zásad dodržování předpisů, přiřadí se mu nejvyšší úroveň závažnosti ze všech zásad.

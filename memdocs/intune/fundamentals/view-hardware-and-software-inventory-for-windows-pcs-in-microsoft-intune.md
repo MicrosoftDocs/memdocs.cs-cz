@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 9e2d5e3f1e5839040c3ffd2229c34f3063a3ce87
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79330127"
 ---
 # <a name="view-hardware-and-software-inventory-for-windows-pcs"></a>Zobrazení inventáře hardwaru a softwaru u počítačů s Windows
@@ -30,7 +30,7 @@ ms.locfileid: "79330127"
 [!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 > [!NOTE]
-> Informace v tomto tématu se vztahují jenom na desktopové systémy Windows, které spravujete jako počítače pomocí softwarového klienta Intune. Pokud chcete zobrazit inventář pro počítače s Windows zaregistrované jako mobilní zařízení, přečtěte si téma [zobrazení podrobností o zařízení v Intune](../remote-actions/device-inventory.md).
+> Informace v tomto tématu se vztahují jenom na desktopové systémy Windows, které spravujete jako počítače (PC) pomocí softwarového klienta Intune. Pokud chcete zobrazit inventář pro počítače s Windows zaregistrované jako mobilní zařízení, přečtěte si téma [zobrazení podrobností o zařízení v Intune](../remote-actions/device-inventory.md).
 
 Intune shromažďuje podrobné informace o hardwaru a softwaru pro stolní počítače, které spravujete jako počítače pomocí softwarového klienta Intune. V následujících postupech se dozvíte toto:
 
@@ -62,7 +62,7 @@ Intune shromažďuje podrobné informace o hardwaru a softwaru pro stolní poč�
 
 ## <a name="to-refresh-computer-inventory-to-ensure-it-is-current"></a>Aktualizace inventáře počítače, abyste měli jistotu, že je aktuální
 
-1. V [konzole pro správu Microsoft Intune](https://manage.microsoft.com/)vyberte **skupiny** &gt; **všechna zařízení** (nebo jinou skupinu obsahující počítač, pro který chcete inventář aktualizovat).
+1. V [konzole pro správu Microsoft Intune](https://manage.microsoft.com/) zvolte **Skupiny** &gt; **Všechna zařízení** (nebo jinou skupinu obsahující počítač, pro který chcete inventář aktualizovat).
 
 2. Vyberte počítač. Nebo když stisknete a podržíte **Ctrl**, můžete vybrat víc počítačů.
 

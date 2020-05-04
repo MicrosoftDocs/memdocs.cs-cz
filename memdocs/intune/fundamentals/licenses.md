@@ -1,5 +1,5 @@
 ---
-title: Licence k dispozici pro Microsoft Intune
+title: Licence dostupné pro Microsoft Intune
 description: Služba Intune je dostupná s těmito licencemi.
 keywords: ''
 author: ErikjeMS
@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 2517c9f548489e33488c2f4b37de3b5a910d8dad
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79332463"
 ---
 # <a name="microsoft-intune-licensing"></a>Microsoft Intune licencování

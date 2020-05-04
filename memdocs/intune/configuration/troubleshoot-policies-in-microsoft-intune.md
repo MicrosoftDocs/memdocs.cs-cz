@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: f3aaf2bf895082f3647f0a1ad6b9997a5e97baee
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79333027"
 ---
 # <a name="troubleshoot-policies-and-profiles-and-in-intune"></a>Řešení potíží se zásadami a profily a v Intune
@@ -79,7 +79,7 @@ Zkontrolujte [stav tenanta](../fundamentals/tenant-status.md) a potvrďte, že j
             - Na zařízení s Androidem otevřete Portál společnosti App > **zařízení** > vyberte zařízení ze seznamu > **Ověřte nastavení zařízení**.
             - V zařízení se systémem iOS/iPadOS otevřete aplikaci Portál společnosti > **zařízení** > v seznamu vyberte zařízení, > **kontrolu nastavení**.
 
-        - Na zařízení s Windows otevřete **nastavení** > **účty** > **přístup do práce nebo do školy** > vyberte účet nebo registraci MDM > **informace** > **synchronizaci**.
+        - Na zařízení s Windows otevřete **Nastavení** > **účty** > **přístup do práce nebo do školy** > vyberte účet nebo registraci MDM > **Info** > **synchronizaci**informací.
 
     - Pokud chcete zobrazit informace specifické pro zásady, vyberte zařízení.
 
@@ -98,13 +98,13 @@ Zkontrolujte [stav tenanta](../fundamentals/tenant-status.md) a potvrďte, že j
 
         **Užitečné odkazy**: 
 
-        - [Způsoby nasazení zásad dodržování předpisů pro zařízení](../protect/device-compliance-get-started.md#ways-to-deploy-device-compliance-policies)
+        - [Způsoby nasazení zásad dodržování předpisů zařízeními](../protect/device-compliance-get-started.md#ways-to-deploy-device-compliance-policies)
         - [Monitorování zásad dodržování předpisů zařízením](../protect/compliance-policy-monitor.md)
 
 ## <a name="youre-unsure-if-a-profile-is-correctly-applied"></a>Nejste si jistí, jestli se profil správně používá
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **zařízení** > **všechna zařízení** > vyberte zařízení > **Konfigurace zařízení**. 
+2. Vyberte **zařízení** > **všechna zařízení** > vyberte **konfiguraci**zařízení > zařízení. 
 
     Každé zařízení obsahuje seznam profilů. Každý profil má **stav**. Stav platí, když jsou společně zváženy všechny přiřazené profily, včetně omezení hardwaru a operačního systému a požadavků. Možné stavy zahrnují:
 
@@ -142,7 +142,7 @@ Pokud zrušíte přiřazení zásady (zastavit nasazení), zařízení s Windows
 
 V závislosti na platformě zařízení může být potřeba resetovat zásady zabezpečení, pokud chcete zásadu změnit na méně bezpečnou hodnotu.
 
-Například v Windows 8.1 na ploše potáhnutím prstem zprava otevřete panel **ovládací tlačítka** . Vyberte **nastavení** > **Ovládací panely** > **uživatelské účty**. Na levé straně vyberte odkaz **Resetovat zásady zabezpečení** a zvolte **Resetovat zásady**.
+Například v Windows 8.1 na ploše potáhnutím prstem zprava otevřete panel **ovládací tlačítka** . Vyberte **Nastavení** > **uživatelské účty**na**ovládacím panelu** > . Na levé straně vyberte odkaz **Resetovat zásady zabezpečení** a zvolte **Resetovat zásady**.
 
 Jiné platformy, jako jsou Android, iOS/iPadOS a Windows Phone 8,1, může být potřeba vyřadit a znovu zaregistrovat, aby bylo možné použít méně omezující zásadu.
 
@@ -155,7 +155,7 @@ Jiné platformy, jako jsou Android, iOS/iPadOS a Windows Phone 8,1, může být 
 
 ### <a name="microsoft-intune-policy-related-errors-in-policyplatformlog"></a>Chyby související se zásadami Microsoft Intune v souboru policyplatform.log
 
-U počítačů s Windows spravovaných pomocí softwarového klienta Intune můžou chyby zásad v souboru `policyplatform.log` být z nevýchozího nastavení v nástroji Řízení uživatelských účtů (UAC) systému Windows v zařízení. Některá nevýchozí nastavení UAC můžou ovlivnit zpracování zásad a instalace klientů Microsoft Intune.
+Pro počítače s Windows spravované pomocí softwarového klienta Intune můžou chyby zásad v `policyplatform.log` souboru být z nevýchozího nastavení v nástroji Řízení uživatelských účtů (UAC) systému Windows v zařízení. Některá nevýchozí nastavení UAC můžou ovlivnit zpracování zásad a instalace klientů Microsoft Intune.
 
 #### <a name="resolve-uac-issues"></a>Řešení potíží s UAC
 

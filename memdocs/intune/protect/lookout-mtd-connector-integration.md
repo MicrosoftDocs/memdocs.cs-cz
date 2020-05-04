@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 54e81a7b9614e1633fe9061fd13d1b99810ce43c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79329219"
 ---
 # <a name="set-up-lookout-mobile-endpoint-security-integration-with-intune"></a>Nastavení integrace zabezpečení mobilních koncových bodů pomocí Intune
@@ -34,7 +34,7 @@ S prostředím, které splňuje [požadavky](lookout-mobile-threat-defense-conne
 ## <a name="collect-azure-ad-information"></a>Shromáždění informací z Azure AD  
 Pokud chcete integrovat se službou Intune, přidružíte svého tenanta pro zabezpečení vašeho mobilního prostředí koncových bodů k vašemu předplatnému služby Azure Active Directory (AD).
 
-Pokud chcete povolit integraci předplatného mobilního koncového bodu zabezpečení s Intune, poskytněte podporu vyhledávání následující informace (enterprisesupport@lookout.com):  
+Pokud chcete povolit integraci předplatného mobilního koncového bodu zabezpečení s Intune, poskytněte podporuenterprisesupport@lookout.comvyhledávání následující informace:  
 
 - **ID adresáře tenanta Azure AD**  
 
@@ -51,7 +51,7 @@ Pokud chcete povolit integraci předplatného mobilního koncového bodu zabezpe
 
 1. Přihlaste se k [Azure Portal](https://portal.azure.com) pomocí účtu globálního správce.
 
-2. Přejděte na **Azure Active Directory** **vlastnosti** > a vyhledejte **ID vašeho adresáře**. Pomocí tlačítka *Kopírovat* zkopírujte ID adresáře a uložte ho do textového souboru.
+2. Přejděte na **Azure Active Directory** > **vlastnosti** a vyhledejte **ID adresáře**. Pomocí tlačítka *Kopírovat* zkopírujte ID adresáře a uložte ho do textového souboru.
 
    ![Vlastnosti služby Azure AD](./media/lookout-mtd-connector-integration/azure-ad-properties.png)  
 
@@ -72,22 +72,22 @@ Pokud chcete povolit integraci předplatného mobilního koncového bodu zabezpe
 
 Následující kroky se dokončí v konzole pro správu vyhledávání v podniku a umožní připojení ke službě vyhledávání pro zařízení zaregistrovaná v Intune (prostřednictvím dodržování předpisů zařízením) **a** neregistrovaných zařízení (prostřednictvím zásad ochrany aplikací).
 
-Když podpora vyhledávání vytvoří účet pro hledání v podnikovém účtu, požádejte o podporu hledání na primární kontakt vaší společnosti e-mail s odkazem na přihlašovací adresu URL: https://aad.lookout.com/les?action=consent. 
+Když podpora vyhledávání vytvoří účet pro hledání v podnikovém účtu, zaznamená vám podpora hledání na primární kontakt vaší společnosti e-mail s odkazem na přihlašovací adresu URL: https://aad.lookout.com/les?action=consent. 
 
 ### <a name="initial-sign-in"></a>Počáteční přihlášení  
 Při prvním přihlášení ke konzole nástroje pro vyhledávání se zobrazí stránka souhlasu (https://aad.lookout.com/les?action=consent). Globální správce Azure AD stačí přihlásit a **přijmout**. Následné přihlášení nevyžaduje, aby uživatel měl tuto úroveň oprávnění Azure AD. 
 
- Zobrazí se stránka pro vyjádření souhlasu. Vyberte možnost **přijmout** a dokončete registraci. 
-   ![snímku obrazovky první přihlašovací stránky v konzole pro hledání](./media/lookout-mtd-connector-integration/lookout_mtp_initial_login.png)
+ Zobrazí se stránka pro vyjádření souhlasu. Kliknutím na tlačítko **přijmout** dokončete registraci. 
+   ![snímek obrazovky první přihlašovací stránky pro konzolu pro vyhledávání](./media/lookout-mtd-connector-integration/lookout_mtp_initial_login.png)
 
 Když souhlasíte a souhlasíte, budete přesměrováni do konzoly pro hledání.
 
-Po dokončení počátečního přihlášení a souhlasu se uživatelé, kteří se přihlásí z https://aad.lookout.com, přesměrují do konzoly. Pokud se souhlas ještě neudělil, všechny pokusy o přihlášení mají za následek chybnou přihlašovací chybu.
+Po dokončení počátečního přihlášení a souhlasu se uživatelé, kteří se přihlásí ze služby https://aad.lookout.com , přesměrují do konzoly. Pokud se souhlas ještě neudělil, všechny pokusy o přihlášení mají za následek chybnou přihlašovací chybu.
 
 ### <a name="configure-the-intune-connector"></a>Konfigurace konektoru Intune  
 Následující postup předpokládá, že jste dříve vytvořili skupinu uživatelů ve službě Azure AD za účelem testování vašeho nasazení vyhledávání. Osvědčeným postupem je začít s malou skupinou uživatelů, aby mohli správci Intune seznámit s integrací produktů. Po jejich znalosti můžete registraci rozšíříte do dalších skupin uživatelů.
 
-1. Přihlaste se ke konzole nástroje pro [hledání](https://aad.lookout.com) a pak na **konektory** **systému** > a pak vyberte **Přidat konektor**.  Vyberte **Intune**.
+1. Přihlaste se ke konzole nástroje pro [hledání](https://aad.lookout.com) a pak **na systémové** > **konektory**a pak vyberte **Přidat konektor**.  Vyberte **Intune**.
 
    ![Obrázek konzoly pro hledání s možností Intune na kartě konektory](./media/lookout-mtd-connector-integration/lookout_mtp_setup-intune-connector.png)
 
@@ -119,7 +119,7 @@ Až nakonfigurujete Intune, musíte nastavit připojení, které se bude [zobraz
 Níže najdete další nastavení, která můžete konfigurovat v konzole nástroje pro vyhledávání.  
 
 ### <a name="configure-enrollment-settings"></a>Konfigurace nastavení registrace
-V konzole prohledat v **systému vyberte systém** > spravovat **Nastavení**registrace > **registrace** .  
+V konzole prohledat v **systému vyberte systém** > **Spravovat** > **Nastavení registrace**registrace.  
 
 - V poli **stav odpojeno**zadejte počet dní, než se nepřipojené zařízení označí jako odpojené.  
 
@@ -137,14 +137,14 @@ Pokud chcete dostávat e-mailová upozornění na hrozby, přihlaste se ke [konz
   ![snímek obrazovky se stránkou předvolby se zobrazeným uživatelským účtem](./media/lookout-mtd-connector-integration/lookout-mtp-email-notifications.png)
 
 ## <a name="configure-threat-classifications"></a>Konfigurace klasifikací hrozeb  
-Vyhledá se mobilní koncový bod zabezpečení, klasifikuje mobilní hrozby různých typů. Klasifikace hrozeb pro vyhledávání mají k sobě přidružené výchozí úrovně rizika. Úrovně rizika lze kdykoli změnit tak, aby vyhovovaly vašim požadavkům vaší společnosti.
+Vyhledá se mobilní koncový bod zabezpečení, klasifikuje mobilní hrozby různých typů. Klasifikace hrozeb ve službě Lookout k nim má přiřazené výchozí úrovně rizika. Úrovně rizika lze kdykoli změnit tak, aby vyhovovaly vašim požadavkům vaší společnosti.
 
 Informace o klasifikacích úrovně hrozeb a o tom, jak spravovat úrovně rizik, které jsou k nim přidružené, najdete v tématu [Reference k hrozbám hledání](https://enterprise.support.lookout.com/hc/articles/360011812974).
 
 >[!IMPORTANT]
 > Úrovně rizika představují důležitý aspekt zabezpečení mobilních koncových bodů, protože integrace Intune počítá dodržování předpisů zařízením podle těchto úrovní rizik za běhu.  
 > 
-> Správce Intune nastaví v zásadách pravidlo, které určí, že zařízení nesplňuje předpisy, pokud pro něj existuje aktivní hrozba minimálně **vysoké**, **střední** nebo**nízké** úrovně. Zásady klasifikace hrozeb v rámci služby Mobile Endpoint Security přímo řídí výpočet dodržování předpisů zařízením v Intune.  
+> Správce Intune nastaví v zásadách pravidlo, které určí, že zařízení nedodržuje předpisy, pokud má aktivní hrozbu s minimální úrovní **Vysoká**, **střední**nebo **Nízká**. Zásady klasifikace hrozeb v rámci služby Mobile Endpoint Security přímo řídí výpočet dodržování předpisů zařízením v Intune.  
 
 ## <a name="monitor-enrollment"></a>Monitorování registrace
 Po dokončení instalace se zobrazí výzva k zadání služby Mobile Endpoint Security do služby Azure AD pro zařízení, která odpovídají zadaným skupinám pro registraci.  Informace o zaregistrovaných zařízeních najdete v části **zařízení** v konzole nástroje pro hledání.  

@@ -20,17 +20,17 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: ad586baf79bb818ccdfc012c04a58e55d19d8cc8
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80084490"
 ---
 # <a name="install-and-sign-in-to-the-company-portal-app"></a>Instalace a přihlášení do aplikace Portál společnosti
 
-Nainstalujte aplikaci Portál společnosti na zařízení s iOSem, abyste získali přístup k pracovním a školním aplikacím, e-mailu a síti. Pomocí aplikace zaregistrujte zařízení v Microsoft Intune a zabezpečte jeho přístup k vašim pracovním nebo školním prostředkům. Další informace najdete v tématu [Co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení do služby Intune](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios.md).
+Nainstalujte aplikaci Portál společnosti na zařízení s iOSem, abyste získali přístup k pracovním a školním aplikacím, e-mailu a síti. Pomocí aplikace zaregistrujte zařízení v Microsoft Intune a zabezpečte jeho přístup k vašim pracovním nebo školním prostředkům. Další informace najdete v tématu [co se stane, když nainstalujete aplikaci Portál společnosti a zaregistruji zařízení do služby Intune](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios.md).
 
-1. Otevřete **App Store** a vyhledejte **Portál společnosti Intune**.
+1. Otevřete **App Store** a vyhledejte **portál společnosti Intune**.
 
 2. Stáhněte si aplikaci **Portál společnosti Intune**.
 

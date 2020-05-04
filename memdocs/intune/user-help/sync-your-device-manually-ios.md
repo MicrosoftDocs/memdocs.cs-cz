@@ -20,13 +20,13 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 631f62d6dfa677bbfc805488ec2d66c7dc2e8afe
-ms.sourcegitcommit: fe7484e86ec8a109fa5f54fe9cceef8aac94bd9f
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/26/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80274944"
 ---
-# <a name="sync-your-ios-device-manually"></a>Ruční synchronizace zařízení s iOSem
+# <a name="sync-your-ios-device-manually"></a>Ruční synchronizace zařízení s iOS
 
 Někdy může stažení aplikace z Portálu společnosti trvat příliš dlouho. Pokud taková situace nastane, zkuste zařízení synchronizovat ručně. Zařízení se pokusí získat informace, které nemohlo stáhnout.
 

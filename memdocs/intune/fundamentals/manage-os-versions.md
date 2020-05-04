@@ -15,10 +15,10 @@ ms.assetid: 361ef17b-1ee0-4879-b7b1-d678b0787f5a
 search.appverid: MET150
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: c25a40d288b643c289c05322e3e2d4677afb0b60
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79332447"
 ---
 # <a name="manage-operating-system-versions-with-intune"></a>Správa verzí operačního systému pomocí Intune
@@ -66,10 +66,10 @@ Nastavení přístupu v zásadách ochrany aplikací Intune a správě mobilníc
  
 Máte dvě různé možnosti: 
 - **Upozornit** – upozornění informuje koncového uživatele o tom, jestli se má upgradovat, když otevřou aplikaci se zásadami ochrany aplikací nebo nastavením přístupu mam na zařízení s verzí operačního systému nižším než zadaná verze. Přístup k datům aplikace a organizace je povolený.
-  ![Obrázek dialogového okna Upozornění aktualizace pro Android](./media/manage-os-versions/os-version-update-warning.png) 
+  ![Obrázek dialogového okna s upozorněním na aktualizaci pro Android](./media/manage-os-versions/os-version-update-warning.png) 
 
 - **Blok bloku** informuje koncového uživatele, že se musí upgradovat, když otevřou aplikaci se zásadami ochrany aplikací nebo nastavením přístupu mam na zařízení s nižší verzí operačního systému, než je zadaná verze. Přístup k datům aplikace a organizace není povolený.
-  ![Obrázek dialogového okna blokovaný přístup k aplikaci](./media/manage-os-versions/os-version-access-blocked.png)
+  ![Obrázek dialogového okna blokovaného přístupu k aplikaci](./media/manage-os-versions/os-version-access-blocked.png)
 
 ### <a name="in-practice"></a>V praxi
 Organizace dnes nastavení zásad ochrany aplikací využívají při spuštění nebo obnovení aplikací jako způsob, jak uživatele informovat o potřebě udržovat aplikace aktuální. Příkladem konfigurace je, že koncoví uživatelé s verzí o jednu nižší než aktuální jsou upozorněni a uživatelé s verzí o dvě nižší než aktuální jsou zablokováni.
@@ -93,4 +93,4 @@ Ke správě verzí operačního systému ve vaší organizaci můžete využít 
 
 - [Nastavení omezení typů zařízení](../enrollment/enrollment-restrictions-set.md#create-a-device-type-restriction)
 - [Začínáme s dodržováním předpisů zařízeními](../protect/device-compliance-get-started.md)
-- [Vytvoření a přiřazení zásad ochrany aplikací](../apps/app-protection-policies.md)
+- [Jak vytvářet a přiřazovat zásady ochrany aplikací](../apps/app-protection-policies.md)

@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: e7dcad93f836ee564e973555bebe1a1f5d7ba3c3
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80323696"
 ---
 # <a name="get-ready-for-windows-information-protection-in-windows-10"></a>Příprava pro Windows Information Protection ve Windows 10 
@@ -36,12 +36,12 @@ Povolte správu mobilních aplikací (MAM) pro Windows 10 nastavením zprostřed
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Vyberte **všechny služby** a zvolte **M365 Azure Active Directory** pro přepnutí řídicích panelů.
 3. Vyberte **Azure Active Directory**.
-4. Ve skupině **Spravovat** zvolte **Mobilita (MDM a MAM)** .
+4. Ve skupině **Spravovat** zvolte **Mobilita (MDM a MAM)**.
 5. Klikněte na **Microsoft Intune**.
 6. Nakonfigurujte nastavení ve skupině **Obnovit výchozí adresy URL mam** v podokně **Konfigurace** .
 
    **Obor uživatele MAM**  
-   Pomocí automatické registrace MAM můžete spravovat podniková data na zařízeních zaměstnanců, která používají Windows. Automatická registrace MAM se nakonfiguruje pro scénáře typu Přineste si vlastní zařízení.<ul><li>**Žádné**<br>Vyberte, pokud se do MAM nemůžou zaregistrovat žádní uživatelé.</li><li>**Některé**<br>Vyberte skupiny Azure AD obsahující uživatele, kteří budou zaregistrováni do MAM.</li><li>**Vše**<br>Vyberte, pokud se do MAM můžou zaregistrovat všichni uživatelé.</li></ul>
+   Pomocí automatické registrace MAM můžete spravovat podniková data na zařízeních zaměstnanců, která používají Windows. Automatická registrace MAM se nakonfiguruje pro scénáře typu Přineste si vlastní zařízení.<ul><li>**Žádné**<br>Vyberte, pokud se do MAM nemůžou zaregistrovat žádní uživatelé.</li><li>**Některé**<br>Vyberte skupiny Azure AD obsahující uživatele, kteří budou zaregistrováni do MAM.</li><li>**Všem**<br>Vyberte, pokud se do MAM můžou zaregistrovat všichni uživatelé.</li></ul>
 
    **Adresa URL podmínek použití služby MAM**  
    Adresa URL podmínek použití služby MAM není pro Microsoft Intune podporovaná. Aby zásady ochrany platily, musí toto vstupní pole zůstat prázdné.

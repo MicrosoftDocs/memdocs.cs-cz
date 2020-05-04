@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 068363167d5c6abb54dde26939b102db2f120d27
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79333107"
 ---
 # <a name="upgrade-windows-10-editions-or-switch-out-of-s-mode-on-devices-using-microsoft-intune"></a>Upgradovat edice Windows 10 nebo zapínat na zařízeních v režimu S použitím Microsoft Intune
@@ -55,21 +55,21 @@ Před upgradem zařízení se ujistěte, že máte následující požadavky:
 - Pro edice Windows 10 Mobile a Windows 10 je možné použít soubor s licencí společnosti Microsoft. Soubor s licencí obsahuje licenční informace pro instalaci aktualizované edice na všechna zařízení, na která tato zásada cílíte.
 - Zařízení s Windows 10, kterým zásady přiřazujete, jsou zaregistrovaná v Microsoft Intune. Zásadu upgradu edice nemůžete použít u počítačů s klientským softwarem Intune pro počítače.
 
-## <a name="supported-upgrade-paths"></a>Podporovaná cesta upgradu
+## <a name="supported-upgrade-paths"></a>Podporované možnosti upgradu
 
 V následující tabulce jsou podporované cesty upgradu pro profil upgradu edice Windows 10.
 
-| Upgrade z | Upgrade na |
+| Upgradovat z | Upgrade na |
 |---|---|
-| Windows 10 Pro | Windows 10 – vzdělávání <br/>Windows 10 Enterprise <br/>Windows 10 Pro Education |
+| Windows 10 Pro | Windows 10 Education <br/>Windows 10 Enterprise <br/>Windows 10 Pro Education |
 | Edice Windows 10 Pro N | Edice Windows 10 Education N <br/>Edice Windows 10 Enterprise N <br/>Edice Windows 10 Pro Education N | 
-| Windows 10 Pro Education | Windows 10 – vzdělávání | 
+| Windows 10 Pro Education | Windows 10 Education | 
 | Edice Windows 10 Pro Education N | Edice Windows 10 Education N |
-| Windows 10 Cloud | Windows 10 – vzdělávání <br/>Windows 10 Enterprise <br/>Windows 10 Pro <br/>Windows 10 Pro Education | 
+| Windows 10 Cloud | Windows 10 Education <br/>Windows 10 Enterprise <br/>Windows 10 Pro <br/>Windows 10 Pro Education | 
 | Edice Windows 10 Cloud N | Edice Windows 10 Education N <br/>Edice Windows 10 Enterprise N <br/>Edice Windows 10 Pro N <br/>Edice Windows 10 Pro Education N | 
-| Windows 10 Enterprise | Windows 10 – vzdělávání | 
+| Windows 10 Enterprise | Windows 10 Education | 
 | Edice Windows 10 Enterprise N | Edice Windows 10 Education N | 
-| Windows 10 Core | Windows 10 – vzdělávání <br/>Windows 10 Enterprise <br/>Windows 10 Pro Education | 
+| Windows 10 Core | Windows 10 Education <br/>Windows 10 Enterprise <br/>Windows 10 Pro Education | 
 | Edice Windows 10 Core N | Edice Windows 10 Education N <br/>Edice Windows 10 Enterprise N <br/>Edice Windows 10 Pro Education N | 
 | Windows 10 Holographic | Windows 10 Holographic for Business |
 | Windows 10 Mobile | Windows 10 Mobile Enterprise |
@@ -97,10 +97,10 @@ V následující tabulce jsou podporované cesty upgradu pro profil upgradu edic
 ## <a name="create-the-profile"></a>Vytvoření profilu
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **zařízení** > **konfiguračních profilech** > **vytvořit profil**.
-3. Zadejte následující vlastnosti:
+2. Vyberte **Konfigurace zařízení** > **profily** > konfigurace**vytvořit profil**.
+3. Zadejte tyto vlastnosti:
 
-    - **Název**: Zadejte popisný název nového profilu. Zadejte například něco jako `Windows 10 edition upgrade profile` nebo `Windows 10 switch off S mode`.
+    - **Název**: Zadejte popisný název nového profilu. Zadejte například něco jako `Windows 10 edition upgrade profile` nebo. `Windows 10 switch off S mode`
     - **Popis**: Zadejte popis profilu. Toto nastavení není povinné, ale doporučujeme ho zadat.
     - **Platforma**: vyberte **Windows 10 a novější**.
     - **Typ profilu**: vyberte **upgrade edice**.
@@ -109,7 +109,7 @@ V následující tabulce jsou podporované cesty upgradu pro profil upgradu edic
         - [Upgrade a režim S Windows 10](edition-upgrade-windows-settings.md)
         - [Windows Holographic for Business](holographic-upgrade.md)
 
-4. Vyberte **OK** > **Vytvořit** a změny uložte.
+4. Kliknutím na **tlačítko OK** > **vytvořit** uložte změny.
 
 Profil se vytvoří a zobrazí se v seznamu. Nezapomeňte [profil přiřadit](device-profile-assign.md) a [monitorovat jeho stav](device-profile-monitor.md).
 

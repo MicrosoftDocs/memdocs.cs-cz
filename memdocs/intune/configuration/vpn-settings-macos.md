@@ -1,6 +1,6 @@
 ---
 title: Konfigurace nastavení sítě VPN pro zařízení macOS v Microsoft Intune – Azure | Microsoft Docs
-description: Přidejte nebo vytvořte konfigurační profil virtuální privátní sítě (VPN), včetně podrobností o připojení, děleného tunelového propojení, vlastního nastavení sítě VPN s identifikátorem, páry klíč-hodnota, nastavení serveru proxy pomocí konfiguračního skriptu, IP adresy nebo adresy plně kvalifikovaného názvu domény a portu TCP v Microsoft Intune na zařízeních s macOS.
+description: Přidejte nebo vytvořte konfigurační profil virtuální privátní sítě (VPN), včetně podrobností o připojení, děleného tunelového propojení, vlastního nastavení sítě VPN s identifikátorem, páry klíč-hodnota, nastavení serveru proxy pomocí konfiguračního skriptu, adresy IP nebo adresy plně kvalifikovaného názvu domény a portu TCP v Microsoft Intune na zařízeních s macOS.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -16,10 +16,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 10bea151002673b36600d4d9deaa36bb8fc3ff79
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80086519"
 ---
 # <a name="add-vpn-settings-on-macos-devices-in-microsoft-intune"></a>Přidat nastavení sítě VPN na zařízení macOS v Microsoft Intune
@@ -38,7 +38,7 @@ V závislosti na tom, jaká nastavení zvolíte, nebudou v následujícím sezna
 ## <a name="base-vpn-settings"></a>Základní nastavení sítě VPN
 
 **Název připojení**: zadejte název tohoto připojení. Tento název uživatelé vidí, když na svém zařízení procházejí seznamem dostupných připojení VPN.
-- **IP adresa nebo plně kvalifikovaný**název domény: zadejte IP adresu nebo plně kvalifikovaný název domény serveru VPN, ke kterému se zařízení připojují. Příklady: **192.168.1.1**, **vpn.contoso.com**.
+- **IP adresa nebo plně kvalifikovaný**název domény: zadejte IP adresu nebo plně kvalifikovaný název domény serveru VPN, ke kterému se zařízení připojují. Příklady: **192.168.1.1**, **VPN.contoso.com**.
 - **Metoda ověřování**: zvolte způsob, kterým se zařízení ověřují vůči serveru VPN:
   - **Certifikáty**: v části **ověřovací certifikát**vyberte profil certifikátu SCEP nebo PKCS, který jste dříve vytvořili za účelem ověřování připojení. Další informace o profilech certifikátů najdete v článku [Konfigurace certifikátů](../protect/certificates-configure.md).
   - **Uživatelské jméno a heslo**: koncoví uživatelé musí pro přihlášení k serveru VPN uvést uživatelské jméno a heslo.
@@ -58,13 +58,13 @@ V závislosti na tom, jaká nastavení zvolíte, nebudou v následujícím sezna
 Pokud jste vybrali **Vlastní VPN**, nakonfigurujte tato další nastavení:
 
 - **Identifikátor sítě VPN**: zadejte identifikátor aplikace VPN, kterou používáte. Tento identifikátor poskytuje poskytovatel sítě VPN.
-- **Zadejte páry klíč-hodnota pro vlastní atributy VPN**: přidejte nebo naimportujte **klíče** a **hodnoty**, pomocí nichž si přizpůsobíte připojení VPN. Tyto hodnoty obvykle poskytuje poskytovatel sítě VPN.
+- **Zadejte páry klíč-hodnota pro vlastní atributy sítě VPN**: přidejte nebo importujte **klíče** a **hodnoty** , které přizpůsobují připojení k síti VPN. Tyto hodnoty obvykle poskytuje poskytovatel sítě VPN.
 
 ## <a name="proxy-settings"></a>Nastavení proxy serveru
 
 - **Skript automatické konfigurace**: ke konfiguraci proxy serveru použijte konfigurační soubor. Zadejte **adresu URL proxy serveru** , který obsahuje konfigurační soubor. Zadejte například `http://proxy.contoso.com`.
 - **Adresa**: zadejte adresu proxy server (jako IP adresu).
-- **Číslo portu**: Zadejte číslo portu přidruženého k proxy serveru.
+- **Číslo portu**: zadejte číslo portu přidruženého k proxy server.
 
 ## <a name="next-steps"></a>Další kroky
 

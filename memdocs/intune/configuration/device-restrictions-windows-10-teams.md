@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 31457667612617bb573ddfb145ed26f70de33159
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79332267"
 ---
 # <a name="microsoft-intune-windows-10-team-device-restriction-settings"></a>Nastavení omezení pro zařízení s Windows 10 Team v Microsoft Intune
@@ -33,12 +33,12 @@ Tento článek ukazuje nastavení omezení zařízení v Microsoft Intune, kter�
 - **Zobrazování informací o schůzkách na úvodní obrazovce** – Pokud povolíte tuto možnost, budete moct zvolit informace, které se zobrazí na dlaždici Schůzky na úvodní obrazovce. Můžete:
   - **Zobrazit jenom organizátora a čas**
   - **Zobrazit organizátora, čas a předmět (u privátních schůzek je předmět skrytý)**
-- **Adresa URL obrázku na pozadí úvodní obrazovky** – Povolením tohoto nastavení umožníte zobrazit na **úvodní** obrazovce zařízení s Windows 10 Team vlastní pozadí ze zadané adresy URL.<br>Obrázek musí být ve formátu PNG a adresa URL musí začínat **https://** .
+- **Adresa URL obrázku na pozadí úvodní obrazovky** – Povolením tohoto nastavení umožníte zobrazit na **úvodní** obrazovce zařízení s Windows 10 Team vlastní pozadí ze zadané adresy URL.<br>Obrázek musí být ve formátu PNG a adresa URL musí začínat **https://**.
 
 ## <a name="azure-operational-insights"></a>Azure Operational Insights
 
 - **Azure Operational Insights** – Služba Azure Operational Insights, která je součástí sady Microsoft Operations Manager, shromažďuje, ukládá a analyzuje data protokolů ze zařízení s Windows 10 Team.
-Pokud se chcete připojit k Azure Operational Insights, musíte zadat **ID** a **klíč pracovního prostoru**.
+Pokud se chcete připojit k Azure Operational Insights, musíte zadat **ID pracovního prostoru** a **klíč pracovního prostoru**.
 
 ## <a name="maintenance"></a>Údržba
 

@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 12d04869834691167c2f31be853029c9a939a338
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79333091"
 ---
 # <a name="use-the-take-a-test-app-on-windows-10-devices-in-microsoft-intune"></a>Použití aplikace nabrat na zařízeních s Windows 10 v Microsoft Intune
@@ -39,8 +39,8 @@ V tomto článku jsou uvedené kroky pro vytvoření profilu konfigurace zaříz
 ## <a name="create-a-device-profile"></a>Vytvoření profilu zařízení
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **zařízení** > **konfiguračních profilech** > **vytvořit profil**.
-3. Zadejte následující vlastnosti:
+2. Vyberte **Konfigurace zařízení** > **profily** > konfigurace**vytvořit profil**.
+3. Zadejte tyto vlastnosti:
 
     - **Název**: Zadejte popisný název nového profilu.
     - **Popis**: Zadejte popis profilu. Toto nastavení není povinné, ale doporučujeme ho zadat.
@@ -51,7 +51,7 @@ V tomto článku jsou uvedené kroky pro vytvoření profilu konfigurace zaříz
 
     - [Windows 10 a novější](education-settings-windows.md)
 
-5. Vyberte **OK** > **Vytvořit** a změny uložte.
+5. Kliknutím na **tlačítko OK** > **vytvořit** uložte změny.
 
 Po zadání nastavení a vytvoření profilu se tento profil zobrazí v seznamu profilů. Dále [tento profil přiřaďte některým skupinám](device-profile-assign.md).
 

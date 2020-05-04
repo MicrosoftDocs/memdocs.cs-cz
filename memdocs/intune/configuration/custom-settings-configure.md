@@ -16,10 +16,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: feb211b1de15aa0400e9ff71b428e2db02ef4b03
-ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/02/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80551370"
 ---
 # <a name="create-a-profile-with-custom-settings-in-intune"></a>Vytvoření profilu s vlastním nastavením v Intune
@@ -38,8 +38,8 @@ V tomto článku se dozvíte, jak vytvořit vlastní profil pro správce zaříz
 ## <a name="create-the-profile"></a>Vytvoření profilu
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **zařízení** > **konfiguračních profilech** > **vytvořit profil**.
-3. Zadejte následující vlastnosti:
+2. Vyberte **Konfigurace zařízení** > **profily** > konfigurace**vytvořit profil**.
+3. Zadejte tyto vlastnosti:
 
     - **Platforma**: vyberte platformu zařízení. Možnosti:  
 
@@ -71,7 +71,7 @@ V tomto článku se dozvíte, jak vytvořit vlastní profil pro správce zaříz
     - [Windows Phone 8.1](custom-settings-windows-phone-8-1.md)
 
 8. Vyberte **Další**.
-9. V části **značky oboru** (volitelné) přiřaďte značku pro filtrování profilu na konkrétní skupiny IT, například `US-NC IT Team` nebo `JohnGlenn_ITDepartment`. Další informace o značkách oboru naleznete v tématu [použití značek RBAC a Scope pro distribuci](../fundamentals/scope-tags.md).
+9. V části **značky oboru** (volitelné) přiřaďte značku pro filtrování profilu pro konkrétní IT skupiny, například `US-NC IT Team` nebo. `JohnGlenn_ITDepartment` Další informace o značkách oboru naleznete v tématu [použití značek RBAC a Scope pro distribuci](../fundamentals/scope-tags.md).
 
     Vyberte **Další**.
 
@@ -86,7 +86,7 @@ V tomto článku se dozvíte, jak vytvořit vlastní profil pro správce zaříz
 V následujícím příkladu je zapnuté nastavení **Connectivity/AllowVPNOverCellular**. Toto nastavení umožňuje zařízení s Windows 10, které je připojené k mobilní síti, otevřít připojení k síti VPN.
 
 > [!div class="mx-imgBorder"]
-> ![příklad vlastní zásady obsahující nastavení sítě VPN v Intune a ve Správci koncového bodu](./media/custom-settings-configure/custom-policy-example.png)
+> ![Příklad vlastní zásady obsahující nastavení sítě VPN v Intune a v nástroji Endpoint Manager](./media/custom-settings-configure/custom-policy-example.png)
 
 ## <a name="next-steps"></a>Další kroky
 

@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 37eff19d940ef02cec0d2d0204644c46ef0742a2
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80326988"
 ---
 # <a name="terms-and-conditions-for-user-access"></a>Podmínky a ujednání pro přístup uživatelů
@@ -46,7 +46,7 @@ Pokud chcete zjistit, která metoda je pro vás nejvhodnější, přečtěte si 
 ## <a name="create-terms-and-conditions"></a>Vytvoření podmínek a ujednání
 Pokud chcete vytvořit podmínky a ujednání, dokončete tento postup. Zobrazovaný název a popis jsou určené pro správu, zatímco vlastnosti podmínek se zobrazují uživatelům na Portálu společnosti.
 
-1. Přihlaste se do [centra pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)a vyberte možnost **Správa tenanta** > **podmínky a ujednání**.
+1. Přihlaste se do [centra pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)**a vyberte podmínky a ujednání** **pro správu** > tenanta.
 2. Zvolte **Vytvořit**.
 3. Na stránce **základy** zadejte následující informace:
 
@@ -59,7 +59,7 @@ Pokud chcete vytvořit podmínky a ujednání, dokončete tento postup. Zobrazov
 
    - **Nadpis**: Název vašich podmínek, který uživatelé uvidí na Portálu společnosti nad **Souhrnem**.
    - **Podmínky**: Podmínky, které se zobrazí uživatelům a které musí uživatelé přijmout nebo odmítnout.
-   - **Souhrn podmínek**: Text, který vysvětluje, jaký význam má pro uživatele přijetí podmínek. Příklad: „Registrací svého zařízení souhlasíte s podmínkami použití stanovenými společností Contoso. Než budete pokračovat, pečlivě si podmínky prostudujte.“
+   - **Souhrn podmínek**: Text, který vysvětluje, jaký význam má pro uživatele přijetí podmínek. Příklad: „Registrací svého zařízení souhlasíte s podmínkami použití stanovenými společností Contoso. Než budete pokračovat, pečlivě si podmínky prostudujte.
 
 5. Kliknutím na tlačítko **Další** přejdete na stránku **značky oboru** .
 
@@ -69,7 +69,7 @@ Pokud chcete vytvořit podmínky a ujednání, dokončete tento postup. Zobrazov
     - **Všichni uživatelé**: tuto možnost vyberte, pokud chcete přiřadit podmínky a ujednání všem uživatelům.
     - **Vybrat skupiny**: tuto možnost vyberte, pokud chcete, aby se tyto podmínky a ujednání přiřadily všem uživatelům ve skupinách, které identifikujete výběrem možnosti **Vybrat skupiny, které se mají zahrnout**.
 
-8. Klikněte na tlačítko **další** > **vytvořit**.
+8. Klikněte na tlačítko **Další** > **vytvořit**.
 
 ## <a name="see-how-terms-are-displayed-to-your-users"></a>Prohlížení podmínek, jak se zobrazují uživatelům
 V následujícím příkladu je vidět **Nadpis** a **Souhrn podmínek** v konzole pro správu a na Portálu společnosti.
@@ -83,7 +83,7 @@ V následujícím příkladu jsou vidět podmínky a ujednání v konzole pro sp
 
 ## <a name="monitor-terms-and-conditions"></a>Monitorování podmínek a ujednání
 
-1. Přihlaste se do [centra pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)a vyberte možnost **Správa tenanta** > **podmínky a ujednání**.
+1. Přihlaste se do [centra pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)**a vyberte podmínky a ujednání** **pro správu** > tenanta.
 2. V seznamu podmínek a ujednání zvolte podmínky, u kterých chcete zobrazit jejich přijetí > **Generování sestav o přijetí**.
 
 ## <a name="work-with-multiple-versions-of-terms-and-conditions"></a>Práce s více verzemi podmínek a ujednání
@@ -93,10 +93,10 @@ Podmínky a ujednání můžete upravit a spravovat jejich verze. Po každé vý
 
 Aktuální číslo verze nechejte, pokud například opravujete překlepy nebo měníte formátování.
 
-1. Přihlaste se do [centra pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431), vyberte možnost **Správa tenanta** > **podmínky a ujednání** > vyberte podmínky a ujednání, které chcete upravit > **vlastnosti**.
+1. Přihlaste se do [centra pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431), vyberte**podmínky a ujednání** **správy** > tenanta > vyberte podmínky a ujednání, které chcete upravit > **vlastností**.
 
 2. V podokně **Vlastnosti** zvolte **Podmínky** a podle potřeby změňte **Nadpis**, **Souhrn podmínek** a **Podmínky**. Pokud je potřeba, aby provedené změny uživatelé znovu přijali jako nové podmínky, zvolte **Požaduje opětovné přijetí od uživatelů a zvýší číslo verze na**.
 
-3. Zvolte **OK** > **Uložit**.
+3. Klikněte na **tlačítko OK** > **Uložit**.
 
 Uživatelé musí přijmout aktualizované podmínky a ujednání jenom jednou. Uživatelé, kteří mají několik zařízení, je nemusejí přijímat na každém z nich.

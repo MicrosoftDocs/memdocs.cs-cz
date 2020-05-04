@@ -14,10 +14,10 @@ ms.technology: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 4de042fdc443a43e8a34a2eb433ecad34152887a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79328903"
 ---
 # <a name="add-iosipados-software-update-policies-in-intune"></a>Přidání zásad aktualizace softwaru pro iOS/iPadOS v Intune
@@ -37,7 +37,7 @@ Ve výchozím nastavení se zařízení zaregistrují v Intune každých 8 hodin
 ## <a name="configure-the-policy"></a>Konfigurace zásad
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **zařízení** > **aktualizace zásad pro iOS/iPadOS** > **vytvořit profil**.
+2. Vyberte **zařízení** > **Aktualizace zásady pro iOS/iPadOS** > **vytvořit profil**.
 3. Na kartě **základy** zadejte název této zásady, zadejte popis (volitelné) a pak vyberte **Další**.
 
    ![Karta základy](./media/software-updates-ios/basics-tab.png)
@@ -60,7 +60,7 @@ Ve výchozím nastavení se zařízení zaregistrují v Intune každých 8 hodin
       ![Příklad výběru, který se má aktualizovat během naplánovaného času](./media/software-updates-ios/scheduled-time.png)
 
       - **Časové pásmo**: Vyberte časové pásmo.
-      - **Časový interval**: definujte jeden nebo více bloků času, které omezují, kdy se aktualizace nainstalují. Účinek následujících možností závisí na typu plánu, který jste vybrali. Pomocí počátečního a koncového dne se podporují přenocování kamenných bloků. Vaše možnosti jsou:
+      - **Časový interval**: definujte jeden nebo více bloků času, které omezují, kdy se aktualizace nainstalují. Účinek následujících možností závisí na typu plánu, který jste vybrali. Pomocí počátečního a koncového dne se podporují přenocování kamenných bloků. Mezi možnosti patří:
 
         - **Počáteční den**: vyberte den, ve kterém se spustí okno plán.
         - **Čas spuštění**: vyberte časový den, kdy se má okno plánování začít. Pokud například vyberete hodnotu 5 AM a naplánujete typ plánu *aktualizace během naplánovaného času*, bude 5 am čas, kdy aktualizace může začít instalovat. Pokud jste zvolili typ plánu *aktualizace mimo naplánovaný čas*, bude čas od 5. až do doby, kdy aktualizace nebude možné instalovat, bude začínat.
@@ -95,13 +95,13 @@ Pokyny z týmu podpory pro Intune najdete v tématu [zpoždění viditelnosti ak
 
 Můžete upravit existující zásadu, včetně změny časových omezení:
 
-1. Vyberte **zařízení** > **aktualizace zásad pro iOS**. Vyberte zásadu, kterou chcete upravit.
+1. Vyberte **zařízení** > **zásady aktualizace pro iOS**. Vyberte zásadu, kterou chcete upravit.
 
 2. Při prohlížení **vlastností**zásad vyberte **Upravit** pro stránku zásady, kterou chcete upravit.
 
    ![Upravit zásadu](./media/software-updates-ios/edit-policy.png)
 
-3. Po zavedení změny vyberte **zkontrolovat + uložit** > **Uložit** , aby se změny uložily, a vraťte se do *vlastností*zásad.
+3. Po zavedení změny vyberte zkontrolovat a **Uložit** > **Uložit** a uložte provedené úpravy a vraťte se do *vlastností*zásad.
 
 > [!NOTE]
 > Pokud je **čas spuštění** i **čas ukončení** nastavený na 12 DOP, Intune nekontroluje při instalaci aktualizací omezení. To znamená, že všechny konfigurace, které máte k dispozici pro **dobu výběru** , se budou ignorovat a aktualizace se můžou nainstalovat kdykoli.
@@ -109,7 +109,7 @@ Můžete upravit existující zásadu, včetně změny časových omezení:
 ## <a name="monitor-device-installation-failures"></a>Monitorování chyb instalace na zařízeních
 
 <!-- 1352223 -->
-**Aktualizace softwaru** > **chyby instalace pro zařízení s iOS** zobrazují seznam zařízení s iOS/iPadOS, která cílí na zásady aktualizace, se pokusily o aktualizaci a nešlo je aktualizovat. U každého zařízení můžete zobrazit, proč se automaticky neaktualizovalo. Zařízení, která jsou v pořádku a aktuální, se v seznamu nezobrazují. „Aktuální“ zařízení obsahují nejnovější aktualizaci, kterou samotné zařízení podporuje.
+**Software updates** > **Selhání instalace aktualizací softwaru pro zařízení s iOS** zobrazuje seznam zařízení s iOS/iPadOS, na která cílí zásady aktualizace, se pokusilo o aktualizaci a nešlo je aktualizovat. U každého zařízení můžete zobrazit, proč se automaticky neaktualizovalo. Zařízení, která jsou v pořádku a aktuální, se v seznamu nezobrazují. „Aktuální“ zařízení obsahují nejnovější aktualizaci, kterou samotné zařízení podporuje.
 
 ## <a name="next-steps"></a>Další kroky
 

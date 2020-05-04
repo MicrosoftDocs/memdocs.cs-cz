@@ -21,13 +21,13 @@ ms.suite: ems
 ms.custom: intune-enduser; seodec18
 ms.collection: ''
 ms.openlocfilehash: 0bc07c2a7c48253ca7b2809287502db272d0b1bd
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80086246"
 ---
-# <a name="move-to-new-device-management-setup"></a>Přesunout na nové nastavení správy zařízení  
+# <a name="move-to-new-device-management-setup"></a>Přechod do nastavení správy nového zařízení  
 
 Pokud vaše organizace vyžaduje, abyste se přesunuli na nové nastavení správy zařízení, budete muset podle pokynů na obrazovce Přidat pracovní profil Android. Pracovní profil odděluje pracovní data v zařízení od osobních dat. Vaše organizace bude spravovat pracovní profil, který se skládá z pouze školních nebo pracovních souborů a dat. Vaše organizace nebude zobrazovat ani spravovat osobní údaje na vašem zařízení. 
 

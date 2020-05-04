@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: e3636314ee21823b76a09120f92aca45965437d3
-ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/07/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80808188"
 ---
 # <a name="what-is-device-enrollment"></a>Co je registrace zařízení?
@@ -35,43 +35,43 @@ Standardně se do Intune můžou registrovat zařízení pro všechny platformy.
 
 ## <a name="iosipados-enrollment-methods"></a>metody registrace pro iOS/iPadOS
 
-| **Metoda** | **Vyžadováno resetování** | [**Přidružení uživatele**](device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile) | **Uzamčeno** | **Podrobnosti** |
+| **Metoda** | **Vyžadováno resetování** | [**Spřažení uživatele**](device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile) | **Uzamčeno** | **Zobrazí** |
 |:---:|:---:|:---:|:---:|:---:|
 | | Zařízení se vymažou při registraci. | Jednotlivá zařízení se přidruží k uživateli.| Pokud ano, uživatelé nemůžou zrušit registraci zařízení. | |
-|**[Uživatelé s vlastním zařízením (BYOD)](#bring-your-own-device)** | Ne| Ano | Ne | [Další informace](apple-mdm-push-certificate-get.md)|
+|**[BYOD](#bring-your-own-device)** | Ne| Ano | Ne | [Další informace](apple-mdm-push-certificate-get.md)|
 |**[DEM](#device-enrollment-manager)**| Ne |Ne |Ne | [Další informace](device-enrollment-manager-enroll.md)|
-|**[ADE](#apple-automated-device-enrollment)**| Ano | Volitelné | Volitelné|[Další informace](device-enrollment-program-enroll-ios.md)|
-|**[USB-SA](#usb-sa)**| Ano | Volitelné | Ne| [Další informace](apple-configurator-enroll-ios.md)|
+|**[ADE](#apple-automated-device-enrollment)**| Ano | Nepovinné | Nepovinné|[Další informace](device-enrollment-program-enroll-ios.md)|
+|**[USB (SA)](#usb-sa)**| Ano | Nepovinné | Ne| [Další informace](apple-configurator-enroll-ios.md)|
 |**[USB (přímo)](#usb-direct)**| Ne | Ne | Ne|[Další informace](apple-configurator-enroll-ios.md)|
 
 ## <a name="macos-enrollment-methods"></a>Metody registrace zařízení s macOS
-| **Metoda** |  **Vyžadováno resetování** |  **Přidružení uživatele** | **Uzamčeno** | **Podrobnosti**|
+| **Metoda** |  **Vyžadováno resetování** |  **Spřažení uživatele** | **Uzamčeno** | **Zobrazí**|
 |:---:|:---:|:---:|:---:|:---:|
-|**[Uživatelé s vlastním zařízením (BYOD)](#bring-your-own-device)** | Ne| Ano | Ne | [Další informace](macos-enroll.md)|
+|**[BYOD](#bring-your-own-device)** | Ne| Ano | Ne | [Další informace](macos-enroll.md)|
 |**[DEM](#device-enrollment-manager)**| Ne |Ne |Ne  | [Další informace](device-enrollment-manager-enroll.md)|
-|**[ADE](#apple-automated-device-enrollment)**| Ano | Volitelné | Volitelné|[Další informace](device-enrollment-program-enroll-macos.md)|
+|**[ADE](#apple-automated-device-enrollment)**| Ano | Nepovinné | Nepovinné|[Další informace](device-enrollment-program-enroll-macos.md)|
 
 ## <a name="windows-enrollment-methods"></a>Metody registrace zařízení s Windows
 
-| **Metoda** | **Vyžadováno resetování** | **Přidružení uživatele** | **Uzamčeno** | **Podrobnosti**|
+| **Metoda** | **Vyžadováno resetování** | **Spřažení uživatele** | **Uzamčeno** | **Zobrazí**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|**[Uživatelé s vlastním zařízením (BYOD)](#bring-your-own-device)** | Ne | Ano | Ne | [Další informace](windows-enroll.md)|
+|**[BYOD](#bring-your-own-device)** | Ne | Ano | Ne | [Další informace](windows-enroll.md)|
 |**[DEM](#device-enrollment-manager)**| Ne |Ne |Ne |[Další informace](device-enrollment-manager-enroll.md)|
 |**Automatická registrace** | Ne |Ano |Ne | [Další informace](windows-enroll.md#enable-windows-10-automatic-enrollment)|
 |**Autopilot** |Ano |Ano |Ne | [Další informace](enrollment-autopilot.md)
 |**Hromadná registrace** |Ne |Ne |Ne | [Další informace](windows-bulk-enroll.md) |
 |**Spoluspráva** |Ne |Ano |Ne | [Další informace](https://docs.microsoft.com/configmgr/core/clients/manage/co-management-overview)
-|**Objekty zásad skupiny** |Ne |Ano |Ne | [Další informace](https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)
+|**GPO** |Ne |Ano |Ne | [Další informace](https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)
 
 ## <a name="android-enrollment-methods"></a>Metody registrace zařízení s Androidem
 
-| **Osobní** | **Metody registrace** | **Vyžadováno resetování** | **Přidružení uživatele** | **Uzamčeno** | **Podrobnosti**|
+| **Osobní** | **Enrollment Methods** | **Vyžadováno resetování** | **Spřažení uživatele** | **Uzamčeno** | **Zobrazí**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
 |**Správce zařízení s Androidem**|**Uživatel inicioval prostřednictvím Portál společnosti** | Ne | Ano | Ne | [Další informace](https://docs.microsoft.com/mem/intune/user-help/enroll-device-android-company-portal)|
 |**Pracovní profil Android Enterprise**|**Uživatel inicioval prostřednictvím Portál společnosti**| Ne | Ano | Ne | [Další informace](android-work-profile-enroll.md)|
 
 
-| **Firemní** | **Metody registrace** | **Vyžadováno resetování** | **Přidružení uživatele** | **Uzamčeno** | **Podrobnosti**|
+| **Firemní** | **Enrollment Methods** | **Vyžadováno resetování** | **Spřažení uživatele** | **Uzamčeno** | **Zobrazí**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
 |**Správce zařízení s Androidem**|**[DEM](#device-enrollment-manager) iniciované prostřednictvím portál společnosti**| Ne | Ne | Ne |[Další informace](device-enrollment-manager-enroll.md)|
 |**Správce zařízení s Androidem**|**(Předem deklarované IMEI nebo SN) Uživatel inicioval prostřednictvím Portál společnosti**| Ne | Ano | Ne | [Další informace](corporate-identifiers-add.md)|
@@ -97,8 +97,8 @@ Další informace o registraci pro iOS/iPadOS ADE:
 - [Volba způsobu registrace zařízení se systémem iOS/iPadOS](ios-enroll.md)
 - [Registrace zařízení s iOS/iPadOS pomocí Program registrace zařízení](device-enrollment-program-enroll-ios.md)
 
-### <a name="usb-sa"></a>USB (pomocník pro instalaci)
-Správci IT používají k ruční přípravě každého zařízení vlastněného společností pro registraci Apple Configurator (přes USB) a Pomocníka s nastavením. Správce IT vytvoří registrační profil a vyexportuje ho do Apple Configuratoru. Když uživatelé dostanou svá zařízení, zobrazí se jim výzva ke spuštění pomocníka s nastavením pro registraci zařízení. Tato metoda podporuje režim **iOS – Pod dohledem**, který umožňuje následující funkce:
+### <a name="usb-sa"></a>USB (SA)
+Správci IT používají k ruční přípravě každého zařízení vlastněného společností pro registraci Apple Configurator (přes USB) a Pomocníka s nastavením. Správce IT vytvoří registrační profil a vyexportuje ho do Apple Configuratoru. Když uživatelé dostanou svá zařízení, zobrazí se jim výzva ke spuštění pomocníka s nastavením pro registraci zařízení. Tato metoda podporuje režim **iOS pod dohledem** , který zase povoluje následující funkce:
 - Registrace uzamčeného zařízení
 - Beznabídkový režim a další pokročilé konfigurace a omezení
 

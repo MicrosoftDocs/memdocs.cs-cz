@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 9729fa1fb89f31606c35d61773c224693e7da3c1
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80323470"
 ---
 # <a name="add-app-configuration-policies-for-managed-apps-without-device-enrollment"></a>Přidání zásad konfigurace aplikací pro spravované aplikace bez registrace zařízení
@@ -32,7 +32,7 @@ ms.locfileid: "80323470"
 Zásady konfigurace aplikací můžete používat se spravovanými aplikacemi, které podporují sadu Intune App SDK, i na nezaregistrovaných zařízeních. 
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **aplikace** > **zásady konfigurace aplikací** > **Přidat** > **spravované aplikace**.
+2.  > Vyberte zásady **Apps** > **Konfigurace aplikací**aplikace**Přidat** > **spravované aplikace**.
 3. Na stránce **základy** nastavte následující podrobnosti:
     - **Name (název**): název profilu, který se zobrazí v Azure Portal.
     - **Popis**: popis profilu, který se zobrazí v Azure Portal.
@@ -43,7 +43,7 @@ Zásady konfigurace aplikací můžete používat se spravovanými aplikacemi, k
 
    Aplikace s povolenou sadou Intune App SDK podporují konfigurace v párech klíč-hodnota. Nahlédněte do dokumentace k jednotlivým aplikacím, kde zjistíte, které konfigurace klíč-hodnota se podporují. Připomínáme, že můžete používat tokeny, které se budou dynamicky plnit daty generovanými aplikací. Další informace najdete v tématu [konfigurační hodnoty pro používání tokenů](app-configuration-policies-managed-app.md#configuration-values-for-using-tokens). Informace o nastavení zásad konfigurace aplikace Outlook pro iOS/iPadOS najdete v tématu [Správa konfigurace aplikací pro iOS/iPadOS pomocí Microsoft Intune](https://technet.microsoft.com/library/mt813789(v=exchg.150).aspx).
 
-    Pokud chcete konfiguraci odstranit, zvolte tři tečky ( **…** ) a vyberte **Odstranit**.  
+    Pokud chcete konfiguraci odstranit, zvolte tři tečky (**…**) a vyberte **Odstranit**.  
 
 7. Kliknutím na tlačítko **Další** zobrazíte stránku **přiřazení** .
 8. Klikněte na **Vybrat skupiny, které chcete zahrnout**.
@@ -59,7 +59,7 @@ Zásady konfigurace aplikací můžete používat se spravovanými aplikacemi, k
 
 ## <a name="configuration-values-for-using-tokens"></a>Hodnoty konfigurace pro používání tokenů
 
-Intune může určité tokeny vygenerovat a odeslat je do spravované aplikace. Pokud třeba konfigurace aplikace umožňuje používat nastavení e-mailu, můžete pomocí tokenu přidat dynamický e-mail. Do pole **Název** zadejte název, který aplikace očekává, a potom do pole `\{\{mail\}\}`Hodnota**zadejte**.
+Intune může určité tokeny vygenerovat a odeslat je do spravované aplikace. Pokud třeba konfigurace aplikace umožňuje používat nastavení e-mailu, můžete pomocí tokenu přidat dynamický e-mail. Do pole **Název** zadejte název, který aplikace očekává, a potom do pole **Hodnota** zadejte `\{\{mail\}\}`.
 
 Intune podporuje v nastavení konfigurace následující typy tokenů. Jiné vlastní dvojice klíč/hodnota nejsou podporované.
 

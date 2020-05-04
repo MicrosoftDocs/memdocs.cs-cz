@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: c9ee00d13b32e1f52937489b86d29f075e5f580a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79329391"
 ---
 # <a name="protect-devices-with-microsoft-intune"></a>Ochrana zařízení pomocí Microsoft Intune
@@ -30,7 +30,7 @@ ms.locfileid: "79329391"
 Microsoft Intune pomáhá chránit vámi spravovaná zařízení i data, která jsou na nich uložená.
 
 ## <a name="device-configuration"></a>Konfigurace zařízení
-[Zásady konfigurace](../configuration/device-profiles.md) umožňují Intune nastavit celou řadu parametrů a funkcí a pomáhají tak s ochranou a konfigurací zařízení. Příklad:
+[Zásady konfigurace](../configuration/device-profiles.md) Intune vám pomůžou chránit a konfigurovat zařízení tím, že se řídí velké množství nastavení a funkcí. Příklad:
 
 - Na zařízení můžete omezit používání hardwarových funkcí, jako je fotoaparát nebo Bluetooth.
 - Můžete nakonfigurovat, které aplikace splňují či nesplňují vaše požadavky. Když se nainstaluje aplikace nesplňující požadavky, dostanete upozornění (a některé platformy instalaci přímo zablokují).

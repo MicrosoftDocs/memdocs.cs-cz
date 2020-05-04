@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 07aceda512163513632d124d3e17d1041069b229
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80085819"
 ---
 # <a name="use-the-troubleshooting-portal-to-help-users-at-your-company"></a>Použití portálu pro řešení potíží k poskytování pomoci uživatelům ve vaší společnosti
@@ -61,12 +61,12 @@ V podokně **Řešení potíží** můžete zkontrolovat informace o uživateli.
 
 ![Řídicí panel pro řešení potíží s očíslovanými oblastmi popsanými v následující tabulce](./media/help-desk-operators/troubleshooting-dash.png)
 
-| Plošný | Název | Popis |
+| Oblast | Název | Popis |
 | ---  | ---  | ---         |
 | 1.   | Stav účtu  | Zobrazuje stav aktuálního tenanta Intune, například **Aktivní** nebo **Neaktivní**.       |
 | 2.   | Výběr uživatele  | Jméno aktuálně vybraného uživatele. Kliknutím na **Změnit uživatele** zvolíte nového uživatele.       |
 | 3.   | Stav uživatele  | Zobrazuje stav licence Intune uživatele, počet zařízení a dodržování předpisů pro každé zařízení.       |
-| 4.   | Informace o uživateli  | Pomocí seznamu můžete vybrat podrobnosti, které chcete v podokně zkontrolovat. <br>Můžete vybrat: <ul><li>Klientské aplikace<li>Zásady slučitelnosti<li> Zásady konfigurace<li>Zásady ochrany aplikace <li>Omezení registrace</ul>      |
+| 4.   | Údaje uživatele  | Pomocí seznamu můžete vybrat podrobnosti, které chcete v podokně zkontrolovat. <br>Můžete vybrat: <ul><li>Klientské aplikace<li>Compliance zásady<li> Zásady konfigurace<li>Zásady ochrany aplikace <li>Omezení registrace</ul>      |
 | 5.   | Členství ve skupině  | Zobrazí aktuální skupiny, ve kterých je vybraný uživatel členem.       |
 
 <!-- this section needs to be updated
@@ -251,15 +251,15 @@ Tabulka Neúspěšné registrace obsahuje neúspěšné pokusy o registraci. Za�
 | Sloupec tabulky | Popis |
 |-------------|----------|
 | Stav registrace | Počáteční čas, kdy uživatel poprvé zahájil registraci |
-| OS | Operační systém zařízení |
+| Operační systém | Operační systém zařízení |
 | Verze operačního systému | Verze operačního systému zařízení |
-| Nezdařilo se | Důvod chyby |
+| Selhání | Důvod chyby |
 
 ### <a name="failure-details"></a>Podrobnosti chyby
 
 Po výběru řádku chyby se zobrazí další podrobnosti.
 
-| Část | Popis |
+| Sekce | Popis |
 |-------------|----------|
 | Podrobnosti chyby | Podrobnější vysvětlení chyby |
 | Možná náprava | Navrhovaný postup k vyřešení chyby. Pro některé chyby nemusí být náprava uvedená. |
@@ -285,7 +285,7 @@ Po výběru řádku chyby se zobrazí další podrobnosti.
 | Profil autopilotu se nenašel nebo není přiřazený. | Zařízení nemá aktivní profil autopilotu. |
 | Neočekávaná metoda registrace autopilotu | Zařízení se pokusilo o registraci pomocí nepovolené metody. |
 | Zařízení Autopilot se odebralo. | Zařízení, které se pokouší zaregistrovat, se odebralo z autopilotního projektu pro tento účet. |
-| Dosažení limitu zařízení | Tato registrace se zablokovala kvůli omezení počtu zařízení, které nakonfiguroval správce. |
+| Dosáhlo se maximálního počtu zařízení | Tato registrace se zablokovala kvůli omezení počtu zařízení, které nakonfiguroval správce. |
 | Onboarding Apple | V tuto chvíli se zablokovala registrace všech zařízení s iOS/iPadOS z důvodu chybějícího nebo neplatného certifikátu Apple MDM push Certificate v Intune. |
 | Zařízení se nezaregistrovalo předem | Zařízení se nezaregistrovalo předem jako podnikové a správce zablokoval všechny osobní registrace. |
 | Funkce se nepodporuje | Uživatel se zřejmě pokusil o registraci prostřednictvím metody, která není kompatibilní s konfigurací Intune. |

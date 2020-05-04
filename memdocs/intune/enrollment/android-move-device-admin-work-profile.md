@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 6f16c39ff0af44918099863be5d23ec9fe564493
-ms.sourcegitcommit: 954b3aae7916ad14065e6e86a577c5205103a50e
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/03/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80624913"
 ---
 # <a name="move-android-devices-from-device-administrator-to-work-profile-management"></a>Přesunutí zařízení s Androidem ze Správce zařízení do správy pracovního profilu
@@ -45,14 +45,14 @@ Když uživatelé uvidí, že z tohoto důvodu nejsou v souladu s předpisy, mů
 
 ## <a name="create-device-compliance-policy"></a>Vytvoření zásad dodržování předpisů pro zařízení
 
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **zásady dodržování předpisů** > **zásady** > **vytvořit zásadu**.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **zásady** >  > **zásad dodržování předpisů****vytvořit zásadu**.
 
-    ![Vytvořit zásadu](./media/android-move-device-admin-work-profile/create-policy.png)
+    ![Vytvoření zásad](./media/android-move-device-admin-work-profile/create-policy.png)
 
-2. Na stránce **vytvořit zásadu** nastavte nastavení **platforma** na **správce zařízení s Androidem** > **vytvořit**.
+2. Na stránce **vytvořit zásadu** nastavte nastavení **platforma** na >  **Správce zařízení s Androidem****vytvořit**.
 3. Na stránce **základy** zadejte **název** a **Popis** > **Další**.
 
-    ![Základní informace o stránce](./media/android-move-device-admin-work-profile/basics.png)
+    ![Stránka základy](./media/android-move-device-admin-work-profile/basics.png)
     
 4. Na stránce **Nastavení dodržování předpisů** v části **stav zařízení** nastavte možnost **blokovat zařízení spravovaná pomocí Správce zařízení** na **Ano** > **Další**.
 
@@ -61,7 +61,7 @@ Když uživatelé uvidí, že z tohoto důvodu nejsou v souladu s předpisy, mů
 5. Na stránce **umístění** můžete přidat umístění, pokud chcete > **Další**.
 6. U **akcí při nedodržení předpisů**můžete nastavit akci pro **odeslání e-mailu na koncového uživatele** .
 
-    ![Poslat e-mail](./media/android-move-device-admin-work-profile/send-email.png)
+    ![Odeslat e-mail](./media/android-move-device-admin-work-profile/send-email.png)
 
 
     Do e-mailu můžete do zprávy přidat níže uvedenou adresu URL pro uživatele. Adresa URL spustí Portál společnosti pro Android na stránce **aktualizovat nastavení zařízení** . Tato stránka spustí svůj tok pro přesun do správy pracovního profilu.
@@ -73,13 +73,13 @@ Když uživatelé uvidí, že z tohoto důvodu nejsou v souladu s předpisy, mů
     > - Pokud je Android Portál společnosti otevřený a na pozadí, když uživatel klepne na odkaz, může místo toho přejít na poslední stránku, kterou otevřeli.
     > - Uživatelé musí klepnout na odkaz na zařízení s Androidem. Pokud je místo toho vložíte do prohlížeče, nespustí se Portál společnosti pro Android. 
 
-    Vyberte **Další**.
+    Zvolte **Další**.
 
 7. Na stránce **značky oboru** vyberte libovolné značky oboru, které chcete zahrnout.
 8. Na stránce **přiřazení** přiřaďte zásadu ke skupině, která má zařízení zaregistrovaná pomocí správy správce zařízení > **Další**.
 9. Na stránce **Revize + vytvořit** potvrďte všechna nastavení a potom vyberte **vytvořit**.
 
-## <a name="troubleshooting"></a>Odstraňování potíží
+## <a name="troubleshooting"></a>Řešení potíží
 
 [Tok koncového uživatele, který se má přesunout do nového nastavení správy zařízení](../user-help/move-to-new-device-management-setup.md) , provede uživatele tím, že zruší registraci ze správy Správce zařízení a nastavuje se pomocí správy pracovního profilu. Uživatelé musí mít [zařízení zaregistrovaná správcem zařízení](android-enroll-device-administrator.md) s androidem portál společnosti verze 5.0.4720.0 nebo novější.
 
@@ -104,5 +104,5 @@ Uživatelům se v prohlížeči může zobrazit chybová stránka, když klepnou
 - Zařízení s Androidem používá Android 6 nebo starší. 
 
 ## <a name="next-steps"></a>Další kroky
-[Podívejte se na tok koncového uživatele](../user-help/move-to-new-device-management-setup.md)
-[Správa zařízení s pracovním profilem Androidu pomocí Intune](android-enterprise-overview.md)
+[Podívejte se na tok](../user-help/move-to-new-device-management-setup.md)
+koncového uživatele[Správa zařízení s pracovním profilem Androidu pomocí Intune](android-enterprise-overview.md) .

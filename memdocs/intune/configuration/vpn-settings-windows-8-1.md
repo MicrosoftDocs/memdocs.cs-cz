@@ -16,10 +16,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 2c80bf57b195d7e97308ba423c9e5b53f7e29c74
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80086473"
 ---
 # <a name="add-vpn-settings-on-windows-81-devices-in-microsoft-intune"></a>Přidat nastavení sítě VPN na zařízeních Windows 8.1 v Microsoft Intune
@@ -39,7 +39,7 @@ V závislosti na tom, jaká nastavení zvolíte, nebudou v následujícím sezna
 - **Servery**: přidejte minimálně jeden VPN server, ke kterému se budou zařízení připojovat.
   - **Přidat**: otevře stránku **Přidat řádek** , kde můžete zadat následující informace:
     - **Popis**: zadejte popisný název serveru, jako je **Contoso VPN server**.
-    - **IP adresa nebo plně kvalifikovaný**název domény: zadejte IP adresu nebo plně kvalifikovaný název domény serveru VPN, ke kterému se zařízení připojují. Příklady: **192.168.1.1**, **vpn.contoso.com**.
+    - **IP adresa nebo plně kvalifikovaný**název domény: zadejte IP adresu nebo plně kvalifikovaný název domény serveru VPN, ke kterému se zařízení připojují. Příklady: **192.168.1.1**, **VPN.contoso.com**.
     - **Výchozí server**: povolí tento server jako výchozí server, který budou zařízení používat k navázání připojení. Jako výchozí server musí být nastavený jenom jeden server.
   - **Importovat**: vyhledejte soubor s oddělovači se seznamem serverů ve formátu popis, IP adresa nebo plně kvalifikovaný název domény, výchozí server. Pomocí **OK** servery naimportujte do seznamu **Servery**.
   - **Export**: exportuje seznam serverů do textového souboru s oddělovači (CSV).
@@ -94,7 +94,7 @@ V závislosti na tom, jaká nastavení zvolíte, nebudou v následujícím sezna
 - **Skript automatické konfigurace**: ke konfiguraci proxy serveru použijte konfigurační soubor. Zadejte **adresu URL proxy serveru** , který obsahuje konfigurační soubor. Zadejte například `http://proxy.contoso.com`.
 - **Použít proxy server**: tuto možnost povolte, pokud chcete ručně zadat nastavení proxy server.
   - **Adresa**: zadejte adresu proxy server (jako IP adresu).
-  - **Číslo portu**: Zadejte číslo portu přidruženého k proxy serveru.
+  - **Číslo portu**: zadejte číslo portu přidruženého k proxy server.
 - **Obejít proxy server pro místní adresy**: Pokud server VPN vyžaduje pro připojení proxy server, nechcete použít proxy server pro místní adresy, které zadáte, a pak tuto možnost vyberte.
 
 ## <a name="next-steps"></a>Další kroky

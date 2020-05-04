@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 839809de89d4220fa87012cd9a28e5f6b6c35dcf
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79328247"
 ---
 # <a name="enroll-device-with-android-work-profile"></a>Registrace zařízení pomocí pracovního profilu Androidu
@@ -38,7 +38,7 @@ Přečtěte si o tom, [co se stane, když si vytvoříte pracovní profil](what-
 
 1. Otevřete aplikaci Portál společnosti a přihlaste se pomocí svého pracovního nebo školního účtu. Pokud jste nenainstalovali bezplatnou aplikaci, nainstalujte ji z [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal).  
 
-2. Na obrazovce **Nastavení firemního přístupu** klepněte na **ZAČÍT**.  
+2. Na obrazovce **nastavení firemního přístupu** klepněte na **začít**.  
 
     ![Obrazovka nastavení firemního přístupu](./media/access-setup-work-profile-1911.png)  
 
@@ -46,7 +46,7 @@ Přečtěte si o tom, [co se stane, když si vytvoříte pracovní profil](what-
 
     ![Příklad obrázku Portál společnosti, záleží na obrazovce ochrany osobních údajů a zvýrazníme tlačítko pokračovat.](./media/android-privacy-screen-1911.png)  
 
-4. Přečtěte si Google terms for the Work Profile. Pak klepněte na **přijmout &AMP; pokračovat**. Vzhled této obrazovky se bude lišit v závislosti na verzi Androidu vašeho zařízení. 
+4. Přečtěte si Google terms for the Work Profile. Pak klepněte na **přijmout & pokračovat**. Vzhled této obrazovky se bude lišit v závislosti na verzi Androidu vašeho zařízení. 
 
     ![Snímek obrazovky s podmínkami pracovního profilu Google](./media/android-wp-05-1908.png)  
 

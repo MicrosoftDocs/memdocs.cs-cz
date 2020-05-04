@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: c3b66c0fd88910dc192af10a1b5ad701304c885e
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80327079"
 ---
 # <a name="set-up-iosipados-and-ipados-user-enrollment-preview"></a>Nastavení zápisu pro iOS/iPadOS a iPadOS uživatele (Preview)
@@ -36,30 +36,30 @@ Další informace o možnostech, které jsou k dispozici pro zápis uživatele, 
 
 ## <a name="prerequisites"></a>Požadavky
 - [Autorita pro správu mobilních zařízení (MDM)](../fundamentals/mdm-authority-set.md)
-- [Certifikát Apple MDM Push Certificate](apple-mdm-push-certificate-get.md)
+- [Apple MDM push Certificate](apple-mdm-push-certificate-get.md)
 - [Spravovaná Apple ID](https://support.apple.com/guide/apple-business-manager/mdm1c9622977/web).
 
 ## <a name="create-a-user-enrollment-profile-in-intune"></a>Vytvoření profilu registrace uživatele v Intune
 
 Registrační profil definuje nastavení použité pro skupinu zařízení během registrace. 
 
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **iOS** > **registrace ios** > **typy registrace (Preview)**  > **vytvořit profil** > **iOS/iPadOS**. V tomto profilu určíte, jaké možnosti registrace budou mít koncoví uživatelé pro iOS/iPadOS a iPadOS na zařízeních, která nejsou zaregistrovaná prostřednictvím podnikové metody Apple. Pokud byste chtěli provést změny, můžete tento profil po jeho vytvoření upravit.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **iOS** > **ioS enrollment** > iOS**typy registrace (Preview)** > **vytvořit profil** > **iOS/iPadOS**. V tomto profilu určíte, jaké možnosti registrace budou mít koncoví uživatelé pro iOS/iPadOS a iPadOS na zařízeních, která nejsou zaregistrovaná prostřednictvím podnikové metody Apple. Pokud byste chtěli provést změny, můžete tento profil po jeho vytvoření upravit.
 
     ![Vytvořit registrační profil Apple](./media/ios-user-enrollment/create-profile.png)
 
-2. Na stránce **základy** zadejte **název** a **Popis** profilu pro účely správy. Uživatelé tyto podrobnosti nevidí. Pole **Název** můžete využít k vytvoření dynamické skupiny v Azure Active Directory. Název profilu použijte k definování parametru enrollmentProfileName, který slouží k přiřazení zařízení s tímto registračním profilem. Přečtěte si další informace o [dynamických skupinách Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-groups-dynamic-membership-azure-portal#rules-for-devices).
+2. Na stránce **základy** zadejte **název** a **Popis** profilu pro účely správy. Uživatelé tyto podrobnosti nevidí. Pole **Název** můžete využít k vytvoření dynamické skupiny v Azure Active Directory. Název profilu použijte k definování parametru enrollmentProfileName pro přiřazení zařízení s tímto registračním profilem. Přečtěte si další informace o [Azure Active Directory dynamických skupinách](https://docs.microsoft.com/azure/active-directory/active-directory-groups-dynamic-membership-azure-portal#rules-for-devices).
 
-    ![Základní informace o stránce](./media/ios-user-enrollment/basics-page.png)
+    ![Stránka základy](./media/ios-user-enrollment/basics-page.png)
 
 3. Vyberte **Další**.
 
 4. Na stránce **Nastavení** vyberte jednu z následujících možností pro **typ registrace**:
 
-    ![Stránka nastavení](./media/ios-user-enrollment/settings-page.png)
+    ![Stránka Nastavení](./media/ios-user-enrollment/settings-page.png)
 
     - **Registrace zařízení**: všichni uživatelé v tomto profilu budou používat registraci zařízení.
     - **Zápis uživatele**: všichni uživatelé v tomto profilu použijí zápis uživatele.
-    - **Určení podle výběru uživatele**: všichni uživatelé v této skupině budou mít možnost zvolit typ registrace, který se má použít. Když si uživatelé zaregistrují svá zařízení, uvidí možnost vybrat si **vlastní** zařízení a zařízení **(společnosti)** , které je vlastníkem tohoto zařízení. Pokud si tyto možnosti zvolí, zařízení se zaregistruje pomocí registrace zařízení. Pokud uživatel zvolí **Toto zařízení jako vlastní**, získá další možnost zabezpečení celého zařízení nebo pouze zabezpečené aplikace a data související s prací. Výběr, který typ registrace je implementován na zařízení, určí koncový uživatel, který vlastní zařízení. Tato volba uživatele se taky odráží v atributu vlastnictví zařízení v Intune. Další informace o uživatelském prostředí najdete v tématu [nastavení přístupu zařízení s iOS/iPadOS k prostředkům společnosti](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-in-intune-macos-cp).
+    - **Určení podle výběru uživatele**: všichni uživatelé v této skupině budou mít možnost zvolit typ registrace, který se má použít. Když si uživatelé zaregistrují svá zařízení, uvidí možnost vybrat si **vlastní** zařízení a zařízení **(společnosti)**, které je vlastníkem tohoto zařízení. Pokud si tyto možnosti zvolí, zařízení se zaregistruje pomocí registrace zařízení. Pokud uživatel zvolí **Toto zařízení jako vlastní**, získá další možnost zabezpečení celého zařízení nebo pouze zabezpečené aplikace a data související s prací. Výběr, který typ registrace je implementován na zařízení, určí koncový uživatel, který vlastní zařízení. Tato volba uživatele se taky odráží v atributu vlastnictví zařízení v Intune. Další informace o uživatelském prostředí najdete v tématu [nastavení přístupu zařízení s iOS/iPadOS k prostředkům společnosti](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-in-intune-macos-cp).
     
 5. Vyberte **Další**.
 
@@ -78,7 +78,7 @@ Registrační profil definuje nastavení použité pro skupinu zařízení běhe
 
 Po vytvoření více než jednoho profilu typu registrace můžete změnit pořadí priorit, ve kterém se používají.
 
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **iOS** > **Registrace iOS** > **typy registrace (Preview)** .
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **iOS** > **iOS enrollment** > iOS**typy registrace (Preview)**.
 2. Profily v seznamu můžete přetáhnout v pořadí, v jakém se mají použít.
 
 V případě konfliktů mezi profily pro každého uživatele se pro uživatele použije profil s vyšší prioritou.

@@ -16,17 +16,17 @@ ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 05dec05cdc5a16078328d736d2f622cea1b2aa00
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79329907"
 ---
 # <a name="better-mobile-threat-defense-connector-with-intune"></a>Konektor Better Mobile Threat Defense s Intune
 
 Přístup mobilních zařízení k podnikovým prostředkům můžete řídit pomocí podmíněného přístupu na základě posouzení rizik, které provádí lépe mobilní, řešení ochrany před mobilními hrozbami (MTD), které se integruje s Microsoft Intune. Riziko se posuzuje na základě telemetrie, která se shromažďuje ze zařízení, na kterých aplikace Better Mobile běží.
 
-Zásady podmíněného přístupu můžete nakonfigurovat na základě lepšího posouzení mobilního rizika prostřednictvím zásad dodržování předpisů zařízení v Intune pro zaregistrovaná zařízení, která můžete použít k povolení nebo blokování zařízení nesplňujících požadavky pro přístup k podnikovým prostředkům na základě zjištěných nejnovější. U neregistrovaných zařízení můžete zásady ochrany aplikací použít k vykonání bloku nebo selektivního vymazání na základě zjištěných hrozeb.
+Zásady podmíněného přístupu můžete nakonfigurovat na základě lepšího posouzení mobilního rizika prostřednictvím zásad dodržování předpisů zařízení v Intune pro zaregistrovaná zařízení, která můžete použít k povolení nebo blokování zařízení nesplňujících požadavky pro přístup k podnikovým prostředkům na základě zjištěných hrozeb. U neregistrovaných zařízení můžete zásady ochrany aplikací použít k vykonání bloku nebo selektivního vymazání na základě zjištěných hrozeb.
 
 ## <a name="how-do-intune-and-better-mobile-help-protect-your-company-resources"></a>Jak Intune a Better Mobile pomáhají chránit prostředky společnosti?
 
@@ -46,7 +46,7 @@ Aplikace Better Mobile je nainstalovaná a spuštěná na mobilních zařízení
 
 - **Android 4.1 nebo novější**
 
-- **iOS 8.0 a novější**
+- **iOS 8,0 a novější**
 
 ## <a name="prerequisites"></a>Požadavky
 
@@ -72,7 +72,7 @@ Když se na zařízeních zjistí přítomnost škodlivých aplikací (třeba ma
 
 - Přístup k aplikacím společnosti
 
-Blokovat při zjištění škodlivých aplikací:
+Zablokování při zjištění přítomnosti škodlivých aplikací:
 
 ![Obrázek zobrazující zjištěné škodlivé aplikace](./media/better-mobile-threat-defense-connector/better-mobile-maliciousapps-blocked.png)
 
@@ -106,7 +106,7 @@ Přístup po nápravě udělen:
 
 ### <a name="control--access-on-unenrolled-devices-based-on-threats-from-malicious-apps"></a>Řízení přístupu na nezaregistrovaných zařízeních na základě hrozeb ze škodlivých aplikací
 
-Když se lepší řešení ochrany před mobilními hrozbami považuje za zařízení, které se má zadezinfikovat: ![bloky zásad ochrany aplikací z důvodu zjištěného malwaru](./media/better-mobile-threat-defense-connector/better-mobile-app-policy-block.png)
+Když se lepší řešení ochrany před mobilními hrozbami považuje za zařízení ![, které se má zadezinfikovat: zablokují se zjištěné malware v zásadách ochrany aplikací](./media/better-mobile-threat-defense-connector/better-mobile-app-policy-block.png)
 
 Přístup se udělí při nápravě:
 

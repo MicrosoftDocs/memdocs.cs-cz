@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 607e2303cbec9ec7fc069db602d51684b71e6575
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80083832"
 ---
 # <a name="troubleshoot-and-see-potential-issues-on-android-zebra-devices-in-microsoft-intune"></a>Řešení potíží a zobrazení potenciálních problémů na zařízeních s Androidem Zebra v Microsoft Intune
@@ -54,14 +54,14 @@ Když otestujete profil přímo pomocí StageNow na počítači v systému, mís
 ### <a name="get-logs-using-android-debug-bridge"></a>Získání protokolů pomocí Android Debug Bridge
 Pokud chcete získat protokoly, až bude profil už nasazený pomocí Intune, připojte ho k počítači s [Android Debug Bridge (ADB)](https://developer.android.com/studio/command-line/adb) (otevře se web Androidu).
 
-V zařízení jsou protokoly uložené v `/sdcard/Android/data/com.microsoft.windowsintune.companyportal/files`
+V zařízení se protokoly ukládají do`/sdcard/Android/data/com.microsoft.windowsintune.companyportal/files`
 
 ### <a name="get-logs-from-email"></a>Získat protokoly z e-mailu
 Aby se protokoly dostaly po nasazení profilu s Intune, můžou koncoví uživatelé odeslat e-mailem protokoly pomocí e-mailové aplikace na zařízení. Na zařízení Zebra otevřete aplikaci Portál společnosti a [odešlete protokoly](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android). Pomocí funkce Odeslat protokoly vytvoří také ID incidentu PowerLift, na které můžete odkazovat, pokud se obrátíte na podporu Microsoftu.
 
 ## <a name="read-the-logs"></a>Přečtěte si protokoly
 
-Při prohlížení protokolů dojde k chybě vždy, když se zobrazí značka `<characteristic-error>`. Podrobnosti o chybě se zapisují do `<parm-error>` značky > vlastnosti `desc`.
+Při prohlížení protokolů dojde k chybě vždy, když se zobrazí `<characteristic-error>` značka. Podrobnosti o chybě se zapisují `<parm-error>` do vlastnosti `desc` tag >.
 
 ## <a name="error-types"></a>Typy chyb
 
@@ -113,7 +113,7 @@ V jiném příkladu máte následující vstup:
 </wap-provisioningdoc>
 ```
 
-V protokolu se zobrazí chyba, protože obsahuje značku `<characteristic-error>`. V tomto scénáři se profil pokusil nainstalovat balíček pro Android (APK), který v dané cestě neexistuje:
+Protokol zobrazuje chybu, protože obsahuje `<characteristic-error>` značku. V tomto scénáři se profil pokusil nainstalovat balíček pro Android (APK), který v dané cestě neexistuje:
 
 ```xml
 <wap-provisioningdoc>

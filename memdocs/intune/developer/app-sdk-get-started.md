@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 709824c91173edd0b322e1477c3204db34db7a9f
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80086304"
 ---
 # <a name="get-started-with-the-microsoft-intune-app-sdk"></a>Začínáme s Microsoft Intune App SDK
@@ -50,7 +50,7 @@ E-mailové adresy, které uvedete ve svých odpovědích v dotazníku, použijem
 > [!NOTE]
 > Všechny informace shromážděné prostřednictvím dotazníku a e-mailové korespondence s týmem Microsoft Intune používáme v souladu s [Prohlášením o zásadách ochrany osobních údajů společnosti Microsoft](https://www.microsoft.com/privacystatement/default.aspx).
 
-**V procesu registrace se setkáte s následujícími akcemi**:
+**Jak probíhá registrace**:
 
 1. Po odeslání dotazníku vás budeme kontaktovat na e-mailové adrese použité k registraci a potvrdíme úspěšný příjem, případně vás požádáme o další informace potřebné k dokončení registrace.
 
@@ -82,11 +82,11 @@ Doporučujeme, abyste si zaregistrovali na GitHubu účet, který je možné pou
 
 Budete potřebovat jednu z následujících příruček pro vývojáře, která vám pomůže integrovat Intune App SDK do vaší aplikace:
 
-* **[Příručka pro vývojáře sady Intune App SDK pro iOS](app-sdk-ios.md)** : Tento dokument vás detailně provede procesem povolování vaší nativní aplikace pro iOS pomocí Intune App SDK.
+* **[Příručka pro vývojáře sady Intune App SDK pro iOS](app-sdk-ios.md)**: Tento dokument vás detailně provede procesem povolování vaší nativní aplikace pro iOS pomocí Intune App SDK.
 
-* **[Příručka pro vývojáře sady Intune App SDK pro Android](app-sdk-android.md)** : Tento dokument vás detailně provede procesem povolování vaší nativní aplikace pro Android pomocí Intune App SDK.
+* **[Příručka pro vývojáře sady Intune App SDK pro Android](app-sdk-android.md)**: Tento dokument vás detailně provede procesem povolování vaší nativní aplikace pro Android pomocí Intune App SDK.
 
-* **[Příručka ke xamarinovým vazbám sady Intune App SDK](app-sdk-xamarin.md)** : Tento dokument vám pomůže vytvářet aplikace pro iOS a Android pomocí zásad ochrany aplikací Xamarin pro Intune.
+* **[Příručka ke xamarinovým vazbám sady Intune App SDK](app-sdk-xamarin.md)**: Tento dokument vám pomůže vytvářet aplikace pro iOS a Android pomocí zásad ochrany aplikací Xamarin pro Intune.
 
 
 
@@ -123,7 +123,7 @@ Celé číslo verze tvoří dvě části:
 - **Verze**  
   Číslo verze je čitelné číslo vydané verze aplikace. Koncovým uživatelům slouží k identifikaci různých vydaných verzí aplikace.
 
-- **Číslo buildu**  
+- **Číslo sestavení**  
   Číslo buildu je interní číslo, které může sloužit k rozpoznání aplikace a její programové správě. Číslo buildu se vztahuje k iteraci aplikace, která odkazuje na změny v kódu.
 
 ### <a name="version-and-build-number-in-android-and-ios"></a>Číslo verze a buildu v Androidu a iOSu
@@ -153,7 +153,7 @@ Intune|iOS|Android|Popis|
 
 ## <a name="next-steps-after-integration"></a>Další postup po integraci
 
-### <a name="test-your-app"></a>Otestování aplikace
+### <a name="test-your-app"></a>Testování aplikace
 Po dokončení nezbytných kroků pro integraci vaší aplikace pro iOS nebo Android se sadou Intune App SDK budete muset zajistit, aby všechny zásady ochrany aplikací byly povolené a funkční pro uživatele a správce IT. K otestování integrované aplikace budete potřebovat následující:
 
 * **Testovací účet Microsoft Intune**: Pokud budete chtít otestovat aplikaci spravovanou prostřednictvím Intune s funkcemi ochrany aplikací Intune, budete potřebovat účet Microsoft Intune.
@@ -183,7 +183,7 @@ Po zaregistrování aplikace v rámci tenanta Azure a jejich zobrazení v rámci
 7. Klikněte na tlačítko **Přidat oprávnění**.
 
 > [!NOTE]
-> Pokud vaše aplikace neomezuje přihlášení z důvodu chyby přístupu k tomuto prostředku: https\://intunemam.microsoftonline.com, musíte Odeslat poznámku, která msintuneappsdk@microsoft.com s ID klienta vaší aplikace. Toto je ruční proces schvalování ještě dnes.
+> Pokud vaše aplikace neomezuje přihlášení z důvodu chyby přístupu k tomuto prostředku: https\://intunemam.microsoftonline.com, musíte poslat poznámku na msintuneappsdk@microsoft.com ID klienta vaší aplikace. Toto je ruční proces schvalování ještě dnes.
 
 ### <a name="badge-your-app-optional"></a>Označte si aplikaci (volitelné)
 

@@ -18,10 +18,10 @@ ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: d315a9597df482037480aab876505f440354861b
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79328063"
 ---
 # <a name="how-to-update-the-company-portal-app"></a>Aktualizace aplikace Portál společnosti
@@ -40,7 +40,7 @@ Obchod Google Play vás upozorní, jakmile bude k dispozici nová verze aplikace
 
 Když je k dispozici nová verze, zobrazí se v seznamu nainstalovaných aplikací vedle aplikace Portál společnosti možnost **Aktualizovat**.  
 
-1. Otevřete App Store a vyhledejte řetězec **Intune**.  
+1. Otevřete App Store a vyhledejte **Intune**.  
 2. Až aplikaci najdete, klepněte na **Aktualizovat**.  
 
 ## <a name="update-the-company-portal-app-on-your-macos-device"></a>Aktualizace aplikace Portál společnosti na zařízení macOS

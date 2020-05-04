@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: d9e074def368927504c3f3c1761ec21b3ab62d22
-ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80696266"
 ---
 # <a name="encrypting-your-android-device"></a>Šifrování zařízení s Androidem
@@ -45,7 +45,7 @@ Pomocí těchto kroků Zašifrujte své zařízení. Vaše zařízení se může
 
 Název a umístění možnosti šifrování se budou lišit v závislosti na výrobci zařízení a verzi Androidu. 
 
-1. Otevřete aplikaci **Nastavení** .
+1. Otevřete aplikaci **Nastavení**.
 2. Zadejte **zabezpečení** nebo **Zašifrujte** na panelu hledání aplikace a vyhledejte související nastavení.
 3. Klepněte na možnost k zašifrování zařízení. Postupujte podle pokynů na obrazovce.  
 4. Po zobrazení výzvy nastavte heslo zamykací obrazovky, kód PIN nebo jinou metodu ověřování (pokud to vaše organizace dovoluje). 
@@ -59,9 +59,9 @@ Vaše organizace může vyžadovat, abyste v rámci svých zásad šifrování p
 
 Název a umístění možnosti zabezpečeného spuštění se budou lišit v závislosti na výrobci zařízení a verzi Androidu. V některých zařízeních se toto nastavení může volat jako **silná ochrana**. 
 
-1. Otevřete aplikaci **Nastavení** .
+1. Otevřete aplikaci **Nastavení**.
 2. Zadejte **zabezpečené spuštění** na panelu hledání aplikace.
-3. Klepněte na **zabezpečený start** > **při zapnutí zařízení vyžadovat kód PIN**.
+3. Klepněte na **zabezpečené spuštění** > **vyžadovat při zapnutí zařízení PIN kód**.
 4. Po zobrazení výzvy zadejte PIN kód zařízení.   
 5. Chcete-li znovu kontrolovat nastavení, otevřete Portál společnosti nebo Microsoft Intune aplikaci.
     * Portál společnosti uživatelé: Vyberte zařízení a klepněte na **kontrolovat nastavení zařízení**. 
@@ -73,12 +73,12 @@ Když [zařízení zašifrujete](#encrypt-device) a [povolíte zabezpečené spo
 
 Chcete-li zvolit nebo změnit typ zamykací obrazovky:
 
-1. Otevřete aplikaci **Nastavení** .
+1. Otevřete aplikaci **Nastavení**.
 2. Na panelu hledání aplikace zadejte **Zámek obrazovky** .
 3. Klepněte na **Typ zámku obrazovky**.
 4. Klepněte na typ zámku obrazovky, který chcete použít, a postupujte podle pokynů na obrazovce.  
 
-## <a name="troubleshoot"></a>Řešení problémů    
+## <a name="troubleshoot"></a>Řešení potíží    
 **Problém**: tlačítko šifrování je zakázané.   
 
 **Můžete vyzkoušet**: 
@@ -90,4 +90,4 @@ Chcete-li zvolit nebo změnit typ zamykací obrazovky:
    *  Nastavte na svém zařízení [zamykací obrazovku](#set-startup-passcode) . 
    * [Povolit zabezpečené spuštění](#enable-secure-startup).
 
-Potřebujete ještě další pomoc? Obraťte se na svou firemní podporu (kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980)) nebo napište <a href="mailto:wintunedroidfbk@microsoft.com?subject=I'm having trouble with encryption on my Android device&body=Describe the issue you're experiencing here.">týmu Microsoft Android</a>.  
+Potřebujete ještě další pomoc? Obraťte se na firemní podporu (kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980)) nebo napište <a href="mailto:wintunedroidfbk@microsoft.com?subject=I'm having trouble with encryption on my Android device&body=Describe the issue you're experiencing here.">týmu Microsoft Android</a>.  

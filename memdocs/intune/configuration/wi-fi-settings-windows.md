@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 61d84b0d1f5047df23e9571a0330768ed37eb921
-ms.sourcegitcommit: 441d0958721b6f9b6694dfffbec77c9a49929dd3
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/08/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80862818"
 ---
 # <a name="add-wi-fi-settings-for-windows-10-and-later-devices-in-intune"></a>Přidání nastavení Wi-Fi pro zařízení s Windows 10 a novější verzí v Intune
@@ -31,7 +31,7 @@ Těmito nastaveními se zabývá tento článek.
 
 ## <a name="before-you-begin"></a>Před zahájením
 
-[Vytvořte profil zařízení v Microsoft Intune](wi-fi-settings-configure.md).
+[Vytvořte profil zařízení](wi-fi-settings-configure.md).
 
 ## <a name="basic-profile"></a>Základní profil
 
@@ -55,7 +55,7 @@ Těmito nastaveními se zabývá tento článek.
   - **Pevné**: Tuto možnost použijte, pokud je síť nakonfigurovaná s pevně stanoveným limitem síťového provozu. Po dosažení limitu se přístup k síti zakáže.
   - **Proměnná**: Tuto možnost použijte, pokud se síťový provoz účtuje po bajtech (cena za bajt).
 
-- **Typ zabezpečení bezdrátové sítě**: Zadejte protokol zabezpečení, který bude ověřovat zařízení v síti. Možnosti:
+- **Typ zabezpečení bezdrátové sítě**: Zadejte protokol zabezpečení, který bude ověřovat zařízení v síti. Máte tyto možnosti:
   - **Otevřené (bez zabezpečení):** tuto možnost použijte jenom v případě, že síť není zabezpečená.
   - **WPA/WPA2-osobní**: Jedná se o možnost s vyšším zabezpečením, která se obvykle používá pro připojení Wi-Fi. Z důvodu dalšího zvýšení zabezpečení můžete zadat také heslo předsdíleného klíče nebo síťový klíč.
 
@@ -69,7 +69,7 @@ Těmito nastaveními se zabývá tento článek.
   - **Nakonfigurovat ručně:** Zadejte **IP adresu proxy serveru** a **Číslo portu**.
   - **Automaticky nakonfigurovat**: Zadejte adresu URL, která odkazuje na skript PAC (automatická konfigurace proxy). Zadejte například `http://proxy.contoso.com/proxy.pac`.
 
-Vyberte **OK** > **Vytvořit** a změny uložte. Profil se vytvoří a zobrazí se v seznamu profilů.
+Kliknutím na **tlačítko OK** > **vytvořit** uložte změny. Profil se vytvoří a zobrazí se v seznamu profilů.
 
 ## <a name="enterprise-profile"></a>Profil Enterprise
 
@@ -92,7 +92,7 @@ Vyberte **OK** > **Vytvořit** a změny uložte. Profil se vytvoří a zobrazí 
   - **Pevné**: Tuto možnost použijte, pokud je síť nakonfigurovaná s pevně stanoveným limitem síťového provozu. Po dosažení limitu se přístup k síti zakáže.
   - **Proměnná**: Tuto možnost použijte, pokud se síťový provoz účtuje po bajtech.
 
-- **Jednotné přihlašování:** Umožňuje vám nakonfigurovat jednotné přihlašování (SSO), u kterého se přihlašovací údaje k počítači i síti Wi-Fi sdílejí. Možnosti:
+- **Jednotné přihlašování:** Umožňuje vám nakonfigurovat jednotné přihlašování (SSO), u kterého se přihlašovací údaje k počítači i síti Wi-Fi sdílejí. Máte tyto možnosti:
   - **Zakázat:** Jednotné přihlašování se zakáže. Uživatel se musí v síti ověřit zvlášť.
   - **Povolit dříve, než se uživatel přihlásí k zařízení:** Použití jednotného přihlašování k síti těsně předtím, než se uživatel přihlásí
   - **Povolit, až se uživatel přihlásí k zařízení:** Použití jednotného přihlašování k síti hned poté, co se uživatel přihlásil
@@ -126,32 +126,32 @@ Vyberte **OK** > **Vytvořit** a změny uložte. Profil se vytvoří a zobrazí 
 
       **Kořenový certifikát pro ověřování serveru**: Použijte s protokoly typu **EAP-TLS**, **EAP-TTLS** a **PEAP**. Zvolte profil důvěryhodného kořenového certifikátu pro ověření připojení.  
 
-      **Ochrana identity (vnější identita)** : Použijte s typem **PEAP**. Zadejte text odeslaný v odpovědi na požadavek identity EAP. Tento text může být libovolná hodnota. Při ověřování se nejdřív pošle tato anonymní identita a po ní následuje skutečná identifikace poslaná přes zabezpečené tunelové propojení.  
+      **Ochrana identity (vnější identita)**: Použijte s typem **PEAP**. Zadejte text odeslaný v odpovědi na požadavek identity EAP. Tento text může být libovolná hodnota. Při ověřování se nejdřív pošle tato anonymní identita a po ní následuje skutečná identifikace poslaná přes zabezpečené tunelové propojení.  
 
-    - **Ověřování klientů**
+    - **Ověřování klienta**
 
-      **Klientský certifikát pro ověření klienta (certifikát identity)** : Použijte s typem **EAP-TLS**. Vyberte profil certifikátu použitý k ověření připojení.
+      **Klientský certifikát pro ověření klienta (certifikát identity)**: Použijte s typem **EAP-TLS**. Vyberte profil certifikátu použitý k ověření připojení.
 
       **Metoda ověřování**: Použijte s typem **EAP-TTLS**. Vyberte metodu ověřování připojení:  
 
       - **Certifikáty**: Vyberte klientský certifikát, který je certifikátem identity předloženým serveru.
-      - **Uživatelské jméno a heslo**: Zadejte metodu ověřování **Metoda bez protokolu EAP (vnitřní identita)** . Možnosti:
+      - **Uživatelské jméno a heslo**: Zadejte metodu ověřování **Metoda bez protokolu EAP (vnitřní identita)**. Možnosti:
 
         - **Nezašifrované heslo (PAP)**
         - **Protokol CHAP (Challenge Handshake)**
         - **Protokol Microsoft CHAP (MS-CHAP)**
         - **Protokol Microsoft CHAP verze 2 (MS-CHAP v2)**
 
-      **Ochrana identity (vnější identita)** : Použijte s typem **EAP-TTLS**. Zadejte text odeslaný v odpovědi na požadavek identity EAP. Tento text může být libovolná hodnota. Při ověřování se nejdřív pošle tato anonymní identita a po ní následuje skutečná identifikace poslaná přes zabezpečené tunelové propojení.
+      **Ochrana identity (vnější identita)**: Použijte s typem **EAP-TTLS**. Zadejte text odeslaný v odpovědi na požadavek identity EAP. Tento text může být libovolná hodnota. Při ověřování se nejdřív pošle tato anonymní identita a po ní následuje skutečná identifikace poslaná přes zabezpečené tunelové propojení.
 
 - **Nastavení firemního proxy:** Zvolte nastavení proxy v organizaci. Možnosti:
   - **Žádné:** nenakonfiguruje se žádné nastavení proxy.
   - **Nakonfigurovat ručně:** Zadejte **IP adresu proxy serveru** a **Číslo portu**.
-  - **Automaticky nakonfigurovat:** Zadejte adresu URL, která odkazuje na skript PAC (automatická konfigurace proxy). Zadejte například `http://proxy.contoso.com/proxy.pac`.
+  - **Automaticky konfigurovat**: zadejte adresu URL odkazující na skript automatické konfigurace proxy serveru (PAC). Zadejte například `http://proxy.contoso.com/proxy.pac`.
 
 - **Vynutit, aby profil Wi-Fi dodržoval standard FIPS**: Pokud chcete používat vyhodnocování proti standardu FIPS 140-2, vyberte možnost **Ano**. Tento standard se vyžaduje od všech agentur federální vlády USA, které chrání citlivé, ale ne tajné digitálně ukládané informace pomocí bezpečnostních systémů založených na kryptografii. Pokud se nemá standard FIPS dodržovat, zvolte **Ne**.
 
-Vyberte **OK** > **Vytvořit** a změny uložte. Profil se vytvoří a zobrazí se v seznamu profilů.
+Kliknutím na **tlačítko OK** > **vytvořit** uložte změny. Profil se vytvoří a zobrazí se v seznamu profilů.
 
 ## <a name="use-an-imported-settings-file"></a>Importování souboru nastavení
 
@@ -161,7 +161,7 @@ Pro libovolné nastavení, které není v Intune k dispozici, můžete exportova
 
 Profil se vytvoří, ale nic nedělá. Dále [tento profil přiřaďte](device-profile-assign.md).
 
-## <a name="more-resources"></a>Další zdroje
+## <a name="more-resources"></a>Další zdroje informací
 
 - Podívejte se na nastavení, která jsou dostupná pro [Windows 8.1](wi-fi-settings-import-windows-8-1.md).
-- [Přehled nastavení Wi-Fi](wi-fi-settings-configure.md), včetně dalších platforem
+- [Přehled nastavení sítě Wi-Fi](wi-fi-settings-configure.md), včetně dalších platforem.

@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: bcc524a69d0fb41da84a2e882b81a205fe7192cc
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79332783"
 ---
 # <a name="troubleshoot-android-enterprise-device-problems-in-microsoft-intune"></a>Řešení potíží se zařízeními s Androidem Enterprise v Microsoft Intune
@@ -59,7 +59,7 @@ Ano. Další informace najdete v tématu [spravované Google Play webové odkazy
 
   Pokud chcete shromažďovat protokoly Portál společnosti, postupujte takto:
 
-  1. V aplikaci Portál společnosti s označením klepněte na **nabídku** > **pomoc** > **e-mailová podpora**a potom klepněte na **Odeslat e-mail & Odeslat protokoly**. 
+  1. V aplikaci Portál společnosti s označením klepněte na **nabídku** > **pomocná** > **e-mailová podpora**a potom klepněte na **Odeslat e-mail & Odeslat protokoly**. 
   2. Až se vám zobrazí výzva k **odeslání žádosti o podporu**, vyberte jednu z e-mailových aplikací.
   3. Správci IT se vygeneruje e-mail s ID incidentu, které je možné poskytnout podpoře produktů Microsoftu.
 

@@ -16,10 +16,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 8b43b9671767a2d67bb98db6150799d266fe9fa6
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80086554"
 ---
 # <a name="android-device-settings-to-configure-vpn-in-intune"></a>Nastavení zařízení s Androidem pro konfiguraci sítě VPN v Intune
@@ -49,7 +49,7 @@ Další informace o profilech sítě VPN v Intune najdete v tématu [Profily sí
   - **Check Point Capsule VPN**
   - **Cisco AnyConnect**
   - **SonicWall Mobile Connect**
-  - **Přístup F5**
+  - **F5 Access**
   - **Pulse Secure**
   - **Citrix SSO**
 

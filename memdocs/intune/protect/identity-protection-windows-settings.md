@@ -17,10 +17,10 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: shpate
 ms.openlocfilehash: b4581ba6bdc8b5be41d5cf567c631ffaad40d418
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79329287"
 ---
 # <a name="windows-10-device-settings-to-enable-windows-hello-for-business-in-intune"></a>Nastavení zařízení s Windows 10 pro povolení Windows Hello pro firmy v Intune
@@ -52,7 +52,7 @@ Další informace o profilech Windows Hello pro firmy v Intune najdete v tématu
 
     **Výchozí**: *Nenakonfigurováno*
 
-  - **Maximální délka kódu PIN**  
+  - **Maximální délka PIN kódu**  
   Zadejte maximální délku PIN kódu pro zařízení, aby se usnadnilo zabezpečení přihlášení. Výchozí hodnoty zařízení s Windows jsou šest znaků, ale toto nastavení může vyhovět minimálně čtyř až 127 znaků.  
 
     **Výchozí**: *Nenakonfigurováno*  
@@ -72,7 +72,7 @@ Další informace o profilech Windows Hello pro firmy v Intune najdete v tématu
     - **Požadováno** – uživatelé musí v PIN kódu použít aspoň jedno velké písmeno. Běžnou praxí třeba je vyžadovat použití nejméně jednoho velkého písmena, jednoho malého písmena a jednoho speciálního znaku.
 
   - **Speciální znaky v PIN kódu**  
-    Silnější kód PIN můžete vynutíte tak, že koncoví uživatelé budou obsahovat speciální znaky. Mezi speciální znaky patří: `! " # $ % &amp; ' ( ) &#42; + , - . / : ; &lt; = &gt; ? @ [ \ ] ^ _ &#96; { &#124; } ~`  
+    Silnější kód PIN můžete vynutíte tak, že koncoví uživatelé budou obsahovat speciální znaky. Mezi speciální znaky patří:`! " # $ % &amp; ' ( ) &#42; + , - . / : ; &lt; = &gt; ? @ [ \ ] ^ _ &#96; { &#124; } ~`  
 
     Možnosti:
     - **Nepovoleno** – zablokuje uživatelům používání speciálních znaků v PIN kódu. K tomuto chování dochází také v případě, že nastavení není nakonfigurováno.
@@ -99,7 +99,7 @@ Další informace o profilech Windows Hello pro firmy v Intune najdete v tématu
 
     **Výchozí**: Nenakonfigurováno
 
-  - **Použít čip TPM (Trusted Platform Module)**    
+  - **Použít čip TPM (Trusted Platform Module)**   
     Čip TPM poskytuje další úroveň zabezpečení dat.  
 
     - **Pro Windows** Hello pro firmy můžou zřídit jenom zařízení s PŘÍSTUPNÝM čipem TPM.
@@ -108,7 +108,7 @@ Další informace o profilech Windows Hello pro firmy v Intune najdete v tématu
     **Výchozí**: Nenakonfigurováno
 
   - **Povolení biometrického ověřování**  
-     Jako alternativu ke kódu PIN pro Windows Hello pro firmy umožňuje biometrické ověřování, například rozpoznávání obličeje nebo otisků prstů. Uživatelé ale stejně musí nakonfigurovat pracovní kód PIN pro případ, že se biometrické ověření nepovede. Vybírejte z těchto možností:
+     Jako alternativu ke kódu PIN pro Windows Hello pro firmy umožňuje biometrické ověřování, například rozpoznávání obličeje nebo otisků prstů. Uživatelé ale stejně musí nakonfigurovat pracovní PIN kód pro případ, že se biometrické ověření nepovede. Vybírejte z těchto možností:
 
     - **Povolit** – Windows Hello pro firmy umožňuje biometrické ověřování.
     - **Nenakonfigurováno** – Windows Hello pro firmy neumožňuje biometrické ověřování (pro všechny typy účtů).

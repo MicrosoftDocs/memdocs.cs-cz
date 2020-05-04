@@ -16,10 +16,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 716925f077b7433eab06a6ea2f557c7653d0b03d
-ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/02/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80551425"
 ---
 # <a name="configure-device-restriction-settings-in-microsoft-intune"></a>Konfigurace nastavení omezení zařízení v Microsoft Intune
@@ -42,8 +42,8 @@ V tomto článku se dozvíte, jak vytvořit profil omezení pro zařízení. Mů
 ## <a name="create-the-profile"></a>Vytvoření profilu
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **zařízení** > **konfiguračních profilech** > **vytvořit profil**.
-3. Zadejte následující vlastnosti:
+2. Vyberte **Konfigurace zařízení** > **profily** > konfigurace**vytvořit profil**.
+3. Zadejte tyto vlastnosti:
 
     - **Platforma**: vyberte platformu zařízení. Možnosti:  
 
@@ -52,12 +52,12 @@ V tomto článku se dozvíte, jak vytvořit profil omezení pro zařízení. Mů
         - **iOS/iPadOS**
         - **macOS**
         - **Windows 10 a novější**
-        - **Windows 8.1 a novější**
+        - **Windows 8.1 a vyšší**
         - **Windows Phone 8.1**
 
     - **Profil**: vyberte **omezení zařízení**.
 
-        Pokud chcete vytvořit profil omezení zařízení pro zařízení s Windows 10 Team, jako je například Surface Hub, zvolte **omezení zařízení (Windows 10 Team)** .
+        Pokud chcete vytvořit profil omezení zařízení pro zařízení s Windows 10 Team, jako je například Surface Hub, zvolte **omezení zařízení (Windows 10 Team)**.
 
 4. Vyberte **Vytvořit**.
 5. V části **základy**zadejte následující vlastnosti:
@@ -74,13 +74,13 @@ V tomto článku se dozvíte, jak vytvořit profil omezení pro zařízení. Mů
     - [iOS/iPadOS](device-restrictions-ios.md)
     - [macOS](device-restrictions-macos.md)
     - [Windows Phone 8.1](device-restrictions-windows-phone-8-1.md)
-    - [Windows 8.1](device-restrictions-windows-8-1.md)
+    - [Windows 8.1](device-restrictions-windows-8-1.md)
     - [Windows 10 a novější](device-restrictions-windows-10.md)
     - [Windows 10 Team](device-restrictions-windows-10-teams.md)
     - [Windows Holographic for Business](device-restrictions-windows-holographic.md)
 
 8. Vyberte **Další**.
-9. V části **značky oboru** (volitelné) přiřaďte značku pro filtrování profilu na konkrétní skupiny IT, například `US-NC IT Team` nebo `JohnGlenn_ITDepartment`. Další informace o značkách oboru naleznete v tématu [použití značek RBAC a Scope pro distribuci](../fundamentals/scope-tags.md).
+9. V části **značky oboru** (volitelné) přiřaďte značku pro filtrování profilu pro konkrétní IT skupiny, například `US-NC IT Team` nebo. `JohnGlenn_ITDepartment` Další informace o značkách oboru naleznete v tématu [použití značek RBAC a Scope pro distribuci](../fundamentals/scope-tags.md).
 
     Vyberte **Další**.
 

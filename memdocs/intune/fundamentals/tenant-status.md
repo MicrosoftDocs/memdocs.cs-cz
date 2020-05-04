@@ -17,10 +17,10 @@ ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: d309b295281c88dff717c5f609905b3e541e3fed
-ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80696441"
 ---
 # <a name="use-the-intune-tenant-status-page"></a>Použití stránky stavu tenanta Intune
@@ -50,7 +50,7 @@ Pokud je k dispozici více než jeden konektor libovolného typu, je stav souhrn
 - **Není v pořádku**
   - Platnost certifikátu nebo přihlašovacích údajů vypršela.
   - Poslední synchronizace proběhla před třemi nebo více dny.
-- **Upozornění**
+- **Upozornění:**
   - Platnost certifikátu nebo přihlašovacích údajů vyprší do sedmi dnů.
   - Poslední synchronizace proběhla před víc než jedním dnem.
 - **V pořádku**

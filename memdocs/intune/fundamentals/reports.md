@@ -16,10 +16,10 @@ ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: d4e377e0cd9ad15d1d3a0ac9fb5c088dc1366d48
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80326751"
 ---
 # <a name="intune-reports"></a>Sestavy Intune
@@ -40,7 +40,7 @@ Rozhraní pro vytváření sestav poskytuje konzistentní a komplexnější pros
 - **Výkon** – můžete rychle generovat a zobrazovat sestavy vytvořené z velkých klientů.
 - **Export** – můžete rychle exportovat data vytváření sestav vygenerovaná z velkých tenantů.
 
-### <a name="who-can-access-the-data"></a>Kdo má k těmto datům přístup?
+### <a name="who-can-access-the-data"></a>Kdo má přístup k datům?
 
 V protokolech mohou uživatelé s následujícími oprávněními zkontrolovat:
 
@@ -54,12 +54,12 @@ Zařízení nedodržující předpisy sestavují data Surface, která obvykle po
 Sestavu **zařízení nesplňující požadavky** můžete zobrazit pomocí následujících kroků:
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **zařízení** > **monitorování** > **zařízení, která nedodržují předpisy**.
+2. Vyberte **zařízení** > **monitorovat** > **zařízení, která nedodržují předpisy**.
 
     ![Sestava zařízení nedodržujících předpisy](./media/intune-reports/intune-reports-02.png)
 
     > [!TIP]
-    > Pokud jste v Azure Portal dříve použili Intune, zjistili jste výše uvedené podrobnosti v Azure Portal tak, že se přihlásíte k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) a vyberete **dodržování předpisů zařízením** > **zařízení nedodržující předpisy**.
+    > Pokud jste v Azure Portal dříve použili Intune, zjistili jste výše uvedené podrobnosti v Azure Portal tak, že se přihlásíte k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) a **vyberete** > zařízení nedodržující**předpisy**.
 
 ## <a name="device-compliance-report-organizational"></a>Sestava dodržování předpisů pro zařízení (organizace)
 
@@ -98,7 +98,7 @@ Sestava trendu dodržování předpisů zařízením pro trendy dodržování p�
 Sestavu **trendů** můžete zobrazit pomocí následujících kroků:
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **sestavy** > **trendy** pro zobrazení dodržování předpisů zařízením během 60 dne trendu.
+2. Vyberte **sestavy** > **trendy** , abyste zobrazili dodržování předpisů zařízením za 60 dní trendu.
 
     ![Sestava trendů Intune](./media/intune-reports/intune-reports-03.png)
 
@@ -146,7 +146,7 @@ Další informace o nastaveních diagnostiky najdete [v tématu Vytvoření nast
 ### <a name="log-analytics"></a>Log Analytics
 Log Analytics je primárním nástrojem v Azure Portal pro zápis dotazů protokolu a interaktivní analýzu výsledků dotazů. I v případě, že se dotaz protokolu používá jinde v Azure Monitor, obvykle nejprve zapíšete a otestujete dotaz pomocí Log Analytics. Podrobnosti o používání Log Analytics a vytváření dotazů protokolu najdete v tématu [Přehled dotazů protokolu v Azure monitor](https://docs.microsoft.com/azure/azure-monitor/log-query/log-query-overview). 
 
-### <a name="workbooks"></a>Sešity
+### <a name="workbooks"></a>Workbooks
 Sešity kombinují text, analytické dotazy, metriky Azure a parametry do propracovaných interaktivních sestav. Sešity mohou upravovat všichni ostatní členové týmu, kteří mají přístup ke stejným prostředkům Azure. Další informace o sešitech najdete v tématu [Azure monitor sešity](https://docs.microsoft.com/azure/azure-monitor/app/usage-workbooks). Můžete také pracovat se šablonami sešitu a přispívat do nich. Další informace najdete v tématu [Azure monitor šablon sešitu](https://go.microsoft.com/fwlink/?linkid=867045).
 
 ## <a name="next-steps"></a>Další kroky 
@@ -154,8 +154,8 @@ Sešity kombinují text, analytické dotazy, metriky Azure a parametry do propra
 Přečtěte si další informace o těchto technologiích:
 - [Blogový Microsoft Intune – rozhraní pro vytváření sestav](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/New-Reporting-Framework-Coming-to-Intune/ba-p/1009553)
 - [Azure Monitor](https://docs.microsoft.com/azure/active-directory/reports-monitoring/concept-activity-logs-azure-monitor)
-- [Co je Log Analytics?](https://docs.microsoft.com/azure/azure-monitor/log-query/log-query-overview#what-is-log-analytics)
-- [Dotazy protokolu](https://docs.microsoft.com/azure/azure-monitor/log-query/log-query-overview)
+- [Co je služba Log Analytics?](https://docs.microsoft.com/azure/azure-monitor/log-query/log-query-overview#what-is-log-analytics)
+- [Dotazy na protokoly](https://docs.microsoft.com/azure/azure-monitor/log-query/log-query-overview)
 - [Začínáme s Log Analytics v Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/log-query/get-started-portal)
 - [Azure Monitor sešity](https://docs.microsoft.com/azure/azure-monitor/app/usage-workbooks)
 - [Nástroje pro správu událostí a informací o zabezpečení (SIEM)](https://docs.microsoft.com/microsoft-365/security/office-365-security/siem-server-integration)

@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: df5c33e1e8e589f430fe8265ee4762b4755f3618
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80086449"
 ---
 # <a name="use-a-custom-device-profile-to-create-a-wifi-profile-with-a-pre-shared-key-in-intune"></a>Vytvoření profilu Wi-Fi s předsdíleným klíčem pomocí vlastního profilu zařízení v Intune
@@ -49,8 +49,8 @@ Tato funkce podporuje:
 ## <a name="create-a-custom-profile"></a>Vytvoření vlastního profilu
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **zařízení** > **konfiguračních profilech** > **vytvořit profil**.
-3. Zadejte následující vlastnosti:
+2. Vyberte **Konfigurace zařízení** > **profily** > konfigurace**vytvořit profil**.
+3. Zadejte tyto vlastnosti:
 
     - **Název**: zadejte popisný název zásady. Své zásady pojmenujte, abyste je později mohli snadno identifikovat. Dobrým názvem zásad je například **vlastní nastavení profilu Wi-Fi OMA-URI pro zařízení s Androidem pro správu**.
     - **Popis**: Zadejte popis profilu. Toto nastavení není povinné, ale doporučujeme ho zadat.
@@ -63,19 +63,19 @@ Tato funkce podporuje:
     2. **Popis**: zadejte popis nastavení OMA-URI. Toto nastavení není povinné, ale doporučujeme ho zadat.
     3. **OMA-URI**: zadejte jednu z následujících možností:
 
-        - **Pro Android**: `./Vendor/MSFT/WiFi/Profile/SSID/Settings`
-        - **Pro Windows**: `./Vendor/MSFT/WiFi/Profile/SSID/WlanXml`
+        - **Pro Android**:`./Vendor/MSFT/WiFi/Profile/SSID/Settings`
+        - **Pro Windows**:`./Vendor/MSFT/WiFi/Profile/SSID/WlanXml`
 
         > [!NOTE]
         > Nezapomeňte použít tečku na začátku.
 
-        SSID je identifikátor SSID, pro který vytváříte zásady. Pokud se například síť Wi-Fi jmenuje `Hotspot-1`, zadejte `./Vendor/MSFT/WiFi/Profile/Hotspot-1/Settings`.
+        SSID je identifikátor SSID, pro který vytváříte zásady. Pokud je například síť Wi-Fi pojmenována `Hotspot-1`, zadejte `./Vendor/MSFT/WiFi/Profile/Hotspot-1/Settings`.
 
     4. **Datový typ**: vyberte **řetězec**.
 
     5. **Hodnota**: vložte kód XML. Podívejte se na [Příklady](#android-or-windows-wi-fi-profile-example) v tomto článku. Aktualizujte jednotlivé hodnoty tak, aby odpovídaly nastavení vaší sítě. Nějaké pokyny najdete v sekci komentáře ke kódu.
 
-5. Až to budete mít, vyberte **OK** > **Vytvořit** a změny uložte.
+5. Až budete hotovi, vyberte **OK** > **a uložte** změny.
 
 Váš profil se zobrazí v seznamu profily. V dalším kroku [přiřaďte tento profil](device-profile-assign.md) ke skupinám uživatelů. Tuto zásadu je možné přiřadit pouze skupinám uživatelů.
 
@@ -89,9 +89,9 @@ Následující příklad zahrnuje kód XML pro profil Wi-Fi pro Android nebo Win
 
 - `<protected>false</protected>` je třeba nastavit na hodnotu **nepravda**. Nastavení hodnoty **pravda** by mohlo způsobit, že zařízení by očekávalo šifrované heslo, následně by se ho pokoušelo dešifrovat a to by vedlo k selhání připojení.
 
-- `<hex>53534944</hex>`má být nastaveno na šestnáctkovou hodnotu `<name><SSID of wifi profile></name>`. Zařízení s Windows 10 můžou vracet falešnou chybu `x87D1FDE8 Remediation failed`, ale zařízení pořád obsahuje profil.
+- `<hex>53534944</hex>`má být nastaveno na šestnáctkovou hodnotu `<name><SSID of wifi profile></name>`. Zařízení s Windows 10 můžou vracet falešnou `x87D1FDE8 Remediation failed` chybu, ale zařízení pořád obsahuje profil.
 
-- XML má speciální znaky, například `&` (ampersand). Použití speciálních znaků může zabránit tomu, aby XML fungovalo podle očekávání. 
+- XML má speciální znaky, jako například `&` (ampersand). Použití speciálních znaků může zabránit tomu, aby XML fungovalo podle očekávání. 
 
 ### <a name="example"></a>Příklad
 
@@ -227,21 +227,21 @@ Následující příklad obsahuje kód XML pro profil Wi-Fi založený na protok
 
 Můžete také vytvořit soubor XML z existujícího připojení Wi-Fi. V počítači se systémem Windows použijte následující postup:
 
-1. Vytvořte místní složku pro exportované profily W-Fi, například c:\WiFi.
-2. Otevřete příkazový řádek jako správce (klikněte pravým tlačítkem na `cmd` > **Spustit jako správce**).
+1. Vytvořte místní složku pro exportované profily W-Fi, například c:\WiFi..
+2. Otevřete příkazový řádek jako správce (klikněte pravým tlačítkem na `cmd`  >  **Spustit jako správce**).
 3. Spusťte `netsh wlan show profiles`. Zobrazí se názvy všech profilů.
 4. Spusťte `netsh wlan export profile name="YourProfileName" folder=c:\Wifi`. Tento příkaz vytvoří soubor s názvem `Wi-Fi-YourProfileName.xml` v c:\Wifi.
 
-    - Pokud exportujete profil Wi-Fi, který obsahuje předsdílený klíč, přidejte `key=clear` k příkazu:
+    - Pokud exportujete profil Wi-Fi, který obsahuje předsdílený klíč, přidejte `key=clear` do příkazu:
   
         `netsh wlan export profile name="YourProfileName" key=clear folder=c:\Wifi`
 
-        `key=clear` exportuje klíč do prostého textu, který je nutný k úspěšnému použití profilu.
+        `key=clear`Exportuje klíč do prostého textu, který je požadován pro úspěšné použití profilu.
 
 Až budete mít soubor XML, zkopírujte a vložte syntax XML do nastavení OMA-URI > **datový typ**. [Vytvoření vlastního profilu](#create-a-custom-profile) (v tomto článku) obsahuje seznam kroků.
 
 > [!TIP]
-> `\ProgramData\Microsoft\Wlansvc\Profiles\Interfaces\{guid}` také zahrnuje všechny profily ve formátu XML.
+> `\ProgramData\Microsoft\Wlansvc\Profiles\Interfaces\{guid}`zahrnuje také všechny profily ve formátu XML.
 
 ## <a name="best-practices"></a>Osvědčené postupy
 

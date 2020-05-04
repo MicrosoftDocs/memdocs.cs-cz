@@ -17,15 +17,15 @@ ms.reviewer: maholdaa
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: ab544d285e49fd3914a8e9867c35ad9ed97f5fe8
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80087035"
 ---
 # <a name="android-enterprise-device-settings-to-configure-email-authentication-and-synchronization-in-intune"></a>Nastavení zařízení s Androidem Enterprise pro konfiguraci e-mailu, ověřování a synchronizace v Intune
 
-Tento článek obsahuje seznam a popis různých nastavení e-mailů, která můžete řídit na zařízeních s Androidem Enterprise. Jako součást řešení správy mobilních zařízení pomocí těchto nastavení můžete nakonfigurovat e-mailový server, použijte protokol SSL k šifrování e-mailů a další.
+Tento článek obsahuje seznam a popis různých nastavení e-mailů, která můžete řídit na zařízeních s Androidem Enterprise. V rámci řešení pro správu mobilních zařízení (MDM) použijte Tato nastavení ke konfiguraci e-mailového serveru, k šifrování e-mailů použijte protokol SSL a další informace.
 
 Jako správce Intune můžete v pracovním profilu vytvořit a přiřadit nastavení e-mailu pro zařízení s Androidem Enterprise.
 
@@ -41,12 +41,12 @@ Vytvořte [profil konfigurace zařízení](email-settings-configure.md) (vyberte
 - **E-mailový server**: Zadejte název hostitele vašeho Exchange serveru. Zadejte například `outlook.office365.com`.
 - **Atribut uživatelského jména z AAD**: Toto jméno je atribut, který Intune získá z Azure Active Directory (Azure AD). Intune dynamicky vygeneruje uživatelské jméno, které tento profil používá. Možnosti:
 
-  - **Hlavní název uživatele**: Získá název, například `user1` nebo `user1@contoso.com`.
-  - **Uživatelské jméno**: získá pouze název, například `user1`.
+  - **Hlavní název uživatele**: Získá název, například `user1` nebo. `user1@contoso.com`
+  - **Uživatelské jméno**: Získá jenom název, třeba `user1`.
 
 - **Atribut e-mailové adresy z AAD**: Tento název je atribut e-mailu, který Intune získá z Azure AD. Intune dynamicky generuje e-mailovou adresu, kterou používá tento profil. Možnosti:
-  - **Hlavní název uživatele**: jako e-mailová adresa používá úplný hlavní název, jako je například `user1@contoso.com` nebo `user1`.
-  - **Primární adresa SMTP**: pomocí primární adresy SMTP, jako je `user1@contoso.com`, se přihlaste k Exchangi.
+  - **Hlavní název uživatele**: používá jako e-mailovou adresu úplný `user1@contoso.com` hlavní `user1`název, jako je například nebo.
+  - **Primární adresa SMTP**: pomocí primární adresy SMTP, například `user1@contoso.com`, se přihlaste k Exchangi.
 
 - **Metoda ověřování**: jako metodu ověřování používanou e-mailovým profilem vyberte **uživatelské jméno a heslo** nebo **certifikáty** .
   - Pokud vyberete **Certifikát**, vyberte profil certifikátu SCEP nebo PKCS klienta, který jste dříve vytvořili za účelem ověřování připojení Exchange.

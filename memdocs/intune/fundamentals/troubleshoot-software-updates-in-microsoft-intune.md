@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 851fea24f101d313dba3426e5d65c60c5f31fdb5
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79330399"
 ---
 # <a name="troubleshoot-software-updates-in-microsoft-intune"></a>Řešení potíží s aktualizacemi softwaru ve službě Microsoft Intune
@@ -37,11 +37,11 @@ U Microsoft Intune klientů může docházet k jednomu nebo několika z následu
 - Zařízení se setkávají s vysokým využitím procesoru.
 - Aplikace se při instalaci přes Intune instalují pomalu.
 - Microsoft Intune Center se zobrazuje následující chyba: `An error occurred while updating your computer. Error found: Code 0x800705b4`.
-- Konzola pro správu Intune > skupiny > všechna zařízení > Stav zobrazuje: `One or more agents that are installed on this computer have errors. The information for this computer may not be accurate or up-to-date.`
+- Konzola pro správu Intune > skupiny > všechna zařízení > stav zobrazuje:`One or more agents that are installed on this computer have errors. The information for this computer may not be accurate or up-to-date.`
 
 K tomuto problému může dojít, pokud se nahrazené aktualizace (aktualizace nahrazují jinou aktualizací), které se po delší dobu neodmítly. Během některých procesů, jako je instalace aplikace, systém Windows zkontroluje všechny nahrazené aktualizace tak, aby byly aktualizace a jejich nástupce správně namapované. Pokud je seznam nahrazených aktualizací příliš velký, tato kontrola úlohy může způsobit vysoké využití procesoru z důvodu zatížení a požadovaného času. Tento problém se týká především zařízení se systémem Windows 7 kvůli velkému počtu nahrazených aktualizací, které jsou k dispozici pro systém Windows 7. Novější operační systémy nemusí mít tolik dostupných aktualizací, které se nahrazují, a nemusí být k tomuto problému náchylné.
 
-**Rozhodnutí**
+**Rozlišení**
 
 1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Vyberte **aktualizace softwaru**.

@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 62fe18a086630a768976220b8de7469f53f25cc4
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80086948"
 ---
 # <a name="set-up-a-telecom-expense-management-service-in-intune"></a>Nastavení služby TEM (Telecom Expense Management) v Intune
@@ -34,7 +34,7 @@ Integrace s Datalert může nastavovat, monitorovat a vymáhat limity využití 
 Následující obrázek ukazuje, jak se Intune integruje s Datalert:
 
 > [!div class="mx-imgBorder"]
-> ![diagram](./media/telecom-expenses-monitor/tem-datalert-intune-solution-diagram.png) integrace Intune a Datalert
+> ![Schéma integrace Intune a Datalertu](./media/telecom-expenses-monitor/tem-datalert-intune-solution-diagram.png)
 
 Pokud chcete používat službu Datalert s Intune, je k dispozici několik nastavení konfigurace v Datalert a Intune. V tomto článku se dozvíte, jak:
 
@@ -73,7 +73,7 @@ Intune se integruje s následujícím poskytovatelem pro správu telekomunikačn
 
 3. Vyberte **odblokovat**. **Odblokování** umožňuje změnit nebo aktualizovat nastavení na stránce.
 
-4. V **Intune/Datalert připojení** > **serveru MDM**vyberte **Microsoft Intune**.
+4. V **Intune/** > **MDM serveru**připojení Datalert vyberte **Microsoft Intune**.
 
 5. V případě **domény Azure AD**zadejte ID tenanta Azure. Vyberte **připojení**.
 
@@ -86,7 +86,7 @@ Intune se integruje s následujícím poskytovatelem pro správu telekomunikačn
     Na následujícím obrázku jsou po úspěšném připojení zobrazeny zelené značky zaškrtnutí:
 
       > [!div class="mx-imgBorder"]
-      > Stránka ![Datalert ukazující úspěšné připojení](./media/telecom-expenses-monitor/tem-datalert-connection.png)
+      > ![Stránka Datalert zobrazující úspěšné připojení](./media/telecom-expenses-monitor/tem-datalert-connection.png)
 
 7. V části **Datalert App/ADAL souhlasu**nastavte přepínač na **zapnuto**. Na ověřovací stránce Microsoft vyberte **Přijmout**.
 
@@ -95,7 +95,7 @@ Intune se integruje s následujícím poskytovatelem pro správu telekomunikačn
     Na následujícím obrázku jsou po úspěšném připojení zobrazeny zelené značky zaškrtnutí:
 
       > [!div class="mx-imgBorder"]
-      > Stránka ![Datalert ukazující úspěšné připojení](./media/telecom-expenses-monitor/tem-datalert-adal-consent.png)
+      > ![Stránka Datalert zobrazující úspěšné připojení](./media/telecom-expenses-monitor/tem-datalert-adal-consent.png)
 
 8. V části **Správa profilů MDM (volitelné)** nastavte přepínač na **zapnuto**. Toto nastavení umožňuje Datalert načíst dostupné profily v Intune, které vám pomůžou nastavit zásady. 
 
@@ -106,7 +106,7 @@ Intune se integruje s následujícím poskytovatelem pro správu telekomunikačn
     Na následujícím obrázku jsou po úspěšném připojení zobrazeny zelené značky zaškrtnutí:
 
     > [!div class="mx-imgBorder"]
-    > Stránka ![Datalert ukazující úspěšné připojení](./media/telecom-expenses-monitor/tem-datalert-mdm-profiles.png)
+    > ![Stránka Datalert zobrazující úspěšné připojení](./media/telecom-expenses-monitor/tem-datalert-mdm-profiles.png)
 
 ### <a name="step-2-confirm-telecom-expense-management-is-active-in-intune"></a>Krok 2: potvrďte, že je Správa telekomunikačních výdajů aktivní v Intune
 
@@ -114,10 +114,10 @@ Po dokončení kroku 1 se připojení automaticky povolí. V Intune se zobrazuje
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Vyberte možnost **Správa tenanta** > **konektory a tokeny** > **správu telekomunikačních výdajů**. Vyhledejte stav **aktivního** připojení:
+2. Vyberte možnost konektory **správy** > tenanta**a tokeny** > **pro správu telekomunikačních výdajů**. Vyhledejte stav **aktivního** připojení:
 
     > [!div class="mx-imgBorder"]
-    > Stránka Intune, na které se zobrazuje stav připojení datalert aktivní](./media/telecom-expenses-monitor/tem-azure-portal-enable-service.png) ![
+    > ![Stránka Intune zobrazující aktivní stav připojení Datalertu](./media/telecom-expenses-monitor/tem-azure-portal-enable-service.png)
 
 ### <a name="step-3-deploy-the-datalert-app-to-devices"></a>Krok 3: nasazení aplikace Datalert do zařízení
 
@@ -137,7 +137,7 @@ Informace o vytváření kategorií zařízení v Intune najdete v tématu [mapo
 Tyto kategorie se uživatelům zobrazí během registrace ([registrace zařízení s Androidem](../enrollment/android-enroll.md)). V závislosti na tom, jakou kategorii uživatelé zvolí, se zaregistrované zařízení přesune do příslušné skupiny zařízení.
 
 > [!div class="mx-imgBorder"]
-> ![snímku obrazovky](./media/telecom-expenses-monitor/tem-dynamic-membership-rules.png) podokna přidat zásadu
+> ![Snímek obrazovky s podoknem Přidat zásadu](./media/telecom-expenses-monitor/tem-dynamic-membership-rules.png)
 
 #### <a name="add-the-datalert-app-to-intune"></a>Přidání aplikace Datalert do Intune
 
@@ -152,12 +152,12 @@ V následujících krocích se přidá aplikace Datalert. Jako příklad se pou�
 4. Zvolte aplikaci **Datalert** > **Vyberte**:
 
     > [!div class="mx-imgBorder"]
-    > ![přidat aplikaci datalert z App Storu do klientských aplikací Intune](./media/telecom-expenses-monitor/tem-select-app-from-apple-app-store.png)
+    > ![Přidání aplikace datalert z App Storu do klientských aplikací Intune](./media/telecom-expenses-monitor/tem-select-app-from-apple-app-store.png)
 
 5. Zadejte jakékoli další vlastnosti, například informace o aplikaci a značky oboru:
 
     > [!div class="mx-imgBorder"]
-    > ![zadejte vlastnosti aplikace, včetně názvu, popisu, výběru operačního systému a dalších nastavení aplikace v Intune](./media/telecom-expenses-monitor/tem-steps-to-create-the-app.png)
+    > ![Zadejte vlastnosti aplikace, včetně názvu, popisu, výběru operačního systému a dalších nastavení aplikace v Intune.](./media/telecom-expenses-monitor/tem-steps-to-create-the-app.png)
 
 6. Vyberte **OK** > **Přidat** a uložte provedené změny. V seznamu se zobrazí aplikace Datalert.
 
@@ -170,7 +170,7 @@ V následujících krocích se přidá aplikace Datalert. Jako příklad se pou�
     V tomto postupu se rozhodnete nastavit, aby byla instalace aplikace povinná nebo volitelná pro skupinu. Následující příklad znázorňuje instalaci podle potřeby. V případě potřeby si uživatelé musí po registraci svého zařízení nainstalovat aplikaci Datalert.
 
     > [!div class="mx-imgBorder"]
-    > ![snímku obrazovky](./media/telecom-expenses-monitor/tem-assign-datalert-app-to-device-group.png) podokna přidat zásadu
+    > ![Snímek obrazovky s podoknem Přidat zásadu](./media/telecom-expenses-monitor/tem-assign-datalert-app-to-device-group.png)
 
 ### <a name="step-4-add-organization-phone-lines-to-the-datalert-console"></a>Krok 4: Přidání telefonních linek organizace do konzoly Datalert
 
@@ -179,7 +179,7 @@ Služby Intune a Datalert jsou teď nakonfigurované tak, aby vzájemně komunik
 Chcete-li nastavit tyto položky, přejít na [Datalert instalační program pro Microsoft Intune](http://www.datalert.fr/microsoft-intune/intune-setup) (otevře web Datalert). Na kartě **Nastavení** postupujte podle pokynů v Průvodci instalací nástroje.
 
 > [!div class="mx-imgBorder"]
-> ![snímku obrazovky](./media/telecom-expenses-monitor/tem-add-phone-lines-to-datalert-console.png) podokna přidat zásadu
+> ![Snímek obrazovky s podoknem Přidat zásadu](./media/telecom-expenses-monitor/tem-add-phone-lines-to-datalert-console.png)
 
 Služba Datalert je teď aktivní. Spustí monitorování využití dat a zakáže mobilní a roamingová data na zařízeních, která překračují nakonfigurovaná omezení využití.
 
@@ -192,9 +192,9 @@ Pro činnost koncového uživatele mohou následující články pomáhat:
 
 ## <a name="turn-off-the-datalert-service"></a>Vypnutí služby Datalert
 
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **Správa tenanta** > **konektory a tokeny** > **správu telekomunikačních výdajů**.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte konektory **správy** > tenanta**a tokeny** > pro**správu telekomunikačních výdajů**.
 2. Nastavte **Povolit správu telekomunikačních výdajů a zablokujte mobilní nebo roamingová data na zařízeních, která přesahují kvóty využití, které nakonfigurujete** pro **zakázání**.
-3. **Uložte** provedené změny.
+3. **Uložte** změny.
 
 > [!IMPORTANT]
 > Pokud službu Datalert zakážete v Intune:

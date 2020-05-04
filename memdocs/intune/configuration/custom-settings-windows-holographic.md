@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 43199009740f259c6a6484e455b0205da76492ba
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80084047"
 ---
 # <a name="use-custom-settings-for-windows-holographic-for-business-devices-in-intune"></a>Použití vlastního nastavení u zařízení s Windows Holographic for Business v Intune
@@ -38,7 +38,7 @@ V tomto článku si ukážeme, jak vytvořit vlastní profil pro zařízení s W
 ## <a name="create-the-profile"></a>Vytvoření profilu
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **zařízení** > **konfiguračních profilech** > **vytvořit profil**.
+2. Vyberte **Konfigurace zařízení** > **profily** > konfigurace**vytvořit profil**.
 3. Zadejte následující nastavení:
 
     - **Název**: zadejte popisný název profilu. Své profily pojmenujte, abyste je později mohli snadno identifikovat. Dobrým názvem profilu je například **vlastní profil HoloLens**.
@@ -53,11 +53,11 @@ V tomto článku si ukážeme, jak vytvořit vlastní profil pro zařízení s W
     - **OMA-URI** (rozlišuje velká a malá písmena): Zadejte nastavení OMA-URI, které chcete použít.
     - **Datový typ**: vyberte datový typ, který budete používat pro toto nastavení OMA-URI. Možnosti:
 
-        - String
+        - Řetězec
         - Řetězec (soubor XML)
         - Datum a čas
-        - Celé číslo
-        - Číslo s plovoucí desetinnou čárkou
+        - Integer
+        - Plovoucí desetinná čárka
         - Logická hodnota
         - Base64 (soubor)
 
@@ -77,28 +77,28 @@ Následující nastavení jsou užitečná pro zařízení s Windows Holographic
 > [!div class="mx-tableFixed"]
 > |OMA-URI|Datový typ|
 > |---|---|
-> |./Vendor/MSFT/Policy/Config/Authentication/AllowFastReconnect|Celé číslo<br/>0 – Nepovoluje se.<br/>1 – Povoluje se (výchozí).|
+> |./Vendor/MSFT/Policy/Config/Authentication/AllowFastReconnect|Integer<br/>0 – Nepovoluje se.<br/>1 – Povoluje se (výchozí).|
 
 ### <a name="allowupdateservice"></a>[AllowUpdateService](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-allowupdateservice)
 
 > [!div class="mx-tableFixed"]
 > |OMA-URI|Datový typ|
 > |---|---|
-> |./Vendor/MSFT/Policy/Config/Update/AllowUpdateService|Celé číslo<br/>0 – Služba aktualizací se nepovoluje. <br/>1 – Služba aktualizací se povoluje (výchozí).|
+> |./Vendor/MSFT/Policy/Config/Update/AllowUpdateService|Integer<br/>0 – Služba aktualizací se nepovoluje. <br/>1 – Služba aktualizací se povoluje (výchozí).|
 
 ### <a name="allowvpn"></a>[AllowVPN](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-settings#settings-allowvpn)
 
 > [!div class="mx-tableFixed"]
 > |OMA-URI|Datový typ|
 > |---|---|
-> |./Vendor/MSFT/Policy/Config/Settings/AllowVPN|Celé číslo<br/>0 – Nepovoluje se.<br/>1 – Povoluje se (výchozí).|
+> |./Vendor/MSFT/Policy/Config/Settings/AllowVPN|Integer<br/>0 – Nepovoluje se.<br/>1 – Povoluje se (výchozí).|
 
 ### <a name="requireupdateapproval"></a>[RequireUpdateApproval](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-requireupdateapproval)
 
 > [!div class="mx-tableFixed"]
 > |OMA-URI|Datový typ|
 > |---|---|
-> |./Vendor/MSFT/Policy/Config/Update/RequireUpdateApproval|Toto nastavení je k dispozici v RS5 (Build 17763) a starší. Počínaje 19H1 (Build 18362) použijte [web Windows Update pro firmy](../protect/windows-update-for-business-configure.md).<br/><br/>Celé číslo<br/>0 – Není nakonfigurováno. Zařízení nainstaluje všechny použitelné aktualizace.<br/>1 – Zařízení nainstaluje jenom aktualizace, které jsou použitelné a jsou také v seznamu schválených aktualizací. Pokud chce oddělení IT řídit nasazení aktualizací na zařízení, třeba když je před nasazením nutné testování, nastavte tuto zásadu na 1.|
+> |./Vendor/MSFT/Policy/Config/Update/RequireUpdateApproval|Toto nastavení je k dispozici v RS5 (Build 17763) a starší. Počínaje 19H1 (Build 18362) použijte [web Windows Update pro firmy](../protect/windows-update-for-business-configure.md).<br/><br/>Integer<br/>0 – Není nakonfigurováno. Zařízení nainstaluje všechny použitelné aktualizace.<br/>1 – Zařízení nainstaluje jenom aktualizace, které jsou použitelné a jsou také v seznamu schválených aktualizací. Pokud chce oddělení IT řídit nasazení aktualizací na zařízení, třeba když je před nasazením nutné testování, nastavte tuto zásadu na 1.|
 
 ### <a name="scheduledinstalltime"></a>[ScheduledInstallTime](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-scheduledinstalltime)
 
@@ -112,28 +112,28 @@ Následující nastavení jsou užitečná pro zařízení s Windows Holographic
 > [!div class="mx-tableFixed"]
 > |OMA-URI|Datový typ|
 > |---|---|
-> |./Vendor/MSFT/Policy/Config/Update/UpdateServiceUrl|Toto nastavení je k dispozici v RS5 (Build 17763) a starší. Počínaje 19H1 (Build 18362) použijte [web Windows Update pro firmy](../protect/windows-update-for-business-configure.md).<br/><br/>String<br/>URL – Zařízení vyhledá aktualizace na serveru WSUS na zadané adrese URL.<br/>Nenakonfigurováno – Zařízení vyhledá aktualizace ve službě Microsoft Update.|
+> |./Vendor/MSFT/Policy/Config/Update/UpdateServiceUrl|Toto nastavení je k dispozici v RS5 (Build 17763) a starší. Počínaje 19H1 (Build 18362) použijte [web Windows Update pro firmy](../protect/windows-update-for-business-configure.md).<br/><br/>Řetězec<br/>URL – Zařízení vyhledá aktualizace na serveru WSUS na zadané adrese URL.<br/>Nenakonfigurováno – Zařízení vyhledá aktualizace ve službě Microsoft Update.|
 
 ### <a name="approvedupdates"></a>[ApprovedUpdates](https://docs.microsoft.com/windows/client-management/mdm/update-csp)
 
 > [!div class="mx-tableFixed"]
 > |OMA-URI|Datový typ|
 > |---|---|
-> |./Vendor/MSFT/Update/ApprovedUpdates/*GUID*<br/><br/>**Důležité**<br/>Musíte si přečíst smlouvy EULA k aktualizacím a přijmout je jménem vašich koncových uživatelů. Pokud tak neučiníte, dojde k porušení právních nebo smluvních závazků.|Uzel pro schválení aktualizací a přijetí smlouvy EULA jménem koncového uživatele<br/><br/>Další informace naleznete v tématu [Update CSP](https://docs.microsoft.com/windows/client-management/mdm/update-csp).|
+> |./Vendor/MSFT/Update/ApprovedUpdates/*GUID*<br/><br/>**Významná**<br/>Musíte si přečíst smlouvy EULA k aktualizacím a přijmout je jménem vašich koncových uživatelů. Pokud tak neučiníte, dojde k porušení právních nebo smluvních závazků.|Uzel pro schválení aktualizací a přijetí smlouvy EULA jménem koncového uživatele<br/><br/>Další informace naleznete v tématu [Update CSP](https://docs.microsoft.com/windows/client-management/mdm/update-csp).|
 
 ### <a name="applicationlaunchrestrictions"></a>[ApplicationLaunchRestrictions](https://docs.microsoft.com/windows/client-management/mdm/applocker-csp)
 
 > [!div class="mx-tableFixed"]
 > |OMA-URI|Datový typ|
 > |----|---|
-> |./Vendor/MSFT/AppLocker/ApplicationLaunchRestrictions/*Grouping*/*ApplicationType*/Policy<br/><br/>**Důležité**<br/>V článku o AppLocker CSP se používají příklady XML, které obsahují pomocné řídicí znaky. Pokud chcete nakonfigurovat nastavení s vlastními profily Intune, je nutné použít prostý XML.|String<br/>Další informace najdete v článku o [AppLocker CSP](https://docs.microsoft.com/windows/client-management/mdm/applocker-csp).|
+> |/Vendor/MSFT/AppLocker/ApplicationLaunchRestrictions/*seskupení*/*typu ApplicationType*/Policy<br/><br/>**Významná**<br/>V článku o AppLocker CSP se používají příklady XML, které obsahují pomocné řídicí znaky. Pokud chcete nakonfigurovat nastavení s vlastními profily Intune, je nutné použít prostý XML.|Řetězec<br/>Další informace najdete v článku o [AppLocker CSP](https://docs.microsoft.com/windows/client-management/mdm/applocker-csp).|
 
 ### <a name="deletionpolicy"></a>[DeletionPolicy](https://docs.microsoft.com/windows/client-management/mdm/accountmanagement-csp)
 
 > [!div class="mx-tableFixed"]
 > |OMA-URI|Datový typ|
 > |----|---|
-> |./Vendor/MSFT/AccountManagement/UserProfileManagement/DeletionPolicy|Celé číslo<br/>0 – dojde k okamžitému odstranění, když se zařízení vrátí do stavu, ve kterém nemá žádné aktuálně aktivní uživatele.<br/>1 – dojde k odstranění při dosažení prahové hodnoty kapacity úložiště (výchozí nastavení).<br/>2 – dojde k odstranění při dosažení prahové hodnoty kapacity úložiště a prahové hodnoty neaktivity profilu.|
+> |./Vendor/MSFT/AccountManagement/UserProfileManagement/DeletionPolicy|Integer<br/>0 – dojde k okamžitému odstranění, když se zařízení vrátí do stavu, ve kterém nemá žádné aktuálně aktivní uživatele.<br/>1 – dojde k odstranění při dosažení prahové hodnoty kapacity úložiště (výchozí nastavení).<br/>2 – dojde k odstranění při dosažení prahové hodnoty kapacity úložiště a prahové hodnoty neaktivity profilu.|
 
 ### <a name="enableprofilemanager"></a>[EnableProfileManager](https://docs.microsoft.com/windows/client-management/mdm/accountmanagement-csp)
 
@@ -147,7 +147,7 @@ Následující nastavení jsou užitečná pro zařízení s Windows Holographic
 > [!div class="mx-tableFixed"]
 > |OMA-URI|Datový typ|
 > |----|---|
-> |./Vendor/MSFT/AccountManagement/UserProfileManagement/ProfileInactivityThreshold|Celé číslo<br/>Výchozí hodnota je 30.|
+> |./Vendor/MSFT/AccountManagement/UserProfileManagement/ProfileInactivityThreshold|Integer<br/>Výchozí hodnota je 30.|
 
 
 ### <a name="storagecapacitystartdeletion"></a>[StorageCapacityStartDeletion](https://docs.microsoft.com/windows/client-management/mdm/accountmanagement-csp)
@@ -155,14 +155,14 @@ Následující nastavení jsou užitečná pro zařízení s Windows Holographic
 > [!div class="mx-tableFixed"]
 > |OMA-URI|Datový typ|
 > |----|---|
-> |./Vendor/MSFT/AccountManagement/UserProfileManagement/StorageCapacityStartDeletion|Celé číslo<br/>Výchozí hodnota je 25.|
+> |./Vendor/MSFT/AccountManagement/UserProfileManagement/StorageCapacityStartDeletion|Integer<br/>Výchozí hodnota je 25.|
 
 ### <a name="storagecapacitystopdeletion"></a>[StorageCapacityStopDeletion](https://docs.microsoft.com/windows/client-management/mdm/accountmanagement-csp)
 
 > [!div class="mx-tableFixed"]
 > |OMA-URI|Datový typ|
 > |----|---|
-> |./Vendor/MSFT/AccountManagement/UserProfileManagement/StorageCapacityStopDeletion|Celé číslo<br/>Výchozí hodnota je 50.|
+> |./Vendor/MSFT/AccountManagement/UserProfileManagement/StorageCapacityStopDeletion|Integer<br/>Výchozí hodnota je 50.|
 
 ## <a name="find-the-policies-you-can-configure"></a>Vyhledání zásad, které můžete nakonfigurovat
 

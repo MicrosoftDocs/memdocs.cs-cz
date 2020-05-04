@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: b23fbed8f12c4df90ff2136434e21f3eba369c9e
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80322574"
 ---
 # <a name="disable-activation-lock-on-supervised-iosipados-devices-with-intune"></a>Zakázání Zámek aktivace na zařízeních s iOS/iPadOS pod dohledem v Intune
@@ -84,7 +84,7 @@ Akce **zakázat zámek aktivace** vzdálené zařízení v Intune odebere zámek
     >Před vymazáním zařízení si kód zkopírujte. Když nastavení zařízení obnovíte před zkopírováním kódu, kód se z Azure odebere.
 
 7. Přejděte do okna zařízení **Přehled** a pak vyberte **Vymazat**.
-8. Jakmile se zařízení obnoví, zobrazí se výzva k zadání *Apple ID* a *hesla*. Pole *ID* nechte prázdné a jako **heslo** zadejte *kód pro překonání zámku*. Tímto se účet odebere ze zařízení. 
+8. Jakmile se zařízení obnoví, zobrazí se výzva k zadání *Apple ID* a *hesla*. Pole *ID* nechte prázdné a jako *heslo* zadejte **kód pro překonání zámku**. Tímto se účet odebere ze zařízení. 
 
 
 ## <a name="next-steps"></a>Další kroky

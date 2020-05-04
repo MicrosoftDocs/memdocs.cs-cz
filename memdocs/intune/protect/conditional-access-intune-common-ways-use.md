@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure; get-started; seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 9c8c78106125b45f52b45cb5fc6494b8e13b7a15
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80084952"
 ---
 # <a name="what-are-common-ways-to-use-conditional-access-with-intune"></a>Jaké jsou běžné způsoby použití podmíněného přístupu s Intune?
@@ -54,8 +54,8 @@ Zásady podmíněného přístupu na základě zařízení pro Exchange Online a
 > Když v zařízeních s Androidem povolíte přístup na základě zařízení pro SharePoint Online nebo přístup k Exchangi Online, uživatelé musí na zaregistrovaném zařízení povolit možnost **Povolit přístup z prohlížeče** následujícím způsobem:
 > 1. Spusťte **aplikaci Portál společnosti**.
 > 2. Přejděte na stránku **Nastavení** prostřednictvím tlačítka se třemi tečkami (...) nebo hardwarového tlačítka nabídky.
-> 3. Stiskne tlačítko **Povolit přístup z prohlížeče** . 
-> 4. V prohlížeči Chrome se odhlaste z Office 365 a znovu spusťte Chrome.
+> 3. Stiskněte tlačítko **Povolit přístup z prohlížeče**. 
+> 4. V prohlížeči Chrome se odhlásí z Office 365 a restartuje Chrome.
 
 ### <a name="conditional-access-based-on-network-access-control"></a>Podmíněný přístup na základě řízení přístupu k síti
 
@@ -157,7 +157,7 @@ Exchange Server poskytuje rozhraní API a infrastrukturu pro přesunutí zaříz
 
 [Postup konfigurace podmíněného přístupu v Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)
 
-[Nastavení zásad podmíněného přístupu na základě aplikace](app-based-conditional-access-intune-create.md)
+[Nastavení zásad podmíněného přístupu k aplikacím](app-based-conditional-access-intune-create.md)
 
 [Jak nainstalovat místní konektor Exchange v Intune](exchange-connector-install.md)
 

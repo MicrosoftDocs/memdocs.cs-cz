@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 1d8b05a5cd4398026d58c04199caf7f63567cc1e
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79327963"
 ---
 # <a name="remove-your-device-from-the-company-portal"></a>Odebrat zařízení z portálu společnosti
@@ -38,7 +38,7 @@ Odebrání zařízení:
 
     ![Snímek obrazovky stránky Zařízení se dvěma dlaždicemi, které zobrazují neznámá zařízení s obecným názvem. Šedý banner pod zařízeními vyzývá uživatele k identifikaci používaného zařízení nebo přidání nového.](./media/rename-reset-device-step2-1808.png) 
 
-3. Vyberte **Odebrat**. Pokud se v horní části stránky možnost Odebrat nezobrazuje, vyberte **Více (…)**  > **Odebrat**.  
+3. Vyberte **Odebrat**. Pokud možnost odebrat není v horní části stránky zobrazená, vyberte **Další (...)** .  >  **Odebrat**.  
 
    ![Stránka podrobností o zařízení pro vybrané zařízení na webu Portál společnosti. V horní části stránky se nacházejí odkazy Přejmenovat, Odebrat, Resetovat zařízení, Resetovat heslo a Vzdálené uzamčení. ](./media/rename-reset-device-1808.png)  
   

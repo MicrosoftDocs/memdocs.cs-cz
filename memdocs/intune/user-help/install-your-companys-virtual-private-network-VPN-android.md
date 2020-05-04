@@ -20,17 +20,17 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: d83d8b36507901edb9a4299b5f54c761f3370d93
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79328019"
 ---
 # <a name="how-to-install-your-companys-virtual-private-network-vpn"></a>Instalace firemní virtuální privátní sítě (VPN)
 
 Pokud firemní podpora nakonfigurovala aplikaci VPN, která vám umožní připojit se k prostředkům vaší společnosti, zobrazí se v zařízení s Androidem oznámení, že je potřeba nainstalovat aplikaci VPN. Aplikaci VPN nainstalujete pomocí následujícího postupu:
 
-1. Stáhněte dolů panel oznámení a klepněte na **Klepnutím nainstalujete tuto požadovanou aplikaci**.
+1. Vytáhněte zásuvku pro zásobník oznámení a klepnutím na **klepnutím nainstalujte tuto požadovanou aplikaci**.
 
 2. V obchodě **Play Store** klepněte na **INSTALOVAT** a při instalaci aplikace postupujte podle pokynů.
 

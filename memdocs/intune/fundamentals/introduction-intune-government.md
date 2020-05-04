@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 65459953fab0faed3e0c64b2097dd2a41e795111
-ms.sourcegitcommit: b5a9ce31de743879d2a6306cea76be3a093976bb
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79372564"
 ---
 # <a name="what-is-intune-for-government"></a>Co je Intune pro státní správu?
@@ -29,7 +29,7 @@ Intune pro vládní organizace je platforma pro správu aplikací a mobilních z
 
 Intune pro státní správu zahrnuje fyzicky izolovanou instanci Microsoft Intune, která podporuje požadavky na zabezpečení a dodržování předpisů, které jsou pro státní správu USA zásadní. Intune je cloudová služba pro správu mobility podnikových zařízení (EMM), která je základem pro vládu Intune. Státní úřady budou mít přístup ke stejným funkcím dostupným pro komerční zákazníky. Mezi ně patří certifikace dodržování předpisů v FedRAMP a DoD a provozovaná osobami na základě obrazovky USA.
 
-S Intune pro státní správu můžete spravovat zařízení s Windows 10, iOS a Androidem s využitím úplných možností MDM dostupných v Intune. Můžete třeba:
+S Intune pro státní správu můžete spravovat zařízení s Windows 10, iOS a Androidem s využitím úplných možností MDM dostupných v Intune. Můžete například provést následující věci:
 
 - Spravujte mobilní zařízení zaměstnanců státní správy používané pro přístup k datům.
 - Spravujte mobilní aplikace, ke kterým uživatelé přistupují.

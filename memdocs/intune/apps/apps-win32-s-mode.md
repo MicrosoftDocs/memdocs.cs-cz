@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 796e95b09193228fdc4612a370658e532fbbd2c6
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80324372"
 ---
 # <a name="enable-win32-apps-on-s-mode-devices"></a>Povolit aplikace Win32 na zařízeních S režimem S
@@ -49,7 +49,7 @@ Postup pro povolení spouštění aplikací Win32 v zařízení S Windows 10 v r
    - Intune použije podepsaný katalog aplikací k instalaci aplikace Win32 do zařízení v režimu S pomocí [rozšíření pro správu Intune](intune-management-extension.md).
 
 > [!NOTE]
-> Obchodní `.appx` a sady `.appx` v režimu Windows 10 S se budou podporovat prostřednictvím podepisování Microsoft Store for Business (MSFB).
+> Obchodní aplikace (LOB) `.appx` a `.appx` sady v režimu Windows 10 S se budou podporovat prostřednictvím podepisování Microsoft Store pro firmy (MSFB).
 >
 > **Doplňkové zásady** pro aplikace se musí doručovat prostřednictvím rozšíření pro správu Intune.
 >
@@ -58,8 +58,8 @@ Postup pro povolení spouštění aplikací Win32 v zařízení S Windows 10 v r
 Chcete-li vytvořit doplňkové zásady režimu Windows 10 S, použijte následující postup:
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **aplikace** > v **režimu S doplňkovými zásadami** > **vytvořit zásadu**.
-3. Před přidáním **souboru zásad**je nutné ho vytvořit a podepsat. Více informací najdete v následujících tématech:
+2. Vyberte **aplikace** > v**režimu doplňkové zásady** > **vytvořit zásadu**.
+3. Před přidáním **souboru zásad**je nutné ho vytvořit a podepsat. Další informace naleznete v tématu:
     - [Vytvoření zásady WDAC pomocí nástrojů PowerShellu a její převedení do binárního formátu](https://go.microsoft.com/fwlink/?linkid=2095387)
     - [Podepsat pomocí služby podepisování zařízení Guard](https://go.microsoft.com/fwlink/?linkid=2095629) **(doporučeno)**
 

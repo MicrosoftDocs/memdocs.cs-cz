@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 6dad4dffba0efadcca0ea5eb7d61960bec1b3f8e
-ms.sourcegitcommit: 0907ee1137773f0482b1d2b9bb344e206d05aede
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80536839"
 ---
 # <a name="how-to-add-macos-line-of-business-lob-apps-to-microsoft-intune"></a>Přidání obchodních aplikací pro macOS do Microsoft Intune
@@ -52,7 +52,7 @@ Musíte si stáhnout externí nástroj, označit stažený nástroj jako spustit
 
 2. Označte stažený nástroj jako spustitelný soubor:
    - Spusťte aplikaci Terminal.
-   - Změňte adresář na umístění, kde se nachází `IntuneAppUtil`.
+   - Změňte adresář na umístění, kde `IntuneAppUtil` se nachází.
    - Spusťte následující příkaz, který nastaví spustitelný soubor nástroje:<br> 
        `chmod +x IntuneAppUtil`
 
@@ -60,13 +60,13 @@ Musíte si stáhnout externí nástroj, označit stažený nástroj jako spustit
 
     Tady jsou vzorové příkazy pro Microsoft Intune App Wrapping Tool pro macOS:
     > [!IMPORTANT]
-    > Před spuštěním příkazů `IntuneAppUtil` zajistěte, aby `<source_file>` argumentu neobsahuje mezery.
+    > Před spuštěním `<source_file>` `IntuneAppUtil` příkazů zajistěte, aby argument neobsahoval mezery.
 
     - `IntuneAppUtil -h`<br>
     Tento příkaz zobrazí informace o využití nástroje.
     
     - `IntuneAppUtil -c <source_file> -o <output_directory_path> [-v]`<br>
-    Tento příkaz zalomí soubor aplikace LOB *. pkg* , který je součástí `<source_file>`, do souboru *. intunemac* se stejným názvem a umístí ho do složky, na kterou odkazuje `<output_directory_path>`.
+    Tento příkaz zabalí soubor `<source_file>` obchodní aplikace *. pkg* , který je součástí souboru *. intunemac* se stejným názvem a umístí ho do složky, na kterou odkazuje `<output_directory_path>`.
     
     - `IntuneAppUtil -r <filename.intunemac> [-v]`<br>
     Tento příkaz extrahuje zjištěné parametry a verze vytvořeného souboru *.intunemac*.
@@ -92,9 +92,9 @@ Musíte si stáhnout externí nástroj, označit stažený nástroj jako spustit
 1. Na stránce **informace o aplikaci** přidejte podrobnosti o aplikaci. V závislosti na zvolené aplikaci můžou být některé hodnoty v tomto podokně vyplněné automaticky:
     - **Název**: Zadejte název aplikace, který se zobrazí na portálu společnosti. Ověřte, že názvy všech používaných aplikací jsou jedinečné. Pokud stejný název aplikace existuje dvakrát, zobrazí se na portálu společnosti jen jedna z aplikací.
     - **Popis**: Zadejte popis aplikace. Popis se zobrazí na portálu společnosti.
-    - **Vydavatel**: Zadejte název vydavatele aplikace.
+    - **Vydavatel**: zadejte název vydavatele aplikace.
     - **Minimální operační systém**: V seznamu zvolte minimální verzi operačního systému, na kterou jde aplikaci nainstalovat. Pokud aplikaci přiřadíte k zařízení se starším operačním systémem, nenainstaluje se.
-    - **Kategorie**: Vyberte jednu nebo několik předdefinovaných kategorií aplikací nebo kategorii, kterou jste si vytvořili sami. Díky kategoriím uživatelé aplikaci při procházení portálu společnosti snadněji najdou.
+    - **Kategorie**: vyberte jednu nebo více předdefinovaných kategorií aplikací nebo vyberte kategorii, kterou jste vytvořili. Díky kategoriím uživatelé aplikaci při procházení portálu společnosti snadněji najdou.
     - **Zobrazit tuto aplikaci jako doporučenou aplikaci v portál společnosti**: když uživatelé vyhledávají aplikace, zobrazí se na hlavní stránce portálu společnosti výrazně.
     - **Adresa URL informací**: Volitelně můžete zadat adresu URL webu, který obsahuje informace o této aplikaci. Adresa URL se zobrazí na portálu společnosti.
     - **Adresa URL informací o ochraně osobních údajů**: Volitelně zadejte adresu URL webu, který obsahuje informace o ochraně osobních údajů v této aplikaci. Adresa URL se zobrazí na portálu společnosti.

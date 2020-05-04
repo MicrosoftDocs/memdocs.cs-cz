@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: d6f8f3cf9ced5b613323093ed2baafcf65667997
-ms.sourcegitcommit: fe7484e86ec8a109fa5f54fe9cceef8aac94bd9f
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/26/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80275080"
 ---
 # <a name="symantec-endpoint-protection-mobile-connector"></a>Konektor Symantec Endpoint Protection Mobile
@@ -90,7 +90,7 @@ Když se na zařízeních zjistí přítomnost škodlivých aplikací (třeba ma
 
 ![Zjistila se koncepční bitová kopie škodlivých aplikací.](./media/skycure-mobile-threat-defense-connector/symantec-arch-1.png)
 
-*Přístup udělený po nápravě:*
+*Přístup po nápravě udělen:*
 
 ![Obrázek přístupu uděleného při nápravě po zjištění škodlivých aplikací](./media/skycure-mobile-threat-defense-connector/symantec-arch-2.png)
 
@@ -98,11 +98,11 @@ Když se na zařízeních zjistí přítomnost škodlivých aplikací (třeba ma
 
 Zjišťuje hrozby v síti, například **útoky prostředníkem**, a chrání přístup k sítím Wi-Fi na základě rizika zařízení.
 
-*Zablokování přístupu k síti prostřednictvím sítě Wi-Fi:*
+*Blokovat přístup k síti přes Wi-Fi:*
 
 ![Zablokování přístupu k síti prostřednictvím sítě Wi-Fi](./media/skycure-mobile-threat-defense-connector/symantec-arch-3.png)
 
-*Přístup udělený po nápravě:*
+*Přístup po nápravě udělen:*
 
 ![Přístup udělený po nápravě](./media/skycure-mobile-threat-defense-connector/symantec-arch-4.png)
 
@@ -110,11 +110,11 @@ Zjišťuje hrozby v síti, například **útoky prostředníkem**, a chrání 
 
 Zjišťuje hrozby v síti, například **útoky prostředníkem**, a zabraňuje synchronizaci podnikových souborů na základě rizika zařízení.
 
-*Zablokování SharePointu Online v případě, že se zjistí ohrožení sítě:*
+*Zablokovat SharePoint Online, když jsou zjištěny hrozby sítě:*
 
 ![Zablokování SharePointu Online v případě zjištění ohrožení sítě](./media/skycure-mobile-threat-defense-connector/symantec-arch-5.png)
 
-*Přístup udělený po nápravě:*
+*Přístup po nápravě udělen:*
 
 ![Sharepointový příklad přístupu uděleného po nápravě](./media/skycure-mobile-threat-defense-connector/symantec-arch-6.png)
 

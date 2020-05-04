@@ -17,10 +17,10 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
 ms.openlocfilehash: 554bc09aa57306010069df4a85baa70fafdc41a6
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80086274"
 ---
 # <a name="settings-for-windows-10-microsoft-defender-antivirus-policy-in-microsoft-intune"></a>Nastavení pro zásady antivirové ochrany v Microsoft Defenderu pro Windows 10 v Microsoft Intune
@@ -144,7 +144,7 @@ Pro každé nastavení v této skupině můžete rozbalit nastavení, vybrat **P
   - **Ne** – nastavení je zakázané. Uživatelé zařízení nemůžou toto nastavení změnit.
   - **Ano** – zapněte kontrolu e-mailů. Uživatelé zařízení nemůžou toto nastavení změnit.
 
-## <a name="remediation"></a>Náprava
+## <a name="remediation"></a>Odstranění rizika
 
 - **Počet dní (0-90) pro udržení malwaru v karanténě**  
   CSP: [DaysToRetainCleanedMalware](https://go.microsoft.com/fwlink/?linkid=2114055&clcid=0x409)
@@ -182,7 +182,7 @@ Pro každé nastavení v této skupině můžete rozbalit nastavení, vybrat **P
 
   Pro každou úroveň zadejte akci, která se má provést. Výchozí hodnota pro každou úroveň závažnosti není *nakonfigurovaná*.
 
-  - **Nenakonfigurované**
+  - **Není nakonfigurováno**
   - **Vyčistit** – služba se pokusí o obnovení souborů a pokusit se o jejich dezinfekci.
   - **Karanténa** – přesune soubory do karantény.
   - **Odebrat** – odebere soubory ze zařízení.
@@ -190,7 +190,7 @@ Pro každé nastavení v této skupině můžete rozbalit nastavení, vybrat **P
   - **Definováno uživatelem** – uživatel zařízení provede rozhodnutí, které akce má provést.
   - **Blok** – zablokuje spuštění souboru.
 
-## <a name="scan"></a>skenuje
+## <a name="scan"></a>Skenování
 
 - **Prohledat archivní soubory**  
   CSP: [AllowArchiveScanning](https://go.microsoft.com/fwlink/?linkid=2114047&clcid=0x409)
@@ -275,7 +275,7 @@ Další informace
 
   Zadejte interval od nuly do 24 (v hodinách), který se používá ke kontrole podpisů. Nulová hodnota nemá za následek kontrolu nových podpisů. Hodnota 2 bude kontrolovat každé dvě hodiny atd.
 
-## <a name="user-experience"></a>Činnost koncového uživatele
+## <a name="user-experience"></a>Uživatelské prostředí
 
 - **Povolení přístupu uživatele k aplikaci Microsoft Defender**  
   CSP: [AllowUserUIAccess](https://go.microsoft.com/fwlink/?linkid=2114043&clcid=0x409)  

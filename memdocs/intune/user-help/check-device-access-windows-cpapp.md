@@ -19,10 +19,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: f99a159a776e95c2f7ff8045a802b0c686672c9a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79328291"
 ---
 # <a name="check-access-from-company-portal-app-for-windows"></a>Kontrola přístupu z aplikace Portál společnosti pro Windows
@@ -68,7 +68,7 @@ Proveďte kroky uvedené v tomto článku, abyste zkontrolovali přístup z apli
 
     ![Příklad snímku obrazovky aplikace Portál společnosti pro Windows, domovská stránka, zvýrazněná část Moje zařízení](./media/1809_CheckAccess_Context_Select_Device.png)  
 
-2. Klikněte pravým tlačítkem myši nebo stiskněte a podržte zařízení, aby se otevřela jeho [místní nabídka](https://docs.microsoft.com//windows/uwp/design/controls-and-patterns/menus).  
+2. Kliknutím pravým tlačítkem nebo stisknutím a podržením zařízení otevřete jeho [kontextovou nabídku](https://docs.microsoft.com//windows/uwp/design/controls-and-patterns/menus).  
 
     ![Příklad snímku obrazovky s aplikací Portál společnosti pro Windows, domovská stránka Místní nabídka zařízení se zobrazuje na stránce v části Moje zařízení a zobrazuje akce Přejmenovat, Odebrat a Zkontrolovat přístup.](./media/1809_DeviceContextMenu_Windows_CP.png)  
 3. Vyberte **Zkontrolovat přístup**. Aplikace synchronizuje vaše zařízení s aktuálními požadavky vaší organizace a provede kontrolu, kterou ověří, že jim vaše zařízení odpovídá. Tato kontrola může trvat několik minut.  

@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 38c3c4adb7029303eaad34b1d5a9fdef774c0f00
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80086435"
 ---
 # <a name="add-wi-fi-settings-for-android-enterprise-dedicated-and-fully-managed-devices-in-microsoft-intune"></a>Přidání nastavení sítě Wi-Fi pro vyhrazená a plně spravovaná zařízení s Androidem v Microsoft Intune
@@ -31,17 +31,17 @@ Těmito nastaveními se zabývá tento článek. [Použití Wi-Fi na vašich za�
 
 ## <a name="before-you-begin"></a>Před zahájením
 
-[Vytvořte profil zařízení v Microsoft Intune](wi-fi-settings-configure.md).
+[Vytvořte profil zařízení](wi-fi-settings-configure.md).
 
 ## <a name="device-owner-only"></a>Pouze vlastník zařízení
 
 Tuto možnost vyberte, pokud nasazujete na vyhrazené nebo plně spravované zařízení s Androidem Enterprise.  Vyhrazená a plně spravovaná zařízení s Androidem Enterprise aktuálně podporují nasazení certifikátu SCEP, ale ne PKCS.
 
-### <a name="basic"></a>Basic
+### <a name="basic"></a>Základní
 
 - **Typ Wi-Fi**: Zvolte **Základní**.
 - **Název sítě**: Zadejte název pro toto připojení Wi-Fi. Koncoví uživatelé uvidí tento název při procházení svého zařízení k dostupným připojením Wi-FI. Zadejte například **Contoso Wi-Fi**.
-- **SSID**: zadejte **identifikátor sady služeb**, což je skutečný název bezdrátové sítě, ke které se zařízení připojují. **Název sítě**, který jste nakonfigurovali, ale uživatelé uvidí jen při zvolení připojení.
+- **SSID**: zadejte **identifikátor sady služeb**, což je skutečný název bezdrátové sítě, ke které se zařízení připojují. Uživatelé ale uvidí jenom **název sítě** , který jste nakonfigurovali, když zvolí připojení.
 - **Skrytá síť**: Zvolte **Povolit**, pokud chcete tuto síť skrýt v seznamu dostupných sítí na zařízení. Identifikátor SSID se všesměrově nevysílá. Zvolte **Zakázat**, pokud tuto síť chcete v seznamu dostupných sítí na zařízení zobrazit.
 - **Typ Wi-Fi**: Vyberte protokol zabezpečení, který se má použít k ověření sítě Wi-Fi. Možnosti:
 
@@ -52,26 +52,26 @@ Tuto možnost vyberte, pokud nasazujete na vyhrazené nebo plně spravované za�
 ### <a name="enterprise"></a>Enterprise
 
 - **Typ Wi-Fi**: Zvolte **Enterprise**.
-- **SSID**: zadejte **identifikátor sady služeb**, což je skutečný název bezdrátové sítě, ke které se zařízení připojují. **Název sítě**, který jste nakonfigurovali, ale uživatelé uvidí jen při zvolení připojení.
+- **SSID**: zadejte **identifikátor sady služeb**, což je skutečný název bezdrátové sítě, ke které se zařízení připojují. Uživatelé ale uvidí jenom **název sítě** , který jste nakonfigurovali, když zvolí připojení.
 - **Skrytá síť**: Zvolte **Povolit**, pokud chcete tuto síť skrýt v seznamu dostupných sítí na zařízení. Identifikátor SSID se všesměrově nevysílá. Zvolte **Zakázat**, pokud tuto síť chcete v seznamu dostupných sítí na zařízení zobrazit.
 - **Typ EAP**: Zvolte typ protokolu EAP (Extensible Authentication Protocol) pro ověřování zabezpečených bezdrátových připojení. Možnosti:
 
   - **EAP-TLS**: Dále zadejte:
 
-    - **Vztah důvěryhodnosti serveru** –  - Kořenový certifikát pro ověřování serveru **: Zvolte existující profil důvěryhodného kořenového certifikátu. Když se klient připojí k síti, zobrazí se tento certifikát serveru a ověří připojení.
+    - **Server Trust** - **Kořenový certifikát důvěryhodnosti serveru pro ověření serveru**: Vyberte existující profil důvěryhodného kořenového certifikátu. Když se klient připojí k síti, zobrazí se tento certifikát serveru a ověří připojení.
 
-    - **Ověřování** klienta - **klientský certifikát pro ověřování klientů (certifikát identity)** : vyberte profil klientského certifikátu SCEP, který je také nasazený do zařízení. Tento certifikát představuje identitu, kterou zařízení předloží serveru pro ověření připojení.
+    - **Client Authentication** - **Klientský certifikát pro ověření klienta pro ověření klienta (certifikát identity)**: vyberte profil klientského certifikátu SCEP, který je také nasazený do zařízení. Tento certifikát představuje identitu, kterou zařízení předloží serveru pro ověření připojení.
 
-    - **Ochrana identity (vnější identita)** : Zadejte text odeslaný v odpovědi na žádost o identitu EAP. Tento text může být libovolná hodnota, například `anonymous`. Při ověřování se nejdřív pošle tato anonymní identita a po ní následuje skutečná identifikace poslaná přes zabezpečené tunelové propojení.
+    - **Ochrana identity (vnější identita)**: Zadejte text odeslaný v odpovědi na žádost o identitu EAP. Tento text může být libovolná hodnota, například `anonymous`. Při ověřování se nejdřív pošle tato anonymní identita a po ní následuje skutečná identifikace poslaná přes zabezpečené tunelové propojení.
 
   - **EAP-TTLS**: Dále zadejte:
 
-    - **Vztah důvěryhodnosti serveru** –  - Kořenový certifikát pro ověřování serveru **: Zvolte existující profil důvěryhodného kořenového certifikátu. Když se klient připojí k síti, zobrazí se tento certifikát serveru a ověří připojení.
+    - **Server Trust** - **Kořenový certifikát důvěryhodnosti serveru pro ověření serveru**: Vyberte existující profil důvěryhodného kořenového certifikátu. Když se klient připojí k síti, zobrazí se tento certifikát serveru a ověří připojení.
 
     - **Ověřování klientů**: vyberte **metodu ověřování**. Možnosti:
 
       - **Uživatelské jméno a heslo**: Zobrazí uživateli výzvu k zadání uživatelského jména a hesla pro ověření připojení. Dále zadejte:
-        - **Metoda bez protokolu EAP (vnitřní identita)** : Zvolte, jak chcete připojení ověřovat. Nezapomeňte vybrat stejný protokol, který je nakonfigurovaný u sítě Wi-Fi. Možnosti:
+        - **Metoda bez protokolu EAP (vnitřní identita)**: Zvolte, jak chcete připojení ověřovat. Nezapomeňte vybrat stejný protokol, který je nakonfigurovaný u sítě Wi-Fi. Možnosti:
 
           - **Nezašifrované heslo (PAP)**
           - **Protokol Microsoft CHAP (MS-CHAP)**
@@ -79,55 +79,55 @@ Tuto možnost vyberte, pokud nasazujete na vyhrazené nebo plně spravované za�
 
       - **Certifikáty**: vyberte profil klientského certifikátu SCEP, který se taky nasadí do zařízení. Tento certifikát představuje identitu, kterou zařízení předloží serveru pro ověření připojení.
 
-      - **Ochrana identity (vnější identita)** : Zadejte text odeslaný v odpovědi na žádost o identitu EAP. Tento text může být libovolná hodnota, například `anonymous`. Při ověřování se nejdřív pošle tato anonymní identita a po ní následuje skutečná identifikace poslaná přes zabezpečené tunelové propojení.
+      - **Ochrana identity (vnější identita)**: Zadejte text odeslaný v odpovědi na žádost o identitu EAP. Tento text může být libovolná hodnota, například `anonymous`. Při ověřování se nejdřív pošle tato anonymní identita a po ní následuje skutečná identifikace poslaná přes zabezpečené tunelové propojení.
 
   - **PEAP**: Dále zadejte:
 
-    - **Vztah důvěryhodnosti serveru** –  - Kořenový certifikát pro ověřování serveru **: Zvolte existující profil důvěryhodného kořenového certifikátu. Když se klient připojí k síti, zobrazí se tento certifikát serveru a ověří připojení.
+    - **Server Trust** - **Kořenový certifikát důvěryhodnosti serveru pro ověření serveru**: Vyberte existující profil důvěryhodného kořenového certifikátu. Když se klient připojí k síti, zobrazí se tento certifikát serveru a ověří připojení.
 
     - **Ověřování klientů**: vyberte **metodu ověřování**. Možnosti:
 
       - **Uživatelské jméno a heslo**: Zobrazí uživateli výzvu k zadání uživatelského jména a hesla pro ověření připojení. Dále zadejte:
-        - **Ověřování metodou bez protokolu EAP (vnitřní identita)** : Zvolte, jak chcete připojení ověřovat. Nezapomeňte vybrat stejný protokol, který je nakonfigurovaný u sítě Wi-Fi. Možnosti:
+        - **Ověřování metodou bez protokolu EAP (vnitřní identita)**: Zvolte, jak chcete připojení ověřovat. Nezapomeňte vybrat stejný protokol, který je nakonfigurovaný u sítě Wi-Fi. Možnosti:
 
           - **Žádné**
           - **Protokol Microsoft CHAP verze 2 (MS-CHAP v2)**
 
       - **Certifikáty**: vyberte profil klientského certifikátu SCEP, který se taky nasadí do zařízení. Tento certifikát představuje identitu, kterou zařízení předloží serveru pro ověření připojení.
 
-      - **Ochrana identity (vnější identita)** : Zadejte text odeslaný v odpovědi na žádost o identitu EAP. Tento text může být libovolná hodnota, například `anonymous`. Při ověřování se nejdřív pošle tato anonymní identita a po ní následuje skutečná identifikace poslaná přes zabezpečené tunelové propojení.
+      - **Ochrana identity (vnější identita)**: Zadejte text odeslaný v odpovědi na žádost o identitu EAP. Tento text může být libovolná hodnota, například `anonymous`. Při ověřování se nejdřív pošle tato anonymní identita a po ní následuje skutečná identifikace poslaná přes zabezpečené tunelové propojení.
 
 ## <a name="work-profile-only"></a>Pouze pracovní profil
 
-### <a name="basic"></a>Basic
+### <a name="basic"></a>Základní
 
 - **Typ Wi-Fi**: Zvolte **Základní**.
-- **SSID**: zadejte **identifikátor sady služeb**, což je skutečný název bezdrátové sítě, ke které se zařízení připojují. **Název sítě**, který jste nakonfigurovali, ale uživatelé uvidí jen při zvolení připojení.
+- **SSID**: zadejte **identifikátor sady služeb**, což je skutečný název bezdrátové sítě, ke které se zařízení připojují. Uživatelé ale uvidí jenom **název sítě** , který jste nakonfigurovali, když zvolí připojení.
 - **Skrytá síť**: Zvolte **Povolit**, pokud chcete tuto síť skrýt v seznamu dostupných sítí na zařízení. Identifikátor SSID se všesměrově nevysílá. Zvolte **Zakázat**, pokud tuto síť chcete v seznamu dostupných sítí na zařízení zobrazit.
 
 ### <a name="enterprise"></a>Enterprise
 
 - **Typ Wi-Fi**: Zvolte **Enterprise**.
-- **SSID**: zadejte **identifikátor sady služeb**, což je skutečný název bezdrátové sítě, ke které se zařízení připojují. **Název sítě**, který jste nakonfigurovali, ale uživatelé uvidí jen při zvolení připojení.
+- **SSID**: zadejte **identifikátor sady služeb**, což je skutečný název bezdrátové sítě, ke které se zařízení připojují. Uživatelé ale uvidí jenom **název sítě** , který jste nakonfigurovali, když zvolí připojení.
 - **Skrytá síť**: Zvolte **Povolit**, pokud chcete tuto síť skrýt v seznamu dostupných sítí na zařízení. Identifikátor SSID se všesměrově nevysílá. Zvolte **Zakázat**, pokud tuto síť chcete v seznamu dostupných sítí na zařízení zobrazit.
 - **Typ EAP**: Zvolte typ protokolu EAP (Extensible Authentication Protocol) pro ověřování zabezpečených bezdrátových připojení. Možnosti:
 
   - **EAP-TLS**: Dále zadejte:
 
-    - **Vztah důvěryhodnosti serveru** –  - Kořenový certifikát pro ověřování serveru **: Zvolte existující profil důvěryhodného kořenového certifikátu. Když se klient připojí k síti, zobrazí se tento certifikát serveru a ověří připojení.
+    - **Server Trust** - **Kořenový certifikát důvěryhodnosti serveru pro ověření serveru**: Vyberte existující profil důvěryhodného kořenového certifikátu. Když se klient připojí k síti, zobrazí se tento certifikát serveru a ověří připojení.
 
-    - **Ověřování klientů** –  - Klientský certifikát pro ověření klienta (certifikát identity) **: Zvolte profil klientského certifikátu SCEP nebo PKCS, který je také nasazený na zařízení. Tento certifikát představuje identitu, kterou zařízení předloží serveru pro ověření připojení.
+    - **Client Authentication** - **Klientský certifikát pro ověření klienta pro ověření klienta (certifikát identity)**: vyberte profil certifikátu klienta SCEP nebo PKCS, který je také nasazený do zařízení. Tento certifikát představuje identitu, kterou zařízení předloží serveru pro ověření připojení.
 
-    - **Ochrana identity (vnější identita)** : Zadejte text odeslaný v odpovědi na žádost o identitu EAP. Tento text může být libovolná hodnota, například `anonymous`. Při ověřování se nejdřív pošle tato anonymní identita a po ní následuje skutečná identifikace poslaná přes zabezpečené tunelové propojení.
+    - **Ochrana identity (vnější identita)**: Zadejte text odeslaný v odpovědi na žádost o identitu EAP. Tento text může být libovolná hodnota, například `anonymous`. Při ověřování se nejdřív pošle tato anonymní identita a po ní následuje skutečná identifikace poslaná přes zabezpečené tunelové propojení.
 
   - **EAP-TTLS**: Dále zadejte:
 
-    - **Vztah důvěryhodnosti serveru** –  - Kořenový certifikát pro ověřování serveru **: Zvolte existující profil důvěryhodného kořenového certifikátu. Když se klient připojí k síti, zobrazí se tento certifikát serveru a ověří připojení.
+    - **Server Trust** - **Kořenový certifikát důvěryhodnosti serveru pro ověření serveru**: Vyberte existující profil důvěryhodného kořenového certifikátu. Když se klient připojí k síti, zobrazí se tento certifikát serveru a ověří připojení.
 
     - **Ověřování klientů**: vyberte **metodu ověřování**. Možnosti:
 
       - **Uživatelské jméno a heslo**: Zobrazí uživateli výzvu k zadání uživatelského jména a hesla pro ověření připojení. Dále zadejte:
-        - **Metoda bez protokolu EAP (vnitřní identita)** : Zvolte, jak chcete připojení ověřovat. Nezapomeňte vybrat stejný protokol, který je nakonfigurovaný u sítě Wi-Fi. Možnosti:
+        - **Metoda bez protokolu EAP (vnitřní identita)**: Zvolte, jak chcete připojení ověřovat. Nezapomeňte vybrat stejný protokol, který je nakonfigurovaný u sítě Wi-Fi. Možnosti:
 
           - **Nezašifrované heslo (PAP)**
           - **Protokol Microsoft CHAP (MS-CHAP)**
@@ -135,23 +135,23 @@ Tuto možnost vyberte, pokud nasazujete na vyhrazené nebo plně spravované za�
 
       - **Certifikáty**: Zvolte profil klientského certifikátu SCEP nebo PKCS, který je také nasazený na zařízení. Tento certifikát představuje identitu, kterou zařízení předloží serveru pro ověření připojení.
 
-      - **Ochrana identity (vnější identita)** : Zadejte text odeslaný v odpovědi na žádost o identitu EAP. Tento text může být libovolná hodnota, například `anonymous`. Při ověřování se nejdřív pošle tato anonymní identita a po ní následuje skutečná identifikace poslaná přes zabezpečené tunelové propojení.
+      - **Ochrana identity (vnější identita)**: Zadejte text odeslaný v odpovědi na žádost o identitu EAP. Tento text může být libovolná hodnota, například `anonymous`. Při ověřování se nejdřív pošle tato anonymní identita a po ní následuje skutečná identifikace poslaná přes zabezpečené tunelové propojení.
 
   - **PEAP**: Dále zadejte:
 
-    - **Vztah důvěryhodnosti serveru** –  - Kořenový certifikát pro ověřování serveru **: Zvolte existující profil důvěryhodného kořenového certifikátu. Když se klient připojí k síti, zobrazí se tento certifikát serveru a ověří připojení.
+    - **Server Trust** - **Kořenový certifikát důvěryhodnosti serveru pro ověření serveru**: Vyberte existující profil důvěryhodného kořenového certifikátu. Když se klient připojí k síti, zobrazí se tento certifikát serveru a ověří připojení.
 
     - **Ověřování klientů**: vyberte **metodu ověřování**. Možnosti:
 
       - **Uživatelské jméno a heslo**: Zobrazí uživateli výzvu k zadání uživatelského jména a hesla pro ověření připojení. Dále zadejte:
-        - **Ověřování metodou bez protokolu EAP (vnitřní identita)** : Zvolte, jak chcete připojení ověřovat. Nezapomeňte vybrat stejný protokol, který je nakonfigurovaný u sítě Wi-Fi. Možnosti:
+        - **Ověřování metodou bez protokolu EAP (vnitřní identita)**: Zvolte, jak chcete připojení ověřovat. Nezapomeňte vybrat stejný protokol, který je nakonfigurovaný u sítě Wi-Fi. Možnosti:
 
           - **Žádné**
           - **Protokol Microsoft CHAP verze 2 (MS-CHAP v2)**
 
       - **Certifikáty**: Zvolte profil klientského certifikátu SCEP nebo PKCS, který je také nasazený na zařízení. Tento certifikát představuje identitu, kterou zařízení předloží serveru pro ověření připojení.
 
-      - **Ochrana identity (vnější identita)** : Zadejte text odeslaný v odpovědi na žádost o identitu EAP. Tento text může být libovolná hodnota, například `anonymous`. Při ověřování se nejdřív pošle tato anonymní identita a po ní následuje skutečná identifikace poslaná přes zabezpečené tunelové propojení.
+      - **Ochrana identity (vnější identita)**: Zadejte text odeslaný v odpovědi na žádost o identitu EAP. Tento text může být libovolná hodnota, například `anonymous`. Při ověřování se nejdřív pošle tato anonymní identita a po ní následuje skutečná identifikace poslaná přes zabezpečené tunelové propojení.
 
 - **Nastavení proxy serveru**: zadejte konfiguraci proxy serveru, kterou používá vaše organizace. Možnosti:
 
@@ -161,7 +161,7 @@ Tuto možnost vyberte, pokud nasazujete na vyhrazené nebo plně spravované za�
 - **Adresa URL proxy serveru**: Toto nastavení je dostupné, když nastavíte *nastavení proxy* serveru na *Automatické*. Zadejte jednu z následujících možností, jak zařízení nasměrovat na proxy server:
 
   - IP adresa. Například `10.0.0.11`.
-  - ADRESA URL. Například `http://proxyserver.contoso.com`.
+  - ADRESA URL. Například, `http://proxyserver.contoso.com`.
   - Adresa URL souboru automatické konfigurace proxy serveru (PAC). Například: `http://proxy.contoso.com/proxy.pac`.
 
   Další informace o souborech PAC najdete v tématu [soubor automatické konfigurace proxy serveru](https://developer.mozilla.org/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file) (otevře se na webu, který není Microsoft).

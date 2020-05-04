@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: c76045413324deef395f546033d37ec47405a28f
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79332247"
 ---
 # <a name="windows-10-and-later-settings-to-manage-shared-devices-using-intune"></a>Nastavení Windows 10 a novějších pro správu sdílených zařízení pomocí Intune
@@ -49,16 +49,16 @@ Tato nastavení používají [zprostředkovatele CSP pro SharedPC](https://docs.
   - **Host a doména**: na zařízení vytvoří účet hosta místně a v Azure Active Directory (AD).
 - **Správa účtů**: Nastavte, aby se **povolilo** automatické odstraňování místních účtů vytvořených hosty a účtů v AD a Azure AD. Když se uživatel odhlásí ze zařízení nebo když se spustí údržba systému, tyto účty se odstraní. Pokud je tato možnost povolená, nastaví se také:
   - **Odstranění účtu**: vyberte, kdy se mají účty odstranit: **v prahové hodnotě úložného prostoru**, **v prahové hodnotě úložiště a na neaktivní prahové hodnotě**nebo **hned po odhlášení**. Zadejte také:
-    - **Počáteční hodnota odstranění – prahová hodnota (%)** : zadejte procento místa na disku (0-100). Když celková velikost disku nebo úložiště klesne pod hodnotu, kterou zadáte, odstraní se účty v mezipaměti. Neustále odstraňuje účty pro uvolnění místa na disku. Účty, které jsou neaktivní, se nejprve odstraní.
-    - **Zastavit odstranění prahové hodnoty (%)** : zadejte procento místa na disku (0-100). Když celkové místo na disku nebo úložišti odpovídá hodnotě, kterou zadáte, odstranění se zastaví.
+    - **Počáteční hodnota odstranění – prahová hodnota (%)**: zadejte procento místa na disku (0-100). Když celková velikost disku nebo úložiště klesne pod hodnotu, kterou zadáte, odstraní se účty v mezipaměti. Neustále odstraňuje účty pro uvolnění místa na disku. Účty, které jsou neaktivní, se nejprve odstraní.
+    - **Zastavit odstranění prahové hodnoty (%)**: zadejte procento místa na disku (0-100). Když celkové místo na disku nebo úložišti odpovídá hodnotě, kterou zadáte, odstranění se zastaví.
 
   Nastavením této hodnoty **zakážete** , aby byly účty místních účtů, AD a Azure AD vytvořené hosty.
 
 - **Místní úložiště**: Pokud chcete zabránit uživatelům v ukládání a zobrazování souborů na pevném disku zařízení, vyberte možnost **povoleno** . Zvolením možnosti **zakázáno** umožníte uživatelům zobrazovat a ukládat soubory místně pomocí Průzkumníka souborů. **Nenakonfigurováno** (výchozí) Toto nastavení nespravuje Intune a nenabídne žádné zásady pro řízení tohoto nastavení na zařízení.
 - **Zásady napájení**: Pokud je nastavené na **povoleno**, uživatelé nemůžou vypnout režim hibernace, nemůžou přepsat všechny akce režimu spánku (například zavřít víko) a nemůžou měnit nastavení napájení. Když je tato možnost **zakázaná**, můžou uživatelé zařízení přepnout do režimu hibernace, může zavřít víko zařízení a změnit nastavení napájení. **Nenakonfigurováno** (výchozí) Toto nastavení nespravuje Intune a nenabídne žádné zásady pro řízení tohoto nastavení na zařízení.
-- **Časový limit režimu spánku (v sekundách)** : zadejte počet neaktivních sekund (0-18000), než se zařízení přepne do režimu spánku. `0` znamená, že zařízení nikdy nepřejde do režimu spánku. Pokud nenastavíte čas, zařízení přejde do režimu spánku po 3600 sekundách (60 minut).
+- **Časový limit režimu spánku (v sekundách)**: zadejte počet neaktivních sekund (0-18000), než se zařízení přepne do režimu spánku. `0`znamená, že zařízení nikdy nepřejde do režimu spánku. Pokud nenastavíte čas, zařízení přejde do režimu spánku po 3600 sekundách (60 minut).
 - **Přihlášení při probuzení z počítače: Pokud**je nastaveno na **povoleno** , bude vyžadovat, aby se uživatelé přihlásili pomocí hesla, když zařízení nepřejde do režimu spánku. Vyberte možnost **zakázáno** , aby uživatelé nemuseli zadávat své uživatelské jméno a heslo. **Nenakonfigurováno** (výchozí) Toto nastavení nespravuje Intune a nenabídne žádné zásady pro řízení tohoto nastavení na zařízení.
-- **Čas zahájení údržby (v minutách od půlnoci)** : zadejte čas v minutách (0-1440), kdy se mají spouštět úlohy automatické údržby, například web Windows Update. Výchozí čas spuštění je půlnoc nebo nula (`0`) minut. Změňte čas spuštění zadáním počátečního času v minutách od půlnoci. Například pokud chcete, aby údržba začínala 2., zadejte `120`. Pokud chcete, aby údržba začínala 8 ODP. Zadejte `1200`.
+- **Čas zahájení údržby (v minutách od půlnoci)**: zadejte čas v minutách (0-1440), kdy se mají spouštět úlohy automatické údržby, například web Windows Update. Výchozí počáteční čas je půlnoc nebo nula (`0`) minut. Změňte čas spuštění zadáním počátečního času v minutách od půlnoci. Například pokud chcete, aby údržba začínala 2., zadejte `120`. Pokud chcete, aby údržba začínala 8. odp. `1200`, zadejte.
 - **Zásady vzdělávání**: vyberte možnost **povoleno** pro použití doporučeného nastavení pro zařízení používaná ve školách, které jsou více omezující. Vyberte možnost **zakázáno** , takže se nepoužijí výchozí a doporučené zásady vzdělávání. **Nenakonfigurováno** (výchozí) Toto nastavení nespravuje Intune a nenabídne žádné zásady pro řízení tohoto nastavení na zařízení.
 
   Další informace o tom, co dělají zásady vzdělávání, najdete v tématu [doporučení konfigurace Windows 10 pro zákazníky ve vzdělávání](https://docs.microsoft.com/education/windows/configure-windows-for-education).

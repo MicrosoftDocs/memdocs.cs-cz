@@ -19,17 +19,17 @@ ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 22910604d19aecb37adef2452d01d46c1435f7ef
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79330299"
 ---
 # <a name="tutorial-walkthrough-of-microsoft-intune-in-the-azure-portal"></a>Kurz: návod Microsoft Intune v Azure Portal
 
 [Azure](https://docs.microsoft.com/learn/modules/welcome-to-azure) obsahuje více než 100 služeb, které vám pomůžou s nejrůznějšími scénáři a možnostmi cloud computingu. Microsoft Intune je jedna z několika služeb dostupných v Azure. Intune vám pomůže zajistit, aby zařízení, aplikace a data vaší společnosti splňovaly požadavky na zabezpečení vaší společnosti. Máte kontrolu nad tím, které požadavky je potřeba zkontrolovat a co se stane, když tyto požadavky nebudou splněné. [Azure Portal](https://portal.azure.com) je místo, kde najdete službu Microsoft Intune. Porozumění funkcím dostupným v Intune vám pomůže dosáhnout různých úloh správy mobilních zařízení (MDM) a správy mobilních aplikací (MAM).
 
-V tomto kurzu se naučíte:
+V tomto kurzu provedete následující:
 > [!div class="checklist"]
 > * Microsoft Intune prohlídky
 > * Nakonfigurovat Azure Portal
@@ -171,4 +171,4 @@ Tato možnost bude užitečnější, až si do Intune přidáte další obsah, j
 Pokud chcete rychle pracovat na Microsoft Intune, přečtěte si první nastavení bezplatného účtu Intune a Projděte si rychlý Start k Intune.
 
 > [!div class="nextstepaction"]
-> [Rychlý Start: Vyzkoušejte si Microsoft Intune zdarma](free-trial-sign-up.md)
+> [Rychlý start: Bezplatné vyzkoušení Microsoft Intune](free-trial-sign-up.md)

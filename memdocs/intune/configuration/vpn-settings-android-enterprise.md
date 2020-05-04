@@ -16,10 +16,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 8bc627e7b9efb68e8d5cb777b5d8e659b06cab92
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80086808"
 ---
 # <a name="android-enterprise-device-settings-to-configure-vpn-in-intune"></a>Nastavení zařízení s Androidem Enterprise pro konfiguraci sítě VPN v Intune
@@ -50,7 +50,7 @@ Další informace o profilech sítě VPN v Intune najdete v tématu [Profily sí
 - **Typ připojení**: Vyberte typ připojení VPN. Možnosti:
 
   - **Cisco AnyConnect**
-  - **Přístup F5**
+  - **F5 Access**
   - **Pulse Secure**
 
 ## <a name="work-profile-only"></a>Pouze pracovní profil
@@ -66,7 +66,7 @@ Další informace o profilech sítě VPN v Intune najdete v tématu [Profily sí
 - **Typ připojení**: Vyberte typ připojení VPN. Možnosti:
 
   - **Cisco AnyConnect**
-  - **Přístup F5**
+  - **F5 Access**
   - **Pulse Secure**
   - **SonicWall Mobile Connect**
   - **Check Point Capsule VPN**

@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: ed0194f0ace1ed1e962a8b993a4e93f7ef487bdc
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80084929"
 ---
 # <a name="windows-10-and-later-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Nastavení Windows 10 a novějších označení zařízení jako kompatibilních nebo nekompatibilních s Intune
@@ -37,14 +37,14 @@ Jako správce Intune můžete pomocí těchto nastavení dodržování předpis�
 
 ## <a name="before-you-begin"></a>Před zahájením
 
-[Vytvořte zásadu dodržování předpisů](create-compliance-policy.md#create-the-policy). V poli **Platforma** vyberte **Windows 10 a novější**.
+[Vytvořte zásady dodržování předpisů](create-compliance-policy.md#create-the-policy). V části **platforma**vyberte **Windows 10 a novější**.
 
 ## <a name="device-health"></a>Stav zařízení
 
 ### <a name="windows-health-attestation-service-evaluation-rules"></a>Pravidla pro vyhodnocení služby ověření stavu systému Windows
 
 - **Vyžadovat nástroj BitLocker**:  
-   Windows BitLocker Drive Encryption šifruje všechna data uložená na svazku operačního systému Windows. BitLocker používá čip TPM (Trusted Platform Module) k ochraně operačního systému Windows a uživatelských dat. Pomáhá také ověřit, že počítač není úmyslně poškozen, a to ani v případě, že je jeho levý bezobslužný, ztracený nebo odcizený. Pokud je počítač je vybaven kompatibilním čipem TPM, BitLocker použije čip TPM k uzamknutí šifrovacích klíčů, které chrání data. K těmto klíčům proto nelze přistupovat, dokud čip TPM neověří stav počítače.  
+   Windows BitLocker Drive Encryption šifruje všechna data uložená na svazku operačního systému Windows. BitLocker používá čip TPM (Trusted Platform Module) k ochraně operačního systému Windows a uživatelských dat. Pomáhá také ověřit, že počítač není úmyslně poškozen, a to ani v případě, že je jeho levý bezobslužný, ztracený nebo odcizený. Pokud je počítač vybavený kompatibilním čipem TPM, nástroj BitLocker pomocí čipu TPM uzamkne šifrovací klíče, které chrání data. K těmto klíčům proto nelze přistupovat, dokud čip TPM neověří stav počítače.  
 
    - **Nenakonfigurováno** (*výchozí*) – Toto nastavení není vyhodnoceno pro dodržování předpisů nebo nedodržování předpisů.
    - **Vyžadovat** – zařízení může chránit data uložená na disku před neoprávněným přístupem, když je systém vypnutý nebo v režimu hibernace.  
@@ -145,13 +145,13 @@ Platí jenom pro spoluspravovaná zařízení s Windows 10 a novějším. Zaří
 - **Maximální počet minut nečinnosti před vyžadováním hesla**:  
   Zadejte dobu nečinnosti, než uživatel musí znovu zadat heslo.
 
-- **Vypršení platnosti hesla (dny)** :  
+- **Vypršení platnosti hesla (dny)**:  
   Zadejte počet dní do vypršení platnosti hesla a musí vytvořit nové, od 1-730.
 
 - **Počet předchozích hesel, která zabrání opakovanému použití**:  
   Zadejte počet dříve použitých hesel, která se nedají použít.
 
-- **Vyžadovat heslo při návratu zařízení ze stavu nečinnosti (mobilní a holografická)** :  
+- **Vyžadovat heslo při návratu zařízení ze stavu nečinnosti (mobilní a holografická)**:  
   - **Nenakonfigurováno** (*výchozí*)
   - **Vyžadovat** – vyžaduje, aby uživatelé zařízení zadali heslo pokaždé, když se zařízení vrátí ze stavu nečinnosti.
 
@@ -179,7 +179,7 @@ Platí jenom pro spoluspravovaná zařízení s Windows 10 a novějším. Zaří
   > [!NOTE]
   > Pokud se zařízení hned po restartování synchronizuje nebo hned synchronizuje probuzení z režimu spánku, toto nastavení se může hlásit jako **Chyba**. Tento scénář nemusí mít vliv na celkový stav dodržování předpisů zařízením. Pokud chcete znovu vyhodnotit stav dodržování předpisů, proveďte ruční [synchronizaci zařízení](https://docs.microsoft.com/mem/intune/user-help/sync-your-device-manually-windows).
 
-- **Čip TPM (Trusted Platform Module)** :  
+- **Čip TPM (Trusted Platform Module)**:  
   - **Nenakonfigurováno** (*výchozí*) – Intune nekontroluje u zařízení verzi čipu TPM.
   - **Vyžadovat** – Intune kontroluje dodržování předpisů ve verzi čipu TPM. Zařízení splňuje předpisy, pokud je verze čipu TPM větší než **0** (nula). Zařízení nedodržuje předpisy, pokud na zařízení není verze TPM.  
 
@@ -240,7 +240,7 @@ Platí jenom pro spoluspravovaná zařízení s Windows 10 a novějším. Zaří
 
 Windows Holographic for Business používá platformu **Windows 10 a novější**. Windows Holographic for Business podporuje následující nastavení:
 
-- **Zabezpečení systému** > **Šifrování** > **Šifrování datového úložiště na zařízení**.
+- **System Security** > **Šifrování**zabezpečení > systému**datového úložiště na zařízení**.
 
 Pokud chcete ověřit šifrování u zařízení Microsoft HoloLens, přečtěte si článek [Ověření šifrování zařízení](https://docs.microsoft.com/hololens/hololens-encryption#verify-device-encryption).
 

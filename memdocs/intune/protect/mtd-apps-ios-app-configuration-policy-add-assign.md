@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 627fb13554f8f379f75f08c27d18cdd0b1106028
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80084848"
 ---
 # <a name="add-and-assign-mobile-threat-defense-mtd-apps-with-intune"></a>Přidání a přiřazení aplikací pro ochranu před mobilními hrozbami (MTD) pomocí Intune
@@ -64,7 +64,7 @@ Vyberte část, která odpovídá vašemu poskytovateli MTD:
 
 ### <a name="configure-lookout-for-work-apps"></a>Konfigurace aplikací Lookout for Work
 
-- **Androidemem**
+- **Android**
   - Přečtěte si pokyny pro [přidávání aplikací z Android Storu do Microsoft Intune](../apps/store-apps-android.md). Použijte tuto [adresu URL obchodu Google App Storu](https://play.google.com/store/apps/details?id=com.lookout.enterprise) pro **adresu URL AppStore**.
 
 - **iOS**
@@ -82,7 +82,7 @@ Vyberte část, která odpovídá vašemu poskytovateli MTD:
 
     3. Text **com.lookout.enterprise.názevfirmy** nahraďte identifikátorem zákaznického balíčku, který jste vybrali při podepisování IPA.
 
-    4. Přidejte další identifikátor URI pro přesměrování: **&lt;companyportal://code/>** následovaný původním identifikátorem URI pro přesměrování ve verzi kódované v řetězci URL.
+    4. Přidejte další identifikátor URI pro přesměrování: ** &lt;CompanyPortal://Code/>** následovaný verzí s kódováním URL vašeho původního identifikátoru URI pro přesměrování.
 
     5. Přidejte k aplikaci **Delegovaná oprávnění**.
 
@@ -95,15 +95,15 @@ Vyberte část, která odpovídá vašemu poskytovateli MTD:
 
 ### <a name="configure-symantec-endpoint-protection-mobile-apps"></a>Konfigurace aplikací Symantec Endpoint Protection Mobile
 
-- **Androidemem**
-  - Přečtěte si pokyny pro [přidávání aplikací z Android Storu do Microsoft Intune](../apps/store-apps-android.md). Použijte tuto [adresu URL obchodu s mobilními aplikacemi SEP](https://play.google.com/store/apps/details?id=com.skycure.skycure) pro **adresu URL AppStore**.  Jako **Minimální operační systém** vyberte **Android 4.0 (Ice Cream Sandwich)** .
+- **Android**
+  - Přečtěte si pokyny pro [přidávání aplikací z Android Storu do Microsoft Intune](../apps/store-apps-android.md). Použijte tuto [adresu URL obchodu s mobilními aplikacemi SEP](https://play.google.com/store/apps/details?id=com.skycure.skycure) pro **adresu URL AppStore**.  Jako **Minimální operační systém** vyberte **Android 4.0 (Ice Cream Sandwich)**.
 
 - **iOS**
   - Přečtěte si pokyny pro [přidávání aplikací z iOS Storu do Microsoft Intune](../apps/store-apps-ios.md). Použijte tuto [adresu URL obchodu s mobilními aplikacemi SEP](https://itunes.apple.com/us/app/skycure/id695620821?mt=8) pro **adresu URL AppStore**.
 
 ### <a name="configure-check-point-sandblast-mobile-apps"></a>Konfigurace aplikací Check Point SandBlast Mobile
 
-- **Androidemem**  
+- **Android**  
   - Přečtěte si pokyny pro [přidávání aplikací z Android Storu do Microsoft Intune](../apps/store-apps-android.md). Pro **adresu URL AppStore**použijte tuto [adresu URL pro SandBlast mobilní aplikace v tomto kontrolním bodě](https://play.google.com/store/apps/details?id=com.lacoon.security.fox) .
 
 - **iOS**
@@ -111,7 +111,7 @@ Vyberte část, která odpovídá vašemu poskytovateli MTD:
 
 ### <a name="configure-zimperium-apps"></a>Konfigurace aplikací Zimperium
 
-- **Androidemem**
+- **Android**
   - Přečtěte si pokyny pro [přidávání aplikací z Android Storu do Microsoft Intune](../apps/store-apps-android.md). Tuto [adresu URL obchodu s aplikacemi Zimperium](https://play.google.com/store/apps/details?id=com.zimperium.zips&hl=en) použijte pro **adresu URL AppStore**.
 
 - **iOS**
@@ -119,7 +119,7 @@ Vyberte část, která odpovídá vašemu poskytovateli MTD:
  
 ### <a name="configure-pradeo-apps"></a>Konfigurace aplikací Pradeo
 
-- **Androidemem**
+- **Android**
   - Přečtěte si pokyny pro [přidávání aplikací z Android Storu do Microsoft Intune](../apps/store-apps-android.md). Tuto [adresu URL obchodu s aplikacemi Pradeo](https://play.google.com/store/apps/details?id=net.pradeo.service&hl=en_US) použijte pro **adresu URL AppStore**.
 
 - **iOS**
@@ -127,7 +127,7 @@ Vyberte část, která odpovídá vašemu poskytovateli MTD:
 
 ### <a name="configure-better-mobile-apps"></a>Konfigurace aplikací Better Mobile
 
-- **Androidemem**
+- **Android**
   - Přečtěte si pokyny pro [přidávání aplikací z Android Storu do Microsoft Intune](../apps/store-apps-android.md). Použijte tuto [aktivní adresu URL obchodu s aplikacemi](https://play.google.com/store/apps/details?id=com.better.active.shield.enterprise) pro **AppStore**.
 
 - **iOS**
@@ -135,7 +135,7 @@ Vyberte část, která odpovídá vašemu poskytovateli MTD:
 
 ### <a name="configure-sophos-apps"></a>Konfigurace aplikací Sophos
 
-- **Androidemem**
+- **Android**
   - Přečtěte si pokyny pro [přidávání aplikací z Android Storu do Microsoft Intune](../apps/store-apps-android.md). Použijte tuto [adresu URL obchodu s aplikacemi Sophos](https://play.google.com/store/apps/details?id=com.sophos.smsec) pro **adresu URL AppStore**.
 
 - **iOS**
@@ -143,7 +143,7 @@ Vyberte část, která odpovídá vašemu poskytovateli MTD:
 
 ### <a name="configure-wandera-apps"></a>Konfigurace aplikací Wandera
 
-- **Androidemem**
+- **Android**
   - Přečtěte si pokyny pro [přidávání aplikací z Android Storu do Microsoft Intune](../apps/store-apps-android.md). Použijte tuto [adresu URL obchodu Wandera mobilních aplikací](https://play.google.com/store/apps/details?id=com.wandera.android) pro **adresu URL AppStore**. V případě **minimálního operačního systému**vyberte **Android 5,0**.
 
 - **iOS**
@@ -164,11 +164,11 @@ Použijte stejný účet Azure AD, který jste dříve nakonfigurovali v [konzol
 
   - Přejděte na **Settings** (Nastavení) a v části **Integrations** (Integrace) zvolte **Intune**. Zvolte **EMM Integration Selection** (Výběr integrace EMM). Zvolte **Microsoft** a pak svůj výběr uložte.
 
-  - Klikněte na odkaz **Integration setup files** (Integrační soubory nastavení) a vygenerovaný soubor \*.zip uložte. Soubor .zip obsahuje soubor * **.plist**, který se použije k vytvoření zásad konfigurace aplikace pro iOS v Intune.
+  - Klikněte na odkaz **Integration setup files** (Integrační soubory nastavení) a vygenerovaný soubor \*.zip uložte. Soubor .zip obsahuje soubor ***.plist**, který se použije k vytvoření zásad konfigurace aplikace pro iOS v Intune.
 
   - Pokud chcete přidat zásady konfigurace aplikace SEP Mobile pro iOS, přečtěte si pokyny ohledně [používání zásad konfigurace aplikací služby Microsoft Intune pro iOS](../apps/app-configuration-policies-use-ios.md).
 
-    - Pro **formát nastavení konfigurace**vyberte **zadat XML data**, zkopírujte obsah ze souboru * **. plist** a vložte jeho obsah do těla zásad konfigurace.
+    - Pro **formát nastavení konfigurace**vyberte **zadat XML data**, zkopírujte obsah ze souboru ***. plist** a vložte jeho obsah do těla zásad konfigurace.
 
 > [!NOTE]
 > Pokud se vám nedaří soubory načíst, obraťte se na [podporu Symantec Endpoint Protection Mobile pro firmy](https://support.symantec.com/en_US/contact-support.html).
@@ -232,7 +232,7 @@ Pokud chcete přidat zásady konfigurace aplikace Wandera pro iOS, přečtěte s
 
 - V případě **formátu nastavení konfigurace**vyberte možnost **zadat data XML**.
 
-Přihlaste se k portálu pro PAPRSKový Wandera a přejděte do **nastavení** > **integraci EMM** > **push App**. Vyberte **Intune**a potom zkopírujte obsah níže a vložte ho do těla zásad konfigurace.  
+Přihlaste se k portálu pro paprskový Wandera a přejděte do **Nastavení** > **integrace** > **aplikace EMM nabízená**instalace. Vyberte **Intune**a potom zkopírujte obsah níže a vložte ho do těla zásad konfigurace.  
 
   ```
   <dict><key>secretKey</key>

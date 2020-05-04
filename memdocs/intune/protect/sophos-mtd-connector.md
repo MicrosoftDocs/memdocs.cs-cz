@@ -16,10 +16,10 @@ ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 285f323f55d41edab5ccd450deb0244b6fbda874
-ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79526440"
 ---
 # <a name="sophos-mobile-threat-defense-connector-with-intune"></a>Nastavení konektoru ochrany před mobilními hrozbami v Intune
@@ -65,21 +65,21 @@ Když se na zařízeních zjistí přítomnost škodlivých aplikací (třeba ma
 ![Zjistila se koncepční bitová kopie škodlivých aplikací.](./media/sophos-mtd-connector/sophos-malicious-apps-blocked.png)  
 
 *Přístup udělen při nápravě*:  
-![koncepční bitovou kopii přístupu uděleného po opravě](./media/sophos-mtd-connector/sophos-malicious-apps-unblocked.png)
+![Koncepční bitová kopie přístupu udělená po nápravě](./media/sophos-mtd-connector/sophos-malicious-apps-unblocked.png)
 
 ### <a name="control-access-based-on-threat-to-network"></a>Řízení přístupu na základě ohrožení sítě
 
-Detekuje hrozby pro vaši síť, jako jsou útoky prostředníkem, a chrání přístup k sítím Wi-Fi na základě rizika zařízení.  
+Zjišťuje ohrožení vaší sítě, například útoky prostředníkem, a chrání přístup k sítím Wi-Fi na základě rizika zařízení.  
 
 *Blokovat přístup k síti přes Wi-Fi*:  
-![blokovat přístup k síti přes Wi-Fi](./media/sophos-mtd-connector/sophos-network-wifi-blocked.png)
+![Blokovat přístup k síti přes Wi-Fi](./media/sophos-mtd-connector/sophos-network-wifi-blocked.png)
 
 *Přístup udělen při nápravě*:   
-![přístup udělen při nápravě](./media/sophos-mtd-connector/sophos-network-wifi-unblocked.png)  
+![Přístup udělen při nápravě](./media/sophos-mtd-connector/sophos-network-wifi-unblocked.png)  
 
 ### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>Řízení přístupu k SharePointu Online na základě ohrožení sítě
 
-Detekuje hrozby pro vaši síť, jako jsou útoky prostředníkem, a zabraňuje synchronizaci podnikových souborů na základě rizika zařízení.  
+Zjišťuje ohrožení vaší sítě, například útoky prostředníkem, a zabraňuje synchronizaci podnikových souborů na základě rizika zařízení.  
 
 *Zablokovat SharePoint Online, když jsou zjištěny hrozby sítě*:
 

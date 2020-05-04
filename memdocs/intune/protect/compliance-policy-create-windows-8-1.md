@@ -16,10 +16,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 0189fea7f73b70286a6daf844a10806d4c1e8a5d
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79329667"
 ---
 # <a name="windows-81-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Nastavení Windows 8.1 pro označení zařízení jako kompatibilních nebo nekompatibilních s použitím Intune
@@ -28,14 +28,14 @@ Tento článek obsahuje seznam a popis různých nastavení dodržování předp
 
 Tato funkce platí pro:
 
-- Wvdows Phone 8.1
-- Windows 8.1 a novější
+- Windows Phone 8.1
+- Windows 8.1 a vyšší
 
 Jako správce Intune můžete pomocí těchto nastavení dodržování předpisů ochránit prostředky vaší organizace. Další informace o zásadách dodržování předpisů a o tom, co dělají, najdete v tématu [Začínáme s dodržováním předpisů pro zařízení](device-compliance-get-started.md).
 
 ## <a name="before-you-begin"></a>Před zahájením
 
-[Vytvořte zásadu dodržování předpisů](create-compliance-policy.md#create-the-policy). V části **platforma**vyberte **Windows Phone 8,1** nebo **Windows 8.1 a novější**.
+[Vytvořte zásady dodržování předpisů](create-compliance-policy.md#create-the-policy). V části **platforma**vyberte **Windows Phone 8,1** nebo **Windows 8.1 a novější**.
 
 ## <a name="device-properties"></a>Vlastnosti zařízení
 
@@ -48,7 +48,7 @@ Jako správce Intune můžete pomocí těchto nastavení dodržování předpis�
 - **Maximální verze operačního systému pro mobilní zařízení**:  
   Zadejte maximální povolenou verzi. Pokud zařízení používá verzi operačního systému, která je novější než verze zadaná v pravidle, bude přístup k prostředkům organizace blokovaný. Uživateli zařízení se zobrazí výzva, aby kontaktoval správce IT. Zařízení nemá přístup k prostředkům organizace, dokud se nezmění pravidlo, které povoluje verzi operačního systému.
 
-**Windows 8.1 a novější**
+**Windows 8.1 a vyšší**
 - **Minimální verze operačního systému**:  
   Zadejte minimální povolenou verzi. Pokud zařízení nesplňuje požadavek na minimální verzi operačního systému, nahlásí se jako nevyhovující. Zobrazí se odkaz s informacemi, jak upgradovat. Uživatel zařízení si může upgradovat svoje zařízení a pak získat přístup k firemním prostředkům.
 
@@ -98,7 +98,7 @@ Počítače s Windows 8.1 vrací verzi **3**. Pokud je pravidlo verze operační
 - **Maximální počet minut nečinnosti před vyžadováním hesla**:  
   Zadejte dobu nečinnosti, než uživatel musí znovu zadat heslo.
 
-- **Vypršení platnosti hesla (dny)** :  
+- **Vypršení platnosti hesla (dny)**:  
   Vyberte počet dní do vypršení platnosti hesla a uživatelé musí vytvořit nové.
 
 - **Počet předchozích hesel, která zabrání opakovanému použití**:  

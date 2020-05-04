@@ -1,6 +1,6 @@
 ---
 title: Konfigurace nastavení sítě VPN pro zařízení s iOS nebo iPadOS v Microsoft Intune – Azure | Microsoft Docs
-description: Přidejte nebo vytvořte profil konfigurace sítě VPN na zařízeních s iOS/iPadOS pomocí nastavení konfigurace virtuální privátní sítě (VPN). Nakonfigurujte podrobnosti připojení, metody ověřování, dělené tunelové propojení, vlastní nastavení sítě VPN s páry identifikátor, klíč-hodnota, nastavení sítě VPN pro jednotlivé aplikace, které zahrnují adresy URL Safari, a sítě VPN na vyžádání, které budou zahrnovat nastavení proxy serveru. konfigurační skript, adresa IP nebo plně kvalifikovaný název domény a port TCP v Microsoft Intune.
+description: Přidejte nebo vytvořte profil konfigurace sítě VPN na zařízeních s iOS/iPadOS pomocí nastavení konfigurace virtuální privátní sítě (VPN). Nakonfigurujte podrobnosti připojení, metody ověřování, dělené tunelové propojení, vlastní nastavení sítě VPN s páry identifikátorů, klíčů a hodnot, nastavení sítě VPN pro jednotlivé aplikace, které zahrnují adresy URL Safari, a sítě VPN na vyžádání, které obsahují konfigurační skripty, adresy IP nebo plně kvalifikovaného názvu domény a port TCP v Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -16,10 +16,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 74e889419dcaaa75c2a31fe16931dddd84d1a967
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80086539"
 ---
 # <a name="add-vpn-settings-on-ios-and-ipados-devices-in-microsoft-intune"></a>Přidání nastavení sítě VPN v zařízeních s iOS a iPadOS v Microsoft Intune
@@ -43,7 +43,7 @@ Z následujícího seznamu dodavatelů vyberte typ připojení VPN:
 - **SonicWall Mobile Connect**
 - **Starší verze F5 Access**: Určeno pro aplikaci F5 Access verze 2.1 a starší.
 - **F5 Access**: Určeno pro aplikaci F5 Access verze 3.0 a novější.
-- **Palo Alto Networks GlobalProtect (starší verze)** : Určeno pro aplikaci Palo Alto Networks GlobalProtect verze 4.1 a starší.
+- **Palo Alto Networks GlobalProtect (starší verze)**: Určeno pro aplikaci Palo Alto Networks GlobalProtect verze 4.1 a starší.
 - **Palo Alto Networks GlobalProtect**: Určeno pro aplikaci Palo Alto Networks GlobalProtect verze 5.0 a novější.
 - **Pulse Secure**
 - **Cisco (IPSec)**
@@ -106,7 +106,7 @@ Nastavení, která jsou v následujícím seznamu, jsou ovlivněná zvoleným ty
 
 ## <a name="ikev2-settings"></a>Nastavení IKEv2
 
-Tato nastavení se použijí, když zvolíte **Typ připojení** > **IKEv2**.
+Tato nastavení se použijí, když zvolíte **typ** > připojení**IKEv2**.
 
 - **Vždycky zapnutá síť VPN**: **Povolit** nastaví klienta VPN tak, aby se automaticky připojoval a znovu připojil k síti VPN. Neustále aktivní připojení VPN zůstávají ve spojení nebo se ihned připojí, jakmile uživatel zamkne zařízení, zařízení se restartuje nebo se změní bezdrátová síť. Pokud je nastavené na **Zakázat** (výchozí), je vždycky zapnutá síť VPN pro všechny klienty VPN. Pokud je tato možnost povolená, nakonfigurujte taky:
 
@@ -133,7 +133,7 @@ Tato nastavení se použijí, když zvolíte **Typ připojení** > **IKEv2**.
     - **Ano, konkrétní aplikace**: **přidá** seznam aplikací propojené sítě, jejichž provoz může obejít síť VPN. Zadejte identifikátory sady prostředků aplikace CN. Zadejte například `com.contoso.app.id.package`.
 
   - **Provoz z neobsluhované aplikace weblist, který se má předat mimo VPN**: vestavěný weblist je integrovaný webový prohlížeč, který zpracovává přihlašovacího přihlášení. Při použití této **možnost povolíte** , aby aplikace prohlížeče mohla obejít síť VPN. **Disable** (výchozí) vynutí provoz na weblist, aby používal síť VPN Always On. Výchozí hodnota je nejbezpečnější možnost.
-  - **Interval kontroly udržení adres (NAT)** (v sekundách): Pokud chcete zůstat připojení k síti VPN, zařízení zachová aktivní síťové pakety. Zadejte hodnotu v sekundách, jak často se tyto pakety odesílají, od 20-1440. Zadejte například hodnotu `60` pro odeslání síťových paketů do sítě VPN každých 60 sekund. Ve výchozím nastavení je tato hodnota nastavená na `110` sekund.
+  - **Interval kontroly udržení adres (NAT)**(v sekundách): Pokud chcete zůstat připojení k síti VPN, zařízení zachová aktivní síťové pakety. Zadejte hodnotu v sekundách, jak často se tyto pakety odesílají, od 20-1440. Zadejte například hodnotu `60` pro odeslání síťových paketů do sítě VPN každých 60 sekund. Ve výchozím nastavení je tato hodnota nastavena na `110` sekund.
   - Přesměrovat nastavení protokolu **NAT na hardware, když je zařízení v režimu spánku**: když je zařízení v režimu spánku, **Povolit** (výchozí) NAT nepřetržitě odesílá pakety Keep-Alive, takže zařízení zůstane připojené k síti VPN. **Disable** tuto funkci vypne.
 
 - **Vzdálený identifikátor**: zadejte síťovou IP adresu, plně kvalifikovaný název domény, USERFQDN nebo ASN1DN serveru IKEv2. Zadejte například `10.0.0.3` nebo `vpn.contoso.com`. Obvykle zadáváte stejnou hodnotu jako [**název připojení**](#base-vpn-settings) (v tomto článku). Ale závisí na nastavení serveru IKEv2.
@@ -164,8 +164,8 @@ Tato nastavení se použijí, když zvolíte **Typ připojení** > **IKEv2**.
   - **Střední** (výchozí): odešle zprávu kontroly stavu kontroly každých 10 minut.
   - **Vysoká**: pošle zprávu o prohození každých 60 sekund.
 
-- **Minimální rozsah verze TLS**: zadejte minimální verzi TLS, kterou chcete použít. Zadejte `1.0`, `1.1`nebo `1.2`. Pokud necháte pole prázdné, použije se výchozí hodnota `1.0`.
-- **Maximální hodnota rozsahu verze TLS**: zadejte maximální verzi TLS, která se má použít. Zadejte `1.0`, `1.1`nebo `1.2`. Pokud necháte pole prázdné, použije se výchozí hodnota `1.2`.
+- **Minimální rozsah verze TLS**: zadejte minimální verzi TLS, kterou chcete použít. Zadejte `1.0`, `1.1`nebo `1.2`. Pokud necháte pole prázdné, použije se výchozí `1.0` hodnota.
+- **Maximální hodnota rozsahu verze TLS**: zadejte maximální verzi TLS, která se má použít. Zadejte `1.0`, `1.1`nebo `1.2`. Pokud necháte pole prázdné, použije se výchozí `1.2` hodnota.
 
 > [!NOTE]
 > Při použití ověřování uživatelů a certifikátů je potřeba nastavit minimální a maximální rozsah verze TLS.
@@ -176,38 +176,38 @@ Tato nastavení se použijí, když zvolíte **Typ připojení** > **IKEv2**.
 - **Konfigurovat parametry přidružení zabezpečení**: **Nenakonfigurováno** (výchozí) používá výchozí systém iOS/iPadOS. Pokud chcete zadat parametry používané při vytváření přidružení zabezpečení se serverem VPN, vyberte **Povolit** .
   - **Šifrovací algoritmus**: vyberte algoritmus, který chcete:
     - DES
-    - ŠIFROVÁNÍ
+    - 3DES
     - AES-128
     - AES-256 (výchozí)
     - AES-128 – GCM
-    - AES-256-GCM
+    - AES-256 – GCM
   - **Algoritmus integrity**: vyberte algoritmus, který chcete:
     - SHA1-96
     - SHA1 – 160
     - SHA2-256 (výchozí)
     - SHA2 – 384
     - SHA2 – 512
-  - **Skupina Diffie-Hellman**: vyberte skupinu, kterou chcete. Výchozí hodnota je skupina `2`.
-  - **Doba života** (minuty): vyberte, jak dlouho zůstane přidružení zabezpečení aktivní, dokud se klíče neotáčí. Zadejte celou hodnotu mezi `10` a `1440` (1440 minut je 24 hodin). Výchozí hodnota je `1440`.
+  - **Skupina Diffie-Hellman**: vyberte skupinu, kterou chcete. Výchozí hodnota je `2`skupina.
+  - **Doba života** (minuty): vyberte, jak dlouho zůstane přidružení zabezpečení aktivní, dokud se klíče neotáčí. Zadejte celou hodnotu v rozsahu `10` a `1440` (1440 minut je 24 hodin). Výchozí je `1440`.
 
 - **Konfigurace samostatné sady parametrů pro podřízená přidružení zabezpečení**: iOS/iPadOS umožňuje konfigurovat samostatné parametry pro připojení IKE a všechna podřízená připojení. 
 
   **Nenakonfigurováno** (výchozí) používá hodnoty, které zadáte v nastavení dříve **Konfigurovat parametry přidružení zabezpečení** . Pokud chcete zadat parametry používané při vytváření *podřízených* přidružení zabezpečení se serverem VPN, vyberte **Povolit** .
   - **Šifrovací algoritmus**: vyberte algoritmus, který chcete:
     - DES
-    - ŠIFROVÁNÍ
+    - 3DES
     - AES-128
     - AES-256 (výchozí)
     - AES-128 – GCM
-    - AES-256-GCM
+    - AES-256 – GCM
   - **Algoritmus integrity**: vyberte algoritmus, který chcete:
     - SHA1-96
     - SHA1 – 160
     - SHA2-256 (výchozí)
     - SHA2 – 384
     - SHA2 – 512
-  - **Skupina Diffie-Hellman**: vyberte skupinu, kterou chcete. Výchozí hodnota je skupina `2`.
-  - **Doba života** (minuty): vyberte, jak dlouho zůstane přidružení zabezpečení aktivní, dokud se klíče neotáčí. Zadejte celou hodnotu mezi `10` a `1440` (1440 minut je 24 hodin). Výchozí hodnota je `1440`.
+  - **Skupina Diffie-Hellman**: vyberte skupinu, kterou chcete. Výchozí hodnota je `2`skupina.
+  - **Doba života** (minuty): vyberte, jak dlouho zůstane přidružení zabezpečení aktivní, dokud se klíče neotáčí. Zadejte celou hodnotu v rozsahu `10` a `1440` (1440 minut je 24 hodin). Výchozí je `1440`.
 
 ## <a name="automatic-vpn-settings"></a>Automatické nastavení sítě VPN
 
@@ -218,7 +218,7 @@ Tato nastavení se použijí, když zvolíte **Typ připojení** > **IKEv2**.
 
 - **Síť VPN na vyžádání:** Nakonfigurujte podmíněná pravidla, která řídí, kdy se má připojení VPN spustit. Můžete třeba vytvořit podmínku, že se připojení VPN použije, jen pokud zařízení není připojené k firemní síti Wi-Fi. Nebo vytvořte podmínku. Pokud například zařízení nemá přístup k zadané doméně hledání DNS, pak se připojení VPN nespustí.
 
-  - **Identifikátory SSID nebo domény hledání DNS**: Vyberte, jestli se v této podmínce používají identifikátory **SSID** bezdrátové sítě nebo **domény hledání DNS**. Zvolte **Přidat** a nakonfigurujte minimálně jeden identifikátor SSID nebo doménu hledání.
+  - **Identifikátory SSID nebo domény hledání DNS**: Vyberte, jestli se v této podmínce používají identifikátory **SSID** bezdrátové sítě nebo **domény hledání DNS**. Vyberte **Přidat** a nakonfigurujte minimálně jeden identifikátor SSID nebo doménu hledání.
   - **Test řetězce adresy URL**: Toto nastavení je volitelné. Zadejte adresu URL, kterou pravidlo použije pro účely testování. Pokud zařízení přistupuje k této adrese URL bez přesměrování, spustí se připojení VPN. A zařízení se připojí k cílové adrese URL. Uživatel neuvidí testovací web řetězce adresy URL.
 
     Například test řetězce adresy URL je audit URL webového serveru, který kontroluje dodržování předpisů zařízením před připojením k síti VPN. Adresa URL taky testuje schopnost sítě VPN připojit se k lokalitě předtím, než se zařízení připojí k cílové adrese URL prostřednictvím sítě VPN.
@@ -238,7 +238,7 @@ Pokud používáte proxy server, nakonfigurujte následující nastavení. Nasta
 
 - **Skript automatické konfigurace**: ke konfiguraci proxy serveru použijte konfigurační soubor. Zadejte **adresu URL proxy serveru** (například `http://proxy.contoso.com`), na které je konfigurační soubor.
 - **Adresa**: Zadejte IP adresu plně kvalifikovaného názvu hostitele proxy serveru.
-- **Číslo portu**: Zadejte číslo portu přidruženého k proxy serveru.
+- **Číslo portu**: zadejte číslo portu přidruženého k proxy server.
 
 ## <a name="next-steps"></a>Další kroky
 

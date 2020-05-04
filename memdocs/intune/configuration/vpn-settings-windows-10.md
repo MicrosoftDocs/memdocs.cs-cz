@@ -17,10 +17,10 @@ ms.reviewer: tycast
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 8d2f671e88b1221961e978d1945e28c7cec474cb
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80086510"
 ---
 # <a name="windows-10-and-windows-holographic-device-settings-to-add-vpn-connections-using-intune"></a>Nastavení zařízení s Windows 10 a Windows holografické pro přidání připojení k síti VPN pomocí Intune
@@ -141,7 +141,7 @@ Další informace o vytváření vlastních dat XML protokolu EAP najdete v tém
 
   ![Výběr tří teček a kliknutí a přetažení za účelem přesunutí přípony DNS](./media/vpn-settings-windows-10/vpn-settings-windows10-move-dns-suffix.png)
 
-- **Pravidla pro tabulku zásad překladu IP adres (NRPT)** : pravidla pro překlad adres IP (NRPT) definují, jak DNS překládá názvy při připojení k síti VPN. Po navázání připojení VPN zvolíte, které servery DNS připojení VPN používá.
+- **Pravidla pro tabulku zásad překladu IP adres (NRPT)**: pravidla pro překlad adres IP (NRPT) definují, jak DNS překládá názvy při připojení k síti VPN. Po navázání připojení VPN zvolíte, které servery DNS připojení VPN používá.
 
   Do tabulky můžete přidat pravidla, která zahrnují doménu, server DNS, proxy a další podrobnosti pro překlad domény, kterou zadáte. Připojení VPN používá tato pravidla, když se uživatelé připojí k doménám, které zadáte.
 
@@ -150,7 +150,7 @@ Další informace o vytváření vlastních dat XML protokolu EAP najdete v tém
   - **Doména**: zadejte plně kvalifikovaný název domény (FQDN) nebo příponu DNS pro použití pravidla. Můžete také zadat tečku (.) na začátku pro příponu DNS. Zadejte například `contoso.com` nebo `.allcontososubdomains.com`.
   - **Servery DNS**: zadejte IP adresu nebo server DNS, který tuto doménu vyřeší. Zadejte například `10.0.0.3` nebo `vpn.contoso.com`.
   - **Proxy**: zadejte web proxy server, který řeší doménu. Zadejte například `http://proxy.com`.
-  - **Automaticky připojit**: Pokud je tato možnost **povolena**, zařízení se automaticky připojí k síti VPN, když se zařízení připojí k doméně, kterou zadáte, například `contoso.com`. Pokud **není nakonfigurovaná** (výchozí), zařízení se k síti VPN automaticky nepřipojí.
+  - **Automaticky připojit**: Pokud je tato možnost **povolena**, zařízení se automaticky připojí k síti VPN, když se zařízení připojí k doméně, kterou `contoso.com`zadáte, jako je například. Pokud **není nakonfigurovaná** (výchozí), zařízení se k síti VPN automaticky nepřipojí.
   - **Persistent**: Pokud je tato možnost nastavená na **povolenou**, pravidlo zůstane v tabulce zásad překladu IP adres (NRPT), dokud se ze zařízení ručně neodebere pravidlo, a to ani po odpojení sítě VPN. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), pravidla NRPT v profilu sítě VPN se ze zařízení odeberou, když se síť VPN odpojí.
 
 ## <a name="proxy-settings"></a>Nastavení proxy serveru
@@ -162,7 +162,7 @@ Další informace o vytváření vlastních dat XML protokolu EAP najdete v tém
 
 ## <a name="split-tunneling"></a>Dělené tunelové propojení
 
-- **Rozdělit tunel**: tuto možnost můžete **povolit** nebo **zakázat**, aby se zařízení mohla rozhodnout, které připojení se má v závislosti na typech přenosů používat. Uživatel v hotelu například pro přístup k pracovním souborům použije připojení VPN, ale pro běžné procházení webu bude používat standardní síť hotelu.
+- **Dělené tunelové propojení**: **Povolit** nebo **Zakázat** , aby se zařízení mohla rozhodnout, které připojení se má použít v závislosti na provozu. Uživatel v hotelu například pro přístup k pracovním souborům použije připojení VPN, ale pro běžné procházení webu bude používat standardní síť hotelu.
 - **Rozdělit tunelové trasy pro toto připojení k síti VPN**: přidejte volitelné trasy pro externí poskytovatele připojení VPN. Pro každé připojení zadejte předponu cíle a velikost předpony.
 
 ## <a name="trusted-network-detection"></a>Zjištění důvěryhodné sítě

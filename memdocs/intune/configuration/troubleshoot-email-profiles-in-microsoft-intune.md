@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 4d7e3b5b9a169baf336b0d4e7d8d66b06af38061
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79332195"
 ---
 # <a name="common-issues-and-resolutions-with-email-profiles-in-microsoft-intune"></a>Běžné problémy a řešení v e-mailových profilech v Microsoft Intune
@@ -62,8 +62,8 @@ Zkontrolujte konfiguraci svého profilu EAS pro zařízení Samsung KNOX a zdroj
 Uživatelé, kteří mají automaticky nastavené e-mailové účty, nemůžou ze svých zařízení odesílat obrázky ani obrázky. K tomuto scénáři může dojít, pokud není povolená **možnost povolit odesílání e-mailů z aplikací třetích stran** .
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **zařízení** > **konfigurační profily**.
-3. Vyberte váš e-mailový profil > **vlastnosti** > **Nastavení**.
+2. Vyberte možnost**profily konfigurace** **zařízení** > .
+3. Vyberte váš e-mailový profil >**Nastavení** **vlastností** > .
 4. Nastavte povolení **odesílání e-mailů z aplikací třetích stran** na hodnotu **Povolit**.
 
 ## <a name="next-steps"></a>Další kroky

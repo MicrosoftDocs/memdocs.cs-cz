@@ -19,20 +19,20 @@ ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 81ea88bc72e6bcd52dbfe51cb4fa12803605de18
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79330387"
 ---
-# <a name="tutorial-walkthrough-intune-in-microsoft-endpoint-manager"></a>Kurz: návod Intune ve Správci Microsoft Endpoint Manager
+# <a name="tutorial-walkthrough-intune-in-microsoft-endpoint-manager"></a>Kurz: Seznámení se se službou Intune v Microsoft Endpoint Manageru
 
 [Azure](https://docs.microsoft.com/learn/modules/welcome-to-azure) obsahuje více než 100 služeb, které vám pomůžou s nejrůznějšími scénáři a možnostmi cloud computingu. Microsoft Intune je jedna z několika služeb dostupných v Azure. Intune vám pomůže zajistit, aby zařízení, aplikace a data vaší společnosti splňovaly požadavky na zabezpečení vaší společnosti. Máte kontrolu nad tím, které požadavky je potřeba zkontrolovat a co se stane, když tyto požadavky nebudou splněné. [Centrum pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) je místo, kde můžete najít službu Microsoft Intune a další nastavení související s správou zařízení. Porozumění funkcím dostupným v Intune vám pomůže dosáhnout různých úloh správy mobilních zařízení (MDM) a správy mobilních aplikací (MAM).
 
 > [!NOTE]
 > Microsoft Endpoint Manager je jediná integrovaná platforma pro správu koncových bodů pro správu všech vašich koncových bodů. Toto centrum pro správu Microsoft Endpoint Manageru integruje nástroj ConfigMgr a Microsoft Intune.
 
-V tomto kurzu se naučíte:
+V tomto kurzu provedete následující:
 > [!div class="checklist"]
 > * Prohlídka centra pro správu Microsoft Endpoint Manageru
 > * Přizpůsobení zobrazení centra pro správu Microsoft Endpoint Manageru
@@ -110,7 +110,7 @@ Pomocí následujících kroků můžete lépe pochopit Intune v centru pro spr�
 
     Podmíněný přístup označuje způsoby, kterými můžete řídit zařízení a aplikace, které se můžou připojovat k e-mailu a prostředkům společnosti. Další informace o podmíněném přístupu založeném na zařízeních a aplikacích a o běžných scénářích použití podmíněného přístupu v Intune najdete v tématu [co je podmíněný přístup?](../protect/conditional-access.md) .
 
-6. V navigačním podokně vyberte **zařízení** > **konfigurační profily** , abyste zobrazili podrobnosti o profilech zařízení v Intune.
+6. V navigačním podokně vyberte možnost**profily konfigurací** **zařízení** > a zobrazte podrobnosti o profilech zařízení v Intune.
 
     ![Snímek obrazovky centra pro správu služby Microsoft Endpoint Manager – konfigurační profily](./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-06.png)
     
@@ -121,7 +121,7 @@ Pomocí následujících kroků můžete lépe pochopit Intune v centru pro spr�
 
     Další informace o konfiguraci zařízení najdete v tématu [použití nastavení funkcí v zařízeních pomocí profilů zařízení v Microsoft Intune](../configuration/device-profiles.md).
 
-7. V navigačním podokně vyberte **zařízení** > **všechna zařízení** , abyste zobrazili podrobnosti o zaregistrovaných zařízeních klienta Intune. Pokud začínáte s novým zařazení Intune, zatím nebudete mít žádná zaregistrovaná zařízení.
+7. V navigačním podokně vyberte **zařízení** > **všechna zařízení** a zobrazte podrobnosti o zaregistrovaných zařízeních klienta Intune. Pokud začínáte s novým zařazení Intune, zatím nebudete mít žádná zaregistrovaná zařízení.
 
     ![Snímek obrazovky s centrem pro správu Microsoft Endpoint Manageru – všechna zařízení](./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-07.png)
 
@@ -151,7 +151,7 @@ Pomocí následujících kroků můžete lépe pochopit Intune v centru pro spr�
 9. V podokně **aplikace – přehled** vyberte **všechny aplikace** , abyste viděli seznam aplikací přidaných do Intune.
 
     > [!TIP]
-    > Pokud jste v Azure Portal dříve použili Intune, zjistili jste výše uvedené podrobnosti v Azure Portal tak, že se přihlásíte k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) a vyberete **klientské aplikace** > **aplikace**.
+    > Pokud jste v Azure Portal dříve použili Intune, zjistili jste výše uvedené podrobnosti v Azure Portal tak, že se přihlásíte [k Intune](https://go.microsoft.com/fwlink/?linkid=2090973) a vyberete**aplikace**pro **klientské aplikace** > .
 
     Do Intune můžete přidat různé typy aplikací, které jsou založené na platformě. Po přidání aplikace ji můžete přiřadit ke skupinám uživatelů. 
 
@@ -188,7 +188,7 @@ Pomocí následujících kroků můžete lépe pochopit Intune v centru pro spr�
 
     Další informace najdete v tématu [stav tenanta Intune](tenant-status.md).
 
-13. V navigačním podokně vyberte **řešení potíží + podpora** > **řešení potíží** a ověřte podrobnosti o stavu konkrétního uživatele. 
+13. V navigačním podokně vyberte **řešení potíží +** > **řešení** potíží a ověřte podrobnosti o stavu konkrétního uživatele. 
 
     > [!TIP]
     > Pokud jste v Azure Portal dříve použili Intune, zjistili jste výše uvedené podrobnosti v Azure Portal tak, že se přihlásíte k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) a vyberete **řešení potíží**.
@@ -199,7 +199,7 @@ Pomocí následujících kroků můžete lépe pochopit Intune v centru pro spr�
 
     Další informace o řešení potíží v Intune najdete v tématu [použití portálu pro řešení potíží pro pomoc uživatelům ve vaší společnosti](help-desk-operators.md).
 
-14. V navigačním podokně vyberte **řešení potíží + podpora** > **nápovědě a podpoře** pro žádosti o pomoc.
+14. V navigačním podokně vyberte možnost **Poradce při potížích + podpora** > **a podpora a** požádejte o pomoc.
 
     > [!TIP]
     > Pokud jste v Azure Portal dříve použili Intune, zjistili jste výše uvedené podrobnosti v Azure Portal tak, že se přihlásíte k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) a vyberete možnost **pomoc a podpora**.
@@ -212,7 +212,7 @@ Pomocí následujících kroků můžete lépe pochopit Intune v centru pro spr�
 
     Další informace najdete v tématu [Jak získat podporu pro Microsoft Intune](get-support.md).
 
-15. V navigačním podokně vyberte **řešení potíží + podpora** > **scénářů** , které vám pomohou Zobrazit dostupné scénáře Intune s asistencí.
+15. V navigačním podokně vyberte **Poradce při potížích** > a ve**scénářích s asistencí** pro zobrazení dostupných scénářů s asistencí Intune.
 
     Scénář s asistencí je přizpůsobený sled kroků, které jsou na začátku celého případu použití. Běžné scénáře jsou založené na roli, kterou správce, uživatel nebo zařízení hraje ve vaší organizaci. Tyto role obvykle vyžadují kolekci pečlivě Orchestrované profily, nastavení, aplikace a kontroly zabezpečení, které poskytují nejlepší uživatelské prostředí a zabezpečení.
 
@@ -245,4 +245,4 @@ Centrum pro správu Microsoft Endpoint Manageru můžete přizpůsobit tak, že 
 Pokud chcete rychle pracovat na Microsoft Intune, přečtěte si první nastavení bezplatného účtu Intune a Projděte si rychlý Start k Intune.
 
 > [!div class="nextstepaction"]
-> [Rychlý Start: Vyzkoušejte si Microsoft Intune zdarma](free-trial-sign-up.md)
+> [Rychlý start: Bezplatné vyzkoušení Microsoft Intune](free-trial-sign-up.md)

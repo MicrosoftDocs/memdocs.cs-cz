@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/02/2020
+ms.date: 04/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a6855abaf09a89303bfadd1a973dd1e1761346af
-ms.sourcegitcommit: 954b3aae7916ad14065e6e86a577c5205103a50e
+ms.openlocfilehash: 728fa69303760252068db454c04ed4431b89602a
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80624893"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81615516"
 ---
 # <a name="add-managed-google-play-apps-to-android-enterprise-devices-with-intune"></a>Přidání spravovaných aplikací Google Play do zařízení s Androidem Enterprise pomocí Intune
 
@@ -129,7 +129,7 @@ Existují dva způsoby, jak přidat obchodní aplikace do spravovaných Google P
     > [!NOTE]
     > Synchronizace privátních aplikací může trvat několik minut, než se synchronizuje. Pokud se aplikace při prvním provedení synchronizace nezobrazí, počkejte pár minut a zahajte novou synchronizaci.
 
-Další informace o spravovaných Google Play privátních aplikacích včetně nejčastějších dotazů najdete v článku podpora Google: https://support.google.com/googleplay/work/answer/9146439
+Další informace o spravovaných Google Play privátních aplikacích včetně nejčastějších dotazů najdete v článku podpora Google:https://support.google.com/googleplay/work/answer/9146439
 
 >[!IMPORTANT]
 >Privátní aplikace přidané pomocí této metody se nikdy nedají zveřejnit. Tuto možnost publikování použijte jenom v případě, že jste si jisti, že tato aplikace bude vždycky soukromá pro vaši organizaci.
@@ -139,9 +139,7 @@ Další informace o spravovaných Google Play privátních aplikacích včetně 
 1. Přihlaste se ke [konzole pro vývojáře Google Play](https://play.google.com/apps/publish) pomocí stejného účtu, který jste použili ke konfiguraci připojení mezi Intune a Androidem Enterprise.  
     Pokud se přihlašujete poprvé, musíte se zaregistrovat a zaplatit poplatek, abyste se stali členy programu pro vývojáře Google.
 2. V této konzole zvolte **Přidat novou aplikaci**.
-3. Informace o vaší aplikaci nahrajete a zadáte stejným způsobem jako při publikování jakékoli jiné aplikace v obchodě Google Play. Musíte ale vybrat **Zpřístupnit tuto aplikaci pouze pro moji organizaci (<*název organizace*>)** .
-
-    ![Zpřístupnění aplikace jen pro vaši organizaci](./media/apps-add-android-for-work/restrict.png)
+3. Informace o vaší aplikaci nahrajete a zadáte stejným způsobem jako při publikování jakékoli jiné aplikace v obchodě Google Play. Musíte ale vybrat **Zpřístupnit tuto aplikaci pouze pro moji organizaci (<*název organizace*>)**.
 
     Tato operace zpřístupní aplikaci ve vaší organizaci. Nebude dostupná ve veřejném obchodu Google Play.
 
@@ -175,7 +173,7 @@ Webové odkazy se otevřou pomocí Microsoft Edge nebo jakékoli jiné aplikace 
 Pokud jste aplikaci schválili ze Storu a nevidíte ji v úloze **aplikace** , vynuťte okamžitou synchronizaci následujícím způsobem:
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-3. Vyberte **aplikace** > **Správa tenanta** > **konektory a tokeny** > **spravované Google Play**.
+3. Vyberte **aplikace** > konektory**pro správu** > **tenanta a tokeny** > **spravované Google Play**.
 5. V podokně **Spravovaný obchod Google Play** zvolte **Aktualizovat**.  
     Stránka aktualizuje čas a stav poslední synchronizace.
 6. V centru pro správu Microsoft Endpoint Manageru vyberte **aplikace** > **všechny aplikace**.  
@@ -218,6 +216,10 @@ Případně ale můžete obchod Google Play nastavit tak, aby automaticky schval
 ## <a name="additional-managed-google-play-app-reporting-for-android-enterprise-work-profile-devices"></a>Další spravované Google Play vytváření sestav aplikací pro zařízení s Androidem Enterprise Work Profile
 
 U spravovaných aplikací Google Play nasazených do zařízení se systémem Android Enterprise Work profilů můžete zobrazit stav a číslo verze aplikace nainstalované na zařízení pomocí Intune. 
+
+## <a name="working-with-managed-google-play-closed-testing-tracks"></a>Práce s ukončenými testovacími běhy spravované Google Play
+
+Neprodukční verzi spravované aplikace Google Play můžete distribuovat do zařízení zaregistrovaných ve scénáři Android Enterprise (**Enterprise Work Profile**, **plně spravované**a **vyhrazené**), aby bylo možné provádět testování. V Intune můžete zjistit, jestli aplikace obsahuje předprodukční zkušební záznam buildu, který je na něj publikovaný, a taky umožnit přiřazení této stopy ke skupinám uživatelů AAD nebo skupinám zařízení. Pracovní postup přiřazení produkční verze ke skupině, která aktuálně existuje, je stejný jako při přiřazování neprodukčního kanálu. Po nasazení bude stav instalace každé stopy odpovídat číslu verze stopy ve spravovaném Google Play. Další informace najdete v tématu [o ukončených testovacích běhů Google Play pro předběžné verze testování aplikace](https://support.google.com/googleplay/android-developer/answer/3131213).
 
 ## <a name="delete-managed-google-play-apps"></a>Odstranit spravované aplikace Google Play
 V případě potřeby můžete z Microsoft Intune odstranit spravované aplikace Google Play. Pokud chcete odstranit spravovanou aplikaci Google Play, otevřete Microsoft Intune v Azure Portal a vyberte **aplikace** > **všechny aplikace**. V seznamu aplikace vyberte tři tečky (...) napravo od spravované aplikace Google Play a pak v zobrazeném seznamu vyberte **Odstranit** . Při odstranění spravované aplikace Google Play ze seznamu aplikací se spravovaná aplikace Google Play automaticky neschválí.

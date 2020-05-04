@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 6aa9195e8d0559a106be323108487579eb068b91
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80084808"
 ---
 # <a name="audit-export-or-delete-personal-data-in-intune"></a>Audit, export a odstranění osobních dat v Intune
@@ -68,7 +68,7 @@ Když zařízení resetujete do továrního nastavení, obnoví se všechna fire
 ### <a name="user-self-removal-from-intune-management"></a>Samostatné odebrání uživatele ze správy v Intune
 Uživatelé mohou odebrat osobní zařízení se systémem [Android, Apple nebo Windows](https://docs.microsoft.com/mem/intune/user-help/unenroll-your-device-from-intune-android) ze správy v Intune i bez pomoci správce.   
 
-### <a name="retire"></a>Vyřadit
+### <a name="retire"></a>Vyřazení
 Když zařízení **vyřadíte**, Intune odebere poskytnutá data, jako jsou firemní aplikace, data o aplikacích spravovaných v Intune, nastavení zásad a e-mailové profily zřízené prostřednictvím Intune. Tato akce opustí osobní údaje uživatele v zařízení.
 
 ### <a name="delete-a-tenant-from-microsoft-intune"></a>Odstranění tenanta z Microsoft Intune

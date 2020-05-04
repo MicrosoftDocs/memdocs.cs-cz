@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 0c9bf96188e27afeaf66e7b2897f8cda19f9df37
-ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/02/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80551660"
 ---
 # <a name="enroll-your-device-with-company-portal"></a>Registrace zařízení pomocí Portál společnosti  
@@ -32,7 +32,7 @@ Pokud chcete získat zabezpečený přístup k firemnímu e-mailu, aplikacím a 
 > [!VIDEO https://www.youtube.com/embed/k0Q_sGLSx6o?rel=0]
 
 > [!NOTE]
-> Samsung KNOX je typ zabezpečení, který některá zařízení Samsung využívají k další ochraně mimo rámec toho, co poskytuje nativní Android. Pokud chcete zjistit, jestli máte zařízení Samsung KNOX, > Přejít na **nastavení** > **o zařízení**. Pokud se tam uvedená **verze Knox** nezobrazuje, máte nativní zařízení s Androidem.
+> Samsung KNOX je typ zabezpečení, který některá zařízení Samsung využívají k další ochraně mimo rámec toho, co poskytuje nativní Android. Pokud chcete zjistit, jestli máte zařízení Samsung KNOX, > přejít na **Nastavení** > **o zařízení**. Pokud se tam uvedená **verze Knox** nezobrazuje, máte nativní zařízení s Androidem.
 
 ## <a name="enroll-device"></a>Registrace zařízení  
 Nezapomeňte nainstalovat aplikaci Portál společnosti Intune [z Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal). Seznam obchodů, které nabízejí aplikaci v kontinentální Číně, najdete v tématu [instalace portál společnosti aplikace v části pevninská Čína](install-company-portal-android-china.md) .    
@@ -61,7 +61,7 @@ Během registrace můžete být požádáni, abyste zvolili kategorii, která ne
     * **Povolit portál společnosti, aby mohli provádět a spravovat telefonní hovory**: Toto oprávnění umožňuje vašemu zařízení sdílet číslo IMEI (International Mobile Equipment Identity) s Intune a poskytovatelem správy zařízení ve vaší organizaci. Toto oprávnění je bezpečné. Společnost Microsoft nikdy neprovede ani nespravuje telefonní hovory.  
     * **Umožněte portál společnosti přistupovat ke kontaktům**: Toto oprávnění umožňuje aplikaci Portál společnosti vytvářet, používat a spravovat váš pracovní účet.  Toto oprávnění je bezpečné. Společnost Microsoft nebude nikdy přistupovat k vašim kontaktům. 
 
-    Pokud odepřete oprávnění, zobrazí se při příštím přihlášení k Portál společnosti dotaz znovu. Chcete-li tyto zprávy vypnout, vyberte možnost **příště znovu zobrazit dotaz**. Pokud chcete spravovat oprávnění aplikace, přečtěte si v části nastavení aplikace > **aplikace** > **Portál společnosti** > **oprávnění** > **telefon**.  
+    Pokud odepřete oprávnění, zobrazí se při příštím přihlášení k Portál společnosti dotaz znovu. Chcete-li tyto zprávy vypnout, vyberte možnost **příště znovu zobrazit dotaz**. Pokud chcete spravovat oprávnění aplikace, přečtěte si v části nastavení aplikace > **aplikace** > **portál společnosti** > **oprávnění** > **telefon**.  
 
 6. Aktivujte aplikaci Správce zařízení. 
 
@@ -91,7 +91,7 @@ Během registrace můžete být požádáni, abyste zvolili kategorii, která ne
 
 ## <a name="next-steps"></a>Další kroky  
 
-Než se pokusíte nainstalovat školní nebo pracovní aplikaci, přejdete na **nastavení** > **zabezpečení**a zapněte **neznámé zdroje**. Pokud tuto možnost nezapnete, zobrazí se při pokusu o instalaci aplikace následující zpráva: "instalace blokována. Z důvodů zabezpečení je v zařízení nastavené blokování instalací pro aplikace získané z neznámého zdroje.“ Klepnutím na **Nastavení** ve zprávě můžete přejít přímo k **neznámým zdrojům**.  
+Než se pokusíte nainstalovat školní nebo pracovní aplikaci, přejdete na **Nastavení** > **zabezpečení**a zapněte **neznámé zdroje**. Pokud tuto možnost nezapnete, zobrazí se při pokusu o instalaci aplikace následující zpráva: "instalace blokována. Z důvodů zabezpečení je v zařízení nastavené blokování instalací pro aplikace získané z neznámého zdroje.“ Klepnutím na **Nastavení** ve zprávě můžete přejít přímo k **neznámým zdrojům**.  
 
 > [!Note]
 > Pokud vaše organizace používá software pro správu telekomunikačních výdajů (Telecom Expense Management), budete muset před úplnou registrací zařízení provést několik dalších kroků. Další informace najdete [tady](enroll-your-device-with-telecom-expense-management-android.md).

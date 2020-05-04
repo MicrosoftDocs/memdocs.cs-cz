@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: c7de0b978c24f28988c62854a249505a0598db95
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80084083"
 ---
 # <a name="bundle-ids-for-built-in-ios-and-ipados-apps-you-can-use-in-intune"></a>ID sady prostředků pro integrované aplikace pro iOS a iPadOS, které můžete použít v Intune
@@ -35,13 +35,13 @@ Když konfigurujete funkce na zařízeních s iOS/iPadOS, můžete taky přidat 
 | com. Apple. Store. Jolly       | Apple Store  | Apple     |
 | com.apple.calculator        | Kalkulačka   | Apple     |
 | com.apple.mobilecal         | Kalendář     | Apple     |
-| com.apple.camera            | Fotoaparát       | Apple     |
-| com.apple.mobiletimer       | Hodiny        | Apple     |
+| com.apple.camera            | Camera       | Apple     |
+| com.apple.mobiletimer       | Clock        | Apple     |
 | com. Apple. klipy             | Klip        | Apple     |
 | com.apple.compass           | Kompas      | Apple     |
 | com.apple.MobileAddressBook | Kontakty     | Apple     |
 | com.apple.facetime          | FaceTime     | Apple     |
-| com.apple.DocumentsApp      | Soubory        | Apple     |
+| com. Apple. DocumentsApp      | Soubory        | Apple     |
 | com.apple.mobileme.fmf1     | Najít přátele | Apple     |
 | com.apple.mobileme.fmip1    | Najít iPhone  | Apple     |
 | com.apple.gamecenter        | Herní centrum  | Apple     |
@@ -49,29 +49,29 @@ Když konfigurujete funkce na zařízeních s iOS/iPadOS, můžete taky přidat 
 | com.apple.Health            | Stav       | Apple     |
 | com. Apple. Home              | Domů         | Apple     |
 | com.apple.iBooks            | iBooks       | Apple     |
-| com.apple.iMovie            | iMovie       | Apple     |
-| com.apple.itunesconnect.mobile | Připojení iTunes | Apple |
+| com. Apple. iMovie            | iMovie       | Apple     |
+| com. Apple. itunesconnect. Mobile | Připojení iTunes | Apple |
 | com.apple.MobileStore       | iTunes Store | Apple     |
 | com.apple.itunesu           | iTunes U     | Apple     |
 | com.apple.Keynote           | Keynote      | Apple     |
 | com.apple.mobilemail        | Pošta         | Apple     |
 | com.apple.Maps              | Maps         | Apple     |
-| com. Apple. Measure           | Míra      | Apple     |
+| com. Apple. Measure           | Measure      | Apple     |
 | com.apple.MobileSMS         | Zprávy     | Apple     |
 | com.apple.Music             | Hudba        | Apple     |
-| com.apple.news              | News         | Apple     |
+| com.apple.news              | Novinky         | Apple     |
 | com.apple.mobilenotes       | Poznámky        | Apple     |
 | com.apple.Numbers           | Čísla      | Apple     |
 | com.apple.Pages             | Stránky        | Apple     |
-| com.apple.mobilephone       | Telefon        | Apple     |
+| com. Apple. mobilephone       | Telefon        | Apple     |
 | com.apple.Photo-Booth       | Photo Booth  | Apple     |
 | com.apple.mobileslideshow   | Fotky       | Apple     |
 | com.apple.podcasts          | Podcasty     | Apple     |
 | com.apple.reminders         | Připomínky    | Apple     |
 | com.apple.mobilesafari      | Safari       | Apple     |
 | com.apple.Preferences       | Nastavení     | Apple     |
-| com. Apple. Shortcuts         | Odkazy    | Apple     |
-| com.apple.SiriViewService   | Siri         | Apple     |
+| com. Apple. Shortcuts         | Zástupci    | Apple     |
+| com. Apple. SiriViewService   | Siri         | Apple     |
 | com.apple.stocks            | Stocks       | Apple     |
 | com.apple.tips              | Tipy         | Apple     |
 | com.apple.tv                | TV           | Apple     |
@@ -79,7 +79,7 @@ Když konfigurujete funkce na zařízeních s iOS/iPadOS, můžete taky přidat 
 | com.apple.VoiceMemos        | Diktafon   | Apple     |
 | com.apple.Passbook          | Wallet       | Apple     |
 | com.apple.Bridge            | Watch        | Apple     |
-| com.apple.weather           | Počasí      | Apple     |
+| com.apple.weather           | Weather      | Apple     |
 
 ## <a name="next-steps"></a>Další kroky
 

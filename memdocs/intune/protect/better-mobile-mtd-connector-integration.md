@@ -16,10 +16,10 @@ ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: a509c24e4b84c1f72a5efa4f6691f69b8a309f00
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79329955"
 ---
 # <a name="integrate-better-mobile-with-intune"></a>Integrace Better Mobile s Intune
@@ -40,7 +40,7 @@ Před zahájením procesu integrace řešení Better Mobile a Intune zkontrolujt
 
   - Přístup k adresáři jako přihlášený uživatel
 
-  - Číst data z adresáře
+  - Čtení dat z adresáře
 
   - Odeslání informací o zařízení do Intune
 
@@ -61,16 +61,16 @@ Postup autorizace aplikace Better Mobile:
 ## <a name="to-set-up-better-mobile-integration"></a>Nastavení integrace Better Mobile
 
 1. Přejděte ke [konzole pro správu Better Mobile](https://aad.bmobi.net) a přihlaste se pomocí svých přihlašovacích údajů.
-2. Zvolte **Integrace** > **EMM/MDM** > **PŘIDAT ÚČET**.
+2. Vyberte **Integration** > **EMM/MDM** > **Přidat účet**.
 
      ![Obrázek lepší konzoly pro správu mobilních zařízení](./media/better-mobile-mtd-connector-integration/better_mobile_console.png)
 
-3. Zvolte **Intune**.
+3. Vyberte **Intune**.
 4. Vedle položky **NÁZEV ÚČTU** zadejte popisovač.
 5. V okně **Přihlášení k Microsoftu** zadejte svoje přihlašovací údaje k Intune.
 6. V okně **Požadovaná oprávnění** zvolte **Přijmout**.
 7. Vyhledejte skupiny zabezpečení Azure AD Security, ze kterých má Better Mobile synchronizovat zařízení, a vyberte je v seznamu. Potom vyberte **Pokračovat**.
-8. Vyberte **Hotovo**.
+8. Vyberte **Done** (Hotovo).
 9. Znovu se zobrazí stránka **Přidat účet**. Stránku zavřete.
 
 ## <a name="next-steps"></a>Další kroky

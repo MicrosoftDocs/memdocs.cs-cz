@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: fd7483319443b7a960f8e704442d2b43b6b00c66
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80326910"
 ---
 # <a name="set-up-enrollment-for-windows-devices"></a>Nastavení registrace pro zařízení s Windows
@@ -33,9 +33,9 @@ Tento článek pomáhá správcům IT zjednodušit svým uživatelům registraci
 
 Jako správce Intune můžete registraci zjednodušit. Máte tyto možnosti:
 
-- [Povolit automatickou registraci](#enable-windows-10-automatic-enrollment) (vyžaduje Azure AD Premium)
+- [Povolit automatický zápis](#enable-windows-10-automatic-enrollment) (Azure AD Premium vyžaduje)
 - [Registrace CNAME](#simplify-windows-enrollment-without-azure-ad-premium)
-- [Povolit hromadnou registraci](windows-bulk-enroll.md) (vyžaduje Azure AD Premium a Windows Configuration Designer)
+- [Povolit hromadnou registraci](windows-bulk-enroll.md) (vyžaduje se Azure AD Premium a Windows Configuration Designer)
 
 Způsob zjednodušení registrace zařízení s Windows určují dva faktory:
 
@@ -91,7 +91,7 @@ Správce DNS Contosa by měl vytvořit následující záznamy CNAME:
 |CNAME|EnterpriseEnrollment.us.contoso.com|EnterpriseEnrollment-s.manage.microsoft.com|1 hodina|
 |CNAME|EnterpriseEnrollment.eu.contoso.com|EnterpriseEnrollment-s.manage.microsoft.com| 1 hodina|
 
-`EnterpriseEnrollment-s.manage.microsoft.com` – podporuje přesměrování na službu Intune s rozpoznáním domény z doménového názvu e-mailu.
+`EnterpriseEnrollment-s.manage.microsoft.com`– Podporuje přesměrování na službu Intune s rozpoznáním domény z doménového názvu e-mailu.
 
 Změny záznamů DNS se mohou projevit až po 72 hodinách. Před rozšířením záznamu DNS nemůžete v Intune ověřit změnu DNS.
 
@@ -102,7 +102,7 @@ EnterpriseEnrollment-s.manage.microsoft.com je upřednostňovaný plně kvalifik
 Použití jiné metody než konfigurace CNAME není podporováno. Například použití proxy server k přesměrování enterpriseenrollment.contoso.com/EnrollmentServer/Discovery.svc na enterpriseenrollment-s.manage.microsoft.com/EnrollmentServer/Discovery.svc nebo manage.microsoft.com/EnrollmentServer/Discovery.svc není podporováno.
 
 **Krok 2: Ověřte záznamy CNAME** (volitelné)<br>
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **Windows** > Windows **registrace** > **CNAME ověřování**.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **Windows** > **Windows registrace** > **CNAME ověřování**.
 2. Do pole **Doména** zadejte web společnosti a zvolte **Test**.
 
 ## <a name="tell-users-how-to-enroll-windows-devices"></a>Informování uživatelů, jak zařízení s Windows zaregistrovat
@@ -114,7 +114,7 @@ Informujte uživatele, jak si mají svá zařízení s Windows zaregistrovat a c
 Postup registrace koncových uživatelů najdete v tématu [Registrace zařízení s Windows v Intune](../user-help/windows-enrollment-company-portal.md). Uživatelům také můžete poradit, aby si přečetli článek o tom, [jaké informace vidí správce IT na zařízení](../user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md).
 
 >[!IMPORTANT]
-> Pokud není povolená automatická registrace MDM, ale máte zařízení s Windows 10 připojená ke službě Azure AD, zobrazí se v konzole Intune po registraci dva záznamy. Tomuto chování zabráníte tak, že uživatelé se zařízeními připojenými ke službě Azure AD přejdou na **Účty** > **Přístup do práce nebo do školy** a **Připojit** pomocí stejného účtu. 
+> Pokud není povolená automatická registrace MDM, ale máte zařízení s Windows 10 připojená ke službě Azure AD, zobrazí se v konzole Intune po registraci dva záznamy. To můžete zastavit tím, že zajistíte, že uživatelé se zařízeními připojenými k Azure AD přejdou na **účty** > **přístup do práce nebo do školy** a **připojíte** se pomocí stejného účtu. 
 
 Další informace o úlohách pro koncové uživatele najdete v tématu [Materiály o prostředí Microsoft Intune pro koncové uživatele](../fundamentals/end-user-educate.md).
 

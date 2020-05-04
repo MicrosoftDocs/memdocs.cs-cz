@@ -18,10 +18,10 @@ ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 91c79ae7ca7fc70c361fba0a7ad6becf8d035b5a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79332611"
 ---
 # <a name="help-end-users-understand-company-portal-app-messages"></a>Vysvětlení zpráv aplikace Portál společnosti pro koncové uživatele
@@ -50,15 +50,15 @@ Přijetím této výzvy uživatel umožní, aby se telefonní číslo a číslo 
 > [!NOTE]
 > **Aplikace Portál společnosti nikdy netelefonuje ani nespravuje telefonní hovory!** Text zprávy je pod kontrolu Googlu a nejde ho změnit.
 
-Stránku **Hardware** zobrazíte tak, že přejdete na **Skupiny** > **Všechna mobilní zařízení** > **Zařízení**. Vyberte zařízení uživatele a pak použijte možnosti **Zobrazit vlastnosti** > **Hardware**.
+Stránku **Hardware** zobrazíte tak, že přejdete na **Skupiny** > **Všechna mobilní zařízení** > **Zařízení**. Vyberte zařízení uživatele a pak přejít na **Zobrazit vlastnosti** > **hardware**.
 
-### <a name="what-happens-if-users-deny-access"></a>Co se stane, když uživatel přístup odepře
+### <a name="what-happens-if-users-deny-access"></a>Co se stane, když uživatel přístup zamítne
 
 Pokud uživatel přístup zamítne, může aplikaci Portál společnosti dál používat a zaregistrovat své zařízení. Na stránce __Hardware__ v konzole pro správu ale bude telefonní číslo a číslo IMEI zařízení prázdné. Při druhém přihlášení k aplikaci Portál společnosti po zamítnutí přístupu se ve zprávě zobrazí zaškrtávací políčko **Příště se už neptat**, takže uživatel může zobrazování této výzvy zastavit.
 
 Pokud uživatel povolí přístup, ale později ho zamítne, zobrazí se tato zpráva při přihlášení k aplikaci Portál společnosti, které následuje po registraci zařízení.
 
-Pokud se uživatel rozhodne povolit přístup později, může přejít na **Nastavení** > **Aplikace** > **Portál společnosti** > **Oprávnění** > **Telefon** a zapnout ho.
+Pokud se uživatel později rozhodne povolit přístup, může přejít na **Nastavení** > **aplikace** > **portál společnosti** > **oprávnění** > **telefon**a zapnout ho.
 
 ### <a name="how-to-explain-this-to-your-users"></a>Jak to vysvětlit uživatelům
 
@@ -77,13 +77,13 @@ Přijetím této výzvy uživatel umožní, aby služba Intune vytvořila pracov
 > [!NOTE]
 > **Společnost Microsoft nebude nikdy přistupovat k vašim kontaktům!** Text zprávy je pod kontrolu Googlu a nejde ho změnit.
 
-### <a name="what-happens-if-users-deny-access"></a>Co se stane, když uživatel přístup odepře
+### <a name="what-happens-if-users-deny-access"></a>Co se stane, když uživatel přístup zamítne
 
 Pokud uživatel přístup zamítne, nebude zařízení v Intune zaregistrováno a nebude možné ho spravovat. Při druhém přihlášení k aplikaci Portál společnosti po zamítnutí přístupu se ve zprávě zobrazí zaškrtávací políčko **Příště se už neptat**, takže uživatel může zobrazování této výzvy zastavit.
 
-Pokud uživatel povolí přístup, ale později ho odepře, tato zpráva se zobrazí při přihlášení k aplikaci Portál společnosti, které následuje po registraci zařízení.
+Pokud uživatel povolí přístup, ale později ho zamítne, zobrazí se tato zpráva při přihlášení k aplikaci Portál společnosti, které následuje po registraci zařízení.
 
-Pokud se uživatel rozhodne povolit přístup později, může přejít na **Nastavení** > **Aplikace** > **Portál společnosti** > **Oprávnění** > **Telefon** a zapnout ho.
+Pokud se uživatel později rozhodne povolit přístup, může přejít na **Nastavení** > **aplikace** > **portál společnosti** > **oprávnění** > **telefon**a zapnout ho.
 
 ### <a name="how-to-explain-this-to-your-users"></a>Jak to vysvětlit uživatelům
 
@@ -100,13 +100,13 @@ Zpráva **Povolit pro Portál společnosti přístup k fotkám, médiím a soubo
 Přijetím této výzvy umožní uživatel zápis datových protokolů na SD kartu zařízení. Také se tím umožní přesun těchto protokolů pomocí USB kabelu.   
 
 > [!NOTE]
-> **Aplikace Portál společnosti nikdy nemá přístup k fotografiím, médiím a souborům uživatele!** Text zprávy je pod kontrolu Googlu a nejde ho změnit.
+> **Aplikace Portál společnosti nikdy nemá přístup k fotografiím, médiím a souborům uživatelů.** Text zprávy je pod kontrolu Googlu a nejde ho změnit.
 
-### <a name="what-happens-if-users-deny-access"></a>Co se stane, když uživatel přístup odepře
+### <a name="what-happens-if-users-deny-access"></a>Co se stane, když uživatel přístup zamítne
 
 Pokud uživatel přístup zamítne, může pořád odesílat datové protokoly e-mailem, ale tyto protokoly se nezkopírují na SD kartu zařízení.
 
-Při druhém přihlášení k aplikaci Portál společnosti po zamítnutí přístupu se ve zprávě zobrazí zaškrtávací políčko **Příště se už neptat**, takže uživatel může určit, že se tato zpráva už nebude zobrazovat. Pokud uživatel povolí přístup, ale později ho zamítne, zobrazí se tato zpráva při příštím pokusu o odeslání protokolů. Pokud se ale uživatel rozhodne povolit přístup později, může přejít na **Nastavení** > **Aplikace** > **Portál společnosti** > **Oprávnění** > **Úložiště** a toto oprávnění zapnout.
+Při druhém přihlášení k aplikaci Portál společnosti po odepření přístupu se ve zprávě zobrazí zaškrtávací políčko **Příště se už neptat**, takže uživatel může určit, že se tato zpráva už nebude zobrazovat. Pokud uživatel povolí přístup, ale později ho zamítne, zobrazí se tato zpráva při příštím pokusu o odeslání protokolů. Pokud se ale uživatel později rozhodne povolit přístup, může přejít na **Nastavení** > **aplikace** > **portál společnosti** > **oprávnění** > **úložiště**a toto oprávnění zapnout.
 
 
 ### <a name="how-to-explain-this-to-your-users"></a>Jak to vysvětlit uživatelům
@@ -142,13 +142,13 @@ Když tyto aplikace nainstalujete pomocí Portál společnosti a aplikaci spust�
 
 1. Po spuštění nainstalované firemní aplikace (obchodní aplikace) se zobrazí zpráva "nedůvěryhodná verze Enterprise Developer". <br>
    Stiskněte **Zrušit**.
-2. Přejděte na **nastavení** > **Obecná** > **Správa zařízení**.
+2. Přejděte na **Nastavení** > **Obecné** > **Správa zařízení**.
 
    ![uživatelské rozhraní zařízení s iOS – Správa zařízení](./media/end-user-company-portal-messages/end-user-company-portal-messages-02.png)
 
-3. Vyberte možnost **Profil správy** > **podniková aplikace**.
+3. Vyberte možnost **profil** > správy**podniková aplikace**.
 4. Vyberte název vývojáře.
-5. Stiskněte klávesu **Trust _název vývojáře_** .
+5. Stiskněte klávesu **Trust _název vývojáře_**.
 6. Potvrďte aplikaci tak, že v místní zprávě pro instalaci aplikace vyberete **důvěřovat** .
 
    ![uživatelské rozhraní zařízení s iOS – důvěryhodná zpráva aplikace](./media/end-user-company-portal-messages/end-user-company-portal-messages-03.png)

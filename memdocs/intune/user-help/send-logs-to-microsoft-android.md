@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 533c0117b73883776e3dbdd4628fda7630a3a15a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79327899"
 ---
 # <a name="send-logs-to-the-company-portal-developers-for-android-devices"></a>Odeslání protokolů ze zařízení s Androidem vývojářům Portálu společnosti
@@ -37,7 +37,7 @@ Protokoly odešlete do Microsoftu takto:
 
 1. Otevřete aplikaci Portál společnosti.
 
-2. Klepněte na **Nabídka** > **Nápověda** > **E-mailová podpora**.
+2. Klepněte na **nabídku** > **help** > **e-mail podpora**.
 
     > [!NOTE]
     > Podle toho, jaké zařízení s Androidem máte, může být **Nabídka** buď softwarové, nebo hardwarové tlačítko.
@@ -46,6 +46,6 @@ Protokoly odešlete do Microsoftu takto:
 
 4. Jakmile se nahrávání dokončí, zobrazí se ID incidentu. Toto ID si uložte pro svoje potřeby.
 
-Pokud chcete tým Portálu společnosti kontaktovat přímo, napište e-mail na adresu <a href="mailto:wintunedroidfbk@microsoft.com?subject=Send logs to Microsoft&body=Describe the issue you are having.">wintunedroidfbk@microsoft.com</a>. 
+Chcete-li přímo kontaktovat tým Portál společnosti pro Android, <a href="mailto:wintunedroidfbk@microsoft.com?subject=Send logs to Microsoft&body=Describe the issue you are having.">wintunedroidfbk@microsoft.com</a>e-mail. 
 
 Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).

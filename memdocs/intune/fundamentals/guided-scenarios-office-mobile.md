@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 7aabc09e276c723e9aeaed4ec8eb3dd4c0332b4e
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79332531"
 ---
 # <a name="guided-scenario---secure-microsoft-office-mobile-apps"></a>Scénář s asistencí – zabezpečené systém Microsoft Office mobilní aplikace
@@ -38,7 +38,7 @@ Ochrana aplikace, kterou povolíte, vynutila následující akce:
 - Zablokovat přístup k pracovním souborům, pokud je zařízení po dobu 720 minut v režimu offline.
 - Pokud je zařízení po dobu 90 dnů offline, odeberte pracovní soubory.
 
-## <a name="background"></a>Podrobnosti
+## <a name="background"></a>Pozadí
 
 Mobilní aplikace Office a Microsoft Edge pro mobilní zařízení podporují duální identitu. Duální identita umožňuje aplikacím spravovat pracovní soubory odděleně od osobních souborů. 
 
@@ -111,11 +111,11 @@ V tomto kroku musíte nakonfigurovat požadavky pro přístup k firemním soubor
 
 | Nastavení | Popis | Výchozí hodnota |
 |---------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|
-| Typ kódu PIN | Číselné kódy PIN se skládají ze všech čísel. Hesla se skládají z alfanumerických znaků a speciálních znaků.  Pro konfiguraci typu "heslo" v systému iOS/iPadOS je nutné, aby měla aplikace sadu Intune SDK verze 7.1.12 nebo vyšší. Číselný typ nemá žádné omezení, pokud se jedná o verzi sady Intune SDK. | Číselné |
+| Typ kódu PIN | Číselné kódy PIN se skládají ze všech čísel. Hesla se skládají z alfanumerických znaků a speciálních znaků.  Pro konfiguraci typu "heslo" v systému iOS/iPadOS je nutné, aby měla aplikace sadu Intune SDK verze 7.1.12 nebo vyšší. Číselný typ nemá žádné omezení, pokud se jedná o verzi sady Intune SDK. | Numeric |
 | Vyberte minimální délku PIN kódu. | Určuje minimální počet číslic v posloupnosti kódu PIN. | 6 |
 | Znovu ověřit požadavky na přístup po (minuty neaktivity) | Pokud je aplikace spravovaná zásadou neaktivní po dobu delší, než je zadaný počet minut nečinnosti, aplikace se vyzve k zadání požadavků na přístup (tj. Připnutí, nastavení podmíněného spuštění), které se má po spuštění aplikace znovu ověřit. | 30 |
-| Tisk organizačních dat | Pokud je zablokovaná, aplikace nemůže tisknout chráněná data. | Blokování |
-| Otevření odkazů aplikací spravovaných zásadou v nespravovaných prohlížečích | Pokud je zablokované, musí se odkazy na aplikace spravované podle zásad otevřít ve spravovaném prohlížeči. | Blokování |
+| Tisk organizačních dat | Pokud je zablokovaná, aplikace nemůže tisknout chráněná data. | Blok |
+| Otevření odkazů aplikací spravovaných zásadou v nespravovaných prohlížečích | Pokud je zablokované, musí se odkazy na aplikace spravované podle zásad otevřít ve spravovaném prohlížeči. | Blok |
 | Kopírování dat do nespravovaných aplikací | Pokud je blokované, spravovaná data zůstanou ve spravovaných aplikacích. | Povolit |
 
 ## <a name="step-5---assignments"></a>Krok 5 – přiřazení

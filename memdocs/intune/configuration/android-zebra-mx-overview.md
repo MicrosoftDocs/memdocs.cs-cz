@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: dbb8e5644390c589756af5a69f2fdd5a829866a1
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80084009"
 ---
 # <a name="use-and-manage-zebra-devices-with-zebra-mobility-extensions-in-microsoft-intune"></a>Používání a Správa zařízení Zebra s rozšířeními mobility Zebra v Microsoft Intune
@@ -71,8 +71,8 @@ Následující kroky poskytují přehled. Konkrétní podrobnosti najdete v doku
 4. V souboru **Stáhnout MDM**vyberte **přenést/kopírovat soubor**. Přidejte zdroj a cíl balíčku Portál společnosti pro Android (APK).
 5. V části **Spustit MDM**ponechte výchozí hodnoty tak, jak jsou. Přidejte následující podrobnosti:
 
-    - **Název balíčku**: `com.microsoft.windowsintune.companyportal`
-    - **Název třídy**: `com.microsoft.windowsintune.companyportal.views.SplashActivity`
+    - **Název balíčku**:`com.microsoft.windowsintune.companyportal`
+    - **Název třídy**:`com.microsoft.windowsintune.companyportal.views.SplashActivity`
 
 Pokračujte v publikování profilu a využijte ho u aplikace StageNow na zařízení. Aplikace Portál společnosti je nainstalovaná a otevřená na zařízení.
 
@@ -106,7 +106,7 @@ Po dokončení prvního dvou kroků se Portál společnosti aplikace nainstaluje
 
 Pomocí StageNow vytvořte profil, který konfiguruje nastavení, která chcete na zařízení spravovat. Konkrétní podrobnosti najdete v dokumentaci k zebra. [Profily](http://techdocs.zebra.com/stagenow/3-2/stagingprofiles/) (otevře se webová stránka Zebra) může být dobrým prostředkem.
 
-Když vytvoříte profil v StageNow, vyberte v posledním kroku možnost **exportovat do MDM**. Tento krok generuje soubor XML. Soubor uložte. Budete ho potřebovat v pozdějším kroku.
+Když vytvoříte profil v StageNow, vyberte v posledním kroku možnost **exportovat do MDM**. Tento krok generuje soubor XML. Soubor uložte. Budete je potřebovat později.
 
 - Doporučuje se profil otestovat předtím, než ho nasadíte do zařízení ve vaší organizaci. K otestování v posledním kroku při vytváření profilů s StageNow v počítači použijte možnosti **testu** . Pak na zařízení využívejte soubor generovaný StageNow a aplikaci StageNow.
 
@@ -134,23 +134,23 @@ Po otestování souboru je dalším krokem nasazení profilu do zařízení pomo
 V Intune vytvořte profil konfigurace zařízení:
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **zařízení** > **konfiguračních profilech** > **vytvořit profil**.
-3. Zadejte následující vlastnosti:
+2. Vyberte **Konfigurace zařízení** > **profily** > konfigurace**vytvořit profil**.
+3. Zadejte tyto vlastnosti:
 
     - **Název**: Zadejte popisný název nového profilu.
     - **Popis**: Zadejte popis profilu. Toto nastavení není povinné, ale doporučujeme ho zadat.
     - **Platforma**: vyberte **Správce zařízení s Androidem**.
-    - **Typ profilu**: vyberte možnost **profil MX (jenom Zebra)** .
+    - **Typ profilu**: vyberte možnost **profil MX (jenom Zebra)**.
 
 4. V **profilu MX ve formátu. XML**přidejte soubor profilu XML, [který jste exportovali z StageNow](#step-4-create-a-device-management-profile-in-stagenow) (v tomto článku).
-5. Vyberte **OK** > **Vytvořit** a změny uložte. Zásada se vytvoří a zobrazí se v seznamu.
+5. Kliknutím na **tlačítko OK** > **vytvořit** uložte změny. Zásada se vytvoří a zobrazí se v seznamu.
 
     > [!TIP]
     > Z bezpečnostních důvodů nebude po uložení zobrazený text profilu XML. Text je zašifrovaný a zobrazují se jenom hvězdičky (`****`). Pro referenci doporučujeme uložit kopie profilů MX ještě před jejich přidáním do Intune.
 
 Profil je vytvořený, ale zatím se nepoužívá. Dále [Přiřaďte profil](device-profile-assign.md) a [sledujte jeho stav](device-profile-monitor.md).
 
-Až zařízení příště zkontroluje aktualizace konfigurace, nasadí se do zařízení profil MX. Zařízení se po registraci zařízení synchronizují s Intune a přibližně každých 8 hodin. Můžete taky [Vynutit synchronizaci v Intune](../remote-actions/device-sync.md). Nebo na zařízení otevřete Portál společnosti > **Nastavení** **aplikace** > **synchronizace**. 
+Až zařízení příště zkontroluje aktualizace konfigurace, nasadí se do zařízení profil MX. Zařízení se po registraci zařízení synchronizují s Intune a přibližně každých 8 hodin. Můžete taky [Vynutit synchronizaci v Intune](../remote-actions/device-sync.md). Nebo na zařízení otevřete **portál společnosti** > **Settings** > **synchronizace**nastavení aplikace. 
 
 ## <a name="update-a-zebra-mx-configuration-after-its-assigned"></a>Aktualizace konfigurace MX Zebra po jejím přiřazení
 

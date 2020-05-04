@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 9a1a5b291135f5c6d42a47377d14d6d3d4f13411
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79332475"
 ---
 # <a name="keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune"></a>Udržování počítačů s Windows v aktuálním stavu díky softwarovým aktualizacím v Microsoft Intune
@@ -29,11 +29,11 @@ ms.locfileid: "79332475"
 [!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 > [!NOTE]
-> Informace v tomto tématu se vztahují jenom na desktopové systémy Windows, které spravujete jako počítače pomocí softwarového klienta Intune. Pokud chcete spravovat aktualizace pro počítače s Windows zaregistrované jako mobilní zařízení, přečtěte si téma [Správa aktualizací softwaru v Intune](../protect/windows-update-for-business-configure.md).
+> Informace v tomto tématu se vztahují jenom na desktopové systémy Windows, které spravujete jako počítače (PC) pomocí softwarového klienta Intune. Pokud chcete spravovat aktualizace pro počítače s Windows zaregistrované jako mobilní zařízení, přečtěte si téma [Správa aktualizací softwaru v Intune](../protect/windows-update-for-business-configure.md).
 
 Microsoft Intune vám může pomoct zabezpečit spravované počítače mnoha způsoby, včetně správy softwarových aktualizací, které udržují počítače v aktuálním stavu, protože zajišťují, že se rychle nainstalují nejnovější opravy a aktualizace.
 
-Pokud jste ještě na svých počítačích nenainstalovali klienta Intune, přečtěte si téma [Instalace klienta na počítači s Windows pomocí Microsoft Intune](install-the-windows-pc-client-with-microsoft-intune.md).
+Pokud jste ještě na svých počítačích nenainstalovali klienta Intune, přečtěte si téma [instalace klienta na počítači s Windows pomocí Microsoft Intune](install-the-windows-pc-client-with-microsoft-intune.md).
 
 Jakmile jsou nové aktualizace dostupné na webu Microsoft Update nebo jste vytvořili aktualizaci jiného výrobce a tyto aktualizace se dají použít pro spravované počítače, na stránce **Přehled** pracovního prostoru **Aktualizace** se zobrazí oznámení. Po kliknutí na odkaz v tomto oznámení potom můžete provádět různé operace, třeba zobrazit další informace o aktualizaci, přijmout nebo nepřijmout aktualizaci a zobrazit počítače, na které se tato aktualizace bude po schválení instalovat.
 
@@ -51,14 +51,14 @@ Než začnete vytvářet a schvalovat aktualizace softwaru, nakonfigurujte a nas
 
 1. V [konzole pro správu Microsoft Intune](https://manage.microsoft.com/)vyberte **zásady** &gt; **Přehled** &gt; **Přidat zásadu**.
 
-2. Nakonfigurujte a nasaďte zásady **nastavení agenta Microsoft Intune** pro nastavení aktualizací. Můžete použít doporučená nastavení nebo nastavení upravit. Pokud potřebujete více informací o postupu při vytváření a nasazování zásad, projděte si článek [Běžné úlohy správy počítačů s Windows pomocí počítačového klienta Microsoft Intune](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md).
+2. Nakonfigurujte a nasaďte zásady **nastavení agenta Microsoft Intune** pro nastavení aktualizací. Můžete použít doporučená nastavení nebo nastavení upravit. Pokud potřebujete další informace o tom, jak vytvořit a nasadit zásady, Projděte si článek [běžné úlohy správy počítačů s Windows pomocí počítačového klienta Microsoft Intune](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md).
 
 Následující tabulka zobrazuje hodnoty, které můžete v zásadách konfigurovat, a taky Doporučené hodnoty, které se použijí, pokud zásady neupravíte. Tahle nastavení najdete v části **Aktualizace**.
 
   |Nastavení zásad|Podrobnosti|
     |------------------|--------------------|
     |**Četnost detekce aktualizací a aplikací (hodiny)** |Určuje, jak často (od 8 do 22 hodin) Intune kontroluje nové aktualizace a aplikace.<br /><br />Doporučená hodnota: **8** hodin.|
-    |**Automatizovaná instalace aktualizací a aplikací nebo instalace aktualizací a aplikací s výzvami** |Určuje, jestli se mají aktualizace instalovat automaticky nebo jestli se má před instalací uživateli zobrazit výzva. Kromě toho vám tohle nastavení umožňuje naplánovat instalaci aktualizací a aplikací.<br /><br />**Instalace aktualizací a aplikací automaticky podle plánu** umožňuje instalovat aktualizace a aplikace pomocí určeného plánu.<br /><br />**Používat automatickou údržbu pro počítače se systémem Windows**  jako závislé nastavení zásad určuje, jestli se mají aktualizace a aplikace instalovat při zobrazení okna automatické údržby Windows.<br /><br />**Zobrazit uživateli výzvu k instalaci** vyzývá uživatele k instalaci aktualizací, jakmile jsou připravené.<br /><br />Doporučené hodnoty:<br /><br />Vybraná možnost **Instalovat aktualizace a aplikace automaticky podle plánu**<br /><br />**Naplánovaný den: Každý den**<br /><br />**Naplánovaný čas: 3:00**<br /><br />Vybraná možnost **Používat automatickou údržbu pro počítače se systémem Windows**|
+    |**Automatizovaná instalace aktualizací a aplikací nebo instalace aktualizací a aplikací s výzvami** |Určuje, jestli se mají aktualizace instalovat automaticky nebo jestli se má před instalací uživateli zobrazit výzva. Kromě toho vám tohle nastavení umožňuje naplánovat instalaci aktualizací a aplikací.<br /><br />**Instalace aktualizací a aplikací automaticky podle plánu** umožňuje instalovat aktualizace a aplikace pomocí určeného plánu.<br /><br />**Používat automatickou údržbu pro počítače se systémem Windows** jako závislé nastavení zásad určuje, jestli se mají aktualizace a aplikace instalovat při zobrazení okna automatické údržby Windows.<br /><br />**Zobrazit uživateli výzvu k instalaci** vyzývá uživatele k instalaci aktualizací, jakmile jsou připravené.<br /><br />Doporučené hodnoty:<br /><br />Vybraná možnost **Instalovat aktualizace a aplikace automaticky podle plánu**<br /><br />**Naplánovaný den: Denně**<br /><br />**Naplánovaný čas: 3:00**<br /><br />Vybraná možnost **Používat automatickou údržbu pro počítače se systémem Windows**|
     |**Umožnit okamžitou instalaci aktualizací, které nenaruší běh systému Windows** |Možnost **Povolit** umožňuje instalovat aktualizace hned po stažení s výjimkou aktualizací, které by přerušily nebo restartovaly Windows. Tyto aktualizace se instalují v závislosti na konfiguraci nastavení **Automatizovaná instalace aktualizací nebo instalace aktualizací s výzvami**.<br /><br />Možnost **Nepovolit** umožňuje instalovat aktualizace v závislosti na konfiguraci **Automatizovaná instalace aktualizací a aplikací nebo instalace aktualizací a aplikací s výzvami**.<br /><br />Doporučená hodnota: **Povolit** |
     |**Zpoždění restartu systému Windows po instalaci plánovaných aktualizací a aplikací (minuty)** |Určuje (1 až 30 minut) dobu čekání na restartování Windows po instalaci naplánovaných aktualizací a aplikací.<br /><br />Doporučená hodnota: **15 minut** |
     |**Zpoždění po restartu systému Windows při zahájení instalace dosud neprovedených plánovaných aktualizací nebo aplikací (minuty)** |Určuje (1 až 60 minut), jak dlouho se má čekat na spuštění instalace aktualizací a aplikací po restartování Windows, pokud nebyla nainstalovaná plánovaná aktualizace.<br /><br />Doporučená hodnota: **5 minut**|
@@ -78,7 +78,7 @@ Použijte tyto dva postupy, které vám pomůžou s používáním aktualizací 
 
 ### <a name="configure-the-product-categories-and-update-classifications-you-want-to-make-available-to-managed-computers"></a>Konfigurace kategorií produktů a klasifikace aktualizací, které chcete zpřístupnit pro spravované počítače
 
-1. V [konzole pro správu Microsoft Intune](https://manage.microsoft.com/)vyberte **správce** &gt; **aktualizace**.
+1. V [konzole pro správu Microsoft Intune](https://manage.microsoft.com/)vyberte možnost **aktualizace** **správců** &gt; .
 
 2. Na stránce **Nastavení služby: Aktualizace** vyberte v seznamu **Kategorie produktů** kategorie aktualizací, které mají být dostupné pro počítače. Ve výchozím nastavení jsou vybrané nejběžnější aktualizace.
 
@@ -91,9 +91,9 @@ Použijte tyto dva postupy, které vám pomůžou s používáním aktualizací 
 
 ### <a name="to-configure-automatic-approval-rules-for-software-updates"></a>Konfigurace pravidel automatického schvalování pro aktualizace softwaru
 
-1. V [konzole pro správu Microsoft Intune](https://manage.microsoft.com/)vyberte **správce** &gt; **aktualizace**.
+1. V [konzole pro správu Microsoft Intune](https://manage.microsoft.com/)vyberte možnost **aktualizace** **správců** &gt; .
 
-2. V části **Pravidla automatického schvalování** na stránce **Nastavení serveru: Aktualizace** zvolte **Nový**.
+2. V části **pravidla automatického schvalování** stránky **nastavení serveru: aktualizace** vyberte možnost **Nový**.
 
 3. Na stránce **Obecné** v průvodci vytvořením pravidla automatického schvalování zadejte název a volitelný popis pravidla.
 
@@ -103,7 +103,7 @@ Použijte tyto dva postupy, které vám pomůžou s používáním aktualizací 
 
 6. Na stránce **Nasazení** udělejte tohle:
 
-    - Vyberte skupiny počítačů, ve kterých chcete nasadit nové pravidlo, a pak zvolte **Přidat**.
+    - Vyberte skupiny počítačů, do kterých chcete nasadit nové pravidlo, a pak zvolte **Přidat**.
 
     - Pokud chcete určit termín instalace aktualizací, zaškrtněte políčko **Vynutit konečný termín instalace těchto aktualizací** a pak v seznamu **Konečný termín instalace** vyberte termín instalace.
 
@@ -122,7 +122,7 @@ Nové pravidlo najdete v části **Pravidla automatického schvalování** strá
 
 ### <a name="to-edit-run-or-delete-an-automatically-approved-update-rule"></a>Úpravy, spuštění nebo odstranění pravidla automaticky schválené aktualizace
 
-1. V [konzole pro správu Microsoft Intune](https://manage.microsoft.com/)vyberte **správce** &gt; **aktualizace**.
+1. V [konzole pro správu Microsoft Intune](https://manage.microsoft.com/)vyberte možnost **aktualizace** **správců** &gt; .
 
 2. V části **Pravidla automatického schvalování** vyberte pravidlo a pak udělejte jednu z těchhle věcí:
 
@@ -130,7 +130,7 @@ Nové pravidlo najdete v části **Pravidla automatického schvalování** strá
 
     - Pokud chcete pravidlo spustit, zvolte **Spustit vybrané**.
 
-    - Pokud chcete pravidlo odstranit, zvolte **Odstranit**.
+    - Chcete-li pravidlo odstranit, vyberte možnost **Odstranit**.
 
         > [!NOTE]
         > Odstranění pravidla nemá vliv na předchozí aktualizace schválené odstraněným pravidlem.
@@ -140,7 +140,7 @@ Můžete nasadit aktualizace pro software jiného výrobce než Microsoftu. K to
 
 ### <a name="to-upload-and-configure-a-third-party-update"></a>Nahrání a konfigurace aktualizace jiného výrobce
 
-1. V [konzole pro správu Microsoft Intune](https://manage.microsoft.com/)vyberte **aktualizace** &gt; **Přehled** &gt; **nahrát**.
+1. V [konzole pro správu Microsoft Intune](https://manage.microsoft.com/)vyberte možnost **aktualizace** &gt; **Přehled** &gt; **nahrávání**.
 
 2. Na stránce **Soubory aktualizace** vyberte **Procházet** a zvolte instalační soubory potřebné k instalaci balíčku aktualizace. Tímto souborem může být soubor instalační služby Windows (.msi), soubor opravy instalační služby Windows (.msp) nebo soubor programu .exe. Dále můžete přidat libovolné soubory a složky, které jsou ve stejné složce jako instalační soubor.
 
@@ -157,21 +157,21 @@ Můžete nasadit aktualizace pro software jiného výrobce než Microsoftu. K to
 
     Výběrem jednoho nebo více pravidel určíte, jestli je aktualizace už nainstalovaná na spravovaných počítačích:
 
-    - **Soubor existuje**.
+    - **Soubor existuje.**
 
     - **Kód produktu MSI existuje**.
 
-    - **Klíč registru existuje**.
+    - **Klíč registru existuje.**
 
-6. Zadejte veškeré další informace, které jsou třeba ke konfiguraci pravidla zjišťování, například cestu k souboru a jeho název, kód produktu instalační služby Windows nebo klíč registru, a potom zvolte **Další**.
+6. Zadejte další informace, které jsou potřeba ke konfiguraci pravidla zjišťování, například cestu k souboru a jeho název, Instalační služba systému Windows kód produktu nebo klíč registru, a pak zvolte **Další**.
 
 7. Na stránce **Požadavky** v průvodci určete software, který už musí být nainstalovaný před instalací této aktualizace. Můžete zadat **Žádný**a vybrat softwarový balíček, který jste už přidali do služby Intune, která ho spravuje, nebo můžete nastavit některé z těchto pravidel pro popis softwaru:
 
-    - **Soubor existuje**.
+    - **Soubor existuje.**
 
     - **Kód produktu MSI existuje**.
 
-    - **Klíč registru existuje**.
+    - **Klíč registru existuje.**
 
 8. Zadejte veškeré další informace, které jsou třeba ke konfiguraci pravidla zjišťování, například cestu k souboru a jeho název, kód produktu instalační služby Windows nebo klíč registru, a potom zvolte **Další**.
 
@@ -190,7 +190,7 @@ Můžete nasadit aktualizace pro software jiného výrobce než Microsoftu. K to
 11. Všechny neuvedené návratové kódy se považují za chybu.
 Některé aktualizace používají pro návratové kódy nestandardní interpretace. V takovém případě můžete zadat své vlastní interpretace návratových kódů.
 
-12. Zadejte nebo upravte požadované návratové kódy a pak zvolte **Další**.
+12. Zadejte nebo upravte požadované návratové kódy a klikněte na tlačítko **Další**.
 
 13. Na stránce **Souhrn** v průvodci zkontrolujte akce, které se mají provést, a potom výběrem položky **Nahrát** kroky průvodce dokončete.
 
@@ -201,31 +201,31 @@ Jakmile se aktualizace jiného výrobce nahraje do Intune, zobrazí se v pracovn
 ## <a name="approve-and-decline-updates"></a>Schválení a zamítnutí aktualizací
 Jakmile jsou aktualizace připravené k instalaci, zobrazí se o tom zpráva na stránce **Přehled aktualizací** pracovního prostoru **Aktualizace** v části **Stav aktualizace**. Výběrem této zprávy otevřete stránku **Všechny aktualizace** , na které uvidíte, jaké aktualizace jsou připravené ke schválení.
 
-Abyste usnadnili hledání aktualizací, můžete použít seznam **Filtry**. Můžete třeba zobrazit jen aktualizace, které se nepodařilo nainstalovat nebo které byly nahrazené.
+Abyste usnadnili hledání aktualizací, můžete použít seznam **Filtry** . Můžete třeba zobrazit jen aktualizace, které se nepodařilo nainstalovat nebo které byly nahrazené.
 
 Po výběru aktualizace ze seznamu budete moct použít další příkazy, které umožňují spravovat aktualizace a které jsou uvedené v této tabulce:
 
-|Úloha|Podrobnosti|
+|Úkol|Podrobnosti|
 |--------|--------------------|
 |**Zobrazit vlastnosti**|Zobrazí podrobné informace o aktualizaci včetně počtu počítačů, na které se vztahuje.|
 |**Upravit**|Používá se jen pro aktualizace jiného výrobce než Microsoftu. Umožňuje upravit vlastnosti aktualizace.|
-|**Schválit**|Schválí vybranou aktualizaci a umožní vám nakonfigurovat, do jakých skupin se nasadí. Další informace najdete v postupu **Schválení aktualizací** v tomto tématu.|
-|**Odmítnout**|Odebere všechna předchozí schválení aktualizace a skryje aktualizaci z výchozích zobrazení. Kromě toho se odeberou všechna data sestavy pro tuto aktualizaci.<br /><br />Pokud chcete později hledat odmítnuté aktualizace, nastavte filtr na stránce **Všechny aktualizace** na **Odmítnuto**. Tuto aktualizaci pak můžete podle potřeby schválit.<br /><br />Pokud došlo k odmítnutí aktualizace z důvodu vypršení její platnosti ve službě Microsoft Update, nebude možné ji schválit v konzole pro správu Intune.<br /><br />Když odstraníte zásady aktualizací nasazené na počítače, hodnoty nastavení zásad těchto aktualizací se vrátí do výchozího stavu pro operační systém nainstalovaný na počítačích.|
+|**Schválení**|Schválí vybranou aktualizaci a umožní vám nakonfigurovat, do jakých skupin se nasadí. Další informace najdete v postupu **Schválení aktualizací** v tomto tématu.|
+|**Odmítnutí**|Odebere všechna předchozí schválení aktualizace a skryje aktualizaci z výchozích zobrazení. Kromě toho se odeberou všechna data sestavy pro tuto aktualizaci.<br /><br />Pokud chcete později hledat odmítnuté aktualizace, nastavte filtr na stránce **Všechny aktualizace** na **Odmítnuto**. Tuto aktualizaci pak můžete podle potřeby schválit.<br /><br />Pokud došlo k odmítnutí aktualizace z důvodu vypršení její platnosti ve službě Microsoft Update, nebude možné ji schválit v konzole pro správu Intune.<br /><br />Když odstraníte zásady aktualizací nasazené na počítače, hodnoty nastavení zásad těchto aktualizací se vrátí do výchozího stavu pro operační systém nainstalovaný na počítačích.|
 |**Odstranit**|Používá se jen pro aktualizace jiného výrobce než Microsoftu. Odstraní vybranou aktualizaci.|
-|**Odeslat**|Spustí průvodce **Nahrát aktualizaci**, který vám umožní nahrát aktualizace jiného výrobce než Microsoftu, které chcete nasadit.|
+|**Nahrát**|Spustí průvodce **Nahrát aktualizaci**, který vám umožní nahrát aktualizace jiného výrobce než Microsoftu, které chcete nasadit.|
 
 ### <a name="to-approve-updates"></a>Schválení aktualizací
 
 1. V [konzole pro správu Microsoft Intune](https://manage.microsoft.com/)vyberte **aktualizace** &gt; **Přehled** &gt; **nové aktualizace ke schválení**.
 
-    V pracovním prostoru **aktualizace** vyberte **Přehled** &gt; **nové aktualizace ke schválení**.
+    V pracovním prostoru **aktualizace** vyberte možnost **Přehled** &gt; **nových aktualizací ke schválení**.
 
     > [!NOTE]
     > Odkaz **Nové aktualizace ke schválení** se zobrazí v oblasti **Stav aktualizací** , jen když máte aspoň jeden spravovaný počítač, který vyžaduje schválení aktualizace.
 
 2. Vyberte aktualizaci, kterou chcete schválit, v dolní části stránky se podívejte na její vlastnosti, a potom vyberte možnost **Schválit**. Můžete vybrat víc aktualizací tím, že při výběru jednotlivých položek podržíte stisknutou klávesu **CTRL**.
 
-3. Na stránce **Vybrat skupiny** vyberte skupinu, do které chcete nasadit aktualizace, a vyberte možnost **Přidat**. Až budete s určováním skupin hotoví, zvolte **Další**.
+3. Na stránce **Vybrat skupiny** vyberte skupinu, do které chcete nasadit aktualizace, a vyberte možnost **Přidat**. Po dokončení zadávání skupin klikněte na tlačítko **Další**.
 
 4. Na stránce **Akce nasazení** udělejte pro každou skupinu v seznamu tohle:
 

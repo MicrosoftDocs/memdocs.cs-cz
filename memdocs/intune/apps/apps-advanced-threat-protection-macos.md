@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 8707b938231e682fe1cd165c207cca8e575950d4
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80324657"
 ---
 # <a name="add-microsoft-defender-atp-to-macos-devices-using-microsoft-intune"></a>Přidání ATP Microsoft Defenderu do zařízení macOS pomocí Microsoft Intune
@@ -34,7 +34,7 @@ Než budete moct nasadit, nakonfigurovat, monitorovat nebo chránit aplikace, mu
 - Nasaďte rozšíření jádra do Intune. Další informace najdete v tématu [Přidání rozšíření jádra MacOS do Intune](../configuration/kernel-extensions-overview-macos.md).
 
 > [!IMPORTANT]
-> Rozšíření jádra se dá automaticky schválit jenom v případě, že se nachází na zařízení před instalací aplikace Microsoft Defender ATP. Jinak se uživatelům zobrazí zpráva "rozšíření systému je blokované" na počítači Mac a musí toto rozšíření schválit tak, že přejde na **Předvolby zabezpečení** nebo **Předvolby systému** > **zabezpečení & ochrany osobních údajů** a potom vyberte **Povolit**. Další informace najdete v tématu [řešení potíží s rozšířením jádra v programu Microsoft Defender ATP pro Mac](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/mac-support-kext).
+> Rozšíření jádra se dá automaticky schválit jenom v případě, že se nachází na zařízení před instalací aplikace Microsoft Defender ATP. Jinak se uživatelům zobrazí zpráva "rozšíření systému je blokované" na počítači Mac a musí toto rozšíření schválit tak, že přejde na **Předvolby zabezpečení** nebo na zabezpečení **Předvolby** > systému **& ochrany osobních údajů** a potom vyberte **Povolit**. Další informace najdete v tématu [řešení potíží s rozšířením jádra v programu Microsoft Defender ATP pro Mac](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/mac-support-kext).
 
 ## <a name="add-microsoft-defender-atp-to-intune"></a>Přidání ATP Microsoft Defenderu do Intune
 Do Intune můžete přidat ATP programu Microsoft Defender pomocí následujících kroků:
@@ -51,7 +51,7 @@ V tomto kroku zadáte informace o tomto nasazení aplikace. Tyto informace vám 
     - **Název**: zadejte název aplikace, který se zobrazí na portálu společnosti. Ujistěte se, že jsou všechny názvy jedinečné. Pokud stejný název aplikace existuje dvakrát, zobrazí se na portálu společnosti uživatelům jenom jedna z aplikací.
     - **Popis**: Zadejte popis aplikace. Můžete například zobrazit seznam cílových uživatelů v popisu.
     - **Vydavatel**: Jako vydavatel se zobrazí Microsoft.
-    - **Kategorie**: Můžete vybrat jednu nebo několik předdefinovaných kategorií nebo kategorii, kterou jste vytvořili. Toto nastavení usnadňuje uživatelům vyhledání aplikace při procházení portálu společnosti.
+    - **Kategorie**: volitelně vyberte jednu nebo více předdefinovaných kategorií aplikací nebo kategorii, kterou jste vytvořili. Toto nastavení usnadňuje uživatelům vyhledání aplikace při procházení portálu společnosti.
     - **Zobrazit jako doporučenou aplikaci v portál společnosti**: tuto možnost vyberte, pokud chcete, aby se aplikace zobrazovala na hlavní stránce portálu společnosti, když uživatelé vyhledávají aplikace.
     - **Adresa URL informací**: Volitelně můžete zadat adresu URL webu, který obsahuje informace o této aplikaci. Adresa URL se zobrazí uživatelům na portálu společnosti.
     - **Adresa URL informací o ochraně osobních údajů**: Volitelně zadejte adresu URL webu, který obsahuje informace o ochraně osobních údajů v této aplikaci. Adresa URL se zobrazí uživatelům na portálu společnosti.
@@ -62,10 +62,10 @@ V tomto kroku zadáte informace o tomto nasazení aplikace. Tyto informace vám 
 
 ## <a name="select-scope-tags-optional"></a>Vybrat značky oboru (volitelné)
 Pomocí značek Scope můžete určit, kdo může v Intune zobrazit informace o klientské aplikaci. Úplné podrobnosti o značkách oboru najdete v tématu použití značek řízení přístupu na základě role a rozsahu pro distribuci IT.
-1.    Vyberte **obor (značky)**  > **Přidat**.
+1.    Vyberte **obor (značky)** > **Přidat**.
 2.    Pro vyhledání značek oboru použijte pole **Vybrat** .
 3.    Zaškrtněte políčko vedle značek oboru, které chcete této aplikaci přiřadit.
-4.    Klikněte na **vybrat** > **OK**.
+4.    Klikněte na **Vybrat** > **OK**.
 
 ## <a name="add-the-app"></a>Přidání aplikace
 Po dokončení konfigurace vyberte v podokně **aplikace aplikace** možnost **Přidat** . 

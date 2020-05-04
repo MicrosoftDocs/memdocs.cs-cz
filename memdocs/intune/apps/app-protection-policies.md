@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 379ceb4bf99081e5544be15d338aade0eb5a7a60
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80323600"
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>Vytvoření a přiřazení zásad ochrany aplikací
@@ -102,7 +102,7 @@ Když vytvoříte zásady ochrany aplikací pro iOS/iPadOS a aplikace pro Androi
     > [!TIP]
     > Tato nastavení zásad se vynutí jenom při použití aplikace v pracovním kontextu. Když koncový uživatel použije aplikaci k provedení osobní úlohy, nebudou mít tyto zásady na ni vliv. Upozorňujeme, že když vytvoříte nový soubor, považuje se za osobní soubor.
 
-Koncoví uživatelé můžou stahovat aplikace z App Storu nebo Google Play. Více informací najdete v následujících tématech:
+Koncoví uživatelé můžou stahovat aplikace z App Storu nebo Google Play. Další informace naleznete v tématu:
 * [Co očekávat, když ke správě svojí aplikace pro Android používáte zásady ochrany aplikací](../fundamentals/end-user-mam-apps-android.md)
 * [Co očekávat, když je vaše aplikace pro iOS/iPadOS spravovaná zásadami ochrany aplikací](../fundamentals/end-user-mam-apps-ios.md)
 
@@ -169,7 +169,7 @@ V mnoha organizacích je běžné, že koncovým uživatelům umožníte použí
 
 Vzhledem k tomu, že zásady ochrany aplikací Intune cílí na identitu uživatele, nastavení ochrany pro uživatele se může vztahovat na zaregistrovaná zařízení (spravovaná přes MDM) i na nezaregistrovaná zařízení (bez MDM). Proto můžete cílit na zásady ochrany aplikací Intune buď na zaregistrovaná, nebo na neregistrovaná zařízení s iOS/iPadOS a Androidem. Můžete mít jednu zásadu ochrany pro nespravovaná zařízení, ve kterých jsou zavedené ovládací prvky ochrany před únikem informací (DLP), a samostatné zásady ochrany pro zařízení spravovaná pomocí MDM, kde můžou být ovládací prvky ochrany před únikem informací trochu uvolněné. Další informace o tom, jak funguje na osobních zařízeních s Androidem Enterprise, najdete v tématu [Zásady ochrany aplikací a pracovní profily](android-deployment-scenarios-app-protection-work-profiles.md).
 
-Pokud chcete vytvořit tyto zásady, přejděte do části **aplikace** > **Zásady ochrany aplikací** v konzole Intune a pak vyberte **vytvořit zásadu**. Můžete také upravit existující zásadu ochranu aplikací. Pokud chcete, aby se zásady ochrany aplikací nastavily u spravovaných i nespravovaných zařízení, přejděte na stránku **aplikace** a ověřte, že **cíl pro aplikace na všech typech zařízení** je nastavená na **Ano**, což je výchozí hodnota. Pokud chcete členit přiřazení na základě stavu správy, nastavte **cíl pro aplikace na všech typech zařízení** na **ne**. 
+Pokud chcete vytvořit tyto zásady, vyhledejte v konzole Intune **aplikace** > **Zásady ochrany aplikací** a potom vyberte **vytvořit zásadu**. Můžete také upravit existující zásadu ochranu aplikací. Pokud chcete, aby se zásady ochrany aplikací nastavily u spravovaných i nespravovaných zařízení, přejděte na stránku **aplikace** a ověřte, že **cíl pro aplikace na všech typech zařízení** je nastavená na **Ano**, což je výchozí hodnota. Pokud chcete členit přiřazení na základě stavu správy, nastavte **cíl pro aplikace na všech typech zařízení** na **ne**. 
 
 ### <a name="device-types"></a>Typy zařízení
 
@@ -183,7 +183,7 @@ V Androidu se zařízení s Androidem zobrazí výzva k instalaci aplikace Port�
 Pro iOS/iPadOS se pro výběr typu zařízení vynutilo nespravované zařízení, vyžaduje se další nastavení konfigurace aplikace. Tyto konfigurace budou komunikovat se službou APP Service, že konkrétní aplikace je spravovaná a že nastavení aplikace nebudou platit:
 
 - **IntuneMAMUPN** musí být nakonfigurované pro všechny aplikace spravované pomocí správy mobilních zařízení (MDM). Další informace najdete v tématu [Správa přenosu dat mezi aplikacemi pro iOS/iPadOS v Microsoft Intune](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm).
-- **IntuneMAMDeviceID** musí být nakonfigurované pro všechny aplikace spravované pro správu MDM od třetích stran. **IntuneMAMDeviceID** by mělo být nakonfigurované na token ID zařízení. Například `key=IntuneMAMDeviceID, value={{deviceID}}`. Další informace najdete v tématu [Přidání zásad konfigurace aplikací pro spravovaná zařízení s iOS/iPadOS](app-configuration-policies-use-ios.md).
+- **IntuneMAMDeviceID** musí být nakonfigurované pro všechny aplikace spravované pro správu MDM od třetích stran. **IntuneMAMDeviceID** by mělo být nakonfigurované na token ID zařízení. Například, `key=IntuneMAMDeviceID, value={{deviceID}}`. Další informace najdete v tématu [Přidání zásad konfigurace aplikací pro spravovaná zařízení s iOS/iPadOS](app-configuration-policies-use-ios.md).
 - Pokud je nakonfigurované jenom **IntuneMAMDeviceID**, Intune APP bude zařízení považovat za nespravované.
 
 > [!NOTE]

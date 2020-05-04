@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 17b120faa0021a1fc044d7831b4b81ea88f404a7
-ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79526576"
 ---
 # <a name="lookout-mobile-endpoint-security-connector-with-intune"></a>Podívejte se na mobilní koncový bod Security Connector s Intune
@@ -81,12 +81,12 @@ Když se na zařízeních zjistí přítomnost škodlivých aplikací (třeba ma
 *Zablokování při zjištění přítomnosti škodlivých aplikací:*
 
 > [!div class="mx-imgBorder"]
-> ![koncepční obrázek zásad blokující přístup z důvodu škodlivých aplikací](./media/lookout-mobile-threat-defense-connector/malicious-apps-blocked.png)
+> ![Koncepční obrázek zásad blokující přístup z důvodu škodlivých aplikací](./media/lookout-mobile-threat-defense-connector/malicious-apps-blocked.png)
 
-*Přístup udělený po nápravě:*
+*Přístup po nápravě udělen:*
 
 > [!div class="mx-imgBorder"]
-> ![koncepční image ukazující přístup k zařízením po opravě](./media/lookout-mobile-threat-defense-connector/malicious-apps-unblocked.png)
+> ![Koncepční obrázek ukazující přístup k zařízením po opravě](./media/lookout-mobile-threat-defense-connector/malicious-apps-unblocked.png)
 
 ### <a name="control-access-based-on-threat-to-network"></a>Řízení přístupu na základě ohrožení sítě
 
@@ -97,35 +97,35 @@ Zjišťuje ohrožení vaší sítě, například útoky prostředníkem, a chrá
 > [!div class="mx-imgBorder"]
 > ![Obrázek znázorňující blokování přístupu Wi-Fi na základě hrozeb sítě](./media/lookout-mobile-threat-defense-connector/network-wifi-blocked.png)
 
-*Přístup udělený po nápravě:*
+*Přístup po nápravě udělen:*
 
 > [!div class="mx-imgBorder"]
-> ![koncepční obrázek podmíněného přístupu umožňující přístup po opravě](./media/lookout-mobile-threat-defense-connector/network-wifi-unblocked.png)
+> ![Koncepční obrázek podmíněného přístupu umožňující přístup po nápravě](./media/lookout-mobile-threat-defense-connector/network-wifi-unblocked.png)
 
 ### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>Řízení přístupu k SharePointu Online na základě ohrožení sítě
 
 Zjišťuje ohrožení vaší sítě, například útoky prostředníkem, a zabraňuje synchronizaci podnikových souborů na základě rizika zařízení.
 
-*Zablokování SharePointu Online v případě, že se zjistí ohrožení sítě:*
+*Zablokovat SharePoint Online, když jsou zjištěny hrozby sítě:*
 
 > [!div class="mx-imgBorder"]
-> ![koncepční obrázek blokování přístupu k SharePointu Online](./media/lookout-mobile-threat-defense-connector/network-spo-blocked.png)
+> ![Koncepční obrázek blokující přístup k SharePointu Online](./media/lookout-mobile-threat-defense-connector/network-spo-blocked.png)
 
-*Přístup udělený po nápravě:*
+*Přístup po nápravě udělen:*
 
 > [!div class="mx-imgBorder"]
-> ![koncepční obrázek o povolení přístupu po vypravení hrozby sítě](./media/lookout-mobile-threat-defense-connector/network-spo-unblocked.png)
+> ![Koncepční obrázek povolení přístupu po nápravě síťové hrozby](./media/lookout-mobile-threat-defense-connector/network-spo-unblocked.png)
 
 ### <a name="control-access-on-unenrolled-devices-based-on-threats-from-malicious-apps"></a>Řízení přístupu na nezaregistrovaných zařízeních na základě hrozeb ze škodlivých aplikací
 
 Když řešení ochrany před mobilními hrozbami považuje zařízení za infikované:
 > [!div class="mx-imgBorder"]
-> ![bloky zásad ochrany aplikací z důvodu zjištěného malwaru](./media/lookout-mobile-threat-defense-connector/lookout-app-policy-block.png)
+> ![Blokování zásad ochrany aplikací z důvodu zjištěného malwaru](./media/lookout-mobile-threat-defense-connector/lookout-app-policy-block.png)
 
 Přístup se udělí při nápravě:
 
 > [!div class="mx-imgBorder"]
-> k nápravě pro zásady ochrany aplikací je udělený přístup ![](./media/lookout-mobile-threat-defense-connector/lookout-app-policy-remediated.png)
+> ![Pro zásady ochrany aplikací se udělí přístup k nápravě.](./media/lookout-mobile-threat-defense-connector/lookout-app-policy-remediated.png)
 
 ## <a name="next-steps"></a>Další kroky
 

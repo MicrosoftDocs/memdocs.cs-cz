@@ -18,10 +18,10 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: lacranda
 ms.openlocfilehash: b6303d7d98e718c2a4f54b199bf90a3bd0684bf8
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80084759"
 ---
 # <a name="remove-scep-and-pkcs-certificates-in-microsoft-intune"></a>Odebrání certifikátů SCEP a PKCS v Microsoft Intune
@@ -92,7 +92,7 @@ Certifikáty PKCS *zůstávají* v zařízení (certifikáty se neodvolává neb
 - Správce změní nebo aktualizuje profil PKCS.
 - Z přiřazení skupiny se odebere profil certifikátu.
 
-## <a name="ios-devices"></a>Zařízení se systémem iOS
+## <a name="ios-devices"></a>Zařízení s iOSem
 
 ### <a name="scep-certificates"></a>Certifikáty SCEP
 
@@ -247,4 +247,4 @@ Certifikáty PKCS zůstávají v zařízení (certifikáty se neodvolává nebo 
 
 ## <a name="next-steps"></a>Další kroky
 
-[Použití certifikátů k ověřování](certificates-configure.md)
+[Ověřování pomocí certifikátů](certificates-configure.md)

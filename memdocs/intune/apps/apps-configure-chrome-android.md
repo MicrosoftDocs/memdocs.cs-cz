@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 89d9fce6579b0fdf89299e342969f647c457cc84
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80324831"
 ---
 # <a name="configure-google-chrome-for-android-devices-using-intune"></a>Konfigurace Google Chrome pro zařízení s Androidem pomocí Intune 
@@ -37,7 +37,7 @@ Pomocí zásad konfigurace aplikací Intune můžete nakonfigurovat Google Chrom
 ## <a name="add-the-google-chrome-app-to-intune"></a>Přidání aplikace Google Chrome do Intune
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **aplikace** > **všechny aplikace** > **přidejte** a přidejte **spravovanou Google Play** aplikaci.
+2. Vybrat **aplikace** > **všechny aplikace** > **Přidat** a pak přidat **spravovanou aplikaci Google Play** .
 3. Přejít na Managed Google Play, hledejte pomocí **Google Chrome** a schvalte.
 
     ![Hledání a schvalování Google Chrome](./media/apps-configure-chrome-android/search.png)
@@ -48,7 +48,7 @@ Další podrobnosti o přidání spravované aplikace Google Play do Intune najd
 
 ## <a name="add-app-configuration-for-managed-ae-devices"></a>Přidat konfiguraci aplikace pro spravovaná zařízení s AE
 
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **aplikace** > **zásady konfigurace aplikací** > **Přidat** > **spravovaná zařízení**.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **aplikace** > **zásady** > konfigurace aplikace**Přidat** > **spravovaná zařízení**.
 2. Zadejte tyto podrobnosti:
     - **Název**: Název profilu, který se zobrazí na portálu Azure Portal
     - **Popis**: Popis profilu, který se zobrazí na portálu Azure Portal
@@ -66,16 +66,16 @@ Další podrobnosti o přidání spravované aplikace Google Play do Intune najd
     ![Přidat návrháře konfigurace použití](./media/apps-configure-chrome-android/configuration.png)
 
     Níže je uveden příklad běžných nastavení:
-    - **Zablokovat přístup k seznamu adres URL**: `["*"]`
-    - **Povolení přístupu k seznamu adres URL**: `["baidu.com", "youtube.com", "chromium.org", "chrome://*"]`
-    - **Spravované záložky**: `[{"toplevel_name": "My managed bookmarks folder"  },  {"url": "baidu.com",   "name": "Baidu"},  {"url": "youtube.com", "name": "Youtube"},  {"name": "Chrome links",  "children": [{"url": "chromium.org", "name": "Chromium"},    {"url": "dev.chromium.org", "name": "Chromium Developers"}]}]`
-    - **Dostupnost režimu anonymním**: `Incognito mode disabled`
+    - **Zablokovat přístup k seznamu adres URL**:`["*"]`
+    - **Povolení přístupu k seznamu adres URL**:`["baidu.com", "youtube.com", "chromium.org", "chrome://*"]`
+    - **Spravované záložky**:`[{"toplevel_name": "My managed bookmarks folder"  },  {"url": "baidu.com",   "name": "Baidu"},  {"url": "youtube.com", "name": "Youtube"},  {"name": "Chrome links",  "children": [{"url": "chromium.org", "name": "Chromium"},    {"url": "dev.chromium.org", "name": "Chromium Developers"}]}]`
+    - **Dostupnost režimu anonymním**:`Incognito mode disabled`
 
     Po přidání nastavení konfigurace pomocí návrháře konfigurace budou uvedená v tabulce. 
 
-    ![Společná nastavení](./media/apps-configure-chrome-android/common-settings.png)
+    ![Obecná nastavení](./media/apps-configure-chrome-android/common-settings.png)
 
-    Výše uvedená nastavení vytvoří záložky a zablokuje přístup ke všem adresám URL s výjimkou `baidu.com`, `yahoo.com`, `chromium.org`a `chrome://`.
+    Výše uvedená nastavení vytvoří záložky a zablokuje přístup ke všem `baidu.com`adresám `chromium.org`URL s `chrome://`výjimkou, `yahoo.com`, a.
 
 5. Kliknutím na **OK** a **Přidat** přidejte zásady konfigurace do Intune.
 6. Přiřaďte tyto zásady konfigurace ke skupině uživatelů. Další informace najdete v článku [Přiřazení aplikací do skupin pomocí Microsoft Intune](apps-deploy.md).
@@ -100,7 +100,7 @@ Spusťte Google Chrome a zobrazí se použitá nastavení.
    Karta anonymním:<br>
    <img alt="Incognito tab" src="./media/apps-configure-chrome-android/incognito-tab.png" width="350">
 
-## <a name="troubleshooting"></a>Odstraňování potíží
+## <a name="troubleshooting"></a>Řešení potíží
 
 1. Podívejte se na portál Intune, kde můžete monitorovat stav nasazení zásad.
 

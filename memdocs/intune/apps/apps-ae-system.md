@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: ce2a685abc1997e0152fcc2cf087b8c54d2253c3
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80324643"
 ---
 # <a name="add-android-enterprise-system-apps-to-microsoft-intune"></a>Přidání aplikací pro Android Enterprise System do Microsoft Intune
@@ -39,7 +39,7 @@ Aplikaci pro Android Enterprise System můžete do Intune přidat z Azure Portal
 4. Klikněte na **Vybrat**. Zobrazí se kroky **Přidání aplikace** .
 Na stránce **informace o aplikaci** přidejte podrobnosti o aplikaci:
     - **Název aplikace**: zadejte název aplikace.
-    - **Vydavatel**: Zadejte název vydavatele aplikace.  
+    - **Vydavatel**: zadejte název vydavatele aplikace.  
     - **Název balíčku**: zadejte název balíčku. Intune ověří, jestli je název balíčku platný.
 5. Kliknutím na tlačítko **Další** zobrazíte stránku **značky oboru** .
 8. Klikněte na **Vybrat značky oboru** a volitelně přidejte značky oboru pro aplikaci. Další informace najdete v tématu [použití řízení přístupu na základě role (RBAC) a značek oboru pro distribuci](../fundamentals/scope-tags.md).

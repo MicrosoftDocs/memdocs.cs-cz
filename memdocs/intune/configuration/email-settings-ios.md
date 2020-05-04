@@ -16,10 +16,10 @@ search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 1ac4050e6113eba2a34099a627bf6141049d8454
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79333047"
 ---
 # <a name="add-e-mail-settings-for-ios-and-ipados-devices-in-microsoft-intune"></a>Přidání nastavení e-mailu pro zařízení s iOS a iPadOS v Microsoft Intune
@@ -45,13 +45,13 @@ V tomto článku najdete seznam všech nastavení e-mailu, která jsou dostupná
   - **Název účtu SAM**: Vyžaduje doménu, například `domain\user1`. Dále zadejte:  
     - **Zdroj názvu domény uživatele**: Zvolte **AAD** (Azure Active Directory) nebo **Vlastní**.
       - **AAD**: Získejte atributy z Azure AD. Dále zadejte:
-        - **Atribut názvu domény uživatele z AAD**: vyberte, chcete-li získat **úplný název domény** (`contoso.com`) nebo atribut **název pro rozhraní NetBIOS** (`contoso`) daného uživatele.
+        - **Atribut názvu domény uživatele z AAD**: vyberte, pokud chcete získat **úplný název domény** (`contoso.com`) nebo **název pro rozhraní NetBIOS** (`contoso`) pro uživatele.
 
       - **Vlastní**: Získejte atributy z vlastního názvu domény. Dále zadejte:
-        - **Vlastní název domény, který se má použít**: zadejte hodnotu, kterou Intune používá pro název domény, například `contoso.com` nebo `contoso`.
+        - **Vlastní název domény, který se má použít**: zadejte hodnotu, kterou Intune používá pro název domény, `contoso.com` například `contoso`nebo.
 
 - **Atribut e-mailové adresy z AAD**: Zvolte, jak se generuje e-mailová adresa uživatele. Možnosti:
-  - **Hlavní název uživatele**: jako e-mailovou adresu použijte úplný hlavní název, například `user1@contoso.com` nebo `user1`.
+  - **Hlavní název uživatele**: jako e-mailová adresa použijte úplný hlavní název, jako `user1@contoso.com` je `user1`například nebo.
   - **Primární adresa SMTP**: k přihlášení k Exchangi použijte primární adresu SMTP, třeba `user1@contoso.com`.
 - **Metoda ověřování**: Vyberte způsob ověřování uživatelů pro e-mailový server. Možnosti:
   - **Certifikát**: vyberte profil certifikátu SCEP nebo PKCS klienta, který jste dříve vytvořili za účelem ověřování připojení k systému Exchange. Tato možnost nabízí nejbezpečnější a bezproblémové prostředí pro vaše uživatele.

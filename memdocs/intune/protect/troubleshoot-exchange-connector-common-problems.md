@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 55f51f94cf26aa2486ef390d5fbb668eaf013e10
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79328875"
 ---
 # <a name="resolve-common-problems-with-the-intune-exchange-connector"></a>Řešení běžných problémů s Intune Exchange Connectorem
@@ -68,10 +68,10 @@ V následujících částech najdete řešení potíží s e-mailovými oznámen
 
    1. Na příkazovém řádku zadejte příkaz *nslookup*.
 
-   2. Zadejte *Autodiscover.SMTPdomain.com*. Výstup by měl vypadat podobně jako na následujícím obrázku: ![výsledků nslookup](./media/troubleshoot-exchange-connector-common-problems/nslookup-results.png
+   2. Zadejte *Autodiscover.SMTPdomain.com*. Výstup by měl vypadat podobně jako na následujícím obrázku: ![výsledky nslookup](./media/troubleshoot-exchange-connector-common-problems/nslookup-results.png
       )
 
-   Službu automatické konfigurace můžete také otestovat z Internetu na https://testconnectivity.microsoft.com. Nebo ho testujte z místní domény pomocí nástroje Microsoft Connectivity Analyzer. Další informace najdete v tématu [Nástroj Microsoft Connectivity Analyzer](https://docs.microsoft.com/previous-versions/office/exchange-remote-connectivity/jj851141(v=exchg.80)).
+   Službu Automatická konfigurace můžete také otestovat z Internetu na adrese https://testconnectivity.microsoft.com. Nebo ho testujte z místní domény pomocí nástroje Microsoft Connectivity Analyzer. Další informace najdete v tématu [Nástroj Microsoft Connectivity Analyzer](https://docs.microsoft.com/previous-versions/office/exchange-remote-connectivity/jj851141(v=exchg.80)).
 
 
 ### <a name="check-autodiscovery"></a>Ověřit automatické zjišťování
@@ -82,9 +82,9 @@ Pokud se automatická konfigurace nezdařila, zkuste provést následující kro
 
 2. V konfiguračním souboru Intune Exchange Connectoru pevně zakódovat adresu URL služby EWS:
 
-   1. Určete adresu URL EWS. Výchozí adresa URL služby EWS pro Exchange je `https://<mailServerFQDN>/ews/exchange.asmx`, adresa URL se ale může lišit. Obraťte se na správce Exchange a ověřte správnou adresu URL vašeho prostředí.
+   1. Určete adresu URL EWS. Výchozí adresa URL služby EWS pro Exchange `https://<mailServerFQDN>/ews/exchange.asmx`je, ale adresa URL se může lišit. Obraťte se na správce Exchange a ověřte správnou adresu URL vašeho prostředí.
 
-   2. Upravte soubor *OnPremisesExchangeConnectorServiceConfiguration. XML* . Ve výchozím nastavení se soubor nachází v *%ProgramData%\Microsoft\Windows Intune Exchange Connectoru* na počítači, na kterém běží konektor Exchange Connector. Otevřete soubor v textovém editoru a pak změňte následující řádek tak, aby odrážel adresu URL služby EWS pro vaše prostředí: `<ExchangeWebServiceURL> https://<YourExchangeHOST>/EWS/Exchange.asmx</ExchangeWebServiceURL>`
+   2. Upravte soubor *OnPremisesExchangeConnectorServiceConfiguration. XML* . Ve výchozím nastavení se soubor nachází v *%ProgramData%\Microsoft\Windows Intune Exchange Connectoru* na počítači, na kterém běží konektor Exchange Connector. Otevřete soubor v textovém editoru a pak změňte následující řádek tak, aby odrážel adresu URL služby EWS pro vaše prostředí:`<ExchangeWebServiceURL>https://<YourExchangeHOST>/EWS/Exchange.asmx</ExchangeWebServiceURL>`
 
 3. Uložte soubor a restartujte počítač nebo restartujte službu Microsoft Intune Exchange Connector.
 

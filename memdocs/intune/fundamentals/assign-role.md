@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: a679df157a2623012d19fab2370792cac73f6f2b
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80326821"
 ---
 # <a name="assign-a-role-to-an-intune-user"></a>Přiřazení role uživateli Intune
@@ -32,17 +32,17 @@ Abyste mohli vytvářet, upravovat nebo přiřazovat role, váš účet musí m�
 - **Globální správce**
 - **Správce služby Intune**
 
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte možnost **Správa tenanta** > **role** > **všechny role**.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte**role** >  **pro správu** > tenanta**všechny role**.
 
-2. V okně **role Intune – všechny role** vyberte předdefinovanou roli, kterou chcete přiřadit > **přiřazení** > **přiřadit**.
+2. V okně **role Intune – všechny role** vyberte předdefinovanou roli, kterou**chcete přiřadit >** **přiřazení** > .
 
 5. Na stránce **základy** zadejte **název přiřazení** a volitelný **Popis přiřazení**a klikněte na tlačítko **Další**.
 
-6. Na stránce **skupiny pro správu** vyberte skupinu, která obsahuje uživatele, kterému chcete udělit oprávnění. Klikněte na **Další**.
+6. Na stránce **skupiny pro správu** vyberte skupinu, která obsahuje uživatele, kterému chcete udělit oprávnění. Zvolit **Další**
 
-7. Na stránce **rozsah (skupiny)** vyberte skupinu obsahující uživatele nebo zařízení, které bude člen výše moci spravovat. Vyberte **Další**.
+7. Na stránce **rozsah (skupiny)** vyberte skupinu obsahující uživatele nebo zařízení, které bude člen výše moci spravovat. Zvolte **Další**.
 
-8. Na stránce **obor (značky)** vyberte značky, ve kterých se bude toto přiřazení role použít. Vyberte **Další**.
+8. Na stránce **obor (značky)** vyberte značky, ve kterých se bude toto přiřazení role použít. Zvolte **Další**.
 
 9. Po dokončení na stránce **Revize + vytvořit** klikněte na **vytvořit**. Nové přiřazení se zobrazí v seznamu přiřazení.
 
