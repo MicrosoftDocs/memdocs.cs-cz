@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6b9f5a560b0f44b8ff256034b51cb9057faf0ec2
-ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
+ms.openlocfilehash: 5aa91a84b2fe5d8870afc93022ab5a468b30e0db
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80576832"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82074788"
 ---
 # <a name="how-to-use-intune-in-environments-without-google-mobile-services"></a>Jak používat Intune v prostředích bez Google Mobile Services
 
@@ -33,7 +33,7 @@ Microsoft Intune používá Google Mobile Services (GMS) ke komunikaci s portál
 
 ### <a name="for-users-outside-of-mainland-china"></a>Pro uživatele mimo kontinentální Čínu 
 
-Pokud Google Play není k dispozici, zařízení s Androidem můžou stáhnout [Microsoft Intune portál společnosti pro Android](../user-help/install-the-company-portal-app-android.md) a aplikace bokem. Při instalaci tímto způsobem aplikace neobdrží aktualizace nebo opravy automaticky. Je nutné, abyste aplikaci pravidelně aktualizovali a ručně aktualizovali. 
+Pokud Google Play není k dispozici, zařízení s Androidem můžou stáhnout [Microsoft Intune portál společnosti pro Android](https://www.microsoft.com/en-us/download/details.aspx?id=49140) a aplikace bokem. Při instalaci tímto způsobem aplikace neobdrží aktualizace nebo opravy automaticky. Je nutné, abyste aplikaci pravidelně aktualizovali a ručně aktualizovali. 
 
 ### <a name="for-users-in-mainland-china"></a>Pro uživatele v pevninské Číně 
 
@@ -45,7 +45,7 @@ Vzhledem k tomu, že Obchod Google Play aktuálně není v pevninské Číně k 
 
 Některé funkce Intune spoléhají na komponenty GMS, jako je Google Play Store nebo Google Play Services. Vzhledem k tomu, že tyto komponenty nejsou k dispozici v prostředích bez GMS, nemusí být k dispozici následující funkce v konzole pro správu Intune.  
 
-| Scénář  | Funkce:  |
+| Scénář  | Funkce  |
 |-----------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Zásady dodržování předpisů pro zařízení  | Při vytváření nebo úpravách zásad dodržování předpisů pro správce zařízení s Androidem nejsou k dispozici všechny možnosti uvedené v části **Google Play ochrana** .  |
 | Zásady ochrany aplikací (podmíněné spuštění)  | **Ověření zařízení SafetyNet** a **vyžadovat podmínky kontroly hrozeb u aplikací** nelze použít k podmíněnému spuštění.  |
@@ -62,10 +62,10 @@ Dokončení následujících úloh může vyžadovat až 8 hodin:
 
 **Konzola Intune**:
 - Úplné vymazání
-- selektivní vymazání
+- Selektivní vymazání
 - Nasazení nových nebo aktualizovaných aplikací
-- Vzdálené uzamčení
-- Resetování hesla
+- vzdálené uzamčení
+- resetování hesla
 
 **Portál společnosti Intune aplikace pro Android**:
 - Vzdálené odebrání zařízení

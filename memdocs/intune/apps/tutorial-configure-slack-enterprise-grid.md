@@ -18,24 +18,24 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 556381337b225640f25d2e3adf86dde5ed428273
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 98ab8fd069b0542a29f61d9b0f5b69d7b82a8a1c
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80325683"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82074771"
 ---
 # <a name="tutorial-configure-slack-to-use-intune-for-emm-and-app-configuration"></a>Kurz: Konfigurace časové rezervy pro používání služby Intune pro modul EMM a konfiguraci aplikací
 
 Časová rezerva je aplikace pro spolupráci, kterou můžete použít s Microsoft Intune.   
 
-V tomto kurzu se naučíte:
+V tomto kurzu provedete následující:
 > [!div class="checklist"]
 > - Nastavte Intune jako poskytovatele podnikové mobility (EMM) v podnikové mřížce s časovou rezervou. V zařízeních spravovaných přes Intune budete moct omezit přístup k pracovním prostorům plánu vaší mřížky.
 > - Vytvořte zásady konfigurace aplikací pro správu časové rezervy aplikace EMM na zařízeních iOS/iPadOS a aplikaci časové rezervy pro zařízení s pracovním profilem Androidu.
 > - Vytvoření zásad dodržování předpisů pro zařízení v Intune pro nastavení podmínek, které musí zařízení s Androidem a iOS/iPadOS splňovat, aby se dalo považovat za vyhovující.
 
-Pokud nemáte předplatné Intune, [zaregistrujte si bezplatný zkušební účet](../fundamentals/free-trial-sign-up.md).
+Pokud nemáte předplatné Intune, [Zaregistrujte si bezplatný zkušební účet](../fundamentals/free-trial-sign-up.md).
 
 ## <a name="prerequisites"></a>Požadavky
 Pro účely tohoto kurzu budete potřebovat testovacího tenanta s následujícími předplatnými:
@@ -59,8 +59,8 @@ Přidejte do Intune časovou rezervu pro modul EMM jako spravovanou aplikaci pro
 2. V části **Typ aplikace**vyberte aplikace pro **iOS** Store.
 3. Vyberte **Hledat v App Storu**. Zadejte hledaný termín "časová rezerva pro modul EMM" a vyberte aplikaci. V podokně Hledat v **App Storu** klikněte na **Vybrat** .
 4. Vyberte **informace o aplikaci** a podle potřeby nakonfigurujte libovolné změny. Vyberte **OK** a nastavte informace o aplikaci.
-5. Klikněte na **Přidat**.
-6. Zvolte **Přiřazení**.
+5. Klikněte na tlačítko **Add** (Přidat).
+6. Vyberte **přiřazení**.
 7. Klikněte na **Přidat skupinu**. V závislosti na tom, na koho jste se zapnuli, když zapnete modul EMM pro časovou rezervu, vyberte v části **Typ přiřazení** , který chcete vybrat:
     - **K dispozici pro zaregistrovaná zařízení** , pokud jste zvolili "Všichni členové (včetně hostů)" nebo
     - **K dispozici s registrací nebo bez registrace** , pokud jste vybrali "Všichni členové (kromě hostů)" nebo "volitelné".
@@ -70,7 +70,7 @@ Přidejte do Intune časovou rezervu pro modul EMM jako spravovanou aplikaci pro
 
 ### <a name="add-an-app-configuration-policy-for-slack-for-emm"></a>Přidání zásad konfigurace aplikace pro časovou rezervu pro modul EMM
 Přidejte zásady konfigurace aplikace pro tuto časovou rezervu pro modul EMM iOS/iPadOS. Zásady konfigurace aplikací pro spravovaná zařízení jsou specifické pro konkrétní platformu, takže musíte přidat samostatnou zásadu pro uživatele časové rezervy na zařízeních s Androidem.
-1. V centru pro správu vyberte **aplikace** > **zásady konfigurace aplikací** > **Přidat** > **spravovaná zařízení**.
+1. V centru pro správu vyberte **aplikace** > **zásady** > konfigurace aplikace**Přidat** > **spravovaná zařízení**.
 2. Do název zadejte ' test zásad konfigurace aplikace pro časovou rezervu '.
 3. V části typ registrace zařízení potvrďte, že je nastavená **spravovaná zařízení** .
 4. V části platforma vyberte **iOS**.
@@ -85,19 +85,19 @@ Přidejte zásady konfigurace aplikace pro tuto časovou rezervu pro modul EMM i
 
 ### <a name="optional-create-an-ios-device-compliance-policy"></a>Volitelné Vytvoření zásady dodržování předpisů pro zařízení s iOS
 Nastavte zásadu dodržování předpisů zařízením s iOSem v Intune a nastavte podmínky, které zařízení musí splnit, než bude považováno za vyhovující. Pro tento kurz vytvoříme zásadu dodržování předpisů pro zařízení s iOS/iPadOS. Zásady dodržování předpisů jsou specifické pro konkrétní platformu, takže musíte vytvořit samostatnou zásadu pro uživatele časové rezervy na zařízeních s Androidem.
-1. V centru pro správu vyberte **zásady** > **dodržování předpisů zařízením** > **vytvořit zásadu**.
+1. V centru pro správu vyberte > **zásady** >  **dodržování předpisů zařízením****vytvořit zásadu**.
 2. Do název zadejte "test zásad dodržování předpisů pro iOS".
 3. V části Popis zadejte "test zásad dodržování předpisů pro iOS".
 4. V části platforma vyberte **iOS**.
 5. Vyberte **Stav zařízení**. V poli zařízení s jailbreakem vyberte **blokovat**a pak vyberte **OK**.
-6. Vyberte **zabezpečení systému** a zadejte nastavení hesla. Pro účely tohoto kurzu vyberte následující doporučená nastavení:
+6. Vyberte **Zabezpečení systému** a zadejte nastavení hesla. Pro účely tohoto kurzu vyberte následující doporučená nastavení:
     - Pro možnost vyžadovat heslo k odemknutí mobilních zařízení vyberte **vyžadovat**.
     - V případě jednoduchých hesel vyberte **blokovat**.
-    - Pro minimální délku hesla zadejte 4.
+    - U možnosti Minimální délka hesla zadejte 4.
     - V případě požadovaného typu hesla vyberte možnost **alfanumerické**.
     - Po maximálním počtu minut po uzamknutí obrazovky před zadáním hesla vyberte možnost **okamžitě**.
-    - Do vypršení platnosti hesla (dny) zadejte 41.
-    - Pokud chcete zabránit opakovanému použití, zadejte pro počet předchozích hesel 5.
+    - U možnosti Konec platnosti hesla (dny) zadejte 41.
+    - U možnosti Počet předchozích hesel, která se nesmí použít znovu zadejte 5.
 7. Klikněte na **OK**a pak znovu vyberte **OK** .
 8. Klikněte na **Vytvořit**.
 
@@ -121,7 +121,7 @@ Přidejte časovou rezervu jako spravovanou aplikaci Google Play do Intune a př
 
 ### <a name="add-an-app-configuration-policy-for-slack"></a>Přidání zásad konfigurace aplikace pro časovou rezervu
 Přidejte zásady konfigurace aplikace pro časovou rezervu. Zásady konfigurace aplikací pro spravovaná zařízení jsou specifické pro konkrétní platformu, takže musíte přidat samostatnou zásadu pro uživatele časové rezervy na zařízeních s iOS/iPadOS.
-1. V Intune vyberte **aplikace** > **zásady konfigurace aplikací** > **Přidat**.
+1. V Intune vyberte **aplikace** > **zásady** > konfigurace aplikace**Přidat**.
 2. Do název zadejte Test zásad konfigurace aplikace pro časovou rezervu.
 3. V části typ registrace zařízení vyberte **spravovaná zařízení**.
 4. V části platforma vyberte **Android**.
@@ -137,7 +137,7 @@ Přidejte zásady konfigurace aplikace pro časovou rezervu. Zásady konfigurace
 
 ### <a name="optional-create-an-android-device-compliance-policy"></a>Volitelné Vytvoření zásad dodržování předpisů pro zařízení s Androidem
 Nastavte zásadu dodržování předpisů zařízením s iOSem v Intune a nastavte podmínky, které zařízení musí splnit, než bude považováno za vyhovující. Pro tento kurz vytvoříme zásady dodržování předpisů pro zařízení s Androidem. Zásady dodržování předpisů jsou specifické pro konkrétní platformu, takže potřebujete vytvořit samostatnou zásadu pro uživatele časové rezervy na zařízeních s iOS/iPadOS.
-1. V Intune vyberte **Dodržování předpisů zařízením** > **Zásady** > **Vytvořit zásadu**.
+1. V Intune vyberte > **zásady** >  **dodržování předpisů zařízením****vytvořit zásadu**.
 2. Do název zadejte "test zásad dodržování předpisů pro Android".
 3. V části Popis zadejte "test zásad dodržování předpisů pro Android".
 4. V části platforma vyberte **Android Enterprise**.
@@ -146,10 +146,10 @@ Nastavte zásadu dodržování předpisů zařízením s iOSem v Intune a nastav
 7. Vyberte **zabezpečení systému** a zadejte **Nastavení hesla**. Pro účely tohoto kurzu vyberte následující doporučená nastavení:
     - Pro možnost vyžadovat heslo k odemknutí mobilních zařízení vyberte **vyžadovat**.
     - Pro požadovaný typ hesla vyberte **aspoň alfanumerické znaky**.
-    - Pro minimální délku hesla zadejte 4.
+    - U možnosti Minimální délka hesla zadejte 4.
     - Po maximálním počtu minut po uzamčení obrazovky, než se vyžaduje heslo, vyberte **15 minut**.
-    - Do vypršení platnosti hesla (dny) zadejte 41.
-    - Pokud chcete zabránit opakovanému použití, zadejte pro počet předchozích hesel 5.
+    - U možnosti Konec platnosti hesla (dny) zadejte 41.
+    - U možnosti Počet předchozích hesel, která se nesmí použít znovu zadejte 5.
 8. Klikněte na **OK**a pak znovu na **OK** .
 9. Klikněte na **Vytvořit**.
 

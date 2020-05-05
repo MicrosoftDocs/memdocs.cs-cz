@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 82e02795dc9dbcbc0598218418404fe74fdf1226
-ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
+ms.openlocfilehash: e6a3e2b9026024791ef1a9e4eb5aca08718d8573
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80551618"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82023159"
 ---
 # <a name="use-policy-sets-to-group-collections-of-management-objects"></a>Použití sad zásad k seskupení kolekcí objektů pro správu
 
@@ -58,7 +58,7 @@ Při vytváření sady zásad můžete vytvořit jednu jednotku přiřazení a s
 ## <a name="how-to-create-a-policy-set"></a>Postup vytvoření sady zásad
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **zařízení** > **sady zásad** > **sady zásad** > **vytvořit**.
+2. Vyberte **zařízení** > **zásady sady** > **zásady** > **vytvořit vytvořit**.
 3. Na stránce **základy** přidejte následující hodnoty:
     - **Název sady zásad** – zadejte název pro tuto sadu zásad.
     - **Popis** – Volitelně můžete zadat popis sady zásad.
@@ -89,7 +89,7 @@ U sad zásad, které jsou novinkou 1910, se zobrazí následující známé prob
   - Aplikace z obchodu pro Android
   - Obchodní aplikace pro Android
   - Spravovaná obchodní aplikace pro Android
-  - Sada Office 365 ProPlus (Windows 10)
+  - Aplikace Microsoft 365 (Windows 10)
   - Webový odkaz
   - Integrovaná aplikace pro iOS/iPadOS
   - Integrovaná aplikace pro Android
@@ -121,6 +121,7 @@ U sad zásad, které jsou novinkou 1910, se zobrazí následující známé prob
     Pokud se do sady zásad, která je nasazená do skupiny, přidá zásada, bude se tato skupina zobrazovat jako přímo přiřazená v rámci úlohy, nikoli přiřazená prostřednictvím sady zásad. V důsledku toho MAM nezpracovává odstranění přiřazení skupin pocházející ze sad zásad.
 
 - MAM nepodporuje nasazení u všech typů zásad pro **všechny uživatele** a všechny virtuální skupiny **zařízení** .
+- V rámci sady zásad nelze vybrat konfigurační profil zařízení typu "Šablony pro správu".
 
 ## <a name="next-steps"></a>Další kroky
 

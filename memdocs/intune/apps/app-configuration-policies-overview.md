@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/06/2020
+ms.date: 04/22/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8e5abdfe69d5553be420d96da60f34df93a6b2f4
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: f4dd0b1702b06f3efbed07a70b13a59b271816f8
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80083674"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82023006"
 ---
 # <a name="app-configuration-policies-for-microsoft-intune"></a>Zásady konfigurace aplikací v Microsoft Intune
 
@@ -49,7 +49,7 @@ Dostupné parametry konfigurace jsou v konečném rozhodování od vývojářů 
 >
 > V případě, že jako typ registrace pro zařízení s Androidem používáte spravovaná zařízení, uvidíte jenom aplikace ze [spravovaného Google Play Storu](https://play.google.com/work), ne z [úložiště Google Play](https://play.google.com/store/apps). Spravované Obchod Google Play, které můžete také znáte jako Android for Work (AfW) a Android Enterprise, jsou aplikace v pracovním profilu, které obsahují verze aplikací, které podporují konfiguraci aplikací.
 
-Zásadu konfigurace aplikace můžete přiřadit skupině koncových uživatelů a zařízení pomocí kombinace [zahrnutí a vyloučení přiřazení](apps-inc-exl-assignments.md). Jakmile přidáte zásady konfigurace aplikace, můžete u těchto zásad konfigurace aplikací nastavit přiřazení. Když nastavíte přiřazení zásad, můžete zahrnout a vyloučit [skupiny](../fundamentals/groups-add.md) koncových uživatelů, pro které se zásady vztahují. Když zvolíte možnost zahrnout jednu nebo více skupin, můžete zahrnout konkrétní nebo integrované skupiny. Integrované skupiny jsou **Všichni uživatelé**, **Všechna zařízení** a **Všichni uživatelé a všechna zařízení**.
+Zásadu konfigurace aplikace můžete přiřadit skupině koncových uživatelů a zařízení pomocí kombinace [zahrnutí a vyloučení přiřazení](apps-inc-exl-assignments.md). Jakmile přidáte zásady konfigurace aplikace, můžete u těchto zásad konfigurace aplikací nastavit přiřazení. Když nastavíte přiřazení zásad, můžete zahrnout a vyloučit [skupiny](../fundamentals/groups-add.md) koncových uživatelů, pro které se zásady vztahují. Když zvolíte možnost zahrnout jednu nebo více skupin, můžete zahrnout konkrétní nebo integrované skupiny. Mezi předdefinované skupiny patří **Všichni uživatelé**, **všechna zařízení**a **Všichni uživatelé a všechna zařízení**.
 
 Zásady konfigurace aplikací se službou Intune můžete použít dvěma způsoby:
 - **Spravovaná zařízení** – Intune spravuje zařízení jako poskytovatel správy mobilních zařízení (MDM). Aplikace musí být navržená tak, aby podporovala konfiguraci aplikace.
@@ -73,6 +73,20 @@ Výběr **spravovaných aplikací** jako **typ registrace zařízení** konkrét
 > [!NOTE]
 > Pro aplikace s více identitami, jako je Microsoft Outlook, se můžou zvážit uživatelské předvolby. Prioritní Doručená pošta, například, bude respektovat nastavení uživatele a nemění konfiguraci. Další parametry umožňují řídit, jestli uživatel může nebo nemůže změnit nastavení. Další informace najdete v tématu [nasazení aplikace Outlook pro iOS/iPadOS a nastavení konfigurace aplikací pro Android](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune).
 
+## <a name="android-app-configuration-policies"></a>Zásady konfigurace aplikací pro Android
+
+Pro zásady konfigurace aplikací pro Android můžete před vytvořením konfiguračního profilu aplikace vybrat typ registrace zařízení. Můžete si účet použít pro profily certifikátů založené na typu registrace (pracovní profil nebo vlastník zařízení). Tato aktualizace poskytuje následující:
+
+1. Pokud je vytvořený nový profil a pro typ registrace zařízení je vybraný profil pracovního profilu a vlastníka zařízení, nebudete moct k zásadě konfigurace aplikace přidružit profil certifikátu.
+2. Pokud je vytvořen nový profil a je vybrán pouze pracovní profil, mohou být využívány Zásady certifikátů pracovního profilu vytvořené v části Konfigurace zařízení.
+3. Pokud je vytvořen nový profil a je vybrán pouze vlastník zařízení, může být využita zásada certifikátu vlastníka zařízení vytvořená v části Konfigurace zařízení. 
+4. Pokud nasadíte konfigurační profil Gmail nebo devět na vyhrazené zařízení s Androidem Enterprise, které nezahrnuje uživatele, selže, protože Intune nebude moct uživatele vyřešit.
+
+> [!IMPORTANT]
+> Stávající zásady vytvořené před vydáním této funkce (duben 2020 Release-2004), které nemají žádné profily certifikátů přidružené k zásadám, budou ve výchozím nastavení funkční profil a profil vlastníka zařízení pro typ registrace zařízení. Existující zásady vytvořené před vydáním této funkce, které mají profily certifikátů, které jsou k nim přidružené, budou také nastavené jako výchozí pouze pracovní profil.
+> 
+> Stávající zásady nebudou opravovat ani vydávat nové certifikáty.
+
 ## <a name="validate-the-applied-app-configuration-policy"></a>Ověření použitých zásad konfigurace aplikace
 
 Zásady konfigurace aplikací můžete ověřit pomocí následujících tří metod:
@@ -85,7 +99,7 @@ Zásady konfigurace aplikací můžete ověřit pomocí následujících tří m
 
       ![Druhý snímek stavu instalace zařízení](./media/app-configuration-policies-overview/device-install-status-2.png)
 
-      Kromě toho v části **Intune** -> **zařízení** -> **všechna zařízení** na levé straně obrazovky, v možnosti **Konfigurace aplikace** se zobrazí všechny přiřazené zásady a jejich stav:
+      V části **Intune** -> **zařízení** -> **všechna zařízení** na levé straně obrazovky se navíc v možnosti **Konfigurace aplikace** zobrazí všechny přiřazené zásady a jejich stav:
 
       ![Snímek obrazovky s konfigurací aplikace](./media/app-configuration-policies-overview/app-configuration.png)
 
@@ -101,7 +115,7 @@ Konfiguraci iOS/iPadOS můžete ověřit pomocí **diagnostického protokolu Int
 4. Klikněte na **sdílet protokoly**.
 5. Pomocí e-mailové aplikace dle vašeho výběru můžete protokol odeslat sami sobě, aby se mohl zobrazit v počítači. 
 6. Zkontrolujte soubor **IntuneMAMDiagnostics. txt** v prohlížeči textových souborů.
-7. Hledat `ApplicationConfiguration`. Výsledky budou vypadat takto:
+7. Vyhledejte `ApplicationConfiguration`. Výsledky budou vypadat takto:
 
     ``` JSON
         {
@@ -145,18 +159,18 @@ Konfiguraci iOS/iPadOS můžete ověřit pomocí **diagnostického protokolu Int
 4. Klikněte na **sdílet protokoly**.
 5. Pomocí e-mailové aplikace dle vašeho výběru můžete protokol odeslat sami sobě, aby se mohl zobrazit v počítači. 
 6. Zkontrolujte soubor **IntuneMAMDiagnostics. txt** v prohlížeči textových souborů.
-7. Hledat `AppConfig`. Výsledky by měly odpovídat zásadám konfigurace aplikací nakonfigurovaným pro vašeho tenanta.
+7. Vyhledejte `AppConfig`. Výsledky by měly odpovídat zásadám konfigurace aplikací nakonfigurovaným pro vašeho tenanta.
 
 ### <a name="android-configuration-on-managed-devices"></a>Konfigurace Androidu na spravovaných zařízeních
 
-Konfiguraci iOS/iPadOS můžete ověřit pomocí **diagnostického protokolu Intune** na spravovaných zařízeních pro konfiguraci spravované aplikace.
+Konfiguraci Androidu můžete ověřit pomocí **diagnostického protokolu Intune** na spravovaných zařízeních pro konfiguraci spravované aplikace.
 
 Pokud chcete shromažďovat protokoly ze zařízení s Androidem, musíte vy nebo koncový uživatel stáhnout protokoly ze zařízení přes připojení USB (nebo v **Průzkumníku souborů** ekvivalentní na zařízení). Postup je následující:
 
 1. Připojte zařízení s Androidem k počítači pomocí kabelu USB.
 2. V počítači vyhledejte adresář, který má název vašeho zařízení. V tomto adresáři Najděte `Android Device\Phone\Android\data\com.microsoft.windowsintune.companyportal`.
-3. Ve složce `com.microsoft.windowsintune.companyportal` otevřete složku soubory a otevřete `OMADMLog_0`.
-3. Vyhledejte `AppConfigHelper` pro vyhledání zpráv souvisejících s konfigurací aplikace. Výsledky budou vypadat podobně jako následující blok dat:
+3. Ve `com.microsoft.windowsintune.companyportal` složce otevřete složku soubory a otevřete `OMADMLog_0`.
+3. Vyhledejte zprávy `AppConfigHelper` týkající se konfigurace aplikací. Výsledky budou vypadat podobně jako následující blok dat:
 
     `2019-06-17T20:09:29.1970000       INFO   AppConfigHelper     10888  02256  Returning app config JSON [{"ApplicationConfiguration":[{"Name":"com.microsoft.intune.mam.managedbrowser.BlockListURLs","Value":"https:\/\/www.aol.com"},{"Name":"com.microsoft.intune.mam.managedbrowser.bookmarks","Value":"Outlook Web|https:\/\/outlook.office.com||Bing|https:\/\/www.bing.com"},{"Name":"com.microsoft.intune.mam.managedbrowser.homepage","Value":"https:\/\/www.arstechnica.com"}]},{"ApplicationConfiguration":[{"Name":"IntuneMAMUPN","Value":"AdeleV@M365x935807.OnMicrosoft.com"},{"Name":"com.microsoft.outlook.Mail.NotificationsEnabled","Value":"false"},{"Name":"com.microsoft.outlook.Mail.NotificationsEnabled.UserChangeAllowed","Value":"false"}]}] for user User-875363642`
     
@@ -164,7 +178,7 @@ Pokud chcete shromažďovat protokoly ze zařízení s Androidem, musíte vy neb
 
 K provádění úloh konfigurace aplikace můžete použít Graph API. Podrobnosti najdete v tématu [Graph API cílené konfigurace mam reference](https://docs.microsoft.com/graph/api/resources/intune-shared-targetedmanagedappconfiguration?view=graph-rest-beta). Další informace o Intune a graphu najdete [v tématu práce s Intune v Microsoft Graph](https://docs.microsoft.com/graph/api/resources/intune-graph-overview?view=graph-rest-beta).
 
-## <a name="troubleshooting"></a>Odstraňování potíží
+## <a name="troubleshooting"></a>Řešení potíží
 
 ### <a name="using-logs-to-show-a-configuration-parameter"></a>Použití protokolů k zobrazení konfiguračního parametru
 Když se v protokolech zobrazí parametr konfigurace, u kterého se potvrdí, že se má použít, ale zdá se, že nebude fungovat, může se jednat o problém s implementací konfigurace vývojářem aplikace. Vyzkoušejte si nejprve konkrétního vývojáře aplikace nebo ověřte jeho znalostní bázi, může vám pomoci s Microsoftem. Pokud se jedná o problém s tím, jak se konfigurace zpracovává v rámci aplikace, bude nutné ji vyřešit v budoucí aktualizované verzi této aplikace.

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 240e19d7e0665da44d58bf0b2d4d5f2dd47a319e
-ms.sourcegitcommit: 10578b5a631f9148e59389a1ce4e7d4892f772a0
+ms.openlocfilehash: db9164d68783356faf01fe4fc4e8d74f2a4b0869
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80979269"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82023346"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-automated-device-enrollment"></a>Automatické registrace zařízení s iOS/iPadOS pomocí automatizované registrace zařízení společnosti Apple
 
@@ -32,7 +32,7 @@ ms.locfileid: "80979269"
 
 Můžete nastavit Intune pro registraci zařízení se systémem iOS/iPadOS zakoupená prostřednictvím [automatického zápisu zařízení (ADE)](https://deploy.apple.com) společnosti Apple (dříve program registrace zařízení). Automatický zápis zařízení vám umožňuje registrovat velké počty zařízení, aniž byste je museli dotýkat. Zařízení, jako jsou iPhone, iPady a MacBooks, se dají dodávat přímo uživatelům. Když uživatel zapne zařízení, Pomocník s nastavením, který zahrnuje typické prostředí pro produkty Apple, běží s předem nakonfigurovaným nastavením a zařízení se zaregistruje do správy.
 
-Pokud chcete povolit ADE, použijte portál Intune i [Apple Business Manager (ABM)](https://business.apple.com/) nebo [Apple School Manager (ASM)](https://school.apple.com/) . Vyžaduje se seznam sériových čísel nebo čísel nákupních objednávek, abyste mohli zařízení přiřadit do Intune pro správu na portálu Apple. V Intune vytvoříte profily zápisu ADE obsahující nastavení, která se v zařízeních při registraci používají. Všimněte si, že ADE nelze použít s účtem [správce registrace zařízení](device-enrollment-manager-enroll.md) .
+Pokud chcete povolit ADE, použijte portál Intune i [Apple Business Manager (ABM)](https://business.apple.com/) nebo [Apple School Manager (ASM)](https://school.apple.com/) . Vyžaduje se seznam sériových čísel nebo čísel nákupních objednávek, abyste mohli zařízení přiřadit do Intune pro správu na portálu Apple. V Intune vytvoříte profily zápisu ADE obsahující nastavení, která se v zařízeních při registraci používají. ADE nelze použít s účtem [správce registrace zařízení](device-enrollment-manager-enroll.md) .
 
 > [!NOTE]
 > ADE nastaví konfigurace zařízení, které koncoví uživatelé nemusí nutně odebrat. Před [migrací do ADE](../fundamentals/migration-guide-considerations.md)se proto musí zařízení vymazat a vrátit ho do předem připraveného (nového) stavu.
@@ -52,7 +52,7 @@ Pokud chcete povolit, aby se Portál společnosti automaticky aktualizovala a po
 
 Apple představil režim pod dohledem v iOS/iPadOS 5. Zařízení s iOS/iPadOS v režimu pod dohledem je možné spravovat s dalšími ovládacími prvky, jako je například blokování snímku obrazovky a blokování instalace aplikací z App Storu. To je zvlášť užitečné pro zařízení vlastněná firmou. Intune podporuje konfiguraci zařízení pro režim pod dohledem jako součást ADE.
 
-Podpora pro zařízení s nekontrolovaným ADE je v iOS/iPadOS 11 zastaralá. V systému iOS/iPadOS 11 a novějších by měly být nakonfigurovaná zařízení ADE vždy pod dohledem. Příznak *IS_SUPERVISED* ADE se v budoucí verzi pro iOS/iPadOS bude ignorovat.
+Podpora pro zařízení s nekontrolovaným ADE je v iOS/iPadOS 11 zastaralá. V systému iOS/iPadOS 11 a novějších by měly být nakonfigurovaná zařízení ADE vždy pod dohledem. Příznak *IS_SUPERVISED* ADE se bude ignorovat s iOS/iPadOS 13,0 a novějším. Všechna zařízení s iOS/iPadOS s verzí 13,0 a novější se po registraci pomocí automatického zápisu zařízení automaticky dohlíží pod dohledem. 
 
 <!--
 **Steps to enable enrollment programs from Apple**
@@ -62,10 +62,17 @@ Podpora pro zařízení s nekontrolovaným ADE je v iOS/iPadOS 11 zastaralá. V 
 4. [Assign DEP profile to devices](#assign-an-enrollment-profile-to-devices)
 5. [Distribute devices to users](#end-user-experience-with-managed-devices)
 -->
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 - Zařízení zakoupená v nástroji [ADE společnosti Apple](https://deploy.apple.com)
 - [Autorita pro správu mobilních zařízení (MDM)](../fundamentals/mdm-authority-set.md)
-- [Certifikát Apple MDM Push Certificate](apple-mdm-push-certificate-get.md)
+- [Apple MDM push Certificate](apple-mdm-push-certificate-get.md)
+
+## <a name="supported-volume"></a>Podporovaný svazek
+
+- Maximální počet profilů zápisu na token: 1 000  
+- Maximální počet automatizovaných zařízení pro zápis zařízení na profil: bez omezení (v rámci maximálního počtu zařízení na token)
+- Maximální počet automatizovaných tokenů registrace zařízení na účet Intune: 2 000
+- Maximální počet automatizovaných zařízení pro zápis zařízení na token: 75 000
 
 ## <a name="get-an-apple-ade-token"></a>Získání tokenu Apple ADE
 
@@ -76,23 +83,23 @@ K vytvoření tokenu použijete portál [Apple Business Manager (ABM)](https://b
 > [!NOTE]
 > Pokud token odstraníte z klasického portálu Intune před migrací do Azure, může Intune obnovit odstraněný token Apple ADE. Token ADE můžete znovu odstranit z Azure Portal.
 
-### <a name="step-1-download-the-intune-public-key-certificate-required-to-create-the-token"></a>Krok 1: Stáhněte si certifikát veřejného klíče Intune, který je potřebný k vytvoření tokenu.
+### <a name="step-1-download-the-intune-public-key-certificate-required-to-create-the-token"></a>Krok 1. Stáhněte si certifikát veřejného klíče Intune, který je potřebný k vytvoření tokenu.
 
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **iOS** > **registrace** zařízení s iOS > **tokeny programu registrace** > **Přidat**.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **iOS** > **iOS registrace** > **tokeny** > programu**Přidat**.
 
     ![Stažení tokenu programu registrace zařízení](./media/device-enrollment-program-enroll-ios/image01.png)
 
 2. Výběrem možnosti **Souhlasím** udělte Microsoftu oprávnění k odesílání informací o uživatelích a zařízeních do společnosti Apple.
 
-> [!NOTE]
-> Až budete postupovat od kroku 2 ke stažení certifikátu veřejného klíče Intune, nezavírejte průvodce ani nevybírejte z této stránky. Tím dojde k zrušení platnosti certifikátu, který jste stáhli, a budete muset tento proces opakovat. Pokud k této situaci dojde, obvykle si všimněte, že tlačítko **vytvořit** na kartě **Revize + vytvořit** je šedé a nemůžete tento proces dokončit.
+   > [!NOTE]
+   > Až budete postupovat od kroku 2 ke stažení certifikátu veřejného klíče Intune, nezavírejte průvodce ani nevybírejte z této stránky. Tím dojde k zrušení platnosti certifikátu, který jste stáhli, a budete muset tento proces opakovat. Pokud k této situaci dojde, obvykle si všimněte, že tlačítko **vytvořit** na kartě **Revize + vytvořit** je šedé a nemůžete tento proces dokončit.
 
    ![Snímek obrazovky s podoknem Token Programu registrace v pracovním prostoru Certifikáty Apple pro stažení veřejného klíče](./media/device-enrollment-program-enroll-ios/add-enrollment-program-token-pane.png)
 
-3. Vyberte **Stáhnout veřejný klíč** a stáhněte si a místně uložte soubor šifrovacího klíče (.pem). Soubor .pem slouží k vyžádání certifikátu vztahu důvěryhodnosti z portálu Apple.
+3. Vyberte **Stáhnout veřejný klíč** a stáhněte si a místně uložte soubor šifrovacího klíče (.pem). Soubor. pem slouží k vyžádání certifikátu vztahu důvěryhodnosti z portálu Apple.
 
 
-### <a name="step-2-use-your-key-to-download-a-token-from-apple"></a>Krok 2: Pomocí klíče si stáhněte token od společnosti Apple.
+### <a name="step-2-use-your-key-to-download-a-token-from-apple"></a>Krok 2. Pomocí klíče si stáhněte token od společnosti Apple.
 
 1. Výběrem možnosti **vytvořit token pro program registrace zařízení od společnosti Apple** otevřete obchodní portál společnosti Apple a přihlaste se pomocí Apple ID vaší společnosti. Toto Apple ID můžete použít k obnovení tokenu ADE.
 2. Na [portálu](https://business.apple.com)společnosti Apple vyberte **Začínáme** pro **program registrace zařízení**.
@@ -100,9 +107,9 @@ K vytvoření tokenu použijete portál [Apple Business Manager (ABM)](https://b
 3. Na stránce pro **správu serverů** zvolte, že chcete **přidat server MDM**.
 4. Zadejte **název serveru MDM** a zvolte **Další**. Název serveru slouží pro vaši informaci, abyste mohli identifikovat server pro správu mobilních zařízení (MDM). Nejedná se o název nebo adresu URL serveru Microsoft Intune.
 
-5. Otevře se dialogové okno pro **přidání&lt;názvu serveru&gt;** , ve kterém se zobrazí výzva, abyste **nahráli svůj veřejný klíč**. Vyberte **zvolit soubor...** abyste mohli nahrát soubor .pem, a pak zvolte **Další**.
+5. Otevře se dialogové okno pro **přidání&lt;názvu serveru&gt;**, ve kterém se zobrazí výzva, abyste **nahráli svůj veřejný klíč**. Vyberte **zvolit soubor...** abyste mohli nahrát soubor .pem, a pak zvolte **Další**.
 
-6. Přejít na **programy pro nasazení** &gt; **program registrace zařízení** &gt; **spravovat zařízení**.
+6. Přejděte na **Deployment Programs (Programy nasazení) ** &gt; **Device Enrollment Program (Program registrace zařízení) ** &gt; **Manage Devices** (Spravovat zařízení).
 7. V části se **způsobem výběru zařízení** určete způsob identifikace zařízení:
     - **Sériové číslo**
     - **Číslo objednávky**
@@ -112,7 +119,7 @@ K vytvoření tokenu použijete portál [Apple Business Manager (ABM)](https://b
 
 8. V možnosti **Vybrat akci** vyberte **Přiřadit k serveru**, vyberte &lt;název_serveru&gt; zadaný pro Microsoft Intune a pak zvolte **OK**. Portál Apple přiřadí daná zařízení k serveru Intune, aby bylo možné je spravovat, a pak zobrazí zprávu o **dokončení přiřazení**.
 
-   Na portálu Apple přejděte do části **programy pro nasazení** &gt; **program registrace zařízení** &gt; **Zobrazit historii přiřazení** a zobrazte tak seznam zařízení a jejich přiřazení k serveru MDM.
+   Na portálu Apple přejděte na **Programy nasazení** &gt; **Program registrace zařízení** &gt; **Zobrazit historii přiřazení**. Zobrazí se seznam zařízení s přiřazeným serverem MDM.
 
 ### <a name="step-3-save-the-apple-id-used-to-create-this-token"></a>Krok 3. Uložte si Apple ID, které jste použili k vytvoření tohoto tokenu.
 
@@ -122,7 +129,7 @@ V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwli
 
 ### <a name="step-4-upload-your-token-and-choose-scope-tags"></a>Krok 4. Nahrajte token a vyberte značky oboru.
 
-1. V poli **token Apple** vyhledejte soubor certifikátu (. pem), vyberte **otevřít**.
+1. V poli **token Apple** vyhledejte soubor certifikátu (. p7m), vyberte **otevřít**.
 2. Pokud chcete pro tento token DEP použít [značky oboru](../fundamentals/scope-tags.md) , zvolte **rozsah (značky)** a vyberte požadované značky oboru. Značky oboru použité u tokenu budou děděny profily a zařízeními přidanými do tohoto tokenu.
 3. Zvolte **Vytvořit**.
 
@@ -136,19 +143,20 @@ Teď, když jste nainstalovali token, můžete vytvořit profil zápisu pro zař
 > Zařízení se zablokuje, pokud není k dispozici dostatek Portál společnosti licencí pro token VPP, nebo pokud vypršela platnost tokenu. Intune zobrazí výstrahu, když se brzo vyprší platnost tokenu nebo dojde k nedostatku licencí.
  
 
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **iOS** > **Registrace iOS** > **tokeny programu registrace**.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **iOS** > iOS**registrace** > **tokeny programu**.
 2. Vyberte token, zvolte **profily** > **vytvořit profil** > **iOS**.
 
     ![Snímek obrazovky pro vytvoření profilu](./media/device-enrollment-program-enroll-ios/image04.png)
 
-3. Na stránce **základy** zadejte **název** a **Popis** profilu pro účely správy. Uživatelé tyto podrobnosti nevidí. Pole **Název** můžete využít k vytvoření dynamické skupiny v Azure Active Directory. Název profilu použijte k definování parametru enrollmentProfileName, který slouží k přiřazení zařízení s tímto registračním profilem. Přečtěte si další informace o [dynamických skupinách Azure Active Directory](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices).
+3. Na stránce **základy** zadejte **název** a **Popis** profilu pro účely správy. Uživatelé tyto podrobnosti nevidí. Pole **Název** můžete využít k vytvoření dynamické skupiny v Azure Active Directory. Název profilu použijte k definování parametru enrollmentProfileName pro přiřazení zařízení s tímto registračním profilem. U zařízení zaregistrovaných v rámci automatického zápisu zařízení s přidružením uživatele zajistěte, aby uživatelé, kteří zapisují uživatele jako člen před instalací zařízení, zajistili nejrychlejší doručování zásad do zařízení. Zacílení aplikací a zásad na dynamické skupiny založené na registračních profilech způsobí určitou prodlevu při použití na zařízení po dokončení toku registrace.
+Přečtěte si další informace o [Azure Active Directory dynamických skupinách](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices).
 
     ![Název a popis profilu](./media/device-enrollment-program-enroll-ios/image05.png)
 
 4. Vyberte **Další: nastavení správy zařízení**.
 
 5. V části **Přidružení uživatele** zvolte, jestli se zařízení s tímto profilem musí registrovat s přiřazeným uživatelem nebo bez něj.
-    - **Zaregistrovat s přidružením uživatele** – tuto možnost vyberte u zařízení patřících uživatelům, kteří chtějí Portál společnosti používat pro služby, jako je instalace aplikací. Pokud používáte službu AD FS a používáte pomocníka s nastavením k ověřování, je třeba zadat [uživatelské jméno/Smíšený Koncový bod WS-Trust 1,3](https://technet.microsoft.com/library/adfs2-help-endpoints) [Další informace](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint) .
+    - **Zaregistrovat s přidružením uživatele** – tuto možnost vyberte pro zařízení, která patří uživatelům a chtějí používat portál společnosti pro služby, jako je instalace aplikací. Pokud používáte službu AD FS a používáte pomocníka s nastavením k ověřování, je třeba zadat [uživatelské jméno/Smíšený Koncový bod WS-Trust 1,3](https://technet.microsoft.com/library/adfs2-help-endpoints) [Další informace](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint) .
 
     - **Zaregistrovat bez přidružení uživatele** – Tuto možnost zvolte pro zařízení nespojená s jedním uživatelem. Tuto možnost použijte pro zařízení, která nemají přístup k místním uživatelským datům. Aplikace, jako je Portál společnosti aplikace, nefungují.
 
@@ -164,7 +172,7 @@ Teď, když jste nainstalovali token, můžete vytvořit profil zápisu pro zař
     >
     > Ty nejsou podporované při ověřování pomocí Pomocníka s nastavením Apple.
 
-6. Pokud jste zvolili **portál společnosti** pro **Vyberte, kde se uživatelé musí ověřit**, můžete k automatické instalaci portál společnosti na zařízení použít token VPP. V takovém případě nemusí uživatel zadávat Apple ID. K instalaci Portálu společnosti pomocí tokenu VPP zvolte token v seznamu **Nainstalovat Portál společnosti pomocí VPP**. Vyžaduje, aby byla Portál společnosti již přidána do tokenu VPP. Aby se zajistilo, že bude aplikace Portál společnosti po registraci nadále aktualizována, ujistěte se, že jste nakonfigurovali nasazení aplikace v Intune (> klientských aplikacích Intune). Aby se interakce uživatele nevyžadovala, pravděpodobně budete chtít Portál společnosti jako aplikaci VPP pro iOS/iPadOS, nastavit ji jako požadovanou aplikaci a pro přiřazení použít licencování zařízení. Dbejte na to, aby tokenu nevypršela platnost a abyste měli dost licencí zařízení pro aplikaci Portál společnosti. Pokud vyprší platnost tokenu nebo dojde k nedostatku licencí, Intune nainstaluje místo toho Portál společnosti App Storu a zobrazí výzvu k zadání Apple ID. 
+6. Pokud jste zvolili **portál společnosti** pro **Vyberte, kde se uživatelé musí ověřit**, můžete k automatické instalaci portál společnosti na zařízení použít token VPP. V takovém případě nemusí uživatel zadávat Apple ID. K instalaci Portálu společnosti pomocí tokenu VPP zvolte token v seznamu **Nainstalovat Portál společnosti pomocí VPP**. Vyžaduje, aby byla Portál společnosti již přidána do tokenu VPP. Aby se zajistilo, že bude aplikace Portál společnosti po registraci nadále aktualizována, ujistěte se, že jste nakonfigurovali nasazení aplikace v Intune (>klientských aplikacích Intune). Takže interakce uživatele není povinná, pravděpodobně budete chtít Portál společnosti jako aplikaci VPP pro iOS/iPadOS, nastavit ji jako požadovanou aplikaci a používat licencování zařízení pro přiřazení. Dbejte na to, aby tokenu nevypršela platnost a abyste měli dost licencí zařízení pro aplikaci Portál společnosti. Pokud vyprší platnost tokenu nebo dojde k nedostatku licencí, Intune nainstaluje místo toho Portál společnosti App Storu a zobrazí výzvu k zadání Apple ID. 
 
     > [!NOTE]
     > Když vyberete, aby se **Uživatelé musí ověřit** , **portál společnosti**, ujistěte se, že se proces registrace zařízení provádí během prvních 24 hodin aplikace Portál společnosti, který se stahuje do zařízení ADE. Jinak může registrace selhat a k registraci zařízení bude potřeba obnovení továrního nastavení.
@@ -190,17 +198,22 @@ Teď, když jste nainstalovali token, můžete vytvořit profil zápisu pro zař
     Uživatelé se dozvědí, že jejich zařízení jsou pod dohledem, dvěma způsoby:
 
    - Na zamykací obrazovce se zobrazí oznámení: „Tento iPhone spravuje Contoso.“
-   - Na obrazovce **Nastavení** > **Obecné** > **O produktu** je uvedeno: „Tento iPhone je pod dohledem. Společnost Contoso může monitorovat internetové přenosy a zařízení vyhledat.“
+   - **Nastavení** > **General**obecné > **o** obrazovce říká: "Tento iPhone je pod dohledem. Společnost Contoso může monitorovat internetové přenosy a zařízení vyhledat.“
 
      > [!NOTE]
      > Zařízení zaregistrované bez dohledu se dá resetovat do stavu pod dohledem jenom pomocí Apple Configuratoru. Resetování zařízení tímto způsobem vyžaduje připojení zařízení s iOS/iPadOS k počítači Mac pomocí kabelu USB. Další informace na toto téma získáte v [dokumentaci Apple Configuratoru](http://help.apple.com/configurator/mac/2.3).
 
 10. Vyberte, jestli chcete pro zařízení, která používají tento profil, uzamčenou registraci. **Uzamčená registrace** zakáže nastavení pro iOS/iPadOS, která umožňují odebrání profilu správy z nabídky **Nastavení** . Po registraci zařízení toto nastavení nemůžete změnit bez vymazání zařízení. Taková zařízení musí mít režim správy **Pod dohledem** nastavený na *Ano*. 
 
+    > [!NOTE]
+    > Až se zařízení zaregistruje pomocí **zamčené registrace**, nebudou moct uživatelé v portál společnosti aplikaci použít **odebrání zařízení** nebo **obnovení továrního nastavení** . Možnosti nebudou pro uživatele k dispozici. Uživatel také nebude moci zařízení odebrat na webu Portál společnosti (https://portal.manage.microsoft.com).
+    > Pokud je zařízení BYOD převést na zařízení Apple automatizovaného zápisu zařízení a zaregistrované s uzamčeným profilem s povoleným **zápisem** , bude moct uživatel použít možnost **Odebrat zařízení** a **obnovit tovární nastavení** po dobu 30 dnů a možnosti budou zakázané nebo nedostupné. Odkaz: https://help.apple.com/configurator/mac/2.8/#/cad99bc2a859.
+
 11. Vyberte, jestli chcete, aby zařízení, která používají tento profil, mohla **synchronizovat s počítači**. Pokud vyberete **Povolit Apple Configurator podle certifikátu**, musíte zvolit certifikát v části **Certifikáty Apple Configuratoru**.
 
      > [!NOTE]
-     > Pokud je **synchronizace s počítači** nastavená na **Odepřít vše**, port bude omezený na zařízeních s iOS a iPadOS. Port lze použít pouze pro zpoplatnění a žádné jiné. Port se zablokuje pomocí iTunes nebo Apple Configuratoru.
+     > Pokud je **synchronizace s počítači** nastavená na **Odepřít vše**, port bude omezený na zařízeních s iOS a iPadOS. Port lze použít pouze pro zpoplatnění a žádné jiné. Port se zablokuje pomocí iTunes nebo Apple Configuratoru 2.
+     Pokud je **synchronizace s počítači** nastavená tak, aby **povolovala Apple Configuratoru podle certifikátu**, nezapomeňte uložit místní kopii certifikátu, ke kterému budete mít přístup později. V nahraném kopírování nebudete moct provádět změny. Je důležité, aby byl tento certifikát nadále přístupný v budoucnu. 
 
 12. Pokud jste v předchozím kroku zvolili **Povolit Apple Configurator podle certifikátu**, zvolte certifikát Apple Configuratoru, který se má importovat.
 
@@ -226,18 +239,18 @@ Teď, když jste nainstalovali token, můžete vytvořit profil zápisu pro zař
     | <strong>Heslo</strong> | Vyzve uživatele k zadání hesla. Vždy vyžadovat heslo pro nezabezpečená zařízení, pokud není přístup kontrolován jiným způsobem (například celoobrazovkový režim, který zařízení omezuje na jednu aplikaci). |
     | <strong>Zjišťování polohy</strong> | Vyzve uživatele k poskytnutí polohy. |
     | <strong>Obnovení</strong> | Zobrazí obrazovku aplikace & data. Tato obrazovka nabídne uživateli při nastavování zařízení možnost obnovit nebo přenést data ze zálohy v iCloudu. |
-    | <strong>iCloud a Apple ID</strong> | Poskytněte uživateli možnosti přihlašovat se pomocí Apple ID a používat iCloud.                         |
+    | <strong>iCloud a Apple ID</strong> | Umožní uživateli přihlásit se pomocí svého Apple ID a používat iCloud.                         |
     | <strong>Podmínky a ujednání</strong> | Požaduje, aby uživatel přijal podmínky a ujednání společnosti Apple. |
     | <strong>Touch ID</strong> | Umožní uživateli nastavit pro zařízení identifikaci otiskem prstu. |
     | <strong>Apple Pay</strong> | Umožní uživateli nastavit na zařízení Apple Pay. |
-    | <strong>Lupa</strong> | Umožní uživateli zvětšit zobrazení při nastavování zařízení. |
+    | <strong>Zoom</strong> | Umožní uživateli zvětšit zobrazení při nastavování zařízení. |
     | <strong>Siri</strong> | Umožní uživateli nastavit Siri. |
-    | <strong>Diagnostická data</strong> | Zobrazit obrazovku diagnostiky uživateli Tato obrazovka umožní uživateli poslat společnosti Apple diagnostická data. |
-    | <strong>Zobrazit tónový displej</strong> | Poskytněte uživateli možnost zapnout tónový displej. |
+    | <strong>Diagnostická data</strong> | Zobrazí uživateli obrazovku Diagnostická data. Tato obrazovka umožní uživateli poslat společnosti Apple diagnostická data. |
+    | <strong>Tón zobrazení</strong> | Poskytněte uživateli možnost zapnout tónový displej. |
     | <strong>Ochrana osobních údajů</strong> | Zobrazit obrazovku ochrany osobních údajů uživateli. |
-    | <strong>Migrace pro Android</strong> | Poskytněte uživateli možnost migrovat datum ze zařízení s Androidem. |
+    | <strong>Migrace zařízení s Androidem</strong> | Poskytněte uživateli možnost migrovat datum ze zařízení s Androidem. |
     | <strong>iMessage a FaceTime</strong> | Poskytněte uživateli možnost nastavit iMessage a FaceTime. |
-    | <strong>Registrace</strong> | Zobrazuje informační obrazovky pro vzdělávání uživatelů, jako je například titulní stránka a multitasking a řídicí centrum. |
+    | <strong>Onboarding</strong> | Zobrazuje informační obrazovky pro vzdělávání uživatelů, jako je například titulní stránka a multitasking a řídicí centrum. |
     | <strong>Sledovat migraci</strong> | Poskytněte uživateli možnost migrovat data ze sledovacího zařízení. |
     | <strong>Čas obrazovky</strong> | Zobrazí obrazovku čas obrazovky. |
     | <strong>Aktualizace softwaru</strong> | Zobrazte povinnou obrazovku aktualizace softwaru. |
@@ -255,7 +268,7 @@ Teď, když jste nainstalovali token, můžete vytvořit profil zápisu pro zař
 ## <a name="sync-managed-devices"></a>Synchronizace spravovaných zařízení
 Teď, když má Intune oprávnění spravovat vaše zařízení, můžete synchronizovat Intune s Apple, aby se spravovaná zařízení zobrazila v Intune na portálu Azure Portal.
 
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **ios** > **registrace v iOS** > **tokeny programu registrace** > v seznamu > **zařízení** > **synchronizaci**vyberte token. ![snímek obrazovky uzlu zařízení programu registrace a odkaz na synchronizaci.](./media/device-enrollment-program-enroll-ios/image06.png)
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **iOS** > **iOS registrace** > **tokeny programu** > vyberte token v seznamu > **zařízení** > **synchronizovat**. ![Snímek obrazovky uzlu zařízení programu registrace a odkaz na synchronizaci.](./media/device-enrollment-program-enroll-ios/image06.png)
 
    Pokud chcete dodržovat podmínky společnosti Apple pro přijatelný provoz programu registrace, Intune ukládá tato omezení:
    - Úplná synchronizace se nesmí pouštět častěji než jednou za sedm dní. Během úplné synchronizace načte Intune úplný aktualizovaný seznam sériových čísel přiřazených k serveru Apple MDM připojenému k Intune. Pokud se zařízení ADE odstraní z portálu Intune, měl by být na portálu ADE nepřiřazený ze serveru Apple MDM. Pokud není přiřazená, nebude se znovu naimportovat do Intune, dokud se nespustí Úplná synchronizace.   
@@ -268,7 +281,7 @@ Než se můžou zařízení zaregistrovat, musíte přiřadit profil programu re
 >[!NOTE]
 >Sériová čísla můžete profilům také přiřadit v okně **sériových čísel Apple**.
 
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **ios** > **registrace v iOS** > **tokeny programu registrace** > v seznamu vyberte token.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **iOS** > **iOS enrollment** > iOS**tokeny programu registrace** > v seznamu vyberte token.
 2. Zvolte **Zařízení** > zvolte zařízení v seznamu > **Přiřadit profil**.
 3. V části **Přiřadit profil** zvolte profil pro zařízení > **Přiřadit**.
 
@@ -276,7 +289,7 @@ Než se můžou zařízení zaregistrovat, musíte přiřadit profil programu re
 
 Můžete si vybrat výchozí profil, který se má použít pro všechna zařízení, která se registrují s konkrétním tokenem.
 
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **ios** > **registrace v iOS** > **tokeny programu registrace** > v seznamu vyberte token.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **iOS** > **iOS enrollment** > iOS**tokeny programu registrace** > v seznamu vyberte token.
 2. Zvolte **Nastavit výchozí profil**, v rozevíracím seznamu zvolte profil a potom zvolte **Uložit**. Tento profil se použije pro všechna zařízení, která se registrují s tímto tokenem.
 
 ## <a name="distribute-devices"></a>Distribuujte zařízení.
@@ -287,7 +300,7 @@ Další informace najdete [v tématu Registrace zařízení se systémem iOS/iPa
 ## <a name="renew-an-ade-token"></a>Prodloužit platnost tokenu ADE  
 
 > [!NOTE]
-> V rámci každoročního obnovení tokenu ADE budete muset obnovit token programu registrace v Intune a Apple Business Manageru, když se změní heslo spravovaného Apple ID pro uživatele, který tento token nastavil v Apple Business Manageru, nebo když ho uživatel opustí. Organizace Apple Business Manageru.
+> Kromě prodloužení platnosti tokenu ADE je potřeba obnovit token programu registrace v Intune a Apple Business Manageru, když se změní heslo spravovaného Apple ID pro uživatele, který nastavil token v Apple Business Manageru, nebo tento uživatel opouští vaši organizaci Apple Business Manageru.
 
 1. Přejít na business.apple.com.  
 2. V části **Manage Servers** (Spravovat servery) zvolte server MDM přidružený k souboru tokenu, který chcete obnovit.
@@ -296,7 +309,7 @@ Další informace najdete [v tématu Registrace zařízení se systémem iOS/iPa
     ![Snímek obrazovky s možností Generate New Token (Vygenerovat nový token)](./media/device-enrollment-program-enroll-ios/generatenewtoken.png)
 
 4. Zvolte **Your Server Token** (Token vašeho serveru).  
-5. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **ios** > **registrace v iOS** > **tokeny programu registrace** > vyberte token.
+5. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **iOS** > iOS**registrace** > **tokeny programu** > vyberte token.
     ![Snímek obrazovky s možností Tokeny programu registrace](./media/device-enrollment-program-enroll-ios/enrollmentprogramtokens.png)
 
 6. Vyberte možnost **Obnovit token** a zadejte Apple ID, které jste použili k vytvoření původního tokenu.  
@@ -305,3 +318,15 @@ Další informace najdete [v tématu Registrace zařízení se systémem iOS/iPa
 8. Nahrajte nově stažený token.  
 9. Zvolte **Obnovit token**. Zobrazí se potvrzení, že se token obnovil.   
     ![Snímek obrazovky s potvrzením](./media/device-enrollment-program-enroll-ios/confirmation.png)
+
+## <a name="delete-an-ade-token-from-intune"></a>Odstranění tokenu ADE z Intune
+
+Tokeny registračního profilu můžete z Intune odstranit, pokud
+- k tokenu nejsou přiřazená žádná zařízení.
+- k výchozímu profilu nejsou přiřazená žádná zařízení.
+
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **iOS/MacOS** > **iOS/MacOS** > **tokeny programu registrace** > vyberte token > **zařízení**.
+2. Odstraňte všechna zařízení přiřazená k tomuto tokenu.
+3. V části **zařízení** > **iOS/MacOS** > **iOS/MacOS** > registrace zápisu**tokeny programu** > vyberte **profily**> tokeny.
+4. Pokud existuje výchozí profil, odstraňte ho.
+5. V části **zařízení** > **iOS/MacOS** > **iOS/MacOS** > registrace zápisu**tokeny programu** > vyberte token > **Odstranit**.

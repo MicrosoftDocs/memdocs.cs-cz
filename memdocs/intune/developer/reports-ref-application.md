@@ -1,8 +1,8 @@
 ---
-title: Referenční informace pro entity aplikací
+title: Referenční informace o entitách aplikace
 titleSuffix: Microsoft Intune
 description: Téma referenčních informací ke kategorii Aplikace pro kolekce entit v rozhraní API datového skladu Intune
-keywords: Datový sklad Intune
+keywords: Intune Data Warehouse
 author: Erikre
 ms.author: erikre
 manager: dougeby
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 78fce6f5f518227500b3cf42f1d935c0dd88df8c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 4ec35681b6e81eb28c114733cc7913dd90875bfd
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79331715"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82023312"
 ---
 # <a name="reference-for-application-entities"></a>Referenční informace o entitách aplikací
 
@@ -41,20 +41,20 @@ Entita **appRevision** obsahuje seznam všech verzí aplikací.
 
 | Vlastnost  | Popis | Příklad |
 |---------|------------|--------|
-| AppKey |Jedinečný identifikátor aplikace |123 |
+| appKey |Jedinečný identifikátor aplikace |123 |
 | applicationId |Jedinečný identifikátor aplikace – podobá se AppKey, ale tento klíč je přirozený. |b66bc706-ffff-7437-0340-032819502773 |
-| Revize |Verze, kterou uvedl správce během nahrávání binárního souboru |2 |
+| revision |Verze, kterou uvedl správce během nahrávání binárního souboru |2 |
 | title |Název aplikace |Excel |
-| publisher |Vydavatel aplikace |Microsoft |
-| UploadState |Stav nahrávání aplikace |1 |
-| AppTypeKey |Odkaz na entitu AppType, která je popsaná v následujícím oddílu | |
-| VppProgramTypeKey |Odkaz na entitu VppProgramType, která je popsaná níže | |
-| CreationTime |Čas vytvoření této revize |23.11.2016 12:00:00 |
-| ModifiedTime |Čas poslední změny nějakého prvku, který s touto revizí souvisí |23.11.2016 12:00:00 |
-| Velikost |Velikost binárního souboru | |
+| vydavatel |Vydavatel aplikace |Microsoft |
+| uploadState |Stav nahrávání aplikace |1 |
+| appTypeKey |Odkaz na entitu AppType, která je popsaná v následujícím oddílu | |
+| vppProgramTypeKey |Odkaz na entitu VppProgramType, která je popsaná níže | |
+| creationTime |Čas vytvoření této revize |23.11.2016 12:00:00 |
+| modifiedTime |Čas poslední změny nějakého prvku, který s touto revizí souvisí |23.11.2016 12:00:00 |
+| velikost |Velikost binárního souboru | |
 | startDateInclusiveUTC |Datum a čas ve standardu UTC, kdy se tato revize aplikace v datovém skladu vytvořila |23.11.2016 12:00:00 |
-| EndDateExclusiveUTC |Datum a čas ve standardu UTC, od kdy je tato revize aplikace zastaralá |23.11.2016 12:00:00 |
-| Aktuální |Určuje, jestli tato verze aplikace v datovém skladu je nebo není aktuální |True nebo False |
+| endDateExclusiveUTC |Datum a čas ve standardu UTC, od kdy je tato revize aplikace zastaralá |23.11.2016 12:00:00 |
+| Aktuální |Určuje, jestli tato verze aplikace v datovém skladu je nebo není aktuální |Pravda/nepravda |
 | rowLastModifiedDateTimeUTC |Datum a čas ve standardu UTC, kdy se tato verze aplikace v datovém skladu naposledy změnila |23.11.2016 12:00:00 |
 
 ## <a name="apptypes"></a>appTypes
@@ -63,9 +63,9 @@ Entita **appType** obsahuje seznam zdrojů instalace aplikace.
 
 | Vlastnost  | Popis |
 |---------|------------|
-| AppTypeID |ID pro daný typ |
-| AppTypeKey |Náhradní klíč pro daný klíč |
-| AppTypeName |Typ aplikace |
+| appTypeID |ID pro daný typ |
+| appTypeKey |Náhradní klíč pro daný klíč |
+| appTypeName |Typ aplikace |
 
 ### <a name="example"></a>Příklad
 
@@ -77,7 +77,7 @@ Entita **appType** obsahuje seznam zdrojů instalace aplikace.
 | 3 |Aplikace z obchodu pro iOS | Aplikace z obchodu pro iOS |
 | 4 |Obchodní aplikace pro iOS | Obchodní aplikace pro iOS |
 | 5 |Spravovaná aplikace obchodu pro iOS (MAM) | Aplikace z obchodu pro iOS s povolenou správou |
-| 6 |Sada O365 Pro Plus | Sada Office 365 Pro Plus pro Windows 10 |
+| 6 |Sada O365 Pro Plus | Aplikace Microsoft 365 pro Windows 10 |
 | 7 |Webová aplikace | Webová aplikace |
 | 8 |Aplikace pro Windows Phone 8.1 Store | Aplikace pro Windows Phone 8.1 Store |
 | 9 |Aplikace pro Windows Store | Aplikace pro Windows Store |
@@ -92,9 +92,9 @@ Entita **vppProgramType** obsahuje seznam možných typů programu VPP pro aplik
 
 | Vlastnost  | Popis |
 |---------|------------|
-| VppProgramTypeID | ID pro daný typ |
-| VppProgramTypeKey | Náhradní klíč pro daný klíč |
-| VppProgramTypeName | Typ programu VPP |
+| vppProgramTypeID | ID pro daný typ |
+| vppProgramTypeKey | Náhradní klíč pro daný klíč |
+| vppProgramTypeName | Typ programu VPP |
 
 ### <a name="example"></a>Příklad
 
@@ -114,7 +114,7 @@ Entita **entita applicationinventory zobrazuje** obsahuje seznam aplikací, kter
 |---------|------------|
 | deviceKey | Jedná se o odkaz na tabulku zařízení obsahující ID zařízení v Intune. |
 | dateKey | Odkaz na tabulku kalendářních dat udávající den inventáře |
-| applicationName | Název aplikace |
+| applicationName | Název aplikace. |
 | applicationVersion | Verze aplikace |
 | bundleSize | Velikost aplikace v bajtech |
 
@@ -124,9 +124,9 @@ Entita **entita mobileappinstallstate** představuje stav instalace mobilní apl
 
 | Vlastnost | Popis |
 |---|---|
-| AppInstallStateKey | Jedinečné ID stavu instalace aplikace pro váš účet |
-| AppInstallState | Hodnota výčtu stavu instalace aplikace |
-| AppInstallStateName | Název stavu instalace aplikace |
+| appInstallStateKey | Jedinečné ID stavu instalace aplikace pro váš účet |
+| appInstallState | Hodnota výčtu stavu instalace aplikace |
+| appInstallStateName | Název stavu instalace aplikace |
 
 
 

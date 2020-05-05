@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 61ca3d5ecc614cee70c1d8a834f29b9db7ad21d2
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 42e28238a1ffbad3faa162dd21d4639e742ec7e3
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80326833"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82075400"
 ---
 # <a name="add-groups-to-organize-users-and-devices"></a>Přidání skupin pro uspořádání uživatelů a zařízení
 
@@ -43,7 +43,7 @@ Pomocí následujícího postupu vytvořte novou skupinu.
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Vyberte **skupiny** > **Nová skupina**:
 
-   ![Snímek obrazovky Azure Portal s vybranou novou skupinou](./media/groups-add/groups-add-new.png)
+   ![Snímek obrazovky Azure Portalu s vybranou možností Nová skupina](./media/groups-add/groups-add-new.png)
 
 3. V poli **typ skupiny**vyberte jednu z následujících možností:
 
@@ -85,7 +85,7 @@ Pomocí následujícího postupu vytvořte novou skupinu.
 > - Všechna zařízení s Androidem Enterprise
 > - Všechna zařízení se systémem iOS 11 a starším
 > - Marketing
-> - Lidské zdroje
+> - Personální oddělení
 > - Všichni zaměstnanci Charlotte
 > - Všichni zaměstnanci v WA
 

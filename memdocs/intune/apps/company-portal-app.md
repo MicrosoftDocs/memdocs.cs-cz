@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/16/2020
+ms.date: 04/09/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e6a3152966dee507cde690d9be8f5a7e210c7945
-ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
+ms.openlocfilehash: 7e584019063c6af7f04f5666ba2c38d8199681c5
+ms.sourcegitcommit: 568f8f8c19fafdd0f4352d0682f1ca7a4d665d25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80407758"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81771414"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>Přizpůsobení aplikací Portál společnosti Intune, Portál společnosti webu a Intune
 
@@ -31,7 +31,7 @@ Aplikace Portál společnosti, Portál společnosti web a Intune v Androidu jsou
 
 ## <a name="customizing-the-user-experience"></a>Přizpůsobení uživatelského prostředí
 
-Přizpůsobením prostředí pro koncové uživatele umožníte vašim koncovým uživatelům získat známé a užitečné možnosti. Provedete to tak, že přejdete do [centra pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431), vyberete **Správa tenanta** > **přizpůsobení**a pak nakonfigurujete požadovaná nastavení. Tato nastavení se použijí pro aplikace Portál společnosti, Portál společnosti webu a Intune v Androidu.
+Přizpůsobením prostředí pro koncové uživatele umožníte vašim koncovým uživatelům získat známé a užitečné možnosti. Provedete to tak, že přejdete do [centra pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)a vyberete > **přizpůsobení** **správy tenanta**, kde můžete buď upravit výchozí zásadu, nebo vytvořit až 10 cílových zásad skupiny. Tato nastavení se použijí pro aplikace Portál společnosti, Portál společnosti webu a Intune v Androidu.
 
 ## <a name="branding"></a>Branding
 
@@ -71,7 +71,7 @@ Níže vidíte příklad obrázku značky v aplikaci Intune pro Android:
 
 <img alt="Screenshot of example #2 for Intune app for Android branding image" src="./media/company-portal-app/company-portal-app-03.png" width="250">
 
-## <a name="support-information"></a>Informace o podpoře
+## <a name="support-information"></a>Informace pro získání podpory
 
 Zadejte informace o podpoře vaší organizace, aby se zaměstnanci mohli obrátit na otázky. Tyto informace o podpoře se budou zobrazovat na **podporu**, **pomáhat & podpoře**a stránkách **helpdesku** v rámci prostředí koncových uživatelů.
 
@@ -92,7 +92,8 @@ Následující tabulka poskytuje další podrobnosti o konfiguraci:
 |------------------------------------------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Adresa URL prohlášení o zásadách ochrany osobních údajů | 79 | Nastavte prohlášení o zásadách ochrany osobních údajů ve vaší organizaci, které se zobrazí, když uživatel klikne na odkazy na soukromí Musíte zadat platnou adresu URL ve formátu `https://www.contoso.com`. |
 | Zpráva o ochraně osobních údajů v Portál společnosti pro iOS/iPadOS | 520 | Ponechte výchozí nebo nastavte vlastní zprávu tak, aby vynechala seznam položek, které vaše organizace může nebo nemůže zobrazit na spravovaných zařízeních se systémem iOS/iPadOS. Pomocí Markdownu můžete přidat odrážky, tučné písmo, kurzívu a odkazy. |
-| Registrace zařízení | Není k dispozici | Určete, jestli a jak se má uživatelům zobrazit výzva k registraci do správy mobilních zařízení. Podrobnosti níže. |
+| Registrace zařízení | – | Určete, jestli a jak se má uživatelům zobrazit výzva k registraci do správy mobilních zařízení. Podrobnosti níže. |
+| Oznámení o vlastnictví zařízení | – | Odeslání nabízeného oznámení do uživatelů pro Android i iOS Portál společnosti, když se jejich typ vlastnictví zařízení změnil z osobních na firemní. Ve výchozím nastavení je toto nabízené oznámení nastaveno na vypnuto. Když je vlastnictví zařízení nastavené na vlastnictví firmy, má Intune větší přístup k zařízení, které zahrnuje plný inventář aplikací, rotaci klíčů trezoru souborů, načtení telefonního čísla a několik vzdálených akcí. Další informace najdete v tématu [Změna vlastnictví zařízení](../enrollment/corporate-identifiers-add.md#change-device-ownership).  |
 
 ### <a name="device-enrollment-setting-options"></a>Možnosti nastavení registrace zařízení
 
@@ -105,7 +106,7 @@ Následující tabulka poskytuje další podrobnosti o konfiguraci:
 |-----------------------------------|-------------------------------------------------------------------------------------------------------------------------|-------------------------|--------------------|-----------------------------|--------------------------------------------------------------------|
 |    K dispozici, s výzvami    |    Výchozí prostředí s výzvou k registraci ve všech možných umístěních.    |    Ano    |    Ano    |    Ano    |    Ano    |
 |    K dispozici, žádné výzvy    |    Uživatel se může zaregistrovat přes stav v podrobnostech o zařízení pro svoje aktuální zařízení nebo aplikace, které vyžadují registraci.    |    Ne    |    Ne    |    Ano    |    Ano    |
-|    Nedostupný    |    Pro uživatele neexistuje žádný způsob, jak ho zaregistrovat.    |    Ne    |    Ne    |    Ne    |    Ne<sup>(1)</sup>    |
+|    Neaktivní    |    Pro uživatele neexistuje žádný způsob, jak ho zaregistrovat.    |    Ne    |    Ne    |    Ne    |    Ne<sup>(1)</sup>    |
 
 <sup>(1)</sup> **známý problém:** Pokud nakonfigurujete aplikace, aby vyžadovaly registraci pro instalaci, a také nastavení registrace zařízení na "nedostupné", aplikace Portál společnosti v Androidu pořád budou uživatele registrovat. Tato akce bude brzy odebrána.
 
@@ -136,21 +137,21 @@ V aplikaci Portál společnosti pro Windows jsou k dispozici následující klá
 
 | Oblast | Popis | Klávesová zkratka |
 |:------------------:|:--------------:|:-----------------:|
-| Navigační nabídka | Navigace | ALT + M |
-|  | Domů | ALT + H |
-|  | Všechny aplikace | ALT + A |
+| Navigační nabídka | Navigace | Alt+M |
+|  | Domů | Alt+H |
+|  | Všechny aplikace | Alt+A |
 |  | Nainstalované aplikace | Alt+I |
-|  | Váš názor | ALT + F |
-|  | Můj profil | ALT + U |
-|  | Nastavení | Alt + T |
-| Úvodní stránka – dlaždice Zařízení | Přejmenovat | F2 |
+|  | Odeslat názor | Alt+F |
+|  | Můj profil | Alt+U |
+|  | Nastavení | Alt+T |
+| Úvodní stránka – dlaždice Zařízení | přejmenování | F2 |
 |  | Odebrat | Ctrl+D nebo Delete |
-|  | Zkontrolovat přístup | Ctrl+M nebo F9 |
-| Podrobnosti o zařízení | Přejmenovat | F2 |
+|  | Kontrola přístupu | Ctrl+M nebo F9 |
+| Podrobnosti o zařízení | přejmenování | F2 |
 |  | Odebrat | Ctrl+D nebo Delete |
-|  | Zkontrolovat přístup | Ctrl+M nebo F9 |
-| Podrobnosti aplikace | Install | Ctrl+I |
-| Zařízení | K dispozici | CTRL+D |
+|  | Kontrola přístupu | Ctrl+M nebo F9 |
+| Podrobnosti aplikace | Instalace | Ctrl+I |
+| Zařízení | K dispozici. | Ctrl+D |
 
 Koncoví uživatelé budou také moci zobrazit dostupné zkratky v aplikaci pro Windows Portál společnosti.
 
@@ -174,13 +175,13 @@ Některé platformy a konfigurace neumožňují akce zařízení samoobslužné 
 
 |  | Windows 10<sup>(3)</sup> | iOS/iPadOS<sup>(3)</sup> | MacOS<sup>(3)</sup> | Android<sup>(3)</sup> |
 |----------------------|--------------------------|-------------------|-----------------------------------|-------------------------|
-| Vyřadit | K dispozici<sup>(1)</sup> | K dispozici | K dispozici | K dispozici<sup>(7)</sup> |
-| Vymazání | K dispozici | K dispozici<sup>(5)</sup> | Není k dispozici | K dispozici<sup>(7)</sup> |
-| Přejmenovat<sup>(4)</sup> | K dispozici | K dispozici | K dispozici | K dispozici |
-| Synchronizovat | K dispozici | K dispozici | K dispozici | K dispozici |
-| Vzdálené uzamčení | Pouze Windows Phone | K dispozici | K dispozici | K dispozici |
+| Vyřazení | K dispozici<sup>(1)</sup> | K dispozici. | K dispozici. | K dispozici<sup>(7)</sup> |
+| Vymazání | K dispozici. | K dispozici<sup>(5)</sup> | Není k dispozici | K dispozici<sup>(7)</sup> |
+| Přejmenovat<sup>(4)</sup> | K dispozici. | K dispozici. | K dispozici. | K dispozici. |
+| Sync | K dispozici. | K dispozici. | K dispozici. | K dispozici. |
+| Vzdálené uzamčení | Pouze Windows Phone | K dispozici. | K dispozici. | K dispozici. |
 | Resetovat heslo | Pouze Windows Phone | K dispozici<sup>(8)</sup> | Není k dispozici | K dispozici<sup>(6)</sup> |
-| Obnovení klíče | Není k dispozici | Není k dispozici | K dispozici<sup>(2)</sup> | Není k dispozici |
+| Key Recovery | Není k dispozici | Není k dispozici | K dispozici<sup>(2)</sup> | Není k dispozici |
 
 <sup>(1)</sup> **vyřazení** je vždycky blokované na zařízeních s Windows připojená k Azure AD.<br>
 <sup>(2)</sup> **obnovení klíče** pro MacOS je dostupné jenom přes webový portál.<br>
@@ -188,7 +189,7 @@ Některé platformy a konfigurace neumožňují akce zařízení samoobslužné 
 <sup>(4)</sup> **přejmenování** změní pouze název zařízení v portál společnosti aplikaci nebo webovém portálu, nikoli na zařízení.<br>
 <sup>(5)</sup> **vymazání** není k dispozici pro uživatele zaregistrovaná zařízení se systémem iOS/iPadOS.<br>
 <sup>(6)</sup> **resetování hesla** není podporované u některých konfigurací pro Android a Android Enterprise. Další informace najdete v tématu [resetování nebo odebrání hesla zařízení v Intune](../remote-actions/device-passcode-reset.md).<br>
-<sup>(7)</sup> **vyřazení** a **vymazání** nejsou k dispozici ve scénářích pro vlastníky zařízení s Androidem Enterprise (odolat, Cobo, COSU).<br> 
+<sup>(7)</sup> **vyřazení** a **vymazání** nejsou k dispozici ve scénářích pro vlastníky zařízení s Androidem Enterprise (odolat, Cobo, COSU).<br>
 <sup>(8)</sup> **resetování hesla** není podporované uživatelem zaregistrovanými zařízeními iOS/iPadOS.
 
 ## <a name="next-steps"></a>Další kroky

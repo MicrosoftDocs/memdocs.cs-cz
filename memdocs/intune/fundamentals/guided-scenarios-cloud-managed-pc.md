@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8720eec22c8e7fd8a9c8c2303b50e71db0e834ad
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 1fcd77774cb19a70ee02cab9d2d1e6a44dd9745a
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79332555"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82023193"
 ---
 # <a name="guided-scenario---cloud-managed-modern-desktop"></a>Scénář s asistencí – moderní plocha spravovaná cloudem
 
-Moderní plocha je špičkovou produkční platformou pro informačního pracovníka. Office 365 ProPlus a Windows 10 jsou základními komponentami moderního počítače spolu s nejnovějšími směrnými plány zabezpečení pro Windows 10 a rozšířené možnosti ochrany před internetovými útoky v programu Microsoft Defender.
+Moderní plocha je špičkovou produkční platformou pro informačního pracovníka. Microsoft 365 aplikace a Windows 10 jsou základními komponentami moderní plochy společně s nejnovějšími směrnými plány zabezpečení pro Windows 10 a rozšířené ochrany před internetovými útoky v programu Microsoft Defender.
 
 Správa moderního stolního počítače z cloudu přináší přidaný přínos pro vzdálené akce v rámci Internetu. Správa cloudu využívá integrované zásady správy mobilních zařízení systému Windows a odebírá závislosti v místních zásadách skupiny služby Active Directory.
 
@@ -46,7 +46,7 @@ Pokud chcete vyhodnotit cloudovou moderní plochu ve vaší vlastní organizaci,
 
 ## <a name="step-1---introduction"></a>Krok 1 – Úvod
 
-V tomto scénáři nastavíte testovacího uživatele, zaregistrujete zařízení v Intune a nasadíte zařízení s použitím nastavení doporučeného pro Intune i Windows 10 a Office ProPlus. Pokud se rozhodnete [tuto ochranu povolit v Intune](../protect/advanced-threat-protection.md#enable-microsoft-defender-atp-in-intune), vaše zařízení se taky nakonfiguruje pro rozšířenou ochranu před internetovými útoky v programu Microsoft Defender. Uživatel, kterého jste nastavili, a zařízení, které zaregistrujete, bude přidáno do nových skupin zabezpečení a bude nakonfigurováno s doporučeným nastavením pro zabezpečení a produktivitu.
+V tomto průvodci nastavíte testovacího uživatele, zaregistrujete zařízení v Intune a nasadíte zařízení s použitím nastavení doporučeného pro Intune i pro Windows 10 a Microsoft 365 aplikace. Pokud se rozhodnete [tuto ochranu povolit v Intune](../protect/advanced-threat-protection.md#enable-microsoft-defender-atp-in-intune), vaše zařízení se taky nakonfiguruje pro rozšířenou ochranu před internetovými útoky v programu Microsoft Defender. Uživatel, kterého jste nastavili, a zařízení, které zaregistrujete, bude přidáno do nových skupin zabezpečení a bude nakonfigurováno s doporučeným nastavením pro zabezpečení a produktivitu.
 
 ### <a name="what-you-will-need-to-continue"></a>Co budete potřebovat k pokračování
 
@@ -121,7 +121,7 @@ Ve scénáři s asistencí se uživatel přiřadí k vybranému zařízení auto
 
 Jakmile uživatel připojí zařízení k Azure Active Directory, na zařízení se použijí následující konfigurace:
 
-1. Do počítače spravovaného v cloudu se automaticky nainstaluje Office 365 ProPlus. Zahrnuje aplikace, se kterými jste obeznámeni, včetně přístupu, Excelu, OneNotu, Outlooku, PowerPointu, vydavatele, Skypu pro firmy a Wordu. Tyto aplikace můžete použít pro připojení ke službám Office 365, jako je SharePoint Online, Exchange Online a Online Skype pro firmy. Sada Office 365 ProPlus se pravidelně aktualizuje novými funkcemi, na rozdíl od verzí Office, které nejsou předplatné. Seznam nových funkcí najdete v tématu Co je nového v Office 365.
+1. Microsoft 365 aplikace se automaticky nainstalují na počítač spravovaný v cloudu. Zahrnuje aplikace, se kterými jste obeznámeni, včetně přístupu, Excelu, OneNotu, Outlooku, PowerPointu, vydavatele, Skypu pro firmy a Wordu. Tyto aplikace můžete použít pro připojení ke službám Office 365, jako je SharePoint Online, Exchange Online a Online Skype pro firmy. Microsoft 365 aplikace se pravidelně aktualizují s novými funkcemi, na rozdíl od verzí Office, které nejsou předplatné. Seznam nových funkcí najdete v tématu Co je nového v Office 365.
 2. Do počítače spravovaného v cloudu se nainstalují standardní hodnoty zabezpečení systému Windows. Pokud jste nastavili rozšířenou ochranu před internetovými útoky v programu Microsoft Defender, ve scénáři s asistencí se také nakonfigurují základní nastavení pro Defender. Program Defender Advanced Threat Protection poskytuje novou vrstvu ochrany před porušením zásobníku pro Windows 10 Security. Díky kombinaci technologie klienta integrované do systému Windows 10 a robustní cloudové služby vám pomůže detekovat hrozby, které provedly v minulosti po jiné obrany. 
 
 ## <a name="next-steps"></a>Další kroky

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 682791256bf0ce40db1dedd1fa6b947efc85b729
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: aa8a18d24fb27b1d1ca7ea7dbe4fad532f85d662
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79329415"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82022717"
 ---
 # <a name="prevent-unauthorized-access-to-company-data-using-microsoft-intune"></a>Zabránění neoprávněnému přístupu k podnikovým datům v Microsoft Intune
 
@@ -36,7 +36,7 @@ Následující akční plán je možné provést při splnění následujících
 * Vaše společnost používá Office 365 Exchange Online, SharePoint Online, OneDrive pro firmy nebo Yammer.
 * Vaše společnost má licence na Microsoft 365, Enterprise Mobility + Security (EMS) nebo Azure Information Protection.
 * Vaše společnost pracuje se zařízeními se systémem Windows 7 Service Pack 1 nebo novějším.
-* Vaše společnost používá Office 365 ProPlus s aplikacemi verze 2016 nebo 2013, Office Professional Plus 2016, Office Professional Plus 2013 s aktualizací Service Pack 1 nebo Office Professional Plus 2010.
+* Vaše společnost používá Microsoft 365 aplikace s aplikacemi 2016 nebo 2013, Office Professional Plus 2016, Office Professional Plus 2013 s aktualizací Service Pack 1 nebo Office Professional Plus 2010.
 
 ## <a name="action-plan"></a>Akční plán
 

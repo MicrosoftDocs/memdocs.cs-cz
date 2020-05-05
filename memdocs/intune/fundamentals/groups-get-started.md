@@ -16,12 +16,12 @@ ms.assetid: 323f384d-8a76-4adc-999b-e508d641bfa1
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ae7613606cd6803c4d65007ce5792e47d60bfb38
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 5e8fdd0de8b276017a51c2fd464eef4b1d8505bc
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79331507"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82075383"
 ---
 # <a name="microsoft-intune-classic-groups-in-the-azure-portal"></a>Skupiny Microsoft Intune Classic na portálu Azure Portal
 
@@ -47,9 +47,9 @@ Některé možnosti skupin Intune, které jste dříve možná používali, nejs
 ## <a name="how-to-get-started"></a>Jak začít?
 
 - Přečtěte si následující témata, kde najdete další informace o skupinách zabezpečení služby Azure AD a jak fungují:
-  - [Správa přístupu k prostředkům prostřednictvím skupin Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-manage-groups/)
-  - [Správa skupin ve službě Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-manage-groups/)
-  - [Vytváření pokročilých pravidel pomocí atributů](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-groups-with-advanced-rules/)
+  - [Správa přístupu k prostředkům pomocí skupin Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-manage-groups/).
+  - [Správa skupin v Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-manage-groups/).
+  - [Vytváření rozšířených pravidel pomocí atributů](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-groups-with-advanced-rules/)
 - Všechny správce, kteří potřebují vytvářet skupiny, je potřeba přidat do role Azure AD **Správce služby Intune**. Role správce služby Azure AD nemá oprávnění **Spravovat skupinu**.
 - Pokud vaše skupiny Intune použily možnost **Vyloučit konkrétní členy**, rozhodněte se, jestli chcete tyto skupiny znovu vytvořit bez vyloučení nebo jestli potřebujete rozšířená pravidla, abyste vyhověli potřebám firmy.
 
@@ -82,7 +82,7 @@ Atributy jsou vlastnosti zařízení, které se dají použít při definování
 |Atribut Manager pro skupiny uživatelů|Rozšířené pravidlo pro atribut *manager* v dynamických skupinách|
 |Všichni uživatelé z nadřazené skupiny uživatelů|Statická skupina s touto skupinou jako členem|
 |Všechna mobilní zařízení z nadřazené skupiny zařízení|Statická skupina s touto skupinou jako členem|
-|Veškerá mobilní zařízení spravovaná přes Intune|Atribut Management Type s MDM jako hodnotou pro dynamickou skupinu|
+|Veškerá mobilní zařízení spravovaná přes Intune|Atribut typu správy s typem MDM jako s hodnotou pro dynamickou skupinu|
 |Vnořené skupiny v rámci statických skupin |Vnořené skupiny v rámci statických skupin|
 |Vnořené skupiny v rámci dynamických skupin|Dynamická skupina s jednou úrovní vnoření|
 

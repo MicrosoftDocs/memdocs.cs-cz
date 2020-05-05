@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/20/2020
+ms.date: 04/22/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b808e34e6b44641902daddcee3a47f7273756b2d
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: d9a3e2c2a2c50f2d0fde264eedc2096d34f815a9
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80323276"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82023176"
 ---
 # <a name="configure-and-use-imported-pkcs-certificates-with-intune"></a>Konfigurace a používání importovaných certifikátů PKCS pomocí Intune
 
@@ -89,7 +89,7 @@ Když použijete Intune k nasazení **importovaného certifikátu PFX** pro uži
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Vyberte možnost **Správa tenanta** > **konektory a tokeny** > **konektory certifikátů** > **Přidat**.
+2. Vyberte možnost konektory **správy** > **a tokeny** > **certifikátů** > **Přidat**.
 
    ![Konektor certifikátu PFX pro stažení Microsoft Intune](./media/certificates-imported-pfx-configure/download-imported-pfxconnector.png)
 
@@ -104,9 +104,9 @@ Když použijete Intune k nasazení **importovaného certifikátu PFX** pro uži
    > [!WARNING]
    > Ve výchozím nastavení je **Konfigurace rozšířeného zabezpečení** Windows serveru IE nastavená na **zapnuto** , což může způsobit problémy s přihlášením k Office 365.
 
-6. Okno zavřete.
+6. Zavřete okno.
 
-7. V centru pro správu Microsoft Endpoint Manageru se vraťte do části **Správa tenanta** > **konektory a tokeny** > **konektory certifikátů**. Za chvíli se zobrazí zelená značka zaškrtnutí a aktualizuje se stav připojení. Server konektoru teď může komunikovat s Intune.
+7. V centru pro správu Microsoft Endpoint Manageru se vraťte k konektorům **pro správu** > tenanta**a tokenům** > **certifikátů**. Za chvíli se zobrazí zelená značka zaškrtnutí a aktualizuje se stav připojení. Server konektoru teď může komunikovat s Intune.
 
 ## <a name="import-pfx-certificates-to-intune"></a>Import certifikátů PFX do Intune
 
@@ -122,7 +122,7 @@ Pokud chcete používat rutiny PowerShellu, sestavíte projekt sami pomocí sady
 
    ![Tlačítko pro stažení GitHubu](./media/certificates-imported-pfx-configure/github-download.png)
 
-2. Přejít na `.\Intune-Resource-Access-develop\src\PFXImportPowershell\` a otevřít projekt pomocí sady Visual Studio pomocí souboru **PFXImportPS. sln**.
+2. `.\Intune-Resource-Access-develop\src\PFXImportPowershell\` Pomocí souboru **PFXImportPS. sln**otevřete projekt pomocí sady Visual Studio.
 
 3. V horní části se změňte z **ladění** na **release**.
 
@@ -130,7 +130,7 @@ Pokud chcete používat rutiny PowerShellu, sestavíte projekt sami pomocí sady
 
    ![Možnost sestavení sady Visual Studio](./media/certificates-imported-pfx-configure/vs-build-release.png)
 
-5. Proces sestavení vytvoří novou složku s modulem PowerShell na `.\Intune-Resource-Access-develop\src\PFXImportPowershell\PFXImportPS\bin\Release`.
+5. Proces sestavení vytvoří novou složku pomocí modulu PowerShell v `.\Intune-Resource-Access-develop\src\PFXImportPowershell\PFXImportPS\bin\Release`.
 
    Tuto složku pro **vydání** použijete pro další kroky.
 
@@ -146,14 +146,14 @@ Modul PowerShell poskytuje metody pro vytvoření klíče pomocí Kryptografie s
 
 2. Na serveru otevřete *PowerShell* jako správce a pak přejděte do složky pro *vydání* , která obsahuje modul prostředí PowerShell.
 
-3. Pokud chcete modul naimportovat, spusťte `Import-Module .\IntunePfxImport.psd1` a importujte modul.
+3. Pokud chcete modul naimportovat `Import-Module .\IntunePfxImport.psd1` , spusťte příkaz a importujte modul.
 
-4. Dále spusťte `Add-IntuneKspKey "Microsoft Software Key Storage Provider" "PFXEncryptionKey"`
+4. Dále spusťte`Add-IntuneKspKey "Microsoft Software Key Storage Provider" "PFXEncryptionKey"`
 
    > [!TIP]
    > Poskytovatele, kterého použijete, musí být vybrán znovu při importu certifikátů PFX. Můžete použít **poskytovatele úložiště klíčů od Microsoftu**, i když se podporuje použití jiného poskytovatele. Název klíče je také k dispozici jako příklad a můžete použít jiný název klíče podle vašeho výběru.
 
-   Pokud plánujete importovat certifikát z pracovní stanice, můžete tento klíč exportovat do souboru pomocí následujícího příkazu: `Export-IntunePublicKey -ProviderName "<ProviderName>" -KeyName "<KeyName>" -FilePath "<File path\Filename.PFX>"`
+   Pokud plánujete importovat certifikát z pracovní stanice, můžete tento klíč exportovat do souboru pomocí následujícího příkazu:`Export-IntunePublicKey -ProviderName "<ProviderName>" -KeyName "<KeyName>" -FilePath "<File path\Filename.PFX>"`
 
    Privátní klíč musí být importován na serveru, který je hostitelem konektoru certifikátů PFX pro Microsoft Intune, aby bylo možné úspěšně zpracovat importované certifikáty PFX.
 
@@ -165,10 +165,10 @@ K vygenerování a uložení páru veřejného a privátního klíče můžete p
 
 Následující postup používá rutiny prostředí PowerShell jako příklad importu certifikátů PFX. V závislosti na vašich požadavcích můžete vybrat různé možnosti.
 
-Vaše možnosti jsou:
+Mezi možnosti patří:
 
 - Zamýšlený účel (skupiny certifikátů na základě značky):
-  - nepřiřazeno
+  - nepřiřazené
   - Šifrování smimeencryption
   - smimeSigning
 
@@ -185,25 +185,25 @@ Vyberte poskytovatele úložiště klíčů, který odpovídá poskytovateli, kt
 
 2. Na serveru otevřete *PowerShell* jako správce a pak přejděte do složky pro *vydání* , která obsahuje modul prostředí PowerShell.
 
-3. Pokud chcete modul naimportovat, spusťte `Import-Module .\IntunePfxImport.psd1`
+3. Pokud chcete modul naimportovat, spusťte`Import-Module .\IntunePfxImport.psd1`
 
-4. Pokud chcete provést ověření v Intune Graph, spusťte `$authResult = Get-IntuneAuthenticationToken -AdminUserName "<Admin-UPN>"`
+4. Pokud chcete provést ověření v Intune Graph, spusťte`$authResult = Get-IntuneAuthenticationToken -AdminUserName "<Admin-UPN>"`
 
    > [!NOTE]
    > Vzhledem k tomu, že je ověřování spuštěno v grafu, je nutné zadat oprávnění k AppID. Pokud jste tento nástroj použili poprvé, vyžaduje se *globální správce* . Rutiny PowerShellu používají stejný AppID jako ten, který se používá při použití [ukázek PowerShellu pro Intune](https://github.com/microsoftgraph/powershell-intune-samples).
 
-5. Převeďte heslo pro každý soubor PFX, který importujete do zabezpečeného řetězce spuštěním `$SecureFilePassword = ConvertTo-SecureString -String "<PFXPassword>" -AsPlainText -Force`.
+5. Převeďte heslo pro každý soubor PFX, který se importuje do zabezpečeného řetězce spuštěním `$SecureFilePassword = ConvertTo-SecureString -String "<PFXPassword>" -AsPlainText -Force`.
 
-6. Pokud chcete vytvořit objekt **UserPFXCertificate** , spusťte `$userPFXObject = New-IntuneUserPfxCertificate -PathToPfxFile "<FullPathPFXToCert>" $SecureFilePassword "<UserUPN>" "<ProviderName>" "<KeyName>" "<IntendedPurpose>"`
+6. Chcete-li vytvořit objekt **UserPFXCertificate** , spusťte příkaz`$userPFXObject = New-IntuneUserPfxCertificate -PathToPfxFile "<FullPathPFXToCert>" $SecureFilePassword "<UserUPN>" "<ProviderName>" "<KeyName>" "<IntendedPurpose>"`
 
-   Například: `$userPFXObject = New-IntuneUserPfxCertificate -PathToPfxFile "C:\temp\userA.pfx" $SecureFilePassword "userA@contoso.com" "Microsoft Software Key Storage Provider" "PFXEncryptionKey" "smimeEncryption"`
+   Příklad: `$userPFXObject = New-IntuneUserPfxCertificate -PathToPfxFile "C:\temp\userA.pfx" $SecureFilePassword "userA@contoso.com" "Microsoft Software Key Storage Provider" "PFXEncryptionKey" "smimeEncryption"`
 
    > [!NOTE]
-   > Když importujete certifikát z jiného systému, než je server, na kterém je konektor nainstalovaný, použijte následující příkaz, který zahrnuje cestu k souboru klíče: `$userPFXObject = New-IntuneUserPfxCertificate -PathToPfxFile "<FullPathPFXToCert>" $SecureFilePassword "<UserUPN>" "<ProviderName>" "<KeyName>" "<IntendedPurpose>" "<PaddingScheme>" "<File path to public key file>"`
+   > Když importujete certifikát z jiného systému, než je server, na kterém je konektor nainstalovaný, použijte následující příkaz, který zahrnuje cestu k souboru klíče:`$userPFXObject = New-IntuneUserPfxCertificate -PathToPfxFile "<FullPathPFXToCert>" $SecureFilePassword "<UserUPN>" "<ProviderName>" "<KeyName>" "<IntendedPurpose>" "<PaddingScheme>" "<File path to public key file>"`
 
-7. Import objektu **UserPFXCertificate** do Intune spuštěním `Import-IntuneUserPfxCertificate -AuthenticationResult $authResult -CertificateList $userPFXObject`
+7. Naimportujte objekt **UserPFXCertificate** do Intune spuštěním`Import-IntuneUserPfxCertificate -AuthenticationResult $authResult -CertificateList $userPFXObject`
 
-8. Pokud chcete ověřit, že se certifikát naimportoval, spusťte `Get-IntuneUserPfxCertificate -AuthenticationResult $authResult -UserList "<UserUPN>"`
+8. Pokud chcete ověřit, že se certifikát naimportoval, spusťte`Get-IntuneUserPfxCertificate -AuthenticationResult $authResult -UserList "<UserUPN>"`
 
 Další informace o dalších dostupných příkazech najdete v souboru Readme v [projektu PFXImport PowerShellu na GitHubu](https://github.com/microsoft/Intune-Resource-Access/tree/develop/src/PFXImportPowershell).
 
@@ -211,11 +211,14 @@ Další informace o dalších dostupných příkazech najdete v souboru Readme v
 
 Po importování certifikátů do Intune vytvořte profil **importovaného certifikátu PKCS** a přiřaďte ho ke skupinám Azure Active Directory.
 
+> [!NOTE]
+> Po vytvoření importovaného profilu certifikátu PKCS jsou hodnoty **zamýšleného účelu** a **zprostředkovatele úložiště klíčů** (KSP) v profilu jen pro čtení a nelze je upravovat. Pokud pro některá z těchto nastavení potřebujete jinou hodnotu, vytvořte a nasaďte nový profil. 
+
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Vyberte **zařízení** > **konfigurační profily** > **vytvořit profil**.
+2. Vyberte a přejdete na konfigurace **zařízení** > **profily** > **vytvořit profil**.
 
-3. Zadejte následující vlastnosti:
+3. Zadejte tyto vlastnosti:
    - **Platforma**: vyberte platformu zařízení.
    - **Profil**: vyberte **importovaný certifikát PKCS** .
 
@@ -238,7 +241,7 @@ Po importování certifikátů do Intune vytvořte profil **importovaného certi
 
 8. Vyberte **Další**.
 
-9. V části **značky oboru** (volitelné) přiřaďte značku pro filtrování profilu na konkrétní skupiny IT, například `US-NC IT Team` nebo `JohnGlenn_ITDepartment`. Další informace o značkách oboru naleznete v tématu [použití značek RBAC a Scope pro distribuci](../fundamentals/scope-tags.md).
+9. V části **značky oboru** (volitelné) přiřaďte značku pro filtrování profilu pro konkrétní IT skupiny, například `US-NC IT Team` nebo. `JohnGlenn_ITDepartment` Další informace o značkách oboru naleznete v tématu [použití značek RBAC a Scope pro distribuci](../fundamentals/scope-tags.md).
 
    Vyberte **Další**.
 
@@ -262,7 +265,7 @@ Následující partneři poskytují podporované metody nebo nástroje, které m
 
 Pokud používáte službu DigiCert PKI, můžete k importu certifikátů PFX do Intune použít **Nástroj pro import DigiCert pro certifikáty Intune S/MIME** . Použití tohoto nástroje nahrazuje pokyny v části [Import certifikátů PFX do Intune](#import-pfx-certificates-to-intune) , které jsou popsané dříve v tomto článku.
 
-Další informace o nástroji pro import DigiCert, včetně toho, jak tento nástroj získat, najdete v tématu https://knowledge.digicert.com/tutorials/microsoft-intune.html ve znalostní bázi DigiCert.
+Další informace o nástroji pro import DigiCert, včetně toho, jak tento nástroj získat, najdete https://knowledge.digicert.com/tutorials/microsoft-intune.html v článku znalostní báze DigiCert.
 
 ## <a name="next-steps"></a>Další kroky
 

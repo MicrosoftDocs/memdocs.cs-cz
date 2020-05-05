@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c5b6762669e4d816010982c63a119bffdec2f055
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 32405d7cc00d7ddbf528eb9ce736cf0faf702b42
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79323843"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82023023"
 ---
 # <a name="quickstart-add-and-assign-a-client-app"></a>Rychlý start: Přidání a přiřazení klientské aplikace
 
@@ -46,7 +46,7 @@ Při zahrnutí aplikace může Intune spravovat aspekty této aplikace.
 Aplikaci přidáte do Intune následujícím postupem:
 
 1. V [Intune](https://aka.ms/intuneportal)vyberte **aplikace** > **všechny aplikace** > **Přidat**. 
-2. V části **Sada Office 365** v podokně **Vybrat typ aplikace** vyberte **Windows 10** .
+2. V části **Microsoft 365 aplikace** v podokně **Vybrat typ aplikace** vyberte **Windows 10** .
 3. Klikněte na **Vybrat**. Zobrazí se kroky **Přidání aplikace** .
 4. Potvrďte výchozí údaje na stránce s **informacemi o sadě aplikací** .
 5. Kliknutím na **Další** zobrazte stránku **Konfigurovat sadu aplikací** .
@@ -70,10 +70,10 @@ Aplikaci přiřadíte ke skupině následujícím postupem:
 
 1. V [Intune](https://aka.ms/intuneportal)vyberte **aplikace** > **všechny aplikace**. 
 2. Vyberte aplikaci, kterou chcete přiřadit ke skupině.
-3. Klikněte na **přiřazení** > **Přidat skupinu** , aby se zobrazilo podokno **Přidat skupinu** .
+3. Kliknutím na **přiřazení** > **Přidat skupinu** zobrazíte podokno **Přidat skupinu** .
 4. V rozevíracím seznamu **Typ přiřazení** vyberte **K dispozici registrovaným zařízením**. 
-5. Klikněte na **Zahrnuté skupiny** > **Vybrat skupiny, které se zahrnou** > **Testeři Contoso**.
-6. Kliknutím na **Vybrat** > **OK** > **OK** > **Uložit** tuto skupinu přiřaďte.
+5. Klikněte na **zahrnuté skupiny** > **Vybrat skupiny a přidejte** > **testery contoso**.
+6. Klikněte na **Vybrat** > **OK** > **OK** > **Uložit** a skupinu přiřaďte.
 
 Tuto aplikaci jste teď přiřadili ke skupině **Testeři Contoso**.
 
@@ -88,12 +88,12 @@ Abyste mohli nainstalovat aplikaci **Úkoly Contoso** zpřístupněnou službou 
 
 2. V nabídce **Start** otevřete **Microsoft Store**. Pak vyhledejte aplikaci **Portál společnosti** a nainstalujte ji.
 3. Spusťte aplikaci **Portál společnosti**.
-4. Klikněte na aplikaci, kterou jste přidali pomocí Intune. V tomto rychlém startu jste přidali aplikaci **Sada aplikací Microsoft Office 365**.
+4. Klikněte na aplikaci, kterou jste přidali pomocí Intune. V tomto rychlém startu jste přidali sadu **Microsoft 365 Apps** .
 
     > [!NOTE]
     > Pokud jste uživateli Intune nepřiřadili úspěšně žádné aplikace, zobrazí se následující zpráva: *Váš správce IT pro vás nezpřístupnil žádné aplikace.*
 
-5. Klikněte na **Nainstalovat**.
+5. Klikněte na **nainstalovat**.
 
 Pokud potřeby vaší firmy vyžadují, abyste aplikaci Portál společnosti přiřadili zaměstnancům, můžete aplikaci Portál společnosti pro Windows 10 přiřadit ručně přímo z Intune. Další informace najdete v článku [Ruční přidání aplikace Portál společnosti pro Windows 10 pomocí Microsoft Intune](company-portal-app.md).
 

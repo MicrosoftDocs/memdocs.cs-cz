@@ -19,12 +19,12 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 84a7f679cc071a3e8d339fd29e278dfde6eef28c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 08a6cf6eed86836c8fe887265faddb1459918aea
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79328127"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82074754"
 ---
 # <a name="enroll-your-windows-phone-81-device-in-intune"></a>Registrace zařízení s Windows Phone 8.1 v Intune  
 
@@ -35,16 +35,16 @@ Pokud chcete zařízení zaregistrovat v Intune, postupujte podle pokynů, kter�
 ## <a name="enroll-through-company-portal"></a>Registrovat prostřednictvím Portál společnosti  
 Pokud Portál společnosti aplikaci můžete z Microsoft Store nainstalovat, postupujte podle těchto kroků. 
 
-1. Klepněte na **Start** > **Store**.  
+1. Klepněte na **Start** > **Store**(spustit).  
 
 2. Klepněte na **Hledat** a napište **portál společnosti**.  
 
-3. V seznamu výsledků klepněte na **Portál společnosti**.  
+3. V seznamu výsledků klepněte na **portál společnosti**.  
 
 
-    ![Výsledky hledání portálu společnosti](./media/WP81-1-CP-search-store-v2.png)  
+    ![Výsledky hledání Portálu společnosti](./media/WP81-1-CP-search-store-v2.png)  
 
-4. Klepněte na **Portál společnosti**&gt; **nainstalovat**.  
+4. Klepněte na **portál společnosti** &gt; **nainstalovat**.    
 
 
     ![Instalace portálu společnosti](./media/WP81-2-CP-install-v2.png)  
@@ -54,7 +54,7 @@ Zaregistrujte své zařízení:
 1. V zařízení otevřete aplikaci **Portál společnosti Microsoft Intune**.  
 
 
-2. Zadejte svoje přihlašovací údaje. V odpovídajících případech můžete být vyzváni, abyste přijali podmínky a ujednání vaší společnosti.  
+2. Zadejte svoje přihlašovací údaje. Můžete být vyzváni, abyste přijali podmínky a ujednání vaší společnosti, pokud jsou k dispozici.  
 
 3. Potažením prstem přejděte na **Moje zařízení**.  
 
@@ -63,7 +63,7 @@ Zaregistrujte své zařízení:
 
     ![Klepněte sem a můžete pak toto zařízení zaregistrovat nebo identifikovat](./media/WP81-enroll-1-swipe-my-devices.png)  
 
-5. Klepněte na **Zaregistrovat toto zařízení**.  
+5. Klepněte na **zaregistrovat toto zařízení**.  
 
 
     ![Zaregistrovat toto zařízení.](./media/WP81-enroll-2-enroll-this-device.png)  
@@ -73,7 +73,7 @@ Zaregistrujte své zařízení:
 
     ![Obrazovka nastavení pracoviště](./media/WP81-enroll-3-workplace-add-acct.png)  
 
-7. Podle potřeby zadejte další informace a klepnutím na **Přihlásit se** dokončete registraci. Teď byste měli vidět svůj účet na pracovišti na stránce **nastavení** &gt; **pracoviště** .  
+7. Podle potřeby zadejte další informace a klepnutím na **Přihlásit se** dokončete registraci. Teď byste měli vidět účet pracoviště na stránce **Nastavení** &gt; **Pracoviště**.  
 
 
     ![Obrazovka přidání účtu](./media/WP81-enroll-4-account-added.png)  
@@ -81,13 +81,13 @@ Zaregistrujte své zařízení:
 ## <a name="enroll-through-settings-app"></a>Zaregistrování v aplikaci nastavení  
 Pokud nemáte přístup k Microsoft Store ze zařízení Windows Phone nebo nemáte účet Microsoft, postupujte podle těchto kroků.
 
-1. Klepněte na **nastavení** &gt; **pracoviště**.  
+1. Klepněte na **Nastavení** &gt; **pracoviště**.  
 
 2. Klikněte na **Přidat účet** a potom se přihlaste pomocí svého pracovního účtu.  
 
 3. Podle potřeby zadejte další informace a klepnutím na **Přihlásit se** dokončete registraci.  
 
-4. Pokud se zobrazí výzva k instalaci firemní aplikace nebo firemního centra, zaškrtněte odpovídající políčko a potom klepněte na **Hotovo**.  
+4. Pokud se zobrazí výzva k instalaci aplikace společnosti nebo centra, ujistěte se, že je zaškrtnuté příslušné políčko, a pak klepněte na **Hotovo**.  
 
 Pokud vaše firemní podpora nastavila Portál společnosti tak, aby se nainstaloval během registrace, zobrazí se Portál společnosti ve vašem seznamu aplikací.  
 
