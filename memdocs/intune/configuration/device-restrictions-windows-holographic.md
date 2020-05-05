@@ -1,6 +1,6 @@
 ---
-title: Nastavení zařízení s Windows Holographic Business – Microsoft Intune – Azure | Dokumentace Microsoftu
-description: Přečtěte si o a nakonfigurujte nastavení omezení zařízení v Microsoft Intune pro Windows holografické pro firmy, včetně zrušení registrace, geografického umístění, hesel, instalace aplikací z App Storu, souborů cookie a automaticky otevíraných oken v Microsoft Edge, Microsoft Defenderu, hledání, Cloud a úložiště, konektivita Bluetooth, systémový čas a data o využití v Azure.
+title: Nastavení zařízení pro Windows holografické firmy – Microsoft Intune – Azure | Microsoft Docs
+description: Přečtěte si o a nakonfigurujte nastavení omezení zařízení v Microsoft Intune pro Windows holografické pro firmy, včetně zrušení registrace, geografického umístění, hesel, instalaci aplikací z App Storu, souborů cookie a automaticky otevíraných oken v Microsoft Edge, Microsoft Defenderu, vyhledávání, cloudu a úložišti, připojení Bluetooth, systémového času a dat o využití v Azure.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -15,18 +15,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 837e7b5ccbeeae0664095619bf8703fa5cf422c6
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 0a207c34c0d46b423eda44abf953e9c084cc9b2d
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79332259"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078222"
 ---
-# <a name="windows-holographic-for-business-device-settings-to-allow-or-restrict-features-using-intune"></a>Windows Holographic for Business zařízení nastavení k povolení nebo zakázání funkcí pomocí Intune
+# <a name="windows-holographic-for-business-device-settings-to-allow-or-restrict-features-using-intune"></a>Nastavení zařízení ve Windows-holografické pro firmy, které umožňuje povolit nebo zakázat funkce využívající Intune
 
 
 
-Tento článek uvádí a popisuje různá nastavení, které můžete řídit na Windows Holographic for Business zařízení, jako je například Microsoft Hololens. Jako součást řešení správy mobilních zařízení pomocí těchto nastavení můžete povolit nebo zakázat funkce, ovládací prvek zabezpečení a další.
+Tento článek obsahuje seznam a popis různých nastavení, která můžete řídit na zařízeních s Windows holografickým pro firmy, jako je například Microsoft HoloLens. Jako součást řešení správy mobilních zařízení (MDM) pomocí těchto nastavení můžete povolit nebo zakázat funkce, zabezpečení a další funkce.
 
 ## <a name="before-you-begin"></a>Před zahájením
 
@@ -61,7 +61,7 @@ Tento článek uvádí a popisuje různá nastavení, které můžete řídit na
 
 - **Filtr SmartScreen pro Microsoft Edge**: Povolí filtr SmartScreen v Microsoft Edge pro přístup k webu a stahování souborů.
 
-## <a name="search"></a>Hledat
+## <a name="search"></a>Search
 
 - **Poloha při hledání** – Určuje, jestli hledání může používat informace
 
@@ -85,11 +85,11 @@ Tato nastavení jsou jen pro čtení a nedají se změnit. Pokud chcete nakonfig
 
 Ve veřejných terminálech obvykle běží konkrétní aplikace. Uživatelé nemají v zařízení přístup k žádným prvkům ani funkcím mimo aplikaci veřejného terminálu.
 
-- **Celoobrazovkový režim**: Určuje typ beznabídkového režimu, který zásady podporuje. Vaše možnosti jsou:
+- **Celoobrazovkový režim**: Určuje typ beznabídkového režimu, který zásady podporuje. Mezi možnosti patří:
 
   - **Není konfigurováno** (výchozí): Zásady nepovolují režim veřejného terminálu. 
   - Veřejný **terminál s jednou aplikací**: Profil umožňuje, aby zařízení spouštělo jenom jednu aplikaci. Jakmile se uživatel přihlásí, spustí se daná aplikace. Tento režim zároveň brání uživateli v otevírání nových aplikací nebo změně spuštěné aplikace.
-  - Veřejný **terminál s více aplikacemi**: Profil umožňuje, aby zařízení spouštělo víc aplikací. Uživatel má k dispozici pouze aplikace, které přidáte. Veřejný terminál s více aplikacemi, neboli zařízení s pevně stanoveným účelem, umožňuje poskytovat přehledné prostředí jednotlivým uživatelům, protože jim povoluje přístup pouze k aplikacím, které potřebují. Nezobrazuje aplikace, které nepotřebují. 
+  - Veřejný **terminál s více aplikacemi**: Profil umožňuje, aby zařízení spouštělo víc aplikací. Uživatel má k dispozici pouze aplikace, které přidáte. Veřejný terminál s více aplikacemi, neboli zařízení s pevně stanoveným účelem, umožňuje poskytovat přehledné prostředí jednotlivým uživatelům, protože jim povoluje přístup pouze k aplikacím, které potřebují. A odeberte aplikace, které nepotřebují z pohledu. 
   
     Když přidáváte aplikace pro prostředí veřejného terminálu s více aplikacemi, potřebujete také soubor rozložení nabídky Start. [Soubor rozložení nabídky Start](/hololens/hololens-kiosk#start-layout-file-for-mdm-intune-and-others) obsahuje ukázkový soubor XML, který můžete použít v Intune. 
 

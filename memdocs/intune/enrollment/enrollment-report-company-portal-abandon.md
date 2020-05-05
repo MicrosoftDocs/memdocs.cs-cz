@@ -17,18 +17,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9a3fc8976c4799759088db4c4f28a9f50dff8e37
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: d754076537fb8014b3e66a05413379637a67ba32
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79332851"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077967"
 ---
 # <a name="incomplete-user-enrollments-report"></a>Sestava nekompletních zápisů uživatelů
 
 Tato sestava obsahuje informace o tom, kde v procesu registrace Portál společnosti uživatelé nedokončují proces registrace.
 
-Pokud chcete zobrazit sestavu, vyberte > **Intune** **registrace zařízení** > **nedokončené registrace uživatelů**.
+Pokud se chcete podívat na sestavu, vyberte zařízení **Intune** > **registrace** > **nedokončených uživatelů**.
 
 Pomocí těchto informací můžete aktualizovat dokumenty pro připojování, aby uživatelé mohli dokončit registraci. Pokud například končí mnoho uživatelů u podmínek použití, můžete tuto oblast prozkoumat a upravit, aby byla pro uživatele intuitivnější.
 
@@ -80,7 +80,7 @@ Následující tabulky obsahují seznam akcí uživatele, které se dotáže na 
 | EnrollmentWrapUp | Obrazovka registrace zařízení až do dokončení **načítání firemních prostředků** | iOS/Android | Trvalo > 30 minut |
 | DeviceCategory | Výběr kategorie zařízení (pokud ji správce nakonfiguroval) až do kliknutí na **Hotovo** | iOS/Android | Trvalo > 30 minut |
 | PreEnrollmentWizard | Obrazovka nastavení přístupu, pokud byla registrace zahájena, ale vrátila se k nastavení přístupu | iOS/Android| **Odložit** |
-| PreEnrollmentWizard | Obrazovka nastavení přístupu až do kliknutí na **Další** na obrazovce **Co dál** | iOS/Android | Trvalo > 30 minut |
+| PreEnrollmentWizard | Nastavte přístupovou obrazovku, dokud **nekliknete na další na** obrazovce **co dál** . | iOS/Android | Trvalo > 30 minut |
 
 #### <a name="platform-screens-section"></a>Část Obrazovky platformy
 
@@ -88,7 +88,7 @@ Následující tabulky obsahují seznam akcí uživatele, které se dotáže na 
 | ---- |---- |---- |---- |
 | iOSProfileLaunch | Výzva k zobrazení konfiguračního profilu | iOS/iPadOS | **Ignorovat** |
 | iOSProfileLaunch | Obrazovka instalace profilu | iOS/iPadOS | **Zrušit** |
-| iOSProfileLaunch | Výzva k určení důvěryhodnosti zdroje profilu pro registraci zařízení | iOS/iPadOS | **Zrušit** |
+| iOSProfileLaunch | Vyzvat k důvěřování zdroji profilu, aby bylo možné zařízení zaregistrovat | iOS/iPadOS | **Zrušit** |
 | iOSProfileLaunch | Obrazovka instalace profilu až do dokončení instalace profilu | iOS/iPadOS | Trvalo > 30 minut |
 | AndroidPermissions | Obrazovka aktivace správce zařízení | Android | **Zrušit** |
 | AndroidPermissions | Od výzvy ke schválení uskutečňování telefonních hovorů a jejich správy až do **aktivace** správce zařízení | Android | Trvalo > 30 minut |

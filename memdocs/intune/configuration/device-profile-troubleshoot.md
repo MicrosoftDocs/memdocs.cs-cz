@@ -1,6 +1,6 @@
 ---
 title: Řešení potíží s profily zařízení v Microsoft Intune – Azure | Microsoft Docs
-description: Běžné dotazy a odpovědi se zásadami a profily zařízení, včetně změn profilu, které se u uživatelů nebo zařízení nepoužijí, jak dlouho trvá, než se nové zásady přidají do zařízení, která nastavení se použijí, když je k dispozici několik zásad, co se stane, když Profil se odstranil nebo odebírá a je k disMicrosoft Intune.
+description: Běžné dotazy a odpovědi se zásadami a profily zařízení, včetně změn profilu, které se u uživatelů nebo zařízení nepoužijí, jak dlouho trvá, než se nové zásady přidají do zařízení, která nastavení se použijí, když je k dispozici více zásad, co se stane, když se profil odstraní nebo odebere a další Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 67d0d271b5befc65ad286a8da6e00f647973d73d
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 7893e845d2f4c73d4fc6fdecd8691b288c33bb48
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79333131"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078239"
 ---
 # <a name="common-questions-issues-and-resolutions-with-device-policies-and-profiles-in-microsoft-intune"></a>Běžné otázky, problémy a řešení se zásadami a profily zařízení v Microsoft Intune
 
@@ -40,7 +40,7 @@ Další doporučení:
 - Až se úspěšně připojíte ke koncovému bodu sítě Wi-Fi (směrovači sítě Wi-Fi), zapište si identifikátor SSID a použité přihlašovací údaje (heslo).
 - Zadejte identifikátor SSID a přihlašovací údaje (heslo) do pole Předsdílený klíč. 
 - Nasaďte profil u testovací skupiny, která má omezený počet uživatelů, nejlépe jenom u IT týmu. 
-- Synchronizujte zařízení s iOS/iPadOS s Intune. Zaregistrujte se (pokud jste to ještě neudělali). 
+- Synchronizujte zařízení s iOS/iPadOS s Intune. Pokud jste to ještě nezaregistrovali, zaregistrujte se. 
 - Vyzkoušejte připojení ke stejnému koncovému bodu sítě Wi-Fi (jak je uvedeno v prvním kroku).
 - Zaveďte profil u větších skupin a nakonec u všech předpokládaných uživatelů ve vaší organizaci. 
 
@@ -58,21 +58,21 @@ Pokud se zařízení po prvním oznámení nevrátí se změnami, zobrazí se v 
 | macOS | Přibližně každých 8 hodin |
 | Android | Přibližně každých 8 hodin |
 | Počítače s Windows 10 zaregistrované jako zařízení | Přibližně každých 8 hodin |
-| Windows Phone | Přibližně každých 8 hodin |
-| Windows 8.1 | Přibližně každých 8 hodin |
+| telefon se systémem Windows | Přibližně každých 8 hodin |
+| Windows 8.1 | Přibližně každých 8 hodin |
 
 Pokud se zařízení nedávno zaregistrovalo, spouští se ověření dodržování předpisů, nedodržování předpisů a konfigurace častěji, což je **Odhadované** na:
 
-| Platforma | Četnost |
+| Platforma | Frequency |
 | --- | --- |
 | iOS/iPadOS | Každých 15 minut po dobu 1 hodiny a pak přibližně každých 8 hodin |  
 | macOS | Každých 15 minut po dobu 1 hodiny a pak přibližně každých 8 hodin | 
 | Android | Každé 3 minuty každé 3 minuty, potom každých 15 minut, 2 hodiny a pak každých 8 hodin. | 
 | Počítače s Windows 10 zaregistrované jako zařízení | Každé 3 minuty každé 3 minuty, potom každých 15 minut, 2 hodiny a pak každých 8 hodin. | 
-| Windows Phone | Každých 15 minut každých 5 minut, potom každých 15 minut a pak přibližně každých 8 hodin | 
-| Windows 8.1 | Každých 15 minut každých 5 minut, potom každých 15 minut a pak přibližně každých 8 hodin | 
+| telefon se systémem Windows | Každých 15 minut každých 5 minut, potom každých 15 minut a pak přibližně každých 8 hodin | 
+| Windows 8.1 | Každých 15 minut každých 5 minut, potom každých 15 minut a pak přibližně každých 8 hodin | 
 
-Uživatel může kdykoli otevřít aplikaci Portál společnosti, **nastavení** > **synchronizaci** , aby okamžitě kontrolovala aktualizace zásad nebo profilů.
+Když uživatelé můžou aplikaci Portál společnosti otevřít, **Nastavení** > se**synchronizuje** , aby se okamžitě kontrolovala aktualizace zásad nebo profilů.
 
 ## <a name="what-actions-cause-intune-to-immediately-send-a-notification-to-a-device"></a>Které akce způsobí, že Intune hned pošle oznámení do zařízení?
 
@@ -122,7 +122,7 @@ Když odstraníte profil nebo odeberete zařízení ze skupiny, která má profi
     - Povolit jednoduchá hesla
     - Minimální délka hesla
     - Vyžadovaný typ hesla
-    - Vypršení platnosti hesla (dny)
+    - Omezená platnost hesla (ve dnech)
     - Pamatovat si historii hesel
     - Počet povolených opakovaných neúspěšných přihlášení, než bude zařízení vymazáno
     - Počet minut nečinnosti před vyžadováním hesla
@@ -154,7 +154,7 @@ Když odstraníte profil nebo odeberete zařízení ze skupiny, která má profi
 
 Po nastavení zařízení Windows Phone nedovolí, aby se v zabezpečení snížily zásady zabezpečení nastavené pomocí MDM nebo EAS. Například nastavíte **minimální počet znaků hesla** na hodnotu 8. Pokusíte se ho zmenšit na 4. V zařízení se už používá více omezující profil.
 
-Pokud chcete profil změnit na méně bezpečnou hodnotu, resetujte zásady zabezpečení. Například v Windows 8.1 na ploše potáhnutím prstem vpravo > vyberte **nastavení** > **Ovládací panely**. Vyberte aplet **Uživatelské účty** . V navigační nabídce vlevo najdete odkaz **resetovat zásady zabezpečení** (směrem k dolnímu). Vyberte ho a potom zvolte **Resetovat zásady**.
+Pokud chcete profil změnit na méně bezpečnou hodnotu, resetujte zásady zabezpečení. Například v Windows 8.1 na ploše potáhnutím prstem vpravo > vyberte **Nastavení** > **Ovládací panely**. Vyberte aplet **Uživatelské účty** . V navigační nabídce vlevo najdete odkaz **resetovat zásady zabezpečení** (směrem k dolnímu). Vyberte ho a potom zvolte **Resetovat zásady**.
 
 Jiná zařízení MDM, například Android, Windows Phone 8,1 a novější, iOS/iPadOS a Windows 10, může být potřeba vyřadit a znovu zaregistrovat do Intune a použít tak méně omezující profil.
 

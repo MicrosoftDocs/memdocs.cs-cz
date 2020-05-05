@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6dc2c1d4f07e601d98bc2f26ec4766e21a8f1bc7
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 5d56d3982a036ace198ceae9bf2d01a8c12de6d5
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79328887"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079140"
 ---
 # <a name="troubleshoot-conditional-access"></a>Řešení potíží s podmíněným přístupem
 Tento článek popisuje, co dělat, když se vašim uživatelům nedaří získat přístup k prostředkům chráněným pomocí podmíněného přístupu, nebo když uživatelé mají přístup k chráněným prostředkům, ale měli byste je zablokovat.
@@ -42,7 +42,7 @@ Aby podmíněný přístup fungoval, musí být splněné následující požada
 
 - Uživatel i zařízení musí vyhovovat přiřazeným zásadám dodržování předpisů Intune.
 
-- Uživateli se standardně musí přiřadit zásady dodržování předpisů pro zařízení. To může záviset na konfiguraci nastavení **označení zařízení bez přiřazených zásad dodržování předpisů,** které se vztahuje na **nastavení zásad** dodržování předpisů pro **zařízení** > na portálu pro správu Intune.
+- Uživateli se standardně musí přiřadit zásady dodržování předpisů pro zařízení. To může záviset na konfiguraci nastavení **označení zařízení bez přiřazených zásad dodržování předpisů,** která jsou v**nastavení zásad dodržování** předpisů **zařízením** > v portálu pro správu Intune.
 
 - Pokud uživatel nepoužívá Outlook, ale nativního poštovního klienta daného zařízení, musí být v zařízení aktivovaný protokol Exchange ActiveSync. K tomu dochází automaticky pro zařízení se systémy iOS/iPadOS, Windows Phone a Android Knox.
 
@@ -78,18 +78,18 @@ Tyto podmínky si můžete prohlédnout u každého zařízení na webu Azure Po
 
 - Zařízení s Androidem, které je zaregistrováno, může uživateli zobrazit výzvu bez nalezených certifikátů a nebude jim udělen přístup k prostředkům O365. Uživatel musí na zaregistrovaném zařízení povolit možnost *Povolit přístup z prohlížeče* následujícím způsobem:
   1. Otevřete aplikaci Portál společnosti.
-  2. Přejděte na stránku nastavení z části tři tečky (...) nebo hardwarové tlačítko nabídky.
+  2. Přejděte na stránku Nastavení prostřednictvím tlačítka se třemi tečkami (...) nebo hardwarového tlačítka nabídky.
   3. Vyberte tlačítko *Povolit přístup z prohlížeče* .
-  4. V prohlížeči Chrome se odhlaste z Office 365 a znovu spusťte Chrome.  
+  4. V prohlížeči Chrome se odhlásí z Office 365 a restartuje Chrome.  
 
 
 ## <a name="devices-are-blocked-and-no-quarantine-email-is-received"></a>Zařízení jsou blokovaná, ale žádný e-mail o karanténě nepřišel
 
-- Ověřte, jestli se dané zařízení nachází v konzole pro správu Intune jako zařízení Exchange ActiveSync. Pokud ne, je pravděpodobné, že zjišťování tohoto zařízení bylo neúspěšné, zřejmě kvůli problému Exchange Connectoru. Další informace najdete v tématu [řešení potíží s místním Exchange Connectorem v Intune](troubleshoot-exchange-connector.md).
+- Ověřte, jestli se dané zařízení nachází v konzole pro správu Intune jako zařízení Exchange ActiveSync. Pokud není, je pravděpodobné, že se zjišťování zařízení nedaří, pravděpodobně kvůli problému s Exchange Connectorem. Další informace najdete v tématu [řešení potíží s místním Exchange Connectorem v Intune](troubleshoot-exchange-connector.md).
 
 - Než Exchange Connector začne blokovat zařízení, odešle aktivační e-mail (e-mail o karanténě). Pokud je zařízení offline, nemusí aktivační e-mail obdržet. 
 
-- Zkontrolujte, jestli je e-mailový klient na zařízení nakonfigurovaný tak, aby načítal e-maily pomocí metody **Push**, a ne **Poll**. Pokud ano, může to být příčina toho, že uživatel nedostal příslušný e-mail. Přepněte na **Poll** a zkontrolujte, jestli zařízení obdrží e-mail.
+- Zkontrolujte, jestli je e-mailový klient na zařízení nakonfigurovaný tak, aby načítal e-maily pomocí metody **Push**, a ne **Poll**. Pokud ano, může to být příčina toho, že uživatel nedostal příslušný e-mail. Přepněte na **dotaz** a podívejte se, jestli zařízení neobdrží e-mail.
 
 ## <a name="devices-are-noncompliant-but-users-are-not-blocked"></a>Zařízení nedodržují předpisy, ale uživatelé nejsou blokovaní
 
@@ -105,12 +105,12 @@ Tyto podmínky si můžete prohlédnout u každého zařízení na webu Azure Po
 
 Pokud zařízení nedodržuje předpisy, ale má i nadále přístup, proveďte následující akce.
 
-- Zkontrolujte cílovou skupinu a skupinu pro vyloučení. Pokud uživatel není ve správné cílové skupině nebo je ve skupině pro vyloučení, nebude blokován. Vyhovování předpisům se kontroluje jenom u zařízení uživatelů, kteří jsou v cílové skupině.
+- Zkontrolujte cílovou skupinu a skupinu pro vyloučení. Pokud uživatel není ve správné cílové skupině nebo je ve skupině vyloučení, nebude zablokovaný. Vyhovování předpisům se kontroluje jenom u zařízení uživatelů, kteří jsou v cílové skupině.
 
 - Zkontrolujte, že se zařízení zjišťuje. Směřuje Exchange Connector na CAS pro Exchange 2010, zatímco je uživatel na serveru Exchange 2013? V takovém případě pokud je výchozí pravidlo Exchange nastavené na povolení, i když je uživatel v cílové skupině, Intune nemůže vědět o připojení zařízení k Exchangi.
 
 - Kontrola stavu existence a přístupu k zařízení v Exchangi:
-  - Pomocí této rutiny PowerShellu získáte seznam všech mobilních zařízení pro poštovní schránku: Get-ActiveSyncDeviceStatistics-Mailbox MBX. Pokud zařízení není v seznamu, nepřistupuje k Exchangi.
+  - Pomocí této rutiny PowerShellu získáte seznam všech mobilních zařízení pro poštovní schránku: Get-ActiveSyncDeviceStatistics-Mailbox MBX. Pokud zařízení není v seznamu uvedeno, nepřistupuje k Exchangi.
   
   - Pokud je zařízení uvedené, použijte příkaz Get-CASmailbox-identity: UPN | FL rutina pro získání podrobných informací o jeho stavu přístupu a poskytování těchto informací podpora Microsoftu.
 

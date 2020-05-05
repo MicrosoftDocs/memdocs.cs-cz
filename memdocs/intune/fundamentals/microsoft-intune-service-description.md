@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1a37971928ab2aef8c5e78e9d0eefb748ecf5f04
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 4ca133b1995769f1c4cdfdcaf6b3a8256d7e6d5c
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79331339"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078837"
 ---
 # <a name="microsoft-intune-service-description"></a>Popis služby Microsoft Intune
 
@@ -54,19 +54,19 @@ Microsoft nabízí pro Intune adaptační benefity pro příslušné služby v r
 
 Ekosystém správy mobilních zařízení se často mění. Důvodem jsou aktualizace operačních systémů a nové verze mobilních aplikací. Proto Microsoft službu Intune pravidelně aktualizuje. Existují tři způsoby, jak se dozvědět o změnách ve službě Intune:
 
-- [Co je nového v Microsoft Intune](whats-new.md) Toto téma se aktualizuje nejen při měsíčních aktualizacích služeb, ale také týdně, například při vydání aplikací, jako je Portál společnosti.
+- [Co je nového v Microsoft Intune](whats-new.md). Toto téma se aktualizuje nejen při měsíčních aktualizacích služeb, ale také týdně, například při vydání aplikací, jako je Portál společnosti.
 
-- Důležité aktualizace služby se také oznamují v centru pro [správu Microsoft 365](https://admin.microsoft.com/) centra zpráv. Pokud si nainstalujete doprovodnou [mobilní aplikaci pro správu Office 365](https://support.office.com/article/Office-365-Admin-Mobile-App-e16f6421-2a1a-4142-bf9d-9846600a060a), můžete dostat oznámení na svém mobilním zařízení. Tady si můžete přečíst, jak pracovat s [centrem zpráv Office 365](https://support.office.com/client/results?Shownav=true&ns=O365ENTADMIN&version=15&ver=15&HelpID=O365E_MCManageUpdates).
+- Důležité aktualizace služby se také oznamují v centru pro [správu Microsoft 365](https://admin.microsoft.com/) centra zpráv. Pokud si nainstalujete doprovodnou [mobilní aplikaci pro správu Office 365](https://support.office.com/article/Office-365-Admin-Mobile-App-e16f6421-2a1a-4142-bf9d-9846600a060a), můžete přijímat oznámení na svém mobilním zařízení. Tady si můžete přečíst, jak pracovat s [centrem zpráv Office 365](https://support.office.com/client/results?Shownav=true&ns=O365ENTADMIN&version=15&ver=15&HelpID=O365E_MCManageUpdates).
 
   Několik užitečných tipů:
 
-  - Zprávy v centru zpráv Office 365 jsou cílené. To znamená, že pokud vaše společnost nemá v nabídce Intune pro EDU, nebudeme vám posílat zprávy o Intune pro EDU.
+  - Zprávy v centru zpráv Office 365 jsou cílené. To znamená, že pokud vaše společnost nemá nabídku Intune pro EDU, nebudeme vám v Intune pro EDU zprávy.
 
-  - Zprávy mají časově omezenou platnost. Například platnost oznámení o aktualizaci služby s odkazem na stránku s novinkami pravděpodobně vyprší před dalším oznámením o aktualizaci služby. Jinak byste měli velký backlog příspěvků, které už nejsou relevantní.
+  - Zprávy mají časově omezenou platnost. Například oznámení o tom, že vaše služba byla aktualizována odkazem na stránku co je nového, pravděpodobně vyprší před dalším oznámením o aktualizaci služby. V opačném případě máte velký počet nevyřízených položek příspěvků, které již nemusí být relevantní.
 
   - Mobilní aplikace pro správce Office 365 umožňuje prohledávat všechny zprávy a přeposílat oznámení, pokud je chcete sdílet se svými spolupracovníky v organizaci.
 
-  - V úpravě předvoleb centra zpráv je přepínač **Intune**, abyste se mohli podívat na zprávy zveřejněné do předplatného Intune. Pokud vidíte Správa mobilních zařízení pro Office 365, jde o jinou službu než Intune.
+  - V části upravit předvolby centra zpráv se vám podíváme na **Intune** , abyste se mohli podívat na tyto zprávy, které se publikují do předplatného Intune. Pokud vidíte Správa mobilních zařízení pro Office 365, jde o jinou službu než Intune.
 
 - Ke sdílení zpráv o Enterprise Mobility + Security (EMS) a osvědčených postupů podpory Intune používáme také dva blogy:
 
@@ -81,18 +81,18 @@ Ekosystém správy mobilních zařízení se často mění. Důvodem jsou aktual
 
 Abyste mohli počítat se změnami služby ve svých plánech, upozorníme vás na změny minimálně 7–90 dní předem (podle toho, jaký mají dopad). Typy prováděných změn:
 
-- Změny prostředí pro koncové uživatele, které pravděpodobně budete chtít sdílet s pracovníky helpdesku nebo s koncovými uživateli. Na tyto změny upozorníme obvykle 7 až 30 dní předem a zaznamenáme je na stránce [novinek uživatelského rozhraní aplikací Intune](whats-new-app-ui.md). Třeba opravu pravopisné chyby ale v dokumentaci neuvádíme. Naopak změna prostředí pro registraci koncových uživatelů je v uživatelském rozhraní natolik důležitá, že zveřejníme zprávu pro zákazníky v centru zpráv Office 365 a přidáme i odkaz na stránku s novinkami v uživatelském rozhraní aplikací Intune, abyste byli na změny upozorněni a měli dostatek času na jejich vyhodnocení a aktualizaci pokynů pro koncové uživatele, než se změny projeví v ostrém provozu.
+- Změny prostředí pro koncové uživatele, které pravděpodobně budete chtít sdílet s pracovníky helpdesku nebo s koncovými uživateli. Poskytujeme obvykle 7 až 30 dnů oznámení o těchto změnách a zdokumentujte je v [uživatelském rozhraní aplikace Intune, co je nového](whats-new-app-ui.md). V případě nějaké chyby jako pravopisné opravy nebudeme obvykle vyzvat v dokumentaci. Ale změna v uživatelském prostředí pro registraci koncových uživatelů je v uživatelském rozhraní dostatečně významná, takže pošleme zprávu zákazníkům v centru zpráv Office 365 a připojíte se k novinkám v uživatelském rozhraní aplikace Intune, abyste byli informováni o tom, co se mění a které mají čas k vyhodnocení a aktualizaci pokynů pro koncové uživatele předtím, než se změny provedou v produkčním prostředí.
 
 - Změny, které vyžadují váš zásah, se nazývají **Plán na změnu** a obvykle na ně upozorňujeme 30 dní předem. V centru zpráv Office 365 je konkrétní kategorie Plán na změnu. Pokud známe přesné datum provedení změny v produkčním prostředí, uvedeme ho v datu **Jednat do**, abyste měli vizuální vodítko a upozornění.
 
-- U většiny vyřazení posíláme upozornění 90 dní předem. Pokud například přestaneme podporovat určitou verzi IE, je naším cílem upozornit vás na to 90 dní předem. Vyřazení se ale mohou zkomplikovat, pokud ho oznámí jiná společnost. Například společnost, která vyrábí prohlížeč, oznámí, že v nejnovějším buildu přestane podporovat Silverlight. Proto informujeme zákazníky, že tento prohlížeč přestaneme podporovat, ale oznámíme jim to v kratší době než 90 dní.
+- U většiny vyřazení posíláme upozornění 90 dní předem. Například pokud už nebudeme podporovat určitou verzi IE, je naším cílem poskytování oznámení 90 dnů. Zastaralosti se ale mají složitou, pokud se jedná o jinou společnost, která oznamuje vyřazení. Například společnost, která vyrábí prohlížeč, oznámí, že v nejnovějším buildu přestane podporovat Silverlight. Proto informujeme zákazníky, že tento prohlížeč přestaneme podporovat, ale oznámíme jim to v kratší době než 90 dní.
 
 - V případě vyřazení služby Intune byste dostali upozornění 12 měsíců předem.
 
-V ojedinělých případech, kdy zveřejněný incident vyžaduje váš zásah, aby bylo možné obnovit normální provoz služeb, nebo došlo k rozsáhlé změně, která by podle připomínek zákazníků mohla mít škodlivé následky, pošleme správcům služby e-mail podle nastavení [komunikačních předvoleb Office 365](https://support.office.com/article/Change-your-contact-preferences-for-communications-from-Microsoft-6f70de1b-a64d-4498-bfbd-be8c83a9c0fc), pokud uvedete platnou (nejlépe pracovní) e-mailovou adresu.  
+V nečastém případě je v některých případech nějaká akce po incidentu potřebná k tomu, aby se vaše služba vrátila zpět do normálního stavu, nebo velkou změnu, kterou jsme v závislosti na zpětné vazbě na zákazníky mohli rušit, pošleme správcům služby e-mail podle toho, jak jsou nastavené vaše [Předvolby komunikace Office 365](https://support.office.com/article/Change-your-contact-preferences-for-communications-from-Microsoft-6f70de1b-a64d-4498-bfbd-be8c83a9c0fc) a jestli jste zahrnuli platnou (a případně pracovní) e-  
 
 
-<!--- ## Choose the management solution that’s right for you
+<!--- ## Choose the management solution that's right for you
 You can set up Intune in several ways to manage and help protect your company's mobile devices and computers (referred to as **devices** in this article).
 
 - **Intune stand-alone configuration.** Use the web-based admin console in Intune to manage devices in your organization. Intune can be used without any on-premises IT infrastructure. If you use Intune with Active Directory Domain Services, you can use domain user accounts that you manage with Domain Services with Intune.

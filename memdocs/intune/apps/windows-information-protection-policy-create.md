@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6e7305d33b1c40c2624c5c860f59922a5817c818
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 8103e1a4946c0a325501b0d9f538c00d08a1e4cb
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80326110"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078307"
 ---
 # <a name="create-and-deploy-windows-information-protection-wip-policy-with-intune"></a>Vytvoření a nasazení zásad Windows Information Protection (NV) pomocí Intune
 
@@ -39,7 +39,7 @@ Musíte porozumět několika konceptům při přidání zásady WIP:
 
 - **Chráněné aplikace**: Jedná se o aplikace, které musí tuto zásadu dodržovat.
 
-- **Aplikace s výjimkou:** Tyto aplikace mají z této zásady výjimku a můžou k podnikovým datům přistupovat bez omezení.
+- **Aplikace s výjimkou:** Tyto aplikace jsou z těchto zásad vyloučené a mají přístup k podnikovým datům bez omezení.
 
 ### <a name="types-of-apps"></a>Typy aplikací
 
@@ -56,7 +56,7 @@ Než budete moct vytvořit zásady nedokončené výroby, musíte nakonfigurovat
 
 Navíc musíte mít následující licenci a aktualizaci:
 
-- Licence [Azure AD Premium](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium)
+- [Azure AD Premium](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium) licence
 - [Windows Creators Update](https://blogs.windows.com/windowsexperience/2017/04/11/how-to-get-the-windows-10-creators-update/#o61bC2PdrHslHG5J.97)
 
 
@@ -72,7 +72,7 @@ Pokud už máte v organizaci nastavenou službu Intune, můžete vytvořit zása
 
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **aplikace** > **zásady ochrany aplikací** > **vytvořit zásadu**.
+2. Vyberte **aplikace** > **zásady** > ochrany aplikací**vytvořit zásadu**.
 3. Přidejte následující hodnoty:
     - **Název:** Zadejte název nové zásady (povinné).
     - **Popis:** Volitelně zadejte popis.
@@ -123,7 +123,7 @@ Po přidání aplikací, které chcete chránit pomocí WIP, je potřeba použí
 
 ### <a name="before-you-begin"></a>Před zahájením
 
-Kurzy k WIP jsou sestava umožňující monitorovat vaše aplikace podporující WIP a neznámé aplikace v rámci WIP. Neznámé aplikace jsou aplikace, které nenasadilo IT oddělení vaší organizace. Můžete je ze sestavy vyexportovat a přidat do zásad WIP. Zabráníte tak přerušení produktivity po dobu, než vynutíte WIP v režimu Blokovat.
+Kurzy k WIP jsou sestava umožňující monitorovat vaše aplikace podporující WIP a neznámé aplikace v rámci WIP. Neznámé aplikace jsou ty, které nesadí IT oddělení vaší organizace. Tyto aplikace můžete exportovat ze sestavy a přidat je do zásad nedokončené výroby, abyste se vyhnuli výpadkům v produktivitě, aby se vynutily nedokončené výroby v režimu blokovat.
 
 <!-- 1631908 -->
 Kromě zobrazování informací o aplikacích s podporou WIP můžete zobrazit souhrn zařízení, která sdílí pracovní data s weby. Pomocí těchto informací můžete určit, které weby by se měly přidat do zásad WIP pro skupiny a uživatele. Souhrn zobrazuje adresy URL webů, ke kterým mají přístup aplikace podporující WIP.
@@ -132,7 +132,7 @@ Když pracujete s aplikacemi podporujícími WIP a s neznámými aplikacemi v r�
 
 ### <a name="what-are-the-protection-modes"></a>Co jsou režimy ochrany?
 
-#### <a name="block"></a>Blokování
+#### <a name="block"></a>Blok
 WIP hledá nepatřičné postupy sdílení dat a zabrání uživateli dokončit akci. K blokovaným akcím může patřit sdílení mezi podnikově nechráněnými aplikacemi a sdílení podnikových dat mezi dalšími lidmi a zařízeními mimo vaši organizaci.
 
 #### <a name="allow-overrides"></a>Povolit potlačení
@@ -144,7 +144,7 @@ WIP běží bez upozorňování s protokolováním nepatřičného sdílení dat
 #### <a name="off-not-recommended"></a>Vypnuto (nedoporučuje se)
 WIP je vypnuté a nepomáhá chránit nebo auditovat data.
 
-Když WIP vypnete, proběhne pokus o dešifrování všech souborů označených přes WIP na místně připojených jednotkách. Mějte na paměti, že po opětovném zapnutí WIP se předchozí informace o šifrování a zásadách znovu automaticky nepoužijí.
+Když WIP vypnete, proběhne pokus o dešifrování všech souborů označených přes WIP na místně připojených jednotkách. Všimněte si, že předchozí informace o šifrování a zásadách se automaticky znovu neaplikují, pokud jste znovu zapnuli ochranu NV.
 
 ### <a name="add-a-protection-mode"></a>Přidání režimu ochrany
 
@@ -156,11 +156,11 @@ Když WIP vypnete, proběhne pokus o dešifrování všech souborů označených
 
 ### <a name="use-wip-learning"></a>Použití Kurzů k WIP
 
-1. Otevřete portál [Azure Portal](https://portal.azure.com). Zvolte **Všechny služby**. Do filtru textového pole zadejte **Intune**.
+1. Otevřete [Azure Portal](https://portal.azure.com). Zvolte **Všechny služby**. Do filtru textového pole zadejte **Intune**.
 
-3. Vyberte **Intune** > **aplikace**.
+3. Vyberte**aplikace** **Intune** > .
 
-4. Zvolte **Stav ochrany aplikace** > **Sestavy** > **Kurz k Windows Information Protection**.  
+4. Výběr > **Reports**sestav >  **stavu ochrany aplikací****Windows Information Protection učení**.  
 
     Jakmile se tyto aplikace objeví v sestavě protokolování Kurzy k WIP, můžete je přidat do zásad ochrany aplikací.
 
@@ -186,7 +186,7 @@ Kromě nastavení možnosti **Povolit Windows Search Indexeru prohledávat šifr
 
 Když jste vytvořili zásadu ochrany aplikací WIP, potřebujete ji nasadit ve vaší organizaci s použitím MAM.
 
-1. V podokně **zásady aplikace** vyberte nově vytvořenou zásadu ochrany aplikací, vyberte **skupiny uživatelů** > **Přidat skupinu uživatelů**.
+1. V podokně **zásady aplikace** vyberte nově vytvořenou zásadu ochrany aplikací, vyberte **skupiny** > uživatelů**Přidat skupinu uživatelů**.
 
     Seznam skupin uživatelů, ze kterých se ve vašem Azure Active Directory skládá všechny skupiny zabezpečení, se otevře v podokně **Přidat skupinu uživatelů** .
 

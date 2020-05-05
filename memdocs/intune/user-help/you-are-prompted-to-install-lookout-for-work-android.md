@@ -17,12 +17,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 6d588955a625c6cf1e7771560f298bd612b10aff
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 6eaf0013531018e77a65386ca32dece0bee4ea08
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79327655"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079684"
 ---
 # <a name="install-lookout-for-work"></a>Instalace Lookout for Work
 
@@ -64,11 +64,11 @@ Pokud máte s instalací potíže, zkuste provést kroky k odstranění potíž�
 
    ![jste připojeni k aplikaci Lookout for Work](./media/lookout-you-are-now-connected-android.png)
 
-   Lookout for Work začne okamžitě vyhledávat bezpečnostní hrozby ve vašem zařízení. Pokud žádné hrozby nenajde, zobrazí se následující obrazovka.
+   Lookout for Work začne okamžitě vyhledávat bezpečnostní hrozby ve vašem zařízení. Pokud se nenaleznou žádné hrozby, zobrazí se následující obrazovka.
 
    ![Aplikace Lookout for Work nenašla žádné bezpečnostní hrozby.](./media/lookout-scan-no-threats-found-android.png)
 
-   Obrazovka s podrobnostmi o zařízení v aplikaci Portál společnosti ukazuje, že teď už splňujete firemní požadavky na zabezpečení.
+   Obrazovka s podrobnostmi o zařízení v Portál společnosti ukazuje, že teď dodržujete požadavky na zabezpečení vaší společnosti.
 
     ![vaše zařízení splňuje podmínky zásad](./media/mtd-device-now-compliant-android.png)
 

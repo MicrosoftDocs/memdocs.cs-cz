@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dc536d4c2c0d06a768d42d4a796ec56cf80c0d66
-ms.sourcegitcommit: e7fb8cf2ffce29548b4a33b2a0c33a3a227c6bc4
+ms.openlocfilehash: aa70d5881a60d159ca668751ab2e1de9cf0cbd07
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80401443"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82076097"
 ---
 # <a name="intune-guided-scenarios-overview"></a>Přehled scénářů s asistencí pro Intune 
 
@@ -46,7 +46,7 @@ Scénáře s asistencí nabízejí konkrétní funkce. Následující podrobnost
 
 ### <a name="launching"></a>Spouštění  
 
-Všechny scénáře s asistencí jsou k dispozici na **[portálu pro správu zařízení](https://endpoint.microsoft.com)**  > **řešení potíží + podpora** **scénářů s asistencí** > . 
+Všechny scénáře s asistencí jsou k dispozici > na **[portálu pro správu zařízení](https://endpoint.microsoft.com)****řešení potíží a** > ve**scénářích s asistencí**. 
 
 Scénář s asistencí začíná úvodem, který vysvětluje účel scénáře a všechny nezbytné součásti potřebné k dokončení instalace. V tomto okamžiku se kontrolují vaše oprávnění správce, aby se ověřilo, že máte všechna potřebná oprávnění k dokončení tohoto scénáře.  
 
@@ -60,7 +60,7 @@ Dalším krokem je nasazení scénáře. Nasazení scénáře vytvoří a ulož�
 > Seznam uvedený na konci scénáře s asistencí není uložen a je možné jej zobrazit pouze v případě, že je otevřený scénář s asistencí.  
 Pokud při nasazení scénáře dojde k chybě, všechny změny se vrátí. 
 
-### <a name="editing"></a>Úpravy 
+### <a name="editing"></a>Úprava 
 
 Scénáře s asistencí nelze použít pro úpravu existujících prostředků. Po vytvoření se musí všechny prostředky, skupiny a přiřazení upravovat pomocí stávajících úloh.
 
@@ -72,7 +72,7 @@ Scénáře s asistencí nelze použít k monitorování existujících prostřed
 
 Scénáře s asistencí nelze použít k vyřazení existujících prostředků Kromě automatického vyčištění během chyby při počátečním nasazení. Po vytvoření musí být všechny prostředky, skupiny a přiřazení vyřazeny pomocí stávajících úloh. 
 
-### <a name="updating"></a>Aktualizace
+### <a name="updating"></a>Doplnění
 
 V době, kdy se vyvíjí technologie, může Intune čas od času aktualizovat scénář s asistencí pro zlepšení uživatelského prostředí, zabezpečení nebo dalších aspektů scénáře. Tato aktualizace bude mít vliv jenom na nová nasazení vytvořená ve scénáři s asistencí. Intune nebude aktualizovat existující prostředky dřív vygenerované scénářem s asistencí, aby odpovídaly novým osvědčeným postupům nebo doporučením.  
 

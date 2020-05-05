@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d82121fbd3d02c5eef9f45a4e67a897277da9334
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 8c3c2719759180fb4b367d46e45a314995b6f425
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79331071"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079242"
 ---
 # <a name="develop-a-rollout-communication-plan"></a>Příprava plánu komunikace při nasazení
 
@@ -37,11 +37,11 @@ Dobré řízení změn stojí na jasné a vstřícné komunikaci ohledně změn,
 
 - Časová osa komunikace
 
-Pojďme se podívat na každou oblast podrobněji.
+Pojďme si prohlédnout každou oblast podrobněji.
 
 ## <a name="what-needs-to-be-communicated"></a>Jaké informace chcete sdělit?
 
-Sdělované informace se liší podle toho, kdy je při zavádění Intune sdělujete. Můžete se například rozhodnout, že budete se svými skupinami a uživateli komunikovat ve vlnách: začnete při úvodním zavedení Intune, budete pokračovat před registrací a další sdělení rozešlete po registraci. Pojďme se věnovat typu informací, které v každé vlně sdělujete.
+Sdělované informace se liší podle toho, kdy je při zavádění Intune sdělujete. Můžete se například rozhodnout, že budete se svými skupinami a uživateli komunikovat ve vlnách: začnete při úvodním zavedení Intune, budete pokračovat před registrací a další sdělení rozešlete po registraci. Podívejme se na typ informací, které by se daly sdělit v každé vlně.
 
 **Na úvod** <br/>Obecná sdělení ohledně projektu Intune jako takového. Sdělení by měla obsahovat odpovědi na otázky typu co je to Intune a proč organizace Intune zavádí (výhody pro organizaci a uživatele) a také obecný plán nasazení a zavedení.
 
@@ -73,15 +73,15 @@ Například úvodní komunikace o zahájení projektu Intune může být cílena
 
   | **Plán komunikace** | **Červenec** | **Srpen** | **Září** | **Říjen** |
 |:---:|:---:|:---:|:---:|:---:|
-| 1\. vlna  | Všechny |  |  |  |
+| 1. vlna  | Všechny |  |  |  |
 | Úvodní schůzka | První týden |  |  |  |
-| 2\. vlna | IT | Prodej a marketing | Maloobchod | Personalistika, finance a vedení |
+| 2. vlna | IT | Prodej a marketing | Maloobchod | Personalistika, finance a vedení |
 | E-mail před registrací 1 | První týden | První týden | První týden | První týden |
-| 3\. vlna | IT | Prodej a marketing | Maloobchod | Personalistika, finance a vedení |
+| 3. vlna | IT | Prodej a marketing | Maloobchod | Personalistika, finance a vedení |
 | E-mail před registrací 2 | Druhý týden | Druhý týden | Druhý týden | Druhý týden |
-| 4\. vlna | IT | Prodej a marketing | Maloobchod | Personalistika, finance a vedení |
-| Registrační e-mail | 3\. týden | 3\. týden | 3\. týden | 3\. týden |
-| 5\. vlna | IT | Prodej a marketing | Maloobchod | Personalistika, finance a vedení |
+| 4. vlna | IT | Prodej a marketing | Maloobchod | Personalistika, finance a vedení |
+| Registrační e-mail | 3. týden | 3. týden | 3. týden | 3. týden |
+| 5. vlna | IT | Prodej a marketing | Maloobchod | Personalistika, finance a vedení |
 | E-mail po registraci | Čtvrtý týden | Čtvrtý týden | Čtvrtý týden | Čtvrtý týden |
 
 Můžete si [stáhnout šablonu výše uvedené tabulky](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) a použít ji k vypracování vlastního komunikačního plánu.

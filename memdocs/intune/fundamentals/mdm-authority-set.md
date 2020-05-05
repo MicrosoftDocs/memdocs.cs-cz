@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c8545f7d1ef48cc426f4b8e48aa1832ce3328bf0
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: eee979ad22a501f8545b93c85790d37ca9648cf7
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80326772"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077899"
 ---
 # <a name="set-the-mobile-device-management-authority"></a>Nastavení autority pro správu mobilních zařízení
 
@@ -73,7 +73,7 @@ Po přechodu na novou autoritu MDM pravděpodobně nastane přechodná doba (až
 
 ## <a name="change-mdm-authority-to-office-365"></a>Změna autority MDM na Office 365
 
-Pokud chcete aktivovat Office 365 MDM (nebo pokud chcete společně s vaší stávající službou Intune povolit koexistenci MDM), použijte [https://protection.office.com](https://protection.office.com), vyberte možnost **prevence ztráty dat** > **zásady zabezpečení zařízení** > **Zobrazit seznam spravovaných zařízení** > **Pojďme začít**.
+Pokud chcete aktivovat Office 365 MDM (nebo pokud chcete společně s vaší stávající službou Intune povolit koexistenci MDM), přejít [https://protection.office.com](https://protection.office.com)na, vyberte > **zásady** > zabezpečení zařízení **Ochrana před únikem informací****Zobrazit seznam spravovaných zařízení** > .**Pojďme začít**.
 
 Další informace najdete v článku o [nastavení správy mobilních zařízení (MDM) v Office 365](https://support.office.com/en-us/article/Set-up-Mobile-Device-Management-MDM-in-Office-365-dd892318-bc44-4eb1-af00-9db5430be3cd).
 
@@ -89,7 +89,7 @@ Autoritu MDM nemůžete změnit zpátky na neznámou. Autorita pro správu mobil
 
 ## <a name="what-to-expect-after-changing-the-mdm-authority"></a>Co očekávat po změně autority MDM
 
-- Když služba Intune zjistí, že se autorita MDM tenanta změnila, odešle do všech zaregistrovaných zařízení zprávu s oznámením, aby se ohlásila a synchronizovala se službou (mimo interval pravidelně naplánovaných ohlášení). Proto po změně autority MDM pro tenanta ze samostatné Intune se všechna zařízení, která jsou zapnutá a online, připojí ke službě, obdrží novou autoritu MDM a budou spravovaná novou autoritou MDM. Správa a ochrana těchto zařízení se nijak nepřeruší.
+- Když služba Intune zjistí, že se Autorita MDM tenanta změnila, pošle zprávu oznámení všem zaregistrovaným zařízením, aby je bylo možné zaregistrovat a synchronizovat se službou (Toto oznámení je mimo pravidelné plánované vrácení se změnami). Proto po změně autority MDM pro tenanta ze samostatné Intune se všechna zařízení, která jsou zapnutá a online, připojí ke službě, obdrží novou autoritu MDM a budou spravovaná novou autoritou MDM. Správa a ochrana těchto zařízení se nijak nepřeruší.
 - I když jsou zařízení při změně autority MDM (nebo krátce po ní) zapnutá a online, může trvat až osm hodin, než se do služby zaregistrují pod novou autoritou MDM (záleží na načasování příští naplánované pravidelné registrace).    
 
   > [!IMPORTANT]    
@@ -101,7 +101,7 @@ Autoritu MDM nemůžete změnit zpátky na neznámou. Autorita pro správu mobil
   - E-mailový profil
   - Profil VPN
   - Profil certifikátu
-  - Profil Wi-Fi
+  - Wi-Fi profil
   - Konfigurační profily
 - Po změně na novou autoritu MDM může trvat až týden, než budou data o dodržování předpisů v konzole pro správu Microsoft Intune přesná. Stavy dodržování předpisů v Azure Active Directory a na zařízení však přesné budou, takže zařízení je i nadále chráněné.
 - Zajistěte, aby nová nastavení, která mají přepsat stávající nastavení, měla stejný název jako ta předchozí, aby se původní nastavení skutečně přepsala. Jinak může mít zařízení nadbytečné profily a zásady.    

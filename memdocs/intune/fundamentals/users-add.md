@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 53f95c83cecbfce68b2370c0c0d4f8e98f856e12
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: b8239b750da0d04247608486ea7f3a11ca9c8f86
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80326695"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077848"
 ---
 # <a name="add-users-and-grant-administrative-permission-to-intune"></a>Přidání uživatelů a udělení oprávnění pro správu v Intune
 
@@ -37,17 +37,17 @@ Do svého předplatného Intune můžete ručně přidat uživatele pomocí [cen
 
 1. Přihlaste se k [Microsoft 365 centra pro správu](https://admin.microsoft.com) pomocí účtu globálního správce nebo správce správy uživatelů.
 2. V nabídce Office 365 vyberte **Správce**.
-3. V centru pro správu vyberte **Přidat uživatele**.
+3. V Centru pro správu vyberte **Přidat uživatele**.
 
    ![Snímek obrazovky sekce Přidat uživatele](./media/users-add/office-add-user.png)
 
 4. Uveďte následující údaje o uživateli:
    - **Jméno**
    - **Příjmení**
-   - **Zobrazovaný název**
+   - **Zobrazované jméno**
    - **Uživatelské jméno** – hlavní název uživatele (UPN) uložený v Azure Active Directory a používaný pro přístup ke službě
    - **Umístění**
-   - **Kontaktní informace** (volitelné)
+   - **Kontaktní informace** (nepovinné)
    - **Heslo** – automaticky vygenerované nebo vytvořené
 
      ![Snímek obrazovky sekce nového uživatele](./media/users-add/office-add-user-details.png)
@@ -63,7 +63,7 @@ Do svého předplatného Intune můžete ručně přidat uživatele pomocí [cen
    - **Název**
    - **Uživatelské jméno** – nové jméno na portálu Azure Active Directory ![Snímek obrazovky přidání jména a uživatelského jména](./media/users-add/intune-add-user-info.png) Pokračujte výběrem **OK**.
 4. Volitelně můžete zadat následující vlastnosti uživatele:
-   - **Profil** – údaje týkající se práce včetně **Funkce** a **Oddělení**
+   - **Profil** – údaje týkající se práce včetně **pracovní pozice** a **oddělení**
    - **Skupiny** – vyberte skupiny, které chcete pro uživatele přidat
    - **Role adresáře** – přidělte uživateli oprávnění správce včetně role správce služeb Intune.
 
@@ -88,7 +88,7 @@ Až budete mít k předplatnému Intune přidané další uživatele, doporučuj
 
 5. Ze seznamu dostupných rolí vyberte oprávnění správce, které chcete udělit.
 ![Snímek obrazovky přiřazení rolí](./media/users-add/office-assign-roles.png)
-6. Zvolte **Uložit**.
+6. Klikněte na tlačítko **Uložit**.
 
 ### <a name="give-admin-permissions-in-the-azure-portal"></a>Udělení oprávnění správce na Azure Portalu
 
@@ -96,7 +96,7 @@ Až budete mít k předplatnému Intune přidané další uživatele, doporučuj
 2. Na Azure Portalu zvolte **Uživatel** a pak vyberte uživatele, kterému chcete udělit oprávnění správce.
 3. Vyberte **Role adresáře** a pak vyberte oprávnění.
   ![Snímek obrazovky Role adresáře](./media/users-add/add-intune-directory-role.png)
-4. Zvolte **Uložit**.
+4. Klikněte na tlačítko **Uložit**.
 
 ### <a name="types-of-administrators"></a>Typy správců
 
@@ -104,12 +104,12 @@ Přiřazení jednoho nebo více oprávnění správce uživatelům. Tato oprávn
 
 - **Globální správce** – (Office 365 a Intune) má přístup ke všem funkcím pro správu v Intune. Ve výchozím nastavení se osoba, která se zaregistruje do Intune, stal globálním správcem. Globální správci jsou jedinými správci, kteří můžou přiřazovat další role správců. V organizaci můžete mít více než jednoho globálního správce. Jako osvědčený postup doporučujeme, aby tuto roli mělo jenom pár lidí ve vaší společnosti, aby se minimalizovala rizika, která by mohla ohrozit vaši firmu.
 - **Správce hesel** – (Office 365 a Intune) může resetovat hesla, spravovat žádosti o služby a sledovat stav služeb. Správci hesel můžou resetovat hesla jenom uživatelům.
-- **Správce služeb** – (Office 365 a Intune) předkládá žádosti o podporu u Microsoftu a může si zobrazit řídicí panel služeb a centrum zpráv. Má oprávnění „jenom pro zobrazení“ s výjimkou zakládání lístků podpory a jejich čtení.
-- **Správce fakturace** – (Office 365 a Intune) může nakupovat, spravovat předplatná, spravovat lístky podpory a sledovat stav služeb.
+- **Správce služeb** – (Office 365 a Intune) předkládá žádosti o podporu u Microsoftu a může si zobrazit řídicí panel služeb a centrum zpráv. Mají oprávnění pouze pro zobrazení s výjimkou otevření lístků podpory a jejich čtení.
+- **Správce fakturace** – (Office 365 a Intune) Může dělat nákupy, spravovat předplatná, spravovat lístky podpory a sledovat stav služeb.
 - **Správce uživatelů** – (Office 365 a Intune) může resetovat hesla, sledovat stav služeb, přidávat a odstraňovat uživatelské účty a spravovat žádosti o služby. Správce správy uživatelů nemůže odstranit globálního správce, vytvářet další role správců ani resetovat hesla jiných správců.
 - **Správce služby Intune** – všechna oprávnění globálního správce Intune s výjimkou oprávnění k vytvoření správců s možnostmi **Role adresáře**.
 
-Účet, který se používá k vytvoření vašeho předplatného Microsoft Intune, je globální správce. Nedoporučujeme používat účet globálního správce k provádění každodenních úloh. Pro přístup k Intune na portálu Azure Portal sice správce nepotřebuje licenci Intune, ale k provádění určitých úloh správy, jako je třeba nastavení konektoru služby Exchange, se licence Intune vyžaduje.
+Účet, který se používá k vytvoření vašeho předplatného Microsoft Intune, je globální správce. Pro každodenní úlohy se nedoporučuje používat globálního správce. Pro přístup k Intune na portálu Azure Portal sice správce nepotřebuje licenci Intune, ale k provádění určitých úloh správy, jako je třeba nastavení konektoru služby Exchange, se licence Intune vyžaduje.
 
 Pokud chcete získat přístup k centru pro správu Microsoft 365, váš účet musí mít **povolenou** sadu pro přihlášení. Na Azure Portalu nastavte v oblasti **Profil** volbu **Zablokovat přihlášení** na **Ne**, čímž povolíte přístup. Tento stav je něco jiného než vlastnictví licence k předplatnému. Ve výchozím nastavení jsou všechny uživatelské účty nastavené na **Povoleno**. Uživatelé bez oprávnění správce můžou použít Centrum pro správu Microsoft 365 k resetování hesel Intune.
 

@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9ff60d5823d7b249e4648b5858ff5ab2dcd5935a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 74fbf1af85fdaef7cebde5c58f7892015b433ff6
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79331055"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079225"
 ---
 # <a name="determine-deployment-goals-objectives-and-challenges"></a>Vymezení cílů, úkolů a problémů při nasazení
 
-Dobrý plán nasazení začíná identifikací cílů, úkolů a potenciálních problémů spojených s nasazením řešení v organizaci. Pojďme se na jednotlivé oblasti podívat podrobněji.
+Dobrý plán nasazení začíná prvním určením cílů a cílů nasazení vaší organizace a také potenciálními problémy. Pojďme pokaždé, když se podrobněji podíváme na každou oblast.
 
 ## <a name="deployment-goals"></a>Cíle nasazení
 
@@ -51,7 +51,7 @@ Cíle nasazení jsou dlouhodobé výsledky, kterých chcete nasazením Intune v 
 
   - **Obchodní hodnota:** Ochrana dat je nezbytným předpokladem zachování konkurenceschopnosti, který organizaci umožňuje zacházet s klienty a jejich daty co nejopatrněji.
 
-- **Snižování nákladů**
+- **Snížení nákladů**
 
   - **Popis:** Pokud je to možné, snižuje projekt náklady na nasazení a provoz.
 
@@ -95,4 +95,4 @@ Problémy při nasazení mají pro organizaci nejvyšší prioritu, protože moh
 
 ## <a name="next-steps"></a>Další kroky
 
-Po identifikaci cílů, úkolů a možných problémů při nasazení můžete přejít k další části, kterou je [identifikace scénářů použití](planning-guide-scenarios.md).
+Teď, když jste identifikovali cíle nasazení, cíle a potenciální problémy, pojďme přejít k další části, které [identifikují scénáře použití](planning-guide-scenarios.md).

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0ef8989c9f4de0211a7636c747ff9a01111842f6
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: da2bc520448236c93845731b1f7c937d417fc2e0
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80325312"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078987"
 ---
 # <a name="send-custom-notifications-in-intune"></a>Odesílání vlastních oznámení v Intune
 
@@ -36,19 +36,19 @@ Vlastní zprávy s oznámením obsahují krátký nadpis a tělo zprávy o 500 n
 Pokud máte aplikaci Portál společnosti otevřenou v zařízení se systémem iOS/iPadOS, oznámení se podobá následujícímu snímku obrazovky:
 
 > [!div class="mx-imgBorder"]
-> ![Portál společnosti testovací oznámení pro iOS/iPadOS](./media/custom-notifications/105046-1.png)
+> ![Portál společnosti testovacího oznámení pro iOS/iPadOS](./media/custom-notifications/105046-1.png)
 
 Pokud je zařízení uzamčené, oznámení se podobá následujícímu snímku obrazovky:
 
 > [!div class="mx-imgBorder"]
-> ![uzamčené zařízení iOS/iPadOS test Notification](./media/custom-notifications/105046-2.png)
+> ![Uzamčené zařízení iOS/iPadOS test Notification](./media/custom-notifications/105046-2.png)
 
 ### <a name="what-the-notification-looks-like-on-an-android-device"></a>Jak oznámení vypadá na zařízení s Androidem
 
 Pokud máte aplikaci Portál společnosti otevřenou na zařízení s Androidem, oznámení se podobá následujícímu snímku obrazovky:
 
 > [!div class="mx-imgBorder"]
-> ![zkušebních oznámení pro Android](./media/custom-notifications/105046-3.png)
+> ![Testovací oznámení pro Android](./media/custom-notifications/105046-3.png)
 
 ## <a name="common-scenarios-for-sending-custom-notifications"></a>Běžné scénáře odesílání vlastních oznámení  
 
@@ -65,8 +65,8 @@ Pokud máte aplikaci Portál společnosti otevřenou na zařízení s Androidem,
 
 **Oprávnění**:
 
-- Aby bylo možné odesílat oznámení do skupin, váš účet musí mít v Intune následující oprávnění RBAC: > *organizace* **aktualizace**.
-- Aby bylo možné odesílat oznámení do zařízení, musí mít váš účet v Intune následující oprávnění RBAC: *vzdálené úlohy* > **odesílají vlastní oznámení**.
+- Aby bylo možné odesílat oznámení do skupin, musí mít váš účet v Intune následující oprávnění RBAC:**aktualizace** *organizace* > .
+- Aby bylo možné odesílat oznámení do zařízení, váš účet musí mít v Intune následující oprávnění RBAC: *vzdálené úlohy* > **odesílají vlastní oznámení**.
 
 **Vytváření oznámení**:
  
@@ -89,7 +89,7 @@ Pokud máte aplikaci Portál společnosti otevřenou na zařízení s Androidem,
 
 ## <a name="send-a-custom-notification-to-groups"></a>Odeslání vlastního oznámení do skupin
 
-1. Přihlaste se k [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431) pomocí účtu, který má oprávnění k vytváření a odesílání oznámení, a přejít na **správu tenanta** > **vlastní oznámení**.  
+1. Přihlaste se k [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431) pomocí účtu, který má oprávnění k vytváření a odesílání oznámení, a přejít na**vlastní oznámení** **správy** > tenanta.  
 
 2. Na kartě základy zadejte následující příkaz a pokračujte výběrem **Další** .  
    - **Title** – zadejte název tohoto oznámení. Názvy jsou omezeny na 50 znaků.  

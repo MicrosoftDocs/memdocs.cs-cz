@@ -18,15 +18,15 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8d47d91388fffd0e5716d20be640c4afbad2862e
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 4416e6bef4386358c964b0ed58aa568bb8c3a3a4
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79326539"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078154"
 ---
 # <a name="microsoft-intune-app-sdk-overview"></a>Přehled sady Microsoft Intune App SDK
-Sada Intune App SDK, která je dostupná pro iOS i Android, umožňuje, aby vaše aplikace podporovala [Zásady ochrany aplikací](../apps/app-protection-policy.md)Intune. Když vaše aplikace používá zásady ochrany aplikací, dá se spravovat přes Intune a jako spravovaná aplikace je rozpozná Intune. Sada SDK se snaží minimalizovat množství změn v kódu, které vyžaduje vývojář aplikace. Zjistíte, že většinu funkcí sady SDK můžete povolit bez změny chování vaší aplikace. Pro pokročilé prostředí koncových uživatelů a správců IT můžete využít rozhraní API sady SDK k přizpůsobení chování vaší aplikace pro podporu funkcí, které vyžadují zapojení vaší aplikace.
+Sada Intune App SDK, která je dostupná pro iOS i Android, umožňuje, aby vaše aplikace podporovala [Zásady ochrany aplikací](../apps/app-protection-policy.md)Intune. Když vaše aplikace používá zásady ochrany aplikací, dá se spravovat přes Intune a jako spravovaná aplikace je rozpozná Intune. Sada SDK se snaží minimalizovat množství změn v kódu, které vyžaduje vývojář aplikace. Zjistíte, že většinu funkcí sady SDK můžete povolit beze změny chování vaší aplikace. Pro pokročilé prostředí koncových uživatelů a správců IT můžete využít rozhraní API sady SDK k přizpůsobení chování vaší aplikace pro podporu funkcí, které vyžadují zapojení vaší aplikace.
 
 Jakmile povolíte aplikaci, aby podporovala zásady ochrany aplikací Intune, můžou správci IT tyto zásady nasadit, aby chránily podniková data v rámci aplikace.
 
@@ -34,7 +34,7 @@ Jakmile povolíte aplikaci, aby podporovala zásady ochrany aplikací Intune, m�
 
 Níže najdete příklady funkcí ochrany aplikací Intune, které se dají aktivovat pomocí sady SDK.
 
-### <a name="control-users-ability-to-move-corporate-files"></a>Ovládání možnosti uživatelů přesouvat podnikové soubory
+### <a name="control-users-ability-to-move-corporate-files"></a>Řízení možnosti uživatelů přesouvat firemní soubory
 Správci IT můžou řídit, kam se dají přesouvat pracovní nebo školní data v aplikaci. Můžou třeba nasadit zásadu, která zakazuje aplikacím zálohovat podniková data do cloudu.
 
 ### <a name="configure-clipboard-restrictions"></a>Konfigurace omezení schránky
@@ -44,7 +44,7 @@ Správci IT můžou konfigurovat chování schránky v aplikacích spravovaných
 Správci IT můžou vynutit zásadu, která zajišťuje, aby data ukládaná aplikací do zařízení šifrovala.
 
 ### <a name="remotely-wipe-corporate-data"></a>Vzdálené vymazání podnikových dat
-Správci IT můžou vzdáleně vymazat podniková data z aplikací spravovaných v Intune. Tato funkce je založená na identitě a odstraní jenom soubory přidružené k podnikové identitě koncového uživatele. Kvůli tomu funkce vyžaduje zapojení aplikace. Aplikace může určit identitu, u které má dojít k vymazání, na základě uživatelského nastavení. Když uvedená uživatelská nastavení v aplikaci chybí, výchozím chováním bude vymazání adresáře aplikace a upozornění koncového uživatele, že došlo k odebrání přístupu.
+Správci IT můžou vzdáleně vymazat podniková data z aplikací spravovaných v Intune. Tato funkce je založená na identitě a odstraní jenom soubory přidružené k podnikové identitě koncového uživatele. K tomu funkce vyžaduje zapojení aplikace. Aplikace může určit identitu, u které má dojít k vymazání, na základě uživatelského nastavení. Když uvedená uživatelská nastavení v aplikaci chybí, výchozím chováním bude vymazání adresáře aplikace a upozornění koncového uživatele, že došlo k odebrání přístupu.
 
 ### <a name="enforce-the-use-of-a-managed-browser"></a>Vynucení používání spravovaného prohlížeče
 Správce IT může vynutit, aby se webové odkazy v aplikaci otevíraly pomocí [aplikace Intune Managed Browser](../apps/app-configuration-managed-browser.md). Tato funkce zajistí, aby odkazy zobrazované v podnikovém prostředí zůstaly uchované v rámci aplikací spravovaných v Intune.
@@ -75,7 +75,7 @@ Mnoho uživatelů s osobními zařízeními chce pracovat s podnikovými daty be
 Ochrana aplikací bez registrace zařízení umožňuje službě Microsoft Intune nasadit zásady ochrany aplikací přímo na aplikaci, aby se nemusela spoléhat na nasazení zásad prostřednictvím kanálu pro správu zařízení.
 
 ### <a name="on-demand-application-vpn-connections-with-citrix-mvpn"></a>Připojení VPN aplikace na vyžádání pomocí Citrix mVPN 
-Můžete spravovat zařízení a aplikace s kombinací Citrix XenMobile MDX a Microsoft Intune. Tato kombinace znamená, že při používání technologie mVPN od Citrixu můžete aplikace spravovat pomocí zásad ochrany aplikací Intune. Integrace s Citrixem je dostupná pro sadu Intune App SDK pro iOS a Android a při použití nástroje Intune App Wrapping Tool pro iOS a Android (s příznakem -citrix).
+Můžete spravovat zařízení a aplikace s kombinací Citrix XenMobile MDX a Microsoft Intune. Tato kombinace znamená, že můžete spravovat aplikace pomocí zásad ochrany aplikací Intune při použití technologie mVPN společnosti Citrix. Integrace s Citrixem je dostupná pro sadu Intune App SDK pro iOS a Android a při použití nástroje Intune App Wrapping Tool pro iOS a Android (s příznakem -citrix).
  
 Další informace o Citrix MDX najdete v tématech, které pojednávají o [sadě nástrojů MDX](https://docs.citrix.com/en-us/mdx-toolkit/10/about-mdx-toolkit.html), [nástroji Citrix MDX App Wrapper pro iOS](https://docs.citrix.com/en-us/mdx-toolkit/10/xmob-mdx-kit-app-wrap-ios.html) a [nástroji Citrix MDX App Wrapper pro Android](https://docs.citrix.com/en-us/mdx-toolkit/10/xmob-mdx-kit-app-wrap-android.html).
 

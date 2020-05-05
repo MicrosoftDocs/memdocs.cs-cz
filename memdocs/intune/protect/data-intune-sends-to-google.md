@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fa9b8bc49e9c5aaf6337988fd980115beea1200b
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 56274fd614dfd521e59c604cf00f18df7c8b1bc3
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79329443"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079718"
 ---
 # <a name="data-intune-sends-to-google"></a>Data z Intune odesílaná Googlu
 
@@ -34,7 +34,7 @@ Pokud se na zařízení povolí správa zařízení s Androidem Enterprise, Micr
 Následující tabulka uvádí data, která Microsoft Intune odesílá do Googlu, když je na daném zařízení povolená správa zařízení:
 
 
-| Data odesílaná Googlu | Podrobnosti | Používáno pro | Příklad |
+| Data odesílaná Googlu | Podrobnosti | Použití | Příklad |
 |:---:|:---:|:---:|:---:|
 | EnterpriseId | Vytvoří se v Googlu po vytvoření vazby účtu Gmail s Intune. | Primární identifikátor používaný ke komunikaci mezi Intune a Googlem.  Tato komunikace zahrnuje nastavení zásad, správu zařízení a vytvoření nebo zrušení vazby Androidu s Intune. | Jedinečný identifikátor, příklad formátu: LC04eik8a6 |
 | Text zásad | Vytvoří se v Intune při ukládání nových zásad aplikací nebo konfigurace. | Přiřazení zásad pro zařízení | Jde o kolekci všech nakonfigurovaných nastavení pro zásady aplikace nebo konfigurace. Může obsahovat informace o zákaznících, pokud se poskytly v rámci zásad, například názvy sítí, názvy aplikací a nastavení pro konkrétní aplikace. |
@@ -42,7 +42,7 @@ Následující tabulka uvádí data, která Microsoft Intune odesílá do Googlu
 | newPassword | Vytvoří se v Intune. | Resetuje heslo zařízení. | Řetězec představující nové heslo. |
 | Uživatel Googlu | Google | Spravuje pracovní profil pro scénáře s pracovními profily (BYOD). | Jedinečný identifikátor, který představuje propojený účet Gmail. Příklad: 114223373813435875042 |
 | Data aplikací | Vytvoří se v Intune při ukládání zásad aplikací. |  | Řetězec názvu aplikace. Příklad: app:com.microsoft.windowsintune.companyportal |
-| Účet služby Enterprise | Vytvoří se v Googlu na žádost služby Intune. | Používá se u transakcí zahrnujících daného zákazníka pro ověřování mezi Intune a Googlem. | Má několik částí:<br> **Enterprise Id**: Bylo už popsáno.<br>**UPN**: Vygenerovaný hlavní název uživatele (UPN), který se používá při ověřování jménem zákazníka.<br>Příklad: w49d77900526190e26708c31c9e8a0@pfwp-commicrosoftonedfmdm2.google.com.iam.gserviceaccount.com<br>**Key**: Objekt blob s kódováním Base64, který se používá v žádostech o ověření, je uložený jako šifrovaný v této službě a vypadá takto:<br> Jedinečný identifikátor, který představuje klíč zákazníka.<br>Příklad: a70d4d53eefbd781ce7ad6a6495c65eb15e74f1f |
+| Účet služby Enterprise | Vytvoří se v Googlu na žádost služby Intune. | Používá se u transakcí zahrnujících daného zákazníka pro ověřování mezi Intune a Googlem. | Má několik částí:<br> **Enterprise Id**: Bylo už popsáno.<br>**UPN**: Vygenerovaný hlavní název uživatele (UPN), který se používá při ověřování jménem zákazníka.<br>Příklad: w49d77900526190e26708c31c9e8a0@pfwp-commicrosoftonedfmdm2.google.com.iam.gserviceaccount.com<br>**Key**: Objekt blob s kódováním Base64, který se používá v žádostech o ověření, je uložený jako šifrovaný v této službě a vypadá takto:<br> Jedinečný identifikátor představující klíč zákazníka<br>Příklad: a70d4d53eefbd781ce7ad6a6495c65eb15e74f1f |
 
 
 Pokud chcete ukončit používání správy zařízení s Androidem Enterprise v Microsoft Intune a odstranit data, je nutné deaktivovat správu zařízení s Androidem Enterprise v Microsoft Intune a také odstranit váš účet Google. Vyhledejte si v účtu Google postup pro správu účtu.

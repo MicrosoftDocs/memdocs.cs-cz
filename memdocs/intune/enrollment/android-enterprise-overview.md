@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: df5cb910d38deaca76ee92246badcebf02a7e4de
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: a2f8ccfccfdca26416b0da92e6f27425e13c90c6
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79325483"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078035"
 ---
 # <a name="manage-android-work-profile-devices-with-intune"></a>Správa zařízení s pracovním profilem Androidu v Intune
 
@@ -33,7 +33,7 @@ Android Enterprise nabízí sadu možností registrace, které uživatelům posk
 
 Funkce pro správu Androidu Enterprise se spoléhají na funkce, které jsou součástí novějšího operačního systému Android. Pro zařízení, která nepodporují Android Enterprise, zůstane k dispozici běžná Správa Androidu. Další informace najdete v tématu [požadavky na Android Enterprise](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012).
 
-## <a name="onboarding"></a>Připojení
+## <a name="onboarding"></a>Onboarding
 
 Před registrací zařízení se systémem Android Enterprise Work Profile je nutné provést některé kroky připojování. Tyto kroky naváže spojení mezi vaším klientem Intune a spravovaným Google Play. Další informace najdete v tématu [Povolení registrace zařízení s pracovními profily Android Enterprise](android-work-profile-enroll.md).
 
@@ -45,7 +45,7 @@ Intune poskytuje řadu předdefinovaných obecných nastavení, která můžete 
 
 ## <a name="app-publishing-and-distribution"></a>Publikování a distribuce aplikací
 
-Spravovaná Google Play je nedílnou součástí distribuce a správy aplikací pro Android Enterprise. Všechny aplikace nasazené na zařízení s Androidem Enterprise Work Profiles v pracovním profilu pocházejí ze spravované služby Google Play. Pokud chcete v obchodu Play spravovat a nasazovat aplikace, přihlaste se na web Google Play pomocí přihlašovacích údajů správce vaší společnosti pro správu účtu Google. Můžete schvalovat aplikace pro podnikové nasazení Androidu, aby se zobrazovaly v pracovních profilech zařízení. Tyto aplikace se potom budou synchronizovat s konzolou Intune, kde je pak možné je pomocí služby Intune nasadit a spravovat. Obchodní aplikace vyvinuté ve vaší organizaci se musí publikovat do spravovaného obchodu Google Play pomocí konzoly pro publikování aplikací pro Android od Googlu. Obchodní aplikace se musí nakonfigurovat na konzole pro publikování aplikací pro Android. Omezí se tak přístup do vaší organizace.
+Spravovaná Google Play je nedílnou součástí distribuce a správy aplikací pro Android Enterprise. Všechny aplikace nasazené na zařízení s Androidem Enterprise Work Profiles v pracovním profilu pocházejí ze spravované služby Google Play. Pokud chcete v obchodu Play spravovat a nasazovat aplikace, přihlaste se na web Google Play pomocí přihlašovacích údajů správce vaší společnosti pro správu účtu Google. Můžete schvalovat aplikace pro podnikové nasazení Androidu, aby se zobrazovaly v pracovních profilech zařízení. Tyto aplikace se potom budou synchronizovat s konzolou Intune, kde je pak možné je pomocí služby Intune nasadit a spravovat. Obchodní aplikace, které vyvinula vaše organizace, se musí publikovat na spravovaných Google Play pomocí konzoly pro publikování aplikací pro Android od společnosti Google. Obchodní aplikace se musí nakonfigurovat na konzole pro publikování aplikací pro Android. Omezí se tak přístup do vaší organizace.
 
 Aplikace se můžou instalovat bez interakce uživatelů, kteří ani nemusí povolit **instalaci z neznámých zdrojů**. Uživatelé můžou procházet obchod Play for Work a na svoje zařízení z něj instalovat volitelné nebo dostupné aplikace. Další informace najdete v tématu [přiřazení aplikací k zařízením s pracovním profilem Android Enterprise s Intune](../apps/apps-add-android-for-work.md).
 

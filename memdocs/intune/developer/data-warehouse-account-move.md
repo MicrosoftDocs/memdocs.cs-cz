@@ -1,5 +1,5 @@
 ---
-title: Přesunutí dat účtu datového skladu Intune
+title: Přesunutí vašich dat účtu datového skladu Intune
 titleSuffix: Microsoft Intune
 description: Vysvětlení, jak při přesouvání účtu zálohovat data v datovém skladu Intune
 keywords: ''
@@ -18,14 +18,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b7bf08775a6cccac3dd96268765d6e1a2e453c51
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 95c7104f949216a6a9f7704ac9bec6a7c2dfa7aa
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79327255"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078086"
 ---
-# <a name="move-your-intune-data-warehouse-account-data"></a>Přesunutí dat účtu datového skladu Intune 
+# <a name="move-your-intune-data-warehouse-account-data"></a>Přesunutí vašich dat účtu datového skladu Intune 
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
@@ -43,16 +43,16 @@ Pokud chcete zálohovat data datového skladu, musíte je uložit jako soubor *.
 Některé grafy trendů ve vašem zobrazení portálu Azure Portal se resetují. Spuštěním následujícího skriptu v části **Graf** můžete tyto grafy zálohovat:   
 
 ### <a name="terms--conditions-acceptance-reports"></a>Sestavy přijetí podmínek a ujednání
-1. Na portálu Azure Portal přejděte na **Microsoft Intune** -> **Registrace zařízení** -> **Podmínky a ujednání**.
+1. V Azure Portal přejděte na **Microsoft Intune** -> podmínky**registrace** -> zařízení **& podmínky**.
 2. Pro každou položku **podmínek a ujednání** zvolte **Generování sestav o přijetí** a potom **Exportovat**.
 3. Uložte si sestavu místně.
  
 ### <a name="app-protection-reports"></a>Sestavy o ochraně aplikace  
-1. Na portálu Azure Portal přejděte na **Microsoft Intune** -> **Klientské aplikace** -> **Stav ochrany aplikace**.
+1. V Azure Portal přejděte na **Microsoft Intune** -> **klientské aplikace** -> **stav ochrany aplikace**.
 2. Klikněte na ikonu stažení (⤓) pro sestavy, které si chcete uložit.
 
 ### <a name="device-configuration-charts"></a>Grafy konfigurace zařízení 
-1. Na portálu Azure Portal přejděte na **Microsoft Intune** -> **Konfigurace zařízení**.
+1. V Azure Portal přejděte na **Microsoft Intune** -> **DeviceConfiguration**.
 2. Pomocí [Graph exploreru](https://developer.microsoft.com/graph/graph-explorer) stáhněte podkladová data grafů. 
     - Stav nasazení u všech konfiguračních profilů zařízení pro všechna zařízení viz [Stav nasazení zařízení](https://graph.microsoft.com/beta/reports/deviceConfigurationDeviceActivity/content).
 
@@ -64,7 +64,7 @@ Některé grafy trendů ve vašem zobrazení portálu Azure Portal se resetují.
     > Pro přístup ke konfiguraci zařízení a informacím o stavu nasazení musíte mít platný ověřovací token.
 
 ## <a name="device-enrollment-charts"></a>Grafy registrace zařízení
-1. Na portálu Azure Portal přejděte na **Microsoft Intune** -> **Registrace zařízení**.
+1. V Azure Portal přejděte na **Microsoft Intune** -> **DeviceEnrollment**.
 2. Pomocí [Graph exploreru](https://developer.microsoft.com/graph/graph-explorer) stáhněte podkladová data grafů.
     - Pro stav registrace zkopírujte tento [dotaz na stav registrace](https://graph.microsoft.com/beta/reports/managedDeviceEnrollmentFailureTrends()/content) a vložte ho do [Graf exploreru](https://developer.microsoft.com/graph/graph-explorer).
     - Pro nejzávažnější chyby registrace zkopírujte tento [dotaz na chyby registrace](https://graph.microsoft.com/beta/reports/managedDeviceEnrollmentTopFailures(period=null)/content) a vložte ho do [Graf exploreru](https://developer.microsoft.com/graph/graph-explorer).
@@ -78,9 +78,9 @@ Po přesunutí účtu datového skladu uvidíte v Intune, že datový sklad byl 
 
 ## <a name="data-warehouse-move-example"></a>Příklad přesunutí datového skladu 
 
-Zákazník X požaduje, aby bylo přesunutí účtu zahájeno 1. 6. 2018. V odpovědi na tento požadavek obdrží zákazník odkaz na dokumentaci s podrobnými kroky, které má podniknout, pokud si chce zazálohovat předchozí datový sklad. 1\. 6. 2018 se datový sklad a grafy, které podporuje, resetují a data se začnou ukládat v novém datovém centru. 
+Zákazník X požaduje, aby bylo přesunutí účtu zahájeno 1. 6. 2018. V odpovědi na tento požadavek obdrží zákazník odkaz na dokumentaci s podrobnými kroky, které má podniknout, pokud si chce zazálohovat předchozí datový sklad. 1. 6. 2018 se datový sklad a grafy, které podporuje, resetují a data se začnou ukládat v novém datovém centru. 
 
 ## <a name="next-steps"></a>Další kroky
 
-- Zjistěte, [jaké novinky každý týden přináší Intune](../fundamentals/whats-new.md). Můžete také získat informace o nadcházejících změnách, důležitá oznámení o službě a informace o minulých vydaných verzích.
+- Podívejte [se, co je nového v Intune každý týden](../fundamentals/whats-new.md). Můžete také získat informace o nadcházejících změnách, důležitá oznámení o službě a informace o minulých vydaných verzích.
 - Přečtěte si [Blog Microsoft Intune](https://go.microsoft.com/fwlink/?LinkID=273882).

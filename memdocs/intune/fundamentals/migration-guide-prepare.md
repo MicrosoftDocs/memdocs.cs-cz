@@ -17,16 +17,16 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 46e717478078ab13cc2c8783cdacbde0911e83a5
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: cb0b8bdc3fb5ed13f68ab2e261ada091e245ac1d
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79331203"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079667"
 ---
 # <a name="phase-1-prepare-microsoft-intune-for-mobile-device-management-mdm"></a>Fáze 1: Příprava Microsoft Intune na správu mobilních zařízení (MDM)
 
-Než začneme probírat podrobnosti nastavení Intune, zaměřme se na posouzení požadavků vaší organizace na správu mobilních zařízení. Může být vhodné spustit sestavy aktivních uživatelů v aktuálním zprostředkovateli MDM a identifikovat tak nejdůležitější skupiny uživatelů. Pak můžete začít řešit otázky v části [vyhodnocení požadavků na MDM](migration-guide-prepare.md#assess-mdm-requirements) .
+Než se začnete na podrobnosti o nastavení Intune, Podívejme se na požadavky na správu mobilních zařízení ve vaší organizaci. Může být vhodné spustit sestavy aktivních uživatelů v aktuálním zprostředkovateli MDM a identifikovat tak nejdůležitější skupiny uživatelů. Pak můžete začít řešit otázky v části [vyhodnocení požadavků na MDM](migration-guide-prepare.md#assess-mdm-requirements) .
 
 ## <a name="assess-mdm-requirements"></a>Vyhodnocení požadavků na MDM
 

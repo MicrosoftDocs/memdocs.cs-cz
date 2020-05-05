@@ -16,22 +16,22 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 54271edb7f9c4de240992ca2ca620866c9ca469c
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 2e1f4512441212d308e97122fe71369eaadd1226
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80326233"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077814"
 ---
 # <a name="sync-devices-to-get-the-latest-policies-and-actions-with-intune"></a>Synchronizace zařízení s cílem načíst nejnovější zásady a akce pomocí Intune
 
 
-Akce zařízení **Synchronizovat** vybrané zařízení donutí se okamžitě ohlásit ve službě Intune. Jakmile se zařízení ohlásí, začne okamžitě přijímat veškeré čekající akce nebo zásady, které mu byly přiřazeny. Tato funkce vám může pomoct okamžitě ověřit přiřazené zásady nebo s těmito zásadami vyřešit potíže, aniž byste čekali na další naplánované vrácení se změnami.
+Akce zařízení **Synchronizovat** vybrané zařízení donutí se okamžitě ohlásit ve službě Intune. Jakmile se zařízení ohlásí, začne okamžitě přijímat veškeré čekající akce nebo zásady, které mu byly přiřazeny. Tato funkce vám může pomoct okamžitě ověřit a řešit potíže se zásadami, které jste přiřadili, aniž byste čekali na další plánované vrácení se změnami.
 
 ## <a name="supported-platforms"></a>Podporované platformy
 
 - Windows
-- Windows Phone
+- telefon se systémem Windows
 - iOS
 - macOS
 - Android
@@ -39,11 +39,11 @@ Akce zařízení **Synchronizovat** vybrané zařízení donutí se okamžitě o
 ## <a name="sync-a-device"></a>Synchronizace zařízení
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431). 
-3. Vyberte **Zařízení** > **Všechna zařízení**.
+3. Vyberte **zařízení** > **všechna zařízení**.
 4. V seznamu zařízení, která spravujete, vyberte zařízení a otevřete jeho podokno *přehledu* a pak vyberte **synchronizovat**.
 5. Potvrďte zvolením **Ano**.
 
-Chcete-li zobrazit stav akce synchronizace, vyberte možnost **zařízení** > **monitorovat** > **Akce zařízení**.
+Pokud chcete zobrazit stav akce synchronizace, vyberte **zařízení** > **monitorovat** > **Akce zařízení**.
 
 Standardní frekvence vrácení se změnami zásad služby Intune najdete v [časech obnovy cyklů](../configuration/device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned).
 
@@ -62,7 +62,7 @@ Když správce spustí akci zařízení **synchronizovat** , aplikace pro iOS/IP
 | 2016330893 | Ztratili jste připojení k internetu. Resetujte připojení. | Ano|
 | 2016330892 | Mezinárodní roaming je zakázaný. | Ne|
 | 2016330891 | K mobilnímu datovému připojení pro toto zařízení nelze připomenout během telefonního hovoru. Počkejte na dokončení telefonního hovoru. | Ano|
-| 2016330890 | Pro tato zařízení nešlo v tuto chvíli V tuto chvíli se tato zařízení nedala použít. | Ne|
+| 2016330890 | Pro tato zařízení nešlo v tuto chvíli  V tuto chvíli se tato zařízení nedala použít. | Ne|
 | 2016330889 | Nepovedlo se navázat zabezpečené připojení. Resetujte připojení. | Ano|
 | 2016330888 | Nepovedlo se vyhodnotit důvěryhodnost serveru. | Ne|
 

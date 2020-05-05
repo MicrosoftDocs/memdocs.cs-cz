@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 953dbf7883377b95647a1cd1f253306cf41f0fd6
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 275bb43552b0dda3409dcd11ef14311334f13fa9
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79329083"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079501"
 ---
 # <a name="privacy-and-personal-data-in-intune"></a>Ochrana soukromí a osobní údaje v Intune
 
-Koncoví uživatelé mohou přijímat, přenášet a ukládat data na zařízeních spravovaných pomocí Intune. Spoléhají se na to, že je soukromí jejich dat je chráněno a že jsou data využívána jen takovým způsobem, který splňuje jejich očekávání. Aby mohli správci služby Intune taková očekávání vytvářet, obsahují články v této části informace o tom, jak Intune shromažďuje, ukládá, uchovává, zpracovává, zabezpečuje, sdílí, audituje a exportuje osobní údaje. Dozvíte se zde také, jak osobní údaje zobrazit, opravit a odstranit.
+Koncoví uživatelé mohou přijímat, přenášet a ukládat data na zařízeních spravovaných pomocí Intune. Důvěřují, že soukromí dat je chráněná a používaná jenom způsobem, který je konzistentní s jejich očekáváními. Aby mohli správci služby Intune taková očekávání vytvářet, obsahují články v této části informace o tom, jak Intune shromažďuje, ukládá, uchovává, zpracovává, zabezpečuje, sdílí, audituje a exportuje osobní údaje. Dozvíte se zde také, jak osobní údaje zobrazit, opravit a odstranit.
 
 Žádné osobní údaje shromážděné v rámci poskytování služeb nejsou službou Microsoft Intune využívány k profilování, k reklamním ani marketingovým účelům.
 
@@ -35,9 +35,9 @@ Koncoví uživatelé mohou přijímat, přenášet a ukládat data na zařízen�
 
 ## <a name="your-company-terms-and-conditions"></a>Podmínky a ujednání vaší společnosti
 
-[Prohlášení o zásadách ochrany osobních údajů můžete zahrnout do podmínek a ujednání vaší společnosti pro koncové uživatele](../apps/company-portal-app.md). Toto prohlášení může obsahovat informace o využití a zajištění ochrany osobních údajů koncových uživatelů.
+Do podmínek [a ujednání vaší společnosti pro koncové uživatele můžete zahrnout prohlášení o zásadách ochrany osobních údajů](../apps/company-portal-app.md). Tyto prohlášení o zásadách ochrany osobních údajů můžou zahrnovat informace o využití a ochraně osobních údajů pro osobní údaje koncového uživatele.
 
-Podmínky a ujednání společnosti lze zobrazit v aplikaci Portál společnosti Intune. Podmínky i prohlášení o zásadách ochrany osobních údajů si tak mohou uživatelé pročíst ještě před tím, než se zaregistrují do Intune a získají přístup k firemním prostředkům a datům.
+Podmínky a ujednání vaší společnosti můžete zobrazit v aplikaci Portál společnosti Intune. Podmínky i prohlášení o zásadách ochrany osobních údajů si tak mohou uživatelé pročíst ještě před tím, než se zaregistrují do Intune a získají přístup k firemním prostředkům a datům.
 
 ## <a name="next-steps"></a>Další kroky
 

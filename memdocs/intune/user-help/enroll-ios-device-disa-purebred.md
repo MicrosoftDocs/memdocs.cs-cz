@@ -9,6 +9,7 @@ ms.date: 10/31/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: ''
 searchScope:
@@ -18,12 +19,12 @@ ms.reviewer: tisilver
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 38d1b40ecdeee5bfd872297a5fd4f0229cb48dcf
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 268ed874be65c9ade7f801b89528d1a23f176ee1
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79324863"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077797"
 ---
 # <a name="set-up-ios-or-ipados-device-with-company-portal-and-disa-purebred"></a>Nastavení zařízení se systémem iOS nebo iPadOS pomocí Portál společnosti a DISA purebred  
 
@@ -36,10 +37,10 @@ Je možné, že budete muset nastavit odvozené přihlašovací údaje, pokud po
 * Přihlaste se do školních nebo pracovních aplikací, Wi-Fi a virtuálních privátních sítí (VPN).
 * Podepisování a šifrování pracovních e-mailů pomocí certifikátů S/MIME  
 
-V tomto článku budete:  
+V tomto článku provedete následující:  
 
    * Zaregistrujte mobilní zařízení se systémem iOS nebo iPadOS pomocí Portál společnosti Intune.  
-   * Získejte odvozené přihlašovací údaje od poskytovatele odvozeného pověření vaší organizace, [DISA purebred](https://cyber.mil/pki-pke/purebred/).  
+   * Získejte odvozené přihlašovací údaje od poskytovatele odvozeného pověření vaší organizace, DISA purebred: https:\//Cyber.mil/PKI-PKE/purebred/.  
 
 ## <a name="what-are-derived-credentials"></a>Co jsou odvozené přihlašovací údaje?  
 Odvozená pověření je certifikát, který je odvozený z vašich přihlašovacích údajů čipové karty a nainstalovaný na vašem zařízení. Poskytuje vzdálený přístup k pracovním prostředkům a zároveň brání neautorizovaným uživatelům v přístupu k citlivým informacím.  
@@ -86,12 +87,12 @@ Při instalaci bude také potřeba kontaktovat agenta purebred nebo zástupce.
 
     ![Ukázkový snímek obrazovky Portál společnosti výzvy k otevření aplikace purebred v DISA](./media/open-app-prompt-disa-purbred.png)  
 10. Když aplikace funguje, spolupracujte s agentem purebred vaší organizace a nakonfigurujte a Stáhněte si konfigurační profil pro předběžné registrace purebred.   
-11. V části nastavení aplikace > Profily **obecné** >  **& Správa zařízení** > **instalovat profil** a klepněte na **instalovat**.  
+11. V části nastavení aplikace > **Obecné** > **profily &** > **instalovat profil** zařízení a klepněte na **instalovat**.  
 12. Zadejte heslo zařízení.  
 13. Nainstalujte profil. Pro spuštění instalace možná budete muset klepnout na **nainstalovat** více než jednou. 
 14. Vraťte se do registrační aplikace purebred. Pokračujte podle pokynů agenta purebred.  
  
-15. Po stažení konfiguračního profilu přejdete do části nastavení aplikace > **obecné** > **profily & Správa zařízení** > **instalovat profil** a klepněte na **instalovat**.   
+15. Až stáhnete konfigurační profil, v části nastavení aplikace > **Obecné** > **profily &** > **instalovat profil** zařízení a klepněte na **instalovat**.   
 16.  Zadejte heslo zařízení.
 17. Nainstalujte profil. Pro spuštění instalace možná budete muset klepnout na **nainstalovat** více než jednou. 
 18. Po dokončení instalace se vraťte do aplikace Portál společnosti.  
@@ -99,19 +100,19 @@ Při instalaci bude také potřeba kontaktovat agenta purebred nebo zástupce.
 
 20. Na obrazovce **Import certifikátů** načtěte a importujte odvozené přihlašovací údaje, které jste získali z DISA purebred.  
 
-    a. Klepněte na **Pokračovat**.   
+    a. Klepněte na **pokračovat**.   
 
-    ![ukázkový snímek obrazovky Portál společnosti nastavit import certifikátů.](./media/import-certificate-disa-purebred.png)  
-    b. Přejděte na iCloud jednotka **procházet** > **umístění** a klepněte na **Další umístění**.  
+    ![Ukázkový snímek obrazovky Portál společnosti nastavit import certifikátů](./media/import-certificate-disa-purebred.png)  
+    b. Přejděte na**umístění** pro **procházení** > jednotky iCloud a klepněte na **Další umístění**.  
 
-    ![ukázkový snímek obrazovky jednotky iCloud, procházení nabídky s možností další umístění.](./media/icloud-drive-more-locations.png)  
+    ![Příklad obrazovky iCloud Drive, procházení nabídky Procházet Další místa možnost.](./media/icloud-drive-more-locations.png)  
     c. Klepněte na přepínač a povolte tak **řetěz purebred klíčů**.  
 
     ![Ukázkový snímek obrazovky iCloud Drive, zobrazení procházení a zvýraznění, že je povolený přepínač řetězení klíčů purebred](./media/icloud-drive-enable-purebred-keychain.png)   
 
     d. Klepněte na **balíček přihlašovacích údajů purebred**.  
 
-    ![ukázkový snímek obrazovky iOS s možností volitelný balíček přihlašovacích údajů purebred.](./media/purebred-credential-package.png)  
+    ![Ukázkový snímek obrazovky s iOS s možností balíčku s volitelným přihlašovacími údaji purebred](./media/purebred-credential-package.png)  
     f. Zobrazí se seznam certifikátů. Vyberte jednu a potom klepněte na **Importovat klíč**.  
 
     ![Příklad snímku obrazovky seznamu volitelných certifikátů, u kterých je už vybraný.](./media/import-purebred-keychain.png) 

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7d193e067a752e89377b4bec903ff4f890add230
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: ac6650f06abddd2633e73f39a6bf72d54e344a61
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80325621"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079191"
 ---
 # <a name="troubleshoot-bitlocker-policies-in-microsoft-intune"></a>Řešení potíží se zásadami BitLockeru v Microsoft Intune
 
@@ -37,7 +37,7 @@ Pomocí Microsoft Intune máte k dispozici následující metody pro správu ná
 
    Informace o dostupných možnostech a funkcích si můžete přečíst tady: [šifrování Windows](https://docs.microsoft.com/intune/endpoint-protection-windows-10#windows-encryption).
 
-- **Směrné plány zabezpečení** - [standardních hodnot zabezpečení](security-baselines.md) jsou známé skupiny nastavení a výchozí hodnoty, které doporučuje příslušný bezpečnostní tým k zabezpečení zařízení s Windows. Různé zdroje standardních hodnot, jako jsou *základní hodnoty zabezpečení MDM* nebo *standardní hodnoty ATP v programu Microsoft Defender* , můžou spravovat stejné nastavení i jiná nastavení. Můžou taky spravovat stejná nastavení, která spravujete pomocí zásad konfigurace zařízení. 
+- **Security baselines** - Směrné[plány](security-baselines.md) zabezpečení standardních hodnot zabezpečení jsou známé skupiny nastavení a výchozí hodnoty, které doporučuje příslušný bezpečnostní tým k zabezpečení zařízení s Windows. Různé zdroje standardních hodnot, jako jsou *základní hodnoty zabezpečení MDM* nebo *standardní hodnoty ATP v programu Microsoft Defender* , můžou spravovat stejné nastavení i jiná nastavení. Můžou taky spravovat stejná nastavení, která spravujete pomocí zásad konfigurace zařízení. 
 
 Pro hardware, který je kompatibilní s moderní pohotovostní úsporou a HSTI při použití některé z těchto funkcí, se šifrování zařízení BitLockeru automaticky zapne při každém připojení zařízení do Azure AD. Azure AD poskytuje portál, ve kterém se zálohují taky klíče pro obnovení, takže uživatelé můžou v případě potřeby získat vlastní obnovovací klíč pro samoobslužné služby.
 
@@ -47,7 +47,7 @@ Bez ohledu na to, jak se na zařízení aplikují nastavení, zásady BitLockeru
 
 Pokud se chcete dozvědět víc o BitLockeru, podívejte se na následující zdroje informací:
 
-- [Zapnut](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-overview)
+- [BitLocker](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-overview)
 - [Přehled nástroje BitLocker a požadavky – Nejčastější dotazy](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-overview-and-requirements-faq)
 
 Teď, když máte obecné informace o tom, co tyto zásady dělají a jak fungují, si přečtěte, jak můžete ověřit, jestli se nastavení BitLockeru úspěšně netýká klienta Windows.
@@ -68,7 +68,7 @@ Když ke konfiguraci BitLockeru použijete zásady konfigurace zařízení, mů�
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Vyberte **zařízení** > **konfigurační profily** a potom vyberte profil, který obsahuje nastavení nástroje BitLocker.
+2. Vyberte možnost**profily konfigurace** **zařízení** > a potom vyberte profil, který obsahuje nastavení nástroje BitLocker.
 
 3. Až vyberete profil, který chcete zobrazit, vyberte **stav zařízení**. Zobrazí se zařízení přiřazená k profilu a sloupec *stav zařízení* indikuje, jestli se v zařízení úspěšně nasadil profil.
 
@@ -76,14 +76,14 @@ Nezapomeňte, že mezi zařízením, které přijímá zásady BitLockeru, můž
 
 ### <a name="use-control-panel-on-the-client"></a>Použití ovládacích panelů na klientovi  
 
-Na zařízení s povoleným BitLockerem a zašifrovanou jednotkou můžete zobrazit stav nástroje BitLocker v ovládacím panelu zařízení. V zařízení otevřete **Ovládací panely** > **systém a > zabezpečení** **Nástroj BitLocker Drive Encryption**. Zobrazí se potvrzení, jak je vidět na následujícím obrázku.  
+Na zařízení s povoleným BitLockerem a zašifrovanou jednotkou můžete zobrazit stav nástroje BitLocker v ovládacím panelu zařízení. Na zařízení otevřete **Ovládací panely** > **systém a** > **Nástroj BitLocker Drive Encryption**zabezpečení. Zobrazí se potvrzení, jak je vidět na následujícím obrázku.  
 
 ![BitLocker je zapnutý v Ovládacích panelech.](./media/troubleshooting-bitlocker-policies/control-panel.png)
 
 ### <a name="use-a-command-prompt"></a>Použití příkazového řádku  
 
-Na zařízení, které povolilo nástroj BitLocker a zašifroval jednotku, spusťte příkazový řádek s přihlašovacími údaji správce a potom spusťte `manage-bde -status`. Výsledky by měly vypadat podobně jako v následujícím příkladu:  
-![výsledku příkazu status](./media/troubleshooting-bitlocker-policies/command.png)
+Na zařízení, které povolilo nástroj BitLocker a zašifroval jednotku, spusťte příkazový řádek s přihlašovacími údaji správce `manage-bde -status`a spusťte příkaz. Výsledky by měly vypadat podobně jako v následujícím příkladu:  
+![Výsledek příkazu status](./media/troubleshooting-bitlocker-policies/command.png)
 
 V tomto příkladu:
 
@@ -194,7 +194,7 @@ Teď byste měli mít dobrý nápad, jak ověřit, že zásady BitLockeru se ús
 
 - Vzhledem k tomu, že nástroj BitLocker spoléhá na čip TPM, může dojít k tomu, že nástroj BitLocker neselže kvůli potížím se službou Intune nebo zásadou, ale místo toho, aby samotné zařízení nemá čip TPM nebo čip TPM není v systému BIOS zakázán.
 
-  Jako další tip můžete potvrdit stejné v Prohlížeč událostí Windows v části **protokoly aplikací a služeb** > **Microsoft** > **Windows** > **BitLocker API**. V protokolu událostí **rozhraní API BitLockeru** najdete ID události 853, což znamená, že čip TPM není k dispozici:
+   > Jako další tip můžete potvrdit stejné v Prohlížeč událostí Windows v části **protokoly aplikací a služeb****Microsoft** > **Windows** > **BitLocker API**. V protokolu událostí **rozhraní API BitLockeru** najdete ID události 853, což znamená, že čip TPM není k dispozici:
 
   ![ID události 853](./media/troubleshooting-bitlocker-policies/event-error.png)
 

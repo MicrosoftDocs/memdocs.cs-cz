@@ -17,18 +17,18 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7d5a9c1fab01393f45c877165230ae68118b1113
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: cdef53672c46fe4e49a5d21a22e585654c504f03
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79331211"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82075944"
 ---
 # <a name="typical-migration-cycle"></a>Typický cyklus migrace
 
-Je běžné, že organizace zahájí migraci do Intune malou pilotní skupinou uživatelů z IT oddělení. Dále je vhodné, aby organizace zohlednila faktory, jako je připravenost uživatelů na změnu, počet uživatelů, komplexnost prostředků a lokalit, požadavky a obchodní rizika. To vše vám pomůže vytvořit optimální časový plán migrace.
+Je běžné, že organizace zahájí migraci Intune s malým pilotem tím, že cílí na podmnožinu svých uživatelů v oddělení IT. Kromě toho může vaše organizace potřebovat diskutovat o takových faktorech, jako je například ochota skupiny pro změny, počet uživatelů, složitost, požadavky, umístění a obchodní riziko, které vám pomůžou určit časový rámec migrace.
 
-Tady je příklad naplánování cílových skupin:
+Tady je příklad, jak můžete naplánovat cílové skupiny:
 
   | **Cílové skupiny migrace** | **Časové období 1** | **Časové období 2** | **Časové období 3** | **Časové období 4** | **...**
 |:---:|:---:|:---:|:---:|:---:|:---:|
@@ -63,4 +63,4 @@ Sledujte, kolik uživatelů si po každé fázi zaregistrovalo zařízení, abys
 
 ## <a name="post-migration"></a>Po migraci
 
-Po migraci do Intune ukončete spolupráci s předchozím poskytovatelem služby pro správu mobilních zařízení (MDM) a zrušte odběr této služby. Dále je nutné podle pokynů poskytovatele MDM odebrat veškerou požadovanou infrastrukturu, která už není potřeba.
+Po migraci do Intune ukončete spolupráci s předchozím poskytovatelem služby pro správu mobilních zařízení (MDM) a zrušte odběr této služby. Dále podle pokynů poskytovatele MDM odeberte všechny nepotřebné požadavky na infrastrukturu.

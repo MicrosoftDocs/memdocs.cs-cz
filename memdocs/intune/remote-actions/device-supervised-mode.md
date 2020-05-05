@@ -17,14 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: da03bb3fdf1f0d67639f7719215d756b7d598d7c
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 6b4afd0c440455b7dab9c1e7674a935967b2fd64
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80325077"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078936"
 ---
-# <a name="turn-on-iosipados-supervised-mode"></a>Zapnutí dohledového režimu systému iOS/iPadOS
+# <a name="turn-on-iosipados-supervised-mode"></a>Zapnout režim pod dohledem pro iOS/iPadOS
 
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -33,7 +33,7 @@ Apple iOS/iPadOS pod dohledem poskytuje správcům více možností při správ�
 
 Intune podporuje režim Pod dohledem v rámci [Programu registrace zařízení Apple (DEP)](../enrollment/device-enrollment-program-enroll-ios.md).
 
-Seznam ovládacích prvků Apple, které vyžadují dohled, najdete na webu společnosti Apple v [referenčních informacích o nastavení datové části](http://help.apple.com/configurator/mac/2.4/#/cad5370d089).
+Seznam Apple Controls, které vyžadují dohled, najdete v [referenčních informacích k nastavení datové části](http://help.apple.com/configurator/mac/2.4/#/cad5370d089)společnosti Apple.
 
 ## <a name="turn-on-supervised-mode-during-enrollment"></a>Zapnutí režimu Pod dohledem během registrace
 
@@ -41,7 +41,7 @@ V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwli
 
 ## <a name="turn-on-supervised-mode-after-enrollment"></a>Zapnutí režimu Pod dohledem po registraci
 
-Jediným způsobem, jak zapnout režim pod dohledem, je připojit zařízení s iOS/iPadOS k počítači Mac a [použít Apple Configuratoru](../enrollment/apple-configurator-enroll-ios.md) (při kterém se zařízení resetuje). Po registraci není možné nakonfigurovat režim Pod dohledem pro zařízení v Intune.
+Jediným způsobem, jak zapnout režim pod dohledem, je připojit zařízení s iOS/iPadOS k počítači Mac a [použít Apple Configuratoru](../enrollment/apple-configurator-enroll-ios.md) (při kterém se zařízení resetuje). Po registraci nemůžete nakonfigurovat zařízení pro dohledový režim v Intune.
 
 ## <a name="identify-a-supervised-device"></a>Zjištění, jestli je zařízení pod dohledem
 

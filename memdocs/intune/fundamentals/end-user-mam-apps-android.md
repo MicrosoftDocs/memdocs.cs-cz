@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 347b64317d39be587acccbabc6530019f13c152d
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: b712b0365505ce4dab6162640cc8440799f2948b
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79326855"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079446"
 ---
 # <a name="what-to-expect-when-your-android-app-is-managed-by-app-protection-policies"></a>Co očekávat, když ke správě svojí aplikace pro Android používáte zásady ochrany aplikací
 
@@ -78,7 +78,7 @@ Podporované jsou následující typy souborů:
 
 |**pfile**|
 |----|
-|Pfile je obecný „obálkový“ formát pro chráněné soubory, který zapouzdřuje šifrovaný obsah a licence Azure Information Protection. Dá se použít pro ochranu libovolného typu souboru.|
+|Pfile je obecný formát "Obálka" chráněných souborů, který zapouzdřuje šifrovaný obsah a Azure Information Protection licence. Dá se použít pro ochranu libovolného typu souboru.|
 
 ## <a name="next-steps"></a>Další kroky
 [Co očekávat, když je vaše aplikace pro iOS/iPadOS spravovaná zásadami ochrany aplikací](end-user-mam-apps-ios.md)

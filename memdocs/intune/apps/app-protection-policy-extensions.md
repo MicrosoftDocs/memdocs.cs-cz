@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d7de306a7d4f632b3eedf321323e12c7ad95b713
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 1dce45d0ad8d44d09345ebfe3fcd358b34a104d6
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79326207"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078375"
 ---
 # <a name="protecting-application-extensions"></a>Ochrana rozšíření aplikace
 
@@ -70,12 +70,12 @@ Pokud uživatel souhlasí se sdílením dat mezi účty stejně jako u doplňků
 |Oprávnění ke čtení pro možnost [Kalendáře](https://developer.microsoft.com/graph/docs/concepts/permissions_reference#calendars-permissions)     |Umožňuje aplikaci přístup k událostem v uživatelských kalendářích. Zahrnuje schůzky v kalendářích přihlášených uživatelů, jejich časy, umístění a účastníky.         |
 |Oprávnění ke čtení pro možnost [Profil uživatele](https://developer.microsoft.com/graph/docs/concepts/permissions_reference#user-permissions)     |Umožňuje uživatelům přihlásit se k aplikaci a aplikaci umožňuje přístup k profilu přihlášených uživatelů. Také aplikaci umožňuje přístup k základním informacím o společnosti u přihlášených uživatelů.         |
 |Předplatná     |Tento rozsah se zatím nepoužívá a není proto dostupný. Zahrnuje předplatná, která organizace uživatele poskytuje aplikacím a službám Microsoft, například Office 365.         |
-|Přehledy     |Tento rozsah se zatím nepoužívá a není proto dostupný. Zahrnuje zájmy přidružené k účtu přihlášeného uživatele podle toho, jak uživatel používá služby Microsoft.         |
+|Insights     |Tento rozsah se zatím nepoužívá a není proto dostupný. Zahrnuje zájmy přidružené k účtu přihlášeného uživatele podle toho, jak uživatel používá služby Microsoft.         |
 
 ### <a name="learn-more"></a>Další informace
 
 - Přečtěte si o [informacích a funkcích LinkedIn v aplikacích Microsoft](https://go.microsoft.com/fwlink/?linkid=850740).
 - Přečtěte si o možnosti připojení účtů LinkedIn na [stránce roadmapy Office 365](https://products.office.com/en-US/business/office-365-roadmap?filters=%26freeformsearch=linkedin#abc). 
 - Přečtěte si o [konfiguraci připojení účtů LinkedIn](https://docs.microsoft.com/azure/active-directory/linkedin-integration).
-- Další informace o datech sdílených mezi účtem LinkedIn a pracovním nebo školním účtem Microsoft uživatele najdete v článku o [LinkedInu v aplikacích Microsoft v práci nebo ve škole](https://www.linkedin.com/help/linkedin/answer/84077).
+- Další informace o datech, která jsou sdílená mezi uživateli LinkedIn a pracovními nebo školními účty uživatelů, najdete [v tématu LinkedIn v aplikacích Microsoftu ve vaší práci nebo ve škole](https://www.linkedin.com/help/linkedin/answer/84077).
 

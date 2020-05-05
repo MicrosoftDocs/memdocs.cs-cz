@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 58203c09784f0d4a50472ff4ae9cd06957025a1c
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 391fa20cf7ba53af649f9f614d9ca02c653c278b
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80324341"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079310"
 ---
 # <a name="windows-10-app-deployment-by-using-microsoft-intune"></a>Nasazení aplikací pro Windows 10 pomocí Microsoft Intune 
 
 Microsoft Intune podporuje různé typy aplikací a scénáře nasazení na zařízeních s Windows 10. Po přidání aplikace do Intune ji můžete přiřadit uživatelům a zařízením. Tento článek obsahuje další informace o podporovaných scénářích Windows 10 a také obsahuje důležité informace, které je třeba poznamenat při nasazování aplikací do systému Windows. 
 
-Obchodní aplikace (LOB) a aplikace pro Microsoft Store pro firmy jsou na zařízeních s Windows 10 podporované. Mezi přípony souborů pro aplikace pro Windows patří soubory. msi,. appx a. appxbundle.  
+Obchodní aplikace (LOB) a aplikace pro Microsoft Store pro firmy jsou na zařízeních s Windows 10 podporované. Mezi přípony souborů aplikací pro Windows patří .msi, .appx a .appxbundle.  
 
 > [!Note]
 > K nasazení moderních aplikací potřebujete aspoň tyto:
@@ -44,7 +44,7 @@ Obchodní aplikace (LOB) a aplikace pro Microsoft Store pro firmy jsou na zaří
 
 Konkrétní typy aplikací jsou podporované v závislosti na verzi Windows 10, kterou používají vaši uživatelé. Následující tabulka uvádí typ aplikace a podporu Windows 10.
 
-| Typ aplikace | Domů | Pro | Firemní | Enterprise | Vzdělávání | S-režim | HoloLens<sup>1 | Surface Hub | WCOS | Mobilní |
+| Typ aplikace | Domů | Verze Pro | Do zaměstnání | Enterprise | Education | S-režim | HoloLens<sup>1 | Surface Hub | WCOS | Mobilní |
 |----------------|------|-----|----------|------------|-----------|--------|-----------|------------|------|--------|
 |  . SOUBOR | Ne | Ano | Ano | Ano | Ano | Ne | Ne | Ne | Ne | Ne |
 | . IntuneWin | Ne | Ano | Ano | Ano | Ano | 19H2 + | Ne | Ne | Ne | Ne |
@@ -52,7 +52,7 @@ Konkrétní typy aplikací jsou podporované v závislosti na verzi Windows 10, 
 | LOB: APPX/MSIX | Ano | Ano | Ano | Ano | Ano | Ano | Ano | Ano | Ano | Ano |
 | MSFB offline | Ano | Ano | Ano | Ano | Ano | Ano | Ano | Ano | Ano | Ano |
 | MSFB online | Ano | Ano | Ano | Ano | Ano | Ano | RS4 + | Ne | Ano | Ano |
-| Webové aplikace | Ano | Ano | Ano | Ano | Ano | Ano | Ano<sup>2 | Ano<sup>2 | Ano | Ano<sup>2 |
+| Web Apps | Ano | Ano | Ano | Ano | Ano | Ano | Ano<sup>2 | Ano<sup>2 | Ano | Ano<sup>2 |
 | Odkaz na Store | Ano | Ano | Ano | Ano | Ano | Ano | Ano | Ano | Ano | Ano |
 | Microsoft Edge | Ne | Ano | Ano | Ano | Ano | 19H2 +<sup>3 | Ne | Ne | Ne | Ne |
 
@@ -67,16 +67,16 @@ Konkrétní typy aplikací jsou podporované v závislosti na verzi Windows 10, 
 
 Do konzoly pro správu Intune můžete podepisovat a nahrávat obchodní aplikace pro Windows 10. Ty můžou zahrnovat moderní aplikace, jako jsou aplikace Univerzální platforma Windows (UWP) a balíčky aplikací pro Windows (AppX), a také aplikace pro Win 32, jako jsou například jednoduché soubory balíčku Instalační služby společnosti Microsoft (MSI). Správce musí ručně nahrávat a nasazovat aktualizace obchodních aplikací. Tyto aktualizace se automaticky nainstalují na uživatelská zařízení, ve kterých je nainstalovaná aplikace. Není vyžadován žádný zásah uživatele a uživatel nemá žádnou kontrolu nad aktualizacemi. 
 
-## <a name="microsoft-store-for-business-apps"></a>Aplikace z Microsoft Storu pro firmy
+## <a name="microsoft-store-for-business-apps"></a>Aplikace pro Microsoft Store pro firmy
 
-Microsoft Store pro obchodní aplikace jsou moderní aplikace zakoupené na portálu pro správu Microsoft Store pro firmy. Pak se synchronizují s Microsoft Intune pro správu. Aplikace můžou být buď online licencované, nebo offline. Microsoft Store přímo spravuje aktualizace bez dalších akcí, které správce vyžaduje. Aktualizace konkrétních aplikací můžete také zabránit pomocí vlastního identifikátoru URI (Uniform Resource Identifier). Další informace najdete v tématu o [správě podnikových aplikací a zabránění jejich automatické aktualizace](https://docs.microsoft.com/windows/client-management/mdm/enterprise-app-management#prevent-app-from-automatic-updates). Uživatel může také zakázat aktualizace pro všechny Microsoft Store pro obchodní aplikace na zařízení. 
+Microsoft Store pro obchodní aplikace jsou moderní aplikace zakoupené na portálu pro správu Microsoft Store pro firmy. Pak se synchronizují s Microsoft Intune pro správu. Tyto aplikace mohou mít online licenci nebo offline licenci. Microsoft Store přímo spravuje aktualizace bez dalších akcí, které správce vyžaduje. Aktualizace konkrétních aplikací můžete také zabránit pomocí vlastního identifikátoru URI (Uniform Resource Identifier). Další informace najdete v tématu o [správě podnikových aplikací a zabránění jejich automatické aktualizace](https://docs.microsoft.com/windows/client-management/mdm/enterprise-app-management#prevent-app-from-automatic-updates). Uživatel může také zakázat aktualizace pro všechny Microsoft Store pro obchodní aplikace na zařízení. 
 
 ### <a name="categorize-microsoft-store-for-business-apps"></a>Kategorizace Microsoft Store pro obchodní aplikace 
 Kategorizace Microsoft Store pro obchodní aplikace: 
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **aplikace** > **všech aplikacích**. 
-3. Vyberte Microsoft Store pro obchodní aplikaci. Pak vyberte **vlastnosti** > **informace o aplikaci** > **kategorii**. 
+2. Vyberte **aplikace** > **všechny aplikace**. 
+3. Vyberte Microsoft Store pro obchodní aplikaci. Pak vyberte **vlastnosti** >  > **kategorie****informací o aplikaci**. 
 4. Vyberte kategorii.
 
 ## <a name="install-apps-on-windows-10-devices"></a>Instalace aplikací na zařízení s Windows 10
@@ -97,7 +97,7 @@ Aplikace se dají instalovat jenom v kontextu zařízení, když je podporuje za
 - Aplikace Win32
 - Offline licencované Microsoft Store pro obchodní aplikace
 - Obchodní aplikace (MSI, APPX a MSIX)
-- Office 365 ProPlus
+- Aplikace Microsoft 365 pro podniky
 
 Aplikace LOB pro Windows (konkrétně APPX a MSIX) a Microsoft Store pro firmy (offline aplikace), které jste vybrali k instalaci v kontextu zařízení, musí být přiřazené ke skupině zařízení. Instalace se nezdařila, pokud je jedna z těchto aplikací nasazena v uživatelském kontextu. V konzole pro správu se zobrazí následující stav a chyba:
   - Stav: Neúspěšné.

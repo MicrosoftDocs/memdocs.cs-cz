@@ -2,7 +2,7 @@
 title: Zařízení – Datový sklad Intune
 titleSuffix: Microsoft Intune
 description: Téma referenčních informací ke kategorii Zařízení pro kolekce entit v rozhraní API datového skladu Intune
-keywords: Datový sklad Intune
+keywords: Intune Data Warehouse
 author: Erikre
 ms.author: erikre
 manager: dougeby
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ae1f0117f6dbf186b3a4bdddb393d053c33c914a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 31eef700f7aa38b70c5e9a2fa75fd3faee4c9713
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79331695"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078052"
 ---
 # <a name="reference-for-devices-entities"></a>Referenční informace o entitách zařízení
 
@@ -34,7 +34,7 @@ Kategorie **zařízení** obsahuje entity pro mobilní zařízení, které sledu
 - Vlastnictví zařízení
 - Stav správy zařízení
 - Stav členství zařízení v Azure AD
-- Stav zápisu
+- Stav registrace
 - Historické informace o zařízení
 - Inventář aplikací na daném zařízení
 
@@ -52,7 +52,7 @@ Entita **deviceTypes** představuje typ zařízení, na který odkazují jiné e
 
 | deviceTypeID  | Název | Popis |
 |---------|------------|--------|
-| 0 |Desktop |Zařízení se systémem Windows |
+| 0 |Aplikace klasické pracovní plochy |Zařízení se systémem Windows |
 | 1 |WindowsRT |Zařízení se systémem WindowsRT |
 | 2 |WinMO6 |Zařízení se systémem Windows Mobile 6.0 |
 | 3 |Nokia |Zařízení Nokia |
@@ -71,7 +71,7 @@ Entita **deviceTypes** představuje typ zařízení, na který odkazují jiné e
 | 17 |AndroidForWork |Zařízení Android spravované pomocí vlastníka profilu Androidu |
 | 100 |Blackberry |Zařízení Blackberry |
 | 101 |Palm |Zařízení Palm |
-| 255 |Neznámé |Neznámý typ zařízení |
+| 255 |Není známo |Neznámý typ zařízení |
 
 ## <a name="enrollmentactivities"></a>enrollmentActivities 
 Entita **enrollmentActivity** označuje aktivitu registrace zařízení.
@@ -93,15 +93,15 @@ Entita **enrollmentEventStatus** indikuje výsledek registrace zařízení.
 | Vlastnost                   | Popis                                                                       |
 |----------------------------|-----------------------------------------------------------------------------------|
 | enrollmentEventStatusKey   | Jedinečný identifikátor stavu registrace v datovém skladu (náhradní klíč)  |
-| enrollmentEventStatusName  | Název stavu registrace. Podívejte se na příklady níže.                            |
+| enrollmentEventStatusName  | Název stavu registrace. Podívejte se na následující příklady:                            |
 
 ### <a name="example"></a>Příklad
 
 | enrollmentEventStatusName  | Popis                            |
 |----------------------------|----------------------------------------|
 | Úspěch                    | Úspěšná registrace zařízení         |
-| Neúspěšné                     | Neúspěšná registrace zařízení             |
-| Nedostupný              | Stav registrace není k dispozici.  |
+| Failed                     | Neúspěšná registrace zařízení             |
+| Není k dispozici              | Stav registrace není k dispozici.  |
 
 ## <a name="enrollmentfailurecategories"></a>enrollmentFailureCategories 
 Entita **EnrollmentFailureCategory** indikuje, proč se registrace zařízení nezdařila. 
@@ -109,16 +109,16 @@ Entita **EnrollmentFailureCategory** indikuje, proč se registrace zařízení n
 | Vlastnost                       | Popis                                                                                 |
 |--------------------------------|---------------------------------------------------------------------------------------------|
 | enrollmentFailureCategoryKey   | Jedinečný identifikátor kategorie selhání registrace v datovém skladu (náhradní klíč)  |
-| enrollmentFailureCategoryName  | Název kategorie selhání registrace. Podívejte se na příklady níže.                            |
+| enrollmentFailureCategoryName  | Název kategorie selhání registrace. Podívejte se na následující příklady:                            |
 
 ### <a name="example"></a>Příklad
 
 | enrollmentFailureCategoryName   | Popis                                                                                                   |
 |---------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Nepoužitelné                  | Kategorie selhání registrace se nedá použít.                                                            |
-| Nedostupný                   | Kategorie selhání registrace není k dispozici.                                                             |
-| Neznámé                         | Neznámá chyba                                                                                                |
-| Ověřování                  | Ověřování se nezdařilo.                                                                                        |
+| Neuvedeno                  | Kategorie selhání registrace se nedá použít.                                                            |
+| Není k dispozici                   | Kategorie selhání registrace není k dispozici.                                                             |
+| Není známo                         | Neznámou chybu.                                                                                                |
+| Authentication                  | Ověření se nezdařilo.                                                                                        |
 | Autorizace                   | Volání bylo ověřeno, ale není autorizováno k registraci.                                                         |
 | AccountValidation               | Nepovedlo se ověřit účet pro registraci. (Účet zablokován, registrace není povolená.)                      |
 | UserValidation                  | Uživatele nelze ověřit. (Uživatel neexistuje, chybí licence)                                           |
@@ -136,15 +136,15 @@ Entita **EnrollmentFailureReason** označuje podrobnější důvod selhání reg
 | Vlastnost                     | Popis                                                                               |
 |------------------------------|-------------------------------------------------------------------------------------------|
 | enrollmentFailureReasonKey   | Jedinečný identifikátor důvodu selhání registrace v datovém skladu (náhradní klíč)  |
-| enrollmentFailureReasonName  | Název důvodu selhání registrace. Podívejte se na příklady níže.                            |
+| enrollmentFailureReasonName  | Název důvodu selhání registrace. Podívejte se na následující příklady:                            |
 
 ### <a name="example"></a>Příklad
 
 | enrollmentFailureReasonName      | Popis                                                                                                                                                                                            |
 |----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Nepoužitelné                   | Důvod selhání registrace se nedá použít.                                                                                                                                                       |
-| Nedostupný                    | Důvod selhání registrace není k dispozici.                                                                                                                                                        |
-| Neznámé                          | Neznámá chyba.                                                                                                                                                                                         |
+| Neuvedeno                   | Důvod selhání registrace se nedá použít.                                                                                                                                                       |
+| Není k dispozici                    | Důvod selhání registrace není k dispozici.                                                                                                                                                        |
+| Není známo                          | Neznámá chyba.                                                                                                                                                                                         |
 | UserNotLicensed                  | Uživatel se v Intune nenašel nebo nemá platnou licenci.                                                                                                                                     |
 | UserUnknown                      | Intune nezná uživatele.                                                                                                                                                                           |
 | BulkAlreadyEnrolledDevice        | Zařízení může zaregistrovat jenom jeden uživatel. Toto zařízení dřív zaregistroval jiný uživatel.                                                                                                                |
@@ -170,7 +170,7 @@ Entita **enrollmentType** označuje, jestli je zařízení firemní, osobně vla
 | ownerTypeName |Představuje typ vlastníka zařízení:  <br>Podnik – zařízení je ve vlastnictví podniku. <br>Osobní – zařízení je v osobním vlastnictví (BYOD).  <br>Neznámé – žádné informace o tomto zařízení nejsou dostupné. |Firemní osobní neznámý |
 
 > [!Note]  
-> Pro `ownerTypeName` v AzureAD při vytváření dynamických skupin pro zařízení je potřeba nastavit hodnotu filtru `deviceOwnership` jako `Company`. Další informace najdete v tématu [pravidla pro zařízení](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices). 
+> Při vytváření `ownerTypeName` dynamických skupin pro zařízení v nástroji AzureAD je potřeba nastavit hodnotu `deviceOwnership` filtru jako. `Company` Další informace najdete v tématu [pravidla pro zařízení](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices). 
 
 ## <a name="managementstates"></a>managementStates
 
@@ -219,7 +219,7 @@ Entita **ManagementAgentType** představuje agenty používané ke správě zař
 | 4 |IntuneClient | Zařízení se spravuje pomocí agenta Intune pro počítače. |
 | 5 |EasIntuneClient | Zařízení se spravuje pomocí protokolu Exchange Active Sync i pomocí agenta Intune pro počítače. |
 | 8 |ConfigManagerClient | Zařízení spravuje agent Configuration Manager. |
-| 16 |Neznámé | Neznámý typ agenta správy |
+| 16 |Není známo | Neznámý typ agenta správy |
 
 ## <a name="devices"></a>zařízení
 
@@ -242,7 +242,7 @@ Entita **zařízení** obsahuje seznam všech zaregistrovaných zařízení, kte
 | deviceCategoryKey          | Klíč kategorie, která je k tomuto zařízení přidružená.                                                                                                                                     |
 | deviceEnrollmentType       | Klíč typu registrace, který je přidružený k tomuto zařízení a který udává metodu registrace.                                                                                             |
 | complianceStateKey         | Klíč stavu dodržování předpisů, který je k tomuto zařízení přidružený.                                                                                                                             |
-| osVersion                  | Verze operačního systému zařízení.                                                                                                                                                |
+| osVersion                  | Verze operačního systému v zařízení                                                                                                                                                |
 | easDeviceId                | ID protokolu Exchange ActiveSync zařízení.                                                                                                                                                  |
 | serialNumber               | SerialNumber                                                                                                                                                                           |
 | userId                     | Jedinečný identifikátor uživatele přidružený k zařízení                                                                                                                           |

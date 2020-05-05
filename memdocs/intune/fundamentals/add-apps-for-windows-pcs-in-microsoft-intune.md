@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a2c5590acd870e2623491052ba43bf29e4676568
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: d9ad6414bd0565389b39cc97322341ada0b4b4c4
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79326947"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079293"
 ---
 # <a name="add-apps-for-windows-pcs-that-run-the-intune-software-client"></a>Přidání aplikací pro počítače s Windows, na kterých běží softwarový klient Intune
 
@@ -42,7 +42,7 @@ Můžete uživatelům umožnit ovládání instalace aplikací. Pokud je tato mo
 ## <a name="add-the-app"></a>Přidání aplikace
 Pomocí Vydavatele softwaru Microsoft Intune nakonfigurujete vlastnosti aplikace a odešlete ji do svého cloudového úložiště. K tomu slouží tento postup:
 
-1. V [Konzola pro správu Microsoft Intune](https://manage.microsoft.com)vyberte **aplikace** &gt; **Přidat aplikace** a spusťte Intune software Publisher.
+1. V [konzole pro správu Microsoft Intune](https://manage.microsoft.com) vyberte **Aplikace** &gt; **Přidat aplikace**. Spustí se Vydavatel softwaru Intune.
 
    > [!TIP]
    > Před spuštěním vydavatele softwaru možná budete muset zadat svoje uživatelské jméno a heslo k Intune.
@@ -51,7 +51,7 @@ Pomocí Vydavatele softwaru Microsoft Intune nakonfigurujete vlastnosti aplikace
 
    - **Vyberte typ souboru instalačního programu softwaru**. Označuje typ softwaru, který chcete nasadit. U počítačů s Windows zvolte **Instalační služba systému Windows**.
    - **Zadejte umístění instalačních souborů softwaru**. Zadejte umístění instalačních souborů, nebo zvolte **Procházet** a vyberte umístění ze seznamu.
-   - **Zahrňte další soubory a podsložky ze stejné složky**. Software, který používá Instalační službu systému Windows, někdy potřebuje podpůrné soubory. Ty musí být umístěné ve stejné složce jako instalační soubor. Tuto možnost vyberte, když chcete nasadit i podpůrné soubory.
+   - **Zahrnout další soubory a podsložky ze stejné složky**. Software, který používá Instalační službu systému Windows, někdy potřebuje podpůrné soubory. Ty musí být umístěné ve stejné složce jako instalační soubor. Tuto možnost vyberte, když chcete nasadit i podpůrné soubory.
 
    Pokud třeba chcete publikovat aplikaci s názvem Application.msi do Intune, stránka bude vypadat takto: ![Stránka instalace softwaru vydavatele](./media/add-apps-for-windows-pcs-in-microsoft-intune/publisher-for-pc.png)
 
@@ -68,7 +68,7 @@ Pomocí Vydavatele softwaru Microsoft Intune nakonfigurujete vlastnosti aplikace
    - **Adresa URL informací o softwaru** (volitelné). Můžete zadat adresu URL webu, který obsahuje informace o této aplikaci. Adresa URL se zobrazí uživatelům na portálu společnosti.
    - **Adresa URL zásad ochrany osobních údajů** (volitelné). Můžete zadat adresu URL webu, který obsahuje informace o ochraně osobních údajů v této aplikaci. Adresa URL se zobrazí uživatelům na portálu společnosti.
    - **Kategorie** (volitelné). Vyberte jednu z předdefinovaných kategorií aplikací. Uživatelé ji budou moct při procházení portálu snáz najít.
-   - **Ikona** (volitelné). Nahrajte ikonu, která bude k aplikaci přidružená. Tato ikona se u aplikace zobrazí, když uživatelé procházejí portál společnosti.
+   - **Ikona** (volitelné): Nahrajte ikonu, která bude k aplikaci přidružená. Tato ikona se u aplikace zobrazí, když uživatelé procházejí portál společnosti.
 
 4. Na stránce **Požadavky** vyberte požadavky, které je potřeba splnit, aby bylo možné aplikaci nainstalovat. Vybírejte z těchto možností:
 
@@ -78,13 +78,13 @@ Pomocí Vydavatele softwaru Microsoft Intune nakonfigurujete vlastnosti aplikace
 5. Na stránce **Pravidla detekce** můžete nakonfigurovat pravidla, která zjistí, jestli už je konfigurovaná aplikace na počítači nainstalovaná. Nebo můžete použít výchozí pravidla detekce k automatickému přepsání dříve nainstalovaných verzí aplikace. Tato možnost se týká Instalační služby systému Windows (jenom soubory .exe).
 
    Jaká pravidla můžete konfigurovat:
-   - **Soubor existuje**. Zadejte cestu k souboru, který chcete zjistit. Můžete hledat ve složce **%ProgramFiles%** (prohledá složku **Program Files**\&lt;cesta&gt; a **Program Files (x86)** \&lt;cesta&gt;) na počítači nebo ve složce **%SystemDrive%** (prohledá kořenovou jednotku počítače, většinou je to jednotka C:).
+   - **Soubor existuje**. Zadejte cestu k souboru, který chcete zjistit. Můžete hledat ve složce **%ProgramFiles%** (prohledá složku **Program Files**\&lt;cesta&gt; a **Program Files (x86)**\&lt;cesta&gt;) na počítači nebo ve složce **%SystemDrive%** (prohledá kořenovou jednotku počítače, většinou je to jednotka C:).
    - **Kód produktu MSI existuje**. Pokud chcete vybrat soubor Instalační služby systému Windows (.msi), který chcete detekovat, vyberte **Procházet**.
    - <strong>Klíč registru existuje</strong>. Zadejte klíč registru, který začíná <strong>HKEY_LOCAL_MACHINE\</strong>. Prohledají se 32bitové i 64bitové cesty registru. Pokud zadaný klíč v některém umístění existuje, pravidlo detekce je splněné.
 
    Pokud aplikace odpovídá některému z nakonfigurovaných pravidel, nebude se instalovat.
 
-6. Platí jen pro typ souboru **Instalační služba systému Windows** (.msi a .exe): Na stránce **Argumenty příkazového řádku** můžete vybrat, jestli chcete instalačnímu programu poskytnout volitelné argumenty příkazového řádku.
+6. Pro **Instalační služba systému Windows** jenom typ souboru (. msi a. exe): na stránce **argumenty příkazového řádku** vyberte, jestli chcete instalačnímu programu zadat volitelné argumenty příkazového řádku.
    Intune automaticky přidá tyto parametry:
    - Pro soubory .exe se přidá parametr **/install**.
    - Pro soubory .msi se přidá parametr **/quiet**.
@@ -104,4 +104,4 @@ Aplikace se zobrazí v uzlu **Aplikace** v pracovním prostoru **Aplikace**.
 
 Dalším krokem po vytvoření aplikace je její nasazení. Další informace najdete v článku o [přiřazení aplikací do skupin pomocí Microsoft Intune](../apps/apps-deploy.md).
 
-Různé tipy a triky pro nasazení softwaru na počítače s Windows najdete v blogovém příspěvku [Support Tip: Best Practices for Intune Software Distribution to PC’s](https://support.microsoft.com/en-US/help/2583929) (Tip pro podporu: Osvědčené postupy distribuce softwaru na počítače pomocí Intune).
+Pokud si chcete přečíst další informace o tipech a štychech k nasazení softwaru do počítačů s Windows, přečtěte si článek [Tip pro podporu blogu: osvědčené postupy pro distribuci softwaru Intune do počítače](https://support.microsoft.com/en-US/help/2583929).

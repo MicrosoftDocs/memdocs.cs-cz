@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 104996e87c830701b1725129727c76d8c7a09ee3
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: cf4fc3017ccf3efcf93986544c8a60b60acbf3c8
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79326875"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82076114"
 ---
 # <a name="how-to-configure-intune-settings-for-the-iosipados-classroom-app"></a>Jak nakonfigurovat nastavení Intune pro aplikaci pro iOS/iPadOS
 
@@ -46,7 +46,7 @@ K nastavení učebny na zařízení budete muset vytvořit a nakonfigurovat prof
 Než tato nastavení začnete konfigurovat, zvažte následující skutečnosti:
 
 - Učitelé i studenti musí být zaregistrovaní v Intune.
-- Zajistěte, aby na zařízení učitele byla nainstalovaná aplikace [Apple Classroom](https://itunes.apple.com/us/app/classroom/id1085319084?mt=8). Můžete aplikaci nainstalovat buď ručně, nebo přes [správu aplikací Intune](../apps/app-management.md).
+- Ujistěte se, že máte nainstalovanou aplikaci [Apple učeben](https://itunes.apple.com/us/app/classroom/id1085319084?mt=8) na zařízení učitelů. Můžete aplikaci nainstalovat buď ručně, nebo přes [správu aplikací Intune](../apps/app-management.md).
 - Musíte nakonfigurovat certifikáty pro ověřování připojení mezi zařízeními učitelů a studentů (viz krok 2, vytvoření a přiřazení vzdělávacího profilu pro iOS/iPadOS v Intune).
 - iPady učitelů a studentů musí být ve stejné síti Wi-Fi a musí mít povolené Bluetooth.
 - Aplikace učebny se spouští na iPady pod dohledem, na kterém běží iOS/iPadOS 9,3 nebo novější.
@@ -79,11 +79,11 @@ Informace můžete do SDS naimportovat jednou z následujících metod:
 1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3. V podokně **Intune** zvolte **Konfigurace zařízení**.
 2. V podokně **Konfigurace zařízení** v části **Spravovat** zvolte **Profily**.
-5. V podokně profilů zvolte **Vytvořit profil**.
+5. V podokně profily vyberte **vytvořit profil**.
 6. V podokně **vytvořit profil** zadejte **název** a **Popis** vzdělávacího profilu pro iOS/iPadOS.
 7. Z rozevíracího seznamu **Platforma** zvolte **iOS**.
 8. Z rozevíracího seznamu **Typ profilu** zvolte **Vzdělávání**.
-9. Zvolte **Nastavení** > **Konfigurovat**.
+9. Vyberte **Nastavení** > **Konfigurovat**.
 
 
 Teď si vytvoříte certifikáty k navázání vztahu důvěryhodnosti mezi iPady učitelů a studentů. Certifikáty se používají k bezproblémovému a bezobslužnému ověřování připojení mezi zařízeními bez nutnosti zadávání uživatelských jmen a hesel.
@@ -109,10 +109,10 @@ V části **Kořenový certifikát učitele** vyberte tlačítko Procházet. Vyb
 
 V části **Certifikát PKCS#12 učitele** nakonfigurujte následující hodnoty:
 
-- **Formát názvu subjektu** – Intune automaticky přidá k běžnému názvu certifikátu učitele předponu **leader**. K certifikátu studenta přidává předponu **member**.
+- **Formát názvu subjektu** – Intune automaticky přihlašuje běžné názvy certifikátů učitelů pomocí **vedoucího**procesu. K certifikátu studenta přidává předponu **member**.
 - **Certifikační autorita** – Certifikační autorita organizace (CA), která běží na verzi Enterprise systému Windows Server 2008 R2 nebo novější. Samostatná certifikační autorita není podporovaná. 
 - **Název certifikační autority** – Zadejte název certifikační autority.
-- **Název šablony certifikátu** – Zadejte název šablony certifikátu, která byla přidána k vystavující certifikační autoritě. 
+- **Název šablony certifikátu** – zadejte název šablony certifikátu, která byla přidána k vystavující certifikační autoritě. 
 - **Prahová hodnota obnovení (%)** – Zadejte procento doby životnosti certifikátu zbývající v okamžiku, kdy zařízení požádá o obnovení certifikátu.
 - **Období platnosti certifikátu** – Zadejte zbývající dobu do vypršení platnosti certifikátu.
 Zadat můžete hodnotu nižší, než je období platnosti zadané v šabloně certifikátu, ne však vyšší. Pokud je třeba období platnosti certifikátu v šabloně certifikátu dva roky, můžete zadat hodnotu jeden rok, ale ne pět let. Tato hodnota musí být zároveň nižší než zbývající doba platnosti certifikátu vystavující certifikační autority.
@@ -121,7 +121,7 @@ Jakmile dokončíte konfiguraci certifikátů, zvolte **OK**.
 
 ### <a name="configure-student-certificates"></a>Konfigurace certifikátů studentů
 
-1. V podokně **Vzdělávání** zvolte **Certifikáty studentů**.
+1. V podokně **vzdělávání** vyberte **certifikáty studenta**.
 2. V podokně **Certifikáty studentů** zvolte v seznamu **Typ certifikátů studentských zařízení** možnost **1:1**.
 
 #### <a name="configure-student-root-certificate"></a>Konfigurace kořenového certifikátu studenta
@@ -134,10 +134,10 @@ V části **Kořenový certifikát studenta** vyberte tlačítko Procházet. Vyb
 
 V části **Certifikát PKCS#12 studenta** nakonfigurujte následující hodnoty:
 
-- **Formát názvu subjektu** – Intune automaticky přidá k běžnému názvu certifikátu učitele předponu **leader**. K certifikátu studenta přidává předponu **member**.
+- **Formát názvu subjektu** – Intune automaticky přihlašuje běžné názvy certifikátů učitelů pomocí **vedoucího**procesu. K certifikátu studenta přidává předponu **member**.
 - **Certifikační autorita** – Certifikační autorita organizace (CA), která běží na verzi Enterprise systému Windows Server 2008 R2 nebo novější. Samostatná certifikační autorita není podporovaná. 
 - **Název certifikační autority** – Zadejte název certifikační autority.
-- **Název šablony certifikátu** – Zadejte název šablony certifikátu, která byla přidána k vystavující certifikační autoritě. 
+- **Název šablony certifikátu** – zadejte název šablony certifikátu, která byla přidána k vystavující certifikační autoritě. 
 - **Prahová hodnota obnovení (%)** – Zadejte procento doby životnosti certifikátu zbývající v okamžiku, kdy zařízení požádá o obnovení certifikátu.
 - **Období platnosti certifikátu** – Zadejte zbývající dobu do vypršení platnosti certifikátu.
 Zadat můžete hodnotu nižší, než je období platnosti zadané v šabloně certifikátu, ne však vyšší. Pokud je třeba období platnosti certifikátu v šabloně certifikátu dva roky, můžete zadat hodnotu jeden rok, ale ne pět let. Tato hodnota musí být zároveň nižší než zbývající doba platnosti certifikátu vystavující certifikační autority.
@@ -146,7 +146,7 @@ Jakmile dokončíte konfiguraci certifikátů, zvolte **OK**.
 
 ## <a name="finish-up"></a>Dokončení
 
-1. V podokně **Vzdělávání** zvolte OK.
+1. V podokně **vzdělávání** klikněte na tlačítko OK.
 2. V podokně **Vytvořit profil** zvolte **Vytvořit**.
 
 Profil se vytvoří a zobrazí se v podokně se seznamem profilů.

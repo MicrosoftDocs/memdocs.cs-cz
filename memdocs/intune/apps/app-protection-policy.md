@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, get-started, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7441cd36a05e94140b46d322840346872b94b64f
-ms.sourcegitcommit: 441d0958721b6f9b6694dfffbec77c9a49929dd3
+ms.openlocfilehash: de679314bcd3b52ff879fbe9a6340a61d2b7e993
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80863158"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078358"
 ---
 # <a name="app-protection-policies-overview"></a>Přehled zásad ochrany aplikací
 
@@ -36,7 +36,7 @@ Zásady ochrany aplikací pro správu mobilních aplikací (MAM) umožňují spr
 ## <a name="how-you-can-protect-app-data"></a>Způsob ochrany dat aplikací
 Vaši zaměstnanci používají mobilní zařízení pro osobní a pracovní úkoly. Chcete, aby vaši zaměstnanci byli produktivní, ale chcete zabránit případným záměrným či neúmyslným ztrátám dat. Budete také chtít chránit firemní data, s kterými se pracuje ze zařízení, která nespravujete.
 
-Můžete použít zásady ochrany aplikací Intune **nezávisle na řešení správy mobilních zařízení (MDM)** . Tato nezávislost vám pomůže s ochranou dat vaší společnosti, ať už budou zařízení registrovaná v řešení pro správu zařízení nebo ne. Implementací **zásad na úrovni aplikace** můžete omezit přístup k prostředkům společnosti a ponechat data v kompetenci IT oddělení.
+Můžete použít zásady ochrany aplikací Intune **nezávisle na řešení správy mobilních zařízení (MDM)**. Tato nezávislost vám pomůže chránit podniková data pomocí nebo bez registrace zařízení do řešení pro správu zařízení. Implementací **zásad na úrovni aplikace** můžete omezit přístup k prostředkům společnosti a ponechat data v kompetenci IT oddělení.
 
 ### <a name="app-protection-policies-on-devices"></a>Zásady ochrany aplikací na zařízeních
 
@@ -58,11 +58,11 @@ Zásady ochrany aplikací lze konfigurovat pro aplikace běžící na zařízen�
 
 Mezi důležité výhody použití zásad ochrany aplikací patří následující:
 
-- **Ochrana firemních dat na úrovni aplikace.** Protože správa mobilních aplikací nevyžaduje správu zařízení, můžete podniková data chránit na spravovaných i nespravovaných zařízeních. Správa je zaměřená na identitu uživatele, odpadá tedy požadavek na správu zařízení.
+- **Ochrana podnikových dat na úrovni aplikace.** Protože správa mobilních aplikací nevyžaduje správu zařízení, můžete podniková data chránit na spravovaných i nespravovaných zařízeních. Správa je zaměřená na identitu uživatele, odpadá tedy požadavek na správu zařízení.
 
-- **Produktivita koncového uživatele není ovlivněná a zásady se při použití aplikace v osobním kontextu nepoužijí.** Zásady se použijí jenom v pracovním kontextu, což umožňuje chránit podniková data bez zásahu do osobních dat.
+- **Produktivita koncového uživatele není ovlivněná a při použití aplikace pro osobní účely se neaplikují zásady.** Zásady se použijí jenom v pracovním kontextu, což umožňuje chránit podniková data bez zásahu do osobních dat.
 
-- **Zásady ochrany aplikací zajišťují, že jsou zavedena ochrana aplikační vrstvy.** Můžete třeba:
+- **Zásady ochrany aplikací zajišťují, že jsou zavedena ochrana aplikační vrstvy.** Můžete například provést následující věci:
   - Vyžadovat PIN k otevření aplikace v pracovním kontextu 
   - Řídit sdílení dat mezi aplikacemi 
   - Zabránit ukládání dat firemních aplikací do osobního úložiště
@@ -167,9 +167,9 @@ Další požadavky na používání [mobilní aplikace Outlooku](https://product
 ### <a name="word-excel-and-powerpoint"></a>Word, Excel a PowerPoint
 Mezi další požadavky na používání aplikací pro [Word, Excel a PowerPoint](https://products.office.com/business/office) patří následující:
 
-- Koncový uživatel musí mít licenci pro [Office 365 Business nebo Enterprise](https://products.office.com/business/compare-more-office-365-for-business-plans) propojenou se svým účtem Azure Active Directory. Předplatné musí obsahovat aplikace Office na mobilních zařízeních a může obsahovat účet pro ukládání do cloudu přes [OneDrive pro firmy](https://onedrive.live.com/about/business/). Licence na Office 365 se dají přiřadit v [centru pro správu Microsoft 365](https://admin.microsoft.com) podle těchto [pokynů](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc).
+- Koncový uživatel musí mít licenci pro [aplikace Microsoft 365 pro firmy nebo podnik](https://products.office.com/business/compare-more-office-365-for-business-plans) propojený s jejich Azure Active Directorym účtem. Předplatné musí obsahovat aplikace Office na mobilních zařízeních a může obsahovat účet pro ukládání do cloudu přes [OneDrive pro firmy](https://onedrive.live.com/about/business/). Licence na Office 365 se dají přiřadit v [centru pro správu Microsoft 365](https://admin.microsoft.com) podle těchto [pokynů](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc).
 
-- Koncový uživatel musí mít spravované umístění nakonfigurované pomocí podrobné funkce Uložit jako v nastavení zásad ochrany aplikací Uložit kopie org data. Pokud je spravovaným umístěním třeba OneDrive, musí být v aplikaci Word, Excel nebo PowerPoint koncového uživatele nakonfigurovaná aplikace [OneDrive](https://onedrive.live.com/about/).
+- Koncový uživatel musí mít spravované umístění nakonfigurované pomocí podrobné funkce Uložit jako v nastavení zásad ochrany aplikací Uložit kopie org data. Pokud je spravovaným umístěním například OneDrive, aplikace [OneDrive](https://onedrive.live.com/about/) by měla být nakonfigurovaná v aplikaci Word, Excel nebo PowerPoint koncového uživatele.
 
 - Pokud je spravovaným umístěním OneDrive, musí být aplikace cílem pro zásadu ochrany aplikace nasazenou pro koncového uživatele.
 
@@ -190,7 +190,7 @@ V tomto nastavení, které je přístupné na konzole pro správu OneDrivu, mů�
 
 Po povolení jsou aplikace OneDrive a SharePoint pro iOS/iPadOS a Android chráněné s vybraným nastavením standardně. Odborník na IT může tuto zásadu upravit v konzole Intune, kde může přidat další cílové aplikace a změnit její nastavení. 
 
-Implicitně smí existovat jenom jedna **globální** zásada pro tenanta. K vytvoření dalších globálních zásad pro tenanta je však možné použít [rozhraní Graph API v Intune](../developer/intune-graph-apis.md). Tento postup se ale nedoporučuje. Vytvoření dalších globálních zásad se nedoporučuje kvůli možným komplikacím při řešení potíží s implementací této zásady.
+Implicitně smí existovat jenom jedna **globální** zásada pro tenanta. K vytvoření dalších globálních zásad pro tenanta je však možné použít [rozhraní Graph API v Intune](../developer/intune-graph-apis.md). Tento postup se ale nedoporučuje. Vytváření dalších globálních zásad se nedoporučuje, protože řešení potíží s implementací těchto zásad může být složité.
 
 **Globální** zásada sice platí pro všechny uživatele v tenantovi, ale každá standardní zásada ochrany aplikací v Intune toto nastavení přepíše.
 
@@ -231,7 +231,7 @@ V případě zařízení se systémem iOS/iPadOS, i když je kód PIN sdílen me
   > Kvůli častějšímu ověřování požadavků na přístup uživatele (například výzvy k zadání PINu) doporučujeme zmenšit hodnotu nastavení Překontrolovat požadavky na přístup za (minuty), a to především u často používaných aplikací.
 
 **Předdefinované PIN kódy aplikací pro Outlook a OneDrive**<br>
-PIN kód Intune funguje na základě časovače založeného na nečinnosti (hodnota **překontrolovat požadavky na přístup po (minuty)** ). Proto se výzvy PIN kódu Intune zobrazují nezávisle na výzvách integrovaných PIN kódů aplikace pro Outlook a OneDrive, které jsou většinou ve výchozím nastavení svázané se spuštěním aplikace. Pokud se uživateli zobrazí obě výzvy PIN kódu najednou, měl by mít přednost PIN kód Intune.
+PIN kód Intune funguje na základě časovače založeného na nečinnosti (hodnota **překontrolovat požadavky na přístup po (minuty)**). Proto se výzvy PIN kódu Intune zobrazují nezávisle na výzvách integrovaných PIN kódů aplikace pro Outlook a OneDrive, které jsou většinou ve výchozím nastavení svázané se spuštěním aplikace. Pokud se uživateli zobrazí obě výzvy PIN kódu najednou, měl by mít přednost PIN kód Intune.
 
 **Zabezpečení kódu PIN pro Intune**<br>
 PIN slouží k tomu, aby v aplikaci povolil pracovat s daty organizace jenom správnému uživateli. Proto se koncový uživatel musí přihlásit s pracovním nebo školním účtem, aby si mohl nastavit nebo resetovat PIN pro aplikaci Intune. Toto ověřování zpracovává Azure Active Directory přes zabezpečený token Exchange a není transparentní pro [sadu Intune SDK](../developer/app-sdk.md). Z hlediska zabezpečení je nejlepší ochranou pracovních nebo školních dat jejich šifrování. Šifrování nesouvisí s PINem aplikace, ale jde o vlastní zásadu ochrany aplikace.
@@ -273,7 +273,7 @@ Správci IT můžou nasadit zásadu ochrany aplikace, která vyžaduje šifrová
 
 U obchodních aplikací spravovaných pomocí [Nástroje pro zabalení aplikace Intune](../developer/apps-prepare-mobile-application-management.md)se všechna data aplikací považují za podniková.
 
-### <a name="selective-wipe"></a>selektivní vymazání
+### <a name="selective-wipe"></a>Selektivní vymazání
 
 **Vzdáleně vymazat data**<br>
 Intune může data aplikace vymazat třemi různými způsoby: 
@@ -310,7 +310,7 @@ Zásady ochrany aplikací Intune umožňují řídit přístup k aplikacím jen 
 Účelem tohoto procesu je pokračovat v zachování dat vaší organizace v rámci zabezpečení a ochrany v aplikaci na úrovni aplikace. Tato funkce je dostupná jenom pro iOS/iPadOS a vyžaduje zapojení aplikací, které integrují sadu Intune SDK pro iOS/iPadOS, verze 9.0.1 nebo novější. Integrace této sady SDK je nezbytná kvůli vynucení tohoto chování u cílových aplikací. K této integraci dochází průběžně a závisí na týmech konkrétních aplikací. Mezi zapojené aplikace patří například WXP, Outlook, Managed Browser a Yammer.
   
 ### <a name="ios-share-extension"></a>rozšíření pro sdílení iOS
-Rozšíření sdílené složky pro iOS/iPadOS můžete použít k otevření pracovních nebo školních dat v nespravovaných aplikacích, a to i v případě, že zásady přenosu dat nastavily **jenom na spravované aplikace** nebo **žádné aplikace**. Zásady ochrany aplikací Intune nemůžou řídit rozšíření sdílené složky iOS/iPadOS bez správy zařízení. Proto Intune _**podniková data před jejich sdílením mimo příslušnou aplikaci zašifruje**_ . Toto chování šifrování můžete ověřit tak, že se pokusíte otevřít podnikový soubor mimo spravovanou aplikaci. Soubor by měl být zašifrovaný a mimo spravovanou aplikaci by ho nemělo být možné otevřít.
+Rozšíření sdílené složky pro iOS/iPadOS můžete použít k otevření pracovních nebo školních dat v nespravovaných aplikacích, a to i v případě, že zásady přenosu dat nastavily **jenom na spravované aplikace** nebo **žádné aplikace**. Zásady ochrany aplikací Intune nemůžou řídit rozšíření sdílené složky iOS/iPadOS bez správy zařízení. Proto Intune _**podniková data před jejich sdílením mimo příslušnou aplikaci zašifruje**_. Toto chování šifrování můžete ověřit tak, že se pokusíte otevřít podnikový soubor mimo spravovanou aplikaci. Soubor by měl být zašifrovaný a mimo spravovanou aplikaci by ho nemělo být možné otevřít.
 
 ### <a name="multiple-intune-app-protection-access-settings-for-same-set-of-apps-and-users"></a>Více nastavení přístupu k ochraně aplikací Intune pro stejnou sadu aplikací a uživatelů
 Zásady ochrany aplikací Intune pro přístup se použijí v konkrétním pořadí na zařízeních koncových uživatelů, aby se pokusily o přístup k cílové aplikaci ze svého podnikového účtu. Obecně má přednost vymazání, pak blokování, a pak upozornění, které se dá zavřít. Například pokud se vztahuje na konkrétního uživatele nebo aplikaci, nastavení minimálního operačního systému iOS/iPadOS, které uživatele upozorní na aktualizaci verze iOS/iPadOS, se použije po nastavení minimálního operačního systému iOS/iPadOS, které uživateli zablokuje přístup. Proto ve scénáři, kde správce IT nakonfiguruje minimální operační systém iOS na 11.0.0.0 a minimální operační systém iOS (pouze upozornění) na 11.1.0.0, zatímco zařízení pokoušející se o přístup k aplikaci má iOS 10, by byl koncový uživatel zablokován na základě přísnějšího nastavení pro minimální verzi operačního systému iOS, které vede k zablokování přístupu.
@@ -320,7 +320,7 @@ Při práci s různými typy nastavení bude mít požadavek na verzi Intune SDK
 ## <a name="app-protection-experience-for-android-devices"></a>Prostředí ochrany aplikací pro zařízení s Androidem
 
 ### <a name="company-portal-app-and-intune-app-protection"></a>Portál společnosti aplikace a ochrana aplikací Intune
-Většina funkcí ochrany aplikací je integrovaná do aplikace Portál společnosti. I když aplikace Portál společnosti se vždycky vyžaduje, registrace zařízení se _nevyžaduje_. Pro správu mobilních aplikací bez registrace (MAM-WE) potřebuje koncový uživatel na zařízení nainstalovanou aplikaci Portál společnosti.
+Většina funkcí ochrany aplikací je integrovaná do aplikace Portál společnosti. Registrace zařízení se _nevyžaduje, i když_ je aplikace Portál společnosti vždycky povinná. Pro správu mobilních aplikací bez registrace (MAM-WE) potřebuje koncový uživatel na zařízení nainstalovanou aplikaci Portál společnosti.
 
 ### <a name="multiple-intune-app-protection-access-settings-for-same-set-of-apps-and-users"></a>Více nastavení přístupu k ochraně aplikací Intune pro stejnou sadu aplikací a uživatelů
 Zásady ochrany aplikací Intune pro přístup se použijí v konkrétním pořadí na zařízeních koncových uživatelů, aby se pokusily o přístup k cílové aplikaci ze svého podnikového účtu. Obecně má přednost blokování, pak upozornění, které se dá zavřít. Například pokud se aplikuje na konkrétního uživatele nebo aplikaci, nastavení minimální verze opravy Androidu, které uživatele upozorňuje, aby provedl upgrade opravy, se použije po nastavení minimální verze opravy Androidu, které uživateli zablokuje přístup. Proto ve scénáři, kde správce IT nakonfiguruje minimální verzi opravy Androidu na 2018-03-01 a minimální verzi opravy Androidu (pouze upozornění) na 2018-02-01, zatímco zařízení pokoušející se o přístup k aplikaci má verzi opravy 2018-01-01, by byl koncový uživatel zablokován na základě přísnějšího nastavení pro minimální verzi opravy Androidu, která vede k zablokování přístupu. 

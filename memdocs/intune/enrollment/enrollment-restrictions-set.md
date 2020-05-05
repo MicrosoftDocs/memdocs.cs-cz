@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b05d89c40f274a7cacc29634fcf60433019c7e1f
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 4da13b77b52a8110072dcba208b70d1ce0407cbb
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80327084"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077984"
 ---
 # <a name="set-enrollment-restrictions"></a>Nastavení omezení registrace
 
@@ -33,7 +33,7 @@ Jako správce Intune můžete vytvořit a spravovat omezení registrace, která 
 - Počet zařízení.
 - Operační systémy a verze.
 
-Můžete vytvořit více omezení a použít je u různých skupin uživatelů. Pro různá omezení můžete nastavit [pořadí priority](#change-enrollment-restriction-priority).
+Můžete vytvořit několik omezení a použít je pro různé skupiny uživatelů. Můžete nastavit [pořadí priorit](#change-enrollment-restriction-priority) pro různá omezení.
 
 >[!NOTE]
 >Omezení registrací nepatří k funkcím zabezpečení. Ohrožená zařízení mohou poskytovat zavádějící informace. Tato omezení jsou jen určitou bariérou pro uživatele bez zlých úmyslů.
@@ -59,11 +59,11 @@ Pro omezení registrace typu i limitu počtu zařízení se automaticky poskytno
 
 ## <a name="create-a-device-type-restriction"></a>Vytvoří omezení typu zařízení.
 
-1. Přihlaste se [k centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) > **zařízení** > **omezení registrace** > **vytvořit omezení** > **omezení typu zařízení**.
+1. Přihlaste se k centru**pro** >  >  [správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431)**omezení** > registrace**vytvořit** > omezení**typu zařízení**.
 2. Na stránce **základy** poskytněte omezení **název** a volitelný **Popis**.
 3. Kliknutím na tlačítko **Další** přejdete na stránku **Nastavení platformy** .
 4. V části **platforma**vyberte možnost **Povolení** pro platformy, u kterých chcete toto omezení omezit.
-    ![zakončení obrazovky pro výběr nastavení platformy](./media/enrollment-restrictions-set/choose-platform-settings.png)
+    ![Zakončení obrazovky pro výběr nastavení platformy](./media/enrollment-restrictions-set/choose-platform-settings.png)
 5. V části **verze**vyberte minimální a maximální verze, které mají povolené platformy podporovat. Omezení verze se vztahují jenom na zařízení zaregistrovaná ve Portál společnosti.
      Podporované formáty verzí:
     - Správce zařízení s Androidem a pracovní profil Android Enterprise podporují hlavní. podverze. rev. Build.
@@ -85,7 +85,7 @@ Pro omezení registrace typu i limitu počtu zařízení se automaticky poskytno
 7. V části **výrobce zařízení**Zadejte čárkami oddělený seznam výrobců, které chcete blokovat.
 8. Kliknutím na tlačítko **Další** přejdete na stránku **přiřazení** .
 9. Zvolte **Vybrat skupiny, které chcete zahrnout** , a potom pomocí vyhledávacího pole vyhledejte skupiny, které chcete zahrnout do tohoto omezení. Omezení platí jenom u skupin, ke kterým je přiřazené. Pokud omezení nepřiřadíte alespoň k jedné skupině, nebude mít žádný efekt. Pak zvolte **Vybrat**. 
-    ![zakončení obrazovky pro výběr nastavení platformy](./media/enrollment-restrictions-set/select-groups.png)
+    ![Zakončení obrazovky pro výběr nastavení platformy](./media/enrollment-restrictions-set/select-groups.png)
 10. Kliknutím na tlačítko **Další** přejdete na stránku **Revize + vytvořit** .
 11. Vyberte **vytvořit** a vytvořte tak omezení.
 12. Priorita nově vytvořeného omezení bude o jeden stupeň vyšší než výchozí omezení. [Prioritu můžete změnit](#change-enrollment-restriction-priority).
@@ -93,19 +93,19 @@ Pro omezení registrace typu i limitu počtu zařízení se automaticky poskytno
 
 ## <a name="create-a-device-limit-restriction"></a>Vytvoření omezení limitu počtu zařízení
 
-1. Přihlaste se [k centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) > **zařízení** > **omezení registrace** > **vytvořit** omezení > omezení **limitu počtu zařízení**.
+1. Přihlaste se k > **Devices** >  [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)**omezení** > registrace**vytvořit** > omezení omezení**počtu zařízení**.
 2. Na stránce **základy** poskytněte omezení **název** a volitelný **Popis**.
 3. Kliknutím na tlačítko **Další** přejdete na stránku **omezení počtu zařízení** .
 4. V poli **limit počtu zařízení**vyberte maximální počet zařízení, která může uživatel zaregistrovat.
-    ![zakončení obrazovky pro výběr limitu zařízení](./media/enrollment-restrictions-set/choose-device-limit.png)
+    ![Zakončení obrazovky pro výběr limitu zařízení](./media/enrollment-restrictions-set/choose-device-limit.png)
 5. Kliknutím na tlačítko **Další** přejdete na stránku **přiřazení** .
 6. Zvolte **Vybrat skupiny, které chcete zahrnout** , a potom pomocí vyhledávacího pole vyhledejte skupiny, které chcete zahrnout do tohoto omezení. Omezení platí jenom u skupin, ke kterým je přiřazené. Pokud omezení nepřiřadíte alespoň k jedné skupině, nebude mít žádný efekt. Pak zvolte **Vybrat**. 
-    ![zakončení obrazovky pro výběr skupin](./media/enrollment-restrictions-set/select-groups-device-limit.png)
+    ![Zakončení obrazovky pro výběr skupin](./media/enrollment-restrictions-set/select-groups-device-limit.png)
 7. Kliknutím na tlačítko **Další** přejdete na stránku **Revize + vytvořit** .
 8. Vyberte **vytvořit** a vytvořte tak omezení.
 9. Priorita nově vytvořeného omezení bude o jeden stupeň vyšší než výchozí omezení. [Prioritu můžete změnit](#change-enrollment-restriction-priority).
 
-Během registrace BYOD uživatelům se zobrazí oznámení, že se při dosažení limitu počtu zaregistrovaných zařízení. Například v systému iOS:
+Během registrace BYOD se uživatelům zobrazí oznámení, které jim oznámí, že dosáhli maximálního počtu zaregistrovaných zařízení. Například v systému iOS:
 
 ![Oznámení o dosažení limitu počtu zařízení s iOSem](./media/enrollment-restrictions-set/enrollment-restrictions-ios-set-limit-notification.png)
 
@@ -126,7 +126,7 @@ Během registrace BYOD uživatelům se zobrazí oznámení, že se při dosažen
 
 Nastavení omezení registrace můžete změnit podle následujících kroků. Tato omezení neovlivňují zařízení, která jsou už zaregistrovaná. Pomocí této funkce se nedají blokovat zařízení zaregistrovaná prostřednictvím [agenta Intune pro počítače](../fundamentals/manage-windows-pcs-with-microsoft-intune.md).
 
-1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) > **zařízení** > **omezení registrace** > vyberte omezení, které chcete v > **vlastnostech**změnit.
+1. Přihlaste se k centru**pro** >  >  [správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431)**omezení registrace** > vyberte omezení, které chcete > **vlastností**změnit.
 2. Klikněte na tlačítko **Upravit** vedle nastavení, které chcete změnit.
 3. Na stránce **Upravit** proveďte požadované změny a přejděte na stránku **Revize + Uložit** a pak zvolte **Uložit**.
 
@@ -141,18 +141,18 @@ Když zablokujete registraci osobních zařízení s Windows, Intune u každého
 
 K registraci zařízení s Windows ve společnosti jsou povoleny následující metody:
 - Uživatel se registruje pomocí [účtu správce registrace zařízení]( device-enrollment-manager-enroll.md).
-- Zařízení se registruje prostřednictvím programu [Windows AutoPilot](enrollment-autopilot.md).
+- Zařízení se registruje pomocí automatických [pilotů Windows](enrollment-autopilot.md).
 - Zařízení se zaregistruje u automatického pilotního nasazení Windows, ale v nastavení Windows se nejedná o možnost jenom registrace MDM.
-- Číslo IMEI zařízení je uvedené v seznamu **Registrace zařízení** >  **[Identifikátory podnikových zařízení](corporate-identifiers-add.md)** . (Nepodporuje se ve Windows Phone 8.1.)
+- Číslo IMEI zařízení je uvedené v části **registrace** > zařízení**[identifikátory podnikových zařízení](corporate-identifiers-add.md)**. (Nepodporuje se ve Windows Phone 8.1.)
 - Zařízení se registruje v rámci [balíčku hromadného zřizování](windows-bulk-enroll.md).
 - Zařízení se registruje prostřednictvím objektu zásad skupiny nebo [automatického zápisu z Configuration Manager pro spolusprávu](https://docs.microsoft.com/configmgr/comanage/quickstart-paths#bkmk_path1).
  
 Intune označí jako firemní tyto registrace. Protože ale nenabízí řízení Intune pro správu jednotlivých zařízení, zablokují se:
-- [Automatická registrace MDM](windows-enroll.md#enable-windows-10-automatic-enrollment) s [připojením k Azure Active Directory během instalace Windows](https://docs.microsoft.com/azure/active-directory/device-management-azuread-joined-devices-frx)\*.
+- [Automatická registrace MDM](windows-enroll.md#enable-windows-10-automatic-enrollment) \*s [Azure Active Directory JOIN během instalace systému Windows](https://docs.microsoft.com/azure/active-directory/device-management-azuread-joined-devices-frx).
 - [Automatická registrace MDM](windows-enroll.md#enable-windows-10-automatic-enrollment) s [připojením k Azure Active Directory z nastavení Windows](https://docs.microsoft.com/azure/active-directory/user-help/user-help-register-device-on-network).*
  
 Zablokují se také následující metody osobní registrace:
-- [Automatická registrace MDM](windows-enroll.md#enable-windows-10-automatic-enrollment) s [přidáním pracovního účtu z nastavení Windows](https://docs.microsoft.com/azure/active-directory/user-help/user-help-join-device-on-network)\*.
+- [Automatická registrace MDM](windows-enroll.md#enable-windows-10-automatic-enrollment) \*pomocí [možnosti Přidat pracovní účet z nastavení systému Windows](https://docs.microsoft.com/azure/active-directory/user-help/user-help-join-device-on-network)
 - Volba [Jen registrace MDM]( https://docs.microsoft.com/windows/client-management/mdm/mdm-enrollment-of-windows-devices#connecting-personally-owned-devices-bring-your-own-device) v nastavení Windows.
 
 \*Nezablokují se, pokud se k registraci použije Autopilot.
@@ -174,8 +174,8 @@ Registrace zařízení obsahuje výchozí omezení jak pro omezení typu zaříz
 
 Prioritu kteréhokoli nevýchozího omezení můžete změnit.
 
-1. Přihlaste se k portálu Azure Portal.
+1. Přihlaste se k portálu Azure.
 2. Zvolte **Další služby**, vyhledejte **Intune** a zvolte **Intune**.
-3. Zvolte **Registrace zařízení** > **Omezení registrace**.
+3. Vyberte **registrace** > zařízení**omezení registrace**.
 4. Najeďte kurzorem myši na omezení v seznamu priorit.
 5. Pomocí tří svislých teček přetáhněte prioritu na požadované místo v seznamu.

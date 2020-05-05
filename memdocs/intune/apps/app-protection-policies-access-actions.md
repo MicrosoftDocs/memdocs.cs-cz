@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f77fb3b93c2600bf422aa95af267abc3e64ae7ee
-ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
+ms.openlocfilehash: ba37abadc8571cee53b97877f4a8a6695f78acd2
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80551352"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079327"
 ---
 # <a name="selectively-wipe-data-using-app-protection-policy-conditional-launch-actions-in-intune"></a>Selektivní vymazání dat pomocí zásad ochrany aplikací s podmíněnými spouštěcími akcemi v Intune
 
 Pomocí zásad ochrany aplikací můžete v Intune nakonfigurovat nastavení, která koncovým uživatelům zablokují přístup k podnikové aplikaci nebo účtu. Tato nastavení se zaměřují na přemístění dat a požadavky na přístup, které vaše organizace stanovila například pro zařízení s jailbreakem a minimální verze operačního systému.
  
-S využitím těchto nastavení můžete explicitně vymazat podniková data ze zařízení koncového uživatele jako akci, která se má provést při nedodržení předpisů. U některých nastavení budete moci nakonfigurovat více akcí (například zablokování přístupu a vymazání dat) na základě různých zadaných hodnot.
+Pomocí těchto nastavení můžete výslovně zvolit, že se firemní data vaší společnosti vymažou ze zařízení koncového uživatele jako akce, která se má provést při nedodržení předpisů. U některých nastavení budete moci nakonfigurovat více akcí (například zablokování přístupu a vymazání dat) na základě různých zadaných hodnot.
 
 ## <a name="create-an-app-protection-policy-using-conditional-launch-actions"></a>Vytvoření zásady ochrany aplikací pomocí podmíněných spouštěcích akcí
 
@@ -85,7 +85,7 @@ Pro Android budete moci pomocí rozevíracího seznamu **Nastavení** nakonfigur
 - Minimální verze Portál společnosti
 - Maximální povolená úroveň hrozby pro zařízení
 
-Pomocí **Minimální verze portál společnosti**můžete zadat konkrétní minimální verzi portál společnosti, která se vynutila na zařízení koncového uživatele. Toto nastavení podmíněného spuštění umožňuje nastavit hodnoty pro **blokování přístupu**, **vymazání dat**a **Upozornění** jako na možné akce, když se jednotlivá hodnota nesplní. Možné formáty této hodnoty se řídí vzorem *[hlavní]. [ Vedlejší]* , *[hlavní]. [ Vedlejší]. [Build]* nebo *[hlavní]. [ Vedlejší]. [Build]. [Revize]* . Vzhledem k tomu, že někteří koncoví uživatelé nemusí preferovat vynucenou aktualizaci aplikací na místě, může být při konfiguraci tohoto nastavení ideální možnost upozornění. Obchod Google Play je dobrým úkolem, který odesílá jenom rozdílové bajty pro aktualizace aplikací, ale může to být i velké množství dat, které uživatel nemusí použít, pokud se v době aktualizace data používají. Vynucení aktualizace a stažení aktualizované aplikace může vést k neočekávaným poplatkům za data v době aktualizace. Nastavení **Minimální verze portál společnosti** , pokud je nakonfigurováno, bude mít vliv na každého koncového uživatele, který získá 5.0.4560.0 verze portál společnosti a jakékoli budoucí verze portál společnosti. Toto nastavení nebude mít žádný vliv na uživatele, kteří používají verzi Portál společnosti, která je starší než verze, ve které byla tato funkce vydána. Koncoví uživatelé, kteří používají automatické aktualizace aplikace na jejich zařízení, nejspíš neuvidí žádná dialogová okna této funkce, protože budou pravděpodobně na nejnovější verzi Portál společnosti. Toto nastavení platí jenom pro Android s ochranou aplikací pro zapsaná a neregistrovaná zařízení.
+Pomocí **Minimální verze portál společnosti**můžete zadat konkrétní minimální verzi portál společnosti, která se vynutila na zařízení koncového uživatele. Toto nastavení podmíněného spuštění umožňuje nastavit hodnoty pro **blokování přístupu**, **vymazání dat**a **Upozornění** jako na možné akce, když se jednotlivá hodnota nesplní. Možné formáty této hodnoty se řídí vzorem *[hlavní]. [ Vedlejší]*, *[hlavní]. [ Vedlejší]. [Build]* nebo *[hlavní]. [ Vedlejší]. [Build]. [Revize]*. Vzhledem k tomu, že někteří koncoví uživatelé nemusí preferovat vynucenou aktualizaci aplikací na místě, může být při konfiguraci tohoto nastavení ideální možnost upozornění. Obchod Google Play je dobrým úkolem, který odesílá jenom rozdílové bajty pro aktualizace aplikací, ale může to být i velké množství dat, které uživatel nemusí použít, pokud se v době aktualizace data používají. Vynucení aktualizace a stažení aktualizované aplikace může vést k neočekávaným poplatkům za data v době aktualizace. Nastavení **Minimální verze portál společnosti** , pokud je nakonfigurováno, bude mít vliv na každého koncového uživatele, který získá 5.0.4560.0 verze portál společnosti a jakékoli budoucí verze portál společnosti. Toto nastavení nebude mít žádný vliv na uživatele, kteří používají verzi Portál společnosti, která je starší než verze, ve které byla tato funkce vydána. Koncoví uživatelé, kteří používají automatické aktualizace aplikace na jejich zařízení, nejspíš neuvidí žádná dialogová okna této funkce, protože budou pravděpodobně na nejnovější verzi Portál společnosti. Toto nastavení platí jenom pro Android s ochranou aplikací pro zapsaná a neregistrovaná zařízení.
 
 Pokud chcete použít nastavení **Výrobci zařízení**, zadejte seznam výrobců zařízení s Androidem oddělených středníkem. U těchto hodnot se nerozlišují velká a malá písmena. Kromě vytváření sestav služby Intune můžete v nastavení zařízení najít výrobce Androidu zařízení. <br>
 Příklad zadání: *Výrobce A;Výrobce B* 
@@ -109,7 +109,7 @@ Pokud chcete konfigurovat některé nastavení, vyberte ho v rozevíracím sezna
 
 Následující seznam obsahuje nejčastější akce:
 - **Blokovat přístup** – zablokuje koncovému uživateli přístup k podnikové aplikaci.
-- **Vymazat data** – vymaže ze zařízení koncového uživatele podniková data.
+- **Vymazání dat** – vymaže podniková data ze zařízení koncového uživatele.
 - **Upozornit** – zobrazí koncovému uživateli dialogové okno s upozorněním.
 
 V některých případech, jako u nastavení **Minimální verze operačního systému**, můžete nakonfigurovat, aby se provedly všechny použitelné akce na základě různých čísel verzí. 
@@ -121,6 +121,6 @@ Jakmile je nastavení plně nakonfigurované, objeví se řádek v zobrazení je
 ## <a name="next-steps"></a>Další kroky
 
 Další informace o zásadách ochrany aplikací v Intune zjistíte zde:
-- [Vytvoření a přiřazení zásad ochrany aplikací](app-protection-policies.md)
+- [Jak vytvářet a přiřazovat zásady ochrany aplikací](app-protection-policies.md)
 - [nastavení zásad ochrany aplikací pro iOS/iPadOS](app-protection-policy-settings-ios.md)
 - [Nastavení zásad ochrany aplikací pro Android v Microsoft Intune](app-protection-policy-settings-android.md) 

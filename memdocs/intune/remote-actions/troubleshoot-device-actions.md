@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 78dec649f5486e0dcf56f92b8ac16d176d119653
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 2ad644d8438b23f36eccad24bee31ee92de5c040
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80322323"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078838"
 ---
 # <a name="troubleshoot-device-actions-in-intune"></a>Řešení potíží s akcemi zařízení v Intune
 
@@ -32,7 +32,7 @@ Microsoft Intune má mnoho akcí, které vám pomůžou se spravovanými zaříz
 ## <a name="disable-activation-lock-action"></a>Zakázat Zámek aktivace akci
 
 ### <a name="i-clicked-the-disable-activation-lock-action-in-the-portal-but-nothing-happened-on-the-device"></a>Na portálu jsem kliknul na akci zakázat Zámek aktivace, ale na zařízení nic neproběhlo.
-Toto je očekávané. Po zahájení akce zakázat Zámek aktivace se službě Intune požádalo o aktualizovaný kód od společnosti Apple. Po zobrazení zařízení na obrazovce Zámek aktivace ručně zadáte kód do pole heslo. Tento kód je platný jenom po dobu 15 dnů, takže nezapomeňte kliknout na akci a zkopírovat kód před tím, než vydáte vymazání.
+To se očekává. Po zahájení akce zakázat Zámek aktivace se službě Intune požádalo o aktualizovaný kód od společnosti Apple. Po zobrazení zařízení na obrazovce Zámek aktivace ručně zadáte kód do pole heslo. Tento kód je platný jenom po dobu 15 dnů, takže nezapomeňte kliknout na akci a zkopírovat kód před tím, než vydáte vymazání.
 
 ### <a name="why-dont-i-see-the-disable-activation-lock-code-in-the-hardware-overview-blade-of-my-iosipados-device"></a>Proč se nezobrazuje kód zakázat Zámek aktivace v okně s přehledem hardwaru zařízení s iOS/iPadOS?
 K nejpravděpodobnějším důvodům patří:
@@ -54,11 +54,11 @@ Ne. A nemusíte zadávat pomlčky.
 ## <a name="remove-devices-action"></a>Akce odebrání zařízení
 
 ### <a name="how-do-i-tell-who-started-a-retirewipe"></a>Návody informovat, kdo zahájil vyřazení/vymazání?
-V centru pro [správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)přejdete do části **Správa tenanta** > **protokoly auditu** > Zkontrolujte sloupce **iniciované ve** sloupci.
+V centru pro [správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)přejdete do části > **protokoly auditu** **správy tenanta**> zkontrolujte **iniciované** sloupce.
 Pokud položku nevidíte, nejpravděpodobnější osoba, která iniciovala tuto akci, je uživatel tohoto zařízení. Pravděpodobně použili Portál společnosti aplikaci nebo portal.manage.microsoft.com.
 
 ### <a name="why-wasnt-my-application-uninstalled-after-using-retire"></a>Proč se mi po použití vyřazení nenainstalovala moje aplikace?
-Protože není považována za spravovanou aplikaci. V tomto kontextu je spravovaná aplikace aplikace, která byla nainstalována pomocí služby Intune. Patří mezi ně:
+Protože není považována za spravovanou aplikaci. V tomto kontextu je spravovaná aplikace aplikace, která byla nainstalována pomocí služby Intune. To zahrnuje:
 - Aplikace se nasadila jako povinná.
 - Aplikace byla nasazená jako dostupná a pak koncovým uživatelem nainstalovaná v aplikaci Portál společnosti.
 
@@ -69,7 +69,7 @@ Toto chování je očekávané. Google neumožňuje obnovení továrního nastav
 Protože vyřazení zařízení z provozu neodvolává přístupové tokeny. Pomocí zásad podmíněného přístupu můžete zmírnit tuto podmínku.
 
 ### <a name="how-can-i-monitor-a-retirewipe-action-after-it-was-issued"></a>Jak můžu monitorovat akci vyřazení/vymazání po jejím vydání?
-V centru pro [správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)přejdete do části **Správa tenanta** > **protokoly auditu**.
+V centru pro [správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)přejdete do části > **protokoly auditu** **správy tenanta**.
 
 ### <a name="why-do-wipes-sometimes-show-as-pending-indefinitely"></a>Proč se vymazání někdy zobrazuje na neomezenou dobu?
 Zařízení před zahájením resetování vždy hlásí svůj stav zpět do služby Intune. Proto se akce zobrazí jako čeká na vyřízení. Pokud jste ověřili, že se akce úspěšně provedla, odstraňte zařízení ze služby.

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e81a88ae3d6db37dfeece31a2e78a2243a9a6387
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: a05e36a2da42bf88e2d9d7e94a67e2d81b8f1271
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79333143"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078273"
 ---
 # <a name="assign-user-and-device-profiles-in-microsoft-intune"></a>Přiřazení profilů uživatelů a zařízení v Microsoft Intune
 
@@ -44,20 +44,20 @@ Ujistěte se, že máte odpovídající roli pro přiřazení profilů. Další 
 ## <a name="assign-a-device-profile"></a>Přiřazení profilu zařízení
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **zařízení** > **konfigurační profily**. Zobrazí se všechny profily.
+2. Vyberte možnost**profily konfigurace** **zařízení** > . Zobrazí se všechny profily.
 3. Vyberte profil, který chcete přiřadit > **přiřazení**.
 4. Zvolte **Zahrnout** skupiny nebo **vyloučit** skupiny a pak vyberte své skupiny. Když skupiny vybíráte, zvolíte skupinu Azure AD. Pokud chcete vybrat více skupin, podržte stisknutou klávesu **CTRL** a vyberte vaše skupiny.
 
     ![Snímek obrazovky s možnostmi zahrnout nebo vyloučit skupiny z přiřazení profilu](./media/device-profile-assign/group-include-exclude.png)
 
-5. **Uložte** provedené změny.
+5. **Uložte** změny.
 
 ### <a name="evaluate-how-many-users-are-targeted"></a>Vyhodnocení počtu cílových uživatelů
 
 Když přiřadíte profil, můžete také **vyhodnotit** , kolik uživatelů je ovlivněno. Tato funkce vypočítává uživatele. nepočítá zařízení.
 
-1. V centru pro správu vyberte **zařízení** > **konfigurační profily**.
-2. Vyberte profil > **přiřazení** > **vyhodnotit**. Zobrazí se zpráva o tom, kolik uživatelů cílí na tento profil.
+1. V centru pro správu vyberte možnost **Devices** > **profily konfigurace**zařízení.
+2. Vyberte profil >**vyhodnotit** **přiřazení** > . Zobrazí se zpráva o tom, kolik uživatelů cílí na tento profil.
 
 Pokud je tlačítko **vyhodnotit** zobrazené šedě, ujistěte se, že je profil přiřazený k jedné nebo více skupinám.
 
@@ -73,7 +73,7 @@ Na zařízeních s Windows 10 můžete přidat **pravidla použitelnosti** , aby
 
 Mnoho uživatelů požaduje používání skupin uživatelů a kdy používat skupiny zařízení. Odpověď závisí na vašem cíli. Tady jsou některé doprovodné materiály, které vám pomohou začít.
 
-### <a name="device-groups"></a>Skupiny zařízení
+### <a name="device-groups"></a>skupiny zařízení.
 
 Pokud chcete použít nastavení na zařízení bez ohledu na to, kdo je přihlášený, přiřaďte své profily ke skupině zařízení. Nastavení použitá pro skupiny zařízení vždy přecházejí na zařízení, nikoli na uživatele.
 

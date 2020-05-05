@@ -18,20 +18,20 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e986a6dcb598a11a0f2906d6d7be8e2e1abb6aba
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 1e2b5f39c9c0316239c2de6f353c73e7f80f743c
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79329119"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079565"
 ---
 # <a name="data-collection-in-intune"></a>Shromažďování údajů v Intune
 
 Když si uživatelé zaregistrují svá firemní nebo osobní zařízení pomocí Intune, některé z jejich osobních údajů se shromažďují a sdílí. Intune shromažďuje osobní údaje z těchto zdrojů:
 
-- Využití služby Intune na portálu Azure Portal správcem
+- Použití Intune v Azure Portal pro správce.
 - Zařízení koncových uživatelů (při registraci ke správě Intune a v průběhu využívání)
-- Účty zákazníků u služeb třetích stran (podle pokynů správce)
+- Zákaznické účty na službách třetích stran (podle pokynů správce).
 - Diagnostické informace a informace o výkonu a použití
 
 Z těchto zdrojů shromažďuje Intune informace, které spadají do těchto tří kategorií: [identifikované](#identified-data), [pseudonymizované](#pseudonymized-data) a [agregované](#aggregated-data) údaje.
@@ -41,11 +41,11 @@ Z těchto zdrojů shromažďuje Intune informace, které spadají do těchto tř
 
 ## <a name="identified-data"></a>Identifikované údaje
 
-Většina osobních údajů shromážděných službou Intune představuje identifikované údaje. Tato data se vážou k uživateli, zařízení nebo aplikaci a pro správu jako takovou jsou nezbytná. Slouží ke správě zařízení a aplikací uživatele a poskytování služby Intune.
+Většina osobních údajů shromážděných službou Intune představuje identifikované údaje. Tato data se vážou k uživateli, zařízení nebo aplikaci a pro správu jako takovou jsou nezbytná. Identifikovaná data se používají ke správě zařízení a aplikací uživatele a k zajištění služby Intune.
 
 Mezi identifikovaná data shromažďovaná službou Intune patří mimo jiné: 
 
-- Informace o uživateli
+- Údaje uživatele
   - Jméno vlastníka / zobrazované jméno uživatele (jméno uživatele zaregistrované v Azure, které označuje ID uživatele služby Azure)
   - Hlavní název uživatele nebo e-mailová adresa
   - Identifikátory uživatele třetích stran (např. Apple ID)
@@ -64,13 +64,13 @@ Mezi identifikovaná data shromažďovaná službou Intune patří mimo jiné:
   - Vytvořit
   - Aktualizace (úpravy)
   - Odstranit
-  - Přiřadit
+  - Přiřazení
   - Vzdálené úlohy
-- Informace o podpoře
+- Informace pro získání podpory
   - Kontaktní informace (jméno, telefonní číslo, e-mailová adresa)
   - E-mailové diskuze s podporou Microsoftu a členy produktových týmů nebo týmů zaměřených na zkušenosti uživatelů
 - Informace o řízení přístupu (Intune tato data využívá ke správě přístupu k rolím a funkcím pro správu prostřednictvím funkcí, jako je [Řízení přístupu založené na rolích](../fundamentals/role-based-access-control.md).)
-  - Statické ověřovače (heslo zákazníka)
+  - Statické ověřovatele (heslo zákazníka)
   - Klíče osobních údajů pro certifikáty 
 - Informace o správci a účtu
   - Jméno a příjmení uživatele s rolí správce
@@ -83,9 +83,9 @@ Mezi identifikovaná data shromažďovaná službou Intune patří mimo jiné:
   - Klíč předplatného
 - Inventář aplikací, například
   - Název aplikace
-  - Verze nástroje
+  - version
   - ID aplikace
-  - Velikost
+  - velikost
   - Umístění instalace
   - Data inventáře aplikací se shromažďují pouze tehdy, pokud je správce označí jako zařízení vlastněné společností nebo pokud je zapnutá funkce aplikace dodržující předpisy.  
 - Zákaznická ID tenantů třetích stran, jako je Apple ID 
@@ -109,7 +109,7 @@ Mezi pseudonymizované údaje shromažďované službou Intune patří mimo jin�
   - ID zařízení v Azure Active Directory
   - ID správy zařízení v Intune
   - ID tenanta
-  - ID účtu
+  - Account ID
   - ID zařízení v EAS
   - ID specifická pro konkrétní platformu
   - AppleID pro zařízení s iOS/iPadOS

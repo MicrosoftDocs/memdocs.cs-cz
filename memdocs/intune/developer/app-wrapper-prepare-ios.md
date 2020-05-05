@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 26204a36000b8c49b65effbfdb5f629fc092df64
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 373a5e55a28c6fab740a86a3ad2ad69c5fa08848
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79327311"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078137"
 ---
 # <a name="prepare-ios-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Příprava aplikací pro iOS na zásady ochrany aplikací pomocí nástroje Intune App Wrapping Tool
 
@@ -50,7 +50,7 @@ Než nástroj App Wrapping Tool spustíte, musíte splnit některé obecné pož
 
   * Vstupní aplikace nemůže mít rozšířené atributy souborů.
 
-  * Před zpracováním v nástroji Intune App Wrapping Tool musí mít aplikace nastavené nároky. [Nároky](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/EntitlementKeyReference/Chapters/AboutEntitlements.html) aplikaci poskytují další oprávnění a možnosti nad rámec těch, které se udělují obvykle. Pokyny najdete v části [Nastavení nároků aplikace](#setting-app-entitlements).
+  * Před zpracováním v nástroji Intune App Wrapping Tool musí mít aplikace nastavené nároky. [Nároky](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/EntitlementKeyReference/Chapters/AboutEntitlements.html) aplikaci poskytují další oprávnění a možnosti nad rámec těch, které se udělují obvykle. Pokyny najdete v části [Nastavení oprávnění aplikace](#setting-app-entitlements).
 
 ## <a name="apple-developer-prerequisites-for-the-app-wrapping-tool"></a>Požadavky na Apple Developer pro nástroj App Wrapping Tool
 
@@ -81,7 +81,7 @@ K distribuci aplikací zabalených pomocí Intune budete potřebovat toto:
 
 5. Vyberte svůj **typ entity** (Entity Type) a klikněte na **Continue** (Pokračovat).
 
-6. Vyplňte formulář údaji o vaší organizaci. Klikněte na **Continue** (Pokračovat). V tuto chvíli vás Apple kontaktuje, aby ověřil, že máte autorizaci registrovat svoji organizaci.
+6. Vyplňte formulář údaji o vaší organizaci. Klikněte na **Pokračovat**. V tuto chvíli vás Apple kontaktuje, aby ověřil, že máte autorizaci registrovat svoji organizaci.
 
 7. Po ověření klikněte na **Agree to License** (Souhlasím s licencí).
 
@@ -101,7 +101,7 @@ K distribuci aplikací zabalených pomocí Intune budete potřebovat toto:
 
    ![Portál pro vývojáře Apple – certifikáty, ID & profily](./media/app-wrapper-prepare-ios/iOS-signing-cert-1.png)
 
-5. Klikněte na kartu ![znaménko plus portálu Apple Developer](./media/app-wrapper-prepare-ios/iOS-signing-cert-2.png) v pravém horním rohu, abyste mohli přidat certifikát iOS.
+5. Klikněte na ![znaménko plus portálu Apple Developer](./media/app-wrapper-prepare-ios/iOS-signing-cert-2.png) v pravém horním rohu, abyste mohli přidat certifikát iOS.
 
 6. V části **Production** (Výroba) zvolte možnost vytvořit **In-House and Ad Hoc** (Interní a ad hoc) certifikát.
 
@@ -126,7 +126,7 @@ K distribuci aplikací zabalených pomocí Intune budete potřebovat toto:
 
     ![Zadejte informace pro certifikát, který požadujete.](./media/app-wrapper-prepare-ios/iOS-signing-cert-6.png)
 
-12. Vraťte se na web Apple Developer. Klikněte na **Continue** (Pokračovat). Pak nahrajte soubor CSR.
+12. Vraťte se na web Apple Developer. Klikněte na **Pokračovat**. Pak nahrajte soubor CSR.
 
 13. Apple vygeneruje váš podpisový certifikát. Stáhněte a uložte si ho do počítače s macOS na nějaké snadno zapamatovatelné místo.
 
@@ -148,13 +148,13 @@ K distribuci aplikací zabalených pomocí Intune budete potřebovat toto:
 
 2. Klikněte na **Certificates, IDs & Profiles** (Certifikáty, ID a profily).
 
-3. Klikněte na kartu ![znaménko plus portálu Apple Developer](./media/app-wrapper-prepare-ios/iOS-signing-cert-2.png) v pravém horním rohu, abyste mohli přidat zřizovací profil iOS.
+3. Klikněte na ![znaménko plus portálu Apple Developer](./media/app-wrapper-prepare-ios/iOS-signing-cert-2.png) v pravém horním rohu, abyste mohli přidat zřizovací profil iOS.
 
 4. V části **Distribution** (Distribuce) zvolte možnost vytvořit **In House** (Interní) zřizovací profil.
 
    ![Výběr interního zřizovacího profilu](./media/app-wrapper-prepare-ios/iOS-provisioning-profile-1.png)
 
-5. Klikněte na **Continue** (Pokračovat). Nezapomeňte propojit předtím vygenerovaný podpisový certifikát se zřizovacím profilem.
+5. Klikněte na **Pokračovat**. Nezapomeňte propojit předtím vygenerovaný podpisový certifikát se zřizovacím profilem.
 
 6. Podle pokynů si stáhněte svůj profil (s příponou .mobileprovision) na svůj počítač s macOS.
 
@@ -168,7 +168,7 @@ K distribuci aplikací zabalených pomocí Intune budete potřebovat toto:
 
 3. Výběrem možnosti **Souhlasím** přijměte podmínky smlouvy EULA. Tím připojíte balíček k počítači.
 
-## <a name="run-the-app-wrapping-tool"></a>Spuštění nástroje pro zabalení aplikace
+## <a name="run-the-app-wrapping-tool"></a>Spuštění nástroje App Wrapping Tool
 
 ### <a name="use-terminal"></a>Použití terminálu
 
@@ -193,19 +193,19 @@ V nástroji App Wrapping Tool můžete používat následující parametry pří
 
 |Vlastnost|Jak ji použít|
 |---------------|--------------------------------|
-|**-i**|`<Path of the input native iOS application file>`. Název souboru musí končit na .app nebo .ipa. |
-|**-o**|`<Path of the wrapped output application>` |
+|**– i**|`<Path of the input native iOS application file>`. Název souboru musí končit na .app nebo .ipa. |
+|**– o**|`<Path of the wrapped output application>` |
 |**-p**|`<Path of your provisioning profile for iOS apps>`|
 |**-c**|`<SHA1 hash of the signing certificate>`|
 |**-h**| Zobrazí podrobné informace o použití dostupných vlastností příkazového řádku nástroje App Wrapping. |
-|**– AA**|(Volitelné) `<Authority URI of the input app if the app uses the Azure Active Directory Authentication Library>`, tj. `login.windows.net/common` |
-|**– AC**|(Volitelné) `<Client ID of the input app if the app uses the Azure Active Directory Authentication Library>` Toto je identifikátor GUID v poli ID klienta je ze seznamu vaší aplikace v okně registrace aplikace. |
-|**– ar**|(Volitelné) `<Redirect/Reply URI of the input app if the app uses the Azure Active Directory Authentication Library>` Toto je identifikátor URI přesměrování konfigurovaný v registraci vaší aplikace. Obvykle by to byl protokol adresy URL aplikace, kterou Microsoft Authenticator aplikace vrátila po zprostředkované ověřování. |
+|**– AA**|Volitelné `<Authority URI of the input app if the app uses the Azure Active Directory Authentication Library>` tj. `login.windows.net/common` |
+|**– AC**|Volitelné `<Client ID of the input app if the app uses the Azure Active Directory Authentication Library>` Toto je identifikátor GUID v poli ID klienta je ze seznamu vaší aplikace v okně registrace aplikace. |
+|**– ar**|Volitelné `<Redirect/Reply URI of the input app if the app uses the Azure Active Directory Authentication Library>` Toto je identifikátor URI přesměrování konfigurovaný v registraci vaší aplikace. Obvykle by to byl protokol adresy URL aplikace, kterou Microsoft Authenticator aplikace vrátila po zprostředkované ověřování. |
 |**-v**| (Nepovinná) Zobrazí v konzole podrobné zprávy. Tento příznak doporučujeme používat k ladění všech chyb. |
-|**-e**| (Nepovinná) Tímto příznakem zajistíte, že nástroj App Wrapping při zpracování aplikace odebere chybějící oprávnění. Další informace najdete v části [Nastavení oprávnění aplikace](#setting-app-entitlements).|
-|**-xe**| (Nepovinná) Zobrazí informace o rozšířeních iOS v aplikaci a o oprávněních, která potřebujete k jejich používání. Další informace najdete v části [Nastavení oprávnění aplikace](#setting-app-entitlements). |
-|**-x**| (Nepovinná) `<An array of paths to extension provisioning profiles>` Tuto vlastnost použijte v případě, že vaše aplikace potřebuje zřizovací profily rozšíření.|
-|**-b**|(Nepovinná) Pokud chcete, aby měla zabalená výstupní aplikace stejnou verzi balíčku jako vstupní aplikace, použijte vlastnost -b bez argumentu (nedoporučuje se to). <br/><br/> Když chcete, aby měla zabalená aplikace vlastní verzi balíčku (CFBundleVersion), použijte vlastnost `-b <custom bundle version>`. Pokud se rozhodnete zadat vlastní verzi balíčku CFBundleVersion, doporučujeme zvýšit nejméně důležitou část hodnoty CFBundleVersion nativní aplikace, třeba z 1.0.0 na 1.0.1. |
+|**-e**| (Nepovinná) Tímto příznakem zajistíte, že nástroj App Wrapping při zpracování aplikace odebere chybějící oprávnění. Další podrobnosti najdete v tématu [Nastavení nároků aplikace](#setting-app-entitlements) .|
+|**-xe**| (Nepovinná) Zobrazí informace o rozšířeních iOS v aplikaci a o oprávněních, která potřebujete k jejich používání. Další podrobnosti najdete v tématu [Nastavení nároků aplikace](#setting-app-entitlements) . |
+|**– x**| (Nepovinná) `<An array of paths to extension provisioning profiles>` Tuto vlastnost použijte v případě, že vaše aplikace potřebuje zřizovací profily rozšíření.|
+|**– b**|(Nepovinná) Pokud chcete, aby měla zabalená výstupní aplikace stejnou verzi balíčku jako vstupní aplikace, použijte vlastnost -b bez argumentu (nedoporučuje se to). <br/><br/> Když chcete, aby měla zabalená aplikace vlastní verzi balíčku (CFBundleVersion), použijte vlastnost `-b <custom bundle version>`. Pokud se rozhodnete zadat vlastní CFBundleVersion, je vhodné zvýšit CFBundleVersion nativní aplikace o nejmenší významnou součást, například 1.0.0-> 1.0.1. |
 |**– Citrix**|Volitelné Zahrňte sadu Citrix XenMobile App SDK (variantu jenom sítě). Abyste mohli použít tuto možnost, musíte mít nainstalovanou [sadu Citrix MDX Toolkit](https://docs.citrix.com/en-us/mdx-toolkit/about-mdx-toolkit.html) . |
 |**-f**|(Nepovinná) `<Path to a plist file specifying arguments.>` Pokud se rozhodnete zadat zbývající vlastnosti nástroje IntuneMAMPackager, jako je -i, -o a -p, šablonou plist, použijte tento příznak před souborem [plist](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/PropertyLists/Introduction/Introduction.html). Další informace najdete v části, která vysvětluje použití souboru plist k zadání argumentů. |
 
@@ -217,19 +217,19 @@ Ve složce IntuneMAMPackager/Contents/MacOS otevřete `Parameters.plist` (prázd
 
 | Klíč souboru plist | Typ |  Výchozí hodnota | Poznámky |
 |------------------|-----|--------------|-----|
-| Input Application Package Path |String|Prázdná| Odpovídá vlastnosti -i.|
-| Output Application Package Path |String|Prázdná| Odpovídá vlastnosti -o.|
-| Provisioning Profile Path |String|Prázdná| Odpovídá vlastnosti -p.|
-| SHA-1 Certificate Hash |String|Prázdná| Odpovídá vlastnosti -c.|
-| Autorita ADAL |String|Prázdná| Stejné jako-AA|
-| ID klienta ADAL |String|Prázdná| Stejné jako-AC|
-| Identifikátor URI odpovědi ADAL |String|Prázdná| Stejné jako – ar|
-| Verbose Enabled |Logická hodnota|false| Odpovídá vlastnosti -v.|
-| Remove Missing Entitlements |Logická hodnota|false| Odpovídá vlastnosti -c.|
-| Zabránit výchozí aktualizaci sestavení |Logická hodnota|false| Odpovídá použití vlastnosti -b bez argumentů.|
-| Build String Override |String|Prázdná| Vlastní verze balíčku (CFBundleVersion) zabalené výstupní aplikace|
-| Zahrnout sadu Citrix XenMobile App SDK (jenom síť variant)|Logická hodnota|false| Stejné jako – Citrix|
-| Extension Provisioning Profile Paths |Pole řetězců|Prázdná| Pole zřizovacích profilů rozšíření pro aplikaci
+| Input Application Package Path |Řetězec|empty| Odpovídá vlastnosti -i.|
+| Output Application Package Path |Řetězec|empty| Odpovídá vlastnosti -o.|
+| Provisioning Profile Path |Řetězec|empty| Odpovídá vlastnosti -p.|
+| SHA-1 Certificate Hash |Řetězec|empty| Odpovídá vlastnosti -c.|
+| Autorita ADAL |Řetězec|empty| Stejné jako-AA|
+| ID klienta ADAL |Řetězec|empty| Stejné jako-AC|
+| Identifikátor URI odpovědi ADAL |Řetězec|empty| Stejné jako – ar|
+| Verbose Enabled |Logická hodnota|false (nepravda)| Odpovídá vlastnosti -v.|
+| Remove Missing Entitlements |Logická hodnota|false (nepravda)| Odpovídá vlastnosti -c.|
+| Zabránit výchozí aktualizaci sestavení |Logická hodnota|false (nepravda)| Odpovídá použití vlastnosti -b bez argumentů.|
+| Build String Override |Řetězec|empty| Vlastní verze balíčku (CFBundleVersion) zabalené výstupní aplikace|
+| Zahrnout sadu Citrix XenMobile App SDK (jenom síť variant)|Logická hodnota|false (nepravda)| Stejné jako – Citrix|
+| Extension Provisioning Profile Paths |Pole řetězců|empty| Pole zřizovacích profilů rozšíření pro aplikaci
 
 Spusťte nástroj IntuneMAMPackager a jako jediný argument použijte soubor plist:
 
@@ -239,7 +239,7 @@ Spusťte nástroj IntuneMAMPackager a jako jediný argument použijte soubor pli
 
 ### <a name="post-wrapping"></a>Po zabalení
 
-Po dokončení procesu zabalení se zobrazí zpráva The application was successfully wrapped (Zabalení aplikace proběhlo úspěšně.). V případě chyby najdete nápovědu v tématu věnovaném [chybovým zprávám](#error-messages-and-log-files).
+Po dokončení procesu zabalení se zobrazí zpráva The application was successfully wrapped (Zabalení aplikace proběhlo úspěšně.). Pokud dojde k chybě, zobrazte nápovědu v tématu [chybové zprávy](#error-messages-and-log-files) .
 
 Zabalená aplikace se uloží do výstupní složky, kterou jste určili předtím. Aplikaci můžete nahrát do konzoly pro správu Intune a přidružit ji k zásadě správy mobilní aplikace.
 
@@ -255,7 +255,7 @@ Hlavní situace, ve kterých potřebujete znovu zabalit svoje aplikace, jsou tyt
 * Aplikace sama vydala novou verzi. Do konzoly Intune byla zabalena a nahrána předchozí verze aplikace.
 * Vydala se nová verze nástroje Intune App Wrapping Tool pro iOS, která přináší důležité opravy chyb nebo nové specifické funkce zásad ochrany aplikací Intune. Pro [Microsoft Intune App Wrapping Tool pro iOS](https://github.com/msintuneappsdk/intune-app-wrapping-tool-ios) se toto děje každých 6–8 týdnů prostřednictvím úložiště GitHub.
 
-Pro iOS/iPadOS, přestože je možné zabalit jiný profil pro registraci a zřízení než původní použitý k podepsání aplikace, pokud se oprávnění uvedená v aplikaci nezahrnují do nového zřizovacího profilu, balení se nezdaří. Použití parametru -e příkazového řádku, který z aplikace odebere všechna chybějící oprávnění, k tomu, aby se v tomto scénáři předešlo neúspěšnému zabalení, může způsobit chybnou funkčnost aplikace.
+Pro iOS/iPadOS, přestože je možné zabalit jiný profil pro registraci a zřízení než původní použitý k podepsání aplikace, pokud se oprávnění uvedená v aplikaci nezahrnují do nového zřizovacího profilu, balení se nezdaří. Když použijete možnost příkazového řádku "-e", která odebere z aplikace chybějící oprávnění, aby se vynutilo selhání v tomto scénáři, mohlo by dojít k porušení funkčnosti v aplikaci.
 
 Mezi osvědčené postupy pro opětovné balení patří:
 
@@ -265,7 +265,7 @@ Mezi osvědčené postupy pro opětovné balení patří:
 
 K řešení potíží s nástrojem App Wrapping použijte následující informace.
 
-### <a name="error-messages"></a>Chybovými zprávami
+### <a name="error-messages"></a>Chybové zprávy
 
 Pokud se nástroji App Wrapping nepodaří aplikaci zabalit, zobrazí konzola některou z následujících chybových zpráv:
 
@@ -278,8 +278,8 @@ Pokud se nástroji App Wrapping nepodaří aplikaci zabalit, zobrazí konzola n�
 |Nenašla se zadaná vstupní aplikace. Zadejte platný název a cestu vstupní aplikace.|Přesvědčte se, jestli je cesta ke vstupní aplikaci platná a existuje. Ujistěte se, jestli vstupní aplikace existuje v tomto umístění.|
 |Zadaný soubor vstupního profilu zřizování se nenašel. Zadejte platný soubor vstupního profilu zřizování.|Ujistěte se, jestli je cesta k vstupnímu souboru profilu zřizování platná a jestli existuje soubor, který jste zadali.|
 |Zadaná složka výstupní aplikace se nenašla. Zadejte platnou cestu k výstupní aplikaci.|Ujistěte se, jestli je zadaná výstupní cesta platná a existuje.|
-|Výsledná aplikace nemá příponu **.ipa**.|Nástroj App Wrapping přijímá jenom aplikace s příponou **.app** a **.ipa**. Ujistěte se, že výstupní má platnou příponu.|
-|Je zadaný neplatný podpisový certifikát. Zadejte platný podpisový certifikát Apple.|Ujistěte se, jestli jste stáhli správný podpisový certifikát stažený z portálu pro vývojáře Apple. Platnost vašeho certifikátu nejspíš vypršela nebo je možné, že chybí veřejný nebo privátní klíč. Pokud můžete certifikát Apple a zřizovací profil použít ke správnému podepsání aplikace v Xcodu, platí tyto položky i pro nástroj App Wrapping.|
+|Výstupní aplikace nemá příponu **. ipa** .|Nástroj App Wrapping přijímá jenom aplikace s příponou **.app** a **.ipa**. Ujistěte se, že výstupní má platnou příponu.|
+|Je zadaný neplatný podpisový certifikát. Zadejte platný podpisový certifikát Apple.|Ujistěte se, že jste stáhli správný podpisový certifikát z portálu pro vývojáře Apple. Platnost vašeho certifikátu nejspíš vypršela nebo je možné, že chybí veřejný nebo privátní klíč. Pokud můžete certifikát Apple a zřizovací profil použít ke správnému podepsání aplikace v Xcodu, platí tyto položky i pro nástroj App Wrapping.|
 |Zadaná vstupní aplikace je neplatná. Zadejte platnou aplikaci.|Ujistěte se, že máte platnou aplikaci iOS, která je kompilovaná jako soubor .app nebo .ipa.|
 |Zadaná vstupní aplikace je zašifrovaná. Zadejte platnou nezašifrovanou aplikaci.|Nástroj App Wrapping nepodporuje šifrované aplikace. Použijte aplikaci, která šifrovaná není.|
 |Zadaná vstupní aplikace není ve formátu Position Independent Executable (PIE). Zadejte platnou aplikaci ve formátu PIE.|Aplikace ve formátu Position Independent Executable (PIE) je možné při spuštění načíst s náhodnou adresou v paměti. Může to být výhodné kvůli zabezpečení. Další informace o výhodách týkajících se zabezpečení najdete v dokumentaci pro vývojáře Apple.|
@@ -307,7 +307,7 @@ Vaše aplikace může přihlašovat užitečné informace do konzoly klientskéh
 
 1. Reprodukujte problém spuštěním aplikace.
 
-2. Shromážděte výstup konzoly podle pokynů společnosti Apple k [ladění nasazených aplikací iOS](https://developer.apple.com/library/ios/qa/qa1747/_index.html).
+2. Shromážděte výstup konzoly podle pokynů společnosti Apple pro [ladění nasazených aplikací pro iOS](https://developer.apple.com/library/ios/qa/qa1747/_index.html).
 
 Zabalené aplikace taky uživatelům nabídnou možnost odeslat protokoly přímo ze zařízení prostřednictvím e-mailu v případě chyby aplikace. Protokoly můžou uživatelé poslat ke kontrole vám a vy je případně můžete přeposlat Microsoftu.
 
@@ -317,32 +317,32 @@ Aby bylo možné zaručit plnou funkčnost nástroje App Wrapping Tool pro iOS, 
 
 |Požadavek|Podrobnosti|
 |---------------|-----------|
-|Profil pro zřizování iOS|Zkontrolujte platnost zřizovacího profilu, než ho zahrnete. Při zpracování aplikace pro iOS nástroj App Wrapping nekontroluje, jestli vypršela platnost zřizovacího profilu. Když je zadaný profil zřizování s ukončenou platností, bude nástroj pro zabalení aplikace zahrnovat tento profil a vy nepoznáte, jestli existuje problém, dokud neselže instalace aplikace na zařízení iOS.|
+|Profil pro zřizování iOS|Zkontrolujte platnost zřizovacího profilu, než ho zahrnete. Při zpracování aplikace pro iOS nástroj App Wrapping nekontroluje, jestli vypršela platnost zřizovacího profilu. Když je zadaný profil zřizování s ukončenou platností, bude nástroj pro zabalení aplikace zahrnovat tento profil a vy nepoznáte, jestli existuje problém, dokud neselže instalace aplikace na zařízení s iOSem.|
 |Podpisový certifikát iOS|Před zadáním podpisového certifikátu zkontrolujte jeho platnost. Nástroj při zpracování aplikací pro iOS nekontroluje, jestli nevypršela platnost certifikátu. Pokud je zadaný hash pro prošlý certifikát, nástroj zpracuje a podepíše aplikaci, ale nenainstaluje ji na zařízení.<br /><br />Zkontrolujte, jestli se certifikát dodaný k podpisu zabalené aplikace shoduje se zřizovacím profilem. Nástroj neověřuje, jestli pro certifikát poskytnutý k podepsání zabalené aplikace existuje shoda ve zřizovacím profilu.|
-|Ověřování|Aby šifrování fungovalo, musí mít zařízení PIN. Když se uživatel zařízení, do kterého jste nasadili zabalenou aplikaci, dotkne stavového řádku, musí se znovu přihlásit přes svůj pracovní nebo školní účet. Podle výchozí zásady zabalené aplikace probíhá *ověřování při opakovaném spuštění*. V iOSu se každé externí oznámení (třeba při telefonním hovoru) zpracuje tak, že se aplikace ukončí a potom znovu spustí.
+|Authentication|Aby šifrování fungovalo, musí mít zařízení PIN. Když se uživatel zařízení, do kterého jste nasadili zabalenou aplikaci, dotkne stavového řádku, musí se znovu přihlásit přes svůj pracovní nebo školní účet. Podle výchozí zásady zabalené aplikace probíhá *ověřování při opakovaném spuštění*. V iOSu se každé externí oznámení (třeba při telefonním hovoru) zpracuje tak, že se aplikace ukončí a potom znovu spustí.
 
 ## <a name="setting-app-entitlements"></a>Nastavení oprávnění aplikace
 
-Než aplikaci zabalíte, můžete jí udělit taková *oprávnění*, kterými získá další oprávnění a funkce nad rámec obvyklých možností. Při podepisování kódu se pomocí *souboru oprávnění* určí v aplikaci speciální oprávnění (například přístup ke sdílenému řetězci klíčů). Při vývoji aplikace jsou v prostředí Xcode povolené určité služby aplikace, pro které se také používá označení *schopnosti*. Jakmile se tyto schopnosti povolí, odrazí se to v souboru oprávnění. Další informace o oprávněních a schopnostech najdete v článku věnovaném [přidání schopností](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/AddingCapabilities/AddingCapabilities.html) na webu iOS Developer Library. Úplný seznam podporovaných schopností najdete v části [Podporované schopnosti](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/SupportedCapabilities/SupportedCapabilities.html).
+Než aplikaci zabalíte, můžete jí udělit taková *oprávnění*, kterými získá další oprávnění a funkce nad rámec obvyklých možností. Při podepisování kódu se pomocí *souboru oprávnění* určí v aplikaci speciální oprávnění (například přístup ke sdílenému řetězci klíčů). Konkrétní služby App Services označované jako *Možnosti* jsou v rámci Xcode při vývoji aplikací povolené. Jakmile se tyto schopnosti povolí, odrazí se to v souboru oprávnění. Další informace o oprávněních a schopnostech najdete v článku věnovaném [přidání schopností](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/AddingCapabilities/AddingCapabilities.html) na webu iOS Developer Library. Úplný seznam podporovaných funkcí najdete v tématu [podporované funkce](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/SupportedCapabilities/SupportedCapabilities.html).
 
 ### <a name="supported-capabilities-for-the-app-wrapping-tool-for-ios"></a>Podporované schopnosti nástroje App Wrapping pro iOS
 
-|Funkce|Popis|Doporučené pokyny|
+|Schopnost|Popis|Doporučené pokyny|
 |--------------|---------------|------------------------|
 |Skupiny aplikací|Ve skupinách aplikací můžete více aplikacím povolit přístup ke sdíleným kontejnerům a povolit mezi aplikacemi další komunikaci na úrovni procesů.<br /><br />Pokud chcete povolit skupiny aplikací, otevřete podokno **Schopnosti** a v části **Skupiny aplikací** klikněte na **ZAPNUTO**. Můžete přidat nové skupiny aplikací nebo vybrat stávající.|U skupin aplikací používejte zpětný zápis DNS:<br /><br />*group.com.companyName.AppGroup*|
 |Režimy pozadí|Pokud povolíte režimy pozadí, může vaše aplikace pro iOS běžet dál na pozadí.||
 |Ochrana dat|Ochrana dat přidá do souborů, které aplikace iOS uložení na disk, úroveň zabezpečení. Ochrana dat využívá integrovaný šifrovací hardware přítomný v určitých zařízeních k ukládání souborů na disk v zašifrovaném formátu. Pokud má vaše aplikace používat ochranu dat, musí být zřízená.||
 |Nákupy v aplikaci|Nákupy v aplikaci vloží přímo do aplikace obchod tím, že vám umožní připojit se k obchodu a bezpečně zpracovávat platby uživatele. Nákupy v aplikaci umožňují inkasovat platby za rozšířené funkce a další obsah využitelný v aplikaci.||
 |Sdílení řetězce klíčů|Pokud povolíte sdílení řetězce klíčů, můžete aplikace pomocí řetězce klíčů sdílet hesla s jinými aplikacemi, které vyvinul váš tým.|Při sdílení řetězce klíčů použijte zpětný způsob zápisu DNS:<br /><br />*com.companyName.KeychainGroup*|
-|Osobní síť VPN|Můžete povolit osobní síť VPN, aby mohla vaše aplikace vytvářet a řídit vlastní systémovou konfiguraci sítě VPN s využitím rámce pro rozšíření sítě.||
-|Nabízená oznámení|Služba APNs (Apple Push Notification service) umožňuje aplikaci, která není spuštěná v popředí, zobrazit uživateli oznámení o dostupných informacích.|Nabízená oznámení fungují jenom tehdy, když pro konkrétní aplikaci použijete profil zřizování.<br /><br />Postupujte podle návodu v [dokumentaci pro vývojáře Apple](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/AddingCapabilities/AddingCapabilities.html).|
+|Osobní VPN|Můžete povolit osobní síť VPN, aby mohla vaše aplikace vytvářet a řídit vlastní systémovou konfiguraci sítě VPN s využitím rámce pro rozšíření sítě.||
+|Nabízená oznámení|Služba APNs (Apple Push Notification Service) umožňuje aplikaci, která není spuštěná v popředí, informovat uživatele o tom, že má pro uživatele informace.|Nabízená oznámení fungují jenom tehdy, když pro konkrétní aplikaci použijete profil zřizování.<br /><br />Postupujte podle kroků v [dokumentaci pro vývojáře Apple](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/AddingCapabilities/AddingCapabilities.html).|
 |Konfigurace bezdrátového příslušenství|Když povolíte konfiguraci bezdrátového příslušenství, přidáte do svého projektu rozhraní externího příslušenství a umožníte tím aplikaci nastavit příslušenství MFi s připojením Wi-Fi.||
 
 ### <a name="steps-to-enable-entitlements"></a>Postup pro povolení oprávnění
 
 1. Povolení schopností v aplikaci:
 
-    a.  V prostředí Xcode přejděte do cíle aplikace a klikněte na **Schopnosti**.
+    a.  V Xcode přejděte na cíl vaší aplikace a klikněte na **Možnosti**.
 
     b.  Zapněte příslušné schopnosti. Podrobné informace o jednotlivých schopnostech a o tom, jak určit správné hodnoty, najdete v článku věnovaném [přidání schopností](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/AddingCapabilities/AddingCapabilities.html) na webu iOS Developer Library.
 
@@ -354,7 +354,7 @@ Než aplikaci zabalíte, můžete jí udělit taková *oprávnění*, kterými z
 
     a.  Přihlaste se do Centra pro vývojáře Apple.
 
-    b.  Vytvořte pro svoji aplikaci profil pro zřizování. Pokyny najdete v článku věnovaném [splnění předpokladů pro nástroj Intune App Wrapping pro iOS](https://blogs.technet.microsoft.com/enterprisemobility/2015/02/25/how-to-obtain-the-prerequisites-for-the-intune-app-wrapping-tool-for-ios/).
+    b.  Vytvořte pro svoji aplikaci profil pro zřizování. Pokyny najdete v tématu [postup získání požadavků pro nástroj pro zabalení aplikace Intune pro iOS](https://blogs.technet.microsoft.com/enterprisemobility/2015/02/25/how-to-obtain-the-prerequisites-for-the-intune-app-wrapping-tool-for-ios/).
 
     c.  V profilu pro zřizování povolte stejná oprávnění, jaká máte ve své aplikaci. Budete muset zadat stejná ID (hodnoty `AppIdentifierPrefix`), která jste zadali během vývoje aplikace. 
 
@@ -366,7 +366,7 @@ Než aplikaci zabalíte, můžete jí udělit taková *oprávnění*, kterými z
 
 Pokud nástroj App Wrapping pro iOS zobrazí chybu oprávnění, zkuste vyřešit potíže následujícími postupy.
 
-|Problém|Příčina|Rozlišení|
+|Problém|Příčina|Řešení|
 |---------|---------|--------------|
 |Nepodařilo se analyzovat oprávnění vygenerovaná vstupní aplikací.|Nástroj App Wrapping nemůže přečíst soubor oprávnění extrahovaný z aplikace. Soubor oprávnění může být poškozený.|Zkontrolujte soubor oprávnění pro svoji aplikaci. Následující pokyny vysvětlují postup. Při kontrole souboru oprávnění hledejte případy poškozené syntaxe. Soubor by měl být ve formátu XML.|
 |V profilu pro zřizování chybí oprávnění (s uvedením chybějících oprávnění). Znovu zabalte aplikaci pomocí profilu pro zřizování, který má tato oprávnění.|Oprávnění povolená v profilu pro zřizování neodpovídají schopnostem povoleným v aplikaci. Tyto rozdíly platí také pro ID přidružená k určitým schopnostem (například skupiny aplikací a přístup k řetězci klíčů).|Obecně platí, že můžete vytvořit nový profil pro zřizování, který povolí stejné schopnosti jako aplikace. Pokud ID v profilu neodpovídají ID v aplikaci, nástroj App Wrapping tato ID nahradí, pokud to bude možné. Pokud se chyba zobrazuje i po vytvoření nového zřizovacího profilu, můžete zkusit aplikaci odebrat oprávnění parametrem –e (viz část Použití parametru –e k odebrání oprávnění z aplikace).|
@@ -438,7 +438,7 @@ Jednoduše spusťte obecný příkaz pro balení aplikací s připojeným příz
 ./IntuneMAMPackager/Contents/MacOS/IntuneMAMPackager -i /<path of input app>/<app filename> -o /<path to output folder>/<app filename> -p /<path to provisioning profile> -c <SHA1 hash of the certificate> [-b [<output app build string>]] [-v] [-e] [-x /<array of extension provisioing profile paths>] [-citrix]
 ```
 
-**Příklad příkazu:**
+**Příklad příkazu**:
 
 ```bash
 ./IntuneMAMPackager/Contents/MacOS/IntuneMAMPackager -i ~/Desktop/MyApp.ipa -o ~/Desktop/MyApp_Wrapped.ipa -p ~/Desktop/My_Provisioning_Profile_.mobileprovision -c 12A3BC45D67EF8901A2B3CDEF4ABC5D6E7890FAB  -v true -citrix
@@ -446,6 +446,6 @@ Jednoduše spusťte obecný příkaz pro balení aplikací s připojeným příz
 
 ## <a name="see-also"></a>Viz také
 
-- [Rozhodování o způsobu přípravy aplikací na jejich správu v Microsoft Intune](apps-prepare-mobile-application-management.md)
+- [Rozhodování o způsobu přípravy aplikací na správu mobilních aplikací v Microsoft Intune](apps-prepare-mobile-application-management.md)
 - [Běžné otázky, problémy a řešení se zásadami a profily zařízení](../configuration/device-profile-troubleshoot.md)
 - [Použití sady SDK k povolení správy mobilních aplikací pro aplikace](app-sdk.md)

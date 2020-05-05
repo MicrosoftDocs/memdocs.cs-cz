@@ -18,14 +18,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4c472011f0b46777d7beab0a425e0b5af78b610b
-ms.sourcegitcommit: 10578b5a631f9148e59389a1ce4e7d4892f772a0
+ms.openlocfilehash: 63a465e39e8a041c47b6748d9dacdebf3c6ea8a5
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80979252"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078103"
 ---
-# <a name="set-up-iosipados-device-enrollment-with-apple-school-manager"></a>Nastavení registrace zařízení se systémem iOS/iPadOS pomocí Apple School Manageru
+# <a name="set-up-iosipados-device-enrollment-with-apple-school-manager"></a>Nastavení registrace zařízení s iOS/iPadOS pomocí Apple School Manageru
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
@@ -37,24 +37,24 @@ Registraci přes Apple School Manager nejde používat s [programem registrace z
 
 **Požadavky**
 - [Nabízený certifikát pro správu mobilních zařízení Apple (MDM)](apple-mdm-push-certificate-get.md)
-- [Autorita pro správu mobilních zařízení (MDM)](../fundamentals/mdm-authority-set.md)
-- Když se používá ADFS, přidružení uživatelů vyžaduje [koncový bod WS-Trust 1.3 Username/Mixed](https://technet.microsoft.com/library/adfs2-help-endpoints). [Přečtěte si další informace](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).
+- [Autorita MDM](../fundamentals/mdm-authority-set.md)
+- Při použití ADFS vyžaduje přidružení uživatelů [koncový bod WS-Trust 1.3 Username/Mixed](https://technet.microsoft.com/library/adfs2-help-endpoints). [Další informace](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).
 - Zařízení zakoupená z programu [Apple School Management](http://school.apple.com)
 
 ## <a name="get-an-apple-token-and-assign-devices"></a>Získání tokenu Apple a přiřazení zařízení
 
 Než budete moct pomocí Apple School Manageru registrovat zařízení s iOS a iPadOS vlastněná společností, potřebujete od společnosti Apple soubor tokenu (. p7m). Tento token umožňuje Intune synchronizovat informace o zařízeních v Apple School Manageru. Token také umožňuje Intune odesílat společnosti Apple registrační profily a přiřazovat k těmto profilům zařízení. Na portálu společnosti Apple můžete také přiřadit sériová čísla zařízení pro správu.
 
-### <a name="step-1-download-the-intune-public-key-certificate-required-to-create-an-apple-token"></a>Krok 1: Stáhněte si certifikát veřejného klíče Intune, který je potřebný k vytvoření tokenu Apple.
+### <a name="step-1-download-the-intune-public-key-certificate-required-to-create-an-apple-token"></a>Krok 1. Stáhněte si certifikát veřejného klíče Intune, který je potřebný k vytvoření tokenu Apple.
 
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **iOS** > **registrace** zařízení s iOS > **tokeny programu registrace** > **Přidat**.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **iOS** > **iOS registrace** > **tokeny** > programu**Přidat**.
 
    ![Stažení tokenu programu registrace zařízení](./media/device-enrollment-program-enroll-ios/image01.png)
 
 2. V okně **Token Programu registrace** zvolte **Stáhnout veřejný klíč** a stáhněte a místně uložte soubor šifrovacího klíče (.pem). Soubor .pem slouží k vyžádání certifikátu vztahu důvěryhodnosti z portálu Apple School Manager.
      ![Podokno Token Programu registrace zařízení](./media/apple-school-manager-set-up-ios/image02.png)
 
-### <a name="step-2-download-a-token-and-assign-devices"></a>Krok 2: Stáhněte si token a přiřaďte zařízení.
+### <a name="step-2-download-a-token-and-assign-devices"></a>Krok 2. Stáhněte si token a přiřaďte zařízení.
 1. Zvolte **Vytvořit token prostřednictvím Apple School Manageru** a přihlaste se k Apple School pomocí Apple ID vaší společnosti. Toto Apple ID můžete použít k obnovení tokenu Apple School Manageru.
 2. Na portálu [Apple School Manager](https://school.apple.com) přejděte na **MDM Servers** (MDM servery) a vpravo nahoře zvolte **Add MDM Server** (Přidat MDM server).
 3. Zadejte **název MDM serveru**. Název serveru slouží pro vaši informaci, abyste mohli identifikovat server pro správu mobilních zařízení (MDM). Nejedná se o název nebo adresu URL serveru Microsoft Intune.
@@ -66,7 +66,7 @@ Než budete moct pomocí Apple School Manageru registrovat zařízení s iOS a i
      ![Snímek obrazovky portálu Apple School Manager s vybranou možností Sériové číslo](./media/apple-school-manager-set-up-ios/asm-device-assignment.png)
 7. Zvolte akci **Assign to Server** (Přiřadit k serveru) a zvolte **MDM Server**, který jste vytvořili.
 8. Určete, jak **Vybrat zařízení**, a pak zadejte informace o zařízení a podrobnosti.
-9. Zvolte **Přiřadit k serveru**, zvolte &lt;název_serveru&gt; zadaný pro Microsoft Intune a potom zvolte **OK**.
+9. Zvolte **Assign to Server** (Přiřadit k serveru), zvolte &lt;název serveru&gt; zadaný pro Microsoft Intune a potom zvolte **OK**.
 
 ### <a name="step-3-save-the-apple-id-used-to-create-this-token"></a>Krok 3. Uložte si Apple ID, které jste použili k vytvoření tohoto tokenu.
 
@@ -80,17 +80,17 @@ V poli **Token Apple** přejděte k souboru certifikátu (.pem), zvolte **Otevř
 ## <a name="create-an-apple-enrollment-profile"></a>Vytvoření registračního profilu Apple
 Po nainstalování tokenu můžete vytvořit registrační profil pro zařízení Apple School. Registrační profil zařízení definuje nastavení, která se během registrace použijí pro skupinu zařízení.
 
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **iOS** > **Registrace iOS** > **tokeny programu registrace**.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **iOS** > iOS**registrace** > **tokeny programu**.
 2. Vyberte token, zvolte **Profily** a potom zvolte **Vytvořit profil**.
 
-3. V části **Vytvořit profil** zadejte **Název** a **Popis** profilu pro účely správy. Uživatelé tyto podrobnosti nevidí. Pole **Název** můžete využít k vytvoření dynamické skupiny v Azure Active Directory. Název profilu použijte k definování parametru enrollmentProfileName, který slouží k přiřazení zařízení s tímto registračním profilem. Přečtěte si další informace o [dynamických skupinách Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-groups-dynamic-membership-azure-portal#rules-for-devices).
+3. V části **Vytvořit profil** zadejte **Název** a **Popis** profilu pro účely správy. Uživatelé tyto podrobnosti nevidí. Pole **Název** můžete využít k vytvoření dynamické skupiny v Azure Active Directory. Název profilu použijte k definování parametru enrollmentProfileName pro přiřazení zařízení s tímto registračním profilem. Přečtěte si další informace o [Azure Active Directory dynamických skupinách](https://docs.microsoft.com/azure/active-directory/active-directory-groups-dynamic-membership-azure-portal#rules-for-devices).
 
     ![Název a popis profilu](./media/apple-school-manager-set-up-ios/image05.png)
 
 4. V části **Přidružení uživatele** zvolte, jestli se zařízení s tímto profilem musí registrovat s přiřazeným uživatelem nebo bez něj.
-    - **Zaregistrovat s přidružením uživatele** – Tuto možnost zvolte pro zařízení, která patří uživatelům a chtějí pro služby, jako je instalace aplikací, používat portál společnosti. Tato možnost také umožňuje uživatelům ověřovat svoje zařízení pomocí portálu společnosti. Když se používá ADFS, přidružení uživatelů vyžaduje [koncový bod WS-Trust 1.3 Username/Mixed](https://technet.microsoft.com/library/adfs2-help-endpoints). [Přečtěte si další informace](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).   Režim Sdílený iPad programu Apple School Manager vyžaduje registraci uživatele bez přidružení uživatele.
+    - **Zaregistrovat s přidružením uživatele** – Tuto možnost zvolte pro zařízení, která patří uživatelům a chtějí pro služby, jako je instalace aplikací, používat portál společnosti. Tato možnost také umožňuje uživatelům ověřovat svoje zařízení pomocí portálu společnosti. Při použití ADFS vyžaduje přidružení uživatelů [koncový bod WS-Trust 1.3 Username/Mixed](https://technet.microsoft.com/library/adfs2-help-endpoints). [Další informace](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).   Režim Sdílený iPad programu Apple School Manager vyžaduje registraci uživatele bez přidružení uživatele.
 
-    - **Zaregistrovat bez přidružení uživatele** – Tuto možnost zvolte pro zařízení nespojená s jedním uživatelem, například sdílená zařízení. Použijte ji pro zařízení určená k plnění úkolů, u kterých není potřeba přístup k místním uživatelským datům. Aplikace, jako je aplikace Portál společnosti, nefungují.
+    - **Zaregistrovat bez přidružení uživatele** – Tuto možnost zvolte pro zařízení nespojená s jedním uživatelem, například sdílená zařízení. Použijte ji pro zařízení určená k plnění úkolů, u kterých není potřeba přístup k místním uživatelským datům. Aplikace, jako je Portál společnosti aplikace, nefungují.
 
 5. Pokud jste zvolili možnost **registrovat s přidružením uživatele**, můžete uživatelům povolit ověřování pomocí portál společnosti namísto pomocníka s nastavením Apple.
 
@@ -110,7 +110,7 @@ Po nainstalování tokenu můžete vytvořit registrační profil pro zařízen�
     Uživatelé se dozvědí, že jejich zařízení jsou pod dohledem, dvěma způsoby:
 
    - Na zamykací obrazovce se zobrazí oznámení: „Tento iPhone spravuje Contoso.“
-   - Na obrazovce **Nastavení** > **Obecné** > **O produktu** je uvedeno: „Tento iPhone je pod dohledem. Společnost Contoso může monitorovat internetové přenosy a zařízení vyhledat.“
+   - **Nastavení** > **General**obecné > **o** obrazovce říká: "Tento iPhone je pod dohledem. Společnost Contoso může monitorovat internetové přenosy a zařízení vyhledat.“
 
      > [!NOTE]
      > Zařízení zaregistrované bez dohledu se dá resetovat do stavu pod dohledem jenom pomocí Apple Configuratoru. Resetování zařízení tímto způsobem vyžaduje připojení zařízení s iOS/iPadOS k počítači Mac pomocí kabelu USB. Další informace na toto téma získáte v [dokumentaci Apple Configuratoru](http://help.apple.com/configurator/mac/2.3).
@@ -142,7 +142,7 @@ Po nainstalování tokenu můžete vytvořit registrační profil pro zařízen�
     |  <strong>Podmínky a ujednání</strong>   |                                                   V případě povolení Průvodce nastavením vyzve uživatele k přijetí podmínek a ujednání společnosti Apple během aktivace.                                                   |
     |        <strong>Touch ID</strong>         |                                                                 V případě povolení Průvodce nastavením zobrazí během aktivace výzvu pro tuto službu.                                                                 |
     |        <strong>Apple Pay</strong>        |                                                                 V případě povolení Průvodce nastavením zobrazí během aktivace výzvu pro tuto službu.                                                                 |
-    |          <strong>Lupa</strong>           |                                                                 V případě povolení Průvodce nastavením zobrazí během aktivace výzvu pro tuto službu.                                                                 |
+    |          <strong>Zoom</strong>           |                                                                 V případě povolení Průvodce nastavením zobrazí během aktivace výzvu pro tuto službu.                                                                 |
     |          <strong>Siri</strong>           |                                                                 V případě povolení Průvodce nastavením zobrazí během aktivace výzvu pro tuto službu.                                                                 |
     |     <strong>Diagnostická data</strong>     |                                                                 V případě povolení Průvodce nastavením zobrazí během aktivace výzvu pro tuto službu.                                                                 |
 
@@ -154,7 +154,7 @@ Po nainstalování tokenu můžete vytvořit registrační profil pro zařízen�
 ## <a name="connect-school-data-sync"></a>Připojení služby School Data Sync
 (Volitelné) Apple School Manager podporuje synchronizaci třídních seznamů do Azure Active Directory (AD) pomocí služby Microsoft School Data Sync (SDS). Pomocí SDS můžete synchronizovat jenom jeden token. Pokud pomocí School Data Sync nastavíte další token, odebere se SDS z tokenu, který měl SDS předtím. Nové připojení nahradí aktuální token. Pokud chcete použít službu SDS k synchronizaci školních dat, proveďte následující kroky.
 
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **iOS** > **Registrace iOS** > **tokeny programu registrace**.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **iOS** > iOS**registrace** > **tokeny programu**.
 2. Vyberte token Apple School Manageru a potom zvolte **Synchronizace školních dat**.
 3. V části **Synchronizace školních dat** zvolte **Povolit**. Toto nastavení umožňuje službě Intune propojení se službou SDS v Office 365.
 4. Pokud chcete povolit připojení mezi Apple School Managerem a Azure AD, vyberte **nastavit Microsoft School data Sync**. Přečtěte si další informace o [tom, jak nastavit synchronizaci školních dat](https://support.office.com/article/Install-the-School-Data-Sync-Toolkit-8e27426c-8c46-416e-b0df-c29b5f3f62e1).
@@ -164,7 +164,7 @@ Po nainstalování tokenu můžete vytvořit registrační profil pro zařízen�
 
 Až ke službě Intune přiřadíte oprávnění ke správě zařízení Apple School Manageru, synchronizujte Intune se službou Apple, aby se spravovaná zařízení zobrazila v Intune.
 
-V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **ios** > **registrace v iOS** > **tokeny programu registrace** > v seznamu > **zařízení** > **synchronizaci**vyberte token. ![snímek obrazovky uzlu zařízení programu registrace a odkaz na synchronizaci.](./media/apple-school-manager-set-up-ios/image06.png)
+V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)klikněte na **zařízení** > **iOS** > **iOS enrollment** > iOS**tokeny programu registrace** > vyberte token v seznamu >**synchronizace** **zařízení** > . ![Snímek obrazovky uzlu zařízení programu registrace a odkaz na synchronizaci.](./media/apple-school-manager-set-up-ios/image06.png)
 
 Pokud chcete dodržovat podmínky společnosti Apple pro přijatelný provoz programu registrace, Intune ukládá tato omezení:
 - Úplná synchronizace se nesmí pouštět častěji než jednou za sedm dní. Během úplné synchronizace Intune aktualizuje všechna sériová čísla Apple přiřazená Intune. Pokud se během sedmi dnů od předchozí úplné synchronizace pokusí se Úplná synchronizace, aktualizuje Intune jenom sériová čísla, která ještě nejsou uvedená v Intune.
@@ -177,9 +177,9 @@ Pokud chcete dodržovat podmínky společnosti Apple pro přijatelný provoz pro
 ## <a name="assign-a-profile-to-devices"></a>Přiřazení profilu k zařízením
 Zařízení Apple School Manageru spravovaná přes Intune musí mít před registrací přiřazený registrační profil.
 
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **ios** > **registrace v iOS** > **tokeny programu registrace** > v seznamu vyberte token.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **iOS** > **iOS enrollment** > iOS**tokeny programu registrace** > v seznamu vyberte token.
 2. Zvolte **Zařízení** > zvolte zařízení v seznamu > **Přiřadit profil**.
-3. V části **Přiřadit profil** zvolte profil pro zařízení a potom zvolte **Přiřadit**.
+3. V části **přiřadit profil**zvolte profil pro zařízení a pak zvolte **přiřadit**.
 
 ## <a name="distribute-devices-to-users"></a>Distribuce zařízení uživatelům
 

@@ -19,12 +19,12 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 6a8c7212de97fbcb741d03cbcec57bafc4692484
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 65533f3d93d226b91493c98fd029c6257e7e6409
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79324139"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077253"
 ---
 # <a name="what-happens-if-you-install-the-company-portal-app-and-enroll-your-windows-device-in-intune"></a>Co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení s Windows v Intune?
 
@@ -33,7 +33,7 @@ Když nainstalujete aplikaci Portál společnosti a pak přes ni zaregistrujete
 ## <a name="what-happens-to-all-windows-devices-after-enrollment"></a>Co se stane všem zařízením s Windows po registraci
 Registrace zařízení s Windows nebo Windows Phone v Intune nabízí tyto možnosti:
 
-- Přístup k podnikové síti, e-mailu a pracovním souborům
+- Přístup k podnikové síti, e-mailu a pracovním souborům
 
 - Získání aplikací společnosti z webu Portál společnosti (__Poznámka__: Pro Windows 7 a Windows Vista je možné získat aplikace společnosti jenom z webu Portál společnosti.)
 
@@ -43,9 +43,9 @@ Registrace zařízení s Windows nebo Windows Phone v Intune nabízí tyto mo�
 
 Když zaregistrujete zařízení, udělujete firemní podpoře oprávnění provést následující akce:
 
-- Obnovit v zařízení výchozí tovární nastavení. To je užitečné v případě ztráty nebo odcizení zařízení.
+- Resetujte zařízení zpátky na výchozí nastavení výrobce. To je užitečné v případě ztráty nebo odcizení zařízení.
 
-- Odebrat obchodní aplikace a soubory, ale jenom takové, které jsou spojené se společností. *Vaše osobní data a nastavení odebrána nebudou.*
+- Odebrat obchodní aplikace a soubory, ale jenom takové, které jsou spojené se společností. *Vaše osobní údaje a nastavení se neodeberou.*
 
 - Firemní podpora může vidět software nainstalovaný v zařízení, a to i software, který jste si nainstalovali sami.
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 39f881b05c9698a8560fe009331fac3389b35bde
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 551f0a442f81712cff29a9ff6f55c62aeaba547a
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79333079"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078188"
 ---
 # <a name="configure-the-take-a-test-app-on-windows-10-devices-using-intune"></a>Konfigurace aplikace pořizovat test na zařízeních s Windows 10 pomocí Intune
 
@@ -37,7 +37,7 @@ Pokud chcete získat další informace o této funkci, [Vyzkoušejte si testovac
 [Vytvořte profil konfigurace zařízení](education-settings-configure.md#create-a-device-profile).
 
 ## <a name="take-a-test-settings"></a>Provést nastavení testu
-Po vytvoření profilu konfigurace zařízení, přejít na **typ profilu** a vyberte **zabezpečené hodnocení (vzdělávání)** . Najdete v něm následující nastavení aplikace, které si můžete vyzkoušet. 
+Po vytvoření profilu konfigurace zařízení, přejít na **typ profilu** a vyberte **zabezpečené hodnocení (vzdělávání)**. Najdete v něm následující nastavení aplikace, které si můžete vyzkoušet. 
 
 
 - **Typ účtu**: Vyberte způsob, jakým se uživatelé přihlásí k testu. Možnosti:

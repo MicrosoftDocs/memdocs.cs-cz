@@ -17,12 +17,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: f7dc2fcf505890af1e24f8176bef653a6d5f1022
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 0aff833df367cced712219fff0be85653ef79e89
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79324059"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079650"
 ---
 # <a name="you-need-to-install-sandblast-mobile-protect-on-your-android-device"></a>Na zařízení s Androidem je potřeba nainstalovat SandBlast Mobile Protect
 
@@ -52,7 +52,7 @@ Pokud máte s instalací potíže, zkuste provést kroky k odstranění potíž�
 
 10. Pokud se žádné hrozby nenajdou, zobrazí se všechny tři typy hrozeb zeleně.
 
-11. Obrazovka s **podrobnostmi o zařízení** v aplikaci Portál společnosti ukazuje, že teď už splňujete firemní požadavky na zabezpečení.
+11. Obrazovka s **podrobnostmi o zařízení** v portál společnosti ukazuje, že teď dodržujete požadavky na zabezpečení vaší společnosti.
 
     ![Vaše zařízení teď vyhovuje zásadám.](./media/mtd-device-now-compliant-android.png)
 

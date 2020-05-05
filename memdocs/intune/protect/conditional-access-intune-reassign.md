@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e28ca9e9b8ed77cdd01b415761fd90308d5b7017
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: a36449de6d6ebc437b445309bb64f3a9b448d90f
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79329527"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079803"
 ---
 # <a name="reassign-conditional-access-policies-from-intune-classic-portal-to-the-azure-portal"></a>Změna přiřazení zásad podmíněného přístupu z klasického portálu Intune na Azure Portal
 
@@ -86,7 +86,7 @@ Okno **Intune App Protection** na portálu Azure Portal umožňuje správcům na
     ![Obrázek, který porovnává uživatelské rozhraní skupiny uživatelů mezi Intune a portály Azure](./media/conditional-access-intune-reassign/reassign-ca-1.png)
 
     > [!IMPORTANT] 
-    > Výběr, který provedete pro portál Azure Portal, musí odpovídat výběru, který jste provedli pro portál Classic. Pokud máte třeba na klasickém portálu Intune vybrané všechny uživatele, vyberte **Všichni uživatelé** na portálu Azure Portal. Pokud jste navíc na klasickém portálu Intune zvolili možnost **Vyloučené skupiny**, tyto vybrané skupiny vylučte i na portálu Azure Portal.
+    > Výběr, který provedete pro portál Azure Portal, musí odpovídat výběru, který jste provedli pro portál Classic. Pokud máte třeba na klasickém portálu Intune vybrané všechny uživatele, vyberte **Všichni uživatelé** na portálu Azure Portal. Kromě toho, pokud jste na klasickém portálu Intune zvolili možnost **Vyloučené skupiny** , vylučte také tyto vybrané skupiny v Azure Portal.
 
 5. Jakmile svou skupinu zvolíte, klikněte na **Vybrat** a pak na **Hotovo**.
 
@@ -96,7 +96,7 @@ Okno **Intune App Protection** na portálu Azure Portal umožňuje správcům na
 
 8. Zvolte aplikaci, na kterou chcete nové zásady podmíněného přístupu použít, a klikněte na **Vybrat**.
 
-9. Klikněte na **Hotovo**.
+9. Klikněte na **Done** (Hotovo).
 
     ![Obrázek porovnání uživatelského rozhraní cloudové aplikace mezi službami Intune a portály Azure](./media/conditional-access-intune-reassign/reassign-ca-3.png)
 
@@ -154,7 +154,7 @@ Pokud jste nakonfigurovali nastavení Exchange ActiveSync jako součást zásady
     ![Obrázek znázorňující porovnání uživatelského rozhraní skupiny uživatelů mezi portály Azure a portály Intune](./media/conditional-access-intune-reassign/reassign-ca-12.png)
 
     > [!IMPORTANT] 
-    > Výběr, který provedete pro Azure Portal, musí odpovídat výběru, který jste provedli pro Azure Portal. Pokud máte třeba na klasickém portálu Intune vybrané všechny uživatele, vyberte **Všichni uživatelé** na portálu Azure Portal. Pokud jste navíc na klasickém portálu Intune zvolili možnost **Vyloučené skupiny**, tyto vybrané skupiny vylučte i na portálu Azure Portal.
+    > Výběr, který provedete pro Azure Portal, musí odpovídat výběru, který jste provedli pro Azure Portal. Pokud máte třeba na klasickém portálu Intune vybrané všechny uživatele, vyberte **Všichni uživatelé** na portálu Azure Portal. Kromě toho, pokud jste na klasickém portálu Intune zvolili možnost **Vyloučené skupiny** , vylučte také tyto vybrané skupiny v Azure Portal.
 
 5. Jakmile svou skupinu zvolíte, klikněte na **Vybrat** a pak na **Hotovo**.
 
@@ -167,7 +167,7 @@ Pokud jste nakonfigurovali nastavení Exchange ActiveSync jako součást zásady
     > [!IMPORTANT] 
     > Zásady podmíněného přístupu pro klienty EAS nemohou zahrnovat žádnou další cloudovou aplikaci.
 
-8. V okně **Podmínky** zvolte **Klientské aplikace** a pak vyberte příslušné klientské aplikace. Pokud jste se rozhodli blokovat klienty, kteří nejsou podporovaní službou Intune, použijte možnost **Použít zásady jenom na podporovaných platformách**.
+8. V okně **Podmínky** zvolte **Klientské aplikace** a pak vyberte příslušné klientské aplikace. Pokud jste se rozhodli blokovat klienty, kteří nejsou podporováni službou Intune, použijte možnost **použít zásadu pouze pro podporované platformy** .
 
     ![Obrázek znázorňující porovnání uživatelského rozhraní klientských aplikací mezi portály Azure a portály Intune](./media/conditional-access-intune-reassign/reassign-ca-15.png)
 
@@ -203,4 +203,4 @@ Vzhledem k tomu, že MDM byla odebrána z klasického portálu Intune, byl k dis
 
 - [Běžné způsoby použití podmíněného přístupu s Intune](conditional-access-intune-common-ways-use.md)
 - [Podmíněný přístup na základě aplikace s Intune](app-based-conditional-access-intune.md)
-- [Podmíněný přístup ve službě Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal-get-started)
+- [Podmíněný přístup v Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal-get-started)

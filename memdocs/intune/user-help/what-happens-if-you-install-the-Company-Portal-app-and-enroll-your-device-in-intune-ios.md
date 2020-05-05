@@ -19,18 +19,18 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 64a1a8484af537649fd618b5cfa718dc7dff5607
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: af748f91d47d6276b5590577079130e2be470e05
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79324155"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077355"
 ---
 # <a name="what-happens-if-you-install-the-company-portal-app-and-enroll-your-ios-device-in-intune"></a>Co se stane, když nainstalujete aplikaci Portál společnosti a zaregistrujete zařízení s iOSem v Intune?
 
 Když nainstalujete aplikaci Portál společnosti a pak zaregistrujete zařízení s iOSem v Intune, můžete v aplikaci Portál společnosti provádět tyto kroky:
 
-- Přístup k podnikové síti, e-mailu a pracovním souborům
+- Přístup k podnikové síti, e-mailu a pracovním souborům
 
 - Získání aplikací společnosti z Portálu společnosti
 
@@ -45,9 +45,9 @@ Když svoje zařízení zaregistrujete do služby Intune, udělíte tím firemn�
 
 Po registraci zařízení může firemní podpora provádět tyto akce:
 
-- Obnovit výchozí tovární nastavení v případě ztráty nebo odcizení zařízení.
+- Pokud dojde ke ztrátě nebo odcizení zařízení, resetujte zařízení zpátky na výchozí nastavení od výrobce.
 
-- Odebrat ze zařízení veškerá firemní data a nainstalované obchodní aplikace. Vaše osobní údaje a nastavení se při tom neodeberou.
+- Odebrat ze zařízení veškerá firemní data a nainstalované obchodní aplikace. Vaše osobní údaje a nastavení se neodeberou.
 
 - Vynutit používání hesla nebo PIN kódu v zařízení.
 

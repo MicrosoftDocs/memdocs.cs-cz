@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 48ca59c9eea6ba7dd489f5c958ef6976095f27c9
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 40eaf6be1b5f6cdb0222fc5bd79e8e5a5b72a947
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79331951"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078205"
 ---
 # <a name="troubleshoot-wi-fi-device-configuration-profiles-in-microsoft-intune"></a>Řešení potíží s profily konfigurace zařízení Wi-Fi v Microsoft Intune
 
@@ -46,12 +46,12 @@ V tomto scénáři se používá zařízení Nokia 6,1. Předtím, než se profi
 1. Koncovým uživatelům se zobrazí oznámení o instalaci profilu důvěryhodného kořenového certifikátu:
 
     > [!div class="mx-imgBorder"]
-    > ![ukázkové oznámení Portál společnosti aplikace v Androidu pro instalaci profilu důvěryhodného kořenového certifikátu](./media/troubleshoot-wi-fi-profiles/android-end-user-company-portal-trusted-root.png)
+    > ![Ukázka Portál společnosti oznámení aplikace na Androidu pro instalaci profilu důvěryhodného kořenového certifikátu](./media/troubleshoot-wi-fi-profiles/android-end-user-company-portal-trusted-root.png)
 
 2. Další oznámení vám vyzve k instalaci profilu certifikátu SCEP:
 
     > [!div class="mx-imgBorder"]
-    > ![ukázkové oznámení Portál společnosti aplikace na Androidu pro instalaci profilu certifikátu SCEP](./media/troubleshoot-wi-fi-profiles/android-end-user-company-portal-scep-certificate.png)
+    > ![Ukázka Portál společnosti oznámení aplikace na Androidu pro instalaci profilu certifikátu SCEP](./media/troubleshoot-wi-fi-profiles/android-end-user-company-portal-scep-certificate.png)
 
     > [!TIP]
     > Pokud používáte zařízení se systémem Android spravovaná správcem zařízení, může být uvedeno více certifikátů. Při odvolání nebo odebrání profilu certifikátu zůstane certifikát na zařízení. V tomto scénáři vyberte nejnovější certifikát. Obvykle se jedná o poslední certifikát zobrazený v seznamu.
@@ -61,12 +61,12 @@ V tomto scénáři se používá zařízení Nokia 6,1. Předtím, než se profi
 3. V dalším kroku obdrží uživatelé oznámení o instalaci profilu sítě Wi-Fi:
 
     > [!div class="mx-imgBorder"]
-    > ![ukázkové oznámení Portál společnosti aplikace na Androidu pro instalaci profilu certifikátu SCEP](./media/troubleshoot-wi-fi-profiles/android-end-user-install-wifi-profile.png)
+    > ![Ukázka Portál společnosti oznámení aplikace na Androidu pro instalaci profilu certifikátu SCEP](./media/troubleshoot-wi-fi-profiles/android-end-user-install-wifi-profile.png)
 
 4. Po dokončení se připojení Wi-Fi zobrazí jako uložená síť:
 
     > [!div class="mx-imgBorder"]
-    > ![připojení Wi-Fi se zobrazuje jako uložená síť](./media/troubleshoot-wi-fi-profiles/android-end-user-saved-networks.png)
+    > ![Připojení Wi-Fi ukazuje jako uloženou síť.](./media/troubleshoot-wi-fi-profiles/android-end-user-saved-networks.png)
 
 ### <a name="review-company-portal-app-logs"></a>Kontrola Portál společnosti protokolů aplikací
 
@@ -75,7 +75,7 @@ V Androidu soubor **Omadmlog. log** podrobně popisuje aktivity profilu Wi-Fi p�
 V následujícím příkladu použijte [CMTrace](https://docs.microsoft.com/configmgr/core/support/cmtrace) ke čtení protokolů a vyhledejte "wifimgr":
 
 > [!div class="mx-imgBorder"]
-> ![připojení Wi-Fi se zobrazuje jako uložená síť](./media/troubleshoot-wi-fi-profiles/android-cmtrace-filter-wifimgr.png)
+> ![Připojení Wi-Fi ukazuje jako uloženou síť.](./media/troubleshoot-wi-fi-profiles/android-cmtrace-filter-wifimgr.png)
 
 Následující protokol zobrazuje výsledky hledání a zobrazuje profil sítě Wi-Fi byl úspěšně použit:
 
@@ -105,25 +105,25 @@ Následující protokol zobrazuje výsledky hledání a zobrazuje profil sítě 
 Po instalaci profilu sítě Wi-Fi na zařízení se zobrazí v **profilu správy**:
 
 > [!div class="mx-imgBorder"]
-> ![profil správy v zařízení se systémem iOS/iPadOS v Intune](./media/troubleshoot-wi-fi-profiles/ios-management-profile.png)
+> ![Profil správy v zařízení se systémem iOS/iPadOS v Intune](./media/troubleshoot-wi-fi-profiles/ios-management-profile.png)
 
 > [!div class="mx-imgBorder"]
-> ![se připojení Wi-Fi v zařízení s iOS/iPadOS v Intune zobrazuje jako síť Wi-Fi](./media/troubleshoot-wi-fi-profiles/ios-wifi-connection-in-management-profile.png)
+> ![Připojení Wi-Fi ukazuje jako síť Wi-Fi v zařízení s iOS nebo iPadOS v Intune.](./media/troubleshoot-wi-fi-profiles/ios-wifi-connection-in-management-profile.png)
 
 ### <a name="review-the-iosipados-console-and-device-logs"></a>Zkontrolujte konzolu iOS/iPadOS a protokoly zařízení.
 
 V zařízeních se systémem iOS/iPadOS neobsahuje protokol aplikací Portál společnosti informace o profilech sítě Wi-Fi. Chcete-li zobrazit podrobnosti o instalaci profilů sítě Wi-Fi, použijte protokoly konzoly nebo zařízení:
 
-1. Připojte zařízení s iOS/iPadOS k počítači Mac. Přejít na **aplikace** > **nástroje**a otevřete konzolovou aplikaci.
+1. Připojte zařízení s iOS/iPadOS k počítači Mac. Přejdete na**nástroje** **aplikace** > a otevřete konzolovou aplikaci.
 2. V části **Akce**vyberte **Zahrnout informační zprávy** a **zahrnout zprávy ladění**:
 
     > [!div class="mx-imgBorder"]
-    > ![zahrnout informační zprávy a zahrnout zprávy ladění v konzolové aplikaci iOS/iPadOS](./media/troubleshoot-wi-fi-profiles/ios-console-app-include-info-messages-debug-messages.png)
+    > ![Zahrnutí informací o zprávách a zahrnutí zpráv ladění do konzolové aplikace iOS/iPadOS](./media/troubleshoot-wi-fi-profiles/ios-console-app-include-info-messages-debug-messages.png)
 
 3. Reprodukování scénáře a uložení protokolů do textového souboru:
 
-    1. Vyberte všechny zprávy na aktuální obrazovce: **upravit** > **Vybrat vše**.
-    2. Zkopírujte zprávy: **upravit** > **kopírování**.
+    1. Vyberte všechny zprávy na aktuální obrazovce: **Upravit** > **Vybrat vše**.
+    2. Zkopírujte zprávy: **Upravit** > **kopii**.
     3. Vložte data protokolu do textového editoru a soubor uložte.
 
 4. Pokud chcete zobrazit podrobné informace, prohledejte uložený soubor protokolu. Po úspěšné instalaci profilu bude výstup vypadat podobně jako v následujícím protokolu:
@@ -136,20 +136,20 @@ V zařízeních se systémem iOS/iPadOS neobsahuje protokol aplikací Portál sp
 
 ## <a name="windows"></a>Windows
 
-Po instalaci profilu sítě Wi-Fi na zařízení přejděte na **nastavení** > **účty** > **přístup do práce nebo do školy**. Vyberte > **informace o**účtu:
+Po instalaci profilu sítě Wi-Fi na zařízení přejděte na **Nastavení** > **účty** > **přístup do práce nebo do školy**. Vyberte > **informace o**účtu:
 
 > [!div class="mx-imgBorder"]
-> ![přístup do práce nebo do školy a vyberte informace na zařízeních s Windows](./media/troubleshoot-wi-fi-profiles/windows-access-work-school-info.png)
+> ![Přístup do práce nebo do školy a výběr informací na zařízení s Windows](./media/troubleshoot-wi-fi-profiles/windows-access-work-school-info.png)
 
 V **oblastech spravovaných Microsoftem**se zobrazí **Wi-Fi** :
 
 > [!div class="mx-imgBorder"]
-> ![v oblastech spravovaných Microsoftem najdete informace o Wi-Fi uvedené ve Windows](./media/troubleshoot-wi-fi-profiles/windows-wifi-areas-managed-by-microsoft.png)
+> ![V oblastech spravovaných Microsoftem najdete informace o Wi-Fi uvedené ve Windows.](./media/troubleshoot-wi-fi-profiles/windows-wifi-areas-managed-by-microsoft.png)
 
-Připojení Wi-Fi zobrazíte tak, že přejdete na **nastavení** > **Network & Internet**  > **Wi-Fi**:
+Připojení Wi-Fi zobrazíte tak, že přejdete na **Nastavení** > **Network & Internet**  > **Wi-Fi**:
 
 > [!div class="mx-imgBorder"]
-> ![v systému Windows se v nastavení zobrazí připojení Wi-Fi jako známá síť](./media/troubleshoot-wi-fi-profiles/windows-wifi-connection-known-networks.png)
+> ![V systému Windows se v nastavení zobrazí připojení Wi-Fi jako známá síť.](./media/troubleshoot-wi-fi-profiles/windows-wifi-connection-known-networks.png)
 
 ### <a name="review-event-viewer-logs"></a>Kontrola protokolů prohlížeče událostí
 
@@ -157,7 +157,7 @@ V zařízeních s Windows se v Prohlížeč událostí protokolují podrobnosti 
 
 1. Otevřete aplikaci **Prohlížeč událostí** .
 2. V nabídce **zobrazení** vyberte možnost **Zobrazit protokoly pro ladění a analýzu**.
-3. Rozbalte **protokoly aplikací a služeb** > **Microsoft** > **Windows** > **DeviceManagement-Enterprise-Diagnostic-Provider** > **admin** .
+3.  > Rozbalte **protokoly aplikací a služeb****Microsoft** > **Windows** > **DeviceManagement-Enterprise-Diagnostic-Provider** > **admin** .
 
 Výstup bude vypadat podobně jako v následujících protokolech:
 
@@ -181,7 +181,7 @@ WiFiConfigurationServiceProvider: Node set value, type: (0x4), Result: (The oper
 
 - Potvrďte, že je profil sítě Wi-Fi přiřazen ke správné skupině:
 
-    1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **konfigurační profily**.
+    1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **Devices** > **Konfigurace zařízení profily konfigurace**.
     2. Vyberte profil > **přiřazení**. Potvrďte, že vybrané skupiny jsou správné.
     3. Ve Správci koncového bodu vyberte **řešení potíží + podpora**. Zkontrolujte informace o **přiřazení** .
 
@@ -191,14 +191,14 @@ WiFiConfigurationServiceProvider: Node set value, type: (0x4), Result: (The oper
 
 - V zařízeních se systémem Windows 10 a novějšími zkontrolujte protokol diagnostické informace MDM:
 
-  1. Přejděte na **nastavení** > **účty** > **přístup do práce nebo do školy**.
+  1. Přejděte na **Nastavení** > **účty** > **přístup do práce nebo do školy**.
   2. Vyberte svůj pracovní nebo školní účet > **informace**.
   3. V dolní části stránky **Nastavení** vyberte **vytvořit sestavu**.
-  4. Otevře se okno, které zobrazuje cestu k souborům protokolu. Vyberte **exportovat**.
+  4. Otevře se okno, které zobrazuje cestu k souborům protokolu. Vyberte **Exportovat**.
   5. Přejít na `\Users\Public\Documents\MDMDiagnostics` cestu a zobrazit sestavu:
 
       > [!div class="mx-imgBorder"]
-      > ![ukázkové diagnostické informace MDM zobrazující konfiguraci profilu Wi-Fi na zařízeních s Windows 10](./media/troubleshoot-wi-fi-profiles/windows-mdm-diagnostic-info.png)
+      > ![Ukázkové diagnostické informace MDM zobrazující konfiguraci profilu Wi-Fi na zařízeních s Windows 10](./media/troubleshoot-wi-fi-profiles/windows-mdm-diagnostic-info.png)
 
   > [!TIP]
   > Další informace najdete v tématu [Diagnostika selhání MDM ve Windows 10](https://docs.microsoft.com/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10).
@@ -228,10 +228,10 @@ WiFiConfigurationServiceProvider: Node set value, type: (0x4), Result: (The oper
     Následující ukázka znázorňuje profil SCEP, který jste zadali pro **účely** rozšířené použití klíče. Ale není zadaný v šabloně certifikátu certifikační autority (CA). Chcete-li tento problém vyřešit, přidejte do šablony certifikátu možnost **libovolný účel** . Případně z profilu SCEP odeberte možnost **libovolný účel** .
 
     > [!div class="mx-imgBorder"]
-    > ![v Androidu přidejte jakýkoli účel do šablony certifikátu v certifikační autoritě](./media/troubleshoot-wi-fi-profiles/android-add-any-purpose-eku.png)
+    > ![V Androidu přidejte jakýkoli účel do šablony certifikátu v certifikační autoritě.](./media/troubleshoot-wi-fi-profiles/android-add-any-purpose-eku.png)
 
     > [!div class="mx-imgBorder"]
-    > ![v Androidu přidejte jakýkoliv účel do profilu konfigurace certifikátu SCEP v Intune](./media/troubleshoot-wi-fi-profiles/android-any-purpose-scep-device-config-profile.png)
+    > ![V Androidu přidejte libovolný účel do konfiguračního profilu certifikátu SCEP v Intune.](./media/troubleshoot-wi-fi-profiles/android-any-purpose-scep-device-config-profile.png)
 
   - Potvrďte, že všechny požadované certifikáty v rámci kompletního řetězu certifikátů jsou na zařízení s Androidem. V opačném případě se profil sítě Wi-Fi nedá na zařízení nainstalovat. Další informace najdete v tématu [chybějící zprostředkující certifikační autorita](https://developer.android.com/training/articles/security-ssl#MissingCa) (otevře web v Androidu).
   - Vyfiltrujte Omadmlog s klíčovými slovy pro hledání informací, například který certifikát se používá v profilu sítě Wi-Fi, a pokud byl profil úspěšně použit.
@@ -239,12 +239,12 @@ WiFiConfigurationServiceProvider: Node set value, type: (0x4), Result: (The oper
     Můžete například použít [CMTrace](https://docs.microsoft.com/configmgr/core/support/cmtrace) ke čtení protokolů. Pomocí vyhledávacího řetězce vyfiltrujte "wifimgr":
 
     > [!div class="mx-imgBorder"]
-    > ![CMTrace filtru pro hledání konfiguračních profilů WiFiMgr na zařízeních s Androidem](./media/troubleshoot-wi-fi-profiles/cmtrace-filter-wifimgr.png)
+    > ![Filtrovat CMTrace, aby se vyhledaly konfigurační profily WiFiMgr na zařízeních s Androidem](./media/troubleshoot-wi-fi-profiles/cmtrace-filter-wifimgr.png)
 
     Výstup bude vypadat podobně jako v následujícím protokolu:
 
     > [!div class="mx-imgBorder"]
-    > ![vzorový výstup protokolu CMTrace, který zobrazuje konfigurační profil Wi-Fi na zařízeních úspěšně použit](./media/troubleshoot-wi-fi-profiles/cmtrace-sample-log-output.png)
+    > ![Ukázkový výstup protokolu CMTrace, který zobrazuje profil konfigurace Wi-Fi na zařízeních byl úspěšně použit](./media/troubleshoot-wi-fi-profiles/cmtrace-sample-log-output.png)
 
     Pokud se v protokolu zobrazí chyba, zkopírujte časové razítko chyby a Odfiltrujte protokol. Pak použijte možnost najít s časovým razítkem, abyste zjistili, co se stalo hned před chybou.
 

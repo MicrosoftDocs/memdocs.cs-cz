@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8612640ec71075194af680535a988f2228bb66fd
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 21b1fb333ce77fdf358e268eb22db17708bbfe11
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79332647"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82076131"
 ---
 # <a name="configure-intune-education-settings-for-shared-ipad-devices"></a>Konfigurace nastavení vzdělávání Intune pro sdílená zařízení iPad
 
@@ -40,7 +40,7 @@ Informace o konfiguraci vyhrazených zařízení iPad (1:1) pro použití aplika
 
 Sdílení zařízení iPad vyžaduje, abyste nejprve provedli následující kroky:
 
-- Nastavte [Apple School Manager](../enrollment/apple-school-manager-set-up-ios.md) a [School Data Sync (SDS)](https://support.office.com/article/Apple-School-Manager-integration-with-Intune-for-Education-and-School-Data-Sync-974bd1f9-2c7a-45cb-9447-b58166108617).
+- Nastavte [Apple School Manager](../enrollment/apple-school-manager-set-up-ios.md) a [School data Sync (SDS)](https://support.office.com/article/Apple-School-Manager-integration-with-Intune-for-Education-and-School-Data-Sync-974bd1f9-2c7a-45cb-9447-b58166108617).
 - V rámci nastavení Apple School Manageru nakonfigurujte pro studenty [spravovaná Apple ID](http://help.apple.com/schoolmanager/#/tes78b477c81). [Další informace o spravovaných Apple ID](https://support.apple.com/HT205918).
 - Vytvořte registrační profil pro sériová čísla zařízení synchronizovaných prostřednictvím Apple School Manageru.
 
@@ -71,11 +71,11 @@ Informace můžete do SDS naimportovat jednou z následujících metod:
 1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3. V podokně **Intune** zvolte **Konfigurace zařízení**.
 2. V podokně **Konfigurace zařízení** v části **Spravovat** zvolte **Profily**.
-5. V podokně profilů zvolte **Vytvořit profil**.
+5. V podokně profily vyberte **vytvořit profil**.
 6. V podokně **vytvořit profil** zadejte **název** a **Popis** vzdělávacího profilu pro iOS/iPadOS.
 7. Z rozevíracího seznamu **Platforma** zvolte **iOS**.
 8. Z rozevíracího seznamu **Typ profilu** zvolte **Vzdělávání**.
-9. Zvolte **Nastavení** > **Konfigurovat**.
+9. Vyberte **Nastavení** > **Konfigurovat**.
 
 Dále potřebujete certifikáty k navázání vztahu důvěryhodnosti mezi iPady učitelů a studentů. Certifikáty se používají k bezproblémovému a bezobslužnému ověřování připojení mezi zařízeními bez nutnosti zadávání uživatelských jmen a hesel.
 
@@ -123,7 +123,7 @@ V části **Certifikát PKCS#12 studenta** nakonfigurujte následující hodnoty
 - **Formát názvu subjektu** – Intune automaticky přidá k běžnému názvu certifikátu předponu leader pro certifikát učitele a předponu member pro certifikát zařízení.
 - **Certifikační autorita** – Certifikační autorita organizace (CA), která běží na verzi Enterprise systému Windows Server 2008 R2 nebo novější. Samostatná certifikační autorita není podporovaná.
 - **Název certifikační autority** – Zadejte název certifikační autority.
-- **Název šablony certifikátu** – Zadejte název šablony certifikátu, která byla přidána k vystavující certifikační autoritě.
+- **Název šablony certifikátu** – zadejte název šablony certifikátu, která byla přidána k vystavující certifikační autoritě.
 - **Prahová hodnota obnovení (%)** – Zadejte procento doby životnosti certifikátu zbývající v okamžiku, kdy zařízení požádá o obnovení certifikátu.
 - **Období platnosti certifikátu** – Zadejte zbývající dobu do vypršení platnosti certifikátu. Zadat můžete hodnotu nižší, než je období platnosti zadané v šabloně certifikátu, ne však vyšší. Pokud je třeba období platnosti certifikátu v šabloně certifikátu dva roky, můžete zadat hodnotu jeden rok, ale ne pět let. Tato hodnota musí být zároveň nižší než zbývající doba platnosti certifikátu vystavující certifikační autority.
 
@@ -171,7 +171,7 @@ Dynamická skupina se vytvoří v podokně **Uživatelé a skupiny – Všechny 
 4. V podokně **Zařízení** zvolte **Všechna zařízení**.
 5. V podokně **Zařízení – Všechna zařízení** zvolte zařízení.
 6. V podokně zařízení zvolte **Vlastnosti**.
-7. V podokně vlastností zařízení zadejte kategorii zařízení do textového pole **Kategorie zařízení**.
+7. V podokně vlastností zařízení zadejte kategorii zařízení do textového pole **kategorie zařízení** .
 8. V podokně zařízení zvolte **Uložit**.
 
 Zařízení je teď přidružené ke kategorii zařízení. Zopakujte tento postup u všech zařízení, která chcete k vytvořené kategorii zařízení přidružit.
@@ -183,9 +183,9 @@ Zařízení je teď přidružené ke kategorii zařízení. Zopakujte tento post
 4. V podokně **Konfigurace zařízení** zvolte **Spravovat** > **Profily košíků**.
 5. V podokně profilů zvolte **Vytvořit profil**.
 6. V podokně **Vytvořit přiřazení** zadejte **Název** a **Popis**.
-7. Zvolte **Vyberte třídy** > **Konfigurovat** a přiřaďte skupiny k profilu košíku.
+7. Zvolte **Vybrat třídy** > **Konfigurovat** a přidružte skupiny k profilu košíku.
 8. Zvolte třídy, které chcete do profilu košíku zahrnout, a potom zvolte **Vybrat**. 
-9. Zvolte **Vyberte košíky** > **Konfigurovat** a přiřaďte skupiny k profilu košíku.
+9. Zvolte **Vybrat košíky** > **Konfigurovat** a přidružte skupiny k profilu košíku.
 10. Zvolte skupiny, které chcete do profilu košíku zahrnout, a potom zvolte **Vybrat**.
 11. V podokně **Vytvořit přiřazení** vyberte **Uložit**. Profil košíku se uloží.
 

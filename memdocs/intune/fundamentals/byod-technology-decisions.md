@@ -15,18 +15,18 @@ ms.reviewer: pfetty
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2bc28f1b5170fb955f8614f098a46ed0c66a9f3a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: f5d0e809e834a82f192128263742bc2b9b0024a2
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79326951"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079276"
 ---
 # <a name="technology-decisions-for-enabling-byod-with-microsoft-enterprise-mobility--security-ems"></a>Rozhodnutí o technologiích, která umožní používání vlastních zařízení uživatelů (BYOD), pomocí řešení Microsoft Enterprise Mobility + Security (EMS)
 
 Při vývoji strategie umožňující vzdálenou práci zaměstnanců na vlastních zařízeních (BYOD) je potřeba udělat ve scénářích klíčová rozhodnutí, která umožní používání vlastních zařízení uživatelů a určí způsob ochrany firemních dat. Řešení EMS naštěstí nabízí všechny potřebné funkce jako komplexní sadu řešení.  
 
-V tomto tématu prozkoumáme jednoduchý případ použití, ve kterém se povoluje přístup pomocí vlastních zařízení uživatelů k podnikovému e-mailu. Zaměříme se na to, jestli je potřeba spravovat celé zařízení nebo jenom aplikace, přičemž obě tyto možnosti jsou přípustné.
+V tomto tématu prozkoumáme jednoduchý případ použití, ve kterém se povoluje přístup pomocí vlastních zařízení uživatelů k podnikovému e-mailu. Zaměřte se na to, jestli potřebujete spravovat celé zařízení, nebo jenom aplikace, z nichž obě jsou zcela platné volby.
 
 ## <a name="assumptions"></a>Předpoklady
 * Máte základní znalosti o Azure Active Directory a Microsoft Intune.
@@ -60,7 +60,7 @@ Jak už bylo zmíněno, podmíněný přístup může uživateli řídit registr
 * Úroveň rizika přihlášení
 * Platforma zařízení
 
-Řada organizací má ještě často specifická rizika, kterými se musí zabývat.  Následující tabulka obsahuje běžné problémy a reakce MDM a MAM na tyto problémy.
+Přesto mnoho organizací má často specifická rizika, o kterých se zajímá.  Následující tabulka obsahuje běžné problémy a reakce MDM a MAM na tyto problémy.
 
 | Problém   |   MDM  |   MAM  |
 |------------|--------|--------|
@@ -79,9 +79,9 @@ Jak už bylo zmíněno, podmíněný přístup může uživateli řídit registr
 | | | |
 | Nechtěné sdílení dat nebo uložení do nezabezpečených umístění | Zakázání zálohování dat na zařízení | Zakázání funkcí Vyjmout, Kopírovat a Vložit|
 | Nechtěné sdílení dat nebo uložení do nezabezpečených umístění | Zakázání funkce Uložit jako | Zakázání funkce Uložit jako |
-|Nechtěné sdílení dat nebo uložení do nezabezpečených umístění | Zakázat tisk | není k dispozici|
+|Nechtěné sdílení dat nebo uložení do nezabezpečených umístění | Zakázat tisk | neuvedeno|
 
 ## <a name="next-steps"></a>Další kroky
-Teď je čas na rozhodnutí, jestli se ve vaší organizaci při povolování vlastních zařízení uživatelů (BYOD) zaměříte na správu zařízení, na správu aplikací nebo na kombinaci obou možností. Volba implementace je na vás, ale bez ohledu na zvolenou možnost máte jistotu, že budete mít k dispozici funkce pro práci s identitami a funkce zabezpečení, které jsou dostupné v Azure AD.  
+Teď je čas rozhodnout, jestli ve vaší organizaci chcete povolit BYOD, a to tak, že se zaměříte na správu zařízení, správu aplikací nebo kombinaci těchto dvou. Volba implementace je na vás, ale bez ohledu na zvolenou možnost máte jistotu, že budete mít k dispozici funkce pro práci s identitami a funkce zabezpečení, které jsou dostupné v Azure AD.  
 
 K navržení další úrovně plánování použijte [průvodce plánováním](planning-guide.md) Intune.

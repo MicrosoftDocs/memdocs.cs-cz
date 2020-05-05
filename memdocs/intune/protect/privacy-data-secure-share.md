@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aebb9163d236e5da48b92cfbbfc12e76db69b55c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 9f4e6d425923637d991ef62bb0e3c8090e657403
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79325315"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079548"
 ---
 # <a name="data-security-and-sharing-in-intune"></a>Zabezpečení a sdílení údajů v Intune
 
@@ -52,21 +52,21 @@ Při zjištění bezpečnostního incidentu ohlašovaného zákazníkům (CRSI) 
 
 Když správci tenantů povolí některou z funkcí (například Program registrace zařízení Apple), získá Microsoft Intune souhlas správce se sdílením dat s příslušnými třetími stranami. V takovém případě může Intune sdílet osobní údaje s těmito subjekty:
 
-- Třetí strany jednající jako agenti Microsoftu
-- Třetí strany, které nejednají jako agenti Microsoftu, ale správci tenantů jim k tomu výslovně udělili oprávnění Intune
+- Třetí strany fungují jako zástupci Microsoftu.
+- Třetí strany nefungují jako zástupci Microsoftu, ale jenom když oprávnění k tomu udělí správci tenanta explicitně.
 
 Všechny třetí strany, které jednají jako agenti Microsoftu, jsou uvedeny v [seznamu subdodavatelů online služeb](https://aka.ms/Online_Serv_Subcontractor_List).
 
 Účelem sdílení dat s těmito entitami je pomáhat zákaznické a technické podpoře, údržbě služeb a dalším operacím.
 
-Smlouva tenanta se třetí stranou řídí osobní údaje Intune ve službě této třetí strany. Kromě toho uděluje službě Intune oprávnění k přenosu dat do služby třetí strany.  
+Smlouva tenanta s třetí stranou řídí osobní údaje Intune držené v rámci služby třetí strany. Kromě toho uděluje službě Intune oprávnění k přenosu dat do služby třetí strany.  
 
 Informace o datech sdílených s některými třetími stranami najdete v následujících článcích:
 - [Data z Intune odesílaná Applu](data-intune-sends-to-apple.md)
 - [Data z Intune odesílaná Googlu](data-intune-sends-to-google.md)
-- [Data z Applu odesílaná do Intune](data-apple-sends-to-intune.md)
-- [Data z Googlu odesílaná do Intune](data-google-sends-to-intune.md)
-- [Data Jamf pro odesílá do Intune.](data-jamf-sends-to-intune.md)
+- [Data odesílaná Applem do Intune](data-apple-sends-to-intune.md)
+- [Data odesílaná Googlem do Intune](data-google-sends-to-intune.md)
+- [Data, která Jamf Pro odesílaná do Intune](data-jamf-sends-to-intune.md)
 
 ### <a name="microsoft-endpoint-configuration-manager-data-sharing"></a>Sdílení dat v Microsoft Endpoint Configuration Manager
 

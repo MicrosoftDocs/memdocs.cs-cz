@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f218ffd5d11e800588000e8b24aa81a7554b7051
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: fac6db40f60ee833572b703d125e6f7b283a06f1
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79329463"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079752"
 ---
 # <a name="data-google-sends-to-intune"></a>Data odesílaná Googlem do Intune
 
@@ -34,9 +34,9 @@ Pokud se na zařízení povolí správa zařízení s Androidem Enterprise, Micr
 Následující tabulka uvádí data, která Google odesílá do Intune, když je na daném zařízení povolená správa zařízení:
 
 
-| Data odesílaná Googlem do Intune | Podrobnosti | Používáno pro | Příklad |
+| Data odesílaná Googlem do Intune | Podrobnosti | Použití | Příklad |
 |:---:|:---:|:---:|:---:|
-| Podniková data | Identifikátory společnosti zákazníka v Googlu | Propojí informace o zákazníkovi mezi Intune a Googlem. | Příklad **enterpriseId**: LC04eik8a6<br>**Název**. Jméno správce zadané při konfiguraci Androidu Enterprise Příklad: Jan Novák<br>**E-mail správce** YourAdmin@gmail.com, který se použil při konfiguraci Androidu Enterprise |
+| Podniková data | Identifikátory organizace zákazníka v Google. | Propojí informace o zákaznících mezi Intune a Google. | Příklad **enterpriseId**: LC04eik8a6<br>**Název**. Jméno správce zadané při konfiguraci Androidu Enterprise Příklad: Jan Novák<br>**E-mail správce** YourAdmin@gmail.com, který se použil při konfiguraci Androidu Enterprise |
 | Data aplikací | Data pro spravované aplikace Obchodu Play | Cílení aplikace na dostupné nebo vyžadované uživatele nebo zařízení | Příklad **názvu aplikace**: Contoso Warehouse Inventory Application<br>Příklad **jedinečného identifikátoru reprezentujícího aplikaci**: app:com.Contoso.Warehouse.InventoryTracking |
 | Účet služby | Jedinečný interní účet služby Google pro použití s voláními konkrétního uživatele | Používá se pro uskutečňování volání do Googlu jménem zákazníka (pro zobrazení aplikací, zařízení atd.). | Příklad **názvu**: InternalAccount@InternalService.com<br>Příklad **klíče**: ServiceAccountPassword |
 

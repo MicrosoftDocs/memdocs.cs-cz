@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 97024c641be4c61561e762751cfabfab2732e4c1
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 6027a8f193bc470c4c7ab7724f3b9736c2487980
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80327173"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078018"
 ---
 # <a name="connect-your-intune-account-to-your-managed-google-play-account"></a>Připojte svůj účet Intune k vašemu spravovanému účtu Google Play
 
@@ -41,8 +41,8 @@ Aby bylo snazší konfigurovat a používat podnikovou správu Androidu, při p�
 > [!NOTE]
 > Protože dochází k interakci mezi doménami Google a Microsoft, může tento krok vyžadovat úpravu nastavení prohlížeče.  Zkontrolujte, jestli jsou portal.azure.com a play.google.com ve vašem prohlížeči ve stejné zóně zabezpečení.
 
-1. Pokud jste to ještě neudělali, připravte se na správu mobilních zařízení [nastavením autority pro správu mobilních zařízení](../fundamentals/mdm-authority-set.md) na **Microsoft Intune**.
-2. Přihlaste se [do centra pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)a vyberte **zařízení** > **android** > **Android** > **Managed Google Play**.  Pokud používáte vlastní roli správce Intune, vyžaduje přístup k tomuto nastavení oprávnění ke čtení a aktualizaci na úrovni organizace.
+1. Pokud jste to ještě neudělali, připravte se na správu mobilních zařízení [nastavením autority pro správu mobilních zařízení na](../fundamentals/mdm-authority-set.md) **Microsoft Intune**.
+2. Přihlaste se [do centra pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)a vyberte **zařízení** > **Android** > Android**registrace** > **spravovaná Google Play**.  Pokud používáte vlastní roli správce Intune, vyžaduje přístup k tomuto nastavení oprávnění ke čtení a aktualizaci na úrovni organizace.
    
    ![Obrazovka registrace Androidu Enterprise](./media/connect-intune-android-enterprise/android-work-bind.png)
 
@@ -64,7 +64,7 @@ Aby bylo snazší konfigurovat a používat podnikovou správu Androidu, při p�
 Můžete vypnout registraci a správu Androidu Enterprise. Abyste to mohli udělat, musíte nejdřív vyřadit všechna zaregistrovaná podniková zařízení s Androidem, včetně zařízení s pracovním profilem, vyhrazených zařízení a plně spravovaných zařízení. Pak v konzole pro správu Intune zvolte **Odpojit** a odeberte všechna zaregistrovaná zařízení se systémem Android Enterprise Work Profiling, vyhrazená zařízení a plně spravovaná zařízení od registrace. Tím se taky odstraní vztah mezi spravovaným účtem Google Play a Intune.
 
 1. Jako správce Intune se přihlaste k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **zařízení** > registraci **Androidu** > **Android** > **spravované Google Play** > **odpojení**.
+2. Vyberte **Devices** > **Android** > **registrace** > **spravovaná Google Play** > **Odpojit**.
 3. Volbou možnosti **Ano** odpojte a zrušte registraci všech zařízení s Androidem Enterprise z Intune.
 
 ## <a name="next-steps"></a>Další kroky

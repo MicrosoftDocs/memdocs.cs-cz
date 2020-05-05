@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9fbf58b7ae035bbd7da15814787f283c7b80e13e
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 5ff2898f97bbef4cba0d14d4810a503d613cff18
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79330255"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077916"
 ---
 # <a name="where-did-my-intune-feature-go-in-azure"></a>Kde v Azure najdu svoje funkce Intune?
-Při přesunu Intune do portálu Azure Portal jsme využili příležitost uspořádat některé úlohy logičtěji. Každé vylepšení ale přichází za cenu toho, že je potřeba se s novým uspořádáním seznámit. Tato referenční příručka je určena uživatelům, kteří znají dobře Intune na klasickém portálu a zajímá je, jak s Intune pracovat na webu Azure Portal. Pokud tento článek nepopisuje funkci, kterou hledáte, uveďte ji v poznámce na konci článku, abychom ho mohli aktualizovat.
-## <a name="quick-reference-guide"></a>Stručný referenční přehled
+Při přesunu Intune do portálu Azure Portal jsme využili příležitost uspořádat některé úlohy logičtěji. Každé vylepšení ale přichází za cenu toho, že je potřeba se s novým uspořádáním seznámit. Tato referenční příručka je určena uživatelům, kteří znají dobře Intune na klasickém portálu a zajímá je, jak s Intune pracovat na webu Azure Portal. Pokud tento článek nepopisuje funkci, kterou se pokoušíte najít, ponechte na konci článku komentář, abychom ho mohli aktualizovat.
+## <a name="quick-reference-guide"></a>Stručná referenční příručka
 
 |Funkce |Cesta na klasickém portálu|Cesta v Intune na Azure Portalu|
 |------------|---------------|---------------|
@@ -64,7 +64,7 @@ Výchozí omezení typu zařízení odpovídá na klasickém portálu omezením 
 
 ![Obrázek omezení typu zařízení v Azure](./media/ui-changes/04-azure-platform-restrictions.png)
 
-Možnost povolit nebo blokovat zařízení v osobním vlastnictví se teď spravuje v Konfiguraci platforem pod Omezeními typu zařízení.
+Možnost povolit nebo zablokovat zařízení v osobním vlastnictví se teď spravuje v rámci konfigurace platforem omezení typu zařízení.
 
 ![Obrázek nastavení blokování osobních zařízení v Azure](./media/ui-changes/05-azure-personal-block.png)
 
@@ -81,7 +81,7 @@ Po migraci tenanta na web Azure Portal zůstávají zásady dodržování předp
 Pokud chcete zásady dodržování předpisů zobrazovat a měnit na webu Azure Portal, musíte staré zásady odebrat z klasického portálu. A potom je znovu vytvořit na webu Azure Portal. Další informace o zásadách dodržování předpisů pro zařízení najdete v článku o tom, [jak začít používat zásady dodržování předpisů pro zařízení v Intune](../protect/device-compliance-get-started.md). 
 
 ## <a name="where-did-apple-dep-go"></a>Kde najdu Program registrace zařízení (DEP) Apple?
-Na klasickém portálu jste mohli nastavit integraci Intune s Programem registrace zařízení Apple a ručně vyžádat synchronizaci se službou společnosti Apple:
+Na klasickém portálu můžete nastavit integraci Intune s Program registrace zařízení společnosti Apple a ručně vyžádat synchronizaci se službou společnosti Apple:
 
 ![Obrázek klasického tokenu DEP](./media/ui-changes/06-classic-dep-token.png)
 
@@ -101,11 +101,11 @@ Na klasickém portálu můžete zařízení s iOSem registrovat prostřednictví
 
 Tam najdete sériová čísla pro registraci pomocí DEP Apple i Apple Configuratoru v jednom seznamu. Abychom omezili neshody při přiřazení profilů (profil DEP přiřazený sériovému číslu AC a naopak), rozdělili jsme sériová čísla na portálu Apple Portal do dvou seznamů:
 
-**Sériová čísla DEP**
-![Obrázek sériových čísel DEP v Azure](./media/ui-changes/10-azure-dep-serials.png)
+**Sériová čísla**
+![DEP obrázek sériových čísel DEP v Azure](./media/ui-changes/10-azure-dep-serials.png)
 
-**Sériová čísla Apple Configuratoru**
-![Obrázek sériových čísel Apple Configuratoru v Azure](./media/ui-changes/11-azure-ac-serials.png)
+**Sériová čísla**
+![Apple Configuratoru obrázek sériových čísel Apple Configuratoru v Azure](./media/ui-changes/11-azure-ac-serials.png)
 
 ### <a name="by-imei-all-platforms"></a>Podle IMEI (všechny platformy)
 
@@ -128,8 +128,8 @@ Tento seznam ukazuje profily povolené pro použití s Programem registrace zař
 
 Abychom omezili možnost záměny obou typů profilů a potenciální nesprávná přiřazení (profil DEP přiřazený zařízením Configuratoru a naopak), oddělili jsme tvorbu a správu profilů programu registrace (podporují Program registrace zařízení Apple i Apple School Manager) a profilů Apple Configuratoru:
 
-**Profily DEP**
-![Obrázek profilů DEP v Azure](./media/ui-changes/15-azure-dep-profiles.png)
+**Profily DEP obrázek**
+![DEP Azure](./media/ui-changes/15-azure-dep-profiles.png)
 
 **Profily Apple Configuratoru**
-![Obrázek profilů Apple Configuratoru v Apple](./media/ui-changes/16-azure-ac-profiles.png)
+obrázek profilů Apple Configuratoru![v Azure](./media/ui-changes/16-azure-ac-profiles.png)

@@ -19,12 +19,12 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 7af5274065217331cf3c7fc2a493374f4c0e2227
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: f0ad29e04e2f1d15c94e3ecdc4dbb3c891cd605e
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79324267"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077712"
 ---
 # <a name="troubleshoot-your-windows-10-device-enrollment"></a>Řešení potíží při registraci zařízení s Windows 10
 Pokud jste zařízení zaregistrovali, ale pořád nemáte přístup k pracovnímu nebo školnímu e-mailu a souborům, zkuste tento postup řešení potíží.  
@@ -41,9 +41,9 @@ Pokud jste zařízení zaregistrovali, ale pořád nemáte přístup k pracovní
 
 ## <a name="troubleshooting-steps-to-follow-if-you-see-access-work-or-school"></a>Postup řešení potíží, pokud se zobrazí „Přístup do práce nebo do školy“
 
-1. Pokud jste použili tento postup, ale pořád nemáte přístup k pracovnímu nebo školnímu e-mailu a souborům, vraťte se k položce **Přístup do práce nebo do školy**.
+1. Pokud jste postupovali podle výše uvedených kroků, ale pořád nemáte přístup k pracovnímu nebo školnímu e-mailu a souborům, vraťte se k **přístupu do práce nebo do školy**.
 
-2. Udělejte jednu z těchto věcí:
+2. Proveďte jednu z těchto akcí:
 
    - Pokud vidíte připojení, které vypadá jako na obrázku níž, klepněte na něj a potom zkontrolujte, že se zobrazují možnosti Správa, Informace a Odpojit. Pokud vidíte tyto možnosti, jste nyní zaregistrovaní a připojeni.
 
@@ -53,11 +53,11 @@ Pokud jste zařízení zaregistrovali, ale pořád nemáte přístup k pracovní
 
 ## <a name="troubleshooting-steps-to-follow-if-you-see-your-account"></a>Postup řešení potíží, pokud se zobrazí „Váš účet“
 
-Pokud jste použili tento postup, ale pořád nemáte přístup k pracovnímu nebo školnímu e-mailu, souborům a dalším datům, vraťte se k položce **Účty** a klepněte na **Přístup do práce**.
+Pokud jste postupovali podle výše uvedených kroků, ale pořád nemáte přístup k pracovnímu nebo školnímu e-mailu, souborům a dalším datům, přejděte zpátky na **účty**a klepněte na **přístup do práce**.
 
 - Pokud vidíte svůj pracovní nebo školní účet v seznamu, jste připojeni.  
 
-- Pokud svůj pracovní nebo školní účet nevidíte, klepněte na **Připojit** a přihlaste se pomocí přihlašovacích údajů svého pracovního nebo školního účtu.
+- Pokud svůj pracovní nebo školní účet nevidíte, klepněte na **připojit**a přihlaste se pomocí svých pracovních nebo školních přihlašovacích údajů.
 
 ## <a name="troubleshooting-steps-to-follow-if-you-see-set-up-a-work-or-school-account"></a>Postup řešení potíží, pokud se zobrazí „Nastavení pracovního nebo školního účtu“
 

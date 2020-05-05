@@ -19,12 +19,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 77c8a972020113b36b57c992b64a6965f733d119
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 66053bae197a74bf83a41b7ea400ffdc3d514b06
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79324211"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077576"
 ---
 # <a name="unenroll-your-android-device-from-management"></a>Zrušení správy registrovaného zařízení s Androidem  
 
@@ -32,7 +32,7 @@ Pokud organizace nechce zaregistrované zařízení s Androidem dále spravovat,
 
 * Zařízení ztratí přístup k chráněným datům a prostředkům organizace.
 * Zařízení se přestane zobrazovat na Portálu společnosti.
-* Z Portálu společnosti nebude možné instalovat aplikace.
+* Nemůžete instalovat aplikace z Portál společnosti.
 * Už nebudou platit nastavení, která se v zařízení změnila od jeho přidání (třeba zakázání fotoaparátu/kamery nebo vyžadování určité délky hesla).  
 
 > [!NOTE]
@@ -40,7 +40,7 @@ Pokud organizace nechce zaregistrované zařízení s Androidem dále spravovat,
 
 1. Na Portálu společnosti přejděte do pravého horního rohu a klepněte na tři svislé tečky. Otevře se nabídka akcí.
 
-   ![Snímek obrazovky aplikace pro Android Portál společnosti s nabídkou akce otevřenou v pravém horním rohu. Nová možnost Odebrat portál společnosti je k dispozici jako třetí pod možnostmi Můj profil a Nastavení a nad možnostmi Podmínky, Nápověda a váš názor a O produktu.](./media/android_remove_cp_menu_action_after_1705.png)
+   ![Snímek obrazovky aplikace pro Android Portál společnosti s nabídkou akce otevřenou v pravém horním rohu. Nová možnost Odebrat Portál společnosti je k dispozici jako třetí pod možnostmi Můj profil a Nastavení a nad možnostmi Podmínky, Nápověda a váš názor a O produktu.](./media/android_remove_cp_menu_action_after_1705.png)
 
 2. Klepněte na **Odebrat Portál společnosti**.  
 
@@ -52,14 +52,14 @@ Pokud organizace nechce zaregistrované zařízení s Androidem dále spravovat,
 
 Postup odebrání všech dat, která do zařízení uložila aplikace Portál společnosti pro Android:
 
-- Vymažte data aplikace klepnutím na **aplikace** > **[*název aplikace*]**  > **Vymazat data**.
+- Vymažte data aplikace klepnutím na **aplikace** > **[*název aplikace*]** > **Vymazat data**.
 - Odstraňte následující složku: \storage\internal storage\Android\data\com.microsoft.windowsintune.companyportal.
 
 ## <a name="uninstall-the-company-portal-app"></a>Odinstalace aplikace Portál společnosti
 
 Portál společnosti je aplikace pro správu zařízení. Nedá se odinstalovat, dokud zrušíte registraci zařízení od jeho správy. Jakmile registraci zrušíte, klepněte na ikonu aplikace Portál společnosti a podržte ji, dokud se nezobrazí **Odinstalovat**. Klepněte na **Odinstalovat** a aplikaci ze zařízení odeberte.  
 
-Případně klepněte na **nastavení** > **aplikace** > **portál společnosti** > **odinstalovat**.  
+Případně klepněte na **Nastavení** > **aplikace** > **portál společnosti** > **odinstalovat**.  
 
 ### <a name="remove-the-company-portal-app-as-a-device-administrator"></a>Odebrání aplikace Portál společnosti jako správce zařízení
 
@@ -71,12 +71,12 @@ Tady je postup, jak zakázat Portál společnosti jako správce zařízení. Sku
 
 **Možnost 1**:  
 
-1. Vyberte **nastavení** > **zabezpečení** > **Další nastavení zabezpečení** > **Správci zařízení**.  
+1. Vyberte **Nastavení** > **zabezpečení** > **Další nastavení** > zabezpečení**Správci zařízení**.  
 2. Zrušte zaškrtnutí **portál společnosti** výběru.  
 
-**Možnost 2**:
+**Možnost 2:**
 
-1. Vyberte **nastavení** > **zamykací obrazovce a zabezpečení** > **Další nastavení zabezpečení** > **aplikace pro správu zařízení**.
+1. Vyberte **Nastavení** > **zamykací obrazovky a zabezpečení** > **Další nastavení** > zabezpečení**aplikace Správce zařízení**.
 2. Zrušte zaškrtnutí **portál společnosti** výběru.
 
 Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).

@@ -9,6 +9,7 @@ ms.date: 10/31/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: ''
 searchScope:
@@ -18,12 +19,12 @@ ms.reviewer: tisilver
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 1bd216049c5dbda7c044949f9fa39c3b7bd56f9d
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: b83092521f1ab0058d47d599e7fd9c10c2fd6d35
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79324755"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077763"
 ---
 # <a name="set-up-ios-or-ipados-device-with-company-portal-and-intercede"></a>Nastavení zařízení se systémem iOS nebo iPadOS s využitím Portál společnosti a Intercede
 
@@ -36,7 +37,7 @@ Je možné, že budete muset nastavit odvozené přihlašovací údaje, pokud po
 * Přihlaste se do školních nebo pracovních aplikací, Wi-Fi a virtuálních privátních sítí (VPN).
 * Podepisování a šifrování pracovních e-mailů pomocí certifikátů S/MIME  
 
-V tomto článku budete:  
+V tomto článku provedete následující:  
 
 * Zaregistrujte mobilní zařízení se systémem iOS nebo iPadOS pomocí Portál společnosti Intune.  
 * Získejte odvozené přihlašovací údaje od poskytovatele odvozeného pověření vaší organizace, [Intercede](https://www.intercede.com/).   

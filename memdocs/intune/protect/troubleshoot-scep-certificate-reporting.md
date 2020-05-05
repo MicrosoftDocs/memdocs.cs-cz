@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 93bacecf2829b1e7119f909c14ce9ab44a8f6d2f
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: f4b374d79d689e1ecad8124489fe5023378bd4f1
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79328651"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079072"
 ---
 # <a name="troubleshoot-ndes-reporting-of-certificate-deployments-in-microsoft-intune"></a>Řešení potíží se sestavou nasazení certifikátů v Microsoft Intune
 

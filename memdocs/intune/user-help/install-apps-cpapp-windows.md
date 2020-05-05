@@ -19,12 +19,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: e0802e068b98e3f71393ca9b8124558243bf4847
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: c16f2d8cf70fe42e5122083364efa222cffa706e
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79328035"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078885"
 ---
 # <a name="install-and-share-apps-on-your-device"></a>Instalace a sdílení aplikací na zařízení
 
@@ -62,7 +62,7 @@ Sdílejte a doporučujte aplikace svým pracovním nebo školním kontaktům. N�
 
     ![Aplikace Portál společnosti pro Windows 10, úvodní stránka se zobrazeným seznamem aplikací a zařízení Místní nabídka Sdílet, na kterou jde kliknout, je zobrazená v horní části ikony ukázkové aplikace. ](./media/1808_ShareContext_CP_Windows.png)  
 
-2. Vyberte **Sdílet**.
+2. Vyberte **sdílet**.
 3. Zvolte si z jednotlivých kontaktů nebo vyberte jiný program, jako je například OneNote, a můžete to poslat celé skupině. Pokud nevidíte aplikaci, kterou chcete použít, vyberte **Získat aplikace ve Storu**, aby se zobrazily další dostupné aplikace.  
 
     ![Příklad snímku obrazovky s aplikací Portál společnosti pro Windows 10, místní stránka sdílení. Na stránce je Další informace o: <název ukázkové aplikace> v aplikaci Portál společnosti. Zobrazuje jeden kontakt a 2 aplikace, z kterých jde zvolit, kam se má poslat odkaz, a odkaz Získat aplikace ve Storu. ](./media/1808_ShareApps_CP_Windows.png) 

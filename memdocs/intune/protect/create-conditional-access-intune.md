@@ -17,12 +17,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6e9f30daef96180e58c6d4307d91155cf1305254
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 2af62dd8480c1e804e1ab8558d270b95fe97bbd4
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80323066"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079786"
 ---
 # <a name="create-a-device-based-conditional-access-policy"></a>Vytvoření zásady podmíněného přístupu na základě zařízení
 
@@ -37,8 +37,8 @@ Zásady podmíněného přístupu určují aplikace nebo služby, které chcete 
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Vyberte **zařízení** > **podmíněný přístup** > **zásady** > **nové zásady**.
-  ![vytvořit nové zásady podmíněného přístupu](./media/create-conditional-access-intune/create-ca.png)
+2. Vyberte **zařízení** >  > **zásady****podmíněného přístupu** > **nové zásady**.
+  ![Vytvořit nové zásady podmíněného přístupu](./media/create-conditional-access-intune/create-ca.png)
 
 3. V části **Přiřazení** vyberte **Uživatelé a skupiny**.
 
@@ -57,7 +57,7 @@ Zásady podmíněného přístupu určují aplikace nebo služby, které chcete 
         > [!TIP]
         > Otestujte zásadu s menší skupinou uživatelů, abyste se ujistili, že funguje podle očekávání.
 
-5. Vyberte **Hotovo**.
+5. Vyberte **Done** (Hotovo).
 
 6. V části **přiřazení**vyberte **cloudové aplikace nebo akce**.
 
@@ -91,7 +91,7 @@ Zásady podmíněného přístupu určují aplikace nebo služby, které chcete 
      > [!TIP]
      > Pokud chcete chránit oba klienty pro **moderní ověřování** i **klienty Exchange ActiveSync**, vytvořte dvě samostatné zásady podmíněného přístupu, jednu pro každý typ klienta. I když Exchange ActiveSync podporuje moderní ověřování, jediná podmínka, kterou podporuje Exchange ActiveSync, je platforma. Další podmínky, včetně Multi-Factor Authentication, se nepodporují. Pokud chcete efektivně chránit přístup k Exchangi Online z Exchange ActiveSync, vytvořte zásadu podmíněného přístupu, která určuje cloudovou aplikaci Office 365 Exchange Online a klientskou aplikaci Exchange ActiveSync se zásadami použít jenom pro vybrané podporované platformy.
 
-9. Vyberte **Hotovo**.
+9. Vyberte **Done** (Hotovo).
 
 10. V části **Ovládací prvky přístupu** zvolte **Udělení**. Nakonfigurujte, co se stane na základě podmínek, které jste nastavili.  Můžete vybrat z následujících možností:
 
@@ -105,7 +105,7 @@ Zásady podmíněného přístupu určují aplikace nebo služby, které chcete 
 
       ![Nastavení udělení řízení přístupu](./media/create-conditional-access-intune/create-ca-grant-access-settings.png)
 
-11. V části **Povolit zásadu** vyberte **Zapnuto**.
+11. V části **Povolit zásadu** vyberte **Zapnuté**.
 
 12. Vyberte **Vytvořit**.
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 525389e2f1cec207389bc37816ea4fc5399c99b4
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 9bb40b21d9a257586bbd38d24b2e9b6b0a9f8ce3
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79329111"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079531"
 ---
 # <a name="data-storage-and-processing-in-intune"></a>Ukládání a zpracovávání údajů v Intune
 
@@ -37,7 +37,7 @@ Veškeré shromážděné údaje, které nepatří mezi telemetrická data, se z
 - Spolehlivé kolekce (Service Fabric)  
 - Úložiště Azure 
 
-Telemetrická data (protokoly služby, protokoly výkonu, chyby atd.) nezbytná pro monitorování a poskytování stabilní služby se odesílají do úložišť telemetrických dat Microsoftu.
+Telemetrie (protokoly služeb, protokoly výkonu, chyby atd.), které jsou klíčem k monitorování a poskytování stabilní služby se odesílají do úložišť dat telemetrie Microsoftu.
 
 ### <a name="storage-locations"></a>Umístění úložišť
 
@@ -63,12 +63,12 @@ Intune zpracovává osobní údaje pomocí systémů s certifikací ISO. Další
 
 ### <a name="restrict-processing-of-personal-data"></a>Omezení zpracování osobních údajů
 
-Pokud chcete omezit zpracovávání osobních údajů uživatele, můžete jeho uživatelský účet odstranit takto:
+Chcete-li omezit zpracování osobních údajů uživatele, můžete účet uživatele odstranit pomocí:
 1. Export elektronické kopie osobních údajů uživatele, jejíž součástí jsou také:
-    - účty
+    - accounts
     - Data služby
-    - Přidružené protokoly
-2. Odstranění uživatelského účtu a přidružených dat z Intune.
+    - přidružených protokolů.
+2. Odstraňuje se účet uživatele a přidružená data z Intune.
 
 ## <a name="next-steps"></a>Další kroky
 

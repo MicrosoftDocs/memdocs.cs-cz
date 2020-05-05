@@ -18,23 +18,23 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c1c3c08a8ea50e23b9e3e59a6a6e8f04168f10e2
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 57210928bf92c5300db69dc68d5d5dd4d37795e7
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79332503"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079429"
 ---
 # <a name="help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune"></a>Pomoc při ochraně počítačů s Windows pomocí zásad brány Windows Firewall v Microsoft Intune
 
 [!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 > [!NOTE]
-> Informace v tomto tématu se vztahují jenom na desktopové systémy Windows, které spravujete jako počítače pomocí softwarového klienta Intune. Pokud chcete spravovat nastavení brány firewall pro počítače s Windows zaregistrované jako mobilní zařízení, přečtěte si téma [Přidání nastavení ochrany koncových bodů v Intune](../protect/endpoint-protection-configure.md).
+> Informace v tomto tématu se vztahují jenom na desktopové systémy Windows, které spravujete jako počítače (PC) pomocí softwarového klienta Intune. Pokud chcete spravovat nastavení brány firewall pro počítače s Windows zaregistrované jako mobilní zařízení, přečtěte si téma [Přidání nastavení ochrany koncových bodů v Intune](../protect/endpoint-protection-configure.md).
 
 Microsoft Intune vám pomůže mnoha různými způsoby zabezpečit počítače s Windows, které spravujete. Jedním z těchto způsobů je poskytnutí zásad, které vám umožní nakonfigurovat nastavení brány Windows Firewall na počítačích.
 
-Pokud jste si ještě do počítačů nenainstalovali klienta Intune pro počítače s Windows, přečtěte si téma [Instalace klienta na počítači s Windows pomocí Microsoft Intune](install-the-windows-pc-client-with-microsoft-intune.md).
+Pokud jste ještě na svých počítačích nenainstalovali klienta Intune pro počítače s Windows, přečtěte si téma [instalace klienta na počítači s Windows pomocí Microsoft Intune](install-the-windows-pc-client-with-microsoft-intune.md).
 
 Informace v následujících částech vám pomohou s konfigurací, nasazováním a monitorováním zásad brány Windows Firewall na počítačích s Windows.
 
@@ -54,9 +54,9 @@ Zásady brány Windows Firewall umožňují vytvářet a nasazovat nastavení, k
 
 ## <a name="configure-a-windows-firewall-policy"></a>Konfigurace zásad brány Windows Firewall
 
-1. V [konzole pro správu Microsoft Intune](https://manage.microsoft.com/)vyberte **zásady** &gt; **Přidat zásadu**.
+1. V [konzole pro správu Microsoft Intune](https://manage.microsoft.com/)klikněte na **zásady** &gt; **Přidat zásadu**.
 
-2. Konfigurujte a nasaďte zásady **nastavení brány Windows Firewall**. Můžete použít doporučená nastavení, nebo nastavení upravit. Pokud potřebujete více informací o postupu při vytváření a nasazování zásad, projděte si článek [Běžné úlohy správy počítačů s Windows pomocí počítačového klienta Microsoft Intune](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md).
+2. Konfigurujte a nasaďte zásady **nastavení brány Windows Firewall**. Můžete použít doporučená nastavení, nebo nastavení upravit. Pokud potřebujete další informace o tom, jak vytvořit a nasadit zásady, Projděte si článek [běžné úlohy správy počítačů s Windows pomocí počítačového klienta Microsoft Intune](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md).
 
     V následující části jsou uvedené hodnoty, které můžete v zásadách konfigurovat, a také výchozí hodnoty, které se použijí, pokud zásady neupravíte.
 
@@ -117,12 +117,12 @@ Můžete nakonfigurovat výjimky, které povolují konkrétní typy síťového 
 |**Služba správy klíčů**|Umožňuje spočítání počítačů kvůli shodě s licencí v podnikovém prostředí.|
 |**Zařízení Media Center Extender**|Umožňuje zařízením Media Center Extender komunikovat s počítači se systémem Windows Media Center. Toto nastavení využívá protokol SSDP (Simple Service Discovery Protocol) a qWave.|
 |**Služba Netlogon**|Konfiguruje zabezpečený kanál mezi klienty v doméně a řadičem domény za účelem ověřování totožnosti uživatelů a služeb. Toto nastavení využívá protokol RPC.|
-|**Zjišťování v síti**|Umožňuje počítačům zjišťovat jiná zařízení a být zjištěny jinými zařízeními v síti. Toto nastavení používá službu publikování a hostitele rozpoznávání funkcí a taky síťové protokoly SSDP, NetBIOS, LLMNR a UPnP.|
+|**Zjištění sítě**|Umožňuje počítačům zjišťovat jiná zařízení a být zjištěny jinými zařízeními v síti. Toto nastavení používá službu publikování a hostitele rozpoznávání funkcí a taky síťové protokoly SSDP, NetBIOS, LLMNR a UPnP.|
 |**Výstrahy a protokolování výkonu**|Umožňuje vzdálenou správu služby Výstrahy a protokolování výkonu. Toto nastavení využívá protokol RPC.|
 |**Vzdálená správa**|Umožňuje vzdálenou správu počítače.|
 |**Vzdálená pomoc**|Umožňuje uživatelům spravovaných počítačů žádat o vzdálenou pomoc od jiných uživatelů v síti. Toto nastavení používá síťové protokoly SSDP, PNRP (Peer Name Resolution Protocol), Teredo a UPnP.|
 |**Vzdálená plocha**|Umožňuje počítači přistupovat k jiným počítačům pomocí vzdálené plochy.|
-|**Vzdálená správa protokolů událostí**|Umožňuje vzdálené zobrazení a správu protokolů událostí klienta. Toto nastavení využívá pojmenované kanály a rozhraní RPC.|
+|**Vzdálená správa protokolu událostí**|Umožňuje vzdálené zobrazení a správu protokolů událostí klienta. Toto nastavení využívá pojmenované kanály a rozhraní RPC.|
 |**Vzdálená správa naplánovaných úloh**|Umožňuje vzdálenou správu služby plánování úloh. Toto nastavení využívá protokol RPC.|
 |**Vzdálená správa služeb**|Umožňuje vzdálenou správu místních služeb na klientech. Toto nastavení využívá pojmenované kanály a rozhraní RPC.|
 |**Vzdálená správa svazků**|Umožňuje vzdálenou softwarovou a hardwarovou správu svazku disku. Toto nastavení využívá protokol RPC.|
@@ -135,9 +135,9 @@ Můžete nakonfigurovat výjimky, které povolují konkrétní typy síťového 
 |**Služba Windows Media Player Network Sharing**|Umožňuje uživatelům sdílet multimédia přes síť. Toto nastavení používá síťové protokoly SSDP, qWave a UPnP.|
 |**Služba Windows Media Player Network Sharing (Internet)**<br>(Windows 7 nebo novější)|Umožňuje uživatelům sdílet domácí multimédia prostřednictvím internetu.|
 |**Centrum spolupráce**|Umožňuje uživatelům spolupracovat přes síť a sdílet tak dokumenty, programy nebo plochy. Toto nastavení využívá službu Replikace distribuovaného systému souborů (DFSR) a P2P.|
-|**Základ spolupráce rovnocenných počítačů ve Windows**|Konfiguruje různé programy a technologie typu peer-to-peer, aby se mohly připojit. Toto nastavení využívá protokol SSDP a PNRP.|
+|**Základ spolupráce rovnocenných počítačů**|Konfiguruje různé programy a technologie typu peer-to-peer, aby se mohly připojit. Toto nastavení využívá protokol SSDP a PNRP.|
 |**Vzdálená správa Windows (režim kompatibility)**|Umožňuje vzdálenou správu spravovaných počítačů pomocí služby vzdálené správy systému Windows (WS-Management), což je protokol založený na webových službách pro vzdálenou správu operačních systémů a zařízení.|
-|**Vzdálená správa Windows**<br>(Windows 8 nebo novější)|Umožňuje vzdálenou správu spravovaných počítačů pomocí služby vzdálené správy systému Windows (WS-Management), což je protokol založený na webových službách pro vzdálenou správu operačních systémů a zařízení.|
+|**Vzdálená správa systému Windows**<br>(Windows 8 nebo novější)|Umožňuje vzdálenou správu spravovaných počítačů pomocí služby vzdálené správy systému Windows (WS-Management), což je protokol založený na webových službách pro vzdálenou správu operačních systémů a zařízení.|
 |**Windows Virtual PC**<br>(Windows 7 nebo novější)|Umožňuje virtuálním počítačům komunikovat s dalšími počítači.|
 |**Bezdrátová přenosná zařízení**|Umožňuje přenos multimediálních souborů z fotoaparátu nebo multimediálního zařízení připojeného k síti do spravovaných počítačů pomocí protokolu MTP (Media Transfer Protocol). Toto nastavení používá síťové protokoly SSDP a UPnP.|
 

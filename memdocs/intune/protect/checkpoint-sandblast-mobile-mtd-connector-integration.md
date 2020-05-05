@@ -1,5 +1,5 @@
 ---
-title: Integrace kontrola Point SandBlast MTD
+title: Integrace kontrolního bodu SandBlast MTD
 titleSuffix: Microsoft Intune
 description: Jak nastavit Check Point SandBlast Mobile Threat Defense (MTD) s Intune za účelem regulace přístupu mobilních zařízení k firemním prostředkům.
 keywords: ''
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ed468bfd9a16bb231d29f21c545cd27f121d22e7
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 71dc3eed84f2f1a5a267740b5c1539b29f4c63bb
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79329719"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079854"
 ---
 # <a name="integrate-check-point-sandblast-mobile-with-intune"></a>Integrace Check Point SandBlast Mobile a Intune
 
@@ -46,7 +46,7 @@ Před zahájením procesu integrace Check Point SandBlast Mobile a Intune zkontr
 
   - Přístup k adresáři jako přihlášený uživatel
 
-  - Číst data z adresáře
+  - Čtení dat z adresáře
 
   - Odeslání informací o zařízení do Intune
 
@@ -58,7 +58,7 @@ Proces autorizace aplikace Check Point SandBlast:
 
 - Povolte službě Check Point SandBlast Mobile předávání informací týkajících se stavu zařízení zpět do Intune.
 
-- CheckPoint SandBlast Mobile se synchronizuje s členstvím skupiny registrace Azure AD, aby se mohla naplnit databáze zařízení.
+- Kontrolní bod SandBlast mobilní synchronizace se synchronizuje s členstvím skupiny registrace Azure AD, aby se naplnila databáze zařízení.
 
 - Povolte u konzoly pro správu Check Point SandBlast použití jednotného přihlašování (SSO) k Azure AD.
 

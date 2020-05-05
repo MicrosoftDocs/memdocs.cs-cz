@@ -9,12 +9,12 @@ ms.date: 04/24/2018
 ms.author: lizross
 ms.custom: include file
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8a40f614dccf3a61c8323acab763ce284a775324
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 1b8fcab22462027cc50b5794319b71cb467c8bc2
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79325303"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079500"
 ---
 >[!Note] 
->Pokud si chcete prohlédnout nebo odstranit osobní údaje, přečtěte si článek o [žádostech subjektů údajů v Azure pro GDPR](https://docs.microsoft.com/microsoft-365/compliance/gdpr-dsr-azure). Pokud hledáte obecné informace o nařízení GDPR, přejděte na [část věnovanou GDPR na portálu Service Trust Portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
+>Pokud vás zajímá prohlížení a odstraňování osobních údajů, přečtěte si článek [žádosti o služby Azure data pro GDPR](https://docs.microsoft.com/microsoft-365/compliance/gdpr-dsr-azure) . Pokud hledáte Obecné informace o GDPR, přečtěte si [část GDPR na portálu Trust Service](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).

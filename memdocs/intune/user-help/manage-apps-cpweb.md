@@ -19,12 +19,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 374b433ff6ee50f91343489ae36a1a190d87c7aa
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: b2ed22f393ea58d50c10175ffbd647bc53f592e5
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79328023"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078817"
 ---
 # <a name="manage-apps-from-the-company-portal-website"></a>Správa aplikací z Portál společnosti webu 
 Navštivte [web portál společnosti](https://portal.manage.microsoft.com) , kde můžete zobrazit a spravovat aplikace z vaší organizace. 

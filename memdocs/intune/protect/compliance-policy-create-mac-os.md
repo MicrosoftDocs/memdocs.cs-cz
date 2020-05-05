@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 210ec5ea6acc2d0ce91a93c83991b630a6fdbb4d
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
-ms.translationtype: MT
+ms.openlocfilehash: d5ac87b7539888ddceb6095b8a8c37f194c5a97a
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79329679"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079820"
 ---
 # <a name="macos-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>nastavení macOS a označení zařízení jako kompatibilních nebo nekompatibilních s použitím Intune
 
@@ -35,7 +35,7 @@ Jako správce Intune můžete pomocí těchto nastavení dodržování předpis�
 
 ## <a name="before-you-begin"></a>Před zahájením
 
-[Vytvořte zásadu dodržování předpisů](create-compliance-policy.md#create-the-policy). U možnosti **Platforma** vyberte **macOS**.
+[Vytvořte zásady dodržování předpisů](create-compliance-policy.md#create-the-policy). U možnosti **Platforma** vyberte **macOS**.
 
 ## <a name="device-health"></a>Stav zařízení
 
@@ -52,10 +52,10 @@ Jako správce Intune můžete pomocí těchto nastavení dodržování předpis�
   Pokud zařízení používá verzi operačního systému, která je novější než verze v pravidle, bude přístup k prostředkům organizace blokovaný. Uživateli zařízení se zobrazí výzva, aby kontaktoval správce IT. Zařízení nemá přístup k prostředkům organizace, dokud se nezmění pravidlo, které povoluje verzi operačního systému.
 
 - **Minimální verze buildu operačního systému**:  
-  Když Apple publikuje aktualizace zabezpečení, číslo sestavení se obvykle aktualizuje, nikoli verze operačního systému. Pomocí této funkce lze zadat číslo minimální povolenou sestavení na zařízení.
+  Když Apple publikuje aktualizace zabezpečení, číslo sestavení se obvykle aktualizuje, nikoli verze operačního systému. Pomocí této funkce můžete zadat minimální povolené číslo sestavení v zařízení.
 
 - **Maximální verze buildu operačního systému**:  
-  Když Apple publikuje aktualizace zabezpečení, číslo sestavení se obvykle aktualizuje, nikoli verze operačního systému. Pomocí této funkce lze zadat maximální povolené sestavení číslo na zařízení.
+  Když Apple publikuje aktualizace zabezpečení, číslo sestavení se obvykle aktualizuje, nikoli verze operačního systému. Pomocí této funkce můžete zadat maximální povolené číslo sestavení v zařízení.
 
 ## <a name="system-security-settings"></a>Systémové nastavení zabezpečení
 
@@ -75,20 +75,20 @@ Jako správce Intune můžete pomocí těchto nastavení dodržování předpis�
 - **Typ hesla**: Zvolte, jestli má heslo obsahovat pouze **číselné** znaky, nebo jestli má obsahovat kombinaci čísel a dalších znaků (**alfanumerické**).
 
 - **Počet nealfanumerických znaků v hesle**:  
-  Zadejte minimální počet speciálních znaků, například `&`, `#`, `%`, `!`a tak dále, které musí být v hesle.
+  Zadejte minimální počet speciálních znaků ( `&`například, `#`, `%`, `!`atd.), které musí být v hesle.
 
   Po nastavení vyššího čísla bude uživatel muset vytvořit složitější heslo.
 
 - **Maximální počet minut nečinnosti před vyžadováním hesla**:  
   Zadejte dobu nečinnosti, než uživatel musí znovu zadat heslo.
 
-- **Vypršení platnosti hesla (dny)** :  
+- **Vypršení platnosti hesla (dny)**:  
   Vyberte počet dní, po jejichž uplynutí vyprší platnost hesla, a musí vytvořit nové.
 
 - **Počet předchozích hesel, která zabrání opakovanému použití**:  
   Zadejte počet dříve použitých hesel, která se nedají použít.
 > [!IMPORTANT]
-> Když se požadavek na heslo na zařízení s macOS změní, projeví se to až při příští změně hesla uživatelem. Pokud třeba nastavíte omezení délky hesla na osm číslic a zařízení s macOS má aktuálně šestičíselné heslo, bude zařízení dál splňovat předpisy až do doby, kdy uživatel heslo na zařízení aktualizuje.
+> Když se požadavek na heslo v zařízení macOS změní, projeví se to až při příštím změně hesla uživatelem. Pokud třeba nastavíte omezení délky hesla na osm číslic a zařízení s macOS má aktuálně šestičíselné heslo, bude zařízení dál splňovat předpisy až do doby, kdy uživatel heslo na zařízení aktualizuje.
 
 ### <a name="encryption"></a>Šifrování
 

@@ -19,12 +19,12 @@ ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 5b22902d4cc0aa28903cf5a159355c92befb8e6b
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: c0c2e76157ee09d5094e81856a27e655b5932d1f
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79324195"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077406"
 ---
 # <a name="unenroll-your-macos-device-from-company-portal"></a>Zrušit registraci zařízení macOS z Portál společnosti
 
@@ -40,15 +40,15 @@ Pokud chcete ve správě zrušit registraci zařízení s macOS, postupujte takt
 
 Jakmile zrušíte registraci zařízení v Intune, stane se toto:
 
-- Zařízení se nebude zobrazovat na portálu společnosti.
+- Vaše zařízení se nezobrazuje v Portál společnosti.
 
-- Z portálu společnosti nebude možné instalovat aplikace.
+- Nemůžete instalovat aplikace z Portál společnosti.
 
 - Nebudou platit nastavení, která jste v zařízení změnili tím, že jste je přidali (například síla hesla).
 
 - Je možné, že již v zařízení nebudete mít přístup k některým prostředkům společnosti, jako jsou sdílené složky nebo interní weby.
 
-- Nebudete již moci v zařízení používat aplikace a data společnosti.
+- V zařízení už nemůžete používat firemní aplikace ani data společnosti.
 
 - Je možné, že se už nebudete moct připojovat k podnikové síti pomocí Wi-Fi nebo virtuální privátní sítě (VPN).
 

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 04ee6fea411c0ee231f4a7e9e00cdea45d206943
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 06d2c0b659f3dacb68f5029c23fbd488c06c1fbe
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80326608"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079089"
 ---
 # <a name="troubleshoot-deployment-of-a-scep-certificate-profile-to-devices-in-microsoft-intune"></a>Řešení potíží s nasazením profilu certifikátu SCEP do zařízení v Microsoft Intune
 
@@ -36,7 +36,7 @@ Profily certifikátů SCEP pro Android se přidávají do zařízení jako SyncM
 
 ### <a name="validate-that-the-android-device-was-sent-the-policy"></a>Ověřte, že zařízení s Androidem poslalo zásadu.
 
-Pokud chcete ověřit, že se profil poslal do zařízení, které jste očekávali, v [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431) se můžete obrátit na **řešení potíží + podpora** > **řešení potíží**.  V okně *řešení potíží* nastavte **přiřazení** na **konfigurační profily** a pak ověřte následující konfigurace:
+Pokud chcete ověřit, že se profil poslal do zařízení, které očekáváte, v [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431) přejít na **řešení potíží +** > **řešení potíží s**podporou.  V okně *řešení potíží* nastavte **přiřazení** na **konfigurační profily** a pak ověřte následující konfigurace:
 
 1. Zadejte uživatele, který by měl získat profil certifikátu SCEP.
 
@@ -63,7 +63,7 @@ Příklady klíčových položek:
 
 ### <a name="validate-that-the-iosipados-device-was-sent-the-policy"></a>Ověřte, že zařízení s iOS/iPadOS poslalo zásadu.
 
-Pokud chcete ověřit, že se profil poslal do zařízení, které jste očekávali, v [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431) se můžete obrátit na **řešení potíží + podpora** > **řešení potíží**.  V okně *řešení potíží* nastavte **přiřazení** na **konfigurační profily** a pak ověřte následující konfigurace:
+Pokud chcete ověřit, že se profil poslal do zařízení, které očekáváte, v [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431) přejít na **řešení potíží +** > **řešení potíží s**podporou.  V okně *řešení potíží* nastavte **přiřazení** na **konfigurační profily** a pak ověřte následující konfigurace:
 
 1. Zadejte uživatele, který by měl získat profil certifikátu SCEP.
 
@@ -90,7 +90,7 @@ Příklady klíčových položek:
 
 ### <a name="validate-that-the-windows-device-was-sent-the-policy"></a>Ověřte, že zařízení s Windows poslalo zásady.
 
-Pokud chcete ověřit, že se profil poslal do zařízení, které jste očekávali, v [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)v centru pro správu[Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431) Endpoint Manageru se můžete obrátit na **řešení potíží + support** > **řešení potíží**.  V okně *řešení potíží* nastavte **přiřazení** na **konfigurační profily** a pak ověřte následující konfigurace:
+Pokud chcete ověřit, že se profil poslal do zařízení, které jste očekávali, v [centru pro správu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431)v centru pro správu[Microsoft Endpoint](https://go.microsoft.com/fwlink/?linkid=2109431) Manageru se můžete obrátit na **řešení potíží a** > **řešení potíží s**podporou  V okně *řešení potíží* nastavte **přiřazení** na **konfigurační profily** a pak ověřte následující konfigurace:
 
 1. Zadejte uživatele, který by měl získat profil certifikátu SCEP.
 
@@ -102,13 +102,13 @@ Pokud chcete ověřit, že se profil poslal do zařízení, které jste očekáv
 
 ### <a name="validate-the-policy-reached-the-windows-device"></a>Ověření, že zásada dosáhla zařízení s Windows
 
-Doručení zásady pro profil se zaznamená **do protokolu** *DeviceManagement-Enterprise-diagnostics- > Provider* pro zařízení Windows s ID události **306**. 
+Doručení zásady pro profil se zaznamená do protokolu**správce** zařízení s Windows *DeviceManagement-Enterprise-Diagnostics-Provider* > s ID události **306**. 
 
 Postup otevření protokolu:
 
 1. Na zařízení spusťte příkaz **eventvwr. msc** a otevřete Prohlížeč událostí Windows.
 
-2. Rozbalte **protokoly aplikací a služeb** > **Microsoft** > **Windows** > **DeviceManagement-Enterprise-Diagnostic-Provider** > **admin**.
+2.  > Rozbalte položku **protokoly aplikací a služeb****Microsoft** > **Windows** > **DeviceManagement-Enterprise-Diagnostic-Provider** > **admin**.
 
 3. Vyhledejte událost **306**, která se podobá následujícímu příkladu:
 

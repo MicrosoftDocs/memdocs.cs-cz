@@ -9,6 +9,7 @@ ms.date: 10/31/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: ''
 searchScope:
@@ -18,12 +19,12 @@ ms.reviewer: tisilver
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 763d67c393eede1920f356e54d6ab422bc75a480
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: d0e933d3ab40b6c07615f701c9d181d41e4fded5
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79328219"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077780"
 ---
 # <a name="set-up-ios-or-ipados-device-with-company-portal-and-entrust-datacard"></a>Nastavení zařízení se systémem iOS nebo iPadOS s Portál společnosti a Entrust Datacard
 
@@ -36,7 +37,7 @@ Je možné, že budete muset nastavit odvozené přihlašovací údaje, pokud po
 * Přihlaste se do školních nebo pracovních aplikací, Wi-Fi a virtuálních privátních sítí (VPN).
 * Podepisování a šifrování pracovních e-mailů pomocí certifikátů S/MIME  
 
-V tomto článku budete:  
+V tomto článku provedete následující:  
 
    * Zaregistrujte mobilní zařízení se systémem iOS nebo iPadOS pomocí Portál společnosti Intune.  
    * Získejte odvozené přihlašovací údaje od zprostředkovatele odvozeného pověření vaší organizace [Entrust Datacard](https://www.entrustdatacard.com/).  

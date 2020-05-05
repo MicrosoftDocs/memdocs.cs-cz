@@ -17,12 +17,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: shpate
-ms.openlocfilehash: cb88ddf489fbcf588d3abbaffae545dc46d91b7d
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: e6537eec4e897afa183c51f67f32704c75985e05
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80326577"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079021"
 ---
 # <a name="integrate-windows-hello-for-business-with-microsoft-intune"></a>Integrace Windows Hello pro firmy s Microsoft Intune  
 
@@ -42,7 +42,7 @@ Pomocí tohoto článku můžete vytvořit výchozí zásadu pro službu Windows
 > [!IMPORTANT]
 > V desktopových a mobilních verzích Windows 10 před Anniversary Update šlo nastavit dva různé kódy PIN, které se daly použít k ověření prostředků:
 > - **PIN zařízení** se používal k odemknutí zařízení a připojení k prostředkům cloudu.
-> - **Pracovní PIN** se používal pro přístup k prostředkům Azure AD na uživatelově osobním zařízení (BYOD).
+> - **Pracovní PIN kód** se použil pro přístup k prostředkům Azure AD na osobních zařízeních uživatelů (BYOD).
 > 
 > Anniversary Update sloučil tyhle dva kódy do jediného PIN zařízení.
 > Veškeré zásady konfigurace Intune, které mají nastaveno, že ovládají PIN zařízení, a také jakékoli nakonfigurované zásady Windows Hello pro firmy teď nastavují hodnotu tohoto nového kódu PIN.
@@ -55,7 +55,7 @@ Pomocí tohoto článku můžete vytvořit výchozí zásadu pro službu Windows
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Přejít na **zařízení** >  **registrace** > registrace **zařízení** > **registraci systému Windows** > **Windows Hello pro firmy**. Otevře se podokno Windows Hello pro firmy.
+2. Přejít na **zařízení** >  **registrace registrace** > **zařízení** > **Windows registrace** > **Windows Hello pro firmy**. Otevře se podokno Windows Hello pro firmy.
 
 3. Pro **konfiguraci Windows Hello pro firmy**vyberte z těchto možností:
 
@@ -65,9 +65,9 @@ Pomocí tohoto článku můžete vytvořit výchozí zásadu pro službu Windows
 
 4. Pokud jste v předchozím kroku vybrali **Povoleno**, nakonfigurujte požadovaná nastavení, která se použijí pro všechna zaregistrovaná zařízení s Windows 10 a Windows 10 Mobile. Po konfiguraci těchto nastavení vyberte **Uložit**.
 
-   - **Použít čip TPM (Trusted Platform Module)** :
+   - **Použít čip TPM (Trusted Platform Module)**:
 
-     Čip TPM poskytuje další úroveň zabezpečení dat. Vyberte jednu z těchto hodnot:
+     Čip TPM poskytuje další úroveň zabezpečení dat. Vyberte jednu z těchto hodnot:
 
      - **Požadované** (výchozí). Windows Hello pro firmy můžou zřídit jenom zařízení s přístupným čipem TPM.
      - **Preferované**. Zařízení se nejdřív pokusí použít čip TPM. Pokud tato možnost není k dispozici, můžou použít softwarové šifrování.
@@ -80,15 +80,15 @@ Pomocí tohoto článku můžete vytvořit výchozí zásadu pro službu Windows
 
      Silnější kódy PIN můžete vynutit tím, že se v nich bude vyžadovat použití velkých a malých písmen a speciálních znaků. U každého vyberte možnost z:
 
-     - **Povolené**. Uživatelé můžou ve svém PIN kódu použít typ znaku, ale není to povinné.
+     - **Povoleno**. Uživatelé můžou ve svém PIN kódu použít typ znaku, ale není to povinné.
 
-     - **Požadované**. Uživatelé musí ve svém kódu PIN použít aspoň jeden z těchto typů znaků. Běžnou praxí třeba je vyžadovat použití nejméně jednoho velkého písmena, jednoho malého písmena a jednoho speciálního znaku.
+     - **Požadováno**. Uživatelé musí ve svém kódu PIN použít aspoň jeden z těchto typů znaků. Běžnou praxí třeba je vyžadovat použití nejméně jednoho velkého písmena, jednoho malého písmena a jednoho speciálního znaku.
 
      - **Není povolené** (výchozí). Uživatelé nesmí tyto typy znaků ve svém kódu PIN používat. (To je také chování, pokud nastavení není nakonfigurováno.)
 
-       Mezi speciální znaky patří: **! " # $ % &amp; ' ( ) &#42; + , - . / : ; &lt; = &gt; ? @ [ \ ] ^ _ &#96; { &#124; } ~**
+       Mezi speciální znaky patří: **! "# $% &amp; ' () &#42; +,-. / : ; &lt; = &gt; ? @ [\] ^ _ &#96; {&#124;} ~**
 
-   - **Doba platnosti kódu PIN (dny)** :
+   - **Doba platnosti kódu PIN (dny)**:
 
      Je dobrým zvykem zadat pro kód PIN dobu platnosti, po jejímž uplynutí ho uživatel musí změnit. Výchozí hodnota je 41 dnů.
 
@@ -98,7 +98,7 @@ Pomocí tohoto článku můžete vytvořit výchozí zásadu pro službu Windows
 
    - **Povolení biometrického ověřování**:
 
-     Jako alternativu ke kódu PIN pro Windows Hello pro firmy umožňuje biometrické ověřování, například rozpoznávání obličeje nebo otisků prstů. Uživatelé ale stejně musí nakonfigurovat pracovní kód PIN pro případ, že se biometrické ověření nepovede. Vybírejte z těchto možností:
+     Jako alternativu ke kódu PIN pro Windows Hello pro firmy umožňuje biometrické ověřování, například rozpoznávání obličeje nebo otisků prstů. Uživatelé ale stejně musí nakonfigurovat pracovní PIN kód pro případ, že se biometrické ověření nepovede. Vybírejte z těchto možností:
 
      - **Ano**. Windows Hello pro firmy umožňuje biometrické ověřování.
      - **Ne**. Windows Hello pro firmy neumožňuje biometrické ověřování (pro všechny typy účtů).
@@ -111,7 +111,7 @@ Pomocí tohoto článku můžete vytvořit výchozí zásadu pro službu Windows
 
    - **Povolení přihlášení telefonem**:
 
-     Pokud je tato možnost nastavená na hodnotu **Ano**, uživatelé můžou použít vzdálenou službu Passport, která bude sloužit jako přenosné doprovodné zařízení pro ověřování stolního počítače. Stolní počítač musí být připojený ke službě Azure Active Directory a v doprovodném zařízení musí být nakonfigurovaný kód PIN služby Windows Hello pro firmy.
+     Pokud je tato možnost nastavená na hodnotu **Ano**, uživatelé můžou použít vzdálenou službu Passport, která bude sloužit jako přenosné doprovodné zařízení pro ověřování stolního počítače. Stolní počítač musí být připojený ke službě Azure Active Directory a v doprovodném zařízení musí být nakonfigurovaný PIN kód pro Windows Hello pro firmy.
 
 ## <a name="windows-holographic-for-business-support"></a>Podpora Windows Holographic for Business
 

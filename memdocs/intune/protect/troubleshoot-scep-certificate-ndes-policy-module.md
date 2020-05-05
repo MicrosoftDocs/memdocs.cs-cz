@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b9f0a4b260fcd2698315ba8b777d88b86e203259
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: f58723be1a3fed09173a20a585077aef72e0c8f0
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79328683"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079106"
 ---
 # <a name="troubleshoot-the-ndes-policy-module-in-microsoft-intune"></a>Řešení potíží s modulem NDES Policy v Microsoft Intune
 
@@ -123,7 +123,7 @@ Pokud výsledek výzvy vrátí **hodnotu false**, vyhledejte chyby v *Certificat
 Signing certificate could not be retrieved. System.Security.Cryptography.CryptographicException: m_safeCertContext is an invalid handle. at System.Security.Cryptography.X509Certificates.X509Certificate.ThrowIfContextInvalid() at System.Security.Cryptography.X509Certificates.X509Certificate.GetCertHashString() at Microsoft.ConfigurationManager.CertRegPoint.CRPCertificate.RetrieveSigningCert(String certThumbprint
 ```
 
-**Řešení**: na serveru, na kterém je nainstalovaný konektor, otevřete Editor registru, vyhledejte klíč registru `HKLM\SOFTWARE\Microsoft\MicrosoftIntune\NDESConnector` a zkontrolujte, jestli existuje hodnota SigningCertificate.
+**Řešení**: na serveru, na kterém je nainstalovaný konektor, otevřete Editor registru, vyhledejte klíč `HKLM\SOFTWARE\Microsoft\MicrosoftIntune\NDESConnector` registru a zkontrolujte, jestli hodnota SigningCertificate existuje.
 
 Pokud tato hodnota neexistuje, restartujte službu Intune Connector v Services. msc a potom zkontrolujte, jestli se hodnota objeví v registru. Pokud hodnota stále chybí, často se jedná o problémy s připojením k síti mezi serverem, který je součástí služby NDES a Intune.
 

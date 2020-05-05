@@ -15,12 +15,12 @@ ms.technology: ''
 ms.assetid: 82872ba6-80f8-4cc9-adf4-0ccd8ff26dd2
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1d08b058303d70188c89d3ded989d4d3864b318f
-ms.sourcegitcommit: 012947b2095979ceb4e9c9f698e9c32f46baa7d8
+ms.openlocfilehash: 10cda4126f709ddd0cb5cda40b36067bd078a3f0
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80525212"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079582"
 ---
 # <a name="integrate-pradeo-mobile-threat-defense-with-intune"></a>Integrace ochrany před mobilními hrozbami Pradeo pomocí Intune
 
@@ -32,7 +32,7 @@ Při integraci řešení Pradeo Mobile Threat Defense do Intune je potřeba prov
 ## <a name="before-you-begin"></a>Před zahájením
 
 > [!NOTE]
-> Následující kroky je potřeba provést v [konzole Pradeo Security](https://www.apps-security.com).
+> Následující kroky je potřeba provést v [konzole Pradeo Security](https://pradeo-security.com/).
 
 Před zahájením procesu integrace řešení Pradeo a Intune zkontrolujte, že máte následující:
 
@@ -56,7 +56,7 @@ Postup autorizace aplikace Pradeo:
 
 - Povolte službě Pradeo předávání informací, které se týkají stavu zařízení, zpět do Intune.
 
-- Pradeo se synchronizuje s členstvím skupiny registrace Azure AD, aby se mohla naplnit databáze zařízení.
+- Pradeo se synchronizuje s členstvím skupiny registrace Azure AD, aby se naplnila databáze zařízení.
 
 - Povolte u konzoly pro správu Pradeo použití jednotného přihlašování (SSO) k Azure AD.
 

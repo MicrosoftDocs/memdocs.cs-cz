@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/28/2020
+ms.date: 04/21/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2538a8c9755efe9ecec80358b7d90f10d5f2c33a
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 44089df5645b128ba29e481e899d52c90b8c0a42
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80323831"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078392"
 ---
 # <a name="intune-discovered-apps"></a>Zjištěné aplikace Intune
 
@@ -34,7 +34,7 @@ ms.locfileid: "80323831"
 Intune poskytuje agregovaný seznam zjištěných aplikací na zařízeních zaregistrovaných v Intune ve vašem tenantovi.
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **aplikace** > **monitorovat** > **zjištěné aplikace**.
+2. Vybrat **aplikace** > **monitorovat** > **zjištěné aplikace**
 
 >[!NOTE]
 >Seznam zjištěných aplikací můžete exportovat do souboru. csv výběrem možnosti **exportovat** v podokně **zjištěné aplikace** .
@@ -54,9 +54,9 @@ Následující seznam poskytuje typ aplikační platformy, aplikace, které jsou
 
 | Platforma | Pro zařízení vlastněná osobně | Pro zařízení vlastněná společností | Aktualizovat cyklus |
 |------------------------------------------------------------------------|----------------------------------|--------------------------------------------------|---------------------------------------|
-| Windows 10 (aplikace Win32) Poznámka: [vyžaduje rozšíření správy Intune](intune-management-extension.md) na zařízení. | Nepoužitelné | Pouze spravované aplikace | Každých 24 hodin od registrace zařízení |
+| Windows 10 (aplikace Win32) Poznámka: [vyžaduje rozšíření správy Intune](intune-management-extension.md) na zařízení. | Neuvedeno | Všechny aplikace instalované na zařízení | Každých 24 hodin od registrace zařízení |
 | Windows 10 (moderní aplikace) | Jenom spravované moderní aplikace | Všechny moderní aplikace nainstalované v zařízení | Každých 7 dnů od registrace zařízení |
-| Windows 8.1 | Pouze spravované aplikace | Pouze spravované aplikace | Každých 7 dnů od registrace zařízení |
+| Windows 8.1 | Pouze spravované aplikace | Pouze spravované aplikace | Každých 7 dnů od registrace zařízení |
 | Windows Phone 8 | Pouze spravované aplikace | Pouze spravované aplikace | Každých 7 dnů od registrace zařízení |
 | Windows RT | Pouze spravované aplikace | Pouze spravované aplikace | Každých 7 dnů od registrace zařízení |
 | iOS/iPadOS | Pouze spravované aplikace | Všechny aplikace instalované na zařízení | Každých 7 dnů od registrace zařízení |

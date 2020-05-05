@@ -17,12 +17,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 2bd295b0dca016971c34997873994a4fe1bc2c0d
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 5c521740eb714ac6e80499dfb99d1e9de2df376e
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79324047"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079633"
 ---
 # <a name="install-symantec-endpoint-protection-mobile-on-your-android-device"></a>Instalace Symantec Endpoint Protection Mobile na zařízení s Androidem
 
@@ -52,7 +52,7 @@ Pokud máte s instalací potíže, zkuste provést kroky k odstranění potíž�
 
    * Pokud se žádné hrozby nenajdou, zobrazí se všechny tři typy hrozeb zeleně.
 
-     * Obrazovka s **podrobnostmi o zařízení** v aplikaci Portál společnosti ukazuje, že teď už splňujete firemní požadavky na zabezpečení.
+     * Obrazovka s **podrobnostmi o zařízení** v portál společnosti ukazuje, že teď dodržujete požadavky na zabezpečení vaší společnosti.
 
      ![Vaše zařízení teď vyhovuje zásadám.](./media/mtd-device-now-compliant-android.png)
 

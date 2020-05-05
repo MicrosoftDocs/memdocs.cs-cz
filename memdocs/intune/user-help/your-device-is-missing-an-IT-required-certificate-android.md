@@ -19,12 +19,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: b4a16204afc99169183e02eb269ab24d7f63cc49
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 6fa5865c1be4733df6edef484894b246c767db59
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79327467"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079599"
 ---
 # <a name="install-missing-certificate-required-by-your-organization"></a>Instalace chybějícího certifikátu požadovaného vaší organizací  
 
@@ -74,7 +74,7 @@ Provedením těchto kroků ručně identifikujte a nainstalujete certifikát do 
 
 4. V dialogovém okně **Název certifikátu** zobrazeném na následujícím snímku obrazovky přijměte výchozí název certifikátu.
 
-5. Ujistěte se, že **Použití přihlašovacích údajů** je nastavené na **Použito pro VPN a aplikace**, a potom klepněte na **OK**.
+5. Zajistěte, aby bylo **použití přihlašovacích údajů** nastaveno na **použití pro sítě VPN a aplikace**, a pak klepněte na **OK**.
 
     ![screenshot-certificate-name-dialog-showing-certificate-name](./media/andr-missing-cert-cert-name.png)
 
