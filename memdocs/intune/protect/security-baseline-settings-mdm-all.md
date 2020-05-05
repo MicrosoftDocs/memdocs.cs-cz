@@ -5,7 +5,7 @@ description: Zkontrolujte výchozí a dostupná nastavení pro různé verze sta
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/07/2020
+ms.date: 05/04/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 11d01481369f1f6439217262c4181c2c9dabf548
-ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
-ms.translationtype: HT
+ms.openlocfilehash: 0416332c74ba3305d344794c888d1867c25f8271
+ms.sourcegitcommit: 99a6e83219978433ec5a91d09beeaf69acbeb522
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82693385"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82782221"
 ---
 # <a name="windows-mdm-security-baseline-settings-for-intune"></a>Nastavení standardních hodnot zabezpečení Windows MDM pro Intune
 
@@ -38,6 +38,7 @@ Nezapomeňte vybrat verzi směrného plánu, kterou chcete zobrazit.
 <!-- Cookies might be required to enable some browsers to display the zone options -->
 
 ::: zone pivot="mdm-may-2019"
+
 **Základní hodnota zabezpečení MDM pro květen 2019**:  
 > [!NOTE]
 > V červnu 2019 byla šablona *zabezpečení MDM pro květen 2019* vydaná jako obecně dostupná (není ve verzi Preview). Tato verze standardních hodnot zabezpečení nahrazuje předchozí standardní hodnoty *zabezpečení MDM pro 2018. října*.  Profily, které byly vytvořeny před dostupností směrného plánu květen 2019, se neaktualizují, aby odrážely nastavení a hodnoty, které jsou ve verzi květen 2019.  I když nemůžete vytvořit nové profily založené na šabloně Preview, můžete upravit a pokračovat v používání profilů, které jste vytvořili dříve, a to na základě šablony ve verzi Preview.
@@ -46,6 +47,7 @@ Informace o tom, co se změnilo v této verzi směrného plánu z předchozí ve
 
 ::: zone-end
 ::: zone pivot="mdm-preview"
+
 **Preview – směrný plán zabezpečení MDM pro říjen 2018**:  
 > [!NOTE]
 > Toto je verze Preview směrného plánu zabezpečení MDM vydaná v říjnu od 2018. Tato verze Preview byla v červnu 2019 nahrazena vydáním *směrného plánu zabezpečení MDM pro šablonu květen 2019* , která je všeobecně dostupná (není ve verzi Preview). Profily, které byly vytvořeny před dostupností *směrného plánu zabezpečení MDM pro květen 2019* , se nebudou aktualizovat tak, aby odrážely nastavení a hodnoty, které jsou v směrném plánu zabezpečení MDM pro verzi květen 2019. I když nemůžete vytvořit nové profily založené na šabloně Preview, můžete upravit a pokračovat v používání profilů, které jste vytvořili dříve, a to na základě šablony ve verzi Preview.
@@ -146,11 +148,17 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Bit
 
   Pro zásady vyměnitelné jednotky nástrojem BitLocker nakonfigurujte následující nastavení:
 
-  - **Vyžadovat šifrování pro přístup pro zápis**:  
+::: zone-end
+::: zone pivot="mdm-may-2019"
+
+  - **Zablokovat přístup pro zápis na vyměnitelné datové jednotky, které nechrání BitLocker**:  
     **Výchozí**: Ano
 
 ::: zone-end
 ::: zone pivot="mdm-preview"
+
+  - **Vyžadovat šifrování pro přístup pro zápis**:  
+    **Výchozí**: Ano
 
 - **Zásada pro vyměnitelné jednotky BitLockeru**:  
   Toto nastavení zásad slouží k řízení metody šifrování a složitosti šifry. Hodnoty této zásady určují sílu šifry, kterou BitLocker používá k šifrování. Podniky můžou chtít řídit úroveň šifrování pro zvýšené zabezpečení (AES-256 je silnější než AES-128). Pokud povolíte toto nastavení, můžete nakonfigurovat šifrovací algoritmus a složitost klíče pro pevné datové jednotky, jednotky operačního systému a vyměnitelné datové jednotky. U pevných jednotek operačního systému doporučujeme použít algoritmus XTS-AES. U vyměnitelných jednotek byste měli použít algoritmus AES-CBC 128-bit nebo AES-CBC 256-bit, pokud se jednotka používá v jiných zařízeních, na kterých běží Windows 10, verze 1511 nebo novější. Změna metody šifrování nemá žádný vliv, pokud je jednotka již zašifrovaná nebo pokud probíhá šifrování. V těchto případech se nastavení této zásady ignoruje.  
@@ -284,7 +292,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Dat
 
 Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – DeviceGuard](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deviceguard) .
 
-- **Ochrana přihlašovacích údajů**:  
+- **Zapnout ochranu Credential Guard**:  
   Toto nastavení umožňuje uživatelům zapnout ochranu Credential Guard se zabezpečením na základě virtualizace, které pomáhá chránit přihlašovací údaje při příštím restartování počítače.  
   [Další informace](https://go.microsoft.com/fwlink/?linkid=2067044)
 
@@ -384,7 +392,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Dev
 
     **Výchozí**: 60
 
-  - **Požadovaný typ hesla**:  
+  - **Požadované heslo**:  
     Určuje typ kódu PIN nebo hesla, které se vyžaduje.  
     [Další informace](https://go.microsoft.com/fwlink/?linkid=2067027)
 
@@ -892,7 +900,7 @@ Další informace najdete v dokumentaci k Windows v dokumentaci k [zásadě CSP]
 
   **Výchozí**: povoleno
 
-- **Důvěryhodná zóna aplikace Internet Explorer nespouští antimalware proti ovládacím prvkům**ActiveX:  
+- **Důvěryhodná zóna aplikace Internet Explorer neběží proti malwaru proti ovládacím prvkům**ActiveX:  
   Nastavení této zásady určuje, jestli aplikace Internet Explorer spouští antimalwarové programy proti ovládacím prvkům ActiveX, aby zkontrolovala, jestli se dají bezpečně načíst na stránkách. Pokud nastavení této zásady povolíte, aplikace Internet Explorer nebude u antimalwarového programu kontrolovat, zda je bezpečné vytvořit instanci ovládacího prvku ActiveX. Pokud nastavení této zásady zakážete, bude aplikace Internet Explorer vždy kontrolovat váš Antimalwarový program, aby bylo možné zjistit, zda je bezpečné vytvořit instanci ovládacího prvku ActiveX. Pokud nastavení této zásady nenakonfigurujete, bude aplikace Internet Explorer vždy kontrolovat váš Antimalwarový program, aby bylo možné zjistit, zda je bezpečné vytvořit instanci ovládacího prvku ActiveX. Uživatelé můžou toto chování zapnout nebo vypnout pomocí nastavení zabezpečení Internet Exploreru.  
   [Další informace](https://go.microsoft.com/fwlink/?linkid=2067115)
 
@@ -1504,7 +1512,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Loc
 
   **Výchozí**: Ano
   
-- **Povolení přístupu k aplikacím v uživatelském rozhraní pro zabezpečená umístění**:  
+- **Povolte pouze aplikace přístupu uživatelského rozhraní pro zabezpečená umístění**:  
   Nastavení této zásady určuje, jestli programy pro usnadnění přístupu k uživatelskému rozhraní (UIAccess nebo UIA) můžou automaticky zakázat zabezpečenou plochu pro výzvy ke zvýšení oprávnění používané standardním uživatelem.
 
   - *Ano* – UIA programy, včetně vzdálené pomoci Windows, automaticky zakažte zabezpečenou plochu pro výzvy ke zvýšení oprávnění. Pokud nezakážete řízení uživatelských účtů: při zobrazení výzvy ke zvýšení oprávnění přepnout na zabezpečenou plochu, zobrazí se výzva na ploše interaktivního uživatele místo na zabezpečené ploše.
@@ -1542,151 +1550,168 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Loc
 
 Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Defender](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender) .
 
-- **Kontrolovat příchozí e-mailové zprávy**:  
-  Povolí nebo zakáže kontrolu e-mailu.  
-  [Další informace](https://go.microsoft.com/fwlink/?linkid=2067116)
-
-  **Výchozí**: Ano
-
-- **Typ podřízeného procesu spuštění aplikací Office**:  
-  Aplikace Office nemůžou vytvářet podřízené procesy. K tomu patří Word, Excel, PowerPoint, OneNote a Access. Toto je typické chování malwaru, zejména u útoků založených na makrech, které se pokoušejí použít aplikace Office ke spouštění nebo stahování škodlivých spustitelných souborů.  
-  [Další informace](https://go.microsoft.com/fwlink/?linkid=2067121)
-
-  **Výchozí**: blok
-
-- **Typ souhlasu pro odeslání ukázky**v programu Defender:  
-  Kontroluje, jestli se na úrovni souhlasu uživatele v programu Microsoft Defender odesílají data. Pokud je požadovaný souhlas již udělen, Microsoft Defender je odešle. Pokud ne (a pokud si uživatel není nikdy požádán), uživatelské rozhraní se spustí, aby požádalo o souhlas uživatele (když je povolený Defender/AllowCloudProtection) před odesláním dat.  
-  [Další informace](https://go.microsoft.com/fwlink/?linkid=2067131)
-
-  **Výchozí**: automaticky odesílat bezpečné vzorky
-
-- **Interval aktualizace podpisu (v hodinách)**:  
-  Interval aktualizace signatury Defenderu v hodinách
-
-  **Výchozí**: 4
-
-- **Typ spuštění datové části staženého skriptu**:  
-  Skript programu Defender stáhl typ spuštění datové části.
-
-  **Výchozí**: blok
-  
-- **Zabránit krádeži pověření typu**:  
-  Ochrana přihlašovacích údajů v programu Microsoft Defender používá zabezpečení na základě virtualizace k izolaci tajných kódů, aby k nim měli přístup jenom privilegovaný systémový software. Neoprávněný přístup k těmto tajným kódům může vést k útokům využívajícím krádež přihlašovacích údajů, jako je například Pass-the-Hash nebo Pass-The-Ticket. Ochrana přihlašovacích údajů v programu Microsoft Defender brání těmto útokům ochranou hodnot hash hesla NTLM, lístků pro udělení lístku Kerberos a přihlašovacích údajů uložených aplikacemi jako přihlašovací údaje domény.  
-  [Další informace](https://go.microsoft.com/fwlink/?linkid=2067065)
-  
-  **Výchozí**: Povolit
-
-- **Typ spuštění obsahu e-mailu**:  
-  Toto pravidlo blokuje spuštění nebo spuštění následujících typů souborů z e-mailu, který se zobrazuje v aplikaci Microsoft Outlook nebo webové pošty (například Gmail.com nebo Outlook.com): spustitelné soubory (například. exe,. dll nebo. scr) soubory skriptu (například PowerShell. PS, VisualBasic. vbs nebo JavaScript. js).  
-  [Další informace](https://go.microsoft.com/fwlink/?linkid=2067063)
-
-  **Výchozí**: blok
-
 ::: zone-end
 ::: zone pivot="mdm-may-2019"
 
-- **Spuštění aplikace Adobe Reader v podřízeném procesu**:  
+- **Zablokuje Adobe Reader při vytváření podřízených procesů**:  
 Toto pravidlo zabraňuje útokům blokováním aplikace Adobe Reader v vytváření dalších procesů. Prostřednictvím sociálního inženýrství nebo zneužití může malware stahovat a spouštět další datové části a přerušit z aplikace Adobe Reader. Blokováním podřízených procesů, které jsou vygenerovány aplikací Adobe Reader, se pokus o použití malwaru jako vektoru zabrání v rozprostření.
 [Další informace](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
 
   **Výchozí**: Povolit
 
-::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019"
-
-- **Ochrana sítě**:  
-  Tato zásada umožňuje zapnout ochranu sítě (blokovat/audit) nebo vypnout v programu Microsoft Defender zneužití Guard. Ochrana sítě je funkcí ochrany před zneužitím v programu Microsoft Defender, která chrání zaměstnance pomocí libovolné aplikace v přístupu k podvodným podvodům, webům pro zneužití a škodlivému obsahu na internetu. To zahrnuje prevenci prohlížeče třetích stran v připojení k nebezpečným webům. Typ hodnoty je celé číslo. Pokud povolíte toto nastavení, bude zapnutá ochrana sítě a zaměstnanci ji nebudou moct vypnout. Jeho chování se dá řídit následujícími možnostmi: blokování a audit. Pokud povolíte tuto zásadu s možností blokovat, uživatelé a aplikace budou mít zablokovaný připojení k nebezpečným doménám. Tuto aktivitu vidíte v programu Microsoft Defender Security Center. Pokud povolíte tuto zásadu s možností audit, uživatelé nebo aplikace nebudou mít možnost se připojit k nebezpečným doménám. Tato aktivita se ale pořád zobrazuje v programu Microsoft Defender Security Center. Pokud tuto zásadu zakážete, nebudou se uživatelé nebo aplikace zablokovat z připojení k nebezpečným doménám. V programu Microsoft Defender Security Center neuvidíte žádné síťové aktivity. Pokud tuto zásadu nenakonfigurujete, blokování sítě je ve výchozím nastavení zakázané.  
-  [Další informace](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/enable-network-protection)
+- **Aplikace Office Communications se spouští v podřízeném procesu**:  
+  [Chránit zařízení před zneužitím](https://go.microsoft.com/fwlink/?linkid=874499)
 
   **Výchozí**: Povolit
+
+- **Zadejte, jak často (0-24 hodin) se mají kontrolovat aktualizace služby Security Intelligence.**  
+  CSP: [Defender/SignatureUpdateInterval](https://go.microsoft.com/fwlink/?linkid=2113936)
+  
+  Určete, jak často se mají kontrolovat nové podpisy. Hodnota 1 je jedna hodina, 2 je dvě hodiny atd.
+
+  **Výchozí**: 4
+
+::: zone-end
+::: zone pivot="mdm-preview,mdm-may-2019"
 
 - **Den kontroly plánu Defenderu**:  
   Den kontroly plánu Defenderu
 
   **Výchozí**: každý den
 
-- **Ochrana Doručená v cloudu**:  
-  Aby se Váš počítač mohl nejlépe chránit, Microsoft Defender pošle Microsoftu informace o všech zjištěných problémech. Microsoft bude tyto informace analyzovat, získat další informace o problémech, které mají vliv na vás a jiné zákazníky, a nabízí Vylepšená řešení.  
-  [Další informace](https://go.microsoft.com/fwlink/?linkid=2067039)
+- **Zapnout ochranu s doručováním v cloudu**:  
+  CSP: [Defender/AllowCloudProtection](https://go.microsoft.com/fwlink/?linkid=2113937)
+  
+  Když se nastaví na Ano, Defender pošle Microsoftu informace o všech nalezených problémech. Pokud je nastavené na Nenakonfigurováno, klient se vrátí k výchozímu, který funkci povolí, ale umožní uživateli ho zakázat.
 
   **Výchozí**: Ano  
 
-- **Akce potenciálně nežádoucí aplikace v Defenderu**:  
-  Funkce ochrany potenciálně nežádoucí aplikace (PUA) v antivirové ochraně v programu Microsoft Defender může identifikovat a blokovat PUAs ze stahování a instalace do koncových bodů ve vaší síti. Tyto aplikace nejsou považovány za viry, malware nebo jiné typy hrozeb, ale mohou provádět akce s koncovými body, které nepříznivě ovlivňují jejich výkon nebo použití. PUA může také odkazovat na aplikace, které se považují za nekvalitní pověst. Typické chování PUA zahrnuje různé typy softwaru, které je možné vydávat do ovladačů pro webové prohlížeče a optimalizace registru, které zjišťují problémy, vyžádají si platbu, aby opravila chyby, ale zůstaly na koncovém bodu a neobsahují žádné změny ani optimalizace (označované taky jako "neautorizovaný antivirový program"). Tyto aplikace můžou zvýšit riziko napadení vaší sítě malwarem, způsobit obtížnější nákazu malwaru a může obcházet prostředky IT při čištění aplikací.  
-  [Další informace](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)
+- **Zapnout ochranu v reálném čase**  
+  CSP: [Defender/AllowRealtimeMonitoring](https://go.microsoft.com/fwlink/?linkid=2114050)
 
-  **Výchozí**: blok  
-
-- **Typ kódu makra zakódováného skriptu**:  
-  Malware a další hrozby se mohou pokusit dekódovat nebo skrýt škodlivý kód v některých souborech skriptu. Toto pravidlo zabrání spuštění skriptů, které se jeví jako nepoužívané.  
-  [Další informace](https://go.microsoft.com/fwlink/?linkid=2067026)
-
-  **Výchozí**: blok
-
-- **Kontrolovat vyměnitelné jednotky během úplného prohledávání**:  
-  Umožňuje, aby Microsoft Defender během úplného prohledávání kontroloval škodlivý a nežádoucí software v vyměnitelných jednotkách (například jednotky Flash). Antivirová ochrana v programu Microsoft Defender před spuštěním kontroluje všechny soubory na zařízeních USB.  
-  [Další informace](https://go.microsoft.com/fwlink/?linkid=2067036)
+  Pokud je toto nastavení nastaveno na Ano, vynutilo se monitorování v reálném čase a uživatel ho nebude moct zakázat. Pokud je nastavené na Nenakonfigurováno, nastavení se vrátí do výchozího nastavení klienta, které je zapnuté, ale uživatel ho může změnit. Pokud chcete zakázat monitorování v reálném čase, použijte vlastní identifikátor URI.
 
   **Výchozí**: Ano  
 
 - **Kontrolovat archivní soubory**:  
-  Defender prohledává archivní soubory.
+  SLUŽEB[](https://go.microsoft.com/fwlink/?linkid=2114047)
+  
+  Pokud je nastaveno na Ano, vynutily se soubory archivu, jako je například skenování souborů ZIP nebo CAB. Pokud je nastavené na Nenakonfigurováno, nastavení se vrátí zpátky do výchozího nastavení klienta, které bude kontrolovat archivované soubory, ale uživatel to může zakázat.
 
   **Výchozí**: Ano
 
-- **Monitorování chování**:  
-  Povolí nebo zakáže funkci monitorování chování programu Microsoft Defender. V systému Windows 10 tyto senzory shromažďují a zpracovávají signály chování z operačního systému a odesílají tato data ze senzorů do vaší privátní, izolované a cloudové instance ATP programu Microsoft Defender.  
-  [Další informace](https://go.microsoft.com/fwlink/?linkid=2067111)
+- **Zapnout monitorování chování**:  
+  CSP: [Defender/AllowBehaviorMonitoring](https://go.microsoft.com/fwlink/?linkid=2114048)
+
+  Pokud je toto nastavení nastaveno na Ano, vynutilo se monitorování chování a uživatel ho nemůže zakázat. Pokud je nastavené na Nenakonfigurováno, nastavení se vrátí do výchozího nastavení klienta, které je zapnuté, ale uživatel ho může změnit. Pokud chcete zakázat monitorování v reálném čase, použijte vlastní identifikátor URI.
 
   **Výchozí**: Ano
 
-- **Kontrolovat soubory otevřené ze síťových složek**:  
-  Pokud jsou soubory jen pro čtení, uživatel nebude moct odebrat zjištěný malware.
+- **Kontrolovat příchozí e-mailové zprávy**:  
+  CSP: [Defender/AllowEmailScanning](https://go.microsoft.com/fwlink/?linkid=2114052)
+
+  Při nastavení Ano se prohledají poštovní schránka a e-mailové soubory, například PST, DBX, MNX, MIME a BINHEX. Pokud není nakonfigurovaný, nastavení se vrátí do výchozího nastavení klienta e-mailových souborů, které se nekontrolují.
 
   **Výchozí**: Ano
 
-- **Nedůvěryhodný typ procesu USB**:  
-  Pomocí tohoto pravidla můžou správci zabránit spuštění nepodepsaných nebo nedůvěryhodných spustitelných souborů z vyměnitelných jednotek USB, včetně karet SD.  
-  [Další informace](https://go.microsoft.com/fwlink/?linkid=2067100)
+- **Kontrolovat vyměnitelné jednotky během úplného prohledávání**:  
+  CSP: [Defender/AllowFullScanRemovableDriveScanning](https://go.microsoft.com/fwlink/?linkid=2113946)
+
+  Když se nastaví na Ano, provedou se při úplné kontrole vyměnitelných jednotek (například jednotky USB Flash). Když se nastaví jako nenakonfigurované, nastavení se vrátí do výchozího klienta, který prohledá vyměnitelné jednotky, ale uživatel ho může zakázat.
+  **Výchozí**: Ano  
+
+- **Blokovat aplikacím Office vkládání kódu do jiných procesů**:  
+  [Chránit zařízení před zneužitím](https://go.microsoft.com/fwlink/?linkid=872974)
+
+  Při nastavení Ano budou aplikace Office zablokované v vkládání kódu do jiných procesů. Pokud je nastaveno pouze na audit, budou namísto blokování zavolány události systému Windows. Nastavení Nenakonfigurováno vrátí nastavení výchozí nastavení systému Windows, které je vypnuté. Toto pravidlo ASR se ovládá pomocí následujícího identifikátoru GUID: 75668C1F-73B5-4CF0-BB93-3ECF5CB7CC84
 
   **Výchozí**: blok
 
-- **Typ injektáže jiného procesu pro aplikace Office**:  
-  Aplikace Office, včetně Wordu, Excelu, PowerPointu a OneNotu, nemůžou vkládat kód do jiných procesů. Většinou ho malware používá ke spouštění škodlivého kódu při pokusu o skrytí aktivity z skenovacích modulů antivirového programu.  
-  [Další informace](https://go.microsoft.com/fwlink/?linkid=2067019)
+- **Blokovat aplikacím Office vytváření spustitelného obsahu**  
+  [Chránit zařízení před zneužitím](https://go.microsoft.com/fwlink/?linkid=872975)
+
+  Pokud nastavíte Ano, aplikace Office nepovolí vytvoření spustitelného obsahu. Pokud je nastaveno pouze na audit, budou namísto blokování zavolány události systému Windows. Nastavení Nenakonfigurováno vrátí nastavení výchozí nastavení systému Windows, které je vypnuté. Toto pravidlo ASR se řídí pomocí následujícího identifikátoru GUID: 3B576869-A4EC-4529-8536-B80A7769E899
 
   **Výchozí**: blok
 
-- **Kód makra Office umožňuje typ importů Win32**:  
-  Malware může v souborech Office použít kód makra pro import a načtení knihoven DLL Win32, které slouží k tomu, aby volání rozhraní API umožňovala v celém systému další infekce. Toto pravidlo se pokusí zablokovat soubory Office obsahující kód makra, který může importovat knihovny DLL Win32. K tomu patří Word, Excel, PowerPoint a OneNote.  
-  [Další informace](https://go.microsoft.com/fwlink/?linkid=2067130)
+- **Zablokovat všechny aplikace Office z vytváření podřízených procesů**  
+  [Chránit zařízení před zneužitím](https://go.microsoft.com/fwlink/?linkid=872976)
+
+  Při nastavení režimu auditování budou události systému Windows vyvolány namísto blokování. Nastavení Nenakonfigurováno vrátí nastavení výchozí nastavení systému Windows, které je vypnuté. Toto pravidlo ASR se ovládá pomocí následujícího identifikátoru GUID: D4F940AB-401B-4EFC-AADC-AD5F3C50688A
 
   **Výchozí**: blok
 
-- **Úroveň blokování cloudu Defenderu**:  
-  Úroveň bloku cloudu Defenderu
+- **Blokovat volání Win32 API z makra Office**:  
+  [Chránit zařízení před zneužitím](https://go.microsoft.com/fwlink/?linkid=872977)
 
-  **Výchozí**: Nenakonfigurováno
+  Pokud je nastaveno na Ano, bude se pro makro Office zablokovat použití volání Win32 API. Pokud je nastaveno pouze na audit, budou namísto blokování zavolány události systému Windows. Nastavení Nenakonfigurováno vrátí nastavení výchozí nastavení systému Windows, které je vypnuté. Toto pravidlo ASR se řídí pomocí následujícího identifikátoru GUID: 92E97FA1-2EDF-4476-BDD6-9DD0B4DDDC7B
+  
+  **Výchozí**: blok
 
-- **Sledování v reálném čase**:  
-  Defender vyžaduje sledování v reálném čase.
+- **Zablokovat provádění potenciálně zablokovaných skriptů (js/vbs/PS)**:  
+  [Chránit zařízení před zneužitím](https://go.microsoft.com/fwlink/?linkid=872978)
 
-  **Výchozí**: Ano
+  Když je nastaveno na Ano, Defender zablokuje provádění zavedených skriptů. Pokud je nastaveno pouze na audit, budou namísto blokování zavolány události systému Windows. Nastavení Nenakonfigurováno vrátí nastavení výchozí nastavení systému Windows, které je vypnuté. Toto pravidlo ASR se ovládá pomocí následujícího identifikátoru GUID: 5BEB7EFE-FD9A-4556-801D-275E5FFC04CC
+  
+  **Výchozí**: blok
+
+- **Typ spuštění obsahu e-mailu**:    
+  [Blokovat stahování spustitelného obsahu z e-mailu a klientů webové pošty](https://go.microsoft.com/fwlink/?linkid=872980)
+
+  Pokud je nastaveno na Ano, spustitelný obsah stažený z e-mailu a klientů webové pošty se zablokuje. Pokud je nastaveno pouze na audit, budou namísto blokování zavolány události systému Windows. Nastavení Nenakonfigurováno vrátí nastavení výchozí nastavení systému Windows, které je vypnuté.
+
+  **Výchozí**: blok
+
+- **Zabránit krádeži pověření typu**:  
+  [Chránit zařízení před zneužitím](https://go.microsoft.com/fwlink/?linkid=874499)
+  
+  Pokud je nastaveno na Ano, pokusy o odcizení přihlašovacích údajů prostřednictvím Lsass. exe budou zablokovány. Pokud je nastaveno pouze na audit, budou namísto blokování zavolány události systému Windows. Nastavení Nenakonfigurováno vrátí nastavení výchozí nastavení systému Windows, které je vypnuté. Toto pravidlo ASR se ovládá pomocí následujícího identifikátoru GUID: 9e6c4e1f-7d60-472f-ba1a-a39ef669e4b2
+
+  **Výchozí**: Povolit
+
+- **Akce potenciálně nežádoucí aplikace v Defenderu**:  
+  CSP: [Defender/PUAProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)+
+
+  Funkce ochrany potenciálně nežádoucí aplikace (PUA) v antivirové ochraně v programu Microsoft Defender může identifikovat a blokovat PUAs ze stahování a instalace do koncových bodů ve vaší síti. Tyto aplikace nejsou považovány za viry, malware nebo jiné typy hrozeb, ale mohou provádět akce s koncovými body, které nepříznivě ovlivňují jejich výkon nebo použití. PUA může také odkazovat na aplikace, které se považují za nekvalitní pověst. Typické chování PUA zahrnuje různé typy softwaru, které je možné vydávat do ovladačů pro webové prohlížeče a optimalizace registru, které zjišťují problémy, vyžádají si platbu, aby opravila chyby, ale zůstaly na koncovém bodu a neobsahují žádné změny ani optimalizace (označované taky jako "neautorizovaný antivirový program"). Tyto aplikace můžou zvýšit riziko napadení vaší sítě malwarem, způsobit obtížnější nákazu malwaru a může obcházet prostředky IT při čištění aplikací.
+
+  **Výchozí**: blok
+
+- **Zablokovat nedůvěryhodné a nepodepsané procesy, které se spouštějí z USB**:  
+  [Chránit zařízení před zneužitím](https://go.microsoft.com/fwlink/?linkid=874502)
+  
+  Při nastavení Ano se zablokuje nedůvěryhodné a nepodepsané procesy, které se spouštějí z USB jednotky. Pokud je nastaveno pouze na audit, budou namísto blokování zavolány události systému Windows. Nastavení Nenakonfigurováno vrátí nastavení výchozí nastavení systému Windows, které je vypnuté. Toto pravidlo ASR se ovládá pomocí následujícího identifikátoru GUID: b2b3f03d-6a65-4f7b-a9c7-1c7ef74a9ba4
+
+  **Výchozí**: blok
+
+- **Ochrana sítě**:  
+  [Defender/EnableNetworkProtection](https://go.microsoft.com/fwlink/?linkid=872618)
+
+  Pokud je nastaveno na Ano, bude ochrana sítě povolena pro všechny uživatele systému. Ochrana sítě chrání zaměstnance před přístupem k podvodným podvodům a škodlivému obsahu na internetu. Patří sem prohlížeče třetích stran. Když nastavení nastavíte jenom na audit, nebudou se uživatelé z nebezpečných domén zablokovat, ale místo toho se vyvolají události Windows. Nastavení Nenakonfigurováno vrátí nastavení výchozí nastavení systému Windows, které je zakázáno.
+
+  **Výchozí**: Povolit
+
+- **Typ souhlasu pro odeslání ukázky**v programu Defender:  
+  [Defender/SubmitSamplesConsent](https://go.microsoft.com/fwlink/?linkid=2067131)
+
+  Kontroluje, jestli se na úrovni souhlasu uživatele v programu Microsoft Defender odesílají data. Pokud je požadovaný souhlas již udělen, Microsoft Defender je odešle. V takovém případě se uživatelské rozhraní spustí, aby požádalo o souhlas uživatele (když je povolený program Defender/AllowCloudProtection) před odesláním dat.
+
+  **Výchozí**: automaticky odesílat bezpečné vzorky
 
 ::: zone-end
 ::: zone pivot="mdm-may-2019"
 
-- **Aplikace Office Communications se spouští v podřízeném procesu**:  
-  **Výchozí**: Povolit
+- **Prohledat síťové soubory**  
+  [Defender/AllowScanningNetworkFiles](https://go.microsoft.com/fwlink/?linkid=2114049)
+
+  - **Výchozí**: Ano
+
+- **Blokování spouštění staženého spustitelného obsahu pomocí JavaScriptu nebo VBScript**  
+  [Chránit zařízení před zneužitím](https://go.microsoft.com/fwlink/?linkid=872979)
+
+  Když se nastaví hodnota Ano, Defender bude blokovat spouštění souborů JavaScript nebo VBScript, které byly staženy z Internetu. Pokud je nastaveno pouze na audit, budou namísto blokování zavolány události systému Windows. Nastavení Nenakonfigurováno vrátí nastavení výchozí nastavení systému Windows, které je vypnuté. Toto pravidlo ASR se ovládá pomocí následujícího identifikátoru GUID: D3E037E1-3EB8-44C8-A917-57927947596D
 
 ::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019"
-
-- **Typ při vytváření nebo spouštění obsahu aplikací Office**:  
-  Toto pravidlo cílí na typické chování používané podezřelými a zlomyslnými doplňky a skripty (rozšíření), které vytvářejí nebo spouštějí spustitelné soubory. Toto je typická antimalwarová technika. Používání rozšíření je pro aplikace Office blokované. Tato rozšíření obvykle používají skriptování Windows Scripting Host (. Soubory WSH) pro spouštění skriptů, které automatizují určité úkoly nebo poskytují uživatelsky vytvořené funkce doplňků.  
-  [Další informace](https://go.microsoft.com/fwlink/?linkid=2067108)
-
-  **Výchozí**: blok
+::: zone pivot="mdm-may-2019,mdm-preview"
 
 ## <a name="ms-security-guide"></a>Průvodce zabezpečením MS
 
@@ -1736,7 +1761,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – MSS
 
   **Výchozí**: nejvyšší ochrana
 
-- **Přesměrování sítě ICMP přepsání protokolu OSPF vygenerované**:  
+- **Přesměrování sítě ICMP přepisují trasy vygenerované protokolem OSPF**:  
   [Další informace](https://go.microsoft.com/fwlink/?linkid=2067326)
 
   **Výchozí**: zakázáno
@@ -1790,19 +1815,21 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Rem
 
   **Výchozí**: zakázat vzdálenou pomoc
 
-  Pokud je nastavená možnost *Povolit vzdálenou pomoc*, nakonfigurujte následující další nastavení:
+<!-- These settings are not available: 
+  When set to *Enable Remote Assistance*, configure the following additional settings:
 
-  - **Vyžádaná oprávnění vzdálené pomoci**:  
-    **Výchozí**: zobrazení
+  - **Remote Assistance solicited permission**:  
+    **Default**: View
 
-  - **Maximální hodnota času lístku**:  
-    **Výchozí**: *Nenakonfigurováno*
+  - **Maximum ticket time value**:  
+    **Default**: *Not configured*
 
-  - **Maximální časové období lístku**:  
-    **Výchozí**: minuty
+  - **Maximum ticket time period**:  
+    **Default**: Minutes
 
-  - **Metoda pozvánky e-mailu**:  
-    **Výchozí**: jednoduché rozhraní MAPI
+  - **E-Mail invitation method**:  
+    **Default**: Simple MAPI
+-->
 
 ::: zone-end
 ::: zone pivot="mdm-preview,mdm-may-2019"
@@ -1920,6 +1947,9 @@ Další informace najdete v tématu [zásady CSP – hledání](https://docs.mic
 
 Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – filtr](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-smartscreen) .
 
+::: zone-end
+::: zone pivot="mdm-preview"
+
 - **Zablokovat provádění neověřených souborů**:  
   Zablokuje uživateli spouštění neověřených souborů.
 
@@ -1936,6 +1966,26 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – fil
   [Další informace](https://go.microsoft.com/fwlink/?linkid=2067168)
 
   **Výchozí**: Ano
+
+::: zone-end
+::: zone pivot="mdm-may-201"
+
+- **Zapnout filtr Windows SmartScreen**  
+  CSP: [SmartScreen/EnableSmartScreenInShell](https://go.microsoft.com/fwlink/?linkid=872784)
+
+  Při nastavení Ano se vynutilo použití filtru SmartScreen pro všechny uživatele. Když nastavení nastavíte na Nenakonfigurováno, vrátí nastavení výchozí nastavení systému Windows, které povoluje filtr SmartScreen, ale uživatelé můžou toto nastavení změnit. Chcete-li zakázat filtr SmartScreen, použijte vlastní identifikátor URI.
+
+  **Výchozí**: Ano
+
+- **Zablokovat uživatelům ignorovat upozornění filtru SmartScreen**  
+  CSP: [SmartScreen/PreventOverrideForFilesInShell](https://go.microsoft.com/fwlink/?linkid=872783)
+
+  Když tuto možnost nastavíte na Ano, filtr SmartScreen nenabídne uživateli možnost upozornění a spustí aplikaci. Zobrazí se upozornění, ale uživatel ji bude moci obejít. Když toto nastavení zakážete, vrátí se výchozí nastavení systému Windows, které umožní uživateli přepsat. Toto nastavení vyžaduje, aby bylo povolené nastavení vynutí filtr SmartScreen pro aplikace a soubory.
+
+  **Výchozí**: Ano
+
+::: zone-end
+::: zone pivot="mdm-preview,mdm-may-2019"
 
 ## <a name="system"></a>Systém
 
@@ -1994,52 +2044,40 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Win
 
 ## <a name="windows-hello-for-business"></a>Windows Hello pro firmy
 
-- **Povolit používání rozšířené ochrany proti falšování identity, pokud je dostupná**
-
-  Pokud ano, zařízení budou používat rozšířenou ochranu proti falšování identity, pokud jsou k dispozici. V případě ne se zablokuje ochrana proti falšování identity. Nenakonfigurované budou respektovat konfigurace provedené na klientovi.  
-  [Další informace](https://go.microsoft.com/fwlink/?linkid=2067192)
-
-  **Výchozí**: Ano
-
-- **Konfigurace Windows Hello pro firmy**
-
-  Windows Hello pro firmy je alternativní metoda pro přihlašování do systému Windows tím, že nahrazujete hesla, čipové karty a virtuální čipové karty.
-
-  > [!IMPORTANT]
-  > Možnosti pro toto nastavení se obrátí z předpokládaných významů. V opačném případě hodnota *Ano* nepovoluje Windows Hello a místo toho je považována za *nenakonfigurovanou*. Pokud je toto nastavení nastavené na *Nenakonfigurováno*, je Windows Hello zapnuto na zařízeních, která tyto standardní hodnoty obdrží.
-  >
-  > Následující popisy byly revidovány, aby odrážely toto chování. V budoucí aktualizaci tohoto směrného plánu zabezpečení bude záměna nastavení opravena.
-
-  - Pokud je nastavené na *není nakonfigurované*, Windows Hello je povolené a zařízení se zřídí ve Windows Hello pro firmy.
-  - Pokud je nastavená hodnota *Ano*, směrný plán nemá vliv na nastavení zásad daného zařízení. To znamená, že pokud je Windows Hello pro firmy v zařízení zakázané, zůstane zakázané. Pokud je povolená, zůstane povolený.
-  <!-- expected behavior 
-  - When set to *Yes*, you  enable this policy and the device provisions Windows Hello for Business.  
-  - When set to *Not configured*, the baseline does not affect the policy setting of the device. This means that if Windows Hello for Business is disabled on a device, it remains disabled. If its enabled, it remains enabled. 
-  -->
-
-  Nemůžete zakázat Windows Hello pro firmy prostřednictvím tohoto směrného plánu. Windows Hello pro firmy můžete zakázat při konfiguraci [registrace systému Windows](windows-hello.md)nebo jako součást profilu konfigurace zařízení pro [ochranu identity](identity-protection-configure.md).  
-
-  **Výchozí**: Ano
-
-- **Vyžadovat v PIN kódu malá písmena**:  
-  V případě potřeby musí kód PIN uživatele obsahovat aspoň jedno malé písmeno.
+- **Blokovat Windows Hello pro firmy**  
+  Windows Hello pro firmy je alternativní metoda pro přihlašování do systému Windows tím, že nahrazujete hesla, čipové karty a virtuální čipové karty. Pokud toto nastavení zásad zakážete nebo nenakonfigurujete, zařízení zřídí Windows Hello pro firmy. Pokud nastavení této zásady povolíte, zařízení nezřídí Windows Hello pro firmy pro žádného uživatele.
 
   **Výchozí**: povoleno
+  
+  Pokud je nastavené na *zakázáno*, můžete nakonfigurovat následující nastavení:
 
-- **Vyžadovat speciální znaky v PIN kódu**:  
-  V případě potřeby musí kód PIN uživatele zahrnovat aspoň jeden speciální znak.
+  - **Minimální délka PIN kódu**  
+    Minimální délka kódu PIN musí být mezi 4 a 127.
 
-  **Výchozí**: povoleno
+    **Výchozí**: *Nenakonfigurováno*
 
-- **Minimální délka PIN kódu**:  
-  Minimální délka kódu PIN musí být mezi 4 a 127.
+  - **Povolit používání rozšířené ochrany proti falšování identity, pokud je dostupná**  
+    [Ochrana proti falšování identity](https://go.microsoft.com/fwlink/?linkid=2067192)
 
-  **Výchozí hodnota**: 6
+    Pokud je tato možnost povolená, budou zařízení používat rozšířenou ochranu proti falšování identity, pokud je dostupná. Pokud není nakonfigurováno, bude dodržena konfigurace klienta pro ochranu proti falšování identity.
 
-- **Vyžadovat v PIN kódu velká písmena**:  
-  Pokud se to vyžaduje, PIN kód uživatele musí obsahovat aspoň jedno velké písmeno.
+    **Výchozí**: Nenakonfigurováno
 
-  **Výchozí**: povoleno
+  - **Malá písmena v PIN kódu**:  
+    V případě potřeby musí kód PIN uživatele obsahovat aspoň jedno malé písmeno.
+
+    **Výchozí**: nepovolené
+
+  - **Speciální znaky v PIN kódu**:  
+    V případě potřeby musí kód PIN uživatele zahrnovat aspoň jeden speciální znak.
+
+    **Výchozí**: nepovolené
+ 
+
+  - **Velká písmena v PIN kódu**:  
+    Pokud se to vyžaduje, PIN kód uživatele musí obsahovat aspoň jedno velké písmeno.
+
+    **Výchozí**: nepovolené
 
 ::: zone-end
 ::: zone pivot="mdm-preview,mdm-may-2019"
@@ -2065,7 +2103,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Win
 
 Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – WindowsPowerShell](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-windowspowershell) .
 
-- **Protokolování bloku skriptu prostředí Power Shell**:  
+- **Protokolování bloku skriptu PowerShellu**:  
   Nastavením této zásady lze povolit protokolování veškerého vstupu skriptu PowerShell do protokolu Microsoft-Windows-PowerShell/Operational Event Log. Pokud toto nastavení zásad povolíte, bude Windows PowerShell protokolovat zpracování příkazů, bloků skriptu, funkcí a skriptů – ať už se vyvolají interaktivně nebo prostřednictvím automatizace. Pokud nastavení této zásady zakážete, protokolování vstupu skriptu PowerShellu je zakázané. Pokud povolíte protokolování volání bloku skriptu, PowerShell kromě toho při vyvolání příkazu, bloku skriptu, funkce nebo skriptu spustí nebo zastaví protokol události. Povolení protokolování vyvolání generuje velké množství protokolů událostí. Poznámka: Toto nastavení zásad existuje v editoru Zásady skupiny v části Konfigurace počítače i Konfigurace uživatele. Nastavení zásad konfigurace počítače má přednost před nastavením zásad konfigurace uživatele.  
   [Další informace](https://go.microsoft.com/fwlink/?linkid=2067330)
 

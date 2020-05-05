@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/21/2020
+ms.date: 05/04/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2640107a4a3b17e2c544041445c8c797ef40b01e
-ms.sourcegitcommit: ad4b3e4874a797b755e774ff84429b5623f17c5c
-ms.translationtype: HT
+ms.openlocfilehash: f21728c62b5cb306e03b259940eef37141592b25
+ms.sourcegitcommit: 99a6e83219978433ec5a91d09beeaf69acbeb522
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82166544"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82782204"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>nastavení zařízení s iOS a iPadOS pro povolení nebo omezení funkcí pomocí Intune
 
@@ -593,9 +593,12 @@ Pokud chcete přidat aplikace, můžete:
 
 ## <a name="autonomous-single-app-mode"></a>Autonomní režim jedné aplikace
 
-Pomocí těchto nastavení můžete nakonfigurovat zařízení s iOS/iPadOS, aby spouštěla konkrétní aplikace v autonomním režimu jedné aplikace. Když je tento režim nakonfigurovaný a uživatelé spouštějí jednu z nakonfigurovaných aplikací, zařízení je do této aplikace uzamčené. Přepínání aplikace nebo úlohy je zakázané, dokud uživatelé neukončí povolenou aplikaci.
+Pomocí těchto nastavení můžete nakonfigurovat zařízení s iOS/iPadOS, aby spouštěla konkrétní aplikace v autonomním režimu jedné aplikace (ASAM). Když je tento režim nakonfigurovaný a uživatelé spouštějí jednu z nakonfigurovaných aplikací, zařízení je do této aplikace uzamčené. Přepínání aplikace nebo úlohy je zakázané, dokud uživatelé neukončí povolenou aplikaci.
 
 Například ve škole nebo univerzitním prostředí přidejte aplikaci, která umožní uživatelům provést test na zařízení. Nebo zařízení uzamkněte do aplikace Portál společnosti, dokud se uživatel neověří. Pokud jsou akce aplikace dokončené uživateli nebo pokud tuto zásadu odeberete, zařízení se vrátí do normálního stavu.
+
+> [!NOTE]
+> Ne všechny aplikace podporují autonomní režim jedné aplikace. K umístění aplikace v autonomním režimu jedné aplikace se obvykle vyžadují ID sady prostředků nebo dvojice klíč-hodnota, které jsou poskytovány zásadami konfigurace aplikace. Další informace najdete v části [ `autonomousSingleAppModePermittedAppIDs` omezení](https://developer.apple.com/documentation/devicemanagement/restrictions) v dokumentaci k MDM společnosti Apple. Další informace o konkrétním nastavení požadovaném pro aplikaci, kterou konfigurujete, najdete v dokumentaci od dodavatele.
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Nastavení platí pro: automatický zápis zařízení (pod dohledem)
 
@@ -606,6 +609,8 @@ Například ve škole nebo univerzitním prostředí přidejte aplikaci, která 
 Soubor CSV můžete také **naimportovat** se seznamem názvů aplikací a jejich ID sady. Případně **exportujte** existující seznam obsahující aplikace.
 
 ## <a name="kiosk"></a>Kiosk
+
+V Intune se beznabídkový režim označuje taky jako režim jedné aplikace. V [dokumentaci k MDM od společnosti Apple](https://developer.apple.com/documentation/devicemanagement/applock)se jedná o celoobrazovkový režim, který je známý jako zámek aplikace.
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Nastavení platí pro: automatický zápis zařízení (pod dohledem)
 
@@ -671,7 +676,7 @@ Soubor CSV můžete také **naimportovat** se seznamem názvů aplikací a jejic
 
 režim iOS/iPadOS pod dohledem se dá povolit jenom při počátečním nastavení zařízení prostřednictvím Program registrace zařízení společnosti Apple nebo pomocí Apple Configuratoru. Po povolení režimu pod dohledem může Intune v zařízení nakonfigurovat následující funkce:
 
-- Zámek aplikace (režim jedné aplikace) 
+- Celoobrazovkový režim (režim jedné aplikace): v dokumentaci k Apple MDM se říká "App Lock".
 - Zakázání zámku aktivace 
 - Autonomní režim jedné aplikace 
 - Filtr webového obsahu 

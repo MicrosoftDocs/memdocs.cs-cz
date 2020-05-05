@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a703914b589430f3e2347c0ea08843193595dc0e
-ms.sourcegitcommit: 56bb5419c41c2e150ffed0564350123135ea4592
-ms.translationtype: HT
+ms.openlocfilehash: 5f85a8ffc81aa91bce09d6a76eeb5a52335d8b23
+ms.sourcegitcommit: dda5e6f00f79737348e850d971f15fc3093d6431
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82729330"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82745188"
 ---
 # <a name="monitor-intune-device-compliance-policies"></a>Monitorování zásad dodržování předpisů zařízením v Intune
 
@@ -104,9 +104,9 @@ Tato akce otevře okno **dodržování předpisů zařízením** a zobrazí zař
 Pokud chcete zobrazit všechna zařízení vlastněná konkrétním uživatelem, můžete také filtrovat sestavu grafu zadáním e-mailu uživatele.
 
 > [!TIP]
-> Pokud se uživatel do zařízení přihlásí, zařízení se zásadami dodržování předpisů zařízení odešle zprávu o dodržování předpisů zpět do Intune, která zobrazuje **systémový účet** jako hlavní název uživatele. Důvodem je to, že zásady dodržování předpisů pro zařízení byly cílené na skupinu uživatelů nebo zařízení a v době vyhodnocení dodržování předpisů nebylo na zařízení přihlášen žádný uživatel.
+> Pokud k zařízení není přihlášený žádný uživatel, pošle zařízení s cílem zásady dodržování předpisů zařízením zprávu o dodržování předpisů zpět do Intune, která zobrazuje **systémový účet** jako hlavní název uživatele. Důvodem je to, že zásady dodržování předpisů pro zařízení byly cílené na skupinu uživatelů nebo zařízení a v době, kdy byly vyhodnoceny zásady dodržování předpisů, nebyl do zařízení přihlášen žádný uživatel.
 >
-> Pokud se navíc ke stejnému zařízení přihlásilo více uživatelů a toto zařízení je cílem zásad dodržování předpisů pro zařízení a zvažuje, že tito uživatelé jsou součástí stejné zásady dodržování předpisů pro zařízení, které je třeba vyhodnotit, může sestava dodržování předpisů zobrazovat stejné zařízení víckrát, protože každý uživatel přihlášený k zařízení musí vyhodnotit zásady dodržování předpisů zařízením a nahlásit ho zpátky do Intune.
+> Pokud se navíc ke stejnému zařízení přihlásilo více uživatelů a incident se zaměřuje na zásadu dodržování předpisů, která je vymezená tak, aby pokryla všechny uživatele, kteří jsou aktuálně přihlášení k zařízení, může sestava dodržování předpisů zobrazovat stejné zařízení víckrát, protože každý uživatel, který je přihlášený k zařízení, musí vyhodnotit zásady dodržování předpisů zařízením a nahlásit ho zpátky do Intune.
 
 #### <a name="filter-and-columns"></a>Filtrování a sloupce
 
