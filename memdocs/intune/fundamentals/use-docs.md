@@ -11,12 +11,12 @@ author: dougeby
 ms.author: dougeby
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b91f6b11df1b65176711df0ecd907a1764c2e692
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 3892da4f3783e8b169bff576a9945f34cc47c356
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79330247"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81726048"
 ---
 # <a name="using-the-intune-docs"></a>Používání dokumentace Intune
 
@@ -28,15 +28,15 @@ Obecnou nápovědu a podporu pro Intune najdete v tématu [získání podpory pr
 
  Následující tipy vám můžou pomoct při hledání požadovaných informací:  
 
-- Při použití preferovaného vyhledávacího modulu k vyhledání obsahu pro Microsoft Intune přidejte `Intune` společně s klíčovými slovy hledání.  
+- Pokud používáte preferovaný vyhledávací web k vyhledání obsahu pro Microsoft Intune, zahrňte `Intune` společně s klíčovými slovy hledání.  
 
   - Hledání výsledků z docs.microsoft.com. Výsledky z technet.microsoft.com nebo msdn.microsoft.com jsou pro starší verze produktu.  
 
-  - Chcete-li se zaměřit na výsledky hledání do aktuální knihovny obsahu, zahrňte `site:docs.microsoft.com` do oboru vyhledávacího modulu.  
+  - Chcete-li se zaměřit na výsledky hledání do aktuální knihovny obsahu, `site:docs.microsoft.com` zahrňte do oboru vyhledávacího modulu.  
 
 - Použijte hledané výrazy, které odpovídají terminologii v uživatelském rozhraní a online dokumentaci. Vyhněte se neoficiálním podmínkám nebo zkratkám, které by se vám mohly zobrazit v obsahu komunity.
 
-- Pokud chcete hledat v aktuálně zobrazeném článku, použijte funkci **Najít** v prohlížeči. Ve většině moderních webových prohlížečů stiskněte **kombinaci kláves Ctrl**+**F** a zadejte hledané výrazy.  
+- Pokud chcete hledat v aktuálně zobrazeném článku, použijte funkci **Najít** v prohlížeči. V případě většiny moderních webových prohlížečů stiskněte **kombinaci kláves CTRL**+**F** a zadejte hledané výrazy.  
 
 - Každý článek v docs.microsoft.com obsahuje následující pole, která vám pomůžou při hledání obsahu:  
 
@@ -86,7 +86,7 @@ Dokumentace ke službě Intune, jako je většina obsahu v docs.microsoft.com, j
 
 4. V části navrhnout změnu souboru zadejte komentář veřejné potvrzení popisující, *co* jste změnili. Pak klikněte na **navrhnout změnu souboru**.  
 
-5. Posuňte se dolů a ověřte změny, které jste provedli. Kliknutím na **vytvořit žádost o získání dat** otevřete formulář. Popište, *Proč* jste tuto změnu provedli. Klikněte na **vytvořit žádost o získání dat**.
+5. Posuňte se dolů a ověřte změny, které jste provedli. Kliknutím na **vytvořit žádost o získání dat** otevřete formulář. Popište, *Proč* jste tuto změnu provedli. Klikněte na **Create pull request** (Vytvořit žádost o přijetí změn).
 
 Tým pro psaní obdrží vaši žádost o přijetí změn, přiřadí položku příslušnému zapisovači, zkontroluje text a provede v něm rychlé úpravy a schválí a sloučí změny, nebo vám poskytne další informace o této aktualizaci.  
 
@@ -117,11 +117,11 @@ Při přispívání do dokumentace k Intune postupujte podle těchto obecných p
 
 ## <a name="consolidation-of-documentation-for-microsoft-endpoint-manager"></a>Konsolidace dokumentace pro Microsoft Endpoint Manager
 
-Pro lepší podporu kombinovaných scénářů pro Intune a Configuration Manager se tato knihovna dokumentace přesunula na [https://docs.microsoft.com/mem/intune](https://docs.microsoft.com/mem/intune). Knihovna dokumentace Configuration Manager se později přesune na `docs.microsoft.com/mem/configmgr`. Všechny odkazy budou automaticky přesměrovány, takže nemusíte dělat žádné změny pro čtení tohoto obsahu.
+Pro lepší podporu kombinovaných scénářů pro Intune a Configuration Manager byla dokumentace Intune a Configuration Manager konsolidovaná na webu Microsoft Endpoint Manager. Dokumentace k Intune je teď v [https://docs.microsoft.com/mem/intune](https://docs.microsoft.com/mem/intune) a v knihovně dokumentace Configuration Manager je dostupná na [https://docs.microsoft.com/mem/configmgr](https://docs.microsoft.com/mem/configmgr)adrese. Pokud používáte starou adresu URL, všechny odkazy se automaticky přesměrují, takže nemusíte dělat žádné změny pro čtení tohoto obsahu.
 
 Pokud zadáte zpětnou vazbu nebo přispějete k článkům, jsou nutné některé změny:
 
-- Existující problémy GitHubu zůstanou v původním úložišti, [https://github.com/MicrosoftDocs/IntuneDocs/issues](https://github.com/MicrosoftDocs/IntuneDocs/issues).
+- Stávající problémy GitHubu zůstaly v původním úložišti [https://github.com/MicrosoftDocs/IntuneDocs/issues](https://github.com/MicrosoftDocs/IntuneDocs/issues) , [https://github.com/MicrosoftDocs/sccmdocs/issues](https://github.com/MicrosoftDocs/sccmdocs/)nebo.
 
   - Tyto problémy se nebudou zobrazovat jako otevřené nebo uzavřené problémy v části věnované zpětné vazbě v odkazovaném článku.
 

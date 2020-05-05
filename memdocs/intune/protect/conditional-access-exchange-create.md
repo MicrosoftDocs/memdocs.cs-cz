@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/26/2020
+ms.date: 04/15/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 671f80efb54f51cac410b37de6227e456d9316d9
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 36b39d20e666015ae040a1fa058dca1d167686e4
+ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80323127"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739902"
 ---
 # <a name="configure-exchange-on-premises-access-for-intune"></a>Konfigurace přístupu k místnímu Exchangi pro Intune
 
@@ -35,7 +35,7 @@ Pokud máte vyhrazené prostředí Exchange Online a potřebujete zjistit, jestl
 
 Než budete moct nakonfigurovat podmíněný přístup, ověřte, že existují následující konfigurace:
 
-- Vaše verze Exchange je **exchange 2010 SP1 nebo novější**. Podporuje se pole serveru pro klientský přístup (CAS) serveru Exchange.
+- Vaše verze Exchange je **exchange 2010 SP3 nebo novější**. Podporuje se pole serveru pro klientský přístup (CAS) serveru Exchange.
 
 - Nainstalovali jste a používali místní [Exchange Connector pro Exchange ActiveSync](exchange-connector-install.md), který připojuje Intune k místnímu Exchangi.
 
@@ -50,7 +50,7 @@ Než budete moct nakonfigurovat podmíněný přístup, ověřte, že existují 
 
 - Pokud jsou zásady podmíněného přístupu nakonfigurované a cílené na uživatele, musí být předtím, než se uživatel může připojit k e-mailu, použít následující **zařízení** :
   - Musí být **zaregistrovaný** ve službě Intune nebo se musí jednat o počítač připojený k doméně.
-  - **Je zaregistrované v Azure Active Directory**. Kromě toho musí být ve službě Azure Active Directory zaregistrované ID protokolu Exchange ActiveSync klienta.
+  - **Musí být zaregistrované v Azure Active Directory**. Kromě toho musí být ve službě Azure Active Directory zaregistrované ID protokolu Exchange ActiveSync klienta.
 
 - Pro zákazníky s Intune a Office 365 se služba Azure AD Device Registration Service (DRS) aktivuje automaticky. Zákazníci, kteří už mají nasazenou službu AD FS Device Registration Service, nevidí registrovaná zařízení v místní službě Active Directory. **To neplatí pro počítače s Windows ani zařízení Windows Phone**.
 
@@ -74,13 +74,13 @@ Než budete moct nakonfigurovat podmíněný přístup, ověřte, že existují 
   
   2. V případě **potřeby**Nasaďte aplikaci Gmail nebo devět Work.
 
-  3. Vyberte **zařízení** > **konfigurační profily** > **vytvořit profil**, zadejte **název** a **Popis** profilu.
+  3. Vyberte **Devices** > **Konfigurace zařízení profily** > **vytvořit profil**, zadejte **název** a **Popis** profilu.
 
   4. Na **platformě**vyberte **Android Enterprise** a v **typ profilu**vyberte **e-mail** .
 
   5. Nakonfigurujte [Nastavení e-mailového profilu](https://docs.microsoft.com/intune/configuration/email-settings-android-enterprise#android-enterprise).
 
-  6. Až to budete mít, vyberte **OK** > **Vytvořit** a změny uložte.
+  6. Až budete hotovi, vyberte **OK** > **a uložte** změny.
 
   7. Po vytvoření e-mailového profilu [ho přiřaďte do skupin](https://docs.microsoft.com/intune/device-profile-assign).
 
@@ -99,30 +99,30 @@ Než budete moct pomocí následujícího postupu nastavit místní řízení p�
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Přejděte do **správy tenanta** > **přístup k Exchangi**a pak vyberte **přístup k místnímu Exchangi**.
+2. Přejděte na > **přístup k Exchangi**pro **správu tenanta**a pak vyberte **přístup k místnímu Exchangi**.
 
 3. V podokně **přístup v místním systému Exchange** *Povolte řízení přístupu k místnímu systému Exchange*kliknutím na **Ano** .
 
    > [!div class="mx-imgBorder"]
-   > ![ukázkový snímek obrazovky s přístupem k místnímu systému Exchange](./media/conditional-access-exchange-create/exchange-on-premises-access.png)
+   > ![Ukázkový snímek obrazovky s přístupem k místnímu systému Exchange](./media/conditional-access-exchange-create/exchange-on-premises-access.png)
 
 4. V části **přiřazení**zvolte **Vybrat skupiny, které se mají zahrnout**, a potom vyberte jednu nebo víc skupin pro konfiguraci přístupu.
 
    Členové vybraných skupin mají zásady podmíněného přístupu pro přístup k místnímu systému Exchange, na které se vztahují. Uživatelé, kteří obdrží tuto zásadu, musí zaregistrovat svoje zařízení v Intune a splňovat profily dodržování předpisů předtím, než budou moct přistupovat k místnímu Exchangi.
 
    > [!div class="mx-imgBorder"]
-   > ![vybrat skupiny, které se mají zahrnout](./media/conditional-access-exchange-create/select-groups.png)
+   > ![Vyberte skupiny, které chcete zahrnout.](./media/conditional-access-exchange-create/select-groups.png)
 
 5. Pokud chcete skupiny vyloučit, zvolte Vybrat skupiny, které se **mají vyloučit**, a potom vyberte jednu nebo víc skupin, které se nevztahují na požadavky na registraci zařízení a jestli mají být kompatibilní s profily dodržování předpisů, než budete mít přístup k místnímu Exchangi.
 
    Vyberte **Uložit** a uložte svou konfiguraci a vraťte se do podokna **přístup k Exchangi** .
 
-6. Dále nakonfigurujte nastavení pro místní Exchange Connector služby Intune. V konzole nástroje vyberte **Správa tenanta** > **přístup k Exchangi**> **Exchange ActiveSync On-Premises Connector** a pak vyberte konektor pro organizaci Exchange, kterou chcete nakonfigurovat.
+6. Dále nakonfigurujte nastavení pro místní Exchange Connector služby Intune. V konzole vyberte v konzole **Správa** > tenanta**Exchange přístup**> **na Exchange ActiveSync On-Premises Connector** a pak vyberte konektor pro organizaci Exchange, kterou chcete nakonfigurovat.
 
 7. V případě **oznámení uživateli**vyberte možnost **Upravit** a otevřete pracovní postup **Upravit organizaci** , kde můžete upravit zprávu s *oznámením uživatele* .
 
    > [!div class="mx-imgBorder"]
-   > ![Příklad obrazovky pracovní postup úpravy pracovního postupu organizace pro oznámení](./media/conditional-access-exchange-create/edit-organization-user-notification.png)
+   > ![Ukázka snímku pracovního postupu úpravy pracovní postup organizace pro oznámení](./media/conditional-access-exchange-create/edit-organization-user-notification.png)
 
    Upravte výchozí e-mailovou zprávu, která se pošle uživatelům, pokud jejich zařízení nedodržuje předpisy a chtějí získat přístup k místnímu Exchangi. Šablona zprávy používá jazyk využívající značky. Můžete si také prohlédnout náhled toho, jak zpráva vypadá při psaní.
 
@@ -134,7 +134,7 @@ Než budete moct pomocí následujícího postupu nastavit místní řízení p�
 8. V dalším kroku vyberte **Upřesnit nastavení přístupu Exchange ActiveSync** a otevřete tak pracovní postup *Rozšířené nastavení přístupu Exchange ActiveSync* , ve kterém nakonfigurujete pravidla přístupu k zařízení.
 
    > [!div class="mx-imgBorder"]
-   > ![Příklad obrazovky pracovní postup úpravy pracovního postupu organizace pro rozšířené nastavení](./media/conditional-access-exchange-create/edit-organization-advanced-settings.png)
+   > ![Příklad obrazovky pracovní postup úpravy organizace pro pokročilá nastavení](./media/conditional-access-exchange-create/edit-organization-advanced-settings.png)
 
    - V případě **nespravovaného přístupu k zařízení**nastavte globální výchozí pravidlo pro přístup ze zařízení, která neovlivní podmíněný přístup nebo jiná pravidla:
 

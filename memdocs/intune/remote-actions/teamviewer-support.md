@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f9dc309cb373d9f06fd68810531d5634eb4c0b7d
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 1a18895ecfcb17567170dfae8f07814020a60df1
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80325040"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81726006"
 ---
 # <a name="use-teamviewer-to-remotely-administer-intune-devices"></a>Vzdálená správa zařízení s Intune pomocí TeamVieweru
 
@@ -48,18 +48,18 @@ Když použijete TeamViewer, umožníte Konektoru pro TeamViewer služby Intune 
 Abyste mohli poskytovat vzdálenou pomoc pro zařízení, nakonfigurujte si s použitím následujícího postupu konektor pro TeamViewer a Intune:
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte možnost **Správa tenanta** > **konektory a tokeny** > **konektor pro TeamViewer**.
+2. Vyberte možnost konektory **správy tenanta** > **a tokeny** > pro**TeamViewer**.
 3. Vyberte **Připojit** a přijměte podmínky licenční smlouvy.
 4. Zvolte **Přihlásit se k TeamVieweru pro autorizaci**.
 5. Otevře se webová stránka TeamVieweru. Zadejte přihlašovací údaje pro svoji licenci TeamVieweru a pak se **přihlaste**.
 
 ## <a name="remotely-administer-a-device"></a>Vzdálená správa zařízení
 
-Po konfiguraci konektoru jste připravení vzdáleně spravovat zařízení. Postupujte podle následujících pokynů: 
+Po konfiguraci konektoru jste připravení vzdáleně spravovat zařízení. Použijte k tomu následující postup: 
 
 1. V centru pro [správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Vyberte **Zařízení** a potom **Všechna zařízení**.
-3. V seznamu vyberte zařízení, které chcete vzdáleně spravovat > **...**  > **novou relaci vzdálené pomoci**.
+3. V seznamu vyberte zařízení, které chcete vzdáleně spravovat > **...**  >  **Nová relace vzdálené pomoci**.
 4. Až se Intune ke službě TeamViewer připojí, zobrazí se některé informace o zařízení. Ke spuštění vzdálené relace použijte možnost **Připojit**.
 
 ![Vzdálená správa zařízení s Androidem pomocí TeamVieweru – příklad](./media/teamviewer-support/android-teamviewer.png)
@@ -67,7 +67,7 @@ Po konfiguraci konektoru jste připravení vzdáleně spravovat zařízení. Pos
 Když spustíte vzdálenou relaci, uživatelé uvidí na svém zařízení příznak oznámení na ikoně aplikace Portál společnosti. Oznámení se zobrazí také při otevření aplikace. Uživatelé pak mohou žádost o vzdálenou pomoc přijmout.
 
 > [!NOTE]
-> Zařízení s Windows, která jsou zaregistrovaná pomocí metod bez uživatelů, například DEM a WCD, nezobrazují v aplikaci Portál společnosti oznámení o TeamVieweru. V těchto scénářích doporučujeme k vygenerování relace použít portál TeamViewer.
+> Zařízení s Windows, která jsou zaregistrovaná pomocí metod bez uživatelů, jako je třeba správce registrace zařízení (DEM) a Windows Configuration Designer (WCD), nezobrazují oznámení o TeamVieweru v aplikaci Portál společnosti. V těchto scénářích doporučujeme k vygenerování relace použít portál TeamViewer.
 
 V TeamVieweru můžete provést na zařízení řadu akcí, včetně převzetí řízení zařízení. Úplné podrobnosti s informacemi, co můžete dělat, najdete v tématu [Pokyny k TeamVieweru](https://www.teamviewer.com/support/documents/).
 

@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 07/22/2019
+ms.date: 04/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7e1a7c9665f142bf7dd7832e6bac0e016539ddea
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 86c90d8313cd9eed853ad438a5ea9a31f0d834ce
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79331367"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81725539"
 ---
 # <a name="network-endpoints-for-microsoft-intune"></a>Koncové body sítě pro Microsoft Intune  
 
@@ -34,6 +34,9 @@ V rámci cloudové služby Intune nevyžaduje místní infrastrukturu, jako jsou
 
 Pokud chcete spravovat zařízení za branami firewall a proxy servery, musíte povolit komunikaci s Intune.
 
+> [!NOTE]
+> Informace v části se vztahují také na Microsoft Intune Certificate Connector. Konektor má stejné požadavky na síť jako spravovaná zařízení.
+
 - Proxy server musí podporovat **protokol HTTP (80)** i **https (443)** , protože klienti Intune používají oba protokoly. Information Protection Windows používá port 444.
 - U některých úloh (například stažení aktualizací softwaru pro klasického agenta počítače) Intune vyžaduje neověřený proxy server přístup k manage.microsoft.com.
 
@@ -44,6 +47,7 @@ Nastavení proxy server můžete upravit na jednotlivých klientských počíta�
 > [!NOTE] If Windows 8.1 devices haven't cached proxy server credentials, enrollment might fail because the request doesn't prompt for credentials. Enrollment fails without warning as the request wait for a connection. If users might experience this issue, instruct them to open their browser settings and save proxy server settings to enable a connection.   -->
 
 Spravovaná zařízení musí být nakonfigurovaná tak, aby **všichni uživatelé** měli přístup ke službám přes brány firewall.
+
 
 Následující tabulky obsahují seznam portů a služeb, ke kterým přistupuje klient Intune:
 
@@ -125,10 +129,10 @@ Pro metadata Optimalizace doručení:
 
 ## <a name="apple-device-network-information"></a>Informace o síti pro zařízení Apple  
 
-|Používáno pro|Název hostitele (IP adresa/podsíť)|Protokol|Port|
+|Použití|Název hostitele (IP adresa/podsíť)|Protocol (Protokol)|Port|
 |-----|--------|------|-------|
 |Načítání a zobrazování obsahu ze serverů Apple|itunes.apple.com<br>\*. itunes.apple.com<br>\*. mzstatic.com<br>\*. phobos.apple.com<br> \*. phobos.itunes-apple.com.akadns.net |    HTTP    |      80      |
-|Komunikace se servery APNS|#-courier.push.apple.com<br>' # ' je náhodné číslo od 0 do 50.|    TCP     |  5223 a 443  |
+|Komunikace se servery APNS|# – courier.push.apple.com<br>' # ' je náhodné číslo od 0 do 50.|    TCP     |  5223 a 443  |
 |Různé funkce, včetně přístupu k webu, obchodu iTunes, macOS App Storu, iCloud, zasílání zpráv atd. |phobos.apple.com<br>ocsp.apple.com<br>ax.itunes.apple.com<br>ax.itunes.apple.com.edgesuite.net| HTTP/HTTPS |  80 nebo 443   |
 
 Další informace najdete v tématu [porty TCP a UDP společnosti Apple používané softwarovými produkty společnosti Apple](https://support.apple.com/HT202944), [informace o připojeních hostitele MacOS, iOS/iPadOS a iTunes serveru iTunes a o procesech na pozadí iTunes](https://support.apple.com/HT201999)a [v případě, že klienti MacOS a iOS/iPadOS nezískávají nabízená oznámení Apple](https://support.apple.com/HT203609).  

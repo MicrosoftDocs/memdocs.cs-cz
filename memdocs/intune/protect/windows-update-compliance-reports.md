@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/25/2019
+ms.date: 04/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,16 +16,16 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7ad666f21b2ff271b99675486835357dfd071773
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 157c61e9f145295f5ef728d12385fa44697a88e2
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80326505"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81725646"
 ---
 # <a name="intune-compliance-reports-for-updates"></a>Sestavy dodržování předpisů v Intune pro aktualizace
 
-Když použijete Intune k nasazení služby Windows Update na zařízení s Windows 10, zobrazí se podrobnosti o kompatibilitě aktualizací pomocí Intune nebo bezplatného řešení s názvem *Update Compliance*, které je součástí Microsoft Operations Management Suite (OMS).
+Když použijete Intune k nasazení služby Windows Update na zařízení s Windows 10, zobrazí se podrobnosti o kompatibilitě aktualizací pomocí Intune nebo bezplatného řešení s názvem *Update Compliance*. Update Compliance je součástí Microsoft Operations Management Suite (OMS).
 
 ## <a name="use-intune"></a>Použití Intune
 
@@ -43,25 +43,25 @@ Chcete-li zkontrolovat sestavu zásad pro stav nasazení pro aktualizační kan�
 
    - **Stav uživatele**– zobrazí se informace o uživatelském jménu, stavu a poslední sestavě, podrobnosti najdete v [seznamu deviceConfigurationUserStatuses](https://docs.microsoft.com/graph/api/intune-deviceconfig-deviceconfigurationuserstatus-list?view=graph-rest-1.0).
 
-   - **Stav aktualizace koncového uživatele**– tím se zobrazí stav aktualizace zařízení se systémem Windows. Podrobnosti najdete v tématu [windowsUpdateState](https://docs.microsoft.com/graph/api/resources/intune-shared-windowsupdatestate?view=graph-rest-beta).
+   - **Stav aktualizace koncového uživatele**– tím se zobrazí stav aktualizace zařízení se systémem Windows, podrobnosti najdete v tématu [windowsUpdateState](https://docs.microsoft.com/graph/api/resources/intune-shared-windowsupdatestate?view=graph-rest-beta).
 
 ## <a name="use-update-compliance"></a>Použít Update Compliance
 
-Uvádění Windows 10 Update můžete monitorovat pomocí [Update Compliance](https://technet.microsoft.com/itpro/windows/manage/update-compliance-monitor)a řešení Windows Analytics. Update Compliance k dispozici prostřednictvím Azure Portal a jsou dostupné zdarma pro zařízení, která splňují [požadavky](https://docs.microsoft.com/windows/deployment/update/update-compliance-get-started#update-compliance-prerequisites).  
+Uvádění Windows 10 Update můžete monitorovat pomocí [Update Compliance](https://technet.microsoft.com/itpro/windows/manage/update-compliance-monitor). Update Compliance k dispozici prostřednictvím Azure Portal a jsou dostupné zdarma pro zařízení, která splňují [požadavky](https://docs.microsoft.com/windows/deployment/update/update-compliance-get-started#update-compliance-prerequisites).  
 
 Když použijete toto řešení, nasadíte komerční ID do libovolného zařízení s Windows 10 spravovaných pomocí Intune, pro které chcete ohlásit dodržování předpisů pro aktualizace.  
 
 V Intune můžete ke konfiguraci komerčního ID použít nastavení OMA-URI vlastní zásady. Viz [použití vlastních nastavení pro zařízení s Windows 10 v Intune](../configuration/custom-settings-windows-10.md).
 
-Cesta OMA-URI (s rozlišováním velkých a malých písmen) pro konfiguraci komerčního ID je: *./VENDOR/MSFT/DMCLIENT/Provider/MS DM Server/CommercialID*  
+Cesta OMA-URI (s rozlišováním velkých a malých písmen) pro konfiguraci komerčního ID je: *./VENDOR/MSFT/DMCLIENT/Provider/MS DM Server/CommercialID*
 
 V nastavení **Přidat nebo upravit nastavení OMA-URI** můžete použít třeba následující hodnoty:
 
 - **Název nastavení**: Komerční ID pro analýzu Windows
-- **Popis nastavení**: Konfigurace komerčního ID pro řešení pro analýzu Windows
+- **Popis nastavení**: Konfigurace komerčního ID pro řešení Windows Analytics
 - **OMA-URI** (rozlišuje velká a malá písmena): *./Vendor/MSFT/DMClient/Provider/MS DM Server/CommercialID*
-- **Datový typ:** Řetězec
-- **Hodnota**: \<použít identifikátor GUID zobrazený na kartě telemetrie Windows v pracovním prostoru OMS >
+- **Datový typ**: řetězec
+- **Hodnota**: \<použijte identifikátor GUID zobrazený na kartě telemetrie Windows v pracovním prostoru OMS>
 
 > [!NOTE]
 > Podrobnosti o MS DM Serveru najdete v tématu [Poskytovatel konfiguračních služeb DMClient]( https://docs.microsoft.com/windows/client-management/mdm/dmclient-csp).
