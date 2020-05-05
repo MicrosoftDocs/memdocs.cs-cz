@@ -17,20 +17,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c8fce5e8d7a92922d6061c33655bc4e83b3a1a95
-ms.sourcegitcommit: 670c90a2e2d3106048f53580af76cabf40fd9197
+ms.openlocfilehash: 3a10709972b0387681d00c8fe848079807c6293a
+ms.sourcegitcommit: 4381afb515c06f078149bd52528d1f24b63a2df9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80233481"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82538098"
 ---
 # <a name="microsoft-intune-is-an-mdm-and-mam-provider-for-your-devices"></a>Microsoft Intune je poskytovatel MDM a MAM pro vaše zařízení.
 
 Microsoft Intune je cloudová služba, která se zaměřuje na správu mobilních zařízení (MDM) a správu mobilních aplikací (MAM). Intune je součástí [sady Microsoft Enterprise mobility + Securitye (EMS)](https://www.microsoft.com/microsoft-365/enterprise-mobility-security)a umožňuje uživatelům zvýšit produktivitu při zachování chráněných dat vaší organizace. Integruje se s dalšími službami, včetně Microsoft 365 a Azure Active Directory (Azure AD) k řízení, kdo má přístup a k čemu mají přístup, a Azure Information Protection pro ochranu dat. Když ji použijete s Microsoft 365, můžete pracovníkům umožnit, aby byli produktivní na všech svých zařízeních, a současně chránit informace vaší organizace.
 
-![Obrázek architektury Intune](./media/what-is-intune/intunearch_sm.png)
-
-Podívejte se na [větší verzi](./media/what-is-intune/intunearchitecture.svg) diagramu architektury Intune.
+[![Obrázek architektury Intune](./media/what-is-intune/intunearch_sm.png )](./media/what-is-intune/intunearchitecture.svg#lightbox)
 
 Intune vám umožňuje:
 
@@ -40,7 +38,7 @@ Intune vám umožňuje:
 - Zabezpečte informace společnosti tím, že řídíte způsob přístupu uživatelů k informacím a jejich sdílení.
 - Ujistěte se, že zařízení a aplikace vyhovují vašim požadavkům na zabezpečení.
 
-## <a name="manage-devices"></a>Spravujte zařízení.
+## <a name="manage-devices"></a>Správa zařízení
 
 V Intune můžete zařízení spravovat pomocí přístupu, který je pro vás nejvhodnější. U zařízení vlastněných organizací budete chtít mít oprávnění k úplnému řízení na zařízeních, včetně nastavení, funkcí a zabezpečení. V tomto postupu se zařízení a uživatelé těchto zařízení registrují v Intune. Po registraci obdrží vaše pravidla a nastavení prostřednictvím zásad nakonfigurovaných v Intune. Můžete například nastavit požadavky na heslo a PIN kód, vytvořit připojení k síti VPN, nastavit ochranu před hrozbami a další.
 
@@ -62,6 +60,11 @@ Když jsou zařízení zaregistrovaná a spravovaná v Intune, můžou správci:
 
 - [Ochrana zařízení pomocí Microsoft Intune](../protect/device-protect.md)
 
+### <a name="try-the-interactive-guide"></a>Vyzkoušejte interaktivní příručku
+Interaktivní příručka pro [správu zařízení pomocí Microsoft Endpoint Manageru](https://mslearn.cloudguides.com/en-us/guides/Manage%20devices%20with%20Microsoft%20Endpoint%20Manager) vás provede centrem pro správu Microsoft Endpoint Manageru, který vám ukáže, jak spravovat a chránit mobilní a desktopové aplikace.</br></br>
+
+> [!VIDEO https://mslearn.cloudguides.com/en-us/guides/Manage%20devices%20with%20Microsoft%20Endpoint%20Manager]
+
 ## <a name="manage-apps"></a>Správa aplikací
 
 Správa mobilních aplikací (MAM) v Intune je navržená tak, aby chránila data organizace na úrovni aplikace, včetně vlastních aplikací a aplikací pro Store. Správa aplikací se dá použít na zařízeních vlastněných organizací a na osobních zařízeních.
@@ -73,7 +76,7 @@ Když se aplikace spravují v Intune, můžou správci:
 - Podívejte se na sestavy, které aplikace se používají, a sledujte jejich využití.
 - Vymažte selektivní vymazání tím, že z aplikací odeberete jenom firemní data.
 
-Jedním ze způsobů, jak Intune zajišťuje zabezpečení mobilních aplikací, je prostřednictvím **[zásad ochrany aplikací](../apps/app-protection-policy.md)** . Zásady ochrany aplikací:
+Jedním ze způsobů, jak Intune zajišťuje zabezpečení mobilních aplikací, je prostřednictvím **[zásad ochrany aplikací](../apps/app-protection-policy.md)**. Zásady ochrany aplikací:
 
 - Využijte Azure AD identity k izolaci firemních dat od osobních dat. Proto jsou osobní údaje izolované od jejich povědomí z organizace. K datům, která se získávají pomocí přihlašovacích údajů organizace, se přidávají další ochrana zabezpečení
 - Zabezpečte přístup k osobním zařízením omezením akcí, které mohou uživatelé provádět, například kopírování a vkládání, ukládání a zobrazování.

@@ -17,18 +17,18 @@ ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 81864c207cec560ca8b42041f9248560ebcf3b04
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 0b634dad49b11e39e9a046688f0b5fd9ddc53ab4
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80322439"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254992"
 ---
 # <a name="monitor-device-encryption-with-intune"></a>Monitorování šifrování zařízení pomocí Intune
 
 Sestava Microsoft Intuneho šifrování je centralizované umístění pro zobrazení podrobností o stavu šifrování zařízení a možnosti hledání pro správu klíčů pro obnovení zařízení. Možnosti obnovovacího klíče, které jsou k dispozici, závisí na typu zařízení, které si prohlížíte.
 
-Sestavu můžete najít tak, že se přihlásíte do [centra pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431). Vyberte **zařízení** > **monitorování**a potom v části *Konfigurace*vyberte **Sestava šifrování**.
+Sestavu můžete najít tak, že se přihlásíte do [centra pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431). Vyberte **Devices** > **monitorování**zařízení a potom v části *Konfigurace*vyberte **Sestava šifrování**.
 
 ## <a name="view-encryption-details"></a>Zobrazit podrobnosti o šifrování
 
@@ -53,10 +53,10 @@ Podokno sestava šifrování zobrazuje seznam zařízení, která spravujete, s 
   - **Připraveno**: zařízení se dá zašifrovat pomocí zásad MDM, což vyžaduje, aby zařízení splňovalo následující požadavky:
 
     **Pro zařízení MacOS**:
-    - MacOS verze 10,13 nebo novější
+    - macOS verze 10,13 nebo novější
 
     **Pro zařízení s Windows 10**:
-    - Verze 1703 nebo novější, *obchodní*, *podnikové*, *vzdělávací*nebo verze 1809 nebo novější *pro*
+    - Verze 1709 nebo novější, *obchodní*, *podnikové*, *vzdělávací*nebo verze 1809 nebo novější *pro*
     - Zařízení musí mít čip TPM.
 
     Další informace najdete v dokumentaci k Windows v dokumentaci k [poskytovateli služby BitLocker Configuration Service Provider (CSP)](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) .
@@ -96,7 +96,7 @@ Když vyberete zařízení ze sestavy šifrování, Intune zobrazí podokno **st
 
 - **Shrnutí stavu profilu** – souhrn profilů, které se vztahují k tomuto zařízení. Souhrn představuje nejmenší příznivou podmínku v rámci platných profilů. Pokud například výsledkem pouze jednoho z několika použitelných profilů je chyba, zobrazí se v *souhrnu stavu profilu* *Chyba*.
 
-  Pokud chcete zobrazit podrobnosti o stavu, přečtěte si v **Intune** > **Konfigurace zařízení** > **profily**a vyberte profil. Volitelně můžete vybrat možnost **stav zařízení** a pak vybrat zařízení.
+  Pokud chcete zobrazit podrobnosti o stavu, přejít na > **profily****Konfigurace zařízení**v **Intune** > a vybrat profil. Volitelně můžete vybrat možnost **stav zařízení** a pak vybrat zařízení.
 
 - **Podrobnosti o stavu** – rozšířené informace o stavu šifrování zařízení.
 
@@ -120,11 +120,11 @@ Když vyberete zařízení ze sestavy šifrování, Intune zobrazí podokno **st
 
     *Vezměte v úvahu: Intune nemůže na zařízení, které je už zašifrované, nastavit trezor. Místo toho musí uživatel ručně dešifrovat svoje zařízení, aby ho bylo možné spravovat pomocí zásad konfigurace zařízení a Intune*.
 
-  - Trezor úložiště potřebuje, aby uživatel schválil svůj profil pro správu v MacOS Catalina a vyšších.
+  - Trezor úložiště potřebuje, aby uživatel schválil svůj profil pro správu v macOS Catalina a vyšších.
 
-    *Zvažte: počínaje verzí MacOS 10,15 (Catalina) může nastavení registrace schválená uživatelem způsobit požadavek, aby uživatelé ručně schválili šifrování trezoru. Další informace najdete v dokumentaci k [registraci schválené uživatelem](../enrollment/macos-enroll.md) v dokumentaci k Intune*.
+    *Zvažte: počínaje verzí macOS 10,15 (Catalina) může nastavení registrace schválená uživatelem způsobit požadavek, aby uživatelé ručně schválili šifrování trezoru. Další informace najdete v dokumentaci k [registraci schválené uživatelem](../enrollment/macos-enroll.md) v dokumentaci k Intune*.
 
-  - Neznámá
+  - Neznámý.
 
     *Vezměte v úvahu: možnou příčinou neznámého stavu je to, že zařízení je uzamčené a Intune nemůže spustit v úschově nebo proces šifrování. Po odemknutí zařízení může pokračovat průběh*.
 
@@ -218,7 +218,7 @@ Intune poskytuje přístup k oknu Azure AD pro BitLocker, takže můžete na por
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Vyberte **Zařízení** > **Všechna zařízení**.
+2. Vyberte **zařízení** > **všechna zařízení**.
 
 3. V seznamu vyberte zařízení a potom v části *monitorování*vyberte **klíče pro obnovení**.
   
@@ -229,7 +229,7 @@ Intune poskytuje přístup k oknu Azure AD pro BitLocker, takže můžete na por
 
    Pokud klíče nejsou v Azure AD, zobrazí se v Intune *pro toto zařízení nenašel žádný klíč BitLockeru*.
 
-Informace pro BitLocker se získávají pomocí [poskytovatele služby BitLocker Configuration Service Provider](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) (CSP). CSP nástroje BitLocker podporuje Windows 10 verze 1703 a novější a pro Windows 10 pro verze 1809 a novější.
+Informace pro BitLocker se získávají pomocí [poskytovatele služby BitLocker Configuration Service Provider](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) (CSP). CSP nástroje BitLocker podporuje Windows 10 verze 1709 a novější a pro Windows 10 pro verze 1809 a novější.
 
 ## <a name="next-steps"></a>Další kroky
 

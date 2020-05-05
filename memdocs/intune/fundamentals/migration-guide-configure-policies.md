@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5f0f4106921f7b4ef1d33e72a217246543512bb5
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 2cefc43aa4c1e5031bc1b755a244df54f6442137
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79331231"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079990"
 ---
 # <a name="configure-device-compliance-and-app-management-policies-when-migrating-to-microsoft-intune"></a>Konfigurace zásad dodržování předpisů zařízením a správy aplikací během migrace do Microsoft Intune
 
@@ -50,7 +50,7 @@ Skupiny zařízení můžete vytvořit, když potřebujete provádět úlohy spr
 
 Skupiny zařízení jsou užitečné ke správě zařízení bez vyhrazených uživatelů, jako jsou veřejné terminály nebo zařízení sdílená pracovníky ve směnném provozu nebo přiřazená určitému umístění.
 
-Když nakonfigurujete skupiny zařízení ještě před registrací zařízení, můžete využít kategorie zařízení k tomu, aby se zařízení při registraci automaticky seskupovala. Automaticky pak obdrží zásady zařízení příslušné skupiny. Další informace najdete v článku [Začínáme se skupinami](groups-get-started.md).
+Když nakonfigurujete skupiny zařízení ještě před registrací zařízení, můžete využít kategorie zařízení k tomu, aby se zařízení při registraci automaticky seskupovala. Pak získají zásady zařízení skupiny automaticky. Začněte [se skupinami](groups-get-started.md).
 
 ### <a name="task-2-use-resource-access-profiles-wi-fi-vpn-and-email-certificates"></a>Krok 2: Použití profilů přístupu k prostředkům (sítím Wi-Fi, VPN a e-mailovým certifikátům)
 
@@ -62,11 +62,11 @@ Je potřeba vytvořit profil konfigurace zařízení k vynucení nastavení na �
 
 #### <a name="directly-import-iosipados-configuration-profiles-optional"></a>Přímo importovat konfigurační profily pro iOS/iPadOS (volitelné)
 
-- **Profily Apple Configuratoru pro iOS (7.1 a novější):** Pokud vaše existující řešení MDM používá profily Apple Configuratoru (soubory .mobileconfig), Intune je může přímo importovat jako vlastní zásady konfigurace.
+- **Profily Apple Configuratoru pro iOS (ios 7,1 a novější):** Pokud vaše existující řešení MDM používá profily Apple Configuratoru (soubory. mobileconfig), Intune je může přímo importovat jako vlastní zásady konfigurace.
 
 - **zásady konfigurace mobilních aplikací pro iOS:** Pokud vaše existující řešení MDM používá zásady konfigurace mobilních aplikací pro iOS/iPadOS, Intune je může přímo importovat, pokud odpovídají formátu XML určenému společností Apple pro seznamy vlastností.
 
-- Zjistěte, jak přidat vlastní zásady pro [iOS](../configuration/custom-settings-ios.md).
+- Přečtěte si, jak přidat vlastní zásady pro [iOS](../configuration/custom-settings-ios.md).
 
 ### <a name="task-4-create-and-deploy-device-compliance-policies-optional"></a>Krok 4: Vytvoření a nasazení zásad dodržování předpisů pro zařízení (volitelné)
 
@@ -88,7 +88,7 @@ Pokud používáte správu mobilních zařízení (MDM) v Intune, můžete dodat
 
 - [Jak přidat aplikace](../apps/apps-add.md)
 
-- [Jak nasadit aplikace](../apps/apps-deploy.md)
+- [Jak nasazovat aplikace](../apps/apps-deploy.md).
 
 ### <a name="task-6-enable-device-enrollment"></a>Krok 6: Povolení registrace zařízení
 
@@ -96,4 +96,4 @@ Registrace zařízení je nezbytná k jejich správě. Zjistěte, [jak se připr
 
 ## <a name="next-steps"></a>Další kroky
 
-[Konfigurace zásad ochrany aplikací (volitelné)](../apps/app-protection-policies.md)
+[Nakonfigurujte zásady ochrany aplikací (volitelné)](../apps/app-protection-policies.md).

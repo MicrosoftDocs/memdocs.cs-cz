@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6327de8fd4543f60d66eedc3ac6b86b8275f2ca2
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 65d4745580a4b0d733ffe14be03f0f9893074586
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79330903"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82080092"
 ---
 # <a name="intune-deployment-planning-design-and-implementation-guide"></a>Průvodce plánováním nasazení, návrhem a implementací Intune
 
 Úspěšné nasazení Microsoft Intune začíná s dobrým plánem a návrhem. Účelem této příručky je provést vás procesem vývoje plánu nasazení, vytváření návrhu, registrace Intune a zavedení do výroby.
 
-## <a name="whats-included-in-this-guide"></a>Obsah příručky
+## <a name="whats-included-in-this-guide"></a>Co je součástí tohoto průvodce?
 
 Tento průvodce obsahuje oddíly, které vás provedou celým procesem nasazení Intune. Začněte oddílem 1, abyste si ujasnili své cíle, úkoly a problémy. Pak přejděte k oddílům 2–7 v pořadí, které vám nejvíce vyhovuje. Tyto oddíly nemusíte procházet postupně, ale můžete je dokončit souběžně.
 
@@ -63,4 +63,4 @@ Tento průvodce také obsahuje další technické informace a šablony tabulek, 
 
 ## <a name="next-steps"></a>Další kroky
 
-Začněte prvním oddílem: [Vymezení cílů, úkolů a problémů při nasazení](planning-guide-deployment-goals.md).
+Pojďme začít s první částí: [určení cílů, úkolů a problémů při nasazení](planning-guide-deployment-goals.md).

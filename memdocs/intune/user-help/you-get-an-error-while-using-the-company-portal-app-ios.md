@@ -19,21 +19,21 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 0a5d9c378e42b56c8d13f42877cca889726b7579
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 417932e046517f17481e2d6c5e91f24cb7ac2d7a
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79327591"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82080041"
 ---
 # <a name="you-get-an-error-while-using-the-company-portal-app"></a>Při použití aplikace Portál společnosti se zobrazí chyba
 
-Pokud při použití aplikace Portál společnosti v zařízení s iOSem dojde k chybě, můžete své firemní podpoře pomoct potíže vyřešit tak, že jí pošlete informace o této chybě. Informace o chybě můžete odeslat různými způsoby:
+Pokud při používání aplikace Portál společnosti na zařízení s iOS dojde k chybě, můžete firemní podpoře pomoct vyřešit problém odesláním informací. Informace o chybě můžete odeslat různými způsoby:
 
 - Ve zprávě s výstrahou chyby klepněte na **Sestava**.
 
-- Na obrazovce **O produktu** aplikace Portál společnosti klepněte na **Odeslat diagnostickou sestavu**.
+- Na obrazovce **O produktu** aplikace Portál společnosti klepněte na **Odeslat diagnostickou zprávu**.
 
-- Když jste v aplikaci Portál společnosti, zatřeste zařízením a po zobrazení diagnostické výstrahy klepněte na **E-mail**. Pokud zatřesete zařízením, ale žádná výstraha se nezobrazí, otevřete **Nastavení** > **Portál společnosti** a zkontrolujte, že je zapnutá možnost **Gesto zatřesením**.
+- Když jste v aplikaci Portál společnosti, zatřeste zařízení a po zobrazení diagnostické výstrahy klepněte na **e-mail** . Pokud se vám výstraha po zatřesení zařízení nezobrazí, otevřete **Nastavení** > **portál společnosti**a ujistěte se, že je zapnutá možnost **gesto natřesení** .
 
 Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).

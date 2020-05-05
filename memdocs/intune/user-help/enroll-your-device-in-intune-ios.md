@@ -19,12 +19,12 @@ ms.reviewer: tisilv
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: aeb2e22348e7197f0abb62ee540c37079f8645f4
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 49e598f370669ed55688af6e6a570a932b5bf9d3
+ms.sourcegitcommit: 3ff33493c3f93bf06fdc942d30958a2a4ad03529
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80084682"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82137962"
 ---
 # <a name="set-up-ios-device-access-to-your-company-resources"></a>Nastavení přístupu zařízení s iOSem k prostředkům společnosti  
 
@@ -56,7 +56,7 @@ Pokud po registraci vaše organizace vynucuje nový požadavek na zabezpečení 
 
 Další informace o registraci najdete v tématu s informacemi o tom, [co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení](https://docs.microsoft.com//mem/intune/user-help/what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios).  
 
-## <a name="enroll-your-ios-device"></a>Registrace zařízení s iOS  
+## <a name="enroll-your-ios-device"></a>Registrace zařízení s iOSem  
 
 Pokud si chcete stáhnout a nainstalovat [aplikaci Portál společnosti Intune](install-and-sign-in-to-the-intune-company-portal-app-ios.md) do svého zařízení, přejdete do obchodu App Store. Budete také muset udržovat připojení Wi-Fi a mít přístup k Safari během registrace. 
 
@@ -72,7 +72,7 @@ Pozastavení aplikace po dobu delší než několik minut může způsobit ukon�
 
 4. Zobrazí se obrazovka **Vybrat typ zařízení a registrace** a zobrazí výzvu k zadání typu zařízení.  
     * Klepněte na **(organizace) Toto zařízení vlastní** , pokud jste si dostali zařízení z vaší organizace. Potom přejděte na [zabezpečení celé zařízení](#secure-entire-device) v tomto článku a dokončete instalaci.  
-    * Pokud používáte osobní zařízení, které jste napravili z domova, klepněte na **Toto zařízení** . Pak pokračujte k dalšímu kroku.  
+    * Pokud používáte osobní zařízení, které jste napravili z domova, klepněte na **Toto zařízení** . Pak pokračujte na další krok.  
 
     Pokud tuto obrazovku nevidíte, přejděte k nastavení [zabezpečit celé zařízení](#secure-entire-device) a dokončete instalaci.  
     
@@ -109,9 +109,9 @@ Pozastavení aplikace po dobu delší než několik minut může způsobit ukon�
 
     ![Příklad snímku obrazovky aplikace nastavení, registrace v možnosti organizace](./media/enroll-in-organization-ios-1909.PNG)  
 
-   Pokud se nezobrazí žádné možnosti, přečtěte si **obecné** > **profily & Správa zařízení**> **Profil správy**. Pokud se vám stále nezobrazuje profil správy, budete ho muset stáhnout znovu.  
+   Pokud se nezobrazí žádné možnosti, jděte do **obecných** > **profilů &**> **Profil správy**správy zařízení. Pokud se vám stále nezobrazuje profil správy, budete ho muset stáhnout znovu.  
 
-5. Klepněte na **Instalovat**.  
+5. Klepněte na **instalovat**.  
     
 6. Zadejte heslo zařízení. Pak klepněte na **instalovat**.    
 
@@ -123,7 +123,7 @@ Pozastavení aplikace po dobu delší než několik minut může způsobit ukon�
 
 9. Vraťte se do aplikace Portál společnosti. Portál společnosti se začne synchronizovat a nastavit vaše zařízení. Portál společnosti vás může zobrazit výzva k aktualizaci dalších nastavení zařízení. Pokud k tomu klepne, klepněte na **pokračovat**.  
 
-10. Poznáte, že je instalace dokončena, když všechny položky v seznamu zobrazí zelenou značku zaškrtnutí. Klepněte na možnost **Hotovo**.   
+10. Poznáte, že je instalace dokončena, když všechny položky v seznamu zobrazí zelenou značku zaškrtnutí. Klepněte na **Hotovo**.   
 
 > [!Note]
 > Pokud vaše organizace sleduje omezení hlasu a dat nebo poskytuje zařízení vlastněná společností, může být potřeba provést několik dalších kroků. Pokud se zobrazí výzva k instalaci aplikace **Datalert** , přečtěte si téma [registrace zařízení ve správě telekomunikačních výdajů](enroll-your-device-with-telecom-expense-management-ios.md). Pokud je vaše organizace součástí Program registrace zařízení společnosti Apple, přečtěte si, [jak zaregistrovat zařízení vlastněné společností](enroll-your-device-dep-ios.md).  
@@ -159,7 +159,7 @@ Pozastavení aplikace po dobu delší než několik minut může způsobit ukon�
 
     ![Příklad snímku obrazovky aplikace nastavení, registrace v možnosti organizace](./media/enroll-in-organization-ios-1909.PNG)  
 
-   Pokud se nezobrazí žádné možnosti, přečtěte si **obecné** > **profily & Správa zařízení**> **Profil správy**. Pokud se vám stále nezobrazuje profil správy, budete ho muset stáhnout znovu.   
+   Pokud se nezobrazí žádné možnosti, jděte do **obecných** > **profilů &**> **Profil správy**správy zařízení. Pokud se vám stále nezobrazuje profil správy, budete ho muset stáhnout znovu.   
 
 
 6. Na obrazovce **registrace uživatele** klepněte na **Registrovat iPhone**.  
@@ -170,13 +170,13 @@ Pozastavení aplikace po dobu delší než několik minut může způsobit ukon�
 
 8. Na **přihlašovací** obrazovce zadejte heslo pro vaše spravované Apple ID. Ve většině případů budou tyto přihlašovací údaje stejné jako při přihlášení k pracovnímu nebo školnímu účtu, pokud vám vaše organizace neposkytla jinou sadu přihlašovacích údajů. 
 9. Klepněte na **Přihlásit se**.  
-10. Na obrazovce se krátce po instalaci profilu zobrazí zpráva o úspěchu. Chcete-li ověřit, zda je profil nainstalován, v části **profily & Správa zařízení** nastavení. Měl by se zobrazit profil uvedený v části **Správa mobilních zařízení.**  
+10. Na obrazovce se krátce po instalaci profilu zobrazí zpráva o úspěchu. Pokud chcete ověřit, že se profil nainstaloval, klikněte na **profily & nastavení správy zařízení** . Měl by se zobrazit profil uvedený v části **Správa mobilních zařízení.**  
 
     ![Příklad obrazovky nastavení aplikace, profily & nastavení správy zařízení, zobrazení profilu správy.](./media/ios-12-cp-enroll-1904.PNG)  
 
 11. Vraťte se do aplikace Portál společnosti. Portál společnosti se začne synchronizovat a nastavit vaše zařízení. Portál společnosti vás může zobrazit výzva k aktualizaci dalších nastavení zařízení. Pokud k tomu klepne, klepněte na **pokračovat**.    
 
-12. Poznáte, že je instalace dokončena, když všechny položky v seznamu zobrazí zelenou značku zaškrtnutí. Klepněte na **Hotovo**.  
+12. Poznáte, že je instalace dokončena, když všechny položky v seznamu zobrazí zelenou značku zaškrtnutí. Klepněte na **Hotovo**.  
 
 ## <a name="it-administrator-support"></a>Podpora správce IT  
 Pokud jste správcem IT a máte potíže s registrací zařízení, přečtěte si téma řešení potíží s registrací [zařízení s iOS v Microsoft Intune](https://support.microsoft.com/en-us/help/4039809). V tomto článku jsou uvedené běžné chyby, jejich příčiny a kroky, jak je vyřešit.  

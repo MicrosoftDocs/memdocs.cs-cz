@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 26576212f4df86681210956669320ed4b124025d
-ms.sourcegitcommit: d601f4e08268d139028f720c0a96dadecc7496d5
+ms.openlocfilehash: 41a2dce895761053e482fe029e4599819a099ac6
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80488165"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254856"
 ---
 # <a name="tutorial-use-the-cloud-to-configure-group-policy-on-windows-10-devices-with-admx-templates-and-microsoft-intune"></a>Kurz: použití cloudu ke konfiguraci zásad skupiny na zařízeních s Windows 10 s šablonami ADMX a Microsoft Intune
 
@@ -34,14 +34,14 @@ ms.locfileid: "80488165"
 Šablony ADMX jsou k dispozici pro následující služby:
 
 - **Microsoft Edge**: Stáhněte si [soubor zásad Microsoft Edge](https://www.microsoftedgeinsider.com/en-us/enterprise).
-- **Office**: Stáhněte si ho v [Office 365 ProPlus, Office 2019 a Office 2016](https://www.microsoft.com/download/details.aspx?id=49030).
+- **Office**: Stáhněte [se na Microsoft 365 aplikace, Office 2019 a Office 2016](https://www.microsoft.com/download/details.aspx?id=49030).
 - **Windows**: integrovaný v operačním systému Windows 10.
 
 Další informace o zásadách pro ADMX najdete v tématu [Principy zásad zálohovaných v ADMX](https://docs.microsoft.com/windows/client-management/mdm/understanding-admx-backed-policies).
 
 Tyto šablony jsou integrované pro Microsoft Intune a jsou dostupné jako profily **šablon pro správu** . V tomto profilu nakonfigurujete nastavení, která chcete zahrnout, a potom tento profil přiřadíte k vašim zařízením.
 
-V tomto kurzu se naučíte:
+V tomto kurzu provedete následující:
 
 > [!div class="checklist"]
 > * Zavedli jsme do [centra pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431).
@@ -53,7 +53,7 @@ Na konci tohoto testovacího prostředí budete mít přehled o tom, jak začít
 
 Tato funkce platí pro:
 
-- Windows 10 verze 1703 a novější
+- Windows 10 verze 1709 a novější
 
 ## <a name="prerequisites"></a>Požadavky
 
@@ -64,7 +64,7 @@ Tato funkce platí pro:
 - Microsoft Intune je nakonfigurovaný jako **Autorita MDM pro Intune**. Další informace najdete v tématu [Nastavení autority pro správu mobilních zařízení](../fundamentals/mdm-authority-set.md).
 
   > [!div class="mx-imgBorder"]
-  > ![nastavit autoritu MDM pro Microsoft Intune ve stavu tenanta](./media/tutorial-walkthrough-administrative-templates/tenant-status.png)
+  > ![Nastavte autoritu MDM tak, aby ve stavu tenanta Microsoft Intune.](./media/tutorial-walkthrough-administrative-templates/tenant-status.png)
 
 - Místní řadič domény služby Active Directory (DC):
 
@@ -90,13 +90,13 @@ Tato funkce platí pro:
 
   - Instalace **nástrojů pro správu RSAT: Zásady skupiny Management**:
 
-    1. Otevřete okno **Nastavení** aplikace > **aplikace** > **volitelné funkce** > **Přidat funkci**.
-    2. Vyberte možnost **RSAT: Zásady skupiny nástroje pro správu** > **nainstalovat**.
+    1. Otevřete okno **Nastavení** **aplikace >** > **volitelné funkce** > **Přidat funkci**.
+    2.  > Vyberte **RSAT: Instalace nástrojů pro správu Zásady skupiny**.**Install**
 
         Počkejte, než systém Windows nainstaluje funkci. Po dokončení se zobrazí v aplikaci **Nástroje pro správu systému Windows** .
 
         > [!div class="mx-imgBorder"]
-        > ![aplikací nástrojů pro správu systému Windows, včetně aplikace pro správu Zásady skupiny](./media/tutorial-walkthrough-administrative-templates/windows-administrative-tools-app.png)
+        > ![Aplikace nástrojů pro správu systému Windows, včetně aplikace pro správu Zásady skupiny](./media/tutorial-walkthrough-administrative-templates/windows-administrative-tools-app.png)
 
   - Ujistěte se, že máte oprávnění k přístupu k Internetu a oprávnění správce k předplatnému Microsoft 365, které zahrnuje centrum pro správu Správce koncových bodů.
 
@@ -114,10 +114,10 @@ Centrum pro správu Správce koncových bodů můžete otevřít taky z [centra 
 
 1. Přejít na [https://admin.microsoft.com](https://admin.microsoft.com).
 2. Přihlaste se pomocí účtu správce předplatného Microsoft 365 tenanta.
-3. V části **centra pro správu**vyberte **všechna centra pro správu** > **správy koncových bodů**. Otevře se centrum pro správu Správce koncových bodů.
+3. V **části centra pro správu**vyberte **všechna centra** > **pro správu koncový bod správa koncových bodů**. Otevře se centrum pro správu Správce koncových bodů.
 
     > [!div class="mx-imgBorder"]
-    > ![se zobrazí všechna centra pro správu v centru pro správu Microsoft 365](./media/tutorial-walkthrough-administrative-templates/microsoft365-admin-centers.png)
+    > ![Zobrazit všechna centra pro správu v centru pro správu Microsoft 365](./media/tutorial-walkthrough-administrative-templates/microsoft365-admin-centers.png)
 
 ## <a name="create-groups-and-add-users"></a>Vytváření skupin a přidávání uživatelů
 
@@ -139,7 +139,7 @@ V těchto dalších krocích vytvoříte skupiny zabezpečení a do těchto skup
 
     Přidávání zařízení je volitelné. Cílem je postup vytváření skupin a pochopení způsobu přidávání zařízení. Pokud tento kurz používáte v produkčním prostředí, měli byste vědět, co děláte.
 
-4. Pokud chcete změny uložit, **vyberte** > **vytvořit** .
+4. **Výběrem** > **vytvořit** uložte změny.
 
     Nezobrazuje se vaše skupina? Vyberte **aktualizovat**.
 
@@ -157,11 +157,11 @@ V těchto dalších krocích vytvoříte skupiny zabezpečení a do těchto skup
         1. Vyberte **přidat výraz**. Výraz je zobrazen v **syntaxi pravidla**:
 
             > [!div class="mx-imgBorder"]
-            > ![vytvořit dynamický dotaz a přidat výraz do Microsoft Intune šablony pro správu](./media/tutorial-walkthrough-administrative-templates/dynamic-group-query.png)
+            > ![Vytvoření dynamického dotazu a Přidání výrazu v Microsoft Intune šabloně pro správu](./media/tutorial-walkthrough-administrative-templates/dynamic-group-query.png)
 
             Když uživatelé nebo zařízení splňují zadaná kritéria, automaticky se přidají do dynamických skupin. V tomto příkladu se zařízení automaticky přidají do této skupiny, když je operační systém Windows. Pokud tento kurz používáte v produkčním prostředí, buďte opatrní. Cílem je postupovat při vytváření dynamických skupin.
 
-        2. **Uložte** změny tak, že > **vytvořit** .
+        2. **Uložením** > uložte změny, které jste**vytvořili** .
 
 6. Vytvořte skupinu **všichni učitelé** s následujícím nastavením:
 
@@ -178,7 +178,7 @@ V těchto dalších krocích vytvoříte skupiny zabezpečení a do těchto skup
 
             Když uživatelé nebo zařízení splňují zadaná kritéria, automaticky se přidají do dynamických skupin. V tomto příkladu se uživatelé automaticky přidají do této skupiny, když jsou jejich oddělení učitelé. Po přidání uživatelů do vaší organizace můžete zadat oddělení a další vlastnosti. Pokud tento kurz používáte v produkčním prostředí, buďte opatrní. Cílem je postupovat při vytváření dynamických skupin.
 
-        2. **Uložte** změny tak, že > **vytvořit** .
+        2. **Uložením** > uložte změny, které jste**vytvořili** .
 
 ### <a name="talking-points"></a>Body konverzace
 
@@ -197,20 +197,20 @@ V těchto dalších krocích vytvoříte skupiny zabezpečení a do těchto skup
   - Všechna zařízení s Androidem
   - Všechna zařízení s iOS/iPadOS
   - Marketing
-  - Lidské zdroje
+  - Personální oddělení
   - Všichni zaměstnanci Charlotte
   - Všichni zaměstnanci Redmond
   - Západní pobřeží správců IT
   - Správci IT východní pobřeží
 
-Vytvoření uživatelé a skupiny se také zobrazují v [centru pro správu Microsoft 365](https://admin.microsoft.com), v Azure Portal Azure AD v a [Microsoft Intune v Azure Portal](https://go.microsoft.com/fwlink/?linkid=2090973). Můžete vytvářet a spravovat skupiny ve všech oblastech pro předplatné tenanta. **Pokud je vaším cílem Správa zařízení, použijte [Centrum pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431)** .
+Vytvoření uživatelé a skupiny se také zobrazují v [centru pro správu Microsoft 365](https://admin.microsoft.com), v Azure Portal Azure AD v a [Microsoft Intune v Azure Portal](https://go.microsoft.com/fwlink/?linkid=2090973). Můžete vytvářet a spravovat skupiny ve všech oblastech pro předplatné tenanta. **Pokud je vaším cílem Správa zařízení, použijte [Centrum pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431)**.
 
 ### <a name="review-group-membership"></a>Kontrola členství ve skupinách
 
 1. V centru pro správu Správce koncových bodů vyberte **uživatelé** > vyberte jméno existujícího uživatele.
 
     > [!div class="mx-imgBorder"]
-    > ![v centru pro správu Správce koncových bodů vyberte uživatelé](./media/tutorial-walkthrough-administrative-templates/select-users-endpoint-manager-admin-center.png)
+    > ![V centru pro správu Správce koncových bodů vyberte uživatelé.](./media/tutorial-walkthrough-administrative-templates/select-users-endpoint-manager-admin-center.png)
 
 2. Projděte si některé informace, které můžete přidat nebo změnit. Podívejte se například na vlastnosti, které můžete konfigurovat, jako je například název úlohy, oddělení, město, umístění kanceláře a další. Tyto vlastnosti můžete použít ve svých dynamických dotazech při vytváření dynamických skupin.
 3. Pokud chcete zobrazit členství tohoto uživatele, vyberte **skupiny** . Uživatele můžete také odebrat ze skupiny.
@@ -224,8 +224,8 @@ V centru pro správu Správce koncových bodů jste vytvořili nové skupiny zab
 
 V této části vytvoříme v Intune šablonu pro správu, podíváme se na některá nastavení ve **správě Zásady skupiny**a porovnáte stejné nastavení v Intune. Cílem je Ukázat nastavení v zásadách skupiny a zobrazit stejné nastavení v Intune.
 
-1. V centru pro správu Správce koncových bodů vyberte **zařízení** > **konfigurační profily** > **vytvořit profil**.
-2. Zadejte následující vlastnosti:
+1. V centru pro správu Správce koncových bodů vyberte **zařízení** > **Konfigurace profily** > **vytvořit profil**.
+2. Zadejte tyto vlastnosti:
 
     - **Platforma**: vyberte **Windows 10 a novější**.
     - **Profil**: vyberte **šablony pro správu**.
@@ -240,17 +240,17 @@ V této části vytvoříme v Intune šablonu pro správu, podíváme se na něk
 6. V **nastavení konfigurace**platí nastavení pro zařízení (**Konfigurace počítače**) a nastavení platí pro uživatele (**Konfigurace uživatele**):
 
     > [!div class="mx-imgBorder"]
-    > ![použít nastavení šablony ADMX pro uživatele a zařízení ve Správci služby Microsoft Intune Endpoint](./media/tutorial-walkthrough-administrative-templates/administrative-templates-choose-computer-user-configuration.png)
+    > ![Použití nastavení šablony ADMX pro uživatele a zařízení ve Správci služby Microsoft Intune Endpoint Manager](./media/tutorial-walkthrough-administrative-templates/administrative-templates-choose-computer-user-configuration.png)
 
-7. Rozbalte položku **Konfigurace počítače** > **Microsoft Edge** > vyberte **nastavení filtru SmartScreen**. Všimněte si cesty k zásadám a všech dostupných nastavení:
+7. Rozbalte položku **Konfigurace** > počítače**Microsoft Edge** > vyberte **nastavení filtru SmartScreen**. Všimněte si cesty k zásadám a všech dostupných nastavení:
 
     > [!div class="mx-imgBorder"]
-    > ![se v šablonách ADMX v Microsoft Intune zobrazí nastavení zásad SmartScreen pro Microsoft Edge](./media/tutorial-walkthrough-administrative-templates/computer-configuration-microsoft-edge-smartscreen-path.png)
+    > ![Viz nastavení zásad SmartScreen pro Microsoft Edge v šablonách ADMX v Microsoft Intune](./media/tutorial-walkthrough-administrative-templates/computer-configuration-microsoft-edge-smartscreen-path.png)
 
 8. Do Hledat zadejte **Download (stáhnout**). Všimněte si, že nastavení zásad jsou filtrovaná:
 
     > [!div class="mx-imgBorder"]
-    > ![filtrovat nastavení zásad SmartScreen pro Microsoft Edge v šabloně Microsoft Intune ADMX](./media/tutorial-walkthrough-administrative-templates/computer-configuration-microsoft-edge-smartscreen-search-download.png)
+    > ![Filtrování nastavení zásad SmartScreen v Microsoft Edge v Microsoft Intune šabloně ADMX](./media/tutorial-walkthrough-administrative-templates/computer-configuration-microsoft-edge-smartscreen-search-download.png)
 
 ### <a name="open-group-policy-management"></a>Otevřít správu Zásady skupiny
 
@@ -266,41 +266,41 @@ V této části uvádíme zásadu v Intune a odpovídající zásady v Editor pr
 3. Klikněte pravým tlačítkem na zásady **OfficeandEdge** > **Upravit**. Otevře se aplikace Editor pro správu zásad skupiny.
 
     > [!div class="mx-imgBorder"]
-    > ![klikněte pravým tlačítkem na zásady skupiny Office a Microsoft Edge ADMX a vyberte Upravit](./media/tutorial-walkthrough-administrative-templates/open-group-policy-management.png)
+    > ![Klikněte pravým tlačítkem na zásady skupiny Office a Microsoft Edge ADMX a vyberte Upravit.](./media/tutorial-walkthrough-administrative-templates/open-group-policy-management.png)
 
     **OfficeandEdge** je zásada skupiny, která zahrnuje šablony Office a Microsoft Edge ADMX. Tato zásada je popsaná v tématu [požadavky](#prerequisites) (v tomto článku).
 
-4. Rozbalte položku **zásady** > **konfigurace počítače** > **šablony pro správu** > **ovládacích panelů** > **přizpůsobení**. Všimněte si dostupných nastavení.
+4. Rozbalte položku**zásady** >  **Konfigurace** > počítače**šablony pro správu** > **přizpůsobení****ovládacích panelů** > . Všimněte si dostupných nastavení.
 
     > [!div class="mx-imgBorder"]
-    > ![rozbalte položku Konfigurace počítače v Editor pro správu zásad skupiny a pokračujte na přizpůsobení](./media/tutorial-walkthrough-administrative-templates/open-group-policy-management-editor-admx-policy.png)
+    > ![Rozbalte položku Konfigurace počítače v Editor pro správu zásad skupiny a pokračujte na přizpůsobení.](./media/tutorial-walkthrough-administrative-templates/open-group-policy-management-editor-admx-policy.png)
 
     Poklikejte na **zabránit povolování kamery zamykací obrazovky**a podívejte se na dostupné možnosti:
 
     > [!div class="mx-imgBorder"]
-    > ![zobrazí možnosti nastavení konfigurace počítače v zásadách skupiny](./media/tutorial-walkthrough-administrative-templates/prevent-enabling-lock-screen-camera-admx-policy.png)
+    > ![Podívejte se na možnosti nastavení konfigurace počítače v zásadách skupiny.](./media/tutorial-walkthrough-administrative-templates/prevent-enabling-lock-screen-camera-admx-policy.png)
 
 5. V centru pro správu Správce koncových bodů můžete přejít na šablonu **správce – šablona zařízení s Windows 10 Students** .
-6. Vyberte položku **Konfigurace počítače** > **Ovládací panely** > **přizpůsobení**. Všimněte si dostupných nastavení:
+6. Vyberte možnost**přizpůsobení**v**ovládacím panelu** >  **Konfigurace** > počítače. Všimněte si dostupných nastavení:
 
     > [!div class="mx-imgBorder"]
-    > ![cestu nastavení zásad přizpůsobení v Microsoft Intune](./media/tutorial-walkthrough-administrative-templates/computer-configuration-control-panel-personalization-path.png)
+    > ![Cesta nastavení zásad přizpůsobení v Microsoft Intune](./media/tutorial-walkthrough-administrative-templates/computer-configuration-control-panel-personalization-path.png)
 
     Typ nastavení je **zařízení**a cesta je **/Control Panel nebo individuální nastavení**. Tato cesta se podobá tomu, co jste se v Editor pro správu zásad skupiny právě viděli. Pokud otevřete nastavení **zabránit povolování kamery zamykací obrazovky** , uvidíte stejné možnosti, které **nejsou nakonfigurované**, **povolené**a **zakázané** , a vidíte v Editor pro správu zásad skupiny.
 
 #### <a name="compare-a-user-policy"></a>Porovnání zásad uživatele
 
-1. V šabloně správce vyberte **Konfigurace počítače** > **všechna nastavení**a vyhledejte **procházení InPrivate**. Všimněte si cesty.
+1. V šabloně správce vyberte **Konfigurace** > počítače**všechna nastavení**a vyhledejte **procházení InPrivate**. Všimněte si cesty.
 
     Proveďte stejnou **konfiguraci uživatele**. Vyberte **všechna nastavení**a vyhledejte **procházení InPrivate**.
 
 2. V **Editor pro správu zásad skupiny**vyhledejte nastavení odpovídajícího uživatele a zařízení:
 
-    - Zařízení: rozbalte **Konfigurace počítače** **zásady** >  > **Šablony pro správu** > **součásti systému Windows** > **Internet Explorer** > **Ochrana osobních údajů** > **vypnout procházení InPrivate**.
-    - Uživatel: rozbalte **zásady** > **konfigurace uživatelů** > **Šablony pro správu** > **součásti systému Windows** > **Internet Explorer** > **Ochrana osobních údajů** > **vypnout procházení InPrivate**.
+    - Zařízení: rozbalte**zásady** >  **Konfigurace** > počítače**šablony pro správu** > **součásti** > systému Windows**Ochrana osobních údajů** > pro**Internet Explorer** > **vypnout procházení InPrivate**.
+    - Uživatel: rozbalte**zásady** >  **Konfigurace** > uživatelů**šablony pro správu** > **součásti** > systému Windows**Ochrana osobních údajů** > pro**Internet Explorer** > **vypnout procházení InPrivate**.
 
     > [!div class="mx-imgBorder"]
-    > ![vypnutí procházení InPrivate v Internet Exploreru pomocí šablony ADMX](./media/tutorial-walkthrough-administrative-templates/group-policy-turn-off-inprivate-browsing.png)
+    > ![Vypnutí procházení InPrivate v Internet Exploreru pomocí šablony ADMX](./media/tutorial-walkthrough-administrative-templates/group-policy-turn-off-inprivate-browsing.png)
 
 > [!TIP]
 > Chcete-li zobrazit integrované zásady systému Windows, můžete použít také příkaz GPEdit (**Upravit aplikaci zásad skupiny** ).
@@ -308,14 +308,14 @@ V této části uvádíme zásadu v Intune a odpovídající zásady v Editor pr
 #### <a name="compare-an-edge-policy"></a>Porovnání hraničních zásad
 
 1. V centru pro správu Správce koncových bodů můžete přejít na šablonu **správce – šablona zařízení s Windows 10 Students** .
-2. Rozbalte položku **Konfigurace počítače** > **Microsoft Edge** > **po spuštění, na domovské stránce a na nové kartě**. Všimněte si dostupných nastavení.
+2. Rozbalte položku **Konfigurace** > počítače**Microsoft Edge** > **po spuštění, Domovská stránka a nová karta**. Všimněte si dostupných nastavení.
 
     Proveďte stejnou **konfiguraci uživatele**.
 
 3. V Editor pro správu zásad skupiny Najděte tato nastavení:
 
-    - Zařízení: rozbalte položku **zásady** > **konfigurace počítače** > **šablony pro správu** > **Microsoft Edge** > **po spuštění, na domovské stránce a na nové kartě**.
-    - Uživatel: rozbalte **zásady** > **konfigurace uživatelů** > **šablony pro správu** > **Microsoft Edge** > **po spuštění, domovskou stránku a novou kartu** .
+    - Zařízení: rozbalte**zásady** >  **Konfigurace** > počítače**šablony pro správu** > úvodní stránky**Microsoft Edge** > **, Domovská stránka a nová karta**.
+    - Uživatel: rozbalte položku**zásady** >  **Konfigurace** > uživatele**šablony pro správu** > **úvodní, domovskou stránku a novou stránku karty** **Microsoft Edge** > .
 
 ### <a name="what-did-i-just-do"></a>Co mám dělat?
 
@@ -328,10 +328,10 @@ V této šabloně nakonfigurujeme některá nastavení aplikace Internet Explore
 1. V **šabloně pro správu – zařízení s Windows 10 studenty**, rozbalte položku **Konfigurace počítače**, vyberte **všechna nastavení**a vyhledejte vypnout **procházení InPrivate**:
 
     > [!div class="mx-imgBorder"]
-    > ![vypnout zásadu zařízení pro procházení InPrivate v šabloně pro správu v Microsoft Intune](./media/tutorial-walkthrough-administrative-templates/turn-off-inprivate-browsing-administrative-template.png)
+    > ![Vypnutí zásad zařízení pro procházení InPrivate v šabloně pro správu v Microsoft Intune](./media/tutorial-walkthrough-administrative-templates/turn-off-inprivate-browsing-administrative-template.png)
 
 2. Vyberte nastavení **procházení InPrivate** . V tomto okně si všimněte popisu a hodnot, které můžete nastavit. Tyto možnosti jsou podobné tomu, co vidíte v zásadách skupiny.
-3. Pokud chcete změny uložit, vyberte **povoleno** > **OK** .
+3. Kliknutím na možnost **povoleno** > **OK** uložte změny.
 4. Také nakonfigurujte následující nastavení aplikace Internet Explorer. Nezapomeňte vybrat **OK** , aby se změny uložily.
 
     - **Povolení přetahování nebo kopírování a vkládání souborů**
@@ -353,14 +353,14 @@ V této šabloně nakonfigurujeme některá nastavení aplikace Internet Explore
 5. Vymažte vyhledávací filtr. Všimněte si, že nastavení, které jste nakonfigurovali, jsou uvedená v horní části:
 
     > [!div class="mx-imgBorder"]
-    > ![nakonfigurovaná nastavení jsou uvedená v horní části Microsoft Intune](./media/tutorial-walkthrough-administrative-templates/configured-settings-administrative-template.png)
+    > ![Nakonfigurovaná nastavení jsou uvedená v horní části Microsoft Intune](./media/tutorial-walkthrough-administrative-templates/configured-settings-administrative-template.png)
 
 ### <a name="assign-your-template"></a>Přiřazení šablony
 
 1. V šabloně vyberte **Další** , dokud se nedostanete k **přiřazení**. Zvolte **Vybrat skupiny, které se mají zahrnout**:
 
     > [!div class="mx-imgBorder"]
-    > ![v seznamu profily konfigurace zařízení v Microsoft Intune vyberte profil šablony pro správu](./media/tutorial-walkthrough-administrative-templates/filter-administrative-template-device-configuration-profiles-list.png)
+    > ![V seznamu profily konfigurace zařízení v Microsoft Intune vyberte profil šablony pro správu.](./media/tutorial-walkthrough-administrative-templates/filter-administrative-template-device-configuration-profiles-list.png)
 
 2. Zobrazí se seznam existujících uživatelů a skupin. Vyberte skupinu **všechna zařízení s Windows 10 Students** , kterou jste vytvořili dříve, > **Vybrat**.
 
@@ -380,9 +380,9 @@ V centru pro správu Správce koncových bodů jste vytvořili profil konfigurac
 
 V této části vytvoříte v Intune šablonu správce OneDrivu, abyste mohli řídit některá nastavení. Tato konkrétní nastavení se volí, protože je běžně používají organizace.
 
-1. Vytvořte další profil (**devices** > **Configuration** Profiles > **Create Profile**).
+1. Vytvořte další profil (konfigurace**zařízení** > **profily** > **vytvořit profil**).
 
-2. Zadejte následující vlastnosti:
+2. Zadejte tyto vlastnosti:
 
     - **Platforma**: vyberte **Windows 10 a novější**.
     - **Profil**: vyberte **šablony pro správu**.
@@ -396,7 +396,7 @@ V této části vytvoříte v Intune šablonu správce OneDrivu, abyste mohli ř
 5. Vyberte **Další**.
 6. V **nastavení konfigurace**nakonfigurujte následující nastavení. Nezapomeňte vybrat **OK** , aby se změny uložily.:
 
-    - **Konfigurace počítače** > **všechna nastavení**:
+    - **Computer configuration** > **Všechna nastavení**konfigurace počítače:
       - **Tiché přihlášení uživatelů do synchronizačního klienta OneDrivu s přihlašovacími údaji Windows**
         - **Typ**: zařízení
         - **Hodnota**: povoleno
@@ -404,7 +404,7 @@ V této části vytvoříte v Intune šablonu správce OneDrivu, abyste mohli ř
         - **Typ**: zařízení
         - **Hodnota**: povoleno
 
-    - **Konfigurace uživatele** > **všechna nastavení**:
+    - **User configuration** > **Všechna nastavení**konfigurace uživatele:
       - **Zabránit uživatelům v synchronizaci osobních účtů OneDrivu**
         - **Typ**: uživatel
         - **Hodnota**: povoleno
@@ -412,7 +412,7 @@ V této části vytvoříte v Intune šablonu správce OneDrivu, abyste mohli ř
 Vaše nastavení vypadá podobně jako u následujících nastavení:
 
 > [!div class="mx-imgBorder"]
-> ![vytvořit šablonu pro správu OneDrivu v Microsoft Intune](./media/tutorial-walkthrough-administrative-templates/one-drive-administrative-template.png)
+> ![Vytvoření šablony pro správu OneDrivu v Microsoft Intune](./media/tutorial-walkthrough-administrative-templates/one-drive-administrative-template.png)
 
 Další informace o nastavení klienta OneDrive najdete v tématu [použití zásady skupiny k řízení nastavení synchronizace klienta OneDrive](https://docs.microsoft.com/onedrive/use-group-policy).
 
@@ -440,23 +440,23 @@ Tato část používá následující zdroje informací. Tyto prostředky nainst
     2. Klikněte pravým tlačítkem na **Windows PowerShell** > **Spustit jako správce**.
 
     > [!div class="mx-imgBorder"]
-    > ![spustit prostředí Windows PowerShell jako správce](./media/tutorial-walkthrough-administrative-templates/run-windows-powershell-administrator.png)
+    > ![Spusťte prostředí Windows PowerShell jako správce.](./media/tutorial-walkthrough-administrative-templates/run-windows-powershell-administrator.png)
 
 2. Získejte a nastavte zásady spouštění.
 
-    1. Zadejte: `get-ExecutionPolicy`
+    1. Napište`get-ExecutionPolicy`
 
         Zapište, co je nastaveno na, což může být **omezeno**. Po dokončení kurzu ho nastavte zpátky na původní hodnotu.
 
-    2. Zadejte: `Set-ExecutionPolicy -ExecutionPolicy Unrestricted`
+    2. Napište`Set-ExecutionPolicy -ExecutionPolicy Unrestricted`
 
-    3. Pokud ho chcete změnit, zadejte `Y`.
+    3. Pokud `Y` ho chcete změnit, zadejte.
 
     Zásady spouštění prostředí PowerShell pomáhají zabránit spouštění škodlivých skriptů. Další informace najdete v tématu [o zásadách spouštění](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_execution_policies).
 
-3. Zadejte: `Install-Module -Name Microsoft.Graph.Intune`
+3. Napište`Install-Module -Name Microsoft.Graph.Intune`
 
-    Zadejte `Y`, pokud:
+    Zadejte `Y` IF:
 
     - Výzva k instalaci zprostředkovatele NuGet
     - Výzva k instalaci modulů z nedůvěryhodného úložiště
@@ -464,25 +464,25 @@ Tato část používá následující zdroje informací. Tyto prostředky nainst
     Dokončení může trvat několik minut. Po dokončení se zobrazí výzva podobná následujícímu dotazu:
 
     > [!div class="mx-imgBorder"]
-    > ![Windows PowerShellu po instalaci modulu se zobrazí výzva](./media/tutorial-walkthrough-administrative-templates/powershell-prompt.png)
+    > ![Windows PowerShell – výzva po instalaci modulu](./media/tutorial-walkthrough-administrative-templates/powershell-prompt.png)
 
-4. Ve webovém prohlížeči přejdete na [https://github.com/Microsoft/Intune-PowerShell-SDK/releases](https://github.com/Microsoft/Intune-PowerShell-SDK/releases)a vyberte soubor **Intune-PowerShell-SDK_v6.1907.00921.0001. zip** .
+4. Ve webovém prohlížeči přejdete na [https://github.com/Microsoft/Intune-PowerShell-SDK/releases](https://github.com/Microsoft/Intune-PowerShell-SDK/releases)adresu a vyberte soubor **Intune-PowerShell-SDK_v6. zip** .
 
-    1. Vyberte **Uložit jako**a vyberte složku, kterou si pamatujete. `c:\psscripts` je vhodná volba.
-    2. Otevřete složku, klikněte pravým tlačítkem na soubor. zip > **Extrahujte všechny** > **extrahování**. Struktura složek vypadá podobně jako v následující složce:
+    1. Vyberte **Uložit jako**a vyberte složku, kterou si pamatujete. `c:\psscripts`je dobrá volba.
+    2. Otevřete složku, klikněte pravým tlačítkem na soubor. zip > **extrahování všech** > **extrakcí**. Struktura složek vypadá podobně jako v následující složce:
 
         > [!div class="mx-imgBorder"]
-        > ![struktury složky Intune PowerShell SDK po extrakci](./media/tutorial-walkthrough-administrative-templates/psscripts-directory.png)
+        > ![Struktura složky sady Intune PowerShell SDK po extrakci](./media/tutorial-walkthrough-administrative-templates/psscripts-directory.png)
 
 5. Na kartě **zobrazení** zkontrolujte **přípony názvů souborů**:
 
     > [!div class="mx-imgBorder"]
-    > ![na kartě zobrazení v Průzkumníkovi vyberte přípony názvů souborů](./media/tutorial-walkthrough-administrative-templates/file-names-extension.png)
+    > ![Na kartě zobrazení v Průzkumníkovi vyberte přípony názvů souborů.](./media/tutorial-walkthrough-administrative-templates/file-names-extension.png)
 
-6. Ve složce a přejít na `c:\psscripts\Intune-PowerShell-SDK_v6.1907.00921.0001\drop\outputs\build\Release\net471`. Klikněte pravým tlačítkem na všechny knihovny DLL > **vlastnosti** > **odblokovat**.
+6. Ve složce a přejít na `c:\psscripts\Intune-PowerShell-SDK_v6.1907.00921.0001\drop\outputs\build\Release\net471`. Klikněte pravým tlačítkem na všechny knihovny DLL. > **vlastnosti** > **odblokovat**.
 
     > [!div class="mx-imgBorder"]
-    > ![odblokovat knihovny DLL](./media/tutorial-walkthrough-administrative-templates/unblock-dll.png)
+    > ![Odblokovat knihovny DLL](./media/tutorial-walkthrough-administrative-templates/unblock-dll.png)
 
 7. V aplikaci **Windows PowerShell** zadejte:
 
@@ -490,20 +490,20 @@ Tato část používá následující zdroje informací. Tyto prostředky nainst
     Import-Module c:\psscripts\Intune-PowerShell-SDK_v6.1907.00921.0001\drop\outputs\build\Release\net471\Microsoft.Graph.Intune.psd1
     ```
 
-    Zadejte `R`, pokud se zobrazí výzva ke spuštění z nedůvěryhodného vydavatele.
+    Pokud `R` se zobrazí výzva ke spuštění z nedůvěryhodného vydavatele, zadejte.
 
 8. Šablony pro správu Intune používají beta verzi grafu:
 
-    1. Zadejte: `Update-MSGraphEnvironment -SchemaVersion 'beta'`
+    1. Napište`Update-MSGraphEnvironment -SchemaVersion 'beta'`
 
-    2. Zadejte: `Connect-MSGraph -AdminConsent`
+    2. Napište`Connect-MSGraph -AdminConsent`
 
     3. Po zobrazení výzvy se přihlaste pomocí stejného účtu správce Microsoft 365. Tyto rutiny vytvářejí zásady ve vaší organizaci tenanta.
 
         **Uživatel**: zadejte účet správce předplatného tenanta Microsoft 365.  
         **Heslo**: zadejte jeho heslo.
 
-    4. Vyberte **přijmout**.
+    4. Vyberte **Přijmout**.
 
 9. Vytvořte konfigurační profil konfigurace **testu** . Zadejte:
 
@@ -541,7 +541,7 @@ Tato část používá následující zdroje informací. Tyto prostředky nainst
 
 ### <a name="see-your-policy"></a>Zobrazit vaše zásady
 
-1. V centru pro správu Správce koncových bodů > **konfigurační profily** > **aktualizovat**.
+1. V centru pro správu Správce koncových bodů >**aktualizujte** **konfigurační profily** > .
 2. Vyberte profil **Konfigurace testu** > **Nastavení**.
 3. V rozevíracím seznamu vyberte možnost **všechny produkty**.
 

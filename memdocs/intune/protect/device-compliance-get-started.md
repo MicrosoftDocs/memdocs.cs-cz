@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/13/2020
+ms.date: 04/21/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0ccc5c93d72c026c38616c8fdcfea6f81f153aa0
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: b9fa14dd54a820ed20f8b3b504a836392c7f428f
+ms.sourcegitcommit: 4381afb515c06f078149bd52528d1f24b63a2df9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79329395"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82538162"
 ---
 # <a name="set-rules-on-devices-to-allow-access-to-resources-in-your-organization-using-intune"></a>Nastavení pravidel na zařízeních pro povolení přístupu k prostředkům ve vaší organizaci pomocí Intune
 
@@ -74,7 +74,7 @@ Intune používá [podmíněný přístup](https://docs.microsoft.com/azure/acti
 
 ### <a name="with-conditional-access"></a>S podmíněným přístupem
 
-Pro zařízení, která vyhovují pravidlům zásad, můžete těmto zařízením udělit přístup k e-mailu a jiným prostředkům organizace. Pokud zařízení nedodržují pravidla zásad, nezískají přístup k prostředkům organizace. Toto je podmíněný přístup.
+U zařízení, která dodržují pravidla zásad, můžete těmto zařízením udělit přístup k e-mailu a dalším prostředkům organizace. Pokud zařízení nedodržují pravidla zásad, nezískají přístup k prostředkům organizace. Toto je podmíněný přístup.
 
 ### <a name="without-conditional-access"></a>Bez podmíněného přístupu
 
@@ -82,7 +82,7 @@ Zásady dodržování předpisů zařízením taky můžete používat bez podm�
 
 ## <a name="ways-to-deploy-device-compliance-policies"></a>Způsoby nasazení zásad dodržování předpisů zařízeními
 
-Zásady dodržování předpisů můžete nasadit uživatelům ve skupinách uživatelů nebo zařízením ve skupinách zařízení. Po nasazení zásady dodržování předpisů uživateli se u všech jeho zařízení kontroluje dodržování předpisů. Zařízení s Windows 10 verze 1803 a novějšími je doporučeno nasadit do skupin zařízení, *pokud* primární uživatel zařízení nezaregistroval. Použití skupin zařízení pomáhá v této situaci s vykazováním dodržování předpisů.
+Zásady dodržování předpisů můžete nasadit uživatelům ve skupinách uživatelů nebo zařízením ve skupinách zařízení. Po nasazení zásady dodržování předpisů uživateli se u všech jeho zařízení kontroluje dodržování předpisů. Použití skupin zařízení pomáhá v této situaci s vykazováním dodržování předpisů.
 
 Intune také obsahuje sadu předdefinovaných nastavení zásad dodržování předpisů. Následující předdefinované zásady se vyhodnotí na všechna zařízení zaregistrovaná v Intune:
 
@@ -91,7 +91,7 @@ Intune také obsahuje sadu předdefinovaných nastavení zásad dodržování p�
   - **Kompatibilní** (*výchozí*): vypnutá funkce zabezpečení
   - **Nekompatibilní**: funkce zabezpečení zapnuta
 
-  Pokud zařízení nemá přiřazené zásady dodržování předpisů, považuje se toto zařízení za vyhovující ve výchozím nastavení. Pokud používáte podmíněný přístup se zásadami dodržování předpisů, doporučujeme změnit výchozí nastavení na **nekompatibilní**. Pokud koncový uživatel nedodržuje předpisy, protože zásada není přiřazená, zobrazí se `No compliance policies have been assigned`[aplikace Portál společnosti](../apps/company-portal-app.md) .
+  Pokud zařízení nemá přiřazené zásady dodržování předpisů, považuje se toto zařízení za vyhovující ve výchozím nastavení. Pokud používáte podmíněný přístup se zásadami dodržování předpisů, doporučujeme změnit výchozí nastavení na **nekompatibilní**. Pokud koncový uživatel nedodržuje předpisy, protože zásada není přiřazená, zobrazí `No compliance policies have been assigned`se [aplikace Portál společnosti](../apps/company-portal-app.md) .
 
 - **Vylepšené zjišťování jailbreaků**: Pokud je toto nastavení povolené, způsobí to, že se na zařízeních s iOS/iPadOS bude nacházet v zařízení s jailbreakem/. Toto nastavení má vliv jenom na zařízení, která jsou cílem zásad dodržování předpisů, které blokují zařízení s jailbreakem. Povolení této vlastnosti používá služby zjišťování polohy zařízení a může mít vliv na využití baterie. Data o umístění uživatele nejsou uložená službou Intune a používají se jenom k aktivaci jailbreaků detekce na pozadí. 
 
@@ -101,9 +101,9 @@ Intune také obsahuje sadu předdefinovaných nastavení zásad dodržování p�
 
   Vyhodnocování se aktivuje otevřením aplikace Portál společnosti nebo fyzickému přesunutí zařízení o důležitou vzdálenost přibližně 500 metrů a dalších. U iOS 13 a dalších funkcí bude tato funkce vyžadovat, aby uživatelé vždy, když se jim zobrazí výzva, povolili Portál společnosti používat jejich umístění na pozadí. Pokud uživatelé nemají vždycky přístup k poloze a mají nakonfigurovanou zásadu s tímto nastavením, bude jejich zařízení označeno jako nedodržující předpisy. Všimněte si, že Intune nemůže zaručit, že při každé významné změně umístění dojde k tomu, aby jailbreaků kontrolu detekce, protože to závisí na síťovém připojení zařízení.
 
-- **Doba platnosti stavu dodržování předpisů (dny)** : Zadejte časové období, během kterého zařízení nahlásí stav všech přijatých zásad dodržování předpisů. Zařízení, která během tohoto období nevrátí stav, se považují za nedodržující předpisy. Výchozí hodnota je 30 dní. Minimální hodnota je 1 den.
+- **Doba platnosti stavu dodržování předpisů (dny)**: Zadejte časové období, během kterého zařízení nahlásí stav všech přijatých zásad dodržování předpisů. Zařízení, která během tohoto období nevrátí stav, se považují za nedodržující předpisy. Výchozí hodnota je 30 dní. Minimální hodnota je 1 den.
 
-  Toto nastavení ukazuje, že **je aktivní** výchozí zásada dodržování předpisů (**zařízení** > **monitorování** > **Nastavení dodržování předpisů**). Úloha na pozadí pro tyto zásady se spouští jednou denně.
+  Toto nastavení ukazuje, že **je aktivní** výchozí zásada dodržování předpisů (**zařízení** > **monitorují** > **Nastavení dodržování předpisů**). Úloha na pozadí pro tyto zásady se spouští jednou denně.
 
 Pomocí těchto integrovaných zásad můžete tato nastavení monitorovat. Intune také aktualizuje [nebo zjišťuje aktualizace](create-compliance-policy.md#refresh-cycle-times) v různých intervalech v závislosti na platformě zařízení. [Běžné otázky, problémy a řešení se zásadami a profily zařízení v Microsoft Intune](../configuration/device-profile-troubleshoot.md) jsou dobrým prostředkem.
 
@@ -117,13 +117,13 @@ Následující tabulka popisuje, jak se spravují nevyhovující nastavení při
 
 |**Nastavení zásad**| **Platforma** |
 | --- | ----|
-| **Konfigurace kódu PIN nebo hesla** | - **Android 4,0 a novější**: v karanténě<br>- **Samsung KNOX Standard 4,0 a novější**: v karanténě<br>- **Android Enterprise**: v karanténě  <br>  <br>- **iOS 8,0 a novější**: Opraveno<br>- **macOS 10,11 a novější**: Opraveno  <br>  <br>- **Windows 8.1 a novější**: Opraveno<br>- **Windows Phone 8,1 a novější**: Opraveno|
-| **Šifrování zařízení** | - **Android 4,0 a novější**: v karanténě<br>- **Samsung KNOX Standard 4,0 a novější**: v karanténě<br>- **Android Enterprise**: v karanténě<br><br>- **iOS 8,0 a novější**: opravené (nastavením PIN kódu)<br>- **macOS 10,11 a novější**: opravené (nastavením PIN kódu)<br><br>- **Windows 8.1 a novější**: nejde použít.<br>- **Windows Phone 8,1 a novější**: Opraveno |
-| **Zařízení s jailbreakem nebo rootem** | - **Android 4,0 a novější**: v karanténě (nejedná se o nastavení)<br>- **Samsung KNOX Standard 4,0 a novější**: v karanténě (nejedná se o nastavení)<br>- **Android Enterprise**: v karanténě (nejedná se o nastavení)<br><br>- **iOS 8,0 a novější**: v karanténě (nejedná se o nastavení)<br>- **macOS 10,11 a novější**: nelze použít<br><br>- **Windows 8.1 a novější**: nejde použít.<br>- **Windows Phone 8,1 a novější**: nelze použít |
-| **E-mailový profil** | - **Android 4,0 a novější**: nejde použít.<br>- **Samsung KNOX Standard 4,0 a novější**: nejde použít.<br>- **Android Enterprise**: nejde použít.<br><br>- **iOS 8,0 a novější**: v karanténě<br>- **macOS 10,11 a novější**: v karanténě<br><br>- **Windows 8.1 a novější**: nejde použít.<br>- **Windows Phone 8,1 a novější**: nelze použít |
-| **Minimální verze operačního systému** | - **Android 4,0 a novější**: v karanténě<br>- **Samsung KNOX Standard 4,0 a novější**: v karanténě<br>- **Android Enterprise**: v karanténě<br><br>- **iOS 8,0 a novější**: v karanténě<br>- **macOS 10,11 a novější**: v karanténě<br><br>- **Windows 8.1 a novější**: v karanténě<br>- **Windows Phone 8,1 a novější**: v karanténě |
-| **Maximální verze operačního systému** | - **Android 4,0 a novější**: v karanténě<br>- **Samsung KNOX Standard 4,0 a novější**: v karanténě<br>- **Android Enterprise**: v karanténě<br><br>- **iOS 8,0 a novější**: v karanténě<br>- **macOS 10,11 a novější**: v karanténě<br><br>- **Windows 8.1 a novější**: v karanténě<br>- **Windows Phone 8,1 a novější**: v karanténě |
-| **Ověření stavu Windows** | - **Android 4,0 a novější**: nejde použít.<br>- **Samsung KNOX Standard 4,0 a novější**: nejde použít.<br>- **Android Enterprise**: nejde použít.<br><br>- **iOS 8,0 a novější**: nejde použít.<br>- **macOS 10,11 a novější**: nelze použít<br><br>- **Windows 10 a Windows 10 Mobile**: v karanténě<br>- **Windows 8.1 a novější**: v karanténě<br>- **Windows Phone 8,1 a novější**: nelze použít |
+| **Konfigurace kódu PIN nebo hesla** | - **Android 4,0 a novější**: v karanténě<br>- **Samsung KNOX standard 4,0 a novější**: v karanténě<br>- **Android Enterprise**: v karanténě  <br>  <br>- **iOS 8,0 a novější**: Opraveno<br>- **macOS 10,11 a novější**: Opraveno  <br>  <br>- **Windows 8.1 a novější**: Opraveno<br>- **Windows Phone 8,1 a novější**: Opraveno|
+| **Šifrování zařízení** | - **Android 4,0 a novější**: v karanténě<br>- **Samsung KNOX standard 4,0 a novější**: v karanténě<br>- **Android Enterprise**: v karanténě<br><br>- **iOS 8,0 a novější**: opravené (nastavením PIN kódu)<br>- **macOS 10,11 a novější**: opravené (nastavením PIN kódu)<br><br>- **Windows 8.1 a novější**: nejde použít.<br>- **Windows Phone 8,1 a novější**: Opraveno |
+| **Zařízení s jailbreakem nebo rootem** | - **Android 4,0 a novější**: v karanténě (nejedná se o nastavení)<br>- **Samsung KNOX standard 4,0 a novější**: v karanténě (nejedná se o nastavení)<br>- **Android Enterprise**: v karanténě (nejedná se o nastavení)<br><br>- **iOS 8,0 a novější**: v karanténě (nejedná se o nastavení)<br>- **macOS 10,11 a novější**: nelze použít<br><br>- **Windows 8.1 a novější**: nejde použít.<br>- **Windows Phone 8,1 a novější**: nelze použít |
+| **E-mailový profil** | - **Android 4,0 a novější**: nejde použít.<br>- **Samsung KNOX standard 4,0 a novější**: nejde použít.<br>- **Android Enterprise**: nejde použít.<br><br>- **iOS 8,0 a novější**: v karanténě<br>- **macOS 10,11 a novější**: v karanténě<br><br>- **Windows 8.1 a novější**: nejde použít.<br>- **Windows Phone 8,1 a novější**: nelze použít |
+| **Minimální verze operačního systému** | - **Android 4,0 a novější**: v karanténě<br>- **Samsung KNOX standard 4,0 a novější**: v karanténě<br>- **Android Enterprise**: v karanténě<br><br>- **iOS 8,0 a novější**: v karanténě<br>- **macOS 10,11 a novější**: v karanténě<br><br>- **Windows 8.1 a novější**: v karanténě<br>- **Windows Phone 8,1 a novější**: v karanténě |
+| **Maximální verze operačního systému** | - **Android 4,0 a novější**: v karanténě<br>- **Samsung KNOX standard 4,0 a novější**: v karanténě<br>- **Android Enterprise**: v karanténě<br><br>- **iOS 8,0 a novější**: v karanténě<br>- **macOS 10,11 a novější**: v karanténě<br><br>- **Windows 8.1 a novější**: v karanténě<br>- **Windows Phone 8,1 a novější**: v karanténě |
+| **Ověření stavu Windows** | - **Android 4,0 a novější**: nejde použít.<br>- **Samsung KNOX standard 4,0 a novější**: nejde použít.<br>- **Android Enterprise**: nejde použít.<br><br>- **iOS 8,0 a novější**: nejde použít.<br>- **macOS 10,11 a novější**: nelze použít<br><br>- **Windows 10 a Windows 10 Mobile**: v karanténě<br>- **Windows 8.1 a novější**: v karanténě<br>- **Windows Phone 8,1 a novější**: nelze použít |
 
 ---------------------------
 
@@ -139,13 +139,13 @@ Následující tabulka popisuje, jak se spravují nevyhovující nastavení při
 - [Vytvořte zásadu](create-compliance-policy.md) a zobrazte požadované součásti.
 - Podívejte se na nastavení dodržování předpisů pro různé platformy zařízení:
 
-  - [Androidemem](compliance-policy-create-android.md)
+  - [Android](compliance-policy-create-android.md)
   - [Android Enterprise](compliance-policy-create-android-for-work.md)
   - [iOS](compliance-policy-create-ios.md)
   - [macOS](compliance-policy-create-mac-os.md)
   - [Windows Holographic for Business](compliance-policy-create-windows.md#windows-holographic-for-business)
   - [Windows Phone 8.1](compliance-policy-create-windows-8-1.md)
-  - [Windows 8.1 a novější](compliance-policy-create-windows-8-1.md)
+  - [Windows 8.1 a vyšší](compliance-policy-create-windows-8-1.md)
   - [Windows 10 a novější](compliance-policy-create-windows.md)
 
 - [Referenční informace pro entity zásad](../developer/reports-ref-policy.md) obsahují informace o entitách zásad datového skladu Intune.

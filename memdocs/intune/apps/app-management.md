@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9e97322fa8a126203bf6e4d1e7a3703b92ded339
-ms.sourcegitcommit: 0907ee1137773f0482b1d2b9bb344e206d05aede
+ms.openlocfilehash: baffa150b416b778e41a59fdf4e5a1b686cdae7b
+ms.sourcegitcommit: 4381afb515c06f078149bd52528d1f24b63a2df9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80536852"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82538144"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Co je správa aplikací v Microsoft Intune?
 
@@ -51,7 +51,7 @@ Intune MAM podporuje dvě konfigurace:
 
 Intune nabízí celou řadu funkcí, které vám pomůžou dostat požadované aplikace na zařízení, na kterých je chcete spouštět. Následující tabulka nabízí souhrn funkcí správy aplikací.
 
-|  | Android/Android Enterprise | iOS/iPadOS | macOS | Windows 10 | Wvdows Phone 8.1 |
+|  | Android/Android Enterprise | iOS/iPadOS | macOS | Windows 10 | Windows Phone 8.1 |
 |-------------------------------------------------------------------------------------|---------|-----|-------|------------|-------------------|
 | Přidání a přiřazení aplikací k zařízením a uživatelům | Ano | Ano | Ano | Ano | Ano |
 | Přiřazení aplikací k zařízením nezaregistrovaným v Intune | Ano | Ano | Ne | Ne | Ne |
@@ -109,6 +109,11 @@ Horní část navigační nabídky úlohy aplikace poskytuje běžně používan
     - **Kategorie aplikací**: Tady můžete přidat, připnout a odstranit názvy kategorií aplikací.
     - **Elektronické knihy**: v některých obchodech s aplikacemi máte možnost koupit si pro aplikace nebo knihy, které chcete používat ve vaší společnosti, více licencí. Podrobnosti najdete v tématu [Správa aplikací a knih zakoupených v rámci multilicenčního programu pomocí Microsoft Intune](vpp-apps.md).
 - **Nápověda a podpora**: Tady můžete řešit potíže, požádat o podporu nebo zobrazit stav Intune. Další informace najdete v tématu [řešení problémů](../fundamentals/help-desk-operators.md).
+
+### <a name="try-the-interactive-guide"></a>Vyzkoušejte interaktivní příručku
+Interaktivní příručka [Spravovat a chránit mobilní a desktopové aplikace Microsoft Endpoint Manager](https://mslearn.cloudguides.com/en-us/guides/Manage%20and%20protect%20mobile%20and%20desktop%20applications%20with%20Microsoft%20Endpoint%20Manager) vás provede centrem pro správu Microsoft Endpoint Manageru, která vám ukáže, jak spravovat zařízení zaregistrovaná v Intune, vymáhat dodržování zásad a chránit data vaší organizace.</br></br>
+
+> [!VIDEO https://mslearn.cloudguides.com/en-us/guides/Manage%20and%20protect%20mobile%20and%20desktop%20applications%20with%20Microsoft%20Endpoint%20Manager]
 
 ## <a name="additional-information"></a>Další informace
 Následující položky v konzole poskytují funkce související s aplikacemi:

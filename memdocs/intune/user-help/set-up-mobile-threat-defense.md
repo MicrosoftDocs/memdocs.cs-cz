@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/25/2019
+ms.date: 04/27/2020
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: b5df63a14f27b657c585eb43e09b02368d969939
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 676af3373acd399056a0ebdc77c9152442a72101
+ms.sourcegitcommit: 53bab52e42de28b87e53596646a3532e25eb9c14
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80084398"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82182272"
 ---
 # <a name="install-mobile-threat-defense"></a>Instalace ochrany před mobilními hrozbami   
 
@@ -30,20 +30,20 @@ V rámci požadavků na zabezpečení vaší organizace může být nutné nains
 
 Pokud nemáte požadovanou aplikaci MTD, budete se moci přihlásit k chráněným aplikacím pomocí svého pracovního nebo školního účtu. V tomto článku se dozvíte, [Jak nainstalovat aplikaci MTD](set-up-mobile-threat-defense.md#install-app) , která se odblokuje.  
 
-K instalaci je k dispozici celá řada aplikací MTD dodavatele; vaše organizace vám pošle informace o tom, které z nich se má použít. 
+K instalaci je k dispozici celá řada MTDch aplikací dodavatele, a to vše s různými názvy. Vaše organizace vám pošle informace o tom, které z nich se má použít. Pokud se zobrazí výzva k instalaci aplikace, ale nejsou uvedené další pokyny nebo odkaz pro získání aplikace, obraťte se na pracovníky podpory IT. 
 
 
 ## <a name="information-your-organization-can-see"></a>Informace, které vaše organizace uvidí   
 
 Vaše organizace nemůže v osobních aplikacích zobrazit žádná data, jako jsou texty, e-maily a obrázky. Aplikace MTD oznamuje informace o vašich aplikacích, jako je název a verze, do vaší organizace. Skutečné informace hlášené v závislosti na dodavateli MTD, které vaše společnost používá. Vaše organizace může zobrazit tyto informace:   
 
-* Název aplikace  
+* App name (Název aplikace)  
 * ID aplikace: jedinečný název, který identifikuje aplikaci v Google Play.  
 * Verze aplikace a krátké číslo verze: specifická čísla vydání pro aplikaci.  
 * Sada prostředků aplikace a dynamická velikost: velikost místa, které aplikace v zařízení používá. 
 
 
-## <a name="install-app"></a>Instalovat aplikaci    
+## <a name="install-app"></a>Nainstalovat aplikaci    
 Když se přihlásíte k chráněné aplikaci, automaticky se zobrazí výzva k instalaci aplikace MTD. Dokončete instalaci podle pokynů na obrazovce. Pro další nápovědu použijte postup v této části.  
  
 Může se také zobrazit výzva k registraci zařízení. Registrace je nutná k potvrzení vaší identity a připojení školního nebo pracovního účtu k vašemu zařízení. Pokud nejste registrováni, budete po instalaci aplikace MTD automaticky provedete tuto instalaci. Po zobrazení obrazovky **získat přístup** můžete spustit instalační kroky.  
@@ -54,7 +54,7 @@ Další informace o registraci zařízení najdete v tématu [registrace osobní
 
 1. Na obrazovce **získat přístup** postupujte podle pokynů k instalaci aplikace MTD, kterou vyžaduje vaše organizace.   
 2. Vraťte se na obrazovku **získat přístup** a vyberte **otevřít**.  
-3. Aplikace MTD požaduje oprávnění k otevření Microsoft Authenticator. Vyberte **Otevřít**. 
+3. Aplikace MTD požaduje oprávnění k otevření Microsoft Authenticator. Vyberte **Open** (Otevřít). 
 4. Vyberte svůj pracovní účet a přihlaste se. 
 5. Počkejte, než aplikace MTD zkontroluje bezpečnostní hrozby ve vašem zařízení. 
 6. Vraťte se do školy nebo pracovní aplikace, ke které jste se pokusili získat přístup. V tomto okamžiku může vaše organizace zobrazit výzvu ke konfiguraci dalších požadavků na zabezpečení aplikací, například vytvoření kódu PIN.   

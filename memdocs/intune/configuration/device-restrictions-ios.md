@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/30/2020
+ms.date: 04/21/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 897366ba9b7bae15050c0aa5e392ba5255a90b24
-ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
-ms.translationtype: MT
+ms.openlocfilehash: 2640107a4a3b17e2c544041445c8c797ef40b01e
+ms.sourcegitcommit: ad4b3e4874a797b755e774ff84429b5623f17c5c
+ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80407824"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82166544"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>nastavení zařízení s iOS a iPadOS pro povolení nebo omezení funkcí pomocí Intune
 
@@ -52,7 +52,7 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
 - **Nedůvěryhodné certifikáty TLS**: **blok** zabraňuje nedůvěryhodným certifikátům TLS (Transport Layer Security) na zařízeních. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém umožňovat certifikáty TLS.
 - **Zablokovat vysoce dolety aktualizace PKI**: **blok** znemožní uživatelům přijímat aktualizace softwaru, pokud nejsou zařízení připojená k počítači. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém zařízení přijímat aktualizace softwaru bez připojení k počítači.
 - **Omezení sledování služby AD**: **limit** zakáže identifikátor inzerce zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém ponechat povolený.
-- **Vztah důvěryhodnosti pro podnikovou aplikaci**: **blok** **odebere v nastavení** > Obecné > profily & správu zařízení na zařízeních. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém uživatelům dovolit, aby důvěřovali aplikacím, které nebyly staženy z App Storu.
+- **Vztah důvěryhodnosti pro podnikovou aplikaci**: **blok** **odebere v nastavení** > obecné > profily & správu zařízení na zařízeních. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém uživatelům dovolit, aby důvěřovali aplikacím, které nebyly staženy z App Storu.
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Nastavení platí pro: automatický zápis zařízení (pod dohledem)
 
@@ -85,7 +85,7 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
   Toto nastavení bylo přejmenováno z **možnosti Povolit omezení v nastavení zařízení**. Dopad této změny:  
   
   - iOS 11.4.1 a starší: **blok** zabraňuje uživatelům v nastavení zařízení v nastavení vlastních omezení. Chování je stejné. a neexistují žádné změny pro uživatele.
-  - iOS 12,0 a novější: **blok** zabraňuje uživatelům v nastavení zařízení nastavit vlastní **čas obrazovky** (nastavení > Obecné > čas obrazovky), včetně omezení obsahu a ochrany osobních údajů. V zařízeních upgradovaných na iOS 12,0 se už v nastavení zařízení nezobrazí karta omezení (Nastavení > Obecné > Správa zařízení > > omezení profilu správy. Tato nastavení se nacházejí v **čase obrazovky**.
+  - iOS 12,0 a novější: **blok** zabraňuje uživatelům v nastavení zařízení nastavit vlastní **čas obrazovky** (nastavení > obecné > čas obrazovky), včetně omezení obsahu a ochrany osobních údajů. V zařízeních upgradovaných na iOS 12,0 se už v nastavení zařízení nezobrazí karta omezení (nastavení > obecné > Správa zařízení > > omezení profilu správy. Tato nastavení se nacházejí v **čase obrazovky**.
   
 - **Použití možnosti pro vymazání veškerého obsahu a nastavení na zařízení**: **blok** zabraňuje použití možnosti pro vymazání veškerého obsahu a nastavení na zařízeních. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém poskytnout uživatelům přístup k těmto nastavením.
 - **Úprava názvu zařízení**: **blok** znemožňuje změnu názvu zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém uživatelům dovolit změnit název zařízení.
@@ -150,7 +150,7 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
 > - Jednoduchá hesla, například `1111` nebo `1234`, nejsou povolena.
 > - Je vynutil kód PIN pro číslice 6.
 
-- **Jednoduchá hesla**: **blok** vyžaduje složitější hesla. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém umožňovat jednoduchá hesla, například `0000` a `1234`.
+- **Jednoduchá hesla**: **blok** vyžaduje složitější hesla. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém umožňovat jednoduchá hesla, například `0000` a. `1234`
 
 - **Vyžadovaný typ hesla**: zadejte požadovanou úroveň složitosti hesla, kterou vaše organizace vyžaduje. Možnosti:
   - **Výchozí ze zařízení**
@@ -161,7 +161,7 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
 - **Minimální délka hesla**: zadejte minimální délku hesla, která musí být delší než 4-16 znaků. Do zařízení zaregistrovaných uživatelem zadejte délku 4 až 6 znaků.
   
   > [!NOTE]
-  > U zařízení, která jsou zaregistrovaná uživatelem, můžou uživatelé nastavit PIN kód o více než 6 číslic. Ale na zařízeních se neuplatní více než 6 číslic. Správce například nastaví minimální délku `8`. U zařízení zaregistrovaných uživatelem se uživatelům vyžaduje jenom zadání kódu PIN pro 6 číslic. Intune nevynutí na uživatelem zaregistrovaná zařízení kód PIN delší než 6 číslic.
+  > U zařízení, která jsou zaregistrovaná uživatelem, můžou uživatelé nastavit PIN kód o více než 6 číslic. Ale na zařízeních se neuplatní více než 6 číslic. Správce například nastaví minimální délku na `8`. U zařízení zaregistrovaných uživatelem se uživatelům vyžaduje jenom zadání kódu PIN pro 6 číslic. Intune nevynutí na uživatelem zaregistrovaná zařízení kód PIN delší než 6 číslic.
 
 - **Počet neúspěšných přihlášení před vymazáním zařízení**: zadejte počet neúspěšných přihlášení, než se zařízení vymaže, od 4-11.
   
@@ -194,12 +194,12 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
   - **10**: po 10 minutách nečinnosti se zamkne obrazovka.
   - **15**: po 15 minutách nečinnosti se zamkne obrazovka.
 
-  Pokud se hodnota nevztahuje na iOS a iPadOS, pak Apple používá nejbližší *nejnižší* hodnotu. Pokud například zadáte `4` minut, zařízení iPadOS používají `2` minut. Pokud zadáte `10` minut, zařízení s iOS budou používat `5` minut. Toto je omezení Apple.
+  Pokud se hodnota nevztahuje na iOS a iPadOS, pak Apple používá nejbližší *nejnižší* hodnotu. Pokud například zadáte `4` minuty, zařízení iPadOS budou používat `2` minuty. Pokud zadáte `10` minuty, zařízení s iOS budou `5` používat minuty. Toto je omezení Apple.
   
   > [!NOTE]
   > Uživatelské rozhraní Intune pro toto nastavení nedělí podporované hodnoty pro iOS a iPadOS. Uživatelské rozhraní může být v budoucí verzi aktualizováno.
 
-- **Vypršení platnosti hesla (dny)** : zadejte počet dní, než bude nutné změnit heslo zařízení, od 1-65535.
+- **Vypršení platnosti hesla (dny)**: zadejte počet dní, než bude nutné změnit heslo zařízení, od 1-65535.
 - **Zakázat opakované použití předchozích hesel**: pomocí tohoto nastavení můžete uživatelům zabránit ve vytváření hesel, která používali dřív. Zadejte počet dříve použitých hesel, která se nedají použít, od 1-24. Zadejte například hodnotu 5, aby uživatelé nemohli nastavit nové heslo, nebo některá z předchozích čtyř hesel. Pokud je hodnota prázdná, Intune se nezmění ani neaktualizuje.
 - **Dotykové ID a odemknutí ID obličeje**: **blok** zabraňuje použití otisku prstu nebo obličeje k odemknutí zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém uživatelům dovolit odemknout zařízení pomocí biometrika.
 
@@ -278,7 +278,7 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
 
 - **Vyžadovat heslo pro iTunes Store pro všechny nákupy**: **vyžadovat** , aby uživatelé zadali heslo Apple ID pro každý nákup v aplikaci nebo iTunes. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém vyžadovat nákupy bez výzvy k zadání hesla pokaždé, když.
 - **Nákupy v aplikaci**: **blok** brání nákupům v aplikaci ze Storu. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém v rámci spuštěné aplikace dovolit nákupy do Storu.
-- **Stáhnout obsah z obchodu iBooks Store označeného jako ' Erotika '** : **Block** znemožní uživatelům stahovat média z obchodu iBooks úložiště, které je označeno jako erotika. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém uživatelům dovolit stahovat knihy s kategorií "Erotika".
+- **Stáhnout obsah z obchodu iBooks Store označeného jako ' Erotika '**: **Block** znemožní uživatelům stahovat média z obchodu iBooks úložiště, které je označeno jako erotika. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém uživatelům dovolit stahovat knihy s kategorií "Erotika".
 - **Povolení spravovaných aplikací pro psaní kontaktů na nespravované účty kontaktů**: **Povolení** umožňuje spravovaným aplikacím, jako je mobilní aplikace Outlook, ukládat nebo synchronizovat kontaktní informace, včetně obchodních a firemních kontaktů, do integrované aplikace pro iOS/iPadOS Contacts. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém zabránit tomu, aby spravované aplikace ukládaly nebo synchronizovaly kontaktní informace na vestavěnou aplikaci pro iOS/iPadOS Contacts na zařízeních.
   
   Pokud chcete použít toto nastavení, nastavte možnost **zobrazení firemních dokumentů v nespravovaných aplikacích** na **blokovat**.
@@ -324,7 +324,10 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
 
 ### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Nastavení platí pro: registrace zařízení, automatický zápis zařízení (pod dohledem)
 
+
 - **Vyhledávání Spotlightu, které vrátí výsledky z Internetu**: **blok** přestane vracet žádné výsledky z internetu hledání. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém umožnit vyhledávání Spotlightem připojení k Internetu a poskytnout tak výsledky hledání.
+
+  Toto nastavení je duplikováno v uživatelském rozhraní a bude opraveno v nadcházející verzi. V současné době toto nastavení platí pro zařízení pod dohledem. V budoucí verzi toto nastavení platí pro zařízení zaregistrovaná a automatizovaná zaregistrovaná zařízení a nevyžadují dohled.
 
 - **Soubory cookie Safari**: vyberte, jak se soubory cookie zpracovávají na zařízeních. Možnosti:
   - Povolit
@@ -334,7 +337,7 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
 
 - **Safari JavaScript**: **blok** zabraňuje spuštění skriptů Java v prohlížeči v zařízeních. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém umožňovat skripty Java.
 
-- **Automaticky otevíraná okna Safari**: **blok** zakáže blokování automaticky otevíraných oken ve webovém prohlížeči. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém dovolit blokování automaticky otevíraných oken.
+- **Automaticky otevíraná okna Safari**: **blokovat** blokuje všechna automaticky otevíraná okna ve webovém prohlížeči Safari. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém dovolit blokování automaticky otevíraných oken.
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Nastavení platí pro: automatický zápis zařízení (pod dohledem)
 
@@ -387,6 +390,8 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
 
 - **Vyhledávání Spotlightu, které vrátí výsledky z Internetu**: **blok** přestane vracet žádné výsledky z internetu hledání. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém umožnit vyhledávání Spotlightem připojení k Internetu a poskytnout tak výsledky hledání.
 
+  Toto nastavení je duplikováno v uživatelském rozhraní a bude opraveno v nadcházející verzi. V současné době toto nastavení platí pro zařízení pod dohledem. V budoucí verzi toto nastavení platí pro zařízení zaregistrovaná a automatizovaná zaregistrovaná zařízení a nevyžadují dohled.
+
 - **Blokovat odebrání systémových aplikací ze zařízení**: **blok** zakáže možnost odebrat systémové aplikace ze zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém uživatelům dovolit odebrat systémové aplikace.
 
 - **Safari**: **zablokujte blokování** pomocí prohlížeče Safari na zařízeních. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém uživatelům dovolit používat prohlížeč Safari.
@@ -409,7 +414,7 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
 
 Pokud chcete do těchto seznamů přidat aplikace, můžete:
 
-- **Přidejte** adresu URL obchodu iTunes pro aplikaci, kterou chcete. Pokud například chcete přidat aplikaci Microsoft work folders, zadejte `https://itunes.apple.com/us/app/work-folders/id950878067?mt=8` nebo `https://apps.apple.com/us/app/work-folders/id950878067?mt=8`.
+- **Přidejte** adresu URL obchodu iTunes pro aplikaci, kterou chcete. Pokud například chcete přidat aplikaci Microsoft work folders, zadejte `https://itunes.apple.com/us/app/work-folders/id950878067?mt=8` nebo. `https://apps.apple.com/us/app/work-folders/id950878067?mt=8`
 
   Pokud chcete najít adresu URL aplikace, otevřete aplikaci iTunes App Store a vyhledejte aplikaci. Vyhledejte například `Microsoft Remote Desktop` nebo `Microsoft Word`. Vyberte aplikaci a zkopírujte adresu URL.
 
@@ -441,7 +446,7 @@ Tato funkce platí pro:
 
   - Pokud chcete přidat aplikaci Microsoft work folders, zadejte `https://itunes.apple.com/us/app/work-folders/id950878067?mt=8` nebo `https://apps.apple.com/us/app/work-folders/id950878067?mt=8`. 
 
-  - Chcete-li přidat aplikaci Microsoft Word, zadejte `https://itunes.apple.com/de/app/microsoft-word/id586447913` nebo `https://apps.apple.com/de/app/microsoft-word/id586447913`.
+  - Chcete-li přidat aplikaci Microsoft Word, `https://itunes.apple.com/de/app/microsoft-word/id586447913` zadejte `https://apps.apple.com/de/app/microsoft-word/id586447913`nebo.
 
   Pokud chcete najít adresu URL aplikace, otevřete aplikaci iTunes App Store a vyhledejte aplikaci. Vyhledejte například `Microsoft Remote Desktop` nebo `Microsoft Word`. Vyberte aplikaci a zkopírujte adresu URL.
 
@@ -473,7 +478,7 @@ Pokud chcete přidat aplikace, můžete:
   > [!IMPORTANT]
   > Toto nastavení se považuje za akci vzdáleného zařízení. Toto nastavení se proto nezobrazí v profilu správy na zařízeních. Pokaždé, když se změní stav osobního hotspotu na zařízení, služba Intune zablokuje **osobní hotspot** . Pokud se v Intune zobrazuje stav sestavy úspěch, pak víte, že funguje, i když se toto nastavení nezobrazí v profilu správy na zařízení.
 
-- **Pravidla pro mobilní použití (jenom spravované aplikace)** : **umožňuje** definovat datové typy, které spravované aplikace můžou používat při použití v mobilních sítích. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Možnosti:
+- **Pravidla pro mobilní použití (jenom spravované aplikace)**: **umožňuje** definovat datové typy, které spravované aplikace můžou používat při použití v mobilních sítích. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Možnosti:
   - **Zablokovat používání mobilních dat**: blokuje používání mobilních dat pro **všechny spravované aplikace** nebo umožňuje **zvolit konkrétní aplikace**.
   - **Zablokovat používání mobilních dat při roamingu**: při roamingu používejte mobilní data pro **všechny spravované aplikace** nebo **vyberte konkrétní aplikace**.
 
@@ -563,7 +568,7 @@ Pokud chcete přidat aplikace, můžete:
 - **Šifrované zálohování**: **vyžaduje** , aby bylo zálohování zařízení nutné šifrovat. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
 - **Synchronizace spravovaných aplikací do cloudu**: **blok** brání aplikacím spravovaným v Intune synchronizovat data s uživatelským účtem iCloud. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém iCloud synchronizaci těchto dat.
 - **Blokovat zálohování v podnikové knize**: **blok** znemožní zálohování podnikových knih. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém uživatelům dovolit zálohovat tyto knihy.
-- **Blokování synchronizace metadat v podnikovém adresáři (poznámky a zvýraznění)** : **blok** zabraňuje synchronizaci poznámek a světel v podnikových knihách. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém umožňovat synchronizaci.
+- **Blokování synchronizace metadat v podnikovém adresáři (poznámky a zvýraznění)**: **blok** zabraňuje synchronizaci poznámek a světel v podnikových knihách. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém umožňovat synchronizaci.
 
 ### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Nastavení platí pro: registrace zařízení, automatický zápis zařízení (pod dohledem)
 
@@ -646,17 +651,17 @@ Soubor CSV můžete také **naimportovat** se seznamem názvů aplikací a jejic
 > Než budete moct nakonfigurovat zařízení se systémem iOS/iPadOS pro celoobrazovkový režim, musíte použít nástroj Apple Configuratoru nebo Apple Program registrace zařízení k umístění zařízení do režimu pod dohledem. Podívejte se na téma Příručka Apple na používání nástroje Apple Configuratoru.
 > Pokud je aplikace pro iOS/iPadOS, kterou zadáte, nainstalovaná po přiřazení profilu, zařízení nepřejde do celoobrazovkového režimu, dokud se zařízení nerestartuje.
 
-## <a name="domains"></a>Domains
+## <a name="domains"></a>Domény
 
 ### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Nastavení platí pro: registrace zařízení, automatický zápis zařízení (pod dohledem)
 
-- **Neoznačená e-mailová** doména > **Adresa URL e-mailové domény**: přidejte jednu nebo více adres URL do seznamu. Když uživatelé dostanou e-mail z jiné domény než z domén, které zadáte, bude tento e-mail v aplikaci pro iOS/iPadOS pošty označený jako nedůvěryhodný.
+- **Unmarked email domains** > **Adresa URL e-mailové domény**v neoznačeném e-mailu: přidejte do seznamu jednu nebo víc adres URL. Když uživatelé dostanou e-mail z jiné domény než z domén, které zadáte, bude tento e-mail v aplikaci pro iOS/iPadOS pošty označený jako nedůvěryhodný.
 
-- **Spravované webové domény** > **Adresa URL webové domény**; Přidejte do seznamu jednu nebo více adres URL. Po stažení dokumentů z domén, které zadáte, se považují za spravované. Toto nastavení platí jenom pro dokumenty stažené prostřednictvím prohlížeče Safari.
+- **Managed web domains** > **Adresa URL webové domény**spravované webové domény; Přidejte do seznamu jednu nebo více adres URL. Po stažení dokumentů z domén, které zadáte, se považují za spravované. Toto nastavení platí jenom pro dokumenty stažené prostřednictvím prohlížeče Safari.
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Nastavení platí pro: automatický zápis zařízení (pod dohledem)
 
-- **Domény pro automatické vyplňování hesel v Safari** > **doméně**: do seznamu přidejte jednu nebo více adres URL. Uživatelé si mohou uložit jenom webová hesla z adres URL uvedených v tomto seznamu. Toto nastavení platí jenom pro prohlížeč Safari a zařízení v režimu pod dohledem. Pokud nezadáte žádné adresy URL, bude možné ukládat hesla ze všech webů.
+- **Safari password autofill domains** > **Adresa URL domény**pro automatické vyplňování hesel v Safari: přidejte jednu nebo více adres URL do seznamu. Uživatelé si mohou uložit jenom webová hesla z adres URL uvedených v tomto seznamu. Toto nastavení platí jenom pro prohlížeč Safari a zařízení v režimu pod dohledem. Pokud nezadáte žádné adresy URL, bude možné ukládat hesla ze všech webů.
 
   Toto nastavení platí pro:  
   - iOS 9,3 a novější
@@ -667,7 +672,6 @@ Soubor CSV můžete také **naimportovat** se seznamem názvů aplikací a jejic
 režim iOS/iPadOS pod dohledem se dá povolit jenom při počátečním nastavení zařízení prostřednictvím Program registrace zařízení společnosti Apple nebo pomocí Apple Configuratoru. Po povolení režimu pod dohledem může Intune v zařízení nakonfigurovat následující funkce:
 
 - Zámek aplikace (režim jedné aplikace) 
-- Globální proxy server HTTP 
 - Zakázání zámku aktivace 
 - Autonomní režim jedné aplikace 
 - Filtr webového obsahu 
@@ -683,11 +687,11 @@ režim iOS/iPadOS pod dohledem se dá povolit jenom při počátečním nastaven
 - Hostitelské párování 
 - Synchronizace cloudu 
 - Vyhledávání Spotlight 
-- Handoff 
+- Předání 
 - Vymazání zařízení 
 - Uživatelské rozhraní pro omezení 
 - Instalace konfiguračních profilů uživatelským rozhraním 
-- News 
+- Novinky 
 - Klávesové zkratky 
 - Změny hesla 
 - Změny názvu zařízení 
@@ -707,7 +711,7 @@ režim iOS/iPadOS pod dohledem se dá povolit jenom při počátečním nastaven
 > - Explicitní obsah
 > - Dokumenty a data v iCloudu
 > - Hry pro víc hráčů
-> - Přidat přátele z herního centra
+> - Přidat Game Center přátelé
 > - Siri
 
 ## <a name="next-steps"></a>Další kroky

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0af3574d5ca05a076cb62f899a0ce93aaf02ef09
-ms.sourcegitcommit: 441d0958721b6f9b6694dfffbec77c9a49929dd3
+ms.openlocfilehash: 8d1933350675a0d36042d1a4bd1e6a26c9a95814
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80863175"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254601"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Samostatná verze Intune – Správa aplikací Win32
 
@@ -35,7 +35,7 @@ ms.locfileid: "80863175"
 > [!IMPORTANT]
 > Při nasazování aplikací Win32 zvažte výhradně použití přístupu [rozšíření správy Intune](../apps/intune-management-extension.md) , zejména v případě, že máte k dispozici instalační program aplikace pro více souborů Win32. Pokud během registrace automatického pilotního nasazení kombinujete instalaci aplikací Win32 a obchodních aplikací, může instalace aplikace selhat. Rozšíření pro správu Intune se nainstaluje automaticky, když se k uživateli nebo zařízení přiřadí skript prostředí PowerShell nebo aplikace Win32.
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 
 Pokud chcete používat správu aplikací Win32, ujistěte se, že splňujete následující kritéria:
 
@@ -75,7 +75,7 @@ Pokud spustíte `IntuneWinAppUtil.exe` z příkazového okna bez parametrů, ná
 
 ### <a name="example-commands"></a>Příklady příkazů
 
-|    **Příklad příkazu**    |    **Popis**    |
+|    **Ukázkový příkaz**    |    **Popis**    |
 |:-----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
 |    `IntuneWinAppUtil -h`    |    Tento příkaz zobrazí informace o využití nástroje.    |
 |    `IntuneWinAppUtil -c c:\testapp\v1.0 -s c:\testapp\v1.0\setup.exe -o c:\testappoutput\v1.0 -q`    |    Tento příkaz vygeneruje soubor `.intunewin` ze zadané zdrojové složky a instalačního souboru. U instalačního souboru MSI tento nástroj načte požadované informace pro Intune. Pokud zadáte parametr `-q`, příkaz se spustí v tichém režimu a pokud už výstupní soubor existuje, přepíše se. Pokud výstupní složka ještě neexistuje, automaticky se vytvoří.    |
@@ -101,7 +101,7 @@ Následující kroky obsahují pokyny k přidání aplikace pro Windows do Intun
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Vyberte **aplikace** > **všechny aplikace** > **Přidat**.
-3. V podokně **Vybrat typ aplikace** v části **ostatní** typy aplikací vyberte **aplikace pro Windows (Win32)** .
+3. V podokně **Vybrat typ aplikace** v části **ostatní** typy aplikací vyberte **aplikace pro Windows (Win32)**.
 
     > [!IMPORTANT]
     > Nezapomeňte použít nejnovější verzi nástroje pro přípravu obsahu Microsoft Win32. Pokud nepoužíváte nejnovější verzi, zobrazí se upozornění s oznámením, že aplikace byla zabalená pomocí starší verze nástroje pro přípravu obsahu Microsoft Win32. 
@@ -122,8 +122,8 @@ Následující kroky obsahují pokyny k přidání aplikace pro Windows do Intun
 1. Na stránce **informace o aplikaci** přidejte podrobnosti o aplikaci. V závislosti na zvolené aplikaci můžou být některé hodnoty v tomto podokně vyplněné automaticky:
     - **Název**: Zadejte název aplikace, který se zobrazí na portálu společnosti. Ověřte, že názvy všech používaných aplikací jsou jedinečné. Pokud stejný název aplikace existuje dvakrát, zobrazí se na portálu společnosti jen jedna z aplikací.
     - **Popis**: Zadejte popis aplikace. Popis se zobrazí na portálu společnosti.
-    - **Vydavatel**: Zadejte název vydavatele aplikace.
-    - **Kategorie**: Vyberte jednu nebo několik předdefinovaných kategorií aplikací nebo kategorii, kterou jste si vytvořili sami. Díky kategoriím uživatelé aplikaci při procházení portálu společnosti snadněji najdou.
+    - **Vydavatel**: zadejte název vydavatele aplikace.
+    - **Kategorie**: vyberte jednu nebo více předdefinovaných kategorií aplikací nebo vyberte kategorii, kterou jste vytvořili. Díky kategoriím uživatelé aplikaci při procházení portálu společnosti snadněji najdou.
     - **Zobrazit tuto aplikaci jako doporučenou aplikaci v portál společnosti**: když uživatelé vyhledávají aplikace, zobrazí se na hlavní stránce portálu společnosti výrazně.
     - **Adresa URL informací**: Volitelně můžete zadat adresu URL webu, který obsahuje informace o této aplikaci. Adresa URL se zobrazí na portálu společnosti.
     - **Adresa URL informací o ochraně osobních údajů**: Volitelně zadejte adresu URL webu, který obsahuje informace o ochraně osobních údajů v této aplikaci. Adresa URL se zobrazí na portálu společnosti.
@@ -138,12 +138,12 @@ Následující kroky obsahují pokyny k přidání aplikace pro Windows do Intun
 1. Na stránce **program** nakonfigurujte příkazy instalace a odebrání aplikace pro aplikaci:
     - **Install – příkaz**: přidejte k instalaci aplikace úplný příkazový řádek instalace. 
 
-        Například pokud je název vaší aplikace **MyApp123**, přidejte následující:<br>
+        Pokud je například název souboru aplikace **MyApp123**, přidejte toto: .<br>
         `msiexec /p "MyApp123.msp"`<p>
-        A pokud je aplikace `ApplicationName.exe`, příkaz by představoval název aplikace následovaný argumenty příkazu (přepínači) podporovanými balíčkem. <br>
+        A pokud je `ApplicationName.exe`aplikace, příkaz by byl název aplikace následovaný argumenty příkazu (přepínači) podporovanými balíčkem. <br>
         Příklad:<br>
         `ApplicationName.exe /quiet`<br>
-        Ve výše uvedeném příkazu balíček `ApplicationName.exe` podporuje argument příkazu `/quiet`.<p> 
+        Ve výše uvedeném příkazu `ApplicationName.exe` balíček podporuje argument `/quiet` příkazu.<p> 
         Pro konkrétní argumenty podporované balíčkem aplikace se obraťte na dodavatele aplikace.
 
         > [!IMPORTANT]
@@ -184,10 +184,10 @@ Následující kroky obsahují pokyny k přidání aplikace pro Windows do Intun
 1. Na stránce **požadavky** zadejte požadavky, které zařízení musí splnit, než bude aplikace nainstalována:
     - **Architektura operačního systému**: Zvolte architektury nutné k instalaci aplikace.
     - **Minimální operační systém**: Vyberte minimální operační systém potřebný k instalaci aplikace.
-    - **Požadované místo na disku (MB)** : Volitelně přidejte volné místo na systémové jednotce pro instalaci aplikace.
-    - **Požadovaná fyzická paměť (MB)** : Volitelně přidejte fyzickou paměť (RAM) nutnou pro instalaci aplikace.
+    - **Požadované místo na disku (MB)**: Volitelně přidejte volné místo na systémové jednotce pro instalaci aplikace.
+    - **Požadovaná fyzická paměť (MB)**: Volitelně přidejte fyzickou paměť (RAM) nutnou pro instalaci aplikace.
     - **Minimální požadovaný počet logických procesorů**: Volitelně přidejte minimální počet logických procesorů požadovaných k instalaci aplikace.
-    - **Minimální požadovaná rychlost CPU (MHz)** : Volitelně přidejte minimální rychlost procesoru, která se požaduje pro instalaci aplikace.
+    - **Minimální požadovaná rychlost CPU (MHz)**: Volitelně přidejte minimální rychlost procesoru, která se požaduje pro instalaci aplikace.
     - **Konfigurovat další pravidla požadavků**: 
         1. Kliknutím na tlačítko **Přidat** zobrazíte podokno **Přidat pravidlo požadavku** a nakonfigurujete další pravidla požadavků. Vyberte **typ požadavku** a zvolte typ pravidla, který budete používat k určení způsobu ověření požadavku. Pravidla požadavků můžou být založená na informacích o systému souborů, hodnotách registru nebo skriptech PowerShellu. 
             - **Soubor**: když jako **typ požadavku**zvolíte **soubor** , pravidlo požadavku musí detekovat soubor nebo složku, datum, verzi nebo velikost. 
@@ -298,7 +298,7 @@ Koncovému uživateli se zobrazí informační zpráva systému Windows s oznám
 - 1 nebo více požadavků závislých aplikací nebylo splněno.
 - jedna nebo více závislých aplikací čeká na restartování zařízení.
 
-Pokud se rozhodnete, že nechcete **automatickou instalaci** závislosti, nebude proveden pokus o instalaci aplikace Win32. Kromě toho se v hlášení aplikace zobrazí, že tato závislost byla označena jako `failed` a také poskytuje důvod selhání. Selhání instalace závislosti můžete zobrazit kliknutím na chybu (nebo upozornění), která je k dispozici v [podrobnostech o instalaci](troubleshoot-app-install.md#win32-app-installation-troubleshooting)aplikace Win 32.
+Pokud se rozhodnete, že nechcete **automatickou instalaci** závislosti, nebude proveden pokus o instalaci aplikace Win32. Kromě toho se v hlášení aplikace zobrazí, že závislost byla označena `failed` jako, a také může poskytnout důvod selhání. Selhání instalace závislosti můžete zobrazit kliknutím na chybu (nebo upozornění), která je k dispozici v [podrobnostech o instalaci](troubleshoot-app-install.md#win32-app-installation-troubleshooting)aplikace Win 32.
 
 Každá závislost bude odpovídat logice opakování aplikace Intune Win32 (zkuste nainstalovat třikrát po uplynutí 5 minut) a globální plán opakovaného vyhodnocení. Závislosti se taky použijí jenom v době instalace aplikace Win32 do zařízení. Závislosti nejsou k dispozici pro odinstalaci aplikace Win32. Pokud chcete závislost odstranit, musíte kliknout na elipsy (tři tečky) nalevo od závislé aplikace umístěné na konci řádku seznamu závislostí. 
 
@@ -312,7 +312,7 @@ Pomocí značek Scope můžete určit, kdo může v Intune zobrazit informace o 
 
 Můžete vybrat **požadované**, **dostupné pro zaregistrovaná zařízení**nebo **odinstalaci** přiřazení skupin pro aplikaci. Další informace najdete v tématech [Přidání skupin pro uspořádání uživatelů a zařízení](../fundamentals/groups-add.md) a [přiřazení aplikací do skupin pomocí Microsoft Intune](apps-deploy.md).
 
-1. V případě konkrétní aplikace vyberte typ přiřazení:
+1. Pro konkrétní aplikaci vyberte typ přiřazení:
     - **Povinné**: Aplikace se nainstaluje na zařízení ve vybraných skupinách.
     - **K dispozici zaregistrovaným zařízením**: Uživatelé nainstalují aplikaci z aplikace Portál společnosti nebo z webu Portál společnosti.
     - **Odinstalovat**: Aplikace se odinstaluje ze zařízení ve vybraných skupinách.
@@ -357,10 +357,15 @@ Kromě toho aplikace Portál společnosti zobrazuje další zprávy o stavu inst
 ## <a name="set-win32-app-availability-and-notifications"></a>Nastavení dostupnosti a oznámení aplikace Win32
 Můžete nakonfigurovat čas zahájení a konečný termín pro aplikaci Win32. V počátečním čase rozšíření pro správu Intune spustí stažení obsahu aplikace a uloží je do mezipaměti pro požadovaný záměr. Aplikace se nainstaluje v čase konečného termínu. V případě dostupných aplikací se čas spuštění určí při zobrazení aplikace v Portál společnosti a obsah se stáhne, když koncový uživatel požádá aplikaci z Portál společnosti. Navíc můžete povolit dobu odkladu pro restartování. 
 
+> [!IMPORTANT]
+> Nastavení **období odkladu pro restartování** v části **přiřazení** je dostupné, jenom když je **chování zařízení** v části **program** nastavené na jednu z následujících možností:
+> - **Určení chování na základě návratových kódů**
+> - **Intune vynutí povinné restartování zařízení.**
+
 Nastavte dostupnost aplikace na základě data a času požadované aplikace pomocí následujících kroků:
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **aplikace** > **všech aplikacích**.
+2. Vyberte **aplikace** > **všechny aplikace**.
 3. Vyberte ze seznamu existující **aplikaci pro Windows (Win32)** . 
 4. V podokně aplikace vyberte **vlastnosti** > **Upravit** vedle oddílu **přiřazení** > **přidejte skupinu** pod **požadovaný** typ přiřazení. 
    Všimněte si, že dostupnost aplikace se dá nastavit na základě typu přiřazení. **Typ přiřazení** může být **povinný**, **dostupný pro zaregistrovaná zařízení**nebo **odinstalovat**.
@@ -378,15 +383,15 @@ Nastavte dostupnost aplikace na základě data a času požadované aplikace pom
 9. Nastavte **konečný termín instalace aplikace** na **konkrétní datum a čas** a vyberte datum a čas. Toto datum a čas určuje, kdy se aplikace nainstaluje na koncové uživatele. Pokud se pro stejného uživatele nebo zařízení provede více než jedno přiřazení, bude čas konečného termínu instalace aplikace vyzvednut na základě nejdřívějšího možného času.
 
 10. Klikněte na **povoleno** vedle **období odkladu pro restartování**. Doba odkladu restartování se spustí hned po dokončení instalace aplikace na zařízení. Když je tato možnost zakázaná, může se zařízení bez upozornění restartovat. <br>Můžete přizpůsobit následující možnosti:
-    - **Doba odkladu pro restartování zařízení (minuty)** : výchozí hodnota je 1440 minut (24 hodin). Tato hodnota může být maximálně 2 týdny.
-    - **Vyberte, kdy se má zobrazit dialogové okno odpočítávání před restartováním (minuty)** : výchozí hodnota je 15 minut.
+    - **Doba odkladu pro restartování zařízení (minuty)**: výchozí hodnota je 1440 minut (24 hodin). Tato hodnota může být maximálně 2 týdny.
+    - **Vyberte, kdy se má zobrazit dialogové okno odpočítávání před restartováním (minuty)**: výchozí hodnota je 15 minut.
     - **Dovolit uživateli odložit oznámení o restartování**: můžete vybrat **Ano** nebo **ne**.
-        - **Vyberte dobu opakovaného přiložení (minuty)** : výchozí hodnota je 240 minut (4 hodiny). Hodnota pro odložení nemůže být delší než doba odkladu pro restartování.
+        - **Vyberte dobu opakovaného přiložení (minuty)**: výchozí hodnota je 240 minut (4 hodiny). Hodnota pro odložení nemůže být delší než doba odkladu pro restartování.
 
 11. Klikněte na tlačítko **zkontrolovat a uložit**.
 
 ## <a name="toast-notifications-for-win32-apps"></a>Oznámení informačních zpráv pro aplikace Win32 
-V případě potřeby můžete potlačit zobrazování oznámení informační zprávy koncového uživatele na přiřazení aplikace. V Intune vyberte **aplikace** > **všechny aplikace** > vyberte **přiřazení** > aplikací > **Zahrnout skupiny**. 
+V případě potřeby můžete potlačit zobrazování oznámení informační zprávy koncového uživatele na přiřazení aplikace. V Intune vyberte **aplikace** > **všechny aplikace** > vyberte **přiřazení** > > aplikace**Zahrnout skupiny**. 
 
 > [!NOTE]
 > Rozšíření pro správu Intune nainstalované aplikace Win32 se odinstalují na nezaregistrovaných zařízeních. Správci můžou využít vyloučení přiřazení, aby nenabízeli aplikacím Win32 možnost BYOD zařízení.
@@ -430,10 +435,10 @@ exit 1
 }
 ```
 
-Ve výše uvedeném příkazu PowerShellu nahraďte řetězec `<path to binary file>` cestou k souboru aplikace Win32. Příklad cesty by byl podobný následujícímu:<br>
+Ve výše uvedeném příkazu prostředí PowerShell nahraďte `<path to binary file>` řetězec cestou k souboru aplikace Win32. Příklad cesty by byl podobný následujícímu:<br>
 `C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\ssms.exe`
 
-Také nahraďte řetězec `<file version of successfully detected file>` verzí souboru, který je třeba zjistit. Příklad řetězce verze souboru by byl podobný následujícímu:<br>
+Nahraďte `<file version of successfully detected file>` řetězec verzí souboru, který je třeba zjistit. Příklad řetězce verze souboru by byl podobný následujícímu:<br>
 `2019.0150.18118.00 ((SSMS_Rel).190420-0019)`
 
 Pokud potřebujete získat informace o verzi vaší aplikace Win32, můžete použít následující příkaz prostředí PowerShell:
@@ -444,7 +449,7 @@ Pokud potřebujete získat informace o verzi vaší aplikace Win32, můžete pou
 
 ```
 
-Ve výše uvedeném příkazu PowerShellu nahraďte `<path to binary file>` cestou k souboru.
+V příkazu prostředí PowerShell nahraďte `<path to binary file>` cestou k souboru.
 
 ### <a name="additional-troubleshooting-areas-to-consider"></a>Další oblasti řešení potíží, které je potřeba zvážit
 - Zkontroluje cílení, abyste měli jistotu, že je agent nainstalovaný na zařízení – aplikace Win32 zacílená na skupinu nebo powershellový skript zacílený na skupinu vytvoří zásady instalace agenta pro skupinu zabezpečení.

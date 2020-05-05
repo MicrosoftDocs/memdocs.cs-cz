@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/09/2020
+ms.date: 04/28/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0e5726ec06ac5b315937bd30e9a2e2680c0030be
-ms.sourcegitcommit: b36badbbfb86255948e8d5cdda787c7291b09e05
+ms.openlocfilehash: 4babd715df08a905a5ceed6ec881cbfe07f5de19
+ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/10/2020
-ms.locfileid: "81007704"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82209869"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Nastavení zařízení s Windows 10 (a novějším) pro povolení nebo omezení funkcí pomocí Intune
 
@@ -114,7 +114,7 @@ Tato nastavení používají [zásady připojení](https://docs.microsoft.com/wi
 - **Mobilní datový kanál**: vyberte, jestli koncoví uživatelé můžou používat data, jako je procházení webu, při připojení k mobilní síti. Možnosti:
   - **Nenakonfigurováno** (výchozí): Intune toto nastavení nemění ani neaktualizuje. Koncoví uživatelé ji můžou vypnout.
   - **Blok**: nepovoluje mobilní datový kanál. Koncoví uživatelé je nemůžou zapnout.
-  - **Povolit (není editovatelné)** : povoluje mobilní datový kanál. Koncoví uživatelé ji nemohou vypnout.
+  - **Povolit (není editovatelné)**: povoluje mobilní datový kanál. Koncoví uživatelé ji nemohou vypnout.
 
 - **Datový roaming**: **blokování** zabraňuje mobilním datovým roamingu v zařízení. **Nenakonfigurováno** (výchozí) umožňuje roaming mezi sítěmi při přístupu k datům.
 - **VPN přes mobilní síť**: **blok** zabraňuje zařízení v přístupu k připojením VPN v případě připojení k mobilní síti. **Nenakonfigurováno** (výchozí) umožňuje síti VPN použít jakékoli připojení, včetně mobilních.
@@ -124,7 +124,7 @@ Tato nastavení používají [zásady připojení](https://docs.microsoft.com/wi
 - **Wi-Fi**: **blok** zabraňuje uživatelům v zařízení povolit, konfigurovat, konfigurovat a používat připojení Wi-Fi. **Nenakonfigurováno** (výchozí) umožňuje připojení Wi-Fi.
 - **Automaticky se připojovat k Wi-Fi hotspotům**: **blokování** znemožňuje zařízením automaticky se připojovat k Wi-Fi hotspotům. **Nenakonfigurováno** (výchozí) umožňuje zařízením automaticky se připojovat k bezplatným Wi-Fi hotspotům a automaticky pro připojení přijímat jakékoli podmínky a ujednání.
 - **Ruční konfigurace Wi-Fi**: **blok** zabraňuje zařízením v připojení k Wi-Fi mimo sítě instalované na MDM serveru. **Nenakonfigurováno** (výchozí) umožňuje koncovým uživatelům přidat a nakonfigurovat vlastní sítě SSID sítě Wi-Fi Connections.
-- **Interval kontroly sítě Wi-Fi**: zadejte, jak často zařízení hledají sítě Wi-Fi. Zadejte hodnotu od 1 (nejčastější) do 500 (nejméně časté). Výchozí hodnota je `0` (nula).
+- **Interval kontroly sítě Wi-Fi**: zadejte, jak často zařízení hledají sítě Wi-Fi. Zadejte hodnotu od 1 (nejčastější) do 500 (nejméně časté). Výchozí hodnota `0` je (nula).
 
 ### <a name="bluetooth"></a>Bluetooth
 
@@ -142,15 +142,14 @@ Tato nastavení používají [poskytovatele zásad Bluetooth](https://docs.micro
 
 Tato nastavení používají [CSP v zásadách účtů](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-accounts); Zobrazuje se taky podporované edice Windows.
 
-- **Účet Microsoft**: **blok** brání koncovým uživatelům v přidružení účet Microsoft k zařízení. **Blok** může mít také vliv na některé scénáře registrace, které se spoléhají na to, že uživatelé dokončí proces registrace.
+> [!IMPORTANT]
+> Blokování nebo zakázání těchto nastavení účet Microsoft může mít vliv na scénáře registrace, které vyžadují, aby se uživatelé přihlásili ke službě Azure AD. Například používáte [šetrnější pro Autopilotu](https://docs.microsoft.com/windows/deployment/windows-autopilot/white-glove). Uživatelům se obvykle zobrazuje okno pro přihlášení k Azure AD. Pokud jsou tato nastavení nastavená tak, aby **blokovala** nebo **zakázala**, možnost přihlášení k Azure AD se nemusí zobrazit. Místo toho se uživatelům zobrazí výzva k přijetí smlouvy EULA a vytvoření místního účtu, který nemusí být požadovaný.
 
-  **Nenakonfigurováno** (výchozí) umožňuje přidání a použití účet Microsoft.
+- **Účet Microsoft**: **blok** brání koncovým uživatelům v přidružení účet Microsoft k zařízení. **Nenakonfigurováno** (výchozí) umožňuje přidání a použití účet Microsoft.
 
 - **Bez účet Microsoft**: **blok** brání koncovým uživatelům v přidávání účtů mimo Microsoft pomocí uživatelského rozhraní. **Nenakonfigurováno** (výchozí) umožňuje uživatelům přidávat e-mailové účty, které nejsou přidružené k účet Microsoft.
 - **Synchronizace nastavení pro účet Microsoft**: **Nenakonfigurováno** (výchozí) povolí synchronizaci nastavení zařízení a aplikací přidružených k účet Microsoftu mezi zařízeními. **Blok** zabraňuje této synchronizaci.
 - **Pomocník pro přihlášení k účtu Microsoft**: Pokud je nastavené na **Nenakonfigurováno** (výchozí), koncoví uživatelé můžou spustit a zastavit službu **Microsoft account Signing Assistant** (wlidsvc). Tato služba operačního systému umožňuje uživatelům přihlašovat se k jejich účet Microsoft. **Disable** nakonfiguruje službu pomocníka pro přihlašování Microsoftu (wlidsvc) na zakázanou a zabrání koncovým uživatelům v ručním spuštění.
-
-  **Zakažte** také může mít vliv na některé scénáře registrace, které se spoléhají na to, že uživatelé dokončí registraci. Například používáte [šetrnější pro Autopilotu](https://docs.microsoft.com/windows/deployment/windows-autopilot/white-glove). Uživatelům se obvykle zobrazuje okno pro přihlášení k Azure AD. Pokud je nastavené na **Zakázat**, možnost přihlášení k Azure AD se nemusí zobrazit. Místo toho se uživatelům zobrazí výzva k přijetí smlouvy EULA a vytvoření místního účtu, který nemusí být požadovaný.
 
 ## <a name="cloud-printer"></a>Cloudová tiskárna
 
@@ -179,7 +178,7 @@ Tato nastavení používají [zprostředkovatele CSP v zásadách EnterpriseClou
   - **Čas a jazyk**: **blok** znemožní přístup k oblasti času & jazyka aplikace nastavení na zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
     - **Změna systémového času**: **blok** znemožní koncovým uživatelům změnit nastavení data a času v zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Uživatelé můžou tato nastavení změnit.
     - **Změny nastavení oblasti** (jenom desktopové): **blok** znemožní koncovým uživatelům změnit nastavení oblasti na zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Uživatelé můžou tato nastavení změnit.
-    - **Změny nastavení jazyka (jenom desktopové verze)** : **blok** znemožní koncovým uživatelům změnit nastavení jazyka v zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Uživatelé můžou tato nastavení změnit.
+    - **Změny nastavení jazyka (jenom desktopové verze)**: **blok** znemožní koncovým uživatelům změnit nastavení jazyka v zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Uživatelé můžou tato nastavení změnit.
 
       [Zásady nastavení – CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-settings)
 
@@ -188,7 +187,7 @@ Tato nastavení používají [zprostředkovatele CSP v zásadách EnterpriseClou
   - **Ochrana osobních údajů**: **blok** znemožní přístup k oblasti soukromí v aplikaci nastavení na zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
   - **Aktualizace a zabezpečení**: **blok** znemožní přístup k oblasti zabezpečení & aktualizace aplikace nastavení na zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
 
-## <a name="display"></a>Zobrazit
+## <a name="display"></a>Displej
 
 Tato nastavení používají [zprostředkovatele CSP v zásadách zobrazení](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-display). Zobrazuje se taky podporované edice Windows.
 
@@ -209,7 +208,7 @@ Můžete také **naimportovat** soubor. CSV se seznamem aplikací.
 Tato nastavení používají [poskytovatele cloudových zásad](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-experience) Zobrazuje se taky podporované edice Windows. 
 
 - **Snímek obrazovky** (jenom mobilní): **blok** znemožňuje koncovým uživatelům získat na zařízení snímky obrazovky. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
-- **Kopírování a vkládání (jenom mobilní)** : **blok** brání koncovým uživatelům v používání kopírování a vkládání mezi aplikacemi na zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
+- **Kopírování a vkládání (jenom mobilní)**: **blok** brání koncovým uživatelům v používání kopírování a vkládání mezi aplikacemi na zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
 - **Ruční zrušení registrace**: **blok** znemožní koncovým uživatelům odstranit pracovní účet pomocí ovládacích panelů na pracovišti na zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
 
   Nastavení této zásady se nepoužije, pokud je počítač připojený k Azure AD a je povolená Automatická registrace.
@@ -258,15 +257,15 @@ Tato nastavení používají [poskytovatele cloudových zásad](https://docs.mic
 
 ## <a name="locked-screen-experience"></a>Prostředí zamknuté obrazovky
 
-- **Oznámení centra akcí (jenom mobilní)** : **blok** zabraňuje zobrazování oznámení centra akcí na zamykací obrazovce zařízení. **Nenakonfigurováno** (výchozí) umožňuje uživatelům zvolit, které aplikace budou zobrazovat oznámení na zamykací obrazovce.
+- **Oznámení centra akcí (jenom mobilní)**: **blok** zabraňuje zobrazování oznámení centra akcí na zamykací obrazovce zařízení. **Nenakonfigurováno** (výchozí) umožňuje uživatelům zvolit, které aplikace budou zobrazovat oznámení na zamykací obrazovce.
 
   [CSP AboveLock/AllowActionCenterNotifications](https://msdn.microsoft.com/ie/dn904962(v=vs.94)#AboveLock_AllowActionCenterNotifications)
 
-- **Adresa URL obrázku pro zamknutou obrazovku (jenom desktopové aplikace)** : zadejte adresu URL obrázku ve formátu jpg, JPEG nebo PNG, který se používá jako tapeta zamykací obrazovky Windows. Zadejte například `https://contoso.com/image.png`. Toto nastavení zamkne obrázek a nedá se změnit.
+- **Adresa URL obrázku pro zamknutou obrazovku (jenom desktopové aplikace)**: zadejte adresu URL obrázku ve formátu jpg, JPEG nebo PNG, který se používá jako tapeta zamykací obrazovky Windows. Zadejte například `https://contoso.com/image.png`. Toto nastavení zamkne obrázek a nedá se změnit.
 
   [Přizpůsobení/LockScreenImageUrl CSP](https://docs.microsoft.com/windows/client-management/mdm/personalization-csp)
 
-- **Uživatelem konfigurovatelný časový limit obrazovky (jenom mobilní)** : **Povolení** umožňuje uživatelům nakonfigurovat časový limit obrazovky. **Nenakonfigurováno** (výchozí) neuděluje uživatelům tuto možnost.
+- **Uživatelem konfigurovatelný časový limit obrazovky (jenom mobilní)**: **Povolení** umožňuje uživatelům nakonfigurovat časový limit obrazovky. **Nenakonfigurováno** (výchozí) neuděluje uživatelům tuto možnost.
 
   [CSP DeviceLock/AllowScreenTimeoutWhileLockedUserConfig](https://msdn.microsoft.com/ie/dn904962(v=vs.94)#DeviceLock_AllowScreenTimeoutWhileLockedUserConfig)
 
@@ -278,7 +277,7 @@ Tato nastavení používají [poskytovatele cloudových zásad](https://docs.mic
 
   [CSP AboveLock/AllowToasts](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-abovelock#abovelock-allowtoasts)
 
-- **Časový limit obrazovky (jenom mobilní zařízení)** : Nastavte dobu trvání (v sekundách) na zamykací obrazovce na obrazovku vypnutí. Podporované hodnoty jsou 11-1800. Zadejte například `300` a nastavte tento časový limit na 5 minut.
+- **Časový limit obrazovky (jenom mobilní zařízení)**: Nastavte dobu trvání (v sekundách) na zamykací obrazovce na obrazovku vypnutí. Podporované hodnoty jsou 11-1800. Zadejte `300` například, pokud chcete nastavit tento časový limit na 5 minut.
 
   [CSP DeviceLock/ScreenTimeoutWhileLocked](https://msdn.microsoft.com/ie/dn904962(v=vs.94)#DeviceLock_ScreenTimeoutWhileLocked)
 
@@ -286,9 +285,9 @@ Tato nastavení používají [poskytovatele cloudových zásad](https://docs.mic
 
 Tato nastavení používají [zásady zasílání zpráv CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-messaging); Zobrazuje se taky podporované edice Windows.
 
-- **Synchronizace zpráv (jenom mobilní zařízení)** : **blok** zakáže zálohování a obnovování textových zpráv a synchronizaci zpráv mezi zařízeními s Windows. Vypnutí pomáhá zabránit ukládání informací na serverech mimo řízení organizace. **Nenakonfigurováno** (výchozí) umožňuje uživatelům měnit tato nastavení a synchronizovat jejich zprávy.
-- **MMS (jenom mobilní)** : **blokování** zakáže na zařízení funkci Send a Receive MMS. V případě podniků použijte tuto zásadu k zakázání MMS na zařízeních v rámci požadavku auditování nebo správy. **Nenakonfigurováno** (výchozí) umožňuje odeslat a přijmout MMS.
-- **RCS (jenom mobilní)** : **blokování** zakáže na zařízení funkci posílání a přijímání RCS (Rich Communication Services). V případě podniků použijte tuto zásadu k zakázání RCS na zařízeních v rámci požadavku auditování nebo správy. **Nenakonfigurováno** (výchozí) umožňuje RCS Odeslat a přijmout.
+- **Synchronizace zpráv (jenom mobilní zařízení)**: **blok** zakáže zálohování a obnovování textových zpráv a synchronizaci zpráv mezi zařízeními s Windows. Vypnutí pomáhá zabránit ukládání informací na serverech mimo řízení organizace. **Nenakonfigurováno** (výchozí) umožňuje uživatelům měnit tato nastavení a synchronizovat jejich zprávy.
+- **MMS (jenom mobilní)**: **blokování** zakáže na zařízení funkci Send a Receive MMS. V případě podniků použijte tuto zásadu k zakázání MMS na zařízeních v rámci požadavku auditování nebo správy. **Nenakonfigurováno** (výchozí) umožňuje odeslat a přijmout MMS.
+- **RCS (jenom mobilní)**: **blokování** zakáže na zařízení funkci posílání a přijímání RCS (Rich Communication Services). V případě podniků použijte tuto zásadu k zakázání RCS na zařízeních v rámci požadavku auditování nebo správy. **Nenakonfigurováno** (výchozí) umožňuje RCS Odeslat a přijmout.
 
 ## <a name="microsoft-edge-browser"></a>Prohlížeč Microsoft Edge
 
@@ -299,10 +298,10 @@ Tato nastavení používají [zprostředkovatele CSP zásad prohlížeče](https
 Dostupná nastavení se mění v závislosti na tom, co zvolíte. Možnosti:
 
 - **Ne** (výchozí): Microsoft Edge není spuštěný v celoobrazovkovém režimu. Všechna nastavení Microsoft Edge jsou k dispozici pro změnu a konfiguraci.
-- **Digitální nebo interaktivní signice (samoobslužný terminál)** : filtruje nastavení Microsoft Edge, která se vztahují k digitálnímu a interaktivnímu registračnímu režimu Microsoft Edge pro použití jenom v terminálech s jednou aplikací ve Windows 10. Toto nastavení vyberte, pokud chcete otevřít adresu URL na celé obrazovce a zobrazit jenom obsah na tomto webu. [Nastavení digitální znaménka](https://docs.microsoft.com/windows/configuration/setup-digital-signage) poskytuje další informace o této funkci.
-- **Veřejné procházení InPrivate (samoobslužný terminál)** : filtruje nastavení Microsoft Edge, která se vztahují k veřejnému procházení InPrivate pro použití v terminálech s jednou aplikací ve Windows 10 a v celoobrazovkovém režimu. Spustí více karet verze Microsoft Edge.
-- **Normální režim (veřejný terminál s více aplikacemi)** : filtruje nastavení Microsoft Edge, která platí pro normální celoobrazovkový režim Microsoft Edge. Spustí plnou verzi Microsoft Edge se všemi funkcemi pro procházení.
-- **Veřejné procházení (veřejný terminál s více aplikacemi)** : filtruje nastavení Microsoft Edge, která se vztahují k veřejnému procházení veřejného terminálu pro více aplikací ve Windows 10.  Spustí na více kartách verzi Microsoft Edge InPrivate.
+- **Digitální nebo interaktivní signice (samoobslužný terminál)**: filtruje nastavení Microsoft Edge, která se vztahují k digitálnímu a interaktivnímu registračnímu režimu Microsoft Edge pro použití jenom v terminálech s jednou aplikací ve Windows 10. Toto nastavení vyberte, pokud chcete otevřít adresu URL na celé obrazovce a zobrazit jenom obsah na tomto webu. [Nastavení digitální znaménka](https://docs.microsoft.com/windows/configuration/setup-digital-signage) poskytuje další informace o této funkci.
+- **Veřejné procházení InPrivate (samoobslužný terminál)**: filtruje nastavení Microsoft Edge, která se vztahují k veřejnému procházení InPrivate pro použití v terminálech s jednou aplikací ve Windows 10 a v celoobrazovkovém režimu. Spustí více karet verze Microsoft Edge.
+- **Normální režim (veřejný terminál s více aplikacemi)**: filtruje nastavení Microsoft Edge, která platí pro normální celoobrazovkový režim Microsoft Edge. Spustí plnou verzi Microsoft Edge se všemi funkcemi pro procházení.
+- **Veřejné procházení (veřejný terminál s více aplikacemi)**: filtruje nastavení Microsoft Edge, která se vztahují k veřejnému procházení veřejného terminálu pro více aplikací ve Windows 10.  Spustí na více kartách verzi Microsoft Edge InPrivate.
 
 > [!TIP]
 > Další informace o tom, co tyto možnosti dělají, najdete v článku [typy konfigurace celoobrazovkového režimu Microsoft Edge](https://docs.microsoft.com/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-configuration-types).
@@ -327,7 +326,7 @@ Tento profil omezení zařízení přímo souvisí s profilem veřejného termin
   - **Stránka poslední relace**: Microsoft Edge načte stránku poslední relace.
   - **Úvodní stránky v nastavení místní aplikace**: Microsoft Edge začíná výchozí úvodní stránkou DEFINOVANOU operačním systémem.
 
-- **Umožní uživateli změnit úvodní stránky**: **Ano** (výchozí) umožňuje uživatelům změnit úvodní stránky. Správci mohou použít `EdgeHomepageUrls` k zadání spouštěcích stránek, které se uživatelům zobrazí ve výchozím nastavení při otevření Microsoft Edge. **Žádní** uživatelé neblokují změnu úvodní stránky.
+- **Umožní uživateli změnit úvodní stránky**: **Ano** (výchozí) umožňuje uživatelům změnit úvodní stránky. Správci můžou použít `EdgeHomepageUrls` k zadání spouštěcích stránek, které se uživatelům zobrazí ve výchozím nastavení při otevření Microsoft Edge. **Žádní** uživatelé neblokují změnu úvodní stránky.
 - **Stránka pro povolení webového obsahu na nové kartě**: když je nastavená hodnota **Ano** (výchozí), Microsoft Edge otevře adresu URL zadanou v nastavení **Adresa URL nové karty** . Pokud je **Nová adresa URL karty** prázdná, Microsoft Edge otevře novou stránku karty uvedenou v nastavení Microsoft Edge. Uživatelé je mohou změnit. Pokud je nastavena na **ne**, Microsoft Edge otevře novou kartu s prázdnou stránkou. Uživatelé je nemůžou změnit.
 - **Adresa URL nové karty**: zadejte adresu URL, která se má otevřít na stránce Nová karta. Zadejte například `https://www.bing.com` nebo `https://www.contoso.com`.
 
@@ -337,10 +336,10 @@ Tento profil omezení zařízení přímo souvisí s profilem veřejného termin
   - **Adresa URL pro tlačítko domů**: zadejte adresu URL, která se má otevřít. Zadejte například `https://www.bing.com` nebo `https://www.contoso.com`.
   - **Skrýt tlačítko domů**: skryje tlačítko domů.
 - **Tlačítko pro povolení uživatelů změnit domů**: **Ano** umožňuje uživatelům změnit tlačítko domů. Změny uživatele přepíší všechna nastavení správce na tlačítko domů. **Ne** (výchozí) znemožní uživatelům měnit způsob, jakým Správce nakonfiguroval tlačítko domů.
-- **Zobrazit stránku prvního spuštění (jenom mobilní)** : **Ano** (výchozí) zobrazuje úvodní stránku použití v Microsoft Edge. **No** zastaví zobrazování úvodní stránky při prvním spuštění Microsoft Edge. Tato funkce umožňuje podnikům, jako jsou například organizace zaregistrované v konfiguracích s nulovou emisemi, blokovat tuto stránku.
+- **Zobrazit stránku prvního spuštění (jenom mobilní)**: **Ano** (výchozí) zobrazuje úvodní stránku použití v Microsoft Edge. **No** zastaví zobrazování úvodní stránky při prvním spuštění Microsoft Edge. Tato funkce umožňuje podnikům, jako jsou například organizace zaregistrované v konfiguracích s nulovou emisemi, blokovat tuto stránku.
 - **Umístění seznamu adres URL prvního spuštění** (jenom Windows 10 Mobile): zadejte adresu URL, která odkazuje na soubor XML, který obsahuje adresy URL prvního spuštění stránky. Zadejte například `https://www.contoso.com/sites.xml`.
 
-- **Aktualizovat prohlížeč po době nečinnosti**: zadejte počet minut nečinnosti, než se prohlížeč aktualizuje, od 0-1440 minut. Výchozí hodnota je `5` minut. Pokud je nastavena hodnota `0` (nula), prohlížeč nebude po nečinnosti aktualizován.
+- **Aktualizovat prohlížeč po době nečinnosti**: zadejte počet minut nečinnosti, než se prohlížeč aktualizuje, od 0-1440 minut. Výchozí hodnota `5` je minuty. Při nastavení na `0` hodnotu (nula) se prohlížeč po nečinnosti neaktualizuje.
 
   Toto nastavení je dostupné jenom v případě, že běží ve [veřejném procházení InPrivate (veřejný terminál s jednou aplikací)](#use-microsoft-edge-kiosk-mode).
 
@@ -370,7 +369,7 @@ Tento profil omezení zařízení přímo souvisí s profilem veřejného termin
 - **Synchronizovat oblíbené položky mezi prohlížeči Microsoft** (jenom desktopové aplikace): **Ano** vynutí, aby Windows synchronizoval oblíbené položky mezi Internet Explorerem a Microsoft Edgem. Přidání, odstranění, úpravy a změna pořadí oblíbených položek jsou sdíleny mezi prohlížeči.  **Ne** (výchozí) používá výchozí nastavení operačního systému, které může uživatelům umožnit synchronizaci oblíbených položek mezi prohlížeči.
 - **Výchozí vyhledávací modul**: Vyberte výchozí vyhledávací web na zařízení. Koncoví uživatelé mohou tuto hodnotu kdykoli změnit. Možnosti:
   - Vyhledávací modul v nastavení klienta Microsoft Edge
-  - Zjišťuje
+  - Bing
   - Google
   - Yahoo
   - Vlastní hodnota: v **adrese URL XML OpenSearch**zadejte adresu URL protokolu HTTPS se souborem XML, který obsahuje krátký název a adresu URL vyhledávacího stroje. Zadejte například `https://www.contoso.com/opensearch.xml`.
@@ -402,14 +401,14 @@ Když je vybraná možnost blokovat a povolit uživatele, může přepsat označ
 - **Povolit shromažďování dat živé dlaždice**: **Ano** (výchozí) umožňuje Microsoft Edge shromažďovat informace z živých dlaždic připnuté do nabídky Start. **Žádné** nebrání shromažďování těchto informací, což může uživatelům poskytnout omezené prostředí.
 - **Uživatel může přepsat chyby certifikátu**: **Ano** (výchozí) umožňuje uživatelům přístup k webům s chybami protokolu SSL/TLS (SSL (Secure Sockets Layer)/Transport Layer Security). **Ne** (doporučeno pro zvýšené zabezpečení) znemožní uživatelům přístup k webům s chybami SSL nebo TLS.
 
-### <a name="additional"></a>Další informace
+### <a name="additional"></a>Další
 
 - **Povolit prohlížeč Microsoft Edge** (jenom mobilní zařízení): **Ano** (výchozí) umožňuje používat na mobilním zařízení webový prohlížeč Microsoft Edge. Na zařízení **nebrání použití** Microsoft Edge. Pokud zvolíte **ne**, ostatní individuální nastavení platí pouze pro plochu.
 - Možnost **Povolit panel Adresa**: **Ano** (výchozí) umožňuje, aby Microsoft Edge zobrazoval rozevírací seznam s panelem Adresa se seznamem návrhů. V takovém případě se v rozevíracím seznamu při psaní **nezastaví zobrazení** seznamu návrhů v Microsoft Edge. Pokud je nastavena na **ne**, můžete:
   - Můžete minimalizovat šířku pásma sítě mezi Microsoft Edge a službami Microsoftu.
   - Zakažte možnost **Zobrazit hledání a návrhy webu při psaní** v nastavení Microsoft Edge >.
 - **Povolit režim zobrazení na celé obrazovce**: **Ano** (výchozí) umožňuje, aby Microsoft Edge používal režim celé obrazovky, který zobrazuje jenom webový obsah a skrývá uživatelské rozhraní Microsoft Edge. V Microsoft **Edge znemožní režim** celoobrazovkového režimu.
-- **Stránka povolení o příznacích**: **Ano** (výchozí) použije výchozí nastavení operačního systému, které může umožňovat přístup k `about:flags` stránce. Stránka `about:flags` umožňuje uživatelům změnit nastavení vývojáře a povolit experimentální funkce. **No** znemožní koncovým uživatelům přistupovat k `about:flags` stránce v Microsoft Edge.
+- **Stránka povolení o příznacích**: **Ano** (výchozí) použije výchozí nastavení operačního systému, které může umožňovat `about:flags` přístup k této stránce. Tato `about:flags` stránka umožňuje uživatelům změnit nastavení vývojáře a povolit experimentální funkce. **Žádné** zabrání koncovým uživatelům v `about:flags` přístupu k stránce v Microsoft Edge.
 - **Povolit vývojářské nástroje**: **Ano** (výchozí) umožňuje uživatelům používat nástroje F12 Developer Tools k vytváření a ladění webových stránek ve výchozím nastavení. **Žádné** nebrání koncovým uživatelům v používání vývojářských nástrojů F12.
 - **Povolit jazyk JavaScript**: **Ano** (výchozí) umožňuje spouštění skriptů, jako je například JavaScript, v prohlížeči Microsoft Edge. **Žádné** zabraňuje spuštění skriptů Java v prohlížeči.
 - **Uživatel může nainstalovat rozšíření**: **Ano** (výchozí) umožňuje koncovým uživatelům instalovat na zařízení rozšíření Microsoft Edge. **Nebrání instalaci** .
@@ -441,25 +440,25 @@ Tato nastavení používají [zprostředkovatele CSP zásad DeviceLock](https://
     - **Nenakonfigurováno**: heslo může obsahovat číslice a písmena.
     - **Číselná**: heslo musí obsahovat pouze čísla.
     - **Alfanumerické**: heslo musí být kombinací číslic a písmen.
-  - **Minimální délka hesla**: zadejte minimální počet požadovaných znaků, od 4-16. Zadejte například `6` pro vyžadování aspoň šesti znaků v délce hesla.
+  - **Minimální délka hesla**: zadejte minimální počet požadovaných znaků, od 4-16. Zadejte `6` například, pokud chcete, aby délka hesla vyžadovala alespoň šest znaků.
   
     > [!IMPORTANT]
     > Když se požadavek na heslo změní na plochu Windows, uživatelé budou mít vliv na jeho příštím přihlášení, protože to znamená, že zařízení přestane být aktivní. Uživatelům s hesly, kteří splňují požadavky, se stále zobrazí výzva ke změně hesla.
     
-  - **Počet neúspěšných přihlášení před vymazáním zařízení**: zadejte počet povolených selhání ověřování, než může být zařízení vymazáno, až 11. Platné číslo, které zadáte, závisí na edici. [DeviceLock/MAXDEVICEPASSWORDFAILEDATTEMPTS CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-maxdevicepasswordfailedattempts) obsahuje seznam podporovaných hodnot. `0` (nula) může zakázat funkci vymazání zařízení.
+  - **Počet neúspěšných přihlášení před vymazáním zařízení**: zadejte počet povolených selhání ověřování, než může být zařízení vymazáno, až 11. Platné číslo, které zadáte, závisí na edici. [DeviceLock/MAXDEVICEPASSWORDFAILEDATTEMPTS CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-maxdevicepasswordfailedattempts) obsahuje seznam podporovaných hodnot. `0`(nula) může zakázat funkci vymazání zařízení.
 
     Toto nastavení má také jiný dopad v závislosti na edici. Konkrétní podrobnosti o tomto nastavení najdete v tématu [CSP pro DeviceLock/MaxDevicePasswordFailedAttempts](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-maxdevicepasswordfailedattempts).
 
   - **Maximální počet minut nečinnosti, po kterém se uzamkne obrazovka**: zadejte dobu, po kterou musí být zařízení v nečinnosti, než se zamkne obrazovka.
-  - **Vypršení platnosti hesla (dny)** : zadejte dobu ve dnech, kdy musí být heslo zařízení změněno, od 1-365. Zadejte například `90` vypršení platnosti hesla po 90 dnech.
-  - **Zakázat opakované použití předchozích hesel**: zadejte počet dříve použitých hesel, která se nedají použít, od 1-24. Zadejte například `5`, takže uživatelé nemůžou nastavit nové heslo nebo některá z předchozích čtyř hesel.
+  - **Vypršení platnosti hesla (dny)**: zadejte dobu ve dnech, kdy musí být heslo zařízení změněno, od 1-365. Zadejte `90` například platnost hesla po 90 dnech.
+  - **Zakázat opakované použití předchozích hesel**: zadejte počet dříve použitých hesel, která se nedají použít, od 1-24. Například zadejte `5` , že uživatelé nemůžou nastavit nové heslo na aktuální heslo ani na žádná z předchozích čtyř hesel.
   - **Vyžadovat heslo při návratu zařízení ze stavu nečinnosti** (mobilní a holografické): vyberte **vyžadovat** , aby uživatelé před nečinným zařízením museli odemknout heslo. **Není nakonfigurováno** (výchozí) při obnovení zařízení ze stavu nečinnosti nevyžaduje PIN kód ani heslo.
-  - **Jednoduchá hesla**: nastavte **blokování** , aby uživatelé nemohli vytvářet jednoduchá hesla, například `1234` nebo `1111`. Nastavte na **Nenakonfigurováno** (výchozí), aby uživatelé mohli vytvářet hesla, jako je `1234` nebo `1111`. Toto nastavení také povolí obrázková hesla Windows (nebo je zablokuje).
+  - **Jednoduchá hesla**: nastavte **blokování** , aby uživatelé nemohli vytvářet jednoduchá hesla, například `1234` nebo. `1111` Nastavte na **Nenakonfigurováno** (výchozí), aby uživatelé mohli vytvářet `1234` hesla `1111`, například nebo. Toto nastavení také povolí obrázková hesla Windows (nebo je zablokuje).
 - **Automatické šifrování během AADJ**: **blok** zabraňuje automatickému šifrování zařízení bitlockerem, když je zařízení připravené k prvnímu použití, když je zařízení připojené ke službě Azure AD. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Další informace o [šifrování zařízení nástrojem BitLocker](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-device-encryption-overview-windows-10#bitlocker-device-encryption).
 
   [CSP pro zabezpečení/PreventAutomaticDeviceEncryptionForAzureADJoinedDevices](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-security#security-preventautomaticdeviceencryptionforazureadjoineddevices)
 
-- **Zásada FIPS (Federal Information Processing Standard)** : **povoluje** použití zásad FIPS (Federal Information Processing Standard), což je standard státní správy USA pro šifrování, algoritmus hash a podepisování. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Výchozí operační systém nemůže používat FIPS.
+- **Zásada FIPS (Federal Information Processing Standard)**: **povoluje** použití zásad FIPS (Federal Information Processing Standard), což je standard státní správy USA pro šifrování, algoritmus hash a podepisování. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Výchozí operační systém nemůže používat FIPS.
 
   [Kryptografie/AllowFipsAlgorithmPolicy CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-cryptography#cryptography-allowfipsalgorithmpolicy)
 
@@ -477,7 +476,7 @@ Tato nastavení používají [zprostředkovatele CSP zásad DeviceLock](https://
 
   [Ověřování/EnableWebSignIn CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-authentication#authentication-enablewebsignin)
 
-- **Upřednostňovaná doména tenanta Azure AD**: zadejte název existující domény v organizaci Azure AD. Když se uživatelé v této doméně přihlásí, nemusí zadávat název domény. Zadejte například `contoso.com`. Uživatelé v doméně `contoso.com` se mohou přihlásit pomocí svého uživatelského jména, jako je například `abby`namísto `abby@contoso.com`.
+- **Upřednostňovaná doména tenanta Azure AD**: zadejte název existující domény v organizaci Azure AD. Když se uživatelé v této doméně přihlásí, nemusí zadávat název domény. Zadejte například `contoso.com`. Uživatelé v `contoso.com` doméně se můžou přihlásit pomocí svého uživatelského jména, jako `abby`je místo. `abby@contoso.com`
 
   [Ověřování/PreferredAadTenantDomainName CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-authentication#authentication-preferredaadtenantdomainname)
 
@@ -509,11 +508,11 @@ Můžete přidat aplikace, které by měly mít jiné chování ochrany osobníc
 - **Zpětná vazba a diagnostika**: Definujte, jestli tato aplikace bude mít přístup k diagnostickým informacím.
 - **Synchronizovat se zařízeními**: Určete, jestli tato aplikace může automaticky sdílet a synchronizovat informace s bezdrátovými zařízeními, která se neexplicitně spárují se zařízením.
 
-## <a name="personalization"></a>Přizpůsobení
+## <a name="personalization"></a>Personalizace
 
 Tato nastavení používají [zprostředkovatele kryptografických služeb v zásadách přizpůsobení](https://docs.microsoft.com/windows/client-management/mdm/personalization-csp), který obsahuje taky podporované edice Windows.
 
-- **Adresa URL obrázku na pozadí plochy (jenom desktopové aplikace)** : zadejte adresu URL obrázku ve formátu. jpg,. jpeg nebo. png, který chcete použít jako tapetu plochy Windows. Uživatelé nemohou tento obrázek změnit. Zadejte například `https://contoso.com/logo.png`.
+- **Adresa URL obrázku na pozadí plochy (jenom desktopové aplikace)**: zadejte adresu URL obrázku ve formátu. jpg,. jpeg nebo. png, který chcete použít jako tapetu plochy Windows. Uživatelé nemohou tento obrázek změnit. Zadejte například `https://contoso.com/logo.png`.
 
 ## <a name="printer"></a>Tiskárna
 
@@ -553,7 +552,7 @@ Můžete nakonfigurovat informace, ke kterým mají přístup všechny aplikace 
 - **Zpětná vazba a diagnostika**: vyberte, jestli tato aplikace bude mít přístup k diagnostickým informacím.
 - **Synchronizovat se zařízeními** – Definujte, jestli tato aplikace může automaticky sdílet a synchronizovat informace s bezdrátovými zařízeními, která se explicitně nepárují s tímto počítačem, tabletem nebo telefonem.
 
-## <a name="projection"></a>Promítání
+## <a name="projection"></a>Projekce
 
 Tato nastavení používají [zprostředkovatele CSP zásad WirelessDisplay](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-wirelessdisplay), který obsahuje také podporované edice Windows.
 
@@ -594,17 +593,17 @@ Tato nastavení používají [zprostředkovatele CSP zásad WirelessDisplay](htt
 
 Výběrem **OK** uložte změny.
 
-## <a name="search"></a>Hledat
+## <a name="search"></a>Search
 
 Tato nastavení používají [CSP v zásadách hledání](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-search), ve kterém jsou uvedeny také podporované edice systému Windows. 
 
-- **Bezpečné vyhledávání (jenom mobilní)** : Určuje, jak Cortana filtruje obsah pro dospělé ve výsledcích hledání. Možnosti:
+- **Bezpečné vyhledávání (jenom mobilní)**: Určuje, jak Cortana filtruje obsah pro dospělé ve výsledcích hledání. Možnosti:
   - **Definováno uživatelem**: umožňuje koncovým uživatelům zvolit si vlastní nastavení.
   - **Strict**: nejvyšší filtrování obsahu pro dospělé.
   - **Střední**: mírné filtrování obsahu pro dospělé. Platné výsledky hledání nejsou filtrovány.
 - **Zobrazit výsledky webu v hledání**: když se nastaví **blokování**, uživatelé nemůžou vyhledávat a výsledky webu nejsou zobrazené ve vyhledávání. **Nenakonfigurováno** (výchozí) umožňuje uživatelům vyhledávat na webu a výsledky se zobrazí na zařízení.
 
-## <a name="start"></a>Začátek
+## <a name="start"></a>Spustit
 
 Tato nastavení používají [zprostředkovatele CSP zásad spuštění](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-start), který také uvádí podporované edice systému Windows.  
 
@@ -676,7 +675,7 @@ Tato nastavení používají [zprostředkovatele CSP zásad spuštění](https:/
 
 ## <a name="microsoft-defender-smart-screen"></a>Inteligentní obrazovka Microsoft Defenderu
 
-- **Filtr SmartScreen pro Microsoft Edge**: **vyžaduje** vypnutí filtru SmartScreen v programu Microsoft Defender a zabránění uživatelům v jeho zapnutí. **Nenakonfigurováno** (výchozí) zapne filtr SmartScreen. Pomáhá chránit uživatele před potenciálními hrozbami a zabránit uživatelům v jejich vypnutí.
+- **Filtr SmartScreen pro Microsoft Edge**: **vyžaduje** zapnutí funkce SmartScreen v programu Microsoft Defender a zabránění uživatelům v jejich vypnutí. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém zapnout filtr SmartScreen a povolit uživatelům jeho zapnutí a vypnutí.
 
   Microsoft Edge používá filtr SmartScreen v programu Microsoft Defender (zapnutý) k ochraně uživatelů před potenciálními podvodnými zprávami a škodlivým softwarem.
 
@@ -724,7 +723,7 @@ Tato nastavení používají [zprostředkovatele CSP v zásadách Defenderu](htt
 
   [Defender/AllowBehaviorMonitoring CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowbehaviormonitoring)
 
-- **Systém kontroly sítě (NIS)** : NIS pomáhá chránit zařízení před zneužitím prostřednictvím sítě. Používá signatury známých slabých míst z Centra Microsoftu pro ochranu koncových bodů ke zjištění a blokování škodlivého síťového provozu.
+- **Systém kontroly sítě (NIS)**: NIS pomáhá chránit zařízení před zneužitím prostřednictvím sítě. Používá signatury známých slabých míst z Centra Microsoftu pro ochranu koncových bodů ke zjištění a blokování škodlivého síťového provozu.
 
   **Povolit zapne možnost** zapnout ochranu sítě a síťové blokování. Uživatelé ji nemůžou vypnout. Pokud je tato možnost povolená, uživatelé se budou moct připojit ke známým chybám zabezpečení.
 
@@ -760,7 +759,7 @@ Tato nastavení používají [zprostředkovatele CSP v zásadách Defenderu](htt
 
   [Defender/AllowUserUIAccess CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowuseruiaccess)
 
-- **Interval aktualizace Security Intelligence (v hodinách)** : zadejte interval, který Defender kontroluje pro nové Security Intelligence, od 0-24. Možnosti:
+- **Interval aktualizace Security Intelligence (v hodinách)**: zadejte interval, který Defender kontroluje pro nové Security Intelligence, od 0-24. Možnosti:
 
   - **Nenakonfigurováno** (výchozí): Intune toto nastavení nemění ani neaktualizuje. Výchozí operační systém může kontrolovat aktualizace každých 8 hodin.
   - **Nekontrolovat**: Defender nehledá nové aktualizace Security Intelligence.
@@ -778,11 +777,11 @@ Tato nastavení používají [zprostředkovatele CSP v zásadách Defenderu](htt
 
   [Defender/RealTimeScanDirection CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-realtimescandirection)
 
-- **Dny před odstraněním malwaru v karanténě**: pokračovat v sledování vyřešeného malwaru po dobu, po kterou zadáte, abyste mohli ručně kontrolovat dříve zasažená zařízení. Pokud nastavíte počet dní, po který se `0`, malware zůstane ve složce karantény a automaticky se neodebere. Pokud je nastavena na `90`, jsou karanténní položky uloženy po dobu 90 dnů v systému a poté odebrány.
+- **Dny před odstraněním malwaru v karanténě**: pokračovat v sledování vyřešeného malwaru po dobu, po kterou zadáte, abyste mohli ručně kontrolovat dříve zasažená zařízení. Pokud nastavíte počet dní na `0`, malware zůstane ve složce karanténa a automaticky se neodebere. Pokud je nastaveno `90`na, karanténní položky jsou uloženy po dobu 90 dnů v systému a poté odebrány.
 
   [Defender/DaysToRetainCleanedMalware CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-daystoretaincleanedmalware)
 
-- **Limit využití procesoru při kontrole**: Omezte počet procesorů, které mohou kontroly využít, od `0` k `100`.
+- **Limit využití procesoru při kontrole**: Omezte množství procesorů, které mohou kontroly využít, od `0` do. `100`
 - **Kontrolovat archivní soubory**: **Povolit** zapne Defender, aby kontroloval archivní soubory, jako jsou soubory ZIP nebo CAB. Uživatelé toto nastavení nemůžou vypnout.
 
   Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Pokud toto nastavení povolíte a pak ho změníte zpátky na **není nakonfigurované**, Intune ponechá nastavení v dřív nakonfigurovaném stavu. Ve výchozím nastavení operační systém toto skenování zapne a umožňuje uživatelům ho změnit.
@@ -895,12 +894,12 @@ Tato nastavení používají [zprostředkovatele CSP v zásadách Defenderu](htt
 
 - **Akce zjištěných malwarových hrozeb**: vyberte, jak chcete zpracovat vlákna malwaru. **Nenakonfigurováno** (výchozí) umožňuje programu Microsoft Defender zvolit nejlepší možnost. Pokud je nastavena možnost **Povolit**, vyberte akce, které má Defender provést pro každou úroveň hrozby, kterou zjistí: nízká, střední, vysoká a závažná. Možnosti:
   
-  - **Vyčistit**
+  - **Odstranit**
   - **Karanténa**
   - **Odebrat**
-  - **Povoleno**
+  - **Povolit**
   - **Definováno uživatelem**
-  - **Blokováno**
+  - **Blokované**
 
   Pokud vaše akce není možná, pak Microsoft Defender vybere nejlepší možnost, abyste zajistili, že dojde k nápravě hrozby. 
 
@@ -919,13 +918,13 @@ Můžete vyloučit určité soubory z kontroly antivirové ochrany v programu Mi
 
 ## <a name="power-settings"></a>Nastavení napájení
 
-### <a name="battery"></a>Bije
+### <a name="battery"></a>Baterie
 
 - **Úroveň baterie**: Pokud zařízení používá napájení z baterie, zadejte úroveň nabití baterie, abyste zapnuli úsporu energie z 0-100. Zadejte procentuální hodnotu, která označuje úroveň nabití baterie. Výchozí hodnota je 70%. Když je nastavená na 70%, úspora energie se zapne, když má baterie za 70% nebo méně dostupného.
 
   [CSP pro Power/EnergySaverBatteryThresholdOnBattery](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-energysaverbatterythresholdonbattery)
 
-- **Zavření víka (jenom mobilní)** : Pokud zařízení používá napájení z baterie, vyberte, co se stane po zavření víka. Možnosti:
+- **Zavření víka (jenom mobilní)**: Pokud zařízení používá napájení z baterie, vyberte, co se stane po zavření víka. Možnosti:
 
   - **Nenakonfigurováno** (výchozí): Intune toto nastavení nemění ani neaktualizuje.
   - **Žádná akce**: zařízení zůstává zapnuté a nadále používá napájení z baterie.
@@ -965,7 +964,7 @@ Můžete vyloučit určité soubory z kontroly antivirové ochrany v programu Mi
 
   [CSP pro Power/EnergySaverBatteryThresholdPluggedIn](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-energysaverbatterythresholdpluggedin)
 
-- **Zavření víka (jenom mobilní)** : když je zařízení napájené z elektrické sítě, vyberte, co se stane po zavření víka. Možnosti:
+- **Zavření víka (jenom mobilní)**: když je zařízení napájené z elektrické sítě, vyberte, co se stane po zavření víka. Možnosti:
 
   - **Nenakonfigurováno** (výchozí): Intune toto nastavení nemění ani neaktualizuje.
   - **Žádná akce**: zařízení zůstane zapnuté.

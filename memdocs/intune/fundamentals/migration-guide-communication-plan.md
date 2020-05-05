@@ -17,12 +17,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f7322ca043db4f6c6f7b66221ba20a02ee505ba2
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: aaeca2e4dadf7ef28b55479fb83becfc3b206123
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79331235"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82080007"
 ---
 # <a name="plan-communications"></a>Plán komunikace
 
@@ -30,9 +30,9 @@ Plán komunikace je klíčovým prvkem migrace do Intune. K dispozici jsou násl
 
 Stažení: [sada Intune pro přijetí](https://aka.ms/IntuneAdoptionKit)
 
-## <a name="email-templates"></a>E-mailové šablony
+## <a name="email-templates"></a>Šablony e-mailů
 
-Doporučujeme následující plán komunikace s využitím e-mailů. Text můžete upravit tak, aby se zarovnal k operačnímu systému vašich uživatelů a prostředí. K dispozici jsou šablony, které můžete přizpůsobit vašemu plánu komunikace:
+Doporučujeme následující plán komunikace s využitím e-mailů. Text můžete upravit tak, aby se zarovnal k operačnímu systému vašich uživatelů a prostředí. Vytvořili jsme pro vás šablony, které můžete přizpůsobit svému plánu komunikace:
 
 - **#1 e-mailu**: Vysvětlete výhody, očekávání a plán. Využijte této příležitosti a představte nové služby, ke kterým budou mít uživatelé přístup na zařízeních spravovaných v Intune.
 

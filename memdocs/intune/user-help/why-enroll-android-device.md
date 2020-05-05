@@ -1,5 +1,5 @@
 ---
-title: Proč zaregistrovat zařízení s Androidem
+title: Proč registrovat vaše zařízení s Androidem
 description: Zjistěte, proč je důležité zaregistrovat zařízení v Intune.
 keywords: ''
 author: lenewsad
@@ -19,14 +19,14 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: ea760ef125ce2d6d7d0446564be3b2b27a6038ce
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: bee0f037e1695112739a898c75a67d232ea722d8
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79324107"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079939"
 ---
-# <a name="why-enroll-your-android-device"></a>Proč zaregistrovat zařízení s Androidem  
+# <a name="why-enroll-your-android-device"></a>Proč registrovat vaše zařízení s Androidem  
 
 Školy a zaměstnavatelé chtějí zajistit, aby pro přístup k interním prostředkům používali zabezpečené a důvěryhodné zařízení. Portál společnosti a aplikace Microsoft Intune při přístupu k těmto prostředkům zachovají zabezpečení zařízení a dat Androidu. Ujistěte se, že máte zabezpečený přístup k prostředkům bez ohledu na to, kde jste nebo jaké zařízení používáte. 
 
@@ -64,9 +64,9 @@ Když je zařízení nesynchronizované nebo už nesplňuje požadavky, jeho sta
 
 
 ## <a name="permits-company-support-access-to-your-device"></a>Povolení přístupu firemní podpory k zařízení
-Když zaregistrujete zařízení, firemní podpora nebo správce IT obdrží přístup k zařízení z důvodu omezeného a smysluplného důvodu. Jsou to tyto:  
+Když zaregistrujete zařízení, firemní podpora nebo správce IT obdrží přístup k zařízení z důvodu omezeného a smysluplného důvodu. Mohou:  
 
-* Obnovit v zařízení výchozí tovární nastavení. Jak je uvedeno výše, vy máte k resetování zařízení také přístup. Pokud ale nemáte k aplikaci Portál společnosti přístup okamžitě, může vaše společnost resetovat zařízení za vás.  
+* Resetujte zařízení zpátky na výchozí hodnoty výrobce. Jak je uvedeno výše, vy máte k resetování zařízení také přístup. Pokud ale nemáte k aplikaci Portál společnosti přístup okamžitě, může vaše společnost resetovat zařízení za vás.  
 
 * Odebrat všechna data týkající se společnosti. Pokud ze společnosti odejdete nebo pokud se vaše zařízení už nedá spravovat, může organizace z vašeho zařízení odebrat data týkající se společnosti. Vaše osobní údaje a nastavení se neodeberou a v zařízení zůstanou.  
 
@@ -80,4 +80,4 @@ Když zaregistrujete zařízení, firemní podpora nebo správce IT obdrží př
 
 ## <a name="next-steps"></a>Další kroky  
 
-Potřebujete pomoc? Obraťte se na svou firemní podporu (kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980)) nebo napište <a href="mailto:wintunedroidfbk@microsoft.com?subject=I'm having trouble installing the Company Portal app on my Android device&body=Describe the issue you're experiencing here.">týmu Microsoft Android</a>.
+Potřebujete pomoc? Obraťte se na firemní podporu (kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980)) nebo napište <a href="mailto:wintunedroidfbk@microsoft.com?subject=I'm having trouble installing the Company Portal app on my Android device&body=Describe the issue you're experiencing here.">týmu Microsoft Android</a>.

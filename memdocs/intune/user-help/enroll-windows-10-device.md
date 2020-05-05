@@ -19,12 +19,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 2d5438a83132323f67f9fd9655a8a1bff52439a9
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 8f3150a887cfbff73976bb697e0b13ea129f003f
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79328203"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82080075"
 ---
 # <a name="enroll-windows-10-devices-with-intune-company-portal"></a>Registrace zařízení s Windows 10 pomocí Portál společnosti Intune
 
@@ -39,9 +39,9 @@ Tento postup popisuje, jak zaregistrovat zařízení, které běží ve Windows 
 
 1. Přejděte na **Start**. Pokud jste na zařízení s Windows 10 Mobile, pokračujte na seznam **všechny aplikace** .
 
-2. Otevřete aplikaci **Nastavení** . Pokud aplikace není v seznamu aplikací snadno dostupná, otevřete panel hledání a zadejte "nastavení".
+2. Otevřete aplikaci **Nastavení**. Pokud aplikace není v seznamu aplikací snadno dostupná, otevřete panel hledání a zadejte "nastavení".
 
-3. Vyberte **Účty** > **Přístup do práce nebo do školy** > **Připojit**.  
+3. Vyberte **účty** > **přístup do práce nebo do školy** > **připojit**.  
 
 
     ![Vyberte možnost Nastavit pracovní nebo školní účet.](./media/w10-enroll-rs1-connect-to-work-or-school.png)  
@@ -54,7 +54,7 @@ Tento postup popisuje, jak zaregistrovat zařízení, které běží ve Windows 
 5. Přihlaste se k Intune ze svého pracovního nebo školního účtu.  
 
 
-    ![Přidat pracovní nebo školní účet](./media/w10-enroll-rs1-enter-your-credentials.png)  
+    ![Přidání pracovního nebo školního účtu](./media/w10-enroll-rs1-enter-your-credentials.png)  
 
     Nakonec se zobrazí zpráva, že vaše společnost nebo škola zaregistruje vaše zařízení.
 
@@ -62,7 +62,7 @@ Tento postup popisuje, jak zaregistrovat zařízení, které běží ve Windows 
 
 7. Na stránce **, kterou jste nastavili!** vyberte **Hotovo**. Právě jste svoje zařízení zaregistrovali.  
 
-8. Pokud chcete dvakrát ověřit připojení, přejděte zpět na **nastavení** > **účty** > **přístup do práce nebo do školy**.  Váš účet by se teď měl zobrazit v seznamu.  
+8. Pokud chcete dvakrát ověřit připojení, přejděte zpátky na **Nastavení** > **účty** > **přístup do práce nebo do školy**.  Váš účet by se teď měl zobrazit v seznamu.  
 
 
     ![Ověření, zda bylo připojení správně nastaveno](./media/w10-enroll-rs1-validate-successful-enrollment.png)  
@@ -74,9 +74,9 @@ Tento postup popisuje, jak zaregistrovat zařízení, které běží ve Windows 
 
 1. Přejděte na **Start**. Pokud jste na zařízení s Windows 10 Mobile, pokračujte na seznam **všechny aplikace** .
 
-2. Otevřete aplikaci **Nastavení** . Pokud aplikace není v seznamu aplikací snadno dostupná, otevřete panel hledání a zadejte "nastavení".
+2. Otevřete aplikaci **Nastavení**. Pokud aplikace není v seznamu aplikací snadno dostupná, otevřete panel hledání a zadejte "nastavení".
 
-3. Vyberte **účty** > **váš účet**.  
+3. Vyberte **účty** > , které**váš účet máte**.  
 
 
     ![Vyberte svůj účet.](./media/W10-enroll-2-accounts-your-account.png)  
@@ -89,7 +89,7 @@ Tento postup popisuje, jak zaregistrovat zařízení, které běží ve Windows 
 6. Přihlaste se pomocí přihlašovacích údajů svého pracovního nebo školního účtu.  
 
 
-    ![Přihlásit](./media/W10-enroll-4-sign-in.png)  
+    ![Přihlášení](./media/W10-enroll-4-sign-in.png)  
 
 Stále nemáte přístup k pracovním nebo školním e-mailům, souborům nebo jiným datům? Naučte se [řešit problémy související s účtem](troubleshoot-your-windows-10-device-windows.md#troubleshooting-steps-to-follow-if-you-see-your-account) během registrace.  
 

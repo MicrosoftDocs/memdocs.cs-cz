@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d838260f0a4961302b24486474eec74b4cacd23e
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: f0a7bbdd5bb27b6fe17f5b4f44302551ff67de5d
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79326819"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254975"
 ---
 # <a name="how-to-manage-data-transfer-between-ios-apps-in-microsoft-intune"></a>Správa přenosu dat mezi aplikacemi pro iOS pomocí Microsoft Intune
 
@@ -45,15 +45,15 @@ Pomocí zásad ochrany aplikací se službou pro **správu** systému iOS může
 ## <a name="configure-user-upn-setting-for-microsoft-intune-or-third-party-emm"></a>Konfigurace nastavení hlavního názvu uživatele (UPN) pro Microsoft Intune nebo řešení EMM (Enterprise Mobility Management) jiného výrobce
 Konfigurace nastavení hlavního názvu uživatele (UPN) se **vyžaduje** pro zařízení spravovaná pomocí Intune nebo řešení EMM jiného výrobce k identifikaci zaregistrovaného uživatelského účtu. Konfigurace hlavního názvu uživatele (UPN) spolupracuje se zásadami ochrany aplikací, které nasazujete z Intune. Následující postup představuje obecné informace o tom, jak nakonfigurovat nastavení hlavního názvu uživatele (UPN) a výsledné prostředí uživatele:
 
-1. V [Azure Portal](https://portal.azure.com) [vytvořte a přiřaďte zásady ochrany aplikací](app-protection-policies.md) pro iOS/iPadOS. Nakonfigurujte nastavení zásad podle požadavků vaší společnosti a vyberte aplikace iOS, které by tyto zásady měly používat.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431) [vytvořte a přiřaďte zásady ochrany aplikací](app-protection-policies.md) pro iOS/iPadOS. Nakonfigurujte nastavení zásad podle požadavků vaší společnosti a vyberte aplikace iOS, které by tyto zásady měly používat.
 
 2. Nasaďte aplikace a e-mailový profil, který chcete spravovat prostřednictvím Intune nebo řešení MDM jiného výrobce, pomocí následujících obecných kroků. Na toto prostředí se vztahuje také *Příklad 1*.
 
 3. Nasaďte aplikaci s následujícím nastavením konfigurace aplikace na spravované zařízení:
 
-      **Key** = IntuneMAMUPN, **Value** = <username@company.com>
+      **Key** = IntuneMAMUPN; **hodnota** = <username@company.com>
 
-      Příklad: [‘IntuneMAMUPN’, ‘janellecraig@contoso.com’]
+      Příklad: [' IntuneMAMUPN ', 'janellecraig@contoso.com']
       
      > [!NOTE]
      > V Intune musí být typ registrace zásady konfigurace aplikace nastavený na **spravovaná zařízení**.
@@ -68,17 +68,17 @@ Konfigurace nastavení hlavního názvu uživatele (UPN) se **vyžaduje** pro za
 
 2. V části Konfigurace aplikace zadejte tato nastavení:
 
-   **Key** = IntuneMAMUPN, **Value** = <username@company.com>
+   **Key** = IntuneMAMUPN; **hodnota** = <username@company.com>
 
    Skutečná syntaxe dvojice klíč/hodnota se může lišit podle toho, jakého máte jiného poskytovatele řešení MDM. V následující tabulce jsou uvedeny příklady poskytovatelů MDM třetích stran a přesné hodnoty, které byste měli zadat pro dvojici klíč/hodnota.
 
    |Jiný poskytovatel řešení MDM| Konfigurační klíč | Typ hodnoty | Konfigurační hodnota|
    | ------- | ---- | ---- | ---- |
-   |Microsoft Intune| IntuneMAMUPN | String | {{UserPrincipalName}}|
-   |VMware AirWatch| IntuneMAMUPN | String | {UserPrincipalName}|
-   |MobileIron | IntuneMAMUPN | String | ${userUPN} **nebo** ${userEmailAddress} |
-   |Správa koncových bodů Citrix | IntuneMAMUPN | String | $ {User. userPrincipalName} |
-   |Správce mobilních zařízení ManageEngine | IntuneMAMUPN | String | %upn% |
+   |Microsoft Intune| IntuneMAMUPN | Řetězec | {{UserPrincipalName}}|
+   |VMware AirWatch| IntuneMAMUPN | Řetězec | {UserPrincipalName}|
+   |MobileIron | IntuneMAMUPN | Řetězec | ${userUPN} **nebo** ${userEmailAddress} |
+   |Správa koncových bodů Citrix | IntuneMAMUPN | Řetězec | $ {User. userPrincipalName} |
+   |Správce mobilních zařízení ManageEngine | IntuneMAMUPN | Řetězec | %upn% |
 
 > [!NOTE]  
 > Pokud pro Outlook pro iOS nebo iPadOS nasadíte zásadu konfigurace aplikace spravovaná zařízení s možností "použití návrháře konfigurace" a povolíte možnost **Povolit pouze pracovní nebo školní účty**, konfigurační klíč IntuneMAMUPN se konfiguruje automaticky na pozadí této zásady. Další podrobnosti najdete v části Nejčastější dotazy v [nové aplikaci Outlook pro zásady konfigurace aplikací pro iOS a Android – konfigurace obecné aplikace](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/New-Outlook-for-iOS-and-Android-App-Configuration-Policy/ba-p/370481). 

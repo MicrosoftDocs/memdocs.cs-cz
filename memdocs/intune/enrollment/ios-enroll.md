@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 02/22/2018
+ms.date: 04/23/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1f3964ec67c9c78e5aedc70ff4f328a66c59c04b
-ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
+ms.openlocfilehash: 2c05a5518ff180bcfd3f00f6f59097815e9eed9d
+ms.sourcegitcommit: 2871a17e43b2625a5850a41a9aff447c8ca44820
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80696531"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82126174"
 ---
 # <a name="enroll-iosipados-devices-in-intune"></a>Registrace zařízení s iOS/iPadOS v Intune
 
@@ -35,7 +35,7 @@ Jako správce Intune můžete nastavit registraci pro zařízení s iOS/iPadOS a
 
 Předtím, než budete moci povolit zařízení se systémem iOS/iPadOS, proveďte následující kroky:
 
-- Ujistěte [se, že vaše zařízení má nárok na registraci zařízení Apple](https://support.apple.com/en-us/HT204142#eligibility).
+- Ujistěte [se, že jsou vaše zařízení podporovaná](../fundamentals/supported-devices-browsers.md).
 - [Nastavení Intune](../fundamentals/setup-steps.md) – tento postup slouží k nastavení infrastruktury Intune. Registrace zařízení vyžaduje zejména [nastavení autority MDM](../fundamentals/mdm-authority-set.md).
 - [Získání certifikátu Apple MDM push Certificate](apple-mdm-push-certificate-get.md) – Apple vyžaduje certifikát, aby bylo možné povolit správu zařízení se systémem iOS/IPadOS a MacOS.
 

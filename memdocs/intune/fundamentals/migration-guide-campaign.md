@@ -17,16 +17,16 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 11959de1d03c7aa9cd29de2b4069c6d7bc133f79
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 9a15bc7c1fd74aa3741a9bd699778795cbf3faab
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79331279"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82080024"
 ---
 # <a name="phase-2-migration-campaign"></a>Fáze 2: Kampaň migrace
 
-Zvolte takový postup migrace, který bude nejvíc vyhovovat potřebám organizace, a přizpůsobte taktiku implementace vlastním požadavkům. Zbývající část tohoto průvodce vás seznámí s nástroji, které budete potřebovat k úspěšné registraci zařízení vašich uživatelů do Intune.
+Zvolte takový postup migrace, který bude nejvíc vyhovovat potřebám organizace, a přizpůsobte taktiku implementace vlastním požadavkům. Zbývající část tohoto průvodce vás seznámí s nástroji, které potřebujete k dosažení cíle získání uživatelských zařízení zaregistrovaných do Intune.
 
 ## <a name="keys-to-a-successful-migration"></a>Klíč k úspěšné migraci
 
@@ -64,7 +64,7 @@ Pokud jste spokojení s první fází migrace, zopakujte daný [cyklus migrace](
 
 - Zajistěte připravenost týmu technické podpory pomoct během kampaně migrace koncovým uživatelům. Spusťte dobrovolnou migraci, abyste byli schopni odhadnout zátěž telefonních linek technické podpory.
 
-- Nestanovujte konečný termín registrace, dokud nebude tým technické podpory schopný zpracovat zbývající uživatele.
+- Nevytvářejte konečné termíny pro registraci, dokud si pracovník helpdesku nedokáže zpracovat zbývající populace.
 
 > [!IMPORTANT]
 > Vyhněte se tomu, abyste konfigurovali použití ovládacích prvků přístupu k prostředkům, jako je Exchange nebo SharePoint Online, současně pro Intune i vaše stávající řešení MDM. Kromě toho by měla být zařízení registrována vždy jen v jednom řešení.

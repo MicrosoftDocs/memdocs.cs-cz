@@ -17,12 +17,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 88f30f10af5969d202dd8eb252cc82d03d3d921e
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 7b09240c2bd1d562985ce69c35f07181dc5c9489
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79331163"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079905"
 ---
 # <a name="intune-migration-guide"></a>Příručka k migraci do Intune
 
@@ -32,7 +32,7 @@ ms.locfileid: "79331163"
 
 Tato příručka vás seznámí s různými detaily migrace od jiného poskytovatele MDM do Intune.
 
-## <a name="whats-included-in-this-guide"></a>Obsah příručky
+## <a name="whats-included-in-this-guide"></a>Co je součástí tohoto průvodce?
 
 Tato příručka rozděluje migraci na dvě fáze zahrnující úkoly, strategie a taktické pokyny, které vám pomůžou projít celým procesem migrace do Intune MDM.
 
@@ -46,7 +46,7 @@ Tato příručka rozděluje migraci na dvě fáze zahrnující úkoly, strategie
 
   - [Konfigurace zásad pro ochranu aplikací](../apps/app-protection-policies.md)
 
-  - [Speciální aspekty migrace](migration-guide-considerations.md)
+  - [Zvláštní stránky migrace](migration-guide-considerations.md)
 
 - [Fáze 2: Kampaň migrace](migration-guide-campaign.md)
 

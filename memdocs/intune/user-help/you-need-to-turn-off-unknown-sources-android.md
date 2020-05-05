@@ -1,7 +1,7 @@
 ---
 title: Musíte vypnout nastavení Neznámé zdroje | Dokumentace Microsoftu
 titlesuffix: Microsoft Intune
-description: Musí se zakázat instalace z neznámých zdrojů.
+description: Je třeba zakázat instalaci z neznámých zdrojů.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
@@ -18,18 +18,18 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser; seodec18
 ms.collection: ''
-ms.openlocfilehash: ee7c1898315a01872bc47b9928116bc9a487b837
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 449bbd14ae32ca5a8b0d02347b00a827fb714b40
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79323967"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82080160"
 ---
 # <a name="you-need-to-turn-off-unknown-sources"></a>Musíte vypnout nastavení Neznámé zdroje
 
 Do zařízení s Androidem si můžete nainstalovat aplikace z různých umístění. Obchod Google Play nabízí spoustu aplikací pro většinu uživatelů. Některé aplikace, například aplikace vytvořené vaší společností k internímu použití, se můžou instalovat z jiných webových obchodů. Pokud byste aplikace instalovali z neověřených umístění, mohlo by to vést k problémům se zařízením a potenciálně způsobit problémy se zabezpečením. Vaše firemní podpora kvůli zabezpečení firemních dat rozhodla, že je nutné vypnout přístup k neznámým zdrojům.
 
-Pokud se zobrazí zpráva „Musí se zakázat instalace z neznámých zdrojů“, budete muset přejít do části **Nastavení** > **Zabezpečení** (na některých zařízeních to může být **Zamykací obrazovka a zabezpečení**) a vypnout nastavení **Neznámé zdroje**.
+Pokud se zobrazí zpráva "musí se zakázat instalace z neznámých zdrojů", budete muset přejít na **Nastavení** > **zabezpečení** (na některých zařízeních, může to být **zamykací obrazovka a zabezpečení** ) a vypnout **neznámé zdroje**.
 
 Když nastavení **Neznámé zdroje** vypnete, může trvat několik minut, než budete zařízení s Androidem moct znovu používat pro přístup k datům společnosti nebo školy.
 

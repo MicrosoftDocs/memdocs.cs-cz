@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ba2b8e407b4c81f74df7c86e7101461b30a0d8e0
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: fe95196da3e75dc50e585dc1c4508e8d20c7d5e3
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80087149"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82255026"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Aktualizace uživatelského rozhraní pro aplikace Intune pro koncové uživatele
 
@@ -41,7 +41,7 @@ Pokud jste zaměstnancem nebo studentem, nezapomeňte se podívat na snímky obr
 Aktualizovali jsme rozložení několika přihlašovacích obrazovek v aplikaci Portál společnosti pro Android, aby bylo prostředí pro uživatele užitečnější, jednoduché a čisté. Pokud chcete zobrazit všechny Portál společnosti pokyny k registraci Androidu, přejděte k tématu [registrace zařízení s Androidem](../user-help/enroll-device-android-company-portal.md) nebo [registrace pomocí pracovního profilu Androidu](../user-help/enroll-device-android-work-profile.md).   
 
 
-|Datum aktualizace|Předchozí|   
+|Aktualizováno|Předchozí|   
 |---|---|   
 |![Příklad obrázku nové obrazovky pro přihlášení Portál společnosti, tlačítko Přihlásit se](./media/whats-new-app-ui/intune-company-portal-sign-in-2003.png)|![Příklad obrázku předchozí Portál společnosti přihlašovací stránka, která zobrazuje návrh vytíženější](./media/whats-new-app-ui/intune-company-portal-sign-in-2002.png)| 
 |![Příklad obrázku nové obrazovky průběh přihlašování, která zobrazuje jeden indikátor průběhu.](./media/whats-new-app-ui/intune-company-portal-signing-in-2003.png)|![Příklad obrázku předchozího procesu přihlašování, který zobrazuje návrh vytíženější](./media/whats-new-app-ui/intune-company-portal-signing-in-2002.png)|  
@@ -72,13 +72,13 @@ Kontrolní seznam nastavení v aplikaci Portál společnosti pro Android byl akt
 
 Na následujících obrazovkách se zobrazuje aktualizovaný kontrolní seznam pro registraci pracovního profilu Androidu:
 
-|Datum aktualizace|Předchozí|  
+|Aktualizováno|Předchozí|  
 |---|---|  
 |![Příklad obrázku nastavení pracovního profilu v Portál společnosti zobrazuje zjednodušený kontrolní seznam a nové ikony.](./media/whats-new-app-ui/work-profile-checklist-1911.png)|![Příklad obrázku předchozího nastavení pracovního profilu v Portál společnosti se zobrazením kontrolního seznamu vytíženější.](./media/whats-new-app-ui/work-profile-checklist-1904.png)|   
 
 Na následujících obrazovkách je zobrazen aktualizovaný kontrolní seznam pro registraci Správce zařízení s Androidem:  
 
-|Datum aktualizace|Předchozí|  
+|Aktualizováno|Předchozí|  
 |---|---|  
 |![Příklad obrázku nastavení Správce zařízení s Androidem v Portál společnosti, který ukazuje zjednodušený kontrolní seznam a nové ikony.](./media/whats-new-app-ui/android-checklist-1911.png)|![Příklad obrázku předchozího nastavení Správce zařízení s Androidem v Portál společnosti, který ukazuje kontrolní seznam vytíženější.](./media/whats-new-app-ui/android-checklist-1904.png)|  
 
@@ -106,7 +106,7 @@ Stránka Portál společnosti nové **nainstalované aplikace** na webu obsahuje
 ![Obrazovka stránky Portál společnosti web, nainstalované aplikace](./media/whats-new-app-ui/intune-installed-apps-1907.png)     
 
 ### <a name="new-view-lets-app-users-see-all-managed-apps-installed-on-device----2352913---"></a>Nové zobrazení umožňuje uživatelům aplikace zobrazit všechny spravované aplikace nainstalované na zařízení. <!-- 2352913 -->
-Aplikace Portál společnosti pro Windows teď obsahuje seznam všech spravovaných aplikací (požadovaných i dostupných), které jsou nainstalované na zařízení uživatele. Uživatelé můžou také zobrazit pokusy o instalaci aplikací a jejich aktuální stavy. Pokud jste neudělali aplikace, které uživatelé potřebují nebo k nim nejsou k dispozici, zobrazí se zpráva s vysvětlením, že nebyly nainstalovány žádné aplikace společnosti. Chcete-li zobrazit nové zobrazení, přejděte do navigačního podokna Portál společnosti a vyberte **aplikace** > **nainstalované aplikace**.   
+Aplikace Portál společnosti pro Windows teď obsahuje seznam všech spravovaných aplikací (požadovaných i dostupných), které jsou nainstalované na zařízení uživatele. Uživatelé můžou také zobrazit pokusy o instalaci aplikací a jejich aktuální stavy. Pokud jste neudělali aplikace, které uživatelé potřebují nebo k nim nejsou k dispozici, zobrazí se zpráva s vysvětlením, že nebyly nainstalovány žádné aplikace společnosti. Chcete-li zobrazit nové zobrazení, přejděte do navigačního podokna portál společnosti a vyberte **aplikace** > **nainstalované aplikace**.   
 
 ![Ukázkový snímek obrazovky stránky aplikace Portál společnosti pro Windows 10, nainstalované aplikace ](./media/whats-new-app-ui/installed-apps-cp-1906.png)  
 
@@ -153,7 +153,7 @@ Portál společnosti na obrazovkách a krocích pro registraci zařízení s iOS
 
 Aktualizované kroky a obrazovky registrace najdete v tématu [registrace zařízení se systémem iOS v Intune](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-in-intune-ios).  
 
-### <a name="user-experience-update-for-the-company-portal-app-for-ios----2536024---"></a>Aktualizace uživatelského prostředí pro aplikaci Portál společnosti pro iOS <!-- 2536024 -->
+### <a name="user-experience-update-for-the-company-portal-app-for-ios----2536024---"></a>Aktualizace uživatelského prostředí aplikace Portál společnosti pro iOS  <!-- 2536024 -->
 Změnila se Domovská stránka aplikace Portál společnosti pro zařízení s iOS. Tato změna způsobí, že se Domovská stránka bude lépe řídit vzorci uživatelského rozhraní iOS a zároveň poskytuje vylepšenou zjistitelnost pro aplikace a e-knihy.  
 
 ## <a name="week-of-february-19-2019"></a>Týden od 19. února 2019  
@@ -169,13 +169,13 @@ Koncoví uživatelé teď budou moct aktivovat akce aplikace a zařízení ve Wi
 
 ## <a name="week-of-october-22-2018"></a>Týden od 22. října 2018
 
-### <a name="add-custom-brand-image-for-company-portal-app----1916266---"></a>Přidat vlastní obrázek značky pro aplikaci Portál společnosti <!-- 1916266 -->
+### <a name="add-custom-brand-image-for-company-portal-app----1916266---"></a>Přidání vlastní firemní image pro aplikaci Portál společnosti  <!-- 1916266 -->
 Správce služby Microsoft Intune může nahrát obrázek vlastní značky, který se v aplikaci Portál společnosti pro iOS zobrazí jako pozadí stránky s profilem uživatele. Další informace o konfiguraci aplikace Portál společnosti najdete v tématu [Konfigurace aplikace Portál společnosti služby Microsoft Intune](../apps/company-portal-app.md).  
 
 ## <a name="week-of-august-27-2018"></a>Týden od 27. srpna 2018  
 
-### <a name="new-user-experience-update-for-the-company-portal-website---2000968---"></a>Nová aktualizace uživatelského prostředí pro Portál společnosti web <!--2000968 -->  
-Do Portál společnosti webu jsme přidali nové funkce založené na zpětné vazbě od zákazníků. Na svých zařízeních si všimnete značného vylepšení stávající funkčnosti a použitelnosti. Konkrétní oblasti webu, jako jsou podrobnosti o zařízení, názory a podpora a přehledy zařízení, teď mají nový, moderní a reagující návrh. Aktualizovali jsme [dokumentaci na Portálu společnosti Intune](https://docs.microsoft.com/mem/intune/user-help/using-the-intune-company-portal-website), aby tyto změny reflektovala.   
+### <a name="new-user-experience-update-for-the-company-portal-website---2000968---"></a>Nová aktualizace uživatelského prostředí pro web Portál společnosti  <!--2000968 -->  
+Do Portál společnosti webu jsme přidali nové funkce založené na zpětné vazbě od zákazníků. Na svých zařízeních si všimnete značného vylepšení stávající funkčnosti a použitelnosti. Konkrétní oblasti webu, jako jsou podrobnosti o zařízení, názory a podpora a přehledy zařízení, teď mají nový, moderní a reagující návrh. Aktualizovali jsme [dokumentaci na Portálu společnosti Intune](https://docs.microsoft.com/mem/intune/user-help/using-the-intune-company-portal-website), aby reflektovala tyto změny.   
 
 Mezi nové aktualizace patří:  
 
@@ -187,7 +187,7 @@ Mezi nové aktualizace patří:
 - Vylepšený výkon u velkých katalogů aplikací
 - Lepší přístupnost pro všechny uživatele  
 
-|Datum aktualizace|Předchozí|
+|Aktualizováno|Předchozí|
 |---|---|
 |![Aktualizovaná stránka zařízení zobrazuje zařízení přímo nad informacemi o zařízení a zařízení se už nezobrazuje nad celým seznamem.](./media/whats-new-app-ui/iwp-device-after-1803.png)|![Předchozí verze stránky zařízení](./media/whats-new-app-ui/iwp-device-before-1803.png)|
 |![Aktualizovaná stránka instalace aplikace zobrazuje aplikaci přímo nad popisem a různými informacemi o instalaci, jako jsou datum publikování, verze a typ aplikace.](./media/whats-new-app-ui/iwp-app-install-after-1803.png)|![Předchozí verze stránky instalace aplikace](./media/whats-new-app-ui/iwp-app-install-before-1803.png)|  
@@ -214,7 +214,7 @@ Ukázkový snímek obrazovky se zobrazením podrobností:
 ![Snímek obrazovky aplikace Portál společnosti Intune pro Windows s nainstalovanými aplikacemi v zobrazení podrobností](./media/whats-new-app-ui/details-installed-view-cpapp-1807.png)
 
 ## <a name="week-of-april-23-2018"></a>Týden od 23. dubna 2018
-### <a name="updated-navigation-view-in-the-company-portal-app-for-windows-10----1195010---"></a>Aktualizované navigační zobrazení v aplikaci Portál společnosti pro Windows 10 <!-- 1195010 -->
+### <a name="updated-navigation-view-in-the-company-portal-app-for-windows-10----1195010---"></a>Aktualizované navigační zobrazení v aplikaci Portál společnosti pro Windows 10  <!-- 1195010 -->
 Aplikace Portál společnosti Intune pro Windows 10 byla aktualizována o [navigační zobrazení systému návrhu FDS](https://docs.microsoft.com/windows/uwp/design/basics/navigation-basics). Po straně aplikace je statický svislý seznam všech hlavních stránek. Když na odkaz kliknete, stránka se rychle zobrazí nebo můžete mezi stránkami přepínat. Jde o první z řady aktualizací, které jsou výsledkem naší trvalé snahy o vytvoření přizpůsobivého, empatického a známého prostředí Intune. 
 
 ![Snímek obrazovky řídicího panelu aplikace Portál společnosti s navigačním zobrazením Fluent Design](./media/whats-new-app-ui/1804_WindowsCP_Fluent_01.png)
@@ -222,7 +222,7 @@ Aplikace Portál společnosti Intune pro Windows 10 byla aktualizována o [navig
 
 ## <a name="week-of-april-2-2018"></a>Týden od 2. dubna 2018
 
-### <a name="user-experience-update-for-the-company-portal-app-for-ios----1412866---"></a>Aktualizace uživatelského prostředí pro aplikaci Portál společnosti pro iOS <!-- 1412866 -->
+### <a name="user-experience-update-for-the-company-portal-app-for-ios----1412866---"></a>Aktualizace uživatelského prostředí aplikace Portál společnosti pro iOS  <!-- 1412866 -->
 V aplikaci Portál společnosti pro iOS/iPadOS jsme vydali velkou aktualizaci uživatelského prostředí. Tato aktualizace nabízí zcela přepracovaný vzhled aplikace, včetně modernějšího vzhledu a chování. Zachovali jsme funkčnost aplikace, ale zvýšili její využitelnost a přístupnost.  
 
 Další vylepšení:
@@ -231,27 +231,27 @@ Další vylepšení:
 - Další indikátory průběhu, které uživatelům poskytují aktuální informace o stavu
 - Vylepšené nahrávání protokolů, které usnadňuje hlášení vzniklých problémů  
 
-|Dříve|Nyní|
+|Před|Po|
 |---|---|
 |![01](./media/whats-new-app-ui/cp_iosRedesign_before_1803_01.png)|![01](./media/whats-new-app-ui/cp_iosRedesign_after_1803_01.png)|
 |*Zkombinováno s předchozím krokem*|![02](./media/whats-new-app-ui/cp_iosRedesign_after_1803_02.png)|
 |![03](./media/whats-new-app-ui/cp_iosRedesign_before_1803_02.png)|![03](./media/whats-new-app-ui/cp_iosRedesign_after_1803_03.png)|
 
-### <a name="improvements-to-the-language-in-the-company-portal-app-for-windows----1683758---"></a>Vylepšení jazyka v aplikaci Portál společnosti pro Windows <!-- 1683758 -->
+### <a name="improvements-to-the-language-in-the-company-portal-app-for-windows----1683758---"></a>Jazyková vylepšení aplikace Portál společnosti pro Windows  <!-- 1683758 -->
 Vylepšili jsme jazyk v aplikaci Portál společnosti pro Windows 10 tak, aby byl uživatelsky přívětivější a lépe přizpůsobený vaší firmě.
 
-|Dříve|Nyní|
+|Před|Po|
 |---|---|
 |![01](./media/whats-new-app-ui/windows_enroll_before_1803.png)|![01](./media/whats-new-app-ui/windows_enroll_after_1803.png)|
 |![02](./media/whats-new-app-ui/windows_view_policy_issues_before_1803.png)|![02](./media/whats-new-app-ui/windows_view_policy_issues_after_1803.png)
 
 ## <a name="week-of-march-12-2018"></a>Týden od 12. března 2018
 
-### <a name="company-portal-for-android-visual-updates----976944---"></a>Portál společnosti pro Visual Update pro Android <!-- 976944 -->
+### <a name="company-portal-for-android-visual-updates----976944---"></a>Vizuální aktualizace Portálu společnosti pro Android  <!-- 976944 -->
 
 Aktualizovali jsme aplikaci Portál společnosti pro Android v souladu s pokyny pro [Material Design](https://material.io/) Androidu.
 
-|Dříve|Nyní|
+|Před|Po|
 |---|---|
 |![01](./media/whats-new-app-ui/android_about_before_1803.png)|![01](./media/whats-new-app-ui/androidCP_about_after_1803.png)|
 |![02](./media/whats-new-app-ui/android_contact_it_before_1803.png)|![02](./media/whats-new-app-ui/android_contact_it_after_1803.png)|
@@ -264,7 +264,7 @@ Aktualizovali jsme aplikaci Portál společnosti pro Android v souladu s pokyny 
 
 ## <a name="week-of-november-27-2017"></a>Týden od 27. listopadu 2017
 
-### <a name="new-device-categories-step-in-guided-setup-for-the-company-portal-app-for-windows-10----1335292---"></a>Nový krok "kategorie zařízení" v Průvodci instalací aplikace Portál společnosti pro Windows 10 <!-- 1335292 -->
+### <a name="new-device-categories-step-in-guided-setup-for-the-company-portal-app-for-windows-10----1335292---"></a>Nový krok Kategorie zařízení v průvodci nastavením aplikace Portál společnosti pro Windows 10  <!-- 1335292 -->
 
 Pokud jste povolili [mapování skupin zařízení](../enrollment/device-group-mapping.md), aplikace Portál společnosti pro Windows 10 teď po registraci zařízení provádí uživatele přes výběr kategorie zařízení.
 
@@ -272,14 +272,14 @@ Pokud jste povolili [mapování skupin zařízení](../enrollment/device-group-m
 
 ## <a name="week-of-november-13-2017"></a>Týden od 13. listopadu 2017
 
-### <a name="improvements-to-device-setup-workflow-in-the-company-portal-for-ios-in-version-290----1417174---"></a>Vylepšení pracovního postupu instalace zařízení v Portál společnosti pro iOS ve verzi 2.9.0 <!-- 1417174 -->
+### <a name="improvements-to-device-setup-workflow-in-the-company-portal-for-ios-in-version-290----1417174---"></a>Vylepšení pracovního postupu instalace zařízení na Portálu společnosti pro iOS verze 2.9.0  <!-- 1417174 -->
 
 Vylepšili jsme pracovní postup instalace zařízení v aplikaci Portál společnosti pro iOS/iPadOS. Jazyk je uživatelsky přívětivější a tam, kde to bylo možné, jsme také sjednotili obrazovky. Také jsme použitím názvu vaší společnosti všude v textu instalace upravili jazyk tak, aby více odpovídal vaší společnosti.
 
 > [!NOTE]
-> Používáme název společnosti, který jste nastavili na portálu Azure Portal v **Microsoft Intune** > **Klientské aplikace** > **Značky Portálu společnosti** > **Název společnosti**. Pokud jste nenastavili tuto hodnotu, budeme používat název tenanta nastavený v **Azure Active Directory** > **Vlastnosti** > **Název**. Pokud jste název společnosti nenastavili v Portál společnosti brandingu a nechcete, aby se váš název tenanta zobrazoval, doporučujeme nastavit název společnosti na kartě Portál společnosti branding. Pokud nechcete, aby se tento řetězec zobrazoval v hlavičce v Portál společnosti, můžete zrušit zaškrtnutí políčka Zobrazit název společnosti vedle možnosti logo.
+> Název společnosti, který jste nastavili na webu Azure Portal, použijeme v **Microsoft Intune** > **klientských aplikacích** > **portál společnosti branding** > **název společnosti**. Pokud jste tuto hodnotu nestavili, použijeme název tenanta nastavený v **Azure Active Directory** > **vlastnosti** > **název**. Pokud jste název společnosti nenastavili v Portál společnosti brandingu a nechcete, aby se váš název tenanta zobrazoval, doporučujeme nastavit název společnosti na kartě Portál společnosti branding. Pokud nechcete, aby se tento řetězec zobrazoval v hlavičce v Portál společnosti, můžete zrušit zaškrtnutí políčka Zobrazit název společnosti vedle možnosti logo.
 
-|Dříve|Nyní|
+|Před|Po|
 |---|---|
 |![01](./media/whats-new-app-ui/ios_cp_enroll_01_before_1711.png)|![01](./media/whats-new-app-ui/ios_cp_enroll_01_after_1711.png)|
 |![02](./media/whats-new-app-ui/ios_cp_enroll_02_before_1711.png)|*Zkombinováno s předchozím krokem*|
@@ -295,19 +295,19 @@ Vylepšili jsme pracovní postup instalace zařízení v aplikaci Portál spole�
 ### <a name="updates-to-the-company-portal-app-for-windows-10---1299474--"></a>Aktualizace aplikace Portál společnosti pro Windows 10 <!--1299474-->
 Stránka Nastavení aplikace Portál společnosti pro Windows 10 je aktualizovaná, aby nastavení a zamýšlené akce uživatelů byly konzistentnější v rámci všech nastavení. Stránka také byla aktualizována tak, aby rozložením odpovídala jiným aplikacím pro Windows.
 
-|Dříve|Nyní|
+|Před|Po|
 |---|---|
 |![01](./media/whats-new-app-ui/w10-share-logs.png)|![02](./media/whats-new-app-ui/w10-share-logs-after-1711.png)|
 
 
-### <a name="search-improvements-to-the-company-portal-apps-and-website----1418189---"></a>Hledání ve Portál společnosti aplikací a na webu <!-- 1418189 -->
+### <a name="search-improvements-to-the-company-portal-apps-and-website----1418189---"></a>Vyhledání vylepšení pro aplikace a web Portál společnosti  <!-- 1418189 -->
 Aplikace Portál společnosti teď používají vyhledávání v kategoriích, názvech a popisech aplikací. Výsledky se seřazují v sestupném pořadí podle relevance. Tyto aktualizace jsou dostupné také na [webu Portál společnosti](https://portal.manage.microsoft.com).
 
 Stále ještě na vyhodnocení relevance pracujeme, tak nám prosím dejte prostřednictvím odkazu „Váš názor“ v dolní části webu Portál společnosti vědět, jak dobře toto vyhodnocení funguje.
 
 ## <a name="week-of-october-16-2017"></a>Týden od 16. října 2017
 
-### <a name="search-improvements-to-the-company-portal-website----1331697---"></a>Hledat na webu Portál společnosti vylepšení <!-- 1331697 -->
+### <a name="search-improvements-to-the-company-portal-website----1331697---"></a>Vyhledání vylepšení pro web Portál společnosti  <!-- 1331697 -->
 Vylepšujeme schopnosti vyhledávání aplikací a začali jsme u [webu Portál společnosti](https://portal.manage.microsoft.com). Vyhledávání bude nyní možné provádět nejen podle polí Název a Popis, ale také na základě kategorií aplikací. Výsledky budou ve výchozím nastavení seřazeny v sestupném pořadí podle relevance. 
 
 uživatelé iOS tuto změnu také dostanou, protože Portál společnosti web se používá také jako součást Portál společnosti aplikace pro iOS/iPadOS. Aplikace Portál společnosti pro Android a Windows obdrží podobné aktualizace v nadcházejících měsících.
@@ -315,16 +315,16 @@ uživatelé iOS tuto změnu také dostanou, protože Portál společnosti web se
 Stále ještě na vyhodnocení relevance pracujeme, tak nám prosím dejte prostřednictvím odkazu „Váš názor“ v dolní části webu Portál společnosti vědět, jak dobře toto vyhodnocení funguje.
 
 
-### <a name="ios-company-portal-displays-large-icons----1454593---"></a>iOS Portál společnosti zobrazuje velké ikony <!-- 1454593 -->
+### <a name="ios-company-portal-displays-large-icons----1454593---"></a>Portál společnosti pro iOS zobrazuje velké ikony  <!-- 1454593 -->
 Tato vydaná verze opravuje známý problém s tím, jak Portál společnosti pro iOS zobrazuje ikony v dlaždici aplikace. Pokud nahrajete ikony aplikace o rozměru 120×120 pixelů nebo větší, zobrazí se teď na [webu Portálu společnosti](https://portal.manage.microsoft.com) a na stránkách aplikací Portálu společnosti pro iOS v plné velikosti dlaždice aplikace.
 
 
 ## <a name="week-of-october-2-2017"></a>Týden od 2. října 2017
 
-### <a name="improvements-to-device-setup-workflow-in-company-portal----1490692---"></a>Vylepšení pracovního postupu instalace zařízení v Portál společnosti <!-- 1490692 -->
+### <a name="improvements-to-device-setup-workflow-in-company-portal----1490692---"></a>Vylepšení pracovního postupu instalace zařízení na Portálu společnosti  <!-- 1490692 -->
 Vylepšili jsme pracovní postup instalace zařízení v aplikaci Portál společnosti pro Android. Jazyk je uživatelsky přívětivější a přizpůsobenější potřebám vaší společnosti. Tam, kde to bylo možné, jsme také zkombinovali obrazovky. 
 
-|Dříve|Nyní|
+|Před|Po|
 |---|---|
 |![01](./media/whats-new-app-ui/android_cp_enroll_01_post_1709.png)|![01](./media/whats-new-app-ui/android_cp_enroll_01_1709_new.png)|
 |![01a](./media/whats-new-app-ui/android_cp_enroll_01_before_1710.png)| *Zkombinováno s předchozím krokem* |
@@ -333,7 +333,7 @@ Vylepšili jsme pracovní postup instalace zařízení v aplikaci Portál spole�
 
 Vylepšili jsme další kroky na zařízeních s pracovním profilem Androidu.
 
-|Dříve|Nyní|
+|Před|Po|
 |---|---|
 |![04](./media/whats-new-app-ui/android_work_cp_enroll_01_before_1710.png)|![04](./media/whats-new-app-ui/android_work_cp_enroll_01_after_1710.png)|
 |![05](./media/whats-new-app-ui/android_work_cp_enroll_02_before_1710.png)| *Zkombinováno s předchozím krokem* |
@@ -344,17 +344,17 @@ Vylepšili jsme další kroky na zařízeních s pracovním profilem Androidu.
 
 Aktualizovali jsme také obrazovku aktivace e-mailu podmíněného přístupu.
 
-|Dříve|Nyní|
+|Před|Po|
 |---|---|
 |![06](./media/whats-new-app-ui/android_conditional_access_email_before_1710.png)|![06](./media/whats-new-app-ui/android_conditional_access_email_after_1710.png)
 
 ## <a name="week-of-september-11-2017"></a>Týden od 11. září 2017
 
-### <a name="easier-to-understand-phrasing-for-the-company-portal-app-for-android----1396349---"></a>Snadnější pochopení formulace pro Portál společnosti aplikaci pro Android <!-- 1396349 -->  
+### <a name="easier-to-understand-phrasing-for-the-company-portal-app-for-android----1396349---"></a>Srozumitelnější text v aplikaci Portál společnosti pro Android  <!-- 1396349 -->  
 
 Proces registrace aplikace Portál společnosti pro Android byl zjednodušen novým textem, který koncovým uživatelům umožňuje jednodušší registraci. Pokud máte vlastní dokumentaci k registraci, měli byste ji aktualizovat, aby odrážela nové obrazovky. Ukázkové obrázky najdete tady:
 
-|Dříve|Nyní|
+|Před|Po|
 |---|---|
 |![01](./media/whats-new-app-ui/android_cp_enroll_01_before_1709.png)|![01](./media/whats-new-app-ui/android_cp_enroll_01_post_1709.png)|
 |![02](./media/whats-new-app-ui/android_cp_enroll_02_before_1709.png)|![02](./media/whats-new-app-ui/android_cp_enroll_02_post_1709.png)|
@@ -365,7 +365,7 @@ Proces registrace aplikace Portál společnosti pro Android byl zjednodušen nov
 
 ## <a name="august-2017"></a>Srpen 2017
 
-### <a name="ios-11-mail-app-will-support-oauth----1196951---"></a>aplikace pro iOS 11 mail bude podporovat OAuth. <!-- 1196951 -->
+### <a name="ios-11-mail-app-will-support-oauth----1196951---"></a>Aplikace Mail v iOSu 11 bude podporovat OAuth  <!-- 1196951 -->
 
 Podmíněný přístup s Intune podporuje bezpečnější ověřování na zařízeních s iOS pomocí OAuth. Pro podporu této funkce teď bude v aplikaci Portál společnosti pro iOS odlišný tok, který umožní ověřování s větším zabezpečením. Když se koncoví uživatelé pokusí v aplikaci Mail přihlásit k novému účtu Exchange, zobrazí se jim výzva ve webovém zobrazení. Při registraci v Intune se uživatelům zobrazí výzva, aby nativní aplikaci Mail povolili přístup k certifikátu. Většině koncových uživatelů se už nebudou zobrazovat žádné další e-maily v karanténě. Existující poštovní účty budou i nadále používat základní ověřovací protokol, a proto se uživatelům těchto účtů budou stále doručovat e-maily v karanténě. Prostředí pro přihlášení koncových uživatelů se podobá prostředí v mobilních aplikacích Office.
 
@@ -385,7 +385,7 @@ Podmíněný přístup s Intune podporuje bezpečnější ověřování na zař�
 
 
 
-### <a name="intune-mobile-application-management-mam-dialog-boxes-will-have-a-modern-interface----1199015---"></a>Dialogová okna správy mobilních aplikací (MAM) Intune budou mít moderní rozhraní. <!-- 1199015 -->
+### <a name="intune-mobile-application-management-mam-dialog-boxes-will-have-a-modern-interface----1199015---"></a>Dialogová okna správy mobilních aplikací (MAM) Intune mají moderní rozhraní  <!-- 1199015 -->
 
 Dialogová okna správy mobilních aplikací (MAM) Intune byla aktualizována na moderní vzhled. Dialogová okna fungují stejně jako v předchozím stylu.
 
@@ -406,13 +406,13 @@ V aplikaci Portál společnosti pro Windows 10 se značka __Kategorie__ přesouv
 
 ## <a name="july-2017"></a>Červenec 2017
 
-### <a name="apps-details-pages-will-display-new-information-for-android-devices---1287476--"></a>Na stránkách s podrobnostmi o aplikacích se zobrazí nové informace pro zařízení s Androidem. <!--1287476-->
+### <a name="apps-details-pages-will-display-new-information-for-android-devices---1287476--"></a>Stránky podrobností o aplikacích zobrazují nové informace pro zařízení s Androidem  <!--1287476-->
 
 Na stránce podrobností o aplikacích v aplikaci Portál společnosti pro Android se nyní zobrazují kategorie aplikací, které správce IT pro tuto aplikaci určil.
 
 ![Nová stránka podrobností o aplikacích](./media/whats-new-app-ui/cp_android_appdetails_after_1708.png)
 
-### <a name="improved-sign-in-experience-across-company-portal-apps-for-all-platforms---user-story-1132123--"></a>Vylepšené přihlašování napříč Portál společnosti aplikacemi pro všechny platformy <!--User Story 1132123-->
+### <a name="improved-sign-in-experience-across-company-portal-apps-for-all-platforms---user-story-1132123--"></a>Vylepšené přihlašování k aplikacím Portál společnosti na všech platformách  <!--User Story 1132123-->
 
 Oznamujeme změnu, která se chystá během několika následujících měsíců, což vylepšit možnosti přihlašování pro Portál společnosti Intune aplikace pro Android, iOS/iPadOS a Windows. Nové uživatelské prostředí se automaticky zobrazí na všech platformách pro aplikaci Portál společnosti, až Azure AD tuto změnu provede. Kromě toho se teď uživatelé můžou k Portálu společnosti přihlašovat z jiného zařízení pomocí vygenerovaného kódu na jedno použití. To se hodí hlavně v případech, kdy se uživatelé potřebují přihlásit bez přihlašovacích údajů.  
 
@@ -444,7 +444,7 @@ Klepněte na odkaz __Přihlásit z jiného zařízení__.
 
 ![Zobrazí se pokyny, abyste ze svého pracovního počítače přešli na stránku aka.ms/devicelogin s jedinečným přístupovým kódem a pak kód použili k přihlášení.](./media/whats-new-app-ui/cp_ios_aad_signin_from_another_device_after_1704_003.png)
 
-Spusťte prohlížeč a přejděte na [https://aka.ms/devicelogin](https://aka.ms/devicelogin).
+Spusťte prohlížeč a pak přejít na [https://aka.ms/devicelogin](https://aka.ms/devicelogin).
 
 ![Obrázek uživatelova prohlížeče na pracovním počítači místo aplikace Portál společnosti. Zobrazená stránka „Přihlášení na zařízení“ uživatele vyzve k zadání kódu, který dostal v aplikaci Portál společnosti.](./media/whats-new-app-ui/cp_ios_aad_signin_from_another_device_after_1704_004.png)
 
@@ -475,15 +475,15 @@ Zařízení je stále možné zaregistrovat do plné správy klepnutím na nabí
 
 ![Obrázek aplikace Portál společnosti pro Android se zobrazenou nabídkou v horním pravém rohu obrazovky, kde je stále k dispozici možnost registrace zařízení.](./media/whats-new-app-ui/and_sign_in_menu_after_app_protection_policy_enrolled_after_1706.png)
 
-### <a name="improvements-to-app-syncing-with-windows-10-creators-update---676505--"></a>Vylepšení synchronizace aplikací s Windows 10 Creators Update <!--676505-->
+### <a name="improvements-to-app-syncing-with-windows-10-creators-update---676505--"></a>Vylepšení synchronizace aplikace s Windows 10 Creators Update  <!--676505-->
 
-Aplikace Portál společnosti pro Windows 10 teď automaticky zahájí synchronizaci pro požadavky na instalaci zařízení s Windows 10 Creators Update (verze 1703). Omezí se tím potíže s pozastavením instalací aplikace ve stavu čekající synchronizace. Uživatelé navíc budou moct synchronizaci zahájit ručně uvnitř aplikace.
+Aplikace Portál společnosti pro Windows 10 teď automaticky zahájí synchronizaci žádostí o instalaci aplikací pro zařízení s Windows 10 Creators Update (verze 1709). Omezí se tím potíže s pozastavením instalací aplikace ve stavu čekající synchronizace. Uživatelé navíc budou moct synchronizaci zahájit ručně uvnitř aplikace.
 
 ![Obrázek aplikace Portál společnosti pro Windows 10, kde se právě čeká na spuštění stahování Microsoft Wordu z obchodu s aplikacemi na Portálu společnosti.](./media/whats-new-app-ui/w10_download_pending_after_1706.png)
 
 ![Obrázek aplikace Portál společnosti pro Windows 10 v nově zavedeném stavu automatické synchronizace a se zobrazenou stavovou zprávou o tom, že probíhá synchronizace zařízení a pokus o stažení aplikace.](./media/whats-new-app-ui/w10_download_pending_syncing_after_1706.png)
 
-### <a name="new-guided-experience-for-windows-10-company-portal----1058938---"></a>Nové prostředí s asistencí pro Windows 10 Portál společnosti <!---1058938--->
+### <a name="new-guided-experience-for-windows-10-company-portal----1058938---"></a>Nové prostředí s asistencí pro portál společnosti s Windows 10  <!---1058938--->
 Aplikace Portál společnosti pro Windows 10 bude obsahovat návod s pokyny Intune pro zařízení, která nejsou identifikovaná nebo zaregistrovaná. Nové prostředí obsahuje podrobné pokyny, které provedou uživatele registrací do Azure Active Directory (která je nutná pro funkce podmíněného přístupu), a zápis do MDM (který je nutný pro funkce správy zařízení). Prostředí s asistencí bude přístupné z domovské stránky portálu společnosti. Uživatelé můžou aplikaci dál používat, i když registraci a zápis neprovedou, ale budou mít k dispozici omezené funkce.
 
 Tato aktualizace se zobrazí pouze na zařízení s Windows 10 Anniversary Update (build 1607) a novějšími verzemi.
@@ -498,21 +498,21 @@ Tato aktualizace se zobrazí pouze na zařízení s Windows 10 Anniversary Updat
 
 ![Obrázek obrazovky s dokončením nastavení v aplikaci Portál společnosti pro Windows 10, která uživateli sděluje, že je všechno nastavené a že zařízení je zaregistrované a je k němu správně přidaný podnikový účet.](./media/whats-new-app-ui/win10_guided_enroll_youre_all_set_after_1706.png)
 
-### <a name="new-menu-action-to-easily-remove-company-portal---1164569--"></a>Nová akce nabídky pro snadné odebrání Portál společnosti <!--1164569-->
+### <a name="new-menu-action-to-easily-remove-company-portal---1164569--"></a>Nová akce nabídky ke snadnému odebrání Portálu společnosti  <!--1164569-->
 Na základě zpětné vazby od uživatelů jsme do aplikace Portál společnosti pro Android přidali novou akci nabídky k zahájení odebrání Portálu společnosti ze zařízení. Tato akce odebere zařízení ze správy Intune, aby uživatel mohl aplikaci ze zařízení odebrat.
 
-![Obrázek aplikace Portál společnosti pro Android s otevřenou nabídkou akcí v pravém horním rohu. Nová možnost Odebrat portál společnosti je k dispozici jako třetí pod možnostmi Můj profil a Nastavení a nad možnostmi Podmínky, Nápověda a váš názor a O produktu.](./media/whats-new-app-ui/android_remove_cp_menu_action_after_1705.png)
+![Obrázek aplikace Portál společnosti pro Android s otevřenou nabídkou akcí v pravém horním rohu Nová možnost Odebrat Portál společnosti je k dispozici jako třetí pod možnostmi Můj profil a Nastavení a nad možnostmi Podmínky, Nápověda a váš názor a O produktu.](./media/whats-new-app-ui/android_remove_cp_menu_action_after_1705.png)
 
-![Obrázek potvrzovacího okna, které se otevře, když v nabídce akcí vyberete možnost Odebrat Portál společnosti. V dialogovém okně se uživateli zobrazí následující informace: „Pokud odeberete Portál společnosti, váš správce IT už nebude vaše zařízení spravovat a může odebrat přístup k podnikovým datům, aplikacím a e-mailu.“ Pak uživatele požádá o potvrzení, jestli chce aplikaci Portál společnosti skutečně odebrat. Pokud ji chce odebrat, musí zvolit Ano.](./media/whats-new-app-ui/android_remove_cp_menu_confirmation_after_1705.png)
+![Obrázek potvrzovacího okna, které se otevře, když v nabídce akcí vyberete možnost Odebrat Portál společnosti. V dialogovém okně se uživateli zobrazí následující informace: „Pokud odeberete Portál společnosti, váš správce IT už nebude vaše zařízení spravovat a může odebrat přístup k podnikovým datům, aplikacím a e-mailu.“ Pak uživatele vyzve, aby potvrdil, že chce aplikaci Portál společnosti skutečně odebrat. Pokud ji uživatel chce odebrat, vybere Ano.](./media/whats-new-app-ui/android_remove_cp_menu_confirmation_after_1705.png)
 
 ### <a name="improvements-to-the-app-tiles-in-the-company-portal-app-for-ios---1230777--"></a>Vylepšení dlaždic aplikací v aplikaci Portál společnosti pro iOS <!--1230777-->
 Aktualizovali jsme vzhled dlaždic aplikací na domovské stránce tak, aby odrážely barvu brandingu nastavenou v Portálu společnosti.
 
-**Dříve**
+**Před**
 
 ![Obrázek aplikace Portál společnosti pro iOS z doby před aktualizací, která zobrazovala přednastavené obrázky s výplní pro Všechny aplikace, Vybrané aplikace a Kategorie.](./media/whats-new-app-ui/cp_ios_homepage_before_1705.png)
 
-**Nyní**
+**Po**
 
 ![Obrázek aplikace Portál společnosti pro iOS po aktualizaci, která teď odráží možnost vybrat libovolné barvy relevantní pro vaši organizaci.](./media/whats-new-app-ui/cp_ios_homepage_after_1705.png)
 
@@ -523,7 +523,7 @@ Pokud uživatelé na zařízení s iOSem použili svůj pracovní nebo školní 
 
 ## <a name="april-2017"></a>Duben 2017
 
-### <a name="new-icons-for-the-managed-browser-and-the-company-portal---918433-918431--"></a>Nové ikony pro Managed Browser a Portál společnosti <!--918433, 918431-->
+### <a name="new-icons-for-the-managed-browser-and-the-company-portal---918433-918431--"></a>Nové ikony pro Managed Browser a Portál společnosti  <!--918433, 918431-->
 
 Managed Browser dostal aktualizované ikony pro verze aplikace pro Android i iOS. Nová ikona bude obsahovat aktualizovaný odznak Intune, aby byla konzistentnější s ostatními aplikacemi v Enterprise Mobility + Security (EM+S).
 
@@ -544,7 +544,7 @@ Managed Browser dostal aktualizované ikony pro verze aplikace pro Android i iOS
 
 Portál společnosti také dostal aktualizované ikony pro verze aplikace pro Android, iOS i Windows, aby byly konzistentnější s ostatními aplikacemi v EM+S. Tyto ikony se budou postupně vydávat pro všechny platformy od dubna do konce května.
 
-### <a name="sign-in-progress-indicator-in-android-company-portal---953374--"></a>Indikátor průběhu přihlašování v Androidu Portál společnosti <!--953374-->
+### <a name="sign-in-progress-indicator-in-android-company-portal---953374--"></a>Ukazatel průběhu přihlášení v Portálu společnosti pro Android  <!--953374-->
 
 Aktualizace aplikace Portál společnosti pro Android zobrazuje indikátor průběhu přihlášení, když uživatel aplikaci spustí nebo pokračuje v jejím používání. Než uživatel získá přístup k aplikaci, indikátor postupně zobrazuje nové stavy od „Připojování...“ přes „Přihlašování...“ po „Kontrolují se požadavky na zabezpečení...“.
 
@@ -566,16 +566,16 @@ Aktualizace aplikace Portál společnosti pro Android zobrazuje indikátor průb
 </body>
 </html>
 
-### <a name="improved-app-install-status-for-the-windows-10-company-portal-app---676495--"></a>Vylepšený stav instalace aplikace pro Portál společnosti aplikaci pro Windows 10 <!--676495-->
+### <a name="improved-app-install-status-for-the-windows-10-company-portal-app---676495--"></a>Vylepšený stav instalace aplikace pro aplikaci Portál společnosti ve Windows 10  <!--676495-->
 Na stránce podrobností aplikace v aplikaci Portál společnosti ve Windows 10 se teď zobrazuje indikátor průběhu instalace. To platí pro moderní aplikace na zařízeních s Windows 10 Anniversary Update a novějšími verzemi.
 
-__Před__ ![image předchozí verze načítací obrazovky, kde se stav jednoduše označuje jako "Install."](./media/whats-new-app-ui/cp_win10_install_status_before_1704.png)
+__Před__ ![Obrázek předchozí verze načítací obrazovky, na které se jako stav zobrazovalo jen oznámení o tom, že probíhá instalace.](./media/whats-new-app-ui/cp_win10_install_status_before_1704.png)
 
-__Po__ ![obrázek aktualizované verze zkušební obrazovky, která nyní zobrazuje indikátor průběhu instalace.](./media/whats-new-app-ui/cp_win10_install_status_after_1704.png)
+__Po__ ![Obrázek aktualizované verze načítací obrazovky, na které se teď zobrazuje indikátor průběhu instalace.](./media/whats-new-app-ui/cp_win10_install_status_after_1704.png)
 
 ## <a name="february-2017"></a>Únor 2017
 
-### <a name="new-user-experience-for-the-company-portal-app-for-android---621622-announced-1702--"></a>Nové uživatelské prostředí pro aplikaci Portál společnosti pro Android <!--621622, announced 1702-->
+### <a name="new-user-experience-for-the-company-portal-app-for-android---621622-announced-1702--"></a>Nové uživatelské prostředí aplikace Portál společnosti pro Android  <!--621622, announced 1702-->
 Od března bude aplikace Portál společnosti pro Android odpovídat [specifikacím Material Design](https://material.io/guidelines/material-design/introduction.html) a získá tak modernější vzhled a chování. Toto vylepšené uživatelské prostředí zahrnuje:
 
 * __Barvy__: Záhlaví karet můžou mít barvy podle vaší vlastní palety barev.
@@ -586,7 +586,7 @@ Od března bude aplikace Portál společnosti pro Android odpovídat [specifikac
 
 ![Nalevo je obrázek aplikace Portál společnosti pro Android před aktualizací. Napravo je obrázek aplikace Portál společnosti pro Android po aktualizaci. Na obou obrázcích je karta Aplikace jako vybraná karta ze tří dostupných karet Aplikace, Zařízení a Kontaktovat oddělení IT.](./media/whats-new-app-ui/CP_Android_AppsTab_BeforeAfter.png)
 
-* __Navigace__: V části Všechny aplikace se teď zobrazují karty __Doporučené__, __Vše__ a __Kategorie__, které zjednodušují navigaci. __Kontaktovat oddělení IT__ je teď jednodušší a s vylepšenou čitelností.
+* __Navigace__: u všech aplikací se zobrazuje seznam __doporučených__, __všech__ a __kategorií__ s kartami, které usnadňují navigaci. __Kontaktovat oddělení IT__ je teď jednodušší a s vylepšenou čitelností.
 
 <html>
 <body>
@@ -602,7 +602,7 @@ Od března bude aplikace Portál společnosti pro Android odpovídat [specifikac
 
 ## <a name="january-2017"></a>Leden 2017
 
-### <a name="modernizing-the-company-portal-website---753980-announced-1701--"></a>Modernizaci web Portál společnosti <!--753980, announced 1701-->
+### <a name="modernizing-the-company-portal-website---753980-announced-1701--"></a>Modernizace webu Portál společnosti  <!--753980, announced 1701-->
 Od února bude web Portál společnosti podporovat aplikace zaměřené na uživatele, kteří nemají spravovaná zařízení. Tento web bude podobně jako ostatní produkty a služby Microsoftu používat nové kontrastní barevné schéma, dynamické ilustrace a „hamburgerovou“ nabídku ![Obrázek hamburgerové nabídky, která je teď přidaná v levém horním rohu webu Portál společnosti](./media/whats-new-app-ui/CP_hamburger_menu.png) , která bude obsahovat kontaktní údaje helpdesku a informace o existujících spravovaných zařízeních. Cílová stránka bude mít nové uspořádání, které zdůrazní aplikace dostupné uživatelům – s karusely pro Vybrané a Nedávno aktualizované aplikace.
 
 ![Vlevo je obrázek současné verze webu Portál společnosti s předchozí verzí zobrazení Aplikace, Moje zařízení, Doporučené a Kategorie. Vpravo je obrázek aktualizované verze webu Portál společnosti s novým karuselem aplikací, seznamem Nedávno publikované aplikace a aktualizovaným zobrazením Kategorie.](./media/whats-new-app-ui/CP_Website_BeforeAfter_Feb2016.png)

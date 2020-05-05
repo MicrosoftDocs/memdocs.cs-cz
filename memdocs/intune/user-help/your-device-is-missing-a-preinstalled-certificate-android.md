@@ -19,16 +19,16 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 341cb27d59786802124a575b04a2809ba6f3a987
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 827780900904f4a04575b6ed6d1363112b8c6eec
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79323899"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079922"
 ---
 # <a name="your-android-device-is-missing-a-certificate-that-usually-comes-installed-on-your-phone"></a>Ve vašem zařízení s Androidem chybí certifikát, který je v telefonu obvykle nainstalovaný
 
-Pokud zařízení není zaregistrované v Intune a chybí mu certifikát, který je v telefonu obvykle nainstalovaný, nebudete se k aplikaci Portál společnosti moct přihlásit. Při pokusu o přihlášení se zobrazí tato zpráva:
+Pokud zařízení není zaregistrované v Intune a chybí mu certifikát, který je obvykle nainstalovaný v telefonu, nebudete se moct přihlásit k aplikaci Portál společnosti. Při pokusu o přihlášení se zobrazí tato zpráva:
 
 ![screenshot-error-message-about-missing-certificate](./media/andr-cert_install-1-cert_missing.png)
 
@@ -40,7 +40,7 @@ Tento problém můžete opravit, když si požadovaný certifikát stáhnete ze 
 
 3. Vaše zařízení vás vyzve k **pojmenování certifikátu**. Neměňte výchozí název certifikátu, který se zobrazí.
 
-4. Ujistěte se, že **Použití přihlašovacích údajů** je nastavené na **Použito pro VPN a aplikace**, a potom klepněte na **OK**.
+4. Zajistěte, aby bylo **použití přihlašovacích údajů** nastaveno na **použití pro sítě VPN a aplikace**, a pak klepněte na **OK**.
 
     ![screenshot-certificate-name-dialog-showing-baltimore-certificate-name](./media/andr-cert_install-2-add_cert_name.png)
 

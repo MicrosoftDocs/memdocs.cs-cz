@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/03/2020
+ms.date: 04/22/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 635804a9ad5cd76d104f16bcd204df1daa28b114
-ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
+ms.openlocfilehash: 86117193ce7aae01380923ce26f84dfb5ba97a4d
+ms.sourcegitcommit: 53bab52e42de28b87e53596646a3532e25eb9c14
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80696505"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82182289"
 ---
 # <a name="data-protection-framework-using-app-protection-policies"></a>Architektura ochrany dat pomocí zásad ochrany aplikací 
 
@@ -37,7 +37,7 @@ Konfigurační rozhraní ochrany dat aplikace je rozdělené do tří různých 
 
 - Level 2 Enterprise Enhanced Data Protection – Microsoft doporučuje tuto konfiguraci pro zařízení, kde uživatelé přistupují k citlivým nebo důvěrným informacím. Tato konfigurace platí pro většinu mobilních uživatelů, kteří přistupují k pracovním nebo školním datům. Některé ovládací prvky mohou ovlivnit činnost koncového uživatele.
 
-- Level 3 Enterprise high data Protection – Microsoft doporučuje tuto konfiguraci pro zařízení spuštěná v organizaci s větším nebo výkonnějším bezpečnostním týmem nebo pro konkrétní uživatele nebo skupiny, které mají jednoznačně vysoké riziko (jako jeden příklad, jedna organizace identifikovala uživatele, kteří zpracovávají data, jejichž krádež by přímo a vážně ovlivnily svou cenu akcií). Organizace, která bude pravděpodobně cílena prostřednictvím dobře financované a sofistikované nežádoucí osoby, by měla snažíme na tuto konfiguraci.
+- Level 3 Enterprise high data Protection – Microsoft doporučuje tuto konfiguraci pro zařízení spuštěná v organizaci s větším nebo výkonnějším bezpečnostním týmem nebo pro konkrétní uživatele nebo skupiny, které mají jednoznačně vysoké riziko (uživatelé, kteří zpracovávají vysoce citlivá data, pokud neoprávněná vyzrazení způsobuje značnou materiální ztrátu v organizaci). Organizace, která bude pravděpodobně cílena prostřednictvím dobře financované a sofistikované nežádoucí osoby, by měla snažíme na tuto konfiguraci.
 
 ## <a name="app-data-protection-framework-deployment-methodology"></a>Metodologie nasazení architektury APP data Protection
 
@@ -45,11 +45,11 @@ Stejně jako u jakéhokoli nasazení nového softwaru, funkcí nebo nastavení d
 
 Společnost Microsoft doporučuje pro architekturu ochrany dat aplikací následující aktualizační přístup k nasazení:
 
-| Aktualizační kanál nasazení  | Klient  | Týmy posouzení  | Výstup  | Časová osa  |
+| Aktualizační kanál nasazení  | Tenant  | Týmy posouzení  | Výstup  | Časová osa  |
 |--------------------|------------------------|-------------------------------------------------------------------|----------------------------------------------------------|----------------------------------------|
-| Zabezpečování kvality  | Předprodukční tenant  | Vlastníci funkce, zabezpečení, posouzení rizik, soukromí, uživatelské rozhraní  | Ověřování funkčních scénářů, koncept dokumentace  | 0-30 dní  |
+| Kontrola kvality  | Předprodukční tenant  | Vlastníci funkce, zabezpečení, posouzení rizik, soukromí, uživatelské rozhraní  | Ověřování funkčních scénářů, koncept dokumentace  | 0-30 dní  |
 | Preview  | Provozní tenant  | Vlastníci mobilních funkcí, UX  | Ověření scénáře koncového uživatele, dokumentace k uživateli  | 7-14 dní, vyúčtování kvality  |
-| Výroba  | Provozní tenant  | Vlastníci na mobilní funkce, IT oddělení technické podpory  | NEUŽÍVÁ SE.  | 7 dní do několika týdnů, po verzi Preview  |
+| Výroba  | Provozní tenant  | Vlastníci na mobilní funkce, IT oddělení technické podpory  | –  | 7 dní do několika týdnů, po verzi Preview  |
 
 Jak uvádí výše uvedená tabulka, všechny změny zásad ochrany aplikací by se měly nejdřív provést v předprodukčním prostředí, aby se porozumělo nastavení zásad. Po dokončení testování je možné změny přesunout do produkčního prostředí a použít na podmnožinu produkčních uživatelů, obecně, IT oddělení a dalších příslušných skupin. A nakonec můžete zavedení dokončit pro ostatní uživatele mobilní komunity. Zavedení do produkčního prostředí může trvat delší dobu v závislosti na rozsahu dopadu na změnu. Pokud nedochází k žádnému dopadu na uživatele, změna by se měla rychle vymezit, zatímco pokud změna vznikne vlivem na uživatele, může být potřeba, aby se povedlo zpomalit, protože je potřeba sdělit změny naplnění uživatele.
 
@@ -73,7 +73,7 @@ Pro každou zásadu ochrany aplikací by měly být zahrnuté následující zá
 - Edge
 - Excel
 - Office
-- OneDrivu
+- OneDrive
 - OneNote
 - Outlook
 - PowerPoint
@@ -99,10 +99,10 @@ Zásady na úrovni 1 vynutily rozumnou úroveň přístupu k datům a současně
 | Přenos dat |       Příjem dat z jiných aplikací  |             Všechny aplikace  |             iOS/iPadOS, Android        |
 | Přenos dat |       Omezit vyjmutí, kopírování a vložení mezi aplikacemi  |             Libovolná aplikace  |             iOS/iPadOS, Android        |
 | Přenos dat |       Klávesnice třetích stran  |             Povolit  |             iOS/iPadOS        |
-| Přenos dat |       Schválené klávesnice  |             Nevyžadováno  |             Android        |
+| Přenos dat |       Schválené klávesnice  |             Není požadováno  |             Android        |
 | Přenos dat |       Snímek obrazovky a pomocník Google  |             Povolit  |             Android        |
-| Šifrování |             Šifrování dat organizace  |             Požadováno  |             iOS/iPadOS, Android        |
-| Šifrování |       Šifrování dat organizace v zaregistrovaných zařízeních  |             Požadováno  |             Android        |
+| Šifrování |             Šifrování dat organizace  |             Vyžadovat  |             iOS/iPadOS, Android        |
+| Šifrování |       Šifrování dat organizace v zaregistrovaných zařízeních  |             Vyžadovat  |             Android        |
 | Funkce  |             Synchronizace aplikace s nativní aplikací kontaktů  |             Povolit  |             iOS/iPadOS, Android        |
 | Funkce  |       Tisk organizačních dat  |             Povolit  |             iOS/iPadOS, Android        |
 | Funkce  |       Omezení přenosu webového obsahu u jiných aplikací  |             Libovolná aplikace  |             iOS/iPadOS, Android        |
@@ -112,17 +112,17 @@ Zásady na úrovni 1 vynutily rozumnou úroveň přístupu k datům a současně
 
 | Nastavení  | Hodnota  | Platforma  | Poznámky  |
 |----------------------------------------------------------------|---------------|----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Připnout pro přístup  | Požadováno  | iOS/iPadOS, Android  |   |
-| Typ kódu PIN  | Číselné  | iOS/iPadOS, Android  |   |
+| Připnout pro přístup  | Vyžadovat  | iOS/iPadOS, Android  |   |
+| Typ kódu PIN  | Numeric  | iOS/iPadOS, Android  |   |
 | Jednoduchý PIN kód  | Povolit  | iOS/iPadOS, Android  |   |
 | Vyberte minimální délku PIN kódu.  | 4  | iOS/iPadOS, Android  |   |
 | Biometrika místo kódu PIN pro přístup  | Povolit  | iOS/iPadOS, Android  |   |
-| Přepsat biometriku místo kódu PIN pro přístup  | Požadováno  | iOS/iPadOS, Android  |   |
+| Přepsat biometriku místo kódu PIN pro přístup  | Vyžadovat  | iOS/iPadOS, Android  |   |
 | Časový limit (minuty aktivity)  | 720  | iOS/iPadOS, Android  |   |
 | ID obličeje místo kódu PIN pro přístup  | Povolit  | iOS/iPadOS  |   |
 | Resetovat PIN kód po počtu dní  | Ne  | iOS/iPadOS, Android  |   |
-| PIN kód aplikace, když je nastavený PIN kód zařízení  | Požadováno  | iOS/iPadOS, Android  | Pokud je zařízení zaregistrované v Intune, můžou správci zvážit nastavení "Nepožadováno", pokud vynucuje silný PIN kód zařízení pomocí zásad dodržování předpisů zařízením.  |
-| Přihlašovací údaje k pracovnímu nebo školnímu účtu pro přístup  | Nevyžadováno  | iOS/iPadOS, Android  |   |
+| PIN kód aplikace, když je nastavený PIN kód zařízení  | Vyžadovat  | iOS/iPadOS, Android  | Pokud je zařízení zaregistrované v Intune, můžou správci zvážit nastavení "Nepožadováno", pokud vynucuje silný PIN kód zařízení pomocí zásad dodržování předpisů zařízením.  |
+| Přihlašovací údaje k pracovnímu nebo školnímu účtu pro přístup  | Není požadováno  | iOS/iPadOS, Android  |   |
 | Znovu ověřit požadavky na přístup po (minuty neaktivity)  | 30  | iOS/iPadOS, Android  |   |
 
 #### <a name="conditional-launch"></a>Podmíněné spouštění 
@@ -146,12 +146,12 @@ Nastavení zásad, která jsou vydaná na úrovni 2, zahrnují všechna nastaven
 
 | Nastavení | Popis nastavení |             Hodnota  |             Platforma        | Poznámky |
 |---------------|----------------------------------------------------------|-----------------------------------------------|---------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Přenos dat |       Zálohovat organizační data do...  |          Blokování  |          iOS/iPadOS, Android  |                  |
+| Přenos dat |       Zálohovat organizační data do...  |          Blok  |          iOS/iPadOS, Android  |                  |
 | Přenos dat |       Posílání organizačních dat do jiných aplikací  |          Aplikace spravované podle zásad  |          iOS/iPadOS, Android  |          <p>S iOS/iPadOS můžou správci nakonfigurovat tuto hodnotu jako "aplikace spravované zásadou", "aplikace spravované zásadou" s funkcí sdílení operačního systému "nebo" aplikace spravované podle zásad s filtrováním Open-in/sdílení ". </p><p>Aplikace spravované podle zásad se sdílením operačního systému jsou dostupné, pokud je zařízení také zaregistrované v Intune. Toto nastavení umožňuje přenos dat do jiných aplikací spravovaných zásadou a také přenos souborů do jiných aplikací spravovaných pomocí Intune. </p><p>Aplikace spravované podle zásad s filtrováním Open-in/sdílení vyfiltrují dialogová okna otevřít v operačním systému nebo sdílet, aby zobrazovala jenom aplikace spravované zásadami. </p><p> Další informace najdete v tématu [nastavení zásad ochrany aplikací pro iOS](app-protection-policy-settings-ios.md).</p> |
-| Přenos dat |       Uložení kopií dat org  |          Blokování  |          iOS/iPadOS, Android  |                  |
+| Přenos dat |       Uložení kopií dat org  |          Blok  |          iOS/iPadOS, Android  |                  |
 | Přenos dat |       Umožňuje uživatelům ukládat kopie do vybraných služeb.  |          OneDrive pro firmy, SharePoint Online |          iOS/iPadOS, Android  |                  |
 | Přenos dat |       Omezit vyjmutí, kopírování a vložení mezi aplikacemi  |          Aplikace s vložením spravované podle zásad  |          iOS/iPadOS, Android  |                  |
-| Přenos dat |       Snímek obrazovky a pomocník Google  |          Blokování  |          Android  |                  |
+| Přenos dat |       Snímek obrazovky a pomocník Google  |          Blok  |          Android  |                  |
 | Funkce |       Omezení přenosu webového obsahu u jiných aplikací  |          Microsoft Edge  |          iOS/iPadOS, Android  |                  |
 | Funkce |       Oznámení o datech organizace  |          Blokovat organizační data  |          iOS/iPadOS, Android  |          Seznam aplikací, které podporují toto nastavení, najdete v tématu nastavení [zásad ochrany aplikací pro iOS](app-protection-policy-settings-ios.md) a [nastavení zásad ochrany aplikací pro Android](app-protection-policy-settings-android.md).       |
 
@@ -159,9 +159,9 @@ Nastavení zásad, která jsou vydaná na úrovni 2, zahrnují všechna nastaven
 
 | Nastavení | Popis nastavení |          Hodnota/akce  |          Platforma        | Poznámky |
 |--------------------|----------------------------|-----------------------------------------------------------|----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Podmínky zařízení  |       Minimální verze operačního systému  |          *Format: Hlavní_verze. podverze. Build <br>příklad: 12.4.4* /Block Access |          iOS/iPadOS        | Microsoft doporučuje nakonfigurovat minimální hlavní verzi iOS tak, aby odpovídala podporovaným verzím iOS pro aplikace Microsoftu.   Aplikace Microsoftu podporují N-1 přístup, kde N je aktuální hlavní verze iOS. V případě hodnot menších verzí a verze sestavení doporučuje společnost Microsoft zajistit, aby byla zařízení v aktuálním stavu s příslušnými aktualizacemi zabezpečení. Seznamte se s [aktualizacemi zabezpečení Apple](https://support.apple.com/en-us/HT201222) pro nejnovější doporučení společnosti Apple. |
-| Podmínky zařízení  |       Minimální verze operačního systému  |          *Formát: hlavní. vedlejší<br> příklad: 8,0* /blokovat přístup   |          Android        | Microsoft doporučuje nakonfigurovat minimální hlavní verzi Androidu tak, aby odpovídala podporovaným verzím Androidu pro aplikace Microsoftu. Výrobci OEM a zařízení, kteří dodržují doporučené požadavky na Android Enterprise, musí podporovat aktuální dodací verzi a jeden upgrade na jedno písmeno.   V současné době Android doporučuje Android 8,0 a novější pro pracovníky znalostní báze.   Nejnovější doporučení pro Android najdete v tématu [Doporučené požadavky pro Android Enterprise](https://www.android.com/enterprise/recommended/requirements/) |
-| Podmínky zařízení  |       Minimální verze opravy  |          *Formát: RRRR-MM-DD <br> příklad: 2020-01-01* /blokovat přístup  |          Android        | Zařízení s Androidem můžou přijímat měsíční opravy zabezpečení, ale tato verze závisí na výrobci OEM nebo nosiči. Organizace musí před implementací tohoto nastavení zajistit, aby nasazená zařízení s Androidem přijímala aktualizace zabezpečení. Nejnovější verze oprav najdete v [bulletinech zabezpečení pro Android](https://source.android.com/security/bulletin/) .  |
+| Podmínky zařízení  |       Minimální verze operačního systému  |          *Format: Hlavní_verze. podverze. <br>sestavení příklad: 12.4.6* /Block Access |          iOS/iPadOS        | Microsoft doporučuje nakonfigurovat minimální hlavní verzi iOS tak, aby odpovídala podporovaným verzím iOS pro aplikace Microsoftu.   Aplikace Microsoftu podporují N-1 přístup, kde N je aktuální hlavní verze iOS. V případě hodnot menších verzí a verze sestavení doporučuje společnost Microsoft zajistit, aby byla zařízení v aktuálním stavu s příslušnými aktualizacemi zabezpečení. Seznamte se s [aktualizacemi zabezpečení Apple](https://support.apple.com/en-us/HT201222) pro nejnovější doporučení společnosti Apple. |
+| Podmínky zařízení  |       Minimální verze operačního systému  |          *Formát: hlavní. vedlejší<br> příklad: 5,0* /blokovat přístup   |          Android        | Microsoft doporučuje nakonfigurovat minimální hlavní verzi Androidu tak, aby odpovídala podporovaným verzím Androidu pro aplikace Microsoftu. Výrobci OEM a zařízení, kteří dodržují doporučené požadavky na Android Enterprise, musí podporovat aktuální dodací verzi a jeden upgrade na jedno písmeno.   V současné době Android doporučuje Android 8,0 a novější pro pracovníky znalostní báze.   Nejnovější doporučení pro Android najdete v tématu [Doporučené požadavky pro Android Enterprise](https://www.android.com/enterprise/recommended/requirements/) |
+| Podmínky zařízení  |       Minimální verze opravy  |          *Formát: rrrr-mm-dd <br> příklad: 2020-01-01* /blokovat přístup  |          Android        | Zařízení s Androidem můžou přijímat měsíční opravy zabezpečení, ale tato verze závisí na výrobci OEM nebo nosiči. Organizace musí před implementací tohoto nastavení zajistit, aby nasazená zařízení s Androidem přijímala aktualizace zabezpečení. Nejnovější verze oprav najdete v [bulletinech zabezpečení pro Android](https://source.android.com/security/bulletin/) .  |
 
 #### <a name="level-3-enterprise-high-data-protection"></a>Úroveň 3; podniková ochrana dat – vysoká 
 
@@ -174,16 +174,16 @@ Nastavení zásad, která jsou vydaná v úrovni 3, zahrnují všechna nastaven�
 | Nastavení | Popis nastavení |             Hodnota  |             Platforma        | Poznámky |
 |---------------|---------------------------------------|----------------------------------------|--------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Přenos dat |       Příjem dat z jiných aplikací  |          Aplikace spravované podle zásad  |          iOS/iPadOS, Android         |  |
-| Přenos dat |       Klávesnice třetích stran  |          Blokování  |          iOS/iPadOS        | V systému iOS to blokuje fungování všech klávesnic třetích stran v rámci aplikace.  |
-| Přenos dat |       Schválené klávesnice  |          Požadováno  |          Android        | V případě Androidu je třeba vybrat klávesnice, aby bylo možné je použít v závislosti na nasazených zařízeních s Androidem.  |
+| Přenos dat |       Klávesnice třetích stran  |          Blok  |          iOS/iPadOS        | V systému iOS to blokuje fungování všech klávesnic třetích stran v rámci aplikace.  |
+| Přenos dat |       Schválené klávesnice  |          Vyžadovat  |          Android        | V případě Androidu je třeba vybrat klávesnice, aby bylo možné je použít v závislosti na nasazených zařízeních s Androidem.  |
 | Přenos dat |       Vybrat klávesnice ke schválení  |          *Přidat nebo odebrat klávesnice*  |          Android        | V případě Androidu je třeba vybrat klávesnice, aby bylo možné je použít v závislosti na nasazených zařízeních s Androidem.  |
-| Funkce |       Tisk organizačních dat  |          Blokování  |          iOS/iPadOS, Android         |  |
+| Funkce |       Tisk organizačních dat  |          Blok  |          iOS/iPadOS, Android         |  |
 
 #### <a name="access-requirements"></a>Požadavky na přístup
 
 |       Nastavení  |          Hodnota  |          Platforma  |
 |-----------------------------------------------------------|--------------------|---------------------------------|
-|       Jednoduchý PIN kód  |          Blokování  |          iOS/iPadOS, Android  |
+|       Jednoduchý PIN kód  |          Blok  |          iOS/iPadOS, Android  |
 |       Vyberte minimální délku PIN kódu.  |          6  |          iOS/iPadOS, Android  |
 |       Resetovat PIN kód po počtu dní  |          Ano  |          iOS/iPadOS, Android  |
 |       Počet dní  |          365  |          iOS/iPadOS, Android  |
@@ -192,6 +192,7 @@ Nastavení zásad, která jsou vydaná v úrovni 3, zahrnují všechna nastaven�
 
 | Nastavení | Popis nastavení |          Hodnota/akce  |          Platforma        | Poznámky |
 |----------------------------|--------------------------------------|-------------------|---------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Podmínky zařízení  |       Minimální verze operačního systému  |          *Formát: hlavní. vedlejší<br> příklad: 8,0* /blokovat přístup   |          Android        | Microsoft doporučuje nakonfigurovat minimální hlavní verzi Androidu tak, aby odpovídala podporovaným verzím Androidu pro aplikace Microsoftu. Výrobci OEM a zařízení, kteří dodržují doporučené požadavky na Android Enterprise, musí podporovat aktuální dodací verzi a jeden upgrade na jedno písmeno.   V současné době Android doporučuje Android 8,0 a novější pro pracovníky znalostní báze.   Nejnovější doporučení pro Android najdete v tématu [Doporučené požadavky pro Android Enterprise](https://www.android.com/enterprise/recommended/requirements/) |
 |       Podmínky zařízení  |          Zařízení s jailbreakem nebo rootem  |        Data není k dispozici a vymazání  |          iOS/iPadOS, Android        |  |
 |       Podmínky zařízení  |          Maximální povolená úroveň hrozeb  |          Zabezpečený/blokovaný přístup  |          iOS/iPadOS, Android        | <p>U neregistrovaných zařízení je možné kontrolovat hrozby pomocí ochrany před mobilními hrozbami. Další informace najdete v tématu Ochrana před [mobilními hrozbami u neregistrovaných zařízení](https://aka.ms/mtdmamdocs).      </p><p>     Pokud je zařízení zaregistrované, toto nastavení se dá přeskočit při nasazení ochrany před mobilními hrozbami pro zaregistrovaná zařízení. Další informace najdete v tématu Ochrana před [mobilními hrozbami u zaregistrovaných zařízení](../protect/mtd-device-compliance-policy-create.md).</p> |
 

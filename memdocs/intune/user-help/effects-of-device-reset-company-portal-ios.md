@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 4cb9b22220e4c33aadd5b7c46f4274df44e3ec9c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 87b51d2df20f13ad29bca0b5961d59a41cbedf49
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79324931"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82080058"
 ---
 # <a name="effects-of-company-portal-ios-device-reset"></a>Účinky Portál společnosti obnovení zařízení s iOS 
 
@@ -32,13 +32,13 @@ Resetování zařízení iPhone nebo iPad prostřednictvím Portál společnosti
 
 Pokud vaše organizace spravuje vaše zařízení a Vy máte přístup k pracovním a školním e-mailům, aplikacím a Wi-Fi:
 
-- Vaše zařízení se už nebude zobrazovat na portálu společnosti.  
+- Vaše zařízení se už nebude zobrazovat v Portál společnosti.  
 
 - Vaše zařízení se obnoví do výchozího továrního nastavení od výrobce. Vaše osobní data, aplikace a nastavení se při tom odeberou.
 
 Pokud je vaše zařízení nastavené jenom na přístup k pracovnímu nebo školnímu e-mailu:
 
-- Vaše zařízení se už nebude zobrazovat na portálu společnosti.  
+- Vaše zařízení se už nebude zobrazovat v Portál společnosti.  
 
 - Váš pracovní nebo školní e-mailový účet se odstraní. Odstraní se neuložené e-maily.   
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6e002b62fb00c4e2e8523848c4c64ad7a54ce024
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 257f717243e021e7fd643a6e7ca41644e4369bcd
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79331035"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82080126"
 ---
 # <a name="determine-use-case-scenario-requirements"></a>Určení požadavků na scénáře použití
 
@@ -33,17 +33,17 @@ Každý scénář nebo dílčí scénář použití může mít jinou množinu p
 
 Ve scénáři firemního použití také můžete mít organizační skupiny s různými sadami požadavků (např. nastavení kódu PIN, Wi-Fi, profilu VPN a nasazených aplikací). Požadavky také mohou být dány možnostmi platformy mobilního zařízení (např. čtečka otisku prstů nebo e-mailový profil).
 
-Tady je několik příkladů scénářů použití v organizaci s různými sadami požadavků pro každý scénář nebo dílčí scénář použití, organizační skupinu a platformu mobilního zařízení. Požadavky na případy použití v organizaci také můžete zadat do následující tabulky:
+Tady je několik příkladů požadavků na případy použití organizace, které ukazují různé sady požadavků pro každý scénář použití a dílčí scénář použití, organizační skupinu a platformu mobilních zařízení. Následující tabulku můžete použít také k zadání požadavků na případ použití vaší organizace:
 
-| **Případy použití** | **Dílčí případy použití** | **Skupiny** | **Platformy zařízení** | **Requirements** |
+| **Případy použití** | **Dílčí případy použití** | **Skupiny** | **Platformy zařízení** | **Požadavky** |
 |:---:|:---:|:---:|:---:|:---:|
-| Firemní | Informatik | Personální, finanční oddělení | iOS/iPadOS | Zabezpečený e-mail, nastavení zařízení, profily, aplikace |                                                          
-| Firemní | Vedení | Personální, finanční oddělení | iOS/iPadOS | Zabezpečený e-mail, nastavení zařízení, profily, aplikace |                                                         
-| Firemní | Veřejný terminál | Maloobchod | Android | Nastavení zařízení, profily, aplikace |
-| UŽIVATELÉ S VLASTNÍM ZAŘÍZENÍM (BYOD) | Informatik | Marketing, prodej | iOS/iPadOS | Zabezpečený e-mail, nastavení zařízení, profily, aplikace |                                                         
-| UŽIVATELÉ S VLASTNÍM ZAŘÍZENÍM (BYOD) | Vedení | Marketing, prodej | iOS/iPadOS | Zabezpečený e-mail, nastavení zařízení, profily, aplikace |
+| Firemní | Informatik | Personalistika, finance | iOS/iPadOS | Zabezpečený e-mail, nastavení zařízení, profily, aplikace |                                                          
+| Firemní | Vedení | Personalistika, finance | iOS/iPadOS | Zabezpečený e-mail, nastavení zařízení, profily, aplikace |                                                         
+| Firemní | Kiosk | Maloobchod | Android | Nastavení zařízení, profily, aplikace |
+| BYOD | Informatik | Marketing, prodej | iOS/iPadOS | Zabezpečený e-mail, nastavení zařízení, profily, aplikace |                                                         
+| BYOD | Vedení | Marketing, prodej | iOS/iPadOS | Zabezpečený e-mail, nastavení zařízení, profily, aplikace |
 
-Pokud chcete zadat požadavky na scénáře použití a dílčí scénáře použití ve vaší organizaci, [stáhněte si šablonu předchozí tabulky](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0).
+Můžete [si stáhnout šablonu výše uvedené tabulky](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) a zadat požadavky na případy použití a dílčího případu použití vaší organizace.
 
 
 ## <a name="examples-of-requirements"></a>Příklady požadavků

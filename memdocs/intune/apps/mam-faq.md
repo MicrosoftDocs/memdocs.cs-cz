@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/06/2020
+ms.date: 04/14/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7a533344b72952098403fae0ebcabbcad473684a
-ms.sourcegitcommit: db511e03f14e6120968b60def8990485eb42529b
+ms.openlocfilehash: 16c086295b93b72ef2f9cfbd2d6a15d6bb54f320
+ms.sourcegitcommit: 53bab52e42de28b87e53596646a3532e25eb9c14
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80611725"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82183004"
 ---
 # <a name="frequently-asked-questions-about-mam-and-app-protection"></a>Časté otázky ke správě mobilních aplikací (MAM) a ochraně aplikací
 
@@ -38,9 +38,9 @@ MAM chrání data organizace v rámci aplikace. Díky funkci MAM bez registrace 
 
 **Jaké konfigurace zařízení MAM podporuje?**<br></br>
 Intune MAM podporuje dvě konfigurace:
-- **MDM+MAM Intune**: Správci IT můžou spravovat aplikace pomocí MAM a zásad ochrany aplikací jenom na zařízeních, která jsou zaregistrovaná ve správě mobilních zařízení (MDM) Intune. Pokud zákazníci chtějí spravovat aplikace pomocí MDM + MAM, měli by používat konzolu Intune na portálu Azure Portal na https://portal.azure.com.
+- **MDM+MAM Intune**: Správci IT můžou spravovat aplikace pomocí MAM a zásad ochrany aplikací jenom na zařízeních, která jsou zaregistrovaná ve správě mobilních zařízení (MDM) Intune. Pokud zákazníci chtějí spravovat aplikace pomocí MDM + MAM, měli by používat [Centrum pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-- **MAM bez registrace zařízení:** MAM bez registrace zařízení, neboli MAM-WE, umožňuje správcům IT spravovat aplikace pomocí MAM a zásad ochrany aplikací na zařízeních, která nejsou zaregistrovaná ve správě mobilních zařízení Intune. To znamená, že aplikace je možné spravovat pomocí Intune na zařízeních, která jsou zaregistrovaná u jiných poskytovatelů EMM. Pokud chcete spravovat aplikace pomocí MAM-WE, zákazníci by měli používat konzolu Intune v Azure Portal v [https://portal.azure.com](https://portal.azure.com). Aplikace je také možné spravovat pomocí Intune na zařízeních zaregistrovaných pomocí jiných poskytovatelů správy firemních mobilních zařízení (Enterprise Mobility Management (EMM)) nebo na zařízeních vůbec v MDM nezaregistrovaných.
+- **MAM bez registrace zařízení:** MAM bez registrace zařízení, neboli MAM-WE, umožňuje správcům IT spravovat aplikace pomocí MAM a zásad ochrany aplikací na zařízeních, která nejsou zaregistrovaná ve správě mobilních zařízení Intune. To znamená, že aplikace je možné spravovat pomocí Intune na zařízeních, která jsou zaregistrovaná u jiných poskytovatelů EMM. Pokud chcete spravovat aplikace pomocí MAM-WE, zákazníci by měli používat [Centrum pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431). Aplikace je také možné spravovat pomocí Intune na zařízeních zaregistrovaných pomocí jiných poskytovatelů správy firemních mobilních zařízení (Enterprise Mobility Management (EMM)) nebo na zařízeních vůbec v MDM nezaregistrovaných.
 
 
 ## <a name="app-protection-policies"></a>Zásady ochrany aplikace
@@ -54,6 +54,7 @@ Podrobné informace o jednotlivých nastaveních zásad ochrany aplikací najdet
 **Je možné pro stejné uživatele současně použít zásady MDM i MAM pro různá zařízení? Například pokud by uživatel mohl získat přístup ke svým pracovním prostředkům ze svého vlastního počítače s podporou MAM, ale také přichází k práci a používání zařízení spravovaného přes MDM v Intune. Existují nějaká upozornění k této myšlence?**<br></br>
 Pokud pro uživatele použijete zásadu MAM bez nastavení stavu zařízení, uživatel získá zásadu MAM na zařízení BYOD i na zařízení spravovaném přes Intune. Můžete také použít zásadu MAM založenou na spravovaném stavu. Takže když vytvoříte zásady ochrany aplikací, zobrazí se vedle cíle u všech typů aplikací možnost Ne. Pak proveďte některou z následujících akcí:
 - Použijte pro zařízení spravovaná přes Intune méně přísné zásady MAM a použijte pro zařízení zaregistrovaná v MDM více omezující zásadu MAM.
+-   Na zařízeních spravovaných přes Intune použijte stejně přísnou zásadu MAM jako zařízení spravovaná třetí stranou.
 - Použije zásady MAM jenom pro odregistrovaná zařízení.
 
 Další informace najdete v tématu [jak monitorovat zásady ochrany aplikací](app-protection-policies-monitor.md).
@@ -69,7 +70,7 @@ Zásadami ochrany aplikací Intune se dá spravovat každá aplikace integrovan�
 
 - Koncový uživatel musí mít ke svému účtu Azure Active Directory přiřazenou licenci pro Microsoft Intune. Informace o tom, jak se přiřazují licence Intune koncovým uživatelům, najdete v článku [Správa licencí Intune](../fundamentals/licenses-assign.md).
 
-- Koncový uživatel musí patřit do skupiny zabezpečení, která je cílem zásady ochrany aplikace. Stejná zásada ochrany aplikace musí mít za cíl konkrétní používanou aplikaci. Zásady ochrany aplikací se dají vytvářet a nasazovat v konzole Intune na [portálu Azure](https://portal.azure.com). Skupiny zabezpečení se teď dají vytvořit v [centru pro správu Microsoft 365](https://admin.microsoft.com).
+- Koncový uživatel musí patřit do skupiny zabezpečení, která je cílem zásady ochrany aplikace. Stejná zásada ochrany aplikace musí mít za cíl konkrétní používanou aplikaci. Zásady ochrany aplikací se dají vytvářet a nasazovat v [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431). Skupiny zabezpečení se teď dají vytvořit v [centru pro správu Microsoft 365](https://admin.microsoft.com).
 
 - Koncový uživatel se musí do aplikace přihlásit pomocí svého účtu AAD.
 
@@ -78,7 +79,7 @@ Zásadami ochrany aplikací Intune se dá spravovat každá aplikace integrovan�
 Vývojový tým sady Intune SDK aktivně testuje a udržuje podporu pro aplikace vytvořené s nativními platformami Android, iOS/iPadOS (obj-C, SWIFT), Xamarin a Xamarin. Forms. I když se někteří zákazníci dokončí s integrací sady Intune SDK s jinými platformami, jako je například reakce nativních a NativeScript, neposkytujeme explicitní pokyny ani moduly plug-in pro vývojáře aplikací, kteří používají jinou než naše podporované platformy.
 
 **Podporuje sada Intune App SDK knihovnu MSAL (Microsoft Authentication Library) nebo účty sociálních sítí?**<br></br>
-Sada Intune App SDK používá některé pokročilé možnosti ADAL (Active Directory Authentication Library) pro výchozí verze sady SDK i pro verze třetích stran. Proto knihovna MSAL příliš dobře nespolupracuje s mnoha našimi hlavními scénáři, jako je ověřování ve službě Intune App Protection nebo podmíněné spuštění. Vzhledem k tomu, že celkový návod od týmu identity společnosti Microsoft je přepnout na MSAL pro všechny systém Microsoft Office aplikace, Intune SDK bude nakonec potřebovat podporu, ale ještě neexistují žádné plány.
+Sada Intune App SDK může pro své scénáře ověřování a podmíněného spuštění použít buď knihovnu ověřování Azure Active Directory, nebo knihovnu Microsoft Authentication Library. Také spoléhá na knihovnu ADAL/MSAL k registraci identity uživatele ve službě MAM pro správu bez scénářů registrace zařízení.
 
 **Jaké jsou další požadavky na používání [mobilní aplikace Outlook](https://products.office.com/outlook)?**
 
@@ -91,16 +92,16 @@ Sada Intune App SDK používá některé pokročilé možnosti ADAL (Active Dire
 
 **Jaké jsou další požadavky na používání aplikací [Word, Excel a PowerPoint](https://products.office.com/business/office)?**
 
-- Koncový uživatel musí mít licenci pro [Office 365 Business nebo Enterprise](https://products.office.com/business/compare-more-office-365-for-business-plans) propojenou se svým účtem Azure Active Directory. Předplatné musí obsahovat aplikace Office na mobilních zařízeních a může obsahovat účet pro ukládání do cloudu přes [OneDrive pro firmy](https://onedrive.live.com/about/business/). Licence na Office 365 se dají přiřadit v [centru pro správu Microsoft 365](https://admin.microsoft.com) podle těchto [pokynů](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc).
+- Koncový uživatel musí mít licenci pro [aplikace Microsoft 365 pro firmy nebo podnik](https://products.office.com/business/compare-more-office-365-for-business-plans) propojený s jejich Azure Active Directorym účtem. Předplatné musí obsahovat aplikace Office na mobilních zařízeních a může obsahovat účet pro ukládání do cloudu přes [OneDrive pro firmy](https://onedrive.live.com/about/business/). Licence na Office 365 se dají přiřadit v [centru pro správu Microsoft 365](https://admin.microsoft.com) podle těchto [pokynů](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc).
 
-- Koncový uživatel musí mít spravované umístění nakonfigurované pomocí podrobné funkce Uložit jako v nastavení zásad ochrany aplikací Uložit kopie org data. Pokud je spravovaným umístěním třeba OneDrive, musí být v aplikaci Word, Excel nebo PowerPoint koncového uživatele nakonfigurovaná aplikace [OneDrive](https://onedrive.live.com/about/).
+- Koncový uživatel musí mít spravované umístění nakonfigurované pomocí podrobné funkce Uložit jako v nastavení zásad ochrany aplikací Uložit kopie org data. Pokud je spravovaným umístěním například OneDrive, aplikace [OneDrive](https://onedrive.live.com/about/) by měla být nakonfigurovaná v aplikaci Word, Excel nebo PowerPoint koncového uživatele.
 
 - Pokud je spravovaným umístěním OneDrive, musí být aplikace cílem pro zásadu ochrany aplikace nasazenou pro koncového uživatele.
 
   >[!NOTE]
   > Mobilní aplikace Office aktuálně podporují jenom SharePoint Online a ne místní SharePoint.
 
-**Proč je pro Office potřeba spravované umístění (jako OneDrive)?**<br></br>
+**Proč je pro Office potřeba spravované umístění (tj. OneDrive)?**<br></br>
 Intune označuje veškerá data v aplikaci jako podniková (firemní) nebo osobní. Data se považují za podniková, když pocházejí z firemního umístění. U aplikací Office považuje Intune za firemní následující umístění: e-mail (Exchange) nebo cloudové úložiště (aplikace OneDrive s účtem OneDrive pro firmy).
 
 **Jaké jsou další požadavky na používání Skypu pro firmy?**<br></br>
@@ -140,7 +141,7 @@ PIN kód Intune funguje na základě časovače založeného na nečinnosti (hod
 
 - **Jak Intune chrání PIN před útoky hrubou silou?**<br></br> Jako součást zásady pro PIN aplikace může správce IT nastavit maximální počet pokusů, které uživatel má k ověření PINu před uzamčením aplikace. Po vyčerpání pokusů může sada Intune App SDK vymazat podniková data v aplikaci.
   
-- **Proč musím v aplikacích od stejného vydavatele dvakrát zadávat PIN?**<br></br> MAM (v iOS/iPadOS) v současné době povoluje PIN kód na úrovni aplikace s alfanumerickými a speciálními znaky (označované jako "heslo"), které vyžadují zapojení aplikací (například WXP, Outlook, Managed Browser, Yammer) pro integraci sady Intune APP SDK pro iOS/iPadOS. Bez toho se nastavení hesla pro cílové aplikace správně nevynutí. Tato funkce byla vydaná v Intune SDK pro iOS/iPadOS v. 7.1.12. <br><br> Aby se tato funkce podporovala a zajistila zpětná kompatibilita s předchozími verzemi sady Intune SDK pro iOS/iPadOS, jsou všechny PIN kódy v 7.1.12 + zpracovávány odděleně od číselného kódu PIN v předchozích verzích sady SDK. Proto pokud má zařízení aplikace se sadou Intune SDK pro verze iOS/iPadOS před 7.1.12 a po 7.1.12 od stejného vydavatele, budou muset nastavit dvě PIN kódy. <br><br> Tyto dva kódy PIN (pro každou aplikaci jeden) spolu nijak nesouvisejí, tzn. že musejí vyhovovat zásadám ochrany aplikace platným pro danou aplikaci. Uživatel smí nastavit stejný PIN dvakrát *jen tehdy*, když aplikace A a B používají stejné zásady (platné pro PIN). <br><br> Toto chování je specifické pro PIN aplikací pro iOS/iPadOS, které jsou povolené pomocí správy mobilních aplikací Intune. Když aplikace v průběhu času přijímají novější verze sady Intune SDK pro iOS/iPadOS, je nutné nastavit kód PIN dvakrát u aplikací od stejného vydavatele na menší problém. V následující poznámce uvádíme příklad.
+- **Proč musím v aplikacích od stejného vydavatele dvakrát zadávat PIN?**<br></br> MAM (v iOS/iPadOS) v současné době povoluje PIN kód na úrovni aplikace s alfanumerickými a speciálními znaky (označované jako "heslo"), které vyžadují zapojení aplikací (například WXP, Outlook, Managed Browser, Yammer) pro integraci sady Intune APP SDK pro iOS/iPadOS. Bez toho se nastavení hesla pro cílové aplikace správně nevynutí. Tato funkce byla vydaná v Intune SDK pro iOS/iPadOS v. 7.1.12. <br><br> Aby se tato funkce podporovala a zajistila zpětná kompatibilita s předchozími verzemi sady Intune SDK pro iOS/iPadOS, jsou všechny PIN kódy v 7.1.12 + zpracovávány odděleně od číselného kódu PIN v předchozích verzích sady SDK. Proto pokud má zařízení aplikace se sadou Intune SDK pro verze iOS/iPadOS před 7.1.12 a po 7.1.12 od stejného vydavatele, budou muset nastavit dvě PIN kódy. <br><br> To znamená, že tyto dva kódy PIN (pro každou aplikaci) nesouvisejí žádným způsobem, tj. musí dodržovat zásady ochrany aplikací, které jsou pro aplikaci aplikovány. Uživatel smí nastavit stejný PIN dvakrát *jen tehdy*, když aplikace A a B používají stejné zásady (platné pro PIN). <br><br> Toto chování je specifické pro PIN aplikací pro iOS/iPadOS, které jsou povolené pomocí správy mobilních aplikací Intune. Když aplikace v průběhu času přijímají novější verze sady Intune SDK pro iOS/iPadOS, je nutné nastavit kód PIN dvakrát u aplikací od stejného vydavatele na menší problém. V následující poznámce uvádíme příklad.
 
   >[!NOTE]
   > Například pokud je aplikace A sestavena s verzí starší než 7.1.12 a aplikace B je sestavena s verzí větší nebo rovnou 7.1.12 od stejného vydavatele, bude muset koncový uživatel nastavit PIN kódy samostatně pro a a B, pokud jsou obě nainstalovány na zařízení iOS/iPadOS. <br><br> Pokud na toto zařízení nainstalujete aplikaci C se sadou SDK 7.1.9, bude mít stejný PIN jako aplikace A. <br><br> Aplikace D vytvořená s použitím verze 7.1.14 bude mít stejný PIN jako aplikace B. <br><br> Pokud na zařízení nainstalujete jenom aplikace A a C, stačí nastavit jenom jeden PIN. To samé platí, i pokud jsou na zařízení nainstalované aplikace B a D.
@@ -161,7 +162,7 @@ Intune může data aplikace smazat třemi způsoby: úplným vymazáním zaříz
 
 - **Co je selektivní vymazání pro MDM?**<br></br> V článku [Odebrání zařízení – část Vyřazení](../remote-actions/devices-wipe.md#retire) najdete informace o odebírání firemních dat.
 
-- **Co je selektivní vymazání pro MAM?**<br></br> Selektivní vymazání pro MAM jednoduše odebere data aplikace společnosti z aplikace. Žádost se inicializuje pomocí portálu Intune Azure Portal. Informace o zahájení žádosti o vymazání najdete v článku [Jak z aplikací vymazat jenom firemní data](apps-selective-wipe.md).
+- **Co je selektivní vymazání pro MAM?**<br></br> Selektivní vymazání pro MAM jednoduše odebere data aplikace společnosti z aplikace. Požadavek se iniciuje pomocí [centra pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431). Informace o zahájení žádosti o vymazání najdete v článku [Jak z aplikací vymazat jenom firemní data](apps-selective-wipe.md).
 
 - **Jak rychle selektivní vymazání pro MAM proběhne?**<br></br> Pokud uživatel používá aplikaci, když je zahájeno selektivní vymazání, sada Intune App SDK kontroluje každých 30 minut žádost o selektivní vymazání ze služby Intune MAM. Selektivní vymazání také kontroluje tehdy, když uživatel spustí aplikaci poprvé a přihlásí se pomocí pracovního nebo školního účtu.
 
@@ -174,7 +175,7 @@ Ano! Správce IT může nasadit a nastavit zásadu ochrany aplikace pro [aplikac
 ## <a name="app-experience-on-android"></a>Prostředí aplikací na Androidu
 
 **Proč je potřeba aplikace Portál společnosti, aby ochrana aplikací Intune fungovala na zařízeních s Androidem?**<br></br>
-Většina funkcí ochrany aplikací je integrovaná do aplikace Portál společnosti. I když aplikace Portál společnosti se vždycky vyžaduje, registrace zařízení se _nevyžaduje_. U správy mobilních aplikací bez registrace (MAM-WE) je jenom nutné, aby měl koncový uživatel aplikaci Portál společnosti na zařízení nainstalovanou.
+Většina funkcí ochrany aplikací je integrovaná do aplikace Portál společnosti. Registrace zařízení se _nevyžaduje, i když_ je aplikace Portál společnosti vždycky povinná. U správy mobilních aplikací bez registrace (MAM-WE) je jenom nutné, aby měl koncový uživatel aplikaci Portál společnosti na zařízení nainstalovanou.
 
 **Jak na Androidu funguje více nastavení přístupu k ochraně aplikací Intune, která jsou nakonfigurovaná na stejnou sadu aplikací a uživatelů?**<br></br>
 Zásady ochrany aplikací Intune pro přístup se na zařízení koncových uživatelů, která se pokusí o přístup k cílové aplikaci z firemního účtu, použijí v konkrétním pořadí. Obecně má přednost blokování, pak upozornění, které se dá zavřít. Například pokud se aplikuje na konkrétního uživatele nebo aplikaci, nastavení minimální verze opravy Androidu, které uživatele upozorňuje, aby provedl upgrade opravy, se použije po nastavení minimální verze opravy Androidu, které uživateli zablokuje přístup. Proto ve scénáři, kde správce IT nakonfiguruje minimální verzi opravy Androidu na 2018-03-01 a minimální verzi opravy Androidu (pouze upozornění) na 2018-02-01, zatímco zařízení pokoušející se o přístup k aplikaci má verzi opravy 2018-01-01, by byl koncový uživatel zablokován na základě přísnějšího nastavení pro minimální verzi opravy Androidu, která vede k zablokování přístupu. 
@@ -210,7 +211,7 @@ Zásady ochrany aplikací Intune umožňují řídit přístup k aplikacím jen 
 Záměrem tohoto chování je nadále udržovat data organizace v aplikaci zabezpečená a chráněná na úrovni aplikace. Tato funkce je dostupná jenom pro iOS/iPadOS a vyžaduje zapojení aplikací, které integrují sadu Intune APP SDK pro iOS/iPadOS, verze 9.0.1 nebo novější. Integrace této sady SDK je nezbytná kvůli vynucení tohoto chování u cílových aplikací. K této integraci dochází průběžně a závisí na týmech konkrétních aplikací. Mezi zapojené aplikace patří například WXP, Outlook, Managed Browser a Yammer.
   
 **Můžu pomocí rozšíření pro sdílení pro iOS otevřít pracovní nebo školní data v nespravovaných aplikacích, a to i v případě, že se zásady přenosu dat nastavily jenom na spravované aplikace nebo žádné aplikace. Nejedná se o nevrácená data?**<br></br>
-Zásady ochrany aplikací pro Intune nemůžou ovládat rozšíření pro sdílení v iOS, když dané zařízení nespravují. Proto Intune _**podniková data před jejich sdílením mimo příslušnou aplikaci zašifruje**_ . Můžete si to ověřit tak, že si zkusíte otevřít podnikový soubor mimo spravovanou aplikaci. Soubor by měl být zašifrovaný a mimo spravovanou aplikaci by ho nemělo být možné otevřít.
+Zásady ochrany aplikací pro Intune nemůžou ovládat rozšíření pro sdílení v iOS, když dané zařízení nespravují. Proto Intune _**podniková data před jejich sdílením mimo příslušnou aplikaci zašifruje**_. Můžete si to ověřit pokusem o otevření „podnikového“ souboru mimo spravovanou aplikaci. Soubor by měl být zašifrovaný a mimo spravovanou aplikaci by ho nemělo být možné otevřít.
 
 **Jak v iOSu funguje více nastavení přístupu k ochraně aplikací Intune, která jsou nakonfigurovaná na stejnou sadu aplikací a uživatelů?**<br></br>
 Zásady ochrany aplikací Intune pro přístup se na zařízení koncových uživatelů, která se pokusí o přístup k cílové aplikaci z firemního účtu, použijí v konkrétním pořadí. Obecně má přednost vymazání, pak blokování, a pak upozornění, které se dá zavřít. Například pokud se vztahuje na konkrétního uživatele nebo aplikaci, nastavení minimálního operačního systému iOS/iPadOS, které uživatele upozorní na aktualizaci verze iOS/iPadOS, se použije po nastavení minimálního operačního systému iOS/iPadOS, které uživateli zablokuje přístup. Proto ve scénáři, kde správce IT nakonfiguruje minimální operační systém iOS/iPadOS na 11.0.0.0 a minimální operační systém iOS/iPadOS (pouze upozornění) na 11.1.0.0, zatímco zařízení pokoušející se o přístup k aplikaci bylo v iOS/iPadOS 10, bude koncový uživatel zablokován na základě přísnějšího nastavení pro minimální verzi operačního systému iOS/iPadOS, která vede k zablokování přístupu.
@@ -225,5 +226,5 @@ Při zpracování různých typů nastavení by měl přednost požadavek verze 
 - [nastavení zásad správy mobilních aplikací pro iOS/iPadOS](../apps/app-protection-policy-settings-ios.md)
 - [Aktualizace zásad ochrany aplikací](../apps/app-protection-policy-delivery.md)
 - [Ověření zásad ochrany aplikací](../apps/app-protection-policy-delivery.md)
-- [Přidání zásad konfigurace aplikací pro spravované aplikace bez registrace zařízení](../apps/app-configuration-policies-managed-app.md)
+- [Přidávání zásad konfigurace aplikací pro spravované aplikace bez registrace zařízení](../apps/app-configuration-policies-managed-app.md)
 - [Jak získat podporu pro Microsoft Intune](../fundamentals/get-support.md)

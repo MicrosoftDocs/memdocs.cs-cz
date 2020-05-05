@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ad0964eafccc5bf007b1569762e4cea4d0ee691a
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: b8552bd6bb570c91e84acd40cd2b654696eca972
+ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80326779"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82210345"
 ---
 # <a name="assign-licenses-to-users-so-they-can-enroll-devices-in-intune"></a>Přiřazení licencí uživatelům, aby mohli zaregistrovat zařízení v Intune
 
@@ -34,9 +34,9 @@ Ať už přidáváte uživatele ručně, nebo provádíte synchronizaci z místn
 
 [Centrum pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431) můžete použít k ručnímu přidání cloudových uživatelů a přiřazení licencí ke cloudovým uživatelským účtům a účtům synchronizovaným z místní služby Active Directory do Azure AD.
 
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **Uživatelé** > **všech uživatelů** > vyberte > **přiřazení** **licence** pro uživatele >.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **Uživatelé** > **Všichni uživatelé** > vyberte**přiřazení** **licencí** > > uživatelem.
 
-2. Zaškrtněte políčko pro **Intune** > **Uložit**.
+2. Zaškrtněte políčko pro uložení **Intune** > **Save**. Pokud chcete použít Enterprise Mobility + Security E5 nebo jinou licenci, vyberte místo toho toto políčko.
 
    ![Snímek obrazovky oddílu Microsoft 365 licence k produktu centra pro správu](./media/licenses-assign/mem-assign-license.png)
 
@@ -76,9 +76,9 @@ Informace o předplatném určuje způsob, jakým jste zakoupili Intune:
 - Pokud jste Intune zakoupili přes CC# nebo na fakturu, budou vaše licence uživatelské.
 
 ## <a name="use-powershell-to-selectively-manage-ems-user-licenses"></a>Použití PowerShellu k selektivní správě uživatelských licencí pro EMS
-Organizace, které používají Microsoft Enterprise Mobility + Security (dříve Enterprise Mobility Suite), můžou mít uživatele, kteří v balíčku EMS vyžadují jenom služby Azure Active Directory Premium nebo Intune. Pomocí [rutin prostředí PowerShell pro Azure Active Directory](https://msdn.microsoft.com/library/jj151815.aspx) můžete přiřadit jednu službu nebo jejich podmnožinu.
+Organizace, které používají Microsoft Enterprise Mobility + Security (dříve Enterprise Mobility Suite), můžou mít uživatele, kteří v balíčku EMS vyžadují jenom služby Azure Active Directory Premium nebo Intune. Pomocí [rutin Azure Active Directory PowerShellu](https://msdn.microsoft.com/library/jj151815.aspx)můžete přiřadit jednu nebo podmnožinu služeb.
 
-Chcete-li selektivně přiřadit uživatelské licence pro služby EMS, otevřete PowerShell jako správce v počítači, kde je instalovaný [modul Azure Active Directory pro Windows PowerShell](https://msdn.microsoft.com/library/jj151815.aspx#bkmk_installmodule). PowerShell můžete nainstalovat na místní počítač nebo na server služby AD FS.
+Pokud chcete selektivně přiřadit uživatelské licence pro služby EMS, otevřete PowerShell jako správce v počítači, kde je instalovaný [modul Azure Active Directory pro Windows PowerShell](https://msdn.microsoft.com/library/jj151815.aspx#bkmk_installmodule). PowerShell můžete nainstalovat na místní počítač nebo na server služby AD FS.
 
 Musíte vytvořit novou definici SKU licence, která se vztahuje jenom na požadované plány služeb. Pokud to chcete provést, zakažte plány, které nechcete použít. Můžete třeba vytvořit definici SKU licence, která nepřiřazuje licenci pro Intune. Pokud chcete zobrazit seznam dostupných služeb, zadejte:
 

@@ -15,12 +15,12 @@ ms.reviewer: aiwang
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7e568a7700a6849993d24be4dd042195a95ab000
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 0b18af35b0e741540637ecdde74877d1058a7915
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79325119"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254703"
 ---
 # <a name="windows-update-settings-for-intune"></a>Nastavení služby Windows Update pro Intune  
 
@@ -28,7 +28,7 @@ Prohlédněte si nastavení aktualizace Windows 10, která můžete [Konfigurova
 
 Když konfigurujete nastavení pro aktualizační kanály Windows 10 v Intune, konfigurujete nastavení web Windows Update. Pokud má nastavení Windows Update závislost na verzi Windows 10, zaznamená se závislost na verzi v podrobnostech nastavení.  
 
-## <a name="update-settings"></a>Aktualizovat nastavení  
+## <a name="update-settings"></a>Aktualizace nastavení  
 
 Nastavení aktualizace řídí, co se bude stahovat a kdy se zařízení stáhne. Další informace o chování jednotlivých nastaveních najdete v referenční dokumentaci k systému Windows.  
 
@@ -61,7 +61,7 @@ Nastavení aktualizace řídí, co se bude stahovat a kdy se zařízení stáhne
   - **Povolení** – vyberte možnost *umožňuje* vyhledávat aktualizace aplikací z Microsoft Update.  
   - **Blok-výběr** bloku, který zabrání v kontrole aktualizací aplikace.  
 
-- **Ovladače Windows**  
+- **Ovladače pro Windows**  
   **Výchozí**: povolení  
   Web Windows Update CSP: [Update/ExcludeWUDriversInQualityUpdate](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-excludewudriversinqualityupdate)  
 
@@ -85,8 +85,7 @@ Nastavení aktualizace řídí, co se bude stahovat a kdy se zařízení stáhne
   Podporované období odložení:  
 
   - *Windows verze 1709 a novější* -0 až 365 dní  
-  - *Windows verze 1703* -0 až 180 dní  
-
+  
   Aktualizace funkcí jsou zpravidla nové funkce pro Windows.  
 
 - **Nastavit období odinstalace aktualizací funkcí (2 – 60 dní)**  
@@ -164,8 +163,6 @@ Nastavení uživatelského prostředí řídí činnost koncového uživatele p�
   
   Toto nastavení má různé výsledky v závislosti na verzi Windows pro zařízení:  
  
-  - *Windows verze 1703 a starší* – když restartujete zařízení, dojde k některým kontrolám, ke kterým dochází, včetně kontroly aktivních uživatelů, úrovní baterie, spuštěných her a dalších.  
-  
   - *Windows verze 1709 a novější* – během aktivní hodiny se pro aktualizace nespouštějí následující procesy: kontrola, stažení, instalace a restartování. Po aktivní hodině se procesy aktualizace spouštějí a můžou zařízení probudit z režimu spánku, prohledávat, stahovat, instalovat a restartovat zařízení, pokud se kontrolují baterie a kontrolují napájení. 
 
 - **Zablokovat uživateli pozastavit aktualizace Windows**  
@@ -186,7 +183,7 @@ Nastavení uživatelského prostředí řídí činnost koncového uživatele p�
   **Výchozí**: Nenakonfigurováno  
   Web Windows Update CSP: [Update/AutoRestartRequiredNotificationDismissal](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-autorestartrequirednotificationdismissal)
   
-  - **Nenakonfigurované**  
+  - **Není nakonfigurováno**  
   - **Požadováno** – vyžaduje, aby uživatel schválil restart zařízení mimo pracovní dobu.  
    
 - **Připomenout uživatele před vyžadováním automatického restartování s připomenutím přeskočit (hodiny)**  
@@ -212,7 +209,7 @@ Nastavení uživatelského prostředí řídí činnost koncového uživatele p�
   Určete, jakou úroveň oznámení web Windows Update uživatelé uvidí. Toto nastavení neurčuje, jak a kdy se aktualizace stahují a instalují.  
 
   Podporované možnosti:
-  - **Nenakonfigurované**
+  - **Není nakonfigurováno**
   - **Použít výchozí oznámení web Windows Update**
   - **Vypnout všechna oznámení s výjimkou upozornění na restartování**
   - **Vypnout všechna oznámení, včetně upozornění na restartování**  
@@ -222,8 +219,8 @@ Nastavení uživatelského prostředí řídí činnost koncového uživatele p�
  
   Umožňuje uživateli použít nastavení termínu.  
 
-  - **Nenakonfigurované**
-  - **Povoleno**
+  - **Není nakonfigurováno**
+  - **Povolit**
 
   Pokud je nastaveno na hodnotu *povoleno*, můžete pro termíny nakonfigurovat následující nastavení:
 

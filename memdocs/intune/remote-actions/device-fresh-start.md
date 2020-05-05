@@ -16,19 +16,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f6d409f3ba1dc91815ce3dc67a2d65e5703c7268
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: ac718ee2351260f79ae91882c71373111900d8fd
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80322549"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254737"
 ---
 # <a name="use-fresh-start-to-reset-windows-10-devices-with-intune"></a>Resetování zařízení s Windows 10 přes Intune pomocí akce Začít znovu
 
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Akce zařízení **Začít znovu** odebere veškeré aplikace nainstalované na počítači s Windows 10 ve verzi 1703 nebo novější. Akce Začít znovu pomáhá odebrat předinstalované aplikace (výrobců OEM), které se obvykle instalují na nový počítač. 
+Akce zařízení **začít** znovu odebere všechny aplikace, které jsou nainstalovány na počítači se systémem Windows 10 verze 1709 nebo novějším. Akce Začít znovu pomáhá odebrat předinstalované aplikace (výrobců OEM), které se obvykle instalují na nový počítač. 
 
 1. Přihlaste se k [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431) a vyberte **zařízení** > **všechna zařízení**.
 2. V seznamu zařízení, která spravujete, zvolte zařízení s Windows 10 Desktop.

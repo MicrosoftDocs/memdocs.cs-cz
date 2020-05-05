@@ -9,12 +9,12 @@ ms.date: 04/24/2018
 ms.author: lizross
 ms.custom: include file
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b5e550f18908ae34c7df7e8ba9f03ce6a1b7d0a5
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 349ad64867426efda8bb33134edc09fcae7b16cf
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79325331"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82096051"
 ---
 >[!Note] 
-> Tento článek popisuje kroky pro odstranění osobních údajů ze zařízení nebo služby a slouží jako podpora při plnění povinností kladených směrnicí GDPR. Pokud hledáte obecné informace o nařízení GDPR, přejděte na [část věnovanou GDPR na portálu Service Trust Portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
+> Tento článek obsahuje postup pro odstranění osobních údajů ze zařízení nebo služby a je možné ho využít jako podporu vašich závazků v rámci GDPR. Pokud hledáte Obecné informace o GDPR, přečtěte si [část GDPR na portálu Trust Service](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).

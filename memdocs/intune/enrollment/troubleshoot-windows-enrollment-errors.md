@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 04bc86ff697ed7083cacd552cbf9ebe5096a228c
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: f74308e5c59adee6810d54ce44cf104514f83056
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80326868"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254771"
 ---
 # <a name="troubleshoot-windows-device-enrollment-problems-in-microsoft-intune"></a>Řešení potíží s registrací zařízení s Windows v Microsoft Intune
 
@@ -34,16 +34,16 @@ Než začnete řešit potíže, je důležité shromáždit některé základní
 Shromážděte následující informace o problému:
 - Má uživatel přiřazenou platnou licenci Intune? Než si uživatelé můžou zaregistrovat svoje zařízení, musí mít přiřazenou potřebnou licenci.
 - Je na zařízení s Windows nainstalovaná nejnovější aktualizace? Některé funkce Intune fungují jenom s nejnovější verzí Windows. K dispozici je mnoho oprav pro známé problémy, které jsou dostupné prostřednictvím web Windows Update. Použití všech nejnovějších aktualizací často řeší potíže s registrací zařízení s Windows. 
-- Jaká je přesná chybová zpráva?
+- Jaké je přesné znění chybové zprávy?
 - Kde se zobrazí chybová zpráva?
-- Kdy problém začal? Byl zápis někdy zpracován? 
+- Kdy tento problém začal? Byl zápis někdy zpracován? 
 - Jakou platformu (Android, iOS/iPadOS, Windows) má problém?
-- Kolika uživatelů se to týká? Ovlivnili všichni uživatelé nebo jen některé?
+- Kolik uživatelů je ovlivněno? Ovlivnili všichni uživatelé nebo jen některé?
 - Kolik zařízení je ovlivněno? Jsou všechna zařízení ovlivněná nebo jenom některá?
 - Co je Autorita MDM?
 - Jak se provádí registrace? Znamená to, že vlastní zařízení (BYOD) nebo Apple automatického zápisu zařízení (ADE) pomocí registračních profilů?
 
-## <a name="error-messages"></a>Chybovými zprávami
+## <a name="error-messages"></a>Chybové zprávy
 
 ### <a name="this-user-is-not-authorized-to-enroll"></a>Tento uživatel nemá autorizaci k registraci.
 
@@ -56,12 +56,12 @@ Chyba 80180003: něco se pokazilo. Tento uživatel nemá autorizaci k registraci
 - Zařízení je blokováno omezeními typů zařízení.    
 - V počítači je spuštěný systém Windows 10 Home. Registrace v Intune nebo připojení služby Azure AD je ale podporovaná jenom v edicích Windows 10 pro a vyšší.
 
-#### <a name="resolution"></a>Rozlišení
+#### <a name="resolution"></a>Řešení
 Tento problém může být několik možných řešení:
 
 ##### <a name="remove-devices-that-were-enrolled"></a>Odebrat zařízení, která byla zaregistrována
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).    
-2. Přejít na **uživatele** > **všech uživatelích**.    
+2. Přejít na **uživatele** > **Všichni uživatelé**.    
 3. Vyberte příslušný účet uživatele a pak klikněte na **zařízení**.    
 4. Vyberte všechna nepoužívaná nebo nežádoucí zařízení a pak klikněte na **Odstranit**. 
 
@@ -71,13 +71,13 @@ Tento problém může být několik možných řešení:
 > Tato metoda zvyšuje limit pro registraci zařízení pro všechny uživatele, nikoli jenom ovlivněného uživatele.
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. V části **zařízení** > **omezení registrace** > **výchozí** (v části **omezení počtu zařízení**) > **vlastnosti** > **Upravit** (u možnosti **limit zařízení**) > zvyšte **limit počtu zařízení** (maximálně 15) > **zkontrolovat + Uložit**.    
+2. Přejít na **zařízení** > **omezení** > **registrace výchozí** (v **části omezení limitu počtu zařízení**) > **vlastnosti** > **Upravit** (u **limitu zařízení**) > zvýšit **limit zařízení** (maximálně 15) > **zkontrolovat + Uložit**.    
  
 
 ##### <a name="check-device-type-restrictions"></a>Ověřit omezení typu zařízení
 1. Přihlaste se k [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431) pomocí účtu globálního správce.
-2. V části **zařízení** > **omezení registrace**a v části **omezení typů zařízení**vyberte **výchozí** omezení.    
-3. Vyberte **platformy**a pak vyberte možnost **Povolení** pro **Windows (MDM)** .
+2. Vyberte **zařízení** > **omezení registrace**a v části **omezení typů zařízení**vyberte **výchozí** omezení.    
+3. Vyberte **platformy**a pak vyberte možnost **Povolení** pro **Windows (MDM)**.
 
     > [!IMPORTANT]
     > Pokud je aktuální nastavení již **povoleno**, změňte ho na **blokovat**, uložte nastavení a pak ho změňte zpět na **povoleno** a uložte nastavení znovu. Tím se obnoví nastavení registrace.
@@ -95,7 +95,7 @@ Chyba 0x801c0003: Tento uživatel není povolen k registraci. Můžete to zkusit
 
 **Příčina:** **Uživatelé můžou připojovat zařízení k nastavení Azure AD** je nastavená na **žádná**. To zabrání novým uživatelům v připojení svých zařízení k Azure AD. Proto se registrace v Intune nezdařila.
 
-#### <a name="resolution"></a>Rozlišení
+#### <a name="resolution"></a>Řešení
 1. Přihlaste se k [Azure Portal](https://portal.azure.com/) jako správce.    
 2. Přejít na **Azure Active Directory** > **zařízení** > **nastavení zařízení**.    
 3. Nastavení **Uživatelé můžou připojovat zařízení ke službě Azure AD** **všem**.    
@@ -106,15 +106,15 @@ Chyba 0x801c0003: Tento uživatel není povolen k registraci. Můžete to zkusit
 Chyba 8018000a: něco se pokazilo. Zařízení je už zaregistrované.  Můžete se obrátit na správce systému s kódem chyby 8018000a. "
 
 **Příčina:** Platí jedna z následujících podmínek:
-- Jiný uživatel už zařízení zaregistroval v Intune nebo se připojil k zařízení do Azure AD. Pokud chcete zjistit, jestli se jedná o tento případ, přejděte na **nastavení** > **účty** > **pracovní přístup**. Vyhledejte zprávu podobnou následující: "jiný uživatel v systému je již připojen k práci nebo škole. Odeberte prosím toto pracovní nebo školní připojení a zkuste to znovu. "    
+- Jiný uživatel už zařízení zaregistroval v Intune nebo se připojil k zařízení do Azure AD. Pokud chcete zjistit, jestli se jedná o tento případ, přejděte na **Nastavení** > **účty** > **pracovní přístup**. Vyhledejte zprávu podobnou následující: "jiný uživatel v systému je již připojen k práci nebo škole. Odeberte prosím toto pracovní nebo školní připojení a zkuste to znovu. "    
 
-#### <a name="resolution"></a>Rozlišení
+#### <a name="resolution"></a>Řešení
 
 K vyřešení tohoto problému použijte jednu z následujících metod:
 
 ##### <a name="remove-the-other-work-or-school-account"></a>Odebrat jiný pracovní nebo školní účet
 1. Odhlaste se z Windows a pak se přihlaste pomocí jiného účtu, který je zaregistrovaný nebo připojený k zařízení.    
-2. Přejděte na **nastavení** > **účty** > **pracovní přístup**a pak odstraňte pracovní nebo školní účet.
+2. Přejděte na **Nastavení** > **účty** > **pracovní přístup**a pak odeberte pracovní nebo školní účet.
 3. Odhlaste se z Windows a pak se přihlaste pomocí svého účtu.    
 4. Zaregistrujte zařízení v Intune nebo ho připojte k Azure AD. 
 
@@ -126,7 +126,7 @@ Chyba: Tento účet není na tomto telefonu povolen. Ujistěte se, že informace
 
 **Příčina:** Uživatel, který se pokusil zaregistrovat zařízení, nemá platnou licenci Intune.
 
-#### <a name="resolution"></a>Rozlišení
+#### <a name="resolution"></a>Řešení
 Přiřaďte uživateli platnou licenci Intune a pak zařízení zaregistrujte.
 
 
@@ -136,7 +136,7 @@ Přiřaďte uživateli platnou licenci Intune a pak zařízení zaregistrujte.
  - Pro Office 365 a Intune na tenantovi používáte správu mobilních zařízení (MDM) a uživatel, který se pokusí zaregistrovat zařízení, nemá platnou licenci Intune nebo licenci na Office 365.     
 - Podmínky a ujednání MDM ve službě Azure AD jsou prázdné nebo neobsahují správnou adresu URL.    
 
-#### <a name="resolution"></a>Rozlišení
+#### <a name="resolution"></a>Řešení
 
 Chcete-li tento problém vyřešit, použijte jednu z následujících metod: 
  
@@ -146,8 +146,8 @@ Otevřete centrum pro [správu Microsoft 365](https://admin.microsoft.com)a při
 ##### <a name="correct-the-mdm-terms-of-use-url"></a>Opravte adresu URL podmínek použití MDM.
   1. Přihlaste se k [Azure Portal](https://portal.azure.com/)a pak vyberte **Azure Active Directory**.    
   2. Vyberte **mobilita (MDM a mam)** a pak klikněte na **Microsoft Intune**.    
-  3. Vyberte **Obnovit výchozí adresy URL MDM**a ověřte, že **Adresa URL podmínek použití MDM** je nastavená na **https://portal.manage.microsoft.com/TermsofUse.aspx** .    
-  4. Zvolte **Uložit**.    
+  3. Vyberte **Obnovit výchozí adresy URL MDM**a ověřte, že **Adresa URL podmínek použití MDM** je nastavená na **https://portal.manage.microsoft.com/TermsofUse.aspx**.    
+  4. Klikněte na tlačítko **Uložit**.    
 
 
 ### <a name="something-went-wrong"></a>Něco se pokazilo.
@@ -158,15 +158,15 @@ Chyba 80180026: něco se pokazilo. Potvrďte, že používáte správné přihla
 - V Azure je povolený automatický zápis MDM.    
 - Počítačového klienta Intune pro počítače (agent Intune pro počítače) je nainstalovaný v počítači s Windows 10.
 
-#### <a name="resolution"></a>Rozlišení
+#### <a name="resolution"></a>Řešení
 K vyřešení tohoto problému použijte jednu z následujících metod:
 
 ##### <a name="disable-mdm-automatic-enrollment-in-azure"></a>Zakáže automatickou registraci MDM v Azure.
-1. Přihlaste se k [portálu Azure](https://portal.azure.com/).    
-2. Přejít na **Azure Active Directory** > **mobility (MDM a MAM)**  > **Microsoft Intune**.    
+1. Přihlaste se k webu [Azure Portal](https://portal.azure.com/).    
+2. Přejít na **Azure Active Directory** > **mobility (MDM a mam)** > **Microsoft Intune**.    
 3. Nastavte **obor uživatele MDM** na **žádný**a pak klikněte na **Uložit**.    
      
-##### <a name="uninstall"></a>Odinstalace
+##### <a name="uninstall"></a>Odinstalovat
 Odinstalujte klientského agenta Intune pro počítače z počítače.    
 
 ### <a name="the-software-cannot-be-installed"></a>Software nelze nainstalovat.
@@ -175,9 +175,9 @@ Chyba: software nelze nainstalovat, 0x80cf4017.
 
 **Příčina:** Software klienta není aktuální.
 
-#### <a name="resolution"></a>Rozlišení
-1. Přihlaste se k [https://admin.manage.microsoft.com](https://admin.manage.microsoft.com).    
-2. Přejděte na **správce** > **stažení klientského softwaru**a pak klikněte na **Stáhnout klientský software**.    
+#### <a name="resolution"></a>Řešení
+1. Přihlaste se k webu [https://admin.manage.microsoft.com](https://admin.manage.microsoft.com).    
+2. Přejděte na **správce** > **klientského softwaru ke stažení**a pak klikněte na **Stáhnout klientský software**.    
 3. Uložte instalační balíček a pak nainstalujte klientský software. 
 
 
@@ -187,9 +187,9 @@ Chyba: "certifikát účtu není platný a pravděpodobně vypršela jeho platno
 
 **Příčina:** Software klienta není aktuální.
 
-#### <a name="resolution"></a>Rozlišení
-1. Přihlaste se k [https://admin.manage.microsoft.com](https://admin.manage.microsoft.com).    
-2. Přejděte na **správce** > **stažení klientského softwaru**a pak klikněte na **Stáhnout klientský software**.    
+#### <a name="resolution"></a>Řešení
+1. Přihlaste se k webu [https://admin.manage.microsoft.com](https://admin.manage.microsoft.com).    
+2. Přejděte na **správce** > **klientského softwaru ke stažení**a pak klikněte na **Stáhnout klientský software**.    
 3. Uložte instalační balíček a pak nainstalujte klientský software.    
 
 ### <a name="your-organization-does-not-support-this-version-of-windows"></a>Vaše organizace nepodporuje tuto verzi Windows. 
@@ -198,18 +198,18 @@ Chyba: došlo k problému. Vaše organizace nepodporuje tuto verzi Windows.  (0x
 
 **Příčina:** Registrace Windows MDM je v tenantovi Intune zakázaná.
 
-#### <a name="resolution"></a>Rozlišení
+#### <a name="resolution"></a>Řešení
 Pokud chcete tento problém vyřešit v samostatném prostředí Intune, postupujte takto: 
  
 1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **omezení registrace** > vyberte omezení typu zařízení.    
-2. Vyberte **vlastnosti** > **Upravit** (vedle **Nastavení platformy**) > **Povolení** pro **Windows (MDM)** .    
+2. Vyberte **vlastnosti** > **Upravit** (vedle **Nastavení platformy**) > **Povolení** pro **Windows (MDM)**.    
 3. Klikněte na tlačítko **zkontrolovat a uložit**.    
 
 ### <a name="a-setup-failure-has-occurred-during-bulk-enrollment"></a>Při hromadné registraci došlo k chybě instalace.
 
 **Příčina:** Uživatelské účty Azure AD v balíčku účtů (Package_GUID) pro příslušný zřizovací balíček neumožňují připojení zařízení ke službě Azure AD. Tyto účty Azure AD se automaticky vytvoří při nastavení zřizovacího balíčku pomocí nástroje Windows Configuration Designer (WCD) nebo nastavení aplikace školních počítačů. tyto účty se pak použijí pro připojení zařízení k Azure AD.
 
-#### <a name="resolution"></a>Rozlišení
+#### <a name="resolution"></a>Řešení
 1. Přihlaste se k [Azure Portal](https://portal.azure.com/) jako správce.    
 2. Přejít na **Azure Active Directory > zařízení > nastavení zařízení**.    
 3. Nastavení uživatelé můžou ke **všem** nebo **vybraným** **uživatelům připojovat zařízení do Azure AD** .
@@ -224,7 +224,7 @@ Další informace o tom, jak nainstalovat aplikaci školních počítačů, najd
 ### <a name="auto-mdm-enroll-failed"></a>Automatický zápis MDM: selhání 
 
 Při automatickém pokusu o registraci zařízení s Windows 10 pomocí Zásady skupiny dojde k následujícím problémům: 
-- V Plánovač úloh v části **Microsoft** > **Windows** > **EnterpriseMgmt**, poslední výsledek spuštění **plánu vytvořeného klientem registrace pro automatické registraci v MDM z úlohy AAD** je následující: **událost 76 automatické registrace MDM: nezdařilo se (Neznámý kód chyby Win32:0x8018002b)**       
+- V Plánovač úloh v části **Microsoft** > **Windows** > **EnterpriseMgmt**byl poslední výsledek spuštění **plánu vytvořeného klientem registrace pro automatický zápis do MDM z úlohy AAD** následující: **událost 76 Automatická registrace MDM: selhala (Neznámý kód chyby Win32:0x8018002b)**       
 - V Prohlížeč událostí se v **protokolech aplikací a služeb zaprotokolují následující události/Microsoft/Windows/DeviceManagement-Enterprise-Diagnostics-Provider/admin**:   
     ```asciidoc
     Log Name: Microsoft-Windows-DeviceManagement-Enterprise-Diagnostics-Provider/Admin
@@ -234,10 +234,10 @@ Při automatickém pokusu o registraci zařízení s Windows 10 pomocí Zásady 
     Description: Auto MDM Enroll: Failed (Unknown Win32 Error code: 0x80180002b)
     ```
 **Příčina:** Platí jedna z následujících podmínek: 
-- Hlavní název uživatele obsahuje neověřenou nebo Nesměrovatelné domény, jako je například. Local (například joe@contoso.local).    
+- Hlavní název uživatele obsahuje neověřenou nebo Nesměrovatelné domény, například. Local (jako joe@contoso.local).    
 - **Obor uživatele MDM** je nastavený na **None (žádné**). 
 
-#### <a name="resolution"></a>Rozlišení
+#### <a name="resolution"></a>Řešení
 Pokud hlavní název uživatele obsahuje neověřenou nebo Nesměrovatelné domény, použijte následující postup: 
 
 1. Na serveru, na kterém Active Directory Domain Services (služba AD DS) běží na, otevřete modul **Uživatelé a počítače služby Active Directory** zadáním **DSA. msc** v dialogovém okně **Spustit** a pak klikněte na **OK**.    
@@ -262,20 +262,20 @@ Pokud je **obor uživatele MDM** nastavený na **None (žádné**), postupujte t
 
 **Příčina:** Zadaný formát pojmenování v šabloně názvu zařízení nesplňuje požadavky. Například použijete malé písmeno pro sériové makro, jako je například% sériové% místo% SÉRIOVÉho%.
 
-#### <a name="resolution"></a>Rozlišení
+#### <a name="resolution"></a>Řešení
 
 Ujistěte se, že formát názvů splňuje následující požadavky:
 
 - Vytvořte jedinečný název pro vaše zařízení. Název musí mít maximálně 15 znaků a může obsahovat písmena (a-z, A – Z), číslice (0-9) a spojovníky (k).
 - Nemohou být ale tvořené jen číslicemi.
 - Názvy nesmí obsahovat prázdné znaky.
-- K přidání sériového čísla specifického pro hardware použijte makro% SERIAL%. Nebo použijte makro% RAND: < # číslice >% pro přidání náhodného řetězce čísel, řetězec obsahuje < # číslice > číslic. Například MYPC-% RAND: 6% generuje název, jako je například MYPC-123456.
+- Pomocí makra %SERIAL% můžete přidat sériové číslo specifické pro určitý hardware. Nebo použijte makro% RAND: < # číslice>% pro přidání náhodného řetězce čísel, řetězec obsahuje < # číslice> číslic. Například MYPC-% RAND: 6% generuje název, jako je například MYPC-123456.
 
 ### <a name="something-went-wrong-oobeidps"></a>Něco se pokazilo. OOBEIDPS.
 
 **Příčina:** K tomuto problému dochází, pokud máte proxy, bránu firewall nebo jiné síťové zařízení blokující přístup k poskytovateli identity (IdP).
 
-#### <a name="resolution"></a>Rozlišení
+#### <a name="resolution"></a>Řešení
 Ujistěte se, že požadovaný přístup k internetovým službám pro autopilota není blokovaný. Další informace najdete v tématu [požadavky na síť Windows autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot-requirements-network).
 
 
@@ -283,7 +283,7 @@ Ujistěte se, že požadovaný přístup k internetovým službám pro autopilot
 
 **Příčina:** Zařízení má čip TPM, který podporuje verzi 2,0, ale ještě nebyla upgradována na verzi 2,0.
 
-#### <a name="resolution"></a>Rozlišení
+#### <a name="resolution"></a>Řešení
 Upgradujte čip TPM na verzi 2,0.
 
 Pokud se problém opakuje, ověřte, jestli je stejné zařízení ve dvou přiřazených skupinách, přičemž každé skupině se přiřadí jiný profil pro autopilot. Pokud se nachází ve dvou skupinách, určete, který profil pro autopilot by se měl na zařízení použít, a pak odeberte přiřazení druhého profilu.
@@ -304,11 +304,11 @@ Registering your device for mobile management (Previous step failed)
 
 - Zařízení musí mít fyzický čip TPM 2,0. Zařízení s Virtual čipy TPM (například virtuální počítače Hyper-V) nebo čipy TPM 1,2 nefungují s režimem automatického nasazení.
 - V zařízení musí běžet jedna z následujících verzí Windows:
-    - Windows 10 Build 1703 nebo novější verze.
+    - Windows 10 Build 1709 nebo novější verze.
     - Pokud se používá hybridní připojení k Azure AD, Windows 10 Build 1809 nebo novější verze.
 
 
-#### <a name="resolution"></a>Rozlišení
+#### <a name="resolution"></a>Řešení
 Ujistěte se, že cílové zařízení splňuje obě požadavky popsané v části **Příčina** .
 
 Další informace o tom, jak nasadit zařízení s Windows v celoobrazovkovém režimu pomocí funkce autopilot, najdete v tématu [nasazení veřejného terminálu pomocí funkce Windows autopilot](https://blogs.technet.microsoft.com/mniehaus/2018/06/07/deploying-a-kiosk-using-windows-autopilot/).
@@ -324,9 +324,9 @@ K tomuto problému obvykle dochází předtím, než se zařízení restartuje v
 
 Další možnou příčinou této chyby je, že zařízení AzureAD přidružené k objektu autopilotu bylo odstraněno. Chcete-li tento problém vyřešit, odstraňte objekt autopilot a znovu importujte hodnotu hash, čímž vygenerujete novou.
 
-#### <a name="resolution"></a>Rozlišení
+#### <a name="resolution"></a>Řešení
 
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte > **zařízení** > **Windows** > **Windows**.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte > **zařízení** > **Windows** > Windows**Windows Devices**.
 2. Vyberte zařízení, u kterého dochází k problému > klikněte na tlačítko se třemi tečkami (...) na pravé straně.
 3. Vyberte zrušit **přiřazení uživatele** a počkejte na dokončení procesu.
 4. Před opakovaným pokusem o spuštění instalace ověřte, že je profil Azure AD autopilotu pro hybridní nasazení přiřazen.
@@ -361,17 +361,17 @@ Description:
 
 K tomuto problému obvykle dochází, když nesprávně delegujete oprávnění k organizační jednotce, kde se vytváří zařízení Windows autopilotu. Další informace najdete v tématu [zvýšení limitu účtu počítače v organizační jednotce](windows-autopilot-hybrid.md#increase-the-computer-account-limit-in-the-organizational-unit).
 
-1. Otevřete položku **Uživatelé a počítače služby Active Directory (DSA. msc)** .
+1. Otevřete položku **Uživatelé a počítače služby Active Directory (DSA. msc)**.
 2. Klikněte pravým tlačítkem na organizační jednotku, kterou použijete k vytvoření hybridních počítačů připojených k Azure AD > **delegování ovládacího prvku**.
-3. V průvodci **delegováním řízení** vyberte **další** > **Přidat** > **typy objektů**.
+3. V průvodci **delegováním řízení** vyberte **Další** > **Přidat** > **typy objektů**.
 4. V podokně **typy objektů** zaškrtněte políčko **počítače** > **OK**.
 5. V podokně **Vybrat uživatele**, **počítače**nebo **skupiny** v poli **Zadejte názvy objektů k výběru** zadejte název počítače, ve kterém je konektor nainstalovaný.
-6. Vyberte možnost **Kontrola názvů** a ověřte zadání > **OK** > **Další**.
+6. Vyberte **Zkontrolovat jména** a ověřte zadání > **OK** > **Next**.
 7. Vyberte **vytvořit vlastní úlohu pro delegování** > **Další**.
 8. Zaškrtněte políčko **pouze následující objekty ve složce** a potom vyberte **objekty počítače**, **vytvořte vybrané objekty v této složce**a zrušte zaškrtnutí políček **Odstranit vybrané objekty v této** složce.
 9. Vyberte **Další**.
 10. V části **oprávnění**zaškrtněte políčko **Úplné řízení** . Tato akce vybere všechny ostatní možnosti.
-11. Vyberte **další** > **Dokončit**.
+11. Vyberte **Další** > **Dokončit**.
 
 ### <a name="the-enrollment-status-page-times-out-before-the-sign-in-screen"></a>Časový limit stránky stavu registrace vypršel před přihlašovací obrazovkou.
 
@@ -380,7 +380,7 @@ K tomuto problému obvykle dochází, když nesprávně delegujete oprávnění 
 - Máte zásady podmíněného přístupu Azure AD, které používají nastavení vyžadovat, aby zařízení bylo označené jako vyhovující.
 - Zásady se vztahují na všechny cloudové aplikace a Windows.
 
-#### <a name="resolution"></a>Řešení::
+#### <a name="resolution"></a>Řešení:
 Zkuste jednu z těchto možností:
 - Zaměřte zásady dodržování předpisů Intune na zařízení. Ujistěte se, že je možné určit dodržování předpisů před přihlášením uživatele.
 - Používejte offline licencování pro aplikace ze Storu. V takovém případě nemusí klient Windows před určením dodržování předpisů pro zařízení kontrolovat Microsoft Store.

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 04a8cd4ce64b566bf2d90ef301c1be44589a53e4
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 27033c2452224bc93e335f3517c9548ad65666c4
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79329971"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82080143"
 ---
 # <a name="app-based-conditional-access-with-intune"></a>Podmíněný přístup na základě aplikace s Intune
 
@@ -34,7 +34,7 @@ Podmíněný přístup na základě aplikace a Správa klientských aplikací p�
 > [!NOTE]
 > Spravovaná aplikace je taková aplikace, která využívá zásady ochrany aplikací a která lze spravovat pomocí Intune.
 
-Pokud povolíte přístup k Exchangi Online jenom aplikaci Microsoft Outlook, můžete zablokovat integrované e-mailové aplikace v iOS/iPadOS a Androidu. Kromě toho můžete u aplikací, které nepoužívají zásady ochrany aplikací Intune, blokovat přístup k SharePointu Online.
+Pokud povolíte přístup k Exchangi Online jenom aplikaci Microsoft Outlook, můžete zablokovat integrované e-mailové aplikace v iOS/iPadOS a Androidu. Kromě toho můžete blokovat aplikace, které nemají zásady ochrany aplikací Intune použité pro přístup k SharePointu Online.
 
 ## <a name="prerequisites"></a>Požadavky
 
@@ -64,7 +64,7 @@ V tomto příkladu správce použil zásady ochrany aplikací pro Outlookovou ap
 
 2. Při prvním pokusu o ověření je uživatel přesměrován do obchodu s aplikacemi, odkud si má nainstalovat zprostředkující aplikaci. Zprostředkující aplikací může být buď Microsoft Authenticator pro zařízení s iOSem, nebo Portál společnosti Microsoft pro zařízení s Androidem.
 
-   Pokud se uživatelé pokusí použít nativní e-mailovou aplikaci, budou přesměrováni do obchodu s aplikacemi, aby si nainstalovali Outlook.
+   Pokud se uživatelé pokusí použít nativní e-mailovou aplikaci, budou přesměrováni do obchodu s aplikacemi, aby si nainstalovali aplikaci Outlook.
 
 3. Zprostředkující aplikace se nainstaluje na zařízení.
 
@@ -72,7 +72,7 @@ V tomto příkladu správce použil zásady ochrany aplikací pro Outlookovou ap
 
 5. Zprostředkující aplikace ověří identitu aplikace. K dispozici je vrstva zabezpečení, aby aplikace zprostředkovatele mohla ověřit, jestli je aplikace autorizována pro použití uživatelem.
 
-6. Zprostředkující aplikace odešle v rámci ověřování uživatele ID klienta aplikace do Azure AD, aby zkontrolovala, že je v seznamu schválených zásad.
+6. Aplikace zprostředkovatele odešle ID klienta aplikace do služby Azure AD jako součást procesu ověřování uživatele, aby zkontroloval, jestli je v seznamu schválených zásad.
 
 7. Azure AD umožní ověření uživatele a použití aplikace na základě seznamu schválených zásad. Pokud aplikace není v seznamu, služba Azure AD odepře přístup k aplikaci.
 

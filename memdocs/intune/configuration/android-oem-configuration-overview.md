@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7d6fdb0e019c4c61a83beed63c6d2470a0ed04b1
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: c2d0d4c186dd0c703e371169fd24c2dbdabaa8ea
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80326052"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254839"
 ---
 # <a name="use-and-manage-android-enterprise-devices-with-oemconfig-in-microsoft-intune"></a>Používání a Správa zařízení s Androidem Enterprise pomocí OEMConfig v Microsoft Intune
 
@@ -79,8 +79,8 @@ Ujistěte se, že zařízení podporuje OEMConfig, do Intune se přidá správn�
 ## <a name="create-an-oemconfig-profile"></a>Vytvoření profilu OEMConfig
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **zařízení** > **konfiguračních profilech** > **vytvořit profil**.
-3. Zadejte následující vlastnosti:
+2. Vyberte **Konfigurace zařízení** > **profily** > konfigurace**vytvořit profil**.
+3. Zadejte tyto vlastnosti:
 
     - **Platforma**: vyberte **Android Enterprise**.
     - **Typ profilu**: vyberte **OEMConfig**.
@@ -103,7 +103,7 @@ Ujistěte se, že zařízení podporuje OEMConfig, do Intune se přidá správn�
 8. V části **Konfigurovat nastavení**vyberte **Návrhář konfigurace** nebo **Editor JSON**:
 
     > [!TIP]
-    > Přečtěte si dokumentaci OEM a ujistěte se, že jste správně nakonfigurovali vlastnosti. Tyto vlastnosti aplikace jsou součástí výrobce OEM, nikoli Intune. Intune provede minimální ověření vlastností nebo to, co zadáte. Pokud například zadáte `abcd` pro číslo portu, profil se uloží tak, jak je, a nasadí se do vašich zařízení s hodnotami, které nakonfigurujete. Ujistěte se, že zadáváte správné informace.
+    > Přečtěte si dokumentaci OEM a ujistěte se, že jste správně nakonfigurovali vlastnosti. Tyto vlastnosti aplikace jsou součástí výrobce OEM, nikoli Intune. Intune provede minimální ověření vlastností nebo to, co zadáte. Pokud například zadáte `abcd` číslo portu, profil se uloží tak, jak je, a nasadí se do vašich zařízení s hodnotami, které nakonfigurujete. Ujistěte se, že zadáváte správné informace.
 
     - **Návrhář konfigurace**: po výběru této možnosti se zobrazí vlastnosti dostupné v rámci schématu aplikace, které můžete nakonfigurovat.
 
@@ -126,7 +126,7 @@ Ujistěte se, že zařízení podporuje OEMConfig, do Intune se přidá správn�
     Všechny změny provedené v Návrháři konfigurace jsou také automaticky provedeny v editoru JSON. Podobně všechny změny provedené v editoru JSON se automaticky provedou v Návrháři konfigurace. Pokud vstup obsahuje neplatné hodnoty, nemůžete přepínat mezi návrhářem konfigurace a editorem JSON, dokud problémy neopravíte.
 
 9. Vyberte **Další**.
-10. V části **značky oboru** (volitelné) přiřaďte značku pro filtrování profilu na konkrétní skupiny IT, například `US-NC IT Team` nebo `JohnGlenn_ITDepartment`. Další informace o značkách oboru naleznete v tématu [použití značek RBAC a Scope pro distribuci](../fundamentals/scope-tags.md).
+10. V části **značky oboru** (volitelné) přiřaďte značku pro filtrování profilu pro konkrétní IT skupiny, například `US-NC IT Team` nebo. `JohnGlenn_ITDepartment` Další informace o značkách oboru naleznete v tématu [použití značek RBAC a Scope pro distribuci](../fundamentals/scope-tags.md).
 
     Vyberte **Další**.
 
@@ -151,21 +151,25 @@ V porovnání se standardními aplikacemi aplikace OEMConfig rozšiřují opráv
 
 | OEM | ID sady prostředků | Dokumentace OEM (je-li k dispozici) |
 | --- | --- | ---|
-| Samsung | com.samsung.android.knox.kpu | [Příručka pro správce modulů plug-in služby Knox](https://docs.samsungknox.com/knox-service-plugin/admin-guide/index.htm) |
-| Zebra technologie | com. zebra. oemconfig. Common | [Zebra OEMConfig – přehled](http://techdocs.zebra.com/oemconfig ) |
+| Ascom | com. Ascom. MyCo. oemconfig | |
+| Cipherlab | com. CipherLab. oemconfig | |
 | Honeywell | com. Honeywell. oemconfig |  |
+| HMDGlobal-7,2 | com. hmdglobal. app. oemconfig. n7_2 | 
+| HMDGlobal-4,2 | com. hmdglobal. app. oemconfig. n4_2 | 
 | Tiskárny | JP. Kyocera. enterprisedeviceconfig |  |
+| Samsung | com. Samsung. Android. Knox. KPU | [Příručka pro správce modulů plug-in služby Knox](https://docs.samsungknox.com/knox-service-plugin/admin-guide/index.htm) |
+| Seuic | com. seuic. seuicoemconfig | |
 | Spectralink – čárové kódy | com. Spectralink. čárový kód. Service |  |
 | Spectralink – tlačítka | com. Spectralink. Buttons |  |
 | Spectralink – zařízení | com. Spectralink. slnkdevicesettings  |  |
 | Spectralink – protokolování | com. Spectralink. slnklogger |  |
 | Spectralink - VQO | com. Spectralink. slnkvqo |  |
-| Seuic | com. seuic. seuicoemconfig | |
 | Unitech elektronika | com. Unitech. oemconfig | |
+| Zebra technologie | com. zebra. oemconfig. Common | [Zebra OEMConfig – přehled](http://techdocs.zebra.com/oemconfig ) |
 
 -----------------
 
-Pokud aplikace OEMConfig pro vaše zařízení existuje, ale není v tabulce výše, nebo se nezobrazuje v konzole Intune, `IntuneOEMConfig@microsoft.com`e-mailem.
+Pokud aplikace OEMConfig pro vaše zařízení existuje, ale není v tabulce výše, nebo se nezobrazuje v konzole Intune, e-mail `IntuneOEMConfig@microsoft.com`.
 
 > [!NOTE]
 > Aby bylo možné nakonfigurovat aplikace OEMConfig pomocí profilů OEMConfig, musí být na zprovoznění služby Intune. Jakmile je aplikace podporovaná, nemusíte od Microsoftu kontaktovat žádné informace o jeho nastavování ve vašem tenantovi. Stačí postupovat podle pokynů na této stránce.

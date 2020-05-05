@@ -17,12 +17,12 @@ ms.reviewer: spshumwa
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 077d7c4dd345b9b16677d61269b9f331dedb4dbb
-ms.sourcegitcommit: d601f4e08268d139028f720c0a96dadecc7496d5
+ms.openlocfilehash: 54b26c2b7599906df29e5130b99dc38124e0b411
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80488079"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254788"
 ---
 # <a name="bulk-enrollment-for-windows-devices"></a>Hromadná registrace pro zařízení s Windows
 
@@ -32,7 +32,7 @@ Uživatelé Azure AD jsou na těchto zařízeních standardními uživateli a ob
 
 ## <a name="prerequisites-for-windows-devices-bulk-enrollment"></a>Předpoklady pro hromadnou registraci zařízení s Windows
 
-- Zařízení se systémem Windows 10 Creator Update (build 1703) nebo novějším
+- Zařízení s Windows 10 Creator Update (Build 1709) nebo novější
 - [Automatická registrace Windows](windows-enroll.md#enable-windows-10-automatic-enrollment)
 
 ## <a name="create-a-provisioning-package"></a>Vytvoření zřizovacího balíčku
@@ -74,8 +74,8 @@ Uživatelé Azure AD jsou na těchto zařízeních standardními uživateli a ob
 
 1. Najděte zřizovací balíček v umístění, které jste zadali v **Project folder** (Složka projektu) v aplikaci.
 
-2. Zvolte, jakým způsobem zřizovací balíček do zařízení aplikujete.  Zřizovací balíček se dá do zařízení aplikovat jedním z těchto způsobů:
-   - Zřizovací balíček umístěte na USB flash disk, připojte USB flash disk k zařízení, které chcete hromadně zaregistrovat, a aplikujte balíček během počáteční instalace.
+2. Vyberte způsob použití zřizovacího balíčku pro zařízení.  Zřizovací balíček se dá do zařízení aplikovat jedním z těchto způsobů:
+   - Zřizovací balíček umístěte do jednotky USB a vložte jednotku USB do zařízení, které chcete hromadně zaregistrovat, a použijte ho při počáteční instalaci.
    - Zřizovací balíček umístěte do síťové složky a nainstalujte ho po počáteční instalaci.
 
    Podrobné pokyny k aplikování zřizovacího balíčku najdete v článku o [aplikování zřizovacího balíčku](https://technet.microsoft.com/itpro/windows/configure/provisioning-apply-package).
