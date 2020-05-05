@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/21/2019
+ms.date: 05/01/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 58369ee2130ac296c9768812cf51b3fcbfed0d95
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 3f8cb75907befaa747ebae1718815d9722ff7085
+ms.sourcegitcommit: 56bb5419c41c2e150ffed0564350123135ea4592
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79329707"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82729228"
 ---
 # <a name="android-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Nastavení pro Android označení zařízení jako kompatibilních nebo nekompatibilních s Intune
 
@@ -36,19 +36,37 @@ Jako správce Intune můžete pomocí těchto nastavení dodržování předpis�
 
 ## <a name="before-you-begin"></a>Před zahájením
 
-[Vytvořte zásadu dodržování předpisů](create-compliance-policy.md#create-the-policy). Pro možnost **platforma**vyberte **Správce zařízení s Androidem**.
+[Vytvořte zásady dodržování předpisů](create-compliance-policy.md#create-the-policy). Pro možnost **platforma**vyberte **Správce zařízení s Androidem**.
+
+## <a name="microsoft-defender-atp"></a>Microsoft Defender ATP
+
+- **Vyžadovat, aby zařízení bylo na nebo pod hodnocením rizika počítače**  
+
+  Vyberte maximální povolené skóre rizika počítače pro zařízení vyhodnocená ATP programu Microsoft Defender. Zařízení, která překračují toto skóre, se označí jako nedodržující předpisy.
+  - **Nenakonfigurováno** (*výchozí*)
+  - **Vymazat**
+  - **Nízká**
+  - **Medium**
+  - **Maximální**
 
 ## <a name="device-health"></a>Stav zařízení
 
-- **Zařízení s rootem**:
+- **Zařízení spravovaná pomocí Správce zařízení**  
+  Možnosti *Správce zařízení* jsou nahrazené Androidem Enterprise.
+
+  - **Nenakonfigurováno** (*výchozí*)
+  - **Blok** – blokování zařízení: uživatelé budou moct přejít na správu pracovního profilu Android Enterprise a získat tak přístup.
+
+- **Zařízení s rootem**  
+  Zabránit tomu, aby zařízení se rootem měla přístup k podnikové síti. (Tato kontrolu dodržování předpisů se podporují pro Android 4,0 a vyšší.)
 
   - **Nenakonfigurováno** (*výchozí*) – Toto nastavení není vyhodnoceno pro dodržování předpisů nebo nedodržování předpisů.
   - **Block** Zařízení s označením root (jailbreak) jako nevyhovující předpisům.
 
-- **Vyžadovat, aby zařízení bylo na úrovni hrozby pro zařízení nebo pod**ní:
-
+- **Vyžadovat, aby zařízení bylo na úrovni hrozby pro zařízení nebo pod ní**  
   Pomocí tohoto nastavení můžete v rámci podmínky dodržování předpisů převzít vyhodnocení rizik od připojené služby ochrany před mobilními hrozbami.
-  - **Nenakonfigurováno** (*výchozí*) – Toto nastavení není vyhodnoceno pro dodržování předpisů nebo nedodržování předpisů. 
+
+  - **Nenakonfigurováno** (*výchozí*) – Toto nastavení není vyhodnoceno pro dodržování předpisů nebo nedodržování předpisů.
   - **Zabezpečené** – Tato možnost je nejbezpečnější, protože zařízení nemůže mít žádné hrozby. Pokud jsou na zařízení zjištěny hrozby jakékoli úrovně, vyhodnotí se jako nevyhovující.
   - **Nízká** – zařízení se vyhodnotí jako vyhovující, pokud jsou přítomny jenom hrozby nízké úrovně. Jakákoliv vyšší úroveň zařízení zařadí do stavu nedodržující předpisy.
   - **Střední** – zařízení se vyhodnotí jako vyhovující, pokud jsou stávající hrozby v zařízení na nízké nebo střední úrovni. Pokud se u zařízení zjistí vysoká míra ohrožení, vyhodnotí se jako nevyhovující.
@@ -56,19 +74,18 @@ Jako správce Intune můžete pomocí těchto nastavení dodržování předpis�
 
 ### <a name="google-play-protect"></a>Google Play chránit
 
-- **Služby Google Play je nakonfigurované**:
-
+- **Aplikace Služby Google Play je nakonfigurovaná**  
   Aplikace Služby Google Play umožňuje instalaci aktualizací zabezpečení a je základní závislostí pro mnoho funkcí zabezpečení na zařízeních s certifikací Google.
 
   - **Nenakonfigurováno** (*výchozí*) – Toto nastavení není vyhodnoceno pro dodržování předpisů nebo nedodržování předpisů.  
   - **Vyžadovat** – vyžaduje, aby byla aplikace Google Play Services nainstalovaná a povolená.  
 
-- **Aktuální poskytovatel zabezpečení**:
+- **Aktualizovaný poskytovatel zabezpečení**
 
   - **Nenakonfigurováno** (*výchozí*) – Toto nastavení není vyhodnoceno pro dodržování předpisů nebo nedodržování předpisů.
   - **Vyžadovat** – vyžaduje, aby aktuální poskytovatel zabezpečení chránil zařízení před známými chybami zabezpečení.
 
-- **Kontrola hrozeb v aplikacích**:
+- **Kontrola ohrožení aplikací**
 
   - **Nenakonfigurováno** (*výchozí*) – Toto nastavení není vyhodnoceno pro dodržování předpisů nebo nedodržování předpisů.
   - **Vyžadovat** – vyžaduje, aby byla povolená funkce Androidu **ověřovat aplikace** .
@@ -76,8 +93,7 @@ Jako správce Intune můžete pomocí těchto nastavení dodržování předpis�
   > [!NOTE]
   > Na starších verzích platformy Android tato funkce představuje nastavení dodržování předpisů. Intune může jenom zkontrolovat, jestli je toto nastavení povolené na úrovni zařízení.
 
-- **Ověření zařízení SafetyNet**:
-
+- **Ověření zařízení SafetyNet**  
   Zadejte úroveň [ověření identity SafetyNet](https://developer.android.com/training/safetynet/attestation.html) , která musí být splněna. Možnosti:
 
   - **Nenakonfigurováno** (*výchozí*) – Toto nastavení není vyhodnoceno pro dodržování předpisů nebo nedodržování předpisů.
@@ -89,16 +105,14 @@ Jako správce Intune můžete pomocí těchto nastavení dodržování předpis�
 
 ## <a name="device-properties"></a>Vlastnosti zařízení
 
-### <a name="operating-system-version"></a>Verze operačního systému 
+### <a name="operating-system-version"></a>Verze operačního systému
 
-- **Minimální verze operačního systému**:
-
+- **Minimální verze operačního systému**  
   Pokud zařízení nesplňuje požadavek na minimální verzi operačního systému, nahlásí se jako nedodržující předpisy. Zobrazí se odkaz s informacemi, jak upgradovat. Koncový uživatel si může zařízení upgradovat. Potom získá přístup k prostředkům společnosti.
 
   *Ve výchozím nastavení není nakonfigurována žádná verze*.
 
-- **Maximální verze OS**:
-
+- **Maximální verze operačního systému**  
   Pokud zařízení používá verzi operačního systému, která je novější než verze zadaná v pravidle, bude přístup k prostředkům společnosti blokovaný. Uživateli se zobrazí výzva, aby kontaktoval správce IT. Dokud se pravidlo nezmění a nepovolí verzi operačního systému, nebude mít toto zařízení přístup k prostředkům společnosti.
 
   *Ve výchozím nastavení není nakonfigurována žádná verze*.
@@ -107,38 +121,50 @@ Jako správce Intune můžete pomocí těchto nastavení dodržování předpis�
 
 ### <a name="password"></a>Heslo
 
-<!-- Removed
-- **Minimum password length**: Enter the minimum number of digits or characters that the user's password must have.   
+- **Vyžadovat heslo k odemknutí mobilních zařízení**  
+  *Podporováno v systému Android 4,0 a novějším nebo KNOX 4,0 a novějším.*
 
-
-- **Maximum minutes of inactivity before password is required**: Enter the idle time before the user must reenter their password. When you choose **Not configured** (default), this setting isn't evaluated for compliance or non-compliance.
-
-- **Password expiration (days)**: Select the number of days before the password expires and the user must create a new password.
-
-- **Number of previous passwords to prevent reuse**: Enter the number of recent passwords that can't be reused. Use this setting to restrict the user from creating previously used passwords.
-
--->
-
-- **Vyžadovat heslo k odemknutí mobilních zařízení**:
+  Toto nastavení určuje, jestli se má po uživatelích vyžadovat zadání hesla, než bude udělen přístup k informacím uloženým v jejich mobilních zařízeních. Doporučená hodnota: vyžadovat  
 
   - **Nenakonfigurováno** (*výchozí*) – Toto nastavení není vyhodnoceno pro dodržování předpisů nebo nedodržování předpisů.
   - **Vyžadovat** – uživatelé musí zadat heslo, aby mohli získat přístup ke svému zařízení.
 
-- **Požadovaný typ hesla**:
+- **Vyžadovaný typ hesla**  
+  *Podporováno v systému Android 4,0 a novějším nebo KNOX 4,0 a novějším.*
 
-  Vyberte, jestli má heslo obsahovat jenom číselné znaky, nebo kombinaci číslic a dalších znaků. Možnosti:
+  Vyberte, jestli má heslo obsahovat jenom číselné znaky, nebo kombinaci číslic a dalších znaků.
 
   - **Výchozí nastavení zařízení** – vyhodnotit dodržování předpisů heslem, nezapomeňte vybrat jinou sílu hesla než **výchozí zařízení**.
   - **Biometrika s nízkým zabezpečením**
-  - **Aspoň číslice**
-  - **Číselné komplexní** – opakované nebo po sobě jdoucí číslice, například `1111` nebo `1234`, nejsou povoleny.
-  - **Aspoň abecední znaky**
-  - **Aspoň alfanumerické znaky**
+  - **Aspoň číselné**
+  - **Číselné komplexní** – opakující se nebo po sobě jdoucí číslice `1111` , `1234`například nebo, nejsou povoleny.
+  - **Aspoň abecední**
+  - **Aspoň alfanumerické**
   - **Aspoň alfanumerické se symboly**
+
+  Na základě konfigurace tohoto nastavení je k dispozici minimálně jedna z následujících možností:
+
+  - **Minimální délka hesla**  
+    *Podporováno v systému Android 4,0 a novějším nebo KNOX 4,0 a novějším.*
+
+    Zadejte minimální počet číslic nebo znaků, které musí heslo uživatele obsahovat.
+
+  - **Maximální počet minut nečinnosti před vyžadováním hesla**  
+    *Podporováno v systému Android 4,0 a novějším nebo KNOX 4,0 a novějším.*
+
+    Zadejte dobu nečinnosti, než uživatel musí znovu zadat heslo. Pokud zvolíte **Nenakonfigurováno** (výchozí), nebude se u tohoto nastavení vyhodnocovat, jestli zařízení vyhovuje.
+
+  - **Počet dní do vypršení platnosti hesla**  
+  *Podporováno v systému Android 4,0 a novějším nebo KNOX 4,0 a novějším.*
+
+  Vyberte počet dní do vypršení platnosti hesla a uživatel musí vytvořit nové heslo.
+
+  - **Počet předchozích hesel, která zabrání opakovanému použití**  
+    Zadejte počet nedávných hesel, která se nedají znovu použít. Toto nastavení použijte, pokud chcete uživateli zabránit ve vytváření hesel, která používal dříve. (Podporuje se pro Android 4,0 a vyšší nebo KNOX 4,0 a vyšší.)
 
 ### <a name="encryption"></a>Šifrování
 
-- **Šifrování datového úložiště na zařízení**:  
+- **Šifrování datového úložiště na zařízení**  
   *Podporováno v systému Android 4,0 a novějším nebo KNOX 4,0 a novějším.*
 
   - **Nenakonfigurováno** (*výchozí*) – Toto nastavení není vyhodnoceno pro dodržování předpisů nebo nedodržování předpisů.
@@ -146,18 +172,18 @@ Jako správce Intune můžete pomocí těchto nastavení dodržování předpis�
 
 ### <a name="device-security"></a>Zabezpečení zařízení
 
-- **Blokovat aplikace z neznámých zdrojů**:
+- **Blokovat aplikace z neznámých zdrojů**  
+  *Podporováno v Androidu 4,0 až Android 7. x. Nepodporováno Androidem 8,0 a novějším*
 
   - **Nenakonfigurováno** (*výchozí*) – Toto nastavení není vyhodnoceno pro dodržování předpisů nebo nedodržování předpisů.
-  - **Blokové** zařízení s povoleným **zabezpečením > neznámými** zdroji (*podporované v Androidu 4,0 až Android 7. x. Nepodporováno v Androidu 8,0 a novějším.* )
+  - **Blokové** zařízení s povoleným **zabezpečením > neznámými** zdroji (*podporované v Androidu 4,0 až Android 7. x. Nepodporováno v Androidu 8,0 a novějším.*)
 
   Pokud chcete instalovat aplikace bokem, musí být povoleny neznámé zdroje. Pokud aplikace pro Android neinstalujete bokem, nastavte tuto funkci na **Blokovat**, abyste tuto zásadu dodržování předpisů povolili.
 
   > [!IMPORTANT]
   > Aplikace instalované bokem vyžadují, aby bylo povolené nastavení **Blokovat aplikace z neznámých zdrojů**. Na dodržení této zásady trvejte jenom v případě, že na zařízeních neprovádíte instalaci aplikací pro Android bokem.
 
-- **Integrita modulu runtime aplikace Portál společnosti**:
-
+- **Integrita modulu runtime aplikace Portál společnosti**
   - **Nenakonfigurováno** (*výchozí*) – Toto nastavení není vyhodnoceno pro dodržování předpisů nebo nedodržování předpisů.
   - **Vyžadovat** – vyberte *vyžadovat* a potvrďte, že aplikace Portál společnosti splňuje všechny následující požadavky:
 
@@ -166,19 +192,20 @@ Jako správce Intune můžete pomocí těchto nastavení dodržování předpis�
     - Není v režimu ladění.
     - Je nainstalovaná ze známého zdroje.
 
-- **Blokovat na zařízení ladění USB** *(Android 4,2 nebo novější)* :
+- **Blokovat na zařízení ladění USB**  
+  *(Podporováno v systému Android 4,2 nebo novějším)*
 
   - **Nenakonfigurováno** (*výchozí*) – Toto nastavení není vyhodnoceno pro dodržování předpisů nebo nedodržování předpisů.
   - **Blok** – zabraňuje zařízením používat funkci ladění USB.
 
-- **Minimální úroveň opravy zabezpečení** *(Android 6,0 nebo novější)* :
+- **Minimální úroveň opravy zabezpečení**  
+  *(Podporováno v systému Android 6,0 nebo novějším)*
 
   Vyberte nejstarší úroveň opravy zabezpečení, kterou může zařízení mít. Zařízení, která nemají aspoň tuto úroveň opravy, nevyhovují. Datum musí být zadáno ve formátu `YYYY-MM-DD`.
 
   *Ve výchozím nastavení není nakonfigurované žádné datum*.
 
-- **Aplikace s omezeným přístupem**:
-
+- **Omezené aplikace**  
   Zadejte **název aplikace** a **ID sady prostředků aplikace** pro aplikace, které by měly být omezené, a pak vyberte **Přidat**. Pokud je na zařízení nainstalovaná aspoň jedna zakázaná aplikace, označí se zařízení jako nevyhovující.
 
 ## <a name="next-steps"></a>Další kroky

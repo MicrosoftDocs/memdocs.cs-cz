@@ -5,23 +5,23 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/01/2020
+ms.date: 05/01/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
-ms.reviewer: shpate
+ms.reviewer: laarrizz
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 618ed802d33f2c50a567f1e18da4689855bbf016
-ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
+ms.openlocfilehash: 35e48be90b80d0c776087c95444f5f77f5ff547c
+ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80551688"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82693422"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Konfigurace zařízení s Windows 10 v Intune pomocí směrných plánů zabezpečení
 
@@ -46,21 +46,49 @@ Směrné plány zabezpečení vám můžou při práci s Microsoft 365 mít komp
 
 Hlavní [směry zabezpečení Windows](https://docs.microsoft.com/windows/security/threat-protection/windows-security-baselines) jsou skvělým prostředkem pro další informace o této funkci. [Správa mobilních zařízení](https://docs.microsoft.com/windows/client-management/mdm/) (MDM) je skvělým prostředkem o MDM a o tom, co můžete dělat na zařízeních s Windows.
 
+## <a name="available-security-baselines"></a>Dostupné standardní hodnoty zabezpečení
+
+Následující instance standardních hodnot zabezpečení jsou k dispozici pro použití s Intune. Pomocí odkazů můžete zobrazit nastavení nejaktuálnější instance každého směrného plánu.
+
+- **Základní hodnoty zabezpečení MDM**
+  - [Základní hodnota zabezpečení MDM pro květen 2019](security-baseline-settings-mdm-all.md?pivots=mdm-may-2019)
+  - [Preview: směrný plán zabezpečení MDM pro říjen 2018](security-baseline-settings-mdm-all.md?pivots=mdm-preview)
+
+- **Základní hodnoty**
+  ATP v programu Microsoft Defender *(k použití tohoto směrného plánu musí vaše prostředí splňovat požadavky na použití [rozšířené ochrany před internetovými útoky v programu Microsoft Defender](advanced-threat-protection.md#prerequisites))*.
+  - [Směrné plány ATP v programu Microsoft Defender pro 2020. dubna verze 4](security-baseline-settings-defender-atp.md?pivots=atp-april-2020)
+  - [Směrné plány ATP v programu Microsoft Defender pro březen 2020 – verze 3](security-baseline-settings-defender-atp.md?pivots=atp-march-2020)
+
+  > [!NOTE]
+  > Základní hodnoty zabezpečení služby Microsoft Defender ATP byly optimalizované pro fyzická zařízení a v tuto chvíli se nedoporučují pro použití na virtuálních počítačích (VM) nebo koncových bodech VDI. Určitá nastavení standardních hodnot můžou mít vliv na vzdálené interaktivní relace ve virtualizovaných prostředích.  Další informace najdete v dokumentaci k Windows v tématu [zvýšení dodržování předpisů pro základní hodnoty zabezpečení služby Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) .
+
+- **Základní hodnoty Microsoft Edge**
+  - [Směrný plán Microsoft Edge pro duben 2020 (hrana verze 80 a novější)](security-baseline-settings-edge.md?pivots-edge-april-2020)
+  - [Preview: směrný plán Microsoft Edge pro říjen 2019 (verze Edge 77 a novější)](security-baseline-settings-edge.md?pivots=edge-october-2019)
+
+Můžete dál používat a upravovat profily, které jste předtím vytvořili na základě šablony verze Preview, a to i v případě, že tato šablona Preview už není dostupná pro vytváření nových profilů.
+
+Až budete připraveni přejít na novější verzi používaného směrného plánu, přečtěte si téma [Změna základní verze profilu](#change-the-baseline-version-for-a-profile) v tomto článku. 
+
 ## <a name="about-baseline-versions-and-instances"></a>Základní verze a instance
 
 Každá nová instance verze směrného plánu může přidat nebo odebrat nastavení nebo zavést další změny. Například protože nové nastavení Windows 10 bude k dispozici v nových verzích Windows 10, základní hodnota zabezpečení MDM může obdržet novou instanci verze, která bude obsahovat nejnovější nastavení.
 
-V konzole Intune se na dlaždici pro jednotlivé standardní hodnoty zobrazí název základní šablony a základní informace o tomto směrném plánu. Tyto informace zahrnují počet profilů, které používají daný typ základního typu, počet různých instancí typu standardních hodnot a datum *posledního publikování* , které určuje, kdy se tato šablona směrného plánu přidala do vašeho tenanta. Následující příklad ukazuje dlaždici pro dobře používané standardní hodnoty zabezpečení MDM:
+V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)v části**základní hodnoty zabezpečení** **Endpoint Security** > se zobrazí seznam dostupných směrných plánů. Seznam obsahuje název základní šablony, počet profilů, které používají daný typ základního typu, počet oddělených instancí typu standardních hodnot a datum *posledního publikování* , které určuje, kdy byla k dispozici nejnovější verze šablony směrného plánu.
 
-![Dlaždice standardních hodnot](./media/security-baselines/baseline-tile.png)
-
-Chcete-li zobrazit další informace o základních verzích, které používáte, vyberte dlaždici základní hodnoty a otevřete její podokno *přehledu* a pak vyberte možnost **verze**. Intune zobrazí podrobnosti o verzích tohoto směrného plánu, které používají vaše profily. V podokně verze můžete vybrat jednu verzi pro zobrazení hlubších podrobností o profilech, které používají tuto verzi. Můžete také vybrat dvě různé verze a pak vybrat **Porovnat směrné plány** a stáhnout soubor CSV s podrobnostmi o těchto rozdílech.
-
-![Porovnat směrné plány](./media/security-baselines/compare-baselines.png)
-
-Když vytvoříte *profil*standardních hodnot zabezpečení, profil automaticky použije naposledy vydanou instanci standardních hodnot zabezpečení.  Můžete pokračovat v používání a úpravách dříve vytvořených profilů, které používají předchozí instanci základní verze, včetně standardních hodnot vytvořených pomocí verze Preview.
+Chcete-li zobrazit další informace o základních verzích, které používáte, vyberte dlaždici základní hodnoty a otevřete její podokno *přehledu* a pak vyberte možnost **verze**. Intune zobrazí podrobnosti o verzích tohoto směrného plánu, které používají vaše profily, včetně nejnovější a aktuální základní verze.  Pro zobrazení podrobných podrobností o profilech, které používají tuto verzi, můžete vybrat jednu verzi.
 
 Můžete zvolit [změnu verze](#change-the-baseline-version-for-a-profile) směrného plánu, který se používá s daným profilem. To znamená, že když se objeví nová verze, nemusíte vytvářet nový základní profil, abyste ho mohli využít. Až budete připraveni, můžete vybrat profil standardních hodnot a potom pomocí předdefinované možnosti změnit verzi instance pro tento profil na nový.
+
+### <a name="compare-baseline-versions"></a>Porovnat základní verze
+
+V podokně **verze** pro směrný plán zabezpečení je seznam každé verze tohoto směrného plánu, který jste nasadili. Tento seznam obsahuje také nejnovější a aktivní verzi směrného plánu. Při vytváření nového *profilu*standardních hodnot zabezpečení profil používá tuto nejnovější verzi směrného plánu zabezpečení.  Můžete pokračovat v používání a úpravách dříve vytvořených profilů, které používají dřívější základní verzi, včetně standardních hodnot vytvořených pomocí verze Preview.
+
+Chcete-li zjistit, co se změnilo mezi verzemi, zaškrtněte políčka pro dvě různé verze a pak vyberte **Porovnat směrné plány** pro stažení souboru CSV, který tyto rozdíly podrobně popisuje. 
+
+Stažení identifikuje všechna nastavení ve dvou standardních verzích a poznámky, pokud se toto nastavení změnilo (*notEqual*) nebo má stejné (*stejné*). Podrobnosti zahrnují také výchozí hodnotu nastavení podle verze, a pokud bylo nastavení *přidáno* do novější verze nebo *odebrané* z novější verze.
+
+![Porovnat směrné plány](./media/security-baselines/compare-baselines.png)
 
 ## <a name="avoid-conflicts"></a>Vyhnout se konfliktům
 
@@ -75,26 +103,6 @@ Pomocí informací na následujících odkazech můžete identifikovat a vyřeš
 - [Řešení potíží se zásadami a profily v Intune](../configuration/troubleshoot-policies-in-microsoft-intune.md)
 - [Monitorování standardních hodnot zabezpečení](security-baselines-monitor.md#troubleshoot-using-per-setting-status)
 
-## <a name="available-security-baselines"></a>Dostupné standardní hodnoty zabezpečení
-
-Následující instance standardních hodnot zabezpečení jsou k dispozici pro použití s Intune. Pomocí odkazů můžete zobrazit nastavení nejaktuálnější instance každého směrného plánu.
-
-- **Základní hodnoty zabezpečení MDM**
-  - [Základní hodnota zabezpečení MDM pro květen 2019](security-baseline-settings-mdm-all.md?pivots=mdm-may-2019)
-  - [Preview: směrný plán zabezpečení MDM pro říjen 2018](security-baseline-settings-mdm-all.md?pivots=mdm-preview)
-
-- **Základní
-  služby Microsoft Defender ATP** *(aby se tyto standardní hodnoty používaly, musí vaše prostředí splňovat požadavky na použití [rozšířené ochrany před internetovými útoky v programu Microsoft Defender](advanced-threat-protection.md#prerequisites))* .
-  - [Základní hodnota ATP v programu Microsoft Defender – verze 3](security-baseline-settings-defender-atp.md)
-
-  > [!NOTE]
-  > Základní hodnoty zabezpečení služby Microsoft Defender ATP byly optimalizované pro fyzická zařízení a v tuto chvíli se nedoporučují pro použití na virtuálních počítačích (VM) nebo koncových bodech VDI. Určitá nastavení standardních hodnot můžou mít vliv na vzdálené interaktivní relace ve virtualizovaných prostředích.  Další informace najdete v dokumentaci k Windows v tématu [zvýšení dodržování předpisů pro základní hodnoty zabezpečení služby Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) .
-
-- **Základní hodnoty Microsoft Edge**
-  - [Preview: směrný plán Microsoft Edge](security-baseline-settings-edge.md)
-
-Můžete dál používat a upravovat profily, které jste předtím vytvořili na základě šablony verze Preview, a to i v případě, že tato šablona Preview už není dostupná pro vytváření nových profilů.
-
 ## <a name="manage-baselines"></a>Spravovat směrné plány
 
 Mezi běžné úlohy při práci se standardními hodnotami zabezpečení patří:
@@ -104,7 +112,7 @@ Mezi běžné úlohy při práci se standardními hodnotami zabezpečení patř�
 - [Odebrání přiřazení standardních hodnot](#remove-a-security-baseline-assignment) – Zjistěte, co se stane, když zastavíte správu nastavení se směrným plánem zabezpečení.
 
 
-### <a name="prerequisites"></a>Předpoklady
+### <a name="prerequisites"></a>Požadavky
 
 - Aby bylo možné spravovat směrné plány v Intune, musí mít váš účet předdefinovanou roli [správce zásad a profilů](../fundamentals/role-based-access-control.md#built-in-roles) .
 
@@ -114,7 +122,7 @@ Mezi běžné úlohy při práci se standardními hodnotami zabezpečení patř�
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Vyberte možnost **Endpoint security** > **úrovně zabezpečení** a zobrazte seznam dostupných směrných plánů.
+2. Vyberte možnost**základní hodnoty zabezpečení** **Endpoint** > Security a zobrazte seznam dostupných směrných plánů.
 
    ![Vyberte standardní hodnoty zabezpečení, které se mají nakonfigurovat.](./media/security-baselines/available-baselines.png)
 
@@ -151,7 +159,7 @@ Mezi běžné úlohy při práci se standardními hodnotami zabezpečení patř�
 
    ![Kontrola standardních hodnot](./media/security-baselines/review.png)
 
-9. Po vytvoření profilu ho upravte tak, že kliknete na položku **Endpoint security** > **úrovně zabezpečení**, vyberte typ standardních hodnot, který jste nakonfigurovali, a pak vyberte **profily**. V seznamu dostupných profilů vyberte profil a pak vyberte **vlastnosti**. Můžete upravit nastavení ze všech dostupných karet konfigurace a kliknutím na tlačítko **zkontrolovat + Uložit** změny potvrďte.
+9. Po vytvoření profilu ho upravte tak, že kliknete na možnost**základní hodnoty zabezpečení** **Endpoint Security** > , vyberte typ standardních hodnot, který jste nakonfigurovali, a pak vyberte **profily**. V seznamu dostupných profilů vyberte profil a pak vyberte **vlastnosti**. Můžete upravit nastavení ze všech dostupných karet konfigurace a kliknutím na tlačítko **zkontrolovat + Uložit** změny potvrďte.
 
 ### <a name="change-the-baseline-version-for-a-profile"></a>Změna základní verze profilu
 
@@ -173,7 +181,7 @@ Po uložení se po dokončení převodu směrný plán okamžitě znovu nasadí 
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431). 
 
-2. Vyberte **Endpoint security** > **úrovně zabezpečení**a pak vyberte dlaždici pro typ základního typu, který má profil, který chcete změnit.
+2. Vyberte možnost**základní hodnoty zabezpečení** **Endpoint** > Security a potom vyberte dlaždici pro typ základního typu, který má profil, který chcete změnit.
 
 3. V dalším kroku vyberte **profily**a potom zaškrtněte políčko u profilu, který chcete upravit, a pak vyberte **změnit verzi**.
 
@@ -198,6 +206,14 @@ Po uložení se po dokončení převodu směrný plán okamžitě znovu nasadí 
 Pokud se nastavení standardních hodnot zabezpečení už netýká zařízení, nebo se nastavení ve standardních hodnotách nastaví na *není nakonfigurované*, nastavení se v zařízení nevrátí do předem spravované konfigurace. Místo toho předchozí spravovaná nastavení v zařízení ponechá poslední konfigurace přijatá od standardních hodnot, dokud některý jiný proces tyto nastavení v zařízení neaktualizuje.
 
 Jiné procesy, které můžou později měnit nastavení zařízení, zahrnují různé nebo nové základní hodnoty zabezpečení, konfigurační profil zařízení, konfigurace Zásady skupiny nebo ruční úpravu nastavení na zařízení.
+
+### <a name="older-baseline-versions"></a>Starší základní verze
+
+Microsoft Endpoint Manager aktualizuje verze předdefinovaných standardních hodnot zabezpečení v závislosti na měnícím se potřebách typické organizace. Každá nová verze má za následek aktualizaci verze na konkrétní směrný plán. Očekává se, že zákazníci budou používat nejnovější základní verzi jako výchozí bod pro své konfigurační profily zařízení.
+
+Pokud už neexistují žádné profily, které používají starší standardní hodnoty uvedené ve vašem tenantovi, Microsoft Endpoint Manager zobrazí jenom nejnovější dostupnou verzi základní verze.
+
+Pokud máte profil přidružený ke staršímu směrnému plánu, bude tento starší směrný plán dál uveden.
 
 ## <a name="co-managed-devices"></a>Společně spravovaná zařízení
 

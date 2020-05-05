@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 235f5517c9968ba63b04fefa03d9486e5bd6e52d
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: d1ff20db13a87faea41d262da5742a428ec4d28f
+ms.sourcegitcommit: b7e5b053dfa260e7383a9744558d50245f2bccdc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80086397"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82587285"
 ---
 # <a name="add-and-use-wi-fi-settings-on-your-devices-in-microsoft-intune"></a>Přidání a použití nastavení Wi-Fi na zařízeních v Microsoft Intune
 
@@ -52,8 +52,8 @@ Profily Wi-Fi podporují zařízení s následujícími platformami:
 ## <a name="create-the-profile"></a>Vytvoření profilu
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **zařízení** > **konfiguračních profilech** > **vytvořit profil**.
-3. Zadejte následující vlastnosti:
+2. Vyberte **Konfigurace zařízení** > **profily** > konfigurace**vytvořit profil**.
+3. Zadejte tyto vlastnosti:
 
     - **Platforma**: vyberte platformu zařízení. Možnosti:
 
@@ -62,13 +62,13 @@ Profily Wi-Fi podporují zařízení s následujícími platformami:
       - **iOS/iPadOS**
       - **macOS**
       - **Windows 10 a novější**
-      - **Windows 8.1 a novější**
+      - **Windows 8.1 a vyšší**
 
     - **Profil**: vyberte **Wi-Fi**.
 
       > [!TIP]
       >
-      > - Pro zařízení s **Androidem Enterprise** spuštěná jako vyhrazené zařízení (beznabídkový režim) vyberte **pouze vlastník zařízení** > **Wi-Fi**.
+      > - Pro zařízení s **Androidem Enterprise** spuštěná jako vyhrazené zařízení (beznabídkový režim) vyberte >  **jenom vlastník zařízení****Wi-Fi**.
       > - U **Windows 8.1 a novějších verzí** můžete zvolit **Import Wi-Fi**. Tato možnost umožňuje importovat nastavení Wi-Fi jako soubor XML, který jste předtím vyexportovali z jiného zařízení.
 
 4. Vyberte **Vytvořit**.
@@ -88,7 +88,7 @@ Profily Wi-Fi podporují zařízení s následujícími platformami:
     - [Windows 8.1 a novější](wi-fi-settings-import-windows-8-1.md) (včetně Windows Holographic for Business)
 
 8. Vyberte **Další**.
-9. V části **značky oboru** (volitelné) přiřaďte značku pro filtrování profilu na konkrétní skupiny IT, například `US-NC IT Team` nebo `JohnGlenn_ITDepartment`. Další informace o značkách oboru naleznete v tématu [použití značek RBAC a Scope pro distribuci](../fundamentals/scope-tags.md).
+9. V části **značky oboru** (volitelné) přiřaďte značku pro filtrování profilu pro konkrétní IT skupiny, například `US-NC IT Team` nebo. `JohnGlenn_ITDepartment` Další informace o značkách oboru naleznete v tématu [použití značek RBAC a Scope pro distribuci](../fundamentals/scope-tags.md).
 
     Vyberte **Další**.
 
@@ -97,6 +97,10 @@ Profily Wi-Fi podporují zařízení s následujícími platformami:
     Vyberte **Další**.
 
 11. V rámci **Revize a vytvoření**zkontrolujte nastavení. Když vyberete **vytvořit**, vaše změny se uloží a profil se přiřadí. Tato zásada se taky zobrazuje v seznamu profily.
+
+> [!TIP]
+> Pokud pro profil sítě Wi-Fi používáte ověřování založené na certifikátech, nasaďte profil sítě Wi-Fi, profil certifikátu a důvěryhodný kořenový profil do stejných skupin, abyste zajistili, že každé zařízení dokáže rozpoznat legitimitu certifikační autority.  Další informace najdete v tématu [Postup konfigurace certifikátů pomocí Microsoft Intune](../protect/certificates-configure.md).
+
 
 ## <a name="next-steps"></a>Další kroky
 

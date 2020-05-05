@@ -13,16 +13,17 @@ ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: ''
 zone_pivot_groups: windows-mdm-versions
+ms.reviewer: laarrizz
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5b40ed9dff0d83639015e70889bf7008e8e68173
-ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
-ms.translationtype: MT
+ms.openlocfilehash: 11d01481369f1f6439217262c4181c2c9dabf548
+ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
+ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80696491"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82693385"
 ---
 # <a name="windows-mdm-security-baseline-settings-for-intune"></a>Nastavení standardních hodnot zabezpečení Windows MDM pro Intune
 
@@ -30,6 +31,8 @@ Zobrazte nastavení základní hodnoty zabezpečení MDM, které Microsoft Intun
 
 - Další informace o použití standardních hodnot zabezpečení s Intune a postup upgradu základní verze v profilech standardních hodnot zabezpečení najdete v tématu [použití standardních hodnot zabezpečení](security-baselines.md).
 - Nejnovější základní verze je základní hodnota **zabezpečení MDM pro květen 2019**
+
+Chcete-li zjistit, co se změnilo v této verzi směrného plánu z předchozích verzí, použijte akci [Porovnat směrné plány](../protect/security-baselines.md#compare-baseline-versions) , která je k dispozici při prohlížení podokna *verze* pro tento směrný plán.
 
 Nezapomeňte vybrat verzi směrného plánu, kterou chcete zobrazit.
 <!-- Cookies might be required to enable some browsers to display the zone options -->
@@ -105,7 +108,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – App
 ::: zone-end
 ::: zone pivot="mdm-preview,mdm-may-2019"
 
-- **Blokovat hru DVR (jenom Desktop)** :  
+- **Blokovat hru DVR (jenom Desktop)**:  
   Konfiguruje, zda je povoleno nahrávání a vysílání her.  
   [Další informace](https://go.microsoft.com/fwlink/?linkid=2067056)
 
@@ -267,7 +270,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Cre
 
   **Výchozí**: zakázáno
 
-## <a name="data-protection"></a>Data Protection
+## <a name="data-protection"></a>Ochrana dat
 
 Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – DataProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dataprotection) .
 
@@ -375,7 +378,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Dev
 
     **Výchozí**: 10  
 
-  - **Vypršení platnosti hesla (dny)** :  
+  - **Vypršení platnosti hesla (dny)**:  
     Nastavení zásad maximální stáří hesla určuje, jak dlouho (ve dnech) se dá heslo použít, než systém vyžaduje, aby ho uživatel změnil. Můžete nastavit, aby platnost hesla vyprší po uplynutí počtu dní od 1 do 999, nebo můžete zadat, že hesla budou nikdy vypršet nastavením počtu dní na hodnotu 0. Pokud je maximální stáří hesla mezi 1 a 999 dny, minimální stáří hesla musí být kratší než maximální stáří hesla. Pokud je maximální stáří hesla nastavené na 0, minimální stáří hesla může být libovolná hodnota mezi 0 a 998 dny.  
     [Další informace](https://go.microsoft.com/fwlink/?linkid=2067028)
 
@@ -463,24 +466,24 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Eve
 Další informace najdete v dokumentaci k Windows v tématu [zásady pro poskytovatele cloudu](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-experience) .
 
 - **Blokovat Windows Spotlight**:  
-  Umožňuje správcům IT vypnout všechny funkce Windows Spotlight – okno Spotlight na zamykací obrazovce, tipy pro Windows, funkce Microsoftu pro zákazníky a další související funkce.  
+  Umožňuje správcům IT vypnout (blokovat) všechny funkce Windows Spotlightu. To zahrnuje i Windows Spotlight na zamykací obrazovce, tipy pro Windows, funkce Microsoftu pro uživatele a další související funkce.  
   [Další informace](https://go.microsoft.com/fwlink/?linkid=2067037)
 
   **Výchozí**: Ano
 
-  Pokud je u možnosti *blokovat Windows Spotlight* nastavená hodnota *Ano*, jsou k dispozici následující nastavení.
+  Když je pro *blokování Windows Spotlight* nastavená možnost *není nakonfigurované*, Windows Spotlight se na zařízeních nezablokuje a pak můžete nakonfigurovat následující nastavení, aby se zablokovaly vybrané položky pro Windows Spotlight:
 
   - **Zablokovat návrhy třetích stran ve Windows Spotlightu**:  
     Určuje, jestli se mají povolit návrhy aplikací a obsahu od vydavatelů softwaru třetích stran ve funkcích Windows Spotlight, jako je Spotlight na zamykací obrazovce, navrhované aplikace v nabídce Start a tipy pro Windows. Uživatelé se pořád můžou podívat na návrhy funkcí, aplikací a služeb Microsoftu.  
     [Další informace](https://go.microsoft.com/fwlink/?linkid=2067045)
 
-    **Výchozí**: Ano
+    **Výchozí**: Nenakonfigurováno
 
   - **Zablokovat funkce specifické pro uživatele**:  
     Umožňuje správcům IT zapnout prostředí, která jsou typicky jenom pro příjemce, jako jsou návrhy spuštění, oznámení o členství, instalace aplikace po POČÁTEČNÍm startu a přesměrovat dlaždice.  
     [Další informace](https://go.microsoft.com/fwlink/?linkid=2067054)
 
-    **Výchozí**: Ano
+    **Výchozí**: Nenakonfigurováno
 
 ## <a name="exploit-guard"></a>Zneužití Guard
 
@@ -765,7 +768,7 @@ Další informace najdete v dokumentaci k Windows v dokumentaci k [zásadě CSP]
   **Výchozí**: zakázat Java
 
 - **Ovládací prvky ActiveX aplikace Internet Explorer v chráněném režimu**:  
-  Nastavení této zásady zabraňuje spuštění ovládacích prvků ActiveX v chráněném režimu, je-li povolen Rozšířený chráněný režim. Když má uživatel nainstalovaný ovládací prvek ActiveX, který není kompatibilní s rozšířeným chráněným režimem a web se pokusí načíst ovládací prvek, Internet Explorer uživatele upozorní a nabídne možnost spustit web v normálním chráněném režimu. Nastavení této zásady zakáže toto oznámení a vynutí spuštění všech webů v rozšířeném chráněném režimu. Rozšířený chráněný režim poskytuje dodatečnou ochranu před škodlivými weby pomocí 64 procesů na 64 verzích systému Windows. V počítačích s minimálně Windows 8 se v rozšířeném chráněném režimu taky omezují umístění, ze kterých může Internet Explorer číst v registru a v systému souborů. Pokud je povolený Rozšířený chráněný režim a uživatel se nachází na webu, který se pokusí načíst ovládací prvek ActiveX, který není kompatibilní se zapnutým rozšířeným chráněným režimem, Internet Explorer uživatele upozorní a nabídne možnost zakázat Rozšířený chráněný režim pro konkrétní web. Pokud toto nastavení zásad povolíte, uživateli Internet Exploreru nebude umožněno zakázat Rozšířený chráněný režim. Všechny weby s chráněným režimem budou spouštěny v rozšířeném chráněném režimu. Pokud nastavení této zásady zakážete nebo nenakonfigurujete, Internet Explorer upozorní uživatele a nabídne možnost spouštět weby s nekompatibilními ovládacími prvky ActiveX v normálním chráněném režimu.  
+  Nastavení této zásady zabraňuje spuštění ovládacích prvků ActiveX v chráněném režimu, je-li povolen Rozšířený chráněný režim. Když má uživatel nainstalovaný ovládací prvek ActiveX, který není kompatibilní s rozšířeným chráněným režimem a web se pokusí načíst ovládací prvek, Internet Explorer uživatele upozorní a nabídne možnost spustit web v normálním chráněném režimu. Nastavení této zásady zakáže toto oznámení a vynutí spuštění všech webů v rozšířeném chráněném režimu. Rozšířený chráněný režim poskytuje dodatečnou ochranu před škodlivými weby pomocí 64 procesů na 64 verzích systému Windows. V počítačích s minimálně Windows 8 se v rozšířeném chráněném režimu taky omezují umístění, ze kterých může Internet Explorer číst v registru a v systému souborů. Pokud je povolen Rozšířený chráněný režim a uživatel se nachází na webu, který se pokusí načíst ovládací prvek ActiveX, který není kompatibilní se zapnutým rozšířeným chráněným režimem, Internet Explorer uživatele upozorní a nabídne možnost zakázat Rozšířený chráněný režim pro daný web. Pokud toto nastavení zásad povolíte, uživateli Internet Exploreru nebude umožněno zakázat Rozšířený chráněný režim. Všechny weby s chráněným režimem budou spouštěny v rozšířeném chráněném režimu. Pokud nastavení této zásady zakážete nebo nenakonfigurujete, Internet Explorer upozorní uživatele a nabídne možnost spouštět weby s nekompatibilními ovládacími prvky ActiveX v normálním chráněném režimu.  
   [Další informace](https://go.microsoft.com/fwlink/?linkid=2067145)
 
   **Výchozí**: zakázáno
@@ -871,7 +874,7 @@ Další informace najdete v dokumentaci k Windows v dokumentaci k [zásadě CSP]
   **Výchozí**: zakázáno
 
 - **Internet Explorer Internet Zone umožňuje spuštění jazyka VBScript**:  
-  Nastavení této zásady umožňuje určit, jestli se může VBScript spouštět na stránkách v určitých zónách Internet Exploreru. Vaše možnosti jsou:
+  Nastavení této zásady umožňuje určit, jestli se může VBScript spouštět na stránkách v určitých zónách Internet Exploreru. Mezi možnosti patří:
 
   - *Enable* – jazyk VBScript běží na stránkách v určitých zónách bez jakékoli interakce.
 
@@ -1274,7 +1277,7 @@ Další informace najdete v dokumentaci k Windows v dokumentaci k [zásadě CSP]
   **Výchozí**: zakázat
 
 - **Uživatelé aplikace Internet Explorer měnící zásady**:  
-  Zabrání uživatelům měnit nastavení zón zabezpečení. Zóna zabezpečení je skupina webů se stejnou úrovní zabezpečení. Pokud tuto zásadu povolíte, na kartě zabezpečení v dialogovém okně Možnosti Internetu jsou zakázaná tlačítka vlastní úroveň a posuvník úrovně zabezpečení. Pokud tuto zásadu zakážete nebo nenakonfigurujete, můžou uživatelé změnit nastavení zón zabezpečení. Tato zásada zabraňuje uživatelům měnit nastavení zón zabezpečení vytvořená správcem. Poznámka: zásada "Zakázat stránku zabezpečení" (nacházející se v Ovládacích panelech \ Šablony pro správu \ součásti systému Windows\internet Explorer\Internet), která odebere kartu zabezpečení z Internet Exploreru v Ovládacích panelech, má přednost nad touto zásadou. Pokud je tato zásada povolená, ignoruje se. Podívejte se také na zásady zóny zabezpečení: použít jenom nastavení počítače.  
+  Zabrání uživatelům měnit nastavení zón zabezpečení. Zóna zabezpečení je skupina webů se stejnou úrovní zabezpečení. Pokud tuto zásadu povolíte, na kartě zabezpečení v dialogovém okně Možnosti Internetu jsou zakázaná tlačítka vlastní úroveň a posuvník úrovně zabezpečení. Pokud tuto zásadu zakážete nebo nenakonfigurujete, můžou uživatelé změnit nastavení zón zabezpečení. Tato zásada zabraňuje uživatelům měnit nastavení zón zabezpečení vytvořená správcem. Poznámka: zásada "Zakázat stránku zabezpečení" (nacházející se v části \ Šablony pro správu \ součásti \ Windows\internet ovládací panely), která odebere kartu zabezpečení z Internet Exploreru v Ovládacích panelech, má přednost před touto zásadou. Pokud je tato zásada povolená, ignoruje se. Podívejte se také na zásady zóny zabezpečení: použít jenom nastavení počítače.  
   [Další informace](https://go.microsoft.com/fwlink/?linkid=2067155)
 
   **Výchozí**: zakázáno
@@ -1344,13 +1347,13 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Loc
   **Výchozí**: vyžadování protokolu NTLM V2 a 128 bitového šifrování
 
 - Počet **minut nečinnosti uzamčené obrazovky, po které se spořič obrazovky aktivuje**:  
-  Systém Windows zaznamená nečinnost relace přihlášení, a pokud doba neaktivního času překročí limit nečinnosti, spustí se spořič obrazovky a zamkne relaci.  
+  Systém Windows zaznamená nečinnost relace přihlášení, a pokud neaktivní doba překračuje limit nečinnosti, pak se spustí šetřič obrazovky, který relaci uzamkne.  
   [Další informace](https://go.microsoft.com/fwlink/?linkid=2067210)
 
   **Výchozí**: 15
 
 - **Vyžadovat od klienta vždycky digitálně podepsat komunikaci**:  
-  Toto nastavení zabezpečení určuje, zda musí být veškerý provoz zabezpečeného kanálu iniciované členem domény podepsán nebo zašifrován. Když se počítač připojí k doméně, vytvoří se účet počítače. Po tom, co se systém spustí, se pomocí hesla účtu počítače vytvoří zabezpečený kanál s řadičem domény pro svoji doménu. Tento zabezpečený kanál se používá k provádění operací, jako je například ověřování pomocí protokolu NTLM, ověřování názvů zabezpečení LSA a další informace. Toto nastavení určuje, zda veškerý provoz zabezpečeného kanálu iniciované členem domény splňuje minimální požadavky na zabezpečení. Konkrétně určuje, zda je nutné všechny přenosy zabezpečeného kanálu spuštěné členem domény podepsat nebo zašifrovat. Pokud je tato zásada povolená, zabezpečený kanál se nevytvoří, pokud se nepoužije podepisování nebo šifrování veškerého provozu zabezpečeného kanálu. Pokud je tato zásada zakázaná, pak se šifrování a podepisování veškerého provozu zabezpečeného kanálu vyjednávají s řadičem domény. v takovém případě závisí úroveň podepisování a šifrování na verzi řadiče domény a nastavení následujících dvou zásady: člen domény: digitálně zašifrovat data zabezpečeného kanálu (Pokud je to možné) člen domény: digitálně podepsat data zabezpečeného kanálu (Pokud je to možné).  
+  Toto nastavení zabezpečení určuje, zda musí být veškerý provoz zabezpečeného kanálu iniciované členem domény podepsán nebo zašifrován. Když se počítač připojí k doméně, vytvoří se účet počítače. Po tom, co se systém spustí, se pomocí hesla účtu počítače vytvoří zabezpečený kanál s řadičem domény pro svoji doménu. Tento zabezpečený kanál se používá k provádění operací, jako je například ověřování pomocí protokolu NTLM, ověřování názvů zabezpečení LSA a další informace. Toto nastavení určuje, zda veškerý provoz zabezpečeného kanálu iniciované členem domény splňuje minimální požadavky na zabezpečení. Konkrétně určuje, zda je nutné všechny přenosy zabezpečeného kanálu spuštěné členem domény podepsat nebo zašifrovat. Pokud je tato zásada povolená, zabezpečený kanál se nevytvoří, pokud se nepoužije podepisování nebo šifrování veškerého provozu zabezpečeného kanálu. Pokud je tato zásada zakázaná, pak se šifrování a podepsání veškerého provozu zabezpečeného kanálu vyjednávají s řadičem domény. v takovém případě je úroveň podepisování a šifrování závislá na verzi řadiče domény a nastavení těchto dvou zásad: člen domény: digitálně šifrovat data zabezpečeného kanálu (Pokud je to možné): digitálně podepsat data zabezpečeného kanálu (Pokud je to možné).  
   [Další informace](https://go.microsoft.com/fwlink/?linkid=2067187)
 
   **Výchozí**: Ano
@@ -1387,7 +1390,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Loc
   **Výchozí**: Ano
 
 - **Chování výzvy ke zvýšení úrovně oprávnění správce**:  
-  Toto nastavení zásady řídí chování výzvy ke zvýšení oprávnění pro správce. Možnosti:
+  Toto nastavení zásady řídí chování výzvy ke zvýšení oprávnění pro správce. Dostupné možnosti:
 
   - *Zvýšení oprávnění bez výzvy* – umožňuje privilegovaným účtům provést operaci, která vyžaduje zvýšení oprávnění bez vyžadování souhlasu nebo přihlašovacích údajů. Poznámka: tuto možnost použijte jenom v nejvíc omezených prostředích.
 
@@ -1406,7 +1409,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Loc
   **Výchozí**: vyzvat k vyjádření souhlasu na zabezpečené ploše
 
 - **Minimální zabezpečení relace pro klienty založené na NTLM SSP**:  
-  Toto nastavení zabezpečení umožňuje klientovi vyžadovat vyjednávání 128 bitů šifrování a zabezpečení relace NTLMv2. Tyto hodnoty jsou závislé na hodnotě nastavení zabezpečení na úrovni ověřování v programu LAN Manager. Možnosti:
+  Toto nastavení zabezpečení umožňuje klientovi vyžadovat vyjednávání 128 bitů šifrování a zabezpečení relace NTLMv2. Tyto hodnoty jsou závislé na hodnotě nastavení zabezpečení na úrovni ověřování v programu LAN Manager. Dostupné možnosti:
 
   - *Vyžadovat zabezpečení relace NTLMv2* – Pokud není protokol NTLMv2 vyjednávat, připojení se nezdaří.
 
@@ -1419,7 +1422,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Loc
   **Výchozí**: vyžadovat šifrování NTLM v2 128
 
 - **Chování při odebrání čipové karty**:  
-  Toto nastavení zabezpečení určuje, co se stane, když se čipová karta přihlášeného uživatele odebere z čtecího zařízení s čipovou kartou. Možnosti:
+  Toto nastavení zabezpečení určuje, co se stane, když se čipová karta přihlášeného uživatele odebere z čtecího zařízení s čipovou kartou. Dostupné možnosti:
 
   - *Žádná akce*.
 
@@ -1463,7 +1466,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Loc
   **Výchozí**: automaticky zamítnout žádosti o zvýšení oprávnění
 
 - **Vyžadovat režim schválení správce pro správce**:  
-  Toto nastavení zásady řídí chování všech nastavení zásad řízení uživatelských účtů (UAC) v počítači. Pokud toto nastavení zásad změníte, musíte restartovat počítač. Možnosti:
+  Toto nastavení zásady řídí chování všech nastavení zásad řízení uživatelských účtů (UAC) v počítači. Pokud toto nastavení zásad změníte, musíte restartovat počítač. Dostupné možnosti:
 
   - *Nenakonfigurováno* – režim schválení správce a všechna související nastavení zásad nástroje řízení uživatelských účtů jsou zakázaná. Poznámka: Pokud je toto nastavení zásad zakázané, Security Center vás upozorní, že celkové zabezpečení operačního systému bylo omezené.
 
@@ -1491,7 +1494,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Loc
   **Výchozí**: *O:Bag: Bad: (A;; RC;;; BA)*
 
 - **Použít režim schválení správce**:  
-  Toto nastavení zásady řídí chování režimu schválení správcem pro předdefinovaný účet správce. Možnosti:
+  Toto nastavení zásady řídí chování režimu schválení správcem pro předdefinovaný účet správce. Dostupné možnosti:
 
   - *Ano* – integrovaný účet správce používá režim schválení správcem. Ve výchozím nastavení vyzve uživatel ke schválení operace všechny operace, které vyžadují zvýšení oprávnění.
 
@@ -1513,7 +1516,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Loc
   **Výchozí**: Ano
 
 - **Zjišťovat instalace aplikací a vyzvat ke zvýšení oprávnění**:  
-  Toto nastavení zásady řídí chování detekce instalace aplikace pro daný počítač. Možnosti:
+  Toto nastavení zásady řídí chování detekce instalace aplikace pro daný počítač. Dostupné možnosti:
 
   - *Povoleno* – při zjištění instalačního balíčku aplikace, který vyžaduje zvýšení oprávnění, se uživateli zobrazí výzva k zadání uživatelského jména a hesla pro správu. Pokud uživatel zadá platné přihlašovací údaje, operace pokračuje s příslušným oprávněním.
 
@@ -1530,7 +1533,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Loc
   **Výchozí**: Ano
 
 - **Virtualizovat selhání zápisu souborů a registrů do umístění uživatelů**:  
-  Nastavení této zásady určuje, zda jsou chyby zápisu aplikace přesměrovány do definovaného registru a umístění systému souborů. Nastavení této zásady snižuje riziko aplikací spouštěných jako správce a zápis dat aplikace za běhu do *% ProgramFiles%* , *% windir%* , *%windir%\System32*nebo *HKLM\Software*.  
+  Nastavení této zásady určuje, zda jsou chyby zápisu aplikace přesměrovány do definovaného registru a umístění systému souborů. Nastavení této zásady snižuje riziko aplikací spouštěných jako správce a zápis dat aplikace za běhu do *% ProgramFiles%*, *% windir%*, *%windir%\System32*nebo *HKLM\Software*.  
   [Další informace](https://go.microsoft.com/fwlink/?linkid=2067321)
 
   **Výchozí**: Ano
@@ -1557,7 +1560,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Def
 
   **Výchozí**: automaticky odesílat bezpečné vzorky
 
-- **Interval aktualizace podpisu (v hodinách)** :  
+- **Interval aktualizace podpisu (v hodinách)**:  
   Interval aktualizace signatury Defenderu v hodinách
 
   **Výchozí**: 4
@@ -1568,13 +1571,13 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Def
   **Výchozí**: blok
   
 - **Zabránit krádeži pověření typu**:  
-  Ochrana přihlašovacích údajů v programu Microsoft Defender používá zabezpečení na základě virtualizace k izolaci tajných kódů, aby k nim měli přístup jenom privilegovaný systémový software. Neoprávněný přístup k těmto tajným klíčům může vést k útokům krádeže přihlašovacích údajů, jako je například pass-the-hash nebo Pass-The-Ticket. Ochrana přihlašovacích údajů v programu Microsoft Defender brání těmto útokům ochranou hodnot hash hesla NTLM, lístků pro udělení lístku Kerberos a přihlašovacích údajů uložených aplikacemi jako přihlašovací údaje domény.  
+  Ochrana přihlašovacích údajů v programu Microsoft Defender používá zabezpečení na základě virtualizace k izolaci tajných kódů, aby k nim měli přístup jenom privilegovaný systémový software. Neoprávněný přístup k těmto tajným kódům může vést k útokům využívajícím krádež přihlašovacích údajů, jako je například Pass-the-Hash nebo Pass-The-Ticket. Ochrana přihlašovacích údajů v programu Microsoft Defender brání těmto útokům ochranou hodnot hash hesla NTLM, lístků pro udělení lístku Kerberos a přihlašovacích údajů uložených aplikacemi jako přihlašovací údaje domény.  
   [Další informace](https://go.microsoft.com/fwlink/?linkid=2067065)
   
   **Výchozí**: Povolit
 
 - **Typ spuštění obsahu e-mailu**:  
-  Toto pravidlo blokuje spuštění nebo spuštění následujících typů souborů z e-mailu, který se zobrazuje v aplikaci Microsoft Outlook nebo webové pošty (například Gmail.com nebo Outlook.com): spustitelné soubory (například. exe,. dll nebo. scr) soubory skriptu (například PowerShell. PS, VisualBasic. vbs, nebo soubor JavaScript. js). soubory archivu skriptu.  
+  Toto pravidlo blokuje spuštění nebo spuštění následujících typů souborů z e-mailu, který se zobrazuje v aplikaci Microsoft Outlook nebo webové pošty (například Gmail.com nebo Outlook.com): spustitelné soubory (například. exe,. dll nebo. scr) soubory skriptu (například PowerShell. PS, VisualBasic. vbs nebo JavaScript. js).  
   [Další informace](https://go.microsoft.com/fwlink/?linkid=2067063)
 
   **Výchozí**: blok
@@ -1609,7 +1612,7 @@ Toto pravidlo zabraňuje útokům blokováním aplikace Adobe Reader v vytváře
   **Výchozí**: Ano  
 
 - **Akce potenciálně nežádoucí aplikace v Defenderu**:  
-  Funkce ochrany potenciálně nežádoucí aplikace (PUA) v antivirové ochraně v programu Microsoft Defender může identifikovat a blokovat PUAs ze stahování a instalace do koncových bodů ve vaší síti. Tyto aplikace nejsou považovány za viry, malware nebo jiné typy hrozeb, ale mohou provádět akce s koncovými body, které nepříznivě ovlivňují jejich výkon nebo použití. PUA může také odkazovat na aplikace, které se považují za nekvalitní pověst. Typické chování PUA zahrnuje různé typy softwaru, které se provedou vypsáním do ovladačů pro webové prohlížeče a optimalizace registru, které zjišťují problémy, vyžádají si platbu, aby opravila chyby, ale zůstaly na koncovém bodu a neobsahují žádné změny ani optimalizace (označované taky jako). programy neautorizovaných antivirových programů). Tyto aplikace můžou zvýšit riziko napadení vaší sítě malwarem, způsobit obtížnější nákazu malwaru a může obcházet prostředky IT při čištění aplikací.  
+  Funkce ochrany potenciálně nežádoucí aplikace (PUA) v antivirové ochraně v programu Microsoft Defender může identifikovat a blokovat PUAs ze stahování a instalace do koncových bodů ve vaší síti. Tyto aplikace nejsou považovány za viry, malware nebo jiné typy hrozeb, ale mohou provádět akce s koncovými body, které nepříznivě ovlivňují jejich výkon nebo použití. PUA může také odkazovat na aplikace, které se považují za nekvalitní pověst. Typické chování PUA zahrnuje různé typy softwaru, které je možné vydávat do ovladačů pro webové prohlížeče a optimalizace registru, které zjišťují problémy, vyžádají si platbu, aby opravila chyby, ale zůstaly na koncovém bodu a neobsahují žádné změny ani optimalizace (označované taky jako "neautorizovaný antivirový program"). Tyto aplikace můžou zvýšit riziko napadení vaší sítě malwarem, způsobit obtížnější nákazu malwaru a může obcházet prostředky IT při čištění aplikací.  
   [Další informace](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)
 
   **Výchozí**: blok  
@@ -1804,7 +1807,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Rem
 ::: zone-end
 ::: zone pivot="mdm-preview,mdm-may-2019"
 
-## <a name="remote-desktop-services"></a>Služba Vzdálená plocha
+## <a name="remote-desktop-services"></a>Vzdálená plocha
 
 Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – RemoteDesktopServices](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-remotedesktopservices) .
 
@@ -1821,7 +1824,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Rem
   **Výchozí**: povoleno
 
 - **Zablokovat přesměrování jednotky**:  
-  Nastavení této zásady určuje, jestli se má zabránit mapování klientských jednotek v relaci vzdálené plochy (přesměrování jednotky). Ve výchozím nastavení server Hostitel relace VP mapuje jednotky klienta automaticky po připojení. Mapované jednotky se zobrazí ve stromu složky relace v Průzkumníkovi souborů nebo v počítači ve formátu *\<písmeno_jednotky >* v *\<ComputerName >* . Toto chování můžete přepsat pomocí tohoto nastavení zásad. Pokud toto nastavení zásad povolíte, přesměrování jednotky klienta není v relacích služby Vzdálená plocha povoleno a přesměrování kopírování souborů ve schránce není povoleno v počítačích se systémem Windows Server 2003, Windows 8 a Windows XP. Pokud nastavení této zásady zakážete, přesměrování klientské jednotky je vždycky povolené. I když je povolené přesměrování schránky, přesměrování kopírování souborů ve schránce je vždycky povolené. Pokud nastavení této zásady nenakonfigurujete, přesměrování jednotky klienta a přesměrování kopírování souborů ve schránce nejsou zadané na úrovni Zásady skupiny.  
+  Nastavení této zásady určuje, jestli se má zabránit mapování klientských jednotek v relaci vzdálené plochy (přesměrování jednotky). Ve výchozím nastavení server Hostitel relace VP mapuje jednotky klienta automaticky po připojení. Mapované jednotky se zobrazí ve stromu složky relace v Průzkumníkovi souborů nebo v počítači ve formátu * \<písmeno_jednotky>* v * \<>ComputerName *. Toto chování můžete přepsat pomocí tohoto nastavení zásad. Pokud toto nastavení zásad povolíte, přesměrování jednotky klienta není v relacích služby Vzdálená plocha povoleno a přesměrování kopírování souborů ve schránce není povoleno v počítačích se systémem Windows Server 2003, Windows 8 a Windows XP. Pokud nastavení této zásady zakážete, přesměrování klientské jednotky je vždycky povolené. I když je povolené přesměrování schránky, přesměrování kopírování souborů ve schránce je vždycky povolené. Pokud nastavení této zásady nenakonfigurujete, přesměrování jednotky klienta a přesměrování kopírování souborů ve schránce nejsou zadané na úrovni Zásady skupiny.  
   [Další informace](https://go.microsoft.com/fwlink/?linkid=2067197)
 
   **Výchozí**: povoleno
@@ -1903,7 +1906,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Rem
 
   **Výchozí**: ověřeno
 
-## <a name="search"></a>Hledat
+## <a name="search"></a>Search
 
 Další informace najdete v tématu [zásady CSP – hledání](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-search) v dokumentaci k Windows.
 
@@ -1913,7 +1916,7 @@ Další informace najdete v tématu [zásady CSP – hledání](https://docs.mic
 
   **Výchozí**: Ano
 
-## <a name="smart-screen"></a>Smart Screen
+## <a name="smart-screen"></a>Inteligentní obrazovka
 
 Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – filtr](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-smartscreen) .
 
@@ -1979,7 +1982,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Win
 
   - *Automatické pokusy o připojení* – Pokud je počítač už připojený k síti založené na doméně, zablokují se všechny automatické pokusy o připojení k sítím, které nejsou v doméně. Pokud je počítač již připojen k síti založené na doméně, jsou blokovány automatické pokusy o připojení do sítí založených na doméně.
 
-  - *Ruční pokusy o připojení* – Pokud je počítač už připojený k síti, která není založená na doméně, nebo k síti založené na doméně přes jiné médium než Ethernet a uživatel se pokusí vytvořit ruční připojení k další síti v rozporu s nastavením této zásady, dojde k odpojení stávajícího síťového připojení a ruční připojení je povolené. Pokud je počítač již připojen k síti založené na doméně nebo k síti založené na doméně přes síť Ethernet a uživatel se pokusí vytvořit ruční připojení k další síti v rozporu s nastavením této zásady, stávající připojení k síti Ethernet je Údržba a ruční pokus o připojení je zablokovaný.
+  - *Ruční pokusy o připojení* – Pokud je počítač už připojený k síti, která není založená na doméně, nebo k síti založené na doméně přes jiné médium než Ethernet a uživatel se pokusí vytvořit ruční připojení k další síti v rozporu s nastavením této zásady, dojde k odpojení stávajícího síťového připojení a ruční připojení je povolené. Pokud je počítač již připojen k síti založené na doméně nebo k síti založené na doméně přes síť Ethernet a uživatel se pokusí vytvořit ruční připojení k další síti s porušením tohoto nastavení zásad, bude zachováno existující připojení k síti Ethernet a je blokováno ruční pokus o připojení.
 
   Pokud nastavení této zásady není nakonfigurované nebo je zakázané, počítače se můžou současně připojit k doméně i k sítím, které nejsou v doméně.  
   [Další informace](https://go.microsoft.com/fwlink/?linkid=2067323)
@@ -2160,7 +2163,7 @@ Následující nastavení:
 - **Vyžadovat rozšířenou ochranu proti falšování identity, pokud je dostupná**
 - **Konfigurace Windows Hello pro firmy**
 - **Vyžadovat v PIN kódu malá písmena**
-- **Vyžadovat speciální znaky v PIN kódu**
+- **Vyžadovat speciální znaky v PIN kódech**
 - **Minimální délka PIN kódu**
 - **Vyžadovat v PIN kódu velká písmena**
 

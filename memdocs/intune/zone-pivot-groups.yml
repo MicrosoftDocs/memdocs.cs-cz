@@ -16,10 +16,26 @@ groups:
     title: Květen 2019
   - id: mdm-preview
     title: Preview – říjen 2018
+- id: edge-baseline-versions
+  title: Verze hraničního plánu
+  prompt: Zvolit verzi
+  pivots:
+  - id: edge-october-2019
+    title: Říjen 2019
+  - id: edge-april-2020
+    title: Duben 2020
+- id: atp-baseline-versions
+  title: Základní verze ATP
+  prompt: Zvolit verzi
+  pivots:
+  - id: atp-april-2020
+    title: Duben 2020
+  - id: atp-march-2020
+    title: Březen 2020
 metadata:
-  ms.openlocfilehash: 1b1f0e7b28dfda7ba9b4867c9641154147aa4c1f
-  ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+  ms.openlocfilehash: 304a1087e156f7c491afd83b9981cdba996dc9fc
+  ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
   ms.translationtype: MT
   ms.contentlocale: cs-CZ
-  ms.lasthandoff: 03/13/2020
-  ms.locfileid: "79327431"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82693285"

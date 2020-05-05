@@ -5,34 +5,58 @@ description: Nastavení standardních hodnot zabezpečení, které Intune podpor
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/01/2020
+ms.date: 05/01/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: ''
-ms.reviewer: aanavath
+ms.reviewer: laarrizz
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9a431ad92c285e1a2912e0f387ee5ea514e876ef
-ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
+zone_pivot_groups: atp-baseline-versions
+ms.openlocfilehash: e1081395c733807c38dc940ebd1b7c2765da7a9a
+ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80551754"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82693397"
 ---
+<!-- Pivots in use: 
+::: zone pivot="atp-april-2020"
+::: zone-end
+
+::: zone pivot="atp-march-2020"
+::: zone-end
+
+::: zone pivot="atp-march-2020,atp-april-2020"
+::: zone-end
+-->
+
 # <a name="microsoft-defender-advanced-threat-protection-baseline-settings-for-intune"></a>Základní nastavení pro Intune v programu Microsoft Defender Advanced Threat Protection
 
 Zobrazit základní nastavení nástroje Microsoft Defender Advanced Threat Protection, která jsou podporována nástrojem Microsoft Intune. Výchozí hodnoty standardních hodnot rozšířené ochrany před internetovými útoky (ATP) znázorňují doporučenou konfiguraci ATP a nemusí odpovídat výchozím hodnotám pro jiné standardní hodnoty zabezpečení.
 
-Podrobnosti v tomto článku se týkají verze 3 standardních hodnot ATP v programu Microsoft Defender, který byl vydán 1. března 2020.
+::: zone pivot="atp-april-2020"
+
+Podrobnosti v tomto článku se týkají verze 4 standardních hodnot ATP v programu Microsoft Defender, který byl vydán 21. dubna 2020. Chcete-li zjistit, co se změnilo v této verzi směrného plánu z předchozích verzí, použijte akci [Porovnat směrné plány](../protect/security-baselines.md#compare-baseline-versions) , která je k dispozici při prohlížení podokna *verze* pro tento směrný plán.
+
+::: zone-end
+::: zone pivot="atp-march-2020"
+
+Podrobnosti v tomto článku se týkají verze 3 standardních hodnot ATP v programu Microsoft Defender, který byl vydán 1. března 2020. Chcete-li zjistit, co se změnilo v této verzi směrného plánu z předchozích verzí, použijte akci [Porovnat směrné plány](../protect/security-baselines.md#compare-baseline-versions) , která je k dispozici při prohlížení podokna *verze* pro tento směrný plán.
+
+::: zone-end
+::: zone pivot="atp-march-2020,atp-april-2020"
+
 
 Směrný plán rozšířené ochrany před internetovými útoky v programu Microsoft Defender je dostupný, když vaše prostředí splňuje požadavky na používání [rozšířené ochrany před internetovými útoky v programu Microsoft Defender](advanced-threat-protection.md#prerequisites).
 
 Tato standardní hodnota je optimalizovaná pro fyzická zařízení a v tuto chvíli se nedoporučuje používat na virtuálních počítačích (VM) nebo koncových bodech VDI. Určitá nastavení standardních hodnot můžou mít vliv na vzdálené interaktivní relace ve virtualizovaných prostředích. Další informace najdete v dokumentaci k Windows v tématu [zvýšení dodržování předpisů pro základní hodnoty zabezpečení služby Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) .
+
 
 ## <a name="application-guard"></a>Ochrana Application Guard
 
@@ -57,7 +81,7 @@ Při používání Microsoft Edge Aplikace Microsoft Defender Application Guard 
   - **Chování schránky**  
     CSP: [Nastavení/ClipboardSettings](https://go.microsoft.com/fwlink/?linkid=872351)
 
-    Vyberte, které akce kopírování a vkládání jsou povolené mezi místním počítačem a virtuálním prohlížečem Application Guard. Vaše možnosti jsou:
+    Vyberte, které akce kopírování a vkládání jsou povolené mezi místním počítačem a virtuálním prohlížečem Application Guard. Mezi možnosti patří:
     - **Není nakonfigurováno**  
     - **Zablokovat kopírování a vkládání mezi počítačem a prohlížečem** (*výchozí*) – zablokuje obojí. Data se nemůžou přenášet mezi počítačem a virtuálním prohlížečem.
     - **Povolení kopírování a vkládání z prohlížeče pouze do počítačů** – data nelze přenést z počítače do virtuálního prohlížeče.
@@ -69,7 +93,7 @@ Při používání Microsoft Edge Aplikace Microsoft Defender Application Guard 
 
   Zadejte seznam *domén sítě*, což jsou podnikové prostředky hostované v cloudu, které Application Guard považuje za podnikové lokality.
   - **Konfigurace** (*výchozí*)
-  - **Nenakonfigurované**
+  - **Není nakonfigurováno**
 
   Po nastavení *Konfigurace* můžete definovat *síťové domény*.
 
@@ -101,7 +125,7 @@ Další informace najdete v dokumentaci k Windows v části [nastavení zásady 
   [Nastavení Zásady skupiny BitLockeru](https://go.microsoft.com/fwlink/?linkid=2067025)
 
   - **Konfigurace** (*výchozí*)
-  - **Nenakonfigurované**
+  - **Není nakonfigurováno**
 
   Po nastavení *Konfigurace*můžete nakonfigurovat *metodu šifrování pro jednotky operačního systému*.
 
@@ -121,7 +145,7 @@ Další informace najdete v dokumentaci k Windows v části [nastavení zásady 
   [Nastavení Zásady skupiny BitLockeru](https://go.microsoft.com/fwlink/?linkid=2067018)
 
   - **Konfigurace** (*výchozí*)
-  - **Nenakonfigurované**
+  - **Není nakonfigurováno**
 
   Když nastavíte *konfiguraci*, můžete nakonfigurovat *přístup zablokování na pevné datové jednotky, které nechrání BitLocker* , a *nakonfigurovat metodu šifrování pro pevné datové jednotky*.
 
@@ -133,7 +157,7 @@ Další informace najdete v dokumentaci k Windows v části [nastavení zásady 
     - **Ano** – Windows nebude umožňovat zápis jakýchkoli dat na pevné jednotky, které nejsou chráněné bitlockerem. Pokud pevná jednotka není šifrovaná, bude uživatel muset před udělením přístupu pro zápis dokončit průvodce nastavením BitLockeru jednotky.
 
   - **Konfigurace metody šifrování pro pevné datové jednotky**  
-    CSP: [EncryptionMethodByDriveType](h https://go.microsoft.com/fwlink/?linkid=872526)  
+    CSP: [EncryptionMethodByDriveType](https://go.microsoft.com/fwlink/?linkid=872526)  
     Toto nastavení je k dispozici, když je *zásada pevná jednotka nástroje BitLocker* nastavená na hodnotu *Konfigurovat*.
 
     Nakonfigurujte metodu šifrování a sílu šifrování pro disky s pevnými datovými jednotkami. *XTS-AES 128-bit* je výchozí metodou šifrování Windows a doporučenou hodnotou.
@@ -148,7 +172,7 @@ Další informace najdete v dokumentaci k Windows v části [nastavení zásady 
   [Nastavení Zásady skupiny BitLockeru](https://go.microsoft.com/fwlink/?linkid=2067140)
 
   - **Konfigurace** (*výchozí*)
-  - **Nenakonfigurované**
+  - **Není nakonfigurováno**
 
   Po nastavení *Konfigurace*můžete nakonfigurovat *metodu šifrování pro vyměnitelné datové jednotky* a *zablokovat přístup pro zápis na vyměnitelné datové jednotky, které nechrání BitLocker*.
 
@@ -158,7 +182,7 @@ Další informace najdete v dokumentaci k Windows v části [nastavení zásady 
 
     Nakonfigurujte metodu šifrování a sílu šifrování pro disky vyměnitelných datových jednotek. *XTS-AES 128-bit* je výchozí metodou šifrování Windows a doporučenou hodnotou.
 
-    - **Nenakonfigurované**
+    - **Není nakonfigurováno**
     - **128bit CBC AES**
     - **AES 256BIT CBC** (*výchozí*)
     - **128bit XTS AES**
@@ -177,21 +201,21 @@ Další informace najdete v dokumentaci k Windows v části [nastavení zásady 
   CSP: [browser/AllowSmartScreen](https://go.microsoft.com/fwlink/?linkid=2067029)
 
   - **Ano** (*výchozí*) – pomocí filtru SmartScreen ochráníte uživatele před potenciálními podvodnými zprávami a škodlivým softwarem.
-  - **Nenakonfigurované**
+  - **Není nakonfigurováno**
 
 - **Blokovat přístup ke škodlivému webu**  
   CSP: [browser/PreventSmartScreenPromptOverride](https://go.microsoft.com/fwlink/?linkid=2067040)  
 
   - **Ano** (*výchozí*) – zablokuje uživatelům ignorovat upozornění filtru SmartScreen v programu Microsoft Defender a zablokuje jejich přesun na web.
-  - **Nenakonfigurované**
+  - **Není nakonfigurováno**
 
 - **Blokovat stahování neověřených souborů**  
   CSP: [browser/PreventSmartScreenPromptOverrideForFiles](https://go.microsoft.com/fwlink/?linkid=2067023)  
 
   - **Ano** (*výchozí*) – zablokuje uživatelům ignorovat upozornění filtru SmartScreen v programu Microsoft Defender a zablokuje stahování neověřených souborů.
-  - **Nenakonfigurované**
+  - **Není nakonfigurováno**
 
-## <a name="data-protection"></a>Data Protection
+## <a name="data-protection"></a>Ochrana dat
 
 - **Zablokovat přímý přístup do paměti**  
   CSP: [DataProtection/AllowDirectMemoryAccess](https://go.microsoft.com/fwlink/?linkid=2067031)  
@@ -199,7 +223,7 @@ Další informace najdete v dokumentaci k Windows v části [nastavení zásady 
   Nastavení této zásady se vynutilo jenom v případě, že je povolené BitLocker nebo šifrování zařízení.
 
   - **Ano** (*výchozí*) – zablokuje přímý přístup do paměti (DMA) pro všechny horké porty PCI pro příjem po dobu, kdy se uživatel do Windows přihlásí. Jakmile se uživatel přihlásí, systém Windows zobrazí zařízení PCI připojená k portům plug-in hostitele. Pokaždé, když uživatel zamkne počítač, je přímý přístup do zásuvky na konektorech PCI bez podřízených zařízení blokovaný, dokud se uživatel znovu nepřipojí. Zařízení, která už jsou ve výčtu, když se počítač odemkne, bude dál fungovat, dokud nebude odpojený.
-  - **Nenakonfigurované**
+  - **Není nakonfigurováno**
 
 ## <a name="device-guard"></a>Ochrana zařízení  
 
@@ -215,11 +239,11 @@ Další informace najdete v dokumentaci k Windows v části [nastavení zásady 
 ## <a name="device-installation"></a>Instalace zařízení
 
 - **Instalace hardwarových zařízení podle identifikátorů zařízení**  
-  [DeviceInstallation/PreventInstallationOfMatchingDeviceIDs](h https://go.microsoft.com/fwlink/?linkid=2066794)  
+  [DeviceInstallation/PreventInstallationOfMatchingDeviceIDs](https://go.microsoft.com/fwlink/?linkid=2066794)  
   
   Toto nastavení zásad umožňuje zadat seznam technologie Plug and Play ID hardwaru a kompatibilní ID pro zařízení, na která systém Windows znemožňuje instalaci. Nastavení této zásady má přednost před jinými nastaveními zásad, která umožňují systému Windows nainstalovat zařízení.  Pokud nastavení této zásady povolíte na vzdáleném počítači, nastavení zásad bude mít vliv na přesměrování zadaných zařízení z klienta vzdálené plochy na server vzdálené plochy.
 
-  - **Nenakonfigurované**
+  - **Není nakonfigurováno**
   - **Povolit instalaci hardwarového zařízení** – zařízení je možné nainstalovat a aktualizovat tak, aby byla povolená nebo zabrání jiným nastavením zásad.
   - **Blokovat instalaci hardwarového zařízení** (*výchozí*) – systému Windows se znemožní nainstalovat zařízení, jehož ID hardwaru nebo kompatibilní ID se zobrazí v seznamu, který definujete.
 
@@ -229,7 +253,7 @@ Další informace najdete v dokumentaci k Windows v části [nastavení zásady 
 
     Toto nastavení je dostupné, jenom když je *Instalace hardwarového zařízení podle identifikátorů zařízení* nastavená tak, aby *blokovala instalaci hardwarového zařízení*.
     - **Ano**
-    - **Nenakonfigurované**
+    - **Není nakonfigurováno**
 
   - **Blokované identifikátory hardwarových zařízení**  
     
@@ -242,7 +266,7 @@ Další informace najdete v dokumentaci k Windows v části [nastavení zásady 
   
   Nastavení této zásady umožňuje zadat seznam globálně jedinečných identifikátorů (GUID) třídy nastavení zařízení pro ovladače zařízení, které systém Windows znemožňuje nainstalovat. Nastavení této zásady má přednost před jinými nastaveními zásad, která umožňují systému Windows nainstalovat zařízení. Pokud nastavení této zásady povolíte na vzdáleném počítači, nastavení zásad bude mít vliv na přesměrování zadaných zařízení z klienta vzdálené plochy na server vzdálené plochy.
 
-  - **Nenakonfigurované**
+  - **Není nakonfigurováno**
   - **Povolit instalaci hardwarového zařízení** – systém Windows může nainstalovat a aktualizovat zařízení podle povolených nebo zabránících jiným nastavením zásad.
   - **Zablokovat instalaci hardwarového zařízení** (*výchozí*) – systém Windows znemožní instalaci zařízení, jejichž identifikátory GUID třídy nastavení se zobrazí v seznamu, který definujete.
 
@@ -252,7 +276,7 @@ Další informace najdete v dokumentaci k Windows v části [nastavení zásady 
 
     Toto nastavení je dostupné, jenom když je *Instalace hardwarového zařízení podle identifikátorů zařízení* nastavená tak, aby *blokovala instalaci hardwarového zařízení*.
     - **Ano**
-    - **Nenakonfigurované**
+    - **Není nakonfigurováno**
 
   - **Blokované identifikátory hardwarových zařízení**
 
@@ -283,7 +307,7 @@ Další informace o následujících nastaveních najdete v tématu [WindowsAdva
   Vrátí nebo nastaví parametr konfigurace sdílení ukázky rozšířené ochrany před internetovými útoky v programu Microsoft Defender.  
   
   - **Ano** (*výchozí*)
-  - **Nenakonfigurované**
+  - **Není nakonfigurováno**
 
 - **Urychlení četnosti vytváření sestav telemetrie**  
   CSP: [Configuration/TelemetryReportingFrequency](https://docs.microsoft.com/windows/client-management/mdm/windowsadvancedthreatprotection-csp)
@@ -291,7 +315,7 @@ Další informace o následujících nastaveních najdete v tématu [WindowsAdva
   Urychlení generování sestav telemetrie rozšířené ochrany před internetovými útoky v programu Microsoft Defender  
 
   - **Ano** (*výchozí*)
-  - **Nenakonfigurované**
+  - **Není nakonfigurováno**
 
 ## <a name="firewall"></a>Brána firewall
 
@@ -315,7 +339,7 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
 
    Pokud nepotřebujete UTF-8, předsdílené klíče se zpočátku zakódují pomocí kódování UTF-8. Pak uživatelé zařízení můžou zvolit jinou metodu kódování.
 
-  - **Nenakonfigurované**
+  - **Není nakonfigurováno**
   - **Žádné**
   - **UTF8** (*výchozí*)
 
@@ -327,7 +351,7 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
   - **Nenakonfigurováno** (*výchozí*)-ověření seznamu CRL je zakázané.
   - **Žádné**
   - **Byl**
-  - **Žádá**
+  - **Vyžadovat**
 
 - **Řízení front paketů**  
   CSP: [MdmStore/Global/EnablePacketQueue](https://go.microsoft.com/fwlink/?linkid=872551)
@@ -335,7 +359,7 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
   Určete, jak se má pro daný software na straně příjmu Povolit šifrované přijímání a prostý text před scénářem brány IPsec pro tunelové připojení. Toto nastavení zajistí, aby bylo zachováno pořadí paketů.
 
   - **Nenakonfigurováno** (*výchozí*) – služba Packet Queuing vrátí do výchozího nastavení klienta, což je zakázané.
-  - **Zabezpečen**
+  - **Disabled** (Zakázáno)
   - **Příchozí fronta**
   - **Odchozí fronta**
   - **Zařadit do fronty**
@@ -344,7 +368,7 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
   [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlink/?linkid=2067041)
 
   - **Konfigurace** (*výchozí*)
-  - **Nenakonfigurované**
+  - **Není nakonfigurováno**
 
   Po nastavení *Konfigurace*můžete nakonfigurovat následující další nastavení.
 
@@ -352,48 +376,48 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
     CSP: [/DefaultInboundAction](https://go.microsoft.com/fwlink/?linkid=872564)
 
     - **Ano** (*výchozí*)
-    - **Nenakonfigurované**
+    - **Není nakonfigurováno**
 
   - **Vyžadují se jednosměrové odpovědi na všesměrová vysílání vícesměrového vysílání.**  
     CSP: [/DisableUnicastResponsesToMulticastBroadcast](https://go.microsoft.com/fwlink/?linkid=872562)
 
     - **Ano** (*výchozí*)
-    - **Nenakonfigurované**
+    - **Není nakonfigurováno**
 
   - **Je vyžadován neviditelný režim.**  
     CSP: [/DisableStealthMode](https://go.microsoft.com/fwlink/?linkid=872559)
 
     - **Ano** (*výchozí*)
-    - **Nenakonfigurované**
+    - **Není nakonfigurováno**
 
   - **Vyžadují se odchozí připojení.**  
     CSP: [/DefaultOutboundAction](https://aka.ms/intune-firewall-outboundaction)
 
     - **Ano** (*výchozí*)
-    - **Nenakonfigurované**
+    - **Není nakonfigurováno**
 
   - **Blokovaná příchozí oznámení**  
     CSP: [/DisableInboundNotifications](https://go.microsoft.com/fwlink/?linkid=872563)
 
     - **Ano** (*výchozí*)
-    - **Nenakonfigurované**
+    - **Není nakonfigurováno**
 
   - **Globální pravidla portů ze sloučených zásad skupiny**  
     CSP: [/GlobalPortsAllowUserPrefMerge](https://go.microsoft.com/fwlink/?linkid=872566)
 
     - **Ano** (*výchozí*)
-    - **Nenakonfigurované**
+    - **Není nakonfigurováno**
 
   - **Zakázaný neviditelný režim**  
     CSP: [/DisableStealthMode](https://go.microsoft.com/fwlink/?linkid=872559)
 
     - **Ano** (*výchozí*)
-    - **Nenakonfigurované**
+    - **Není nakonfigurováno**
 
   - **Povolená brána firewall**  
     CSP: [/EnableFirewall](https://go.microsoft.com/fwlink/?linkid=872558)
 
-    - **Nenakonfigurované**
+    - **Není nakonfigurováno**
     - **Blokováno**
     - **Povoleno** (*výchozí*)
 
@@ -401,31 +425,31 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
     CSP: [/AuthAppsAllowUserPrefMerge](https://go.microsoft.com/fwlink/?linkid=872565)
 
     - **Ano** (*výchozí*)
-    - **Nenakonfigurované**
+    - **Není nakonfigurováno**
 
   - **Pravidla zabezpečení připojení ze zásad skupiny nejsou sloučena.**  
     CSP: [/AllowLocalIpsecPolicyMerge](https://go.microsoft.com/fwlink/?linkid=872568)
 
     - **Ano** (*výchozí*)
-    - **Nenakonfigurované**
+    - **Není nakonfigurováno**
 
   - **Vyžaduje se příchozí provoz**  
     CSP: [/Shielded](https://go.microsoft.com/fwlink/?linkid=872561)
 
     - **Ano** (*výchozí*)
-    - **Nenakonfigurované**
+    - **Není nakonfigurováno**
 
   - **Pravidla zásad ze zásad skupiny nejsou sloučena.**  
     CSP: [/AllowLocalPolicyMerge](https://go.microsoft.com/fwlink/?linkid=872567)
 
     - **Ano** (*výchozí*)
-    - **Nenakonfigurované**
+    - **Není nakonfigurováno**
 
 - **Veřejný profil brány firewall**  
   [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlink/?linkid=2067143)
 
   - **Konfigurace** (*výchozí*)
-  - **Nenakonfigurované**
+  - **Není nakonfigurováno**
 
   Po nastavení *Konfigurace*můžete nakonfigurovat následující další nastavení.
 
@@ -433,54 +457,54 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
     CSP: [/DefaultInboundAction](https://go.microsoft.com/fwlink/?linkid=872564)
 
     - **Ano** (*výchozí*)
-    - **Nenakonfigurované**
+    - **Není nakonfigurováno**
 
   - **Vyžadují se jednosměrové odpovědi na všesměrová vysílání vícesměrového vysílání.**  
     CSP: [/DisableUnicastResponsesToMulticastBroadcast](https://go.microsoft.com/fwlink/?linkid=872562)
 
     - **Ano** (*výchozí*)
-    - **Nenakonfigurované**
+    - **Není nakonfigurováno**
 
   - **Je vyžadován neviditelný režim.**  
     CSP: [/DisableStealthMode](https://go.microsoft.com/fwlink/?linkid=872559)
 
     - **Ano** (*výchozí*)
-    - **Nenakonfigurované**
+    - **Není nakonfigurováno**
 
   - **Vyžadují se odchozí připojení.**  
     CSP: [/DefaultOutboundAction](https://aka.ms/intune-firewall-outboundaction)
 
     - **Ano** (*výchozí*)
-    - **Nenakonfigurované**
+    - **Není nakonfigurováno**
 
   - **Pravidla autorizovaných aplikací ze zásad skupiny nejsou sloučena.**  
     CSP: [/AuthAppsAllowUserPrefMerge](https://go.microsoft.com/fwlink/?linkid=872565)
 
     - **Ano** (*výchozí*)
-    - **Nenakonfigurované**
+    - **Není nakonfigurováno**
 
   - **Blokovaná příchozí oznámení**  
     CSP: [/DisableInboundNotifications](https://go.microsoft.com/fwlink/?linkid=872563)
 
     - **Ano** (*výchozí*)
-    - **Nenakonfigurované**
+    - **Není nakonfigurováno**
 
   - **Globální pravidla portů ze sloučených zásad skupiny**  
     CSP: [/GlobalPortsAllowUserPrefMerge](https://go.microsoft.com/fwlink/?linkid=872566)
 
     - **Ano** (*výchozí*)
-    - **Nenakonfigurované**
+    - **Není nakonfigurováno**
 
   - **Zakázaný neviditelný režim**  
     CSP: [/DisableStealthMode](https://go.microsoft.com/fwlink/?linkid=872559)
 
     - **Ano** (*výchozí*)
-    - **Nenakonfigurované**
+    - **Není nakonfigurováno**
 
   - **Povolená brána firewall**  
     CSP: [/EnableFirewall](https://go.microsoft.com/fwlink/?linkid=872558)
 
-    - **Nenakonfigurované**
+    - **Není nakonfigurováno**
     - **Blokováno**
     - **Povoleno** (*výchozí*)
 
@@ -488,19 +512,19 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
     CSP: [/AllowLocalIpsecPolicyMerge](https://go.microsoft.com/fwlink/?linkid=872568)
 
     - **Ano** (*výchozí*)
-    - **Nenakonfigurované**
+    - **Není nakonfigurováno**
 
   - **Vyžaduje se příchozí provoz**  
     CSP: [/Shielded](https://go.microsoft.com/fwlink/?linkid=872561)
 
     - **Ano** (*výchozí*)
-    - **Nenakonfigurované**
+    - **Není nakonfigurováno**
 
   - **Pravidla zásad ze zásad skupiny nejsou sloučena.**  
     CSP: [/AllowLocalPolicyMerge](https://go.microsoft.com/fwlink/?linkid=872567)
 
     - **Ano** (*výchozí*)
-    - **Nenakonfigurované**
+    - **Není nakonfigurováno**
 
 - **Doména profilu brány firewall**  
   CSP: [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlink/?linkid=2066796)
@@ -512,30 +536,30 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
     CSP: [/AuthAppsAllowUserPrefMerge](https://go.microsoft.com/fwlink/?linkid=872565)
 
     - **Ano** (*výchozí*)
-    - **Nenakonfigurované**  
+    - **Není nakonfigurováno**  
 
   - **Blokovaná příchozí oznámení**  
     CSP: [/DisableInboundNotifications](https://go.microsoft.com/fwlink/?linkid=872563)
 
     - **Ano** (*výchozí*)
-    - **Nenakonfigurované**
+    - **Není nakonfigurováno**
 
   - **Globální pravidla portů ze sloučených zásad skupiny**  
     CSP: [/GlobalPortsAllowUserPrefMerge](https://go.microsoft.com/fwlink/?linkid=872566)
 
     - **Ano** (*výchozí*)
-    - **Nenakonfigurované**
+    - **Není nakonfigurováno**
 
   - **Zakázaný neviditelný režim**  
     CSP: [/DisableStealthMode](https://go.microsoft.com/fwlink/?linkid=872559)
 
     - **Ano** (*výchozí*)
-    - **Nenakonfigurované**
+    - **Není nakonfigurováno**
 
   - **Povolená brána firewall**  
     CSP: [/EnableFirewall](https://go.microsoft.com/fwlink/?linkid=872558)
 
-    - **Nenakonfigurované**
+    - **Není nakonfigurováno**
     - **Blokováno**
     - **Povoleno** (*výchozí*)
 
@@ -543,13 +567,13 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
     CSP: [/AllowLocalIpsecPolicyMerge](https://go.microsoft.com/fwlink/?linkid=872568)
 
     - **Ano** (*výchozí*)
-    - **Nenakonfigurované**
+    - **Není nakonfigurováno**
 
   - **Pravidla zásad ze zásad skupiny nejsou sloučena.**  
     CSP: [/AllowLocalPolicyMerge](https://go.microsoft.com/fwlink/?linkid=872567)
 
     - **Ano** (*výchozí*)
-    - **Nenakonfigurované**
+    - **Není nakonfigurováno**
 
 ## <a name="microsoft-defender"></a>Microsoft Defender
 
@@ -566,7 +590,7 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
   CSP: [Defender/EnableLowCPUPriority](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-enablelowcpupriority)  
 
   -**Ano** (*výchozí*)
-  - **Nenakonfigurované**
+  - **Není nakonfigurováno**
 
 - **Blokování aplikací pro komunikaci Office z vytváření podřízených procesů**  
   [Chránit zařízení před zneužitím](https://go.microsoft.com/fwlink/?linkid=874499)  
@@ -622,7 +646,7 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
   CSP: [Defender/EnableNetworkProtection](https://go.microsoft.com/fwlink/?linkid=2113939&clcid=0x409)
   
   - **Ano** (*výchozí*) – blokování škodlivých přenosů zjištěných signaturami ve službě systém kontroly sítě (NIS).
-  - **Nenakonfigurované**
+  - **Není nakonfigurováno**
 
 - **Prohledat všechny stažené soubory a přílohy**  
   CSP: [Defender/AllowIOAVProtection](https://go.microsoft.com/fwlink/?linkid=2113934&clcid=0x409)
@@ -630,11 +654,26 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
   - **Ano** (*výchozí*) – prohledají se všechny stažené soubory a přílohy. Nastavení se vrátí do výchozího nastavení klienta, které je zapnuté, ale uživatel ho může změnit. Pokud chcete toto nastavení zakázat, použijte vlastní identifikátor URI.
   - **Nenakonfigurováno** – nastavení se vrátí do výchozího nastavení klienta, které je zapnuté, ale uživatel ho může změnit. Pokud chcete toto nastavení zakázat, použijte vlastní identifikátor URI.
 
+::: zone-end
+::: zone pivot="atp-april-2020"
+
+- **Blokovat ochranu přístupu**  
+  CSP: [Defender/AllowOnAccessProtection](https://go.microsoft.com/fwlink/?linkid=2113935&clcid=0x409)
+
+  - **Ano**
+  - **Nenakonfigurováno** (*výchozí*)
+
+::: zone-end
+::: zone pivot="atp-march-2020"
+
 - **Blokovat ochranu přístupu**  
   CSP: [Defender/AllowOnAccessProtection](https://go.microsoft.com/fwlink/?linkid=2113935&clcid=0x409)
 
   - **Ano** (*výchozí*)
-  - **Nenakonfigurované**
+  - **Není nakonfigurováno**
+
+::: zone-end
+::: zone pivot="atp-march-2020,atp-april-2020"
 
 - **Kontrolovat skripty v prohlížeči**  
   CSP: [Defender/AllowScriptScanning](https://go.microsoft.com/fwlink/?linkid=2114054&clcid=0x409)
@@ -657,7 +696,7 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
   CSP: [Defender/ScanParameter](https://go.microsoft.com/fwlink/?linkid=2114045&clcid=0x409)
 
   - **Definováno uživatelem**
-  - **Zabezpečen**
+  - **Disabled** (Zakázáno)
   - **Rychlá kontrola** (*výchozí*)
   - **Úplná kontrola**
 
@@ -815,7 +854,7 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
   - **Ano** (*výchozí*) – zabrání uživatelům v provádění změn v oblasti nastavení ochrany před zneužitím v programu Microsoft Defender Security Center.
   - **Nenakonfigurováno** – místní uživatelé mohou provádět změny v oblasti nastavení ochrany před zneužitím.
 
-## <a name="smart-screen"></a>Smart Screen
+## <a name="smart-screen"></a>Inteligentní obrazovka
 
 - **Zablokovat uživatelům ignorovat upozornění filtru SmartScreen**  
   CSP: [SmartScreen/PreventOverrideForFilesInShell](https://go.microsoft.com/fwlink/?linkid=872783)
@@ -827,7 +866,7 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
 - **Vyžadovat pouze aplikace ze Storu**  
 
   - **Ano** (*výchozí*)
-  - **Nenakonfigurované**
+  - **Není nakonfigurováno**
 
 - **Zapnout filtr Windows SmartScreen**  
   CSP: [SmartScreen/EnableSmartScreenInShell](https://go.microsoft.com/fwlink/?linkid=872784)
@@ -863,6 +902,8 @@ Další informace najdete v tématu [PASSPORTFORWORK CSP](https://docs.microsoft
     - **Není povoleno**
     - **Požadováno**
     - **Povoleno** (*výchozí*)
+
+::: zone-end
 
 ## <a name="next-steps"></a>Další kroky
 

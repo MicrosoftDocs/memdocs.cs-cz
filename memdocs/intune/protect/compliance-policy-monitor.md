@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6a2dbd43ff5a8048286693dbfb417d6bb720a877
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
-ms.translationtype: MT
+ms.openlocfilehash: a703914b589430f3e2347c0ea08843193595dc0e
+ms.sourcegitcommit: 56bb5419c41c2e150ffed0564350123135ea4592
+ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79329615"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82729330"
 ---
 # <a name="monitor-intune-device-compliance-policies"></a>Monitorování zásad dodržování předpisů zařízením v Intune
 
@@ -38,7 +38,7 @@ Otevřete **řídicí panel Intune pro dodržování předpisů zařízením**:
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Vyberte **zařízení** > **Přehled** > karta **stav kompatibility** .
+2. Vyberte **zařízení** > **Přehled** > karta**stav dodržování předpisů** .
 
 > [!IMPORTANT]
 > Aby mohla zařízení přijímat zásady dodržování předpisů, musejí být zaregistrovaná v Intune.
@@ -68,7 +68,7 @@ Podrobnosti o různých stavech zásad dodržování předpisů zařízením jso
 
 - **Vyhovující předpisům**: Zařízení úspěšně použilo jedno nebo více nastavení zásad dodržování předpisů zařízením.
 
-- **V období odkladu**: Na zařízení je zacíleno jedno nebo více nastavení zásad dodržování předpisů zařízením. Koncový uživatel ale zásady ještě nepoužil. To znamená, že zařízení předpisy nedodržuje, ale je v období odkladu definovaném správcem.
+- **V období odkladu**: Na zařízení je zacíleno jedno nebo více nastavení zásad dodržování předpisů zařízením. Ale uživatel zatím zásady nepoužil. To znamená, že zařízení nedodržuje předpisy, ale je v období odkladu definovaném správcem.
 
   - Přečtěte si další informace o [akcích pro zařízení nedodržující předpisy](actions-for-noncompliance.md).
 
@@ -81,7 +81,7 @@ Podrobnosti o různých stavech zásad dodržování předpisů zařízením jso
     - Zařízení s Androidem pro veřejného terminálu nebo zařízení s Androidem Enterprise
   - Zařízení zaregistrovaná pomocí účtu správce registrace zařízení (DEM)
 
-- **Nedodržující předpisy**: Zařízení se nepodařilo použít jedno nebo více nastavení zásad dodržování předpisů zařízením. Případně zásady nedodržel uživatel.
+- **Nedodržující předpisy**: Zařízení se nepodařilo použít jedno nebo více nastavení zásad dodržování předpisů zařízením. Nebo uživatel nedodržuje zásady.
 
 - **Zařízení není synchronizované**: Zařízení se nepodařilo oznámit svůj stav zásad dodržování předpisů zařízením z některého z následujících důvodů:
 
@@ -99,9 +99,14 @@ V grafu **Stav dodržování předpisů pro zařízení** vyberte některý stav
 ![Výběr stavu dodržování předpisů](./media/compliance-policy-monitor/select-not-compliant-status.png)
 
 Tato akce otevře okno **dodržování předpisů zařízením** a zobrazí zařízení v grafu **stavu zařízení** . Graf zobrazuje více podrobností o zařízeních v tomto stavu, včetně platformy operačního systému, data posledního vrácení se změnami a dalších.
-Obrázek řídicího panelu ![zobrazí další podrobnosti o zařízení v určitém stavu](./media/compliance-policy-monitor/drill-down-details.png)
+![Snímek řídicího panelu s podrobnostmi o zařízeních v příslušném stavu](./media/compliance-policy-monitor/drill-down-details.png)
 
-Pokud chcete zobrazit všechna zařízení vlastněná konkrétním uživatelem, můžete sestavu grafu také filtrovat zadáním jeho e-mailové adresy.
+Pokud chcete zobrazit všechna zařízení vlastněná konkrétním uživatelem, můžete také filtrovat sestavu grafu zadáním e-mailu uživatele.
+
+> [!TIP]
+> Pokud se uživatel do zařízení přihlásí, zařízení se zásadami dodržování předpisů zařízení odešle zprávu o dodržování předpisů zpět do Intune, která zobrazuje **systémový účet** jako hlavní název uživatele. Důvodem je to, že zásady dodržování předpisů pro zařízení byly cílené na skupinu uživatelů nebo zařízení a v době vyhodnocení dodržování předpisů nebylo na zařízení přihlášen žádný uživatel.
+>
+> Pokud se navíc ke stejnému zařízení přihlásilo více uživatelů a toto zařízení je cílem zásad dodržování předpisů pro zařízení a zvažuje, že tito uživatelé jsou součástí stejné zásady dodržování předpisů pro zařízení, které je třeba vyhodnotit, může sestava dodržování předpisů zobrazovat stejné zařízení víckrát, protože každý uživatel přihlášený k zařízení musí vyhodnotit zásady dodržování předpisů zařízením a nahlásit ho zpátky do Intune.
 
 #### <a name="filter-and-columns"></a>Filtrování a sloupce
 
@@ -111,7 +116,7 @@ Když vyberete tlačítko **Filtr** , otevře se filtr s dalšími možnostmi, v
 
 Pomocí vlastnosti **Sloupce** můžete ve výstupním grafu přidávat nebo odebírat sloupce. Například sloupec **Hlavní název uživatele** může zobrazovat e-mailovou adresu zaregistrovanou na zařízení. Kliknutím na **Použít** výsledky aktualizujete.
 
-#### <a name="device-details"></a>Podrobnosti zařízení
+#### <a name="device-details"></a>Podrobnosti o zařízení
 
 V grafu **podrobností o zařízení** vyberte konkrétní zařízení a pak vyberte **dodržování předpisů zařízením**:
 
@@ -131,7 +136,7 @@ Když tuto dlaždici vyberete, zobrazí se všechna zařízení bez zásad dodr�
 
 - U nastavení zabezpečení **Označit zařízení, která nemají přiřazené žádné zásady dodržování předpisů, jako** je důležité určit zařízení bez zásad dodržování předpisů. Potom jim můžete přiřadit aspoň jednu zásadu dodržování předpisů.
 
-  Nastavení zabezpečení můžete konfigurovat na portálu Intune. Do **zařízení** > **zásady dodržování předpisů** > **nastavení zásad dodržování předpisů**. Potom nastavte možnost **Označit zařízení, která nemají přiřazené žádné zásady dodržování předpisů, jako** na **Vyhovující předpisům**, nebo **Nevyhovující předpisům**.
+  Nastavení zabezpečení můžete konfigurovat na portálu Intune.  > **Nastavení zásad dodržování**předpisů **zařízením** > v**zásadách dodržování předpisů**. Potom nastavte možnost **Označit zařízení, která nemají přiřazené žádné zásady dodržování předpisů, jako** na **Vyhovující předpisům**, nebo **Nevyhovující předpisům**.
 
   Další informace najdete v článku o [vylepšeních zabezpečení ve službě Intune](https://blogs.technet.microsoft.com/intunesupport/2018/02/09/updated-upcoming-security-enhancements-in-the-intune-service/).
 
@@ -151,11 +156,11 @@ Graf **Nastavení dodržování předpisů** zobrazuje všechna nastavení zása
 
 ## <a name="view-compliance-reports"></a>Zobrazení sestav dodržování předpisů
 
-Kromě použití grafů na *stav dodržování předpisů*můžete přejít na **sestavy** > **dodržování předpisů zařízením**.
+Kromě použití grafů na *stav dodržování předpisů*můžete přejít na **zprávy** > **dodržování předpisů zařízením**.
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Vyberte **zařízení** > **monitorování**a pak z nižšího **dodržování předpisů** vyberte sestavu, kterou chcete zobrazit. K dispozici jsou tyto sestavy dodržování předpisů:
+2. Vyberte **Devices** > **monitorování**zařízení a pak z nižšího **dodržování předpisů** vyberte sestavu, kterou chcete zobrazit. K dispozici jsou tyto sestavy dodržování předpisů:
 
    - Dodržování předpisů zařízení
    - Zařízení nedodržující předpisy
@@ -173,7 +178,7 @@ Různé stavy zásad můžete zkontrolovat podle platformy. Máte například z�
 
 Tato funkce je zahrnutá v sestavách stavu zařízení:
 
-1. Vyberte **zařízení** > **zásady dodržování předpisů** > **zásady**. Zobrazí se seznam zásad včetně platformy, pokud je příslušná zásada přiřazená, a další podrobnosti.
+1. Vyberte > **zásady****zásady dodržování předpisů**pro **zařízení** > . Zobrazí se seznam zásad včetně platformy, pokud je příslušná zásada přiřazená, a další podrobnosti.
 2. Vyberte zásadu > **Přehled**. Přiřazení zásad v tomto zobrazení zahrnuje následující stavy:
 
     - **Úspěch**: zásada se použije

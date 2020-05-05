@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 64356bf9be0c2c439c1f4fc296a9728a7937b001
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 70b0c5693c22b6504016d85e35977c5f99935742
+ms.sourcegitcommit: b7e5b053dfa260e7383a9744558d50245f2bccdc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80086559"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82587205"
 ---
 # <a name="create-vpn-profiles-to-connect-to-vpn-servers-in-intune"></a>Vytvoření profilů sítě VPN pro připojení k serverům VPN v Intune
 
@@ -32,9 +32,9 @@ Chcete například nakonfigurovat všechna zařízení s iOS/iPadOS s požadovan
 > [!NOTE]
 > [Vlastní zásady konfigurace Intune](custom-settings-configure.md) můžete použít k vytvoření profilů sítě VPN pro následující platformy:
 >
-> * Android 4 a novější
+> * Android 4 nebo novější
 > * Zaregistrovaná zařízení se systémem Windows 8.1 a novějším
-> * Windows Phone 8.1 a novější
+> * Windows Phone 8.1 nebo novější
 > * Zaregistrovaná zařízení s desktopovým systémem Windows 10
 > * Windows 10 Mobile
 > * Windows Holographic for Business
@@ -52,8 +52,8 @@ Profily VPN můžete vytvářet pomocí následujících typů připojení:
   - iOS/iPadOS
   - macOS
   - Windows 10
-  - Windows 8.1
-  - Wvdows Phone 8.1
+  - Windows 8.1
+  - Windows Phone 8.1
 
 - Cisco AnyConnect
   - Správce zařízení s Androidem
@@ -85,8 +85,8 @@ Profily VPN můžete vytvářet pomocí následujících typů připojení:
   - iOS/iPadOS
   - macOS
   - Windows 10
-  - Windows 8.1
-  - Wvdows Phone 8.1
+  - Windows 8.1
+  - Windows Phone 8.1
 
 - IKEv2
   - iOS/iPadOS
@@ -110,8 +110,8 @@ Profily VPN můžete vytvářet pomocí následujících typů připojení:
   - iOS/iPadOS
   - macOS
   - Windows 10
-  - Windows 8.1
-  - Wvdows Phone 8.1
+  - Windows 8.1
+  - Windows Phone 8.1
 
 - SonicWall Mobile Connect
   - Správce zařízení s Androidem
@@ -119,8 +119,8 @@ Profily VPN můžete vytvářet pomocí následujících typů připojení:
   - iOS/iPadOS
   - macOS
   - Windows 10
-  - Windows 8.1
-  - Wvdows Phone 8.1
+  - Windows 8.1
+  - Windows Phone 8.1
 
 - Zscaler
   - Android Enterprise Working Profiles: použití [zásad konfigurace aplikací](../apps/app-configuration-policies-use-android.md)
@@ -132,17 +132,17 @@ Profily VPN můžete vytvářet pomocí následujících typů připojení:
 ## <a name="create-the-profile"></a>Vytvoření profilu
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **zařízení** > **konfiguračních profilech** > **vytvořit profil**.
-3. Zadejte následující vlastnosti:
+2. Vyberte **Konfigurace zařízení** > **profily** > konfigurace**vytvořit profil**.
+3. Zadejte tyto vlastnosti:
 
     - **Platforma**: vyberte platformu zařízení. Možnosti:
       - **Správce zařízení s Androidem**
-      - Jenom **Android Enterprise** > **vlastník zařízení**
-      - **Jenom pracovní profil** pro **Android Enterprise** > 
+      - **Android Enterprise** > **Jenom vlastníci zařízení** s Androidem Enterprise
+      - **Android Enterprise** > **Jenom pracovní profil** Android Enterprise
       - **iOS/iPadOS**
       - **macOS**
       - **Windows 10 a novější**
-      - **Windows 8.1 a novější**
+      - **Windows 8.1 a vyšší**
       - **Windows Phone 8.1**
     - **Profil**: vyberte **VPN**.
 
@@ -160,11 +160,11 @@ Profily VPN můžete vytvářet pomocí následujících typů připojení:
     - [iOS/iPadOS](vpn-settings-ios.md)
     - [macOS](vpn-settings-macos.md)
     - [Windows 10](vpn-settings-windows-10.md) (včetně Windows holografického pro firmy)
-    - [Windows 8.1](vpn-settings-windows-8-1.md)
+    - [Windows 8.1](vpn-settings-windows-8-1.md)
     - [Windows Phone 8.1](vpn-settings-windows-phone-8-1.md)
 
 8. Vyberte **Další**.
-9. V části **značky oboru** (volitelné) přiřaďte značku pro filtrování profilu na konkrétní skupiny IT, například `US-NC IT Team` nebo `JohnGlenn_ITDepartment`. Další informace o značkách oboru naleznete v tématu [použití značek RBAC a Scope pro distribuci](../fundamentals/scope-tags.md).
+9. V části **značky oboru** (volitelné) přiřaďte značku pro filtrování profilu pro konkrétní IT skupiny, například `US-NC IT Team` nebo. `JohnGlenn_ITDepartment` Další informace o značkách oboru naleznete v tématu [použití značek RBAC a Scope pro distribuci](../fundamentals/scope-tags.md).
 
     Vyberte **Další**.
 
@@ -181,6 +181,8 @@ Profily VPN můžou používat spoustu různých typů připojení a protokoly o
 ### <a name="certificates"></a>Certifikáty
 
 Při vytváření profilu VPN zvolíte certifikátu SCEP nebo PKCS, který jste předtím vytvořili v Intune. Tento profil se označuje jako certifikát identity. Slouží k ověřování na základě důvěryhodného profilu certifikátu (neboli *kořenového certifikátu*), který vytvoříte, aby bylo možné zařízení uživatele připojit. Tento důvěryhodný certifikát se přiřazuje počítači, který ověřuje připojení VPN. Zpravidla se jedná o server VPN.
+
+Pokud pro profil sítě VPN použijete ověřování založené na certifikátech, nasaďte profil sítě VPN, profil certifikátu a důvěryhodný kořenový profil do stejných skupin, abyste zajistili, že každé zařízení dokáže rozpoznat legitimitu certifikační autority.
 
 Další informace o vytváření a používání profilů certifikátů v Intune najdete v tématu [Jak konfigurovat certifikáty pomocí Microsoft Intune](../protect/certificates-configure.md).
 
