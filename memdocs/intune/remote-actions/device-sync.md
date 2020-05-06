@@ -54,17 +54,17 @@ Když správce spustí akci zařízení **synchronizovat** , aplikace pro iOS/IP
 
 | Kód chyby  | Navrhovaný popis | Možnost opakovaného pokusu |
 |---|---|---|
-| 2016330898 | Došlo k neznámé chybě. | Ne |
+| 2016330898 | Došlo k neznámé chybě. | No |
 | 2016330897 | Vypršel časový limit vašeho připojení k Intune. Obnovte připojení. | Ano |
 | 2016330896 | Ztratili jste připojení k internetu. Resetujte připojení. | Ano |
 | 2016330895 | Ztratili jste připojení k internetu. Resetujte připojení. | Ano |
 | 2016330894 | Ztratili jste připojení k internetu. Resetujte připojení. | Ano |
 | 2016330893 | Ztratili jste připojení k internetu. Resetujte připojení. | Ano|
-| 2016330892 | Mezinárodní roaming je zakázaný. | Ne|
+| 2016330892 | Mezinárodní roaming je zakázaný. | No|
 | 2016330891 | K mobilnímu datovému připojení pro toto zařízení nelze připomenout během telefonního hovoru. Počkejte na dokončení telefonního hovoru. | Ano|
-| 2016330890 | Pro tato zařízení nešlo v tuto chvíli  V tuto chvíli se tato zařízení nedala použít. | Ne|
+| 2016330890 | Pro tato zařízení nešlo v tuto chvíli  V tuto chvíli se tato zařízení nedala použít. | No|
 | 2016330889 | Nepovedlo se navázat zabezpečené připojení. Resetujte připojení. | Ano|
-| 2016330888 | Nepovedlo se vyhodnotit důvěryhodnost serveru. | Ne|
+| 2016330888 | Nepovedlo se vyhodnotit důvěryhodnost serveru. | No|
 
 ## <a name="next-steps"></a>Další kroky
 

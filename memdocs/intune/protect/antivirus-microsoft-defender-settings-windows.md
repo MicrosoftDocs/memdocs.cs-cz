@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/20/2020
+ms.date: 05/05/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 554bc09aa57306010069df4a85baa70fafdc41a6
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 7d8ea221b6c1768055e3ca1839c20ed64e2e3838
+ms.sourcegitcommit: 14d7dd0a99ebd526c9274d5781c298c828323ebf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80086274"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82802017"
 ---
 # <a name="settings-for-windows-10-microsoft-defender-antivirus-policy-in-microsoft-intune"></a>Nastavení pro zásady antivirové ochrany v Microsoft Defenderu pro Windows 10 v Microsoft Intune
 
@@ -82,7 +82,7 @@ Pro každé nastavení v této skupině můžete rozbalit nastavení, vybrat **P
   - **Ano** – vynutilo používání monitorování v reálném čase. Uživatelé zařízení nemůžou toto nastavení změnit.
 
 - **Povolit při ochraně přístupu**  
-  CSP: [AllowOnAccessProtection](https://go.microsoft.com/fwlink/?linkid=2113935&clcid=0x409)
+  CSP: [AllowOnAccessProtection](https://go.microsoft.com/fwlink/?linkid=2113935)
 
   Nakonfigurujte nepřetržitě aktivní antivirovou ochranu, a to na rozdíl od na vyžádání.
 
@@ -90,8 +90,16 @@ Pro každé nastavení v této skupině můžete rozbalit nastavení, vybrat **P
   - **No** – zablokuje ochranu přístupu na zařízeních. Uživatelé zařízení nemůžou toto nastavení změnit.
   - Na zařízeních je aktivní ochrana přístupu na úrovni **Ano** .
 
+- **Monitorování příchozích a odchozích souborů**  
+  CSP: [Defender/RealTimeScanDirection](https://go.microsoft.com/fwlink/?linkid=2113943)
+
+  Konfigurací tohoto nastavení určíte, která aktivita souborů a programů systému souborů NTFS bude monitorována.
+  - **Monitorovat všechny soubory** (*výchozí*)
+  - **Monitorovat jenom příchozí soubory**
+  - **Monitorovat jenom odchozí soubory**
+
 - **Zapnout monitorování chování**  
-  CSP: [AllowBehaviorMonitoring](https://go.microsoft.com/fwlink/?linkid=2114048&clcid=0x409)
+  CSP: [AllowBehaviorMonitoring](https://go.microsoft.com/fwlink/?linkid=2114048)
 
   Ve výchozím nastavení používá Defender na zařízeních s Windows 10 Desktop funkce monitorování chování.
 
@@ -109,7 +117,7 @@ Pro každé nastavení v této skupině můžete rozbalit nastavení, vybrat **P
   - **Ano** – Ochrana sítě je zapnutá. Uživatelé zařízení nemůžou toto nastavení změnit.
 
 - **Prohledat všechny stažené soubory a přílohy**  
-  CSP: [EnableNetworkProtection](https://go.microsoft.com/fwlink/?linkid=2113939&clcid=0x409)
+  CSP: [EnableNetworkProtection](https://go.microsoft.com/fwlink/?linkid=2113939)
 
   Nakonfigurujte Defender tak, aby kontroloval všechny stažené soubory a přílohy.
 
@@ -118,7 +126,7 @@ Pro každé nastavení v této skupině můžete rozbalit nastavení, vybrat **P
   - **Ano** – Defender vyhledá všechny stažené soubory a přílohy. Uživatelé zařízení nemůžou toto nastavení změnit.
 
 - **Kontrolovat skripty, které se používají v prohlížečích Microsoftu**  
-  CSP: [AllowScriptScanning](https://go.microsoft.com/fwlink/?linkid=2114054&clcid=0x409)
+  CSP: [AllowScriptScanning](https://go.microsoft.com/fwlink/?linkid=2114054)
 
   Nakonfigurujte Defender tak, aby kontroloval skripty.
 
@@ -127,7 +135,7 @@ Pro každé nastavení v této skupině můžete rozbalit nastavení, vybrat **P
   - **Ano** – Defender prohledává skripty. Uživatelé zařízení nemůžou toto nastavení změnit.
 
 - **Prohledat síťové soubory**  
-  CSP: [AllowScanningNetworkFiles](https://go.microsoft.com/fwlink/?linkid=2114049&clcid=0x409)
+  CSP: [AllowScanningNetworkFiles](https://go.microsoft.com/fwlink/?linkid=2114049&)
 
   Nakonfigurujte Defender pro kontrolu síťových souborů.
 
@@ -136,7 +144,7 @@ Pro každé nastavení v této skupině můžete rozbalit nastavení, vybrat **P
   - **Ano** – zapněte kontrolu síťových souborů. Uživatelé zařízení nemůžou toto nastavení změnit.
 
 - **Kontrolovat e-maily**  
-  CSP: [AllowEmailScanning](https://go.microsoft.com/fwlink/?linkid=2114052&clcid=0x409)
+  CSP: [AllowEmailScanning](https://go.microsoft.com/fwlink/?linkid=2114052)
 
   Nakonfigurujte Defender pro kontrolu příchozích e-mailů.
 
@@ -147,7 +155,7 @@ Pro každé nastavení v této skupině můžete rozbalit nastavení, vybrat **P
 ## <a name="remediation"></a>Odstranění rizika
 
 - **Počet dní (0-90) pro udržení malwaru v karanténě**  
-  CSP: [DaysToRetainCleanedMalware](https://go.microsoft.com/fwlink/?linkid=2114055&clcid=0x409)
+  CSP: [DaysToRetainCleanedMalware](https://go.microsoft.com/fwlink/?linkid=2114055)
 
   Zadejte počet dní od nuly do 90, po který systém ukládá položky v karanténě, než se automaticky odebere. Hodnota nula zachovává položky v karanténě a automaticky je neodstraní.
 
@@ -160,7 +168,7 @@ Pro každé nastavení v této skupině můžete rozbalit nastavení, vybrat **P
   - **Posílat všechny vzorky automaticky**
 
 - **Akce, která se má provést u potenciálně nežádoucích aplikací**  
-  CSP: [PUAProtection](https://go.microsoft.com/fwlink/?linkid=2114051&clcid=0x409)
+  CSP: [PUAProtection](https://go.microsoft.com/fwlink/?linkid=2114051)
 
   Zadejte úroveň detekce potenciálně nežádoucích aplikací (PUAs). Program Defender upozorní uživatele, když se stahuje potenciálně nežádoucí software nebo se pokouší o instalaci na zařízení.
 
@@ -170,7 +178,7 @@ Pro každé nastavení v této skupině můžete rozbalit nastavení, vybrat **P
   - **Režim auditování** – Defender detekuje potenciálně nežádoucí aplikace, ale neprovede žádnou akci. Můžete zkontrolovat informace o aplikacích, které Defender přijal, pomocí hledání událostí, které vytvořil Defender v Prohlížeč událostí.
 
 - **Akce zjištěných hrozeb**  
-  CSP: [ThreatSeverityDefaultAction](https://go.microsoft.com/fwlink/?linkid=2113938&clcid=0x409)
+  CSP: [ThreatSeverityDefaultAction](https://go.microsoft.com/fwlink/?linkid=2113938)
 
   Zadejte akci, kterou Defender provede u zjištěného malwaru na základě úrovně hrozby malwaru.
   
@@ -193,7 +201,7 @@ Pro každé nastavení v této skupině můžete rozbalit nastavení, vybrat **P
 ## <a name="scan"></a>Skenování
 
 - **Prohledat archivní soubory**  
-  CSP: [AllowArchiveScanning](https://go.microsoft.com/fwlink/?linkid=2114047&clcid=0x409)
+  CSP: [AllowArchiveScanning](https://go.microsoft.com/fwlink/?linkid=2114047)
 
   Nakonfigurujte Defender pro kontrolu souborů archivu, jako jsou soubory ZIP nebo CAB.
 
@@ -203,7 +211,7 @@ Další informace
   - **Ano** – povolí kontroly souborů archivu. Uživatelé zařízení nemůžou toto nastavení změnit.
 
 - **Pro naplánovaná prohledávání použít nízkou prioritu procesoru**  
-  CSP: [EnableLowCPUPriority](https://go.microsoft.com/fwlink/?linkid=2113944&clcid=0x409)
+  CSP: [EnableLowCPUPriority](https://go.microsoft.com/fwlink/?linkid=2113944)
 
   Nakonfigurujte prioritu procesoru pro naplánovaná prohledávání.
   - **Nenakonfigurováno** (*výchozí*) – nastavení se vrátí do výchozího systému, ve kterém se neprovádí žádné změny priority procesoru.
@@ -211,7 +219,7 @@ Další informace
   - **Ano** – nízká priorita procesoru bude použita během naplánovaných kontrol. Uživatelé zařízení nemůžou toto nastavení změnit.
 
 - **Zakázat úplné prověřování při zachytávání**  
-  CSP: [DisableCatchupFullScan](https://go.microsoft.com/fwlink/?linkid=2114042&clcid=0x409)
+  CSP: [DisableCatchupFullScan](https://go.microsoft.com/fwlink/?linkid=2114042)
 
   Konfigurace zachytávání kontrol pro plánované úplné prověřování. Kontrola, která je zachytávání, se spustí, protože se vynechala pravidelná Naplánovaná kontrola. Obvykle se Tato naplánovaná prohledávání neprojeví, protože počítač byl v naplánovaném čase vypnutý.
 
@@ -220,7 +228,7 @@ Další informace
   - **Ano** – vynutily se kontroly pro plánované úplné kontroly a uživatel je nemůže zakázat. Pokud je počítač offline po dvou po sobě jdoucích plánovaných kontrolách, spustí se při příštím přihlášení k počítači, když se někdo znovu přihlašuje. Pokud není nakonfigurovaná žádná Naplánovaná kontrola, nebudete moct spustit žádnou kontrolu. Uživatelé zařízení nemůžou toto nastavení změnit.
 
 - **Zakázat rychlé prověřování zjištění nového stavu**  
-  CSP: [DisableCatchupQuickScan](https://go.microsoft.com/fwlink/?linkid=2113941&clcid=0x409)
+  CSP: [DisableCatchupQuickScan](https://go.microsoft.com/fwlink/?linkid=2113941)
 
   Konfigurace zachytávání kontrol pro plánované rychlé prověřování. Kontrola, která je zachytávání, se spustí, protože se vynechala pravidelná Naplánovaná kontrola. Obvykle se Tato naplánovaná prohledávání neprojeví, protože počítač byl v naplánovaném čase vypnutý.
 
@@ -229,12 +237,12 @@ Další informace
   - **Ano** – vynutily se kontroly pro plánované rychlé kontroly a uživatel je nemůže zakázat. Pokud je počítač offline po dvou po sobě jdoucích plánovaných kontrolách, spustí se při příštím přihlášení k počítači, když se někdo znovu přihlašuje. Pokud není nakonfigurovaná žádná Naplánovaná kontrola, nebudete moct spustit žádnou kontrolu. Uživatelé zařízení nemůžou toto nastavení změnit.
 
 - **Limit využití procesoru na kontrolu**  
-  CSP: [AvgCPULoadFactor](https://go.microsoft.com/fwlink/?linkid=2114046&clcid=0x409)
+  CSP: [AvgCPULoadFactor](https://go.microsoft.com/fwlink/?linkid=2114046)
 
   Zadejte jako procento od nuly do 100, což je průměrný faktor zatížení procesoru pro hledání v programu Defender.
 
 - **Při úplné kontrole kontrolovat namapované síťové jednotky**  
-  CSP: [AllowFullScanOnMappedNetworkDrives](https://go.microsoft.com/fwlink/?linkid=2113945&clcid=0x409)
+  CSP: [AllowFullScanOnMappedNetworkDrives](https://go.microsoft.com/fwlink/?linkid=2113945)
 
   Nakonfigurujte Defender pro kontrolu mapovaných síťových jednotek.
 
@@ -243,13 +251,13 @@ Další informace
   - **Ano** – povolí kontroly mapovaných síťových jednotek. Uživatelé zařízení nemůžou toto nastavení změnit.
 
 - **Spustit každodenní rychlou kontrolu v**  
-  CSP: [ScheduleQuickScanTime](https://go.microsoft.com/fwlink/?linkid=2114053&clcid=0x409)
+  CSP: [ScheduleQuickScanTime](https://go.microsoft.com/fwlink/?linkid=2114053)
 
   Vyberte denní dobu, po kterou se spustí rychlé prověřování v Defenderu.
   Ve výchozím nastavení to není **nakonfigurované** .
 
 - **Typ kontroly**  
-  CSP: [ScanParameter](https://go.microsoft.com/fwlink/?linkid=2114045&clcid=0x409)
+  CSP: [ScanParameter](https://go.microsoft.com/fwlink/?linkid=2114045)
 
   Vyberte typ kontroly, který Defender spustí.
 
@@ -271,14 +279,14 @@ Další informace
 ## <a name="updates"></a>Aktualizace
 
 - **Zadejte, jak často (0-24 hodin) se mají kontrolovat aktualizace služby Security Intelligence.**  
-  CSP: [SignatureUpdateInterval](https://go.microsoft.com/fwlink/?linkid=2113936&clcid=0x409)
+  CSP: [SignatureUpdateInterval](https://go.microsoft.com/fwlink/?linkid=2113936)
 
   Zadejte interval od nuly do 24 (v hodinách), který se používá ke kontrole podpisů. Nulová hodnota nemá za následek kontrolu nových podpisů. Hodnota 2 bude kontrolovat každé dvě hodiny atd.
 
 ## <a name="user-experience"></a>Uživatelské prostředí
 
 - **Povolení přístupu uživatele k aplikaci Microsoft Defender**  
-  CSP: [AllowUserUIAccess](https://go.microsoft.com/fwlink/?linkid=2114043&clcid=0x409)  
+  CSP: [AllowUserUIAccess](https://go.microsoft.com/fwlink/?linkid=2114043)  
 
   - **Nenakonfigurováno** (*výchozí*) – nastavení se vrátí do výchozího nastavení klienta, ve kterém se uživatelské rozhraní a oznámení povolují.
   - **Ne** – uživatelské rozhraní (UI) programu Defender je nedostupné a nepřístupné oznámení se nepoužívá.

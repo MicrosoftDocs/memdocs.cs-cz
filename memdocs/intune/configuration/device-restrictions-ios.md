@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/04/2020
+ms.date: 05/05/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f21728c62b5cb306e03b259940eef37141592b25
-ms.sourcegitcommit: 99a6e83219978433ec5a91d09beeaf69acbeb522
+ms.openlocfilehash: af842bbb9c8dcb133bfe0d52f49948761f968c71
+ms.sourcegitcommit: 79fb3b0f0486de1644904be348b7e08048e93b18
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82782204"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82842253"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>nastavení zařízení s iOS a iPadOS pro povolení nebo omezení funkcí pomocí Intune
 
@@ -591,7 +591,7 @@ Pokud chcete přidat aplikace, můžete:
 
   Od iOS/iPadOS 13,0 Toto nastavení vyžaduje zařízení pod dohledem.
 
-## <a name="autonomous-single-app-mode"></a>Autonomní režim jedné aplikace
+## <a name="autonomous-single-app-mode-asam"></a>Autonomní režim jedné aplikace (ASAM)
 
 Pomocí těchto nastavení můžete nakonfigurovat zařízení s iOS/iPadOS, aby spouštěla konkrétní aplikace v autonomním režimu jedné aplikace (ASAM). Když je tento režim nakonfigurovaný a uživatelé spouštějí jednu z nakonfigurovaných aplikací, zařízení je do této aplikace uzamčené. Přepínání aplikace nebo úlohy je zakázané, dokud uživatelé neukončí povolenou aplikaci.
 
@@ -599,6 +599,8 @@ Například ve škole nebo univerzitním prostředí přidejte aplikaci, která 
 
 > [!NOTE]
 > Ne všechny aplikace podporují autonomní režim jedné aplikace. K umístění aplikace v autonomním režimu jedné aplikace se obvykle vyžadují ID sady prostředků nebo dvojice klíč-hodnota, které jsou poskytovány zásadami konfigurace aplikace. Další informace najdete v části [ `autonomousSingleAppModePermittedAppIDs` omezení](https://developer.apple.com/documentation/devicemanagement/restrictions) v dokumentaci k MDM společnosti Apple. Další informace o konkrétním nastavení požadovaném pro aplikaci, kterou konfigurujete, najdete v dokumentaci od dodavatele.
+
+Pokud třeba chcete nakonfigurovat místnosti lupy v autonomním režimu jedné aplikace, přiblížením říkáte, `us.zoom.zpcontroller` že se má použít ID sady prostředků. V této instanci provedete také změnu webového portálu zoom. Další informace najdete v centru pro [nápovědu lupy](https://support.zoom.us/hc/articles/360021322632-Autonomous-Single-App-Mode-for-Zoom-Rooms-with-a-Third-Party-MDM).
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Nastavení platí pro: automatický zápis zařízení (pod dohledem)
 

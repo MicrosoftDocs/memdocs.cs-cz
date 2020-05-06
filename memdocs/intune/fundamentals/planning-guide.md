@@ -13,17 +13,17 @@ ms.subservice: fundamentals
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: a65efa6e-4a48-47f3-8f6e-34a85ca64ced
-ms.reviewer: jeffbu, cgerth
+ms.reviewer: andredm7
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 65d4745580a4b0d733ffe14be03f0f9893074586
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 613bb0ddf935815a4022fa483e0aad615c64121a
+ms.sourcegitcommit: 14d7dd0a99ebd526c9274d5781c298c828323ebf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82080092"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82802034"
 ---
 # <a name="intune-deployment-planning-design-and-implementation-guide"></a>Průvodce plánováním nasazení, návrhem a implementací Intune
 
@@ -53,7 +53,10 @@ Tento průvodce obsahuje oddíly, které vás provedou celým procesem nasazení
 
 Tento průvodce také obsahuje další technické informace a šablony tabulek, které vám pomohou při plánování, návrhu a implementaci Intune.
 
-- [Další zdroje: odkazy a šablony tabulek](planning-guide-resources.md)
+### <a name="additional-resources"></a>Další zdroje
+
+- Příručka k testování koncepce [(koncepce) Microsoft Endpoint Manageru:](https://www.microsoft.com/microsoft-365/partners/endpoint-manager-poc) cílem je poskytnout rozhraní a technické pokyny pro spuštění úspěšného ověření koncepce v rámci vaší organizace.
+- [Odkazy a šablony tabulek](planning-guide-resources.md)
 
 ## <a name="assumptions"></a>Předpoklady
 

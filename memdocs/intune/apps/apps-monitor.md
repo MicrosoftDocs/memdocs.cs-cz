@@ -63,7 +63,7 @@ Grafy zobrazují počet aplikací pro následující stav:
 | **Nenainstalováno**     | Počet nenainstalovaných aplikací                     |
 | **Failed**            | Počet neúspěšných instalací                   |
 | **Instalace čeká**   | Počet aplikací, které se právě instalují |
-| **Nelze použít**           | Počet aplikací, u nichž není stav k dispozici            |
+| **Neuvedeno**           | Počet aplikací, u nichž není stav k dispozici            |
 
 > [!NOTE]
 > Mějte na paměti, že aplikace pro Android LOB (. APK) nasazené jako **k dispozici s registrací nebo bez registrace** stav instalace aplikace pouze u zaregistrovaných zařízení. Pro zařízení, která nejsou zaregistrovaná v Intune, není stav instalace aplikace k dispozici.

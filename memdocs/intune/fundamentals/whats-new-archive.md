@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5657a26419280871e6739060509a72c4604fc3a7
-ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
+ms.openlocfilehash: c3adb6f1548c0b332aaa477014f07559ffc826c1
+ms.sourcegitcommit: 79fb3b0f0486de1644904be348b7e08048e93b18
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82255009"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82842287"
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Novinky v Microsoft Intune – předchozí měsíce
 
@@ -4011,7 +4011,7 @@ V této verzi jsme přidali nová nastavení pro profil omezení zařízení s�
 - Mobilní síť a připojení
 - Prostředí zamknuté obrazovky
 - Ochrana osobních údajů
-- Search
+- Vyhledávání
 - Windows Spotlight
 - Prohlížeč Microsoft Edge
 
@@ -4187,7 +4187,7 @@ V profilu omezení zařízení Intune teď můžete nakonfigurovat tato [nastave
 - Určit, jestli jsou povolené zvuky oznámení
 
 ### <a name="configure-ios-apps-to-run-in-single-app-mode-autonomously---737837---"></a>Konfigurace spouštění aplikací pro iOS autonomně v režimu jedné aplikace <!-- 737837 -->
-Pomocí profilu zařízení Intune teď můžete nakonfigurovat, aby zařízení s iOSem spouštěla zadané aplikace v [autonomním režimu jedné aplikace](../configuration/device-restrictions-ios.md#autonomous-single-app-mode). Pokud je tento režim nakonfigurovaný a uživatel spustí aplikaci, v zařízení se zablokuje spuštění jakékoli další aplikace. Příkladem je nakonfigurování aplikace, která uživatelům umožňuje absolvovat na zařízení test. Když se akce aplikace dokončí nebo tuto zásadu odeberete, zařízení se vrátí do normálního stavu.
+Pomocí profilu zařízení Intune teď můžete nakonfigurovat, aby zařízení s iOSem spouštěla zadané aplikace v [autonomním režimu jedné aplikace](../configuration/device-restrictions-ios.md#autonomous-single-app-mode-asam). Pokud je tento režim nakonfigurovaný a uživatel spustí aplikaci, v zařízení se zablokuje spuštění jakékoli další aplikace. Příkladem je nakonfigurování aplikace, která uživatelům umožňuje absolvovat na zařízení test. Když se akce aplikace dokončí nebo tuto zásadu odeberete, zařízení se vrátí do normálního stavu.
 
 ### <a name="configure-trusted-domains-for-email-and-web-browsing-on-ios-devices---723765---"></a>Konfigurace důvěryhodných domén pro e-mail a procházení webu v zařízeních s iOSem <!-- 723765 -->
 V profilu omezení zařízení s iOSem teď můžete nakonfigurovat tato [nastavení domén](../configuration/device-restrictions-ios.md#domains):

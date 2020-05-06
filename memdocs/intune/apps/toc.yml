@@ -147,12 +147,12 @@
               href: apps-configure-chrome-android.md
         - name: hromadně zakoupené aplikace a knihy
           items:
-            - name: Správa aplikací a knih zakoupených prostřednictvím programu VPP
+            - name: Přehled hromadných nákupů
               href: vpp-apps.md
               displayName: vpp; volume purchased
-            - name: Aplikace iOS VPP
+            - name: Hromadně zakoupené aplikace pro iOS
               href: vpp-apps-ios.md
-            - name: Aplikace pro Microsoft Store pro firmy
+            - name: Aplikace z Microsoft Storu pro firmy
               href: windows-store-for-business.md
             - name: E-knihy pro iOS
               href: vpp-ebooks-ios.md
@@ -206,6 +206,10 @@
           href: app-install-error-codes.md
         - name: Řešení potíží se správou mobilních aplikací
           href: troubleshoot-mam.md
+        - name: Kontrola protokolů ochrany aplikace
+          href: app-protection-policy-settings-log.md
+        - name: Řešení potíží s nasazením zásad ochrany aplikací
+          href: troubleshoot-app-protection-policy-deployment.md
 - name: Reference
   items:
     - name: Ochrana aplikací pomocí sady Intune App SDK
