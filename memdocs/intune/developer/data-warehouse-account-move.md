@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 95c7104f949216a6a9f7704ac9bec6a7c2dfa7aa
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 94592505806ec005fcc5abf6aead04ec89422d6e
+ms.sourcegitcommit: d1c7548b4177d720065b822356f9a08d1e1657c2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078086"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82881073"
 ---
 # <a name="move-your-intune-data-warehouse-account-data"></a>Přesunutí vašich dat účtu datového skladu Intune 
 
@@ -83,4 +83,4 @@ Zákazník X požaduje, aby bylo přesunutí účtu zahájeno 1. 6. 2018. V odpo
 ## <a name="next-steps"></a>Další kroky
 
 - Podívejte [se, co je nového v Intune každý týden](../fundamentals/whats-new.md). Můžete také získat informace o nadcházejících změnách, důležitá oznámení o službě a informace o minulých vydaných verzích.
-- Přečtěte si [Blog Microsoft Intune](https://go.microsoft.com/fwlink/?LinkID=273882).
+- Přečtěte si [Blog Microsoft Intune](https://www.microsoft.com/microsoft-365/blog/microsoft-intune/).

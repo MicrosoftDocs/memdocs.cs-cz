@@ -12,12 +12,12 @@ metadata:
   ms.author: dougeby
   manager: dougeby
   ms.date: 08/07/2019
-  ms.openlocfilehash: 468bf56722f17fded75c18a722b15e5e55113eec
-  ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+  ms.openlocfilehash: c604af033d47061c186bd987310e495d2b118268
+  ms.sourcegitcommit: 5f9d5d22114ae5aeb0270c7fb59c5dced5f48826
   ms.translationtype: HT
   ms.contentlocale: cs-CZ
-  ms.lasthandoff: 04/23/2020
-  ms.locfileid: "82077950"
+  ms.lasthandoff: 05/06/2020
+  ms.locfileid: "82862322"
 landingContent:
 - title: Další informace o registraci
   linkLists:
@@ -65,8 +65,6 @@ landingContent:
     links:
     - text: Propojení účtu Intune se spravovaným účtem Google Play
       url: connect-intune-android-enterprise.md
-    - text: Nastavení registrace zařízení s pracovním profilem Android Enterprise
-      url: android-work-profile-enroll.md
     - text: Nastavení registrace zařízení s pracovním profilem Android Enterprise
       url: android-work-profile-enroll.md
     - text: Nastavení registrace vyhrazených zařízení s Androidem Enterprise

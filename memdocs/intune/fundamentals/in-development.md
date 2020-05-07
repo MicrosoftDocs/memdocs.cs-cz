@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0151bfd993c3ad5cc48194da368d3385d8bc32ec
-ms.sourcegitcommit: 8a8378b685a674083bfb9fbc9c0662fb0c7dda97
+ms.openlocfilehash: 0098ff8f7916dd08b32fbc4acc9289a403a860ef
+ms.sourcegitcommit: d1c7548b4177d720065b822356f9a08d1e1657c2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82619555"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82881056"
 ---
 # <a name="in-development-for-microsoft-intune"></a>Ve vývoji pro Microsoft Intune
 
@@ -37,7 +37,7 @@ Tato stránka vám umožní v rámci připravenosti a plánování vypsat aktual
 
 **Informační kanál RSS**: Zjistěte, kdy se tato stránka aktualizuje zkopírováním a vložením následující adresy URL do čtečky informačních kanálů:`https://docs.microsoft.com/api/search/rss?search=%22in+development+-+microsoft+intune%22&locale=en-us`
 
-Tento článek byl naposledy aktualizován na datum uvedené pod nadpisem výše.
+**Tento článek byl naposledy aktualizován na datum uvedené pod nadpisem výše.**
 
 <!--
 ## What's coming to Intune in the Azure portal 

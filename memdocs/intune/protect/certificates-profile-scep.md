@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3da418db81a315e4102b63c34ffc557646d36f70
-ms.sourcegitcommit: 2871a17e43b2625a5850a41a9aff447c8ca44820
+ms.openlocfilehash: fe91e36ab5cc66fe81c77401a2a0374f6577b202
+ms.sourcegitcommit: 5f9d5d22114ae5aeb0270c7fb59c5dced5f48826
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82126064"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82862373"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>Vytvoření a přiřazení profilů certifikátů SCEP v Intune
 
@@ -301,7 +301,8 @@ Než budete pokračovat, zvažte následující:
 - Pokud používáte spolusprávu pro Intune a Configuration Manager, v Configuration Manager [nastavte posuvník úlohy](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads) pro zásady přístupu k prostředkům na **Intune** nebo **pilotní Intune**. Toto nastavení umožňuje klientům Windows 10 zahájit proces vyžádání certifikátu.
 
 > [!NOTE]
-> Když se na zařízeních s iOS/iPadOS přihlásí profil certifikátu SCEP nebo profil certifikátu PKCS k dalšímu profilu, jako je například profil sítě Wi-Fi nebo VPN, zařízení obdrží certifikát pro každý z těchto dalších profilů. Výsledkem je, že zařízení se systémem iOS/iPadOS má několik certifikátů dodaných žádostí o certifikát SCEP nebo PKCS. 
+> - Když se na zařízeních s iOS/iPadOS přihlásí profil certifikátu SCEP nebo profil certifikátu PKCS k dalšímu profilu, jako je například profil sítě Wi-Fi nebo VPN, zařízení obdrží certifikát pro každý z těchto dalších profilů. Výsledkem je, že zařízení se systémem iOS/iPadOS má několik certifikátů dodaných žádostí o certifikát SCEP nebo PKCS. 
+> - V systémech iOS 13 a macOS 10,15 jsou k dispozici některé [Další požadavky na zabezpečení, které jsou zdokumentovány společností Apple](https://support.apple.com/HT210176) .  
 
 
 ## <a name="next-steps"></a>Další kroky

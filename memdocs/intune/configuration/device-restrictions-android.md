@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4afc27680c464f67756340ebcb0958887ae6f795
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 5fc11d7302c30dd53314eb2312d37842b081a6b3
+ms.sourcegitcommit: 5f9d5d22114ae5aeb0270c7fb59c5dced5f48826
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80407874"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82862356"
 ---
 # <a name="android-and-samsung-knox-standard-device-restriction-settings-lists-in-intune"></a>Seznamy nastavení omezení zařízení s Androidem a Samsung KNOX standard v Intune
 
@@ -114,7 +114,7 @@ Pomocí těchto nastavení můžete na zařízeních zapnout nebo zakázat konkr
 - **Nenakonfigurováno** (výchozí): Intune toto nastavení nemění ani neaktualizuje.
 - **Zakázané aplikace**: seznam aplikací (nespravovaných pomocí Intune), které uživatelé nemůžou instalovat a spouštět. Pokud uživatel z tohoto seznamu nainstaluje aplikaci, budete Intune informovat.
 - **Schválené aplikace**: seznam aplikací, které můžou uživatelé instalovat. Aby bylo možné zachovat dodržování předpisů, uživatelé nesmí instalovat jiné aplikace.  Aplikace spravované přes Intune se automaticky povolují, včetně aplikace Portál společnosti.
-- **Seznam aplikací**: **Přidat** aplikaci:
+- **Seznam aplikací**: **přidejte** svoji aplikaci:
   - **ID sady prostředků aplikace**: Zadejte ID sady prostředků aplikace.
   - **Adresa URL obchodu s aplikacemi**: zadejte adresu URL obchod Google Play aplikace, kterou chcete. Pokud například chcete přidat aplikaci Vzdálená plocha Microsoft pro Android, zadejte `https://play.google.com/store/apps/details?id=com.microsoft.rdc.android`.
 
