@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4ffa3d11b92c38373da22e53b96fe9cf9e520b5b
-ms.sourcegitcommit: af8a3efd361a7f3fa6e98e5126dfb1391966ff76
+ms.openlocfilehash: 8e72fc48608ebf32f3e32d4a94ab7203ee418d8f
+ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82149185"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82943803"
 ---
 # <a name="add-ios-ipados-or-macos-device-feature-settings-in-intune"></a>Přidání nastavení funkcí zařízení se systémem iOS, iPadOS nebo macOS v Intune
 
@@ -153,7 +153,7 @@ Tato nastavení konfigurují rozšíření aplikace, které umožňuje jednotné
 
 Pomocí těchto nastavení můžete v Intune nakonfigurovat rozšíření aplikace jednotného přihlašování vytvořené vaší organizací, vaším poskytovatelem identity, Microsoftem nebo společností Apple. Rozšíření aplikace jednotného přihlašování zpracovává ověřování pro vaše uživatele. Tato nastavení konfigurují rozšíření aplikace jednotného přihlašování pro typ přesměrování a přihlašovací údaje.
 
-- Typ přesměrování je navržený pro moderní ověřovací protokoly, jako je OAuth a typu Saml2. Na zařízeních macOS můžete použít obecné rozšíření přesměrování. Pro zařízení s iOS/iPadOS si můžete vybrat mezi rozšířením Microsoft Azure AD SSO Extension ([Microsoft Enterprise SSO-in](https://docs.microsoft.com/azure/active-directory/develop/apple-sso-plugin)) a obecným rozšířením pro přesměrování.
+- Typ přesměrování je navržený pro moderní ověřovací protokoly, jako je OpenID Connect, OAuth a typu Saml2. Na zařízeních macOS můžete použít obecné rozšíření přesměrování. Pro zařízení s iOS/iPadOS si můžete vybrat mezi rozšířením Microsoft Azure AD SSO Extension ([Microsoft Enterprise SSO-in](https://docs.microsoft.com/azure/active-directory/develop/apple-sso-plugin)) a obecným rozšířením pro přesměrování.
 - Typ přihlašovacích údajů je určený pro toky ověřování typu Challenge a Response. Můžete si vybrat rozšíření přihlašovací údaje specifické pro protokol Kerberos poskytované společností Apple a obecné rozšíření přihlašovacích údajů.
 
 Seznam nastavení, která můžete nakonfigurovat v Intune, najdete v tématu [rozšíření aplikace pro iOS/IPADOS SSO](ios-device-features-settings.md#single-sign-on-app-extension) a [rozšíření aplikace MacOS SSO](macos-device-features-settings.md#single-sign-on-app-extension).

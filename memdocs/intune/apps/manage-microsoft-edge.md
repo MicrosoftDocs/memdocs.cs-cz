@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cc1b11fe533499ebe29101c09fb1355cd8d04243
-ms.sourcegitcommit: 53bab52e42de28b87e53596646a3532e25eb9c14
+ms.openlocfilehash: 373c3c5a6a3167943d78e5a17ac9b7cab8afba8a
+ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82183071"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82943854"
 ---
 # <a name="manage-web-access-by-using-microsoft-edge-with-microsoft-intune"></a>Správa webového přístupu pomocí Microsoft Edge s Microsoft Intune
 
@@ -351,7 +351,7 @@ Ve výchozím nastavení nabízí Microsoft Edge na iOS k ukládání hesel uži
 
 |    Key    |    Hodnota    |
 |-----------------------|-----------------------|
-|    `com.microsoft.intune.mam.managedbrowser.disableFeatures`    |    **heslo** zakáže výzvy, které nabízí ukládání hesel pro koncového uživatele.    |
+|    `com.microsoft.intune.mam.managedbrowser.disabledFeatures`    |    **heslo** zakáže výzvy, které nabízí ukládání hesel pro koncového uživatele.    |
 
 ### <a name="disable-users-from-adding-extensions-to-microsoft-edge"></a>Zakázat uživatelům přidávat rozšíření do Microsoft Edge 
 

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bafe9f564519e597e0bcc84350de3bb17dc646e1
-ms.sourcegitcommit: 5f9d5d22114ae5aeb0270c7fb59c5dced5f48826
+ms.openlocfilehash: dfcedebf32c8f08450e3eaa87c99f9bc11dd7431
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82862339"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906899"
 ---
 # <a name="windows-10-and-later-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Nastavení Windows 10 a novějších označení zařízení jako kompatibilních nebo nekompatibilních s Intune
 
@@ -192,7 +192,7 @@ Platí jenom pro spoluspravovaná zařízení s Windows 10 a novějším. Zaří
   [DeviceStatus CSP – DeviceStatus/Antivirus/status](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
 
   > [!NOTE]
-  > DeviceStatus CSP pro antivirový program není podporován pro *Windows 10 Home* a oznamuje stav není k *dispozici*. Toto omezení se bude řešit v budoucí měsíční aktualizaci Intune. Pokud chcete toto omezení obejít, zvažte použití nastavení [Windows Defenderu](#defender) v zásadách dodržování předpisů pro zařízení. Nastavení Windows Defenderu jsou podporovaná s Windows 10 Home.  
+  > DeviceStatus CSP pro antivirový program není podporován pro *Windows 10 Home* a oznamuje stav není k *dispozici*. Tým Intune pracuje na opravě. Pokud chcete toto omezení obejít, zvažte použití nastavení [Windows Defenderu](#defender) v zásadách dodržování předpisů pro zařízení. Nastavení Windows Defenderu jsou podporovaná s Windows 10 Home.  
 
 - **Antispywarový**program:  
   - **Nenakonfigurováno** (*výchozí*) – Intune nekontroluje žádná antispywarová řešení nainstalovaná na zařízení.
@@ -201,7 +201,7 @@ Platí jenom pro spoluspravovaná zařízení s Windows 10 a novějším. Zaří
   [DeviceStatus CSP – DeviceStatus/antispywarový/status](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
 
   > [!NOTE]
-  > DeviceStatus CSP pro antispywar není podporován pro *Windows 10 Home* a oznamuje stav *není k dispozici*. Toto omezení se bude řešit v budoucí měsíční aktualizaci Intune. Pokud chcete toto omezení obejít, zvažte použití nastavení [Windows Defenderu](#defender) v zásadách dodržování předpisů pro zařízení. Nastavení Windows Defenderu jsou podporovaná s Windows 10 Home. 
+  > DeviceStatus CSP pro antispywar není podporován pro *Windows 10 Home* a oznamuje stav *není k dispozici*. Tým Intune pracuje na opravě. Pokud chcete toto omezení obejít, zvažte použití nastavení [Windows Defenderu](#defender) v zásadách dodržování předpisů pro zařízení. Nastavení Windows Defenderu jsou podporovaná s Windows 10 Home. 
 
 ### <a name="defender"></a>Defender
 

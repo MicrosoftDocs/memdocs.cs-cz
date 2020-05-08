@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0416332c74ba3305d344794c888d1867c25f8271
-ms.sourcegitcommit: 99a6e83219978433ec5a91d09beeaf69acbeb522
+ms.openlocfilehash: 67bb805df6406226c67084ed832f5cc590b1664a
+ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82782221"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82943905"
 ---
 # <a name="windows-mdm-security-baseline-settings-for-intune"></a>Nastavení standardních hodnot zabezpečení Windows MDM pro Intune
 
@@ -1594,7 +1594,7 @@ Toto pravidlo zabraňuje útokům blokováním aplikace Adobe Reader v vytváře
   **Výchozí**: Ano  
 
 - **Kontrolovat archivní soubory**:  
-  SLUŽEB[](https://go.microsoft.com/fwlink/?linkid=2114047)
+  CSP: [Defender/AllowArchiveScanning](https://go.microsoft.com/fwlink/?linkid=2114047)
   
   Pokud je nastaveno na Ano, vynutily se soubory archivu, jako je například skenování souborů ZIP nebo CAB. Pokud je nastavené na Nenakonfigurováno, nastavení se vrátí zpátky do výchozího nastavení klienta, které bude kontrolovat archivované soubory, ale uživatel to může zakázat.
 
@@ -1933,7 +1933,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Rem
 
   **Výchozí**: ověřeno
 
-## <a name="search"></a>Search
+## <a name="search"></a>Vyhledávání
 
 Další informace najdete v tématu [zásady CSP – hledání](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-search) v dokumentaci k Windows.
 

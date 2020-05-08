@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0098ff8f7916dd08b32fbc4acc9289a403a860ef
-ms.sourcegitcommit: d1c7548b4177d720065b822356f9a08d1e1657c2
+ms.openlocfilehash: 7827c85585d630f64ba9c6d342b6275fca506b1d
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/07/2020
-ms.locfileid: "82881056"
+ms.locfileid: "82906960"
 ---
 # <a name="in-development-for-microsoft-intune"></a>Ve vývoji pro Microsoft Intune
 
@@ -152,8 +152,6 @@ PowerShellové skripty budou podporovat registrovaná zařízení Azure AD v Int
 ### <a name="log-analytics-will-include-device-details-log--6014987----"></a>Log Analytics bude zahrnovat protokol podrobností o zařízení.<!--6014987  -->
 V **sestavách** > **Log Analytics**budou k dispozici protokoly podrobností o zařízeních v Intune. Můžete korelovat podrobnosti o zařízení a vytvářet vlastní dotazy a sešity Azure.
 
-### <a name="new-details-for-the-autopilot-report--5405786---"></a>Nové podrobnosti pro sestavu autopilot<!--5405786 -->
-Chcete-li zobrazit nové podrobnosti o stavu instalace aplikací a zásad, přejděte do [centra pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431)a vyberte **zařízení** > **monitorování** > **nasazení autopilotu**.
 
 ### <a name="macos-script-support---6376978----"></a>Podpora skriptů macOS<!-- 6376978  -->
 Podpora skriptů pro macOS je teď všeobecně dostupná. Kromě toho budeme přidávat podporu pro skripty přiřazené uživateli i pro zařízení macOS, která byla zaregistrovaná pomocí automatizované registrace zařízení společnosti Apple (dříve Program registrace zařízení). Další informace najdete v tématu [použití skriptů prostředí v zařízeních MacOS v Intune](../apps/macos-shell-scripts.md).

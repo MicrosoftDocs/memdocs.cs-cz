@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 569a80d21efd82b6008c7aa7a613c089a10c6ff3
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 5b3052d8d213ce3190ed29b43f580a8de9c840b7
+ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79331111"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82943837"
 ---
 # <a name="intune-network-configuration-requirements-and-bandwidth"></a>Šířka pásma a požadavky na konfiguraci sítě Intune
 
@@ -74,14 +74,6 @@ Tady jsou obvyklá nastavení proxy serveru, který do mezipaměti ukládá obsa
 
 Informace o používání proxy serveru k ukládání obsahu do mezipaměti najdete v dokumentaci k vašemu řešení proxy serveru.
 
-### <a name="use-background-intelligent-transfer-service-bits-on-computers"></a>Použití Background Intelligent Transfer Service (BITS) na počítačích
-
-Během hodin, které nakonfigurujete, můžete k omezení šířky pásma sítě použít službu BITS na počítači s Windows. Zásady BITS můžete nakonfigurovat na stránce **Šířka pásma sítě** v zásadách agenta Intune.
-
-> [!NOTE]
-> Pro správu MDM v systému Windows používá ke stažení bitů jenom rozhraní pro správu operačního systému pro typ aplikace MobileMSI. AppX/MsiX používají vlastní zásobník pro stahování bez služby BITS a aplikace Win32 přes agenta Intune místo bitů používá optimalizaci doručování.
-
-Další informace o službě BITS a počítačích s Windows najdete v části [Služba inteligentního přenosu na pozadí](https://technet.microsoft.com/library/bb968799.aspx) v knihovně TechNet.
 
 ### <a name="delivery-optimization"></a>Optimalizace doručení
 
@@ -91,7 +83,22 @@ Optimalizace doručení vám umožní používat Intune k omezení spotřeby š�
 
 [Optimalizace doručování můžete nastavit](../configuration/delivery-optimization-settings.md) jako součást profilů konfigurace zařízení.
 
-### <a name="use-branchcache-on-computers"></a>Používání BranchCache na počítačích
+
+### <a name="background-intelligent-transfer-service-bits-and-branchcache"></a>Background Intelligent Transfer Service (BITS) a BranchCache 
+
+Pomocí Microsoft Intune můžete spravovat počítače s Windows buď [jako mobilní zařízení se správou mobilních zařízení (MDM)](../enrollment/windows-enroll.md) , nebo jako počítače s klientským softwarem Intune. Microsoft doporučuje, aby zákazníci [používali řešení správy](../enrollment/windows-enroll.md) mobilních zařízení, kdykoli to bude možné. Když tento způsob spravujete, BranchCache a BITS se nepodporují. Další informace najdete v tématu [porovnání správy počítačů s Windows jako počítačů nebo mobilních zařízení](pc-management-comparison.md).
+
+#### <a name="use-bits-on-computers-requires-intune-software-client"></a>Použití (BITS) na počítačích (vyžaduje softwarového klienta Intune)
+
+Během hodin, které nakonfigurujete, můžete k omezení šířky pásma sítě použít službu BITS na počítači s Windows. Zásady BITS můžete nakonfigurovat na stránce **Šířka pásma sítě** v zásadách agenta Intune.
+
+> [!NOTE]
+> Pro správu MDM v systému Windows používá ke stažení bitů jenom rozhraní pro správu operačního systému pro typ aplikace MobileMSI. AppX/MsiX používají vlastní zásobník pro stahování bez služby BITS a aplikace Win32 přes agenta Intune místo bitů používá optimalizaci doručování.
+
+Další informace o službě BITS a počítačích s Windows najdete v části [Služba inteligentního přenosu na pozadí](https://technet.microsoft.com/library/bb968799.aspx) v knihovně TechNet.
+
+
+#### <a name="use-branchcache-on-computers-requires-intune-software-client"></a>Použít BranchCache na počítačích (vyžaduje softwarového klienta Intune)
 
 Klienti Intune můžou díky BranchCache omezit přenos v síti WAN. BranchCache podporují následující operační systémy:
 
@@ -106,8 +113,6 @@ Když je klient Intune nainstalovaný na počítačích, služba BranchCache a r
 
 Pokud používáte BranchCache, měli byste při správě zásad skupiny a zásad brány firewall pro Intune spolupracovat s ostatními správci ve vaší organizaci. Zajistěte, aby nasadily zásady zakazující BranchCache nebo výjimky brány firewall. Další informace o BranchCache najdete v tématu [BranchCache – přehled](https://technet.microsoft.com/library/hh831696.aspx).
 
-> [!NOTE]
-> Pomocí Microsoft Intune můžete spravovat počítače s Windows buď [jako mobilní zařízení se správou mobilních zařízení (MDM)](../enrollment/windows-enroll.md) , nebo jako počítače s klientským softwarem Intune. Microsoft doporučuje, aby zákazníci [používali řešení správy](../enrollment/windows-enroll.md) mobilních zařízení, kdykoli to bude možné. Pokud tento způsob spravujete, služba BranchCache není podporována. Další informace najdete v tématu [porovnání správy počítačů s Windows jako počítačů nebo mobilních zařízení](pc-management-comparison.md).
 
 ## <a name="next-steps"></a>Další kroky
 

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 05/07/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 70b0c5693c22b6504016d85e35977c5f99935742
-ms.sourcegitcommit: b7e5b053dfa260e7383a9744558d50245f2bccdc
+ms.openlocfilehash: c72d2f8d9bd6a7235845863000272f605bb41089
+ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82587205"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82943820"
 ---
 # <a name="create-vpn-profiles-to-connect-to-vpn-servers-in-intune"></a>Vytvoření profilů sítě VPN pro připojení k serverům VPN v Intune
 
@@ -185,6 +185,10 @@ Při vytváření profilu VPN zvolíte certifikátu SCEP nebo PKCS, který jste 
 Pokud pro profil sítě VPN použijete ověřování založené na certifikátech, nasaďte profil sítě VPN, profil certifikátu a důvěryhodný kořenový profil do stejných skupin, abyste zajistili, že každé zařízení dokáže rozpoznat legitimitu certifikační autority.
 
 Další informace o vytváření a používání profilů certifikátů v Intune najdete v tématu [Jak konfigurovat certifikáty pomocí Microsoft Intune](../protect/certificates-configure.md).
+
+> [!NOTE]
+> Certifikáty přidané pomocí typu profilu **certifikátu importovaného PKCS** nejsou podporované pro ověřování VPN. Certifikáty přidané pomocí typu profilu **PKCS certifikáty** jsou podporovány pro ověřování sítě VPN.
+
 
 ### <a name="user-name-and-password"></a>Uživatelské jméno a heslo
 

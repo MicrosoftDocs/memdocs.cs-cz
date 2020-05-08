@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/27/2020
+ms.date: 05/07/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: af60c16c4a7c9d27409f82cfc53d5c345dfe1af0
-ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
+ms.openlocfilehash: fce26aab90989f31ee56a9abd58f617c780d9c4b
+ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82210206"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82943871"
 ---
 # <a name="ios-and-ipados-device-settings-to-use-common-iosipados-features-in-intune"></a>nastavení zařízení s iOS a iPadOS pro použití běžných funkcí iOS/iPadOS v Intune
 
@@ -107,7 +107,7 @@ Pro Dock zařízení můžete přidat až **šest** položek (kombinované aplik
       Pro Dock zařízení můžete přidat až **20** stránek.
 
 > [!NOTE]
-> Když přidáváte ikony pomocí nastavení Dock, ikony na domovské obrazovce a stránkách jsou zamčené a nejde je přesunout. To může být záměrné pro iOS/iPadOS a zásady MDM společnosti Apple.
+> Když použijete nastavení rozložení domovské obrazovky a přidáte stránky nebo do Docku přidáte stránky a aplikace, ikony na domovské obrazovce a stránkách jsou zamčené. Nelze je přesunout ani odstranit. Toto chování může být záměrné pomocí zásad pro iOS/iPadOS a Apple MDM.
 
 #### <a name="example"></a>Příklad
 
