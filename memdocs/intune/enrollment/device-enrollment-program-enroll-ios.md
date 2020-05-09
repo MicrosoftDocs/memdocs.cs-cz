@@ -18,14 +18,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: db9164d68783356faf01fe4fc4e8d74f2a4b0869
-ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
+ms.openlocfilehash: 994ab31e2a06b0d2ef570fcfbb4f9d8c6ea7cca4
+ms.sourcegitcommit: 0dafd513a59afe592b5cfe2a80b6288020dc5bf0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82023346"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82991761"
 ---
-# <a name="automatically-enroll-iosipados-devices-with-apples-automated-device-enrollment"></a>Automatické registrace zařízení s iOS/iPadOS pomocí automatizované registrace zařízení společnosti Apple
+# <a name="automatically-enroll-iosipados-devices-with-apples-automated-device-enrollment"></a>Automatická registrace zařízení se systémem iOS/iPadOS pomocí Automatické registrace zařízení společnosti Apple
 
 > [!IMPORTANT]
 > Apple se nedávno změnil z použití programu Apple Program registrace zařízení (DEP) na Apple Automated Device Enrollment (ADE). Intune je v procesu aktualizace uživatelského rozhraní Intune, aby odrážel. Dokud tyto změny nedokončíte, budete na portálu Intune dál zobrazovat *program registrace zařízení* . Všude, kde se zobrazuje, teď používá automatický zápis zařízení.
@@ -148,8 +148,7 @@ Teď, když jste nainstalovali token, můžete vytvořit profil zápisu pro zař
 
     ![Snímek obrazovky pro vytvoření profilu](./media/device-enrollment-program-enroll-ios/image04.png)
 
-3. Na stránce **základy** zadejte **název** a **Popis** profilu pro účely správy. Uživatelé tyto podrobnosti nevidí. Pole **Název** můžete využít k vytvoření dynamické skupiny v Azure Active Directory. Název profilu použijte k definování parametru enrollmentProfileName pro přiřazení zařízení s tímto registračním profilem. U zařízení zaregistrovaných v rámci automatického zápisu zařízení s přidružením uživatele zajistěte, aby uživatelé, kteří zapisují uživatele jako člen před instalací zařízení, zajistili nejrychlejší doručování zásad do zařízení. Zacílení aplikací a zásad na dynamické skupiny založené na registračních profilech způsobí určitou prodlevu při použití na zařízení po dokončení toku registrace.
-Přečtěte si další informace o [Azure Active Directory dynamických skupinách](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices).
+3. Na stránce **základy** zadejte **název** a **Popis** profilu pro účely správy. Uživatelé tyto podrobnosti nevidí. 
 
     ![Název a popis profilu](./media/device-enrollment-program-enroll-ios/image05.png)
 
@@ -264,6 +263,17 @@ Přečtěte si další informace o [Azure Active Directory dynamických skupiná
 16. Kliknutím na tlačítko **Další** přejdete na stránku **Revize + vytvořit** .
 
 17. Pokud chcete profil uložit, zvolte **Vytvořit**.
+
+### <a name="dynamic-groups-in-azure-active-directory"></a>Dynamické skupiny v Azure Active Directory
+
+Pole **název** registrace můžete použít k vytvoření dynamické skupiny v Azure Active Directory. Další informace najdete v tématu [Azure Active Directory dynamické skupiny](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership.md).
+
+Pomocí názvu profilu můžete definovat [parametr enrollmentProfileName](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices) pro přiřazení zařízení s tímto registračním profilem.
+
+Pokud chcete nejrychlejší doručování zásad na zařízeních ADE s přidružením uživatele, ujistěte se, že je uživatel registrace členem, a to před nastavením zařízení ve skupině uživatelů AAD. 
+
+Přiřazení dynamických skupin k registračním profilům může vést k prodlevám při doručování aplikací a zásad do zařízení po registraci.
+
 
 ## <a name="sync-managed-devices"></a>Synchronizace spravovaných zařízení
 Teď, když má Intune oprávnění spravovat vaše zařízení, můžete synchronizovat Intune s Apple, aby se spravovaná zařízení zobrazila v Intune na portálu Azure Portal.

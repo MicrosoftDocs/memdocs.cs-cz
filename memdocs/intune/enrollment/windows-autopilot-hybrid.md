@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 81e5dc772ca85bf124af3da33a263b683ea0885b
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 2ea6d407417300d2b758861ed35fcecc88f7ec74
+ms.sourcegitcommit: 0dafd513a59afe592b5cfe2a80b6288020dc5bf0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326971"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82991701"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot"></a>Nasazení hybridních zařízení připojených k Azure AD pomocí Intune a automatického pilotního projektu Windows
 Pomocí Intune a Windows autopilotu můžete nastavit zařízení připojená k hybridnímu Azure Active Directory (Azure AD). Pokud to chcete provést, postupujte podle kroků v tomto článku.
@@ -108,6 +108,8 @@ Organizační jednotka, která má udělena práva k vytváření počítačů, 
 ## <a name="install-the-intune-connector"></a>Instalace konektoru Intune
 
 Konektor Intune pro službu Active Directory musí být nainstalovaný na počítači se systémem Windows Server 2016 nebo novějším. Počítač musí mít také přístup k Internetu a ke službě Active Directory. Pokud chcete zvýšit škálování a dostupnost nebo chcete podporovat více domén Active Directory, můžete do vašeho prostředí nainstalovat více konektorů. Doporučujeme nainstalovat konektor na server, na kterém neběží žádné jiné konektory Intune.
+
+Konektor Intune vyžaduje [stejné koncové body jako Intune](../fundamentals/intune-endpoints.md).
 
 1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **Windows** > **Windows registrace** > **Intune Connector pro Active Directory** > **Přidat**. 
 2. Podle pokynů stáhněte konektor.

@@ -6,7 +6,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/05/2020
+ms.date: 05/08/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4d29da297689f09cfdcbaf884f5f343a519093db
-ms.sourcegitcommit: d1c7548b4177d720065b822356f9a08d1e1657c2
+ms.openlocfilehash: 17213a29d5182176fe2fd8e5802e5ca03587d8f7
+ms.sourcegitcommit: 0dafd513a59afe592b5cfe2a80b6288020dc5bf0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82881090"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82991799"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Aktualizace uživatelského rozhraní pro aplikace Intune pro koncové uživatele
 
@@ -36,6 +36,26 @@ Pokud jste zaměstnancem nebo studentem, nezapomeňte se podívat na snímky obr
 
 
 
+## <a name="week-of-may-4-2020"></a>Týden od 4. května 2020  
+### <a name="company-portal-for-android-guides-users-to-get-apps-after-work-profile-enrollment----6103999---"></a>Portál společnosti pro Android provede uživatele k získání aplikací po registraci pracovního profilu. <!-- 6103999 -->
+Vylepšili jsme doprovodné materiály k aplikaci v Portál společnosti, aby uživatelé mohli snáze najít a nainstalovat aplikace. Po registraci v nástroji Správa pracovních profilů se uživatelům zobrazí zpráva s vysvětlením, jak najít navrhované aplikace v označení verze Google Play. Poslední krok v části [registrace zařízení s Androidem](../user-help/enroll-device-android-work-profile.md) se aktualizoval, aby se zobrazila nová zpráva. 
+
+![Příklad obrázku Portál společnosti – výzva karty zařízení k otevření verze Google Play označená příznakem](./media/whats-new-app-ui/updated-banner-android-2005.png)  
+
+Uživatelům se na levé straně Portál společnosti zobrazí také nový odkaz **získat aplikace** . 
+
+![Příklad obrázku Portál společnosti levou ruky Draw, zvýraznění získat aplikace položka nabídky.](./media/whats-new-app-ui/updated-drawer-android-2005.png)  
+
+Aby bylo možné tyto nové a vylepšené prostředí vytvořit, karta **aplikace** zobrazená na následujícím obrázku byla odstraněna.  
+
+![Příklad obrázku nově odebrané Portál společnosti, karty aplikace](./media/whats-new-app-ui/apps-tab-android-removed-2005.png)  
+
+
+
+
+
+
+
 ## <a name="week-of-march-2-2020"></a>Týden od 2. března 2020   
 ### <a name="improved-sign-in-experience-in-company-portal-for-android"></a>Vylepšené prostředí pro přihlašování v Portál společnosti pro Android   
 Aktualizovali jsme rozložení několika přihlašovacích obrazovek v aplikaci Portál společnosti pro Android, aby bylo prostředí pro uživatele užitečnější, jednoduché a čisté. Pokud chcete zobrazit všechny Portál společnosti pokyny k registraci Androidu, přejděte k tématu [registrace zařízení s Androidem](../user-help/enroll-device-android-company-portal.md) nebo [registrace pomocí pracovního profilu Androidu](../user-help/enroll-device-android-work-profile.md).   
@@ -44,7 +64,7 @@ Aktualizovali jsme rozložení několika přihlašovacích obrazovek v aplikaci 
 |Aktualizováno|Předchozí|   
 |---|---|   
 |![Příklad obrázku nové obrazovky pro přihlášení Portál společnosti, tlačítko Přihlásit se](./media/whats-new-app-ui/intune-company-portal-sign-in-2003.png)|![Příklad obrázku předchozí Portál společnosti přihlašovací stránka, která zobrazuje návrh vytíženější](./media/whats-new-app-ui/intune-company-portal-sign-in-2002.png)| 
-|![Příklad obrázku nové obrazovky průběh přihlašování, která zobrazuje jeden indikátor průběhu.](./media/whats-new-app-ui/intune-company-portal-signing-in-2003.png)|![Příklad obrázku předchozího procesu přihlašování, který zobrazuje návrh vytíženější](./media/whats-new-app-ui/intune-company-portal-signing-in-2002.png)|  
+|![Příklad obrázku nové obrazovky průběh přihlašování, která zobrazuje jeden indikátor průběhu.](./media/whats-new-app-ui/intune-company-portal-signing-in-2003.png)|![Příklad obrázku předchozího procesu přihlašování, který zobrazuje návrh vytíženější](./media/whats-new-app-ui/intune-company-portal-signing-in-2002.png)|
 ## <a name="week-of-february-3-2020"></a>Týden od 3. února 2020
 
 ### <a name="screen-removed-from-company-portal-android-work-profile-enrollment---6103987---"></a>Obrazovka, která se odebrala z Portál společnosti, registrace pracovních profilů Android <!--6103987 -->

@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 02/07/2020
+ms.date: 05/08/2020
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 839809de89d4220fa87012cd9a28e5f6b6c35dcf
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 3007e9a40dd77e156f0c0a77214e819948fc01da
+ms.sourcegitcommit: 0dafd513a59afe592b5cfe2a80b6288020dc5bf0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79328247"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82991598"
 ---
 # <a name="enroll-device-with-android-work-profile"></a>Registrace zařízení pomocí pracovního profilu Androidu
 
@@ -74,6 +74,15 @@ Přečtěte si o tom, [co se stane, když si vytvoříte pracovní profil](what-
 9. Po dokončení instalace klepněte na **Hotovo**.  
 
     ![Příklad obrázku Portál společnosti, obrazovka nastavení firemního přístupu, zobrazení dokončeného nastavení a zvýraznění tlačítka Hotovo.](./media/work-profile-done-1911.png)  
+
+10. Po zobrazení výzvy k zobrazení navrhovaných aplikací vaší organizace v Google Play vyberte **otevřít**. 
+
+    ![Příklad obrázku Portál společnosti výzvy k otevření verze Google Play s označením](./media/get-apps-banner-android-2005.png) 
+
+    Pokud nejste připraveni k instalaci aplikací, můžete k nim kdykoli získat přístup přímo na označenou verzi Google Play aplikace. Můžete také vybrat možnost **získat aplikace** z nabídky portál společnosti.  
+
+    ![Příklad obrázku nabídky Portál společnosti, zvýrazňování získat aplikace odkaz](./media/updated-drawer-android-2005.png) 
+
 
 
 ## <a name="next-steps"></a>Další kroky  
