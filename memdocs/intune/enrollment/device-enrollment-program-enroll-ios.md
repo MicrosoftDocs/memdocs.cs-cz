@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 994ab31e2a06b0d2ef570fcfbb4f9d8c6ea7cca4
-ms.sourcegitcommit: 0dafd513a59afe592b5cfe2a80b6288020dc5bf0
+ms.openlocfilehash: dd999f621375cfdbfa80bf076766be20053221dc
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82991761"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83269061"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-automated-device-enrollment"></a>Automatická registrace zařízení se systémem iOS/iPadOS pomocí Automatické registrace zařízení společnosti Apple
 
@@ -85,7 +85,7 @@ K vytvoření tokenu použijete portál [Apple Business Manager (ABM)](https://b
 
 ### <a name="step-1-download-the-intune-public-key-certificate-required-to-create-the-token"></a>Krok 1. Stáhněte si certifikát veřejného klíče Intune, který je potřebný k vytvoření tokenu.
 
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **iOS** > **iOS registrace** > **tokeny** > programu**Přidat**.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení**  >  **iOS**iOS  >  **registrace**  >  **tokeny programu**  >  **Přidat**.
 
     ![Stažení tokenu programu registrace zařízení](./media/device-enrollment-program-enroll-ios/image01.png)
 
@@ -143,8 +143,8 @@ Teď, když jste nainstalovali token, můžete vytvořit profil zápisu pro zař
 > Zařízení se zablokuje, pokud není k dispozici dostatek Portál společnosti licencí pro token VPP, nebo pokud vypršela platnost tokenu. Intune zobrazí výstrahu, když se brzo vyprší platnost tokenu nebo dojde k nedostatku licencí.
  
 
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **iOS** > iOS**registrace** > **tokeny programu**.
-2. Vyberte token, zvolte **profily** > **vytvořit profil** > **iOS**.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení**  >  **iOS**iOS  >  **registrace**  >  **tokeny programu**.
+2. Vyberte token, zvolte **profily**  >  **vytvořit profil**  >  **iOS**.
 
     ![Snímek obrazovky pro vytvoření profilu](./media/device-enrollment-program-enroll-ios/image04.png)
 
@@ -197,7 +197,7 @@ Teď, když jste nainstalovali token, můžete vytvořit profil zápisu pro zař
     Uživatelé se dozvědí, že jejich zařízení jsou pod dohledem, dvěma způsoby:
 
    - Na zamykací obrazovce se zobrazí oznámení: „Tento iPhone spravuje Contoso.“
-   - **Nastavení** > **General**obecné > **o** obrazovce říká: "Tento iPhone je pod dohledem. Společnost Contoso může monitorovat internetové přenosy a zařízení vyhledat.“
+   - **Nastavení**  >  **Obecné**  >  **o** obrazovce říká: "Tento iPhone je pod dohledem. Společnost Contoso může monitorovat internetové přenosy a zařízení vyhledat.“
 
      > [!NOTE]
      > Zařízení zaregistrované bez dohledu se dá resetovat do stavu pod dohledem jenom pomocí Apple Configuratoru. Resetování zařízení tímto způsobem vyžaduje připojení zařízení s iOS/iPadOS k počítači Mac pomocí kabelu USB. Další informace na toto téma získáte v [dokumentaci Apple Configuratoru](http://help.apple.com/configurator/mac/2.3).
@@ -205,8 +205,8 @@ Teď, když jste nainstalovali token, můžete vytvořit profil zápisu pro zař
 10. Vyberte, jestli chcete pro zařízení, která používají tento profil, uzamčenou registraci. **Uzamčená registrace** zakáže nastavení pro iOS/iPadOS, která umožňují odebrání profilu správy z nabídky **Nastavení** . Po registraci zařízení toto nastavení nemůžete změnit bez vymazání zařízení. Taková zařízení musí mít režim správy **Pod dohledem** nastavený na *Ano*. 
 
     > [!NOTE]
-    > Až se zařízení zaregistruje pomocí **zamčené registrace**, nebudou moct uživatelé v portál společnosti aplikaci použít **odebrání zařízení** nebo **obnovení továrního nastavení** . Možnosti nebudou pro uživatele k dispozici. Uživatel také nebude moci zařízení odebrat na webu Portál společnosti (https://portal.manage.microsoft.com).
-    > Pokud je zařízení BYOD převést na zařízení Apple automatizovaného zápisu zařízení a zaregistrované s uzamčeným profilem s povoleným **zápisem** , bude moct uživatel použít možnost **Odebrat zařízení** a **obnovit tovární nastavení** po dobu 30 dnů a možnosti budou zakázané nebo nedostupné. Odkaz: https://help.apple.com/configurator/mac/2.8/#/cad99bc2a859.
+    > Až se zařízení zaregistruje pomocí **zamčené registrace**, nebudou moct uživatelé v portál společnosti aplikaci použít **odebrání zařízení** nebo **obnovení továrního nastavení** . Možnosti nebudou pro uživatele k dispozici. Uživatel také nebude moci zařízení odebrat na webu Portál společnosti ( https://portal.manage.microsoft.com) .
+    > Pokud je zařízení BYOD převést na zařízení Apple automatizovaného zápisu zařízení a zaregistrované s uzamčeným profilem s povoleným **zápisem** , bude moct uživatel použít možnost **Odebrat zařízení** a **obnovit tovární nastavení** po dobu 30 dnů a možnosti budou zakázané nebo nedostupné. Odkaz: https://help.apple.com/configurator/mac/2.8/#/cad99bc2a859 .
 
 11. Vyberte, jestli chcete, aby zařízení, která používají tento profil, mohla **synchronizovat s počítači**. Pokud vyberete **Povolit Apple Configurator podle certifikátu**, musíte zvolit certifikát v části **Certifikáty Apple Configuratoru**.
 
@@ -220,7 +220,7 @@ Teď, když jste nainstalovali token, můžete vytvořit profil zápisu pro zař
 
 14. Klikněte na tlačítko **Další: přizpůsobení pomocníka s nastavením**.
 
-15. Na stránce **vlastní nastavení Pomocníka s nastavením** nakonfigurujte následující nastavení profilu: ![přizpůsobení pomocníka s nastavením.](./media/device-enrollment-program-enroll-ios/setupassistantcustom.png)
+15. Na stránce **vlastní nastavení Pomocníka s nastavením** nakonfigurujte následující nastavení profilu: ![ přizpůsobení pomocníka s nastavením.](./media/device-enrollment-program-enroll-ios/setupassistantcustom.png)
 
 
     | Nastavení oddělení | Popis |
@@ -266,9 +266,9 @@ Teď, když jste nainstalovali token, můžete vytvořit profil zápisu pro zař
 
 ### <a name="dynamic-groups-in-azure-active-directory"></a>Dynamické skupiny v Azure Active Directory
 
-Pole **název** registrace můžete použít k vytvoření dynamické skupiny v Azure Active Directory. Další informace najdete v tématu [Azure Active Directory dynamické skupiny](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership.md).
+Pole **název** registrace můžete použít k vytvoření dynamické skupiny v Azure Active Directory. Další informace najdete v tématu [Azure Active Directory dynamické skupiny](/azure/active-directory/users-groups-roles/groups-dynamic-membership).
 
-Pomocí názvu profilu můžete definovat [parametr enrollmentProfileName](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices) pro přiřazení zařízení s tímto registračním profilem.
+Pomocí názvu profilu můžete definovat [parametr enrollmentProfileName](/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices) pro přiřazení zařízení s tímto registračním profilem.
 
 Pokud chcete nejrychlejší doručování zásad na zařízeních ADE s přidružením uživatele, ujistěte se, že je uživatel registrace členem, a to před nastavením zařízení ve skupině uživatelů AAD. 
 
@@ -278,7 +278,7 @@ Přiřazení dynamických skupin k registračním profilům může vést k prodl
 ## <a name="sync-managed-devices"></a>Synchronizace spravovaných zařízení
 Teď, když má Intune oprávnění spravovat vaše zařízení, můžete synchronizovat Intune s Apple, aby se spravovaná zařízení zobrazila v Intune na portálu Azure Portal.
 
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **iOS** > **iOS registrace** > **tokeny programu** > vyberte token v seznamu > **zařízení** > **synchronizovat**. ![Snímek obrazovky uzlu zařízení programu registrace a odkaz na synchronizaci.](./media/device-enrollment-program-enroll-ios/image06.png)
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **iOS** iOS > **registrace** > **tokeny programu** > vyberte token v seznamu > **zařízení** > **synchronizovat**. ![ Snímek obrazovky uzlu zařízení programu registrace a odkaz na synchronizaci.](./media/device-enrollment-program-enroll-ios/image06.png)
 
    Pokud chcete dodržovat podmínky společnosti Apple pro přijatelný provoz programu registrace, Intune ukládá tato omezení:
    - Úplná synchronizace se nesmí pouštět častěji než jednou za sedm dní. Během úplné synchronizace načte Intune úplný aktualizovaný seznam sériových čísel přiřazených k serveru Apple MDM připojenému k Intune. Pokud se zařízení ADE odstraní z portálu Intune, měl by být na portálu ADE nepřiřazený ze serveru Apple MDM. Pokud není přiřazená, nebude se znovu naimportovat do Intune, dokud se nespustí Úplná synchronizace.   
@@ -291,7 +291,7 @@ Než se můžou zařízení zaregistrovat, musíte přiřadit profil programu re
 >[!NOTE]
 >Sériová čísla můžete profilům také přiřadit v okně **sériových čísel Apple**.
 
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **iOS** > **iOS enrollment** > iOS**tokeny programu registrace** > v seznamu vyberte token.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení**  >  **iOS**  >  **iOS**  >  **tokeny programu registrace** > v seznamu vyberte token.
 2. Zvolte **Zařízení** > zvolte zařízení v seznamu > **Přiřadit profil**.
 3. V části **Přiřadit profil** zvolte profil pro zařízení > **Přiřadit**.
 
@@ -299,7 +299,7 @@ Než se můžou zařízení zaregistrovat, musíte přiřadit profil programu re
 
 Můžete si vybrat výchozí profil, který se má použít pro všechna zařízení, která se registrují s konkrétním tokenem.
 
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **iOS** > **iOS enrollment** > iOS**tokeny programu registrace** > v seznamu vyberte token.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení**  >  **iOS**  >  **iOS**  >  **tokeny programu registrace** > v seznamu vyberte token.
 2. Zvolte **Nastavit výchozí profil**, v rozevíracím seznamu zvolte profil a potom zvolte **Uložit**. Tento profil se použije pro všechna zařízení, která se registrují s tímto tokenem.
 
 ## <a name="distribute-devices"></a>Distribuujte zařízení.
@@ -319,7 +319,7 @@ Další informace najdete [v tématu Registrace zařízení se systémem iOS/iPa
     ![Snímek obrazovky s možností Generate New Token (Vygenerovat nový token)](./media/device-enrollment-program-enroll-ios/generatenewtoken.png)
 
 4. Zvolte **Your Server Token** (Token vašeho serveru).  
-5. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **iOS** > iOS**registrace** > **tokeny programu** > vyberte token.
+5. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení**  >  **iOS**iOS  >  **registrace**  >  **tokeny programu** > vyberte token.
     ![Snímek obrazovky s možností Tokeny programu registrace](./media/device-enrollment-program-enroll-ios/enrollmentprogramtokens.png)
 
 6. Vyberte možnost **Obnovit token** a zadejte Apple ID, které jste použili k vytvoření původního tokenu.  
@@ -335,8 +335,8 @@ Tokeny registračního profilu můžete z Intune odstranit, pokud
 - k tokenu nejsou přiřazená žádná zařízení.
 - k výchozímu profilu nejsou přiřazená žádná zařízení.
 
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **iOS/MacOS** > **iOS/MacOS** > **tokeny programu registrace** > vyberte token > **zařízení**.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení**  >  **iOS/MacOS**  >  **iOS/MacOS**  >  **tokeny programu registrace** > vyberte token > **zařízení**.
 2. Odstraňte všechna zařízení přiřazená k tomuto tokenu.
-3. V části **zařízení** > **iOS/MacOS** > **iOS/MacOS** > registrace zápisu**tokeny programu** > vyberte **profily**> tokeny.
+3. V části **zařízení**  >  **iOS/MacOS**  >  **iOS/MacOS**registrace zápisu  >  **tokeny programu** > vyberte **profily**> tokeny.
 4. Pokud existuje výchozí profil, odstraňte ho.
-5. V části **zařízení** > **iOS/MacOS** > **iOS/MacOS** > registrace zápisu**tokeny programu** > vyberte token > **Odstranit**.
+5. V části **zařízení**  >  **iOS/MacOS**  >  **iOS/MacOS**registrace zápisu  >  **tokeny programu** > vyberte token > **Odstranit**.

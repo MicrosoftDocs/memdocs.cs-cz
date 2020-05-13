@@ -10,13 +10,14 @@ metadata:
   ms.topic: landing-page
   author: aczechowski
   ms.author: aaroncz
+  ms.reviewer: acabello
   ms.date: 01/28/2020
-  ms.openlocfilehash: 1c0aa1c481acb18fadeebbdecdcd4759568d2242
-  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.openlocfilehash: addc4c2db995e76e51b52003057cd4111444f1f4
+  ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
   ms.translationtype: HT
   ms.contentlocale: cs-CZ
-  ms.lasthandoff: 04/21/2020
-  ms.locfileid: "81741404"
+  ms.lasthandoff: 05/12/2020
+  ms.locfileid: "83268330"
 landingContent:
 - title: O portálu Desktop Analytics
   linkLists:

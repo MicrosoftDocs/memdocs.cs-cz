@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f1b183d960f3413e59d29cfb18c5aa0be35ae590
-ms.sourcegitcommit: 5f9d5d22114ae5aeb0270c7fb59c5dced5f48826
+ms.openlocfilehash: 49ecd2a1aaa5408a721b06264703720be601c73c
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82862390"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83269010"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>nastavení zařízení s iOS a iPadOS pro povolení nebo omezení funkcí pomocí Intune
 
@@ -151,21 +151,21 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
 > Například nakonfigurujete nastavení **vypršení platnosti hesla** a tuto zásadu nahrajete do zařízení zaregistrovaných uživatelem. V zařízeních dojde k následujícímu:
 >
 > - Nastavení **vypršení platnosti hesla** je ignorováno.
-> - Jednoduchá hesla, například `1111` nebo `1234`, nejsou povolena.
+> - Jednoduchá hesla, například `1111` nebo `1234` , nejsou povolena.
 > - Je vynutil kód PIN pro číslice 6.
 
-- **Jednoduchá hesla**: **blok** vyžaduje složitější hesla. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém umožňovat jednoduchá hesla, například `0000` a. `1234`
+- **Jednoduchá hesla**: **blok** vyžaduje složitější hesla. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém umožňovat jednoduchá hesla, například `0000` a `1234` .
 
 - **Vyžadovaný typ hesla**: zadejte požadovanou úroveň složitosti hesla, kterou vaše organizace vyžaduje. Možnosti:
   - **Výchozí ze zařízení**
   - **Číselná**: heslo musí obsahovat jenom čísla, třeba 123456789.
   - **Alfanumerické**znaky: obsahuje velká písmena, malá písmena a číslice.
-- **Počet nealfanumerických znaků v hesle**: zadejte počet znaků symbolu, například `#` nebo `@`, které musí heslo obsahovat, od 1-4. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
+- **Počet nealfanumerických znaků v hesle**: zadejte počet znaků symbolu, například `#` nebo `@` , které musí heslo obsahovat, od 1-4. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
 
 - **Minimální délka hesla**: zadejte minimální délku hesla, která musí být delší než 4-16 znaků. Do zařízení zaregistrovaných uživatelem zadejte délku 4 až 6 znaků.
   
   > [!NOTE]
-  > U zařízení, která jsou zaregistrovaná uživatelem, můžou uživatelé nastavit PIN kód o více než 6 číslic. Ale na zařízeních se neuplatní více než 6 číslic. Správce například nastaví minimální délku na `8`. U zařízení zaregistrovaných uživatelem se uživatelům vyžaduje jenom zadání kódu PIN pro 6 číslic. Intune nevynutí na uživatelem zaregistrovaná zařízení kód PIN delší než 6 číslic.
+  > U zařízení, která jsou zaregistrovaná uživatelem, můžou uživatelé nastavit PIN kód o více než 6 číslic. Ale na zařízeních se neuplatní více než 6 číslic. Správce například nastaví minimální délku na `8` . U zařízení zaregistrovaných uživatelem se uživatelům vyžaduje jenom zadání kódu PIN pro 6 číslic. Intune nevynutí na uživatelem zaregistrovaná zařízení kód PIN delší než 6 číslic.
 
 - **Počet neúspěšných přihlášení před vymazáním zařízení**: zadejte počet neúspěšných přihlášení, než se zařízení vymaže, od 4-11.
   
@@ -198,7 +198,7 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
   - **10**: po 10 minutách nečinnosti se zamkne obrazovka.
   - **15**: po 15 minutách nečinnosti se zamkne obrazovka.
 
-  Pokud se hodnota nevztahuje na iOS a iPadOS, pak Apple používá nejbližší *nejnižší* hodnotu. Pokud například zadáte `4` minuty, zařízení iPadOS budou používat `2` minuty. Pokud zadáte `10` minuty, zařízení s iOS budou `5` používat minuty. Toto je omezení Apple.
+  Pokud se hodnota nevztahuje na iOS a iPadOS, pak Apple používá nejbližší *nejnižší* hodnotu. Pokud například zadáte `4` minuty, zařízení iPadOS budou používat `2` minuty. Pokud zadáte `10` minuty, zařízení s iOS budou používat `5` minuty. Toto je omezení Apple.
   
   > [!NOTE]
   > Uživatelské rozhraní Intune pro toto nastavení nedělí podporované hodnoty pro iOS a iPadOS. Uživatelské rozhraní může být v budoucí verzi aktualizováno.
@@ -296,7 +296,7 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
   Od iOS/iPadOS 13,0 Toto nastavení vyžaduje zařízení pod dohledem.
 
   - **Instalace aplikací z App Storu**: **blok** nezobrazuje obchod s aplikacemi na domovské obrazovce zařízení. Uživatelé můžou k instalaci aplikací dál používat iTunes nebo Apple Configuratoru. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém na domovské obrazovce dovolit obchod s aplikacemi.
-  - **Automatické stahování aplikací**: **blok** znemožňuje automatické stahování aplikací zakoupených na jiných zařízeních. Nemá vliv na aktualizace existujících aplikací. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém na zařízení nakoupené aplikace dovolit na jiných zařízeních s iOS/iPadOS stáhnout.
+  - **Automatické stahování aplikací**: **blok** znemožňuje automatické stahování aplikací zakoupených na jiných zařízeních a automatické aktualizace nových aplikací. Nemá vliv na aktualizace existujících aplikací. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém na zařízení nakoupené aplikace na jiných zařízeních s iOS/iPadOS dovolit, aby si stáhli a aktualizovali.
 
 - **Explicitní obsah v hudbě, podcastech nebo zprávách v iTunes**: **blok** zabraňuje explicitnímu obsahu iTunes v hudbě, podcastech nebo zprávách. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém zařízení dovolit přístup k obsahu, který je hodnocen jako dospělý ze Storu.
 
@@ -418,9 +418,9 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
 
 Pokud chcete do těchto seznamů přidat aplikace, můžete:
 
-- **Přidejte** adresu URL obchodu iTunes pro aplikaci, kterou chcete. Pokud například chcete přidat aplikaci Microsoft work folders, zadejte `https://itunes.apple.com/us/app/work-folders/id950878067?mt=8` nebo. `https://apps.apple.com/us/app/work-folders/id950878067?mt=8`
+- **Přidejte** adresu URL obchodu iTunes pro aplikaci, kterou chcete. Pokud například chcete přidat aplikaci Microsoft work folders, zadejte `https://itunes.apple.com/us/app/work-folders/id950878067?mt=8` nebo `https://apps.apple.com/us/app/work-folders/id950878067?mt=8` .
 
-  Pokud chcete najít adresu URL aplikace, otevřete aplikaci iTunes App Store a vyhledejte aplikaci. Vyhledejte například `Microsoft Remote Desktop` nebo `Microsoft Word`. Vyberte aplikaci a zkopírujte adresu URL.
+  Pokud chcete najít adresu URL aplikace, otevřete aplikaci iTunes App Store a vyhledejte aplikaci. Vyhledejte například `Microsoft Remote Desktop` nebo `Microsoft Word` . Vyberte aplikaci a zkopírujte adresu URL.
 
   K vyhledání aplikace můžete také použít iTunes a potom pomocí úlohy **Kopírovat odkaz** získat adresu URL aplikace.
 
@@ -448,11 +448,11 @@ Tato funkce platí pro:
 
 - **Adresa URL aplikace**: zadejte adresu URL aplikace pro Store aplikace, kterou chcete zobrazit nebo skrýt. Příklad:
 
-  - Pokud chcete přidat aplikaci Microsoft work folders, zadejte `https://itunes.apple.com/us/app/work-folders/id950878067?mt=8` nebo `https://apps.apple.com/us/app/work-folders/id950878067?mt=8`. 
+  - Pokud chcete přidat aplikaci Microsoft work folders, zadejte `https://itunes.apple.com/us/app/work-folders/id950878067?mt=8` nebo `https://apps.apple.com/us/app/work-folders/id950878067?mt=8` . 
 
-  - Chcete-li přidat aplikaci Microsoft Word, `https://itunes.apple.com/de/app/microsoft-word/id586447913` zadejte `https://apps.apple.com/de/app/microsoft-word/id586447913`nebo.
+  - Chcete-li přidat aplikaci Microsoft Word, zadejte `https://itunes.apple.com/de/app/microsoft-word/id586447913` nebo `https://apps.apple.com/de/app/microsoft-word/id586447913` .
 
-  Pokud chcete najít adresu URL aplikace, otevřete aplikaci iTunes App Store a vyhledejte aplikaci. Vyhledejte například `Microsoft Remote Desktop` nebo `Microsoft Word`. Vyberte aplikaci a zkopírujte adresu URL.
+  Pokud chcete najít adresu URL aplikace, otevřete aplikaci iTunes App Store a vyhledejte aplikaci. Vyhledejte například `Microsoft Remote Desktop` nebo `Microsoft Word` . Vyberte aplikaci a zkopírujte adresu URL.
 
   K vyhledání aplikace můžete také použít iTunes a potom pomocí úlohy **Kopírovat odkaz** získat adresu URL aplikace.
 
@@ -604,7 +604,7 @@ Například ve škole nebo univerzitním prostředí přidejte aplikaci, která 
 > [!NOTE]
 > Ne všechny aplikace podporují autonomní režim jedné aplikace. K umístění aplikace v autonomním režimu jedné aplikace se obvykle vyžadují ID sady prostředků nebo dvojice klíč-hodnota, které jsou poskytovány zásadami konfigurace aplikace. Další informace najdete v části [ `autonomousSingleAppModePermittedAppIDs` omezení](https://developer.apple.com/documentation/devicemanagement/restrictions) v dokumentaci k MDM společnosti Apple. Další informace o konkrétním nastavení požadovaném pro aplikaci, kterou konfigurujete, najdete v dokumentaci od dodavatele.
 
-Pokud třeba chcete nakonfigurovat místnosti lupy v autonomním režimu jedné aplikace, přiblížením říkáte, `us.zoom.zpcontroller` že se má použít ID sady prostředků. V této instanci provedete také změnu webového portálu zoom. Další informace najdete v centru pro [nápovědu lupy](https://support.zoom.us/hc/articles/360021322632-Autonomous-Single-App-Mode-for-Zoom-Rooms-with-a-Third-Party-MDM).
+Pokud třeba chcete nakonfigurovat místnosti lupy v autonomním režimu jedné aplikace, přiblížením říkáte, že se má použít `us.zoom.zpcontroller` ID sady prostředků. V této instanci provedete také změnu webového portálu zoom. Další informace najdete v centru pro [nápovědu lupy](https://support.zoom.us/hc/articles/360021322632-Autonomous-Single-App-Mode-for-Zoom-Rooms-with-a-Third-Party-MDM).
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Nastavení platí pro: automatický zápis zařízení (pod dohledem)
 
@@ -616,7 +616,7 @@ Soubor CSV můžete také **naimportovat** se seznamem názvů aplikací a jejic
 
 ## <a name="kiosk"></a>Kiosk
 
-V Intune se beznabídkový režim označuje taky jako režim jedné aplikace. V [dokumentaci k MDM od společnosti Apple](https://developer.apple.com/documentation/devicemanagement/applock)se jedná o celoobrazovkový režim, který je známý jako zámek aplikace.
+[Režim jedné aplikace](https://support.apple.com/guide/mdm/mdm80a981/web) se v Intune označuje jako celoobrazovkový režim.
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Nastavení platí pro: automatický zápis zařízení (pod dohledem)
 
@@ -666,13 +666,13 @@ V Intune se beznabídkový režim označuje taky jako režim jedné aplikace. V 
 
 ### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Nastavení platí pro: registrace zařízení, automatický zápis zařízení (pod dohledem)
 
-- **Unmarked email domains** > **Adresa URL e-mailové domény**v neoznačeném e-mailu: přidejte do seznamu jednu nebo víc adres URL. Když uživatelé dostanou e-mail z jiné domény než z domén, které zadáte, bude tento e-mail v aplikaci pro iOS/iPadOS pošty označený jako nedůvěryhodný.
+- **Neoznačené e-mailové domény**  >  **Adresa URL e-mailové domény**: přidejte do seznamu jednu nebo víc adres URL. Když uživatelé dostanou e-mail z jiné domény než z domén, které zadáte, bude tento e-mail v aplikaci pro iOS/iPadOS pošty označený jako nedůvěryhodný.
 
-- **Managed web domains** > **Adresa URL webové domény**spravované webové domény; Přidejte do seznamu jednu nebo více adres URL. Po stažení dokumentů z domén, které zadáte, se považují za spravované. Toto nastavení platí jenom pro dokumenty stažené prostřednictvím prohlížeče Safari.
+- **Spravované webové domény**  >  **Adresa URL webové domény**; Přidejte do seznamu jednu nebo více adres URL. Po stažení dokumentů z domén, které zadáte, se považují za spravované. Toto nastavení platí jenom pro dokumenty stažené prostřednictvím prohlížeče Safari.
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Nastavení platí pro: automatický zápis zařízení (pod dohledem)
 
-- **Safari password autofill domains** > **Adresa URL domény**pro automatické vyplňování hesel v Safari: přidejte jednu nebo více adres URL do seznamu. Uživatelé si mohou uložit jenom webová hesla z adres URL uvedených v tomto seznamu. Toto nastavení platí jenom pro prohlížeč Safari a zařízení v režimu pod dohledem. Pokud nezadáte žádné adresy URL, bude možné ukládat hesla ze všech webů.
+- Domény pro automatické **vyplňování hesel v Safari**  >  **Adresa URL domény**: přidejte do seznamu jednu nebo více adres URL. Uživatelé si mohou uložit jenom webová hesla z adres URL uvedených v tomto seznamu. Toto nastavení platí jenom pro prohlížeč Safari a zařízení v režimu pod dohledem. Pokud nezadáte žádné adresy URL, bude možné ukládat hesla ze všech webů.
 
   Toto nastavení platí pro:  
   - iOS 9,3 a novější
@@ -682,7 +682,7 @@ V Intune se beznabídkový režim označuje taky jako režim jedné aplikace. V 
 
 režim iOS/iPadOS pod dohledem se dá povolit jenom při počátečním nastavení zařízení prostřednictvím Program registrace zařízení společnosti Apple nebo pomocí Apple Configuratoru. Po povolení režimu pod dohledem může Intune v zařízení nakonfigurovat následující funkce:
 
-- Celoobrazovkový režim (režim jedné aplikace): v dokumentaci k Apple MDM se říká "App Lock".
+- Celoobrazovkový režim (režim jedné aplikace): v [dokumentaci pro vývojáře Apple](https://developer.apple.com/business/documentation/Configuration-Profile-Reference.pdf)se říká "zámek aplikace".
 - Zakázání zámku aktivace 
 - Autonomní režim jedné aplikace 
 - Filtr webového obsahu 
