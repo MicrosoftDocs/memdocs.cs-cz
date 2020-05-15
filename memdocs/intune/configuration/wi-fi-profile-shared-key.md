@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 05/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: df5c33e1e8e589f430fe8265ee4762b4755f3618
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 3de08fd1b7369e2a7038bd6698af3d1608c006be
+ms.sourcegitcommit: b94415467831517f2aeab9c7c8a13fe8db8bc8ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80086449"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83401760"
 ---
 # <a name="use-a-custom-device-profile-to-create-a-wifi-profile-with-a-pre-shared-key-in-intune"></a>Vytvoření profilu Wi-Fi s předsdíleným klíčem pomocí vlastního profilu zařízení v Intune
 
@@ -49,15 +49,20 @@ Tato funkce podporuje:
 ## <a name="create-a-custom-profile"></a>Vytvoření vlastního profilu
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **Konfigurace zařízení** > **profily** > konfigurace**vytvořit profil**.
+2. Vyberte **Devices**  >  **Konfigurace zařízení profily konfigurace**  >  **vytvořit profil**.
 3. Zadejte tyto vlastnosti:
+
+    - **Platforma**: Vyberte svou platformu.
+    - **Profil**: vyberte **vlastní**.
+
+4. Vyberte **Vytvořit**.
+5. V části **základy**zadejte následující vlastnosti:
 
     - **Název**: zadejte popisný název zásady. Své zásady pojmenujte, abyste je později mohli snadno identifikovat. Dobrým názvem zásad je například **vlastní nastavení profilu Wi-Fi OMA-URI pro zařízení s Androidem pro správu**.
     - **Popis**: Zadejte popis profilu. Toto nastavení není povinné, ale doporučujeme ho zadat.
-    - **Platforma**: Vyberte svou platformu.
-    - **Typ profilu**: vyberte **vlastní**.
 
-4. V **Nastavení**vyberte **Přidat**. Zadejte nové nastavení OMA-URI s následujícími vlastnostmi:
+6. Vyberte **Další**.
+7. V **nastavení konfigurace**vyberte **Přidat**. Zadejte nové nastavení OMA-URI s následujícími vlastnostmi:
 
     1. **Název**: zadejte název nastavení OMA-URI.
     2. **Popis**: zadejte popis nastavení OMA-URI. Toto nastavení není povinné, ale doporučujeme ho zadat.
@@ -69,15 +74,27 @@ Tato funkce podporuje:
         > [!NOTE]
         > Nezapomeňte použít tečku na začátku.
 
-        SSID je identifikátor SSID, pro který vytváříte zásady. Pokud je například síť Wi-Fi pojmenována `Hotspot-1`, zadejte `./Vendor/MSFT/WiFi/Profile/Hotspot-1/Settings`.
+        SSID je identifikátor SSID, pro který vytváříte zásady. Pokud je například síť Wi-Fi pojmenována `Hotspot-1` , zadejte `./Vendor/MSFT/WiFi/Profile/Hotspot-1/Settings` .
 
     4. **Datový typ**: vyberte **řetězec**.
 
     5. **Hodnota**: vložte kód XML. Podívejte se na [Příklady](#android-or-windows-wi-fi-profile-example) v tomto článku. Aktualizujte jednotlivé hodnoty tak, aby odpovídaly nastavení vaší sítě. Nějaké pokyny najdete v sekci komentáře ke kódu.
+    6. Pokud chcete změny uložit, vyberte **Přidat** .
 
-5. Až budete hotovi, vyberte **OK** > **a uložte** změny.
+8. Vyberte **Další**.
 
-Váš profil se zobrazí v seznamu profily. V dalším kroku [přiřaďte tento profil](device-profile-assign.md) ke skupinám uživatelů. Tuto zásadu je možné přiřadit pouze skupinám uživatelů.
+9. V části **značky oboru** (volitelné) přiřaďte značku pro filtrování profilu pro konkrétní IT skupiny, například `US-NC IT Team` nebo `JohnGlenn_ITDepartment` . Další informace o značkách oboru naleznete v tématu [použití značek RBAC a Scope pro distribuci](../fundamentals/scope-tags.md).
+
+    Vyberte **Další**.
+
+10. V části **přiřazení**vyberte uživatele nebo skupinu uživatelů, kteří obdrží váš profil. Další informace o přiřazování profilů najdete v tématu [přiřazení profilů uživatelů a zařízení](device-profile-assign.md).
+
+    > [!NOTE]
+    > Tuto zásadu je možné přiřadit pouze skupinám uživatelů.
+
+    Vyberte **Další**.
+
+11. V rámci **Revize a vytvoření**zkontrolujte nastavení. Když vyberete **vytvořit**, vaše změny se uloží a profil se přiřadí. Tato zásada se taky zobrazuje v seznamu profily.
 
 Pro každé zařízení, které se příště vrátí se změnami, se použijí zásady a vytvoří se pro ně profil Wi-Fi. Zařízení se potom připojí k síti automaticky.
 

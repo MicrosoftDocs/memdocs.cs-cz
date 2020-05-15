@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/18/2020
+ms.date: 05/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,14 +16,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e4e9a37e2dbb725a06d304d345fd085dabbc5e14
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 79e6f8c7b4501f0f15d00b094d7d90ad66225dd9
+ms.sourcegitcommit: b94415467831517f2aeab9c7c8a13fe8db8bc8ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80086995"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83401770"
 ---
-# <a name="configure-esim-cellular-profiles-in-intune---public-preview"></a>Konfigurace mobilních profilů eSIM v Intune – verze Public Preview
+# <a name="configure-esim-cellular-profiles-in-intune-public-preview"></a>Konfigurace mobilních profilů eSIM v Intune (Public Preview)
 
 Technologie eSIM je zabudovaný čip SIM, který vám na zařízení s podporou eSIM, jako je [Surface LTE Pro](https://www.microsoft.com/surface/business/surface-pro), umožňuje připojit se prostřednictvím mobilního datového připojení k internetu. Když využijete technologii eSIM, není nutné pořizovat SIM kartu od mobilního operátora. Při cestování po světě navíc můžete jednoduše přecházet mezi mobilními operátory a datovými tarify a zůstat v kontaktu se svými blízkými.
 
@@ -75,7 +75,7 @@ U následujících zařízení byla oznámena podpora eSIM a mohou už být v pr
 Mobilní aktivační kódy poskytuje mobilní operátor v souboru CSV (textový soubor s oddělovači). Jakmile tento soubor budete mít, přidejte ho do Intune následujícím postupem:
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **zařízení** > **mobilní profily** > eSIM karty**Přidat**.
+2. Vyberte **zařízení**  >  **mobilní profily eSIM karty**  >  **Přidat**.
 3. Vyberte soubor CSV s aktivačními kódy.
 4. Výběrem **OK** uložte změny.
 
@@ -97,11 +97,11 @@ Při práci se souborem CSV, který obsahuje aktivační kódy, se ujistěte, ž
     1. První sloupec je jedinečný ICCID (identifikátor čipu SIM).
     2. Druhý sloupec je ID pro porovnávání, které je oddělené čárkou (na konci už čárka není). Prohlédněte si následující příklad:
 
-        ![Příklad souboru CSV s aktivačními kódy mobilního operátora](./media/esim-device-configuration/url-activation-code-examples.png)
+        :::image type="content" source="./media/esim-device-configuration/url-activation-code-examples.png" alt-text="Ukázkový soubor. CSV pro aktivační kód mobilní operátor.":::
 
 3. Název souboru CSV se v centru pro správu Správce koncových bodů zobrazí jako název fondu mobilních předplatných. Na předchozím obrázku se soubor nazývá `UnlimitedDataSkynet.csv`. Takže Intune fond předplatných pojmenuje `UnlimitedDataSkynet.csv`:
 
-    ![Fond mobilních předplatných pojmenovaný podle názvu ukázkového souboru CSV](./media/esim-device-configuration/subscription-pool-name-csv-file.png)
+    :::image type="content" source="./media/esim-device-configuration/subscription-pool-name-csv-file.png" alt-text="Fond odběrů mobilních předplatných se nazývá název souboru ukázka aktivačního kódu CSV.":::
 
 ## <a name="step-2-create-an-azure-ad-device-group"></a>Krok 2: Vytvoření skupiny zařízení služby Azure AD
 
@@ -116,11 +116,11 @@ Vytvořte skupinu zařízení, která obsahuje zařízení s podporou eSIM. Cel�
 Přiřaďte skupině Azure AD profil, který obsahuje zařízení s podporou eSIM.
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **zařízení** > **mobilní profily na kartě**zařízení.
+2. Vyberte **zařízení**  >  **mobilní profily na kartě**zařízení.
 3. V seznamu profilů vyberte fond mobilních předplatných eSIM, který chcete přiřadit, a pak vyberte **Přiřazení**.
 4. Zvolte **Zahrnout** skupiny nebo **Vyloučit** skupiny a pak tyto skupiny vyberte.
 
-    ![Zahrnutí skupiny zařízení, které chcete přiřadit profil.](./media/esim-device-configuration/include-exclude-groups.png)
+    :::image type="content" source="./media/esim-device-configuration/include-exclude-groups.png" alt-text="Zahrňte skupinu zařízení pro přiřazení profilu v Microsoft Intune.":::
 
 5. Když skupiny vybíráte, zvolíte skupinu Azure AD. Pokud chcete vybrat více skupin, použijte klávesu **Ctrl** a požadované skupiny vyberte.
 6. Až budete hotovi, zvolte **Uložit**, aby se změny uložily.
@@ -134,14 +134,14 @@ Aktivační kódy eSIM jsou jednorázové. Jakmile Intune nainstaluje aktivačn�
 Po přiřazení profilu můžete monitorovat stav nasazení fondu předplatných.
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **zařízení** > **mobilní profily na kartě**zařízení. Uvidíte uvedené všechny existující fondy mobilních předplatných eSIM.
+2. Vyberte **zařízení**  >  **mobilní profily na kartě**zařízení. Uvidíte uvedené všechny existující fondy mobilních předplatných eSIM.
 3. Vyberte předplatné a zkontrolujte jeho **Stav nasazení**.
 
 ### <a name="check-the-profile-status"></a>Kontrola stavu profilu
 
 Po vytvoření profilu zařízení Intune nabízí grafy. Tyto grafy zobrazují stav profilu, třeba že je úspěšně přiřazený k zařízením nebo jestli profil vykazuje konflikt.
 
-1. Vyberte **zařízení** > **mobilní profily eSIM** > vybrat stávající předplatné.
+1. Vyberte **zařízení**  >  **mobilní profily eSIM** > vybrat stávající předplatné.
 2. Na kartě **Přehled** zobrazuje horní graf počet zařízení přiřazených ke konkrétnímu nasazení fondu mobilních předplatných eSIM.
 
     Ukazuje také počet zařízení pro jiné platformy, která jsou přiřazená ke stejnému profilu zařízení.
@@ -157,7 +157,7 @@ Po vytvoření profilu zařízení Intune nabízí grafy. Tyto grafy zobrazují 
 
 Podrobný seznam zařízení můžete monitorovat nebo si ho můžete zobrazit na stránce Stav zařízení.**
 
-1. Vyberte **zařízení** > **mobilní profily eSIM** > vybrat stávající předplatné.
+1. Vyberte **zařízení**  >  **mobilní profily eSIM** > vybrat stávající předplatné.
 2. Vyberte **Stav zařízení**. Intune zobrazí další podrobnosti o zařízení:
 
     - **Název zařízení:** název vybraného zařízení
@@ -170,10 +170,10 @@ Podrobný seznam zařízení můžete monitorovat nebo si ho můžete zobrazit n
 ### <a name="monitor-esim-profile-details-on-the-actual-device"></a>Monitorování podrobností profilu eSIM na příslušném zařízení
 
 1. Na svém zařízení otevřete **Nastavení** > přejděte na **Síť a internet**.
-2. Vybrat **mobilní síť** > **Správa profilů eSIM**
+2. Vybrat **mobilní síť**  >  **Správa profilů eSIM**
 3. Uvidíte profily eSIM:
 
-    ![Zobrazení profilů eSIM v nastavení zařízení](./media/esim-device-configuration/device-settings-cellular-profiles.png)
+    :::image type="content" source="./media/esim-device-configuration/device-settings-cellular-profiles.png" alt-text="Podívejte se na profily eSIM v nastavení zařízení.":::
 
 ## <a name="remove-the-esim-profile-from-device"></a>Odebrání profilu eSIM ze zařízení
 
@@ -197,4 +197,5 @@ Profil eSIM se také odebere, když se zařízení [vyřadí](../remote-actions/
   - **Chyba mobilní aktivace, kontaktujte mobilního operátora:** Aktivační kód pravděpodobně nebude v jeho síti aktivovaný. Mohlo také selhat stažení profilu a mobilní aktivace.
 
 ## <a name="next-steps"></a>Další kroky
+
 [Konfigurace profilů zařízení](device-profiles.md)

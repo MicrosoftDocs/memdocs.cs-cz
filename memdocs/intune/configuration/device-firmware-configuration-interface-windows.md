@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/06/2019
+ms.date: 05/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -15,16 +15,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: df8f6ba6873e98663be853e134995bab640541fc
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: dce3c269686c6928e495796dedbadc6a1ba51a99
+ms.sourcegitcommit: b94415467831517f2aeab9c7c8a13fe8db8bc8ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79332103"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83401633"
 ---
 # <a name="use-device-firmware-configuration-interface-profiles-on-windows-devices-in-microsoft-intune-public-preview"></a>Použití profilů rozhraní pro konfiguraci firmwaru zařízení na zařízeních s Windows v Microsoft Intune (Public Preview)
-
-
 
 Pokud ke správě zařízení autopilot používáte Intune, můžete po registraci spravovat nastavení rozhraní UEFI (DFCI) pomocí rozhraní pro konfiguraci firmwaru zařízení. Přehled výhod, scénářů a požadavků najdete v tématu [Přehled DFCI](https://microsoft.github.io/mu/dyn/mu_plus/DfciPkg/Docs/Dfci_Feature/).
 
@@ -78,34 +76,38 @@ Tento profil zajišťuje, aby byla zařízení ověřená a povolená pro DFCI b
 Tento profil obsahuje nastavení DFCI, která nakonfigurujete.
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **Konfigurace zařízení** > **profily** > konfigurace**vytvořit profil**.
+2. Vyberte **Devices**  >  **Konfigurace zařízení profily konfigurace**  >  **vytvořit profil**.
 3. Zadejte tyto vlastnosti:
+
+    - **Platforma**: Zvolte **Windows 10 a novější**.
+    - **Profil**: vyberte **rozhraní pro konfiguraci firmwaru zařízení**.
+
+4. Vyberte **Vytvořit**.
+5. V části **základy**zadejte následující vlastnosti:
 
     - **Název**: zadejte popisný název profilu. Své zásady pojmenujte, abyste je později mohli snadno identifikovat. Dobrým názvem profilu je například **Windows: Konfigurace nastavení DFCI na zařízeních s Windows**.
     - **Popis**: Zadejte popis profilu. Toto nastavení není povinné, ale doporučujeme ho zadat.
-    - **Platforma**: Zvolte **Windows 10 a novější**.
-    - **Typ profilu**: vyberte **rozhraní pro konfiguraci firmwaru zařízení**.
 
-4. Nakonfigurujte nastavení:
+6. Vyberte **Další**.
+7. V **nastavení konfigurace**nakonfigurujte následující nastavení:
 
     - **Umožňuje místnímu uživateli změnit nastavení rozhraní UEFI (BIOS)**: vaše možnosti:
       - **Jenom nenakonfigurovaná nastavení**: místní uživatel může změnit jakékoli nastavení, *s výjimkou* toho, že nastavení je explicitně nastavené na **Povolit** nebo **Zakázat** v Intune.
       - **Žádné**: místní uživatel nesmí měnit nastavení rozhraní UEFI (BIOS), včetně nastavení nezobrazených v profilu DFCI.
 
     - **Virtualizace CPU a v/** v: vaše možnosti:
-        - **Nenakonfigurováno**: Intune se nedotkne této funkce a ponechá všechna nastavení tak, jak je.
+        - **Nenakonfigurováno**: Intune toto nastavení nemění ani neaktualizuje.
         - **Povoleno**: systém BIOS povoluje možnosti virtualizace procesoru a vstupně-výstupních operací platformy pro použití v operačním systému. Zapne technologie Windows Virtualization Security a Device Guard.
-        - **Zakázat**: systém BIOS ZAKÁŽE možnosti CPU & a virtualizace procesoru platformy a zabraňuje jejich použití.
     - **Kamery**: vaše možnosti:
-        - **Nenakonfigurováno**: Intune se nedotkne této funkce a ponechá všechna nastavení tak, jak je.
+        - **Nenakonfigurováno**: Intune toto nastavení nemění ani neaktualizuje.
         - **Povoleno**: jsou povoleny všechny integrované kamery přímo spravované pomocí rozhraní UEFI (BIOS). Periferní zařízení, jako jsou kamery USB, nejsou ovlivněná.
         - **Zakázáno**: všechny integrované kamery přímo spravované pomocí rozhraní UEFI (BIOS) jsou zakázané. Periferní zařízení, jako jsou kamery USB, nejsou ovlivněná.
     - Mikrofony **a reproduktory**: vaše možnosti:
-        - **Nenakonfigurováno**: Intune se nedotkne této funkce a ponechá všechna nastavení tak, jak je.
+        - **Nenakonfigurováno**: Intune toto nastavení nemění ani neaktualizuje.
         - **Povoleno**: jsou povoleny všechny integrované mikrofony a reproduktory přímo spravované rozhraním UEFI (BIOS). Periferní zařízení, jako jsou zařízení USB, ovlivněná nejsou.
         - **Zakázáno**: všechny integrované mikrofony a reproduktory přímo spravované pomocí rozhraní UEFI (BIOS) jsou zakázané. Periferní zařízení, jako jsou zařízení USB, ovlivněná nejsou.
     - **Radiostanice (Bluetooth, Wi-Fi, NFC atd.)**: vaše možnosti:
-        - **Nenakonfigurováno**: Intune se nedotkne této funkce a ponechá všechna nastavení tak, jak je.
+        - **Nenakonfigurováno**: Intune toto nastavení nemění ani neaktualizuje.
         - **Povoleno**: jsou povoleny všechny vestavěné radiostanice přímo spravované pomocí rozhraní UEFI (BIOS). Periferní zařízení, jako jsou zařízení USB, ovlivněná nejsou.
         - **Zakázáno**: jsou zakázaná všechna integrovaná radiostanice přímo spravovaná rozhraním UEFI (BIOS). Periferní zařízení, jako jsou zařízení USB, ovlivněná nejsou.
 
@@ -113,19 +115,31 @@ Tento profil obsahuje nastavení DFCI, která nakonfigurujete.
         > Pokud zakážete nastavení **přepínačů** , bude zařízení vyžadovat kabelové připojení k síti. V opačném případě může být zařízení nemožné spravovat.
 
     - **Spustit z externího média (USB, SD)**: vaše možnosti:
-        - **Nenakonfigurováno**: Intune se nedotkne této funkce a ponechá všechna nastavení tak, jak je.
+        - **Nenakonfigurováno**: Intune toto nastavení nemění ani neaktualizuje.
         - **Enabled**: rozhraní UEFI (BIOS) umožňuje spuštění z úložiště bez pevného disku.
         - **Disabled**: rozhraní UEFI (BIOS) neumožňuje spouštění z úložiště bez pevného disku.
     - **Spouštění ze síťových adaptérů**: vaše možnosti:
-        - **Nenakonfigurováno**: Intune se nedotkne této funkce a ponechá všechna nastavení tak, jak je.
+        - **Nenakonfigurováno**: Intune toto nastavení nemění ani neaktualizuje.
         - **Enabled**: rozhraní UEFI (BIOS) umožňuje spuštění z vestavěných síťových rozhraní.
         - **Disabled**: rozhraní UEFI (BIOS) neumožňuje spouštění vestavěných síťových rozhraní.
 
-5. Až budete hotovi, vyberte **OK** > **a uložte** změny. Profil se vytvoří a zobrazí se v seznamu.
+8. Vyberte **Další**.
+
+9. V části **značky oboru** (volitelné) přiřaďte značku pro filtrování profilu pro konkrétní IT skupiny, například `US-NC IT Team` nebo `JohnGlenn_ITDepartment` . Další informace o značkách oboru naleznete v tématu [použití značek RBAC a Scope pro distribuci](../fundamentals/scope-tags.md).
+
+    Vyberte **Další**.
+
+10. V části **přiřazení**vyberte uživatele nebo skupinu uživatelů, kteří obdrží váš profil. Další informace o přiřazování profilů najdete v tématu [přiřazení profilů uživatelů a zařízení](device-profile-assign.md).
+
+    Vyberte **Další**.
+
+11. V rámci **Revize a vytvoření**zkontrolujte nastavení. Když vyberete **vytvořit**, vaše změny se uloží a profil se přiřadí. Tato zásada se taky zobrazuje v seznamu profily.
+
+Při příštím ověření každého zařízení se zásada použije.
 
 ## <a name="assign-the-profiles-and-reboot"></a>Přiřaďte profily a restartujte počítač.
 
-Po vytvoření profilů jsou [připravené k jejich přiřazení](../configuration/device-profile-assign.md). Nezapomeňte přiřadit profily ke skupinám zabezpečení Azure AD, které zahrnují vaše zařízení DFCI.
+Nezapomeňte [přiřadit](../configuration/device-profile-assign.md) profily ke skupinám zabezpečení Azure AD, které zahrnují vaše zařízení DFCI. Profil může být přiřazený, když je vytvořený, nebo později.
 
 Když zařízení spustí automatický pilotní program Windows, během stránky stav registrace může DFCI Vynutit restartování. Tímto prvním restartováním zaregistrujete rozhraní UEFI do Intune. 
 
@@ -158,7 +172,7 @@ Po vymazání zařízení přesuňte zařízení do skupiny přiřazené nové p
 
 Až budete připraveni zařízení vyřadit z provozu a uvolnit ho ze správy, aktualizujte profil DFCI na nastavení rozhraní UEFI (BIOS), které chcete ve stavu ukončení. Obvykle chcete povolit všechna nastavení. Příklad:
 
-1. Otevřete profil DFCI (**profily konfigurace****zařízení** > ).
+1. Otevřete profil DFCI (**Devices**  >  **profily konfigurace**zařízení).
 2. Změňte **nastavení nastavit místnímu uživateli, aby se změnila nastavení rozhraní UEFI (BIOS)** na **nenakonfigurovaná nastavení**.
 3. Nastavte všechna ostatní nastavení na **nenakonfigurovaná**.
 4. Uložte nastavení.
@@ -179,4 +193,4 @@ Když se použije zásada DFCI, místní uživatelé nemůžou měnit nastavení
 
 ## <a name="next-steps"></a>Další kroky
 
-Po přiřazení profilu [sledujte jeho stav](device-profile-monitor.md).
+Po [přiřazení profilu](device-profile-assign.md) [sledujte jeho stav](device-profile-monitor.md).

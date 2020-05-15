@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 05/13/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f3aaf2bf895082f3647f0a1ad6b9997a5e97baee
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: e96199d9f525fa0dcbf7545d2c20b90a3a76b9cd
+ms.sourcegitcommit: b94415467831517f2aeab9c7c8a13fe8db8bc8ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79333027"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83401799"
 ---
 # <a name="troubleshoot-policies-and-profiles-and-in-intune"></a>Řešení potíží se zásadami a profily a v Intune
 
@@ -39,12 +39,12 @@ Zkontrolujte [stav tenanta](../fundamentals/tenant-status.md) a potvrďte, že j
 
 1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **řešení potíží + podpora**:
 
-    ![V Intune si přečtěte pomoc a podpora a vyberte řešení potíží.](./media/troubleshoot-policies-in-microsoft-intune/help-and-support-troubleshoot.png)
+    :::image type="content" source="./media/troubleshoot-policies-in-microsoft-intune/help-and-support-troubleshoot.png" alt-text="V centru pro správu služby Endpoint Management a Intune si přečtěte řešení potíží a podpora.":::
 
 2. Zvolte **Vybrat uživatele** > vyberte uživatele s problémem > **Vybrat**.
 3. Potvrďte, že licence a **stav účtu** **Intune** zobrazují zelenou kontrolu:
 
-    ![V Intune vyberte uživatele a potvrďte stav účtu a licenci Intune zobrazit zeleně kontroler stavu.](./media/troubleshoot-policies-in-microsoft-intune/account-status-intune-license-show-green.png)
+    :::image type="content" source="./media/troubleshoot-policies-in-microsoft-intune/account-status-intune-license-show-green.png" alt-text="V Intune vyberte uživatele a potvrďte stav účtu a licenci Intune zobrazit zeleně kontroler stavu.":::
 
     **Užitečné odkazy**:
 
@@ -79,7 +79,7 @@ Zkontrolujte [stav tenanta](../fundamentals/tenant-status.md) a potvrďte, že j
             - Na zařízení s Androidem otevřete Portál společnosti App > **zařízení** > vyberte zařízení ze seznamu > **Ověřte nastavení zařízení**.
             - V zařízení se systémem iOS/iPadOS otevřete aplikaci Portál společnosti > **zařízení** > v seznamu vyberte zařízení, > **kontrolu nastavení**.
 
-        - Na zařízení s Windows otevřete **Nastavení** > **účty** > **přístup do práce nebo do školy** > vyberte účet nebo registraci MDM > **Info** > **synchronizaci**informací.
+        - Na zařízení s Windows otevřete **Nastavení**  >  **účty**  >  **přístup do práce nebo do školy** > vyberte účet nebo registraci MDM > **Info**  >  **synchronizaci**informací.
 
     - Pokud chcete zobrazit informace specifické pro zásady, vyberte zařízení.
 
@@ -104,7 +104,7 @@ Zkontrolujte [stav tenanta](../fundamentals/tenant-status.md) a potvrďte, že j
 ## <a name="youre-unsure-if-a-profile-is-correctly-applied"></a>Nejste si jistí, jestli se profil správně používá
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **zařízení** > **všechna zařízení** > vyberte **konfiguraci**zařízení > zařízení. 
+2. Vyberte **zařízení**  >  **všechna zařízení** > vyberte **konfiguraci**zařízení > zařízení. 
 
     Každé zařízení obsahuje seznam profilů. Každý profil má **stav**. Stav platí, když jsou společně zváženy všechny přiřazené profily, včetně omezení hardwaru a operačního systému a požadavků. Možné stavy zahrnují:
 
@@ -142,7 +142,7 @@ Pokud zrušíte přiřazení zásady (zastavit nasazení), zařízení s Windows
 
 V závislosti na platformě zařízení může být potřeba resetovat zásady zabezpečení, pokud chcete zásadu změnit na méně bezpečnou hodnotu.
 
-Například v Windows 8.1 na ploše potáhnutím prstem zprava otevřete panel **ovládací tlačítka** . Vyberte **Nastavení** > **uživatelské účty**na**ovládacím panelu** > . Na levé straně vyberte odkaz **Resetovat zásady zabezpečení** a zvolte **Resetovat zásady**.
+Například v Windows 8.1 na ploše potáhnutím prstem zprava otevřete panel **ovládací tlačítka** . Vyberte **Nastavení**  >  **Control Panel**  >  **uživatelské účty**na ovládacím panelu. Na levé straně vyberte odkaz **Resetovat zásady zabezpečení** a zvolte **Resetovat zásady**.
 
 Jiné platformy, jako jsou Android, iOS/iPadOS a Windows Phone 8,1, může být potřeba vyřadit a znovu zaregistrovat, aby bylo možné použít méně omezující zásadu.
 

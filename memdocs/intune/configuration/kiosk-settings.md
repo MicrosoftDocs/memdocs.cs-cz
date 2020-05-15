@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/26/2020
+ms.date: 05/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 60a4ac793500cd4d31df2188344e2b5f4e1094a4
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: a56aa9f1953a1886b0736c5a3d1c0bfbd10853a1
+ms.sourcegitcommit: b94415467831517f2aeab9c7c8a13fe8db8bc8ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80359150"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83401532"
 ---
 # <a name="windows-10-and-windows-holographic-for-business-device-settings-to-run-as-a-dedicated-kiosk-using-intune"></a>Nastavení zařízení s Windows 10 a Windows holografickým pro firmy, která se mají používat jako vyhrazené veřejné terminály pomocí Intune
 
@@ -42,33 +42,49 @@ V tomto článku se dozvíte, jak vytvořit profil konfigurace zařízení. Sezn
 ## <a name="create-the-profile"></a>Vytvoření profilu
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **Konfigurace zařízení** > **profily** > konfigurace**vytvořit profil**.
+2. Vyberte **Devices**  >  **Konfigurace zařízení profily konfigurace**  >  **vytvořit profil**.
 3. Zadejte tyto vlastnosti:
+
+   - **Platforma**: vyberte **Windows 10 a novější**.
+   - **Profil**: vyberte možnost **celoobrazovkový**.
+
+4. Vyberte **Vytvořit**.
+5. V části **základy**zadejte následující vlastnosti:
 
    - **Název**: Zadejte popisný název nového profilu.
    - **Popis**: Zadejte popis profilu. Toto nastavení není povinné, ale doporučujeme ho zadat.
-   - **Platforma**: Vyberte **Windows 10 a novější**.
-   - **Typ profilu**: Vyberte veřejný **terminál** .
 
-4. V **Nastavení**vyberte **celoobrazovkový režim**. **Beznabídkový režim** určuje typ režimu veřejného terminálu podporovaného zásadami. Mezi možnosti patří:
+6. Vyberte **Další**.
+7. V **nastavení konfigurace**  >  **Vyberte celoobrazovkový režim**a zvolte typ celoobrazovkového režimu, který zásady podporuje. Mezi možnosti patří:
 
-    - **Není konfigurováno** (výchozí): Zásady nepovolují režim veřejného terminálu.
+    - **Nenakonfigurováno** (výchozí): Intune toto nastavení nemění ani neaktualizuje. Zásada nepovoluje celoobrazovkový režim.
     - **Beznabídkový režim na celou obrazovku s jednou aplikací**: Zařízení se spustí jako účet jednoho uživatele a uzamkne ho pro jednu aplikaci pro Store. Když se uživatel přihlásí, spustí se daná aplikace. Tento režim zároveň brání uživateli v otevírání nových aplikací nebo změně spuštěné aplikace.
     - **Veřejný terminál s více aplikacemi**: Zařízení spustí více aplikací pro Store, aplikací Win32 nebo vnitřních aplikací pro Windows pomocí ID uživatele aplikace (AUMID). Na zařízení jsou dostupné pouze aplikace, které přidáte.
 
         Veřejný terminál s více aplikacemi, neboli zařízení s pevně stanoveným účelem, umožňuje poskytovat přehledné prostředí uživatelům, protože jim povoluje přístup pouze k aplikacím, které potřebují. A také z jejich zobrazení z pohledu aplikací, které nepotřebují.
 
     Seznam všech nastavení a o tom, co dělají, najdete v těchto tématech:
+
       - [Nastavení beznabídkového režimu Windows 10](kiosk-settings-windows.md)
       - [Nastavení veřejného terminálu pro Windows Holografick pro firmy](kiosk-settings-holographic.md)
 
-5. Až budete hotovi, vyberte **OK** > **a uložte** změny.
+8. Vyberte **Další**.
 
-Profil se vytvoří a zobrazí se v seznamu profily. Dále [přiřaďte](device-profile-assign.md) profil.
+9. V části **značky oboru** (volitelné) přiřaďte značku pro filtrování profilu pro konkrétní IT skupiny, například `US-NC IT Team` nebo `JohnGlenn_ITDepartment` . Další informace o značkách oboru naleznete v tématu [použití značek RBAC a Scope pro distribuci](../fundamentals/scope-tags.md).
+
+    Vyberte **Další**.
+
+10. V části **přiřazení**vyberte uživatele nebo skupinu uživatelů, kteří obdrží váš profil. Další informace o přiřazování profilů najdete v tématu [přiřazení profilů uživatelů a zařízení](device-profile-assign.md).
+
+    Vyberte **Další**.
+
+11. V rámci **Revize a vytvoření**zkontrolujte nastavení. Když vyberete **vytvořit**, vaše změny se uloží a profil se přiřadí. Tato zásada se taky zobrazuje v seznamu profily.
+
+Při příštím ověření každého zařízení se zásada použije.
 
 ## <a name="next-steps"></a>Další kroky
 
-[Přiřaďte profil](device-profile-assign.md) a [monitorujte jeho stav](device-profile-monitor.md).
+Po [přiřazení profilu](device-profile-assign.md) [sledujte jeho stav](device-profile-monitor.md).
 
 Pro zařízení s následujícími platformami můžete vytvořit profily na veřejném terminálu:
 

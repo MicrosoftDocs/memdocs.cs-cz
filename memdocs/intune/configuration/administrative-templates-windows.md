@@ -1,11 +1,11 @@
 ---
 title: Použití šablon pro zařízení s Windows 10 v Microsoft Intune – Azure | Microsoft Docs
-description: Pomocí šablon pro správu v Microsoft Intune a Endpoint Manageru můžete vytvořit skupiny nastavení pro zařízení s Windows 10. Tato nastavení použijte v profilu konfigurace zařízení k řízení programů Office, Microsoft Edge, zabezpečení funkcí v Internet Exploreru, řízení přístupu k OneDrivu, použití funkcí vzdálené plochy, povolení automatického přehrání, nastavení řízení spotřeby, používání tisku HTTP, používání různých možností přihlašování uživatelů a řízení velikosti protokolu událostí.
+description: Pomocí šablon pro správu v Microsoft Intune a Endpoint Manageru můžete vytvořit skupiny nastavení pro zařízení s Windows 10. Tato nastavení použijte v profilu konfigurace zařízení k řízení programů Office, Microsoft Edge, zabezpečení Internet Exploreru, přístupu k OneDrivu, použití vzdálené plochy, povolení automatického přehrání, nastavení řízení spotřeby, používání tisku HTTP, řízení přihlašování uživatelů a změně velikosti protokolu událostí.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/15/2020
+ms.date: 05/14/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,18 +16,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f609ec62259deffb220c8ee935d0f10a98ae77b5
-ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
+ms.openlocfilehash: b77f823d60871288505257fc1aaec5d7959165be
+ms.sourcegitcommit: 4174f7e485067812c29aea01a4767989ffdbb578
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82254890"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83406443"
 ---
 # <a name="use-windows-10-templates-to-configure-group-policy-settings-in-microsoft-intune"></a>Pomocí šablon Windows 10 můžete nakonfigurovat nastavení zásad skupiny v Microsoft Intune
 
 Při správě zařízení ve vaší organizaci chcete vytvořit skupiny nastavení, které se vztahují k různým skupinám zařízení. Máte například několik skupin zařízení. Pro skupinu a chcete přiřadit konkrétní sadu nastavení. Pro GroupB chcete přiřadit jinou sadu nastavení. Potřebujete také jednoduché zobrazení nastavení, která můžete konfigurovat.
 
-Tuto úlohu můžete dokončit pomocí **šablony pro správu** v Microsoft Intune. Šablony pro správu obsahují stovky nastavení, která řídí funkce Microsoft Edge verze 77 a novější, Internet Explorer, systém Microsoft Office programů, Vzdálená plocha, OneDrive, hesla a PIN kódy a další. Tato nastavení umožňují správcům skupiny spravovat zásady skupiny pomocí cloudu.
+Tuto úlohu můžete dokončit pomocí **šablony pro správu** v Microsoft Intune. Šablony pro správu zahrnují tisíce nastavení, které řídí funkce v Microsoft Edge verze 77 a novější, Internet Explorer, systém Microsoft Office programy, Vzdálená plocha, OneDrive, hesla, PIN kódy a další. Tato nastavení umožňují správcům skupiny spravovat zásady skupiny pomocí cloudu.
 
 Tato funkce platí pro:
 
@@ -48,7 +48,7 @@ Tento článek obsahuje seznam kroků pro vytvoření šablony pro zařízení s
 ## <a name="create-the-template"></a>Vytvoření šablony
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **Konfigurace zařízení** > **profily** > konfigurace**vytvořit profil**.
+2. Vyberte **Devices**  >  **Konfigurace zařízení profily konfigurace**  >  **vytvořit profil**.
 3. Zadejte tyto vlastnosti:
 
     - **Platforma**: vyberte **Windows 10 a novější**.
@@ -62,27 +62,27 @@ Tento článek obsahuje seznam kroků pro vytvoření šablony pro zařízení s
 
 6. Vyberte **Další**.
 
-7. V **nastavení konfigurace**nakonfigurujte nastavení, která se vztahují na zařízení (**Konfigurace počítače**), a nastavení, která se vztahují na uživatele **(konfigurace uživatele**):
+7. V **nastavení konfigurace**vyberte **všechna nastavení** a zobrazte Abecední seznam všech nastavení. Můžete také nakonfigurovat nastavení, která se vztahují na zařízení (**Konfigurace počítače**), a nastavení, která se vztahují na uživatele **(konfigurace uživatele**):
 
     > [!div class="mx-imgBorder"]
     > ![Použití nastavení šablony ADMX pro uživatele a zařízení ve Správci služby Microsoft Intune Endpoint Manager](./media/administrative-templates-windows/administrative-templates-choose-computer-user-configuration.png)
 
-8. Když vyberete položku **Konfigurace počítače**, zobrazí se kategorie nastavení. Dostupná nastavení můžete zobrazit výběrem libovolné kategorie.
-
-    Vyberte například položku **Konfigurace** > počítače**součásti** > systému Windows**Internet Explorer** , aby se zobrazila všechna nastavení zařízení, která platí pro Internet Explorer:
-
-    > [!div class="mx-imgBorder"]
-    > ![Zobrazit všechna nastavení zařízení, která platí pro Internet Explorer v Microsoft Intune Endpoint Manager](./media/administrative-templates-windows/administrative-templates-all-internet-explorer-settings-device.png)
-
-9. Můžete také vybrat **všechna nastavení** , aby se zobrazila všechna nastavení zařízení. Posuňte se dolů a použijte šipky před a další, abyste viděli další nastavení:
+8. Když vyberete **všechna nastavení**, zobrazí se všechna nastavení. Posuňte se dolů a použijte šipky před a další, abyste viděli další nastavení:
 
     > [!div class="mx-imgBorder"]
     > ![Podívejte se na vzorový seznam nastavení a použijte tlačítka předchozí a další.](./media/administrative-templates-windows/administrative-templates-sample-settings-list.png)
 
-10. Vyberte libovolné nastavení. Můžete například vyfiltrovat **sadu Office**a vybrat **Aktivovat prohlížení s omezeným přístupem**. Zobrazí se podrobný popis nastavení. Vyberte možnost **povoleno**, **zakázáno**nebo ponechat nastavení jako **Nenakonfigurováno** (výchozí). Podrobný popis také vysvětluje, co se stane, když vyberete možnost **povoleno**, **zakázáno**nebo **není nakonfigurováno**.
+9. Vyberte libovolné nastavení. Můžete například vyfiltrovat **sadu Office**a vybrat **Aktivovat prohlížení s omezeným přístupem**. Zobrazí se podrobný popis nastavení. Vyberte možnost **povoleno**, **zakázáno**nebo ponechat nastavení jako **Nenakonfigurováno** (výchozí). Podrobný popis také vysvětluje, co se stane, když vyberete možnost **povoleno**, **zakázáno**nebo **není nakonfigurováno**.
 
     > [!TIP]
-    > Nastavení Windows v Intune se koreluje s cestou k místní zásadě skupiny, kterou vidíte v Editor místních zásad skupiny (`gpedit`).
+    > Nastavení Windows v Intune se koreluje s cestou k místní zásadě skupiny, kterou vidíte v Editor místních zásad skupiny ( `gpedit` ).
+
+10. Když vyberete položku **Konfigurace počítače** nebo **Konfigurace uživatele**, zobrazí se kategorie nastavení. Dostupná nastavení můžete zobrazit výběrem libovolné kategorie.
+
+    Vyberte například položku **Konfigurace počítače**  >  **součásti systému Windows**  >  **Internet Explorer** , aby se zobrazila všechna nastavení zařízení, která platí pro Internet Explorer:
+
+    > [!div class="mx-imgBorder"]
+    > ![Zobrazit všechna nastavení zařízení, která platí pro Internet Explorer v Microsoft Intune Endpoint Manager](./media/administrative-templates-windows/administrative-templates-all-internet-explorer-settings-device.png)
 
 11. Výběrem **OK** uložte změny.
 
@@ -97,14 +97,14 @@ Tento článek obsahuje seznam kroků pro vytvoření šablony pro zařízení s
     - A mnohem víc...
 
 12. Vyberte **Další**.
-13. V části **značky oboru** (volitelné) přiřaďte značku pro filtrování profilu pro konkrétní IT skupiny, například `US-NC IT Team` nebo. `JohnGlenn_ITDepartment` Další informace o značkách oboru naleznete v tématu [použití značek RBAC a Scope pro distribuci](..//fundamentals/scope-tags.md).
+13. V části **značky oboru** (volitelné) přiřaďte značku pro filtrování profilu pro konkrétní IT skupiny, například `US-NC IT Team` nebo `JohnGlenn_ITDepartment` . Další informace o značkách oboru naleznete v tématu [použití značek RBAC a Scope pro distribuci](..//fundamentals/scope-tags.md).
 
     Vyberte **Další**.
 
 14. V části **přiřazení**vyberte uživatele nebo skupiny, které obdrží váš profil. Další informace o přiřazování profilů najdete v tématu [přiřazení profilů uživatelů a zařízení](device-profile-assign.md).
 
-    Pokud je profil přiřazen skupinám uživatelů, pak se nakonfigurovaná nastavení ADMX vztahují na všechna zařízení, která uživatel zapíše, a přihlásí se k nástroji. Pokud je profil přiřazený ke skupinám zařízení, pak se nakonfigurovaná nastavení ADMX použijí pro všechny uživatele, kteří se přihlásí do daného zařízení. K tomuto přiřazení dojde, pokud je nastavení ADMX nastaveno na konfigurace`HKEY_LOCAL_MACHINE`počítače () nebo na konfiguraci uživatele`HKEY_CURRENT_USER`(). U některých nastavení může mít nastavení počítače přiřazené uživateli vliv i na možnosti ostatních uživatelů v tomto zařízení.
-    
+    Pokud je profil přiřazen skupinám uživatelů, pak se nakonfigurovaná nastavení ADMX vztahují na všechna zařízení, která uživatel zapíše, a přihlásí se k nástroji. Pokud je profil přiřazený ke skupinám zařízení, pak se nakonfigurovaná nastavení ADMX použijí pro všechny uživatele, kteří se přihlásí do daného zařízení. K tomuto přiřazení dojde, pokud je nastavení ADMX nastaveno na konfigurace počítače ( `HKEY_LOCAL_MACHINE` ) nebo na konfiguraci uživatele ( `HKEY_CURRENT_USER` ). U některých nastavení může mít nastavení počítače přiřazené uživateli vliv i na možnosti ostatních uživatelů v tomto zařízení.
+
     Další informace najdete v tématu [skupiny uživatelů a skupiny zařízení](device-profile-assign.md#user-groups-vs-device-groups).
 
     Vyberte **Další**.
@@ -115,16 +115,22 @@ Když zařízení příště zkontroluje aktualizace konfigurace, aplikuje se na
 
 ## <a name="find-some-settings"></a>Najít některá nastavení
 
-V těchto šablonách jsou k dispozici stovky nastavení. Aby bylo snazší najít konkrétní nastavení, použijte integrované funkce:
+V těchto šablonách jsou k dispozici tisíce nastavení. Aby bylo snazší najít konkrétní nastavení, použijte integrované funkce:
 
-- V šabloně pro řazení seznamu vyberte sloupce **Nastavení**, **stav**, **Typ nastavení**nebo **cesta** . Vyberte například sloupec **cesta** a pomocí šipky Další zobrazte nastavení v `Microsoft Excel` cestě:
+- V šabloně pro řazení seznamu vyberte sloupce **Nastavení**, **stav**, **Typ nastavení**nebo **cesta** . Vyberte například sloupec **cesta** a pomocí šipky Další zobrazte nastavení v `Microsoft Excel` cestě.
 
-- V šabloně vyhledejte konkrétní nastavení pomocí **vyhledávacího** pole. Můžete hledat podle nastavení nebo cesty. Například vyhledejte zprávu `copy`. Zobrazí se všechna nastavení `copy` s těmito možnostmi:
+- V šabloně vyhledejte konkrétní nastavení pomocí **vyhledávacího** pole. Můžete hledat podle nastavení nebo cesty. Vyberte například **všechna nastavení**a vyhledejte `copy` . Zobrazí se všechna nastavení s těmito možnostmi `copy` :
 
   > [!div class="mx-imgBorder"]
   > ![Vyhledat kopii pro zobrazení všech nastavení zařízení v šablonách pro správu v Intune](./media/administrative-templates-windows/search-copy-settings.png) 
 
-  V jiném příkladu vyhledejte `microsoft word`. Zobrazí se nastavení, která můžete nastavit pro program Microsoft Word. Pokud `explorer` chcete zobrazit nastavení aplikace Internet Explorer, která můžete přidat do šablony, vyhledejte ji.
+  V jiném příkladu vyhledejte `microsoft word` . Zobrazí se nastavení, která můžete nastavit pro program Microsoft Word. Pokud `explorer` chcete zobrazit nastavení aplikace Internet Explorer, která můžete přidat do šablony, vyhledejte ji.
+
+- Hledání můžete také zúžit tak, že vyberete jenom **konfiguraci počítače** nebo **konfiguraci uživatele**.
+
+  Chcete-li například zobrazit všechna dostupná uživatelská nastavení aplikace Internet Explorer, vyberte možnost **Konfigurace uživatele**a vyhledejte `Internet Explorer` . Zobrazí se pouze nastavení IE, která platí pro uživatele:
+
+  :::image type="content" source="./media/administrative-templates-windows/show-all-internet-explorer-settings-user-configuration.png" alt-text="V šabloně ADMX vyberte konfigurace uživatele a vyhledejte nebo vyfiltrujte Internet Explorer v Microsoft Intune.":::
 
 ## <a name="next-steps"></a>Další kroky
 

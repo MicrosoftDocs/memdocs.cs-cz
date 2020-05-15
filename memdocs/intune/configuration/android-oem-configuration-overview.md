@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c2d0d4c186dd0c703e371169fd24c2dbdabaa8ea
-ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
+ms.openlocfilehash: c28229808c6404e08c569c7a8300db5c925c79e6
+ms.sourcegitcommit: b94415467831517f2aeab9c7c8a13fe8db8bc8ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82254839"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83401588"
 ---
 # <a name="use-and-manage-android-enterprise-devices-with-oemconfig-in-microsoft-intune"></a>Používání a Správa zařízení s Androidem Enterprise pomocí OEMConfig v Microsoft Intune
 
@@ -79,11 +79,11 @@ Ujistěte se, že zařízení podporuje OEMConfig, do Intune se přidá správn�
 ## <a name="create-an-oemconfig-profile"></a>Vytvoření profilu OEMConfig
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **Konfigurace zařízení** > **profily** > konfigurace**vytvořit profil**.
+2. Vyberte **Devices**  >  **Konfigurace zařízení profily konfigurace**  >  **vytvořit profil**.
 3. Zadejte tyto vlastnosti:
 
     - **Platforma**: vyberte **Android Enterprise**.
-    - **Typ profilu**: vyberte **OEMConfig**.
+    - **Profil**: vyberte **OEMConfig**.
 
 4. Vyberte **Vytvořit**.
 5. V části **základy**zadejte následující vlastnosti:
@@ -126,7 +126,7 @@ Ujistěte se, že zařízení podporuje OEMConfig, do Intune se přidá správn�
     Všechny změny provedené v Návrháři konfigurace jsou také automaticky provedeny v editoru JSON. Podobně všechny změny provedené v editoru JSON se automaticky provedou v Návrháři konfigurace. Pokud vstup obsahuje neplatné hodnoty, nemůžete přepínat mezi návrhářem konfigurace a editorem JSON, dokud problémy neopravíte.
 
 9. Vyberte **Další**.
-10. V části **značky oboru** (volitelné) přiřaďte značku pro filtrování profilu pro konkrétní IT skupiny, například `US-NC IT Team` nebo. `JohnGlenn_ITDepartment` Další informace o značkách oboru naleznete v tématu [použití značek RBAC a Scope pro distribuci](../fundamentals/scope-tags.md).
+10. V části **značky oboru** (volitelné) přiřaďte značku pro filtrování profilu pro konkrétní IT skupiny, například `US-NC IT Team` nebo `JohnGlenn_ITDepartment` . Další informace o značkách oboru naleznete v tématu [použití značek RBAC a Scope pro distribuci](../fundamentals/scope-tags.md).
 
     Vyberte **Další**.
 
@@ -169,7 +169,7 @@ V porovnání se standardními aplikacemi aplikace OEMConfig rozšiřují opráv
 
 -----------------
 
-Pokud aplikace OEMConfig pro vaše zařízení existuje, ale není v tabulce výše, nebo se nezobrazuje v konzole Intune, e-mail `IntuneOEMConfig@microsoft.com`.
+Pokud aplikace OEMConfig pro vaše zařízení existuje, ale není v tabulce výše, nebo se nezobrazuje v konzole Intune, e-mail `IntuneOEMConfig@microsoft.com` .
 
 > [!NOTE]
 > Aby bylo možné nakonfigurovat aplikace OEMConfig pomocí profilů OEMConfig, musí být na zprovoznění služby Intune. Jakmile je aplikace podporovaná, nemusíte od Microsoftu kontaktovat žádné informace o jeho nastavování ve vašem tenantovi. Stačí postupovat podle pokynů na této stránce.

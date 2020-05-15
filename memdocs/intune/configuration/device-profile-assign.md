@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 05/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a05e36a2da42bf88e2d9d7e94a67e2d81b8f1271
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: aac4bf355724194e55f55bd89b66426487d50427
+ms.sourcegitcommit: b94415467831517f2aeab9c7c8a13fe8db8bc8ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078273"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83401676"
 ---
 # <a name="assign-user-and-device-profiles-in-microsoft-intune"></a>Přiřazení profilů uživatelů a zařízení v Microsoft Intune
 
@@ -44,11 +44,11 @@ Ujistěte se, že máte odpovídající roli pro přiřazení profilů. Další 
 ## <a name="assign-a-device-profile"></a>Přiřazení profilu zařízení
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte možnost**profily konfigurace** **zařízení** > . Zobrazí se všechny profily.
+2. Vyberte **Devices**možnost  >  **profily konfigurace**zařízení. Zobrazí se všechny profily.
 3. Vyberte profil, který chcete přiřadit > **přiřazení**.
 4. Zvolte **Zahrnout** skupiny nebo **vyloučit** skupiny a pak vyberte své skupiny. Když skupiny vybíráte, zvolíte skupinu Azure AD. Pokud chcete vybrat více skupin, podržte stisknutou klávesu **CTRL** a vyberte vaše skupiny.
 
-    ![Snímek obrazovky s možnostmi zahrnout nebo vyloučit skupiny z přiřazení profilu](./media/device-profile-assign/group-include-exclude.png)
+    :::image type="content" source="./media/device-profile-assign/group-include-exclude.png" alt-text="Snímek obrazovky s možnostmi zahrnutí nebo vyloučení skupin z přiřazení profilu v Microsoft Intune":::
 
 5. **Uložte** změny.
 
@@ -56,8 +56,8 @@ Ujistěte se, že máte odpovídající roli pro přiřazení profilů. Další 
 
 Když přiřadíte profil, můžete také **vyhodnotit** , kolik uživatelů je ovlivněno. Tato funkce vypočítává uživatele. nepočítá zařízení.
 
-1. V centru pro správu vyberte možnost **Devices** > **profily konfigurace**zařízení.
-2. Vyberte profil >**vyhodnotit** **přiřazení** > . Zobrazí se zpráva o tom, kolik uživatelů cílí na tento profil.
+1. V centru pro správu vyberte možnost **Devices**  >  **profily konfigurace**zařízení.
+2. Vyberte profil > **Assignments**  >  **vyhodnotit**přiřazení. Zobrazí se zpráva o tom, kolik uživatelů cílí na tento profil.
 
 Pokud je tlačítko **vyhodnotit** zobrazené šedě, ujistěte se, že je profil přiřazený k jedné nebo více skupinám.
 
@@ -65,7 +65,7 @@ Pokud je tlačítko **vyhodnotit** zobrazené šedě, ujistěte se, že je profi
 
 Když vytváříte nebo aktualizujete profil, můžete do profilu přidat také značky oboru a pravidla použitelnosti.
 
-**Značky oboru** jsou skvělým způsobem, jak filtrovat profily na konkrétní skupiny, například `US-NC IT Team` nebo `JohnGlenn_ITDepartment`. [Pro distribuci použijte značky RBAC a Scope](../fundamentals/scope-tags.md) s více informacemi.
+**Značky oboru** jsou skvělým způsobem, jak filtrovat profily na konkrétní skupiny, například `US-NC IT Team` nebo `JohnGlenn_ITDepartment` . [Pro distribuci použijte značky RBAC a Scope](../fundamentals/scope-tags.md) s více informacemi.
 
 Na zařízeních s Windows 10 můžete přidat **pravidla použitelnosti** , aby se profil mohl vztahovat jenom na konkrétní verzi operačního systému nebo na konkrétní edici Windows. [Pravidla použitelnosti](device-profile-create.md#applicability-rules) obsahují další informace.
 
@@ -109,7 +109,7 @@ Osvědčeným postupem je vytvořit a přiřadit profily konkrétně pro vaše s
 
 Když přiřadíte profily, použijte následující tabulku při zahrnutí a vyloučení skupin. Značka zaškrtnutí znamená, že je přiřazení podporováno:
 
-![Podporované možnosti zahrnují nebo vylučují skupiny z přiřazení profilu.](./media/device-profile-assign/include-exclude-user-device-groups.png)
+:::image type="content" source="./media/device-profile-assign/include-exclude-user-device-groups.png" alt-text="Podporované možnosti zahrnují nebo vylučují skupiny z přiřazení profilu.":::
 
 ### <a name="what-you-should-know"></a>Co byste měli vědět
 

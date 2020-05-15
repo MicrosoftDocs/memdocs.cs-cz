@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/23/2020
+ms.date: 05/11/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6b0c673eb702e3e9f08209d04bf256c049b10ee6
-ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
+ms.openlocfilehash: a702532b08f199c561677785877195502455ebab
+ms.sourcegitcommit: 4174f7e485067812c29aea01a4767989ffdbb578
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82022683"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83406753"
 ---
 # <a name="use-update-channel-and-target-version-settings-to-update-office-365-with-microsoft-intune-administrative-templates"></a>Pomocí nastavení aktualizace kanálu a cílové verze aktualizujte Office 365 pomocí Microsoft Intune Šablony pro správu
 
@@ -44,7 +44,7 @@ Nezapomeňte pro aplikace Office [Povolit automatické aktualizace aplikací pro
 
 ## <a name="set-the-update-channel-in-the-intune-administrative-template"></a>Nastavení kanálu aktualizací v šabloně pro správu Intune
 
-1. V [šabloně pro správu Intune](administrative-templates-windows.md#create-the-template)přejděte na nastavení **kanál aktualizací** a zadejte požadovaný kanál. Například vyberte `Semi-Annual Channel`:
+1. V [šabloně pro správu Intune](administrative-templates-windows.md#create-the-template)přejděte na nastavení **kanál aktualizací** a zadejte požadovaný kanál. Například vyberte `Semi-Annual Channel` :
 
     > [!div class="mx-imgBorder"]
     > ![V šabloně pro správu Intune nastavte nastavení kanálu pro aktualizace pro Office.](./media/administrative-templates-update-office/admx-enable-update-channel-setting.png)
@@ -62,17 +62,17 @@ Nezapomeňte pro aplikace Office [Povolit automatické aktualizace aplikací pro
 Po přiřazení zásad a synchronizace zařízení můžete potvrdit použití zásady:
 
 1. V zařízení otevřete aplikaci **Editor registru** .
-2. Přejít na cestu k zásadám Intune `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\PolicyManager\Providers\<Provider ID>\default\Device\office16~Policy~L_MicrosoftOfficemachine~L_Updates`:.
+2. Přejít na cestu k zásadám Intune: `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\PolicyManager\Providers\<Provider ID>\default\Device\office16~Policy~L_MicrosoftOfficemachine~L_Updates` .
 
     > [!TIP]
-    > V `<Provider ID>` klíči registru se změní. Pokud chcete najít ID poskytovatele pro vaše zařízení, otevřete aplikaci **Editor registru** a pokračujte na `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\PolicyManager\AdmxInstalled`. Zobrazí se ID zprostředkovatele.
+    > `<Provider ID>`V klíči registru se změní. Pokud chcete najít ID poskytovatele pro vaše zařízení, otevřete aplikaci **Editor registru** a pokračujte na `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\PolicyManager\AdmxInstalled` . Zobrazí se ID zprostředkovatele.
 
     Při použití zásady se zobrazí následující klíče registru:
 
     - `L_UpdateBranch`
     - `L_UpdateTargetVersion`
 
-    V následujícím příkladu se zobrazí `L_UpdateBranch` hodnota podobná. `<enabled /><data id="L_UpdateBranchID" value="Deferred" />` Tato hodnota znamená, že je nastavená na půlroční kanál:
+    V následujícím příkladu se zobrazí `L_UpdateBranch` hodnota podobná `<enabled /><data id="L_UpdateBranchID" value="Deferred" />` . Tato hodnota znamená, že je nastavená na půlroční kanál:
 
     > [!div class="mx-imgBorder"]
     > ![Příklad šablony pro správu L_Updatebranch klíče registru](./media/administrative-templates-update-office/admx-update-branch-registry-key.png)
@@ -91,23 +91,23 @@ V tomto okamžiku se zásady Intune na zařízení úspěšně nastavily.
 ## <a name="check-the-office-registry-keys"></a>Podívejte se na klíče registru Office.
 
 1. V zařízení otevřete aplikaci **Editor registru** .
-2. Přejít na cestu k zásadám Office `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration`:.
+2. Přejít na cestu k zásadám Office: `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration` .
 
     Zobrazí se následující klíče registru:
 
     - `UpdateChannel`: Dynamický klíč, který se mění v závislosti na nakonfigurovaných nastaveních.
     - `CDNBaseUrl`: Nastaví se, když se na zařízení nainstaluje Office 365.
 
-3. Podívejte se `UpdateChannel` na hodnotu. Hodnota určuje, jak často se Office aktualizuje. [Spravujte Microsoft 365 aplikace pomocí Configuration Manager](https://docs.microsoft.com/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel) zobrazí seznam hodnot a jejich nastavení.
+3. Podívejte se na `UpdateChannel` hodnotu. Hodnota určuje, jak často se Office aktualizuje. [Spravujte Microsoft 365 aplikace pomocí Configuration Manager](https://docs.microsoft.com/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel) zobrazí seznam hodnot a jejich nastavení.
 
-    V následujícím příkladu vidíte `UpdateChannel` , že je nastavena na `http://officecdn.microsoft.com/pr/492350f6-3a01-4f97-b9c0-c7c6ddf67d60`hodnotu, která je **měsíčně**:
+    V následujícím příkladu vidíte `UpdateChannel` , že je nastavena na hodnotu `http://officecdn.microsoft.com/pr/492350f6-3a01-4f97-b9c0-c7c6ddf67d60` , která je **měsíčně**:
 
     > [!div class="mx-imgBorder"]
     > ![Příklad klíče registru UpdateChannel Office šablony pro správu](./media/administrative-templates-update-office/admx-update-channel-office-registry-key.png)
 
     Tento příklad znamená, že zásady se ještě nepoužily, protože je pořád nastavená na **měsíční**místo **roční**.
 
-Tento klíč registru se aktualizuje, když se spustí **Plánovač úloh** > **Automatické aktualizace Office 2,0** nebo když se uživatel přihlásí k zařízení. Pokud to chcete ověřit, otevřete > **triggery**úlohy **automatické aktualizace Office 2,0** . V závislosti na aktivačních událostech může trvat aspoň jeden den, než se aktualizuje klíč `UpdateChannel` registru.
+Tento klíč registru se aktualizuje, když se spustí **Plánovač úloh**  >  **Automatické aktualizace Office 2,0** nebo když se uživatel přihlásí k zařízení. Pokud to chcete ověřit, otevřete > **triggery**úlohy **automatické aktualizace Office 2,0** . V závislosti na aktivačních událostech může trvat aspoň jeden den, než `UpdateChannel` se aktualizuje klíč registru.
 
 ## <a name="force-office-automatic-updates-to-run"></a>Vynutit spuštění automatických aktualizací Office
 
@@ -121,17 +121,17 @@ K otestování zásad můžete na zařízení vynutit nastavení zásad. Násled
 2. Spusťte úlohu automatické aktualizace Office:
 
     1. Otevřete **Plánovač úloh** aplikaci na zařízení.
-    2. Rozbalte **Plánovač úloh Library** > **Microsoft** > **Office**.
-    3. Vyberte možnost **Automatické aktualizace Office 2,0** > **Spustit**:
+    2. Rozbalte **Plánovač úloh Library**  >  **Microsoft**  >  **Office**.
+    3. Vyberte možnost **Automatické aktualizace Office 2,0**  >  **Spustit**:
 
         > [!div class="mx-imgBorder"]
         > ![Otevření plánu úloh a spuštění automatických aktualizací pro Office](./media/administrative-templates-update-office/admx-task-scheduler-office-automatic-updates.png)
 
         Počkejte, než se úloha dokončí, což může trvat několik minut.
 
-3. V aplikaci **Editor registru** , přejít na `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration`. Ověřte `UpdateChannel` hodnotu.
+3. V aplikaci **Editor registru** , přejít na `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration` . Ověřte `UpdateChannel` hodnotu.
 
-    Měla by se aktualizovat hodnotou nastavenou v zásadě. V našem příkladu by měla být hodnota nastavena na `http://officecdn.microsoft.com/pr/7ffbc6bf-bc32-4f92-8982-f9dd17fd3114`.
+    Měla by se aktualizovat hodnotou nastavenou v zásadě. V našem příkladu by měla být hodnota nastavena na `http://officecdn.microsoft.com/pr/7ffbc6bf-bc32-4f92-8982-f9dd17fd3114` .
 
 V tuto chvíli se kanál aktualizací Office v zařízení úspěšně změnil. Můžete otevřít aplikaci Office 365 pro uživatele, který obdrží tuto aktualizaci, aby zkontroloval stav.
 
@@ -162,7 +162,7 @@ Zvažte použití těchto kroků k otestování zásad před nasazením zásad v
 
 1. V aplikaci **Editor registru** , přejít na`Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\PolicyManager\Providers\<Provider ID>\default\Device\office16~Policy~L_MicrosoftOfficemachine~L_Updates`
 
-2. Podívejte se `L_UpdateTargetVersion` na hodnotu. Po použití těchto zásad je hodnota nastavena na zadanou verzi, například `<enabled /><data id="L_UpdateTargetVersionID" value="16.0.10730.20344" />`.
+2. Podívejte se na `L_UpdateTargetVersion` hodnotu. Po použití těchto zásad je hodnota nastavena na zadanou verzi, například `<enabled /><data id="L_UpdateTargetVersionID" value="16.0.10730.20344" />` .
 
     V tomto okamžiku se zásady Intune na zařízení úspěšně nastavily.
 
@@ -170,7 +170,7 @@ Zvažte použití těchto kroků k otestování zásad před nasazením zásad v
 
     Tato aktualizace trvá několik minut. Můžete potvrdit, že se Office pokusí získat verzi, kterou zadáte:
 
-      1. V zařízení přejít na `C:\Program Files (x86)\Microsoft Office\Updates\Detection\Version`.
+      1. V zařízení přejít na `C:\Program Files (x86)\Microsoft Office\Updates\Detection\Version` .
       2. Otevřete `VersionDescriptor.xml` soubor a pokračujte v `<Version>` části. Dostupná verze by měla být stejná jako verze, kterou jste zadali v zásadách Intune, například:
 
           > [!div class="mx-imgBorder"]

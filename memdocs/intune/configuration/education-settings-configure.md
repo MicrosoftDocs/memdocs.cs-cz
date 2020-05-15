@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/04/2019
+ms.date: 05/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,16 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 12d04869834691167c2f31be853029c9a939a338
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 476f0c3ef058c1c051ce3b571adec5d48787ee0e
+ms.sourcegitcommit: b94415467831517f2aeab9c7c8a13fe8db8bc8ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79333091"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83401710"
 ---
 # <a name="use-the-take-a-test-app-on-windows-10-devices-in-microsoft-intune"></a>Použití aplikace nabrat na zařízeních s Windows 10 v Microsoft Intune
-
-
 
 Vzdělávací profily v Intune jsou navržené pro studenty, kteří můžou na zařízeních pořizovat test nebo zkoušku. Tato funkce **zahrnuje testovací URL aplikaci a** nastavení, které umožňují přidat testovací adresu URL, zvolit způsob, jakým se koncoví uživatelé přihlásí k testu, a další. Tato funkce podporuje následující platformu:
 
@@ -39,24 +37,39 @@ V tomto článku jsou uvedené kroky pro vytvoření profilu konfigurace zaříz
 ## <a name="create-a-device-profile"></a>Vytvoření profilu zařízení
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **Konfigurace zařízení** > **profily** > konfigurace**vytvořit profil**.
+2. Vyberte **Devices**  >  **Konfigurace zařízení profily konfigurace**  >  **vytvořit profil**.
 3. Zadejte tyto vlastnosti:
+
+    - **Platforma**: vyberte **Windows 10 a novější**.
+    - **Profil**: vyberte **zabezpečené hodnocení (vzdělávání)**.
+
+4. Vyberte **Vytvořit**.
+5. V části **základy**zadejte následující vlastnosti:
 
     - **Název**: Zadejte popisný název nového profilu.
     - **Popis**: Zadejte popis profilu. Toto nastavení není povinné, ale doporučujeme ho zadat.
-    - **Platforma**: Zvolte **Windows 10 a novější**.
-    - **Profil**: vyberte **vzdělávací profil**.
 
-4. Zadejte nastavení, která chcete nakonfigurovat:
+6. Vyberte **Další**.
+7. V **nastavení konfigurace**zadejte nastavení, která chcete nakonfigurovat:
 
     - [Windows 10 a novější](education-settings-windows.md)
 
-5. Kliknutím na **tlačítko OK** > **vytvořit** uložte změny.
+8. Vyberte **Další**.
 
-Po zadání nastavení a vytvoření profilu se tento profil zobrazí v seznamu profilů. Dále [tento profil přiřaďte některým skupinám](device-profile-assign.md).
+9. V části **značky oboru** (volitelné) přiřaďte značku pro filtrování profilu pro konkrétní IT skupiny, například `US-NC IT Team` nebo `JohnGlenn_ITDepartment` . Další informace o značkách oboru naleznete v tématu [použití značek RBAC a Scope pro distribuci](../fundamentals/scope-tags.md).
+
+    Vyberte **Další**.
+
+10. V části **přiřazení**vyberte uživatele nebo skupinu uživatelů, kteří obdrží váš profil. Další informace o přiřazování profilů najdete v tématu [přiřazení profilů uživatelů a zařízení](device-profile-assign.md).
+
+    Vyberte **Další**.
+
+11. V rámci **Revize a vytvoření**zkontrolujte nastavení. Když vyberete **vytvořit**, vaše změny se uloží a profil se přiřadí. Tato zásada se taky zobrazuje v seznamu profily.
+
+Při příštím ověření každého zařízení se zásada použije.
 
 ## <a name="next-steps"></a>Další kroky
 
 Podívejte se na seznam [Nastavení vzdělávání pro Windows 10](education-settings-windows.md) a jejich popis.
 
-[Přiřaďte profil](device-profile-assign.md) a [monitorujte jeho stav](device-profile-monitor.md).
+Po [přiřazení profilu](device-profile-assign.md) [sledujte jeho stav](device-profile-monitor.md).

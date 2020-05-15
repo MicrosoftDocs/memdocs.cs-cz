@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/04/2019
+ms.date: 05/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,16 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 068363167d5c6abb54dde26939b102db2f120d27
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: b7c75d75b6afef728b23093dd4313f1c028fc5c7
+ms.sourcegitcommit: b94415467831517f2aeab9c7c8a13fe8db8bc8ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79333107"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83401731"
 ---
 # <a name="upgrade-windows-10-editions-or-switch-out-of-s-mode-on-devices-using-microsoft-intune"></a>Upgradovat edice Windows 10 nebo zapínat na zařízeních v režimu S použitím Microsoft Intune
-
-
 
 V rámci řešení pro správu mobilních zařízení (MDM) můžete chtít upgradovat zařízení s Windows 10. Například chcete upgradovat zařízení s Windows 10 Professional na Windows 10 Enterprise. Nebo chcete, aby zařízení přepnulo režim S.
 
@@ -97,24 +95,40 @@ V následující tabulce jsou podporované cesty upgradu pro profil upgradu edic
 ## <a name="create-the-profile"></a>Vytvoření profilu
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **Konfigurace zařízení** > **profily** > konfigurace**vytvořit profil**.
+2. Vyberte **Devices**  >  **Konfigurace zařízení profily konfigurace**  >  **vytvořit profil**.
 3. Zadejte tyto vlastnosti:
 
-    - **Název**: Zadejte popisný název nového profilu. Zadejte například něco jako `Windows 10 edition upgrade profile` nebo. `Windows 10 switch off S mode`
-    - **Popis**: Zadejte popis profilu. Toto nastavení není povinné, ale doporučujeme ho zadat.
     - **Platforma**: vyberte **Windows 10 a novější**.
-    - **Typ profilu**: vyberte **upgrade edice**.
-    - **Nastavení**: Zadejte nastavení, které chcete konfigurovat. Seznam všech nastavení a o tom, co dělají, najdete v těchto tématech:
+    - **Profil**: vyberte **upgrade edice**.
 
-        - [Upgrade a režim S Windows 10](edition-upgrade-windows-settings.md)
-        - [Windows Holographic for Business](holographic-upgrade.md)
+4. Vyberte **Vytvořit**.
+5. V části **základy**zadejte následující vlastnosti:
 
-4. Kliknutím na **tlačítko OK** > **vytvořit** uložte změny.
+    - **Název**: Zadejte popisný název nového profilu. Zadejte například něco jako `Windows 10 edition upgrade profile` nebo `Windows 10 switch off S mode` .
+    - **Popis**: Zadejte popis profilu. Toto nastavení není povinné, ale doporučujeme ho zadat.
 
-Profil se vytvoří a zobrazí se v seznamu. Nezapomeňte [profil přiřadit](device-profile-assign.md) a [monitorovat jeho stav](device-profile-monitor.md).
+6. Vyberte **Další**.
+7. V **nastavení konfigurace**zadejte nastavení, které chcete konfigurovat. Seznam všech nastavení a o tom, co dělají, najdete v těchto tématech:
+
+    - [Upgrade a režim S Windows 10](edition-upgrade-windows-settings.md)
+    - [Windows Holographic for Business](holographic-upgrade.md)
+
+8. Vyberte **Další**.
+
+9. V části **značky oboru** (volitelné) přiřaďte značku pro filtrování profilu pro konkrétní IT skupiny, například `US-NC IT Team` nebo `JohnGlenn_ITDepartment` . Další informace o značkách oboru naleznete v tématu [použití značek RBAC a Scope pro distribuci](../fundamentals/scope-tags.md).
+
+    Vyberte **Další**.
+
+10. V části **přiřazení**vyberte uživatele nebo skupinu uživatelů, kteří obdrží váš profil. Další informace o přiřazování profilů najdete v tématu [přiřazení profilů uživatelů a zařízení](device-profile-assign.md).
+
+    Vyberte **Další**.
+
+11. V rámci **Revize a vytvoření**zkontrolujte nastavení. Když vyberete **vytvořit**, vaše změny se uloží a profil se přiřadí. Tato zásada se taky zobrazuje v seznamu profily.
+
+Při příštím ověření každého zařízení se zásada použije.
 
 ## <a name="next-steps"></a>Další kroky
 
-Profil je po vytvoření připravený k přiřazení. Dále [Přiřaďte profil](device-profile-assign.md) a [sledujte jeho stav](device-profile-monitor.md).
+Po [přiřazení profilu](device-profile-assign.md) [sledujte jeho stav](device-profile-monitor.md).
 
-Zobrazit nastavení upgradu a režimu S pro zařízení S [Windows 10](edition-upgrade-windows-settings.md) a [Windows holografickým pro firmy](holographic-upgrade.md) .
+Podívejte se na nastavení upgradu a režimu S pro zařízení S [Windows 10](edition-upgrade-windows-settings.md) a [Windows holografickým pro firmy](holographic-upgrade.md) .

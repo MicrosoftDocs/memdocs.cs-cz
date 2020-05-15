@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7827c85585d630f64ba9c6d342b6275fca506b1d
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: f910320e59c12f34570ff6d354bfb8f6934a9e66
+ms.sourcegitcommit: 4174f7e485067812c29aea01a4767989ffdbb578
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906960"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83406391"
 ---
 # <a name="in-development-for-microsoft-intune"></a>Ve vývoji pro Microsoft Intune
 
@@ -67,7 +67,7 @@ Portál společnosti v zařízeních macOS nyní ukládá do mezipaměti uživat
 Aplikace, které se publikují jako dostupné aplikace programu Volume purchase program (VPP), se automaticky aktualizují, pokud je pro token VPP povolená **Automatická aktualizace aplikací** . Aktuálně dostupné aplikace VPP se neaktualizují automaticky. Místo toho musí koncoví uživatelé přejít na Portál společnosti a znovu nainstalovat aplikaci, pokud je k dispozici novější verze. Požadované aplikace ale v současné době podporují automatické aktualizace.
 
 ### <a name="customize-self-service-device-actions-in-the-company-portal--4393379----"></a>Přizpůsobení akcí zařízení samoobslužných služeb v Portál společnosti<!--4393379  -->
-Budete moct přizpůsobit dostupné akce samoobslužného zařízení, které se zobrazí koncovým uživatelům v aplikaci Portál společnosti a na webu. Aby se zabránilo nezamýšleným akcím zařízení, můžete nakonfigurovat tato nastavení pro aplikaci Portál společnosti, a to tak, že vyberete možnost**přizpůsobení** >  **správy** > tenanta**vytvořit** > **Skrýt funkce**. K dispozici jsou následující akce:
+Budete moct přizpůsobit dostupné akce samoobslužného zařízení, které se zobrazí koncovým uživatelům v aplikaci Portál společnosti a na webu. Aby se zabránilo nezamýšleným akcím zařízení, můžete nakonfigurovat tato nastavení pro aplikaci Portál společnosti, a to tak, že vyberete možnost přizpůsobení **správy tenanta**  >  **Customization**  >  **vytvořit**  >  **Skrýt funkce**. K dispozici jsou následující akce:
 - Skrýt tlačítko **Odebrat** na podnikovém zařízení s Windows
 - Skrýt tlačítko pro **obnovení** na podnikových zařízeních s Windows
 - Skrýt tlačítko pro **obnovení** na podnikových zařízeních iOS.
@@ -76,10 +76,10 @@ Budete moct přizpůsobit dostupné akce samoobslužného zařízení, které se
 Další informace najdete v tématu [Akce zařízení Samoobslužná služba z portál společnosti](../apps/company-portal-app.md#user-self-service-device-actions-from-the-company-portal).
 
 ### <a name="unified-delivery-of-azure-ad-enterprise-or-office-online-applications-in-the-company-portal--4404429---"></a>Jednotné doručování aplikací Azure AD Enterprise nebo Office Online v Portál společnosti<!--4404429 -->
-Zobrazení aplikací Azure AD Enterprise nebo Office Online v Portál společnosti budete moct přepínat (**skrývat** nebo **zobrazovat**). Každý uživatel uvidí ze zvolené služby Microsoftu celý katalog aplikací. Ve výchozím nastavení se každý další zdroj aplikace nastaví jako **skrytý**. Tato funkce se nejprve projeví na Portál společnosti webu ve verzi 2005 s podporou na portálech Windows, iOS/iPadOS a macOS společnosti, které by měly dodržovat. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte**přizpůsobení** **správy** > tenanta a najděte toto budoucí nastavení. Související informace najdete v tématu [Postup přizpůsobení aplikací portál společnosti Intune, portál společnosti webu a aplikace Intune](../apps/company-portal-app.md).
+Zobrazení aplikací Azure AD Enterprise nebo Office Online v Portál společnosti budete moct přepínat (**skrývat** nebo **zobrazovat**). Každý uživatel uvidí ze zvolené služby Microsoftu celý katalog aplikací. Ve výchozím nastavení se každý další zdroj aplikace nastaví jako **skrytý**. Tato funkce se nejprve projeví na Portál společnosti webu ve verzi 2005 s podporou na portálech Windows, iOS/iPadOS a macOS společnosti, které by měly dodržovat. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **přizpůsobení správy tenanta**  >  **Customization** a najděte toto budoucí nastavení. Související informace najdete v tématu [Postup přizpůsobení aplikací portál společnosti Intune, portál společnosti webu a aplikace Intune](../apps/company-portal-app.md).
 
 ### <a name="search-the-intune-docs-from-the-company-portal---1736480---"></a>Hledání v dokumentaci k Intune z Portál společnosti<!-- 1736480 -->
-V dokumentaci k Intune teď můžete vyhledávat přímo z Portál společnosti aplikace pro macOS. V řádku nabídek vyberte**vyhledávání** v **nápovědě** > a zadejte klíčová slova hledání, abyste mohli rychle najít odpovědi na své otázky.
+V dokumentaci k Intune teď můžete vyhledávat přímo z Portál společnosti aplikace pro macOS. V řádku nabídek vyberte vyhledávání v **nápovědě**  >  **Search** a zadejte klíčová slova hledání, abyste mohli rychle najít odpovědi na své otázky.
 
 ### <a name="company-portal-for-android-will-guide-users-to-get-apps-after-work-profile-enrollment----6103999----"></a>Portál společnosti pro Android budou uživatelům získávat aplikace po registraci pracovního profilu. <!-- 6103999  -->
 Vylepšujeme doprovodné materiály k aplikaci v Portál společnosti, aby uživatelé mohli snáze najít a nainstalovat aplikace.  Po registraci v nástroji Správa pracovních profilů se uživatelům zobrazí zpráva s oznámením, že v ní budou moci najít navrhované aplikace v Google Play. Uživatelům se na levé straně Portál společnosti zobrazí také nový odkaz **získat aplikace** . Aby bylo možné tyto nové a vylepšené prostředí vytvořit, karta **aplikace** se odebere. 
@@ -92,7 +92,7 @@ Ve vydání 2005 Portál společnosti Androidu se koncovým uživatelům zaříz
 ## <a name="device-configuration"></a>Konfigurace zařízení
 
 ### <a name="device-configuration-profile-settings-and-values-will-be-updated-for-windows-platforms---4091122---"></a>Nastavení a hodnoty konfiguračního profilu zařízení se aktualizují pro platformy Windows.<!-- 4091122 -->
-Když vytváříte profily konfigurace zařízení pro platformy Windows (**Devices** > **konfigurační profily** > zařízení**vytvořit profil** > jakékoli možnosti **Windows** pro platformu), některá nastavení a jejich hodnoty se liší od CSP a můžou být matoucí. Názvy nastavení a jejich hodnoty se aktualizují tak, aby byly jasné.
+Když vytváříte profily konfigurace zařízení pro platformy Windows (**Devices**  >  **konfigurační profily**zařízení  >  **vytvořit profil** > jakékoli možnosti **Windows** pro platformu), některá nastavení a jejich hodnoty se liší od CSP a můžou být matoucí. Názvy nastavení a jejich hodnoty se aktualizují tak, aby byly jasné.
 
 To platí pro:
 
@@ -101,20 +101,15 @@ To platí pro:
 - Windows 8.1 konfigurační profily zařízení
 - Profily konfigurace zařízení Windows Phone 8,1
 
-### <a name="configure-the-microsoft-defender-atp-app-for-macos-----5520115----"></a>Konfigurace aplikace Microsoft Defender ATP pro macOS  <!-- 5520115  -->
-Brzy budete moct nakonfigurovat [Nastavení](../protect/endpoint-protection-macos.md) pro aplikaci Microsoft Defender ATP pro zařízení, která používají MacOS jako součást konfiguračního profilu zařízení Endpoint Protection (konfigurace**zařízení** > **profily** > **vytvořit profil**, vyberte **MacOS** pro *platformu*a pak **Endpoint Protection** pro *typ profilu*). Pro konfiguraci zařízení macOS bude k dispozici osm nastavení. 
-
-Ochrana ATP v programu Defender je podporovaná na macOS 10,13 (s vysokou verzí Sierra) a novějších a aplikace [Microsoft Defender ATP](../apps/apps-advanced-threat-protection-macos.md) musí být *po* těchto nastaveních nasazená do zařízení. Nastavení byste měli před nasazením aplikace poslat do zařízení. Beta verze macOS se nepodporují.
-
 ### <a name="new-filevault-setting-for-macos-endpoint-protection-device-configuration-policy---5459801-----"></a>Nové nastavení trezoru úložiště pro macOS Endpoint Protection zásady konfigurace zařízení<!-- 5459801   -->
-Do kategorie trezoru úložišť přidáváme nové nastavení v rámci šablony [macOS Endpoint Protection](../protect/endpoint-protection-macos.md) : skryjte obnovovací klíč. (Konfigurace**zařízení** > **profily** > **vytvořit profil**, pro danou *platformu* vyberte **MacOS** a pak jako *typ profilu*nastavte **Endpoint Protection** ). Toto nastavení skrývá osobní klíč od koncového uživatele během šifrování trezoru 2. Uživatel zařízení si může svůj osobní obnovovací klíč kdykoli zobrazit z aplikace Portál společnosti pro iOS nebo z webu portál společnosti pro šifrované zařízení macOS. Pokud si chcete zobrazit klíč pro osobní obnovení, můžete přejít na podrobnosti o zařízení a kliknout na *získat obnovovací klíč*.
+Do kategorie trezoru úložišť přidáváme nové nastavení v rámci šablony [macOS Endpoint Protection](../protect/endpoint-protection-macos.md) : skryjte obnovovací klíč. (**Zařízení**  >  **Konfigurační profily**  >  **Vytvořte profil**, pro danou *platformu* vyberte **MacOS** a pak jako *typ profilu*nastavte **Endpoint Protection** ). Toto nastavení skrývá osobní klíč od koncového uživatele během šifrování trezoru 2. Uživatel zařízení si může svůj osobní obnovovací klíč kdykoli zobrazit z aplikace Portál společnosti pro iOS nebo z webu portál společnosti pro šifrované zařízení macOS. Pokud si chcete zobrazit klíč pro osobní obnovení, můžete přejít na podrobnosti o zařízení a kliknout na *získat obnovovací klíč*.
 
 Toto nastavení nebude k dispozici v dříve vytvořených zásadách. Abyste mohli nakonfigurovat toto nastavení tak, aby ho bylo možné používat, budete muset znovu vytvořit zásady trezoru úložišť. 
 
 ### <a name="configure-system-extensions-on-macos-devices---6255624----"></a>Konfigurace systémových rozšíření na zařízeních macOS<!-- 6255624  -->
-Na zařízeních MacOS můžete vytvořit profil rozšíření jádra pro konfiguraci nastavení na úrovni jádra (**konfigurační profily** > **zařízení** > **MacOS** pro **rozšíření jádra** > platformy pro profil). Apple je nakonec zastaralá rozšíření jádra a v budoucí verzi je nahrazuje rozšířeními systému. Rozšíření systému běží v uživatelském prostoru a neposkytují přístup k jádru. Cílem je zvýšit zabezpečení a poskytnout více koncovým uživatelským ovládacím prvkům a omezit tak útoky na úrovni jádra. Rozšíření jádra i systémová rozšíření umožňují uživatelům instalovat rozšíření aplikací, která rozšiřuje nativní možnosti operačního systému.
+Na zařízeních MacOS můžete vytvořit profil rozšíření jádra pro konfiguraci nastavení na úrovni jádra (**Devices**  >  **konfigurační profily**zařízení  >  **MacOS** pro **rozšíření jádra** > platformy pro profil). Apple je nakonec zastaralá rozšíření jádra a v budoucí verzi je nahrazuje rozšířeními systému. Rozšíření systému běží v uživatelském prostoru a neposkytují přístup k jádru. Cílem je zvýšit zabezpečení a poskytnout více koncovým uživatelským ovládacím prvkům a omezit tak útoky na úrovni jádra. Rozšíření jádra i systémová rozšíření umožňují uživatelům instalovat rozšíření aplikací, která rozšiřuje nativní možnosti operačního systému.
 
-V Intune můžete nakonfigurovat rozšíření jádra i systémová rozšíření (**konfigurační profily** > **zařízení** > **MacOS** pro rozšíření Platform > **System** pro profil). Rozšíření jádra se vztahují na 10.13.2 a novější. Systémová rozšíření se vztahují na 10,15 a novější. V macOS 10,15 až macOS 10.15.4 mohou běžet rozšíření jádra a systémová rozšíření vedle sebe. 
+V Intune můžete nakonfigurovat rozšíření jádra i systémová rozšíření (**Devices**  >  **konfigurační profily**zařízení  >  **MacOS** pro rozšíření Platform > **System** pro profil). Rozšíření jádra se vztahují na 10.13.2 a novější. Systémová rozšíření se vztahují na 10,15 a novější. V macOS 10,15 až macOS 10.15.4 mohou běžet rozšíření jádra a systémová rozšíření vedle sebe. 
 
 Další informace o rozšíření jádra na zařízeních macOS najdete v tématu [Přidání rozšíření jádra MacOS](../configuration/kernel-extensions-overview-macos.md).
 
@@ -134,12 +129,12 @@ V případě automatizované registrace zařízení od společnosti Apple se int
 Windows autopilot bude podporovat zařízení HoloLens 2. Další informace o použití modulu Autopilot v Intune najdete v tématu [registrace zařízení s Windows v Intune pomocí automatických pilotů Windows](../enrollment/enrollment-autopilot.md).
 
 ### <a name="enrollment-restrictions-will-support-scope-tags--4209550---"></a>Omezení registrace budou podporovat značky oboru<!--4209550 -->
-K omezením registrace budete moct přiřadit značky oboru. Provedete to tak, že přejdete do centra**pro** >  >  [správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431)**omezení** > registrace**vytvořit omezení**. Vytvořte buď typ omezení, a zobrazí se stránka **značky oboru** .
+K omezením registrace budete moct přiřadit značky oboru. Provedete to tak, že přejdete do [centra pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431)  >  **Devices**  >  **omezení registrace**  >  **vytvořit omezení**. Vytvořte buď typ omezení, a zobrazí se stránka **značky oboru** .
 
 ### <a name="shared-ipads-for-business--6367326---"></a>Shared iPady for Business<!--6367326 -->
 Pomocí Intune a Apple Business Manageru budete moct snadno a bezpečně nastavit sdílený iPad, aby zařízení mohla sdílet víc zaměstnanců. [Sdílený iPad](https://developer.apple.com/education/shared-ipad/) společnosti Apple nabízí individuální prostředí pro více uživatelů při zachování uživatelských dat. Pomocí spravovaného Apple ID můžou uživatelé získat přístup k aplikacím, datům a nastavením po přihlášení ke všem sdíleným iPadům v jejich organizaci. Sdílený iPad spolupracuje se federované identity.
 
-Tuto funkci zobrazíte tak, že přejdete do centra**pro** >  >  [správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431)**zařízení** > **iOS** > .**tokeny programu registrace** iOS > vyberte token * * > **profily** > **vytvořit profil** > **iOS**. Na stránce **Nastavení správy** vyberte **zaregistrovat bez přidružení uživatele** a zobrazí se možnost **sdílené iPady** .
+Tuto funkci zobrazíte tak, že přejdete do [centra pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431)  >  **zařízení**.  >  **iOS**  >  **iOS enrollment**  >  **tokeny programu registrace** iOS > vyberte token * * > **profily**  >  **vytvořit profil**  >  **iOS**. Na stránce **Nastavení správy** vyberte **zaregistrovat bez přidružení uživatele** a zobrazí se možnost **sdílené iPady** .
 
 **Platí pro:** iPadOS 13,4 a novější. Tato verze přidala podporu pro dočasné relace se sdíleným iPadem, takže uživatelé budou mít přístup k zařízení bez spravovaného Apple ID. Po odhlášení zařízení vymaže všechna uživatelská data, aby bylo zařízení hned připravené k použití, což eliminuje nutnost vymazání zařízení. 
 
@@ -150,7 +145,7 @@ Tuto funkci zobrazíte tak, že přejdete do centra**pro** >  >  [správu služb
 PowerShellové skripty budou podporovat registrovaná zařízení Azure AD v Intune. Další informace o PowerShellu najdete [v tématu použití skriptů PowerShellu na zařízeních s Windows 10 v Intune](../apps/intune-management-extension.md). Tato funkce nepodporuje zařízení s Windows 10 Home Edition.
 
 ### <a name="log-analytics-will-include-device-details-log--6014987----"></a>Log Analytics bude zahrnovat protokol podrobností o zařízení.<!--6014987  -->
-V **sestavách** > **Log Analytics**budou k dispozici protokoly podrobností o zařízeních v Intune. Můžete korelovat podrobnosti o zařízení a vytvářet vlastní dotazy a sešity Azure.
+V **sestavách**  >  **Log Analytics**budou k dispozici protokoly podrobností o zařízeních v Intune. Můžete korelovat podrobnosti o zařízení a vytvářet vlastní dotazy a sešity Azure.
 
 
 ### <a name="macos-script-support---6376978----"></a>Podpora skriptů macOS<!-- 6376978  -->
@@ -175,7 +170,7 @@ Správci budou moct aktualizovat verzi šablony zprávy o kompatibilitě Power B
 ## <a name="security"></a>Zabezpečení
 
 ### <a name="derived-credentials-support-for-disa-purebred-on-android-devices--4839592---"></a>Podpora odvozených přihlašovacích údajů pro DISA purebred na zařízeních s Androidem<!--4839592 -->
-*DISA purebred* budete moct používat jako [odvozeného poskytovatele přihlašovacích údajů](../protect/derived-credentials.md) u plně spravovaných zařízení s Androidem Enterprise (konektory**pro správu** > tenanta a**přihlašovací údaje odvozené**od**tokenů** > ). Podpora bude zahrnovat načtení odvozeného pověření pro DISA purebred. U aplikací, které ji podporují, budete moct používat odvozená pověření pro ověřování aplikací, podepisování Wi-Fi, VPN nebo šifrování S/MIME. 
+*DISA purebred* budete moct používat jako [odvozeného poskytovatele přihlašovacích údajů](../protect/derived-credentials.md) u plně spravovaných zařízení s Androidem Enterprise (konektory**pro správu tenanta**  >  **a**  >  **přihlašovací údaje odvozené**od tokenů). Podpora bude zahrnovat načtení odvozeného pověření pro DISA purebred. U aplikací, které ji podporují, budete moct používat odvozená pověření pro ověřování aplikací, podepisování Wi-Fi, VPN nebo šifrování S/MIME. 
 
 V dubnu přidala Intune podporu pro *Entrust Datacard* a *Intercede* jako poskytovatele pro odvozená pověření. 
 
@@ -196,10 +191,10 @@ Budete moct vybrat zásadu, kterou jste vytvořili v uzlu zabezpečení koncové
 Duplikace provede kopii původní zásady, kterou pak můžete přejmenovat a upravit. Kopie nebude zahrnovat přiřazení původní.
 
 ### <a name="send-push-notifications-as-an-action-for-non-compliance----1733150-----"></a>Odeslání nabízených oznámení jako akce při nedodržení předpisů <!-- 1733150   -->
-V případě platforem iOS a Android přidáváme novou akci při nedodržení předpisů, která odešle nabízené oznámení aplikace v aplikaci Portál společnosti. Uživatelé můžou kliknout na oznámení, která spustí aplikaci Portál společnosti, která pak zobrazí důvod, proč nedodržují předpisy. Správci budou moct tuto novou akci nakonfigurovat pro nedodržování předpisů v centru pro správu Microsoft Endpoint Manageru tak, že přejdete na **zařízení** > **zásady** > dodržování předpisů**vytvořit zásadu**a pak vyberte *akci* pro odeslání nabízeného oznámení aplikace. 
+V případě platforem iOS a Android přidáváme novou akci při nedodržení předpisů, která odešle nabízené oznámení aplikace v aplikaci Portál společnosti. Uživatelé můžou kliknout na oznámení, která spustí aplikaci Portál společnosti, která pak zobrazí důvod, proč nedodržují předpisy. Správci budou moct tuto novou akci nakonfigurovat pro nedodržování předpisů v centru pro správu Microsoft Endpoint Manageru tak, že přejdete na **zařízení**  >  **zásady dodržování předpisů**  >  **vytvořit zásadu**a pak vyberte *akci* pro odeslání nabízeného oznámení aplikace. 
 
 ### <a name="new-profile-for-endpoint-security-firewall-policy---5653324-----"></a>Nový profil pro zásady brány firewall zabezpečení koncového bodu<!-- 5653324   -->
-Ve verzi Preview přidáváme další profil pro Windows 10 a novější zásady brány firewall v zabezpečení koncového bodu služby Intune (**Endpoint Security** > **firewall** > **Create Policy** > vyberte **Windows 10 a novější**). 
+Ve verzi Preview přidáváme další profil pro Windows 10 a novější zásady brány firewall v zabezpečení koncového bodu služby Intune (**Endpoint Security**  >  **firewall**  >  **Create Policy** > vyberte **Windows 10 a novější**). 
 
 Každá instance tohoto nového profilu podporuje až 150 vlastních *pravidel firewallu v programu Microsoft Defender*. Profil pravidla firewallu v programu Microsoft Defender umožňuje definovat podrobná pravidla brány Windows Firewall pro povolení nebo blokování portů a aplikací ve Windows 10.
 

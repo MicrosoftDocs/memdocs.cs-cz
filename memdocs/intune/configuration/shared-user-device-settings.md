@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/04/2019
+ms.date: 05/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 179314f363c8f086239b2c926c4bed8d09c68204
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: f1a11d9b41d17935d9c74490aabb5b983d04b4e1
+ms.sourcegitcommit: b94415467831517f2aeab9c7c8a13fe8db8bc8ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79333039"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83401528"
 ---
 # <a name="control-access-accounts-and-power-features-on-shared-pc-or-multi-user-devices-using-intune"></a>Řízení přístupu, účtů a funkcí napájení na sdílených počítačích nebo zařízeních s více uživateli pomocí Intune
 
@@ -43,21 +43,42 @@ Při vytvoření profilu v Intune nasadíte nebo přiřadíte tento profil skupi
 ## <a name="create-the-profile"></a>Vytvoření profilu
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **Konfigurace zařízení** > **profily** > konfigurace**vytvořit profil**.
+2. Vyberte **Devices**  >  **Konfigurace zařízení profily konfigurace**  >  **vytvořit profil**.
 3. Zadejte tyto vlastnosti:
+
+   - **Platforma**: vyberte **Windows 10 a novější**.
+   - **Profil**: vyberte **sdílené zařízení s více uživateli**.
+
+4. Vyberte **Vytvořit**.
+5. V části **základy**zadejte následující vlastnosti:
 
    - **Název**: Zadejte popisný název nového profilu.
    - **Popis**: Zadejte popis profilu. Toto nastavení není povinné, ale doporučujeme ho zadat.
-   - **Platforma**: vyberte **Windows 10 a novější**.
-   - **Typ profilu**: vyberte **sdílené zařízení s více uživateli**.
 
-4. Nakonfigurujte nastavení pro [Windows 10 a novější](shared-user-device-settings-windows.md) nebo [Windows holografické pro firmy](shared-user-device-settings-windows-holographic.md).
+6. Vyberte **Další**.
+7. Nastavení, která můžete konfigurovat v **nastavení konfigurace**, se liší v závislosti na zvolené platformě. Pro podrobnější nastavení vyberte platformu:
 
-5. Kliknutím na **tlačítko OK** > **vytvořit** uložte změny.
+    - [Windows 10 a novější](shared-user-device-settings-windows.md)
+    - [Windows Holographic for Business](shared-user-device-settings-windows-holographic.md)
 
-Váš profil se vytvoří a zobrazí v seznamu, ale ještě nic nedělá. Nezapomeňte [profil přiřadit](device-profile-assign.md) ke skupinám zařízení ve vaší organizaci.
+8. Vyberte **Další**.
+
+9. V části **značky oboru** (volitelné) přiřaďte značku pro filtrování profilu pro konkrétní IT skupiny, například `US-NC IT Team` nebo `JohnGlenn_ITDepartment` . Další informace o značkách oboru naleznete v tématu [použití značek RBAC a Scope pro distribuci](../fundamentals/scope-tags.md).
+
+    Vyberte **Další**.
+
+10. V části **přiřazení**vyberte skupinu zařízení, která obdrží váš profil. Další informace o přiřazování profilů najdete v tématu [přiřazení profilů uživatelů a zařízení](device-profile-assign.md).
+
+    Vyberte **Další**.
+
+    > [!NOTE]
+    > Nezapomeňte profil přiřadit ke skupinám zařízení ve vaší organizaci.
+
+11. V rámci **Revize a vytvoření**zkontrolujte nastavení. Když vyberete **vytvořit**, vaše změny se uloží a profil se přiřadí. Tato zásada se taky zobrazuje v seznamu profily.
+
+Při příštím ověření každého zařízení se zásada použije.
 
 ## <a name="next-steps"></a>Další kroky
 
 - Podívejte se na všechna nastavení pro [Windows 10 a novější](shared-user-device-settings-windows.md) a [Windows holografick pro firmy](shared-user-device-settings-windows-holographic.md).
-- [Přiřaďte profil](device-profile-assign.md) a [monitorujte jeho stav](device-profile-monitor.md).
+- Po [přiřazení profilu](device-profile-assign.md) [sledujte jeho stav](device-profile-monitor.md).
