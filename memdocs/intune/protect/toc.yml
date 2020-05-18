@@ -60,12 +60,51 @@
           href: actions-for-noncompliance.md
         - name: Monitorování dodržování předpisů zařízením
           href: compliance-policy-monitor.md
-    - name: Šifrování zařízení
+    - name: Zabezpečení koncového bodu
+      href: endpoint-security.md
       items:
-        - name: Šifrování zařízení
-          href: encrypt-devices.md
-        - name: Monitorování šifrování zařízení
-          href: encryption-monitor.md
+        - name: Správa zařízení
+          href: endpoint-security-manage-devices.md
+        - name: Základní nastavení zabezpečení
+          items:
+            - name: Základní nastavení zabezpečení
+              href: security-baselines.md
+            - name: Monitorování základního nastavení
+              href: security-baselines-monitor.md
+        - name: Úlohy zabezpečení
+          href: atp-manage-vulnerabilities.md
+        - name: Zásady zabezpečení
+          items:
+            - name: Správa zásad zabezpečení
+              href: endpoint-security-policy.md
+            - name: Antivirus
+              href: endpoint-security-antivirus-policy.md
+            - name: Šifrování disků
+              href: endpoint-security-disk-encryption-policy.md
+            - name: Firewall
+              href: endpoint-security-firewall-policy.md
+            - name: Zjišťování koncových bodů a odpověď
+              href: endpoint-security-edr-policy.md
+            - name: Omezení možností útoku
+              href: endpoint-security-asr-policy.md
+            - name: Ochrana účtu
+              href: endpoint-security-account-protection-policy.md
+        - name: Microsoft Defender ATP
+          href: advanced-threat-protection.md
+        - name: Šifrování disků
+          items:
+            - name: Správa zásad nástroje BitLocker
+              href: encrypt-devices.md
+            - name: Správa zásad pro FileVault
+              href: encrypt-devices-filevault.md
+            - name: Monitorování šifrování disků
+              href: encryption-monitor.md
+    - name: Ochrana identit
+      items:
+        - name: Windows Hello
+          href: windows-hello.md
+        - name: Ochrana identit
+          href: identity-protection-configure.md
     - name: Podmíněný přístup
       items:
         - name: Přehled podmíněného přístupu
@@ -87,100 +126,76 @@
           href: app-based-conditional-access-intune-create.md
         - name: ADAL a Intune
           href: app-modern-authentication-block.md
-        - name: Jamf Pro pro macOS
-          items:
-            - name: Použití cloudového konektoru Jamf
-              href: conditional-access-jamf-cloud-connector.md
-            - name: Ruční integrace Jamf s Intune
-              href: conditional-access-integrate-jamf.md
-            - name: Vynucení dodržování předpisů v počítačích Mac spravovaných aplikací Jamf Pro
-              href: conditional-access-assign-jamf.md
-    - name: Ochrana před internetovými útoky
-      items:
-        - name: Mobile Threat Defense
-          href: mobile-threat-defense.md
-          items:
-            - name: MTD na nezaregistrovaných zařízeních
-              items:
-                - name: Přidání aplikací MTD do nezaregistrovaných zařízení
-                  href: mtd-add-apps-unenrolled-devices.md
-                - name: Vytvoření zásady ochrany aplikací MTD
-                  href: mtd-app-protection-policy.md
-                - name: Povolení MTD pro nezaregistrovaná zařízení
-                  href: mtd-enable-unenrolled-devices.md
-            - name: MTD na zaregistrovaných zařízeních
-              items:
-                - name: Přidání aplikací MTD do zaregistrovaných zařízení
-                  href: mtd-apps-ios-app-configuration-policy-add-assign.md
-                - name: Vytvoření zásad dodržování předpisů zařízením MTD
-                  href: mtd-device-compliance-policy-create.md
-                - name: Povolení MTD pro zaregistrovaná zařízení
-                  href: mtd-connector-enable.md
-            - name: Aplikace MTD
-              items:
-                - name: Nastavení služby Better Mobile
-                  href: better-mobile-threat-defense-connector.md
-                  items:
-                    - name: Integrace služby Better Mobile se službou Intune
-                      href: better-mobile-mtd-connector-integration.md
-                      displayName: sso
-                - name: Nastavení Check Pointu
-                  href: checkpoint-sandblast-mobile-mobile-threat-defense-connector.md
-                  items:
-                    - name: Integrace Check Pointu a Intune
-                      href: checkpoint-sandblast-mobile-mtd-connector-integration.md
-                - name: Nastavení Lookoutu
-                  href: lookout-mobile-threat-defense-connector.md
-                  items:
-                    - name: Integrace Lookoutu a Intune
-                      href: lookout-mtd-connector-integration.md
-                - name: Nastavení služby Pradeo
-                  href: pradeo-mobile-threat-defense-connector.md
-                  items:
-                    - name: Integrace služeb Pradeo a Intune
-                      href: pradeo-mtd-connector-integration.md
-                - name: Nastavení Sophos Mobile
-                  href: sophos-mtd-connector.md
-                  items:
-                    - name: Integrace Sophos Mobile a Intune
-                      href: sophos-mtd-connector-integration.md
-                - name: Nastavení Symantecu
-                  href: skycure-mobile-threat-defense-connector.md
-                  items:
-                    - name: Integrace Symantecu a Intune
-                      href: skycure-mtd-connector-integration.md
-                - name: Nastavení řešení Wandera
-                  href: wandera-mtd-connector.md
-                  items:
-                    - name: Integrace řešení Wandera s Intune
-                      href: wandera-mtd-connector-integration.md
-                - name: Nastavení služby Zimperium
-                  href: zimperium-mobile-threat-defense-connector.md
-                  items:
-                    - name: Integrace služeb Zimperium a Intune
-                      href: zimperium-mtd-connector-integration.md
-        - name: Microsoft Defender
-          items:
-            - name: Microsoft Defender ATP
-              href: advanced-threat-protection.md
-            - name: Úlohy zabezpečení
-              href: atp-manage-vulnerabilities.md
-    - name: Základní nastavení zabezpečení
-      items:
-        - name: Základní nastavení zabezpečení
-          href: security-baselines.md
-        - name: Monitorování základního nastavení
-          href: security-baselines-monitor.md
+        - name: Integrace Jamf Pro s Intune pro dodržování předpisů
+          href: conditional-access-integrate-jamf.md
+        - name: Vynucení dodržování předpisů v počítačích Mac spravovaných aplikací Jamf Pro
+          href: conditional-access-assign-jamf.md
     - name: Ochrana koncového bodu
       href: endpoint-protection-configure.md
+    - name: Partneři Mobile Threat Defense
+      href: mobile-threat-defense.md
+      items:
+        - name: MTD na nezaregistrovaných zařízeních
+          items:
+            - name: Přidání aplikací MTD do nezaregistrovaných zařízení
+              href: mtd-add-apps-unenrolled-devices.md
+            - name: Vytvoření zásady ochrany aplikací MTD
+              href: mtd-app-protection-policy.md
+            - name: Povolení MTD pro nezaregistrovaná zařízení
+              href: mtd-enable-unenrolled-devices.md
+        - name: MTD na zaregistrovaných zařízeních
+          items:
+            - name: Přidání aplikací MTD do zaregistrovaných zařízení
+              href: mtd-apps-ios-app-configuration-policy-add-assign.md
+            - name: Vytvoření zásad dodržování předpisů zařízením MTD
+              href: mtd-device-compliance-policy-create.md
+            - name: Povolení MTD pro zaregistrovaná zařízení
+              href: mtd-connector-enable.md
+        - name: Aplikace MTD
+          items:
+            - name: Nastavení služby Better Mobile
+              href: better-mobile-threat-defense-connector.md
+              items:
+                - name: Integrace služby Better Mobile se službou Intune
+                  href: better-mobile-mtd-connector-integration.md
+                  displayName: sso
+            - name: Nastavení Check Pointu
+              href: checkpoint-sandblast-mobile-mobile-threat-defense-connector.md
+              items:
+                - name: Integrace Check Pointu a Intune
+                  href: checkpoint-sandblast-mobile-mtd-connector-integration.md
+            - name: Nastavení Lookoutu
+              href: lookout-mobile-threat-defense-connector.md
+              items:
+                - name: Integrace Lookoutu a Intune
+                  href: lookout-mtd-connector-integration.md
+            - name: Nastavení služby Pradeo
+              href: pradeo-mobile-threat-defense-connector.md
+              items:
+                - name: Integrace služeb Pradeo a Intune
+                  href: pradeo-mtd-connector-integration.md
+            - name: Nastavení Sophos Mobile
+              href: sophos-mtd-connector.md
+              items:
+                - name: Integrace Sophos Mobile a Intune
+                  href: sophos-mtd-connector-integration.md
+            - name: Nastavení Symantecu
+              href: skycure-mobile-threat-defense-connector.md
+              items:
+                - name: Integrace Symantecu a Intune
+                  href: skycure-mtd-connector-integration.md
+            - name: Nastavení řešení Wandera
+              href: wandera-mtd-connector.md
+              items:
+                - name: Integrace řešení Wandera s Intune
+                  href: wandera-mtd-connector-integration.md
+            - name: Nastavení služby Zimperium
+              href: zimperium-mobile-threat-defense-connector.md
+              items:
+                - name: Integrace služeb Zimperium a Intune
+                  href: zimperium-mtd-connector-integration.md
     - name: Řízení přístupu k síti
       href: network-access-control-integrate.md
-    - name: Windows Hello
-      items:
-        - name: Windows Hello
-          href: windows-hello.md
-        - name: Ochrana identit
-          href: identity-protection-configure.md
     - name: Certifikáty
       items:
         - name: Ověřování pomocí certifikátů
@@ -257,13 +272,8 @@
           href: troubleshoot-jamf.md
 - name: Reference
   items:
-    - name: Nastavení zásad antivirové ochrany
-      items:
-        - name: Nastavení antivirové ochrany v Microsoft Defenderu pro macOS
-          href: antivirus-microsoft-defender-settings-macos.md
-        - name: Nastavení antivirové ochrany v Microsoft Defenderu pro Windows 10
-          href: antivirus-microsoft-defender-settings-windows.md
     - name: Rozhraní API pro přidání certifikační autority třetí strany
+      href: scep-libraries-apis.md
     - name: Nastavení zásad dodržování předpisů
       items:
         - name: Nastavení zásad dodržování předpisů – Android
@@ -280,7 +290,26 @@
           href: compliance-policy-create-windows-8-1.md
         - name: Nastavení zásad dodržování předpisů – Windows Phone 8.1
           href: compliance-policy-create-windows-8-1.md
-      href: scep-libraries-apis.md
+    - name: Nastavení zásad zabezpečení koncových bodů
+      items:
+        - name: Nastavení zásad antivirové ochrany
+          items:
+            - name: Nastavení antivirové ochrany v Microsoft Defenderu pro macOS
+              href: antivirus-microsoft-defender-settings-macos.md
+            - name: Nastavení antivirové ochrany v Microsoft Defenderu pro Windows 10
+              href: antivirus-microsoft-defender-settings-windows.md
+            - name: Nastavení prostředí Zabezpečení Windows
+              href: antivirus-security-experience-windows-settings.md
+        - name: Nastavení profilu pro šifrování disků
+          href: endpoint-security-disk-encryption-profile-settings.md
+        - name: Nastavení zásad firewallu
+          href: endpoint-security-firewall-profile-settings.md
+        - name: Zjišťování koncových bodů a nastavení profilu pro odpovědi
+          href: endpoint-security-edr-profile-settings.md
+        - name: Nastavení profilu pro omezení možností útoku
+          href: endpoint-security-asr-profile-settings.md
+        - name: Nastavení profilu ochrany účtů
+          href: endpoint-security-account-protection-profile-settings.md
     - name: Nastavení standardních hodnot zabezpečení
       items:
         - name: Windows 10 – základní nastavení MDM

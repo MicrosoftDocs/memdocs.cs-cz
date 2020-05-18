@@ -20,6 +20,7 @@
 #### Registrace pomocí odvozených přihlašovacích údajů
 ##### [Registrace pomocí Entrust Datacard](enroll-android-device-entrust-datacard.md)
 ##### [Registrace pomocí Intercede](enroll-android-device-intercede.md)
+##### [Registrace pomocí Disa Purebred](enroll-android-device-disa-purebred.md)
 ### [Přechod do nastavení správy nového zařízení](move-to-new-device-management-setup.md)
 ### [Použití spravovaných aplikací na zařízení](use-managed-apps-on-your-device-android.md)
 ### [Zašifrování zařízení](encrypt-your-device-android.md)
