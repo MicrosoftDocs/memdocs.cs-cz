@@ -18,8 +18,12 @@
     - name: Přehled profilu
       href: device-profile-create.md
     - name: Vlastní nastavení
-      href: custom-settings-configure.md
-      displayName: oma-uri
+      displayName: 'oma-uri, csp'
+      items:
+        - name: Vytváření vlastních profilů
+          href: custom-settings-configure.md
+        - name: Příklad HoloLens 2
+          href: custom-profile-hololens.md
     - name: Omezení nastavení a funkcí zařízení
       href: device-restrictions-configure.md
       displayName: device restrictions

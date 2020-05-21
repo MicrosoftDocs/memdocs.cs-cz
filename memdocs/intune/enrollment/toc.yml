@@ -28,6 +28,8 @@
       href: terms-and-conditions-create.md
     - name: Omezení
       href: enrollment-restrictions-set.md
+    - name: Vysvětlení limitů zařízení v Intune a Azure AD
+      href: device-limit-intune-azure.md
     - name: Certifikát Apple MDM Push Certificate
       href: apple-mdm-push-certificate-get.md
     - name: Podnikové identifikátory
