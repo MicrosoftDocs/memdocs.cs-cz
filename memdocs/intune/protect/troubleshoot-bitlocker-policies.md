@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ac6650f06abddd2633e73f39a6bf72d54e344a61
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 92d1e1c5d1e2a66ed036d0ed7a5a75d40c737bf3
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079191"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83428972"
 ---
 # <a name="troubleshoot-bitlocker-policies-in-microsoft-intune"></a>Řešení potíží se zásadami BitLockeru v Microsoft Intune
 
@@ -37,7 +37,7 @@ Pomocí Microsoft Intune máte k dispozici následující metody pro správu ná
 
    Informace o dostupných možnostech a funkcích si můžete přečíst tady: [šifrování Windows](https://docs.microsoft.com/intune/endpoint-protection-windows-10#windows-encryption).
 
-- **Security baselines** - Směrné[plány](security-baselines.md) zabezpečení standardních hodnot zabezpečení jsou známé skupiny nastavení a výchozí hodnoty, které doporučuje příslušný bezpečnostní tým k zabezpečení zařízení s Windows. Různé zdroje standardních hodnot, jako jsou *základní hodnoty zabezpečení MDM* nebo *standardní hodnoty ATP v programu Microsoft Defender* , můžou spravovat stejné nastavení i jiná nastavení. Můžou taky spravovat stejná nastavení, která spravujete pomocí zásad konfigurace zařízení. 
+- **Standardní hodnoty zabezpečení**  -  [Směrné plány zabezpečení](security-baselines.md) jsou známé skupiny nastavení a výchozí hodnoty, které doporučuje příslušný bezpečnostní tým k zabezpečení zařízení s Windows. Různé zdroje standardních hodnot, jako jsou *základní hodnoty zabezpečení MDM* nebo *standardní hodnoty ATP v programu Microsoft Defender* , můžou spravovat stejné nastavení i jiná nastavení. Můžou taky spravovat stejná nastavení, která spravujete pomocí zásad konfigurace zařízení. 
 
 Pro hardware, který je kompatibilní s moderní pohotovostní úsporou a HSTI při použití některé z těchto funkcí, se šifrování zařízení BitLockeru automaticky zapne při každém připojení zařízení do Azure AD. Azure AD poskytuje portál, ve kterém se zálohují taky klíče pro obnovení, takže uživatelé můžou v případě potřeby získat vlastní obnovovací klíč pro samoobslužné služby.
 
@@ -68,7 +68,7 @@ Když ke konfiguraci BitLockeru použijete zásady konfigurace zařízení, mů�
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Vyberte možnost**profily konfigurace** **zařízení** > a potom vyberte profil, který obsahuje nastavení nástroje BitLocker.
+2. Vyberte **Devices**možnost  >  **profily konfigurace** zařízení a potom vyberte profil, který obsahuje nastavení nástroje BitLocker.
 
 3. Až vyberete profil, který chcete zobrazit, vyberte **stav zařízení**. Zobrazí se zařízení přiřazená k profilu a sloupec *stav zařízení* indikuje, jestli se v zařízení úspěšně nasadil profil.
 
@@ -76,13 +76,13 @@ Nezapomeňte, že mezi zařízením, které přijímá zásady BitLockeru, můž
 
 ### <a name="use-control-panel-on-the-client"></a>Použití ovládacích panelů na klientovi  
 
-Na zařízení s povoleným BitLockerem a zašifrovanou jednotkou můžete zobrazit stav nástroje BitLocker v ovládacím panelu zařízení. Na zařízení otevřete **Ovládací panely** > **systém a** > **Nástroj BitLocker Drive Encryption**zabezpečení. Zobrazí se potvrzení, jak je vidět na následujícím obrázku.  
+Na zařízení s povoleným BitLockerem a zašifrovanou jednotkou můžete zobrazit stav nástroje BitLocker v ovládacím panelu zařízení. Na zařízení otevřete **Ovládací panely**  >  **systém a**  >  **Nástroj BitLocker Drive Encryption**zabezpečení. Zobrazí se potvrzení, jak je vidět na následujícím obrázku.  
 
 ![BitLocker je zapnutý v Ovládacích panelech.](./media/troubleshooting-bitlocker-policies/control-panel.png)
 
 ### <a name="use-a-command-prompt"></a>Použití příkazového řádku  
 
-Na zařízení, které povolilo nástroj BitLocker a zašifroval jednotku, spusťte příkazový řádek s přihlašovacími údaji správce `manage-bde -status`a spusťte příkaz. Výsledky by měly vypadat podobně jako v následujícím příkladu:  
+Na zařízení, které povolilo nástroj BitLocker a zašifroval jednotku, spusťte příkazový řádek s přihlašovacími údaji správce a spusťte příkaz `manage-bde -status` . Výsledky by měly vypadat podobně jako v následujícím příkladu:  
 ![Výsledek příkazu status](./media/troubleshooting-bitlocker-policies/command.png)
 
 V tomto příkladu:
@@ -169,11 +169,11 @@ Teď byste měli mít dobrý nápad, jak ověřit, že zásady BitLockeru se ús
      
 **Šifrování BitLockeru se neprovádí v tichém režimu** – nakonfigurovali jste zásady Endpoint Protection s nastavením upozornění pro jiné šifrování disku, které se nastaví jako zablokované a Průvodce šifrováním se pořád zobrazuje:
 
-- **Potvrzení, že verze Windows podporuje tiché šifrování** To vyžaduje minimálně verzi 1803. Pokud uživatel není na zařízení správce, než vyžaduje minimální verzi 1809. Navíc 1809 přidání podpory pro zařízení, která nepodporují moderní pohotovostní režim
+- **Potvrzení, že verze Windows podporuje tiché šifrování** To vyžaduje minimálně verzi 1803. Pokud uživatel není správcem na zařízení, než vyžaduje minimální verzi 1809. Navíc 1809 přidání podpory pro zařízení, která nepodporují moderní pohotovostní režim
 
 **Zařízení šifrované bitlockerem se zobrazuje jako nevyhovující zásadám dodržování předpisů Intune** – k tomuto problému dochází, když šifrování nástrojem BitLocker není dokončené. Šifrování BitLockeru může trvat dlouhou dobu, a to na základě faktorů, jako je velikost disku, počet souborů a nastavení nástroje BitLocker. Po dokončení šifrování se zařízení zobrazí jako vyhovující. Zařízení se taky můžou dočasně nedodržující předpisy hned po poslední instalaci aktualizací WIndows.
 
-**Zařízení se šifrují pomocí 128 bitových algorithim, když jsou specifické pro zásady 256 bit** – ve výchozím nastavení Windows 10 zašifruje jednotku pomocí šifrování XTS-AES 128-bit. V této příručce najdete [nastavení 256 šifrování pro BitLocker při autopilotu](https://techcommunity.microsoft.com/t5/intune-customer-success/setting-256-bit-encryption-for-bitlocker-during-autopilot-with/ba-p/323791#).
+**Zařízení se šifrují pomocí 128 bitového algoritmu, pokud jsou specifické pro zásady 256 bit** – ve výchozím nastavení Windows 10 zašifruje jednotku pomocí XTS šifrování s 128-bit. V této příručce najdete [nastavení 256 šifrování pro BitLocker při autopilotu](https://techcommunity.microsoft.com/t5/intune-customer-success/setting-256-bit-encryption-for-bitlocker-during-autopilot-with/ba-p/323791#).
 
 
 **Ukázkové šetření**
@@ -194,7 +194,7 @@ Teď byste měli mít dobrý nápad, jak ověřit, že zásady BitLockeru se ús
 
 - Vzhledem k tomu, že nástroj BitLocker spoléhá na čip TPM, může dojít k tomu, že nástroj BitLocker neselže kvůli potížím se službou Intune nebo zásadou, ale místo toho, aby samotné zařízení nemá čip TPM nebo čip TPM není v systému BIOS zakázán.
 
-   > Jako další tip můžete potvrdit stejné v Prohlížeč událostí Windows v části **protokoly aplikací a služeb****Microsoft** > **Windows** > **BitLocker API**. V protokolu událostí **rozhraní API BitLockeru** najdete ID události 853, což znamená, že čip TPM není k dispozici:
+  Jako další tip můžete potvrdit stejné v Prohlížeč událostí Windows v části **protokoly aplikací a služeb**  >  **Microsoft**  >  **Windows**  >  **BitLocker API**. V protokolu událostí **rozhraní API BitLockeru** najdete ID události 853, což znamená, že čip TPM není k dispozici:
 
   ![ID události 853](./media/troubleshooting-bitlocker-policies/event-error.png)
 

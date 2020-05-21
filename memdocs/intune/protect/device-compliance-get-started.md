@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/21/2020
+ms.date: 05/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b9fa14dd54a820ed20f8b3b504a836392c7f428f
-ms.sourcegitcommit: 4381afb515c06f078149bd52528d1f24b63a2df9
+ms.openlocfilehash: c2af5957d22b5b512b28f574f2a0996801e19018
+ms.sourcegitcommit: 5dc3545d7f76ce81598f6b1c9734b0ac0a3e9722
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82538162"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83690505"
 ---
 # <a name="set-rules-on-devices-to-allow-access-to-resources-in-your-organization-using-intune"></a>Nastavení pravidel na zařízeních pro povolení přístupu k prostředkům ve vaší organizaci pomocí Intune
 
@@ -86,24 +86,24 @@ Zásady dodržování předpisů můžete nasadit uživatelům ve skupinách už
 
 Intune také obsahuje sadu předdefinovaných nastavení zásad dodržování předpisů. Následující předdefinované zásady se vyhodnotí na všechna zařízení zaregistrovaná v Intune:
 
-- **Označit zařízení, která nemají přiřazené žádné zásady dodržování předpisů, jako**: Tato vlastnost má dvě hodnoty:
+- **Označit zařízení, která nemají přiřazené žádné zásady dodržování předpisů**: Toto je výchozí akce při nedodržení předpisů. Tato vlastnost má dvě hodnoty:
 
   - **Kompatibilní** (*výchozí*): vypnutá funkce zabezpečení
   - **Nekompatibilní**: funkce zabezpečení zapnuta
 
-  Pokud zařízení nemá přiřazené zásady dodržování předpisů, považuje se toto zařízení za vyhovující ve výchozím nastavení. Pokud používáte podmíněný přístup se zásadami dodržování předpisů, doporučujeme změnit výchozí nastavení na **nekompatibilní**. Pokud koncový uživatel nedodržuje předpisy, protože zásada není přiřazená, zobrazí `No compliance policies have been assigned`se [aplikace Portál společnosti](../apps/company-portal-app.md) .
+  Pokud zařízení nemá přiřazené zásady dodržování předpisů, považuje se toto zařízení za vyhovující ve výchozím nastavení. Pokud používáte podmíněný přístup se zásadami dodržování předpisů, doporučujeme změnit výchozí nastavení na **nekompatibilní**. Pokud koncový uživatel nedodržuje předpisy, protože zásada není přiřazená, zobrazí se [aplikace Portál společnosti](../apps/company-portal-app.md) `No compliance policies have been assigned` .
 
-- **Vylepšené zjišťování jailbreaků**: Pokud je toto nastavení povolené, způsobí to, že se na zařízeních s iOS/iPadOS bude nacházet v zařízení s jailbreakem/. Toto nastavení má vliv jenom na zařízení, která jsou cílem zásad dodržování předpisů, které blokují zařízení s jailbreakem. Povolení této vlastnosti používá služby zjišťování polohy zařízení a může mít vliv na využití baterie. Data o umístění uživatele nejsou uložená službou Intune a používají se jenom k aktivaci jailbreaků detekce na pozadí. 
+- **Vylepšené zjišťování jailbreaků** (*platí pro iOS/IPadOS*): Pokud je toto nastavení povolené, způsobí to, že se stav zařízení s jailbreakem na zařízeních s iOS/iPadOS stane častěji. Toto nastavení má vliv jenom na zařízení, která jsou cílem zásad dodržování předpisů, které blokují zařízení s jailbreakem. Povolení této vlastnosti používá služby zjišťování polohy zařízení a může mít vliv na využití baterie. Data o umístění uživatele nejsou uložená službou Intune a používají se jenom k aktivaci jailbreaků detekce na pozadí. 
 
   Povolení tohoto nastavení vyžaduje, aby zařízení:
   - Povolte služby zjišťování polohy na úrovni operačního systému.
   - Vždy povolí Portál společnosti používat služby zjišťování polohy.
 
-  Vyhodnocování se aktivuje otevřením aplikace Portál společnosti nebo fyzickému přesunutí zařízení o důležitou vzdálenost přibližně 500 metrů a dalších. U iOS 13 a dalších funkcí bude tato funkce vyžadovat, aby uživatelé vždy, když se jim zobrazí výzva, povolili Portál společnosti používat jejich umístění na pozadí. Pokud uživatelé nemají vždycky přístup k poloze a mají nakonfigurovanou zásadu s tímto nastavením, bude jejich zařízení označeno jako nedodržující předpisy. Všimněte si, že Intune nemůže zaručit, že při každé významné změně umístění dojde k tomu, aby jailbreaků kontrolu detekce, protože to závisí na síťovém připojení zařízení.
+  Rozšířené zjišťování funguje přes služby zjišťování polohy. Toto vyhodnocení se aktivuje otevřením aplikace Portál společnosti nebo fyzickému přesunutí zařízení o významné vzdálenosti přibližně 500 metrů. U iOS 13 a dalších funkcí Tato funkce vyžaduje, aby uživatelé vždy, když se jim zobrazí výzva, aby mohli dál povolit Portál společnosti používání jejich umístění na pozadí. Pokud uživatelé nemají vždycky přístup k poloze a mají nakonfigurovanou zásadu s tímto nastavením, bude jejich zařízení označeno jako nedodržující předpisy. Všimněte si, že Intune nemůže zaručit, že při každé významné změně umístění dojde k tomu, aby jailbreaků kontrolu detekce, protože to závisí na síťovém připojení zařízení.
 
-- **Doba platnosti stavu dodržování předpisů (dny)**: Zadejte časové období, během kterého zařízení nahlásí stav všech přijatých zásad dodržování předpisů. Zařízení, která během tohoto období nevrátí stav, se považují za nedodržující předpisy. Výchozí hodnota je 30 dní. Minimální hodnota je 1 den.
+- **Doba platnosti stavu dodržování předpisů (dny)**: Zadejte časové období, během kterého zařízení nahlásí stav všech přijatých zásad dodržování předpisů. Zařízení, která během tohoto období nevrátí stav, se považují za nedodržující předpisy. Výchozí hodnota je 30 dní. Maximální hodnota je 120 dní. Minimální hodnota je 1 den.
 
-  Toto nastavení ukazuje, že **je aktivní** výchozí zásada dodržování předpisů (**zařízení** > **monitorují** > **Nastavení dodržování předpisů**). Úloha na pozadí pro tyto zásady se spouští jednou denně.
+  Toto nastavení ukazuje, že **je aktivní** výchozí zásada dodržování předpisů (**zařízení**  >  **monitorují**  >  **Nastavení dodržování předpisů**). Úloha na pozadí pro tyto zásady se spouští jednou denně.
 
 Pomocí těchto integrovaných zásad můžete tato nastavení monitorovat. Intune také aktualizuje [nebo zjišťuje aktualizace](create-compliance-policy.md#refresh-cycle-times) v různých intervalech v závislosti na platformě zařízení. [Běžné otázky, problémy a řešení se zásadami a profily zařízení v Microsoft Intune](../configuration/device-profile-troubleshoot.md) jsou dobrým prostředkem.
 

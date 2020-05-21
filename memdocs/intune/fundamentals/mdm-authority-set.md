@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eee979ad22a501f8545b93c85790d37ca9648cf7
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: c719c14ba51826c644a68360bacf192cce3cf796
+ms.sourcegitcommit: dba89b827d7f89067dfa75a421119e0c973bb747
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82077899"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83709464"
 ---
 # <a name="set-the-mobile-device-management-authority"></a>Nastavení autority pro správu mobilních zařízení
 
@@ -36,9 +36,9 @@ Možné konfigurace:
 
 - **Spoluspráva Intune** – integrace cloudového řešení Intune s Configuration Manager pro zařízení s Windows 10. Intune můžete konfigurovat pomocí konzoly Configuration Manager. [Konfigurace automatického zápisu zařízení do Intune](https://docs.microsoft.com/configmgr/comanage/tutorial-co-manage-clients#configure-auto-enrollment-of-devices-to-intune) 
 
-- **Správa mobilních zařízení pro Office 365** – jedná se o integraci Office 365 s cloudovým řešením Intune. Intune se konfiguruje v centru pro správu Microsoft 365. Zahrnuje dílčí sadu možností, které jsou dostupné s Intune Standalone. Nastavte autoritu MDM v centru pro správu Microsoft 365.
+- **Správa mobilních zařízení pro Office 365** – jedná se o integraci Office 365 s cloudovým řešením Intune. Intune se konfiguruje v centru pro správu Microsoft 365. Zahrnuje dílčí sadu možností, které jsou dostupné s Intune Standalone. Viz [Nastavení správy mobilních zařízení (MDM) v sadě Office 365](https://support.office.com/en-us/article/Set-up-Mobile-Device-Management-MDM-in-Office-365-dd892318-bc44-4eb1-af00-9db5430be3cd) .
 
-- **Koexistence Office 365 MDM** V tenantovi můžete aktivovat a používat současně službu MDM pro Office 365 i Intune a nastavit autoritu pro správu na Intune nebo MDM pro Office 365 pro každého uživatele, aby využíval, která služba se bude používat ke správě mobilních zařízení. Autorita pro správu uživatele je definovaná na základě licence přiřazené uživateli. Další informace najdete v tématu [Microsoft Intune souběžná existence s MDM pro Office 365](https://blogs.technet.microsoft.com/configmgrdogs/2016/01/04/microsoft-intune-co-existence-with-mdm-for-office-365) .
+- **Koexistence Office 365 MDM** V tenantovi můžete aktivovat a používat současně službu MDM pro Office i Intune a nastavit autoritu pro správu na Intune nebo MDM pro Office pro každého uživatele, který určí, která služba se bude používat ke správě zařízení zaregistrovaných v MDM. Autorita pro správu jednotlivých uživatelů je definována na základě licence přiřazené uživateli: Pokud má uživatel pouze licenci pro Microsoft 365 Basic nebo Standard, budou jejich zařízení spravována MDM pro Office. Pokud má uživatel licenci entitling Intune, jejich zařízení se budou spravovat přes Intune. Pokud přidáte licenci entitling Intune k uživateli, který dřív spravovala služba MDM pro Office, budou jejich zařízení přepnuta do správy Intune. Ujistěte se, že jsou konfigurace Intune přiřazené uživatelům, aby před přepnutím uživatelů do Intune nahradily MDM pro Office, jinak jejich zařízení ztratí konfiguraci MDM pro Office a neobdrží žádné náhrady z Intune.
 
 ## <a name="set-mdm-authority-to-intune"></a>Nastavení autority MDM na Intune
 
@@ -70,14 +70,6 @@ Po přechodu na novou autoritu MDM pravděpodobně nastane přechodná doba (až
 - Zařízení se musí ke službě po změně připojit, aby nastavení z nové autority MDM (Intune samostatně) nahradila stávající nastavení v zařízení.
 - Po změně autority MDM některá základní nastavení (například profily) z předchozí autority MDM zůstanou v zařízení po dobu až sedmi dnů nebo do chvíle, kdy se zařízení ke službě poprvé připojí. Doporučuje se nakonfigurovat aplikace a nastavení (zásady, profily, aplikace atd.) v nové autoritě MDM co nejdříve a nasadit nastavení do skupin uživatelů obsahujících uživatele, kteří mají stávající zaregistrovaná zařízení. Jakmile se zařízení ke službě po změně autority MDM připojí, obdrží nová nastavení z nové autority MDM a zabrání se mezerám ve správě a ochraně.
 - Zařízení, která nemají přidružené uživatele (obvykle když máte scénáře pro iOS/iPadOS Program registrace zařízení nebo hromadné registrace), se nemigrují do nové autority MDM. Pro taková zařízení musíte zavolat podporu, aby vám s přesunem do nové autority MDM pomohla.
-
-## <a name="change-mdm-authority-to-office-365"></a>Změna autority MDM na Office 365
-
-Pokud chcete aktivovat Office 365 MDM (nebo pokud chcete společně s vaší stávající službou Intune povolit koexistenci MDM), přejít [https://protection.office.com](https://protection.office.com)na, vyberte > **zásady** > zabezpečení zařízení **Ochrana před únikem informací****Zobrazit seznam spravovaných zařízení** > .**Pojďme začít**.
-
-Další informace najdete v článku o [nastavení správy mobilních zařízení (MDM) v Office 365](https://support.office.com/en-us/article/Set-up-Mobile-Device-Management-MDM-in-Office-365-dd892318-bc44-4eb1-af00-9db5430be3cd).
-
-Pokud chcete ke správě koncových uživatelů používat jenom Office 365 MDM, aktivujte Office 365 MDM a pak odeberte přiřazené licence Intune a/nebo EMS.
 
 ## <a name="mobile-device-cleanup-after-mdm-certificate-expiration"></a>Vyčištění mobilních zařízení po vypršení platnosti certifikátu MDM
 

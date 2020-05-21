@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 242ec66ef79195533e7362694efb00928769b305
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 919c285366f44a208c1c8d803770b9cbaeb00c5c
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078171"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83429272"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Microsoft Intune App SDK pro iOS – Příručka pro vývojáře
 
@@ -97,9 +97,9 @@ Cílem sady Intune App SDK pro iOS je doplnit do aplikací pro iOS možnosti spr
 
 Pokud chcete povolit sadu Intune App SDK, postupujte takto:
 
-1. **Možnost 1 – rozhraní (doporučeno)**: Pokud používáte Xcode 10.2 + a vaše aplikace/rozšíření obsahuje kód SWIFT, `IntuneMAMSwift.framework` odkaz a `IntuneMAMSwiftStub.framework` cíl: Přetáhněte `IntuneMAMSwift.framework` a `IntuneMAMSwiftStub.framework` do seznamu **vložených binárních souborů** cíle projektu.
+1. **Možnost 1 – rozhraní (doporučeno)**: Pokud používáte Xcode 10.2 + a vaše aplikace/rozšíření obsahuje kód SWIFT, odkaz `IntuneMAMSwift.framework` a `IntuneMAMSwiftStub.framework` cíl: Přetáhněte `IntuneMAMSwift.framework` a `IntuneMAMSwiftStub.framework` do seznamu **vložených binárních souborů** cíle projektu.
 
-    V opačném `IntuneMAM.framework` případě odkaz na cíl: `IntuneMAM.framework` přetáhněte do seznamu **vložených binárních souborů** cíle projektu.
+    V opačném případě odkaz `IntuneMAM.framework` na cíl: Přetáhněte `IntuneMAM.framework` do seznamu **vložených binárních souborů** cíle projektu.
 
    > [!NOTE]
    > Pokud tuto architekturu použijete, nezapomeňte z univerzální architektury před odesláním aplikace do App Storu odstranit architektury simulátoru. Viz část [Odeslání aplikace do App Storu](#submit-your-app-to-the-app-store), kde najdete další podrobnosti.
@@ -109,7 +109,7 @@ Pokud chcete povolit sadu Intune App SDK, postupujte takto:
     ![Intune App SDK iOS: propojené architektury a knihovny](./media/app-sdk-ios/intune-app-sdk-ios-linked-frameworks-and-libraries.png)
 
     Přidejte `-force_load {PATH_TO_LIB}/libIntuneMAM.a` do následujících nastavení a nahraďte přitom `{PATH_TO_LIB}` umístěním Intune App SDK:
-   * Nastavení konfigurace `OTHER_LDFLAGS` sestavení projektu.
+   * `OTHER_LDFLAGS`Nastavení konfigurace sestavení projektu.
    * **Další příznaky linkeru**uživatelského rozhraní Xcode.
 
      > [!NOTE]
@@ -122,7 +122,7 @@ Pokud chcete povolit sadu Intune App SDK, postupujte takto:
 2. Do projektu přidejte tyto modely iOS:  
 -  MessageUI.framework  
 -  Security.framework  
--  MobileCoreServices.framework  
+-  CoreServices. Framework  
 -  SystemConfiguration.framework  
 -  libsqlite3.tbd  
 -  libc++.tbd  
@@ -135,7 +135,7 @@ Pokud chcete povolit sadu Intune App SDK, postupujte takto:
 3. Povolte sdílení řetězce klíčů (pokud ještě není povolené) tak, že v každém cíli projektu kliknete na **Možnosti** a zapnete přepínač **Sdílení řetězce klíčů**. Sdílení řetězce klíčů se vyžaduje pro přechod k dalšímu kroku.
 
    > [!NOTE]
-   > Profil zřizování musí podporovat nové hodnoty sdílení řetězce klíčů. Přístupové skupiny pro řetězce klíčů by měly podporovat zástupné znaky. Můžete to zjistit tak, že otevřete soubor. mobileprovision v textovém editoru, vyhledáte klíčová slova pro **přístup do klíčů**a ověříte, že máte zástupný znak. Příklad:
+   > Profil zřizování musí podporovat nové hodnoty sdílení řetězce klíčů. Přístupové skupiny pro řetězce klíčů by měly podporovat zástupné znaky. Můžete to zjistit tak, že otevřete soubor. mobileprovision v textovém editoru, vyhledáte klíčová slova pro **přístup do klíčů**a ověříte, že máte zástupný znak. Například:
    >
    >  ```xml
    >  <key>keychain-access-groups</key>
@@ -154,7 +154,7 @@ Pokud chcete povolit sadu Intune App SDK, postupujte takto:
     
       ![Intune App SDK iOS: sdílení řetězců klíčů](./media/app-sdk-ios/intune-app-sdk-ios-keychain-sharing.png)
     
-    d. Pokud přímo upravujete soubor nároků a nepoužíváte k vytvoření přístupové skupiny pro řetězce klíčů výše popsané uživatelské rozhraní Xcode, dejte na začátek přístupové skupiny pro řetězce klíčů předponu `$(AppIdentifierPrefix)` (Xcode to dělá automaticky). Příklad:
+    d. Pokud přímo upravujete soubor nároků a nepoužíváte k vytvoření přístupové skupiny pro řetězce klíčů výše popsané uživatelské rozhraní Xcode, dejte na začátek přístupové skupiny pro řetězce klíčů předponu `$(AppIdentifierPrefix)` (Xcode to dělá automaticky). Například:
     
       - `$(AppIdentifierPrefix)com.microsoft.intune.mam`
       - `$(AppIdentifierPrefix)com.microsoft.adalcache`
@@ -194,7 +194,7 @@ Doporučuje se, aby vaše aplikace propojuje nejnovější verzi [ADAL](https://
 
 1. Pokud vaše aplikace nemá definované žádné přístupové skupiny pro řetězce klíčů, přidejte jako první skupinu ID sady aplikace.
 
-2. Pokud chcete povolit jednotné přihlašování (SSO) ADAL/MSAL, `com.microsoft.adalcache` přidejte je do skupin přístupu pro řetězce klíčů.
+2. Pokud chcete povolit jednotné přihlašování (SSO) ADAL/MSAL, přidejte `com.microsoft.adalcache` je do skupin přístupu pro řetězce klíčů.
 
 3. V případě, že explicitně nastavujete skupinu pro sdílený řetězec klíčů mezipaměti ADAL, ujistěte se, že je nastavená na `<appidprefix>.com.microsoft.adalcache`. Pokud ho nepřepíšete, knihovna ADAL tohle nastavení provede za vás. Pokud chcete `com.microsoft.adalcache` nahradit vlastní skupinou řetězce klíčů, uveďte ji pomocí klíče `ADALCacheKeychainGroupOverride` v souboru Info.plist pod IntuneMAMSettings.
 
@@ -210,9 +210,9 @@ Pokud už vaše aplikace používá ADAL nebo MSAL k ověřování a má své vl
 
 Pokud už vaše aplikace používá ADAL nebo MSAL, vyžadují se následující konfigurace:
 
-1. V souboru info. plist projektu ve slovníku **IntuneMAMSettings** s názvem `ADALClientId`klíče zadejte ID klienta, které se má použít pro volání ADAL.
+1. V souboru info. plist projektu ve slovníku **IntuneMAMSettings** s názvem klíče `ADALClientId` Zadejte ID klienta, které se má použít pro volání ADAL.
 
-2. Ve slovníku **IntuneMAMSettings** s názvem `ADALAuthority`klíče také zadejte autoritu Azure AD.
+2. Ve slovníku **IntuneMAMSettings** s názvem klíče také `ADALAuthority` Zadejte autoritu Azure AD.
 
 3. Ve slovníku **IntuneMAMSettings** s názvem klíče `ADALRedirectUri` také zadejte identifikátor URI pro přesměrování, který se má použít pro volání ADALu. Alternativně můžete místo toho zadat `ADALRedirectScheme`, pokud identifikátor URI pro přesměrování dané aplikace je ve formátu `scheme://bundle_id`.
 
@@ -229,12 +229,12 @@ Jak už jsme uvedli, sada Intune App SDK může pro své scénáře ověřován�
 
 ADAL – Intune App SDK bude poskytovat výchozí hodnoty pro parametry ADAL a zpracovávat ověřování proti Azure AD. Vývojáři nemusejí zadávat žádné hodnoty pro výše zmíněná nastavení ADAL. 
 
-MSAL – vývojáři potřebují vytvořit registraci aplikace v AAD s vlastním identifikátorem URI přesměrování v zadaném [formátu.](https://github.com/AzureAD/microsoft-authentication-library-for-objc/wiki/Migrating-from-ADAL-Objective-C-to-MSAL-Objective-C#app-registration-migration) Vývojáři by měli nastavit `ADALClientID` výše `ADALRedirectUri` zmíněná nastavení a, nebo ekvivalentní `aadClientIdOverride` a `aadRedirectUriOverride` vlastnosti `IntuneMAMPolicyManager` instance. Vývojáři by se měli ujistit, že budou dodržovat krok 4 v předchozí části, aby měli přístup k registraci aplikace službě Intune App Protection.
+MSAL – vývojáři potřebují vytvořit registraci aplikace v AAD s vlastním identifikátorem URI přesměrování v zadaném [formátu.](https://github.com/AzureAD/microsoft-authentication-library-for-objc/wiki/Migrating-from-ADAL-Objective-C-to-MSAL-Objective-C#app-registration-migration) Vývojáři by měli nastavit `ADALClientID` `ADALRedirectUri` výše zmíněná nastavení a, nebo ekvivalentní `aadClientIdOverride` a `aadRedirectUriOverride` vlastnosti `IntuneMAMPolicyManager` instance. Vývojáři by se měli ujistit, že budou dodržovat krok 4 v předchozí části, aby měli přístup k registraci aplikace službě Intune App Protection.
 
 ### <a name="special-considerations-when-using-msal"></a>Zvláštní důležité důvody při použití MSAL 
 
-1. **Zkontrolujte si WebView** – doporučujeme, aby aplikace nepoužívaly SFSafariViewController, SFAuthSession nebo ASWebAuthSession jako své WebView pro všechny operace MSAL pro ověřování iniciované aplikacemi. Pokud z nějakého důvodu vaše aplikace musí použít jedno z těchto webzobrazení pro všechny interaktivní operace ověřování MSAL, pak musí být také `SafariViewControllerBlockedOverride` nastavené `true` na `IntuneMAMSettings` slovník v souboru info. plist aplikace. Upozornění: Tato akce vypne SafariViewController zavěšení služby Intune, aby umožnila relaci ověřování. Tím se riziková data nevrátí jinde v aplikaci, pokud aplikace používá SafariViewController k zobrazení podnikových dat, takže by aplikace neměla v žádném z těchto typů WebView zobrazovat podniková data.
-2. **Propojení ADAL a MSAL** – vývojáři musí souhlasit, pokud chtějí v tomto scénáři Intune upřednostnit MSAL přes ADAL. Ve výchozím nastavení Intune bude upřednostňovat podporované verze ADAL pro podporované verze MSAL, pokud jsou oba propojeny za běhu. Intune bude upřednostňovat jenom podporovanou verzi MSAL jenom v případě, že v době první operace ověřování Intune `IntuneMAMUseMSALOnNextLaunch` je `true` v. `NSUserDefaults` Pokud `IntuneMAMUseMSALOnNextLaunch` je `false` nebo není nastavené, Intune se vrátí k výchozímu chování. Jak název navrhuje, změna `IntuneMAMUseMSALOnNextLaunch` se projeví při příštím spuštění.
+1. **Zkontrolujte si WebView** – doporučujeme, aby aplikace nepoužívaly SFSafariViewController, SFAuthSession nebo ASWebAuthSession jako své WebView pro všechny operace MSAL pro ověřování iniciované aplikacemi. Pokud z nějakého důvodu vaše aplikace musí použít jedno z těchto webzobrazení pro všechny interaktivní operace ověřování MSAL, pak musí být také nastavené `SafariViewControllerBlockedOverride` na `true` `IntuneMAMSettings` slovník v souboru info. plist aplikace. Upozornění: Tato akce vypne SafariViewController zavěšení služby Intune, aby umožnila relaci ověřování. Tím se riziková data nevrátí jinde v aplikaci, pokud aplikace používá SafariViewController k zobrazení podnikových dat, takže by aplikace neměla v žádném z těchto typů WebView zobrazovat podniková data.
+2. **Propojení ADAL a MSAL** – vývojáři musí souhlasit, pokud chtějí v tomto scénáři Intune upřednostnit MSAL přes ADAL. Ve výchozím nastavení Intune bude upřednostňovat podporované verze ADAL pro podporované verze MSAL, pokud jsou oba propojeny za běhu. Intune bude upřednostňovat jenom podporovanou verzi MSAL jenom v případě, že v době první operace ověřování Intune `IntuneMAMUseMSALOnNextLaunch` je `true` v `NSUserDefaults` . Pokud `IntuneMAMUseMSALOnNextLaunch` je `false` nebo není nastavené, Intune se vrátí k výchozímu chování. Jak název navrhuje, změna se projeví `IntuneMAMUseMSALOnNextLaunch` při příštím spuštění.
 
 
 ## <a name="configure-settings-for-the-intune-app-sdk"></a>Konfigurace nastavení pro sadu Intune App SDK
@@ -247,34 +247,34 @@ Některá z těchto nastavení jsou možná popsaná v předchozích částech a
 
 Nastavení  | Typ  | Definice | Povinné?
 --       |  --   |   --       |  --
-ADALClientId  | Řetězec  | Identifikátor klienta Azure AD aplikace | Vyžaduje se pro všechny aplikace, které používají MSAL a všechny aplikace ADAL, které přistupují k prostředku AAD bez Intune. |
-ADALAuthority | Řetězec | Autorita Azure AD aplikace se používá. Měli byste použít vlastní prostředí, ve kterém jsou nakonfigurované účty AAD. | Vyžaduje se, pokud aplikace používá ADAL nebo MSAL k přístupu k prostředku AAD bez Intune. Pokud tato hodnota chybí, použije se výchozí hodnota Intune.|
-ADALRedirectUri  | Řetězec  | Identifikátor URI pro přesměrování Azure AD aplikace. | ADALRedirectUri nebo ADALRedirectScheme se vyžadují pro všechny aplikace, které používají MSAL a všechny aplikace ADAL, které přistupují k prostředku AAD bez Intune.  |
-ADALRedirectScheme  | Řetězec  | Schéma přesměrování Azure AD aplikace Dá se použít místo ADALRedirectUri, pokud má aplikace identifikátor URI pro přesměrování ve formátu `scheme://bundle_id`. | ADALRedirectUri nebo ADALRedirectScheme se vyžadují pro všechny aplikace, které používají MSAL a všechny aplikace ADAL, které přistupují k prostředku AAD bez Intune. |
+ADALClientId  | String  | Identifikátor klienta Azure AD aplikace | Vyžaduje se pro všechny aplikace, které používají MSAL a všechny aplikace ADAL, které přistupují k prostředku AAD bez Intune. |
+ADALAuthority | String | Autorita Azure AD aplikace se používá. Měli byste použít vlastní prostředí, ve kterém jsou nakonfigurované účty AAD. | Vyžaduje se, pokud aplikace používá ADAL nebo MSAL k přístupu k prostředku AAD bez Intune. Pokud tato hodnota chybí, použije se výchozí hodnota Intune.|
+ADALRedirectUri  | String  | Identifikátor URI pro přesměrování Azure AD aplikace. | ADALRedirectUri nebo ADALRedirectScheme se vyžadují pro všechny aplikace, které používají MSAL a všechny aplikace ADAL, které přistupují k prostředku AAD bez Intune.  |
+ADALRedirectScheme  | String  | Schéma přesměrování Azure AD aplikace Dá se použít místo ADALRedirectUri, pokud má aplikace identifikátor URI pro přesměrování ve formátu `scheme://bundle_id`. | ADALRedirectUri nebo ADALRedirectScheme se vyžadují pro všechny aplikace, které používají MSAL a všechny aplikace ADAL, které přistupují k prostředku AAD bez Intune. |
 ADALLogOverrideDisabled | Logická hodnota  | Určuje, jestli SDK bude všechny protokoly ADAL/MSAL (včetně případných volání ADAL z aplikace) směrovat do vlastního souboru protokolu. Výchozí hodnota je NE. Nastavte na Ano, pokud aplikace nastaví vlastní zpětné volání protokolu ADAL/MSAL. | Nepovinný parametr. |
-ADALCacheKeychainGroupOverride | Řetězec  | Určuje skupinu řetězce klíčů, která se má použít pro mezipaměť ADAL/MSAL místo com. Microsoft. adalcache. Všimněte si, že nemá předponu App-ID. Předpona se použije u zadaného řetězce za běhu. | Nepovinný parametr. |
+ADALCacheKeychainGroupOverride | String  | Určuje skupinu řetězce klíčů, která se má použít pro mezipaměť ADAL/MSAL místo com. Microsoft. adalcache. Všimněte si, že nemá předponu App-ID. Předpona se použije u zadaného řetězce za běhu. | Nepovinný parametr. |
 AppGroupIdentifiers | Pole řetězců  | Pole skupin aplikací z části com. Apple. Security. Application-Groups – oprávnění aplikace | Vyžaduje se, když aplikace využívá skupiny aplikací. |
-ContainingAppBundleId | Řetězec | Určuje ID sady, která obsahuje rozšíření aplikace. | Vyžaduje se rozšíření pro iOS. |
+ContainingAppBundleId | String | Určuje ID sady, která obsahuje rozšíření aplikace. | Vyžaduje se rozšíření pro iOS. |
 DebugSettingsEnabled| Logická hodnota | Pokud je nastaveno na ANO, dají se uplatnit testovací zásady v rámci sady Nastavení. Publikované aplikace by *neměly* mít tohle nastavení povolené. | Nepovinný parametr. Výchozí hodnota je NE. |
 AutoEnrollOnLaunch| Logická hodnota| Určuje, zda se má aplikace pokusit o automatickou registraci při spuštění, pokud se zjistí existující spravovaná identita a aplikace se ještě nezaregistrovala. Výchozí hodnota je NE. <br><br> Poznámky: Pokud se nenalezne žádná spravovaná identita nebo v mezipaměti ADAL/MSAL není k dispozici žádný platný token pro identitu, pokus o registraci selže bez výzvy k zadání přihlašovacích údajů, pokud aplikace také nenastaví MAMPolicyRequired na Ano. | Nepovinný parametr. Výchozí hodnota je NE. |
 MAMPolicyRequired| Logická hodnota| Určuje, jestli se aplikaci zabrání ve spuštění, pokud nebude mít zásady ochrany aplikací Intune. Výchozí hodnota je NE. <br><br> Poznámka: Aplikace není možné odesílat do App Storu, pokud mají možnost MAMPolicyRequired nastavenou na ANO. Při nastavení možnosti MAMPolicyRequired na ANO je vhodné nastavit na ANO také možnost AutoEnrollOn. | Nepovinný parametr. Výchozí hodnota je NE. |
 MAMPolicyWarnAbsent | Logická hodnota| Určuje, jestli aplikace při spuštění upozorní uživatele v případě, že nebude mít zásady ochrany aplikací Intune. <br><br> Poznámka: Po zavření upozornění budou uživatelé i nadále moci používat aplikaci bez zásad. | Nepovinný parametr. Výchozí hodnota je NE. |
 MultiIdentity | Logická hodnota| Určuje, jestli aplikace umožňuje rozlišovat více identit. | Nepovinný parametr. Výchozí hodnota je NE. |
 SafariViewControllerBlockedOverride | Logická hodnota| Zakáže SafariViewController zavěšení služby Intune, aby povolovala ověřování MSAL prostřednictvím SFSafariViewController, SFAuthSession nebo ASWebAuthSession. | Nepovinný parametr. Výchozí hodnota je NE. Upozornění: při nesprávném použití může dojít k úniku dat. Povolte pouze v případě nezbytně nutného. Podrobnosti najdete v tématu [zvláštní informace o použití MSAL](#special-considerations-when-using-msal) .  |
-SplashIconFile <br>SplashIconFile~ipad | Řetězec  | Určuje soubor úvodní (spouštěcí) ikony Intune. | Nepovinný parametr. |
+SplashIconFile <br>SplashIconFile~ipad | String  | Určuje soubor úvodní (spouštěcí) ikony Intune. | Nepovinný parametr. |
 SplashDuration | Číslo | Minimální doba v sekundách, po kterou se při spuštění aplikace bude zobrazovat úvodní obrazovka Intune. Výchozí hodnota je 1,5. | Nepovinný parametr. |
-BackgroundColor| Řetězec| Určuje barvu pozadí pro součásti uživatelského rozhraní sady Intune SDK. Zadat je možné šestnáctkový řetězec RGB ve formátu #XXXXXX, kde každé X může mít hodnotu 0–9 nebo A–F. Symbol křížku můžete vynechat.   | Nepovinný parametr. Výchozím nastavením je barva pozadí systému, která se může lišit v různých verzích iOS a v závislosti na nastavení tmavého režimu iOS. |
-ForegroundColor| Řetězec| Určuje barvu popředí pro součásti uživatelského rozhraní sady Intune SDK, jako je barva textu. Zadat je možné šestnáctkový řetězec RGB ve formátu #XXXXXX, kde každé X může mít hodnotu 0–9 nebo A–F. Symbol křížku můžete vynechat.  | Nepovinný parametr. Výchozím nastavením je barva popisku systému, která se může lišit v různých verzích iOS a v závislosti na nastavení tmavého režimu iOS. |
-AccentColor | Řetězec| Určuje barvu zvýraznění pro součásti uživatelského rozhraní sady Intune SDK, například barvu textu tlačítka a zvýraznění pole připnutí. Zadat je možné šestnáctkový řetězec RGB ve formátu #XXXXXX, kde každé X může mít hodnotu 0–9 nebo A–F. Symbol křížku můžete vynechat.| Nepovinný parametr. Výchozí hodnota je systémová modrá. |
-SecondaryBackgroundColor| Řetězec| Určuje sekundární barvu pozadí pro obrazovky MTD. Zadat je možné šestnáctkový řetězec RGB ve formátu #XXXXXX, kde každé X může mít hodnotu 0–9 nebo A–F. Symbol křížku můžete vynechat.   | Nepovinný parametr. Výchozí hodnota je bílá. |
-SecondaryForegroundColor| Řetězec| Určuje sekundární barvu popředí pro obrazovky MTD, jako je barva poznámky pod čarou. Zadat je možné šestnáctkový řetězec RGB ve formátu #XXXXXX, kde každé X může mít hodnotu 0–9 nebo A–F. Symbol křížku můžete vynechat.  | Nepovinný parametr. Výchozí hodnota je šedá. |
+BackgroundColor| String| Určuje barvu pozadí pro součásti uživatelského rozhraní sady Intune SDK. Zadat je možné šestnáctkový řetězec RGB ve formátu #XXXXXX, kde každé X může mít hodnotu 0–9 nebo A–F. Symbol křížku můžete vynechat.   | Nepovinný parametr. Výchozím nastavením je barva pozadí systému, která se může lišit v různých verzích iOS a v závislosti na nastavení tmavého režimu iOS. |
+ForegroundColor| String| Určuje barvu popředí pro součásti uživatelského rozhraní sady Intune SDK, jako je barva textu. Zadat je možné šestnáctkový řetězec RGB ve formátu #XXXXXX, kde každé X může mít hodnotu 0–9 nebo A–F. Symbol křížku můžete vynechat.  | Nepovinný parametr. Výchozím nastavením je barva popisku systému, která se může lišit v různých verzích iOS a v závislosti na nastavení tmavého režimu iOS. |
+AccentColor | String| Určuje barvu zvýraznění pro součásti uživatelského rozhraní sady Intune SDK, například barvu textu tlačítka a zvýraznění pole připnutí. Zadat je možné šestnáctkový řetězec RGB ve formátu #XXXXXX, kde každé X může mít hodnotu 0–9 nebo A–F. Symbol křížku můžete vynechat.| Nepovinný parametr. Výchozí hodnota je systémová modrá. |
+SecondaryBackgroundColor| String| Určuje sekundární barvu pozadí pro obrazovky MTD. Zadat je možné šestnáctkový řetězec RGB ve formátu #XXXXXX, kde každé X může mít hodnotu 0–9 nebo A–F. Symbol křížku můžete vynechat.   | Nepovinný parametr. Výchozí hodnota je bílá. |
+SecondaryForegroundColor| String| Určuje sekundární barvu popředí pro obrazovky MTD, jako je barva poznámky pod čarou. Zadat je možné šestnáctkový řetězec RGB ve formátu #XXXXXX, kde každé X může mít hodnotu 0–9 nebo A–F. Symbol křížku můžete vynechat.  | Nepovinný parametr. Výchozí hodnota je šedá. |
 SupportsDarkMode| Logická hodnota | Určuje, jestli má barevné schéma uživatelského rozhraní Intune SDK sledovat nastavení režimu tmavého systému, pokud není nastavená žádná explicitní hodnota pro BackgroundColor/ForegroundColor/AccentColor. | Nepovinný parametr. Výchozí hodnota je Ano. |
 MAMTelemetryDisabled| Logická hodnota| Určuje, jestli SDK nebude odesílat žádná telemetrická data do back-endu.| Nepovinný parametr. Výchozí hodnota je NE. |
 MAMTelemetryUsePPE | Logická hodnota | Určuje, jestli sada MAM SDK bude odesílat data do back-endu telemetrie PPE. Použijte při testování aplikací se zásadami Intune, aby se testovací telemetrická data nesmíchala se zákaznickými. | Nepovinný parametr. Výchozí hodnota je NE. |
-MaxFileProtectionLevel | Řetězec | Nepovinný parametr. Povoluje aplikaci určit maximální úroveň, kterou `NSFileProtectionType` může podporovat. Tato hodnota přepíše zásady odeslané službou, pokud je příslušná úroveň vyšší než ta, kterou aplikace může podporovat. Možné hodnoty: `NSFileProtectionComplete`, `NSFileProtectionCompleteUnlessOpen`, `NSFileProtectionCompleteUntilFirstUserAuthentication`, `NSFileProtectionNone`.|
+MaxFileProtectionLevel | String | Nepovinný parametr. Povoluje aplikaci určit maximální úroveň, kterou `NSFileProtectionType` může podporovat. Tato hodnota přepíše zásady odeslané službou, pokud je příslušná úroveň vyšší než ta, kterou aplikace může podporovat. Možné hodnoty: `NSFileProtectionComplete`, `NSFileProtectionCompleteUnlessOpen`, `NSFileProtectionCompleteUntilFirstUserAuthentication`, `NSFileProtectionNone`.|
 OpenInActionExtension | Logická hodnota | Pro rozšíření akce Open in se nastavuje na ANO. Další informace najdete v části Sdílení dat přes UIActivityViewController. |
 WebViewHandledURLSchemes | Pole řetězců | Určuje schémata URL zpracovávaná komponentami WebView vaší aplikace. | Povinný parametr, pokud aplikace používá komponenty WebView, které zpracovávají adresy URL prostřednictvím odkazů nebo JavaScriptu. |
-DocumentBrowserFileCachePath | Řetězec | Pokud vaše aplikace používá [`UIDocumentBrowserViewController`](https://developer.apple.com/documentation/uikit/uidocumentbrowserviewcontroller?language=objc) k procházení souborů v různých poskytovatelích souborů, můžete tuto cestu nastavit relativně k domovskému adresáři v izolovaném prostoru aplikace, aby sada Intune SDK mohla do této složky vyřadit dešifrované spravované soubory. | Nepovinný parametr. Výchozím nastavením je `/Documents/` adresář. |
+DocumentBrowserFileCachePath | String | Pokud vaše aplikace používá [`UIDocumentBrowserViewController`](https://developer.apple.com/documentation/uikit/uidocumentbrowserviewcontroller?language=objc) k procházení souborů v různých poskytovatelích souborů, můžete tuto cestu nastavit relativně k domovskému adresáři v izolovaném prostoru aplikace, aby sada Intune SDK mohla do této složky vyřadit dešifrované spravované soubory. | Nepovinný parametr. Výchozím nastavením je `/Documents/` adresář. |
 VerboseLoggingEnabled | Logická hodnota | Pokud je tato hodnota nastavená na Ano, Intune se přihlásí do režimu podrobného protokolování. | Nepovinný parametr. Výchozí hodnota je ne. |
 
 ## <a name="receive-app-protection-policy"></a>Příjem zásad ochrany aplikací
@@ -288,7 +288,7 @@ Kvůli příjmu zásad ochrany aplikací Intune musí aplikace inicializovat ž�
 
 ### <a name="apps-that-already-use-adal-or-msal"></a>Aplikace, které už používají ADAL nebo MSAL
 
-Aplikace, které už používají ADAL nebo MSAL, `registerAndEnrollAccount` by měly volat metodu `IntuneMAMEnrollmentManager` na instanci po úspěšném ověření uživatele:
+Aplikace, které už používají ADAL nebo MSAL, by měly volat `registerAndEnrollAccount` metodu na `IntuneMAMEnrollmentManager` instanci po úspěšném ověření uživatele:
 
 ```objc
 /*
@@ -475,18 +475,18 @@ IntuneMAMDataProtectionManager.h | Třída IntuneMAMDataProtectionManager zveře
 
 Intune umožňuje správcům IT určit, které účty může uživatel přihlásit. Aplikace se můžou v sadě Intune App SDK zadat dotaz na zadaný seznam povolených účtů a pak zajistit, aby se do zařízení přihlásily jenom povolené účty.
 
-K dotazování na povolené účty by měla aplikace kontrolovat `allowedAccounts` vlastnost v. `IntuneMAMEnrollmentManager` `allowedAccounts` Vlastnost je buď pole obsahující povolené účty, nebo hodnotu Nil. Pokud má vlastnost hodnotu Nil, nebyly zadány žádné povolené účty.
+K dotazování na povolené účty by měla aplikace kontrolovat `allowedAccounts` vlastnost v `IntuneMAMEnrollmentManager` . `allowedAccounts`Vlastnost je buď pole obsahující povolené účty, nebo hodnotu Nil. Pokud má vlastnost hodnotu Nil, nebyly zadány žádné povolené účty.
 
-Aplikace mohou také reagovat na změny `allowedAccounts` vlastnosti tím, že proreagují `IntuneMAMAllowedAccountsDidChangeNotification` oznámení. Oznámení se publikuje vždy, `allowedAccounts` když se změní vlastnost v hodnotě.
+Aplikace mohou také reagovat na změny vlastnosti tím, že proreagují `allowedAccounts` `IntuneMAMAllowedAccountsDidChangeNotification` oznámení. Oznámení se publikuje vždy, když se `allowedAccounts` změní vlastnost v hodnotě.
 
 ## <a name="implement-save-as-and-open-from-controls"></a>Implementace ovládacích prvků Uložit jako a otevřít z
 
-Intune umožňuje správcům IT vybrat, do kterých umístění úložiště může spravovaná aplikace ukládat data, nebo je otevírat. Aplikace se můžou do sady Intune MAM SDK zadat dotaz na povolená umístění úložiště s uložením do úložiště `isSaveToAllowedForLocation` pomocí `IntuneMAMPolicy.h`rozhraní API definovaného v. Aplikace se také můžou do sady Intune MAM SDK dotázat, aby povolily otevřená umístění úložiště pomocí `isOpenFromAllowedForLocation` rozhraní API definovaného `IntuneMAMPolicy.h`v.
+Intune umožňuje správcům IT vybrat, do kterých umístění úložiště může spravovaná aplikace ukládat data, nebo je otevírat. Aplikace se můžou do sady Intune MAM SDK zadat dotaz na povolená umístění úložiště s uložením do úložiště pomocí `isSaveToAllowedForLocation` rozhraní API definovaného v `IntuneMAMPolicy.h` . Aplikace se také můžou do sady Intune MAM SDK dotázat, aby povolily otevřená umístění úložiště pomocí `isOpenFromAllowedForLocation` rozhraní API definovaného v `IntuneMAMPolicy.h` .
 
 Před uložením spravovaných dat do cloudového úložiště nebo místního umístění musí aplikace v rozhraní API `isSaveToAllowedForLocation` zjistit, jestli do nich správce IT povolil data ukládat.
-Před otevřením dat do aplikace z cloudového úložiště nebo z místního umístění musí aplikace pomocí `isOpenFromAllowedForLocation` rozhraní API zjistit, jestli má správce IT povolená data, která se mají z nich otevřít.
+Před otevřením dat do aplikace z cloudového úložiště nebo z místního umístění musí aplikace pomocí rozhraní API zjistit, `isOpenFromAllowedForLocation` jestli má správce IT povolená data, která se mají z nich otevřít.
 
-Pokud aplikace používají rozhraní `isSaveToAllowedForLocation` API `isOpenFromAllowedForLocation` nebo, musí je v případě, že je k dispozici, předat do hlavního názvu uživatele (UPN) pro umístění úložiště.
+Pokud aplikace používají `isSaveToAllowedForLocation` `isOpenFromAllowedForLocation` rozhraní API nebo, musí je v případě, že je k dispozici, předat do hlavního názvu uživatele (UPN) pro umístění úložiště.
 
 ### <a name="supported-save-locations"></a>Podporovaná umístění pro ukládání
 
@@ -502,11 +502,11 @@ Aplikace by měly konstanty v `isSaveToAllowedForLocation` používat k zjiště
 
 Konstanta `IntuneMAMSaveLocationLocalDrive` by se měla použít, když aplikace ukládá data do jakéhokoli umístění na místním zařízení.
 
-Pokud není účet pro cílové umístění známý, `nil` měl by být předán. `IntuneMAMSaveLocationLocalDrive` Umístění by mělo být vždy spárováno s `nil` účtem.
+Pokud není účet pro cílové umístění známý, `nil` měl by být předán. `IntuneMAMSaveLocationLocalDrive`Umístění by mělo být vždy spárováno s `nil` účtem.
 
 ### <a name="supported-open-locations"></a>Podporovaná otevřená umístění
 
-`isOpenFromAllowedForLocation` Rozhraní API poskytuje konstanty ke kontrole, jestli správce IT povoluje otevírání dat z následujících umístění definovaných v `IntuneMAMPolicy.h`.
+`isOpenFromAllowedForLocation`Rozhraní API poskytuje konstanty ke kontrole, jestli správce IT povoluje otevírání dat z následujících umístění definovaných v `IntuneMAMPolicy.h` .
 
 * IntuneMAMOpenLocationOther
 * IntuneMAMOpenLocationOneDriveForBusiness
@@ -515,27 +515,27 @@ Pokud není účet pro cílové umístění známý, `nil` měl by být předán
 * IntuneMAMOpenLocationLocalStorage
 * IntuneMAMOpenLocationAccountDocument
 
-Aplikace by měly konstanty v `isOpenFromAllowedForLocation` nástroji použít ke kontrole, jestli je možné data otevřít z umístění považovaných za "spravovaná", jako je OneDrive pro firmy, nebo "osobní". Kromě toho by se mělo rozhraní API použít, když aplikace nemůže zjistit, jestli je umístění "spravované", nebo "osobní".
+Aplikace by měly konstanty v nástroji použít `isOpenFromAllowedForLocation` ke kontrole, jestli je možné data otevřít z umístění považovaných za "spravovaná", jako je OneDrive pro firmy, nebo "osobní". Kromě toho by se mělo rozhraní API použít, když aplikace nemůže zjistit, jestli je umístění "spravované", nebo "osobní".
 
-`IntuneMAMOpenLocationCamera` Konstanta by se měla použít, když aplikace otevírá data z fotoaparátu nebo alba fotografií.
+`IntuneMAMOpenLocationCamera`Konstanta by se měla použít, když aplikace otevírá data z fotoaparátu nebo alba fotografií.
 
-Konstanta by se měla použít, `IntuneMAMOpenLocationLocalStorage` když aplikace otevírá data z libovolného umístění na místním zařízení.
+`IntuneMAMOpenLocationLocalStorage`Konstanta by se měla použít, když aplikace otevírá data z libovolného umístění na místním zařízení.
 
-`IntuneMAMOpenLocationAccountDocument` Konstanta by se měla použít, když aplikace otevírá dokument, který má identitu spravovaného účtu (viz část sdílená data níže).
+`IntuneMAMOpenLocationAccountDocument`Konstanta by se měla použít, když aplikace otevírá dokument, který má identitu spravovaného účtu (viz část sdílená data níže).
 
-Pokud není účet pro zdrojové umístění znám, `nil` měla by být předána. Umístění `IntuneMAMOpenLocationLocalStorage` a `IntuneMAMOpenLocationCamera` by měly vždy být párovány s `nil` účtem.
+Pokud není účet pro zdrojové umístění znám, `nil` měla by být předána. `IntuneMAMOpenLocationLocalStorage`Umístění a `IntuneMAMOpenLocationCamera` by měly vždy být párovány s `nil` účtem.
 
 ### <a name="unknown-or-unlisted-locations"></a>Neznámé nebo neuvedené umístění
 
-Pokud požadované umístění není uvedeno v výčtech `IntuneMAMSaveLocation` nebo `IntuneMAMOpenLocation` nebo není známo, je třeba použít jedno ze dvou umístění.
-* Pokud je pro uložení k dispozici spravovaný účet, `IntuneMAMSaveLocationAccountDocument` umístění by mělo být použito (`IntuneMAMOpenLocationAccountDocument` pro otevřené).
-* V opačném případě `IntuneMAMSaveLocationOther` použijte umístění`IntuneMAMOpenLocationOther` (pro Open).
+Pokud požadované umístění není uvedeno v `IntuneMAMSaveLocation` `IntuneMAMOpenLocation` výčtech nebo nebo není známo, je třeba použít jedno ze dvou umístění.
+* Pokud je pro uložení k dispozici spravovaný účet, `IntuneMAMSaveLocationAccountDocument` umístění by mělo být použito ( `IntuneMAMOpenLocationAccountDocument` pro otevřené).
+* V opačném případě použijte `IntuneMAMSaveLocationOther` umístění ( `IntuneMAMOpenLocationOther` pro Open).
 
-Je důležité odlišit jasné rozlišení mezi spravovaným účtem a účtem, který sdílí hlavní název uživatele spravovaného účtu. Například spravovaný účet s UPN "user@contoso.com" přihlášený k OneDrivu není stejný jako účet, který má hlavní název uživatele (user@contoso.comUPN) "" přihlášený k Dropboxu. Pokud se přihlašujete k neznámé nebo neuvedené službě, přihlaste se ke spravovanému účtuuser@contoso.com(například "" přihlášenému na OneDrive), mělo `AccountDocument` by být reprezentované umístěním. Pokud se neznámá nebo neuvedená služba přihlásí prostřednictvím jiného účtu (např. ""user@contoso.compřihlášení k Dropboxu "), nepřistupuje k umístění se spravovaným účtem a mělo by být reprezentované jeho `Other` umístěním.
+Je důležité odlišit jasné rozlišení mezi spravovaným účtem a účtem, který sdílí hlavní název uživatele spravovaného účtu. Například spravovaný účet s UPN " user@contoso.com " přihlášený k OneDrivu není stejný jako účet, který má hlavní název uživatele (UPN) " user@contoso.com " přihlášený k Dropboxu. Pokud se přihlašujete k neznámé nebo neuvedené službě, přihlaste se ke spravovanému účtu (například " user@contoso.com " přihlášenému na OneDrive), mělo by být reprezentované `AccountDocument` umístěním. Pokud se neznámá nebo neuvedená služba přihlásí prostřednictvím jiného účtu (např. " user@contoso.com " přihlášení k Dropboxu "), nepřistupuje k umístění se spravovaným účtem a mělo by být reprezentované jeho `Other` umístěním.
 
 ### <a name="sharing-blocked-alert"></a>Sdílení blokované výstrahy
 
-Pomocná funkce uživatelského rozhraní se dá použít, když `isSaveToAllowedForLocation` se `isOpenFromAllowedForLocation` volá rozhraní API nebo, které se najde, aby se zablokoval akce Uložit/otevřít. Pokud aplikace chce uživateli upozornit, že akce byla zablokována, může zavolat `showSharingBlockedMessage` rozhraní API definované v `IntuneMAMUIHelper.h` a prezentovat tak zobrazení výstrah s obecnou zprávou.
+Pomocná funkce uživatelského rozhraní se dá použít, když `isSaveToAllowedForLocation` `isOpenFromAllowedForLocation` se volá rozhraní API nebo, které se najde, aby se zablokoval akce Uložit/otevřít. Pokud aplikace chce uživateli upozornit, že akce byla zablokována, může zavolat `showSharingBlockedMessage` rozhraní API definované v `IntuneMAMUIHelper.h` a prezentovat tak zobrazení výstrah s obecnou zprávou.
 
 ## <a name="share-data-via-uiactivityviewcontroller"></a>Sdílení dat přes UIActivityViewController
 
@@ -543,9 +543,9 @@ Od verze 8.0.2 může sada Intune App SDK filtrovat akce `UIActivityViewControll
 
 ### <a name="copy-to-actions"></a>Akce kopírovat do
 
-Při sdílení dokumentů přes `UIActivityViewController` a `UIDocumentInteractionController`iOS se zobrazí akce kopírovat do pro každou aplikaci, která podporuje otevření sdíleného dokumentu. Aplikace deklarují podporované typů dokumentů prostřednictvím nastavení `CFBundleDocumentTypes` ve svém souboru Info.plist. Pokud zásady zakazují sdílení s nespravovanými aplikacemi, nebude už tento typ sdílení k dispozici. Místo toho bude potřeba přidat do aplikace rozšíření akce, které se nevztahuje k uživatelskému rozhraní, a propojit ho se sadou Intune App SDK. Rozšíření akce je jenom zástupná procedura. Sada SDK implementuje chování sdílení souborů. Postupujte následovně:
+Při sdílení dokumentů přes `UIActivityViewController` a `UIDocumentInteractionController` iOS se zobrazí akce kopírovat do pro každou aplikaci, která podporuje otevření sdíleného dokumentu. Aplikace deklarují podporované typů dokumentů prostřednictvím nastavení `CFBundleDocumentTypes` ve svém souboru Info.plist. Pokud zásady zakazují sdílení s nespravovanými aplikacemi, nebude už tento typ sdílení k dispozici. Místo toho bude potřeba přidat do aplikace rozšíření akce, které se nevztahuje k uživatelskému rozhraní, a propojit ho se sadou Intune App SDK. Rozšíření akce je jenom zástupná procedura. Sada SDK implementuje chování sdílení souborů. Postupujte následovně:
 
-1. Vaše aplikace musí mít alespoň jednu schemeURL definovanou v souboru info. plist `CFBundleURLTypes` společně se svým `-intunemam` protějškem. Příklad:
+1. Vaše aplikace musí mít alespoň jednu schemeURL definovanou v souboru info. plist `CFBundleURLTypes` společně se svým `-intunemam` protějškem. Například:
     ```objc
     <key>CFBundleURLSchemes</key>
     <array>
@@ -554,7 +554,7 @@ Při sdílení dokumentů přes `UIActivityViewController` a `UIDocumentInteract
     </array>
     ```
 
-2. Vaše aplikace i rozšíření akcí musí sdílet aspoň jednu skupinu aplikací a skupina aplikací musí být uvedená v `AppGroupIdentifiers` poli pod slovníkem IntuneMAMSettings aplikace a příponou rozšíření.
+2. Vaše aplikace i rozšíření akcí musí sdílet aspoň jednu skupinu aplikací a skupina aplikací musí být uvedená v poli `AppGroupIdentifiers` pod slovníkem IntuneMAMSettings aplikace a příponou rozšíření.
 
 3. Vaše aplikace i rozšíření akcí musí mít schopnost sdílení řetězce klíčů a sdílet skupinu řetězců `com.microsoft.intune.mam` klíčů.
 
@@ -568,7 +568,7 @@ Při sdílení dokumentů přes `UIActivityViewController` a `UIDocumentInteract
 
 6. V části IntuneMAMSettings v souboru info. plist rozšíření přidejte logickou hodnotu s názvem `OpenInActionExtension` Yes.
 
-7. Nakonfigurujte `NSExtensionActivationRule` tak, aby podporovalo jeden soubor a všechny typy z aplikace `CFBundleDocumentTypes` s `com.microsoft.intune.mam`předponou. Pokud například aplikace podporuje public.text a public.image, bude pravidlo aktivace vypadat takto:
+7. Nakonfigurujte `NSExtensionActivationRule` tak, aby podporovalo jeden soubor a všechny typy z aplikace `CFBundleDocumentTypes` s předponou `com.microsoft.intune.mam` . Pokud například aplikace podporuje public.text a public.image, bude pravidlo aktivace vypadat takto:
 
     ```objc
     SUBQUERY (
@@ -653,7 +653,7 @@ Další informace možnostech rozhraní Graph API najdete v [referenčních info
 
 Další informace o tom, jak vytvořit zásady konfigurace cílené aplikace v MAM v iOS, najdete v části v tématu Konfigurace cílené aplikace MAM v článku [Jak používat Microsoft Intune zásady konfigurace aplikací pro iOS/iPadOS](../apps/app-configuration-policies-use-ios.md).
 
-## <a name="telemetry"></a>Telemetrie
+## <a name="telemetry"></a>Telemetrická data
 
 Intune App SDK pro iOS ve výchozím nastavení shromažďuje telemetrii týkající se následujících typů událostí:
 
@@ -707,7 +707,7 @@ Aplikace případně můžou identitu vlastníka souboru nastavit explicitně po
 
 Pokud aplikace vytvoří soubory, které mají data z spravovaných i nespravovaných uživatelů, zodpovídá za šifrování dat spravovaného uživatele. Data můžete šifrovat pomocí rozhraní API `protect` a `unprotect` v `IntuneMAMDataProtectionManager`.
 
-Metoda `protect` přijímá identitu spravovaného i nespravovaného uživatele. Pokud je uživatel spravován, data budou zašifrovaná. Pokud uživatel spravován není, hlavička přidaná k datům zašifruje identitu, ale data zašifrovaná nebudou. K načtení vlastníka dat `protectionInfo` lze použít metodu.
+Metoda `protect` přijímá identitu spravovaného i nespravovaného uživatele. Pokud je uživatel spravován, data budou zašifrovaná. Pokud uživatel spravován není, hlavička přidaná k datům zašifruje identitu, ale data zašifrovaná nebudou. `protectionInfo`K načtení vlastníka dat lze použít metodu.
 
 ### <a name="share-extensions"></a>Rozšíření pro sdílení
 
@@ -745,10 +745,10 @@ Ve výchozím nastavení se všechny aplikace považují za aplikace s jedinou i
     Tato metoda se volá z vlákna na pozadí. Aplikace by neměly vracet hodnotu, dokud se neodeberou všechna data uživatele (s výjimkou souborů, u kterých aplikace vrací hodnotu FALSE).
 
 ## <a name="siri-intents"></a>Siri záměry
-Pokud se vaše aplikace integruje s Siri záměry, nezapomeňte si přečíst poznámky pro `areSiriIntentsAllowed` v `IntuneMAMPolicy.h` tématu, kde najdete pokyny k podpoře tohoto scénáře. 
+Pokud se vaše aplikace integruje s Siri záměry, nezapomeňte si přečíst poznámky pro v tématu `areSiriIntentsAllowed` , `IntuneMAMPolicy.h` kde najdete pokyny k podpoře tohoto scénáře. 
     
 ## <a name="notifications"></a>Oznámení
-Pokud vaše aplikace obdrží oznámení, nezapomeňte si přečíst poznámky pro `notificationPolicy` v `IntuneMAMPolicy.h` tématu, kde najdete pokyny k podpoře tohoto scénáře.  Doporučuje se, aby se aplikace registrovaly `IntuneMAMPolicyDidChangeNotification` na `IntuneMAMPolicyManager.h`popsanou v tématu a komunikovaly `UNNotificationServiceExtension` s ní prostřednictvím řetězce klíčů.
+Pokud vaše aplikace obdrží oznámení, nezapomeňte si přečíst poznámky pro v tématu, `notificationPolicy` `IntuneMAMPolicy.h` kde najdete pokyny k podpoře tohoto scénáře.  Doporučuje se, aby se aplikace registrovaly na `IntuneMAMPolicyDidChangeNotification` popsanou v tématu `IntuneMAMPolicyManager.h` a komunikovaly s ní `UNNotificationServiceExtension` prostřednictvím řetězce klíčů.
 ## <a name="displaying-web-content-within-application"></a>Zobrazení webového obsahu v rámci aplikace
 Pokud má vaše aplikace možnost zobrazovat weby v rámci webového zobrazení a zobrazované webové stránky mají možnost přejít na libovolné weby, aplikace je responisble pro nastavení aktuální identity tak, aby se spravovaná data nedala prostřednictvím webového zobrazení úniková. Příklady tohoto příkladu jsou webové stránky navrhnout funkci nebo zpětná vazba, které mají buď přímé nebo nepřímé odkazy na vyhledávací web.
 Aplikace s více identitami by měly volat IntuneMAMPolicyManager setUIPolicyIdentity před zobrazením webového zobrazení v prázdném řetězci. Po ukončení webového zobrazení by aplikace měla zavolat setUIPolicyIdentity na předání v aktuální identitě.
@@ -770,7 +770,7 @@ Rozhraní API sady Intune App SDK jsou v cíli-C a nepodporují **nativní** SWI
 
 ### <a name="do-all-users-of-my-application-need-to-be-registered-with-the-app-we-service"></a>Musí být všichni uživatelé mojí aplikace zaregistrovaní ve službě APP-WE?
 
-Ne. V Intune App SDK by se měly registrovat jen pracovní a školní účty. Za zjištění, jestli je účet používán jako pracovní nebo školní, zodpovídají aplikace.
+No. V Intune App SDK by se měly registrovat jen pracovní a školní účty. Za zjištění, jestli je účet používán jako pracovní nebo školní, zodpovídají aplikace.
 
 ### <a name="what-about-users-that-have-already-signed-in-to-the-application-do-they-need-to-be-enrolled"></a>A co uživatelé, kteří se už do aplikace přihlásili? Musí se zaregistrovat?
 
@@ -807,7 +807,7 @@ Ano! Nedávno jsme přepracovali naši open-source ukázkovou aplikaci [Wagr pro
 
 ### <a name="how-can-i-troubleshoot-my-app"></a>Jak můžu řešit potíže s aplikací?
 
-Intune SDK pro iOS 9.0.3 + podporuje možnost Přidat diagnostické konzole v mobilní aplikaci pro testování zásad a chyb protokolování. `IntuneMAMDiagnosticConsole.h`Definuje rozhraní `IntuneMAMDiagnosticConsole` třídy, které můžou vývojáři použít k zobrazení diagnostické konzoly Intune. To umožňuje koncovým uživatelům nebo vývojářům během testování shromažďovat a sdílet protokoly Intune, které vám pomůžou diagnostikovat případné potíže. Toto rozhraní API je volitelné pro integrátory.
+Intune SDK pro iOS 9.0.3 + podporuje možnost Přidat diagnostické konzole v mobilní aplikaci pro testování zásad a chyb protokolování. `IntuneMAMDiagnosticConsole.h`definuje `IntuneMAMDiagnosticConsole` rozhraní třídy, které můžou vývojáři použít k zobrazení diagnostické konzoly Intune. To umožňuje koncovým uživatelům nebo vývojářům během testování shromažďovat a sdílet protokoly Intune, které vám pomůžou diagnostikovat případné potíže. Toto rozhraní API je volitelné pro integrátory.
 
 ## <a name="submit-your-app-to-the-app-store"></a>Odeslání aplikace do App Storu
 

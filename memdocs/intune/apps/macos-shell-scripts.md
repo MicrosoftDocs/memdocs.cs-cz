@@ -17,17 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c5839154ab0c884e933e8d11055e745d54503433
-ms.sourcegitcommit: 8a8378b685a674083bfb9fbc9c0662fb0c7dda97
+ms.openlocfilehash: c8d290e038529a85a01de3bdb890b9f131ef8442
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82619538"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83430051"
 ---
-# <a name="use-shell-scripts-on-macos-devices-in-intune-public-preview"></a>Použití skriptů prostředí v zařízeních macOS v Intune (Public Preview)
-
-> [!NOTE]
-> Skripty prostředí pro zařízení macOS jsou momentálně ve verzi Preview. Před použitím této funkce si přečtěte seznam [známých problémů ve verzi Preview](macos-shell-scripts.md#known-issues) .
+# <a name="use-shell-scripts-on-macos-devices-in-intune"></a>Použití skriptů prostředí v zařízeních macOS v Intune
 
 Používejte skripty prostředí pro rozšiřování možností správy zařízení v Intune nad rámec toho, co podporuje operační systém macOS. 
 
@@ -35,7 +32,7 @@ Používejte skripty prostředí pro rozšiřování možností správy zaříze
 Při sestavování skriptů prostředí a jejich přiřazení k zařízením macOS se ujistěte, že jsou splněné následující předpoklady. 
  - Na zařízeních běží macOS 10,12 nebo novější.
  - Zařízení se spravují přes Intune. 
- - Skripty prostředí začínají na `#!` a musí být v platném umístění, například `#!/bin/sh` nebo `#!/usr/bin/env zsh`.
+ - Skripty prostředí začínají na `#!` a musí být v platném umístění, například `#!/bin/sh` nebo `#!/usr/bin/env zsh` .
  - Jsou nainstalované překladače příkazového řádku pro příslušné prostředí.
 
 ## <a name="important-considerations-before-using-shell-scripts"></a>Důležité informace před použitím skriptů prostředí
@@ -48,7 +45,7 @@ Při sestavování skriptů prostředí a jejich přiřazení k zařízením mac
  
 ## <a name="create-and-assign-a-shell-script-policy"></a>Vytvoření a přiřazení zásad skriptu prostředí
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **zařízení** > **MacOS** > **Scripts**skripty > **Přidat**.
+2. Vyberte **zařízení**  >  **MacOS**  >  **skripty**  >  **Přidat**.
 3. V části **základy**zadejte následující vlastnosti a vyberte **Další**:
    - **Název**: zadejte název skriptu prostředí.
    - **Popis**: zadejte popis skriptu prostředí. Toto nastavení není povinné, ale doporučujeme ho zadat.
@@ -59,18 +56,19 @@ Při sestavování skriptů prostředí a jejich přiřazení k zařízením mac
    - **Frekvence skriptu:** Vyberte, jak často se má skript spouštět. Pokud chcete spustit skript jenom jednou, vyberte **nenakonfigurované** (výchozí).
    - **Maximální počet pokusů o opakování, pokud se skript nezdařil:** Vyberte, kolikrát se má skript spustit, pokud vrátí nenulový ukončovací kód (nula znamená úspěch). Pokud dojde k chybě skriptu, vyberte možnost **Nenakonfigurováno** (výchozí).
 5. V části **značky oboru**Volitelně přidejte značky oboru pro skript a vyberte **Další**. Pomocí značek Scope můžete určit, kdo může v Intune zobrazovat skripty. Úplné podrobnosti o značkách oboru najdete v tématu [použití značek řízení přístupu na základě role a rozsahu pro distribuci IT](../fundamentals/scope-tags.md).
-6. Vyberte **přiřazení** > **Vybrat skupiny, které chcete zahrnout**. Zobrazí se existující seznam skupin Azure AD. Vyberte jednu nebo více skupin zařízení, které zahrnují uživatele, jejichž zařízení macOS mají přijmout skript. Zvolte **Vybrat**. Skupiny, které vyberete, se zobrazí v seznamu a budou dostávat vaše zásady pro skripty.
+6. Vyberte **přiřazení**  >  **Vybrat skupiny, které chcete zahrnout**. Zobrazí se existující seznam skupin Azure AD. Vyberte jednu nebo více skupin uživatelů nebo zařízení, které mají přijmout tento skript. Zvolte **Vybrat**. Skupiny, které vyberete, se zobrazí v seznamu a budou dostávat vaše zásady pro skripty.
    > [!NOTE]
-   > - Skripty prostředí v Intune je možné přiřadit jenom skupinám zabezpečení zařízení Azure AD. Přiřazení skupiny uživatelů se ve verzi Preview nepodporuje. 
-   > - Aktualizace přiřazení pro skripty prostředí také aktualizuje přiřazení pro [agenta Microsoft Intune pro správu pro MacOS](macos-shell-scripts.md#microsoft-intune-management-agent-for-macos).
+   > - Skripty prostředí přiřazené skupinám uživatelů se vztahují na každého uživatele přihlášeného k počítači Mac.  
+   > - Aktualizace přiřazení pro skripty prostředí také aktualizuje přiřazení pro [Microsoft Intune agenta MDM pro MacOS](macos-shell-scripts.md#microsoft-intune-management-agent-for-macos).
+
 7. V okně **Revize a přidat**se zobrazí souhrn nastavení, které jste nakonfigurovali. Vyberte **Přidat** a uložte skript. Když vyberete **Přidat**, zásada skriptu se nasadí do skupin, které jste zvolili.
 
 Skript, který jste vytvořili, se teď zobrazí v seznamu skriptů. 
 
 ## <a name="monitor-a-shell-script-policy"></a>Monitorování zásad skriptů prostředí
 Kliknutím na jednu z následujících sestav můžete monitorovat stav spuštění všech přiřazených skriptů pro uživatele a zařízení:
-- **Skripty** > **vyberou skript ke sledování** > **stavu zařízení** .
-- **Skripty** > **vyberou skript pro sledování** > **stavu uživatele** .
+- **Skripty**  >  **Vyberte skript, který chcete monitorovat**  >  . **Stav zařízení**
+- **Skripty**  >  **Vyberte skript, který chcete monitorovat**  >  . **Stav uživatele**
 
 >[!IMPORTANT]
 > Bez ohledu na zvolenou **frekvenci skriptu**se stav spuštění skriptu oznamuje jenom při prvním spuštění skriptu. Stav spuštění skriptu není aktualizován při dalších spuštěních. Aktualizované skripty se však považují za nové skripty a stav spuštění bude hlášen znovu.
@@ -93,7 +91,7 @@ Pro shromáždění protokolů na zařízení macOS jsou vyžadovány následuj�
 #### <a name="collect-device-logs"></a>Shromažďování protokolů zařízení
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. V sestavě **stav zařízení** nebo **stav uživatele** vyberte zařízení.
-3. Vyberte **shromažďovat protokoly**, zadejte cesty ke složkám souborů protokolu oddělené středníkem (;) bez mezer nebo newlines mezi cestami.<br>Například je třeba zapsat více cest jako `/Path/to/logfile1.zip;/Path/to/logfile2.log`. 
+3. Vyberte **shromažďovat protokoly**, zadejte cesty ke složkám souborů protokolu oddělené středníkem (;) bez mezer nebo newlines mezi cestami.<br>Například je třeba zapsat více cest jako `/Path/to/logfile1.zip;/Path/to/logfile2.log` . 
 
    >[!IMPORTANT]
    > Několik cest k souboru protokolu oddělených pomocí čárky, tečky, nového řádku nebo uvozovek s mezerami nebo bez nich bude mít za následek chybu shromažďování protokolů. Mezery se také nepovolují jako oddělovače mezi cestami.
@@ -103,8 +101,8 @@ Pro shromáždění protokolů na zařízení macOS jsou vyžadovány následuj�
    >[!NOTE]
    > 
    > - Shromážděné protokoly se v zařízení šifrují, přenáší a ukládají se do Microsoft Azure úložiště po dobu 30 dnů. Uložené protokoly se dešifrují na vyžádání a stáhnou se pomocí centra pro správu služby Microsoft Endpoint Manager.
-   > - Kromě protokolů určených pro správu jsou protokoly agenta pro správu Intune také shromažďovány z těchto složek: `/Library/Logs/Microsoft/Intune` a. `~/Library/Logs/Microsoft/Intune` Názvy souborů protokolu agenta jsou `IntuneMDMDaemon date--time.log` a. `IntuneMDMAgent date--time.log` 
-   > - Pokud nějaký soubor zadaný správcem chybí nebo má nesprávnou příponu souboru, najdete tyto názvy souborů uvedené v `LogCollectionInfo.txt`části.     
+   > - Kromě protokolů určených pro správu jsou protokoly agenta pro správu Intune také shromažďovány z těchto složek: `/Library/Logs/Microsoft/Intune` a `~/Library/Logs/Microsoft/Intune` . Názvy souborů protokolu agenta jsou `IntuneMDMDaemon date--time.log` a `IntuneMDMAgent date--time.log` . 
+   > - Pokud nějaký soubor zadaný správcem chybí nebo má nesprávnou příponu souboru, najdete tyto názvy souborů uvedené v části `LogCollectionInfo.txt` .     
 
 ### <a name="log-collection-errors"></a>Chyby shromažďování protokolů
 Shromažďování protokolů nemusí být úspěšné z některého z následujících důvodů uvedených v následující tabulce. Chcete-li tyto chyby vyřešit, postupujte podle kroků pro odstranění problému.
@@ -123,8 +121,8 @@ Shromažďování protokolů nemusí být úspěšné z některého z následuj�
 ## <a name="frequently-asked-questions"></a>Nejčastější dotazy
 ### <a name="why-are-assigned-shell-scripts-not-running-on-the-device"></a>Proč jsou přiřazené skripty prostředí v zařízení nespuštěny?
 Může existovat několik důvodů:
-* Agent může být muset vrátit se změnami, aby přijímal nové nebo aktualizované skripty. Tento proces vrácení se změnami probíhá každých 8 hodin a liší se od vrácení se změnami MDM. Ujistěte se, že je zařízení spuštěno a připojené k síti pro úspěšné přihlášení agenta a počkejte na vrácení se změnami agenta.
-* Agent nemusí být nainstalován. Ověřte, že je agent nainstalovaný `/Library/Intune/Microsoft Intune Agent.app` na zařízení MacOS.
+* Agent může být muset vrátit se změnami, aby přijímal nové nebo aktualizované skripty. Tento proces vrácení se změnami probíhá každých 8 hodin a liší se od vrácení se změnami MDM. Ujistěte se, že je zařízení spuštěno a připojené k síti pro úspěšné přihlášení agenta a počkejte na vrácení se změnami agenta. Můžete také požádat koncového uživatele, aby na počítači Mac otevřel Portál společnosti, vyberte zařízení a klikněte na **kontrolovat nastavení**.
+* Agent nemusí být nainstalován. Ověřte, že je agent nainstalovaný na `/Library/Intune/Microsoft Intune Agent.app` zařízení MacOS.
 * Agent nemůže být v dobrém stavu. Agent se pokusí o zotavení po dobu 24 hodin, odebrat sám sebe a znovu nainstalovat, pokud jsou skripty prostředí stále přiřazeny.
 
 ### <a name="how-frequently-is-script-run-status-reported"></a>Jak často je stav spuštění skriptu hlášeno?
@@ -141,7 +139,7 @@ Vaše přiřazená role Intune vyžaduje **Konfigurace zařízení** oprávněn�
 Aby bylo možné Upřesnit možnosti správy zařízení, které nejsou podporovány nativním operačním systémem macOS, je nutné nainstalovat Microsoft Intune agenta pro správu.
  
  ### <a name="how-is-the-agent-installed"></a>Jak je nainstalován agent?
- Na zařízeních macOS spravovaných pomocí Intune se automaticky a tiše nainstaluje agent, kterému přiřadíte aspoň jeden skript prostředí v centru pro správu Microsoft Endpoint Manageru. `/Library/Intune/Microsoft Intune Agent.app` Agent se instaluje v případě potřeby a v aplikacích **vyhledávací** > **aplikace** na zařízeních MacOS se nezobrazuje. Agent se při spuštění `IntuneMdmAgent` na zařízeních MacOS zobrazí jako v **monitorování aktivity** .
+ Na zařízeních macOS spravovaných pomocí Intune se automaticky a tiše nainstaluje agent, kterému přiřadíte aspoň jeden skript prostředí v centru pro správu Microsoft Endpoint Manageru. Agent se instaluje v `/Library/Intune/Microsoft Intune Agent.app` případě potřeby a v aplikacích **vyhledávací**  >  **aplikace** na zařízeních MacOS se nezobrazuje. Agent se `IntuneMdmAgent` při spuštění na zařízeních MacOS zobrazí jako v **monitorování aktivity** .
 
 ### <a name="what-does-the-agent-do"></a>Co agent dělá?
  - Před vrácením se změnami pro příjem skriptů prostředí pro zařízení macOS se agent tiše ověřuje pomocí služeb Intune.
@@ -149,15 +147,12 @@ Aby bylo možné Upřesnit možnosti správy zařízení, které nejsou podporov
  - Agent kontroluje nové nebo aktualizované skripty se službami Intune obvykle každých 8 hodin. Tato operace vrácení se změnami je nezávislá na vrácení se změnami MDM. 
  
  ### <a name="how-can-i-manually-initiate-an-agent-check-in-from-a-mac"></a>Jak mohu ručně iniciovat agenty vrácení se změnami z počítače Mac?
-Na spravovaném počítači Mac s nainstalovaným agentem otevřete **terminál**, spusťte `sudo killall IntuneMdmAgent` příkaz, aby se `IntuneMdmAgent` proces ukončil. `IntuneMdmAgent` Proces se okamžitě restartuje, čímž se zahájí vrácení se změnami do Intune.
+Na spravovaném počítači Mac, na kterém je nainstalovaný agent, otevřete **portál společnosti**, vyberte místní zařízení a klikněte na **kontrolovat nastavení**. Tím se zahájí vrácení se změnami do MDM a Agent pro vrácení se změnami.
 
-Případně můžete provést následující akce:
-1. Otevřete > **zobrazení** **monitorování** > aktivit*vybrat **všechny procesy**.* 
-2. Vyhledejte procesy s názvem `IntuneMdmAgent`. 
-3. Ukončete proces spuštěný pro uživatele **root** . 
+Případně otevřete **terminál**, spusťte `sudo killall IntuneMdmAgent` příkaz pro ukončení `IntuneMdmAgent` procesu. `IntuneMdmAgent`Proces se okamžitě restartuje, čímž se zahájí vrácení se změnami do Intune.
 
 > [!NOTE]
-> Akce **kontroly nastavení** v portál společnosti a akce **synchronizace** pro zařízení v konzole pro správu služby Microsoft Endpoint Manager iniciují kontrolu MDM a nevynutí vrácení se změnami agenta.
+> Akce **synchronizace** pro zařízení v konzole pro správu Microsoft Endpoint Manager iniciuje vrácení se změnami MDM a nenutí agenta při vrácení se změnami.
 
  ### <a name="when-is-the-agent-removed"></a>Kdy je agent odebrán?
  Existuje několik podmínek, které mohou způsobit odebrání agenta ze zařízení, například:
@@ -165,14 +160,14 @@ Případně můžete provést následující akce:
  - Zařízení macOS již není spravováno.
  - Agent je ve stavu nezotavitelné po dobu delší než 24 hodin (doba provozu zařízení).
 
+ ### <a name="why-are-scripts-running-even-though-the-mac-is-no-longer-managed"></a>Proč se skripty spouštějí, i když se počítač Mac už nespravuje?
+ Pokud se už počítač s přiřazenými skripty nespravuje, Agent se okamžitě neodebere. Agent zjistí, že se počítač Mac nespravuje při dalším vrácení se změnami agenta (obvykle každých 8 hodin) a zruší naplánované spuštění skriptu. Proto se spustí všechny místně uložené skripty naplánované tak, aby běžely častěji než další naplánované agentské vrácení se změnami. Když se Agent nemůže vrátit k vrácení se změnami, opakuje se se změnami po dobu až 24 hodin (čas spuštění zařízení) a pak se sám odeberou z počítače Mac.
+ 
  ### <a name="how-to-turn-off-usage-data-sent-to-microsoft-for-shell-scripts"></a>Jak vypnout data o využití, která se odesílají do Microsoftu pro skripty prostředí?
- Pokud chcete vypnout data o využití posílaná Microsoftu z agenta pro správu Intune, otevřete portál společnosti a vyberte**Předvolby** >  **nabídky** > zrušit*zaškrtnutí políčka Povolit Microsoftu shromažďovat data o využití*. Tato akce vypne data o využití, která jsou posílána jak pro agenta, tak pro Portál společnosti.
+ Pokud chcete vypnout data o využití posílaná Microsoftu z agenta pro správu Intune, otevřete portál společnosti a vyberte předvolby **nabídky**zrušit  >  **Preferences**  >  *zaškrtnutí políčka Povolit Microsoftu shromažďovat data o využití*. Tato akce vypne data o využití, která jsou posílána jak pro agenta, tak pro Portál společnosti.
 
 ## <a name="known-issues"></a>Známé problémy
-- **Přiřazení skupiny uživatelů:** Skripty prostředí přiřazené skupinám uživatelů se nevztahují na zařízení. Přiřazení skupiny uživatelů se v tuto chvíli ve verzi Preview nepodporuje. K přiřazení skriptů použijte přiřazení skupiny zařízení.
-- **Shromažďovat protokoly:** Akce shromáždit protokoly je viditelná. Ale při pokusu o shromažďování protokolů se zobrazí zpráva "došlo k chybě" a nezachytí protokoly. Shromažďování protokolů není v současné době ve verzi Preview podporováno.
 - **Žádný stav spuštění skriptu:** V nepravděpodobném případě, že se na zařízení přijme skript a zařízení přejde do režimu offline, než se nahlásí stav spuštění, zařízení neohlásí stav spuštění skriptu v konzole pro správu.
-- **Zpráva o stavu uživatele:** Existuje prázdný problém sestavy. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **monitor**. Stav uživatele zobrazuje prázdnou sestavu.
 
 ## <a name="next-steps"></a>Další kroky
 

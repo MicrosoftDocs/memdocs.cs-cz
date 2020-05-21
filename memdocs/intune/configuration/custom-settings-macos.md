@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/24/2020
+ms.date: 05/04/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2e900252392f1e6f057561d8d07f6e764dc0aafc
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: e92315377a839a537dfc4c2da00d282d2cddf58f
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80359363"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83429093"
 ---
 # <a name="use-custom-settings-for-macos-devices-in-microsoft-intune"></a>Použití vlastního nastavení u zařízení s macOS v Microsoft Intune
 
@@ -39,7 +39,7 @@ Tento článek obsahuje pokyny k používání Apple Configuratoru a Apple Profi
 
 ## <a name="before-you-begin"></a>Před zahájením
 
-[Vytvořte profil](custom-settings-configure.md).
+[Vytvořte vlastní profil MacOS](custom-settings-configure.md).
 
 ## <a name="what-you-need-to-know"></a>Co je potřeba vědět
 
@@ -49,7 +49,7 @@ Tento článek obsahuje pokyny k používání Apple Configuratoru a Apple Profi
 
   - Povolit [správu mobilních zařízení](https://help.apple.com/serverapp/mac/5.7/#/apd05B9B761-D390-4A75-9251-E9AD29A61D0C) v Profile Manageru.
   - Přidat [zařízení s macOS](https://help.apple.com/profilemanager/mac/5.7/#/pm9onzap1984) v Profile Manageru.
-  - Po přidání zařízení do Správce profilů klikněte v **části** > **zařízení** knihovny > vyberte **Nastavení**> zařízení. Zadejte obecné nastavení, nastavení zabezpečení, ochrany osobních údajů, adresáře a certifikátu zařízení.
+  - Po přidání zařízení do Správce profilů klikněte v **části**  >  **zařízení** knihovny > vyberte **Nastavení**> zařízení. Zadejte obecné nastavení, nastavení zabezpečení, ochrany osobních údajů, adresáře a certifikátu zařízení.
 
     Stáhněte a uložte si tento soubor. Zadáte ho v profilu Intune. 
 
@@ -57,16 +57,16 @@ Tento článek obsahuje pokyny k používání Apple Configuratoru a Apple Profi
 
 ## <a name="custom-configuration-profile-settings"></a>Nastavení vlastního konfiguračního profilu
 
-- **Název vlastního konfiguračního profilu:** Zadejte název zásady. Tento název se zobrazí na zařízení a ve stavu Intune.
-- **Soubor konfiguračního profilu:** Přejděte ke konfiguračnímu profilu vytvořenému v Apple Configuratoru nebo Apple Profile Manageru. Importovaný soubor se zobrazí v části **Obsah souboru**.
+- **Název konfiguračního profilu**: zadejte název zásady. Tento název se zobrazí na zařízení a ve stavu Intune.
+- **Soubor konfiguračního profilu**: přejděte k `.xml` souboru nebo `.mobileconfig` , který jste vytvořili pomocí Apple Configuratoru nebo Apple Profile Manageru. Maximální velikost souboru je 1000000 bajtů (stejně jako 1 MB). Zobrazí se soubor, který importujete. Soubor můžete po přidání také **Odebrat** .
 
-  Do `.mobileconfig` souborů můžete také přidat tokeny zařízení. Tokeny zařízení se používají k přidání informací specifických pro zařízení. Chcete-li například zobrazit sériové číslo, zadejte `{{serialnumber}}`. V zařízení se text zobrazuje podobně jako `123456789ABC`jedinečný pro každé zařízení. Při zadávání proměnných nezapomeňte použít složené závorky `{{ }}`. [Tokeny konfigurace aplikace](../apps/app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) obsahují seznam proměnných, které se dají použít. Můžete také použít `deviceid` nebo libovolná jiná hodnota specifická pro zařízení.
+  Do souborů můžete také přidat tokeny zařízení `.mobileconfig` . Tokeny zařízení se používají k přidání informací specifických pro zařízení. Chcete-li například zobrazit sériové číslo, zadejte `{{serialnumber}}` . V zařízení se text zobrazuje podobně jako `123456789ABC` jedinečný pro každé zařízení. Při zadávání proměnných nezapomeňte použít složené závorky `{{ }}` . [Tokeny konfigurace aplikace](../apps/app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) obsahují seznam proměnných, které se dají použít. Můžete také použít `deviceid` nebo libovolná jiná hodnota specifická pro zařízení.
 
   > [!NOTE]
-  > Proměnné nejsou v uživatelském rozhraní ověřeny a rozlišují se velká a malá písmena. V důsledku toho mohou být profily uloženy s nesprávným vstupem. Pokud například zadáte `{{DeviceID}}` místo `{{deviceid}}`, pak se místo jedinečného ID zařízení zobrazí literální řetězec. Nezapomeňte zadat správné informace.
+  > Proměnné nejsou v uživatelském rozhraní ověřeny a rozlišují se velká a malá písmena. V důsledku toho mohou být profily uloženy s nesprávným vstupem. Pokud například zadáte `{{DeviceID}}` místo `{{deviceid}}` , pak se místo jedinečného ID zařízení zobrazí literální řetězec. Nezapomeňte zadat správné informace.
 
 ## <a name="next-steps"></a>Další kroky
 
-Profil se vytvoří, ale nemusí ještě nic dělat. Dále [Přiřaďte profil](device-profile-assign.md) a [sledujte jeho stav](device-profile-monitor.md).
+[Přiřaďte profil](device-profile-assign.md) a [monitorujte jeho stav](device-profile-monitor.md).
 
 Vytvořte si [vlastní profil na zařízeních s iOS/iPadOS](custom-settings-ios.md).

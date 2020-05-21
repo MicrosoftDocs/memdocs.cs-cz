@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/17/2020
+ms.date: 5/15/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e8d4b866ca2086ae11efa10f1967b08f12e55919
-ms.sourcegitcommit: d1c7548b4177d720065b822356f9a08d1e1657c2
+ms.openlocfilehash: 01965b2760ed9e4036f12b8c2c0d75e5a85e89b2
+ms.sourcegitcommit: 6ca5e75ed7a6fd2186fbe51c177960004d5ec81f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82881022"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83633420"
 ---
 # <a name="use-derived-credentials-in-microsoft-intune"></a>Použití odvozených přihlašovacích údajů v Microsoft Intune
 
@@ -63,7 +63,7 @@ Intune podporuje odvozená pověření na těchto platformách:
 
 Intune podporuje jeden odvozený Vystavitel přihlašovacích údajů na každého tenanta. Intune můžete nakonfigurovat tak, aby fungoval s následujícími vystaviteli:
 
-- **DISA purebred** (jenom iOS): https:\//Cyber.mil/PKI-PKE/purebred/
+- **DISA purebred** (jenom iOS):https://public.cyber.mil/pki-pke/purebred/
 - **Entrust Datacard**:https://www.entrustdatacard.com/
 - **Intercede**:https://www.intercede.com/
 
@@ -112,6 +112,7 @@ Následují klíčové důležité požadavky pro každého podporovaného partn
 Pro zařízení, která použijete s odvozenými přihlašovacími údaji, si Projděte pracovní postup pro uživatele pro konkrétní platformu.
 
 - [iOS a iPadOS](https://docs.microsoft.com/intune-user-help/enroll-ios-device-disa-purebred)
+- [Zařízení se systémem Android Enterprise s plnou správou](https://docs.microsoft.com/mem/intune/user-help/enroll-android-device-disa-purebred)
 
 **Mezi klíčové požadavky patří**:
 
@@ -188,7 +189,7 @@ Vyhněte se vyžadování použití odvozeného pověření pro přístup k proc
 Před vytvořením zásad, které vyžadují použití odvozených přihlašovacích údajů, nastavte vystavitele přihlašovacích údajů v konzole Intune. Odvozený Vystavitel přihlašovacích údajů je nastavení v rámci tenanta. Klienti podporují pouze jednoho vystavitele najednou.
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte možnost konektory **pro správu** > tenanta**a tokeny** > **odvozené od přihlašovacích údajů**.
+2. Vyberte možnost konektory **pro správu tenanta**  >  **a tokeny**  >  **odvozené od přihlašovacích údajů**.
 
     > [!div class="mx-imgBorder"]
     > ![Konfigurace odvozených přihlašovacích údajů v konzole](./media/derived-credentials/configure-provider.png)
@@ -224,9 +225,12 @@ Kromě nasazení aplikace v Intune nakonfigurujte síť VPN Intune na aplikaci p
 
 **Proveďte následující úlohy**:
   
-1. Stáhněte si aplikaci DISA purebred: https:\//Cyber.mil/PKI-PKE/purebred/.
+1. Stáhněte si aplikaci DISA purebred: https: \/ /Cyber.mil/PKI-PKE/purebred/.
 
-2. Nasaďte aplikaci DISA purebred v Intune. Přečtěte si téma [Přidání obchodní aplikace pro iOS do Microsoft Intune](../apps/lob-apps-ios.md).
+2. Nasaďte aplikaci DISA purebred v Intune. 
+
+   - Přečtěte si téma [Přidání obchodní aplikace pro iOS do Microsoft Intune](../apps/lob-apps-ios.md).
+   - Přečtěte si téma [Přidání obchodní aplikace pro Android do Microsoft Intune](../apps/lob-apps-android.md)
 
 3. Pro aplikaci DISA purebred [Vytvořte síť VPN pro jednotlivé aplikace](../configuration/vpn-settings-configure.md) .
 
@@ -256,7 +260,7 @@ Můžete zadat **odvozená pověření** pro následující typy profilů a úč
 Použijte odvozená pověření pro ověřování pomocí certifikátů u webů a aplikací. Postup při doručování odvozených přihlašovacích údajů pro ověřování aplikací:
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **Konfigurace zařízení** > **profily** > konfigurace**vytvořit profil**.
+2. Vyberte **Devices**  >  **Konfigurace zařízení profily konfigurace**  >  **vytvořit profil**.
 3. Zadejte následující nastavení:
 
    Pro iOS a iPadOS:
@@ -272,7 +276,7 @@ Použijte odvozená pověření pro ověřování pomocí certifikátů u webů 
    - **Typ profilu**: jenom v části *vlastník zařízení*vyberte **odvozené přihlašovací údaje**.
 
 4. Výběrem **OK** uložte změny.
-5. Po dokončení vyberte **OK** > **vytvořit** a vytvořte profil Intune. Po dokončení se Váš profil zobrazí v seznamu **zařízení – konfigurační profily** .
+5. Po dokončení vyberte **OK**  >  **vytvořit** a vytvořte profil Intune. Po dokončení se Váš profil zobrazí v seznamu **zařízení – konfigurační profily** .
 6. Vyberte nové > **přiřazení**profilu. Vyberte skupiny, které by měly tuto zásadu přijímat.
 
 Uživatelé obdrží aplikaci nebo e-mailové oznámení v závislosti na nastaveních, která jste zadali při vytváření odvozeného vystavitele přihlašovacích údajů. Oznámení informuje uživatele o spuštění Portál společnosti tak, aby bylo možné zpracovat odvozené zásady pověření.
@@ -297,7 +301,7 @@ Po změně vystavitele se uživatelům zobrazí výzva, aby od nového vystavite
 > Pokud odstraníte vystavitele a ihned znovu nakonfigurujete téhož vystavitele, musíte pořád aktualizovat profily a zařízení, aby se použily odvozené přihlašovací údaje od tohoto vystavitele. Odvozené přihlašovací údaje, které byly získány před odstraněním vystavitele, již nejsou platné.
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte možnost konektory **pro správu** > tenanta**a tokeny** > **odvozené od přihlašovacích údajů**.
+2. Vyberte možnost konektory **pro správu tenanta**  >  **a tokeny**  >  **odvozené od přihlašovacích údajů**.
 3. Vyberte **Odstranit** pro odebrání aktuálního odvozeného vystavitele přihlašovacích údajů.
 4. Nakonfigurujte nového vystavitele.
 

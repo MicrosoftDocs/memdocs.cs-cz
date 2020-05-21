@@ -18,12 +18,12 @@ ms.reviewer: jeyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8afc499f85e91658b411a25988ac858ca59030cc
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: f48fb487df6a1b20e333ee6a2154490a59d220a9
+ms.sourcegitcommit: 5d32dd481e2a944465755ce74e14c835cce2cd1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81616001"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "83551940"
 ---
 # <a name="set-up-android-device-with-company-portal-and-intercede"></a>Nastavení zařízení s Androidem pomocí Portál společnosti a Intercede
 
@@ -135,7 +135,7 @@ V této části provedete kontrolu kódu QR poskytovaného vaší společností.
 ### <a name="token-enrollment"></a>Zápis tokenu  
 V této části zadáte svůj token poskytovaný společností. Až budete hotovi, přesměrujeme vás zpátky na kroky registrace zařízení.  
 
-1. Do přihlašovací obrazovky Google v poli **e-mail nebo telefon** zadejte **AFW # Setup**. Klepněte na **Další**. 
+1. Do přihlašovací obrazovky Google v poli **e-mail nebo telefon** zadejte **AFW # Setup**. Pak klepněte na **Další**. 
 
    ![Příklad obrázku přihlašovací obrazovky Google, který ukazuje, že se do pole zadává nastavení "AFW #".](./media/token-intune-app-01.png)   
 

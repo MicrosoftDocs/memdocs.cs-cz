@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 29b30d46fc5998c69059c743c3f469e198cee1ef
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 3a94b71bb479fcb84e998a4e4b7c3ad91e2e3043
+ms.sourcegitcommit: d8dc05476ecd5db7ecb36dc649b566b349ba263d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80325141"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83732903"
 ---
 # <a name="remotely-lock-devices-with-intune"></a>Vzdálené uzamčení zařízení přes Intune
 
@@ -45,15 +45,16 @@ Akce zařízení **Vzdálené uzamčení** uzamkne zařízení. Vlastník zaří
 - Stolní počítač s Windows 10
 
 > [!NOTE]
-> Pro zařízení s macOS nastavíte šestimístní číselný kód PIN pro obnovení. Když se zařízení zamkne, **přehled zařízení** bude zobrazovat kód PIN, dokud se nepošle jiná akce zařízení.
+> Pro zařízení s macOS nastavíte šestimístní číselný kód PIN pro obnovení. Když se zařízení zamkne, **přehled zařízení** bude zobrazovat kód PIN, dokud se nepošle jiná akce zařízení. Nezapomeňte si kód PIN zapsat, protože bude k dispozici až 7 dní po odeslání příkazu Remote Lock. Po 7 dnech už Intune nebude mít PIN kód. Tento příkaz také nespouštějte pro stejné zařízení, dokud se nepoužije původní PIN kód k úspěšnému odemknutí zařízení. Tento příkaz byste měli odeslat, zapište si PIN kód a dokud ho nepoužijete k úspěšnému přihlášení do zařízení macOS, neodešlete znovu tento příkaz do stejného zařízení.  
+
 
 ## <a name="remote-lock-a-device"></a>Vzdáleně uzamknout zařízení
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-3. Vyberte **zařízení** > **všechna zařízení**.
+3. Vyberte **zařízení**  >  **všechna zařízení**.
 4. V seznamu zařízení vyberte zařízení a pak vyberte akci **Vzdálené uzamčení**.
 
 ## <a name="next-steps"></a>Další kroky
 
-- Chcete-li zobrazit stav této akce, vyberte možnost **Microsoft Intune** > **zařízení** > **Akce zařízení**. 
+- Chcete-li zobrazit stav této akce, vyberte možnost **Microsoft Intune**  >  **zařízení**  >  **Akce zařízení**. 
 - Další akce, které vám můžou pomoct se správou zařízení, najdete v tématu [Dostupné akce](device-management.md).

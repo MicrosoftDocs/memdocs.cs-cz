@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9a4d468c62132c6af4477ba48f17ac9b21013e51
-ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
+ms.openlocfilehash: 997a2db8917da1443531d8446176c21db3a5dbf6
+ms.sourcegitcommit: dba89b827d7f89067dfa75a421119e0c973bb747
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82022733"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83709447"
 ---
 # <a name="intune-data-warehouse-collections"></a>Shromažďování dat do datového skladu
 
@@ -38,7 +38,7 @@ Entita **appRevision** obsahuje seznam všech verzí aplikací.
 | ApplicationId              | Jedinečný identifikátor aplikace – podobá se AppKey, ale tento klíč je přirozený.        | b66bc706-ffff-7437-0340-032819502773 |
 | Revize                   | Verze, kterou uvedl správce během nahrávání binárního souboru.                   | 2                                    |
 | Nadpis                      | Název aplikace                                                                     | Excel                                |
-| Vydavatel                  | Vydavatel aplikace                                                                 | Microsoft                            |
+| Publisher                  | Vydavatel aplikace                                                                 | Microsoft                            |
 | UploadState                | Stav nahrávání aplikace                                                              | 1                                    |
 | AppTypeKey                 | Odkaz na entitu AppType, která je popsaná v následujícím oddílu.                            | 1                                    |
 | VppProgramTypeKey          | Odkaz na entitu VppProgramType, která je popsaná níže.                                        | 30876                                |
@@ -61,7 +61,7 @@ Entita **appType** obsahuje seznam zdrojů instalace aplikace.
 
 ### <a name="example"></a>Příklad
 
-| AppTypeID |                Název               |                     Popis                     |
+| AppTypeID |                Name               |                     Popis                     |
 |:---------:|:---------------------------------:|:---------------------------------------------------:|
 | 0         | Aplikace z obchodu pro Android               | Aplikace z obchodu pro Android                             |
 | 1         | Obchodní aplikace pro Android                 | Obchodní aplikace pro Android                  |
@@ -193,6 +193,8 @@ Entita **DeviceConfigurationProfileUserActivity** obsahuje počet uživatelů v 
 | OSVersion                  | Verze operačního systému.                                                                                                                                                                          |
 | JailBroken                 | Zda má zařízení jailbreak nebo root.                                                                                                                                         |
 | DeviceCategoryKey          | Klíč atributu kategorie zařízení pro toto zařízení                                                                                                                                    |
+
+
 ## <a name="deviceregistrationstates"></a>deviceRegistrationStates
 Entita **DeviceRegistrationState** zastupuje typ registrace, na který odkazují jiné kolekce datového skladu. 
 
@@ -222,7 +224,6 @@ Entita **device** obsahuje seznam všech zaregistrovaných zařízení ve správ
 | DeviceRegistrationState    | Klíč atributu stavu registrace klienta pro toto zařízení                                                                                                                      |
 | OwnerTypeKey               | Klíč atributu typu vlastníka pro toto zařízení: podnikový, osobní nebo neznámý                                                                                                    |
 | EnrolledDateTime           | Datum a čas, kdy se zařízení zaregistrovalo.                                                                                                                                         |
-| EthernetMacAddress           | Jedinečný identifikátor sítě tohoto zařízení.                                                                                                                                        |
 | LastSyncDateTime           | Poslední známé přihlášení zařízení k Intune.                                                                                                                                              |
 | ManagementAgentKey         | Klíč agenta správy, který je k tomuto zařízení přidružený.                                                                                                                             |
 | ManagementStateKey         | Klíč stavu správy, který je přidružený k tomuto zařízení a který udává poslední stav vzdálené akce nebo informaci, jestli jde o zařízení s jailbreakem nebo rootem.                                                |
@@ -244,16 +245,12 @@ Entita **device** obsahuje seznam všech zaregistrovaných zařízení ve správ
 | MEID                       | MEID                                                                                                                                                                                   |
 | isSupervised               | Stav dohledu zařízení                                                                                                                                                               |
 | FreeStorageSpaceInBytes    | Volné úložiště v bajtech                                                                                                                                                                 |
-| TotalStorageSpaceInBytes   | Celková kapacita úložiště v bajtech                                                                                                                                                                |
 | EncryptionState            | Stav šifrování zařízení                                                                                                                                                      |
 | SubscriberCarrier          | Poskytovatel předplatného na zařízení                                                                                                                                                       |
 | PhoneNumber                | Telefonní číslo zařízení                                                                                                                                                             |
 | IMEI                       | IMEI                                                                                                                                                                                   |
 | CellularTechnology         | Mobilní technologie zařízení                                                                                                                                                    |
 | WiFiMacAddress             | Wi-Fi MAC                                                                                                                                                                              |
-| Model                      | Model zařízení.                                                                                                                                                                      |
-| Office365Version           | Verze Office 365, která je na zařízení nainstalovaná.                                                                                                                             |
-| PhysicalMemoryInBytes      | Fyzická paměť v bajtech.                                                                                                                                                          |
 
 
 ## <a name="devicetypes"></a>deviceTypes
@@ -267,10 +264,10 @@ Entita **deviceType** zastupuje typ zařízení, na který odkazují jiné entit
 
 ### <a name="example"></a>Příklad
 
-| deviceTypeID |        Název       |                      Popis                      |
+| deviceTypeID |        Name       |                      Popis                      |
 |:------------:|:-----------------:|:-----------------------------------------------------:|
 | -1           | Není k dispozici   | Tento typ zařízení není k dispozici.                     |
-| 0            | Aplikace klasické pracovní plochy           | Zařízení se systémem Windows                              |
+| 0            | Plocha           | Zařízení se systémem Windows                              |
 | 1            | Windows           | Zařízení s Windows                                      |
 | 2            | WinMO6            | Zařízení se systémem Windows Mobile 6.0                           |
 | 3            | Nokia             | Zařízení Nokia                                        |
@@ -304,7 +301,7 @@ Entita **deviceEnrollmentType** určuje, jak se zařízení zaregistrovalo. Typ 
 
 ### <a name="example"></a>Příklad
 
-| enrollmentTypeID |                Název                |                                        Popis                                       |
+| enrollmentTypeID |                Name                |                                        Popis                                       |
 |:----------------:|:----------------------------------:|:----------------------------------------------------------------------------------------:|
 | 0                | Není známo                            | Typ registrace se neshromáždil.                                                      |
 | 1                | UserEnrollment                     | Registrace řízená uživatelem prostřednictvím kanálu uživatelé s vlastním zařízením (BYOD)                                           |
@@ -462,7 +459,7 @@ Entita **MamApplicationInstance** obsahuje seznam aplikací spravovaných přes 
 |        CreatedDate         |                                                                 Datum vytvoření daného záznamu instance aplikace MAM Hodnota může být null.                                                                 |        23.11.2016 12:00:00        |
 |          Platforma          |                                                                          Platforma zařízení, na kterém je daná aplikace MAM nainstalovaná                                                                           |                  2                   |
 |      PlatformVersion       |                                                                      Verze platformy zařízení, na kterém je daná aplikace MAM nainstalovaná                                                                       |                 2,2                  |
-|         SdkVersion         |                                                                            Verze sady SDK MAM, pomocí které byla daná aplikace MAM zabalena                                                                            |                 3,2                  |
+|         SdkVersion         |                                                                            Verze sady SDK MAM, pomocí které byla daná aplikace MAM zabalena                                                                            |                 3.2                  |
 | mamDeviceId | ID zařízení, ke kterému je přidružená instance aplikace MAM   | 23.11.2016 12:00:00   |
 | mamDeviceType | Typ zařízení, ke kterému je přidružená instance aplikace MAM   | 23.11.2016 12:00:00   |
 | mamDeviceName | Název zařízení, ke kterému je přidružená instance aplikace MAM   | 23.11.2016 12:00:00   |
@@ -508,7 +505,7 @@ Entita **MamPlatform** obsahuje seznam názvů a typů platforem, na kterých by
 |----------------------------|-----------------------------------------------------------------------------------|---------------------------------------------------------|
 |        PlatformKey         |     Jedinečný identifikátor platformy v datovém skladu – náhradní klíč      |                           123                           |
 |          Platforma          | Jedinečný identifikátor platformy – podobá se vlastnosti PlatformKey, jedná se ale o přirozený klíč. |                           123                           |
-|        PlatformName        |                                   Název platformy                                   | Není k dispozici <br>Žádná <br>Windows <br>iOS <br>Android. |
+|        PlatformName        |                                   Název platformy                                   | Není k dispozici <br>Žádné <br>Windows <br>iOS <br>Android. |
 | RowLastModifiedDateTimeUtc | Datum a čas ve standardu UTC, kdy se tato platforma v datovém skladu naposledy změnila  |                 23.11.2016 12:00:00                  |
 
 ## <a name="managementagenttypes"></a>managementAgentTypes
@@ -522,7 +519,7 @@ Entita **managementAgentType** představuje agenty používané ke správě zař
 
 ### <a name="example"></a>Příklad
 
-| ManagementAgentTypeID |                Název               |                                  Popis                                 |
+| ManagementAgentTypeID |                Name               |                                  Popis                                 |
 |:---------------------:|:---------------------------------:|:----------------------------------------------------------------------------:|
 | 1                     | EAS                               | Zařízení se spravuje prostřednictvím protokolu Exchange Active Sync.                         |
 | 2                     | MDM                               | Zařízení se spravuje pomocí agenta MDM.                                   |
@@ -547,7 +544,7 @@ Entita **ManagementState** poskytuje podrobné informace o stavu daného zaříz
 
 ### <a name="example"></a>Příklad
 
-| managementStateID |      Název      |                                                   Popis                                                   |
+| managementStateID |      Name      |                                                   Popis                                                   |
 |:-----------------:|:--------------:|:---------------------------------------------------------------------------------------------------------------:|
 | 0                 | Spravovaní        | Spravováno bez čekajících vzdálených akcí                                                                       |
 | 1                 | RetirePending  | Pro toto zařízení existuje příkaz pro vyřazení z provozu, který čeká na vyřízení.                                                             |
@@ -593,7 +590,7 @@ Entita **ownerType** určuje, jestli je zařízení firemní, v osobním vlastni
 | ownerTypeName | Představuje typ vlastníka zařízení: podniková zařízení jsou vlastněná podnikem.  Osobní – zařízení je v osobním vlastnictví (BYOD).   Neznámé – žádné informace o tomto zařízení nejsou dostupné. | Firemní osobní neznámý |
 
 > [!Note]  
-> Pro `ownerTypeName` filtr v AzureAD při vytváření dynamických skupin pro zařízení je potřeba nastavit hodnotu `deviceOwnership` jako. `Company` Další informace najdete v tématu [pravidla pro zařízení](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices). 
+> Pro `ownerTypeName` Filtr v AzureAD při vytváření dynamických skupin pro zařízení je potřeba nastavit hodnotu `deviceOwnership` jako `Company` . Další informace najdete v tématu [pravidla pro zařízení](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices). 
 
 ## <a name="policies"></a>Zásady
 Entita **Policy** obsahuje seznam konfiguračních profilů zařízení, konfiguračních profilů aplikací a zásady dodržování předpisů. Zásady se správou mobilních zařízení (MDM) můžete přiřadit skupině ve vašem podniku.
@@ -670,7 +667,7 @@ Entita **termsAndConditions** představuje metadata a obsah daných zásad podm�
 |    termsAndConditionsKey    |    Klíč odpovídající záznamu v kolekci ' userTermsAndConditionsAcceptances '    |    123    |
 |    termsAndCondidionsId    |    ID této položky termsAndConditions    |    276edcb7-7440-4339-b6c5-8b6fc556fee6    |
 |    termsAndConditionsVersion    |    Verze této položky termsAndConditions    |    1    |
-|    jméno    |    Název této položky termsAndConditions        |    Podmínky použití Intune     |
+|    name    |    Název této položky termsAndConditions        |    Podmínky použití Intune     |
 |    description    |    Popis těchto podmínek a ujednání     |         |
 |    title    |    Název těchto podmínek a ujednání     |    Podnikové zásady správy zařízení        |
 |    summaryOfTerms    |    Souhrn podmínek předaných uživateli     |    Souhlasím s podmínkami a ujednáními.    |
@@ -682,7 +679,7 @@ Entita **termsAndConditions** představuje metadata a obsah daných zásad podm�
 ## <a name="userdeviceassociations"></a>userDeviceAssociations
 Entita **UserDeviceAssociation** obsahuje přidružení zařízení uživatelů ve vaší organizaci.
 
-|        Název        |                                             Popis                                            |     Příklad     |
+|        Name        |                                             Popis                                            |     Příklad     |
 |:------------------:|:--------------------------------------------------------------------------------------------------:|:---------------:|
 | UserKey            | Jedinečný identifikátor uživatele v datovém skladu   (náhradní klíč)                            | 123             |
 | DeviceKey          | Jedinečný identifikátor zařízení v datovém skladu                                             | 123             |
@@ -728,7 +725,7 @@ Entita **vppProgramType** obsahuje seznam možných typů programu VPP pro aplik
 
 ### <a name="example"></a>Příklad
 
-|             VppProgramID             |         Název        | Popis                |
+|             VppProgramID             |         Name        | Popis                |
 |:------------------------------------:|:-------------------:|----------------------------|
 | 3DDA2474-470B-4503-9830-2665C21C1945 | Microsoft           | Program VPP společnosti Microsoft |
 | 00000000-0000-0000-0000-000000000000 | Ještě není k dispozici | Výchozí hodnota, žádný program VPP   |

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/25/2020
+ms.date: 05/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 391fa20cf7ba53af649f9f614d9ca02c653c278b
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: f06a6d6689107c97a80e11149da499ccd51fa755
+ms.sourcegitcommit: 6ca5e75ed7a6fd2186fbe51c177960004d5ec81f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079310"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83633301"
 ---
 # <a name="windows-10-app-deployment-by-using-microsoft-intune"></a>Nasazení aplikací pro Windows 10 pomocí Microsoft Intune 
 
@@ -44,17 +44,17 @@ Obchodní aplikace (LOB) a aplikace pro Microsoft Store pro firmy jsou na zaří
 
 Konkrétní typy aplikací jsou podporované v závislosti na verzi Windows 10, kterou používají vaši uživatelé. Následující tabulka uvádí typ aplikace a podporu Windows 10.
 
-| Typ aplikace | Domů | Verze Pro | Do zaměstnání | Enterprise | Education | S-režim | HoloLens<sup>1 | Surface Hub | WCOS | Mobilní |
+| Typ aplikace | Domů | Verze Pro | Do zaměstnání | Enterprise | Vzdělávání | S-režim | HoloLens <sup> 1 | Surface Hub | WCOS | Mobilní |
 |----------------|------|-----|----------|------------|-----------|--------|-----------|------------|------|--------|
-|  . SOUBOR | Ne | Ano | Ano | Ano | Ano | Ne | Ne | Ne | Ne | Ne |
-| . IntuneWin | Ne | Ano | Ano | Ano | Ano | 19H2 + | Ne | Ne | Ne | Ne |
-| C2R Office | Ne | Ano | Ano | Ano | Ano | RS4 + | Ne | Ne | Ne | Ne |
+|  . SOUBOR | No | Ano | Ano | Ano | Ano | Ne | Ne | Ne | Ne | Ne |
+| . IntuneWin | No | Ano | Ano | Ano | Ano | 19H2 + | Ne | Ne | Ne | Ne |
+| C2R Office | No | Ano | Ano | Ano | Ano | RS4 + | Ne | Ne | Ne | Ne |
 | LOB: APPX/MSIX | Ano | Ano | Ano | Ano | Ano | Ano | Ano | Ano | Ano | Ano |
 | MSFB offline | Ano | Ano | Ano | Ano | Ano | Ano | Ano | Ano | Ano | Ano |
-| MSFB online | Ano | Ano | Ano | Ano | Ano | Ano | RS4 + | Ne | Ano | Ano |
+| MSFB online | Ano | Ano | Ano | Ano | Ano | Ano | RS4 + | No | Ano | Ano |
 | Web Apps | Ano | Ano | Ano | Ano | Ano | Ano | Ano<sup>2 | Ano<sup>2 | Ano | Ano<sup>2 |
 | Odkaz na Store | Ano | Ano | Ano | Ano | Ano | Ano | Ano | Ano | Ano | Ano |
-| Microsoft Edge | Ne | Ano | Ano | Ano | Ano | 19H2 +<sup>3 | Ne | Ne | Ne | Ne |
+| Microsoft Edge | No | Ano | Ano | Ano | Ano | 19H2 + <sup> 3 | Ne | Ne | Ne | Ne |
 
 <sup>1</sup> Chcete-li odemknout správu aplikací, Upgradujte své zařízení HoloLens na [holografické pro firmy](../fundamentals/windows-holographic-for-business.md).<br />
 <sup>2</sup> spustit pouze z portál společnosti.<br />
@@ -67,7 +67,7 @@ Konkrétní typy aplikací jsou podporované v závislosti na verzi Windows 10, 
 
 Do konzoly pro správu Intune můžete podepisovat a nahrávat obchodní aplikace pro Windows 10. Ty můžou zahrnovat moderní aplikace, jako jsou aplikace Univerzální platforma Windows (UWP) a balíčky aplikací pro Windows (AppX), a také aplikace pro Win 32, jako jsou například jednoduché soubory balíčku Instalační služby společnosti Microsoft (MSI). Správce musí ručně nahrávat a nasazovat aktualizace obchodních aplikací. Tyto aktualizace se automaticky nainstalují na uživatelská zařízení, ve kterých je nainstalovaná aplikace. Není vyžadován žádný zásah uživatele a uživatel nemá žádnou kontrolu nad aktualizacemi. 
 
-## <a name="microsoft-store-for-business-apps"></a>Aplikace pro Microsoft Store pro firmy
+## <a name="microsoft-store-for-business-apps"></a>Aplikace z Microsoft Storu pro firmy
 
 Microsoft Store pro obchodní aplikace jsou moderní aplikace zakoupené na portálu pro správu Microsoft Store pro firmy. Pak se synchronizují s Microsoft Intune pro správu. Tyto aplikace mohou mít online licenci nebo offline licenci. Microsoft Store přímo spravuje aktualizace bez dalších akcí, které správce vyžaduje. Aktualizace konkrétních aplikací můžete také zabránit pomocí vlastního identifikátoru URI (Uniform Resource Identifier). Další informace najdete v tématu o [správě podnikových aplikací a zabránění jejich automatické aktualizace](https://docs.microsoft.com/windows/client-management/mdm/enterprise-app-management#prevent-app-from-automatic-updates). Uživatel může také zakázat aktualizace pro všechny Microsoft Store pro obchodní aplikace na zařízení. 
 
@@ -75,8 +75,8 @@ Microsoft Store pro obchodní aplikace jsou moderní aplikace zakoupené na port
 Kategorizace Microsoft Store pro obchodní aplikace: 
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **aplikace** > **všechny aplikace**. 
-3. Vyberte Microsoft Store pro obchodní aplikaci. Pak vyberte **vlastnosti** >  > **kategorie****informací o aplikaci**. 
+2. Vyberte **aplikace**  >  **všechny aplikace**. 
+3. Vyberte Microsoft Store pro obchodní aplikaci. Pak vyberte **vlastnosti**  >  **kategorie informací o aplikaci**  >  **Category**. 
 4. Vyberte kategorii.
 
 ## <a name="install-apps-on-windows-10-devices"></a>Instalace aplikací na zařízení s Windows 10
@@ -92,7 +92,9 @@ V závislosti na typu aplikace můžete aplikaci nainstalovat na zařízení s W
 > [!NOTE]
 > Pro aplikace Win32 sestavené jako aplikace v duálním režimu musí správce zvolit, jestli bude aplikace fungovat jako uživatelský režim nebo aplikace v režimu počítače pro všechna přiřazení přidružená k této instanci. Kontext nasazení nejde změnit na přiřazení.  
 
-Aplikace se dají instalovat jenom v kontextu zařízení, když je podporuje zařízení a typ aplikace Intune. V kontextu zařízení můžete nainstalovat následující typy aplikací a přiřadit tyto aplikace ke skupině zařízení:
+Aplikace se dají instalovat jenom v kontextu zařízení, když je podporuje zařízení a typ aplikace Intune. Instalace kontextu zařízení se podporují na zařízeních s Windows 10 desktops a teams, jako je Surface Hub. Nepodporují se na zařízeních s Windows holografickým pro firmy, jako je například Microsoft HoloLens.
+
+V kontextu zařízení můžete nainstalovat následující typy aplikací a přiřadit tyto aplikace ke skupině zařízení:
 
 - Aplikace Win32
 - Offline licencované Microsoft Store pro obchodní aplikace

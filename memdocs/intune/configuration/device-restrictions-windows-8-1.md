@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/30/2020
+ms.date: 05/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,16 +16,20 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 59af48b36cb9c76ce7587457d4921356f542493f
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 36a74e503f15fe982eeaf1addfed40d0c599cb2c
+ms.sourcegitcommit: 169e279ba686c28d9a23bc0a54f0a2a0d20bdee4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80407672"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83556230"
 ---
 # <a name="microsoft-intune-windows-81-device-restriction-settings"></a>Nastavení omezení Microsoft Intune Windows 8.1 zařízení
 
 V tomto článku se dozvíte, jak Microsoft Intune nastavení omezení zařízení, která můžete nakonfigurovat pro zařízení s Windows 8.1.
+
+## <a name="before-you-begin"></a>Před zahájením
+
+[Vytvoří konfigurační profil omezení zařízení Windows 8.1](device-restrictions-configure.md#create-the-profile).
 
 ## <a name="general"></a>Obecné
 
@@ -44,17 +48,21 @@ V tomto článku se dozvíte, jak Microsoft Intune nastavení omezení zařízen
   - **Nenakonfigurováno** (výchozí): Intune toto nastavení nemění ani neaktualizuje.
   - **Alfanumerické**: heslo musí být kombinací číslic a písmen.
   - **Číselná**: heslo musí obsahovat pouze čísla.
-- **Minimální délka hesla**: zadejte minimální počet požadovaných znaků od 6-16. Zadejte `6` například, pokud chcete pro délku hesla vyžadovat alespoň šest číslic nebo znaků.
+- **Minimální délka hesla**: zadejte minimální počet požadovaných znaků od 6-16. Zadejte například, pokud `6` chcete pro délku hesla vyžadovat alespoň šest číslic nebo znaků.
 - **Počet neúspěšných přihlášení před vymazáním zařízení**: zadejte počet chybných hesel povolených před vymazáním zařízení, od 1-14.
-- **Maximální počet minut nečinnosti, po kterém se zamkne obrazovka (v minutách)**: zadejte dobu, po kterou musí být zařízení nečinné, než se automaticky uzamkne obrazovka, od 1-60 minut. Zadejte `5` například, pokud chcete zařízení uzamknout po 5 minutách nečinnosti. Pokud je nastavené na **Nenakonfigurováno**, Intune toto nastavení nezmění ani neaktualizuje.
-- **Vypršení platnosti hesla (dny)**: zadejte dobu ve dnech, kdy musí být heslo zařízení změněno, od 1-255. Zadejte `90` například platnost hesla po 90 dnech. Pokud je hodnota prázdná, Intune se nezmění ani neaktualizuje.
-- **Zakázat opakované použití předchozích hesel**: zadejte počet dříve použitých hesel, která se nedají použít, od 1-24. Například zadejte `5` , že uživatelé nemůžou nastavit nové heslo na aktuální heslo ani na žádná z předchozích čtyř hesel. Pokud je hodnota prázdná, Intune se nezmění ani neaktualizuje.
-- **Obrázkové heslo a kód PIN**: **blok** zabraňuje použití obrázku nebo PIN kódu jako hesla. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Obrázkové heslo umožňuje uživateli přihlášení pomocí gesta na obrázku. Kód PIN umožňuje uživatelům rychlé přihlášení pomocí čtyřmístného kódu.
+- **Maximální počet minut nečinnosti, po kterém se zamkne obrazovka (v minutách)**: zadejte dobu, po kterou musí být zařízení nečinné, než se automaticky uzamkne obrazovka, od 1-60 minut. Zadejte například, `5 Minutes` Pokud chcete zařízení uzamknout po 5 minutách nečinnosti. Pokud je nastavené na **Nenakonfigurováno**, Intune toto nastavení nezmění ani neaktualizuje.
+- **Vypršení platnosti hesla (dny)**: zadejte dobu ve dnech, kdy musí být heslo zařízení změněno, od 1-255. Zadejte například `90` platnost hesla po 90 dnech. Pokud je hodnota prázdná, Intune se nezmění ani neaktualizuje.
+- **Zakázat opakované použití předchozích hesel**: zadejte počet dříve použitých hesel, která se nedají použít, od 1-24. Například zadejte, `5` že uživatelé nemůžou nastavit nové heslo na aktuální heslo ani na žádná z předchozích čtyř hesel. Pokud je hodnota prázdná, Intune se nezmění ani neaktualizuje.
+- **Obrázkové heslo a PIN**: obrázkové heslo umožňuje uživateli přihlašovat se gesty na obrázku. Kód PIN umožňuje uživatelům rychlé přihlášení pomocí čtyřmístného kódu.
+
+  **Blok** zabraňuje použití obrázku nebo PIN kódu jako hesla. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
+
 - **Šifrování**: **vyžaduje** šifrování u zařízení, včetně souborů. Ne všechna zařízení podporují šifrování. Pokud je nastavené na **Nenakonfigurováno**, Intune toto nastavení nezmění ani neaktualizuje.
 
   Pokud chcete nakonfigurovat toto nastavení a správně ohlásit dodržování předpisů, nakonfigurujte taky:
+
   - **Požadovaný typ hesla**: Nastavte aspoň na **číslo**.
-  - **Minimální délka hesla**: Nastavte aspoň `4`na.
+  - **Minimální délka hesla**: Nastavte aspoň na `6` .
 
   K vynucení šifrování na zařízeních s Windows 8.1 je potřeba na každé zařízení nainstalovat [aktualizaci MDM klienta pro Windows z prosince 2014](https://support.microsoft.com/kb/3013816) .
 
@@ -69,17 +77,17 @@ V tomto článku se dozvíte, jak Microsoft Intune nastavení omezení zařízen
 - Automatické vyplňování: **blok** znemožní uživatelům měnit nastavení automatického dokončování v prohlížeči a automaticky **naplnit**pole formuláře. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém umožňovat automatické vyplňování.
 - **Upozornění na podvod**: **vyžaduje, aby** v prohlížeči byla zobrazena upozornění podvodů pro potenciální podvodné weby. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
 - **Filtr SmartScreen pro Microsoft Edge**: **blok** vypne filtr SmartScreen v programu Microsoft Defender. Filtr SmartScreen při přístupu k webům a stahování souborů vyhledává potenciální podvodné zprávy a škodlivý software. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém zapnout filtr SmartScreen.
-- **JavaScript**: **Block** zabrání v prohlížeči spouštění skriptů, jako je například JavaScript. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
+- **Allow JavaScript**: **Block** zabrání v prohlížeči spouštění skriptů, jako je například JavaScript. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém umožňovat jazyk JavaScript.
 - **Automaticky otevíraná**okna: **blok** zapne blokování automaticky otevíraných oken, aby se zabránilo automaticky otevíraná okna ve webovém prohlížeči. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
 - **Hlavičky do Not Track**: **blok** zabraňuje zařízením v posílání hlaviček do Not Track pro weby požadující informace o sledování. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
 - **Moduly plug**-in: **blokovat** znemožní uživatelům přidávat do Internet Exploreru moduly plug-in. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
-- **Položka s jedním slovem na intranetovém webu**: jedna položka umožňující uživatelům přejít na intranetový web zadáním jediného slova, `hr` například `benefits`nebo. **Blokování** brání této funkci. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
+- **Položka s jedním slovem na intranetovém webu**: jedna položka umožňující uživatelům přejít na intranetový web zadáním jediného slova, například `hr` nebo `benefits` . **Blokování** brání této funkci. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
 - **Automatické zjišťování intranetového webu**: **blok** zabraňuje automatickému zjišťování intranetových webů v prohlížeči. Pravidla mapování intranetu jsou blokovaná. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
 - **Úroveň zabezpečení v Internetu**: nastaví úroveň zabezpečení internetových serverů. Možnosti:
   - **Nenakonfigurováno** (výchozí): Intune toto nastavení nemění ani neaktualizuje.
-  - **Medium**
-  - **Střední-vysoká**
   - **Maximální**
+  - **Střední-vysoká**
+  - **Medium**
 - **Úroveň zabezpečení intranetu**: nastaví úroveň zabezpečení intranetových serverů. Možnosti:
   - **Nenakonfigurováno** (výchozí): Intune toto nastavení nemění ani neaktualizuje.
   - **Nízká**
@@ -95,8 +103,12 @@ V tomto článku se dozvíte, jak Microsoft Intune nastavení omezení zařízen
   - **Střední-vysoká**
   - **Maximální**
 - **Vysoké zabezpečení pro weby s omezeným přístupem**: konfiguruje úroveň zabezpečení pro zónu lokalit s omezeným přístupem. **Konfigurace** vynutila vysoké zabezpečení pro weby s omezeným přístupem. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
-- **Přístup z nabídky podnikového režimu**: **blok** znemožní uživatelům přístup k možnostem nabídky podnikového režimu v Internet Exploreru. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Pokud je nastaveno na **blokovat**, zadejte také:
+- **Přístup z nabídky podnikového režimu**: **blok** znemožní uživatelům přístup k možnostem nabídky podnikového režimu v Internet Exploreru. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
+
+  Pokud je nastavena na hodnotu **není nakonfigurováno**, zadejte také:
+
   - **Adresa URL umístění sestavy protokolování**: zadejte umístění adresy URL, kam chcete získat sestavy, které zobrazují weby s povoleným přístupem v podnikovém režimu.
+
 - **Umístění seznamu webů podnikového režimu (jenom desktopové verze)**: zadejte umístění seznamu webů, které se dají otevřít v podnikovém režimu.
 
 ## <a name="cellular"></a>Mobilní služby

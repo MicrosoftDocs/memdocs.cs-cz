@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2fbb82123f28c5049a60d60572aadcb3d03777b7
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 97566b4c14e0d5cb63847547822ce1908a33bb8a
+ms.sourcegitcommit: 6ca5e75ed7a6fd2186fbe51c177960004d5ec81f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326947"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83633387"
 ---
 # <a name="how-to-get-support-for-microsoft-intune"></a>Jak získat podporu pro Microsoft Intune
 
@@ -53,7 +53,7 @@ Při použití nově vytvořeného tenanta pro Intune je možné, že se nepoved
 
 Podrobnosti o chybě zahrnují *ID relace*, podrobnosti *rozšíření* a další.
 
-K tomuto problému dochází, když jste svůj nový účet tenanta neověřili prostřednictvím **centra pro správu M365** na https://admin.microsoft.comportálu nebo na **portálu Office 365** na adrese https://portal.office.com. Pokud chcete tento problém vyřešit, vyberte odkaz pro *Centrum pro správu M365* ve zprávě, nebo navštivte https://portal.office.comstránku a přihlaste se. Po ověření v obou lokalitách bude k dispozici *pomoc a podpora* služby Intune.
+K tomuto problému dochází, když jste svůj nový účet tenanta neověřili prostřednictvím **centra pro správu M365** na https://admin.microsoft.com portálu nebo na **portálu Office 365** na adrese https://portal.office.com . Pokud chcete tento problém vyřešit, vyberte odkaz pro *Centrum pro správu M365* ve zprávě, nebo navštivte stránku https://portal.office.com a přihlaste se. Po ověření v obou lokalitách bude k dispozici *pomoc a podpora* služby Intune.
 
 **Přístup k nápovědě a podpoře**:
 
@@ -68,7 +68,7 @@ K tomuto problému dochází, když jste svůj nový účet tenanta neověřili 
 
   - Z libovolného uzlu v centru pro správu Microsoft Endpoint Manageru vyberte **?** v pravém horním rohu portálu a pak pomocí rozevíracího seznamu vyberte typ správy, ke kterému chcete získat informace. Centrum pro správu Microsoft Endpoint Manageru podporuje následující typy správy a Vy musíte vybrat tu, na kterou chcete pomoct, jako je Intune:
 
-    - Správce konfigurace (zahrnuje analýzu stolního počítače)
+    - Configuration Manager (zahrnuje analýzu stolního počítače)
     - Intune
     - Spoluspráva  
 
@@ -82,7 +82,7 @@ K tomuto problému dochází, když jste svůj nový účet tenanta neověřili 
     > [!div class="mx-imgBorder"]
     > ![Potvrďte typ správy](./media/get-support/confirm-management-selection.png)
 
-  - Pokud otevřete pomoc a podporu pro **řešení problémů** > **a podporu a**podporu podpory, neuvidíte vybraný typ správy uvedený níže v části *pomoc a podpora*.
+  - Pokud otevřete pomoc a podporu pro **řešení problémů**  >  **a podporu a**podporu podpory, neuvidíte vybraný typ správy uvedený níže v části *pomoc a podpora*.
 
   - Pokud přejdete na jakýkoli jiný uzel, třeba na *zařízení*, *aplikace*nebo *uživatele*, a pak vyberte možnost *pomoc a podpora*, nebudete mít možnost vybrat typ správy, ani se nezobrazí zobrazení typu pod možností *pomoc a podpora*. V takovém případě se předpokládá použití služby *Intune* . Pokud nechcete, aby byl kontext Intune, použijte **?** možnost, abyste mohli vybrat jiný typ správy.
 
@@ -94,7 +94,7 @@ K tomuto problému dochází, když jste svůj nový účet tenanta neověřili 
 
   V levém horním rohu jsou tři ikony, které můžete vybrat pro otevření různých podoken v okně *Potřebuji Help?* . Podokno zobrazené v podokně je označeno podtržením.
 
-  Zákazníci se smlouvou o podpoře **Premier** nebo **Unified** mají [Další možnosti](#premier-and-unified-support-customers) pro podporu a v nápisu *potřebujete pomoc* , který se podobá následujícímu obrázku: ![banner Premier](./media/get-support/premier-banner.png)
+  Zákazníci se smlouvou o podpoře **Premier** nebo **Unified** mají [Další možnosti](#premier-and-unified-support-customers) pro podporu a v nápisu *potřebujete pomoc* , který se podobá následujícímu obrázku: ![ banner Premier](./media/get-support/premier-banner.png)
 
   *Potřebujete tuto podporu?* Otevře se podokno *najít řešení* . Pokud ale máte aktivní případ podpory, otevře se okno v podokně *žádosti o služby* , kde můžete zobrazit podrobnosti o aktivních a uzavřených případech podpory.
 

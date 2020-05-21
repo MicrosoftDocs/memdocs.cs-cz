@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/05/2020
+ms.date: 05/15/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,16 +16,16 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 7d8ea221b6c1768055e3ca1839c20ed64e2e3838
-ms.sourcegitcommit: 14d7dd0a99ebd526c9274d5781c298c828323ebf
+ms.openlocfilehash: be850b2351de138ddacb087b2acf198e164dcd67
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82802017"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83430098"
 ---
 # <a name="settings-for-windows-10-microsoft-defender-antivirus-policy-in-microsoft-intune"></a>Nastavení pro zásady antivirové ochrany v Microsoft Defenderu pro Windows 10 v Microsoft Intune
 
-Zobrazit nastavení zásad antivirové ochrany, která můžete nakonfigurovat pro profil antivirové ochrany Microsoft Defenderu pro Windows 10 v Microsoft Intune.
+Podívejte se na nastavení zásad ochrany antivirovým programem Endpoint Security, která můžete nakonfigurovat pro antivirový profil Microsoft Defender pro Windows 10 v Microsoft Intune jako součást [zásady zabezpečení koncového bodu](../protect/endpoint-security-policy.md).
 
 ## <a name="cloud-protection"></a>Ochrana cloudu
 

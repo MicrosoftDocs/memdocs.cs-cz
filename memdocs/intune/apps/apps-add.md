@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 05/11/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a0cf2096b4a8862a29d47bc05aa29f0cbb48792b
-ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
+ms.openlocfilehash: d8745c06cabb2bc90236aa2ed5c9076b03e1e2f0
+ms.sourcegitcommit: 6ca5e75ed7a6fd2186fbe51c177960004d5ec81f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82023244"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83633203"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>Přidání aplikací do Microsoft Intune 
 
@@ -43,6 +43,7 @@ Intune podporuje širokou škálu typů aplikací. Dostupné možnosti se pro je
 | Interně napsané aplikace (obchodní) | Intune nainstaluje aplikaci na zařízení (vy dodáte instalační soubor). | Aplikaci musíte aktualizovat sami. |
 | Aplikace, které jsou integrované (integrované aplikace) | Intune nainstaluje aplikaci na zařízení.  | Aplikace se aktualizují automaticky. |
 | Aplikace na webu (webový odkaz) | Intune vytvoří zástupce webové aplikace na domovské obrazovce zařízení. | Aplikace se aktualizují automaticky. |
+| Aplikace z jiných služeb Microsoftu  | Intune vytvoří zástupce aplikace v Portál společnosti. Další informace najdete v tématu [Možnosti nastavení zdroje aplikace](../apps/company-portal-app.md#app-source-setting-options). | Aplikace se aktualizují automaticky. |
 
 ### <a name="specific-app-type-details"></a>Podrobnosti o konkrétním typu aplikace
  
@@ -71,10 +72,9 @@ Následující tabulka obsahuje konkrétní typy aplikací a popis, jak je můž
 | Aplikace pro Windows (Win32)  | Obchodní aplikace  | Jako **typ aplikace** vyberte **aplikaci pro Windows (Win32)**, vyberte **Soubor balíčku aplikace** a pak vyberte instalační soubor s příponou **.intunewin**.  |
 | Obchodní aplikace pro macOS | Obchodní aplikace  | Jako **Typ aplikace**vyberte **obchodní** typ, vyberte **soubor balíčku aplikace**a pak vyberte instalační soubor s příponou **. intunemac**.  |
 
-
 <sup>1</sup> Další informace o pracovních profilech Androidu a Enterprise a Android najdete v části [Principy licencovaných aplikací](apps-add.md#understanding-licensed-apps) níže.
 
-Aplikaci můžete do Microsoft Intune přidat tak, že vyberete **aplikace** > **všechny aplikace** > **Přidat**. Zobrazí se podokno **Vybrat typ aplikace** a můžete vybrat **Typ aplikace**. 
+Aplikaci můžete do Microsoft Intune přidat tak, že vyberete **aplikace**  >  **všechny aplikace**  >  **Přidat**. Zobrazí se podokno **Vybrat typ aplikace** a můžete vybrat **Typ aplikace**. 
 
 >[!TIP]
 > Obchodní aplikace je aplikace, kterou přidáte z instalačního souboru aplikace. Pokud třeba chcete nainstalovat aplikaci LOB pro iOS/iPadOS, přidáte aplikaci tak, že jako **Typ aplikace** v podokně **Vybrat typ aplikace** vyberete **obchodní aplikace** . Potom vyberete soubor balíčku aplikace (má příponu .ipa). Tyto typy aplikací obvykle vznikají interně.
@@ -112,6 +112,7 @@ Vybírat můžete z těchto typů aplikací:
 - **Aplikace ze Storu**: aplikace, které se nahrály do obchodu Microsoft Storu, iOS/iPadOS nebo Store pro Android, jsou aplikace pro Store. Poskytovatel aplikace pro Store udržuje a poskytuje aktualizace aplikace. Aplikaci si vyberete v seznamu v obchodě Store a přidáte ji pomocí Intune jako aplikaci dostupnou pro vaše uživatele.
 - **Interně napsané aplikace (obchodní)**: Aplikace vytvořené interně se nazývají obchodní aplikace (LOB). Funkce tohoto typu aplikace se vytvořila pro jednu z podporovaných platforem Intune, jako je Windows, iOS/iPadOS, macOS nebo Android. Vaše organizace vytvoří a poskytuje aktualizace jako samostatný soubor. Aktualizace aplikace poskytujete uživatelům tak, že přidáte a nasadíte aktualizace přes Intune.
 - **Aplikace na webu**: Webová aplikace představuje aplikaci klient-server. Server poskytuje webovou aplikaci, která zahrnuje uživatelské rozhraní, obsah a funkce. Moderní webové hostingové platformy dále běžně nabízejí zabezpečení, vyrovnávání zatížení a další výhody. Tento typ aplikace se samostatně udržuje na webu. Na tento typ aplikace se odkazuje pomocí Intune. Můžete také určit, které skupiny uživatelů mají k aplikaci přístup. Všimněte si, že Android webové aplikace nepodporuje.
+- **Aplikace z jiných služeb Microsoftu**: aplikace, které byly vytvořené z Azure AD nebo Office Online. **Podnikové aplikace Azure AD** se registrují a přiřazují prostřednictvím [Azure Portal](https://portal.azure.com). **Aplikace Office Online** se přiřazují pomocí řídicích mechanismů licencování dostupných v [centru pro správu M365](https://admin.microsoft.com). Můžete skrýt nebo zobrazit aplikace služby Azure AD Enterprise a Office Online koncovým uživatelům v Portál společnosti. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **přizpůsobení správy tenanta**  >  **Customization** a najděte toto nastavení konfigurace. Tuto možnost vyberte, pokud chcete pro každého koncového uživatele **Skrýt** nebo **Zobrazit** buď **aplikace Azure AD Enterprise** nebo **aplikace Office Online** , v portál společnosti. Každý koncový uživatel uvidí ze zvolené služby Microsoftu celý katalog aplikací. Ve výchozím nastavení se každý další zdroj aplikace nastaví jako **skrytý**. Další informace najdete v tématu [Možnosti nastavení zdroje aplikace](../apps/company-portal-app.md#app-source-setting-options). 
 
 Při určování aplikací potřebných pro vaši organizaci zvažte, jak se tyto aplikace integrují s cloudovými službami, k jakým datům mají aplikace přístup, jestli jsou aplikace dostupné pro uživatele, kteří používají vlastní zařízení (BYOD), a jestli aplikace vyžadují přístup k internetu.
 
@@ -162,7 +163,7 @@ Když aplikace seřadíte do kategorií, uživatelé je jednodušeji najdou na p
 Když přidáte aplikaci do Intune, budete mít možnost vybrat požadovanou kategorii. Informace k přidání aplikací a přiřazení kategorií získáte v tématech pro jednotlivé platformy. Pokud chcete vytvořit a upravit vlastní kategorie, postupujte podle následujících pokynů:
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-3.  > Vyberte**kategorie aplikací** **pro aplikace.**  
+3. Vyberte **Apps**  >  **kategorie aplikací**pro aplikace.  
     V podokně **Kategorie aplikací** se zobrazí seznam aktuálních kategorií. 
 5. Proveďte jednu z následujících akcí:
     - Pokud chcete přidat kategorii, v podokně **Vytvořit kategorii** vyberte **Přidat** a zadejte název kategorie.  

@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/14/2020
+ms.date: 05/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d80c01380350463543fd7a24dc57031675104c1f
-ms.sourcegitcommit: 4174f7e485067812c29aea01a4767989ffdbb578
+ms.openlocfilehash: 8962ed0fe5fdba0879e13bd1abdb6253f555f9f0
+ms.sourcegitcommit: dba89b827d7f89067dfa75a421119e0c973bb747
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83406408"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83709260"
 ---
 # <a name="configure-and-use-imported-pkcs-certificates-with-intune"></a>Konfigurace a používání importovaných certifikátů PKCS pomocí Intune
 
@@ -148,7 +148,7 @@ Modul PowerShell poskytuje metody pro vytvoření klíče pomocí Kryptografie s
 
 3. Pokud chcete modul naimportovat, spusťte příkaz `Import-Module .\IntunePfxImport.psd1` a importujte modul.
 
-4. Dále spusťte`Add-IntuneKspKey "Microsoft Software Key Storage Provider" "PFXEncryptionKey"`
+4. Dále spusťte`Add-IntuneKspKey -ProviderName "Microsoft Software Key Storage Provider" -KeyName "PFXEncryptionKey"`
 
    > [!TIP]
    > Poskytovatele, kterého použijete, musí být vybrán znovu při importu certifikátů PFX. Můžete použít **poskytovatele úložiště klíčů od Microsoftu**, i když se podporuje použití jiného poskytovatele. Název klíče je také k dispozici jako příklad a můžete použít jiný název klíče podle vašeho výběru.
@@ -200,6 +200,9 @@ Vyberte poskytovatele úložiště klíčů, který odpovídá poskytovateli, kt
 
    > [!NOTE]
    > Když importujete certifikát z jiného systému, než je server, na kterém je konektor nainstalovaný, použijte následující příkaz, který zahrnuje cestu k souboru klíče:`$userPFXObject = New-IntuneUserPfxCertificate -PathToPfxFile "<FullPathPFXToCert>" $SecureFilePassword "<UserUPN>" "<ProviderName>" "<KeyName>" "<IntendedPurpose>" "<PaddingScheme>" "<File path to public key file>"`
+   >
+   > *Síť VPN* není podporovaná jako IntendedPurpose. 
+
 
 7. Naimportujte objekt **UserPFXCertificate** do Intune spuštěním`Import-IntuneUserPfxCertificate -CertificateList $userPFXObject`
 

@@ -1,12 +1,12 @@
 ---
-title: Vytvoření profilu zařízení rozšíření jádra macOS pomocí Microsoft Intune – Azure | Microsoft Docs
+title: Vytvoření macOS systémů a rozšíření jádra pomocí Microsoft Intune – Azure | Microsoft Docs
 titleSuffix: ''
-description: Přidejte nebo vytvořte profil zařízení macOS a potom nakonfigurujte rozšíření jádra, aby bylo možné přepsat uživatele, přidat identifikátor týmu a sadu prostředků a identifikátor týmu v Microsoft Intune.
+description: Přidejte nebo vytvořte profil zařízení macOS, který konfiguruje rozšíření systému nebo rozšíření jádra, aby bylo možné přepsat uživatele, přidá identifikátor týmu a přidá do Microsoft Intune sadu prostředků a identifikátor týmu.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/24/2020
+ms.date: 05/07/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,49 +17,67 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8f9212d275b17db6a40e3133b5363cd13c9d13d6
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: ea801f528199dfee419ae8bbea63f53c45c7e43a
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80551430"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83429585"
 ---
-# <a name="add-macos-kernel-extensions-in-intune"></a>Přidání rozšíření jádra macOS v Intune
+# <a name="add-macos-system-and-kernel-extensions-in-intune"></a>Přidání macOS systémů a rozšíření jádra do Intune
 
 > [!NOTE]
 > rozšíření jádra macOS se nahrazují systémovými rozšířeními. Další informace najdete v tématu [Podpora tipů: Použití systémových rozšíření místo rozšíření jádra pro MacOS Catalina 10,15 v Intune](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-using-system-extensions-instead-of-kernel-extensions/ba-p/1191413).
 
-Na zařízeních macOS můžete přidat funkce na úrovni jádra. Tyto funkce přistupují k částem operačního systému, ke kterým nemají běžné programy přístup. Vaše organizace může mít konkrétní potřeby nebo požadavky, které nejsou k dispozici v aplikaci, funkci zařízení atd. 
+Na zařízeních macOS můžete přidat rozšíření jádra a systémová rozšíření. Rozšíření jádra i systémová rozšíření umožňují uživatelům instalovat rozšíření aplikací, která rozšiřuje nativní možnosti operačního systému. Rozšíření jádra spouštějí svůj kód na úrovni jádra. Systémová rozšíření běží v pevně kontrolovaném uživatelském prostoru.
 
-Pokud chcete přidat rozšíření jádra, která se vždycky můžou v zařízeních načíst, přidejte do Microsoft Intune rozšíření jádra (KEXT) a potom tato rozšíření nasaďte do svých zařízení.
+Pokud chcete přidat rozšíření, která se vždycky můžou na svých zařízeních načíst, použijte Microsoft Intune. Intune používá konfigurační profily k vytvoření a přizpůsobení těchto nastavení potřebám vaší organizace. Po přidání těchto funkcí do profilu ho potom nahrajte nebo nasaďte, abyste macOS zařízení ve vaší organizaci.
+
+Tento článek popisuje systémová rozšíření a rozšíření jádra. Také se dozvíte, jak vytvořit profil konfigurace zařízení pomocí rozšíření v Intune.
+
+## <a name="system-extensions"></a>Rozšíření systému
+
+Systémová rozšíření běží v uživatelském prostoru a nepřístupují k jádru. Cílem je zvýšit zabezpečení, poskytnout více koncovým uživatelům řízení a omezit útoky na úrovni jádra. Tato rozšíření mohou být:
+
+- Rozšíření ovladačů, včetně ovladačů na USB, síťových karet (NIC), řadičů sériového portu a zařízení s lidským rozhraním (HID)
+- Rozšíření sítě, včetně filtrů obsahu, proxy serverů DNS a klientů VPN
+- Rozšíření zabezpečení koncového bodu, včetně zjišťování koncových bodů, odpovědí na koncového bodu a antivirové ochrany
+
+Systémová rozšíření jsou součástí sady aplikace a nainstalují se z aplikace.
+
+Další informace o rozšířeních systému najdete v tématu [systémová rozšíření](https://developer.apple.com/documentation/systemextensions) (otevře web společnosti Apple).
+
+## <a name="kernel-extensions"></a>Rozšíření jádra
+
+Rozšíření jádra přidávají funkce na úrovni jádra. Tyto funkce přistupují k částem operačního systému, ke kterým nemají běžné programy přístup. Vaše organizace může mít konkrétní potřeby nebo požadavky, které nejsou k dispozici v aplikaci, funkci zařízení atd.
 
 Máte třeba program pro kontrolu virů, který v zařízení hledá škodlivý obsah. Toto rozšíření jádra programu pro kontrolu virů můžete přidat jako povolené rozšíření jádra v Intune. Pak přiřaďte rozšíření k zařízením macOS.
 
 Díky této funkci můžou správci uživatelům umožnit přepsat rozšíření jádra, přidat identifikátory týmu a přidat konkrétní rozšíření jádra do Intune.
 
-Tato funkce platí pro:
+Další informace o rozšíření jádra najdete v tématu [rozšíření jádra](https://developer.apple.com/library/archive/documentation/Darwin/Conceptual/KernelProgramming/Extend/Extend.html) (Otevírá web společnosti Apple).
 
-- macOS 10.13.2 a novější
+## <a name="prerequisites"></a>Požadavky
 
-Aby bylo možné tuto funkci používat, musí být zařízení:
+- Tato funkce platí pro:
 
-- Zaregistrované v Intune pomocí Program registrace zařízeníu (DEP) společnosti Apple. [Automatická registrace zařízení MacOS](../enrollment/device-enrollment-program-enroll-macos.md) obsahuje další informace.
+  - macOS 10.13.2 a novější (rozšíření jádra)
+  - macOS 10,15 a novější (systémová rozšíření)
 
-  NEBO
+  Z macOS 10,15 až 10.15.4 se můžou rozšíření jádra a systémová rozšíření spouštět vedle sebe.
 
-- Zaregistrováno v Intune s "uživatelem schváleným zápisem" (termínem Apple). [Příprava na změny rozšíření jádra v MacOS High Sierra](https://support.apple.com/en-us/HT208019) (otevře web společnosti Apple) obsahuje další informace.
+- Aby bylo možné tuto funkci používat, musí být zařízení:
 
-Intune používá konfigurační profily k vytvoření a přizpůsobení těchto nastavení potřebám vaší organizace. Po přidání těchto funkcí do profilu můžete profil vložit nebo nasadit, abyste macOS zařízení ve vaší organizaci.
+  - Zaregistrované v Intune pomocí Program registrace zařízeníu (DEP) společnosti Apple. [Automatická registrace zařízení MacOS](../enrollment/device-enrollment-program-enroll-macos.md) obsahuje další informace.
 
-V tomto článku se dozvíte, jak vytvořit profil konfigurace zařízení pomocí rozšíření jádra v Intune.
+    NEBO
 
-> [!TIP]
-> Další informace o rozšíření jádra najdete v tématu [Přehled rozšíření jádra](https://developer.apple.com/library/archive/documentation/Darwin/Conceptual/KernelProgramming/Extend/Extend.html) (otevření webu společnosti Apple).
+  - Zaregistrováno v Intune s "uživatelem schváleným zápisem" (termínem Apple). [Příprava na změny rozšíření jádra v MacOS High Sierra](https://support.apple.com/en-us/HT208019) (otevře web společnosti Apple) obsahuje další informace.
 
 ## <a name="what-you-need-to-know"></a>Co je potřeba vědět
 
-- Je možné přidat nepodepsaná starší verze rozšíření jádra.
-- Nezapomeňte zadat správný identifikátor týmu a ID sady rozšíření jádra. Intune neověřuje hodnoty, které zadáte. Pokud zadáte chybné informace, rozšíření na zařízení nebude fungovat. Identifikátor týmu je přesně 10 alfanumerických znaků dlouhý. 
+- Je možné přidat nepodepsaná starší verze jádra a rozšíření systému.
+- Nezapomeňte zadat správný identifikátor týmu a ID sady rozšíření. Intune neověřuje hodnoty, které zadáte. Pokud zadáte chybné informace, rozšíření na zařízení nebude fungovat. Identifikátor týmu je přesně 10 alfanumerických znaků dlouhý.
 
 > [!NOTE]
 > Informace společnosti Apple, které se týkají podepisování a notarization pro veškerý software. U macOS 10.14.5 a novějších rozšíření jádra nasazená přes Intune nemusí splňovat zásady notarization od společnosti Apple.
@@ -69,13 +87,10 @@ V tomto článku se dozvíte, jak vytvořit profil konfigurace zařízení pomoc
 > - [Notarizing aplikaci před distribucí](https://developer.apple.com/documentation/security/notarizing_your_app_before_distribution) (otevře web společnosti Apple) 
 > - [Příprava na změny rozšíření jádra v MacOS High Sierra](https://support.apple.com/en-us/HT208019) (otevře web společnosti Apple)
 
-> [!NOTE]
-> Uživatelské rozhraní (UI) Intune se aktualizuje na celé obrazovce a může trvat několik týdnů. Až do chvíle, kdy váš tenant obdrží tuto aktualizaci, budete mít při vytváření nebo úpravách nastavení popsaných v tomto článku mírně odlišný pracovní postup.
-
 ## <a name="create-the-profile"></a>Vytvoření profilu
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **Konfigurace zařízení** > **profily** > konfigurace**vytvořit profil**.
+2. Vyberte **Devices**  >  **Konfigurace zařízení profily konfigurace**  >  **vytvořit profil**.
 3. Zadejte tyto vlastnosti:
 
     - **Platforma**: vyberte **MacOS**
@@ -84,7 +99,7 @@ V tomto článku se dozvíte, jak vytvořit profil konfigurace zařízení pomoc
 4. Vyberte **Vytvořit**.
 5. V části **základy**zadejte následující vlastnosti:
 
-    - **Název**: zadejte popisný název zásady. Své zásady pojmenujte, abyste je později mohli snadno identifikovat. Dobrým názvem zásad je například **MacOS: Přidání rozšíření jádra do zařízení**.
+    - **Název**: zadejte popisný název zásady. Své zásady pojmenujte, abyste je později mohli snadno identifikovat. Dobrým názvem zásad je například **MacOS: Přidání antivirové kontroly do rozšíření jádra na zařízeních**.
     - **Popis**: zadejte popis zásady. Toto nastavení není povinné, ale doporučujeme ho zadat.
 
 6. Vyberte **Další**.
@@ -94,7 +109,7 @@ V tomto článku se dozvíte, jak vytvořit profil konfigurace zařízení pomoc
     - [macOS](kernel-extensions-settings-macos.md)
 
 8. Vyberte **Další**.
-9. V části **značky oboru** (volitelné) přiřaďte značku pro filtrování profilu pro konkrétní IT skupiny, například `US-NC IT Team` nebo. `JohnGlenn_ITDepartment` Další informace o značkách oboru naleznete v tématu [použití značek RBAC a Scope pro distribuci](../fundamentals/scope-tags.md).
+9. V části **značky oboru** (volitelné) přiřaďte značku pro filtrování profilu pro konkrétní IT skupiny, například `US-NC IT Team` nebo `JohnGlenn_ITDepartment` . Další informace o značkách oboru naleznete v tématu [použití značek RBAC a Scope pro distribuci](../fundamentals/scope-tags.md).
 
     Vyberte **Další**.
 

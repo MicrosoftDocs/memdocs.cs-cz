@@ -1,11 +1,11 @@
 ---
 title: Nastavení zařízení pro Windows holografické firmy – Microsoft Intune – Azure | Microsoft Docs
-description: Přečtěte si o a nakonfigurujte nastavení omezení zařízení v Microsoft Intune pro Windows holografické pro firmy, včetně zrušení registrace, geografického umístění, hesel, instalaci aplikací z App Storu, souborů cookie a automaticky otevíraných oken v Microsoft Edge, Microsoft Defenderu, vyhledávání, cloudu a úložišti, připojení Bluetooth, systémového času a dat o využití v Azure.
+description: Přečtěte si o a nakonfigurujte nastavení omezení zařízení v Microsoft Intune pro Windows Holografick pro firmy. Řízení zrušení registrace, geografického umístění, hesel, instalace aplikací z App Storu, souborů cookie a automaticky otevíraných oken v Microsoft Edge, Microsoft Defenderu, hledání, cloudu a úložišti, připojení Bluetooth, systémový čas a data o využití.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/13/2019
+ms.date: 05/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,98 +15,144 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0a207c34c0d46b423eda44abf953e9c084cc9b2d
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 301cdd9403b0bb3e2d64c8707782ecbc639dc044
+ms.sourcegitcommit: 169e279ba686c28d9a23bc0a54f0a2a0d20bdee4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078222"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83556043"
 ---
 # <a name="windows-holographic-for-business-device-settings-to-allow-or-restrict-features-using-intune"></a>Nastavení zařízení ve Windows-holografické pro firmy, které umožňuje povolit nebo zakázat funkce využívající Intune
 
-
-
 Tento článek obsahuje seznam a popis různých nastavení, která můžete řídit na zařízeních s Windows holografickým pro firmy, jako je například Microsoft HoloLens. Jako součást řešení správy mobilních zařízení (MDM) pomocí těchto nastavení můžete povolit nebo zakázat funkce, zabezpečení a další funkce.
+
+Jako správce Intune můžete vytvořit a přiřadit tato nastavení k vašim zařízením.
 
 ## <a name="before-you-begin"></a>Před zahájením
 
-[Vytvořte profil konfigurace zařízení](device-restrictions-configure.md#create-the-profile).
+[Vytvoří konfigurační profil omezení zařízení s Windows 10](device-restrictions-configure.md#create-the-profile).
 
-## <a name="general"></a>Obecné
-
-- **Ruční zrušení registrace**: umožňuje uživateli ze zařízení ručně odstranit pracovní účet.
-- **Cortana**: povolení nebo zákaz hlasového asistenta Cortana
-- **Zeměpisná poloha**: Určuje, jestli zařízení může používat informace o poloze služby.
-
-## <a name="password"></a>Heslo
-
-- **Heslo**: vyžaduje, aby koncový uživatel zadal heslo pro přístup k zařízení.
-- **Vyžadovat heslo při návratu zařízení ze stavu nečinnosti**: Určuje, že uživatel musí zadat heslo k odemknutí zařízení.
+Když vytvoříte konfigurační profil omezení zařízení s Windows 10, budete mít víc nastavení, než jaké je uvedené v tomto článku. Nastavení v tomto článku jsou podporovaná na zařízeních s Windows holografickým pro firmy.
 
 ## <a name="app-store"></a>App Store
 
-- **Automaticky aktualizovat aplikace ze Storu**: povolí automatickou aktualizaci aplikací nainstalovaných z Microsoft Store.
-- **Instalace důvěryhodné aplikace**: povoluje zkušebně načtené aplikací podepsaných důvěryhodným certifikátem.
-- **Odemčení pro vývojáře**: umožňuje povolit nastavení vývojářů pro Windows, jako je například umožnění úprav aplikací zkušebně načtené koncovým uživatelem.
+- **Automatické aktualizace aplikací ze Storu**: **blok** zabraňuje automatické instalaci aktualizací z Microsoft Store. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém umožňovat automatickou aktualizaci aplikací nainstalovaných z Microsoft Store.
 
-## <a name="microsoft-edge-browser"></a>Prohlížeč Microsoft Edge
+  [CSP ApplicationManagement/AllowAppStoreAutoUpdate](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-allowappstoreautoupdate)
 
-- **Soubory cookie**: umožňuje prohlížeči ukládat do zařízení internetové soubory cookie.
-- **Automaticky otevíraná**okna: blokuje automaticky otevíraná okna v prohlížeči (platí jenom pro Windows 10 Desktop).
-- **Návrhy hledání**: umožňuje vyhledávacímu webu navrhovat weby při psaní vyhledávacích frází.
-- **Správce hesel**: povolí nebo zakáže funkci Microsoft Edge Password Manager.
-- **Odeslat hlavičky do Not Track**: nakonfiguruje prohlížeč Microsoft Edge tak, aby odesílal záhlaví do nesledovaných webů, které uživatelé navštěvují.
+- **Instalace důvěryhodných aplikací**: vyberte, jestli se můžou instalovat aplikace, které nejsou Microsoft Store, označované taky jako zkušební načtení. Probíhá instalace zkušebního načtení a následné spuštění nebo otestování aplikace, která není certifikována Microsoft Store. Například aplikace, která je interní pro vaši společnost. Možnosti:
+  - **Nenakonfigurováno** (výchozí): Intune toto nastavení nemění ani neaktualizuje.
+  - **Blok**: zabraňuje zkušebnímu načtení. NeMicrosoft Store aplikace se nedají nainstalovat.
+  - **Povolit**: umožňuje zkušební načtení. Je možné nainstalovat aplikace, které nejsou Microsoft Store.
 
-## <a name="microsoft-defender-smart-screen"></a>Inteligentní obrazovka Microsoft Defenderu
+  [CSP ApplicationManagement/AllowAllTrustedApps](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-allowalltrustedapps)
 
-- **Filtr SmartScreen pro Microsoft Edge**: Povolí filtr SmartScreen v Microsoft Edge pro přístup k webu a stahování souborů.
+- **Odemčení pro vývojáře**: umožňuje povolit nastavení vývojářů pro Windows, jako je například umožnění úprav aplikací zkušebně načtené uživateli. Možnosti:
+  - **Nenakonfigurováno** (výchozí): Intune toto nastavení nemění ani neaktualizuje.
+  - **Blok**: znemožní vývojářský režim a aplikace pro zkušební načtení.
+  - **Povolit**: povolí vývojářský režim a aplikace pro zkušební načtení.
 
-## <a name="search"></a>Search
-
-- **Poloha při hledání** – Určuje, jestli hledání může používat informace
-
-## <a name="cloud-and-storage"></a>Cloud a úložiště
-
-- **Účet Microsoft**: umožňuje uživateli přidružit k zařízení účet Microsoft.
+  [CSP ApplicationManagement/AllowDeveloperUnlock](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-allowdeveloperunlock)
 
 ## <a name="cellular-and-connectivity"></a>Mobilní síť a připojení
 
-- **Bluetooth**: Určuje, jestli uživatel může na zařízení povolit a nakonfigurovat Bluetooth.
-- **Zjistitelnost Bluetooth**: umožňuje zařízení zjistit jiná zařízení s podporou Bluetooth.
-- **Inzerce Bluetooth**: umožňuje zařízení přijímat reklamy přes Bluetooth.
+- **Bluetooth**: **blok** znemožní uživatelům povolit Bluetooth. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém na zařízení umožňovat Bluetooth.
+
+  [Připojení/AllowBluetooth CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-connectivity#connectivity-allowbluetooth)
+
+- **Zjistitelnost Bluetooth**: **blok** zabraňuje zařízení, aby bylo zjistitelné jinými zařízeními podporujícími technologii Bluetooth. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém pro zjištění zařízení povolit jiná zařízení s podporou Bluetooth, jako je třeba sluchátka.
+
+  [Zprostředkovatel kryptografických služeb Bluetooth/AllowDiscoverableMode](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowdiscoverablemode)
+
+- **Inzerce Bluetooth**: **blok** zabraňuje zařízení v posílání reklamy Bluetooth. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém zařízení odeslat reklamy Bluetooth.
+
+  [Zprostředkovatel kryptografických služeb Bluetooth/AllowAdvertising](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowadvertising)
+
+## <a name="cloud-and-storage"></a>Cloud a úložiště
+
+- **Účet Microsoft**: **blok** zabraňuje uživatelům v přidružení účet Microsoft k zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém přidat a použít účet Microsoft.
+
+  [Accounts/AllowMicrosoftAccountConnection CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-accounts#accounts-allowmicrosoftaccountconnection)
 
 ## <a name="control-panel-and-settings"></a>Ovládací panely a nastavení
 
-- **Změna systémového času**: zabrání koncovému uživateli ve změně data a času zařízení.
+- **Změna systémového času**: **blok** znemožní uživatelům měnit nastavení data a času v zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém uživatelům dovolit tato nastavení změnit.
 
-## <a name="kiosk---obsolete"></a>Veřejný terminál (zastaralé)
+  [Nastavení/CSP AllowDateTime](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-settings#settings-allowdatetime)
 
-Tato nastavení jsou jen pro čtení a nedají se změnit. Pokud chcete nakonfigurovat režim veřejného terminálu, podívejte se na článek o [nastavení veřejného terminálu](kiosk-settings-holographic.md).
+## <a name="general"></a>Obecné
 
-Ve veřejných terminálech obvykle běží konkrétní aplikace. Uživatelé nemají v zařízení přístup k žádným prvkům ani funkcím mimo aplikaci veřejného terminálu.
+- **Ruční zrušení registrace**: **blok** znemožní uživatelům odstranit pracovní účet pomocí ovládacích panelů na pracovišti na zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
 
-- **Celoobrazovkový režim**: Určuje typ beznabídkového režimu, který zásady podporuje. Mezi možnosti patří:
+  [Experience/AllowManualMDMUnenrollment CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-experience#experience-allowmanualmdmunenrollment)
 
-  - **Není konfigurováno** (výchozí): Zásady nepovolují režim veřejného terminálu. 
-  - Veřejný **terminál s jednou aplikací**: Profil umožňuje, aby zařízení spouštělo jenom jednu aplikaci. Jakmile se uživatel přihlásí, spustí se daná aplikace. Tento režim zároveň brání uživateli v otevírání nových aplikací nebo změně spuštěné aplikace.
-  - Veřejný **terminál s více aplikacemi**: Profil umožňuje, aby zařízení spouštělo víc aplikací. Uživatel má k dispozici pouze aplikace, které přidáte. Veřejný terminál s více aplikacemi, neboli zařízení s pevně stanoveným účelem, umožňuje poskytovat přehledné prostředí jednotlivým uživatelům, protože jim povoluje přístup pouze k aplikacím, které potřebují. A odeberte aplikace, které nepotřebují z pohledu. 
-  
-    Když přidáváte aplikace pro prostředí veřejného terminálu s více aplikacemi, potřebujete také soubor rozložení nabídky Start. [Soubor rozložení nabídky Start](/hololens/hololens-kiosk#start-layout-file-for-mdm-intune-and-others) obsahuje ukázkový soubor XML, který můžete použít v Intune. 
+- **Zeměpisná poloha**: **blok** zabraňuje uživatelům v zapínání služeb zjišťování polohy na zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
 
-### <a name="single-app-kiosks"></a>Veřejné terminály s jednou aplikací
+  [Experience/AllowFindMyDevice CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-experience#experience-allowfindmydevice)
 
-Zadejte následující nastavení:
+- **Cortana**: **Block** zakáže hlasového asistenta Cortana na zařízení. Když je Cortana vypnutá, uživatelé můžou pořád vyhledávat položky v zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém umožňovat Cortanu.
 
-- **Uživatelský účet**: Zadejte místní uživatelský účet (zařízení) nebo přihlašovací údaje k účtu Azure AD přidružené k aplikaci veřejného terminálu. U účtů připojených k doménám Azure AD zadejte účet ve tvaru `domain\username@tenant.org`. 
+  [Experience/AllowCortana CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-experience#experience-allowcortana)
 
-    U terminálů určených veřejnosti s povoleným automatickým přihlašováním je vhodné použít typ uživatele s nejnižšími oprávněními (například místní standardní uživatelský účet). Ke konfiguraci účtu Azure Active Directory (AD) pro beznabídkový režim veřejného terminálu použijte formát `AzureAD\user@contoso.com`.
+## <a name="microsoft-edge-browser"></a>Prohlížeč Microsoft Edge
 
-- **ID modelu uživatele aplikace (AUMID)** aplikace: zadejte AUMID aplikace veřejného terminálu. Další informace najdete v tématu [Jak najít ID modelu uživatele aplikace (AUMID) nainstalované aplikace](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
+- **Úvodní prostředí**  >  **Povolit automaticky otevíraná okna**: **Ano** (výchozí) umožňuje automaticky otevíraná okna ve webovém prohlížeči. V prohlížeči **nebrání automaticky** otevíraná okna.
+
+  [CSP pro Browser/AllowPopups](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowpopups)
+
+- **Oblíbené položky a hledání**  >  **Zobrazit návrhy hledání**: **Ano** (výchozí) umožňuje vyhledávacímu webu navrhovat při psaní frází hledání na adresním řádku. Tato funkce **není** zabráněno.
+
+  [CSP pro Browser/AllowSearchSuggestionsinAddressBar](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsearchsuggestionsinaddressbar)
+
+- **Ochrana osobních údajů a zabezpečení**  >  **Povolit správce hesel**: **Ano** (výchozí) umožňuje Microsoft Edge automaticky používat Správce hesel, který umožňuje uživatelům ukládat a spravovat hesla v zařízení. **No** zabrání Microsoft Edge v používání Správce hesel.
+
+  [CSP pro Browser/AllowPasswordManager](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowpasswordmanager)
+
+- **Ochrana osobních údajů a zabezpečení**  >  **Soubory cookie**: Vyberte způsob zpracování souborů cookie ve webovém prohlížeči. Možnosti:
+  - **Povoleno**: soubory cookie jsou uloženy v zařízení.
+  - **Blokovat všechny soubory cookie**: soubory cookie nejsou uloženy v zařízení.
+  - **Blokovat pouze soubory cookie třetích stran**: soubory cookie třetích stran nebo partnerů nejsou uloženy v zařízení.
+
+  [CSP pro Browser/AllowCookies](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowcookies)
+
+- **Ochrana osobních údajů a zabezpečení**  >  **Odeslat hlavičky do Not Track**: **Ano** odešle hlavičky do Not Track pro weby požadující informace o sledování (doporučeno). **Ne** (výchozí) neodesílají hlavičky, které umožňují webům sledovat uživatele. Uživatelé můžou toto nastavení nakonfigurovat.
+
+  [CSP pro Browser/AllowDoNotTrack](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowdonottrack)
+
+## <a name="microsoft-defender-smartscreen"></a>Filtr SmartScreen v programu Microsoft Defender
+
+- **Filtr SmartScreen pro Microsoft Edge**: **vyžaduje** zapnutí funkce SmartScreen v programu Microsoft Defender a zabránění uživatelům v jejich vypnutí. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém zapnout filtr SmartScreen a povolit uživatelům jeho zapnutí a vypnutí.
+
+  [CSP pro Browser/AllowSmartScreen](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen)
+
+## <a name="password"></a>Heslo
+
+- **Heslo**: **vyžaduje** , aby uživatelé zadali heslo pro přístup k zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém umožňovat přístup k zařízením bez hesla. Platí jenom pro místní účty. Hesla doménového účtu zůstávají nakonfigurovaná službou Active Directory (AD) a službou Azure AD.
+
+  [CSP DeviceLock/DevicePasswordEnabled](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-devicepasswordenabled)
+
+- **Vyžadovat heslo při návratu zařízení ze stavu nečinnosti**: **vyžaduje** , aby uživatelé po nečinnosti odemkli zařízení zadáním hesla. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení operační systém nemusí po nečinnosti vyžadovat kód PIN nebo heslo.
+
+  [CSP DeviceLock/AllowIdleReturnWithoutPassword](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-allowidlereturnwithoutpassword)
 
 ## <a name="reporting-and-telemetry"></a>Vytváření sestav a telemetrie
 
-- **Sdílet data o využití**: vyberte úroveň odeslání diagnostických dat.
+- **Sdílet data o využití**: vyberte úroveň diagnostických dat, která se odešlou. Možnosti:
+
+  - **Nenakonfigurováno** (výchozí): Intune toto nastavení nemění ani neaktualizuje. Žádné nastavení není vynuceno. Uživatelé zvolí úroveň, která je odeslána. Ve výchozím nastavení operační systém nemusí sdílet žádná data.
+  - **Zabezpečení**: informace, které jsou nutné k zajištění vyššího zabezpečení systému Windows, včetně údajů o nastavení komponenty prostředí s připojeným uživatelem a telemetriem, nástroji pro odebrání škodlivého softwaru a programu Microsoft Defender
+  - **Základní**: základní informace o zařízení, včetně dat týkajících se kvality, kompatibility aplikací, dat o využití aplikací a dat z úrovně zabezpečení
+  - **Rozšířené**: Další přehledy, včetně toho, jak se používají Windows, Windows Server, System Center a aplikace, jak provádějí, pokročilá data o spolehlivosti a data ze základních i úrovní zabezpečení
+  - **Úplné**: všechna data potřebná pro identifikaci a pomoc při řešení problémů a data ze zabezpečení, úrovně Basic a rozšířené úrovně.
+
+  [CSP pro System/AllowTelemetry](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-system#system-allowtelemetry)
+
+## <a name="search"></a>Search
+
+- **Umístění pro hledání**: **blok** zabrání službě Windows Search v použití umístění. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém tuto funkci dovolit.
+
+  [Hledání/AllowSearchToUseLocation CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-search#search-allowsearchtouselocation)
 
 ## <a name="next-steps"></a>Další kroky
 
-[Přiřaďte profil](device-profile-assign.md) a [monitorujte jeho stav](device-profile-monitor.md).
+[Přiřaďte profil](device-profile-assign.md)a [sledujte jeho stav](device-profile-monitor.md).

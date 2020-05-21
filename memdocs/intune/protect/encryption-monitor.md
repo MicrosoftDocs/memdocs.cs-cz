@@ -17,18 +17,18 @@ ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 0b634dad49b11e39e9a046688f0b5fd9ddc53ab4
-ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
+ms.openlocfilehash: 5e90cb7ad97ce3fc0fe728a3d8b7d7c122605751
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82254992"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83429860"
 ---
 # <a name="monitor-device-encryption-with-intune"></a>Monitorování šifrování zařízení pomocí Intune
 
 Sestava Microsoft Intuneho šifrování je centralizované umístění pro zobrazení podrobností o stavu šifrování zařízení a možnosti hledání pro správu klíčů pro obnovení zařízení. Možnosti obnovovacího klíče, které jsou k dispozici, závisí na typu zařízení, které si prohlížíte.
 
-Sestavu můžete najít tak, že se přihlásíte do [centra pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431). Vyberte **Devices** > **monitorování**zařízení a potom v části *Konfigurace*vyberte **Sestava šifrování**.
+Sestavu můžete najít tak, že se přihlásíte do [centra pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431). Vyberte **Devices**  >  **monitorování**zařízení a potom v části *Konfigurace*vyberte **Sestava šifrování**.
 
 ## <a name="view-encryption-details"></a>Zobrazit podrobnosti o šifrování
 
@@ -96,7 +96,7 @@ Když vyberete zařízení ze sestavy šifrování, Intune zobrazí podokno **st
 
 - **Shrnutí stavu profilu** – souhrn profilů, které se vztahují k tomuto zařízení. Souhrn představuje nejmenší příznivou podmínku v rámci platných profilů. Pokud například výsledkem pouze jednoho z několika použitelných profilů je chyba, zobrazí se v *souhrnu stavu profilu* *Chyba*.
 
-  Pokud chcete zobrazit podrobnosti o stavu, přejít na > **profily****Konfigurace zařízení**v **Intune** > a vybrat profil. Volitelně můžete vybrat možnost **stav zařízení** a pak vybrat zařízení.
+  Pokud chcete zobrazit podrobnosti o stavu, přejít na **Intune**  >  **profily konfigurace zařízení**  >  **Profiles**v Intune a vybrat profil. Volitelně můžete vybrat možnost **stav zařízení** a pak vybrat zařízení.
 
 - **Podrobnosti o stavu** – rozšířené informace o stavu šifrování zařízení.
 
@@ -169,68 +169,20 @@ Při prohlížení podokna sestavy šifrování můžete vybrat **exportovat** a
 
 Tato sestava může být používána při identifikaci problémů pro skupiny zařízení. Můžete například použít sestavu k identifikaci seznamu zařízení macOS, která *je už povolená uživatelem*, což znamená, že zařízení, která se musí ručně dešifrovat, než může Intune spravovat jeho nastavení trezoru.
 
-## <a name="filevault-recovery-keys"></a>Klíče obnovení trezoru úložišť
+## <a name="manage-recovery-keys"></a>Správa klíčů pro obnovení
 
-Když Intune nejdřív zašifruje zařízení macOS s trezorem, vytvoří se osobní obnovovací klíč. Po zašifrování zařízení zobrazí pro koncového uživatele Tento osobní klíč jednou.
+Podrobnosti o správě klíčů pro obnovení najdete v dokumentaci k Intune v následujících tématech:
 
-U spravovaných zařízení může Intune v úschově kopii osobního obnovovacího klíče. V úschově klíčů umožňuje správcům Intune otáčet klíče, aby lépe chránily zařízení a uživatelé obnovili ztracený nebo otočený osobní obnovovací klíč.
+macOS úložiště:
+- [Načíst osobní obnovovací klíč](../protect/encrypt-devices-filevault.md#retrieve-personal-recovery-key)
+- [Otočení obnovovacích klíčů](../protect/encrypt-devices-filevault.md#rotate-recovery-keys)
+- [Obnovit obnovovací klíče](../protect/encrypt-devices-filevault.md#recover-recovery-keys)
 
-Intune podporuje několik možností, jak můžete otáčet a obnovovat osobní klíče pro obnovení. Jedním z důvodů, jak klíč otočit, je, že aktuální osobní klíč je ztracený nebo je pravděpodobně ohrožen.
-
-> [!IMPORTANT]
-> Zařízení, která jsou zašifrovaná uživateli, a ne Intune, se nedají spravovat přes Intune. To znamená, že Intune nemůže v úschově osobní obnovení těchto zařízení ani spravovat rotaci obnovovacího klíče. Aby mohla Intune spravovat trezory a obnovovací klíče pro zařízení, musí si uživatel dešifrovat svoje zařízení a pak nechat Intune šifrování zařízení.
-
-### <a name="rotate-recovery-keys"></a>Otočení obnovovacích klíčů
-
-- **Automatické otočení**: jako správce můžete nakonfigurovat nastavení trezoru klíčů pro automatické vygenerování nového klíče pro obnovení. Když se pro zařízení vygeneruje nový klíč, klíč se uživateli nezobrazí. Místo toho musí uživatel získat klíč buď od správce, nebo pomocí aplikace Portál společnosti.
-
-- **Ruční rotace**: jako správce můžete zobrazit informace o zařízení, které spravujete v Intune a které je zašifrované pomocí trezoru. Pak můžete zvolit ruční otočení obnovovacího klíče pro podniková zařízení. Obnovovací klíče pro osobní zařízení nemůžete otočit.
-
-  Otočení obnovovacího klíče:
-
-  1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-  
-  2. Vyberte **zařízení** > **všechna zařízení**.
-  
-  3. V seznamu zařízení vyberte zařízení, které je šifrované a pro které chcete otočit jeho klíč. Pak v části monitorování vyberte **klíče pro obnovení**.
-  
-  4. V podokně klíče pro obnovení vyberte **otočit obnovovací klíč trezoru**.
-
-     Až se zařízení příště vrátí se službou Intune, osobní klíč se otočí. V případě potřeby může koncový uživatel získat nový klíč prostřednictvím portálu společnosti.
-
-### <a name="recover-recovery-keys"></a>Obnovit obnovovací klíče
-
-- **Správce**: Správci nemohou zobrazit osobní klíče pro obnovení pro zařízení, která jsou zašifrovaná pomocí trezoru služby.
-
-- **Koncový uživatel**: koncoví uživatelé používají portál společnosti web z libovolného zařízení k zobrazení aktuálního osobního obnovovacího klíče pro kterékoli ze svých spravovaných zařízení. Nemůžete zobrazit obnovovací klíče z aplikace Portál společnosti.
-
-  Postup zobrazení obnovovacího klíče:
-  
-  1. Přihlaste se k webu *portál společnosti Intune* z libovolného zařízení.
-
-  2. Na portálu klikněte na **zařízení** a vyberte zařízení MacOS, které je šifrované pomocí trezoru.
-
-  3. Vyberte **získat obnovovací klíč**. Zobrazí se aktuální obnovovací klíč.
-
-## <a name="bitlocker-recovery-keys"></a>Obnovovací klíče nástroje BitLocker
-
-Intune poskytuje přístup k oknu Azure AD pro BitLocker, takže můžete na portálu Intune zobrazit ID klíčů a obnovovací klíče BitLockeru pro zařízení s Windows 10. Aby bylo možné získat přístup k zařízení, musí mít uloží klíče ke službě Azure AD.
-
-1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-
-2. Vyberte **zařízení** > **všechna zařízení**.
-
-3. V seznamu vyberte zařízení a potom v části *monitorování*vyberte **klíče pro obnovení**.
-  
-   Pokud jsou ve službě Azure AD k dispozici klíče, jsou k dispozici tyto informace:
-   - ID klíče BitLockeru
-   - Obnovovací klíč nástroje BitLocker
-   - Typ jednotky
-
-   Pokud klíče nejsou v Azure AD, zobrazí se v Intune *pro toto zařízení nenašel žádný klíč BitLockeru*.
-
-Informace pro BitLocker se získávají pomocí [poskytovatele služby BitLocker Configuration Service Provider](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) (CSP). CSP nástroje BitLocker podporuje Windows 10 verze 1709 a novější a pro Windows 10 pro verze 1809 a novější.
+Windows 10 BitLocker:
+- [Otočit obnovovací klíče BitLockeru](../protect/encrypt-devices.md#rotate-bitlocker-recovery-keys)
 
 ## <a name="next-steps"></a>Další kroky
 
-Vytvořte zásady [dodržování předpisů pro zařízení](compliance-policy-create-windows.md) .
+[Správa zásad nástroje BitLocker](../protect/encrypt-devices.md)
+
+[Správa zásad pro FileVault](encrypt-devices-filevault.md)

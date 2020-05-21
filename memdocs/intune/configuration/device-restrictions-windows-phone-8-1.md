@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/30/2020
+ms.date: 05/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,16 +16,20 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 285144e42f2a029bf2d24b96493c54922727d6dc
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 24fd2085839df35a486fcfa4cf817944b0d19944
+ms.sourcegitcommit: 169e279ba686c28d9a23bc0a54f0a2a0d20bdee4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80407642"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83556247"
 ---
 # <a name="microsoft-intune-windows-phone-81-device-restriction-settings"></a>Nastavení omezení pro zařízení Windows Phone 8.1 v Microsoft Intune
 
 Tento článek ukazuje nastavení omezení zařízení v Microsoft Intune, která můžete nakonfigurovat pro zařízení s Windows Phone 8.1.
+
+## <a name="before-you-begin"></a>Před zahájením
+
+[Vytvořte profil omezení zařízení Windows Phone 8,1](device-restrictions-configure.md).
 
 ## <a name="general"></a>Obecné
 
@@ -48,16 +52,16 @@ Tento článek ukazuje nastavení omezení zařízení v Microsoft Intune, kter�
     - **Výchozí nastavení zařízení**: heslo může obsahovat číslice a písmena.
     - **Alfanumerické**: heslo musí být kombinací číslic a písmen.
     - **Číselná**: heslo musí obsahovat pouze čísla.
-  - **Minimální délka hesla**: zadejte minimální počet požadovaných znaků od 4-16. Zadejte `6` například, pokud chcete, aby délka hesla vyžadovala alespoň šest znaků.
-  - **Jednoduchá hesla**: **blok** znemožní uživatelům vytvářet jednoduchá hesla, například `1234` nebo. `1111` Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
+  - **Minimální délka hesla**: zadejte minimální počet požadovaných znaků od 4-16. Zadejte například, pokud `6` chcete, aby délka hesla vyžadovala alespoň šest znaků.
+  - **Jednoduchá hesla**: **blok** znemožní uživatelům vytvářet jednoduchá hesla, například `1234` nebo `1111` . Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
   - **Počet neúspěšných přihlášení před vymazáním zařízení**: zadejte počet chybných hesel povolených před vymazáním zařízení.
-  - **Maximální počet minut nečinnosti, po kterém se zamkne obrazovka**: zadejte dobu, po kterou musí být zařízení nečinné, než se automaticky uzamkne obrazovka. Zadejte `5` například, pokud chcete zařízení zamknout po 5 minutách nečinnosti. Pokud je tato možnost nastavená na hodnotu **není nakonfigurované** nebo je ponecháno prázdné, Intune se nezmění ani neaktualizuje.
-  - **Vypršení platnosti hesla (dny)**: zadejte dobu ve dnech, kdy musí být heslo zařízení změněno, od 1-255. Zadejte `90` například platnost hesla po 90 dnech. Pokud je hodnota prázdná, Intune se nezmění ani neaktualizuje.
-  - **Zakázat opakované použití předchozích hesel**: zadejte počet dříve použitých hesel, která se nedají použít, od 1-24. Například zadejte `5` , že uživatelé nemůžou nastavit nové heslo na aktuální heslo ani na žádná z předchozích čtyř hesel. Pokud je hodnota prázdná, Intune se nezmění ani neaktualizuje.
+  - **Maximální počet minut nečinnosti, po kterém se zamkne obrazovka**: zadejte dobu, po kterou musí být zařízení nečinné, než se automaticky uzamkne obrazovka. Zadejte například, `5` Pokud chcete zařízení zamknout po 5 minutách nečinnosti. Pokud je tato možnost nastavená na hodnotu **není nakonfigurované** nebo je ponecháno prázdné, Intune se nezmění ani neaktualizuje.
+  - **Vypršení platnosti hesla (dny)**: zadejte dobu ve dnech, kdy musí být heslo zařízení změněno, od 1-255. Zadejte například `90` platnost hesla po 90 dnech. Pokud je hodnota prázdná, Intune se nezmění ani neaktualizuje.
+  - **Zakázat opakované použití předchozích hesel**: zadejte počet dříve použitých hesel, která se nedají použít, od 1-24. Například zadejte, `5` že uživatelé nemůžou nastavit nové heslo na aktuální heslo ani na žádná z předchozích čtyř hesel. Pokud je hodnota prázdná, Intune se nezmění ani neaktualizuje.
 - **Šifrování**: **vyžadovat** šifrování u zařízení, včetně souborů. Ne všechna zařízení podporují šifrování. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Pokud chcete nakonfigurovat toto nastavení a správně ohlásit dodržování předpisů, nakonfigurujte taky:
   - **Vyžadovat heslo**: nastavte na **vyžadovat**.
   - **Požadovaný typ hesla**: Nastavte aspoň na **číslo**.
-  - **Minimální délka hesla**: Nastavte aspoň `4`na.
+  - **Minimální délka hesla**: Nastavte aspoň na `4` .
 
 ## <a name="app-store"></a>App Store
 

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/21/2020
+ms.date: 05/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e77c1dd32bc70b94d5c4fdd74ea82dbd65211e38
-ms.sourcegitcommit: ad4b3e4874a797b755e774ff84429b5623f17c5c
+ms.openlocfilehash: ee69e70c243ae7016cbfa2e79a6f69ae2058000d
+ms.sourcegitcommit: 5dc3545d7f76ce81598f6b1c9734b0ac0a3e9722
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82166634"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83690653"
 ---
 # <a name="add-a-windows-line-of-business-app-to-microsoft-intune"></a>Přidání obchodní aplikace pro Windows do Microsoft Intune
 
@@ -37,7 +37,7 @@ Obchodní aplikace (LOB) je aplikace, kterou přidáte z instalačního souboru 
 ## <a name="select-the-app-type"></a>Vyberte typ aplikace.
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **aplikace** > **všechny aplikace** > **Přidat**.
+2. Vyberte **aplikace**  >  **všechny aplikace**  >  **Přidat**.
 3. V podokně **Vybrat typ aplikace** v části **ostatní** typy aplikací vyberte **obchodní aplikace**.
 4. Klikněte na **Vybrat**. Zobrazí se kroky **Přidání aplikace** .
 
@@ -50,7 +50,7 @@ Obchodní aplikace (LOB) je aplikace, kterou přidáte z instalačního souboru 
    Zobrazí se podrobnosti o aplikaci.
 
     > [!NOTE]
-    > Mezi přípony souborů pro aplikace pro Windows patří soubory **. msi**, **. appx**, **. appxbundle**, **. msix**a **. msixbundle**.  
+    > Mezi přípony souborů pro aplikace pro Windows patří soubory **. msi**, **. appx**, **. appxbundle**, **. msix**a **. msixbundle**. Další informace o **. msix**najdete v tématu [dokumentace Msix](https://docs.microsoft.com/windows/msix/) a [distribuce aplikací msix](https://docs.microsoft.com/windows/msix/desktop/managing-your-msix-deployment-enterprise).
 
 3. Až budete hotovi, vyberte **OK** v podokně **soubor balíčku aplikace** a přidejte aplikaci.
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 71929e59e4447340d26516c8caec6beb2b3612f3
-ms.sourcegitcommit: 4174f7e485067812c29aea01a4767989ffdbb578
+ms.openlocfilehash: dd6160520660f015c69dccd968b67b1f4581c8a8
+ms.sourcegitcommit: 5d32dd481e2a944465755ce74e14c835cce2cd1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83406432"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "83551748"
 ---
 # <a name="create-a-device-profile-in-microsoft-intune"></a>Vytvořte profil zařízení v Microsoft Intune
 
@@ -37,7 +37,7 @@ Tento článek:
 
 ## <a name="create-the-profile"></a>Vytvoření profilu
 
-Profily se vytvářejí v [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431). V tomto centru pro správu vyberte **zařízení**. Máte následující možnosti:
+Profily se vytvářejí v [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431). V tomto centru pro správu vyberte **zařízení**. Máte tyto možnosti:
 
 - **Přehled**: zobrazuje stav profilů a poskytuje další podrobnosti o profilech, které jste přiřadili uživatelům a zařízením.
 - **Monitorování**: Zkontrolujte stav vašich profilů pro úspěch nebo neúspěch a také si prohlédněte protokoly v profilech.
@@ -57,7 +57,7 @@ Když vytváříte profil (**konfigurační profily**  >  **vytvoří profil**),
 Pak zvolte typ profilu. Nastavení, která můžete konfigurovat, se liší podle zvolené platformy. Následující články popisují nastavení pro různé typy profilů:
 
 - [Šablony pro správu (Windows)](administrative-templates-windows.md)
-- [Uživatelská](custom-settings-configure.md)
+- [Vlastní](custom-settings-configure.md)
 - [Optimalizace doručení (Windows)](delivery-optimization-windows.md)
 - [Odvozené přihlašovací údaje (Android Enterprise, iOS, iPadOS)](../protect/derived-credentials.md)
 - [Funkce zařízení (macOS, iOS, iPadOS)](device-features-configure.md)
@@ -66,7 +66,7 @@ Pak zvolte typ profilu. Nastavení, která můžete konfigurovat, se liší podl
 - [Připojení k doméně (Windows)](domain-join-configure.md)
 - [Upgrade edice a přepínač režimu (Windows)](edition-upgrade-configure-windows-10.md)
 - [Vzdělávání (iOS, iPadOS)](../fundamentals/education-settings-configure-ios.md)
-- [Elektron](email-settings-configure.md)
+- [E-mail](email-settings-configure.md)
 - [Endpoint Protection (macOS, Windows)](../protect/endpoint-protection-configure.md)
 - [Rozšíření (macOS)](kernel-extensions-overview-macos.md)
 - [Identity Protection (Windows)](../protect/identity-protection-configure.md)
@@ -85,10 +85,9 @@ Pak zvolte typ profilu. Nastavení, která můžete konfigurovat, se liší podl
 - [VPN](vpn-settings-configure.md)
 - [Wi-Fi](wi-fi-settings-configure.md)
 
-Pokud třeba pro platformu vyberete **iOS/iPadOS** , možnosti typu vašeho profilu vypadají podobně jako v následujícím profilu:
+Pokud třeba pro platformu vyberete **iOS/iPadOS** , možnosti vašeho profilu vypadají podobně jako v následujícím profilu:
 
-> [!div class="mx-imgBorder"]
-> ![Vytvoření profilu iOS/iPadOS v Intune](./media/device-profile-create/create-device-profile.png)
+:::image type="content" source="./media/device-profile-create/create-device-profile.png" alt-text="Vytvořte v Microsoft Intune profil iOS/iPadOS.":::
 
 ## <a name="scope-tags"></a>Značky oboru
 
@@ -129,10 +128,9 @@ Když přiřadíte profil ke skupinám, budou pravidla použitelnosti fungovat j
 
 ### <a name="add-a-rule"></a>Přidání pravidla
 
-1. Vyberte **pravidla použitelnosti**. Můžete zvolit **pravidlo**, **vlastnost**a **edici OS**:
+1. Vyberte **pravidla použitelnosti**. Můžete zvolit **pravidlo**a **vlastnost**:
 
-    > [!div class="mx-imgBorder"]
-    > ![Přidání pravidla použitelnosti do konfiguračního profilu zařízení v Microsoft Intune](./media/device-profile-create/applicability-rules.png)
+    :::image type="content" source="./media/device-profile-create/applicability-rules.png" alt-text="Přidejte pravidlo použitelnosti do konfiguračního profilu zařízení s Windows 10 v Microsoft Intune.":::
 
 2. V možnosti **pravidlo**vyberte, jestli chcete zahrnout nebo vyloučit uživatele nebo skupiny. Možnosti:
 
@@ -178,8 +176,7 @@ Při vytváření profilů Vezměte v úvahu následující doporučení:
 
   Následující obrázek ukazuje příklad nastavení, které se může vztahovat na uživatele nebo použít na zařízení:
 
-  > [!div class="mx-imgBorder"]
-  > ![Šablona správce Intune, která se vztahuje na uživatele a zařízení](./media/device-profile-create/setting-applies-to-user-and-device.png)
+  :::image type="content" source="./media/device-profile-create/setting-applies-to-user-and-device.png" alt-text="Šablona správce Intune, která se vztahuje na uživatele a zařízení":::
 
 - Pokaždé, když vytvoříte omezující zásadu, sdělte tuto změnu vašim uživatelům. Pokud například měníte požadavek na přístupový kód ze 4 znaků na 6 znaků, dejte uživatelům informace o tom, než zásadu přiřadíte.
 

@@ -1,12 +1,12 @@
 ---
-title: Šifrovat zařízení pomocí metody šifrování podporované platformou
+title: Šifrování zařízení s Windows 10 pomocí nástroje BitLocker v Intune
 titleSuffix: Microsoft Intune
-description: Zašifrujte zařízení pomocí integrovaných šifrovacích metod, jako je BitLocker nebo trezoru klíčů, a spravujte klíče pro obnovení těchto zašifrovaných zařízení z portálu Intune.
+description: Zašifrujte zařízení pomocí integrované metody šifrování BitLockeru a spravujte klíče pro obnovení těchto zašifrovaných zařízení z portálu Intune.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/03/2020
+ms.date: 05/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,114 +17,103 @@ ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: d79f97da88a939d95b68a9ef747da87cf3844598
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 8d84e8d92ba483e96a1e78da0566d2e8a389e403
+ms.sourcegitcommit: 5d32dd481e2a944465755ce74e14c835cce2cd1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80322480"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "83551889"
 ---
-# <a name="use-device-encryption-with-intune"></a>Použití šifrování zařízení s Intune
+# <a name="manage-bitlocker-policy-for-windows-10-in-intune"></a>Správa zásad BitLockeru pro Windows 10 v Intune
 
-Použijte Intune ke správě zařízení integrovaných na disku nebo šifrování jednotky, abyste mohli chránit data na svých zařízeních.
+Pomocí Intune můžete nakonfigurovat nástroj BitLocker Drive Encryption na zařízeních s Windows 10.
 
-Nakonfigurujte šifrování disku jako součást profilu konfigurace zařízení pro službu Endpoint Protection. Intune podporuje následující platformy a šifrovací technologie:
+BitLocker je k dispozici na zařízeních se systémem Windows 10 nebo novějším. Některá nastavení nástroje BitLocker vyžadují, aby zařízení mělo podporovaný čip TPM.
 
-- macOS: trezor
-- Windows 10 a novější: BitLocker
+Ke konfiguraci BitLockeru na spravovaných zařízeních použijte jeden z následujících typů zásad
 
-Intune také obsahuje integrovanou [sestavu šifrování](encryption-monitor.md) , která poskytuje podrobné informace o stavu šifrování zařízení ve všech spravovaných zařízeních.
+- **[Zásada šifrování disku Endpoint Security pro Windows 10 BitLocker](#create-an-endpoint-security-policy-for-bitlocker)** Profil nástroje BitLocker v *Endpoint Security* je zaměřený na skupinu nastavení, která je vyhrazená pro konfiguraci nástroje BitLocker.
 
-## <a name="filevault-encryption-for-macos"></a>Šifrování trezoru úložiště pro macOS
+  Prohlédněte si nastavení BitLockeru, která jsou k dispozici v [profilech nástroje BitLocker ze zásad šifrování disku](../protect/endpoint-security-disk-encryption-profile-settings.md#bitlocker).
 
-Pomocí Intune můžete na zařízeních se systémem macOS nakonfigurovat šifrování disků trezoru. Pak pomocí sestavy šifrování Intune zobrazte podrobnosti o šifrování těchto zařízení a spravujte klíče pro obnovení pro zařízení zašifrovaná pomocí trezoru.
+- **[Konfigurační profil zařízení pro službu Endpoint Protection pro Windows 10 BitLocker](#create-an-endpoint-security-policy-for-bitlocker)** Nastavení BitLockeru jsou jedna z kategorií dostupných nastavení pro ochranu koncových bodů Windows 10.
 
-Pro práci s úložištěm na zařízení se vyžaduje registrace zařízení schválená uživatelem. Uživatel musí ručně schválit profil správy ze systémových předvoleb, aby bylo možné registraci považovat za schválenou uživatelem.
+  Prohlédněte si nastavení nástroje BitLocker, která jsou k dispozici pro [Nástroj BitLocker v profilech Endpoint Protection zásady konfigurace zařízení](../protect/endpoint-protection-windows-10.md#windows-settings).
 
-Trezor úložišť je program pro šifrování celého disku, který je součástí macOS. Intune můžete použít ke konfiguraci trezoru úložišť na zařízeních, na kterých běží **macOS 10,13 nebo novější**.
+> [!TIP]
+> Intune poskytuje integrovanou [sestavu šifrování](encryption-monitor.md) , která obsahuje podrobnosti o stavu šifrování zařízení ve všech spravovaných zařízeních. Jakmile Intune zašifruje zařízení s Windows 10 pomocí nástroje BitLocker, můžete při zobrazení sestavy šifrování zobrazit a načíst klíče pro obnovení nástroje BitLocker.
+>
+> K důležitým informacím z vašich zařízení můžete také přistupovat pomocí nástroje BitLocker, jak se nachází v Azure Active Directory (Azure AD).
+[Zpráva o šifrování](encryption-monitor.md) , která obsahuje podrobnosti o stavu šifrování zařízení ve všech spravovaných zařízeních.
 
-Pro konfiguraci trezoru úložišť vytvořte [profil konfigurace zařízení](endpoint-protection-configure.md) pro službu Endpoint Protection pro platformu MacOS. Nastavení trezoru úložiště je jednou z dostupných kategorií nastavení pro macOS Endpoint Protection.
+## <a name="permissions-to-manage-bitlocker"></a>Oprávnění ke správě nástroje BitLocker
 
-Když vytvoříte zásadu pro šifrování zařízení pomocí trezoru, zásada se použije na zařízení ve dvou fázích. Nejdřív je zařízení připravené k tomu, aby Intune mohl načíst a zálohovat obnovovací klíč. Tato akce se označuje jako v úschově. Po uloží klíče se může šifrování disku spustit.
+Aby bylo možné spravovat BitLocker v Intune, musí mít váš účet příslušné oprávnění [řízení přístupu na základě role](../fundamentals/role-based-access-control.md) (RBAC) služby Intune.
 
-![Nastavení trezoru úložišť](./media/encrypt-devices/filevault-settings.png)
+Níže jsou uvedené oprávnění nástroje BitLocker, která jsou součástí kategorie vzdálené úlohy, a předdefinované role RBAC, které udělují oprávnění:
 
-Podrobnosti o nastavení trezoru klíčů, které můžete spravovat pomocí Intune, najdete v tématu [trezor](endpoint-protection-macos.md#filevault) pro MacOS v článku Intune pro nastavení ochrany koncových bodů.
-
-### <a name="permissions-to-manage-filevault"></a>Oprávnění ke správě trezoru úložišť
-
-Aby bylo možné spravovat trezory v Intune, musí mít váš účet příslušné oprávnění [řízení přístupu na základě role](../fundamentals/role-based-access-control.md) (RBAC) Intune.
-
-Níže jsou uvedené oprávnění trezoru úložišť, která jsou součástí kategorie **vzdálené úlohy** , a předdefinované role RBAC, které udělují oprávnění:
- 
-- **Získat klíč trezoru úložiště**:
-  - Operátor helpdesku
-  - Správce zabezpečení koncového bodu
-
-- **Otočit klíč trezoru**
+- **Otočení klíčů BitLockeru**
   - Operátor helpdesku
 
-### <a name="how-to-configure-macos-filevault"></a>Jak nakonfigurovat macOS trezor
+## <a name="create-and-deploy-policy"></a>Vytvoření a nasazení zásad
+
+Použijte jeden z následujících postupů k vytvoření typu zásad, které dáváte přednost.
+
+### <a name="create-an-endpoint-security-policy-for-bitlocker"></a>Vytvoření zásady zabezpečení koncového bodu pro BitLocker
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Vyberte **Konfigurace zařízení** > **profily** > konfigurace**vytvořit profil**.
+2. Vyberte **Endpoint Security**  >  **šifrování disku**  >  **vytvořit zásadu**.
 
 3. Nastavte následující možnosti:
+   1. **Platforma**: Windows 10 nebo novější
+   2. **Profil**: BitLocker
 
-   - Platforma: macOS
-   - Typ profilu: Endpoint Protection
+   ![Vyberte profil BitLockeru.](./media/encrypt-devices/select-windows-bitlocker-es.png)
 
-4. Vyberte **Nastavení** > **trezoru úložišť**.
+4. Na stránce **nastavení konfigurace** nakonfigurujte nastavení BitLockeru tak, aby vyhovovalo vašim obchodním potřebám.  
 
-5. V případě *trezoru úložišť*vyberte **Povolit**.
+   Pokud chcete BitLocker zapnout Tichě, přečtěte si téma [bezobslužné zapnutí nástroje BitLocker na zařízeních](#silently-enable-bitlocker-on-devices). v tomto článku najdete další požadavky a konkrétní konfigurace nastavení, které musíte použít.
 
-6. Pro *typ obnovovacího klíče*se podporuje jenom **osobní klíč** .
+   Vyberte **Další**.
 
-   Zvažte přidání zprávy do Průvodce nápovědou koncovým uživatelům, jak získat obnovovací klíč pro své zařízení. Tyto informace mohou být užitečné pro koncové uživatele, když použijete nastavení pro rotaci klíče pro obnovení, což může pravidelně automaticky generovat nový obnovovací klíč pro zařízení.
+5. Na stránce **obor (značky)** zvolte **Vybrat značky oboru** a otevřete tak podokno vybrat značky, abyste přiřadili značky oboru k profilu.
 
-   Příklad: Chcete-li načíst ztracený nebo nedávno otočený obnovovací klíč, přihlaste se k webu Portál společnosti Intune z libovolného zařízení. Na portálu klikněte na *zařízení* a vyberte zařízení s povoleným trezorem úložiště a pak vyberte *získat obnovovací klíč*. Zobrazí se aktuální obnovovací klíč.
+   Pokračujte výběrem tlačítka **Next** (Další).
 
-7. Nakonfigurujte zbývající [Nastavení trezoru úložišť](endpoint-protection-macos.md#filevault) tak, aby splňovalo vaše obchodní potřeby, a pak vyberte **OK**.
+6. Na stránce **přiřazení** vyberte skupiny, které získají tento profil. Další informace o přiřazování profilů najdete v tématu Přiřazení profilů uživatelů a zařízení.
 
-  8. Dokončete konfiguraci dalšího nastavení a potom profil uložte.  
+   Vyberte **Další**.
 
-### <a name="manage-filevault"></a>Správa trezoru úložišť
+7. Po dokončení na stránce **Revize + vytvořit** klikněte na **vytvořit**. Nový profil se zobrazí v seznamu, když vyberete typ zásady pro profil, který jste vytvořili.
 
-Jakmile Intune zašifruje zařízení macOS s trezorem, můžete zobrazit a spravovat klíče pro obnovení trezoru úložiště, když si zobrazíte [sestavu šifrování](encryption-monitor.md)Intune.
-
-Jakmile Intune zašifruje zařízení macOS s trezorem souborů, můžete si z webu zobrazit jeho osobní obnovovací klíč, který je Portál společnosti na jakémkoli zařízení. Jednou na webu Portál společnosti zvolte šifrované zařízení macOS a pak zvolte možnost "získat klíč pro obnovení" jako akci vzdáleného zařízení.
-
-### <a name="retrieve-personal-recovery-key-from-mem-encrypted-macos-devices"></a>Načtení osobního obnovovacího klíče ze zařízení s macOS šifrovaným zařízením MEM
-
-Koncoví uživatelé mohou načíst svůj osobní obnovovací klíč (klíč trezoru) pomocí aplikace Portál společnosti pro iOS, aplikace pro Android Portál společnosti nebo prostřednictvím aplikace Intune pro Android. Zařízení, které má osobní obnovovací klíč, musí být zaregistrované v Intune a zašifrované pomocí trezoru služby prostřednictvím Intune. Pomocí aplikace Portál společnosti pro iOS, aplikace pro Android Portál společnosti, aplikace Intune pro Android nebo webu Portál společnosti může koncový uživatel zobrazit obnovovací klíč **trezoru úložiště** , který je potřebný pro přístup k zařízením Mac. Koncoví uživatelé můžou vybrat **zařízení** > *zašifrovaná a zaregistrovaná zařízení* > MacOS**získat obnovovací klíč**. V prohlížeči se zobrazí webová Portál společnosti a zobrazí se obnovovací klíč. 
-
-## <a name="bitlocker-encryption-for-windows-10"></a>Šifrování BitLockeru pro Windows 10
-
-Pomocí Intune můžete nakonfigurovat nástroj BitLocker Drive Encryption na zařízeních s Windows 10. Pak můžete pomocí sestavy šifrování Intune zobrazit podrobnosti o šifrování těchto zařízení. K důležitým informacím z vašich zařízení můžete také přistupovat pomocí nástroje BitLocker, jak se nachází v Azure Active Directory (Azure AD).
-
-BitLocker je k dispozici na zařízeních se **systémem Windows 10 nebo novějším**.
-
-Nakonfigurujte BitLocker při vytváření [profilu konfigurace zařízení](endpoint-protection-configure.md) pro službu Endpoint Protection pro platformu Windows 10 nebo novější. Nastavení BitLockeru jsou v kategorii nastavení šifrování Windows pro Endpoint Protection pro Windows 10.
-
-![Nastavení BitLockeru](./media/encrypt-devices/bitlocker-settings.png)
-
-### <a name="how-to-configure-windows-10-bitlocker"></a>Jak nakonfigurovat Windows 10 BitLocker
+### <a name="create-a-device-configuration-profile-for-bitlocker"></a>Vytvoření profilu konfigurace zařízení pro nástroj BitLocker
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Vyberte **Konfigurace zařízení** > **profily** > konfigurace**vytvořit profil**.
+2. Vyberte **Devices**  >  **Konfigurace zařízení profily konfigurace**  >  **vytvořit profil**.
 
 3. Nastavte následující možnosti:
+   1. **Platforma**: Windows 10 a novější
+   2. **Typ profilu**: Endpoint Protection
 
-   - Platforma: Windows 10 a novější
-   - Typ profilu: Endpoint Protection
+   ![Vyberte profil BitLockeru.](./media/encrypt-devices/select-windows-bitlocker-dc.png)
 
-4. Vyberte **Nastavení** > **šifrování systému Windows**.
+4. Vyberte **Nastavení**  >  **šifrování systému Windows**.
 
-5. Nakonfigurujte nastavení BitLockeru tak, aby vyhovovalo vašim obchodním potřebám, a pak vyberte **OK**.
+   ![Nastavení BitLockeru](./media/encrypt-devices/bitlocker-settings.png)
 
-6. Dokončete konfiguraci dalšího nastavení a potom profil uložte.
+5. Nakonfigurujte nastavení BitLockeru tak, aby vyhovovalo vašim obchodním potřebám.
+
+   Pokud chcete BitLocker zapnout Tichě, přečtěte si téma [bezobslužné zapnutí nástroje BitLocker na zařízeních](#silently-enable-bitlocker-on-devices). v tomto článku najdete další požadavky a konkrétní konfigurace nastavení, které musíte použít.
+
+6. Vyberte **OK**.
+
+7. Dokončete konfiguraci dalšího nastavení a potom profil uložte.
+
+## <a name="manage-bitlocker"></a>Správa nástroje BitLocker
+
+Informace o zařízeních, která přijímají zásady BitLockeru, najdete v tématu [monitorování šifrování disku](../protect/encryption-monitor.md). Klíče pro obnovení nástroje BitLocker můžete zobrazit a načíst i při zobrazení sestavy šifrování.
 
 ### <a name="silently-enable-bitlocker-on-devices"></a>Tiché zapnutí nástroje BitLocker na zařízeních
 
@@ -139,22 +128,35 @@ Zařízení musí splňovat následující podmínky, aby bylo možné tiše pov
 
 **Konfigurace zásad BitLockeru**:
 
-V zásadách BitLockeru musí být nakonfigurovaná následující dvě nastavení pro [základní nastavení BitLockeru](../protect/endpoint-protection-windows-10.md#bitlocker-base-settings) :
+V zásadách BitLockeru musí být nakonfigurovaná následující dvě nastavení pro *základní nastavení BitLockeru* :
 
-- **Upozornění pro další** = *blok*šifrování disku.
-- **Povolit Standard uživatelům povolit šifrování během připojení ke** = *Allow* službě Azure AD
+- **Upozornění pro jiné šifrování disku**  =  *Blok*.
+- **Povolit Standard uživatelům povolit šifrování během připojení ke**  =  službě Azure AD *Povolení*
 
-Zásady BitLockeru **nesmí vyžadovat** použití spouštěcího kódu PIN nebo spouštěcího klíče. Když je *vyžadován*spouštěcí PIN kód TPM nebo spouštěcí klíč, BitLocker nemůže tiše povolit a vyžaduje interakci od koncového uživatele.  Tento požadavek splníte pomocí následujících tří [Nastavení jednotky s operačním systémem BitLocker](../protect/endpoint-protection-windows-10.md#bitlocker-os-drive-settings) ve stejné zásadě:
+Zásady BitLockeru **nesmí vyžadovat** použití spouštěcího kódu PIN nebo spouštěcího klíče. Když je *vyžadován*spouštěcí PIN kód TPM nebo spouštěcí klíč, BitLocker nemůže tiše povolit a vyžaduje interakci od koncového uživatele.  Tento požadavek splníte pomocí následujících tří *Nastavení jednotky s operačním systémem BitLocker* ve stejné zásadě:
 
 - **Kompatibilní spouštěcí PIN kód TPM** nesmí být nastavený tak, aby *vyžadoval spouštěcí PIN kód s čipem TPM* .
 - **Kompatibilní spouštěcí klíč čipu TPM** nesmí nastavit, aby *vyžadoval spouštěcí klíč s čipem TPM* .
 - **Kompatibilní spouštěcí klíč TPM a PIN** nesmí být nastavené tak, aby *vyžadovaly spouštěcí klíč a PIN kód s čipem TPM* .
 
+### <a name="view-details-for-recovery-keys"></a>Zobrazit podrobnosti pro obnovovací klíče
 
+Intune poskytuje přístup k oknu Azure AD pro BitLocker, takže můžete na portálu Intune zobrazit ID klíčů a obnovovací klíče BitLockeru pro zařízení s Windows 10. Aby bylo možné získat přístup k zařízení, musí mít uloží klíče ke službě Azure AD.
 
-### <a name="manage-bitlocker"></a>Správa nástroje BitLocker
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-Jakmile Intune zašifruje zařízení s Windows 10 pomocí nástroje BitLocker, můžete zobrazit a načíst klíče pro obnovení nástroje BitLocker při zobrazení [sestavy šifrování](encryption-monitor.md)Intune.
+2. Vyberte **zařízení**  >  **všechna zařízení**.
+
+3. V seznamu vyberte zařízení a potom v části *monitorování*vyberte **klíče pro obnovení**.
+  
+   Pokud jsou ve službě Azure AD k dispozici klíče, jsou k dispozici tyto informace:
+   - ID klíče BitLockeru
+   - Obnovovací klíč nástroje BitLocker
+   - Typ jednotky
+
+   Pokud klíče nejsou v Azure AD, zobrazí se v Intune *pro toto zařízení nenašel žádný klíč BitLockeru*.
+
+Informace pro BitLocker se získávají pomocí [poskytovatele služby BitLocker Configuration Service Provider](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) (CSP). CSP nástroje BitLocker podporuje Windows 10 verze 1703 a novější a pro Windows 10 pro verze 1809 a novější.
 
 ### <a name="rotate-bitlocker-recovery-keys"></a>Otočit obnovovací klíče BitLockeru
 
@@ -171,25 +173,21 @@ Zařízení musí splňovat následující požadavky, aby podporovaly rotaci ob
   - **Otočení hesla pro obnovení na základě klienta**
 
   Toto nastavení se vztahuje na *šifrování Windows* jako součást zásad konfigurace zařízení pro Windows 10 Endpoint Protection.
-  
+
 #### <a name="to-rotate-the-bitlocker-recovery-key"></a>Otočení obnovovacího klíče BitLockeru
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Vyberte **zařízení** > **všechna zařízení**.
+2. Vyberte **zařízení**  >  **všechna zařízení**.
 
 3. V seznamu zařízení, která spravujete, vyberte zařízení, klikněte na **Další**a pak vyberte vzdálenou akci zařízení pro **střídání klíčů nástrojem BitLocker** .
 
+4. Na stránce **Přehled** zařízení vyberte **otočení klíče BitLockeru**. Pokud tuto možnost nevidíte, vyberte tři tečky (**...**) a zobrazte další možnosti a pak vyberte vzdálenou akci zařízení pro **otočení klíče BitLockeru** .
+
+   ![Pokud chcete zobrazit další možnosti, vyberte tři tečky.](./media/encrypt-devices/select-more.png)
+
 ## <a name="next-steps"></a>Další kroky
 
-Vytvořte zásady [dodržování předpisů pro zařízení](compliance-policy-create-windows.md) .
+[Správa zásad pro FileVault](../protect/encrypt-devices-filevault.md)
 
-Pomocí sestavy šifrování můžete spravovat:
-
-- [Obnovovací klíče nástroje BitLocker](encryption-monitor.md#bitlocker-recovery-keys)
-- [Klíče obnovení trezoru úložišť](encryption-monitor.md#filevault-recovery-keys)
-
-Zkontrolujte nastavení šifrování, která můžete nakonfigurovat pomocí Intune pro:
-
-- [BitLocker](endpoint-protection-windows-10.md#windows-encryption)
-- [FileVault](endpoint-protection-macos.md#filevault)
+[Monitorování šifrování disků](../protect/encryption-monitor.md)

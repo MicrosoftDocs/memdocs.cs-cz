@@ -1,6 +1,6 @@
 ---
 title: Přidání nastavení sítě VPN do zařízení v Microsoft Intune – Azure | Microsoft Docs
-description: Pro správce zařízení s Androidem, Android Enterprise, iOS, iPadOS, macOS a Windows můžete pomocí integrovaných nastavení vytvořit připojení k virtuální privátní síti (VPN) v Microsoft Intune.
+description: Na zařízeních s Androidem pro správce zařízení, Android Enterprise, iOS, iPadOS, macOS a Windows můžete pomocí integrovaných nastavení vytvořit připojení k virtuální privátní síti (VPN) v Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c72d2f8d9bd6a7235845863000272f605bb41089
-ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
+ms.openlocfilehash: 3d078f813b334806adb9e62054efc1fe844cea21
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82943820"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83429157"
 ---
 # <a name="create-vpn-profiles-to-connect-to-vpn-servers-in-intune"></a>Vytvoření profilů sítě VPN pro připojení k serverům VPN v Intune
 
-Virtuální privátní sítě (VPN) poskytují uživatelům zabezpečený vzdálený přístup k síti vaší organizace. Zařízení používají profil připojení VPN ke spuštění připojení se serverem VPN. **Profily sítě VPN** v Microsoft Intune přiřazují uživatelům a zařízením ve vaší organizaci nastavení sítě VPN, aby se mohli snadno a bezpečně připojit k síti vaší organizace.
+Virtuální privátní sítě (VPN) poskytují uživatelům zabezpečený vzdálený přístup k síti vaší organizace. Zařízení používají profil připojení VPN ke spuštění připojení se serverem VPN. **Profily sítě VPN** v Microsoft Intune přiřazují nastavení sítě VPN pro uživatele a zařízení ve vaší organizaci. Tato nastavení použijte, aby se uživatelé mohli snadno a bezpečně připojit k síti vaší organizace.
 
 Chcete například nakonfigurovat všechna zařízení s iOS/iPadOS s požadovaným nastavením pro připojení ke sdílené složce v síti organizace. Vytvoříte profil sítě VPN, který bude obsahovat tato nastavení. Pak tento profil přiřadíte všem uživatelům, kteří mají zařízení se systémem iOS/iPadOS. Uživatelé uvidí připojení VPN v seznamu dostupných sítí a můžou se připojit s minimálním úsilím.
 
@@ -108,7 +108,6 @@ Profily VPN můžete vytvářet pomocí následujících typů připojení:
   - Podnikové pracovní profily Androidu
   - Vlastník zařízení se systémem Android Enterprise (plně spravovaný)
   - iOS/iPadOS
-  - macOS
   - Windows 10
   - Windows 8.1
   - Windows Phone 8.1
@@ -132,13 +131,13 @@ Profily VPN můžete vytvářet pomocí následujících typů připojení:
 ## <a name="create-the-profile"></a>Vytvoření profilu
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **Konfigurace zařízení** > **profily** > konfigurace**vytvořit profil**.
+2. Vyberte **Devices**  >  **Konfigurace zařízení profily konfigurace**  >  **vytvořit profil**.
 3. Zadejte tyto vlastnosti:
 
     - **Platforma**: vyberte platformu zařízení. Možnosti:
       - **Správce zařízení s Androidem**
-      - **Android Enterprise** > **Jenom vlastníci zařízení** s Androidem Enterprise
-      - **Android Enterprise** > **Jenom pracovní profil** Android Enterprise
+      - **Android Enterprise**  >  **Pouze vlastník zařízení**
+      - **Android Enterprise**  >  **Pouze pracovní profil**
       - **iOS/iPadOS**
       - **macOS**
       - **Windows 10 a novější**
@@ -164,7 +163,7 @@ Profily VPN můžete vytvářet pomocí následujících typů připojení:
     - [Windows Phone 8.1](vpn-settings-windows-phone-8-1.md)
 
 8. Vyberte **Další**.
-9. V části **značky oboru** (volitelné) přiřaďte značku pro filtrování profilu pro konkrétní IT skupiny, například `US-NC IT Team` nebo. `JohnGlenn_ITDepartment` Další informace o značkách oboru naleznete v tématu [použití značek RBAC a Scope pro distribuci](../fundamentals/scope-tags.md).
+9. V části **značky oboru** (volitelné) přiřaďte značku pro filtrování profilu pro konkrétní IT skupiny, například `US-NC IT Team` nebo `JohnGlenn_ITDepartment` . Další informace o značkách oboru naleznete v tématu [použití značek RBAC a Scope pro distribuci](../fundamentals/scope-tags.md).
 
     Vyberte **Další**.
 
@@ -182,7 +181,7 @@ Profily VPN můžou používat spoustu různých typů připojení a protokoly o
 
 Při vytváření profilu VPN zvolíte certifikátu SCEP nebo PKCS, který jste předtím vytvořili v Intune. Tento profil se označuje jako certifikát identity. Slouží k ověřování na základě důvěryhodného profilu certifikátu (neboli *kořenového certifikátu*), který vytvoříte, aby bylo možné zařízení uživatele připojit. Tento důvěryhodný certifikát se přiřazuje počítači, který ověřuje připojení VPN. Zpravidla se jedná o server VPN.
 
-Pokud pro profil sítě VPN použijete ověřování založené na certifikátech, nasaďte profil sítě VPN, profil certifikátu a důvěryhodný kořenový profil do stejných skupin, abyste zajistili, že každé zařízení dokáže rozpoznat legitimitu certifikační autority.
+Pokud pro profil sítě VPN používáte ověřování pomocí certifikátů, pak nasaďte profil sítě VPN, profil certifikátu a důvěryhodný kořenový profil do stejných skupin. Toto přiřazení zajišťuje, aby každé zařízení rozpoznalo legitimitu vaší certifikační autority.
 
 Další informace o vytváření a používání profilů certifikátů v Intune najdete v tématu [Jak konfigurovat certifikáty pomocí Microsoft Intune](../protect/certificates-configure.md).
 

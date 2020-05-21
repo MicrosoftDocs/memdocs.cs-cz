@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 31eef700f7aa38b70c5e9a2fa75fd3faee4c9713
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 2ad156e49444679bbf7b15c53e87f504b07897bd
+ms.sourcegitcommit: dba89b827d7f89067dfa75a421119e0c973bb747
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078052"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83709362"
 ---
 # <a name="reference-for-devices-entities"></a>Referenční informace o entitách zařízení
 
@@ -50,9 +50,9 @@ Entita **deviceTypes** představuje typ zařízení, na který odkazují jiné e
 
 ### <a name="example"></a>Příklad
 
-| deviceTypeID  | Název | Popis |
+| deviceTypeID  | Name | Popis |
 |---------|------------|--------|
-| 0 |Aplikace klasické pracovní plochy |Zařízení se systémem Windows |
+| 0 |Plocha |Zařízení se systémem Windows |
 | 1 |WindowsRT |Zařízení se systémem WindowsRT |
 | 2 |WinMO6 |Zařízení se systémem Windows Mobile 6.0 |
 | 3 |Nokia |Zařízení Nokia |
@@ -170,7 +170,7 @@ Entita **enrollmentType** označuje, jestli je zařízení firemní, osobně vla
 | ownerTypeName |Představuje typ vlastníka zařízení:  <br>Podnik – zařízení je ve vlastnictví podniku. <br>Osobní – zařízení je v osobním vlastnictví (BYOD).  <br>Neznámé – žádné informace o tomto zařízení nejsou dostupné. |Firemní osobní neznámý |
 
 > [!Note]  
-> Při vytváření `ownerTypeName` dynamických skupin pro zařízení v nástroji AzureAD je potřeba nastavit hodnotu `deviceOwnership` filtru jako. `Company` Další informace najdete v tématu [pravidla pro zařízení](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices). 
+> Při `ownerTypeName` vytváření dynamických skupin pro zařízení v nástroji AzureAD je potřeba nastavit hodnotu filtru `deviceOwnership` jako `Company` . Další informace najdete v tématu [pravidla pro zařízení](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices). 
 
 ## <a name="managementstates"></a>managementStates
 
@@ -184,7 +184,7 @@ Entita **managementStates** poskytuje podrobné informace o stavu zařízení. P
 
 ### <a name="example"></a>Příklad
 
-| managementStateID  | Název | Popis |
+| managementStateID  | Name | Popis |
 |---------|------------|--------|
 | 0 |Spravovaní | Spravováno bez čekajících vzdálených akcí |
 | 1 |RetirePending | Pro toto zařízení existuje příkaz pro vyřazení z provozu, který čeká na vyřízení. |
@@ -211,7 +211,7 @@ Entita **ManagementAgentType** představuje agenty používané ke správě zař
 
 ### <a name="example"></a>Příklad
 
-| ManagementAgentTypeID  | Název | Popis |
+| ManagementAgentTypeID  | Name | Popis |
 |---------|------------|--------|
 | 1 |EAS | Zařízení se spravuje prostřednictvím protokolu Exchange Active Sync. |
 | 2 |MDM | Zařízení se spravuje pomocí agenta MDM. |
@@ -263,6 +263,11 @@ Entita **zařízení** obsahuje seznam všech zaregistrovaných zařízení, kte
 | cellularTechnology         | Mobilní technologie zařízení                                                                                                                                                    |
 | WiFiMacAddress             | Wi-Fi MAC                                                                                                                                                                              |
 | ICCD                       | Identifikátor karty integrovaného okruhu                                                                                                                                                     |
+| windowsOsEdition           | Edice operačního systému Windows.                                                                                                                             |
+| ethernetMacAddress           | Jedinečný identifikátor sítě tohoto zařízení.                                                                                                                                        |
+| model                      | Model zařízení.                                                                                                                                                                      |
+| office365Version           | Verze Office 365, která je na zařízení nainstalovaná.                                                                                                                             |
+
 
 ## <a name="devicepropertyhistories"></a>devicePropertyHistories
 
@@ -281,4 +286,6 @@ Entita **devicePropertyHistory** má stejné vlastnosti jako tabulka zařízení
 | OSVersion                  | Verze operačního systému.                                                                                                                                                                          |
 | Jailbreak                 | Zda má zařízení jailbreak nebo root.                                                                                                                                         |
 | deviceCategoryKey          | Klíč atributu kategorie zařízení pro toto zařízení 
+| physicalMemoryInBytes      | Fyzická paměť v bajtech.                                                                                                                                                          |
+| totalStorageSpaceInBytes   | Celková kapacita úložiště v bajtech                                                                                                                                                                |
 

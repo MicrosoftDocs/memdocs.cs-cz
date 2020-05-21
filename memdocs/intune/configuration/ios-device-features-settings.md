@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fce26aab90989f31ee56a9abd58f617c780d9c4b
-ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
+ms.openlocfilehash: 235a79f644bf15b82eb9e8750f04519238760aca
+ms.sourcegitcommit: 5d32dd481e2a944465755ce74e14c835cce2cd1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82943871"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "83551923"
 ---
 # <a name="ios-and-ipados-device-settings-to-use-common-iosipados-features-in-intune"></a>nastavení zařízení s iOS a iPadOS pro použití běžných funkcí iOS/iPadOS v Intune
 
@@ -60,15 +60,15 @@ Pokud chcete přidat servery pro tisk přes mosty, můžete:
 Chcete-li přidat servery s modulem pro tisk, budete potřebovat IP adresu tiskárny, cestu k prostředku a port. Následující kroky ukazují, jak tyto informace získat.
 
 1. Na Macu, který je připojený ke stejné místní síti (podsíti) jako tiskárny pro Protisk, otevřete **terminál** (z **/aplikace/Utility**).
-2. V terminálu zadejte `ippfind`a vyberte Enter.
+2. V terminálu zadejte `ippfind` a vyberte Enter.
 
-    Poznamenejte si informace o tiskárně. Například může vracet něco podobného jako `ipp://myprinter.local.:631/ipp/port1`. První část je název tiskárny. Poslední část (`ipp/port1`) je cesta prostředku.
+    Poznamenejte si informace o tiskárně. Například může vracet něco podobného jako `ipp://myprinter.local.:631/ipp/port1` . První část je název tiskárny. Poslední část ( `ipp/port1` ) je cesta prostředku.
 
-3. V terminálu zadejte `ping myprinter.local`a vyberte Enter.
+3. V terminálu zadejte `ping myprinter.local` a vyberte Enter.
 
-   Poznamenejte si IP adresu. Například může vracet něco podobného jako `PING myprinter.local (10.50.25.21)`.
+   Poznamenejte si IP adresu. Například může vracet něco podobného jako `PING myprinter.local (10.50.25.21)` .
 
-4. Použijte hodnoty IP adresy a prostředku cesty. V tomto příkladu je IP adresa `10.50.25.21`a cesta k prostředku. `/ipp/port1`
+4. Použijte hodnoty IP adresy a prostředku cesty. V tomto příkladu je IP adresa `10.50.25.21` a cesta k prostředku `/ipp/port1` .
 
 ## <a name="home-screen-layout"></a>Rozložení domovské obrazovky
 
@@ -210,10 +210,10 @@ Tato funkce platí pro:
 
 - **Poznámka pod čarou na zamykací obrazovce**: Pokud dojde ke ztrátě nebo odcizení zařízení, zadejte poznámku, která může přispět k vrácení zařízení zpět. Můžete zadat libovolný text, který chcete. Zadejte třeba `If found, call Contoso at ...`.
 
-  Tokeny zařízení lze také použít k přidání informací o jednotlivých zařízeních do těchto polí. Chcete-li například zobrazit sériové číslo, zadejte `Serial Number: {{serialnumber}}`. Na zamykací obrazovce se text zobrazí jako podobný `Serial Number 123456789ABC`. Při zadávání proměnných nezapomeňte použít složené závorky `{{ }}`. [Tokeny konfigurace aplikace](../apps/app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) obsahují seznam proměnných, které se dají použít. Můžete také použít `deviceName` nebo libovolná jiná hodnota specifická pro zařízení.
+  Tokeny zařízení lze také použít k přidání informací o jednotlivých zařízeních do těchto polí. Chcete-li například zobrazit sériové číslo, zadejte `Serial Number: {{serialnumber}}` . Na zamykací obrazovce se text zobrazí jako podobný `Serial Number 123456789ABC` . Při zadávání proměnných nezapomeňte použít složené závorky `{{ }}` . [Tokeny konfigurace aplikace](../apps/app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) obsahují seznam proměnných, které se dají použít. Můžete také použít `deviceName` nebo libovolná jiná hodnota specifická pro zařízení.
 
   > [!NOTE]
-  > Proměnné nejsou v uživatelském rozhraní ověřeny a rozlišují se velká a malá písmena. V důsledku toho mohou být profily uloženy s nesprávným vstupem. Pokud například zadáte `{{DeviceID}}` místo `{{deviceid}}`, pak se místo jedinečného ID zařízení zobrazí literální řetězec. Nezapomeňte zadat správné informace.
+  > Proměnné nejsou v uživatelském rozhraní ověřeny a rozlišují se velká a malá písmena. V důsledku toho mohou být profily uloženy s nesprávným vstupem. Pokud například zadáte `{{DeviceID}}` místo `{{deviceid}}` nebo {{DEVICEID}}, pak se místo jedinečného ID zařízení zobrazí literální řetězec. Nezapomeňte zadat správné informace. Podporují se všechna malá a velká písmena, ale ne kombinace. 
 
 ## <a name="single-sign-on"></a>Jednotné přihlašování
 
@@ -230,7 +230,7 @@ Tato funkce platí pro:
 
     Sféru také můžete přepsat textem, který zadáte do textového pole **Sféra**.
 
-    Například contoso má několik oblastí, včetně Evropy, Asie a Severní Amerika. Společnost Contoso chce, aby uživatelé v Asii používali jednotné přihlašování a aplikace vyžaduje hlavní `username@asia.contoso.com` název uživatele (UPN) ve formátu. Když vyberete **hlavní název uživatele**, vyřadí se sféra pro každého uživatele ze služby Azure AD, která `contoso.com`je. Takže pro uživatele v Asii vyberte **hlavní název uživatele**a zadejte `asia.contoso.com`. Hlavní název uživatele (UPN `username@asia.contoso.com`) se místo `username@contoso.com`.
+    Například contoso má několik oblastí, včetně Evropy, Asie a Severní Amerika. Společnost Contoso chce, aby uživatelé v Asii používali jednotné přihlašování a aplikace vyžaduje hlavní název uživatele (UPN) ve `username@asia.contoso.com` formátu. Když vyberete **hlavní název uživatele**, vyřadí se sféra pro každého uživatele ze služby Azure AD, která je `contoso.com` . Takže pro uživatele v Asii vyberte **hlavní název uživatele**a zadejte `asia.contoso.com` . Hlavní název uživatele (UPN) se `username@asia.contoso.com` místo `username@contoso.com` .
 
   - **ID zařízení v Intune**: Intune automaticky vybere ID zařízení v Intune.
 
@@ -245,7 +245,7 @@ Tato funkce platí pro:
 
 - **Aplikace**: **přidejte** aplikace na zařízení uživatelů, která můžou používat jednotné přihlašování.
 
-  `AppIdentifierMatches` Pole musí zahrnovat řetězce, které odpovídají ID sady prostředků aplikace. Tyto řetězce můžou být přesné shody, jako `com.contoso.myapp`je, nebo zadejte shodu předpony u ID sady prostředků pomocí \* zástupného znaku. Zástupný znak musí být uveden za znakem tečky (.) a může se objevit pouze jednou, na konci řetězce, například `com.contoso.*`. Při použití zástupného znaku se udělí přístup k účtu všem aplikacím, jejichž ID sady prostředků začíná příslušnou předponou.
+  `AppIdentifierMatches`Pole musí zahrnovat řetězce, které odpovídají ID sady prostředků aplikace. Tyto řetězce můžou být přesné shody, jako `com.contoso.myapp` je, nebo zadejte shodu předpony u ID sady prostředků pomocí \* zástupného znaku. Zástupný znak musí být uveden za znakem tečky (.) a může se objevit pouze jednou, na konci řetězce, například `com.contoso.*` . Při použití zástupného znaku se udělí přístup k účtu všem aplikacím, jejichž ID sady prostředků začíná příslušnou předponou.
 
   **Název aplikace** použijte k zadání popisného názvu, který pomůže při identifikaci ID sady prostředků.
 
@@ -256,9 +256,9 @@ Tato funkce platí pro:
   > [!NOTE]
   > V těchto adresách URL se musí používat správně naformátovaný plně kvalifikovaný název domény. Apple vyžaduje, aby byly ve `http://<yourURL.domain>` formátu.
 
-  Odpovídající vzory adres URL musí mít na začátku `http://` nebo `https://`. Je spuštěna jednoduchá řetězcová shoda, takže se `http://www.contoso.com/` předpona adresy URL `http://www.contoso.com:80/`neshoduje. U iOS 10.0 + a iPadOS 13.0 + se dá použít jeden \* zástupný znak k zadání všech vyhovujících hodnot. Například `http://*.contoso.com/` odpovídá `http://store.contoso.com/` a `http://www.contoso.com`.
+  Odpovídající vzory adres URL musí mít na začátku `http://` nebo `https://`. Je spuštěna jednoduchá řetězcová shoda, takže se `http://www.contoso.com/` předpona adresy URL neshoduje `http://www.contoso.com:80/` . U iOS 10.0 + a iPadOS 13.0 + se dá použít jeden zástupný znak \* k zadání všech vyhovujících hodnot. Například `http://*.contoso.com/` odpovídá `http://store.contoso.com/` a `http://www.contoso.com` .
 
-  Vzory `http://.com` a `https://.com` odpovídají všem adresám URL protokolu HTTP a HTTPS, v uvedeném pořadí.
+  `http://.com`Vzory a `https://.com` odpovídají všem adresám URL protokolu HTTP a HTTPS, v uvedeném pořadí.
 
 - **Certifikát obnovení**: Pokud používáte certifikáty pro ověřování (nikoli hesla), vyberte jako ověřovací certifikát existující certifikát SCEP nebo PFX. Obvykle se jedná o stejný certifikát, který je nasazený pro uživatele pro jiné profily, jako je VPN, Wi-Fi nebo e-mail.
 
@@ -283,7 +283,7 @@ Tato funkce platí pro:
     - **Cesta záložky**: Apple toto nastavení změnil. Všechny záložky přecházejí do složky **schválené weby** . Záložky nejdou do cesty záložky, kterou zadáte.
     - **Title**: zadejte popisný název záložky.
 
-    Pokud nezadáte žádné adresy URL, uživatelé nebudou mít přístup k žádným webům s `microsoft.com`výjimkou `microsoft.net`, `apple.com`a. Tyto adresy URL jsou automaticky povolené službou Intune.
+    Pokud nezadáte žádné adresy URL, uživatelé nebudou mít přístup k žádným webům s výjimkou `microsoft.com` , `microsoft.net` a `apple.com` . Tyto adresy URL jsou automaticky povolené službou Intune.
 
 ## <a name="single-sign-on-app-extension"></a>Rozšíření aplikace s jednotným přihlašováním
 
@@ -315,15 +315,15 @@ Tato funkce platí pro:
 
   Další informace o režimu sdíleného zařízení a jeho povolení najdete v tématu Přehled režimu [sdíleného zařízení](https://docs.microsoft.com/azure/active-directory/develop/msal-shared-devices) a [sdíleného zařízení pro zařízení s iOS](https://docs.microsoft.com/azure/active-directory/develop/msal-ios-shared-devices).  
 
-- **ID rozšíření** (přesměrování a přihlašovací údaje): zadejte identifikátor sady prostředků, který identifikuje vaše rozšíření aplikace jednotného přihlašování, například `com.apple.extensiblesso`.
+- **ID rozšíření** (přesměrování a přihlašovací údaje): zadejte identifikátor sady prostředků, který identifikuje vaše rozšíření aplikace jednotného přihlašování, například `com.apple.extensiblesso` .
 
-- **ID týmu** (přesměrování a přihlašovací údaje): zadejte identifikátor týmu rozšíření aplikace jednotného přihlašování. Identifikátor týmu je alfanumerický řetězec (čísla a písmena), který vygenerovala společnost Apple, jako je například `ABCDE12345`. ID týmu se nevyžaduje.
+- **ID týmu** (přesměrování a přihlašovací údaje): zadejte identifikátor týmu rozšíření aplikace jednotného přihlašování. Identifikátor týmu je alfanumerický řetězec (čísla a písmena), který vygenerovala společnost Apple, jako je například `ABCDE12345` . ID týmu se nevyžaduje.
 
   [Najděte své ID týmu](https://help.apple.com/developer-account/#/dev55c3c710c) (otevře se webová stránka společnosti Apple), kde najdete další informace.
 
-- **Sféra** (přihlašovací údaje a Kerberos): zadejte název sféry ověřování. Název sféry by měl být velkými písmeny, `CONTOSO.COM`například. Název vaší sféry je typicky stejný jako název vaší domény DNS, ale jenom na velká písmena.
+- **Sféra** (přihlašovací údaje a Kerberos): zadejte název sféry ověřování. Název sféry by měl být velkými písmeny, například `CONTOSO.COM` . Název vaší sféry je typicky stejný jako název vaší domény DNS, ale jenom na velká písmena.
 
-- **Domény** (přihlašovací údaje a Kerberos): zadejte doménu nebo názvy hostitelů pro weby, které se dají ověřit pomocí jednotného přihlašování. Například pokud je `mysite.contoso.com`váš web, pak `mysite` je název hostitele a `contoso.com` je název domény. Když se uživatelé připojí k některé z těchto webů, aplikace App Extension zpracuje výzvu ověřování. Toto ověřování umožňuje uživatelům k přihlášení použít ID obličeje, dotykové ID nebo Apple PINCODE/přístupový kód.
+- **Domény** (přihlašovací údaje a Kerberos): zadejte doménu nebo názvy hostitelů pro weby, které se dají ověřit pomocí jednotného přihlašování. Například pokud je váš web `mysite.contoso.com` , pak `mysite` je název hostitele a `contoso.com` je název domény. Když se uživatelé připojí k některé z těchto webů, aplikace App Extension zpracuje výzvu ověřování. Toto ověřování umožňuje uživatelům k přihlášení použít ID obličeje, dotykové ID nebo Apple PINCODE/přístupový kód.
 
   - Všechny domény v profilech služby Intune, které mají rozšíření pro aplikace jednotného přihlašování, musí být jedinečné. Doménu nemůžete opakovat v žádném profilu rozšíření aplikace pro přihlášení, i když používáte různé typy rozšíření aplikace jednotného přihlašování.
   - U těchto domén se nerozlišují velká a malá písmena.
@@ -331,14 +331,14 @@ Tato funkce platí pro:
 - **Adresy URL** (pouze přesměrované): zadejte PŘEDPONY adresy URL vašich zprostředkovatelů identity, na jejichž základě rozšíření pro přesměrování aplikace používá jednotné přihlašování. Když budou uživatelé přesměrováni na tyto adresy URL, rozšíření aplikace jednotného přihlašování se zasáhne a zobrazí výzvu k přihlášení SSO.
 
   - Všechny adresy URL v profilech rozšíření aplikace jednotného přihlašování Intune musí být jedinečné. Doménu nejde opakovat v žádném profilu rozšíření aplikace jednotného přihlašování, a to ani v případě, že používáte různé typy rozšíření aplikace jednotného přihlašování.
-  - Adresy URL musí `http://` začínat `https://`na nebo.
+  - Adresy URL musí začínat na `http://` nebo `https://` .
 
 - **Další konfigurace** (Microsoft Azure AD, přesměrování a přihlašovací údaje): zadejte další data specifická pro rozšíření, která chcete předat rozšíření aplikace jednotného přihlašování:
-  - **Klíč**: zadejte název položky, kterou chcete přidat, například `user name`.
+  - **Klíč**: zadejte název položky, kterou chcete přidat, například `user name` .
   - **Typ**: zadejte typ dat. Možnosti:
 
-    - Řetězec
-    - Boolean: v **konfigurační hodnotě**zadejte `True` nebo `False`.
+    - String
+    - Boolean: v **konfigurační hodnotě**zadejte `True` nebo `False` .
     - Integer: v **hodnotě konfigurace**zadejte číslo.
 
   - **Hodnota**: zadejte data.
@@ -354,10 +354,10 @@ Tato funkce platí pro:
   > - Toto nastavení **Povolte** , pokud používáte více sfér. Nastaví hodnotu **sféry** , kterou jste zadali jako výchozí sféru.
   > - Pokud máte pouze jednu sféru, ponechte ji **nenakonfigurovanou** (výchozí).
 
-- **Hlavní název** (jenom Kerberos): zadejte uživatelské jméno objektu zabezpečení protokolu Kerberos. Nemusíte zahrnovat název sféry. Například v `user@contoso.com`, `user` je hlavní název a `contoso.com` je název sféry.
+- **Hlavní název** (jenom Kerberos): zadejte uživatelské jméno objektu zabezpečení protokolu Kerberos. Nemusíte zahrnovat název sféry. Například v `user@contoso.com` , `user` je hlavní název a `contoso.com` je název sféry.
 
   > [!TIP]
-  > - Můžete také použít proměnné v hlavním názvu tak, že zadáte složené závorky `{{ }}`. Pokud například chcete zobrazit uživatelské jméno, zadejte `Username: {{username}}`. 
+  > - Můžete také použít proměnné v hlavním názvu tak, že zadáte složené závorky `{{ }}` . Pokud například chcete zobrazit uživatelské jméno, zadejte `Username: {{username}}` . 
   > - Buďte ale opatrní s náhradou proměnných, protože proměnné nejsou v uživatelském rozhraní ověřené a rozlišují velká a malá písmena. Nezapomeňte zadat správné informace.
 
 - **Kód lokality služby Active Directory** (pouze Kerberos): zadejte název lokality služby Active Directory, kterou má rozšíření protokolu Kerberos použít. Tuto hodnotu pravděpodobně nebudete muset měnit, protože rozšíření protokolu Kerberos může automaticky najít kód lokality služby Active Directory.

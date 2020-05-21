@@ -18,12 +18,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 zone_pivot_groups: atp-baseline-versions
-ms.openlocfilehash: e1081395c733807c38dc940ebd1b7c2765da7a9a
-ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
+ms.openlocfilehash: 330a4387ef1a079b2a0f691bfb0b887117dd9e4b
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82693397"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83429339"
 ---
 <!-- Pivots in use: 
 ::: zone pivot="atp-april-2020"
@@ -418,7 +418,7 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
     CSP: [/EnableFirewall](https://go.microsoft.com/fwlink/?linkid=872558)
 
     - **Není nakonfigurováno**
-    - **Blokováno**
+    - **Blokované**
     - **Povoleno** (*výchozí*)
 
   - **Pravidla autorizovaných aplikací ze zásad skupiny nejsou sloučena.**  
@@ -505,7 +505,7 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
     CSP: [/EnableFirewall](https://go.microsoft.com/fwlink/?linkid=872558)
 
     - **Není nakonfigurováno**
-    - **Blokováno**
+    - **Blokované**
     - **Povoleno** (*výchozí*)
 
   - **Pravidla zabezpečení připojení ze zásad skupiny nejsou sloučena.**  
@@ -560,7 +560,7 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
     CSP: [/EnableFirewall](https://go.microsoft.com/fwlink/?linkid=872558)
 
     - **Není nakonfigurováno**
-    - **Blokováno**
+    - **Blokované**
     - **Povoleno** (*výchozí*)
 
   - **Pravidla zabezpečení připojení ze zásad skupiny nejsou sloučena.**  
@@ -596,7 +596,7 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
   [Chránit zařízení před zneužitím](https://go.microsoft.com/fwlink/?linkid=874499)  
 
   Toto pravidlo ASR se řídí pomocí následujícího identifikátoru GUID: 26190899-1602-49e8-8b27-eb1d0a1ce869.
-  - **Nenakonfigurováno** – obnoví se výchozí nastavení systému Windows, není blokováno vytváření podřízených procesů.
+  - **Nenakonfigurováno** – obnoví se výchozí nastavení systému Windows, které neblokuje vytváření podřízených procesů.
   - **Definováno uživatelem**
   - **Povolit** (*výchozí*) – komunikační aplikace Office jsou blokované pro vytváření podřízených procesů.
   - **Režim auditu** – místo blokování podřízených procesů jsou vyvolány události systému Windows.

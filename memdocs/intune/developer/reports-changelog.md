@@ -6,7 +6,7 @@ keywords: Intune Data Warehouse
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/04/2019
+ms.date: 05/14/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,18 +18,49 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 36944b05a12b150c15e59f145efd9fef85598a2f
-ms.sourcegitcommit: d1c7548b4177d720065b822356f9a08d1e1657c2
+ms.openlocfilehash: 8a4ddbb96c17e8e370fee73e6a6ec1d004df05f9
+ms.sourcegitcommit: dba89b827d7f89067dfa75a421119e0c973bb747
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82881039"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83709328"
 ---
 # <a name="change-log-for-the-intune-data-warehouse-api"></a>Protokol změn pro rozhraní API datového skladu Intune
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Udržujte si přehled o aktualizacích datového skladu Intune.
+
+## <a name="2004"></a>2004 
+_Vydáno v dubnu 2020_
+
+### <a name="beta-changes"></a>Změny v beta verzi
+
+Následující tabulka uvádí přidanou vlastnost pro entitu **zařízení** v datovém skladu Intune.
+
+|    Kolekce                          |    Změnit     |    Informace o popisu                                                                                                                                                                                                                                                                                                                                                                 |
+|----------------------------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    windowsOsEdition     |    Přidáno    |    Edice operačního systému Windows.                                                                                                                                                                                                                                                                     |
+
+## <a name="2003"></a>2003 
+_Vydáno v březnu 2020_
+
+### <a name="beta-changes"></a>Změny v beta verzi
+
+Následující tabulka obsahuje seznam přidaných vlastností k entitě **zařízení** v datovém skladu Intune.
+
+|    Kolekce                          |    Změnit     |    Informace o popisu                                                                                                                                                                                                                                                                                                                                                                 |
+|----------------------------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    ethernetMacAddress    |    Přidáno    |    Jedinečný identifikátor sítě tohoto zařízení.                                                                                                                                                                                                                                                                     |
+|    model    |    Přidáno    |    Model zařízení.                                                                                                                                                                                                                                                                     |
+|    office365Version    |    Přidáno    |    Verze Office 365, která je na zařízení nainstalovaná.                                                                                                                                                                                                                                                                     |
+
+Následující tabulka obsahuje seznam přidaných vlastností k entitě **devicePropertyHistory** v datovém skladu Intune.
+
+|    Kolekce                          |    Změnit     |    Informace o popisu                                                                                                                                                                                                                                                                                                                                                                 |
+|----------------------------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    physicalMemoryInBytes    |    Přidáno    |    Fyzická paměť v bajtech.                                                                                                                                                                                                                                                                     |
+|    totalStorageSpaceInBytes     |    Přidáno    |    Celková velikost úložiště v bajtech                                                                                                                                                                                                                                                                     |
 
 ## <a name="1903-part-2"></a>1903 (část 2)
 _Vydáno v dubnu 2019_
@@ -43,7 +74,7 @@ V následující tabulce je uveden seznam nedávných odebraných kolekcí a kol
 |    mobileAppDeviceUserInstallStatus    |    Odebráno    |    Místo toho použijte [mobileAppInstallStatusCounts](intune-data-warehouse-collections.md#mobileappinstallstatuscounts) .                                                                                                                                                                                                                                                                     |
 |    Entita enrollmenttypes                     |    Odebráno    |    Místo toho použijte [deviceEnrollmentTypes](intune-data-warehouse-collections.md#deviceenrollmenttypes) .                                                                                                                                                                                                                                                                                      |
 |    mdmStatuses                         |    Odebráno    |    Místo toho použijte [complianceStates](intune-data-warehouse-collections.md#compliancestates) .                                                                                                                                                                                                                                                                                               |
-|    workPlaceJoinStateTypes             |    Odebráno    |    Místo toho `azureAdRegistered` použijte vlastnost v [devicePropertyHistories](intune-data-warehouse-collections.md#devicepropertyhistories) kolekcích [zařízení](intune-data-warehouse-collections.md#devices) .                                                                                                                                                                                                             |
+|    workPlaceJoinStateTypes             |    Odebráno    |    `azureAdRegistered`Místo toho použijte vlastnost v [devicePropertyHistories](intune-data-warehouse-collections.md#devicepropertyhistories) kolekcích [zařízení](intune-data-warehouse-collections.md#devices) .                                                                                                                                                                                                             |
 |    clientRegistrationStateTypes        |    Odebráno    |    Místo toho použijte [deviceRegistrationStates](intune-data-warehouse-collections.md#deviceregistrationstates) .                                                                                                                                                                                                                                                                             |
 |    currentUser                         |    Odebráno    |    Místo toho použijte kolekci [uživatelů](intune-data-warehouse-collections.md#users) .                                                                                                                                                                                                                                                                                                      |
 |    mdmDeviceInventoryHistories         |    Odebráno    |    Mnohé z vlastností byly redundantní nebo se teď dají najít v kolekcích [devicePropertyHistories](intune-data-warehouse-collections.md#devicepropertyhistories) nebo [Devices](intune-data-warehouse-collections.md#devices) . Všechny vlastnosti **mdmDeviceInventoryHistories** , které již nejsou uvedeny s těmito dvěma kolekcemi, již nejsou k dispozici. Níže najdete podrobnosti.    |

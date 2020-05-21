@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/18/2019
+ms.date: 05/13/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,67 +15,55 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5b6646c67f9425d395bbec1e33c03f6f29b6af7e
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 96074f4bea22b7468b1f210d631f0912eeafe7b5
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79332351"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83428995"
 ---
 # <a name="use-custom-settings-for-windows-10-devices-in-intune"></a>Použití vlastních nastavení pro zařízení s Windows 10 v Intune
 
-V Microsoft Intune můžete vlastní profily použít k přidání nebo vytvoření vlastního nastavení pro zařízení s Windows 10. Vlastní profily jsou funkcí Intune. Jsou navržené tak, aby bylo možné přidat nastavení a funkce zařízení, které nejsou integrované do Intune.
+Tento článek obsahuje seznam a popis všech různých vlastních nastavení, která můžete řídit na zařízeních s Windows 10 a novějším. Jako součást řešení správy mobilních zařízení (MDM) pomocí těchto nastavení můžete nakonfigurovat nastavení, která nejsou integrovaná do Intune.
 
-Vlastní profily zařízení s Windows 10 používají nastavení OMA-URI (Open Mobile Alliance Uniform Resource Identifier) ke konfiguraci různých funkcí. Tato nastavení obvykle používají výrobci mobilních zařízení k řízení funkcí na zařízení. 
+Další informace o vlastních profilech najdete v tématu [Vytvoření profilu s vlastním nastavením](custom-settings-configure.md).
+
+Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a pak se přiřadí nebo nasadí na vaše zařízení s Windows 10.
+
+Tato funkce platí pro:
+
+- Windows 10 a novější
+
+Vlastní profily zařízení s Windows 10 používají nastavení OMA-URI (Open Mobile Alliance Uniform Resource Identifier) ke konfiguraci různých funkcí. Tato nastavení obvykle používají výrobci mobilních zařízení k řízení funkcí na zařízení.
 
 Ve Windows 10 je k dispozici řada nastavení od poskytovatelů konfiguračních služeb (CSP), třeba [Poskytovatel konfiguračních služeb pro zásady (CSP pro zásady)](https://technet.microsoft.com/itpro/windows/manage/how-it-pros-can-use-configuration-service-providers).
 
 Pokud hledáte konkrétní nastavení, nezapomeňte, že řada integrovaných nastavení je v [restriktivním profilu zařízení s Windows 10](device-restrictions-windows-10.md). Takže možná nebude potřeba zadávat vlastní hodnoty.
 
-V tomto článku najdete:
+## <a name="before-you-begin"></a>Před zahájením
 
-- Postup vytvoření vlastního profilu na zařízeních s Windows 10
-- Seznam doporučených nastavení OMA-URI
-- Příklad vlastního profilu, který otevře připojení k síti VPN
+[Vytvořte vlastní profil Windows 10](custom-settings-configure.md#create-the-profile).
 
-## <a name="create-the-profile"></a>Vytvoření profilu
+## <a name="oma-uri-settings"></a>Nastavení OMA-URI
 
-1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **Konfigurace zařízení** > **profily** > konfigurace**vytvořit profil**.
-3. Zadejte následující nastavení:
+**Přidat**: zadejte následující nastavení:
 
-    - **Název**: zadejte popisný název profilu. Své profily pojmenujte, abyste je později mohli snadno identifikovat. Dobrým názvem profilu je například **vlastní profil Windows 10**.
-    - **Popis**: Zadejte popis profilu. Toto nastavení není povinné, ale doporučujeme ho zadat.
-    - **Platforma**: vyberte **Windows 10 a novější**.
-    - **Typ profilu**: vyberte **vlastní**.
+- **Název:** Zadejte jedinečný název nastavení OMA-URI, abyste ho v seznamu poznali.
+- **Popis:** Zadejte popis, který nastavení stručně charakterizuje, a další důležité podrobnosti.
+- **OMA-URI** (rozlišuje velká a malá písmena): Zadejte nastavení OMA-URI, které chcete použít.
+- **Datový typ**: vyberte datový typ, který budete používat pro toto nastavení OMA-URI. Možnosti:
 
-4. V nabídce **Vlastní nastavení OMA-URI** vyberte **Přidat**. Zadejte následující nastavení:
+  - Base64 (soubor)
+  - Logická hodnota
+  - Řetězec (soubor XML)
+  - Datum a čas
+  - String
+  - Plovoucí desetinná čárka
+  - Integer
 
-    - **Název:** Zadejte jedinečný název nastavení OMA-URI, abyste ho v seznamu poznali.
-    - **Popis:** Zadejte popis, který nastavení stručně charakterizuje, a další důležité podrobnosti.
-    - **OMA-URI** (rozlišuje velká a malá písmena): Zadejte nastavení OMA-URI, které chcete použít.
-    - **Datový typ**: vyberte datový typ, který budete používat pro toto nastavení OMA-URI. Možnosti:
+- **Hodnota:** Zadejte datovou hodnotu, kterou chcete přidružit k zadanému nastavení OMA-URI. Hodnota závisí na vybraném datovém typu. Pokud například vyberete položku **Datum a čas**, vyberte hodnotu z ovládacího prvku pro výběr data.
 
-        - Řetězec
-        - Řetězec (soubor XML)
-        - Datum a čas
-        - Integer
-        - Plovoucí desetinná čárka
-        - Logická hodnota
-        - Base64 (soubor)
-
-    - **Hodnota:** Zadejte datovou hodnotu, kterou chcete přidružit k zadanému nastavení OMA-URI. Hodnota závisí na vybraném datovém typu. Pokud například vyberete položku **Datum a čas**, vyberte hodnotu z ovládacího prvku pro výběr data.
-
-    Po přidání nastavení můžete vybrat **Exportovat**. **Export** vytvoří seznam všech hodnot, které jste přidali do souboru hodnot oddělených čárkou (.csv).
-
-5. Výběrem **OK** uložte změny. Podle potřeby přidejte další nastavení.
-6. Po dokončení vyberte **OK** > **vytvořit** a vytvořte profil Intune. Po dokončení se Váš profil zobrazí v seznamu **zařízení – konfigurační profily** .
-
-## <a name="example"></a>Příklad
-
-V následujícím příkladu je zapnuté nastavení **Connectivity/AllowVPNOverCellular**. Toto nastavení umožňuje zařízení s Windows 10, které je připojené k mobilní síti, otevřít připojení k síti VPN.
-
-![Příklad vlastní zásady s nastavením VPN](./media/custom-settings-windows-10/custom-policy-example.png)
+Po přidání nastavení můžete vybrat **Exportovat**. **Export** vytvoří seznam všech hodnot, které jste přidali do souboru hodnot oddělených čárkou (.csv).
 
 ## <a name="find-the-policies-you-can-configure"></a>Vyhledání zásad, které můžete nakonfigurovat
 
@@ -87,4 +75,6 @@ Intune navíc nepodporuje všechna nastavení, která jsou v [referenčních inf
 
 ## <a name="next-steps"></a>Další kroky
 
-Profil je vytvořený, ale zatím se nepoužívá. Dále [Přiřaďte profil](device-profile-assign.md) a [sledujte jeho stav](device-profile-monitor.md).
+[Přiřaďte profil](device-profile-assign.md)a [sledujte jeho stav](device-profile-monitor.md).
+
+[Přečtěte si další informace o vlastních profilech v Intune](custom-settings-configure.md).

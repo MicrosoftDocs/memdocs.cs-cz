@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dd999f621375cfdbfa80bf076766be20053221dc
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 09c8713bd9f0e63182dd94187de1711ef65af802
+ms.sourcegitcommit: d8dc05476ecd5db7ecb36dc649b566b349ba263d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83269061"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83732954"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-automated-device-enrollment"></a>Automatická registrace zařízení se systémem iOS/iPadOS pomocí Automatické registrace zařízení společnosti Apple
 
@@ -225,7 +225,7 @@ Teď, když jste nainstalovali token, můžete vytvořit profil zápisu pro zař
 
     | Nastavení oddělení | Popis |
     |---|---|
-    | <strong>Název oddělení</strong> | Zobrazí se, když uživatelé klepnou při aktivaci na <strong>O konfiguraci</strong>. |
+    | <strong>Department Name</strong> | Zobrazí se, když uživatelé klepnou při aktivaci na <strong>O konfiguraci</strong>. |
     |    <strong>Telefon na oddělení</strong>     | Zobrazí se, když uživatel při aktivaci klikne na tlačítko <strong>Potřebuji nápovědu</strong>. |
 
     Během instalace uživatele můžete skrýt obrazovky pomocníka s nastavením na zařízení.
@@ -235,29 +235,33 @@ Teď, když jste nainstalovali token, můžete vytvořit profil zápisu pro zař
 
     | Nastavení na obrazovce Průvodce nastavením | Pokud zvolíte **Zobrazit**, zařízení při nastavování: |
     |------------------------------------------|------------------------------------------|
-    | <strong>Heslo</strong> | Vyzve uživatele k zadání hesla. Vždy vyžadovat heslo pro nezabezpečená zařízení, pokud není přístup kontrolován jiným způsobem (například celoobrazovkový režim, který zařízení omezuje na jednu aplikaci). |
-    | <strong>Zjišťování polohy</strong> | Vyzve uživatele k poskytnutí polohy. |
-    | <strong>Obnovení</strong> | Zobrazí obrazovku aplikace & data. Tato obrazovka nabídne uživateli při nastavování zařízení možnost obnovit nebo přenést data ze zálohy v iCloudu. |
-    | <strong>iCloud a Apple ID</strong> | Umožní uživateli přihlásit se pomocí svého Apple ID a používat iCloud.                         |
-    | <strong>Podmínky a ujednání</strong> | Požaduje, aby uživatel přijal podmínky a ujednání společnosti Apple. |
-    | <strong>Touch ID</strong> | Umožní uživateli nastavit pro zařízení identifikaci otiskem prstu. |
-    | <strong>Apple Pay</strong> | Umožní uživateli nastavit na zařízení Apple Pay. |
-    | <strong>Zoom</strong> | Umožní uživateli zvětšit zobrazení při nastavování zařízení. |
-    | <strong>Siri</strong> | Umožní uživateli nastavit Siri. |
-    | <strong>Diagnostická data</strong> | Zobrazí uživateli obrazovku Diagnostická data. Tato obrazovka umožní uživateli poslat společnosti Apple diagnostická data. |
-    | <strong>Tón zobrazení</strong> | Poskytněte uživateli možnost zapnout tónový displej. |
-    | <strong>Ochrana osobních údajů</strong> | Zobrazit obrazovku ochrany osobních údajů uživateli. |
-    | <strong>Migrace zařízení s Androidem</strong> | Poskytněte uživateli možnost migrovat datum ze zařízení s Androidem. |
-    | <strong>iMessage a FaceTime</strong> | Poskytněte uživateli možnost nastavit iMessage a FaceTime. |
-    | <strong>Onboarding</strong> | Zobrazuje informační obrazovky pro vzdělávání uživatelů, jako je například titulní stránka a multitasking a řídicí centrum. |
-    | <strong>Sledovat migraci</strong> | Poskytněte uživateli možnost migrovat data ze sledovacího zařízení. |
-    | <strong>Čas obrazovky</strong> | Zobrazí obrazovku čas obrazovky. |
-    | <strong>Aktualizace softwaru</strong> | Zobrazte povinnou obrazovku aktualizace softwaru. |
-    | <strong>Nastavení SIM</strong> | Poskytněte uživateli možnost Přidat plán pro mobilní síť. |
-    | <strong>Příznaky</strong> | Zobrazit obrazovku vzhled pro uživatele |
+    | <strong>Heslo</strong> | Vyzve uživatele k zadání hesla. Vždy vyžadovat heslo pro nezabezpečená zařízení, pokud není přístup kontrolován jiným způsobem (například celoobrazovkový režim, který zařízení omezuje na jednu aplikaci). Pro iOS/iPadOS 7,0 a novější. |
+    | <strong>Zjišťování polohy</strong> | Vyzve uživatele k poskytnutí polohy. Pro macOS 10,11 a novější a iOS/iPadOS 7,0 a novější. |
+    | <strong>Obnovení</strong> | Zobrazí obrazovku aplikace & data. Tato obrazovka nabídne uživateli při nastavování zařízení možnost obnovit nebo přenést data ze zálohy v iCloudu. Pro macOS 10,9 a novější a iOS/iPadOS 7,0 a novější. |
+    | <strong>iCloud a Apple ID</strong> | Umožní uživateli přihlásit se pomocí svého Apple ID a používat iCloud. Pro macOS 10,9 a novější a iOS/iPadOS 7,0 a novější.   |
+    | <strong>Podmínky a ujednání</strong> | Požaduje, aby uživatel přijal podmínky a ujednání společnosti Apple. Pro macOS 10,9 a novější a iOS/iPadOS 7,0 a novější. |
+    | <strong>Touch ID</strong> | Umožní uživateli nastavit pro zařízení identifikaci otiskem prstu. Pro macOS 10.12.4 a novější a iOS/iPadOS 8,1 a novější. |
+    | <strong>Apple Pay</strong> | Umožní uživateli nastavit na zařízení Apple Pay. Pro macOS 10.12.4 a novější a iOS/iPadOS 7,0 a novější. |
+    | <strong>Zoom</strong> | Umožní uživateli zvětšit zobrazení při nastavování zařízení. Pro iOS/iPadOS 8,3 a novější. |
+    | <strong>Siri</strong> | Umožní uživateli nastavit Siri. Pro macOS 10,12 a novější a iOS/iPadOS 7,0 a novější. |
+    | <strong>Diagnostická data</strong> | Zobrazí uživateli obrazovku Diagnostická data. Tato obrazovka umožní uživateli poslat společnosti Apple diagnostická data. Pro macOS 10,9 a novější a iOS/iPadOS 7,0 a novější. |
+    | <strong>Tón zobrazení</strong> | Poskytněte uživateli možnost zapnout tónový displej. Pro macOS 10.13.6 a novější a iOS/iPadOS 9.3.2 a novější. |
+    | <strong>Ochrana osobních údajů</strong> | Zobrazit obrazovku ochrany osobních údajů uživateli. Pro macOS 10.13.4 a novější a iOS/iPadOS 11,3 a novější. |
+    | <strong>Migrace zařízení s Androidem</strong> | Poskytněte uživateli možnost migrovat datum ze zařízení s Androidem. Pro iOS/iPadOS 9,0 a novější.|
+    | <strong>iMessage a FaceTime</strong> | Poskytněte uživateli možnost nastavit iMessage a FaceTime. Pro iOS/iPadOS 9,0 a novější. |
+    | <strong>Onboarding</strong> | Zobrazuje informační obrazovky pro vzdělávání uživatelů, jako je například titulní stránka a multitasking a řídicí centrum. Pro iOS/iPadOS 11,0 a novější. |
+    | <strong>Sledovat migraci</strong> | Poskytněte uživateli možnost migrovat data ze sledovacího zařízení. Pro iOS/iPadOS 11,0 a novější.|
+    | <strong>Čas obrazovky</strong> | Zobrazí obrazovku čas obrazovky. Pro macOS 10,15 a novější a iOS/iPadOS 12,0 a novější. |
+    | <strong>Aktualizace softwaru</strong> | Zobrazte povinnou obrazovku aktualizace softwaru. Pro iOS/iPadOS 12,0 a novější. |
+    | <strong>Nastavení SIM</strong> | Poskytněte uživateli možnost Přidat plán pro mobilní síť. Pro iOS/iPadOS 12,0 a novější. |
+    | <strong>Příznaky</strong> | Zobrazit obrazovku vzhled pro uživatele Pro macOS 10,14 a novější a iOS/iPadOS 13,0 a novější. |
     | <strong>Jazyk Express</strong>| Zobrazit obrazovku jazyka Express pro uživatele |
     | <strong>Preferovaný jazyk</strong> | Poskytněte uživateli možnost zvolit si **preferovaný jazyk**. |
-    | <strong>Migrace zařízení do zařízení</strong> | Poskytněte uživateli možnost migrovat data ze starého zařízení do tohoto zařízení.|
+    | <strong>Migrace zařízení do zařízení</strong> | Poskytněte uživateli možnost migrovat data ze starého zařízení do tohoto zařízení. Pro iOS/iPadOS 13,0 a novější. |
+    | <strong>Registrace</strong> | Zobrazit registrační obrazovku uživateli Pro macOS 10,9 a novější. |
+    | <strong>FileVault</strong> | Zobrazit na uživateli obrazovku šifrování trezoru 2. Pro macOS 10,10 a novější. |
+    | <strong>Diagnostika iCloud</strong> | Zobrazit obrazovku iCloud Analaytics pro uživatele Pro macOS 10.12.4 a novější. |
+    | <strong>Úložiště iCloud</strong> | Zobrazí uživateli iCloud dokumenty a plochu obrazovky. Pro macOS 10.13.4 a novější. |
     
 
 16. Kliknutím na tlačítko **Další** přejdete na stránku **Revize + vytvořit** .
@@ -282,7 +286,7 @@ Teď, když má Intune oprávnění spravovat vaše zařízení, můžete synchr
 
    Pokud chcete dodržovat podmínky společnosti Apple pro přijatelný provoz programu registrace, Intune ukládá tato omezení:
    - Úplná synchronizace se nesmí pouštět častěji než jednou za sedm dní. Během úplné synchronizace načte Intune úplný aktualizovaný seznam sériových čísel přiřazených k serveru Apple MDM připojenému k Intune. Pokud se zařízení ADE odstraní z portálu Intune, měl by být na portálu ADE nepřiřazený ze serveru Apple MDM. Pokud není přiřazená, nebude se znovu naimportovat do Intune, dokud se nespustí Úplná synchronizace.   
-   - Synchronizace se spouští automaticky každých 24 hodin. Můžete ji také spustit kliknutím na tlačítko **Synchronizovat** (ne častěji než jednou za 15 minut). Každá žádost o synchronizaci má 15 minut na dokončení. Tlačítko **Synchronizovat** bude deaktivované, dokud se synchronizace nedokončí. Při synchronizaci se zaktualizuje stav existujících zařízení a naimportují se nová zařízení přiřazená k serveru Apple MDM.   
+   - Synchronizace se spouští automaticky každých 12 hodin. Můžete ji také spustit kliknutím na tlačítko **Synchronizovat** (ne častěji než jednou za 15 minut). Každá žádost o synchronizaci má 15 minut na dokončení. Tlačítko **Synchronizovat** bude deaktivované, dokud se synchronizace nedokončí. Při synchronizaci se zaktualizuje stav existujících zařízení a naimportují se nová zařízení přiřazená k serveru Apple MDM.   
 
 
 ## <a name="assign-an-enrollment-profile-to-devices"></a>Přiřazení profilu registrace zařízením

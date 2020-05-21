@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ef23854fd3fee0883f6f91415a40ebbcc1b3c240
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: add599a715d32eac84b2784de976de4caf17faa9
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80620580"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83428808"
 ---
 # <a name="how-to-manage-ios-and-macos-apps-purchased-through-apple-volume-purchase-program-with-microsoft-intune"></a>Jak spravovat aplikace pro iOS a macOS zakoupené prostřednictvím Apple Volume Purchase Program s využitím Microsoft Intune
 
@@ -50,7 +50,7 @@ Zakoupené aplikace je možné přiřadit ke skupinám pomocí dvou typů licenc
 |-----------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Přihlášení do App Storu | Nepožadováno. | Každý koncový uživatel musí při zobrazení výzvy k přihlášení do App Storu použít jedinečné Apple ID. |
 | Konfigurace zařízení blokující přístup k obchodu s aplikacemi | Aplikace se dají nainstalovat a aktualizovat pomocí Portál společnosti. | Pozvánka k připojení k programu Apple VPP vyžaduje přístup k App Storu. Pokud jste nastavili zásadu pro zakázání App Storu, Licencování uživatelů pro aplikace VPP nebude fungovat. |
-| Automatická aktualizace aplikace | Jak je nakonfigurované správcem Intune v nastavení tokenu Apple VPP, kde se vyžaduje typ přiřazení aplikace.<p>Pokud je pro zaregistrovaná zařízení dostupný typ přiřazení, můžou se dostupné aktualizace aplikace nainstalovat z Portál společnosti. | Jak je nakonfigurované koncovým uživatelem v nastavení osobního obchodu s aplikacemi. Tuto funkci nemůže spravovat správce Intune. |
+| Automatická aktualizace aplikace | Jak je nakonfiguroval správce Intune v nastavení tokenu Apple VPP.<p>Pokud je typ přiřazení dostupný pro zaregistrovaná zařízení, můžete z Portál společnosti nainstalovat taky dostupné aktualizace aplikací, a to tak, že na stránce podrobností aplikace vyberete akci **aktualizovat** . | Jak je nakonfigurované koncovým uživatelem v nastavení osobního obchodu s aplikacemi. Tuto funkci nemůže spravovat správce Intune. |
 | Zápis uživatele | Není podporováno. | Podporováno pomocí spravovaných Apple ID. |
 | Knihy | Není podporováno. | Podporuje se. |
 | Používané licence | 1 licence na zařízení Licence je přidružená k zařízení. | 1 licence pro až 5 zařízení, která používají stejné osobní Apple ID. Licence je přidružena k uživateli.<p>Koncový uživatel přidružený k osobnímu Apple ID a spravovanému Apple ID v Intune spotřebovává 2 licence aplikací. |
@@ -87,13 +87,13 @@ Migrujte existující koupený obsah a tokeny VPP do aplikací a knih v Apple Bu
 1. Vyzvěte nákupčí VPP, aby se připojili k vaší organizaci, a nasměrujte jednotlivé uživatele na výběr jedinečného umístění. 
 2. Než budete pokračovat, ujistěte se, že všichni odběratelé VPP v rámci vaší organizace dokončili krok 1.
 3. Ověřte, že se všechny koupené aplikace a licence migrovali do aplikací a knih v Apple Business Manageru nebo Apple School Manageru.
-4. Pokud chcete stáhnout nový token umístění, přejdeme do nabídky**Nastavení** > aplikace **Apple Business (nebo školy)** > a**Moje tokeny serveru**v**Books** > .
-5. V > **centru pro správu** > Microsoft Endpoint Manageru aktualizujte token umístění, a to tak, že na portálu **pro správu tenanta**zařadíte tokeny**Apple VPP** a synchronizujete token.
+4. Pokud chcete stáhnout nový token umístění, přejdeme do nabídky nastavení aplikace **Apple Business (nebo školy)**  >  **Settings**  >  **a**  >  **Moje tokeny serveru**v Books.
+5. V centru pro správu Microsoft Endpoint Manageru aktualizujte token umístění, a to tak, že na portálu **pro správu tenanta**zařadíte tokeny  >  **Connectors and tokens**  >  **Apple VPP** a synchronizujete token.
 
 ## <a name="upload-an-apple-vpp-or-location-token"></a>Nahrání tokenu Apple VPP nebo umístění
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte možnost konektory **správy** > tenanta**a tokeny** > programu**Apple VPP**.
+2. Vyberte možnost konektory **správy tenanta**  >  **a tokeny**programu  >  **Apple VPP**.
 3. V podokně s tokeny VPP vyberte **Vytvořit**.
 4. V podokně **Vytvořit token VPP** zadejte následující informace:
     - **Soubor tokenu VPP** – Pokud jste to ještě neudělali, zaregistrujte se do Apple Business Manageru nebo Apple School Manager. Po zaregistrování si stáhněte token Apple VPP pro svůj účet a vyberte ho tady.
@@ -108,7 +108,7 @@ Migrujte existující koupený obsah a tokeny VPP do aplikací a knih v Apple Bu
     - **Automatické aktualizace aplikací** – zvolte **Zapnuto** nebo **Vypnuto** podle toho, jestli chcete automatické aktualizace povolit nebo zakázat. Když je tato možnost povolená, Intune zjistí aktualizace aplikací VPP v App Storu a automaticky je odešle do zařízení, jakmile se ohlásí.
 
         > [!NOTE]
-        > Automatické aktualizace aplikací Apple VPP automaticky aktualizují jenom aplikace nasazené pomocí instalačního záměru **Povinné**. U aplikací nasazených s **dostupným** záměrem instalace vygeneruje Automatická aktualizace stavovou zprávu pro správce IT, která informuje o tom, že je k dispozici nová verze aplikace. Tato stavová zpráva se zobrazí tak, že se vybere aplikace, vyberete stav instalace zařízení a zkontrolujete podrobnosti o stavu.  
+        > Automatické aktualizace aplikací pro aplikace Apple VPP se automaticky aktualizují pro **požadované** i **dostupné** instalační záměry. U aplikací nasazených s **dostupným** záměrem instalace vygeneruje Automatická aktualizace stavovou zprávu pro správce IT, která informuje o tom, že je k dispozici nová verze aplikace. Tato stavová zpráva se zobrazí tak, že se vybere aplikace, vyberete stav instalace zařízení a zkontrolujete podrobnosti o stavu.  
 
     - **Udělujem Microsoftu oprávnění odesílat informace o uživatelích i zařízeních do společnosti Apple.** – **Chcete-li pokračovat** , je nutné vybrat souhlasím. Informace o tom, jaká data Microsoft posílá společnosti Apple, najdete v tématu [data Intune odesílají společnosti Apple](../protect/data-intune-sends-to-apple.md).
 5. Po dokončení vyberte **Vytvořit**. Token se zobrazí v podokně se seznamem tokenů.
@@ -119,9 +119,9 @@ Můžete synchronizovat názvy aplikací, metadata a informace o licencích pro 
 
 ## <a name="assign-a-volume-purchased-app"></a>Přiřazení hromadně koupené aplikace
 
-1. Vyberte **aplikace** > **všechny aplikace**.
+1. Vyberte **aplikace**  >  **všechny aplikace**.
 2. V podokně se seznamem aplikací zvolte aplikaci, kterou chcete přiřadit, a pak zvolte **Přiřazení**.
-3. V podokně - **přiřazení** **názvu aplikace**zvolte **Přidat skupinu** a pak v podokně **Přidat skupinu** vyberte **Typ přiřazení** a skupiny uživatelů nebo zařízení Azure AD, ke kterým chcete aplikaci přiřadit.
+3. V podokně **přiřazení názvu aplikace**  -  **Assignments** zvolte **Přidat skupinu** a pak v podokně **Přidat skupinu** vyberte **Typ přiřazení** a skupiny uživatelů nebo zařízení Azure AD, ke kterým chcete aplikaci přiřadit.
 5. Pro každou zvolenou skupinu vyberte následující nastavení:
     - **Typ** – vyberte, jestli bude aplikace **k dispozici** (koncoví uživatelé můžou aplikaci nainstalovat z Portálu společnosti), nebo **povinná** (aplikace se na zařízení koncových uživatelů nainstaluje automaticky).
     - **Typ licence** – vyberte **Licencování uživatelů** nebo **Licencování zařízení**.
@@ -190,8 +190,8 @@ V současné době nemůžete z Microsoft Intune odstranit aplikaci VPP pro iOS/
 
 Přístup k tokenům Apple VPP a aplikacím VPP se dá řídit nezávisle pomocí oprávnění přiřazených k vlastním rolím Správce v Intune.
 
-* Pokud chcete, aby vlastní role Intune spravovala tokeny programu Apple VPP v části **aplikace** > **tokenů**Apple VPP, přiřaďte oprávnění pro **spravované aplikace**.
-* Aby mohla vlastní role Intune spravovat aplikace zakoupené pomocí tokenů VPP pro iOS/iPadOS v části **aplikace** > **všechny aplikace**, přiřaďte oprávnění pro **mobilní aplikace**. 
+* Pokud chcete, aby vlastní role Intune spravovala tokeny programu Apple VPP v části **aplikace**  >  **tokenů**Apple VPP, přiřaďte oprávnění pro **spravované aplikace**.
+* Aby mohla vlastní role Intune spravovat aplikace zakoupené pomocí tokenů VPP pro iOS/iPadOS v části **aplikace**  >  **všechny aplikace**, přiřaďte oprávnění pro **mobilní aplikace**. 
 
 ## <a name="additional-information"></a>Další informace
 
@@ -211,7 +211,7 @@ Licence by se měly aktualizovat do několika hodin od instalace nebo odinstalac
 
 ### <a name="is-it-possible-to-oversubscribe-an-app-and-if-so-in-what-circumstance"></a>Je možné přidělit aplikaci nadměrnému počtu subjektů? A pokud ano, za jakých okolností?
 
-Ano. Správce Intune může aplikaci přidělit nadměrnému počtu uživatelů nebo zařízení. A to například tehdy, když zakoupí sto licencí k aplikaci XYZ a potom ji zacílí na skupinu s pěti sty členy. Prvnímu stu členů (uživatelům nebo zařízením) se licence přiřadí a u zbylých členů se přiřazení licence nezdaří.
+Yes. Správce Intune může aplikaci přidělit nadměrnému počtu uživatelů nebo zařízení. A to například tehdy, když zakoupí sto licencí k aplikaci XYZ a potom ji zacílí na skupinu s pěti sty členy. Prvnímu stu členů (uživatelům nebo zařízením) se licence přiřadí a u zbylých členů se přiřazení licence nezdaří.
 
 ## <a name="next-steps"></a>Další kroky
 

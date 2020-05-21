@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/10/2020
+ms.date: 05/14/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c76045413324deef395f546033d37ec47405a28f
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: f013074ac67b7622b509d8b9781de3ab5f4041e0
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79332247"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83429495"
 ---
 # <a name="windows-10-and-later-settings-to-manage-shared-devices-using-intune"></a>Nastavení Windows 10 a novějších pro správu sdílených zařízení pomocí Intune
 
@@ -42,32 +42,57 @@ Další informace o této funkci v Intune najdete v tématu [řízení přístup
 
 Tato nastavení používají [zprostředkovatele CSP pro SharedPC](https://docs.microsoft.com/windows/client-management/mdm/sharedpc-csp).
 
-- **Režim SDÍLENÉHO počítače**: Pokud chcete zapnout režim sdíleného počítače, vyberte **Povolit** . V tomto režimu se k zařízení v jednom okamžiku přihlašuje jenom jeden uživatel. Jiný uživatel se nemůže přihlásit, dokud se první uživatel odhlásí. **Nenakonfigurováno** (výchozí) Toto nastavení nespravuje Intune a nenabídne žádné zásady pro řízení tohoto nastavení na zařízení.
+- **Režim SDÍLENÉHO počítače**: **Povolit** zapne režim sdílení počítače. V tomto režimu se k zařízení v jednom okamžiku přihlašuje jenom jeden uživatel. Jiný uživatel se nemůže přihlásit, dokud se první uživatel odhlásí. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
 - **Účet Guest**: vyberte možnost vytvořit hosta na přihlašovací obrazovce. Účty hostů nevyžadují žádné přihlašovací údaje ani ověřování uživatele. Toto nastavení vytvoří nový místní účet pokaždé, když se použije. Možnosti:
   - **Host**: vytvoří na zařízení místně účet hosta.
   - **Doména**: vytvoří účet hosta v Azure Active Directory (AD).
   - **Host a doména**: na zařízení vytvoří účet hosta místně a v Azure Active Directory (AD).
-- **Správa účtů**: Nastavte, aby se **povolilo** automatické odstraňování místních účtů vytvořených hosty a účtů v AD a Azure AD. Když se uživatel odhlásí ze zařízení nebo když se spustí údržba systému, tyto účty se odstraní. Pokud je tato možnost povolená, nastaví se také:
-  - **Odstranění účtu**: vyberte, kdy se mají účty odstranit: **v prahové hodnotě úložného prostoru**, **v prahové hodnotě úložiště a na neaktivní prahové hodnotě**nebo **hned po odhlášení**. Zadejte také:
+- **Správa účtů**: vyberte, jestli se mají automaticky odstranit účty. Možnosti:
+  - **Nenakonfigurováno** (výchozí): Intune toto nastavení nemění ani neaktualizuje.
+  - **Povoleno**: účty vytvořené hostům a účty v AD a Azure AD se automaticky odstraní. Když se uživatel odhlásí ze zařízení nebo když se spustí údržba systému, tyto účty se odstraní.
+
+    Dále zadejte:
+
+    - **Odstranění účtu**: vyberte, kdy se mají účty odstranit:
+      - **V prahové hodnotě prostoru úložiště**
+      - **V prahové hodnotě prostoru úložiště a neaktivní prahové hodnoty**
+      - **Ihned po odhlášení**
+
+    Dále zadejte:
+
     - **Počáteční hodnota odstranění – prahová hodnota (%)**: zadejte procento místa na disku (0-100). Když celková velikost disku nebo úložiště klesne pod hodnotu, kterou zadáte, odstraní se účty v mezipaměti. Neustále odstraňuje účty pro uvolnění místa na disku. Účty, které jsou neaktivní, se nejprve odstraní.
     - **Zastavit odstranění prahové hodnoty (%)**: zadejte procento místa na disku (0-100). Když celkové místo na disku nebo úložišti odpovídá hodnotě, kterou zadáte, odstranění se zastaví.
+    - **Prahová hodnota neaktivního účtu**: zadejte počet po sobě jdoucích dnů, než se účet odstraní, od 0-60 dnů.
 
-  Nastavením této hodnoty **zakážete** , aby byly účty místních účtů, AD a Azure AD vytvořené hosty.
+  - **Zakázané**: účty místní, AD a Azure AD vytvořené hosty zůstanou na zařízení a neodstraňují se.
 
-- **Místní úložiště**: Pokud chcete zabránit uživatelům v ukládání a zobrazování souborů na pevném disku zařízení, vyberte možnost **povoleno** . Zvolením možnosti **zakázáno** umožníte uživatelům zobrazovat a ukládat soubory místně pomocí Průzkumníka souborů. **Nenakonfigurováno** (výchozí) Toto nastavení nespravuje Intune a nenabídne žádné zásady pro řízení tohoto nastavení na zařízení.
-- **Zásady napájení**: Pokud je nastavené na **povoleno**, uživatelé nemůžou vypnout režim hibernace, nemůžou přepsat všechny akce režimu spánku (například zavřít víko) a nemůžou měnit nastavení napájení. Když je tato možnost **zakázaná**, můžou uživatelé zařízení přepnout do režimu hibernace, může zavřít víko zařízení a změnit nastavení napájení. **Nenakonfigurováno** (výchozí) Toto nastavení nespravuje Intune a nenabídne žádné zásady pro řízení tohoto nastavení na zařízení.
+- **Místní úložiště**: pomocí místního úložiště můžou uživatelé ukládat soubory na pevném disku zařízení a zobrazovat je. Možnosti:
+  - **Nenakonfigurováno** (výchozí): Intune toto nastavení nemění ani neaktualizuje.
+  - **Povoleno**: zabraňuje uživatelům v ukládání a zobrazování souborů na pevném disku zařízení.
+  - **Zakázáno**: umožňuje uživatelům zobrazovat a ukládat soubory místně pomocí Průzkumníka souborů.
+
+- **Zásady napájení**: povolí nebo zakáže uživatelům měnit nastavení napájení. Možnosti:
+  - **Nenakonfigurováno** (výchozí): Intune toto nastavení nemění ani neaktualizuje.
+  - **Povoleno**: uživatelé nemohou vypnout režim hibernace, nelze přepsat všechny akce režimu spánku (například zavření víka) a nelze změnit nastavení napájení.
+  - **Zakázáno**: uživatelé můžou zařízení přepnout do režimu hibernace, může zavřít víko zařízení a změnit nastavení napájení.
+
 - **Časový limit režimu spánku (v sekundách)**: zadejte počet neaktivních sekund (0-18000), než se zařízení přepne do režimu spánku. `0`znamená, že zařízení nikdy nepřejde do režimu spánku. Pokud nenastavíte čas, zařízení přejde do režimu spánku po 3600 sekundách (60 minut).
-- **Přihlášení při probuzení z počítače: Pokud**je nastaveno na **povoleno** , bude vyžadovat, aby se uživatelé přihlásili pomocí hesla, když zařízení nepřejde do režimu spánku. Vyberte možnost **zakázáno** , aby uživatelé nemuseli zadávat své uživatelské jméno a heslo. **Nenakonfigurováno** (výchozí) Toto nastavení nespravuje Intune a nenabídne žádné zásady pro řízení tohoto nastavení na zařízení.
-- **Čas zahájení údržby (v minutách od půlnoci)**: zadejte čas v minutách (0-1440), kdy se mají spouštět úlohy automatické údržby, například web Windows Update. Výchozí počáteční čas je půlnoc nebo nula (`0`) minut. Změňte čas spuštění zadáním počátečního času v minutách od půlnoci. Například pokud chcete, aby údržba začínala 2., zadejte `120`. Pokud chcete, aby údržba začínala 8. odp. `1200`, zadejte.
-- **Zásady vzdělávání**: vyberte možnost **povoleno** pro použití doporučeného nastavení pro zařízení používaná ve školách, které jsou více omezující. Vyberte možnost **zakázáno** , takže se nepoužijí výchozí a doporučené zásady vzdělávání. **Nenakonfigurováno** (výchozí) Toto nastavení nespravuje Intune a nenabídne žádné zásady pro řízení tohoto nastavení na zařízení.
+
+- **Přihlášení při probuzení z počítače**: vyberte, jestli se uživatelé musí přihlásit, až se zařízení přepne do režimu spánku. Možnosti:
+  - **Nenakonfigurováno** (výchozí): Intune toto nastavení nemění ani neaktualizuje.
+  - **Povoleno**: vyžaduje, aby se uživatelé přihlásili pomocí hesla, když zařízení nepřejde do režimu spánku.
+  - **Zakázáno**: uživatelé nemusejí zadávat uživatelské jméno a heslo.
+
+- **Čas zahájení údržby (v minutách od půlnoci)**: zadejte čas v minutách (0-1440), kdy se mají spouštět úlohy automatické údržby, například web Windows Update. Výchozí počáteční čas je půlnoc nebo nula ( `0` ) minut. Změňte čas spuštění zadáním počátečního času v minutách od půlnoci. Například pokud chcete, aby údržba začínala 2., zadejte `120` . Pokud chcete, aby údržba začínala 8. odp., zadejte `1200` .
+
+  Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
+
+- **Zásady vzdělávání**: vyberte, jestli se mají povolit zásady pro vzdělávací prostředí. Možnosti:
+  - **Nenakonfigurováno** (výchozí): Intune toto nastavení nemění ani neaktualizuje.
+  - **Povoleno**: používá doporučené nastavení pro zařízení používaná ve školách, které jsou přísnější.
+  - **Zakázáno**: nepoužívají se výchozí a doporučené zásady vzdělávání.
 
   Další informace o tom, co dělají zásady vzdělávání, najdete v tématu [doporučení konfigurace Windows 10 pro zákazníky ve vzdělávání](https://docs.microsoft.com/education/windows/configure-windows-for-education).
-
-- **Rychlé první přihlášení** (zastaralé): Pokud chcete, aby uživatelé měli rychlý úvodní přihlašovací prostředí, vyberte **povoleno** . Pokud je tato možnost **povolená**, zařízení automaticky připojí nové účty Azure AD, které nejsou správci, k předem nakonfigurovaným místním účtům kandidátů. Výběrem možnosti **zakázáno** zabráníte rychlému prvnímu přihlášení. **Nenakonfigurováno** (výchozí) Toto nastavení nespravuje Intune a nenabídne žádné zásady pro řízení tohoto nastavení na zařízení.
-
-  Toto nastavení se v nadcházející verzi odebere. Toto nastavení nepoužívejte.
-
-  [Ověřování/EnableFastFirstSignIn CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-authentication#authentication-enablefastfirstsignin)
 
 > [!TIP]
 > [Nastavení sdíleného nebo hostovaného počítače](https://docs.microsoft.com/windows/configuration/set-up-shared-or-guest-pc) (otevře si jiný web docs) je skvělým prostředkem této funkce Windows 10, včetně konceptů a zásad skupiny, které je možné nastavit ve sdíleném režimu.

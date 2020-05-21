@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 05/14/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.reviewer: tycast
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8d2f671e88b1221961e978d1945e28c7cec474cb
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 9fbe28a6585fe9fe5cf7772b559924675ac39a30
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80086510"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83429476"
 ---
 # <a name="windows-10-and-windows-holographic-device-settings-to-add-vpn-connections-using-intune"></a>Nastavení zařízení s Windows 10 a Windows holografické pro přidání připojení k síti VPN pomocí Intune
 
@@ -66,7 +66,7 @@ V závislosti na tom, jaká nastavení zvolíte, nemusí být všechny uvedené 
   - **PPTP**
 
   Když zvolíte typ připojení VPN, můžete být také vyzváni k zadání těchto nastavení:  
-  - **Always On**: vyberte **Povolit** pro automatické připojení k připojení VPN, když dojde k následujícím událostem:
+  - **Always On**: **Povolit** automatické připojení k připojení VPN, když dojde k následujícím událostem:
     - Při přihlášení uživatelů do zařízení
     - Při změně sítě na zařízení
     - Při opětovném zapnutí obrazovky na zařízení po vypnutí
@@ -114,10 +114,11 @@ Další informace o vytváření vlastních dat XML protokolu EAP najdete v tém
 
   - **Přidružit WIP k tomuto připojení**: zadejte **Doménu WIP pro toto připojení**.
   - **Přidružit aplikace k tomuto připojení**: můžete **Omezit připojení ze sítě VPN k těmto aplikacím** a pak přidat **Přidružené aplikace**. Aplikace, které zadáte, automaticky použijí připojení VPN. Typ aplikace určuje identifikátor aplikace. Pro univerzální aplikace zadejte identitu aplikace (PFN). Pro desktopové aplikace zadejte cestu k souboru aplikace.
-  >[!IMPORTANT]
-  >Doporučujeme všechny seznamy aplikací vytvořené pro sítě VPN pro jednotlivé aplikace zabezpečit. Pokud seznam změní neoprávněný uživatel a vy seznam naimportujete do seznamu aplikací sítě VPN pro jednotlivé aplikace, potenciálně tím autorizujete přístup k síti VPN pro aplikace, které by přístup mít neměly. Jedním ze způsobů, jak zabezpečit seznamy aplikací, je použít seznam řízení přístupu (ACL).
 
-- **Pravidla síťových přenosů pro toto připojení k síti VPN**: vyberte protokoly a rozsahy místních a vzdálených portů a adres, které budou povolené pro připojení VPN. Když nevytvoříte pravidlo pro provoz sítě, budou povolené všechny protokoly, porty a rozsahy adres. Po vytvoření pravidla se pro připojení VPN použijí jenom protokoly, porty a rozsahy adres, které určíte v tomto pravidle.
+  > [!IMPORTANT]
+  > Doporučujeme všechny seznamy aplikací vytvořené pro sítě VPN pro jednotlivé aplikace zabezpečit. Pokud seznam změní neoprávněný uživatel a vy seznam naimportujete do seznamu aplikací sítě VPN pro jednotlivé aplikace, potenciálně tím autorizujete přístup k síti VPN pro aplikace, které by přístup mít neměly. Jedním ze způsobů, jak zabezpečit seznamy aplikací, je použít seznam řízení přístupu (ACL).
+
+- **Pravidla síťových přenosů pro toto připojení**k síti VPN: Vyberte protokoly a místní & vzdálený port a rozsahy adres, které jsou povolené pro připojení VPN. Když nevytvoříte pravidlo pro provoz sítě, budou povolené všechny protokoly, porty a rozsahy adres. Po vytvoření pravidla se pro připojení VPN použijí jenom protokoly, porty a rozsahy adres, které určíte v tomto pravidle.
 
 ## <a name="conditional-access"></a>Podmíněný přístup
 
@@ -150,7 +151,7 @@ Další informace o vytváření vlastních dat XML protokolu EAP najdete v tém
   - **Doména**: zadejte plně kvalifikovaný název domény (FQDN) nebo příponu DNS pro použití pravidla. Můžete také zadat tečku (.) na začátku pro příponu DNS. Zadejte například `contoso.com` nebo `.allcontososubdomains.com`.
   - **Servery DNS**: zadejte IP adresu nebo server DNS, který tuto doménu vyřeší. Zadejte například `10.0.0.3` nebo `vpn.contoso.com`.
   - **Proxy**: zadejte web proxy server, který řeší doménu. Zadejte například `http://proxy.com`.
-  - **Automaticky připojit**: Pokud je tato možnost **povolena**, zařízení se automaticky připojí k síti VPN, když se zařízení připojí k doméně, kterou `contoso.com`zadáte, jako je například. Pokud **není nakonfigurovaná** (výchozí), zařízení se k síti VPN automaticky nepřipojí.
+  - **Automaticky připojit**: Pokud je tato možnost **povolena**, zařízení se automaticky připojí k síti VPN, když se zařízení připojí k doméně, kterou zadáte, jako je například `contoso.com` . Pokud **není nakonfigurovaná** (výchozí), zařízení se k síti VPN automaticky nepřipojí.
   - **Persistent**: Pokud je tato možnost nastavená na **povolenou**, pravidlo zůstane v tabulce zásad překladu IP adres (NRPT), dokud se ze zařízení ručně neodebere pravidlo, a to ani po odpojení sítě VPN. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), pravidla NRPT v profilu sítě VPN se ze zařízení odeberou, když se síť VPN odpojí.
 
 ## <a name="proxy-settings"></a>Nastavení proxy serveru

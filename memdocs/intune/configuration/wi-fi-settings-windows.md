@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/07/2020
+ms.date: 05/14/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 61d84b0d1f5047df23e9571a0330768ed37eb921
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: ea4b196a6b2fade8ca926d13c3436207cb4b764e
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80862818"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83429775"
 ---
 # <a name="add-wi-fi-settings-for-windows-10-and-later-devices-in-intune"></a>Přidání nastavení Wi-Fi pro zařízení s Windows 10 a novější verzí v Intune
 
@@ -69,8 +69,6 @@ Těmito nastaveními se zabývá tento článek.
   - **Nakonfigurovat ručně:** Zadejte **IP adresu proxy serveru** a **Číslo portu**.
   - **Automaticky nakonfigurovat**: Zadejte adresu URL, která odkazuje na skript PAC (automatická konfigurace proxy). Zadejte například `http://proxy.contoso.com/proxy.pac`.
 
-Kliknutím na **tlačítko OK** > **vytvořit** uložte změny. Profil se vytvoří a zobrazí se v seznamu profilů.
-
 ## <a name="enterprise-profile"></a>Profil Enterprise
 
 - **Typ Wi-Fi**: Zvolte **Enterprise**.
@@ -116,7 +114,7 @@ Kliknutím na **tlačítko OK** > **vytvořit** uložte změny. Profil se vytvo�
   - **Protokol PEAP** (Protected EAP)
 
     **Další nastavení EAP-TLS, EAP-TTLS a PEAP**:
-    
+
     > [!NOTE]
     > V současné době jsou při použití typu protokolu EAP podporované pouze profily certifikátů SCEP. Profily certifikátů PKCS podporované nejsou. Kdykoli je uživatel vyzván k zadání certifikátu, nezapomeňte vybrat certifikát SCEP.
 
@@ -150,8 +148,6 @@ Kliknutím na **tlačítko OK** > **vytvořit** uložte změny. Profil se vytvo�
   - **Automaticky konfigurovat**: zadejte adresu URL odkazující na skript automatické konfigurace proxy serveru (PAC). Zadejte například `http://proxy.contoso.com/proxy.pac`.
 
 - **Vynutit, aby profil Wi-Fi dodržoval standard FIPS**: Pokud chcete používat vyhodnocování proti standardu FIPS 140-2, vyberte možnost **Ano**. Tento standard se vyžaduje od všech agentur federální vlády USA, které chrání citlivé, ale ne tajné digitálně ukládané informace pomocí bezpečnostních systémů založených na kryptografii. Pokud se nemá standard FIPS dodržovat, zvolte **Ne**.
-
-Kliknutím na **tlačítko OK** > **vytvořit** uložte změny. Profil se vytvoří a zobrazí se v seznamu profilů.
 
 ## <a name="use-an-imported-settings-file"></a>Importování souboru nastavení
 

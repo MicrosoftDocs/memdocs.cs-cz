@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 05/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2c80bf57b195d7e97308ba423c9e5b53f7e29c74
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: f0f242f336fadf9dd31641849462a5dd24c09e3f
+ms.sourcegitcommit: 169e279ba686c28d9a23bc0a54f0a2a0d20bdee4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80086473"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83556349"
 ---
 # <a name="add-vpn-settings-on-windows-81-devices-in-microsoft-intune"></a>Přidat nastavení sítě VPN na zařízeních Windows 8.1 v Microsoft Intune
 
@@ -30,21 +30,19 @@ V závislosti na tom, jaká nastavení zvolíte, nebudou v následujícím sezna
 
 ## <a name="before-you-begin"></a>Před zahájením
 
-[Vytvořte profil konfigurace zařízení](vpn-settings-configure.md).
+[Vytvořte Windows 8.1 konfigurační profil zařízení VPN](vpn-settings-configure.md).
 
 ## <a name="base-vpn-settings"></a>Základní nastavení sítě VPN
 
-- **Použít všechna nastavení jenom na Windows 8.1**: nakonfigurujte toto nastavení na klasickém portálu Intune. V centru pro správu Microsoft Endpoint Manageru toto nastavení nejde změnit. Při nastavení **Konfigurace**se všechna nastavení aplikují jenom na zařízení Windows 8.1. Pokud je nastavené na **Nenakonfigurováno**, tato nastavení se vztahují také na zařízení s Windows 10.
-- **Název připojení**: zadejte název tohoto připojení. Tento název uživatelé vidí, když na svém zařízení procházejí seznamem dostupných připojení VPN.
-- **Servery**: přidejte minimálně jeden VPN server, ke kterému se budou zařízení připojovat.
-  - **Přidat**: otevře stránku **Přidat řádek** , kde můžete zadat následující informace:
-    - **Popis**: zadejte popisný název serveru, jako je **Contoso VPN server**.
-    - **IP adresa nebo plně kvalifikovaný**název domény: zadejte IP adresu nebo plně kvalifikovaný název domény serveru VPN, ke kterému se zařízení připojují. Příklady: **192.168.1.1**, **VPN.contoso.com**.
-    - **Výchozí server**: povolí tento server jako výchozí server, který budou zařízení používat k navázání připojení. Jako výchozí server musí být nastavený jenom jeden server.
-  - **Importovat**: vyhledejte soubor s oddělovači se seznamem serverů ve formátu popis, IP adresa nebo plně kvalifikovaný název domény, výchozí server. Pomocí **OK** servery naimportujte do seznamu **Servery**.
-  - **Export**: exportuje seznam serverů do textového souboru s oddělovači (CSV).
+- **Název připojení**: zadejte název tohoto připojení. Tento název uživatelé vidí, když na svém zařízení procházejí seznamem dostupných připojení VPN. Zadejte například `Contoso VPN`.
+- **Servery**: přidejte minimálně jeden VPN server, ke kterému se budou zařízení připojovat. Při přidání serveru zadáváte tyto informace:
+  - **Popis**: zadejte popisný název serveru, jako je **Contoso VPN server**.
+  - **IP adresa nebo plně kvalifikovaný**název domény: zadejte IP adresu nebo plně kvalifikovaný název domény (FQDN) serveru VPN, ke kterému se zařízení připojují. Zadejte například `192.168.1.1` nebo `vpn.contoso.com`.
+  - **Výchozí server**: **hodnota true** nastaví tento server jako výchozí server, který budou zařízení používat k navázání připojení. Jako výchozí server nastavte jenom jeden server.
+  - **Importovat**: vyhledejte soubor s oddělovači se seznamem serverů ve formátu: Popis, IP adresa nebo plně kvalifikovaný název domény, výchozí server. Pomocí **OK** servery naimportujte do seznamu **Servery**.
+  - **Export**: exportuje seznam serverů do souboru s hodnotami oddělenými čárkami (CSV).
 
-- **Typ připojení**: z následujícího seznamu dodavatelů vyberte typ připojení VPN:
+- **Typ připojení**: Vyberte typ připojení VPN. Možnosti:
   - **Check Point Capsule VPN**
   - **SonicWall Mobile Connect**
   - **F5 Edge Client**
@@ -58,7 +56,7 @@ V závislosti na tom, jaká nastavení zvolíte, nebudou v následujícím sezna
 
 - **Sféra** (pouze Pulse Secure): zadejte název sféry ověření, kterou chcete použít. Sféra ověření je seskupení prostředků ověření používaných typem připojení Pulse Secure.
 
-- **Vlastní XML**: Zadejte libovolné vlastní příkazy XML, které KONFIGURUJÍ připojení VPN.
+- **Vlastní XML**: zadejte vlastní příkazy XML pro konfiguraci připojení VPN.
 
   **Příklad zabezpečení Pulse**:
 
@@ -90,15 +88,20 @@ V závislosti na tom, jaká nastavení zvolíte, nebudou v následujícím sezna
 
 ## <a name="proxy-settings"></a>Nastavení proxy serveru
 
-- **Automaticky zjišťovat nastavení proxy**serveru: Pokud server VPN vyžaduje pro připojení proxy server, určete, jestli chcete, aby zařízení automaticky zjišťoval nastavení připojení.
 - **Skript automatické konfigurace**: ke konfiguraci proxy serveru použijte konfigurační soubor. Zadejte **adresu URL proxy serveru** , který obsahuje konfigurační soubor. Zadejte například `http://proxy.contoso.com`.
-- **Použít proxy server**: tuto možnost povolte, pokud chcete ručně zadat nastavení proxy server.
-  - **Adresa**: zadejte adresu proxy server (jako IP adresu).
-  - **Číslo portu**: zadejte číslo portu přidruženého k proxy server.
-- **Obejít proxy server pro místní adresy**: Pokud server VPN vyžaduje pro připojení proxy server, nechcete použít proxy server pro místní adresy, které zadáte, a pak tuto možnost vyberte.
+- **Adresa**: zadejte adresu proxy server, jako je například IP adresa nebo `vpn.contoso.com` .
+- **Číslo portu**: zadejte číslo portu TCP používaného vaším proxy server.
+- **Automaticky zjišťovat nastavení proxy serveru**: pokud VPN server vyžaduje pro připojení proxy server, zadejte, jestli mají zařízení automaticky zjišťovat nastavení připojení. Možnosti:
+  - **Nenakonfigurováno** (výchozí): Intune toto nastavení nemění ani neaktualizuje.
+  - **Povolit**: automaticky detekuje nastavení připojení.
+  - **Zakázat**: nezjišťuje automaticky nastavení připojení.
+- **Obejít proxy server pro místní adresy**: Určete, že se má použít proxy server pro místní adresy. Možnosti:
+  - **Nenakonfigurováno** (výchozí): Intune toto nastavení nemění ani neaktualizuje.
+  - **Povolit**: nepoužívejte proxy server pro místní adresy.
+  - **Zakázat**: použijte proxy server pro místní adresy.
 
 ## <a name="next-steps"></a>Další kroky
 
-Profil je vytvořený, ale zatím se nepoužívá. Dále [Přiřaďte profil](device-profile-assign.md) a [sledujte jeho stav](device-profile-monitor.md).
+[Přiřaďte profil](device-profile-assign.md)a [sledujte jeho stav](device-profile-monitor.md).
 
 Nakonfigurujte nastavení sítě VPN na zařízeních se systémem [Android](vpn-settings-android.md), [Android Enterprise](vpn-settings-android-enterprise.md), [MacOS](vpn-settings-macos.md)a [Windows 10](vpn-settings-windows-10.md) .

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/16/2020
+ms.date: 05/05/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 63ffda60d00c1a386eb65d851563c911957c0acd
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 9d4bc2de9e16cfcf9322cf343badafe3c9a35c70
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81615717"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83428903"
 ---
 # <a name="macos-device-feature-settings-in-intune"></a>nastavení funkcí zařízení macOS v Intune
 
@@ -31,95 +31,127 @@ Pomocí těchto funkcí můžete řídit zařízení macOS jako součást řeše
 
 Tento článek uvádí tato nastavení a popisuje, co jednotlivé nastavení dělá. V této části najdete taky postup pro získání IP adresy, cesty a portu pro tiskárny pro práci na tiskárně pomocí Terminálové aplikace (emulátor). Další informace o funkcích zařízení najdete v pro [Přidání nastavení funkcí zařízení s iOS/iPadOS nebo MacOS](device-features-configure.md).
 
+> [!NOTE]
+> Uživatelské rozhraní nemusí odpovídat typům registrace v tomto článku. Informace v tomto článku jsou správné. Uživatelské rozhraní se aktualizuje v nadcházející verzi.
+
 ## <a name="before-you-begin"></a>Před zahájením
 
-[Vytvořte profil konfigurace zařízení MacOS](device-features-configure.md).
+[Vytvořte profil funkcí zařízení MacOS](device-features-configure.md).
 
 > [!NOTE]
 > Tato nastavení platí pro různé typy registrace s některými nastaveními, která platí pro všechny možnosti registrace. Další informace o různých typech registrace najdete v tématu [registrace MacOS](../enrollment/macos-enroll.md).
 
 ## <a name="airprint"></a>AirPrint
 
-### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Nastavení platí pro: registrace zařízení a automatický zápis zařízení
+### <a name="settings-apply-to-all-enrollment-types"></a>Nastavení platí pro: všechny typy registrace
 
-- **IP adresa**: zadejte adresu IPv4 nebo IPv6 tiskárny. Pokud k identifikaci tiskáren používáte názvy hostitelů, můžete získat IP adresu pomocí příkazového testu tiskárny v aplikaci Terminal. Další podrobnosti najdete v článku [získání IP adresy a cesty](#get-the-ip-address-and-path) (v tomto článku).
-- **Cesta**: zadejte cestu k tiskárně. Cesta je typicky `ipp/print` pro tiskárny v síti. Další podrobnosti najdete v článku [získání IP adresy a cesty](#get-the-ip-address-and-path) (v tomto článku).
-- **Port** (iOS 11.0 +, iPadOS 13.0 +): zadejte port naslouchání cíle přenosu. Pokud necháte tuto vlastnost prázdnou, použije se při tisku výchozí port.
-- **TLS** (iOS 11.0 +, iPadOS 13.0 +): Pokud chcete zabezpečit připojení přes tisk přes TLS (Transport Layer Security), vyberte **Povolit** .
+- **Cílení na tisk**: **přidejte** jednu nebo více tiskových tiskáren, které uživatelé můžou tisknout ze svých zařízení. Dále zadejte:
+  - **Port** (iOS 11.0 +, iPadOS 13.0 +): zadejte port naslouchání cíle přenosu. Pokud necháte tuto vlastnost prázdnou, použije se při tisku výchozí port.
+  - **IP adresa**: zadejte adresu IPv4 nebo IPv6 tiskárny. Zadejte například `10.0.0.1`. Pokud k identifikaci tiskáren používáte názvy hostitelů, můžete získat IP adresu pomocí příkazového testu tiskárny v aplikaci Terminal. Získat další podrobnosti najdete v [části IP adresa a cesta](#get-the-ip-address-and-path) (v tomto článku).
+  - **Cesta**: zadejte cestu prostředku tiskárny. Cesta je typicky `ipp/print` pro tiskárny v síti. Získat další podrobnosti najdete v [části IP adresa a cesta](#get-the-ip-address-and-path) (v tomto článku).
+  - **TLS** (iOS 11.0 +, iPadOS 13.0 +): vaše možnosti:
+    - **Ne** (výchozí): protokol TLS (Transport Layer Security) se při připojování k tiskárnám tiskárny pro přenos na tiskárně neuplatňuje.
+    - **Ano**: zabezpečuje připojení s využitím protokolu TLS (Transport Layer Security).
 
-- **Přidat** Server pro Protisk. Můžete přidat spoustu tiskových serverů.
-
-Můžete taky **importovat** textový soubor s oddělovači (. csv), který obsahuje seznam tiskáren pro průchozí tisk. Po přidání tiskáren pro tisk do Intune můžete také **exportovat** tento seznam.
+- **Importujte** textový soubor s oddělovači (. csv), který obsahuje seznam tiskáren pro průchozí tisk. Po přidání tiskáren pro tisk do Intune můžete také **exportovat** tento seznam.
 
 ### <a name="get-the-ip-address-and-path"></a>Získat IP adresu a cestu
 
 Chcete-li přidat servery s modulem pro tisk, budete potřebovat IP adresu tiskárny, cestu k prostředku a port. Následující kroky ukazují, jak tyto informace získat.
 
 1. Na Macu, který je připojený ke stejné místní síti (podsíti) jako tiskárny pro Protisk, otevřete **terminál** (z **/aplikace/Utility**).
-2. V aplikaci Terminal App zadejte `ippfind`a vyberte Enter.
+2. V aplikaci Terminal App zadejte `ippfind` a vyberte Enter.
 
-    Poznamenejte si informace o tiskárně. Například může vracet něco podobného jako `ipp://myprinter.local.:631/ipp/port1`. První část je název tiskárny. Poslední část (`ipp/port1`) je cesta prostředku.
+    Poznamenejte si informace o tiskárně. Například může vracet něco podobného jako `ipp://myprinter.local.:631/ipp/port1` . První část je název tiskárny. Poslední část ( `ipp/port1` ) je cesta prostředku.
 
-3. V terminálu zadejte `ping myprinter.local`a vyberte Enter.
+3. V terminálu zadejte `ping myprinter.local` a vyberte Enter.
 
-   Poznamenejte si IP adresu. Například může vracet něco podobného jako `PING myprinter.local (10.50.25.21)`.
+   Poznamenejte si IP adresu. Například může vracet něco podobného jako `PING myprinter.local (10.50.25.21)` .
 
-4. Použijte hodnoty IP adresy a prostředku cesty. V tomto příkladu je IP adresa `10.50.25.21`a cesta k prostředku. `/ipp/port1`
+4. Použijte hodnoty IP adresy a prostředku cesty. V tomto příkladu je IP adresa `10.50.25.21` a cesta k prostředku `/ipp/port1` .
+
+## <a name="associated-domains"></a>Přidružené domény
+
+V Intune můžete:
+
+- Přidejte mnoho přidružení aplikace k doméně.
+- Přidružte mnoho domén ke stejné aplikaci.
+
+Tato funkce platí pro:
+
+- macOS 10,15 a novější
+
+### <a name="settings-apply-to-user-approved-device-enrollment-and-automated-device-enrollment"></a>Nastavení platí pro: registrace zařízení schválená uživatelem a automatický zápis zařízení
+
+- **Přidružené domény**: **přidejte** přidružení mezi vaší doménou a aplikací. Tato funkce sdílí přihlašovací údaje mezi aplikací contoso a webem společnosti Contoso. Dále zadejte:
+
+  - **ID aplikace**: zadejte identifikátor aplikace, který se má přidružit k webu. Identifikátor aplikace zahrnuje ID týmu a ID sady: `TeamID.BundleID` .
+
+    ID týmu je alfanumerické znaky (písmena a čísla) vygenerované společností Apple pro vývojáře aplikací, jako je například `ABCDE12345` . [Najít ID týmu](https://help.apple.com/developer-account/#/dev55c3c710c)   (otevře web společnosti Apple) obsahuje další informace.
+
+    ID sady prostředků jednoznačně identifikuje aplikaci a obvykle je ve formátu zpětného zápisu názvů domén. Například ID sady Finder je `com.apple.finder` . Pokud chcete najít ID sady, použijte AppleScript v terminálu:
+
+    `osascript -e 'id of app "ExampleApp"'`
+
+  - **Doména**: zadejte doménu webu, kterou chcete přidružit k aplikaci. Doména zahrnuje typ služby a plně kvalifikovaný název hostitele, jako je například `webcredentials:www.contoso.com` .
+
+    Všechny subdomény přidružené domény můžete vyhledat zadáním `*.` (zástupný znak hvězdička a tečka) před začátkem domény. Období je povinné. Přesné domény mají vyšší prioritu než u domén se zástupnými znaky. Modely z nadřazených domén se tedy shodují, *Pokud* se shoda nenajde v plně kvalifikované subdoméně.
+
+    Typ služby může být:
+
+    - **authsrv**: rozšíření aplikace s jednotným přihlašováním
+    - **applink**: Universal Link
+    - **webcredentials**: Automatické vyplňování hesel
+
+> [!TIP]
+> Pokud chcete řešit potíže, otevřete na zařízení MacOS **profily Předvolby systému**  >  **Profiles**. Ověřte, že profil, který jste vytvořili, je v seznamu profily zařízení. Pokud je v seznamu uveden, ujistěte se, že je **Konfigurace přidružených domén** v profilu a obsahuje správné ID aplikace a domény.
 
 ## <a name="login-items"></a>Přihlašovací položky
 
 ### <a name="settings-apply-to-all-enrollment-types"></a>Nastavení platí pro: všechny typy registrace
 
-- **Soubory, složky a vlastní aplikace**: **přidejte** cestu k souboru, složce, vlastní aplikaci nebo systémové aplikaci, kterou chcete otevřít, když se uživatelé přihlásí ke svým zařízením. Systémové aplikace nebo aplikace sestavené nebo přizpůsobené pro vaši organizaci jsou obvykle ve `Applications` složce s cestou podobnou `/Applications/AppName.app`. 
+- **Přidat soubory, složky a vlastní aplikace, které se spustí při přihlášení**: **přidejte** cestu k souboru, složce, vlastní aplikaci nebo systémové aplikaci, kterou chcete otevřít, když se uživatelé přihlašují ke svým zařízením. Dále zadejte:
 
-  Můžete přidat mnoho souborů, složek a aplikací. Zadejte například .  
-  
-  - `/Applications/Calculator.app`
-  - `/Applications`
-  - `/Applications/Microsoft Office/root/Office16/winword.exe`
-  - `/Users/UserName/music/itunes.app`
-  
-  Při přidávání libovolné aplikace, složky nebo souboru Nezapomeňte zadat správnou cestu. Ne všechny položky jsou ve `Applications` složce. Pokud uživatel přesune položku z jednoho umístění do jiného, pak se cesta změní. Tato přesunutá položka nebude otevřena, když se uživatel přihlásí.
+  - **Cesta položky**: zadejte cestu k souboru, složce nebo aplikaci. Systémové aplikace nebo aplikace sestavené nebo přizpůsobené pro vaši organizaci jsou obvykle ve `Applications` složce s cestou podobnou `/Applications/AppName.app` .
 
-- **Skrýt z konfigurace uživatele**: při **skrytí** se aplikace nezobrazuje v seznamu Uživatelé & skupiny přihlášení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení OS zobrazuje položku, kterou spustíte při přihlášení, v seznamu Uživatelé & skupiny přihlášení skupin s možností skrýt nezaškrtnuto.
+    Můžete přidat mnoho souborů, složek a aplikací. Zadejte například .  
+  
+    - `/Applications/Calculator.app`
+    - `/Applications`
+    - `/Applications/Microsoft Office/root/Office16/winword.exe`
+    - `/Users/UserName/music/itunes.app`
+  
+    Při přidávání libovolné aplikace, složky nebo souboru Nezapomeňte zadat správnou cestu. Ne všechny položky jsou ve `Applications` složce. Pokud uživatel přesune položku z jednoho umístění do jiného, pak se cesta změní. Tato přesunutá položka nebude otevřena, když se uživatel přihlásí.
+
+  - **Skrýt**: tuto možnost vyberte, pokud chcete aplikaci zobrazit nebo skrýt. Možnosti:
+    - **Nenakonfigurováno**: Toto je výchozí nastavení. Intune toto nastavení nezmění ani neaktualizuje. Ve výchozím nastavení zobrazí operační systém položky v seznamu Uživatelé & skupiny přihlášení a možnost skrýt nebude zaškrtnuto.
+    - **Ano**: skryje aplikaci v seznamu Uživatelé & skupiny přihlášení.
 
 ## <a name="login-window"></a>Přihlašovací okno
 
-### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Nastavení platí pro: registrace zařízení a automatický zápis zařízení
+### <a name="settings-apply-to-all-enrollment-types"></a>Nastavení platí pro: všechny typy registrace
 
-#### <a name="window-layout"></a>Rozložení okna
-
-- **Zobrazit další informace v řádku nabídek**: když je vybraná časová oblast na řádku **nabídek, možnost** Zobrazit zobrazí název hostitele a verzi MacOS. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení operační systém nemusí tyto informace na řádku nabídek zobrazit.
+- **Zobrazit další informace v řádku nabídek**: když je vybraná časová oblast na řádku nabídek, zobrazí **Ano** název hostitele a verzi MacOS. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení operační systém nemusí tyto informace na řádku nabídek zobrazit.
 - **Banner**: zadejte zprávu, která se zobrazí na přihlašovací obrazovce na zařízeních. Zadejte například informace o vaší organizaci, uvítací zprávu, ztracené a zjištěné informace atd.
-- **Vyberte formát přihlášení**: vyberte, jak se uživatelé přihlašují k zařízením. Možnosti:
-  - **Vyzvat k zadání uživatelského jména a hesla** (výchozí): vyžaduje, aby uživatelé zadali uživatelské jméno a heslo.
-  - **Seznam všech uživatelů, výzva k zadání hesla**: vyžaduje, aby uživatelé vybrali své uživatelské jméno ze seznamu uživatelů a pak zadali heslo. Také konfigurovat:
+- **Textové pole vyžadovat uživatelské jméno a heslo**: Vyberte způsob, jakým se uživatelé přihlásí k zařízením. **Ano** – vyžaduje, aby uživatelé zadali uživatelské jméno a heslo. Pokud je nastavené na **Nenakonfigurováno**, Intune toto nastavení nezmění ani neaktualizuje. Ve výchozím nastavení operační systém může vyžadovat, aby si uživatelé ze seznamu vybrali své uživatelské jméno a pak zadali jejich heslo.
 
-    - **Místní uživatelé**: **Skrýt** nezobrazuje místní uživatelské účty v seznamu uživatelů, které mohou zahrnovat účty Standard a admin. Zobrazují se jenom účty uživatelů sítě a systému. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém v seznamu uživatelů zobrazovat místní uživatelské účty.
-    - **Mobilní účty**: **Skrýt** nezobrazuje mobilní účty v seznamu uživatelů. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém zobrazit mobilní účty v seznamu uživatelů. Některé mobilní účty se můžou zobrazovat jako síťoví uživatelé.
-    - **Uživatelé sítě**: výběrem **Zobrazit zobrazíte** seznam uživatelů v síti v seznamu uživatelů. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení operační systém nemusí v seznamu uživatelů zobrazovat síťové uživatelské účty.
-    - **Uživatelé s oprávněními**správce: **Skrýt** v seznamu uživatelů nezobrazují uživatelské účty správců. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém zobrazit uživatelské účty správce v seznamu uživatelů.
-    - **Jiní uživatelé**: výběrem **Zobrazit** můžete v seznamu uživatelů vybrat **Další seznam.** Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení operační systém nemusí v seznamu uživatelů zobrazovat jiné uživatelské účty.
+  Dále zadejte:
 
-#### <a name="login-screen-power-settings"></a>Nastavení napájení přihlašovací obrazovky
+  - **Skrýt místní uživatele**: **Ano** nezobrazí místní uživatelské účty v seznamu uživatelů, které mohou zahrnovat účty Standard a admin. Zobrazují se jenom účty uživatelů sítě a systému. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém v seznamu uživatelů zobrazovat místní uživatelské účty.
+  - **Skrýt mobilní účty**: **Ano** v seznamu uživatelů nezobrazí mobilní účty. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém zobrazit mobilní účty v seznamu uživatelů. Některé mobilní účty se můžou zobrazovat jako síťoví uživatelé.
+  - **Zobrazit uživatele sítě**: výběrem **Ano** zobrazíte seznam uživatelů sítě v seznamu uživatelů. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení operační systém nemusí v seznamu uživatelů zobrazovat síťové uživatelské účty.
+  - **Skrýt správce počítače** **: v** seznamu uživatel nezobrazí účty uživatelů správce. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém zobrazit uživatelské účty správce v seznamu uživatelů.
+  - **Zobrazit další uživatele**: vyberte **Ano** , pokud chcete zobrazit seznam **dalších** uživatelů v seznamu uživatelů. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení operační systém nemusí v seznamu uživatelů zobrazovat jiné uživatelské účty.
 
-- **Tlačítko vypnout**: **Skrýt** na přihlašovací obrazovce nezobrazuje tlačítko vypnout. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém zobrazit tlačítko vypnout.
-- **Tlačítko restartovat**: **Skrýt** na přihlašovací obrazovce nezobrazuje tlačítko restartovat. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém zobrazit tlačítko restartovat.
-- **Tlačítko režimu spánku**: **Skrýt** nezobrazuje na přihlašovací obrazovce tlačítko režimu spánku. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém zobrazit tlačítko režimu spánku.
-
-#### <a name="other"></a>Ostatní
-
-- **Zakázat přihlášení uživatele z konzoly**: **Disable zakáže** a skryje příkaz MacOS, který se používá pro přihlášení. V případě typických uživatelů toto nastavení **zakažte** . Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém uživatelům dovolit, aby se přihlásili pomocí příkazového řádku macOS. Chcete-li přejít do režimu konzoly `>console` , uživatelé zadají do pole uživatelské jméno a musí se ověřit v okně konzoly.
-
-#### <a name="apple-menu"></a>Nabídka Apple
-
-Až se uživatelé přihlásí k zařízením, následující nastavení budou mít vliv na to, co můžou dělat.
-
-- **Zakázat možnost vypnout**: **Zakázat** umožňuje uživatelům vybrat možnost **vypnutí** po přihlášení uživatele. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém uživatelům dovolit, aby na zařízeních vybrali položku nabídky pro **vypnutí** .
-- **Zakázat restart**: **Disable** znemožní uživatelům vybrat možnost **restartování** po přihlášení uživatele. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém uživatelům dovolit vybrat položku nabídky **restartovat** na zařízeních.
-- **Zakázat**vypnutí: **Zakázat** umožňuje uživatelům **vybrat možnost vypnutí** po přihlášení uživatele. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém uživatelům dovolit vybrat položku nabídky **napájení** v zařízeních.
-- **Zakázat možnost Odhlásit** se (MacOS 10,13 a novější): **Disable** znemožní uživatelům vybrat možnost **Odhlásit** se po přihlášení uživatele. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém uživatelům dovolit vybrat položku nabídky **Odhlásit** se na zařízeních.
-- **Zakázat zamykací obrazovku** (MacOS 10,13 a novější): možnost **Zakázat** znemožní uživatelům vybrat možnost **zamykací obrazovky** po přihlášení uživatele. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém uživatelům dovolit vybrat položku nabídky **zamykací obrazovka** na zařízeních.
+- **Skrýt tlačítko pro vypnutí**: **na** přihlašovací obrazovce se nezobrazí tlačítko vypnout. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém zobrazit tlačítko vypnout.
+- **Skrýt tlačítko**pro restartování **: na** přihlašovací obrazovce se nezobrazí tlačítko restartovat. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém zobrazit tlačítko restartovat.
+- **Skrýt tlačítko pro režim spánku**: na obrazovce přihlásit **se nezobrazí tlačítko** režimu spánku. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém zobrazit tlačítko režimu spánku.
+- **Zakázat přihlášení uživatele z konzoly**: **Ano** skryje MacOS příkazový řádek, který se používá pro přihlášení. U typických uživatelů nastavte toto nastavení na **Ano**. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém uživatelům dovolit, aby se přihlásili pomocí příkazového řádku macOS. Chcete-li přejít do režimu konzoly, uživatelé zadají `>console` do pole uživatelské jméno a musí se ověřit v okně konzoly.
+- **Zakázat vypnutí při přihlášení**: **Ano** znemožní uživatelům vybrat možnost **vypnutí** po přihlášení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém uživatelům dovolit, aby na zařízeních vybrali položku nabídky pro **vypnutí** .
+- **Zakázat restart během přihlášení**: **Ano** zabraňuje uživatelům v výběru možnosti **restartování** po přihlášení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém uživatelům dovolit vybrat položku nabídky **restartovat** na zařízeních.
+- **Vypnout vypnutí během**přihlašování: **Ano** znemožní uživatelům vybrat možnost **vypnutí** po přihlášení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém uživatelům dovolit vybrat položku nabídky **napájení** v zařízeních.
+- **Zakázat odhlásit se během přihlášení** (MacOS 10,13 a novější): **Ano** uživatelům zabránit v výběru možnosti **odhlášení** po přihlášení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém uživatelům dovolit vybrat položku nabídky **Odhlásit** se na zařízeních.
+- **Zakázat zamykací obrazovku, pokud jste přihlášeni** (MacOS 10,13 a novější): **Ano** zabraňuje uživatelům v výběru možnosti **zamykací obrazovky** po přihlášení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém uživatelům dovolit vybrat položku nabídky **zamykací obrazovka** na zařízeních.
 
 ## <a name="single-sign-on-app-extension"></a>Rozšíření aplikace s jednotným přihlašováním
 
@@ -127,7 +159,7 @@ Tato funkce platí pro:
 
 - macOS 10,15 a novější
 
-### <a name="settings-apply-to-all-enrollment-types"></a>Nastavení platí pro: všechny typy registrace 
+### <a name="settings-apply-to-user-approved-device-enrollment-and-automated-device-enrollment"></a>Nastavení platí pro: registrace zařízení schválená uživatelem a automatický zápis zařízení
 
 - **Typ rozšíření aplikace jednotného přihlašování**: Vyberte typ rozšíření aplikace jednotného přihlašování. Možnosti:
 
@@ -139,14 +171,14 @@ Tato funkce platí pro:
   > [!TIP]
   > Pomocí typů **přesměrování** a **přihlašovacích údajů** přidáte vlastní hodnoty konfigurace, které budou předávány prostřednictvím rozšíření. Pokud používáte **přihlašovací údaje**, zvažte použití integrovaného nastavení konfigurace poskytovaného společností Apple v typu **Kerberos** .
 
-- **ID rozšíření** (přesměrování a přihlašovací údaje): zadejte identifikátor sady prostředků, který identifikuje vaše rozšíření aplikace jednotného přihlašování, například `com.apple.ssoexample`.
-- **ID týmu** (přesměrování a přihlašovací údaje): zadejte identifikátor týmu rozšíření aplikace jednotného přihlašování. Identifikátor týmu je alfanumerický řetězec (čísla a písmena), který vygenerovala společnost Apple, jako je například `ABCDE12345`. 
+- **ID rozšíření** (přesměrování a přihlašovací údaje): zadejte identifikátor sady prostředků, který identifikuje vaše rozšíření aplikace jednotného přihlašování, například `com.apple.ssoexample` .
+- **ID týmu** (přesměrování a přihlašovací údaje): zadejte identifikátor týmu rozšíření aplikace jednotného přihlašování. Identifikátor týmu je alfanumerický řetězec (čísla a písmena), který vygenerovala společnost Apple, jako je například `ABCDE12345` . 
 
   [Najděte své ID týmu](https://help.apple.com/developer-account/#/dev55c3c710c) (otevře se webová stránka společnosti Apple), kde najdete další informace.
 
-- **Sféra** (přihlašovací údaje a Kerberos): zadejte název sféry ověřování. Název sféry by měl být velkými písmeny, `CONTOSO.COM`například. Název vaší sféry je typicky stejný jako název vaší domény DNS, ale jenom na velká písmena.
+- **Sféra** (přihlašovací údaje a Kerberos): zadejte název sféry ověřování. Název sféry by měl být velkými písmeny, například `CONTOSO.COM` . Název vaší sféry je typicky stejný jako název vaší domény DNS, ale jenom na velká písmena.
 
-- **Domény** (přihlašovací údaje a Kerberos): zadejte doménu nebo názvy hostitelů pro weby, které se dají ověřit pomocí jednotného přihlašování. Například pokud je `mysite.contoso.com`váš web, pak `mysite` je název hostitele a `contoso.com` je název domény. Když se uživatelé připojí k některé z těchto webů, aplikace App Extension zpracuje výzvu ověřování. Toto ověřování umožňuje uživatelům k přihlášení použít ID obličeje, dotykové ID nebo Apple PINCODE/přístupový kód.
+- **Domény** (přihlašovací údaje a Kerberos): zadejte doménu nebo názvy hostitelů pro weby, které se dají ověřit pomocí jednotného přihlašování. Například pokud je váš web `mysite.contoso.com` , pak `mysite` je název hostitele a `contoso.com` je název domény. Když se uživatelé připojí k některé z těchto webů, aplikace App Extension zpracuje výzvu ověřování. Toto ověřování umožňuje uživatelům k přihlášení použít ID obličeje, dotykové ID nebo Apple PINCODE/přístupový kód.
 
   - Všechny domény v profilech služby Intune, které mají rozšíření pro aplikace jednotného přihlašování, musí být jedinečné. Doménu nemůžete opakovat v žádném profilu rozšíření aplikace pro přihlášení, i když používáte různé typy rozšíření aplikace jednotného přihlašování.
   - U těchto domén se nerozlišují velká a malá písmena.
@@ -157,13 +189,13 @@ Tato funkce platí pro:
   - Adresy URL musí začínat na http://nebo https://.
 
 - **Další konfigurace** (přesměrování a přihlašovací údaje): zadejte další data specifická pro rozšíření, která chcete předat rozšíření aplikace jednotného přihlašování:
-  - **Klíč**: zadejte název položky, kterou chcete přidat, například `user name`.
+  - **Klíč**: zadejte název položky, kterou chcete přidat, například `user name` .
   - **Typ**: zadejte typ dat. Možnosti:
 
-    - Řetězec
-    - Boolean: v **konfigurační hodnotě**zadejte `True` nebo `False`.
+    - String
+    - Boolean: v **konfigurační hodnotě**zadejte `True` nebo `False` .
     - Integer: v **hodnotě konfigurace**zadejte číslo.
-    
+
   - **Hodnota**: zadejte data.
   
   - **Přidat**: vyberte, pokud chcete přidat konfigurační klíče.
@@ -187,10 +219,10 @@ Tato funkce platí pro:
 - **Oznámení vypršení platnosti hesla** (jenom Kerberos): zadejte počet dní, než heslo vyprší, uživatelé obdrží oznámení o vypršení platnosti hesla. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém používat `15` dny.
 - **Vypršení platnosti hesla** (pouze Kerberos): zadejte počet dní, než bude nutné změnit heslo zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém nikdy vypršení platnosti hesel.
 - **Adresa URL pro změnu hesla** (jenom Kerberos): zadejte adresu URL, která se otevře, když uživatelé spustí změnu hesla protokolu Kerberos.
-- **Hlavní název** (jenom Kerberos): zadejte uživatelské jméno objektu zabezpečení protokolu Kerberos. Nemusíte zahrnovat název sféry. Například v `user@contoso.com`, `user` je hlavní název a `contoso.com` je název sféry.
+- **Hlavní název** (jenom Kerberos): zadejte uživatelské jméno objektu zabezpečení protokolu Kerberos. Nemusíte zahrnovat název sféry. Například v `user@contoso.com` , `user` je hlavní název a `contoso.com` je název sféry.
 
   > [!TIP]
-  > - Můžete také použít proměnné v hlavním názvu tak, že zadáte složené závorky `{{ }}`. Pokud například chcete zobrazit uživatelské jméno, zadejte `Username: {{username}}`. 
+  > - Můžete také použít proměnné v hlavním názvu tak, že zadáte složené závorky `{{ }}` . Pokud například chcete zobrazit uživatelské jméno, zadejte `Username: {{username}}` . 
   > - Buďte ale opatrní s náhradou proměnných, protože proměnné nejsou v uživatelském rozhraní ověřené a rozlišují velká a malá písmena. Nezapomeňte zadat správné informace.
   
 - **Kód lokality služby Active Directory** (pouze Kerberos): zadejte název lokality služby Active Directory, kterou má rozšíření protokolu Kerberos použít. Tuto hodnotu pravděpodobně nebudete muset měnit, protože rozšíření protokolu Kerberos může automaticky najít kód lokality služby Active Directory.
@@ -199,42 +231,6 @@ Tato funkce platí pro:
 - **ID sady prostředků aplikace** (jenom Kerberos): **přidejte** identifikátory sady prostředků aplikace, které by měly na svých zařízeních používat jednotné přihlašování. Těmto aplikacím je udělen přístup k lístku pro udělení lístku protokolu Kerberos a ověřovacímu lístku. Aplikace také ověřují uživatele pro služby, kterým má oprávnění k přístupu.
 - **Mapování sféry domény** (jenom Kerberos): **přidejte** přípony DNS domény, které by se měly namapovat do vaší sféry. Toto nastavení použijte, pokud názvy DNS hostitelů neodpovídají názvu sféry. Pravděpodobně nemusíte vytvářet vlastní mapování domén na sféru.
 - **PKINIT certifikát** (jenom Kerberos): **Vyberte** certifikát kryptografie s veřejným klíčem pro počáteční ověřování (PKINIT), který se dá použít pro ověřování protokolem Kerberos. Můžete si vybrat z certifikátů [PKCS](../protect/certficates-pfx-configure.md) nebo [SCEP](../protect/certificates-scep-configure.md) , které jste přidali v Intune. Další informace o certifikátech najdete v tématu [použití certifikátů k ověřování v Microsoft Intune](../protect/certificates-configure.md).
-
-## <a name="associated-domains"></a>Přidružené domény
-
-V Intune můžete:
-
-- Přidejte mnoho přidružení aplikace k doméně.
-- Přidružte mnoho domén ke stejné aplikaci.
-
-Tato funkce platí pro:
-
-- macOS 10,15 a novější
-
-### <a name="settings-apply-to-all-enrollment-types"></a>Nastavení platí pro: všechny typy registrace
-
-- **ID aplikace**: zadejte identifikátor aplikace, který se má přidružit k webu. Identifikátor aplikace zahrnuje ID týmu a ID sady: `TeamID.BundleID`.
-
-  ID týmu je alfanumerické znaky (písmena a čísla) vygenerované společností Apple pro vývojáře aplikací, jako je například `ABCDE12345`. [Najděte své ID](https://help.apple.com/developer-account/#/dev55c3c710c) týmu (otevře web společnosti Apple) obsahuje další informace.
-
-  ID sady prostředků jednoznačně identifikuje aplikaci a obvykle je ve formátu zpětného zápisu názvů domén. Například ID sady Finder je `com.apple.finder`. Pokud chcete najít ID sady, použijte AppleScript v terminálu:
-
-  `osascript -e 'id of app "ExampleApp"'`
-
-- **Doména**: zadejte doménu webu, kterou chcete přidružit k aplikaci. Doména zahrnuje typ služby a plně kvalifikovaný název hostitele, jako je například `webcredentials:www.contoso.com`.
-
-  Všechny subdomény přidružené domény můžete vyhledat zadáním `*.` (zástupný znak hvězdička a tečka) před začátkem domény. Období je povinné. Přesné domény mají vyšší prioritu než u domén se zástupnými znaky. Modely z nadřazených domén se tedy shodují, *Pokud* se shoda nenajde v plně kvalifikované subdoméně.
-
-  Typ služby může být:
-
-  - **authsrv**: rozšíření aplikace s jednotným přihlašováním
-  - **applink**: Universal Link
-  - **webcredentials**: Automatické vyplňování hesel
-
-- **Přidat**: vyberte, pokud chcete přidat své aplikace a přidružené domény.
-
-> [!TIP]
-> Pokud chcete řešit potíže, otevřete na zařízení MacOS > **profily** **Předvolby systému**. Ověřte, že profil, který jste vytvořili, je v seznamu profily zařízení. Pokud je v seznamu uveden, ujistěte se, že je **Konfigurace přidružených domén** v profilu a obsahuje správné ID aplikace a domény.
 
 ## <a name="next-steps"></a>Další kroky
 

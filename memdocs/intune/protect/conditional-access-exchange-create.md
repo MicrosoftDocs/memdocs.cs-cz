@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 36b39d20e666015ae040a1fa058dca1d167686e4
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 3cb279677f3693200112f663b1c5c538a3426dc9
+ms.sourcegitcommit: 5dc3545d7f76ce81598f6b1c9734b0ac0a3e9722
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81739902"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83690627"
 ---
 # <a name="configure-exchange-on-premises-access-for-intune"></a>Konfigurace přístupu k místnímu Exchangi pro Intune
 
@@ -66,7 +66,10 @@ Než budete moct nakonfigurovat podmíněný přístup, ověřte, že existují 
 - **Nativní e-mailová aplikace v systému iOS/iPadOS** – vytvoření zásady podmíněného přístupu najdete v tématu [Vytvoření zásad podmíněného přístupu](../protect/create-conditional-access-intune.md) .
 - **Poštovní klienti EAS, například Gmail v Androidu 4 nebo novějším** – vytvoření zásady podmíněného přístupu, najdete v tématu [Vytvoření zásad podmíněného přístupu](../protect/create-conditional-access-intune.md) .
 
+- **Poštovní klienti EAS na Správci zařízení s Androidem** : Pokud chcete vytvořit zásadu podmíněného přístupu, přečtěte si téma [Vytvoření zásad podmíněného přístupu](../protect/create-conditional-access-intune.md) .
+
 - **Poštovní klienti EAS na zařízeních s pracovním profilem Android** – na zařízeních s Androidem Work profilování jsou podporovaná jenom *Gmail* a *devět práce pro Android Enterprise* . Aby mohl podmíněný přístup pracovat s pracovními profily Androidu, musíte nasadit e-mailový profil pro aplikaci *Gmail* nebo *devět Work pro Android Enterprise* a tyto aplikace nasadit jako požadovanou instalaci. Po nasazení aplikace můžete nastavit podmíněný přístup na základě zařízení.
+
 
 #### <a name="to-set-up-conditional-access-for-android-work-profile-devices"></a>Nastavení podmíněného přístupu pro zařízení s pracovním profilem Androidu
 
@@ -74,13 +77,13 @@ Než budete moct nakonfigurovat podmíněný přístup, ověřte, že existují 
   
   2. V případě **potřeby**Nasaďte aplikaci Gmail nebo devět Work.
 
-  3. Vyberte **Devices** > **Konfigurace zařízení profily** > **vytvořit profil**, zadejte **název** a **Popis** profilu.
+  3. Vyberte **Devices**  >  **Konfigurace zařízení profily**  >  **vytvořit profil**, zadejte **název** a **Popis** profilu.
 
   4. Na **platformě**vyberte **Android Enterprise** a v **typ profilu**vyberte **e-mail** .
 
   5. Nakonfigurujte [Nastavení e-mailového profilu](https://docs.microsoft.com/intune/configuration/email-settings-android-enterprise#android-enterprise).
 
-  6. Až budete hotovi, vyberte **OK** > **a uložte** změny.
+  6. Až budete hotovi, vyberte **OK**  >  **Create** a uložte změny.
 
   7. Po vytvoření e-mailového profilu [ho přiřaďte do skupin](https://docs.microsoft.com/intune/device-profile-assign).
 
@@ -99,7 +102,7 @@ Než budete moct pomocí následujícího postupu nastavit místní řízení p�
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Přejděte na > **přístup k Exchangi**pro **správu tenanta**a pak vyberte **přístup k místnímu Exchangi**.
+2. Přejděte na přístup k Exchangi pro **správu tenanta**  >  **Exchange access**a pak vyberte **přístup k místnímu Exchangi**.
 
 3. V podokně **přístup v místním systému Exchange** *Povolte řízení přístupu k místnímu systému Exchange*kliknutím na **Ano** .
 
@@ -117,7 +120,7 @@ Než budete moct pomocí následujícího postupu nastavit místní řízení p�
 
    Vyberte **Uložit** a uložte svou konfiguraci a vraťte se do podokna **přístup k Exchangi** .
 
-6. Dále nakonfigurujte nastavení pro místní Exchange Connector služby Intune. V konzole vyberte v konzole **Správa** > tenanta**Exchange přístup**> **na Exchange ActiveSync On-Premises Connector** a pak vyberte konektor pro organizaci Exchange, kterou chcete nakonfigurovat.
+6. Dále nakonfigurujte nastavení pro místní Exchange Connector služby Intune. V konzole vyberte v konzole **Správa tenanta**  >  **Exchange přístup** >  **na Exchange ActiveSync On-Premises Connector** a pak vyberte konektor pro organizaci Exchange, kterou chcete nakonfigurovat.
 
 7. V případě **oznámení uživateli**vyberte možnost **Upravit** a otevřete pracovní postup **Upravit organizaci** , kde můžete upravit zprávu s *oznámením uživatele* .
 

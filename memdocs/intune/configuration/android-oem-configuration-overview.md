@@ -5,24 +5,24 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/02/2020
+ms.date: 05/12/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: ''
 ms.technology: ''
 ms.assetid: ''
-ms.reviewer: ''
+ms.reviewer: jieyan
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c28229808c6404e08c569c7a8300db5c925c79e6
-ms.sourcegitcommit: b94415467831517f2aeab9c7c8a13fe8db8bc8ed
+ms.openlocfilehash: 9875e394fb72e1c190bcc57da5e6ba4db04c1051
+ms.sourcegitcommit: 5dc3545d7f76ce81598f6b1c9734b0ac0a3e9722
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83401588"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83690576"
 ---
 # <a name="use-and-manage-android-enterprise-devices-with-oemconfig-in-microsoft-intune"></a>Používání a Správa zařízení s Androidem Enterprise pomocí OEMConfig v Microsoft Intune
 
@@ -31,6 +31,8 @@ V Microsoft Intune můžete použít OEMConfig k přidání, vytvoření a přiz
 Tato funkce platí pro:  
 
 - Android Enterprise
+
+Pro zařízení s Androidem pro správce zařízení použijte [mobilní rozšíření (MX)](android-zebra-mx-overview.md).
 
 Tento článek popisuje OEMConfig, seznam požadavků, ukazuje, jak vytvořit konfigurační profil a seznam podporovaných aplikací OEMConfig v Intune.
 
@@ -56,7 +58,9 @@ Při používání OEMConfig si pamatujte na následující informace:
 - Intune zpřístupňuje schéma aplikace OEMConfig, abyste ho mohli nakonfigurovat. Intune neověřuje ani nemění schéma, které poskytuje aplikace. Takže pokud je schéma nesprávné nebo obsahuje nepřesná data, jsou tato data pořád odesílána do zařízení. Pokud narazíte na problém, který pochází z schématu, obraťte se na výrobce OEM s pokyny.
 - Intune neovlivňuje ani neovládá obsah schématu aplikace. Intune například nemá žádnou kontrolu nad řetězci, jazykem, povolenými akcemi a tak dále. Doporučujeme obrátit se na výrobce OEM, kde najdete další informace o správě jejich zařízení pomocí OEMConfig.
 - Výrobci OEM můžou kdykoli aktualizovat své podporované funkce a schémata a nahrát novou aplikaci do Google Play. Intune vždycky synchronizuje nejnovější verzi aplikace OEMConfig z Google Play. Intune neudržuje starší verze schématu nebo aplikace. Pokud narazíte na konflikty verzí, doporučujeme, abyste se obrátili na výrobce OEM, kde najdete další informace.
-- Přiřaďte zařízení jeden profil OEMConfig. Pokud je ke stejnému zařízení přiřazeno několik profilů, může se zobrazit nekonzistentní chování. Model OEMConfig podporuje pouze jednu zásadu na zařízení.
+- Na zařízeních Zebra můžete vytvořit několik profilů a přiřadit je ke stejnému zařízení. Další informace najdete v tématu [OEMConfig na zařízeních Zebra](oemconfig-zebra-android-devices.md).
+
+  Model OEMConfig na zařízeních, která nejsou Zebra, podporuje jenom jednu zásadu na každé zařízení. Pokud je ke stejnému zařízení přiřazeno několik profilů, může se zobrazit nekonzistentní chování.
 
 ## <a name="prerequisites"></a>Požadavky
 
@@ -153,6 +157,7 @@ V porovnání se standardními aplikacemi aplikace OEMConfig rozšiřují opráv
 | --- | --- | ---|
 | Ascom | com. Ascom. MyCo. oemconfig | |
 | Cipherlab | com. CipherLab. oemconfig | |
+| Datalogic | com. Datalogic. Settings. oemconfig | |
 | Honeywell | com. Honeywell. oemconfig |  |
 | HMDGlobal-7,2 | com. hmdglobal. app. oemconfig. n7_2 | 
 | HMDGlobal-4,2 | com. hmdglobal. app. oemconfig. n4_2 | 

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/18/2019
+ms.date: 05/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 18de92792582d4c6753bc8657c56d73fa1509788
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 3d54e02c7bb88354ec59a9a8ce780ff559377466
+ms.sourcegitcommit: 169e279ba686c28d9a23bc0a54f0a2a0d20bdee4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80359129"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83556094"
 ---
 # <a name="windows-holographic-for-business-device-settings-to-run-as-a-kiosk-in-intune"></a>Nastavení zařízení s Windows holografickým pro firmy, která se mají spustit jako veřejný terminál v Intune
 
@@ -34,50 +34,79 @@ Další informace o funkci veřejného terminálu Windows v Intune najdete v té
 
 ## <a name="before-you-begin"></a>Před zahájením
 
-[Vytvořte profil](kiosk-settings.md#create-the-profile).
+- [Vytvoří konfigurační profil zařízení s Windows 10 v celoobrazovkovém](kiosk-settings.md#create-the-profile)režimu.
 
-## <a name="single-full-screen-app-kiosks"></a>Veřejné terminály s jednou aplikací v režimu na celou obrazovku
+  Když vytvoříte konfigurační profil zařízení s Windows 10, budete mít víc nastavení, než jaké je uvedené v tomto článku. Nastavení v tomto článku jsou podporovaná na zařízeních s Windows holografickým pro firmy.
 
-Když zvolíte beznabídkový režim s jednou aplikací, zadejte následující nastavení:
+- Tento profil veřejného terminálu přímo souvisí s profilem omezení zařízení, které vytvoříte pomocí [nastavení Microsoft Edge](device-restrictions-windows-holographic.md#microsoft-edge-browser)na veřejném terminálu. Shrnutí:
 
-- **Typ přihlášení uživatele**: Vyberte **Účet místního uživatele** a zadejte účet místního uživatele (v zařízení) nebo účet Microsoft (MSA) přidružený k aplikaci veřejného terminálu. Typy uživatelských účtů **Automatické přihlášení** nejsou na zařízení s Windows Holographic for Business podporované.
+  1. Vytvořte tento profil veřejného terminálu pro spuštění zařízení v celoobrazovkovém režimu.
+  2. Umožňuje vytvořit [profil omezení zařízení](device-restrictions-windows-holographic.md#microsoft-edge-browser)a nakonfigurovat konkrétní funkce a nastavení povolená v Microsoft Edge.
 
-- **Typ aplikace**: Vyberte **aplikaci pro Store**.
+> [!IMPORTANT]
+> Ujistěte se, že tento profil pro terminál přiřadíte ke stejným zařízením jako váš [profil Microsoft Edge](device-restrictions-windows-holographic.md#microsoft-edge-browser).
 
-- **Aplikace, která se spustí v beznabídkovém režimu**: Zvolte **Přidat aplikaci pro Store** a vyberte aplikaci ze seznamu.
+## <a name="single-app-full-screen-kiosk"></a>Jedna aplikace, celoobrazovkový terminál na celé obrazovce
+
+Spustí na zařízení jenom jednu aplikaci. Jakmile se uživatel přihlásí, spustí se daná aplikace. Tento režim zároveň brání uživateli v otevírání nových aplikací nebo změně spuštěné aplikace.
+
+- **Typ přihlášení uživatele**: Vyberte typ účtu, ve kterém se aplikace spouští. Možnosti:
+
+  - **Automatické přihlašování (Windows 10 verze 1803 a novější)**: Nepodporováno ve Windows holografickém pro firmy.
+  - **Účet místního uživatele**: Zadejte účet místního uživatele (v zařízení). Případně zadejte účet Microsoft (MSA), který je přidružený k aplikaci veřejného terminálu. Účet, který zadáte, se přihlaste k veřejnému terminálu.
+
+    Pro veřejné terminály ve veřejných prostředích byste měli použít typ uživatele s nejnižším oprávněním.
+
+- **Typ aplikace**: vyberte **Přidat aplikaci ze Storu**.
+
+  - **Aplikace, která se má spustit v celoobrazovkovém režimu**: ze seznamu vyberte aplikaci.
 
     Nejsou v seznamu žádné aplikace? Přidejte aplikace pomocí postupu v části [Klientské aplikace](../apps/apps-add.md).
 
-    Výběrem **OK** uložte změny.
+## <a name="multi-app-kiosk"></a>Veřejný terminál s více aplikacemi
 
-## <a name="multi-app-kiosks"></a>Veřejné terminály s více aplikacemi
+Aplikace v tomto režimu jsou k dispozici v nabídce Start. Tyto aplikace jsou jedinými aplikacemi, které může uživatel spustit. Pokud má aplikace závislost na jiné aplikaci, musí být v seznamu povolené aplikace zahrnutá obě.
 
-Aplikace v tomto režimu jsou k dispozici v nabídce Start. Tyto aplikace jsou jedinými aplikacemi, které může uživatel spustit. Když zvolíte beznabídkový režim s více aplikacemi, zadejte následující nastavení:
+- **Cílová zařízení s Windows 10 v režimu S**: vyberte **ne**. Režim S není podporován na Windows Holografick pro firmy.
 
-- **Cílit na zařízení s Windows 10 v režimu S**: Zvolte **Ne**. Režim S není podporován na Windows Holografick pro firmy.
+- **Typ přihlášení uživatele**: Přidejte jeden nebo více uživatelských účtů, které mohou přidané aplikace používat. Možnosti:
 
-- **Typ přihlášení uživatele**: Přidejte jeden nebo více uživatelských účtů, které mohou přidané aplikace používat. Možnosti: 
-
-  - **Automatické přihlášení**: Na zařízeních s Windows Holographic for Business se nepodporuje.
-  - **Účet místního uživatele**: **Přidejte** účet místního uživatele (v zařízení). Zadaný účet se používá pro přihlášení k veřejnému terminálu.
+  - **Automatické přihlašování (Windows 10 verze 1803 a novější)**: Nepodporováno ve Windows holografickém pro firmy.
+  - **Účet místního uživatele**: **Přidejte** účet místního uživatele (v zařízení). Účet, který zadáte, se přihlaste k veřejnému terminálu.
   - **Uživatel nebo skupina Azure AD (Windows 10, verze 1803+)**: Vyžaduje zadání přihlašovacích údajů, aby se uživatel mohl k zařízení přihlásit. Vyberte **Přidat** a zvolte uživatele nebo skupiny Azure AD ze seznamu. Můžete vybrat více uživatelů a skupin. Zvolením možnosti **Vybrat** uložte změny.
   - **Návštěvník HoloLens**: Účet návštěvníka je účtem hosta, který nevyžaduje žádné přihlašovací údaje uživatele ani ověřování, viz článek o [konceptech režimu sdíleného počítače](https://docs.microsoft.com/windows/configuration/set-up-shared-or-guest-pc#shared-pc-mode-concepts).
 
-- **Aplikace**: Přidejte aplikace, které se budou spouštět zařízení s beznabídkovým režimem. Nezapomeňte, že můžete přidat několik aplikací.
+- **Prohlížeč a aplikace**: Přidejte aplikace, které se mají spustit v celoobrazovkovém zařízení. Nezapomeňte, že můžete přidat několik aplikací.
 
-  - **Přidat aplikace pro Store**: Vyberte existující aplikaci, kterou jste přidali nebo nasadili do Intune, jako [klientské aplikace](../apps/apps-add.md), včetně obchodních aplikací. Pokud nemáte uvedené žádné aplikace, podporuje Intune mnoho [typů aplikací](../apps/apps-add.md) , které [přidáte do Intune](../apps/store-apps-windows.md).
-  - **Přidat aplikaci Win32**: Na zařízeních s Windows Holographic for Business se nepodporuje.
-  - **Přidat podle AUMID**: Tuto možnost použijte pro přidání vnitřních aplikací pro Windows. Zadejte tyto vlastnosti: 
+  - **Browsers**
+    - **Přidat Microsoft Edge**: Microsoft Edge se přidá do mřížky aplikace a všechny aplikace můžou běžet na tomto terminálu. Vyberte typ beznabídkového režimu Microsoft Edge:
 
-    - **Název aplikace**: Povinné. Zadejte název aplikace.
-    - **ID modelu uživatele aplikace (AUMID)**: Povinné. Zadejte ID modelu uživatele aplikace (AUMID) aplikace pro Windows. Pokud chcete získat toto ID, přečtěte si článek o tom, [jak u nainstalované aplikace najít ID modelu uživatele aplikace](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
-    - **Velikost dlaždice**: Povinné. Zvolte velikost dlaždice aplikace – malá, střední, široká nebo velká.
+      - **Normální režim (plná verze Microsoft Edge)**: spustí plnou verzi Microsoft Edge se všemi funkcemi pro procházení. Data a stav uživatele jsou ukládána mezi relacemi.
+      - **Veřejné procházení (InPrivate)**: spouští vícevrstvou verzi Microsoft Edge InPrivate s přizpůsobeným prostředím pro veřejné terminály, které běží v režimu celé obrazovky.
 
-- **Nastavení Kiosk Browseru**: Na zařízeních s Windows Holographic for Business se nepodporuje.
+      Další informace o těchto možnostech najdete v tématu [nasazení celoobrazovkového režimu Microsoft Edge](https://docs.microsoft.com/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-configuration-types).
 
-- **Použít alternativní rozložení nabídky Start**: Zvolte **Ano**, pokud chcete zadat soubor XML, který popisuje, jak se aplikace zobrazují v nabídce Start (včetně jejich pořadí). Tuto možnost použijte, pokud v nabídce Start potřebujete větší míru přizpůsobení. V článku o [přizpůsobení a exportu rozložení nabídky Start](https://docs.microsoft.com/hololens/hololens-kiosk#start-layout-for-hololens) najdete pokyny a ukázkový soubor XML pro zařízení s Windows Holographic for Business.
+      > [!NOTE]
+      > Toto nastavení povolí prohlížeči Microsoft Edge na zařízení. Pokud chcete nakonfigurovat nastavení specifické pro Microsoft Edge, vytvořte profil omezení zařízení (**Devices**  >  **Konfigurace zařízení profily**  >  **vytvořit profil**  >  **Windows 10** pro platformu > **omezení zařízení**  >  **prohlížeč Microsoft Edge**). [Prohlížeč Microsoft Edge](device-restrictions-windows-holographic.md#microsoft-edge-browser) uvádí a popisuje dostupná nastavení pro holografické firmy.
+
+    - **Přidat webový prohlížeč**na veřejném počítači: Nepodporováno ve Windows holografické pro firmy.
+
+  - **Aplikace**
+    - **Přidat aplikaci pro Store**: Vyberte existující aplikaci, kterou jste přidali nebo nasadili do Intune, jako [klientské aplikace](../apps/apps-add.md), včetně obchodních aplikací. Pokud nemáte uvedené žádné aplikace, podporuje Intune mnoho [typů aplikací](../apps/apps-add.md) , které [přidáte do Intune](../apps/store-apps-windows.md).
+    - **Přidat aplikaci Win32**: Na zařízeních s Windows Holographic for Business se nepodporuje.
+    - **Přidat podle AUMID**: Tuto možnost použijte pro přidání aplikací pro Windows, například Poznámkového bloku nebo Kalkulačky. Zadejte tyto vlastnosti:
+
+      - **Název aplikace**: Povinné. Zadejte název aplikace.
+      - **ID modelu uživatele aplikace (AUMID)**: Povinné. Zadejte ID modelu uživatele aplikace (AUMID) aplikace pro Windows. Pokud chcete získat toto ID, přečtěte si článek o tom, [jak u nainstalované aplikace najít ID modelu uživatele aplikace](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
+
+    - **AUTOLAUNCH**: volitelné. Po přidání aplikací a prohlížeče vyberte jednu aplikaci nebo prohlížeč, které se automaticky otevřou, když se uživatel přihlásí. Spustit se dá jenom jedna aplikace nebo prohlížeč.
+    - **Velikost dlaždice**: Povinné. Po přidání aplikací vyberte malou, střední, širokou nebo velkou velikost dlaždice aplikace.
+
+- **Použít alternativní počáteční rozložení**: vyberte **Ano** , pokud chcete zadat soubor XML, který popisuje, jak se aplikace objeví v nabídce Start, včetně pořadí aplikací. Tuto možnost použijte, pokud v nabídce Start potřebujete větší míru přizpůsobení. V článku o [přizpůsobení a exportu rozložení nabídky Start](https://docs.microsoft.com/hololens/hololens-kiosk#start-layout-for-hololens) najdete pokyny a ukázkový soubor XML pro zařízení s Windows Holographic for Business.
 
 - **Hlavní panel Windows**: Na zařízeních s Windows Holographic for Business se nepodporuje.
+- **Povolení přístupu ke složce stažené soubory**: Nepodporováno ve Windows Holografick pro firmy.
+- **Zadejte časové období údržby pro restartování aplikací**: nepodporuje se ve Windows holografickém pro firmy.
 
 ## <a name="next-steps"></a>Další kroky
 

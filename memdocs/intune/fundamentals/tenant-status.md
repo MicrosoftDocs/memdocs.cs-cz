@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/06/2020
+ms.date: 05/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -16,15 +16,19 @@ ms.reviewer: crisk
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d309b295281c88dff717c5f609905b3e541e3fed
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: a4d747a38dd8e2f95cafb25ec5705f83199f4c54
+ms.sourcegitcommit: 5dc3545d7f76ce81598f6b1c9734b0ac0a3e9722
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80696441"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83690689"
 ---
 # <a name="use-the-intune-tenant-status-page"></a>Použití stránky stavu tenanta Intune
-Stránka stav tenanta Microsoft Intune je centralizované centrum, kde si můžete zobrazit aktuální a důležité podrobnosti o vašem tenantovi. Podrobnosti zahrnují dostupnost a používání licencí, stav konektoru a důležitou komunikaci týkající se služby Intune.  
+
+Stránka stav tenanta Microsoft Intune je centralizované centrum, kde si můžete zobrazit aktuální a důležité podrobnosti o vašem tenantovi. Podrobnosti zahrnují dostupnost a používání licencí, stav konektoru a důležitou komunikaci týkající se služby Intune.
+
+> [!TIP]
+> Tenant je instance Azure Active Directory (Azure AD). Vaše předplatné Intune hostuje tenant služby Azure AD. Další informace najdete v tématu [Nastavení tenanta](https://docs.microsoft.com/azure/active-directory/develop/quickstart-create-new-tenant) v dokumentaci k Azure AD.
 
 Řídicí panel zobrazíte tak, že se přihlásíte do [centra pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431) , přejdete na **Správa tenanta**a pak vyberete **stav tenanta**.
 
@@ -64,20 +68,20 @@ Pokud například vyberete konektor **Datum vypršení platnosti VPP** , otevře
 ## <a name="service-health-dashboard"></a>Řídicí panel stavu služby  
 Na řídicím panelu stavu služby můžete zobrazit podrobnosti o *incidentech služby* , které mají vliv na vašeho tenanta, a *novinky Intune* , které poskytují informace o aktualizacích a plánovaných změnách.
 
-### <a name="intune-service-health"></a>Service Health Intune
+### <a name="intune-service-health-and-message-center"></a>Intune Service Health a Centrum zpráv
 Zobrazte si podrobnosti o aktivních incidentech a poradcích, aniž byste museli přecházet na řídicí panel Microsoft 365 Service Health nebo Centrum zpráv, jak je umístěno v [centru pro správu Microsoft 365](https://admin.microsoft.com). Zobrazí se pouze incidenty, které mají vliv na vašeho tenanta.  
 
 Po výběru incidentu se podrobnosti o incidentu zobrazí přímo na stránce Stav tenanta. Pokud chcete zobrazit minulé poradce a incidenty, vyberte **zobrazit minulé incidenty/poradci**. Otevře se centrum pro správu Microsoft 365, kde můžete zobrazit upozornění a incidenty za posledních 30 dní pro vašeho tenanta.  
 
-Pokud chcete zobrazit informace o *Service Health Intune*, váš účet musí mít roli **globálního správce** nebo **Správce služby** v Azure Active Directory nebo v centru pro správu Microsoft 365. Pokud chcete přiřadit tato oprávnění, přihlaste se k [centru pro správu Microsoft 365](https://admin.microsoft.com) s oprávněními globálního správce. Vyberte **uživatelé > aktivní uživatelé**a pak vyberte účet, který vyžaduje přístup. Vyberte **Upravit** pro role, vyberte *Správce služby* nebo *globální správce*a pak **uložte** úpravy, abyste přidělili oprávnění.  
+Pokud chcete zobrazit informace o *Service Health Intune*, musí mít váš účet roli správce **globálního správce** nebo **služby Service support** v Azure Active Directory nebo v centru pro správu Microsoft 365. Pokud chcete přiřadit tato oprávnění, přihlaste se k [centru pro správu Microsoft 365](https://admin.microsoft.com) s oprávněními globálního správce. Vyberte **uživatelé > aktivní uživatelé**a pak vyberte účet, který vyžaduje přístup. Vyberte **Upravit** pro role, vyberte *Správce podpory služeb* nebo *globální správce*a pak **uložte** úpravy, abyste přidělili oprávnění.  
 
 Předvolby komunikace pro Service Health Intune můžete nastavit jenom prostřednictvím centra pro správu Microsoft 365.
 
-### <a name="intune-news"></a>Novinky Intune  
+### <a name="intune-message-center"></a>Centrum zpráv Intune  
 Prohlédněte si informační komunikaci z týmu služby Intune, aniž byste museli přejít do centra zpráv Office. Mezi komunikace patří zprávy o změnách, ke kterým nedávno došlo ve službě Intune, nebo na způsobu, jakým je váš tenant.  
 
 Ve výchozím nastavení se zobrazuje 10 nejaktuálnějších a aktivních zpráv. Chcete-li zobrazit starší zprávy, vyberte možnost **zobrazit minulé zprávy** a otevřete *Centrum zpráv* v centru pro správu Microsoft 365.  
 
-Pokud chcete zobrazit informace o zprávách Intune, váš účet musí mít roli **globálního správce** nebo **správce služeb** v Azure Active Directory nebo roli **Čtenář centra zpráv** v centru pro správu Microsoft 365.  Pokud chcete toto oprávnění přiřadit, přihlaste se k [centru pro správu Microsoft 365](https://admin.microsoft.com) s oprávněními správce. Vyberte **uživatelé > aktivní uživatelé**a pak vyberte účet, který vyžaduje přístup. Vyberte **Upravit** pro *role*, vyberte *týmy komunikace správce*a potom **uložte** vaši úpravu pro přiřazení oprávnění.  
+Pokud chcete zobrazit informace o zprávách Intune, musí mít váš účet roli správce **globálního správce** nebo **služby Service support** v Azure Active Directory nebo role **Čtenář centra zpráv** v centru pro správu Microsoft 365.  Pokud chcete toto oprávnění přiřadit, přihlaste se k [centru pro správu Microsoft 365](https://admin.microsoft.com) s oprávněními správce. Vyberte **uživatelé > aktivní uživatelé**a pak vyberte účet, který vyžaduje přístup. Vyberte **Upravit** pro *role*, vyberte *týmy komunikace správce*a potom **uložte** vaši úpravu pro přiřazení oprávnění.  
 
-Předvolby komunikace pro zprávy Intune můžete nastavit jenom prostřednictvím centra pro správu Microsoft 365.
+Předvolby komunikace pro Centrum zpráv Intune můžete nastavit jenom prostřednictvím centra pro správu Microsoft 365.

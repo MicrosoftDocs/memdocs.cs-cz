@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/21/2020
+ms.date: 05/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 44089df5645b128ba29e481e899d52c90b8c0a42
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 451b1f2744f7f82d2a1c50c9003fba549bea4bdd
+ms.sourcegitcommit: 169e279ba686c28d9a23bc0a54f0a2a0d20bdee4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078392"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83556059"
 ---
 # <a name="intune-discovered-apps"></a>Zjištěné aplikace Intune
 
@@ -34,7 +34,7 @@ ms.locfileid: "82078392"
 Intune poskytuje agregovaný seznam zjištěných aplikací na zařízeních zaregistrovaných v Intune ve vašem tenantovi.
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vybrat **aplikace** > **monitorovat** > **zjištěné aplikace**
+2. Vybrat **aplikace**  >  **monitorovat**  >  **zjištěné aplikace**
 
 >[!NOTE]
 >Seznam zjištěných aplikací můžete exportovat do souboru. csv výběrem možnosti **exportovat** v podokně **zjištěné aplikace** .
@@ -44,7 +44,7 @@ Intune poskytuje agregovaný seznam zjištěných aplikací na zařízeních zar
 Intune také nabízí seznam zjištěných aplikací pro jednotlivá zařízení ve vašem tenantovi.
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **zařízení** > **všechna zařízení**.
+2. Vyberte **zařízení**  >  **všechna zařízení**.
 3. Vyberte zařízení.
 4. Pokud chcete zobrazit zjištěné aplikace pro toto zařízení, vyberte v části **monitorování** **zjištěné aplikace** .
 
@@ -54,7 +54,7 @@ Následující seznam poskytuje typ aplikační platformy, aplikace, které jsou
 
 | Platforma | Pro zařízení vlastněná osobně | Pro zařízení vlastněná společností | Aktualizovat cyklus |
 |------------------------------------------------------------------------|----------------------------------|--------------------------------------------------|---------------------------------------|
-| Windows 10 (aplikace Win32) Poznámka: [vyžaduje rozšíření správy Intune](intune-management-extension.md) na zařízení. | Neuvedeno | Všechny aplikace instalované na zařízení | Každých 24 hodin od registrace zařízení |
+| Windows 10 (aplikace Win32) Poznámka: [vyžaduje rozšíření správy Intune](intune-management-extension.md) na zařízení. | Neuvedeno | Instalované aplikace MSI na zařízení | Každých 24 hodin od registrace zařízení |
 | Windows 10 (moderní aplikace) | Jenom spravované moderní aplikace | Všechny moderní aplikace nainstalované v zařízení | Každých 7 dnů od registrace zařízení |
 | Windows 8.1 | Pouze spravované aplikace | Pouze spravované aplikace | Každých 7 dnů od registrace zařízení |
 | Windows Phone 8 | Pouze spravované aplikace | Pouze spravované aplikace | Každých 7 dnů od registrace zařízení |

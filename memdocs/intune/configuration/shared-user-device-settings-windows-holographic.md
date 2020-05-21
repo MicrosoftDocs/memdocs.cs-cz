@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/09/2019
+ms.date: 05/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5b7e77933134dae3523edaf45f8b345aca4fc162
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 49d1b8f407814fd368a7ff45bb94bc4c5ef7fd9d
+ms.sourcegitcommit: 169e279ba686c28d9a23bc0a54f0a2a0d20bdee4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79326635"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83556281"
 ---
 # <a name="windows-holographic-for-business-settings-to-manage-shared-devices-using-intune"></a>Nastavení Windows holografického pro firmy pro správu sdílených zařízení pomocí Intune
 
@@ -36,24 +36,33 @@ Další informace o této funkci v Intune najdete v tématu [řízení přístup
 
 ## <a name="before-your-begin"></a>Před začátkem
 
-[Vytvořte profil](shared-user-device-settings.md).
+[Vytvoří sdílený konfigurační profil zařízení s více uživateli ve Windows 10](shared-user-device-settings.md).
+
+Když vytváříte profil konfigurace sdíleného zařízení s Windows 10, je k dispozici více nastavení, než je uvedeno v tomto článku. Nastavení v tomto článku jsou podporovaná na zařízeních s Windows holografickým pro firmy.
 
 ## <a name="shared-multi-user-device-settings"></a>Sdílená nastavení zařízení s více uživateli
 
 > [!NOTE]
 > Zařízení, která používají Windows Holografick pro firmy, včetně Microsoft HoloLens, podporují jenom nastavení **správy účtů** . Pokud nakonfigurujete některá z dalších nastavení zobrazených v Intune, včetně **režimu SDÍLENÉHO počítače**, nemá to na těchto zařízeních žádný vliv.
 
-- **Správa účtů**: Nastavte, aby se **povolilo** automatické odstraňování místních účtů vytvořených hosty a účtů v AD a Azure AD. Když se uživatel odhlásí ze zařízení nebo když se spustí údržba systému, tyto účty se odstraní. Pokud je tato možnost povolená, nastaví se také:
-  - **Odstranění účtu**: vyberte, kdy se mají účty odstranit: **v prahové hodnotě úložného prostoru**, **v prahové hodnotě úložiště a na neaktivní prahové hodnotě**nebo **hned po odhlášení**. Zadejte také:
+- **Správa účtů**: vyberte, jestli se mají automaticky odstranit účty. Možnosti:
+  - **Nenakonfigurováno** (výchozí): automaticky odstraní místní účty vytvořené hostů a účty v AD a Azure AD. Když se uživatel odhlásí ze zařízení nebo když se spustí údržba systému, tyto účty se odstraní.
+
+    Dále zadejte:
+
+    - **Odstranění účtu**: vyberte, kdy se mají účty odstranit:
+      - **V prahové hodnotě prostoru úložiště**
+      - **V prahové hodnotě prostoru úložiště a neaktivní prahové hodnoty**
+      - **Ihned po odhlášení**
+
+    Dále zadejte:
+
     - **Počáteční hodnota odstranění – prahová hodnota (%)**: zadejte procento místa na disku (0-100). Když celková velikost disku nebo úložiště klesne pod hodnotu, kterou zadáte, odstraní se účty v mezipaměti. Neustále odstraňuje účty pro uvolnění místa na disku. Účty, které jsou neaktivní, se nejprve odstraní.
     - **Zastavit odstranění prahové hodnoty (%)**: zadejte procento místa na disku (0-100). Když celkové místo na disku nebo úložišti odpovídá hodnotě, kterou zadáte, odstranění se zastaví.
 
-  Nastavením této hodnoty **zakážete** , aby byly účty místních účtů, AD a Azure AD vytvořené hosty.
-
-  > [!NOTE]
-  > Zařízení Microsoft HoloLens podporují pouze nastavení **správy účtů** .
+  - **Zakázat**: účty místní, AD a Azure AD vytvořené hosty zůstanou na zařízení a neodstraňují se.
 
 ## <a name="next-steps"></a>Další kroky
 
 - [Přiřaďte profil](device-profile-assign.md) a [monitorujte jeho stav](device-profile-monitor.md).
-- Podívejte se na nastavení pro [Windows 10 a novější](shared-user-device-settings-windows.md).
+- Podívejte se na nastavení sdíleného zařízení uživatele pro [Windows 10 a novější](shared-user-device-settings-windows.md).

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 53f33b659e45720dc84b7c38ca54fec0e3768a60
-ms.sourcegitcommit: 2871a17e43b2625a5850a41a9aff447c8ca44820
+ms.openlocfilehash: c538236d57961298ff7caedd6d5e00e7cc78c4a6
+ms.sourcegitcommit: 6ca5e75ed7a6fd2186fbe51c177960004d5ec81f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82126102"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83633373"
 ---
 # <a name="troubleshoot-device-to-ndes-server-communication-for-scep-certificate-profiles-in-microsoft-intune"></a>Řešení potíží s komunikací serveru NDES pro profily certifikátů SCEP v Microsoft Intune
 
@@ -76,8 +76,8 @@ Zkontrolujte [protokol OMADM zařízení](troubleshoot-scep-certificate-profiles
 Klíčové položky obsahují následující vzorové textové řetězce:
 
 - K dispozici jsou 1 žádosti.
-- Při odesílání GetCACaps (CA) do serveru https://\<byla přijata zpráva "200 OK">. msappproxy.NET/certsrv/mscep/mscep.dll?Operation=GetCACaps&zpráva = CA
-- Podepisování pkiMessage pomocí klíče patřícího k [DN = CN\<= username>; Serial = 1]
+- Při odesílání GetCACaps (CA) do serveru https://byla přijata zpráva "200 OK" \<>. msappproxy.net/certsrv/mscep/mscep.dll?operation=GetCACaps&zpráva = CA
+- Podepisování pkiMessage pomocí klíče patřícího k [DN = CN = \< username>; Serial = 1]
 
 
 Služba IIS protokoluje i připojení ve složce%SystemDrive%\inetpub\logs\LogFiles\W3SVC1\ serveru NDES. Například:
@@ -110,13 +110,13 @@ Klíčové položky obsahují následující vzorové textové řetězce:
 
 ### <a name="windows-devices"></a>Zařízení s Windows
 
-Na zařízení s Windows, které provádí připojení ke službě NDES, můžete zobrazit Prohlížeč událostí zařízení s Windows a vyhledat indikaci úspěšného připojení. Připojení se protokolují jako ID události **36** v DeviceManagement zařízení *-Enterprise-Diagnostics – poskytnutí* > protokolu**správce** .
+Na zařízení s Windows, které provádí připojení ke službě NDES, můžete zobrazit Prohlížeč událostí zařízení s Windows a vyhledat indikaci úspěšného připojení. Připojení se protokolují jako ID události **36** v DeviceManagement zařízení *-Enterprise-Diagnostics – poskytnutí*  >  protokolu**správce** .
 
 Postup otevření protokolu:
 
 1. Na zařízení spusťte příkaz **eventvwr. msc** a otevřete Prohlížeč událostí Windows.
 
-2.  > Rozbalte položku **protokoly aplikací a služeb****Microsoft** > **Windows** > **DeviceManagement-Enterprise-Diagnostic-Provider** > **admin**.
+2. Rozbalte položku **protokoly aplikací a služeb**  >  **Microsoft**  >  **Windows**  >  **DeviceManagement-Enterprise-Diagnostic-Provider**  >  **admin**.
 
 3. Vyhledejte událost **36**, která se podobá následujícímu příkladu, a to pomocí klíčového řádku protokolu **SCEP: žádost o certifikát se úspěšně vygenerovala**:
 
@@ -161,7 +161,7 @@ Připojení, která se podobají následujícímu příkladu, s kódem stavu 500
 
 Pomocí následujícího postupu otestujte adresu URL, která je zadaná v profilu certifikátu SCEP.
 
-1. V Intune upravte svůj profil certifikátu SCEP a zkopírujte adresu URL serveru. Adresa URL by měla vypadat *https://contoso.com/certsrv/mscep/mscep.dll*přibližně takto.
+1. V Intune upravte svůj profil certifikátu SCEP a zkopírujte adresu URL serveru. Adresa URL by měla vypadat přibližně takto `https://contoso.com/certsrv/mscep/mscep.dll` .
 
 2. Otevřete webový prohlížeč a přejděte na adresu URL serveru SCEP. Výsledek by měl být: **Chyba protokolu HTTP 403,0 – zakázáno**. Tento výsledek indikuje, že adresa URL funguje správně.
 
@@ -202,7 +202,7 @@ K tomuto problému obvykle dochází, protože ve službě IIS není spuštěn f
 
 Pokud není fond aplikací SCEP spuštěný, podívejte se na protokol událostí aplikace na serveru:
 
-1. Na zařízení spusťte příkaz **eventvwr. msc** , který otevřete **Prohlížeč událostí** a přejdete do části **Windows logs** > **aplikace**.
+1. Na zařízení spusťte příkaz **eventvwr. msc** , který otevřete **Prohlížeč událostí** a přejdete do části **Windows logs**  >  **aplikace**.
 
 2. Vyhledejte událost, která je podobná následujícímu příkladu, což znamená, že fond aplikací selže při přijetí žádosti:
 
@@ -234,7 +234,7 @@ Pokud není fond aplikací SCEP spuštěný, podívejte se na protokol událost�
 
   **Řešení**: Pokud chcete získat další informace, povolte další protokolování:
   1. Otevřete Prohlížeč událostí, klikněte na tlačítko **Zobrazit**, ujistěte se, že je zaškrtnuta možnost **Zobrazit protokoly o analýze a ladění** .
-  2.  > Přejděte do části **protokoly aplikací a služeb****Microsoft** > **Windows** > **CAPI2** > **provoz**, klikněte pravým tlačítkem na **operační**a pak klikněte na **Povolit protokol**.
+  2. Přejděte do části **protokoly aplikací a služeb**  >  **Microsoft**  >  **Windows**  >  **CAPI2**  >  **provoz**, klikněte pravým tlačítkem na **operační**a pak klikněte na **Povolit protokol**.
   3. Jakmile je povoleno protokolování CAPI2, reprodukování problému a Projděte si protokol událostí, abyste mohli problém vyřešit.
 
 - **Příčina 3**: oprávnění služby IIS v **CertificateRegistrationSvc** má povolené **ověřování systému Windows** .
@@ -252,9 +252,9 @@ Pokud není fond aplikací SCEP spuštěný, podívejte se na protokol událost�
      - Obnovit existující certifikát
      - Vyberte jiný certifikát s podobným vlastnosti (předmět, rozšířené použití klíče, typ a délka atd.).
      - Registrace nového certifikátu
-  2. Exportujte klíč `NDESPolicy` registru pro zálohování aktuálních hodnot.
-  3. Nahraďte data hodnoty `NDESCertThumbprint` registru kryptografickým otiskem nového certifikátu, odeberete všechny prázdné znaky a text převede na malá písmena.
-  4. Restartujte fondy aplikací NDES služby IIS nebo je `iisreset` spusťte z příkazového řádku se zvýšenými oprávněními.
+  2. Exportujte `NDESPolicy` klíč registru pro zálohování aktuálních hodnot.
+  3. Nahraďte data `NDESCertThumbprint` hodnoty registru kryptografickým otiskem nového certifikátu, odeberete všechny prázdné znaky a text převede na malá písmena.
+  4. Restartujte fondy aplikací NDES služby IIS nebo je spusťte `iisreset` z příkazového řádku se zvýšenými oprávněními.
 
 #### <a name="gatewaytimeout"></a>GatewayTimeout
 
@@ -274,7 +274,7 @@ Když přejdete na adresu URL serveru SCEP, zobrazí se následující chyba:`HT
 
 - **Řešení**: Nakonfigurujte podporu dlouhých adres URL.
 
-  1. Na serveru NDES otevřete Správce služby IIS, vyberte **výchozí webový server** > **filtrování** > požadavků**Upravit nastavení funkce** a otevřete stránku **Upravit nastavení filtrování požadavků** .
+  1. Na serveru NDES otevřete Správce služby IIS, vyberte **výchozí webový server**  >  **filtrování požadavků**  >  **Upravit nastavení funkce** a otevřete stránku **Upravit nastavení filtrování požadavků** .
 
   2. Nakonfigurujte tahle nastavení:
      - **Maximální délka adresy URL (bajty)** = 65534
@@ -298,7 +298,7 @@ Máte nakonfigurovanou službu Azure Proxy aplikací služby AD. Když přejdete
 
 `This page can't be displayed`
 
-- **Příčina**: k tomuto problému dochází v případě, že externí adresa URL SCEP není v konfiguraci proxy aplikace správná. Příkladem této adresy URL je `https://contoso.com/certsrv/mscep/mscep.dll`.
+- **Příčina**: k tomuto problému dochází v případě, že externí adresa URL SCEP není v konfiguraci proxy aplikace správná. Příkladem této adresy URL je `https://contoso.com/certsrv/mscep/mscep.dll` .
 
   **Řešení**: použijte výchozí doménu *yourtenant.msappproxy.NET* pro externí adresu URL SCEP v konfiguraci proxy aplikace.
 
@@ -324,7 +324,7 @@ Když přejdete na adresu URL serveru SCEP, zobrazí se následující chyba:
 
   3. Otevřete modul snap-in Certifikáty konzoly MMC pro **účet počítače**.
 
-  4. Rozbalte **osobní**, klikněte pravým tlačítkem na **certifikáty**a pak vyberte **všechny úkoly** > **požádat o nový certifikát**.
+  4. Rozbalte **osobní**, klikněte pravým tlačítkem na **certifikáty**a pak vyberte **všechny úkoly**  >  **požádat o nový certifikát**.
 
   5. Na stránce **Vyžádat certifikát** vyberte **šifrování CEP**a pak klikněte na **Další informace, které se vyžadují k registraci tohoto certifikátu. Kliknutím sem můžete nakonfigurovat nastavení**.
 
@@ -338,7 +338,7 @@ Když přejdete na adresu URL serveru SCEP, zobrazí se následující chyba:
 
      Když se zaregistrujete k certifikátu agenta zápisu Exchange (offline žádosti), musí se provést v kontextu uživatele. Vzhledem k tomu, že **typ subjektu** této šablony certifikátu je nastaven na hodnotu **uživatel**.
 
-  9. Rozbalte **osobní**, klikněte pravým tlačítkem na **certifikáty**a pak vyberte **všechny úkoly** > **požádat o nový certifikát**.
+  9. Rozbalte **osobní**, klikněte pravým tlačítkem na **certifikáty**a pak vyberte **všechny úkoly**  >  **požádat o nový certifikát**.
 
   10. Na stránce **Vyžádat certifikát** vyberte možnost **Agent pro zápis systému Exchange (žádost v režimu offline)** a pak klikněte na tlačítko **Další informace, které se vyžadují k registraci tohoto certifikátu. Kliknutím sem můžete nakonfigurovat nastavení**.
 
@@ -360,7 +360,7 @@ Když přejdete na adresu URL serveru SCEP, zobrazí se následující chyba:
 
   15. V konzole MMC certifikáty proveďte u každého nového certifikátu následující akci:
 
-      Klikněte pravým tlačítkem na certifikát, klikněte na **všechny úlohy** > **spravovat soukromé klíče**a přidejte oprávnění **číst** k účtu služby NDES.
+      Klikněte pravým tlačítkem na certifikát, klikněte na **všechny úlohy**  >  **spravovat soukromé klíče**a přidejte oprávnění **číst** k účtu služby NDES.
 
   16. Spusťte příkaz **iisreset** a restartujte službu IIS.
 
