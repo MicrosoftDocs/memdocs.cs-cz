@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/19/2020
+ms.date: 05/21/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c2af5957d22b5b512b28f574f2a0996801e19018
-ms.sourcegitcommit: 5dc3545d7f76ce81598f6b1c9734b0ac0a3e9722
+ms.openlocfilehash: 116ce7aa024afff5665fa3f09bfca56b54a1c452
+ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83690505"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83764284"
 ---
 # <a name="set-rules-on-devices-to-allow-access-to-resources-in-your-organization-using-intune"></a>Nastavení pravidel na zařízeních pro povolení přístupu k prostředkům ve vaší organizaci pomocí Intune
 
@@ -64,11 +64,17 @@ Remember that you need to implement Conditional Access policies in addition to c
 
 ## <a name="device-compliance-policies-work-with-azure-ad"></a>Zásady dodržování předpisů pro zařízení fungují s Azure AD
 
-Intune používá [podmíněný přístup](https://docs.microsoft.com/azure/active-directory/conditional-access/overview) Azure Active Directory (AD) (otevře jiný web docs), aby se vynutilo dodržování předpisů. Když se zařízení zaregistruje v Intune, spustí se proces registrace Azure AD a v Azure AD se aktualizují informace o zařízení. Jednou z informací je stav dodržování předpisů zařízením. Tento stav dodržování předpisů používají zásady podmíněného přístupu k blokování nebo povolení přístupu k e-mailu a dalším prostředkům organizace.
+Intune používá [podmíněný přístup](../protect/conditional-access.md) k zajištění dodržování předpisů. Podmíněný přístup je technologie Azure Active Directory (Azure AD).
 
-- [Co je Správa zařízení v Azure Active Directory](https://docs.microsoft.com/azure/active-directory/device-management-introduction) je skvělým prostředkem, proč a jak se zařízení registrují ve službě Azure AD.
+Když se zařízení zaregistruje v Intune, spustí se proces registrace Azure AD a v Azure AD se aktualizují informace o zařízení. Jednou z informací je stav dodržování předpisů zařízením. Tento stav dodržování předpisů používají zásady podmíněného přístupu k blokování nebo povolení přístupu k e-mailu a dalším prostředkům organizace.
 
-- [Podmíněný přístup](conditional-access.md) a [běžné způsoby použití podmíněného přístupu](conditional-access-intune-common-ways-use.md) popisují tuto funkci v souvislosti s Intune.
+Další informace o podmíněném přístupu a Intune:
+
+- [Běžné způsoby použití podmíněného přístupu s Intune](conditional-access-intune-common-ways-use.md)
+
+Informace o podmíněném přístupu v dokumentaci k Azure AD:
+  - [Co je podmíněný přístup](https://docs.microsoft.com/azure/active-directory/conditional-access/overview)
+  - [Co je identita zařízení](https://docs.microsoft.com/azure/active-directory/device-management-introduction)
 
 ## <a name="ways-to-use-device-compliance-policies"></a>Způsoby používání zásad dodržování předpisů zařízeními
 

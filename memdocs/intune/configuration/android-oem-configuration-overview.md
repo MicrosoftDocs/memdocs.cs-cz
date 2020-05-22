@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9875e394fb72e1c190bcc57da5e6ba4db04c1051
-ms.sourcegitcommit: 5dc3545d7f76ce81598f6b1c9734b0ac0a3e9722
+ms.openlocfilehash: 014608a5042f15ab9ef250b42ad816e8130e2960
+ms.sourcegitcommit: fb77170957f50aa386ff825fb4183b4fd9e3e488
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83690576"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83791694"
 ---
 # <a name="use-and-manage-android-enterprise-devices-with-oemconfig-in-microsoft-intune"></a>Používání a Správa zařízení s Androidem Enterprise pomocí OEMConfig v Microsoft Intune
 
@@ -157,7 +157,7 @@ V porovnání se standardními aplikacemi aplikace OEMConfig rozšiřují opráv
 | --- | --- | ---|
 | Ascom | com. Ascom. MyCo. oemconfig | |
 | Cipherlab | com. CipherLab. oemconfig | |
-| Datalogic | com. Datalogic. Settings. oemconfig | |
+| Datalogic | com. Datalogic. Settings. oemconfig | [Příručka k Datalogic OEMConfig](https://datalogic.github.io/oemconfig/overview) |
 | Honeywell | com. Honeywell. oemconfig |  |
 | HMDGlobal-7,2 | com. hmdglobal. app. oemconfig. n7_2 | 
 | HMDGlobal-4,2 | com. hmdglobal. app. oemconfig. n4_2 | 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: add599a715d32eac84b2784de976de4caf17faa9
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 5f50005ace235c66b26ed441169a62cf73bae6d9
+ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83428808"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83764080"
 ---
 # <a name="how-to-manage-ios-and-macos-apps-purchased-through-apple-volume-purchase-program-with-microsoft-intune"></a>Jak spravovat aplikace pro iOS a macOS zakoupené prostřednictvím Apple Volume Purchase Program s využitím Microsoft Intune
 
@@ -87,8 +87,8 @@ Migrujte existující koupený obsah a tokeny VPP do aplikací a knih v Apple Bu
 1. Vyzvěte nákupčí VPP, aby se připojili k vaší organizaci, a nasměrujte jednotlivé uživatele na výběr jedinečného umístění. 
 2. Než budete pokračovat, ujistěte se, že všichni odběratelé VPP v rámci vaší organizace dokončili krok 1.
 3. Ověřte, že se všechny koupené aplikace a licence migrovali do aplikací a knih v Apple Business Manageru nebo Apple School Manageru.
-4. Pokud chcete stáhnout nový token umístění, přejdeme do nabídky nastavení aplikace **Apple Business (nebo školy)**  >  **Settings**  >  **a**  >  **Moje tokeny serveru**v Books.
-5. V centru pro správu Microsoft Endpoint Manageru aktualizujte token umístění, a to tak, že na portálu **pro správu tenanta**zařadíte tokeny  >  **Connectors and tokens**  >  **Apple VPP** a synchronizujete token.
+4. Stáhněte si nový token umístění, a to tak, že v aplikaci **Apple Business (nebo School) Manager**  >  **Nastavení**  >  **aplikace a**  >  **Moje tokeny na serverech**.
+5. Aktualizujte token umístění v centru pro správu Microsoft Endpoint Manageru tak, že v části provedete konektory **pro správu tenanta**  >  **a**tokeny  >  **Apple VPP** a ručně nahrajete token.
 
 ## <a name="upload-an-apple-vpp-or-location-token"></a>Nahrání tokenu Apple VPP nebo umístění
 

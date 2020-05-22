@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6f16c39ff0af44918099863be5d23ec9fe564493
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 33e4f36afce9b8a2f296697623cd7031edf0fa74
+ms.sourcegitcommit: fb77170957f50aa386ff825fb4183b4fd9e3e488
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80624913"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83791787"
 ---
 # <a name="move-android-devices-from-device-administrator-to-work-profile-management"></a>Přesunutí zařízení s Androidem ze Správce zařízení do správy pracovního profilu
 
@@ -45,28 +45,28 @@ Když uživatelé uvidí, že z tohoto důvodu nejsou v souladu s předpisy, mů
 
 ## <a name="create-device-compliance-policy"></a>Vytvoření zásad dodržování předpisů pro zařízení
 
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **zásady** >  > **zásad dodržování předpisů****vytvořit zásadu**.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení**zásady  >  **zásad dodržování předpisů**  >  **Policies**  >  **vytvořit zásadu**.
 
     ![Vytvoření zásad](./media/android-move-device-admin-work-profile/create-policy.png)
 
-2. Na stránce **vytvořit zásadu** nastavte nastavení **platforma** na >  **Správce zařízení s Androidem****vytvořit**.
-3. Na stránce **základy** zadejte **název** a **Popis** > **Další**.
+2. Na stránce **vytvořit zásadu** nastavte nastavení **platforma** na **Správce zařízení s Androidem**  >  **vytvořit**.
+3. Na stránce **základy** zadejte **název** a **Popis**  >  **Další**.
 
     ![Stránka základy](./media/android-move-device-admin-work-profile/basics.png)
     
-4. Na stránce **Nastavení dodržování předpisů** v části **stav zařízení** nastavte možnost **blokovat zařízení spravovaná pomocí Správce zařízení** na **Ano** > **Další**.
+4. Na stránce **Nastavení dodržování předpisů** v části **stav zařízení** nastavte možnost **blokovat zařízení spravovaná pomocí Správce zařízení** na **Ano**  >  **Další**.
 
     ![Blokovat zařízení](./media/android-move-device-admin-work-profile/block-devices.png)
 
 5. Na stránce **umístění** můžete přidat umístění, pokud chcete > **Další**.
-6. U **akcí při nedodržení předpisů**můžete nastavit akci pro **odeslání e-mailu na koncového uživatele** .
 
-    ![Odeslat e-mail](./media/android-move-device-admin-work-profile/send-email.png)
+6. U **akcí při nedodržení předpisů**můžete nakonfigurovat [Dostupné akce při nedodržení předpisů](../protect/actions-for-noncompliance.md#available-actions-for-noncompliance) pro přizpůsobení prostředí koncových uživatelů pro tento tok. Jedná se o některé akce, které je potřeba vzít v úvahu.
 
-
-    Do e-mailu můžete do zprávy přidat níže uvedenou adresu URL pro uživatele. Adresa URL spustí Portál společnosti pro Android na stránce **aktualizovat nastavení zařízení** . Tato stránka spustí svůj tok pro přesun do správy pracovního profilu.
+- **Označit zařízení jako nevyhovující**: ve výchozím nastavení je tato akce nastavená na nula (0) dnů a okamžitě se zařízení označí jako nedodržující předpisy. Změna tohoto počtu na více dní poskytuje uživatelům dobu odkladu, ve které můžou sledovat tok, který se přesune ke správě pracovních profilů, aniž by se ještě označil jako nedodržující předpisy. Například nastavení na hodnotu 14 dní uživateli poskytne dva týdny, aby se přesunuli od správce zařízení do správy pracovních profilů bez rizika ztráty přístupu k prostředkům.
+- **Odeslat nabízená oznámení koncovému uživateli**: tuto konfiguraci nakonfigurujte pro odesílání nabízených oznámení do zařízení Správce zařízení. Když uživatel vybere oznámení, spustí Portál společnosti pro Android na stránce **aktualizovat nastavení zařízení** , kde může spustit tok pro přesun do správy pracovního profilu.
+- **Odeslat e-mail koncovému uživateli**: tuto možnost nakonfigurujte, pokud chcete uživatelům odeslat e-maily o přesunutí ze Správce zařízení do správy pracovního profilu. Do e-mailu můžete zahrnout níže uvedenou adresu URL, která je v případě, že ji vyberete, spustí Portál společnosti pro Android na stránce aktualizovat nastavení zařízení, kde může spustit tok pro přesun do správy pracovního profilu.
     - `https://portal.manage.microsoft.com/UpdateSettings.aspx`.
-    - Pro státní správu USA můžete místo toho použít tento odkaz: `https://portal.manage.microsoft.us/UpdateSettings.aspx`.
+    - Pro státní správu USA můžete místo toho použít tento odkaz: `https://portal.manage.microsoft.us/UpdateSettings.aspx` .
   
     > [!NOTE]
     > - Samozřejmě můžete použít uživatelsky přívětivý text Hyper-v propojeních ve vaší komunikaci s uživateli. Nepoužívejte však zkrácení adres URL, protože odkazy nemusí fungovat, pokud se tímto způsobem změní.
@@ -104,5 +104,5 @@ Uživatelům se v prohlížeči může zobrazit chybová stránka, když klepnou
 - Zařízení s Androidem používá Android 6 nebo starší. 
 
 ## <a name="next-steps"></a>Další kroky
-[Podívejte se na tok](../user-help/move-to-new-device-management-setup.md)
-koncového uživatele[Správa zařízení s pracovním profilem Androidu pomocí Intune](android-enterprise-overview.md) .
+[Zobrazit tok](../user-help/move-to-new-device-management-setup.md) 
+ koncového uživatele [Správa zařízení s pracovním profilem Androidu pomocí Intune](android-enterprise-overview.md)

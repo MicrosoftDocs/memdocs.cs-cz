@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/15/2020
+ms.date: 05/21/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fb23c67fa4a750728987122a44cbcf7a6f04df05
-ms.sourcegitcommit: dba89b827d7f89067dfa75a421119e0c973bb747
+ms.openlocfilehash: c737de8a991bc8d96e38d729292be721c6bdd1cf
+ms.sourcegitcommit: fb77170957f50aa386ff825fb4183b4fd9e3e488
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83709532"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83791844"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
@@ -71,7 +71,7 @@ Aplikace, které se publikují jako dostupné aplikace programu Volume purchase 
 
 
 #### <a name="unified-delivery-of-azure-ad-enterprise-and-office-online-applications-in-the-company-portal---4404429-----"></a>Jednotné doručování aplikací Azure AD Enterprise a Office Online v Portál společnosti<!-- 4404429   -->
-*Tato funkce probíhá a zavádí se za několik dalších týdnů. V uživatelském rozhraní se můžou zobrazit ovládací prvky funkcí, ale nastavení se projeví až po několik týdnů.*
+*Tato funkce byla zpožděna.*
 V podokně **přizpůsobení** služby Intune můžete vybrat možnost **Skrýt** nebo **Zobrazit** **podnikové aplikace Azure AD** a **aplikace Office Online** v portál společnosti. Každý koncový uživatel uvidí ze zvolené služby Microsoftu celý katalog aplikací. Ve výchozím nastavení se každý další zdroj aplikace nastaví jako **skrytý**. Tato funkce se nejprve projeví na webu Portál společnosti, s podporou na portálech Windows, iOS/iPadOS a macOS společnosti, které by měly dodržovat. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **přizpůsobení správy tenanta**  >  **Customization** a najděte toto nastavení konfigurace. Související informace najdete v tématu [Postup přizpůsobení aplikací portál společnosti Intune, portál společnosti webu a aplikace Intune](../apps/company-portal-app.md).
 
 #### <a name="android-company-portal-user-experience---5736084----"></a>Uživatelské prostředí pro Android Portál společnosti<!-- 5736084  -->
@@ -169,6 +169,7 @@ Když uživatel vybere nabízené oznámení na svém zařízení, otevře se Po
 #### <a name="endpoint-security-content-and-new-features---5720009-5892558-7130145-5653324-7140602----"></a>Obsah a nové funkce zabezpečení koncového bodu<!-- 5720009 5892558, 7130145, 5653324, 7140602  -->
 
 V dokumentaci k Intune [Endpoint Security](../protect/endpoint-security.md) je teď k dispozici. V uzlu zabezpečení koncového bodu centra pro správu Microsoft Endpoint Manageru můžete:
+
 - Vytvoření a nasazení zásad zabezpečení s fokusem na spravovaná zařízení
 - Nakonfigurujte integraci pomocí rozšířené ochrany před internetovými útoky v programu Microsoft Defender a spravujte bezpečnostní úkoly, které vám pomůžou napravit rizika pro rizikové zařízení, která jsou určená vaším týmem ATP.
 - Konfigurace standardních hodnot zabezpečení
@@ -182,13 +183,15 @@ Kromě dostupnosti obsahu jsou pro řešení Endpoint Security v tomto měsíci 
   - V nové *veřejné verzi Preview*můžete použít [profil **pravidla firewallu v programu Microsoft Defender** ](../protect/endpoint-security-firewall-policy.md#firewall-profiles) pro zásady brány firewall systému Windows 10. U každé instance tohoto profilu můžete nakonfigurovat až 150 pravidel brány firewall, která budou chtít vaše profily firewallu v programu Microsoft Defenderu zdarma. 
   - Zásady zabezpečení ochrany účtů zůstávají ve verzi Preview. 
 
-- Teď můžete [**vytvořit duplikáty zásad zabezpečení koncového bodu**](../protect/endpoint-security-policy.md#duplicate-a-policy). Duplikují nastavení původní zásady, ale získají nový název a nezahrnují žádná přiřazení do skupin, dokud je neupravíte a nebudete je přidávat.  
+- Teď můžete [**vytvořit duplikáty zásad zabezpečení koncového bodu**](../protect/endpoint-security-policy.md#duplicate-a-policy). Duplicity udržují konfiguraci nastavení původní zásady, ale získají nový název. Nová instance zásad pak neobsahuje žádná přiřazení do skupin, dokud neupravíte novou instanci zásady tak, aby se přidala. Duplikovat můžete následující zásady:
   - Antivirus
   - Šifrování disků
   - Firewall
   - Zjišťování koncových bodů a odpověď
   - Omezení možností útoku
   - Ochrana účtu
+
+- Nyní můžete [**vytvořit duplikát standardních hodnot zabezpečení**](../protect/security-baselines.md#duplicate-a-security-baseline). Duplicity udržují konfiguraci nastavení původního směrného plánu, ale získají nový název. Nová instance směrného plánu neobsahuje žádná přiřazení do skupin, dokud neupravíte novou instanci směrného plánu tak, aby se přidala.
 
 - K dispozici je nová sestava pro zásady antivirové ochrany Endpoint Security: [**koncové body Windows 10**](../protect/endpoint-security-antivirus-policy.md#windows-10-unhealthy-endpoints)nejsou v pořádku. Tato sestava je novou stránkou, kterou si můžete vybrat, když vaše aplikace zobrazuje vaše zásady ochrany koncových bodů. V sestavě se zobrazí stav antivirové ochrany zařízení s Windows 10 spravovaných přes MDM.  
 
@@ -523,7 +526,7 @@ Nové možnosti organizace jsou ty, které jsou k dispozici pro základní profi
 Aktualizovali jsme [prostředí pro uživatele](../configuration/device-profile-create.md) v centru pro správu správy koncových**Devices**bodů (  >  **konfigurační profily**zařízení  >  **vytvořit profil**) pro vytváření a úpravu následujících typů profilů. Nové prostředí prezentuje stejné nastavení jako předtím, ale používá i průvodce, který nepotřebuje tolik horizontální posouvání. Pro nové prostředí nebudete muset měnit existující konfigurace.
 
 - Odvozené přihlašovací údaje
-- E-mail
+- E-mailu
 - Certifikát PKCS
 - Importovaný certifikát PKCS
 - Certifikát SCEP

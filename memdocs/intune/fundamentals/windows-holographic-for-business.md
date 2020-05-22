@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d33f642a564179b857afc214110cf098c695055c
-ms.sourcegitcommit: d8dc05476ecd5db7ecb36dc649b566b349ba263d
+ms.openlocfilehash: 5a463742a9511f21a98c277394f8c0d29084d379
+ms.sourcegitcommit: fb77170957f50aa386ff825fb4183b4fd9e3e488
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83732920"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83791750"
 ---
 # <a name="manage-and-use-different-device-management-features-on-windows-holographic-and-hololens-devices-with-intune"></a>Správa a používání různých funkcí správy zařízení na zařízeních s Windows holografickými a HoloLens pomocí Intune
 
@@ -117,7 +117,7 @@ V profilech můžete k přizpůsobení některých nastavení, vytvoření omeze
 
 Pokud chcete nakonfigurovat nastavení OMA-URI (Open Mobile Alliance Uniform Resource Identifier), můžete v Intune vytvořit vlastní profil. Nastavení OMA-URI se používá k ovládání různých funkcí zařízení s Windows Holographic for Business, jako je povolení VPN nebo kontrola aktualizací ve službě Microsoft Update.
 
-Podívejte se na příklad, který pomocí [zprostředkovatele CSP v programu Windows Defender Application Control (WDAC)](https://docs.microsoft.com/windows/client-management/mdm/applicationcontrol-csp) povolí nebo zablokuje otevírání aplikací na zařízeních HoloLens 2.
+Podívejte se na [příklad](../configuration/custom-profile-hololens.md) , který pomocí [zprostředkovatele CSP v programu Windows Defender Application Control (WDAC)](https://docs.microsoft.com/windows/client-management/mdm/applicationcontrol-csp) povolí nebo zablokuje otevírání aplikací na zařízeních HoloLens 2.
 
 ### <a name="configure-kiosk-mode"></a>[Konfigurace beznabídkového režimu](../configuration/kiosk-settings-holographic.md)
 

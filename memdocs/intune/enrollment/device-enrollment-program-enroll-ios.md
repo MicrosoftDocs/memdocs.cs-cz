@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 09c8713bd9f0e63182dd94187de1711ef65af802
-ms.sourcegitcommit: d8dc05476ecd5db7ecb36dc649b566b349ba263d
+ms.openlocfilehash: 35c2a9f5dec506d1a9f0eafc9c82f277cd2635db
+ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/21/2020
-ms.locfileid: "83732954"
+ms.locfileid: "83764216"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-automated-device-enrollment"></a>Automatická registrace zařízení se systémem iOS/iPadOS pomocí Automatické registrace zařízení společnosti Apple
 
@@ -44,9 +44,6 @@ Zápisy přes ADE nejsou kompatibilní s verzí aplikace Portál společnosti Ap
 Pokud chcete povolit moderní ověřování během registrace, nahrajte aplikaci do zařízení pomocí **portál společnosti instalace** pomocí programu VPP (Volume purchase program) v profilu ADE. Další informace najdete v tématu [Automatická registrace zařízení s iOS/iPadOS pomocí ADE společnosti Apple](device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile).
 
 Pokud chcete povolit, aby se Portál společnosti automaticky aktualizovala a poskytovala aplikace Portál společnosti na zařízeních, která jsou už zaregistrovaná v ADE, nasaďte aplikaci Portál společnosti přes Intune jako povinnou aplikaci VPP (Volume purchase program) s použitou [zásadou konfigurace aplikace](../apps/app-configuration-policies-use-ios.md) .
-
-> [!NOTE]
-> Při automatickém zápisu zařízení, zatímco Portál společnosti běží v režimu jedné aplikace, se kliknutím na odkaz další **informace** zobrazí chybová zpráva v důsledku režimu jedné aplikace. Po dokončení registrace můžete zobrazit další informace v CP, pokud už zařízení není v režimu jedné aplikace. 
 
 ## <a name="what-is-supervised-mode"></a>Co je režim Pod dohledem?
 
@@ -237,7 +234,7 @@ Teď, když jste nainstalovali token, můžete vytvořit profil zápisu pro zař
     |------------------------------------------|------------------------------------------|
     | <strong>Heslo</strong> | Vyzve uživatele k zadání hesla. Vždy vyžadovat heslo pro nezabezpečená zařízení, pokud není přístup kontrolován jiným způsobem (například celoobrazovkový režim, který zařízení omezuje na jednu aplikaci). Pro iOS/iPadOS 7,0 a novější. |
     | <strong>Zjišťování polohy</strong> | Vyzve uživatele k poskytnutí polohy. Pro macOS 10,11 a novější a iOS/iPadOS 7,0 a novější. |
-    | <strong>Obnovení</strong> | Zobrazí obrazovku aplikace & data. Tato obrazovka nabídne uživateli při nastavování zařízení možnost obnovit nebo přenést data ze zálohy v iCloudu. Pro macOS 10,9 a novější a iOS/iPadOS 7,0 a novější. |
+    | <strong>Obnovil</strong> | Zobrazí obrazovku aplikace & data. Tato obrazovka nabídne uživateli při nastavování zařízení možnost obnovit nebo přenést data ze zálohy v iCloudu. Pro macOS 10,9 a novější a iOS/iPadOS 7,0 a novější. |
     | <strong>iCloud a Apple ID</strong> | Umožní uživateli přihlásit se pomocí svého Apple ID a používat iCloud. Pro macOS 10,9 a novější a iOS/iPadOS 7,0 a novější.   |
     | <strong>Podmínky a ujednání</strong> | Požaduje, aby uživatel přijal podmínky a ujednání společnosti Apple. Pro macOS 10,9 a novější a iOS/iPadOS 7,0 a novější. |
     | <strong>Touch ID</strong> | Umožní uživateli nastavit pro zařízení identifikaci otiskem prstu. Pro macOS 10.12.4 a novější a iOS/iPadOS 8,1 a novější. |

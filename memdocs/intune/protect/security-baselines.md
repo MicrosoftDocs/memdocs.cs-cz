@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/01/2020
+ms.date: 05/21/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.reviewer: laarrizz
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 35e48be90b80d0c776087c95444f5f77f5ff547c
-ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
+ms.openlocfilehash: 578c1c5dc3b6eff9508f7b252fa99a0f8bfcd9c5
+ms.sourcegitcommit: fb77170957f50aa386ff825fb4183b4fd9e3e488
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82693422"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83791805"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Konfigurace zařízení s Windows 10 v Intune pomocí směrných plánů zabezpečení
 
@@ -54,8 +54,8 @@ Následující instance standardních hodnot zabezpečení jsou k dispozici pro 
   - [Základní hodnota zabezpečení MDM pro květen 2019](security-baseline-settings-mdm-all.md?pivots=mdm-may-2019)
   - [Preview: směrný plán zabezpečení MDM pro říjen 2018](security-baseline-settings-mdm-all.md?pivots=mdm-preview)
 
-- **Základní hodnoty**
-  ATP v programu Microsoft Defender *(k použití tohoto směrného plánu musí vaše prostředí splňovat požadavky na použití [rozšířené ochrany před internetovými útoky v programu Microsoft Defender](advanced-threat-protection.md#prerequisites))*.
+- **Základní hodnoty** 
+   ATP v programu Microsoft Defender *(K použití tohoto směrného plánu musí vaše prostředí splňovat požadavky na použití [rozšířené ochrany před internetovými útoky v programu Microsoft Defender](advanced-threat-protection.md#prerequisites))*.
   - [Směrné plány ATP v programu Microsoft Defender pro 2020. dubna verze 4](security-baseline-settings-defender-atp.md?pivots=atp-april-2020)
   - [Směrné plány ATP v programu Microsoft Defender pro březen 2020 – verze 3](security-baseline-settings-defender-atp.md?pivots=atp-march-2020)
 
@@ -74,17 +74,21 @@ Až budete připraveni přejít na novější verzi používaného směrného pl
 
 Každá nová instance verze směrného plánu může přidat nebo odebrat nastavení nebo zavést další změny. Například protože nové nastavení Windows 10 bude k dispozici v nových verzích Windows 10, základní hodnota zabezpečení MDM může obdržet novou instanci verze, která bude obsahovat nejnovější nastavení.
 
-V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)v části**základní hodnoty zabezpečení** **Endpoint Security** > se zobrazí seznam dostupných směrných plánů. Seznam obsahuje název základní šablony, počet profilů, které používají daný typ základního typu, počet oddělených instancí typu standardních hodnot a datum *posledního publikování* , které určuje, kdy byla k dispozici nejnovější verze šablony směrného plánu.
+V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)v části základní hodnoty zabezpečení **Endpoint Security**se  >  **Security baselines** zobrazí seznam dostupných směrných plánů. Seznam obsahuje:
+- název šablony standardních hodnot
+- Kolik profilů používá daný typ standardních hodnot
+- kolik různých instancí typu základní (verze) je dostupných
+- datum *posledního publikování* , které určuje, kdy byla k dispozici nejnovější verze šablony standardních hodnot
 
-Chcete-li zobrazit další informace o základních verzích, které používáte, vyberte dlaždici základní hodnoty a otevřete její podokno *přehledu* a pak vyberte možnost **verze**. Intune zobrazí podrobnosti o verzích tohoto směrného plánu, které používají vaše profily, včetně nejnovější a aktuální základní verze.  Pro zobrazení podrobných podrobností o profilech, které používají tuto verzi, můžete vybrat jednu verzi.
+Chcete-li zobrazit další informace o základních verzích, které používáte, vyberte směrný plán a otevřete jeho podokno *přehledu* a pak vyberte možnost **verze**. Intune zobrazí podrobnosti o verzích tohoto směrného plánu, které používají vaše profily. Podrobnosti zahrnují nejnovější a aktuální základní verzi. Pro zobrazení podrobných podrobností o profilech, které používají tuto verzi, můžete vybrat jednu verzi.
 
-Můžete zvolit [změnu verze](#change-the-baseline-version-for-a-profile) směrného plánu, který se používá s daným profilem. To znamená, že když se objeví nová verze, nemusíte vytvářet nový základní profil, abyste ho mohli využít. Až budete připraveni, můžete vybrat profil standardních hodnot a potom pomocí předdefinované možnosti změnit verzi instance pro tento profil na nový.
+Můžete zvolit [změnu verze](#change-the-baseline-version-for-a-profile) směrného plánu, který se používá s daným profilem. Když změníte verzi, nemusíte vytvářet nový základní profil, abyste mohli využívat aktualizované verze. Místo toho můžete vybrat profil standardních hodnot a použít vestavěnou možnost ke změně verze instance pro tento profil na nový.
 
 ### <a name="compare-baseline-versions"></a>Porovnat základní verze
 
 V podokně **verze** pro směrný plán zabezpečení je seznam každé verze tohoto směrného plánu, který jste nasadili. Tento seznam obsahuje také nejnovější a aktivní verzi směrného plánu. Při vytváření nového *profilu*standardních hodnot zabezpečení profil používá tuto nejnovější verzi směrného plánu zabezpečení.  Můžete pokračovat v používání a úpravách dříve vytvořených profilů, které používají dřívější základní verzi, včetně standardních hodnot vytvořených pomocí verze Preview.
 
-Chcete-li zjistit, co se změnilo mezi verzemi, zaškrtněte políčka pro dvě různé verze a pak vyberte **Porovnat směrné plány** pro stažení souboru CSV, který tyto rozdíly podrobně popisuje. 
+Chcete-li zjistit, co se změnilo mezi verzemi, zaškrtněte políčka pro dvě různé verze a pak vyberte **Porovnat směrné plány**. Pak se zobrazí výzva ke stažení souboru CSV s podrobnostmi o těchto rozdílech.
 
 Stažení identifikuje všechna nastavení ve dvou standardních verzích a poznámky, pokud se toto nastavení změnilo (*notEqual*) nebo má stejné (*stejné*). Podrobnosti zahrnují také výchozí hodnotu nastavení podle verze, a pokud bylo nastavení *přidáno* do novější verze nebo *odebrané* z novější verze.
 
@@ -122,7 +126,7 @@ Mezi běžné úlohy při práci se standardními hodnotami zabezpečení patř�
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Vyberte možnost**základní hodnoty zabezpečení** **Endpoint** > Security a zobrazte seznam dostupných směrných plánů.
+2. Vyberte **Endpoint security**možnost  >  **základní hodnoty zabezpečení** Endpoint Security a zobrazte seznam dostupných směrných plánů.
 
    ![Vyberte standardní hodnoty zabezpečení, které se mají nakonfigurovat.](./media/security-baselines/available-baselines.png)
 
@@ -159,7 +163,7 @@ Mezi běžné úlohy při práci se standardními hodnotami zabezpečení patř�
 
    ![Kontrola standardních hodnot](./media/security-baselines/review.png)
 
-9. Po vytvoření profilu ho upravte tak, že kliknete na možnost**základní hodnoty zabezpečení** **Endpoint Security** > , vyberte typ standardních hodnot, který jste nakonfigurovali, a pak vyberte **profily**. V seznamu dostupných profilů vyberte profil a pak vyberte **vlastnosti**. Můžete upravit nastavení ze všech dostupných karet konfigurace a kliknutím na tlačítko **zkontrolovat + Uložit** změny potvrďte.
+9. Po vytvoření profilu ho upravte tak, že kliknete na **Endpoint security**  >  možnost**základní hodnoty zabezpečení**Endpoint Security, vyberte typ standardních hodnot, který jste nakonfigurovali, a pak vyberte **profily**. V seznamu dostupných profilů vyberte profil a pak vyberte **vlastnosti**. Můžete upravit nastavení ze všech dostupných karet konfigurace a kliknutím na tlačítko **zkontrolovat + Uložit** změny potvrďte.
 
 ### <a name="change-the-baseline-version-for-a-profile"></a>Změna základní verze profilu
 
@@ -181,7 +185,7 @@ Po uložení se po dokončení převodu směrný plán okamžitě znovu nasadí 
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431). 
 
-2. Vyberte možnost**základní hodnoty zabezpečení** **Endpoint** > Security a potom vyberte dlaždici pro typ základního typu, který má profil, který chcete změnit.
+2. Vyberte **Endpoint security**možnost  >  **základní hodnoty zabezpečení**Endpoint Security a potom vyberte dlaždici pro typ základního typu, který má profil, který chcete změnit.
 
 3. V dalším kroku vyberte **profily**a potom zaškrtněte políčko u profilu, který chcete upravit, a pak vyberte **změnit verzi**.
 
@@ -206,6 +210,36 @@ Po uložení se po dokončení převodu směrný plán okamžitě znovu nasadí 
 Pokud se nastavení standardních hodnot zabezpečení už netýká zařízení, nebo se nastavení ve standardních hodnotách nastaví na *není nakonfigurované*, nastavení se v zařízení nevrátí do předem spravované konfigurace. Místo toho předchozí spravovaná nastavení v zařízení ponechá poslední konfigurace přijatá od standardních hodnot, dokud některý jiný proces tyto nastavení v zařízení neaktualizuje.
 
 Jiné procesy, které můžou později měnit nastavení zařízení, zahrnují různé nebo nové základní hodnoty zabezpečení, konfigurační profil zařízení, konfigurace Zásady skupiny nebo ruční úpravu nastavení na zařízení.
+
+### <a name="duplicate-a-security-baseline"></a>Duplikovat směrný plán zabezpečení
+
+Můžete vytvořit duplicity svých standardních hodnot zabezpečení. Scénář při duplikaci standardních hodnot je užitečný, pokud chcete přiřadit podobný, ale odlišný směrný plán k podmnožině zařízení. Vytvořením duplicitních dat nebudete muset ručně znovu vytvořit celý směrný plán. Místo toho můžete duplikovat všechny aktuální směrné plány a potom zavádět pouze změny, které nová instance vyžaduje. Můžete změnit pouze konkrétní nastavení a skupinu, ke které je směrný plán přiřazen.
+
+Při vytváření duplicitního názvu přiřadíte kopii nový název. Kopie se vytvoří se stejnou konfigurací nastavení a značkami oboru jako původní, ale nebude mít žádné přiřazení. Chcete-li přidat přiřazení, bude nutné upravit nový směrný plán.
+
+Všechny standardní hodnoty zabezpečení podporují vytváření duplicitních hodnot.
+
+Po duplikaci směrného plánu zkontrolujte a upravte novou instanci, aby se změnila její konfigurace.
+
+#### <a name="to-duplicate-a-baseline"></a>Duplikace standardních hodnot
+
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. V části **Endpoint security**  >  **základní hodnoty zabezpečení**Endpoint Security vyberte typ směrného plánu, který chcete duplikovat, a pak vyberte **profily**.
+3. Klikněte pravým tlačítkem na profil, který chcete duplikovat, a vyberte **Duplikovat**, nebo vyberte tři tečky (**...**) napravo od směrného plánu a vyberte **Duplikovat**.
+4. Zadejte **nový název** pro směrný plán a potom vyberte **Uložit**.
+
+Po *aktualizaci*se nový základní profil zobrazí v centru pro správu.
+
+#### <a name="to-edit-a-baseline"></a>Úprava směrného plánu
+
+1. Vyberte standardní hodnoty a pak vyberte **vlastnosti**.
+2. Vyberte **Nastavení** a rozbalte seznam kategorií nastavení ve standardních hodnotách. Nastavení z tohoto zobrazení nemůžete změnit, ale můžete zkontrolovat, jak jsou nakonfigurované.
+3. Chcete-li upravit nastavení, vyberte možnost **Upravit** pro každou kategorii, u které chcete provést změnu:
+   - Základy
+   - Přiřazení
+   - Značky oboru
+   - Nastavení konfigurace
+4. Až změny provedete, vyberte **Uložit** a uložte provedené úpravy.  Než začnete s úpravou dalších kategorií, je nutné změny v jedné kategorii Uložit.
 
 ### <a name="older-baseline-versions"></a>Starší základní verze
 

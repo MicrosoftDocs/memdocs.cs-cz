@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/18/2020
+ms.date: 05/21/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1e2b271c9dae03e5352f37404401f540fb78d6f7
-ms.sourcegitcommit: 169e279ba686c28d9a23bc0a54f0a2a0d20bdee4
+ms.openlocfilehash: ae89a939e35f68f55d2e63e7495a9b743cc0fa34
+ms.sourcegitcommit: fb77170957f50aa386ff825fb4183b4fd9e3e488
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83556151"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83791770"
 ---
 # <a name="windows-10-and-later-device-settings-to-run-as-a-kiosk-in-intune"></a>Nastavení zařízení s Windows 10 a novějším, která se mají spustit jako veřejný terminál v Intune
 
@@ -85,7 +85,7 @@ Spustí na zařízení jenom jednu aplikaci.
 
     - **Povolené weby**: Toto nastavení použijte, pokud chcete povolit otevírání konkrétních webů. Jinými slovy, tuto funkci použijte k omezení nebo zabránění spouštění webů na zařízení. Můžete například povolit, aby se otevíraly všechny weby na `http://contoso.com`. Ve výchozím nastavení jsou povolené všechny weby.
 
-      Pokud chcete povolit konkrétní weby, nahrajte soubor, který obsahuje seznam povolených webů na samostatných řádcích. Pokud soubor nepřidáte, jsou povolené všechny weby. Ve výchozím nastavení podporuje Intune zástupnou kartu. Takže když zadáte doménu, například `sharepoint.com` , povolit subdomény, které jsou povoleny automaticky, například `contoso.sharepoint.com` , `my.sharepoint.com` a tak dále.
+      Pokud chcete povolit konkrétní weby, nahrajte soubor, který obsahuje seznam povolených webů na samostatných řádcích. Pokud soubor nepřidáte, jsou povolené všechny weby. Ve výchozím nastavení Intune umožňuje všechny subdomény webu. Například můžete zadat `sharepoint.com` doménu. Intune automaticky povoluje všechny subdomény, například `contoso.sharepoint.com` , `my.sharepoint.com` a tak dále. Nezadávejte zástupné znaky, například hvězdičku ( `*` ).
 
       Váš ukázkový soubor by se měl podobat následujícímu seznamu:
 

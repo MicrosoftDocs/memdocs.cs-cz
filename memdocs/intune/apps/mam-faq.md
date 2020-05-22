@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 16c086295b93b72ef2f9cfbd2d6a15d6bb54f320
-ms.sourcegitcommit: 53bab52e42de28b87e53596646a3532e25eb9c14
+ms.openlocfilehash: 73d34424d9263378e92f1c2c888f6b79bb30ce55
+ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82183004"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83764301"
 ---
 # <a name="frequently-asked-questions-about-mam-and-app-protection"></a>Časté otázky ke správě mobilních aplikací (MAM) a ochraně aplikací
 
@@ -78,7 +78,7 @@ Zásadami ochrany aplikací Intune se dá spravovat každá aplikace integrovan�
 
 Vývojový tým sady Intune SDK aktivně testuje a udržuje podporu pro aplikace vytvořené s nativními platformami Android, iOS/iPadOS (obj-C, SWIFT), Xamarin a Xamarin. Forms. I když se někteří zákazníci dokončí s integrací sady Intune SDK s jinými platformami, jako je například reakce nativních a NativeScript, neposkytujeme explicitní pokyny ani moduly plug-in pro vývojáře aplikací, kteří používají jinou než naše podporované platformy.
 
-**Podporuje sada Intune App SDK knihovnu MSAL (Microsoft Authentication Library) nebo účty sociálních sítí?**<br></br>
+**Podporuje Intune APP SDK knihovnu Microsoft Authentication Library (MSAL)?**<br></br>
 Sada Intune App SDK může pro své scénáře ověřování a podmíněného spuštění použít buď knihovnu ověřování Azure Active Directory, nebo knihovnu Microsoft Authentication Library. Také spoléhá na knihovnu ADAL/MSAL k registraci identity uživatele ve službě MAM pro správu bez scénářů registrace zařízení.
 
 **Jaké jsou další požadavky na používání [mobilní aplikace Outlook](https://products.office.com/outlook)?**

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: beea54b7ca244190ec0821d4ce8364369797590a
-ms.sourcegitcommit: ad4b3e4874a797b755e774ff84429b5623f17c5c
+ms.openlocfilehash: e158edfcb622f7a6e614b767ab05633f0a5151c7
+ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82166603"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83764165"
 ---
 # <a name="enforce-compliance-for-microsoft-defender-atp-with-conditional-access-in-intune"></a>Vymáhání dodržování předpisů pro Microsoft Defender ATP pomocí podmíněného přístupu v Intune
 
@@ -74,12 +74,12 @@ Pro každého tenanta stačí pouze povolit v programu Defender ATP pouze jeden 
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Vyberte **Endpoint Security** > **Microsoft Defender ATP**a pak vyberte **Otevřít Microsoft Defender Security Center**.
+2. Vyberte **Endpoint Security**  >  **Microsoft Defender ATP**a pak vyberte **Otevřít Microsoft Defender Security Center**.
 
    ![Výběrem otevřete Security Center programu Microsoft Defender.](./media/advanced-threat-protection/atp-device-compliance-open-microsoft-defender.png)
 
 3. V **programu Microsoft Defender Security Center**:
-   1. Vyberte **Nastavení** > **Rozšířené funkce**.
+   1. Vyberte **Nastavení**  >  **Rozšířené funkce**.
    2. Přepínač pro **připojení Microsoft Intune** přepněte do polohy **Zapnuto**:
 
       ![Povolení připojení k Intune](./media/advanced-threat-protection/atp-security-center-intune-toggle.png)
@@ -104,7 +104,7 @@ Pro každého tenanta stačí pouze povolit v programu Defender ATP pouze jeden 
 > - Liší se od zásad podmíněného přístupu, které byste mohli vytvořit, abyste mohli lépe spravovat MTD.
 > - Ve výchozím nastavení nekomunikujete s dalšími zásadami podmíněného přístupu, které používáte pro vyhodnocení.
 >
-> Pokud chcete zobrazit klasické zásady podmíněného přístupu, přejděte v [Azure](https://portal.azure.com/#home)na **Azure Active Directory** > **klasické zásady****podmíněného přístupu** > .
+> Pokud chcete zobrazit klasické zásady podmíněného přístupu, přejděte v [Azure](https://portal.azure.com/#home)na **Azure Active Directory**  >  klasické zásady**podmíněného přístupu**  >  **Classic policies**.
 
 ## <a name="onboard-windows-devices-by-using-a-configuration-profile"></a>Připojování zařízení s Windows pomocí konfiguračního profilu 
 
@@ -115,7 +115,7 @@ Po navázání připojení k Microsoft Defender ATP obdržela Intune konfigurač
 ### <a name="create-the-device-configuration-profile"></a>Vytvoření profilu konfigurace zařízení
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **Konfigurace zařízení** > **profily** > konfigurace**vytvořit profil**.
+2. Vyberte **Devices**  >  **Konfigurace zařízení profily konfigurace**  >  **vytvořit profil**.
 3. Zadejte **Název** a **Popis**.
 4. V části **Platforma** vyberte **Windows 10 a novější**. 
 5. Jako **typ profilu**vyberte **ATP Microsoft Defender (Windows 10 Desktop)**.
@@ -142,7 +142,7 @@ Pokud jste se neseznámili s vytvářením zásad dodržování předpisů, v č
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Vyberte **zařízení** >  > **Policies**zásady > **zásad dodržování předpisů****vytvořit zásadu**.
+2. Vyberte **zařízení**zásady  >  **zásad dodržování předpisů**  >  **Policies**  >  **vytvořit zásadu**.
 
 3. V části **platforma** vyberte *Windows 10 a novější*, **Správce zařízení s Androidem**a/nebo **Android Enterprise**. Pak vyberte **vytvořit** a otevřete tak okno **vytvořit konfiguraci zásad** .
 
@@ -168,7 +168,7 @@ Zásada podmíněného přístupu blokuje přístup k prostředkům pro zaříze
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Vyberte položku **Endpoint Security** > **podmíněný přístup** > **nové zásady**.
+2. Vyberte položku **Endpoint Security**  >  **podmíněný přístup**  >  **nové zásady**.
 
 3. Zadejte **Název** zásady a zvolte **Uživatelé a skupiny**. Pomocí možností Zahrnout a Vyloučit vyberte požadované skupiny pro nasazení zásady a zvolte **Hotovo**.
 
@@ -176,11 +176,11 @@ Zásada podmíněného přístupu blokuje přístup k prostředkům pro zaříze
 
    Zvolením možnosti **Hotovo** uložte změny.
 
-5. Vyberte **podmínky** > , které**klientské aplikace** použijí pro použití zásad pro aplikace a prohlížeče. Zvolte například **Ano** a pak povolte **Prohlížeč** a **Mobilní aplikace a desktopoví klienti**.
+5. Vyberte **podmínky**,  >  které**klientské aplikace** použijí pro použití zásad pro aplikace a prohlížeče. Zvolte například **Ano** a pak povolte **Prohlížeč** a **Mobilní aplikace a desktopoví klienti**.
 
    Zvolením možnosti **Hotovo** uložte změny.
 
-6. Vyberte **udělit** pro uplatnění podmíněného přístupu na základě dodržování předpisů zařízením. Vyberte například **udělit přístup** > **vyžadovat, aby zařízení bylo označené jako vyhovující**.
+6. Vyberte **udělit** pro uplatnění podmíněného přístupu na základě dodržování předpisů zařízením. Vyberte například **udělit přístup**  >  **vyžadovat, aby zařízení bylo označené jako vyhovující**.
 
     Zvolením možnosti **Vybrat** uložte změny.
 
@@ -192,19 +192,19 @@ Dále Sledujte stav zařízení, která mají zásady dodržování předpisů A
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Vyberte **zařízení** > **monitorování** > **dodržování zásad**.
+2. Vyberte **zařízení**  >  **monitorování**  >  **dodržování zásad**.
 
 3. Vyhledejte v seznamu Zásady ochrany ATP v programu Microsoft Defender a podívejte se, která zařízení jsou kompatibilní nebo nekompatibilní.
 
 Můžete také použít *provozní* sestavu pro zařízení nedodržující předpisy ze stejného umístění:
 
-1. Vyberte **zařízení** > **monitorovat** > **zařízení, která nedodržují předpisy**.
+1. Vyberte **zařízení**  >  **monitorovat**  >  **zařízení, která nedodržují předpisy**.
 
 Další informace o sestavách najdete v tématu [sestavy Intune](../fundamentals/reports.md).
 
 ## <a name="view-onboarding-status"></a>Zobrazit stav zprovoznění
 
-Pokud chcete zobrazit stav připojování všech zařízení s Windows 10 spravovaných přes Intune, můžete přejít do části **Správa** > tenanta**ATP Microsoft Defender**. Na této stránce můžete také zahájit vytváření konfiguračního profilu zařízení pro připojování více zařízení do ATP v programu Microsoft Defender.
+Pokud chcete zobrazit stav připojování všech zařízení s Windows 10 spravovaných přes Intune, můžete přejít na **Security Endpoint Security**v  >  **Microsoft Defenderu**. Na této stránce můžete také zahájit vytváření konfiguračního profilu zařízení pro připojování více zařízení do ATP v programu Microsoft Defender.
 
 ## <a name="next-steps"></a>Další kroky
 

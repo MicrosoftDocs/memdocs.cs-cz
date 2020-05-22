@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/15/2020
+ms.date: 05/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9657353dd877b380d506e588934e3f6fd29b51c1
-ms.sourcegitcommit: b7e5b053dfa260e7383a9744558d50245f2bccdc
+ms.openlocfilehash: 6d60d7f366159777548e61fdf52aadedfecb32ae
+ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82587035"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83764029"
 ---
 # <a name="add-email-settings-to-devices-using-intune"></a>Přidání nastavení e-mailu do zařízení pomocí Intune
 
@@ -29,9 +29,9 @@ Microsoft Intune obsahuje různá nastavení e-mailu, která můžete nasadit do
 
 E-mailové profily umožňují nakonfigurovat nastavení integrovaného e-mailu na následujících zařízeních:
 
-- Správce zařízení s Androidem na Samsung KNOX Standard 4,0 a novějších
+- Správce zařízení s Androidem na Samsung KNOX standard 5,0 a novějších
 - Android Enterprise
-- iOS 8,0 a novější
+- iOS 11,0 a novější
 - iPadOS 13,0 a novější
 - Windows Phone 8,1 a novější
 - Windows 10 (pro stolní počítače) a Windows 10 Mobile
@@ -41,7 +41,7 @@ V tomto článku se dozvíte, jak vytvořit e-mailový profil v Microsoft Intune
 ## <a name="create-the-profile"></a>Vytvoření profilu
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **Konfigurace zařízení** > **profily** > konfigurace**vytvořit profil**.
+2. Vyberte **Devices**  >  **Konfigurace zařízení profily konfigurace**  >  **vytvořit profil**.
 3. Zadejte tyto vlastnosti:
 
     - **Platforma**: vyberte platformu zařízení. Možnosti:  
@@ -71,7 +71,7 @@ V tomto článku se dozvíte, jak vytvořit e-mailový profil v Microsoft Intune
     - [Windows Phone 8.1](email-settings-windows-phone-8-1.md)
 
 8. Vyberte **Další**.
-9. V části **značky oboru** (volitelné) přiřaďte značku pro filtrování profilu pro konkrétní IT skupiny, například `US-NC IT Team` nebo. `JohnGlenn_ITDepartment` Další informace o značkách oboru naleznete v tématu [použití značek RBAC a Scope pro distribuci](../fundamentals/scope-tags.md).
+9. V části **značky oboru** (volitelné) přiřaďte značku pro filtrování profilu pro konkrétní IT skupiny, například `US-NC IT Team` nebo `JohnGlenn_ITDepartment` . Další informace o značkách oboru naleznete v tématu [použití značek RBAC a Scope pro distribuci](../fundamentals/scope-tags.md).
 
     Vyberte **Další**.
 
@@ -85,7 +85,7 @@ V tomto článku se dozvíte, jak vytvořit e-mailový profil v Microsoft Intune
 
 E-mailové profily se nepřiřazují skupinám uživatelů, ale skupinám zařízení. Existují různé způsoby, jak ze zařízení odebrat e-mailový profil, i když je v zařízení jenom jeden profil:
 
-- **Možnost 1**: Otevřete e-mailový profil (**profily konfigurací** **zařízení** > > vyberte svůj profil) a zvolte **přiřazení**. Na kartě **Zahrnout** jsou skupiny, které jsou k profilu přiřazené. Klikněte na skupinu pravým tlačítkem > **Odebrat**. Nezapomeňte změny uložit kliknutím na **Uložit**.
+- **Možnost 1**: Otevřete e-mailový**Devices**profil (  >  **profily konfigurací** zařízení > vyberte svůj profil) a zvolte **přiřazení**. Na kartě **Zahrnout** jsou skupiny, které jsou k profilu přiřazené. Klikněte na skupinu pravým tlačítkem > **Odebrat**. Nezapomeňte změny uložit kliknutím na **Uložit**.
 
 - **2. možnost:**[Vymažte zařízení nebo ho vyřaďte](../remote-actions/devices-wipe.md). Tyto akce můžete použít k selektivnímu nebo úplnému odebrání dat a nastavení.
 

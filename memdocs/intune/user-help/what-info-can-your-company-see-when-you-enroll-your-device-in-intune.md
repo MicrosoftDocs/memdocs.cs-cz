@@ -18,12 +18,12 @@ ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
 ms.collection: ''
-ms.openlocfilehash: ed3f9f6f01c8dc2df3a89daee991d9f8c61056b9
-ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
+ms.openlocfilehash: d546c92cb498a58c649ed0668dc254bbd6903699
+ms.sourcegitcommit: fb77170957f50aa386ff825fb4183b4fd9e3e488
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82210311"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83791829"
 ---
 # <a name="what-information-can-my-organization-see-when-i-enroll-my-device"></a>Jaké informace moje organizace uvidí, když zaregistruji své zařízení?
 
@@ -51,7 +51,14 @@ Při registraci zařízení do Microsoft Intune nevidí organizace vaše osobní
 - IMEI
 
  > [!NOTE]
- > U plně spravovaných a vyhrazených zařízení pro Android Enterprise se nebudete moct podívat na všechny inventáře aplikací.    
+ > U plně spravovaných a vyhrazených zařízení pro Android Enterprise se nebudete moct podívat na všechny inventáře aplikací.
+ 
+ > [!NOTE]
+ > Aplikace se považuje za **spravovanou aplikaci** , když je nainstalovaná jedním z následujících způsobů:
+ > 1. Uživatel si ho nainstaluje z aplikace Portál společnosti po jeho publikování jako **k dispozici** správcem Intune.
+ > 2. Aplikace je publikovaná podle **požadavku** správce Intune a je na zařízení nainstalovaná. 
+ >
+ > Pokud jste správcem IT nebo pracovníkem podpory ve vaší organizaci a chcete získat další informace o správě aplikací v Intune, přečtěte si téma [porozumění možnostem nespravovaných aplikací, spravovaných aplikací a aplikací mam](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/understanding-the-capabilities-of-unmanaged-apps-managed-apps/ba-p/249164).
     
 **Údaje, které vaše organizace může vidět:**
 
