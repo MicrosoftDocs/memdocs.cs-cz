@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e4c8ee2e25d14d6b39cea91255ed955eeb27174d
-ms.sourcegitcommit: 5dc3545d7f76ce81598f6b1c9734b0ac0a3e9722
+ms.openlocfilehash: 6f22b2d87492d227b8a78859adb1debc504da8d5
+ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83690703"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83824179"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>Přizpůsobení aplikací Portál společnosti Intune, Portál společnosti webu a Intune
 
@@ -220,8 +220,8 @@ Některé platformy a konfigurace neumožňují akce zařízení samoobslužné 
 
 |  | Windows 10<sup>(3)</sup> | iOS/iPadOS<sup>(3)</sup> | MacOS<sup>(3)</sup> | Android<sup>(3)</sup> |
 |----------------------|--------------------------|-------------------|-----------------------------------|-------------------------|
-| Vyřazení | K dispozici<sup>(1)</sup> | K dispozici | K dispozici | K dispozici<sup>(7)</sup> |
-| Vymazání | K dispozici | K dispozici<sup>(5)</sup> | NA | K dispozici<sup>(7)</sup> |
+| Vyřazení | K dispozici<sup>(1)</sup> | K dispozici<sup>(9)</sup> | K dispozici | K dispozici<sup>(7)</sup> |
+| Vymazání | K dispozici | K dispozici<sup>(5)</sup><sup>(9)</sup> | NA | K dispozici<sup>(7)</sup> |
 | Přejmenovat<sup>(4)</sup> | K dispozici | K dispozici | K dispozici | K dispozici |
 | Sync | K dispozici | K dispozici | K dispozici | K dispozici |
 | Vzdálené uzamčení | Pouze Windows Phone | K dispozici | K dispozici | K dispozici |
@@ -235,7 +235,8 @@ Některé platformy a konfigurace neumožňují akce zařízení samoobslužné 
 <sup>(5)</sup> **vymazání** není k dispozici pro uživatele zaregistrovaná zařízení se systémem iOS/iPadOS.<br>
 <sup>(6)</sup> **resetování hesla** není podporované u některých konfigurací pro Android a Android Enterprise. Další informace najdete v tématu [resetování nebo odebrání hesla zařízení v Intune](../remote-actions/device-passcode-reset.md).<br>
 <sup>(7)</sup> **vyřazení** a **vymazání** nejsou k dispozici ve scénářích pro vlastníky zařízení s Androidem Enterprise (odolat, Cobo, COSU).<br>
-<sup>(8)</sup> **resetování hesla** není podporované uživatelem zaregistrovanými zařízeními iOS/iPadOS.
+<sup>(8)</sup> **resetování hesla** není podporované uživatelem zaregistrovanými zařízeními iOS/iPadOS.<br>
+<sup>(9)</sup> Všechna zařízení s automatickým zápisem zařízení s iOS nebo iPadOS (dříve označovaná jako DEP) mají zakázané možnosti **vyřazení** a **vymazání** .
 
 ### <a name="app-logs"></a>Protokoly aplikací
 

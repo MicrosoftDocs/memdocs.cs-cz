@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/15/2020
+ms.date: 05/22/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,25 +16,30 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: dd41cfc0d08771c461e6f681ed18791535202bef
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: dd53ec47435ba9dc416d2b152719b393d1647f90
+ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431313"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83823992"
 ---
 # <a name="endpoint-detection-and-response-policy-settings-for-endpoint-security-in-intune"></a>Nastavení zásad pro zjišťování a odpověď koncových bodů pro zabezpečení koncových bodů v Intune
 
-Podívejte se na nastavení, která můžete nakonfigurovat v části profily pro *zjišťování koncových bodů a zásady odezvy* v uzlu zabezpečení koncového bodu služby Intune jako součást [zásad zabezpečení koncového bodu](../protect/endpoint-security-policy.md).
+Podívejte se na nastavení, která můžete nakonfigurovat v části profily pro [zjišťování koncových bodů a zásady odezvy](../protect/endpoint-security-edr-policy.md) v uzlu zabezpečení koncového bodu služby Intune.
 
 Podporované platformy a profily:
 
-- **Windows 10 a novější**:
-  - Profil: **detekce a odpověď koncového bodu**
+- **Windows 10 a novější**: tuto platformu použijte pro zásady, které nasadíte do zařízení spravovaných pomocí Intune.
+  - Profil: **detekce a odpověď koncového bodu (MDM)**
 
-## <a name="endpoint-detection-and-response-profile"></a>Zjišťování koncových bodů a profil odpovědi
+- **Windows 10 a Windows Server**: tuto platformu použijte pro zásady, které nasadíte do zařízení spravovaných pomocí Configuration Manager.
+  - Profil: **detekce a odpověď koncového bodu (ConfigMgr) (Preview)**
+  
+  *Tato platforma a profil jsou v Public Preview*.
 
-### <a name="endpoint-detection-and-response"></a>Zjišťování koncových bodů a odpověď
+## <a name="endpoint-detection-and-response-mdm"></a>Detekce a odpověď koncového bodu (MDM)
+
+**Zjištění a odpověď koncového bodu**:
 
 - **Typ balíčku konfigurace klienta ATP v programu Microsoft Defender**
 
@@ -53,6 +58,21 @@ Podporované platformy a profily:
   
   - **Objekt BLOB pro zrušení rozšířené ochrany před internetovými útoky**  
      Kliknutím na **Vybrat soubor** pro zrušení otevřete podokno *Vybrat soubor* pro oddálení, kde zadáte `.offboarding` soubor.
+
+- **Sdílení ukázky pro všechny soubory**  
+
+  Vrátí nebo nastaví parametr konfigurace sdílení ukázky rozšířené ochrany před internetovými útoky v programu Microsoft Defender.  
+  - **Nenakonfigurováno** (*výchozí*)
+  - **Ano**
+
+- **Urychlení četnosti vytváření sestav telemetrie**
+
+  - **Nenakonfigurováno** (*výchozí*)
+  - **Ano** – zvýšit četnost generování sestav telemetrie rozšířené ochrany před internetovými útoky v programu Microsoft Defender
+
+## <a name="endpoint-detection-and-response-configmgr-preview"></a>Zjištění a odpověď koncového bodu (ConfigMgr) (Preview)
+
+**Zjištění a odpověď koncového bodu**:
 
 - **Sdílení ukázky pro všechny soubory**  
 

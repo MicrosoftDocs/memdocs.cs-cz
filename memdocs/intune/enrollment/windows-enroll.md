@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 08/05/2019
+ms.date: 05/22/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fd7483319443b7a960f8e704442d2b43b6b00c66
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 55d7be5d54d194ccd3a1f982f70f26ee8c829d4f
+ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326910"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83824145"
 ---
 # <a name="set-up-enrollment-for-windows-devices"></a>Nastavení registrace pro zařízení s Windows
 
@@ -95,14 +95,14 @@ Správce DNS Contosa by měl vytvořit následující záznamy CNAME:
 
 Změny záznamů DNS se mohou projevit až po 72 hodinách. Před rozšířením záznamu DNS nemůžete v Intune ověřit změnu DNS.
 
-## <a name="additional-endpoints-are-supported-but-not-recommended"></a>Další koncové body jsou podporované, ale nedoporučují se.
-EnterpriseEnrollment-s.manage.microsoft.com je upřednostňovaný plně kvalifikovaný název domény pro registraci, ale podporují se dva ostatní koncové body, které zákazníci v minulosti používali. EnterpriseEnrollment.manage.microsoft.com (bez a-s) a manage.microsoft.com fungují jako cíl pro Server automatického zjišťování, ale uživatel bude muset na potvrzovací zprávě se dotknout OK. Pokud odkazujete na EnterpriseEnrollment-s.manage.microsoft.com, uživatel nebude muset provést další potvrzovací krok, takže se jedná o doporučenou konfiguraci.
+## <a name="additional-endpoints-are-used-but-no-longer-supported"></a>Používají se další koncové body, ale už se nepodporují.
+EnterpriseEnrollment-s.manage.microsoft.com je upřednostňovaný plně kvalifikovaný název domény pro registraci. Existují dva ostatní koncové body, které zákazníci používali v minulosti a stále pracují, ale již nejsou podporováni. EnterpriseEnrollment.manage.microsoft.com (bez a-s) a manage.microsoft.com fungují jako cíl pro Server automatického zjišťování, ale uživatel bude muset na potvrzovací zprávě se dotknout OK. Pokud odkazujete na EnterpriseEnrollment-s.manage.microsoft.com, uživatel nebude muset provést další potvrzovací krok, takže se jedná o doporučenou konfiguraci.
 
 ## <a name="alternate-methods-of-redirection-are-not-supported"></a>Alternativní metody přesměrování se nepodporují.
 Použití jiné metody než konfigurace CNAME není podporováno. Například použití proxy server k přesměrování enterpriseenrollment.contoso.com/EnrollmentServer/Discovery.svc na enterpriseenrollment-s.manage.microsoft.com/EnrollmentServer/Discovery.svc nebo manage.microsoft.com/EnrollmentServer/Discovery.svc není podporováno.
 
 **Krok 2: Ověřte záznamy CNAME** (volitelné)<br>
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **Windows** > **Windows registrace** > **CNAME ověřování**.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení**  >  **Windows**  >  **Windows registrace**  >  **CNAME ověřování**.
 2. Do pole **Doména** zadejte web společnosti a zvolte **Test**.
 
 ## <a name="tell-users-how-to-enroll-windows-devices"></a>Informování uživatelů, jak zařízení s Windows zaregistrovat
@@ -114,7 +114,7 @@ Informujte uživatele, jak si mají svá zařízení s Windows zaregistrovat a c
 Postup registrace koncových uživatelů najdete v tématu [Registrace zařízení s Windows v Intune](../user-help/windows-enrollment-company-portal.md). Uživatelům také můžete poradit, aby si přečetli článek o tom, [jaké informace vidí správce IT na zařízení](../user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md).
 
 >[!IMPORTANT]
-> Pokud není povolená automatická registrace MDM, ale máte zařízení s Windows 10 připojená ke službě Azure AD, zobrazí se v konzole Intune po registraci dva záznamy. To můžete zastavit tím, že zajistíte, že uživatelé se zařízeními připojenými k Azure AD přejdou na **účty** > **přístup do práce nebo do školy** a **připojíte** se pomocí stejného účtu. 
+> Pokud není povolená automatická registrace MDM, ale máte zařízení s Windows 10 připojená ke službě Azure AD, zobrazí se v konzole Intune po registraci dva záznamy. To můžete zastavit tím, že zajistíte, že uživatelé se zařízeními připojenými k Azure AD přejdou na **účty**  >  **přístup do práce nebo do školy** a **připojíte** se pomocí stejného účtu. 
 
 Další informace o úlohách pro koncové uživatele najdete v tématu [Materiály o prostředí Microsoft Intune pro koncové uživatele](../fundamentals/end-user-educate.md).
 

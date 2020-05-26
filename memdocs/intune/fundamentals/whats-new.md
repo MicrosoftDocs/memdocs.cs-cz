@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/21/2020
+ms.date: 05/22/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c737de8a991bc8d96e38d729292be721c6bdd1cf
-ms.sourcegitcommit: fb77170957f50aa386ff825fb4183b4fd9e3e488
+ms.openlocfilehash: ca3ec1605bd4d63c182511c32297da0bdb503d8b
+ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83791844"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83824162"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
@@ -53,6 +53,22 @@ Podívejte se, co je nového v jednom týdnu v Microsoft Intune v [centru pro sp
 ### Monitor and troubleshoot
 
 <!-- ########################## -->
+
+## <a name="week-of-may-18-2020"></a>Týden od 18. května 2020
+
+### <a name="device-security"></a>Zabezpečení zařízení
+
+#### <a name="use-endpoint-detection-and-response-policy-to-onboard-devices-to-defender-atp---7130165----"></a>Použití zjišťování koncových bodů a zásad odezvy k zapojení zařízení do ATP pro Defender<!-- 7130165  -->
+
+Zásady zabezpečení koncového bodu [pro zjišťování koncových bodů a odpověď](../protect/endpoint-security-edr-policy.md) (EDR) použijte k připojení a konfiguraci zařízení pro nasazení aplikace Microsoft Defender Advanced Threat Protection (Defender ATP). EDR podporuje zásady pro zařízení s Windows spravovaná přes Intune (MDM) a samostatné zásady pro zařízení s Windows spravovaná pomocí Configuration Manager. 
+
+Pokud chcete používat zásady pro Configuration Manager zařízení, musíte [nastavit Configuration Manager pro podporu zásad EDR](../protect/endpoint-security-edr-policy.md#set-up-configuration-manager-to-support-edr-policy). Nastavení zahrnuje:
+
+- Nakonfigurujte Správce konfigurace pro *připojení tenanta*.
+- Pokud chcete povolit podporu zásad EDR, nainstalujte konzolovou aktualizaci pro Configuration Manager. Tato aktualizace se vztahuje jenom na hierarchie, které mají povolené *připojení tenanta*.
+- Synchronizujte svoje kolekce zařízení s vaší hierarchií do centra pro správu služby Microsoft Endpoint Manager.
+
+
 ## <a name="week-of-may-11-2020-2005-service-release"></a>Týden od 11. května 2020 (2005 Service Release)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -526,7 +542,7 @@ Nové možnosti organizace jsou ty, které jsou k dispozici pro základní profi
 Aktualizovali jsme [prostředí pro uživatele](../configuration/device-profile-create.md) v centru pro správu správy koncových**Devices**bodů (  >  **konfigurační profily**zařízení  >  **vytvořit profil**) pro vytváření a úpravu následujících typů profilů. Nové prostředí prezentuje stejné nastavení jako předtím, ale používá i průvodce, který nepotřebuje tolik horizontální posouvání. Pro nové prostředí nebudete muset měnit existující konfigurace.
 
 - Odvozené přihlašovací údaje
-- E-mailu
+- E-mail
 - Certifikát PKCS
 - Importovaný certifikát PKCS
 - Certifikát SCEP
