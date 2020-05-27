@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 01/09/2019
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,19 +19,19 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: c32be14ed453d7afd9b91e1c637a6c0484a872a6
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: ef75b3a678c60fd2683feb269210d70baed9c46a
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79327871"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83881964"
 ---
 # <a name="send-logs-to-your-company-support-from-the-settings-app-for-windows-10"></a>Odeslání protokolů firemní podpoře z aplikace Nastavení pro Windows 10
 
 Pomocí aplikace nastavení můžete řešit potíže s Portál společnosti pro Windows 10. Pokud narazíte na problém při používání aplikace na zařízení s Windows 10, můžete vám poslat tým podpory e-mailem. Události a chyby, ke kterým dochází v aplikaci Portál společnosti, se uloží do vašeho zařízení ve speciálním dokumentu s názvem _diagnostický protokol_. Můžou obsahovat další informace o této chybě a při exportu jsou užitečné pro podporu týmů.
 
 1. Pokud chcete otevřít aplikaci **Nastavení** , přejděte do nabídky **Start** > **Nastavení**. Můžete také vyhledat *Nastavení* na panelu hledání.
-2. Přejděte na **účty** > **přístup do práce nebo do školy**.
+2. Přejděte na **účty**  >  **přístup do práce nebo do školy**.
 3. Vyberte **exportovat soubory protokolů správy**.
 
    ![Obrazovka Přístup do práce nebo do školy s možností exportu pod nadpisem Související nastavení](./media/w10-export-logs.png)

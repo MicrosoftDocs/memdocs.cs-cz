@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 01/09/2020
-ms.topic: conceptual
+ms.topic: overview
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aa70d5881a60d159ca668751ab2e1de9cf0cbd07
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 1ad9d641bc59b9fee99abce4d05b3871eb90e189
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82076097"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83984841"
 ---
 # <a name="intune-guided-scenarios-overview"></a>Přehled scénářů s asistencí pro Intune 
 
@@ -46,7 +46,7 @@ Scénáře s asistencí nabízejí konkrétní funkce. Následující podrobnost
 
 ### <a name="launching"></a>Spouštění  
 
-Všechny scénáře s asistencí jsou k dispozici > na **[portálu pro správu zařízení](https://endpoint.microsoft.com)****řešení potíží a** > ve**scénářích s asistencí**. 
+Všechny scénáře s asistencí jsou k dispozici na **[portálu pro správu zařízení](https://endpoint.microsoft.com)**  >  **řešení potíží a**ve  >  **scénářích s asistencí**. 
 
 Scénář s asistencí začíná úvodem, který vysvětluje účel scénáře a všechny nezbytné součásti potřebné k dokončení instalace. V tomto okamžiku se kontrolují vaše oprávnění správce, aby se ověřilo, že máte všechna potřebná oprávnění k dokončení tohoto scénáře.  
 

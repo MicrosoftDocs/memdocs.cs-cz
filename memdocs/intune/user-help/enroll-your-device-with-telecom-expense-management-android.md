@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 04/19/2017
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: sumitp
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 2b67a7bd05e8d10ebd9d2ea8649eedce2a8b256c
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 1dd1c2c26a2162daf9865d089d4b3b416c3d3438
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79324655"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83882387"
 ---
 # <a name="enroll-your-android-device-in-telecom-expense-management"></a>Registrace zařízení s Androidem ve službě TEM (Telecom Expense Management)
 

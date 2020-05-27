@@ -7,7 +7,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 10/21/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -15,12 +15,12 @@ ms.technology: ''
 ms.assetid: 82872ba6-80f8-4cc9-adf4-0ccd8ff26dd2
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 10cda4126f709ddd0cb5cda40b36067bd078a3f0
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 2fb2317474b49dcb4bb39a0590c8ad7fa4ac8aa4
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079582"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83984878"
 ---
 # <a name="integrate-pradeo-mobile-threat-defense-with-intune"></a>Integrace ochrany před mobilními hrozbami Pradeo pomocí Intune
 

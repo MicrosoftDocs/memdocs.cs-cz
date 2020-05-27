@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 10/01/2018
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -18,12 +18,12 @@ ROBOTS: ''
 ms.reviewer: priyar
 ms.suite: ems
 ms.collection: ''
-ms.openlocfilehash: ff2ce49140900796c5e5f0fa1f77bbd93a1e6a9a
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: d32a61121dff3f68fe96a9eb4ca6e296a0a2ec74
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79324275"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83881797"
 ---
 # <a name="fix-common-issues-with-your-windows-device"></a>Řešení běžných problémů se zařízením s Windows
 

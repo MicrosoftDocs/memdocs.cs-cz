@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 09/18/2019
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -17,12 +17,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 790aa9e73d990ec3996d4357cbda0e1ddcbf9de9
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 85b98d9ea3a4953e26bf94f990e2c1321309f4de
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79324355"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83881929"
 ---
 # <a name="set-or-change-your-passcode"></a>Nastavení nebo změna vašeho přístupového kódu
 
@@ -35,13 +35,13 @@ Pokud máte potíže při vytváření nebo změně hesla, obraťte se na pracov
 
 ## <a name="set-your-passcode"></a>Nastavení přístupového kódu
 
-1. Klepněte na **Nastavení** > **Touch ID & heslo**.
+1. Klepněte na **Nastavení**  >  **Touch ID & heslo**.
 2. V nabídce **Touch ID & heslo** klepněte na **zapnout heslo**.
 3. Zadejte nový přístupový kód, který splňuje požadavky firemní podpory, a potom ho opětovným zadáním ověřte.
 
 ## <a name="change-your-passcode"></a>Změna přístupového kódu
 
-1. Klepněte na **Nastavení** > **Touch ID & heslo**.
+1. Klepněte na **Nastavení**  >  **Touch ID & heslo**.
 2. Zadejte přístupový kód. Otevře se nabídka **Touch ID a kódový zámek**.
 2. Klepněte na **Změnit přístupový kód** a zadejte svoje staré heslo.
 3. Zadejte nový přístupový kód, který splňuje požadavky firemní podpory, a potom ho opětovným zadáním ověřte.

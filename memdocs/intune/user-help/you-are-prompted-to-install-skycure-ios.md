@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 11/14/2017
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -17,12 +17,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: b0c0a8ae505e582c53e176bae714a22dc8680014
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: c04d01f53a90d06fe9f3ff96c6c3bd180e43c818
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79324051"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83882018"
 ---
 # <a name="install-symantec-endpoint-protection-mobile-on-your-ios-device"></a>Instalace aplikace Symantec Endpoint Protection Mobile na zařízení s iOSem
 

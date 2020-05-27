@@ -7,7 +7,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 02/20/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5862793180efa2184f620920aad7decf3935e1ae
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: b6c762aafbc1d82e7e51746806f8ba15cc5ad83c
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80322434"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83984922"
 ---
 # <a name="enable-the-mobile-threat-defense-connector-in-intune-for-unenrolled-devices"></a>Povolení konektoru ochrany před mobilními hrozbami v Intune pro neregistrovaná zařízení
 
@@ -52,13 +52,13 @@ Klasické zásady podmíněného přístupu pro aplikace MTD:
 
 - Ve výchozím nastavení nekomunikujete s dalšími zásadami podmíněného přístupu, které používáte pro vyhodnocení.
 
-Pokud chcete zobrazit klasické zásady podmíněného přístupu, přejděte v [Azure](https://portal.azure.com/#home)na **Azure Active Directory** > **klasické zásady****podmíněného přístupu** > .
+Pokud chcete zobrazit klasické zásady podmíněného přístupu, přejděte v [Azure](https://portal.azure.com/#home)na **Azure Active Directory**  >  klasické zásady**podmíněného přístupu**  >  **Classic policies**.
 
 ## <a name="to-enable-the-mtd-connector"></a>Povolení konektoru MTD
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Vyberte možnost**konektory** >  **pro správu** > tenanta a**ochranu před mobilními hrozbami**.
+2. Vyberte možnost konektory **pro správu tenanta**  >  **a**  >  **ochranu před mobilními hrozbami**.
 
 3. V podokně **Mobile Threat Defense** zvolte **Přidat**.
 
@@ -74,9 +74,9 @@ Podle požadavků organizace se můžete rozhodnout, jaké možnosti přepínán
 
 **Nastavení zásad ochrany aplikací**
 
-- **Připojit zařízení s Androidem verze 4,4 a novější pro * \<MTD partnerský název>* pro vyhodnocení zásad ochrany aplikací**: když tuto možnost povolíte, zásady ochrany aplikací pomocí pravidla úrovně hrozby zařízení vyhodnotí zařízení, včetně dat z tohoto konektoru.
+- **Připojit zařízení s Androidem verze 4,4 a novější pro * \< MTD partnerský název>* pro vyhodnocení zásad ochrany aplikací**: když tuto možnost povolíte, zásady ochrany aplikací pomocí pravidla úrovně hrozby zařízení vyhodnotí zařízení, včetně dat z tohoto konektoru.
 
-- **Připojení zařízení s iOS verze 11 a novější k * \<MTD partner Name>* pro vyhodnocení zásad ochrany aplikací**: Pokud povolíte tuto možnost, zásady ochrany aplikací pomocí pravidla úrovně hrozby zařízení vyhodnotí zařízení, včetně dat z této spojnice.
+- **Připojení zařízení s iOS verze 11 a novější k * \< MTD partner Name>* pro vyhodnocení zásad ochrany aplikací**: Pokud povolíte tuto možnost, zásady ochrany aplikací pomocí pravidla úrovně hrozby zařízení vyhodnotí zařízení, včetně dat z této spojnice.
 
 **Společné sdílené nastavení**
 

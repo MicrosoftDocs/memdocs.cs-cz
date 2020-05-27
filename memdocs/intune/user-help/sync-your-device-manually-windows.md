@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 07/24/2018
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: cc2fbfac43916a8298646f6ff57c146c45966b1c
-ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
+ms.openlocfilehash: 5346a288a8411a66ab79b0816385a530eeabb8c2
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82254805"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83881860"
 ---
 # <a name="sync-your-windows-device-manually"></a>Ruční synchronizace zařízení s Windows
 
@@ -44,7 +44,7 @@ Tento postup proveďte, pokud chcete ručně synchronizovat všechna zařízení
 
 1. Na svém zařízení otevřete aplikaci Portál společnosti.
 
-2. Vyberte **Nastavení** > **synchronizace**.
+2. Vyberte **Nastavení**  >  **synchronizace**.
 
     ![Snímek obrazovky s domovskou stránkou aplikace Portál společnosti a zvýrazněnou možností Nastavení](./media/RS1_homePage_settings_04.png)  
     
@@ -65,7 +65,7 @@ K řízení synchronizace se dá dostat také mimo aplikaci, z plochy vašeho za
 Následující postup použijte k ruční synchronizaci zařízení se systémem Microsoft HoloLens, Windows 10 Desktop, Windows 10 Mobile nebo Windows Phone 8.1 z aplikace Nastavení.  
 
 ### <a name="windows-10-desktop"></a>Stolní počítač s Windows 10
-1. V zařízení vyberte **Spustit** > **Nastavení**.
+1. V zařízení vyberte **Spustit**  >  **Nastavení**.
 
 2. Vyberte **Účty**.
 
@@ -112,7 +112,7 @@ Následující postup použijte k ruční synchronizaci zařízení se systémem
 
 ### <a name="windows-10-mobile"></a>Windows 10 Mobile
 
-   1. V zařízení, přejít na **všechny aplikace** > **Nastavení** > **účty**.
+   1. V zařízení, přejít na **všechny aplikace**  >  **Nastavení**  >  **účty**.
 
        ![Volba možnosti Účty na obrazovce Nastavení](./media/win10m-sync-1-settings-accounts.png)
 
@@ -131,14 +131,14 @@ Následující postup použijte k ruční synchronizaci zařízení se systémem
 Tyto pokyny platí pro zařízení HoloLens se systémem Windows 10 Anniversary Update (označovaným také jako RS1). 
 1. Otevřete na svém zařízení aplikaci Nastavení.  
 
-2. Vyberte **účty** > **přístup do práce**.  
+2. Vyberte **účty**  >  **přístup do práce**.  
     ![Snímek obrazovky s aplikací Nastavení HoloLens a zvýrazněným odkazem Účty](./media/RS1_holoLens_SettingsRS1_Accounts_06.png)  
 
 3. Vyberte připojený účet > **synchronizaci**.  ![Snímek obrazovky s nastavením aplikace snímku obrazovky, tlačítko synchronizace zvýrazněné](./media/RS1_holoLens_SyncRS1_Sync_08.png)  
 
 ### <a name="windows-phone-81"></a>Windows Phone 8.1
 
-1. Přejít na **všechny aplikace** > **Nastavení** > **pracoviště**.
+1. Přejít na **všechny aplikace**  >  **Nastavení**  >  **pracoviště**.
 
     ![Seznam nastavení](./media/wp81-1-sync-settings-workplace.png)
 

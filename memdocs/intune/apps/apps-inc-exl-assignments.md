@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 02/28/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6095c079c6b5cb6f132d9963e3e7413e97180d70
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: a7f382c604d4cddef487871e47ad004389669982
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80324585"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83984292"
 ---
 # <a name="include-and-exclude-app-assignments-in-microsoft-intune"></a>Zahrnutí a vyloučení přiřazení aplikací v Microsoft Intune
 
@@ -58,7 +58,7 @@ V důsledku toho se nedoporučuje přiřazovat aplikace do smíšených skupin.
 Přiřazení aplikace ke skupinám pomocí zahrnutí a vyloučení přiřazení:
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **aplikace** > **všechny aplikace**. Zobrazí se seznam přidaných aplikací.
+2. Vyberte **aplikace**  >  **všechny aplikace**. Zobrazí se seznam přidaných aplikací.
 3. Vyberte aplikaci, kterou chcete přiřadit. V řídicím panelu se zobrazí informace o aplikaci.
 4. V části nabídky **Spravovat** vyberte **Přiřazení**.
 

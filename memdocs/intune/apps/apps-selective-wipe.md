@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 04/10/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1640928bfb1ca27d4ee72e014adad88db0976a2d
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 2d5e73961daae140a039ba243e7364ffd6b06502
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078324"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83984101"
 ---
 # <a name="how-to-wipe-only-corporate-data-from-intune-managed-apps"></a>Jak z aplikací spravovaných pomocí Intune vymazat jenom firemní data
 
@@ -40,12 +40,12 @@ Pokud chcete selektivně odebrat data firemních aplikací, vytvořte žádost o
 > Kontakty synchronizované přímo z aplikace do nativního adresáře se odeberou. Kontakty synchronizované z nativního adresáře do dalšího externího zdroje není možné vymazat. V současnosti to platí jen pro aplikaci Microsoft Outlook.
 
 ## <a name="deployed-wip-policies-without-user-enrollment"></a>Nasazené zásady WIP bez registrace uživatele 
-Zásady Windows Information Protection (NV) se dají nasadit, aniž by uživatelé MDM museli zaregistrovat svoje zařízení s Windows 10. Tato konfigurace umožňuje společnostem chránit jejich podnikové dokumenty na základě konfigurace WIP a zároveň umožňuje uživatelům uchovat si správu svých vlastních zařízení s Windows. Po ochraně dokumentů pomocí zásad nedokončené výroby je možné chráněná data selektivně vymazat správce Intune ([globální správce nebo správce služby Intune](../fundamentals/users-add.md#types-of-administrators)). Výběrem uživatele a zařízení a odesláním žádosti o vymazání se veškerá data chráněná prostřednictvím zásad WIP stanou nepoužitelnými. Z Intune v Azure Portal vyberte možnost **klientská** > **aplikace aplikace selektivní vymazání**. Další informace najdete v článku [Vytvoření a nasazení zásady ochrany aplikací WIP (Windows Information Protection) u Intune](windows-information-protection-policy-create.md).
+Zásady Windows Information Protection (NV) se dají nasadit, aniž by uživatelé MDM museli zaregistrovat svoje zařízení s Windows 10. Tato konfigurace umožňuje společnostem chránit jejich podnikové dokumenty na základě konfigurace WIP a zároveň umožňuje uživatelům uchovat si správu svých vlastních zařízení s Windows. Po ochraně dokumentů pomocí zásad nedokončené výroby je možné chráněná data selektivně vymazat správce Intune ([globální správce nebo správce služby Intune](../fundamentals/users-add.md#types-of-administrators)). Výběrem uživatele a zařízení a odesláním žádosti o vymazání se veškerá data chráněná prostřednictvím zásad WIP stanou nepoužitelnými. Z Intune v Azure Portal vyberte možnost **klientská**  >  **aplikace aplikace selektivní vymazání**. Další informace najdete v článku [Vytvoření a nasazení zásady ochrany aplikací WIP (Windows Information Protection) u Intune](windows-information-protection-policy-create.md).
 
 ## <a name="create-a-device-based-wipe-request"></a>Vytvoření žádosti o vymazání na základě zařízení
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **aplikace aplikace** > **selektivní vymazání** > **vytvořit žádost o vymazání**.<br>
+2. Vyberte **aplikace aplikace**  >  **selektivní vymazání**  >  **vytvořit žádost o vymazání**.<br>
    Zobrazí se podokno **vytvořit žádost o vymazání** .
 3. Klikněte na **Vybrat uživatele**, vyberte uživatele, jehož data aplikací chcete vymazat, a klikněte na **Vybrat** v dolní části podokna **Vybrat uživatele** .
 
@@ -66,7 +66,7 @@ Služba vytvoří a sleduje samostatnou žádost o vymazání pro každou chrán
 Přidáním uživatele do vymazání na úrovni uživatele budeme automaticky vydávat příkazy pro vymazání všech aplikací na všech zařízeních uživatele.  Uživatel bude nadále získávat příkazy vymazání při každém vrácení se změnami ze všech zařízení.  Chcete-li uživatele znovu povolit, je nutné je odebrat ze seznamu.  
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **aplikace aplikace** > **selektivní vymazání** > **vytvořit žádost o vymazání**.<br>
+2. Vyberte **aplikace aplikace**  >  **selektivní vymazání**  >  **vytvořit žádost o vymazání**.<br>
    Výběr **vymazání na úrovni uživatele**
 3. Klikněte na tlačítko **Přidat** a **Vyberte podokno uživatel** .
 4. Zvolte uživatele, jehož data aplikací chcete vymazat, a klikněte na **Vybrat**.
@@ -75,7 +75,7 @@ Přidáním uživatele do vymazání na úrovni uživatele budeme automaticky vy
 
 Můžete získat souhrnnou sestavu, která zobrazuje celkový stav žádostí o vymazání a také počet nevyřízených a neúspěšných žádostí. Další podrobnosti získáte tímto postupem:
 
-1. V podokně **aplikace** > s**selektivním vymazáním aplikace** můžete zobrazit seznam žádostí seskupených podle uživatelů. Protože systém vytvoří žádost o vymazání pro každou chráněnou aplikaci spuštěnou na zařízení, může být u uživatele více žádostí. Stav označuje, jestli je žádost o vymazání **nevyřízená**, **selhala** nebo byla **úspěšná**.
+1. V podokně **aplikace**s  >  **selektivním vymazáním aplikace** můžete zobrazit seznam žádostí seskupených podle uživatelů. Protože systém vytvoří žádost o vymazání pro každou chráněnou aplikaci spuštěnou na zařízení, může být u uživatele více žádostí. Stav označuje, jestli je žádost o vymazání **nevyřízená**, **selhala** nebo byla **úspěšná**.
 
     ![Snímek obrazovky se stavem žádosti o vymazání v podokně Selektivní vymazání aplikace](./media/apps-selective-wipe/wipe-request-status-1.png)
 

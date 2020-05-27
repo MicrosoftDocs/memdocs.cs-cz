@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 12/18/2019
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: tisilv
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 49e598f370669ed55688af6e6a570a932b5bf9d3
-ms.sourcegitcommit: 3ff33493c3f93bf06fdc942d30958a2a4ad03529
+ms.openlocfilehash: a8d48235141c0b5ad07fbdce4d24e894f8103e6f
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82137962"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83882396"
 ---
 # <a name="set-up-ios-device-access-to-your-company-resources"></a>Nastavení přístupu zařízení s iOSem k prostředkům společnosti  
 
@@ -109,7 +109,7 @@ Pozastavení aplikace po dobu delší než několik minut může způsobit ukon�
 
     ![Příklad snímku obrazovky aplikace nastavení, registrace v možnosti organizace](./media/enroll-in-organization-ios-1909.PNG)  
 
-   Pokud se nezobrazí žádné možnosti, jděte do **obecných** > **profilů &**> **Profil správy**správy zařízení. Pokud se vám stále nezobrazuje profil správy, budete ho muset stáhnout znovu.  
+   Pokud se nezobrazí žádné možnosti, jděte do **obecných**  >  **profilů &** >  **Profil správy**správy zařízení. Pokud se vám stále nezobrazuje profil správy, budete ho muset stáhnout znovu.  
 
 5. Klepněte na **instalovat**.  
     
@@ -159,7 +159,7 @@ Pozastavení aplikace po dobu delší než několik minut může způsobit ukon�
 
     ![Příklad snímku obrazovky aplikace nastavení, registrace v možnosti organizace](./media/enroll-in-organization-ios-1909.PNG)  
 
-   Pokud se nezobrazí žádné možnosti, jděte do **obecných** > **profilů &**> **Profil správy**správy zařízení. Pokud se vám stále nezobrazuje profil správy, budete ho muset stáhnout znovu.   
+   Pokud se nezobrazí žádné možnosti, jděte do **obecných**  >  **profilů &** >  **Profil správy**správy zařízení. Pokud se vám stále nezobrazuje profil správy, budete ho muset stáhnout znovu.   
 
 
 6. Na obrazovce **registrace uživatele** klepněte na **Registrovat iPhone**.  

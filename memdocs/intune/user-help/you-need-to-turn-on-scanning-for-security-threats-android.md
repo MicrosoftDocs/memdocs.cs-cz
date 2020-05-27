@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 01/23/2017
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -17,12 +17,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 664384a03839b85be3ff01731a988315b61342c3
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 6825a6b6dbab206d528d6063afb818510c75971d
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79323963"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83882489"
 ---
 # <a name="enable-security-threat-scans-on-your-device"></a>Povolení vyhledávání bezpečnostních hrozeb na zařízení 
 Pokud nechtěně nainstalujete nebezpečnou aplikaci, můžete ohrozit data zařízení. Pokud chcete data na svém zařízení chránit, doporučujeme: 
@@ -30,8 +30,8 @@ Pokud nechtěně nainstalujete nebezpečnou aplikaci, můžete ohrozit data zař
 * Stahovat aplikace pouze z ověřených zdrojů, jako je obchod Google Play  
 * Povolit vyhledávání bezpečnostních hrozeb na zařízení Tato vyhledávání provádí Google a ověřuje tak, že jsou aplikace pro instalaci bezpečné.  
 
-Pokud chcete povolit kontroly na vašem zařízení, použijte **Nastavení** > **Google** > **Security**. Zapněte nastavení **Vyhledat bezpečnostní hrozby na zařízení**.  
+Pokud chcete povolit kontroly na vašem zařízení, použijte **Nastavení**  >  **Google**  >  **Security**. Zapněte nastavení **Vyhledat bezpečnostní hrozby na zařízení**.  
 
-U některých zařízení Samsung můžete najít nastavení v **Nastavení** > **Google** > **Security** > **Google Play chránit**.
+U některých zařízení Samsung můžete najít nastavení v **Nastavení**  >  **Google**  >  **Security**  >  **Google Play chránit**.
 
 Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980). 

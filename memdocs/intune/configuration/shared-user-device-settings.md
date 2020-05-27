@@ -6,7 +6,7 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 05/13/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f1a11d9b41d17935d9c74490aabb5b983d04b4e1
-ms.sourcegitcommit: b94415467831517f2aeab9c7c8a13fe8db8bc8ed
+ms.openlocfilehash: 4f85c30c9472849d26802c8cdccd7a95006a3e4a
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83401528"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83984011"
 ---
 # <a name="control-access-accounts-and-power-features-on-shared-pc-or-multi-user-devices-using-intune"></a>Řízení přístupu, účtů a funkcí napájení na sdílených počítačích nebo zařízeních s více uživateli pomocí Intune
 

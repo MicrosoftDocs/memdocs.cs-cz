@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 08/14/2019
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 4fd08ba190654db5678766e34e3340330dcf3ca8
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: a7ce95d5c28b1b85f27fdd0aee74e3148abfb554
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79327479"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83882270"
 ---
 # <a name="device-encrypted-but-apps-say-otherwise"></a>Šifrované zařízení, ale aplikace říkají jinak
 
@@ -32,7 +32,7 @@ Pokud Portál společnosti nebo aplikace Microsoft Intune říká, že vaše za�
 
 ## <a name="add-a-startup-pin"></a>Přidání spouštěcího kódu PIN
 
-Určitá zařízení s Androidem budou vyžadovat vytvoření spouštěcího PIN kódu, který zaručí, že je zařízení zabezpečené. Umístění tohoto nastavení bude v aplikaci **Nastavení** vašeho zařízení. Název a umístění nastavení se může lišit. Například na S7 Samsung Galaxy se toto nastavení označuje jako **zabezpečené spuštění**. Pokud ho chcete povolit a vytvořit heslo, přejdete na **Nastavení** > **zamykací obrazovka a zabezpečení** > **zabezpečené po spuštění**.  
+Určitá zařízení s Androidem budou vyžadovat vytvoření spouštěcího PIN kódu, který zaručí, že je zařízení zabezpečené. Umístění tohoto nastavení bude v aplikaci **Nastavení** vašeho zařízení. Název a umístění nastavení se může lišit. Například na S7 Samsung Galaxy se toto nastavení označuje jako **zabezpečené spuštění**. Pokud ho chcete povolit a vytvořit heslo, přejdete na **Nastavení**  >  **zamykací obrazovka a zabezpečení**  >  **zabezpečené po spuštění**.  
 
 ## <a name="encrypt-the-entire-device"></a>Zašifrujte celé zařízení.
 

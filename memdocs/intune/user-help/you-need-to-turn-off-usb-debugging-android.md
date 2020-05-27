@@ -7,7 +7,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 12/06/2018
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -18,18 +18,18 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser; seodec18
 ms.collection: ''
-ms.openlocfilehash: d7f35f3f7f1d3deb607e4f5b0da7b8ffcf5d536f
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 4cc6b1e5f96ff68ac9b73c5e050ff587bdb21506
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79327499"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83882525"
 ---
 # <a name="you-need-to-turn-off-usb-debugging"></a>Potřebujete vypnout Ladění USB.
 
 _Ladění USB_ je režim, ve kterém zařízení s Androidem můžou komunikovat s počítači. Cílem je zjednodušit vývojářům ladění aplikací pro Android. Tento režim umožňuje jistý přístup ke zvláštním oblastem telefonu, se kterými nemusí většina lidí pravidelně pracovat. Mít takový přístup je sice užitečné, ale zařízení může být během připojení k počítači vystavené dalšímu ohrožení informací. Vaše firemní podpora požaduje, aby kvůli lepší ochraně firemních dat ve vašem zařízení bylo toto nastavení vypnuté.
 
-Ladění USB můžete vypnout tak, že kliknete na **Nastavení** > **Možnosti pro vývojáře**a vypnete **ladění USB**.
+Ladění USB můžete vypnout tak, že kliknete na **Nastavení**  >  **Možnosti pro vývojáře**a vypnete **ladění USB**.
 
 Po vypnutí **ladění USB** pár minut počkejte. Potom byste měli být schopni zařízení s Androidem používat pro přístup k datům společnosti nebo školy jako obvykle.
 

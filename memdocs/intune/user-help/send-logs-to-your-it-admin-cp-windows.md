@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 01/09/2019
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: scottduf
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: b0df9499d79ff7773266326d5b0e1347413f88dd
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: b2adca8ed11148e80967c231f79f33b18bb3b113
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79327887"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83881973"
 ---
 # <a name="email-your-company-support-about-problem-from-company-portal-for-windows"></a>Poslat e-mail firemní podpoře o problému z Portál společnosti pro Windows
 
@@ -46,7 +46,7 @@ Události a chyby, ke kterým dochází v aplikaci Portál společnosti, se ulo�
 ## <a name="steps-to-get-help"></a>Postup získání nápovědu  
 
 1. Otevřete aplikaci **portál společnosti** .
-2. Vyberte **Nápověda & podpora** > **získat nápovědu**.  
+2. Vyberte **Nápověda & podpora**  >  **získat nápovědu**.  
 
    ![Snímek obrazovky se stránkou podpory & pro nápovědu, zvýraznění levého navigačního panelu a získání oddílu s nápovědu](./media/1812_UCP_Help_Support_Get_Help_Logs.png)    
 

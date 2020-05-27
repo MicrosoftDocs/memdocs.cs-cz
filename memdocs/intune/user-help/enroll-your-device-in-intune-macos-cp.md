@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 12/16/2019
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: kakyker
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: a069a70077a2b6b1b484bb8a88960c314488cc70
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 2f3fe39285542199cf214c4b5bf505a176663657
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82075910"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83882421"
 ---
 # <a name="enroll-your-macos-device-using-the-company-portal-app"></a>Registrace zařízení macOS pomocí aplikace Portál společnosti  
 
@@ -74,7 +74,7 @@ Pomocí následujících kroků zaregistrujete zařízení macOS ve vaší organ
 5. Na obrazovce **Potvrdit správu zařízení** vyberte **Otevřít Předvolby systému**.  
 
     ![Příklad obrazovky s potvrzením obrazovky potvrdit správu zařízení, zvýraznění "otevřené Předvolby systému".](./media/confirm-device-management-macos-1912.PNG)  
-6. Spustí se Předvolby systému vašeho zařízení. V seznamu profily zařízení vyberte možnost **Profil správy** a pak vyberte **schválit** > **schválení**.  
+6. Spustí se Předvolby systému vašeho zařízení. V seznamu profily zařízení vyberte možnost **Profil správy** a pak vyberte **schválit**  >  **schválení**.  
     ![Příklad obrazovky Předvolby systému, obrazovka profilu správy, zvýrazňování tlačítka "schválit".](./media/management-profile-approve-macos-1912.PNG)   
 1. Vraťte se do Portál společnosti a vyberte **pokračovat**.    
 2. Vaše organizace může vyžadovat, abyste aktualizovali nastavení zařízení. Po dokončení aktualizace nastavení vyberte možnost **kontrolovat nastavení**.  
@@ -85,15 +85,15 @@ Pomocí následujících kroků zaregistrujete zařízení macOS ve vaší organ
 
  ## <a name="troubleshooting-and-feedback"></a>Řešení potíží a zpětná vazba   
 
-Pokud při registraci narazíte na problémy, přečtěte si **informace v tématu** > **poslat diagnostickou zprávu** a oznamte problém vývojářům aplikací Microsoftu. Tyto informace se používají k vylepšení aplikace. Tyto informace budou také tyto informace používat k vyřešení problému, pokud se na něj pracovník podpory IT dostane, aby vám pomohli.  
+Pokud při registraci narazíte na problémy, přečtěte si **informace v tématu**  >  **poslat diagnostickou zprávu** a oznamte problém vývojářům aplikací Microsoftu. Tyto informace se používají k vylepšení aplikace. Tyto informace budou také tyto informace používat k vyřešení problému, pokud se na něj pracovník podpory IT dostane, aby vám pomohli.  
 
 Po nahlášení problému společnosti Microsoft můžete odeslat podrobnosti o vašem prostředí vaší osobě podpory IT. Vyberte **Podrobnosti e-mailu**. Zadejte, co jste se setkali v těle e-mailu. Pokud chcete najít e-mailovou adresu pracovníka podpory, přečtěte si v aplikaci Portál společnosti > **kontaktujte**. Nebo se podívejte na [web portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).  
  
 
-Kromě toho tým Microsoft Intune Portál společnosti by chtěl slyšet vaši zpětnou vazbu. Přejít na další **informace** > a**poslat zpětnou vazbu** ke sdílení vašich nápadů a nápadů.  
+Kromě toho tým Microsoft Intune Portál společnosti by chtěl slyšet vaši zpětnou vazbu. Přejít na další **informace**a  >  **poslat zpětnou vazbu** ke sdílení vašich nápadů a nápadů.  
 
 ## <a name="unverified-profiles"></a>Neověřené profily  
-Když zobrazíte nainstalované profily správy mobilních zařízení (MDM) v**profilech** **systémových předvoleb** > , můžou se u některých profilů zobrazit neověřený stav. Pokud profil správy zobrazuje ověřený stav, nemusíte se zabývat.  
+Když zobrazíte nainstalované profily správy mobilních zařízení (MDM) v **System Preferences**  >  **profilech**systémových předvoleb, můžou se u některých profilů zobrazit neověřený stav. Pokud profil správy zobrazuje ověřený stav, nemusíte se zabývat.  
 
 Právě profil správy definuje připojení kanálu MDM. Dokud se profil správy ověří, všechny ostatní profily doručené počítači prostřednictvím tohoto kanálu zdědí vlastnosti zabezpečení profilu správy.  
 

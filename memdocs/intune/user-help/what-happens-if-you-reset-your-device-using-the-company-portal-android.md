@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 04/19/2019
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 1097abfa7ea0589812e3cc750e6d74cd898fe755
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 5a56f55050eedba199b1d47027cd283a4f74f630
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79327723"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83882041"
 ---
 # <a name="what-happens-if-you-reset-your-android-device-using-the-company-portal"></a>Co se stane, když resetujete zařízení s Androidem pomocí Portálu společnosti?
 

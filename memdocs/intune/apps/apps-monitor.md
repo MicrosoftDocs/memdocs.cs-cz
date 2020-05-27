@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 02/27/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c505b73b37daefac7027ff6b18f209583db99f0a
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 44fa8860380c2059be9feb0ceac3a4b749423ae9
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80324490"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83984111"
 ---
 # <a name="monitor-app-information-and-assignments-with-microsoft-intune"></a>Monitorování informací a přiřazení aplikace pomocí Microsoft Intune
 
@@ -32,7 +32,7 @@ ms.locfileid: "80324490"
 Intune poskytuje několik způsobů, jak monitorovat vlastnosti spravovaných aplikací a spravovat stav jejich přiřazení.
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **aplikace** > **všechny aplikace**.
+2. Vyberte **aplikace**  >  **všechny aplikace**.
 3. V seznamu aplikací vyberte aplikaci, která se má monitorovat. Zobrazí se podokno aplikace s přehledem stavu zařízení a uživatele.
 
 > [!NOTE]
@@ -49,7 +49,7 @@ V podokně aplikace si můžete zkontrolovat podrobnosti o stavu aplikace ve va�
 
  | **Podrobnosti o aplikaci**            | **Popis**                                                      |
 |------------------------|------------------------------------------------------------------|
-| **Microsoft**          | Vydavatel aplikace                                            |
+| **Publisher**          | Vydavatel aplikace                                            |
 | **Operační systém**   | Operační systém aplikace (Windows, iOS/iPadOS, Android atd.). |
 | **Vytvořeno**             | Datum a čas vytvoření této revize <b>**Poznámka**: Tato hodnota data se aktualizuje, když správce IT změní metadata aplikace, jako je například změna kategorie aplikace nebo popisu aplikace.                        |
 | **Přiřazený**           | Jestli byla aplikace přiřazena (**Ano** nebo **Ne**)                  |
@@ -63,7 +63,7 @@ Grafy zobrazují počet aplikací pro následující stav:
 | **Nenainstalováno**     | Počet nenainstalovaných aplikací                     |
 | **Failed**            | Počet neúspěšných instalací                   |
 | **Instalace čeká**   | Počet aplikací, které se právě instalují |
-| **Neuvedeno**           | Počet aplikací, u nichž není stav k dispozici            |
+| **Nelze použít**           | Počet aplikací, u nichž není stav k dispozici            |
 
 > [!NOTE]
 > Mějte na paměti, že aplikace pro Android LOB (. APK) nasazené jako **k dispozici s registrací nebo bez registrace** stav instalace aplikace pouze u zaregistrovaných zařízení. Pro zařízení, která nejsou zaregistrovaná v Intune, není stav instalace aplikace k dispozici.

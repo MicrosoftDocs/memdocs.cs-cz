@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 09/25/2017
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -17,12 +17,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 5c521740eb714ac6e80499dfb99d1e9de2df376e
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 95c3d266654f1290d0a1c6d6eb831ecd7ca354f2
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079633"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83882065"
 ---
 # <a name="install-symantec-endpoint-protection-mobile-on-your-android-device"></a>Instalace Symantec Endpoint Protection Mobile na zařízení s Androidem
 

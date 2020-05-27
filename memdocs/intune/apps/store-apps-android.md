@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 01/22/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a0e46e0578205c57c91680154112c917876fba4a
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 891e1f1e5263c748082b83b4694169948c02922e
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80325951"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83983902"
 ---
 # <a name="add-android-store-apps-to-microsoft-intune"></a>Přidání aplikací z obchodu pro Android do Microsoft Intune
 
@@ -36,7 +36,7 @@ Před přiřazením aplikace k zařízení nebo skupině uživatelů je nejprve 
 Aplikaci z obchodu pro Android můžete přidat do Intune z portálu Azure Portal následujícím postupem:
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **aplikace** > **všechny aplikace** > **Přidat**.
+2. Vyberte **aplikace**  >  **všechny aplikace**  >  **Přidat**.
 3. V podokně **Vybrat typ aplikace** v části dostupné typy **aplikací pro Store** vyberte aplikace pro **Android Store**.
 4. Klikněte na **Vybrat**.<br>
    Zobrazí se kroky **Přidání aplikace** .

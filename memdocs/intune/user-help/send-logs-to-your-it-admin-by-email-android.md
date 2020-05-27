@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 04/19/2019
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: c288ea474fde9466b4b66056445ec93b572b29d2
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 8094f9739f05a7e7c0ffc10e9b4835c67c5539b3
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79327891"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83881991"
 ---
 # <a name="upload-and-email-logs"></a>Nahrávání a posílání protokolů e-mailem  
 
@@ -38,7 +38,7 @@ Podrobnosti o skutečných chybách se v zařízení uchovávají ve speciální
 ## <a name="upload-and-email-logs-from-company-portal"></a>Nahrávání a e-mailové protokoly z Portál společnosti  
 
 1. V aplikaci Portál společnosti existují dva způsoby, jak zahájit podporu e-mailu.
-    * Z obrazovky domů: klepněte na tlačítko **Nabídka** > **help** > **e-mail podpora**.  
+    * Z obrazovky domů: klepněte na tlačítko **Nabídka**  >  **help**  >  **e-mail podpora**.  
     * Z chybové zprávy: klepněte na tlačítko **help** nebo **Odeslat informace**, je-li k dispozici.  
 
     > [!NOTE]
@@ -52,7 +52,7 @@ Podrobnosti o skutečných chybách se v zařízení uchovávají ve speciální
 ## <a name="upload-and-email-logs-from-microsoft-intune-app"></a>Nahrávání a e-mailové protokoly z aplikace Microsoft Intune   
 
 1. V aplikaci Microsoft Intune existují dva způsoby, jak zahájit podporu e-mailu.  
-    * Z obrazovky domů: klepněte na **nabídku** > **Nápověda** > **získat podporu**.  
+    * Z obrazovky domů: klepněte na **nabídku**  >  **Nápověda**  >  **získat podporu**.  
     * Z chybové zprávy: klepněte na tlačítko **help** nebo **Odeslat informace**, je-li k dispozici.  
 
     > [!NOTE]

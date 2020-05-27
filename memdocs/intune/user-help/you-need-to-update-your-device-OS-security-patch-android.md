@@ -7,7 +7,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 12/06/2018
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -18,28 +18,28 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser; seodec18
 ms.collection: ''
-ms.openlocfilehash: 835823e3bad5e567d9516e454858653bc52aa3f4
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 565cd05852a3cf49681dca7c9e805a63b9cee43e
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79323947"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83882442"
 ---
 # <a name="you-need-to-update-your-android-devices-operating-system"></a>Potřebujete si aktualizovat operační systém zařízení s Androidem
 
 Pokud se vám zobrazila zpráva, která říká, že vaše úroveň opravy zabezpečení Androidu je příliš nízká, musíte si nainstalovat aktualizaci, aby zařízení zůstalo zabezpečené. _Oprava_ se vydává jako údržba softwaru, aby fungoval bez obtíží a byl aktuální. Vaše firemní podpora po vás vyžaduje, abyste si tuto opravu nainstalovali, aby se zajistilo, že firemní data jsou na vašem zařízení co nejlépe chráněná. Umístění potřebné opravy zabezpečení se bude lišit v závislosti na typu vašeho zařízení s Androidem.
 
-Pokud máte zařízení Samsung, přejděte na **Nastavení** > **informace o telefonu**a zkontrolujte, jestli je slovo Knox kdekoli na obrazovce. Pokud ano, postupujte podle pokynů pro Samsung Knox níže.
+Pokud máte zařízení Samsung, přejděte na **Nastavení**  >  **informace o telefonu**a zkontrolujte, jestli je slovo Knox kdekoli na obrazovce. Pokud ano, postupujte podle pokynů pro Samsung Knox níže.
 
 [!INCLUDE [wit_nextref](includes/end-user-os-update-guidance.md)]
 
 ## <a name="for-most-android-devices-non-samsung-knox"></a>U většiny zařízení s Androidem (ne Samsung Knox):
 
-Přejít na **Nastavení** > **o** > **aktualizacích softwaru**. Nainstalujte aktualizaci a vaše zařízení by mělo mít nainstalovanou správnou opravu zabezpečení.
+Přejít na **Nastavení**  >  **o**  >  **aktualizacích softwaru**. Nainstalujte aktualizaci a vaše zařízení by mělo mít nainstalovanou správnou opravu zabezpečení.
 
 ## <a name="for-samsung-knox-android-devices"></a>U zařízení Samsung Knox s Androidem:
 
-Přejít na **Nastavení** > **aktualizace** > systému**Vyhledat novou aktualizaci systému**. Nainstalujte aktualizaci a vaše zařízení Samsung Knox by mělo mít nainstalovanou správnou opravu zabezpečení.
+Přejít na **Nastavení**  >  **aktualizace systému**  >  **Vyhledat novou aktualizaci systému**. Nainstalujte aktualizaci a vaše zařízení Samsung Knox by mělo mít nainstalovanou správnou opravu zabezpečení.
 
 
 
