@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 04/17/2020
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
@@ -18,12 +18,12 @@ ms.reviewer: jeyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f48fb487df6a1b20e333ee6a2154490a59d220a9
-ms.sourcegitcommit: 5d32dd481e2a944465755ce74e14c835cce2cd1c
+ms.openlocfilehash: e82d8f27b7ffbce663ee64030a6d933bf1684dc1
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/18/2020
-ms.locfileid: "83551940"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83880607"
 ---
 # <a name="set-up-android-device-with-company-portal-and-intercede"></a>Nastavení zařízení s Androidem pomocí Portál společnosti a Intercede
 

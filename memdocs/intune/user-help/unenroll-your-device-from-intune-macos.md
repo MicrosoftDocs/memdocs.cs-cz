@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 03/20/2019
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: c0c2e76157ee09d5094e81856a27e655b5932d1f
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: aab11985c0d3673da5ad99973418d13d1f25e26a
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82077406"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83881610"
 ---
 # <a name="unenroll-your-macos-device-from-company-portal"></a>Zrušit registraci zařízení macOS z Portál společnosti
 

@@ -7,7 +7,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 03/19/2020
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -20,12 +20,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser; seodec18
 ms.collection: ''
-ms.openlocfilehash: 0bc07c2a7c48253ca7b2809287502db272d0b1bd
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 66930a4fd863406728e917867b869a697f7074ab
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80086246"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83879834"
 ---
 # <a name="move-to-new-device-management-setup"></a>Přechod do nastavení správy nového zařízení  
 

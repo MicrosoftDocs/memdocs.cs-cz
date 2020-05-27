@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 08/29/2018
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: japoehlm
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 784a0f40fd07d53f7bc32d00ab3f3a9d76d4dcaf
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 4a20e1b26df1d07a80d8919f8e59e0d9117f891d
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79324907"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83880262"
 ---
 # <a name="enroll-your-organization-provided-macos-device-in-management"></a>Registrace zařízení s macOS poskytnutého vaší organizací do správy
 
@@ -70,12 +70,12 @@ Zařízení s macOS zaregistrujete do správy provedením následujících krok�
 
 Stáhněte si do svého zařízení aplikaci Portál společnosti Intune pro macOS. Tato aplikace vám umožní monitorovat, synchronizovat, přidat nebo odebrat zařízení ze správy a nainstalovat aplikace. V tomto postupu je také popsané, zaregistrovat zařízení na Portálu společnosti.
 
-1. Na zařízení macOS přejít na [https://portal.manage.microsoft.com/EnrollmentRedirect.aspx](https://portal.manage.microsoft.com/EnrollmentRedirect.aspx).
+1. Na zařízení macOS přejít na [https://portal.manage.microsoft.com/EnrollmentRedirect.aspx](https://portal.manage.microsoft.com/EnrollmentRedirect.aspx) .
 2. Přihlaste se na web Portál společnosti přes svůj pracovní nebo školní účet. 
 3. Klikněte na **Získat aplikaci** a stáhněte si instalační program aplikace Portál společnosti pro macOS.
 4. Po zobrazení výzvy otevřete soubor .pkg a dokončete instalační kroky.
 5. Otevřete aplikaci Portál společnosti a přihlaste se pomocí svého pracovního nebo školního účtu.
 6. Najděte své zařízení a klikněte na **Zaregistrovat**.
-7. Klikněte na **pokračovat** > **Hotovo**. Vaše zařízení by se mělo zobrazit v aplikaci Portál společnosti jako vyhovující firemní zařízení.
+7. Klikněte na **pokračovat**  >  **Hotovo**. Vaše zařízení by se mělo zobrazit v aplikaci Portál společnosti jako vyhovující firemní zařízení.
 
 Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).

@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 03/06/2019
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser; intune-azure
 ms.collection: ''
-ms.openlocfilehash: f7d009703e61cf717a2084557ab662351f879cb1
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 767788e0d3f70c2059454f6fc664b49c85fb2d3e
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79324471"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83881206"
 ---
 # <a name="reset-device-from-the-company-portal-app"></a>Resetování zařízení z aplikace Portál společnosti  
 

@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 11/08/2017
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: shburbid
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 46ad7a5d34e6d006794b13cd5eae9c533e047ec3
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: f29cc024b34736a0a6d759179af70ceb51e12ea1
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79324255"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83881105"
 ---
 # <a name="turn-on-windows-defender-to-access-company-resources"></a>Zapnutí přístupu k prostředkům společnosti pro program Windows Defender
 
@@ -35,8 +35,8 @@ Některá nastavení programu Windows Defender bude možná potřeba při řeše
 ## <a name="turn-on-windows-defender"></a>Zapnutí programu Windows Defender
 
 1. V nabídce **Start** otevřete **Ovládací panely**.
-2.  > Otevřete **Nástroje pro správu****upravit zásady skupiny**. V novém okně se otevře **Editor místních zásad skupiny**.
-3. Otevřete okno **Konfigurace** > počítače**šablony pro správu** > **součásti** > systému Windows**antivirová ochrana v programu Windows Defender**. Nastavení **Vypnout Antivirovou ochranu v programu Windows Defender** se nachází pod složkami dalších nastavení. 
+2. Otevřete **Nástroje pro správu**  >  **upravit zásady skupiny**. V novém okně se otevře **Editor místních zásad skupiny**.
+3. Otevřete okno **Konfigurace počítače**  >  **šablony pro správu**  >  **součásti systému Windows**  >  **antivirová ochrana v programu Windows Defender**. Nastavení **Vypnout Antivirovou ochranu v programu Windows Defender** se nachází pod složkami dalších nastavení. 
 4. Otevřete nastavení **Vypnout Antivirovou ochranu v programu Windows Defender** a ujistěte se, že je nastavené na **Zakázáno** nebo **Není nakonfigurováno**.
 
 ## <a name="turn-on-real-time-protection"></a>Zapnutí ochrany v reálném čase
@@ -44,8 +44,8 @@ Některá nastavení programu Windows Defender bude možná potřeba při řeše
 Zkontrolujte, jestli je zapnutá ochrana v reálném čase. Uděláte to tak, že přejdete na **Start** a vyhledáte **Centrum zabezpečení v programu Windows Defender**. Vyberete **Nastavení ochrany před viry a hrozbami ** a ověříte, že možnosti **Ochrana v reálném čase** a **Cloudová ochrana** jsou přepnuté na **Zapnuto**. Pokud se tyto možnosti nezobrazují, zapněte je takto:
 
 1. V nabídce **Start** otevřete **Ovládací panely**.
-2.  > Otevřete **Nástroje pro správu****upravit zásady skupiny**. V novém okně se otevře **Editor místních zásad skupiny**.
-3. Otevřete položku **Konfigurace** > počítače**šablony pro správu** > **součásti** > systému Windows**Defender Security Center** > **antivirová a hrozbová ochrana**.
+2. Otevřete **Nástroje pro správu**  >  **upravit zásady skupiny**. V novém okně se otevře **Editor místních zásad skupiny**.
+3. Otevřete položku **Konfigurace počítače**  >  **šablony pro správu**  >  **součásti systému Windows**  >  **Defender Security Center**  >  **antivirová a hrozbová ochrana**.
 4. Otevřete nastavení **ochrany před viry a hrozbami** a nastavte je na **Zakázáno**.
 
 ## <a name="update-your-antivirus-definitions"></a>Aktualizace antivirových definic

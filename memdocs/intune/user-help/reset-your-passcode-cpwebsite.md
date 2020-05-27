@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 09/18/2019
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 3752ec0cf872e0a42113586cb9faa068643eb2dc
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 46bca2cf87b36e0099308d0269d9aba0b9b71eeb
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79324459"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83881492"
 ---
 # <a name="how-to-reset-your-device-passcode-from-the-company-portal-website"></a>Resetování hesla zařízení z webu Portál společnosti
 
@@ -42,7 +42,7 @@ Resetování hesla není k dispozici pro zařízení se systémem Android 7,0 a 
 
     ![Snímek obrazovky se stránkou zařízení se dvěma dlaždicemi, které zobrazují neidentifikované a obecně pojmenovaná zařízení. Šedý banner se nachází přímo pod zařízením a vyzve uživatele k identifikaci zařízení, které používají, nebo přidání nového.](./media/rename-reset-device-step2-1808.png) 
 
-3. Zvolte **Resetovat heslo**. Pokud možnost heslo není v horní části stránky zobrazená, vyberte **Další (...)** .  >  **Resetování hesla**.   
+3. Zvolte **Resetovat heslo**. Pokud možnost heslo není v horní části stránky zobrazená, vyberte **Další (...)**  >  . **Resetování hesla**.   
 
    ![Stránka podrobností o zařízení pro vybrané zařízení na webu Portál společnosti. V horní části stránky se nacházejí odkazy Přejmenovat, Odebrat, Resetovat zařízení, Resetovat heslo a Vzdálené uzamčení. ](./media/rename-reset-device-1808.png)   
 

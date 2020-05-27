@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 09/25/2017
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -17,12 +17,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 427d79750afe12929101ce4702684da698887ba4
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: c3a3cc630b25d3819d3c763979dc70bdbb23d6c9
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79324031"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83880858"
 ---
 # <a name="install-zimperium-zips-on-your-ios-device"></a>Instalace aplikace Zimperium zIPS na zařízení s iOSem
 

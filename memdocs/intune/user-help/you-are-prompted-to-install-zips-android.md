@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 09/10/2019
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -17,12 +17,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: ee0cd575da83231723ea869d472da1be599ce477
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 4cc322f6bc0e217ed4b471d8a764a0fc083af2ac
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079616"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83880865"
 ---
 # <a name="install-zimperium-zips-on-your-android-device"></a>Instalace aplikace Zimperium zIPS na zařízení s Androidem
 

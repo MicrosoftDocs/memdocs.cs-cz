@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 10/31/2019
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: tisilver
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: d0e933d3ab40b6c07615f701c9d181d41e4fded5
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: e24a03f3706256c1d18efb2eaebf520a4312edb1
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82077780"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83881531"
 ---
 # <a name="set-up-ios-or-ipados-device-with-company-portal-and-entrust-datacard"></a>Nastavení zařízení se systémem iOS nebo iPadOS s Portál společnosti a Entrust Datacard
 
@@ -68,7 +68,7 @@ Odvozené přihlašovací údaje jsou implementací pokynů National Institute o
 
     ![Příklad obrázku Portál společnosti aplikace pomocí zprávy a kódu na obrazovce](./media/copy-code-intercede.png)   
 
-3. Přepněte na zařízení s podporou čipové karty a přejděte na https://microsoft.com/devicelogin. 
+3. Přepněte na zařízení s podporou čipové karty a přejděte na https://microsoft.com/devicelogin . 
 4. Zadejte kód, který jste dříve zapsali.  
 
     ![Ukázkový snímek obrazovky Portál společnostiového webu "zadání kódu".](./media/enter-code-intercede.png)   
@@ -99,7 +99,7 @@ Odvozené přihlašovací údaje jsou implementací pokynů National Institute o
 16. Vraťte se do mobilního zařízení. Na obrazovce Portál společnosti > **získat kód QR** klepněte na **pokračovat**. 
 
     ![Příklad obrazovky Portál společnosti získání kódu QR](./media/get-qr-code-intercede.png)  
-17. Klepněte na **použít fotoaparát** > **OK**.  
+17. Klepněte na **použít fotoaparát**  >  **OK**.  
 
     ![Ukázkový snímek obrazovky Portál společnostiového řádku, který žádá o povolení přístupu ke kameře](./media/allow-cp-camera-access-intercede.png)  
 18. Naskenujte obrázek kódu QR, který je na vašem zařízení s podporou čipové karty.  

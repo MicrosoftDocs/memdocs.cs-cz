@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 04/17/2020
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
@@ -18,12 +18,12 @@ ms.reviewer: jeyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c729bb176c5f290bac4142a2f7de9a63c707b6d9
-ms.sourcegitcommit: 5d32dd481e2a944465755ce74e14c835cce2cd1c
+ms.openlocfilehash: 16d14a802c82918656741c137da672e501ddd41a
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/18/2020
-ms.locfileid: "83551974"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83879372"
 ---
 # <a name="set-up-android-device-with-company-portal-and-entrust-datacard"></a>Nastavení zařízení s Androidem pomocí Portál společnosti a Entrust Datacard
 

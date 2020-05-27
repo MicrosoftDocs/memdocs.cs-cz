@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 01/09/2019
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: maxles
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 7d3c81e8f7ed8dd8d1571efe87eb59614d79a5e8
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 50b259bd007582ca9e7320a982608c62a353b7ae
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79324187"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83879926"
 ---
 # <a name="use-managed-apps-on-your-ios-device"></a>Použití spravovaných aplikací na zařízení s iOSem
 

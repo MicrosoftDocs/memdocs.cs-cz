@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 05/24/2019
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 1956db4b044faffdd5e010ed66de2dfbc6738419
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 5e7cd5e5fa5f04e674b2fd9d37c8895b72372c4c
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79324099"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83881406"
 ---
 # <a name="windows-device-enrollment-in-intune-company-portal"></a>Registrace zařízení s Windows v Portál společnosti Intune  
 
@@ -39,7 +39,7 @@ V zařízení už možná máte nainstalovanou aplikaci Portál společnosti. Ov
 
 2. Do **vyhledávacího** pole zadejte **portál společnosti**.
 
-3. V seznamu výsledků vyberte **portál společnosti** > **nainstalovat**.
+3. V seznamu výsledků vyberte **portál společnosti**  >  **nainstalovat**.
 
 4. Vyberte buď **Instalovat**, nebo **Zdarma**. Mezi těmito dvěma možnostmi není žádný rozdíl; slova se zobrazí v závislosti na tom, jak vaše organizace tuto aplikaci nastavila.  
 
@@ -62,18 +62,18 @@ Postup registrace se liší u různých verzí zařízení s Windows 10. Násled
 
 4. Pokud je vaše verze  
 
-    * __1607 nebo novější__: Zaregistrujte zařízení pomocí [ **Settings** > **účtu** > nastavení**přístup k pracovnímu nebo školnímu** postupu](enroll-windows-10-device.md#enroll-windows-10-version-1607-and-later-device).   
-    * __1511 nebo starší__: Zaregistrujte zařízení pomocí [ **Settings** > **účtu** > nastavení, na který**vaše účty** směrují](enroll-windows-10-device.md#enroll-windows-10-version-1511-and-earlier-device).  
+    * __1607 nebo novější__: Zaregistrujte zařízení pomocí [ **Settings**  >  **účtu**nastavení  >  **přístup k pracovnímu nebo školnímu** postupu](enroll-windows-10-device.md#enroll-windows-10-version-1607-and-later-device).   
+    * __1511 nebo starší__: Zaregistrujte zařízení pomocí účtu nastavení, na který [ **Settings**  >  **Account**  >  **vaše účty** směrují](enroll-windows-10-device.md#enroll-windows-10-version-1511-and-earlier-device).  
 
 ### <a name="windows-10-mobile-devices"></a>Zařízení s Windows 10 Mobile
 
 1. Přejít na __všechny aplikace__ a vybrat aplikaci __Nastavení__ .
-2. Vyberte __systém__ > __o produktu__.
+2. Vyberte __systém__  >  __o produktu__.
 3. V části __informace o zařízení__vyhledejte __verzi__.  
 4. Pokud je vaše verze  
 
-    * __1607 nebo novější__: Zaregistrujte své zařízení pomocí [ **Nastavení** > **přístup do pracovní nebo školní** trasy](enroll-windows-10-device.md#enroll-windows-10-version-1607-and-later-device).   
-    * __1511 nebo starší__: Zaregistrujte své zařízení pomocí [ **Nastavení** > trasa**účty** ](enroll-windows-10-device.md#enroll-windows-10-version-1511-and-earlier-device).  
+    * __1607 nebo novější__: Zaregistrujte své zařízení pomocí [ **Nastavení**  >  **přístup do pracovní nebo školní** trasy](enroll-windows-10-device.md#enroll-windows-10-version-1607-and-later-device).   
+    * __1511 nebo starší__: Zaregistrujte své zařízení pomocí [ **Nastavení**  >  trasa**účty** ](enroll-windows-10-device.md#enroll-windows-10-version-1511-and-earlier-device).  
 
 ## <a name="enroll-non-windows-10-devices"></a>Registrace zařízení bez Windows 10  
 Následující články použijte k registraci dalších podporovaných zařízení s Windows prostřednictvím webu Portál společnosti:   

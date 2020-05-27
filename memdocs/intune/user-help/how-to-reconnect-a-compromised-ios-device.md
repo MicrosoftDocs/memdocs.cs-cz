@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 02/05/2018
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 8b6a9dc88bc6f08e04a7c438039c61122376ba74
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: d87918dde7b56e92435ab6bf39df4a42c75a3581
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79328067"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83878209"
 ---
 # <a name="how-to-reconnect-a-compromised-ios-device"></a>Opakované připojení k ohroženému zařízení se systémem iOS
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f4dd0b1702b06f3efbed07a70b13a59b271816f8
-ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
+ms.openlocfilehash: b6e42049a7fef0646fa94bde1b42d62c1ef8c066
+ms.sourcegitcommit: a1da477542fb0ff360685d6eb58ef43e37ac3950
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82023006"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83853549"
 ---
 # <a name="app-configuration-policies-for-microsoft-intune"></a>Zásady konfigurace aplikací v Microsoft Intune
 
@@ -99,7 +99,7 @@ Zásady konfigurace aplikací můžete ověřit pomocí následujících tří m
 
       ![Druhý snímek stavu instalace zařízení](./media/app-configuration-policies-overview/device-install-status-2.png)
 
-      V části **Intune** -> **zařízení** -> **všechna zařízení** na levé straně obrazovky se navíc v možnosti **Konfigurace aplikace** zobrazí všechny přiřazené zásady a jejich stav:
+      V části **Intune**  ->  **zařízení**  ->  **všechna zařízení** na levé straně obrazovky se navíc v možnosti **Konfigurace aplikace** zobrazí všechny přiřazené zásady a jejich stav:
 
       ![Snímek obrazovky s konfigurací aplikace](./media/app-configuration-policies-overview/app-configuration.png)
 
@@ -107,10 +107,10 @@ Zásady konfigurace aplikací můžete ověřit pomocí následujících tří m
 
 ### <a name="iosipados-configuration-on-unmanaged-devices"></a>Konfigurace iOS/iPadOS na nespravovaných zařízeních
 
-Konfiguraci iOS/iPadOS můžete ověřit pomocí **diagnostického protokolu Intune** na nespravovaných zařízeních pro konfiguraci spravované aplikace. Kromě následujících kroků můžete získat přístup k protokolům spravovaných aplikací pomocí Microsoft Edge. Další informace najdete v tématu [použití Microsoft Edge v systému iOS/iPadOS pro přístup k protokolům spravovaných aplikací](manage-microsoft-edge.md#use-microsoft-edge-to-access-managed-app-logs).
+Konfiguraci iOS/iPadOS můžete ověřit pomocí **diagnostického protokolu Intune** na nespravovaných zařízeních pro konfiguraci spravované aplikace. Kromě následujících kroků můžete získat přístup k protokolům spravovaných aplikací pomocí Microsoft Edge. Další informace najdete v tématu [použití Edge pro iOS a Android pro přístup k protokolům spravovaných aplikací](manage-microsoft-edge.md#use-edge-for-ios-and-android-to-access-managed-app-logs).
 
 1. Pokud na zařízení ještě není nainstalovaná, Stáhněte si a nainstalujte **Microsoft Edge** z App Storu. Další informace najdete v tématu [Microsoft Intune Protected Apps](apps-supported-intune-apps.md).
-2. Spusťte **Microsoft Edge** a na navigačním panelu vyberte **o** > **intunehelp** .
+2. Spusťte **Microsoft Edge** a na navigačním panelu vyberte **o**  >  **intunehelp** .
 3. Klikněte **na Začínáme.**
 4. Klikněte na **sdílet protokoly**.
 5. Pomocí e-mailové aplikace dle vašeho výběru můžete protokol odeslat sami sobě, aby se mohl zobrazit v počítači. 
@@ -154,7 +154,7 @@ Podrobnosti konfigurace aplikace by měly odpovídat zásadám konfigurace aplik
 Konfiguraci iOS/iPadOS můžete ověřit pomocí **diagnostického protokolu Intune** na spravovaných zařízeních pro konfiguraci spravované aplikace.
 
 1. Pokud na zařízení ještě není nainstalovaná, Stáhněte si a nainstalujte **Microsoft Edge** z App Storu. Další informace najdete v tématu [Microsoft Intune Protected Apps](apps-supported-intune-apps.md).
-2. Spusťte **Microsoft Edge** a na navigačním panelu vyberte **o** > **intunehelp** .
+2. Spusťte **Microsoft Edge** a na navigačním panelu vyberte **o**  >  **intunehelp** .
 3. Klikněte **na Začínáme.**
 4. Klikněte na **sdílet protokoly**.
 5. Pomocí e-mailové aplikace dle vašeho výběru můžete protokol odeslat sami sobě, aby se mohl zobrazit v počítači. 
@@ -165,12 +165,12 @@ Konfiguraci iOS/iPadOS můžete ověřit pomocí **diagnostického protokolu Int
 
 Konfiguraci Androidu můžete ověřit pomocí **diagnostického protokolu Intune** na spravovaných zařízeních pro konfiguraci spravované aplikace.
 
-Pokud chcete shromažďovat protokoly ze zařízení s Androidem, musíte vy nebo koncový uživatel stáhnout protokoly ze zařízení přes připojení USB (nebo v **Průzkumníku souborů** ekvivalentní na zařízení). Postup je následující:
+Pokud chcete shromažďovat protokoly ze zařízení s Androidem, musíte vy nebo koncový uživatel stáhnout protokoly ze zařízení přes připojení USB (nebo v **Průzkumníku souborů** ekvivalentní na zařízení). Postupujte takto:
 
 1. Připojte zařízení s Androidem k počítači pomocí kabelu USB.
-2. V počítači vyhledejte adresář, který má název vašeho zařízení. V tomto adresáři Najděte `Android Device\Phone\Android\data\com.microsoft.windowsintune.companyportal`.
-3. Ve `com.microsoft.windowsintune.companyportal` složce otevřete složku soubory a otevřete `OMADMLog_0`.
-3. Vyhledejte zprávy `AppConfigHelper` týkající se konfigurace aplikací. Výsledky budou vypadat podobně jako následující blok dat:
+2. V počítači vyhledejte adresář, který má název vašeho zařízení. V tomto adresáři Najděte `Android Device\Phone\Android\data\com.microsoft.windowsintune.companyportal` .
+3. Ve `com.microsoft.windowsintune.companyportal` složce otevřete složku soubory a otevřete `OMADMLog_0` .
+3. Vyhledejte `AppConfigHelper` zprávy týkající se konfigurace aplikací. Výsledky budou vypadat podobně jako následující blok dat:
 
     `2019-06-17T20:09:29.1970000       INFO   AppConfigHelper     10888  02256  Returning app config JSON [{"ApplicationConfiguration":[{"Name":"com.microsoft.intune.mam.managedbrowser.BlockListURLs","Value":"https:\/\/www.aol.com"},{"Name":"com.microsoft.intune.mam.managedbrowser.bookmarks","Value":"Outlook Web|https:\/\/outlook.office.com||Bing|https:\/\/www.bing.com"},{"Name":"com.microsoft.intune.mam.managedbrowser.homepage","Value":"https:\/\/www.arstechnica.com"}]},{"ApplicationConfiguration":[{"Name":"IntuneMAMUPN","Value":"AdeleV@M365x935807.OnMicrosoft.com"},{"Name":"com.microsoft.outlook.Mail.NotificationsEnabled","Value":"false"},{"Name":"com.microsoft.outlook.Mail.NotificationsEnabled.UserChangeAllowed","Value":"false"}]}] for user User-875363642`
     

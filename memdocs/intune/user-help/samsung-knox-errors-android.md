@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 04/19/2019
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -18,12 +18,12 @@ ROBOTS: ''
 ms.reviewer: arnab
 ms.suite: ems
 ms.collection: ''
-ms.openlocfilehash: 398720e2f491fa8b69d80cbc2f2783123b965723
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: b5329bf340dc6a57b3139fba0a90d4873fc7ee0d
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79324399"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83881434"
 ---
 # <a name="fix-common-issues-with-your-samsung-knox-device"></a>Řešení nejčastějších problémů se zařízením se zabezpečením Samsung Knox
 

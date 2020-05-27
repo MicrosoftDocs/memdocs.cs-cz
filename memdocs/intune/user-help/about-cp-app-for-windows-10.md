@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 01/23/2017
-ms.topic: article
+ms.topic: end-user-help
 ms.service: microsoft-intune
 ms.subservice: end-user
 ms.technology: ''
@@ -18,12 +18,12 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 8fffba81b1da6b335346edd0c04bd0c9ea2e6c56
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: a84b17f9ba005526b729167bbce0006ee17c96f5
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79328315"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83880488"
 ---
 # <a name="installing-the-company-portal-app-for-windows-10"></a>Instalace aplikace Portál společnosti pro Windows 10  
 

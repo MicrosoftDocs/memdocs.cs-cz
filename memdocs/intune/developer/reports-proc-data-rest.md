@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/04/2019
+ms.date: 05/26/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2e036e139e97ce033b3269ba0b8d5cf202fad773
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 8a90345bef46161911bcb1c1072b6ae4af41f16e
+ms.sourcegitcommit: 97fbb7db14b0c4049c0fe3a36ee16a5c0cf3407a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79331767"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83864952"
 ---
 # <a name="get-data-from-the-intune-data-warehouse-api-with-a-rest-client"></a>Získání dat z rozhraní API datového skladu Intune pomocí klienta REST
 
@@ -41,7 +41,7 @@ V následujícím postupu se dozvíte, jak autorizovat rozhraní API a přistupo
 
 Vytvořte nativní aplikaci v Azure. Tato nativní aplikace představuje klientskou aplikaci. Klient běžící na místním počítači odkazuje na rozhraní API datového skladu Intune, když si místní klient vyžádá přihlašovací údaje.
 
-1. Přihlaste se k Azure Portalu svého tenanta. Zvolením možnosti **Azure Active Directory** > **Registrace aplikací** otevřete podokno **Registrace aplikací** .
+1. Přihlaste se k Azure Portalu svého tenanta. Zvolením možnosti **Azure Active Directory**  >  **Registrace aplikací** otevřete podokno **Registrace aplikací** .
 2. Vyberte **Registrace nové aplikace**.
 3. Zadejte podrobnosti této aplikace.
     1. Do pole **Název** zadejte nějaký popisný název, například Intune Data Warehouse Client.
@@ -66,7 +66,7 @@ Teď máte v Azure definovanou aplikaci. Udělte z této nativní aplikace pří
 7. Vyberte **Vybrat**.
 8. Zaškrtnutím políčka **Delegovaná oprávnění** přidejte možnost **Získat informace datového skladu z Microsoft Intune**.
 
-    ![Povolení přístupu – rozhraní API Microsot Intune](./media/reports-proc-data-rest/reports-get_rest_data_client_access.png)
+    ![Povolit přístup – Microsoft Intune rozhraní API](./media/reports-proc-data-rest/reports-get_rest_data_client_access.png)
 
 9. Vyberte **Vybrat**.
 10. Vyberte **Done** (Hotovo).
@@ -155,7 +155,7 @@ Následující vzorový kód obsahuje jednoduchého klienta REST. V kódu se pou
 > Následující vzorový kód můžete [zpřístupnit na GitHubu](https://github.com/Microsoft/Intune-Data-Warehouse/blob/master/Samples/CSharp/Program.cs). V tomto úložišti GitHubu najdete jeho nejnovější změny a aktualizace.
 
 1. Otevřete **Microsoft Visual Studio**.
-2. Vyberte **soubor** > **Nový projekt**. Rozbalte **Visual C#** a zvolte **Konzolová aplikace (.Net Framework)**.
+2. Vyberte **soubor**  >  **Nový projekt**. Rozbalte **Visual C#** a zvolte **Konzolová aplikace (.Net Framework)**.
 3. Dejte projektu název `IntuneDataWarehouseSamples`, přejděte do místa, kam chcete projekt uložit, a vyberte **OK**.
 4. V Průzkumníkovi řešení klikněte na toto řešení pravým tlačítkem a vyberte **Spravovat balíčky NuGet pro řešení**. Vyberte **Procházet** a pak do vyhledávacího pole zadejte `Microsoft.IdentityModel.Clients.ActiveDirectory`.
 5. Zvolte tento balíček, v oblasti Spravovat balíčky pro vaše řešení vyberte projekt **IntuneDataWarehouseSamples** a pak vyberte **Nainstalovat**.
@@ -216,6 +216,7 @@ Následující vzorový kód obsahuje jednoduchého klienta REST. V kódu se pou
 
    Console.Write(response.Content.ReadAsStringAsync().Result);
    Console.ReadKey();
+   }
    }
    }
    ```

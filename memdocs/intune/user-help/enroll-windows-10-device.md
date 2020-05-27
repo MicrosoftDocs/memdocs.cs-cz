@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 05/21/2019
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 8f3150a887cfbff73976bb697e0b13ea129f003f
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: cffdadab0518fbc6a52d0f2bf60752c165fd1c3e
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82080075"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83881500"
 ---
 # <a name="enroll-windows-10-devices-with-intune-company-portal"></a>Registrace zařízení s Windows 10 pomocí Portál společnosti Intune
 
@@ -41,7 +41,7 @@ Tento postup popisuje, jak zaregistrovat zařízení, které běží ve Windows 
 
 2. Otevřete aplikaci **Nastavení**. Pokud aplikace není v seznamu aplikací snadno dostupná, otevřete panel hledání a zadejte "nastavení".
 
-3. Vyberte **účty** > **přístup do práce nebo do školy** > **připojit**.  
+3. Vyberte **účty**  >  **přístup do práce nebo do školy**  >  **připojit**.  
 
 
     ![Vyberte možnost Nastavit pracovní nebo školní účet.](./media/w10-enroll-rs1-connect-to-work-or-school.png)  
@@ -62,7 +62,7 @@ Tento postup popisuje, jak zaregistrovat zařízení, které běží ve Windows 
 
 7. Na stránce **, kterou jste nastavili!** vyberte **Hotovo**. Právě jste svoje zařízení zaregistrovali.  
 
-8. Pokud chcete dvakrát ověřit připojení, přejděte zpátky na **Nastavení** > **účty** > **přístup do práce nebo do školy**.  Váš účet by se teď měl zobrazit v seznamu.  
+8. Pokud chcete dvakrát ověřit připojení, přejděte zpátky na **Nastavení**  >  **účty**  >  **přístup do práce nebo do školy**.  Váš účet by se teď měl zobrazit v seznamu.  
 
 
     ![Ověření, zda bylo připojení správně nastaveno](./media/w10-enroll-rs1-validate-successful-enrollment.png)  
@@ -76,7 +76,7 @@ Tento postup popisuje, jak zaregistrovat zařízení, které běží ve Windows 
 
 2. Otevřete aplikaci **Nastavení**. Pokud aplikace není v seznamu aplikací snadno dostupná, otevřete panel hledání a zadejte "nastavení".
 
-3. Vyberte **účty** > , které**váš účet máte**.  
+3. Vyberte **účty**  >  , které**váš účet máte**.  
 
 
     ![Vyberte svůj účet.](./media/W10-enroll-2-accounts-your-account.png)  

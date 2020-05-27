@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/17/2020
+ms.date: 05/26/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.reviewer: samyada
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b8b8bde6b7979cfe3b936a08630e23e19fc7e5a0
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: b74ea17e0fdadfbb6f7c1ec82e502f57187ba74e
+ms.sourcegitcommit: 97fbb7db14b0c4049c0fe3a36ee16a5c0cf3407a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81615065"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83864916"
 ---
 # <a name="configure-actions-for-noncompliant-devices-in-intune"></a>Konfigurace akcí pro zařízení nedodržující předpisy v Intune
 
@@ -112,7 +112,7 @@ Pokud chcete vytvořit zásady dodržování předpisů pro zařízení, přečt
 Pokud chcete svým uživatelům odeslat e-mail, vytvořte šablonu zprávy s oznámením. Pokud zařízení nedodržuje předpisy, musíte do šablony zadat podrobnosti, které se zobrazují v e-mailu odeslaném vašim uživatelům.
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **zařízení** >  > **Notifications**oznámení > **zásady dodržování předpisů****vytvořit oznámení**.
+2. Vyberte **zařízení**  >  **oznámení zásady dodržování předpisů**  >  **Notifications**  >  **vytvořit oznámení**.
 3. V části *základy*zadejte následující informace:
 
    - **Název**
@@ -144,14 +144,14 @@ Můžete přidat volitelné akce při vytváření zásad dodržování předpis
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Vyberte > **zásady****zásady dodržování předpisů** **zařízení** > , vyberte jednu z vašich zásad a pak vyberte **vlastnosti**.
+2. Vyberte **Devices**  >  **zásady zásady dodržování předpisů**zařízení  >  **Policies**, vyberte jednu z vašich zásad a pak vyberte **vlastnosti**.
 
    Ještě zásadu nemáte? Vytvořte zásadu pro [Android](compliance-policy-create-android.md), [iOS](compliance-policy-create-ios.md), [Windows](compliance-policy-create-windows.md) nebo jinou platformu.
 
    > [!NOTE]
    > Zařízení JAMF a zařízení nastavená pomocí skupin zařízení nemohou v současnosti přijímat akce dodržování předpisů.
 
-3. Vyberte **Akce při nedodržení předpisů** > **Přidat**.
+3. Vyberte **Akce při nedodržení předpisů**  >  **Přidat**.
 
 4. Vyberte vaši **Akci**:
 
@@ -161,7 +161,7 @@ Můžete přidat volitelné akce při vytváření zásad dodržování předpis
 
    - **Vzdáleně uzamknout zařízení, které nedodržuje předpisy**: Pokud zařízení nedodržuje předpisy, uzamkněte ho. Tato akce vynutí, aby uživatel zadal kód PIN nebo heslo k odemknutí zařízení.
 
-   - **Vyřadit zařízení nesplňující požadavky**: když zařízení nedodržuje předpisy, odeberte ze zařízení všechna firemní data a odeberte zařízení ze správy Intune. Aby nedocházelo k náhodnému vymazání zařízení, tato akce podporuje minimální plán na **30** dní.
+   - **Vyřadit zařízení nesplňující požadavky**: když zařízení nedodržuje předpisy, odeberte ze zařízení všechna firemní data a odeberte zařízení ze správy Intune.
 
    - **Odeslat nabízené oznámení koncovému uživateli**: Nakonfigurujte tuto akci pro odeslání nabízeného oznámení o nedodržení předpisů zařízení prostřednictvím aplikace Portál společnosti nebo aplikace Intune na zařízení.
 
@@ -173,7 +173,7 @@ Můžete přidat volitelné akce při vytváření zásad dodržování předpis
 
   Další informace o dodržování předpisů a integrovaných akcích najdete v tématu [Přehled dodržování předpisů](device-compliance-get-started.md).
 
-6. Po dokončení vyberte **Přidat** > **OK** a uložte provedené změny.
+6. Po dokončení vyberte **Přidat**  >  **OK** a uložte provedené změny.
 
 ## <a name="next-steps"></a>Další kroky
 

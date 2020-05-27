@@ -7,7 +7,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 12/06/2018
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -20,12 +20,12 @@ ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-enduser; seodec18
 ms.collection: ''
-ms.openlocfilehash: 172ffb9a19490459eaa75ee8a75e47b8baed3d8c
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 7f8d1683f9273aebe53772227bbeb5034b2272cc
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79323863"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83877927"
 ---
 # <a name="your-windows-devices-operating-system-version-isnt-yet-supported"></a>Verze operačního systému vašeho zařízení s Windows zatím není podporovaná
 

@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 04/25/2018
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 5c1ebf73dde1423f618d58d06cddc96162f725be
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 8bb10a81f015b5ffa4b1d22d2afab1e8c4d40d05
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79327911"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83881421"
 ---
 # <a name="submit-errors-to-the-right-people-for-your-managed-macos-device"></a>Odeslání chyb správným osobám pro vaše spravované zařízení s macOS
 
@@ -38,7 +38,7 @@ Odeslání podrobností o chybě v aplikaci Portál společnosti:
 
 - Klikněte na nabídku **Nápověda** > **Uložit diagnostickou sestavu**. Vyberte umístění pro uložení tohoto souboru. Pak soubor zašlete e-mailem nebo nahrajte pracovníkovi firemní podpory.
 
-- Pokud je vaše e-mailová aplikace nakonfigurovaná, můžete zprávu diagnostiky odeslat tak, že v **nápovědě** > **odešlete diagnostickou zprávu**. Po nahrání protokolů klikněte na **Poslat podrobnosti e-mailem**.
+- Pokud je vaše e-mailová aplikace nakonfigurovaná, můžete zprávu diagnostiky odeslat tak, že v **nápovědě**  >  **odešlete diagnostickou zprávu**. Po nahrání protokolů klikněte na **Poslat podrobnosti e-mailem**.
 
 ## <a name="send-errors-to-the-company-portal-developers-for-macos-devices"></a>Odeslání chyb vývojářům Portálu společnosti pro zařízení s macOS
 

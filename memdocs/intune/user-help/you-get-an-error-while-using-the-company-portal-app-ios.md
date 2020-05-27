@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 01/23/2017
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 417932e046517f17481e2d6c5e91f24cb7ac2d7a
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 92be57c0f65dfbed5a5fdbdb707659071b460a25
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82080041"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83880817"
 ---
 # <a name="you-get-an-error-while-using-the-company-portal-app"></a>Při použití aplikace Portál společnosti se zobrazí chyba
 
@@ -34,6 +34,6 @@ Pokud při používání aplikace Portál společnosti na zařízení s iOS dojd
 
 - Na obrazovce **O produktu** aplikace Portál společnosti klepněte na **Odeslat diagnostickou zprávu**.
 
-- Když jste v aplikaci Portál společnosti, zatřeste zařízení a po zobrazení diagnostické výstrahy klepněte na **e-mail** . Pokud se vám výstraha po zatřesení zařízení nezobrazí, otevřete **Nastavení** > **portál společnosti**a ujistěte se, že je zapnutá možnost **gesto natřesení** .
+- Když jste v aplikaci Portál společnosti, zatřeste zařízení a po zobrazení diagnostické výstrahy klepněte na **e-mail** . Pokud se vám výstraha po zatřesení zařízení nezobrazí, otevřete **Nastavení**  >  **portál společnosti**a ujistěte se, že je zapnutá možnost **gesto natřesení** .
 
 Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).

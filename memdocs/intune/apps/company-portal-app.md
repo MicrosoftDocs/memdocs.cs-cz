@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6f22b2d87492d227b8a78859adb1debc504da8d5
-ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
+ms.openlocfilehash: d69167a034970216e1e245f638bd59091ed6e18c
+ms.sourcegitcommit: a1da477542fb0ff360685d6eb58ef43e37ac3950
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83824179"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83853600"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>Přizpůsobení aplikací Portál společnosti Intune, Portál společnosti webu a Intune
 
@@ -247,5 +247,5 @@ Pokud používáte Azure Government, nabízí se protokoly aplikace koncovým u�
 
 ## <a name="next-steps"></a>Další kroky
 
-- [Nakonfigurovat logo vaší organizace a barvu značky pro nové stránky karet v Microsoft Edge](../apps/manage-microsoft-edge.md#configure-your-organizations-logo-and-brand-color-for-new-tab-pages-in-microsoft-edge)
+- [Nakonfigurujte logo vaší organizace a barvu značky pro nové stránky karet v Microsoft Edge pro iOS a Android.](manage-microsoft-edge.md#organization-logo-and-brand-color)
 - [Přidání aplikací](apps-add.md)

@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 10/05/2018
-ms.topic: article
+ms.topic: end-user-help
 ms.service: microsoft-intune
 ms.subservice: end-user
 ms.technology: ''
@@ -18,12 +18,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: f99a159a776e95c2f7ff8045a802b0c686672c9a
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 24d83e5ada6109caec2f6238df44559909580931
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79328291"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83878436"
 ---
 # <a name="check-access-from-company-portal-app-for-windows"></a>Kontrola přístupu z aplikace Portál společnosti pro Windows
 

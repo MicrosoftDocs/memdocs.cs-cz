@@ -18,21 +18,21 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8e44dbb8e29da829e3455121700e8901a3b3fc98
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 63000a7285b2d1d6505a739f186dc9168e7f3fca
+ms.sourcegitcommit: a1da477542fb0ff360685d6eb58ef43e37ac3950
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81007619"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83853583"
 ---
 # <a name="review-client-app-protection-logs"></a>Kontrola protokolů ochrany klientské aplikace
 
 Přečtěte si informace o nastaveních, která můžete zkontrolovat v protokolech ochrany aplikace. Přístup k protokolům tím, že povolíte diagnostiku Intune v mobilním klientovi. 
 
 Proces povolení a shromažďování protokolů se u jednotlivých platforem liší:
-- **zařízení se systémem iOS/iPadOS** – ke shromažďování protokolů použijte Microsoft Edge pro iOS/iPadOS. Podrobnosti najdete v tématu [Správa webového přístupu pomocí Microsoft Edge s Microsoft Intune](manage-microsoft-edge.md#use-microsoft-edge-to-access-managed-app-logs). 
+- **zařízení se systémem iOS/iPadOS** – ke shromažďování protokolů použijte Microsoft Edge pro iOS/iPadOS. Podrobnosti najdete v tématu [použití Edge pro iOS a Android pro přístup k protokolům spravovaných aplikací](manage-microsoft-edge.md#use-edge-for-ios-and-android-to-access-managed-app-logs).
 - **Zařízení s Windows 10** – použijte *MDMDiag* a protokoly událostí. Podívejte se na téma [Diagnostika chyb MDM ve Windows 10](https://docs.microsoft.com/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10) v obsahu správy klientů Windows a v blogu [řešení potíží s chybami zásad Windows 10 Intune](https://blogs.technet.microsoft.com/configmgrdogs/2018/08/09/troubleshooting-windows-10-intune-policy-failures/).
-- **Zařízení s Androidem** – k shromažďování protokolů použijte Microsoft Edge pro Android. Podrobnosti najdete v tématu [Správa webového přístupu pomocí Microsoft Edge s Microsoft Intune](manage-microsoft-edge.md#use-microsoft-edge-to-access-managed-app-logs). 
+- **Zařízení s Androidem** – k shromažďování protokolů použijte Microsoft Edge pro Android. Podrobnosti najdete v tématu [použití Edge pro iOS a Android pro přístup k protokolům spravovaných aplikací](manage-microsoft-edge.md#use-edge-for-ios-and-android-to-access-managed-app-logs).
 
   > [!Note]
   > V zařízeních s Androidem, která jsou plně spravovaná, se v některých případech může Portál společnosti Intune aplikace zobrazit v části všechny aplikace. K tomu může dojít, když aplikace přidružená k zásadám ochrany aplikací buď není nainstalovaná, nebo se nespustí. 
@@ -41,7 +41,7 @@ Následující tabulka uvádí název nastavení zásad ochrany aplikací a podp
 
 ## <a name="app-protection-policy-settings"></a>Nastavení zásad ochrany aplikací
 
-| Název                        | Podrobnosti hodnoty                                                                                                                                                                                                                                                                                            | Nastavení v zásadách ochrany aplikací služby Microsoft Endpoint Manager                                                                                                                            |
+| Name                        | Podrobnosti hodnoty                                                                                                                                                                                                                                                                                            | Nastavení v zásadách ochrany aplikací služby Microsoft Endpoint Manager                                                                                                                            |
 |-----------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | AccessRecheckOfflineTimeout | x minut                                                                                                                                                                                                                                                                                                   | **Oddíl**: podmíněné spuštění<br>**Nastavení**: offline období odkladu s přístupem k bloku akce (minuty)           |
 | AccessRecheckOnlineTimeout  | _x_ minut                                                                                                                                                                                                                                                                                                   | **Oddíl**: požadavky na přístup<br>**Nastavení**: znovu zkontroluje požadavky na přístup po (minuty neaktivity). |

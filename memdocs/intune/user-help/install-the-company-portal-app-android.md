@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 04/19/2019
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,18 +19,18 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 23ae0ec9d91a0bd1a171708699ae88e7c572a250
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 042a89016127fe7a088aa31ce64468c9337c77bc
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80084506"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83880993"
 ---
 # <a name="install-the-company-portal-app-for-android"></a>Instalace aplikace Portál společnosti pro Android
 
 Portál společnosti je aplikace, která umožňuje přístup k podnikovým nebo školním aplikacím, e-mailům a internetovým připojením. Tato aplikace přispívá k bezpečnosti informací organizace díky zabezpečení zařízení, například udržováním aktuálního stavu podnikových aplikací nebo zajištěním, že se zařízení po určité době samo zamkne. Další informace o funkcích Portál společnosti a její části ve správě zařízení najdete v tématu [Proč zaregistrovat zařízení s Androidem](why-enroll-android-device.md).  
 
-1. Klepněte na **Domovská** > **Obchod Play**.
+1. Klepněte na **Domovská**  >  **Obchod Play**.
 
 2. Do **vyhledávacího** pole zadejte **portál společnosti Intune**.  
 

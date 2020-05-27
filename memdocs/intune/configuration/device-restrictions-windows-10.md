@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/13/2020
+ms.date: 05/26/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c8ad2583bb7cf4bf4c783dc244eaa9f7be0c9306
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 20c552ff879574edc0ed497b5c99b45b8092918a
+ms.sourcegitcommit: 97fbb7db14b0c4049c0fe3a36ee16a5c0cf3407a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83429663"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83864888"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Nastavení zařízení s Windows 10 (a novějším) pro povolení nebo omezení funkcí pomocí Intune
 
@@ -234,11 +234,20 @@ Tato nastavení používají [zprostředkovatele kryptografických služeb (CSP]
   [CSP pro kameru](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-camera)
 
 - **OneDrive File Sync**: **blok** brání uživatelům v synchronizaci souborů se ze zařízení na OneDrivu. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
+
+  [CSP pro System/DisableOneDriveFileSync](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-system#system-disableonedrivefilesync)
+
 - **Vyměnitelné úložiště**: **blok** zabraňuje uživatelům v používání externích úložných zařízení, jako jsou SD karty se zařízením. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
 - **Zeměpisná poloha**: **blok** zabraňuje uživatelům v zapínání služeb zjišťování polohy na zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
+
+  [CSP pro System/AllowLocation](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-system#system-allowlocation)
+
 - **Sdílení internetu**: **blok** zabraňuje sdílení internetového připojení na zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
 - **Resetování na telefonu**: **blok** brání uživatelům v vymazání nebo obnovení továrního nastavení v zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
 - **Připojení USB**: **blok** zabraňuje přístupu k externímu úložnému zařízení přes připojení USB na zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Toto nastavení neovlivňuje zpoplatnění přes USB.
+
+  [Připojení/AllowUSBConnection CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-connectivity#connectivity-allowusbconnection)
+
 - **Režim AntiTheft** (jenom mobilní): **blok** zabraňuje uživatelům v výběru předvolby režimu AntiTheft na zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
 - **Cortana**: **Block** zakáže hlasového asistenta Cortany na zařízení. Když je Cortana vypnutá, uživatelé můžou pořád vyhledávat položky v zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém umožňovat Cortanu.
 
@@ -249,6 +258,9 @@ Tato nastavení používají [zprostředkovatele kryptografických služeb (CSP]
 - **Přidat zřizovací balíčky**: **blok** zabraňuje agentovi konfigurace běhu, který instaluje zřizovací balíčky na zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
 - **Odebrat zřizovací balíčky**: **blok** zabraňuje agentům konfigurace běhu, který ze zařízení odebírá zřizovací balíčky. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
 - **Zjišťování zařízení**: **blok** zabraňuje tomu, aby se zařízení zjistilo jinými zařízeními. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
+
+  [Experience/AllowDeviceDiscovery](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-experience#experience-allowdevicediscovery)
+
 - **Přepínání úloh** (jenom mobilní): **blok** zabraňuje přepínání úloh na zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
 - **Chybový dialog SIM karty** (jenom mobilní): **blokovat** zobrazování chybových zpráv na zařízení, pokud se nezjistí žádná SIM karta. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém zobrazit chybové zprávy.
 - **Pracovní prostor Ink**: vyberte, jestli a jak má uživatel přístup k pracovnímu prostoru rukopisu. Možnosti:

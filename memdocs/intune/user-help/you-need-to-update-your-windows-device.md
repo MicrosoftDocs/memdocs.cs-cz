@@ -7,7 +7,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 12/06/2018
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -20,18 +20,18 @@ ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-enduser; seodec18
 ms.collection: ''
-ms.openlocfilehash: b180337ccba00727f37026230a796e515ec5ff9f
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 05d427ae32bc0de9ce1c9086f5523bb444dd4874
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79327483"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83880728"
 ---
 # <a name="you-need-to-update-your-windows-device"></a>Potřebujete si aktualizovat zařízení s Windows
 
 [!INCLUDE [wit_nextref](includes/end-user-os-update-guidance.md)]
 
-Pro mobilní zařízení s Windows aktualizujte své zařízení tak, že přejdete na **Nastavení** > **aktualizace** > telefonu**Vyhledat aktualizace**.
+Pro mobilní zařízení s Windows aktualizujte své zařízení tak, že přejdete na **Nastavení**  >  **aktualizace telefonu**  >  **Vyhledat aktualizace**.
 
 V počítačích s Windows vyhledejte **operační systém** a postupujte podle pokynů, kterými zjistíte používanou verzi Windows.
 

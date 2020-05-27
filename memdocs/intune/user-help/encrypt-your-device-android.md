@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 03/31/2020
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: d9e074def368927504c3f3c1761ec21b3ab62d22
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 268e1ab9b76cc214b7e755763ada6a2bd09ed80e
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80696266"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83880580"
 ---
 # <a name="encrypting-your-android-device"></a>Šifrování zařízení s Androidem
 
@@ -61,7 +61,7 @@ Název a umístění možnosti zabezpečeného spuštění se budou lišit v zá
 
 1. Otevřete aplikaci **Nastavení**.
 2. Zadejte **zabezpečené spuštění** na panelu hledání aplikace.
-3. Klepněte na **zabezpečené spuštění** > **vyžadovat při zapnutí zařízení PIN kód**.
+3. Klepněte na **zabezpečené spuštění**  >  **vyžadovat při zapnutí zařízení PIN kód**.
 4. Po zobrazení výzvy zadejte PIN kód zařízení.   
 5. Chcete-li znovu kontrolovat nastavení, otevřete Portál společnosti nebo Microsoft Intune aplikaci.
     * Portál společnosti uživatelé: Vyberte zařízení a klepněte na **kontrolovat nastavení zařízení**. 

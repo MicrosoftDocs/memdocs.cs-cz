@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 08/07/2019
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 700a06fd876705a14f661a71d6d97419f13a13c6
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 58af7bfc0cb7521ef73f32322db7bc148492645a
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79324831"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83881672"
 ---
 # <a name="enroll-your-corporate-device-with-the-microsoft-intune-app"></a>Registrace podnikového zařízení pomocí aplikace Microsoft Intune
 

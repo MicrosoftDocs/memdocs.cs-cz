@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 09/18/2019
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: coferro
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: f7f86f595adf8b06f9a3d9da198d89b263e00574
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 77643d689a2a5693b71f85a7e82b98bddec9a646
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79327959"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83881460"
 ---
 # <a name="reset-device-from-company-portal-website"></a>Resetování zařízení z Portál společnosti webu
 
@@ -43,7 +43,7 @@ Resetování zařízení v Portál společnosti není k dispozici pro všechna z
 
     ![Snímek obrazovky se stránkou zařízení se dvěma dlaždicemi, které zobrazují neidentifikované a obecně pojmenovaná zařízení. Šedý banner se nachází přímo pod zařízením a vyzve uživatele k identifikaci zařízení, které používají, nebo přidání nového.](./media/rename-reset-device-step2-1808.png)  
 
-3. Vyberte **Resetovat**. Pokud možnost Reset není v horní části stránky zobrazená, vyberte **Další (...)** .  >  **Resetovat**.  
+3. Vyberte **Resetovat**. Pokud možnost Reset není v horní části stránky zobrazená, vyberte **Další (...)**  >  . **Resetovat**.  
 
      ![Stránka podrobností o zařízení pro vybrané zařízení na webu Portál společnosti. V horní části stránky se nacházejí odkazy Přejmenovat, Odebrat, Resetovat zařízení, Resetovat heslo a Vzdálené uzamčení. ](./media/rename-reset-device-1808.png)  
 

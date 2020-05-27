@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 01/23/2017
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 00f3b217140b1d5f46b68409b38ca2db76c45406
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 35b2fdd25f58df4acea202d1d4d844683f632b49
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79324631"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83880641"
 ---
 # <a name="how-to-enroll-your-windows-81-or-windows-rt-81-device-in-intune"></a>Registrace zařízení s Windows 8.1 nebo Windows RT 8.1 v Intune  
 
@@ -33,7 +33,7 @@ Pokud vaše společnost nebo škola používá Microsoft Intune, můžete svá z
 
 Registrace zařízení s Windows 8.1 nebo Windows RT 8.1:  
 
-1. V zařízení klepněte na **Nastavení** &gt; **Nastavení** &gt; počítače **síť** &gt; **pracoviště**.  
+1. V zařízení klepněte na **Nastavení** &gt; **nastavení počítače** &gt; **síť** &gt; **pracoviště**.  
 
     ![nav-to-workplace](./media/W81-1-workplacejoin.png)  
 

@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 08/28/2018
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 79bcfc1fabab3b14a9a2560b692c5f2ca459aee4
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 9d932fffa7381cca26699bb37e10783bcd7803dd
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079412"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83880918"
 ---
 # <a name="remotely-lock-your-device-from-the-company-portal-website"></a>Vzdálené uzamčení zařízení z webu Portál společnosti
 
@@ -45,7 +45,7 @@ Nastavení vzdáleného uzamčení funguje v těchto systémech:
 
     ![Snímek obrazovky stránky Zařízení se dvěma dlaždicemi, které zobrazují neznámá zařízení s obecným názvem. Šedý banner pod zařízeními vyzývá uživatele k identifikaci používaného zařízení nebo přidání nového.](./media/rename-reset-device-step2-1808.png) 
 
-3. Vyberte **Vzdálené uzamčení**. Pokud možnost zámek není v horní části stránky zobrazená, vyberte **Další (...)** .  >  **Vzdálené uzamčení**.  
+3. Vyberte **Vzdálené uzamčení**. Pokud možnost zámek není v horní části stránky zobrazená, vyberte **Další (...)**  >  . **Vzdálené uzamčení**.  
 
    ![Stránka podrobností o zařízení pro vybrané zařízení na webu Portál společnosti. V horní části stránky se nacházejí odkazy Přejmenovat, Odebrat, Resetovat zařízení, Resetovat heslo a Vzdálené uzamčení. ](./media/rename-reset-device-1808.png) 
 

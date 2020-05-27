@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 12/03/2019
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: f891d88f929a8e4e297ec8bc58f5fe6d37228cf4
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: ef4b20d27e121cd3ec7ce92d3fe20cfee9c6aba9
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79327783"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83880980"
 ---
 # <a name="use-managed-apps-on-your-android-device"></a>Použití spravovaných aplikací na zařízení s Androidem
 Spravované aplikace jsou nakonfigurované tak, aby splňovaly požadavky organizace týkající se zabezpečení a chránily pracovní a školní data. Tyto aplikace máte k dispozici, abyste si je mohli nainstalovat na své zařízení nebo je automaticky používat. 

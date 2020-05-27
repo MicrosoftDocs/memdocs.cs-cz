@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 10/31/2019
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: tisilver
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: b83092521f1ab0058d47d599e7fd9c10c2fd6d35
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: bac9edcb91ef49cfa2252bd82e6e88bfd512d9ef
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82077763"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83881523"
 ---
 # <a name="set-up-ios-or-ipados-device-with-company-portal-and-intercede"></a>Nastavení zařízení se systémem iOS nebo iPadOS s využitím Portál společnosti a Intercede
 
@@ -67,7 +67,7 @@ Odvozené přihlašovací údaje jsou implementací pokynů National Institute o
 2. Zapište kód, který se zobrazí na obrazovce.  
 
     ![Příklad obrázku Portál společnosti aplikace pomocí zprávy a kódu na obrazovce](./media/copy-code-intercede.png)  
-1. Přepněte na zařízení s podporou čipové karty a přejděte na https://microsoft.com/devicelogin. 
+1. Přepněte na zařízení s podporou čipové karty a přejděte na https://microsoft.com/devicelogin . 
 
 1. Zadejte kód, který jste dříve zapsali.
  
@@ -91,7 +91,7 @@ Odvozené přihlašovací údaje jsou implementací pokynů National Institute o
 
     ![Příklad obrazovky Portál společnosti získání kódu QR](./media/get-qr-code-intercede.png) 
  
-10. Klepněte na **použít fotoaparát** > **OK**.  
+10. Klepněte na **použít fotoaparát**  >  **OK**.  
 
     ![Ukázkový snímek obrazovky Portál společnostiového řádku, který žádá o povolení přístupu ke kameře](./media/allow-cp-camera-access-intercede.png)  
 

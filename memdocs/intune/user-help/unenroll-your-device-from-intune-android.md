@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 04/19/2019
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 66053bae197a74bf83a41b7ea400ffdc3d514b06
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 0715cce163d999ef0c978f9c085ce9df10b5155a
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82077576"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83881693"
 ---
 # <a name="unenroll-your-android-device-from-management"></a>Zrušení správy registrovaného zařízení s Androidem  
 
@@ -52,14 +52,14 @@ Pokud organizace nechce zaregistrované zařízení s Androidem dále spravovat,
 
 Postup odebrání všech dat, která do zařízení uložila aplikace Portál společnosti pro Android:
 
-- Vymažte data aplikace klepnutím na **aplikace** > **[*název aplikace*]** > **Vymazat data**.
+- Vymažte data aplikace klepnutím na **aplikace**  >  **[*název aplikace*]**  >  **Vymazat data**.
 - Odstraňte následující složku: \storage\internal storage\Android\data\com.microsoft.windowsintune.companyportal.
 
 ## <a name="uninstall-the-company-portal-app"></a>Odinstalace aplikace Portál společnosti
 
 Portál společnosti je aplikace pro správu zařízení. Nedá se odinstalovat, dokud zrušíte registraci zařízení od jeho správy. Jakmile registraci zrušíte, klepněte na ikonu aplikace Portál společnosti a podržte ji, dokud se nezobrazí **Odinstalovat**. Klepněte na **Odinstalovat** a aplikaci ze zařízení odeberte.  
 
-Případně klepněte na **Nastavení** > **aplikace** > **portál společnosti** > **odinstalovat**.  
+Případně klepněte na **Nastavení**  >  **aplikace**  >  **portál společnosti**  >  **odinstalovat**.  
 
 ### <a name="remove-the-company-portal-app-as-a-device-administrator"></a>Odebrání aplikace Portál společnosti jako správce zařízení
 
@@ -71,12 +71,12 @@ Tady je postup, jak zakázat Portál společnosti jako správce zařízení. Sku
 
 **Možnost 1**:  
 
-1. Vyberte **Nastavení** > **zabezpečení** > **Další nastavení** > zabezpečení**Správci zařízení**.  
+1. Vyberte **Nastavení**  >  **zabezpečení**  >  **Další nastavení zabezpečení**  >  **Správci zařízení**.  
 2. Zrušte zaškrtnutí **portál společnosti** výběru.  
 
 **Možnost 2:**
 
-1. Vyberte **Nastavení** > **zamykací obrazovky a zabezpečení** > **Další nastavení** > zabezpečení**aplikace Správce zařízení**.
+1. Vyberte **Nastavení**  >  **zamykací obrazovky a zabezpečení**  >  **Další nastavení zabezpečení**  >  **aplikace Správce zařízení**.
 2. Zrušte zaškrtnutí **portál společnosti** výběru.
 
 Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).

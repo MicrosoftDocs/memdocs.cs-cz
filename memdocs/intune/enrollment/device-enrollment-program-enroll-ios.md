@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 35c2a9f5dec506d1a9f0eafc9c82f277cd2635db
-ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
+ms.openlocfilehash: 8b90d37737618d238597919b1baf5089758d1ca5
+ms.sourcegitcommit: 97fbb7db14b0c4049c0fe3a36ee16a5c0cf3407a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83764216"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83864969"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-automated-device-enrollment"></a>Automatická registrace zařízení se systémem iOS/iPadOS pomocí Automatické registrace zařízení společnosti Apple
 
@@ -209,7 +209,7 @@ Teď, když jste nainstalovali token, můžete vytvořit profil zápisu pro zař
 
      > [!NOTE]
      > Pokud je **synchronizace s počítači** nastavená na **Odepřít vše**, port bude omezený na zařízeních s iOS a iPadOS. Port lze použít pouze pro zpoplatnění a žádné jiné. Port se zablokuje pomocí iTunes nebo Apple Configuratoru 2.
-     Pokud je **synchronizace s počítači** nastavená tak, aby **povolovala Apple Configuratoru podle certifikátu**, nezapomeňte uložit místní kopii certifikátu, ke kterému budete mít přístup později. V nahraném kopírování nebudete moct provádět změny. Je důležité, aby byl tento certifikát nadále přístupný v budoucnu. 
+     Pokud je **synchronizace s počítači** nastavená tak, aby **povolovala Apple Configuratoru podle certifikátu**, ujistěte se, že máte místní kopii certifikátu, ke kterému budete mít přístup později. V nahraném kopírování nebudete moct dělat změny a je důležité, aby byl tento certifikát v budoucnu přístupný. Pokud se chcete připojit k zařízení se systémem iOS/iPadOS ze zařízení macOS nebo počítače s, musí být v zařízení nainstalovaný stejný certifikát, který vytváří připojení k zařízení se systémem iOS/iPadOS, které bylo zaregistrováno pomocí profilu automatického zápisu zařízení s touto konfigurací a certifikátem.
 
 12. Pokud jste v předchozím kroku zvolili **Povolit Apple Configurator podle certifikátu**, zvolte certifikát Apple Configuratoru, který se má importovat.
 
@@ -234,7 +234,7 @@ Teď, když jste nainstalovali token, můžete vytvořit profil zápisu pro zař
     |------------------------------------------|------------------------------------------|
     | <strong>Heslo</strong> | Vyzve uživatele k zadání hesla. Vždy vyžadovat heslo pro nezabezpečená zařízení, pokud není přístup kontrolován jiným způsobem (například celoobrazovkový režim, který zařízení omezuje na jednu aplikaci). Pro iOS/iPadOS 7,0 a novější. |
     | <strong>Zjišťování polohy</strong> | Vyzve uživatele k poskytnutí polohy. Pro macOS 10,11 a novější a iOS/iPadOS 7,0 a novější. |
-    | <strong>Obnovil</strong> | Zobrazí obrazovku aplikace & data. Tato obrazovka nabídne uživateli při nastavování zařízení možnost obnovit nebo přenést data ze zálohy v iCloudu. Pro macOS 10,9 a novější a iOS/iPadOS 7,0 a novější. |
+    | <strong>Obnovení</strong> | Zobrazí obrazovku aplikace & data. Tato obrazovka nabídne uživateli při nastavování zařízení možnost obnovit nebo přenést data ze zálohy v iCloudu. Pro macOS 10,9 a novější a iOS/iPadOS 7,0 a novější. |
     | <strong>iCloud a Apple ID</strong> | Umožní uživateli přihlásit se pomocí svého Apple ID a používat iCloud. Pro macOS 10,9 a novější a iOS/iPadOS 7,0 a novější.   |
     | <strong>Podmínky a ujednání</strong> | Požaduje, aby uživatel přijal podmínky a ujednání společnosti Apple. Pro macOS 10,9 a novější a iOS/iPadOS 7,0 a novější. |
     | <strong>Touch ID</strong> | Umožní uživateli nastavit pro zařízení identifikaci otiskem prstu. Pro macOS 10.12.4 a novější a iOS/iPadOS 8,1 a novější. |

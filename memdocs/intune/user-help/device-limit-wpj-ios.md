@@ -7,7 +7,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 01/18/2018
-ms.topic: article
+ms.topic: end-user-help
 ms.service: microsoft-intune
 ms.subservice: end-user
 ms.technology: ''
@@ -19,12 +19,12 @@ ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 9091cae7b989754497cf5d69f7890574de42ea96
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 7920450185bbc3d198777893a303f4fdec1cd5f7
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79328259"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83880504"
 ---
 # <a name="the-limit-of-devices-you-can-register-has-been-reached"></a>Dosáhlo se limitu počtu zařízení, která můžete zaregistrovat
 

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 05/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, get-started, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: de679314bcd3b52ff879fbe9a6340a61d2b7e993
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 3ad6baf1ec1ed892495845e0b9fdaaa5583bba85
+ms.sourcegitcommit: a1da477542fb0ff360685d6eb58ef43e37ac3950
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078358"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83853634"
 ---
 # <a name="app-protection-policies-overview"></a>Přehled zásad ochrany aplikací
 
@@ -84,6 +84,18 @@ Podpora platforem zásad ochrany aplikací Intune se zarovnává s podporou plat
 > [!IMPORTANT]
 > Na zařízení se vyžaduje Portál společnosti Intune pro příjem zásad ochrany aplikací na Androidu. Další informace najdete v tématu [požadavky aplikace Portál společnosti Intune Access](../fundamentals/end-user-mam-apps-android.md#access-apps).
 
+## <a name="app-protection-policy-data-protection-framework"></a>Zásady ochrany aplikací – Architektura ochrany dat
+
+Volby dostupné v zásadách ochrany aplikací (aplikace) umožňují organizacím přizpůsobit ochranu na jejich konkrétní potřeby. V některých případech nemusí být zřejmé, která nastavení zásad jsou nutná k implementaci kompletního scénáře. Microsoft zavedl taxonomii pro své rozhraní ochrany dat aplikací pro správu mobilních aplikací v iOS a Androidu, aby organizacím pomohly určit prioritu posílení koncových bodů mobilních klientů.
+
+Architektura aplikace Data Protection je rozdělená na tři různé úrovně konfigurace, přičemž každá úroveň se sestavuje na předchozí úrovni:
+
+- **Ochrana podnikových dat** na úrovni Basic (úroveň 1) zajišťuje, aby byly aplikace chráněny pomocí kódu PIN a zašifrované a prováděly operace selektivního vymazání. U zařízení s Androidem Tato úroveň ověřuje ověření zařízení s Androidem. Toto je konfigurace na úrovni vstupu, která poskytuje podobné řízení ochrany dat v zásadách poštovní schránky Exchange Online a zavádí uživatele a naplňování do aplikace.
+- **Enterprise Enhanced Data Protection** (úroveň 2) zavádí mechanismy prevence úniku dat aplikace a minimální požadavky na operační systém. Jedná se o konfiguraci, která platí pro většinu mobilních uživatelů, kteří přistupují k pracovním nebo školním datům.
+- **Podniková ochrana dat** (úroveň 3) zavádí pokročilé mechanismy ochrany dat, rozšířenou konfiguraci kódu PIN a ochranu před mobilními hrozbami aplikace. Tato konfigurace je žádoucí pro uživatele, kteří mají přístup k datům s vysokým rizikem.
+
+Pokud chcete zobrazit konkrétní doporučení pro jednotlivé úrovně konfigurace a minimální aplikace, které musí být chráněné, přečtěte si téma [Ochrana dat pomocí zásad ochrany aplikací](app-protection-framework.md).
+
 ## <a name="how-app-protection-policies-protect-app-data"></a>Jak zásady ochrany aplikací chrání data aplikací
 
 ### <a name="apps-without-app-protection-policies"></a>Aplikace bez zásad ochrany aplikací
@@ -143,13 +155,13 @@ Vývojový tým sady Intune SDK aktivně testuje a udržuje podporu pro aplikace
 
 Následující seznam uvádí požadavky koncových uživatelů na používání zásad ochrany aplikací v aplikaci spravované přes Intune:
 
-- Koncový uživatel musí mít účet Azure Active Directory (AAD). Pokud se chcete dozvědět, jak se vytvářejí uživatelé Intune v Azure Active Directory, přečtěte si [Přidání uživatelů a udělení oprávnění pro správu v Intune](../fundamentals/users-add.md).
+- Koncový uživatel musí mít účet Azure Active Directory (Azure AD). Pokud se chcete dozvědět, jak se vytvářejí uživatelé Intune v Azure Active Directory, přečtěte si [Přidání uživatelů a udělení oprávnění pro správu v Intune](../fundamentals/users-add.md).
 
 - Koncový uživatel musí mít ke svému účtu Azure Active Directory přiřazenou licenci pro Microsoft Intune. Informace o tom, jak se přiřazují licence Intune koncovým uživatelům, najdete v článku [Správa licencí Intune](../fundamentals/licenses-assign.md).
 
 - Koncový uživatel musí patřit do skupiny zabezpečení, která je cílem zásady ochrany aplikace. Stejná zásada ochrany aplikace musí mít za cíl konkrétní používanou aplikaci. Zásady ochrany aplikací se dají vytvářet a nasazovat v konzole Intune na [portálu Azure](https://portal.azure.com). Skupiny zabezpečení se teď dají vytvořit v [centru pro správu Microsoft 365](https://admin.microsoft.com).
 
-- Koncový uživatel se musí do aplikace přihlásit pomocí svého účtu AAD.
+- Koncový uživatel se musí do aplikace přihlásit pomocí svého účtu služby Azure AD.
 
 ## <a name="app-protection-policies-for-microsoft-office-apps"></a>Zásady ochrany aplikací pro aplikace systém Microsoft Office
 
@@ -207,7 +219,7 @@ Příklad práce nebo "firemní" kontext vám může nabídnout uživatele, kter
 Outlook obsahuje souhrnné zobrazení e-mailů osobních i firemních e-mailů. V této situaci aplikace Outlook při spuštění vyzve k zadání kódu PIN služby Intune.
 
   >[!NOTE]
-  > I když je hrana v "podnikovém" kontextu, uživatel může úmyslně přesunout soubory kontextu firemního prostředí OneDrivu do neznámého umístění úložiště v osobním cloudu. Pokud tomu chcete předejít, přečtěte si téma [Určení seznamu povolených nebo blokovaných webů pro Microsoft Edge](../apps/manage-microsoft-edge.md#specify-allowed-or-blocked-sites-list-for-microsoft-edge) a konfigurace seznamu povolených a blokovaných webů pro Edge.
+  > I když je hrana v "podnikovém" kontextu, uživatel může úmyslně přesunout soubory kontextu firemního prostředí OneDrivu do neznámého umístění úložiště v osobním cloudu. Pokud tomu chcete předejít, přečtěte si téma [Správa omezených](manage-microsoft-edge.md#manage-restricted-web-sites) webů a konfigurace seznamu povolených a blokovaných webů pro Edge.
 
 Další informace o více identitách v Intune najdete v tématu [mam a multi-identity](apps-supported-intune-apps.md).
 

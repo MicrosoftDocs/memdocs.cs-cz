@@ -1,12 +1,12 @@
 ---
-title: Architektura ochrany dat pomocí zásad ochrany aplikací
+title: Architektura ochrany dat pomocí zásad APP (App Protection Policies)
 titleSuffix: Microsoft Intune
 description: Přečtěte si, jak zásady ochrany aplikací (aplikace) zajišťují, že data organizace zůstávají v bezpečí nebo jsou obsažená ve spravované aplikaci bez ohledu na to, jestli je zařízení zaregistrované.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/22/2020
+ms.date: 05/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,14 +18,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 86117193ce7aae01380923ce26f84dfb5ba97a4d
-ms.sourcegitcommit: 53bab52e42de28b87e53596646a3532e25eb9c14
+ms.openlocfilehash: 91683280a2e48d82fd145bf19228c33b432b6b49
+ms.sourcegitcommit: a1da477542fb0ff360685d6eb58ef43e37ac3950
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82182289"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83853566"
 ---
-# <a name="data-protection-framework-using-app-protection-policies"></a>Architektura ochrany dat pomocí zásad ochrany aplikací 
+# <a name="data-protection-framework-using-app-protection-policies"></a>Architektura ochrany dat pomocí zásad APP (App Protection Policies) 
 
 Protože víc organizací implementuje strategie mobilních zařízení pro přístup k pracovním nebo školním datům, je ochrana před únikem dat zcela nejdůležitější. Řešení správy mobilních aplikací v Intune pro ochranu před únikem dat je zásady ochrany aplikací (aplikace). APLIKACE jsou pravidla, která zajistí, aby data organizace zůstala bezpečná nebo obsažená ve spravované aplikaci bez ohledu na to, jestli je zařízení zaregistrované. Další informace najdete v tématu [Přehled zásad ochrany aplikací](app-protection-policy.md).
 
@@ -49,13 +49,13 @@ Společnost Microsoft doporučuje pro architekturu ochrany dat aplikací násled
 |--------------------|------------------------|-------------------------------------------------------------------|----------------------------------------------------------|----------------------------------------|
 | Kontrola kvality  | Předprodukční tenant  | Vlastníci funkce, zabezpečení, posouzení rizik, soukromí, uživatelské rozhraní  | Ověřování funkčních scénářů, koncept dokumentace  | 0-30 dní  |
 | Preview  | Provozní tenant  | Vlastníci mobilních funkcí, UX  | Ověření scénáře koncového uživatele, dokumentace k uživateli  | 7-14 dní, vyúčtování kvality  |
-| Výroba  | Provozní tenant  | Vlastníci na mobilní funkce, IT oddělení technické podpory  | –  | 7 dní do několika týdnů, po verzi Preview  |
+| Produkce  | Provozní tenant  | Vlastníci na mobilní funkce, IT oddělení technické podpory  | –  | 7 dní do několika týdnů, po verzi Preview  |
 
 Jak uvádí výše uvedená tabulka, všechny změny zásad ochrany aplikací by se měly nejdřív provést v předprodukčním prostředí, aby se porozumělo nastavení zásad. Po dokončení testování je možné změny přesunout do produkčního prostředí a použít na podmnožinu produkčních uživatelů, obecně, IT oddělení a dalších příslušných skupin. A nakonec můžete zavedení dokončit pro ostatní uživatele mobilní komunity. Zavedení do produkčního prostředí může trvat delší dobu v závislosti na rozsahu dopadu na změnu. Pokud nedochází k žádnému dopadu na uživatele, změna by se měla rychle vymezit, zatímco pokud změna vznikne vlivem na uživatele, může být potřeba, aby se povedlo zpomalit, protože je potřeba sdělit změny naplnění uživatele.
 
 Při testování změn v aplikaci mějte na paměti [časování doručování](app-protection-policy-delivery.md). Stav doručování aplikace pro daného uživatele může být monitorován. Další informace najdete v tématu [jak monitorovat zásady ochrany aplikací](app-protection-policies-monitor.md).
 
-Jednotlivá nastavení aplikací pro každou aplikaci je možné ověřit na zařízeních pomocí Edge a adresy URL *o: Intunehelp*. Další informace najdete v tématech [Kontrola protokolů ochrany klientských aplikací](app-protection-policy-settings-log.md) a [Správa webového přístupu pomocí Microsoft Edge s Microsoft Intune](manage-microsoft-edge.md#use-microsoft-edge-to-access-managed-app-logs).
+Jednotlivá nastavení aplikací pro každou aplikaci je možné ověřit na zařízeních pomocí Edge a adresy URL *o: Intunehelp*. Další informace najdete v tématech [Kontrola protokolů ochrany klientských aplikací](app-protection-policy-settings-log.md) a [používání hraničních zařízení pro iOS a Android pro přístup k protokolům spravovaných aplikací](manage-microsoft-edge.md#use-edge-for-ios-and-android-to-access-managed-app-logs).
 
 ## <a name="app-data-protection-framework-settings"></a>Nastavení architektury aplikace Data Protection
 
@@ -140,7 +140,7 @@ Zásady na úrovni 1 vynutily rozumnou úroveň přístupu k datům a současně
 
 Úroveň 2 je konfigurace ochrany dat doporučená jako standard pro zařízení, kde uživatelé přistupují k citlivým informacím. Tato zařízení jsou v podnicích v současnosti přirozeného cíle. Tato doporučení nepředpokládají velký personál zkušených specialistů na zabezpečení, a proto by měla být přístupná většině podnikových organizací. Tato konfigurace se rozšíří na konfiguraci na úrovni 1 tím, že omezí scénáře přenosu dat a vyžaduje minimální verzi operačního systému.
 
-Nastavení zásad, která jsou vydaná na úrovni 2, zahrnují všechna nastavení zásad doporučená pro úroveň 1 a k implementaci dalších ovládacích prvků a pokročilejší konfiguraci než úroveň 1 se přidají nebo aktualizují nastavení níže uvedených zásad. I když tato nastavení mohou mít mírně vyšší dopad na uživatele nebo na aplikace, vynutila úroveň ochrany dat lépe úměrná riziku uživatelů s přístupem k citlivým informacím na mobilních zařízeních.
+Nastavení zásad vyžadované v úrovni 2 zahrnuje všechna nastavení zásad doporučená pro úroveň 1, ale obsahuje jenom ta nastavení, která byla přidaná nebo změněná k implementaci více ovládacích prvků a pokročilejší konfigurace než úroveň 1. I když tato nastavení mohou mít mírně vyšší dopad na uživatele nebo na aplikace, vynutila úroveň ochrany dat lépe úměrná riziku uživatelů s přístupem k citlivým informacím na mobilních zařízeních.
 
 #### <a name="data-protection"></a>Ochrana dat
 
@@ -159,15 +159,15 @@ Nastavení zásad, která jsou vydaná na úrovni 2, zahrnují všechna nastaven
 
 | Nastavení | Popis nastavení |          Hodnota/akce  |          Platforma        | Poznámky |
 |--------------------|----------------------------|-----------------------------------------------------------|----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Podmínky zařízení  |       Minimální verze operačního systému  |          *Format: Hlavní_verze. podverze. <br>sestavení příklad: 12.4.6* /Block Access |          iOS/iPadOS        | Microsoft doporučuje nakonfigurovat minimální hlavní verzi iOS tak, aby odpovídala podporovaným verzím iOS pro aplikace Microsoftu.   Aplikace Microsoftu podporují N-1 přístup, kde N je aktuální hlavní verze iOS. V případě hodnot menších verzí a verze sestavení doporučuje společnost Microsoft zajistit, aby byla zařízení v aktuálním stavu s příslušnými aktualizacemi zabezpečení. Seznamte se s [aktualizacemi zabezpečení Apple](https://support.apple.com/en-us/HT201222) pro nejnovější doporučení společnosti Apple. |
-| Podmínky zařízení  |       Minimální verze operačního systému  |          *Formát: hlavní. vedlejší<br> příklad: 5,0* /blokovat přístup   |          Android        | Microsoft doporučuje nakonfigurovat minimální hlavní verzi Androidu tak, aby odpovídala podporovaným verzím Androidu pro aplikace Microsoftu. Výrobci OEM a zařízení, kteří dodržují doporučené požadavky na Android Enterprise, musí podporovat aktuální dodací verzi a jeden upgrade na jedno písmeno.   V současné době Android doporučuje Android 8,0 a novější pro pracovníky znalostní báze.   Nejnovější doporučení pro Android najdete v tématu [Doporučené požadavky pro Android Enterprise](https://www.android.com/enterprise/recommended/requirements/) |
-| Podmínky zařízení  |       Minimální verze opravy  |          *Formát: rrrr-mm-dd <br> příklad: 2020-01-01* /blokovat přístup  |          Android        | Zařízení s Androidem můžou přijímat měsíční opravy zabezpečení, ale tato verze závisí na výrobci OEM nebo nosiči. Organizace musí před implementací tohoto nastavení zajistit, aby nasazená zařízení s Androidem přijímala aktualizace zabezpečení. Nejnovější verze oprav najdete v [bulletinech zabezpečení pro Android](https://source.android.com/security/bulletin/) .  |
+| Podmínky zařízení  |       Minimální verze operačního systému  |          *Formát: Hlavní_verze. podverze. sestavení <br> Příklad: 12.4.6* /Block Access |          iOS/iPadOS        | Microsoft doporučuje nakonfigurovat minimální hlavní verzi iOS tak, aby odpovídala podporovaným verzím iOS pro aplikace Microsoftu.   Aplikace Microsoftu podporují N-1 přístup, kde N je aktuální hlavní verze iOS. V případě hodnot menších verzí a verze sestavení doporučuje společnost Microsoft zajistit, aby byla zařízení v aktuálním stavu s příslušnými aktualizacemi zabezpečení. Seznamte se s [aktualizacemi zabezpečení Apple](https://support.apple.com/en-us/HT201222) pro nejnovější doporučení společnosti Apple. |
+| Podmínky zařízení  |       Minimální verze operačního systému  |          *Formát: Hlavní_verze. podverze <br>   Příklad: 5,0* /blokovat přístup   |          Android        | Microsoft doporučuje nakonfigurovat minimální hlavní verzi Androidu tak, aby odpovídala podporovaným verzím Androidu pro aplikace Microsoftu. Výrobci OEM a zařízení, kteří dodržují doporučené požadavky na Android Enterprise, musí podporovat aktuální dodací verzi a jeden upgrade na jedno písmeno.   V současné době Android doporučuje Android 8,0 a novější pro pracovníky znalostní báze.   Nejnovější doporučení pro Android najdete v tématu [Doporučené požadavky pro Android Enterprise](https://www.android.com/enterprise/recommended/requirements/) |
+| Podmínky zařízení  |       Minimální verze opravy  |          *Formát: rrrr-mm-dd <br> Příklad: 2020-01-01* /blokovat přístup  |          Android        | Zařízení s Androidem můžou přijímat měsíční opravy zabezpečení, ale tato verze závisí na výrobci OEM nebo nosiči. Organizace musí před implementací tohoto nastavení zajistit, aby nasazená zařízení s Androidem přijímala aktualizace zabezpečení. Nejnovější verze oprav najdete v [bulletinech zabezpečení pro Android](https://source.android.com/security/bulletin/) .  |
 
 #### <a name="level-3-enterprise-high-data-protection"></a>Úroveň 3; podniková ochrana dat – vysoká 
 
 Úroveň 3 je konfigurace ochrany dat doporučená jako standard pro organizace s velkými a sofistikovanými organizacemi zabezpečení nebo pro konkrétní uživatele a skupiny, které budou jedinečně cíleny na nežádoucí osoby. Tyto organizace jsou obvykle zaměřené na dobře financované a sofistikované nežádoucí osoby a jako taková jsou popsaná další omezení a ovládací prvky. Tato konfigurace se rozšíří na konfiguraci ve druhé úrovni tím, že omezí další scénáře přenosu dat, zvýší složitost konfigurace kódu PIN a přidá detekci mobilních hrozeb.  
 
-Nastavení zásad, která jsou vydaná v úrovni 3, zahrnují všechna nastavení zásad doporučená pro úrovně 2 a 1 a k implementaci striktní konfigurace a ovládacích prvků ochrany dat se přidávají nebo aktualizují níže uvedená nastavení zásad. Tato nastavení zásad můžou mít potenciálně významný dopad na uživatele nebo na aplikace, což vynucuje úroveň zabezpečení odpovídající cílovým organizacím, které čelí.  
+Nastavení zásad vyžadované v úrovni 3 zahrnuje všechna nastavení zásad doporučená pro úroveň 2, ale obsahuje jenom ta nastavení, která jste přidali nebo změnili k implementaci více ovládacích prvků a pokročilejší konfiguraci než úroveň 2. Tato nastavení zásad můžou mít potenciálně významný dopad na uživatele nebo na aplikace, což vynucuje úroveň zabezpečení odpovídající cílovým organizacím, které čelí.  
 
 #### <a name="data-protection"></a>Ochrana dat
 
@@ -192,7 +192,7 @@ Nastavení zásad, která jsou vydaná v úrovni 3, zahrnují všechna nastaven�
 
 | Nastavení | Popis nastavení |          Hodnota/akce  |          Platforma        | Poznámky |
 |----------------------------|--------------------------------------|-------------------|---------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Podmínky zařízení  |       Minimální verze operačního systému  |          *Formát: hlavní. vedlejší<br> příklad: 8,0* /blokovat přístup   |          Android        | Microsoft doporučuje nakonfigurovat minimální hlavní verzi Androidu tak, aby odpovídala podporovaným verzím Androidu pro aplikace Microsoftu. Výrobci OEM a zařízení, kteří dodržují doporučené požadavky na Android Enterprise, musí podporovat aktuální dodací verzi a jeden upgrade na jedno písmeno.   V současné době Android doporučuje Android 8,0 a novější pro pracovníky znalostní báze.   Nejnovější doporučení pro Android najdete v tématu [Doporučené požadavky pro Android Enterprise](https://www.android.com/enterprise/recommended/requirements/) |
+| Podmínky zařízení  |       Minimální verze operačního systému  |          *Formát: Hlavní_verze. podverze <br>   Příklad: 8,0* /blokovat přístup   |          Android        | Microsoft doporučuje nakonfigurovat minimální hlavní verzi Androidu tak, aby odpovídala podporovaným verzím Androidu pro aplikace Microsoftu. Výrobci OEM a zařízení, kteří dodržují doporučené požadavky na Android Enterprise, musí podporovat aktuální dodací verzi a jeden upgrade na jedno písmeno.   V současné době Android doporučuje Android 8,0 a novější pro pracovníky znalostní báze.   Nejnovější doporučení pro Android najdete v tématu [Doporučené požadavky pro Android Enterprise](https://www.android.com/enterprise/recommended/requirements/) |
 |       Podmínky zařízení  |          Zařízení s jailbreakem nebo rootem  |        Data není k dispozici a vymazání  |          iOS/iPadOS, Android        |  |
 |       Podmínky zařízení  |          Maximální povolená úroveň hrozeb  |          Zabezpečený/blokovaný přístup  |          iOS/iPadOS, Android        | <p>U neregistrovaných zařízení je možné kontrolovat hrozby pomocí ochrany před mobilními hrozbami. Další informace najdete v tématu Ochrana před [mobilními hrozbami u neregistrovaných zařízení](https://aka.ms/mtdmamdocs).      </p><p>     Pokud je zařízení zaregistrované, toto nastavení se dá přeskočit při nasazení ochrany před mobilními hrozbami pro zaregistrovaná zařízení. Další informace najdete v tématu Ochrana před [mobilními hrozbami u zaregistrovaných zařízení](../protect/mtd-device-compliance-policy-create.md).</p> |
 

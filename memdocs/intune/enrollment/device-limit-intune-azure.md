@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 749b648cb3527c75aac85fd7817b918a61f3a2a8
-ms.sourcegitcommit: d8dc05476ecd5db7ecb36dc649b566b349ba263d
+ms.openlocfilehash: 8610b619a4ac05f37b893060b3b3a2bcb1dae528
+ms.sourcegitcommit: 97fbb7db14b0c4049c0fe3a36ee16a5c0cf3407a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83733642"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83864850"
 ---
 # <a name="understand-intune-and-azure-ads-device-limit-restrictions"></a>Principy omezení limitu počtu zařízení v Intune a Azure AD
 
@@ -54,15 +54,15 @@ Pokud máte nastavené omezení omezení počtu zařízení v Intune i Azure, v 
 | Správce zařízení s Androidem DEM | Ne | | Ne | 
 | iOS/macOS BYOD | Ano | Ano | Ano |
 | iOS/macOS – automatický zápis zařízení (ADE) | Ano | Ano | Ano |
-| iOS/macOS ADE | No | Ano | No |
+| iOS/macOS ADE | Ne | Ano | Ne |
 | BYOD Windows | Ano | Ano | Ano |
 | Pouze Windows MD | | Ano | Ano |
-| Připojeno k Windows Azure AD| Ano | Ano | No |
-| Windows Autopilot | Ano | Ano | No |
+| Připojeno k Windows Azure AD| Ano | Ano | Ne |
+| Windows Autopilot | Ano | Ano | Ne |
 | Připojeno k hybridní službě Azure AD pro Windows | Ne | Ne | Ano |
-| Spoluspráva Windows | No | Ano | No |
-| Windows DEM | No | Ano | No |
-| Hromadná registrace Windows | No | Ano | No |
+| Spoluspráva Windows | Ne | Ano | Ne |
+| Windows DEM | Ne | Ano | Ne |
+| Hromadná registrace Windows | Ne | Ano | Ne |
 
 
 ## <a name="android-and-ios-devices"></a>Zařízení s Androidem a iOS
@@ -114,6 +114,6 @@ Pro omezení limitu počtu zařízení v Azure se **maximální počet zařízen
 
 ## <a name="next-steps"></a>Další kroky
 
-- [Vytvořte omezení limitu počtu zařízení v Azure.](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal.md#configure-device-settings)
+- [Vytvořte omezení limitu počtu zařízení v Azure.](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal#configure-device-settings)
 - [Nakonfigurujte nastavení zařízení v Azure.](enrollment-restrictions-set.md#create-a-device-limit-restriction)
-- [Přečtěte si další informace o registraci a připojených doménách.](https://docs.microsoft.com/azure/active-directory/devices/overview.md#getting-devices-in-azure-ad)
+- [Přečtěte si další informace o registraci a připojených doménách.](https://docs.microsoft.com/azure/active-directory/devices/overview#getting-devices-in-azure-ad)

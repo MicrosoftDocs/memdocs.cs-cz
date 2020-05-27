@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 10/07/2018
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -18,12 +18,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: c1e22f4d56ed5a48aaf3c8af633e9f73c195dfb1
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 1616fe4104707668463843dfb890c2f8e0b0c4a8
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79327975"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83880965"
 ---
 # <a name="lock-your-device-from-the-company-portal-app-for-windows-10"></a>Uzamčení zařízení z aplikace Portál společnosti pro Windows 10
 

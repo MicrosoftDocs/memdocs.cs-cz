@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 10/07/2018
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 1d8b05a5cd4398026d58c04199caf7f63567cc1e
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 2dfb9d674bdec33a41c4ec2d6e8c73e21cfdbf64
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79327963"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83880910"
 ---
 # <a name="remove-your-device-from-the-company-portal"></a>Odebrat zařízení z portálu společnosti
 
@@ -38,7 +38,7 @@ Odebrání zařízení:
 
     ![Snímek obrazovky stránky Zařízení se dvěma dlaždicemi, které zobrazují neznámá zařízení s obecným názvem. Šedý banner pod zařízeními vyzývá uživatele k identifikaci používaného zařízení nebo přidání nového.](./media/rename-reset-device-step2-1808.png) 
 
-3. Vyberte **Odebrat**. Pokud možnost odebrat není v horní části stránky zobrazená, vyberte **Další (...)** .  >  **Odebrat**.  
+3. Vyberte **Odebrat**. Pokud možnost odebrat není v horní části stránky zobrazená, vyberte **Další (...)**  >  . **Odebrat**.  
 
    ![Stránka podrobností o zařízení pro vybrané zařízení na webu Portál společnosti. V horní části stránky se nacházejí odkazy Přejmenovat, Odebrat, Resetovat zařízení, Resetovat heslo a Vzdálené uzamčení. ](./media/rename-reset-device-1808.png)  
   

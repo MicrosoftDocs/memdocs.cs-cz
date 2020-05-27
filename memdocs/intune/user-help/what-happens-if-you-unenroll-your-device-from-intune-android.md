@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 03/13/2017
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: a8bbabee06e2aa94b6dc7c4d273c76f513005ddf
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: c0e2564a17f22d0e341325b285cf9ff576c7dbb9
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82077015"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83879712"
 ---
 # <a name="what-happens-if-you-unenroll-your-android-device-from-intune"></a>Co se stane, když zrušíte registraci zařízení s Androidem v Intune?
 

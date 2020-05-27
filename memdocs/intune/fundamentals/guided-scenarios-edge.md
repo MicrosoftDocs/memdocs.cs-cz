@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7eb352e73a88f8da8eb927400b5db86356c10363
-ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
+ms.openlocfilehash: 49f9b9076d20c1f5d4740a6f8b1b9883e12ce629
+ms.sourcegitcommit: a1da477542fb0ff360685d6eb58ef43e37ac3950
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83764148"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83853532"
 ---
 # <a name="guided-scenario---deploy-microsoft-edge-for-mobile"></a>Scénář s asistencí – nasazení Microsoft Edge pro mobilní zařízení
 
@@ -90,6 +90,5 @@ Poslední krok vám umožní zkontrolovat souhrn nastavení, která jste nakonfi
 
 ## <a name="next-steps"></a>Další kroky
 
-- Nastavením integrace zásad ochrany aplikací Intune Zvyšte zabezpečení používání Microsoft Edge. Další informace najdete v tématu [Zásady ochrany aplikací pro Microsoft Edge](../apps/manage-microsoft-edge.md#application-protection-policies-for-microsoft-edge).
-- Pokud máte Intranetové servery, které chcete zahrnout, prozkoumejte ochranu přístupu pomocí integrace služby Azure Application proxy. Další informace najdete v tématu [Konfigurace nastavení proxy aplikací pro Microsoft Edge](../apps/manage-microsoft-edge.md#configure-application-proxy-settings-for-microsoft-edge).
-
+- Nastavením integrace zásad ochrany aplikací Intune Zvyšte zabezpečení používání Microsoft Edge. Další informace najdete v tématu [Vytvoření zásad ochrany aplikací Intune](../apps/manage-microsoft-edge.md#create-intune-app-protection-policies).
+- Pokud máte Intranetové servery, které chcete zahrnout, prozkoumejte ochranu přístupu pomocí integrace služby Azure Application proxy. Další informace najdete v tématu [Správa konfigurace proxy serveru](../apps/manage-microsoft-edge.md#manage-proxy-configuration).

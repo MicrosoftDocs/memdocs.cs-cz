@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 07/29/2019
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 6fa5865c1be4733df6edef484894b246c767db59
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 1cd3309ebe05d48fd2b28988ffc09702901c470a
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079599"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83881062"
 ---
 # <a name="install-missing-certificate-required-by-your-organization"></a>Instalace chybějícího certifikátu požadovaného vaší organizací  
 

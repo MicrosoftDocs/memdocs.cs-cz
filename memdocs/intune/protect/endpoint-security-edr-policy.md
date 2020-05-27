@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 063d7fbbd5572e1ff2399efc161d319c6c9c5c1b
-ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
+ms.openlocfilehash: f17f781d95f5560e73cc7f55cddac3e5c8d5022e
+ms.sourcegitcommit: 97fbb7db14b0c4049c0fe3a36ee16a5c0cf3407a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83824086"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83864935"
 ---
 # <a name="endpoint-detection-and-response-policy-for-endpoint-security-in-intune"></a>Zjišťování koncových bodů a zásady odezvy pro zabezpečení koncového bodu v Intune
 
@@ -265,4 +265,4 @@ Podrobnosti o zásadách EDR, které nasadíte, můžete zobrazit v centru pro s
 ## <a name="next-steps"></a>Další kroky
 
 - [Konfigurace zásad zabezpečení koncového bodu](../protect/endpoint-security-policy.md#create-an-endpoint-security-policy)
-- Přečtěte si další informace o [detekci a odezvě koncových bodů](https://docs.microsoft.com/windows/security/-threat-protection/microsoft-defender-atp/overview-endpoint-detection-response) v dokumentaci ke službě Microsoft Defender atp.
+- Přečtěte si další informace o [detekci a odezvě koncových bodů](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/overview-endpoint-detection-response) v dokumentaci ke službě Microsoft Defender atp.

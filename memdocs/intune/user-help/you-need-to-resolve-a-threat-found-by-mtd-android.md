@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 08/28/2018
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -17,12 +17,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 68bc48461f6bac9fc7a220642e8867178ee3999c
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 558d90ab6ae3eae6db749a2f0b80ee97dea7f96b
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79324015"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83879623"
 ---
 # <a name="resolve-a-threat-found-by-a-mobile-threat-defense-app"></a>Vyřešení hrozby, kterou zjistila aplikace Mobile Threat Defense
 

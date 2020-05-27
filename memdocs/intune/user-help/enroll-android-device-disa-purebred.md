@@ -6,9 +6,10 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 05/15/2020
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: ''
 searchScope:
@@ -18,12 +19,12 @@ ms.reviewer: jeyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9f92a23b117582ef40d236fe257917018431128e
-ms.sourcegitcommit: 6ca5e75ed7a6fd2186fbe51c177960004d5ec81f
+ms.openlocfilehash: 584392891320f96eed16863225ffb323dc240594
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83633394"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83880620"
 ---
 # <a name="set-up-android-device-with-the-microsoft-intune-app-and-disa-purebred"></a>Nastavení zařízení s Androidem pomocí aplikace Microsoft Intune a DISA purebred
 

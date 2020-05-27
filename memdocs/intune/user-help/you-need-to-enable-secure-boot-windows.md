@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 12/06/2018
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-enduser; seodec18
 ms.collection: ''
-ms.openlocfilehash: 4d35ec1cc34b7bba7a27f67640d3adaf66510e02
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: ede37e43740d6b8e7627df017f0c7acc5f712b3c
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82076811"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83880775"
 ---
 # <a name="you-need-to-enable-secure-boot"></a>Je nutné povolit zabezpečené spouštění.
 

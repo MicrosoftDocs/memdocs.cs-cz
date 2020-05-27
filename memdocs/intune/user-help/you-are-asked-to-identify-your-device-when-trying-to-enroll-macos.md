@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 12/06/2017
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 320d4fcc4a7e13333832150125e3ddaa74fbaba4
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 06e6b170667d16afa699706e2349e01710a0dc6e
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79324115"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83880890"
 ---
 # <a name="you-need-to-identify-your-device-when-youre-trying-to-enroll"></a>Při pokusu o registraci je potřeba identifikovat vaše zařízení
 
