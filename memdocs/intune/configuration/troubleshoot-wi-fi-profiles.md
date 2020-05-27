@@ -6,7 +6,7 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 02/18/2020
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 40eaf6be1b5f6cdb0222fc5bd79e8e5a5b72a947
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 82706356f82008798dc8c9b9de02ad55606ee87b
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078205"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83987843"
 ---
 # <a name="troubleshoot-wi-fi-device-configuration-profiles-in-microsoft-intune"></a>Řešení potíží s profily konfigurace zařízení Wi-Fi v Microsoft Intune
 
@@ -114,7 +114,7 @@ Po instalaci profilu sítě Wi-Fi na zařízení se zobrazí v **profilu správy
 
 V zařízeních se systémem iOS/iPadOS neobsahuje protokol aplikací Portál společnosti informace o profilech sítě Wi-Fi. Chcete-li zobrazit podrobnosti o instalaci profilů sítě Wi-Fi, použijte protokoly konzoly nebo zařízení:
 
-1. Připojte zařízení s iOS/iPadOS k počítači Mac. Přejdete na**nástroje** **aplikace** > a otevřete konzolovou aplikaci.
+1. Připojte zařízení s iOS/iPadOS k počítači Mac. Přejdete **Applications**na  >  **nástroje**aplikace a otevřete konzolovou aplikaci.
 2. V části **Akce**vyberte **Zahrnout informační zprávy** a **zahrnout zprávy ladění**:
 
     > [!div class="mx-imgBorder"]
@@ -122,8 +122,8 @@ V zařízeních se systémem iOS/iPadOS neobsahuje protokol aplikací Portál sp
 
 3. Reprodukování scénáře a uložení protokolů do textového souboru:
 
-    1. Vyberte všechny zprávy na aktuální obrazovce: **Upravit** > **Vybrat vše**.
-    2. Zkopírujte zprávy: **Upravit** > **kopii**.
+    1. Vyberte všechny zprávy na aktuální obrazovce: **Upravit**  >  **Vybrat vše**.
+    2. Zkopírujte zprávy: **Upravit**  >  **kopii**.
     3. Vložte data protokolu do textového editoru a soubor uložte.
 
 4. Pokud chcete zobrazit podrobné informace, prohledejte uložený soubor protokolu. Po úspěšné instalaci profilu bude výstup vypadat podobně jako v následujícím protokolu:
@@ -136,7 +136,7 @@ V zařízeních se systémem iOS/iPadOS neobsahuje protokol aplikací Portál sp
 
 ## <a name="windows"></a>Windows
 
-Po instalaci profilu sítě Wi-Fi na zařízení přejděte na **Nastavení** > **účty** > **přístup do práce nebo do školy**. Vyberte > **informace o**účtu:
+Po instalaci profilu sítě Wi-Fi na zařízení přejděte na **Nastavení**  >  **účty**  >  **přístup do práce nebo do školy**. Vyberte > **informace o**účtu:
 
 > [!div class="mx-imgBorder"]
 > ![Přístup do práce nebo do školy a výběr informací na zařízení s Windows](./media/troubleshoot-wi-fi-profiles/windows-access-work-school-info.png)
@@ -146,7 +146,7 @@ V **oblastech spravovaných Microsoftem**se zobrazí **Wi-Fi** :
 > [!div class="mx-imgBorder"]
 > ![V oblastech spravovaných Microsoftem najdete informace o Wi-Fi uvedené ve Windows.](./media/troubleshoot-wi-fi-profiles/windows-wifi-areas-managed-by-microsoft.png)
 
-Připojení Wi-Fi zobrazíte tak, že přejdete na **Nastavení** > **Network & Internet**  > **Wi-Fi**:
+Připojení Wi-Fi zobrazíte tak, že přejdete na **Nastavení**  >  **Network & Internet**   >  **Wi-Fi**:
 
 > [!div class="mx-imgBorder"]
 > ![V systému Windows se v nastavení zobrazí připojení Wi-Fi jako známá síť.](./media/troubleshoot-wi-fi-profiles/windows-wifi-connection-known-networks.png)
@@ -157,7 +157,7 @@ V zařízeních s Windows se v Prohlížeč událostí protokolují podrobnosti 
 
 1. Otevřete aplikaci **Prohlížeč událostí** .
 2. V nabídce **zobrazení** vyberte možnost **Zobrazit protokoly pro ladění a analýzu**.
-3.  > Rozbalte **protokoly aplikací a služeb****Microsoft** > **Windows** > **DeviceManagement-Enterprise-Diagnostic-Provider** > **admin** .
+3. Rozbalte **protokoly aplikací a služeb**  >  **Microsoft**  >  **Windows**  >  **DeviceManagement-Enterprise-Diagnostic-Provider**  >  **admin** .
 
 Výstup bude vypadat podobně jako v následujících protokolech:
 
@@ -181,7 +181,7 @@ WiFiConfigurationServiceProvider: Node set value, type: (0x4), Result: (The oper
 
 - Potvrďte, že je profil sítě Wi-Fi přiřazen ke správné skupině:
 
-    1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **Devices** > **Konfigurace zařízení profily konfigurace**.
+    1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **Devices**  >  **Konfigurace zařízení profily konfigurace**.
     2. Vyberte profil > **přiřazení**. Potvrďte, že vybrané skupiny jsou správné.
     3. Ve Správci koncového bodu vyberte **řešení potíží + podpora**. Zkontrolujte informace o **přiřazení** .
 
@@ -191,7 +191,7 @@ WiFiConfigurationServiceProvider: Node set value, type: (0x4), Result: (The oper
 
 - V zařízeních se systémem Windows 10 a novějšími zkontrolujte protokol diagnostické informace MDM:
 
-  1. Přejděte na **Nastavení** > **účty** > **přístup do práce nebo do školy**.
+  1. Přejděte na **Nastavení**  >  **účty**  >  **přístup do práce nebo do školy**.
   2. Vyberte svůj pracovní nebo školní účet > **informace**.
   3. V dolní části stránky **Nastavení** vyberte **vytvořit sestavu**.
   4. Otevře se okno, které zobrazuje cestu k souborům protokolu. Vyberte **Exportovat**.

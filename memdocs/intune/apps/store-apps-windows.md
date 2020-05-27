@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 01/22/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 23bb882c7dbf06264b3c8e5aa29947f8e4cb712c
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 42be4df74093f90360d2968a7c0b6fe4597eedec
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80325757"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83987798"
 ---
 # <a name="add-microsoft-store-apps-to-microsoft-intune"></a>Přidání aplikací z Microsoft Storu do Microsoft Intune
 
@@ -35,7 +35,7 @@ Než budete moct přiřadit, monitorovat, konfigurovat nebo chránit aplikace, m
 Aplikaci z Microsoft Storu můžete do Intune přidat následujícím postupem:
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **aplikace** > **všechny aplikace** > **Přidat**.
+2. Vyberte **aplikace**  >  **všechny aplikace**  >  **Přidat**.
 3. V podokně **Vybrat typ aplikace** v části dostupné typy **aplikací pro Store** vyberte aplikace pro **Windows Store**.
 4. Klikněte na **Vybrat**. Zobrazí se kroky **Přidání aplikace** .
 5. Chcete-li nakonfigurovat **informace o aplikaci** pro aplikace pro Windows Store, přejděte do služby [Microsoft Store](https://www.microsoft.com/store/apps) a vyhledejte aplikaci, kterou chcete nasadit. Zobrazte stránku aplikace a poznamenejte si podrobnosti o aplikaci. 

@@ -7,7 +7,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 03/08/2018
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dd1bea64bbde5c7da7579471f93f659b71dffa87
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: a66171d678ffd19e424fb399633c3fed3db9a588
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80327213"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83987006"
 ---
 # <a name="get-an-apple-mdm-push-certificate"></a>Získání certifikátu Apple MDM Push Certificate
 
@@ -41,7 +41,7 @@ Když platnost certifikátu Push vyprší, je nutné ho obnovit. Při obnovován
 
 
 ## <a name="steps-to-get-your-certificate"></a>Kroky k získání certifikátu
-Přihlaste se [do centra pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431), zvolte **zařízení** > **Registrovat zařízení** > **registrace** > Apple**Apple MDM push Certificate**a pak postupujte podle těchto kroků.
+Přihlaste se do [centra pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431), zvolte **zařízení**  >  **Registrovat zařízení**  >  **registrace Apple**  >  **Apple MDM push Certificate**a pak postupujte podle těchto kroků.
 
 ### <a name="step-1-grant-microsoft-permission-to-send-user-and-device-information-to-apple"></a>Krok 1. Udělte Microsoftu oprávnění k odesílání informací o uživatelích a zařízeních společnosti Apple.
 Vyberte Souhlasím **.** udělte Microsoftu oprávnění odesílat data do společnosti Apple.
@@ -68,12 +68,12 @@ Certifikát Apple MDM push Certificate je platný jeden rok a musí se každoro�
 
 K certifikátu je přidružené Apple ID použité k jeho vytvoření. Obnovte certifikát MDM Push Certificate s použitím stejného Apple ID, které se použilo k jeho vytvoření.
 
-1. Přihlaste se [do centra pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)a vyberte **zařízení** > **Registrovat zařízení** > **registrace** > Apple**Apple MDM push Certificate**.
+1. Přihlaste se do [centra pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)a vyberte **zařízení**  >  **Registrovat zařízení**  >  **registrace Apple**  >  **Apple MDM push Certificate**.
 2. Vyberte **Stáhnout CSR** a stáhněte a uložte si soubor žádosti lokálně. Tento soubor slouží k vyžádání certifikátu vztahu důvěryhodnosti z portálu Apple Push Certificates Portal.
 3. Vyberte **vytvořit certifikát MDM push Certificate** a přejdete na portál Apple Push Certificates Portal. Vyhledejte certifikát, který chcete obnovit, a vyberte možnost **obnovit**.
 4. Na obrazovce **obnovit certifikát push** zadejte poznámky, které vám v budoucnosti pomůžou certifikát identifikovat, vyberte **zvolit soubor** , přejděte na nový soubor žádosti, který jste stáhli, a zvolte **nahrát**.
    > [!TIP]
-   > Certifikát je možné identifikovat podle jeho jedinečného ID. Projděte si **ID subjektu** v podrobnostech certifikátu a vyhledejte část identifikátoru GUID daného identifikátoru. Případně můžete na zaregistrovaném zařízení se systémem iOS/iPadOS přejít **na nastavení** > **Obecné** > **Správa** > **zařízení** **Management** > profil správy**Další podrobnosti** > **Profil správy**. Druhá položka řádku, **téma**, obsahuje jedinečný identifikátor GUID, který můžete porovnat s certifikátem na portálu Apple Push Certificates Portal.
+   > Certifikát je možné identifikovat podle jeho jedinečného ID. Projděte si **ID subjektu** v podrobnostech certifikátu a vyhledejte část identifikátoru GUID daného identifikátoru. Případně můžete na zaregistrovaném zařízení se systémem iOS/iPadOS přejít na **Nastavení**  >  **Obecné**Správa  >  **zařízení** **Profil správy**  >  **Management Profile**  >  **Další podrobnosti**  >  **Profil správy**. Druhá položka řádku, **téma**, obsahuje jedinečný identifikátor GUID, který můžete porovnat s certifikátem na portálu Apple Push Certificates Portal.
  
 6. Na obrazovce **potvrzení** vyberte **Stáhnout** a uložte soubor. pem místně.
 7. V [Intune](https://go.microsoft.com/fwlink/?linkid=2090973)vyberte ikonu procházení **Apple MDM push Certificate** , vyberte soubor. pem stažený od společnosti Apple a zvolte **nahrát**.

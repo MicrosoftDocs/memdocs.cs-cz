@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 02/28/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 831bc368553f4806c6bc734ac5697d2b81de38fe
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: f39681bf954e84376e5d8e3862354a2a10b1003a
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80323718"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988104"
 ---
 # <a name="how-to-monitor-app-protection-policies"></a>Jak monitorovat zásady ochrany aplikací
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -43,7 +43,7 @@ Doba uchování dat ochrany aplikací je 90 dní. Všechny instance aplikace, kt
 ## <a name="summary-view"></a>Souhrnné zobrazení
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-3. Vyberte **aplikace** > **monitor** > **stav ochrany aplikace**.
+3. Vyberte **aplikace**  >  **monitor**  >  **stav ochrany aplikace**.
 
    ![Snímek obrazovky s dlaždicí souhrnu v podokně Správa mobilních aplikací Intune](./media/app-protection-policies-monitor/app-protection-user-status-summary.png)
 
@@ -76,7 +76,7 @@ Uživatelé se zařízeními, která jsou označená pomocí kontroly podmíněn
 
 ## <a name="reporting-view"></a>Zobrazení vytváření sestav
 
-Stejné sestavy můžete najít v horní části podokna **stav ochrany aplikací** . Pokud chcete zobrazit tyto sestavy, vyberte **aplikace** > **sestavy****stavů** > aplikace App Protection. Podokno **sestavy** obsahuje několik sestav založených na uživateli a aplikaci, včetně následujících:
+Stejné sestavy můžete najít v horní části podokna **stav ochrany aplikací** . Pokud chcete zobrazit tyto sestavy, vyberte **aplikace**  >  **sestavy stavů aplikace App Protection**  >  **Reports**. Podokno **sestavy** obsahuje několik sestav založených na uživateli a aplikaci, včetně následujících:
 
 ### <a name="user-report"></a>Sestava uživatele
 
@@ -173,7 +173,7 @@ Pomocí těchto kroků vygenerujte soubor. CSV aplikace App Protection nebo soub
     ![Snímek obrazovky pole pro potvrzení uložení sestavy](./media/app-protection-policies-monitor/app-protection-report-csv-1.png)
    
 > [!NOTE]
-> Intune poskytuje další pole pro vytváření sestav zařízení, včetně ID registrace aplikace, výrobce Androidu, modelu a verze opravy zabezpečení i modelu iOS/iPadOS. V Intune získáte přístup k těmto polím výběrem možnosti **aplikace** > aplikace**stav ochrany App Protection sestava stav** > **: iOS/iPadOS, Android**. Kromě toho tyto parametry pomůžou nakonfigurovat seznam **povolených** pro výrobce zařízení (Android), seznam **povolených** nastavení pro model zařízení (Android a iOS/iPadOS) a **minimální verzi opravy zabezpečení Androidu** .   
+> Intune poskytuje další pole pro vytváření sestav zařízení, včetně ID registrace aplikace, výrobce Androidu, modelu a verze opravy zabezpečení i modelu iOS/iPadOS. V Intune získáte přístup k těmto polím výběrem možnosti **aplikace**aplikace  >  **stav ochrany App Protection**  >  **Sestava stav: iOS/iPadOS, Android**. Kromě toho tyto parametry pomůžou nakonfigurovat seznam **povolených** pro výrobce zařízení (Android), seznam **povolených** nastavení pro model zařízení (Android a iOS/iPadOS) a **minimální verzi opravy zabezpečení Androidu** .   
  
 ## <a name="see-also"></a>Viz také
 - [Správa přenosu dat mezi aplikacemi pro iOS/iPadOS](data-transfer-between-apps-manage-ios.md)

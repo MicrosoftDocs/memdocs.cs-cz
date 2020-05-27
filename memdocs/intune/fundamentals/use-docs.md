@@ -5,18 +5,18 @@ description: Naučte se hledat v dokumentaci k Intune, poskytovat zpětnou vazbu
 ms.date: 03/03/2020
 ms.service: microsoft-intune
 ms.subservice: fundamentals
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: e6e44225-cc9e-47c2-913b-1e629ba9a71e
 author: dougeby
 ms.author: dougeby
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3892da4f3783e8b169bff576a9945f34cc47c356
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 3d5d8d2d9882c033f3fbb726db937ba48d67fdc8
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81726048"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988170"
 ---
 # <a name="using-the-intune-docs"></a>Používání dokumentace Intune
 
@@ -32,11 +32,11 @@ Obecnou nápovědu a podporu pro Intune najdete v tématu [získání podpory pr
 
   - Hledání výsledků z docs.microsoft.com. Výsledky z technet.microsoft.com nebo msdn.microsoft.com jsou pro starší verze produktu.  
 
-  - Chcete-li se zaměřit na výsledky hledání do aktuální knihovny obsahu, `site:docs.microsoft.com` zahrňte do oboru vyhledávacího modulu.  
+  - Chcete-li se zaměřit na výsledky hledání do aktuální knihovny obsahu, zahrňte `site:docs.microsoft.com` do oboru vyhledávacího modulu.  
 
 - Použijte hledané výrazy, které odpovídají terminologii v uživatelském rozhraní a online dokumentaci. Vyhněte se neoficiálním podmínkám nebo zkratkám, které by se vám mohly zobrazit v obsahu komunity.
 
-- Pokud chcete hledat v aktuálně zobrazeném článku, použijte funkci **Najít** v prohlížeči. V případě většiny moderních webových prohlížečů stiskněte **kombinaci kláves CTRL**+**F** a zadejte hledané výrazy.  
+- Pokud chcete hledat v aktuálně zobrazeném článku, použijte funkci **Najít** v prohlížeči. V případě většiny moderních webových prohlížečů stiskněte **kombinaci kláves CTRL** + **F** a zadejte hledané výrazy.  
 
 - Každý článek v docs.microsoft.com obsahuje následující pole, která vám pomůžou při hledání obsahu:  
 
@@ -117,11 +117,11 @@ Při přispívání do dokumentace k Intune postupujte podle těchto obecných p
 
 ## <a name="consolidation-of-documentation-for-microsoft-endpoint-manager"></a>Konsolidace dokumentace pro Microsoft Endpoint Manager
 
-Pro lepší podporu kombinovaných scénářů pro Intune a Configuration Manager byla dokumentace Intune a Configuration Manager konsolidovaná na webu Microsoft Endpoint Manager. Dokumentace k Intune je teď v [https://docs.microsoft.com/mem/intune](https://docs.microsoft.com/mem/intune) a v knihovně dokumentace Configuration Manager je dostupná na [https://docs.microsoft.com/mem/configmgr](https://docs.microsoft.com/mem/configmgr)adrese. Pokud používáte starou adresu URL, všechny odkazy se automaticky přesměrují, takže nemusíte dělat žádné změny pro čtení tohoto obsahu.
+Pro lepší podporu kombinovaných scénářů pro Intune a Configuration Manager byla dokumentace Intune a Configuration Manager konsolidovaná na webu Microsoft Endpoint Manager. Dokumentace k Intune je teď v [https://docs.microsoft.com/mem/intune](https://docs.microsoft.com/mem/intune) a v knihovně dokumentace Configuration Manager je dostupná na adrese [https://docs.microsoft.com/mem/configmgr](https://docs.microsoft.com/mem/configmgr) . Pokud používáte starou adresu URL, všechny odkazy se automaticky přesměrují, takže nemusíte dělat žádné změny pro čtení tohoto obsahu.
 
 Pokud zadáte zpětnou vazbu nebo přispějete k článkům, jsou nutné některé změny:
 
-- Stávající problémy GitHubu zůstaly v původním úložišti [https://github.com/MicrosoftDocs/IntuneDocs/issues](https://github.com/MicrosoftDocs/IntuneDocs/issues) , [https://github.com/MicrosoftDocs/sccmdocs/issues](https://github.com/MicrosoftDocs/sccmdocs/)nebo.
+- Stávající problémy GitHubu zůstaly v původním úložišti, [https://github.com/MicrosoftDocs/IntuneDocs/issues](https://github.com/MicrosoftDocs/IntuneDocs/issues) nebo [https://github.com/MicrosoftDocs/sccmdocs/issues](https://github.com/MicrosoftDocs/sccmdocs/) .
 
   - Tyto problémy se nebudou zobrazovat jako otevřené nebo uzavřené problémy v části věnované zpětné vazbě v odkazovaném článku.
 

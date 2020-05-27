@@ -6,7 +6,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 2/27/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cbcd54a56304df36c536e5a623f4e9da5ba3f15b
-ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
+ms.openlocfilehash: c910b840d51a1db94702bc8e095255e557246bea
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82254686"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988185"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>Odebrání zařízení vymazáním, vyřazením nebo ručním zrušením registrace
 
@@ -54,7 +54,7 @@ Vymazání je vhodné, když chcete zařízení resetovat, abyste ho mohli dát 
 ### <a name="wiping-a-device"></a>Vymazání zařízení
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-3. Vyberte **zařízení** > **všechna zařízení**.
+3. Vyberte **zařízení**  >  **všechna zařízení**.
 4. Zvolte název zařízení, které chcete vymazat.
 5. V podokně s názvem zařízení vyberte **Vymazání**.
 6. Pro Windows 10 verze 1709 nebo novější máte také **zařízení pro vymazání, ale možnost zachovat stav registrace a přidružený uživatelský účet** . 
@@ -91,7 +91,7 @@ Následující tabulky popisují, jaká data se odeberou a jaký vliv má akce *
 |Nastavení profilu sítě Wi-Fi a VPN|Odebrány.|
 |Nastavení profilu certifikátu|Certifikáty jsou odebrané a odvolané.|
 |Agent pro správu|Odebere se profil pro správu.|
-|E-mailu|Odeberou se e-mailové profily, které jsou zřízené prostřednictvím Intune. Odstraní se e-maily v mezipaměti zařízení.|
+|E-mail|Odeberou se e-mailové profily, které jsou zřízené prostřednictvím Intune. Odstraní se e-maily v mezipaměti zařízení.|
 |Zrušení připojení k Azure AD|Odebere se záznam Azure AD.|
 
 ### <a name="android-device-administrator"></a>Správce zařízení s Androidem
@@ -107,7 +107,7 @@ Následující tabulky popisují, jaká data se odeberou a jaký vliv má akce *
 |Nastavení profilu sítě Wi-Fi a VPN|Odebrány.|Odebrány.|
 |Nastavení profilu certifikátu|Certifikáty se zruší, ale neodeberou.|Certifikáty jsou odebrané a odvolané.|
 |Agent pro správu|Zruší se oprávnění správce zařízení.|Zruší se oprávnění správce zařízení.|
-|E-mailu|Není k dispozici (zařízení s Androidem nepodporují e-mailové profily)|Odeberou se e-mailové profily, které jsou zřízené prostřednictvím Intune. Odstraní se e-maily v mezipaměti zařízení.|
+|E-mail|Není k dispozici (zařízení s Androidem nepodporují e-mailové profily)|Odeberou se e-mailové profily, které jsou zřízené prostřednictvím Intune. Odstraní se e-maily v mezipaměti zařízení.|
 |Zrušení připojení k Azure AD|Odebere se záznam Azure AD.|Odebere se záznam Azure AD.|
 
 ### <a name="android-enterprise-devices-with-a-work-profile"></a>Zařízení s Androidem Enterprise s pracovním profilem
@@ -138,8 +138,8 @@ Zařízení s Androidem v beznabídkovém režimu můžete jen vymazat. Vyřazen
 |Nastavení|Konfigurace nastavené zásadami Intune se už nevynucují. Uživatelé můžou nastavení změnit.|Konfigurace nastavené zásadami Intune se už nevynucují. Uživatelé můžou nastavení změnit.|Konfigurace nastavené zásadami Intune se už nevynucují. Uživatelé můžou nastavení změnit.|Konfigurace nastavené zásadami Intune se už nevynucují. Uživatelé můžou nastavení změnit.|
 |Nastavení profilu sítě Wi-Fi a VPN|Odebrány.|Odebrány.|Není podporováno.|Odebrány.|
 |Nastavení profilu certifikátu|Certifikáty jsou odebrané a odvolané.|Certifikáty jsou odebrané a odvolané.|Není podporováno.|Certifikáty jsou odebrané a odvolané.|
-|E-mailu|Odeberou se e-maily s povoleným systémem souborů EFS. To zahrnuje e-maily a přílohy v aplikaci Pošta pro Windows.|Není podporováno.|Odeberou se e-mailové profily, které jsou zřízené prostřednictvím Intune. Odstraní se e-maily v mezipaměti zařízení.|Odeberou se e-maily s povoleným systémem souborů EFS. To zahrnuje e-maily a přílohy v aplikaci Pošta pro Windows. Odebere e-mailové účty, které byly zřízené Intune.|
-|Zrušení připojení k Azure AD|Ne.|Ne.|Odebere se záznam Azure AD.|Odebere se záznam Azure AD.|
+|E-mail|Odeberou se e-maily s povoleným systémem souborů EFS. To zahrnuje e-maily a přílohy v aplikaci Pošta pro Windows.|Není podporováno.|Odeberou se e-mailové profily, které jsou zřízené prostřednictvím Intune. Odstraní se e-maily v mezipaměti zařízení.|Odeberou se e-maily s povoleným systémem souborů EFS. To zahrnuje e-maily a přílohy v aplikaci Pošta pro Windows. Odebere e-mailové účty, které byly zřízené Intune.|
+|Zrušení připojení k Azure AD|No.|No.|Odebere se záznam Azure AD.|Odebere se záznam Azure AD.|
 
 > [!NOTE]
 > Pro zařízení s Windows 10, která se připojují k Azure AD při počátečním nastavení (OOBE), příkaz vyřadit ze zařízení odeberou všechny účty Azure AD. Postupujte podle kroků v části [spuštění počítače v bezpečném režimu](https://support.microsoft.com/en-us/help/12376/windows-10-start-your-pc-in-safe-mode) , abyste se mohli přihlásit jako místní správce a znovu získat přístup k místním datům uživatele. 
@@ -158,12 +158,12 @@ Pokud je zařízení zapnuté a připojené, akce **Vyřazení** se do všech ty
 Pokud chcete odebrat zařízení z portálu Intune, můžete je odstranit z podokna konkrétního zařízení. Při příštím přihlášení zařízení se z něj odeberou všechna firemní data.
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **zařízení** > **všechna zařízení** > vyberte zařízení, která chcete odstranit > **Odstranit**.
+2. Vyberte **zařízení**  >  **všechna zařízení** > vyberte zařízení, která chcete odstranit > **Odstranit**.
 
 ### <a name="automatically-delete-devices-with-cleanup-rules"></a>Automatické odstranění zařízení pomocí pravidel čištění
 Můžete nakonfigurovat Intune tak, aby automaticky odstraňoval zařízení, která jsou neaktivní, zastaralá nebo nereagující. Tato pravidla čištění průběžně monitorují váš inventář zařízení, aby záznamy vašich zařízení byly stále aktuální. Zařízení odstraněná tímto způsobem se odeberou ze správy Intune.
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **zařízení** > **pravidla** > čištění zařízení**Ano**.
+2. Vyberte **zařízení**  >  **pravidla čištění zařízení**  >  **Ano**.
 3. V poli **Odstranit zařízení, která se pro tento počet dnů nevrátila** , zadejte číslo mezi 30 a 270.
 4. Klikněte na tlačítko **Uložit**.
 
@@ -173,7 +173,7 @@ Můžete nakonfigurovat Intune tak, aby automaticky odstraňoval zařízení, kt
 
 Kvůli komunikačním problémům nebo ztraceným zařízením můžete potřebovat odstranit zařízení z Azure AD. Pomocí akce **Odstranit** můžete z portálu Azure Portal odebrat záznamy zařízení, o kterých víte, že jsou nedosažitelná a je nepravděpodobné, že by se službou Azure znovu komunikovala. Akce **Odstranit** neodebere zařízení ze správy.
 
-1. Přihlaste se k [Azure Active Directory na portálu Azure Portal](https://aka.ms/accessaad) pomocí přihlašovacích údajů správce. Můžete se také přihlásit do centra pro [správu Microsoft 365](https://admin.microsoft.com). V nabídce vyberte **centra** > pro správu**Azure AD**.
+1. Přihlaste se k [Azure Active Directory na portálu Azure Portal](https://aka.ms/accessaad) pomocí přihlašovacích údajů správce. Můžete se také přihlásit do centra pro [správu Microsoft 365](https://admin.microsoft.com). V nabídce vyberte centra pro **správu**  >  **Azure AD**.
 2. Pokud nemáte předplatné Azure, vytvořte ho. Pokud máte placený účet, neměli byste potřebovat platební kartu ani zadání platby (vyberte odkaz pro předplatné **Zdarma zaregistrovat službu Azure Active Directory** ).
 3. Vyberte **Azure Active Directory** a pak vyberte svoji organizaci.
 4. Vyberte kartu **Uživatelé**.
@@ -186,7 +186,7 @@ Kvůli komunikačním problémům nebo ztraceným zařízením můžete potřebo
 Pokud chcete zařízení Apple DEP zcela odebrat ze systému správy Intune, postupujte takto:
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **zařízení** > **všechna zařízení** > vyberte > **vyřazení**ze zařízení.
+2. Vyberte **zařízení**  >  **všechna zařízení** > vyberte > **vyřazení**ze zařízení.
 ![Snímek obrazovky s akcí vyřazení](./media/devices-wipe/retire.png)
 3. Navštivte [Business.Apple.com](http://business.apple.com) a vyhledejte zařízení podle jeho sériového čísla.
 4. V nabídce **Přiřazeno** zvolte **Nepřiřazeno**.
