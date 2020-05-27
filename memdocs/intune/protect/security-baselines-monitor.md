@@ -6,7 +6,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 04/01/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.reviewer: laarrizz
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b9208c07b35aa7830cfe702604a6dabbcb41ab9f
-ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
+ms.openlocfilehash: 3c6e18bb6c58138d42565d70ab69a6cbd7169ff0
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82693441"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988355"
 ---
 # <a name="monitor-security-baseline-and-profiles-in-microsoft-intune"></a>Sledování standardních hodnot zabezpečení a profilů v Microsoft Intune
 
@@ -35,7 +35,7 @@ Tento článek vás provede jednotlivými možnostmi monitorování.
 
 Při sledování směrného plánu získáte přehled o stavu zabezpečení vašich zařízení na základě doporučení Microsoftu. Tyto přehledy si můžete prohlédnout v podokně Přehled směrného plánu zabezpečení v konzole Intune.  Po prvním přiřazení směrného plánu trvá zobrazení dat až 24 hodin. Pozdější změny se projeví až po šesti hodinách.
 
-Pokud chcete zobrazit data pro základní hodnoty a zařízení, přihlaste se do [centra pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431). Pak vyberte možnost **Endpoint security** > **základní hodnoty zabezpečení**Endpoint Security, vyberte směrný plán a zobrazte podokno **Přehled** .
+Pokud chcete zobrazit data pro základní hodnoty a zařízení, přihlaste se do [centra pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431). Pak vyberte možnost **Endpoint security**  >  **základní hodnoty zabezpečení**Endpoint Security, vyberte směrný plán a zobrazte podokno **Přehled** .
 
 V podokně **Přehled** jsou k dispozici dvě metody monitorování stavu:
 
@@ -98,7 +98,7 @@ Monitorování profilu vám umožní získat přehled o stavu nasazení vašich 
 
    ![Podívejte se, kolik zařízení a uživatelů má přiřazený profil standardních hodnot zabezpečení.](./media/security-baselines-monitor/existing-profile-overview.png)
 
-3. V části **Spravovat** > **vlastnosti**se zobrazí seznam všech nastavení ve standardních hodnotách. Můžete také změnit kterékoli z těchto nastavení:
+3. V části **Spravovat**  >  **vlastnosti**se zobrazí seznam všech nastavení ve standardních hodnotách. Můžete také změnit kterékoli z těchto nastavení:
 
    ![Zobrazit a aktualizovat nastavení v profilu standardních hodnot zabezpečení](./media/security-baselines-monitor/manage-settings.png)
 
@@ -112,7 +112,7 @@ Podívejte se na podrobnosti o konfiguracích zabezpečení, které se vztahují
 
 1. Přihlaste se k [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)a přihlaste se.
 
-2. V části **zařízení** > **všechna zařízení** a vyberte zařízení, které chcete zobrazit.
+2. V části **zařízení**  >  **všechna zařízení** a vyberte zařízení, které chcete zobrazit.
 
 3. V kategorii *monitor* vyberte možnost **Konfigurace zabezpečení koncového bodu** a zobrazte seznam konfigurací zabezpečení, které se vztahují k danému zařízení.
 
@@ -124,7 +124,7 @@ Nasadili jste základní úroveň zabezpečení, ale stav nasazení zobrazuje ch
 
 1. V Intune vyberte **standardní hodnoty zabezpečení** > vyberte směrné > **vytvořené profily**.
 
-2. Vyberte profil > pod položkou **monitorovat** > **stav podle nastavení**.
+2. Vyberte profil > pod položkou **monitorovat**  >  **stav podle nastavení**.
 
 3. V tabulce jsou uvedena všechna nastavení a stav jednotlivých nastavení. Pokud chcete zobrazit nastavení, které způsobuje chybu, vyberte sloupec **Chyba** nebo sloupec **konfliktů** .
 
@@ -134,9 +134,9 @@ Nyní znáte problematické nastavení. V dalším kroku zjistíte, proč toto n
 
 Na zařízeních s Windows 10 je k dispozici integrovaná sestava diagnostické informace MDM. Tato sestava obsahuje výchozí hodnoty, aktuální hodnoty, seznam těchto zásad, informace o tom, jestli se nasadí do zařízení nebo uživatele, a další. Tato sestava vám pomůže zjistit, proč nastavení způsobuje konflikt nebo chybu.
 
-1. V zařízení přejděte na **Nastavení** > **účty** > **přístup do práce nebo do školy**.
+1. V zařízení přejděte na **Nastavení**  >  **účty**  >  **přístup do práce nebo do školy**.
 
-2. Vyberte účet > **informace** > **Upřesnit diagnostickou sestavu** > **vytvořit sestavu**.
+2. Vyberte účet > **informace**  >  **Upřesnit diagnostickou sestavu**  >  **vytvořit sestavu**.
 
 3. Vyberte **exportovat**a vygenerovaný soubor otevřete.
 
@@ -149,7 +149,7 @@ Na zařízeních s Windows 10 je k dispozici integrovaná sestava diagnostické 
 > [!TIP]
 >
 > - Některá nastavení také uvádějí identifikátor GUID. Tento identifikátor GUID můžete vyhledat v místním registru (Regedit) pro všechny hodnoty sady.
-> - Protokoly Prohlížeč událostí mohou také obsahovat informace > o problémech s problematickým nastavením (**protokoly** > aplikací a služeb v**prohlížeči** > událostí**Microsoft** > **Windows** > **DeviceManagement-Enterprise-Diagnostics-Provider****admin**).
+> - Protokoly Prohlížeč událostí mohou také obsahovat informace o problémech s problematickým nastavením (**Event viewer**  >  **protokoly aplikací a služeb**v prohlížeči událostí  >  **Microsoft**  >  **Windows**  >  **DeviceManagement-Enterprise-Diagnostics-Provider**  >  **admin**).
 
 ## <a name="next-steps"></a>Další kroky
 

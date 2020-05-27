@@ -7,7 +7,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 07/01/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2ea6d407417300d2b758861ed35fcecc88f7ec74
-ms.sourcegitcommit: 0dafd513a59afe592b5cfe2a80b6288020dc5bf0
+ms.openlocfilehash: 91a63011b16a05387f09f4cc5b3fe74b9c30891e
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82991701"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988967"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot"></a>Nasazení hybridních zařízení připojených k Azure AD pomocí Intune a automatického pilotního projektu Windows
 Pomocí Intune a Windows autopilotu můžete nastavit zařízení připojená k hybridnímu Azure Active Directory (Azure AD). Pokud to chcete provést, postupujte podle kroků v tomto článku.
@@ -78,7 +78,7 @@ Organizační jednotka, která má udělena práva k vytváření počítačů, 
 
     ![Příkaz ovládacího prvku Delegate](./media/windows-autopilot-hybrid/delegate-control.png)
 
-1. V průvodci **delegováním řízení** vyberte **Další** > **Přidat** > **typy objektů**.
+1. V průvodci **delegováním řízení** vyberte **Další**  >  **Přidat**  >  **typy objektů**.
 
 1. V podokně **typy objektů** zaškrtněte políčko **počítače** a pak vyberte **OK**.
 
@@ -90,7 +90,7 @@ Organizační jednotka, která má udělena práva k vytváření počítačů, 
 
 1. Vyberte **Zkontrolovat jména** a ověřte zadání, vyberte **OK**a pak vyberte **Další**.
 
-1. Vyberte **vytvořit vlastní úlohu pro delegování** > **Další**.
+1. Vyberte **vytvořit vlastní úlohu pro delegování**  >  **Další**.
 
 1. Zaškrtněte políčko **pouze následující objekty ve složce** a potom vyberte **objekty počítače**, **vytvořte vybrané objekty v této složce**a zrušte zaškrtnutí políček **Odstranit vybrané objekty v této** složce.
 
@@ -111,14 +111,14 @@ Konektor Intune pro službu Active Directory musí být nainstalovaný na počí
 
 Konektor Intune vyžaduje [stejné koncové body jako Intune](../fundamentals/intune-endpoints.md).
 
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **Windows** > **Windows registrace** > **Intune Connector pro Active Directory** > **Přidat**. 
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení**  >  **Windows**  >  **Windows registrace**  >  **Intune Connector pro Active Directory**  >  **Přidat**. 
 2. Podle pokynů stáhněte konektor.
 3. Otevřete stažený instalační soubor konektoru *ODJConnectorBootstrapper. exe*a nainstalujte konektor.
 4. Na konci instalace vyberte **Konfigurovat**.
 5. Vyberte **Přihlásit se**.
 6. Zadejte globální správce uživatele nebo přihlašovací údaje role správce Intune.  
    Uživatelský účet musí mít přiřazenou licenci Intune.
-7. V části **zařízení** > **Windows** > **Windows registrace** > **konektoru Intune pro Active Directory**a potvrďte, že stav připojení je **aktivní**.
+7. V části **zařízení**  >  **Windows**  >  **Windows registrace**  >  **konektoru Intune pro Active Directory**a potvrďte, že stav připojení je **aktivní**.
 
 > [!NOTE]
 > Po přihlášení ke konektoru může trvat několik minut, než se objeví v [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431). Zobrazuje se jenom v případě, že může úspěšně komunikovat se službou Intune.
@@ -132,7 +132,7 @@ Pokud máte ve svém síťovém prostředí webový proxy server, ujistěte se, 
 
 
 ## <a name="create-a-device-group"></a>Vytvoření skupiny zařízení
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **skupiny** > **Nová skupina**.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **skupiny**  >  **Nová skupina**.
 
 1. V podokně **Skupina** postupujte takto:
 
@@ -143,9 +143,9 @@ Pokud máte ve svém síťovém prostředí webový proxy server, ujistěte se, 
     c. Vyberte **typ členství**.
 
 1. Pokud jste pro typ členství vybrali možnost **Dynamická zařízení** , vyberte v podokně **Skupina** možnost **Členové dynamického zařízení** a potom v poli **Upřesnit pravidlo** proveďte jednu z následujících akcí:
-    - Pokud chcete vytvořit skupinu, která bude obsahovat všechna zařízení s vaším autopilotem, zadejte `(device.devicePhysicalIDs -any _ -contains "[ZTDId]")`.
+    - Pokud chcete vytvořit skupinu, která bude obsahovat všechna zařízení s vaším autopilotem, zadejte `(device.devicePhysicalIDs -any _ -contains "[ZTDId]")` .
     - Pole značky skupiny v Intune se mapuje na atribut ČísloObjednávky na zařízeních Azure AD. Pokud chcete vytvořit skupinu, která bude obsahovat všechna vaše zařízení autopilotu s konkrétní značkou skupiny (ČísloObjednávky), musíte zadat:`(device.devicePhysicalIds -any _ -eq "[OrderID]:179887111881")`
-    - Pokud chcete vytvořit skupinu, která bude obsahovat všechna vaše zařízení autopilotu s určitým ID nákupní objednávky `(device.devicePhysicalIds -any _ -eq "[PurchaseOrderId]:76222342342")`, zadejte.
+    - Pokud chcete vytvořit skupinu, která bude obsahovat všechna vaše zařízení autopilotu s určitým ID nákupní objednávky, zadejte `(device.devicePhysicalIds -any _ -eq "[PurchaseOrderId]:76222342342")` .
     
 1. Vyberte **Uložit**.
 
@@ -171,15 +171,15 @@ Pokud zařízení ještě nejsou zaregistrovaná, můžete je zaregistrovat sami
 Pokud kupujete nová zařízení, můžou někteří výrobci OEM zaregistrovat tato zařízení za vás. Další informace najdete na [stránce Windows Autopilot](https://aka.ms/WindowsAutopilot).
 
 Po *registraci*zařízení s autopilotem, než se zaregistrují do Intune, se zobrazí na třech místech (s názvy nastavenými na jejich sériová čísla):
-- Podokno **zařízení autopilot** v Intune v Azure Portal. Vyberte **registrace zařízení registrace** > zařízení se**systémem Windows** > **.**
-- Podokno **zařízení Azure AD** v Intune v Azure Portal. Vyberte **zařízení** > zařízení**Azure AD**.
-- Podokno **Azure AD všechna zařízení** v Azure Active Directory v Azure Portal tak, že vyberete **zařízení** > **všechna zařízení**.
+- Podokno **zařízení autopilot** v Intune v Azure Portal. Vyberte **registrace zařízení registrace**zařízení se  >  **systémem Windows**  >  **Devices**.
+- Podokno **zařízení Azure AD** v Intune v Azure Portal. Vyberte **zařízení**zařízení  >  **Azure AD**.
+- Podokno **Azure AD všechna zařízení** v Azure Active Directory v Azure Portal tak, že vyberete **zařízení**  >  **všechna zařízení**.
 
 Po *registraci*zařízení autopilotu se zobrazí na čtyřech místech:
-- Podokno **zařízení autopilot** v Intune v Azure Portal. Vyberte **registrace zařízení registrace** > zařízení se**systémem Windows** > **.**
-- Podokno **zařízení Azure AD** v Intune v Azure Portal. Vyberte **zařízení** > zařízení**Azure AD**.
-- Podokno **všechna zařízení Azure AD** v Azure Active Directory v Azure Portal. Vyberte **zařízení** > **všechna zařízení**.
-- Podokno **všechna zařízení** v Intune v Azure Portal. Vyberte **zařízení** > **všechna zařízení**.
+- Podokno **zařízení autopilot** v Intune v Azure Portal. Vyberte **registrace zařízení registrace**zařízení se  >  **systémem Windows**  >  **Devices**.
+- Podokno **zařízení Azure AD** v Intune v Azure Portal. Vyberte **zařízení**zařízení  >  **Azure AD**.
+- Podokno **všechna zařízení Azure AD** v Azure Active Directory v Azure Portal. Vyberte **zařízení**  >  **všechna zařízení**.
+- Podokno **všechna zařízení** v Intune v Azure Portal. Vyberte **zařízení**  >  **všechna zařízení**.
 
 Po registraci zařízení autopilotu se jejich názvy stanou názvem hostitele zařízení. Ve výchozím nastavení začíná název hostitele s *plochou*.
 
@@ -187,7 +187,7 @@ Po registraci zařízení autopilotu se jejich názvy stanou názvem hostitele z
 ## <a name="create-and-assign-an-autopilot-deployment-profile"></a>Vytvoření a přiřazení profilu nasazení Autopilotu
 Profily nasazení Autopilotu slouží ke konfiguraci zařízení s AutoPilotem.
 
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **Windows** > **Windows enrollment** > **profily** > nasazení registrace Windows Windows**vytvořit profil**.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení**  >  **Windows**  >  **Windows enrollment**  >  **profily nasazení**registrace Windows Windows  >  **vytvořit profil**.
 2. Na stránce **základy** zadejte **název** a volitelný **Popis**.
 3. Pokud chcete, aby se všechna zařízení v přiřazených skupinách automaticky převedla na Autopilot, nastavte možnost **Převést všechna cílová zařízení na Autopilot** na **Ano**. Všechna vlastněná podniková zařízení, která nejsou v přiřazených skupinách, se budou registrovat v rámci služby nasazení autopilotu. Zařízení v osobním vlastnictví nebudou převedena na autopilot. Vyřízení registrace trvá 48 hodin. Jakmile bude registrace zařízení zrušena a zařízení bude resetováno, Autopilot ho zaregistruje. Jakmile se zařízení tímto způsobem zaregistruje, nedojde zakázáním této možnosti ani odebráním přiřazení profilu k odebrání zařízení ze služby nasazení Autopilot. [Zařízení musíte odebrat přímo](enrollment-autopilot.md#delete-autopilot-devices).
 4. Vyberte **Další**.
@@ -198,21 +198,21 @@ Profily nasazení Autopilotu slouží ke konfiguraci zařízení s AutoPilotem.
 9. Na stránce **značky oboru** vyberte [značky oboru](../fundamentals/scope-tags.md) pro tento profil.
 10. Vyberte **Další**.
 11. Na stránce **přiřazení** vyberte **možnost vybrat skupiny, které chcete zahrnout** > hledání, a vyberte skupinu zařízení > **Vybrat**.
-12. Vyberte **Další** > **vytvořit**.
+12. Vyberte **Další**  >  **vytvořit**.
 
 Změna stavu profilu zařízení z *nepřiřazeného* *přiřazení* a nakonec trvá přibližně 15 minut, *než se přiřadí.*
 
 ## <a name="optional-turn-on-the-enrollment-status-page"></a>Volitelné Zapnout stránku stavu registrace
 
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **Windows** > **Windows registrace registrace** > **stavová stránka**.
-1. V podokně **Stránka stavu registrace** vyberte **výchozí** > **Nastavení**.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení**  >  **Windows**  >  **Windows registrace registrace**  >  **stavová stránka**.
+1. V podokně **Stránka stavu registrace** vyberte **výchozí**  >  **Nastavení**.
 1. V poli **Zobrazit průběh instalace aplikace a profilu** vyberte **Ano**.
 1. Nakonfiguruje další možnosti podle potřeby.
 1. Vyberte **Uložit**.
 
 ## <a name="create-and-assign-a-domain-join-profile"></a>Vytvoření a přiřazení profilu připojení k doméně
 
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **Konfigurace profily** > **vytvořit profil**.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení**  >  **Konfigurace profily**  >  **vytvořit profil**.
 2. Zadejte tyto vlastnosti:
    - **Název**: Zadejte popisný název nového profilu.
    - **Popis**: Zadejte popis profilu.
@@ -234,7 +234,7 @@ Změna stavu profilu zařízení z *nepřiřazeného* *přiřazení* a nakonec t
      
    > [!NOTE]
    > Kolem hodnoty v **organizační jednotce**nepoužívejte uvozovky.
-5. Vyberte **OK** > **vytvořit**.  
+5. Vyberte **OK**  >  **vytvořit**.  
     Profil se vytvoří a zobrazí se v seznamu.
 6. Pokud chcete profil přiřadit, postupujte podle kroků v části [přiřazení profilu zařízení](../configuration/device-profile-assign.md#assign-a-device-profile) a přiřazení profilu ke stejné skupině, kterou používá tento krok [vytvořit skupinu zařízení](windows-autopilot-hybrid.md#create-a-device-group). Případně můžete použít různé skupiny, pokud je potřeba připojovat zařízení k různým doménám nebo organizačním jednotkám.
 

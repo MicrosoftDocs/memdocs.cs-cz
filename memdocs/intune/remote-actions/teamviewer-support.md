@@ -6,7 +6,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 02/27/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1a18895ecfcb17567170dfae8f07814020a60df1
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: b94146cc429f2a7f7b196f15527e8687368e6d78
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81726006"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988241"
 ---
 # <a name="use-teamviewer-to-remotely-administer-intune-devices"></a>Vzdálená správa zařízení s Intune pomocí TeamVieweru
 
@@ -48,7 +48,7 @@ Když použijete TeamViewer, umožníte Konektoru pro TeamViewer služby Intune 
 Abyste mohli poskytovat vzdálenou pomoc pro zařízení, nakonfigurujte si s použitím následujícího postupu konektor pro TeamViewer a Intune:
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte možnost konektory **správy tenanta** > **a tokeny** > pro**TeamViewer**.
+2. Vyberte možnost konektory **správy tenanta**  >  **a tokeny**pro  >  **TeamViewer**.
 3. Vyberte **Připojit** a přijměte podmínky licenční smlouvy.
 4. Zvolte **Přihlásit se k TeamVieweru pro autorizaci**.
 5. Otevře se webová stránka TeamVieweru. Zadejte přihlašovací údaje pro svoji licenci TeamVieweru a pak se **přihlaste**.

@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 04/09/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 39837fc3d97389d830fb1befe7e55c276022d351
-ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
+ms.openlocfilehash: 14a4d66cfd5ac0ee3c0938e96794ed12d5b5fde6
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82023227"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989519"
 ---
 # <a name="assign-office-365-to-macos-devices-with-microsoft-intune"></a>Přiřazení Office 365 zařízením s macOS v Microsoft Intune
 
@@ -43,7 +43,7 @@ Než začnete přidávat aplikace Office 365 do zařízení macOS, pochopte nás
 ## <a name="select-microsoft-365-apps"></a>Vybrat Microsoft 365 aplikace
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **aplikace** > **všechny aplikace** > **Přidat**.
+2. Vyberte **aplikace**  >  **všechny aplikace**  >  **Přidat**.
 3. V části **Microsoft 365 aplikace** v podokně **Vybrat typ aplikace** vyberte **MacOS** .
 4. 4. Klikněte na **Vybrat**. Zobrazí se kroky **přidat Microsoft 365 aplikace** .
 

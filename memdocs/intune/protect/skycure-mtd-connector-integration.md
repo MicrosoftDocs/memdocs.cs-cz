@@ -7,7 +7,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 10/21/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0810205e1b1e8b349d074560ec589b10e85443f1
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 9ebd42a4603224004ab586fb6648dcd6360e2f94
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80525225"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988309"
 ---
 # <a name="set-up-symantec-endpoint-protection-mobile-integration-with-intune"></a>Nastavení integrace Symantec Endpoint Protection Mobile s Intune
 
@@ -101,7 +101,7 @@ Služba SEP Mobile sesynchronizuje zařízení, na kterých běží její služb
 
 ### <a name="retrieve-the-directory-id-in-azure-ad"></a>Načtení ID adresáře v Azure AD
 
-1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
+1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
 
 2. Do vyhledávacího pole zadejte „Active Directory“ a pak vyberte **Azure Active Directory**.
 
@@ -126,13 +126,13 @@ Služba SEP Mobile sesynchronizuje zařízení, na kterých běží její služb
 
 2. Zadejte **přihlašovací údaje správce SEP Mobile** a pak zvolte **Continue** (Pokračovat).
 
-3. Přejít do části **integrace nastavení** > **integrace** > modulu EMM**Intune** > pro**Výběr** .
+3. Přejít do části **Settings**  >  **integrace nastavení integrace**modulu  >  EMM**Intune**pro  >  **Výběr** .
 
 4. Do pole **Directory ID** (ID adresáře) vložte identifikátor adresáře, který jste zkopírovali z Azure Active Directory v předchozí části, a uložte nastavení.
 
     ![Obrázek znázorňující ID adresáře na portálu SEP Mobile](./media/skycure-mtd-connector-integration/symantec-portal-directory-ID.png)
 
-5. Přejít do části **Nastavení** > **integrace** > s nastavením**základní instalace** **Intune** > .
+5. Přejít do části **Nastavení**  >  **integrace**s nastavením  >  **Intune**  >  **základní instalace** Intune.
 
 6. Vedle **iOS App** (Aplikace pro iOS) zvolte tlačítko **Add to Active Directory** (Přidat do AD).
 
@@ -150,7 +150,7 @@ Služba SEP Mobile sesynchronizuje zařízení, na kterých běží její služb
 
     ![Obrázek znázorňující skupiny uživatelů pro SEP Mobile](./media/skycure-mtd-connector-integration/symantec-portal-basic-groups.png)
 
-11. SEP Mobile sesynchronizuje zařízení ve vybraných skupinách a začne hlásit informace do Intune. Tato data můžete zobrazit v části Úplná integrace. Přejít do části **Settings** > **integrace** > nastavení s**úplnými integrací** **Intune** > .
+11. SEP Mobile sesynchronizuje zařízení ve vybraných skupinách a začne hlásit informace do Intune. Tato data můžete zobrazit v části Úplná integrace. Přejít do části **Settings**  >  **integrace**nastavení s  >  **Intune**  >  **úplnými integrací** Intune.
 
      ![Obrázek znázorňující dokončenou úplnou integraci SEP Mobile](./media/skycure-mtd-connector-integration/symantec-portal-basic-status.PNG)
 ## <a name="next-steps"></a>Další kroky

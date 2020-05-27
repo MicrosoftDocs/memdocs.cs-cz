@@ -7,7 +7,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 1/15/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b8872efe661f01d2cc286282c38953739711982b
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 544db0c11894967eca71a5b8c2e107e0fab47ef5
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81397692"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989002"
 ---
 # <a name="set-up-intune-enrollment-of-android-enterprise-dedicated-devices"></a>Nastavení registrace Intune pro vyhrazená podniková zařízení s Androidem
 
@@ -55,11 +55,11 @@ Chcete-li nastavit správu vyhrazené správy zařízení s Androidem Enterprise
 ### <a name="create-an-enrollment-profile"></a> Vytvoření profilu zápisu
 
 > [!NOTE]
-> Pokud platnost tokenu vypršela, neobjeví se v **zápisu** > zařízení registrace zařízení s**Androidem** > ve**vlastnictví firmy**zařízení, která jsou k němu přidružená. Pokud chcete zobrazit všechny profily přidružené k aktivním i neaktivním tokenům, klikněte na **Filtr** a zaškrtněte políčka u možnosti aktivní i neaktivní stavy zásad. 
+> Pokud platnost tokenu vypršela, neobjeví se v **zápisu zařízení registrace zařízení**s  >  **Androidem**ve  >  **vlastnictví firmy**zařízení, která jsou k němu přidružená. Pokud chcete zobrazit všechny profily přidružené k aktivním i neaktivním tokenům, klikněte na **Filtr** a zaškrtněte políčka u možnosti aktivní i neaktivní stavy zásad. 
 
 Je nutné vytvořit registrační profil, abyste mohli zaregistrovat vyhrazená zařízení. Po vytvoření poskytne tento profil registrační token (náhodný řetězec) a kód QR. V závislosti na operačním systému Android a verzi zařízení můžete použít buď token, nebo kód QR k [registraci vyhrazeného zařízení](#enroll-the-dedicated-devices).
 
-1. Přihlaste se [do centra pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431) a vyberte **zařízení** > **Android** > Android**registrace** > **vyhrazených zařízení vlastněných společností**.
+1. Přihlaste se do [centra pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431) a vyberte **zařízení**  >  **Android**Android  >  **registrace**  >  **vyhrazených zařízení vlastněných společností**.
 2. Zvolte **Vytvořit** a vyplňte požadovaná pole.
     - **Název**: Zadejte název, který použijete při přiřazení tohoto profilu k dynamické skupině zařízení.
     - **Datum vypršení platnosti tokenu**: Datum, kdy vyprší platnost tokenu. Google vynucuje maximálně 90 dnů.
@@ -69,7 +69,7 @@ Je nutné vytvořit registrační profil, abyste mohli zaregistrovat vyhrazená 
 
 Aplikace a zásady můžete cílit buď na přiřazené, nebo dynamické skupiny zařízení. Následujícím postupem nakonfigurujete dynamické skupiny zařízení služby AAD tak, aby se automaticky naplnily zařízeními, která se zaregistrují s konkrétním registračním profilem:
 
-1. Přihlaste se [k centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431) a vyberte **skupiny** > **všechny skupiny** > **Nová skupina**.
+1. Přihlaste se k [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431) a vyberte **skupiny**  >  **všechny skupiny**  >  **Nová skupina**.
 2. V okně **Skupina** vyplňte požadovaná pole následujícím způsobem:
     - **Typ skupiny**: zabezpečení
     - **Název skupiny**: Zadejte výstižný název (například Zařízení závodu 1).
@@ -81,7 +81,7 @@ Aplikace a zásady můžete cílit buď na přiřazené, nebo dynamické skupiny
     - V prostředním poli vyberte **Equals (rovná**se).
     - Do posledního pole zadejte název dříve vytvořeného registračního profilu.
     Další informace o pravidlech dynamického členství najdete v tématu [Pravidla dynamického členství pro skupiny v AAD](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership). 
-5. Klikněte **na tlačítko Přidat dotaz** > **vytvořit**.
+5. Klikněte **na tlačítko Přidat dotaz**  >  **vytvořit**.
 
 ### <a name="replace-or-remove-tokens"></a>Nahrazení nebo odebrání tokenů
 
@@ -92,7 +92,7 @@ Aplikace a zásady můžete cílit buď na přiřazené, nebo dynamické skupiny
 
 Nahrazení nebo odvolání tokenu/kódu QR nebude mít žádný vliv na zařízení, která už jsou zaregistrovaná.
 
-1. Přihlaste se [do centra pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431) a vyberte **zařízení** > **Android** > Android**registrace** > **vyhrazených zařízení vlastněných společností**.
+1. Přihlaste se do [centra pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431) a vyberte **zařízení**  >  **Android**Android  >  **registrace**  >  **vyhrazených zařízení vlastněných společností**.
 2. Zvolte profil, se kterým chcete pracovat.
 3. Zvolte **Token**.
 4. Pokud chcete token nahradit, zvolte **Nahradit token**.

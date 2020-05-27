@@ -6,7 +6,7 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 03/19/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d58ab666929e1e28cab4e19f2e2cec668f428452
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 367ac927650ebf08c245b1ff554ad01db3bf3792
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80083877"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990159"
 ---
 # <a name="use-a-microsoft-intune-custom-profile-to-create-a-per-app-vpn-profile-for-android-devices"></a>K vytvoření profilu VPN pro aplikaci pro zařízení s Androidem můžete použít vlastní profil Microsoft Intune.
 
@@ -40,7 +40,7 @@ Po přiřazení zásad pro skupiny zařízení nebo uživatelů Android by uživ
 ## <a name="step-1-create-a-vpn-profile"></a>Krok 1: Vytvoření profilu sítě VPN
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **Konfigurace zařízení** > **profily** > konfigurace**vytvořit profil**.
+2. Vyberte **Devices**  >  **Konfigurace zařízení profily konfigurace**  >  **vytvořit profil**.
 3. Zadejte tyto vlastnosti:
 
     - **Platforma**: vyberte **Správce zařízení s Androidem**.
@@ -64,7 +64,7 @@ Po přiřazení zásad pro skupiny zařízení nebo uživatelů Android by uživ
 ## <a name="step-2-create-a-custom-configuration-policy"></a>Krok 2: Vytvoření vlastní zásady konfigurace
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **Konfigurace zařízení** > **profily** > konfigurace**vytvořit profil**.
+2. Vyberte **Devices**  >  **Konfigurace zařízení profily konfigurace**  >  **vytvořit profil**.
 3. Zadejte tyto vlastnosti:
 
     - **Název**: zadejte popisný název vlastního profilu. Své profily pojmenujte, abyste je později mohli snadno identifikovat. Dobrým názvem profilu je například **vlastní profil VPN OMA-URI pro celou firmu**.
@@ -72,13 +72,13 @@ Po přiřazení zásad pro skupiny zařízení nebo uživatelů Android by uživ
     - **Platforma**: vyberte **Správce zařízení s Androidem**.
     - **Typ profilu**: vyberte **vlastní**.
 
-4. Vyberte **Nastavení** > **Konfigurovat**.
+4. Vyberte **Nastavení**  >  **Konfigurovat**.
 5. V podokně **Vlastní nastavení OMA-URI** zvolte **Přidat**.
     - **Název**: zadejte název vašeho nastavení.
     - **Popis**: Zadejte popis profilu. Toto nastavení není povinné, ale doporučujeme ho zadat.
-    - **OMA-URI**: zadejte `./Vendor/MSFT/VPN/Profile/*Name*/PackageList`, kde *název* je název připojení, které jste si poznamenali v kroku 1. V tomto příkladu je `./Vendor/MSFT/VPN/Profile/MyAppVpnProfile/PackageList`řetězec.
+    - **OMA-URI**: zadejte `./Vendor/MSFT/VPN/Profile/*Name*/PackageList` , kde *název* je název připojení, které jste si poznamenali v kroku 1. V tomto příkladu je řetězec `./Vendor/MSFT/VPN/Profile/MyAppVpnProfile/PackageList` .
     - **Datový typ**: zadejte **řetězec**.
-    - **Hodnota**: zadejte středníkem oddělený seznam balíčků, které chcete přidružit k profilu. Například pokud chcete, aby připojení k síti VPN používal Excel a prohlížeč Google Chrome, zadejte `com.microsoft.office.excel;com.android.chrome`.
+    - **Hodnota**: zadejte středníkem oddělený seznam balíčků, které chcete přidružit k profilu. Například pokud chcete, aby připojení k síti VPN používal Excel a prohlížeč Google Chrome, zadejte `com.microsoft.office.excel;com.android.chrome` .
 
     > [!div class="mx-imgBorder"]
     >![Příklad vlastních zásad sítě VPN pro správce zařízení s Androidem](./media/android-pulse-secure-per-app-vpn/android_per_app_vpn_oma_uri.png)
@@ -89,7 +89,7 @@ Pomocí hodnoty **zakázané** zadejte seznam aplikací, které *nemůžou* pou�
 
 1. V podokně **Vlastní nastavení OMA-URI** zvolte **Přidat**.
 2. Zadejte název nastavení.
-3. Do pole **OMA-URI**zadejte `./Vendor/MSFT/VPN/Profile/*Name*/Mode`, kde *název* je název profilu VPN, který jste si poznamenali v kroku 1. V našem příkladu je `./Vendor/MSFT/VPN/Profile/MyAppVpnProfile/Mode`řetězec.
+3. Do pole **OMA-URI**zadejte `./Vendor/MSFT/VPN/Profile/*Name*/Mode` , kde *název* je název profilu VPN, který jste si poznamenali v kroku 1. V našem příkladu je řetězec `./Vendor/MSFT/VPN/Profile/MyAppVpnProfile/Mode` .
 4. Do **datového typu**zadejte **řetězec**.
 5. Do pole **Hodnota** zadejte **BLACKLIST** nebo **WHITELIST**.
 

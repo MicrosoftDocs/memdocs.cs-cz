@@ -6,7 +6,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 03/20/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 548f63dcbd1635c106573fda40f8cc7bf312866e
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 34f88d4e7aefe9a32238bb6d14203de0defd65ef
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80086266"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988256"
 ---
 # <a name="remotely-assist-mobile-devices-managed-by-microsoft-endpoint-manager"></a>Vzdálená pomoc mobilním zařízením spravovaným pomocí Microsoft Endpoint Manageru
 

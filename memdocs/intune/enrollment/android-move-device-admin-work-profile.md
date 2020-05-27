@@ -7,7 +7,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 03/20/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 33e4f36afce9b8a2f296697623cd7031edf0fa74
-ms.sourcegitcommit: fb77170957f50aa386ff825fb4183b4fd9e3e488
+ms.openlocfilehash: fd9741cfa8cf9edd03d723e63ed1936e1c986d08
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83791787"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989063"
 ---
 # <a name="move-android-devices-from-device-administrator-to-work-profile-management"></a>Přesunutí zařízení s Androidem ze Správce zařízení do správy pracovního profilu
 
@@ -60,13 +60,17 @@ Když uživatelé uvidí, že z tohoto důvodu nejsou v souladu s předpisy, mů
 
 5. Na stránce **umístění** můžete přidat umístění, pokud chcete > **Další**.
 
-6. U **akcí při nedodržení předpisů**můžete nakonfigurovat [Dostupné akce při nedodržení předpisů](../protect/actions-for-noncompliance.md#available-actions-for-noncompliance) pro přizpůsobení prostředí koncových uživatelů pro tento tok. Jedná se o některé akce, které je potřeba vzít v úvahu.
+6. Na kartě **Akce při nedodržení předpisů** můžete nakonfigurovat [Dostupné akce při nedodržení předpisů](../protect/actions-for-noncompliance.md#available-actions-for-noncompliance) pro přizpůsobení prostředí koncových uživatelů pro tento tok.
 
-- **Označit zařízení jako nevyhovující**: ve výchozím nastavení je tato akce nastavená na nula (0) dnů a okamžitě se zařízení označí jako nedodržující předpisy. Změna tohoto počtu na více dní poskytuje uživatelům dobu odkladu, ve které můžou sledovat tok, který se přesune ke správě pracovních profilů, aniž by se ještě označil jako nedodržující předpisy. Například nastavení na hodnotu 14 dní uživateli poskytne dva týdny, aby se přesunuli od správce zařízení do správy pracovních profilů bez rizika ztráty přístupu k prostředkům.
-- **Odeslat nabízená oznámení koncovému uživateli**: tuto konfiguraci nakonfigurujte pro odesílání nabízených oznámení do zařízení Správce zařízení. Když uživatel vybere oznámení, spustí Portál společnosti pro Android na stránce **aktualizovat nastavení zařízení** , kde může spustit tok pro přesun do správy pracovního profilu.
-- **Odeslat e-mail koncovému uživateli**: tuto možnost nakonfigurujte, pokud chcete uživatelům odeslat e-maily o přesunutí ze Správce zařízení do správy pracovního profilu. Do e-mailu můžete zahrnout níže uvedenou adresu URL, která je v případě, že ji vyberete, spustí Portál společnosti pro Android na stránce aktualizovat nastavení zařízení, kde může spustit tok pro přesun do správy pracovního profilu.
-    - `https://portal.manage.microsoft.com/UpdateSettings.aspx`.
-    - Pro státní správu USA můžete místo toho použít tento odkaz: `https://portal.manage.microsoft.us/UpdateSettings.aspx` .
+    ![Akce při nedodržení předpisů](media/android-move-device-admin-work-profile/noncompliance-actions.png)
+
+    Jedná se o některé akce, které je potřeba vzít v úvahu:
+
+    - **Označit zařízení jako nevyhovující**: ve výchozím nastavení je tato akce nastavená na nula (0) dnů a okamžitě se zařízení označí jako nedodržující předpisy. Změna tohoto počtu na více dní poskytuje uživatelům dobu odkladu, ve které můžou sledovat tok, který se přesune ke správě pracovních profilů, aniž by se ještě označil jako nedodržující předpisy. Například nastavení na hodnotu 14 dní uživateli poskytne dva týdny, aby se přesunuli od správce zařízení do správy pracovních profilů bez rizika ztráty přístupu k prostředkům.
+    - **Odeslat nabízená oznámení koncovému uživateli**: tuto konfiguraci nakonfigurujte pro odesílání nabízených oznámení do zařízení Správce zařízení. Když uživatel vybere oznámení, spustí Portál společnosti pro Android na stránce **aktualizovat nastavení zařízení** , kde může spustit tok pro přesun do správy pracovního profilu.
+    - **Odeslat e-mail koncovému uživateli**: tuto možnost nakonfigurujte, pokud chcete uživatelům odeslat e-maily o přesunutí ze Správce zařízení do správy pracovního profilu. Do e-mailu můžete zahrnout níže uvedenou adresu URL, která je v případě, že ji vyberete, spustí Portál společnosti pro Android na stránce aktualizovat nastavení zařízení, kde může spustit tok pro přesun do správy pracovního profilu.
+      - `https://portal.manage.microsoft.com/UpdateSettings.aspx`.
+      - Pro státní správu USA můžete místo toho použít tento odkaz: `https://portal.manage.microsoft.us/UpdateSettings.aspx` .
   
     > [!NOTE]
     > - Samozřejmě můžete použít uživatelsky přívětivý text Hyper-v propojeních ve vaší komunikaci s uživateli. Nepoužívejte však zkrácení adres URL, protože odkazy nemusí fungovat, pokud se tímto způsobem změní.

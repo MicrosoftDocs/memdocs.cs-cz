@@ -6,7 +6,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 04/21/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fe91e36ab5cc66fe81c77401a2a0374f6577b202
-ms.sourcegitcommit: 5f9d5d22114ae5aeb0270c7fb59c5dced5f48826
+ms.openlocfilehash: dfa830f1e7bfd87c20c1aed78b933f81e96b8dca
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82862373"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988646"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>Vytvoření a přiřazení profilů certifikátů SCEP v Intune
 
@@ -34,7 +34,7 @@ Až [nakonfigurujete infrastrukturu](certificates-scep-configure.md) pro podporu
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Vyberte a přejdete na konfigurace **zařízení** > **profily** > **vytvořit profil**.
+2. Vyberte a přejdete na konfigurace **zařízení**  >  **profily**  >  **vytvořit profil**.
 
 3. Zadejte tyto vlastnosti:
    - **Platforma**: vyberte platformu zařízení.
@@ -76,7 +76,7 @@ Až [nakonfigurujete infrastrukturu](certificates-scep-configure.md) pro podporu
      Vyberte, jak má Intune automaticky vytvořit název subjektu v žádosti o certifikát. Možnosti pro formát názvu subjektu závisí na zvoleném typu certifikátu – buď **uživatel** , nebo **zařízení**.
 
      > [!NOTE]
-     > K dispozici je [známý problém](#avoid-certificate-signing-requests-with-escaped-special-characters) pro použití SCEP k získání certifikátů, když název subjektu v výsledné žádosti o podepsání certifikátu (CSR) obsahuje jeden z následujících znaků jako řídicí znak (pokračuje zpětným lomítkem \\):
+     > K dispozici je [známý problém](#avoid-certificate-signing-requests-with-escaped-special-characters) pro použití SCEP k získání certifikátů, když název subjektu v výsledné žádosti o podepsání certifikátu (CSR) obsahuje jeden z následujících znaků jako řídicí znak (pokračuje zpětným lomítkem \\ ):
      > - \+
      > - ;
      > - ,
@@ -95,7 +95,7 @@ Až [nakonfigurujete infrastrukturu](certificates-scep-configure.md) pro podporu
        - **Vlastní**: Když vyberete tuto možnost, zobrazí se také textové pole **Vlastní**. V tomto poli můžete zadat vlastní formát názvu subjektu, včetně proměnných. Vlastní formát podporuje dvě proměnné: **Běžný název (CN)** a **E-mail (E)**. **Běžný název (CN)** můžete nastavit na některou z těchto proměnných:
 
          - **CN = {{username}}**: uživatelské jméno uživatele, například janedoe.
-         - **CN = {{userPrincipalName}}**: hlavní název uživatele (UPN), například janedoe@contoso.com.\*
+         - **CN = {{userPrincipalName}}**: hlavní název uživatele (UPN), například janedoe@contoso.com .\*
          - **CN={{AAD_Device_ID}}**: ID přiřazené při registraci zařízení ve službě AD (Azure Active Directory). Toto ID se obvykle používá k ověření ve službě Azure AD.
          - **CN = {{sériové}}**: jedinečné sériové číslo (SN) obvykle používané výrobcem k identifikaci zařízení.
          - **CN = {{IMEINumber}}**: jedinečné číslo IMEI (International Mobile Equipment Identity), které se používá k identifikaci mobilního telefonu.
@@ -112,7 +112,7 @@ Až [nakonfigurujete infrastrukturu](certificates-scep-configure.md) pro podporu
 
          Tento příklad zahrnuje formát názvu subjektu, který používá proměnné CN a E a řetězce pro hodnoty organizační jednotky, organizace, umístění, stav a země. Článek [Funkce CertStrToName](https://msdn.microsoft.com/library/windows/desktop/aa377160.aspx) popisuje tuto funkci a její podporované řetězce.
          
-         \*Pro profily jenom pro vlastníka zařízení s Androidem nebude nastavení **CN = {{userPrincipalName}}** fungovat. Profily jenom pro vlastníka zařízení s Androidem se dají použít pro zařízení bez uživatele, takže tento profil nebude moct získat hlavní název uživatele (UPN). Pokud opravdu potřebujete tuto možnost pro zařízení s uživateli, můžete použít alternativní řešení: **CN = {{UserName}\@} contoso.com** bude poskytovat uživatelské jméno a doménu, kterou jste přidali ručně, napříkladjanedoe@contoso.com
+         \*Pro profily jenom pro vlastníka zařízení s Androidem nebude nastavení **CN = {{userPrincipalName}}** fungovat. Profily jenom pro vlastníka zařízení s Androidem se dají použít pro zařízení bez uživatele, takže tento profil nebude moct získat hlavní název uživatele (UPN). Pokud opravdu potřebujete tuto možnost pro zařízení s uživateli, můžete použít alternativní řešení: **CN = {{UserName}} \@ contoso.com** bude poskytovat uživatelské jméno a doménu, kterou jste přidali ručně, napříkladjanedoe@contoso.com
 
       - **Typ certifikátu zařízení**
 
@@ -170,11 +170,11 @@ Až [nakonfigurujete infrastrukturu](certificates-scep-configure.md) pro podporu
         - **{{FullyQualifiedDomainName}}**
         - **{{MEID}}**
 
-        Chcete-li zadat hodnotu pro atribut, zahrňte název proměnné se složenými závorkami následovaným textem pro tuto proměnnou. Například hodnota atributu DNS může být přidána **{{AzureADDeviceId}}. domain. com** , kde *. domain.com* je text. Pro uživatele s názvem *user1* se může e-mailová adresa zobrazit jako {{User1@Contoso.comFullyQualifiedDomainName}}.
+        Chcete-li zadat hodnotu pro atribut, zahrňte název proměnné se složenými závorkami následovaným textem pro tuto proměnnou. Například hodnota atributu DNS může být přidána **{{AzureADDeviceId}}. domain. com** , kde *. domain.com* je text. Pro uživatele s názvem *user1* se může e-mailová adresa zobrazit jako {{FullyQualifiedDomainName}} User1@Contoso.com .
 
         > [!IMPORTANT]
         > - Při použití proměnné certifikátu zařízení uveďte název proměnné v složených závorkách {}.
-        > - Nepoužívejte složené závorky **{}**, symboly **|** kanálu a středníky **;** v textu, který následuje za proměnnou.
+        > - Nepoužívejte složené závorky **{}**, symboly kanálu **|** a středníky **;** v textu, který následuje za proměnnou.
         > - Vlastnosti zařízení používané v *předmětu* nebo *síti SAN* certifikátu zařízení, jako jsou **IMEI**, **sériové**a **FullyQualifiedDomainName**, jsou vlastnosti, které by mohly být falešné osobou, která by mohla mít přístup k zařízení.
         > - Zařízení musí podporovat všechny proměnné určené v profilu certifikátu pro daný profil k instalaci na toto zařízení.  Pokud se například používá **{{IMEI}}** v síti SAN profilu SCEP a je přiřazeno k zařízení, které nemá číslo IMEI, nepodaří se mu nainstalovat profil.
 
@@ -230,7 +230,7 @@ Až [nakonfigurujete infrastrukturu](certificates-scep-configure.md) pro podporu
 
 8. Vyberte **Další**.
 
-9. V části **značky oboru** (volitelné) přiřaďte značku pro filtrování profilu pro konkrétní IT skupiny, například `US-NC IT Team` nebo. `JohnGlenn_ITDepartment` Další informace o značkách oboru naleznete v tématu [použití značek RBAC a Scope pro distribuci](../fundamentals/scope-tags.md).
+9. V části **značky oboru** (volitelné) přiřaďte značku pro filtrování profilu pro konkrétní IT skupiny, například `US-NC IT Team` nebo `JohnGlenn_ITDepartment` . Další informace o značkách oboru naleznete v tématu [použití značek RBAC a Scope pro distribuci](../fundamentals/scope-tags.md).
 
    Vyberte **Další**.
 
@@ -266,7 +266,7 @@ Máte **například**název subjektu, který se zobrazí jako *testovací uživa
 
  Pokusy o odložení čárky pomocí zpětného lomítka se však nezdaří s chybou v protokolech CRP:
  
-- **Řídicí znak čárky**: *CN = testovací uživatel (\\TESTCOMPANY, LLC), OU = UserAccounts, DC = Corp, DC = contoso, DC = com*
+- **Řídicí znak čárky**: *CN = testovací uživatel (TestCompany \\ , LLC), OU = UserAccounts, DC = Corp, DC = contoso, DC = com*
 
 Tato chyba se podobá následující chybě:
 

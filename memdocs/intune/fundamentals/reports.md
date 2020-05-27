@@ -7,7 +7,7 @@ author: erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 12/19/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
@@ -15,12 +15,12 @@ ms.assetid: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d4e377e0cd9ad15d1d3a0ac9fb5c088dc1366d48
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 299eba5cfd07edac44db35d3b3eb6b97e5242973
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326751"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989987"
 ---
 # <a name="intune-reports"></a>Sestavy Intune
 Sestavy Microsoft Intune vám umožňují efektivněji a aktivně monitorovat stav a činnost koncových bodů napříč vaší organizací a také poskytuje jiná data pro vytváření sestav v rámci Intune. Budete například moci zobrazit sestavy o dodržování předpisů zařízením, stavu zařízení a trendech zařízení. Kromě toho můžete vytvořit vlastní sestavy, abyste získali konkrétnější data. 
@@ -54,12 +54,12 @@ Zařízení nedodržující předpisy sestavují data Surface, která obvykle po
 Sestavu **zařízení nesplňující požadavky** můžete zobrazit pomocí následujících kroků:
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **zařízení** > **monitorovat** > **zařízení, která nedodržují předpisy**.
+2. Vyberte **zařízení**  >  **monitorovat**  >  **zařízení, která nedodržují předpisy**.
 
     ![Sestava zařízení nedodržujících předpisy](./media/intune-reports/intune-reports-02.png)
 
     > [!TIP]
-    > Pokud jste v Azure Portal dříve použili Intune, zjistili jste výše uvedené podrobnosti v Azure Portal tak, že se přihlásíte k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) a **vyberete** > zařízení nedodržující**předpisy**.
+    > Pokud jste v Azure Portal dříve použili Intune, zjistili jste výše uvedené podrobnosti v Azure Portal tak, že se přihlásíte k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) a **vyberete zařízení nedodržující**  >  **předpisy**.
 
 ## <a name="device-compliance-report-organizational"></a>Sestava dodržování předpisů pro zařízení (organizace)
 
@@ -98,7 +98,7 @@ Sestava trendu dodržování předpisů zařízením pro trendy dodržování p�
 Sestavu **trendů** můžete zobrazit pomocí následujících kroků:
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **sestavy** > **trendy** , abyste zobrazili dodržování předpisů zařízením za 60 dní trendu.
+2. Vyberte **sestavy**  >  **trendy** , abyste zobrazili dodržování předpisů zařízením za 60 dní trendu.
 
     ![Sestava trendů Intune](./media/intune-reports/intune-reports-03.png)
 
@@ -113,7 +113,7 @@ Ukázková sestavová sestava by mohla společně propojit data vlastnictví za�
 Vlastní sestavy můžete vytvářet a zobrazovat pomocí následujících kroků:
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **sestavy** > **nastavení diagnostiky** přidat [nastavení diagnostiky](reports.md#diagnostic-settings).
+2. Vyberte **sestavy**  >  **nastavení diagnostiky** přidat [nastavení diagnostiky](reports.md#diagnostic-settings).
 
     ![Souhrn sestav Intune](./media/intune-reports/intune-reports-04.png)
 

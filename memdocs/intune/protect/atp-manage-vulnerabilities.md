@@ -6,7 +6,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 11/06/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5464e70d915dceb9cf2c6a3b2385419cfc11e38b
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 72fb278070e2d5b8581fb1b2e263aa06c90b5df9
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82077831"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989753"
 ---
 # <a name="use-intune-to-remediate-vulnerabilities-identified-by-microsoft-defender-atp"></a>Použití Intune k nápravě ohrožení zabezpečení identifikovaných ATP v programu Microsoft Defender
 
@@ -81,7 +81,7 @@ Příklad pracovního postupu:
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Vyberte**úkoly zabezpečení**služby **Endpoint Security** > .
+2. Vyberte **Endpoint security**  >  **úkoly zabezpečení**služby Endpoint Security.
 
 3. Vyberte úlohu ze seznamu a otevřete tak okno prostředků, které zobrazí další podrobnosti pro tuto úlohu zabezpečení.
 

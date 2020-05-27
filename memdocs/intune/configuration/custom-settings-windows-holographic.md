@@ -6,7 +6,7 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 05/18/2020
-ms.article: article
+ms.article: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5eb1c69ed3a3a2b1671b6bec95a77cb627004ecf
-ms.sourcegitcommit: 169e279ba686c28d9a23bc0a54f0a2a0d20bdee4
+ms.openlocfilehash: f37550bcfd8105b9cf5ea51c1bfa0d9305721348
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83556072"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990086"
 ---
 # <a name="use-custom-settings-for-windows-holographic-for-business-devices-in-intune"></a>Použití vlastního nastavení u zařízení s Windows Holographic for Business v Intune
 
@@ -48,7 +48,7 @@ V tomto článku si ukážeme, jak vytvořit vlastní profil pro zařízení s W
 - **OMA-URI** (rozlišuje velká a malá písmena): Zadejte nastavení OMA-URI, které chcete použít.
 - **Datový typ**: vyberte datový typ, který budete používat pro toto nastavení OMA-URI. Možnosti:
 
-  - String
+  - Řetězec
   - Řetězec (soubor XML)
   - Datum a čas
   - Integer
@@ -104,7 +104,7 @@ Následující nastavení jsou užitečná pro zařízení s Windows Holographic
 > [!div class="mx-tableFixed"]
 > |OMA-URI|Datový typ|
 > |---|---|
-> |./Vendor/MSFT/Policy/Config/Update/UpdateServiceUrl|Toto nastavení je k dispozici v RS5 (Build 17763) a starší. Počínaje 19H1 (Build 18362) použijte [web Windows Update pro firmy](../protect/windows-update-for-business-configure.md).<br/><br/>String<br/>URL – Zařízení vyhledá aktualizace na serveru WSUS na zadané adrese URL.<br/>Nenakonfigurováno – Zařízení vyhledá aktualizace ve službě Microsoft Update.|
+> |./Vendor/MSFT/Policy/Config/Update/UpdateServiceUrl|Toto nastavení je k dispozici v RS5 (Build 17763) a starší. Počínaje 19H1 (Build 18362) použijte [web Windows Update pro firmy](../protect/windows-update-for-business-configure.md).<br/><br/>Řetězec<br/>URL – Zařízení vyhledá aktualizace na serveru WSUS na zadané adrese URL.<br/>Nenakonfigurováno – Zařízení vyhledá aktualizace ve službě Microsoft Update.|
 
 ### <a name="approvedupdates"></a>[ApprovedUpdates](https://docs.microsoft.com/windows/client-management/mdm/update-csp)
 
@@ -118,7 +118,7 @@ Následující nastavení jsou užitečná pro zařízení s Windows Holographic
 > [!div class="mx-tableFixed"]
 > |OMA-URI|Datový typ|
 > |----|---|
-> |/Vendor/MSFT/AppLocker/ApplicationLaunchRestrictions/*seskupení* / *typu ApplicationType*/Policy<br/><br/>**Důležité**<br/>V článku o AppLocker CSP se používají příklady XML, které obsahují pomocné řídicí znaky. Pokud chcete nakonfigurovat nastavení s vlastními profily Intune, je nutné použít prostý XML.|String<br/>Další informace najdete v článku o [AppLocker CSP](https://docs.microsoft.com/windows/client-management/mdm/applocker-csp).|
+> |/Vendor/MSFT/AppLocker/ApplicationLaunchRestrictions/*seskupení* / *typu ApplicationType*/Policy<br/><br/>**Důležité**<br/>V článku o AppLocker CSP se používají příklady XML, které obsahují pomocné řídicí znaky. Pokud chcete nakonfigurovat nastavení s vlastními profily Intune, je nutné použít prostý XML.|Řetězec<br/>Další informace najdete v článku o [AppLocker CSP](https://docs.microsoft.com/windows/client-management/mdm/applocker-csp).|
 
 ### <a name="deletionpolicy"></a>[DeletionPolicy](https://docs.microsoft.com/windows/client-management/mdm/accountmanagement-csp)
 

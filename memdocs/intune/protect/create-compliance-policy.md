@@ -6,7 +6,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 03/20/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b437a72a2380fea215746aa76b35898c6fc60b16
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: de23dc438ac176383cf5f5fbfac4da22f91bd4b2
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80551388"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988828"
 ---
 # <a name="create-a-compliance-policy-in-microsoft-intune"></a>Vytvoření zásady dodržování předpisů v Microsoft Intune
 
@@ -59,14 +59,11 @@ Pokud chcete používat zásady dodržování předpisů zařízením, ujistěte
 
 - Zaregistrujte zařízení jednomu uživateli nebo se zaregistrujte bez primárního uživatele. Zařízení zaregistrovaná pro více uživatelů nejsou podporovaná.
 
-> [!NOTE]
-> Uživatelské rozhraní (UI) Intune se aktualizuje na celé obrazovce a může trvat několik týdnů. Až do chvíle, kdy váš tenant obdrží tuto aktualizaci, budete mít při vytváření nebo úpravách nastavení popsaných v tomto článku mírně odlišný pracovní postup.
-
 ## <a name="create-the-policy"></a>Vytvoření zásady
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Vyberte **zařízení** >  > **Policies**zásady > **zásad dodržování předpisů****vytvořit zásadu**.
+2. Vyberte **zařízení**zásady  >  **zásad dodržování předpisů**  >  **Policies**  >  **vytvořit zásadu**.
 
 3. Vyberte **platformu** pro tuto zásadu z následujících možností:
    - *Správce zařízení s Androidem*
@@ -107,7 +104,7 @@ Pokud chcete používat zásady dodržování předpisů zařízením, ujistěte
 
    Další příklad obsahuje umístění, kam přidáte alespoň jedno umístění k zásadě dodržování předpisů. V takovém případě se výchozí akce při nedodržení předpisů použije, když vyberete aspoň jedno umístění. Pokud zařízení není připojené k žádnému z vybraných umístění, považuje se za nevyhovující. Plán můžete nakonfigurovat tak, aby uživatelům poskytl období odkladu, například jeden den.
 
-8. Na kartě **obor značek** vyberte značky, které vám pomůžou filtrovat zásady na konkrétní skupiny, například `US-NC IT Team` nebo `JohnGlenn_ITDepartment`. Po přidání nastavení můžete také přidat značku oboru do zásad dodržování předpisů. 
+8. Na kartě **obor značek** vyberte značky, které vám pomůžou filtrovat zásady na konkrétní skupiny, například `US-NC IT Team` nebo `JohnGlenn_ITDepartment` . Po přidání nastavení můžete také přidat značku oboru do zásad dodržování předpisů. 
 
    Informace o použití značek oboru najdete v tématu [použití značek oboru k filtrování zásad](../fundamentals/scope-tags.md).
 

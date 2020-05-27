@@ -6,7 +6,7 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 10/21/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b1987783be15bbde704e34bbd21ecd70dc048935
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 3de0b0a6302bd53384bd492aaf9377c0e5653384
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078256"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988451"
 ---
 # <a name="monitor-device-profiles-in-microsoft-intune"></a>Sledování profilů zařízení v Microsoft Intune
 
@@ -33,7 +33,7 @@ Intune obsahuje některé funkce, které vám pomůžou monitorovat a spravovat 
 ## <a name="view-existing-profiles"></a>Zobrazení existujících profilů
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte možnost**profily konfigurace** **zařízení** > .
+2. Vyberte **Devices**možnost  >  **profily konfigurace**zařízení.
 
 Vypíšou se všechny existující profily včetně podrobností jako je platforma, a zobrazí se, jestli je profil přiřazený k nějakým zařízením.
 
@@ -73,9 +73,9 @@ Po vytvoření profilu zařízení Intune nabízí grafy. Tyto grafy zobrazují 
 
 ## <a name="view-conflicts"></a>Zobrazení konfliktů
 
-V **zařízení** > **všechna zařízení**uvidíte všechna nastavení, která způsobují konflikt. V případě konfliktu se zobrazí také všechny konfigurační profily, které obsahují toto nastavení. Správci můžou tuto funkci použít k vyřešení všech nesrovnalostí v profilech.
+V **zařízení**  >  **všechna zařízení**uvidíte všechna nastavení, která způsobují konflikt. V případě konfliktu se zobrazí také všechny konfigurační profily, které obsahují toto nastavení. Správci můžou tuto funkci použít k vyřešení všech nesrovnalostí v profilech.
 
-1. V Intune vyberte **zařízení** > **všechna zařízení** > vyberte existující zařízení v seznamu. Koncový uživatel může název zařízení získat z aplikace Portál společnosti.
+1. V Intune vyberte **zařízení**  >  **všechna zařízení** > vyberte existující zařízení v seznamu. Koncový uživatel může název zařízení získat z aplikace Portál společnosti.
 2. Vyberte **Konfigurace zařízení**. Zobrazí se všechny zásady konfigurace uplatněné na dané zařízení.
 3. Vyberte zásadu. Zobrazí se všechna nastavení této zásady, která se uplatňují na dané zařízení. Pokud je zařízení v **konfliktním** stavu, vyberte tento řádek. V novém okně uvidíte všechny profily a názvy profilů obsahujících nastavení, které tento konflikt způsobuje.
 

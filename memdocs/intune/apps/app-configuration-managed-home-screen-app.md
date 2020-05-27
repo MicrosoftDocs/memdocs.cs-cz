@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 02/27/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ef8fb81b7be05d21eec5a4d1b544ee1a7d34bd07
-ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
+ms.openlocfilehash: 1b2c804618081a21aaf9dfd70b92d65fc14a7cc7
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82693480"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988841"
 ---
 # <a name="configure-the-microsoft-managed-home-screen-app-for-android-enterprise"></a>Konfigurace aplikace pro domovskou obrazovku spravované Microsoftem pro Android Enterprise
 
@@ -36,13 +36,13 @@ Pokud máte k dispozici nastavení prostřednictvím konfigurace zařízení, na
 > [!NOTE]
 > V současné době je možné nastavit povolené aplikace a připnuté webové odkazy prostřednictvím **aplikací** a **Konfigurace zařízení**. Úplný seznam nastavení dostupných v **konfiguraci zařízení** , který se týká spravované domovské obrazovky, najdete v tématu [vyhrazené nastavení zařízení](../configuration/device-restrictions-android-for-work.md#dedicated-devices).  
 
-Nejdřív přejděte do centra pro [správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431) a vyberte **aplikace** > **zásady konfigurace**aplikací. Přidejte zásady konfigurace pro **spravovaná zařízení** s **Androidem** a jako přidruženou aplikaci vyberte **spravovaná Domovská obrazovka** . Kliknutím na **nastavení konfigurace** můžete nakonfigurovat různá dostupná nastavení spravovaných domácích obrazovek. 
+Nejdřív přejděte do centra pro [správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431) a vyberte **aplikace**  >  **zásady konfigurace**aplikací. Přidejte zásady konfigurace pro **spravovaná zařízení** s **Androidem** a jako přidruženou aplikaci vyberte **spravovaná Domovská obrazovka** . Kliknutím na **nastavení konfigurace** můžete nakonfigurovat různá dostupná nastavení spravovaných domácích obrazovek. 
 
 ## <a name="choosing-a-configuration-settings-format"></a>Výběr formátu nastavení konfigurace
 
 Existují dvě metody, které můžete použít k definování nastavení konfigurace pro spravovanou domovskou obrazovku:
 
-- **Configuration Designer** umožňuje nakonfigurovat nastavení pomocí snadno POUŽITELNÉHO uživatelského rozhraní, které umožňuje přepínat a nastavovat funkce a nastavit hodnoty. V této metodě je k dispozici několik zakázaných konfiguračních klíčů s typem `BundleArray`hodnoty. Tyto konfigurační klíče lze nakonfigurovat pouze zadáním dat JSON. 
+- **Configuration Designer** umožňuje nakonfigurovat nastavení pomocí snadno POUŽITELNÉHO uživatelského rozhraní, které umožňuje přepínat a nastavovat funkce a nastavit hodnoty. V této metodě je k dispozici několik zakázaných konfiguračních klíčů s typem hodnoty `BundleArray` . Tyto konfigurační klíče lze nakonfigurovat pouze zadáním dat JSON. 
 - **Data JSON** umožňují definovat všechny možné konfigurační klíče pomocí skriptu JSON. 
 
 Pokud přidáte vlastnosti pomocí návrháře konfigurace, můžete tyto vlastnosti automaticky převést na JSON výběrem možnosti **zadat data JSON** z rozevíracího seznamu **formát nastavení konfigurace** .
@@ -59,9 +59,9 @@ Následující tabulka uvádí seznam dostupných konfiguračních klíčů, hod
 
 | Konfigurační klíč | Typ hodnoty | Výchozí hodnota | Popis |
 |---------------------------------------------------------------------------------------------------------------------------|-------------|------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Nastavit velikost mřížky | řetězec | Auto | Umožňuje nastavit velikost mřížky pro aplikace, které mají být umístěny na spravované domovské obrazovce. Počet řádků a sloupců aplikace můžete nastavit tak, aby se definovala velikost mřížky v následujícím formátu `columns;rows`. Pokud definujete velikost mřížky, maximální počet aplikací, které se zobrazí na řádku na domovské obrazovce, bude počet řádků, které jste nastavili, a maximální počet aplikací, které se zobrazí ve sloupci na domovské obrazovce, bude počet sloupců, které jste nastavili. |
+| Nastavit velikost mřížky | řetězec | Auto | Umožňuje nastavit velikost mřížky pro aplikace, které mají být umístěny na spravované domovské obrazovce. Počet řádků a sloupců aplikace můžete nastavit tak, aby se definovala velikost mřížky v následujícím formátu `columns;rows` . Pokud definujete velikost mřížky, maximální počet aplikací, které se zobrazí na řádku na domovské obrazovce, bude počet řádků, které jste nastavili, a maximální počet aplikací, které se zobrazí ve sloupci na domovské obrazovce, bude počet sloupců, které jste nastavili. |
 | Povolit oznámení | bool | FALSE | Povolí oznamovací označení pro ikony aplikací, které zobrazují počet nových oznámení v aplikaci. Pokud povolíte toto nastavení, koncovým uživatelům se zobrazí oznámení o oznámeních v aplikacích, které mají nepřečtená oznámení. Pokud tento konfigurační klíč zachováte, koncovému uživateli se nezobrazí žádná oznámení, která by mohla obsahovat nepřečtená oznámení. |
-| Uzamknout domovskou obrazovku | bool | TRUE | Odebere koncovému uživateli možnost pohybovat se přes ikony aplikace na domovské obrazovce. Pokud povolíte tento konfigurační klíč, ikony aplikace na domovské obrazovce budou uzamčené a koncový uživatel nebude moct přetahovat do různých pozic mřížky na domovské obrazovce. Pokud je tato `false`možnost zapnutá, koncoví uživatelé se můžou na spravované domovské obrazovce pohybovat přes ikony aplikace a Weblink.  |
+| Uzamknout domovskou obrazovku | bool | TRUE | Odebere koncovému uživateli možnost pohybovat se přes ikony aplikace na domovské obrazovce. Pokud povolíte tento konfigurační klíč, ikony aplikace na domovské obrazovce budou uzamčené a koncový uživatel nebude moct přetahovat do různých pozic mřížky na domovské obrazovce. Pokud je tato možnost zapnutá `false` , koncoví uživatelé se můžou na spravované domovské obrazovce pohybovat přes ikony aplikace a Weblink.  |
 | Nastavit papír na zeď zařízení | řetězec | Výchozí | Umožňuje nastavit tapetu podle vlastního výběru zadáním adresy URL obrázku, který chcete nastavit jako tapetu. |
 | Nastavit velikost ikony aplikace | celé číslo | 2 | Umožňuje nastavit velikost ikon pro aplikace zobrazené na domovské obrazovce. V této konfiguraci můžete zvolit následující hodnoty pro různé velikosti – 0 (nejmenší), 1 (malé), 2 (Regular), 3 (Velká) a 4 (největší). |
 | Ikona nastavení složky aplikace | celé číslo | 0 | Umožňuje definovat vzhled složek aplikace na domovské obrazovce. Můžete zvolit vzhled z následujících hodnot: tmavě čtvercová (0);   Tmavý kroužek (1); Světlá čtvercová (2); Světlý kroužek (3). |
@@ -73,22 +73,22 @@ Následující tabulka uvádí seznam dostupných konfiguračních klíčů, hod
 | Spořič obrazovky – zobrazit čas | celé číslo | 0 | Poskytuje možnost nastavit dobu v sekundách, po kterou zařízení zobrazí spořič obrazovky v režimu spořiče obrazovky. Pokud je nastavené na 0, spořič obrazovky se zobrazí v režimu spořiče obrazovky, dokud se zařízení neaktivuje.  |
 | Neaktivní čas pro povolení spořiče obrazovky | celé číslo | 30 | Doba v sekundách, po kterou je zařízení neaktivní, než se aktivuje šetřič obrazovky. Pokud je nastavené na 0, zařízení nebude nikdy přejít do režimu spořiče obrazovky. |
 | Detekce multimédií před zobrazením spořiče obrazovky | bool | TRUE | Vyberte, jestli má obrazovka zařízení zobrazovat spořič obrazovky, pokud se na zařízení přehrává zvuk/video. Pokud je nastaveno na true, zařízení nebude přehrávat zvuk/video bez ohledu na hodnotu v **inactive_time_to_show_scree_saver**. Pokud je nastaveno na false, obrazovka zařízení zobrazí spořič obrazovky podle hodnoty nastavené v **inactive_time_to_show_screen_saver**.   |
-| Tlačítko Povolit virtuální domů | bool | FALSE | Toto nastavení `True` povolte, pokud chcete, aby měl koncový uživatel přístup k domovskému tlačítku spravované domovské obrazovky, který vrátí uživatele do spravované domovské obrazovky z aktuální úlohy, ve které se nachází.  |
+| Tlačítko Povolit virtuální domů | bool | FALSE | Toto nastavení povolte, pokud chcete `True` , aby měl koncový uživatel přístup k domovskému tlačítku spravované domovské obrazovky, který vrátí uživatele do spravované domovské obrazovky z aktuální úlohy, ve které se nachází.  |
 | Typ virtuálního tlačítka Domů | řetězec | swipe_up | Pro přístup k tlačítku Domů pomocí gesta potáhnutí nahoru použijte **swipe_up** . Pomocí **typu float** získáte přístup k rychlému a trvalému domovskému tlačítku, které lze přesunout kolem obrazovky koncovým uživatelem. |
 | Indikátor síly baterie a signálu | bool | True  | Když toto nastavení zapnete, `True` zobrazí se indikátor baterie a indikátor síly signálu. |
 | Ukončit uzamčení hesla režimu úlohy | řetězec |   | Zadejte kód 4-6, který se má použít k dočasnému vyřazení režimu uzamčení úlohy pro řešení potíží. |
-| Zobrazit spravovaná nastavení | bool | TRUE | "Spravované nastavení" je spravovaná aplikace pro domácí obrazovky, která se zobrazí jenom v případě, že jste nakonfigurovali nastavení pro rychlý přístup, včetně, **zobrazení nastavení Wi-Fi**, **zobrazení nastavení Bluetooth**, **zobrazení nastavení hlasitosti**a **zobrazení nastavení svítící**. K těmto nastavením je možné také připínat potáhnutím dolů na obrazovce. Nastavte tento klíč tak `False` , aby se skryla aplikace spravovaného nastavení a aby nastavení přístupu koncových uživatelů mělo jenom přes potažení.    |
-| Povolit nabídku ladění snadného přístupu | bool | FALSE | Toto nastavení `True` zapněte, pokud chcete získat přístup k nabídce ladění z aplikace spravované nastavení nebo potáhnutím prstem na spravované domovské obrazovce. V současné době je v nabídce ladění k dispozici možnost ukončit celoobrazovkový režim a získat k nim pøístup kliknutím na tlačítko zpět o 15 časech. Tuto možnost nastavte na `False` hodnotu, chcete-li zachovat nabídku vstupní bod do ladění, která je přístupná pouze prostřednictvím tlačítka zpět.   |
+| Zobrazit spravovaná nastavení | bool | TRUE | "Spravované nastavení" je spravovaná aplikace pro domácí obrazovky, která se zobrazí jenom v případě, že jste nakonfigurovali nastavení pro rychlý přístup, včetně, **zobrazení nastavení Wi-Fi**, **zobrazení nastavení Bluetooth**, **zobrazení nastavení hlasitosti**a **zobrazení nastavení svítící**. K těmto nastavením je možné také připínat potáhnutím dolů na obrazovce. Nastavte tento klíč tak, aby se `False` skryla aplikace spravovaného nastavení a aby nastavení přístupu koncových uživatelů mělo jenom přes potažení.    |
+| Povolit nabídku ladění snadného přístupu | bool | FALSE | Toto nastavení zapněte, `True` Pokud chcete získat přístup k nabídce ladění z aplikace spravované nastavení nebo potáhnutím prstem na spravované domovské obrazovce. V současné době je v nabídce ladění k dispozici možnost ukončit celoobrazovkový režim a získat k nim pøístup kliknutím na tlačítko zpět o 15 časech. Tuto možnost nastavte na hodnotu `False` , chcete-li zachovat nabídku vstupní bod do ladění, která je přístupná pouze prostřednictvím tlačítka zpět.   |
 | Zobrazit nastavení Wi-Fi | bool | FALSE | Zapnutím tohoto nastavení `True` umožníte koncovému uživateli zapnout nebo vypnout Wi-Fi nebo se připojit k různým sítím Wi-Fi.  |
-| Povolit Wi-Fi Allow-list | bool | FALSE | Zapněte toto nastavení `True` na a vyplňte klíč **Wi-Fi Allow-List** , který omezí, jaké sítě Wi-Fi se zobrazí na spravované domovské obrazovce. `False` Nastavením této možnosti zobrazíte všechny možné dostupné sítě Wi-Fi, které zařízení zjistilo. Všimněte si, že toto nastavení je relevantní pouze v případě, že je **možnost Zobrazit nastavení sítě Wi-Fi** nastavena na `True` hodnotu a byl vyvyplněn **seznam povolených Wi-Fi** .   |
-| Povolený Wi-Fi – seznam| bundleArray | FALSE | Umožňuje zobrazit seznam všech identifikátorů SSID, u kterých sítě Wi-Fi chcete, aby se zařízení zobrazovalo na spravované domovské obrazovce. Tento seznam je vhodný jenom v případě, že je nastavená možnost **Zobrazit nastavení Wi-Fi** a **Povolit seznam povolených Wi-Fi** `True`. Pokud je některá z těchto nastavení nastavená `False`na, pak tuto konfiguraci nemusíte měnit.    |
+| Povolit Wi-Fi Allow-list | bool | FALSE | Zapněte toto nastavení na `True` a vyplňte klíč **Wi-Fi Allow-List** , který omezí, jaké sítě Wi-Fi se zobrazí na spravované domovské obrazovce. Nastavením `False` této možnosti zobrazíte všechny možné dostupné sítě Wi-Fi, které zařízení zjistilo. Všimněte si, že toto nastavení je relevantní pouze v případě, že je **možnost Zobrazit nastavení sítě Wi-Fi** nastavena na hodnotu `True` a byl vyvyplněn **seznam povolených Wi-Fi** .   |
+| Povolený Wi-Fi – seznam| bundleArray | FALSE | Umožňuje zobrazit seznam všech identifikátorů SSID, u kterých sítě Wi-Fi chcete, aby se zařízení zobrazovalo na spravované domovské obrazovce. Tento seznam je vhodný jenom v případě, že je nastavená možnost **Zobrazit nastavení Wi-Fi** a **Povolit seznam povolených Wi-Fi** `True` . Pokud je některá z těchto nastavení nastavená na `False` , pak tuto konfiguraci nemusíte měnit.    |
 | Zobrazit nastavení Bluetooth | bool | FALSE | Zapnutím tohoto nastavení `True` umožníte koncovému uživateli zapnout nebo vypnout Bluetooth a připojit se k různým zařízením podporujícím Bluetooth.   |
 | Zobrazit nastavení svazku | bool | FALSE | Zapnutím tohoto nastavení `True` umožníte koncovému uživateli přístup k posuvníku hlasitosti, aby bylo možné upravit hlasitost média.   |
-| Zobrazit nastavení Svítící | bool | FALSE | Zapnutím tohoto nastavení `True` umožníte koncovému uživateli zapnout nebo vypnout svítící zařízení. Pokud zařízení nepodporuje svítící, pak se toto nastavení nezobrazí ani v případě, že je nakonfigurované na `True`.   |
+| Zobrazit nastavení Svítící | bool | FALSE | Zapnutím tohoto nastavení `True` umožníte koncovému uživateli zapnout nebo vypnout svítící zařízení. Pokud zařízení nepodporuje svítící, pak se toto nastavení nezobrazí ani v případě, že je nakonfigurované na `True` .   |
 | Zobrazit nastavení informací o zařízení | bool | FALSE | Zapnutím tohoto nastavení `True` umožníte koncovému uživateli přístup k rychlým informacím o zařízení z aplikace spravovaného nastavení nebo potažení. Dostupné informace zahrnují značka, model a sériové číslo zařízení.   |
 | Aplikace ve složce jsou seřazené podle názvu | bool | TRUE | Zapnutím tohoto nastavení `False` umožníte, aby se položky ve složce zobrazily v pořadí, ve kterém jsou určeny. V opačném případě se zobrazí ve složce abecedně.   |
-| Pořadí aplikací povoleno | bool | FALSE | Zapnutím tohoto nastavení `True` umožníte možnost nastavit pořadí aplikací, weblinks a složek na spravované domovské obrazovce. Po povolení nastavte řazení pomocí **app_order**.   |
-| Pořadí aplikací | bundleArray | FALSE | Umožňuje zadat pořadí aplikací, weblinks a složek na spravované domovské obrazovce. Chcete-li použít toto nastavení, musí být povoleno **uzamknutí domovské obrazovky** , musí být definována **Velikost mřížky** a **povolený pořadí aplikací** musí `True`být nastaveno na hodnotu.   |
+| Pořadí aplikací povoleno | bool | FALSE | Zapnutím tohoto nastavení umožníte `True` možnost nastavit pořadí aplikací, weblinks a složek na spravované domovské obrazovce. Po povolení nastavte řazení pomocí **app_order**.   |
+| Pořadí aplikací | bundleArray | FALSE | Umožňuje zadat pořadí aplikací, weblinks a složek na spravované domovské obrazovce. Chcete-li použít toto nastavení, musí být povoleno **uzamknutí domovské obrazovky** , musí být definována **Velikost mřížky** a **povolený pořadí aplikací** musí být nastaveno na hodnotu `True` .   |
 
 ## <a name="enter-json-data"></a>Zadat data JSON
 

@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 02/27/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a1ce95391e8dbfa9fd8f5a8e2347f9c4249ee79f
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: faf7a5b2b5fd027d3ee3f468acb8e6f0d4eef2f7
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80323438"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989600"
 ---
 # <a name="use-ios-app-provisioning-profiles-to-prevent-your-apps-from-expiring"></a>Jak zabránit vypršení platnosti aplikací pomocí zřizovacích profilů pro aplikace pro iOS
 
@@ -45,11 +45,11 @@ Jako správce můžete zahrnout a vyloučit skupiny zabezpečení a přiřadit k
 ## <a name="how-to-create-an-ios-mobile-app-provisioning-profile"></a>Jak vytvořit mobilní zřizovací profil aplikace pro iOS
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **aplikace aplikace** > **iOS profily** > zřizování**vytvořit profil**.
+2. Vyberte **aplikace aplikace**  >  **iOS profily zřizování**  >  **vytvořit profil**.
 3. Na stránce **základy** přidejte následující hodnoty:
     - **Název** – Zadejte název tohoto mobilního zřizovacího profilu.
     - **Popis** – Volitelně zadejte popis pro tuto zásadu.
-    - **Odeslat soubor profilu** – zvolte ikonu **otevřít** a pak zvolte soubor konfiguračního profilu Apple Mobile (s rozšířením `.mobileprovision`), který jste stáhli z webu pro [vývojáře Apple](https://developer.apple.com/).
+    - **Odeslat soubor profilu** – zvolte ikonu **otevřít** a pak zvolte soubor konfiguračního profilu Apple Mobile (s rozšířením `.mobileprovision` ), který jste stáhli z [webu pro vývojáře Apple](https://developer.apple.com/).
 
    **Datum vypršení platnosti** se naplní hodnotou v souboru konfiguračního profilu Apple Mobile, který jste přidali výše.<br>
 

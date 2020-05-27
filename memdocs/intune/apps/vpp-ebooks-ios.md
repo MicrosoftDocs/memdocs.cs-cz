@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 02/26/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 548174cfa891e832f9392604cca8347493db3dab
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 41f52f899f8cb370cd540ddc6bc24120261fb6e4
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80323569"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988485"
 ---
 # <a name="how-to-manage-iosipados-ebooks-you-purchased-through-a-volume-purchase-program-with-microsoft-intune"></a>Jak spravovat e-knihy pro iOS/iPadOS, které jste koupili prostřednictvím programu hromadného nákupu, pomocí Microsoft Intune
 
@@ -58,7 +58,7 @@ Než začnete, musíte od společnosti Apple získat token VPP a nahrát ho do s
 ## <a name="to-get-and-upload-an-apple-vpp-token"></a>Získání a odeslání tokenu Apple VPP
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte možnost konektory **správy** > tenanta**a tokeny** > programu**Apple VPP**.
+2. Vyberte možnost konektory **správy tenanta**  >  **a tokeny**programu  >  **Apple VPP**.
 3. V podokně se seznamem tokenů VPP klikněte na **Vytvořit**.
 5. V podokně **Nový token VPP** zadejte tyto informace:
     - **Soubor tokenu VPP** – je potřeba se zaregistrovat v rámci programu Volume Purchase Program for Business nebo Volume Purchase Program for Education. Potom si stáhněte token Apple VPP pro svůj účet a vyberte ho tady.
@@ -73,7 +73,7 @@ Data ukládaná společností Apple můžete kdykoli synchronizovat s Intune vý
 
 ## <a name="to-assign-a-volume-purchased-app"></a>Přiřazení aplikace zakoupené v rámci multilicenčního programu
 
-1. Vyberte **Apps** > **eBooks**aplikace > pro**všechny e-knihy**.
+1. Vyberte **aplikace**pro  >  **eBooks**  >  **všechny e-knihy**.
 2. V podokně se seznamem knih zvolte knihu, kterou chcete přiřadit, a pak zvolte **...** > **Přiřadit skupiny**.
 3. V podokně <*název knihy*> – **Přiřazené skupiny** zvolte **Spravovat** > **Přiřazené skupiny**.
 4. Zvolte **Přiřadit skupiny** a pak v podokně **Vybrat skupiny** zvolte skupiny uživatelů Azure AD, ke kterým chcete aplikaci přiřadit. V současné době není dostupná podpora skupin zařízení.

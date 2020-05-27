@@ -7,7 +7,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 04/13/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e5b568a90d4077c32a88044beea746907613eb0e
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 8b70d1e8b64a9000d10e46a17b0d3cb6133088f5
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81525729"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989127"
 ---
 # <a name="integrate-jamf-pro-with-intune-for-compliance"></a>Integrace Jamf Pro s Intune pro dodržování předpisů
 
@@ -77,7 +77,7 @@ Postup připojení Intune s Jamf pro:
 
 ### <a name="create-an-application-in-azure-active-directory"></a>Vytvoření aplikace v Azure Active Directory
 
-1. V [Azure Portal](https://portal.azure.com)klikněte na registrace **Azure Active Directory** > **aplikace**a pak vyberte **Nová registrace**.
+1. V [Azure Portal](https://portal.azure.com)klikněte na registrace **Azure Active Directory**  >  **aplikace**a pak vyberte **Nová registrace**.
 
 2. Na stránce **zaregistrovat aplikaci** zadejte následující podrobnosti:
 
@@ -102,7 +102,7 @@ Postup připojení Intune s Jamf pro:
 
 9. Na stránce **požádat o oprávnění API** vyberte **Intune**a pak vyberte **oprávnění aplikace**. Zaškrtněte políčko pouze pro **update_device_attributes** a uložte nové oprávnění.
 
-10. Potom pro tuto aplikaci udělte souhlas správce výběrem možnosti **udělit souhlas správce pro _ \<vašeho tenanta>_ ** v levém horním rohu stránky **oprávnění k rozhraní API** . Je možné, že budete muset znovu ověřit účet v novém okně a udělit přístup k aplikaci podle pokynů.  
+10. Potom pro tuto aplikaci udělte souhlas správce výběrem možnosti **udělit souhlas správce pro _ \< vašeho tenanta>_ ** v levém horním rohu stránky **oprávnění k rozhraní API** . Je možné, že budete muset znovu ověřit účet v novém okně a udělit přístup k aplikaci podle pokynů.  
 
 11. Aktualizujte stránku kliknutím na tlačítko **aktualizovat** v horní části stránky. Potvrďte, že byl udělen souhlas správce pro **update_device_attributes** oprávnění. 
 
@@ -119,7 +119,7 @@ Postup připojení Intune s Jamf pro:
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Vyberte možnost konektory **správy** > tenanta**a tokeny** > **Správa partnerského zařízení**.
+2. Vyberte možnost konektory **správy tenanta**  >  **a tokeny**  >  **Správa partnerského zařízení**.
 
 3. Povolte *konektor dodržování předpisů pro Jamf* tak, že vložíte ID aplikace, které jste uložili během předchozího postupu, do pole **zadejte ID aplikace Azure Active Directory pro pole Jamf** .
 
@@ -129,7 +129,7 @@ Postup připojení Intune s Jamf pro:
 
 1. Aktivujte připojení v konzole Jamf pro:
 
-   1. Otevřete konzolu Jamf pro a přejděte do **globálního řízení** > **podmíněný přístup**. Klikněte na tlačítko **Upravit** na kartě **integrace MacOS Intune** .
+   1. Otevřete konzolu Jamf pro a přejděte do **globálního řízení**  >  **podmíněný přístup**. Klikněte na tlačítko **Upravit** na kartě **integrace MacOS Intune** .
    2. Zaškrtněte políčko **Povolit integraci Intune pro MacOS**.
    3. Zadejte požadované informace o vašem tenantovi Azure, včetně **umístění**, **názvu domény**, **ID aplikace**a hodnoty *tajného klíče klienta* , který jste uložili při vytváření aplikace ve službě Azure AD.
    4. Vyberte **Uložit**. Jamf pro testuje vaše nastavení a ověří úspěch.
@@ -160,7 +160,7 @@ Po nakonfigurování integrace mezi Intune a Jamf je potřeba [použít zásady 
 
 Pokud potřebujete odebrat integraci Jamf pro s Intune, použijte následující postup k odebrání připojení z konzoly Jamf pro. Tyto informace se vztahují na ručně nakonfigurovanou integraci i na integraci pomocí cloudového konektoru.
 
-1. V Jamf pro přejděte do **globálního řízení** > **podmíněný přístup**. Na kartě **integrace MacOS Intune** vyberte **Upravit**.
+1. V Jamf pro přejděte do **globálního řízení**  >  **podmíněný přístup**. Na kartě **integrace MacOS Intune** vyberte **Upravit**.
 
 2. Zrušte zaškrtnutí políčka **Povolit integraci Intune pro MacOS** .
 
@@ -168,7 +168,7 @@ Pokud potřebujete odebrat integraci Jamf pro s Intune, použijte následující
 
 4. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-5. Vyberte možnost konektory **správy** > **tenanta a tokeny** > **Správa partnerského zařízení** a ověřte, zda je stav nyní **ukončen**.
+5. Vyberte možnost konektory **správy tenanta**  >  **a tokeny**  >  **Správa partnerského zařízení** a ověřte, zda je stav nyní **ukončen**.
 
    > [!NOTE]
    > Zařízení Mac vaší organizace budou odebrána v den (3 měsíce), který je zobrazený ve vaší konzole.

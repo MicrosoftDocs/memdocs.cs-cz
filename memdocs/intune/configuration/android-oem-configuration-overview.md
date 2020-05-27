@@ -6,7 +6,7 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 05/12/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: ''
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 014608a5042f15ab9ef250b42ad816e8130e2960
-ms.sourcegitcommit: fb77170957f50aa386ff825fb4183b4fd9e3e488
+ms.openlocfilehash: 8eaa636659cb9e2382f61fb668d8aec2ecd75f7a
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83791694"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990172"
 ---
 # <a name="use-and-manage-android-enterprise-devices-with-oemconfig-in-microsoft-intune"></a>Používání a Správa zařízení s Androidem Enterprise pomocí OEMConfig v Microsoft Intune
 
@@ -32,7 +32,7 @@ Tato funkce platí pro:
 
 - Android Enterprise
 
-Pro zařízení s Androidem pro správce zařízení použijte [mobilní rozšíření (MX)](android-zebra-mx-overview.md).
+Pokud chcete spravovat zařízení Zebra Technologies pomocí Správce zařízení s Androidem, použijte [Zebra Mobile Extensions (MX)](android-zebra-mx-overview.md).
 
 Tento článek popisuje OEMConfig, seznam požadavků, ukazuje, jak vytvořit konfigurační profil a seznam podporovaných aplikací OEMConfig v Intune.
 
@@ -149,7 +149,7 @@ Až zařízení příště zkontroluje aktualizace konfigurace, nakonfigurované
 
 ## <a name="supported-oemconfig-apps"></a>Podporované aplikace OEMConfig
 
-V porovnání se standardními aplikacemi aplikace OEMConfig rozšiřují oprávnění spravovaných konfigurací udělená společností Google, aby podporovala složitější schémata. Intune aktuálně podporuje tyto aplikace OEMConfig:
+V porovnání se standardními aplikacemi aplikace OEMConfig rozšiřují oprávnění spravovaných konfigurací udělená společností Google, aby podporovala složitější schémata a funkce. Výrobci OEM musí své aplikace OEMConfig zaregistrovat pomocí Google. Pokud se nezaregistrujete, tyto funkce nemusí fungovat podle očekávání. Intune aktuálně podporuje tyto aplikace OEMConfig:
 
 -----------------
 
@@ -157,7 +157,7 @@ V porovnání se standardními aplikacemi aplikace OEMConfig rozšiřují opráv
 | --- | --- | ---|
 | Ascom | com. Ascom. MyCo. oemconfig | |
 | Cipherlab | com. CipherLab. oemconfig | |
-| Datalogic | com. Datalogic. Settings. oemconfig | [Příručka k Datalogic OEMConfig](https://datalogic.github.io/oemconfig/overview) |
+| Datalogic | com. Datalogic. Settings. oemconfig | |
 | Honeywell | com. Honeywell. oemconfig |  |
 | HMDGlobal-7,2 | com. hmdglobal. app. oemconfig. n7_2 | 
 | HMDGlobal-4,2 | com. hmdglobal. app. oemconfig. n4_2 | 

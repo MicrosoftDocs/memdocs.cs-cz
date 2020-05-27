@@ -7,7 +7,7 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 03/18/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 62fe18a086630a768976220b8de7469f53f25cc4
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: a0db0c43d60b2b42d35e397924c8555b1ac3d64a
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80086948"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988622"
 ---
 # <a name="set-up-a-telecom-expense-management-service-in-intune"></a>Nastavení služby TEM (Telecom Expense Management) v Intune
 
@@ -73,7 +73,7 @@ Intune se integruje s následujícím poskytovatelem pro správu telekomunikačn
 
 3. Vyberte **odblokovat**. **Odblokování** umožňuje změnit nebo aktualizovat nastavení na stránce.
 
-4. V **Intune/** > **MDM serveru**připojení Datalert vyberte **Microsoft Intune**.
+4. V **Intune/**  >  **MDM serveru**připojení Datalert vyberte **Microsoft Intune**.
 
 5. V případě **domény Azure AD**zadejte ID tenanta Azure. Vyberte **připojení**.
 
@@ -114,7 +114,7 @@ Po dokončení kroku 1 se připojení automaticky povolí. V Intune se zobrazuje
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Vyberte možnost konektory **správy** > tenanta**a tokeny** > **pro správu telekomunikačních výdajů**. Vyhledejte stav **aktivního** připojení:
+2. Vyberte možnost konektory **správy tenanta**  >  **a tokeny**  >  **pro správu telekomunikačních výdajů**. Vyhledejte stav **aktivního** připojení:
 
     > [!div class="mx-imgBorder"]
     > ![Stránka Intune zobrazující aktivní stav připojení Datalertu](./media/telecom-expenses-monitor/tem-azure-portal-enable-service.png)
@@ -143,7 +143,7 @@ Tyto kategorie se uživatelům zobrazí během registrace ([registrace zařízen
 
 V následujících krocích se přidá aplikace Datalert. Jako příklad se používá iOS/iPadOS. [Přidejte aplikace](../apps/apps-add.md) a [používejte značky oboru](../fundamentals/scope-tags.md) , které obsahují konkrétnější informace o těchto krocích.
 
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **aplikace** > **všechny aplikace** > **Přidat**.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **aplikace**  >  **všechny aplikace**  >  **Přidat**.
 
 2. Vyberte **Typ aplikace**. Například pro iOS/iPadOS vyberte **Store app-iOS/iPadOS**.
 
@@ -159,13 +159,13 @@ V následujících krocích se přidá aplikace Datalert. Jako příklad se pou�
     > [!div class="mx-imgBorder"]
     > ![Zadejte vlastnosti aplikace, včetně názvu, popisu, výběru operačního systému a dalších nastavení aplikace v Intune.](./media/telecom-expenses-monitor/tem-steps-to-create-the-app.png)
 
-6. Vyberte **OK** > **Přidat** a uložte provedené změny. V seznamu se zobrazí aplikace Datalert.
+6. Vyberte **OK**  >  **Přidat** a uložte provedené změny. V seznamu se zobrazí aplikace Datalert.
 
 #### <a name="assign-the-datalert-app-to-the-corporate-device-group"></a>Přiřazení aplikace Datalert ke skupině firemních zařízení
 
-1. V části **aplikace** > **všechny aplikace**vyberte aplikaci Datalert, kterou jste přidali v předchozím kroku.
+1. V části **aplikace**  >  **všechny aplikace**vyberte aplikaci Datalert, kterou jste přidali v předchozím kroku.
 
-2. Vyberte **přiřazení** > **Přidat skupinu**. Vyberte způsob přiřazení aplikace. [Přiřazení aplikací do skupin v Intune](../apps/apps-deploy.md) obsahuje další podrobnosti o těchto nastaveních.
+2. Vyberte **přiřazení**  >  **Přidat skupinu**. Vyberte způsob přiřazení aplikace. [Přiřazení aplikací do skupin v Intune](../apps/apps-deploy.md) obsahuje další podrobnosti o těchto nastaveních.
 
     V tomto postupu se rozhodnete nastavit, aby byla instalace aplikace povinná nebo volitelná pro skupinu. Následující příklad znázorňuje instalaci podle potřeby. V případě potřeby si uživatelé musí po registraci svého zařízení nainstalovat aplikaci Datalert.
 
@@ -192,7 +192,7 @@ Pro činnost koncového uživatele mohou následující články pomáhat:
 
 ## <a name="turn-off-the-datalert-service"></a>Vypnutí služby Datalert
 
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte konektory **správy** > tenanta**a tokeny** > pro**správu telekomunikačních výdajů**.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte konektory **správy tenanta**  >  **a tokeny**pro  >  **správu telekomunikačních výdajů**.
 2. Nastavte **Povolit správu telekomunikačních výdajů a zablokujte mobilní nebo roamingová data na zařízeních, která přesahují kvóty využití, které nakonfigurujete** pro **zakázání**.
 3. **Uložte** změny.
 

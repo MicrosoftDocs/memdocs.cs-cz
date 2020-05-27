@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 03/10/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d411950dce117aa9c99f806d2ef80796a2a2fc50
-ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
+ms.openlocfilehash: f8a0fba0f342995070b3408f4edc6b06d2012e7c
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82023261"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989540"
 ---
 # <a name="add-office-365-apps-to-windows-10-devices-with-microsoft-intune"></a>Přidání aplikací Office 365 do zařízení s Windows 10 pomocí Microsoft Intune
 
@@ -52,7 +52,7 @@ Než budete moct přiřadit, monitorovat, konfigurovat nebo chránit aplikace, m
 ## <a name="select-microsoft-365-apps"></a>Vybrat Microsoft 365 aplikace
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **aplikace** > **všechny aplikace** > **Přidat**.
+2. Vyberte **aplikace**  >  **všechny aplikace**  >  **Přidat**.
 3. V části **Microsoft 365 aplikace** v podokně **Vybrat typ aplikace** vyberte **Windows 10** .
 4. Klikněte na **Vybrat**. Zobrazí se kroky **přidat Microsoft 365 aplikace** .
 
@@ -111,7 +111,7 @@ Když zvolíte **Configuration Designer** , změní se podokno **Přidat aplikac
     - **Použít aktivaci pro sdílené počítače**: Tuto možnost vyberte, když počítač sdílí více uživatelů. Další informace najdete v tématu [Přehled aktivace sdíleného počítače pro aplikace Microsoft 365](https://docs.microsoft.com/DeployOffice/overview-of-shared-computer-activation-for-office-365-proplus).
     - **Automaticky přijmout licenční smlouvu s koncovým uživatelem aplikace**: Tuto možnost vyberte, pokud nevyžadujete přijetí licenční smlouvy koncovými uživateli. Intune pak smlouvu přijme automaticky.
     - **Jazyky**: Office se automaticky nainstaluje ve všech podporovaných jazycích nainstalovaných s Windows na zařízení koncových uživatelů. Tuto možnost zvolte, pokud chcete nainstalovat se sadou aplikací další jazyky. <p></p>
-        Můžete nasadit další jazyky pro aplikace Office 365 Pro Plus spravované prostřednictvím Intune. Seznam dostupných jazyků zahrnuje **Typ** jazykové sady (Základní, Částečná a Kontrola pravopisu). V Azure Portal vyberte **Microsoft Intune** > **aplikace** > **všechny aplikace** > **Přidat**. V seznamu **Typ aplikace** v podokně **Přidat aplikaci** vyberte v části **Microsoft 365 aplikace**možnost **Windows 10** . V podokně **nastavení sady App Suite** vyberte **jazyky** . Další informace najdete v tématu [Přehled nasazení jazyků v aplikacích Microsoft 365](https://docs.microsoft.com/deployoffice/overview-of-deploying-languages-in-office-365-proplus).
+        Můžete nasadit další jazyky pro aplikace Office 365 Pro Plus spravované prostřednictvím Intune. Seznam dostupných jazyků zahrnuje **Typ** jazykové sady (Základní, Částečná a Kontrola pravopisu). V Azure Portal vyberte **Microsoft Intune**  >  **aplikace**  >  **všechny aplikace**  >  **Přidat**. V seznamu **Typ aplikace** v podokně **Přidat aplikaci** vyberte v části **Microsoft 365 aplikace**možnost **Windows 10** . V podokně **nastavení sady App Suite** vyberte **jazyky** . Další informace najdete v tématu [Přehled nasazení jazyků v aplikacích Microsoft 365](https://docs.microsoft.com/deployoffice/overview-of-deploying-languages-in-office-365-proplus).
 2. Kliknutím na tlačítko **Další** zobrazíte stránku **značky oboru** .
 
 ## <a name="step-2---option-2-configure-app-suite-using-xml-data"></a>Krok 2 – (**možnost 2**) konfigurace sady aplikací s využitím dat XML 
@@ -123,7 +123,7 @@ Pokud jste vybrali možnost **zadat data XML** v rozevíracím seznamu **formát
 1. Přidali jste konfigurační XML.
 
     > [!NOTE]
-    > ID produktu může být buď Business (`O365BusinessRetail`), nebo ProPlus (`O365ProPlusRetail`). Sadu aplikací pro Microsoft 365 aplikace pro Business Edition však můžete nakonfigurovat pouze pomocí dat XML. Všimněte si, že systém Microsoft Office 365-plus bylo přejmenováno na **Microsoft 365 aplikace pro podniky**.
+    > ID produktu může být buď Business ( `O365BusinessRetail` ), nebo ProPlus ( `O365ProPlusRetail` ). Sadu aplikací pro Microsoft 365 aplikace pro Business Edition však můžete nakonfigurovat pouze pomocí dat XML. Všimněte si, že systém Microsoft Office 365-plus bylo přejmenováno na **Microsoft 365 aplikace pro podniky**.
 
 2. Kliknutím na tlačítko **Další** zobrazíte stránku **značky oboru** .
 
@@ -190,7 +190,7 @@ Až se rozhodnete, že jak Intune, tak i síťová infrastruktura fungují podle
 - Existující verze Office MSI sady Office byly ze zařízení správně odebrány. Intune využívá Office Klikni a spusť, což není kompatibilní s Office MSI. Toto chování se dále zmiňuje v tomto dokumentu:<br>
   [Office nainstalované s kliknou a Instalační služba systému Windows na stejném počítači se nepodporuje.](https://support.office.com/article/office-installed-with-click-to-run-and-windows-installer-on-same-computer-isn-t-supported-30775ef4-fa77-4f47-98fb-c5826a6926cd)
 - Přihlášený uživatel by měl mít oprávnění k instalaci aplikací do zařízení.
-- Potvrďte, že nejsou k dispozici žádné problémy založené na protokolech **Windows** -> **Prohlížeč událostí protokolů**Windows.
+- Potvrďte, že nejsou k dispozici žádné problémy založené na protokolech Windows Prohlížeč událostí protokolů **Windows**  ->  **Applications**.
 - Zachytit podrobné protokoly instalace Office během instalace Postupujte přitom takto:<br>
     1. Aktivujte podrobné protokolování pro instalaci Office na cílových počítačích. Chcete-li to provést, spusťte následující příkaz pro úpravu registru:<br>
         `reg add HKLM\SOFTWARE\Microsoft\ClickToRun\OverRide /v LogLevel /t REG_DWORD /d 3`<br>

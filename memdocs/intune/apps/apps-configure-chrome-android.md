@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 02/28/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 89d9fce6579b0fdf89299e342969f647c457cc84
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 6ea52297e75a7373adc8b3b3c9603541581097c1
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80324831"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990003"
 ---
 # <a name="configure-google-chrome-for-android-devices-using-intune"></a>Konfigurace Google Chrome pro zařízení s Androidem pomocí Intune 
 
@@ -37,7 +37,7 @@ Pomocí zásad konfigurace aplikací Intune můžete nakonfigurovat Google Chrom
 ## <a name="add-the-google-chrome-app-to-intune"></a>Přidání aplikace Google Chrome do Intune
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vybrat **aplikace** > **všechny aplikace** > **Přidat** a pak přidat **spravovanou aplikaci Google Play** .
+2. Vybrat **aplikace**  >  **všechny aplikace**  >  **Přidat** a pak přidat **spravovanou aplikaci Google Play** .
 3. Přejít na Managed Google Play, hledejte pomocí **Google Chrome** a schvalte.
 
     ![Hledání a schvalování Google Chrome](./media/apps-configure-chrome-android/search.png)
@@ -48,7 +48,7 @@ Další podrobnosti o přidání spravované aplikace Google Play do Intune najd
 
 ## <a name="add-app-configuration-for-managed-ae-devices"></a>Přidat konfiguraci aplikace pro spravovaná zařízení s AE
 
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **aplikace** > **zásady** > konfigurace aplikace**Přidat** > **spravovaná zařízení**.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **aplikace**  >  **zásady konfigurace aplikace**  >  **Přidat**  >  **spravovaná zařízení**.
 2. Zadejte tyto podrobnosti:
     - **Název**: Název profilu, který se zobrazí na portálu Azure Portal
     - **Popis**: Popis profilu, který se zobrazí na portálu Azure Portal
@@ -75,7 +75,7 @@ Další podrobnosti o přidání spravované aplikace Google Play do Intune najd
 
     ![Obecná nastavení](./media/apps-configure-chrome-android/common-settings.png)
 
-    Výše uvedená nastavení vytvoří záložky a zablokuje přístup ke všem `baidu.com`adresám `chromium.org`URL s `chrome://`výjimkou, `yahoo.com`, a.
+    Výše uvedená nastavení vytvoří záložky a zablokuje přístup ke všem adresám URL s výjimkou `baidu.com` , `yahoo.com` , `chromium.org` a `chrome://` .
 
 5. Kliknutím na **OK** a **Přidat** přidejte zásady konfigurace do Intune.
 6. Přiřaďte tyto zásady konfigurace ke skupině uživatelů. Další informace najdete v článku [Přiřazení aplikací do skupin pomocí Microsoft Intune](apps-deploy.md).

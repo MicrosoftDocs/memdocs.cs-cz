@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 01/23/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9729fa1fb89f31606c35d61773c224693e7da3c1
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 1ed731cdb4efddaedbfcde47acce3fc24d344d80
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80323470"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988805"
 ---
 # <a name="add-app-configuration-policies-for-managed-apps-without-device-enrollment"></a>Přidání zásad konfigurace aplikací pro spravované aplikace bez registrace zařízení
 
@@ -32,7 +32,7 @@ ms.locfileid: "80323470"
 Zásady konfigurace aplikací můžete používat se spravovanými aplikacemi, které podporují sadu Intune App SDK, i na nezaregistrovaných zařízeních. 
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2.  > Vyberte zásady **Apps** > **Konfigurace aplikací**aplikace**Přidat** > **spravované aplikace**.
+2. Vyberte **Apps**  >  **zásady konfigurace aplikací**aplikace  >  **Přidat**  >  **spravované aplikace**.
 3. Na stránce **základy** nastavte následující podrobnosti:
     - **Name (název**): název profilu, který se zobrazí v Azure Portal.
     - **Popis**: popis profilu, který se zobrazí v Azure Portal.

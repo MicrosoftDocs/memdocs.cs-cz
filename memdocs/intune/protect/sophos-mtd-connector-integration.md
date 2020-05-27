@@ -7,7 +7,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 10/21/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -15,12 +15,12 @@ ms.technology: ''
 ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 06747035f2d04be01dad12a9c89b712a4baae6b4
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 3298c2759b14fd2579fc51513177033c792b9c83
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79325239"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988281"
 ---
 # <a name="integrate-sophos-mobile-with-intune"></a>Integrace Sophos Mobile s Intune  
 
@@ -52,11 +52,11 @@ Postup autorizace mobilní aplikace Sophos je následující:
 
 ## <a name="to-set-up-sophos-mobile-integration"></a>Nastavení integrace s Sophos Mobile  
 
-1. Přihlaste se [k Azure Portal]( https://portal.azure.com/), přečtěte si >**ochrany před mobilními hrozbami** **zařízení** >  **Intune** > a vyberte **Přidat**.  
+1. Přihlaste se k [Azure Portal]( https://portal.azure.com/), přečtěte si **Intune**  >  **Device compliance**  >  >**ochrany před mobilními hrozbami** zařízení Intune a vyberte **Přidat**.  
 2. Na stránce **Přidat konektor** použijte rozevírací seznam a vyberte možnost **Sophos**. A pak vyberte **vytvořit**.  
 3. Vyberte odkaz a *otevřete konzolu pro správu Sophos*.  
 4. Přihlaste se ke [konzole pro správu Sophos](https://central.sophos.com/) pomocí vašich přihlašovacích údajů Sophos.  
-5. Přejít na **nastavení mobilního** > **Nastavení** > **Setup** > nastavení instalačního**programu Sophos**.  
+5. Přejít na nastavení **mobilního**nastavení nastavení instalačního  >  **Settings**  >  **Setup**  >  **programu Sophos**.  
 6. Na stránce s **instalačním programem Sophos** vyberte kartu **Intune MTD** .  
    ![Nastavení Sophos](./media/sophos-mtd-connector-integration/sophos-setup.png) 
  

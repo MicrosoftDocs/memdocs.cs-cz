@@ -7,7 +7,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 3/12/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5f33198e71fd4250ee93207e571bc535abd1c95f
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 3c1b9a695830380c00900d0fe94ec075b21def0a
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80325371"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989346"
 ---
 # <a name="use-bulk-device-actions"></a>Použití hromadných akcí zařízení
 
@@ -31,14 +31,14 @@ Akce hromadných zařízení můžete použít pro následující vzdálené akc
 - [Vlastní oznámení](custom-notifications.md#send-a-custom-notification-to-a-single-device)
 - [Odstranit](devices-wipe.md#delete-devices-from-the-intune-portal)
 - [Přejmenovat](device-rename.md)
-- [Restartování](device-restart.md)
+- [Restartovat](device-restart.md)
 - [Synchronizovat](device-sync.md)
 - [Vymazání](devices-wipe.md#wipe)
 
 ## <a name="use-a-bulk-device-action"></a>Použít hromadnou akci zařízení
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **zařízení** > **všechna zařízení** > **hromadně akce zařízení**.
+2. Vyberte **zařízení**  >  **všechna zařízení**  >  **hromadně akce zařízení**.
 ![Hromadně prováděné akce zařízení](./media/bulk-device-actions/bulk-device-actions.png)
 3. Na stránce **Hromadná akce zařízení** vyberte akci s **operačním systémem** a **zařízením**. Některé akce zařízení mají další možnosti nebo pole k naplnění. Zvolte **Další**.
 4. Na stránce **zařízení** vyberte od 1 do 100 zařízení > **Další**.

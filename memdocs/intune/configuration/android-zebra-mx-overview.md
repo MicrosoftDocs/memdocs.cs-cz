@@ -6,7 +6,7 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 03/18/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: ''
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dbb8e5644390c589756af5a69f2fdd5a829866a1
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 077318d4b55c7e1f2a83864aba51e2282630b9fb
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80084009"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990148"
 ---
 # <a name="use-and-manage-zebra-devices-with-zebra-mobility-extensions-in-microsoft-intune"></a>Používání a Správa zařízení Zebra s rozšířeními mobility Zebra v Microsoft Intune
 
@@ -91,8 +91,8 @@ Následující kroky poskytují přehled. Konkrétní podrobnosti najdete v doku
 1. V StageNow vytvořte profil a vyberte **režim Xpert**.
 2. Přidejte do profilu **DevAdmin Manager** .
 3. Nastavení **Akce Správa zařízení** **zapněte jako správce zařízení**.
-4. Nastavte **název balíčku Správce zařízení** na `com.microsoft.windowsintune.companyportal`.
-5. Nastavte **název třídy Správce zařízení** na `com.microsoft.omadm.client.PolicyManagerReceiver`.
+4. Nastavte **název balíčku Správce zařízení** na `com.microsoft.windowsintune.companyportal` .
+5. Nastavte **název třídy Správce zařízení** na `com.microsoft.omadm.client.PolicyManagerReceiver` .
 
 Pokračujte v publikování profilu a využijte ho u aplikace StageNow na zařízení. Aplikaci Portál společnosti je udělená role Správce zařízení.
 
@@ -134,7 +134,7 @@ Po otestování souboru je dalším krokem nasazení profilu do zařízení pomo
 V Intune vytvořte profil konfigurace zařízení:
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **Konfigurace zařízení** > **profily** > konfigurace**vytvořit profil**.
+2. Vyberte **Devices**  >  **Konfigurace zařízení profily konfigurace**  >  **vytvořit profil**.
 3. Zadejte tyto vlastnosti:
 
     - **Název**: Zadejte popisný název nového profilu.
@@ -143,14 +143,14 @@ V Intune vytvořte profil konfigurace zařízení:
     - **Typ profilu**: vyberte možnost **profil MX (jenom Zebra)**.
 
 4. V **profilu MX ve formátu. XML**přidejte soubor profilu XML, [který jste exportovali z StageNow](#step-4-create-a-device-management-profile-in-stagenow) (v tomto článku).
-5. Kliknutím na **tlačítko OK** > **vytvořit** uložte změny. Zásada se vytvoří a zobrazí se v seznamu.
+5. Kliknutím na **tlačítko OK**  >  **vytvořit** uložte změny. Zásada se vytvoří a zobrazí se v seznamu.
 
     > [!TIP]
-    > Z bezpečnostních důvodů nebude po uložení zobrazený text profilu XML. Text je zašifrovaný a zobrazují se jenom hvězdičky (`****`). Pro referenci doporučujeme uložit kopie profilů MX ještě před jejich přidáním do Intune.
+    > Z bezpečnostních důvodů nebude po uložení zobrazený text profilu XML. Text je zašifrovaný a zobrazují se jenom hvězdičky ( `****` ). Pro referenci doporučujeme uložit kopie profilů MX ještě před jejich přidáním do Intune.
 
 Profil je vytvořený, ale zatím se nepoužívá. Dále [Přiřaďte profil](device-profile-assign.md) a [sledujte jeho stav](device-profile-monitor.md).
 
-Až zařízení příště zkontroluje aktualizace konfigurace, nasadí se do zařízení profil MX. Zařízení se po registraci zařízení synchronizují s Intune a přibližně každých 8 hodin. Můžete taky [Vynutit synchronizaci v Intune](../remote-actions/device-sync.md). Nebo na zařízení otevřete **portál společnosti** > **Settings** > **synchronizace**nastavení aplikace. 
+Až zařízení příště zkontroluje aktualizace konfigurace, nasadí se do zařízení profil MX. Zařízení se po registraci zařízení synchronizují s Intune a přibližně každých 8 hodin. Můžete taky [Vynutit synchronizaci v Intune](../remote-actions/device-sync.md). Nebo na zařízení otevřete **portál společnosti**  >  **Settings**  >  **synchronizace**nastavení aplikace. 
 
 ## <a name="update-a-zebra-mx-configuration-after-its-assigned"></a>Aktualizace konfigurace MX Zebra po jejím přiřazení
 

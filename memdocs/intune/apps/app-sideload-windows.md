@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 04/07/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.assetid: e44f1756-52e1-4ed5-bf7d-0e80363a8674
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0834ee2ac6cbd7460ed96024a9b30ab503fae9fb
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 8194c3fcc90942b791d5300a37b3c093a5229cc9
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078333"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989580"
 ---
 # <a name="sign-line-of-business-apps-so-they-can-be-deployed-to-windows-devices-with-intune"></a>Registrace obchodních aplikací, aby je bylo možné nasadit na zařízení s Windows pomocí Intune
 
@@ -53,7 +53,7 @@ Pokud aplikaci nasadíte podle potřeby pro uživatele nebo zařízení, nepotř
 Pokud vaše zařízení s Windows 10 ještě nedůvěřuje certifikační autoritě, pak po podepsání balíčku appx a jeho nahrání do služby Intune je potřeba nahrát certifikát pro podepisování kódu na portál Intune:
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Klikněte na možnost konektory **pro správu** > **tenanta a tokeny** > **Windows Enterprise certifcates**.
+2. Klikněte na možnost konektory **pro správu tenanta**  >  **a tokeny**  >  **Windows Enterprise certifcates**.
 3. Vyberte soubor v **souboru certifikátu pro podpis kódu**.
 4. Vyberte soubor *. cer* a klikněte na **otevřít**.
 5. Kliknutím na **nahrát** přidejte soubor certifikátu do Intune.
@@ -122,7 +122,7 @@ Pokud je aplikace Portál společnosti pro Windows 10 podepsaná a nasazená tí
 
 Tímto způsobem můžete aplikaci podepsat a nasadit takto:
 
-1. Stáhněte si Portál společnosti podpisový skript aplikace Microsoft Intune Windows 10 [https://aka.ms/win10cpscript](https://aka.ms/win10cpscript).  Tento skript vyžaduje, aby na hostitelském počítači byla nainstalovaná sada Windows SDK pro Windows 10. Pokud si chcete stáhnout Windows SDK pro Windows 10, [https://go.microsoft.com/fwlink/?LinkId=619296](https://go.microsoft.com/fwlink/?LinkId=619296)přejděte na.
+1. Stáhněte si Portál společnosti podpisový skript aplikace Microsoft Intune Windows 10 [https://aka.ms/win10cpscript](https://aka.ms/win10cpscript) .  Tento skript vyžaduje, aby na hostitelském počítači byla nainstalovaná sada Windows SDK pro Windows 10. Pokud si chcete stáhnout Windows SDK pro Windows 10, přejděte na [https://go.microsoft.com/fwlink/?LinkId=619296](https://go.microsoft.com/fwlink/?LinkId=619296) .
 2. Stáhněte si aplikaci Portál společnosti pro Windows 10 z Microsoft Storu pro firmy (podrobnosti jsou uvedené výše).  
 3. Spusťte skript se vstupními parametry popsanými v hlavičce skriptu, abyste podepsali aplikaci Portál společnosti pro Windows 10 (extrahovanou níže). Závislosti není nutné do skriptu předávat. Jsou vyžadované jenom v případě, když aplikaci nahráváte do konzoly pro správu Intune.
 

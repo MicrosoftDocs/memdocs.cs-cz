@@ -6,7 +6,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 12/12/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b8552bd6bb570c91e84acd40cd2b654696eca972
-ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
+ms.openlocfilehash: fe2625a7e13cc3082c156fcbf802c88d095b9859
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82210345"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989816"
 ---
 # <a name="assign-licenses-to-users-so-they-can-enroll-devices-in-intune"></a>Přiřazení licencí uživatelům, aby mohli zaregistrovat zařízení v Intune
 
@@ -34,9 +34,9 @@ Ať už přidáváte uživatele ručně, nebo provádíte synchronizaci z místn
 
 [Centrum pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431) můžete použít k ručnímu přidání cloudových uživatelů a přiřazení licencí ke cloudovým uživatelským účtům a účtům synchronizovaným z místní služby Active Directory do Azure AD.
 
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **Uživatelé** > **Všichni uživatelé** > vyberte**přiřazení** **licencí** > > uživatelem.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **Uživatelé**  >  **Všichni uživatelé** > vyberte přiřazení **licencí**> uživatelem  >  **Assignments**.
 
-2. Zaškrtněte políčko pro uložení **Intune** > **Save**. Pokud chcete použít Enterprise Mobility + Security E5 nebo jinou licenci, vyberte místo toho toto políčko.
+2. Zaškrtněte políčko pro uložení **Intune**  >  **Save**. Pokud chcete použít Enterprise Mobility + Security E5 nebo jinou licenci, vyberte místo toho toto políčko.
 
    ![Snímek obrazovky oddílu Microsoft 365 licence k produktu centra pro správu](./media/licenses-assign/mem-assign-license.png)
 

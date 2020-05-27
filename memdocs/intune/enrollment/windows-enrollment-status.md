@@ -7,7 +7,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 11/26/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8ba3563a243b13b874608ad7a3ec918130e5bb80
-ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
+ms.openlocfilehash: 33c57e5641934200120839ad48a9a4c8b8d0a8fa
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82022700"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988894"
 ---
 # <a name="set-up-an-enrollment-status-page"></a>Nastavení stránky stavu registrace
  
@@ -64,25 +64,25 @@ Můžete také nastavit pořadí priority pro každý profil na účet pro konfl
 
 Pokud chcete zapnout stránku Stav registrace, postupujte podle následujících kroků.
  
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **Windows** > **Windows registrace registrace** > **stavová stránka**.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení**  >  **Windows**  >  **Windows registrace registrace**  >  **stavová stránka**.
 2. V okně **Stránka stavu registrace** zvolte **Výchozí** > **Nastavení**.
 3. U možnosti **Zobrazit průběh instalace aplikací a profilů** zvolte **Ano**.
 4. Zvolte další nastavení, která chcete zapnout, a potom zvolte **Uložit**.
 
 ## <a name="create-enrollment-status-page-profile-and-assign-to-a-group"></a>Vytvoří profil stránky stavu registrace a přiřadí se ke skupině.
 
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **Windows** > **Windows registrace registrace** > **Stránka** > stav**vytvořit profil**.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení**  >  **Windows**  >  **Windows registrace registrace**  >  **Stránka stav**  >  **vytvořit profil**.
 2. Zadejte **Název** a **Popis**.
 3. Zvolte **Vytvořit**.
 4. Nový profil vyberte v seznamu **Stránka stavu registrace**.
-5. Zvolte **přiřazení** > **Vybrat skupiny** > zvolte skupiny, které chcete použít pro tento profil > **Vyberte** > **Uložit**.
+5. Zvolte **přiřazení**  >  **Vybrat skupiny** > zvolte skupiny, které chcete použít pro tento profil > **Vyberte**  >  **Uložit**.
 6. Vyberte **Nastavení** > vyberte nastavení, která chcete pro tento profil použít > **Uložit**.
 
 ## <a name="set-the-enrollment-status-page-priority"></a>Nastavení priority stránky stavu registrace
 
 Uživatel může být v mnoha skupinách a mít velký počet profilů stránek stavu registrace. Chcete-li tyto konflikty zpracovat, můžete nastavit priority pro jednotlivé profily. Pokud má někdo více než jeden profil stránky stavu registrace, použije se k registraci zařízení jenom profil s nejvyšší prioritou.
 
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **Windows** > **Windows registrace registrace** > **stavová stránka**.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení**  >  **Windows**  >  **Windows registrace registrace**  >  **stavová stránka**.
 2. Najeďte myší na profil v seznamu.
 3. Pomocí tří svislých teček přetáhněte profil na požadované místo v seznamu.
 
@@ -90,12 +90,12 @@ Uživatel může být v mnoha skupinách a mít velký počet profilů stránek 
 
 Můžete určit, které aplikace se musí nainstalovat, než uživatel bude moci získat přístup k ploše.
 
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **Windows** > **Windows registrace registrace** > **stavová stránka**.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení**  >  **Windows**  >  **Windows registrace registrace**  >  **stavová stránka**.
 2. Vyberte profil > **Nastavení**.
 3. Pokud chcete **Zobrazit průběh instalace aplikací a profilů**, klikněte na **Ano** .
 4. Vyberte možnost **Ano** pro **blokování použití zařízení, dokud nebudou nainstalovány všechny aplikace a profily**.
 5. Vyberte možnost **Vybraná** pro **blokování použití zařízení, dokud se tyto požadované aplikace neinstalují, pokud jsou přiřazené uživateli nebo zařízení**.
-6. Zvolte **vybrat aplikace** > zvolte aplikace > **Vybrat** > **Uložit**.
+6. Zvolte **vybrat aplikace** > zvolte aplikace > **Vybrat**  >  **Uložit**.
 
 V Intune se používají aplikace, které jsou zahrnuté v tomto seznamu, aby se vyfiltroval seznam, který by se měl považovat za blokující.  Neurčuje, které aplikace se mají nainstalovat.  Pokud například nakonfigurujete tento seznam tak, aby zahrnoval "App 1," App 2, "a" App 3 "a" App 3 "a" App 4 "jsou zaměřené na zařízení nebo uživatele, bude stránka stavu registrace sledovat pouze" App 3 ".  Aplikace "App 4" bude stále nainstalována, ale na stránce Stav registrace nebude čekat na dokončení.
 
@@ -203,7 +203,7 @@ Níže jsou uvedené známé problémy.
     - uživatel musí znovu zadat přihlašovací údaje, než bude pokračovat ve fázi nastavení zařízení do fáze nastavení účtu.
 - Protokol ESP je zablokovaný po dlouhou dobu, nebo nikdy nedokončuje "identifikační" fázi. Intune počítá zásady protokolu ESP v rámci identifikační fáze. Pokud aktuálnímu uživateli není přiřazená licence Intune, nemůže zařízení nikdy dokončit výpočetní zásady ESP.  
 - Konfigurace řízení aplikací v programu Microsoft Defender způsobí při autopilotu dotaz na restartování. Konfigurace aplikace v programu Microsoft Defender (AppLocker CSP) vyžaduje restart. Pokud je tato zásada nakonfigurovaná, může při autopilotu dojít k restartování zařízení. V současné době neexistuje způsob, jak potlačit nebo odložit restartování.
-- Pokud je zásada DeviceLock (https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock) povolená jako součást profilu ESP, automatické přihlášení k počátečnímu počítači nebo ploše uživatele by mohlo selhat unexpectantly ze dvou důvodů.
+- Pokud je zásada DeviceLock ( https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock) povolená jako součást profilu ESP, automatické přihlášení k počátečnímu počítači nebo ploše uživatele by mohlo selhat unexpectantly ze dvou důvodů.
   - Pokud se zařízení před ukončením fáze nastavení zařízení ESP nerestartuje, může se uživateli zobrazit výzva k zadání přihlašovacích údajů Azure AD. Tato výzva se zobrazí místo úspěšného automatického přihlášení, kde se uživateli zobrazí animace prvního přihlašování Windows.
   - Automatické přihlašování se nepovede, pokud se zařízení restartuje po zadání přihlašovacích údajů Azure AD, ale ještě před tím, než se ukončí fáze nastavení zařízení ESP. K této chybě dochází, protože fáze nastavení zařízení ESP nebyla nikdy dokončena. Alternativním řešením je resetování zařízení.
 

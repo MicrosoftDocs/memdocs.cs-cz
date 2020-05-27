@@ -7,7 +7,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 10/20/2018
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 37eff19d940ef02cec0d2d0204644c46ef0742a2
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 66bc3db54ebefe814a14f564abbad42dc226aefe
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326988"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988991"
 ---
 # <a name="terms-and-conditions-for-user-access"></a>Podmínky a ujednání pro přístup uživatelů
 
@@ -46,7 +46,7 @@ Pokud chcete zjistit, která metoda je pro vás nejvhodnější, přečtěte si 
 ## <a name="create-terms-and-conditions"></a>Vytvoření podmínek a ujednání
 Pokud chcete vytvořit podmínky a ujednání, dokončete tento postup. Zobrazovaný název a popis jsou určené pro správu, zatímco vlastnosti podmínek se zobrazují uživatelům na Portálu společnosti.
 
-1. Přihlaste se do [centra pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)**a vyberte podmínky a ujednání** **pro správu** > tenanta.
+1. Přihlaste se do [centra pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)a vyberte podmínky a ujednání **pro správu tenanta**  >  **Terms and Conditions**.
 2. Zvolte **Vytvořit**.
 3. Na stránce **základy** zadejte následující informace:
 
@@ -69,7 +69,7 @@ Pokud chcete vytvořit podmínky a ujednání, dokončete tento postup. Zobrazov
     - **Všichni uživatelé**: tuto možnost vyberte, pokud chcete přiřadit podmínky a ujednání všem uživatelům.
     - **Vybrat skupiny**: tuto možnost vyberte, pokud chcete, aby se tyto podmínky a ujednání přiřadily všem uživatelům ve skupinách, které identifikujete výběrem možnosti **Vybrat skupiny, které se mají zahrnout**.
 
-8. Klikněte na tlačítko **Další** > **vytvořit**.
+8. Klikněte na tlačítko **Další**  >  **vytvořit**.
 
 ## <a name="see-how-terms-are-displayed-to-your-users"></a>Prohlížení podmínek, jak se zobrazují uživatelům
 V následujícím příkladu je vidět **Nadpis** a **Souhrn podmínek** v konzole pro správu a na Portálu společnosti.
@@ -83,7 +83,7 @@ V následujícím příkladu jsou vidět podmínky a ujednání v konzole pro sp
 
 ## <a name="monitor-terms-and-conditions"></a>Monitorování podmínek a ujednání
 
-1. Přihlaste se do [centra pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)**a vyberte podmínky a ujednání** **pro správu** > tenanta.
+1. Přihlaste se do [centra pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)a vyberte podmínky a ujednání **pro správu tenanta**  >  **Terms and Conditions**.
 2. V seznamu podmínek a ujednání zvolte podmínky, u kterých chcete zobrazit jejich přijetí > **Generování sestav o přijetí**.
 
 ## <a name="work-with-multiple-versions-of-terms-and-conditions"></a>Práce s více verzemi podmínek a ujednání
@@ -93,10 +93,10 @@ Podmínky a ujednání můžete upravit a spravovat jejich verze. Po každé vý
 
 Aktuální číslo verze nechejte, pokud například opravujete překlepy nebo měníte formátování.
 
-1. Přihlaste se do [centra pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431), vyberte**podmínky a ujednání** **správy** > tenanta > vyberte podmínky a ujednání, které chcete upravit > **vlastností**.
+1. Přihlaste se do [centra pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431), vyberte **Tenant administration**  >  **podmínky a ujednání** správy tenanta > vyberte podmínky a ujednání, které chcete upravit > **vlastností**.
 
 2. V podokně **Vlastnosti** zvolte **Podmínky** a podle potřeby změňte **Nadpis**, **Souhrn podmínek** a **Podmínky**. Pokud je potřeba, aby provedené změny uživatelé znovu přijali jako nové podmínky, zvolte **Požaduje opětovné přijetí od uživatelů a zvýší číslo verze na**.
 
-3. Klikněte na **tlačítko OK** > **Uložit**.
+3. Klikněte na **tlačítko OK**  >  **Uložit**.
 
 Uživatelé musí přijmout aktualizované podmínky a ujednání jenom jednou. Uživatelé, kteří mají několik zařízení, je nemusejí přijímat na každém z nich.

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f529a80403d27cf9d12c03c6090670095bf569fa
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 662b0ab94004bf54d793d9a913157c53f36d0dcc
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79329967"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989774"
 ---
 # <a name="block-apps-that-dont-use-modern-authentication-adal"></a>Blokovat aplikace, které nepoužívají moderní ověřování (ADAL)
 
@@ -33,7 +33,7 @@ Podmíněný přístup na základě aplikace se zásadami ochrany aplikací spol
 
 ## <a name="block-access-to-apps"></a>Blokovat přístup k aplikacím
 
-Pokud chcete blokovat přístup k aplikacím, které nepoužívají moderní ověřování, implementujte přístup k podmínkám pomocí zásad ochrany aplikací Intune. Další informace najdete v tématu [podmíněný přístup na základě aplikace s Intune](app-based-conditional-access-intune.md).
+Pokud chcete blokovat přístup k aplikacím, které nepoužívají moderní ověřování, implementujte podmíněný přístup pomocí zásad ochrany aplikací Intune. Další informace najdete v tématu [podmíněný přístup na základě aplikace s Intune](app-based-conditional-access-intune.md).
 
 ## <a name="additional-information"></a>Další informace
 

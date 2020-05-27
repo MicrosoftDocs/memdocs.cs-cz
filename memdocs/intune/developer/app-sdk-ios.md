@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 919c285366f44a208c1c8d803770b9cbaeb00c5c
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 379eacee731c8cdd773fc7a15f556ab85e409f7c
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83429272"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989889"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Microsoft Intune App SDK pro iOS – Příručka pro vývojáře
 
@@ -135,7 +135,7 @@ Pokud chcete povolit sadu Intune App SDK, postupujte takto:
 3. Povolte sdílení řetězce klíčů (pokud ještě není povolené) tak, že v každém cíli projektu kliknete na **Možnosti** a zapnete přepínač **Sdílení řetězce klíčů**. Sdílení řetězce klíčů se vyžaduje pro přechod k dalšímu kroku.
 
    > [!NOTE]
-   > Profil zřizování musí podporovat nové hodnoty sdílení řetězce klíčů. Přístupové skupiny pro řetězce klíčů by měly podporovat zástupné znaky. Můžete to zjistit tak, že otevřete soubor. mobileprovision v textovém editoru, vyhledáte klíčová slova pro **přístup do klíčů**a ověříte, že máte zástupný znak. Například:
+   > Profil zřizování musí podporovat nové hodnoty sdílení řetězce klíčů. Přístupové skupiny pro řetězce klíčů by měly podporovat zástupné znaky. Můžete to zjistit tak, že otevřete soubor. mobileprovision v textovém editoru, vyhledáte klíčová slova pro **přístup do klíčů**a ověříte, že máte zástupný znak. Příklad:
    >
    >  ```xml
    >  <key>keychain-access-groups</key>
@@ -154,7 +154,7 @@ Pokud chcete povolit sadu Intune App SDK, postupujte takto:
     
       ![Intune App SDK iOS: sdílení řetězců klíčů](./media/app-sdk-ios/intune-app-sdk-ios-keychain-sharing.png)
     
-    d. Pokud přímo upravujete soubor nároků a nepoužíváte k vytvoření přístupové skupiny pro řetězce klíčů výše popsané uživatelské rozhraní Xcode, dejte na začátek přístupové skupiny pro řetězce klíčů předponu `$(AppIdentifierPrefix)` (Xcode to dělá automaticky). Například:
+    d. Pokud přímo upravujete soubor nároků a nepoužíváte k vytvoření přístupové skupiny pro řetězce klíčů výše popsané uživatelské rozhraní Xcode, dejte na začátek přístupové skupiny pro řetězce klíčů předponu `$(AppIdentifierPrefix)` (Xcode to dělá automaticky). Příklad:
     
       - `$(AppIdentifierPrefix)com.microsoft.intune.mam`
       - `$(AppIdentifierPrefix)com.microsoft.adalcache`
@@ -247,34 +247,34 @@ Některá z těchto nastavení jsou možná popsaná v předchozích částech a
 
 Nastavení  | Typ  | Definice | Povinné?
 --       |  --   |   --       |  --
-ADALClientId  | String  | Identifikátor klienta Azure AD aplikace | Vyžaduje se pro všechny aplikace, které používají MSAL a všechny aplikace ADAL, které přistupují k prostředku AAD bez Intune. |
-ADALAuthority | String | Autorita Azure AD aplikace se používá. Měli byste použít vlastní prostředí, ve kterém jsou nakonfigurované účty AAD. | Vyžaduje se, pokud aplikace používá ADAL nebo MSAL k přístupu k prostředku AAD bez Intune. Pokud tato hodnota chybí, použije se výchozí hodnota Intune.|
-ADALRedirectUri  | String  | Identifikátor URI pro přesměrování Azure AD aplikace. | ADALRedirectUri nebo ADALRedirectScheme se vyžadují pro všechny aplikace, které používají MSAL a všechny aplikace ADAL, které přistupují k prostředku AAD bez Intune.  |
-ADALRedirectScheme  | String  | Schéma přesměrování Azure AD aplikace Dá se použít místo ADALRedirectUri, pokud má aplikace identifikátor URI pro přesměrování ve formátu `scheme://bundle_id`. | ADALRedirectUri nebo ADALRedirectScheme se vyžadují pro všechny aplikace, které používají MSAL a všechny aplikace ADAL, které přistupují k prostředku AAD bez Intune. |
+ADALClientId  | Řetězec  | Identifikátor klienta Azure AD aplikace | Vyžaduje se pro všechny aplikace, které používají MSAL a všechny aplikace ADAL, které přistupují k prostředku AAD bez Intune. |
+ADALAuthority | Řetězec | Autorita Azure AD aplikace se používá. Měli byste použít vlastní prostředí, ve kterém jsou nakonfigurované účty AAD. | Nepovinný parametr. Doporučuje se, pokud je aplikace vlastní obchodní aplikace vytvořená pro použití v rámci jednoho tenanta organizace nebo AAD. Pokud tato hodnota chybí, použije se společná autorita AAD.|
+ADALRedirectUri  | Řetězec  | Identifikátor URI pro přesměrování Azure AD aplikace. | ADALRedirectUri nebo ADALRedirectScheme se vyžadují pro všechny aplikace, které používají MSAL a všechny aplikace ADAL, které přistupují k prostředku AAD bez Intune.  |
+ADALRedirectScheme  | Řetězec  | Schéma přesměrování Azure AD aplikace Dá se použít místo ADALRedirectUri, pokud má aplikace identifikátor URI pro přesměrování ve formátu `scheme://bundle_id`. | ADALRedirectUri nebo ADALRedirectScheme se vyžadují pro všechny aplikace, které používají MSAL a všechny aplikace ADAL, které přistupují k prostředku AAD bez Intune. |
 ADALLogOverrideDisabled | Logická hodnota  | Určuje, jestli SDK bude všechny protokoly ADAL/MSAL (včetně případných volání ADAL z aplikace) směrovat do vlastního souboru protokolu. Výchozí hodnota je NE. Nastavte na Ano, pokud aplikace nastaví vlastní zpětné volání protokolu ADAL/MSAL. | Nepovinný parametr. |
-ADALCacheKeychainGroupOverride | String  | Určuje skupinu řetězce klíčů, která se má použít pro mezipaměť ADAL/MSAL místo com. Microsoft. adalcache. Všimněte si, že nemá předponu App-ID. Předpona se použije u zadaného řetězce za běhu. | Nepovinný parametr. |
+ADALCacheKeychainGroupOverride | Řetězec  | Určuje skupinu řetězce klíčů, která se má použít pro mezipaměť ADAL/MSAL místo com. Microsoft. adalcache. Všimněte si, že nemá předponu App-ID. Předpona se použije u zadaného řetězce za běhu. | Nepovinný parametr. |
 AppGroupIdentifiers | Pole řetězců  | Pole skupin aplikací z části com. Apple. Security. Application-Groups – oprávnění aplikace | Vyžaduje se, když aplikace využívá skupiny aplikací. |
-ContainingAppBundleId | String | Určuje ID sady, která obsahuje rozšíření aplikace. | Vyžaduje se rozšíření pro iOS. |
+ContainingAppBundleId | Řetězec | Určuje ID sady, která obsahuje rozšíření aplikace. | Vyžaduje se rozšíření pro iOS. |
 DebugSettingsEnabled| Logická hodnota | Pokud je nastaveno na ANO, dají se uplatnit testovací zásady v rámci sady Nastavení. Publikované aplikace by *neměly* mít tohle nastavení povolené. | Nepovinný parametr. Výchozí hodnota je NE. |
 AutoEnrollOnLaunch| Logická hodnota| Určuje, zda se má aplikace pokusit o automatickou registraci při spuštění, pokud se zjistí existující spravovaná identita a aplikace se ještě nezaregistrovala. Výchozí hodnota je NE. <br><br> Poznámky: Pokud se nenalezne žádná spravovaná identita nebo v mezipaměti ADAL/MSAL není k dispozici žádný platný token pro identitu, pokus o registraci selže bez výzvy k zadání přihlašovacích údajů, pokud aplikace také nenastaví MAMPolicyRequired na Ano. | Nepovinný parametr. Výchozí hodnota je NE. |
 MAMPolicyRequired| Logická hodnota| Určuje, jestli se aplikaci zabrání ve spuštění, pokud nebude mít zásady ochrany aplikací Intune. Výchozí hodnota je NE. <br><br> Poznámka: Aplikace není možné odesílat do App Storu, pokud mají možnost MAMPolicyRequired nastavenou na ANO. Při nastavení možnosti MAMPolicyRequired na ANO je vhodné nastavit na ANO také možnost AutoEnrollOn. | Nepovinný parametr. Výchozí hodnota je NE. |
 MAMPolicyWarnAbsent | Logická hodnota| Určuje, jestli aplikace při spuštění upozorní uživatele v případě, že nebude mít zásady ochrany aplikací Intune. <br><br> Poznámka: Po zavření upozornění budou uživatelé i nadále moci používat aplikaci bez zásad. | Nepovinný parametr. Výchozí hodnota je NE. |
 MultiIdentity | Logická hodnota| Určuje, jestli aplikace umožňuje rozlišovat více identit. | Nepovinný parametr. Výchozí hodnota je NE. |
 SafariViewControllerBlockedOverride | Logická hodnota| Zakáže SafariViewController zavěšení služby Intune, aby povolovala ověřování MSAL prostřednictvím SFSafariViewController, SFAuthSession nebo ASWebAuthSession. | Nepovinný parametr. Výchozí hodnota je NE. Upozornění: při nesprávném použití může dojít k úniku dat. Povolte pouze v případě nezbytně nutného. Podrobnosti najdete v tématu [zvláštní informace o použití MSAL](#special-considerations-when-using-msal) .  |
-SplashIconFile <br>SplashIconFile~ipad | String  | Určuje soubor úvodní (spouštěcí) ikony Intune. | Nepovinný parametr. |
+SplashIconFile <br>SplashIconFile~ipad | Řetězec  | Určuje soubor úvodní (spouštěcí) ikony Intune. | Nepovinný parametr. |
 SplashDuration | Číslo | Minimální doba v sekundách, po kterou se při spuštění aplikace bude zobrazovat úvodní obrazovka Intune. Výchozí hodnota je 1,5. | Nepovinný parametr. |
-BackgroundColor| String| Určuje barvu pozadí pro součásti uživatelského rozhraní sady Intune SDK. Zadat je možné šestnáctkový řetězec RGB ve formátu #XXXXXX, kde každé X může mít hodnotu 0–9 nebo A–F. Symbol křížku můžete vynechat.   | Nepovinný parametr. Výchozím nastavením je barva pozadí systému, která se může lišit v různých verzích iOS a v závislosti na nastavení tmavého režimu iOS. |
-ForegroundColor| String| Určuje barvu popředí pro součásti uživatelského rozhraní sady Intune SDK, jako je barva textu. Zadat je možné šestnáctkový řetězec RGB ve formátu #XXXXXX, kde každé X může mít hodnotu 0–9 nebo A–F. Symbol křížku můžete vynechat.  | Nepovinný parametr. Výchozím nastavením je barva popisku systému, která se může lišit v různých verzích iOS a v závislosti na nastavení tmavého režimu iOS. |
-AccentColor | String| Určuje barvu zvýraznění pro součásti uživatelského rozhraní sady Intune SDK, například barvu textu tlačítka a zvýraznění pole připnutí. Zadat je možné šestnáctkový řetězec RGB ve formátu #XXXXXX, kde každé X může mít hodnotu 0–9 nebo A–F. Symbol křížku můžete vynechat.| Nepovinný parametr. Výchozí hodnota je systémová modrá. |
-SecondaryBackgroundColor| String| Určuje sekundární barvu pozadí pro obrazovky MTD. Zadat je možné šestnáctkový řetězec RGB ve formátu #XXXXXX, kde každé X může mít hodnotu 0–9 nebo A–F. Symbol křížku můžete vynechat.   | Nepovinný parametr. Výchozí hodnota je bílá. |
-SecondaryForegroundColor| String| Určuje sekundární barvu popředí pro obrazovky MTD, jako je barva poznámky pod čarou. Zadat je možné šestnáctkový řetězec RGB ve formátu #XXXXXX, kde každé X může mít hodnotu 0–9 nebo A–F. Symbol křížku můžete vynechat.  | Nepovinný parametr. Výchozí hodnota je šedá. |
+BackgroundColor| Řetězec| Určuje barvu pozadí pro součásti uživatelského rozhraní sady Intune SDK. Zadat je možné šestnáctkový řetězec RGB ve formátu #XXXXXX, kde každé X může mít hodnotu 0–9 nebo A–F. Symbol křížku můžete vynechat.   | Nepovinný parametr. Výchozím nastavením je barva pozadí systému, která se může lišit v různých verzích iOS a v závislosti na nastavení tmavého režimu iOS. |
+ForegroundColor| Řetězec| Určuje barvu popředí pro součásti uživatelského rozhraní sady Intune SDK, jako je barva textu. Zadat je možné šestnáctkový řetězec RGB ve formátu #XXXXXX, kde každé X může mít hodnotu 0–9 nebo A–F. Symbol křížku můžete vynechat.  | Nepovinný parametr. Výchozím nastavením je barva popisku systému, která se může lišit v různých verzích iOS a v závislosti na nastavení tmavého režimu iOS. |
+AccentColor | Řetězec| Určuje barvu zvýraznění pro součásti uživatelského rozhraní sady Intune SDK, například barvu textu tlačítka a zvýraznění pole připnutí. Zadat je možné šestnáctkový řetězec RGB ve formátu #XXXXXX, kde každé X může mít hodnotu 0–9 nebo A–F. Symbol křížku můžete vynechat.| Nepovinný parametr. Výchozí hodnota je systémová modrá. |
+SecondaryBackgroundColor| Řetězec| Určuje sekundární barvu pozadí pro obrazovky MTD. Zadat je možné šestnáctkový řetězec RGB ve formátu #XXXXXX, kde každé X může mít hodnotu 0–9 nebo A–F. Symbol křížku můžete vynechat.   | Nepovinný parametr. Výchozí hodnota je bílá. |
+SecondaryForegroundColor| Řetězec| Určuje sekundární barvu popředí pro obrazovky MTD, jako je barva poznámky pod čarou. Zadat je možné šestnáctkový řetězec RGB ve formátu #XXXXXX, kde každé X může mít hodnotu 0–9 nebo A–F. Symbol křížku můžete vynechat.  | Nepovinný parametr. Výchozí hodnota je šedá. |
 SupportsDarkMode| Logická hodnota | Určuje, jestli má barevné schéma uživatelského rozhraní Intune SDK sledovat nastavení režimu tmavého systému, pokud není nastavená žádná explicitní hodnota pro BackgroundColor/ForegroundColor/AccentColor. | Nepovinný parametr. Výchozí hodnota je Ano. |
 MAMTelemetryDisabled| Logická hodnota| Určuje, jestli SDK nebude odesílat žádná telemetrická data do back-endu.| Nepovinný parametr. Výchozí hodnota je NE. |
 MAMTelemetryUsePPE | Logická hodnota | Určuje, jestli sada MAM SDK bude odesílat data do back-endu telemetrie PPE. Použijte při testování aplikací se zásadami Intune, aby se testovací telemetrická data nesmíchala se zákaznickými. | Nepovinný parametr. Výchozí hodnota je NE. |
-MaxFileProtectionLevel | String | Nepovinný parametr. Povoluje aplikaci určit maximální úroveň, kterou `NSFileProtectionType` může podporovat. Tato hodnota přepíše zásady odeslané službou, pokud je příslušná úroveň vyšší než ta, kterou aplikace může podporovat. Možné hodnoty: `NSFileProtectionComplete`, `NSFileProtectionCompleteUnlessOpen`, `NSFileProtectionCompleteUntilFirstUserAuthentication`, `NSFileProtectionNone`.|
+MaxFileProtectionLevel | Řetězec | Nepovinný parametr. Povoluje aplikaci určit maximální úroveň, kterou `NSFileProtectionType` může podporovat. Tato hodnota přepíše zásady odeslané službou, pokud je příslušná úroveň vyšší než ta, kterou aplikace může podporovat. Možné hodnoty: `NSFileProtectionComplete`, `NSFileProtectionCompleteUnlessOpen`, `NSFileProtectionCompleteUntilFirstUserAuthentication`, `NSFileProtectionNone`.|
 OpenInActionExtension | Logická hodnota | Pro rozšíření akce Open in se nastavuje na ANO. Další informace najdete v části Sdílení dat přes UIActivityViewController. |
 WebViewHandledURLSchemes | Pole řetězců | Určuje schémata URL zpracovávaná komponentami WebView vaší aplikace. | Povinný parametr, pokud aplikace používá komponenty WebView, které zpracovávají adresy URL prostřednictvím odkazů nebo JavaScriptu. |
-DocumentBrowserFileCachePath | String | Pokud vaše aplikace používá [`UIDocumentBrowserViewController`](https://developer.apple.com/documentation/uikit/uidocumentbrowserviewcontroller?language=objc) k procházení souborů v různých poskytovatelích souborů, můžete tuto cestu nastavit relativně k domovskému adresáři v izolovaném prostoru aplikace, aby sada Intune SDK mohla do této složky vyřadit dešifrované spravované soubory. | Nepovinný parametr. Výchozím nastavením je `/Documents/` adresář. |
+DocumentBrowserFileCachePath | Řetězec | Pokud vaše aplikace používá [`UIDocumentBrowserViewController`](https://developer.apple.com/documentation/uikit/uidocumentbrowserviewcontroller?language=objc) k procházení souborů v různých poskytovatelích souborů, můžete tuto cestu nastavit relativně k domovskému adresáři v izolovaném prostoru aplikace, aby sada Intune SDK mohla do této složky vyřadit dešifrované spravované soubory. | Nepovinný parametr. Výchozím nastavením je `/Documents/` adresář. |
 VerboseLoggingEnabled | Logická hodnota | Pokud je tato hodnota nastavená na Ano, Intune se přihlásí do režimu podrobného protokolování. | Nepovinný parametr. Výchozí hodnota je ne. |
 
 ## <a name="receive-app-protection-policy"></a>Příjem zásad ochrany aplikací
@@ -545,7 +545,7 @@ Od verze 8.0.2 může sada Intune App SDK filtrovat akce `UIActivityViewControll
 
 Při sdílení dokumentů přes `UIActivityViewController` a `UIDocumentInteractionController` iOS se zobrazí akce kopírovat do pro každou aplikaci, která podporuje otevření sdíleného dokumentu. Aplikace deklarují podporované typů dokumentů prostřednictvím nastavení `CFBundleDocumentTypes` ve svém souboru Info.plist. Pokud zásady zakazují sdílení s nespravovanými aplikacemi, nebude už tento typ sdílení k dispozici. Místo toho bude potřeba přidat do aplikace rozšíření akce, které se nevztahuje k uživatelskému rozhraní, a propojit ho se sadou Intune App SDK. Rozšíření akce je jenom zástupná procedura. Sada SDK implementuje chování sdílení souborů. Postupujte následovně:
 
-1. Vaše aplikace musí mít alespoň jednu schemeURL definovanou v souboru info. plist `CFBundleURLTypes` společně se svým `-intunemam` protějškem. Například:
+1. Vaše aplikace musí mít alespoň jednu schemeURL definovanou v souboru info. plist `CFBundleURLTypes` společně se svým `-intunemam` protějškem. Příklad:
     ```objc
     <key>CFBundleURLSchemes</key>
     <array>
@@ -653,7 +653,7 @@ Další informace možnostech rozhraní Graph API najdete v [referenčních info
 
 Další informace o tom, jak vytvořit zásady konfigurace cílené aplikace v MAM v iOS, najdete v části v tématu Konfigurace cílené aplikace MAM v článku [Jak používat Microsoft Intune zásady konfigurace aplikací pro iOS/iPadOS](../apps/app-configuration-policies-use-ios.md).
 
-## <a name="telemetry"></a>Telemetrická data
+## <a name="telemetry"></a>Telemetrie
 
 Intune App SDK pro iOS ve výchozím nastavení shromažďuje telemetrii týkající se následujících typů událostí:
 

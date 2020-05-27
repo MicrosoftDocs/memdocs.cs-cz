@@ -6,7 +6,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 05/26/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.reviewer: samyada
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b74ea17e0fdadfbb6f7c1ec82e502f57187ba74e
-ms.sourcegitcommit: 97fbb7db14b0c4049c0fe3a36ee16a5c0cf3407a
+ms.openlocfilehash: fff21eac61f7b68e00989aefc1f9ea6dc3ad7c0a
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83864916"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989311"
 ---
 # <a name="configure-actions-for-noncompliant-devices-in-intune"></a>Konfigurace akcí pro zařízení nedodržující předpisy v Intune
 
@@ -55,11 +55,25 @@ Po odeslání e-mailu Intune zahrne do e-mailového oznámení podrobnosti o za�
 
 - **Vzdáleně uzamknout zařízení, které nedodržuje předpisy**: pomocí této akce můžete vystavit vzdálený zámek zařízení. Uživateli se zobrazí výzva k zadání PIN kódu nebo hesla k odemknutí zařízení. Další informace o funkci [vzdáleného uzamčení](../remote-actions/device-remote-lock.md).
 
+  Tuto akci podporují následující platformy:
+  - Android:
+    - Správce zařízení s Androidem
+    - Vlastník zařízení se systémem Android Enterprise
+    - Pracovní profil Android Enterprise
+    - Firemní veřejná zařízení s Androidem
+  - iOS/iPadOS
+  - macOS
+  - Windows 10 Mobile
+  - Windows Phone 8.1 nebo novější
+
 - **Vyřazení zařízení nesplňujících požadavky**: Tato akce odebere ze zařízení všechna firemní data a odebere zařízení ze správy Intune. Aby nedocházelo k náhodnému vymazání zařízení, tato akce podporuje minimální plán na **30** dní.
 
   Tuto akci podporují následující platformy:
-  - Android
-  - iOS
+  - Android:
+    - Správce zařízení s Androidem
+    - Vlastník zařízení se systémem Android Enterprise
+    - Pracovní profil Android Enterprise
+  - iOS/iPadOS
   - macOS
   - Windows 10 Mobile
   - Windows Phone 8.1 nebo novější

@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 01/06/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: db078b6c89b58b9b7acb897fa053899d1fdcdd33
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 219ece146d5855084d3cf6aaeb90bf08dcc8bbae
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79323771"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988582"
 ---
 # <a name="manage-volume-purchased-apps-and-books-with-microsoft-intune"></a>Správa aplikací a knih zakoupených v rámci multilicenčního programu pomocí Microsoft Intune
 

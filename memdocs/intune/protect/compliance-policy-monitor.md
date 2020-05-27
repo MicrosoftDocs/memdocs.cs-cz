@@ -6,7 +6,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 12/18/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5f85a8ffc81aa91bce09d6a76eeb5a52335d8b23
-ms.sourcegitcommit: dda5e6f00f79737348e850d971f15fc3093d6431
+ms.openlocfilehash: d73ad9a962042fb06da26c2a03509d4e484a9274
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82745188"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989244"
 ---
 # <a name="monitor-intune-device-compliance-policies"></a>Monitorování zásad dodržování předpisů zařízením v Intune
 
@@ -38,7 +38,7 @@ Otevřete **řídicí panel Intune pro dodržování předpisů zařízením**:
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Vyberte **zařízení** > **Přehled** > karta**stav dodržování předpisů** .
+2. Vyberte **zařízení**  >  **Přehled**  >  karta**stav dodržování předpisů** .
 
 > [!IMPORTANT]
 > Aby mohla zařízení přijímat zásady dodržování předpisů, musejí být zaregistrovaná v Intune.
@@ -136,7 +136,7 @@ Když tuto dlaždici vyberete, zobrazí se všechna zařízení bez zásad dodr�
 
 - U nastavení zabezpečení **Označit zařízení, která nemají přiřazené žádné zásady dodržování předpisů, jako** je důležité určit zařízení bez zásad dodržování předpisů. Potom jim můžete přiřadit aspoň jednu zásadu dodržování předpisů.
 
-  Nastavení zabezpečení můžete konfigurovat na portálu Intune.  > **Nastavení zásad dodržování**předpisů **zařízením** > v**zásadách dodržování předpisů**. Potom nastavte možnost **Označit zařízení, která nemají přiřazené žádné zásady dodržování předpisů, jako** na **Vyhovující předpisům**, nebo **Nevyhovující předpisům**.
+  Nastavení zabezpečení můžete konfigurovat na portálu Intune. **Devices**  >  **Compliance policies**  >  **Nastavení zásad dodržování**předpisů zařízením v zásadách dodržování předpisů. Potom nastavte možnost **Označit zařízení, která nemají přiřazené žádné zásady dodržování předpisů, jako** na **Vyhovující předpisům**, nebo **Nevyhovující předpisům**.
 
   Další informace najdete v článku o [vylepšeních zabezpečení ve službě Intune](https://blogs.technet.microsoft.com/intunesupport/2018/02/09/updated-upcoming-security-enhancements-in-the-intune-service/).
 
@@ -156,11 +156,11 @@ Graf **Nastavení dodržování předpisů** zobrazuje všechna nastavení zása
 
 ## <a name="view-compliance-reports"></a>Zobrazení sestav dodržování předpisů
 
-Kromě použití grafů na *stav dodržování předpisů*můžete přejít na **zprávy** > **dodržování předpisů zařízením**.
+Kromě použití grafů na *stav dodržování předpisů*můžete přejít na **zprávy**  >  **dodržování předpisů zařízením**.
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Vyberte **Devices** > **monitorování**zařízení a pak z nižšího **dodržování předpisů** vyberte sestavu, kterou chcete zobrazit. K dispozici jsou tyto sestavy dodržování předpisů:
+2. Vyberte **Devices**  >  **monitorování**zařízení a pak z nižšího **dodržování předpisů** vyberte sestavu, kterou chcete zobrazit. K dispozici jsou tyto sestavy dodržování předpisů:
 
    - Dodržování předpisů zařízení
    - Zařízení nedodržující předpisy
@@ -178,7 +178,7 @@ Různé stavy zásad můžete zkontrolovat podle platformy. Máte například z�
 
 Tato funkce je zahrnutá v sestavách stavu zařízení:
 
-1. Vyberte > **zásady****zásady dodržování předpisů**pro **zařízení** > . Zobrazí se seznam zásad včetně platformy, pokud je příslušná zásada přiřazená, a další podrobnosti.
+1. Vyberte **Devices**  >  **zásady zásady dodržování předpisů**pro zařízení  >  **Policies**. Zobrazí se seznam zásad včetně platformy, pokud je příslušná zásada přiřazená, a další podrobnosti.
 2. Vyberte zásadu > **Přehled**. Přiřazení zásad v tomto zobrazení zahrnuje následující stavy:
 
     - **Úspěch**: zásada se použije

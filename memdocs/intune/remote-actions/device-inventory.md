@@ -6,7 +6,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 03/18/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ed5ff548d28a5bc973c43c84861b9b256b41a203
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 3c8b8599c7b207900d6e4a14b7580a324a238dfe
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80696291"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989904"
 ---
 # <a name="see-device-details-in-intune"></a>Zobrazení podrobností o zařízení v Intune
 
@@ -34,7 +34,7 @@ V tomto článku se dozvíte, jak si můžete zobrazit všechna zařízení a je
 ## <a name="view-the-device-details"></a>Zobrazení podrobností o zařízení
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-3. Vyberte **zařízení** > **všechna zařízení** > výběrem jednoho ze zařízení v seznamu otevřete jeho podrobnosti:
+3. Vyberte **zařízení**  >  **všechna zařízení** > výběrem jednoho ze zařízení v seznamu otevřete jeho podrobnosti:
 
    - **Přehled** zobrazuje název zařízení a uvádí některé klíčové vlastnosti zařízení, například to, jestli jde o osobní nebo firemní zařízení, sériové číslo, primární uživatel a další. Na zařízení můžete provést následující akce:
       - [Vyřadit](devices-wipe.md#retire)
@@ -70,7 +70,7 @@ V závislosti na tom, jaký dopravce zařízení používá, se nemusí shromaž
 
 |Podrobnosti|Popis|Platforma| 
 |--------------|----------------------|----|  
-|Název|Název zařízení|Windows, iOS|
+|Name|Název zařízení|Windows, iOS|
 |Název správy|Název zařízení používaný jenom v konzole. Změnou tohoto názvu nedojde ke změně názvu v zařízení.|Windows, iOS|
 |UDID|Jedinečný identifikátor zařízení|Windows, iOS|
 |ID zařízení Intune|Globálně jedinečný identifikátor, který jednoznačně identifikuje zařízení|Windows, iOS|

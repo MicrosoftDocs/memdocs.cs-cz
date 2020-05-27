@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 01/22/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 74db26a3d5f80a0192e996913177745c0b438ac6
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 9ee40dc9feb9b66b6267fc91448cc7265296597f
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80324936"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989543"
 ---
 # <a name="add-built-in-apps-to-microsoft-intune"></a>Přidání integrovaných aplikací do Microsoft Intune
 
@@ -38,7 +38,7 @@ Ve starších verzích konzoly Intune bylo v Intune několik výchozích spravov
 
 Postup přidání integrované aplikace k aplikacím dostupným v Microsoft Intune je následující:
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **aplikace** > **všechny aplikace** > **Přidat**.
+2. Vyberte **aplikace**  >  **všechny aplikace**  >  **Přidat**.
 3. V podokně **Vybrat typ aplikace** v části dostupné typy **aplikací pro Store** vyberte **Vestavěná aplikace**.
 4. Klikněte na **Vybrat**. Zobrazí se kroky **Přidání aplikace** .
 5. Na stránce **Vybrat vestavěné aplikace** klikněte na **Vybrat aplikaci** a vyberte aplikace, které chcete zahrnout.
@@ -56,7 +56,7 @@ Postup přidání integrované aplikace k aplikacím dostupným v Microsoft Intu
 ## <a name="configure-app-information"></a>Konfigurace informací o aplikaci
 
 Informace o integrované aplikaci můžete upravit. Tyto informace vám pomůžou identifikovat aplikaci v Intune a také pomůžou uživatelům, aby ji našli na portálu společnosti.
-1. Vyberte **aplikace** > **všechny aplikace** a vyberte vestavěnou aplikaci, kterou chcete upravit.  
+1. Vyberte **aplikace**  >  **všechny aplikace** a vyberte vestavěnou aplikaci, kterou chcete upravit.  
    Zobrazí se podokno pro integrovanou aplikaci.
 2. Vyberte **vlastnosti**.
 3. V poli **informace o aplikaci**vyberte **Upravit** .

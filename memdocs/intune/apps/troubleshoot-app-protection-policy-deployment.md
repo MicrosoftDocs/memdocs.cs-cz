@@ -9,17 +9,17 @@ search.appverid:
 audience: ITPro
 ms.date: 4/17/2020
 ms.service: microsoft-intune
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto:
 - Intune
-ms.openlocfilehash: 3b4c02e366f4778e65b4fe4c853ed147fcdb1df3
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 8443ca01a0ca1647e8069fdccf1d71aef74c23d8
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82072748"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989466"
 ---
 # <a name="troubleshooting-app-protection-policy-deployment-in-intune"></a>Řešení potíží s nasazením zásad ochrany aplikací v Intune
 
@@ -80,7 +80,7 @@ Další informace o tom, jak povolit HMA pro hybridní a místní konfiguraci Sk
 Chcete-li zjistit stav ochrany aplikace, postupujte podle následujících kroků:
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **aplikace** > **monitor** > **stav ochrany aplikace**a pak vyberte dlaždici **přiřazení uživatelé** .
+2. Vyberte **aplikace**  >  **monitor**  >  **stav ochrany aplikace**a pak vyberte dlaždici **přiřazení uživatelé** .
 3. Na stránce **vytváření sestav aplikací** vyberte **Vybrat uživatele** a zobrazte seznam uživatelů a skupin.
 4. Vyhledejte a vyberte ze seznamu jednoho ze všech ovlivněných uživatelů a pak vyberte **Vybrat uživatele**. V horní části podokna vytváření sestav aplikace uvidíte, jestli má uživatel licenci pro ochranu aplikací a má licenci pro O365. Můžete také zobrazit stav aplikace pro všechna zařízení uživatele.
 5. Tyto důležité informace si poznamenejte jako cílené aplikace, typy zařízení, zásady, stav vrácení se změnami zařízení a čas poslední synchronizace.
@@ -105,7 +105,7 @@ Zásady ochrany aplikací Intune musí být cílené na uživatele. Pokud nepři
 Pokud chcete ověřit, jestli se zásada aplikuje na cílového uživatele, postupujte takto:
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **aplikace** > **monitor** > **stav ochrany aplikace**a pak vyberte dlaždici **stav uživatele** (na základě platformy operačního systému zařízení).
+2. Vyberte **aplikace**  >  **monitor**  >  **stav ochrany aplikace**a pak vyberte dlaždici **stav uživatele** (na základě platformy operačního systému zařízení).
 V podokně **vytváření sestav aplikací** vyberte **Vybrat uživatele** a vyhledejte uživatele.
 3. Vyberte uživatele ze seznamu. Můžete zobrazit podrobnosti o tomto uživateli.
 
@@ -168,7 +168,7 @@ Kromě toho může trvat až 8 hodin změny a aktualizace zásad ochrany aplikac
 Chcete-li zjistit stav ochrany aplikace, postupujte podle následujících kroků:
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **aplikace** > **monitor** > **stav ochrany aplikace**a pak vyberte dlaždici **přiřazení uživatelé** .
+2. Vyberte **aplikace**  >  **monitor**  >  **stav ochrany aplikace**a pak vyberte dlaždici **přiřazení uživatelé** .
 3. Na stránce vytváření sestav aplikací vyberte **Vybrat uživatele** a otevřete seznam uživatelů a skupin.
 4. Vyhledejte a vyberte ze seznamu jednoho ze všech ovlivněných uživatelů a pak vyberte **Vybrat uživatele**.
 5. Zkontrolujte aktuálně použité zásady, včetně stavu a času poslední synchronizace.
@@ -180,7 +180,7 @@ Chcete-li zjistit stav ochrany aplikace, postupujte podle následujících krok�
 Zásady ochrany aplikací Intune zahrnují podporu více identit. Intune může zásady ochrany aplikací použít jenom na pracovní nebo školní účet, který se přihlásil k aplikaci. Podporuje se ale jenom jeden pracovní nebo školní účet na zařízení.
 
 ### <a name="scenario-the-policy-is-applied-but-ios-users-can-still-transfer-work-files-to-unmanaged-apps"></a>Scénář: zásady se aplikují, ale uživatelé iOS můžou dál přenášet pracovní soubory do nespravovaných aplikací.
-Funkce **Správa Open-in** ( ![tlačítko](media/troubleshoot-app-protection/troubleshoot-app-protection.jpg) otevřít v) pro zařízení s iOS může omezit přenosy souborů mezi aplikacemi, které jsou nasazené prostřednictvím kanálu MDM. Uživatel může být schopný přenést pracovní soubory ze spravovaných umístění, jako je OneDrive a Exchange, do nespravovaných aplikací nebo umístění v závislosti na konfiguraci. Funkce **správy otevřené v** iOS funguje mimo jiné metody přenosu dat. Proto to není ovlivněno nastaveními **Uložit jako** a **Kopírovat/vložit** .
+Funkce **Správa Open-in** ( ![ tlačítko otevřít v ](media/troubleshoot-app-protection/troubleshoot-app-protection.jpg) ) pro zařízení s iOS může omezit přenosy souborů mezi aplikacemi, které jsou nasazené prostřednictvím kanálu MDM. Uživatel může být schopný přenést pracovní soubory ze spravovaných umístění, jako je OneDrive a Exchange, do nespravovaných aplikací nebo umístění v závislosti na konfiguraci. Funkce **správy otevřené v** iOS funguje mimo jiné metody přenosu dat. Proto to není ovlivněno nastaveními **Uložit jako** a **Kopírovat/vložit** .
 
 Zásady ochrany aplikací Intune můžete použít společně s funkcí **Správa Open in** pro iOS k ochraně firemních dat následujícím způsobem:
 

@@ -7,7 +7,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 11/06/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fadd5817ccd4e591fe92c11cb30041296ac85d61
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 7d07b87bca934dac924f2d2c281ecb7b2a2e8a2c
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80696436"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989796"
 ---
 # <a name="set-up-app-based-conditional-access-policies-with-intune"></a>Nastavení zásad podmíněného přístupu na základě aplikace v Intune
 
@@ -44,7 +44,7 @@ Než budete moct vytvořit zásady podmíněného přístupu z centra pro správ
 
 1. Přihlaste se do [centra pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) .
 
-2. Vyberte položku **Endpoint Security** > **podmíněný přístup** > **nové zásady**.
+2. Vyberte položku **Endpoint Security**  >  **podmíněný přístup**  >  **nové zásady**.
 
 3. Zadejte **název**zásady a potom v části *přiřazení*vyberte **Uživatelé a skupiny**. Pomocí možností Zahrnout a Vyloučit vyberte požadované skupiny pro nasazení zásady a zvolte **Hotovo**.
 
@@ -52,11 +52,11 @@ Než budete moct vytvořit zásady podmíněného přístupu z centra pro správ
 
    Zvolením možnosti **Hotovo** uložte změny.
 
-5. Vyberte **podmínky** > , které**klientské aplikace** použijí pro použití zásad pro aplikace a prohlížeče. Zvolte například **Ano** a pak povolte **Prohlížeč** a **Mobilní aplikace a desktopoví klienti**.
+5. Vyberte **podmínky**,  >  které**klientské aplikace** použijí pro použití zásad pro aplikace a prohlížeče. Zvolte například **Ano** a pak povolte **Prohlížeč** a **Mobilní aplikace a desktopoví klienti**.
 
    Zvolením možnosti **Hotovo** uložte změny.
 
-6. V části *řízení přístupu*vyberte **udělit** pro použití podmíněného přístupu na základě dodržování předpisů zařízením. Vyberte například **udělit přístup** > **vyžadovat schválenou klientskou aplikaci** a **vyžadovat zásady ochrany aplikací (Preview)** a pak vyberte **vyžadovat jeden z vybraných ovládacích prvků** .
+6. V části *řízení přístupu*vyberte **udělit** pro použití podmíněného přístupu na základě dodržování předpisů zařízením. Vyberte například **udělit přístup**  >  **vyžadovat schválenou klientskou aplikaci** a **vyžadovat zásady ochrany aplikací (Preview)** a pak vyberte **vyžadovat jeden z vybraných ovládacích prvků** .
 
    Zvolením možnosti **Vybrat** uložte změny.
 
@@ -71,5 +71,5 @@ Než budete moct vytvořit zásady podmíněného přístupu z centra pro správ
 
 ## <a name="see-also"></a>Viz také
 
-[Ochrana dat aplikací pomocí zásad](../apps/app-protection-policies.md)
-ochrany aplikací[podmíněný přístup v Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access)
+[Ochrana dat aplikací pomocí zásad](../apps/app-protection-policies.md) 
+ ochrany aplikací [Podmíněný přístup v Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access)
