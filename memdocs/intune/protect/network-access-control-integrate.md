@@ -6,7 +6,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 03/19/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5bafd916ef31bea50dabb2de5012d693039ca741
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 9302e2229b84519b46c9b2ade80488e7ca10aebf
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80084825"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83985009"
 ---
 # <a name="network-access-control-nac-integration-with-intune"></a>Integrace řešení pro řízení přístupu k síti (NAC) do Intune
 
@@ -41,7 +41,7 @@ Pokud je zařízení zaregistrované a kompatibilní s Intune, mělo by řešen�
 
 ## <a name="feature-behaviors"></a>Chování funkce
 
-Zařízení, která se aktivně synchronizují s Intune, se nemůžou **přesunout z** / nekompatibilního**nekompatibility** do **nesynchronizovaného** (nebo **neznámého**). Stav **Neznámé** je rezervovaný pro nově registrovaná zařízení, u kterých ještě neproběhla kontrola dodržování předpisů.
+Zařízení, která se aktivně synchronizují s Intune, se nemůžou **přesunout z nekompatibilního**  /  **nekompatibility** do **nesynchronizovaného** (nebo **neznámého**). Stav **Neznámé** je rezervovaný pro nově registrovaná zařízení, u kterých ještě neproběhla kontrola dodržování předpisů.
 
 Pokud mají zařízení zablokovaný přístup k prostředkům, musí blokační služba přesměrovat všechny uživatele na [portál pro správu](https://portal.manage.microsoft.com), aby bylo možné zjistit důvod zablokování zařízení.  Když uživatelé tuto stránku navštíví, zároveň se znovu vyhodnotí, zda zařízení dodržuje předpisy.
 
@@ -85,13 +85,13 @@ NAC se podporuje taky pro přístup k Cisco AnyConnect, Citrix SSO a F5.
 - Použijte Citrix Gateway 12.0.59 nebo vyšší.  
 - Uživatelé musí mít nainstalované Citrix SSO 1.1.6 nebo novější.
 - [Integrujte NetScaler do Intune pro NAC](https://docs.citrix.com/en-us/netscaler-gateway/12/microsoft-intune-integration/configuring-network-access-control-device-check-for-netscaler-gateway-virtual-server-for-single-factor-authentication-deployment.html) , jak je popsáno v dokumentaci k produktu Citrix.
-- V profilu sítě VPN vyberte **základní nastavení** > **Povolit síťové Access Control (NAC)** **> vyberte Souhlasím**.
+- V profilu sítě VPN vyberte **základní nastavení**  >  **Povolit síťové Access Control (NAC)** > vyberte Souhlasím **I agree**.
 
 ### <a name="to-enable-nac-for-f5-access"></a>Povolení přístupu k NAC pro F5
 
 - Použijte F5 BIG-IP 13.1.1.5 nebo novější.
 - Integrujte BIG-IP s Intune for NAC. [Přehled: Konfigurace funkce APM pro stav zařízení pomocí příručky pro správu koncových bodů v systému](https://support.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-client-configuration-7-1-6/6.html#guid-0bd12e12-8107-40ec-979d-c44779a8cc89) F5 seznam kroků.
-- V profilu sítě VPN vyberte **základní nastavení** > **Povolit síťové Access Control (NAC)** **> vyberte Souhlasím**.
+- V profilu sítě VPN vyberte **základní nastavení**  >  **Povolit síťové Access Control (NAC)** > vyberte Souhlasím **I agree**.
 
 Z bezpečnostních důvodů je připojení VPN odpojené každých 24 hodin. SÍŤ VPN se může okamžitě znovu připojit.
 

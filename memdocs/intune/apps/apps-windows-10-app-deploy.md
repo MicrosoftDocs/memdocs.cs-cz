@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 05/19/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f06a6d6689107c97a80e11149da499ccd51fa755
-ms.sourcegitcommit: 6ca5e75ed7a6fd2186fbe51c177960004d5ec81f
+ms.openlocfilehash: 5ed491fd379879369ead35ceb2c618def91d3e53
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83633301"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83985926"
 ---
 # <a name="windows-10-app-deployment-by-using-microsoft-intune"></a>Nasazení aplikací pro Windows 10 pomocí Microsoft Intune 
 
@@ -46,15 +46,15 @@ Konkrétní typy aplikací jsou podporované v závislosti na verzi Windows 10, 
 
 | Typ aplikace | Domů | Verze Pro | Do zaměstnání | Enterprise | Vzdělávání | S-režim | HoloLens <sup> 1 | Surface Hub | WCOS | Mobilní |
 |----------------|------|-----|----------|------------|-----------|--------|-----------|------------|------|--------|
-|  . SOUBOR | No | Ano | Ano | Ano | Ano | Ne | Ne | Ne | Ne | Ne |
-| . IntuneWin | No | Ano | Ano | Ano | Ano | 19H2 + | Ne | Ne | Ne | Ne |
-| C2R Office | No | Ano | Ano | Ano | Ano | RS4 + | Ne | Ne | Ne | Ne |
+|  . SOUBOR | Ne | Ano | Ano | Ano | Ano | Ne | Ne | Ne | Ne | Ne |
+| . IntuneWin | Ne | Ano | Ano | Ano | Ano | 19H2 + | Ne | Ne | Ne | Ne |
+| C2R Office | Ne | Ano | Ano | Ano | Ano | RS4 + | Ne | Ne | Ne | Ne |
 | LOB: APPX/MSIX | Ano | Ano | Ano | Ano | Ano | Ano | Ano | Ano | Ano | Ano |
 | MSFB offline | Ano | Ano | Ano | Ano | Ano | Ano | Ano | Ano | Ano | Ano |
-| MSFB online | Ano | Ano | Ano | Ano | Ano | Ano | RS4 + | No | Ano | Ano |
+| MSFB online | Ano | Ano | Ano | Ano | Ano | Ano | RS4 + | Ne | Ano | Ano |
 | Web Apps | Ano | Ano | Ano | Ano | Ano | Ano | Ano<sup>2 | Ano<sup>2 | Ano | Ano<sup>2 |
 | Odkaz na Store | Ano | Ano | Ano | Ano | Ano | Ano | Ano | Ano | Ano | Ano |
-| Microsoft Edge | No | Ano | Ano | Ano | Ano | 19H2 + <sup> 3 | Ne | Ne | Ne | Ne |
+| Microsoft Edge | Ne | Ano | Ano | Ano | Ano | 19H2 + <sup> 3 | Ne | Ne | Ne | Ne |
 
 <sup>1</sup> Chcete-li odemknout správu aplikací, Upgradujte své zařízení HoloLens na [holografické pro firmy](../fundamentals/windows-holographic-for-business.md).<br />
 <sup>2</sup> spustit pouze z portál společnosti.<br />

@@ -7,7 +7,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 02/27/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a731769a7fa3118170119ae935478eb7dd67e06b
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: e151110a39e28d00a2a98cd6ea3c3fc9214ef4a0
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326566"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83983478"
 ---
 # <a name="logout-the-current-user-on-intune-managed-iosipados-devices"></a>Odhlášení aktuálního uživatele na zařízeních s iOS nebo iPadOS spravovaných přes Intune
 
@@ -41,7 +41,7 @@ Akce **Odhlásit aktuálního uživatele** odhlásí aktuálního uživatele na 
 
 ## <a name="how-to-log-out-the-current-user"></a>Odhlášení aktuálního uživatele
 
-1. Přihlaste se do [centra pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431) a vyberte **zařízení** > **všechna zařízení**.
+1. Přihlaste se do [centra pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431) a vyberte **zařízení**  >  **všechna zařízení**.
 2. Vyberte zařízení s iOS/iPadOS > **...**  >  **Odhlášení aktuálního uživatele**
 
 ## <a name="next-steps"></a>Další kroky

@@ -7,7 +7,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 02/22/2018
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b10d56e9eb915273d5be9a5b14ca4528a64a2057
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 761e668ae2c774bb52dbe6971d343d60b3e95516
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80327111"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83986099"
 ---
 # <a name="categorize-devices-into-groups"></a>Zařazení zařízení do skupin
 
@@ -45,7 +45,7 @@ Kategorie zařízení můžete vytvořit zcela podle svých potřeb. Příklad:
 ## <a name="how-to-configure-device-categories"></a>Jak konfigurovat kategorie zařízení
 
 ### <a name="step-1-create-device-categories-on-the-intune-blade-of-the-azure-portal"></a>Krok 1: Vytvoření kategorií zařízení v okně Intune na portálu Azure Portal
-1. Přihlaste se do [centra pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)a vyberte **zařízení** > **kategorie zařízení**.
+1. Přihlaste se do [centra pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)a vyberte **zařízení**  >  **kategorie zařízení**.
 2. Na stránce **Kategorie zařízení** zvolte **Vytvořit**, abyste mohli přidat novou kategorii.
 3. V okně **Vytvořit kategorii zařízení** zadejte **název** nové kategorie a případně i její **popis**.
 4. Po dokončení vyberte **Vytvořit**. Novou kategorii uvidíte v seznamu kategorií.
@@ -63,15 +63,15 @@ Až nakonfigurujete skupiny zařízení, bude se uživatelům při registrován�
 
 ### <a name="view-the-categories-of-devices-that-you-manage"></a>Zobrazení kategorií zařízení, která spravujete
 
-1. Přihlaste se do [centra pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)a vyberte **zařízení** > **všechna zařízení**.
+1. Přihlaste se do [centra pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)a vyberte **zařízení**  >  **všechna zařízení**.
 
 2. V seznamu zařízení zkontrolujte sloupec **Kategorie zařízení**.
 
-Pokud sloupec **kategorie zařízení** není zobrazený,**použijte možnost použít****kategorii** >  **sloupce** > .
+Pokud sloupec **kategorie zařízení** není zobrazený, použijte **Columns**možnost  >  **Category**  >  **použít**kategorii sloupce.
 
 ### <a name="change-the-category-of-a-device"></a>Změna kategorie zařízení
 
-1. Přihlaste se do [centra pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431), vyberte **zařízení** > **všechna zařízení** > vyberte zařízení, které chcete > **vlastností**.
+1. Přihlaste se do [centra pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431), vyberte **zařízení**  >  **všechna zařízení** > vyberte zařízení, které chcete > **vlastností**.
 2. V dalším okně můžete pro vybrané zařízení změnit nastavení **Kategorie zařízení** na kterýkoliv z názvů kategorií, které jste dříve nakonfigurovali.
 
 ## <a name="after-you-configure-device-groups"></a>Po konfiguraci skupin zařízení

@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 01/08/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 796e95b09193228fdc4612a370658e532fbbd2c6
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 92aa9705fc1a59a288db08a5583bc5b83de111e2
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80324372"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83985910"
 ---
 # <a name="enable-win32-apps-on-s-mode-devices"></a>Povolit aplikace Win32 na zařízeních S režimem S
 
@@ -58,7 +58,7 @@ Postup pro povolení spouštění aplikací Win32 v zařízení S Windows 10 v r
 Chcete-li vytvořit doplňkové zásady režimu Windows 10 S, použijte následující postup:
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **aplikace** > v**režimu doplňkové zásady** > **vytvořit zásadu**.
+2. Vyberte **aplikace**v  >  **režimu doplňkové zásady**  >  **vytvořit zásadu**.
 3. Před přidáním **souboru zásad**je nutné ho vytvořit a podepsat. Další informace naleznete v tématu:
     - [Vytvoření zásady WDAC pomocí nástrojů PowerShellu a její převedení do binárního formátu](https://go.microsoft.com/fwlink/?linkid=2095387)
     - [Podepsat pomocí služby podepisování zařízení Guard](https://go.microsoft.com/fwlink/?linkid=2095629) **(doporučeno)**
@@ -68,7 +68,7 @@ Chcete-li vytvořit doplňkové zásady režimu Windows 10 S, použijte následu
     | Hodnota | Popis |
     |--------------|------------------------------------------------|
     | Soubor zásad | Soubor, který obsahuje zásady WDAC. |
-    | Název | Název této zásady. |
+    | Name | Název této zásady. |
     | Popis | Volitelné Popis této zásady |
 
 5. Klikněte na tlačítko **Další: značky oboru**.<br>

@@ -7,7 +7,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 4/24/2019
-ms.topic: conceptual
+ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e3636314ee21823b76a09120f92aca45965437d3
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 8d907aaac6c37cbe7cad71e850fbc44322c93841
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80808188"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83986389"
 ---
 # <a name="what-is-device-enrollment"></a>Co je registrace zařízení?
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -35,25 +35,25 @@ Standardně se do Intune můžou registrovat zařízení pro všechny platformy.
 
 ## <a name="iosipados-enrollment-methods"></a>metody registrace pro iOS/iPadOS
 
-| **Metoda** | **Vyžadováno resetování** | [**Spřažení uživatele**](device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile) | **Uzamčeno** | **Zobrazí** |
+| **Metoda** | **Vyžadováno resetování** | [**Spřažení uživatele**](device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile) | **Uzamčeno** | **Podrobnosti** |
 |:---:|:---:|:---:|:---:|:---:|
 | | Zařízení se vymažou při registraci. | Jednotlivá zařízení se přidruží k uživateli.| Pokud ano, uživatelé nemůžou zrušit registraci zařízení. | |
 |**[BYOD](#bring-your-own-device)** | Ne| Ano | Ne | [Další informace](apple-mdm-push-certificate-get.md)|
 |**[DEM](#device-enrollment-manager)**| Ne |Ne |Ne | [Další informace](device-enrollment-manager-enroll.md)|
-|**[ADE](#apple-automated-device-enrollment)**| Ano | Nepovinné | Nepovinné|[Další informace](device-enrollment-program-enroll-ios.md)|
-|**[USB (SA)](#usb-sa)**| Ano | Nepovinné | Ne| [Další informace](apple-configurator-enroll-ios.md)|
+|**[ADE](#apple-automated-device-enrollment)**| Ano | Volitelné | Volitelné|[Další informace](device-enrollment-program-enroll-ios.md)|
+|**[USB (SA)](#usb-sa)**| Ano | Volitelné | Ne| [Další informace](apple-configurator-enroll-ios.md)|
 |**[USB (přímo)](#usb-direct)**| Ne | Ne | Ne|[Další informace](apple-configurator-enroll-ios.md)|
 
 ## <a name="macos-enrollment-methods"></a>Metody registrace zařízení s macOS
-| **Metoda** |  **Vyžadováno resetování** |  **Spřažení uživatele** | **Uzamčeno** | **Zobrazí**|
+| **Metoda** |  **Vyžadováno resetování** |  **Spřažení uživatele** | **Uzamčeno** | **Podrobnosti**|
 |:---:|:---:|:---:|:---:|:---:|
 |**[BYOD](#bring-your-own-device)** | Ne| Ano | Ne | [Další informace](macos-enroll.md)|
 |**[DEM](#device-enrollment-manager)**| Ne |Ne |Ne  | [Další informace](device-enrollment-manager-enroll.md)|
-|**[ADE](#apple-automated-device-enrollment)**| Ano | Nepovinné | Nepovinné|[Další informace](device-enrollment-program-enroll-macos.md)|
+|**[ADE](#apple-automated-device-enrollment)**| Ano | Volitelné | Volitelné|[Další informace](device-enrollment-program-enroll-macos.md)|
 
 ## <a name="windows-enrollment-methods"></a>Metody registrace zařízení s Windows
 
-| **Metoda** | **Vyžadováno resetování** | **Spřažení uživatele** | **Uzamčeno** | **Zobrazí**|
+| **Metoda** | **Vyžadováno resetování** | **Spřažení uživatele** | **Uzamčeno** | **Podrobnosti**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
 |**[BYOD](#bring-your-own-device)** | Ne | Ano | Ne | [Další informace](windows-enroll.md)|
 |**[DEM](#device-enrollment-manager)**| Ne |Ne |Ne |[Další informace](device-enrollment-manager-enroll.md)|
@@ -65,13 +65,13 @@ Standardně se do Intune můžou registrovat zařízení pro všechny platformy.
 
 ## <a name="android-enrollment-methods"></a>Metody registrace zařízení s Androidem
 
-| **Osobní** | **Enrollment Methods** | **Vyžadováno resetování** | **Spřažení uživatele** | **Uzamčeno** | **Zobrazí**|
+| **Osobní** | **Enrollment Methods** | **Vyžadováno resetování** | **Spřažení uživatele** | **Uzamčeno** | **Podrobnosti**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
 |**Správce zařízení s Androidem**|**Uživatel inicioval prostřednictvím Portál společnosti** | Ne | Ano | Ne | [Další informace](https://docs.microsoft.com/mem/intune/user-help/enroll-device-android-company-portal)|
 |**Pracovní profil Android Enterprise**|**Uživatel inicioval prostřednictvím Portál společnosti**| Ne | Ano | Ne | [Další informace](android-work-profile-enroll.md)|
 
 
-| **Firemní** | **Enrollment Methods** | **Vyžadováno resetování** | **Spřažení uživatele** | **Uzamčeno** | **Zobrazí**|
+| **Firemní** | **Enrollment Methods** | **Vyžadováno resetování** | **Spřažení uživatele** | **Uzamčeno** | **Podrobnosti**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
 |**Správce zařízení s Androidem**|**[DEM](#device-enrollment-manager) iniciované prostřednictvím portál společnosti**| Ne | Ne | Ne |[Další informace](device-enrollment-manager-enroll.md)|
 |**Správce zařízení s Androidem**|**(Předem deklarované IMEI nebo SN) Uživatel inicioval prostřednictvím Portál společnosti**| Ne | Ano | Ne | [Další informace](corporate-identifiers-add.md)|

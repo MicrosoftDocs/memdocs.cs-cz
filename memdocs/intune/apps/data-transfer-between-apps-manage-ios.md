@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 01/09/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f0a7bbdd5bb27b6fe17f5b4f44302551ff67de5d
-ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
+ms.openlocfilehash: 41be99c94b31c166622ee497d08de438ee59cf23
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82254975"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83985708"
 ---
 # <a name="how-to-manage-data-transfer-between-ios-apps-in-microsoft-intune"></a>Správa přenosu dat mezi aplikacemi pro iOS pomocí Microsoft Intune
 
@@ -53,7 +53,7 @@ Konfigurace nastavení hlavního názvu uživatele (UPN) se **vyžaduje** pro za
 
       **Key** = IntuneMAMUPN; **hodnota** = <username@company.com>
 
-      Příklad: [' IntuneMAMUPN ', 'janellecraig@contoso.com']
+      Příklad: [' IntuneMAMUPN ', ' janellecraig@contoso.com ']
       
      > [!NOTE]
      > V Intune musí být typ registrace zásady konfigurace aplikace nastavený na **spravovaná zařízení**.

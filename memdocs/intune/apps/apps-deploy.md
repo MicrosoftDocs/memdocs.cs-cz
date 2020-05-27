@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 02/27/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 345c2d3824a6bd22f224429717e6c44a3941b0cf
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: b80527921172201dc86c5f3241e9978525afa083
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80324610"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83984821"
 ---
 # <a name="assign-apps-to-groups-with-microsoft-intune"></a>Přiřazení aplikací do skupin pomocí Microsoft Intune
 
@@ -56,7 +56,7 @@ Následující tabulka obsahuje různé možnosti pro přiřazení aplikací už
 ## <a name="assign-an-app"></a>Přiřazení aplikace
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **aplikace** > **všechny aplikace**.
+2. Vyberte **aplikace**  >  **všechny aplikace**.
 3. V podokně **Aplikace** vyberte aplikaci, kterou chcete přiřadit.
 4. V části nabídky **Spravovat** vyberte **Přiřazení**.
 5. Vyberte **Přidat skupinu**. Tím se otevře podokno **Přidat skupinu** týkající se aplikace.
@@ -93,22 +93,22 @@ Informace v následující tabulce vám pomohou pochopit výsledný záměr při
 | Záměr skupiny 1 | Záměr skupiny 2 | Výsledný záměr |
 |-----------------------------------|-----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |Uživatel: Povinné|Uživatel: K dispozici|Povinné a K dispozici|
-|Uživatel: Povinné|Uživatel: Odinstalace|Požaduje se|
-|Uživatel: K dispozici|Uživatel: Odinstalace|Odinstalovat|
+|Uživatel: Povinné|Uživatel: Odinstalace|Vyžadováno|
+|Uživatel: K dispozici|Uživatel: Odinstalace|Odinstalace|
 |Uživatel: Povinné|Zařízení: Povinné|Existuje obojí, Intune zpracovává Povinné.
 |Uživatel: Povinné|Zařízení: Odinstalace|Existuje obojí, Intune překládá Povinné.
 |Uživatel: K dispozici|Zařízení: Povinné|Existuje obojí, Intune překládá Povinné (Povinné a K dispozici).
 |Uživatel: K dispozici|Zařízení: Odinstalace|Existuje obojí, Intune překládá K dispozici.<br><br>Aplikace se zobrazí na Portálu společnosti.<br><br>Pokud je už aplikace nainstalovaná (jako požadovaná aplikace s předchozím záměrem), aplikace se odinstaluje.<br><br>Pokud ale uživatel vybere **instalaci z Portálu společnosti**, aplikace se instaluje a záměr odinstalace se nedodrží.|
 |Uživatel: Odinstalace|Zařízení: Povinné|Existuje obojí, Intune překládá Povinné.|
 |Uživatel: Odinstalace|Zařízení: Odinstalace|Existuje obojí, Intune překládá Odinstalaci.|
-|Zařízení: Povinné|Zařízení: Odinstalace|Požaduje se|
+|Zařízení: Povinné|Zařízení: Odinstalace|Vyžadováno|
 |Uživatel: Povinné a K dispozici|Uživatel: K dispozici|Povinné a K dispozici|
 |Uživatel: Povinné a K dispozici|Uživatel: Odinstalace|Povinné a K dispozici|
 |Uživatel: Povinné a K dispozici|Zařízení: Povinné|Existuje obojí, Povinné a K dispozici
 |Uživatel: Povinné a K dispozici|Zařízení: Odinstalace|Existuje obojí, Intune překládá Povinné (Povinné a K dispozici).
 |Uživatel: K dispozici bez registrace|Uživatel: Povinné a K dispozici|Povinné a K dispozici
-|Uživatel: K dispozici bez registrace|Uživatel: Povinné|Požaduje se
-|Uživatel: K dispozici bez registrace|Uživatel: K dispozici|K dispozici.|
+|Uživatel: K dispozici bez registrace|Uživatel: Povinné|Vyžadováno
+|Uživatel: K dispozici bez registrace|Uživatel: K dispozici|K dispozici|
 |Uživatel: K dispozici bez registrace|Zařízení: Povinné|Povinné a K dispozici bez registrace|
 |Uživatel: K dispozici bez registrace|Zařízení: Odinstalace|Odinstalace a K dispozici bez registrace.<br><br>Pokud uživatel nenainstaloval aplikaci z Portál společnosti, bude tato odinstalace dodržena.<br><br>Pokud uživatel aplikaci nainstaluje z Portálu společnosti, bude mít instalace prioritu před odinstalací.|
 

@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 04/02/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8d1933350675a0d36042d1a4bd1e6a26c9a95814
-ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
+ms.openlocfilehash: 70cb3e2f8baf89be5e77867b385788cb04181ba1
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82254601"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83986034"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Samostatná verze Intune – Správa aplikací Win32
 
@@ -100,7 +100,7 @@ Stejně jako obchodní aplikaci můžete do Microsoft Intune přidat také aplik
 Následující kroky obsahují pokyny k přidání aplikace pro Windows do Intune.
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **aplikace** > **všechny aplikace** > **Přidat**.
+2. Vyberte **aplikace**  >  **všechny aplikace**  >  **Přidat**.
 3. V podokně **Vybrat typ aplikace** v části **ostatní** typy aplikací vyberte **aplikace pro Windows (Win32)**.
 
     > [!IMPORTANT]
@@ -140,10 +140,10 @@ Následující kroky obsahují pokyny k přidání aplikace pro Windows do Intun
 
         Pokud je například název souboru aplikace **MyApp123**, přidejte toto: .<br>
         `msiexec /p "MyApp123.msp"`<p>
-        A pokud je `ApplicationName.exe`aplikace, příkaz by byl název aplikace následovaný argumenty příkazu (přepínači) podporovanými balíčkem. <br>
+        A pokud je aplikace `ApplicationName.exe` , příkaz by byl název aplikace následovaný argumenty příkazu (přepínači) podporovanými balíčkem. <br>
         Příklad:<br>
         `ApplicationName.exe /quiet`<br>
-        Ve výše uvedeném příkazu `ApplicationName.exe` balíček podporuje argument `/quiet` příkazu.<p> 
+        Ve výše uvedeném příkazu `ApplicationName.exe` balíček podporuje `/quiet` argument příkazu.<p> 
         Pro konkrétní argumenty podporované balíčkem aplikace se obraťte na dodavatele aplikace.
 
         > [!IMPORTANT]
@@ -298,7 +298,7 @@ Koncovému uživateli se zobrazí informační zpráva systému Windows s oznám
 - 1 nebo více požadavků závislých aplikací nebylo splněno.
 - jedna nebo více závislých aplikací čeká na restartování zařízení.
 
-Pokud se rozhodnete, že nechcete **automatickou instalaci** závislosti, nebude proveden pokus o instalaci aplikace Win32. Kromě toho se v hlášení aplikace zobrazí, že závislost byla označena `failed` jako, a také může poskytnout důvod selhání. Selhání instalace závislosti můžete zobrazit kliknutím na chybu (nebo upozornění), která je k dispozici v [podrobnostech o instalaci](troubleshoot-app-install.md#win32-app-installation-troubleshooting)aplikace Win 32.
+Pokud se rozhodnete, že nechcete **automatickou instalaci** závislosti, nebude proveden pokus o instalaci aplikace Win32. Kromě toho se v hlášení aplikace zobrazí, že závislost byla označena jako, `failed` a také může poskytnout důvod selhání. Selhání instalace závislosti můžete zobrazit kliknutím na chybu (nebo upozornění), která je k dispozici v [podrobnostech o instalaci](troubleshoot-app-install.md#win32-app-installation-troubleshooting)aplikace Win 32.
 
 Každá závislost bude odpovídat logice opakování aplikace Intune Win32 (zkuste nainstalovat třikrát po uplynutí 5 minut) a globální plán opakovaného vyhodnocení. Závislosti se taky použijí jenom v době instalace aplikace Win32 do zařízení. Závislosti nejsou k dispozici pro odinstalaci aplikace Win32. Pokud chcete závislost odstranit, musíte kliknout na elipsy (tři tečky) nalevo od závislé aplikace umístěné na konci řádku seznamu závislostí. 
 
@@ -365,9 +365,9 @@ Můžete nakonfigurovat čas zahájení a konečný termín pro aplikaci Win32. 
 Nastavte dostupnost aplikace na základě data a času požadované aplikace pomocí následujících kroků:
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **aplikace** > **všechny aplikace**.
+2. Vyberte **aplikace**  >  **všechny aplikace**.
 3. Vyberte ze seznamu existující **aplikaci pro Windows (Win32)** . 
-4. V podokně aplikace vyberte **vlastnosti** > **Upravit** vedle oddílu **přiřazení** > **přidejte skupinu** pod **požadovaný** typ přiřazení. 
+4. V podokně aplikace vyberte **vlastnosti**  >  **Upravit** vedle oddílu **přiřazení** > **přidejte skupinu** pod **požadovaný** typ přiřazení. 
    Všimněte si, že dostupnost aplikace se dá nastavit na základě typu přiřazení. **Typ přiřazení** může být **povinný**, **dostupný pro zaregistrovaná zařízení**nebo **odinstalovat**.
 5. Vyberte skupinu v podokně **Vybrat skupinu** a určete tak, do které skupiny uživatelů se aplikace přiřadí. 
 
@@ -391,7 +391,7 @@ Nastavte dostupnost aplikace na základě data a času požadované aplikace pom
 11. Klikněte na tlačítko **zkontrolovat a uložit**.
 
 ## <a name="toast-notifications-for-win32-apps"></a>Oznámení informačních zpráv pro aplikace Win32 
-V případě potřeby můžete potlačit zobrazování oznámení informační zprávy koncového uživatele na přiřazení aplikace. V Intune vyberte **aplikace** > **všechny aplikace** > vyberte **přiřazení** > > aplikace**Zahrnout skupiny**. 
+V případě potřeby můžete potlačit zobrazování oznámení informační zprávy koncového uživatele na přiřazení aplikace. V Intune vyberte **aplikace**  >  **všechny aplikace** > vyberte **přiřazení**> aplikace  >  **Zahrnout skupiny**. 
 
 > [!NOTE]
 > Rozšíření pro správu Intune nainstalované aplikace Win32 se odinstalují na nezaregistrovaných zařízeních. Správci můžou využít vyloučení přiřazení, aby nenabízeli aplikacím Win32 možnost BYOD zařízení.

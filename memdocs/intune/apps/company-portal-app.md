@@ -6,8 +6,8 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/07/2020
-ms.topic: conceptual
+ms.date: 05/26/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d69167a034970216e1e245f638bd59091ed6e18c
-ms.sourcegitcommit: a1da477542fb0ff360685d6eb58ef43e37ac3950
+ms.openlocfilehash: cc08dc37d4f043b69888c0fc99274e8720ee5562
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83853600"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83985950"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>Přizpůsobení aplikací Portál společnosti Intune, Portál společnosti webu a Intune
 
@@ -102,6 +102,9 @@ Následující tabulka uvádí podrobnosti konfigurace specifické pro registrac
 > Podpora nastavení registrace zařízení vyžaduje, aby koncoví uživatelé měli tyto Portál společnosti verze:
 > - Portál společnosti v systému iOS/iPadOS: verze 4,4 nebo novější
 > - Portál společnosti na Androidu: verze 5.0.4715.0 nebo novější 
+
+> [!IMPORTANT]
+> Následující nastavení se nevztahují na zařízení s iOS/iPadOS konfigurovaná pro registraci pomocí [automatizované registrace zařízení](../enrollment/device-enrollment-program-enroll-ios.md). Bez ohledu na to, jak jsou tato nastavení nakonfigurovaná, se zařízení se systémem iOS/iPadOS nakonfigurovaná k registraci pomocí automatizované registrace zařízení zaregistrují během natékání toku a uživatelé budou vyzváni k přihlášení při spuštění Portál společnosti.
 
 |    Možnosti registrace zařízení    |    Popis    |    Výzvy kontrolního seznamu    |    Oznámení    |    Stav podrobnosti o zařízení    |    Podrobnosti o stavu aplikace (aplikace, která vyžaduje registraci)    |
 |-----------------------------------|-------------------------------------------------------------------------------------------------------------------------|-------------------------|--------------------|-----------------------------|--------------------------------------------------------------------|

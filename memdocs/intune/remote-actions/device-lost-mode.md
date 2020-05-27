@@ -6,7 +6,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 02/27/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3cf638ba82d1b6e91e3c4c24d5cfd3433df3b010
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: a71ba57575bd8512d83b77de66872dd5fa6d4725
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326530"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83983191"
 ---
 # <a name="enable-lost-mode-on-iosipados-devices-with-intune"></a>Povolení režimu ztráty na zařízeních s iOS/iPadOS pomocí Intune
 
