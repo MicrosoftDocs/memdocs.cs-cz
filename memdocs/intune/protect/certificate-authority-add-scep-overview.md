@@ -6,7 +6,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 07/03/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1dfac34615c208328cab06a3fd047d3a9b99c794
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: b3b7316cd496f7ae8ae97bd2d896695c0c11e156
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79329879"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990362"
 ---
 # <a name="add-partner-certification-authority-in-intune-using-scep"></a>Přidání partnerské certifikační autority pomocí protokolu SCEP do Intune
 
@@ -74,7 +74,7 @@ Ujistěte se, že máte k registraci aplikace Azure AD potřebná oprávnění. 
 
 #### <a name="create-an-application-in-azure-active-directory"></a>Vytvoření aplikace v Azure Active Directory  
 
-1. V [Azure Portal](https://portal.azure.com)klikněte na registrace **Azure Active Directory** > **aplikace**a pak vyberte **Nová registrace**.  
+1. V [Azure Portal](https://portal.azure.com)klikněte na registrace **Azure Active Directory**  >  **aplikace**a pak vyberte **Nová registrace**.  
 
 2. Na stránce **zaregistrovat aplikaci** zadejte následující podrobnosti:  
    - V části **název** zadejte smysluplný název aplikace.  
@@ -89,7 +89,7 @@ Ujistěte se, že máte k registraci aplikace Azure AD potřebná oprávnění. 
    > [!IMPORTANT]  
    > Než tuto stránku opustíte, zkopírujte hodnotu pro tajný klíč klienta a zaznamenejte ho pro pozdější použití s implementací CA třetí strany. Tato hodnota se znovu nezobrazí. Nezapomeňte si projít doprovodné materiály k vaší certifikační autoritě od třetí strany, jak si přeje nakonfigurovat ID aplikace, ověřovací klíč a ID tenanta.  
 
-6. Poznamenejte si **ID tenanta**. ID tenanta je text domény za znakem @ při přihlašování k účtu. Pokud je *admin@name.onmicrosoft.com*váš účet například, vaše ID tenanta je **Name.onmicrosoft.com**.  
+6. Poznamenejte si **ID tenanta**. ID tenanta je text domény za znakem @ při přihlašování k účtu. Pokud je váš účet například *admin@name.onmicrosoft.com* , vaše ID tenanta je **Name.onmicrosoft.com**.  
 
 7. V navigačním podokně aplikace otevřete v nabídce **Spravovat** **oprávnění rozhraní API** a pak vyberte **Přidat oprávnění**.  
 

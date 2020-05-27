@@ -7,7 +7,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 12/18/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -15,12 +15,12 @@ ms.technology: ''
 ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 10a0c402c8cf8b39ec1b78606e051501f553ded9
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 02ee6eb85e5ce330233711fe276a585eb80553cc
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79328543"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990976"
 ---
 # <a name="integrate-wandera-mobile-threat-protection-with-intune"></a>Integrace ochrany před mobilními hrozbami Wandera pomocí Intune  
 
@@ -58,10 +58,10 @@ Nastavení modulu *EMM Connect* for Wandera vyžaduje jednorázový proces konfi
 ### <a name="enable-support-for-wandera-in-intune"></a>Povolení podpory pro Wandera v Intune
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte možnost konektory **správy** > tenanta**a tokeny** > ochrany > před**mobilními hrozbami****Přidat**.
+2. Vyberte možnost konektory **správy tenanta**  >  **a tokeny**  >  **ochrany před mobilními hrozbami**  >  **Přidat**.
 3. Na stránce **Přidat konektor** použijte rozevírací seznam a vyberte **Wandera**. A pak vyberte **vytvořit**.  
 4. V podokně obrana proti mobilním hrozbám vyberte konektor **Wandera** MTD ze seznamu konektorů a otevřete tak podokno *Upravit konektor* . Vyberte **otevřít konzolu pro správu Wandera** , otevřete [paprskový](https://radar.wandera.com/login), konzolu pro správu Wandera a přihlaste se. 
-5. V konzole Wandera přejděte na **Nastavení** > **Integrace modulu EMM**a vyberte kartu **EMM Connect** . použijte rozevírací seznam dodavatel modulu *EMM* a vyberte *Microsoft Intune*.
+5. V konzole Wandera přejděte na **Nastavení**  >  **Integrace modulu EMM**a vyberte kartu **EMM Connect** . použijte rozevírací seznam dodavatel modulu *EMM* a vyberte *Microsoft Intune*.
 
    ![Výběr Intune](./media/wandera-mtd-connector-integration/set-up-intune-in-radar.png)
 
@@ -88,7 +88,7 @@ K nasazení Wandera přidáte mobilní aplikace Wandera pro platformy, které po
 
 Tento postup vás provede následujícími oddíly a postupy.
 
-Další informace o tomto procesu z Wandera se přihlaste k Wandera [paprsku](https://radar.wandera.com/login). V části **Nastavení** > **Integrace modulu EMM**vyberte kartu **nabízení aplikace** a pak vyberte **Microsoft Intune**. Karta nabízených oznámení aplikací se aktualizuje pomocí pokynů, které jsou specifické pro Intune.  
+Další informace o tomto procesu z Wandera se přihlaste k Wandera [paprsku](https://radar.wandera.com/login). V části **Nastavení**  >  **Integrace modulu EMM**vyberte kartu **nabízení aplikace** a pak vyberte **Microsoft Intune**. Karta nabízených oznámení aplikací se aktualizuje pomocí pokynů, které jsou specifické pro Intune.  
 
 ### <a name="add-the-wandera-apps"></a>Přidání aplikací Wandera  
 Vytvořte klientské aplikace v Intune, abyste mohli nasadit aplikaci Wandera na zařízení s Androidem a iOS/iPadOS. Další informace najdete v tématu [Přidání aplikací MTD](mtd-apps-ios-app-configuration-policy-add-assign.md) pro postupy a vlastní podrobnosti specifické pro aplikace Wandera.  
@@ -115,10 +115,10 @@ Další informace najdete v tématu [nasazení aplikací](../apps/apps-deploy.md
 Pro aplikaci Wandera, kterou jste vytvořili pro iOS/iPadOS a pro Android, opakujte následující postup.
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **aplikace** > **všechny aplikace** a vyberte aplikaci Wandera.
+2. Vyberte **aplikace**  >  **všechny aplikace** a vyberte aplikaci Wandera.
 3. Vyberte **přiřazení** a pak **Přidat skupinu**.  
 4. V podokně *Přidat skupinu* pro *Typ přiřazení* vyberte **požadované**.
-5. Vyberte **zahrnuté skupiny**a pak **Vyberte skupiny, které chcete zahrnout**. Určete skupinu, kterou jste vytvořili pro Wandera synchronizaci, a pak klikněte na **Vybrat** > **OK** > **.** Kliknutím na **Uložit** dokončete přiřazení skupiny. 
+5. Vyberte **zahrnuté skupiny**a pak **Vyberte skupiny, které chcete zahrnout**. Určete skupinu, kterou jste vytvořili pro Wandera synchronizaci, a pak klikněte na **Vybrat**  >  **OK**  >  **OK**. Kliknutím na **Uložit** dokončete přiřazení skupiny. 
 
 ## <a name="next-steps"></a>Další kroky  
 Teď, když jste nakonfigurovali integraci, můžete začít konfigurovat zásady, nastavit pokročilý podmíněný přístup a zobrazovat sestavy v konzole pro správu Wandera. Další informace o správě a konfiguraci Wandera najdete v tématu [průvodce Začínáme Support Center](https://radar.wandera.com/?return_to=https://wandera.force.com/Customer/s/getting-started) v dokumentaci k Wandera. 

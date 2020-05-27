@@ -6,7 +6,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 04/21/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c9b23d68928b183a70e8069edbf6027ddc0436ed
-ms.sourcegitcommit: b7e5b053dfa260e7383a9744558d50245f2bccdc
+ms.openlocfilehash: 4441fdaf8c3fb8bfb6613805df9eca27cc3ebf0c
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82587301"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990376"
 ---
 # <a name="use-certificates-for-authentication-in-microsoft-intune"></a>Použití certifikátů pro ověřování v Microsoft Intune
 
@@ -109,7 +109,7 @@ Vytvořte samostatný profil důvěryhodného certifikátu pro každou platformu
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Vyberte a přejdete na konfigurace **zařízení** > **profily** > **vytvořit profil**.
+2. Vyberte a přejdete na konfigurace **zařízení**  >  **profily**  >  **vytvořit profil**.
 
    ![Přejděte na Intune a vytvořte nový profil důvěryhodného certifikátu.](./media/certificates-configure/certificates-configure-profile-new.png)
 
@@ -137,7 +137,7 @@ Vytvořte samostatný profil důvěryhodného certifikátu pro každou platformu
 
 8. Vyberte **Další**.
 
-9. V části **značky oboru** (volitelné) přiřaďte značku pro filtrování profilu pro konkrétní IT skupiny, například `US-NC IT Team` nebo. `JohnGlenn_ITDepartment` Další informace o značkách oboru naleznete v tématu [použití značek RBAC a Scope pro distribuci](../fundamentals/scope-tags.md).
+9. V části **značky oboru** (volitelné) přiřaďte značku pro filtrování profilu pro konkrétní IT skupiny, například `US-NC IT Team` nebo `JohnGlenn_ITDepartment` . Další informace o značkách oboru naleznete v tématu [použití značek RBAC a Scope pro distribuci](../fundamentals/scope-tags.md).
 
    Vyberte **Další**.
 

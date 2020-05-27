@@ -6,7 +6,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 01/30/2020
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c538236d57961298ff7caedd6d5e00e7cc78c4a6
-ms.sourcegitcommit: 6ca5e75ed7a6fd2186fbe51c177960004d5ec81f
+ms.openlocfilehash: b35011577b6c5882a2f136d9b6d321b182c2be6a
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83633373"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83991076"
 ---
 # <a name="troubleshoot-device-to-ndes-server-communication-for-scep-certificate-profiles-in-microsoft-intune"></a>Řešení potíží s komunikací serveru NDES pro profily certifikátů SCEP v Microsoft Intune
 
@@ -76,7 +76,7 @@ Zkontrolujte [protokol OMADM zařízení](troubleshoot-scep-certificate-profiles
 Klíčové položky obsahují následující vzorové textové řetězce:
 
 - K dispozici jsou 1 žádosti.
-- Při odesílání GetCACaps (CA) do serveru https://byla přijata zpráva "200 OK" \<>. msappproxy.net/certsrv/mscep/mscep.dll?operation=GetCACaps&zpráva = CA
+- Při odesílání GetCACaps (CA) do serveru https://byla přijata zpráva "200 OK" \< >. msappproxy. NET/certsrv/mscep/mscep. dll? operace = GetCACaps & zpráva = CA
 - Podepisování pkiMessage pomocí klíče patřícího k [DN = CN = \< username>; Serial = 1]
 
 

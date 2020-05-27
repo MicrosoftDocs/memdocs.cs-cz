@@ -6,7 +6,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 08/06/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.technology: ''
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eea973ec936ce41578754cb1a68d1b9128895b76
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 8c447c9187696a8e918886117847dde6421b4014
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326687"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990738"
 ---
 # <a name="use-role-based-access-control-rbac-and-scope-tags-for-distributed-it"></a>Použití řízení přístupu na základě role (RBAC) a značek oboru pro distribuci
 
@@ -43,14 +43,14 @@ Výchozí funkce značky oboru je podobná funkci obory zabezpečení ve služb�
 
 ## <a name="to-create-a-scope-tag"></a>Vytvoření značky oboru
 
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte možnost obor**rolí** >  **správy** > tenanta **(značky)** > **vytvořit**.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte možnost obor rolí **správy tenanta**  >  **Roles**  >  **(značky)**  >  **vytvořit**.
 2. Na stránce **základy** zadejte **název** a volitelný **Popis**. Zvolte **Další**.
 3. Na stránce **přiřazení** vyberte skupiny obsahující zařízení, kterým chcete přiřadit tuto značku oboru. Zvolte **Další**.
 4. Na stránce **Revize + vytvořit** klikněte na **vytvořit**.
 
 ## <a name="to-assign-a-scope-tag-to-a-role"></a>Přiřazení značky oboru k roli
 
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte**role** >  **pro správu** > tenanta**všechny role** > vyberte **přiřazení** > rolí >**přiřazení**.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **role pro správu tenanta**  >  **Roles**  >  **všechny role** > vyberte **přiřazení**rolí >  >  **přiřazení**.
 2. Na stránce **základy** zadejte název a **Popis** **přiřazení** . Zvolte **Další**.
 3. Na stránce **skupiny pro správu** zvolte **Vybrat skupiny, které se mají zahrnout**, a vyberte skupiny, které chcete použít jako součást tohoto přiřazení. Uživatelé v této skupině budou mít oprávnění ke správě uživatelů nebo zařízení v oboru (skupiny). Zvolte **Další**.
 
@@ -70,10 +70,10 @@ Výchozí funkce značky oboru je podobná funkci obory zabezpečení ve služb�
 
 Pro objekty, které podporují značky oboru, se značky oboru obvykle zobrazují v části **vlastnosti**. Pokud například chcete přiřadit značku oboru ke konfiguračnímu profilu, postupujte takto:
 
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **profily konfigurace** > vybrat profil.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení**  >  **profily konfigurace** > vybrat profil.
 
-2. Zvolte **vlastnosti** > **rozsah (značky)** > **Upravit** > **Vybrat rozsah značky** > vyberte značky, které chcete přidat do profilu. Objektu můžete přiřadit maximálně 100 značek rozsahu.
-4. Zvolte **Vybrat** > **zkontrolovat a uložit**.
+2. Zvolte **vlastnosti**  >  **rozsah (značky)**  >  **Upravit**  >  **Vybrat rozsah značky** > vyberte značky, které chcete přidat do profilu. Objektu můžete přiřadit maximálně 100 značek rozsahu.
+4. Zvolte **Vybrat**  >  **zkontrolovat a uložit**.
 
 ## <a name="scope-tag-details"></a>Podrobnosti o značce oboru
 Při práci s štítky oboru si pamatujte tyto podrobnosti: 

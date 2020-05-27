@@ -6,7 +6,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 01/30/2020
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ed98ca328bdd196cd9dd7005f5e2d5ac75ff7511
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 7163a8a615edd8f1b813801aab1e499ab30e0c20
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79328667"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83991021"
 ---
 # <a name="overview-for-troubleshooting-scep-certificate-profiles-with-microsoft-intune"></a>Přehled řešení potíží s profily certifikátů SCEP pomocí Microsoft Intune
 
@@ -125,14 +125,14 @@ Můžete také [nahrávat a e-mailem protokoly](../user-help/send-logs-to-your-i
 
 U zařízení se systémem iOS nebo iPadOS používáte protokoly ladění a **Xcode** , které běží na počítači Mac:
 
-1. Připojte zařízení se systémem iOS/**iPadOS k počítači** Mac a potom v okně **aplikace** > otevřete konzolovou aplikaci. 
+1. Připojte zařízení se systémem iOS/iPadOS k počítači Mac a potom **Applications**  >  **Utilities** v okně aplikace otevřete konzolovou aplikaci. 
 
 2. V části **Akce**vyberte **Zahrnout informační zprávy** a **zahrnout zprávy ladění**.
 
    ![Výběr možností protokolu](../protect/media/troubleshoot-scep-certificate-profiles/message-options.png)
 
 3. Reprodukování problému a uložení protokolů do textového souboru:
-   1. Vyberte **Upravit** > **Vybrat vše** , pokud chcete vybrat všechny zprávy na aktuální obrazovce a pak vybrat **Upravit** > **kopii** a zkopírovat zprávy do schránky. 
+   1. Vyberte **Upravit**  >  **Vybrat vše** , pokud chcete vybrat všechny zprávy na aktuální obrazovce a pak vybrat **Upravit**  >  **kopii** a zkopírovat zprávy do schránky. 
    2. Otevřete aplikaci TextEdit, vložte zkopírované protokoly do nového textového souboru a uložte soubor.
 
 
@@ -142,7 +142,7 @@ Protokol Portál společnosti pro zařízení s iOS a iPadOS neobsahuje informac
 
 U zařízení s Windows použijte protokoly událostí Windows k diagnostice problémů se správou registrace nebo zařízení u zařízení, která spravujete přes Intune.
 
-Na zařízení otevřete **Prohlížeč událostí** > **aplikace a protokoly** > **služeb Microsoft** > **Windows** > **DeviceManagement-Enterprise-Diagnostics-Provider**
+Na zařízení otevřete **Prohlížeč událostí**  >  **aplikace a protokoly služeb**  >  **Microsoft**  >  **Windows**  >  **DeviceManagement-Enterprise-Diagnostics-Provider**
 
 ![Protokoly událostí Windows](../protect/media/troubleshoot-scep-certificate-profiles/windows-event-log.png)
 

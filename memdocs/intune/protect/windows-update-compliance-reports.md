@@ -7,7 +7,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 04/13/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 157c61e9f145295f5ef728d12385fa44697a88e2
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: b4ef3a4c2ba539cc507ef413a4648b42e246b11d
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81725646"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990917"
 ---
 # <a name="intune-compliance-reports-for-updates"></a>Sestavy dodržování předpisů v Intune pro aktualizace
 
@@ -33,7 +33,7 @@ Chcete-li zkontrolovat sestavu zásad pro stav nasazení pro aktualizační kan�
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Vyberte **zařízení** > **Přehled** > **stav aktualizace softwaru**. Uvidíte obecné informace o stavu všech aktualizačních kanálů, které jste přiřadili.
+2. Vyberte **zařízení**  >  **Přehled**  >  **stav aktualizace softwaru**. Uvidíte obecné informace o stavu všech aktualizačních kanálů, které jste přiřadili.
 
 3. Pokud chcete zobrazit další podrobnosti, vyberte **monitorovat**. Potom v části **aktualizace softwaru**vyberte **stav nasazení s kroužkem aktualizace** a zvolte aktualizační kanál nasazení, který chcete zkontrolovat.
 
@@ -61,7 +61,7 @@ V nastavení **Přidat nebo upravit nastavení OMA-URI** můžete použít třeb
 - **Popis nastavení**: Konfigurace komerčního ID pro řešení Windows Analytics
 - **OMA-URI** (rozlišuje velká a malá písmena): *./Vendor/MSFT/DMClient/Provider/MS DM Server/CommercialID*
 - **Datový typ**: řetězec
-- **Hodnota**: \<použijte identifikátor GUID zobrazený na kartě telemetrie Windows v pracovním prostoru OMS>
+- **Hodnota**: \< použijte identifikátor GUID zobrazený na kartě telemetrie Windows v pracovním prostoru OMS>
 
 > [!NOTE]
 > Podrobnosti o MS DM Serveru najdete v tématu [Poskytovatel konfiguračních služeb DMClient]( https://docs.microsoft.com/windows/client-management/mdm/dmclient-csp).

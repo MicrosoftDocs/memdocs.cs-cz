@@ -6,7 +6,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 01/30/2020
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5d869f6129141b9e54058494260a45330fac29f8
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 3acd8f0605ffbfe4f04ea4a9f0aaf81249e38cf5
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79325151"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83991064"
 ---
 # <a name="troubleshoot-the-delivery-of-certificates-provisioned-by-scep-to-devices-in-microsoft-intune"></a>Řešení potíží s doručováním certifikátů zajištěných pomocí protokolu SCEP do zařízení v Microsoft Intune
 
@@ -93,14 +93,14 @@ Default 18:30:57.320616 -0500 profiled Profile \'93www.windowsintune.com.SCEP.Mo
 
 Na zařízení se systémem Windows ověřte, zda byl certifikát dodán:
 
-- Spusťte příkaz **eventvwr. msc** a otevřete Prohlížeč událostí.  > Přejít na **protokoly aplikací a služeb****Microsoft** > **Windows** > **DeviceManagement-Enterprise-Diagnostic-Provider** > **admin** a vyhledejte **událost 39**. Tato událost by měla mít obecný popis: **SCEP: certifikát byl úspěšně nainstalován.**
+- Spusťte příkaz **eventvwr. msc** a otevřete Prohlížeč událostí. Přejít na **protokoly aplikací a služeb**  >  **Microsoft**  >  **Windows**  >  **DeviceManagement-Enterprise-Diagnostic-Provider**  >  **admin** a vyhledejte **událost 39**. Tato událost by měla mít obecný popis: **SCEP: certifikát byl úspěšně nainstalován.**
 
    ![Událost 39 v protokolu aplikace systému Windows](../protect/media/troubleshoot-scep-certificate-delivery/device-app-log.png)
 
 Chcete-li zobrazit certifikát na zařízení, spusťte příkaz **certmgr. msc** a otevřete konzolu MMC a ověřte, zda jsou certifikáty root a SCEP nainstalovány na zařízení v osobním úložišti správně:
 
-   1. V části **certifikáty (místní počítač)** > **Důvěryhodné kořenové certifikační autority** > **certifikátů**a ověřte, jestli je přítomen kořenový certifikát z vaší certifikační autority. Hodnoty pro *vystavení* a *vystavení* budou stejné.
-   2. V modulu snap-in Certifikáty konzoly MMC klikněte na **Certifikáty – aktuální** > **osobní** > **certifikáty**uživatele a ověřte, že je přítomný požadovaný certifikát, který se *vystaví jako* stejný jako název certifikační autority.
+   1. V části **certifikáty (místní počítač)**  >  **Důvěryhodné kořenové certifikační autority**  >  **certifikátů**a ověřte, jestli je přítomen kořenový certifikát z vaší certifikační autority. Hodnoty pro *vystavení* a *vystavení* budou stejné.
+   2. V modulu snap-in Certifikáty konzoly MMC klikněte na **Certifikáty – aktuální**  >  **osobní**  >  **certifikáty**uživatele a ověřte, že je přítomný požadovaný certifikát, který se *vystaví jako* stejný jako název certifikační autority.
 
 ## <a name="troubleshoot-failures"></a>Řešení chyb
 
@@ -116,7 +116,7 @@ Pokud chcete tento krok vyřešit, Projděte si chyby zaznamenané v protokolu l
 
 Pokud chcete řešit problémy s certifikátem, který není v zařízení nainstalovaný, vyhledejte v protokolu událostí systému Windows chyby, které navrhují problémy:
 
-- Na zařízení spusťte příkaz **eventvwr. msc** a otevřete Prohlížeč událostí a potom v části >  **protokoly aplikací a služeb****Microsoft** > **Windows** > **DeviceManagement-Enterprise-Diagnostic-Provider** > **admin**.
+- Na zařízení spusťte příkaz **eventvwr. msc** a otevřete Prohlížeč událostí a potom v části **protokoly aplikací a služeb**  >  **Microsoft**  >  **Windows**  >  **DeviceManagement-Enterprise-Diagnostic-Provider**  >  **admin**.
 
 Chyby při doručování a instalaci certifikátu do zařízení obvykle souvisí s operacemi systému Windows a nikoli s Intune.
 

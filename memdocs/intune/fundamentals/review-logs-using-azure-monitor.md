@@ -6,7 +6,7 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 03/12/2020
-ms.topic: troubleshooting
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2e8045ac53369a471ce232f0eca3e185be2e3e85
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 010bbd18c09424ed2434dc19405851bb5c254591
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79330663"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990767"
 ---
 # <a name="send-log-data-to-storage-event-hubs-or-log-analytics-in-intune-preview"></a>Odeslání dat protokolu do úložiště, centra událostí nebo Log Analytics v Intune (Preview)
 
@@ -60,7 +60,7 @@ V závislosti na tom, kde chcete směrovat data protokolu auditu, potřebujete j
 ## <a name="send-logs-to-azure-monitor"></a>Odeslat protokoly do Azure monitoru
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte možnost **sestavy** > **nastavení diagnostiky**. Když ho otevřete poprvé, zapněte ho. V opačném případě přidejte nastavení.
+2. Vyberte možnost **sestavy**  >  **nastavení diagnostiky**. Když ho otevřete poprvé, zapněte ho. V opačném případě přidejte nastavení.
 
     > [!div class="mx-imgBorder"]
     > ![Zapnutím nastavení diagnostiky v Intune odešlete protokoly do Azure Monitor](./media/review-logs-using-azure-monitor/diagnostics-settings-turn-on.png)
@@ -85,18 +85,18 @@ V závislosti na tom, kde chcete směrovat data protokolu auditu, potřebujete j
 
             Další podrobnosti o těchto nastaveních najdete v [pracovním prostoru Azure Log Analytics](https://docs.microsoft.com/azure/azure-monitor/learn/quick-create-workspace) .
 
-    - **LOG** > **AuditLogs**: tuto možnost vyberte, pokud chcete odesílat [protokoly auditu Intune](monitor-audit-logs.md) do svého účtu úložiště, centra událostí nebo Log Analytics. Protokoly auditu zobrazují historii každého úkolu, který v Intune generuje změnu, včetně toho, kdo ho a kdy.
+    - **Protokol**  >  **AuditLogs**: tuto možnost vyberte, pokud chcete odesílat [protokoly auditu Intune](monitor-audit-logs.md) do svého účtu úložiště, centra událostí nebo Log Analytics. Protokoly auditu zobrazují historii každého úkolu, který v Intune generuje změnu, včetně toho, kdo ho a kdy.
 
       Pokud se rozhodnete použít účet úložiště, zadejte také počet dní, po které chcete zachovat data (uchování). Chcete-li zachovat data navždy, nastavte dobu **uchování (dny)** na `0` (nula).
 
-    - **LOG** > **OperationalLogs**: operační protokoly (Preview) zobrazuje úspěšnost nebo neúspěch uživatelů a zařízení, která se registrují v Intune, a také podrobnosti o nevyhovujících zařízeních. Tuto možnost vyberte, pokud chcete odesílat protokoly zápisu do svého účtu úložiště, centra událostí nebo Log Analytics.
+    - **Protokol**  >  **OperationalLogs**: provozní protokoly (Preview) zobrazuje úspěšnost nebo neúspěch uživatelů a zařízení, která se registrují v Intune, a také podrobnosti o nevyhovujících zařízeních. Tuto možnost vyberte, pokud chcete odesílat protokoly zápisu do svého účtu úložiště, centra událostí nebo Log Analytics.
 
       Pokud se rozhodnete použít účet úložiště, zadejte také počet dní, po které chcete zachovat data (uchování). Chcete-li zachovat data navždy, nastavte dobu **uchování (dny)** na `0` (nula).
 
       > [!NOTE]
       > Provozní protokoly jsou ve verzi Preview. Pokud chcete poskytnout zpětnou vazbu, včetně informací v provozních protokolech, navštivte web [UserVoice](https://microsoftintune.uservoice.com/forums/291681-ideas/suggestions/36613948-diagnostics-settings-feedback).
 
-    - **LOG** > **DeviceComplianceOrg**: protokoly organizace pro dodržování předpisů zařízením (Preview) zobrazení sestavy organizace pro dodržování předpisů zařízením v Intune a podrobnosti o nevyhovujících zařízeních. Tuto možnost vyberte, pokud chcete odesílat protokoly dodržování předpisů do svého účtu úložiště, centra událostí nebo Log Analytics.
+    - **Protokol**  >  **DeviceComplianceOrg**: protokoly organizace pro dodržování předpisů zařízením (Preview) zobrazit sestavu organizace pro dodržování předpisů zařízením v Intune a podrobnosti o nevyhovujících zařízeních. Tuto možnost vyberte, pokud chcete odesílat protokoly dodržování předpisů do svého účtu úložiště, centra událostí nebo Log Analytics.
 
       Pokud se rozhodnete použít účet úložiště, zadejte také počet dní, po které chcete zachovat data (uchování). Chcete-li zachovat data navždy, nastavte dobu **uchování (dny)** na `0` (nula).
  
@@ -108,7 +108,7 @@ V závislosti na tom, kde chcete směrovat data protokolu auditu, potřebujete j
     > [!div class="mx-imgBorder"]
     > ![Ukázkový obrázek, který odesílá protokoly auditu Intune do účtu služby Azure Storage](./media/review-logs-using-azure-monitor/diagnostics-settings-example.png)
 
-4. **Uložte** změny. Vaše nastavení se zobrazí v seznamu. Po vytvoření můžete nastavení změnit výběrem možnosti **Upravit nastavení** > **Uložit**.
+4. **Uložte** změny. Vaše nastavení se zobrazí v seznamu. Po vytvoření můžete nastavení změnit výběrem možnosti **Upravit nastavení**  >  **Uložit**.
 
 ## <a name="use-audit-logs-throughout-intune"></a>Používání protokolů auditu v Intune
 
@@ -227,7 +227,7 @@ V současné době je Azure Monitor podporován [logikou](https://help.sumologic
 
 ### <a name="can-i-access-the-data-from-an-event-hub-without-using-an-external-siem-tool"></a>Můžu získat přístup k datům z centra událostí bez použití externího nástroje SIEM?
 
-Ano. Pro přístup k protokolům z vlastní aplikace můžete použít [rozhraní API služby Event Hubs](https://docs.microsoft.com/azure/event-hubs/event-hubs-dotnet-standard-getstarted-receive-eph).
+Yes. Pro přístup k protokolům z vlastní aplikace můžete použít [rozhraní API služby Event Hubs](https://docs.microsoft.com/azure/event-hubs/event-hubs-dotnet-standard-getstarted-receive-eph).
 
 ### <a name="what-data-is-stored"></a>Jaká data jsou uložená?
 

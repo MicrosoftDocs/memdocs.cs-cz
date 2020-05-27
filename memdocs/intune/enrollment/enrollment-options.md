@@ -7,7 +7,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 10/31/2017
-ms.topic: conceptual
+ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.assetid: cf4ad6d4-423f-4826-ab8d-6eb7a7cfb559
 search.appverid: MET150
 ms.custom: get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3a769b1f1a0f11a4dd98c2f38e313012a7e2590b
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 11dba32ea6b8cc9e7851ebb789776d1121e1d7ce
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79332859"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990535"
 ---
 # <a name="enrollment-options-for-devices-managed-by-intune"></a>Možnosti registrace pro zařízení spravovaná pomocí Intune
 
@@ -47,7 +47,7 @@ Pro registraci zařízení s iOS/iPadOS a macOS se vyžaduje certifikát MDM pus
 ## <a name="corporate-identifiers"></a>Podnikové identifikátory
 
 Pro účely identifikace zařízení, která vlastní firma, můžete vytvořit seznam čísel IMEI a sériových čísel. Přečtěte si další informace o [podnikových identifikátorech](corporate-identifiers-add.md).
-## <a name="multi-factor-authentication"></a>Ověřování pomocí služby Multi-Factor Authentication
+## <a name="multi-factor-authentication"></a>Vícefaktorové ověřování
 
 Při registraci zařízení můžete uživatele požádat, aby použili dodatečnou metodu ověření, například telefon, PIN kód nebo biometrické údaje. Přečtěte si další informace o [vícefaktorovém ověřování](multi-factor-authentication.md).
 

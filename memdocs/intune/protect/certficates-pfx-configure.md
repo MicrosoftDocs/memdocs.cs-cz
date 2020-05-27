@@ -6,7 +6,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 04/21/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dfa559a9c628dfc87c982023e350947d3e9bfeea
-ms.sourcegitcommit: 568f8f8c19fafdd0f4352d0682f1ca7a4d665d25
+ms.openlocfilehash: 2694897e0a9e0ebf0744615e65d76f29416811d0
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81771478"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990400"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>Konfigurace a používání certifikátů PKCS pomocí Intune
 
@@ -57,7 +57,7 @@ Pokud chcete používat certifikáty PKCS s Intune, musíte mít následující 
   Je třeba mít vyexportovanou kopii kořenového certifikátu z vaší certifikační autority organizace.
 
 - **Microsoft Intune Certificate Connector** (označovaný také jako *konektor pro NDES Certificate Connector*):  
-  Na portálu Intune přejděte na **Konfigurace** > **zařízení konektory** > certifikátů**Přidat**a postupujte podle *pokynů k instalaci konektoru pro PKCS #12*. Pomocí odkazu ke stažení na portálu začněte stahovat instalační program konektoru Certificate Connector **NDESConnectorSetup. exe**.  
+  Na portálu Intune přejděte na **Konfigurace zařízení**  >  **konektory certifikátů**  >  **Přidat**a postupujte podle *pokynů k instalaci konektoru pro PKCS #12*. Pomocí odkazu ke stažení na portálu začněte stahovat instalační program konektoru Certificate Connector **NDESConnectorSetup. exe**.  
 
   Intune podporuje až 100 instancí tohoto konektoru na každého tenanta. Každá instance připojení musí být na samostatném Windows serveru. Instanci tohoto konektoru můžete nainstalovat na stejný server jako instanci konektoru certifikátů PFX pro Microsoft Intune. Když použijete více konektorů, infrastruktura konektoru podporuje vysokou dostupnost a vyrovnávání zatížení, protože kterákoli dostupná instance konektoru může zpracovávat žádosti o certifikát PKCS. 
 
@@ -66,7 +66,7 @@ Pokud chcete používat certifikáty PKCS s Intune, musíte mít následující 
   Microsoft Intune Certificate Connector podporuje také režim FIPS (Federal Information Processing Standard). Režim FIPS není povinný, ale pokud ho aktivujete, můžete vydávat a odvolávat certifikáty.
 
 - **Konektor certifikátu PFX pro Microsoft Intune**:  
-  Pokud plánujete používat e-mailové šifrování S/MIME, Stáhněte si pomocí portálu Intune *Certificate Connector* , který podporuje import certifikátů PFX.  Přejděte na **Konfigurace** > **zařízení konektory** > certifikátů**Přidat**a postupujte podle *pokynů k instalaci konektoru pro importované certifikáty PFX*. Pomocí odkazu ke stažení na portálu začněte stahovat instalační program **PfxCertificateConnectorBootstrapper. exe**.
+  Pokud plánujete používat e-mailové šifrování S/MIME, Stáhněte si pomocí portálu Intune *Certificate Connector* , který podporuje import certifikátů PFX.  Přejděte na **Konfigurace zařízení**  >  **konektory certifikátů**  >  **Přidat**a postupujte podle *pokynů k instalaci konektoru pro importované certifikáty PFX*. Pomocí odkazu ke stažení na portálu začněte stahovat instalační program **PfxCertificateConnectorBootstrapper. exe**.
 
   Každý tenant Intune podporuje jednu instanci tohoto konektoru. Tento konektor můžete nainstalovat na stejný server jako instanci konektoru Microsoft Intune Certificate Connector.
 
@@ -95,7 +95,7 @@ K ověření zařízení pomocí sítě VPN, Wi-Fi nebo jiných prostředků pot
 **Použijte příkazový řádek**:  
 1. Přihlaste se ke kořenovému serveru certifikační autority pomocí účtu správce.
  
-2. Přejděte na **Spustit** > **běh**a pak zadáním **cmd** otevřete příkazový řádek. 
+2. Přejděte na **Spustit**  >  **běh**a pak zadáním **cmd** otevřete příkazový řádek. 
     
 3. Zadáním **příkazu certutil-CA. cert CA_NAME. cer** exportujte kořenový certifikát jako soubor s názvem *CA_NAME. cer*.
 
@@ -129,7 +129,7 @@ K ověření zařízení pomocí sítě VPN, Wi-Fi nebo jiných prostředků pot
     > V případě šablon certifikátů pro iOS/iPadOS otevřete kartu **rozšíření** , aktualizujte **použití klíče**a potvrďte, že není vybraná možnost **podpis je důkazem původu** .
 
 10. V **Zabezpečení** přidejte účet počítače pro server, na který instalujete Microsoft Intune Certificate Connector. Pro tento účet povolte oprávnění **Číst** a **Zaregistrovat**.
-11. Kliknutím na tlačítko **použít** > **OK** uložte šablonu certifikátu. Zavřete **konzolu šablony certifikátů**.
+11. Kliknutím na tlačítko **použít**  >  **OK** uložte šablonu certifikátu. Zavřete **konzolu šablony certifikátů**.
 12. V konzole **Certifikační autorita** klikněte pravým tlačítkem myši na **Šablony certifikátů** > **Nová** > **Vystavovaná šablona certifikátu**. Zvolte šablonu, kterou jste vytvořili v předchozím postupu. Vyberte **OK**.
 13. Aby server spravoval certifikáty pro zaregistrovaná zařízení a uživatele, použijte následující postup:
 
@@ -146,7 +146,7 @@ K ověření zařízení pomocí sítě VPN, Wi-Fi nebo jiných prostředků pot
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Vyberte možnost konektory **pro správu** > tenanta**a tokeny** > **Certificate Connectors** > **+ Add**.
+2. Vyberte možnost konektory **pro správu tenanta**  >  **a tokeny**  >  **Certificate Connectors**  >  **+ Add**.
 
 3. Klikněte na *Stáhnout software Certificate Connector* pro konektor pro PKCS #12 a uložte soubor do umístění, ke kterému máte přístup ze serveru, na který budete konektor instalovat.
 
@@ -160,8 +160,8 @@ K ověření zařízení pomocí sítě VPN, Wi-Fi nebo jiných prostředků pot
 
 5. Microsoft Intune Certificate Connector otevře kartu **registrace** . Pokud chcete povolit připojení k Intune, **přihlaste**se a zadejte účet s globálním oprávněním správce.
 6. Na kartě **Rozšířené** doporučujeme ponechat vybranou možnost **Použít účet SYSTEM tohoto počítače (výchozí)**.
-7. **Použít** > **zavření**
-8. Vraťte se na portál Intune ( > **certifikační konektory****Konfigurace zařízení**v**Intune** > ). Po chvíli se zobrazí zelená značka zaškrtnutí a **stav připojení** je **aktivní**. Váš server konektoru teď může komunikovat s Intune.
+7. **Použít**  >  **Zavřít**
+8. Vraťte se na portál Intune (**Intune**  >  **Device Configuration**  >  **certifikační konektory**konfigurace zařízení v Intune). Po chvíli se zobrazí zelená značka zaškrtnutí a **stav připojení** je **aktivní**. Váš server konektoru teď může komunikovat s Intune.
 9. Pokud máte webový proxy server ve vašem síťovém prostředí, možná budete potřebovat další konfigurace, aby konektor mohl fungovat. Další informace najdete v tématu [práce se stávajícími místními proxy servery](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy-configure-connectors-with-proxy-servers) v dokumentaci k Azure Active Directory.
     - Android Enterprise (*pracovní profil*)
     - iOS
@@ -175,7 +175,7 @@ K ověření zařízení pomocí sítě VPN, Wi-Fi nebo jiných prostředků pot
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Vyberte a přejdete na konfigurace **zařízení** > **profily** > **vytvořit profil**.
+2. Vyberte a přejdete na konfigurace **zařízení**  >  **profily**  >  **vytvořit profil**.
 
 3. Zadejte tyto vlastnosti:
    - **Platforma**: vyberte platformu zařízení, která obdrží tento profil.
@@ -198,7 +198,7 @@ K ověření zařízení pomocí sítě VPN, Wi-Fi nebo jiných prostředků pot
 
 8. Vyberte **Další**.
 
-9. V části **značky oboru** (volitelné) přiřaďte značku pro filtrování profilu pro konkrétní IT skupiny, například `US-NC IT Team` nebo. `JohnGlenn_ITDepartment` Další informace o značkách oboru naleznete v tématu [použití značek RBAC a Scope pro distribuci](../fundamentals/scope-tags.md).
+9. V části **značky oboru** (volitelné) přiřaďte značku pro filtrování profilu pro konkrétní IT skupiny, například `US-NC IT Team` nebo `JohnGlenn_ITDepartment` . Další informace o značkách oboru naleznete v tématu [použití značek RBAC a Scope pro distribuci](../fundamentals/scope-tags.md).
 
    Vyberte **Další**.
 
@@ -216,7 +216,7 @@ K ověření zařízení pomocí sítě VPN, Wi-Fi nebo jiných prostředků pot
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Vyberte a přejdete na konfigurace **zařízení** > **profily** > **vytvořit profil**.
+2. Vyberte a přejdete na konfigurace **zařízení**  >  **profily**  >  **vytvořit profil**.
 
 3. Zadejte tyto vlastnosti:
    - **Platforma**: vyberte platformu zařízení. Možnosti:
@@ -241,22 +241,22 @@ K ověření zařízení pomocí sítě VPN, Wi-Fi nebo jiných prostředků pot
    
    |Nastavení     | Platforma     | Podrobnosti   |
    |------------|------------|------------|
-   |**Prahová hodnota obnovení (%)**        |<ul><li>Všechny         |Doporučuje se 20%  | 
-   |**Období platnosti certifikátu**  |<ul><li>Všechny         |Pokud jste šablonu certifikátu nezměnili, může být tato možnost nastavená na jeden rok. |
+   |**Prahová hodnota obnovení (%)**        |<ul><li>Vše         |Doporučuje se 20%  | 
+   |**Období platnosti certifikátu**  |<ul><li>Vše         |Pokud jste šablonu certifikátu nezměnili, může být tato možnost nastavená na jeden rok. |
    |**Zprostředkovatel úložiště klíčů (KSP)**   |<ul><li>Windows 10  |V případě systému Windows vyberte místo, kam chcete uložit klíče na zařízení. |
-   |**Certifikační autorita**      |<ul><li>Všechny         |Zobrazuje interní plně kvalifikovaný název domény (FQDN) vaší certifikační autority organizace.  |
-   |**Název certifikační autority** |<ul><li>Všechny         |Zobrazuje název vaší certifikační autority organizace, například "certifikační autorita společnosti Contoso". |
-   |**Název šablony certifikátu**    |<ul><li>Všechny         |Zobrazuje název šablony certifikátu. |
+   |**Certifikační autorita**      |<ul><li>Vše         |Zobrazuje interní plně kvalifikovaný název domény (FQDN) vaší certifikační autority organizace.  |
+   |**Název certifikační autority** |<ul><li>Vše         |Zobrazuje název vaší certifikační autority organizace, například "certifikační autorita společnosti Contoso". |
+   |**Název šablony certifikátu**    |<ul><li>Vše         |Zobrazuje název šablony certifikátu. |
    |**Typ certifikátu**             |<ul><li>Android Enterprise (*pracovní profil*)</li><li>iOS</li><li>macOS</li><li>Windows 10 a novější|Vyberte typ: <ul><li> Certifikáty **uživatelů** můžou v předmětu a síti SAN certifikátu obsahovat atributy uživatele i zařízení. </il><li>Certifikáty **zařízení** mohou obsahovat pouze atributy zařízení v předmětu a San certifikátu. Použijte zařízení pro scénáře, jako jsou například zařízení bez uživatele, jako jsou veřejné terminály nebo jiná sdílená zařízení.  <br><br> Tento výběr má vliv na formát názvu subjektu. |
-   |**Formát názvu subjektu**          |<ul><li>Všechny         |Podrobnosti o tom, jak nakonfigurovat formát názvu subjektu, najdete v části [Formát názvu subjektu](#subject-name-format) dále v tomto článku.  <br><br> U většiny platforem použijte možnost **běžný název** , pokud není vyžadováno jinak. <br><br>U následujících platforem se formát názvu subjektu určuje podle typu certifikátu: <ul><li>Android Enterprise (*pracovní profil*)</li><li>iOS</li><li>macOS</li><li>Windows 10 a novější</li></ul>  <p>  |
-   |**Alternativní název subjektu**     |<ul><li>Všechny         |V případě *atributu*vyberte **hlavní název uživatele (UPN)** , pokud není vyžadováno jinak, nakonfigurujte odpovídající *hodnotu*a klikněte na tlačítko **Přidat**. <br><br>Další informace najdete v části [Formát názvu subjektu](#subject-name-format) dále v tomto článku.|
+   |**Formát názvu subjektu**          |<ul><li>Vše         |Podrobnosti o tom, jak nakonfigurovat formát názvu subjektu, najdete v části [Formát názvu subjektu](#subject-name-format) dále v tomto článku.  <br><br> U většiny platforem použijte možnost **běžný název** , pokud není vyžadováno jinak. <br><br>U následujících platforem se formát názvu subjektu určuje podle typu certifikátu: <ul><li>Android Enterprise (*pracovní profil*)</li><li>iOS</li><li>macOS</li><li>Windows 10 a novější</li></ul>  <p>  |
+   |**Alternativní název subjektu**     |<ul><li>Vše         |V případě *atributu*vyberte **hlavní název uživatele (UPN)** , pokud není vyžadováno jinak, nakonfigurujte odpovídající *hodnotu*a klikněte na tlačítko **Přidat**. <br><br>Další informace najdete v části [Formát názvu subjektu](#subject-name-format) dále v tomto článku.|
    |**Rozšířené použití klíče**           |<ul><li> Správce zařízení s Androidem </li><li>Android Enterprise (*vlastník zařízení*, *pracovní profil*) </li><li>Windows 10 |Certifikáty obvykle vyžadují *ověření klienta* , aby se mohl uživatel nebo zařízení ověřit na serveru. |
    |**Povolí všem aplikacím přístup k privátnímu klíči.** |<ul><li>macOS  |Nastavením této vlastnosti **povolíte** aplikacím, které jsou nakonfigurované pro přidružené zařízení Mac, přístup k privátnímu klíči certifikátů PKCS. <br><br> Další informace o tomto nastavení najdete v tématu *AllowAllAppsAccess* v části referenční část certifikátu [konfiguračního profilu](https://developer.apple.com/business/documentation/Configuration-Profile-Reference.pdf) v dokumentaci pro vývojáře Apple. |
    |**Kořenový certifikát**             |<ul><li>Správce zařízení s Androidem </li><li>Android Enterprise (*vlastník zařízení*, *pracovní profil*) |Vyberte profil certifikátu od kořenové certifikační autority, který byl dříve přiřazen. |
 
 8. Vyberte **Další**.
 
-9. V části **značky oboru** (volitelné) přiřaďte značku pro filtrování profilu pro konkrétní IT skupiny, například `US-NC IT Team` nebo. `JohnGlenn_ITDepartment` Další informace o značkách oboru naleznete v tématu [použití značek RBAC a Scope pro distribuci](../fundamentals/scope-tags.md).
+9. V části **značky oboru** (volitelné) přiřaďte značku pro filtrování profilu pro konkrétní IT skupiny, například `US-NC IT Team` nebo `JohnGlenn_ITDepartment` . Další informace o značkách oboru naleznete v tématu [použití značek RBAC a Scope pro distribuci](../fundamentals/scope-tags.md).
 
    Vyberte **Další**.
 
@@ -279,7 +279,7 @@ Platformu
 - Windows 10 a novější
 
 > [!NOTE]
-> K dispozici je známý problém s používáním PKCS k získání certifikátů, [které mají stejný problém jako u protokolu SCEP](certificates-profile-scep.md#avoid-certificate-signing-requests-with-escaped-special-characters) , když název subjektu v výsledné žádosti o podepsání certifikátu (CSR) obsahuje jeden z následujících znaků jako řídicí znak (pokračuje zpětným lomítkem \\):
+> K dispozici je známý problém s používáním PKCS k získání certifikátů, [které mají stejný problém jako u protokolu SCEP](certificates-profile-scep.md#avoid-certificate-signing-requests-with-escaped-special-characters) , když název subjektu v výsledné žádosti o podepsání certifikátu (CSR) obsahuje jeden z následujících znaků jako řídicí znak (pokračuje zpětným lomítkem \\ ):
 > - \+
 > - ;
 > - ,
@@ -288,7 +288,7 @@ Platformu
 - **Typ uživatelského certifikátu**  
   Možnosti formátu pro *Formát názvu subjektu* zahrnují dvě proměnné: **běžný název (CN)** a **e-mail (e)**. **Běžný název (CN)** můžete nastavit na některou z těchto proměnných:
 
-  - **CN = {{username}}**: hlavní název uživatele (UPN), například janedoe@contoso.com.
+  - **CN = {{username}}**: hlavní název uživatele (UPN), například janedoe@contoso.com .
   - **CN={{AAD_Device_ID}}**: ID přiřazené při registraci zařízení ve službě AD (Azure Active Directory). Toto ID se obvykle používá k ověření ve službě Azure AD.
   - **CN = {{sériové}}**: jedinečné sériové číslo (SN) obvykle používané výrobcem k identifikaci zařízení.
   - **CN = {{IMEINumber}}**: jedinečné číslo IMEI (International Mobile Equipment Identity), které se používá k identifikaci mobilního telefonu.

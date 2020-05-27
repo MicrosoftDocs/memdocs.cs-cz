@@ -6,7 +6,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 04/06/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 749377ceecf29d9b900cff108fc4b736d6b8d0f2
-ms.sourcegitcommit: d05b1472385c775ebc0b226e8b465dbeb5bf1f40
+ms.openlocfilehash: a8d75208de7cc6697699d79e3a52df742f605fdb
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82605163"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990727"
 ---
 # <a name="use-powershell-scripts-on-windows-10-devices-in-intune"></a>Použití skriptů PowerShellu na zařízeních s Windows 10 v Intune
 
@@ -80,7 +80,7 @@ Rozšíření pro správu Intune má následující požadavky. Po splnění po�
 ## <a name="create-a-script-policy-and-assign-it"></a>Vytvoření zásady skriptu a její přiřazení
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **zařízení** > **PowerShell skripty** > **Přidat**.
+2. Vyberte **zařízení**  >  **PowerShell skripty**  >  **Přidat**.
 
     ![Přidávání a používání skriptů PowerShellu v Microsoft Intune](./media/intune-management-extension/mgmt-extension-add-script.png)
 
@@ -108,7 +108,7 @@ Rozšíření pro správu Intune má následující požadavky. Po splnění po�
 
     2. Po dokončení vyberte **Další**.
 
-6. Vyberte **přiřazení** > **Vybrat skupiny, které chcete zahrnout**. Zobrazí se existující seznam skupin Azure AD.
+6. Vyberte **přiřazení**  >  **Vybrat skupiny, které chcete zahrnout**. Zobrazí se existující seznam skupin Azure AD.
 
     1. Vyberte jednu nebo více skupin, které zahrnují uživatele, jejichž zařízení obdrží skript. Zvolte **Vybrat**. Skupiny, které jste zvolili, se zobrazí v seznamu a budou dostávat vaše zásady.
 
@@ -169,7 +169,7 @@ V části **Powershellové skripty** vyberte skript, který chcete monitorovat, 
 
 ## <a name="intune-management-extension-logs"></a>Protokoly rozšíření pro správu Intune
 
-Protokoly agenta v klientském počítači jsou obvykle v `\ProgramData\Microsoft\IntuneManagementExtension\Logs`systému. K zobrazení těchto souborů protokolu můžete použít [CMTrace. exe](https://docs.microsoft.com/configmgr/core/support/cmtrace) .
+Protokoly agenta v klientském počítači jsou obvykle v systému `\ProgramData\Microsoft\IntuneManagementExtension\Logs` . K zobrazení těchto souborů protokolu můžete použít [CMTrace. exe](https://docs.microsoft.com/configmgr/core/support/cmtrace) .
 
 ![Snímek obrazovky nebo ukázkový protokol agenta CMTrace v Microsoft Intune](./media/apps-win32-app-management/apps-win32-app-10.png)  
 
@@ -190,7 +190,7 @@ V části **Powershellové skripty** klikněte pravým tlačítkem na skript a v
 
 Pokud chcete zjistit, jestli je zařízení automaticky zaregistrované, můžete:
 
-  1. Přejděte na **Nastavení** > **účty** > **přístup do práce nebo do školy**.
+  1. Přejděte na **Nastavení**  >  **účty**  >  **přístup do práce nebo do školy**.
   2. Vyberte připojený účet > **informace**.
   3. V části **Pokročilá diagnostická sestava**vyberte **vytvořit sestavu**.
   4. Otevřete `MDMDiagReport` ve webovém prohlížeči.
@@ -212,10 +212,10 @@ Pokud chcete zjistit, jestli je zařízení automaticky zaregistrované, můžet
 
 - Ujistěte se, že jsou zařízení [připojená k Azure AD](https://docs.microsoft.com/azure/active-directory/user-help/user-help-join-device-on-network). Zařízení, která jsou připojená jenom k vašemu pracovišti nebo organizaci ([zaregistrovaná](https://docs.microsoft.com/azure/active-directory/user-help/user-help-register-device-on-network) ve službě Azure AD), nebudou dostávat skripty.
 - Klient rozšíření pro správu Intune se jednou za hodinu kontroluje v případě jakýchkoli změn ve skriptu nebo zásadách v Intune.
-- Potvrďte, že je rozšíření pro správu Intune stažené do `%ProgramFiles(x86)%\Microsoft Intune Management Extension`.
+- Potvrďte, že je rozšíření pro správu Intune stažené do `%ProgramFiles(x86)%\Microsoft Intune Management Extension` .
 - Skripty se nespouštějí na rozbočovačích Surface nebo Windows 10 v režimu S.
 - Zkontrolujte případné chyby v protokolech. Viz [protokoly rozšíření pro správu Intune](#intune-management-extension-logs) (v tomto článku).
-- V případě možných problémů s oprávněními zkontrolujte, jestli jsou vlastnosti skriptu PowerShellu nastavené `Run this script using the logged on credentials`na. Také ověřte, zda má přihlášený uživatel příslušná oprávnění ke spuštění skriptu.
+- V případě možných problémů s oprávněními zkontrolujte, jestli jsou vlastnosti skriptu PowerShellu nastavené na `Run this script using the logged on credentials` . Také ověřte, zda má přihlášený uživatel příslušná oprávnění ke spuštění skriptu.
 
 - Chcete-li izolovat problémy skriptování, můžete:
 
@@ -242,7 +242,7 @@ Pokud chcete zjistit, jestli je zařízení automaticky zaregistrované, můžet
 
     Pokud skript ohlásí úspěch, podívejte se na text `AgentExecutor.log` pro potvrzení výstupu chyby. Pokud se skript spustí, musí být délka >2.
 
-  - Chcete-li zachytit soubory. Error a. Output, následující fragment kódu spustí skript prostřednictvím AgentExecutor do PSx86 (`C:\Windows\SysWOW64\WindowsPowerShell\v1.0`). Udržuje protokoly pro vaši kontrolu. Mějte na paměti, že rozšíření pro správu Intune po spuštění skriptu vyčistí protokoly:
+  - Chcete-li zachytit soubory. Error a. Output, následující fragment kódu spustí skript prostřednictvím AgentExecutor do PSx86 ( `C:\Windows\SysWOW64\WindowsPowerShell\v1.0` ). Udržuje protokoly pro vaši kontrolu. Mějte na paměti, že rozšíření pro správu Intune po spuštění skriptu vyčistí protokoly:
   
     ```powershell
     $scriptPath = read-host "Enter the path to the script file to execute"

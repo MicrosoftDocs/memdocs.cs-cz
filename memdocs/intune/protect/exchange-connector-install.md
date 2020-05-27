@@ -7,7 +7,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 01/24/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c10f2356e740036bbc779f03253eebec6fd7d05e
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 390a80f6333229a99daec9627e3810c27ca6b580
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80327503"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990844"
 ---
 # <a name="set-up-the-on-premises-intune-exchange-connector"></a>Nastavení místního Intune Exchange Connectoru
 
@@ -85,7 +85,7 @@ Na Windows serveru, který může podporovat Intune Exchange Connector:
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).  Použijte účet, který je správcem místního Exchange serveru a který má licenci k používání Exchange serveru.
 
-2. Vyberte možnost **správce** > klienta**přístup k Exchangi**.
+2. Vyberte možnost **Správce klienta**  >  **přístup k Exchangi**.
 
 3. V části **Nastavení**zvolte **Exchange ActiveSync On-Premises Connector** a pak vyberte **Přidat**.
 
@@ -174,7 +174,7 @@ Ve výchozím nastavení je povoleno zjišťování dalších servery CAS. Pokud
 
 2. V textovém editoru otevřete soubor **OnPremisesExchangeConnectorServiceConfiguration.xml**.
 
-3. Změňte ** \<IsCasFailoverEnabled>*true*\</IsCasFailoverEnabled>** na ** \<IsCasFailoverEnabled>*false*\</IsCasFailoverEnabled>**.
+3. Změňte ** \< IsCasFailoverEnabled>*true* \< /IsCasFailoverEnabled>** na ** \< IsCasFailoverEnabled>*false* \< /IsCasFailoverEnabled>**.
 
 ## <a name="performance-tune-the-exchange-connector-optional"></a>Výkon – ladění Exchange Connectoru (volitelné)
 
@@ -192,7 +192,7 @@ Zlepšení výkonu konektoru Exchange Connector:
 
 3. Vyhledejte **EnableParallelCommandSupport** a nastavte hodnotu na **true**:
 
-   \<EnableParallelCommandSupport>true\</EnableParallelCommandSupport>
+   \<EnableParallelCommandSupport>true \< /EnableParallelCommandSupport>
 
 4. Uložte soubor a pak restartujte službu Microsoft Intune Exchange Connector.
 
@@ -216,7 +216,7 @@ Po úspěšné konfiguraci softwaru Exchange Connector můžete zobrazit stav p�
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Vyberte možnost **správce** > klienta**přístup k Exchangi**.
+2. Vyberte možnost **Správce klienta**  >  **přístup k Exchangi**.
 
 3. Vyberte **Exchange ActiveSync On-Premises Connector**a pak vyberte konektor, který chcete zobrazit.
 
@@ -236,7 +236,7 @@ Konektor můžete vynutit ke spuštění synchronizace pomocí možností **rych
 
    1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-   2. Vyberte **klienta Správa** > **tenanta Exchange** >  **ActiveSync On-Premises Connector**.
+   2. Vyberte **klienta Správa tenanta**  >  **Exchange**  >   **ActiveSync On-Premises Connector**.
 
    3. Vyberte konektor, který chcete synchronizovat, a pak zvolte Rychlá synchronizace nebo Úplná synchronizace.
 

@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 03/31/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6dad4dffba0efadcca0ea5eb7d61960bec1b3f8e
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 673adad15e92fb06cf5cf7c3589b06ab8b1b337a
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80536839"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990651"
 ---
 # <a name="how-to-add-macos-line-of-business-lob-apps-to-microsoft-intune"></a>Přidání obchodních aplikací pro macOS do Microsoft Intune
 
@@ -60,13 +60,13 @@ Musíte si stáhnout externí nástroj, označit stažený nástroj jako spustit
 
     Tady jsou vzorové příkazy pro Microsoft Intune App Wrapping Tool pro macOS:
     > [!IMPORTANT]
-    > Před spuštěním `<source_file>` `IntuneAppUtil` příkazů zajistěte, aby argument neobsahoval mezery.
+    > Před spuštěním příkazů zajistěte, aby argument `<source_file>` neobsahoval mezery `IntuneAppUtil` .
 
     - `IntuneAppUtil -h`<br>
     Tento příkaz zobrazí informace o využití nástroje.
     
     - `IntuneAppUtil -c <source_file> -o <output_directory_path> [-v]`<br>
-    Tento příkaz zabalí soubor `<source_file>` obchodní aplikace *. pkg* , který je součástí souboru *. intunemac* se stejným názvem a umístí ho do složky, na kterou odkazuje `<output_directory_path>`.
+    Tento příkaz zabalí soubor obchodní aplikace *. pkg* , který je součástí `<source_file>` souboru *. intunemac* se stejným názvem a umístí ho do složky, na kterou odkazuje `<output_directory_path>` .
     
     - `IntuneAppUtil -r <filename.intunemac> [-v]`<br>
     Tento příkaz extrahuje zjištěné parametry a verze vytvořeného souboru *.intunemac*.
@@ -74,7 +74,7 @@ Musíte si stáhnout externí nástroj, označit stažený nástroj jako spustit
 ## <a name="select-the-app-type"></a>Vyberte typ aplikace.
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **aplikace** > **všechny aplikace** > **Přidat**.
+2. Vyberte **aplikace**  >  **všechny aplikace**  >  **Přidat**.
 3. V podokně **Vybrat typ aplikace** v části **ostatní** typy aplikací vyberte **obchodní aplikace**.
 4. Klikněte na **Vybrat**. Zobrazí se kroky **Přidání aplikace** .
 

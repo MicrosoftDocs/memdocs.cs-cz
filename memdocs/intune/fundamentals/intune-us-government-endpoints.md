@@ -7,7 +7,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 05/30/2019
-ms.topic: conceptual
+ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 97298bba752f4af29c9dc7c2483c324cbd77a6bc
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 28454fc067a7d8ab281b92d571a872bd9e0aa2d0
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80438784"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83991161"
 ---
 # <a name="us-government-endpoints-for-microsoft-intune"></a>Koncové body pro státní správu USA pro Microsoft Intune
 
@@ -48,25 +48,25 @@ Následující tabulky obsahují seznam portů a služeb, ke kterým přistupuje
 | enterpriseregistration.microsoftonline.us | 13.72.188.239 <br> 13.72.55.179 |
 
 ## <a name="us-government-customer-designated-endpoints"></a>Zákazník pro státní správu USA určil koncové body:
-- Azure Portal: https:\//Portal.Azure.us/ 
-- Office 365: https:\//Portal.office365.us/ 
-- Portál společnosti Intune: https:\//Portal.manage.Microsoft.us/ 
-- Centrum pro správu Microsoft Endpoint Manageru:\/https:/Endpoint.Microsoft.us/
+- Azure Portal: https: \/ /Portal.Azure.us/ 
+- Office 365: https: \/ /Portal.office365.us/ 
+- Portál společnosti Intune: https: \/ /Portal.manage.Microsoft.us/ 
+- Centrum pro správu Microsoft Endpoint Manageru: https: \/ /Endpoint.Microsoft.us/
 
 ## <a name="partner-service-endpoints-that-intune-depends-on"></a>Koncové body partnerských služeb, na kterých závisí Intune:
-- Služba AAD Sync: https:\//SyncService.gov.us.microsoftonline.com/DirectoryService.svc
-- Evo STS: https:\//Login.microsoftonline.us
-- Proxy adresář: https:\//directoryproxy.MicrosoftAzure.us/DirectoryProxy.svc
-- Graf AAD: https:\//Directory.MicrosoftAzure.us a https:\//Graph.MicrosoftAzure.us
-- MS Graph: https:\//Graph.Microsoft.us
-- PRAVIDLA automatického nasazení: https:\//enterpriseregistration.microsoftonline.us
+- Služba AAD Sync: https: \/ /SyncService.gov.us.microsoftonline.com/DirectoryService.svc
+- Evo STS: https: \/ /Login.microsoftonline.us
+- Proxy adresář: https: \/ /directoryproxy.MicrosoftAzure.us/DirectoryProxy.svc
+- Graf AAD: https: \/ /Directory.MicrosoftAzure.us a https: \/ /Graph.MicrosoftAzure.us
+- MS Graph: https: \/ /Graph.Microsoft.us
+- PRAVIDLA automatického nasazení: https: \/ /enterpriseregistration.microsoftonline.us
 
 ## <a name="windows-push-notification-services"></a>Služba nabízených oznámení Windows
 V zařízeních spravovaných pomocí Intune, která spravuje použití správy mobilních zařízení (MDM), se vyžaduje služba Windows Push Notification Services (WNS) pro akce zařízení a další okamžité aktivity. Další informace najdete v tématu [Konfigurace podnikových bran firewall a proxy serverů pro podporu provozu WNS](https://docs.microsoft.com/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config) .
 
 ## <a name="apple-device-network-information"></a>Informace o síti pro zařízení Apple
 
-|**Použití**|**Název hostitele (IP adresa/podsíť)**|**Protokol**|**Přístavní**|
+|**Použití**|**Název hostitele (IP adresa/podsíť)**|**Protocol (Protokol)**|**Přístavní**|
 |------------|-----------|------------|-----------|
 |Načítání a zobrazování obsahu ze serverů Apple|itunes.apple.com<br>\*. itunes.apple.com<br>\*. mzstatic.com<br>\*. phobos.apple.com<br>\*. phobos.itunes-apple.com.akadns.net|HTTP|80|
 |Komunikace se servery APNS|# – courier.push.apple.com<br>' # ' je náhodné číslo od 0 do 50.|TCP|5223 a 443|

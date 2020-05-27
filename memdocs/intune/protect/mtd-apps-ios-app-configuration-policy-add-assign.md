@@ -7,7 +7,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 03/19/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 627fb13554f8f379f75f08c27d18cdd0b1106028
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: bb83a8e5b907ee55dd1c02d3af0dc04002790a18
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80084848"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83991112"
 ---
 # <a name="add-and-assign-mobile-threat-defense-mtd-apps-with-intune"></a>Přidání a přiřazení aplikací pro ochranu před mobilními hrozbami (MTD) pomocí Intune
 
@@ -82,7 +82,7 @@ Vyberte část, která odpovídá vašemu poskytovateli MTD:
 
     3. Text **com.lookout.enterprise.názevfirmy** nahraďte identifikátorem zákaznického balíčku, který jste vybrali při podepisování IPA.
 
-    4. Přidejte další identifikátor URI pro přesměrování: ** &lt;CompanyPortal://Code/>** následovaný verzí s kódováním URL vašeho původního identifikátoru URI pro přesměrování.
+    4. Přidejte další identifikátor URI pro přesměrování: ** &lt; CompanyPortal://Code/>** následovaný verzí s kódováním URL vašeho původního identifikátoru URI pro přesměrování.
 
     5. Přidejte k aplikaci **Delegovaná oprávnění**.
 
@@ -232,7 +232,7 @@ Pokud chcete přidat zásady konfigurace aplikace Wandera pro iOS, přečtěte s
 
 - V případě **formátu nastavení konfigurace**vyberte možnost **zadat data XML**.
 
-Přihlaste se k portálu pro paprskový Wandera a přejděte do **Nastavení** > **integrace** > **aplikace EMM nabízená**instalace. Vyberte **Intune**a potom zkopírujte obsah níže a vložte ho do těla zásad konfigurace.  
+Přihlaste se k portálu pro paprskový Wandera a přejděte do **Nastavení**  >  **integrace**  >  **aplikace EMM nabízená**instalace. Vyberte **Intune**a potom zkopírujte obsah níže a vložte ho do těla zásad konfigurace.  
 
   ```
   <dict><key>secretKey</key>

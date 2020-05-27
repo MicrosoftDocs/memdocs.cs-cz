@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 03/12/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 47b6f624ba5c12cd68322bde5c1f85ad7f0a6430
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 706871d750c9061c6d18fa622fe7b868990b9eec
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80862835"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83991198"
 ---
 # <a name="manage-web-access-using-a-microsoft-intune-policy-protected-browser"></a>Správa webového přístupu pomocí Microsoft Intune prohlížeče chráněného zásadami
 
@@ -98,7 +98,7 @@ Pokud chcete webovým aplikacím připojeným ke službě Azure AD omezit možno
 > Podmíněný přístup je technologie Azure Active Directory (Azure AD). Uzel podmíněného přístupu, ke kterému se přistupuje z *Intune*, je stejný uzel, ke kterému se přistupuje z *Azure AD*.  
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **zařízení** > **podmíněný přístup** > **Nová zásada**.
+2. Vyberte **zařízení**  >  **podmíněný přístup**  >  **Nová zásada**.
 3. Přidejte **název**zásady. 
 4. V části **Přiřazení** vyberte **Podmínky** > **Klientské aplikace**. Zobrazí se podokno **klientské aplikace** .
 5. V části **Konfigurovat** klikněte na **Ano**, aby se zásada použila u konkrétních klientských aplikací.
@@ -109,7 +109,7 @@ Pokud chcete webovým aplikacím připojeným ke službě Azure AD omezit možno
     > [!NOTE]
     > Pokud chcete omezit to, které nativní (neprohlížečové) aplikace mají přístup k těmto cloudovým aplikacím, můžete také vybrat **Mobilní aplikace a desktopoví klienti**.
 
-7. Klikněte na **Hotovo** > **.**
+7. Klikněte na **Hotovo**  >  **Done**.
 8. V části **přiřazení** vyberte **Uživatelé a skupiny** a zvolte uživatele nebo skupiny, kterým chcete přiřadit tuto zásadu. Kliknutím na **Hotovo** zavřete podokno.
 9. V části **přiřazení** vyberte **cloudové aplikace nebo akce** a vyberte aplikace, které chcete chránit pomocí těchto zásad. Kliknutím na **Hotovo** zavřete podokno.
 10. V části **řízení přístupu** v podokně vyberte **udělit** . 
@@ -139,7 +139,7 @@ Jednotné přihlašování vyžaduje, aby vaše zařízení bylo zaregistrované
 >Aby se konfigurace aplikace použily, musí už na zařízení být chráněný prohlížeč nebo jiná aplikace uživatele spravovaná [zásadami ochrany aplikací Intune](app-protection-policy.md).
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **aplikace** > **zásady** > konfigurace aplikace**Přidat** > **spravované aplikace**.
+2. Vyberte **aplikace**  >  **zásady konfigurace aplikace**  >  **Přidat**  >  **spravované aplikace**.
 3. Na stránce **základy** v podokně **vytvořit zásadu konfigurace aplikace** zadejte **název** a volitelný **Popis** nastavení konfigurace aplikace.
 4. Zvolte **vybrat veřejnou aplikaci** a zvolte **Managed Browser** a/nebo **Edge** pro iOS/iPadOS, pro Android nebo pro obojí.
 5. Kliknutím na **Vybrat** se vraťte do podokna **vytvořit zásadu konfigurace aplikace** .
@@ -178,7 +178,7 @@ Pokud je toto nastavení nastaveno na hodnotu "NEPRAVDA":
 
 Pomocí výše uvedeného postupu vytvoříte konfiguraci aplikace Microsoft Edge. Při výběru **nastavení konfigurace** v podokně **Konfigurace** zadejte následující pár klíč-hodnota (krok 9):
 
-| Key                              |  Hodnota   |
+| Klíč                              |  Hodnota   |
 |----------------------------------|----------|
 | **com. Microsoft. Intune. useEdge** | **podmínka** |
 
@@ -224,7 +224,7 @@ Toto nastavení vám umožňuje nakonfigurovat domovskou stránku, kterou uživa
 
 Pomocí postupu vytvoření konfigurace aplikace Microsoft Edge zadejte následující pár klíč-hodnota:
 
-|                                Key                                |                                                           Hodnota                                                            |
+|                                Klíč                                |                                                           Hodnota                                                            |
 |-------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
 | <strong>com.microsoft.intune.mam.managedbrowser.homepage</strong> | Zadejte platnou adresu URL. Nesprávné adresy URL se z bezpečnostních důvodů blokují.<br>Příklad: `https://www.bing.com` |
 
@@ -238,7 +238,7 @@ Toto nastavení vám umožňuje nakonfigurovat sadu záložek, které budou dost
 
 Pomocí postupu vytvoření konfigurace aplikace Microsoft Edge zadejte následující pár klíč-hodnota:
 
-|                                Key                                 |                                                                                                                                                                                                                                                         Hodnota                                                                                                                                                                                                                                                          |
+|                                Klíč                                 |                                                                                                                                                                                                                                                         Hodnota                                                                                                                                                                                                                                                          |
 |--------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | <strong>com.microsoft.intune.mam.managedbrowser.bookmarks</strong> | Hodnotou pro tuto konfiguraci je seznam záložek. Každou záložku tvoří název záložky a adresa URL záložky. Název a adresu URL oddělte znakem <strong>&#124;</strong>.<br><br>Příklad:<br> <code>Microsoft Bing&#124;https://www.bing.com</code><br><br>Pokud chcete nakonfigurovat více záložek, oddělte každý pár těmito dvěma znaky: <strong>&#124;&#124;</strong>.<br><br>Příklad:<br> <code>Bing&#124;https://www.bing.com&#124;&#124;Contoso&#124;https://www.contoso.com</code> |
 
@@ -246,7 +246,7 @@ Pomocí postupu vytvoření konfigurace aplikace Microsoft Edge zadejte následu
 
 Pomocí postupu vytvoření konfigurace aplikace Microsoft Edge zadejte následující pár klíč-hodnota:
 
-|Key|Hodnota|
+|Klíč|Hodnota|
 |-|-|
 |Vybírejte z těchto možností:<br><ul><li>Určení povolených adres URL (povolené jsou pouze tyto adresy URL; na žádné jiné weby nebudou mít uživatelé přístup):<br> **com.microsoft.intune.mam.managedbrowser.AllowListURLs**<br><br></li><li>Určení blokovaných adres URL (na všechny ostatní weby budou mít uživatelé přístup):<br>**com.microsoft.intune.mam.managedbrowser.BlockListURLs**</li></ul>|Odpovídající hodnotou klíče je seznam adres URL. Zadejte všechny adresy, které chcete povolit nebo blokovat, jako jedinou hodnotu oddělenou znaky svislé čáry **&#124;**.<br><br>Příklady:<br><br><code>URL1&#124;URL2&#124;URL3</code><br><code>http://*.contoso.com/*&#124;https://*.bing.com/*&#124;https://expenses.contoso.com</code>|
 
@@ -271,7 +271,7 @@ V následující části najdete informace o povolených formátech a zástupný
 
 - Informace o povolených vzorech, které můžete použít při zadávání adres URL, najdete v následující tabulce:
 
-|                  zprostředkovatele identity                  |                     Podrobnosti                      |                                                Shody                                                |                                Neodpovídá                                 |
+|                  URL                  |                     Podrobnosti                      |                                                Shody                                                |                                Neodpovídá                                 |
 |---------------------------------------|--------------------------------------------------|-------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
 |        `http://www.contoso.com`         |              Odpovídá jediné stránce               |                                            `www.contoso.com`                                            |  `host.contoso.com`<br /><br />`www.contoso.com/images`<br /><br />`contoso.com`/   |
 |          `http://contoso.com`           |              Odpovídá jediné stránce               |                                             `contoso.com/`                                              | `host.contoso.com`<br /><br />`www.contoso.com/images`<br /><br />`www.contoso.com` |
@@ -312,7 +312,7 @@ Jednou z výhod tohoto modelu je, že když se uživatel pokusí otevřít odkaz
 
 Pomocí postupu vytvoření konfigurace aplikace Microsoft Edge zadejte následující pár klíč-hodnota:
 
-| Key                                                                | Hodnota                                                 |
+| Klíč                                                                | Hodnota                                                 |
 |--------------------------------------------------------------------|-------------------------------------------------------|
 | **com. Microsoft. Intune. mam. managedbrowser. AllowTransitionOnBlock** | **False** blokuje výskyt těchto jemných přechodů. |
 

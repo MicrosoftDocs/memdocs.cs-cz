@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 01/09/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5d37bf060f11be9e295a9ef2743fa0ba33844df7
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 6460691ee80a5aed7571ebc2a4471a1d5099859f
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79325887"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990889"
 ---
 # <a name="deploying-apps-using-intune-on-the-gcc-high-and-dod-environments"></a>Nasazení aplikací pomocí Intune pro prostředí RSZ s vysokým a DoD 
 
@@ -41,10 +41,10 @@ Pokud chcete přidat obchodní aplikaci, která je určená pro prostředí RSZ 
 Pokud potřebujete [stáhnout offline aplikaci licencovanou](https://docs.microsoft.com/microsoft-store/distribute-offline-apps#download-an-offline-licensed-app) z Microsoft Store pro firmy, postupujte podle těchto kroků a stáhněte aplikaci: 
 
 1. Přihlaste se ke [Storu pro firmy](https://businessstore.microsoft.com/).
-2. Vyberte **Spravovat** > **Nastavení**.
+2. Vyberte **Spravovat**  >  **Nastavení**.
 3. V části **možnosti nákupu**nastavte **Zobrazit offline aplikace** na **zapnuto**.
 
-Pokud je v případě, že je k dispozici offline verze, při nákupu pro aplikace, můžete zvolit možnost změnit typ licence na offline. Po získání aplikace ji můžete spravovat tak, že vyberete **Spravovat** > **produkty & služby** ve [Storu pro firmy](https://businessstore.microsoft.com/). Navíc můžete stáhnout aplikaci a její závislosti. Pak můžete tuto staženou aplikaci (a její závislosti) nasadit uživatelům pomocí Intune.  
+Pokud je v případě, že je k dispozici offline verze, při nákupu pro aplikace, můžete zvolit možnost změnit typ licence na offline. Po získání aplikace ji můžete spravovat tak, že vyberete **Spravovat**  >  **produkty & služby** ve [Storu pro firmy](https://businessstore.microsoft.com/). Navíc můžete stáhnout aplikaci a její závislosti. Pak můžete tuto staženou aplikaci (a její závislosti) nasadit uživatelům pomocí Intune.  
 
 ## <a name="syncing-intune-to-the-store-for-business"></a>Synchronizuje se Intune s Storem pro firmy. 
 
