@@ -2,7 +2,7 @@
 title: Podpora pro Windows 10
 titleSuffix: Configuration Manager
 description: Přečtěte si o verzích Windows 10, které jsou podporované jako klienti nebo pro OSD s Configuration Manager
-ms.date: 04/01/2020
+ms.date: 05/27/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: a1626a65-da22-49e0-9564-d2f752ea3f4b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 7241db0220bf4adf9b55341514afb03de33c2589
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: a67a22f788af39dacb9f3a39e91e0f28444c6988
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81709625"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83879074"
 ---
 # <a name="support-for-windows-10-in-configuration-manager"></a>Podpora pro Windows 10 v Configuration Manager  
 
@@ -53,20 +53,21 @@ V následující tabulce jsou uvedeny verze systému Windows 10, které lze pou�
 | **Enterprise 2015 LTSB** <!--10/14/2025-->   | ![Podporuje se](media/green_check.png) | ![Podporuje se](media/green_check.png) | ![Podporuje se](media/green_check.png) | ![Podporuje se](media/green_check.png) | ![Podporuje se](media/green_check.png) |
 | **Enterprise 2016 LTSB** <!--10/13/2026-->   | ![Podporuje se](media/green_check.png) | ![Podporuje se](media/green_check.png) | ![Podporuje se](media/green_check.png) | ![Podporuje se](media/green_check.png) | ![Podporuje se](media/green_check.png) |
 | **Enterprise LTSC 2019** <!--01/09/2029-->   | ![Podporuje se](media/green_check.png) | ![Podporuje se](media/green_check.png) | ![Podporuje se](media/green_check.png) | ![Podporuje se](media/green_check.png) | ![Podporuje se](media/green_check.png) |
-| **1709**<br>(10.0.16299)   <!--04/14/2020-->   | ![Podporuje se](media/green_check.png) | ![Podporuje se](media/green_check.png) | ![Podporuje se](media/green_check.png) | ![Podporuje se](media/green_check.png) | ![Podporuje se](media/green_check.png) |
+| **1709**<br>(10.0.16299)   <!--10/13/2020-->   | ![Podporuje se](media/green_check.png) | ![Podporuje se](media/green_check.png) | ![Podporuje se](media/green_check.png) | ![Podporuje se](media/green_check.png) | ![Podporuje se](media/green_check.png) |
 | **1803**<br>(10.0.17134)   <!--11/10/2020-->   | ![Podporuje se](media/green_check.png) | ![Podporuje se](media/green_check.png) | ![Podporuje se](media/green_check.png) | ![Podporuje se](media/green_check.png) | ![Podporuje se](media/green_check.png) |
 | **1809**<br>(10.0.17763)   <!--05/11/2021-->   | ![Podporuje se](media/green_check.png) | ![Podporuje se](media/green_check.png) | ![Podporuje se](media/green_check.png) | ![Podporuje se](media/green_check.png) | ![Podporuje se](media/green_check.png) |
 | **1903**<br>(10.0.18362)   <!--12/08/2020-->   | ![Nepodporuje se](media/Red_X.png) | ![Podporuje se](media/green_check.png) | ![Podporuje se](media/green_check.png) | ![Podporuje se](media/green_check.png) | ![Podporuje se](media/green_check.png) |
-| **1909**<br>(10.0.18363)   <!--05/11/2021-->   | ![Nepodporuje se](media/Red_X.png) | ![Nepodporuje se](media/Red_X.png) | ![Podporuje se](media/green_check.png) | ![Podporuje se](media/green_check.png) | ![Podporuje se](media/green_check.png) |
+| **1909**<br>(10.0.18363)   <!--05/10/2022-->   | ![Nepodporuje se](media/Red_X.png) | ![Nepodporuje se](media/Red_X.png) | ![Podporuje se](media/green_check.png) | ![Podporuje se](media/green_check.png) | ![Podporuje se](media/green_check.png) |
+| **2004**<br>(10.0.19041)   <!--??/??/2021-->   | ![Nepodporuje se](media/Red_X.png) | ![Nepodporuje se](media/Red_X.png) | ![Nepodporuje se](media/Red_X.png) | ![Nepodporuje se](media/Red_X.png) | ![Podporuje se](media/green_check.png) |
 
 <!-- lifecycle reference: https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet -->
 
 Další informace o životním cyklu Windows najdete na [listu faktu pro životní cyklus Windows](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet) .
 
-| Key |
+| Klíč |
 |--|
-| ![](media/green_check.png) = **Podporovaná podpora**  |
-| ![](media/Red_X.png) = **Nepodporovaná není podporovaná** |
+| ![](media/green_check.png)Podporovaná podpora  =  **Supported**  |
+| ![](media/Red_X.png)Nepodporovaná není podporovaná  =  **Not supported** |
 
 ### <a name="windows-10-client-support-notes"></a><a name="bkmk_win10-notes"></a>Poznámky k podpoře klientů s Windows 10
 
@@ -93,7 +94,7 @@ Pokud chcete poskytnout zpětnou vazbu ke službě Windows Insider, použijte [C
 
 ## <a name="windows-10-adk"></a>Windows 10 ADK
 
-Pokud nasazujete operační systémy pomocí Configuration Manager, ADK Windows je požadovaná externí závislost. Další informace najdete v těchto článcích:
+Pokud nasazujete operační systémy pomocí Configuration Manager, ADK Windows je požadovaná externí závislost. Další informace najdete v následujících článcích:
 
 - [Požadavky na infrastrukturu pro nasazení operačního systému](../../../osd/plan-design/infrastructure-requirements-for-operating-system-deployment.md#windows-adk-for-windows-10)
 
@@ -112,12 +113,13 @@ V následující tabulce jsou uvedeny verze ADK Windows 10, které můžete pou�
 | **1803**<br>(10.1.17134) | ![Zpětně kompatibilní](media/blue_compat.png) | ![Zpětně kompatibilní](media/blue_compat.png) | ![Nepodporuje se](media/Red_X.png) | ![Nepodporuje se](media/Red_X.png) | ![Nepodporuje se](media/Red_X.png) |
 | **1809**<br>(10.1.17763) | ![Podporuje se](media/green_check.png) | ![Podporuje se](media/green_check.png) | ![Zpětně kompatibilní](media/blue_compat.png) | ![Zpětně kompatibilní](media/blue_compat.png) | ![Nepodporuje se](media/Red_X.png) |
 | **1903**<br>(10.1.18362) | ![Nepodporuje se](media/Red_X.png) | ![Podporuje se](media/green_check.png) | ![Podporuje se](media/green_check.png) | ![Podporuje se](media/green_check.png) | ![Podporuje se](media/green_check.png) |
+| **2004**<br>(10.1.19041) | ![Nepodporuje se](media/Red_X.png) | ![Nepodporuje se](media/Red_X.png) | ![Nepodporuje se](media/Red_X.png) | ![Nepodporuje se](media/Red_X.png) | ![Podporuje se](media/green_check.png) |
 
-|Key|
+|Klíč|
 |--|
-| ![](media/green_check.png) = **Podporovaná podpora** <br/> V této tabulce je uvedena pouze podpora systému Windows ADK ve vztahu k verzi Configuration Manager. Microsoft doporučuje používat sadu Windows ADK, která odpovídá verzi Windows, kterou nasazujete. Při nasazení nejnovější verze Windows 10 použijte nejnovější verzi Windows ADK. Nejnovější verze systému Windows ADK může podporovat nasazení starších verzí operačního systému, například Windows 8.1.<!-- SCCMDocs issue 1229 --> Další informace o podpoře součástí Windows ADK najdete v článku [podporované platformy DISM](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-supported-platforms) a [požadavky na USMT](https://docs.microsoft.com/windows/deployment/usmt/usmt-requirements#bkmk-1). |
-| ![Zpětně kompatibilní](media/blue_compat.png)  = **zpětně** kompatibilní <br/> Tato kombinace není testována, ale měla by fungovat. Podíváme se na známé problémy nebo upozornění. |
-| ![](media/Red_X.png) = **Nepodporovaná není podporovaná** |
+| ![](media/green_check.png)Podporovaná podpora  =  **Supported** <br/> V této tabulce je uvedena pouze podpora systému Windows ADK ve vztahu k verzi Configuration Manager. Microsoft doporučuje používat sadu Windows ADK, která odpovídá verzi Windows, kterou nasazujete. Při nasazení nejnovější verze Windows 10 použijte nejnovější verzi Windows ADK. Nejnovější verze systému Windows ADK může podporovat nasazení starších verzí operačního systému, například Windows 8.1.<!-- SCCMDocs issue 1229 --> Další informace o podpoře součástí Windows ADK najdete v článku [podporované platformy DISM](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-supported-platforms) a [požadavky na USMT](https://docs.microsoft.com/windows/deployment/usmt/usmt-requirements#bkmk-1). |
+| ![Zpětně kompatibilní ](media/blue_compat.png)   =  **zpětně** kompatibilní <br/> Tato kombinace není testována, ale měla by fungovat. Podíváme se na známé problémy nebo upozornění. |
+| ![](media/Red_X.png)Nepodporovaná není podporovaná  =  **Not supported** |
 
 ### <a name="windows-10-adk-support-notes"></a><a name="bkmk_adk-notes"></a>Poznámky k podpoře pro Windows 10 ADK
 

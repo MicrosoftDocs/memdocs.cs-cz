@@ -10,12 +10,12 @@ ms.assetid: 463ce307-59dd-4abd-87b8-42ca9db178d7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 58b66639094a602206114cd75a724504618ad38c
-ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
+ms.openlocfilehash: ac5b3ca8e8e2231bb421838fa56b20253ddfcb74
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82110028"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83878375"
 ---
 # <a name="how-to-use-the-configuration-manager-console"></a>Jak používat konzolu Configuration Manager
 
@@ -27,7 +27,7 @@ Správci používají konzolu Configuration Manager ke správě prostředí Conf
 
 Konzola Configuration Manager je vždy nainstalována na každém serveru lokality. Můžete ho také nainstalovat na jiné počítače. Další informace najdete v tématu [Instalace konzoly Configuration Manager](../deploy/install/install-consoles.md).
 
-Nejjednodušší způsob, jak otevřít konzolu na počítači s Windows 10, můžete stisknout **Start** a začít `Configuration Manager console`psát. Možná nebudete muset zadávat celý řetězec pro Windows, abyste našli nejlepší shodu.
+Nejjednodušší způsob, jak otevřít konzolu na počítači s Windows 10, můžete stisknout **Start** a začít psát `Configuration Manager console` . Možná nebudete muset zadávat celý řetězec pro Windows, abyste našli nejlepší shodu.
 
 Pokud procházíte v nabídce Start, vyhledejte ikonu **konzoly Configuration Manager** ve skupině **Microsoft Endpoint Manager** .
 
@@ -50,7 +50,7 @@ Pokud se chcete připojit k jinému serveru lokality, použijte následující p
 
     ![Okno připojení k webu zadejte plně kvalifikovaný název domény serveru lokality.](media/site-server-fqdn.png)  
 
-3. Vyberte **Connect** (Připojit).  
+3. Vyberte **Připojit**.  
 
 Počínaje verzí 1810 můžete určit minimální úroveň ověřování pro správce pro přístup k Configuration Manager lokalit. Tato funkce vynutila správcům přihlášení k systému Windows s požadovanou úrovní. Další informace najdete v tématu [plánování poskytovatele serveru SMS](../../plan-design/hierarchy/plan-for-the-sms-provider.md#bkmk_auth). <!--1357013-->  
 
@@ -172,7 +172,7 @@ značte
 
 ### <a name="start-microsoft-teams-chat"></a>Spustit chat Microsoft Teams
 
-1. Přejít do konzoly**zabezpečení** >  **Správa** > **připojení**.
+1. Přejít do **Administration**  >  konzoly**zabezpečení**Správa  >  **připojení**.
 1. Klikněte pravým tlačítkem na připojení ke konzole uživatele a vyberte **Spustit chat Microsoft Teams**.
     - Pokud se hlavní název uživatele pro vybraného správce nenajde, **Spusťte chat Microsoft Teams chat** šedě.
     - Pokud na zařízení, ze kterého spouštíte konzolu, není nainstalovaný Microsoft teams, zobrazí se chybová zpráva, včetně odkazu ke stažení.
@@ -228,7 +228,7 @@ Pro větev Technical Preview platí následující oznámení:
 - Neshoda verzí konzoly (kritická): verze konzoly neodpovídá verzi lokality.  
 - Je k dispozici upgrade lokality (upozornění): je k dispozici nový balíček aktualizace.  
 
-Další informace a pomoc při řešení potíží najdete v souboru **SmsAdminUI. log** v počítači konzoly. Ve výchozím nastavení se tento soubor protokolu nachází v následující cestě: `C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\AdminUILog\SmsAdminUI.log`.
+Další informace a pomoc při řešení potíží najdete v souboru **SmsAdminUI. log** v počítači konzoly. Ve výchozím nastavení se tento soubor protokolu nachází v následující cestě: `C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\AdminUILog\SmsAdminUI.log` .
 
 
 ## <a name="in-console-documentation-dashboard"></a><a name="bkmk_doc-dashboard"></a>Řídicí panel dokumentace konzoly
@@ -255,7 +255,7 @@ Uzel **dokumentace** nemá žádnou explicitní konfiguraci proxy serveru. Použ
 
 Konzola Configuration Manager má následující možnosti příkazového řádku:
 
-|Možnost|Popis|  
+|Možnost|Description|  
 |------------|-----------------|  
 |`/sms:debugview=1`|Nástroj DebugView je součástí všech ResultViews, které určují zobrazení. Nástroj DebugView zobrazí nezpracované vlastnosti (názvy a hodnoty).|  
 |`/sms:NamespaceView=1`|Zobrazuje zobrazení oboru názvů v konzole nástroje.|  
@@ -356,7 +356,7 @@ V pracovním prostoru **prostředky a kompatibilita** , přejít na uzel **zař�
 
 > [!Note]  
 > - Tato karta není momentálně k dispozici v poduzlu zařízení v uzlu **kolekce zařízení** . Například když vyberete možnost **zobrazení členů** v kolekci.
-> - Tato karta se pro některé uživatele nemusí naplnit očekávaným způsobem. Úplný seznam kolekcí, do kterých zařízení patří, zobrazíte tak, že musíte mít roli zabezpečení **správce s úplnými oprávněními** . Jedná se o známý problém. <!--5107309--> <!--5107309-->
+> - Tato karta se pro některé uživatele nemusí naplnit očekávaným způsobem. Úplný seznam kolekcí, do kterých zařízení patří, zobrazíte tak, že musíte mít roli zabezpečení **správce s úplnými oprávněními** . Jde o známý problém. <!--5107309--> <!--5107309-->
 
 
 #### <a name="add-smbios-guid-column-to-device-and-device-collection-nodes"></a>Přidat sloupec SMBIOS GUID do uzlů kolekce zařízení a zařízení
@@ -391,7 +391,7 @@ Další informace o tom, jak zobrazit sloupec, který není výchozí, najdete v
 <!-- 3614690 -->
 Počínaje verzí 1806 při hledání v kolekci zařízení nehledá klíčové slovo u všech vlastností objektu. Pokud nejste konkrétní informace o tom, co hledat, vyhledává se v následujících čtyřech vlastnostech:
 
-- Název
+- Name
 - Počet primárních uživatelů:
 - Aktuálně přihlášený uživatel
 - Jméno posledního přihlášeného uživatele
@@ -419,9 +419,9 @@ V pracovním prostoru **softwarová knihovna** rozbalte položku **Správa aplik
 
 1. V konzole Configuration Manager klikněte na jedno z následujících míst:
 
-   - **Software knihovny** > **softwaru aktualizuje** > **všechny aktualizace softwaru** .
-   - **Softwarová knihovna** > **Windows 10 – Údržba** > **všech aktualizací Windows 10**
-   - **Sada softwarových knihoven** > **Office 365 Správa** > klientů Office**365 – aktualizace**
+   - **Softwarová knihovna**  >  **Aktualizace softwaru**  >  **Všechny aktualizace softwaru**
+   - **Softwarová knihovna**  >  **Údržba**  >  Windows 10 **Všechny aktualizace Windows 10**
+   - **Softwarová knihovna**  >  Správa klientů Office **365**  >  **Aktualizace Office 365**
 
 1. Vyberte jakoukoli aktualizaci, kterou vyžaduje aspoň jedno zařízení.
 1. Podívejte se na kartu **Souhrn** a v části **Statistika**Najděte výsečový graf.

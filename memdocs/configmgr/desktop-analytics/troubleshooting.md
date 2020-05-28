@@ -10,12 +10,13 @@ ms.assetid: 63e08f3f-9558-4ed7-9bf3-3a185ddaac5c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 46a320f4c6e32b57dc11beb325c34c300536381f
-ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
+ms.reviewer: acabello
+ms.openlocfilehash: 69694fa39375daf436abf59fcd48edda41a9fc62
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82693332"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268245"
 ---
 # <a name="troubleshoot-desktop-analytics"></a>Řešení potíží s Desktop Analytics
 

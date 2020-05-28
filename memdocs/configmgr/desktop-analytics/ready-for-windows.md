@@ -10,13 +10,14 @@ ms.assetid: 3f09226c-4ca7-4e43-9ae8-5ee6e78e6bc2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.reviewer: acabello
 ROBOTS: NOINDEX
-ms.openlocfilehash: b3f378ce519085eb1d2714a901e20b29b62b0cd4
-ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
+ms.openlocfilehash: 75dd74e3c1019c9819b44a0ffa8936eeb9eee366
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82109977"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268347"
 ---
 # <a name="ready-for-modern-desktop-retirement-faq"></a>Nejčastější dotazy k vyřazení moderních desktopových prostředí
 

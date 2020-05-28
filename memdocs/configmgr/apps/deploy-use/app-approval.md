@@ -2,7 +2,7 @@
 title: Schválení aplikací
 titleSuffix: Configuration Manager
 description: Přečtěte si o nastavení a chování při schvalování aplikací v Configuration Manager.
-ms.date: 04/30/2020
+ms.date: 05/04/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 20493c86-6454-4b35-8f22-0d049b68b8bb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: fac75f0f13141c86b29d0213b3c7b06b9f603062
-ms.sourcegitcommit: 2aa97d1b6409575d731c706faa2bc093c2b298c4
+ms.openlocfilehash: f725c1b7dc380a84cd94e666b98dbd309df3744c
+ms.sourcegitcommit: 14d7dd0a99ebd526c9274d5781c298c828323ebf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82643231"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82802051"
 ---
 # <a name="approve-applications-in-configuration-manager"></a>Schvalování aplikací v Configuration Manager
 
@@ -109,6 +109,9 @@ S těmito požadavky obdrží příjemci e-mail s oznámením o žádosti. Pokud
 
 - Konfigurace [e-mailových oznámení pro výstrahy](../../core/servers/manage/use-alerts-and-the-status-system.md#to-configure-email-notification-for-alerts).  
 
+    > [!NOTE]
+    > Administrativní uživatel, který nasazuje aplikaci, potřebuje oprávnění k vytvoření výstrahy a předplatného. Pokud tento uživatel nemá tato oprávnění, zobrazí se na konci **Průvodce nasazením softwaru**Chyba: nemáte oprávnění zabezpečení k provedení této operace.<!-- 2810283 -->
+
 - Povolte poskytovateli serveru SMS v primární lokalitě, aby používal certifikát.<!--SCCMDocs-pr issue 3135--> Použijte jednu z následujících možností:  
 
   - Doporučil Povolit [Rozšířený protokol HTTP](../../core/plan-design/hierarchy/enhanced-http.md) pro primární lokalitu.
@@ -127,39 +130,39 @@ U těchto dalších volitelných požadavků můžou příjemci žádost schvál
 
 - Povolte službu pro správu poskytovatele služby SMS přes bránu pro správu cloudu. V konzole Configuration Manager klikněte na pracovní prostor **Správa** , rozbalte položku **Konfigurace lokality**a vyberte uzel **servery a role systému lokality** . Vyberte server s rolí poskytovatele služby SMS. V podokně podrobností vyberte roli **poskytovatele služby SMS** a v pásu karet na kartě role webového serveru vyberte možnost **vlastnosti** . Vyberte možnost, která **povolí Configuration Manager provoz brány pro správu cloudu pro službu správy**.  
 
-  - Poskytovatel serveru SMS vyžaduje **rozhraní .NET 4.5.2** nebo novější.  
+- Poskytovatel serveru SMS vyžaduje **rozhraní .NET 4.5.2** nebo novější.  
 
-- [Brána pro správu cloudu](../../core/clients/manage/cmg/plan-cloud-management-gateway.md)  
+- Nastavte [bránu pro správu cloudu](../../core/clients/manage/cmg/plan-cloud-management-gateway.md).
 
-- Zprovoznění lokality do [služeb Azure](../../core/servers/deploy/configure/azure-services-wizard.md) pro **správu cloudu**  
+- Připojte lokalitu ke [službám Azure](../../core/servers/deploy/configure/azure-services-wizard.md) pro **správu cloudu**.
 
-  - Povolit [zjišťování uživatelů Azure AD](../../core/servers/deploy/configure/configure-discovery-methods.md#azureaadisc)  
+- Povolte [zjišťování uživatelů Azure AD](../../core/servers/deploy/configure/configure-discovery-methods.md#azureaadisc).
 
-  - Ruční konfigurace nastavení v Azure AD:  
+- Ruční konfigurace nastavení v Azure AD:  
 
-        1. Pro uživatele s oprávněními *globálního správce* použijte [Azure Portal](https://portal.azure.com) . Přejít na **Azure Active Directory**a vyberte **Registrace aplikací**.  
+    1. Pro uživatele s oprávněními *globálního správce* použijte [Azure Portal](https://portal.azure.com) . Přejít na **Azure Active Directory**a vyberte **Registrace aplikací**.  
 
-        2. Vyberte aplikaci, kterou jste vytvořili pro Configuration Manager integraci **správy cloudu** .  
+    1. Vyberte aplikaci, kterou jste vytvořili pro Configuration Manager integraci **správy cloudu** .  
 
-        3. V nabídce **Správa** vyberte **ověřování**.  
+    1. V nabídce **Správa** vyberte **ověřování**.  
 
-            1. V části **identifikátory URI pro přesměrování** vložte následující cestu:`https://<CMG FQDN>/CCM_Proxy_ServerAuth/ImplicitAuth`  
+        1. V části **identifikátory URI pro přesměrování** vložte následující cestu:`https://<CMG FQDN>/CCM_Proxy_ServerAuth/ImplicitAuth`  
 
-            2. Nahraďte `<CMG FQDN>` plně kvalifikovaným názvem domény (FQDN) vaší služby brány pro správu cloudu (CMG). Například GraniteFalls.Contoso.com.  
+        1. Nahraďte `<CMG FQDN>` plně kvalifikovaným názvem domény (FQDN) vaší služby brány pro správu cloudu (CMG). Například GraniteFalls.Contoso.com.  
 
-            3. Potom vyberte **Uložit**.  
+        1. Potom vyberte **Uložit**.  
 
-        4. V nabídce **Správa** vyberte možnost **manifest**.  
+    1. V nabídce **Správa** vyberte možnost **manifest**.  
 
-            1. V podokně upravit manifest Najděte vlastnost **oauth2AllowImplicitFlow** .  
+        1. V podokně upravit manifest Najděte vlastnost **oauth2AllowImplicitFlow** .  
 
-            2. Změňte její hodnotu na **true**. Například celá čára by měla vypadat jako na následujícím řádku:`"oauth2AllowImplicitFlow": true,`  
+        1. Změňte její hodnotu na **true**. Například celá čára by měla vypadat jako na následujícím řádku:`"oauth2AllowImplicitFlow": true,`  
 
-            3. Vyberte **Uložit**.  
+        1. Vyberte **Uložit**.  
 
 ### <a name="configure-email-approval"></a>Konfigurace schválení e-mailu
 
-1. V konzole Configuration Manager [Nasaďte aplikaci](deploy-applications.md) jako dostupnou pro kolekci uživatelů. Na stránce **nastavení nasazení** Povolte schválení. Pak zadejte jednu nebo více e-mailových adres pro příjem oznámení. Jednotlivé e-mailové adresy oddělujte středníkem`;`().  
+1. V konzole Configuration Manager [Nasaďte aplikaci](deploy-applications.md) jako dostupnou pro kolekci uživatelů. Na stránce **nastavení nasazení** Povolte schválení. Pak zadejte jednu nebo více e-mailových adres pro příjem oznámení. Jednotlivé e-mailové adresy oddělujte středníkem ( `;` ).  
 
      > [!Note]  
      > Kdokoli ve vaší organizaci Azure AD, který obdrží e-mail, může žádost schválit. Nepředávejte e-mail ostatním uživatelům, pokud nechcete, aby provedli akci.  

@@ -10,12 +10,12 @@ ms.assetid: 97f2d81a-2c58-442c-88bc-defd5a1cd48f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1166d4c674207ed3590901465ca90a98ce3ae78f
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 4403c8d0c57fba8fb63e3df729fb8a48ff123362
+ms.sourcegitcommit: d8dc05476ecd5db7ecb36dc649b566b349ba263d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82075060"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83732869"
 ---
 # <a name="manage-boot-images-with-configuration-manager"></a>Správa spouštěcích imagí pomocí Configuration Manager
 
@@ -25,7 +25,7 @@ Spouštěcí bitová kopie v Configuration Manager je image prostředí [Windows
 
 ## <a name="default-boot-images"></a><a name="BKMK_BootImageDefault"></a>Výchozí spouštěcí image
 
-Configuration Manager poskytuje dvě výchozí spouštěcí image: jednu pro podporu platforem x86 a druhou pro podporu platforem x64. Tyto image jsou uložené ve složkách *x64* nebo *i386* v následující sdílené složce na serveru lokality: `\\<SiteServerName>\SMS_<sitecode>\osd\boot\`. Výchozí spouštěcí image se aktualizují nebo znovu vygenerují v závislosti na tom, jakou akci chcete provést.
+Configuration Manager poskytuje dvě výchozí spouštěcí image: jednu pro podporu platforem x86 a druhou pro podporu platforem x64. Tyto image jsou uložené ve složkách *x64* nebo *i386* v následující sdílené složce na serveru lokality: `\\<SiteServerName>\SMS_<sitecode>\osd\boot\` . Výchozí spouštěcí image se aktualizují nebo znovu vygenerují v závislosti na tom, jakou akci chcete provést.
 
 Pro kteroukoli z akcí popsaných u výchozích spouštěcích imagí zvažte následující chování:
 
@@ -86,7 +86,7 @@ Během instalace lokality Configuration Manager automaticky přidávají spoušt
 | Verze prostředí Windows PE pro spouštěcí bitové kopie přizpůsobitelné z konzoly Configuration Manager | Windows PE 10 |
 | Podporované verze prostředí Windows PE pro spouštěcí bitové kopie, *které nelze přizpůsobit* z konzoly Configuration Manager | – Windows PE 3,1<sup>[Poznámka 1](#bkmk_note1)</sup> <br> – Windows PE 5 |
 
-Použijte například konzolu Configuration Manager k přizpůsobení spouštěcích imagí založených na Windows PE 10 od Windows ADK pro Windows 10. Spouštěcí bitovou kopii založenou na Windows PE 5 si můžete přizpůsobit z jiného počítače pomocí verze nástroje DISM z Windows ADK pro Windows 8. Pak přidejte vlastní spouštěcí bitovou kopii do konzoly Configuration Manager. Další informace najdete v těchto článcích:
+Použijte například konzolu Configuration Manager k přizpůsobení spouštěcích imagí založených na Windows PE 10 od Windows ADK pro Windows 10. Spouštěcí bitovou kopii založenou na Windows PE 5 si můžete přizpůsobit z jiného počítače pomocí verze nástroje DISM z Windows ADK pro Windows 8. Pak přidejte vlastní spouštěcí bitovou kopii do konzoly Configuration Manager. Další informace najdete v následujících článcích:
 
 - [Přizpůsobení spouštěcích imagí](customize-boot-images.md)
 - [Podpora pro Windows 10 ADK](../../core/plan-design/configs/support-for-windows-10.md#windows-10-adk)
@@ -158,7 +158,7 @@ Přidejte nebo odeberte ovladače zařízení v imagi nebo upravte vlastnosti sp
 
 4. Úpravou kteréhokoli z následujících nastavení můžete změnit chování spouštěcí bitové kopie.  
 
-#### <a name="images"></a>Obrázky
+#### <a name="images"></a>Image
 
 Pokud změníte vlastnosti spouštěcí bitové kopie pomocí externího nástroje, na kartě **bitové kopie** vyberte možnost **znovu načíst**.  
 
@@ -188,7 +188,7 @@ Na kartě **Vlastní nastavení** vyberte některé z následujících nastaven�
 - Vyberte možnost **Povolit předspouštěcí příkazy** k určení příkazu, který se má spustit před spuštěním pořadí úloh. Pokud tuto možnost povolíte, zadejte také příkazový řádek, který se má spustit, a všechny podpůrné soubory vyžadované příkazem.  
 
     > [!WARNING]  
-    > Přidejte `cmd /c` na začátek příkazového řádku. Pokud nezadáte `cmd /c`, příkaz se po spuštění nezavře. Nasazení bude i nadále čekat na dokončení příkazu a nespustí žádné další nakonfigurované příkazy nebo akce.  
+    > Přidejte `cmd /c` na začátek příkazového řádku. Pokud nezadáte `cmd /c` , příkaz se po spuštění nezavře. Nasazení bude i nadále čekat na dokončení příkazu a nespustí žádné další nakonfigurované příkazy nebo akce.  
 
     > [!TIP]  
     > Během vytváření média pořadí úloh průvodce zapíše ID balíčku a Předstartovní příkazový řádek do souboru **CreateTSMedia. log** . Tyto informace zahrnují hodnotu všech proměnných pořadí úkolů. Tento protokol je v počítači, na kterém je spuštěna konzola Configuration Manager. Zkontrolujte tento soubor protokolu a ověřte hodnoty proměnných pořadí úkolů.  
@@ -201,13 +201,8 @@ Na kartě **Vlastní nastavení** vyberte některé z následujících nastaven�
 
 - **Nastavení výchozího rozložení klávesnice v prostředí WinPE**: <!--4910348-->Počínaje verzí 1910 nakonfigurujte výchozí rozložení klávesnice pro spouštěcí bitovou kopii. Pokud vyberete jiný jazyk než en-US, Configuration Manager dál obsahuje en-US v dostupných vstupních národních prostředích. V zařízení je počáteční rozložení klávesnice vybraným národním prostředím, ale pokud to bude potřeba, může uživatel zařízení v případě potřeby přepnout na en-US.
 
-    > [!Tip]
-    > Rutina [set-CMBootImage](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmbootimage?view=sccm-ps) prostředí PowerShell nyní obsahuje nový parametr `-InputLocale`. Příklad:
-    >
-    > ```PowerShell
-    > # Set boot image keyboard layout to Russian (Russia)
-    > Set-CMBootimage -Id "CM100004" -InputLocale "ru-ru"`
-    > ```
+> [!Tip]
+> Pomocí rutiny PowerShellu [set-CMBootImage](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmbootimage?view=sccm-ps) můžete nakonfigurovat tato nastavení ze skriptu.
 
 #### <a name="optional-components"></a>Volitelné součásti
 

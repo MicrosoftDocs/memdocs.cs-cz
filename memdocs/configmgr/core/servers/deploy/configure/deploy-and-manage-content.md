@@ -2,7 +2,7 @@
 title: Nasadit obsah
 titleSuffix: Configuration Manager
 description: Po instalaci distribučních bodů pro Configuration Manager můžete začít nasazovat obsah do těchto umístění.
-ms.date: 10/06/2016
+ms.date: 05/12/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: d50dcca0-4419-449d-a487-73abcadf328f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7478eff1a14eeffd4d12b1539df7c5573c6a7cb6
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: df26fe91f009a1a4f5d3c5a4f4adb5fe45bbd245
+ms.sourcegitcommit: 4c129bb04ea4916c78446e89fbff956397cbe828
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81722974"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83343146"
 ---
 # <a name="deploy-and-manage-content-for-configuration-manager"></a>Nasazení a Správa obsahu pro Configuration Manager
 
@@ -24,7 +24,7 @@ ms.locfileid: "81722974"
 Po instalaci distribučních bodů pro Configuration Manager můžete začít s nasazením obsahu. Obvykle se přenosy obsahu do distribučních bodů v síti, ale i další možnosti, jak získat obsah do distribučních bodů, existují. Po přenosu obsahu do distribučního bodu můžete aktualizovat, znovu distribuovat, odebrat a ověřit obsah v distribučních bodech.  
 
 ##  <a name="distribute-content"></a><a name="bkmk_distribute"></a>Distribuovat obsah  
-Obvykle distribuujete obsah do distribučních bodů tak, aby byl dostupný pro klientské počítače. (Výjimkou je tato výjimka při použití distribuce obsahu na vyžádání pro konkrétní nasazení.)  Když distribuujete obsah, Configuration Manager ukládá soubory obsahu do balíčku a potom balíček distribuuje do distribučního bodu. Typy obsahu, které můžete distribuovat, zahrnují:  
+Obvykle distribuujete obsah do distribučních bodů tak, aby byl dostupný pro klientské počítače. (Výjimkou je tato výjimka při použití distribuce obsahu na vyžádání pro konkrétní nasazení.) Když distribuujete obsah, Configuration Manager ukládá soubory obsahu do balíčku a potom balíček distribuuje do distribučního bodu. Obsah balíčku se načte z knihovny obsahu serveru lokality. Typy obsahu, které můžete distribuovat, zahrnují:  
 
 - Typy nasazení aplikace  
 
@@ -52,21 +52,21 @@ K distribuci obsahu do distribučních bodů použijte následující postup.
 
 2.  V pracovním prostoru **softwarová knihovna** vyberte jeden z následujících kroků pro typ obsahu, který chcete distribuovat:  
 
-    - **Aplikace**: rozbalte položku > **aplikace** **pro správu aplikací**a potom vyberte aplikace, které chcete distribuovat.  
+    - **Aplikace**: rozbalte položku aplikace **pro správu aplikací**  >  **Applications**a potom vyberte aplikace, které chcete distribuovat.  
 
-    - **Balíčky**: rozbalte položku >  **balíčky** **pro správu aplikací**a potom vyberte balíčky, které chcete distribuovat.  
+    - **Balíčky**: rozbalte položku balíčky **pro správu aplikací**  >   **Packages**a potom vyberte balíčky, které chcete distribuovat.  
 
-    - **Balíčky pro nasazení**: rozbalte**balíčky pro nasazení** **aktualizací** >  softwaru a potom vyberte balíčky pro nasazení, které chcete distribuovat.  
+    - **Balíčky pro nasazení**: rozbalte balíčky pro nasazení **aktualizací softwaru**  >   **Deployment Packages**a potom vyberte balíčky pro nasazení, které chcete distribuovat.  
 
-    - **Balíčky ovladačů**: rozbalte**balíčky ovladačů** **operačních systémů** >  a pak vyberte balíčky ovladačů, které chcete distribuovat.  
+    - **Balíčky ovladačů**: rozbalte **Operating Systems**  >   **balíčky ovladačů**operačních systémů a pak vyberte balíčky ovladačů, které chcete distribuovat.  
 
-    - **Bitové kopie operačního systému**: **rozbalte** >  **image operačního systému**a potom vyberte image operačního systému, které chcete distribuovat.  
+    - **Bitové kopie operačního systému**: **rozbalte**  >   **image operačního systému**a potom vyberte image operačního systému, které chcete distribuovat.  
 
-    - **Instalační programy operačního systému**: rozbalte položku **operační systémy** > **instalační programy operačního systému**a pak vyberte instalační programy operačního systému, které chcete distribuovat.  
+    - **Instalační programy operačního systému**: rozbalte položku **operační systémy**  >  **instalační programy operačního systému**a pak vyberte instalační programy operačního systému, které chcete distribuovat.  
 
-    - **Spouštěcí bitové kopie**: rozbalte**spouštěcí bitové kopie** **operačních systémů** >  a pak vyberte spouštěcí bitové kopie, které chcete distribuovat.  
+    - **Spouštěcí bitové kopie**: rozbalte **Operating Systems**  >   **spouštěcí bitové kopie**operačních systémů a pak vyberte spouštěcí bitové kopie, které chcete distribuovat.  
 
-    - **Pořadí úloh**: rozbalte**pořadí úloh** **operační systémy** >  a potom vyberte pořadí úkolů, které chcete distribuovat. Přestože pořadí úloh neobsahují obsah, mají přidružené závislosti obsahu, které jsou distribuovány.  
+    - **Pořadí úloh**: rozbalte **Operating Systems**  >   **pořadí úloh**operační systémy a potom vyberte pořadí úkolů, které chcete distribuovat. Přestože pořadí úloh neobsahují obsah, mají přidružené závislosti obsahu, které jsou distribuovány.  
 
       > [!NOTE]  
       > Pokud upravíte pořadí úloh, musíte znovu distribuovat obsah.  
@@ -155,7 +155,7 @@ Můžete vytvořit komprimovaný soubor připraveného obsahu, který obsahuje s
     > [!NOTE]  
     > **Pro aplikace:** Na kartě **Domů** ve skupině **aplikace** klikněte na možnost **vytvořit soubor připraveného obsahu**.  
     >   
-    > **Pro balíčky:** Na kartě **Domů** ve &lt;skupině> *aktualizace* klikněte na možnost **vytvořit soubor připraveného obsahu**.  
+    > **Pro balíčky:** Na kartě **Domů** ve &lt; skupině> *aktualizace* klikněte na možnost **vytvořit soubor připraveného obsahu**.  
 
 4.  Na stránce **Obecné** klikněte na tlačítko **Procházet**, zvolte umístění souboru připraveného obsahu, zadejte název souboru a potom klikněte na tlačítko **Uložit**. Tento soubor připraveného obsahu můžete použít na serverech primární lokality, serverech sekundární lokality nebo distribučních bodech pro import obsahu a metadat.  
 
@@ -252,18 +252,18 @@ Pomocí následujícího postupu můžete ručně exportovat soubory obsahu ze s
 
 1.  Zkopírujte soubor připraveného obsahu do počítače, ze kterého chcete extrahovat obsah.  
 
-2.  Zkopírujte nástroj &lt;příkazového řádku rozbalit obsah z *ConfigMgrInstallationPath*>>\\&lt;*platformy* \Bin do počítače, ze kterého chcete soubor připraveného obsahu extrahovat.  
+2.  Zkopírujte nástroj příkazového řádku rozbalit obsah z &lt; *ConfigMgrInstallationPath*> \\ &lt;>*platformy* \Bin do počítače, ze kterého chcete soubor připraveného obsahu extrahovat.  
 
 3.  Otevřete příkazový řádek a přejděte do umístění složky souboru připraveného obsahu a rozbalte nástroj obsah.  
 
     > [!NOTE]  
     > Jeden nebo více souborů připraveného obsahu můžete extrahovat na server lokality, sekundární server lokality nebo distribuční bod.  
 
-4.  Zadejte **extractcontent/p:**&lt;*příkaz*>**\\**&lt;*PrestagedFileName*PrestagedFileName> **/s** pro import jednoho souboru.  
+4.  Zadejte **extractcontent/p:** &lt; *příkaz* > **\\** &lt; *PrestagedFileName* >  **/s** pro import jednoho souboru.  
 
-    Zadejte **extractcontent/p:**&lt;*příkaz*> **/s** pro import všech předzpracovaných souborů v zadané složce.  
+    Zadejte **extractcontent/p:** &lt; *příkaz* >  **/s** pro import všech předzpracovaných souborů v zadané složce.  
 
-    Například zadejte **extractcontent/p: D:\PrestagedFiles\MyPrestagedFile.pkgx/s** , kde `D:\PrestagedFiles\` je příkaz, `MyPrestagedFile.pkgx` je název předzpracovaného souboru a `/S` informují Configuration Manager k extrakci pouze souborů obsahu, které jsou novější, než je aktuálně na distribučním bodu.  
+    Například zadejte **extractcontent/p: D:\PrestagedFiles\MyPrestagedFile.pkgx/s** `D:\PrestagedFiles\` , kde je příkaz, `MyPrestagedFile.pkgx` je název předzpracovaného souboru a `/S` informují Configuration Manager k extrakci pouze souborů obsahu, které jsou novější, než je aktuálně na distribučním bodu.  
 
     Když extrahujete soubor připraveného obsahu na server lokality, soubory obsahu se přidají do knihovny obsahu na serveru lokality a pak se dostupnost obsahu zaregistruje v databázi serveru lokality. Pokud exportujete soubor připraveného obsahu do distribučního bodu, soubory obsahu budou přidány do knihovny obsahu v distribučním bodě, distribuční bod odešle stavovou zprávu nadřazenému serveru primární lokality a pak bude dostupnost obsahu registrována v databázi lokality.  
 
@@ -311,7 +311,7 @@ Pro správu obsahu máte následující možnosti:
 
 ### <a name="update-content"></a>Aktualizovat obsah
 Pokud je umístění zdrojových souborů pro nasazení Aktualizováno přidáním nových souborů nebo nahrazením existujících souborů novější verzí, můžete aktualizovat soubory obsahu v distribučních bodech pomocí akce **Aktualizovat distribuční body** nebo **Aktualizovat obsah** :  
-- Soubory obsahu se zkopírují z cesty zdrojových souborů do knihovny obsahu v lokalitě, která vlastní zdroj obsahu balíčku.  
+- Soubory obsahu se zkopírují z původního zdrojového umístění balíčku do knihovny obsahu v lokalitě, která vlastní zdroj obsahu balíčku.
 - Verze balíčku se zvýší.  
 - Každá instance knihovny obsahu na serverech lokality a v distribučních bodech aktualizuje pouze soubory, které se změnily.  
 
@@ -324,19 +324,19 @@ Pokud je umístění zdrojových souborů pro nasazení Aktualizováno přidán�
 
 2.  V pracovním prostoru **softwarová knihovna** vyberte jeden z následujících kroků pro typ obsahu, který chcete distribuovat:  
 
-    - **Aplikace**: rozbalte položku > **aplikace** **pro správu aplikací**a potom vyberte aplikace, které chcete distribuovat. Klikněte na kartu **typy nasazení** a potom vyberte typ nasazení, který chcete aktualizovat.  
+    - **Aplikace**: rozbalte položku aplikace **pro správu aplikací**  >  **Applications**a potom vyberte aplikace, které chcete distribuovat. Klikněte na kartu **typy nasazení** a potom vyberte typ nasazení, který chcete aktualizovat.  
 
-    - **Balíčky**: rozbalte položku > **balíčky** **pro správu aplikací**a potom vyberte balíčky, které chcete aktualizovat.  
+    - **Balíčky**: rozbalte položku balíčky **pro správu aplikací**  >  **Packages**a potom vyberte balíčky, které chcete aktualizovat.  
 
-    - **Balíčky pro nasazení**: rozbalte**balíčky pro nasazení** **aktualizací** > softwaru a potom vyberte balíčky pro nasazení, které chcete aktualizovat.  
+    - **Balíčky pro nasazení**: rozbalte balíčky pro nasazení **aktualizací softwaru**  >  **Deployment Packages**a potom vyberte balíčky pro nasazení, které chcete aktualizovat.  
 
-    - **Balíčky ovladačů**: rozbalte**balíčky ovladačů** **operačních systémů** > a pak vyberte balíčky ovladačů, které chcete aktualizovat.  
+    - **Balíčky ovladačů**: rozbalte **Operating Systems**  >  **balíčky ovladačů**operačních systémů a pak vyberte balíčky ovladačů, které chcete aktualizovat.  
 
-    - **Bitové kopie operačního systému**: **rozbalte** > **image operačního systému**a potom vyberte image operačního systému, které chcete aktualizovat.  
+    - **Bitové kopie operačního systému**: **rozbalte**  >  **image operačního systému**a potom vyberte image operačního systému, které chcete aktualizovat.  
 
-    - **Instalační programy operačního systému**: rozbalte položku **operační systémy** > **instalační programy operačního systému**a pak vyberte instalační programy operačního systému, které chcete aktualizovat.  
+    - **Instalační programy operačního systému**: rozbalte položku **operační systémy**  >  **instalační programy operačního systému**a pak vyberte instalační programy operačního systému, které chcete aktualizovat.  
 
-    - **Spouštěcí bitové kopie**: rozbalte**spouštěcí bitové kopie** **operačních systémů** >  a pak vyberte spouštěcí bitové kopie, které chcete aktualizovat.  
+    - **Spouštěcí bitové kopie**: rozbalte **Operating Systems**  >   **spouštěcí bitové kopie**operačních systémů a pak vyberte spouštěcí bitové kopie, které chcete aktualizovat.  
 
 3.  Na kartě **Domů** ve skupině **nasazení** klikněte na možnost **Aktualizovat distribuční body**a potom kliknutím na tlačítko **OK** potvrďte, že chcete aktualizovat obsah.  
 
@@ -362,19 +362,19 @@ Tato operace slouží k opravě souborů obsahu v balíčku nebo k opětovnému 
 
 2.  V pracovním prostoru **softwarová knihovna** vyberte jeden z následujících kroků pro typ obsahu, který chcete distribuovat:  
 
-    - **Aplikace**: rozbalte položku >  **aplikace** **pro správu aplikací**a potom vyberte aplikaci, kterou chcete znovu distribuovat.  
+    - **Aplikace**: rozbalte položku aplikace **pro správu aplikací**  >   **Applications**a potom vyberte aplikaci, kterou chcete znovu distribuovat.  
 
-    - **Balíčky**: rozbalte položku > **balíčky** **pro správu aplikací**a pak vyberte balíček, který chcete znovu distribuovat.  
+    - **Balíčky**: rozbalte položku balíčky **pro správu aplikací**  >  **Packages**a pak vyberte balíček, který chcete znovu distribuovat.  
 
-    - **Balíčky pro nasazení**: rozbalte**balíčky pro nasazení** **aktualizací** >  softwaru a potom vyberte balíček pro nasazení, který chcete znovu distribuovat.  
+    - **Balíčky pro nasazení**: rozbalte balíčky pro nasazení **aktualizací softwaru**  >   **Deployment Packages**a potom vyberte balíček pro nasazení, který chcete znovu distribuovat.  
 
-    - **Balíčky ovladačů**: rozbalte**balíčky ovladačů** **operačních systémů** > a pak vyberte balíček ovladačů, který chcete znovu distribuovat.  
+    - **Balíčky ovladačů**: rozbalte **Operating Systems**  >  **balíčky ovladačů**operačních systémů a pak vyberte balíček ovladačů, který chcete znovu distribuovat.  
 
-    - **Bitové kopie operačního systému**: **rozbalte** > možnost**bitové kopie operačního systému**a pak vyberte bitovou kopii operačního systému, kterou chcete znovu distribuovat.  
+    - **Bitové kopie operačního systému**: **rozbalte**  >  možnost**bitové kopie operačního systému**a pak vyberte bitovou kopii operačního systému, kterou chcete znovu distribuovat.  
 
-    - **Instalační programy operačního systému**: rozbalte položku **operační systémy** > **instalační programy operačního systému**a potom vyberte instalační program operačního systému, který chcete znovu distribuovat.  
+    - **Instalační programy operačního systému**: rozbalte položku **operační systémy**  >  **instalační programy operačního systému**a potom vyberte instalační program operačního systému, který chcete znovu distribuovat.  
 
-    - **Spouštěcí bitové kopie**: rozbalte**spouštěcí bitové kopie** **operačních systémů** >  a pak vyberte spouštěcí bitovou kopii, kterou chcete znovu distribuovat.  
+    - **Spouštěcí bitové kopie**: rozbalte spouštěcí bitové kopie **operačních systémů**  >   **Boot Images**a pak vyberte spouštěcí bitovou kopii, kterou chcete znovu distribuovat.  
 
 3.  Na kartě **Domů** ve skupině **Vlastnosti** klikněte na možnost **Vlastnosti**.  
 
@@ -409,7 +409,7 @@ Pomocí metody třídy **RetryContentReplication** rozhraní WMI (Windows Manage
 
 Tuto metodu použijte pouze k vynucení replikace, pokud je nutné znovu distribuovat obsah po problémech s normální replikací obsahu (obvykle potvrzené použitím uzlu monitorování konzoly).   
 
-Další informace o této možnosti sady SDK naleznete v tématu [Metoda RetryContentReplication ve třídě SMS_CM_UpdatePackages](https://msdn.microsoft.com/library/mt762092(CMSDK.16).aspx) na webu MSDN. Microsoft.com.
+Další informace o této možnosti sady SDK naleznete v tématu [Metoda RetryContentReplication ve třídě SMS_CM_UpdatePackages](../../../../develop/reference/sum/retrycontentreplication-method-in-class-sms_cm_updatepackages.md).
 
 ### <a name="remove-content"></a>Odebrat obsah
 Pokud již nepotřebujete obsah v distribučních bodech, můžete odebrat soubory obsahu v distribučním bodě.  
@@ -426,19 +426,19 @@ Pokud je však obsah přidružen k jinému balíčku, který byl distribuován d
 
 2.  V pracovním prostoru **softwarová knihovna** vyberte jeden z následujících kroků pro typ obsahu, který chcete odstranit:  
 
-    - **Aplikace**: rozbalte > **položku aplikace** **pro správu aplikací**a potom vyberte aplikaci, kterou chcete odebrat.  
+    - **Aplikace**: rozbalte položku aplikace **pro správu aplikací**  >  **Applications**a potom vyberte aplikaci, kterou chcete odebrat.  
 
-    - **Balíčky**: rozbalte položku > **balíčky** **pro správu aplikací**a pak vyberte balíček, který chcete odebrat.  
+    - **Balíčky**: rozbalte položku balíčky **pro správu aplikací**  >  **Packages**a pak vyberte balíček, který chcete odebrat.  
 
-    - **Balíčky pro nasazení**: rozbalte**balíčky pro nasazení** **aktualizací** > softwaru a potom vyberte balíček pro nasazení, který chcete odebrat.  
+    - **Balíčky pro nasazení**: rozbalte balíčky pro nasazení **aktualizací softwaru**  >  **Deployment Packages**a potom vyberte balíček pro nasazení, který chcete odebrat.  
 
-    - **Balíčky ovladačů**: rozbalte**balíčky ovladačů** **operačních systémů** > a pak vyberte balíček ovladačů, který chcete odebrat.  
+    - **Balíčky ovladačů**: rozbalte **Operating Systems**  >  **balíčky ovladačů**operačních systémů a pak vyberte balíček ovladačů, který chcete odebrat.  
 
-    - **Bitové kopie operačního systému**: **rozbalte** > **bitové kopie operačního systému**a pak vyberte bitovou kopii operačního systému, kterou chcete odebrat.  
+    - **Bitové kopie operačního systému**: **rozbalte**  >  **bitové kopie operačního systému**a pak vyberte bitovou kopii operačního systému, kterou chcete odebrat.  
 
-    - **Instalační programy operačního systému**: rozbalte položku **operační systémy** > **instalační programy operačního systému**a pak vyberte instalační program operačního systému, který chcete odebrat.  
+    - **Instalační programy operačního systému**: rozbalte položku **operační systémy**  >  **instalační programy operačního systému**a pak vyberte instalační program operačního systému, který chcete odebrat.  
 
-    - **Spouštěcí bitové kopie**: rozbalte**spouštěcí bitové kopie** **operačních systémů** > a pak vyberte spouštěcí bitovou kopii, kterou chcete odebrat.  
+    - **Spouštěcí bitové kopie**: rozbalte spouštěcí bitové kopie **operačních systémů**  >  **Boot Images**a pak vyberte spouštěcí bitovou kopii, kterou chcete odebrat.  
 
 3.  Na kartě **Domů** ve skupině **Vlastnosti** klikněte na možnost **Vlastnosti**.  
 
@@ -491,19 +491,19 @@ Další informace o konfiguraci plánu ověřování obsahu najdete v tématu [K
 
 2.  V pracovním prostoru **softwarová knihovna** vyberte jeden z následujících kroků pro typ obsahu, který chcete ověřit:  
 
-    - **Aplikace**: rozbalte > **položku aplikace** **pro správu aplikací**a potom vyberte aplikaci, kterou chcete ověřit.  
+    - **Aplikace**: rozbalte položku aplikace **pro správu aplikací**  >  **Applications**a potom vyberte aplikaci, kterou chcete ověřit.  
 
-    - **Balíčky**: rozbalte položku > **balíčky** **pro správu aplikací**a pak vyberte balíček, který chcete ověřit.  
+    - **Balíčky**: rozbalte položku balíčky **pro správu aplikací**  >  **Packages**a pak vyberte balíček, který chcete ověřit.  
 
-    - **Balíčky pro nasazení**: rozbalte**balíčky pro nasazení** **aktualizací** > softwaru a potom vyberte balíček pro nasazení, který chcete ověřit.  
+    - **Balíčky pro nasazení**: rozbalte balíčky pro nasazení **aktualizací softwaru**  >  **Deployment Packages**a potom vyberte balíček pro nasazení, který chcete ověřit.  
 
-    - **Balíčky ovladačů**: rozbalte**balíčky ovladačů** **operačních systémů** > a pak vyberte balíček ovladačů, který chcete ověřit.  
+    - **Balíčky ovladačů**: rozbalte **Operating Systems**  >  **balíčky ovladačů**operačních systémů a pak vyberte balíček ovladačů, který chcete ověřit.  
 
-    - **Bitové kopie operačního systému**: **rozbalte** > **bitové kopie operačního systému**a pak vyberte bitovou kopii operačního systému, kterou chcete ověřit.  
+    - **Bitové kopie operačního systému**: **rozbalte**  >  **bitové kopie operačního systému**a pak vyberte bitovou kopii operačního systému, kterou chcete ověřit.  
 
-    - **Instalační programy operačního systému**: rozbalte položku **operační systémy** >  **instalační programy operačního systému**a potom vyberte instalační program operačního systému, který chcete ověřit.  
+    - **Instalační programy operačního systému**: rozbalte položku **operační systémy**  >   **instalační programy operačního systému**a potom vyberte instalační program operačního systému, který chcete ověřit.  
 
-    - **Spouštěcí bitové kopie**: rozbalte**spouštěcí bitové kopie** **operačních systémů** > a pak vyberte spouštěcí bitovou kopii, kterou chcete připravit.  
+    - **Spouštěcí bitové kopie**: rozbalte spouštěcí bitové kopie **operačních systémů**  >  **Boot Images**a pak vyberte spouštěcí bitovou kopii, kterou chcete připravit.  
 
 3.  Na kartě **Domů** ve skupině **Vlastnosti** klikněte na možnost **Vlastnosti**.  
 

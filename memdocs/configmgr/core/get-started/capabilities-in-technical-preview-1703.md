@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: d06bda9d07a53e022de27afc68f40f9ce706867f
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: fb13844dd05049b9186909884aa0c457a8cfacd9
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82076148"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83428413"
 ---
 # <a name="capabilities-in-technical-preview-1703-for-configuration-manager"></a>Funkce ve verzi Technical Preview 1703 pro Configuration Manager
 
@@ -97,7 +97,7 @@ V Azure Active Directory Zaregistrujte Configuration Manager jako webovou aplika
 
 ### <a name="use-the-wizard-to-configure-the-wsfb-cloud-service"></a>Použití Průvodce ke konfiguraci cloudové služby WSfB
 
-1. V konzole nástroje klikněte na **Správa** > **Přehled** > **Cloud Services Správa** > **Azure** > **Azure a**pak zvolte **Konfigurovat služby Azure** pro spuštění **Průvodce službami Azure**.
+1. V konzole nástroje klikněte na **Správa**  >  **Přehled**  >  **Cloud Services Správa**  >  **Azure**  >  **Azure**a pak zvolte **Konfigurovat služby Azure** pro spuštění **Průvodce službami Azure**.
 
 2. Na stránce **služby Azure** vyberte službu, kterou chcete nakonfigurovat, a potom klikněte na **Další**. V této verzi Preview se dá nakonfigurovat jenom WSfB.
 
@@ -127,10 +127,10 @@ Teď můžete použít zbývající část [obsahu Current Branch](../../apps/de
 ### <a name="modify-a-cloud-service-configuration"></a>Úprava konfigurace cloudové služby
 Můžete zobrazit a upravit vlastnosti cloudové služby a upravit tak konfiguraci.
 
-V konzole**nástroje** > **Overview** >  **Administration** > **Azure****Azure Services** **Properties** **Configure Azure Services**přejdete na Přehled správy Cloud Services služby Azure Azure Services a pak zvolte konfigurovat služby Azure, vyberte cloudovou službu a pak zvolte Vlastnosti. > 
+V konzole nástroje přejdete **na**  >  **Přehled**správy  >  **Cloud Services**služby Azure Azure  >  **Azure**  >  **Services**a pak zvolte **Konfigurovat služby Azure**, vyberte cloudovou službu a pak zvolte **vlastnosti**.
 
 ## <a name="convert-from-bios-to-uefi-during-an-in-place-upgrade"></a>Převod ze systému BIOS na rozhraní UEFI během místního upgradu
-Windows 10 Creators Update zavádí jednoduchý nástroj pro převod, který automatizuje proces opětovného rozdělení pevného disku na hardware s podporou rozhraní UEFI a integruje Nástroj pro převod do místního procesu upgradu Windows 7 na Windows 10. Pokud tento nástroj zkombinujete s pořadím úkolů upgradu operačního systému a nástrojem OEM, který převede firmware ze systému BIOS na rozhraní UEFI, můžete počítače převést na systém BIOS na rozhraní UEFI v rámci místního upgradu na aktualizaci Windows 10 Creators Update. Podrobnosti najdete v tématu věnovaném [krokům pořadí úkolů ke správě převodu systému BIOS na rozhraní UEFI](../../osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md#convert-from-bios-to-uefi-during-an-in-place-upgrade).
+Windows 10 Creators Update zavádí jednoduchý nástroj pro převod, který automatizuje proces opětovného rozdělení pevného disku na hardware s podporou rozhraní UEFI a integruje Nástroj pro převod do místního procesu upgradu Windows 7 na Windows 10. Pokud tento nástroj zkombinujete s pořadím úkolů upgradu operačního systému a nástrojem OEM, který převede firmware ze systému BIOS na rozhraní UEFI, můžete počítače převést na systém BIOS na rozhraní UEFI v rámci místního upgradu na aktualizaci Windows 10 Creators Update. Podrobnosti najdete v tématu věnovaném [krokům pořadí úkolů ke správě převodu systému BIOS na rozhraní UEFI](../../osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md#bkmk_ipu).
 
 ## <a name="collapsible-task-sequence-groups"></a>Sbalitelné skupiny pořadí úloh
 Tato verze přináší možnost Rozbalit a sbalit skupiny pořadí úloh. Můžete rozbalit nebo sbalit jednotlivé skupiny nebo rozbalit nebo sbalit všechny skupiny najednou.
@@ -143,7 +143,7 @@ Od této verze můžete pomocí nastavení klienta zařízení zjednodušit konf
 - Lokalita musí být nakonfigurovaná tak, aby používala cloudovou službu Upgrade Readiness.
 
 ### <a name="configure-windows-analytics-client-settings"></a>Konfigurace nastavení klienta Windows Analytics
-Pokud chcete nakonfigurovat Windows Analytics, v konzole Configuration Manager přejděte na **Správa** > **nastavení klienta**, dvakrát klikněte na **vytvořit vlastní nastavení klienta zařízení** a pak zkontrolujte **Windows Analytics**.  
+Pokud chcete nakonfigurovat Windows Analytics, v konzole Configuration Manager přejděte na **Správa**  >  **nastavení klienta**, dvakrát klikněte na **vytvořit vlastní nastavení klienta zařízení** a pak zkontrolujte **Windows Analytics**.  
 
 Pak po přechodu na kartu nastavení **Windows Analytics** proveďte následující konfiguraci:
 - **Komerční ID**  

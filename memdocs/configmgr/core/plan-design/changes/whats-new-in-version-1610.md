@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: d154dc0ba681a37ebb2155bfa1bcdb6d8734965f
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: b3e1a2feaddb7384d76790249152c89dfa8ee2d3
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82073955"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904804"
 ---
 # <a name="what39s-new-in-version-1610-of-configuration-manager"></a>Co&#39;s novinkou ve verzi 1610 Configuration Manager
 
@@ -29,8 +29,8 @@ Aktualizace 1610 pro Configuration Manager aktuální větev je k dispozici jako
 > Chcete-li nainstalovat novou lokalitu, je nutné použít základní verzi Configuration Manager.  
 >
 > Další informace:    
-> - [Instalace nových lokalit](https://technet.microsoft.com/library/mt590197.aspx)  
-> - [Instalace aktualizací v lokalitách](https://technet.microsoft.com/library/mt607046.aspx)  
+> - [Instalace nových lokalit](../../servers/deploy/install/installing-sites.md)  
+> - [Instalace aktualizací v lokalitách](../../servers/manage/updates.md)  
 > - [Základní a aktualizační verze](../../servers/manage/updates.md#bkmk_Baselines)
 
 Následující části obsahují podrobné informace o změnách a nových funkcích, které jsou představené ve verzi 1610 Configuration Manager.  
@@ -156,7 +156,7 @@ Další informace najdete tady:
 - [Postup konfigurace nastavení klienta](../../clients/deploy/configure-client-settings.md)
 
 ## <a name="software-updates-dashboard"></a>Řídicí panel aktualizace softwaru
-Pomocí nového řídicího panelu aktualizace softwaru můžete zobrazit aktuální stav dodržování předpisů u zařízení ve vaší organizaci a rychle analyzovat data a zjistit, která zařízení jsou v ohrožení. Řídicí panel zobrazíte tak, že přejdete na **monitorování** > **Přehled** > **zabezpečení** > **aktualizace softwaru řídicí panel**.
+Pomocí nového řídicího panelu aktualizace softwaru můžete zobrazit aktuální stav dodržování předpisů u zařízení ve vaší organizaci a rychle analyzovat data a zjistit, která zařízení jsou v ohrožení. Řídicí panel zobrazíte tak, že přejdete na **monitorování**  >  **Přehled**  >  **zabezpečení**  >  **aktualizace softwaru řídicí panel**.
 
 Podrobnosti najdete v tématu [monitorování aktualizací softwaru](../../../sum/deploy-use/monitor-software-updates.md).
 
@@ -168,7 +168,7 @@ Tato akce nezpůsobí, že se aplikace odinstaluje z žádného zařízení. Už
 
 ## <a name="filter-by-content-size-in-automatic-deployment-rules"></a>Filtrovat podle velikosti obsahu v pravidlech automatického nasazení
 Nyní můžete vyfiltrovat velikost obsahu pro aktualizace softwaru v pravidlech automatického nasazení. Chcete-li například stáhnout pouze aktualizace softwaru, které jsou menší než 2 MB, můžete nastavit filtr **Velikost obsahu (KB)** na **< 2048**. Použití tohoto filtru zabraňuje automatickému stahování velkých aktualizací softwaru, což lépe podporuje zjednodušenou údržbu Windows, pokud je omezená šířka pásma sítě. Podrobnosti najdete tady:
-- [Configuration Manager a zjednodušená Údržba Windows na nižší úrovni operačního systému](https://blogs.technet.microsoft.com/enterprisemobility/2016/10/07/configuration-manager-and-simplified-windows-servicing-on-down-level-operating-systems/)
+- [Configuration Manager a zjednodušená Údržba Windows na nižší úrovni operačního systému](https://techcommunity.microsoft.com/t5/configuration-manager-archive/configuration-manager-and-simplified-windows-servicing-on-down/ba-p/274056)
 - [Automatické nasazení aktualizací softwaru](../../../sum/deploy-use/automatically-deploy-software-updates.md)
 
 Chcete-li nakonfigurovat pole **Velikost obsahu (KB)** , proveďte jednu z následujících akcí:
@@ -176,7 +176,7 @@ Chcete-li nakonfigurovat pole **Velikost obsahu (KB)** , proveďte jednu z násl
 - Ve vlastnostech existujícího pravidla automatického nasazení přejdete na kartu **aktualizace softwaru** .
 
 ## <a name="office-365-client-management-dashboard"></a>Řídicí panel pro správu klientů Office 365
-Řídicí panel pro správu klientů Office 365 je nyní k dispozici v konzole Configuration Manager. Řídicí panel zobrazíte tak, že přejdete do části**Přehled** >  **knihovny** > softwaru**Office 365 Správa klientů**.
+Řídicí panel pro správu klientů Office 365 je nyní k dispozici v konzole Configuration Manager. Řídicí panel zobrazíte tak, že přejdete do části Přehled **knihovny softwaru**  >  **Overview**  >  **Office 365 Správa klientů**.
 
 Řídicí panel zobrazuje grafy pro následující:
 

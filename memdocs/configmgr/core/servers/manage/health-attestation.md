@@ -10,23 +10,23 @@ ms.assetid: 91f9de33-b277-4500-acd6-e7d90a2947c9
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 9917ec8a1ed2072903276de438f49d3f783a1284
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ed155fb61491a273732ed3b974b6ddb5ac29bc89
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81712446"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904001"
 ---
 # <a name="health-attestation-for-configuration-manager"></a>Ověření stavu pro Configuration Manager
 
 *Platí pro: Configuration Manager (Current Branch)*
 
-Správci mohou zobrazit stav [Ověření stavu zařízení s Windows 10](https://technet.microsoft.com/library/mt592023.aspx) v konzole nástroje Configuration Manager.  Ověření stavu zařízení umožňuje správcům zajistit, že klientské počítače mají následující důvěryhodné konfigurace systému BIOS, čipu TPM a spouštěcího softwaru:  
+Správci mohou zobrazit stav [Ověření stavu zařízení s Windows 10](https://docs.microsoft.com/windows/security/threat-protection/protect-high-value-assets-by-controlling-the-health-of-windows-10-based-devices) v konzole nástroje Configuration Manager.  Ověření stavu zařízení umožňuje správcům zajistit, že klientské počítače mají následující důvěryhodné konfigurace systému BIOS, čipu TPM a spouštěcího softwaru:  
 
 -   Antimalware s raným spuštěním – Antimalware s raným spuštěním (ELAM) chrání počítač při spuštění a před inicializací ovladačů jiných výrobců. [Zapnutí ELAM](https://gallery.technet.microsoft.com/How-to-turn-on-Early-84552ec5)  
 -   BitLocker – Windows BitLocker Drive Encryption je software, který umožňuje šifrování všech dat uložených na svazku operačního systému Windows.  [Zapnutí nástroje BitLocker](https://gallery.technet.microsoft.com/How-to-turn-on-BitLocker-34294d3d)  
--   Zabezpečené spouštění – Zabezpečené spuštění je bezpečnostní standard vyvinutý členy počítačového průmyslu, který pomáhá zabezpečit, že váš počítač při spouštění použije pouze software, který je důvěryhodný pro výrobce počítačů. [Další informace o Zabezpečeném spouštění](https://technet.microsoft.com/library/hh824987.aspx)  
--   Integrita kódu – Integrita kódu je funkce, která zvyšuje zabezpečení operačního systému tím, že ověří integritu souboru ovladače nebo systémového souboru pokaždé, když je načten do paměti. [Další informace o Integritě kódu](https://technet.microsoft.com/library/dd348642.aspx)  
+-   Zabezpečené spouštění – Zabezpečené spuštění je bezpečnostní standard vyvinutý členy počítačového průmyslu, který pomáhá zabezpečit, že váš počítač při spouštění použije pouze software, který je důvěryhodný pro výrobce počítačů. [Další informace o Zabezpečeném spouštění](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/hh824987(v=win.10))  
+-   Integrita kódu – Integrita kódu je funkce, která zvyšuje zabezpečení operačního systému tím, že ověří integritu souboru ovladače nebo systémového souboru pokaždé, když je načten do paměti. [Další informace o Integritě kódu](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd348642(v=ws.10))  
 
 Tato funkce je dostupná pro osobní počítače a místní prostředky spravované nástrojem Configuration Manager, a pro mobilní zařízení spravované pomocí Microsoft Intune. Správci mohou určit, zda má vytváření sestav probíhat přes cloudovou nebo místní infrastrukturu. Místní monitorování ověření stavu zařízení umožňuje správcům monitorovat klientské počítače bez přístupu k Internetu.
 
@@ -34,7 +34,7 @@ Tato funkce je dostupná pro osobní počítače a místní prostředky spravova
 
  **Požadavků**  
 
--   Klientská zařízení se systémem Windows 10 verze 1607 nebo Windows Server 2016 verze 1607 s [povoleným ověření stavu zařízení](https://technet.microsoft.com/windows-server-docs/security/device-health-attestation).
+-   Klientská zařízení se systémem Windows 10 verze 1607 nebo Windows Server 2016 verze 1607 s [povoleným ověření stavu zařízení](https://docs.microsoft.com/windows-server/security/device-health-attestation).
 -   Zařízení s povoleným čipem TPM 1,2 nebo TPM 2
 -   Pokud používáte správu cloudu, komunikace mezi Configuration Manager klientským agentem a bodem správy s *has.spserv.Microsoft.com* (port 443) služba ověření stavu (cloudová správa). Pokud je místní, klient musí být schopný komunikovat s bodem správy s povoleným ověřením stavu zařízení.
 
@@ -42,7 +42,7 @@ Tato funkce je dostupná pro osobní počítače a místní prostředky spravova
 
 Pomocí tohoto postupu můžete povolit monitorování ověření stavu zařízení pro zařízení, která se připojují k Internetu.
 
-1.  V konzole Configuration Manager klikněte na **Správa** > **Přehled** > **nastavení klienta**.  Vyberte kartu s nastavením **Počítačový agent**.  
+1.  V konzole Configuration Manager klikněte na **Správa**  >  **Přehled**  >  **nastavení klienta**.  Vyberte kartu s nastavením **Počítačový agent**.  
 2.  V dialogovém okně **Výchozí nastavení** vyberte **Počítačový agent** a poté přejděte dolů na **Povolit komunikaci se službou ověření stavu**.  
 3.  Nastavte hodnotu **Povolit komunikaci se službou Ověření stavu** na **Ano**, a poté klikněte na **OK**.  
 4. Cílí na kolekce zařízení, která by měla hlásit stav zařízení.
@@ -52,10 +52,10 @@ Pomocí tohoto postupu můžete povolit monitorování ověření stavu zaříze
 
 Od Configuration Manager 1702 se adresa URL místní služby ověření stavu zařízení dá nakonfigurovat v bodu správy tak, aby podporovala klientské zařízení bez přístupu k Internetu.
 
-1. V konzole Configuration Manager přejděte na **Správa** > **Přehled** > **Konfigurace** > **lokality lokality.**
-2. Klikněte pravým tlačítkem myši na primární nebo sekundární lokalitu s bodem správy, který podporuje místní klienty ověření stavu zařízení, a vyberte **Konfigurovat** > **bod správy**součástí lokality. Otevře se stránka **Vlastnosti komponenty bodu správy** .
+1. V konzole Configuration Manager přejděte na **Správa**  >  **Přehled**  >  **Konfigurace**  >  **lokality lokality**.
+2. Klikněte pravým tlačítkem myši na primární nebo sekundární lokalitu s bodem správy, který podporuje místní klienty ověření stavu zařízení, a vyberte **Konfigurovat**  >  **bod správy**součástí lokality. Otevře se stránka **Vlastnosti komponenty bodu správy** .
 3. Na kartě **Upřesnit možnosti** vyberte **Přidat** a zadejte platnou adresu URL místní služby ověření stavu zařízení. Můžete přidat několik adres URL. Pokud je zadáno více místních adres URL, klienti obdrží úplnou sadu a náhodně si zvolí, která z nich se má použít.
-4.  V konzole Configuration Manager klikněte na **Správa** > **Přehled** > **nastavení klienta**.  Vyberte kartu s nastavením **Počítačový agent**.  
+4.  V konzole Configuration Manager klikněte na **Správa**  >  **Přehled**  >  **nastavení klienta**.  Vyberte kartu s nastavením **Počítačový agent**.  
 5.  Posuňte se dolů, aby **se aktivovala komunikace se službou ověření stavu**, a nastavte na **Ano**.
 7.  Klikněte na možnost **použít místní službu Health Attestaion** a nastavte na **Ano**.
 8. Zaměřte se na kolekce zařízení, která by měla nahlásit stav zařízení pomocí nastavení agenta klienta, aby se povolilo vytváření sestav ověření stavu zařízení.

@@ -10,12 +10,12 @@ ms.assetid: cb616925-bb94-4b7c-a867-b3d95aef4d5e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f9d2a7d4a16f85e9a5f78dd6251754d86527da87
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 05110714d3aa8ca48ff9384f0116338b0092fde1
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81709891"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83877626"
 ---
 # <a name="troubleshoot-package-conversion-manager"></a>Řešení potíží s nástrojem Package Conversion Manager
 
@@ -58,10 +58,13 @@ Podokno podrobností uzlu **balíčky** v konzole Configuration Manager zobrazuj
 
 ### <a name="enable-logging"></a>Povolit protokolování
 
-Pokud povolíte protokolování pro Package Conversion Manager, protokoluje všechny jeho akce, výjimky a chyby. 
+Pokud povolíte protokolování pro Package Conversion Manager, protokoluje všechny jeho akce, výjimky a chyby.
 
 Chcete-li povolit protokolování této součásti v Configuration Manager, upravte soubor **Microsoft. ConfigurationManagement. exe. config**. Ve výchozím nastavení je tento konfigurační soubor umístěný v následující cestě:  
-`C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\bin\Microsoft.ConfigurationManagement.exe.config`  
+`C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\bin\Microsoft.ConfigurationManagement.exe.config`  
+
+> [!IMPORTANT]
+> Počínaje verzí 1910 se tato cesta změnila na použití `Microsoft Endpoint Manager` složky. Ujistěte se, že nepoužíváte starší verzi souboru, která může existovat v jiné složce.
 
 Do prvku **System. Diagnostics** po posledním elementu **sources** vložte následující **přepínače** a **Trace** XML Elements:
 
@@ -83,7 +86,7 @@ Do prvku **System. Diagnostics** po posledním elementu **sources** vložte nás
 Tato ukázka používá soubor **PCMTrace. log**. Tento protokol je v počítači se spuštěnou konzolou Configuration Manager v následující cestě:  
 `%UserProfile%\AppData\Local\Temp`
 
-Chcete-li nakonfigurovat úroveň podrobností, změňte nastavení sledovacího přepínače **PcmLogging** . Nastavte tuto hodnotu na čtyři úrovně podrobností, od nejméně podrobných (`1`) až po nejpodrobnější (`4`).
+Chcete-li nakonfigurovat úroveň podrobností, změňte nastavení sledovacího přepínače **PcmLogging** . Nastavte tuto hodnotu na čtyři úrovně podrobností, od nejméně podrobných ( `1` ) až po nejpodrobnější ( `4` ).
 
 
 ### <a name="smsprovlog"></a>SMSProv.log

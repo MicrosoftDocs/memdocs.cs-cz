@@ -10,12 +10,12 @@ ms.assetid: 55ae86a7-f0ab-4c09-b4da-89cd0e7fa0e0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4ba67fee260867494302e49b7c9d3a97480e236b
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1b7ada6f54a7642817a321937a4d7128994d5538
+ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81723758"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83823975"
 ---
 # <a name="configure-reporting-in-configuration-manager"></a>Konfigurace vytváření sestav v Configuration Manager
 
@@ -70,7 +70,7 @@ Pro ověření, zda je služba SQL Server Reporting Services nainstalovaná a je
 
 3. Otevřete klíč **klávesu ReportBuilderApplicationManifestName** a upravte data hodnoty.  
 
-4. Změňte hodnotu na `ReportBuilder_3_0_0_0.application`a pak kliknutím na **OK** uložte.
+4. Změňte hodnotu na `ReportBuilder_3_0_0_0.application` a pak kliknutím na **OK** uložte.
 
 5. Zavřete editor registru systému Windows.  
 
@@ -114,7 +114,7 @@ Další informace o konfiguraci systémů lokality najdete v tématu [Instalace 
 
 1. Na stránce **bod služby Reporting Services** nakonfigurujte následující nastavení:  
 
-    - **Název serveru databáze lokality**: zadejte název serveru, který je hostitelem databáze lokality Configuration Manager. Průvodce obvykle načte plně kvalifikovaný název domény (FQDN) pro server. Chcete-li určit instanci databáze, použijte formát &lt; *název*>\&lt; *název instance*>. Například, `sqlserver\named1`.
+    - **Název serveru databáze lokality**: zadejte název serveru, který je hostitelem databáze lokality Configuration Manager. Průvodce obvykle načte plně kvalifikovaný název domény (FQDN) pro server. Chcete-li určit instanci databáze, použijte formát &lt; *název* > \& lt;* název instance*>. Například, `sqlserver\named1`.
 
     - **Název databáze**: zadejte název databáze lokality Configuration Manager. Vyberte **ověřit** a potvrďte, že Průvodce má přístup k databázi lokality.  
 
@@ -130,7 +130,7 @@ Další informace o konfiguraci systémů lokality najdete v tématu [Instalace 
 
     - **Účet bodu služby Reporting Services**: vyberte možnost **nastavit**a pak vyberte účet, který chcete použít. SQL Server Reporting Services v bodu služby Reporting Services používá tento účet pro připojení k databázi lokality Configuration Manager. Toto připojení má načíst data pro sestavu. Vyberte možnost **existující účet** a zadejte uživatelský účet systému Windows, který jste dříve nakonfigurovali jako účet Configuration Manager. Vyberte možnost **nový účet** a zadejte uživatelský účet systému Windows, který není aktuálně nakonfigurován pro použití. Configuration Manager automaticky udělí zadanému uživateli přístup k databázi lokality.  
 
-        Účet, který spouští službu Reporting Services, musí patřit do skupiny místních zabezpečení skupiny zabezpečení **Windows Authorization Access**. Také musí mít oprávnění **číst tokenGroupsGlobalAndUniversal** nastaveno na hodnotu **Allow**. Uživatelé v jiné doméně než účet bodu služby Reporting Services potřebují oboustranný vztah důvěryhodnosti mezi doménami, aby bylo možné sestavy úspěšně spouštět.
+        Účet, který spouští službu Reporting Services, musí patřit do skupiny místních zabezpečení skupiny zabezpečení **Windows Authorization Access**. Tento účet udělí účtu oprávnění **ke čtení** u atributu **tokenGroupsGlobalAndUniversal** pro všechny uživatelské objekty v doméně. Uživatelé v jiné doméně než účet bodu služby Reporting Services potřebují oboustranný vztah důvěryhodnosti mezi doménami, aby bylo možné sestavy úspěšně spouštět.
 
         Zadaný uživatelský účet systému Windows a jeho heslo jsou zašifrovány a uloženy v databázi služby Reporting Services. Služba Reporting Services načítá pomocí tohoto účtu a hesla data pro sestavy z databáze lokality.  
 
@@ -232,9 +232,9 @@ Ověřte instalaci bodu služby Reporting Services tak, že prohlížíte konkr�
 
 ### <a name="verify-installation-by-log-file"></a>Ověřit instalaci podle souboru protokolu
 
-Otevřete soubor **soubor Srsrp. log** , který se nachází v adresáři **Logs** instalační cesty Configuration Manager. Vyhledejte řetězec `Installation was successful`.
+Otevřete soubor **soubor Srsrp. log** , který se nachází v adresáři **Logs** instalační cesty Configuration Manager. Vyhledejte řetězec `Installation was successful` .
 
-Projděte si tento soubor protokolu od okamžiku, kdy byl úspěšně nainstalován bod služby Reporting Services. Ověřte, že byly vytvořeny složky sestav, že byly nasazeny sestavy a že u každé složky byly potvrzeny zásady zabezpečení. Po posledním řádku potvrzení zásad zabezpečení vyhledejte řetězec `Successfully checked that the SRS web service is healthy on server`.  
+Projděte si tento soubor protokolu od okamžiku, kdy byl úspěšně nainstalován bod služby Reporting Services. Ověřte, že byly vytvořeny složky sestav, že byly nasazeny sestavy a že u každé složky byly potvrzeny zásady zabezpečení. Po posledním řádku potvrzení zásad zabezpečení vyhledejte řetězec `Successfully checked that the SRS web service is healthy on server` .  
 
 ## <a name="configure-a-certificate-to-author-reports"></a>Konfigurace certifikátu pro vytváření sestav
 
@@ -272,7 +272,7 @@ Po instalaci této role můžete upravit připojení k databázi lokality a nast
 
 Další informace o těchto nastaveních naleznete v popisech v části [instalace bodu služby Reporting Services do systému lokality](#bkmk_install).
 
-## <a name="power-bi-report-server"></a>serveru sestav Power BI
+## <a name="power-bi-report-server"></a>Server sestav Power BI
 
 Počínaje verzí 2002 můžete integrovat vytváření sestav pomocí Server sestav Power BI. Další informace o konfiguraci najdete v tématu věnovaném [integraci s server sestav Power BI](powerbi-report-server.md).
 

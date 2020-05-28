@@ -2,7 +2,7 @@
 title: Optimalizace doručování aktualizací Windows 10
 titleSuffix: Configuration Manager
 description: Naučte se používat Configuration Manager ke správě obsahu aktualizace, aby zůstal aktuální s Windows 10.
-ms.date: 04/21/2020
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: b670cfaf-96a4-4fcb-9caa-0f2e8c2c6198
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f7edd05a7b1ce105e81fd4f594d95c9dfb45f472
-ms.sourcegitcommit: 568f8f8c19fafdd0f4352d0682f1ca7a4d665d25
+ms.openlocfilehash: 835dcd0c86244c1731cb6c6e040d577160759614
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81771374"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83267786"
 ---
 # <a name="optimize-windows-10-update-delivery-with-configuration-manager"></a>Optimalizace doručování aktualizací Windows 10 pomocí Configuration Manager
 
@@ -103,7 +103,7 @@ Výběr správné technologie peere naukládání do mezipaměti pro soubory Exp
 | Velikost mezipaměti na ovládacím prvku disku | Ano | Ano | Ano |
 | Zjišťování zdroje partnerského vztahu | Automaticky | Ruční (nastavení agenta klienta) | Automaticky |
 | Rovnocenné zjišťování | Přes cloudovou službu optimalizace doručování (vyžaduje přístup k Internetu) | Přes bod správy (na základě skupin hranic klientů) | Odesílání |
-| Generování sestav | Ano (použití Desktop Analytics) | Řídicí panel zdrojů dat klienta nástroje ConfigMgr | Řídicí panel zdrojů dat klienta nástroje ConfigMgr |
+| Vytváření sestav | Ano (použití Desktop Analytics) | Řídicí panel zdrojů dat klienta nástroje ConfigMgr | Řídicí panel zdrojů dat klienta nástroje ConfigMgr |
 | Řízení využití sítě WAN | Ano (nativní, lze ovládat pomocí nastavení zásad skupiny) | Skupiny hranic | Pouze podpora podsítí |
 | Správa prostřednictvím nástroje ConfigMgr | Částečný (nastavení klientského agenta) | Ano (nastavení agenta klienta) | Ano (nastavení agenta klienta) |
 
@@ -125,13 +125,13 @@ Pokud jsou na straně serveru kompromisy aktualizací s větší velikostí blok
 
 Agent webu Windows Update (WUA) nejprve požaduje expresní obsah. Pokud se instalace expresní aktualizace nezdařila, může se vrátit k úplné aktualizaci souborů.  
 
-1. Klient Configuration Manager oznamuje službě WUA stažení obsahu aktualizace. Když Agent WUA spustí expresní stažení, nejprve stáhne zástupnou proceduru (například `Windows10.0-KB1234567-<platform>-express.cab`), která je součástí balíčku Express.  
+1. Klient Configuration Manager oznamuje službě WUA stažení obsahu aktualizace. Když Agent WUA spustí expresní stažení, nejprve stáhne zástupnou proceduru (například `Windows10.0-KB1234567-<platform>-express.cab` ), která je součástí balíčku Express.  
 
 2. WUA předá tuto zástupnou proceduru instalačnímu programu služby Windows Update, který je součástí údržby (CBS). CBS používá zástupnou proceduru k provádění místního inventáře a porovnávání rozdílových souborů v zařízení s tím, co je potřeba k získání nejnovější verze nabízeného souboru.  
 
 3. CBS pak vyzve agenta WUA, aby si stáhl požadované rozsahy z jednoho nebo více souborů Express. PSV.  
 
-4. Optimalizace doručování koordinuje s Configuration Manager a stahuje rozsahy z místního distribučního bodu nebo partnerských uzlů, pokud jsou k dispozici. Pokud je optimalizace doručování zakázaná, používá se Background Intelligent Transfer Service (BITS) stejným způsobem jako Configuration Manager koordinace zdrojů sdílené mezipaměti. Optimalizace doručení nebo služba BITS předává rozsahům agentům WUA, díky čemuž je k dispozici pro použití a instalaci služby CBS.  
+4. Pokud je povolená optimalizace doručování a zjištění partnerských uzlů, které mají požadované rozsahy, bude klient stahovat z partnerských uzlů nezávisle na klientovi nástroje ConfigMgr. Pokud je optimalizace doručování zakázána nebo žádné partnerské uzly nemají potřebné rozsahy, klient nástroje ConfigMgr tyto rozsahy stáhne z místního distribučního bodu (nebo z partnerského nebo Microsoft Update). Rozsahy jsou předány agentovi web Windows Update, který je zpřístupňuje, aby bylo možné použít rozsahy.
 
 
 #### <a name="why-are-the-express-files-psf-so-large-when-stored-on-configuration-manager-peer-sources-in-the-ccmcache-folder"></a>Proč jsou expresní soubory (. PSV) tak velké, pokud jsou uložené v Configuration Manager partnerských zdrojů ve složce ccmcache?
@@ -151,7 +151,7 @@ To závisí na okolnostech. Pro každou aktualizaci kvality jsou na serverech ul
 
 #### <a name="do-configuration-manager-clients-still-benefit-from-express-installation-files-when-falling-back-to-the-windows-update-service"></a>Mají Configuration Manager klienti stále výhodné soubory Expresní instalace, pokud se vrátí ke službě web Windows Update?
 
-Ano. Pokud použijete následující možnost nasazení aktualizace softwaru, klienti pořád používají expresní aktualizace a optimalizaci doručování, když se budou vracet do cloudové služby:  
+Yes. Pokud použijete následující možnost nasazení aktualizace softwaru, klienti pořád používají expresní aktualizace a optimalizaci doručování, když se budou vracet do cloudové služby:  
 
 **Pokud aktualizace softwaru nejsou k dispozici v distribučním bodě v aktuálních, sousedních nebo skupinových lokalitách, Stáhněte obsah z aktualizací společnosti Microsoft.**
 

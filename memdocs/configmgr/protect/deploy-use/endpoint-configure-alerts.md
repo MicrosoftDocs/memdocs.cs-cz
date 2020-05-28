@@ -39,12 +39,12 @@ ms.locfileid: "82074856"
     > [!NOTE]
     >  Výstrahy nelze nakonfigurovat pro kolekce uživatelů.
 
-4.  Na kartě **výstrahy** v dialogovém okně **vlastnosti** _názvu\> kolekce<_ vyberte možnost **Zobrazit tuto kolekci na řídicím panelu Endpoint Protection** , pokud chcete zobrazit podrobnosti o antimalwarových operacích pro tuto kolekci v pracovním prostoru **monitorování** konzoly Configuration Manager.
+4.  Na kartě **výstrahy** v dialogovém okně **vlastnosti** _názvu \> kolekce<_ vyberte možnost **Zobrazit tuto kolekci na řídicím panelu Endpoint Protection** , pokud chcete zobrazit podrobnosti o antimalwarových operacích pro tuto kolekci v pracovním prostoru **monitorování** konzoly Configuration Manager.
 
     > [!NOTE]
     >  Pro kolekci **Všechny systémy** není tato možnost dostupná.
 
-5.  Na kartě **výstrahy** v dialogovém okně **vlastnosti** _názvu\> kolekce<_ klikněte na **Přidat**.
+5.  Na kartě **výstrahy** v dialogovém okně **vlastnosti** _názvu \> kolekce<_ klikněte na **Přidat**.
 
 6.  V dialogovém okně **Přidat nové výstrahy kolekce** v části **Generovat výstrahu, když platí tyto podmínky** vyberte výstrahy, které má Configuration Manager generovat při výskytu zadaných událostí Endpoint Protection, a pak klikněte na **OK**.
 
@@ -83,13 +83,13 @@ ms.locfileid: "82074856"
 
         -   **Interval pro zjišťování (hodiny):** Zadejte interval zjišťování (v hodinách), ve kterém se musí objevit počet zjištění malwaru. Zadejte číslo od **1** do **168**.
 
-9. Kliknutím na tlačítko **OK** zavřete dialogové okno **vlastnosti** _\> názvu kolekce<_ .  
+9. Kliknutím na tlačítko **OK** zavřete dialogové okno **vlastnosti** _ \> názvu kolekce<_ .  
 
 ## <a name="alert-for-outdated-malware-client"></a>Výstraha pro zastaralého klienta malwaru
 
-Od verze Configuration Manager 1702 můžete nakonfigurovat výstrahu, aby se zajistilo, že Endpoint Protection klienti nebudou zastaralí. Z libovolné kolekce zařízení teď můžete do seznamu přidat sloupce pro následující atributy **verze antimalwarového klienta** a **stav nasazení Endpoint Protection**. V konzole nástroje přejděte například na **prostředky a kompatibilita** > **Přehled** > **kolekce** > zařízení**všechny počítače a klienti serveru**. Klikněte pravým tlačítkem na záhlaví sloupce a vyberte tyto sloupce, které chcete přidat. Chcete-li zjistit výstrahu, zobrazte **výstrahy** v pracovním prostoru **monitorování** . Pokud je na více než 20% spravovaných klientů spuštěná verze antimalwarového softwaru s vypršenou platností, zobrazí se výstraha verze antimalwarového klienta je zastaralá. Tato výstraha se nezobrazuje na kartě**Přehled** **monitorování** > . Chcete-li aktualizovat antimalwarové klienty s vypršenou platností, povolte aktualizace softwaru pro klienty antimalwaru.
+Od verze Configuration Manager 1702 můžete nakonfigurovat výstrahu, aby se zajistilo, že Endpoint Protection klienti nebudou zastaralí. Z libovolné kolekce zařízení teď můžete do seznamu přidat sloupce pro následující atributy **verze antimalwarového klienta** a **stav nasazení Endpoint Protection**. V konzole nástroje přejděte například na **prostředky a kompatibilita**  >  **Přehled**  >  **kolekce zařízení**  >  **všechny počítače a klienti serveru**. Klikněte pravým tlačítkem na záhlaví sloupce a vyberte tyto sloupce, které chcete přidat. Chcete-li zjistit výstrahu, zobrazte **výstrahy** v pracovním prostoru **monitorování** . Pokud je na více než 20% spravovaných klientů spuštěná verze antimalwarového softwaru s vypršenou platností, zobrazí se výstraha verze antimalwarového klienta je zastaralá. Tato výstraha se nezobrazuje **Monitoring**na  >  kartě**Přehled** monitorování. Chcete-li aktualizovat antimalwarové klienty s vypršenou platností, povolte aktualizace softwaru pro klienty antimalwaru.
 
-Chcete-li nakonfigurovat procento, ve kterém je výstraha vygenerována, rozbalte položku **sledování** > **výstrahy** > **všechny výstrahy**, dvakrát klikněte na **antimalwarové klienty zastaralé** a upravte **výstrahu vyvolat, pokud procento spravovaných klientů s neaktuální verzí antimalwarového klienta je větší než** možnost.
+Chcete-li nakonfigurovat procento, ve kterém je výstraha vygenerována, rozbalte položku **sledování**  >  **výstrahy**  >  **všechny výstrahy**, dvakrát klikněte na **antimalwarové klienty zastaralé** a upravte **výstrahu vyvolat, pokud procento spravovaných klientů s neaktuální verzí antimalwarového klienta je větší než** možnost.
 
 > [!div class="button"]
 > [Další krok >](endpoint-definition-updates.md)

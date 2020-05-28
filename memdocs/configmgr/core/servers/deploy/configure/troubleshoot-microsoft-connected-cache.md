@@ -10,19 +10,19 @@ ms.assetid: 121e0341-4f51-4d54-a357-732c26caf7c5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e5be6158a2ed7d79af2bee72c81a462e4d83b68e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 0a8c975798c506339a981e8648003387dc1e9838
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718284"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83878101"
 ---
 # <a name="troubleshoot-microsoft-connected-cache-in-configuration-manager"></a>Řešení potíží s propojenou mezipamětí Microsoft v Configuration Manager
 
 Tento článek poskytuje technické podrobnosti o mezipaměti připojené k Microsoftu v Configuration Manager. Použijte ho k řešení potíží, které můžete mít ve vašem prostředí. Další informace o tom, jak funguje a jak ho používat, najdete v tématu věnovaném [mezipaměti připojené k Microsoftu v Configuration Manager](../../../plan-design/hierarchy/microsoft-connected-cache.md).
 
 > [!NOTE]
-> Počínaje verzí 1910 je tato funkce nyní označována jako **propojená s mezipamětí Microsoft**. Dříve byla známá jako optimalizace doručování do síťové mezipaměti (DOINC).
+> Počínaje verzí 1910 je tato funkce nyní označována jako **propojená s mezipamětí Microsoft**. Dříve byla známá jako Optimalizace doručení v síťové mezipaměti.
 
 ## <a name="verify"></a>Ověřit
 
@@ -70,18 +70,18 @@ ExpireOn                    : 9/6/2019 8:36:19 AM
 IsPinned                    : False
 ```
 
-Všimněte si, `BytesFromCacheServer` že atribut není nula.
+Všimněte si, že `BytesFromCacheServer` atribut není nula.
 
 Pokud klient není správně nakonfigurovaný nebo server mezipaměti není nainstalovaný správně, vrátí se klientovi Optimalizace doručení do původního cloudového zdroje. Pak bude mít atribut BytesFromCacheServer hodnotu nula.
 
 ### <a name="verify-on-the-server"></a><a name="bkmk_verify-server"></a>Ověřit na serveru
 
-Nejprve ověřte, zda jsou správně nakonfigurovány vlastnosti registru `HKLM\SOFTWARE\Microsoft\Delivery Optimization In-Network Cache`:. Například umístění mezipaměti jednotky je `PrimaryDrivesInput\DOINC-E77D08D0-5FEA-4315-8C95-10D359D59294`, kde `PrimaryDrivesInput` může být více jednotek, například. `C,D,E`
+Nejprve ověřte, zda jsou správně nakonfigurovány vlastnosti registru: `HKLM\SOFTWARE\Microsoft\Delivery Optimization In-Network Cache` . Například umístění mezipaměti jednotky je `PrimaryDrivesInput\DOINC-E77D08D0-5FEA-4315-8C95-10D359D59294` , kde `PrimaryDrivesInput` může být více jednotek, například `C,D,E` .
 
 Dále použijte následující metodu pro simulaci požadavku na stažení klienta na server s povinnými záhlavími.
 
 1. Otevřete 64 okno PowerShellu jako správce.
-2. Spusťte následující příkaz a nahraďte název nebo IP adresu vašeho serveru pro `<DoincServer>`:
+2. Spusťte následující příkaz a nahraďte název nebo IP adresu vašeho serveru pro `<DoincServer>` :
 
 ```PowerShell
 Invoke-WebRequest -URI "http://<DoincServer>/mscomtest/wuidt.gif" -Headers @{"Host"="b1.download.windowsupdate.com"}

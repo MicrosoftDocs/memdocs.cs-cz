@@ -10,12 +10,13 @@ ms.assetid: 8e0e8496-136b-461f-8239-cc19c6b78c3b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8c42576f35d285fc7285466c4208d7ccaf370daa
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.reviewer: acabello
+ms.openlocfilehash: ac9b5ddd85904c90709a9450d6d2a9ffd379ddb9
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81723702"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268755"
 ---
 # <a name="how-to-create-deployment-plans-in-desktop-analytics"></a>Vytvoření plánů nasazení v Desktop Analytics
 
@@ -94,7 +95,7 @@ Nakonfigurujte, jestli vaše zařízení obdrží ovladače od web Windows Updat
 
 ### <a name="windows-applications"></a>Aplikace systému Windows
 
-Aplikace, které Desktop Analytics ukáže jako *zajímavosti* , jsou založené na prahové hodnotě pro nízký počet instalací. Nastavte tuto prahovou hodnotu v pravidlech připravenosti pro plán nasazení. Ve výchozím nastavení je tato prahová hodnota **2,0%**. Hodnotu můžete změnit z `0.0` na. `10.0`
+Aplikace, které Desktop Analytics ukáže jako *zajímavosti* , jsou založené na prahové hodnotě pro nízký počet instalací. Nastavte tuto prahovou hodnotu v pravidlech připravenosti pro plán nasazení. Ve výchozím nastavení je tato prahová hodnota **2,0%**. Hodnotu můžete změnit z `0.0` na `10.0` .
 
 
 ## <a name="next-steps"></a>Další kroky

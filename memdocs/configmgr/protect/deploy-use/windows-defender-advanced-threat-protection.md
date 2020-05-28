@@ -2,7 +2,7 @@
 title: Rozšířená ochrana před internetovými útoky v programu Microsoft Defender
 titleSuffix: Configuration Manager
 description: Naučte se spravovat a monitorovat rozšířenou ochranu před internetovými útoky v programu Microsoft Defender, novou službu, která pomáhá podnikům reagovat na pokročilé útoky.
-ms.date: 04/27/2020
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: a5fc033e-828e-4e45-9097-bbbd0697ebdf
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: a635ae36875984537c18c4850a3526d57ffceb31
-ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
+ms.openlocfilehash: 801aee9665e567ce1a983fba294f1e58f58eee04
+ms.sourcegitcommit: 4174f7e485067812c29aea01a4767989ffdbb578
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82210141"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83406664"
 ---
 # <a name="microsoft-defender-advanced-threat-protection"></a>Rozšířená ochrana před internetovými útoky v programu Microsoft Defender
 
@@ -40,10 +40,10 @@ Na základě verze Configuration Manager, kterou používáte, se dají připoji
 
 #### <a name="configuration-manager-version-2002-and-later"></a>Configuration Manager verze 2002 a novější
 <!--5229962-->
-- Windows 7 SP1
+Počínaje verzí 2002 Configuration Manager můžete připojit následující operační systémy:
+
 - Windows 8.1
 - Windows 10 verze 1607 nebo novější
-- Windows Server 2008 R2 SP1
 - Windows Server 2012 R2
 - Windows Server 2016
 - Windows Server 2016, verze 1803
@@ -57,8 +57,8 @@ Na základě verze Configuration Manager, kterou používáte, se dají připoji
    - Pokud se připojujete k Windows 10, Windows serveru 1803 a Windows Server 2019:
       1. Vyberte **Configuration Manager (aktuální větev) verze 1606** a vyberte **Stáhnout balíček**.
       1. Stáhněte komprimovaný soubor archivu (. zip) a extrahujte obsah.
-   - Pokud se připojujete k jinému operačnímu systému Windows: 
-      1. Vyberte operační systémy, které chcete zařadit ze seznamu. Například vyberte buď **Windows 7 a 8,1** nebo **Windows Server 2008 R2 SP1, 2012 R2 a 2016**.
+   - Pokud se připojujete k jinému operačnímu systému Windows:
+      1. Vyberte operační systémy, které chcete zařadit ze seznamu, který je uvedený v online službě Microsoft Defender ATP.
       1. Po dokončení procesu zkopírujte hodnoty pro **klíč** a **ID pracovního** prostoru v části **Konfigurace připojení** .
 
 > [!IMPORTANT]
@@ -66,11 +66,11 @@ Na základě verze Configuration Manager, kterou používáte, se dají připoji
 
 ## <a name="onboard-devices"></a>Připojení zařízení
 
-1. V konzole Configuration Manager přejděte na **prostředky a kompatibilita** > **Endpoint Protection** > **Zásady ochrany ATP v programu Windows Defender** a vyberte **vytvořit zásadu ochrany ATP v programu Windows Defender**. Otevře se Průvodce zásadami ochrany ATP v programu Microsoft Defender.  
+1. V konzole Configuration Manager přejděte na **prostředky a kompatibilita**  >  **Endpoint Protection**  >  **Zásady ochrany ATP v programu Windows Defender** a vyberte **vytvořit zásadu ochrany ATP v programu Windows Defender**. Otevře se Průvodce zásadami ochrany ATP v programu Microsoft Defender.  
 1. Zadejte **název** a **Popis** zásad ATP v programu Microsoft Defender a vyberte **připojování**.
 1. **Přejděte** ke konfiguračnímu souboru, který poskytl tenant cloudové služby Microsoft Defender ATP pro vaši organizaci.
-   - V případě **systémů Windows 7 a 8,1** nebo **Windows Server 2008 R2 SP1, 2012 R2 a 2016**zadejte **klíč pracovního prostoru** a **ID pracovního prostoru**.
-   - Pro Configuration Manager verze 2002 budete potřebovat **klíč** a **ID pracovního** prostoru a to i v případě, že se připojujete jenom s Windows serverem 2019 a Windows Server 1803 nebo novějšími zařízeními. Tyto hodnoty získáte tak, že vyberete **Nastavení** > **Onboarding** > připojování**Windows 7 a 8,1** od [online služby Microsoft Defender ATP](https://securitycenter.windows.com/). <!--7054188-->
+   - Pro Windows 8.1 nebo Windows Server 2012 R2 a 2016 zadejte **ID**a **klíč pracovního** prostoru.
+   - Pro Configuration Manager verze 2002 budete potřebovat **klíč** a **ID pracovního** prostoru a to i v případě, že se připojujete jenom s Windows serverem 2019 a Windows Server 1803 nebo novějšími zařízeními. Tyto hodnoty získáte tak, že vyberete **Nastavení**  >  **připojování**  >  **Windows 7 a 8,1** od [online služby Microsoft Defender ATP](https://securitycenter.windows.com/). <!--7054188-->
 1. Zadejte ukázky souborů, které se shromažďují a sdílejí ze spravovaných zařízení pro účely analýzy.  
 
    - **Žádné**
@@ -82,7 +82,7 @@ Vyberte **nasadit** a Zaměřte se na zásady ATP v programu Microsoft Defender 
 
 ## <a name="monitor"></a>Monitorování
 
-1. V konzole Configuration Manager přejděte na **sledování** > **zabezpečení** a pak vyberte ochrana **ATP v programu Windows Defender**.  
+1. V konzole Configuration Manager přejděte na **sledování**  >  **zabezpečení** a pak vyberte ochrana **ATP v programu Windows Defender**.  
 
 1. Projděte si řídicí panel rozšířené ochrany před internetovými útoky v programu Microsoft Defender.  
 
@@ -108,7 +108,7 @@ Vyberte **nasadit** a Zaměřte se na zásady ATP v programu Microsoft Defender 
 
 1. Stáhněte komprimovaný soubor archivu (. zip) a extrahujte obsah. Soubory pro odpojování jsou platné po dobu 30 dnů.
 
-1. V konzole Configuration Manager přejděte na **prostředky a kompatibilita** > **Endpoint Protection** > **Zásady ochrany ATP v programu Windows Defender** a vyberte **vytvořit zásadu ochrany ATP v programu Windows Defender**. Otevře se Průvodce zásadami ochrany ATP v programu Microsoft Defender.  
+1. V konzole Configuration Manager přejděte na **prostředky a kompatibilita**  >  **Endpoint Protection**  >  **Zásady ochrany ATP v programu Windows Defender** a vyberte **vytvořit zásadu ochrany ATP v programu Windows Defender**. Otevře se Průvodce zásadami ochrany ATP v programu Microsoft Defender.  
 
 1. Zadejte **název** a **Popis** zásad ATP v programu Microsoft Defender **a vyberte možnost**odregistrování.
 

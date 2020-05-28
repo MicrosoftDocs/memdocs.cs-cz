@@ -10,12 +10,12 @@ ms.assetid: f0703475-85a4-450d-a4e8-7a18a01e2c47
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3a05c10d1f73fa0817febdd591190f6bc2ff0a0e
-ms.sourcegitcommit: b7e5b053dfa260e7383a9744558d50245f2bccdc
+ms.openlocfilehash: c6b33027d67329b883f401168795c1b466ded1a7
+ms.sourcegitcommit: dba89b827d7f89067dfa75a421119e0c973bb747
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82587271"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83709382"
 ---
 # <a name="token-based-authentication-for-cloud-management-gateway"></a>Ověřování založené na tokenech pro bránu pro správu cloudu
 
@@ -25,7 +25,7 @@ ms.locfileid: "82587271"
 
 Brána pro správu cloudu (CMG) podporuje mnoho typů klientů, ale i s [rozšířenými http](../../plan-design/hierarchy/enhanced-http.md), tito klienti vyžadují [certifikát pro ověřování klientů](../manage/cmg/certificates-for-cloud-management-gateway.md#for-internet-based-clients-communicating-with-the-cloud-management-gateway). Tento požadavek na certifikát může být náročný na zřízení internetových klientů, kteří se často nepřipojují k interní síti, nelze se připojit Azure Active Directory (Azure AD) a nemusíte mít k dispozici metodu pro instalaci certifikátu vystaveného infrastrukturou veřejných klíčů.
 
-Počínaje verzí 2002 Configuration Manager rozšiřuje podporu zařízení následujícími metodami:
+Aby se tyto výzvy vyřešily od verze 2002, Configuration Manager rozšiřuje podporu zařízení následujícími způsoby:
 
 - Registrace k interní síti pro jedinečný token
 
@@ -54,7 +54,7 @@ Pokud nemůžete instalovat a registrovat klienty v interní síti, vytvořte to
 
 1. Otevřete příkazový řádek jako správce.
 
-1. Spusťte nástroj ze `\bin\X64` složky instalačního adresáře Configuration Manager na serveru lokality: `BulkRegistrationTokenTool.exe`. Vytvořte nový token s `/new` parametrem. Například, `BulkRegistrationTokenTool.exe /new`. Další informace najdete v tématu [použití nástroje pro hromadnou registraci tokenu](#bulk-registration-token-tool-usage).
+1. Spusťte nástroj ze `\bin\X64` složky instalačního adresáře Configuration Manager na serveru lokality: `BulkRegistrationTokenTool.exe` . Vytvořte nový token s `/new` parametrem. Například, `BulkRegistrationTokenTool.exe /new`. Další informace najdete v tématu [použití nástroje pro hromadnou registraci tokenu](#bulk-registration-token-tool-usage).
 
 1. Zkopírujte token a uložte ho na bezpečném místě.
 
@@ -71,7 +71,7 @@ Nelze vytvořit hromadnou registrační token v lokalitě, která má server lok
 
 ### <a name="bulk-registration-token-tool-usage"></a>Použití nástroje pro hromadnou registraci tokenu
 
-`BulkRegistrationTokenTool.exe` Nástroj je ve `\bin\X64` složce instalačního adresáře Configuration Manager na serveru lokality. Přihlaste se k serveru lokality a spusťte ho jako správce. Podporuje následující parametry příkazového řádku:
+`BulkRegistrationTokenTool.exe`Nástroj je ve `\bin\X64` složce instalačního adresáře Configuration Manager na serveru lokality. Přihlaste se k serveru lokality a spusťte ho jako správce. Podporuje následující parametry příkazového řádku:
 
 - `/?`
 - `/new`
@@ -99,9 +99,31 @@ Token není uložený na klientovi nebo na webu. Nezapomeňte zkopírovat token 
 
 #### <a name="lifetime"></a>/lifetime
 
-K určení `/new` doby platnosti tokenu použijte parametr with. Zadejte celočíselnou hodnotu v minutách. Výchozí hodnota je 4 320 (tři dny). Maximální hodnota je 10 080 (sedm dní).
+`/new`K určení doby platnosti tokenu použijte parametr with. Zadejte celočíselnou hodnotu v minutách. Výchozí hodnota je 4 320 (tři dny). Maximální hodnota je 10 080 (sedm dní).
 
-Příklad: `BulkRegistrationTokenTool.exe /lifetime:4320`
+Příklad: `BulkRegistrationTokenTool.exe /lifetime 4320`
+
+## <a name="bulk-registration-token-management"></a>Správa tokenů hromadné registrace
+
+V případě potřeby můžete zobrazit dříve vytvořené registrační tokeny a jejich životnosti v konzole Configuration Manager a v případě potřeby zablokovat jejich používání. Databáze lokality však nebude ukládat tokeny hromadné registrace.
+
+#### <a name="to-review-a-bulk-registration-token"></a>Postup při kontrole hromadných registračních tokenů
+
+1. V konzole Configuration Manager klikněte na možnost **Správa**.
+
+2. V pracovním prostoru Správa rozbalte položku **zabezpečení**a klikněte na položku **certifikáty**. Konzola obsahuje seznam všech certifikátů souvisejících s lokalitami a registračních tokenů pro hromadnou registraci v podokně podrobností.
+
+3. Vyberte token hromadné registrace, který chcete zkontrolovat.
+
+Můžete identifikovat konkrétní registrační tokeny na základě identifikátoru GUID. V době vytváření tokenu se zobrazují identifikátory GUID pro tokeny hromadné registrace. V případě potřeby můžete také filtrovat nebo řadit podle sloupce **typ** .
+
+#### <a name="to-block-a-bulk-registration-token"></a>Blokování hromadné registračního tokenu
+
+1. V konzole Configuration Manager klikněte na možnost **Správa**.
+
+2. V pracovním prostoru Správa rozbalte položku **zabezpečení**, klikněte na položku **certifikáty**a vyberte token hromadné registrace, který chcete blokovat.
+
+3. Na kartě **Domů** na panelu nástrojů nebo v nabídce obsahu klikněte pravým tlačítkem myši na položku **blokovat**. Naopak můžete zrušit blokování dříve blokovaných hromadných registračních tokenů tak, že na kartě **Domů** na pásu karet nebo v nabídce obsah kliknete pravým tlačítkem na položku **odblokovat** .
 
 ## <a name="see-also"></a>Viz také
 

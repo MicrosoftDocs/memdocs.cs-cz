@@ -10,16 +10,16 @@ ms.assetid: 9875c443-19bf-43a0-9203-3a741f305096
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: dd2a8b3bfb7c4b8af277616c7eaed329bc143bb7
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 23cc7d0c642637a310f53280bafed6a2a28d2834
+ms.sourcegitcommit: 4174f7e485067812c29aea01a4767989ffdbb578
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81711599"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83406686"
 ---
 # <a name="create-a-configuration-manager-lab-in-azure"></a>Vytvoření testovacího prostředí Configuration Manager v Azure
 
-*Platí pro: Configuration Manager (větev Technical Preview)*
+*Platí pro: Configuration Manager (Current Branch, větev Technical Preview)*
 
 <!--3556017-->
 
@@ -35,12 +35,12 @@ Další informace najdete v tématu [Configuration Manager v Azure](../understan
 ## <a name="prerequisites"></a>Požadavky
 
 Tento proces vyžaduje předplatné Azure, ve kterém můžete vytvořit následující objekty: 
-- Dva Standard_B2s virtuální počítače pro role v případě, kdy je k dis pro doménu a & DP.
+- Dva Standard_B2s virtuální počítače pro řadič domény, bod správy a distribuční bod.
 - Jeden Standard_B2ms virtuální počítač pro server primární lokality a server služby SQL Database.
 - Účet úložiště Standard_LRS
 
 > [!Tip]  
-> Podívejte se na [cenové kalkulačky Azure](https://azure.microsoft.com/pricing/calculator/) , které vám pomůžou určit možné náklady.  
+> V [cenové kalkulačkě Azure](https://azure.microsoft.com/pricing/calculator/)vám pomůže určit možné náklady.  
 
 
 
@@ -71,9 +71,9 @@ Tento proces vyžaduje předplatné Azure, ve kterém můžete vytvořit násled
     > [!Important]  
     > Azure vyžaduje následující nastavení. Použijte výchozí hodnoty. Tyto hodnoty neměňte.  
     > 
-    > - umístění artefaktů: umístění skriptů pro tuto šablonu ** \_** <!-- https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/sccm-technicalpreview/ -->  
+    > - ** \_ umístění artefaktů**: umístění skriptů pro tuto šablonu <!-- https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/sccm-technicalpreview/ -->  
     >
-    > - artefakty umístění lokátoru SAS: sasToken se vyžaduje pro přístup k umístění artefaktů. ** \_**  
+    > - ** \_ artefakty umístění lokátoru SAS**: sasToken se vyžaduje pro přístup k umístění artefaktů.  
     > 
     > - **Umístění**: umístění všech prostředků
 
@@ -84,9 +84,9 @@ Azure ověří nastavení a pak zahájí nasazení. Ověřte stav nasazení ve A
 > [!NOTE]
 > Proces může trvat 2-4 hodin. I když Azure Portal zobrazuje úspěšné nasazení, skripty konfigurace budou pořád běžet. Během procesu nerestartujte virtuální počítače.
 
-Chcete-li zobrazit stav konfiguračních skriptů, připojte se k `<prefix>PS1` serveru a Prohlédněte si následující soubor:. `%windir%\TEMP\ProvisionScript\PS1.json` Pokud se zobrazí všechny kroky jako dokončené, proces se provede.
+Chcete-li zobrazit stav konfiguračních skriptů, připojte se k `<prefix>PS1` serveru a Prohlédněte si následující soubor: `%windir%\TEMP\ProvisionScript\PS1.json` . Pokud se zobrazí všechny kroky jako dokončené, proces se provede.
 
-Pokud se chcete připojit k virtuálním počítačům, nejdřív si načtěte z Azure Portal veřejné IP adresy pro každý virtuální počítač. Když se připojíte k virtuálnímu počítači, název domény `contoso.com`je. Použijte přihlašovací údaje, které jste zadali v šabloně nasazení. Další informace najdete v tématu [jak se připojit a přihlásit se k virtuálnímu počítači Azure s Windows](https://docs.microsoft.com/azure/virtual-machines/windows/connect-logon).
+Pokud se chcete připojit k virtuálním počítačům, nejdřív si načtěte z Azure Portal veřejné IP adresy pro každý virtuální počítač. Když se připojíte k virtuálnímu počítači, název domény je `contoso.com` . Použijte přihlašovací údaje, které jste zadali v šabloně nasazení. Další informace najdete v tématu [jak se připojit a přihlásit se k virtuálnímu počítači Azure s Windows](https://docs.microsoft.com/azure/virtual-machines/windows/connect-logon).
 
 
 
@@ -96,13 +96,13 @@ Všechny tři virtuální počítače mají následující specifikace:
 - 150 GB místa na disku
 - Jak veřejné, tak privátní IP adresa. Veřejné IP adresy jsou ve skupině zabezpečení sítě, která umožňuje připojení ke vzdálené ploše jenom na portu TCP 3389. 
 
-Předpona, kterou jste zadali v šabloně nasazení, je předpona názvu virtuálního počítače. Pokud například jako předponu nastavíte "contoso", název počítače řadiče domény je `contosoDC`.
+Předpona, kterou jste zadali v šabloně nasazení, je předpona názvu virtuálního počítače. Pokud například jako předponu nastavíte "contoso", název počítače řadiče domény je `contosoDC` .
 
 
 ### `<prefix>DC01`
 
 - Řadič domény služby Active Directory
-- Standard_B2s, který má dva PROCESORy a 4 GB paměti.
+- Standard_B2s, který má dva procesory a 4 GB paměti.
 - Windows Server 2019 Datacenter Edition
 
 #### <a name="windows-features-and-roles"></a>Funkce a role Windows
@@ -113,7 +113,7 @@ Předpona, kterou jste zadali v šabloně nasazení, je předpona názvu virtuá
 
 ### `<prefix>PS01`
 
-- Standard_B2ms, který má dva PROCESORy a 8 GB paměti.
+- Standard_B2ms, který má dva procesory a 8 GB paměti
 - Windows Server 2016 Datacenter Edition
 - SQL Server
 - Windows 10 ADK s Windows PE 
@@ -127,7 +127,7 @@ Předpona, kterou jste zadali v šabloně nasazení, je předpona názvu virtuá
 
 ### `<prefix>DPMP01`
 
-- Standard_B2s, který má dva PROCESORy a 4 GB paměti.
+- Standard_B2s, který má dva procesory a 4 GB paměti.
 - Windows Server 2019 Datacenter Edition
 - Distribuční bod
 - Bod správy

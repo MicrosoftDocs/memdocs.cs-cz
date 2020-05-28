@@ -10,12 +10,12 @@ ms.assetid: bb83ac87-9914-4a35-b633-ad070031aa6e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 30cd61240b09f821d8b18c37e6accc7450f35817
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 35379aed71544a25a98ec4dfa421be70c1bae851
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718844"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83427747"
 ---
 # <a name="install-a-cloud-distribution-point-for-configuration-manager"></a>Instalace distribučního bodu cloudu pro Configuration Manager
 
@@ -35,7 +35,7 @@ Tento článek podrobně popisuje kroky pro instalaci cloudového distribučníh
 - [Distribuce obsahu a konfigurace klientů](#bkmk_client)
 - [Správa a monitorování](#bkmk_monitor)
 - [Úprava](#bkmk_modify)
-- [Pokročilé řešení potíží](#bkmk_tshoot)
+- [Řešení potíží na pokročilé úrovni](#bkmk_tshoot)
 
 
 ## <a name="before-you-begin"></a><a name="bkmk_before"></a>Než začnete
@@ -65,7 +65,7 @@ Pomocí následujícího kontrolního seznamu se ujistěte, že máte potřebné
     > [!TIP]  
     > Před vyžádáním ověřovacího certifikátu serveru, který používá tento název služby, potvrďte, že požadovaný název domény Azure je jedinečný. Například *WallaceFalls.CloudApp.NET*.
     >
-    > 1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
+    > 1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
     > 1. Vyberte **všechny prostředky**a pak vyberte **Přidat**.
     > 1. Vyhledejte **cloudovou službu**. Vyberte **Vytvořit**.
     > 1. Do pole **název DNS** zadejte požadovanou předponu, například *WallaceFalls*. Rozhraní odráží, zda je název domény k dispozici nebo již používá jiná služba.
@@ -132,7 +132,7 @@ Tento postup proveďte na webu, který bude hostitelem tohoto distribučního bo
     - **Soubor certifikátu**: vyberte **Procházet** a vyberte. Soubor PFX pro certifikát ověřování serveru distribučního bodu cloudu Běžný název z tohoto certifikátu naplní požadovaná pole **plně kvalifikovaného názvu domény služby** a **názvu služby** .  
 
         > [!NOTE]  
-        > Certifikát ověřování serveru distribučního bodu cloudu podporuje zástupné znaky. Pokud používáte certifikát se zástupným znakem, nahraďte hvězdičku (`*`) v poli **plně kvalifikovaný název domény služby** požadovaným názvem hostitele pro danou službu.  
+        > Certifikát ověřování serveru distribučního bodu cloudu podporuje zástupné znaky. Pokud používáte certifikát se zástupným znakem, nahraďte hvězdičku ( `*` ) v poli **plně kvalifikovaný název domény služby** požadovaným názvem hostitele pro danou službu.  
 
 5. Na stránce **výstrahy** nastavte kvóty úložiště, kvóty přenosů a v jakém procentu těchto kvót chcete generovat výstrahy Configuration Manager. Pak vyberte **Další**.  
 
@@ -169,11 +169,11 @@ Aby mohli klienti používat cloudový distribuční bod, musí být schopni př
 If you issue the server authentication certificate from your PKI, you may directly specify the Azure **Service name**. For example, `WallaceFalls.cloudapp.net`. When you specify this certificate in the Create Cloud Distribution Point Wizard, both the **Service FQDN** and **Service name** properties are the same. In this scenario, you don't need to configure DNS. The name that clients receive from the management point is the same name as the service in Azure.  
 -->
 
-Běžný název certifikátu ověřování serveru by měl obsahovat název domény. Tento název se vyžaduje, když si koupíte certifikát od veřejného poskytovatele. Doporučuje se při vydávání tohoto certifikátu z infrastruktury veřejných klíčů. Například, `WallaceFalls.contoso.com`. Při zadání tohoto certifikátu v Průvodci vytvořením distribučního bodu cloudu naplní běžný název vlastnost **plně kvalifikovaný název domény služby** (`WallaceFalls.contoso.com`). **Název služby** má stejný název hostitele (`WallaceFalls`) a připojí ho k názvu domény Azure. `cloudapp.net` V tomto scénáři musí klienti přeložit **plně kvalifikovaný název domény služby** domény (`WallaceFalls.contoso.com`) na **název služby** Azure (`WallaceFalls.cloudapp.net`). Vytvořte alias CNAME pro mapování těchto názvů.
+Běžný název certifikátu ověřování serveru by měl obsahovat název domény. Tento název se vyžaduje, když si koupíte certifikát od veřejného poskytovatele. Doporučuje se při vydávání tohoto certifikátu z infrastruktury veřejných klíčů. Například, `WallaceFalls.contoso.com`. Při zadání tohoto certifikátu v Průvodci vytvořením distribučního bodu cloudu naplní běžný název vlastnost **plně kvalifikovaný název domény služby** ( `WallaceFalls.contoso.com` ). **Název služby** má stejný název hostitele ( `WallaceFalls` ) a připojí ho k názvu domény Azure `cloudapp.net` . V tomto scénáři musí klienti přeložit **plně kvalifikovaný název domény služby** domény ( `WallaceFalls.contoso.com` ) na **název služby** Azure ( `WallaceFalls.cloudapp.net` ). Vytvořte alias CNAME pro mapování těchto názvů.
 
 ### <a name="create-cname-alias"></a>Vytvořit alias CNAME
 
-Vytvořte záznam kanonického názvu (CNAME) ve veřejné službě DNS s přístupem k Internetu vaší organizace. Tento záznam vytvoří alias pro vlastnost **plně kvalifikovaného názvu domény služby** distribučního bodu cloudu, kterou klienti obdrží, do **názvu služby**Azure. Například vytvořte nový záznam CNAME pro `WallaceFalls.contoso.com` `WallaceFalls.cloudapp.net`.  
+Vytvořte záznam kanonického názvu (CNAME) ve veřejné službě DNS s přístupem k Internetu vaší organizace. Tento záznam vytvoří alias pro vlastnost **plně kvalifikovaného názvu domény služby** distribučního bodu cloudu, kterou klienti obdrží, do **názvu služby**Azure. Například vytvořte nový záznam CNAME pro `WallaceFalls.contoso.com` `WallaceFalls.cloudapp.net` .  
 
 ### <a name="client-name-resolution-process"></a>Proces překladu názvů klientů
 
@@ -215,6 +215,8 @@ Výchozí nastavení klienta automaticky umožní klientům používat distribu�
 ## <a name="manage-and-monitor"></a><a name="bkmk_monitor"></a>Správa a monitorování  
 
 Monitorujte obsah, který distribuujete do distribučního bodu cloudu, stejně jako u ostatních místních distribučních bodů. Další informace najdete v tématu [monitorování obsahu](monitor-content-you-have-distributed.md).
+
+Když zobrazíte seznam distribučních bodů cloudu v konzole nástroje, můžete do seznamu přidat další sloupce. Například sloupec **výstup dat** zobrazuje množství datových klientů stažených ze služby za posledních 30 dní.<!-- SCCMDocs#755 -->
 
 ### <a name="alerts"></a><a name="bkmk_alerts"></a>Generoval  
 

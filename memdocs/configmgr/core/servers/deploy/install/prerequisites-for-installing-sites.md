@@ -10,12 +10,12 @@ ms.assetid: 92b339ef-2723-4322-bec6-077b3e8846b0
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 8362dbf5cf7264c19f683ce5a224f1e0ec348b36
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: a7f7853b006d4ac8b11a30217d1b05b1eedd69dc
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718144"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268976"
 ---
 # <a name="prerequisites-for-installing-configuration-manager-sites"></a>Předpoklady pro instalaci Configuration Managerch lokalit
 
@@ -49,6 +49,9 @@ Pokud instalujete lokalitu centrální správy jako součást rozšíření hier
 
         > [!IMPORTANT]  
         > Po dokončení instalace Configuration Manager musí účet počítače serveru lokality uchovávat práva správce systému pro SQL Server. Neodstraňujte z tohoto účtu práva správce systému SQL.  
+
+    > [!NOTE]
+    > Další informace o potřebách těchto oprávnění po dokončení instalace najdete v tématu oprávnění se [zvýšenými](../../../plan-design/hierarchy/accounts.md#elevated-permissions)oprávněními.
 
 - Pokud instalujete primární lokalitu, budete potřebovat následující další práva:  
 
@@ -134,7 +137,7 @@ Po rozšíření lokality je třeba překonfigurovat následující služby Azur
 - [Microsoft Store pro firmy](../../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md)  
 - [Brána pro správu cloudu](../../../clients/manage/cmg/plan-cloud-management-gateway.md)
 
-Ve verzi 1806 a novější si obnovte Azure Active Directory tajný klíč tenanta. Další informace najdete v tématu [obnovení tajného klíče](../configure/azure-services-wizard.md#bkmk_renew).
+Nejjednodušší způsob je obnovit Azure Active Directory tajný klíč tenanta. Další informace najdete v tématu [obnovení tajného klíče](../configure/azure-services-wizard.md#bkmk_renew).
 
 Případně můžete odebrat a znovu vytvořit připojení k této službě:
 

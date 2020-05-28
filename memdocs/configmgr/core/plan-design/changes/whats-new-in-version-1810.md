@@ -10,12 +10,12 @@ ms.assetid: 4812324b-e6aa-4431-bf1d-9fcd763a8caa
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 6a9770dca209669659abf6e4fc9c23d5e6972981
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 2a3b322f868c5c203114de4d974ba6682272c5d7
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82073547"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906256"
 ---
 # <a name="whats-new-in-version-1810-of-configuration-manager-current-branch"></a>Co je nového ve verzi 1810 Configuration Manager Current Branch
 
@@ -43,7 +43,7 @@ Přečtěte si o změnách podpory před jejich implementací v [odebraných a z
 
 Od 14. srpna 2018 je funkce hybridní správy mobilních zařízení zastaralá. Další informace najdete v tématu [co se stalo s hybridní MDM](../../../mdm/understand/what-happened-to-hybrid.md).<!--Intune feature 2683117-->  
 
-Podpora pro System Center Endpoint Protection (SCEP) pro Mac a Linux (všechny verze) končí 31. prosince 2018. Dostupnost nových definic virů pro SCEP pro Mac a SCEP pro Linux se může po skončení podpory přestat používat. Další informace najdete v [příspěvku blogu konec podpory](https://go.microsoft.com/fwlink/?linkid=870182).
+Podpora pro System Center Endpoint Protection (SCEP) pro Mac a Linux (všechny verze) končí 31. prosince 2018. Dostupnost nových definic virů pro SCEP pro Mac a SCEP pro Linux se může po skončení podpory přestat používat. Další informace najdete v [příspěvku blogu konec podpory](https://techcommunity.microsoft.com/t5/configuration-manager-blog/end-of-support-for-scep-for-mac-and-scep-for-linux-on-december/ba-p/286257).
 
 Nasazení klasických služeb v Azure je teď v Configuration Manager zastaralá. Začněte používat Azure Resource Manager nasazení pro bránu pro správu cloudu a distribuční bod cloudu. Další informace najdete v tématu [plánování pro CMG](../../clients/manage/cmg/plan-cloud-management-gateway.md#azure-resource-manager).
 
@@ -395,7 +395,7 @@ Následující vylepšení výkonu a řešení potíží se vztahují na CMPivot
 
 - Další protokoly pro řešení potíží  
 
-Další informace najdete v těchto článcích:  
+Další informace najdete v následujících článcích:  
 
 - [Vytvoření a spuštění PowerShellových skriptů z konzoly Configuration Manager](../../../apps/deploy-use/create-deploy-scripts.md)  
 

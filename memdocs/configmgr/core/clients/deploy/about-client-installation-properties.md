@@ -10,12 +10,12 @@ ms.assetid: c890fd27-7a8c-4f51-bbe2-f9908af1f42b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 518954457ba58656aeb1986689a3cf74ce918c02
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 6ccfb523cc1abc3a64d396f32d55a4dc4551987c
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81713146"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83428594"
 ---
 # <a name="about-client-installation-parameters-and-properties-in-configuration-manager"></a>Informace o parametrech instalace a vlastnostech klienta v Configuration Manager
 
@@ -36,9 +36,9 @@ Příkaz CCMSetup. exe stáhne potřebné soubory pro instalaci klienta z bodu s
 > [!NOTE]
 > Soubor Client. msi nejde nainstalovat přímo.  
 
-Program CCMSetup. exe poskytuje *parametry* příkazového řádku pro přizpůsobení instalace. Parametry mají předponu lomítka (`/`) a podle konvence malými písmeny. V případě potřeby určíte hodnotu parametru pomocí dvojtečky (`:`), a to hned za následováním hodnoty. Další informace najdete v tématu [parametry příkazového řádku CCMSetup. exe](#ccmsetupexe-command-line-parameters).
+Program CCMSetup. exe poskytuje *parametry* příkazového řádku pro přizpůsobení instalace. Parametry mají předponu lomítka ( `/` ) a podle konvence malými písmeny. V případě potřeby určíte hodnotu parametru pomocí dvojtečky (), `:` a to hned za následováním hodnoty. Další informace najdete v tématu [parametry příkazového řádku CCMSetup. exe](#ccmsetupexe-command-line-parameters).
 
-*Vlastnosti* na příkazovém řádku programu CCMSetup. exe můžete také uvést, chcete-li upravit chování souboru Client. msi. Properties podle konvence je velká písmena. Zadejte hodnotu pro vlastnost pomocí znaku rovná se (`=`) ihned následovaný hodnotou. Další informace najdete v tématu [vlastnosti Client. msi](#clientMsiProps).
+*Vlastnosti* na příkazovém řádku programu CCMSetup. exe můžete také uvést, chcete-li upravit chování souboru Client. msi. Properties podle konvence je velká písmena. Zadejte hodnotu pro vlastnost pomocí znaku rovná se ( `=` ) ihned následovaný hodnotou. Další informace najdete v tématu [vlastnosti Client. msi](#clientMsiProps).
 
 > [!IMPORTANT]  
 > Před zadáním vlastností souboru Client. msi zadejte parametry CCMSetup.  
@@ -109,7 +109,7 @@ Tento parametr také umožňuje zadat adresu URL brány pro správu cloudu (CMG)
 - Spusťte následující příkaz:
 
     ```PowerShell
-    (Get-WmiObject -Namespace Root\Ccm\LocationServices -Class SMS_ActiveMPCandidate | Where-Object {$_.Type -eq "Internet"}).MP`
+    (Get-WmiObject -Namespace Root\Ccm\LocationServices -Class SMS_ActiveMPCandidate | Where-Object {$_.Type -eq "Internet"}).MP
     ```
 
 - Připojí `https://` předponu, která se použije s parametrem **/MP** .
@@ -117,7 +117,7 @@ Tento parametr také umožňuje zadat adresu URL brány pro správu cloudu (CMG)
 Příklad, kdy použijete adresu URL brány pro správu cloudu:`ccmsetup.exe /mp:https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72057598037248100`
 
 > [!Important]
-> Při zadání adresy URL brány pro správu cloudu pro parametr **/MP** musí začínat na `https://`.
+> Při zadání adresy URL brány pro správu cloudu pro parametr **/MP** musí začínat na `https://` .
 
 ### <a name="regtoken"></a>/regtoken
 
@@ -218,19 +218,19 @@ Příklad: `CCMSetup.exe /UsePKICert /NoCRLCheck`
 
 Tento parametr určuje textový soubor se seznamem vlastností instalace klienta.
 
-- Pokud je program CCMSetup spuštěn jako služba, umístěte tento soubor do systémové složky CCMSetup: `%Windir%\Ccmsetup`.
+- Pokud je program CCMSetup spuštěn jako služba, umístěte tento soubor do systémové složky CCMSetup: `%Windir%\Ccmsetup` .
 
 - Pokud zadáte parametr [**/noservice**](#noservice) , umístěte tento soubor do stejné složky jako CCMSetup. exe.
 
 Příklad: `CCMSetup.exe /config:"configuration file name.txt"`
 
-Chcete-li zadat správný formát souboru, použijte soubor **mobileclienttemplate. TCF** ve `\bin\<platform>` složce v instalačním adresáři Configuration Manager na serveru lokality. Tento soubor obsahuje komentáře k oddílům a jejich použití. Vlastnosti instalace klienta zadejte v `[Client Install]` části za následujícím textem:. `Install=INSTALL=ALL`
+Chcete-li zadat správný formát souboru, použijte soubor **mobileclienttemplate. TCF** ve `\bin\<platform>` složce v instalačním adresáři Configuration Manager na serveru lokality. Tento soubor obsahuje komentáře k oddílům a jejich použití. Vlastnosti instalace klienta zadejte v `[Client Install]` části za následujícím textem: `Install=INSTALL=ALL` .
 
 Příklad `[Client Install]` položky oddílu:`Install=INSTALL=ALL SMSSITECODE=ABC SMSCACHESIZE=100`  
 
 ### <a name="skipprereq"></a>/skipprereq
 
-Tento parametr určuje, že program CCMSetup. exe neinstaluje zadaný požadavek. Můžete zadat více než jednu hodnotu. Jednotlivé hodnoty oddělte pomocí`;`středníku ().
+Tento parametr určuje, že program CCMSetup. exe neinstaluje zadaný požadavek. Můžete zadat více než jednu hodnotu. `;`Jednotlivé hodnoty oddělte pomocí středníku ().
 
 Příklady:
 
@@ -255,7 +255,7 @@ Příklad: `CCMSetup.exe /ExcludeFeatures:ClientUI` nenainstaluje na klienta Cen
 
 ## <a name="ccmsetupexe-return-codes"></a><a name="ccmsetupReturnCodes"></a>Návratové kódy CCMSetup. exe
 
-Příkaz CCMSetup. exe poskytuje následující návratové kódy. Chcete-li vyřešit `%WinDir%\ccmsetup\ccmsetup.log` potíže, přečtěte si v klientovi kontext a další podrobnosti o návratových kódech.
+Příkaz CCMSetup. exe poskytuje následující návratové kódy. Chcete-li vyřešit potíže, přečtěte si `%WinDir%\ccmsetup\ccmsetup.log` v klientovi kontext a další podrobnosti o návratových kódech.
 
 |Návratový kód|Význam|  
 |-----------|-------|  
@@ -272,7 +272,7 @@ Následující vlastnosti mohou upravit chování souboru CCMSetup. msi v rámci
 
 ### <a name="ccmsetupcmd"></a>CCMSETUPCMD
 
-Použijte tento program CCMSetup. vlastnost *MSI* k předání dalších parametrů a vlastností příkazového řádku do programu CCMSetup. *exe*. Zahrnutí dalších parametrů a vlastností uvnitř uvozovek (`"`). Tuto vlastnost použijte při spuštění klienta Configuration Manager s [metodou instalace Intune MDM](plan/client-installation-methods.md#microsoft-intune-mdm-installation).
+Použijte tento program CCMSetup. vlastnost *MSI* k předání dalších parametrů a vlastností příkazového řádku do programu CCMSetup. *exe*. Zahrnutí dalších parametrů a vlastností uvnitř uvozovek ( `"` ). Tuto vlastnost použijte při spuštění klienta Configuration Manager s [metodou instalace Intune MDM](plan/client-installation-methods.md#microsoft-intune-mdm-installation).
 
 Příklad: `ccmsetup.msi CCMSETUPCMD="/mp:https://mp.contoso.com CCMHOSTNAME=mp.contoso.com"`
 
@@ -323,7 +323,7 @@ Example: `ccmsetup.exe AADTENANTNAME=Contoso`
 
 ### <a name="ccmadmins"></a>CCMADMINS  
 
-Určuje jeden nebo více uživatelských účtů nebo skupin systému Windows, kterým bude poskytnut přístup k nastavení klienta a zásadám. Tato vlastnost je užitečná, pokud nemáte pověření místního správce v klientském počítači. Zadejte seznam účtů, které jsou odděleny středníky (`;`).
+Určuje jeden nebo více uživatelských účtů nebo skupin systému Windows, kterým bude poskytnut přístup k nastavení klienta a zásadám. Tato vlastnost je užitečná, pokud nemáte pověření místního správce v klientském počítači. Zadejte seznam účtů, které jsou odděleny středníky ( `;` ).
 
 Příklad: `CCMSetup.exe CCMADMINS="domain\account1;domain\group1"`
 
@@ -338,7 +338,7 @@ Příklad: `CCMSetup.exe CCMALLOWSILENTREBOOT`
 
 ### <a name="ccmalwaysinf"></a>CCMALWAYSINF
 
-Chcete-li určit, že je klient vždy na internetu a nikdy se nepřipojuje k intranetu, nastavte tuto `1`vlastnost na hodnotu. U typu připojení klienta se zobrazí hodnota **Vždy v síti Internet**.  
+Chcete-li určit, že je klient vždy na internetu a nikdy se nepřipojuje k intranetu, nastavte tuto vlastnost na hodnotu `1` . U typu připojení klienta se zobrazí hodnota **Vždy v síti Internet**.  
 
 Tato vlastnost s [**CCMHOSTNAME**](#ccmhostname) slouží k určení plně kvalifikovaného názvu domény internetového bodu správy. Použijte ji také s parametrem CCMSetup [**/UsePKICert**](#usepkicert) a kódem lokality ([**SMSSITECODE**](#smssitecode)).
 
@@ -350,7 +350,7 @@ Příklad: `CCMSetup.exe /UsePKICert CCMALWAYSINF=1 CCMHOSTNAME=SERVER3.CONTOSO.
 
 Pomocí této vlastnosti lze zadat seznam vystavitelů certifikátů. Tento seznam obsahuje informace o certifikátech důvěryhodných kořenových certifikačních autorit (CA), které jsou vztahem k Configuration Manager lokalitě.  
 
-Tato hodnota rozlišuje malá a velká písmena pro atributy subjektu, které jsou v kořenovém certifikátu certifikační autority. Jednotlivé atributy oddělujte čárkou (`,`) nebo středníkem (`;`). Zadejte více než jeden kořenový certifikát certifikační autority pomocí oddělovacího panelu`|`().
+Tato hodnota rozlišuje malá a velká písmena pro atributy subjektu, které jsou v kořenovém certifikátu certifikační autority. Jednotlivé atributy oddělujte čárkou ( `,` ) nebo středníkem ( `;` ). Zadejte více než jeden kořenový certifikát certifikační autority pomocí oddělovacího panelu ( `|` ).
 
 Příklad: `CCMCERTISSUERS="CN=Contoso Root CA; OU=Servers; O=Contoso, Ltd; C=US | CN=Litware Corporate Root CA; O=Litware, Inc."`
 
@@ -370,7 +370,7 @@ K vyhledání názvu subjektu certifikátu nebo alternativního názvu předmět
 
 Příklady:
 
-- `CCMCERTSEL="Subject:computer1.contoso.com"`: Vyhledejte certifikát s přesnou shodou názvu `computer1.contoso.com` počítače v názvu subjektu nebo v alternativním názvu subjektu.
+- `CCMCERTSEL="Subject:computer1.contoso.com"`: Vyhledejte certifikát s přesnou shodou názvu počítače `computer1.contoso.com` v názvu subjektu nebo v alternativním názvu subjektu.
 
 - `CCMCERTSEL="SubjectStr:contoso.com"`: Vyhledejte certifikát, který se nachází `contoso.com` v názvu subjektu nebo v alternativním názvu subjektu.
 
@@ -378,9 +378,9 @@ Pomocí klíčového slova **SubjectAttr** vyhledejte atributy identifikátoru o
 
 Příklady:
 
-- `CCMCERTSEL="SubjectAttr:2.5.4.11 = Computers"`: Vyhledejte atribut organizační jednotky vyjádřený jako identifikátor objektu a pojmenovaný `Computers`.
+- `CCMCERTSEL="SubjectAttr:2.5.4.11 = Computers"`: Vyhledejte atribut organizační jednotky vyjádřený jako identifikátor objektu a pojmenovaný `Computers` .
 
-- `CCMCERTSEL="SubjectAttr:OU = Computers"`: Vyhledejte atribut organizační jednotky vyjádřený jako rozlišující název a pojmenujte `Computers`.
+- `CCMCERTSEL="SubjectAttr:OU = Computers"`: Vyhledejte atribut organizační jednotky vyjádřený jako rozlišující název a pojmenujte `Computers` .
 
 > [!IMPORTANT]
 > Pokud použijete název subjektu, klíčové slovo **Subject** rozlišuje velká a malá písmena a klíčové slovo **SubjectStr** nerozlišuje malá a velká písmena.
@@ -389,7 +389,7 @@ Příklady:
 
 Úplný seznam atributů, které můžete použít pro výběr certifikátu, najdete v tématu [podporované hodnoty atributů pro kritéria výběru certifikátu PKI](#BKMK_attributevalues).
 
-Pokud hledání odpovídá více než jeden certifikát a nastavili jste [**CCMFIRSTCERT**](#ccmfirstcert) na `1`, pak instalační program klienta vybere certifikát s nejdelší dobou platnosti.
+Pokud hledání odpovídá více než jeden certifikát a nastavili jste [**CCMFIRSTCERT**](#ccmfirstcert) na `1` , pak instalační program klienta vybere certifikát s nejdelší dobou platnosti.
 
 ### <a name="ccmcertstore"></a>CCMCERTSTORE
 
@@ -425,7 +425,7 @@ Další informace najdete v tématu [informace o souborech protokolu](../../plan
 
 ### <a name="ccmevalinterval"></a>CCMEVALINTERVAL
 
-Frekvence v minutách, po které se nástroj pro vyhodnocení stavu klienta (ccmeval. exe) spustí. Zadejte celočíselnou hodnotu z `1` hodnoty `1440`do. Ve výchozím nastavení se ccmeval spustí jednou denně (1440 minut).
+Frekvence v minutách, po které se nástroj pro vyhodnocení stavu klienta (ccmeval. exe) spustí. Zadejte celočíselnou hodnotu z hodnoty `1` do `1440` . Ve výchozím nastavení se ccmeval spustí jednou denně (1440 minut).
 
 Příklad: `CCMSetup.exe CCMEVALINTERVAL=1440`
 
@@ -439,7 +439,7 @@ Další informace o vyhodnocení stavu klienta najdete v tématu [monitorování
 
 ### <a name="ccmfirstcert"></a>CCMFIRSTCERT
 
-Pokud tuto vlastnost nastavíte na `1`, klient vybere certifikát PKI s nejdelší dobou platnosti.
+Pokud tuto vlastnost nastavíte na `1` , klient vybere certifikát PKI s nejdelší dobou platnosti.
 
 Příklad: `CCMSetup.exe /UsePKICert CCMFIRSTCERT=1`
 
@@ -466,23 +466,23 @@ Tato vlastnost může určovat adresu brány pro správu cloudu (CMG). Pro získ
 Příklad: `ccmsetup.exe CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72057598037248100`
 
 > [!Important]
-> Pokud zadáte adresu CMG pro vlastnost **CCMHOSTNAME** , nepřipojujte předponu, například `https://`. Tuto předponu použijte pouze s adresou URL **/MP** CMG.
+> Pokud zadáte adresu CMG pro vlastnost **CCMHOSTNAME** , nepřipojujte předponu, například `https://` . Tuto předponu použijte pouze s adresou URL **/MP** CMG.
 
 ### <a name="ccmhttpport"></a>CCMHTTPPORT
 
-Určuje port, který má klient použít při komunikaci přes protokol HTTP se servery systému lokality. Ve výchozím nastavení je `80`tato hodnota.
+Určuje port, který má klient použít při komunikaci přes protokol HTTP se servery systému lokality. Ve výchozím nastavení je tato hodnota `80` .
 
 Příklad: `CCMSetup.exe CCMHTTPPORT=80`
 
 ### <a name="ccmhttpsport"></a>CCMHTTPSPORT
 
-Určuje port, který má klient použít při komunikaci přes protokol HTTPS se servery systému lokality. Ve výchozím nastavení je `443`tato hodnota.
+Určuje port, který má klient použít při komunikaci přes protokol HTTPS se servery systému lokality. Ve výchozím nastavení je tato hodnota `443` .
 
 Příklad: `CCMSetup.exe /UsePKICert CCMHTTPSPORT=443`
 
 ### <a name="ccminstalldir"></a>CCMINSTALLDIR
 
-Tato vlastnost slouží k nastavení složky pro instalaci Configuration Manager klientských souborů. Ve výchozím nastavení používá `%WinDir%\CCM`.
+Tato vlastnost slouží k nastavení složky pro instalaci Configuration Manager klientských souborů. Ve výchozím nastavení používá `%WinDir%\CCM` .
 
 > [!TIP]
 > Bez ohledu na to, kam nainstalujete soubory klienta, vždy nainstaluje soubor **Ccmcore. dll** do `%WinDir%\System32` složky. V 64 operačním systému nainstaluje kopii Ccmcore. dll do `%WinDir%\SysWOW64` složky. Tento soubor podporuje 32 aplikací, které používají 32 verzi klientských rozhraní API ze sady Configuration Manager SDK.
@@ -506,7 +506,7 @@ Další informace najdete v tématu [informace o souborech protokolu](../../plan
 
 ### <a name="ccmlogmaxhistory"></a>CCMLOGMAXHISTORY
 
-Když soubor protokolu Configuration Manager dosáhne maximální velikosti, klient ho přejmenuje jako zálohu a vytvoří nový soubor protokolu. Tato vlastnost určuje, kolik předchozích verzí souboru protokolu bude zachováno. Výchozí hodnota je `1`. Pokud nastavíte hodnotu na `0`, klient nebude uchovávat žádnou historii souborů protokolu.
+Když soubor protokolu Configuration Manager dosáhne maximální velikosti, klient ho přejmenuje jako zálohu a vytvoří nový soubor protokolu. Tato vlastnost určuje, kolik předchozích verzí souboru protokolu bude zachováno. Výchozí hodnota je `1`. Pokud nastavíte hodnotu na `0` , klient nebude uchovávat žádnou historii souborů protokolu.
 
 Příklad: `CCMSetup.exe CCMLOGMAXHISTORY=5`
 
@@ -554,7 +554,7 @@ Příklad: `CCMSetup.exe FSP=SMSFP01`
 
 ### <a name="ignoreappvversioncheck"></a>IGNOREAPPVVERSIONCHECK
 
-Pokud nastavíte tuto vlastnost na `TRUE`, instalační služba klienta nekontroluje minimální požadovanou verzi Microsoft Application Virtualization (App-V).
+Pokud nastavíte tuto vlastnost na `TRUE` , instalační služba klienta nekontroluje minimální požadovanou verzi Microsoft Application Virtualization (App-V).
 
 > [!IMPORTANT]  
 > Pokud instalujete klienta Configuration Manager bez instalace sady App-V, nebudete moci [nasadit virtuální aplikace](../../../apps/get-started/deploying-app-v-virtual-applications.md).
@@ -581,9 +581,9 @@ Použijte následující postup:
 
 1. [Vytvořte pořadí úkolů nasazení mimo operační systém](../../../osd/deploy-use/create-a-task-sequence-for-non-operating-system-deployments.md) , které nainstaluje aplikace, nainstaluje aktualizace softwaru a nakonfiguruje nastavení.
 
-1. [Nasaďte toto pořadí úloh](../../../osd/deploy-use/deploy-a-task-sequence.md) do nové předdefinované kolekce, **všechna zřizovací zařízení**. Poznamenejte si ID nasazení pořadí úloh, například `PRI20001`.
+1. [Nasaďte toto pořadí úloh](../../../osd/deploy-use/deploy-a-task-sequence.md) do nové předdefinované kolekce, **všechna zřizovací zařízení**. Poznamenejte si ID nasazení pořadí úloh, například `PRI20001` .
 
-1. Do zařízení [nainstalujte klienta Configuration Manager](deploy-clients-to-windows-computers.md#BKMK_Manual) a zahrňte následující vlastnost: `PROVISIONTS=PRI20001`. Nastavte hodnotu této vlastnosti jako ID nasazení pořadí úloh.
+1. Do zařízení [nainstalujte klienta Configuration Manager](deploy-clients-to-windows-computers.md#BKMK_Manual) a zahrňte následující vlastnost: `PROVISIONTS=PRI20001` . Nastavte hodnotu této vlastnosti jako ID nasazení pořadí úloh.
 
     - Pokud instalujete klienta nástroje z Intune během registrace spolusprávy, přečtěte si téma [Příprava internetových zařízení pro spolusprávu](../../../comanage/how-to-prepare-Win10.md).
 
@@ -606,7 +606,7 @@ Příklad: `CCMSetup.exe SMSSITECODE=AUTO SITEREASSIGN=TRUE`
 
 ### <a name="smscachedir"></a>SMSCACHEDIR
 
-Určuje umístění složky mezipaměti klienta v klientském počítači. Ve výchozím nastavení je `%WinDir%\ccmcache`umístění mezipaměti.
+Určuje umístění složky mezipaměti klienta v klientském počítači. Ve výchozím nastavení je umístění mezipaměti `%WinDir%\ccmcache` .
 
 Příklad: `CCMSetup.exe SMSCACHEDIR="C:\Temp"`  
 
@@ -614,7 +614,7 @@ Tuto vlastnost s vlastností [**SMSCACHEFLAGS**](#smscacheflags) použijte k ř�
 
 ### <a name="smscacheflags"></a>SMSCACHEFLAGS
 
-Tato vlastnost slouží k určení dalších podrobností instalace složky mezipaměti klienta. Vlastnosti **SMSCACHEFLAGS** můžete použít samostatně nebo v kombinaci oddělené středníky (`;`).
+Tato vlastnost slouží k určení dalších podrobností instalace složky mezipaměti klienta. Vlastnosti **SMSCACHEFLAGS** můžete použít samostatně nebo v kombinaci oddělené středníky ( `;` ).
 
 Pokud tuto vlastnost nezadáte:
 
@@ -628,7 +628,7 @@ Když upgradujete stávajícího klienta, instalační služba klienta tuto vlas
 
 - **Vlastností PERCENTDISKSPACE**: nastavte velikost mezipaměti jako procentuální hodnotu *celkového* místa na disku. Pokud zadáte tuto vlastnost, nastavte také [**SMSCACHESIZE**](#smscachesize) na hodnotu procent.
 
-- **PERCENTFREEDISKSPACE**: nastavte velikost mezipaměti jako procento *volného* místa na disku. Pokud zadáte tuto vlastnost, nastavte také [**SMSCACHESIZE**](#smscachesize) jako procentuální hodnotu. Například disk má 10 MB volného místa a zadáte `SMSCACHESIZE=50`. Instalační program klienta nastaví velikost mezipaměti na 5 MB. Tuto vlastnost nelze použít s vlastností **vlastností PERCENTDISKSPACE** .
+- **PERCENTFREEDISKSPACE**: nastavte velikost mezipaměti jako procento *volného* místa na disku. Pokud zadáte tuto vlastnost, nastavte také [**SMSCACHESIZE**](#smscachesize) jako procentuální hodnotu. Například disk má 10 MB volného místa a zadáte `SMSCACHESIZE=50` . Instalační program klienta nastaví velikost mezipaměti na 5 MB. Tuto vlastnost nelze použít s vlastností **vlastností PERCENTDISKSPACE** .
 
 - **MAXDRIVE**: Nainstalujte mezipaměť na největší dostupný disk. Pokud zadáte cestu s vlastností [**SMSCACHEDIR**](#smscachedir) , instalační služba klienta tuto hodnotu ignoruje.
 
@@ -668,7 +668,7 @@ Tato vlastnost slouží k určení umístění a pořadí, ve kterém Instalačn
 
 - `U`: Upgradujte nainstalovaného klienta na novější verzi a použijte přiřazený kód lokality.
 
-Ve výchozím nastavení používá `PU`instalační program klienta. Nejprve zkontroluje vlastnosti instalace (`P`) a pak existující nastavení (`U`).  
+Ve výchozím nastavení používá instalační program klienta `PU` . Nejprve zkontroluje vlastnosti instalace ( `P` ) a pak existující nastavení ( `U` ).  
 
 Příklad: `CCMSetup.exe SMSCONFIGSOURCE=RP`
 
@@ -693,7 +693,7 @@ Example: `CCMSetup.exe SMSDIRECTORYLOOKUP=NOWINS`
 Určuje počáteční bod správy, který má klient Configuration Manager použít.  
 
 > [!IMPORTANT]  
-> Pokud bod správy akceptuje pouze připojení klientů přes protokol HTTPS, použijte předponu názvu bodu `https://`správy pomocí.
+> Pokud bod správy akceptuje pouze připojení klientů přes protokol HTTPS, použijte předponu názvu bodu správy pomocí `https://` .
 
 Příklady:
 
@@ -724,7 +724,7 @@ Příklad: `CCMSetup.exe /UsePKICert SMSSIGNCERT=C:\folder\smssign.cer`
 
 ### <a name="smssitecode"></a>SMSSITECODE
 
-Tato vlastnost určuje lokalitu Configuration Manager, ke které přiřadíte klienta. Tato hodnota může být buď kód lokality o třech znacích, nebo slovo `AUTO`. Pokud zadáte `AUTO`nebo nezadáte tuto vlastnost, klient se pokusí určit přiřazení lokality z Active Directory Domain Services nebo ze zadaného bodu správy. Pokud chcete `AUTO` povolit upgrady klientů, nastavte také [SITEREASSIGN = true](#sitereassign).
+Tato vlastnost určuje lokalitu Configuration Manager, ke které přiřadíte klienta. Tato hodnota může být buď kód lokality o třech znacích, nebo slovo `AUTO` . Pokud zadáte `AUTO` nebo nezadáte tuto vlastnost, klient se pokusí určit přiřazení lokality z Active Directory Domain Services nebo ze zadaného bodu správy. Pokud chcete povolit `AUTO` upgrady klientů, nastavte také [SITEREASSIGN = true](#sitereassign).
 
 > [!NOTE]  
 > Pokud zadáte také internetový bod správy s vlastností [**CCMHOSTNAME**](#ccmhostname) , nepoužívejte `AUTO` s **SMSSITECODE**. Přímo přiřaďte klienta ke svému webu zadáním kódu lokality.

@@ -10,12 +10,12 @@ ms.assetid: 1fcc921f-085f-4b0b-9c53-1e0707211076
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c6891a46050bb83e54fb34b97d9129fcb5873785
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: f877de32c9915f91d1e2d7f2d90b9b40ab69df11
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718669"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906578"
 ---
 # <a name="additional-information-about-privacy-for-configuration-manager"></a>Další informace o ochraně osobních údajů pro Configuration Manager
 
@@ -91,6 +91,6 @@ Další informace najdete v tématu [Endpoint Protection](../../../protect/deplo
 
 V konzole Configuration Manager přejděte do pracovního prostoru **monitorování** , vyberte uzel **hierarchie lokality** a přepněte do **geografického zobrazení**. Toto zobrazení vám umožní používat mapy, které Microsoft Bing Maps poskytuje k zobrazení Configuration Manager topologie fyzického serveru. Chcete-li povolit tuto funkci, informace o umístění, které poskytnete, budou odesílány z vašeho serveru do webové služby Bing Maps.
 
-Společnost Microsoft používá informace pro provoz a zlepšování služby Microsoft Bing Maps a dalších webových stránek a služeb společnosti Microsoft. Další informace najdete v tématu [prohlášení o zásadách ochrany osobních údajů společnosti Microsoft](https://go.microsoft.com/fwlink/?LinkId=823548).
+Společnost Microsoft používá informace pro provoz a zlepšování služby Microsoft Bing Maps a dalších webových stránek a služeb společnosti Microsoft. Další informace najdete v tématu [prohlášení o zásadách ochrany osobních údajů společnosti Microsoft](https://privacy.microsoft.com/privacystatement).
 
 Lze zvolit nepoužívání zeměpisného zobrazení hierarchie webu. Výchozí zobrazení diagramu hierarchie vám umožní zobrazit hierarchii a nepoužívá službu Bing Maps.

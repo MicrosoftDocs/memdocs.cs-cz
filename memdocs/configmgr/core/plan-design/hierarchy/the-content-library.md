@@ -10,12 +10,12 @@ ms.assetid: 65c88e54-3574-48b0-a127-9cc914a89dca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 253de522937e48fa1f3939c7303faf7e43e4e047
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d7432b3522d5292e2c2afc1dac6b8db3382cca12
+ms.sourcegitcommit: 4c129bb04ea4916c78446e89fbff956397cbe828
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81720895"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83343163"
 ---
 # <a name="the-content-library-in-configuration-manager"></a>Knihovna obsahu v Configuration Manager
 
@@ -91,6 +91,8 @@ Vzdálená knihovna obsahu je předpokladem pro [vysokou dostupnost serveru loka
 
 - Webový server nemůže mít roli distribučního bodu. Distribuční bod také používá knihovnu obsahu a tato role nepodporuje vzdálenou knihovnu obsahu. Po přesunutí knihovny obsahu nelze přidat roli distribučního bodu do serveru lokality.  
 
+- Vzdálený systém pro knihovnu obsahu musí být v důvěryhodné doméně.
+
 > [!Important]  
 > Neprovádějte opakované použití sdíleného síťového umístění mezi více lokalitami. Nepoužívejte například stejnou cestu jak pro lokalitu centrální správy, tak pro podřízenou primární lokalitu. Tato konfigurace má potenciál poškodit knihovnu obsahu a vyžadovat, abyste ji znovu sestavili.<!--SCCMDocs-pr issue 2764-->  
 
@@ -105,14 +107,14 @@ Vzdálená knihovna obsahu je předpokladem pro [vysokou dostupnost serveru loka
 
 3. Na pásu karet vyberte **Spravovat knihovnu obsahu** .  
 
-4. V okně Spravovat knihovnu obsahu se v poli **aktuální umístění** zobrazuje místní jednotka a cesta. Zadejte platnou síťovou cestu pro **nové umístění**. Tato cesta je umístění, do kterého lokalita přesouvá knihovnu obsahu. Musí obsahovat název složky, který již ve sdílené složce existuje, například `\\server\share\folder`. Vyberte **OK**.  
+4. V okně Spravovat knihovnu obsahu se v poli **aktuální umístění** zobrazuje místní jednotka a cesta. Zadejte platnou síťovou cestu pro **nové umístění**. Tato cesta je umístění, do kterého lokalita přesouvá knihovnu obsahu. Musí obsahovat název složky, který již ve sdílené složce existuje, například `\\server\share\folder` . Vyberte **OK**.  
 
 5. Poznamenejte si hodnotu **stav** ve sloupci knihovna obsahu na kartě Souhrn v podokně podrobností. Aktualizuje a zobrazí průběh přesunutí knihovny obsahu.  
 
    - **V průběhu probíhá**hodnota **přesunu (%)** , která je dokončená v procentech.  
 
         > [!Note]  
-        > Pokud máte rozsáhlou knihovnu obsahu, může se po chvíli `0%` zobrazit průběh v konzole. Například s knihovnou 1 TB musí kopírovat 10 GB před tím, než se zobrazí `1%`. Zkontrolujte **Distmgr. log**, který zobrazuje počet zkopírovaných souborů a bajtů. Počínaje verzí 1810 se v souboru protokolu zobrazuje také Odhadovaný zbývající čas.
+        > Pokud máte rozsáhlou knihovnu obsahu, může se po `0%` chvíli zobrazit průběh v konzole. Například s knihovnou 1 TB musí kopírovat 10 GB před tím, než se zobrazí `1%` . Zkontrolujte **Distmgr. log**, který zobrazuje počet zkopírovaných souborů a bajtů. Počínaje verzí 1810 se v souboru protokolu zobrazuje také Odhadovaný zbývající čas.
 
    - Pokud dojde k chybovém stavu, zobrazí se ve stavu chyba. K běžným chybám patří **odepřený přístup** nebo **disk je plný**.  
 
@@ -128,7 +130,7 @@ Pokud původní Knihovna obsahu zahrnuje dvě jednotky, sloučí se do jediné s
 
 V rámci verze 1810 se během kopírování nezpracovávají součásti pro **vyřazování** a **správu distribuce** nové balíčky. Tato akce zajistí, že se obsah během přesouvání nepřidá do knihovny. Tuto změnu při údržbě systému Naplánujte bez ohledu na tuto změnu.
 
-Pokud potřebujete přesunout knihovnu obsahu zpět na server lokality, opakujte tento postup, ale zadejte místní jednotku a cestu k **novému umístění**. Musí obsahovat název složky, který již na disku existuje, například `D:\SCCMContentLib`. Když původní obsah stále existuje, proces rychle přesune konfiguraci do umístění místního serveru lokality.
+Pokud potřebujete přesunout knihovnu obsahu zpět na server lokality, opakujte tento postup, ale zadejte místní jednotku a cestu k **novému umístění**. Musí obsahovat název složky, který již na disku existuje, například `D:\SCCMContentLib` . Když původní obsah stále existuje, proces rychle přesune konfiguraci do umístění místního serveru lokality.
 
 > [!Tip]  
 > Chcete-li přesunout obsah na jinou jednotku na serveru lokality, použijte nástroj pro **přenos knihovny obsahu** . Další informace najdete v tématu [Nástroj pro přenos knihovny obsahu](../../support/content-library-transfer.md).  
@@ -154,11 +156,11 @@ Ve výchozím nastavení se knihovna obsahu ukládá do kořenového adresáře 
 
 ### <a name="package-library"></a>Knihovna balíčků
 
-Složka knihovny balíčků **PkgLib**obsahuje jeden soubor pro každý balíček distribuovaný do distribučního bodu. Název souboru je ID balíčku, například `ABC00001.INI`. V tomto souboru v `[Packages]` části je seznam ID obsahu, který je součástí balíčku, a další informace, jako je například verze. Například **ABC00001** je starší balíček ve verzi **1**. ID obsahu v tomto souboru je `ABC00001.1`.
+Složka knihovny balíčků **PkgLib**obsahuje jeden soubor pro každý balíček distribuovaný do distribučního bodu. Název souboru je ID balíčku, například `ABC00001.INI` . V tomto souboru v `[Packages]` části je seznam ID obsahu, který je součástí balíčku, a další informace, jako je například verze. Například **ABC00001** je starší balíček ve verzi **1**. ID obsahu v tomto souboru je `ABC00001.1` .
 
 ### <a name="data-library"></a>Knihovna dat
 
-Složka knihovny dat **DataLib**obsahuje jeden soubor a jednu složku pro každý obsah v každém balíčku. Například tento soubor a složka jsou pojmenované `ABC00001.1.INI` a `ABC00001.1`v uvedeném pořadí. Soubor obsahuje informace pro ověření. Složka znovu vytvoří strukturu složky z původního balíčku.
+Složka knihovny dat **DataLib**obsahuje jeden soubor a jednu složku pro každý obsah v každém balíčku. Například tento soubor a složka jsou pojmenované `ABC00001.1.INI` a `ABC00001.1` v uvedeném pořadí. Soubor obsahuje informace pro ověření. Složka znovu vytvoří strukturu složky z původního balíčku.
 
 Soubory v knihovně dat jsou nahrazeny soubory INI s názvem původního souboru v balíčku. Například, `MyFile.exe.INI`. Tyto soubory obsahují informace o původním souboru, jako je například velikost, čas změny a hodnota hash. Použijte první čtyři znaky hash k vyhledání původního souboru v knihovně souborů. Například hodnota hash v souboru MyFile. exe. INI je **DEF98765**a první čtyři znaky jsou **DEF9**.
 
@@ -168,7 +170,7 @@ Pokud knihovna obsahu zahrnuje více jednotek, mohou být soubory balíčku ve s
 
 Vyhledá konkrétní soubor pomocí prvních čtyř znaků z hodnoty hash, která se nachází v knihovně dat. V rámci složky knihovny souborů je to mnoho složek, z nichž každý má název se čtyřmi znaky. Vyhledá složku, která odpovídá prvních čtyř znakům z hodnoty hash. Po nalezení této složky obsahuje jednu nebo více sad tří souborů. Tyto soubory mají stejný název, ale jeden z nich má příponu INI, jedna má příponu SIG a jedna nemá příponu souboru. Původní soubor je ten bez přípony, jehož název je stejný jako hodnota hash z knihovny dat.
 
-Například složka **DEF9** zahrnuje `DEF98765.INI`, `DEF98765.SIG`a. `DEF98765` `DEF98765`je původní `MyFile.exe`. Soubor INI obsahuje seznam uživatelů nebo ID obsahu, které sdílejí stejný soubor. Lokalita soubor neodebere, pokud není odstraněn také celý tento obsah.
+Například složka **DEF9** zahrnuje `DEF98765.INI` , `DEF98765.SIG` a `DEF98765` . `DEF98765`je původní `MyFile.exe` . Soubor INI obsahuje seznam uživatelů nebo ID obsahu, které sdílejí stejný soubor. Lokalita soubor neodebere, pokud není odstraněn také celý tento obsah.
 
 ### <a name="drive-spanning"></a>Pokrývání jednotky
 
@@ -180,7 +182,7 @@ Pokud jste zvolili možnost **automaticky** , Configuration Manager vybere jedno
 
 Během konfigurace zadáte množství rezervovaného prostoru. Configuration Manager se pokusí použít sekundární disk, protože nejlepší dostupný disk má pouze tuto částku rezervovaného místa zbývající zdarma. Pokaždé, když se vybere nová jednotka pro použití, vybere se jednotka s největším dostupným volným místem.
 
-Nemůžete určit, že distribuční bod by měl používat všechny jednotky kromě konkrétní sady. Zabraňte tomuto chování vytvořením prázdného souboru v kořenovém adresáři jednotky, která `NO_SMS_ON_DRIVE.SMS`je volána. Tento soubor umístěte před Configuration Manager vybere jednotku, která se má použít. Pokud Configuration Manager zjistí tento soubor na kořenovém adresáři jednotky, nepoužije jednotku pro knihovnu obsahu.
+Nemůžete určit, že distribuční bod by měl používat všechny jednotky kromě konkrétní sady. Zabraňte tomuto chování vytvořením prázdného souboru v kořenovém adresáři jednotky, která je volána `NO_SMS_ON_DRIVE.SMS` . Tento soubor umístěte před Configuration Manager vybere jednotku, která se má použít. Pokud Configuration Manager zjistí tento soubor na kořenovém adresáři jednotky, nepoužije jednotku pro knihovnu obsahu.
 
 
 ## <a name="troubleshooting"></a>Řešení potíží
@@ -196,3 +198,5 @@ Následující tipy vám můžou pomoct při odstraňování problémů s knihov
 - Pokud chcete zjistit, jestli nedošlo k žádným hodnotám hash, ověřte balíček z konzoly Configuration Manager.  
 
 - Jako poslední možnost znovu distribuujte obsah. Tato akce by měla vyřešit většinu problémů.  
+
+Podrobnější informace najdete v tématu [porozumění a řešení potíží s distribucí obsahu v Configuration Manager](https://support.microsoft.com/help/4482728/understand-troubleshoot-content-distribution-in-configuration-manager).

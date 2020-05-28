@@ -2,7 +2,7 @@
 title: Prostředky v Desktop Analytics
 titleSuffix: Configuration Manager
 description: Přečtěte si o zařízeních, ovladačích a aplikacích v Desktop Analytics.
-ms.date: 01/16/2020
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -10,12 +10,13 @@ ms.assetid: d07198cf-49bb-4712-8c63-063b4302cc11
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: fe1338781cbb16a8485de050a294e34e487a2ecc
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.reviewer: acabello
+ms.openlocfilehash: d5900fd4cb4fdebea23e626ffbe17c5289712b31
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81722547"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268908"
 ---
 # <a name="assets-in-desktop-analytics"></a>Prostředky v Desktop Analytics
 
@@ -41,15 +42,19 @@ Karta **aplikace** zobrazuje všechny nainstalované aplikace, které služba de
 
 Aplikace **zajímavosti** se instalují na více než 2% zaregistrovaných zařízení.
 
+Nastavení **Podrobnosti verzí aplikace** je ve výchozím nastavení vypnuté, takže tato karta kombinuje všechny verze aplikací se stejným názvem a vydavatelem.<!-- 5542186 --> Výchozí chování pomáhá snížit celkový počet aplikací, které vidíte, což pomáhá snižovat vaše úsilí při přidávání poznámek k aplikacím. Toto nastavení se projeví i v počtu aplikací na dlaždici **aplikace zajímavosti** . Například místo výpisu stovek instancí Microsoft Edge existuje jedna instance pro všechny verze. Pro všechny verze můžete udělat rozhodnutí jednou. Pokud potřebujete rozhodnout o konkrétních verzích aplikace, zapněte toto nastavení. Toto nastavení můžete nakonfigurovat i při práci s plánem nasazení. Další informace najdete v tématu [plánování prostředků](about-deployment-plans.md#plan-assets).
+
+Vyberte aplikaci ze seznamu a vyberte **Upravit**. Tato akce zobrazí podrobnosti o aplikaci. Vyberte rozevírací nabídku **důležitost** a nastavte hodnotu. Můžete také přiřadit **vlastníka**. Pokud provedete nějaké změny, vyberte **Uložit**.
+
 Nakonfigurujte **důležitost** aplikací nastavením jedné z následujících kategorií:
 
-- Kritická
+- Kritické
 - Důležité
 - Ignorovat
 - Nerevidováno
 - Není důležité<!-- 3587232 -->
 
-Vyberte aplikaci ze seznamu a vyberte **Upravit**. Tato akce zobrazí podrobnosti o aplikaci. Vyberte rozevírací nabídku **důležitost** a nastavte hodnotu. Můžete také přiřadit **vlastníka**. Pokud provedete nějaké změny, vyberte **Uložit**.
+Pokud je nastavení **Podrobnosti verze aplikace** vypnuté, zobrazí se v podokně podrobností aplikace počet verzí aplikací a jazyků, které kombinuje. Pokud všechny změny v podrobnostech aplikace uložíte, platí pro všechny verze. Nastavte například **důležitost** nebo **vlastník**. Některé hodnoty zobrazí "vícenásobné", což znamená, že ve všech verzích není jedna konzistentní hodnota.
 
 ### <a name="automatic-upgrade-decision-of-system-and-store-apps"></a><a name="bkmk_plan-autoapp" />Automatické rozhodnutí o upgradu pro systém a aplikace ze Storu
 
@@ -70,7 +75,7 @@ Určení **důležitosti** a **rozhodnutí o upgradu** je klíčové pro všechn
 >    - Pro aplikace ze Storu, **typ** filtru jako **moderní**
 >    - Pro systémové aplikace, filtrovat **kategorii** jako **proces na pozadí** nebo **součást systému Windows**
 
-V plánu nasazení můžete také nastavit **rozhodnutí o upgradu**. Další informace najdete v tématu [plánování prostředků](about-deployment-plans.md#plan-assets) .
+V plánu nasazení můžete také nastavit **rozhodnutí o upgradu**. Další informace najdete v tématu [plánování prostředků](about-deployment-plans.md#plan-assets).
 
 ### <a name="usage"></a>Využití
 

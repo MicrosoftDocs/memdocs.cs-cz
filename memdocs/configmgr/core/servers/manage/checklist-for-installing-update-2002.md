@@ -2,7 +2,7 @@
 title: Kontrolní seznam pro 2002
 titleSuffix: Configuration Manager
 description: Přečtěte si o akcích, které je potřeba provést před aktualizací na verzi Configuration Manager 2002.
-ms.date: 04/01/2020
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 2993032a-1204-4bd8-b5af-17a980bb0649
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: a7f2abac1810b5ab40e3c253b6aee7aa970174d9
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 63293c103cf8a19d006bd700cac6c370ba5e7391
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81723534"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268942"
 ---
 # <a name="checklist-for-installing-update-2002-for-configuration-manager"></a>Kontrolní seznam pro instalaci aktualizace 2002 pro Configuration Manager
 
@@ -33,7 +33,7 @@ Jakmile vaše hierarchie stáhne balíček aktualizace od Microsoftu, najděte h
 
   - Dmpdownloader. log může znamenat, že proces dmpdownloader čeká na interval před vyhledáním aktualizací. Chcete-li znovu spustit stahování souborů opětovné distribuce aktualizace, restartujte službu **SMS_Executive** na serveru lokality.
 
-  - K dalšímu problému se stahování dochází, když proxy server nastavení brání `silverlight.dlservice.microsoft.com`stažení `download.microsoft.com`z, `go.microsoft.com`a.
+  - K dalšímu problému se stahování dochází, když proxy server nastavení brání stažení z `silverlight.dlservice.microsoft.com` , `download.microsoft.com` a `go.microsoft.com` .
 
 Další informace o instalaci aktualizací najdete v tématu [aktualizace a údržba v konzole](updates.md#bkmk_inconsole).
 
@@ -68,33 +68,35 @@ Při prvním použití konzoly Configuration Manager po dokončení aktualizace 
 
 <!-- SCCMDocs#1397 -->
 
-<!-- As of December 20, 2019, version 2002 is globally available for all customers to install. If you previously opted in to the early update ring, watch for an update to this current branch version.
- -->
+Od 11. května 2020 je verze 2002 k dispozici pro všechny zákazníky, kteří chtějí instalovat. Pokud jste se dříve přihlásili k okruhu brzké aktualizace, Sledujte aktualizaci této aktuální verze větve.
 
-V tuto chvíli je pro kanál prvotní aktualizace vydaná verze 2002. Pokud chcete nainstalovat tuto aktualizaci, musíte se přihlásit. Následující skript PowerShellu přidá vaši hierarchii nebo samostatnou primární lokalitu do okruhu na začátku aktualizace pro verzi 2002:
+<!--
+At this time, version 2002 is released for the early update ring. To install this update, you need to opt-in. The following PowerShell script adds your hierarchy or standalone primary site to the early update ring for version 2002:
 
-[Skript pro výslovný souhlas verze 2002](https://go.microsoft.com/fwlink/?linkid=2099733) <!-- This fwlink points to the script package on the Download Center, don't change the link here! Make any changes to the fwlink target -->
+[Version 2002 opt-in script](https://go.microsoft.com/fwlink/?linkid=2099733) <!-- This fwlink points to the script package on the Download Center, don't change the link here! Make any changes to the fwlink target -->
 
-Společnost Microsoft digitálně podepíše skript a zabalí ho do podepsaného samorozbalovacího spustitelného souboru.
+<!--
+Microsoft digitally signs the script, and bundles it inside a signed self-extracting executable.
 
 > [!Note]  
-> Aktualizace verze 2002 se vztahuje pouze na lokality, na kterých běží verze 1810 nebo novější.
+> The version 2002 update is only applicable to sites running version 1810 or later.
 
-Pokud se chcete přihlásit k okruhu prvotní aktualizace, postupujte takto:
+To opt-in to the early update ring:
 
-1. Otevřete Windows PowerShell a **Spusťte jako správce** .
-1. Spusťte skript **EnableEarlyUpdateRing2002. ps1** pomocí následující syntaxe:
+1. Open Windows PowerShell and **Run as administrator**
+1. Run the **EnableEarlyUpdateRing2002.ps1** script, using the following syntax:
 
     `EnableEarlyUpdateRing2002.ps1 <SiteServer_Name> | SiteServer_IP>`
 
-    Kde `SiteServer` se odkazuje na lokalitu centrální správy nebo na samostatný primární webový server. Například `EnableEarlyUpdateRing2002.ps1 cmprimary01`.
+    Where `SiteServer` refers to the central administration site or standalone primary site server. For example, `EnableEarlyUpdateRing2002.ps1 cmprimary01`
 
-1. Kontrolovat aktualizace Další informace najdete v tématu [Získání dostupných aktualizací](install-in-console-updates.md#get-available-updates).
+1. Check for updates. For more information, see [Get available updates](install-in-console-updates.md#get-available-updates).
 
-V konzole nástroje by teď měla být dostupná aktualizace verze 2002.
+The version 2002 update should now be available in the console.
 
 > [!Important]  
-> Tento skript přidá web do počátečního okruhu aktualizace pro verzi 2002. Nejedná se o trvalou změnu.
+> This script only adds your site to the early update ring for version 2002. It's not a permanent change.
+ -->
 
 ## <a name="checklist"></a>Kontrolní seznam
 
@@ -190,7 +192,7 @@ Před instalací aktualizace zakažte všechny úlohy údržby lokality, které 
 
 Pokud se během instalace aktualizace spustí některá úloha údržby databáze lokality, při instalaci aktualizace může dojít k chybě. Než úlohu zakážete, zaznamenejte plán úlohy, abyste po instalaci aktualizace mohli obnovit její konfiguraci.
 
-Další informace najdete v tématech [úlohy](maintenance-tasks.md) údržby a [referenční informace pro úlohy údržby](reference-for-maintenance-tasks.md).
+Další informace najdete v tématech [úlohy údržby](maintenance-tasks.md)   a [referenční informace pro úlohy údržby](reference-for-maintenance-tasks.md).
 
 ### <a name="temporarily-stop-any-antivirus-software"></a>Dočasné zastavení veškerého antivirového softwaru
 
@@ -212,7 +214,7 @@ Můžete například přidat vlastní položky do souboru **osdinjection. XML** 
 
 Při instalaci aktualizace lokality, která také aktualizuje klienta, otestujte novou aktualizaci klienta v předprodukčním prostředí ještě před aktualizací všech provozních klientů. Pokud chcete použít tuto možnost, nakonfigurujte svůj web tak, aby podporoval automatické upgrady pro předprodukční prostředí před zahájením instalace aktualizace.
 
-Další informace najdete v tématu [upgrade klientů](../../clients/manage/upgrade/upgrade-clients.md) a [testování upgradu klienta v předprodukční kolekci](../../clients/manage/upgrade/test-client-upgrades.md).
+Další informace najdete v tématu [upgrade klientů](../../clients/manage/upgrade/upgrade-clients.md)   a [testování upgradu klienta v předprodukční kolekci](../../clients/manage/upgrade/test-client-upgrades.md).
 
 ### <a name="plan-to-use-service-windows"></a>Plánování použití oken služby
 
@@ -237,7 +239,7 @@ Chcete-li spustit kontrolu požadovaných součástí z konzoly, otevřete ovlá
 Další informace najdete v části **spuštění kontroly požadovaných součástí před instalací aktualizace v nástroji** [předtím, než nainstalujete konzolovou aktualizaci](install-in-console-updates.md#bkmk_beforeinstall).
 
 > [!IMPORTANT]  
-> Po spuštění kontroly požadovaných součástí proces aktualizuje některé zdrojové soubory produktu, které se používají pro úlohy údržby lokality. Proto po spuštění kontroly požadovaných součástí, ale před instalací aktualizace, potřebujete-li provést úlohu údržby lokality, spusťte **Setupwpf. exe** (Configuration Manager instalační program) z disku CD-ROM. Poslední složka na serveru lokality.
+> Po spuštění kontroly požadovaných součástí proces aktualizuje některé zdrojové soubory produktu, které se používají pro úlohy údržby lokality. Proto po spuštění kontroly požadovaných součástí, ale před instalací aktualizace, potřebujete-li provést úlohu údržby lokality, spusťte **Setupwpf. exe**   (Configuration Manager instalační program) z disku CD-ROM. Poslední složka na serveru lokality.
 
 ### <a name="update-sites"></a>Aktualizovat weby
 
@@ -265,7 +267,7 @@ V konzole Configuration Manager pro zobrazení stavu použijte následující um
 
 - Pracovní prostor **monitorování** , uzel **replikace databáze**  
 
-Další informace najdete v těchto článcích:  
+Další informace najdete v následujících článcích:  
 
 - [Monitorování infrastruktury hierarchie a replikace](monitor-hierarchy.md)
 - [Nástroj Replication Link Analyzer](monitor-replication.md#BKMK_RLA)  

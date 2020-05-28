@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: e0ec7d66-1502-4b31-85bb-94996b1bc66f
-ms.openlocfilehash: 36d256e674a0fe973eca4bc692a244af034d5cc1
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 8c585473ec80ad4c6dfe49d22e527e99175bfbb4
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82076760"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83877418"
 ---
 # <a name="set-up-cloud-management-gateway-for-configuration-manager"></a>Nastavení brány pro správu cloudu pro Configuration Manager
 
@@ -41,7 +41,7 @@ Pomocí následujícího kontrolního seznamu se ujistěte, že máte potřebné
 
     - Integrace se službou [Azure AD](../../../servers/deploy/configure/azure-services-wizard.md) pro **správu cloudu**. Zjišťování uživatelů služby Azure AD není vyžadováno.  
 
-    - Poskytovatelé prostředků Microsoft. **ClassicCompute** & **Microsoft. Storage** musí být zaregistrovaní v rámci předplatného Azure. Další informace najdete v tématu [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/resource-manager-supported-services).
+    - Poskytovatelé prostředků Microsoft. **ClassicCompute**  &  **Microsoft. Storage** musí být zaregistrovaní v rámci předplatného Azure. Další informace najdete v tématu [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/resource-manager-supported-services).
 
     - Musí se přihlásit Správce předplatného.  
 
@@ -87,7 +87,7 @@ Tento postup proveďte v lokalitě nejvyšší úrovně. Tato lokalita je buď s
 6. Na stránce nastavení v průvodci vyberte možnost **Procházet** a zvolte. Soubor PFX pro ověřovací certifikát serveru CMG Název z tohoto certifikátu naplní požadovaná pole **plně kvalifikovaného názvu domény služby** a **názvu služby** .  
 
    > [!NOTE]  
-   > Ověřovací certifikát serveru CMG podporuje zástupné znaky. Pokud používáte certifikát se zástupným znakem, nahraďte hvězdičku (`*`) v poli **plně kvalifikovaný název domény služby** požadovaným názvem hostitele pro CMG.<!--491233-->  
+   > Ověřovací certifikát serveru CMG podporuje zástupné znaky. Pokud používáte certifikát se zástupným znakem, nahraďte hvězdičku ( `*` ) v poli **plně kvalifikovaný název domény služby** požadovaným názvem hostitele pro CMG.<!--491233-->  
 
 7. Vyberte rozevírací seznam **oblast** a zvolte oblast Azure pro tento CMG.  
 
@@ -199,6 +199,43 @@ Tento příkaz zobrazí všechny internetové body správy, o kterých ví klien
 > [!Note]  
 > K řešení potíží s klientskými přenosy CMG použijte **CMGHttpHandler. log**, **CMGService. log**a **SMS_Cloud_ProxyConnector. log**. Další informace najdete v tématu [soubory protokolu](../../../plan-design/hierarchy/log-files.md#cloud-management-gateway).
 
+### <a name="install-off-premises-clients-using-a-cmg"></a>Instalace místních klientů pomocí CMG
+
+Pro instalaci agenta klienta na systémy, které nejsou aktuálně připojené k intranetu, musí být splněna jedna z následujících podmínek. Ve všech případech se vyžaduje účet místního správce v cílových systémech.
+
+1. Lokalita Configuration Manager je správně nakonfigurována tak, aby používala certifikáty PKI pro ověřování klientů. Kromě toho klientské systémy mají každý z nich již platný, jedinečný a důvěryhodný certifikát pro ověřování klientů.
+
+2. Systémy jsou připojené k doméně Azure AD nebo k doméně Azure AD připojené k doméně.
+
+3. Web používá Configuration Manager verze 2002 nebo novější.
+
+V případě možností 1 a 2 použijte parametr **/MP** k určení adresy URL CMG při volání programu **CCMSetup. exe**. Další informace najdete v tématu [informace o parametrech instalace a vlastnostech klienta](../../deploy/about-client-installation-properties.md#mp).
+
+V případě možnosti 3 Configuration Manager počínaje verzí 2002 můžete nainstalovat agenta klienta na systémy, které nejsou připojené k intranetu pomocí velkokapacitní registračního tokenu. Další informace o této metodě najdete v tématu [vytvoření registračního tokenu pro hromadnou registraci](../../deploy/deploy-clients-cmg-token.md#create-a-bulk-registration-token).
+
+### <a name="configure-off-premises-clients-for-cmg"></a>Konfigurace místních klientů pro CMG
+
+Systémy můžete propojit s nedávno nakonfigurovaným CMG, kde jsou splněné následující podmínky:  
+
+- Systémy již mají nainstalovaného klientského agenta Configuration Manager.
+
+- Systémy nejsou připojené a nejde je připojit k intranetu.
+
+- Systémy splňují jednu z následujících podmínek:
+
+  - Každý z nich má dříve vystavený platný, jedinečný a důvěryhodný certifikát pro ověřování klientů.
+
+  - Připojeno k doméně Azure AD
+
+  - Služba Azure AD s připojením k doméně
+
+- Nechcete nebo nemůžete úplně přeinstalovat stávajícího klientského agenta.
+
+- Máte způsob, jak změnit hodnotu registru počítače a restartovat službu **Hostitel agenta serveru SMS** pomocí účtu místního správce.
+
+Pokud chcete vynutit připojení k těmto systémům, vytvořte hodnotu registru **CMGFQDNs** (typu REG_SZ) v části **HKLM\Software\Microsoft\CCM**. Nastavte tuto hodnotu na adresu URL CMG (například `https://contoso-cmg.contoso.com` ). Po nastavení restartujte službu **Hostitel agenta serveru SMS** v klientském systému.
+
+Pokud klient Configuration Manager v registru nemá nastavenou aktuální CMG nebo internetový bod správy, automaticky zkontroluje hodnotu registru **CMGFQDNs** . Tato kontrolu probíhá každých 25 hodin, při spuštění služby **Hostitel agenta serveru SMS** nebo při zjištění změny sítě. Když se klient připojí k lokalitě a zjistí se CMG, tato hodnota se automaticky aktualizuje.
 
 ## <a name="modify-a-cmg"></a>Úprava CMG
 

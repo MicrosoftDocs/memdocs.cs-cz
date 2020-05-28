@@ -5,17 +5,17 @@ description: Přečtěte si, jak připravit Internetová zařízení s Windows 1
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 04/24/2020
+ms.date: 05/14/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 101de2ba-9b4d-4890-b087-5d518a4aa624
-ms.openlocfilehash: 59ca1006d8700e52b3f3fb703f8896ce9fa8b9b7
-ms.sourcegitcommit: 3ff33493c3f93bf06fdc942d30958a2a4ad03529
+ms.openlocfilehash: e6582599a02f4a8196ee739ca875df4d158a993e
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82137911"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83427793"
 ---
 # <a name="how-to-prepare-internet-based-devices-for-co-management"></a>Příprava internetových zařízení na spolusprávu
 
@@ -104,13 +104,13 @@ Další informace najdete v tématu [vlastnosti instalace klienta](../core/clien
 
 ### <a name="create-the-app-in-intune"></a>Vytvoření aplikace v Intune
 
-1. Přejít na [Azure Portal](https://portal.azure.com)a pak otevřete stránku Intune.  
+1. Přejít do [centra pro správu Microsoft Endpoint Manageru](https://endpoint.microsoft.com)a potom rozbalte levé navigační podokno.  
 
-2. Vyberte **Client Apps** > **Apps**aplikace > klienta aplikace**Přidat**.  
+2. Vyberte **aplikace**  >  **všechny aplikace**  >  **Přidat**.  
 
 3. V části **jiné**vyberte **obchodní aplikaci**.  
 
-4. Nahrajte soubor balíčku aplikace **CCMSetup. msi** . Tento soubor vyhledejte v následující složce na serveru Configuration Manager lokality: `<ConfigMgr installation directory>\bin\i386`.  
+4. Nahrajte soubor balíčku aplikace **CCMSetup. msi** . Tento soubor vyhledejte v následující složce na serveru Configuration Manager lokality: `<ConfigMgr installation directory>\bin\i386` .  
 
     > [!Tip]  
     > Při aktualizaci lokality se ujistěte, že tuto aplikaci aktualizujete také v Intune.  

@@ -2,7 +2,7 @@
 title: Co je nového v Desktop Analytics
 titleSuffix: Configuration Manager
 description: Shrnutí nových funkcí v nejnovější měsíční verzi cloudové služby Desktop Analytics.
-ms.date: 03/12/2020
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -10,12 +10,13 @@ ms.assetid: fa300181-86cb-4afe-8fbf-895a7572378d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ce882f6bfc7a0d724688d5df59051dae17d54498
-ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
+ms.reviewer: acabello
+ms.openlocfilehash: 1d45d115f279603fa74e143c603c116146278ffe
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82693141"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268157"
 ---
 # <a name="whats-new-in-desktop-analytics"></a>Co je nového v Desktop Analytics
 
@@ -26,6 +27,16 @@ Zjistěte, co je nového v jednotlivých měsících v Desktop Analytics.
 
 Pokud chcete dostávat upozornění na aktualizaci této stránky, zkopírujte a vložte následující adresu URL do čtečky informačních kanálů RSS:`https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+desktop+analytics+-+Configuration+Manager%22&locale=en-us`
 <!-- a locale is required for the RSS search string -->
+
+## <a name="may-2020"></a>Květen 2020
+
+### <a name="reduce-the-number-of-apps-for-review"></a>Snižte počet aplikací k revizi.
+
+<!-- 5542186 -->
+
+Aby bylo možné konsolidovat a snižovat počet aplikací zobrazených na stránce assets (prostředky) na portálu, teď kombinuje všechny verze aplikací se stejným názvem a vydavatelem. Toto nastavení odráží počet aplikací na dlaždici **aplikace zajímavosti** . Například místo výpisu stovek instancí Microsoft Edge existuje jedna instance pro všechny verze. Pro všechny verze můžete udělat rozhodnutí jednou. Pokud potřebujete rozhodnout o konkrétních verzích aplikace, je toto chování konfigurovatelné.
+
+Další informace najdete v tématu [o prostředcích – aplikace](about-assets.md#apps).
 
 ## <a name="march-2020"></a>Březen 2020
 
@@ -41,7 +52,7 @@ Nyní můžete připojit více Configuration Manager hierarchií k jednomu Azure
 > [!NOTE]
 > Podpora pro více hierarchií vyžaduje Configuration Manager verze 1910 nebo novější.
 
-Další informace najdete v těchto článcích:
+Další informace najdete v následujících článcích:
 
 - [Globální pilotní nasazení](deploy-pilot.md#bkmk_GlobalPilot)
 - [Jak vytvořit plány nasazení](create-deployment-plans.md)

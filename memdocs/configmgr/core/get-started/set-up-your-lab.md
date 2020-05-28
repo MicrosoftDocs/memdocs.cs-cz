@@ -10,12 +10,12 @@ ms.assetid: b1970688-0cd2-404f-a17f-9e2aa4a78758
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: a23f6106a8c922b3ff4e8306fb76aec4fd26b148
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 216c61a671d7d06e434fa399bb3bae12e12f7275
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81711606"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905170"
 ---
 # <a name="set-up-a-configuration-manager-lab"></a>Nastavení testovacího prostředí Configuration Manager
 
@@ -31,9 +31,9 @@ Podle pokynů v tomto tématu vám umožní nastavit testovací prostředí pro 
 
 -   **Testovací prostředí používá Windows Server 2012 R2**, do kterého budeme instalovat Configuration Manager.  
 
-     Zkušební verzi Windows Serveru 2012 R2 si můžete stáhnout z [webu TechNet Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-windows-server-2012).  
+     Zkušební verzi Windows Serveru 2012 R2 si můžete stáhnout z [centra hodnocení](https://www.microsoft.com/evalcenter/evaluate-windows-server-2012).  
 
-     Zvažte úpravu nebo zakázání konfigurace rozšířeného zabezpečení aplikace Internet Explorer, aby bylo snazší získat přístup k některým souborům ke stažení, na které se odkazuje v průběhu těchto cvičení. Další aspekty technologie WCF najdete v tématu [Internet Explorer: Konfigurace rozšířeného zabezpečení](https://technet.microsoft.com/library/dd883248\(v=ws.10\).aspx) .  
+     Zvažte úpravu nebo zakázání konfigurace rozšířeného zabezpečení aplikace Internet Explorer, aby bylo snazší získat přístup k některým souborům ke stažení, na které se odkazuje v průběhu těchto cvičení. Další informace najdete v tématu [Internet Explorer: Konfigurace rozšířeného zabezpečení](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd883248(v=ws.10)).  
 
 -   **Testovací prostředí používá SQL Server 2012 SP2** pro databázi lokality.  
 
@@ -45,7 +45,7 @@ Podle pokynů v tomto tématu vám umožní nastavit testovací prostředí pro 
 
     -   **SQL_Latin1_General_CP1_CI_AS** jako třída **řazení SQL** .  
 
-    -   **ověřování systému Windows**[namísto ověřování SQL](https://technet.microsoft.com/library/ms144284.aspx) is required.  
+    -   **ověřování systému Windows**[namísto ověřování SQL](https://docs.microsoft.com/sql/relational-databases/security/choose-an-authentication-mode?view=sql-server-ver15) is required.  
 
     -   Je požadována vyhrazená **instance SQL Server** .  
 
@@ -61,11 +61,11 @@ Podle pokynů v tomto tématu vám umožní nastavit testovací prostředí pro 
 
 -   **Řadič domény používá Windows Server 2008 R2** s nainstalovaným Active Directory Domain Services. Řadič domény taky funguje jako hostitel pro servery DHCP a DNS k použití s plně kvalifikovaným názvem domény.  
 
-     Další informace najdete v tomto [přehledu Active Directory Domain Services](https://technet.microsoft.com/library/hh831484).  
+     Další informace najdete v tématu [přehled Active Directory Domain Services](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831484(v=ws.11)).  
 
 -   **Technologie Hyper-V se používá s několika virtuálními počítači** , aby se ověřilo, že kroky správy prováděné v těchto cvičeních fungují podle očekávání. Doporučuje se mít minimálně tři virtuální počítače s nainstalovaným Windows 10.  
 
-     Další informace najdete v tomto [přehledu technologie Hyper-V](https://technet.microsoft.com/library/hh831531.aspx).  
+     Další informace najdete v tématu [Přehled technologie Hyper-V](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831531(v=ws.11)).  
 
 -   **Oprávnění správce** bude potřebné pro všechny tyto součásti.  
 
@@ -95,7 +95,7 @@ Po instalaci všech těchto součástí je potřeba provést další kroky, abys
 Další kroky potřebné k tomu, aby Configuration Manager klienti mohli zadat dotaz Active Directory Domain Services vyhledání prostředků lokality, najdete v následujících postupech.  
 
 ##  <a name="create-the-system-management-container"></a><a name="BKMK_CreateSysMgmtLab"></a> Vytvoření kontejneru System Management  
- Pokud je schéma rozšířeno, Configuration Manager nevytvoří automaticky požadovaný kontejner System Management v Active Directory Domain Services. Proto ho pro testovací prostředí vytvoříte vy. Tento krok bude vyžadovat [instalaci nástroje ADSI Edit](https://technet.microsoft.com/library/cc773354\(WS.10\).aspx#BKMK_InstallingADSIEdit).  
+ Pokud je schéma rozšířeno, Configuration Manager nevytvoří automaticky požadovaný kontejner System Management v Active Directory Domain Services. Proto ho pro testovací prostředí vytvoříte vy. Tento krok bude vyžadovat instalaci nástroje [ADSI Edit](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc773354(v=ws.10)).
 
  Zkontrolujte, že jste přihlášení jako účet, který má oprávnění **Vytvořit všechny podřízené objekty** na kontejneru **Systém** ve službě Active Directory Domain Services.  
 
@@ -103,7 +103,7 @@ Další kroky potřebné k tomu, aby Configuration Manager klienti mohli zadat d
 
 1.  Spusťte nástroj **ADSI Edit**a připojte k doméně, ve které se nachází server lokality.  
 
-2.  Rozbalte **plně&lt;kvalifikovaný název\>domény počítače domény**, rozbalte **<rozlišující název\>**, klikněte pravým tlačítkem na **CN = System**, klikněte na **Nový**a pak klikněte na **objekt**.  
+2.  Rozbalte ** &lt; plně \> kvalifikovaný název domény počítače domény**, rozbalte **<rozlišující název \> **, klikněte pravým tlačítkem na **CN = System**, klikněte na **Nový**a pak klikněte na **objekt**.  
 
 3.  V dialogovém okně **Vytvořit objekt** zvolte položku **Kontejner**a pak klikněte na tlačítko **Další**.  
 
@@ -119,7 +119,7 @@ Další kroky potřebné k tomu, aby Configuration Manager klienti mohli zadat d
 
 #### <a name="to-set-security-permissions-for-the-system-management-container"></a>Nastavení oprávnění zabezpečení pro kontejner System Management:  
 
-1.  V podokně konzoly rozbalte **doménu serveru lokality**, rozbalte **&lt;DC = Server rozlišující název\>** a potom rozbalte **CN = System**. Klikněte pravým tlačítkem na **CN = System Management**a pak klikněte na **vlastnosti**.  
+1.  V podokně konzoly rozbalte **doménu serveru lokality**, rozbalte **DC = &lt; \> Server rozlišující název**a potom rozbalte **CN = System**. Klikněte pravým tlačítkem na **CN = System Management**a pak klikněte na **vlastnosti**.  
 
 2.  V dialogovém okně **Vlastnosti CN=System Management** klikněte na kartu **Zabezpečení** a pak kliknutím na **Přidat** přidejte účet počítače serveru lokality. Udělte účtu oprávnění **Úplné řízení** .  
 
@@ -129,7 +129,7 @@ Další kroky potřebné k tomu, aby Configuration Manager klienti mohli zadat d
 
 5.  Kliknutím na **OK** zavřete konzolu **ADSI Edit** a dokončete postup.  
 
-     Další přehled tohoto postupu najdete v [části rozšiřování schématu služby Active Directory pro Configuration Manager](../../core/plan-design/network/extend-the-active-directory-schema.md)  
+     Další informace najdete v tématu věnovaném [rozšiřování schématu služby Active Directory pro Configuration Manager](../../core/plan-design/network/extend-the-active-directory-schema.md)  
 
 ##  <a name="extend-the-active-directory-schema-using-extadschexe"></a><a name="BKMK_ExtADSchLab"></a> Rozšíření schématu služby Active Directory pomocí souboru extadsch.exe  
  Rozšíříte schéma služby Active Directory pro toto testovací prostředí, protože vám to umožní používat všechny Configuration Manager funkce a funkce s minimálním množstvím režijních nákladů na správu. Rozšíření schématu služby Active Directory je konfigurace ovlivňující celou doménovou strukturu, která se v doménové struktuře provádí jenom jednou. Rozšíření schématu trvale upravuje sadu tříd a atributů v základní konfiguraci služby Active Directory. Tato akce je nevratná. Rozšíření schématu umožňuje Configuration Manager získat přístup k součástem, které jim umožní efektivně fungovat v testovacím prostředí.  
@@ -139,7 +139,7 @@ Další kroky potřebné k tomu, aby Configuration Manager klienti mohli zadat d
 
 #### <a name="to-extend-the-active-directory-schema-using-extadschexe"></a>Rozšíření schématu služby Active Directory pomocí souboru extadsch.exe:  
 
-1.  Vytvořte zálohu stavu systému řadiče domény hlavního serveru schémat. Další informace o zálohování řadiče domény originálu najdete v tématu [Zálohování Windows Serveru](https://technet.microsoft.com/library/cc770757.aspx)  
+1.  Vytvořte zálohu stavu systému řadiče domény hlavního serveru schémat. Další informace o zálohování hlavního řadiče domény najdete v tématu [zálohování Windows serveru](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770757(v=ws.11))  
 
 2.  Na instalačním médiu přejděte do složky **\SMSSETUP\BIN\X64** :  
 
@@ -147,7 +147,7 @@ Další kroky potřebné k tomu, aby Configuration Manager klienti mohli zadat d
 
 4.  Kontrolou souboru **extadsch.log** umístěného v kořenovém adresáři diskové jednotky systému ověřte, že rozšíření schématu bylo úspěšné.  
 
-     Další přehled tohoto postupu najdete v [části rozšiřování schématu služby Active Directory pro Configuration Manager](../../core/plan-design/network/extend-the-active-directory-schema.md).  
+     Další informace najdete v tématu věnovaném [rozšiřování schématu služby Active Directory pro Configuration Manager](../../core/plan-design/network/extend-the-active-directory-schema.md).  
 
 ##  <a name="other-required-tasks"></a><a name="BKMK_OtherTasksLab"></a> Další požadované úlohy  
  Před instalací budete taky muset provést následující úlohy.  
@@ -158,7 +158,7 @@ Další kroky potřebné k tomu, aby Configuration Manager klienti mohli zadat d
 
  **Instalace rozhraní .NET a aktivace technologie Windows Communication Foundation**  
 
- Budete muset nainstalovat dvě rozhraní .NET Framework: jako první rozhraní .NET 3.5.1, a potom .NET 4.5.2+. Musíte taky aktivovat technologii Windows Communication Foundation (WCF). Technologie WCF je určená k poskytování spravovaného přístupu k distribuovanému zpracování dat, široké interoperability a přímé podpory pro orientaci na služby a usnadňuje vývoj propojených aplikací prostřednictvím programovacího modelu orientovaného na služby. Další aspekty technologie WCF najdete v tématu [Co je Windows Communication Foundation?](https://technet.microsoft.com/subscriptions/ms731082\(v=vs.90\).aspx) .  
+ Budete muset nainstalovat dvě rozhraní .NET Framework: jako první rozhraní .NET 3.5.1, a potom .NET 4.5.2+. Musíte taky aktivovat technologii Windows Communication Foundation (WCF). Technologie WCF je určená k poskytování spravovaného přístupu k distribuovanému zpracování dat, široké interoperability a přímé podpory pro orientaci na služby a usnadňuje vývoj propojených aplikací prostřednictvím programovacího modelu orientovaného na služby. Další informace najdete v tématu [co je Windows Communication Foundation?](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms731082(v=vs.90)).
 
 #### <a name="to-install-net-and-activate-windows-communication-foundation"></a>Instalace rozhraní .NET a aktivace technologie Windows Communication Foundation:  
 
@@ -198,27 +198,15 @@ Další kroky potřebné k tomu, aby Configuration Manager klienti mohli zadat d
 
 10. Po dokončení základní instalace rozhraní .NET přejděte do služby [Stažení softwaru](https://www.microsoft.com/download/details.aspx?id=42643) a získejte webovou instalační službu pro rozhraní .NET Framework 4.5.2. Klikněte na tlačítko **Stáhnout** a pak na **Spustit** , aby se spustil instalační program. Automaticky se rozpoznají a nainstalují požadované součásti ve vybraném jazyce.  
 
-Další informace o tom, proč jsou tato rozhraní .NET Framework potřeba, najdete v následujících článcích:  
-
--   [Verze a závislosti rozhraní .NET Framework](https://technet.microsoft.com/library/bb822049.aspx)  
-
--   [Návod ke kompatibilitě aplikací rozhraní .NET Framework 4 RTM](https://technet.microsoft.com/library/dd889541.aspx)  
-
--   [Postupy: Upgrade webové aplikace ASP.NET na ASP.NET 4](https://technet.microsoft.com/library/dd483478\(VS.100\).aspx)  
-
--   [Nejčastější dotazy k zásadám životního cyklu podpory rozhraní Microsoft .NET Framework](https://support.microsoft.com/en-us/gp/framework_faq?WT.mc_id=azurebg_email_Trans_943_NET452_Update)  
-
--   [CLR uvnitř souběžného procesu](https://msdn.microsoft.com/magazine/ee819091.aspx)  
-
 **Povolení služby BITS, IIS a RDC**  
 
-[Služba BITS (Background Intelligent Transfer Service)](https://technet.microsoft.com/library/dn282296.aspx) se používá pro aplikace, které potřebují asynchronně přenášet soubory mezi klientem a serverem. Podle měření toku přenosů na popředí a na pozadí zachovává služba BITS odezvy ostatních síťových aplikací. Taky automaticky pokračuje v přenosech souborů, když dojde k přerušení relace přenosu.  
+[Služba BITS (Background Intelligent Transfer Service)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn282296(v=ws.11)) se používá pro aplikace, které potřebují asynchronně přenášet soubory mezi klientem a serverem. Podle měření toku přenosů na popředí a na pozadí zachovává služba BITS odezvy ostatních síťových aplikací. Taky automaticky pokračuje v přenosech souborů, když dojde k přerušení relace přenosu.  
 
 Službu BITS nainstalujete pro toto testovací prostředí, protože server lokality se bude taky používat jako bod správy.  
 
 Internetové informační služby (IIS) je flexibilní, škálovatelný webový server, který jde použít k hostování čehokoli na webu. Používá ho Configuration Manager pro několik rolí systému lokality. Další informace o službě IIS najdete na [webech pro servery systému lokality](../../core/plan-design/network/websites-for-site-system-servers.md).  
 
-[Remote Differential Compression (RDC)](https://technet.microsoft.com/library/cc754372.aspx) je sada rozhraní API, které můžou aplikace použít k určení, jestli nebyly v sadách souborů provedené nějaké změny. RDC umožňuje aplikaci replikovat jenom změněné části souboru, čímž udržuje síťový provoz na minimu.  
+[Remote Differential Compression (RDC)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754372(v=ws.11)) je sada rozhraní API, které můžou aplikace použít k určení, jestli nebyly v sadách souborů provedené nějaké změny. RDC umožňuje aplikaci replikovat jenom změněné části souboru, čímž udržuje síťový provoz na minimu.  
 
 #### <a name="to-enable-bits-iis-and-rdc-site-server-roles"></a>Povolení rolí serveru lokality BITS, IIS a RDC:  
 
@@ -330,7 +318,7 @@ Internetové informační služby (IIS) je flexibilní, škálovatelný webový 
 
 7.  Klikněte na **Instalovat** a v podokně **Oznámení****Správce serveru**ověřte, že se instalace dokončila správně .  
 
-Služba IIS standardně blokuje přístup protokolu HTTP nebo HTTPS k některým typům přípon názvu souborů a umístění. Pokud chcete, aby se tyto soubory distribuovaly na klientské systémy, budete muset nakonfigurovat filtrování žádostí služby IIS v distribučním bodě. Další informace najdete v tématu [IIS Request Filtering for distribution points](../../core/plan-design/network/prepare-windows-servers.md#BKMK_IISFiltering).  
+Služba IIS standardně blokuje přístup protokolu HTTP nebo HTTPS k některým typům přípon názvu souborů a umístění. Pokud chcete, aby se tyto soubory distribuovaly na klientské systémy, budete muset nakonfigurovat filtrování žádostí služby IIS v distribučním bodě. Další informace najdete v tématu [filtrování požadavků služby IIS pro distribuční body](../../core/plan-design/network/prepare-windows-servers.md#BKMK_IISFiltering).  
 
 #### <a name="to-configure-iis-filtering-on-distribution-points"></a>Konfigurace filtrování služby IIS v distribučních bodech:  
 

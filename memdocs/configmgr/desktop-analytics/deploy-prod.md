@@ -10,12 +10,13 @@ ms.assetid: 637fbd8e-b8ea-4c7e-95ee-a60a323c496e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c7a14da1505e89dfd61a3dc4f13385fbf5c21d41
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.reviewer: acabello
+ms.openlocfilehash: 0a7ffe8eea1048e696ce7dd254d58364226efc58
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81723653"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268776"
 ---
 # <a name="how-to-deploy-to-production-with-desktop-analytics"></a>Nasazení do produkčního prostředí s využitím Desktop Analytics
 
@@ -87,7 +88,7 @@ Pokud jste v pilotní kolekci vytvořili jedno nasazení integrované na Desktop
 V rámci pilotního nasazení vás Analytics desktopu radí s případnými problémy, které vyžadují vaši pozornost během produkčního nasazení. V části Desktop Analytics přejděte na plán nasazení a v nabídce vlevo vyberte **stav nasazení** . V zobrazení stav nasazení jsou uvedena zařízení v následujících kategoriích:  
 
 - Nezahájeno
-- Probíhá
+- Rozpracované
 - Dokončeno
 - Potřebuje pozornost – zařízení (seřazené podle názvu zařízení)
 - Vyžaduje problémy s pozorností (seřazené podle typu vydání)
@@ -101,7 +102,7 @@ Stránka **připravit produkci** se zaměřuje na to, aby vám usnadnila rozhodo
 
 Filtrovat tuto stránku podle assetů s následujícími stavy:
 
-| Filtr stavu | Popis |
+| Filtr stavu | Description |
 |----------------------|-------------|
 | **Nutná pozornost** | (Výchozí filtr) Desktop Analytics detekuje statisticky významnou regresi pro určitou metriku stavu tohoto prostředku.
 | **Cíle schůzky** | Desktop Analytics nedetekuje žádné regrese v chování |

@@ -10,12 +10,13 @@ ms.assetid: 004ca404-e6fa-47f0-ae77-e44e18a08b33
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0224d9faecb9ff17afc2af3a57ba222023b5a3d5
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.reviewer: acabello
+ms.openlocfilehash: 8251e21c7eccb87b764af75e883018bdc894ca37
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718893"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268670"
 ---
 # <a name="group-policy-settings-for-desktop-analytics"></a>Nastavení zásad skupiny pro desktopovou analýzu
 
@@ -33,14 +34,14 @@ Configuration Manager nastavuje zásady systému Windows v jednom nebo obou nás
 
 - Preference **místních** zásad:`HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection`
 
-| Zásada | Cesta | Platí pro | Hodnota |
+| Zásady | Cesta | Platí pro | Hodnota |
 |--------|------|------------|-------|
 | **CommercialId** | Local | Všechny verze systému Windows | Aby se zařízení zobrazilo v Desktop Analytics, nakonfigurujte ho pomocí komerčního ID vaší organizace. |
 | **AllowTelemetry**  | GPO | Windows 10 | Nastaveno `1` pro **základní**, `2` **Rozšířené**nebo `3` pro **Úplná** diagnostická data. Desktop Analytics vyžaduje aspoň základní diagnostická data. Microsoft doporučuje použití rozšířené (omezené) úrovně s desktopovou analýzou. Další informace najdete v tématu [Konfigurace diagnostických dat Windows ve vaší organizaci](https://docs.microsoft.com/windows/configuration/configure-windows-diagnostic-data-in-your-organization). |
-| **LimitEnhancedDiagnosticDataWindowsAnalytics** | GPO | Windows 10 verze 1803 a novější | Toto nastavení platí pouze v případě, že je `2`nastavení AllowTelemetry. Omezuje rozšířené události diagnostických dat odeslané společnosti Microsoft jenom na takové události, které potřebuje Desktop Analytics. Další informace najdete v tématu [události diagnostických dat Windows 10 a pole shromážděná prostřednictvím omezení rozšířených diagnostických dat](https://docs.microsoft.com/windows/configuration/enhanced-diagnostic-data-windows-analytics-events-and-fields). |
+| **LimitEnhancedDiagnosticDataWindowsAnalytics** | GPO | Windows 10 verze 1803 a novější | Toto nastavení platí pouze v případě, že je nastavení AllowTelemetry `2` . Omezuje rozšířené události diagnostických dat odeslané společnosti Microsoft jenom na takové události, které potřebuje Desktop Analytics. Další informace najdete v tématu [události diagnostických dat Windows 10 a pole shromážděná prostřednictvím omezení rozšířených diagnostických dat](https://docs.microsoft.com/windows/configuration/enhanced-diagnostic-data-windows-analytics-events-and-fields). |
 | **AllowDeviceNameInTelemetry** | GPO | Windows 10 verze 1803 a novější | Povolit zařízením odesílat název zařízení. Ve výchozím nastavení se název zařízení neposílá společnosti Microsoft. Pokud název zařízení neodešlete, zobrazí se v nástroji Desktop Analytics jako "Neznámý". Další informace najdete v tématu [název zařízení](enroll-devices.md#device-name). |
-| **CommercialDataOptIn** | Local | Windows 8.1 a starší | Desktop Analytics vyžaduje hodnotu `1`. Další informace najdete v tématu věnovaném [obchodním údajům v systému Windows 7](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/ee126127\(v=ws.10\)). |
-| **RequestAllAppraiserVersions** | Obojí | Windows 8.1 a starší | `1` Pro správné fungování shromažďování dat potřebuje aplikace Desktop Analytics hodnotu. |
+| **CommercialDataOptIn** | Local | Windows 8.1 a starší | Desktop Analytics vyžaduje hodnotu `1` . Další informace najdete v tématu věnovaném [obchodním údajům v systému Windows 7](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/ee126127\(v=ws.10\)). |
+| **RequestAllAppraiserVersions** | Obojí | Windows 8.1 a starší | `1`Pro správné fungování shromažďování dat potřebuje aplikace Desktop Analytics hodnotu. |
 | **DisableEnterpriseAuthProxy** | GPO | Všechny verze systému Windows | Pokud vaše prostředí vyžaduje uživatelem ověřený proxy server s integrovaným ověřováním Windows pro přístup k Internetu, potřebuje Desktop Analytics hodnotu `0` pro správné fungování shromažďování dat. Další informace najdete v tématu [ověřování proxy serveru](enable-data-sharing.md#proxy-server-authentication). |
 
 > [!IMPORTANT]
@@ -63,7 +64,7 @@ Obecně platí, že pomocí kolekce Configuration Manager můžete cílit na nas
 
 Configuration Manager konfiguruje nastavení komerčního ID a diagnostických dat v cílové kolekci. Pokud potřebujete nakonfigurovat různá nastavení diagnostických dat pro různé skupiny zařízení, přepište nastavení Configuration Manager pomocí nastavení zásad skupiny. Například potřebujete nastavit **rozšířenou (omezená)** úroveň pro některá zařízení a **Basic** pro jiné. Některá zařízení můžou mít různá nastavení [ověřování proxy server](enable-data-sharing.md#proxy-server-authentication) .
 
-Příslušné nastavení zásad skupiny najdete v následujících umístěních: **Konfigurace** > **šablony pro správu** > kolekce dat**součásti** > systému Windows**a buildy Preview**.
+Příslušné nastavení zásad skupiny najdete v následujících umístěních: **Konfigurace počítače**  >  **šablony pro správu**  >  kolekce dat**součásti systému Windows**  >  **a buildy Preview**.
 
 Nastavení zásad skupiny upravují pouze nastavení registru v následujícím klíči:`HKLM:\SOFTWARE\Policies\Microsoft\Windows\DataCollection`
 
@@ -78,9 +79,9 @@ Nastavení zásad skupiny v následující tabulce má největší potenciál v 
 |--------------|----------------|-------------------------------------------------|
 | **Konfigurace komerčního ID** | CommercialId | Pokud nastavíte tuto zásadu na jinou hodnotu, přepíše komerční ID nastavené Configuration Manager. Pokud se nejedná o stejné ID, nakonfigurované zařízení se nemusí zobrazit v Desktop Analytics. |
 | **Povolení telemetrie** | AllowTelemetry | Pokud nastavíte tuto zásadu na jinou hodnotu, přepíše globální úroveň diagnostických dat, kterou jste nastavili v Configuration Manager pro cílovou kolekci. |
-| **Omezit rozšířená diagnostická data na minimum vyžadované službou Windows Analytics** | LimitEnhancedDiagnosticDataWindowsAnalytics | Tato zásada je závislá na předchozím nastavení AllowTelemetry. V závislosti na úrovni, kterou jste nastavili v Configuration Manager nebo se zásadami skupiny, může tato zásada změnit úroveň diagnostických dat v zařízení na hodnotu **Rozšířené** nebo **Rozšířené (s omezením)**. Tato zásada platí jenom v případě, že je `2` AllowTelemetry nastavené na (**Rozšířené**). |
+| **Omezit rozšířená diagnostická data na minimum vyžadované službou Windows Analytics** | LimitEnhancedDiagnosticDataWindowsAnalytics | Tato zásada je závislá na předchozím nastavení AllowTelemetry. V závislosti na úrovni, kterou jste nastavili v Configuration Manager nebo se zásadami skupiny, může tato zásada změnit úroveň diagnostických dat v zařízení na hodnotu **Rozšířené** nebo **Rozšířené (s omezením)**. Tato zásada platí jenom v případě, že je AllowTelemetry nastavené na `2` (**Rozšířené**). |
 | **Povolí odeslání názvu zařízení v diagnostických datech Windows.** | AllowDeviceNameInTelemetry | Pokud se přihlásíte k odesílání názvů zařízení v Configuration Manager, můžete ji přepsat b konfigurací této zásady na zakázáno. Když toto nastavení zakážete, v části Desktop Analytics se názvy zařízení zobrazí jako neznámé. Další informace najdete v tématu [název zařízení](enroll-devices.md#device-name). |
-| **Konfigurace použití ověřeného proxy serveru pro prostředí a službu telemetrie připojené uživatele** | DisableEnterpriseAuthProxy | Pokud nakonfigurujete Configuration Manager zařízení na používání uživatelem ověřeného proxy`0`serveru (), pokud pak tuto zásadu nakonfigurujete tak, aby`1`se **zakázalo použití ověřeného serveru proxy** (), odešle zařízení diagnostická data v kontextu systému místo kontextu uživatele. Pokud zařízení nekonfigurujete na proxy serveru v kontextu systému nebo pokud se zařízení nedokáže ověřit na proxy serveru, Windows nemůže odeslat diagnostická data do nástroje Desktop Analytics. |
+| **Konfigurace použití ověřeného proxy serveru pro prostředí a službu telemetrie připojené uživatele** | DisableEnterpriseAuthProxy | Pokud nakonfigurujete Configuration Manager zařízení na používání uživatelem ověřeného proxy serveru ( `0` ), pokud pak tuto zásadu nakonfigurujete tak, aby se **zakázalo použití ověřeného serveru proxy** ( `1` ), odešle zařízení diagnostická data v kontextu systému místo kontextu uživatele. Pokud zařízení nekonfigurujete na proxy serveru v kontextu systému nebo pokud se zařízení nedokáže ověřit na proxy serveru, Windows nemůže odeslat diagnostická data do nástroje Desktop Analytics. |
 
 > [!NOTE]
 > Starší zásady **konfigurující prostředí a telemetrii připojené uživatele** (TelemetryProxy) umožňují systému Windows přeposílání diagnostických dat na vyhrazené proxy místo pomocí proxy uživatele (WinInet) nebo zařízení (WinHTTP). Některé součásti systému Windows tyto zásady nepodporují. Pokud použijete tuto zásadu, může to způsobit problémy s kvalitou dat v Desktop Analytics.

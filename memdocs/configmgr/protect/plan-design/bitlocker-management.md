@@ -10,12 +10,12 @@ ms.assetid: a4d8cda2-bc9b-4fb4-aa0d-23c31b4fc60b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 926d1483739b85f787ebc9e2a992ea7ed39633c2
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
-ms.translationtype: HT
+ms.openlocfilehash: 2523d06034f4a7effe769235cb5a4ede4df7e167
+ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81722211"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83764114"
 ---
 # <a name="plan-for-bitlocker-management"></a>Plánování správy nástroje BitLocker
 
@@ -74,7 +74,7 @@ Umožněte uživatelům využít klíč s jedním klíčem k odemknutí zaříze
 
 - K vytvoření zásady správy BitLockeru potřebujete roli **úplného správce** v Configuration Manager.
 
-- Služba obnovení nástroje BitLocker vyžaduje, aby protokol HTTPS zašifroval obnovovací klíče v síti z klienta pro správu konfigurace do bodu správy. Existují dvě možnosti:
+- Služba obnovení BitLockeru vyžaduje, aby protokol HTTPS zašifroval obnovovací klíče v síti od klienta Configuration Manager do bodu správy. Existují dvě možnosti:
 
   - HTTPS – povolí web služby IIS v bodu správy, který je hostitelem služby obnovení. Tato možnost se vztahuje pouze na Configuration Manager verze 2002.<!-- 5925660 -->
 
@@ -96,7 +96,7 @@ Umožněte uživatelům využít klíč s jedním klíčem k odemknutí zaříze
 
 - Uživatelský účet, který spouští instalační skript portálu, potřebuje práva **správce** systému SQL na serveru databáze lokality. Během procesu instalace skript nastaví práva role přihlášení, uživatel a databáze SQL pro účet počítače webového serveru. Tento uživatelský účet můžete odebrat z role sysadmin po dokončení instalace samoobslužného portálu a webu pro správu a monitorování.
 
-- Správa nástroje BitLocker není na virtuálních počítačích podporována. Z tohoto důvodu některé funkce nemusí fungovat podle očekávání na virtuálních počítačích. Například při správě nástroje BitLocker nebude začínat šifrování na pevných jednotkách virtuálních počítačů. Další pevné jednotky ve virtuálních počítačích se můžou zobrazovat jako kompatibilní, i když nejsou zašifrované.
+- Správa BitLockeru není podporovaná na virtuálních počítačích (VM) ani na serveru operačních systémech. Z tohoto důvodu některé funkce nemusí fungovat podle očekávání na virtuálních počítačích nebo na serveru operačních systémech. Například u virtuálních počítačů Správa nástroje BitLocker nespustí šifrování na pevných discích virtuálních počítačů. Navíc se pevné jednotky ve virtuálních počítačích můžou zobrazovat jako kompatibilní, i když nejsou zašifrované.
 
 > [!TIP]
 > Krok pořadí úkolů **zapnout nástroj BitLocker** standardně zašifruje místo na disku *využité místo* . Správa nástroje BitLocker používá *Úplné šifrování disku* . Nakonfigurujte tento krok pořadí úkolů, aby se povolila možnost **používat úplné šifrování disku**. Další informace najdete v tématu [postup pořadí úkolů – povolení nástroje BitLocker](../../osd/understand/task-sequence-steps.md#BKMK_EnableBitLocker).

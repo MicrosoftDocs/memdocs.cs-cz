@@ -10,12 +10,12 @@ ms.assetid: 868049d3-3209-47ec-b34a-9cc26941893a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 05b77fa181da67858c30f48fc8045c20384953ce
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 63f815394414167ad4f887c5970538eab22c931a
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81720090"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906149"
 ---
 # <a name="create-queries-in-configuration-manager"></a>Vytváření dotazů v Configuration Manager
 
@@ -36,31 +36,31 @@ Tento článek popisuje, jak vytvářet a importovat dotazy v Configuration Mana
 
 5.  V seznamu **typ objektu** vyberte typ objektu, který má dotaz vrátit. Tato tabulka popisuje některé příklady typů objektů, které můžete hledat:  
 
-    |typ objektu|Popis|  
+    |typ objektu|Description|  
     |-----------------|-----------------|  
     |**Systémový prostředek**|Slouží k vyhledání typických systémových atributů, jako je například název NetBIOS zařízení, verze klienta, IP adresa klienta a informace Active Directory Domain Services.|  
     |**Prostředek User**|Slouží k vyhledání typických uživatelských informací, jako jsou uživatelská jména, názvy skupin uživatelů a názvy skupin zabezpečení.|  
     |**Nasazení**|Slouží k vyhledání typických atributů nasazení, například názvu nasazení, plánu a kolekce, do které byl nasazen.|  
 
-6.  Výběrem **příkazu Upravit dotaz** otevřete dialogové okno &lt;\> **vlastnosti příkazu** pro název dotazu.  
+6.  Výběrem **příkazu Upravit dotaz** otevřete &lt; \> dialogové okno **vlastnosti příkazu** pro název dotazu.  
 
-7.  Na kartě **Obecné** v dialogovém okně &lt;\> **vlastnosti příkazu** názvu dotazu Určete atributy, které dotaz vrátí a jak se mají zobrazovat. Kliknutím na ikonu **Nový** přidáte nový atribut. Můžete také vybrat možnost **Zobrazit jazyk dotazu** a zadat nebo upravit dotaz přímo v jazyk WQL (WMI Query Language) (WQL). Příklady dotazů WMI najdete v části Příklady [dotazů WQL](#BKMK_Example) v tomto článku.  
+7.  Na kartě **Obecné** v &lt; \> dialogovém okně **vlastnosti příkazu** názvu dotazu Určete atributy, které dotaz vrátí a jak se mají zobrazovat. Kliknutím na ikonu **Nový** přidáte nový atribut. Můžete také vybrat možnost **Zobrazit jazyk dotazu** a zadat nebo upravit dotaz přímo v jazyk WQL (WMI Query Language) (WQL). Příklady dotazů WMI najdete v části Příklady [dotazů WQL](#BKMK_Example) v tomto článku.  
 
     > [!TIP]  
     > K vytvoření vlastních dotazů WQL můžete použít následující referenční dokumentaci:  
     >   
-    > -   [WQL (SQL pro WMI)](https://go.microsoft.com/fwlink/p/?LinkId=256653)  
-    > -   [Klauzule WHERE](https://go.microsoft.com/fwlink/p/?LinkId=256654)  
-    > -   [Operátory WQL](https://go.microsoft.com/fwlink/p/?LinkId=256655)  
+    > -   [WQL (SQL pro WMI)](https://docs.microsoft.com/windows/win32/wmisdk/wql-sql-for-wmi)  
+    > -   [Klauzule WHERE](https://docs.microsoft.com/windows/win32/wmisdk/where-clause)  
+    > -   [Operátory WQL](https://docs.microsoft.com/windows/win32/wmisdk/wql-operators)  
 
-8.  Na kartě **kritéria** v dialogovém okně &lt;\> **vlastnosti příkazu** názvu dotazu zadejte kritéria, která slouží k upřesnění výsledků dotazu. Můžete například vracet pouze prostředky, které mají kód lokality **XYZ**. Pro dotaz můžete nakonfigurovat víc kritérií.  
+8.  Na kartě **kritéria** v &lt; \> dialogovém okně **vlastnosti příkazu** názvu dotazu zadejte kritéria, která slouží k upřesnění výsledků dotazu. Můžete například vracet pouze prostředky, které mají kód lokality **XYZ**. Pro dotaz můžete nakonfigurovat víc kritérií.  
 
     > [!IMPORTANT]  
     > Pokud vytvoříte dotaz neobsahující žádná kritéria, dotaz vrátí všechna zařízení v kolekci **Všechny systémy** .  
 
-9. Na kartě **spojení** v dialogovém okně &lt;\> **vlastnosti příkazu** názvu dotazu můžete kombinovat data ze dvou různých atributů do výsledků dotazu. I když Configuration Manager automaticky vytvoří spojení s dotazy, když pro výsledek dotazu vyberete jiné atributy, karta **spojení** poskytuje pokročilejší možnosti. Configuration Manager podporuje tyto třídy atributů:  
+9. Na kartě **spojení** v &lt; \> dialogovém okně **vlastnosti příkazu** názvu dotazu můžete kombinovat data ze dvou různých atributů do výsledků dotazu. I když Configuration Manager automaticky vytvoří spojení s dotazy, když pro výsledek dotazu vyberete jiné atributy, karta **spojení** poskytuje pokročilejší možnosti. Configuration Manager podporuje tyto třídy atributů:  
 
-    |Typ spojení|Popis|  
+    |Typ spojení|Description|  
     |---------------|-----------------|  
     |Vnitřní|Zobrazí pouze vyhovující výsledky. Vždy používají spojení, která jsou vytvořena automaticky.|  
     |Left|Zobrazí všechny výsledky pro základní atribut a jenom odpovídající výsledky pro spojovaný atribut.|  
@@ -69,7 +69,7 @@ Tento článek popisuje, jak vytvářet a importovat dotazy v Configuration Mana
 
      Další informace o tom, jak používat operace JOIN, najdete v dokumentaci k SQL Server.  
 
-10. Kliknutím na **tlačítko OK** zavřete &lt;dialogové okno\> **vlastnosti příkazu** pro název dotazu.  
+10. Kliknutím na **tlačítko OK** zavřete &lt; \> dialogové okno **vlastnosti příkazu** pro název dotazu.  
 
 11. Na kartě **Obecné** v **Průvodci vytvořením dotazu**určete, že výsledky dotazu nejsou omezeny na členy kolekce, že jsou omezeny na členy zadané kolekce nebo že se při každém spuštění dotazu zobrazí výzva pro kolekci.  
 
@@ -133,7 +133,7 @@ SMS_R_System.SystemOUName = "OU Name"
 
 ### <a name="computers-with-a-specific-netbios-name"></a>Počítače s určitým názvem NetBIOS
 
-Následující dotaz vrátí název NetBIOS všech počítačů, které začínají určitým řetězcem znaků. V tomto příkladu dotaz vrátí všechny počítače s názvem NetBIOS, který začíná na `ABC`.  
+Následující dotaz vrátí název NetBIOS všech počítačů, které začínají určitým řetězcem znaků. V tomto příkladu dotaz vrátí všechny počítače s názvem NetBIOS, který začíná na `ABC` .  
 
 ``` WQL
 select SMS_R_System.NetbiosName from
@@ -148,7 +148,7 @@ Typy zařízení jsou uložené v databázi Configuration Manager pod třídou p
 Select SMS_R_System.ClientEdition from SMS_R_System where SMS_R_System.ClientEdition = <Device ID>  
 ```  
 
-Pro &lt;ID\>zařízení použijte jednu z těchto hodnot:  
+Pro ID zařízení použijte jednu z těchto hodnot &lt; \> :  
 
 |Typ zařízení|Hodnota AgentEdition|  
 |-----------------|---------------------------|  

@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: e7e803dd1cbacbbd65a5f2968e217656b088d281
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 51a974247d7281d6134b699a5865f801d1ed6094
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81721532"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905709"
 ---
 # <a name="capabilities-in-technical-preview-1609-for-configuration-manager"></a>Funkce ve verzi Technical Preview 1609 pro Configuration Manager
 
@@ -51,7 +51,6 @@ Pokud je tato možnost povolená, Pomocník s nastavením společnosti Apple př
 
 Upgrade Analytics umožňuje vyhodnocovat a analyzovat připravenost a kompatibilitu zařízení s Windows 10, aby bylo možné snadněji a plynulejší upgrady. Díky integraci Upgrade Analytics s Configuration Manager máte přístup k datům o kompatibilitě upgradu v konzole pro správu Configuration Manager a potom v seznamu zařízení, která jsou určená pro upgrade nebo nápravu.
 
-Další informace o Upgrade Analytics najdete v článku [Začínáme s upgrade Analytics](https://technet.microsoft.com/itpro/windows/deploy/upgrade-analytics-get-started).
 
 ## <a name="native-connection-types-for-windows-10-vpn-hybrid-profiles"></a>Nativní typy připojení pro hybridní profily sítě VPN s Windows 10
 
@@ -72,7 +71,7 @@ V této verzi jsme aktualizovali [integraci Windows Storu pro firmy](../../apps/
 #### <a name="purchase-and-sync-a-paid-online-licensed-app"></a>Zakoupení a synchronizace placené online licencované aplikace
 
 1. Zakupte si placené online licencované aplikace z Windows Storu pro firmy.
-2. V pracovním prostoru **Správa** konzoly Configuration Manager klikněte na **Cloud Services** > **aktualizace a obsluha** > **Windows Storu pro firmy**.
+2. V pracovním prostoru **Správa** konzoly Configuration Manager klikněte na **Cloud Services**  >  **aktualizace a obsluha**  >  **Windows Storu pro firmy**.
 3. Na kartě **Domů** ve skupině **synchronizace** klikněte na **synchronizovat nyní**.
 4. Později se aplikace, kterou jste zakoupili, zobrazí v uzlu **licenční informace pro aplikace pro Store** v pracovním prostoru **Správa aplikací** .
 
@@ -83,7 +82,7 @@ Postup vytvoření a nasazení Configuration Manager aplikace z aplikace placen�
 
 #### <a name="modify-the-client-secret-key-from-azure-active-directory"></a>Úprava tajného klíče klienta z Azure Active Directory
 
-1. V pracovním prostoru **Správa** konzoly Configuration Manager klikněte na **Cloud Services** > **aktualizace a obsluha** > **Windows Storu pro firmy**.
+1. V pracovním prostoru **Správa** konzoly Configuration Manager klikněte na **Cloud Services**  >  **aktualizace a obsluha**  >  **Windows Storu pro firmy**.
 2. Vyberte účet ve Windows Storu pro firmy a pak klikněte na **vlastnosti**.
 3. V dialogovém okně **vlastnosti účtu ve Windows Storu pro firmy** zadejte nový klíč do pole **tajný klíč klienta** a potom klikněte na **ověřit**. Po ověření klikněte na **použít**a potom dialogové okno zavřete.
 
@@ -239,7 +238,7 @@ Následující části obsahují podrobnosti o změnách zavedených v této ver
 ### <a name="changes-in-ui-and-behavior-for-boundary-groups-and-content-locations"></a>Změny v uživatelském rozhraní a chování pro skupiny hranic a umístění obsahu
 Níže jsou uvedené klíčové změny skupin hranic a způsob, jakým klienti hledají obsah. Mnohé z těchto změn a konceptů společně fungují.
 - **Odeberou se konfigurace pro rychlá nebo pomalá:** Už nemusíte konfigurovat jednotlivé distribuční body, aby byly rychlé nebo pomalé.  Místo toho je pro každý systém lokality, který je přidružený ke skupině hranic, zacházeno stejným způsobem. Z důvodu této změny nepodporuje karta **odkazy** v rámci vlastností hraniční skupiny, aby konfigurace byla rychlá nebo pomalá.
-- **Nová výchozí skupina hranic v každé lokalitě:**  Každá primární lokalita má novou výchozí skupinu hranic s názvem ***Default-site-hranice-\<Group SiteCode>***.  Pokud klient není v síťovém umístění, které je přiřazeno ke skupině hranic, bude tento klient používat systémy lokality přidružené k výchozí skupině ze své přiřazené lokality. Naplánujte použití této skupiny hranic jako náhrady za koncept záložního umístění obsahu.    
+- **Nová výchozí skupina hranic v každé lokalitě:**  Každá primární lokalita má novou výchozí skupinu hranic s názvem ***Default-site-hranice-Group \< SiteCode>***.  Pokud klient není v síťovém umístění, které je přiřazeno ke skupině hranic, bude tento klient používat systémy lokality přidružené k výchozí skupině ze své přiřazené lokality. Naplánujte použití této skupiny hranic jako náhrady za koncept záložního umístění obsahu.    
   -  **' Odebrání záložních umístění zdroje pro obsah '** se odeberou: nemusíte explicitně konfigurovat distribuční bod, který se má použít pro použití jako záložní, a možnosti pro nastavení této volby se odeberou z uživatelského rozhraní.
 
   Kromě toho je výsledkem nastavení **umožnění klientům použít náhradní umístění zdroje obsahu** v typu nasazení pro aplikace. Toto nastavení pro typ nasazení teď umožňuje klientovi použít výchozí skupinu hranic lokality jako umístění zdroje obsahu.
@@ -318,8 +317,8 @@ Konfigurací různých sousedních skupin, které budou k dispozici v různých 
 
 ### <a name="update-existing-boundary-groups-to-the-new-model"></a><a name="bkmk_update"></a>Aktualizace existujících skupin hranic na nový model
 Když nainstalujete verzi 1609 a aktualizujete lokalitu, automaticky se provedou následující konfigurace. Cílem je zajistit, aby vaše aktuální nouzové chování zůstalo k dispozici, dokud nebudete konfigurovat nové skupiny hranic a vztahy.  
-- Nechráněné distribuční body v lokalitě se přidají do hraniční skupiny *Default-site-hraniční-skupina\<>* lokality.
-- Vytvoří se kopie každé existující skupiny hranic, která obsahuje server lokality nakonfigurovaný s pomalým připojením. Název nové skupiny je *** \<původní název skupiny hranic>-pomalé – TMP***:  
+- Nechráněné distribuční body v lokalitě se přidají do hraniční skupiny *Default-site-hraniční-skupina \<>* lokality.
+- Vytvoří se kopie každé existující skupiny hranic, která obsahuje server lokality nakonfigurovaný s pomalým připojením. Název nové skupiny je *** \< původní název skupiny hranic>-pomalé – TMP***:  
   -   Systémy lokality, které mají rychlé připojení, jsou ponechány v původní hraniční skupině.
   -   Kopii systémů lokality, které mají pomalé připojení, se přidají do kopie skupiny hranic. Původní systémy lokality nakonfigurované jako pomalé zůstanou v původní skupině hranic kvůli zpětné kompatibilitě, ale nepoužívají se z této skupiny hranic.
   -   K této kopii skupiny hranic nejsou přidruženy hranice. Záložní propojení se ale vytvoří mezi původní skupinou a novou kopií skupiny hranic, která má v záložním čase nastavenou hodnotu nula.
@@ -338,7 +337,7 @@ Nevybráno | Vybráno |   **Normální záložní** -použití distribučních b
 
 
 ## <a name="office-365-client-management-dashboard"></a>Řídicí panel pro správu klientů Office 365  
-Configuration Manager 1609 Technical Preview zavádí nový řídicí panel. Řídicí panel zobrazíte tak, že v konzole Configuration Manager přejdete na > **Přehled** >  **knihovny softwaru****Sada Office 365 Správa klientů**.
+Configuration Manager 1609 Technical Preview zavádí nový řídicí panel. Řídicí panel zobrazíte tak, že v konzole Configuration Manager přejdete na přehled **knihovny softwaru**  >  **Overview**  >  **Sada Office 365 Správa klientů**.
 >[!NOTE]
 >V pracovním prostoru **co je nového** v konzole Configuration Manager se nový řídicí panel nesprávně jmenuje **řídicí panel údržby Office 365**.
 
@@ -348,7 +347,7 @@ Configuration Manager 1609 Technical Preview zavádí nový řídicí panel. Ř�
 - Verze klientů Office 365
 - Jazyky klienta Office 365
 - Klientské kanály pro Office 365     
-Další informace najdete v článku [Základní informace o aktualizačních kanálech Office 365 ProPlus](https://technet.microsoft.com/library/mt455210.aspx).
+Další informace najdete v článku [Základní informace o aktualizačních kanálech Office 365 ProPlus](https://docs.microsoft.com/deployoffice/overview-update-channels).
 - Pravidla automatického nasazení, která mají klienta Office 365 vybranou v sadě dostupných produktů.
 
 Na řídicím panelu můžete provádět následující akce:
@@ -368,7 +367,7 @@ V této verzi můžete z řídicího panelu pro správu klientů Office 365 spus
 - Při pokusu o Import existujícího nastavení klienta (XML) v Průvodci instalací aplikace sady Office 365 mohou nastat problémy. Můžete ručně nakonfigurovat nastavení klienta bez problému.
 
 #### <a name="to-deploy-office-365-apps-to-clients"></a>Nasazení aplikací Office 365 na klienty
-1. V konzole Configuration Manager přejděte do části > **Přehled** >  **knihovny softwaru****Office 365 Správa klientů**.
+1. V konzole Configuration Manager přejděte do části Přehled **knihovny softwaru**  >  **Overview**  >  **Office 365 Správa klientů**.
 2. V pravém horním podokně klikněte na **instalační program Office 365** . Otevře se Průvodce instalací klienta sady Office 365.
 3. Na stránce **nastavení aplikace** zadejte název a popis aplikace, zadejte umístění pro stažení souborů a potom klikněte na tlačítko **Další**. Všimněte si, že umístění musí být zadáno ve formě &#92;&#92;&#92;*sdílené složky* *serveru* .
 4. Na stránce **importovat nastavení klienta** vyberte, zda chcete importovat nastavení klienta Office 365 z existujícího konfiguračního souboru XML, nebo ručně zadat nastavení, a poté klikněte na tlačítko **Další**.
@@ -383,7 +382,7 @@ Pokud máte existující konfigurační soubor, zadejte umístění souboru a p�
 Pokud se rozhodnete nenasadit balíček v průvodci, přejděte ke kroku 9.
 8. Nakonfiguruje zbývající stránky průvodce jako při typickém nasazení aplikace. Další informace najdete v tématu [Vytvoření a nasazení aplikace](../../apps/get-started/create-and-deploy-an-application.md).
 9. Dokončete průvodce.
-10. Aplikaci můžete nasadit nebo upravit stejně jako jakoukoli jinou aplikaci v Configuration Manager z **knihovny** > **Přehled** > **aplikací****pro správu** > aplikací.
+10. Aplikaci můžete nasadit nebo upravit stejně jako jakoukoli jinou aplikaci v Configuration Manager z **knihovny softwaru**  >  **Přehled**  >  **aplikací pro správu aplikací**  >  **Applications**.
 
 >[!NOTE]
 >Po nasazení aplikací Office 365 můžete vytvořit pravidla automatického nasazení, která budou aplikace spravovat. Pokud chcete vytvořit pravidla automatického nasazení pro aplikace Office 365, klikněte na **vytvořit pravidlo automatického**nasazení a při výběru produktu vyberte **klienta Office 365** . Další informace najdete v tématu [automatické nasazení aktualizací softwaru](../../sum/deploy-use/automatically-deploy-software-updates.md).
@@ -417,7 +416,7 @@ V existujícím pořadí úkolů pro instalaci operačního systému přidáte n
 V této verzi můžete získat rychlý přehled o celkovém dodržování předpisů pro zařízení a hlavní důvody pro nedodržování předpisů pomocí nových grafů v části **pracovní prostor monitorování** v konzole Configuration Manager.
 
 #### <a name="to-view-the-intune-compliance-charts"></a>Zobrazení grafů kompatibility Intune
-1. V konzole Configuration Manager klikněte na **monitorování** > **Přehled** > **Nastavení dodržování předpisů**.
+1. V konzole Configuration Manager klikněte na **monitorování**  >  **Přehled**  >  **Nastavení dodržování předpisů**.
 2. Zobrazí se **Celkový graf kompatibility zařízení** .
 3. Kliknutím na uzel **zásady dodržování předpisů** zobrazíte grafy **celkových požadavků na zařízení** a **nedodržování předpisů** .
 
@@ -437,7 +436,7 @@ Dokončete následující části v uvedeném pořadí:
 
 #### <a name="check-the-top-non-compliance-reasons-chart"></a>Podívejte se na graf důvodů nedodržení předpisů.
 5. Podívejte se na graf **důvodů nedodržení předpisů** . Tento graf obsahuje 5 hlavních důvodů pro nedodržení předpisů, ale v případě, že se v rámci zásad nastavila jenom dvě nastavení dodržování předpisů, zobrazí se jenom 2 nejčastější důvody, které nedodržují předpisy.
-6. Klikněte na jeden z oddílů v grafu. Obě zařízení by se měla zobrazit v filtrovaném zobrazení v části **prostředky a** > **Přehled** > kompatibility**zařízení**.
+6. Klikněte na jeden z oddílů v grafu. Obě zařízení by se měla zobrazit v filtrovaném zobrazení v části **prostředky a**  >  **Přehled**kompatibility  >  **zařízení**.
 
 #### <a name="make-devices-compliant-and-check-the-charts"></a>Nastavení zařízení jako kompatibilních a kontroly grafů
 7. Nastavte jedno ze zařízení, která jsou kompatibilní s jednou ze zásad. Ověřte znovu **Celkový graf dodržování předpisů zařízením** . V grafu by se měl zobrazit jedno vyhovující zařízení a jedno zařízení, které nedodržuje předpisy.

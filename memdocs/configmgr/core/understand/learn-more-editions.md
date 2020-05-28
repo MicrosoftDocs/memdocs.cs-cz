@@ -10,12 +10,12 @@ ms.assetid: 495b87ae-41a4-49ba-abe2-d4f7d22ac0d4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f18ed2180f1d526e2afa4872e8fa9018c7e18721
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 04ed335c65369840085fe44ba2f1b81d7806a0e3
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81722708"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906051"
 ---
 # <a name="licensing-and-branches-for-configuration-manager"></a>Licencování a větve pro Configuration Manager
 
@@ -32,7 +32,7 @@ V tomto článku se dozvíte o licenčních požadavcích na možnosti instalace
 
 Zákazníci s aktivním softwarem Software Assurance (SA) na základě licencí Configuration Manager nebo s ekvivalentními právy k předplatnému od 1. října 2016 mají práva k použití verze Configuration Manager 1606 z října 2016. Zákazníci s právy k Configuration Manager od 1. října 2016 budou při instalaci najít dvě licencované možnosti: aktuální větev a dlouhodobá obsluha větve (LTSB).
 
-Kompletní podmínky a ujednání pro produkty, které zakoupíte prostřednictvím multilicenčních programů Microsoftu, najdete v tématu [licenční podmínky a dokumentace](https://go.microsoft.com/fwlink/?LinkId=800052).
+Kompletní podmínky a ujednání pro produkty, které zakoupíte prostřednictvím multilicenčních programů Microsoftu, najdete v tématu [licenční podmínky a dokumentace](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?mode=1).
 
 
 ## <a name="licensed-branches"></a>Licencované větve
@@ -117,7 +117,7 @@ Další informace o licencování produktu najdete v následujících zdrojích 
 
 - [Přehled VLSC](https://www.microsoft.com/Licensing/existing-customer/vlsc-training-and-resources.aspx)
 
-- [Podmínky produktu multilicenčního programu společnosti Microsoft](https://go.microsoft.com/fwlink/?LinkId=800052)
+- [Podmínky produktu multilicenčního programu společnosti Microsoft](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?mode=1)
 
 - Zákazníci s multilicencí můžou získat souhrn svých licencí z [centra služby Volume License Service](https://www.microsoft.com/Licensing/servicecenter/default.aspx). Přejděte do nabídky **licence** a vyberte **Souhrn licencí**.
 

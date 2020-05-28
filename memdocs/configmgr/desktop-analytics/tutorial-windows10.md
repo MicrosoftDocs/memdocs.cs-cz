@@ -10,12 +10,13 @@ ms.assetid: 3e82cd96-0ce0-474a-a597-d65fceadc95a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2456f530444fa5d9514247edd77cbe7b02f62c38
-ms.sourcegitcommit: 2871a17e43b2625a5850a41a9aff447c8ca44820
+ms.reviewer: acabello
+ms.openlocfilehash: b991c2ddd0ea121251eb19afbdb032844be8738d
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82126005"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268194"
 ---
 # <a name="tutorial-deploy-windows-10-to-pilot"></a>Kurz: nasazení Windows 10 do pilotního nasazení
 
@@ -29,7 +30,7 @@ V tomto kurzu se naučíte:
 > * Vytvoření plánu nasazení Desktop Analytics pro Windows 10  
 > * Použití Configuration Manager k nasazení Windows 10 do pilotní skupiny  
 
-Pokud ještě nemáte předplatné Azure, vytvořte si [bezplatný účet](https://azure.microsoft.com/free) před tím, než začnete. Když se správně nakonfiguruje, používání Desktop Analytics nenese žádné náklady na Azure.
+Pokud ještě nemáte předplatné Azure, [vytvořte si bezplatný účet](https://azure.microsoft.com/free), ještě než začnete. Když se správně nakonfiguruje, používání Desktop Analytics nenese žádné náklady na Azure.
 
 Desktop Analytics používá *Log Analytics pracovní prostor* ve vašem předplatném Azure. Pracovní prostor je v podstatě kontejner, který obsahuje informace o účtu a jednoduché konfigurační informace. Další informace najdete v tématu [Správa pracovních prostorů](https://docs.microsoft.com/azure/log-analytics/log-analytics-manage-access?toc=/azure/azure-monitor/toc.json).
 
@@ -243,7 +244,7 @@ Pomocí tohoto postupu můžete vytvořit plán nasazení v Desktop Analytics.
 
         - Tyto **počítače automaticky získávají ovladače z web Windows Update**: výchozí nastavení je **vypnuté**, což se doporučuje při nasazení pomocí Configuration Manager.  
 
-        - **Pro vaše aplikace definujte prahovou hodnotu pro minimální počet instalací**: výchozí nastavení `2%`je. Aplikace, které jsou pod touto prahovou hodnotou, se automaticky nastaví na *počet málo instalací*. Desktop Analytics neověřuje tyto doplňky během pilotního nasazení.  
+        - **Pro vaše aplikace definujte prahovou hodnotu pro minimální počet instalací**: výchozí nastavení je `2%` . Aplikace, které jsou pod touto prahovou hodnotou, se automaticky nastaví na *počet málo instalací*. Desktop Analytics neověřuje tyto doplňky během pilotního nasazení.  
 
             Pokud je aplikace nainstalovaná na vyšší procento počítačů, než je tato prahová hodnota, plán nasazení označí aplikaci jako *zajímavosti*. Pak se můžete rozhodnout, že jeho důležitost budete testovat během pilotní fáze.  
 

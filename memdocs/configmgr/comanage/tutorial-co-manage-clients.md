@@ -10,12 +10,12 @@ ms.assetid: 140c522f-d09a-40b6-a4b0-e0d14742834a
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 918df2cded3fad48352fff6a2617b1133540c0eb
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: bb770a559904421f6bf01616504331dbebb9b549
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81712425"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268075"
 ---
 # <a name="tutorial-enable-co-management-for-existing-configuration-manager-clients"></a>Kurz: povolení spolusprávy pro stávající klienty Configuration Manager
 
@@ -64,9 +64,10 @@ Pokud ve vašem prostředí ještě neexistují, budete během tohoto kurzu:
 
 V celém tomto kurzu použijte následující oprávnění k dokončení úkolů:
 
-- Účet, který je *globálním správcem* v Azure Active Directory (Azure AD) 
 - Účet, který je *správcem domény* v místní infrastruktuře  
 - Účet, který je *úplný správce* pro *všechny* obory v Configuration Manager
+- Účet, který je *globálním správcem* v Azure Active Directory (Azure AD)
+   - Ujistěte se, že máte přiřazenou licenci Intune k účtu, který používáte k přihlášení do svého tenanta. V opačném případě se přihlášení nezdařilo s chybovou zprávou "uživatel nebyl rozpoznán". <!--mem issue 169-->
 
 ## <a name="set-up-hybrid-azure-ad"></a>Nastavení hybridní služby Azure AD
 
@@ -120,7 +121,7 @@ Pokud dochází k problémům s dokončením hybridního připojení služby Azu
 
 Pomocí nastavení klienta nakonfigurujete klienty Configuration Manager k automatické registraci ve službě Azure AD.  
 
-1. Otevřete okno > **Správa** >  **konzoly Configuration Manager****Přehled** > **nastavení klienta**a pak upravte **výchozí nastavení klienta**.  
+1. Otevřete okno **Správa konzoly Configuration Manager**  >  **Administration**  >  **Přehled**  >  **nastavení klienta**a pak upravte **výchozí nastavení klienta**.  
 
 2. Vyberte **Cloud Services**.  
 
@@ -134,7 +135,7 @@ V dalším kroku nastavíme automatickou registraci zařízení v Intune. Díky 
 
 Automatický zápis taky umožňuje uživatelům zaregistrovat svoje zařízení s Windows 10 do Intune. Zařízení se registrují, když uživatel přidá svůj pracovní účet do svého zařízení v osobním vlastnictví nebo když je zařízení vlastněné společností připojené k Azure Active Directory.  
 
-1. Přihlaste se [k Azure Portal](https://portal.azure.com/) a vyberte**Microsoft Intune** **Azure Active Directory** > **mobility (MDM a mam)** > .  
+1. Přihlaste se k [Azure Portal](https://portal.azure.com/) a vyberte Microsoft Intune **Azure Active Directory**  >  **mobility (MDM a mam)**  >  **Microsoft Intune**.  
 
 2. Nakonfigurujte **obor uživatele MDM**. Určete jednu z následujících možností pro konfiguraci zařízení uživatelů, která jsou spravovaná nástrojem Microsoft Intune a přijměte výchozí hodnoty pro hodnoty URL.  
 

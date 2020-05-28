@@ -2,7 +2,7 @@
 title: Repliky databáze bodu správy
 titleSuffix: Configuration Manager
 description: Pomocí repliky databáze snižte zatížení procesoru na serveru databáze lokality body správy.
-ms.date: 10/06/2016
+ms.date: 05/12/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: b06f781b-ab25-4d9a-b128-02cbd7cbcffe
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 8d413221f7dc4ea905844ad3b2dbe08826314a54
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 3daf23f17719e111dacd45e6176c5f697a3d3224
+ms.sourcegitcommit: 4c129bb04ea4916c78446e89fbff956397cbe828
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81720986"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83343112"
 ---
 # <a name="database-replicas-for-management-points-for-configuration-manager"></a>Repliky databáze pro body správy pro Configuration Manager
 
@@ -57,7 +57,7 @@ Configuration Manager primárních lokalitách může pomocí repliky databáze 
 
     -   Databáze lokality musí repliku databáze **publikovat** a každý vzdálený server repliky databáze musí publikovaná data **odebírat** .  
 
-    -   SQL Server, který je hostitelem databáze lokality, i ten, který je hostitelem repliky databáze, musí být nakonfigurované, aby podporovaly velikost **Max Text Repl Size** 2 GB. Ukázkové konfigurování pro systém SQL Server 2012 je uvedeno v části [Konfigurování možnosti Max Text Repl Size konfigurace serveru](https://go.microsoft.com/fwlink/p/?LinkId=273960).  
+    -   SQL Server, který je hostitelem databáze lokality, i ten, který je hostitelem repliky databáze, musí být nakonfigurované, aby podporovaly velikost **Max Text Repl Size** 2 GB. Ukázkové konfigurování pro systém SQL Server 2012 je uvedeno v části [Konfigurování možnosti Max Text Repl Size konfigurace serveru](https://docs.microsoft.com/sql/database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option?view=sql-server-ver15).  
 
 -   **Certifikát podepsaný svým držitelem:** Chcete-li nakonfigurovat repliku databáze, je nutné na serveru repliky databáze vytvořit certifikát podepsaný svým držitelem a tento certifikát zpřístupnit všem bodům správy, které budou používat server repliky databáze.  
 
@@ -82,6 +82,8 @@ Configuration Manager primárních lokalitách může pomocí repliky databáze 
 -   **Upgrady na Configuration Manager aktuální větev**: před upgradem lokality, buď z nástroje System Center 2012 Configuration Manager na Configuration Manager aktuální větve nebo aktualizace Configuration Manager aktuální větve na nejnovější verzi, je nutné zakázat repliky databáze pro body správy.  Po upgradu lokality můžete repliky databáze pro body správy znovu nakonfigurovat.  
 
 -   **Více replik na jednom SQL Server:**  Pokud nakonfigurujete server repliky databáze pro hostování více replik databáze pro body správy (každá replika musí být v samostatné instanci), musíte použít upravený konfigurační skript (z kroku 4 v následující části), abyste zabránili přepsání používaného certifikátu podepsaného svým držitelem dřív nakonfigurovanými replikami databáze na tomto serveru.  
+
+- Uživatelská nasazení v centru softwaru nebudou fungovat s bodem správy pomocí repliky SQL. <!--sccmdocs-1011-->
 
 ##  <a name="configure-database-replicas"></a><a name="BKMK_DBReplica_Config"></a>Konfigurace replik databáze  
 Konfigurace repliky databáze vyžaduje tyto kroky:  
@@ -172,7 +174,7 @@ Použijte následující postup s ukázkovým konfigurováním serveru repliky d
         -   Jestliže agent SQL Server běží za použití jiného účtu, vyberte **Spustit pod následujícím účtem systému Windows** a pak tento účet nakonfigurujte. Můžete zadat účet systému Windows nebo účet SQL Serveru.  
 
         > [!IMPORTANT]  
-        >  Účtu, který spouští agenta distribuce, musíte přidělit oprávnění vůči vydavateli jako vyžádané odběry. Informace týkající se konfigurování těchto oprávnění naleznete v části [Zabezpečení agenta distribuce](https://go.microsoft.com/fwlink/p/?LinkId=238463) v knihovně SQL Server TechNet.Library.  
+        >  Účtu, který spouští agenta distribuce, musíte přidělit oprávnění vůči vydavateli jako vyžádané odběry. Informace o konfiguraci těchto oprávnění najdete v tématu [zabezpečení agenta distribuce](https://docs.microsoft.com/sql/relational-databases/replication/distribution-agent-security?view=sql-server-ver15).  
 
       - Pro položku **Připojit k distributorovi**vyberte **Zosobněním účtu procesu**.  
 
@@ -421,43 +423,43 @@ Chcete-li u repliky databáze v bodu správy podporovat klientské oznámení, j
 
 ##### <a name="to-configure-the-service-broker-for-a-database-replica"></a>Nakonfigurování služby Service Broker pro repliku databáze  
 
-1. Pomocí **SQL Server Management Studio** se připojte k databázi serveru repliky databáze a pak spusťte následující dotaz, který povolí Service Broker na serveru repliky databáze: **změnit název\> databáze &lt;repliky databáze na hodnotu ENABLE_BROKER, HONOR_BROKER_PRIORITY s vrácením zpět okamžitě** .  
+1. Pomocí **SQL Server Management Studio** se připojte k databázi serveru repliky databáze a pak spusťte následující dotaz, který povolí Service Broker na serveru repliky databáze: **změnit &lt; název databáze repliky databáze na \> hodnotu ENABLE_BROKER, HONOR_BROKER_PRIORITY s vrácením zpět okamžitě** .  
 
 2. Následně na serveru repliky databáze nakonfigurujte službu Service Broker na klientské oznámení a exportujte certifikát služby Service Broker. Abyste tak mohli učinit, spusťte uložený postup SQL Serveru, který nakonfiguruje službu Service Broker a exportuje certifikát v rámci jediné akce. Při spuštění uloženého postupu je nutné zadat úplný název domény (FQDN) pro server repliky databáze, název databáze replik databází a umístění pro export souboru certifikátu.  
 
-    Spuštěním následujícího dotazu nakonfigurujte požadované podrobnosti na serveru repliky databáze a exportujte certifikát pro server repliky databáze: **exec sp_BgbConfigSSBForReplicaDB&lt;' replika SQL Server FQDN\>', '&lt;název\>databáze repliky ', '&lt;cesta\>k souboru zálohy certifikátu '**  
+    Spuštěním následujícího dotazu nakonfigurujte požadované podrobnosti na serveru repliky databáze a exportujte certifikát pro server repliky databáze: **EXEC sp_BgbConfigSSBForReplicaDB ' &lt; replika SQL Server FQDN \> ', ' &lt; název databáze repliky ' \> , ' &lt; cesta k souboru zálohy certifikátu \> '**  
 
    > [!NOTE]  
-   >  Pokud server repliky databáze není ve výchozí instanci SQL Serveru, je nutné v tomto kroku zadat kromě názvu repliky databáze také název instance. Provedete to tak, že nahradíte ** &lt;název\> databáze repliky** názvem ** &lt;instance název\\databáze\>repliky**.  
+   >  Pokud server repliky databáze není ve výchozí instanci SQL Serveru, je nutné v tomto kroku zadat kromě názvu repliky databáze také název instance. Provedete to tak, že nahradíte ** &lt; název \> databáze repliky** názvem ** &lt; \\ \> instance název databáze repliky**.  
 
     Po exportu certifikátu ze serveru repliky databáze umístěte kopii certifikátu na server databáze primárních lokalit.  
 
 3. Pomocí aplikace **SQL Server Management Studio** se připojte k databázi primárních lokalit. Po připojení k databázi primárních lokalit spusťte dotaz, kterým importujete certifikát a určíte port služby Service Broker používaný na serveru repliky databáze, FQDN serveru repliky databáze a název databáze replik databází. Tím se konfiguruje databáze primárních lokalit na použití služby Service Broker ke komunikaci s databází serveru repliky databáze.  
 
-    Spuštěním následujícího dotazu importujte certifikát ze serveru repliky databáze a určete požadované podrobnosti: **exec sp_BgbConfigSSBForRemoteService ' replika '&lt;, ' SQL Service Broker port\>', '&lt;cesta\>souboru certifikátu ', '&lt;replika SQL Server plně kvalifikovaný název domény\>',&lt;' název\>databáze repliky '**  
+    Spuštěním následujícího dotazu importujte certifikát ze serveru repliky databáze a určete požadované podrobnosti: **EXEC sp_BgbConfigSSBForRemoteService ' replika ', ' &lt; SQL Service Broker port \> ', ' &lt; cesta souboru certifikátu \> ', ' &lt; REPLIKa SQL Server plně kvalifikovaný název domény ' \> , ' &lt; název databáze repliky \> '**  
 
    > [!NOTE]  
-   >  Pokud server repliky databáze není ve výchozí instanci SQL Serveru, je nutné v tomto kroku zadat kromě názvu repliky databáze také název instance. Provedete to tak, že nahradíte ** &lt;název\> databáze repliky** názvem **\Instance název\\databáze\>repliky**.  
+   >  Pokud server repliky databáze není ve výchozí instanci SQL Serveru, je nutné v tomto kroku zadat kromě názvu repliky databáze také název instance. Provedete to tak, že nahradíte ** &lt; \> název databáze repliky** názvem **\Instance název \\ databáze \> repliky**.  
 
-4. Potom na serveru databáze lokality spuštěním následujícího příkazu exportujte certifikát pro server databáze lokality: **EXEC sp_BgbCreateAndBackupSQLCert '&lt;cesta\>k souboru zálohy certifikátu '**  
+4. Potom na serveru databáze lokality spuštěním následujícího příkazu exportujte certifikát pro server databáze lokality: **EXEC sp_BgbCreateAndBackupSQLCert ' &lt; cesta k souboru zálohy certifikátu \> '**  
 
     Po exportu certifikátu ze serveru databáze lokality umístěte kopii certifikátu na server repliky databáze.  
 
 5. Pomocí aplikace **SQL Server Management Studio** se připojte k databázi serveru repliky databáze. Po připojení k databázi serveru repliky databáze spusťte dotaz pro import certifikátu a zadejte kód primární lokality a port služby Service Broker používaný na serveru databáze lokality. Tím se nakonfiguruje server repliky databáze na použití služby Service Broker ke komunikaci s databází primární lokality.  
 
-    Spuštěním následujícího dotazu importujte certifikát ze serveru databáze lokality: **exec sp_BgbConfigSSBForRemoteService '&lt;\>kód lokality ', '&lt;SQL Service Broker port\>', '&lt;cesta\>souboru certifikátu '**  
+    Spuštěním následujícího dotazu importujte certifikát ze serveru databáze lokality: **EXEC sp_BgbConfigSSBForRemoteService ' &lt; kód lokality \> ', ' &lt; SQL Service Broker port \> ', ' &lt; cesta souboru certifikátu \> '**  
 
    Několik minut poté, co dokončíte konfiguraci databáze lokality a databáze replik databází, nastaví správce oznámení v primární lokalitě konverzaci služby Service Broker pro klientské oznámení z databáze primární lokality do repliky databáze.  
 
 ###  <a name="supplemental-script-for-additional-database-replicas-on-a-single-sql-server"></a><a name="bkmk_supscript"></a>Doplňkový skript pro další repliky databáze na jednom SQL Server  
  Když použijete skript z kroku 4 ke konfiguraci certifikátu podepsaného svým držitelem pro server repliky databáze na SQL Server, která už má repliku databáze, kterou plánujete dál používat, musíte použít upravenou verzi původního skriptu. Následující úpravy zabrání skriptu v odstranění existujícího certifikátu na serveru a vytvoří další certifikáty s jedinečnými popisnými názvy.  Původní skript upravte takto:  
 
--   Odkomentovat (zabránit spuštění) každý řádek mezi položkami skriptu **# Odstranit existující certifikát, pokud existuje** , a **# vytvořit nový certifikát**. Chcete-li to provést, **#** přidejte jako první znak každého relevantního řádku.  
+-   Odkomentovat (zabránit spuštění) každý řádek mezi položkami skriptu **# Odstranit existující certifikát, pokud existuje** , a **# vytvořit nový certifikát**. Chcete-li to provést, přidejte **#** jako první znak každého relevantního řádku.  
 
 -   U každé další repliky databáze, kterou pomocí tohohle skriptu nakonfigurujete, aktualizujte popisný název certifikátu.  Provedete to tak, že upravíte řádek **$Enrollment. CertificateFriendlyName = "certifikát pro identifikaci nástroje ConfigMgr SQL Server** a nahraďte **SQL Server identifikační certifikát nástroje ConfigMgr** novým názvem, například **ConfigMgr SQL Server Identification Certificate1**.  
 
 ##  <a name="manage-database-replica-configurations"></a><a name="BKMK_DBReplicaOps"></a>Správa konfigurací repliky databáze  
- Při použití repliky databáze v lokalitě použijte informace v následujících částech k doplnění procesu odinstalace repliky databáze, odinstalace lokality používající repliku databáze nebo přesunu databáze lokality do nové instalace SQL Serveru. Pokud použijete informace z následujících částí k odstranění publikací, použijte návod na odstranění transakční replikace pro verzi serveru SQL Server používanou pro repliku databáze. Pokud například použijete SQL Server 2008 R2, přečtěte si téma [Postup: odstranění publikace (programování v Transact-SQL pro replikaci)](https://go.microsoft.com/fwlink/p/?LinkId=273934).  
+ Při použití repliky databáze v lokalitě použijte informace v následujících částech k doplnění procesu odinstalace repliky databáze, odinstalace lokality používající repliku databáze nebo přesunu databáze lokality do nové instalace SQL Serveru. Pokud použijete informace z následujících částí k odstranění publikací, použijte návod na odstranění transakční replikace pro verzi serveru SQL Server používanou pro repliku databáze. Další informace najdete v tématu [Odstranění publikace](https://docs.microsoft.com/sql/relational-databases/replication/publish/delete-a-publication?view=sql-server-ver15).  
 
 > [!NOTE]  
 >  Než bude po obnovení databáze lokality nakonfigurované pro repliky databází možné použít repliky databáze, je nutné překonfigurovat jednotlivé repliky databáze a znovu vytvořit publikace i odběry.  

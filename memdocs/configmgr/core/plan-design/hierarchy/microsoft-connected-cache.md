@@ -2,7 +2,7 @@
 title: Microsoft Connected Cache
 titleSuffix: Configuration Manager
 description: Použití distribučního bodu Configuration Manager jako serveru místní mezipaměti pro optimalizaci doručení
-ms.date: 03/20/2019
+ms.date: 05/05/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c5cb5753-5728-4f81-b830-a6fd1a3e105c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e718e62f097a9fec20d7b29deb9f03453931188a
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 4dead573e1744a5c8b84ff954e85be43af644486
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81714966"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83878497"
 ---
 # <a name="microsoft-connected-cache-in-configuration-manager"></a>Mezipaměť propojená Microsoftem v Configuration Manager
 
@@ -26,7 +26,7 @@ ms.locfileid: "81714966"
 Počínaje verzí 1906 můžete nainstalovat server Microsoft Connected cache do distribučních bodů. Uložením tohoto obsahu do mezipaměti v místním prostředí můžou vaši klienti těžit z funkce Optimalizace doručení, ale můžete přispět k ochraně WAN Links.
 
 > [!NOTE]
-> Počínaje verzí 1910 je tato funkce nyní označována jako **propojená s mezipamětí Microsoft**. Dříve byla známá jako optimalizace doručování do síťové mezipaměti (DOINC).
+> Počínaje verzí 1910 je tato funkce nyní označována jako **propojená s mezipamětí Microsoft**. Dříve byla známá jako Optimalizace doručení v síťové mezipaměti.
 
 Tento server mezipaměti funguje jako transparentní mezipaměť na vyžádání pro obsah stažený optimalizací doručení. Pomocí nastavení klienta se ujistěte, že je tento server nabízen pouze členům místní skupiny hranic Configuration Manager.
 
@@ -99,15 +99,29 @@ Když nakonfigurujete klienty tak, aby používali Server připojené mezipamět
 
 ### <a name="note-1-about-drive-selection"></a><a name="bkmk_note1"></a>Poznámka 1: o výběru jednotky
 
-Pokud vyberete možnost **automaticky**, když Configuration Manager nainstaluje součást připojené mezipaměti, bude dodržet soubor **NO_SMS_ON_DRIVE. SMS** . Například distribuční bod má soubor `C:\no_sms_on_drive.sms`. I když má jednotka C: nejvíce volného místa, Configuration Manager konfiguruje připojenou mezipaměť pro použití jiné jednotky pro svou mezipaměť.
+Pokud vyberete možnost **automaticky**, když Configuration Manager nainstaluje součást připojené mezipaměti, bude dodržet soubor **NO_SMS_ON_DRIVE. SMS** . Například distribuční bod má soubor `C:\no_sms_on_drive.sms` . I když má jednotka C: nejvíce volného místa, Configuration Manager konfiguruje připojenou mezipaměť pro použití jiné jednotky pro svou mezipaměť.
 
-Pokud vyberete konkrétní jednotku, která již obsahuje soubor **NO_SMS_ON_DRIVE. SMS** , Configuration Manager soubor ignoruje. Konfigurace připojené mezipaměti pro použití této jednotky je explicitní záměr. Například distribuční bod má soubor `F:\no_sms_on_drive.sms`. Když explicitně nakonfigurujete vlastnosti distribučního bodu tak, aby používaly jednotku **f:** , Configuration Manager nakonfiguruje připojenou mezipaměť tak, aby používala jednotku f: pro svou mezipaměť.
+Pokud vyberete konkrétní jednotku, která již obsahuje soubor **NO_SMS_ON_DRIVE. SMS** , Configuration Manager soubor ignoruje. Konfigurace připojené mezipaměti pro použití této jednotky je explicitní záměr. Například distribuční bod má soubor `F:\no_sms_on_drive.sms` . Když explicitně nakonfigurujete vlastnosti distribučního bodu tak, aby používaly jednotku **f:** , Configuration Manager nakonfiguruje připojenou mezipaměť tak, aby používala jednotku f: pro svou mezipaměť.
 
 Změna jednotky po instalaci připojené mezipaměti:
 
 - Ručně nakonfigurujte vlastnosti distribučního bodu tak, aby používaly konkrétní písmeno jednotky.
 
 - Pokud je nastavena na hodnotu automaticky, vytvořte nejprve soubor **NO_SMS_ON_DRIVE. SMS** . Pak proveďte nějaké změny vlastností distribučního bodu, aby se aktivovala Změna konfigurace.
+
+### <a name="automation"></a>Automation
+
+<!-- SCCMDocs#1911 -->
+
+Sadu Configuration Manager SDK můžete použít k automatizaci konfigurace nastavení mezipaměti propojeného Microsoftem v distribučním bodě. Stejně jako u všech rolí lokality použijte [SMS_SCI_SysResUse třídy WMI](../../../develop/reference/core/servers/configure/sms_sci_sysresuse-server-wmi-class.md). Další informace najdete v tématu [programování rolí lokality](../../../develop/osd/about-operating-system-deployment-site-role-configuration.md#programming-the-site-roles).
+
+Když aktualizujete instanci **SMS_SCI_SysResUse** pro distribuční bod, nastavte následující vlastnosti:
+
+- **AgreeDOINCLicense**: Pokud chcete `1` přijmout licenční podmínky, nastavte na.
+- **Příznaky**: Povolit `|= 4` , zakázat`&= ~4`
+- **DiskSpaceDOINC**: nastavte na `Percentage` nebo`GB`
+- **RetainDOINCCache**: nastavte na `0` nebo`1`
+- **LocalDriveDOINC**: nastavte na `Automatic` nebo konkrétní písmeno jednotky, například `C:` nebo.`D:`
 
 ## <a name="verify"></a>Ověřit
 
@@ -158,7 +172,7 @@ Pokud v Configuration Manager distribučních bodech povolíte připojenou mezip
 
 - Povolte klientské aplikace funkce předběžné verze **pro spoluspravovaná zařízení**. Další informace najdete v tématu [předběžné verze funkcí](../../servers/manage/pre-release-features.md).
 
-- Povolte spolusprávu a přepněte úlohu **klientské aplikace** na **pilotní nasazení Intune** nebo **Intune**. Další informace najdete v těchto článcích:
+- Povolte spolusprávu a přepněte úlohu **klientské aplikace** na **pilotní nasazení Intune** nebo **Intune**. Další informace najdete v následujících článcích:
 
   - [Úlohy – klientské aplikace](../../../comanage/workloads.md#client-apps)
   - [Jak povolit spolusprávu](../../../comanage/how-to-enable.md)

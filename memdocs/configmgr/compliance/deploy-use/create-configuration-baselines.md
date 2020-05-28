@@ -10,12 +10,12 @@ ms.assetid: 678c9622-c61b-47d1-ba25-690616e431c7
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 2028974c166e060f445b255db6c5af707725a3f4
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1365aec90093ee24ad967e1d68e7c414b4efa254
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81712922"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906664"
 ---
 # <a name="create-configuration-baselines-in-configuration-manager"></a>Vytvoření standardních hodnot konfigurace v Configuration Manager
 
@@ -23,6 +23,9 @@ ms.locfileid: "81712922"
 
 
 Standardní hodnoty konfigurace v Configuration Manager obsahují předdefinované položky konfigurace a volitelně i další standardní hodnoty konfigurace. Po vytvoření standardních hodnot konfigurace je můžete nasadit do kolekce tak, aby zařízení v dané kolekci stáhla dané standardní hodnoty konfigurace a vyhodnotila svůj soulad s nimi.  
+
+> [!TIP]
+> Neexistuje žádný způsob, jak určit pořadí, ve kterém klient Configuration Manager vyhodnotí položky konfigurace v směrném plánu. Není deterministický.<!-- MEMDocs#175 -->
 
 ## <a name="configuration-baselines"></a>Standardní hodnoty konfigurace
 
@@ -38,7 +41,7 @@ Standardní hodnoty konfigurace v Configuration Manager obsahují předdefinovan
 
 Pokud chcete vytvořit standardní hodnoty konfigurace pomocí dialogového okna **Vytvoření standardních hodnot konfigurace** , použijte následující postup:  
 
-1. V konzole Configuration Manager klikněte na **prostředky a dodržování předpisů** > **Nastavení** > dodržování předpisů**standardní hodnoty konfigurace**.  
+1. V konzole Configuration Manager klikněte na **prostředky a dodržování předpisů**  >  **Nastavení dodržování**předpisů  >  **standardní hodnoty konfigurace**.  
 
 2. Na kartě **Domů** ve skupině **Vytvořit** klikněte na **Vytvořit standardní hodnoty konfigurace**.  
 
@@ -95,19 +98,19 @@ Pokud chcete jako součást vyhodnocení zásad dodržování předpisů zahrnou
 
 Když je uživatel součástí kolekce, která je cílem zásady dodržování předpisů, která zahrnuje podmínku pravidla, **zahrnuje nakonfigurované směrné plány v hodnocení zásad dodržování předpisů**. všechny směrné plány s vyhodnocením této standardní hodnoty v rámci vybrané možnosti **vyhodnocení zásad dodržování předpisů** , které jsou nasazené pro uživatele nebo zařízení uživatele, se vyhodnocují pro dodržování předpisů. Příklad:
 
-- `User1`je součástí `User Collection 1`.
-- `User1`používá `Device1`, který je v `Device Collection 1` a `Device Collection 2`.
-- `Compliance Policy 1`má **zahrnuté nakonfigurované směrné plány v podmínkách pravidla vyhodnocení zásad dodržování předpisů** a nasadí se do `User Collection 1`.
-- `Configuration Baseline 1`**vyhodnotí tento směrný plán jako součást vyhodnocování zásad dodržování předpisů** a nasadí se do `Device Collection 1`.
-- `Configuration Baseline 2`**vyhodnotí tento směrný plán jako součást vyhodnocování zásad dodržování předpisů** a nasadí se do `Device Collection 2`.
+- `User1`je součástí `User Collection 1` .
+- `User1`používá `Device1` , který je v `Device Collection 1` a `Device Collection 2` .
+- `Compliance Policy 1`má **zahrnuté nakonfigurované směrné plány v podmínkách pravidla vyhodnocení zásad dodržování předpisů** a nasadí se do `User Collection 1` .
+- `Configuration Baseline 1`**vyhodnotí tento směrný plán jako součást vyhodnocování zásad dodržování předpisů** a nasadí se do `Device Collection 1` .
+- `Configuration Baseline 2`**vyhodnotí tento směrný plán jako součást vyhodnocování zásad dodržování předpisů** a nasadí se do `Device Collection 2` .
 
-V tomto scénáři, při `Compliance Policy 1` vyhodnocování `User1` použití `Device1`, `Configuration Baseline 1` `Configuration Baseline 2` jsou vyhodnoceny i.
+V tomto scénáři, při `Compliance Policy 1` vyhodnocování `User1` použití `Device1` , `Configuration Baseline 1` `Configuration Baseline 2` jsou vyhodnoceny i.
 
-- `User1`někdy používá `Device2`.
-- `Device2`je členem `Device Collection 2` a `Device Collection 3`.
+- `User1`někdy používá `Device2` .
+- `Device2`je členem `Device Collection 2` a `Device Collection 3` .
 - `Device Collection 3`byl `Configuration Baseline 3` do něj nasazen, ale **vyhodnotí tento směrný plán jako součást hodnocení zásad dodržování předpisů** není vybrána.
 
-Při `User1` použití `Device2`se vyhodnotí `Configuration Baseline 2` jenom `Compliance Policy 1` při vyhodnocování.
+Při `User1` použití `Device2` se `Configuration Baseline 2` vyhodnotí jenom při `Compliance Policy 1` vyhodnocování.
 
 > [!NOTE]
 ><!--5582516-->

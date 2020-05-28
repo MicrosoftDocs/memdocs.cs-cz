@@ -10,12 +10,12 @@ ms.assetid: 2aca914f-641e-4bc8-98d4-bbf0a2a5276f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 8889c0ee306eaaf682563b2e8e72d5482054d1c7
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7e4e84b55c929dd878cb0720b3f61dfceedcf449
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81710787"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904099"
 ---
 # <a name="prepare-windows-servers-to-support-configuration-manager"></a>Příprava serverů Windows na podporu nástroje Configuration Manager
 
@@ -98,7 +98,7 @@ Následující role systému Windows jsou vyžadovány pro podporu konkrétních
 ##  <a name="iis-request-filtering-for-distribution-points"></a><a name="BKMK_IISFiltering"></a>Filtrování požadavků služby IIS pro distribuční body  
 Služba IIS ve výchozím nastavení používá filtrování žádostí, čímž blokuje přístup protokolu HTTP nebo HTTPS k některým příponám názvu souborů a umístěním složek. V distribučním bodě zabráníte klientům stahovat balíčky, které mají blokované přípony nebo umístění složek.  
 
-Pokud mají zdrojové soubory balíčku rozšíření, která jsou ve službě IIS blokována vaší konfigurací filtrování požadavků, je nutné nastavit filtrování požadavků tak, aby je povolilo. To se provádí [úpravou funkce filtrování žádostí](https://technet.microsoft.com/library/hh831621.aspx) ve Správci služby IIS na počítačích distribučních bodů.  
+Pokud mají zdrojové soubory balíčku rozšíření, která jsou ve službě IIS blokována vaší konfigurací filtrování požadavků, je nutné nastavit filtrování požadavků tak, aby je povolilo. To se provádí [úpravou funkce filtrování žádostí](https://docs.microsoft.com/previous-versions/orphan-topics/ws.11/hh831621(v=ws.11)) ve Správci služby IIS na počítačích distribučních bodů.  
 
 Configuration Manager pro balíčky a aplikace se navíc používají následující přípony názvů souborů. Ujistěte se, že vaše konfigurace filtrování požadavků neblokují tyto přípony souborů:  
 
@@ -136,4 +136,4 @@ Například zdrojové soubory pro nasazení softwaru mohou zahrnovat složku poj
 - HEAD
 - PROPFIND
 
-Další informace najdete v tématu [Konfigurace filtrování požadavků ve službě IIS](https://technet.microsoft.com/library/hh831621.aspx#Verbs). 
+Další informace najdete v tématu [Konfigurace filtrování požadavků ve službě IIS](https://docs.microsoft.com/previous-versions/orphan-topics/ws.11/hh831621(v=ws.11)#http-verbs). 

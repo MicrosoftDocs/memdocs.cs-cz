@@ -10,12 +10,13 @@ ms.assetid: 38b2bed2-20dd-4ce1-abc0-219343d2c4b8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6710170d6c86f59b1626285c618f3108f8947974
-ms.sourcegitcommit: 8a8378b685a674083bfb9fbc9c0662fb0c7dda97
+ms.reviewer: acabello
+ms.openlocfilehash: b280661c4de9282d3907b7d480477fc67f6a8dc5
+ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82619436"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83824060"
 ---
 # <a name="what-is-desktop-analytics"></a>Co je Desktop Analytics?
 
@@ -93,7 +94,7 @@ Pokud chcete použít desktopovou analýzu, ujistěte se, že vaše prostředí 
     > Funkce Desktop Analytics podporuje vytváření sestav několika hierarchií Configuration Manager do jednoho tenanta služby Azure AD.<!-- 4814075 --> Pokud máte ve svém prostředí více hierarchií, máte následující možnosti:
     >
     > - Používejte odlišná komerční ID a klienty Azure AD.
-    > - Nakonfigurujte obě hierarchie tak, aby používaly stejné komerční ID ke sdílení instance Azure AD tenant a Desktop Analytics.
+    > - Nakonfigurujte obě hierarchie tak, aby používaly stejné komerční ID ke sdílení instance Azure AD tenant a Desktop Analytics. Pro připojení jednotlivých hierarchií použijte [různé aplikace](connect-configmgr.md#bkmk_connect) . Může trvat až 30 dnů od odpojení hiearchy, aby se změny projevily na portálu. 
 
 - Zařízení se systémem Windows 7, Windows 8.1 nebo Windows 10  
 
@@ -106,7 +107,7 @@ Pokud chcete použít desktopovou analýzu, ujistěte se, že vaše prostředí 
     >
     > Desktop Analytics je navržený tak, aby nejlépe podporoval scénář místního upgradu. Pokud potřebujete provést významné změny, jako je například z 32-bitové architektury na 64, použijte scénář pro vytváření imagí. Přehledy Desktop Analytics jsou v těchto scénářích nasazení klasického operačního systému stále důležité, ale můžete ignorovat konkrétní pokyny pro upgrade na místě. Další informace najdete v tématu [scénáře nasazení podnikových operačních systémů pomocí Configuration Manager](../osd/deploy-use/scenarios-to-deploy-enterprise-operating-systems.md).
 
-- Diagnostická data systému Windows. Další informace najdete v těchto článcích:  
+- Diagnostická data systému Windows. Další informace najdete v následujících článcích:  
 
     - [Úrovně diagnostických dat](enable-data-sharing.md#diagnostic-data-levels)  
 

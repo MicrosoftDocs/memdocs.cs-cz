@@ -2,7 +2,7 @@
 title: Přehledy správy
 titleSuffix: Configuration Manager
 description: Přečtěte si informace o funkcích přehledů správy dostupných v konzole Configuration Manager.
-ms.date: 04/01/2020
+ms.date: 05/07/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: a79f83be-884c-48e6-94d6-ed0a68c22e2f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: e9aae1da48deabd0cc339cd25055827caf07354b
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 69b2533dd5c86124a6aff9feac7306ecf16c6e5a
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81713734"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268959"
 ---
 # <a name="management-insights-in-configuration-manager"></a>Přehledy správy v Configuration Manager
 
@@ -78,9 +78,9 @@ Uzel **Management Insights** obsahuje grafický řídicí panel. Tento řídicí
 K upřesnění zobrazení použijte následující filtry v horní části řídicího panelu:
 
 - Zobrazit dokončené
-- Nepovinné
+- Volitelné
 - Doporučené
-- Kritická
+- Kritické
 
 Řídicí panel obsahuje tyto dlaždice:  
 
@@ -146,13 +146,13 @@ Počínaje verzí 1902 jsou k dispozici nová pravidla s doporučeními pro spr�
 
 - **Kolekce se stejným časem zahájení přehodnocení**: tyto kolekce mají stejný čas opětovného vyhodnocení jako jiné kolekce. Upravte čas opakovaného vyhodnocení, aby nedošlo ke konfliktu.  
 
-- **Kolekce s časem dotazu během dvou sekund**: Zkontrolujte pravidla dotazu pro tuto kolekci. Zvažte úpravu nebo odstranění kolekce.
+- **Kolekce s časem dotazu za 5 minut**: Zkontrolujte pravidla dotazu pro tuto kolekci. Zvažte úpravu nebo odstranění kolekce.
 
 - Následující pravidla zahrnují konfigurace, které potenciálně způsobují zbytečné zatížení webu. Zkontrolujte tyto kolekce, pak je buď odstraňte, nebo vyhodnocování pravidla vypněte:  
 
   - **Kolekce bez povolených pravidel dotazů a přírůstkových aktualizací**  
 
-  - **Kolekce bez pravidel dotazů a povolené pro plánované nebo přírůstkové hodnocení**  
+  - **Kolekce bez pravidel dotazů a povolených pro libovolný plán**  
 
   - **Kolekce bez pravidel dotazů a plánovaného úplného vyhodnocení**  
 

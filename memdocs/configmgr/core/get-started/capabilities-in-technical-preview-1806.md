@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 522e01b0d811d768d4f239bc917c2e3db08e05ef
-ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
+ms.openlocfilehash: 2168f844f1c9ef98ea21da68b73531bca7aad999
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82210073"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905174"
 ---
 # <a name="capabilities-in-technical-preview-1806-for-configuration-manager"></a>Funkce ve verzi Technical Preview 1806 pro Configuration Manager
 
@@ -68,7 +68,7 @@ Tato verze dále prochází podporu aktualizací softwaru třetích stran v důs
 
 V této verzi jsou k dispozici následující katalogy aktualizací softwaru třetích stran:
 
- | Vydavatel | Název katalogu |
+ | Publisher | Název katalogu |
  |--------|---------------------|
  | EMULEX | Katalog aktualizací klientů HP |
 
@@ -81,10 +81,10 @@ SCUP nadále podporuje i další katalogy a scénáře. Seznam katalogů v uzlu 
 
     > [!Tip]  
     > Bod aktualizace softwaru vyžaduje protokol HTTPS, protože se jedná o požadavek na rozhraní API služby WSUS použitá ke zpracování podpisových certifikátů. Klienti nemusí být povoleni také pomocí protokolu HTTPS. Další informace o povolení HTTPS na serveru WSUS najdete v následujících článcích o pomoc:  
-    > - [Zabezpečení služby WSUS pomocí protokolu SSL](/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#25-secure-wsus-with-the-secure-sockets-layer-protocol) 
-    > - [Příspěvek na blog podpory služby WSUS](https://blogs.technet.microsoft.com/sus/2011/05/09/how-to-create-an-internet-facing-wsus-server-that-uses-different-internal-and-external-names/)
+    > - [Zabezpečení služby WSUS pomocí protokolu SSL](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#25-secure-wsus-with-the-secure-sockets-layer-protocol) 
+    > - [Příspěvek na blog podpory služby WSUS](https://docs.microsoft.com/archive/blogs/sus/how-to-create-an-internet-facing-wsus-server-that-uses-different-internal-and-external-names)
 
-- V bodu aktualizace softwaru je dostatek místa na disku pro uložení zdrojového binárního obsahu pro aktualizace softwaru třetích stran. Velikost požadovaného úložiště se liší v závislosti na dodavateli, typech aktualizací a konkrétních aktualizacích, které publikujete pro nasazení. Pokud potřebujete přesunout složku WSUSContent na jinou jednotku s větším množstvím volného místa, přečtěte si blog týmu podpory služby WSUS, [kde můžete změnit umístění, kam služba WSUS ukládá aktualizace místně](https://blogs.technet.microsoft.com/sus/2008/05/19/wsus-how-to-change-the-location-where-wsus-stores-updates-locally/).  
+- V bodu aktualizace softwaru je dostatek místa na disku pro uložení zdrojového binárního obsahu pro aktualizace softwaru třetích stran. Velikost požadovaného úložiště se liší v závislosti na dodavateli, typech aktualizací a konkrétních aktualizacích, které publikujete pro nasazení. Pokud potřebujete přesunout složku WSUSContent na jinou jednotku s větším množstvím volného místa, přečtěte si blog týmu podpory služby WSUS, [kde můžete změnit umístění, kam služba WSUS ukládá aktualizace místně](https://docs.microsoft.com/archive/blogs/sus/wsus-how-to-change-the-location-where-wsus-stores-updates-locally).  
 
 - Povolte a nasaďte nastavení klienta [Povolit aktualizace softwaru třetích stran](../clients/deploy/about-client-settings.md#enable-third-party-software-updates) ve skupině **aktualizace softwaru** .  
 
@@ -149,7 +149,7 @@ Proveďte následující kroky pro *jakékoli aktualizace softwaru třetích str
 
 
 ### <a name="monitoring-progress-of-third-party-software-updates"></a>Monitorování průběhu aktualizací softwaru třetích stran
-Synchronizace aktualizací softwaru třetích stran je zpracována komponentou SMS_ISVUPDATES_SYNCAGENT na serveru lokality. Můžete zobrazit stavové zprávy z této součásti nebo zobrazit podrobnější stav v SMS_ISVUPDATES_SYNCAGENT. log. Tento protokol se nachází na serveru lokality v podsložce **log (protokoly** ) instalačního adresáře webového serveru. Ve výchozím nastavení je `C:\Program Files\Microsoft Configuration Manager\Logs`tato cesta. Další informace o monitorování obecného procesu správy aktualizací softwaru najdete v tématu [monitorování aktualizací softwaru](../../sum/deploy-use/monitor-software-updates.md).
+Synchronizace aktualizací softwaru třetích stran je zpracována komponentou SMS_ISVUPDATES_SYNCAGENT na serveru lokality. Můžete zobrazit stavové zprávy z této součásti nebo zobrazit podrobnější stav v SMS_ISVUPDATES_SYNCAGENT. log. Tento protokol se nachází na serveru lokality v podsložce **log (protokoly** ) instalačního adresáře webového serveru. Ve výchozím nastavení je tato cesta `C:\Program Files\Microsoft Configuration Manager\Logs` . Další informace o monitorování obecného procesu správy aktualizací softwaru najdete v tématu [monitorování aktualizací softwaru](../../sum/deploy-use/monitor-software-updates.md).
 
 
 ### <a name="known-issues"></a>Známé problémy
@@ -191,9 +191,6 @@ K dispozici je také nová globální podmínka, jedná **se o aplikace Office 3
 <!--1357861-->
 Package Conversion Manager je teď integrovaný nástroj, který umožňuje převést starší verze balíčků Configuration Manager 2007 na Configuration Manager aktuální aplikace větví. Potom můžete používat funkce aplikací, jako jsou závislosti, pravidla požadavků a spřažení uživatelských zařízení.
 
-> [!Tip]  
-> Starší verze dokumentace pro stávající funkce v balíčku Conversion Manager je k dispozici na [webu TechNet](https://technet.microsoft.com/library/hh531519.aspx). V průběhu migrace do knihovny docs.microsoft.com probíhá zpracování relevantních informací.
-
 ### <a name="try-it-out"></a>Určitě to udělejte!
  Zkuste úkoly dokončit. Potom vám pošleme [názor](capabilities-in-technical-preview-1804.md#bkmk_feedback) , abychom věděli, jak pracovali.
 
@@ -206,7 +203,6 @@ Package Conversion Manager je teď integrovaný nástroj, který umožňuje pře
      - **Převést balíček**: některé balíčky je možné snadno převést na aplikace s touto akcí.
      - **Opravit a převést**: některé balíčky vyžadují před převodem na aplikace problémy, které se mají opravit.  
 
-   Další informace o těchto akcích najdete v tématu [jak analyzovat a převádět balíčky](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/hh846244%28v%3dtechnet.10%29).  
 
 3. V pracovním prostoru **monitorování** vyberte **stav konverze balíčku**. Tento nový řídicí panel zobrazuje celkový stav analýzy a převodu balíčků v lokalitě. Nová úloha na pozadí automaticky shrnuje data analýzy.  
 
@@ -238,7 +234,7 @@ Nyní můžete aktualizace softwaru nasadit do zařízení bez předchozího sta
 Nástroj pro přizpůsobení sady Office je nyní integrovaný s instalačním programem sady Office 365 v konzole Configuration Manager. Při vytváření nasazení pro Office 365 teď můžete dynamicky konfigurovat nejnovější nastavení spravovatelnosti Office. Nástroj pro přizpůsobení sady Office je aktualizován ve stejnou dobu jako vydání nových sestavení sady Office 365. Teď můžete využít nové nastavení spravovatelnosti v Office 365, jakmile budou k dispozici. 
 
 ### <a name="prerequisites"></a>Požadavky
-- Počítač se spuštěnou konzolou Configuration Manager potřebuje přístup přes Internet přes port HTTPS 443. Průvodce instalací klienta Office 365 používá rozhraní API standardního webového prohlížeče Windows pro otevření https://config.office.com. Pokud se použije internetový proxy server, musí být uživatel schopný získat přístup k této adrese URL.
+- Počítač se spuštěnou konzolou Configuration Manager potřebuje přístup přes Internet přes port HTTPS 443. Průvodce instalací klienta Office 365 používá rozhraní API standardního webového prohlížeče Windows pro otevření https://config.office.com . Pokud se použije internetový proxy server, musí být uživatel schopný získat přístup k této adrese URL.
 
 ### <a name="try-it-out"></a>Určitě to udělejte!
  Zkuste úkoly dokončit. Potom vám pošleme [názor](capabilities-in-technical-preview-1804.md#bkmk_feedback) , abychom věděli, jak pracovali.

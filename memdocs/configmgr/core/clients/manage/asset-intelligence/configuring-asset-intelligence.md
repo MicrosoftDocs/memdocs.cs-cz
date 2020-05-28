@@ -10,12 +10,12 @@ ms.assetid: 08e0382d-de05-4a76-ba5c-7223173f7066
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 56a65a0a4e1dd9a96e5725ea8c68cc435947bb08
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1a5c89d3fdd82bfa654f806c6931bde2621e714b
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81713951"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906610"
 ---
 # <a name="configure-asset-intelligence-in-configuration-manager"></a>Konfigurace funkce Asset Intelligence v Configuration Manager
 
@@ -39,7 +39,7 @@ Funkce Asset Intelligence inventáře a spravují využívání softwarových li
 
 ##### <a name="to-enable-asset-intelligence-hardware-inventory-reporting-classes-from-the-asset-intelligence-home-page"></a>Povolení třídy generování sestav inventáře hardwaru Asset Intelligence z domovské stránky funkce Asset Intelligence  
 
-1.  V konzole Configuration Manager vyberte **Asset a funkce Asset Intelligence dodržování předpisů** > **Asset Intelligence**.  
+1.  V konzole Configuration Manager vyberte **Asset a funkce Asset Intelligence dodržování předpisů**  >  **Asset Intelligence**.  
 
 3.  Na kartě **Domů** ve skupině **funkce Asset Intelligence** vyberte možnost **Upravit třídy inventáře**.   
 
@@ -51,13 +51,13 @@ Funkce Asset Intelligence inventáře a spravují využívání softwarových li
 
 ##### <a name="to-enable-asset-intelligence-hardware-inventory-reporting-classes-from-client-settings-properties"></a>Povolení třídy generování sestav inventáře hardwaru Asset Intelligence z vlastností nastavení klienta  
 
-1.  V konzole Configuration Manager vyberte možnost **Správa** >  **Nastavení** > klienta**výchozí nastavení agenta klienta**. Pokud jste vytvořili vlastní nastavení klienta, můžete je místo toho vybrat.  
+1.  V konzole Configuration Manager vyberte možnost **Správa**  >   **nastavení klienta**  >  **výchozí nastavení agenta klienta**. Pokud jste vytvořili vlastní nastavení klienta, můžete je místo toho vybrat.  
 
 3.  Na kartě **domů** > **vlastnosti** skupiny a vyberte **vlastnosti**.   
 
-4.  Vyberte > **třídy sady nastavení** **inventáře hardwaru**. .  
+4.  Vyberte **Hardware Inventory**  >  **třídy sady nastavení**inventáře hardwaru. .  
 
-5.  Vyberte možnost **filtrovat podle kategorie** > **funkce Asset Intelligence třídy vytváření sestav**. Seznam tříd se obnoví a zobrazí se jenom třídy generování sestav inventáře hardwaru funkce Asset Intelligence.  
+5.  Vyberte možnost **filtrovat podle kategorie**  >  **funkce Asset Intelligence třídy vytváření sestav**. Seznam tříd se obnoví a zobrazí se jenom třídy generování sestav inventáře hardwaru funkce Asset Intelligence.  
 
 6.  Vyberte ze seznamu alespoň jednu třídu pro vytváření sestav.  
 
@@ -73,7 +73,7 @@ Bod synchronizace katalogu Asset Intelligence může kromě stažení nových in
 
 ##### <a name="to-install-an-asset-intelligence-synchronization-point-site-system-role"></a>Instalace role systému lokality bodu synchronizace katalogu Asset Intelligence  
 
-1.  V konzole Configuration Manager klikněte na možnost **Správa**> **Konfigurace** > lokality**servery a role systému lokality**.  
+1.  V konzole Configuration Manager klikněte na možnost **Správa** >  **Konfigurace lokality**  >  **servery a role systému lokality**.  
 
 3.  Přidejte roli systému lokality bodu synchronizace funkce Asset Intelligence k novému nebo existujícímu serveru systému lokality:  
 
@@ -110,7 +110,7 @@ Bod synchronizace katalogu Asset Intelligence může kromě stažení nových in
 
 ##### <a name="to-enable-success-logon-event-logging-by-using-a-local-security-policy"></a>Povolení protokolování událostí úspěšného přihlášení pomocí místních zásad zabezpečení  
 
-1.  V Configuration Manager klientském > počítači vyberte možnost **Spustit** > **Nástroje pro správu****místní zásady zabezpečení**.  
+1.  V Configuration Manager klientském počítači vyberte možnost **Spustit**  >  **Nástroje pro správu**  >  **místní zásady zabezpečení**.  
 
 2.  V dialogovém okně **místní zásady zabezpečení** v části **nastavení zabezpečení**rozbalte **místní zásady**a pak zvolte **zásady auditu**.  
 
@@ -139,7 +139,7 @@ Bod synchronizace katalogu Asset Intelligence může kromě stažení nových in
 4.  Na stránce **Import** zadejte, jestli importujete soubor programu Microsoft Volume Licensing (MVLS) (.xml nebo .csv) nebo soubor obecné licenční smlouvy (.csv). Další informace o vytvoření souboru obecné licenční smlouvy najdete dál v tomto tématu v části [Create a general license statement information file for import](#BKMK_CreateGeneralLicenseStatement) .  
 
     > [!WARNING]  
-    >  Pokud chcete stáhnout soubor MVLS ve formátu .csv, který můžete naimportovat do katalogu Asset Intelligence, přejděte na web [Microsoft Volume Licensing Service Center](https://go.microsoft.com/fwlink/p/?LinkId=226547). Pro přístup k těmto informacím musíte mít na tomto webu zaregistrovaný účet. Pokud potřebujete informace, jak získat soubor MVLS ve formátu .xml, musíte kontaktovat zástupce zákazníka Microsoftu.  
+    >  Pokud chcete stáhnout soubor MVLS ve formátu .csv, který můžete naimportovat do katalogu Asset Intelligence, přejděte na web [Microsoft Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx). Pro přístup k těmto informacím musíte mít na tomto webu zaregistrovaný účet. Pokud potřebujete informace, jak získat soubor MVLS ve formátu .xml, musíte kontaktovat zástupce zákazníka Microsoftu.  
 
 5.  Zadejte cestu UNC k souboru výpisu licencí nebo klikněte na **Procházet** a vyberte síťovou sdílenou složku a soubor.  
 
@@ -190,10 +190,10 @@ Asset Intelligence páruje produkty, které zadáte v obecné licenční smlouv�
 #### <a name="sample-table-to-describe-software-licenses"></a>Ukázková tabulka pro popis softwarových licencí  
  Při vytváření souboru importu obecné licenční smlouvy můžete k popisu softwarových licencí, které se mají naimportovat do katalogu Asset Intelligence, použít informace v následující tabulce.  
 
-|Název sloupce|Datový typ|Požaduje se|Příklad|  
+|Název sloupce|Datový typ|Vyžadováno|Příklad|  
 |-----------------|---------------|--------------|-------------|  
-|Název|Až 255 znaků|Ano|Softwarový titul|  
-|Vydavatel|Až 255 znaků|Ano|Vydavatel softwaru|  
+|Name|Až 255 znaků|Ano|Softwarový titul|  
+|Publisher|Až 255 znaků|Ano|Vydavatel softwaru|  
 |Verze|Až 255 znaků|Ano|Verze softwarového titulu|  
 |Jazyk|Až 255 znaků|Ano|Jazyk softwarového titulu|  
 |EffectiveQuantity|Celočíselná hodnota|Ano|Počet zakoupených licencí|  
@@ -213,7 +213,7 @@ Asset Intelligence páruje produkty, které zadáte v obecné licenční smlouv�
 
 ##### <a name="to-configure-asset-intelligence-maintenance-tasks"></a>Konfigurace úloh údržby funkce Asset Intelligence  
 
-1.  V konzole Configuration Manager klikněte na **Správa** > **Konfigurace** > lokality**lokality**.  
+1.  V konzole Configuration Manager klikněte na **Správa**  >  **Konfigurace lokality**  >  **lokality**.  
 
 3.  Vyberte lokalitu, na které chcete nakonfigurovat úlohu údržby funkce Asset Intelligence.  
 

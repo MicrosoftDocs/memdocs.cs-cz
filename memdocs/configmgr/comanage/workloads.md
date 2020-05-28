@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 4c90befe-9c4e-4c27-a947-625887e15052
-ms.openlocfilehash: 8c91ba1c2b4b5ef7072c030eddd9b97dd69933e5
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 928ef8a8ebc90807912f22901743725df9aa67e7
+ms.sourcegitcommit: 79fb3b0f0486de1644904be348b7e08048e93b18
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82075706"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82842219"
 ---
 # <a name="co-management-workloads"></a>Úlohy spolusprávy
 
@@ -75,16 +75,15 @@ Další informace o funkci Intune najdete v tématu [nasazení profilů přístu
 - Řízení aplikací programu Windows Defender  
 - Centrum zabezpečení v programu Windows Defender  
 - Rozšířená ochrana před internetovými útoky v programu Windows Defender (nyní označovaná jako Microsoft Defender Threat Protection)
-- Windows Information Protection  
 
 Další informace o funkci Intune najdete v tématu [Endpoint Protection Microsoft Intune](https://docs.microsoft.com/intune/endpoint-protection-windows-10).
 
 > [!Note]  
 > Když přepnete tuto úlohu, zásady Configuration Manager zůstanou na zařízení, dokud je zásady Intune nepřepíší. Tím se zajistí, že zařízení má při přechodu stále zásady ochrany.
 >
-> Úlohy Endpoint Protection jsou také součástí konfigurace zařízení. Stejné chování platí při přepínání úlohy [Konfigurace zařízení](#device-configuration) .<!-- SCCMDocs.nl-nl issue #4 -->
+> Úlohy Endpoint Protection jsou také součástí konfigurace zařízení. Stejné chování platí při přepínání úlohy [Konfigurace zařízení](#device-configuration) .<!-- SCCMDocs.nl-nl issue #4 --> Když přepnete úlohu konfigurace zařízení, zahrnuje taky zásady pro funkci Windows Information Protection, která není zahrnutá do úlohy Endpoint Protection.<!-- 4184095 -->
 >
-> Nastavení ochrany antivirovým programem Microsoft Defender, která jsou součástí typu profilu omezení zařízení pro konfiguraci zařízení Intune, nejsou zahrnutá do rozsahu posuvníku Endpoint Protection. Pokud chcete spravovat antivirovou ochranu v programu Microsoft Defender pro spoluspravovaná zařízení s povoleným posuvníkem Endpoint Protection, použijte nové zásady antivirové ochrany v centru > pro **správu Microsoft Endpoint Manageru**v části**Endpoint Security** > **Antivirus**. Nový typ zásad má k dispozici nové a vylepšené možnosti a podporuje všechna stejná nastavení, která jsou dostupná v profilu omezení zařízení. <!--6609171-->
+> Nastavení ochrany antivirovým programem Microsoft Defender, která jsou součástí typu profilu omezení zařízení pro konfiguraci zařízení Intune, nejsou zahrnutá do rozsahu posuvníku Endpoint Protection. Pokud chcete spravovat antivirovou ochranu v programu Microsoft Defender pro spoluspravovaná zařízení s povoleným posuvníkem Endpoint Protection, použijte nové zásady antivirové ochrany v **centru pro správu Microsoft Endpoint Manageru**v části  >  **Endpoint Security**  >  **Antivirus**. Nový typ zásad má k dispozici nové a vylepšené možnosti a podporuje všechna stejná nastavení, která jsou dostupná v profilu omezení zařízení. <!--6609171-->
 >
 > Funkce šifrování systému Windows zahrnuje správu BitLockeru. Další informace o chování této funkce společně se správou najdete v tématu [nasazení správy nástroje BitLocker](../protect/deploy-use/bitlocker/deploy-management-agent.md#co-management-and-intune).<!-- SCCMDocs#2321 -->
 
@@ -97,6 +96,9 @@ Další informace o funkci Intune najdete v tématu [Endpoint Protection Microso
 Nastavení můžete i nadále nasazovat z Configuration Manager do spoluspravovaných zařízení, i když je Intune autorita pro konfiguraci zařízení. Tato výjimka se dá použít ke konfiguraci nastavení, které vaše organizace vyžaduje, ale ještě není v Intune dostupná. Zadejte tuto výjimku pro [standardní hodnoty konfigurace Configuration Manager](../compliance/deploy-use/create-configuration-baselines.md). Tuto možnost povolte, pokud chcete při vytváření standardních hodnot **vždycky použít tyto standardní hodnoty i pro spoluspravované klienty** . Později ji můžete změnit na kartě **Obecné** ve vlastnostech existujícího směrného plánu.  
 
 Další informace o funkci Intune najdete v tématu [Vytvoření profilu zařízení v Microsoft Intune](https://docs.microsoft.com/intune/device-profile-create).  
+
+> [!NOTE]
+> Když přepnete úlohu konfigurace zařízení, zahrnuje taky zásady pro funkci Windows Information Protection, která není zahrnutá do úlohy Endpoint Protection.<!-- 4184095 -->
 
 ## <a name="office-click-to-run-apps"></a>Aplikace pro Office Klikni a spusť
 
@@ -139,13 +141,13 @@ Po přesunutí úlohy Endpoint Protection do Intune může klient nadále dodrž
 
 Pokud chcete tento problém obejít, použijte CleanUpPolicy. XML, až po přijetí zásad Intune z klienta použijte následující postup:
 
-1. Zkopírujte a uložte níže uvedený text `CleanUpPolicy.xml`.
+1. Zkopírujte a uložte níže uvedený text `CleanUpPolicy.xml` .
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
    <SecurityPolicy xmlns="http://forefront.microsoft.com/FEP/2010/01/PolicyData" Name="FEP clean-up policy"><PolicySection Name="FEP.AmPolicy"><LocalGroupPolicySettings><IgnoreKey Name="SOFTWARE\Policies\Microsoft\Microsoft Antimalware"/><IgnoreKey Name="SOFTWARE\Policies\Microsoft\Windows Defender"/></LocalGroupPolicySettings></PolicySection></SecurityPolicy>
    ```
-1. Otevřete příkazový řádek se zvýšenými `ConfigSecurityPolicy.exe`oprávněními na. Obvykle je tento spustitelný soubor v jednom z následujících adresářů:
+1. Otevřete příkazový řádek se zvýšenými oprávněními na `ConfigSecurityPolicy.exe` . Obvykle je tento spustitelný soubor v jednom z následujících adresářů:
    - C:\Program Files\Windows Defender
    - C:\Program Files\Microsoft – klient zabezpečení
 1. Z příkazového řádku předejte soubor XML, aby se zásady vyčistily. Například, `ConfigSecurityPolicy.exe C:\temp\CleanUpPolicy.xml`.  

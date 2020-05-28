@@ -10,12 +10,13 @@ ms.assetid: b5606f15-f589-485c-a599-cdabf1a9e7ac
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d6eaf5c8d7f1a58c944f175f2515c49267c1ee36
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.reviewer: acabello
+ms.openlocfilehash: dd970dc1517a6fcc197b2bf39a141871b4999a02
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81714525"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268415"
 ---
 # <a name="desktop-analytics-data-privacy"></a>Ochrana osobních údajů v datech Desktop Analytics
 

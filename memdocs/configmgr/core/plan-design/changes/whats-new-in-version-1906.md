@@ -10,12 +10,12 @@ ms.assetid: 97e23075-549c-4e45-ab1e-0671027edacf
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: c7ad4e96d9afba7e52d2ff2e5dd3f4f6be0b9a98
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 2db1a719aaf1cb79973f1af8e2de3c1bbb91d605
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078698"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83879096"
 ---
 # <a name="whats-new-in-version-1906-of-configuration-manager-current-branch"></a>Co je nového ve verzi 1906 Configuration Manager Current Branch
 
@@ -186,7 +186,7 @@ Další informace najdete v tématu [řídicí panel zdrojů dat klienta](../../
 ### <a name="use-your-distribution-point-as-an-in-network-cache-server-for-delivery-optimization"></a>Použití distribučního bodu jako serveru mezipaměti v síti pro optimalizaci doručení
 
 <!--3555764-->
-Teď můžete v distribučních bodech nainstalovat server pro optimalizaci doručování do mezipaměti (DOINC). Uložením tohoto obsahu do mezipaměti v místním prostředí můžou vaši klienti těžit z funkce Optimalizace doručení, ale můžete přispět k ochraně WAN Links.
+Nyní můžete v distribučních bodech nainstalovat do serveru mezipaměti v síti možnost optimalizace doručování. Uložením tohoto obsahu do mezipaměti v místním prostředí můžou vaši klienti těžit z funkce Optimalizace doručení, ale můžete přispět k ochraně WAN Links.
 
 Tento server mezipaměti funguje jako transparentní mezipaměť na vyžádání pro obsah stažený optimalizací doručení. Pomocí nastavení klienta se ujistěte, že je tento server nabízen pouze členům místní skupiny hranic Configuration Manager.
 
@@ -306,7 +306,7 @@ Tato verze zahrnuje následující vylepšení pro schválení aplikací:
 
 - Existuje nová metoda WMI, kterou **DeleteInstance** odebrat žádost o schválení aplikace. Tato akce neodinstaluje aplikaci na zařízení. Pokud ještě není nainstalovaná, uživatel nemůže aplikaci nainstalovat z centra softwaru.
 
-- Voláním rozhraní **CreateApprovedRequest** API vytvoříte předběžně schválenou žádost o aplikaci na zařízení. Chcete-li zabránit automatické instalaci aplikace na klienta, nastavte parametr **AutoInstall** na `FALSE`. Uživatel uvidí aplikaci v centru softwaru, ale není automaticky nainstalována.
+- Voláním rozhraní **CreateApprovedRequest** API vytvoříte předběžně schválenou žádost o aplikaci na zařízení. Chcete-li zabránit automatické instalaci aplikace na klienta, nastavte parametr **AutoInstall** na `FALSE` . Uživatel uvidí aplikaci v centru softwaru, ale není automaticky nainstalována.
 
 Další informace najdete v tématu [schvalování aplikací](../../../apps/deploy-use/app-approval.md).
 
@@ -501,9 +501,9 @@ Nyní můžete procházet statistiky dodržování předpisů a zjistit, která 
 
 Hypertextový odkaz **požadovaný zobrazení** je k dispozici v následujících umístěních:
 
-   - **Software knihovny** > **softwaru aktualizuje** > **všechny aktualizace softwaru** .
-   - **Softwarová knihovna** > **Windows 10 – Údržba** > **všech aktualizací Windows 10**
-   - **Sada softwarových knihoven** > **Office 365 Správa** > klientů Office**365 – aktualizace**
+   - **Softwarová knihovna**  >  **Aktualizace softwaru**  >  **Všechny aktualizace softwaru**
+   - **Softwarová knihovna**  >  **Údržba**  >  Windows 10 **Všechny aktualizace Windows 10**
+   - **Softwarová knihovna**  >  Správa klientů Office **365**  >  **Aktualizace Office 365**
 
 Další informace najdete v tématech [monitorování aktualizací softwaru](../../../sum/deploy-use/monitor-software-updates.md#drill-through-required-updates), [Správa Windows jako služby](../../../osd/deploy-use/manage-windows-as-a-service.md#drill-through-required-updates)a [Správa aktualizací Office 365 ProPlus](../../../sum/deploy-use/manage-office-365-proplus-updates.md#drill-through-required-office-365-updates).
 
@@ -562,7 +562,7 @@ V pracovním prostoru **prostředky a kompatibilita** , přejít na uzel **zař�
 
 > [!Note]  
 > - Tato karta není momentálně k dispozici v poduzlu zařízení v uzlu **kolekce zařízení** . Například když vyberete možnost **zobrazení členů** v kolekci.
-> - Tato karta se pro některé uživatele nemusí naplnit očekávaným způsobem. Úplný seznam kolekcí, do kterých zařízení patří, zobrazíte tak, že musíte mít roli zabezpečení **správce s úplnými oprávněními** . Jedná se o známý problém. <!--5107309-->
+> - Tato karta se pro některé uživatele nemusí naplnit očekávaným způsobem. Úplný seznam kolekcí, do kterých zařízení patří, zobrazíte tak, že musíte mít roli zabezpečení **správce s úplnými oprávněními** . Jde o známý problém. <!--5107309-->
 
 ### <a name="task-sequences-tab-in-applications-node"></a>Karta pořadí úloh v uzlu aplikace
 

@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: d3ae44892cd46a438113fb54dad0e290b8fb148e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 556ddb10f0ba25fc1c3cf4b215d5058d3221c7fe
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81723310"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906451"
 ---
 # <a name="checklist-for-installing-update-1702-for-configuration-manager"></a>Kontrolní seznam pro instalaci aktualizace 1702 pro Configuration Manager
 
@@ -27,7 +27,7 @@ Když použijete aktuální větev Configuration Manager, můžete nainstalovat 
 > [!TIP]
 > Verze 1702 je také k dispozici jako [Základní médium](updates.md#bkmk_Baselines) , které lze použít k instalaci první lokality nové hierarchie.
 
-Chcete-li získat aktualizaci verze 1702, je nutné použít roli systému lokality spojovacího bodu služby v lokalitě nejvyšší úrovně ve vaší hierarchii. Tato možnost může být v režimu online nebo offline. Jakmile vaše hierarchie stáhne balíček aktualizace od Microsoftu, najdete ho v konzole v části **Správa &gt; přehled &gt; Cloud Services &gt; aktualizace a údržba**.
+Chcete-li získat aktualizaci verze 1702, je nutné použít roli systému lokality spojovacího bodu služby v lokalitě nejvyšší úrovně ve vaší hierarchii. Tato možnost může být v režimu online nebo offline. Jakmile vaše hierarchie stáhne balíček aktualizace od Microsoftu, najdete ho v konzole v části **Správa &gt; Přehled &gt; Cloud Services &gt; aktualizace a údržba**.
 
 -   Je-li aktualizace uvedena jako **dostupná**, je aktualizace připravena k instalaci. Před instalací verze 1702 si přečtěte následující informace [o instalaci aktualizace 1702](#about-installing-update-1702) a [Kontrolní seznam](#checklist) pro konfigurace, které se mají provést před zahájením aktualizace.
 
@@ -35,7 +35,7 @@ Chcete-li získat aktualizaci verze 1702, je nutné použít roli systému lokal
 
     -   Pokud dmpdownloader. log indikuje, že je proces dmpdownloader v režimu spánku a čeká se na něj před kontrolou aktualizací, můžete restartovat službu **SMS_Executive** na serveru lokality, aby se restartovala stahování souborů opětovné distribuce aktualizace.
 
-    -   K dalšímu problému se stahování dochází, když proxy server nastavení brání `silverlight.dlservice.microsoft.com` stažení `download.microsoft.com`z a.
+    -   K dalšímu problému se stahování dochází, když proxy server nastavení brání stažení z `silverlight.dlservice.microsoft.com` a `download.microsoft.com` .
 
 Další informace o instalaci aktualizací najdete v tématu [aktualizace a údržba v konzole](updates.md#bkmk_inconsole).
 
@@ -89,7 +89,7 @@ Další informace najdete v tématu [Požadované součásti lokality a systému
 
 **Přečtěte si verzi sady Windows Assessment and Deployment Kit (ADK) pro Windows 10** . Systém Windows 10 ADK by měl být verze 1607 nebo novější. Pokud musíte aktualizovat ADK, udělejte to ještě před zahájením aktualizace Configuration Manager. Tím se zajistí, že výchozí spouštěcí image se automaticky aktualizují na nejnovější verzi Windows PE. (Vlastní spouštěcí image se musí aktualizovat ručně.)
 
-Pokud aktualizujete lokalitu před aktualizací ADK, podívejte se na blog [Configuration Manager a na Windows ADK pro Windows 10, verze 1607](https://blogs.technet.microsoft.com/enterprisemobility/2016/09/09/configuration-manager-and-the-windows-adk-for-windows-10-version-1607/) pro skript, který se dá použít k opětovnému vygenerování spouštěcích imagí.
+Pokud aktualizujete lokalitu před aktualizací ADK, podívejte se na blog [Configuration Manager a na Windows ADK pro Windows 10, verze 1607](https://techcommunity.microsoft.com/t5/configuration-manager-archive/configuration-manager-and-the-windows-adk-for-windows-10-version/ba-p/274047) pro skript, který se dá použít k opětovnému vygenerování spouštěcích imagí.
 
 **Zkontrolujte stav lokality a hierarchie a ověřte, že nejsou přítomné žádné nevyřešené problémy:** Před aktualizací lokality vyřešte všechny provozní problémy serveru lokality, serveru databáze lokality a rolí systému lokality, které jsou nainstalované na vzdálených počítačích. Aktualizace lokality může kvůli existujícím provozním problémům selhat.
 
@@ -99,7 +99,7 @@ Další informace najdete v tématu [použití výstrah a stavového systému pr
 Ujistěte se, že je replikace souborů a databáze mezi lokalitami v provozu a aktuální. Zpoždění nebo nevyřízené položky můžou bránit hladké úspěšné aktualizaci.
 U replikace databáze můžete k řešení problémů před spuštěním aktualizace použít Analyzátor propojení replikace.
 
-Další informace najdete v tématu [analyzátor propojení replikace](monitor-replication.md#BKMK_RLA) v tématu [monitorování replikace](monitor-replication.md) databáze.
+Další informace najdete v tématu [analyzátor propojení replikace](monitor-replication.md#BKMK_RLA)   v tématu [monitorování replikace databáze](monitor-replication.md)   .
 
 **Nainstalujte všechny použitelné kritické aktualizace operačních systémů na počítače, které jsou hostitelem lokality, serveru databáze lokality a rolí vzdáleného systému lokality:** Před instalací aktualizace pro Configuration Manager nainstalujte všechny důležité aktualizace pro každý příslušný systém lokality. Jestliže aktualizace, kterou instalujete, vyžaduje restart, před spuštěním upgradu restartujte příslušné počítače.
 
@@ -184,7 +184,7 @@ Další informace najdete v tématu [aktualizace pro Configuration Manager](upda
 
 ## <a name="post-update-checklist"></a>Kontrolní seznam po aktualizaci
 Projděte si následující akce, které se mají provést po dokončení instalace aktualizace.
-1. Ujistěte se, že je replikace mezi lokalitami aktivní. V konzole nástroje zobrazte **monitorování** > **hierarchie lokality**a **monitorování** > **replikace databáze** pro indikaci problémů nebo potvrzení, že jsou odkazy replikace aktivní.
+1. Ujistěte se, že je replikace mezi lokalitami aktivní. V konzole nástroje zobrazte **monitorování**  >  **hierarchie lokality**a **monitorování**  >  **replikace databáze** pro indikaci problémů nebo potvrzení, že jsou odkazy replikace aktivní.
 2. Ujistěte se, že každý server lokality a role systému lokality byly aktualizovány na verzi 1702. V konzole nástroje můžete přidat volitelnou **verzi** sloupce do zobrazení některých uzlů včetně **lokalit** a **distribučních bodů**.
 
    V případě potřeby se role systému lokality automaticky přeinstaluje, aby se aktualizovala na novou verzi. Zvažte restartování systémů vzdáleného webového serveru, které se neaktualizují úspěšně.

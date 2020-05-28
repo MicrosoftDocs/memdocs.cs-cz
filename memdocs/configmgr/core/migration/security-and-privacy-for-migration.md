@@ -10,12 +10,12 @@ ms.assetid: 6893fce1-7ad5-4151-9ba9-3096871e8e4a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7ba1f41af778602fb95d268c071b5f0d1dde158c
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ad92e4906c45b5c720ab35efc055449a27cc0850
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81712992"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906217"
 ---
 # <a name="security-and-privacy-for-migration-to-configuration-manager-current-branch"></a>Zabezpečení a ochrana osobních údajů pro migraci do Configuration Manager aktuální větve
 
@@ -48,9 +48,9 @@ Při migraci dat ze zdrojové lokality do cílové lokality ztratíte veškeré 
 
  Další informace o zabezpečení a ochraně osobních údajů najdete v jednom z následujících témat:  
 
--   Další informace o ochraně osobních údajů pro Configuration Manager 2007 najdete v tématu [zabezpečení a ochrana osobních údajů pro Configuration Manager 2007](https://go.microsoft.com/fwlink/p/?LinkId=216450) v knihovně dokumentace ke službě Configuration Manager 2007.  
+-   Další informace o ochraně osobních údajů pro Configuration Manager 2007 najdete v tématu [zabezpečení a ochrana osobních údajů pro Configuration Manager 2007](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb680768(v=technet.10)) v knihovně dokumentace ke službě Configuration Manager 2007.  
 
--   Další informace o ochraně osobních údajů pro System Center 2012 Configuration Manager najdete v tématu [zabezpečení a ochrana osobních údajů pro System center 2012 Configuration Manager](https://technet.microsoft.com/library/gg682033.aspx) v knihovně dokumentace nástroje system center 2012 Configuration Manager.  
+-   Další informace o ochraně osobních údajů pro System Center 2012 Configuration Manager najdete v tématu [zabezpečení a ochrana osobních údajů pro System center 2012 Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg682033(v=technet.10)) v knihovně dokumentace nástroje system center 2012 Configuration Manager.  
 
 -   Další informace o ochraně osobních údajů pro Configuration Manager najdete v tématu [zabezpečení a ochrana osobních údajů pro Configuration Manager](../../core/plan-design/security/security-and-privacy.md).  
 

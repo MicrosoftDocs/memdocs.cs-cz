@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 398f16b8f75d894030d76406807f74bdaa4be9d5
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ace27e9035af6696e455382a32365be0e3824d65
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81714784"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905201"
 ---
 # <a name="capabilities-in-configuration-manager-technical-preview-version-1807"></a>Funkce v Configuration Manager Technical Preview verze 1807 
 
@@ -82,7 +82,7 @@ Pracovní prostor **komunity** obsahuje také následující uzly:
 
 - Použijte konzolu Configuration Manager v operačním systému klienta.  
 
-    - Další, ale nedoporučuje se: na operačním systému serveru zakažte [Internet Explorer: Konfigurace rozšířeného zabezpečení](https://go.microsoft.com/fwlink/?LinkId=253461).  
+    - Další, ale nedoporučuje se: na operačním systému serveru zakažte [Internet Explorer: Konfigurace rozšířeného zabezpečení](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd883248(v=ws.10)).
 
 - Počítač s konzolou vyžaduje přístup k Internetu a připojení k následujícím webům:  
     - `https://aka.ms`  
@@ -112,7 +112,7 @@ Zkuste úkoly dokončit. Potom vám pošle [zpětnou vazbu](capabilities-in-tech
 
 Ve výchozím nastavení je toto nastavení **Automatické**. S touto hodnotou Configuration Manager vybere jednotku, na které je nainstalována. 
 
-Během offline údržby Configuration Manager ukládá do složky dočasné soubory `<drive>:\ConfigMgr_OfflineImageServicing`. Také připojí image operačního systému do této složky. 
+Během offline údržby Configuration Manager ukládá do složky dočasné soubory `<drive>:\ConfigMgr_OfflineImageServicing` . Také připojí image operačního systému do této složky. 
 
 Zkontrolujte soubor protokolu **OfflineServicingMgr. log** . 
 
@@ -191,7 +191,7 @@ Pokud tyto požadavky nenakonfigurujete, lokalita pošle e-mailové oznámení p
 
     - Pro tuto nativní aplikaci v Azure AD ručně nakonfigurujte následující nastavení:  
 
-        - **Identifikátor URI**pro `https://<CMG FQDN>/CCM_Proxy_ServerAuth/ImplicitAuth`přesměrování:. Použijte plně kvalifikovaný název domény (FQDN) služby brány pro správu cloudu (CMG), například GraniteFalls.Contoso.com.   
+        - **Identifikátor URI pro přesměrování**: `https://<CMG FQDN>/CCM_Proxy_ServerAuth/ImplicitAuth` . Použijte plně kvalifikovaný název domény (FQDN) služby brány pro správu cloudu (CMG), například GraniteFalls.Contoso.com.   
 
         - **Manifest**: nastavte **oauth2AllowImplicitFlow** na hodnotu true:`"oauth2AllowImplicitFlow": true,`  
 

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: ced1cc1347167451d4efb789b40746ff849710ee
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 9178b595ba67723c623979b4c29290e42fe5f6ac
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81709961"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83877751"
 ---
 # <a name="technical-reference-for-the-package-conversion-manager-plug-in-configuration-xml"></a>Technické informace o konfiguraci modulu plug-in Správce převodu balíčku pro XML
 
@@ -32,7 +32,7 @@ Tento článek popisuje elementy XML v konfiguračním souboru Configuration Man
 
 Následující tabulka popisuje prvky XML v konfiguračním souboru Configuration Manager, které se vztahují k modulu plug-in Správce převodu balíčků.
 
-|Prvek  |Typ  |Popis  |
+|Prvek  |Typ  |Description  |
 |---------|---------|---------|
 |**PcmPlugIn**|Řetězec|Název skriptu nebo spustitelného souboru, který má být použit jako modul plug-in Správce převodu balíčků.|
 |**PcmPlugInTimeoutMilliseconds**|Integer|Maximální doba (v milisekundách), po kterou se má čekat na skript modulu plug-in Správce převodu balíčku nebo spustitelný soubor pro dokončení zpracování balíčku.|
@@ -44,7 +44,10 @@ Následující tabulka popisuje prvky XML v konfiguračním souboru Configuratio
 ## <a name="sample-configuration-xml"></a>Ukázkový konfigurační soubor XML
 
 V této části najdete příklad prvků XML konfigurace balíčku převodů balíčků v konfiguračním souboru Configuration Manager, **Microsoft. ConfigurationManagement. exe. config**. Ve výchozím nastavení je tento soubor v následující cestě:  
-`C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\bin\Microsoft.ConfigurationManagement.exe.config`
+`C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\bin\Microsoft.ConfigurationManagement.exe.config`
+
+> [!IMPORTANT]
+> Počínaje verzí 1910 se tato cesta změnila na použití `Microsoft Endpoint Manager` složky. Ujistěte se, že nepoužíváte starší verzi souboru, která může existovat v jiné složce. 
 
 V ukázce jsou prvky související se správcem převodu balíčku uvnitř následujícího elementu:`Microsoft.ConfigurationManagement.UserCentric.Workflow.Properties.Settings`
 

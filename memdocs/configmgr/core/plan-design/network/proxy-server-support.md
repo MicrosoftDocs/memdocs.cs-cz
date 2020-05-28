@@ -2,7 +2,7 @@
 title: Podpora proxy serveru
 titleSuffix: Configuration Manager
 description: Přečtěte si, jak Configuration Manager servery systému lokality používají proxy servery.
-ms.date: 04/01/2020
+ms.date: 05/05/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 9123a87a-0b6f-43c7-b5c2-fac5d09686b1
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 5581214dd786bdefd29d0e4d2626de536ad26ace
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 89a2f76f394d3bdf8fd6785429ae0ae60302537a
+ms.sourcegitcommit: 14d7dd0a99ebd526c9274d5781c298c828323ebf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718711"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82802085"
 ---
 # <a name="proxy-server-support-in-configuration-manager"></a>Podpora proxy serveru v Configuration Manager
 
@@ -50,6 +50,10 @@ Pro tuto konfiguraci server primární lokality:
 - Ve výchozím nastavení používá k vytvoření připojení **systémový** účet počítače. V případě potřeby může také použít účet proxy server systému lokality.  
 
 - Používá rozhraní API webového prohlížeče Windows.  
+
+### <a name="cloud-management-gateway-connection-point"></a>Bod připojení brány pro správu cloudu
+
+Bod připojení brány pro správu cloudu (CMG) je místní role, která komunikuje se službou CMG v Azure. Další informace najdete v tématu [plánování pro CMG](../../clients/manage/cmg/plan-cloud-management-gateway.md).
 
 ### <a name="distribution-point"></a>Distribuční bod
 
@@ -111,3 +115,7 @@ Počínaje verzí 2002 Configuration Manager následující funkce používají 
     - **Použijte přihlašovací údaje pro připojení k proxy server**: mnoho proxy serverů vyžaduje ověření uživatele. Ve výchozím nastavení používá systémový server lokality svůj počítačový účet pro připojení k proxy server. V případě potřeby tuto možnost povolte, klikněte na tlačítko **nastavit**a zvolte **existující účet** nebo zadejte **nový účet**. Tyto přihlašovací údaje jsou **proxy server účet systému lokality**.  Další informace najdete v tématu [účty používané v Configuration Manager](../hierarchy/accounts.md).  
 
 4. Kliknutím na **tlačítko OK** uložte novou konfiguraci proxy server.  
+
+## <a name="next-steps"></a>Další kroky
+
+Pokud vaše organizace omezuje síťovou komunikaci s Internetem pomocí brány firewall nebo proxy zařízení, musíte povolit přístup k koncovým bodům Internetu. Další informace najdete v tématu [požadavky na přístup k Internetu](internet-endpoints.md).

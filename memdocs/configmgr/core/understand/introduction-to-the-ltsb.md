@@ -10,12 +10,12 @@ ms.assetid: 694bc29f-a7fd-4e06-815a-1a9c5e9ac563
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: eda58982094860ccf075bcd2d1d8ed9e3d3bb2df
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d4f5ff0e1c8c92fbadc286e9909388eb66aa8f7b
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81722736"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906104"
 ---
 # <a name="introduction-to-the-long-term-servicing-branch-of-configuration-manager"></a>Úvod do větve dlouhodobé údržby Configuration Manager
 
@@ -53,7 +53,7 @@ Integrace cloudu a všechny funkce, které jsou součástí Configuration Manage
 
 ## <a name="find-ltsb-documentation"></a>Najít dokumentaci k LTSB
 
-LTSB vychází z aktuální větve verze 1606. Použijte [dokumentaci k aktuální větvi](https://docs.microsoft.com/sccm/)s upozorněními a omezeními, která jsou specifická pro LTSB. Tato upozornění a omezení se identifikují v následujících článcích:
+LTSB vychází z aktuální větve verze 1606. Použijte [dokumentaci k aktuální větvi](https://docs.microsoft.com/mem/configmgr/)s upozorněními a omezeními, která jsou specifická pro LTSB. Tato upozornění a omezení se identifikují v následujících článcích:
 
 - [Instalace LTSB](install-the-ltsb.md)
 - [Upgrade LTSB na aktuální větev](convert-to-current-branch.md)
@@ -68,7 +68,7 @@ Zákazníci s aktivním softwarem Software Assurance (SA) na Configuration Manag
 
 Zákazníci, kteří mají trvalá práva k System Center Configuration Manager nebo které umožňují, aby se přidružení zabezpečení nebo předplatné poniklo po 1. říjnu, může nainstalovat verzi System Center Configuration Manager LTSB, která je aktuální v době trvání platnosti.
 
-Další informace o těchto licencích najdete v tématu [Úplné podmínky a ujednání pro produkty, které zakoupíte v rámci multilicenčních programů společnosti Microsoft](https://go.microsoft.com/fwlink/?LinkId=800052).
+Další informace o těchto licencích najdete v tématu [Úplné podmínky a ujednání pro produkty, které zakoupíte v rámci multilicenčních programů společnosti Microsoft](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?mode=1).
 
 Další informace o licencování pro Configuration Manager větvích najdete v článku [Configuration Manager licencování a větví](learn-more-editions.md).
 

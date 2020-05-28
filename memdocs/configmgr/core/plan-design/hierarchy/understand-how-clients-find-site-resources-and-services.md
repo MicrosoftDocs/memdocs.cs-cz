@@ -10,12 +10,12 @@ ms.assetid: ae72df4b-5f5d-4e19-9052-bda28edfbace
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a72ff9947f6ca31ce2158c5c763602b34948a15c
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: b012dd1e7da0d6a3efb4d1cc33b8a79ef319bc0a
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82075655"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268993"
 ---
 # <a name="learn-how-clients-find-site-resources-and-services-for-configuration-manager"></a>Informace o tom, jak klienti hledají služby a prostředky lokality pro Configuration Manager
 
@@ -62,7 +62,7 @@ Klient vybere bod správy, se kterým bude komunikovat, a to na základě aktuá
 
 Můžete použít upřednostňované body správy. Preferované body správy jsou body správy z lokality přiřazené klientovi, které jsou přidruženy ke skupině hranic, kterou klient používá při hledání serverů systému lokality. Upřednostňovanou asociací bodu správy se skupinou hranic jako serverem systému lokality je podobný způsob, jakým jsou distribuční body nebo body migrace stavu přidruženy ke skupině hranic. Pokud povolíte upřednostňované body správy pro hierarchii, když klient používá bod správy z jeho přiřazené lokality, pokusí se použít upřednostňovaný bod správy před použitím jiného bodu správy z jeho přiřazené lokality.  
 
-Můžete také použít informace na blogu [spřažení bodu správy](https://blogs.technet.com/b/jchalfant/archive/2014/09/22/management-point-affinity-added-in-configmgr-2012-r2-cu3.aspx) na TechNet.com ke konfiguraci spřažení bodů správy. Spřažení bodů správy přepisuje výchozí chování pro přiřazené body správy a umožňuje klientovi používat jeden nebo více konkrétních bodů správy.  
+Můžete také použít informace na blogu [spřažení bodu správy](https://docs.microsoft.com/archive/blogs/jchalfant/management-point-affinity-added-in-configmgr-2012-r2-cu3) ke konfiguraci spřažení bodů správy. Spřažení bodů správy přepisuje výchozí chování pro přiřazené body správy a umožňuje klientovi používat jeden nebo více konkrétních bodů správy.  
 
 Pokaždé, když klient potřebuje kontaktovat bod správy, zkontroluje seznam MP, který je uložený místně v rozhraní WMI (Windows Management Instrumentation) (WMI). Klient vytvoří počáteční seznam MP při jeho instalaci. Klient pak pravidelně aktualizuje seznam o podrobnosti o jednotlivých bodech správy v hierarchii.  
 
@@ -131,12 +131,12 @@ Poté, co klient naváže komunikaci s bodem správy, pokračuje v používání
 Klient pak náhodně vybere nový bod správy, který se má použít.  
 
 ##  <a name="active-directory"></a><a name="bkmk_ad"></a>Služba Active Directory  
-Klienti přidaní do domény můžou pro umístění služby použít AD DS. To vyžaduje, aby lokality [publikovaly data do Active Directory](https://technet.microsoft.com/library/hh696543.aspx).  
+Klienti přidaní do domény můžou pro umístění služby použít AD DS. To vyžaduje, aby lokality [publikovaly data do Active Directory](../../servers/deploy/configure/publish-site-data.md).  
 
 Klient nástroje může použít služba AD DS pro umístění služby, když jsou splněné všechny následující podmínky:  
 
-- Schéma služby Active Directory [se rozšířilo](https://technet.microsoft.com/library/mt345589.aspx) nebo se rozšířilo pro System Center 2012 Configuration Manager.  
-- [Doménová struktura služby Active Directory je nakonfigurovaná pro publikování](https://technet.microsoft.com/library/hh696542.aspx)a Configuration Manager lokality jsou nakonfigurované pro publikování.  
+- Schéma služby Active Directory [se rozšířilo](../network/extend-the-active-directory-schema.md) nebo se rozšířilo pro System Center 2012 Configuration Manager.  
+- [Doménová struktura služby Active Directory je nakonfigurovaná pro publikování](../../servers/deploy/configure/publish-site-data.md)a Configuration Manager lokality jsou nakonfigurované pro publikování.  
 - Klientský počítač je členem domény služby Active Directory a má přístup na server globálního katalogu.  
 
 Pokud klient nemůže najít bod správy, který se má použít pro umístění služby z služba AD DS, pokusí se použít DNS.  
@@ -148,7 +148,7 @@ Zvažte pro umístění služby použití DNS, pokud je splněná některá z n�
 - Služba AD DS schéma není rozšířeno na podporu Configuration Manager.
 - Klienti v intranetu jsou umístěni v doménové struktuře, která není pro publikování Configuration Manager povolena.  
 - Máte klienty na počítačích v pracovní skupině a klienti nejsou nakonfigurováni pro správu pouze internetových klientů. (Klient pracovní skupiny nakonfigurovaný pro Internet bude komunikovat jenom s internetovými body správy a nebude pro umístění služby používat DNS.)  
-- Můžete [klienty nakonfigurovat tak, aby hledali body správy z DNS](https://technet.microsoft.com/library/gg682055).  
+- Můžete [klienty nakonfigurovat tak, aby hledali body správy z DNS](../../clients/deploy/configure-client-computers-to-find-management-points-by-using-dns-publishing.md).  
 
 Pokud lokalita publikuje záznamy umístění služby pro body správy na DNS:  
 
@@ -183,7 +183,7 @@ Configuration Manager podporuje specifikaci RFC 2782 pro záznamy umístění sl
 
 Pokud chcete publikovat bod správy pro Configuration Manager, zadejte následující hodnoty:  
 
-- **_Service**: zadejte **_mssms_mp**_&lt;SiteCode\>, kde &lt;SiteCode\> je kód lokality bodu správy.  
+- **_Service**: zadejte **_mssms_mp**_ &lt; SiteCode \> , kde &lt; SiteCode \> je kód lokality bodu správy.  
 - **._Proto**: Zadejte **._tcp**.  
 - **.Name**: Zadejte příponu DNS bodu správy, třeba **contoso.com**.  
 - **TTL**: Zadejte **14400**, tj. čtyři hodiny.  
@@ -201,7 +201,7 @@ Pokud používáte službu DNS Windows Serveru, můžete k zadání tohoto zázn
 
 ##### <a name="to-configure-automatic-publishing"></a>Pokud chcete konfigurovat automatické publikování:  
 
-1.  V konzole Configuration Manager rozbalte položku **Správa** > **Konfigurace** > lokality**lokality**.  
+1.  V konzole Configuration Manager rozbalte položku **Správa**  >  **Konfigurace lokality**  >  **lokality**.  
 
 2.  Vyberte svou lokalitu a pak zvolte **Konfigurovat součásti webu**.  
 
@@ -226,7 +226,7 @@ Pokud používáte službu DNS Windows Serveru, můžete k zadání tohoto zázn
 4.  Pomocí možnosti **nové ostatní záznamy** zvolte možnost **umístění služby (SRV)** v dialogovém okně **typ záznamu o prostředku** , zvolte možnost **vytvořit záznam**, zadejte následující informace a pak zvolte možnost **Hotovo**:  
 
     - **Doména**: Pokud je to nutné, zadejte příponu DNS bodu správy, například **contoso.com**.  
-    - **Služba**: zadejte **_mssms_mp**_&lt;SiteCode\>, kde &lt;SiteCode\> je kód lokality bodu správy.  
+    - **Služba**: zadejte **_mssms_mp**_ &lt; SiteCode \> , kde &lt; SiteCode \> je kód lokality bodu správy.  
     - **Protokol**: Zadejte **_tcp**.  
     - **Priorita**: Configuration Manager nepoužívá toto pole.  
     - **Váha**: Configuration Manager nepoužívá toto pole.  

@@ -10,12 +10,12 @@ ms.assetid: 500a9aa6-68aa-44eb-bf49-350c1314a697
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: cc7eb1a8ba721545bdee50d45887ab9d3aa8e952
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d3f01e54ba196ee9c27295d8f970a7dbe352f63f
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81721007"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906182"
 ---
 # <a name="custom-locations-for-configuration-manager-site-database-files"></a>Vlastní umístění pro soubory databáze lokality Configuration Manager
 
@@ -36,6 +36,6 @@ ms.locfileid: "81721007"
 
 -   Na Configuration Manager serveru lokality zastavte službu **SMS_Executive** .  
 
--   Pomocí dokumentace pro vaši verzi SQL Server se naučíte, jak přesunout uživatelskou databázi. Pokud například používáte SQL Server 2014, přečtěte si téma [přesunutí uživatelských databází](https://technet.microsoft.com/library/ms345483\(v=sql.120\).aspx) na webu TechNet.  
+-   Další informace o tom, jak přesunout uživatelskou databázi, najdete v tématu [Přesun uživatelských databází](https://docs.microsoft.com/sql/relational-databases/databases/move-user-databases?view=sql-server-2014).  
 
 -   Po dokončení přesunutí souboru databáze restartujte službu **SMS_Executive** na serveru Configuration Manager lokality.  

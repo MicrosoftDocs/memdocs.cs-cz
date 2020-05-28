@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 2ae184400a3de0d7ab27fffc1ce1e6287593b1ae
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: ed3f53b6e2e9557def20fc459dfcf4641b0e396d
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82076301"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905831"
 ---
 # <a name="capabilities-in-technical-preview-1601-for-configuration-manager"></a>Funkce ve verzi Technical Preview 1601 pro Configuration Manager
 
@@ -83,7 +83,7 @@ V 1601 Technical Preview jsme doplnili podporu pro následující funkce:
 
     -   **Všechny požadované aktualizace jsou nainstalované s konečným termínem starším než určitý počet dnů:** Toto pravidlo zkontroluje, jestli má zařízení uživatele všechny požadované aktualizace (zadané v pravidle **požadované automatické aktualizace** ) v rámci konečného termínu a poskytnuté lhůty, a automaticky nainstaluje všechny požadované aktualizace, které čekají na vyřízení.  
 
-    -   **Vyžadovat šifrování jednotky nástrojem BitLocker:** Tato kontrolu vám umožní zjistit, jestli je primární jednotka (například C:\\) v zařízení šifrovaná bitlockerem. Pokud šifrování nástrojem Bitlocker není na primární jednotce povolené, zařízení má blokovaný přístup k e-mailu a službě SharePoint Services.  
+    -   **Vyžadovat šifrování jednotky nástrojem BitLocker:** Tato kontrolu vám umožní zjistit, jestli je primární jednotka (například C: \\ ) v zařízení šifrovaná bitlockerem. Pokud šifrování nástrojem Bitlocker není na primární jednotce povolené, zařízení má blokovaný přístup k e-mailu a službě SharePoint Services.  
 
     -   **Vyžadovat antimalware:** Tato část kontroluje, zda je povolen a spuštěn antimalwarový software (pouze System Center Endpoint Protection nebo Windows Defender).  
          Pokud není povolený, bude přístup k k e-mailu a službě SharePoint Services blokovaný.  
@@ -140,7 +140,7 @@ Klient je online, pokud je aktuálně připojen k roli systému lokality bodu sp
  Online stav klienta nemá žádné požadavky. Můžete ji začít používat hned po instalaci Configuration Manager Technical Preview 1601.  
 
 ### <a name="limitations"></a>Omezení  
- Online stav klienta je k dispozici pouze pro počítače se systémem Windows s nainstalovaným klientem Configuration Manager. Online stav klienta není podporován pro počítače Mac, počítače se systémem Linux nebo UNIX ani pro zařízení spravovaná pomocí\-místní správy mobilních zařízení.  
+ Online stav klienta je k dispozici pouze pro počítače se systémem Windows s nainstalovaným klientem Configuration Manager. Online stav klienta není podporován pro počítače Mac, počítače se systémem Linux nebo UNIX ani pro zařízení spravovaná pomocí \- místní správy mobilních zařízení.  
 
 ### <a name="to-view-client-online-status"></a>Zobrazení online stavu klienta  
 
@@ -164,7 +164,6 @@ Klient je online, pokud je aktuálně připojen k roli systému lokality bodu sp
 
  Configuration Manager teď vám pomůže spravovat aplikace, které jste koupili prostřednictvím takového programu, importováním licenčních informací z App Storu a sledováním, kolik licencí jste už použili.  
 
- Podrobnosti najdete v tématu [Správa aplikací zakoupených prostřednictvím programu hromadného nákupu pomocí Configuration Manager](https://technet.microsoft.com/library/mt627954.aspx).  
 
 ### <a name="ios---app-configuration-for-applicationsbr-hybrid"></a>iOS – konfigurace aplikací pro aplikace<br />Hybridní  
  Některé aplikace pro iOS podporují předběžnou konfiguraci nastavení, jako je třeba server nebo databáze, ke kterým by se aplikace měla připojit. Configuration Manager teď podporuje nasazení zásad konfigurace aplikací do zařízení, které uživateli umožňuje aplikaci používat hned, aniž by museli tyto informace znát. Vývojáři musí tuto funkci povolit ve svých aplikacích.  

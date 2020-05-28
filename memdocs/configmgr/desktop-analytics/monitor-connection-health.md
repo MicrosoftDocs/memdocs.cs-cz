@@ -10,12 +10,13 @@ ms.assetid: 1f4e26f7-42f2-40c8-80cf-efd405349c6c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 37555c6b60b0d2c18096c2778e9a077baeb9143f
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.reviewer: acabello
+ms.openlocfilehash: fdc15860f2d093a4c9c61b787ba0b780051d3f3d
+ms.sourcegitcommit: 97fbb7db14b0c4049c0fe3a36ee16a5c0cf3407a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81714539"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83864867"
 ---
 # <a name="monitor-connection-health"></a>Monitorování stavu připojení
 
@@ -104,6 +105,9 @@ Configuration Manager detekuje jeden nebo více blokujících potíží, které 
 
 Například klient Configuration Manager není minimálně verze 1902 (5.0.8790). Aktualizujte klienta na nejnovější verzi. Zvažte možnost Povolit automatický upgrade klienta pro Configuration Manager Web. Další informace najdete v tématu [upgrade klientů](../core/clients/manage/upgrade/upgrade-clients.md#automatic-client-upgrade).  
 
+> [!TIP]
+> Došlo k známému problému s kumulativní aktualizací zabezpečení z dubna 2020 (EVJ) pro Windows 7, která způsobuje, že zařízení tuto chybu nehlásí. Další informace najdete v [poznámkách k verzi](../core/servers/deploy/install/release-notes.md#dawin7-diagtrack).<!-- 7283186 -->
+
 Počínaje verzí 2002 můžete snadněji identifikovat problémy s konfigurací klientského proxy serveru ve dvou oblastech:
 
 - **Kontroly připojení koncových bodů**: Pokud klienti nemůžou kontaktovat požadovaný koncový bod, zobrazí se na řídicím panelu upozornění na konfiguraci. Přejděte k podrobnostem o klientech, které se nemohou zaregistrovat, aby se zobrazily koncové body, ke kterým se klienti nemohou připojit kvůli problémům s konfigurací proxy serveru. Další informace najdete v tématu [kontroly připojení koncových bodů](#endpoint-connectivity-checks).<!-- 4963230 -->
@@ -185,7 +189,7 @@ Počínaje verzí 2002,<!-- 4963230 --> aby klienti zjistili problémy s ověřo
 
 Počínaje verzí 2002,<!-- 4963383 --> Pokud klienti používají pro přístup k Desktop Analytics proxy server, zobrazí tato vlastnost problémy s ověřováním proxy serveru. Obsahuje následující podrobnosti týkající se ověřování proxy serveru:
 
-- Kód stavu
+- Stavový kód
 - Návratový kód
 
 V souboru protokolu se zobrazí chyby podobné následujícímu:
@@ -213,7 +217,7 @@ V opačném případě se může zobrazit jedna z následujících chyb:
 
 - Nejde nakonfigurovat shromažďování dat kompatibility aplikací zařízení (SetRequestAllAppraiserVersions). Podrobnosti o výjimce najdete v protokolech.  
 
-- Nelze zapsat RequestAllAppraiserVersions do klíče `HKLM:\SOFTWARE\Microsoft\WindowsNT\CurrentVersion\AppCompatFlags\Appraiser`registru. Kontrolovat oprávnění  
+- Nelze zapsat RequestAllAppraiserVersions do klíče registru `HKLM:\SOFTWARE\Microsoft\WindowsNT\CurrentVersion\AppCompatFlags\Appraiser` . Kontrolovat oprávnění  
 
 Ověřte oprávnění pro tento klíč registru. Ujistěte se, že účet Local System má přístup k tomuto klíči, aby bylo možné nastavit klienta Configuration Manager.  
 
@@ -228,7 +232,7 @@ Nainstalujte nejnovější aktualizaci kompatibility. Další informace najdete 
 
 ### <a name="appraiser-version"></a>Verze posouzení
 
-Tato vlastnost zobrazuje aktuální verzi komponenty hodnotící aplikace na zařízení. Zobrazuje verzi souboru na `%windir%\System32\appraiser.dll`, bez desetinných míst. Například verze souboru 10.0.17763 se zobrazí jako 10017763.
+Tato vlastnost zobrazuje aktuální verzi komponenty hodnotící aplikace na zařízení. Zobrazuje verzi souboru na `%windir%\System32\appraiser.dll` , bez desetinných míst. Například verze souboru 10.0.17763 se zobrazí jako 10017763.
 
 ### <a name="last-successful-full-run-of-appraiser"></a>Poslední úspěšné úplné spuštění posouzení
 
@@ -248,7 +252,7 @@ Pokud se to nepodaří, může se zobrazit jedna z následujících chyb:
 
 Další informace najdete v části M365AHandler. log v klientovi.
 
-Vyhledejte následující soubor: `%windir%\System32\CompatTelRunner.exe`. Pokud neexistuje, přeinstalujte požadované [aktualizace kompatibility](enroll-devices.md#update-devices). Zajistěte, aby tento soubor neodebrala žádná jiná systémová součást, například zásady skupiny nebo antimalwarovou službu.
+Vyhledejte následující soubor: `%windir%\System32\CompatTelRunner.exe` . Pokud neexistuje, přeinstalujte požadované [aktualizace kompatibility](enroll-devices.md#update-devices). Zajistěte, aby tento soubor neodebrala žádná jiná systémová součást, například zásady skupiny nebo antimalwarovou službu.
 
 Pokud soubor M365AHandler. log v klientovi obsahuje jednu z následujících chyb:
 
@@ -299,7 +303,7 @@ Pokud se to nepodaří, může se zobrazit jedna z následujících chyb:
 
 Další informace najdete v části M365AHandler. log v klientovi.
 
-Vyhledejte následující soubor: `%windir%\System32\DeviceCensus.exe`. Pokud neexistuje, přeinstalujte požadované [aktualizace kompatibility](enroll-devices.md#update-devices). Zajistěte, aby tento soubor neodebrala žádná jiná systémová součást, například zásady skupiny nebo antimalwarovou službu.
+Vyhledejte následující soubor: `%windir%\System32\DeviceCensus.exe` . Pokud neexistuje, přeinstalujte požadované [aktualizace kompatibility](enroll-devices.md#update-devices). Zajistěte, aby tento soubor neodebrala žádná jiná systémová součást, například zásady skupiny nebo antimalwarovou službu.
 
 ### <a name="windows-diagnostic-endpoint-connectivity"></a>Připojení ke koncovému bodu diagnostiky Windows
 
@@ -356,9 +360,9 @@ Pokud je tato kontrolu úspěšná, zařízení je správně nakonfigurované s 
 
 V opačném případě se může zobrazit jedna z následujících chyb:
 
-- Nelze zapsat CommercialId do klíče `HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection`registru. Kontrolovat oprávnění  
+- Nelze zapsat CommercialId do klíče registru `HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection` . Kontrolovat oprávnění  
 
-- Nelze aktualizovat CommercialId v klíči `HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection`registru. Podrobnosti o výjimce najdete v protokolech.  
+- Nelze aktualizovat CommercialId v klíči registru `HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection` . Podrobnosti o výjimce najdete v protokolech.  
 
 - Zadejte správnou hodnotu CommercialId na`HKLM:\SOFTWARE\Policies\Microsoft\Windows\DataCollection`  
 
@@ -393,7 +397,7 @@ V opačném případě se může zobrazit jedna z následujících chyb:
 
 - Nejde ověřit, jestli se má název zařízení odeslat Microsoftu jako součást diagnostických dat Windows. Podrobnosti o výjimce najdete v protokolech.  
 
-- Nejde zapisovat AllowDeviceNameInTelemetry do klíče `HKLM:\SOFTWARE\Policies\Microsoft\Windows\DataCollection`registru. Kontrolovat oprávnění  
+- Nejde zapisovat AllowDeviceNameInTelemetry do klíče registru `HKLM:\SOFTWARE\Policies\Microsoft\Windows\DataCollection` . Kontrolovat oprávnění  
 
 Další informace najdete v části M365AHandler. log v klientovi.  
 
@@ -409,6 +413,9 @@ Pokud je tato kontrolu úspěšná, komponenta DiagTrack je na zařízení sprá
 V opačném případě se může zobrazit jedna z následujících chyb:
 
 - Součást prostředí připojené uživatele a telemetrie (DiagTrack. dll) je zastaralá. Ověřit požadavky  
+
+    > [!TIP]
+    > Došlo k známému problému s kumulativní aktualizací zabezpečení z dubna 2020 (EVJ) pro Windows 7, která způsobuje, že zařízení tuto chybu nehlásí. Další informace najdete v [poznámkách k verzi](../core/servers/deploy/install/release-notes.md#dawin7-diagtrack).<!-- 7283186 -->
 
 - Nelze najít součást prostředí připojené uživatele a telemetrie (DiagTrack. dll). Ověřit požadavky  
 
@@ -426,7 +433,7 @@ Ujistěte se, že je spuštěná služba **prostředí a prostředí pro připoj
 
 ### <a name="diagtrack-version"></a>Verze DiagTrack
 
-Tato vlastnost zobrazuje aktuální verzi součásti prostředí připojené uživatele a telemetrie v zařízení. Zobrazuje verzi souboru na `%windir%\System32\diagtrack.dll`, bez desetinných míst. Například verze souboru 10.0.10586 se zobrazí jako 10010586.
+Tato vlastnost zobrazuje aktuální verzi součásti prostředí připojené uživatele a telemetrie v zařízení. Zobrazuje verzi souboru na `%windir%\System32\diagtrack.dll` , bez desetinných míst. Například verze souboru 10.0.10586 se zobrazí jako 10010586.
 
 ### <a name="sqm-id-retrieval"></a>Načítání ID SQM
 

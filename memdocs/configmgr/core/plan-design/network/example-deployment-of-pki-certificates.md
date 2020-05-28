@@ -10,12 +10,12 @@ ms.assetid: 3417ff88-7177-4a0d-8967-ab21fe7eba17
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 994ee2916020ecc4e6d9d3c35f41fe24d5a31405
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 45ef103645630b8e203710ec0ff36a71b3cef4cf
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718774"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904251"
 ---
 # <a name="step-by-step-example-deployment-of-the-pki-certificates-for-configuration-manager-windows-server-2008-certification-authority"></a>Podrobný ukázkový postup nasazení certifikátů PKI pro Configuration Manager: certifikační autorita systému Windows Server 2008
 
@@ -52,7 +52,7 @@ V následující tabulce jsou uvedeny typy certifikátů PKI, které mohou být 
 |Požadavek na certifikát|Popis certifikátu|  
 |-----------------------------|-----------------------------|  
 |Certifikát webového serveru pro systémy lokality, které spouštějí IIS|Tento certifikát se používá pro šifrování dat a pro ověření serveru vůči klientům. Musí být nainstalovaná externě z Configuration Manager na serverech systémů lokality, na kterých běží Internetová informační služba (IIS) a které jsou nastavené v Configuration Manager na používání protokolu HTTPS.<br /><br /> Postup nastavení a instalace tohoto certifikátu najdete v části [Nasazení certifikátu webového serveru pro systémy lokality, které spouští službu IIS](#BKMK_webserver2008_cm2012) v tomto tématu.|  
-|Certifikát služby pro klienty pro připojení ke cloudovým distribučním bodům|Postup pro konfiguraci a instalaci tohoto certifikátu naleznete v části [Nasazení certifikátu služby pro cloudové distribuční body](#BKMK_clouddp2008_cm2012) v tomto tématu.<br /><br /> **Důležité:** Tento certifikát se používá současně s certifikátem správy služby Windows Azure. Další informace o certifikátu správy naleznete v tématu [Vytvoření certifikátu správy](https://docs.microsoft.com/azure/cloud-services/cloud-services-certs-create#create-a-new-self-signed-certificate) a [Přidání certifikátu správy do odběru služby Windows Azure](https://docs.microsoft.com/azure/cloud-services/cloud-services-configure-ssl-certificate-portal#step-3-upload-a-certificate) v části platforma Windows Azure v knihovně MSDN.|  
+|Certifikát služby pro klienty pro připojení ke cloudovým distribučním bodům|Postup pro konfiguraci a instalaci tohoto certifikátu naleznete v části [Nasazení certifikátu služby pro cloudové distribuční body](#BKMK_clouddp2008_cm2012) v tomto tématu.<br /><br /> **Důležité:** Tento certifikát se používá současně s certifikátem správy služby Windows Azure. Další informace o certifikátu správy najdete v tématu [Postup vytvoření certifikátu správy](https://docs.microsoft.com/azure/cloud-services/cloud-services-certs-create#create-a-new-self-signed-certificate) a [Přidání certifikátu pro správu do předplatného služby Windows Azure](https://docs.microsoft.com/azure/cloud-services/cloud-services-configure-ssl-certificate-portal#step-3-upload-a-certificate).|  
 |Certifikát klienta pro počítače se systémem Windows|Tento certifikát se používá k ověření Configuration Manager klientských počítačů na systémy lokality, které jsou nastavené na používání protokolu HTTPS. Dá se taky použít pro body správy a body migrace stavu, abyste mohli monitorovat provozní stav, když jsou nastavené na používání protokolu HTTPS. Musí být nainstalováno externě z Configuration Manager na počítačích.<br /><br /> Postup nastavení a instalace tohoto certifikátu najdete v části [Nasazení certifikátu klienta pro počítače se systémem Windows](#BKMK_client2008_cm2012) v tomto tématu.|  
 |Certifikát klienta pro distribuční body|Tento certifikát má dva účely:<br /><br /> Tento certifikát se používá k ověření distribučního bodu vůči bodu správy s povoleným protokolem HTTPS předtím, než distribuční bod odešle stavové zprávy.<br /><br /> Jestliže se pro distribuční bod vybere možnost **Povolení podpory PXE pro klienty** , certifikát se odešle do počítačů, které se spouštějí pomocí technologie PXE, tak aby se v průběhu nasazování operačního systému mohly připojit k bodu správy s povoleným protokolem HTTPS.<br /><br /> Postup nastavení a instalace tohoto certifikátu najdete v části [Nasazení certifikátu klienta pro distribuční body](#BKMK_clientdistributionpoint2008_cm2012) v tomto tématu.|  
 |Certifikát zápisu pro mobilní zařízení|Tento certifikát se používá k ověření Configuration Manager klientů mobilních zařízení na systémy lokality, které jsou nastavené na používání protokolu HTTPS. Musí být nainstalovaný jako součást registrace mobilního zařízení v Configuration Manager a jako nastavení klienta mobilního zařízení zvolíte konfigurovanou šablonu certifikátu.<br /><br /> Postup nastavení tohoto certifikátu najdete v části [Nasazení certifikátu zápisu pro mobilní zařízení](#BKMK_mobiledevices2008_cm2012) v tomto tématu.|  
@@ -354,7 +354,7 @@ Nasazení tohoto certifikátu zahrnuje následující postupy:
 
 4.  V podokně výsledků na kartě **propojené zásady skupiny objekty** klikněte pravým tlačítkem na nový zásady skupiny a pak zvolte **Upravit**.  
 
-5.  V **Editor pro správu zásad skupiny**rozbalte v části **Konfigurace počítače** **zásady** a pak klikněte na **Nastavení** / Windows nastavení**zabezpečení** / **Zásady veřejných klíčů**.  
+5.  V **Editor pro správu zásad skupiny**rozbalte v části **Konfigurace počítače** **zásady** a pak klikněte na **nastavení Windows**nastavení  /  **zabezpečení**  /  **Zásady veřejných klíčů**.  
 
 6.  Klikněte pravým tlačítkem myši na typ objektu s názvem **klient služby Certificate Services – automatický zápis**a pak zvolte možnost **vlastnosti**.  
 

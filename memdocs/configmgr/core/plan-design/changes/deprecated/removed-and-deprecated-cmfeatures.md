@@ -10,12 +10,12 @@ ms.assetid: 287a6324-ae65-4d38-b2ef-198d47c91231
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 184c836a601378fcb8e58f78debb80a3cd48857c
-ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
+ms.openlocfilehash: 40eda7184d7be5010bf51e3ac0d30d6d9442203c
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82693106"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905059"
 ---
 # <a name="removed-and-deprecated-features-for-configuration-manager"></a>Odebrané a zastaralé funkce pro Configuration Manager
 
@@ -29,7 +29,7 @@ Tyto informace se mohou v budoucích verzích změnit. Nemusí obsahovat všechn
 
 Následující funkce jsou zastaralé. Můžete je dál používat teď, ale Microsoft plánuje ukončit podporu v budoucnu.
 
-|Funkce|Zastarání poprvé oznámeno|Podpora&nbsp;odebrána|
+|Funkce|Zastarání poprvé oznámeno|Podpora &nbsp; odebrána|
 |-----------|---|--------------|
 | Možnost Analytics pro stolní počítače, která **zobrazí poslední data** pro registraci zařízení a aktualizace zabezpečení.<!-- 7080949 --> Další informace najdete v tématu [latence dat](../../../../desktop-analytics/troubleshooting.md#data-latency).|Květen 2020|Červenec 2020|
 |Implementace pro sdílení obsahu z Azure se změnila. Použijte bránu pro správu cloudu s podporou obsahu. V budoucnu nebudete moci vytvořit tradiční distribuční bod cloudu.|Únor 2019|TBD –<sup>[Poznámka 1](#bkmk_note1)</sup>|
@@ -43,14 +43,14 @@ Konkrétní časový rámec má být stanoven (TBD). Microsoft doporučuje, abys
 
 Následující funkce již nejsou podporovány. V některých případech už nejsou v produktu.
 
-|Funkce|Zastarání poprvé oznámeno|Podpora&nbsp;odebrána|  
+|Funkce|Zastarání poprvé oznámeno|Podpora &nbsp; odebrána|  
 |-----------|---|--------------|  
 | Integrace Windows Analytics a Upgrade Readiness. Další informace najdete v [článku KB 4521815: vyřazení služby Windows Analytics na 31. ledna 2020](https://support.microsoft.com/help/4521815/windows-analytics-retirement). | 14. října 2019 | 31. ledna 2020 |
 | Vyhodnocení ověření stavu zařízení pro zásady dodržování předpisů podmíněného přístupu <!--1235616 aka 3608202--> Další informace najdete v tématu [co se stalo s hybridní MDM](../../../../mdm/understand/what-happened-to-hybrid.md).| 3. července 2019 | Verze 1910 |
 | Aplikace Configuration Manager Portál společnosti | 21. května 2019 | Verze 1910 |
 | Katalog aplikací, včetně obou rolí systému lokality: bod webu Katalog aplikací a bod webové služby. Další informace najdete v tématu [Odebrání katalogu aplikací](../../../../apps/plan-design/plan-for-and-configure-application-management.md#bkmk_remove-appcat). | 21. května 2019 | Verze 1910 |
 |Ověřování založené na certifikátech s nastavením Windows Hello pro firmy v Configuration Manager<br>Další informace najdete v tématu [nastavení Windows Hello pro firmy](../../../../protect/deploy-use/windows-hello-for-business-settings.md).|Prosinec 2017|Verze 1910|
-|System Center Endpoint Protection pro Mac a Linux<br>Další informace najdete v [příspěvku blogu konec podpory](https://go.microsoft.com/fwlink/?linkid=870182).|Říjen 2018|31. prosince 2018|
+|System Center Endpoint Protection pro Mac a Linux<br>Další informace najdete v [příspěvku blogu konec podpory](https://techcommunity.microsoft.com/t5/configuration-manager-blog/end-of-support-for-scep-for-mac-and-scep-for-linux-on-december/ba-p/286257).|Říjen 2018|31. prosince 2018|
 |Místní podmíněný přístup<br>Další informace najdete v tématu [co se stalo s hybridní MDM](../../../../mdm/understand/what-happened-to-hybrid.md).|30. ledna 2019|Od 1. září 2019|
 |Hybridní Správa mobilních zařízení (MDM)<br>Další informace najdete v tématu [co se stalo s hybridní MDM](../../../../mdm/understand/what-happened-to-hybrid.md).<br><br>Od verze 1902 Intune, která se očekává na konci února 2019, noví zákazníci nemůžou vytvořit nové hybridní připojení.<!--Intune feature 2683117-->|14. srpna 2018|Od 1. září 2019|
 |Rozšíření SCAP (Security Content Automation Protocol). <!--3607889--><br>Předchozí certifikovaná verze je stále k dispozici na [webu služby Stažení softwaru](https://www.microsoft.com/download/details.aspx?id=48741).|Září 2018|Verze 1810|
@@ -80,7 +80,7 @@ Při Configuration Manager byla odebrána nativní podpora pro počítače na b�
 
 Configuration Manager odebrala podporu pro NAP (Network Access Protection). Tato funkce se v systému Windows Server 2012 R2 nepoužívá a je odebrána z Windows 10.  
 
-Alternativy ochrany síťového přístupu najdete v části *Deprecated functionality* (Zastaralé funkce) v článku [Network Policy and Access Services Overview](https://technet.microsoft.com/library/hh831683.aspx) (Přehled služeb síťových zásad a přístupu).
+Alternativy ochrany síťového přístupu najdete v části *Deprecated functionality* (Zastaralé funkce) v článku [Network Policy and Access Services Overview](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831683(v=ws.11)) (Přehled služeb síťových zásad a přístupu).
 
 ## <a name="see-also"></a>Viz také
 

@@ -10,12 +10,12 @@ ms.assetid: 39aa0558-742c-4171-81bc-9b1e6707f4ea
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 96594731ef64577d30267376d3bcb93268e59a9e
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: ebd847e44c1acd87c316514ec9919f8a6690a647
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82075009"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83428577"
 ---
 # <a name="deploy-bitlocker-management"></a>Nasazení správy nástroje BitLocker
 
@@ -77,7 +77,7 @@ Když tuto zásadu vytvoříte a nasadíte, povolí klient Configuration Manager
 
     - **Vyberte ochranu pro jednotku operačního systému**: nakonfigurujte ji tak, aby používala čip TPM a kód PIN, nebo jenom čip TPM.
 
-    - **Nakonfigurovat minimální délku PIN kódu pro spuštění**: Pokud POŽADUJETE kód PIN, je tato hodnota nejkratší délka, kterou může uživatel zadat. Uživatel zadá tento kód PIN, když se počítač spustí k odemknutí jednotky. Ve výchozím nastavení je `4`minimální délka kódu PIN.
+    - **Nakonfigurovat minimální délku PIN kódu pro spuštění**: Pokud POŽADUJETE kód PIN, je tato hodnota nejkratší délka, kterou může uživatel zadat. Uživatel zadá tento kód PIN, když se počítač spustí k odemknutí jednotky. Ve výchozím nastavení je minimální délka kódu PIN `4` .
 
     Další informace o těchto a dalších nastaveních na této stránce najdete v tématu [nastavení referenčního operačního systému na jednotce s operačním systémem](../../tech-ref/bitlocker/settings.md#os-drive).
 
@@ -205,7 +205,7 @@ Když přepnete autority pro správu šifrování, naplánujte [opakované šifr
 
 Další informace o správě nástroje BitLocker s Intune najdete v následujících článcích:
 
-- [Použití šifrování zařízení s Intune](../../../../intune/protect/encrypt-devices.md#bitlocker-encryption-for-windows-10)
+- [Použití šifrování zařízení s Intune](../../../../intune/protect/encrypt-devices.md)
 - [Řešení potíží se zásadami BitLockeru v Microsoft Intune](../../../../intune/protect/troubleshoot-bitlocker-policies.md)
 
 ## <a name="next-steps"></a>Další kroky

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 0a10726062d679666d14cbbb0b87510af5dfe30c
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 3259bd1b20740046e70b1ef53281b0ff235a3896
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078800"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905469"
 ---
 # <a name="capabilities-in-technical-preview-1705-for-configuration-manager"></a>Funkce ve verzi Technical Preview 1705 pro Configuration Manager
 
@@ -64,7 +64,7 @@ Když nástroj spustíte, spustí se s aktualizací, kterou určíte. Ve výchoz
 -   **Místní správce** na počítači, který je hostitelem spojovacího bodu služby.
 
 Budete potřebovat identifikátor GUID balíčku aktualizací, který chcete obnovit. Získání identifikátoru GUID:
--   V konzole nástroje přejděte na **Správa** > **aktualizace a údržba** a potom v podokně zobrazení klikněte pravým tlačítkem myši na záhlaví jednoho ze sloupců (například **stav**) a pak vyberte možnost **identifikátor GUID balíčku**. Tím se tento sloupec přidá do zobrazení a ve sloupci se zobrazí identifikátor GUID balíčku aktualizace.
+-   V konzole nástroje přejděte na **Správa**  >  **aktualizace a údržba** a potom v podokně zobrazení klikněte pravým tlačítkem myši na záhlaví jednoho ze sloupců (například **stav**) a pak vyberte možnost **identifikátor GUID balíčku**. Tím se tento sloupec přidá do zobrazení a ve sloupci se zobrazí identifikátor GUID balíčku aktualizace.
 
 > [!TIP]  
 > Chcete-li zkopírovat identifikátor GUID, vyberte řádek balíčku aktualizací, který chcete obnovit, a potom pomocí kombinace kláves CTRL + C tento řádek zkopírujte. Pokud vložíte zkopírovaný výběr do textového editoru, můžete zkopírovat pouze identifikátor GUID, který se použije jako parametr příkazového řádku při spuštění nástroje.
@@ -83,13 +83,13 @@ Po spuštění nástroje:
 **Parametry příkazového řádku:**  
 
 
-|                        Parametr                         |                                                            Popis                                                            |
+|                        Parametr                         |                                                            Description                                                            |
 |----------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
-| **-S &lt;plně kvalifikovaný název domény SQL Server vaší lokality nejvyšší úrovně>** | *Požadováno* <br> Je nutné zadat plně kvalifikovaný název domény SQL Server, která je hostitelem databáze lokality pro lokalitu nejvyšší úrovně ve vaší hierarchii. |
-|                **-D &lt;název databáze>**                 |                             *Požadováno* <br> Je nutné zadat název databáze lokalit na nejvyšší úrovni.                             |
+| **-S &lt; plně kvalifikovaný název domény SQL Server vaší lokality nejvyšší úrovně>** | *Požadováno* <br> Je nutné zadat plně kvalifikovaný název domény SQL Server, která je hostitelem databáze lokality pro lokalitu nejvyšší úrovně ve vaší hierarchii. |
+|                **-D &lt; název databáze>**                 |                             *Požadováno* <br> Je nutné zadat název databáze lokalit na nejvyšší úrovni.                             |
 |                 **-P &lt;>identifikátor GUID balíčku**                 |                        *Požadováno* <br> Je nutné zadat identifikátor GUID balíčku aktualizací, který chcete obnovit.                        |
-|           **-I &lt;SQL Server název instance>**           |                   *Nepovinné* <br> Použijte k identifikaci instance SQL Server, která je hostitelem databáze lokality.                   |
-|                       **-FDELETE**                       |                      *Nepovinné* <br> Toto použijte k vynucení odstranění úspěšně staženého balíčku aktualizace.                      |
+|           **-I &lt; SQL Server název instance>**           |                   *Volitelné* <br> Použijte k identifikaci instance SQL Server, která je hostitelem databáze lokality.                   |
+|                       **-FDELETE**                       |                      *Volitelné* <br> Toto použijte k vynucení odstranění úspěšně staženého balíčku aktualizace.                      |
 
  **4.6**  
  V typickém scénáři chcete obnovit aktualizaci, která má problémy se stahováním. Plně kvalifikovaný název domény SQL serveru je *Server1.fabrikam.com*, databáze lokality je *CM_XYZ*a identifikátor GUID balíčku je *61F16B3C-F1F6-4F9F-8647-2A524B0C802C*.  Spustíte: ***CMUpdateReset. exe-S Server1.fabrikam.com-D CM_XYZ-P 61F16B3C-F1F6-4F9F-8647-2A524B0C802C***
@@ -99,7 +99,7 @@ Po spuštění nástroje:
 ### <a name="test-the-tool-with-the-technical-preview"></a>Otestujte nástroj ve verzi Technical Preview.  
 Tento nástroj můžete použít s verzí Technical Preview 1606 nebo novější. Tato zpětná podpora je k dispozici, takže nástroj lze použít s větším počtem scénářů aktualizace Technical Preview, aniž byste museli čekat, až bude k dispozici další verze Technical Preview.
 
-Spusťte nástroj v balíčku aktualizací pro Technical Preview před touto aktualizací, která dokončuje kontrolu požadovaných součástí. Dokončený stav kontroly požadovaných součástí je identifikován jedním z následujících stavů balíčku v části **Správa** > **aktualizace a údržba**:  
+Spusťte nástroj v balíčku aktualizací pro Technical Preview před touto aktualizací, která dokončuje kontrolu požadovaných součástí. Dokončený stav kontroly požadovaných součástí je identifikován jedním z následujících stavů balíčku v části **Správa**  >  **aktualizace a údržba**:  
 -   **Kontrola požadavků byla úspěšná.**
 -   **Kontrola požadovaných součástí byla dokončena s upozorněním.**
 -   **Kontrola požadovaných součástí se nezdařila.**
@@ -121,12 +121,12 @@ V této verzi teď můžete používat repliky asynchronního potvrzení ve skup
 
 - Tato verze nepodporuje převzetí služeb při selhání pro použití repliky asynchronního potvrzení jako databáze lokality.
   > [!CAUTION]  
-  > Vzhledem k tomu, že Configuration Manager neověřuje stav asynchronního svěření repliky, aby bylo možné potvrdit, že je aktuální a [že by taková replika mohla být nesynchronizovaná](https://msdn.microsoft.com/library/ff877884(SQL.120).aspx(d=robot)#Availability%20Modes), použití repliky asynchronního potvrzení jako databáze lokality může mít za následek ohrožení integrity vašeho webu a dat.  
+  > Vzhledem k tomu, že Configuration Manager neověřuje stav asynchronního svěření repliky, aby bylo možné potvrdit, že je aktuální a [že by taková replika mohla být nesynchronizovaná](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server?view=sql-server-2014#AvailabilityModes), použití repliky asynchronního potvrzení jako databáze lokality může mít za následek ohrožení integrity vašeho webu a dat.  
 
 - V rámci skupiny dostupnosti můžete použít stejný počet a typ replik, které jsou podporované podle používané verze SQL Server.   (Předchozí podpora byla omezená na dvě repliky synchronního potvrzení.)
 
 ### <a name="configure-an-asynchronous-commit-replica"></a>Konfigurace repliky asynchronního potvrzování
-Pokud chcete přidat asynchronní repliku do [skupiny dostupnosti, kterou používáte s Configuration Manager](../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md), nemusíte spouštět konfigurační skripty potřebné ke konfiguraci synchronní repliky. (Je to proto, že neexistuje žádná podpora k použití této asynchronní repliky jako databáze lokality.) Informace o tom, jak přidat sekundární repliky do skupin dostupnosti, najdete v [dokumentaci k SQL Server](https://msdn.microsoft.com/library/hh213247(v=sql.120).aspx(d=robot)) .
+Pokud chcete přidat asynchronní repliku do [skupiny dostupnosti, kterou používáte s Configuration Manager](../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md), nemusíte spouštět konfigurační skripty potřebné ke konfiguraci synchronní repliky. (Je to proto, že neexistuje žádná podpora k použití této asynchronní repliky jako databáze lokality.) Další informace najdete v tématu [Přidání sekundární repliky do skupiny dostupnosti](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server?view=sql-server-2014).
 
 ### <a name="use-the-asynchronous-replica-to-recover-your-site"></a>Obnovení lokality pomocí asynchronní repliky
 Před použitím asynchronní repliky k obnovení databáze lokality je nutné zastavit aktivní primární lokalitu, aby se zabránilo dalším zápisům do databáze lokality. Po zastavení lokality můžete použít asynchronní repliku místo použití [ručně obnovené databáze](../servers/manage/recover-sites.md#use-a-site-database-that-has-been-manually-recovered).
@@ -170,7 +170,7 @@ Ujistěte se, že jste si přečetli Blogový příspěvek, abyste pochopili Zá
 Chcete-li vytvořit zásadu a vyhledat dostupná nastavení:
 
 1.  V konzole Configuration Manager vyberte **prostředky a kompatibilita**.
-2.  V pracovním prostoru **prostředky a kompatibilita** vyberte **Přehled** > **Endpoint Protection** > **ochrana Application Guard v programu Windows Defender**.
+2.  V pracovním prostoru **prostředky a kompatibilita** vyberte **Přehled**  >  **Endpoint Protection**  >  **ochrana Application Guard v programu Windows Defender**.
 3.  Na kartě **Domů** ve skupině **vytvořit** klikněte na možnost **vytvořit zásadu Application Guard v programu Windows Defender**.
 4.  Pomocí příspěvku na blogu jako reference můžete vyhledat a nakonfigurovat dostupná nastavení, abyste mohli tuto funkci vyzkoušet.
 5.  Až skončíte, dokončete průvodce a Nasaďte zásadu na jedno nebo více zařízení s Windows 10.
@@ -246,7 +246,7 @@ V tuto chvíli jste připojili Configuration Manager web k Azure AD.
 Než začnete, ujistěte se, že zdrojové soubory instalace klienta jsou uložené lokálně na zařízení, do kterého chcete klienta nainstalovat.
 Pak postupujte podle pokynů v tématu [nasazení klientů do počítačů se systémem Windows](../clients/deploy/deploy-clients-to-windows-computers.md#BKMK_Manual) pomocí následujícího instalačního příkazového řádku (nahraďte hodnoty v příkladu vlastními hodnotami):
 
-**CCMSetup. exe/NoCrlCheck/Source: C:\CLIENT CCMHOSTNAME = SCCMPROXYCONTOSO. CLOUDAPP. NET/CCM_Proxy_ServerAuth/72457598037527932 SMSSiteCode = HEC AADTENANTID = 780433B5-E05E-4B7D-BFD1-E8013911E543 AADTENANTNAME = contoso AADCLIENTAPPID =\<GUID> AADRESOURCEURI =<https://contososerver>**
+**CCMSetup. exe/NoCrlCheck/Source: C:\CLIENT CCMHOSTNAME = SCCMPROXYCONTOSO. CLOUDAPP. NET/CCM_Proxy_ServerAuth/72457598037527932 SMSSiteCode = HEC AADTENANTID = 780433B5-E05E-4B7D-BFD1-E8013911E543 AADTENANTNAME = contoso AADCLIENTAPPID = \< GUID > AADRESOURCEURI =<https://contososerver>**
 
 - **/NoCrlCheck**: Pokud váš bod správy nebo brána pro správu cloudu používá certifikát bez veřejného serveru, klient nemusí být schopný získat přístup k umístění seznamu CRL.
 - **/Source**: místní složka: umístění instalačních souborů klienta.
@@ -276,7 +276,7 @@ Požadavky na konfiguraci připojení k OMS se nezměnily z těch, které jsou [
 
 ### <a name="use-the-azure-services-wizard-to-configure-the-connection-to-oms"></a>Použití Průvodce službami Azure ke konfiguraci připojení k OMS
 
-1.  V konzole nástroje v části**Přehled** >  **správy** > **Cloud Services** > **služby Azure**a pak zvolte **Konfigurovat služby Azure** na kartě **Domů** na pásu karet a spusťte **Průvodce službami Azure**.
+1.  V konzole nástroje v části Přehled **správy**  >  **Overview**  >  **Cloud Services**  >  **služby Azure**a pak zvolte **Konfigurovat služby Azure** na kartě **Domů** na pásu karet a spusťte **Průvodce službami Azure**.
 
 2.  Na stránce **služby Azure** Vyberte cloudovou službu Operations Management Suite. Zadejte popisný název **služby Azure** a případně jeho popis a pak klikněte na **Další**.
 

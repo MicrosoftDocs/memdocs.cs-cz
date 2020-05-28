@@ -2,7 +2,7 @@
 title: Sledování spolusprávy
 titleSuffix: Configuration Manager
 description: Pomocí řídicího panelu spolusprávy můžete zkontrolovat informace o spoluspravovaných zařízeních.
-ms.date: 07/26/2019
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: e83a7b0d-b381-4b4a-8eca-850385abbebb
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 64d34cef57a3d5f141093d2b099c0b352604be42
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: e4516ca9baa7398322c204908c25248921a69d25
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81709695"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268058"
 ---
 # <a name="how-to-monitor-co-management-in-configuration-manager"></a>Jak monitorovat spolusprávu v Configuration Manager
 
@@ -140,7 +140,7 @@ Tato tabulka představuje seznam chyb registrace ze zařízení. Tyto chyby mů�
 Existují stovky možných chyb. V následující tabulce jsou uvedeny nejběžnější chyby.
 <!-- SCCMDocs issue 1064, BUG 3158555 -->
 
-| Chyba | Popis |
+| Chyba | Description |
 |---------|---------|
 | 2147549183 (0x8000FFFF) | Registrace MDM se ještě nenakonfigurovala v Azure AD nebo se neočekává adresa URL pro registraci.<br><br>[Povolení automatické registrace pro Windows 10](https://docs.microsoft.com/intune/windows-enroll#enable-windows-10-automatic-enrollment) |
 | 2149056536 (0x80180018)<br>MENROLL_E_USERLICENSE | Licence uživatele je ve špatném stavu blokující registraci<br><br>[Přiřazení licencí k uživatelům](https://docs.microsoft.com/intune/licenses-assign) |
@@ -173,7 +173,7 @@ Provozní zásady (CoMgmtSettingsProd) jsou cílené na kolekci **všechny syst�
 
 ## <a name="wmi-device-data"></a>Data zařízení WMI
 
-Dotaz na **SMS_Client_ComanagementState** třídu služby WMI. V Configuration Manager můžete vytvořit vlastní kolekce, které vám pomůžou určit stav nasazení spolusprávy. Další informace o vytváření vlastních kolekcí najdete v tématu vytváření [kolekcí](../core/clients/manage/collections/create-collections.md).
+Dotaz na **SMS_Client_ComanagementState** třídu služby WMI ve službě **root\sms\ site_ &lt; SITECODE>** oboru názvů na serveru lokality. V Configuration Manager můžete vytvořit vlastní kolekce, které vám pomůžou určit stav nasazení spolusprávy. Další informace o vytváření vlastních kolekcí najdete v tématu vytváření [kolekcí](../core/clients/manage/collections/create-collections.md).
 
 Ve třídě WMI jsou k dispozici následující pole:  
 

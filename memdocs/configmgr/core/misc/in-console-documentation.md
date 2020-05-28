@@ -2,7 +2,7 @@
 title: Dokumentace konzoly
 titleSuffix: Configuration Manager
 description: Tento článek se zobrazí pouze v konzole Configuration Manager.
-ms.date: 04/23/2020
+ms.date: 05/11/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: cd5c03b9b05bff253a93466eb27700685faea055
-ms.sourcegitcommit: 2871a17e43b2625a5850a41a9aff447c8ca44820
+ms.openlocfilehash: 678f19d4ec69bea2bc5b3863e3e2a8332c10f3be
+ms.sourcegitcommit: 5d32dd481e2a944465755ce74e14c835cce2cd1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82126050"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "83551600"
 ---
 <!-- 
 - Feature 1357546
@@ -27,13 +27,13 @@ ms.locfileid: "82126050"
 
 # <a name="microsoft-endpoint-configuration-manager-documentation"></a>Dokumentace k produktu Microsoft Endpoint Configuration Manager
 
-*Poslední aktualizace: 23. dubna 2020*
+*Poslední aktualizace: Květen 11, 2020*
 
 Tento obsah vám může pomoct při učení a podpoře Configuration Manager.
 
 (Poznámka: Tento obsah se aktualizuje druhý měsíc v každém měsíci pomocí dat z předchozího měsíce.)
 
-Další informace najdete v těchto článcích:
+Další informace najdete v následujících článcích:
 
 - [Knihovna dokumentace Configuration Manager](https://docs.microsoft.com/mem/configmgr)  
 - [Jak používat Configuration Manager docs](https://docs.microsoft.com/mem/configmgr/core/understand/use-docs)
@@ -55,22 +55,22 @@ Seznam důležitých článků.
 
 ## <a name="trending"></a>Populární
 
-Nejoblíbenější články od 1. března 2020.
+Nejoblíbenější články v rozmezí od 1 do 30. dubna 2020.
 
 | Zobrazení stránek | Nadpis |
 |------------|-------|
-| 22659 | [Plánování brány pro správu cloudu](https://docs.microsoft.com/configmgr/core/clients/manage/cmg/plan-cloud-management-gateway) |
-| 16797 | [Referenční informace k protokolům](https://docs.microsoft.com/configmgr/core/plan-design/hierarchy/log-files) |
-| 16142 | [Porty používané pro připojení](https://docs.microsoft.com/configmgr/core/plan-design/hierarchy/ports) |
-| 15907 | [Uživatelská příručka Centra softwaru](https://docs.microsoft.com/configmgr/core/understand/software-center) |
-| 14667 | [Aktualizace a údržba](https://docs.microsoft.com/configmgr/core/servers/manage/updates) |
-| 14455 | [Povolení přehledu TLS (Transport Layer Security) 1,2](https://docs.microsoft.com/configmgr/core/plan-design/security/enable-tls-1-2) |
-| 12292 | [Desktop Analytics](https://docs.microsoft.com/configmgr/desktop-analytics/overview) |
-| 12062 | [Spoluspráva pro zařízení s Windows 10](https://docs.microsoft.com/configmgr/comanage/overview) |
-| 11741 | [Co je Configuration Manager?](https://docs.microsoft.com/configmgr/core/understand/introduction) |
-| 11282 | [Novinky ve verzi 1910](https://docs.microsoft.com/configmgr/core/plan-design/changes/whats-new-in-version-1910) |
+| 37071 | [Plánování brány pro správu cloudu](https://docs.microsoft.com/mem/configmgr/core/clients/manage/cmg/plan-cloud-management-gateway) |
+| 19105 | [Referenční informace k protokolům](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/log-files) |
+| 17942 | [Porty používané pro připojení](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/ports) |
+| 15564 | [Aktualizace a údržba](https://docs.microsoft.com/mem/configmgr/core/servers/manage/updates) |
+| 15389 | [Povolení přehledu TLS (Transport Layer Security) 1,2](https://docs.microsoft.com/mem/configmgr/core/plan-design/security/enable-tls-1-2) |
+| 15316 | [Spoluspráva pro zařízení s Windows 10](https://docs.microsoft.com/mem/configmgr/comanage/overview) |
+| 15229 | [Uživatelská příručka Centra softwaru](https://docs.microsoft.com/mem/configmgr/core/understand/software-center) |
+| 14978 | [Postup povolení protokolu TLS (Transport Layer Security) 1,2 na klientech](https://docs.microsoft.com/mem/configmgr/core/plan-design/security/enable-tls-1-2-client) |
+| 13522 | [Desktop Analytics](https://docs.microsoft.com/mem/configmgr/desktop-analytics/overview) |
+| 13017 | [Nastavení klienta](https://docs.microsoft.com/mem/configmgr/core/clients/deploy/about-client-settings) |
 
-[Stránka centra Configuration Manager](https://docs.microsoft.com/mem/configmgr/) přijala během tohoto časového období zobrazení stránky 36 258.
+[Stránka centra Configuration Manager](https://docs.microsoft.com/mem/configmgr/) přijala během tohoto časového období zobrazení stránky 41 479.
 
 ## <a name="recently-updated"></a>Nedávno aktualizované
 
@@ -78,15 +78,16 @@ Nejoblíbenější články od 1. března 2020.
 
 | Poslední revize | Nadpis |
 |---------------|-------|
-| 3/30/2020 | [Referenční informace k úlohám údržby](https://docs.microsoft.com/configmgr/core/servers/manage/reference-for-maintenance-tasks) |
-| 3/30/2020 | [Správa nastavení pro aktualizace softwaru](https://docs.microsoft.com/configmgr/sum/get-started/manage-settings-for-software-updates) |
-| 3/25/2020 | [Endpoint Protection antimalwarových zásad](https://docs.microsoft.com/configmgr/protect/deploy-use/endpoint-antimalware-policies) |
-| 23. března 2020 | [Windows Autopilot pro existující zařízení](https://docs.microsoft.com/configmgr/osd/deploy-use/windows-autopilot-for-existing-devices) |
-| 12. března 2020 | [Jak vytvořit plány nasazení](https://docs.microsoft.com/configmgr/desktop-analytics/create-deployment-plans) |
-| 12. března 2020 | [Jak nasadit do pilotního nasazení](https://docs.microsoft.com/configmgr/desktop-analytics/deploy-pilot) |
-| 12. března 2020 | [Co je nového v Desktop Analytics](https://docs.microsoft.com/configmgr/desktop-analytics/whats-new) |
-| 3/3/2020 | [Posouzení kompatibility](https://docs.microsoft.com/configmgr/desktop-analytics/compat-assessment) |
-| 3/3/2020 | [Desktop Analytics](https://docs.microsoft.com/configmgr/desktop-analytics/overview) |
+| 30. dubna 2020 | [Technical Preview 2004](https://docs.microsoft.com/mem/configmgr/core/get-started/2020/technical-preview-2004) |
+| 4/29/2020 | [Ověřování na základě tokenů pro CMG](https://docs.microsoft.com/mem/configmgr/core/clients/deploy/deploy-clients-cmg-token) |
+| 4/28/2020 | [Skupiny Orchestration](https://docs.microsoft.com/mem/configmgr/sum/deploy-use/orchestration-groups) |
+| 15. dubna 2020 | [Proces schvalování aplikace](https://docs.microsoft.com/mem/configmgr/develop/apps/application-approval-process) |
+| 15. dubna 2020 | [Registrace zařízení v Desktop Analytics](https://docs.microsoft.com/mem/configmgr/desktop-analytics/enroll-devices) |
+| 4/10/2020 | [Připojení tenanta Microsoft Endpoint Manageru](https://docs.microsoft.com/mem/configmgr/tenant-attach/device-sync-actions) |
+| 4/8/2020 | [Integrace se Serverem sestav Power BI](https://docs.microsoft.com/mem/configmgr/core/servers/manage/powerbi-report-server) |
+| 4/8/2020 | [Poznámky k verzi](https://docs.microsoft.com/mem/configmgr/core/servers/deploy/install/release-notes) |
+| 4/1/2020 | [Co je služba pro správu](https://docs.microsoft.com/mem/configmgr/develop/adminservice/overview) |
+| 4/1/2020 | [Novinky ve verzi 2002](https://docs.microsoft.com/mem/configmgr/core/plan-design/changes/whats-new-in-version-2002) |
 
 ## <a name="troubleshooting-articles"></a>Články věnované řešení potíží
 
@@ -106,11 +107,12 @@ Návody s asistencí, které vám pomůžou při řešení potíží s Configura
 
 ## <a name="new-and-updated-support-articles"></a>Nové a aktualizované články podpory
 
-Články podpory, které jsou nové nebo aktualizované v rozmezí od 21. února 2020.
+Články podpory, které jsou nové nebo aktualizované v rozmezí 20. března a května 2020.
 
-- [Synchronizace kategorie aktualizace třetích stran v KB 4552430 obnoví výchozí nastavení v Configuration Manager](https://support.microsoft.com/help/4552430)
-- [Aktualizace KB 4551013 revize třetích stran se nedaří stáhnout v Configuration Manager](https://support.microsoft.com/help/4551013)
-- [Distribuce obsahu KB 4552181 ve Configuration Manager aktuální větvi, verze 1910](https://support.microsoft.com/help/4552181)
-- [KB 4550023 Configuration Manager pořadí úkolů místního upgradu nepokračuje po vrácení upgradu Windows 10 na místě.](https://support.microsoft.com/help/4550023)
+- [Nepovedlo se vytvořit aplikaci Microsoft Edge v KB 4561494 Configuration Manager](https://support.microsoft.com/help/4561494)
+- [Konzola pro vzdálenou Configuration Manager v KB 4551059 zamrzne 20 sekund každých 10 minut.](https://support.microsoft.com/help/4551059)
+- [Shrnutí KB 4556203 změn ve Configuration Manager aktuální větve Microsoft Endpoint, verze 2002](https://support.microsoft.com/help/4556203)
+- [Aktualizace KB 4553501 pro Microsoft Endpoint Configuration Manager verze 2002, úvodní aktualizační kanál](https://support.microsoft.com/help/4553501)
+- [KB 4561945 "v případě, že nástroj pro připojení služby stahuje soubor ConfigMgr. AdminUIContent. cab, došlo k chybě" základní připojení bylo ukončeno ".](https://support.microsoft.com/help/4561945)
 
 Pokud se chcete přihlásit k odběru oznámení Atom nebo RSS o nových článcích podpory Configuration Manager, přečtěte si článek [podpora aktualizací obsahu](https://support.microsoft.com/help/4089498/) a výběr **koncového bodu Microsoft Configuration Manager**.  

@@ -10,12 +10,13 @@ ms.assetid: 637fbd8e-b8ea-4c7e-95ee-a60a323c496e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b0e939b51c464215ac1d4feea539ceb5677a01a6
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.reviewer: acabello
+ms.openlocfilehash: 0e90855949f5c8f249db6b2f4305c71b8ee4e768
+ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81723681"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83824014"
 ---
 # <a name="how-to-deploy-to-pilot-with-desktop-analytics"></a>Jak nasadit do pilotního nasazení pomocí Desktop Analytics
 
@@ -100,7 +101,12 @@ Předtím, než budete moci nasadit systém Windows, nejprve vytvořte softwarov
 
 ## <a name="deploy-to-pilot-devices"></a>Nasazení do pilotních zařízení
 
-Configuration Manager používá data z Desktop Analytics k vytváření kolekcí pro pilotní nasazení a provozní nasazení. Chcete-li zajistit, aby zařízení byla po každé fázi nasazení v pořádku, použijte následující postup k vytvoření fáze nasazení s integrovaným prostředím Desktop Analytics:
+Configuration Manager používá data z Desktop Analytics k vytváření kolekcí pro pilotní nasazení a provozní nasazení. Tyto kolekce jsou v pracovním prostoru **prostředky a kompatibilita** , uzel **kolekce zařízení** a **plány nasazení** .
+
+> [!IMPORTANT]
+> Tyto kolekce jsou spravované pomocí Configuration Manager pro plány nasazení Desktop Analytics. Ruční změny nejsou podporovány.
+
+Chcete-li zajistit, aby zařízení byla po každé fázi nasazení v pořádku, použijte následující postup k vytvoření fáze nasazení s integrovaným prostředím Desktop Analytics:
 
 1. V konzole Configuration Manager klikněte na **Knihovna softwaru**, rozbalte položku **Údržba Desktop Analytics**a vyberte uzel **plány nasazení** .  
 
@@ -113,9 +119,9 @@ Configuration Manager používá data z Desktop Analytics k vytváření kolekc�
 
 4. Zadejte název nasazení a vyberte pořadí úloh, které se má použít. Pomocí této možnosti můžete **automaticky vytvořit výchozí dvoufázové nasazení**a potom nakonfigurovat následující kolekce:  
 
-    - **První kolekce**: vyhledejte a vyberte **pilotní** kolekci pro tento plán nasazení. Standardní konvence pojmenování pro tuto `<deployment plan name> (Pilot)`kolekci jsou.
+    - **První kolekce**: vyhledejte a vyberte **pilotní** kolekci pro tento plán nasazení. Standardní konvence pojmenování pro tuto kolekci jsou `<deployment plan name> (Pilot)` .
 
-    - **Druhá kolekce**: vyhledejte a vyberte **výrobní** kolekci pro tento plán nasazení. Standardní konvence pojmenování pro tuto `<deployment plan name> (Production)`kolekci jsou.
+    - **Druhá kolekce**: vyhledejte a vyberte **výrobní** kolekci pro tento plán nasazení. Standardní konvence pojmenování pro tuto kolekci jsou `<deployment plan name> (Production)` .
 
     > [!Note]  
     > Při integraci Desktop Analytics Configuration Manager pro plán nasazení automaticky vytvoří pilotní a produkční kolekce. Než je můžete použít, může trvat i čas, než se tyto kolekce synchronizují. Další informace najdete v tématu [řešení potíží – latence dat](troubleshooting.md#data-latency).<!-- 4984639 -->
@@ -171,7 +177,7 @@ Všechna zařízení, která hlásí chyby nebo jiné problémy, jsou uvedena ta
 Na stránce **stav nasazení** jsou uvedena zařízení v následujících kategoriích:
 
 - Nezahájeno
-- Probíhá
+- Rozpracované
 - Dokončeno
 - Vyžaduje pozornost – zařízení
 - Vyžaduje pozornost – problémy

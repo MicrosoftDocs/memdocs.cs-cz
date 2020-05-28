@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: bd9475a72ef8d2b25f026ab76e124c8217ed7ee9
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: eacf64245f4cfc779dc92be73e8d7e387b34f909
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82073938"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83427940"
 ---
 # <a name="what39s-new-in-version-1702-of-configuration-manager"></a>Co&#39;s novinkou ve verzi 1702 Configuration Manager
 
@@ -28,8 +28,8 @@ Aktualizace 1702 pro Configuration Manager aktuální větev je k dispozici jako
 > Chcete-li nainstalovat novou lokalitu, je nutné použít základní verzi Configuration Manager.  
 >
 > Další informace:    
-> - [Instalace nových lokalit](https://technet.microsoft.com/library/mt590197.aspx)  
-> - [Instalace aktualizací v lokalitách](https://technet.microsoft.com/library/mt607046.aspx)  
+> - [Instalace nových lokalit](../../servers/deploy/install/installing-sites.md)  
+> - [Instalace aktualizací v lokalitách](../../servers/manage/updates.md)  
 > - [Základní a aktualizační verze](../../servers/manage/updates.md#bkmk_Baselines)
 
 Následující části obsahují podrobné informace o změnách a nových funkcích, které jsou představené ve verzi 1702 Configuration Manager.  
@@ -71,7 +71,7 @@ Můžete najít možnost **zpětné vazby** :
 - Když kliknete pravým tlačítkem na libovolný objekt v konzole nástroje.   
    ![Righ – možnost kliknutí](./media/feedback-option.png)   
 
-  Zvolení **zpětné vazby** otevře váš prohlížeč na [webu Configuration Manager na webu pro odeslání názoru na web UserVoice](https://go.microsoft.com/fwlink/?linkid=617029).
+  Zvolení **zpětné vazby** otevře váš prohlížeč na [webu Configuration Manager na webu pro odeslání názoru na web UserVoice](https://configurationmanager.uservoice.com/forums/300492-ideas).
 
 
 ###  <a name="changes-for-updates-and-servicing"></a>Změny aktualizací a údržby
@@ -191,7 +191,7 @@ Při spuštění pořadí úkolů se teď můžete vrátit na předchozí strán
 Počínaje verzí 1702 můžete pro dostupná nasazení pořadí úkolů použít předběžnou mezipaměť obsahu. Obsah předběžného ukládání do mezipaměti vám poskytne možnost, aby klient mohl stahovat jenom příslušný obsah hned po přijetí nasazení. Proto když uživatel klikne na **instalovat** v centru softwaru, obsah je připravený a instalace se spustí rychle, protože obsah je na místním pevném disku. Podrobnosti najdete v tématu [Konfigurace obsahu před ukládáním do mezipaměti](../../../osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md#configure-pre-cache-content).
 
 ### <a name="convert-from-bios-to-uefi-during-an-in-place-upgrade"></a>Převod ze systému BIOS na rozhraní UEFI během místního upgradu
-Windows 10 Creators Update zavádí jednoduchý nástroj pro převod, který automatizuje proces opětovného rozdělení pevného disku na hardware s podporou rozhraní UEFI a integruje Nástroj pro převod do místního procesu upgradu Windows 7 na Windows 10. Pokud tento nástroj zkombinujete s pořadím úkolů upgradu operačního systému a nástrojem OEM, který převede firmware ze systému BIOS na rozhraní UEFI, můžete počítače převést na systém BIOS na rozhraní UEFI v rámci místního upgradu na aktualizaci Windows 10 Creators Update. Podrobnosti najdete v tématu věnovaném [krokům pořadí úkolů ke správě převodu systému BIOS na rozhraní UEFI](../../../osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md#convert-from-bios-to-uefi-during-an-in-place-upgrade).
+Windows 10 Creators Update zavádí jednoduchý nástroj pro převod, který automatizuje proces opětovného rozdělení pevného disku na hardware s podporou rozhraní UEFI a integruje Nástroj pro převod do místního procesu upgradu Windows 7 na Windows 10. Pokud tento nástroj zkombinujete s pořadím úkolů upgradu operačního systému a nástrojem OEM, který převede firmware ze systému BIOS na rozhraní UEFI, můžete počítače převést na systém BIOS na rozhraní UEFI v rámci místního upgradu na aktualizaci Windows 10 Creators Update. Podrobnosti najdete v tématu věnovaném [krokům pořadí úkolů ke správě převodu systému BIOS na rozhraní UEFI](../../../osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md#bkmk_ipu).
 
 ### <a name="improvements-to-the-install-applications-task-sequence-step"></a>Vylepšení kroku pořadí úkolů instalovat aplikace
 Tato verze zavedla následující vylepšení:

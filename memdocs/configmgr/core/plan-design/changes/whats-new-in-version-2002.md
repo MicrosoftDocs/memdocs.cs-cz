@@ -2,7 +2,7 @@
 title: Novinky ve verzi 2002
 titleSuffix: Configuration Manager
 description: Získejte podrobnosti o změnách a nových funkcích zavedených ve verzi 2002 Configuration Manager aktuální větve.
-ms.date: 04/01/2020
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,18 +10,18 @@ ms.assetid: de718cdc-d0a9-47e2-9c99-8fa2cb25b5f8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f760e70b1896700fa08bdb27c68794d2dec8c192
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1aca9058b0f095b7f25b345c15eed1446dcf61d2
+ms.sourcegitcommit: 7b224e138c0618e978be59832b3486f3745abacc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81719292"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83381549"
 ---
 # <a name="whats-new-in-version-2002-of-configuration-manager-current-branch"></a>Co je nového ve verzi 2002 Configuration Manager Current Branch
 
 *Platí pro: Configuration Manager (Current Branch)*
 
-Aktualizace 2002 pro Configuration Manager aktuální větev je k dispozici jako aktualizace v konzole. Tuto aktualizaci použijte na webech, na kterých běží verze 1806 nebo novější. <!-- baseline only statement:-->Při instalaci nové lokality je také k dispozici jako základní verze. Tento článek shrnuje změny a nové funkce v Configuration Manager verze 2002.
+Aktualizace 2002 pro Configuration Manager aktuální větev je k dispozici jako aktualizace v konzole. Tuto aktualizaci použijte na webech, na kterých běží verze 1810 nebo novější. <!-- baseline only statement:-->Při instalaci nové lokality je také k dispozici jako základní verze. Tento článek shrnuje změny a nové funkce v Configuration Manager verze 2002.
 
 Vždy si přečtěte nejnovější kontrolní seznam pro instalaci této aktualizace. Další informace najdete v tématu [Kontrolní seznam pro instalaci aktualizace 2002](../../servers/manage/checklist-for-installing-update-2002.md). Po aktualizaci lokality si také Projděte [Kontrolní seznam po aktualizaci](../../servers/manage/checklist-for-installing-update-2002.md#post-update-checklist).
 
@@ -280,7 +280,7 @@ Další informace najdete v tématu [uživatelské prostředí pro nasazení ope
 
 Tato verze zahrnuje následující vylepšení nasazení operačního systému:
 
-- Prostředí pořadí úkolů zahrnuje novou proměnnou určenou jen pro čtení `_TSSecureBoot`.<!--5842295--> Pomocí této proměnné můžete určit stav zabezpečeného spouštění na zařízení s podporou rozhraní UEFI. Další informace najdete v tématu [_TSSecureBoot](../../../osd/understand/task-sequence-variables.md#TSSecureBoot).
+- Prostředí pořadí úkolů zahrnuje novou proměnnou určenou jen pro čtení `_TSSecureBoot` .<!--5842295--> Pomocí této proměnné můžete určit stav zabezpečeného spouštění na zařízení s podporou rozhraní UEFI. Další informace najdete v tématu [_TSSecureBoot](../../../osd/understand/task-sequence-variables.md#TSSecureBoot).
 
 - Nastavte proměnné pořadí úkolů pro konfiguraci kontextu uživatele pro **spuštění příkazového řádku** a **spuštění kroků skriptu PowerShellu** .<!-- 5573175 --> Další informace najdete v tématu [SMSTSRunCommandLineAsUser](../../../osd/understand/task-sequence-variables.md#SMSTSRunCommandLineAsUser) a [SMSTSRunPowerShellAsUser](../../../osd/understand/task-sequence-variables.md#SMSTSRunPowerShellAsUser).
 
@@ -411,9 +411,9 @@ Další informace o změnách rutin prostředí Windows PowerShell pro Configura
 
 Další informace o změnách REST API služby správy najdete v tématu poznámky k [verzi služby správy](../../../develop/adminservice/release-notes.md#bkmk_2002).
 
-<!--
-Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 2002](https://support.microsoft.com/help/nnnnn).
+Kromě nových funkcí obsahuje tato verze také další změny, jako jsou opravy chyb. Další informace najdete v tématu [Souhrn změn v Configuration Manager aktuální větvi, verze 2002](https://support.microsoft.com/help/4556203).
 
+<!--
 The following update rollup (4517869) is available in the console starting on October 1, 2019: [Update rollup for Configuration Manager current branch, version 1906](https://support.microsoft.com/help/4517869).
 
 -->
@@ -433,8 +433,9 @@ The following additional hotfixes are available to address specific issues:
 
 ## <a name="next-steps"></a>Další kroky
 
-V tuto chvíli je pro kanál prvotní aktualizace vydaná verze 2002. Pokud chcete nainstalovat tuto aktualizaci, musíte se přihlásit. Další informace najdete v tématu [počáteční aktualizační kanál](../../servers/manage/checklist-for-installing-update-2002.md#early-update-ring).
-<!-- As of December 20, 2019, version 2002 is globally available for all customers to install. -->
+<!-- At this time, version 2002 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](../../servers/manage/checklist-for-installing-update-2002.md#early-update-ring). -->
+
+Od 11. května 2020 je verze 2002 k dispozici pro všechny zákazníky, kteří chtějí instalovat.
 
 Až budete připraveni k instalaci této verze, přečtěte si téma [instalace aktualizací pro Configuration Manager](../../servers/manage/updates.md) a [Kontrolní seznam pro instalaci aktualizace 2002](../../servers/manage/checklist-for-installing-update-2002.md).
 

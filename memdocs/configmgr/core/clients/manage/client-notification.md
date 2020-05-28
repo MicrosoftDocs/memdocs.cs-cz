@@ -10,12 +10,12 @@ ms.assetid: deb8aac8-2bd9-4980-a25b-5f8d93051226
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8a00f77a5a902728a7c41905314511cffcfa81a5
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7680c8f955773f169d56f36eb9bbe6507d2d7ce6
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81714091"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83427811"
 ---
 # <a name="client-notification-in-configuration-manager"></a>Klientské oznámení v Configuration Manager
 
@@ -129,7 +129,7 @@ Aktivujte klientům Windows 10 kontrolu a odeslání nejnovějšího stavu zař�
 
 Počínaje verzí 1810 můžete aktivovat zařízení nakonfigurovaná tak, aby podporovala funkci Wake-on-LAN k probuzení pomocí dalších zařízení ve stejné podsíti k odeslání balíčku Wake-on-LAN. Další informace najdete v tématu [Postup konfigurace funkce Wake on LAN](../deploy/configure-wake-on-lan.md).
 
-### <a name="restart"></a>Restartování
+### <a name="restart"></a>Restartovat
 
 Aktivovat vybraná zařízení k restartování Další informace najdete v tématu [restart klientů](manage-clients.md#restart-clients).
 
@@ -153,6 +153,9 @@ Počínaje verzí 1910 existují nové akce zařízení pro **diagnostiku klient
 Další informace o těchto nastaveních najdete v tématu [informace o souborech protokolu](../../plan-design/hierarchy/about-log-files.md#bkmk_reg-client).
 
 Sledujte stav úlohy v **diagnostice. log** v klientovi. Po shromáždění protokolů klienta jsou další informace přihlášeny **MP_SinvCollFile. log** v bodu správy a **protokolu Sinvproc. log** na serveru lokality.
+
+> [!Tip]
+> Shromážděné protokoly klienta jsou uloženy v závislosti na nastavení kolekce souborů inventáře softwaru. Soubory jsou uloženy na serveru lokality v adresáři **Inboxes\sinv.box\Filecol** . Neexistuje žádný definovaný limit počtu verzí. Úloha údržby lokality [Odstranit staré shromážděné soubory](../../servers/manage/reference-for-maintenance-tasks.md#delete-aged-collected-files) odstraní soubory podle plánu, který je ve výchozím nastavení každých 90 dní.
 
 ### <a name="prerequisites---client-diagnostics"></a>Předpoklady – Diagnostika klientů
 

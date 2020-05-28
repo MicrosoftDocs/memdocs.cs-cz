@@ -41,7 +41,7 @@ Při nastavování skupin hranic přidáte jednu nebo více hranic do skupiny hr
 
 #### <a name="to-create-a-boundary-group"></a>Postup při vytvoření skupiny hranic  
 
-1.  V konzole Configuration Manager vyberte možnost **Správa** > **Konfigurace** >  hierarchie**skupiny hranic**.  
+1.  V konzole Configuration Manager vyberte možnost **Správa**  >  **Konfigurace hierarchie**  >   **skupiny hranic**.  
 
 2.  Na kartě **Domů** ve skupině **vytvořit** vyberte možnost **vytvořit skupinu hranic**.  
 
@@ -51,7 +51,7 @@ Při nastavování skupin hranic přidáte jednu nebo více hranic do skupiny hr
 
 #### <a name="to-set-up-a-boundary-group"></a>Nastavení skupiny hranic  
 
-1.  V konzole Configuration Manager vyberte možnost **Správa** > **Konfigurace** >  hierarchie**skupiny hranic**.  
+1.  V konzole Configuration Manager vyberte možnost **Správa**  >  **Konfigurace hierarchie**  >   **skupiny hranic**.  
 
 2.  Vyberte skupinu hranic, kterou chcete změnit.  
 
@@ -87,7 +87,7 @@ Při nastavování skupin hranic přidáte jednu nebo více hranic do skupiny hr
 
 #### <a name="to-associate-a-content-deployment-server-or-management-point-with-a-boundary-group"></a>Přidružení serveru nasazení obsahu nebo bodu správy ke skupině hranic  
 
-1.  V konzole Configuration Manager vyberte možnost **Správa** > **Konfigurace** >  hierarchie**skupiny hranic**.  
+1.  V konzole Configuration Manager vyberte možnost **Správa**  >  **Konfigurace hierarchie**  >   **skupiny hranic**.  
 
 2.  Vyberte skupinu hranic, kterou chcete změnit.  
 
@@ -101,7 +101,7 @@ Při nastavování skupin hranic přidáte jednu nebo více hranic do skupiny hr
 
 #### <a name="to-enable-use-of-preferred-management-points"></a>Povolit používání upřednostňované body správy  
 
-1.  V konzole Configuration Manager zvolte **Správa** > **Konfigurace** > **lokality lokality**a pak na kartě **Domů** vyberte **Nastavení hierarchie**.  
+1.  V konzole Configuration Manager zvolte **Správa**  >  **Konfigurace lokality**  >  **lokality**a pak na kartě **Domů** vyberte **Nastavení hierarchie**.  
 
 2.  Na kartě **Obecné** v **Nastavení hierarchie**vyberte **Klienti dávají přednost používání bodů správy zadaných ve skupinách hranic**.  
 
@@ -109,7 +109,7 @@ Při nastavování skupin hranic přidáte jednu nebo více hranic do skupiny hr
 
 #### <a name="to-set-up-a-fallback-site-for-automatic-site-assignment"></a>Nastavení záložní lokality pro automatické přiřazení lokality  
 
-1. V konzole Configuration Manager klikněte na **Správa** > **Konfigurace** >  lokality**lokality**.  
+1. V konzole Configuration Manager klikněte na **Správa**  >  **Konfigurace lokality**  >   **lokality**.  
 
 2. Na kartě **Domů** ve skupině **lokality** klikněte na možnost **Nastavení hierarchie**.  
 

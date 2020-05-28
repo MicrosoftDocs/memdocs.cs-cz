@@ -10,12 +10,12 @@ ms.assetid: 038e61f9-f49d-41d1-9a9f-87bec9e00d5d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 623125ad64c7ed421ea209137eb68f17891d7a81
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7848e3c0c38391ab61d10ad46cbb772c812539c7
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81714014"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906639"
 ---
 # <a name="planning-for-client-deployment-to-windows-embedded-devices-in-configuration-manager"></a>Plánování nasazení klientů na zařízení se systémem Windows Embedded v Configuration Manager
 
@@ -25,7 +25,7 @@ ms.locfileid: "81714014"
 
  Pokud zakážete filtry, neměli byste zakázat ovladače filtrů. Obvykle se tyto ovladače spouštějí automaticky při spuštění počítače. Zakázání ovladačů buď zabrání instalaci klienta, nebo bude v konfliktu s orchestrací filtrů zápisu, což způsobí selhání operací klienta. Zde jsou uvedené služby přidružené jednotlivým typům filtrů zápisu, které musí zůstat spuštěné:  
 
-|Typ filtru zápisu|Ovladač|Typ|Popis|  
+|Typ filtru zápisu|Ovladač|Typ|Description|  
 |-----------------------|------------|----------|-----------------|  
 |EWF|EWF|Kernel|Implementuje přesměrování vstupu/výstupu na úrovni sektorů na chráněných svazcích.|  
 |FBWF|FBWF|Systém souborů|Implementuje přesměrování vstupu/výstupu na úrovni souborů na chráněných svazcích.|  
@@ -46,11 +46,11 @@ ms.locfileid: "81714014"
 
  Configuration Manager podporuje správu následujících typů filtrů zápisu:  
 
-- Souborový filtr zápisu (FBWF) – Další informace najdete v tématu [filtr zápisu na základě souborů](https://go.microsoft.com/fwlink/?LinkID=204717).  
+- Souborový filtr zápisu (FBWF) – Další informace najdete v tématu [filtr zápisu na základě souborů](https://docs.microsoft.com/previous-versions/windows/embedded/aa940926(v=winembedded.5)).  
 
-- Vylepšený filtr zápisu (EWF) RAM – další informace najdete v tématu [vylepšený filtr zápisu](https://go.microsoft.com/fwlink/?LinkId=204718).  
+- Vylepšený filtr zápisu (EWF) RAM – další informace najdete v tématu [vylepšený filtr zápisu](https://docs.microsoft.com/previous-versions/windows/embedded/ms912906(v=winembedded.5)).  
 
-- Sjednocený filtr zápisu (UWF) – Další informace najdete v tématu [Sjednocený filtr zápisu](https://go.microsoft.com/fwlink/?LinkId=309236).  
+- Sjednocený filtr zápisu (UWF) – Další informace najdete v tématu [Sjednocený filtr zápisu](https://docs.microsoft.com/windows-hardware/customize/enterprise/unified-write-filter).  
 
   Configuration Manager nepodporuje operace filtru zápisu, pokud je zařízení se systémem Windows Embedded v režimu Reg EWF RAM.  
 
@@ -59,7 +59,7 @@ ms.locfileid: "81714014"
 > 
 > **Pro zařízení, která používají jenom FBWF:** Nakonfigurujte následující výjimky, aby trvaly stav klienta a data inventáře mezi restarty zařízení:  
 > 
-> - CCMINSTALLDIR\\*. sdf  
+> - CCMINSTALLDIR \\ *. sdf  
 >   -   CCMINSTALLDIR\ServiceData  
 >   -   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCM\StateSystem  
 > 

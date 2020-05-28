@@ -2,7 +2,7 @@
 title: Služba Endpoint Analytics Preview
 titleSuffix: Configuration Manager
 description: Pokyny pro službu Endpoint Analytics Preview
-ms.date: 04/30/2020
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX, NOFOLLOW
-ms.openlocfilehash: e7dbb53833c29aae442eec4ca3c8402b99cde237
-ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
-ms.translationtype: HT
+ms.openlocfilehash: c7a99931db27b6a55c9e0722cc12c1d7a9cc9e80
+ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82693235"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83764233"
 ---
 # <a name="endpoint-analytics-preview"></a><a name="bkmk_uea"></a>Služba Endpoint Analytics Preview
 
@@ -24,6 +24,9 @@ ms.locfileid: "82693235"
 > Tyto informace se vztahují k funkci ve verzi Preview, která se podstatně změnila předtím, než se komerční verze uvolní. Microsoft neposkytuje žádné záruky, výslovné ani předpokládané, týkající se zde uváděných informací. 
 >
 > Další informace o změnách služby Endpoint Analytics najdete v tématu [co je nového ve službě Endpoint Analytics](whats-new-endpoint-analytics.md). 
+>
+>Pokud se chcete připojit k privátní verzi Preview pro službu Endpoint Analytics, zadejte prosím podrobnosti [v tomto formuláři](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR9-ZzmlTlbJMh03eDDHtO81UOERLUkMzNFZKSlBaNFNFUVhFSlE0MzNYMS4u). Klienti se budou považovat za otevírání pro rozšíření Preview.
+
 
 ## <a name="endpoint-analytics-overview"></a>Přehled služby Endpoint Analytics
 
@@ -64,7 +67,7 @@ Tato verze Preview vyžaduje k registraci zařízení přes Intune:
 Tato verze Preview vyžaduje k registraci zařízení přes Configuration Manager:
 - Configuration Manager verze 2002 nebo novější
 - Klienti upgradovali na verzi 2002 nebo novější.
-- [Klient Microsoft Endpoint Manageru](https://docs.microsoft.com/mem/configmgr/tenant-attach/device-sync-actions) se musí připojit s umístěním klienta Azure Severní Amerika (brzy se rozbalíme do dalších oblastí).
+- [Tenant Microsoft Endpoint Manageru se připojovat](https://docs.microsoft.com/mem/configmgr/tenant-attach/device-sync-actions) s povoleným umístěním klienta Azure Severní Amerika nebo Evropa (brzy se rozšíříme do dalších oblastí).
 
 Bez ohledu na to, jestli jsou zařízení zaregistrovaná přes Intune nebo Configuration Manager, má [**skriptování proaktivního problému**](#bkmk_uea_prs) následující požadavky:
 - Zařízení musí být připojená k Azure AD nebo být připojená k hybridní službě Azure AD a splňovat jednu z následujících podmínek:
@@ -99,8 +102,38 @@ Uživatel, který je jen pro čtení, potřebuje jenom oprávnění **ke čtení
 
 V případě proaktivní nápravy potřebuje uživatel oprávnění odpovídající jejich roli v kategorii **Konfigurace zařízení** .  Oprávnění v kategorii služby **Endpoint Analytics** nejsou potřebná, pokud uživatel používá proaktivní nápravy.
 
+[Správce služby Intune](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#intune-service-administrator-permissions) se před prvním použitím proaktivní nápravy vyžaduje k potvrzení licenčních požadavků.
 
 ## <a name="start-gathering-data"></a><a name="bkmk_uea_start"></a>Spustit shromažďování dat
+- Pokud zapisujete jenom zařízení spravovaná přes Intune, přejděte k části připojení na [portálu služby Endpoint Analytics](#bkmk_uea_onboard) .
+
+- Pokud zaregistrujete zařízení, která jsou spravovaná pomocí Configuration Manager, musíte provést následující kroky:
+   - [Povolit shromažďování dat služby Endpoint Analytics v Configuration Manager](#bkmk_uea_cm_enroll)
+   - [Povolit nahrávání dat v Configuration Manager](#bkmk_uea_cm_upload)
+   - [Zprovoznění na portálu pro analýzu koncových bodů](#bkmk_uea_onboard)  
+
+### <a name="enroll-devices-managed-by-configuration-manager"></a><a name="bkmk_uea_cm_enroll"></a>Registrace zařízení spravovaných pomocí Configuration Manager
+<!--6051638, 5924760-->
+Před registrací zařízení Configuration Manager ověřte [požadavky](#bkmk_uea_prereq) včetně povolení [připojení tenanta služby Microsoft Endpoint Manager](https://docs.microsoft.com/mem/configmgr/tenant-attach/device-sync-actions). 
+
+#### <a name="enable-endpoint-analytics-data-collection-in-configuration-manager"></a><a name="bkmk_uea_cm_enable"></a>Povolit shromažďování dat služby Endpoint Analytics v Configuration Manager
+
+1. V konzole Configuration Manager klikněte na **Správa**  >  **nastavení klienta**  >  **výchozí nastavení klienta**.
+1. Klikněte pravým tlačítkem a vyberte **vlastnosti** a pak vyberte nastavení **agenta počítače** .
+1. Nastavte **možnost Povolit shromažďování dat služby Endpoint Analytics** na **hodnotu Ano**.
+   > [!Important] 
+   > Pokud máte existující vlastní nastavení klientského agenta, které je nasazené na vaše zařízení, budete muset v tomto vlastním nastavení aktualizovat možnost **Povolit shromažďování dat služby Endpoint Analytics** a pak ji znovu nasadit do vašich počítačů, aby se projevila.
+
+#### <a name="enable-data-upload-in-configuration-manager"></a><a name="bkmk_uea_cm_upload"></a>Povolit nahrávání dat v Configuration Manager
+
+1. V konzole Configuration Manager, navštivte **Správa**  >  **Cloud Services**  >  **spoluspráva**.
+1. Vyberte **CoMgmtSettingsProd** a pak klikněte na **vlastnosti**.
+1. Na kartě **Konfigurovat nahrávání** zaškrtněte možnost **Povolit službu Endpoint Analytics pro zařízení odeslaná do nástroje Microsoft Endpoint Manager** .
+
+   :::image type="content" source="media/6051638-configure-upload-configmgr.png" alt-text="Povolení služby Endpoint Analytics pro zařízení odeslaná do Microsoft Endpoint Manageru" lightbox="media/6051638-configure-upload-configmgr.png":::
+
+### <a name="onboard-in-the-endpoint-analytics-portal"></a><a name="bkmk_uea_onboard"></a>Zprovoznění na portálu pro analýzu koncových bodů
+Připojování z portálu pro službu Endpoint Analytics se vyžaduje pro zařízení spravovaná Configuration Manager i Intune.
 
 1. Přejděte na `https://endpoint.microsoft.com/#blade/Microsoft_Intune_Enrollment/UXAnalyticsMenu`.
 1. Klikněte na tlačítko **Start**. Tím se automaticky přiřadí konfigurační profil pro shromažďování údajů o výkonu spouštění ze všech oprávněných zařízení. [Přiřazená zařízení](#bkmk_uea_profile) můžete později změnit. Po restartování může trvat až 24 hodin, než se data o výkonu po spuštění naplní ze zařízení zaregistrovaných v Intune.
@@ -207,7 +240,7 @@ Pokud kliknete na konkrétní zařízení, můžete se podívat na jeho spoušt�
 Stránka **výkon při spuštění** obsahuje karty pro vytváření sestav, které poskytují podporu pro přehledy, včetně:
 1. **Výkon modelu**. Na této kartě se můžete podívat na výkon spuštění a přihlášení podle modelu zařízení, který vám může poznat, jestli jsou problémy s výkonem izolované na konkrétní modely.
 1. **Výkon zařízení**. Tato karta poskytuje spouštěcí a přihlašovací metriky pro všechna vaše zařízení. Můžete řadit podle konkrétní metriky (například přihlašování pomocí GP) a zjistit, která zařízení mají pro tuto metriku nejhorších skóre, která vám pomůžou při řešení potíží. Můžete také vyhledat zařízení podle názvu. Pokud kliknete na zařízení, uvidíte jeho historii spouštění a přihlašování, které vám pomůžou zjistit, jestli došlo k nedávné regresi.
-1. **Procesy po spuštění**. Tato karta (je-li viditelná; jsme se na to seznámili jenom s tím, jak pořád tuto funkci vyvíjíme) se dozvíte, které procesy mají vliv na fázi přihlášení "čas do reakce na pracovní plochu"; To znamená, že po vygenerování plochy se udržuje procesor nad 50%.
+1. **Procesy po spuštění**. Procesy po spuštění můžou negativně ovlivnit uživatelské prostředí tím, že se prodlouží doba, po kterou musí uživatelé čekat, než se plocha přestane reagovat. Tato karta (je-li viditelná; jsme se na to seznámili jenom s tím, jak pořád tuto funkci vyvíjíme) se dozvíte, které procesy mají vliv na fázi přihlášení "čas do reakce na pracovní plochu"; To znamená, že po vygenerování plochy se udržuje procesor nad 50%. V tabulce jsou uvedeny pouze procesy, které mají vliv na minimálně 10 zařízení ve vašem tenantovi.  
 
 ## <a name="proactive-remediations"></a><a name="bkmk_uea_prs"></a>Proaktivní nápravné opravy
 
@@ -218,7 +251,7 @@ Každý balíček skriptu se skládá ze skriptu detekce, skriptu pro nápravu a
 ### <a name="get-the-detection-and-remediation-scripts"></a><a name="bkmk_uea_prs_ps1"></a>Získání skriptů pro detekci a nápravu
 
 1. Zkopírujte skripty z dolní části tohoto článku v části [powershellové skripty](#bkmk_uea_ps_scripts) .
-    - Soubory skriptu, jejichž názvy začínají `det` na, jsou skripty detekce. Skripty pro `rem`nápravu začínají na.
+    - Soubory skriptu, jejichž názvy začínají na, `det` jsou skripty detekce. Skripty pro nápravu začínají na `rem` .
     - Popis skriptů najdete v [popisech skriptů](#bkmk_uea_scripts).
 1. Uložte všechny skripty pomocí zadaného názvu. Název je také v komentářích v horní části každého skriptu.
     - Můžete použít jiný název skriptu, ale neshoduje se s názvem uvedeným v části [popisy skriptů](#bkmk_uea_scripts) .
@@ -232,7 +265,7 @@ Služba **rozšíření pro správu Microsoft Intune** získá skripty z Intune 
      [![Stránka proaktivní opravy služby Endpoint Analytics. Vyberte odkaz vytvořit.](media/proactive-remediations-create.png)](media/proactive-remediations-create.png#lightbox)
 1. V kroku **základy** dejte balíčku skriptu **název** a volitelně také **Popis**. Pole **vydavatele** lze upravovat, ale ve výchozím nastavení se jedná o název tenanta. **Verzi** nelze upravovat. 
 1. V kroku **Nastavení** zkopírujte text ze skriptů, které jste stáhli, do polí pro **vyhledávání** a skripty pro **nápravu** . 
-   - Potřebujete odpovídající detekci a skript pro nápravu, aby byl ve stejném balíčku. Skript `Detect_stale_Group_Policies.ps1` detekce například odpovídá skriptu pro `Remediate_stale_GroupPolicies.ps1` nápravu.
+   - Potřebujete odpovídající detekci a skript pro nápravu, aby byl ve stejném balíčku. `Detect_stale_Group_Policies.ps1`Skript detekce například odpovídá `Remediate_stale_GroupPolicies.ps1` skriptu pro nápravu.
        [![Stránka nastavení skriptu proaktivní opravy služby Endpoint Analytics.](media/proactive-remediations-script-settings.png)](media/proactive-remediations-script-settings.png#lightbox)
 1. Dokončete možnosti na stránce **Nastavení** s následujícími doporučenými konfiguracemi:
    - **Spustit tento skript pomocí přihlášených přihlašovacích údajů**: Tato akce je závislá na skriptu. Další informace najdete v [popisech skriptů](#bkmk_uea_scripts).
@@ -241,7 +274,7 @@ Služba **rozšíření pro správu Microsoft Intune** získá skripty z Intune 
 1. Klikněte na **Další** a přiřaďte libovolné **značky oboru** , které potřebujete.
 1. V kroku **přiřazení** vyberte skupiny zařízení, do kterých chcete balíček skriptu nasadit.
 1. Dokončete krok **zkontrolovat + vytvořit** pro vaše nasazení.
-1. V části **vytváření sestav** > **služby Endpoint Analytics – proaktivní nápravy**můžete zobrazit přehled stavu zjišťování a oprav.
+1. V části **vytváření sestav**  >  **služby Endpoint Analytics – proaktivní nápravy**můžete zobrazit přehled stavu zjišťování a oprav.
        [![Sestava proaktivní nápravy služby Endpoint Analytics, stránku Přehled.](media/proactive-remediations-report-overview.png)](media/proactive-remediations-report-overview.png#lightbox)
 1. Kliknutím na **stav zařízení** získáte podrobnosti o stavu jednotlivých zařízení v nasazení.
        [![Stav zařízení proaktivní opravy služby Endpoint Analytics.](media/proactive-remediations-device-status.png)](media/proactive-remediations-device-status.png#lightbox)
@@ -310,7 +343,7 @@ Všimněte si, že tyto problémy nebudou platit pro data přicházející z nad
 V druhém najdete stručný kontrolní seznam pro řešení potíží:
 1. Ujistěte se, že máte profil sledování stavu systému Windows, který je zaměřený na všechna zařízení, pro která chcete data o výkonu. Odkaz na tento profil můžete najít na stránce nastavení služby Endpoint Analytics nebo na něj přejít stejným způsobem jako jakýkoli jiný profil Intune. Podívejte se na kartu přiřazení a ujistěte se, že je přiřazená k očekávané sadě zařízení. 
 1. Podívá se na to, která zařízení byla úspěšně nakonfigurovaná pro shromažďování dat. Tyto informace můžete zobrazit také na stránce Přehled profilů.  
-   - Existuje známý problém, kdy se zákazníkům zobrazí Chyby přiřazení profilu, kde ovlivněná zařízení zobrazují kód chyby `-2016281112 (Remediation failed)`. Aktivně zkoumáme tento problém.
+   - Existuje známý problém, kdy se zákazníkům zobrazí Chyby přiřazení profilu, kde ovlivněná zařízení zobrazují kód chyby `-2016281112 (Remediation failed)` . Aktivně zkoumáme tento problém.
 1. Zařízení, která byla úspěšně nakonfigurovaná pro shromažďování dat, se musí po povolení shromažďování dat restartovat a po zobrazení zařízení na kartě výkon zařízení musíte počkat až 24 hodin.
 1. Pokud se vaše zařízení úspěšně nakonfigurovalo pro shromažďování dat, později se restartuje a po 24 hodinách ho nevidíte, může to být tím, že se zařízení nemůže dostat do našich koncových bodů kolekce. K tomuto problému může dojít, pokud vaše společnost používá proxy server a koncové body nebyly na proxy serveru povoleny. Další informace najdete v tématu [řešení potíží s koncovými body](#bkmk_uea_endpoints).
 
@@ -350,7 +383,7 @@ Nakonfigurovat zařízení tak, aby používala kontext přihlášeného uživat
 - Ujistěte se, že uživatelé mají oprávnění k přístupu k koncovým bodům sdílení dat. Tato možnost vyžaduje, aby zařízení měla uživatele konzoly s oprávněními proxy serveru, takže tuto metodu nemůžete použít u zařízení bez periferních zařízení.
 
 > [!IMPORTANT]
-> Přístup k ověřování pomocí uživatelského proxy serveru je nekompatibilní s používáním rozšířené ochrany před internetovými útoky v programu Microsoft Defender. Toto chování je způsobeno tím, že toto **DisableEnterpriseAuthProxy** ověřování spoléhá na klíč registru `0`DisableEnterpriseAuthProxy nastavený na, zatímco ATP programu Microsoft Defender vyžaduje, `1`aby byl nastaven na. Další informace najdete v tématu [Konfigurace nastavení připojení počítače a připojení k Internetu v ochraně ATP v programu Microsoft Defender](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/configure-proxy-internet-windows-defender-advanced-threat-protection).
+> Přístup k ověřování pomocí uživatelského proxy serveru je nekompatibilní s používáním rozšířené ochrany před internetovými útoky v programu Microsoft Defender. Toto chování je způsobeno tím, že toto ověřování spoléhá na klíč registru **DisableEnterpriseAuthProxy** nastavený na `0` , zatímco ATP programu Microsoft Defender vyžaduje, aby byl nastaven na `1` . Další informace najdete v tématu [Konfigurace nastavení připojení počítače a připojení k Internetu v ochraně ATP v programu Microsoft Defender](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/configure-proxy-internet-windows-defender-advanced-threat-protection).
 
 #### <a name="device-proxy-authentication"></a>Ověřování proxy zařízení
 
@@ -372,7 +405,7 @@ Tento přístup je nejsložitější, protože vyžaduje následující konfigur
 
   - Transparentní proxy server
 
-  - Nakonfigurujte proxy server WinINET v rámci zařízení pomocí následujících nastavení zásad skupiny: **nastavení proxy serveru na počítač (nikoli na uživatele)** (ProxySettingsPerUser = `1`).
+  - Nakonfigurujte proxy server WinINET v rámci zařízení pomocí následujících nastavení zásad skupiny: **nastavení proxy serveru na počítač (nikoli na uživatele)** (ProxySettingsPerUser = `1` ).
 
   - Směrované připojení nebo použití překladu síťových adres (NAT)
 
@@ -380,6 +413,10 @@ Tento přístup je nejsložitější, protože vyžaduje následující konfigur
 
 
 ## <a name="frequently-asked-questions"></a><a name="bkmk_uea_faq"></a>Nejčastější dotazy
+
+### <a name="will-my-endpoint-analytics-data-migrate-if-i-move-my-intune-tenant-to-a-different-tenant-location"></a>Migrují se data analýzy koncových bodů, když přesunete tenanta Intune do jiného umístění tenanta?
+
+Pokud migrujete tenanta Intune do jiného umístění, ztratí se v době migrace všechna data v řešení Endpoint Analytics. Vzhledem k tomu, že koncové body zaznamenávají do služby Endpoint Analytics nepřetržitě, všechny události, ke kterým dojde po migraci, se automaticky nahrají do nového umístění tenanta a sestavy se začnou znovu registrovat. 
 
 ### <a name="why-are-the-scripts-exiting-with-a-code-of-1"></a>Proč se skripty ukončí s kódem 1?
 
@@ -391,13 +428,13 @@ Skripty se ukončí s kódem 1 k signalizaci Intune, ke kterému by mělo dojít
 
 ## <a name="script-descriptions"></a><a name="bkmk_uea_scripts"></a>Popisy skriptů
 
-Tato tabulka zobrazuje názvy skriptů, popisy, detekce, nápravy a konfigurovatelné položky. Soubory skriptu, jejichž názvy začínají `Detect` na, jsou skripty detekce. Skripty pro `Remediate`nápravu začínají na. Tyto skripty můžete zkopírovat z další části tohoto článku.
+Tato tabulka zobrazuje názvy skriptů, popisy, detekce, nápravy a konfigurovatelné položky. Soubory skriptu, jejichž názvy začínají na, `Detect` jsou skripty detekce. Skripty pro nápravu začínají na `Remediate` . Tyto skripty můžete zkopírovat z další části tohoto článku.
 
-|Název skriptu|Popis|
+|Název skriptu|Description|
 |---|---|
-|**Aktualizace zastaralých zásad skupiny** </br>`Detect_stale_Group_Policies.ps1` </br> `Remediate_stale_GroupPolicies.ps1`| Zjistí, zda je poslední Zásady skupiny aktualizace větší `7 days` než před.  </br>Upravte prahovou hodnotu pro 7 dní změnou hodnoty pro `$numDays` ve skriptu detekce. </br></br>Oprava probíhá spuštěním `gpupdate /target:computer /force` a`gpupdate /target:user /force`  </br> </br>Může pomoci omezit volání podpory související s připojením k síti při doručování certifikátů a konfigurací prostřednictvím Zásady skupiny. </br> </br> **Spusťte skript pomocí přihlášených přihlašovacích údajů**: Ano|
+|**Aktualizace zastaralých zásad skupiny** </br>`Detect_stale_Group_Policies.ps1` </br> `Remediate_stale_GroupPolicies.ps1`| Zjistí, zda je poslední Zásady skupiny aktualizace větší než `7 days` před.  </br>Upravte prahovou hodnotu pro 7 dní změnou hodnoty pro `$numDays` ve skriptu detekce. </br></br>Oprava probíhá spuštěním `gpupdate /target:computer /force` a`gpupdate /target:user /force`  </br> </br>Může pomoci omezit volání podpory související s připojením k síti při doručování certifikátů a konfigurací prostřednictvím Zásady skupiny. </br> </br> **Spusťte skript pomocí přihlášených přihlašovacích údajů**: Ano|
 |**Restartujte službu Office Klikni a spusť.** </br> `Detect_Click_To_Run_Service_State.ps1` </br> `Remediate_Click_To_Run_Service_State.ps1`| Zjišťuje, jestli je služba Klikni a spusť nastavená na automatické spuštění a jestli je služba zastavená. </br> </br> Opraví nastavení služby tak, aby se spouštěla automaticky a spouštěla službu, pokud je zastavená. </br></br> Pomáhá opravovat problémy s tím, že se aplikace Win32 Microsoft 365 pro podnik nespustí, protože je zastavená služba Klikni a spusť. </br> </br> **Spusťte skript s použitím přihlášených přihlašovacích údajů**: ne|
-|**Kontrolovat síťové certifikáty** </br>`Detect_Expired_Issuer_Certificates.ps1` </br>`Remediate_Expired_Issuer_Certificates.ps1`|Vyhledá certifikáty vydané certifikační autoritou v osobním úložišti nebo v počítači uživatele, jehož platnost vypršela nebo brzy vyprší. </br> Určete certifikační autoritu změnou hodnoty pro `$strMatch` ve skriptu detekce. Chcete-li `$expiringDays` vyhledat certifikáty s vypršenou platností, zadejte hodnotu 0 pro vyhledání certifikátů s vypršenou platností nebo zadejte jiný počet dní.  </br></br>Oprava vyzvednutím informačního oznámení uživateli. </br> Zadejte hodnoty `$Title` a `$msgText` s názvem a textem zprávy, které mají uživatelé vidět. </br> </br> Upozorňuje uživatele na certifikáty s vypršenou platností, které může být nutné obnovit. </br> </br> **Spusťte skript s použitím přihlášených přihlašovacích údajů**: ne|
+|**Kontrolovat síťové certifikáty** </br>`Detect_Expired_Issuer_Certificates.ps1` </br>`Remediate_Expired_Issuer_Certificates.ps1`|Vyhledá certifikáty vydané certifikační autoritou v osobním úložišti nebo v počítači uživatele, jehož platnost vypršela nebo brzy vyprší. </br> Určete certifikační autoritu změnou hodnoty pro `$strMatch` ve skriptu detekce. `$expiringDays`Chcete-li vyhledat certifikáty s vypršenou platností, zadejte hodnotu 0 pro vyhledání certifikátů s vypršenou platností nebo zadejte jiný počet dní.  </br></br>Oprava vyzvednutím informačního oznámení uživateli. </br> Zadejte `$Title` hodnoty a `$msgText` s názvem a textem zprávy, které mají uživatelé vidět. </br> </br> Upozorňuje uživatele na certifikáty s vypršenou platností, které může být nutné obnovit. </br> </br> **Spusťte skript s použitím přihlášených přihlašovacích údajů**: ne|
 |**Vymazat zastaralé certifikáty** </br>`Detect_Expired_User_Certificates.ps1` </br> `Remediate_Expired_User_Certificates.ps1`| Detekuje prošlé certifikáty vydané certifikační autoritou v osobním úložišti aktuálního uživatele. </br> Určete certifikační autoritu změnou hodnoty pro `$certCN` ve skriptu detekce. </br> </br> Opravuje odstraněním certifikátů, jejichž platnost vystavila certifikační autorita z osobního úložiště aktuálního uživatele. </br> Určete certifikační autoritu změnou hodnoty pro `$certCN` ve skriptu pro opravu. </br> </br> Vyhledá a odstraní prošlé certifikáty vydané certifikační autoritou z osobního úložiště aktuálního uživatele. </br> </br> **Spusťte skript pomocí přihlášených přihlašovacích údajů**: Ano|
 
 ## <a name="powershell-scripts"></a><a name="bkmk_uea_ps_scripts"></a>PowerShellové skripty
@@ -770,7 +807,7 @@ Základní funkce služby Endpoint Analytics v současné době shromažďují i
   - **gpLogonDurationInMilliseconds**: čas, kdy se mají zpracovat zásady skupiny
   - **desktopShownDurationInMilliseconds:** Čas, kdy se má načítat plocha (Explorer. exe)
   - **desktopUsableDurationInMilliseconds:** Čas, kdy se má použít Desktop (Explorer. exe)
-  - **topProcesses:** Seznam procesů načtených během spouštění s názvem, včetně statistik využití procesoru a podrobností aplikace (název, vydavatel, verze) Například *{\"Process\":\"Svchost\",\"CpuUsage\": 43,\"ProcessFullPath\":\"C:\\\\Windows\\\\system32\\\\Svchost. exe\",\"ProductName\":\"operační systém&reg; &reg; \"Microsoft Windows,\"Vydavatel\":\"Microsoft Corporation\",\"ProductVersion\":\"10.0.18362.1}\"*
+  - **topProcesses:** Seznam procesů načtených během spouštění s názvem, včetně statistik využití procesoru a podrobností aplikace (název, vydavatel, verze) Například *{ \" Process \" : \" svchost \" , \" CpuUsage \" : 43, \" ProcessFullPath \" : \" C: \\ \\ Windows \\ \\ system32 \\ \\ svchost. exe \" , \" ProductName \" : \" &reg; operační systém Microsoft Windows &reg; \" , \" Vydavatel \" : \" Microsoft Corporation \" , \" ProductVersion \" : \" 10.0.18362.1 \" }*
 - Data zařízení nesvázaná se zařízením nebo uživatelem (jsou-li svázaná se zařízením nebo uživatelem, Intune s nimi nakládá jako s identifikovanými údaji)
   - **ID:** Jedinečné ID zařízení, které používá web Windows Update
   - **LocalId:** Místně definované jedinečné ID pro zařízení. Nejedná se o název zařízení srozumitelně pro čtení. Nejpravděpodobnější s hodnotou uloženou v HKLM\Software\Microsoft\SQMClient\MachineId.

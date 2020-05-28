@@ -10,12 +10,12 @@ ms.assetid: 7591e386-a9ab-4640-8643-332dce5aa006
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b11e0a1747cb8303c14f5971b98d337ae7b2a834
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 8d87b2cde9a9fadb7326939b7fe473ba2a757e91
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81723002"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83430123"
 ---
 # <a name="create-a-task-sequence-to-upgrade-an-os-in-configuration-manager"></a>Vytvoření pořadí úkolů pro upgrade operačního systému v Configuration Manager
 
@@ -28,7 +28,7 @@ Pomocí pořadí úkolů v Configuration Manager automaticky upgradovat operačn
 
 Před vytvořením pořadí úkolů je nutné, aby byly provedeny následující požadavky:
 
-### <a name="required"></a>Požaduje se
+### <a name="required"></a>Vyžadováno
 
 - [Balíček s upgradem operačního systému](../get-started/manage-operating-system-upgrade-packages.md) musí být dostupný v konzole Configuration Manager.  
 
@@ -63,7 +63,7 @@ Chcete-li upgradovat operační systém na klientských počítačích, vytvořt
 
     - **Index edice**: Pokud je v balíčku k dispozici více indexů OS Edition, vyberte požadovaný index edice. Ve výchozím nastavení Průvodce vybere první index.  
 
-    - **Kód Product Key**: zadejte kód Product Key systému Windows pro operační systém, který chcete nainstalovat. Zadejte kódované klíče multilicencí nebo standardní kódy Product Key. Použijete-li standardní kód Product Key, oddělte každou skupinu pěti znaky pomlčkou (`-`). Například: `XXXXX-XXXXX-XXXXX-XXXXX-XXXXX`. Pokud je upgrade pro multilicenční edici, nemusí se kód Product Key vyžadovat.  
+    - **Kód Product Key**: zadejte kód Product Key systému Windows pro operační systém, který chcete nainstalovat. Zadejte kódované klíče multilicencí nebo standardní kódy Product Key. Použijete-li standardní kód Product Key, oddělte každou skupinu pěti znaky pomlčkou ( `-` ). Příklad: `XXXXX-XXXXX-XXXXX-XXXXX-XXXXX`. Pokud je upgrade pro multilicenční edici, nemusí se kód Product Key vyžadovat.  
 
         > [!Note]  
         > Tento kód Product Key může být klíč k vícenásobné aktivaci (MAK) nebo obecný multilicenční klíč (GVLK). GVLK se také označuje jako klíč pro nastavení klienta služby správy klíčů (KMS). Další informace najdete v tématu [plánování aktivace multilicence](https://docs.microsoft.com/windows/deployment/volume-activation/plan-for-volume-activation-client). Seznam klíčů pro instalaci klienta služby správy klíčů najdete v [příloze a](https://docs.microsoft.com/windows-server/get-started/kmsclientkeys) v příručce k aktivaci Windows serveru.
@@ -102,7 +102,7 @@ Do této skupiny přidejte kroky, pokud chcete ověřit, jestli počítač použ
 
 #### <a name="battery-check-example"></a>Příklad kontroly baterie
 
-Použijte program WbemTest a připojte se `root\cimv2` k oboru názvů. Pak spusťte následující dotaz:
+Použijte program WbemTest a připojte se k `root\cimv2` oboru názvů. Pak spusťte následující dotaz:
 
 `Select BatteryStatus From Win32_Battery where BatteryStatus != 2`
 
@@ -114,7 +114,7 @@ Do této skupiny přidejte kroky, pokud chcete ověřit, jestli je počítač p�
 
 #### <a name="network-check-example"></a>Příklad kontroly sítě
 
-Použijte program WbemTest a připojte se `root\cimv2` k oboru názvů. Pak spusťte následující dotaz:
+Použijte program WbemTest a připojte se k `root\cimv2` oboru názvů. Pak spusťte následující dotaz:
 
 `Select * From Win32_NetworkAdapter Where NetConnectionStatus = 2 and PhysicalAdapter = 'True' and NetConnectionID = 'Wi-Fi'`
 
@@ -147,7 +147,7 @@ Použijte krok [Stáhnout obsah balíčku](../understand/task-sequence-steps.md#
 - Pokud chcete dynamicky stáhnout příslušný balíček ovladačů, použijte dva kroky **Stáhnout obsah balíčku** s podmínkami, které zjišťují odpovídající typ hardwaru pro každý balíček ovladače. Nakonfigurujte všechny kroky **Stáhnout obsah balíčku** tak, aby používaly stejnou proměnnou. Pak použijte tuto proměnnou pro hodnotu **připraveného obsahu** v části ovladače v kroku **upgrade operačního systému** .  
 
     > [!NOTE]  
-    > Configuration Manager přidá k názvu proměnné číselnou příponu. Pokud například zadáte `%mycontent%` jako vlastní proměnnou, klient uloží do tohoto umístění veškerý odkazovaný obsah. Pokud v následujícím kroku odkazujete na proměnnou, jako je například **upgrade operačního systému**, použijte proměnnou s číselnou příponou. V tomto příkladu `%mycontent01%` nebo `%mycontent02%`, kde číslo odpovídá pořadí, ve kterém krok **Stáhnout obsah balíčku** uvádí tento konkrétní obsah.  
+    > Configuration Manager přidá k názvu proměnné číselnou příponu. Pokud například zadáte `%mycontent%` jako vlastní proměnnou, klient uloží do tohoto umístění veškerý odkazovaný obsah. Pokud v následujícím kroku odkazujete na proměnnou, jako je například **upgrade operačního systému**, použijte proměnnou s číselnou příponou. V tomto příkladu `%mycontent01%` nebo `%mycontent02%` , kde číslo odpovídá pořadí, ve kterém krok **Stáhnout obsah balíčku** uvádí tento konkrétní obsah.  
 
 
 ## <a name="recommended-task-sequence-steps-for-post-processing"></a>Doporučené kroky pořadí úloh pro následné zpracování
@@ -261,12 +261,12 @@ Další informace najdete v tématu [upgrade operačního systému](../understan
 
 ### <a name="convert-from-bios-to-uefi"></a>Převod ze systému BIOS na rozhraní UEFI
 
-Pokud chcete změnit zařízení ze systému BIOS na rozhraní UEFI během tohoto pořadí úloh, přečtěte si téma [převod ze systému BIOS na rozhraní UEFI během místního upgradu](task-sequence-steps-to-manage-bios-to-uefi-conversion.md#convert-from-bios-to-uefi-during-an-in-place-upgrade).  
+Pokud chcete změnit zařízení ze systému BIOS na rozhraní UEFI během tohoto pořadí úloh, přečtěte si téma [převod ze systému BIOS na rozhraní UEFI během místního upgradu](task-sequence-steps-to-manage-bios-to-uefi-conversion.md#bkmk_ipu).  
 
 ### <a name="manage-bitlocker"></a>Správa nástroje BitLocker
 
 <!--SCCMDocs issue #494-->
-Pokud používáte šifrování disku BitLockerem, instalační program systému Windows ho ve výchozím nastavení automaticky pozastavit během upgradu. Počínaje verzí 1803 Windows 10 instalační program systému Windows zahrnuje parametr `/BitLocker` příkazového řádku pro řízení tohoto chování. Pokud požadavky na zabezpečení vyžadují, aby bylo šifrování aktivních disků vždy aktivní, použijte k zahrnutí `/BitLocker TryKeepActive` [proměnnou pořadí úloh](../understand/task-sequence-variables.md#OSDSetupAdditionalUpgradeOptions) **OSDSetupAdditionalUpgradeOptions** ve skupině **Příprava pro upgrade** . Další informace najdete v tématu [instalační program systému Windows možnosti příkazového řádku](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options#bitlocker).
+Pokud používáte šifrování disku BitLockerem, instalační program systému Windows ho ve výchozím nastavení automaticky pozastavit během upgradu. Počínaje verzí 1803 Windows 10 instalační program systému Windows zahrnuje `/BitLocker` parametr příkazového řádku pro řízení tohoto chování. Pokud požadavky na zabezpečení vyžadují, aby bylo šifrování aktivních disků vždy aktivní, použijte k zahrnutí **OSDSetupAdditionalUpgradeOptions** [proměnnou pořadí úloh](../understand/task-sequence-variables.md#OSDSetupAdditionalUpgradeOptions) OSDSetupAdditionalUpgradeOptions ve skupině **Příprava pro upgrade** `/BitLocker TryKeepActive` . Další informace najdete v tématu [instalační program systému Windows možnosti příkazového řádku](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options#bitlocker).
 
 ### <a name="remove-default-apps"></a>Odebrat výchozí aplikace
 

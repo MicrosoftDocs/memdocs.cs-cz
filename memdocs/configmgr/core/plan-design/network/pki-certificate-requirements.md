@@ -10,12 +10,12 @@ ms.assetid: d6a73e68-57d8-4786-842b-36669541d8ff
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 3729bdc28cce961bd081ddb461d3d1da45d6c017
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 909f9fa603f6b979b283593da79730a97fcb9fc9
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718718"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904155"
 ---
 # <a name="pki-certificate-requirements-for-configuration-manager"></a>Požadavky na certifikát PKI pro nástroj Configuration Manager
 
@@ -23,11 +23,7 @@ ms.locfileid: "81718718"
 
 Certifikáty infrastruktury veřejných klíčů (PKI), které byste mohli vyžadovat pro Configuration Manager, jsou uvedené v následujících tabulkách. Tyto informace předpokládají základní znalost certifikátů PKI. Další informace najdete v tématu [podrobný příklad nasazení certifikátů PKI pro Configuration Manager: certifikační autorita systému Windows Server 2008](example-deployment-of-pki-certificates.md).
 
-Další informace o službě AD CS (Active Directory Certificate Services) najdete v následující dokumentaci:  
-
-- Windows Server 2012: [Přehled služby AD CS (Active Directory Certificate Services)](https://go.microsoft.com/fwlink/p/?LinkId=286744)  
-
-- Windows Server 2008: [Služba AD CS v systému Windows Server 2008](https://go.microsoft.com/fwlink/p/?LinkId=115018)
+Další informace o službě AD CS (Active Directory Certificate Services) najdete v tématu [Přehled služby Active Directory Certificate Services](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831740(v=ws.11)).
 
 Informace o používání kryptografických certifikátů API: Next Generation (CNG) s Configuration Manager najdete v tématu [Přehled certifikátů CNG](cng-certificates-overview.md).
 

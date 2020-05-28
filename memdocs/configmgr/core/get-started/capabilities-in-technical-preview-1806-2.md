@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 426767b65e0fd770a9a41ce9463948007a524c41
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: b7643c73d2e9dad00e926bdc3db905016c45860a
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078749"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905223"
 ---
 # <a name="capabilities-in-technical-preview-18062-for-configuration-manager"></a>Funkce ve verzi Technical Preview 1806,2 pro Configuration Manager
 
@@ -60,7 +60,7 @@ Pokud jste web již aktualizovali, automatický upgrade klienta a nabízená ins
 Pokud instalujete nového klienta v lokalitě verze Technical Preview 1806,2, použijte stejný postup. 
 
 > [!Important]  
-> V tomto scénáři `/MP` nepoužívejte parametr příkazového řádku. Tento parametr má přednost před `/source` a způsobuje, že služba CCMSetup stahuje obsah klienta z bodu správy nebo distribučního bodu.
+> `/MP`V tomto scénáři nepoužívejte parametr příkazového řádku. Tento parametr má přednost před `/source` a způsobuje, že služba CCMSetup stahuje obsah klienta z bodu správy nebo distribučního bodu.
 > 
 > Vlastnosti příkazového řádku, jako je například SMSSITECODE nebo CCMLOGLEVEL, jsou v pořádku, ale neměly by být nutné při upgradu stávajícího klienta. 
 
@@ -147,7 +147,7 @@ Když vytvoříte postupné nasazení a ručně nakonfigurujete fázi, na strán
 <!--1357427-->
 Configuration Manager teď podporuje nasazení nového balíčku aplikace pro Windows 10 (. msix) a formátů sady prostředků aplikace (. msixbundle). Nejnovější buildy [Windows Insider ve verzi Preview](https://insider.windows.com/) aktuálně podporují tyto nové formáty.
 
-Přehled MSIX najdete v tématu o tom, jak se [podíváte na MSIX](https://blogs.msdn.microsoft.com/sgern/2018/06/18/a-closer-look-at-msix/).
+Přehled MSIX najdete v tématu o tom, jak se [podíváte na MSIX](https://docs.microsoft.com/archive/blogs/sgern/a-closer-look-at-msix).
 
 Informace o tom, jak vytvořit novou aplikaci MSIX, najdete [v článku podpora MSIX představená v programu Insider build 17682](https://techcommunity.microsoft.com/t5/MSIX-Blog/MSIX-support-introduced-in-Insider-Build-17682/ba-p/202376).
 
@@ -159,7 +159,7 @@ Informace o tom, jak vytvořit novou aplikaci MSIX, najdete [v článku podpora 
 Zkuste úkoly dokončit. Potom vám pošleme [názor](capabilities-in-technical-preview-1804.md#bkmk_feedback) , abychom věděli, jak pracovali.
 
 1. V konzole Configuration Manager [vytvořte aplikaci](../../apps/deploy-use/create-applications.md). 
-2. Vyberte **typ** instalačního souboru aplikace jako **balíček aplikace systému Windows\*(. appx \*,. appxbundle \*,. msix \*,. msixbundle)**.
+2. Vyberte **typ** instalačního souboru aplikace jako **balíček aplikace systému Windows ( \* . appx, \* . appxbundle, \* . msix, \* . msixbundle)**.
 3. [Nasaďte aplikaci](../../apps/deploy-use/deploy-applications.md) do klienta, na kterém běží nejnovější Build Windows Insider Preview.
 
 
@@ -214,7 +214,7 @@ Umožňuje spravovat mobilní aplikace pomocí Microsoft Intune a přitom dál p
 
 Po přechodu na tuto úlohu jsou všechny dostupné aplikace nasazené z Intune dostupné v Portál společnosti. Aplikace, které nasazujete z Configuration Manager, jsou k dispozici v centru softwaru. 
 
-Další informace najdete v těchto článcích:  
+Další informace najdete v následujících článcích:  
 
 - [Spoluspráva pro zařízení s Windows 10](../../comanage/overview.md)  
 
@@ -303,7 +303,7 @@ Odstraňte vlastní katalogy ze stejného uzlu konzoly. Vyberte vlastní katalog
 
 
 ### <a name="known-issue"></a>Známý problém
-Akce odstranit u vlastního katalogu je šedá, takže nemůžete odstranit vlastní katalogy z konzoly. Chcete-li tento problém vyřešit, použijte nástroj **WBEMTest** na serveru lokality. Dotaz na instanci, kterou chcete odstranit, pomocí názvu nebo adresy URL pro stažení, například: `select * from SMS_ISVCatalog where DownloadURL="http://www.contoso.com/catalog.cab"`. V okně výsledek dotazu vyberte objekt a klikněte na **Odstranit**.<!--518676-->  
+Akce odstranit u vlastního katalogu je šedá, takže nemůžete odstranit vlastní katalogy z konzoly. Chcete-li tento problém vyřešit, použijte nástroj **WBEMTest** na serveru lokality. Dotaz na instanci, kterou chcete odstranit, pomocí názvu nebo adresy URL pro stažení, například: `select * from SMS_ISVCatalog where DownloadURL="http://www.contoso.com/catalog.cab"` . V okně výsledek dotazu vyberte objekt a klikněte na **Odstranit**.<!--518676-->  
 
 
 

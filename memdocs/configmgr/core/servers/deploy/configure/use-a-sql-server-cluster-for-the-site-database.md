@@ -62,7 +62,7 @@ Pamatujte na následující požadavky:
 
 - Pro podporu ověřování protokolem Kerberos povolte komunikační protokol sítě **TCP/IP** pro síťové připojení každého uzlu SQL Server clusteru. Protokol **pojmenovaných kanálů** není povinný, ale dá se použít k řešení problémů s ověřováním protokolu Kerberos. Nastavení síťového protokolu se konfigurují v **SQL Server Configuration Manager**v části **SQL Server konfigurace sítě**.  
 
-- Při použití SQL Serverho clusteru pro databázi lokality jsou k dispozici konkrétní požadavky na certifikáty. Další informace najdete v těchto článcích:
+- Při použití SQL Serverho clusteru pro databázi lokality jsou k dispozici konkrétní požadavky na certifikáty. Další informace najdete v následujících článcích:
   - [Instalace certifikátu v konfiguraci clusteru s podporou převzetí služeb při selhání pro SQL Server](https://docs.microsoft.com/sql/database-engine/configure-windows/manage-certificates?view=sql-server-ver15#provision-failover-cluster-cert)
   - [Požadavky na certifikát PKI pro nástroj Configuration Manager](../../../plan-design/network/pki-certificate-requirements.md#BKMK_PKIcertificates_for_servers)
 

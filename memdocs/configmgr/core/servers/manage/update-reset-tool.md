@@ -37,7 +37,7 @@ Když nástroj spustíte, spustí se s aktualizací, kterou určíte. Ve výchoz
 - **Místní správce** na počítači, který je hostitelem spojovacího bodu služby.
 
 Potřebujete GUID balíčku aktualizací, který chcete obnovit. Získání identifikátoru GUID:
-  1.   V konzole nástroje přejdete na **Správa** > **aktualizace a údržba**.
+  1.   V konzole nástroje přejdete na **Správa**  >  **aktualizace a údržba**.
   2.   V podokně zobrazení klikněte pravým tlačítkem myši na záhlaví jednoho ze sloupců (například **stav**) a pak vyberte možnost **identifikátor GUID balíčku** pro přidání tohoto sloupce do zobrazení.
   3.   Sloupec teď zobrazuje identifikátor GUID balíčku aktualizace.
 
@@ -63,13 +63,13 @@ Po spuštění nástroje:
 **Parametry příkazového řádku:**  
 
 
-|                        Parametr                         |                                                       Popis                                                        |
+|                        Parametr                         |                                                       Description                                                        |
 |----------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
-| **-S &lt;plně kvalifikovaný název domény SQL Server vaší lokality nejvyšší úrovně>** | *Požadováno* <br> Zadejte plně kvalifikovaný název domény SQL Server, který je hostitelem databáze lokality pro lokalitu nejvyšší úrovně ve vaší hierarchii. |
-|                **-D &lt;název databáze>**                 |                          *Požadováno* <br> Zadejte název databáze v lokalitě nejvyšší úrovně.                          |
+| **-S &lt; plně kvalifikovaný název domény SQL Server vaší lokality nejvyšší úrovně>** | *Požadováno* <br> Zadejte plně kvalifikovaný název domény SQL Server, který je hostitelem databáze lokality pro lokalitu nejvyšší úrovně ve vaší hierarchii. |
+|                **-D &lt; název databáze>**                 |                          *Požadováno* <br> Zadejte název databáze v lokalitě nejvyšší úrovně.                          |
 |                 **-P &lt;>identifikátor GUID balíčku**                 |                        *Požadováno* <br> Zadejte identifikátor GUID balíčku aktualizací, který chcete obnovit.                        |
-|           **-I &lt;SQL Server název instance>**           |                    *Nepovinné* <br> Identifikujte instanci SQL Server, která je hostitelem databáze lokality.                     |
-|                       **-FDELETE**                       |                       *Nepovinné* <br> Vynutit odstranění úspěšně staženého balíčku aktualizace.                        |
+|           **-I &lt; SQL Server název instance>**           |                    *Volitelné* <br> Identifikujte instanci SQL Server, která je hostitelem databáze lokality.                     |
+|                       **-FDELETE**                       |                       *Volitelné* <br> Vynutit odstranění úspěšně staženého balíčku aktualizace.                        |
 
 **4.6**  
 V typickém scénáři chcete obnovit aktualizaci, která má problémy se stahováním. Plně kvalifikovaný název domény SQL serveru je *Server1.fabrikam.com*, databáze lokality je *CM_XYZ*a identifikátor GUID balíčku je *61F16B3C-F1F6-4F9F-8647-2A524B0C802C*.  Spustíte: ***CMUpdateReset. exe-S Server1.fabrikam.com-D CM_XYZ-P 61F16B3C-F1F6-4F9F-8647-2A524B0C802C***

@@ -10,12 +10,12 @@ ms.assetid: 95c13c00-909f-4fbb-bbaa-1eba9d54d8c5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: c78bb5876455e68292e4a69d86a256fa9e5172d0
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1ace560130e43fd5675b51b6d507e84043c01407
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718704"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904073"
 ---
 # <a name="schema-extensions-for-configuration-manager"></a>Rozšíření schématu pro Configuration Manager
 
@@ -25,7 +25,7 @@ Schéma služby Active Directory můžete roztáhnout tak, aby podporovalo Confi
 
 -   Je vhodné, abyste schéma služby Active Directory rozšířili, ale není to nutné.  
 
-Před [rozšířením schématu služby Active Directory](https://docs.microsoft.com/sccm/core/plan-design/network/extend-the-active-directory-schema) byste se měli seznámit se službou Active Directory Domain Services a měli byste také umět [upravit schéma služby Active Directory](https://technet.microsoft.com/library/cc759402\(v=ws.10\).aspx).  
+Před [rozšířením schématu služby Active Directory](https://docs.microsoft.com/sccm/core/plan-design/network/extend-the-active-directory-schema) byste se měli seznámit se službou Active Directory Domain Services a měli byste také umět [upravit schéma služby Active Directory](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc759402(v=ws.10)).  
 
 ## <a name="considerations-for-extending-the-active-directory-schema-for-configuration-manager"></a>Pokyny k rozšíření schématu služby Active Directory pro Configuration Manager  
 
@@ -70,7 +70,7 @@ Před [rozšířením schématu služby Active Directory](https://docs.microsoft
 
     -   **Nainstalujte klienty ručně** a zadejte vlastnosti instalace klienta pomocí vlastností příkazového řádku instalačního programu CCMSetup. Následující vlastnosti jsou povinné:  
 
-        -   Zadejte bod správy nebo cestu ke zdroji, ze které počítač může stáhnout instalační soubory pomocí vlastnosti CCMSetup **/MP: =&lt;název\> počítače** nebo **/Source:&lt;cesta ke zdrojovým souborům\> klienta** v příkazovém řádku programu CCMSetup během instalace klienta.  
+        -   Zadejte bod správy nebo cestu ke zdroji, ze které počítač může stáhnout instalační soubory pomocí vlastnosti CCMSetup **/MP: = &lt; název počítače \> ** nebo **/Source: &lt; cesta ke zdrojovým souborům \> klienta** v příkazovém řádku programu CCMSetup během instalace klienta.  
 
         -   Zadejte seznam počátečních bodů správy, které bude klient používat, aby ho mohl přiřadit k lokalitě a pak stahovat zásady klienta a nastavení lokality. Použijte k tomu vlastnost SMSMP programu CCMSetup Client.msi.  
 

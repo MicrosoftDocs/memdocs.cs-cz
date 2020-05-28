@@ -10,12 +10,13 @@ ms.assetid: be680198-4cea-4378-a686-d52f382ba483
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c7610b0e60f3ea02918c9dd98858a3b2bfd7c712
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.reviewer: acabello
+ms.openlocfilehash: 0811c695acba4859bf32de535a28ea55cf8eee07
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81723632"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268738"
 ---
 # <a name="enable-data-sharing-for-desktop-analytics"></a>Povolení sdílení dat pro desktopovou analýzu
 
@@ -74,6 +75,9 @@ Pokud chcete povolit sdílení dat, nakonfigurujte proxy server tak, aby umožň
 > V případě ochrany osobních údajů a integrity dat systém Windows při komunikaci s koncovými body diagnostických dat kontroluje certifikát Microsoft SSL (připnutí certifikátů). Zachycení a kontrola SSL nejsou možné. Pokud chcete použít desktopovou analýzu, vylučte tyto koncové body z kontroly SSL.<!-- BUG 4647542 -->
 
 Od verze 2002, pokud se lokalita Configuration Manager nepovede připojit k požadovaným koncovým bodům pro cloudovou službu, vyvolá kritickou stavovou zprávu ID 11488. Když se nemůže připojit ke službě, stav součásti SMS_SERVICE_CONNECTOR se změní na kritický. Zobrazit podrobný stav v uzlu [Stav součásti](../core/servers/manage/use-alerts-and-the-status-system.md#BKMK_MonitorSystemStatus) konzoly Configuration Manager.<!-- 5566763 -->
+
+> [!NOTE]
+> Další informace o rozsahu IP adres společnosti Microsoft najdete v tématu věnovaném [veřejné IP adrese Microsoftu](https://www.microsoft.com/download/details.aspx?id=53602). Tyto adresy se pravidelně aktualizují. Služba nenabízí žádnou členitost, proto by mohla být použita jakákoli IP adresa v těchto rozsahech.
 
 ### <a name="server-connectivity-endpoints"></a>Koncové body připojení serveru
 
@@ -136,7 +140,7 @@ Nakonfigurovat zařízení tak, aby používala kontext přihlášeného uživat
 - Ujistěte se, že uživatelé mají oprávnění k přístupu k koncovým bodům diagnostických dat. Tato možnost vyžaduje, aby zařízení měla uživatele konzoly s oprávněními proxy serveru, takže tuto metodu nemůžete použít u zařízení bez periferních zařízení.
 
 > [!IMPORTANT]
-> Přístup k ověřování pomocí uživatelského proxy serveru je nekompatibilní s používáním rozšířené ochrany před internetovými útoky v programu Microsoft Defender. Toto chování je způsobeno tím, že toto **DisableEnterpriseAuthProxy** ověřování spoléhá na klíč registru `0`DisableEnterpriseAuthProxy nastavený na, zatímco ATP programu Microsoft Defender vyžaduje, `1`aby byl nastaven na. Další informace najdete v tématu [Konfigurace nastavení připojení počítače a připojení k Internetu v ochraně ATP v programu Microsoft Defender](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/configure-proxy-internet-windows-defender-advanced-threat-protection).
+> Přístup k ověřování pomocí uživatelského proxy serveru je nekompatibilní s používáním rozšířené ochrany před internetovými útoky v programu Microsoft Defender. Toto chování je způsobeno tím, že toto ověřování spoléhá na klíč registru **DisableEnterpriseAuthProxy** nastavený na `0` , zatímco ATP programu Microsoft Defender vyžaduje, aby byl nastaven na `1` . Další informace najdete v tématu [Konfigurace nastavení připojení počítače a připojení k Internetu v ochraně ATP v programu Microsoft Defender](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/configure-proxy-internet-windows-defender-advanced-threat-protection).
 
 ### <a name="device-proxy-authentication"></a>Ověřování proxy zařízení
 
@@ -158,7 +162,7 @@ Tento přístup je nejsložitější, protože vyžaduje následující konfigur
 
   - Transparentní proxy server
 
-  - Nakonfigurujte proxy server WinINET v rámci zařízení pomocí následujících nastavení zásad skupiny: **nastavení proxy serveru na počítač (nikoli na uživatele)** (ProxySettingsPerUser = `1`).
+  - Nakonfigurujte proxy server WinINET v rámci zařízení pomocí následujících nastavení zásad skupiny: **nastavení proxy serveru na počítač (nikoli na uživatele)** (ProxySettingsPerUser = `1` ).
 
   - Směrované připojení nebo použití překladu síťových adres (NAT)
 

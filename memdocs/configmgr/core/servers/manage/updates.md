@@ -10,12 +10,12 @@ ms.assetid: 3a832943-580a-4a40-b454-961d0854ac2b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f38b8662d4d7b5e7897d0c43560a5e2a4672eee6
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ffee9d851f00bcac5ed7ba562bdc9db8e0fa2767
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81720741"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82903943"
 ---
 # <a name="updates-and-servicing-for-configuration-manager"></a>Aktualizace a údržba pro Configuration Manager
 
@@ -60,11 +60,13 @@ Následující podporované verze Configuration Manager jsou aktuálně k dispoz
 
 | Verze | Datum dostupnosti | [Datum ukončení podpory](current-branch-versions-supported.md) | Standardní hodnoty | Aktualizace v konzole |  
 |-------------|-----------|------------|--------------|------------------------|  
-| [**2002**](../../plan-design/changes/whats-new-in-version-2002.md)<br /> (5.00.8968) | Květen 2020 | Od 1. října 2021 | Ano,<sup>[Poznámka: 1](#bkmk_note1)</sup> | Ano |
+| [**2002**](../../plan-design/changes/whats-new-in-version-2002.md)<br /> (5.00.8968) | 1. dubna 2020 | Od 1. října 2021 | Ano,<sup>[Poznámka: 1](#bkmk_note1)</sup> | Ano |
 | [**1910**](../../plan-design/changes/whats-new-in-version-1910.md)<br /> (5.00.8913) | 29. listopadu 2019 | 29. května 2021 | Ne | Ano |
 | [**1906**](../../plan-design/changes/whats-new-in-version-1906.md)<br /> (5.00.8853) | 26. července 2019 | 26. ledna 2021 | Ne | Ano |
 | [**1902**](../../plan-design/changes/whats-new-in-version-1902.md)<br /> (5.00.8790) | 27. března 2019 | 27. září 2020 | Ano,<sup>[Poznámka: 1](#bkmk_note1)</sup> | Ano |
 | [**1810**](../../plan-design/changes/whats-new-in-version-1810.md)<br /> (5.00.8740) | 27. listopadu 2018 | 1. prosince 2020 | Ne | Ano |
+
+**Datum dostupnosti** je, když je uvolněna [úvodní aktualizační kanál](checklist-for-installing-update-2002.md#early-update-ring) . Pokud je aktualizace globálně dostupná, bude na službě Volume License Service Center k dispozici základní médium.
 
 <a name="bkmk_note1"></a>
 
@@ -75,7 +77,7 @@ Následující podporované verze Configuration Manager jsou aktuálně k dispoz
 > - System Center 2016 Datacenter
 > - System Center 2016 Standard  
 >
-> Vyhledejte například VLSC pro `System Center Config Mgr (current branch)`. V seznamu souborů Najděte základní médium a Stáhněte si ho pro tuto verzi.  
+> Vyhledejte například VLSC pro `System Center Config Mgr (current branch)` . V seznamu souborů Najděte základní médium a Stáhněte si ho pro tuto verzi.  
 
 #### <a name="historical-versions"></a>Historické verze
 

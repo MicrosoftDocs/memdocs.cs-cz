@@ -10,12 +10,12 @@ ms.assetid: c201be2a-692c-4d67-ac95-0a3afa5320fe
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a1355b6d670e94d985717dfb32386f579cba42a0
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: cb91e62c4ffce37068b2de5e125865e28ff8c53b
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078664"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83878958"
 ---
 # <a name="fundamental-concepts-for-content-management-in-configuration-manager"></a>Základní koncepty správy obsahu v nástroji Configuration Manager
 
@@ -108,7 +108,7 @@ Configuration Manager podporuje několik možností správy obsahu mezi partners
 
 K porovnání hlavních funkcí těchto technologií použijte následující tabulku:
 
-| Funkce  | Sdílená&nbsp;mezipaměť  | Optimalizace&nbsp;doručení  | Služba BranchCache  |
+| Funkce  | Sdílená &nbsp; mezipaměť  | &nbsp;Optimalizace doručení  | Služba BranchCache  |
 |---------|---------|---------|---------|
 | V různých podsítích | Ano | Ano | Ne |
 | Omezení šířky pásma | Ano (bity) | Ano (nativní) | Ano (bity) |
@@ -116,7 +116,7 @@ K porovnání hlavních funkcí těchto technologií použijte následující ta
 | Velikost mezipaměti ovládacího prvku na disku | Ano | Ano | Ano |
 | Zjišťování zdrojů partnerského vztahu | Ruční (nastavení klienta) | Automaticky | Automaticky |
 | Rovnocenné zjišťování | Přes bod správy používající skupiny hranic | DO cloudové služby | To |
-| Generování sestav | Řídicí panel zdrojů dat klienta | Řídicí panel zdrojů dat klienta | Řídicí panel zdrojů dat klienta |
+| Vytváření sestav | Řídicí panel zdrojů dat klienta | Řídicí panel zdrojů dat klienta | Řídicí panel zdrojů dat klienta |
 | Řízení využití sítě WAN | Skupiny hranic | DO GroupID | Pouze podsíť |
 | Podporovaný obsah | Veškerý obsah nástroje ConfigMgr | Aktualizace Windows, ovladače, aplikace pro Store | Veškerý obsah nástroje ConfigMgr |
 | Řízení pomocí zásad | Nastavení agenta klienta | Nastavení agenta klienta (částečně) | Nastavení agenta klienta |
@@ -156,7 +156,7 @@ Optimalizace doručování je doporučená technologie pro optimalizaci doručov
 Počínaje verzí 1906 můžete nainstalovat server Microsoft Connected cache do distribučních bodů. Uložením tohoto obsahu do mezipaměti v místním prostředí můžou vaši klienti těžit z funkce Optimalizace doručení, ale můžete přispět k ochraně WAN Links.
 
 > [!NOTE]
-> Počínaje verzí 1910 je tato funkce nyní označována jako **propojená s mezipamětí Microsoft**. Dříve byla známá jako optimalizace doručování do síťové mezipaměti (DOINC).
+> Počínaje verzí 1910 je tato funkce nyní označována jako **propojená s mezipamětí Microsoft**. Dříve byla známá jako Optimalizace doručení v síťové mezipaměti.
 
 Tento server mezipaměti funguje jako transparentní mezipaměť na vyžádání pro obsah stažený optimalizací doručení. Pomocí nastavení klienta se ujistěte, že je tento server nabízen pouze členům místní skupiny hranic Configuration Manager.
 

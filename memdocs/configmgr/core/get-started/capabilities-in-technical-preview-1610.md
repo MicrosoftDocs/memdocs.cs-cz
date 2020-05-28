@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 6402205ae694d719845492b1af37000a0b9335c5
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: cee161747d5c0b462836b7c3a44e1460173b124c
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81721469"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905664"
 ---
 # <a name="capabilities-in-technical-preview-1610-for-configuration-manager"></a>Funkce ve verzi Technical Preview 1610 pro Configuration Manager
 
@@ -29,7 +29,7 @@ V tomto článku se seznámíte s funkcemi, které jsou k dispozici v Technical 
 
 **V následující části najdete nové funkce, které můžete s touto verzí vyzkoušet.**  
 ## <a name="filter-by-content-size-in-automatic-deployment-rules"></a>Filtrovat podle velikosti obsahu v pravidlech automatického nasazení
-Nyní můžete vyfiltrovat velikost obsahu pro aktualizace softwaru v pravidlech automatického nasazení. Můžete například nastavit filtr **Velikost obsahu (KB)** na **< 2048** , aby bylo možné stahovat pouze aktualizace softwaru, které jsou menší než 2 MB. Použití tohoto filtru zabraňuje automatickému stahování velkých aktualizací softwaru, aby byla lépe podporovaná zjednodušená Údržba Windows, když je omezená šířka pásma sítě. Podrobnosti najdete v tématu [Configuration Manager a zjednodušená Údržba Windows v operačních systémech nižší úrovně](https://blogs.technet.microsoft.com/enterprisemobility/2016/10/07/configuration-manager-and-simplified-windows-servicing-on-down-level-operating-systems/).
+Nyní můžete vyfiltrovat velikost obsahu pro aktualizace softwaru v pravidlech automatického nasazení. Můžete například nastavit filtr **Velikost obsahu (KB)** na **< 2048** , aby bylo možné stahovat pouze aktualizace softwaru, které jsou menší než 2 MB. Použití tohoto filtru zabraňuje automatickému stahování velkých aktualizací softwaru, aby byla lépe podporovaná zjednodušená Údržba Windows, když je omezená šířka pásma sítě. Podrobnosti najdete v tématu [Configuration Manager a zjednodušená Údržba Windows v operačních systémech nižší úrovně](https://techcommunity.microsoft.com/t5/configuration-manager-archive/configuration-manager-and-simplified-windows-servicing-on-down/ba-p/274056).
 
 #### <a name="to-configure-the-content-size-field"></a>Konfigurace pole velikost obsahu
 Pokud chcete nakonfigurovat pole **Velikost obsahu (KB)** , na stránce **aktualizace softwaru** v Průvodci vytvořením pravidla automatického nasazení, když vytvoříte pravidlo automatického nasazení, nebo přejít na kartu **aktualizace softwaru** ve vlastnostech pro existující pravidlo automatického nasazení.
@@ -64,7 +64,7 @@ Zamítnutí žádosti schválené pro aplikaci:
 1. V konzole Configuration Manager [vytvořte a nasaďte aplikaci](../../apps/deploy-use/create-applications.md) , která vyžaduje schválení.
 2. V klientském počítači otevřete Centrum softwaru a odešlete žádost o aplikaci.
 3. V konzole Configuration Manager schvalte žádost o aplikaci.
-4. Zamítnout schválenou žádost o aplikaci: v konzole Configuration Manager přejděte na **softwarová knihovna** > **Přehled** >  > **žádosti o schválení** **správy aplikací**a vyberte žádost o aplikaci, kterou chcete odepřít.  Na pásu karet klikněte na **Odepřít**.
+4. Zamítnout schválenou žádost o aplikaci: v konzole Configuration Manager přejděte na **softwarová knihovna**  >  **Přehled**  >  **Application Management**  >  **žádosti o schválení** správy aplikací a vyberte žádost o aplikaci, kterou chcete odepřít.  Na pásu karet klikněte na **Odepřít**.
 
 ## <a name="exclude-clients-from-automatic-upgrade"></a>Vyloučit klienty z automatického upgradu
 Technical Preview 1610 zavádí nové nastavení, které můžete použít k vyloučení kolekce klientů z automatické instalace aktualizovaných verzí klientů.  To platí pro automatický upgrade i pro jiné metody, jako je upgrade na základě aktualizace softwaru, přihlašovací skripty a zásady skupiny. Tato možnost se dá použít pro kolekci počítačů, které při upgradu klienta vyžadují větší péči. Klient, který je ve vyloučené kolekci, ignoruje požadavky na instalaci aktualizovaného klientského softwaru.
@@ -126,7 +126,7 @@ Konkrétně můžete nakonfigurovat následující nastavení programu Windows D
 
 ### <a name="try-it-out"></a>Určitě to udělejte!
 
-1. V konzole Configuration Manager, přejít na **prostředky a kompatibilita** > **Přehled** > **Nastavení** > dodržování předpisů**položky konfigurace položky**a vytvořte novou **položku konfigurace**.
+1. V konzole Configuration Manager, přejít na **prostředky a kompatibilita**  >  **Přehled**  >  **Nastavení dodržování předpisů**  >  **položky konfigurace položky**a vytvořte novou **položku konfigurace**.
 2. Zadejte název a potom v části **nastavení pro zařízení spravovaná bez Configuration Manager klienta** vyberte **Windows 8.1 a Windows 10** a klikněte na **Další**.
 3. Zajistěte, aby na stránce **podporované platformy** byly vybrány **všechny systémy windows 10 (64 bitů)** a **všechny systémy Windows 10 (32-bit)** , a poté klikněte na tlačítko **Další**.
 4. Vyberte skupinu nastavení **programu Windows Defender** a pak klikněte na **Další**.
@@ -143,7 +143,7 @@ Teď si můžete vyžádat synchronizaci zásad pro mobilní zařízení z konzo
 
 ### <a name="try-it-out"></a>Určitě to udělejte!
 
-1. V konzole Configuration Manager otevřete**Přehled** **assetů a dodržování předpisů** > > zařízení.
+1. V konzole Configuration Manager otevřete přehled **assetů a dodržování předpisů**  >  **Overview** > zařízení.
 2. V nabídce **Akce vzdáleného zařízení** vyberte **Odeslat žádost o synchronizaci**.
 
 Synchronizace může trvat pět až deset minut. Všechny změny v zásadách se synchronizují do zařízení. Stav žádosti o synchronizaci můžete sledovat ve sloupci **stav vzdálené synchronizace** v zobrazení **zařízení** nebo v dialogovém okně **vlastnosti** zařízení.

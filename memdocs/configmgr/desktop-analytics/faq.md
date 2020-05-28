@@ -10,12 +10,13 @@ ms.assetid: e0db3311-2303-4013-a906-76b408172d3c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 29f063da47dc26789493b2a83ad8e0cfa6885270
-ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
+ms.reviewer: acabello
+ms.openlocfilehash: d1f18c135f200b2a9e40b970871c73a0d98893a2
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82693294"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83429824"
 ---
 # <a name="desktop-analytics-faq"></a>Časté otázky k Desktop Analytics
 
@@ -51,6 +52,10 @@ Ano, použijte následující postup:
 
 - Na kartě **připojení pro Desktop Analytics** změňte **cílovou kolekci** nebo spravujte další kolekce.
 
+<!-- 7130169 -->
+> [!Note]
+> Do seznamu dalších kolekcí nezahrnujte více než 20 kolekcí. Buďte opatrní na celkovém počtu zařízení v každé kolekci. Vždy zahrňte [globální pilotní zahrnutí a vyloučení kolekcí](deploy-pilot.md#bkmk_GlobalPilot).  
+
 > [!IMPORTANT]  
 > Configuration Manager používá zásadu nastavení ke konfiguraci zařízení v cílové kolekci. Tato zásada zahrnuje nastavení diagnostických dat, která umožňují zařízením odesílat data společnosti Microsoft. Změna cílové kolekce nevrátí zpět zásady nastavení na zařízeních, která už nejsou v cílové kolekci. Pokud nechcete, aby zařízení pokračovala v odesílání diagnostických dat, [překonfigurujte zařízení](account-close.md#reconfigure-clients).
 
@@ -64,7 +69,7 @@ Další informace najdete v tématu [Aktualizace existujícího počítače s no
 
 ### <a name="can-i-change-from-bios-to-uefi-when-upgrading-windows"></a>Můžu při upgradu systému Windows změnit stav systému BIOS na rozhraní UEFI?
 
-Ano. Další informace najdete v tématu [převedení ze systému BIOS na rozhraní UEFI během místního upgradu](../osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md#convert-from-bios-to-uefi-during-an-in-place-upgrade).
+Yes. Další informace najdete v tématu [převedení ze systému BIOS na rozhraní UEFI během místního upgradu](../osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md#bkmk_ipu).
 
 ### <a name="can-i-use-desktop-analytics-with-windows-10-ltsc"></a>Můžu použít desktopovou analýzu s Windows 10 LTSC?
 
@@ -101,7 +106,7 @@ Diagnostická data Windows z vašich počítačů se šifrují, odesílají a zp
 
 ### <a name="can-i-use-update-compliance-together-with-desktop-analytics"></a>Můžu použít Update Compliance společně s desktopovou analýzou?
 
-Ano. Pokud v Azure Portal dnes používáte [Update Compliance](https://docs.microsoft.com/windows/deployment/update/update-compliance-get-started) , můžete to provést i po uplynutí ledna 2020.
+Yes. Pokud v Azure Portal dnes používáte [Update Compliance](https://docs.microsoft.com/windows/deployment/update/update-compliance-get-started) , můžete to provést i po uplynutí ledna 2020.
 
 Další informace najdete v [článku KB 4521815: vyřazení služby Windows Analytics na 31. ledna 2020](https://support.microsoft.com/help/4521815/windows-analytics-retirement).
 
@@ -144,7 +149,7 @@ Ano, následující funkce Windows Analytics byly buď vyřazené, nebo ještě 
 - Windows Information Protection
 - Podpora pro Windows Server
 
-## <a name="other"></a>Ostatní
+## <a name="other"></a>Jiné
 
 ### <a name="can-i-use-desktop-analytics-for-my-office-365-proplus-upgrades"></a><a name="bkmk_office"></a>Můžu použít desktopovou analýzu pro upgrady sady Office 365 ProPlus?
 

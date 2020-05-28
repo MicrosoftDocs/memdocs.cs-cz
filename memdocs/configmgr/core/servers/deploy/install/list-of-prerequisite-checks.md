@@ -2,7 +2,7 @@
 title: Kontroly požadovaných součástí
 titleSuffix: Configuration Manager
 description: Odkaz na konkrétní kontrolu předpokladů pro Configuration Manager aktualizace.
-ms.date: 04/01/2020
+ms.date: 05/07/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 6a279624-ffc9-41aa-8132-df1809708dd5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: d8fc9abfc9fc09bc3011a3fee30b258023d04c8a
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 9f0ed1d5913154d90242d1aa2a47efbcf7d22282
+ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718193"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82943786"
 ---
 # <a name="list-of-prerequisite-checks-for-configuration-manager"></a>Seznam kontrol požadovaných součástí pro Configuration Manager
 
@@ -727,7 +727,7 @@ Configuration Manager nevyžaduje rozšíření schématu služby Active Directo
 
 *Platí pro: lokalita centrální správy, primární lokalita*
 
-Balíčky nemají v názvu sdílené složky neplatné znaky, třeba `#`.
+Balíčky nemají v názvu sdílené složky neplatné znaky, třeba `#` .
 
 ### <a name="site-system-to-sql-server-communication"></a>Komunikace mezi systémem lokality a SQL Server
 
@@ -741,7 +741,7 @@ Balíčky nemají v názvu sdílené složky neplatné znaky, třeba `#`.
 
 Počínaje verzí 1810 ověřte, zda má databáze lokality nevyřízené položky dat sledování změn SQL.<!--SCCMDocs-pr issue 3023-->  
 
-Tuto kontrolu ověřte ručně spuštěním diagnostické uložené procedury v databázi lokality. Nejdřív vytvořte [diagnostické připojení](https://docs.microsoft.com/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators?view=sql-server-2017) k vaší databázi lokality. Nejjednodušším způsobem je použít Editor dotazů databázového stroje SQL Server Management Studio a připojit se k `admin:<instance name>`.
+Tuto kontrolu ověřte ručně spuštěním diagnostické uložené procedury v databázi lokality. Nejdřív vytvořte [diagnostické připojení](https://docs.microsoft.com/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators?view=sql-server-2017) k vaší databázi lokality. Nejjednodušším způsobem je použít Editor dotazů databázového stroje SQL Server Management Studio a připojit se k `admin:<instance name>` .
 
 V okně dotazu na vyhrazené připojení správce spusťte následující příkazy:
 
@@ -771,9 +771,9 @@ SELECT * FROM vLogs WHERE ProcedureName = 'spDiagChangeTracking'
 
 Když nainstalujete novou lokalitu, Configuration Manager automaticky nainstaluje SQL Server Native Client jako Distribuovatelný komponentu. Po instalaci lokality Configuration Manager neupgraduje SQL Server Native Client. Aktualizace SQL Server Native Client může vyžadovat restart, což může mít vliv na proces instalace lokality.
 
-Tato kontrolu zajistí, že má web podporovanou verzi SQL Native Client. Od verze 1810 je minimální verze SQL 2012 SP4 (`11.*.7001.0`).
+Tato kontrolu zajistí, že webový server má podporovanou verzi SQL Native Client. Kontrola požadovaných součástí neověřuje verzi SQL Native Client ve vzdálených systémech lokality.
 
-Tato SQL Native Client verze podporuje TLS 1,2. Další informace najdete v těchto článcích:
+Minimální verze je SQL 2012 SP4 ( `11.*.7001.0` ). Tato SQL Native Client verze podporuje TLS 1,2. Další informace najdete v následujících článcích:
 
 - [Podpora TLS 1,2 pro Microsoft SQL Server](https://support.microsoft.com/help/3135244/tls-1-2-support-for-microsoft-sql-server)  
 

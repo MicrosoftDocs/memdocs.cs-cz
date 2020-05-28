@@ -5,17 +5,17 @@ description: Přečtěte si, jak nakonfigurovat spolusprávu pro nová interneto
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 03/12/2020
+ms.date: 05/14/2020
 ms.topic: tutorial
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 7fb02a5c-e286-46b1-a972-6335c858429a
-ms.openlocfilehash: 75016e8028dde29c83ae7e7f5a23a1f6dbb4417f
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 67d86850dc0440481916984af8635d9e005044c6
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81712712"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83428623"
 ---
 # <a name="tutorial-enable-co-management-for-new-internet-based-devices"></a>Kurz: povolení spolusprávy pro nová zařízení na internetu
 
@@ -96,7 +96,7 @@ O tomto certifikátu:
 
 ### <a name="identify-a-unique-name-for-your-cloud-management-gateway-in-azure"></a>Identifikace jedinečného názvu pro bránu pro správu cloudu v Azure
 
-Když vyžádáte ověřovací certifikát serveru CMG, určíte, co musí být jedinečný název, abyste identifikovali *cloudovou službu (Classic)* v Azure. Ve výchozím nastavení používá veřejný cloud Azure *cloudapp.NET*a CMG je hostovaný v rámci domény cloudapp.NET jako * \<YourUniqueDnsName>. cloudapp.NET*.  
+Když vyžádáte ověřovací certifikát serveru CMG, určíte, co musí být jedinečný název, abyste identifikovali *cloudovou službu (Classic)* v Azure. Ve výchozím nastavení používá veřejný cloud Azure *cloudapp.NET*a CMG je hostovaný v rámci domény cloudapp.NET jako * \< YourUniqueDnsName>. cloudapp.NET*.  
 
 > [!TIP]  
 > V tomto kurzu používá **ověřovací certifikát serveru CMG** plně kvalifikovaný název domény, který končí na *contoso.com*.  Po vytvoření CMG nakonfigurujeme záznam kanonického názvu (CNAME) ve veřejném DNS naší organizace. Tento záznam vytvoří alias pro CMG, který se mapuje na název, který používáme ve veřejném certifikátu.  
@@ -206,9 +206,9 @@ Z primárního serveru lokality spusťte následující postup.
 
    - **Název aplikace**: zadejte popisný název aplikace, jako je třeba *Webová aplikace pro správu cloudu*.  
 
-   - **Adresa URL domovské stránky**: tuto hodnotu nepoužívá Configuration Manager, ale vyžaduje ji služba Azure AD. Ve výchozím nastavení je `https://ConfigMgrService`tato hodnota.  
+   - **Adresa URL domovské stránky**: tuto hodnotu nepoužívá Configuration Manager, ale vyžaduje ji služba Azure AD. Ve výchozím nastavení je tato hodnota `https://ConfigMgrService` .  
 
-   - **Identifikátor URI ID aplikace**: Tato hodnota musí být v TENANTOVI Azure AD jedinečná. Je v přístupovém tokenu, který používá klient Configuration Manager k vyžádání přístupu ke službě. Ve výchozím nastavení je `https://ConfigMgrService`tato hodnota.  
+   - **Identifikátor URI ID aplikace**: Tato hodnota musí být v TENANTOVI Azure AD jedinečná. Je v přístupovém tokenu, který používá klient Configuration Manager k vyžádání přístupu ke službě. Ve výchozím nastavení je tato hodnota `https://ConfigMgrService` .  
 
    Pak vyberte **Přihlásit**se a zadejte účet globálního správce služby Azure AD. Tyto přihlašovací údaje se Configuration Manager neukládají. Tento uživatel nevyžaduje oprávnění v Configuration Manager a nemusí být stejný účet, který spouští Průvodce službami Azure.
 
@@ -220,7 +220,7 @@ Z primárního serveru lokality spusťte následující postup.
 
    - **Název aplikace**: zadejte popisný název aplikace, jako je například *nativní klientská aplikace pro správu cloudu*.
 
-   - **Adresa URL odpovědi**: Tato hodnota není používána Configuration Manager, ale vyžaduje ji služba Azure AD. Ve výchozím nastavení je `https://ConfigMgrClient`tato hodnota.
+   - **Adresa URL odpovědi**: Tato hodnota není používána Configuration Manager, ale vyžaduje ji služba Azure AD. Ve výchozím nastavení je tato hodnota `https://ConfigMgrClient` .
    Pak vyberte **Přihlásit**se a zadejte účet globálního správce služby Azure AD. Podobně jako u webové aplikace se tyto přihlašovací údaje neukládají a nevyžadují oprávnění v Configuration Manager.
 
    Po přihlášení se zobrazí výsledky. Kliknutím na **OK** zavřete dialogové okno vytvořit klientskou aplikaci a vraťte se na stránku vlastností aplikace. Pak pokračujte výběrem **Další** .
@@ -237,11 +237,11 @@ Z primárního serveru lokality spusťte následující postup.
 
    1. Vyberte webovou aplikaci, kterou jste vytvořili.
 
-   2. V **nastavení > požadovaná oprávnění**vyberte **udělit oprávnění**a pak vyberte **Ano**.  
+   2. Přejít na **oprávnění rozhraní API** > vyberte **udělit souhlas správce pro** <your tenant> a pak vyberte **Ano**.  
 
    3. Vyberte aplikaci nativního klienta, kterou jste vytvořili.
 
-   4. V **nastavení > požadovaná oprávnění**vyberte **udělit oprávnění**a pak vyberte **Ano**.  
+   4. Přejít na **oprávnění rozhraní API** > vyberte **udělit souhlas správce pro** <your tenant> a pak vyberte **Ano**.
 
 9. V konzole Configuration Manager klikněte na **správa > přehled > Cloud Services > služby Azure**a vyberte svou službu Azure. Pak klikněte pravým tlačítkem na **Azure Active Directory zjišťování uživatelů** a vyberte **Spustit úplné zjišťování**. Kliknutím na **tlačítko Ano** potvrďte akci.  
 
@@ -323,7 +323,7 @@ Umožňuje nakonfigurovat lokalitu tak, aby podporovala rozšířené protokoly 
 
 3. Nyní přejděte do části **správa > přehled > Konfigurace lokality > servery a role systému lokality** a vyberte server s bodem správy, do kterého chcete nainstalovat bod připojení brány pro správu cloudu.  
 
-4. Vyberte **Přidat role systému lokality**a pak **Další**> **Další.**  
+4. Vyberte **Přidat role systému lokality**a pak **Další** >  **Další**.  
 
 5. Vyberte **bod připojení brány pro správu cloudu** a pokračujte výběrem **Další** .  
 
@@ -351,7 +351,7 @@ Pomocí nastavení klienta nakonfigurujete klienty Configuration Manager ke komu
 
    - **Povolení přístupu k distribučnímu bodu cloudu**
 
-4. Na stránce **zásady klienta** nastavte **možnost povolit žádosti o zásady uživatele od internetových klientů** = **Ano**.
+4. Na stránce **zásady klienta** nastavte **možnost povolit žádosti o zásady uživatele od internetových klientů**  =  **Ano**.
 
 5. Uložte tuto konfiguraci výběrem tlačítka **OK**.
 
@@ -383,11 +383,11 @@ Pak když se dřív nespravované zařízení s Windows 10 zaregistruje do Intun
 
 ### <a name="create-an-intune-app-to-install-the-configuration-manager-client"></a>Vytvoření aplikace Intune pro instalaci klienta Configuration Manager
 
-1. Z primárního serveru lokality se přihlaste k [Azure Portal](https://portal.azure.com/) a v **> klientských aplikacích Intune > aplikace > přidat**.
+1. Z primárního serveru lokality se přihlaste do [centra pro správu služby Microsoft Endpoint Manager](https://endpoint.microsoft.com) a v části **aplikace**  >  **všechny aplikace**  >  **přidejte**.
 
-2. Pro **Typ aplikace**: vyberte **obchodní aplikaci**.
+2. Jako typ aplikace vyberte **obchodní aplikaci** v části **jiné**.
 
-3. Vyberte **soubor balíčku aplikace**a pak přejděte do umístění Configuration Manager souboru **CCMSetup. msi**a pak vyberte **otevřít > ok**.
+3. V **souboru balíčku aplikace**vyhledejte umístění souboru Configuration Manager **CCMSetup. msi**a pak vyberte **Otevřít > OK**.
 Například *C:\Program Files\Microsoft Configuration Manager\bin\i386\ccmsetup.msi*
 
 4. Vyberte **informace o aplikaci**a pak zadejte následující podrobnosti:
@@ -395,7 +395,7 @@ Například *C:\Program Files\Microsoft Configuration Manager\bin\i386\ccmsetup.
 
    - **Vydavatel**: Microsoft  
 
-   - **Argumenty příkazového řádku**: * \<zadejte příkaz **CCMSETUPCMD** Command line. Můžete použít příkazový řádek, který jste uložili* na stránce povolení v *Průvodci konfigurací spolusprávy. Tento příkazový řádek obsahuje názvy vaší cloudové služby a další hodnoty, které zařízením umožňují nainstalovat Configuration Manager klientský software. >*  
+   - **Argumenty příkazového řádku**: * \< Zadejte příkaz **CCMSETUPCMD** Command line. Můžete použít příkazový řádek, který jste uložili* na stránce povolení v *Průvodci konfigurací spolusprávy. Tento příkazový řádek obsahuje názvy vaší cloudové služby a další hodnoty, které zařízením umožňují nainstalovat Configuration Manager klientský software. >*  
 
      Struktura příkazového řádku by se měla podobat tomuto příkladu pouze pomocí parametrů CCMSETUPCMD a SMSSiteCode:  
 
@@ -412,11 +412,11 @@ Například *C:\Program Files\Microsoft Configuration Manager\bin\i386\ccmsetup.
 
 Následující postup nasadí aplikaci pro instalaci klienta Configuration Manager, který jste vytvořili v předchozím postupu.
 
-1. Přihlaste se k webu [Azure Portal](https://portal.azure.com/).  Vyberte **všechny služby > Intune > klientské aplikace > aplikace**a pak vyberte **bootstrap instalace klienta nástroje ConfigMgr**, aplikaci, kterou jste vytvořili pro nasazení klienta Configuration Manager.  
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://endpoint.microsoft.com). Vyberte **aplikace**  >  **všechny aplikace** a pak vyberte **bootstrap instalace klienta nástroje ConfigMgr**, aplikaci, kterou jste vytvořili pro nasazení klienta Configuration Manager.  
 
-2. Vyberte **přiřazení > přidat skupinu**.  Podle **potřeby**nastavte **Typ přiřazení** a pak použijte **zahrnuté skupiny** a **Vyloučené skupiny** , abyste nastavili skupiny Azure Active Directory (AD), které mají uživatele a zařízení, které chcete zúčastnit společné správy.  
+2. Klikněte na **vlastnosti** a pak na **Upravit** pro **přiřazení**. V části **požadovaná** přiřazení vyberte **Přidat skupinu** , abyste nastavili skupiny Azure Active Directory (AD), které mají uživatele a zařízení, které chcete zapojit do společné správy.  
 
-3. Vyberte **OK** a pak konfiguraci **uložte** .
+3. Vyberte **zkontrolovat + Uložit** a pak konfiguraci **uložte** .
 Tuto aplikaci teď vyžadují uživatelé a zařízení, ke kterým jste jim přiřadili. Poté, co aplikace nainstaluje klienta Configuration Manager do zařízení, je spravován spolusprávou.
 
 ## <a name="summary"></a>Souhrn

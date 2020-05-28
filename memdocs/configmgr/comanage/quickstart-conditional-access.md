@@ -1,5 +1,5 @@
 ---
-title: Podmíněný přístup se spolusprávou
+title: Podmíněný přístup s spolusprávou
 titleSuffix: Configuration Manager
 description: Řízení přístupu uživatelů k prostředkům organizace na základě pravidel dodržování předpisů z Intune
 ms.date: 05/13/2019
@@ -10,14 +10,14 @@ ms.assetid: 4cf640b3-610c-4c3c-b966-c62e9f5654ff
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d35f36b6578359f62f21b4e2208a70ace22cf0d9
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 94f002ecd12d08ffd5f3d4767e315e0d83714929
+ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81711501"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83764046"
 ---
-# <a name="conditional-access-with-co-management"></a>Podmíněný přístup se spolusprávou
+# <a name="conditional-access-with-co-management"></a>Podmíněný přístup s spolusprávou
 
 Podmíněný přístup zajistí, že přístup k prostředkům organizace na důvěryhodných zařízeních pomocí důvěryhodných aplikací má jenom důvěryhodní uživatelé. Je vytvořená od začátku v cloudu. Bez ohledu na to, jestli spravujete zařízení pomocí Intune nebo rozšíření nasazení Configuration Manager se spolusprávou, funguje stejným způsobem.
 
@@ -108,11 +108,11 @@ Podmíněný přístup se dá snadno použít, když [povolíte spolusprávu](ho
 
 Další informace o použití podmíněného přístupu najdete v následujících článcích: 
 
-- [Podmíněný přístup v Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)  
+- [Podmíněný přístup ve službě Azure AD](https://docs.microsoft.com/azure/active-directory/conditional-access/overview)  
 
 - [Zásady dodržování předpisů zařízeními v Intune](https://docs.microsoft.com/intune/device-compliance)  
 
-- [Podmíněný přístup na základě aplikace s využitím Intune](https://docs.microsoft.com/intune/app-based-conditional-access-intune)  
+- [Podmíněný přístup na základě aplikace s Intune](https://docs.microsoft.com/intune/app-based-conditional-access-intune)  
 
 > [!Note]  
 > Funkce podmíněného přístupu budou k dispozici okamžitě pro zařízení připojená k hybridní službě Azure AD. Mezi tyto funkce patří Multi-Factor Authentication a hybridní řízení přístupu ke službě Azure AD. Důvodem je to, že jsou založené na vlastnostech Azure AD. Pokud chcete využít hodnocení na základě konfigurace z Intune a Configuration Manager, povolte spolusprávu. Tato konfigurace poskytuje přístup k řízení přístupu přímo z Intune pro vyhovující zařízení. Poskytuje taky funkci vyhodnocení zásad dodržování předpisů pro Intune.  

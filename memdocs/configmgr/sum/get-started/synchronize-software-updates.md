@@ -2,7 +2,7 @@
 title: Správa synchronizace aktualizací softwaru
 titleSuffix: Configuration Manager
 description: Pomocí těchto kroků můžete naplánovat synchronizaci aktualizací softwaru, ručně spustit synchronizaci aktualizací softwaru a monitorovat synchronizaci aktualizací softwaru.
-ms.date: 12/20/2018
+ms.date: 05/11/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -10,12 +10,12 @@ ms.assetid: ea8698c4-9df5-4cf5-8b62-ab93115b4769
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: d1b47965fa5cc36b0c0eb6d47c2214d1dceb8ee8
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d36c6a02868b8ccde9538a286135b2ad1ce08f43
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81712677"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83269044"
 ---
 #  <a name="synchronize-software-updates"></a><a name="BKMK_SUMSync"></a>Synchronizovat aktualizace softwaru
 
@@ -56,7 +56,7 @@ Pro ruční zahájení synchronizace aktualizací softwaru použijte následují
 
 2. V pracovním prostoru Softwarová knihovna rozbalte možnost **Aktualizace softwaru** a klikněte na **Všechny aktualizace softwaru** nebo **Skupiny aktualizací softwaru**.  
 
-3. Na kartě **Domů** v části **Vytvořit** klikněte na **Synchronizovat softwarové aktualizace**. Kliknutím na tlačítko **Ano** v dialogovém okně potvrďte, že chcete proces synchronizace zahájit.  
+3. Na kartě **Domů** ve skupině **všechny aktualizace softwaru** klikněte na možnost **synchronizovat aktualizace softwaru**. Kliknutím na tlačítko **Ano** v dialogovém okně potvrďte, že chcete proces synchronizace zahájit.  
 
    Po zahájení procesu synchronizace v bodě aktualizace softwaru můžete monitorovat proces synchronizace z konzoly Configuration Manager pro všechny body aktualizace softwaru ve vaší hierarchii. Pomocí následujícího postupu monitorujte proces synchronizace aktualizací softwaru.  
 

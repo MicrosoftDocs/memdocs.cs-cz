@@ -10,12 +10,12 @@ ms.assetid: 35e237b6-9f7b-4189-90e7-8eca92ae7d3d
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 24c3a72eacea6446fb82785a25b0318d8cad0471
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 3c52008089a6d23d5c4efe44f0970bb186eb334a
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81711592"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904633"
 ---
 # <a name="supported-sql-server-versions-for-configuration-manager"></a>Podporované verze SQL Server pro Configuration Manager
 
@@ -65,7 +65,7 @@ V hierarchii s více lokalitami můžou různé lokality používat k hostován�
 - Používané verze SQL Server zůstávají v podpoře Microsoftu.
 - SQL Server podporuje replikaci mezi dvěma verzemi SQL Server. Další informace najdete v tématu [zpětné kompatibility replikace SQL Server](https://docs.microsoft.com/sql/relational-databases/replication/replication-backward-compatibility).
 
-Pro SQL Server 2016 a předchozí se podpora každé verze SQL a aktualizace Service Pack řídí [zásadami životního cyklu Microsoftu](https://aka.ms/sqllifecycle). Podpora pro konkrétní aktualizaci Service Pack SQL Server zahrnuje kumulativní aktualizace, pokud nepřeruší zpětnou kompatibilitu se základní verzí aktualizace Service Pack. Počínaje SQL Server 2017 se aktualizace Service Pack neuvolní, protože se řídí [moderním modelem údržby](https://blogs.msdn.microsoft.com/sqlreleaseservices/announcing-the-modern-servicing-model-for-sql-server/). Tým SQL Server doporučuje průběžnou a [aktivní instalaci kumulativních aktualizací](https://blogs.msdn.microsoft.com/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism/) , jakmile budou k dispozici.
+Pro SQL Server 2016 a předchozí se podpora každé verze SQL a aktualizace Service Pack řídí [zásadami životního cyklu Microsoftu](https://aka.ms/sqllifecycle). Podpora pro konkrétní aktualizaci Service Pack SQL Server zahrnuje kumulativní aktualizace, pokud nepřeruší zpětnou kompatibilitu se základní verzí aktualizace Service Pack. Počínaje SQL Server 2017 se aktualizace Service Pack neuvolní, protože se řídí [moderním modelem údržby](https://docs.microsoft.com/archive/blogs/sqlreleaseservices/announcing-the-modern-servicing-model-for-sql-server). Tým SQL Server doporučuje průběžnou a [aktivní instalaci kumulativních aktualizací](https://docs.microsoft.com/archive/blogs/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism) , jakmile budou k dispozici.
 
 Pokud není uvedeno jinak, jsou podporovány následující verze SQL Server se všemi aktivními verzemi Configuration Manager. Pokud se přidá podpora pro novou verzi SQL Server, poznamenala se Configuration Manager verze, která tuto podporu přidává. Podobně, pokud je podpora zastaralá, vyhledejte podrobnosti o ovlivněných verzích Configuration Manager.
 
@@ -109,7 +109,7 @@ SQL Server verze 2019 zaznamená následující chybu:
 
 `Microsoft SQL Server reported SQL message 596, severity 21: [HY000][596][Microsoft][SQL Server Native Client 11.0][SQL Server]Cannot continue the execution because the session is in the kill state.`
 
-V adresáři protokolu SQL se zobrazí taky výpisy stavu systému (`.mdump` soubory), které jsou `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Log`ve výchozím nastavení.
+V adresáři protokolu SQL se zobrazí taky výpisy stavu systému ( `.mdump` soubory), které jsou ve výchozím nastavení `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Log` .
 
 ### <a name="sql-server-2017-standard-enterprise"></a>SQL Server 2017: Standard, Enterprise
 

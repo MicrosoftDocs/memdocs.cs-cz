@@ -2,7 +2,7 @@
 title: Monitorování nasazení operačních systémů
 titleSuffix: Configuration Manager
 description: Pro usnadnění monitorování objektů nasazení operačního systému poskytuje konzola Configuration Manager výstrahy, sestavy a různé indikátory stavu.
-ms.date: 10/06/2016
+ms.date: 05/04/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 08085d94-295c-432f-b5e3-9736bce0193b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9d0a430a1010611bc6a7e0871e8c59ca3d1f8de7
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7afab9fbbb443b2f9fb4af15a3805c0b7df7a014
+ms.sourcegitcommit: 14d7dd0a99ebd526c9274d5781c298c828323ebf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81723828"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82802162"
 ---
 # <a name="monitor-operating-system-deployments-in-configuration-manager"></a>Monitorování nasazení operačního systému v Configuration Manager
 
@@ -45,6 +45,9 @@ Konzola Configuration Manager poskytuje následující možnosti, které vám po
 3.  Klikněte na pořadí úkolů, u kterého chcete monitorovat stav nasazení.  
 
 4.  Na kartě **Domů** ve skupině **Nasazení** klikněte na možnost **Zobrazit stav**.  
+
+> [!NOTE]  
+> Po zahájení upgradu se vygeneruje stavová zpráva 52200. Obsahuje uživatele, který provedl upgrade.  
 
 ##  <a name="operating-system-deployment-reports"></a><a name="BKMK_TSReports"></a> Sestavy nasazení operačního systému  
  Je dostupná řada předdefinovaných sestav nasazení operačního systému. Ty jsou rozdělené do několika kategorií a dají se použít k zjištění určitých informací o migraci stavu a nasazeních pořadí úkolů. Kromě použití předem konfigurovaných sestav rovněž můžete vytvořit vlastní sestavy aktualizací softwaru tak, aby vyhovovaly potřebám vašeho podniku. Další informace najdete v tématu [operace a údržba pro vytváření sestav](../../core/servers/manage/operations-and-maintenance-for-reporting.md).  

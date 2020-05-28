@@ -5,17 +5,17 @@ description: Configuration Manager synchronizuje aktualizace klientů Office 365
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 04/21/2020
+ms.date: 05/20/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: eac542eb-9aa1-4c63-b493-f80128e4e99b
-ms.openlocfilehash: 4967b8b289d54a6355cb0a1e6454d5fac469a733
-ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
+ms.openlocfilehash: 09d8f0a37e9ed4308c5c8ffcf005c788612be235
+ms.sourcegitcommit: dba89b827d7f89067dfa75a421119e0c973bb747
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82110402"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83709498"
 ---
 # <a name="manage-office-365-proplus-with-configuration-manager"></a>Správa Office 365 ProPlus pomocí Configuration Manageru
 
@@ -58,18 +58,18 @@ Pro předchozí verze Configuration Manager musíte provést následující krok
 ### <a name="deploy-office-365-apps-using-configuration-manager-version-1806-or-higher"></a>Nasaďte aplikace Office 365 pomocí Configuration Manager verze 1806 nebo vyšší: 
 Od verze Configuration Manager 1806 se nástroj pro přizpůsobení sady Office integruje s instalačním programem sady Office 365 v konzole Configuration Manager. Při vytváření nasazení pro Office 365 můžete dynamicky konfigurovat nejnovější nastavení spravovatelnosti Office. <!--1358149-->
 
-1. V konzole Configuration Manager přejděte do části > **Přehled** >  **knihovny softwaru****Office 365 Správa klientů**.
+1. V konzole Configuration Manager přejděte do části Přehled **knihovny softwaru**  >  **Overview**  >  **Office 365 Správa klientů**.
 2. V pravém horním podokně klikněte na **instalační program Office 365** . Otevře se Průvodce instalací klienta sady Office 365.
 3. Na stránce **nastavení aplikace** zadejte název a popis aplikace, zadejte umístění pro stažení souborů a potom klikněte na tlačítko **Další**. Umístění musí být zadané jako &#92;&#92;*server*&#92;*Shared*.
 4. Na stránce **Nastavení Office** klikněte na **Přejít k nástroji pro přizpůsobení Office**. Otevře se [Nástroj pro přizpůsobení Office pro kliknutí na spuštění](https://config.office.com).
 5. Nakonfigurujte požadovaná nastavení pro instalaci sady Office 365. Po dokončení konfigurace klikněte na **Odeslat** v pravém horním rohu stránky. 
-6. Na stránce **nasazení** určete, zda chcete nasadit nyní nebo později. Pokud se rozhodnete k nasazení později, můžete aplikaci najít v**aplikacích** > **pro správu** > aplikací v **knihovně softwaru**.  
+6. Na stránce **nasazení** určete, zda chcete nasadit nyní nebo později. Pokud se rozhodnete k nasazení později, můžete aplikaci najít v **Software Library**  >  **aplikacích pro správu aplikací**v knihovně softwaru  >  **Applications**.  
 7. Potvrďte nastavení na stránce **Souhrn** . 
 8. Klikněte na tlačítko **Další** a po dokončení Průvodce instalací klienta sady Office 365 klikněte na tlačítko **Zavřít** . 
 
 ### <a name="deploy-office-365-apps-using-configuration-manager-version-1802-and-prior"></a>Nasaďte aplikace Office 365 pomocí Configuration Manager verze 1802 a předchozí:
 
-1. V konzole Configuration Manager přejděte do části > **Přehled** >  **knihovny softwaru****Office 365 Správa klientů**.
+1. V konzole Configuration Manager přejděte do části Přehled **knihovny softwaru**  >  **Overview**  >  **Office 365 Správa klientů**.
 2. V pravém horním podokně klikněte na **instalační program Office 365** . Otevře se Průvodce instalací klienta sady Office 365.
 3. Na stránce **nastavení aplikace** zadejte název a popis aplikace, zadejte umístění pro stažení souborů a potom klikněte na tlačítko **Další**. Umístění musí být zadané jako &#92;&#92;*server*&#92;*Shared*.
 4. Na stránce **importovat nastavení klienta** vyberte, zda chcete importovat nastavení klienta sady Office 365 z existujícího konfiguračního souboru XML nebo ručně zadat nastavení. Až budete hotovi, klikněte na **Další** .  
@@ -83,7 +83,7 @@ Od verze Configuration Manager 1806 se nástroj pro přizpůsobení sady Office 
 7. Na stránce **nasazení** vyberte, zda chcete aplikaci nasadit, a poté klikněte na tlačítko **Další**. <br/>Pokud se rozhodnete nenasadit balíček v průvodci, přejděte ke kroku 9.
 8. Nakonfigurujte zbývající stránky průvodce jako při typickém nasazení aplikace. Podrobnosti najdete v tématu [Vytvoření a nasazení aplikace](../../apps/get-started/create-and-deploy-an-application.md).
 9. Dokončete průvodce.
-10. Můžete nasadit nebo upravit aplikaci z **knihovny** > **Přehled** > **aplikací****pro správu** > aplikací.    
+10. Můžete nasadit nebo upravit aplikaci z **knihovny softwaru**  >  **Přehled**  >  **aplikací pro správu aplikací**  >  **Applications**.    
 
 Po vytvoření a nasazení aplikací Office 365 pomocí instalačního programu sady Office 365 nebude Configuration Manager ve výchozím nastavení spravovat aktualizace sady Office. Pokud chcete, aby klienti Office 365 dostávali aktualizace z Configuration Manager, přečtěte si téma [nasazení aktualizací Office 365 pomocí Configuration Manager](#deploy-office-365-updates).
 
@@ -96,7 +96,7 @@ Po nasazení aplikací Office 365 můžete vytvořit pravidla automatického nas
 
 Můžete procházet statistiky dodržování předpisů a zjistit, která zařízení vyžadují konkrétní aktualizaci softwaru Office 365. Chcete-li zobrazit seznam zařízení, potřebujete oprávnění k zobrazení aktualizací a kolekcí, do kterých zařízení patří. Přechod k podrobnostem v seznamu zařízení:
 
-1. Přejít na **Software Library** > **Office 365 Update Management** > **Office 365 Updates**.
+1. Přejít na **Software Library**  >  **Office 365**  >  **Update Management Office 365 Updates**.
 1. Vyberte jakoukoli aktualizaci, kterou vyžaduje aspoň jedno zařízení.
 1. Podívejte se na kartu **Souhrn** a v části **Statistika**Najděte výsečový graf.
 1. Pokud chcete přejít k podrobnostem seznamu zařízení, zaškrtněte políčko **Zobrazit požadovaný** hypertextový odkaz vedle výsečového grafu.
@@ -114,7 +114,7 @@ Pomocí následujících kroků nasaďte aktualizace Office 365 s Configuration 
 
     **Metoda 1**: od verze Configuration Manager 1606 můžete použít nastavení klienta Configuration Manager ke správě klientského agenta Office 365. Po nakonfigurování tohoto nastavení a nasazení aktualizací Office 365 komunikuje klientský Agent Configuration Manager s agentem klienta Office 365 ke stažení aktualizací z distribučního bodu a jejich instalaci. Configuration Manager využívá inventarizaci nastavení klienta Office 365 ProPlus.    
 
-      1. V konzole Configuration Manager klikněte na **Správa** > **Přehled** > **nastavení klienta**.  
+      1. V konzole Configuration Manager klikněte na **Správa**  >  **Přehled**  >  **nastavení klienta**.  
 
       2. Otevřete příslušné nastavení zařízení a povolte agenta klienta. Další informace o výchozích a vlastních nastaveních klienta najdete v tématu [Konfigurace nastavení klienta](../../core/clients/deploy/configure-client-settings.md).  
 
@@ -125,7 +125,7 @@ Pomocí následujících kroků nasaďte aktualizace Office 365 s Configuration 
 4. [Nasaďte aktualizace Office 365](deploy-software-updates.md) na klienty.
 
 > [!Important]
-> - Configuration Manager počínaje verzí 1706 se aktualizace klienta sady Office 365 přesunuly do uzlu aktualizace sady Office 365 pro 365 **správu** >klientů**aktualizace** sady Office. Tento přesun nebude mít vliv na aktuální konfiguraci služby ADR. 
+> - Configuration Manager počínaje verzí 1706 se aktualizace klienta sady Office 365 přesunuly do uzlu aktualizace sady Office 365 pro 365 **správu klientů**  > **aktualizace** sady Office. Tento přesun nebude mít vliv na aktuální konfiguraci služby ADR. 
 > - Před Configuration Manager verze 1610 musíte stáhnout a nasadit aktualizace ve stejných jazycích nakonfigurovaných na klientech Office 365. Řekněme například, že máte klienta Office 365 nakonfigurovaný s jazyky en-US a de-de. Na serveru lokality stahujete a nasadíte jenom obsah en-US pro příslušnou aktualizaci Office 365. Když uživatel spustí instalaci z centra softwaru pro tuto aktualizaci, aktualizace přestane při stahování obsahu pro de-de. 
 
 > [!NOTE]  
@@ -184,7 +184,7 @@ Následující postup použijte v bodě aktualizace softwaru v lokalitě centrá
 > Konfigurace dalších jazyků aktualizace Office 365 je nastavení pro celá lokalita. Po přidání jazyků pomocí následujícího postupu jsou všechny aktualizace sady Office 365 staženy v těchto jazycích a jazyky, které vyberete na stránce **Výběr jazyka** v průvodci stáhnout aktualizace softwaru nebo nasadit Průvodce aktualizacemi softwaru.
 
 1. Na příkazovém řádku zadejte program *WBEMTest* jako administrativní uživatel a otevřete rozhraní WMI (Windows Management Instrumentation) Tester.
-2. Klikněte na **připojit**a zadejte *root\sms\ site_&lt;siteCode&gt;*.
+2. Klikněte na **připojit**a zadejte *root\sms\ site_ &lt; siteCode &gt; *.
 3. Klikněte na možnost **dotaz**a poté spusťte následující dotaz: *vyberte &#42; z SMS_SCI_Component, kde "Component" = "SMS_WSUS_CONFIGURATION_MANAGER"*  
    ![Dotaz rozhraní WMI](../media/1-wmiquery.png)
 4. V podokně výsledků dvakrát klikněte na objekt s kódem lokality pro lokalitu centrální správy nebo samostatnou primární lokalitu.
@@ -197,7 +197,7 @@ Následující postup použijte v bodě aktualizace softwaru v lokalitě centrá
  
    ![Přidat jazyky v editoru vlastností](../media/4-props.png)  
 9. Klikněte na tlačítko **Zavřít**, klikněte na tlačítko **Zavřít**, klikněte na tlačítko **Uložit vlastnost**a klikněte na **Uložit objekt** (Pokud kliknete na tlačítko **Zavřít** , hodnoty se zahodí). Klikněte na **Zavřít**a pak kliknutím na **konec** ukončete rozhraní WMI (Windows Management Instrumentation) Tester.
-10. V konzole Configuration Manager klikněte na > **Přehled** >  **knihovny softwaru****Office 365 aktualizace pro správu** > klientů**sady Office 365**.
+10. V konzole Configuration Manager klikněte na přehled **knihovny softwaru**  >  **Overview**  >  **Office 365 aktualizace pro správu klientů**  >  **sady Office 365**.
 11. Když teď stáhnete aktualizace Office 365, stáhnou se aktualizace v jazycích, které jste vybrali v průvodci a nakonfigurovali v tomto postupu. Chcete-li ověřit, zda jsou aktualizace staženy ve správných jazycích, pro aktualizaci použijte zdroj balíčku a vyhledejte soubory s kódem jazyka v názvu souboru.  
     ![Názvy souborů s dalšími jazyky](../media/5-verification.png)
 
@@ -207,7 +207,7 @@ Při instalaci aktualizací Office 365 pomocí kroku pořadí úkolů [instalova
 Chcete-li zajistit, aby byl kanál aktualizací nastaven tak, aby byly nasazené aktualizace správně zjištěny, použijte jednu z následujících metod:
 
 **Metoda 1:**
-1. V počítači se stejnou verzí Office 365 ProPlus otevřete Plánovač úloh (Taskschd. msc) a Identifikujte úlohu automatické aktualizace Office 365. Obvykle se nachází v části **Plánovač úloh Library** >**Microsoft**>**Office**.
+1. V počítači se stejnou verzí Office 365 ProPlus otevřete Plánovač úloh (Taskschd. msc) a Identifikujte úlohu automatické aktualizace Office 365. Obvykle se nachází v části **Plánovač úloh Library**  > **Microsoft** > **Office**.
 2. Klikněte pravým tlačítkem na úlohu automatické aktualizace a vyberte **vlastnosti**.
 3. Přejděte na kartu **Akce** a klikněte na **Upravit**. Zkopírujte příkaz a všechny argumenty. 
 4. V konzole Configuration Manager upravte pořadí úkolů.
@@ -216,7 +216,7 @@ Chcete-li zajistit, aby byl kanál aktualizací nastaven tak, aby byly nasazené
 7. Klikněte na tlačítko **OK**. 
 
 **Metoda 2:**
-1. V počítači se stejnou verzí Office 365 ProPlus otevřete Plánovač úloh (Taskschd. msc) a Identifikujte úlohu automatické aktualizace Office 365. Obvykle se nachází v části **Plánovač úloh Library** >**Microsoft**>**Office**.
+1. V počítači se stejnou verzí Office 365 ProPlus otevřete Plánovač úloh (Taskschd. msc) a Identifikujte úlohu automatické aktualizace Office 365. Obvykle se nachází v části **Plánovač úloh Library**  > **Microsoft** > **Office**.
 2. V konzole Configuration Manager upravte pořadí úkolů.
 3. Přidejte nový krok **Spustit příkazový řádek** před krok **instalovat aktualizace softwaru** v pořadí úkolů. Pokud je sada Office 365 ProPlus nainstalována jako součást stejného pořadí úloh, zajistěte, aby tento krok běžel po instalaci sady Office.
 4. Do pole Příkazový řádek zadejte příkazový řádek, který spustí naplánovanou úlohu. Níže uvedený příklad zajistí, že řetězec v uvozovkách odpovídá cestě a názvu úlohy identifikované v kroku 1.  
@@ -224,7 +224,33 @@ Chcete-li zajistit, aby byl kanál aktualizací nastaven tak, aby byly nasazené
     Příklad: `schtasks /run /tn "\Microsoft\Office\Office Automatic Updates 2.0"`
 5. Klikněte na tlačítko **OK**. 
 
-## <a name="change-the-update-channel-after-you-enable-office-365-clients-to-receive-updates-from-configuration-manager"></a><a name="bkmk_channel"></a>Pokud chcete, aby klienti Office 365 dostávali aktualizace z Configuration Manager, změňte kanál pro aktualizaci.
+## <a name="update-channels-for-microsoft-365-apps"></a><a name="bkmk_channel"></a>Aktualizace kanálů pro aplikace Microsoft 365
+<!--6298093-->
+Až se sada Office 365 ProPlus přejmenovala na **Microsoft 365 aplikace pro podniky**, přejmenují se i kanály aktualizací. Pokud k nasazení aktualizací použijete pravidlo automatického nasazení (ADR), budete muset provést změny v pravidla automatického nasazení, pokud se spoléhají na vlastnost **title** . Důvodem je, že se mění název balíčků aktualizací v katalogu Microsoft Update.
+
+V současné době název balíčku aktualizací pro Office 365 ProPlus začíná "aktualizace klienta Office 365", jak je vidět v následujícím příkladu:
+
+&nbsp;&nbsp;Aktualizace klienta Office 365 – půlroční kanál verze 1908 pro edici x64 (Build 11929,20648)
+
+V případě balíčků aktualizací vydaných v systémech a po 9. června začíná nadpisem "Microsoft 365 Apps Update", jak je vidět v následujícím příkladu:
+
+&nbsp;&nbsp;Aktualizace Microsoft 365 Apps – půlroční kanál verze 1908 pro edici x64 (Build 11929,50000)
+</br>
+</br>
+
+|Název nového kanálu|Název předchozího kanálu|
+|--|--|
+|Půlroční podnikový kanál|Půlroční kanál|
+|Půlroční podnikový kanál (Preview)|Půlroční kanál (vybraní uživatelé)|
+|Měsíční podnikový kanál|NA|
+|Aktuální kanál|Měsíční kanál|
+|Aktuální kanál (Preview)|Měsíční kanál (cílený)|
+|Beta kanál|Obchodování|
+
+Další informace o tom, jak upravit pravidla automatického nasazení, najdete v tématu věnovaném [automatickému nasazování aktualizací softwaru](automatically-deploy-software-updates.md). Další informace o změně názvu najdete v tématu [Změna názvu pro Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change).
+
+
+## <a name="change-the-update-channel-after-you-enable-office-365-clients-to-receive-updates-from-configuration-manager"></a>Pokud chcete, aby klienti Office 365 dostávali aktualizace z Configuration Manager, změňte kanál pro aktualizaci.
 
 Po nasazení Office 365 ProPlus můžete změnit kanál aktualizace pomocí Zásady skupiny nebo nástroje pro nasazení Office (ODT). Můžete například přesunout zařízení z pololetního kanálu na půlroční kanál (cílený). Při změně kanálu se Office aktualizuje automaticky bez nutnosti přeinstalovat nebo stáhnout plnou verzi. Další informace najdete v tématu [Změna kanálu aktualizace Office 365 ProPlus pro zařízení ve vaší organizaci](https://docs.microsoft.com//deployoffice/change-update-channels).
 

@@ -10,12 +10,12 @@ ms.assetid: c631197d-7daa-4faa-9e22-980cd6d604c2
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 21279eb2f7d7962d1286d60a599411912d38313a
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: da2fe2ad66617ffb5ad3058011f111b0aaf9e9ae
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718599"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82903915"
 ---
 # <a name="support-center-for-configuration-manager"></a>Support Center pro Configuration Manager
 
@@ -52,7 +52,7 @@ Počínaje verzí 1906 je **OneTrace** nový prohlížeč protokolů s nástroje
 
 ### <a name="powershell-cmdlets"></a>Rutiny prostředí PowerShell
 
-Support Center obsahuje taky [rutiny Windows PowerShellu](https://go.microsoft.com/fwlink/?linkid=397830). Pomocí těchto rutin můžete vytvořit vzdálené připojení k jinému Configuration Manager klientovi, nakonfigurovat možnosti shromažďování dat a spustit shromažďování dat.
+Support Center zahrnuje také [rutiny PowerShellu](https://docs.microsoft.com/powershell/sccm/overview?view=sccm-ps). Pomocí těchto rutin můžete vytvořit vzdálené připojení k jinému Configuration Manager klientovi, nakonfigurovat možnosti shromažďování dat a spustit shromažďování dat.
 
 
 ## <a name="prerequisites"></a>Požadavky
@@ -66,7 +66,7 @@ Do serveru nebo klientského počítače, na který nainstalujete Support Center
 
 ## <a name="install"></a>Instalace
 
-Na serveru lokality vyhledejte instalační program nástroje Support Center v následující cestě: `cd.latest\SMSSETUP\Tools\SupportCenter\SupportCenterInstaller.msi`.
+Na serveru lokality vyhledejte instalační program nástroje Support Center v následující cestě: `cd.latest\SMSSETUP\Tools\SupportCenter\SupportCenterInstaller.msi` .
 
 Po instalaci nástroje vyhledejte v nabídce Start ve skupině nástroje **Microsoft System Center** následující položky:  
 
@@ -86,7 +86,7 @@ Pokud už máte nainstalovanou starší verzi nástroje Support Center, nový in
 
 ### <a name="remote-connections-must-include-computer-name-or-domain-as-part-of-the-user-name"></a>Vzdálená připojení musí jako součást uživatelského jména obsahovat název počítače nebo doménu.
 
-Pokud se připojíte ke vzdálenému klientovi z nástroje Support Center, musíte při navazování připojení zadat název počítače nebo název domény pro uživatelský účet. Pokud používáte zkrácený název počítače nebo název domény (například `.\administrator`), připojení je úspěšné, ale Support Center neshromažďuje data z klienta.
+Pokud se připojíte ke vzdálenému klientovi z nástroje Support Center, musíte při navazování připojení zadat název počítače nebo název domény pro uživatelský účet. Pokud používáte zkrácený název počítače nebo název domény (například `.\administrator` ), připojení je úspěšné, ale Support Center neshromažďuje data z klienta.
 
 Chcete-li se tomuto problému vyhnout, použijte následující formáty uživatelských jmen pro připojení ke vzdálenému klientovi:
 
@@ -95,7 +95,7 @@ Chcete-li se tomuto problému vyhnout, použijte následující formáty uživat
 
 ### <a name="scripted-server-message-block-connections-to-remote-clients-might-require-removal"></a>Připojení blokových zpráv serveru ke vzdáleným klientům může vyžadovat odebrání.
 
-Při připojování ke vzdáleným klientům pomocí rutiny [New-CMMachineConnection](https://go.microsoft.com/fwlink/p/?linkid=390542) prostředí PowerShell vytvoří Support Center připojení SMB (Server Message Block) ke každému vzdálenému klientovi. Po dokončení shromažďování dat tato připojení zachová. Aby nedošlo k překročení maximálního počtu vzdálených připojení pro Windows, `net use` pomocí příkazu Zobrazte aktuálně aktivní sadu vzdálených připojení. Pak zakažte všechna nepotřebná připojení pomocí následujícího příkazu:`net use <connection_name> /d`
+Při připojování ke vzdáleným klientům pomocí rutiny [New-CMMachineConnection](https://go.microsoft.com/fwlink/p/?linkid=390542) prostředí PowerShell vytvoří Support Center připojení SMB (Server Message Block) ke každému vzdálenému klientovi. Po dokončení shromažďování dat tato připojení zachová. Aby nedošlo k překročení maximálního počtu vzdálených připojení pro Windows, pomocí `net use` příkazu Zobrazte aktuálně aktivní sadu vzdálených připojení. Pak zakažte všechna nepotřebná připojení pomocí následujícího příkazu:`net use <connection_name> /d`
 kde `<connection_name>` je název vzdáleného připojení.
 
 ### <a name="application-deployment-evaluation-cycle-request-isnt-sent-correctly-to-remote-machines"></a>Požadavek na cyklus hodnocení nasazení aplikace není na vzdálených počítačích správně odeslán.

@@ -10,12 +10,12 @@ ms.assetid: 066caf00-e419-4efb-93d3-ba4ba878297c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9777fb12a2d63a990587386ac33cb2749bf19a4e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 93c3887307c32ea636a6dbb064cda13f4b9130c6
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81719649"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905137"
 ---
 # <a name="plan-for-the-migration-of-configuration-manager-objects-to-configuration-manager-current-branch"></a>Plánování migrace Configuration Managerch objektů do Configuration Manager aktuální větev
 
@@ -123,7 +123,7 @@ Z podporované zdrojové hierarchie můžete migrovat následující objekty nas
 Migrovat můžete položky konfigurace a základní údaje konfigurace.  
 
 > [!NOTE]  
->  Neinterpretované položky konfigurace z Configuration Manager 2007 zdrojové hierarchie se pro migraci nepodporují. Tyto položky konfigurace nejde migrovat nebo importovat do cílové hierarchie. Další informace o neinterpretované položkách konfigurace najdete v tématu neinterpretované položky konfigurace v tématu [o položkách konfigurace v tématu o konfiguraci požadovaných konfigurací](https://go.microsoft.com/fwlink/?LinkId=103846) v knihovně dokumentace k nástroji Configuration Manager 2007.  
+>  Neinterpretované položky konfigurace z Configuration Manager 2007 zdrojové hierarchie se pro migraci nepodporují. Tyto položky konfigurace nejde migrovat nebo importovat do cílové hierarchie. Další informace o neinterpretované položkách konfigurace najdete v tématu neinterpretované položky konfigurace v tématu [o položkách konfigurace v tématu o konfiguraci požadovaných konfigurací](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb694136(v=technet.10)#uninterpreted-configuration-item) v knihovně dokumentace k nástroji Configuration Manager 2007.  
 
 Můžete importovat konfigurační balíčky Configuration Manager 2007. Proces importu automaticky převede konfigurační balíčky tak, aby byly kompatibilní s Configuration Manager aktuální větev.  
 

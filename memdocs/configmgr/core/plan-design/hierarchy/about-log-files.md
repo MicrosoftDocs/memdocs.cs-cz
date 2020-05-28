@@ -10,12 +10,12 @@ ms.assetid: b1751e3c-a60c-4ab7-a943-2595df1eb612
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d6be23adc7ac082545bffeef59ed52d3455d9931
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 588bccc533909f2438dc61d6f25b39c3a582c71b
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81720300"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83879016"
 ---
 # <a name="about-log-files-in-configuration-manager"></a>Soubory protokolu v Configuration Manager
 
@@ -132,7 +132,7 @@ Chcete-li nakonfigurovat možnosti protokolování pro všechny součásti v sys
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCM\Logging\@Global`
 
-|Název  |Hodnoty  |Popis  |
+|Name  |Hodnoty  |Description  |
 |---------|---------|---------|
 |LogLevel|`0`: Verbose<br>`1`: Výchozí<br>`2`: Upozornění a chyby<br>`3`: Pouze chyby|Úroveň podrobností, která se má zapsat do souborů protokolu.|
 |LogMaxHistory|Libovolné celé číslo větší nebo rovno nule, například:<br>`0`: Žádná historie<br>`1`: Výchozí|Když soubor protokolu dosáhne maximální velikosti, klient ho přejmenuje jako zálohu a vytvoří nový soubor protokolu. Zadejte, kolik předchozích verzí má být zachováno.|
@@ -145,7 +145,7 @@ Pro pokročilé ladění můžete také přidat tuto **REG_SZ** hodnotu pod nás
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCM\Logging\DebugLogging`
 
-|Název  |Hodnoty  |Popis  |
+|Name  |Hodnoty  |Description  |
 |---------|---------|---------|
 |Povoleno | `True`: povolit protokoly ladění<br>`False`: zakázat protokoly ladění |Povolí protokolování ladění pro účely řešení potíží.|
 
@@ -159,7 +159,7 @@ Tyto hodnoty nakonfigurujte v následujícím klíči registru Windows:
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\Tracing`
 
-|Název  |Hodnoty  |Typ  |Popis
+|Name  |Hodnoty  |Typ  |Description
 |---------|---------|---------|---------|
 |SqlEnabled| `1`: povolit trasování SQL<br> `0`: zakázat trasování SQL |REG_DWORD|Přidejte protokolování trasování SQL do všech protokolů serveru lokality.|
 |ArchiveEnabled| `1`: Povolit archivy protokolů<br> `0`: zakázat archivy protokolů | REG_DWORD |Archivujte protokoly webového serveru do samostatného umístění pro historické uchovávání.|
@@ -174,7 +174,7 @@ Pokud chcete nakonfigurovat možnosti protokolování pro konkrétní součást 
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\Tracing\<ComponentName>`
 
-|Název  |Hodnoty  |Popis  |
+|Name  |Hodnoty  |Description  |
 |---------|---------|---------|
 |LoggingLevel|`0`: Verbose<br>`1`: Výchozí<br>`2`: Upozornění a chyby<br>`3`: Pouze chyby|Úroveň podrobností, která se má zapsat do souborů protokolu.|
 |LogMaxHistory|Libovolné celé číslo větší nebo rovno nule, například:<br>`0`: Žádná historie<br>`1`: Výchozí|Když soubor protokolu dosáhne maximální velikosti, server ho přejmenuje jako zálohu a vytvoří nový soubor protokolu. Zadejte, kolik předchozích verzí má být zachováno.|
@@ -198,7 +198,7 @@ Například pro roli distribučního bodu:
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\DP\Logging`
 
-|Název  |Hodnoty  |Popis  |
+|Name  |Hodnoty  |Description  |
 |---------|---------|---------|
 |LogLevel|`0`: Verbose<br>`1`: Výchozí<br>`2`: Upozornění a chyby<br>`3`: Pouze chyby|Úroveň podrobností, která se má zapsat do souborů protokolu.|
 |LogMaxHistory|Libovolné celé číslo větší nebo rovno nule, například:<br>`0`: Žádná historie<br>`1`: Výchozí|Když soubor protokolu dosáhne maximální velikosti, server ho přejmenuje jako zálohu a vytvoří nový soubor protokolu. Zadejte, kolik předchozích verzí má být zachováno.|
@@ -211,9 +211,12 @@ Například pro roli distribučního bodu:
 
 Chcete-li změnit úroveň podrobností protokolu AdminUI. log pro konzolu Configuration Manager, použijte následující postup:
 
-1. Otevřete konfigurační soubor konzoly **Microsoft. ConfigurationManagement. exe. config**v editoru XML, jako je Poznámkový blok. Výchozí konfigurační soubor je v následujícím umístění:`C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\bin\Microsoft.ConfigurationManagement.exe.config`
+1. Otevřete konfigurační soubor konzoly **Microsoft. ConfigurationManagement. exe. config**v editoru XML, jako je Poznámkový blok. Výchozí konfigurační soubor je v následujícím umístění:`C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\bin\Microsoft.ConfigurationManagement.exe.config`
 
-1. V rámci**zdrojového** **elementu zdroje** >  **System. Diagnostics** > změňte atribut **určit atributy switchValue** z `Error` na `Verbose`. Příklad:
+    > [!IMPORTANT]
+    > Počínaje verzí 1910 se tato cesta změnila na použití `Microsoft Endpoint Manager` složky. Ujistěte se, že nepoužíváte starší verzi souboru, která může existovat v jiné složce.
+
+1. V rámci zdrojového elementu zdroje **System. Diagnostics**  >  **sources**  >  **source** změňte atribut **určit atributy switchValue** z `Error` na `Verbose` . Příklad:
 
     Původní: `<source name="SmsAdminUISnapIn" switchValue="Error">` nové:`<source name="SmsAdminUISnapIn" switchValue="Verbose" >`
 
@@ -240,7 +243,7 @@ Výchozí hodnoty jsou následující umístění. Pokud jste ve svém prostřed
 - Služba`C:\Windows\CCM\logs`
 - WebServer`C:\Program Files\Microsoft Configuration Manager\Logs`
 - Bod správy:`C:\SMS_CCM\Logs`
-- Konzola Configuration Manager:`C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\AdminUILog`
+- Konzola Configuration Manager:`C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\AdminUILog`
 - SLUŽBU`C:\inetpub\logs\logfiles\w3svc1`
 
 ### <a name="task-sequence-log-locations"></a>Umístění protokolu pořadí úloh
@@ -248,7 +251,7 @@ Výchozí hodnoty jsou následující umístění. Pokud jste ve svém prostřed
 Umístění souboru protokolu pořadí úloh **souboru Smsts. log** se liší v závislosti na fázi pořadí úkolů:
 
 - V systému Windows PE před [formátováním a krokem disku oddílu](../../../osd/understand/task-sequence-steps.md#BKMK_FormatandPartitionDisk) : `X:\Windows\temp\smstslog\smsts.log` (X je jednotka RAM systému Windows PE)
-- V systému Windows PE po **formátování a kroku disku oddílu** : `X:\smstslog\smsts.log`, zkopírováno `C:\_SMSTaskSequence\Logs\smstslog\smsts.log` do, když je jednotka připravena
+- V systému Windows PE po **formátování a kroku disku oddílu** : `X:\smstslog\smsts.log` , zkopírováno do, `C:\_SMSTaskSequence\Logs\smstslog\smsts.log` když je jednotka připravena
 - V novém operačním systému Windows před instalací klienta:`C:\_SMSTaskSequence\Logs\smstslog\smsts.log`
 - V systému Windows po instalaci klienta:`C:\Windows\CCM\Logs\smstslog\smsts.log`
 - V systému Windows po dokončení pořadí úloh:`C:\Windows\CCM\Logs\smsts.log`

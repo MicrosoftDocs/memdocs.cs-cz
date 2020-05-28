@@ -48,8 +48,8 @@ K nasazení operačních systémů pro Configuration Manager klientů, kteří v
 >
 > Pokud v rámci verze 1902 povolíte respondér PXE v distribučním bodě bez služby pro nasazení systému Windows, může být nyní na stejném serveru jako služba DHCP.<!--3734270, SCCMDocs-pr #3416--> Přidejte následující nastavení pro podporu této konfigurace:  
 >
-> - Nastavte hodnotu DWord **DoNotListenOnDhcpPort** na `1` následující klíč registru: `HKLM\Software\Microsoft\SMS\DP`.
-> - Nastavte možnost DHCP 60 na `PXEClient`.  
+> - Nastavte hodnotu DWord **DoNotListenOnDhcpPort** na `1` následující klíč registru: `HKLM\Software\Microsoft\SMS\DP` .
+> - Nastavte možnost DHCP 60 na `PXEClient` .  
 > - Restartujte služby SCCMPXE a DHCP na serveru.  
 
 ## <a name="prepare-a-pxe-enabled-boot-image"></a>Příprava spouštěcí image s povolenou technologií PXE

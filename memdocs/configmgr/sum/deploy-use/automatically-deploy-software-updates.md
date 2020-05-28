@@ -5,17 +5,17 @@ description: Automaticky nasazovat aktualizace softwaru pomocí pravidel automat
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 04/21/2020
+ms.date: 05/20/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: b27682de-adf8-4edd-9572-54886af8f7fb
-ms.openlocfilehash: eca3227a023561a099804ef0928bfee7a7aff2c6
-ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
+ms.openlocfilehash: bf172c4cb34a17ac793ea5568b0505505baf97a0
+ms.sourcegitcommit: dba89b827d7f89067dfa75a421119e0c973bb747
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82110436"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83709430"
 ---
 #  <a name="automatically-deploy-software-updates"></a>Automatické nasazení aktualizací softwaru  
 
@@ -49,7 +49,7 @@ Automatické schvalování a nasazování aktualizací softwaru pomocí pravidla
 
          - Šablona **aktualizací klientů Office 365** poskytuje běžná nastavení, která se použijí při nasazení aktualizací pro klienty Office 365 pro plus.
              > [!Note]
-             > Od 21. dubna 2020 se sada Office 365 ProPlus přejmenovává na **Microsoft 365 aplikace pro podniky**. Pokud vaše pravidla automatického nasazení spoléhá na vlastnost "title", budete ji muset upravit od 9. června 2020. `Microsoft 365 Apps Update - Semi-annual Channel Version 1908 for x64 based Edition (Build 11929.50000)`je příkladem nového názvu. Další informace najdete v tématu [Změna názvu pro Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change).
+             > Od 21. dubna 2020 se sada Office 365 ProPlus přejmenovává na **Microsoft 365 aplikace pro podniky**. Pokud vaše pravidla automatického nasazení spoléhá na vlastnost "title", budete ji muset upravit od 9. června 2020. `Microsoft 365 Apps Update - Semi-annual Channel Version 1908 for x64 based Edition (Build 11929.50000)`je příkladem nového názvu. Další informace o tom, jak upravit pravidla automatického nasazení pro změnu názvu, najdete v tématu [aktualizace kanálů pro aplikace Microsoft 365](manage-office-365-proplus-updates.md#bkmk_channel). Další informace o změně názvu najdete v tématu [Změna názvu pro Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change).
 
          - Šablona **SCEP a aktualizace antivirové ochrany v programu Windows Defender** poskytuje běžná nastavení, která se použijí při nasazení Endpoint Protection aktualizace definic.  
 
@@ -85,7 +85,7 @@ Automatické schvalování a nasazování aktualizací softwaru pomocí pravidla
 
      - Limit pro aktualizace softwaru v pravidle automatického nasazení je 1000 aktualizací softwaru.  
 
-     - V případě potřeby vyfiltrujte velikost obsahu pro aktualizace softwaru v pravidlech automatického nasazení. Další informace najdete v tématu [Configuration Manager a zjednodušená Údržba Windows v operačních systémech nižší úrovně](https://blogs.technet.microsoft.com/enterprisemobility/2016/10/07/configuration-manager-and-simplified-windows-servicing-on-down-level-operating-systems/).  
+     - V případě potřeby vyfiltrujte velikost obsahu pro aktualizace softwaru v pravidlech automatického nasazení. Další informace najdete v tématu [Configuration Manager a zjednodušená Údržba Windows v operačních systémech nižší úrovně](https://techcommunity.microsoft.com/t5/configuration-manager-archive/configuration-manager-and-simplified-windows-servicing-on-down/ba-p/274056).  
 
      - Počínaje verzí 1910 můžete použít **nasazení** jako filtr aktualizace pro pravidla automatického nasazení. Tento filtr pomáhá identifikovat nové aktualizace, které může být nutné nasadit do pilotních nebo testovacích kolekcí. Filtr aktualizace softwaru můžete také využít k tomu, abyste se vyhnuli opětovnému nasazení starších aktualizací. 
          - Při použití **nasazení** jako filtru nezapomeňte, že je možné, že jste už aktualizaci nasadili do jiné kolekce, jako je například pilotní nebo testovací kolekce. <!--4852033-->
@@ -187,7 +187,7 @@ Automatické schvalování a nasazování aktualizací softwaru pomocí pravidla
 
         -  **Popis**: Zadejte popis, který poskytuje informace o balíčku pro nasazení. Nepovinný popis je omezený na 127 znaků.  
 
-        -  **Zdroj balíčku:** Určuje umístění zdrojových souborů aktualizace softwaru. Zadejte síťovou cestu k umístění zdroje, například `\\server\sharename\path`, nebo klikněte na tlačítko **Procházet** a vyhledejte umístění v síti. Než přejdete na další stránku, vytvořte sdílenou složku pro zdrojové soubory balíčku pro nasazení.  
+        -  **Zdroj balíčku:** Určuje umístění zdrojových souborů aktualizace softwaru. Zadejte síťovou cestu k umístění zdroje, například `\\server\sharename\path` , nebo klikněte na tlačítko **Procházet** a vyhledejte umístění v síti. Než přejdete na další stránku, vytvořte sdílenou složku pro zdrojové soubory balíčku pro nasazení.  
 
             - Zadané umístění nemůžete použít jako zdroj jiného balíčku pro nasazení softwaru.  
 
@@ -211,7 +211,7 @@ Automatické schvalování a nasazování aktualizací softwaru pomocí pravidla
 
     -   **Stáhnout softwarové aktualizace z Internetu**: Toto nastavení vyberte, pokud chcete stáhnout aktualizace softwaru ze zadaného umístění na internetu. Toto nastavení je standardně zapnuté.  
 
-    -   **Stáhnout softwarové aktualizace z místa v mé síti:** Pomocí tohoto nastavení můžete stáhnout aktualizace softwaru z místního adresáře nebo sdílené složky. Toto nastavení je užitečné, když počítač, na kterém spouštíte Průvodce, nemá přístup k Internetu. Každý počítač s přístupem k Internetu může předběžně stáhnout aktualizace softwaru. Pak je uložte do umístění v místní síti, které je přístupné z počítače, na kterém běží průvodce.  
+    -   **Stáhnout softwarové aktualizace z místa v mé síti:** Pomocí tohoto nastavení můžete stáhnout aktualizace softwaru z místního adresáře nebo sdílené složky. Toto nastavení je užitečné, když počítač, na kterém spouštíte Průvodce, nemá přístup k Internetu. Každý počítač s přístupem k Internetu může předběžně stáhnout aktualizace softwaru. Pak je uložte do umístění v místní síti, které je přístupné z počítače, na kterém běží průvodce. Při stahování obsahu, který je publikovaný prostřednictvím System Center Updates Publisher nebo řešení pro opravy jiného výrobce, by se mohlo jednat o jiný scénář. Sdílenou složku obsahu služby WSUS v bodě aktualizace softwaru nejvyšší úrovně lze zadat jako síťové umístění, ze kterého se má stáhnout `\\server\WsusContent` . <!--memdocs-issue-211-->
 
 14. Na stránce **Výběr jazyka** vyberte jazyky, ve kterých bude lokalita stahovat vybrané aktualizace softwaru. Lokalita stáhne pouze ty aktualizace, pokud jsou k dispozici ve vybraných jazycích. Aktualizace softwaru, které nejsou specifické pro konkrétní jazyk, budou staženy vždy. Ve výchozím nastavení Průvodce vybírá jazyky, které jste nakonfigurovali ve vlastnostech bodu aktualizace softwaru. Před přechodem na další stránku je třeba vybrat alespoň jeden jazyk. Když vyberete jenom jazyky, které aktualizace softwaru nepodporuje, stahování se pro aktualizaci nepovede.  
 

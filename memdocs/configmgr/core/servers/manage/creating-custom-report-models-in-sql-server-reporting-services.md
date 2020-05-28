@@ -10,12 +10,12 @@ ms.assetid: f2df88b4-c348-4dcf-854a-54fd6eedf485
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 590f3adec168fe6d7f4718505bd6f7d6b9f7c25f
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: fe570eeedc2c050bdaf27903d30ddffff63109d9
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81712530"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83879151"
 ---
 # <a name="creating-custom-report-models-for-configuration-manager-in-sql-server-reporting-services"></a>Vytváření vlastních modelů sestav pro Configuration Manager v SQL Server Reporting Services
 
@@ -26,7 +26,7 @@ Modely vzorových sestav jsou součástí Configuration Manager, ale můžete ta
 > [!NOTE]  
 >  Postup pro vytvoření pokročilejšího modelu sestavy naleznete v části [Steps for Creating an Advanced Report Model in SQL Server Reporting Services](#AdvancedReportModel) tohoto tématu.  
 
-|Krok|Popis|Další informace|  
+|Krok|Description|Další informace|  
 |----------|-----------------|----------------------|  
 |Ověřte, zda je nainstalován nástroj SQL Server Business Intelligence Development Studio|Modely sestav jsou navrženy a sestaveny pomocí tohoto nástroje SQL Server Business Intelligence Development Studio. Ověřte, zda na počítači, na kterém vytváříte vlastní model sestavy, je nainstalován nástroj SQL Server Business Intelligence Development Studio.|Další informace o nástroji SQL Server Business Intelligence Development Studio naleznete v dokumentaci k systému SQL Server 2008.|  
 |Vytvoření projektu modelu sestavy|Projekt modelu sestavy obsahuje definici zdroje dat (soubor DS), definici zobrazení zdroje dat (soubor DSV) a model sestavy (soubor SMDL).|Další informace najdete v části [To create the report model project](#BKMK_CreateReportModelProject) v tomto tématu.|  
@@ -68,7 +68,7 @@ Modely vzorových sestav jsou součástí Configuration Manager, ale můžete ta
 
 4.  V dialogovém okně **Správce připojení** zadejte následující vlastnosti připojení pro zdroj dat:  
 
-    -   **Název serveru**: zadejte název serveru databáze lokality Configuration Manager nebo ho vyberte v seznamu. Pokud místo výchozí instance pracujete s pojmenovanou instancí &lt;, zadejte*název instance* *databázového serveru*>\\&lt;>.  
+    -   **Název serveru**: zadejte název serveru databáze lokality Configuration Manager nebo ho vyberte v seznamu. Pokud místo výchozí instance pracujete s pojmenovanou instancí, zadejte &lt; název instance *databázového serveru* > \\ &lt; *instance name*>.  
 
     -   Vyberte **Ověřování systému Windows**.  
 
@@ -136,17 +136,17 @@ Modely vzorových sestav jsou součástí Configuration Manager, ale můžete ta
 
 ###  <a name="to-deploy-the-custom-report-model-to-configuration-manager"></a><a name="BKMK_DeployReportModel"></a> To deploy the custom report model to Configuration Manager  
 
-1. Vyhledejte složku, ve které jste vytvořili projekt modelu sestavy. Například název*USERPROFILE*\\*&lt;projektu% USERPROFILE% \ Documents\Visual Studio 2008 \ Projects.\>*  
+1. Vyhledejte složku, ve které jste vytvořili projekt modelu sestavy. Například název projektu%*USERPROFILE*% \ Documents\Visual Studio 2008 \ \\ * &lt; Projects \> .*  
 
 2. Ze složky projektu modelu sestavy zkopírujte následující soubory do dočasné složky ve vašem počítači:  
 
-   -   * &lt;Název\> modelu* **. DSV**  
+   -   * &lt; Název \> modelu* **. DSV**  
 
-   -   * &lt;Název\> modelu* **. smdl**  
+   -   * &lt; Název \> modelu* **. smdl**  
 
 3. Pomocí textového editoru, např. Poznámkového bloku, otevřete předchozí soubory.  
 
-4. V souboru _ &lt;model název\>_**. DSV**vyhledejte první řádek souboru, který bude načten následujícím způsobem:  
+4. V souboru _ &lt; model název \> _**. DSV**vyhledejte první řádek souboru, který bude načten následujícím způsobem:  
 
     `<DataSourceView xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">`
 
@@ -156,9 +156,9 @@ Modely vzorových sestav jsou součástí Configuration Manager, ale můžete ta
 
 5. Celý obsah souboru zkopírujte do schránky systému Windows.  
 
-6. Zavřete soubor _ &lt;model název\>_**. DSV**.  
+6. Zavřete soubor _ &lt; model název \> _**. DSV**.  
 
-7. V souboru File _ &lt;name\>_**. smdl**vyhledejte poslední tři řádky souboru, které se zobrazí takto:  
+7. V souboru File _ &lt; name \> _**. smdl**vyhledejte poslední tři řádky souboru, které se zobrazí takto:  
 
     `</Entity>`  
 
@@ -166,11 +166,11 @@ Modely vzorových sestav jsou součástí Configuration Manager, ale můžete ta
 
     `</SemanticModel>`  
 
-8. Vložte obsah souborového _ &lt;modelu název\>_**. DSV** přímo před poslední řádek souboru (**&lt;SemanticModel\>**).  
+8. Vložte obsah souborového _ &lt; modelu název \> _**. DSV** přímo před poslední řádek souboru (** &lt; SemanticModel \> **).  
 
-9. Uložte a zavřete soubor _ &lt;model název\>_**. smdl**.  
+9. Uložte a zavřete soubor _ &lt; model název \> _**. smdl**.  
 
-10. Zkopírujte _ &lt;soubor\>_**. smdl** do složky *% ProgramFiles%* \Microsoft Configuration Manager \AdminConsole\XmlStorage\Other na serveru lokality Configuration Manager.  
+10. Zkopírujte _ &lt; \> soubor_**. smdl** do složky *% ProgramFiles%* \Microsoft Configuration Manager \AdminConsole\XmlStorage\Other na serveru lokality Configuration Manager.  
 
     > [!IMPORTANT]  
     >  Po zkopírování souboru modelu sestavy do serveru Configuration Manager lokality je nutné ukončit a znovu spustit konzolu Configuration Manager předtím, než budete moci použít model sestavy v **Průvodci vytvořením sestavy**.  
@@ -213,7 +213,7 @@ Modely vzorových sestav jsou součástí Configuration Manager, ale můžete ta
 
 4.  V dialogovém okně **Správce připojení** zadejte následující vlastnosti připojení pro zdroj dat:  
 
-    -   **Název serveru**: zadejte název serveru databáze lokality Configuration Manager nebo ho vyberte v seznamu. Pokud místo výchozí instance pracujete s pojmenovanou instancí &lt;, zadejte*název instance* *databázového serveru*>\\&lt;>.  
+    -   **Název serveru**: zadejte název serveru databáze lokality Configuration Manager nebo ho vyberte v seznamu. Pokud místo výchozí instance pracujete s pojmenovanou instancí, zadejte &lt; název instance *databázového serveru* > \\ &lt; *instance name*>.  
 
     -   Vyberte **Ověřování systému Windows**.  
 
@@ -246,7 +246,7 @@ Modely vzorových sestav jsou součástí Configuration Manager, ale můžete ta
 
    - **v_GS_OPERATING_SYSTEM (dbo)**  
 
-     Po výběru každého zobrazení klikněte na **>** tlačítko pro přenos objektu do seznamu **zahrnuté objekty** .  
+     Po výběru každého zobrazení klikněte na tlačítko **>** pro přenos objektu do seznamu **zahrnuté objekty** .  
 
    > [!TIP]  
    >  Pro usnadnění vyhledání zobrazení v seznamu **Dostupné objekty** klikněte v horní části seznamu na záhlaví **Název** , čímž se objekty abecedně seřadí.  
@@ -379,17 +379,17 @@ Modely vzorových sestav jsou součástí Configuration Manager, ale můžete ta
 
 #### <a name="to-deploy-the-custom-report-model-to-configuration-manager"></a>To deploy the custom report model to Configuration Manager  
 
-1. Vyhledejte složku, ve které jste vytvořili projekt modelu sestavy. Například název*USERPROFILE*\\*&lt;projektu% USERPROFILE% \ Documents\Visual Studio 2008 \ Projects.\>*  
+1. Vyhledejte složku, ve které jste vytvořili projekt modelu sestavy. Například název projektu%*USERPROFILE*% \ Documents\Visual Studio 2008 \ \\ * &lt; Projects \> .*  
 
 2. Ze složky projektu modelu sestavy zkopírujte následující soubory do dočasné složky ve vašem počítači:  
 
-   -   * &lt;Název\> modelu* **. DSV**  
+   -   * &lt; Název \> modelu* **. DSV**  
 
-   -   * &lt;Název\> modelu* **. smdl**  
+   -   * &lt; Název \> modelu* **. smdl**  
 
 3. Pomocí textového editoru, např. Poznámkového bloku, otevřete předchozí soubory.  
 
-4. V souboru _ &lt;model název\>_**. DSV**vyhledejte první řádek souboru, který bude načten následujícím způsobem:  
+4. V souboru _ &lt; model název \> _**. DSV**vyhledejte první řádek souboru, který bude načten následujícím způsobem:  
 
     `<DataSourceView xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">`
 
@@ -399,9 +399,9 @@ Modely vzorových sestav jsou součástí Configuration Manager, ale můžete ta
 
 5. Celý obsah souboru zkopírujte do schránky systému Windows.  
 
-6. Zavřete soubor _ &lt;model název\>_**. DSV**.  
+6. Zavřete soubor _ &lt; model název \> _**. DSV**.  
 
-7. V souboru File _ &lt;name\>_**. smdl**vyhledejte poslední tři řádky souboru, které se zobrazí takto:  
+7. V souboru File _ &lt; name \> _**. smdl**vyhledejte poslední tři řádky souboru, které se zobrazí takto:  
 
     `</Entity>`  
 
@@ -409,11 +409,11 @@ Modely vzorových sestav jsou součástí Configuration Manager, ale můžete ta
 
     `</SemanticModel>`  
 
-8. Vložte obsah souborového _ &lt;modelu název\>_**. DSV** přímo před poslední řádek souboru (**&lt;SemanticModel\>**).  
+8. Vložte obsah souborového _ &lt; modelu název \> _**. DSV** přímo před poslední řádek souboru (** &lt; SemanticModel \> **).  
 
-9. Uložte a zavřete soubor _ &lt;model název\>_**. smdl**.  
+9. Uložte a zavřete soubor _ &lt; model název \> _**. smdl**.  
 
-10. Zkopírujte soubor _ &lt;\>model_File **. smdl** do složky *% ProgramFiles%* \Microsoft Configuration Manager\AdminConsole\XmlStorage\Other na serveru lokality Configuration Manager.  
+10. Zkopírujte _ &lt; \> soubor_**. smdl** do složky *% ProgramFiles%* \Microsoft Endpoint Manager\AdminConsole\XmlStorage\Other na serveru lokality Configuration Manager.  
 
     > [!IMPORTANT]  
     >  Po zkopírování souboru modelu sestavy do serveru Configuration Manager lokality je nutné ukončit a znovu spustit konzolu Configuration Manager předtím, než budete moci použít model sestavy v **Průvodci vytvořením sestavy**.  

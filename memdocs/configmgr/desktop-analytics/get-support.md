@@ -10,12 +10,13 @@ ms.assetid: d56742bc-a060-4714-a359-48f594c3eaff
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 271a37c80db3a37b721918f3ee739b010c043c70
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.reviewer: acabello
+ms.openlocfilehash: dd18355b9e472866a4d684162913795443ab07ef
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81723590"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268517"
 ---
 # <a name="get-support-for-desktop-analytics"></a>Získat podporu pro desktopovou analýzu
 

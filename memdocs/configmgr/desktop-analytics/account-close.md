@@ -10,12 +10,13 @@ ms.assetid: 6e7d2850-b0af-497e-bbc1-bfc2a7420a7a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e1d031588100f3930bf5bf25970f544b91017d77
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.reviewer: acabello
+ms.openlocfilehash: e24c2ee19093dd12af6e87280a31851a1f593782
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81722519"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268466"
 ---
 # <a name="how-to-close-your-account"></a>Jak zavřít účet
 
@@ -112,7 +113,7 @@ Pokud nechcete, aby zařízení pokračovala v posílání diagnostických dat:
 
 Tyto hodnoty nastavte pomocí jedné z následujících metod:
 
-- Zásady skupiny v části **Konfigurace** > **šablony pro správu** > kolekce dat**součásti** > systému Windows**a buildy Preview**
+- Zásady skupiny v části **Konfigurace počítače**  >  **šablony pro správu**  >  kolekce dat**součásti systému Windows**  >  **a buildy Preview**
 - Správa mobilních zařízení (MDM), například [Microsoft Intune](https://docs.microsoft.com/intune/device-restrictions-windows-10#reporting-and-telemetry)
 
 Další informace najdete v tématu [Konfigurace diagnostických dat Windows ve vaší organizaci](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization).

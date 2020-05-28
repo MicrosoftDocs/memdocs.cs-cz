@@ -10,12 +10,12 @@ ms.assetid: 6143fd47-48ec-4bca-b53b-5b9b9f067bc3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7476f27c050a7870cd8f860f2e1b6bfa3d68a7e9
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: b3849f360b2f22f2f48bbe49159b610399158b29
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81715022"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83427767"
 ---
 # <a name="how-to-upgrade-clients-for-windows-computers-in-configuration-manager"></a>Postup upgradu klientů pro počítače se systémem Windows v nástroji Configuration Manager
 
@@ -39,7 +39,7 @@ Vylučte klienty z upgradu zadáním kolekce vyloučení. Další informace najd
 > Pokud upgradujete serverovou infrastrukturu z předchozí verze Configuration Manager, před upgradem klientů Configuration Manager dokončete upgrade serveru. Tento proces zahrnuje instalaci všech aktualizací aktuální větve. Nejnovější aktualizace aktuální větve obsahuje nejnovější verzi klienta. Upgradujte klienty po instalaci všech aktualizací Configuration Manager.
 
 > [!NOTE]
-> Pokud plánujete změnit přiřazení lokality pro klienty během upgradu, zadejte novou lokalitu pomocí vlastnosti `SMSSITECODE` Client. msi. Použijete `AUTO` `SMSSITECODE`-li hodnotu pro, zadejte `SITEREASSIGN=TRUE`také. Tato vlastnost umožňuje automatické opětovné přiřazení lokality během upgradu. Další informace najdete v tématu [vlastnosti instalace klienta – SMSSITECODE](../../deploy/about-client-installation-properties.md#smssitecode).
+> Pokud plánujete změnit přiřazení lokality pro klienty během upgradu, zadejte novou lokalitu pomocí `SMSSITECODE` vlastnosti Client. msi. Použijete-li hodnotu `AUTO` pro `SMSSITECODE` , zadejte také `SITEREASSIGN=TRUE` . Tato vlastnost umožňuje automatické opětovné přiřazení lokality během upgradu. Další informace najdete v tématu [vlastnosti instalace klienta – SMSSITECODE](../../deploy/about-client-installation-properties.md#smssitecode).
 
 ## <a name="about-automatic-client-upgrade"></a><a name="bkmk_autoupdate"></a>Informace o automatickém upgradu klientů
 
@@ -97,7 +97,7 @@ Pomocí následujícího postupu můžete nakonfigurovat automatický upgrade kl
 Klienti obdrží tato nastavení při dalším stažení zásady.
 
 > [!NOTE]
-> Upgrady klientů dodržují všechna Configuration Manager okna údržby, která jste nakonfigurovali.
+> Upgrady klientů dodržují všechna Configuration Manager okna údržby, která jste nakonfigurovali. Vlákno Execmgr spustí během časového období údržby pouze zaváděcí program pro instalaci klienta (CCMSetup. exe). Pokud zařízení používá edici Windows s filtrem zápisu, program CCMSetup se pokusí stáhnout a nainstalovat současně. V opačném případě bude program CCMSetup náhodně vymezit čas ke stažení obsahu. Po stažení obsahu a kompilování místních zásad Execmgr plánuje upgrade klienta během příštího časového období údržby.<!-- SCCMDocs#896 -->
 
 ## <a name="next-steps"></a>Další kroky
 

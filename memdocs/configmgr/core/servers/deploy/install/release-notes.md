@@ -2,7 +2,7 @@
 title: Poznámky k verzi
 titleSuffix: Configuration Manager
 description: Seznamte se s naléhavými problémy, které zatím nejsou v produktu opravené nebo jsou uvedené v článku znalostní báze podpora Microsoftu Knowledge Base.
-ms.date: 04/08/2020
+ms.date: 05/21/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 030947fd-f5e0-4185-8513-2397fb2ec96f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: da0b9fc5600a957680ad22e54edc176c892527a6
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 131b6104d5724c8a4eeb0bb68c4afd9a5319abb7
+ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718130"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83823958"
 ---
 # <a name="release-notes-for-configuration-manager"></a>Poznámky k verzi pro Configuration Manager
 
@@ -33,6 +33,8 @@ Informace o nových funkcích zavedených s různými verzemi najdete v následu
 - [Novinky ve verzi 1910](../../../plan-design/changes/whats-new-in-version-1910.md)
 - [Novinky ve verzi 1906](../../../plan-design/changes/whats-new-in-version-1906.md)  
 - [Novinky ve verzi 1902](../../../plan-design/changes/whats-new-in-version-1902.md)
+
+Informace o nových funkcích v Desktop Analytics najdete v tématu [co je nového v rámci služby Desktop Analytics](../../../../desktop-analytics/whats-new.md).
 
 > [!Tip]  
 > Pokud chcete dostávat upozornění na aktualizaci této stránky, zkopírujte a vložte následující adresu URL do čtečky informačních kanálů RSS:`https://docs.microsoft.com/api/search/rss?search=%22release+notes+-+Configuration+Manager%22&locale=en-us`
@@ -105,9 +107,9 @@ Pokud používáte konzolu Configuration Manager v operačním systému, ve kter
 
 `Unable to get certificate for Powershell`
 
-K této chybě dochází, `scripts` protože složka v `AdminConsole\bin` adresáři neexistuje pro švédské, maďarské nebo japonské jazyky. Složka skripty je lokalizována do těchto jazyků operačního systému.
+K této chybě dochází `scripts` , protože složka v adresáři neexistuje `AdminConsole\bin` pro švédské, maďarské nebo japonské jazyky. Složka skripty je lokalizována do těchto jazyků operačního systému.
 
-Pokud chcete tento problém obejít, vytvořte složku s `scripts` názvem v `AdminConsole\bin` adresáři. Zkopírujte soubory z lokalizované složky do nově vytvořené `scripts` složky. Po zkopírování souborů nasaďte Microsoft Edge verze 77 a novější.
+Pokud chcete tento problém obejít, vytvořte složku `scripts` s názvem v `AdminConsole\bin` adresáři. Zkopírujte soubory z lokalizované složky do nově vytvořené `scripts` složky. Po zkopírování souborů nasaďte Microsoft Edge verze 77 a novější.
 
 ## <a name="os-deployment"></a>Nasazení operačního systému
 
@@ -166,6 +168,15 @@ Další informace najdete v tématu [Vytvoření vlastních rolí zabezpečení]
 
 ## <a name="desktop-analytics"></a>Desktop Analytics
 
+### <a name="an-extended-security-update-for-windows-7-causes-them-to-show-as-unable-to-enroll"></a><a name="dawin7-diagtrack"></a>Rozšířená aktualizace zabezpečení pro systém Windows 7 způsobí, že se můžou zobrazit jako **neregistrované** .
+
+<!-- 7283186 -->
+_Platí pro: Configuration Manager verze 1902, 1906, 1910 a 2002_
+
+Aktualizace rozšířeného zabezpečení z dubna 2020 (EVJ) pro systém Windows 7 změnila minimální požadovanou verzi souboru DiagTrack. dll z 10586 na 10240. Tato změna způsobí, že se zařízení se systémem Windows 7 zobrazují jako **neschopná se zaregistrovat** na řídicím panelu **stavu připojení** Desktop Analytics. Když přejdete do zobrazení zařízení pro tento stav, vlastnost **Konfigurace služby DiagTrack** zobrazí následující stav:`Connected User Experience and Telemetry (diagtrack.dll) component is outdated. Check requirements.`
+
+Pro tento problém není nutné žádné alternativní řešení. Odinstalujte EVJ. dubna. Pokud je v opačném případě správně nakonfigurovaná, zařízení s Windows 7 pořád hlásí diagnostická data do služby Desktop Analytics a pořád se na portálu zobrazují.
+
 ### <a name="if-you-use-hardware-inventory-for-distributed-views-you-cant-onboard-to-desktop-analytics"></a>Pokud používáte inventář hardwaru pro distribuovaná zobrazení, nemůžete se připojit k desktopovým analýzám.
 
 <!-- 4950335 -->
@@ -209,7 +220,7 @@ Pokud vytvoříte připojení ke službě Azure a nastavíte **prostředí Azure
 Select Environment, Name, TenantID From AAD_Tenant_Ex
 ```
 
-V případě cloudu pro státní správu je `2` výsledek tohoto dotazu určený pro konkrétního tenanta.
+V případě cloudu pro státní správu je výsledek tohoto dotazu `2` určený pro konkrétního tenanta.
 
 ### <a name="cant-download-content-from-a-cloud-management-gateway-enabled-for-tls-12"></a>Nejde stáhnout obsah z brány pro správu cloudu, která je povolená pro TLS 1,2.
 

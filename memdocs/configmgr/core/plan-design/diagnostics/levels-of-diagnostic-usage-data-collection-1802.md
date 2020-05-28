@@ -35,7 +35,7 @@ Změny z předchozích verzí jsou označeny ***[New]***, ***[Aktualizováno]***
 ##  <a name="how-to-change-the-level"></a><a name="bkmk_change"></a> Postup pro změnu úrovně
  Správci, kteří mají obor správy na základě rolí, který zahrnuje oprávnění **změnit** u třídy objektů **lokalita** , můžou měnit úroveň dat shromažďovaných pomocí nastavení dat o diagnostice a dat o využití v konzole Configuration Manager.
 
-Úroveň shromažďování dat můžete změnit v konzole nástroje tak, že přejdete do části **Správa** > **Přehled** > **Konfigurace** > **lokality lokality.** Otevřete **Nastavení hierarchie**a pak vyberte úroveň dat, kterou chcete použít.  
+Úroveň shromažďování dat můžete změnit v konzole nástroje tak, že přejdete do části **Správa**  >  **Přehled**  >  **Konfigurace**  >  **lokality lokality**. Otevřete **Nastavení hierarchie**a pak vyberte úroveň dat, kterou chcete použít.  
 
 
 

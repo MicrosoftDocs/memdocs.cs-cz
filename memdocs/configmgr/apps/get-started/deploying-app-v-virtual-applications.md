@@ -10,12 +10,12 @@ ms.assetid: ddcad9f2-a542-4079-83ca-007d7cb44995
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: bea7c2ef5c3d77932fcd91ca8d4d2b8baa62edd2
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: df6f550b21523e365055f6a4cdafadca7603c4bf
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81710472"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906371"
 ---
 # <a name="deploy-app-v-virtual-applications-with-configuration-manager"></a>Nasazení virtuálních aplikací App-V pomocí Configuration Manager
 
@@ -31,7 +31,7 @@ Pokud ke správě virtuálních aplikací použijete Configuration Manager, zís
 
 -   Nasazení operačního systému, inventář softwaru a hardwaru, měření softwaru a funkce Asset Intelligence pro podporu virtuálních aplikací  
 
-Další informace o tom, jak vytvářet a sekvencovat aplikace pomocí Microsoft Application Virtualization (App-V), najdete v tématu [virtualizace aplikací](https://technet.microsoft.com/library/cc843848.aspx) v knihovně TechNet.  
+Další informace o tom, jak vytvářet a sekvencovat aplikace pomocí Microsoft Application Virtualization (App-V), najdete v [dokumentaci k Application Virtualization 4](https://docs.microsoft.com/microsoft-desktop-optimization-pack/appv-v4/).  
 
 Kromě dalších Configuration Manager požadavků a postupů pro vytváření aplikací musíte při vytváření a nasazování virtuálních aplikací vzít v úvahu následující skutečnosti:
 
@@ -49,7 +49,7 @@ Kromě dalších Configuration Manager požadavků a postupů pro vytváření a
 
 -   Aby bylo možné nasadit virtuální aplikace v Configuration Manager, musí mít klientské počítače minimálně sadu App-V 4,6 SP1 nebo novější verzi nainstalovaného klienta.  
 
--   Než budete moct úspěšně nasadit virtuální aplikace, je potřeba aktualizovat klienta sady App-V s opravou hotfix popsanou v článku znalostní báze [2645225](https://support.microsoft.com/kb/2645225).  
+-   Než budete moct úspěšně nasadit virtuální aplikace, aktualizujte klienta sady App-V s nejnovější opravou hotfix. Další informace najdete v tématu [aktuální seznam verzí sady App-v 4,5 a verze souboru sady App-v 4,6](https://support.microsoft.com/help/2950945/current-list-of-app-v-4-5-and-app-v-4-6-file-versions).
 
 -   Pokud používáte skupiny připojení v App-V 5,0, můžou vaše nasazené virtuální aplikace sdílet stejný systém souborů a registr v klientských počítačích. Na rozdíl od standardních virtuální aplikací mohou tyto aplikace sdílet data mezi sebou. Skupiny připojení si navíc zachovávají uživatelská nastavení pro aplikace, které obsahují. Virtuální prostředí App-V v Configuration Manager slouží k nastavení skupin připojení na klientských počítačích. Při instalaci aplikace nebo vyhodnocování nainstalovaných aplikací klienty dochází k vytvoření nebo úpravám virtuálních prostředí v klientských počítačích. Aplikacím můžete změnit prioritu tak, aby v situaci, kdy se více aplikací pokusí změnit hodnotu v systému souborů nebo registru, měla přednost aplikace s nejvyšší prioritou. Další informace najdete v tématu [Vytvoření virtuálních prostředí App-V](../../apps/deploy-use/create-app-v-virtual-environments.md).  
 
@@ -58,16 +58,16 @@ Kromě dalších Configuration Manager požadavků a postupů pro vytváření a
 
 -   **App-v 4,6**: Chcete-li používat virtuální aplikace v Configuration Manager, musí mít klientské počítače nainstalovaného klienta sady App-v 4,6 SP1, App-V 4,6 SP2 nebo App-v 4,6 SP3.  
 
-     Než budete moct úspěšně nasadit virtuální aplikace, musíte taky aktualizovat klienta sady App-V 4,6 SP1 o opravu hotfix, která je popsaná v článku znalostní báze [2645225](https://go.microsoft.com/fwlink/p/?LinkId=237322).  
+     Než budete moct úspěšně nasadit virtuální aplikace, aktualizujte klienta sady App-V 4,6 o nejnovější opravu hotfix. Další informace najdete v tématu [aktuální seznam verzí sady App-v 4,5 a verze souboru sady App-v 4,6](https://support.microsoft.com/help/2950945/current-list-of-app-v-4-5-and-app-v-4-6-file-versions).  
 
--   Sady **App-v 5, App-v 5,0 SP1, App-v 5,0 SP2, App-v 5,0 SP3 a App-v 5,1**: pro sadu App-v 5,0 SP2 je třeba nainstalovat [hotfix Package 5](https://support.microsoft.com/en-us/kb/2963211) nebo použít App-v 5,0 SP3.  
+-   Sady **App-v 5, App-v 5,0 SP1, App-v 5,0 SP2, App-v 5,0 SP3 a App-v 5,1**: pro sadu App-v 5,0 SP2 je třeba nainstalovat [hotfix Package 5](https://support.microsoft.com/help/2963211) nebo použít App-v 5,0 SP3.  
 -   **App-V 5,2**: Tato verze je integrovaná do Windows 10 školství (1607 a novější), Windows 10 Enterprise (1607 a novější) a windows Server 2016.
 
 Další informace o App-V ve Windows 10 najdete v následujících tématech:
 
-- [Co je nového v App-V](https://technet.microsoft.com/itpro/windows/manage/appv-about-appv)
-- [Začínáme s App-V pro Windows 10](https://technet.microsoft.com/itpro/windows/manage/appv-getting-started)
-- [Upgrade na aplikaci App-V pro Windows 10 z existující instalace](https://technet.microsoft.com/itpro/windows/manage/appv-upgrading-to-app-v-for-windows-10-from-an-existing-installation)
+- [Co je nového v App-V](https://docs.microsoft.com/windows/application-management/app-v/appv-about-appv)
+- [Začínáme s App-V pro Windows 10](https://docs.microsoft.com/windows/application-management/app-v/appv-getting-started)
+- [Upgrade na aplikaci App-V pro Windows 10 z existující instalace](https://docs.microsoft.com/windows/application-management/app-v/appv-upgrading-to-app-v-for-windows-10-from-an-existing-installation)
 
 ##  <a name="steps-to-manage-app-v-virtual-applications"></a>Kroky týkající se správy virtuálních aplikací App-V  
  Pokud chcete spravovat virtuální aplikace App-V, použijte následující postup:  
@@ -147,7 +147,7 @@ Pro použití této funkce se Configuration Manager musí být nasazeny a regist
 Další informace o funkci App-V Dynamic Suite Composition najdete v dokumentaci k App-V.  
 
 ##  <a name="converting-app-v-46-applications-to-app-v-5-applications"></a>Převod aplikací sady App-V 4.6 na aplikace sady App-V 5  
-Formát balíčku aplikace se mezi verzemi sady App-V 4.6 a App-V 5 změnil. Aplikace, které mají stanovené pořadí pomocí sady App-V 4.6, již podporovány nejsou. Sada App-V 5 ale obsahuje nástroj pro převádění balíčků, který můžete použít k převodu aplikací. Další informace najdete v [dokumentaci k App-V 5](https://technet.microsoft.com/library/jj713472.aspx).  
+Formát balíčku aplikace se mezi verzemi sady App-V 4.6 a App-V 5 změnil. Aplikace, které mají stanovené pořadí pomocí sady App-V 4.6, již podporovány nejsou. Sada App-V 5 ale obsahuje nástroj pro převádění balíčků, který můžete použít k převodu aplikací. Další informace najdete v tématu [Postup převodu balíčku vytvořeného v předchozí verzi sady App-V](https://docs.microsoft.com/microsoft-desktop-optimization-pack/appv-v5/how-to-convert-a-package-created-in-a-previous-version-of-app-v).  
 
 Při převodu aplikací sady App-V 4.6 na aplikace sady App-V 5 postupujte podle následujících kroků:  
 
@@ -178,7 +178,7 @@ Konfigurační soubor nasazení obsahuje nastavení, která platí pro počíta�
 
 Chcete-li nasadit virtuální aplikace sady App-V 5 s Configuration Manager, všechny tři soubory musí být při vytvoření typu nasazení sady App-V 5 přítomny ve stejné složce. Pokud se ve složce nachází několik souborů, Configuration Manager použije nejnovější.  
 
-Další informace najdete v [dokumentaci k App-V 5](https://technet.microsoft.com/library/jj713466.aspx).  
+Další informace najdete v tématu [o dynamické konfiguraci sady App-V 5,0](https://docs.microsoft.com/microsoft-desktop-optimization-pack/appv-v5/about-app-v-50-dynamic-configuration).  
 
 ##  <a name="app-v-local-interaction"></a> Místní interakce sady App-V  
 V některých scénářích nasazení aplikací se aplikace instalují místně na klientských počítačích a jiné aplikace se nasazují na stejný klientský počítač jako virtuální aplikace. Ve výchozím nastavení nemohou aplikace nainstalované lokálně vidět virtualizované aplikace přímo nebo s nimi komunikovat. Toto je zamýšlené chování izolace aplikace, které poskytuje App-V. Místní interakce je funkce klienta sady App-V, kterou můžete povolit pro každou aplikaci, aby umožňovala zobrazení a komunikaci s virtualizovanými aplikacemi lokálně nainstalované aplikace, které běží na klientském počítači. Configuration Manager a App-V plně podporují místní interakci.  
@@ -186,14 +186,14 @@ V některých scénářích nasazení aplikací se aplikace instalují místně 
 Další informace o funkci Místní interakce sady App-V najdete v dokumentaci k sadě App-V.  
 
 ##  <a name="app-v-5-shared-content-store"></a>Úložiště sdíleného obsahu sady App-V 5  
-Configuration Manager podporuje funkci úložiště sdíleného obsahu sady App-V 5. Další informace najdete v tématu [Plánování pro Úložiště sdíleného obsahu (SCS) App-V 5.0](https://technet.microsoft.com/library/jj713431.aspx).  
+Configuration Manager podporuje funkci úložiště sdíleného obsahu sady App-V 5. Další informace najdete v tématu [Plánování pro Úložiště sdíleného obsahu (SCS) App-V 5.0](https://docs.microsoft.com/microsoft-desktop-optimization-pack/appv-v5/planning-for-the-app-v-50-sequencer-and-client-deployment#planning-for-the-app-v-50-shared-content-store-scs).  
 
 ##  <a name="monitoring-virtual-applications"></a>Monitorování virtuálních aplikací  
 
 ### <a name="virtual-application-reports"></a>Sestavy virtuálních aplikací  
 K monitorování sady App-V v prostředí Configuration Manager můžete použít následující sestavy:  
 
-|Název sestavy|Popis|  
+|Název sestavy|Description|  
 |-----------------|-----------------|  
 |Výsledky virtuálního prostředí sady App-V|Zobrazuje informace o vybraném virtuálním prostředí, které je v určeném stavu pro vybranou kolekci (pouze sada App-V 5).|  
 |Výsledky virtuálního prostředí sady App-V pro prostředek|Zobrazuje informace o vybraném virtuálním prostředí pro zadaný prostředek a všechny typy nasazení pro vybrané virtuální prostředí (jenom sady App-V 5).|  

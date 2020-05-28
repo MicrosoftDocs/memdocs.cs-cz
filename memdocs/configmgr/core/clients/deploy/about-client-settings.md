@@ -10,12 +10,12 @@ ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1435c1ab6be8c80178566ae9d354084fddebb22a
-ms.sourcegitcommit: 568f8f8c19fafdd0f4352d0682f1ca7a4d665d25
+ms.openlocfilehash: 127ed43fded6c66bc4395ae4d69a28ae8c9eddd5
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81771357"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83877531"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>Informace o nastavení klienta v Configuration Manager
 
@@ -206,7 +206,7 @@ Další informace o následujících třech nastaveních najdete v tématu [ozn�
 > [!Important]  
 > Uživatelské prostředí programu Silverlight v katalogu aplikací není v aktuální větvi verze 1806 podporováno. Počínaje verzí 1906 aktualizované klienty automaticky používají bod správy pro nasazení aplikací, které jsou k dispozici pro uživatele. Nemůžete také instalovat nové role katalogu aplikací. Podpora končí pro role katalogu aplikací s verzí 1910.  
 >
-> Další informace najdete v těchto článcích:
+> Další informace najdete v následujících článcích:
 >
 > - [Konfigurace centra softwaru](../../../apps/plan-design/plan-for-software-center.md#bkmk_userex)
 > - [Odebrané a zastaralé funkce](../../plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md)  
@@ -218,7 +218,7 @@ Configuration Manager používá toto nastavení pro připojení uživatelů ke 
 > [!Important]  
 > Uživatelské prostředí programu Silverlight v katalogu aplikací není v aktuální větvi verze 1806 podporováno. Počínaje verzí 1906 aktualizované klienty automaticky používají bod správy pro nasazení aplikací, které jsou k dispozici pro uživatele. Nemůžete také instalovat nové role katalogu aplikací. Podpora končí pro role katalogu aplikací s verzí 1910.  
 >
-> Další informace najdete v těchto článcích:
+> Další informace najdete v následujících článcích:
 >
 > - [Konfigurace centra softwaru](../../../apps/plan-design/plan-for-software-center.md#bkmk_userex)
 > - [Odebrané a zastaralé funkce](../../plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md)  
@@ -325,9 +325,9 @@ Pokud klienti musí instalovat požadované aktualizace softwaru v konečném te
 
 ### <a name="grace-period-for-enforcement-after-deployment-deadline-hours"></a>Poskytnutá lhůta pro vynucení po termínu nasazení (hodiny)
 
-Pokud chcete uživatelům poskytnout více času na instalaci požadované aplikace nebo nasazení aktualizace softwaru po uplynutí konečného termínu, nastavte tuto možnost na **Ano**. Tato lhůta odkladu je pro počítač vypnutý po delší dobu a uživatel musí instalovat mnoho nasazení aplikace nebo aktualizace. Toto nastavení je užitečné například v případě, že se uživatel vrátí z dovolené a musí počkat delší dobu, než klient nainstaluje zpožděná nasazení aplikace.
+Pokud chcete uživatelům poskytnout více času na instalaci požadované aplikace nebo nasazení aktualizace softwaru po uplynutí konečného termínu, nastavte hodnotu pro tuto možnost. Tato lhůta odkladu je pro počítač vypnutý po delší dobu a uživatel musí instalovat mnoho nasazení aplikace nebo aktualizace. Toto nastavení je užitečné například v případě, že se uživatel vrátí z dovolené a musí počkat delší dobu, než klient nainstaluje zpožděná nasazení aplikace.
 
-Nastavte období odkladu 1 až 120 hodin. Toto nastavení použijte spolu s vlastností nasazení **zpoždění vynucení tohoto nasazení podle uživatelských předvoleb**. Další informace najdete v tématu [nasazení aplikací](../../../apps/deploy-use/deploy-applications.md#delay-enforcement-with-a-grace-period).
+Nastavte období odkladu na 0 až 120 hodin. Toto nastavení použijte spolu s vlastností nasazení **zpoždění vynucení tohoto nasazení podle uživatelských předvoleb**. Další informace najdete v tématu [nasazení aplikací](../../../apps/deploy-use/deploy-applications.md#delay-enforcement-with-a-grace-period).
 
 
 ## <a name="computer-restart"></a>Restartování počítače
@@ -363,7 +363,7 @@ Skupiny hranic Configuration Manager slouží k definování a regulaci distribu
 
 ### <a name="use-configuration-manager-boundary-groups-for-delivery-optimization-group-id"></a>Pro ID skupiny pro optimalizaci doručení použijte Configuration Manager skupiny hranic.
 
-Vyberte **Ano** , pokud chcete použít identifikátor skupiny hranic jako identifikátor skupiny Optimalizace doručení na klientovi. Když klient komunikuje s cloudovou službou Optimalizace doručení, používá tento identifikátor k vyhledání partnerských uzlů s požadovaným obsahem.
+Vyberte **Ano** , pokud chcete použít identifikátor skupiny hranic jako identifikátor skupiny Optimalizace doručení na klientovi. Když klient komunikuje s cloudovou službou Optimalizace doručení, používá tento identifikátor k vyhledání partnerských uzlů s požadovaným obsahem. Když toto nastavení povolíte, nastaví se režim stažení Optimalizace doručení na skupinu (2) u cílových klientů.
 
 > [!Note]
 > Microsoft doporučuje, aby klient mohl nakonfigurovat toto nastavení prostřednictvím místních zásad místo zásad skupiny. To umožňuje, aby byl identifikátor skupiny hranic nastaven jako identifikátor skupiny Optimalizace doručení na klientovi. Další informace najdete v tématu [Optimalizace doručení](../../plan-design/hierarchy/fundamental-concepts-for-content-management.md#delivery-optimization).
@@ -509,13 +509,12 @@ Pro toto nastavení vyberte jednu z následujících možností:
 
     - Požadovaná nasazení (je-li dosažen konečný termín instalace)  
 
-    > [!IMPORTANT]  
-    > Klient vždy povoluje softwarové instalace z centra softwaru bez ohledu na nastavení měřeného připojení k Internetu.  
-
     Pokud klient dosáhne limitu přenosu dat u měřeného připojení k Internetu, klient se již nebude pokoušet o komunikaci s Configuration Manager lokalitami.  
 
 - **Blok**: klient Configuration Manager se nebude pokoušet o komunikaci s Configuration Manager weby, pokud se nachází na měřeném připojení k Internetu. Tato možnost je výchozí.  
 
+> [!IMPORTANT]  
+> Klient vždy povoluje softwarové instalace z centra softwaru bez ohledu na nastavení měřeného připojení k Internetu. Pokud uživatel požádá o instalaci softwaru, když je zařízení v měřené síti, Centrum softwaru respektuje záměr uživatele.<!-- MEMDocs#285 -->
 
 
 ## <a name="power-management"></a>Řízení spotřeby  
@@ -777,9 +776,9 @@ Chcete-li zadat typy souborů k inventarizaci, vyberte možnost **nastavit typy*
 
 - Pokud chcete přidat nový typ souboru do inventáře, vyberte **Nový** . Pak v dialogovém okně **vlastnosti souboru inventáře** zadejte následující informace:  
 
-    - **Název**: zadejte název souboru, který chcete uvést do inventáře. Použijte zástupný znak hvězdička (`*`), který představuje libovolný textový řetězec, a otazník (`?`), který představuje libovolný jednotlivý znak. Pokud například chcete inventarizaci všech souborů s příponou. doc, zadejte název `*.doc`souboru.  
+    - **Název**: zadejte název souboru, který chcete uvést do inventáře. Použijte zástupný znak hvězdička ( `*` ), který představuje libovolný textový řetězec, a otazník ( `?` ), který představuje libovolný jednotlivý znak. Pokud například chcete inventarizaci všech souborů s příponou. doc, zadejte název souboru `*.doc` .  
 
-    - **Umístění**: výběrem možnosti **nastavit** otevřete dialogové okno **Vlastnosti cesty** . Nakonfigurujte inventář softwaru, aby hledal zadaný soubor na všech pevných discích klientů, aby hledal zadanou cestu (například `C:\Folder`), nebo vyhledá zadanou proměnnou (například `%windir%`). Můžete také prohledat všechny podsložky v zadané cestě.  
+    - **Umístění**: výběrem možnosti **nastavit** otevřete dialogové okno **Vlastnosti cesty** . Nakonfigurujte inventář softwaru, aby hledal zadaný soubor na všech pevných discích klientů, aby hledal zadanou cestu (například `C:\Folder` ), nebo vyhledá zadanou proměnnou (například `%windir%` ). Můžete také prohledat všechny podsložky v zadané cestě.  
 
     - **Vyloučení šifrovaných a komprimovaných souborů**: když zvolíte tuto možnost, všechny komprimované nebo zašifrované soubory se neinventáří.  
 
@@ -798,9 +797,9 @@ Pokud chcete shromáždit soubory z klientských počítačů, vyberte možnost 
 
 - V dialogovém okně **Sebrané vlastnosti souboru** zadejte následující údaje:  
 
-    - **Název**: zadejte název souboru, který chcete shromáždit. Použijte zástupný znak hvězdička (`*`), který představuje libovolný textový řetězec, a otazník (`?`), který představuje libovolný jednotlivý znak.  
+    - **Název**: zadejte název souboru, který chcete shromáždit. Použijte zástupný znak hvězdička ( `*` ), který představuje libovolný textový řetězec, a otazník ( `?` ), který představuje libovolný jednotlivý znak.  
 
-    - **Umístění**: výběrem možnosti **nastavit** otevřete dialogové okno **Vlastnosti cesty** . Nakonfigurujte inventář softwaru, který bude hledat soubor, který chcete shromáždit, na všech pevných discích klienta, vyhledat zadanou cestu (například `C:\Folder`) nebo vyhledat zadanou proměnnou (například `%windir%`). Můžete také prohledat všechny podsložky v zadané cestě.  
+    - **Umístění**: výběrem možnosti **nastavit** otevřete dialogové okno **Vlastnosti cesty** . Nakonfigurujte inventář softwaru, který bude hledat soubor, který chcete shromáždit, na všech pevných discích klienta, vyhledat zadanou cestu (například `C:\Folder` ) nebo vyhledat zadanou proměnnou (například `%windir%` ). Můžete také prohledat všechny podsložky v zadané cestě.  
 
     - **Vyloučit šifrované a komprimované soubory**: Pokud zvolíte tuto možnost, všechny komprimované nebo zašifrované soubory se neshromažďují.  
 
@@ -946,7 +945,7 @@ Toto nastavení klienta nabízí následující možnosti:
 
 - **Nízká**: během stahování a aktualizace na pozadí můžete pokračovat v práci na zařízení. Celková doba instalace je delší, ale výpadek uživatele je kratší. Možná bude nutné zvýšit maximální dobu běhu aktualizace, aby nedocházelo k vypršení časového limitu při použití této možnosti.  
 
-    - `/Priority` Odebere [možnost příkazového řádku instalačního programu systému Windows](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options) ze souboru setupconfig. ini.
+    - Odebere `/Priority` [možnost příkazového řádku instalačního programu systému Windows](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options) ze souboru setupconfig. ini.
 
 
 ### <a name="enable-third-party-software-updates"></a>Povolit aktualizace softwaru třetích stran

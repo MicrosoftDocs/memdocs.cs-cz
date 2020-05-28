@@ -2,20 +2,20 @@
 title: Používané účty
 titleSuffix: Configuration Manager
 description: Identifikujte a spravujte skupiny systému Windows, účty a objekty SQL používané v Configuration Manager.
-ms.date: 10/23/2019
+ms.date: 05/08/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.technology: Configuration Manager-core
 ms.topic: conceptual
 ms.assetid: 72d7b174-f015-498f-a0a7-2161b9929198
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a6808fed9fa9aaf894e3975066eb7707880b7948
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 5bd1284b96e1739126b8d6ee19f20699d47e5880
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82073411"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83267979"
 ---
 # <a name="accounts-used-in-configuration-manager"></a>Účty používané v Configuration Manager
 
@@ -24,14 +24,14 @@ ms.locfileid: "82073411"
 Pomocí následujících informací Identifikujte skupiny systému Windows, účty a objekty SQL používané v Configuration Manager, způsob jejich použití a jakékoli požadavky.  
 
 - [Skupiny systému Windows, které vytváří a používá nástroj Configuration Manager](#bkmk_groups)  
-  - [ConfigMgr_CollectedFilesAccess](#configmgr_collectedfilesaccess)  
-  - [ConfigMgr_DViewAccess](#configmgr_dviewaccess)  
-  - [Uživatelé vzdáleného ovládání nástroje ConfigMgr](#configmgr-remote-control-users)  
+  - [Manager_CollectedFilesAccess konfigurace](#configmgr_collectedfilesaccess)  
+  - [Manager_DViewAccess konfigurace](#configmgr_dviewaccess)  
+  - [Configuration Manager uživatele vzdáleného řízení](#configmgr_rcusers)  
   - [Správci SMS](#sms-admins)  
-  - [SMS_SiteSystemToSiteServerConnection_MP_&lt;SiteCode\>](#bkmk_remotemp)  
-  - [SMS_SiteSystemToSiteServerConnection_SMSProv_&lt;SiteCode\>](#bkmk_remoteprov)  
-  - [SMS_SiteSystemToSiteServerConnection_Stat_&lt;SiteCode\>](#bkmk_remotestat)  
-  - [SMS_SiteToSiteConnection_&lt;SiteCode\>](#bkmk_filerepl)  
+  - [SMS_SiteSystemToSiteServerConnection_MP_ &lt; SiteCode\>](#bkmk_remotemp)  
+  - [SMS_SiteSystemToSiteServerConnection_SMSProv_ &lt; SiteCode\>](#bkmk_remoteprov)  
+  - [SMS_SiteSystemToSiteServerConnection_Stat_ &lt; SiteCode\>](#bkmk_remotestat)  
+  - [SMS_SiteToSiteConnection_ &lt; SiteCode\>](#bkmk_filerepl)  
 
 - [Účty, které používá nástroj Configuration Manager](#bkmk_accounts)
   - [Účet zjišťování skupiny služby Active Directory](#active-directory-group-discovery-account)  
@@ -96,7 +96,7 @@ Configuration Manager automaticky vytvoří a v mnoha případech automaticky ud
 > Když Configuration Manager vytvoří skupinu v počítači, který je členem domény, bude skupina místní skupinou zabezpečení. Pokud je počítač řadičem domény, skupina je místní doménovou skupinou. Tento typ skupiny je sdílen mezi všemi řadiči domény v doméně.  
 
 
-### <a name="configmgr_collectedfilesaccess"></a><a name="configmgr_collectedfilesaccess"></a>ConfigMgr_CollectedFilesAccess
+### <a name="configuration-manager_collectedfilesaccess"></a><a name="configmgr_collectedfilesaccess"></a>Manager_CollectedFilesAccess konfigurace
 
 Configuration Manager tuto skupinu používá k udělení přístupu k zobrazení souborů shromážděných inventářem softwaru.  
 
@@ -114,14 +114,14 @@ Configuration Manager automaticky spravuje členství ve skupině. Členství za
 Ve výchozím nastavení má tato skupina oprávnění **číst** k následující složce na serveru lokality:`C:\Program Files\Microsoft Configuration Manager\sinv.box\FileCol`  
 
 
-### <a name="configmgr_dviewaccess"></a><a name="configmgr_dviewaccess"></a>ConfigMgr_DViewAccess  
+### <a name="configuration-manager_dviewaccess"></a><a name="configmgr_dviewaccess"></a>Manager_DViewAccess konfigurace  
 
 Tato skupina je místní skupina zabezpečení, která Configuration Manager vytvořena na serveru databáze lokality nebo serveru repliky databáze pro podřízenou primární lokalitu. Lokalita ji vytvoří, když použijete distribuovaná zobrazení pro replikaci databáze mezi lokalitami v hierarchii. Obsahuje server lokality a účty počítačů SQL Server lokality centrální správy.
 
 Další informace najdete v tématu [přenos dat mezi lokalitami](data-transfers-between-sites.md).
 
 
-### <a name="configmgr-remote-control-users"></a>Uživatelé vzdáleného ovládání nástroje ConfigMgr  
+### <a name="configuration-manager-remote-control-users"></a><a name="configmgr_rcusers"></a>Configuration Manager uživatele vzdáleného řízení  
 
 Configuration Manager nástroje Remote Tools tuto skupinu používají k ukládání účtů a skupin, které jste nastavili v seznamu **povolených prohlížečů** . Lokalita přiřadí tento seznam každému klientovi.  
 
@@ -161,12 +161,12 @@ Když odinstalujete lokalitu, tato skupina se automaticky neodebere. Po odinstal
 Configuration Manager automaticky spravuje členství ve skupině. Ve výchozím nastavení je každý správce v hierarchii a účet počítače serveru lokality členy skupiny **Admins služby SMS** na jednotlivých počítačích poskytovatele SMS v lokalitě.
 
 #### <a name="permissions"></a>Oprávnění
-Práva a oprávnění pro skupinu SMS Admins můžete zobrazit v modulu snap-in konzoly MMC **řízení služby WMI** . Ve výchozím nastavení má tato skupina povolenou **možnost povolit účet** a povolit **Vzdálené povolení** v oboru názvů `Root\SMS` rozhraní WMI. Ověření uživatelé mají oprávnění **spouštět metody**, **zapisovat zprostředkovatele**a **Povolit účet**.
+Práva a oprávnění pro skupinu SMS Admins můžete zobrazit v modulu snap-in konzoly MMC **řízení služby WMI** . Ve výchozím nastavení má tato skupina povolenou **možnost povolit účet** a povolit **Vzdálené povolení** v `Root\SMS` oboru názvů rozhraní WMI. Ověření uživatelé mají oprávnění **spouštět metody**, **zapisovat zprostředkovatele**a **Povolit účet**.
 
 Používáte-li vzdálenou konzolu Configuration Manager, nakonfigurujte oprávnění modelu DCOM pro **vzdálenou aktivaci** na počítači serveru lokality i u poskytovatele serveru SMS. Udělte tato práva skupině **Admins služby SMS** . Tato akce zjednodušuje správu namísto udělení těchto oprávnění přímo uživatelům nebo skupinám. Další informace najdete v tématu [Konfigurace oprávnění modelu DCOM pro vzdálené Configuration Manager konzoly](../../servers/manage/modify-your-infrastructure.md#BKMK_ConfigDCOMforRemoteConsole). 
 
 
-### <a name="sms_sitesystemtositeserverconnection_mp_ltsitecode"></a><a name="bkmk_remotemp"></a>SMS_SiteSystemToSiteServerConnection_MP_&lt;SiteCode\>  
+### <a name="sms_sitesystemtositeserverconnection_mp_ltsitecode"></a><a name="bkmk_remotemp"></a>SMS_SiteSystemToSiteServerConnection_MP_ &lt; SiteCode\>  
  
 Body správy, které jsou vzdálené od serveru lokality, používají tuto skupinu pro připojení k databázi lokality. Tato skupina nabízí bodu správy přístup ke složkám příchozí pošty na serveru lokality a v databázi lokality.  
 
@@ -179,10 +179,10 @@ Když odinstalujete lokalitu, tato skupina se automaticky neodebere. Po odinstal
 Configuration Manager automaticky spravuje členství ve skupině. Ve výchozím nastavení členství zahrnuje počítačové účty vzdálených počítačů, které mají pro lokalitu bod správy.
 
 #### <a name="permissions"></a>Oprávnění
-Ve výchozím nastavení má tato skupina oprávnění **číst**, **číst & spouštět**a **Zobrazovat obsah složky** pro následující složku na serveru lokality: `C:\Program Files\Microsoft Configuration Manager\inboxes`. Tato skupina má další oprávnění **zapisovat** do podsložek pod složkou **Doručená pošta**, do kterých bod správy zapisuje data klientů.
+Ve výchozím nastavení má tato skupina oprávnění **číst**, **číst & spouštět**a **Zobrazovat obsah složky** pro následující složku na serveru lokality: `C:\Program Files\Microsoft Configuration Manager\inboxes` . Tato skupina má další oprávnění **zapisovat** do podsložek pod složkou **Doručená pošta**, do kterých bod správy zapisuje data klientů.
 
 
-### <a name="sms_sitesystemtositeserverconnection_smsprov_ltsitecode"></a><a name="bkmk_remoteprov"></a>SMS_SiteSystemToSiteServerConnection_SMSProv_&lt;SiteCode\>  
+### <a name="sms_sitesystemtositeserverconnection_smsprov_ltsitecode"></a><a name="bkmk_remoteprov"></a>SMS_SiteSystemToSiteServerConnection_SMSProv_ &lt; SiteCode\>  
  
 Vzdálené počítače poskytovatele služby SMS tuto skupinu používají pro připojení k serveru lokality.  
 
@@ -195,19 +195,19 @@ Když odinstalujete lokalitu, tato skupina se automaticky neodebere. Po odinstal
 Configuration Manager automaticky spravuje členství ve skupině. Ve výchozím nastavení členství zahrnuje počítačový účet nebo uživatelský účet domény. Tento účet používá pro připojení k serveru lokality od každého vzdáleného poskytovatele služby SMS.
 
 #### <a name="permissions"></a>Oprávnění
-Ve výchozím nastavení má tato skupina oprávnění **číst**, **číst & spouštět**a **Zobrazovat obsah složky** pro následující složku na serveru lokality: `C:\Program Files\Microsoft Configuration Manager\inboxes`. Tato skupina má další oprávnění pro **zápis** a **Úpravy** podsložek pod složkou Doručená pošta. Poskytovatel serveru SMS vyžaduje přístup k těmto složkám.
+Ve výchozím nastavení má tato skupina oprávnění **číst**, **číst & spouštět**a **Zobrazovat obsah složky** pro následující složku na serveru lokality: `C:\Program Files\Microsoft Configuration Manager\inboxes` . Tato skupina má další oprávnění pro **zápis** a **Úpravy** podsložek pod složkou Doručená pošta. Poskytovatel serveru SMS vyžaduje přístup k těmto složkám.
 
-Tato skupina má také oprávnění **ke čtení** pro podsložky na serveru lokality níže `C:\Program Files\Microsoft Configuration Manager\OSD\Bin`. 
+Tato skupina má také oprávnění **ke čtení** pro podsložky na serveru lokality níže `C:\Program Files\Microsoft Configuration Manager\OSD\Bin` . 
 
-Má také následující oprávnění pro podsložky níže `C:\Program Files\Microsoft Configuration Manager\OSD\boot`:
-- **Čtení**  
+Má také následující oprávnění pro podsložky níže `C:\Program Files\Microsoft Configuration Manager\OSD\boot` :
+- **Oprávnění**  
 - **Čtení & provedení**  
 - **Výpis obsahu složky**  
-- **Zápis**  
+- **Psal**  
 - **Úprava**   
 
 
-### <a name="sms_sitesystemtositeserverconnection_stat_ltsitecode"></a><a name="bkmk_remotestat"></a>SMS_SiteSystemToSiteServerConnection_Stat_&lt;SiteCode\>  
+### <a name="sms_sitesystemtositeserverconnection_stat_ltsitecode"></a><a name="bkmk_remotestat"></a>SMS_SiteSystemToSiteServerConnection_Stat_ &lt; SiteCode\>  
 
 Součást Správce odesílání souborů na Configuration Manager počítače se vzdáleným systémem lokality používá tuto skupinu pro připojení k serveru lokality.  
 
@@ -220,12 +220,12 @@ Když odinstalujete lokalitu, tato skupina se automaticky neodebere. Po odinstal
 Configuration Manager automaticky spravuje členství ve skupině. Ve výchozím nastavení členství zahrnuje počítačový účet nebo uživatelský účet domény. Tento účet používá pro připojení k serveru lokality z každého vzdáleného systému lokality, ve kterém je spuštěný správce odesílání souborů.
 
 #### <a name="permissions"></a>Oprávnění
-Ve výchozím nastavení má tato skupina oprávnění **číst**, **číst & spouštět**a **Zobrazovat obsah složky** v následující složce a jejích podsložkách na serveru lokality: `C:\Program Files\Microsoft Configuration Manager\inboxes`. 
+Ve výchozím nastavení má tato skupina oprávnění **číst**, **číst & spouštět**a **Zobrazovat obsah složky** v následující složce a jejích podsložkách na serveru lokality: `C:\Program Files\Microsoft Configuration Manager\inboxes` . 
 
-Tato skupina má další oprávnění **zápisu** a **úprav** do následující složky na serveru lokality: `C:\Program Files\Microsoft Configuration Manager\inboxes\statmgr.box`.
+Tato skupina má další oprávnění **zápisu** a **úprav** do následující složky na serveru lokality: `C:\Program Files\Microsoft Configuration Manager\inboxes\statmgr.box` .
 
 
-### <a name="sms_sitetositeconnection_ltsitecode"></a><a name="bkmk_filerepl"></a>SMS_SiteToSiteConnection_&lt;SiteCode\>  
+### <a name="sms_sitetositeconnection_ltsitecode"></a><a name="bkmk_filerepl"></a>SMS_SiteToSiteConnection_ &lt; SiteCode\>  
 Configuration Manager tuto skupinu používá k povolení replikace na základě souborů mezi lokalitami v hierarchii. Pro každou vzdálenou lokalitu, která přímo přenáší soubory do této lokality, má tato skupina účty nastavené jako **účet replikace souborů**.  
 
 #### <a name="type-and-location"></a>Typ a umístění
@@ -237,7 +237,7 @@ Když instalujete novou lokalitu jako podřízenou jiné lokalitě, Configuratio
 Když odinstalujete lokalitu, tato skupina se automaticky neodebere. Po odinstalaci lokality ji ručně odstraní.
 
 #### <a name="permissions"></a>Oprávnění
-Ve výchozím nastavení má tato skupina **Úplné řízení** pro následující složku: `C:\Program Files\Microsoft Configuration Manager\inboxes\despoolr.box\receive`.
+Ve výchozím nastavení má tato skupina **Úplné řízení** pro následující složku: `C:\Program Files\Microsoft Configuration Manager\inboxes\despoolr.box\receive` .
 
 
 
@@ -245,6 +245,8 @@ Ve výchozím nastavení má tato skupina **Úplné řízení** pro následujíc
 
 Pro Configuration Manager můžete nastavit následující účty.  
 
+> [!TIP]
+> `%`Pro účty, které zadáte v konzole Configuration Manager, nepoužívejte v hesle znak procenta (). Nepodařilo se ověřit účet.<!-- SCCMDocs#1032 -->
 
 ### <a name="active-directory-group-discovery-account"></a>Účet zjišťování skupiny služby Active Directory  
 
@@ -382,7 +384,7 @@ Klientské počítače používají **účet přístupu k síti** , když nemoho
 
 Klient Configuration Manager se nejprve pokusí použít svůj počítačový účet ke stažení obsahu. Pokud dojde k chybě, bude automaticky proveden pokus o účet přístupu k síti.  
 
-Od verze 1806 může klient připojený k pracovní skupině nebo klientovi připojenému k Azure AD bezpečně přistupovat k obsahu z distribučních bodů bez nutnosti účtu přístupu k síti. Toto chování zahrnuje scénáře nasazení operačního systému s pořadím úkolů spuštěným ze spouštěcího média, PXE nebo centra softwaru. Další informace najdete v tématu [Rozšířená http](enhanced-http.md).<!--1358228,1358278-->
+Pokud nakonfigurujete lokalitu pro protokol HTTPS nebo [Rozšířené http](enhanced-http.md), může pracovní skupina nebo klient připojený k Azure AD bezpečně přistupovat k obsahu z distribučních bodů bez nutnosti účtu přístupu k síti. Toto chování zahrnuje scénáře nasazení operačního systému s pořadím úkolů spuštěným ze spouštěcího média, PXE nebo centra softwaru.<!--1358228,1358278--> Další informace najdete v tématu [komunikace mezi klientem a bodem správy](communications-between-endpoints.md#bkmk_client2mp).<!-- SCCMDocs#1345 -->
 
 > [!Note]  
 > Pokud povolíte **Rozšířený protokol HTTP** tak, aby nevyžadoval účet přístupu k síti, musí mít distribuční bod spuštěný systém Windows Server 2012 nebo novější. <!--SCCMDocs-pr issue #2696-->
@@ -458,7 +460,7 @@ SQL Server Reporting Services používá **účet bodu služby Reporting Service
 > Účet, který zadáte, musí mít oprávnění k **místnímu přihlášení** v počítači, který je hostitelem databáze služby SQL Reporting Services.
 
 > [!NOTE]  
-> Účtu se automaticky přiřadí všechna potřebná práva, a to přidáním do role smsschm_users SQL Database v databázi nástroje ConfigMgr.
+> Účtu se automaticky přidělí všechna potřebná práva, která se přidají do role smsschm_users SQL Database v databázi Configuration Manager.
 
 Další informace najdete v tématu [Úvod do vytváření sestav](../../servers/manage/introduction-to-reporting.md).
 
@@ -643,41 +645,41 @@ Tento objekt se používá ke spouštění SQL Reporting provádění.  S touto 
 
 ## <a name="database-roles-that-configuration-manager-uses-in-sql"></a><a name="bkmk_sqlroles"></a>Databázové role, které Configuration Manager používá v SQL
 <!--SCCMDocs issue #1160-->
-Configuration Manager automaticky vytvoří a zachová následující objekty role v SQL. Tyto role poskytují přístup ke konkrétním uloženým procedurám, tabulkám, zobrazením a funkcím, aby bylo možné provádět potřebné akce jednotlivých rolí buď k načtení dat, nebo k vložení dat do a z databáze nástroje ConfigMgr. Tyto objekty jsou umístěné v rámci databáze Configuration Manager v části zabezpečení/role/databázové role.
+Configuration Manager automaticky vytvoří a zachová následující objekty role v SQL. Tyto role poskytují přístup ke konkrétním uloženým procedurám, tabulkám, zobrazením a funkcím, aby bylo možné provádět potřebné akce jednotlivých rolí, a to buď k načtení dat, nebo k vložení dat do a z databáze Configuration Manager. Tyto objekty jsou umístěné v rámci databáze Configuration Manager v části zabezpečení/role/databázové role.
 
 > [!IMPORTANT]  
-> Úprava nebo odebrání těchto objektů může způsobit drastické problémy v prostředí Configuration Manager.  Pro tyto objekty nedoporučujeme provádět žádné změny.
+> Úprava nebo odebrání těchto objektů může způsobit drastické problémy v prostředí Configuration Manager. Neměňte tyto objekty. Následující seznam slouží pouze pro informační účely.
 
 ### <a name="smsdbrole_aitool"></a>smsdbrole_AITool
 
-Import multilicencí funkce Asset Intelligence. Nástroj ConfigMgr udělí toto oprávnění účtům uživatelů na základě přístupu RBA, aby mohl importovat multilicence pro použití s funkce Asset Intelligence.  Tento účet může být přidán pomocí role úplného správce nebo role správce prostředků.
+Import multilicencí funkce Asset Intelligence. Configuration Manager uděluje toto oprávnění účtům uživatelů na základě přístupu RBA, aby bylo možné naimportovat multilicenční licenci pro použití s funkce Asset Intelligence.  Tento účet může být přidán pomocí role úplného správce nebo role správce prostředků.
 
 ### <a name="smsdbrole_aius"></a>smsdbrole_AIUS
 
-Synchronizace aktualizace funkce Asset Intelligence. ConfigMgr uděluje účet počítače, který je hostitelem účtu bodu synchronizace funkce Asset Intelligence, aby získal přístup k datům proxy serveru funkce Asset Intelligence a zobrazila nevyřízená data AI pro nahrání.
+Synchronizace aktualizace funkce Asset Intelligence. Configuration Manager udělí účet počítače, který je hostitelem účtu bodu synchronizace funkce Asset Intelligence, přístup k získání funkce Asset Intelligence dat proxy serveru a zobrazení nevyřízených dat AI pro nahrání.
 
 ### <a name="smsdbrole_amtsp"></a>smsdbrole_AMTSP
 
 Vzdálená správa. Tuto roli používá Configuration Manager role AMT k načtení dat na zařízeních, která podporují technologii Intel AMT.
 
 > [!NOTE]  
-> Tato role je v novějších verzích nástroje ConfigMgr zastaralá.
+> Tato role je v novějších verzích Configuration Manager zastaralá.
 
 ### <a name="smsdbrole_crp"></a>smsdbrole_CRP
 
-Podpora služby System Center Endpoint Protection pro body registrace certifikátu (SCEP). Nástroj ConfigMgr uděluje oprávnění k účtu počítače v systému lokality, který podporuje bod registrace certifikátu pro podporu SCEP pro podepsání a obnovení certifikátu.
+Bod registrace certifikátu, který podporuje Simple Certificate Enrollment Protocol (SCEP). Configuration Manager uděluje oprávnění k účtu počítače systému lokality, který podporuje bod registrace certifikátu pro podporu SCEP pro podepsání a obnovení certifikátu.
 
 ### <a name="smsdbrole_crppfx"></a>smsdbrole_CRPPfx
 
-Podpora pro bod registrace certifikátu: PFX. Nástroj ConfigMgr uděluje oprávnění k účtu počítače systému lokality, který podporuje bod registrace certifikátu nakonfigurovaný pro podporu PFX pro podepisování a obnovování.
+Podpora pro bod registrace certifikátu: PFX. Configuration Manager uděluje oprávnění k účtu počítače systému lokality, který podporuje bod registrace certifikátu nakonfigurovaný pro podporu PFX pro podepisování a obnovování.
 
 ### <a name="smsdbrole_dmp"></a>smsdbrole_DMP
 
-Bod správy zařízení. Nástroj ConfigMgr udělí toto oprávnění k účtu počítače pro bod správy, který má možnost "Povolit mobilním zařízením a počítačům Mac používat tento bod správy", schopnost poskytovat podporu pro zařízení zaregistrovaná v MDM.
+Bod správy zařízení. Configuration Manager uděluje toto oprávnění k účtu počítače pro bod správy, který má možnost "Povolit mobilním zařízením a počítačům Mac používat tento bod správy", což umožňuje poskytovat podporu pro zařízení zaregistrovaná v MDM.
 
 ### <a name="smsdbrole_dmpconnector"></a>smsdbrole_DmpConnector
 
-Spojovací bod služby. ConfigMgr udělí toto oprávnění k účtu počítače, který je hostitelem spojovacího bodu služby, aby načetl a poskytoval data telemetrie, spravovala cloudové služby a načetla aktualizace služby.
+Spojovací bod služby. Configuration Manager uděluje toto oprávnění účtu počítače, který je hostitelem spojovacího bodu služby, aby načetl a poskytoval data telemetrie, spravovala cloudové služby a načetla aktualizace služby.
 
 ### <a name="smsdbrole_dviewaccess"></a>smsdbrole_DViewAccess
 
@@ -685,11 +687,11 @@ Distribuovaná zobrazení. Pokud je vybrána možnost SQL Server distribuovaná 
 
 ### <a name="smsdbrole_dwss"></a>smsdbrole_DWSS
 
-Datový sklad. Nástroj ConfigMgr udělí toto oprávnění k účtu počítače, který je hostitelem role datového skladu.
+Datový sklad. Configuration Manager udělí toto oprávnění účtu počítače, který je hostitelem role datového skladu.
 
 ### <a name="smsdbrole_enrollsvr"></a>smsdbrole_EnrollSvr
 
- Bod registrace. ConfigMgr udělí toto oprávnění k účtu počítače, který je hostitelem bodu registrace a povoluje registraci zařízení přes MDM.
+ Bod registrace. Configuration Manager uděluje toto oprávnění účtu počítače, který hostuje bod registrace, aby bylo možné zařízení registrovat přes MDM.
 
 ### <a name="smsdbrole_extract"></a>smsdbrole_extract
 
@@ -697,26 +699,26 @@ Poskytuje přístup ke všem zobrazením rozšířených schémat.
 
 ### <a name="smsdbrole_hmsuser"></a>smsdbrole_HMSUser
 
-Služba Hierarchy Manager. ConfigMgr uděluje oprávnění k tomuto účtu pro správu zpráv o stavu převzetí služeb při selhání a transakce SQL Server Broker mezi lokalitami v rámci hierarchie.
+Služba Hierarchy Manager. Configuration Manager uděluje tomuto účtu oprávnění ke správě zpráv o stavu převzetí služeb při selhání a transakcí SQL Server Broker mezi lokalitami v rámci hierarchie.
 
 > [!NOTE]  
 > Role smdbrole_WebPortal je ve výchozím nastavení členem této role.
 
 ### <a name="smsdbrole_mcs"></a>smsdbrole_MCS
 
-Služba vícesměrového vysílání. Nástroj ConfigMgr udělí toto oprávnění k účtu počítače distribučního bodu, který podporuje vícesměrové vysílání.
+Služba vícesměrového vysílání. Configuration Manager udělí toto oprávnění účtu počítače distribučního bodu, který podporuje vícesměrové vysílání.
 
 ### <a name="smsdbrole_mp"></a>smsdbrole_MP
 
-Bod správy. Nástroj ConfigMgr udělí toto oprávnění k účtu počítače, který je hostitelem role bodu správy, aby poskytoval podporu pro klienty nástroje ConfigMgr.
+Bod správy. Configuration Manager udělí toto oprávnění účtu počítače, který je hostitelem role bodu správy a poskytuje podporu pro klienty Configuration Manager.
 
 ### <a name="smsdbrole_mpmbam"></a>smsdbrole_MPMBAM
 
-Správa a monitorování nástrojem Microsoft BitLocker v bodu správy. Nástroj ConfigMgr udělí toto oprávnění účtu počítače, který je hostitelem bodu správy, který spravuje MBAM pro prostředí.
+Správa a monitorování nástrojem Microsoft BitLocker v bodu správy. Configuration Manager uděluje toto oprávnění účtu počítače, který je hostitelem bodu správy, který spravuje MBAM pro prostředí.
 
 ### <a name="smsdbrole_mpusersvc"></a>smsdbrole_MPUserSvc
 
-Žádost o aplikaci bodu správy Nástroj ConfigMgr udělí toto oprávnění k účtu počítače, který je hostitelem bodu správy, aby podporoval požadavky na aplikace založené na uživatelích.
+Žádost o aplikaci bodu správy Configuration Manager udělí toto oprávnění účtu počítače, který je hostitelem bodu správy, aby podporoval požadavky na aplikace založené na uživatelích.
 
 ### <a name="smsdbrole_siteprovider"></a>smsdbrole_siteprovider
 
@@ -724,16 +726,37 @@ Poskytovatel serveru SMS. Configuration Manager udělí toto oprávnění účtu
 
 ### <a name="smsdbrole_siteserver"></a>smsdbrole_siteserver
 
-Server lokality. ConfigMgr udělí toto oprávnění účtu počítače, který je hostitelem primární lokality nebo lokality CAS.
+Server lokality. Configuration Manager udělí toto oprávnění účtu počítače, který je hostitelem primární lokality nebo lokality CAS.
 
 ### <a name="smsdbrole_sup"></a>smsdbrole_SUP
 
-Bod aktualizace softwaru. ConfigMgr udělí toto oprávnění účtu počítače, který je hostitelem bodu aktualizace softwaru pro práci s aktualizacemi třetích stran.
+Bod aktualizace softwaru. Configuration Manager uděluje toto oprávnění účtu počítače, který je hostitelem bodu aktualizace softwaru pro práci s aktualizacemi třetích stran.
 
 ### <a name="smsdbrole_webportal"></a>smsdbrole_WebPortal
 
-Bod webu Katalog aplikací. Nástroj ConfigMgr uděluje oprávnění k účtu počítače, který je hostitelem bodu webu Application Catalog, aby poskytoval nasazení aplikace založené na uživateli.
+Bod webu Katalog aplikací. Configuration Manager uděluje oprávnění k účtu počítače, který je hostitelem bodu webu Application Catalog, aby poskytoval nasazení aplikace založené na uživateli.
 
 ### <a name="smsschm_users"></a>smsschm_users
 
-Přístup k vytváření sestav uživatelů Nástroj ConfigMgr uděluje přístup k účtu, který se používá pro účet bodu služby Reporting Services, aby povoloval přístup k zobrazením sestav SMS, aby mohl zobrazovat data Configuration Manager sestav.  Data jsou dále omezená pomocí RBA.
+Přístup k vytváření sestav uživatelů Configuration Manager uděluje přístup k účtu, který se používá pro účet bodu služby Reporting Services, aby povoloval přístup k zobrazením sestav SMS k zobrazení dat Configuration Manager sestav.  Data jsou dále omezená pomocí RBA.
+
+## <a name="elevated-permissions"></a>Zvýšená oprávnění
+
+<!-- SCCMDocs#405 -->
+
+Configuration Manager vyžaduje, aby některé účty měly zvýšená oprávnění pro operace prováděné při provozu. Podívejte se například na [požadavky pro instalaci primární lokality](../../servers/deploy/install/prerequisites-for-installing-sites.md#bkmk_PrereqPri). Následující seznam shrnuje tato oprávnění a důvody, proč jsou potřeba.
+
+- Účet počítače serveru primární lokality a serveru lokality centrální správy vyžaduje:
+
+  - Oprávnění místního správce na všech serverech systému lokality. Toto oprávnění slouží ke správě, instalaci a odebírání systémových služeb. Server lokality také při přidávání a odebírání rolí aktualizuje místní skupiny v systému lokality.
+
+  - Správce sysadmin přistupuje k instanci SQL pro databázi lokality. Toto oprávnění slouží ke konfiguraci a správě SQL pro lokalitu. Configuration Manager úzce integruje s SQL, není to pouze databáze.
+
+- Uživatelské účty v roli úplného správce vyžadují:
+
+  - Oprávnění místního správce na všech serverech lokality. Toto oprávnění slouží k zobrazení, úpravám, odebrání a instalaci systémových služeb, klíčů a hodnot registru a objektů služby WMI.
+
+  - Správce sysadmin přistupuje k instanci SQL pro databázi lokality. Toto oprávnění je instalace a aktualizace databáze během instalace nebo obnovení. Vyžaduje se taky pro údržbu a provoz SQL. Například přeindexuje a aktualizuje statistiku.
+
+    > [!NOTE]
+    > Některé organizace se můžou rozhodnout odebrat přístup sysadmin a udělit ho jenom v případě, že je potřeba. Toto chování se někdy označuje jako "přístup za běhu (just-in-time)". V takovém případě mají uživatelé s rolí správce s úplnými oprávněními stále přístup ke čtení, aktualizaci a spouštění uložených procedur v databázi Configuration Manager. Tato oprávnění jim umožňují řešit většinu problémů bez plného přístupu sysadmin.

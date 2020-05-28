@@ -2,7 +2,7 @@
 title: Posouzení kompatibility
 titleSuffix: Configuration Manager
 description: Přečtěte si o vyhodnocení kompatibility pro aplikace a ovladače pro Windows v Desktop Analytics.
-ms.date: 04/21/2020
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -10,12 +10,13 @@ ms.assetid: ea78f726-b1b3-49b0-8141-d916be48c458
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: eedd33999ce17417122b2403c777a0b560e5f197
-ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
+ms.reviewer: acabello
+ms.openlocfilehash: 7b2bff4f8365693c86540c9b0578307340f13a49
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82109994"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268891"
 ---
 # <a name="compatibility-assessment-in-desktop-analytics"></a>Posouzení kompatibility v Desktop Analytics
 
@@ -29,7 +30,7 @@ Desktop Analytics používá následující kategorie posouzení kompatibility:
 
 - **Vysoká**: aplikace je skoro v průběhu upgradu nebo po ní téměř neúspěšná. Může to být potřeba k nápravě.
 
-- **Neznámé**: aplikace se nehodnotila. Neexistují žádné další přehledy, například *známé problémy společnosti MS*.
+- **Neznámé**: aplikace se nehodnotila. Neexistují žádné další přehledy, jako je například *MS známé problémy* nebo *připravené pro Windows*.
 
 V seznamu prostředků aplikací nebo ovladačů v plánu nasazení uvidíte tuto hodnotu pro každý Asset ve sloupci **rizika kompatibility** .
 
@@ -40,9 +41,13 @@ V seznamu prostředků aplikací nebo ovladačů v plánu nasazení uvidíte tut
 K dispozici je několik zdrojů, které Desktop Analytics používá k vygenerování hodnocení hodnocení pro aplikace:
 
 - [Známé problémy společnosti Microsoft](#microsoft-known-issues)
+- [Připraveno pro Windows](#ready-for-windows)
 - [Rozšířené přehledy](#advanced-insights)
 
 Posouzení pro každý zdroj v aplikaci můžete najít v části Desktop Analytics. V seznamu prostředků aplikace v plánu nasazení vyberte jednotlivou aplikaci a otevřete její informační podokno s vlastnostmi. Uvidíte celkové doporučení a úroveň posouzení. V části **rizikové faktory kompatibility** se zobrazují podrobnosti o těchto hodnoceních.
+
+> [!TIP]
+> Pokud podokno podrobností aplikace nezobrazuje posouzení kompatibility, může to být způsobeno tím, že je nastavení **Podrobnosti verze aplikace** vypnuté. Ve výchozím nastavení je vypnutá a kombinuje všechny verze aplikací se stejným názvem a vydavatelem. Služba stále vyhodnotila rizika kompatibility pro každou verzi. Pokud chcete zobrazit vyhodnocení rizik kompatibility konkrétní verze aplikace, zapněte si **Podrobnosti o verzích aplikací** . Další informace najdete v tématu [plánování prostředků](about-deployment-plans.md#plan-assets).
 
 ## <a name="microsoft-known-issues"></a>Známé problémy společnosti Microsoft
 
@@ -120,7 +125,7 @@ Data o kompatibilitě Windows klasifikují některé aplikace a ovladače s *och
 
 1. V nabídce vyberte **plán assetů** a přepněte na kartu **aplikace** .
 
-1. Filtrováním sloupce název zobrazíte položky s hodnotami, které obsahují slovo `Safeguard`. Kliknutím na výsledek zobrazíte další informace.
+1. Filtrováním sloupce název zobrazíte položky s hodnotami, které obsahují slovo `Safeguard` . Kliknutím na výsledek zobrazíte další informace.
 
     > [!NOTE]
     > Tato položka není skutečnou aplikací, která je nainstalovaná na vašich zařízeních. Je to zástupný symbol, který vám usnadní identifikaci aplikací nebo ovladačů ve vašem prostředí pomocí značky kompatibility s ochranou.
@@ -130,6 +135,28 @@ Data o kompatibilitě Windows klasifikují některé aplikace a ovladače s *och
 1. Porovnejte aktuální publikovaný seznam se seznamem prostředků ve vašem prostředí. Opravte všechny potenciálně problematické aplikace nebo ovladače tak, že aktualizujete na kompatibilní verzi.
 
 [![Snímek obrazovky s ochranou aplikace v Desktop Analytics](media/5746559-safeguards.png)](media/5746559-safeguards.png#lightbox)
+
+## <a name="ready-for-windows"></a>Připraveno pro Windows
+
+Stav přijetí je založený na informacích z komerčních zařízení, která sdílejí data s Microsoftem. Stav je integrován s příkazy podpory od dodavatelů softwaru.
+
+Desktop Analytics poskytuje stav přijetí pro každou verzi assetu, která se nachází v komerčních zařízeních. Tento stav nezahrnuje data ze zařízení uživatelů nebo zařízení, která nesdílejí data. Stav nemusí být zástupcem míry přijetí ve všech zařízeních s Windows 10.
+
+Možné kategorie:
+
+- **Vysoce přijato**: Tato aplikace nainstalovala aspoň 100 000 komerční zařízení s Windows 10.
+
+- **Přijato**: Tato aplikace nainstalovala aspoň 10 000 komerční zařízení s Windows 10.
+
+- **Nedostatečná data**: příliš málo komerčních zařízení s Windows 10 nesdílí informace pro tuto aplikaci, aby mohla společnost Microsoft zařazovat své přijetí.
+
+- **Vývojář kontaktu**: v této verzi aplikace může dojít k problémům s kompatibilitou. Společnost Microsoft doporučuje kontaktovat poskytovatele softwaru a získat další informace.
+
+- **Neznámé**: k dispozici nejsou žádné informace pro tuto verzi této aplikace. Informace mohou být k dispozici pro jiné verze aplikace.
+
+### <a name="support-statement"></a>Příkaz support
+
+Pokud poskytovatel softwaru podporuje jednu nebo více verzí této aplikace ve Windows 10, zobrazí se v podokně Vlastnosti aplikace tento příkaz. V části rizikové faktory kompatibility se podívejte na **příkaz Support (podpora**).
 
 ## <a name="advanced-insights"></a>Rozšířené přehledy
 
@@ -209,7 +236,7 @@ Desktop Analytics také obsahuje seznam a skupiny podle dostupnosti všech ovlad
 
 Posouzení můžete najít na ovladači v části Desktop Analytics. V seznamu prostředků ovladače v plánu nasazení vyberte jednotlivý ovladač a otevřete jeho podokno s informačním panelem vlastností. Uvidíte celkové doporučení a úroveň posouzení. V části **rizikové faktory kompatibility** se zobrazují podrobnosti o těchto hodnoceních.
 
-| Dostupnost ovladače | Je vyžadována akce? | Význam | Doprovodné materiály |
+| Dostupnost ovladače | Je vyžadována akce? | Význam | Pokyny |
 |---------------------|------------------|---------------|----------|
 | K dispozici v krabicích | Ne, jenom pro povědomí | Aktuálně nainstalovaná verze aplikace nebo ovladače nebude migrována na novou verzi operačního systému. Kompatibilní verze je nainstalována s novou verzí operačního systému. | K pokračování upgradu není nutná žádná akce. |
 | Importovat z web Windows Update | Ano | Aktuálně nainstalovaná verze ovladače nebude migrována na novou verzi operačního systému. Kompatibilní verze je k dispozici z web Windows Update. | Pokud počítač automaticky obdrží aktualizace z web Windows Update, není vyžadována žádná akce. V opačném případě importujte nový ovladač z web Windows Update po upgradu Windows. |

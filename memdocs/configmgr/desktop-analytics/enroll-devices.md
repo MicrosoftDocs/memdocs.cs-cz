@@ -10,12 +10,13 @@ ms.assetid: 2ea18d09-c957-47f7-8e54-c6f2b3c74347
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e9cca066d389ea8d3847737651f4994977a5e2f5
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.reviewer: acabello
+ms.openlocfilehash: 22b5461df3a560449316009471ea029967118f5d
+ms.sourcegitcommit: 97fbb7db14b0c4049c0fe3a36ee16a5c0cf3407a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81723611"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83864887"
 ---
 # <a name="how-to-enroll-devices-in-desktop-analytics"></a>Jak zaregistrovat zařízení v Desktop Analytics
 
@@ -36,10 +37,10 @@ V následující tabulce jsou uvedeny aktualizace pro jednotlivé komponenty v p
 | Verze operačního systému | Ohodnocovatel | DiagTrack |
 | --------------| ----------------------- | -------------------|
 | Systém Windows 10 1909 | Zahrnutá <sup> [Poznámka 1](#bkmk_note1)</sup> | [Nejnovější kumulativní aktualizace](https://support.microsoft.com/help/4529964) |
-| Systém Windows 10 1903 | Zahrnuje | [Nejnovější kumulativní aktualizace](https://support.microsoft.com/help/4498140) |
-| Systém Windows 10 1809 | Zahrnuje | [Nejnovější kumulativní aktualizace](https://support.microsoft.com/help/4464619) |
-| Systém Windows 10 1803 | Zahrnuje | [Nejnovější kumulativní aktualizace](https://support.microsoft.com/help/4099479) |
-| Systém Windows 10 1709 | Zahrnuje | [Nejnovější kumulativní aktualizace](https://support.microsoft.com/help/4043454) |
+| Systém Windows 10 1903 | Zahrnutá <sup> [Poznámka 1](#bkmk_note1)</sup> | [Nejnovější kumulativní aktualizace](https://support.microsoft.com/help/4498140) |
+| Systém Windows 10 1809 | Zahrnutá <sup> [Poznámka 1](#bkmk_note1)</sup> | [Nejnovější kumulativní aktualizace](https://support.microsoft.com/help/4464619) |
+| Systém Windows 10 1803 | Zahrnutá <sup> [Poznámka 1](#bkmk_note1)</sup> | [Nejnovější kumulativní aktualizace](https://support.microsoft.com/help/4099479) |
+| Systém Windows 10 1709 | Zahrnutá <sup> [Poznámka 1](#bkmk_note1)</sup> | [Nejnovější kumulativní aktualizace](https://support.microsoft.com/help/4043454) |
 | Windows 8.1 | [KB 2976978](https://support.microsoft.com/help/2976978) – <sup> [Poznámka 2](#bkmk_note2)</sup> | [Poslední měsíční souhrn](https://support.microsoft.com/help/4009470) |
 | Windows 7 SP1 | [KB 2952664](https://support.microsoft.com/help/2952664) – <sup> [Poznámka 3](#bkmk_note3)</sup> | [Poslední měsíční souhrn](https://support.microsoft.com/help/4009469) |
 
@@ -50,7 +51,7 @@ V následující tabulce jsou uvedeny aktualizace pro jednotlivé komponenty v p
 
 ### <a name="note-1-windows-10"></a><a name="bkmk_note1"></a>Poznámka 1: Windows 10
 
-I když Windows 10 zahrnuje tyto komponenty standardně, zařízení s Windows 10 vyžadují nejnovější kumulativní aktualizaci, aby získala plnou funkčnost Desktop Analytics. Například k vyhodnocení kompatibility zařízení s nejnovější verzí operačního systému a k získání informací téměř v reálném čase pro nasazení a stav registrace.
+I když Windows 10 zahrnuje tyto komponenty standardně, zařízení s Windows 10 vyžadují nejnovější kumulativní aktualizaci, aby získala plnou funkčnost pro desktopovou analýzu, jako je vyhodnocení zařízení kvůli kompatibilitě s nejnovější verzí operačního systému.
 
 ### <a name="note-2-windows-81"></a><a name="bkmk_note2"></a>Poznámka 2: Windows 8.1
 
@@ -125,7 +126,7 @@ K dispozici je možnost nastavení Configuration Manager pro Desktop Analytics p
 
 Obecně platí, že pomocí kolekce Configuration Manager můžete cílit na nastavení a registraci Desktop Analytics. Použijte přímé členství nebo dotazy pro zahrnutí nebo vyloučení zařízení z kolekce. Další informace najdete v tématu [vytváření kolekcí](../core/clients/manage/collections/create-collections.md).
 
-Configuration Manager nakonfiguruje nastavení systému Windows pouze v případě, že hodnota ještě neexistuje. Pokud potřebujete nakonfigurovat různá nastavení pro jedinečnou skupinu zařízení, můžete použít [Zásady skupiny](group-policy-settings.md). Nastavení, která cílí na zásady skupiny, mají přednost před nastaveními Configuration Manager.
+Configuration Manager nakonfiguruje nastavení systému Windows pouze v případě, že hodnota ještě neexistuje. Pokud potřebujete nakonfigurovat různá nastavení pro jedinečnou skupinu zařízení, můžete použít [Zásady skupiny](group-policy-settings.md). Nastavení, která cílí na zásady skupiny, mají přednost před nastaveními Configuration Manager. Zařízení, na která cílí zásady skupiny, nemusí přesně odrážet stav na řídicím panelu [stavu připojení](monitor-connection-health.md) .
 
 Při konfiguraci úrovně diagnostiky dat nastavíte horní hranici zařízení. Ve výchozím nastavení ve Windows 10 verze 1803 a novější se uživatelé můžou rozhodnout nastavit nižší úroveň. Toto chování můžete řídit pomocí nastavení zásad skupiny, **Konfigurovat nastavení výslovných přihlášení k telemetrie v uživatelském rozhraní**. Další informace najdete v tématu [nastavení zásad skupiny pro Desktop Analytics](group-policy-settings.md).
 

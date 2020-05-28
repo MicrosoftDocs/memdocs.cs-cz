@@ -10,12 +10,12 @@ ms.assetid: 1026d616-2a20-4fb2-8604-d331763937f8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 1bdfb8c6d528c12581f05f86111a1a76d2259faa
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 84f4b822475111352c5dcf23f4868a1fa43ec3a7
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81714420"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906271"
 ---
 # <a name="hardware-inventory-for-linux-and-unix-in-configuration-manager"></a>Inventář hardwaru pro Linux a UNIX v Configuration Manager
 
@@ -105,7 +105,7 @@ Akce pro inventář hardwaru se zadávají do souboru protokolu klienta **scxcm.
 ###  <a name="create-a-custom-hardware-inventory-provider-for-linux-and-unix-computers"></a><a name="BKMK_LinuxProvider"></a> Vytvoření vlastního poskytovatele inventáře hardwaru pro počítače se systémem Linux a UNIX:  
  Chcete-li vytvořit vlastního poskytovatele inventáře hardwaru pro klienta Configuration Manager pro systémy Linux a UNIX, použijte **OMI source-v. 1.0.6** a postupujte podle pokynů v průvodci OMI Začínáme. Tento proces zahrnuje vytvoření souboru MOF (Managed Object Format), který definuje schéma nového poskytovatele. Později naimportujte soubor MOF do Configuration Manager, abyste mohli povolit podporu nové vlastní třídy inventáře.  
 
- OMI Source – v.1.0.6 i úvodní příručka k OMI jsou dostupné ke stažení na webu [The Open Group](https://github.com/microsoft/omi/blob/master/README.md) . Tyto soubory ke stažení najdete na webu OpenGroup.org na kartě **Documents** na webové stránce [Open Management Infrastructure (OMI)](https://go.microsoft.com/fwlink/p/?LinkId=286805).  
+ OMI Source – v.1.0.6 i úvodní příručka k OMI jsou dostupné ke stažení na webu [The Open Group](https://github.com/microsoft/omi/blob/master/README.md) . Tyto soubory ke stažení najdete na webu OpenGroup.org na kartě **Documents** na webové stránce [Open Management Infrastructure (OMI)](https://collaboration.opengroup.org/omi/).  
 
 ###  <a name="configure-each-computer-that-runs-linux-or-unix-with-the-custom-hardware-inventory-provider"></a><a name="BKMK_AddProvidertoLinux"></a> Pro všechny počítače se systémem Linux nebo UNIX nakonfigurujte vlastního poskytovatele inventáře hardwaru:  
  Když vytvoříte vlastního poskytovatele inventáře hardwaru, musíte zkopírovat soubor knihovny poskytovatele a zaregistrovat ho ve všech počítačích s inventářem, který chcete zjistit.  

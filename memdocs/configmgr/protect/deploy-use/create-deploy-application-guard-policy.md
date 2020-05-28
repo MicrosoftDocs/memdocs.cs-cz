@@ -10,12 +10,12 @@ ms.assetid: 33a6c1d9-4dd8-411c-a748-693a5bd2ea5a
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 241e7ed9a2195e178cc1aac2ee2a146eea60b093
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: b691004742def4c126ba82b07cad1651cbe822f8
+ms.sourcegitcommit: 13ceb4e1cc8c2a10bfa199e301bf9bada8ceb268
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81721742"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82923432"
 ---
 # <a name="create-and-deploy-windows-defender-application-guard-policy"></a>Vytvoření a nasazení zásad ochrany Application Guard v programu Windows Defender
 
@@ -25,12 +25,12 @@ Zásady ochrany Application Guard [(Application Guard) v programu Windows Defend
 
 ## <a name="prerequisites"></a>Požadavky
 
-Chcete-li vytvořit a nasadit zásady ochrany Application Guard v programu Windows Defender, je nutné použít aktualizaci Windows 10 Updates Creator (1709). U zařízení s Windows 10, na které zásadu nasazujete, se musí nakonfigurovat zásada izolace sítě. Další informace najdete v tématu [Přehled ochrany Application Guard v programu Windows Defender](https://docs.microsoft.com/windows/threat-protection/windows-defender-application-guard/wd-app-guard-overview).
+Chcete-li vytvořit a nasadit zásady ochrany Application Guard v programu Windows Defender, je nutné použít aktualizaci Windows 10 Updates Creator (1709). U zařízení s Windows 10, na které zásadu nasazujete, se musí nakonfigurovat [zásada izolace sítě](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-guard/configure-wd-app-guard#network-isolation-settings). Další informace najdete v tématu [Přehled ochrany Application Guard v programu Windows Defender](https://docs.microsoft.com/windows/threat-protection/windows-defender-application-guard/wd-app-guard-overview).
 
 ## <a name="create-a-policy-and-to-browse-the-available-settings"></a>Vytvoření zásady a procházení dostupných nastavení
 
 1. V konzole Configuration Manager vyberte **prostředky a kompatibilita**.
-2. V pracovním prostoru **prostředky a kompatibilita** vyberte **Přehled** > **Endpoint Protection** > **ochrana Application Guard v programu Windows Defender**.
+2. V pracovním prostoru **prostředky a kompatibilita** vyberte **Přehled**  >  **Endpoint Protection**  >  **ochrana Application Guard v programu Windows Defender**.
 3. Na kartě **Domů** ve skupině **vytvořit** klikněte na možnost **vytvořit zásadu Application Guard v programu Windows Defender**.
 4. Pomocí [článku](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-guard/configure-wd-app-guard) jako reference můžete procházet a konfigurovat dostupná nastavení. Configuration Manager vám umožní nastavit určitá nastavení zásad:
    - [Nastavení interakce hostitele](#bkmk_HIS)
@@ -55,7 +55,7 @@ Konfiguruje interakce mezi hostitelskými zařízeními a kontejnerem ochrany Ap
 - **Schránka** v nastavení před Configuration Manager 1802
   - Povolený typ obsahu
     - Text
-    - Obrázky
+    - Image
 - **Komerční**
   - Povolit tisk do XPS
   - Povolit tisk do PDF

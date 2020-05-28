@@ -10,12 +10,12 @@ ms.assetid: cd74e5f5-33f6-4566-8c9d-d6a93bfe71ed
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: ec5581567925ee57300274e50288058e06d80ec0
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 53aa7e932e782254f63b422526b315f3ce91f397
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718186"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906175"
 ---
 # <a name="language-packs-in-configuration-manager"></a>Jazykové sady v Configuration Manager
 
@@ -42,7 +42,7 @@ Když spustíte instalační program Configuration Manager, stáhne se soubory j
 
 ## <a name="server-languages"></a>Jazyky serveru  
 
-Pomocí následující tabulky namapujte ID národního prostředí na jazyk, který chcete podporovat na serverech. Další informace o ID národních prostředí najdete v tématu [ID národního prostředí přiřazené společností Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=252609).  
+Pomocí následující tabulky namapujte ID národního prostředí na jazyk, který chcete podporovat na serverech. Další informace o ID národních prostředí najdete v tématu [ID národního prostředí přiřazené společností Microsoft](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c).  
 
 |Jazyk serveru|ID národního prostředí (LCID)|Kód se třemi písmeny|  
 |---------------------|------------------------|-----------------------|  
@@ -69,7 +69,7 @@ Pomocí následující tabulky namapujte ID národního prostředí na jazyk, kt
 
 ## <a name="client-languages"></a>Jazyky klienta  
 
-Pomocí následující tabulky namapujte ID národního prostředí na jazyk, který chcete podporovat na klientských počítačích. Další informace o ID národních prostředí najdete v tématu [ID národního prostředí přiřazené společností Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=252609).  
+Pomocí následující tabulky namapujte ID národního prostředí na jazyk, který chcete podporovat na klientských počítačích. Další informace o ID národních prostředí najdete v tématu [ID národního prostředí přiřazené společností Microsoft](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c).  
 
 |Jazyk klienta|ID národního prostředí (LCID)|Kód se třemi písmeny|  
 |---------------------|------------------------|-----------------------|  

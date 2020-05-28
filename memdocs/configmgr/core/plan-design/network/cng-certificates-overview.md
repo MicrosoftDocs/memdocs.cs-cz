@@ -10,12 +10,12 @@ ms.assetid: dba904ae-7c44-46db-ae63-999b9821cb46
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 4574b7ae97e8200da248a0b798677eacadb6229f
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: deb3108d492a955eb0ec6b1635e306dcb85e0062
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81719831"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904218"
 ---
 # <a name="cng-certificates-overview"></a>Přehled certifikátů CNG
 <!-- 1356191 --> 
@@ -23,7 +23,7 @@ ms.locfileid: "81719831"
 Configuration Manager má omezené podpory pro certifikáty Cryptography: Next Generation (CNG). Klienti služby Configuration Manager můžou používat certifikát ověřování klientů PKI s privátním klíčem v CNG (klíč úložiště klíčů). S podporou KSP Configuration Manager klienti podporují privátní klíč založený na hardwaru, jako je například KSP čipu TPM pro certifikáty ověřování klientů PKI.
 
 ## <a name="supported-scenarios"></a>Podporované scénáře
-Šablony certifikátů [kryptografických rozhraní API nové generace (CNG)](https://msdn.microsoft.com/library/windows/desktop/bb204775.aspx) můžete použít pro následující scénáře:
+Šablony certifikátů [kryptografických rozhraní API nové generace (CNG)](https://docs.microsoft.com/windows/win32/seccng/cng-features) můžete použít pro následující scénáře:
 
 - Registrace a komunikace klienta s bodem správy HTTPS   
 - Distribuce softwaru a nasazení aplikací s distribučním bodem HTTPS   

@@ -61,11 +61,11 @@ Pokud nepoužíváte další kontroly pro zabezpečení těchto kanálů mezi se
 
 Neměňte následující skupiny zabezpečení, které Configuration Manager vytváří a spravuje pro komunikaci se systémem lokality:
 
-- **SMS_SiteSystemToSiteServerConnection_MP_&lt;SiteCode\>**  
+- **SMS_SiteSystemToSiteServerConnection_MP_ &lt; SiteCode\>**  
 
-- **SMS_SiteSystemToSiteServerConnection_SMSProv_&lt;SiteCode\>**  
+- **SMS_SiteSystemToSiteServerConnection_SMSProv_ &lt; SiteCode\>**  
 
-- **SMS_SiteSystemToSiteServerConnection_Stat_&lt;SiteCode\>**  
+- **SMS_SiteSystemToSiteServerConnection_Stat_ &lt; SiteCode\>**  
 
 Configuration Manager automaticky vytvoří a spravuje tyto skupiny zabezpečení. Toto chování zahrnuje odebrání účtů počítačů, pokud je odebrána role systému lokality.  
 
@@ -197,7 +197,7 @@ Další informace najdete v tématu [instalace sekundární lokality](../../serv
 ### <a name="site-role-installation-inherits-permissions-from-drive-root"></a>Instalace role lokality dědí oprávnění z kořene jednotky
 
 <!-- SCCMDocs#1380 -->
-Před instalací první role systému lokality na libovolný server nezapomeňte správně nakonfigurovat oprávnění k systémové jednotce. Například `C:\SMS_CCM` dědí oprávnění z `C:\`. Pokud kořenový adresář jednotky není správně zabezpečený, můžou uživatelé s nízkými právy přistupovat k obsahu ve složce Configuration Manager a upravovat ho.
+Před instalací první role systému lokality na libovolný server nezapomeňte správně nakonfigurovat oprávnění k systémové jednotce. Například `C:\SMS_CCM` dědí oprávnění z `C:\` . Pokud kořenový adresář jednotky není správně zabezpečený, můžou uživatelé s nízkými právy přistupovat k obsahu ve složce Configuration Manager a upravovat ho.
 
 
 ## <a name="security-guidance-for-sql-server"></a><a name="BKMK_Security_SQLServer"></a>Pokyny k zabezpečení pro SQL Server
