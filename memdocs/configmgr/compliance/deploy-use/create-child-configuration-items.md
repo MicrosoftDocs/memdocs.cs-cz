@@ -31,7 +31,7 @@ Příkladem vytváření a úprav podřízené položky konfigurace je upřesně
 
 ## <a name="to-create-a-child-configuration-item"></a>Vytvoření podřízené položky konfigurace  
 
-1.  V konzole Configuration Manager klikněte na **prostředky a** > kompatibilita**Nastavení** > dodržování předpisů**položky konfigurace**.  
+1.  V konzole Configuration Manager klikněte na **prostředky a**kompatibilita  >  **Nastavení dodržování**předpisů  >  **položky konfigurace**.  
 
 3.  V seznamu **Položky konfigurace** vyberte položku konfigurace, pro kterou chcete vytvořit podřízenou položku konfigurace, a pak na kartě **Domů** ve skupině **Položka konfigurace** klikněte na **Vytvořit podřízenou položku konfigurace**.  
 

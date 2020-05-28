@@ -26,7 +26,7 @@ Tento článek obsahuje odpovědi na nejčastější dotazy týkající se dat o
 
 ## <a name="can-i-turn-off-diagnostic-and-usage-data"></a><a name="bkmk_off"></a>Můžu vypnout diagnostiku a data o využití?
 
-Chcete-li spravovat, kdy lokalita odesílá data, použijte spojovací bod služby v režimu offline. Pak pomocí nástroje pro připojení služby ručně odešlete data. Další informace najdete v těchto článcích:
+Chcete-li spravovat, kdy lokalita odesílá data, použijte spojovací bod služby v režimu offline. Pak pomocí nástroje pro připojení služby ručně odešlete data. Další informace najdete v následujících článcích:
 
 - [O spojovacím bodu služby](../../servers/deploy/configure/about-the-service-connection-point.md)
 - [Použití nástroje pro připojení služby](../../servers/manage/use-the-service-connection-tool.md)
@@ -43,7 +43,7 @@ Microsoft ukládá data o využití a diagnostiku Configuration Manager po dobu 
 
 ## <a name="is-diagnostics-and-usage-data-sent-when-setup-runs"></a><a name="bkmk_update"></a>Odesílají se data o využití a diagnostika při spuštění instalačního programu?
 
-Ne. Data o využití a diagnostika se odesílají, až když je lokalita nainstalovaná a funkční.
+No. Data o využití a diagnostika se odesílají, až když je lokalita nainstalovaná a funkční.
 
 ## <a name="how-frequently-is-the-data-sent"></a><a name="bkmk_frequency"></a>Jak často se data odesílají?
 
@@ -55,17 +55,17 @@ Uložené procedury SQL se spouštějí každých sedm dní od data instalace lo
 
 ## <a name="can-the-data-be-used-to-form-a-network-map"></a><a name="bkmk_network"></a>Můžou se data použít k vytvoření mapy sítě?
 
-Ne. Tato data neobsahují žádné podrobnosti o síti, jako jsou IP adresy nebo podrobné geografické informace. Další informace najdete v tématu [úrovně diagnostických dat o využití](levels-overview.md#bkmk_versions)a další podrobnosti o verzi, kterou používáte.
+No. Tato data neobsahují žádné podrobnosti o síti, jako jsou IP adresy nebo podrobné geografické informace. Další informace najdete v tématu [úrovně diagnostických dat o využití](levels-overview.md#bkmk_versions)a další podrobnosti o verzi, kterou používáte.
 
 Data obsahují informace o časovém pásmu z každé lokality. Tyto informace mohou poskytnout přehled o širokém geografickém umístění a globální rozptýlení lokalit v hierarchii.
 
 ## <a name="can-you-see-data-in-custom-sql-tables"></a><a name="bkmk_tables"></a>Můžete zobrazit data ve vlastních tabulkách SQL?
 
-Ne. Configuration Manager shromažďuje data o využití a diagnostiku prostřednictvím uložených procedur SQL. Tyto uložené procedury jsou spouštěny s výchozími tabulkami produktů v databázi. Všechny tyto tabulky SQL jsou s předponou **TEL_**. Jako součást dotazu SQL na zjištění schématu jsou všechny názvy tabulek zakódovány pomocí algoritmu hash pro porovnání se známými výchozími hodnotami. Toto chování určuje, že vlastní tabulky v databázi existují. Přítomnost vlastních tabulek informuje společnost Microsoft o tom, že jste rozšířili schéma databáze z výchozího nastavení. Neobsahuje žádná data uložená v těchto tabulkách.
+No. Configuration Manager shromažďuje data o využití a diagnostiku prostřednictvím uložených procedur SQL. Tyto uložené procedury jsou spouštěny s výchozími tabulkami produktů v databázi. Všechny tyto tabulky SQL jsou s předponou **TEL_**. Jako součást dotazu SQL na zjištění schématu jsou všechny názvy tabulek zakódovány pomocí algoritmu hash pro porovnání se známými výchozími hodnotami. Toto chování určuje, že vlastní tabulky v databázi existují. Přítomnost vlastních tabulek informuje společnost Microsoft o tom, že jste rozšířili schéma databáze z výchozího nastavení. Neobsahuje žádná data uložená v těchto tabulkách.
 
 ## <a name="can-you-see-other-databases"></a><a name="bkmk_databases"></a>Vidíte další databáze?
 
-Ne. Uložené procedury pro shromažďování dat jsou omezeny na databázi lokality Configuration Manager. Společnost Microsoft nemůže zobrazit názvy jiných databází ani žádná data v jiných databázích.
+No. Uložené procedury pro shromažďování dat jsou omezeny na databázi lokality Configuration Manager. Společnost Microsoft nemůže zobrazit názvy jiných databází ani žádná data v jiných databázích.
 
 ## <a name="is-any-data-sent-to-other-integrated-cloud-services"></a><a name="bkmk_cloud"></a>Odesílají se všechna data do jiných integrovaných cloudových služeb?
 
@@ -79,6 +79,6 @@ Například následující cloudové služby jsou součástí Microsoft Endpoint
 
 ## <a name="does-configuration-manager-collect-any-personal-data"></a><a name="bkmk_personal"></a>Shromažďuje Configuration Manager shromažďovat osobní údaje?
 
-Ne. Konfigurace neshromažďuje ani neodesílá žádná osobní data ani zákaznická data. Jedná se o místní produkt, který můžete přímo nasazovat, spravovat a provozovat. Diagnostická data a údaje o využití, které Microsoft shromažďuje, vylepšuje možnosti instalace, kvality a zabezpečení budoucích verzí.
+No. Konfigurace neshromažďuje ani neodesílá žádná osobní data ani zákaznická data. Jedná se o místní produkt, který můžete přímo nasazovat, spravovat a provozovat. Diagnostická data a údaje o využití, které Microsoft shromažďuje, vylepšuje možnosti instalace, kvality a zabezpečení budoucích verzí.
 
 Další informace o Configuration Manager dat najdete v tématu [úrovně diagnostických dat o využití](levels-overview.md).

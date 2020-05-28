@@ -40,7 +40,7 @@ Požadavek na obnovení klíče BitLockeru z samoobslužného portálu:
 
 1. Když BitLocker uzamkne zařízení, při spuštění se zobrazí obrazovka pro obnovení BitLockeru. Poznamenejte si ID obnovovacího klíče nástroje BitLocker 32 číslic.
 
-1. V jiném počítači, například `https://webserver.contoso.com/SelfService`, na samoobslužném portálu ve webovém prohlížeči, použijte.
+1. V jiném počítači, například, na samoobslužném portálu ve webovém prohlížeči, použijte `https://webserver.contoso.com/SelfService` .
 
 1. Přečtěte si a přijměte oznámení.
 

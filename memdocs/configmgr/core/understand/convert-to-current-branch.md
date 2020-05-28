@@ -44,7 +44,7 @@ Seznam základních verzí najdete v tématu základní verze **a verze aktualiz
 ## <a name="use-the-configuration-manager-console-to-convert-the-long-term-servicing-branch"></a>Použití konzoly Configuration Manager k převedení dlouhodobé větve údržby
 Pokud vaše lokalita používá LTSB, můžete použít následující možnost v konzole Configuration Manager k převedení na Current Branch:
 
- 1. V konzole nástroje klikněte na **Správa** > **Konfigurace** > lokality**lokality**a pak otevřete **Nastavení hierarchie**.  
+ 1. V konzole nástroje klikněte na **Správa**  >  **Konfigurace lokality**  >  **lokality**a pak otevřete **Nastavení hierarchie**.  
 
  2. V **Nastavení hierarchie**přepněte na kartu **licencování** . Vyberte možnost, kterou chcete **převést na Current Branch**, a pak zvolte **použít**.  
 

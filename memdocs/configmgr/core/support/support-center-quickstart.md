@@ -31,7 +31,7 @@ Vytvořte kompletní soubor *sady prostředků pro řešení potíží* (. zip),
 
 - Práva místního správce pro klienta Configuration Manager  
 
-- Instalační program nástroje Support Center. Tento soubor je na serveru lokality na adrese `cd.latest\SMSSETUP\Tools\SupportCenter\SupportCenterInstaller.msi`. Další informace najdete v tématu [Support Center – Install](support-center.md#install).  
+- Instalační program nástroje Support Center. Tento soubor je na serveru lokality na adrese `cd.latest\SMSSETUP\Tools\SupportCenter\SupportCenterInstaller.msi` . Další informace najdete v tématu [Support Center – Install](support-center.md#install).  
 
 
 
@@ -43,7 +43,7 @@ Vytvořte kompletní soubor *sady prostředků pro řešení potíží* (. zip),
 
 3.  Na kartě Domů na pásu karet vyberte **shromažďovat vybraná data**. Support Center standardně shromažďuje jenom minimální datovou sadu: soubory protokolů, konfiguraci klienta a operační systém.  
 
-4.  Uložte soubor sady prostředků řešení potíží (. zip) do složky v počítači. Ve výchozím nastavení je název souboru podobný následujícímu příkladu: `Support_c885cdfed3c7482bba4f9e662978ec07.zip`.  
+4.  Uložte soubor sady prostředků řešení potíží (. zip) do složky v počítači. Ve výchozím nastavení je název souboru podobný následujícímu příkladu: `Support_c885cdfed3c7482bba4f9e662978ec07.zip` .  
 
 
 

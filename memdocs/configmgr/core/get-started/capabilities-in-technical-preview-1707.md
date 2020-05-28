@@ -35,7 +35,7 @@ V tomto článku se seznámíte s funkcemi, které jsou k dispozici v Technical 
 - **Aktualizace na verzi preview 1707 se nezdařila, pokud máte server lokality v pasivním režimu**. Pokud spustíte verzi Preview 1706 a máte [server primární lokality v pasivním režimu](capabilities-in-technical-preview-1706.md#site-server-role-high-availability), je nutné nejprve odinstalovat server lokality pasivního režimu před tím, než bude možné úspěšně aktualizovat lokalitu Preview na verzi 1707. Server lokality v pasivním režimu můžete po spuštění lokality verze 1707 znovu nainstalovat.
 
   Postup odinstalace serveru lokality pasivního režimu:
-  1. V konzole nástroje klikněte na **Správa** > **Přehled** > **Konfigurace** > **servery lokality a role systému lokality**a potom vyberte server lokality pasivního režimu.
+  1. V konzole nástroje klikněte na **Správa**  >  **Přehled**  >  **Konfigurace**  >  **servery lokality a role systému lokality**a potom vyberte server lokality pasivního režimu.
   2. V podokně **role systému lokality** klikněte pravým tlačítkem na roli **serveru lokality** a pak zvolte **Odebrat roli**.
   3. Klikněte pravým tlačítkem na server lokality pasivního režimu a zvolte **Odstranit**.
   4. Po odinstalaci serveru lokality na aktivním serveru primární lokality restartujte službu **CONFIGURATION_MANAGER_UPDATE**.
@@ -60,7 +60,7 @@ Od této verze sdílená mezipaměť podporuje distribuci souborů Expresní ins
 
 ## <a name="surface-device-dashboard"></a>Řídicí panel zařízení Surface
 <!--1355788-->
-Řídicí panel zařízení Surface poskytuje informace o zařízeních Surface, která se nacházejí ve vašem prostředí. V konzole nástroje přejdete na **monitorování** > **Surface zařízení**. Můžete zobrazit následující:
+Řídicí panel zařízení Surface poskytuje informace o zařízeních Surface, která se nacházejí ve vašem prostředí. V konzole nástroje přejdete na **monitorování**  >  **Surface zařízení**. Můžete zobrazit následující:
 - procento povrchů
 - procento modelů Surface
 - pět hlavních verzí operačního systému
@@ -81,7 +81,7 @@ Aby bylo možné vytvářet a nasazovat zásady ochrany Application Guard v prog
 #### <a name="to-create-a-policy-and-to-browse-the-available-settings"></a>Chcete-li vytvořit zásadu a vyhledat dostupná nastavení:
 
 1. V konzole Configuration Manager vyberte **prostředky a kompatibilita**.
-2. V pracovním prostoru **prostředky a kompatibilita** vyberte **Přehled** > **Endpoint Protection** > **ochrana Application Guard v programu Windows Defender**.
+2. V pracovním prostoru **prostředky a kompatibilita** vyberte **Přehled**  >  **Endpoint Protection**  >  **ochrana Application Guard v programu Windows Defender**.
 3. Na kartě **Domů** ve skupině **vytvořit** klikněte na možnost **vytvořit zásadu Application Guard v programu Windows Defender**.
 4. Pomocí příspěvku na blogu jako reference můžete vyhledat a nakonfigurovat dostupná nastavení, abyste mohli tuto funkci vyzkoušet.
 5. V této verzi jsme přidali novou stránku **definice sítě** do průvodce. Na této stránce zadejte podnikovou identitu a definujte hranici vaší podnikové sítě.<br>Počítače s Windows 10 ukládají na klientovi jenom jeden seznam izolace sítě. V této verzi můžete vytvořit dva různé druhy seznamů izolace sítě (jeden ze systému Windows Information Protection a jeden z ochrany Application Guard v programu Windows Defender) a nasadit je do klienta. Pokud nasadíte obě zásady, musí tyto seznamy izolace sítě odpovídat. Pokud nasadíte seznamy, které se neshodují se stejným klientem, nasazení se nezdaří.

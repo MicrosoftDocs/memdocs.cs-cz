@@ -10,12 +10,12 @@ ms.assetid: 69550b35-bcdb-4b47-bbec-b3c8bc92bb7b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 96cce5d4aaa352177b1c24ff78cf15e90ea6e823
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 4a9ae791582911f91e5f76b841248ad5085d8170
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81713706"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83879822"
 ---
 # <a name="monitor-database-replication"></a>Monitorování replikace databáze
 
@@ -122,7 +122,10 @@ Spusťte RLA buď v konzole Configuration Manager, nebo na příkazovém řádku
 
 - Spuštění v konzole Configuration Manager: přejdete do pracovního prostoru **monitorování** a vyberete uzel **replikace databáze** . Vyberte odkaz replikace, který chcete analyzovat, a potom na pásu karet vyberte **analyzátor propojení replikace**.  
 
-- Pro spuštění na příkazovém řádku zadejte následující příkaz:`%ProgramFiles(x86)%\Microsoft Configuration Manager\AdminConsole\bin\Microsoft.ConfigurationManager.ReplicationLinkAnalyzer.Wizard.exe <source site server FQDN> <destination site server FQDN>`  
+- Pro spuštění na příkazovém řádku zadejte následující příkaz:`%ProgramFiles(x86)%\Microsoft Endpoint Manager\AdminConsole\bin\Microsoft.ConfigurationManager.ReplicationLinkAnalyzer.Wizard.exe <source site server FQDN> <destination site server FQDN>`  
+
+    > [!IMPORTANT]
+    > Počínaje verzí 1910 se tato cesta změnila na použití `Microsoft Endpoint Manager` složky. Ujistěte se, že nepoužíváte starší verzi souboru, která může existovat v jiné složce.
 
 Když spustíte RLA, detekuje problémy pomocí řady diagnostických pravidel a kontrol. Zobrazíte problémy, které nástroj identifikuje. Pokud obsahuje pokyny k vyřešení problému, zobrazí se. Pokud RLA může problém automaticky vyřešit, zobrazí se vám tato možnost.
 

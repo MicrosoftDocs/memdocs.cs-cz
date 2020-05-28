@@ -43,27 +43,27 @@ Pomocí klávesnice můžete také provádět běžné úlohy v nástroji Suppor
 |Úkol  |Klávesová zkratka  |
 |---------|---------|
 |Otevřít možnosti konfigurace aplikace |**F4**|
-|Ukončit     |**ALT** + **F4**|
+|Ukončit     |**ALT**  +  **F4**|
 |Načíst nebo aktualizovat podrobnosti o klientovi<br>(na kartě **Podrobnosti klienta** nástroje Support Center)|**F5**|
 |Načíst vybrané zobrazení zásad<br>(na kartě **Client Policy (zásady klienta** ) nástroje Support Center)|**F5**|
 |Aktualizace zásady<br>(na kartě **zásady klienta** nástroje Support Center po výběru zásady)|**F5** |
-|Kopírovat jako MOF<br>(na kartě **zásady klienta** nástroje Support Center po výběru zásady, k dispozici také pro události WMI)|**CTRL** + **Shift**Shift + +**C** |
-|Zkopírovat zásadu jako soubor MOF místního klienta<br>(na kartě **zásady klienta** nástroje Support Center po výběru zásady)|**CTRL** + **Shift**Shift + **X** |
-|Zásada žádosti<br>(na kartě **Client Policy (zásady klienta** ) nástroje Support Center)|**CTRL** + **R** |
-|Vyhodnocení zásady<br>(na kartě **Client Policy (zásady klienta** ) nástroje Support Center)|**CTRL** + **E** |
+|Kopírovat jako MOF<br>(na kartě **zásady klienta** nástroje Support Center po výběru zásady, k dispozici také pro události WMI)|**CTRL**  +  **Posun**  +  Jazyk **C** |
+|Zkopírovat zásadu jako soubor MOF místního klienta<br>(na kartě **zásady klienta** nástroje Support Center po výběru zásady)|**CTRL**  +  **Posun**  +  **X** |
+|Zásada žádosti<br>(na kartě **Client Policy (zásady klienta** ) nástroje Support Center)|**CTRL**  +  **R** |
+|Vyhodnocení zásady<br>(na kartě **Client Policy (zásady klienta** ) nástroje Support Center)|**CTRL**  +  **E** |
 |Načíst nebo aktualizovat zobrazení obsahu<br>(na kartě Content ( **obsah** ) nástroje Support Center)|**F5** |
 |Načíst inventář<br>(na kartě **inventář** nástroje Support Center)|**F5** |
 |Spuštění řešení potíží<br>(na kartě **Poradce při potížích** nástroje Support Center)|**F5** |
-|Otevřít sadu prostředků<br>(na kartě **Domů** v nástroji Support Center Viewer)|**CTRL** + **O** |
-|Otevření souborů protokolu<br>(na kartě **protokoly** nástroje Support Center a v okně Log Viewer)|**CTRL** + **O** |
-|Otevřít soubory protokolu v aktuálním zobrazení<br>(na kartě **protokoly** nástroje Support Center a v okně Log Viewer)|**CTRL** + **+ SHIFT** + **O** |
-|Otevření souborů protokolu v novém okně prohlížeče protokolů<br>(na kartě **protokoly** nástroje Support Center a v okně Log Viewer)|**CTRL** + **N** |
-|Zavřít všechny soubory protokolu<br>(na kartě **protokoly** nástroje Support Center a v okně **Log Viewer** )|**CTRL** + **W** |
-|Hledání v souborech protokolu| - **CTRL** + **F**: otevře dialogové okno **Najít** , ve kterém můžete zadat hledaný řetězec.<br> - **F3**: najít další shodu<br> - **Shift** + **F3**: najít předchozí shodu|
-|Vyhledat kód chyby<br>(na kartě **Logs (protokoly** ) a v okně **nástroje Log Viewer** )|**CTRL** + **L** |
-|Kopírování ze souboru protokolu| - **CTRL** + **C**: zkopíruje text souboru protokolu.<br> - **CTRL** + **Shift**Shift + **C**: zkopíruje položku protokolu bez formátování.|
-|Rychlý filtr pomocí textu souboru protokolu<br>(na kartě **Logs (protokoly** ) a v okně **nástroje Log Viewer** )|**CTRL** + **Shift**Shift + +**C** |
-|Přidání poznámky k souboru protokolu<br>(na kartě **Logs (protokoly** ) a v okně **nástroje Log Viewer** )|**CTRL** + **+ SHIFT** + **N** <sup>[Poznámka 1](#bkmk_note1)</sup>|
+|Otevřít sadu prostředků<br>(na kartě **Domů** v nástroji Support Center Viewer)|**CTRL**  +  **O** |
+|Otevření souborů protokolu<br>(na kartě **protokoly** nástroje Support Center a v okně Log Viewer)|**CTRL**  +  **O** |
+|Otevřít soubory protokolu v aktuálním zobrazení<br>(na kartě **protokoly** nástroje Support Center a v okně Log Viewer)|**CTRL**  +  **Posun**  +  **O** |
+|Otevření souborů protokolu v novém okně prohlížeče protokolů<br>(na kartě **protokoly** nástroje Support Center a v okně Log Viewer)|**CTRL**  +  **N** |
+|Zavřít všechny soubory protokolu<br>(na kartě **protokoly** nástroje Support Center a v okně **Log Viewer** )|**CTRL**  +  **W** |
+|Hledání v souborech protokolu| - **CTRL**  +  **F**: otevře dialogové okno **Najít** , kde můžete zadat hledaný řetězec.<br> - **F3**: najít další shodu<br> - **Posun**  +  **F3**: najít předchozí shodu|
+|Vyhledat kód chyby<br>(na kartě **Logs (protokoly** ) a v okně **nástroje Log Viewer** )|**CTRL**  +  **L** |
+|Kopírování ze souboru protokolu| - **CTRL**  +  **C**: zkopíruje text souboru protokolu<br> - **CTRL**  +  **Posun**  +  **C**: zkopíruje položku protokolu bez formátování.|
+|Rychlý filtr pomocí textu souboru protokolu<br>(na kartě **Logs (protokoly** ) a v okně **nástroje Log Viewer** )|**CTRL**  +  **Posun**  +  Jazyk **C** |
+|Přidání poznámky k souboru protokolu<br>(na kartě **Logs (protokoly** ) a v okně **nástroje Log Viewer** )|**CTRL**  +  **Posun**  +  **N** <sup>[Poznámka 1](#bkmk_note1)</sup>|
 |Otevřít Help|**F1**|
 
 

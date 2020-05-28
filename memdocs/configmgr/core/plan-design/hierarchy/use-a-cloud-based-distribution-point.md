@@ -10,12 +10,12 @@ ms.assetid: 3cd9c725-6b42-427d-9191-86e67f84e48c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7a14b79a9e7fd91b6470836b4271a669725065bd
-ms.sourcegitcommit: 568f8f8c19fafdd0f4352d0682f1ca7a4d665d25
+ms.openlocfilehash: 52c2b70d2b094d5a89d80aafa61f1db67a53816f
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81771174"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83987710"
 ---
 # <a name="use-a-cloud-distribution-point-in-configuration-manager"></a>Použití distribučního bodu cloudu v Configuration Manager
 
@@ -174,7 +174,9 @@ Při použití distribučního bodu cloudu ve vaší hierarchii vám při pláno
 
 ### <a name="deployment-settings"></a>Nastavení nasazení
 
-- Když nasadíte pořadí úkolů s možností **stahovat obsah místně v případě potřeby spuštěním pořadí úloh**, bod správy neobsahuje distribuční bod cloudu jako umístění obsahu. Nasaďte pořadí úkolů s možností **stahovat veškerý obsah místně před spuštěním pořadí úkolů** , aby klienti mohli používat distribuční bod cloudu.  
+- **Pokud to vyžaduje běžící pořadí úloh, Stáhněte si obsah lokálně**. Počínaje verzí 1910 může stroj sekvence úloh stahovat balíčky na vyžádání z CMG s povoleným obsahem nebo z cloudového distribučního bodu. Tato změna poskytuje větší flexibilitu pro nasazení místního upgradu Windows 10 na Internetová zařízení.
+
+- **Před spuštěním pořadí úloh stáhnout veškerý obsah místně**. V Configuration Manager verze 1906 a starší, další možnosti, jako je například **Stažení obsahu místně, pokud to vyžaduje běžící pořadí úloh** , v tomto scénáři nefungují. Modul pořadí úloh nemůže stáhnout obsah ze zdroje cloudu. Klient Configuration Manager musí před spuštěním pořadí úloh stáhnout obsah ze zdroje cloudu. Tuto možnost můžete v případě potřeby použít ve verzi 1910, pokud je to nutné pro splnění vašich požadavků.
 
 - Distribuční bod cloudu nepodporuje nasazení balíčků s možností **Spustit program z distribučního bodu**. Pomocí možnosti nasazení můžete **Stáhnout obsah z distribučního bodu a spustit místně**.  
 
@@ -363,7 +365,7 @@ Certifikát ověřování klienta není povinný. Klient musí důvěřovat ově
 
 ### <a name="can-my-on-premises-clients-use-a-cloud-distribution-point"></a>Můžou místní klienti používat distribuční bod cloudu?
 
-Ano. Pokud chcete, aby klienti ve vaší interní síti používali distribuční bod cloudu, musí být ve stejné skupině hranic jako klienti. Klienti nastavují prioritu distribučních bodů cloudu jako poslední v seznamu zdrojů obsahu, protože jsou spojené s stažením obsahu mimo Azure. Cloudový distribuční bod se proto obvykle používá jako záložní zdroj pro intranetové klienty. Pokud chcete vytvořit návrh cloudu, proveďte odpovídajícím způsobem návrh skupin hranic. Další informace najdete v tématu [Konfigurace skupin hranic](../../servers/deploy/configure/boundary-groups.md).  
+Yes. Pokud chcete, aby klienti ve vaší interní síti používali distribuční bod cloudu, musí být ve stejné skupině hranic jako klienti. Klienti nastavují prioritu distribučních bodů cloudu jako poslední v seznamu zdrojů obsahu, protože jsou spojené s stažením obsahu mimo Azure. Cloudový distribuční bod se proto obvykle používá jako záložní zdroj pro intranetové klienty. Pokud chcete vytvořit návrh cloudu, proveďte odpovídajícím způsobem návrh skupin hranic. Další informace najdete v tématu [Konfigurace skupin hranic](../../servers/deploy/configure/boundary-groups.md).  
 
 ### <a name="do-i-need-azure-expressroute"></a>Potřebuji Azure ExpressRoute?
 

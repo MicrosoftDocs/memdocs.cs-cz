@@ -46,9 +46,9 @@ OneTrace pracuje s mnoha typy souborů protokolu, například:
 
 ## <a name="install"></a>Instalace
 
-OneTrace se nainstaluje pomocí programu Support Center. Na serveru lokality vyhledejte instalační program nástroje Support Center v následující cestě: `cd.latest\SMSSETUP\Tools\SupportCenter\SupportCenterInstaller.msi`.
+OneTrace se nainstaluje pomocí programu Support Center. Na serveru lokality vyhledejte instalační program nástroje Support Center v následující cestě: `cd.latest\SMSSETUP\Tools\SupportCenter\SupportCenterInstaller.msi` .
 
-Ve výchozím nastavení je aplikace OneTrace nainstalována na adrese `C:\Program Files (x86)\Configuration Manager Support Center\CMPowerLogViewer.exe`.
+Ve výchozím nastavení je aplikace OneTrace nainstalována na adrese `C:\Program Files (x86)\Configuration Manager Support Center\CMPowerLogViewer.exe` .
 
 > [!Note]  
 > Support Center a OneTrace use Windows Presentation Foundation (WPF). Tato součást není k dispozici v systému Windows PE. Nadále používat CMTrace ve spouštěcích bitových kopiích s nasazeními pořadí úloh.  
@@ -69,7 +69,7 @@ Chcete-li zobrazit skupiny protokolů, přejděte do nabídky **zobrazení** a v
 
 ### <a name="customize-log-groups"></a>Přizpůsobení skupin protokolů
 
-Tyto skupiny můžete přizpůsobit změnou konfiguračního souboru XML, který je ve výchozím nastavení v následující cestě: `C:\Program Files (x86)\Configuration Manager Support Center\LogGroups.xml`.
+Tyto skupiny můžete přizpůsobit změnou konfiguračního souboru XML, který je ve výchozím nastavení v následující cestě: `C:\Program Files (x86)\Configuration Manager Support Center\LogGroups.xml` .
 
 V následujícím příkladu je jedna část výchozího konfiguračního souboru:
 
@@ -89,13 +89,13 @@ V následujícím příkladu je jedna část výchozího konfiguračního soubor
 </LogGroups>
 ```
 
-`GroupType` Vlastnost přijímá následující hodnoty:
+`GroupType`Vlastnost přijímá následující hodnoty:
 
 - `0`: Neznámé nebo jiné
 - `1`: Configuration Manager protokoly klienta
 - `2`: Configuration Manager protokoly serveru
 
-`GroupFilePath` Vlastnost může obsahovat explicitní cestu pro soubory protokolu. Pokud je prázdná, OneTrace spoléhá na konfiguraci registru pro daný typ skupiny. Pokud jste například nastavili `GroupType=1`, bude se ve výchozím nastavení automaticky hledat `C:\Windows\CCM\Logs` v protokolech ve skupině. V tomto příkladu není nutné zadávat `GroupFilePath`.
+`GroupFilePath`Vlastnost může obsahovat explicitní cestu pro soubory protokolu. Pokud je prázdná, OneTrace spoléhá na konfiguraci registru pro daný typ skupiny. Pokud jste například nastavili `GroupType=1` , bude se ve výchozím nastavení automaticky hledat v `C:\Windows\CCM\Logs` protokolech ve skupině. V tomto příkladu není nutné zadávat `GroupFilePath` .
 
 ## <a name="see-also"></a>Viz také
 

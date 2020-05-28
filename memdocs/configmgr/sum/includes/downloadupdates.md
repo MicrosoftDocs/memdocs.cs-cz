@@ -26,7 +26,7 @@
 
         -   **Popis**: Zadejte popis, který poskytuje informace o balíčku pro nasazení. Nepovinný popis je omezený na 127 znaků.    
 
-        -   **Zdroj balíčku:** Určuje umístění zdrojových souborů aktualizace softwaru. Zadejte síťovou cestu k umístění zdroje, například `\\server\sharename\path`, nebo klikněte na tlačítko **Procházet** a vyhledejte umístění v síti. Než přejdete na další stránku, vytvořte sdílenou složku pro zdrojové soubory balíčku pro nasazení.  
+        -   **Zdroj balíčku:** Určuje umístění zdrojových souborů aktualizace softwaru. Zadejte síťovou cestu k umístění zdroje, například `\\server\sharename\path` , nebo klikněte na tlačítko **Procházet** a vyhledejte umístění v síti. Než přejdete na další stránku, vytvořte sdílenou složku pro zdrojové soubory balíčku pro nasazení.  
 
              - Zadané umístění nemůžete použít jako zdroj jiného balíčku pro nasazení softwaru.  
 
