@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: e9778b13-c8a3-40eb-8655-34ac8ce9cdaa
-ms.openlocfilehash: c857997bdbeed51286e874dcbecf00b414dfe6a0
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: bd384edafd6464073b33a593a56bc88ba2fb0b87
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81717640"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906768"
 ---
 # <a name="introduction-to-software-updates-in-configuration-manager"></a>Seznámení s aktualizacemi softwaru v Configuration Manager
 
@@ -275,7 +275,7 @@ Ukázkový scénář, který ukazuje, jak můžete nasadit aktualizace softwaru 
  Další informace o tom, jak Configuration Manager spravuje vložená zařízení, která používají filtry zápisu, najdete v tématu [Plánování nasazení klientů na zařízení se systémem Windows Embedded](../../core/clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices.md).  
 
 ##  <a name="extend-software-updates-in-configuration-manager"></a><a name="BKMK_ExtendSoftwareUpdates"></a>Rozšiřování aktualizací softwaru v Configuration Manager  
- Pomocí System Center Updates Publisher můžete spravovat aktualizace softwaru, které nejsou k dispozici Microsoft Update. Po publikování aktualizací softwaru na server aktualizací a synchronizaci aktualizací softwaru v Configuration Manager můžete nasadit aktualizace softwaru pro klienty Configuration Manager. Další informace o nástroji Updates Publisher najdete v tématu [Updates publisher 2011](https://go.microsoft.com/fwlink/p/?LinkId=252947).  
+ Pomocí System Center Updates Publisher můžete spravovat aktualizace softwaru, které nejsou k dispozici Microsoft Update. Po publikování aktualizací softwaru na server aktualizací a synchronizaci aktualizací softwaru v Configuration Manager můžete nasadit aktualizace softwaru pro klienty Configuration Manager. Další informace o nástroji Updates Publisher najdete v tématu [Updates publisher 2011](https://docs.microsoft.com/previous-versions/system-center/updates-publisher-2011/hh134742(v=technet.10)).  
 
 ## <a name="next-steps"></a>Další kroky
 [Plánování aktualizací softwaru](../plan-design/plan-for-software-updates.md)

@@ -10,12 +10,12 @@ ms.assetid: 946b0f74-0794-4e8f-a6af-9737d877179b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f430979a2189494e977c501a36f9f039f860ca7a
-ms.sourcegitcommit: 568f8f8c19fafdd0f4352d0682f1ca7a4d665d25
+ms.openlocfilehash: f5461f888bfa2b749061eef4000f0d7c5f756b84
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81771441"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906748"
 ---
 # <a name="enable-third-party-updates"></a>Povolení aktualizací třetích stran 
 
@@ -30,7 +30,7 @@ Od verze 1806 se uzel **katalogů aktualizací softwaru třetích stran** v konz
 ## <a name="prerequisites"></a>Požadavky 
 - Dostatek místa na disku ve složce WSUSContent bodu aktualizace softwaru na nejvyšší úrovni pro ukládání zdrojového binárního obsahu pro aktualizace softwaru třetích stran.
     - Velikost požadovaného úložiště se liší v závislosti na dodavateli, typech aktualizací a konkrétních aktualizacích, které publikujete pro nasazení.
-    - Pokud potřebujete přesunout složku WSUSContent na jinou jednotku s větším množstvím volného místa, přečtěte si téma [Postup změny umístění, kde služba WSUS ukládá aktualizace místně](https://blogs.technet.microsoft.com/sus/2008/05/19/wsus-how-to-change-the-location-where-wsus-stores-updates-locally/) .
+    - Pokud potřebujete přesunout složku WSUSContent na jinou jednotku s větším množstvím volného místa, přečtěte si téma [Postup změny umístění, kde služba WSUS ukládá aktualizace místně](https://docs.microsoft.com/archive/blogs/sus/wsus-how-to-change-the-location-where-wsus-stores-updates-locally) .
 - Synchronizační služba aktualizace softwaru třetí strany vyžaduje přístup k Internetu.
     - Pro seznam katalogů partnerů je potřeba download.microsoft.com přes port HTTPS 443. 
     -  Přístup k Internetu pro všechny katalogy třetích stran a aktualizace souborů obsahu. Můžou být potřeba další porty, které jsou jiné než 443.
@@ -40,7 +40,7 @@ Od verze 1806 se uzel **katalogů aktualizací softwaru třetích stran** v konz
 ## <a name="additional-requirements-when-the-sup-is-remote-from-the-top-level-site-server"></a>Další požadavky, pokud je server SUP vzdálený od serveru lokality nejvyšší úrovně 
 
 1. Při vzdáleném SUP musí být protokol SSL povolený. To vyžaduje certifikát ověřování serveru vygenerovaný z interní certifikační autority nebo prostřednictvím veřejného poskytovatele.
-    - [Konfigurace protokolu SSL na serveru WSUS](/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#25-secure-wsus-with-the-secure-sockets-layer-protocol)
+    - [Konfigurace protokolu SSL na serveru WSUS](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#25-secure-wsus-with-the-secure-sockets-layer-protocol)
         - Při konfiguraci protokolu SSL na serveru WSUS Pamatujte na to, že některé webové služby a virtuální adresáře jsou vždy HTTP a nikoli HTTPS. 
         - Configuration Manager stáhne obsah třetích stran pro balíčky aktualizací softwaru z adresáře obsahu WSUS přes HTTP.   
     - [Konfigurace SSL v SUP](../get-started/install-a-software-update-point.md#configure-ssl-communications-to-wsus)
@@ -51,7 +51,7 @@ Od verze 1806 se uzel **katalogů aktualizací softwaru třetích stran** v konz
 
 
 3. Na serveru Configuration Manager lokality vytvořte následující klíč registru: 
-    - `HKLM\Software\Microsoft\Update Services\Server\Setup`, vytvořte novou hodnotu DWORD s názvem **EnableSelfSignedCertificates** s hodnotou `1`. 
+    - `HKLM\Software\Microsoft\Update Services\Server\Setup`, vytvořte novou hodnotu DWORD s názvem **EnableSelfSignedCertificates** s hodnotou `1` . 
 
 4. Chcete-li povolit instalaci podpisového certifikátu služby WSUS podepsaného svým držitelem do důvěryhodných vydavatelů a důvěryhodných kořenových úložišť na vzdáleném serveru SUP:
    - **Účet pro připojení k serveru WSUS** by měl mít oprávnění ke vzdálené správě na serveru sup.
@@ -75,7 +75,7 @@ Pokud tuto možnost povolíte, můžete se přihlásit k odběru katalogů aktua
 Budete se muset rozhodnout, jestli chcete, aby Configuration Manager automaticky spravovat podpisový certifikát služby WSUS třetí strany pomocí certifikátu podepsaného svým držitelem, nebo pokud potřebujete ručně nakonfigurovat certifikát. 
 
 ### <a name="automatically-manage-the-wsus-signing-certificate"></a>Automatické spravování podpisového certifikátu služby WSUS
-Pokud nemáte požadavek na používání certifikátů PKI, můžete se rozhodnout pro automatické spravování podpisových certifikátů pro aktualizace třetích stran. Správa certifikátů služby WSUS se provádí jako součást cyklu synchronizace a je přihlášena `wsyncmgr.log`. 
+Pokud nemáte požadavek na používání certifikátů PKI, můžete se rozhodnout pro automatické spravování podpisových certifikátů pro aktualizace třetích stran. Správa certifikátů služby WSUS se provádí jako součást cyklu synchronizace a je přihlášena `wsyncmgr.log` . 
 
 1. V konzole Configuration Manager otevřete pracovní prostor **Správa** . Rozbalte položku **Konfigurace lokality**a vyberte uzel **weby** .
 2. Vyberte lokalitu nejvyšší úrovně v hierarchii. Na pásu karet klikněte na položku **Konfigurovat součásti webu**a vyberte možnost **bod aktualizace softwaru**.
@@ -234,12 +234,12 @@ Synchronizace aktualizací softwaru třetích stran je zpracována komponentou S
 -  Configuration Manager má novou verzi formátu souboru CAB katalogu. Nová verze zahrnuje certifikáty pro binární soubory dodavatele. Po schválení a důvěřování katalogu budou tyto certifikáty přidány do uzlu **certifikáty** v části **zabezpečení** v pracovním prostoru **Správa** .  
      - Starší verzi souboru CAB katalogu můžete dál používat, pokud je adresa URL pro stahování https a aktualizace se podepisují. Publikování obsahu se nezdaří, protože certifikáty pro binární soubory nejsou v souboru CAB a jsou již schváleny. Tento problém můžete obejít tak, že vyhledáte certifikát v uzlu **certifikáty** , odblokujete ho a pak znovu publikujete aktualizaci. Pokud publikujete více aktualizací podepsaných pomocí různých certifikátů, budete muset odblokovat každý použitý certifikát.
      - Další informace najdete v části stavové zprávy 11523 a 11524 v níže uvedené tabulce stavových zpráv.
--  Pokud služba synchronizace aktualizací softwaru třetí strany v bodu aktualizace softwaru nejvyšší úrovně vyžaduje proxy server k přístupu k Internetu, může dojít k selhání kontrol digitálních podpisů. Chcete-li tento problém zmírnit, nakonfigurujte nastavení proxy serveru WinHTTP v systému lokality. Další informace najdete v tématu [Příkazy Netsh pro WinHTTP](https://go.microsoft.com/fwlink/p/?linkid=199086).
+-  Pokud služba synchronizace aktualizací softwaru třetí strany v bodu aktualizace softwaru nejvyšší úrovně vyžaduje proxy server k přístupu k Internetu, může dojít k selhání kontrol digitálních podpisů. Chcete-li tento problém zmírnit, nakonfigurujte nastavení proxy serveru WinHTTP v systému lokality. Další informace najdete v tématu [Příkazy Netsh pro WinHTTP](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731131(v=ws.10)).
 - Při použití CMG pro úložiště obsahu se nebude obsah pro aktualizace třetích stran stahovat do klientů, pokud je povolený **rozdílový obsah ke stažení, pokud** je povolené [nastavení klienta](../../core/clients/deploy/about-client-settings.md#allow-clients-to-download-delta-content-when-available) dostupné. <!--6598587-->
 
 ## <a name="status-messages"></a>Stavové zprávy
 
-| Parametr       | Severity           | Popis | Možná příčina| Možné řešení
+| Parametr       | Severity           | Description | Možná příčina| Možné řešení
 | ------------- |-------------| -----|----|----|
 | 11516     | Chyba |Publikování obsahu pro aktualizaci ID aktualizace se nezdařilo, protože obsah je nepodepsaný.  Publikovat lze pouze obsah s platnými podpisy.  |Configuration Manager nepovoluje publikování nepodepsaných aktualizací.| Publikujte aktualizaci alternativním způsobem. </br></br>Podívejte se, jestli je od dodavatele k dispozici podepsaná aktualizace.|
 | 11523  | Upozornění |  Katalog "X" neobsahuje certifikáty podepisování obsahu, pokusy o publikování obsahu aktualizace pro aktualizace z tohoto katalogu můžou být neúspěšné, dokud nebudou přidané a schválené certifikáty pro podepisování obsahu. | Tato zpráva se může vyskytnout při importu katalogu, který používá starší verzi formátu souboru CAB.|Kontaktujte poskytovatele katalogu a získejte aktualizovaný katalog, který obsahuje certifikáty podepisování obsahu. </br> </br> Certifikáty pro binární soubory nejsou zahrnuté do souboru CAB, takže se obsah nepodaří publikovat. Tento problém můžete obejít tak, že vyhledáte certifikát v uzlu **certifikáty** , odblokujete ho a pak znovu publikujete aktualizaci. Pokud publikujete více aktualizací podepsaných pomocí různých certifikátů, budete muset odblokovat každý použitý certifikát.|

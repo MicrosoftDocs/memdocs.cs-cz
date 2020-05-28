@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: 05e7bbe6373ed91de5a2bb8e99a8425e733274f2
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 0513c1908b1360a50653931dda57e5d148055240
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81721616"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905681"
 ---
 # <a name="capabilities-in-technical-preview-1606-for-configuration-manager"></a>Funkce ve verzi Technical Preview 1606 pro Configuration Manager
 
@@ -50,7 +50,7 @@ Můžete vytvořit kategorie zařízení, které se dají použít k automatick�
 
 ### <a name="associate-a-collection-with-a-device-category"></a>Přidružení kolekce ke kategorii zařízení
 Když přidružíte kolekci ke kategorii zařízení, všechna zařízení v kategorii, kterou zadáte, se do této kolekce přidají.
-1.  V dialogovém okně **vlastnosti** pro kolekci zařízení klikněte na **Přidat** > pravidlo**kategorie zařízení**.
+1.  V dialogovém okně **vlastnosti** pro kolekci zařízení klikněte na **Přidat**pravidlo  >  **kategorie zařízení**.
 2.  V dialogovém okně **vytvořit pravidlo členství v kategorii zařízení** vyberte kategorii, která bude použita pro všechna zařízení v kolekci.
 3.  Zavřete dialogové okno **vytvořit pravidlo členství kategorie zařízení** a dialogové okno Vlastnosti kolekce.
 
@@ -80,9 +80,9 @@ Podobné možnosti byly přidány do Průvodce nasazením aktualizací softwaru,
 
 Device Guard je funkce Windows 10, která využívá hardwarovou a softwarovou funkci k striktnímu řízení toho, co je možné na zařízení spouštět.
 
-Můžete si přečíst podrobný přehled toho, co dělá Ochrana zařízení a jak funguje v [tomto článku na TechNetu](https://technet.microsoft.com/itpro/windows/whats-new/device-guard-overview).
+Další informace najdete v tématu [Úvod do ochrany zařízení](https://docs.microsoft.com/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control).
 
-V této verzi může Configuration Manager spolupracovat s ochranou zařízení a nástrojem [Windows AppLocker](https://technet.microsoft.com/library/dd723678(v=ws.10).aspx) , aby spustitelné soubory a soubory DLL nasazené s Configuration Manager byly automaticky důvěryhodné, protože pocházejí ze spravovaného instalačního programu, což znamená, že budou moci běžet na cílovém zařízení a jiný software nebude možné spustit, pokud není explicitně povoleno spouštět pomocí jiných pravidel nástroje AppLocker.  
+V této verzi může Configuration Manager spolupracovat s ochranou zařízení a nástrojem [Windows AppLocker](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd723678(v=ws.10)) , aby spustitelné soubory a soubory DLL nasazené s Configuration Manager byly automaticky důvěryhodné, protože pocházejí ze spravovaného instalačního programu, což znamená, že budou moci běžet na cílovém zařízení a jiný software nebude možné spustit, pokud není explicitně povoleno spouštět pomocí jiných pravidel nástroje AppLocker.  
 
 V současné době se tato možnost nedá konfigurovat z konzoly Configuration Manager. Chcete-li nakonfigurovat zásady, je nutné nakonfigurovat klíč registru v každém klientovi a nakonfigurovat služby systému Windows v klientovi.
 Až to uděláte, nakonfigurujte soubor zásad AppLockeru. Když nakonfigurujete soubor zásad, můžete ho nasadit do libovolného kompatibilního klientského zařízení.
@@ -93,24 +93,22 @@ Stejně jako všechny zásady nástroje AppLocker můžou zásady s pravidly spr
 - Režim auditování – aplikace se nedají spouštět, ale všechny aplikace, které by byly blokované, se nahlásí v souboru protokolu (Tato operace bude podporovaná v pozdější verzi Configuration Manager).
 - Vynucení povoleno – aplikace se zablokují jako spuštěné.
 
-Další informace o používání ochrany zařízení pomocí Configuration Manager najdete na [blogu Enterprise mobility and Security blog](https://blogs.technet.microsoft.com/enterprisemobility/2016/06/20/configmgr-as-a-managed-installer-with-win10).
+Další informace najdete v následujících článcích:
 
-Další čtení:
+- [Úvod do zařízení Guard](https://docs.microsoft.com/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control)
 
-- [Úvod do zařízení Guard](https://technet.microsoft.com/itpro/windows/keep-secure/introduction-to-device-guard-virtualization-based-security-and-code-integrity-policies)
-- [Certifikace a dodržování předpisů zařízení](https://technet.microsoft.com/itpro/windows/keep-secure/device-guard-certification-and-compliance)
-- [Průvodce nasazením zařízení Guard](https://technet.microsoft.com/itpro/windows/keep-secure/device-guard-deployment-guide)
+- [Plánování a Začínáme s procesem nasazení řízení aplikací v programu Windows Defender](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide)
 
   ##  <a name="multiple-device-management-points-for-on-premises-mobile-device-management"></a><a name="dmp_onprem"></a>Více bodů správy zařízení pro místní správu mobilních zařízení  
-  V\-rámci Technical Preview 1606 podporuje místní správa mobilních zařízení ve Windows 10 pro registraci nových verzí novou funkci, která automaticky konfiguruje zaregistrované zařízení, aby bylo možné používat více než jeden bod správy zařízení. Tato možnost umožňuje zařízení přejít na jiný bod správy zařízení, když normální použití není dostupné. Tato možnost funguje jenom pro počítače s nainstalovanou aktualizací Windows 10 pro výročí.  
+  V rámci Technical Preview 1606 \- podporuje místní správa mobilních zařízení ve Windows 10 pro registraci nových verzí novou funkci, která automaticky konfiguruje zaregistrované zařízení, aby bylo možné používat více než jeden bod správy zařízení. Tato možnost umožňuje zařízení přejít na jiný bod správy zařízení, když normální použití není dostupné. Tato možnost funguje jenom pro počítače s nainstalovanou aktualizací Windows 10 pro výročí.  
 
 ### <a name="try-it-out"></a>Určitě to udělejte!  
 
 1.  Nainstalujte ve vaší hierarchii více než jeden bod správy zařízení.  
 
-2.  Zaregistrujte zařízení aktualizace pro Windows 10 pro\-místní správu mobilních zařízení.  
+2.  Zaregistrujte zařízení aktualizace pro Windows 10 pro \- místní správu mobilních zařízení.  
 
-Informace o tom, jak připravit lokalitu a registrovat zařízení pro\-místní správu mobilních zařízení, najdete v tématu [Správa mobilních zařízení s místní infrastrukturou](../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md).  
+Informace o tom, jak připravit lokalitu a registrovat zařízení pro \- místní správu mobilních zařízení, najdete v tématu [Správa mobilních zařízení s místní infrastrukturou](../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md).  
 
 ## <a name="cloud-proxy-service-for-managing-clients-on-the-internet"></a><a name="cloud_proxy"></a>Cloudová proxy služba pro správu klientů na internetu
 
@@ -221,10 +219,10 @@ Jakmile klienti mají nové informace o umístění pro cloudovou službu proxy,
 
 Od verze Technical Preview 1606 můžete místo zásad skupiny použít Configuration Managerho klientského agenta, aby klienti Office 365 mohli dostávat aktualizace z Configuration Manager. Po nakonfigurování tohoto nastavení a nasazení aktualizací Office 365 komunikuje klientský Agent Configuration Manager s agentem klienta Office 365 ke stažení aktualizací Office 365 z distribučního bodu a jejich instalaci. Configuration Manager také převezme inventář nastavení agenta klienta.
 
-Další informace najdete v tématu [Správa aktualizací Office 365 ProPlus](https://technet.microsoft.com/library/mt741983.aspx).
+Další informace najdete v tématu [Správa aktualizací Office 365 ProPlus](../../sum/deploy-use/manage-office-365-proplus-updates.md).
 
 ### <a name="set-the-configuration-manager-client-setting-to-manage-the-office-365-client-agent"></a>Nastavení Configuration Manager klienta pro správu klientského agenta Office 365
-1.  V konzole Configuration Manager klikněte na **Správa** > **Přehled** > **nastavení klienta**.
+1.  V konzole Configuration Manager klikněte na **Správa**  >  **Přehled**  >  **nastavení klienta**.
 2. Otevřete příslušné nastavení zařízení a povolte agenta klienta. Další informace o výchozích a vlastních nastaveních klienta najdete v tématu [Konfigurace nastavení klienta](../../core/clients/deploy/configure-client-settings.md).
 3. Klikněte na možnost **aktualizace softwaru** a u nastavení **Povolit správu klientského agenta systému Office 365** vyberte **Ano** .  
 

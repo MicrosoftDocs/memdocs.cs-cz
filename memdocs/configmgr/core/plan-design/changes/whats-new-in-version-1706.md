@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: a4fa056c9c0708d2cecc0ca5f244e134e22ad10b
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: a8a4ce1c3d54311db18decc85f57d3e03298d339
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82073705"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904692"
 ---
 # <a name="what39s-new-in-version-1706-of-configuration-manager"></a>Co&#39;s novinkou ve verzi 1706 Configuration Manager
 
@@ -28,8 +28,8 @@ Aktualizace 1706 pro Configuration Manager aktuální větev je k dispozici jako
 > Chcete-li nainstalovat novou lokalitu, je nutné použít základní verzi Configuration Manager.  
 >
 > Další informace:    
-> - [Instalace nových lokalit](https://technet.microsoft.com/library/mt590197.aspx)  
-> - [Instalace aktualizací v lokalitách](https://technet.microsoft.com/library/mt607046.aspx)  
+> - [Instalace nových lokalit](../../servers/deploy/install/installing-sites.md)  
+> - [Instalace aktualizací v lokalitách](../../servers/manage/updates.md)  
 > - [Základní a aktualizační verze](../../servers/manage/updates.md#bkmk_Baselines)  
 
 Následující části obsahují podrobné informace o změnách a nových funkcích, které jsou představené ve verzi 1706 Configuration Manager.  
@@ -223,14 +223,14 @@ Teď můžete pomocí Configuration Manager spravovat aktualizace ovladačů Mic
 
 ### <a name="configure-windows-update-for-business-deferral-policies"></a>Konfigurace zásad odložení web Windows Update pro firmy
 <!-- 1290890 -->
-Teď můžete nakonfigurovat zásady odložení pro aktualizace funkcí Windows 10 nebo aktualizace kvality pro zařízení s Windows 10 spravovaná přímo pomocí web Windows Update pro firmy. Zásady odložení můžete spravovat v uzlu nové **zásady web Windows Update pro firmy** v části **softwarová knihovna** > **Windows 10 – Údržba**.
+Teď můžete nakonfigurovat zásady odložení pro aktualizace funkcí Windows 10 nebo aktualizace kvality pro zařízení s Windows 10 spravovaná přímo pomocí web Windows Update pro firmy. Zásady odložení můžete spravovat v uzlu nové **zásady web Windows Update pro firmy** v části **softwarová knihovna**  >  **Windows 10 – Údržba**.
 
 Podrobnosti najdete v tématu [integrace s web Windows Update pro firmy ve Windows 10](../../../sum/deploy-use/integrate-windows-update-for-business-windows-10.md#configure-windows-update-for-business-deferral-policies).
 
 ### <a name="improved-user-notifications-for-office-365-updates"></a>Vylepšená uživatelská oznámení pro aktualizace Office 365
 V případě, že klient nainstaluje aktualizaci Office 365, provedli jsme vylepšení využití uživatelského prostředí Klikni a spusť pro Office. To zahrnuje automaticky otevíraná okna a oznámení v aplikaci a možnosti odpočítávání. Další informace najdete v tématu [chování při restartování a oznámení klientů pro aktualizace Office 365](../../../sum/deploy-use/manage-office-365-proplus-updates.md#restart-behavior-and-client-notifications-for-office-365-updates) .
 
-## <a name="reporting"></a>Generování sestav
+## <a name="reporting"></a>Vytváření sestav
 
 ### <a name="use-windows-analytics-with-configuration-manager"></a>Použití Windows Analytics s Configuration Manager
 <!-- 1318608 -->

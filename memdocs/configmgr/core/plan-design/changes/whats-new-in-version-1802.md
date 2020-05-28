@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 11066470347db0f3ffbfadda9897aed92baa645b
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: e7bc30c4350d96654a0f6a6ae548d63c2928e791
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82073598"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904659"
 ---
 # <a name="whats-new-in-version-1802-of-configuration-manager"></a>Co je nového ve verzi 1802 Configuration Manager
 
@@ -124,7 +124,7 @@ Při vytváření instance [brány pro správu cloudu](../../clients/manage/cmg/
 
 - Od této verze už **Brána pro správu cloudu** není součástí předběžné verze.  
 
-- Dokumentace k funkcím je revidována a vylepšena. Další informace najdete v těchto článcích:
+- Dokumentace k funkcím je revidována a vylepšena. Další informace najdete v následujících článcích:
     - [Plánování brány pro správu cloudu](../../clients/manage/cmg/plan-cloud-management-gateway.md)
     - [Velikost brány pro správu cloudu a čísla škálování](../configs/size-and-scale-numbers.md#bkmk_cmg)
     - [Zabezpečení a ochrana brány pro správu cloudu](../../clients/manage/cmg/security-and-privacy-for-cloud-management-gateway.md)
@@ -143,7 +143,7 @@ Společnost Microsoft má v úmyslu ukončit podporu klientů se systémy Linux 
 
 ### <a name="surface-device-dashboard"></a>Řídicí panel zařízení Surface
 <!--1355788-->
-Řídicí panel zařízení Surface poskytuje informace o zařízeních Surface, která se nacházejí ve vašem prostředí. V konzole nástroje přejdete na **monitorování** > **Surface zařízení**. Můžete zobrazit položky:
+Řídicí panel zařízení Surface poskytuje informace o zařízeních Surface, která se nacházejí ve vašem prostředí. V konzole nástroje přejdete na **monitorování**  >  **Surface zařízení**. Můžete zobrazit položky:
 - Procento povrchů
 - Procento modelů Surface
 - Pět hlavních verzí firmwaru
@@ -169,7 +169,7 @@ Od této verze můžete zobrazit řídicí panel s informacemi o spolusprávě. 
 
 ### <a name="microsoft-edge-browser-policies"></a>Zásady prohlížeče Microsoft Edge
 <!-- 1357310 -->
-Pro zákazníky, kteří používají webový prohlížeč [Microsoft Edge](https://technet.microsoft.com/microsoft-edge/bb265256) na klientech Windows 10, vytvořte zásady nastavení dodržování předpisů Configuration Manager ke konfiguraci několika nastavení Microsoft Edge. Další informace najdete v tématu [Vytvoření profilu prohlížeče Microsoft Edge](../../../compliance/deploy-use/browser-profiles.md). 
+Pro zákazníky, kteří používají webový prohlížeč [Microsoft Edge](https://www.microsoft.com/itpro/microsoft-edge) na klientech Windows 10, vytvořte zásady nastavení dodržování předpisů Configuration Manager ke konfiguraci několika nastavení Microsoft Edge. Další informace najdete v tématu [Vytvoření profilu prohlížeče Microsoft Edge](../../../compliance/deploy-use/browser-profiles.md). 
 
 
 
@@ -259,7 +259,7 @@ Pravidla automatického nasazení je možné naplánovat tak, aby vyhodnotila po
 
 
 
-## <a name="reporting"></a>Generování sestav
+## <a name="reporting"></a>Vytváření sestav
 
 ### <a name="report-for-default-browser-counts"></a>Sestava pro výchozí počty prohlížečů
 <!-- 1357830 -->

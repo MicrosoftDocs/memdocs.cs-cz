@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: df951bfb44313cfec8dacb8c0df34abb7beb0c56
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: f3f38de1d7440ffd0293bde359deeb6be3bbeffb
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81720293"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906206"
 ---
 # <a name="recommended-antivirus-exclusions-for-configuration-manager"></a>Doporučená vyloučení antivirového programu pro Configuration Manager
 
@@ -83,7 +83,7 @@ Chcete-li těmto problémům zabránit, doporučujeme přidat následující vyl
 
 ### <a name="folder-exclusions-for-clients"></a>Vyloučení složek pro klienty
 
-- *Instalační složka*\\\*klienta. sdf
+- *Instalační složka klienta* \\ \* . SDF
 - \ServiceData *instalační složky klienta*
 - C:\Windows\CCMCache
 - C:\Windows\CCMSetup
@@ -114,10 +114,10 @@ Vyloučení procesů jsou nutná pouze v případě, že agresivní antivirové 
 
 Další informace o výjimkách antivirové ochrany najdete v následujících článcích:
 
-[Vyloučení antivirové ochrany Configuration Manager Current Branch – blog System Center Premier Field inženýr](https://blogs.technet.microsoft.com/systemcenterpfe/2017/05/24/configuration-manager-current-branch-antivirus-update/)
+[Vyloučení antivirové ochrany Configuration Manager Current Branch – blog System Center Premier Field inženýr](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/configuration-manager-current-branch-antivirus-exclusions/ba-p/884831)
 
-[Aktualizace softwaru System Center 2012 Configuration Manager vyloučení antivirové ochrany s dalšími podrobnostmi o technologiích OSD a spouštěcích bitových kopiích](https://blogs.technet.microsoft.com/systemcenterpfe/2013/01/11/updated-system-center-2012-configuration-manager-antivirus-exclusions-with-more-details-on-osd-and-boot-images-etc/)
+[Aktualizace softwaru System Center 2012 Configuration Manager vyloučení antivirové ochrany s dalšími podrobnostmi o technologiích OSD a spouštěcích bitových kopiích](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/updated-system-center-2012-configuration-manager-antivirus/ba-p/884371)
 
-[Jak zvolit antivirový software, který se má spustit na počítačích se spuštěným SQL Server](https://support.microsoft.com/en-us/help/309422/how-to-choose-antivirus-software-to-run-on-computers-that-are-running-sql-server)
+[Jak zvolit antivirový software, který se má spustit na počítačích se spuštěným SQL Server](https://support.microsoft.com/help/309422/how-to-choose-antivirus-software-to-run-on-computers-that-are-running-sql-server)
 
-[Doporučení pro kontrolu virů pro podnikové počítače, na kterých běží aktuálně podporované verze Windows](https://support.microsoft.com/en-us/help/822158/virus-scanning-recommendations-for-enterprise-computers-that-are-running-currently-supported-versions-of-windows)
+[Doporučení pro kontrolu virů pro podnikové počítače, na kterých běží aktuálně podporované verze Windows](https://support.microsoft.com/help/822158/virus-scanning-recommendations-for-enterprise-computers-that-are-running-currently-supported-versions-of-windows)

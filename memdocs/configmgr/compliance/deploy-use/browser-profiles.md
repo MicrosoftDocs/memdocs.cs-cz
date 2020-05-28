@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.assetid: 76477b4d-df41-4b25-8318-7d18d46ca2c6
-ms.openlocfilehash: 91c11e133c74cd3b55db09e8bf80fd6c4df7774d
-ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
+ms.openlocfilehash: 4ed49ed3623b34bfb51fd66fafa858ae3951a5af
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82210090"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906359"
 ---
 # <a name="configure-microsoft-edge-settings-in-configuration-manager"></a>Konfigurace nastavení Microsoft Edge v Configuration Manager
 
 *Platí pro: Configuration Manager (Current Branch)*
 
 <!-- 1357310 -->
-Od verze 1802 pro zákazníky, kteří používají webový prohlížeč [Microsoft Edge](https://technet.microsoft.com/microsoft-edge/bb265256) na klientech Windows 10, vytvořte zásady nastavení dodržování předpisů Configuration Manager ke konfiguraci několika nastavení Microsoft Edge. 
+Od verze 1802 pro zákazníky, kteří používají webový prohlížeč [Microsoft Edge](https://www.microsoft.com/itpro/microsoft-edge) na klientech Windows 10, vytvořte zásady nastavení dodržování předpisů Configuration Manager ke konfiguraci několika nastavení Microsoft Edge. 
 
 Tato zásada platí jenom pro klienty ve Windows 10 verze 1703 nebo novější. <!--511552-->
 

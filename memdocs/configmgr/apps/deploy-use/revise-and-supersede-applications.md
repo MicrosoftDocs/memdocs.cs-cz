@@ -2,7 +2,7 @@
 title: Revidování a nahrazování aplikací
 titleSuffix: Configuration Manager
 description: Naučte se pracovat s Configuration Managermi verzemi aplikací a nahrazovat aplikace.
-ms.date: 10/06/2016
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 30170d70-489f-47f7-bebf-9ed0115db26b
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 87804ee2a76dea918cebb964a3672ab61bf6de8d
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 6afed00b8207edb338b2a6dc62e083a5267fa47e
+ms.sourcegitcommit: 4c129bb04ea4916c78446e89fbff956397cbe828
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81710066"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83343129"
 ---
 # <a name="revise-and-supersede-applications-in-configuration-manager"></a>Revize a nahrazování aplikací v Configuration Manager
 
@@ -28,7 +28,7 @@ V tomto tématu se dozvíte, jak pracovat s Configuration Managermi verzemi apli
 
 ### <a name="to-display-an-application-revision-history"></a>Zobrazení historie revizí aplikace  
 
-1.  V konzole Configuration Manager zvolte možnost aplikace **softwarová knihovna** > **Správa** > **Applications**aplikací a pak zvolte požadovanou aplikaci.  
+1.  V konzole Configuration Manager zvolte možnost aplikace **softwarová knihovna**  >  **Správa aplikací**  >  **Applications**a pak zvolte požadovanou aplikaci.  
 
 3.  Na kartě **Domů** ve skupině **aplikace** kliknutím na možnost **Historie revizí** otevřete dialogové okno **Historie revizí aplikace** .  
 
@@ -59,8 +59,8 @@ V tomto tématu se dozvíte, jak pracovat s Configuration Managermi verzemi apli
 >  Aktuální revizi aplikace můžete odstranit pouze v případě, že je aplikace vyřazena a neobsahuje žádné odkazy.  
 
 ##  <a name="application-supersedence"></a> Nahrazování aplikací  
- Správa aplikací v Configuration Manager umožňuje upgradovat nebo nahradit stávající aplikace pomocí vztahu nahrazování. Pokud nahrazujete aplikaci, můžete určit nový typ nasazení, který nahradí typ nasazení nahrazené aplikace, a také rozhodnout, zda má být nahrazena nebo odinstalována nahrazená aplikace, než bude nainstalována nahrazující aplikace.  
-
+ Správa aplikací v Configuration Manager umožňuje upgradovat nebo nahradit stávající aplikace pomocí vztahu nahrazování. Pokud nahrazujete aplikaci, můžete určit nový typ nasazení, který nahradí typ nasazení nahrazené aplikace, a také rozhodnout, zda má být nahrazena nebo odinstalována nahrazená aplikace, než bude nainstalována nahrazující aplikace. Obecně řečeno, doporučujeme omezit řetězce nahrazení na pět úrovní na maximum.
+ 
 > [!IMPORTANT]  
 >  Když je vybrána možnost odinstalování nahrazovaného typu nasazení, typ nasazení nemůže být nahrazen typem nasazení, který byl nasazen na jiný typ kolekce.  Například nelze typ nasazení, který byl nasazen na kolekci zařízení, nahradit typem nasazení, který byl nasazen na kolekci uživatelů, pokud je vybrána možnost odinstalování nahrazovaného typu nasazení.  
 
@@ -94,11 +94,11 @@ V tomto tématu se dozvíte, jak pracovat s Configuration Managermi verzemi apli
 
 ### <a name="to-specify-a-supersedence-relationship"></a>Určení vztahu nahrazení  
 
-1.  V konzole Configuration Manager zvolte možnost **softwarová knihovna** >  > **aplikace****Správa aplikací**a pak zvolte aplikaci, která nahrazuje jinou aplikaci.  
+1.  V konzole Configuration Manager zvolte možnost **softwarová knihovna**aplikace  >  **Správa aplikací**  >  **Applications**a pak zvolte aplikaci, která nahrazuje jinou aplikaci.  
 
 3.  Na kartě **Domů** ve skupině **vlastnosti** kliknutím na možnost **vlastnosti** otevřete dialogové okno **vlastnosti** názvu aplikace.  
 
-4.  Na kartě **nahrazování** v dialogovém okně *<název\> aplikace* – **vlastnosti** klikněte na tlačítko **Přidat**.  
+4.  Na kartě **nahrazování** v dialogovém okně *<název \> aplikace* – **vlastnosti** klikněte na tlačítko **Přidat**.  
 
 5.  V dialogovém okně **Určit vztah nahrazení** klikněte na tlačítko **Procházet**.  
 
@@ -121,6 +121,6 @@ V tomto tématu se dozvíte, jak pracovat s Configuration Managermi verzemi apli
 
 3.  Na kartě **Domů** ve skupině **vlastnosti** kliknutím na možnost **vlastnosti** otevřete dialogové okno *<\> název aplikace* **vlastnosti** .  
 
-4.  Na kartě **odkazy** v dialogovém okně *<aplikace vlastnosti\> název aplikace* vyberte **aplikace, které nahrazují tuto aplikaci** , z rozevíracího seznamu **typ vztahu** . **Properties**  
+4.  Na kartě **odkazy** v dialogovém okně *<aplikace vlastnosti \> název aplikace* vyberte **aplikace, které nahrazují tuto aplikaci** , z rozevíracího seznamu **typ vztahu** . **Properties**  
 
-5.  Zkontrolujte seznam aplikací, které nahrazují vybranou aplikaci, a pak kliknutím na **tlačítko OK** zavřete dialogové okno *<název\> aplikace* **vlastnosti** .  
+5.  Zkontrolujte seznam aplikací, které nahrazují vybranou aplikaci, a pak kliknutím na **tlačítko OK** zavřete dialogové okno *<název \> aplikace* **vlastnosti** .  

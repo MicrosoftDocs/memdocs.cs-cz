@@ -10,12 +10,12 @@ ms.assetid: f3058277-c597-4dac-86d1-41b6f7e62b36
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 9389f407f8bdbafd057770ff63ed9b139e6600b5
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: a8eed671b723091f2a43350f42ca82d90e0d9da3
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81720706"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906138"
 ---
 # <a name="use-the-hotfix-installer-to-install-updates-for-configuration-manager"></a>Instalace aktualizací pro Configuration Manager pomocí instalačního programu oprav hotfix
 
@@ -75,24 +75,24 @@ Každá sada aktualizací pro Configuration Manager je samorozbalovací soubor. 
 
 |File|Podrobnosti|  
 |----------|-------------|  
-|&lt;\>Verze produktu-QFE-KB&lt;–\>-&lt;ID článku KB\>-&lt;platforma\>Language. exe|Toto je aktualizační soubor. Příkazový řádek tohoto souboru je řízen souborem Updatesetup.exe.<br /><br /> Příklad:<br />CM1511RTM-QFE-KB123456-X64-ENU. exe|  
+|&lt;Verze produktu \> -QFE-KB – &lt; ID článku KB \> - &lt; platforma \> - &lt; Language \> . exe|Toto je aktualizační soubor. Příkazový řádek tohoto souboru je řízen souborem Updatesetup.exe.<br /><br /> Příklad:<br />CM1511RTM-QFE-KB123456-X64-ENU. exe|  
 |Updatesetup.exe|Tato schránka .msi řídí instalaci sady aktualizací.<br /><br /> Po spuštění aktualizace zjistí soubor Updatesetup.exe jazyk zobrazení v počítači, v němž je spuštěn. Výchozím jazykem rozhraní aktualizace je angličtina. Pokud je však podporován jazyk zobrazení nastavený v počítači, zobrazí se uživatelské rozhraní v místním jazyce počítače.|  
 |License_&lt;jazyk\>.rtf|V případě potřeby obsahuje aktualizace jeden nebo více souborů s licencemi v podporovaných jazycích.|  
-|&lt;Produkt&typ aktualizace> –&lt;verze\>-&lt;produktu ID\>-&lt;článku znalostní báze\>Knowledge Base. msp|Pokud se aktualizace vztahuje na Configuration Manager konzolu nebo klienty, obsahuje sada aktualizací samostatné soubory Instalační služba systému Windows opravy (. msp).<br /><br /> Příklad:<br /><br /> **Aktualizace konzoly nástroje Configuration Manager:** ConfigMgr1511-AdminUI-KB1234567-i386.msp<br /><br /> **Aktualizace klienta:** ConfigMgr1511-client-KB1234567-i386. msp<br />ConfigMgr1511-client-KB1234567-x64. msp|  
+|&lt;Produkt&typ aktualizace> – &lt; verze produktu \> - &lt; ID článku znalostní báze Knowledge Base \> - &lt; \> . msp|Pokud se aktualizace vztahuje na Configuration Manager konzolu nebo klienty, obsahuje sada aktualizací samostatné soubory Instalační služba systému Windows opravy (. msp).<br /><br /> Příklad:<br /><br /> **Aktualizace konzoly nástroje Configuration Manager:** ConfigMgr1511-AdminUI-KB1234567-i386.msp<br /><br /> **Aktualizace klienta:** ConfigMgr1511-client-KB1234567-i386. msp<br />ConfigMgr1511-client-KB1234567-x64. msp|  
 
 Sada aktualizací standardně zaznamenává svou činnost do souboru .log na serveru lokality. Soubor protokolu má stejný název jako sada aktualizací a je zapsaný ve složce **%SystemRoot%/Temp** .  
 
-Jakmile spustíte sadu aktualizací, extrahuje soubor se stejným názvem, jako je název sady aktualizací, do dočasné složky v počítači a poté spustí program Updatesetup.exe. Program Updatesetup. exe spustí &lt;průvodce pro číslo\> &lt;\> verze KB aktualizace softwaru pro Configuration Manager verzi produktu.  
+Jakmile spustíte sadu aktualizací, extrahuje soubor se stejným názvem, jako je název sady aktualizací, do dočasné složky v počítači a poté spustí program Updatesetup.exe. Program Updatesetup. exe spustí Průvodce pro číslo verze KB aktualizace softwaru pro Configuration Manager &lt; verzi produktu \> &lt; \> .  
 
 V případě rozsahu aktualizace vytvoří průvodce řadu složek v rámci instalační složky Configuration Manager na serveru lokality. Struktura složek má následující podobu:   
-**\>\\\>\>Název serveru \ SMS_&lt;kód lokality \HotFix&lt;\\KB\\typ&lt;aktualizace platforma.&lt;\> \\ \\ &lt;\>**  
+** \\ \\ &lt; Název serveru \> \ SMS_ &lt; kód lokality \> \HotFix \\ &lt; KB \> \\ &lt; typ aktualizace \> \\ &lt; platforma \> **.  
 
 Podrobnosti o složkách v této struktuře naleznete v následující tabulce:  
 
 |Název složky|Další informace|  
 |-----------------|----------------------|  
 |&lt;Název serveru\>|Název serveru lokality, kde spouštíte sadu aktualizací.|  
-|Kód&lt;SMS_ lokality\>|Toto je název sdílené složky Configuration Manager instalační složky.|  
+|&lt;Kód SMS_ lokality\>|Toto je název sdílené složky Configuration Manager instalační složky.|  
 |&lt;Číslo KB\>|ID článku k této sadě aktualizací ve znalostní bázi Knowledge Base.|  
 |&lt;Typ aktualizace\>|Jedná se o typy aktualizací Configuration Manager. Průvodce vytvoří samostatnou složku pro každý typ aktualizace obsažené v sadě aktualizací. Názvy složek reprezentují typy aktualizací. Jsou to tyto:<br /><br /> **Server**: obsahuje aktualizace serverů lokality, serverů databáze lokality a počítačů, v nichž je spuštěný poskytovatel serveru SMS.<br /><br /> **Klient**: obsahuje aktualizace klienta Configuration Manager.<br /><br /> **AdminConsole**: obsahuje aktualizace konzoly Configuration Manager.<br /><br /> Kromě výše uvedených typů aktualizací vytvoří průvodce složku s názvem **SCUP**. Tato složka nezastupuje žádný typ aktualizace, ale obsahuje soubor .cab pro Updates Publisher.|  
 |&lt;Platforma\>|Složka specifická pro konkrétní platformu. Obsahuje aktualizační soubory specifické pro daný typ procesoru.  Mezi tyto složky patří:<br /><br />– x64<br /><br /> – I386|  
@@ -161,7 +161,7 @@ Pokud se rozhodnete, že nechcete automaticky aktualizovat databázi lokality p�
 
 4.  Restartujte služby, které jste zastavili v předchozích krocích.  
 
-5.  Po instalaci sady aktualizací extrahuje **Update. SQL** do následujícího umístění na serveru lokality: ** \\ \\ &lt;název\>&lt;serveru \ SMS_ kód\>lokality \HotFix\\&lt;KB číslo \Update.SQL\>**  
+5.  Po instalaci sady aktualizací extrahuje **Update. SQL** do následujícího umístění na serveru lokality: ** \\ \\ &lt; název serveru \> \ SMS_ &lt; kód lokality \> \HotFix \\ &lt; KB číslo \> \Update.SQL**  
 
 ####  <a name="update-a-computer-that-runs-the-sms-provider"></a><a name="bkmk_provider"></a>Aktualizace počítače, na kterém je spuštěný poskytovatel serveru SMS  
 Po instalaci sady aktualizací obsahující aktualizace poskytovatele serveru SMS musíte aktualizaci nasadit do každého počítače, na kterém je spuštěný poskytovatel serveru SMS. Jedinou výjimku představuje instance poskytovatele serveru SMS dříve instalovaná na serveru lokality, kde sadu aktualizací instalujete. Místní instance poskytovatele serveru SMS na serveru lokality je aktualizována při instalaci sady aktualizací.  
@@ -169,7 +169,7 @@ Po instalaci sady aktualizací obsahující aktualizace poskytovatele serveru SM
 Pokud poskytovatele služby SMS z počítače odeberete a znovu nainstalujete, musíte znovu nainstalovat aktualizaci poskytovatele služby SMS v tomto počítači.  
 
 ###  <a name="update-clients"></a><a name="BKMK_clients"></a>Aktualizace klientů  
-Při instalaci aktualizace, která obsahuje aktualizace pro klienta Configuration Manager, se zobrazí možnost automaticky upgradovat klienty pomocí instalace aktualizací nebo ručně upgradovat klienty později. Další informace o automatickém upgradu klientů najdete v tématu [Postup upgradu klientů pro počítače s Windows](https://technet.microsoft.com/library/mt627885.aspx).  
+Při instalaci aktualizace, která obsahuje aktualizace pro klienta Configuration Manager, se zobrazí možnost automaticky upgradovat klienty pomocí instalace aktualizací nebo ručně upgradovat klienty později. Další informace o automatickém upgradu klientů najdete v tématu [Postup upgradu klientů pro počítače s Windows](../../clients/manage/upgrade/upgrade-clients-for-windows-computers.md).  
 
 Aktualizace můžete nasadit pomocí nástroje Updates Publisher nebo pomocí balíčku nasazení softwaru. Aktualizace jednotlivých klientů můžete taky nainstalovat ručně. Další informace o použití nasazení k instalaci aktualizací naleznete v části [Nasazení aktualizací pro Configuration Manager](#BKMK_Deploy) v tomto tématu.  
 
@@ -178,7 +178,7 @@ Aktualizace můžete nasadit pomocí nástroje Updates Publisher nebo pomocí ba
 
 Chcete-li ručně nainstalovat aktualizaci klienta, na každém klientském Configuration Manager musíte spustit soubor **Msiexec. exe** a odkazovat na soubor. msp aktualizace klienta pro konkrétní platformu.  
 
-Pro aktualizaci klienta můžete například použít následující příkazový řádek. Tento příkaz spustí v klientském počítači program Msiexec s odkazem na soubor. msp, který byla extrahována ze sady aktualizací na serveru lokality: **msiexec \\ \\ &lt;. exe\>/p servername&lt;\\>SMS_\\&lt;SiteCode \HotFix\>KB\\&lt;number\>\\&lt;\Client\> Platform\*MSP &lt;/l\>v logfile REINSTALLMODE = Mous REINSTALL = ALL**  
+Pro aktualizaci klienta můžete například použít následující příkazový řádek. Tento příkaz spustí v klientském počítači program Msiexec s odkazem na soubor. msp, který byla extrahována ze sady aktualizací na serveru lokality: **Msiexec. exe/p \\ \\ &lt; servername \> \ SMS_ &lt; SiteCode \> \HotFix \\ &lt; KB number \> \Client \\ &lt; Platform \> \\ &lt; MSP \> /l \* v &lt; logfile \> REINSTALLMODE = Mous REINSTALL = ALL**  
 
 ###  <a name="update-configuration-manager-consoles"></a><a name="BKMK_console"></a>Aktualizace Configuration Managerch konzol  
 Chcete-li aktualizovat konzolu Configuration Manager, je nutné nainstalovat aktualizaci na počítač, který spouští konzolu po dokončení instalace konzoly.  
@@ -194,7 +194,7 @@ Pokud počítač, který aktualizujete, spustí klienta Configuration Manager:
 
 - Aktualizaci můžete nainstalovat ručně do jednotlivých počítačů. Chcete-li ručně nainstalovat aktualizaci konzoly Configuration Manager, můžete na každém počítači, na kterém je spuštěna konzola Configuration Manager, spustit soubor Msiexec. exe a odkazovat na Configuration Manager konzolu aktualizace. msp.  
 
-Pomocí následujícího příkazového řádku můžete například aktualizovat Configuration Manager konzolu. Tento příkaz spustí v počítači program Msiexec s odkazem na soubor. msp, který byla extrahována ze sady aktualizací na serveru lokality: **Msiexec. \\ \\ &lt;exe/p\>servername \&lt;SMS_\>SiteCode\\&lt;\HotFix KB\>number\\&lt;\AdminConsole\>\\&lt;Platform\> MSP\*/l &lt;v\>logfile REINSTALLMODE = Mous REINSTALL = ALL**  
+Pomocí následujícího příkazového řádku můžete například aktualizovat Configuration Manager konzolu. Tento příkaz spustí v počítači program Msiexec s odkazem na soubor. msp, který byla extrahována ze sady aktualizací na serveru lokality: **Msiexec. exe/p \\ \\ &lt; servername \> \ SMS_ &lt; SiteCode \> \HotFix \\ &lt; KB number \> \AdminConsole \\ &lt; Platform \> \\ &lt; MSP \> /l \* v &lt; logfile \> REINSTALLMODE = Mous REINSTALL = ALL**  
 
 ##  <a name="deploy-updates-for-configuration-manager"></a><a name="BKMK_Deploy"></a> Nasazení aktualizací pro Configuration Manager  
 Po instalaci sady aktualizací na server lokality můžete použít jednu z následujících tří metod k nasazení aktualizací do dalších počítačů.  
@@ -202,12 +202,12 @@ Po instalaci sady aktualizací na server lokality můžete použít jednu z nás
 ###  <a name="use-updates-publisher-2011-to-install-updates"></a><a name="BKMK_DeploySCUP"></a>Pomocí Updates Publisher 2011 nainstalujte aktualizace.  
 Když nainstalujete sadu aktualizací na server lokality, Průvodce instalací vytvoří soubor katalogu pro nástroj Updates Publisher, který můžete použít k nasazení aktualizací do příslušných počítačů. Průvodce tento katalog vytvoří vždy, i když vyberete možnost **Použít balíček a program k nasazení této aktualizace**.  
 
-Katalog pro aktualizace Publisher má název **SCUPCatalog. cab** a nachází se v následujícím umístění na počítači, kde je spuštěná sada aktualizací: ** \\ \\ &lt;servername\>\&lt;SMS_ SiteCode\>\HotFix\\&lt;KB Number \SCUP\SCUPCatalog.cab\>**  
+Katalog pro aktualizace Publisher má název **SCUPCatalog. cab** a nachází se v následujícím umístění na počítači, kde je spuštěná sada aktualizací: ** \\ \\ &lt; servername \> \ SMS_ &lt; SiteCode \> \HotFix \\ &lt; KB number \> \SCUP\SCUPCatalog.cab**  
 
 > [!IMPORTANT]  
 > Vzhledem k tomu, že soubor SCUPCatalog. cab je vytvořen pomocí cest, které jsou specifické pro server lokality, kde je sada aktualizací nainstalována, nelze ji použít na jiných serverech lokality.  
 
-Po dokončení průvodce můžete katalog importovat do nástroje Updates Publisher a potom k nasazení aktualizací použít Configuration Manager aktualizace softwaru. Informace o nástroji Updates Publisher naleznete v tématu [Updates publisher 2011](https://go.microsoft.com/fwlink/p/?LinkID=83449) v knihovně TechNet pro System Center 2012.  
+Po dokončení průvodce můžete katalog importovat do nástroje Updates Publisher a potom k nasazení aktualizací použít Configuration Manager aktualizace softwaru. Informace o nástroji Updates Publisher najdete v tématu [Updates publisher 2011](https://docs.microsoft.com/previous-versions/system-center/updates-publisher-2011/hh134742(v=technet.10)).  
 
 Následující postup použijte k importu souboru SCUPCatalog. cab do nástroje Updates Publisher a publikování aktualizací.  
 
@@ -253,8 +253,8 @@ Můžete nasadit konkrétní aktualizace pro příslušné klienty. Následujíc
 |Server lokality centrální správy|Vytvořte přímý dotaz členství a přidejte počítač serveru lokality centrální správy.|  
 |Všechny servery primární lokality|Vytvořte přímý dotaz členství a přidejte všechny počítače serverů primární lokality.|  
 |Všechny servery sekundární lokality|Vytvořte přímý dotaz členství a přidejte všechny počítače serverů sekundární lokality.|  
-|Všichni klienti x86|Vytvořte kolekci s následujícími kritérii dotazu:<br /><br /> **Vyberte \* z sms_r_system SMS_G_System_SYSTEM vnitřního spojení na SMS_G_System_SYSTEM. ResourceID = SMS_R_System. ResourceId, kde SMS_G_System_SYSTEM. SystemType = "počítač založený na platformě x86"**|  
-|Všichni klienti x64|Vytvořte kolekci s následujícími kritérii dotazu:<br /><br /> **Vyberte \* z sms_r_system SMS_G_System_SYSTEM vnitřního spojení na SMS_G_System_SYSTEM. ResourceID = SMS_R_System. ResourceId, kde SMS_G_System_SYSTEM. SystemType = "počítač na platformě x64"**|  
+|Všichni klienti x86|Vytvořte kolekci s následujícími kritérii dotazu:<br /><br /> **Vyberte \* z SMS_R_System SMS_G_System_SYSTEM vnitřního spojení na SMS_G_System_SYSTEM. ResourceID = SMS_R_System. ResourceId, kde SMS_G_System_SYSTEM. SystemType = "počítač založený na platformě x86"**|  
+|Všichni klienti x64|Vytvořte kolekci s následujícími kritérii dotazu:<br /><br /> **Vyberte \* z SMS_R_System SMS_G_System_SYSTEM vnitřního spojení na SMS_G_System_SYSTEM. ResourceID = SMS_R_System. ResourceId, kde SMS_G_System_SYSTEM. SystemType = "počítač na platformě x64"**|  
 |Všechny počítače, na kterých běží Konzola Configuration Manager|Vytvořte přímý dotaz členství a přidejte všechny počítače.|  
 |Vzdálené počítače používající instanci poskytovatele služby SMS|Vytvořte přímý dotaz členství a přidejte všechny počítače.|  
 

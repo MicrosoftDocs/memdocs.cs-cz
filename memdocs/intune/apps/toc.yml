@@ -26,7 +26,7 @@
     - name: Zásady ochrany aplikace a pracovní profily (Android)
       href: android-deployment-scenarios-app-protection-work-profiles.md
       displayName: app-we; without; without enrollment
-    - name: Použití Intune bez GMS
+    - name: Použití Intune bez Google Mobile Services
       href: manage-without-gms.md
     - name: MAM – NEJČASTĚJŠÍ DOTAZY
       href: mam-faq.md

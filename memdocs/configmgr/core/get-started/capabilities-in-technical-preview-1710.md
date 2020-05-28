@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 503bb6d2293b4b5efb1d84980225a9d7052e1656
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 3dd4c3f22a0f2c24153e6d26be2e3098511c5dc4
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81721294"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905311"
 ---
 # <a name="capabilities-in-technical-preview-1710-for-configuration-manager"></a>Funkce ve verzi Technical Preview 1710 pro Configuration Manager
 
@@ -35,7 +35,7 @@ V tomto článku se seznámíte s funkcemi, které jsou k dispozici v Technical 
 - **Aktualizace na novou verzi Preview se nezdařila, pokud máte server lokality v pasivním režimu**. Když spustíte verzi Preview, která má [server primární lokality v pasivním režimu](capabilities-in-technical-preview-1706.md#site-server-role-high-availability), je nutné před tím, než budete moct úspěšně aktualizovat lokalitu Preview na tuto novou verzi Preview, odinstalovat server lokality pasivního režimu. Server lokality v pasivním režimu můžete po dokončení aktualizace znovu nainstalovat.
 
   Postup odinstalace serveru lokality pasivního režimu:
-  1. V konzole nástroje klikněte na **Správa** > **Přehled** > **Konfigurace** > **servery lokality a role systému lokality**a potom vyberte server lokality pasivního režimu.
+  1. V konzole nástroje klikněte na **Správa**  >  **Přehled**  >  **Konfigurace**  >  **servery lokality a role systému lokality**a potom vyberte server lokality pasivního režimu.
   2. V podokně **role systému lokality** klikněte pravým tlačítkem na roli **serveru lokality** a pak zvolte **Odebrat roli**.
   3. Klikněte pravým tlačítkem na server lokality pasivního režimu a zvolte **Odstranit**.
   4. Po odinstalaci serveru lokality na aktivním serveru primární lokality restartujte službu **CONFIGURATION_MANAGER_UPDATE**.
@@ -106,11 +106,11 @@ Spravovaná zařízení musí používat Windows 10 1709: creators Update nebo n
 |------------------------|------------------------|
 | Omezení možností útoku  | Zařízení musí mít povolenou [ochranu v reálném čase v programu Windows Defender AV]( https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard) .  |
 | Řízený přístup ke složkám  | Zařízení musí mít povolenou [ochranu v reálném čase v programu Windows Defender AV]( https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard) .   |
-| Ochrana Exploit Protection  | Žádná  |
+| Ochrana Exploit Protection  | Žádné  |
 | Ochrana sítě  |  Zařízení musí mít povolenou [ochranu v reálném čase v programu Windows Defender AV]( https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard) .  |
 
 ### <a name="create-an-exploit-guard-policy----1355468---"></a>Vytvoření zásady ochrany před zneužitím  <!--1355468 -->
-1. V konzole Configuration Manager přejděte na **prostředky a kompatibilita** > **Endpoint Protection**a pak klikněte na **zneužití ochrany před zneužitím v programu Windows Defender**.
+1. V konzole Configuration Manager přejděte na **prostředky a kompatibilita**  >  **Endpoint Protection**a pak klikněte na **zneužití ochrany před zneužitím v programu Windows Defender**.
 2. Na kartě **Domů** ve skupině **vytvořit** klikněte na možnost **vytvořit zásadu zneužití**.
 3. Na stránce **Obecné** v **průvodci vytvořením položky konfigurace**zadejte název a volitelný popis položky konfigurace.
 4. V dalším kroku vyberte součásti zneužití Guard, které chcete s touto zásadou spravovat. Pro každou vybranou součást pak můžete nakonfigurovat další podrobnosti.
@@ -121,11 +121,11 @@ Spravovaná zařízení musí používat Windows 10 1709: creators Update nebo n
 5. Dokončete průvodce a vytvořte zásadu, kterou můžete později nasadit do zařízení.
 
 ### <a name="deploy-an-exploit-guard-policy"></a>Nasazení zásady ochrany před zneužitím     
-Až vytvoříte zásady ochrany před zneužitím, nasadíte je pomocí Průvodce nasazením zásad ochrany před zneužitím. Provedete to tak, že otevřete konzolu Configuration Manager pro **prostředky a dodržování předpisů** > **Endpoint Protection**a potom kliknete na **nasadit zásady ochrany před zneužitím**.
+Až vytvoříte zásady ochrany před zneužitím, nasadíte je pomocí Průvodce nasazením zásad ochrany před zneužitím. Provedete to tak, že otevřete konzolu Configuration Manager pro **prostředky a dodržování předpisů**  >  **Endpoint Protection**a potom kliknete na **nasadit zásady ochrany před zneužitím**.
 
 ## <a name="limited-support-for-cng-certificates"></a>Omezená podpora pro certifikáty CNG
 <!-- 1356191 -->
-Od této verze teď můžete používat šablony certifikátů [kryptografické rozhraní API: nové generace (CNG)](https://msdn.microsoft.com/library/windows/desktop/bb204775.aspx) pro následující scénáře:
+Od této verze teď můžete používat šablony certifikátů [kryptografické rozhraní API: nové generace (CNG)](https://docs.microsoft.com/windows/win32/seccng/cng-features) pro následující scénáře:
 
 - Registrace klienta a komunikace s bodem správy HTTPS.   
 - Distribuce softwaru a nasazení aplikací s distribučním bodem HTTPS.   
@@ -202,7 +202,7 @@ Pokud chcete pochopit základy ochrany Application Guard v programu Windows Defe
 
 Chcete-li vytvořit zásadu a vyhledat dostupná nastavení:
 1. V konzole **Configuration Manager** vyberte **prostředky a kompatibilita**.
-2. V pracovním prostoru **prostředky a kompatibilita** vyberte **Přehled** > **Endpoint Protection** > **ochrana Application Guard v programu Windows Defender**.
+2. V pracovním prostoru **prostředky a kompatibilita** vyberte **Přehled**  >  **Endpoint Protection**  >  **ochrana Application Guard v programu Windows Defender**.
 3. Na kartě **Domů** ve skupině **vytvořit** klikněte na možnost **vytvořit zásadu Application Guard v programu Windows Defender**.
 4. Pomocí příspěvku na blogu jako reference můžete vyhledat a nakonfigurovat dostupná nastavení, abyste mohli tuto funkci vyzkoušet.
 5. V této verzi jsme přidali novou stránku definice sítě do průvodce. Zde zadejte podnikovou identitu a definujte hranici vaší podnikové sítě.

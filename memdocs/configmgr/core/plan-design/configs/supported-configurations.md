@@ -10,12 +10,12 @@ ms.assetid: 45a10878-ff48-4318-9c6d-c014b38a4039
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 09618acc1c0950c3eaae79cca59fcf71dc7ef61e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 66770ea14c3ae53bad8e6df61b54c7c5e2d2aaa0
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81709569"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904565"
 ---
 # <a name="supported-configurations-for-configuration-manager"></a>Podporované konfigurace pro Configuration Manager
 
@@ -27,12 +27,12 @@ Informace v těchto tématech a následující témata jsou nezbytné pro pomoc 
 
 Pokud funkce Configuration Manager nebo schopnost vyžaduje konkrétnější konfigurace, jsou tyto informace součástí dokumentace k jednotlivým funkcím a jsou doplňující k obecnější podrobnostem o konfiguraci.  
 
- Produkty a technologie, které jsou popsány v následujících tématech, jsou podporovány nástrojem Configuration Manager. Jejich zahrnutí do tohoto obsahu ale neznamená rozšíření podpory pro jakýkoli produkt nad rámec životního cyklu podpory tohoto produktu. Produkty, které přesahují životní cyklus podpory, se nepodporují pro použití s Configuration Manager, včetně všech produktů, které jsou zahrnuté v programu [Extended Security Updates (EVJ)](https://support.microsoft.com/help/4497181/lifecycle-faq-extended-security-updates) . Další informace o životních cyklech podpory společnosti Microsoft najdete na webu [o fázích životního cyklu podpory společnosti Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=208270) . Další informace o rozšířených aktualizacích zabezpečení v Configuration Manager najdete v tématu [podporované verze operačních systémů pro klienty a zařízení pro Configuration Manager](supported-operating-systems-for-clients-and-devices.md#bkmk_ESU).
+ Produkty a technologie, které jsou popsány v následujících tématech, jsou podporovány nástrojem Configuration Manager. Jejich zahrnutí do tohoto obsahu ale neznamená rozšíření podpory pro jakýkoli produkt nad rámec životního cyklu podpory tohoto produktu. Produkty, které přesahují životní cyklus podpory, se nepodporují pro použití s Configuration Manager, včetně všech produktů, které jsou zahrnuté v programu [Extended Security Updates (EVJ)](https://support.microsoft.com/help/4497181/lifecycle-faq-extended-security-updates) . Další informace o životních cyklech podpory společnosti Microsoft najdete na webu [o fázích životního cyklu podpory společnosti Microsoft](https://support.microsoft.com/lifecycle) . Další informace o rozšířených aktualizacích zabezpečení v Configuration Manager najdete v tématu [podporované verze operačních systémů pro klienty a zařízení pro Configuration Manager](supported-operating-systems-for-clients-and-devices.md#bkmk_ESU).
 
 > [!NOTE]  
->  Informace o zásadách životního cyklu podpory Microsoftu najdete na webu Nejčastější dotazy k zásadám životního cyklu podpora Microsoftu v tématu [Podpora Microsoftu zásady životního cyklu](https://go.microsoft.com/fwlink/p/?LinkId=31976).  
+>  Informace o zásadách životního cyklu podpory Microsoftu najdete na webu Nejčastější dotazy k zásadám životního cyklu podpora Microsoftu v tématu [Podpora Microsoftu zásady životního cyklu](https://support.microsoft.com/lifecycle).  
 
- Produkty a verze produktů, které nejsou uvedené v následujících tématech, se navíc v Configuration Manager nepodporují, pokud nejsou ohlášeny na [blogu Enterprise mobility and Security blog](https://blogs.technet.microsoft.com/enterprisemobility/).  V některých případech předá obsah tohoto blogu aktualizaci této části dokumentace.
+ Produkty a verze produktů, které nejsou uvedené v následujících tématech, se navíc v Configuration Manager nepodporují, pokud nejsou ohlášeny na [blogu Enterprise mobility and Security blog](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/bg-p/enterprisemobilityandsecurity).  V některých případech předá obsah tohoto blogu aktualizaci této části dokumentace.
 
 
 -  [Dimenzování a škálování](../../../core/plan-design/configs/size-and-scale-numbers.md)  

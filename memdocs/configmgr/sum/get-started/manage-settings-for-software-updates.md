@@ -10,12 +10,12 @@ ms.assetid: 0d484c1a-e903-4bff-9e9b-e452c62e38a8
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 2c8ca66bc83ec8eb18bc331287b6dbee47af7d85
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 0a2a45ff866ea02aacc83c42109c8cba4020ed4e
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81719803"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906797"
 ---
 #  <a name="manage-settings-for-software-updates"></a><a name="BKMK_ManageSUSettings"></a>Správa nastavení pro aktualizace softwaru  
 
@@ -40,7 +40,7 @@ Agent webu Windows Update používá na klientských počítačích určitá nas
 Když je pro lokalitu vytvořený bod aktualizace softwaru, klienti obdrží zásadu počítače, která poskytuje název serveru bodu aktualizace softwaru a konfiguruje místní zásadu **Určit umístění intranetového serveru služby Microsoft Update** na počítači. Agent WUA načte název serveru určený v nastavení **Nastavení intranetové aktualizační služby pro zjišťování aktualizací** a potom se spojí s tímto serverem při zjišťování shody aktualizací softwaru. Pokud se pro položku **Určit umístění intranetového serveru služby Microsoft Update** vytvoří zásada domény, přepíše místní zásadu a agent WUA se může připojit k jinému serveru, než je bod aktualizace softwaru. Pokud k tomu dojde, může klient vyhledat shodu aktualizace softwaru na základě různých produktů, klasifikací a jazyků. Proto byste neměli konfigurovat zásadu služby Active Directory pro klientské počítače.  
 
 ### <a name="allow-signed-content-from-intranet-microsoft-update-service-location-group-policy"></a>Zásada skupiny Povolit podepsaný obsah z umístění intranetové služby Microsoft Update  
-Nastavení zásady skupiny **Povolit podepsané aktualizace z umístění intranetové služby Microsoft Update** musíte povolit předtím, než agent WUA na počítačích vyhledá aktualizace softwaru, které vytvořil a publikoval nástroj System Center Updates Publisher. Když je toto nastavení zásady povolené, agent WUA přijme aktualizace softwaru přijaté z intranetového umístění, pokud jsou aktualizace softwaru podepsané v úložišti certifikátů **Důvěryhodní vydavatelé** na místním počítači. Další informace o nastaveních zásad skupiny požadovaných pro nástroj Updates Publisher najdete v [knihovně dokumentace nástroje Updates Publisher 2011](https://go.microsoft.com/fwlink/p/?LinkId=232476).  
+Nastavení zásady skupiny **Povolit podepsané aktualizace z umístění intranetové služby Microsoft Update** musíte povolit předtím, než agent WUA na počítačích vyhledá aktualizace softwaru, které vytvořil a publikoval nástroj System Center Updates Publisher. Když je toto nastavení zásady povolené, agent WUA přijme aktualizace softwaru přijaté z intranetového umístění, pokud jsou aktualizace softwaru podepsané v úložišti certifikátů **Důvěryhodní vydavatelé** na místním počítači. Další informace o nastaveních zásad skupiny požadovaných pro nástroj Updates Publisher najdete v [knihovně dokumentace nástroje Updates Publisher 2011](https://docs.microsoft.com/previous-versions/system-center/updates-publisher-2011/hh134742(v=technet.10)).  
 
 ### <a name="automatic-updates-configuration"></a>Konfigurace automatických aktualizací  
 Automatické aktualizace umožňují přijetí aktualizací zabezpečení a dalších důležitých stahovaných souborů na klientských počítačích. Automatické aktualizace se konfigurují prostřednictvím nastavení zásad skupiny **Konfigurovat automatické aktualizace** nebo nabídky Ovládací panely místního počítače. Když je položka Automatické aktualizace povolena, klientské počítače obdrží oznámení a v závislosti na nakonfigurovaných nastaveních si tyto počítače stáhnout a nainstalují potřebné aktualizace. Když jsou Automatické aktualizace umístěny společně s aktualizacemi softwaru, může každý klientský počítač zobrazit ikony oznámení a místní kontextová oznámení pro stejnou aktualizaci. Je-li požadováno restartování, může každý klientský počítač zobrazit dialogové okno restartování pro stejnou aktualizaci.  
@@ -137,6 +137,6 @@ Ve výchozím nastavení se seznam odvolaných certifikátů (CRL) nekontroluje 
 V případě použití musí být Kontrola CRL povolena v Configuration Manager konzolách, které zpracovávají aktualizace softwaru.  
 
 #### <a name="to-enable-crl-checking"></a>Povolení kontroly seznamu CRL  
-Na počítači provádějícím kontrolu seznamu CRL z disku DVD s produktem spusťte následující příkaz z příkazového řádku: **\SMSSETUP\BIN\X64\\**<*Language*>**\UpdDwnldCfg.exe/checkrevocation**.  
+Na počítači provádějícím kontrolu seznamu CRL z disku DVD s produktem spusťte následující příkaz z příkazového řádku: **\SMSSETUP\BIN\X64 \\ ** < *Language* > **\UpdDwnldCfg.exe/checkrevocation**.  
 
 Například pro angličtinu (US) spusťte **\SMSSETUP\BIN\X64\00000409\UpdDwnldCfg.exe/checkrevocation**  

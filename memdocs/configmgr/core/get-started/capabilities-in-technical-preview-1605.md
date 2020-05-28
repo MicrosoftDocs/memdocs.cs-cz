@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: c38230b44f7f18e3f60cb4c88b31a03e10a37d30
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d52725e0127f7129a3962cd3ef178d2540bb785a
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81721637"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905736"
 ---
 # <a name="capabilities-in-technical-preview-1605-for-configuration-manager"></a>Funkce ve verzi Technical Preview 1605 pro Configuration Manager
 
@@ -97,13 +97,13 @@ Běžné akce, jako je **vyřazení/vymazání**, **resetování hesla**, **vzd�
 
 1.  V Azure Active Directory Zaregistrujte Configuration Manager pomocí nástroje pro správu "webová aplikace nebo webové rozhraní API". Tím získáte ID klienta, které budete potřebovat později.  
 
-    1.  V uzlu [https://manage.windowsazure.com](https://manage.windowsazure.com)služby Active Directory vyberte svou Azure Active Directory a pak klikněte na **aplikace** > **Přidat**.  
+    1.  V uzlu služby Active Directory [https://manage.windowsazure.com](https://manage.windowsazure.com) Vyberte svou Azure Active Directory a pak klikněte na **aplikace**  >  **Přidat**.  
 
     2.  Klikněte na **Přidat aplikaci, kterou vyvíjí moje organizace**.  
 
     3.  Zadejte název aplikace, vyberte **Webová aplikace** nebo **webové rozhraní API**a potom klikněte na šipku **Další** .  
 
-    4.  Zadejte stejnou adresu URL pro **přihlašovací adresu URL** i **identifikátor URI ID aplikace**. Adresa URL může být libovolná a nemusí se překládat na skutečnou adresu. Můžete například zadat **https://&lt;yourdomain>/SCCM**.  
+    4.  Zadejte stejnou adresu URL pro **přihlašovací adresu URL** i **identifikátor URI ID aplikace**. Adresa URL může být libovolná a nemusí se překládat na skutečnou adresu. Můžete například zadat **https:// &lt; yourdomain>/SCCM**.  
 
     5.  Dokončete průvodce.  
 
@@ -163,7 +163,7 @@ Běžné akce, jako je **vyřazení/vymazání**, **resetování hesla**, **vzd�
 
     2.  2.  Zvolte aplikaci, kterou chcete nasadit, a potom na kartě **Domů** ve skupině **vytvořit** klikněte na možnost **vytvořit aplikaci**.  
 
--   Umístění, které použijete k získání a nahrání tokenu Apple VPP pro hromadně zakoupené aplikace v konzole Configuration Manager, se změnilo. Nyní to můžete provést v pracovním prostoru **správce** pod uzlem **Cloud Services** > **Apple Volume purchase program tokeny** .  
+-   Umístění, které použijete k získání a nahrání tokenu Apple VPP pro hromadně zakoupené aplikace v konzole Configuration Manager, se změnilo. Nyní to můžete provést v pracovním prostoru **správce** pod uzlem **Cloud Services**  >  **Apple Volume purchase program tokeny** .  
 
 ##  <a name="enterprise-data-protection-edp"></a><a name="BKMK_VPP"></a>Ochrana podnikových dat (EDP)  
  Můžete vytvořit položky konfigurace, které umožňují nasadit zásady ochrany podnikových dat (EDP), včetně toho, abyste si vybrali chráněné aplikace, úroveň ochrany EDP a našli podniková data v síti. Další informace o EDP najdete v následujících tématech:  
@@ -192,7 +192,7 @@ V této verzi Technical Preview se uživateli zobrazí chybová zpráva, pokud j
 
 #### <a name="general-prerequisites"></a>Obecné požadavky  
 
--   Ujistěte se, že jste dokončili [přípravné kroky pro místní správu mobilních zařízení](https://technet.microsoft.com/library/mt613153.aspx) a [zaregistrovali vaše zařízení](https://technet.microsoft.com/library/mt627870.aspx).  
+-   Ujistěte se, že jste dokončili [přípravné kroky pro místní MDM](../../mdm/plan-design/plan-on-premises-mdm.md) a [zaregistrovali vaše zařízení](../../mdm/deploy-use/enroll-devices-on-premises-mdm.md).  
 
 -   Pro zajištění nejlepšího prostředí pro instalaci aplikace při použití Portál společnosti se ujistěte, že Configuration Manager aktivní připojení k Microsoft Intune.  
 
@@ -236,7 +236,7 @@ V této verzi Technical Preview se uživateli zobrazí chybová zpráva, pokud j
 
    2. Spustit rutinu **Set-ExecutionPolicy RemoteSigned**  
 
-   3. V ** &lt;instalačním adresáři\>složky SCCM \CD.latest\SMSSETUP\TOOLS\MDM** spustit **.\ConfigurationScript.ps1**  
+   3. V ** &lt; instalačním adresáři složky SCCM \> \CD.latest\SMSSETUP\TOOLS\MDM** spustit **.\ConfigurationScript.ps1**  
 
       Konfigurační skript provede následující akce:  
 
@@ -284,7 +284,7 @@ V této verzi Technical Preview se uživateli zobrazí chybová zpráva, pokud j
 
 #### <a name="to-create-a-collection-for-a-server-group"></a>Vytvoření kolekce pro skupinu serverů  
 
-1.  [Vytvořte kolekci zařízení](https://technet.microsoft.com/library/gg712295.aspx) , která obsahuje počítače ve skupině serverů.  
+1.  [Vytvořte kolekci zařízení](../clients/manage/collections/create-collections.md) , která obsahuje počítače ve skupině serverů.  
 
 2.  V pracovním prostoru **prostředky a kompatibilita** klikněte na **kolekce zařízení**, klikněte pravým tlačítkem na kolekci, která obsahuje počítače ve skupině serverů, a pak klikněte na **vlastnosti**.  
 
@@ -325,9 +325,9 @@ V této verzi Technical Preview se uživateli zobrazí chybová zpráva, pokud j
 
 #### <a name="to-deploy-software-updates-to-the-server-group-and-monitor-status"></a>Nasazení aktualizací softwaru do skupiny serverů a stavu monitorování  
 
-1.  [Nasaďte aktualizace softwaru](https://technet.microsoft.com/library/gg712304.aspx) do kolekce skupin serverů.  
+1.  [Nasaďte aktualizace softwaru](../../sum/deploy-use/deploy-software-updates.md) do kolekce skupin serverů.  
 
-2.  [Monitorujte nasazení aktualizace softwaru](https://technet.microsoft.com/library/gg712304.aspx). Kromě standardních zobrazení monitorování pro nasazení aktualizací softwaru se zobrazí nový popis stavu, když klient čeká na instalaci aktualizací softwaru. Pro tento nový stav se zobrazí **čekání na zámek** .  
+2.  [Monitorujte nasazení aktualizace softwaru](../../sum/deploy-use/monitor-software-updates.md). Kromě standardních zobrazení monitorování pro nasazení aktualizací softwaru se zobrazí nový popis stavu, když klient čeká na instalaci aktualizací softwaru. Pro tento nový stav se zobrazí **čekání na zámek** .  
 
 #### <a name="to-clear-the-deployment-locks-for-computers-in-a-server-group"></a>Vymazání zámků nasazení pro počítače ve skupině serverů  
 
@@ -366,7 +366,7 @@ V této verzi Technical Preview se uživateli zobrazí chybová zpráva, pokud j
 
 ##### <a name="onboard-devices-for-microsoft-defender-atp"></a>Připojení zařízení pro ATP v programu Microsoft Defender  
 
-1. V konzole Configuration Manager přejděte na**Přehled** >  **prostředků a dodržování předpisů** > **Endpoint Protection** > **Zásady ochrany ATP v programu Windows Defender** a klikněte na **vytvořit zásadu ochrany ATP v programu Windows Defender**. Otevře se Průvodce zásadami ochrany ATP v programu Microsoft Defender.  
+1. V konzole Configuration Manager přejděte na přehled **prostředků a dodržování předpisů**  >  **Overview**  >  **Endpoint Protection**  >  **Zásady ochrany ATP v programu Windows Defender** a klikněte na **vytvořit zásadu ochrany ATP v programu Windows Defender**. Otevře se Průvodce zásadami ochrany ATP v programu Microsoft Defender.  
 
 2. Zadejte **název** a **Popis** zásad ATP v programu Microsoft Defender a vyberte **připojování**. Klikněte na Další.  
 
@@ -386,7 +386,7 @@ V této verzi Technical Preview se uživateli zobrazí chybová zpráva, pokud j
 
 ##### <a name="monitor-microsoft-defender-atp"></a>Monitorovat ATP v programu Microsoft Defender  
 
-1.  V konzole Configuration Manager přejděte na **monitorování** > **Přehled** > **zabezpečení** a pak klikněte na ochrana **ATP v programu Windows Defender**.  
+1.  V konzole Configuration Manager přejděte na **monitorování**  >  **Přehled**  >  **zabezpečení** a pak klikněte na ochrana **ATP v programu Windows Defender**.  
 
 2.  Projděte si řídicí panel rozšířené ochrany před internetovými útoky v programu Microsoft Defender.  
 
@@ -408,7 +408,7 @@ V této verzi Technical Preview se uživateli zobrazí chybová zpráva, pokud j
 ### <a name="enable-health-attestation-for-on-premises-devices"></a>Povolit ověření stavu pro místní zařízení  
  V 1605 jsme vyřešili několik chyb zjištěných v 1604 Technical Preview.  Pokud to chcete vyzkoušet, nakonfigurujte místní službu ověření stavu pomocí nastavení klientského agenta.  
 
-1.  V konzole Configuration Manager přejděte na **Správa** > **Přehled** > **nastavení klienta**a pak nastavte použít místní **službu ověření stavu** na **Ano**.  
+1.  V konzole Configuration Manager přejděte na **Správa**  >  **Přehled**  >  **nastavení klienta**a pak nastavte použít místní **službu ověření stavu** na **Ano**.  
 
 2.  Zadejte **Adresu URL místní služby Ověření stavu** a poté klikněte na **OK**.  
 
@@ -429,7 +429,7 @@ V této verzi Technical Preview se uživateli zobrazí chybová zpráva, pokud j
 
 ##### <a name="pre-declare-corporate-owned-devices-with-imei-or-ios-serial-number"></a>Předběžné deklarování zařízení vlastněných společností na základě čísla IMEI nebo sériového čísla systému iOS  
 
-1. V konzole Configuration Manager přejděte na **prostředky a kompatibilita** > **Přehled** >  > **všechna zařízení vlastněná společností****předem deklarovaná zařízení**a potom klikněte na **vytvořit předem deklarovaná zařízení**. Spustí se Průvodce předem deklarovanými zařízeními.  
+1. V konzole Configuration Manager přejděte na **prostředky a kompatibilita**  >  **Přehled**  >  **všechna zařízení vlastněná společností**  >  **předem deklarovaná zařízení**a potom klikněte na **vytvořit předem deklarovaná zařízení**. Spustí se Průvodce předem deklarovanými zařízeními.  
 
 2. Zadejte, jak chcete přidat informace o zařízení:  
 
@@ -439,7 +439,7 @@ V této verzi Technical Preview se uživateli zobrazí chybová zpráva, pokud j
 
 3. U nahraných souborů přejděte k souboru. csv obsahujícímu informace, které předem deklaruje zařízení vlastněná společností. Soubor musí mít následující formát, kromě horního řádku (jenom pro doprovodné materiály):  
 
-   |**IMEI #**|**Sériové číslo iOS**|**OS**|**Zobrazí**|
+   |**IMEI #**|**Sériové číslo iOS**|**OS**|**Podrobnosti**|
    |---|---|---|---|
    |123456789012345||SYSTÉMU|Zařízení s Windows vlastněné společností|
    |123456789012|A0BCD0EFGH0J|iOS|Zařízení s iOSem patřící společnosti|

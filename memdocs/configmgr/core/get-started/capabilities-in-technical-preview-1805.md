@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 88234bb3117850bc3280242671ae459308a5262e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d8c1cd6610bd09b2714951d8a755770b6347b2f6
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81714840"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905232"
 ---
 # <a name="capabilities-in-technical-preview-1805-for-configuration-manager"></a>Funkce ve verzi Technical Preview 1805 pro Configuration Manager
 
@@ -163,8 +163,6 @@ Při přechodu na tuto úlohu můžete i nadále nasazovat nastavení z Configur
 <!--1358112-->
 
 Přenos na pozadí s nízkou prodlevou pro Windows (LEDBAT) je funkce systému Windows Server, která usnadňuje správu přenosů v síti na pozadí. U distribučních bodů běžících na podporovaných verzích Windows serveru můžete povolit možnost upravovat síťový provoz. Klienti používají šířku pásma sítě jenom v případě, že jsou k dispozici. 
-
-Další informace o systému Windows LEDBAT najdete v příspěvku na blogu o [nových prostředcích pro přenos](https://blogs.technet.microsoft.com/networking/2016/07/18/announcing-new-transport-advancements-in-the-anniversary-update-for-windows-10-and-windows-server-2016/) .
 
 
 ### <a name="prerequisites"></a>Požadavky
@@ -349,8 +347,8 @@ Další informace o obecném použití nástroje SCUP naleznete v tématu [Syste
 - Povolte a nasaďte nastavení klienta **Povolit aktualizace softwaru třetích stran** ve skupině **aktualizace softwaru** .
 - Pokud je služba WSUS na samostatném serveru z bodu aktualizace softwaru, musíte na vzdáleném serveru služby WSUS udělat jednu z následujících možností:
     - Povolení služby Remote Registry v systému Windows  
-    – nebo –
-    - V klíči `HKLM\Software\Microsoft\Update Services\Server\Setup`registru vytvořte novou hodnotu DWORD s názvem **EnableSelfSignedCertificates** s hodnotou `1`. 
+    nebo
+    - V klíči registru `HKLM\Software\Microsoft\Update Services\Server\Setup` vytvořte novou hodnotu DWORD s názvem **EnableSelfSignedCertificates** s hodnotou `1` . 
 
 ### <a name="try-it-out"></a>Určitě to udělejte!
 Zkuste úkoly dokončit. Potom vám pošleme [názor](capabilities-in-technical-preview-1804.md#bkmk_feedback) , abychom věděli, jak pracovali.
@@ -390,7 +388,7 @@ Výchozí šablona pořadí úkolů pro místní upgrade systému Windows 10 nyn
 ## <a name="cmtrace-installed-with-client"></a>CMTrace nainstalované s klientem
 <!--1357971-->
 
-Nástroj pro zobrazení protokolu CMTrace se teď automaticky nainstaluje společně s klientem Configuration Manager. Přidá se do instalačního adresáře klienta, který je `%WinDir%\ccm\cmtrace.exe`ve výchozím nastavení.
+Nástroj pro zobrazení protokolu CMTrace se teď automaticky nainstaluje společně s klientem Configuration Manager. Přidá se do instalačního adresáře klienta, který je ve výchozím nastavení `%WinDir%\ccm\cmtrace.exe` .
 
 > [!Note]  
 > CMTrace není *automaticky registrován* v systému Windows pro otevření přípony souboru. log.
@@ -414,10 +412,10 @@ Tato verze zahrnuje následující vylepšení nového mechanismu [zpětné vazb
 
 - Dialog zpětná vazba teď pamatuje předchozí nastavení, například vybrané možnosti a vaši e-mailovou adresu.  
 
-- Teď podporuje offline zpětnou vazbu. Uložte svůj názor z konzoly a pak ho nahrajte do Microsoftu z internetového systému připojeného k Internetu. Použijte nový nástroj pro odeslání zpětné vazby z offline `cd.latest\SMSSETUP\Tools\UploadOfflineFeedback\UploadOfflineFeedback.exe`umístění v části. Chcete-li zobrazit dostupné a požadované možnosti příkazového řádku, spusťte nástroj s `--help` možností. Připojený systém potřebuje přístup k **Petrol.Office.Microsoft.com**.
+- Teď podporuje offline zpětnou vazbu. Uložte svůj názor z konzoly a pak ho nahrajte do Microsoftu z internetového systému připojeného k Internetu. Použijte nový nástroj pro odeslání zpětné vazby z offline umístění v části `cd.latest\SMSSETUP\Tools\UploadOfflineFeedback\UploadOfflineFeedback.exe` . Chcete-li zobrazit dostupné a požadované možnosti příkazového řádku, spusťte nástroj s `--help` možností. Připojený systém potřebuje přístup k **Petrol.Office.Microsoft.com**.
 
 ### <a name="known-issues"></a>Známé problémy
-Když použijete možnost **odeslat smajlíka** nebo **Odeslat zamračení** z konzoly na počítači s připojením k Internetu, může se vám vrátit následující zpráva: "Chyba při odesílání názoru." Pokud kliknete na **Další podrobnosti**, zobrazí se následující text: `{"Message":""}`. Příčinou této chyby je známý problém s odpovědí ze systému zpětné vazby back-endu. Chybu můžete zavřít. Společnost Microsoft si pořád obdržela váš názor. (Pokud se v podrobnostech zobrazují jiné zprávy, použijte možnost zpětné vazby offline, abyste mohli znovu poslat svůj názor později.)
+Když použijete možnost **odeslat smajlíka** nebo **Odeslat zamračení** z konzoly na počítači s připojením k Internetu, může se vám vrátit následující zpráva: "Chyba při odesílání názoru." Pokud kliknete na **Další podrobnosti**, zobrazí se následující text: `{"Message":""}` . Příčinou této chyby je známý problém s odpovědí ze systému zpětné vazby back-endu. Chybu můžete zavřít. Společnost Microsoft si pořád obdržela váš názor. (Pokud se v podrobnostech zobrazují jiné zprávy, použijte možnost zpětné vazby offline, abyste mohli znovu poslat svůj názor později.)
 
 
 

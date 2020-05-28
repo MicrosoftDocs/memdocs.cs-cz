@@ -10,12 +10,12 @@ ms.assetid: e3aaa9d2-a40e-42b1-ad75-5a115351729e
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 8b89f2dd9f60b43db5c4ce8956f843429b47bc62
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 3b206c1556c2e9550ade5c2322acd65ad2b19412
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81724367"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906837"
 ---
 # <a name="endpoint-protection-client-frequently-asked-questions"></a>Endpoint Protection nejčastějších dotazech klienta
 
@@ -145,7 +145,7 @@ Pokud chcete rychle a snadno odebrat všechny nežádoucí nebo potenciálně š
 
 -   Přesvědčte se, jestli váš antivirový a antispywarový software, tedy program Windows Defender, používá nejnovější aktualizace proti potenciálním hrozbám (další informace najdete v tématu Jak zajistím aktuálnost definic virů a spywaru?). Také se ujistěte, že vždycky používáte nejnovější verzi programu Windows Defender.  
 
--   Stahujte jenom aktualizace z důvěryhodných zdrojů. V operačních systémech Windows vždycky přejít na [Microsoft Update](https://go.microsoft.com/fwlink/?LinkID=96304) (https://go.microsoft.com/fwlink/?LinkID=96304) a pro jiný software vždycky používejte legitimní weby společnosti nebo osoby, která ji vyrábí.  
+-   Stahujte jenom aktualizace z důvěryhodných zdrojů. Pro operační systémy Windows vždy přejít do [katalogu Microsoft Update](https://catalog.update.microsoft.com).  Pro jiný software vždy používejte legitimní weby společnosti nebo osoby, která ho vytváří.
 
 -   Pokud dostanete e-mail s přílohou a nejste si jistí jeho zdrojem, měli byste ho okamžitě odstranit. Nestahujte žádné aplikace ani soubory z neznámých zdrojů a buďte opatrní při obchodování soubory s ostatními uživateli.  
 

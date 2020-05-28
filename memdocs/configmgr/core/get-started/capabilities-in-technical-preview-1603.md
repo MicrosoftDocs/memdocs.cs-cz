@@ -73,7 +73,7 @@ Přizpůsobené nastavení budete muset ve svém prostředí otestovat, abyste z
 
    **Zadejte**: REG_DWORD  
 
-   **Hodnota**: &lt;přizpůsobená velikost okna\>  
+   **Hodnota**: &lt; přizpůsobená velikost okna\>  
 
   Výchozí hodnota je 1 (1 datový blok vyplní celé okno).  
 
@@ -86,6 +86,6 @@ Přizpůsobené nastavení budete muset ve svém prostředí otestovat, abyste z
 
    **Zadejte**: REG_DWORD  
 
-   **Hodnota**: &lt;velikost přizpůsobeného bloku\>  
+   **Hodnota**: &lt; Velikost přizpůsobeného bloku\>  
 
   Výchozí hodnota je 4096 (4 tisíce).  

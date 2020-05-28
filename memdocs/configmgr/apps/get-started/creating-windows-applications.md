@@ -10,12 +10,12 @@ ms.assetid: 9181c84e-d74f-44ea-9bb9-f7805eb465fc
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 3af6f2883ebf17ab19f57762b8b3bf26e3716262
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 9e59d850a78a8f45f93769003e7a1de99e5634b3
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82075723"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906390"
 ---
 # <a name="create-windows-applications-in-configuration-manager"></a>Vytváření aplikací pro Windows v Configuration Manager
 
@@ -27,7 +27,7 @@ Kromě dalších Configuration Manager požadavků a postupů pro [vytváření 
 
 Configuration Manager podporuje nasazování formátů balíčku aplikace systému Windows (. appx) a sady prostředků aplikace (. appxbundle) pro Windows 8.1 a zařízení s Windows 10.
 
-Když vytváříte aplikaci v konzole Configuration Manager, vyberte **typ** instalačního souboru aplikace jako **\*balíček aplikace systému Windows (. appx, \*. appxbundle, \*. msix, \*. msixbundle)**. Další informace o tom, jak vytvářet aplikace obecně, najdete v tématu věnovaném [vytváření aplikací](../deploy-use/create-applications.md). Další informace o formátu MSIX najdete v tématu [Podpora formátu MSIX](#bkmk_msix).
+Když vytváříte aplikaci v konzole Configuration Manager, vyberte **typ** instalačního souboru aplikace jako **balíček aplikace systému Windows ( \* . appx, \* . appxbundle, \* . msix, \* . msixbundle)**. Další informace o tom, jak vytvářet aplikace obecně, najdete v tématu věnovaném [vytváření aplikací](../deploy-use/create-applications.md). Další informace o formátu MSIX najdete v tématu [Podpora formátu MSIX](#bkmk_msix).
 
 > [!Note]  
 > Pokud chcete využívat nové funkce Configuration Manager, nejdřív aktualizujte klienty na nejnovější verzi. I když se nové funkce zobrazí v konzole Configuration Manager, když aktualizujete lokalitu a konzolu, kompletní scénář nebude funkční, dokud nebude verze klienta zároveň nejnovější.<!--SCCMDocs issue 646-->  
@@ -58,7 +58,7 @@ Chcete-li pro tuto funkci nakonfigurovat typ nasazení aplikace pro systém Wind
 
 Configuration Manager podporuje balíčky aplikací pro Windows 10 (. msix) a sady prostředků aplikace (. msixbundle). Windows 10 verze 1809 nebo novější tyto formáty podporují.
 
-- Přehled MSIX najdete v tématu o tom, jak se [podíváte na MSIX](https://blogs.msdn.microsoft.com/sgern/2018/06/18/a-closer-look-at-msix/).  
+- Přehled MSIX najdete v tématu o tom, jak se [podíváte na MSIX](https://docs.microsoft.com/archive/blogs/sgern/a-closer-look-at-msix).  
 
 - Informace o tom, jak vytvořit novou aplikaci MSIX, najdete [v článku podpora MSIX představená v programu Insider build 17682](https://techcommunity.microsoft.com/t5/MSIX-Blog/MSIX-support-introduced-in-Insider-Build-17682/ba-p/202376).  
 
@@ -79,7 +79,7 @@ Převeďte stávající aplikace Instalační služba systému Windows (. msi) n
 
   - Instalace nástroje pro vytváření [balíčků MSIX](https://www.microsoft.com/store/productId/9N5LW3JBCXKF) z Microsoft Store  
 
-  - Instalace [ovladače nástroje pro vytváření balíčků MSIX](/windows/msix/packaging-tool/tool-known-issues#frameworks-and-drivers)<!--SCCMDocs-pr issue #3091-->  
+  - Instalace [ovladače nástroje pro vytváření balíčků MSIX](https://docs.microsoft.com/windows/msix/packaging-tool/tool-known-issues#frameworks-and-drivers)<!--SCCMDocs-pr issue #3091-->  
 
 Na toto zařízení neinstalujte žádné další aplikace ani služby. Je to váš referenční systém.
 
@@ -104,7 +104,7 @@ Pokud se proces nezdařil, stránka souhrnu odkazuje na soubor protokolu s více
 
 Pokud chcete tuto aplikaci MSIX použít, musíte ji nejdřív digitálně podepsat, aby ji klienti důvěřovali. Další informace o tomto procesu najdete v následujících článcích:
 
-- [MSIX – Nástroj pro balení MSIX – podepsání balíčku MSIX](https://blogs.msdn.microsoft.com/sgern/2018/09/06/msix-the-msix-packaging-tool-signing-the-msix-package/)
+- [MSIX – Nástroj pro balení MSIX – podepsání balíčku MSIX](https://docs.microsoft.com/archive/blogs/sgern/msix-the-msix-packaging-tool-signing-the-msix-package)
 - [Jak podepsat balíček aplikace pomocí SignTool](https://docs.microsoft.com/windows/desktop/appxpkg/how-to-sign-a-package-using-signtool)
 
 Po podepsání aplikace vytvořte v aplikaci Configuration Manager nový typ nasazení. Další informace najdete v tématu [Vytvoření typů nasazení pro aplikaci](../deploy-use/create-applications.md#bkmk_create-dt).
@@ -152,7 +152,7 @@ Když vytváříte aplikaci, chcete-li přidat typ nasazení pořadí úloh, vá
 
 ## <a name="support-for-universal-windows-platform-uwp-apps"></a><a name="bkmk_uwp"></a>Podpora aplikací Univerzální platforma Windows (UWP)  
 
-Zařízení s Windows 10 nevyžadují k instalaci obchodních aplikací klíč pro zkušební načtení. Pokud ale chcete povolit zkušební načtení ve Windows, musí mít `HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\Appx\AllowAllTrustedApps` klíč registru hodnotu **1**.  
+Zařízení s Windows 10 nevyžadují k instalaci obchodních aplikací klíč pro zkušební načtení. Pokud ale chcete povolit zkušební načtení ve Windows, `HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\Appx\AllowAllTrustedApps` musí mít klíč registru hodnotu **1**.  
 
 Pokud tento klíč registru nenakonfigurujete, Configuration Manager při prvním nasazení aplikace do zařízení automaticky nastaví hodnotu **1** . Pokud jste tuto hodnotu nastavili na **0**, Configuration Manager nemůže automaticky změnit hodnotu a nasazení podnikové aplikace se nepodaří.  
 
@@ -168,7 +168,7 @@ Chcete-li podepisovat balíčky mobilních aplikací, použijte následující t
 
 ## <a name="deploy-windows-installer-apps-to-mdm-enrolled-windows-10-devices"></a><a name="bkmk_mdm-msi"></a>Nasazení aplikací Instalační služba systému Windows do zařízení s Windows 10 zaregistrovaných v MDM  
 
-Typ nasazení **Instalační služba systému Windows až MDM\*(. msi)** umožňuje vytvářet a nasazovat aplikace založené na instalační služba systému Windows na zařízeních zaregistrovaných v MDM s Windows 10.  
+Typ nasazení **Instalační služba systému Windows až MDM ( \* . msi)** umožňuje vytvářet a nasazovat aplikace založené na instalační služba systému Windows na zařízeních zaregistrovaných v MDM s Windows 10.  
 
 Při použití tohoto typu nasazení Vezměte v úvahu následující body:
 

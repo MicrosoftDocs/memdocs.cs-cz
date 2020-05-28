@@ -2,7 +2,7 @@
 title: Novinky ve verzi 2002
 titleSuffix: Configuration Manager
 description: Získejte podrobnosti o změnách a nových funkcích zavedených ve verzi 2002 Configuration Manager aktuální větve.
-ms.date: 05/11/2020
+ms.date: 05/26/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: de718cdc-d0a9-47e2-9c99-8fa2cb25b5f8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 1aca9058b0f095b7f25b345c15eed1446dcf61d2
-ms.sourcegitcommit: 7b224e138c0618e978be59832b3486f3745abacc
+ms.openlocfilehash: afdcc608133d306042c9c6dc817396bb2fc3f387
+ms.sourcegitcommit: b0ae4a9972bac3518d0d4f33e033ac492eefe3c1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83381549"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84126477"
 ---
 # <a name="whats-new-in-version-2002-of-configuration-manager-current-branch"></a>Co je nového ve verzi 2002 Configuration Manager Current Branch
 
@@ -328,6 +328,15 @@ Další informace najdete v tématu [synchronizace aktualizací Office 365 z odp
 
 <!-- 5229962 -->
 Configuration Manager rozšířila podporu pro zařízení s připojováním do ochrany ATP v programu Microsoft Defender. Další informace najdete v tématu [Rozšířená ochrana před internetovými útoky v programu Microsoft Defender](../../../protect/deploy-use/windows-defender-advanced-threat-protection.md#onboard-devices).
+
+## <a name="onboard-configuration-manager-clients-to-microsoft-defender-atp-via-the-microsoft-endpoint-manager-admin-center"></a><a name="bkmk_atp"></a>Připojení klientů Configuration Manager k ochraně ATP v programu Microsoft Defender prostřednictvím centra pro správu Microsoft Endpoint Manageru
+<!--5691658-->
+Teď můžete nasadit zásady registrace a odezvy EDR (Microsoft Defender ATP) pro Configuration Manager spravované klienty. Tito klienti nevyžadují registraci v Azure AD ani MDM a zásady jsou zaměřené na kolekce nástroje ConfigMgr místo skupin Azure AD.
+
+Tato možnost umožňuje zákazníkům spravovat jak Intune MDM, tak Configuration Manager klienta EDR/ATP v rámci jediného prostředí pro správu – centra pro správu Microsoft Endpoint Manageru. Další informace najdete v tématu [zjišťování koncových bodů a zásady odezvy pro zabezpečení koncového bodu v Intune](../../../../intune/protect/endpoint-security-edr-policy.md).
+
+> [!Important]
+> Pro tuto funkci budete potřebovat kumulativní opravu hotfix [KB4563473](https://support.microsoft.com/help/4563473), která je nainstalovaná ve vašem prostředí.
 
 ### <a name="improvements-to-bitlocker-management"></a>Vylepšení správy BitLockeru
 

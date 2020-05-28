@@ -10,12 +10,12 @@ ms.assetid: f0f818d4-7f45-402f-8758-dc88bc024953
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 39039347361076ae7c8491f95419187d0af9da85
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7de7d562131f97ac21d1c394b176d3b7f4ce7747
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81722617"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906439"
 ---
 # <a name="supported-configurations-for-the-long-term-servicing-branch-of-system-center-configuration-manager"></a>Podporované konfigurace pro větev dlouhodobé údržby System Center Configuration Manager
 
@@ -25,9 +25,9 @@ Informace v tomto tématu vám pomohou pochopit, jaké operační systémy a zá
 Pokud není uvedeno jinak v tomto nebo LTSB konkrétní témata, vztahují se na LTSB stejné konfigurace a omezení, které platí pro Current Branch verze 1606.  Pokud dojde ke konfliktům, použijte informace, které se vztahují na edici, kterou používáte. LTSB je typicky omezené, než Current Branch.
 
 ## <a name="general-statement-of-support"></a>Obecné prohlášení o podpoře
-Tato větev Configuration Manager podporuje následující produkty a technologie. Jejich zahrnutí do tohoto obsahu však nevyjadřuje rozšíření podpory pro žádné produkty ani verze, které přesahují jednotlivé životní cyklus podpory daného produktu. Produkty, které přesahují životní cyklus podpory, se nepodporují pro použití s Configuration Manager. Další informace najdete na webu [životního cyklu podpora Microsoftu](https://go.microsoft.com/fwlink/p/?LinkId=208270) a přečtěte si [nejčastější dotazy k podpora Microsoftu zásad životního cyklu](https://go.microsoft.com/fwlink/p/?LinkId=31976).
+Tato větev Configuration Manager podporuje následující produkty a technologie. Jejich zahrnutí do tohoto obsahu však nevyjadřuje rozšíření podpory pro žádné produkty ani verze, které přesahují jednotlivé životní cyklus podpory daného produktu. Produkty, které přesahují životní cyklus podpory, se nepodporují pro použití s Configuration Manager. Další informace najdete na webu [životního cyklu podpora Microsoftu](https://support.microsoft.com/lifecycle) a přečtěte si nejčastější dotazy k podpora Microsoftu zásad životního cyklu.
 
-Produkty a verze produktů, které nejsou uvedené v následujících tématech, se navíc nepodporují, pokud nejsou ohlášeny na [blogu Enterprise mobility + Security](https://blogs.technet.microsoft.com/enterprisemobility/).
+Produkty a verze produktů, které nejsou uvedené v následujících tématech, se navíc nepodporují, pokud nejsou ohlášeny na [blogu Enterprise mobility + Security](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/bg-p/enterprisemobilityandsecurity).
 
 **Omezení pro budoucí podporu:** LTSB má omezené podpory pro budoucí serverové a klientské operační systémy a závislosti produktů. Seznam platforem pro LTSB je vyřešen po dobu životnosti verze:
 
@@ -72,7 +72,7 @@ Pomocí nástroje LTSB můžete spravovat následující počítačové operačn
 - Instalace jádra serveru systému Windows Server 2012 (x64) (Poznámka 2)
 
 **(Poznámka 1)** Vydání Datacenter jsou podporovaná, ale nejsou certifikované pro Configuration Manager.  
-**(Poznámka 2)** Aby bylo možné podporovat nabízenou instalaci klienta, musí počítač, který spouští tuto verzi operačního systému, spustit službu role souborový server pro roli serveru Souborová služba a služba úložiště. Informace o instalaci funkcí Windows na počítači s jádrem serveru najdete v tématu [Instalace rolí serveru a funkcí na server jádra serveru](https://technet.microsoft.com/library/jj574158(v=ws.11).aspx) na webu Windows Server 2012 TechNet Library.
+**(Poznámka 2)** Aby bylo možné podporovat nabízenou instalaci klienta, musí počítač, který spouští tuto verzi operačního systému, spustit službu role souborový server pro roli serveru Souborová služba a služba úložiště. Informace o instalaci funkcí Windows na počítači s jádrem serveru najdete v tématu [Instalace rolí serveru a funkcí na server s jádrem serveru](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj574158(v=ws.11)).
 
 ### <a name="windows-embedded"></a>Windows Embedded
 Pomocí nástroje LTSB můžete spravovat následující zařízení se systémem Windows Embedded, a to tak, že na zařízení nainstalujete klientský software.  Další informace najdete v tématu [Plánování nasazení klientů na zařízení se systémem Windows Embedded](../clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices.md).
@@ -131,7 +131,7 @@ Pomocí nástroje LTSB můžete spravovat následující zařízení se systéme
 ### <a name="mac-computers"></a>Počítače Mac  
  LTSB můžete použít ke správě počítačů s Mac OS X pomocí klienta Configuration Manager pro Mac.
 
-Instalační balíček klienta pro systém Mac není dodáván s Configuration Managerm médiu. Můžete si ho stáhnout jako součást "klienti pro další operační systémy" na webu [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=525184).  
+Instalační balíček klienta pro systém Mac není dodáván s Configuration Managerm médiu. Můžete si ho stáhnout jako součást "klienti pro další operační systémy" na webu [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=47719).  
 
 Podpora pro operační systémy Mac je omezená na ty, které jsou uvedené v této části. Podpora nezahrnuje další operační systémy, které by mohly být podporovány v budoucí aktualizaci instalačních balíčků klienta systému Mac pro Current Branch.
 
@@ -145,7 +145,7 @@ Další informace najdete v tématu [nasazení klientů na počítače Mac](../c
 ## <a name="linux-and-unix-servers"></a>Servery se systémy Linux a UNIX
 LTSB můžete použít ke správě serverů se systémy Linux a UNIX pomocí klienta Configuration Manager pro systémy Linux a UNIX.
 
-Instalační balíčky klienta systému Linux a UNIX nejsou dodávány s Configuration Managerm médiem. Můžete si je stáhnout jako součást "klienti pro další operační systémy" stažení z [webu Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=525184). Vedle instalačních balíčků klienta zahrnuje stažení klienta také skript install , který spravuje instalaci klienta v jednotlivých počítačích.
+Instalační balíčky klienta systému Linux a UNIX nejsou dodávány s Configuration Managerm médiem. Můžete si je stáhnout jako součást "klienti pro další operační systémy" stažení z [webu Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=47719). Vedle instalačních balíčků klienta zahrnuje stažení klienta také skript install , který spravuje instalaci klienta v jednotlivých počítačích.
 
 Podpora pro operační systémy Linux a UNIX je omezená na ty, které jsou uvedené v této části. Podpora nezahrnuje další operační systémy, které by mohly být podporovány v budoucí aktualizaci balíčků klientů se systémy Linux a UNIX pro Current Branch.
 
@@ -163,95 +163,95 @@ Následující verze jsou podporovány pomocí uvedeného souboru. tar.
 
 |Verze|File|  
 |-|-|  
-|Verze 5,3 (výkon)|ccm-Aix53ppc. &lt;Build\>. tar|  
-|Verze 6,1 (výkon)|ccm-Aix61ppc. &lt;Build\>. tar|  
-|Verze 7,1 (výkon)|ccm-Aix71ppc. &lt;Build\>. tar|  
+|Verze 5,3 (výkon)|ccm-Aix53ppc. &lt; Build \> . tar|  
+|Verze 6,1 (výkon)|ccm-Aix61ppc. &lt; Build \> . tar|  
+|Verze 7,1 (výkon)|ccm-Aix71ppc. &lt; Build \> . tar|  
 
 ### <a name="centos"></a>CentOS  
 
 |Verze|File|  
 |-|-|  
-|Verze 5 x86|ccm-Universalx86. &lt;Build\>. tar|  
-|Verze 5 x64|ccm-Universalx64. &lt;Build\>. tar|  
-|Verze 6 x86|ccm-Universalx86. &lt;Build\>. tar|  
-|Verze 6 x64|ccm-Universalx64. &lt;Build\>. tar|  
-|Verze 7 x64|ccm-Universalx64. &lt;Build\>. tar|  
+|Verze 5 x86|ccm-Universalx86. &lt; Build \> . tar|  
+|Verze 5 x64|ccm-Universalx64. &lt; Build \> . tar|  
+|Verze 6 x86|ccm-Universalx86. &lt; Build \> . tar|  
+|Verze 6 x64|ccm-Universalx64. &lt; Build \> . tar|  
+|Verze 7 x64|ccm-Universalx64. &lt; Build \> . tar|  
 
 ### <a name="debian"></a>Debian  
 
 |Verze|File|    
 |-|-|  
-|Verze 5 x86|ccm-Universalx86. &lt;Build\>. tar|  
-|Verze 5 x64|ccm-Universalx64. &lt;Build\>. tar|  
-|6x86 verze|ccm-Universalx86. &lt;Build\>. tar|  
-|Verze 6 x64|ccm-Universalx64. &lt;Build\>. tar|  
-|Verze 7 x86|ccm-Universalx86. &lt;Build\>. tar|  
-|Verze 7 x64|ccm-Universalx64. &lt;Build\>. tar|  
-|Verze 8 x86|ccm-Universalx86. &lt;Build\>. tar|  
-|Verze 8 x64|ccm-Universalx64. &lt;Build\>. tar|  
+|Verze 5 x86|ccm-Universalx86. &lt; Build \> . tar|  
+|Verze 5 x64|ccm-Universalx64. &lt; Build \> . tar|  
+|6x86 verze|ccm-Universalx86. &lt; Build \> . tar|  
+|Verze 6 x64|ccm-Universalx64. &lt; Build \> . tar|  
+|Verze 7 x86|ccm-Universalx86. &lt; Build \> . tar|  
+|Verze 7 x64|ccm-Universalx64. &lt; Build \> . tar|  
+|Verze 8 x86|ccm-Universalx86. &lt; Build \> . tar|  
+|Verze 8 x64|ccm-Universalx64. &lt; Build \> . tar|  
 
 ### <a name="hp-ux"></a>HP-UX  
 
 |Verze|File|  
 |-|-|  
-|11iv2 verze IA64|ccm-HpuxB. 11.23 I64. &lt;Build\>. tar|  
-|Verze 11iv2 PA – RISC|ccm-HpuxB. 11.23 PA. &lt;Build\>. tar|  
-|11iv3 verze IA64|ccm-HpuxB. 11.31 I64. &lt;Build\>. tar|  
-|Verze 11iv3 PA – RISC|ccm-HpuxB. 11.31 PA. &lt;Build\>. tar|  
+|11iv2 verze IA64|ccm-HpuxB. 11.23 I64. &lt; Build \> . tar|  
+|Verze 11iv2 PA – RISC|ccm-HpuxB. 11.23 PA. &lt; Build \> . tar|  
+|11iv3 verze IA64|ccm-HpuxB. 11.31 I64. &lt; Build \> . tar|  
+|Verze 11iv3 PA – RISC|ccm-HpuxB. 11.31 PA. &lt; Build \> . tar|  
 
 ### <a name="oracle-linux"></a>Oracle Linux  
 
 |Verze|File|    
 |-|-|  
-|Verze 5 x86|ccm-Universalx86. &lt;Build\>. tar|  
-|Verze 5 x64|ccm-Universalx64. &lt;Build\>. tar|  
-|Verze 6 x86|ccm-Universalx86. &lt;Build\>. tar|  
-|Verze 6 x64|ccm-Universalx64. &lt;Build\>. tar|  
-|Verze 7 x64|ccm-Universalx64. &lt;Build\>. tar|  
+|Verze 5 x86|ccm-Universalx86. &lt; Build \> . tar|  
+|Verze 5 x64|ccm-Universalx64. &lt; Build \> . tar|  
+|Verze 6 x86|ccm-Universalx86. &lt; Build \> . tar|  
+|Verze 6 x64|ccm-Universalx64. &lt; Build \> . tar|  
+|Verze 7 x64|ccm-Universalx64. &lt; Build \> . tar|  
 
 ### <a name="red-hat-enterprise-linux-rhel"></a>Red Hat Enterprise Linux (RHEL)  
 
 |Verze|File|  
 |-|-|  
-|Verze 4 x86|ccm-RHEL4x86. &lt;Build\>. tar|  
-|Verze 4 x64|ccm-RHEL4x64. &lt;Build\>. tar|  
-|Verze 5 x86|ccm-Universalx86. &lt;Build\>. tar|  
-|Verze 5 x64|ccm-Universalx64. &lt;Build\>. tar|  
-|Verze 6 x86|ccm-Universalx86. &lt;Build\>. tar|  
-|Verze 6 x64|ccm-Universalx64. &lt;Build\>. tar|  
-|Verze 7 x64|ccm-Universalx64. &lt;Build\>. tar|  
+|Verze 4 x86|ccm-RHEL4x86. &lt; Build \> . tar|  
+|Verze 4 x64|ccm-RHEL4x64. &lt; Build \> . tar|  
+|Verze 5 x86|ccm-Universalx86. &lt; Build \> . tar|  
+|Verze 5 x64|ccm-Universalx64. &lt; Build \> . tar|  
+|Verze 6 x86|ccm-Universalx86. &lt; Build \> . tar|  
+|Verze 6 x64|ccm-Universalx64. &lt; Build \> . tar|  
+|Verze 7 x64|ccm-Universalx64. &lt; Build \> . tar|  
 
 ### <a name="solaris"></a>Solaris  
 
 |Verze|File|   
 |-|-|  
-|SPARC verze 9|ccm-Sol9sparc. &lt;Build\>. tar|  
-|Verze 10 x86|ccm-Sol10x86. &lt;Build\>. tar|  
-|Verze 10 SPARC|ccm-Sol10sparc. &lt;Build\>. tar|  
-|Verze 11 x86|ccm-Sol11x86. &lt;Build\>. tar|  
-|SPARC verze 11|ccm-Sol11sparc. &lt;Build\>. tar|  
+|SPARC verze 9|ccm-Sol9sparc. &lt; Build \> . tar|  
+|Verze 10 x86|ccm-Sol10x86. &lt; Build \> . tar|  
+|Verze 10 SPARC|ccm-Sol10sparc. &lt; Build \> . tar|  
+|Verze 11 x86|ccm-Sol11x86. &lt; Build \> . tar|  
+|SPARC verze 11|ccm-Sol11sparc. &lt; Build \> . tar|  
 
 ### <a name="suse-linux-enterprise-server-sles"></a>SUSE Linux Enterprise Server (SLES)  
 
 |Verze|File|  
 |-|-|  
-|Verze 9 x86|ccm-SLES9x86. &lt;Build\>. tar|  
-|Verze 10 SP1 x86|ccm-Universalx86. &lt;Build\>. tar|  
-|Verze 10 SP1 x64|ccm-Universalx64. &lt;Build\>. tar|  
-|Verze 11 SP1 – x86|ccm-Universalx86. &lt;Build\>. tar|  
-|Verze 11 SP1 x64|ccm-Universalx64. &lt;Build\>. tar|  
-|Verze 12 x64|ccm-Universalx64. &lt;Build\>. tar|  
+|Verze 9 x86|ccm-SLES9x86. &lt; Build \> . tar|  
+|Verze 10 SP1 x86|ccm-Universalx86. &lt; Build \> . tar|  
+|Verze 10 SP1 x64|ccm-Universalx64. &lt; Build \> . tar|  
+|Verze 11 SP1 – x86|ccm-Universalx86. &lt; Build \> . tar|  
+|Verze 11 SP1 x64|ccm-Universalx64. &lt; Build \> . tar|  
+|Verze 12 x64|ccm-Universalx64. &lt; Build \> . tar|  
 
 ### <a name="ubuntu"></a>Ubuntu  
 
 |Verze|File|    
 |-|-|  
-|Verze 10,04 LTS x86|ccm-Universalx86. &lt;Build\>. tar|  
-|Verze 10,04 LTS x64|ccm-Universalx64. &lt;Build\>. tar|  
-|Verze 12,04 LTS x86|ccm-Universalx86. &lt;Build\>. tar|  
-|Verze 12,04 LTS x64|ccm-Universalx64. &lt;Build\>. tar|  
-|Verze 14,04 LTS x86|ccm-Universalx86. &lt;Build\>. tar|  
-|Verze 14,04 LTS x64|ccm-Universalx64. &lt;Build\>. tar|  
+|Verze 10,04 LTS x86|ccm-Universalx86. &lt; Build \> . tar|  
+|Verze 10,04 LTS x64|ccm-Universalx64. &lt; Build \> . tar|  
+|Verze 12,04 LTS x86|ccm-Universalx86. &lt; Build \> . tar|  
+|Verze 12,04 LTS x64|ccm-Universalx64. &lt; Build \> . tar|  
+|Verze 14,04 LTS x86|ccm-Universalx86. &lt; Build \> . tar|  
+|Verze 14,04 LTS x64|ccm-Universalx64. &lt; Build \> . tar|  
 
 ### <a name="exchange-server-connector"></a>konektor systému Exchange Server
  LTSB podporuje omezené řízení zařízení, která se připojují k vaší instanci Exchange serveru bez instalace klientského softwaru. Další informace najdete v tématu [Správa mobilních zařízení pomocí Configuration Manager a Exchange](../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md).

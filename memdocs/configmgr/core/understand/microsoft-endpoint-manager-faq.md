@@ -10,12 +10,12 @@ ms.assetid: be276b34-e283-4386-8b45-5629e431c50d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 05aeca86071ea823d3ebc3cf493bea4d418bad27
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 63f6c7321301e5705c4188012ba53b50f4c37b57
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81722687"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906037"
 ---
 # <a name="microsoft-endpoint-configuration-manager-faq"></a>Časté otázky k Microsoft Endpoint Configuration Manageru
 
@@ -41,7 +41,7 @@ Následující řešení pro správu Microsoft jsou teď součástí značky **M
 - [Intune](https://docs.microsoft.com/intune)
 - [Desktop Analytics](../../desktop-analytics/overview.md)
 - [Autopilot](https://docs.microsoft.com/intune/enrollment/enrollment-autopilot)
-- Další funkce v [konzole správce správy zařízení](https://go.microsoft.com/fwlink/?linkid=2109094)
+- Další funkce v [konzole správce správy zařízení](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/microsoft-intune-rolls-out-an-improved-streamlined-endpoint/ba-p/937760)
 
 Další informace najdete v následujících příspěvcích od Brada Anderson, což je Microsoft Corporate viceprezident pro Microsoft 365:
 

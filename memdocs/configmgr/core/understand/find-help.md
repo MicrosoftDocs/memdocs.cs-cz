@@ -2,7 +2,7 @@
 title: Hledání nápovědy
 titleSuffix: Configuration Manager
 description: Další informace o Configuration Manager najdete v materiálech.
-ms.date: 04/01/2020
+ms.date: 05/12/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 86810629-cf2a-43e8-86a2-847444119fc1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6610e86c12b6f7704b65dc11c476fa09e8f2ae63
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7bae98a8df1d8b8ff843bd333083c4c6ad68848c
+ms.sourcegitcommit: 4c129bb04ea4916c78446e89fbff956397cbe828
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81722904"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83343180"
 ---
 # <a name="find-help-for-using-configuration-manager"></a>Najít nápovědu k použití Configuration Manager
 
@@ -81,7 +81,7 @@ Počínaje Configuration Manager 2002 se při **odeslání smajlíka** nebo **od
    - ID zprávy 53900 pro úspěšné odeslání
    - ID zprávy 53901 pro odeslání, které selhalo.
 
-Zobrazit stavové zprávy z **monitorování** > stavového**systému** > **dotazy stavových**zpráv. Začněte dotazem **všechny stavové zprávy** a vyberte svůj časový rámec. Po načtení zpráv klikněte na tlačítko **filtrovat zprávy** a filtr pro zprávu s ID 53900 nebo 53901.
+Zobrazit stavové zprávy z **monitorování**stavového  >  **systému**  >  **dotazy stavových**zpráv. Začněte dotazem **všechny stavové zprávy** a vyberte svůj časový rámec. Po načtení zpráv klikněte na tlačítko **filtrovat zprávy** a filtr pro zprávu s ID 53900 nebo 53901.
 
 Pokud [Odešlete zpětnou vazbu, kterou jste uložili pro pozdější odeslání,](find-help.md#BKMK_NoInternet)stavové zprávy se nevytvoří.
 
@@ -127,13 +127,20 @@ Když **odešlete smajlíka** nebo **odešlete zamračení**, odešlou se násle
         - `-s --silent`Žádné protokolování do konzoly (nelze kombinovat s--verbose)
         - `-v, --verbose`Výstup podrobného protokolování do konzoly (nemůže kombinovat s--Silent)
         - `--help`Zobrazí obrazovku help.
+    
+    - Počínaje verzí 1910 podporuje nástroj UploadOfflineFeedback použití proxy server. Můžete zadat následující parametry:
+        - `-x, --proxy`Určuje proxy server připojení k Internetu.
+        - `-o, --port`Určuje port pro proxy server připojení k Internetu.
+        - `-u, --user`Určuje uživatelské jméno pro proxy server připojení k Internetu.
+        - `-w, --password`Určuje heslo pro proxy server připojení k Internetu. Pokud chcete vytvořit výzvu k zadání hesla, zadejte hvězdičku (&#42;). Heslo se při zadání na příkazovém řádku hesla nezobrazí. Důrazně doporučujeme použít hvězdičku (&#42;) k vytvoření výzvy k zadání hesla, protože prostý text na příkazovém řádku je méně bezpečný.
+        - `-i`Přeskočit kontrolu připojení: Přeskočí kontrolu síťového připojení, stačí nahrát zpětnou vazbu se zadaným nastavením.
 
 ## <a name="confirmation-of-console-feedback"></a><a name="bkmk_feedbackid"></a>Potvrzení zpětné vazby z konzoly
 
 <!--3556010-->
 Od verze 1902 se při odesílání zpětné vazby prostřednictvím konzoly Configuration Manager nebo souboru UploadOfflineFeedback. exe zobrazí potvrzovací zpráva. Tato zpráva obsahuje **ID zpětné vazby**, které můžete společnosti Microsoft poskytnout jako identifikátor sledování.
 
-- Chcete-li zkopírovat **ID zpětné vazby**, vyberte ikonu kopírování vedle ID nebo použijte klávesovou zkratku **CTRL** + **C** .
+- Chcete-li zkopírovat **ID zpětné vazby**, vyberte ikonu kopírování vedle ID nebo použijte klávesovou zkratku **CTRL**  +  **C** .
   - Tento identifikátor není uložený na vašem počítači, proto ho nezapomeňte před zavřením okna zkopírovat.
 - Kliknutím na tlačítko **tuto zprávu už nezobrazovat** potlačíte dialog a zabráníte v jejich zobrazení v budoucnu.
 

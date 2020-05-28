@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: 7ec5802a8931bc4397eaf302920f09d8597802fe
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 73aac9e1bfb7b902a7db28ba4be00a2a02277324
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81721609"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905695"
 ---
 # <a name="capabilities-in-technical-preview-1607-for-configuration-manager"></a>Funkce ve verzi Technical Preview 1607 pro Configuration Manager
 
@@ -62,15 +62,15 @@ Vlastní branding pro Centrum softwaru se používá podle následujících prav
 ## <a name="use-the-same-network-adapter-for-multiple-pxe-initiated-deployments"></a>Použití stejného síťového adaptéru pro více nasazení inicializovaných pomocí technologie PXE
 Pokud ve verzi Technical Preview 1607 používáte adaptér sítě Ethernet k zobrazení imagí více zařízení (například ethernetového adaptéru USB, který používáte na více zařízeních), můžete povolit nové nastavení, které vám umožní zadat identifikátory hardwaru pro adaptéry Ethernet. Configuration Manager ignoruje identifikátory hardwaru v seznamu při provádění instalace PXE a registrace klienta.
 
-Další informace o tomto problému najdete na [blogu týmu podpory pro Configuration Manager OSD](https://blogs.technet.microsoft.com/system_center_configuration_manager_operating_system_deployment_support_blog/2015/08/27/reusing-the-same-nic-for-multiple-pxe-initiated-deployments-in-system-center-configuration-manger-osd/).  
+Další informace o tomto problému najdete na [blogu týmu podpory pro Configuration Manager OSD](https://techcommunity.microsoft.com/t5/configuration-manager-archive/reusing-the-same-nic-for-multiple-pxe-initiated-deployments-in/ba-p/273721).  
 
 ### <a name="enable-the-feature-to-manage-duplicate-hardware-identifiers"></a>Povolení funkce pro správu duplicitních identifikátorů hardwaru  
-1. V konzole Configuration Manager v části**Přehled** >  **správy** > **Cloud Services** > **Možnosti****aktualizace a údržba** > .
+1. V konzole Configuration Manager v části Přehled **správy**  >  **Overview**  >  **Cloud Services**  >  **Možnosti aktualizace a údržba**  >  **Features**.
 2. V podokně zobrazení vyberte možnost **Správa duplicitních identifikátorů hardwaru**.
 3. Na kartě **Domů** ve skupině **funkce** klikněte na **zapnout**.
 
 ### <a name="add-hardware-identifiers-for-configuration-manager-to-ignore"></a>Přidejte identifikátory hardwaru pro Configuration Manager, které se mají ignorovat.  
-1. V konzole Configuration Manager v části **Správa** > **Přehled** > **Konfigurace** > lokality**lokality.**
+1. V konzole Configuration Manager v části **Správa**  >  **Přehled**  >  **Konfigurace lokality**  >  **lokality**.
 2. Na kartě **Domů** ve skupině **Lokality** klikněte na možnost **Nastavení hierarchie**.
 3. Přejít na kartu **schválení klienta a konfliktní záznamy** .
 4. Chcete-li přidat nové identifikátory hardwaru, klikněte na tlačítko **Přidat** v části **duplicitní identifikátory hardwaru** .

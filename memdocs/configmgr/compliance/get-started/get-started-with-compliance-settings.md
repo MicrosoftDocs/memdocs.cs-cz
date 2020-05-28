@@ -10,12 +10,12 @@ ms.assetid: a2742d52-851e-4abc-b623-d12d91684c0b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 59b0b799fd54e0e613f78b11b48b53b19d20ddbf
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 9143c224082f00b882d3cb557b47b737012393fa
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81712222"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906344"
 ---
 # <a name="get-started-with-compliance-settings-in-configuration-manager"></a>Začínáme s nastavením dodržování předpisů v Configuration Manager
 
@@ -107,7 +107,7 @@ Další informace najdete v tématu [upgrade zařízení s Windows pomocí zása
 
 ## <a name="microsoft-edge-browser-profiles"></a>Profily prohlížeče Microsoft Edge
 <!-- 1357310 -->
-Od verze 1802 pro zákazníky, kteří používají webový prohlížeč [Microsoft Edge](https://technet.microsoft.com/microsoft-edge/bb265256) na klientech Windows 10, vytvořte zásady nastavení dodržování předpisů pro konfiguraci několika nastavení Microsoft Edge. 
+Od verze 1802 pro zákazníky, kteří používají webový prohlížeč [Microsoft Edge](https://www.microsoft.com/itpro/microsoft-edge) na klientech Windows 10, vytvořte zásady nastavení dodržování předpisů pro konfiguraci několika nastavení Microsoft Edge. 
 
 Další informace najdete v tématu [profily prohlížeče Microsoft Edge](../deploy-use/browser-profiles.md).
 

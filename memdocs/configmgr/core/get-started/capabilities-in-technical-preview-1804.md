@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: b30386745244900e7f525f8f45b25a598628bf43
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: b709d6ec0c0cda188502c314d945a70e8de71288
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078732"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905255"
 ---
 # <a name="capabilities-in-technical-preview-1804-for-configuration-manager"></a>Funkce ve verzi Technical Preview 1804 pro Configuration Manager
 
@@ -80,7 +80,7 @@ Tato vzdálená knihovna obsahu je novou podmínkou pro [vysokou dostupnost role
 
 3. Vyberte **sdílenou síťovou složku** a zadejte platnou cestu k síti. Tato cesta je umístění, do kterého lokalita přesouvá knihovnu obsahu. Klikněte na tlačítko **OK**.  
 
-4. Poznamenejte si vlastnost **stav** ve sloupci knihovna obsahu v podokně podrobností. Aktualizuje a zobrazí průběh přesunutí knihovny obsahu. V průběhu zobrazení se zobrazí procento dokončení. Pokud dojde k chybovém stavu, zobrazí se chyba. Mezi běžné chyby `access denied` patří `disk full`nebo. Po dokončení se zobrazí `OK`. Podrobnosti najdete v **protokolu Distmgr. log** . Další informace najdete v tématu [protokoly serveru lokality a serveru systému lokality](../plan-design/hierarchy/log-files.md#BKMK_SiteSiteServerLog).  
+4. Poznamenejte si vlastnost **stav** ve sloupci knihovna obsahu v podokně podrobností. Aktualizuje a zobrazí průběh přesunutí knihovny obsahu. V průběhu zobrazení se zobrazí procento dokončení. Pokud dojde k chybovém stavu, zobrazí se chyba. Mezi běžné chyby patří `access denied` nebo `disk full` . Po dokončení se zobrazí `OK` . Podrobnosti najdete v **protokolu Distmgr. log** . Další informace najdete v tématu [protokoly serveru lokality a serveru systému lokality](../plan-design/hierarchy/log-files.md#BKMK_SiteSiteServerLog).  
 
 Pokud potřebujete přesunout knihovnu obsahu zpět na server lokality, opakujte tento postup, ale vyberte možnost **místní pro server lokality**.  
 
@@ -134,8 +134,6 @@ Pokud se pokusíte odeslat zpětnou vazbu ze zařízení, které není schopné 
 
 Použijte Support Center pro řešení potíží s klientem, zobrazení protokolu v reálném čase nebo zachycení stavu Configuration Manager klientského počítače pro pozdější analýzu. Support Center je jedním z nástrojů pro konsolidaci mnoha nástrojů pro odstraňování potíží správců. Verze Preview pro nejnovější verzi nástroje Support Center s opravami chyb, vylepšeními a verzí Preview našeho nového prohlížeče protokolu je k dispozici v Technical Preview. Vyhledejte instalační program centra pro podporu na serveru lokality ve složce **CD. latest\SMSSETUP\Tools\SupportCenter** .
 
- > [!Tip]  
- > Starší verze dokumentace pro stávající funkce v nástroji Support Center je k dispozici na [webu TechNet](https://technet.microsoft.com/library/dn688621.aspx). V průběhu migrace do knihovny docs.microsoft.com probíhá zpracování relevantních informací.  
 
 ### <a name="new-support-center-features"></a>Nové funkce nástroje Support Center  
 
@@ -304,7 +302,7 @@ Provedli jsme následující vylepšení nasazení operačního systému, přič
   > Proměnné a jejich hodnoty jsou uloženy v pořadí úkolů jako XML a v databázi jsou zakódovány. Když klient požádá o zásadu pořadí úloh z bodu správy, zašifruje se při přenosu a při uložení na klienta. Všechny proměnné hodnoty jsou však v prostředí pořadí úloh v paměti během běhu v klientovi prostý text. Pokud pořadí úkolů obsahuje krok pro výstup hodnoty proměnné, je tento výstup v prostém textu. Toto chování vyžaduje explicitní akci správce k zahrnutí takového kroku v pořadí úkolů. 
 
 
-- [Maskovat název programu během příkazu Spustit pořadí úkolů](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/15282795-secret-task-sequence-variable-value-exposed): Pokud chcete zabránit zobrazení nebo protokolování potenciálně citlivých dat, nastavte proměnnou pořadí úkolů **OSDDoNotLogCommand** na `TRUE`. Tato proměnná maskuje název programu v souboru Smsts. log během kroku pořadí úkolů [Spustit příkazový řádek](../../osd/understand/task-sequence-steps.md#BKMK_RunCommandLine) . <!--1358493-->  
+- [Maskovat název programu během příkazu Spustit pořadí úkolů](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/15282795-secret-task-sequence-variable-value-exposed): Pokud chcete zabránit zobrazení nebo protokolování potenciálně citlivých dat, nastavte proměnnou pořadí úkolů **OSDDoNotLogCommand** na `TRUE` . Tato proměnná maskuje název programu v souboru Smsts. log během kroku pořadí úkolů [Spustit příkazový řádek](../../osd/understand/task-sequence-steps.md#BKMK_RunCommandLine) . <!--1358493-->  
 
 
 

@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: f32eaffe673324699e20fc7c579ea1ac9b38c479
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 337b494bdce24463c19dd22ae975af5e99d6d895
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82076335"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905848"
 ---
 # <a name="capabilities-in-technical-preview-1511-for-configuration-manager"></a>Funkce ve verzi Technical Preview 1511 pro Configuration Manager
 
@@ -34,7 +34,7 @@ Pro počítače připojené přes WUfB nebude Configuration Manager moci ohlási
 
 -   Windows 10 Desktop pro nebo Windows 10 Enterprise Edition verze 1511 nebo novější  
 
--   Počítače určené ke správě prostřednictvím [Windows Update for Business](https://technet.microsoft.com/library/mt622730\(v=vs.85\).aspx)  
+-   Počítače určené ke správě prostřednictvím [Windows Update for Business](https://docs.microsoft.com/windows/deployment/update/waas-manage-updates-wufb)  
 
 ### <a name="try-it-out"></a>Určitě to udělejte!  
  Zkuste dokončit následující úlohu a pak použijte informace o zpětné vazbě v horní části tohoto tématu a sdělte nám, jak se pracovalo:  
@@ -67,7 +67,7 @@ Když společnost Microsoft publikuje novou aktualizaci klienta Office 365 pro s
 
 4. Dodržování předpisů pro aktualizace Office 365 můžete ověřit pomocí v konzole monitorování nebo sestavy.  
 
-   Podrobný postup najdete v tématu [Správa aktualizací klientů Office 365 pomocí Configuration Manager Technical Preview](https://technet.microsoft.com/library/mt628083.aspx).  
+   Podrobný postup najdete v tématu [Správa aktualizací klientů Office 365 pomocí Configuration Manager Technical Preview](https://docs.microsoft.com/deployoffice/manage-microsoft-365-apps-updates-configuration-manager).  
 
 ##  <a name="support-for-sql-server-alwayson-for-highly-available-databases"></a><a name="BKMK_AlwasyOn"></a>Podpora SQL Server AlwaysOn pro vysoce dostupné databáze  
  Configuration Manager teď podporuje používání skupin dostupnosti SQL Server AlwaysOn k hostování databáze lokality.  Když nainstalujete novou lokalitu, můžete nastavit, aby se místo normální instance SQL Server používala Skupina dostupnosti.  
@@ -110,7 +110,7 @@ Zkuste provést následující úkoly a pak použijte informace o zpětné vazb�
  Pomocí následujících postupů nejprve vytvořte a nakonfigurujte skupinu dostupnosti a pak nainstalujte novou Configuration Manager lokalitu, která používá skupinu dostupnosti.  
 
 #### <a name="to-create-a-sql-server-alwayson-availability-group"></a>Vytvoření skupiny dostupnosti SQL Server AlwaysOn  
-Proces [Vytvoření skupiny dostupnosti SQL Server](https://technet.microsoft.com/library/ff878265\(v=sql.120\).aspx) je popsán v knihovně dokumentace SQL Server.  Při vytváření skupiny dostupnosti zajistěte splnění následujících požadavků pro použití s Configuration Manager:  
+Proces [Vytvoření skupiny dostupnosti SQL Server](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server?view=sql-server-ver15) je popsán v knihovně dokumentace SQL Server.  Při vytváření skupiny dostupnosti zajistěte splnění následujících požadavků pro použití s Configuration Manager:  
 
 -   Maximálně tři členy:  
 
@@ -131,7 +131,7 @@ Chcete-li nainstalovat lokalitu, která používá skupinu dostupnosti SQL Serve
 
 1.  Po zobrazení výzvy Configuration Manager nastavení nahraďte následující:  
 
-    -   **SQL Server název**: zadejte virtuální název koncového bodu, který jste nakonfigurovali při vytváření skupiny dostupnosti. Virtuálním názvem by měl být úplný název DNS, třeba ** &lt;server koncového bodu\>. fabrikam.com**.  
+    -   **SQL Server název**: zadejte virtuální název koncového bodu, který jste nakonfigurovali při vytváření skupiny dostupnosti. Virtuálním názvem by měl být úplný název DNS, třeba ** &lt; server koncového bodu \> . fabrikam.com**.  
 
     -   **Instance**: Tato hodnota by měla zůstat prázdná. V této konfiguraci neexistuje žádná instance.  
 
@@ -165,7 +165,7 @@ Zkuste dokončit následující úlohu a pak použijte informace o zpětné vazb
 
 #### <a name="to-create-a-collection-for-a-server-cluster"></a>Vytvoření kolekce pro serverový cluster  
 
-1.  [Vytvořte kolekci zařízení](https://technet.microsoft.com/library/gg712295.aspx) , která obsahuje servery v clusteru.  
+1.  [Vytvořte kolekci zařízení](../clients/manage/collections/create-collections.md) , která obsahuje servery v clusteru.  
 
 2.  V pracovním prostoru **prostředky a kompatibilita** klikněte na **kolekce zařízení**, klikněte pravým tlačítkem na kolekci, která obsahuje servery v clusteru, a pak klikněte na **vlastnosti**.  
 
@@ -200,6 +200,6 @@ Zkuste dokončit následující úlohu a pak použijte informace o zpětné vazb
 
 #### <a name="to-deploy-software-updates-to-the-server-cluster"></a>Nasazení aktualizací softwaru do serverového clusteru  
 
-1.  [Nasaďte aktualizace softwaru](https://technet.microsoft.com/library/gg712304.aspx) do kolekce serverového clusteru.  
+1.  [Nasaďte aktualizace softwaru](../../sum/deploy-use/deploy-software-updates.md) do kolekce serverového clusteru.  
 
-2.  [Monitorujte nasazení aktualizace softwaru](https://technet.microsoft.com/library/gg712304.aspx).  
+2.  [Monitorujte nasazení aktualizace softwaru](../../sum/deploy-use/monitor-software-updates.md).  

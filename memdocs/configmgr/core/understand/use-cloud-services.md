@@ -10,12 +10,12 @@ ms.assetid: 24fca61e-9cdb-447a-ad7a-f4d2e4fd6704
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c191debd77502f7d594a77eb3bd0c50cd6854f66
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 84cb878de3eea56dc68180a83fd4b6a32b2d1073
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81722582"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906426"
 ---
 # <a name="use-cloud-services-with-configuration-manager"></a>Použití cloudových služeb s nástrojem Configuration Manager
 
@@ -36,7 +36,7 @@ I když zřizování cloudových prostředků ještě není potřeba, před nasa
 
 -   Informace o cloudových distribučních bodech najdete v tématu [instalace cloudových distribučních bodů](../servers/deploy/configure/install-cloud-based-distribution-points-in-microsoft-azure.md).
 
--   Další informace o Azure najdete v tématu [Azure](https://go.microsoft.com/fwlink/p/?LinkId=262965) v knihovně MSDN.  
+-   Další informace o Azure najdete v tématu [co je Azure?](https://azure.microsoft.com/overview/what-is-azure/)
 
 ### <a name="azure-virtual-machines-for-cloud-based-infrastructure"></a>Virtuální počítače Azure (pro cloudovou infrastrukturu)  
  Configuration Manager podporuje používání počítačů, které běží na virtuálních počítačích v Azure, stejně jako místní spouštění ve vaší fyzické podnikové síti. Virtuální počítače Azure můžete použít v následujících scénářích:  
@@ -78,12 +78,4 @@ Tyto další funkce nevyžadují, abyste měli předplatné Azure. Nemusíte nas
 ##  <a name="security-for-cloud-based-services"></a><a name="BKMK_CloudSec"></a>Zabezpečení cloudových služeb  
  Configuration Manager používá k zřizování a přístupu k vašemu obsahu v Azure a ke správě služeb, které používáte, certifikáty. Configuration Manager šifruje data, která ukládáte v Azure, ale nezavádí další zabezpečení nebo ovládací prvky dat nad rámec těch, které poskytuje Azure.  
 
- Další informace najdete v podrobnostech o různých scénářích cloudových prostředků. Můžete si také prohlédnout následující témata týkající se zabezpečení Azure:  
-
--   [Azure: Principy správy účtů zabezpečení v Azure](https://go.microsoft.com/fwlink/p/?LinkId=262968)  
-
--   [Přehled zabezpečení Azure](https://go.microsoft.com/fwlink/p/?LinkId=262970)  
-
--   [Get Past the Security Crossroads in Your Cloud Migration (Postupy zabezpečení při migraci do prostředí cloudu)](https://go.microsoft.com/fwlink/p/?LinkId=262971)  
-
--   [Data Security in Azure Part 1 of 2 (Zabezpečení dat ve službě Azure, část 1/2)](https://go.microsoft.com/fwlink/p/?LinkId=262974)  
+ Další informace najdete v podrobnostech o různých scénářích cloudových prostředků. Seznamte se také s [úvodem do zabezpečení Azure](https://docs.microsoft.com/azure/security/fundamentals/overview).

@@ -10,12 +10,12 @@ ms.assetid: 95033a9b-ff13-4b70-b1de-bcb25bcb6024
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9a1dcd3528f4dbaacec81837150d6f8a1ad6c455
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 652a0c5e36ce7c4bacf40531a82fdf4e16197d95
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81724164"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906918"
 ---
 # <a name="customize-operating-system-images-with-configuration-manager"></a>Přizpůsobení imagí operačního systému pomocí Configuration Manager
 
@@ -95,7 +95,7 @@ Bitové kopie operačního systému v Configuration Manager jsou soubory WIM a p
     > [!IMPORTANT]  
     >  Krok pořadí úkolů [Připravit systém Windows pro zaznamenání](../understand/task-sequence-steps.md#BKMK_PrepareWindowsforCapture) se před spuštěním nástroje Sysprep pokusí resetovat heslo místního správce v referenčním počítači na prázdnou hodnotu. Pokud je povolena místní zásada zabezpečení **Heslo musí splňovat požadavky na složitost**, resetování hesla správce tímto krokem pořadí úkolů se nezdaří. V případě tohoto scénáře zakažte tuto zásadu před spuštěním pořadí úloh.  
 
-     Další informace o nástroji Sysprep najdete v tématu [Technické informace o nástroji pro přípravu systému (Sysprep)](https://go.microsoft.com/fwlink/?LinkId=280286).  
+     Další informace o nástroji Sysprep najdete v tématu [Přehled nástroje Sysprep (Příprava systému)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/sysprep--system-preparation--overview).  
 
 -   **Vhodné nástroje a skripty potřebné k usnadnění scénářů instalací**  
 

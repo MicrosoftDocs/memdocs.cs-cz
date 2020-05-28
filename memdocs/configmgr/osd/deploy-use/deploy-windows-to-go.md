@@ -10,12 +10,12 @@ ms.assetid: 8eed50f5-80a4-422e-8aa6-a7ccb2171475
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0174cea761da15cc57eeb55fba26070fe664bb76
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: add0d17205cc82b30f3a88558c690a813239b92a
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81710962"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906936"
 ---
 # <a name="deploy-windows-to-go-with-configuration-manager"></a>Nasazení Windows to-přejít pomocí Configuration Manager
 
@@ -23,7 +23,7 @@ ms.locfileid: "81710962"
 
 V tomto tématu najdete postup, jak zajistit, aby Windows to přešel do Configuration Manager. Windows To Go je funkce Enterprise systému Windows 8, která umožňuje vytvořit pracovní prostor Windows To Go, který lze spustit z externího disku připojeného přes USB v počítačích splňujících požadavky systémů Windows 7 nebo Windows 8 na certifikaci, a to bez ohledu na to, jaký operační systém je v počítači používán. Pracovní prostory Windows To Go mohou využívat stejnou bitovou kopii, kterou podniky využívají pro své stolní počítače a notebooky, a lze je spravovat stejným způsobem.  
 
- Další informace o funkci Windows to přejít najdete v tématu [Přehled funkcí Windows to přejít](https://go.microsoft.com/fwlink/p/?LinkId=263433).  
+ Další informace o funkci Windows to přejít najdete v tématu [Přehled funkcí Windows to přejít](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/hh831833(v=ws.11)).  
 
 ## <a name="provision-windows-to-go"></a>Zřízení funkce Windows To Go  
  Windows To Go je operační systém uložený na externím disku připojovaným přes USB. Zřízení disku Windows To Go je podobné jako zřízení ostatních nasazení operačního systému. Protože je však funkce Windows To Go navržena jako vysoce mobilní řešení pro konkrétního uživatele, postup při zřízení těchto disků se v některých ohledech liší.  
@@ -105,7 +105,7 @@ V tomto tématu najdete postup, jak zajistit, aby Windows to přešel do Configu
 
    -   **Komentář**: Zadejte unikátní popis, k čemu médium slouží.  
 
-   -   **Mediální soubor**: Zadejte název výstupních souborů a cestu ke složce, ve které se uloží. Průvodce uloží výstupní soubory do tohoto umístění. Příklad: ** \\\servername\folder\outputfile.wim**  
+   -   **Mediální soubor**: Zadejte název výstupních souborů a cestu ke složce, ve které se uloží. Průvodce uloží výstupní soubory do tohoto umístění. Příklad: ** \\ \servername\folder\outputfile.wim**  
 
 7. Na stránce **Zabezpečení** zadejte následující informace a klikněte na tlačítko **Další**.  
 
@@ -311,7 +311,7 @@ V tomto tématu najdete postup, jak zajistit, aby Windows to přešel do Configu
 
     1.  **Název**: Zadejte název pro příkazový řádek, třeba **Enable BitLocker for Windows To Go**.  
 
-    2.  **Příkazový řádek**: i386 \ osdbitlocker_wtg. exe/Enable/pwd: < *none&#124;AD*>  
+    2.  **Příkazový řádek**: i386 \ osdbitlocker_wtg. exe/Enable/pwd: < *žádná & #124; Služba AD*>  
 
          Parametry:  
 

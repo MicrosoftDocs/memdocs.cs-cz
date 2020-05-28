@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: fc38d0cbd70faa23f67c7089944b8b4c2cd0f7fc
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 2e398795a14f5073141f103d93ccd82e61d4d7a8
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078715"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904893"
 ---
 # <a name="what39s-new-in-version-1602-of-configuration-manager"></a>Co&#39;s novinkou ve verzi 1602 Configuration Manager
 
@@ -42,9 +42,9 @@ Aktualizace 1602 pro Configuration Manager je k dispozici pouze v rámci konzoly
 > [!WARNING]  
 >  Před provedením upgradu na Windows Server 2012 R2 je nutné ze serveru odinstalovat službu WSUS 3.2.  
 >   
->  Informace o tomto důležitém kroku najdete v části "nové a změněné funkce" v tématu [Windows Server Update Services přehled](https://technet.microsoft.com/library/hh852345.aspx)v dokumentaci k Windows serveru.  
+>  Další informace o tomto důležitém kroku najdete v části "nové a změněné funkce" v tématu [přehled Windows Server Update Services](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh852345(v=ws.11)#new-and-changed-functionality).  
 
- Chcete-li upgradovat server, použijte postupy upgradu systému Windows Server 2012 R2. Po upgradu nemusíte spouštět obnovení serveru lokality Configuration Manager. Postupy upgradu najdete v tématu [Možnosti upgradu pro Windows Server 2012 R2](https://technet.microsoft.com/library/dn303416.aspx) v dokumentaci k systému Windows Server.  
+ Chcete-li upgradovat server, použijte postupy upgradu systému Windows Server 2012 R2. Po upgradu nemusíte spouštět obnovení serveru lokality Configuration Manager. Postupy upgradu najdete v tématu [Možnosti upgradu pro Windows Server 2012 R2](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn303416(v=ws.11)) v dokumentaci k systému Windows Server.  
 
 ###  <a name="sql-server-alwayson-availability-groups"></a><a name="bkmk_AOAG"></a>SQL Server skupiny dostupnosti AlwaysOn  
  Použijte SQL Server skupiny dostupnosti AlwaysOn k hostování databáze lokality v primárních lokalitách a lokalitu centrální správy jako řešení zotavení po havárii s vysokou dostupností.  
@@ -60,7 +60,7 @@ Aktualizace 1602 pro Configuration Manager je k dispozici pouze v rámci konzoly
 
 -   Když pro synchronizaci aktualizací softwaru vyberete klasifikaci **upgrady** , zobrazí se upozornění. Toto upozornění vám umožní zjistit, že se vyžaduje [oprava hotfix 3095113](https://support.microsoft.com/kb/3095113) for Windows Server Update Services (WSUS) 4,0 předtím, než budete moct úspěšně synchronizovat aktualizace softwaru, a aby Údržba Windows 10 fungovala správně. Z varovné zprávy můžete přejít na příslušný článek znalostní báze Knowledge Base.  
 
--   Dostupné upgrady Windows 10 se teď zobrazují jenom v uzlu aktualizace Windows **10** \ pro**všechny systémy Windows** 10 konzoly Configuration Manager. Tyto aktualizace se už nezobrazují v uzlu aktualizace **softwaru** \ **všechny aktualizace softwaru** v konzole nástroje.  
+-   Dostupné upgrady Windows 10 se teď zobrazují jenom v uzlu aktualizace Windows **10**  \  pro**všechny systémy Windows** 10 konzoly Configuration Manager. Tyto aktualizace se už nezobrazují v uzlu aktualizace **softwaru**  \  **všechny aktualizace softwaru** v konzole nástroje.  
 
 -   Plán údržby se považuje za vysoce rizikové nasazení a v okně **Vybrat kolekci** se zobrazují pouze vlastní kolekce, které splňují nastavení ověřování nasazení nakonfigurovaná ve vlastnostech lokality. Další informace najdete v tématu [nastavení pro správu nasazení s vysokým rizikem pro Configuration Manager](../../servers/manage/settings-to-manage-high-risk-deployments.md).  
 
@@ -142,7 +142,7 @@ Tyto aplikace se nacházejí v uzlu **aplikace** konzoly Configuration Manager.
  Podrobnosti najdete v tématu [Postup monitorování klientů](../../../core/clients/manage/monitor-clients.md).  
 
 ### <a name="refresh-pc-machine-and-user-policy-from-software-center"></a>Aktualizovat počítač PC a zásady uživatele z centra softwaru  
- Nová možnost, **zásada synchronizace**, byla přidána do stránky **Možnosti** > **Údržba počítače** v centru softwaru, která způsobí, že počítač aktualizuje svůj Configuration Manager počítač a zásady uživatele.  
+ Nová možnost, **zásada synchronizace**, byla přidána do stránky **Možnosti**  >  **Údržba počítače** v centru softwaru, která způsobí, že počítač aktualizuje svůj Configuration Manager počítač a zásady uživatele.  
 
 ### <a name="software-center-branding-changes"></a>Změny brandingu centra softwaru  
  Můžete změnit barvu, název organizace a ikonu, která se zobrazí v centru softwaru. Tato nastavení se aplikují podle následujících pravidel:  

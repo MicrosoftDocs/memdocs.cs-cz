@@ -10,12 +10,12 @@ ms.assetid: a3be4f8f-3d44-4e3c-9fa1-e85f30a36e72
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c7a505296fe51aae996d429fe7da2033d3a787ff
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 542069b82ea4c68a48ccc47b79007fd2fa25322a
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81722561"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906009"
 ---
 # <a name="which-branch-of-configuration-manager-should-i-use"></a>Kterou větev nástroje Configuration Manager mám použít?
 
@@ -47,7 +47,7 @@ Microsoft plánuje vydávat aktualizace pro Configuration Manager aktuální vě
 
 K instalaci aktuální větve jako nového webu použijte [Základní médium](../servers/manage/updates.md#bkmk_Baselines). K upgradu ze System Center 2012 Configuration Manager s aktualizací Service Pack 2 nebo System Center 2012 R2 Configuration Manager s aktualizací Service Pack 1 použijte také základní médium směrného plánu. Přístup k tomuto médiu závisí na tom, jak vaše organizace Configuration Manager licence.
 
-K instalaci nové lokality, která je zkušební edicí aktuální větve, můžete použít také základní médium. Zkušební edice nevyžaduje licenci. Zkušební edici můžete použít po dobu 180 dnů. Podporuje upgrade na licencovanou verzi aktuální větve. Pokud chcete nainstalovat jenom zkušební edici, Získejte ji z [webu TechNet Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection).
+K instalaci nové lokality, která je zkušební edicí aktuální větve, můžete použít také základní médium. Zkušební edice nevyžaduje licenci. Zkušební edici můžete použít po dobu 180 dnů. Podporuje upgrade na licencovanou verzi aktuální větve. Pokud chcete nainstalovat jenom zkušební edici, Získejte ji z [centra hodnocení](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection).
 
 > [!NOTE]
 > K instalaci lokalit pro novou hierarchii Configuration Manager použijte základní média. Pokud jste dříve nainstalovali základní verzi, aktualizujte své weby na novou verzi pomocí konzolových aktualizací.  
@@ -87,9 +87,9 @@ Pokud chcete nainstalovat LTSB jako novou lokalitu nebo jako upgrade z podporova
 > [!TIP]  
 > Informace o produktu System Center 2016 najdete v [dokumentaci k nástroji System center 2016](https://docs.microsoft.com/system-center/index). Tato dokumentace také označuje, jak získat produkt System Center 2016, který vyžaduje licenční smlouvu společnosti Microsoft nebo podobná práva.  
 >  
-> Chcete-li najít Configuration Manager verze 1606 na webu Volume Licensing Service Center (VLSC), klikněte na kartu **Stažení a klíče** [VLSC](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx), vyhledejte `System Center 2016`a potom vyberte buď **system Center 2016 Datacenter** nebo **System Center 2016 Standard**.  
+> Chcete-li najít Configuration Manager verze 1606 na webu Volume Licensing Service Center (VLSC), klikněte na kartu **Stažení a klíče** [VLSC](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx), vyhledejte `System Center 2016` a potom vyberte buď **System center 2016 Datacenter** nebo **System Center 2016 Standard**.  
 >  
-> Můžete také získat zkušební edici System Center 2016 z [webu TechNet Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-technical-preview).  
+> Můžete také získat zkušební edici System Center 2016 z [centra hodnocení](https://www.microsoft.com/evalcenter/evaluate-system-center-technical-preview).  
 
 ### <a name="features-of-the-ltsb"></a>Funkce LTSB
 
@@ -116,7 +116,7 @@ LTSB je založen na aktuální větvi verze 1606 a má následující omezení:
 
 - Instalaci LTSB můžete převést na instalaci aktuální větve. Převod na aktuální větev se podporuje před nebo po ukončení podpory pro LTSB.
 
-  Pro převod musíte mít aktivní smlouvu Software Assurance s Microsoftem. Další informace najdete v těchto článcích:
+  Pro převod musíte mít aktivní smlouvu Software Assurance s Microsoftem. Další informace najdete v následujících článcích:
 
   - [Upgrade větve dlouhodobé údržby na aktuální větev](convert-to-current-branch.md)
   - [Licencování a větve pro Configuration Manager](learn-more-editions.md)
@@ -166,6 +166,6 @@ Chcete-li zjistit verzi webu, v konzole nástroje v levém horním rohu konzoly 
 
 ### <a name="branch"></a>Větvení.
 
-Chcete-li potvrdit větev webu, v konzole nástroje klikněte na **Správa** > **Konfigurace** > lokality**lokality**a otevřete **Nastavení hierarchie**. Pokud je k dispozici aktivní možnost převodu na aktuální větev, lokalita spustí verzi LTSB. Když lokalita spustí aktuální větev, konzola tuto možnost zakáže.
+Chcete-li potvrdit větev webu, v konzole nástroje klikněte na **Správa**  >  **Konfigurace lokality**  >  **lokality**a otevřete **Nastavení hierarchie**. Pokud je k dispozici aktivní možnost převodu na aktuální větev, lokalita spustí verzi LTSB. Když lokalita spustí aktuální větev, konzola tuto možnost zakáže.
 
 Další informace o různých verzích Configuration Manager najdete v tématu [základní a aktualizační verze](../servers/manage/updates.md#bkmk_Baselines).

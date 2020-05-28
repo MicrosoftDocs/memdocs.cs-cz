@@ -10,12 +10,12 @@ ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9fd1e0bb45972bb9b3ba2a3e0bbfbb3d0509c4a8
-ms.sourcegitcommit: 56bb5419c41c2e150ffed0564350123135ea4592
+ms.openlocfilehash: bfcdd74b7b5c31e3f3ab6bb38a7ea96de9d05eec
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82729297"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905143"
 ---
 # <a name="technical-preview-for-configuration-manager"></a>Technical Preview pro Configuration Manager
 
@@ -25,7 +25,7 @@ Tento článek poskytuje podrobné informace o Configuration Manager měsíční
 
 Vzhledem k tomu, že tato verze je Technical Preview, mohou se podrobnosti a funkce změnit.
 
-Tyto informace se vztahují na všechny verze větve Configuration Manager Technical Preview. V tomto článku jsou uvedeny všechny nové funkce společně s verzí Technical Preview, ve které se poprvé zobrazí. Například verze **2001** pro leden (`01`) z 2020 (`20`). Samostatné články vyhrazené pro jednotlivé verze Preview podrobně popisují jednotlivé funkce.
+Tyto informace se vztahují na všechny verze větve Configuration Manager Technical Preview. V tomto článku jsou uvedeny všechny nové funkce společně s verzí Technical Preview, ve které se poprvé zobrazí. Například verze **2001** pro leden ( `01` ) z 2020 ( `20` ). Samostatné články vyhrazené pro jednotlivé verze Preview podrobně popisují jednotlivé funkce.
 
 Informace o novinkách v *aktuální větvi* Configuration Manager najdete v tématu [novinky v Configuration Manager přírůstkových verzích](../plan-design/changes/whats-new-incremental-versions.md).
 
@@ -74,7 +74,7 @@ Větev Technical Preview Configuration Manager podporuje následující produkty
 - Lokalita podporuje až 10 klientů, ve kterých se dá spustit libovolná [podporovaná verze operačního systému klienta](../plan-design/configs/supported-operating-systems-for-clients-and-devices.md).<!-- SCCMDocs#1656 -->
 
 > [!Note]
-> Zahrnutí těchto produktů do tohoto obsahu neznamená rozšíření podpory verze, která přesahuje životní cyklus podpory. Configuration Manager nepodporuje produkty, které přesahují životní cyklus podpory. Další informace najdete v tématu [Zásady životního cyklu Microsoftu](https://go.microsoft.com/fwlink/p/?LinkId=208270).
+> Zahrnutí těchto produktů do tohoto obsahu neznamená rozšíření podpory verze, která přesahuje životní cyklus podpory. Configuration Manager nepodporuje produkty, které přesahují životní cyklus podpory. Další informace najdete v tématu [Zásady životního cyklu Microsoftu](https://support.microsoft.com/lifecycle).
 
 ## <a name="install-and-update"></a><a name="bkmk_install"></a>Nainstalovat a aktualizovat
 
@@ -95,7 +95,7 @@ Nainstalujte základní verzi po dobu až jednoho roku po jejím vydání. Při 
 
 - **Technical Preview verze 2002**: větev Configuration Manager Technical preview verze 2002 je k dispozici jako aktualizace v konzole i jako nová základní verze.
 
-Stáhněte si základní verzi z [webu TechNet Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview).
+Stáhněte si základní verzi z [centra hodnocení](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview).
 
 ## <a name="providing-feedback"></a><a name="BKMK_TPFeedback"></a>Poskytnutí zpětné vazby
 
@@ -188,7 +188,7 @@ Následující funkce byly vydány s předchozími verzemi větve Configuration 
 
 ## <a name="see-also"></a>Viz také
 
-Další informace najdete v těchto článcích:
+Další informace najdete v následujících článcích:
 
 - [Hodnocení nástroje Configuration Manager v testovacím prostředí](evaluate-with-lab-environment.md)
 - [Co je nového v přírůstkových verzích nástroje Configuration Manager](../plan-design/changes/whats-new-incremental-versions.md)

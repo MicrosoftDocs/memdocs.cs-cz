@@ -10,12 +10,12 @@ ms.assetid: 9cbfc406-d009-446d-8fee-4938de48c919
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1e486ddd8652529000c6ec02266f677e45669111
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: cc679ec7e73e9d43902ad70e09fb2a01c95eed65
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81724192"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906887"
 ---
 # <a name="customize-boot-images-with-configuration-manager"></a>Přizpůsobení spouštěcích bitových kopií pomocí Configuration Manager
 
@@ -49,11 +49,7 @@ Každá verze Configuration Manager podporuje určitou verzi sady Windows Assess
 
 - **WinPE-WDS-Tools**: Instaluje nástroje služby pro nasazení systému Windows.  
 
-  Dostupné jsou i další balíčky prostředí Windows PE, které lze přidat. Následující zdroje poskytují další informace o volitelných součástech, které je možné přidat do spouštěcí image.  
-
-- Pro prostředí Windows PE 5 si přečtěte téma [WinPE: Přidání balíčků (reference k volitelným komponentám)](https://msdn.microsoft.com/library/windows/hardware/dn938382\(v=vs.85\).aspx).  
-
-- U systému Windows PE 3.1 si přečtěte téma [Add a Package to a Windows PE Image (Přidání balíčku do image prostředí Windows PE)](https://technet.microsoft.com/library/dd799312\(v=WS.10\).aspx) v knihovně TechNet s dokumentací k systému Windows 7.  
+  Dostupné jsou i další balíčky prostředí Windows PE, které lze přidat. Další informace o volitelných součástech, které lze přidat do spouštěcí bitové kopie, naleznete v tématu [WinPE: Přidání balíčků (odkazy na volitelné součásti)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference).
 
 > [!NOTE]
 >Při spuštění prostředí WinPE z vlastní spouštěcí image, která obsahuje nástroje, které jste přidali, můžete otevřít příkazový řádek z prostředí WinPE a zadáním názvu souboru nástroje ho spustit. Umístění těchto nástrojů se automaticky přidá do proměnné PATH. Příkazový řádek lze přidat pouze v případě, že je vybráno nastavení **Povolit podporu příkazů (pouze testování)** na kartě **vlastní nastavení** ve vlastnostech spouštěcí bitové kopie.
@@ -67,7 +63,7 @@ Každá verze Configuration Manager podporuje určitou verzi sady Windows Assess
 
 2. Stáhněte si sadu Windows ADK pro Windows 8.1 z webu [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=39982).  
 
-3. Zkopírujte spouštěcí image (wimpe. wim) z instalační složky systému Windows ADK (například <*cesta instalace*>\\<*\Windows Kit>* \Assessment a nasazení Kit\Windows předinstalační prostředí\\<*x86 nebo amd64*>\\<*>)* do cílové složky v počítači, ze kterého budete přizpůsobovat spouštěcí bitovou kopii. V tomto postupu slouží označení C:\WinPEWAIK jako název cílové složky.  
+3. Zkopírujte spouštěcí image (wimpe. wim) z instalační složky systému Windows ADK (například <*cesta instalace*> \Windows Kit \\ < *version*> \Assessment a nasazení Kit\Windows předinstalační prostředí \\ < *x86 nebo amd64* > \\ < *locale*>) do cílové složky v počítači, ze kterého budete přizpůsobovat spouštěcí bitovou kopii. V tomto postupu slouží označení C:\WinPEWAIK jako název cílové složky.  
 
 4. Pomocí nástroje DISM připojte spouštěcí image k místní složce prostředí Windows PE. Zadejte například následující příkazový řádek:  
 
@@ -76,7 +72,7 @@ Každá verze Configuration Manager podporuje určitou verzi sady Windows Assess
     Kde C:\WinPEWAIK představuje složku obsahující spouštěcí bitovou kopii a C:\WinPEMount představuje připojenou složku.  
 
    > [!NOTE]
-   >  Další informace o nástroji Obsluha a správa bitových kopií (DISM) naleznete v tématu [DISM - Deployment Image Servicing and Management Technical Reference (Technické informace o nástroji Obsluha a správa bitových kopií (DISM))](https://technet.microsoft.com/library/hh824821.aspx) v knihovně TechNet s dokumentací k systémům Windows 8.1 a Windows 8.
+   >  Další informace najdete v referenčních informacích o [nástroji DISM (Údržba a správa bitových kopií nasazení)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-reference--deployment-image-servicing-and-management).
 
 5. Po připojení spouštěcí bitové kopie do ní pomocí nástroje Obsluha a správa bitových kopií přidejte volitelné součásti. V prostředí Windows PE 5 jsou 64bitové volitelné komponenty umístěny ve složce <*Instalační_cesta*>\Windows Kits\8.1\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs.  
 
@@ -112,7 +108,7 @@ Každá verze Configuration Manager podporuje určitou verzi sady Windows Assess
     **dism.exe /image:C:\WinPEMount /add-package /packagepath:"C:\Program Files (x86)\Windows Kits\8.1\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\en-us\WinPE-WDS-Tools_en-us.cab"**  
 
    > [!TIP]
-   >  Další informace o volitelných součástech, které je možné přidat do spouštěcí bitové kopie, naleznete v tématu [Vytvoření image prostředí Windows PE s volitelnými součástmi](https://technet.microsoft.com/library/hh824926.aspx) v knihovně TechNet s dokumentací k systémům Windows 8.1 a Windows 8.  
+   >  Další informace o volitelných součástech, které můžete přidat do spouštěcí image, najdete v referenčních informacích k [volitelným součástem prostředí Windows PE](https://docs.microsoft.com/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference).
 
 6. Pomocí nástroje Obsluha a správa bitových kopií (DISM) přidejte do spouštěcí bitové kopie konkrétní ovladače, pokud je to třeba. Ovladače přidáte do spouštěcí bitové kopie zadáním následujícího řádku:  
 
@@ -136,7 +132,7 @@ Každá verze Configuration Manager podporuje určitou verzi sady Windows Assess
 
    4. Na stránce **Zdroj dat** určete následující možnosti a klikněte na tlačítko **Další**.  
 
-      - V poli **Cesta** určete cestu k souboru aktualizované spouštěcí bitové kopie. Zadaná cesta musí být platná síťová cesta ve formátu UNC. Příklad: ** \\ \\ ** <em>servername</em><em>WinPEWAIK share</em> ** **WinPEWAIK Share> \Winpe.wim.**>\\**  
+      - V poli **Cesta** určete cestu k souboru aktualizované spouštěcí bitové kopie. Zadaná cesta musí být platná síťová cesta ve formátu UNC. Příklad: **\\\\<** <em>servername</em> **>\\<** <em>WinPEWAIK Share</em> **> \Winpe.wim**.  
 
       - Vyberte spouštěcí bitovou kopii z rozevíracího seznamu **Spouštěcí bitová kopie**. Jestliže soubor WIM obsahuje více spouštěcích bitových kopií, budou v seznamu uvedeny všechny.  
 
@@ -160,7 +156,7 @@ Každá verze Configuration Manager podporuje určitou verzi sady Windows Assess
 
    4. Do příkazového řádku zadejte **wbemtest** a otevřete nástroj Testování služby WMI.  
 
-   5. Do ** \\ \\ **** \root\sms\ site_<** <em>sitecode</em> SiteCode**>** v **oboru názvů**zadejte <em>počítač poskytovatele SMS</em>> a pak klikněte na **připojit**.  
+   5. **\\\\<** Do** \root\sms\ site_<** <em>SiteCode</em> v oboru názvů zadejte <em>počítač poskytovatele SMS</em>> **>** a pak klikněte na **připojit**. **Namespace**  
 
    6. Klikněte na **Otevřít instanci**, zadejte **sms_bootimagepackage.packageID="<ID_balíčku\>"**, a poté klikněte na **OK**. Místo ID_balíčku zadejte hodnotu určenou v kroku 3.  
 
@@ -189,7 +185,7 @@ Každá verze Configuration Manager podporuje určitou verzi sady Windows Assess
 
 2. Nainstalujte doplněk Windows AIK Supplement pro Windows 7 s aktualizací SP1 do počítače z kroku 1. Doplněk Windows AIK Supplement for Windows 7 SP1 si můžete stáhnout z webu [Stažení softwaru](https://www.microsoft.com/download/details.aspx?id=5188).  
 
-3. Zkopírujte spouštěcí bitovou kopii (wimpe. wim) z instalační složky sady Windows AIK (například <*InstallationPath*> \Windows AIK\Tools\PETools\amd64\\) do složky v počítači, ze kterého budete přizpůsobovat spouštěcí bitovou kopii. V tomto postupu slouží označení C:\WinPEWAIK jako název složky.  
+3. Zkopírujte spouštěcí bitovou kopii (wimpe. wim) z instalační složky sady Windows AIK (například <*InstallationPath*> \Windows AIK\Tools\PETools\amd64 \\ ) do složky v počítači, ze kterého budete přizpůsobovat spouštěcí bitovou kopii. V tomto postupu slouží označení C:\WinPEWAIK jako název složky.  
 
 4. Pomocí nástroje DISM připojte spouštěcí image k místní složce prostředí Windows PE. Zadejte například následující příkazový řádek:  
 
@@ -198,9 +194,9 @@ Každá verze Configuration Manager podporuje určitou verzi sady Windows Assess
     Kde C:\WinPEWAIK představuje složku obsahující spouštěcí bitovou kopii a C:\WinPEMount představuje připojenou složku.  
 
    > [!NOTE]
-   >  Další informace o nástroji Obsluha a správa bitových kopií (DISM) naleznete v tématu [Deployment Image Servicing and Management Technical Reference (Technické informace o nástroji Obsluha a správa bitových kopií)](https://technet.microsoft.com/library/dd744256\(v=ws.10\).aspx) v knihovně TechNet s dokumentací k systému Windows 7.  
+   > Další informace najdete v referenčních informacích o [nástroji DISM (Údržba a správa bitových kopií nasazení)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-reference--deployment-image-servicing-and-management).
 
-5. Po připojení spouštěcí bitové kopie do ní pomocí nástroje Obsluha a správa bitových kopií přidejte volitelné součásti. V systému Windows PE 3,1 jsou například volitelné součásti umístěny ve složce <*InstallationPath*> \windows AIK\Tools\PETools\amd64\ WinPE_FPs\\.  
+5. Po připojení spouštěcí bitové kopie do ní pomocí nástroje Obsluha a správa bitových kopií přidejte volitelné součásti. V systému Windows PE 3,1 jsou například volitelné součásti umístěny ve složce <*InstallationPath*> \windows AIK\Tools\PETools\amd64\ WinPE_FPs \\ .  
 
    > [!NOTE]
    >  V tomto postupu se pro volitelné součásti používá toto umístění: C:\Program Files\Windows AIK\Tools\PETools\amd64\WinPE_FPs. Použitá cesta se může lišit v závislosti na verzi a možnostech instalace vybraných pro sadu Windows AIK.  
@@ -228,7 +224,7 @@ Každá verze Configuration Manager podporuje určitou verzi sady Windows Assess
     **dism.exe /image:C:\WinPEMount /add-package /packagepath:"C:\Program Files\Windows AIK\Tools\PETools\amd64\WinPE_FPs\en-us\winpe-wds-tools_en-us.cab"**  
 
    > [!TIP]
-   >  Další informace o různých balíčcích, které se přidávají ke spouštěcí bitové kopii, naleznete v tématu [Add a Package to a Windows PE Image (Přidání balíčku do image prostředí Windows PE)](https://technet.microsoft.com/library/dd799312\(v=WS.10\).aspx) v knihovně TechNet s dokumentací k systému Windows 7.  
+   >  Další informace o různých balíčcích, které můžete přidat do spouštěcí image, najdete v tématu [Přidání balíčku do image prostředí Windows PE](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/dd799312(v=ws.10)).
 
 6. Pomocí nástroje Obsluha a správa bitových kopií (DISM) přidejte do spouštěcí bitové kopie konkrétní ovladače, pokud je to třeba. Ovladače přidáte do spouštěcí bitové kopie zadáním následujícího řádku, pokud je to třeba:  
 
@@ -252,7 +248,7 @@ Každá verze Configuration Manager podporuje určitou verzi sady Windows Assess
 
    4. Na stránce **Zdroj dat** určete následující možnosti a klikněte na tlačítko **Další**.  
 
-      - V poli **Cesta** určete cestu k souboru aktualizované spouštěcí bitové kopie. Zadaná cesta musí být platná síťová cesta ve formátu UNC. Příklad: ** \\ \\ ** <em>servername</em><em>WinPEWAIK share</em> ** **WinPEWAIK Share> \Winpe.wim.**>\\**  
+      - V poli **Cesta** určete cestu k souboru aktualizované spouštěcí bitové kopie. Zadaná cesta musí být platná síťová cesta ve formátu UNC. Příklad: **\\\\<** <em>servername</em> **>\\<** <em>WinPEWAIK Share</em> **> \Winpe.wim**.  
 
       - Vyberte spouštěcí bitovou kopii z rozevíracího seznamu **Spouštěcí bitová kopie**. Jestliže soubor WIM obsahuje více spouštěcích bitových kopií, budou v seznamu uvedeny všechny.  
 
@@ -276,7 +272,7 @@ Každá verze Configuration Manager podporuje určitou verzi sady Windows Assess
 
    4. Do příkazového řádku zadejte **wbemtest** a otevřete nástroj Testování služby WMI.  
 
-   5. Do ** \\ \\ **** \root\sms\ site_<** <em>sitecode</em> SiteCode**>** v **oboru názvů**zadejte <em>počítač poskytovatele SMS</em>> a pak klikněte na **připojit**.  
+   5. **\\\\<** Do** \root\sms\ site_<** <em>SiteCode</em> v oboru názvů zadejte <em>počítač poskytovatele SMS</em>> **>** a pak klikněte na **připojit**. **Namespace**  
 
    6. Klikněte na **Otevřít instanci**, zadejte **sms_bootimagepackage.packageID="<ID_balíčku\>"**, a poté klikněte na **OK**. Místo ID_balíčku zadejte hodnotu určenou v kroku 3.  
 

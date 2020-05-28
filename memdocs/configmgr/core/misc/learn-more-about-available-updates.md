@@ -10,17 +10,17 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: e3f835f3fb583569cf0f2701188a787f1ce2715a
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 33c383484e79032e6b86035013538b1990322d27
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81712957"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268007"
 ---
 # <a name="learn-more-about-available-updates-for-configuration-manager"></a>Další informace o dostupných aktualizacích pro Configuration Manager
 
 *Platí pro: Configuration Manager (Current Branch)*
 
-Pokud používáte prodejní verzi Configuration Manager, přečtěte si téma [co je nového](https://technet.microsoft.com/library/mt622084.aspx) .  
+Pokud používáte prodejní verzi Configuration Manager, přečtěte si téma [co je nového](../plan-design/changes/what-has-changed-from-configuration-manager-2012.md).
 
- Pokud používáte verzi Technical Preview Configuration Manager, přečtěte si téma [Technical Preview pro Configuration Manager](https://technet.microsoft.com/library/mt595861.aspx)
+Pokud používáte verzi Technical Preview Configuration Manager, přečtěte si téma [Technical Preview pro Configuration Manager](../get-started/technical-preview.md).

@@ -10,12 +10,12 @@ ms.assetid: f7832d83-9ae2-4530-8a77-790e0845e12f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 824eaeb939249e1bcc2ed21d5815a0a72dc54797
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 46d2af2d89e41e931add0f77931b442b68835235
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81717864"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906478"
 ---
 # <a name="back-up-a-configuration-manager-site"></a>Zálohování lokality Configuration Manageru
 
@@ -71,7 +71,7 @@ Chcete-li zjednodušit proces zálohování, můžete vytvořit soubor **soubor 
 
 Můžete zálohovat lokalitu centrální správy a primární lokalitu. Sekundární lokality nebo servery systému lokality nemají úlohy zálohování.
 
-Po spuštění služby Configuration Manager Backup se postupuje podle pokynů definovaných v řídicím souboru zálohování: `<ConfigMgrInstallationFolder>\Inboxes\Smsbkup.box\Smsbkup.ctl`. Pokud chcete chování zálohovací služby změnit, můžete upravit řídicí soubor zálohování.  
+Po spuštění služby Configuration Manager Backup se postupuje podle pokynů definovaných v řídicím souboru zálohování: `<ConfigMgrInstallationFolder>\Inboxes\Smsbkup.box\Smsbkup.ctl` . Pokud chcete chování zálohovací služby změnit, můžete upravit řídicí soubor zálohování.  
 > [!NOTE]
 > Změny **Smsbkup. CTL** budou platit po restartování SMS_SITE_VSS_WRITER služby na serveru lokality.
 
@@ -86,7 +86,7 @@ Do souboru **Smsbkup.log** se zapisují stavové informace o zálohování lokal
 
 4.  Vyberte úlohu **Zálohovat server webu** a klikněte na **Upravit**.  
 
-5.  Vyberte možnost pro **Povolení této úlohy**. Klikněte na **nastavit cesty** a zadejte cílovou složku zálohy. Máte následující možnosti:  
+5.  Vyberte možnost pro **Povolení této úlohy**. Klikněte na **nastavit cesty** a zadejte cílovou složku zálohy. Máte tyto možnosti:  
 
     > [!IMPORTANT]  
     >  Aby nemohlo být se soubory zálohy manipulováno, uložte je do zabezpečeného umístění. Nejbezpečnější cestou k zálohování je místní disk, takže můžete nastavit oprávnění pro soubory NTFS ve složce. Configuration Manager nešifruje zálohovaná data uložená v cestě k záloze.  
@@ -116,7 +116,7 @@ Do souboru **Smsbkup.log** se zapisují stavové informace o zálohování lokal
 
 -   Když nakonfigurujete úlohu zálohování tak, aby při selhání vytvořila výstrahu, vyhledejte výstrahy selhání zálohování v uzlu **výstrahy** v pracovním prostoru **monitorování** .  
 
--   Na serveru lokality otevřete Průzkumníka Windows a přejděte na `<ConfigMgrInstallationFolder>\Logs`adresu. Upozornění a chyby najdete v **protokolu Smsbkup. log** . Po úspěšném dokončení zálohování lokality se v protokolu `Backup completed` zobrazí zpráva s `STATMSG: ID=5035`ID.  
+-   Na serveru lokality otevřete Průzkumníka Windows a přejděte na adresu `<ConfigMgrInstallationFolder>\Logs` . Upozornění a chyby najdete v **protokolu Smsbkup. log** . Po úspěšném dokončení zálohování lokality se v protokolu zobrazí `Backup completed` Zpráva s ID `STATMSG: ID=5035` .  
 
     > [!TIP]  
     >  Pokud se úloha zálohovací údržby nezdařila, restartujte úlohu zálohování zastavením a restartováním **SMS_SITE_BACKUP** služby systému Windows.  
@@ -137,7 +137,7 @@ Ponechte více archivů záložního snímku z následujících důvodů:
 
 
 ## <a name="using-the-afterbackupbat-file"></a>Použití souboru AfterBackup.bat  
-Po úspěšném zálohování lokality se úloha zálohování automaticky pokusí spustit skript s názvem **soubor AfterBackup. bat**. Ručně vytvořte soubor soubor AfterBackup. bat na serveru lokality v `<ConfigMgrInstallationFolder>\Inboxes\Smsbkup.box`nástroji. Pokud soubor soubor AfterBackup. bat existuje ve správné složce, spustí se automaticky po dokončení úlohy zálohování.
+Po úspěšném zálohování lokality se úloha zálohování automaticky pokusí spustit skript s názvem **soubor AfterBackup. bat**. Ručně vytvořte soubor soubor AfterBackup. bat na serveru lokality v nástroji `<ConfigMgrInstallationFolder>\Inboxes\Smsbkup.box` . Pokud soubor soubor AfterBackup. bat existuje ve správné složce, spustí se automaticky po dokončení úlohy zálohování.
 
 Soubor soubor AfterBackup. bat umožňuje archivaci záložního snímku na konci každé operace zálohování. Může automaticky provádět další úlohy po zálohování, které nejsou součástí úlohy údržby Zálohovat server webu. Soubor AfterBackup.bat integruje archiv a činnosti zálohování a zajistí tak, že každý nový snímek zálohy bude archivován.
 
@@ -172,7 +172,7 @@ Knihovna obsahu v Configuration Manager je umístění, kam se ukládají všech
 
 -   Aby bylo možné znovu distribuovat obsah do distribučních bodů, je nutné obnovit knihovnu obsahu. Po spuštění Redistribuce obsahu Configuration Manager zkopíruje soubory z knihovny obsahu serveru lokality do distribučních bodů. Další informace najdete v [knihovně obsahu](../../plan-design/hierarchy/the-content-library.md).  
 
--   Než budete moct aktualizovat obsah v distribučních bodech, je potřeba obnovit zdrojové soubory balíčku. Když začnete s aktualizací obsahu, Configuration Manager zkopíruje nové nebo změněné soubory ze zdroje balíčku do knihovny obsahu. Pak zkopíruje soubory do přidružených distribučních bodů. Spusťte následující SQL Server dotaz na databázi lokality, abyste našli zdrojové umístění balíčku pro všechny balíčky a aplikace: `SELECT * FROM v_Package`. Zdrojové umístění balíčku lze určit podle prvních tří znaků ID balíčku. Pokud je třeba ID balíčku CEN00001, kód lokality pro zdrojovou lokalitu je CEN. Když obnovíte zdrojové soubory balíčku, musí být obnoveny do stejného umístění, ve kterém se nacházely před selháním.  
+-   Než budete moct aktualizovat obsah v distribučních bodech, je potřeba obnovit zdrojové soubory balíčku. Když začnete s aktualizací obsahu, Configuration Manager zkopíruje nové nebo změněné soubory ze zdroje balíčku do knihovny obsahu. Pak zkopíruje soubory do přidružených distribučních bodů. Spusťte následující SQL Server dotaz na databázi lokality, abyste našli zdrojové umístění balíčku pro všechny balíčky a aplikace: `SELECT * FROM v_Package` . Zdrojové umístění balíčku lze určit podle prvních tří znaků ID balíčku. Pokud je třeba ID balíčku CEN00001, kód lokality pro zdrojovou lokalitu je CEN. Když obnovíte zdrojové soubory balíčku, musí být obnoveny do stejného umístění, ve kterém se nacházely před selháním.  
 
 Ověřte, zda jste do zálohy systému souborů pro server lokality zahrnuli knihovnu obsahu a zdrojové soubory balíčku.  
 
@@ -183,12 +183,12 @@ K zálohování databáze nástroje Updates Publisher použijte následující p
 
 #### <a name="back-up-the-updates-publisher-database"></a>Zálohování databáze nástroje Updates Publisher  
 
-1.  V počítači, který spouští nástroje Updates Publisher, vyhledejte soubor databáze nástroje Updates Publisher `%USERPROFILE%\AppData\Local\Microsoft\System Center Updates Publisher 2011\5.00.1727.0000\` **Scupdb. sdf** v. Pro každého uživatele, který spouští Updates Publisher, je k dispozici jiný databázový soubor.  
+1.  V počítači, který spouští nástroje Updates Publisher, vyhledejte soubor databáze nástroje Updates Publisher **Scupdb. sdf** v `%USERPROFILE%\AppData\Local\Microsoft\System Center Updates Publisher 2011\5.00.1727.0000\` . Pro každého uživatele, který spouští Updates Publisher, je k dispozici jiný databázový soubor.  
 
-2.  Zkopírujte databázový soubor do umístění zálohy. Pokud je `E:\ConfigMgr_Backup`například cílem zálohování, můžete zkopírovat soubor databáze nástroje Updates Publisher do `E:\ConfigMgr_Backup\SCUP`.  
+2.  Zkopírujte databázový soubor do umístění zálohy. Pokud je například cílem zálohování `E:\ConfigMgr_Backup` , můžete zkopírovat soubor databáze nástroje Updates Publisher do `E:\ConfigMgr_Backup\SCUP` .  
 
     > [!TIP]  
-    >  Pokud je v počítači více než jeden databázový soubor, zvažte uložení souboru do podsložky, která označuje profil uživatele přidružený k databázovému souboru. Například můžete mít jeden databázový soubor v `E:\ConfigMgr_Backup\SCUP\User1` a další databázový soubor v. `E:\ConfigMgr_Backup\SCUP\User2`  
+    >  Pokud je v počítači více než jeden databázový soubor, zvažte uložení souboru do podsložky, která označuje profil uživatele přidružený k databázovému souboru. Například můžete mít jeden databázový soubor v `E:\ConfigMgr_Backup\SCUP\User1` a další databázový soubor v `E:\ConfigMgr_Backup\SCUP\User2` .  
 
 
 
@@ -213,7 +213,7 @@ SMS Writer je služba, která během procesu zálohování komunikuje s Windows 
 ### <a name="process"></a>Proces  
 1. Služba SMS Writer je zaregistrována spolu se službou VSS a váže se k jejím rozhraním a událostem. 
 2. Když služba VSS vysílá události nebo odešle upozornění do služby SMS Writer, služba SMS Writer na upozornění odpoví a provede příslušnou akci. 
-3. Zapisovač SMS přečte řídicí soubor zálohování **Smsbkup. CTL** umístěný v `<ConfigMgrInstallationPath>\inboxes\smsbkup.box`a určí soubory a data, která mají být zálohována. 
+3. Zapisovač SMS přečte řídicí soubor zálohování **Smsbkup. CTL** umístěný v a `<ConfigMgrInstallationPath>\inboxes\smsbkup.box` určí soubory a data, která mají být zálohována. 
 4. Zapisovač SMS vytváří metadata, která se skládají z různých součástí, včetně konkrétních dat z klíče a podklíčů registru serveru SMS. 
     a. Po vyžádání pošle metadata do služby VSS. 
     b. Služba VSS pak pošle metadata do žádosti o Configuration Manager správce zálohování. 
@@ -231,7 +231,7 @@ ID zapisovače zapisovače SMS je **03ba67dd-dc6d-4729-a038-251f7018463b**.
 Služba SMS Writer musí být spuštěna pod účtem místního systému.  
 
 ### <a name="volume-shadow-copy-service"></a>Služba Stínová kopie svazku  
-VSS (Volume Shadow Copy Service) je sada rozhraní API modelu COM, umožňující zálohování svazku, zatímco aplikace v systému mohou do svazků stále zapisovat. Služba VSS nabízí jednotné rozhraní, pomocí kterého je možné koordinovat uživatelské aplikace, aktualizující data na disku (služba SMS Writer), a aplikace provádějící zálohování (služba Správce zálohování). Další informace najdete v [Služba Stínová kopie svazku](https://go.microsoft.com/fwlink/p/?LinkId=241968).  
+VSS (Volume Shadow Copy Service) je sada rozhraní API modelu COM, umožňující zálohování svazku, zatímco aplikace v systému mohou do svazků stále zapisovat. Služba VSS nabízí jednotné rozhraní, pomocí kterého je možné koordinovat uživatelské aplikace, aktualizující data na disku (služba SMS Writer), a aplikace provádějící zálohování (služba Správce zálohování). Další informace najdete v [Služba Stínová kopie svazku](https://docs.microsoft.com/windows-server/storage/file-server/volume-shadow-copy-service).  
 
 
 

@@ -10,12 +10,12 @@ ms.assetid: 3e1ddb65-1193-46ce-a7c0-a48dfd9fd833
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 04981e944b838f89af2383678c94e620aaefd7f0
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: a52b70b0a753036c506e5d515cbac048d6771295
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81719320"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83879052"
 ---
 # <a name="whats-new-in-version-1910-of-configuration-manager-current-branch"></a>Co je nového ve verzi 1910 Configuration Manager Current Branch
 
@@ -46,7 +46,7 @@ Následující řešení pro správu Microsoft jsou teď součástí značky Mic
 - [Intune](https://docs.microsoft.com/intune)
 - [Desktop Analytics](../../../desktop-analytics/overview.md)
 - [Autopilot](https://docs.microsoft.com/intune/enrollment/enrollment-autopilot)
-- Další funkce v [konzole správce správy zařízení](https://go.microsoft.com/fwlink/?linkid=2109094)
+- Další funkce v [konzole správce správy zařízení](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/microsoft-intune-rolls-out-an-improved-streamlined-endpoint/ba-p/937760)
 
 Další informace najdete v následujících příspěvcích od Brada Anderson, což je Microsoft Corporate viceprezident pro Microsoft 365:
 
@@ -123,7 +123,7 @@ Když v Configuration Manager distribučních bodech povolíte propojenou mezipa
 Další informace najdete v tématu věnovaném [mezipaměti připojené k Microsoftu v Configuration Manager](../hierarchy/microsoft-connected-cache.md#bkmk_intune).
 
 > [!NOTE]
-> Configuration Manager aktuální větve verze 1906 zahrnovala [optimalizaci doručování do síťové mezipaměti](../hierarchy/microsoft-connected-cache.md) (DOINC), aplikace nainstalovaná v systému Windows Server, který je stále ve vývoji. Od aktuální větve verze 1910 je tato funkce nyní označována jako propojená s mezipamětí Microsoft.
+> Configuration Manager aktuální větve verze 1906 zahrnovala [optimalizaci doručování do síťové mezipaměti](../hierarchy/microsoft-connected-cache.md), aplikace nainstalovaná v systému Windows Server, která je stále ve vývoji. Od aktuální větve verze 1910 je tato funkce nyní označována jako propojená s mezipamětí Microsoft.
 >
 > Když nainstalujete připojenou mezipaměť do distribučního bodu Configuration Manager, přesměruje provoz služby optimalizace doručení do místních zdrojů. Propojená mezipaměť dělá toto chování efektivně při ukládání obsahu do mezipaměti na úrovni bajtového rozsahu.
 

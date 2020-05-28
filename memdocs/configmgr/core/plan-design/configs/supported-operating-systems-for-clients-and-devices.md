@@ -10,12 +10,12 @@ ms.assetid: 87f4e041-67df-4c61-aa98-7444faffe565
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 57c60fcdadf3e58b59d33ecf2753789122a38ecc
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: e9e0ec6df5f80b318cb78ed8cddc986b613230e1
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078681"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904536"
 ---
 # <a name="supported-os-versions-for-clients-and-devices-for-configuration-manager"></a>Podporované verze operačních systémů pro klienty a zařízení pro Configuration Manager
 
@@ -54,7 +54,7 @@ Pokud v tomto scénáři požadujete zásady uživatele a souhlasíte s případ
 
 - Ve verzi 1910 a novější použijte [nastavení klienta](../../clients/deploy/configure-client-settings.md). Ve skupině **zásad klienta** nakonfigurujte následující nastavení: **Povolit zásady uživatele pro více uživatelských relací**.<!-- 4737447 -->
 
-- Ve verzi 1906 použijte sadu Configuration Manager SDK se [třídou WMI serveru SMS_PolicyAgentConfig](../../../develop/reference/core/clients/config/sms_policyagentconfig-server-wmi-class.md). Nastavte novou `PolicyEnableUserPolicyOnTS` vlastnost na `true`.
+- Ve verzi 1906 použijte sadu Configuration Manager SDK se [třídou WMI serveru SMS_PolicyAgentConfig](../../../develop/reference/core/clients/config/sms_policyagentconfig-server-wmi-class.md). Nastavte novou `PolicyEnableUserPolicyOnTS` vlastnost na `true` .
 
 > [!Note]  
 > Spolusprávu nemůžete použít u klienta s Windows 10 Enterprise více relacemi. <!-- SCCMDocs-pr#3950 -->
@@ -209,7 +209,7 @@ Další informace najdete v tématu [nasazení klientů na počítače Mac](../.
 > [!Important]  
 > Configuration Manager verze 1902 vyřazuje podporu pro systémy Linux a UNIX jako klienta. Vyřazení bylo oznámeno [verzí 1802](../changes/whats-new-in-version-1802.md#deprecation-announcement-for-linux-and-unix-client-support). Zvažte Microsoft Azure správu pro správu serverů se systémem Linux. Řešení Azure mají rozsáhlou podporu pro Linux, která ve většině případů překračuje Configuration Manager funkce, včetně ucelené správy oprav pro Linux.
 
-Instalační balíčky klienta systému Linux a UNIX nejsou dodávány s Configuration Managerm médiem. Stáhněte si **klienty pro další operační systémy** z [webu Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=525184). Kromě instalačních balíčků klienta zahrnuje stažení klienta také skript, který spravuje instalaci klienta v každém počítači.  
+Instalační balíčky klienta systému Linux a UNIX nejsou dodávány s Configuration Managerm médiem. Stáhněte si **klienty pro další operační systémy** z [webu Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=47719). Kromě instalačních balíčků klienta zahrnuje stažení klienta také skript, který spravuje instalaci klienta v každém počítači.  
 
 ### <a name="requirements-and-limitations"></a>Požadavky a omezení
 
@@ -229,89 +229,89 @@ Následující verze jsou podporovány pomocí uvedeného souboru. tar.
 
 |Verze|Soubor TAR|  
 |-|-|  
-|Verze 6,1 (výkon)|ccm-Aix61ppc. &lt;Build\>. tar|  
-|Verze 7,1 (výkon)|ccm-Aix71ppc. &lt;Build\>. tar|  
+|Verze 6,1 (výkon)|ccm-Aix61ppc. &lt; Build \> . tar|  
+|Verze 7,1 (výkon)|ccm-Aix71ppc. &lt; Build \> . tar|  
 
 #### <a name="centos"></a>CentOS  
 
 |Verze|Soubor TAR|  
 |-|-|  
-|Verze 5 x86|ccm-Universalx86. &lt;Build\>. tar|  
-|Verze 5 x64|ccm-Universalx64. &lt;Build\>. tar|  
-|Verze 6 x86|ccm-Universalx86. &lt;Build\>. tar|  
-|Verze 6 x64|ccm-Universalx64. &lt;Build\>. tar|  
-|Verze 7 x64|ccm-Universalx64. &lt;Build\>. tar|  
+|Verze 5 x86|ccm-Universalx86. &lt; Build \> . tar|  
+|Verze 5 x64|ccm-Universalx64. &lt; Build \> . tar|  
+|Verze 6 x86|ccm-Universalx86. &lt; Build \> . tar|  
+|Verze 6 x64|ccm-Universalx64. &lt; Build \> . tar|  
+|Verze 7 x64|ccm-Universalx64. &lt; Build \> . tar|  
 
 #### <a name="debian"></a>Debian  
 
 |Verze|Soubor TAR|  
 |-|-|  
-|Verze 5 x86|ccm-Universalx86. &lt;Build\>. tar|  
-|Verze 5 x64|ccm-Universalx64. &lt;Build\>. tar|  
-|Verze 6 x86|ccm-Universalx86. &lt;Build\>. tar|  
-|Verze 6 x64|ccm-Universalx64. &lt;Build\>. tar|  
-|Verze 7 x86|ccm-Universalx86. &lt;Build\>. tar|  
-|Verze 7 x64|ccm-Universalx64. &lt;Build\>. tar|  
-|Verze 8 x86|ccm-Universalx86. &lt;Build\>. tar|  
-|Verze 8 x64|ccm-Universalx64. &lt;Build\>. tar|  
+|Verze 5 x86|ccm-Universalx86. &lt; Build \> . tar|  
+|Verze 5 x64|ccm-Universalx64. &lt; Build \> . tar|  
+|Verze 6 x86|ccm-Universalx86. &lt; Build \> . tar|  
+|Verze 6 x64|ccm-Universalx64. &lt; Build \> . tar|  
+|Verze 7 x86|ccm-Universalx86. &lt; Build \> . tar|  
+|Verze 7 x64|ccm-Universalx64. &lt; Build \> . tar|  
+|Verze 8 x86|ccm-Universalx86. &lt; Build \> . tar|  
+|Verze 8 x64|ccm-Universalx64. &lt; Build \> . tar|  
 
 #### <a name="hp-ux"></a>HP-UX  
 
 |Verze|Soubor TAR|  
 |-|-|  
-|11iv3 verze IA64|ccm-HpuxB. 11.31 I64. &lt;Build\>. tar|  
+|11iv3 verze IA64|ccm-HpuxB. 11.31 I64. &lt; Build \> . tar|  
 
 #### <a name="oracle-linux"></a>Oracle Linux  
 
 |Verze|Soubor TAR|  
 |-|-|  
-|Verze 5 x86|ccm-Universalx86. &lt;Build\>. tar|  
-|Verze 5 x64|ccm-Universalx64. &lt;Build\>. tar|  
-|Verze 6 x86|ccm-Universalx86. &lt;Build\>. tar|  
-|Verze 6 x64|ccm-Universalx64. &lt;Build\>. tar|  
-|Verze 7 x64|ccm-Universalx64. &lt;Build\>. tar|  
+|Verze 5 x86|ccm-Universalx86. &lt; Build \> . tar|  
+|Verze 5 x64|ccm-Universalx64. &lt; Build \> . tar|  
+|Verze 6 x86|ccm-Universalx86. &lt; Build \> . tar|  
+|Verze 6 x64|ccm-Universalx64. &lt; Build \> . tar|  
+|Verze 7 x64|ccm-Universalx64. &lt; Build \> . tar|  
 
 #### <a name="red-hat-enterprise-linux-rhel"></a>Red Hat Enterprise Linux (RHEL)  
 
 |Verze|Soubor TAR|  
 |-|-|  
-|Verze 5 x86|ccm-Universalx86. &lt;Build\>. tar|  
-|Verze 5 x64|ccm-Universalx64. &lt;Build\>. tar|  
-|Verze 6 x86|ccm-Universalx86. &lt;Build\>. tar|  
-|Verze 6 x64|ccm-Universalx64. &lt;Build\>. tar|  
-|Verze 7 x64|ccm-Universalx64. &lt;Build\>. tar|  
+|Verze 5 x86|ccm-Universalx86. &lt; Build \> . tar|  
+|Verze 5 x64|ccm-Universalx64. &lt; Build \> . tar|  
+|Verze 6 x86|ccm-Universalx86. &lt; Build \> . tar|  
+|Verze 6 x64|ccm-Universalx64. &lt; Build \> . tar|  
+|Verze 7 x64|ccm-Universalx64. &lt; Build \> . tar|  
 
 #### <a name="solaris"></a>Solaris  
 
 |Verze|Soubor TAR|  
 |-|-|  
-|Verze 10 x86|ccm-Sol10x86. &lt;Build\>. tar|  
-|Verze 10 SPARC|ccm-Sol10sparc. &lt;Build\>. tar|  
-|Verze 11 x86|ccm-Sol11x86. &lt;Build\>. tar|  
-|SPARC verze 11|ccm-Sol11sparc. &lt;Build\>. tar|  
+|Verze 10 x86|ccm-Sol10x86. &lt; Build \> . tar|  
+|Verze 10 SPARC|ccm-Sol10sparc. &lt; Build \> . tar|  
+|Verze 11 x86|ccm-Sol11x86. &lt; Build \> . tar|  
+|SPARC verze 11|ccm-Sol11sparc. &lt; Build \> . tar|  
 
 #### <a name="suse-linux-enterprise-server-sles"></a>SUSE Linux Enterprise Server (SLES)  
 
 |Verze|Soubor TAR|  
 |-|-|  
-|Verze 10 SP1 x86|ccm-Universalx86. &lt;Build\>. tar|  
-|Verze 10 SP1 x64|ccm-Universalx64. &lt;Build\>. tar|  
-|Verze 11 SP1 – x86|ccm-Universalx86. &lt;Build\>. tar|  
-|Verze 11 SP1 x64|ccm-Universalx64. &lt;Build\>. tar|  
-|Verze 12 x64|ccm-Universalx64. &lt;Build\>. tar|  
+|Verze 10 SP1 x86|ccm-Universalx86. &lt; Build \> . tar|  
+|Verze 10 SP1 x64|ccm-Universalx64. &lt; Build \> . tar|  
+|Verze 11 SP1 – x86|ccm-Universalx86. &lt; Build \> . tar|  
+|Verze 11 SP1 x64|ccm-Universalx64. &lt; Build \> . tar|  
+|Verze 12 x64|ccm-Universalx64. &lt; Build \> . tar|  
 
 #### <a name="ubuntu"></a>Ubuntu  
 
 |Verze|Soubor TAR|  
 |-|-|  
-|Verze 10,04 LTS x86|ccm-Universalx86. &lt;Build\>. tar|  
-|Verze 10,04 LTS x64|ccm-Universalx64. &lt;Build\>. tar|  
-|Verze 12,04 LTS x86|ccm-Universalx86. &lt;Build\>. tar|  
-|Verze 12,04 LTS x64|ccm-Universalx64. &lt;Build\>. tar|  
-|Verze 14,04 LTS x86|ccm-Universalx86. &lt;Build\>. tar|  
-|Verze 14,04 LTS x64|ccm-Universalx64. &lt;Build\>. tar|  
-|Verze 16,04 LTS x86|ccm-Universalx86. &lt;Build\>. tar|  
-|Verze 16,04 LTS x64|ccm-Universalx64. &lt;Build\>. tar|  
+|Verze 10,04 LTS x86|ccm-Universalx86. &lt; Build \> . tar|  
+|Verze 10,04 LTS x64|ccm-Universalx64. &lt; Build \> . tar|  
+|Verze 12,04 LTS x86|ccm-Universalx86. &lt; Build \> . tar|  
+|Verze 12,04 LTS x64|ccm-Universalx64. &lt; Build \> . tar|  
+|Verze 14,04 LTS x86|ccm-Universalx86. &lt; Build \> . tar|  
+|Verze 14,04 LTS x64|ccm-Universalx64. &lt; Build \> . tar|  
+|Verze 16,04 LTS x86|ccm-Universalx86. &lt; Build \> . tar|  
+|Verze 16,04 LTS x64|ccm-Universalx64. &lt; Build \> . tar|  
 
 
 ## <a name="on-premises-mdm"></a><a name="bkmk_OnpremOS"></a>Místní MDM
