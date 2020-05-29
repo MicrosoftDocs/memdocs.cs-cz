@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/13/2019
+ms.date: 05/28/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -15,12 +15,12 @@ ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: ea67d432f3f418b4ecc592462d93e7d4da3676f6
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 80a26e10a3c05436699d3cafb3c4564e73099c07
+ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79327407"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84165834"
 ---
 # <a name="application-protection-policies-and-work-profiles-on-android-enterprise-devices-in-intune"></a>Zásady ochrany aplikací a pracovní profily na zařízeních s Androidem Enterprise v Intune
 
@@ -102,7 +102,7 @@ Vyžadujete například, aby koncoví uživatelé při otevírání pracovní ap
 
 ### <a name="control-multi-identity-behavior-in-work-profiles"></a>Řízení chování více identit v pracovních profilech
 
-Aplikace Office, jako je například Outlook a OneDrive, mají chování s více identitami. V rámci jedné instance aplikace může koncový uživatel přidat připojení k více jedinečným účtům nebo umístěním cloudového úložiště. V rámci aplikace lze data získaná z těchto umístění oddělit nebo sloučit. A uživatel může kontext přepnout mezi osobními identitami (user@outlook.com) a identitami organizaceuser@contoso.com().
+Aplikace Office, jako je například Outlook a OneDrive, mají chování s více identitami. V rámci jedné instance aplikace může koncový uživatel přidat připojení k více jedinečným účtům nebo umístěním cloudového úložiště. V rámci aplikace lze data získaná z těchto umístění oddělit nebo sloučit. A uživatel může kontext přepnout mezi osobními identitami ( user@outlook.com ) a identitami organizace ( user@contoso.com ).
 
 Pokud používáte pracovní profily, možná budete chtít zakázat toto chování s více identitami. Když ho zakážete, budou se s označením instance aplikace v pracovním profilu moct konfigurovat jenom s identitou organizace. Použijte nastavení konfigurace aplikace povolených účtů pro podporu aplikací Office pro Android.
 

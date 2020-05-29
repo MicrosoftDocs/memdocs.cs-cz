@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 8251e21c7eccb87b764af75e883018bdc894ca37
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 4536adad3114b944baa6c75ac4e246ecddf4a2d2
+ms.sourcegitcommit: 555cb8102715afbe06c4de5fdbc943608f00b52c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268670"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84153464"
 ---
 # <a name="group-policy-settings-for-desktop-analytics"></a>Nastavení zásad skupiny pro desktopovou analýzu
 
@@ -34,7 +34,7 @@ Configuration Manager nastavuje zásady systému Windows v jednom nebo obou nás
 
 - Preference **místních** zásad:`HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection`
 
-| Zásady | Cesta | Platí pro | Hodnota |
+| Zásada | Cesta | Platí pro | Hodnota |
 |--------|------|------------|-------|
 | **CommercialId** | Local | Všechny verze systému Windows | Aby se zařízení zobrazilo v Desktop Analytics, nakonfigurujte ho pomocí komerčního ID vaší organizace. |
 | **AllowTelemetry**  | GPO | Windows 10 | Nastaveno `1` pro **základní**, `2` **Rozšířené**nebo `3` pro **Úplná** diagnostická data. Desktop Analytics vyžaduje aspoň základní diagnostická data. Microsoft doporučuje použití rozšířené (omezené) úrovně s desktopovou analýzou. Další informace najdete v tématu [Konfigurace diagnostických dat Windows ve vaší organizaci](https://docs.microsoft.com/windows/configuration/configure-windows-diagnostic-data-in-your-organization). |
@@ -80,7 +80,7 @@ Nastavení zásad skupiny v následující tabulce má největší potenciál v 
 | **Konfigurace komerčního ID** | CommercialId | Pokud nastavíte tuto zásadu na jinou hodnotu, přepíše komerční ID nastavené Configuration Manager. Pokud se nejedná o stejné ID, nakonfigurované zařízení se nemusí zobrazit v Desktop Analytics. |
 | **Povolení telemetrie** | AllowTelemetry | Pokud nastavíte tuto zásadu na jinou hodnotu, přepíše globální úroveň diagnostických dat, kterou jste nastavili v Configuration Manager pro cílovou kolekci. |
 | **Omezit rozšířená diagnostická data na minimum vyžadované službou Windows Analytics** | LimitEnhancedDiagnosticDataWindowsAnalytics | Tato zásada je závislá na předchozím nastavení AllowTelemetry. V závislosti na úrovni, kterou jste nastavili v Configuration Manager nebo se zásadami skupiny, může tato zásada změnit úroveň diagnostických dat v zařízení na hodnotu **Rozšířené** nebo **Rozšířené (s omezením)**. Tato zásada platí jenom v případě, že je AllowTelemetry nastavené na `2` (**Rozšířené**). |
-| **Povolí odeslání názvu zařízení v diagnostických datech Windows.** | AllowDeviceNameInTelemetry | Pokud se přihlásíte k odesílání názvů zařízení v Configuration Manager, můžete ji přepsat b konfigurací této zásady na zakázáno. Když toto nastavení zakážete, v části Desktop Analytics se názvy zařízení zobrazí jako neznámé. Další informace najdete v tématu [název zařízení](enroll-devices.md#device-name). |
+| **Povolí odeslání názvu zařízení v diagnostických datech Windows.** | AllowDeviceNameInTelemetry | Pokud se rozhodnete, že chcete odesílat názvy zařízení v Configuration Manager, můžete je přepsat konfigurací této zásady na zakázáno. Když toto nastavení zakážete, v části Desktop Analytics se názvy zařízení zobrazí jako neznámé. Další informace najdete v tématu [název zařízení](enroll-devices.md#device-name). |
 | **Konfigurace použití ověřeného proxy serveru pro prostředí a službu telemetrie připojené uživatele** | DisableEnterpriseAuthProxy | Pokud nakonfigurujete Configuration Manager zařízení na používání uživatelem ověřeného proxy serveru ( `0` ), pokud pak tuto zásadu nakonfigurujete tak, aby se **zakázalo použití ověřeného serveru proxy** ( `1` ), odešle zařízení diagnostická data v kontextu systému místo kontextu uživatele. Pokud zařízení nekonfigurujete na proxy serveru v kontextu systému nebo pokud se zařízení nedokáže ověřit na proxy serveru, Windows nemůže odeslat diagnostická data do nástroje Desktop Analytics. |
 
 > [!NOTE]

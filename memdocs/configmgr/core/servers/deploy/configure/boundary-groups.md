@@ -10,12 +10,12 @@ ms.assetid: 5db2926f-f03e-49c7-b44b-e89b1a5a6779
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: ce77c43f49556b3a60e36f05127f82d4d135762a
-ms.sourcegitcommit: 2aa97d1b6409575d731c706faa2bc093c2b298c4
+ms.openlocfilehash: c9567cc441636bbda31262e0857e2fc6484c2af7
+ms.sourcegitcommit: 555cb8102715afbe06c4de5fdbc943608f00b52c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82643264"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84153401"
 ---
 # <a name="configure-boundary-groups-for-configuration-manager"></a>Konfigurace skupin hranic pro Configuration Manager
 
@@ -103,7 +103,7 @@ Když klient nemůže najít dostupný systém lokality, začne hledat umístěn
 
 ### <a name="the-default-site-boundary-group"></a>Výchozí skupina hranic lokality
 
-Můžete vytvořit vlastní skupiny hranic a každá lokalita má výchozí skupinu hranic lokality, kterou Configuration Manager vytvoří. Tato skupina má název **Default-site-hranice-Group&lt;SiteCode>**. Například skupina pro web ABC by se jmenovala **Default-site-hranice-&lt;Group ABC>**.
+Můžete vytvořit vlastní skupiny hranic a každá lokalita má výchozí skupinu hranic lokality, kterou Configuration Manager vytvoří. Tato skupina má název **Default-site-hranice-Group &lt; SiteCode>**. Například skupina pro web ABC by se jmenovala **Default-site-hranice-Group &lt; ABC>**.
 
 Pro každou skupinu hranic, kterou vytvoříte, Configuration Manager automaticky vytvoří implicitní odkaz na každou výchozí skupinu hranic lokality v hierarchii.  
 
@@ -154,8 +154,16 @@ Pokud nakonfigurujete obsah pro distribuci na vyžádání a není k dispozici v
 
 ### <a name="client-installation"></a><a name="bkmk_ccmsetup"></a>Instalace klienta
 
+Instalační program klienta Configuration Manager, program CCMSetup, může získat obsah instalace z místního zdroje nebo přes bod správy. Jeho počáteční chování závisí na parametrech příkazového řádku, které použijete k instalaci klienta:<!-- MEMDocs#286 -->
+
+- Pokud nepoužijete parametry **/MP** ani **/source** , program CCMSetup se pokusí získat seznam bodů správy ze služby Active Directory nebo DNS.
+- Pokud zadáte jenom **/source**, vynutí instalaci ze zadané cesty. Neobjevují body správy. Pokud nemůže najít soubor CCMSetup. cab v zadané cestě, program CCMSetup se nezdařil.
+- Pokud zadáte obě **/MP** i **/source**, zkontroluje zadané body správy a všechny zjistí. Pokud nemůže najít platný bod správy, přejde zpět na zadanou zdrojovou cestu.
+
+Další informace o těchto parametrech CCMSetup najdete v tématu [parametry a vlastnosti instalace klienta](../../../clients/deploy/about-client-installation-properties.md).
+
 <!--1358840-->
-Při instalaci klienta Configuration Manager se proces CCMSetup spojí s bodem správy, aby vyhledal potřebný obsah. Bod správy vrátí distribuční body na základě konfigurace hraniční skupiny. Pokud definujete vztahy na hraniční skupině, bod správy vrátí distribuční body v následujícím pořadí:
+Když se CCMSetup spojí s bodem správy, aby vyhledal potřebný obsah, bod správy vrátí distribuční body na základě konfigurace hraniční skupiny. Pokud definujete vztahy na hraniční skupině, bod správy vrátí distribuční body v následujícím pořadí:
 
 1. Aktuální skupina hranic  
 2. Sousední skupiny hranic  
@@ -241,16 +249,16 @@ Běžné scénáře pro povolení této možnosti:
 
 - Máte jednu velkou skupinu hranic pro všechna Odloučená pracoviště. Tuto možnost povolte a klienti sdílejí obsah v rámci podsítě jenom na vzdáleném pracovišti místo rizikového sdílení obsahu mezi umístěními.
 
-Počínaje verzí 2002 můžete v závislosti na konfiguraci sítě vyloučit určité podsítě pro porovnání. Například chcete zahrnout hranici, ale vyloučit konkrétní podsíť VPN. Ve výchozím nastavení Configuration Manager vyloučí výchozí podsíť Teredo (`2001:0000:%`).<!--3555777-->
+Počínaje verzí 2002 můžete v závislosti na konfiguraci sítě vyloučit určité podsítě pro porovnání. Například chcete zahrnout hranici, ale vyloučit konkrétní podsíť VPN. Ve výchozím nastavení Configuration Manager vyloučí výchozí podsíť Teredo ( `2001:0000:%` ).<!--3555777-->
 
 > [!NOTE]
 > Když při [rozšíření samostatné primární lokality](../install/prerequisites-for-installing-sites.md#bkmk_expand) do verze 2002 přidáte lokalitu centrální správy (CAS), seznam vyloučení podsítě se vrátí k výchozímu. Pokud chcete tento problém obejít, po rozšíření lokality spusťte PowerShellový skript, který přizpůsobuje seznam vyloučení podsítí na certifikačních autoritách.<!-- 6309068 -->
 
-Importujte seznam vyloučení podsítí jako řetězec podsítě oddělený čárkami. Použijte symbol procenta (`%`) jako zástupný znak. Na serveru lokality nejvyšší úrovně nastavte nebo přečtěte vlastnost **SubnetExclusionList** Embedded pro součást **SMS_HIERARCHY_MANAGER** ve třídě **SMS_SCI_Component** . Další informace najdete v tématu [SMS_SCI_Component serverové třídy služby WMI](../../../../develop/reference/core/servers/configure/sms_sci_component-server-wmi-class.md).
+Importujte seznam vyloučení podsítí jako řetězec podsítě oddělený čárkami. Použijte symbol procenta ( `%` ) jako zástupný znak. Na serveru lokality nejvyšší úrovně nastavte nebo přečtěte vlastnost **SubnetExclusionList** Embedded pro součást **SMS_HIERARCHY_MANAGER** ve třídě **SMS_SCI_Component** . Další informace najdete v tématu [SMS_SCI_Component serverové třídy služby WMI](../../../../develop/reference/core/servers/configure/sms_sci_component-server-wmi-class.md).
 
 ##### <a name="sample-powershell-script-to-update-the-subnet-exclusion-list"></a>Ukázkový skript PowerShellu pro aktualizaci seznamu vyloučení podsítě
 
-Následující skript představuje vzorový způsob, jak tuto hodnotu změnit. Přidejte podsítě do proměnné **PropertyValue** po `2001:0000:%,172.16.16.0`. Je to řetězec oddělený čárkami. Spusťte tento skript na serveru lokality nejvyšší úrovně ve vaší hierarchii.
+Následující skript představuje vzorový způsob, jak tuto hodnotu změnit. Přidejte podsítě do proměnné **PropertyValue** po `2001:0000:%,172.16.16.0` . Je to řetězec oddělený čárkami. Spusťte tento skript na serveru lokality nejvyšší úrovně ve vaší hierarchii.
 
 ```PowerShell
 $PropertyValue = "2001:0000:%,172.16.16.0"
@@ -469,7 +477,7 @@ Už nemusíte konfigurovat jednotlivé distribuční body, aby byly rychlé nebo
 
 ### <a name="new-default-boundary-group-at-each-site"></a>Nová výchozí skupina hranic v každé lokalitě
 
-Každá primární lokalita má novou výchozí skupinu hranic s názvem **Default-site-hranice-&lt;Group SiteCode>**. Pokud klient nástroje není v síťovém umístění, které je přiřazeno ke skupině hranic, používá systémy lokality přidružené k výchozí skupině ze své přiřazené lokality. Naplánujte použití této skupiny hranic jako náhrady za koncept záložního umístění obsahu.
+Každá primární lokalita má novou výchozí skupinu hranic s názvem **Default-site-hranice-Group &lt; SiteCode>**. Pokud klient nástroje není v síťovém umístění, které je přiřazeno ke skupině hranic, používá systémy lokality přidružené k výchozí skupině ze své přiřazené lokality. Naplánujte použití této skupiny hranic jako náhrady za koncept záložního umístění obsahu.
 
 #### <a name="allow-fallback-source-locations-for-content-is-removed"></a>Odebrat **záložní umístění zdrojů pro obsah** je odebráno.
 

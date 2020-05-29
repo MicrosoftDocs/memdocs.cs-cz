@@ -6,7 +6,7 @@ keywords: Intune Data Warehouse
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/03/2020
+ms.date: 05/26/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 04521681ee6e262f4634cfc96560a5922ce1b8c0
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: ef0ba25d697bca6d6a6af7aad3565e6c2c70841e
+ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79331831"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84165936"
 ---
 # <a name="intune-data-warehouse-api-endpoint"></a>Koncový bod rozhraní API datového skladu Intune
 
@@ -53,7 +53,7 @@ Adresa URL obsahuje následující prvky:
 |-------------------|------------|--------------------------------------------------------------------------------------------------------------------|
 | location | msua06 | Základní adresu URL můžete najít zobrazením okna rozhraní API datového skladu na webu Azure Portal. |
 | kolekce-entit | devicePropertyHistories | Název kolekce entit OData Další informace o kolekcích a entitách v datovém modelu najdete v tématu [Datový model](reports-ref-data-model.md). |
-| verze-api | beta | Verze je verzí rozhraní API, ke kterému přistupujete. Další informace najdete v tématu [Verze](reports-api-url.md#api-version-information). |
+| verze-api | beta verze | Verze je verzí rozhraní API, ke kterému přistupujete. Další informace najdete v tématu [Verze](reports-api-url.md#api-version-information). |
 | maxhistorydays | 7 | (Volitelné) Maximální počet dní, pro které se načte historie. Tento parametr lze zadat pro jakoukoli kolekci, ale bude mít účinek jenom u kolekcí, jejichž klíčová vlastnost zahrnuje `dateKey`. Další informace najdete v části [Filtry rozsahu DateKey](reports-api-url.md#datekey-range-filters). |
 
 ## <a name="api-version-information"></a>Informace o verzi rozhraní API
@@ -64,7 +64,7 @@ Nejnovější funkce datového skladu můžete vyzkoušet pomocí beta verze. Po
 
 ## <a name="odata-query-options"></a>Možnosti dotazu OData
 
-Aktuální verze podporuje tyto parametry dotazu OData `$filter`:, `$select`, `$skip,` a. `$top` V `$filter`, nebo `DateKey` `RowLastModifiedDateTimeUTC` může být podporován pouze v případě, že jsou sloupce použity a další vlastnosti by aktivovaly chybný požadavek.
+Aktuální verze podporuje tyto parametry dotazu OData: `$filter` , `$select` , `$skip,` a `$top` . V `$filter` , `DateKey` nebo `RowLastModifiedDateTimeUTC` může být podporován pouze v případě, že jsou sloupce použity a další vlastnosti by aktivovaly chybný požadavek.
 
 ## <a name="datekey-range-filters"></a>Filtry rozsahu DateKey
 
@@ -78,8 +78,8 @@ Filtry rozsahu `DateKey` se dají použít k omezení množství dat ke stažen�
 > [!NOTE]
 > Příklady filtru předpokládají, že dnes je 2/21/2019.
 
-|                             Filtr                             |           Optimalizace výkonu           |                                          Popis                                          |
-|:--------------------------------------------------------------:|:--------------------------------------------:|:---------------------------------------------------------------------------------------------:|
+|                             Filtrovat                             |           Optimalizace výkonu           |                                          Popis                                          |
+|----------------------------------------------------------------|----------------------------------------------|-----------------------------------------------------------------------------------------------|
 |    `maxhistorydays=7`                                            |    Do bloku                                      |    Vrátí data s hodnotou `DateKey` mezi 20180214 a 20180221.                                     |
 |    `$filter=DateKey eq 20180214`                                 |    Do bloku                                      |    Vrátí data s hodnotou `DateKey` rovnající se 20180214.                                                    |
 |    `$filter=DateKey ge 20180214 and DateKey lt 20180221`         |    Do bloku                                      |    Vrátí data s hodnotou `DateKey` mezi 20180214 a 20180220.                                     |

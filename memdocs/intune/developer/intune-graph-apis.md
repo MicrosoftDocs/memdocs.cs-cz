@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0412f15912ac9017ebc49f974ec621d86f8b6c0e
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: b87b2528dce4d007f2a2031a11fd69ea774c2033
+ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989093"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84165902"
 ---
 # <a name="how-to-use-azure-ad-to-access-the-intune-apis-in-microsoft-graph"></a>Používání Azure AD pro přístup k rozhraním Intune API v Microsoft Graphu
 
@@ -143,7 +143,7 @@ Další informace najdete v tématech:
 Když udělujete oprávnění pro Microsoft Graph, můžete určit následující obory pro řízení přístupu k funkcím Intune: Následující tabulka shrnuje obory oprávnění rozhraní Intune API.  V prvním sloupci je název funkce, který se zobrazuje na portálu Azure Portal, a ve druhém sloupci je název oboru oprávnění.
 
 Nastavení _Povolit přístup_ | Název oboru
-:--|:--
+:--|---
 __Provádění vzdálených akcí s dopadem na uživatele na zařízeních v Microsoft Intune__ | [DeviceManagementManagedDevices. PrivilegedOperations. All](#mgd-po)
 __Čtení a zápis do zařízení v Microsoft Intune__ | [DeviceManagementManagedDevices.. All](#mgd-rw)
 __Čtení zařízení v Microsoft Intune__ | [DeviceManagementManagedDevices.Read.All](#mgd-ro)

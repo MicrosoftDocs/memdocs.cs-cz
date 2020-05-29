@@ -5,7 +5,7 @@ keywords: Sada SDK
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/02/2020
+ms.date: 05/26/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ce008c21cefeb3920182a09547db091547681401
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 6875dc873d44b77a24fe68f637d9329c9f5e1d9c
+ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79326551"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84165596"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-testing-guide"></a>Průvodce testováním Microsoft Intune App SDK pro Android
 
@@ -55,7 +55,7 @@ Pro přístup k firemním prostředkům můžete vyžadovat PIN kód. Můžete t
 2. Potvrďte následující podmínky:
     - Při spuštění aplikace by se měla zobrazit výzva k zadání PIN kódu nebo výrobnímu uživateli, který se použil při registraci s Portál společnosti.
     - Nepovedlo se vytvořit platnou výzvu k přihlášení, protože je k dispozici nesprávně nakonfigurovaný manifest Androidu, konkrétně hodnoty pro integraci knihovny Azure Active Directory Authentication Library (ADAL) (SkipBroker, ClientID a Authority).
-    - Chyba při zobrazení výzvy může být způsobena nesprávně integrovanou `MAMActivity` hodnotou. Další informace o `MAMActivity`najdete v tématu [Microsoft Intune App SDK pro Android – příručka pro vývojáře](app-sdk-android.md).
+    - Chyba při zobrazení výzvy může být způsobena nesprávně integrovanou `MAMActivity` hodnotou. Další informace o najdete `MAMActivity` v tématu [Microsoft Intune App SDK pro Android – příručka pro vývojáře](app-sdk-android.md).
 
 > [!NOTE] 
 > Pokud předchozí test nefunguje, následující testy budou pravděpodobně také neúspěšné. Projděte si integraci [sady SDK](app-sdk-android.md#sdk-integration) a [ADAL](app-sdk-android.md#configure-azure-active-directory-authentication-library-adal) .
@@ -104,11 +104,11 @@ Spravované aplikace můžete vzdáleně vymazat z obsahujícího podnikového e
 1. Z Azure Portal [vydejte vymazání](../apps/apps-selective-wipe.md).
 2. Pokud se vaše aplikace neregistruje pro žádné obslužné rutiny vymazání, potvrďte následující podmínky:
     - Dojde k úplnému vymazání aplikace.
-3. Pokud se vaše aplikace zaregistrovala `WIPE_USER_DATA` pro `WIPE_USER_AUXILARY_DATA`nebo, potvrďte následující podmínky:
+3. Pokud se vaše aplikace zaregistrovala pro `WIPE_USER_DATA` nebo `WIPE_USER_AUXILARY_DATA` , potvrďte následující podmínky:
     - Spravovaný obsah se z aplikace odebere. Další informace najdete v tématu [sada Intune App SDK pro Android Developer Guide – selektivní vymazání](app-sdk-android.md#selective-wipe).
 
 ### <a name="multi-identity-support"></a>Podpora více identit
-Integrace [podpory více identit](app-sdk-android.md#multi-identity-optional) je vysoce riziková změna, kterou je třeba důkladně otestovat. K nejběžnějším problémům dochází kvůli nesprávně nastavování identity (kontext vs. úroveň ohrožení) a sledovacích souborů (`MAMFileProtectionManager`).
+Integrace [podpory více identit](app-sdk-android.md#multi-identity-optional) je vysoce riziková změna, kterou je třeba důkladně otestovat. K nejběžnějším problémům dochází kvůli nesprávně nastavování identity (kontext vs. úroveň ohrožení) a sledovacích souborů ( `MAMFileProtectionManager` ).
 
 Minimální, potvrďte, že:
 

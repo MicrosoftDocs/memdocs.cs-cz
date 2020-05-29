@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/22/2020
+ms.date: 05/28/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ca3ec1605bd4d63c182511c32297da0bdb503d8b
-ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
+ms.openlocfilehash: 5578a6652c9d8216c0b7726c4ff59cd82a591446
+ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83824162"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84165919"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
@@ -54,7 +54,19 @@ Podívejte se, co je nového v jednom týdnu v Microsoft Intune v [centru pro sp
 
 <!-- ########################## -->
 
+## <a name="week-of-may-25-2020"></a>Týden od 25. května 2020
+
+### <a name="app-management"></a>Správa aplikací
+
+#### <a name="windows-company-portal-app-icon---7114635---"></a>Ikona aplikace pro Windows Portál společnosti<!-- 7114635 -->
+Změnila se ikona aplikace Portál společnosti pro Windows. Další informace o Portál společnosti najdete v tématu [přizpůsobení aplikace Portál společnosti Intune, portál společnosti webu a aplikace Intune](../apps/company-portal-app.md).
+
 ## <a name="week-of-may-18-2020"></a>Týden od 18. května 2020
+
+### <a name="app-management"></a>Správa aplikací  
+
+#### <a name="update-to-icons-in-company-portal-app-for-iosipados-and-macos--6057697---"></a>Aktualizace ikon v aplikaci Portál společnosti pro iOS/iPadOS a macOS<!--6057697 -->
+V Portál společnosti jsme aktualizovali ikony, aby bylo možné vytvořit pokročilejší vzhled a chování, které se podporuje na zařízeních s duální obrazovkou a zarovnává se se systémem Microsoft Fluent design System. Aktualizované ikony zobrazíte tak, že přejdete na [aktualizace uživatelského rozhraní pro aplikace Intune pro koncové uživatele](./whats-new-app-ui.md). 
 
 ### <a name="device-security"></a>Zabezpečení zařízení
 

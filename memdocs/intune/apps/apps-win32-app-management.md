@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 70cb3e2f8baf89be5e77867b385788cb04181ba1
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: ecf8d5b17f19110e6f2428aaf07a37b1216a9411
+ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83986034"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84165698"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Samostatná verze Intune – Správa aplikací Win32
 
@@ -66,7 +66,7 @@ Pokud spustíte `IntuneWinAppUtil.exe` z příkazového okna bez parametrů, ná
 ### <a name="available-command-line-parameters"></a>Dostupné parametry příkazového řádku 
 
 |    **Parametr příkazového řádku**    |    **Popis**    |
-|:------------------------------:|:----------------------------------------------------------:|
+|--------------------------------|------------------------------------------------------------|
 |    `-h`     |    Nápověda    |
 |    `-c <setup_folder>`     |    Složka pro všechny instalační soubory. Všechny soubory v této složce budou zkomprimovány do souboru *. intunewin* .    |
 |    `-s <setup_file>`     |    Instalační soubor (například *setup.exe* nebo *setup.msi*)    |
@@ -76,7 +76,7 @@ Pokud spustíte `IntuneWinAppUtil.exe` z příkazového okna bez parametrů, ná
 ### <a name="example-commands"></a>Příklady příkazů
 
 |    **Ukázkový příkaz**    |    **Popis**    |
-|:-----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+|-------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    `IntuneWinAppUtil -h`    |    Tento příkaz zobrazí informace o využití nástroje.    |
 |    `IntuneWinAppUtil -c c:\testapp\v1.0 -s c:\testapp\v1.0\setup.exe -o c:\testappoutput\v1.0 -q`    |    Tento příkaz vygeneruje soubor `.intunewin` ze zadané zdrojové složky a instalačního souboru. U instalačního souboru MSI tento nástroj načte požadované informace pro Intune. Pokud zadáte parametr `-q`, příkaz se spustí v tichém režimu a pokud už výstupní soubor existuje, přepíše se. Pokud výstupní složka ještě neexistuje, automaticky se vytvoří.    |
 

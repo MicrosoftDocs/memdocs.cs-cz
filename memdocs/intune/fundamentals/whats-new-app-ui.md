@@ -6,7 +6,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/08/2020
+ms.date: 05/26/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 17213a29d5182176fe2fd8e5802e5ca03587d8f7
-ms.sourcegitcommit: 0dafd513a59afe592b5cfe2a80b6288020dc5bf0
+ms.openlocfilehash: efa965bc3dff2436a98602e3cb9dda96a1fe580d
+ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82991799"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84166149"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Aktualizace uživatelského rozhraní pro aplikace Intune pro koncové uživatele
 
@@ -34,6 +34,19 @@ Přečtěte si o nejnovějších aktualizacích aplikace Microsoft Intune. Pravi
 
 Pokud jste zaměstnancem nebo studentem, nezapomeňte se podívat na snímky obrazovky a odkazy na Portál společnosti dokumentaci k nápovědě. Další informace o tom, jak používat aplikaci Portál společnosti, najdete v [dokumentaci k nápovědě pro uživatele portál společnosti](https://docs.microsoft.com/mem/intune/user-help/use-managed-devices-to-get-work-done).  
 
+
+
+## <a name="week-of-may-18-2020"></a>Týden od 18. května 2020  
+### <a name="update-to-icons-in-company-portal-app-for-iosipados-and-macos---6057697---"></a>Aktualizace ikon v aplikaci Portál společnosti pro iOS/iPadOS a macOS <!--6057697 -->  
+V Portál společnosti jsme aktualizovali ikony, aby bylo možné vytvořit pokročilejší vzhled a chování, které se podporuje na zařízeních s duální obrazovkou a zarovnává se se systémem Microsoft Fluent design System.
+
+|Aktualizováno pro iOS/iPadOS|Dříve pro iOS/iPadOS|   
+|---|---|   
+|![Obrázek Portál společnosti pro iOS/iPadOS, zvýraznění aktualizovaných ikon v dolní nabídce](./media/whats-new-app-ui/company-portal-ios-icons-after-2005.png)|![Obrázek Portál společnosti pro iOS, který zvýrazní předchozí ikony.](./media/whats-new-app-ui/company-portal-ios-icons-before-2005.png)| 
+
+|Aktualizováno pro macOS|  
+|---|
+|![Obrázek karty Portál společnosti macOS, karta zařízení, zvýraznění aktualizovaných ikon](./media/whats-new-app-ui/company-portal-macos-icons-after-2005.png)|  
 
 
 ## <a name="week-of-may-4-2020"></a>Týden od 4. května 2020  
@@ -126,7 +139,7 @@ Stránka Portál společnosti nové **nainstalované aplikace** na webu obsahuje
 ![Obrazovka stránky Portál společnosti web, nainstalované aplikace](./media/whats-new-app-ui/intune-installed-apps-1907.png)     
 
 ### <a name="new-view-lets-app-users-see-all-managed-apps-installed-on-device----2352913---"></a>Nové zobrazení umožňuje uživatelům aplikace zobrazit všechny spravované aplikace nainstalované na zařízení. <!-- 2352913 -->
-Aplikace Portál společnosti pro Windows teď obsahuje seznam všech spravovaných aplikací (požadovaných i dostupných), které jsou nainstalované na zařízení uživatele. Uživatelé můžou také zobrazit pokusy o instalaci aplikací a jejich aktuální stavy. Pokud jste neudělali aplikace, které uživatelé potřebují nebo k nim nejsou k dispozici, zobrazí se zpráva s vysvětlením, že nebyly nainstalovány žádné aplikace společnosti. Chcete-li zobrazit nové zobrazení, přejděte do navigačního podokna portál společnosti a vyberte **aplikace** > **nainstalované aplikace**.   
+Aplikace Portál společnosti pro Windows teď obsahuje seznam všech spravovaných aplikací (požadovaných i dostupných), které jsou nainstalované na zařízení uživatele. Uživatelé můžou také zobrazit pokusy o instalaci aplikací a jejich aktuální stavy. Pokud jste neudělali aplikace, které uživatelé potřebují nebo k nim nejsou k dispozici, zobrazí se zpráva s vysvětlením, že nebyly nainstalovány žádné aplikace společnosti. Chcete-li zobrazit nové zobrazení, přejděte do navigačního podokna portál společnosti a vyberte **aplikace**  >  **nainstalované aplikace**.   
 
 ![Ukázkový snímek obrazovky stránky aplikace Portál společnosti pro Windows 10, nainstalované aplikace ](./media/whats-new-app-ui/installed-apps-cp-1906.png)  
 
@@ -297,7 +310,7 @@ Pokud jste povolili [mapování skupin zařízení](../enrollment/device-group-m
 Vylepšili jsme pracovní postup instalace zařízení v aplikaci Portál společnosti pro iOS/iPadOS. Jazyk je uživatelsky přívětivější a tam, kde to bylo možné, jsme také sjednotili obrazovky. Také jsme použitím názvu vaší společnosti všude v textu instalace upravili jazyk tak, aby více odpovídal vaší společnosti.
 
 > [!NOTE]
-> Název společnosti, který jste nastavili na webu Azure Portal, použijeme v **Microsoft Intune** > **klientských aplikacích** > **portál společnosti branding** > **název společnosti**. Pokud jste tuto hodnotu nestavili, použijeme název tenanta nastavený v **Azure Active Directory** > **vlastnosti** > **název**. Pokud jste název společnosti nenastavili v Portál společnosti brandingu a nechcete, aby se váš název tenanta zobrazoval, doporučujeme nastavit název společnosti na kartě Portál společnosti branding. Pokud nechcete, aby se tento řetězec zobrazoval v hlavičce v Portál společnosti, můžete zrušit zaškrtnutí políčka Zobrazit název společnosti vedle možnosti logo.
+> Název společnosti, který jste nastavili na webu Azure Portal, použijeme v **Microsoft Intune**  >  **klientských aplikacích**  >  **portál společnosti branding**  >  **název společnosti**. Pokud jste tuto hodnotu nestavili, použijeme název tenanta nastavený v **Azure Active Directory**  >  **vlastnosti**  >  **název**. Pokud jste název společnosti nenastavili v Portál společnosti brandingu a nechcete, aby se váš název tenanta zobrazoval, doporučujeme nastavit název společnosti na kartě Portál společnosti branding. Pokud nechcete, aby se tento řetězec zobrazoval v hlavičce v Portál společnosti, můžete zrušit zaškrtnutí políčka Zobrazit název společnosti vedle možnosti logo.
 
 |Před|Po|
 |---|---|
@@ -464,7 +477,7 @@ Klepněte na odkaz __Přihlásit z jiného zařízení__.
 
 ![Zobrazí se pokyny, abyste ze svého pracovního počítače přešli na stránku aka.ms/devicelogin s jedinečným přístupovým kódem a pak kód použili k přihlášení.](./media/whats-new-app-ui/cp_ios_aad_signin_from_another_device_after_1704_003.png)
 
-Spusťte prohlížeč a pak přejít na [https://aka.ms/devicelogin](https://aka.ms/devicelogin).
+Spusťte prohlížeč a pak přejít na [https://aka.ms/devicelogin](https://aka.ms/devicelogin) .
 
 ![Obrázek uživatelova prohlížeče na pracovním počítači místo aplikace Portál společnosti. Zobrazená stránka „Přihlášení na zařízení“ uživatele vyzve k zadání kódu, který dostal v aplikaci Portál společnosti.](./media/whats-new-app-ui/cp_ios_aad_signin_from_another_device_after_1704_004.png)
 

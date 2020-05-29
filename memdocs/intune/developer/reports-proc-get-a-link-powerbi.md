@@ -6,7 +6,7 @@ keywords: Intune Data Warehouse
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/03/2020
+ms.date: 05/26/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d6dfba55c8e516e2e689513f063d56f5a43d52d9
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: c6cd61a7a59f87e93d79d7761f9ccb5238b0be43
+ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79331723"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84165494"
 ---
 # <a name="connect-to-the-data-warehouse-with-power-bi"></a>Připojení k datovému skladu pomocí Power BI
 
@@ -66,7 +66,7 @@ Aplikace Power BI [Intune pro dodržování předpisů (datový sklad)](https://
 
 Alternativně můžete aplikaci nainstalovat z portálu Intune:
 
-1. Přihlaste se k Azure Portal a vyberte **monitorování a Správa** > **Intune**. Můžete také vyhledat prostředky pro Intune.
+1. Přihlaste se k Azure Portal a vyberte **monitorování a Správa**  >  **Intune**. Můžete také vyhledat prostředky pro Intune.
 2. Otevřete okno **nastavit datový sklad Intune** .
 3. Vyberte **získat Power BI aplikaci** pro přístup k předem vytvořeným Power BIm sestavám pro vašeho tenanta v prohlížeči a jejich sdílení.
 4. Postupujte podle kroků 2-10 výše.
@@ -80,7 +80,7 @@ S klientem ověřeným v Azure AD se adresa URL pro OData připojí ke koncovém
 3. V okně vytváření sestav načtěte adresu URL vlastního kanálu, například:<br>
     `https://fef.{yourinfo}.manage.microsoft.com/ReportingService/DataWarehouseFEService/dates?api-version=v1.0`
 4. Otevřete **Power BI Desktop**.
-5. Vyberte **soubor** > **získat data**. Vyberte **Datový kanál OData**.
+5. Vyberte **soubor**  >  **získat data**. Vyberte **Datový kanál OData**.
 6. Zvolte **Základní**.
 7. Do pole adresy URL zadejte nebo vložte **adresu URL pro OData**.
 8. Vyberte **OK**.
@@ -88,7 +88,7 @@ S klientem ověřeným v Azure AD se adresa URL pro OData připojí ke koncovém
     1. Vyberte **Účet organizace**.  
     2. Zadejte své uživatelské jméno a heslo.  
     3. Vyberte **Přihlásit se.**  
-    4. Vyberte **Connect** (Připojit).  
+    4. Vyberte **Připojit**.  
 10. Vyberte **Načíst**.
 
 ## <a name="next-steps"></a>Další kroky

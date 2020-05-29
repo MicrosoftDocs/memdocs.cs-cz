@@ -10,12 +10,12 @@ ms.assetid: deb8aac8-2bd9-4980-a25b-5f8d93051226
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7680c8f955773f169d56f36eb9bbe6507d2d7ce6
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: cb7cc71618ad0f86abce3ab76d6344e0d23bfc58
+ms.sourcegitcommit: 555cb8102715afbe06c4de5fdbc943608f00b52c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83427811"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84153423"
 ---
 # <a name="client-notification-in-configuration-manager"></a>Klientské oznámení v Configuration Manager
 
@@ -140,7 +140,7 @@ Počínaje verzí 1910 existují nové akce zařízení pro **diagnostiku klient
 
 - **Zapnout podrobné protokolování**: změňte úroveň globálního protokolu pro komponentu ccm na Verbose a povolte protokolování ladění.
 - **Zakázat podrobné protokolování**: změňte úroveň globálního protokolu na výchozí a zakažte protokolování ladění.
-- **Shromažďovat protokoly klientů** (počínaje 2002): pro shromáždění protokolů ccm se vybraným klientům pošle zpráva s klientským oznámením. Protokoly se vrátí pomocí kolekce souborů inventáře softwaru. <!--4226618-->
+- **Shromažďovat protokoly klientů** (počínaje 2002): lokalita pošle klientovi zprávu s oznámením o doručení vybraným klientům, aby shromáždila protokoly ccm. Klient odesílá protokoly do bodu správy pomocí stejného kanálu jako kolekce souborů inventáře softwaru. <!--4226618--> V nastavení klienta není nutné povolit inventář softwaru.<!-- MEMDocs#305 -->
    - Omezení velikosti pro komprimované protokoly klienta je 100 MB. <!--6366098-->
    - Pomocí [Průzkumník prostředků](inventory/use-resource-explorer-to-view-software-inventory.md#bkmk_diag) spravovat a zobrazovat tyto soubory.
 

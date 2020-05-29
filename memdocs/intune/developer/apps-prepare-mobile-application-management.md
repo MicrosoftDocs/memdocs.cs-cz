@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/02/2020
+ms.date: 05/27/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 863e6e540fcb79ff18accc40142a8e50c1406943
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: cc180b4a554ceec19fb0815b028d875c32da37bf
+ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078069"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84166021"
 ---
 # <a name="prepare-line-of-business-apps-for-app-protection-policies"></a>Příprava obchodních aplikací na zásady ochrany aplikací
 
@@ -71,8 +71,8 @@ Další informace o sadě SDK najdete v tématu [Přehled](app-sdk.md). Pokud ch
 
 |**Sada Intune App SDK** |**Xamarin** |**Cordova**
 |------|----|----|
-|**iOS**|Ano – Použijte [xamarinové vazby sady Intune App SDK](app-sdk-xamarin.md).|Ne|
-|**Android**| Ano – použijte [vazby Xamarin sady Intune App SDK](app-sdk-xamarin.md).|Ne|
+|**iOS**|Ano – Použijte [xamarinové vazby sady Intune App SDK](app-sdk-xamarin.md).|No|
+|**Android**| Ano – použijte [vazby Xamarin sady Intune App SDK](app-sdk-xamarin.md).|No|
 
 ## <a name="not-using-an-app-development-platform-listed-above"></a>Nepoužíváte platformu pro vývoj aplikací uvedenou výše?
 
@@ -82,46 +82,46 @@ Vývojový tým sady Intune SDK aktivně testuje a udržuje podporu pro aplikace
 
 Tato tabulka obsahuje seznam nastavení, která jsou povolená, pokud aplikace používá sadu App SDK nebo nástroj pro zabalení aplikace. Některé funkce vyžadují, aby vývojáři aplikací použili určitou logiku mimo základní integraci se sadou Intune SDK a jako takové nejsou povolené, pokud aplikace používá nástroj pro zabalení aplikace. 
 
-|Funkce|App SDK (sada)|Nástroj App Wrapping Tool|
+|Příznak|App SDK (sada)|Nástroj App Wrapping Tool|
 |-----------|---------------------|-----------|
-|Omezit zobrazování obsahu webu jenom na podnikový spravovaný prohlížeč|×|×|
-|Zabránit zálohování Androidu, iTunes a iCloudu|×|×|
-|Povolit aplikaci přenos dat do ostatních aplikací|×|×|
-|Povolit aplikaci, aby přijímala data z jiných aplikací|×|×|
-|Omezit operace vyjmutí, kopírování a vložení s jinými aplikacemi|×|×|
-|Zadejte počet znaků, které mohou být vyjmuty nebo zkopírovány ze spravované aplikace.|×|×|
-|Požadovat jednoduchý kód PIN pro přístup|×|×|
-|Určit počet pokusů o zadání PIN kódu před jeho obnovením|×|×|
-|Povolit otisk prstu místo PIN kódu|×|×|
-|Povolit rozpoznávání obličeje místo PIN kódu (pouze iOS)|×|×|
-|Vyžadovat podnikové přihlašovací údaje pro přístup|×|×|
-|Nastavit vypršení platnosti kódu PIN|×|×|
-|Blokovat spuštění spravovaných aplikací v zařízení s jailbreakem nebo rootem|×|×|
-|Zašifrovat data aplikací|×|×|
-|Znovu zkontrolovat požadavky na přístup po zadaném počtu minut|×|×|
-|Zadat období odkladu pro offline režim|×|×|
-|Blokovat snímek obrazovky (jenom Android)|×|×|
-|Podpora MAM bez registrace zařízení|×|×|
-|Úplné vymazání dat aplikací|×|×|
-|Selektivní vymazání pracovních a školních dat ve scénářích s více identitami <br><br>**Poznámka:** Pro iOS/iPadOS se při odebrání profilu správy odebere i aplikace.|×||
-|Zabránit možnosti Uložit jako|×||
-|Cílová konfigurace aplikace (nebo konfigurace aplikace prostřednictvím kanálu MAM)|×|×|
-|Podpora víc identit|×||
-|Přizpůsobitelný styl |×|||
-|Připojení VPN aplikace na vyžádání pomocí Citrix mVPN|×|×| 
-|Zakázat synchronizaci kontaktů|×|×|
-|Zakázat tisk|×|×|
-|Vyžadovat minimální verzi aplikace|×|×|
-|Vyžadovat minimální operační systém|×|×|
-|Vyžadovat minimální verzi oprav zabezpečení Androidu (pouze Android)|×|×|
-|Vyžadovat minimální sadu Intune SDK pro iOS (pouze iOS)|×|×|
-|Ověření zařízení SafetyNet (jenom Android)|×|×|
-|Kontrola hrozeb u aplikací (jenom Android)|×|×|
-|Vyžadovat maximální úroveň rizika zařízení u dodavatele ochrany před mobilními hrozbami|×||
-|Konfigurace obsahu oznámení aplikace pro účty organizace|×|×|
-|Vyžadovat použití schválených klávesnic (jenom Android)|×|×|
-|Vyžadovat zásady ochrany aplikací (podmíněný přístup)|×||
-|Vyžadovat aplikaci schválenou klienta (podmíněný přístup)|×||
+|Omezit zobrazování obsahu webu jenom na podnikový spravovaný prohlížeč|X|X|
+|Zabránit zálohování Androidu, iTunes a iCloudu|X|X|
+|Povolit aplikaci přenos dat do ostatních aplikací|X|X|
+|Povolit aplikaci, aby přijímala data z jiných aplikací|X|X|
+|Omezit operace vyjmutí, kopírování a vložení s jinými aplikacemi|X|X|
+|Zadejte počet znaků, které mohou být vyjmuty nebo zkopírovány ze spravované aplikace.|X|X|
+|Požadovat jednoduchý kód PIN pro přístup|X|X|
+|Určit počet pokusů o zadání PIN kódu před jeho obnovením|X|X|
+|Povolit otisk prstu místo PIN kódu|X|X|
+|Povolit rozpoznávání obličeje místo PIN kódu (pouze iOS)|X|X|
+|Vyžadovat podnikové přihlašovací údaje pro přístup|X|X|
+|Nastavit vypršení platnosti kódu PIN|X|X|
+|Blokovat spuštění spravovaných aplikací v zařízení s jailbreakem nebo rootem|X|X|
+|Zašifrovat data aplikací|X|X|
+|Znovu zkontrolovat požadavky na přístup po zadaném počtu minut|X|X|
+|Zadat období odkladu pro offline režim|X|X|
+|Blokovat snímek obrazovky (jenom Android)|X|X|
+|Podpora MAM bez registrace zařízení|X|X|
+|Úplné vymazání dat aplikací|X|X|
+|Selektivní vymazání pracovních a školních dat ve scénářích s více identitami <br><br>**Poznámka:** Pro iOS/iPadOS se při odebrání profilu správy odebere i aplikace.|X||
+|Zabránit možnosti Uložit jako|X||
+|Cílová konfigurace aplikace (nebo konfigurace aplikace prostřednictvím kanálu MAM)|X|X|
+|Podpora víc identit|X||
+|Přizpůsobitelný styl |X|||
+|Připojení VPN aplikace na vyžádání pomocí Citrix mVPN|X|X| 
+|Zakázat synchronizaci kontaktů|X|X|
+|Zakázat tisk|X|X|
+|Vyžadovat minimální verzi aplikace|X|X|
+|Vyžadovat minimální operační systém|X|X|
+|Vyžadovat minimální verzi oprav zabezpečení Androidu (pouze Android)|X|X|
+|Vyžadovat minimální sadu Intune SDK pro iOS (pouze iOS)|X|X|
+|Ověření zařízení SafetyNet (jenom Android)|X|X|
+|Kontrola hrozeb u aplikací (jenom Android)|X|X|
+|Vyžadovat maximální úroveň rizika zařízení u dodavatele ochrany před mobilními hrozbami|X||
+|Konfigurace obsahu oznámení aplikace pro účty organizace|X|X|
+|Vyžadovat použití schválených klávesnic (jenom Android)|X|X|
+|Vyžadovat zásady ochrany aplikací (podmíněný přístup)|X||
+|Vyžadovat aplikaci schválenou klienta (podmíněný přístup)|X||
 
 ## <a name="next-steps"></a>Další kroky
 

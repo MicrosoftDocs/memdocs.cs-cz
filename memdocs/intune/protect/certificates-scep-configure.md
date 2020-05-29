@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 45f649a99f6b3d632fea9e46dfdaee89450ebd23
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 5939d12003df78b459ebc12c294434826194b931
+ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989284"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84166123"
 ---
 # <a name="configure-infrastructure-to-support-scep-with-intune"></a>Konfigurace infrastruktury pro podporu SCEP s Intune
 
@@ -124,7 +124,7 @@ Následující části vyžadují znalost systému Windows Server 2012 R2 nebo n
 
 ### <a name="create-the-scep-certificate-template"></a>Vytvoření šablony certifikátu SCEP
 
-1. Vytvořte šablonu certifikátu v2 (s kompatibilitou systému Windows 2003), která se použije jako šablona certifikátu SCEP. Můžete:
+1. Vytvořte šablonu certifikátu v2 (s kompatibilitou systému Windows 2003), která se použije jako šablona certifikátu SCEP. Další možnosti:
 
    - Pomocí modulu snap-in *šablony certifikátů* vytvořte novou vlastní šablonu.
    - Zkopírujte existující šablonu (třeba šablonu Uživatel) a pak aktualizujte kopii, která se má použít jako šablona NDES.
@@ -224,9 +224,9 @@ Ve výchozím nastavení Intune používá hodnotu nakonfigurovanou v šabloně.
 
 1. V certifikační autoritě spusťte tyto příkazy:
 
-   -**certutil-setreg policy\EditFlags + EDITF_ATTRIBUTEENDDATE** 
-   - **net stop certsvc** 
-   - **net start certsvc**
+   **certutil - setreg Policy\EditFlags +EDITF_ATTRIBUTEENDDATE**  
+   **net stop certsvc**  
+   **net start certsvc**    
 
 2. Ve vydávající certifikační autoritě použijte modul snap-in Certifikační autorita k publikování šablony certifikátu. Vyberte uzel **šablony certifikátů** , vyberte **akci**  >  **New**  >  **vydávat novou šablonu certifikátu**a potom vyberte šablonu certifikátu, kterou jste vytvořili v předchozí části.
 

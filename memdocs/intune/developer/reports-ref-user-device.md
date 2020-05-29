@@ -6,7 +6,7 @@ keywords: Intune Data Warehouse
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/04/2019
+ms.date: 05/28/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6127b365a04ad48a9cbaa98bdef821c4d1334181
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: f095c011f85ea280b6bf1c37140152ac27ef8817
+ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79325571"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84165205"
 ---
 # <a name="reference-for-user-device-association-entity"></a>Referenční informace o entitě Přidružení zařízení uživatelů
 
@@ -32,7 +32,7 @@ Entita **userDeviceAssociation** obsahuje přidružení zařízení uživatelů 
 ## <a name="userdeviceassociations"></a>userDeviceAssociations
 
 
-|        Název        |                                           Popis                                            |        Příklad         |
+|        Name        |                                           Popis                                            |        Příklad         |
 |--------------------|--------------------------------------------------------------------------------------------------|------------------------|
 |      userKey       |              Jedinečný identifikátor uživatele v datovém skladu (náhradní klíč)               |          123           |
 |     deviceKey      |                      Jedinečný identifikátor zařízení v datovém skladu                      |          123           |

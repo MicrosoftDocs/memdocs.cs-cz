@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/02/2020
+ms.date: 05/27/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6c0dab3c84e3a87048a8071c591722c63d89ad69
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 69a694ab9da7987271214bc6919cd3b676f9814e
+ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078120"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84166055"
 ---
 # <a name="prepare-android-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Příprava aplikací pro Android na zásady ochrany aplikací pomocí nástroje Intune App Wrapping Tool
 
@@ -88,13 +88,13 @@ Poznamenejte si složku, do které jste nainstalovali nástroj. Výchozí umíst
 
 |Vlastnost|Informace|Příklad|
 |-------------|--------------------|---------|
-|**– InputPath**&lt;řetězec&gt;|Cesta ke zdrojové aplikaci pro Android (.apk).| |
- |**– OutputPath**&lt;řetězec&gt;|Cesta k výstupní aplikaci pro Android. Když je to cesta ke stejnému adresáři jako InputPath, vytváření balíčků selže.| |
-|**– KeyStorePath**&lt;řetězec&gt;|Cesta k souboru v úložišti klíčů s dvojicí veřejného a privátního klíče, které se používají k podpisu.|Ve výchozím nastavení jsou soubory v úložišti klíčů uložené ve složce „C:\Program Files (x86)\Java\jreX.X.X_XX\bin“. |
-|**– KeyStorePassword**&lt;SecureString&gt;|Heslo použité k dešifrování úložiště klíčů. Android vyžaduje, aby všechny balíčky aplikace (.apk) byly podepsané. Ke generování hesla k úložišti klíčů (parametr KeyStorePassword) použijte nástroj Java keytool. Další informace o úložišti klíčů Java si můžete přečíst [tady](https://docs.oracle.com/javase/7/docs/api/java/security/KeyStore.html).| |
-|**-Jiné –**&lt;řetězec&gt;|Název klíče, který se má použít pro podepisování.| |
-|**-SecureString hesla**&lt;&gt;|Heslo použité k dešifrování privátního klíče, který se použije pro podepisování.| |
-|**– SigAlg**&lt;SecureString&gt;| (Volitelně) Název podpisového algoritmu, který se má použít k podepsání. Algoritmus musí být kompatibilní s privátním klíčem.|Příklady: SHA256withRSA, SHA1withRSA|
+|**– InputPath** &lt; Řetezce&gt;|Cesta ke zdrojové aplikaci pro Android (.apk).| |
+ |**– OutputPath** &lt; Řetezce&gt;|Cesta k výstupní aplikaci pro Android. Když je to cesta ke stejnému adresáři jako InputPath, vytváření balíčků selže.| |
+|**– KeyStorePath** &lt; Řetezce&gt;|Cesta k souboru v úložišti klíčů s dvojicí veřejného a privátního klíče, které se používají k podpisu.|Ve výchozím nastavení jsou soubory v úložišti klíčů uložené ve složce „C:\Program Files (x86)\Java\jreX.X.X_XX\bin“. |
+|**– KeyStorePassword** &lt; SecureString&gt;|Heslo použité k dešifrování úložiště klíčů. Android vyžaduje, aby všechny balíčky aplikace (.apk) byly podepsané. Ke generování hesla k úložišti klíčů (parametr KeyStorePassword) použijte nástroj Java keytool. Další informace o úložišti klíčů Java si můžete přečíst [tady](https://docs.oracle.com/javase/7/docs/api/java/security/KeyStore.html).| |
+|**-Jiné** &lt; . Řetezce&gt;|Název klíče, který se má použít pro podepisování.| |
+|**-Heslo** &lt; SecureString&gt;|Heslo použité k dešifrování privátního klíče, který se použije pro podepisování.| |
+|**– SigAlg** &lt; SecureString&gt;| (Volitelně) Název podpisového algoritmu, který se má použít k podepsání. Algoritmus musí být kompatibilní s privátním klíčem.|Příklady: SHA256withRSA, SHA1withRSA|
 |**-UseMinAPILevelForNativeMultiDex**| Volitelné Pomocí tohoto příznaku zvyšte minimální úroveň rozhraní API u zdrojové aplikace pro Android na 21. Tento příznak zobrazí výzvu k potvrzení, protože bude omezen na to, kdo může tuto aplikaci nainstalovat. Uživatelé můžou potvrzovací dialog přeskočit připojením parametru-Confirm: $false ke svému příkazu PowerShellu. Příznak by měli používat jenom zákazníci v aplikacích s minimálním rozhraním API < 21, které se nepodařilo úspěšně zabalit kvůli chybám přetečení DEX. | |
 | **&lt;CommonParameters&gt;** | (Volitelně) Příkaz podporuje běžné parametry PowerShellu, jako je verbose a debug. |
 

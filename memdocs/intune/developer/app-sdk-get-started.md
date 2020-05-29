@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/02/2020
+ms.date: 05/27/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 709824c91173edd0b322e1477c3204db34db7a9f
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 6427c2bf77255399813edd62519fd365c3cb2a68
+ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80086304"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84166089"
 ---
 # <a name="get-started-with-the-microsoft-intune-app-sdk"></a>Začínáme s Microsoft Intune App SDK
 
@@ -144,7 +144,7 @@ Intune|iOS|Android|Popis|
 - **CFBundleVersion**  
   Verze buildu sady, která označuje iteraci sady. Číslo může označovat vydanou verzi nebo nevydanou sadu. Slouží ke zjištění aplikace.
 
-#### <a name="android"></a>Android
+#### <a name="android"></a>Telefon
 
 - **PackageVersionName**  
   Číslo verze, které se zobrazuje uživatelům. Tento atribut je možné nastavit jako nezpracovaný řetězec nebo jako odkaz na prostředek řetězce. Řetězec nemá žádný jiný účel než ten, že se zobrazuje uživatelům.
@@ -183,7 +183,7 @@ Po zaregistrování aplikace v rámci tenanta Azure a jejich zobrazení v rámci
 7. Klikněte na tlačítko **Přidat oprávnění**.
 
 > [!NOTE]
-> Pokud vaše aplikace neomezuje přihlášení z důvodu chyby přístupu k tomuto prostředku: https\://intunemam.microsoftonline.com, musíte poslat poznámku na msintuneappsdk@microsoft.com ID klienta vaší aplikace. Toto je ruční proces schvalování ještě dnes.
+> Pokud vaše aplikace neomezuje přihlášení z důvodu chyby přístupu k tomuto prostředku: https \: //intunemam.microsoftonline.com, musíte poslat poznámku na msintuneappsdk@microsoft.com ID klienta vaší aplikace. Toto je ruční proces schvalování ještě dnes.
 
 ### <a name="badge-your-app-optional"></a>Označte si aplikaci (volitelné)
 

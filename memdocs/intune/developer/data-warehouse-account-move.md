@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/02/2020
+ms.date: 05/27/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 94592505806ec005fcc5abf6aead04ec89422d6e
-ms.sourcegitcommit: d1c7548b4177d720065b822356f9a08d1e1657c2
+ms.openlocfilehash: 88b79cc3f149af025b4cb2c757017355bc9b4786
+ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82881073"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84166004"
 ---
 # <a name="move-your-intune-data-warehouse-account-data"></a>Přesunutí vašich dat účtu datového skladu Intune 
 
@@ -43,16 +43,16 @@ Pokud chcete zálohovat data datového skladu, musíte je uložit jako soubor *.
 Některé grafy trendů ve vašem zobrazení portálu Azure Portal se resetují. Spuštěním následujícího skriptu v části **Graf** můžete tyto grafy zálohovat:   
 
 ### <a name="terms--conditions-acceptance-reports"></a>Sestavy přijetí podmínek a ujednání
-1. V Azure Portal přejděte na **Microsoft Intune** -> podmínky**registrace** -> zařízení **& podmínky**.
+1. V Azure Portal přejděte na **Microsoft Intune**  ->  podmínky**registrace zařízení**  ->  **& podmínky**.
 2. Pro každou položku **podmínek a ujednání** zvolte **Generování sestav o přijetí** a potom **Exportovat**.
 3. Uložte si sestavu místně.
  
 ### <a name="app-protection-reports"></a>Sestavy o ochraně aplikace  
-1. V Azure Portal přejděte na **Microsoft Intune** -> **klientské aplikace** -> **stav ochrany aplikace**.
+1. V Azure Portal přejděte na **Microsoft Intune**  ->  **klientské aplikace**  ->  **stav ochrany aplikace**.
 2. Klikněte na ikonu stažení (⤓) pro sestavy, které si chcete uložit.
 
 ### <a name="device-configuration-charts"></a>Grafy konfigurace zařízení 
-1. V Azure Portal přejděte na **Microsoft Intune** -> **DeviceConfiguration**.
+1. V Azure Portal přejděte na **Microsoft Intune**  ->  **DeviceConfiguration**.
 2. Pomocí [Graph exploreru](https://developer.microsoft.com/graph/graph-explorer) stáhněte podkladová data grafů. 
     - Stav nasazení u všech konfiguračních profilů zařízení pro všechna zařízení viz [Stav nasazení zařízení](https://graph.microsoft.com/beta/reports/deviceConfigurationDeviceActivity/content).
 
@@ -64,7 +64,7 @@ Některé grafy trendů ve vašem zobrazení portálu Azure Portal se resetují.
     > Pro přístup ke konfiguraci zařízení a informacím o stavu nasazení musíte mít platný ověřovací token.
 
 ## <a name="device-enrollment-charts"></a>Grafy registrace zařízení
-1. V Azure Portal přejděte na **Microsoft Intune** -> **DeviceEnrollment**.
+1. V Azure Portal přejděte na **Microsoft Intune**  ->  **DeviceEnrollment**.
 2. Pomocí [Graph exploreru](https://developer.microsoft.com/graph/graph-explorer) stáhněte podkladová data grafů.
     - Pro stav registrace zkopírujte tento [dotaz na stav registrace](https://graph.microsoft.com/beta/reports/managedDeviceEnrollmentFailureTrends()/content) a vložte ho do [Graf exploreru](https://developer.microsoft.com/graph/graph-explorer).
     - Pro nejzávažnější chyby registrace zkopírujte tento [dotaz na chyby registrace](https://graph.microsoft.com/beta/reports/managedDeviceEnrollmentTopFailures(period=null)/content) a vložte ho do [Graf exploreru](https://developer.microsoft.com/graph/graph-explorer).

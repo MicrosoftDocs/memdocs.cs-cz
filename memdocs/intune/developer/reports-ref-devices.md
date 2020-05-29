@@ -6,7 +6,7 @@ keywords: Intune Data Warehouse
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/03/2020
+ms.date: 05/26/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2ad156e49444679bbf7b15c53e87f504b07897bd
-ms.sourcegitcommit: dba89b827d7f89067dfa75a421119e0c973bb747
+ms.openlocfilehash: bc01428430eb665dc609cff84ee322f28e3b7d79
+ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83709362"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84165426"
 ---
 # <a name="reference-for-devices-entities"></a>Referenční informace o entitách zařízení
 
@@ -63,7 +63,7 @@ Entita **deviceTypes** představuje typ zařízení, na který odkazují jiné e
 | 8 |IPhone |Zařízení iPhone |
 | 9 |IPad |Zařízení iPad |
 | 10 |IPod |Zařízení iPod |
-| 11 |Android |Zařízení Android spravované pomocí Správce zařízení |
+| 11 |Telefon |Zařízení Android spravované pomocí Správce zařízení |
 | 12 |ISocConsumer |Zařízení iSoc Consumer |
 | 14 |MacMDM |Zařízení se systémem Mac OS X spravované pomocí integrovaného agenta MDM |
 | 15 |HoloLens |Zařízení HoloLens |
@@ -226,7 +226,7 @@ Entita **ManagementAgentType** představuje agenty používané ke správě zař
 Entita **zařízení** obsahuje seznam všech zaregistrovaných zařízení, která jsou pod správou, a jejich odpovídající vlastnosti.
 
 |          Vlastnost          |                                                                                       Popis                                                                                      |
-|:--------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+|----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | deviceKey                  | Jedinečný identifikátor zařízení v datovém skladu – náhradní klíč                                                                                                               |
 | deviceId                   | Jedinečný identifikátor zařízení                                                                                                                                                     |
 | deviceName                 | Název zařízení na platformách, které umožňují pojmenování zařízení. Na ostatních platformách Intune vytvoří název z dalších vlastností. Tento atribut nemusí být dostupný pro všechna zařízení. |
@@ -274,7 +274,7 @@ Entita **zařízení** obsahuje seznam všech zaregistrovaných zařízení, kte
 Entita **devicePropertyHistory** má stejné vlastnosti jako tabulka zařízení a denní snímky každého záznamu zařízení za den v posledních 90 dnech. Sloupec DateKey označuje den pro každý řádek.
 
 |          Vlastnost          |                                                                                      Popis                                                                                     |
-|:--------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+|----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | dateKey                    | Odkaz na tabulku kalendářních dat udávající den.                                                                                                                                          |
 | deviceKey                  | Jedinečný identifikátor zařízení v datovém skladu – náhradní klíč Jedná se o odkaz na tabulku zařízení obsahující ID zařízení v Intune.                               |
 | deviceName                 | Název zařízení na platformách, které umožňují pojmenování zařízení. Na ostatních platformách Intune vytvoří název z dalších vlastností. Tento atribut nemusí být dostupný pro všechna zařízení. |

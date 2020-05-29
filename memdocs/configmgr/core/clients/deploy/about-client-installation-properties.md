@@ -10,12 +10,12 @@ ms.assetid: c890fd27-7a8c-4f51-bbe2-f9908af1f42b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6ccfb523cc1abc3a64d396f32d55a4dc4551987c
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 12fee834e4f384cc180658a8e58cf3920a907831
+ms.sourcegitcommit: 555cb8102715afbe06c4de5fdbc943608f00b52c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83428594"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84153454"
 ---
 # <a name="about-client-installation-parameters-and-properties-in-configuration-manager"></a>Informace o parametrech instalace a vlastnostech klienta v Configuration Manager
 
@@ -80,6 +80,8 @@ Příklad: `ccmsetup.exe /?`
 
 Určuje umístění souboru ke stažení. Použijte místní cestu nebo cestu UNC. Zařízení stahuje soubory pomocí protokolu SMB (Server Message Block). Aby bylo možné používat **/source**, uživatelský účet systému Windows pro instalaci klienta potřebuje oprávnění **ke čtení** pro dané umístění.
 
+Další informace o tom, jak služba CCMSetup stahuje obsah, najdete v tématu [skupiny hranic – instalace klienta](../../servers/deploy/configure/boundary-groups.md#bkmk_ccmsetup). Tento článek obsahuje také podrobnosti o chování programu CCMSetup, pokud použijete parametry **/MP** a **/source** .
+
 > [!TIP]  
 > Parametr **/source** lze použít více než jednou na příkazovém řádku pro určení alternativních umístění pro stahování.  
 
@@ -88,6 +90,8 @@ Příklad: `ccmsetup.exe /source:"\\server\share"`
 ### <a name="mp"></a>/MP
 
 Určuje zdrojový bod správy, ke kterému se mají počítače připojit. Počítače používají tento bod správy k vyhledání nejbližšího distribučního bodu pro instalační soubory. Pokud nejsou k dispozici žádné distribuční body nebo počítač nemůže stáhnout soubory z distribučních bodů po čtyřech hodinách, stáhne soubory ze zadaného bodu správy.  
+
+Další informace o tom, jak služba CCMSetup stahuje obsah, najdete v tématu [skupiny hranic – instalace klienta](../../servers/deploy/configure/boundary-groups.md#bkmk_ccmsetup). Tento článek obsahuje také podrobnosti o chování programu CCMSetup, pokud použijete parametry **/MP** a **/source** .
 
 > [!IMPORTANT]  
 > Tento parametr určuje počáteční bod správy pro počítače, které mají najít zdroj stahování, a může to být libovolný bod správy v libovolné lokalitě. Nepřiřazuje *assign* klienta k určenému bodu správy.
