@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/13/2020
+ms.date: 05/29/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f86b418df46069b2a33dd56d06e0e82dbbbf8090
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 734a1361d8889ca1463e8d8986239e088b90cd09
+ms.sourcegitcommit: eb51bb38d484e8ef2ca3ae3c867561249fa413f3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81538403"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84206362"
 ---
 # <a name="use-the-jamf-cloud-connector-with-microsoft-intune"></a>Použití cloudového konektoru Jamf s Microsoft Intune
 
@@ -99,7 +99,7 @@ Pokud jste ještě nevytvořili připojení mezi Jamf pro a Intune nebo máte je
 
 1. Přihlaste se ke konzole Jamf pro.
 
-2. Vyberte **Nastavení** (ikona ozubeného kolečka v pravém horním rohu) a pak přejděte k**podmíněnému přístupu** **globálního řízení** > .
+2. Vyberte **Nastavení** (ikona ozubeného kolečka v pravém horním rohu) a pak přejděte k **Global Management**  >  **podmíněnému přístupu**globálního řízení.
 
    ![Přejít na podmíněný přístup](./media/conditional-access-jamf-cloud-connector/navigate-jamf-console-1.png)
 
@@ -109,13 +109,13 @@ Pokud jste ještě nevytvořili připojení mezi Jamf pro a Intune nebo máte je
 
    Pokud zrušíte výběr tohoto nastavení, zakážete připojení, ale uložíte konfiguraci.
 
-5. Přihlaste se k [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431) a přečtěte si**správu partnerského zařízení** **pro správu** > tenanta.
+5. Přihlaste se k [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431) a přečtěte si správu partnerského zařízení **pro správu tenanta**  >  **Partner device management**.
 
    V uzlu **Správa partnerského zařízení** odstraňte **ID aplikace** v poli **Zadejte ID aplikace Azure Active Directory pro Jamf** a pak vyberte **Uložit**.
 
    ID aplikace je ID podnikové aplikace Azure, která se vytvořila v Azure, když nastavíte ruční integraci, pokud Jamf pro.
 
-6. Přihlaste se k [Azure Portal](https://portal.azure.com/) pomocí účtu, který má oprávnění globálního správce, a přejít na **Azure Active Directory** > **podnikové aplikace**.
+6. Přihlaste se k [Azure Portal](https://portal.azure.com/) pomocí účtu, který má oprávnění globálního správce, a přejít na **Azure Active Directory**  >  **podnikové aplikace**.
 
    Vyhledejte dvě aplikace Jamf a odstraňte je. Nové aplikace se automaticky vytvoří při konfiguraci konektoru Jamf cloudu v dalším postupu.
 
@@ -140,7 +140,7 @@ Pokud teď máte ručně nakonfigurovanou integraci mezi Intune a Jamf pro, pře
 
 1. Přihlaste se ke konzole Jamf pro.
 
-2. V pravém horním corner0u vyberte **Nastavení** (ikona ozubeného kolečka a pak přejděte na**podmíněný přístup** **globálního řízení** > .
+2. V pravém horním corner0u vyberte **Nastavení** (ikona ozubeného kolečka a pak přejděte na **Global Management**  >  **podmíněný přístup**globálního řízení.
 
    ![Přejít na podmíněný přístup](./media/conditional-access-jamf-cloud-connector/navigate-jamf-console-1.png)
 
@@ -157,14 +157,16 @@ Pokud teď máte ručně nakonfigurovanou integraci mezi Intune a Jamf pro, pře
 
    ![Výběr cloudového konektoru v konzole Jamf pro](./media/conditional-access-jamf-cloud-connector/select-cloud-connector.png)
 
-6. V místní nabídce **svrchovaného cloudu** vyberte umístění vašeho cloudu z svrchovaného cloudu od Microsoftu.
+6. V místní nabídce **svrchovaného cloudu** vyberte umístění vašeho cloudu z svrchovaného cloudu od Microsoftu. Pokud nahrazujete předchozí integraci s cloudovým konektorem Jamf, můžete tento krok přeskočit, pokud je zadané umístění.
 
 7. Vyberte jednu z následujících možností na úvodní stránce pro počítače, které nerozpoznají Microsoft Azure:
    - **Výchozí stránka pro registraci zařízení Jamf pro** – v závislosti na stavu zařízení MacOS Tato možnost přesměruje uživatele na portál pro registraci zařízení Jamf pro (pro registraci v Jamf pro) nebo aplikaci Portál společnosti Intune (k registraci v Azure AD).
    - **Stránka odepření přístupu**
    - **Vlastní adresa URL**
-
-8. Vyberte **Connect** (Připojit). Budete přesměrováni a zaregistrujete aplikace Jamf pro v Azure.
+  
+   Pokud nahrazujete předchozí integraci s cloudovým konektorem Jamf, můžete tento krok přeskočit, pokud je zadaná cílová stránka.
+  
+8. Vyberte **Připojit**. Budete přesměrováni a zaregistrujete aplikace Jamf pro v Azure.
 
    Po zobrazení výzvy zadejte přihlašovací údaje pro Microsoft Azure a podle pokynů na obrazovce udělte požadovaná oprávnění. Udělíte oprávnění pro **cloudový konektor**a znovu pro **aplikaci registrace uživatele cloudového konektoru**. Obě aplikace se registrují v Azure jako podnikové aplikace.
 
@@ -174,7 +176,7 @@ Pokud teď máte ručně nakonfigurovanou integraci mezi Intune a Jamf pro, pře
 
    ![ID aplikace](./media/conditional-access-jamf-cloud-connector/copy-application-id.png)
 
-   *ID aplikace* se zkopíruje do systémové schránky pro použití v dalším kroku a otevře se uzel **Správa partnerského zařízení** v *centru pro správu Microsoft Endpoint Manageru* . ( > **Správa partnerského zařízení****správy klientů**).
+   *ID aplikace* se zkopíruje do systémové schránky pro použití v dalším kroku a otevře se uzel **Správa partnerského zařízení** v *centru pro správu Microsoft Endpoint Manageru* . (**Správa tenanta**  >  **Správa partnerského zařízení**).
 
 10. V uzlu **Správa partnerského zařízení** *vložte* **ID aplikace** do pole **Zadejte ID Azure Active Directory aplikace pro Jamf** a pak vyberte **Uložit**.
 
@@ -202,7 +204,7 @@ Po nakonfigurování integrace mezi Intune a Jamf je potřeba [použít zásady 
 
 Pokud potřebujete odebrat integraci Jamf pro s Intune, použijte následující postup k odebrání připojení z konzoly Jamf pro. Tyto informace platí pro cloudový konektor i pro ručně nakonfigurovanou integraci.
 
-1. V Jamf pro přejděte do **globálního řízení** > **podmíněný přístup**. Na kartě **integrace MacOS Intune** vyberte **Upravit**.
+1. V Jamf pro přejděte do **globálního řízení**  >  **podmíněný přístup**. Na kartě **integrace MacOS Intune** vyberte **Upravit**.
 
 2. Zrušte zaškrtnutí políčka **Povolit integraci Intune pro MacOS** .
 
@@ -210,7 +212,7 @@ Pokud potřebujete odebrat integraci Jamf pro s Intune, použijte následující
 
 4. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-5. Vyberte možnost konektory **správy** > **tenanta a tokeny** > **Správa partnerského zařízení** a ověřte, zda je stav nyní **ukončen**.
+5. Vyberte možnost konektory **správy tenanta**  >  **a tokeny**  >  **Správa partnerského zařízení** a ověřte, zda je stav nyní **ukončen**.
 
    > [!NOTE]
    > Zařízení Mac vaší organizace budou odebrána v den (3 měsíce), který je zobrazený ve vaší konzole.
@@ -283,6 +285,10 @@ Ano. Typ připojení můžete změnit zpátky na ruční a postupovat podle poky
 ### <a name="permissions-were-modified-on-one-or-both-required-apps-cloud-connector-and-cloud-connector-user-registration-app-and-registration-is-not-working-is-this-supported"></a>Změnila se oprávnění pro jednu nebo obě požadované aplikace (*cloudový konektor* a *aplikace pro registraci uživatelů cloudového*konektoru) a registrace nefunguje, je tato podpora?
 
 Změna oprávnění pro aplikace není podporovaná.
+
+### <a name="is-there-a-log-file-in-jamf-pro-that-shows-if-the-connection-type-has-been-changed"></a>V Jamf pro je soubor protokolu, který ukazuje, jestli se změnil typ připojení?
+
+Ano, změny jsou protokolovány do souboru JAMFChangeManagement. log. Chcete-li zobrazit protokoly správy změn, přihlaste se k Jamf pro, přejděte na **Nastavení**  >  **nastavení systému**  >  **změny**  >  **protokoly**správy, **typ objektu** vyhledávání pro **podmíněný přístup**a potom kliknutím na tlačítko **Podrobnosti** zobrazte změny.
 
 ## <a name="next-steps"></a>Další kroky
 

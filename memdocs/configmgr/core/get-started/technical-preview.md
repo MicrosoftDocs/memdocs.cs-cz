@@ -2,7 +2,7 @@
 title: Verze Technical Preview
 titleSuffix: Configuration Manager
 description: Přečtěte si o větvi Technical Preview, která vám umožní testovat nové funkce a funkce v Configuration Manager.
-ms.date: 04/30/2020
+ms.date: 05/29/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: bfcdd74b7b5c31e3f3ab6bb38a7ea96de9d05eec
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: e4c0842a3e23eb8503c945073a4be35db5173086
+ms.sourcegitcommit: 0d2f6132428b5fa994e5b770ab1d2bf7d78ac179
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905143"
+ms.lasthandoff: 05/30/2020
+ms.locfileid: "84226259"
 ---
 # <a name="technical-preview-for-configuration-manager"></a>Technical Preview pro Configuration Manager
 
@@ -116,20 +116,28 @@ Enable this section if needed to include any broad change to the tech preview br
 This is the full list of new features in the latest TP release
 
 bullet format:
-<!-- - [title](2020/technical-preview-2003.md) <!--ID-->
+<!-- - [title](2020/technical-preview-2005.md) <!--ID-->
 
 V nejnovější verzi Configuration Manager Technical Preview jsou k dispozici následující funkce:
 
-### <a name="technical-preview-version-2004"></a>Technical Preview verze 2004
+### <a name="technical-preview-version-2005"></a>Technical Preview verze 2005
 
-- [Připojení tenanta Microsoft Endpoint Manageru: podrobnosti o klientovi ConfigMgr](2020/technical-preview-2004.md#bkmk_mem) <!--6374854-->
-- [Oznámení od Microsoftu](2020/technical-preview-2004.md#notifications-from-microsoft) <!--3953121-->
-- [Kopírovat data zjišťování z konzoly](2020/technical-preview-2004.md#bkmk_copydisco) <!--6890051-->
-- [Vylepšení CMPivot](2020/technical-preview-2004.md#improvements-to-cmpivot) <!--6518631-->
-- [Podpora pro PowerShell verze 7](2020/technical-preview-2004.md#bkmk_pwsh7) <!--6023299-->
-- [Vylepšení formátování a rozdělení disku na oddíly pořadí úkolů](2020/technical-preview-2004.md#bkmk_osdpart) <!--6610288-->
-- [Pravidla přehledu správy pro nasazení operačního systému](2020/technical-preview-2004.md#bkmk_osdmi) <!--6982275-->
-- [Rutiny PowerShellu pro typy nasazení pořadí úloh](2020/technical-preview-2004.md#bkmk_osdpwsh) <!--7019342-->
+- [Připojení tenanta: časová osa zařízení v centru pro správu](2020/technical-preview-2005.md#bkmk_timeline) <!--7141381-->
+- [Připojení tenanta: instalace aplikace z centra pro správu](2020/technical-preview-2005.md#bkmk_apps) <!--6024389-->
+- [Připojení tenanta: CMPivot z centra pro správu](2020/technical-preview-2005.md#bkmk_cmpivot) <!--6024392-->
+- [Připojení tenanta: spuštění skriptů z centra pro správu](2020/technical-preview-2005.md#bkmk_scripts) <!--6234688-->
+- [Typ hranice sítě VPN](2020/technical-preview-2005.md#bkmk_vpn) <!--7020519-->
+- [Ověřování Azure AD v centru softwaru](2020/technical-preview-2005.md#bkmk_availapp) <!--6935376-->
+- [Instalace a upgrade klienta na připojení účtované podle objemu dat](2020/technical-preview-2005.md#bkmk_meter) <!--6976145-->
+- [Podpora médií pořadí úloh pro cloudový obsah](2020/technical-preview-2005.md#bkmk_tsmedia) <!--6209223-->
+- [Vylepšení rutin brány pro správu cloudu](2020/technical-preview-2005.md#bkmk_pwshcmg) <!--6978300-->
+- [Komunitní centrum a GitHub](2020/technical-preview-2005.md#community-hub-and-github) <!--3555935-->
+- [Aplikace Microsoft 365 pro podniky](2020/technical-preview-2005.md#bkmk_365_apps) <!--6298093-->
+- [Nahlášení selhání při instalaci a upgradu do Microsoftu](2020/technical-preview-2005.md#report-setup-and-upgrade-failures-to-microsoft) <!--5622909-->
+- [Oznámení o vypršení platnosti tajného klíče aplikace Azure AD](2020/technical-preview-2005.md#bkmk_alertkey) <!--6386392-->
+- [Vylepšení kroků pořadí úloh nástroje BitLocker](2020/technical-preview-2005.md#bkmk_tsbitlocker) <!--6995601-->
+- [Vylepšení nástroje pro vyčištění knihovny obsahu](2020/technical-preview-2005.md#bkmk_content) <!--6887878-->
+- [Odebrání příkazového řádku během místního upgradu Windows 10](2020/technical-preview-2005.md#bkmk_ipucmd) <!--2837795-->
 
 > [!NOTE]
 > Funkce, které byly k dispozici v předchozí verzi Technical Preview, zůstávají dostupné v novějších verzích. Podobně funkce, které jsou přidány do Configuration Manager aktuální větve, zůstávají dostupné ve větvi Technical Preview.
@@ -146,6 +154,17 @@ Následující funkce byly vydány s předchozími verzemi větve Configuration 
 
 > [!TIP]
 > Když je k dispozici nová verze aktuální větve, funkce, které jsou v této verzi k dispozici, jsou uvedeny v článku *co je nového* . Další informace najdete v tématu [co je nového v přírůstkových verzích](../plan-design/changes/whats-new-incremental-versions.md#supported-versions).
+
+### <a name="technical-preview-version-2004"></a>Technical Preview verze 2004
+
+- [Připojení tenanta Microsoft Endpoint Manageru: podrobnosti o klientovi ConfigMgr](2020/technical-preview-2004.md#bkmk_mem) <!--6374854-->
+- [Oznámení od Microsoftu](2020/technical-preview-2004.md#notifications-from-microsoft) <!--3953121-->
+- [Kopírovat data zjišťování z konzoly](2020/technical-preview-2004.md#bkmk_copydisco) <!--6890051-->
+- [Vylepšení CMPivot](2020/technical-preview-2004.md#improvements-to-cmpivot) <!--6518631-->
+- [Podpora pro PowerShell verze 7](2020/technical-preview-2004.md#bkmk_pwsh7) <!--6023299-->
+- [Vylepšení formátování a rozdělení disku na oddíly pořadí úkolů](2020/technical-preview-2004.md#bkmk_osdpart) <!--6610288-->
+- [Pravidla přehledu správy pro nasazení operačního systému](2020/technical-preview-2004.md#bkmk_osdmi) <!--6982275-->
+- [Rutiny PowerShellu pro typy nasazení pořadí úloh](2020/technical-preview-2004.md#bkmk_osdpwsh) <!--7019342-->
 
 ### <a name="technical-preview-version-2003"></a>Technical Preview verze 2003
 
@@ -169,7 +188,7 @@ With each CB release, review and remove from this list for anything that's now a
 
 Následující funkce byly vydány s předchozími verzemi větve Configuration Manager Technical Preview. Tyto funkce zůstanou dostupné v novějších verzích, ale ještě nejsou k dispozici v aktuální větvi.
 
-| Funkce        | Verze Technical Preview |
+| Příznak        | Verze Technical Preview |
 |----------------|---------------------------|
 | Připojit soubory k názoru <!--3556011--> | [Verze Tech Preview 1910](2019/technical-preview-1910.md#attach-files-to-feedback) |
 | Vylepšení distribučních bodů s povoleným vícesměrovým vysíláním <!--3785535--> | [Verze Tech Preview 1908,2](2019/technical-preview-1908-2.md#bkmk_multicast) |

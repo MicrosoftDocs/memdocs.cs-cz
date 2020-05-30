@@ -4,7 +4,7 @@ description: Součástí Microsoft 365 Enterprise je Microsoft Intune. Podívejt
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/13/2019
+ms.date: 05/28/2020
 ms.topic: overview
 audience: microsoft-business
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: microsoft-intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 44f9446299bb20bd73890a67ec33c3d8e7a36e48
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 540faaca71d3694b95d32a24c947a977989a3223
+ms.sourcegitcommit: 7b8921d3ea6a751de67315771d68e2d2750fa36f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988142"
+ms.lasthandoff: 05/30/2020
+ms.locfileid: "84223624"
 ---
 # <a name="device-management-overview"></a>Přehled správy zařízení
 
@@ -56,6 +56,16 @@ S Intune můžete spravovat víc zařízení na osobu a na různých platformác
 - Použití osobních zařízení pro přístup k prostředkům organizace
 
 Další informace o Intune najdete v tématu [co je Intune](what-is-intune.md).
+
+## <a name="co-management"></a>Spoluspráva
+
+Mnoho organizací používá místní Configuration Manager ke správě zařízení, včetně stolních počítačů a serverů. K Microsoft Intune můžete v cloudu připojit místní Configuration Manager. Když se připojíte ke cloudu, získáte výhody Intune a cloudu, včetně [podmíněného přístupu](https://docs.microsoft.com/mem/configmgr/comanage/quickstart-conditional-access), [spouštění vzdálených akcí](https://docs.microsoft.com/mem/configmgr/comanage/quickstart-remote-actions), [používání Windows autopilotu](https://docs.microsoft.com/mem/configmgr/comanage/quickstart-autopilot)a dalších.
+
+[Microsoft Endpoint Manager](https://docs.microsoft.com/mem/endpoint-manager-overview) je platforma řešení, která sjednocuje několik služeb. Zahrnuje [Microsoft Intune](what-is-intune.md) pro cloudovou správu zařízení a [Configuration Manager + Intune](https://docs.microsoft.com/mem/configmgr/comanage/overview) pro správu zařízení pomocí cloudu.
+
+Pokud používáte Configuration Manager a jste připraveni přesunout některé úkoly do cloudu, pak je spoluspráva vaše odpověď.
+
+Další informace o připojení Configuration Manager ke cloudu najdete v tématu [co je spoluspráva](https://docs.microsoft.com/mem/configmgr/comanage/overview).
 
 ## <a name="integration-with-secure-and-protect-services"></a>Integrace se službami zabezpečení a ochrany
 
@@ -94,7 +104,7 @@ V centru pro správu správy zařízení můžete:
 - [Správa aplikací](../apps/app-management.md)  
 - [E-knihy pro iOS](../apps/vpp-ebooks-ios.md)  
 - [Instalace konektoru Exchange On-Premises Connector](../protect/exchange-connector-install.md)  
-- [Správa rolí](role-based-access-control.md)  
+- [Spravovat role](role-based-access-control.md)  
 - Správa aktualizací softwaru
   - [Správa aktualizací Windows 10](../protect/windows-update-for-business-configure.md)  
   - [Správa aktualizací pro iOS/iPadOS](../protect/software-updates-ios.md)  

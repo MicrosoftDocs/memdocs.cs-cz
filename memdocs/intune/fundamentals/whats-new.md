@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5578a6652c9d8216c0b7726c4ff59cd82a591446
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: 67a0ad9eeb7e5ced358a44b17fd8f1c0b05fa2b8
+ms.sourcegitcommit: 7b8921d3ea6a751de67315771d68e2d2750fa36f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84165919"
+ms.lasthandoff: 05/30/2020
+ms.locfileid: "84223674"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
@@ -57,6 +57,9 @@ Podívejte se, co je nového v jednom týdnu v Microsoft Intune v [centru pro sp
 ## <a name="week-of-may-25-2020"></a>Týden od 25. května 2020
 
 ### <a name="app-management"></a>Správa aplikací
+
+#### <a name="windows-32-bit-x86-apps-on-arm64-devices---5477661---"></a>Windows 32 – bitové (x86) aplikace na zařízeních ARM64<!-- 5477661 -->
+Aplikace Windows 32-bit (x86), které jsou nasazeny jako dostupné pro zařízení ARM64, se teď zobrazí v Portál společnosti. Další informace o Windows 32-bitových aplikacích najdete v tématu [Správa aplikací Win32](../apps/apps-win32-app-management.md).
 
 #### <a name="windows-company-portal-app-icon---7114635---"></a>Ikona aplikace pro Windows Portál společnosti<!-- 7114635 -->
 Změnila se ikona aplikace Portál společnosti pro Windows. Další informace o Portál společnosti najdete v tématu [přizpůsobení aplikace Portál společnosti Intune, portál společnosti webu a aplikace Intune](../apps/company-portal-app.md).

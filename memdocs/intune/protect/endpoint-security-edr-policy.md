@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/22/2020
+ms.date: 05/29/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: ac8f82396571a7ae39df43662000f9f3f17d0430
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: d0ba328f1976d0463c6be042dfd6f8a7570d6dac
+ms.sourcegitcommit: eb51bb38d484e8ef2ca3ae3c867561249fa413f3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990877"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84206328"
 ---
 # <a name="endpoint-detection-and-response-policy-for-endpoint-security-in-intune"></a>Zjišťování koncových bodů a zásady odezvy pro zabezpečení koncového bodu v Intune
 
@@ -38,13 +38,13 @@ Zásady EDR se nasazují do skupin zařízení v Azure Active Directory (Azure A
 
 Zásady zabezpečení koncového bodu pro EDR najdete v části *Správa* v uzlu **Security Endpoint** v [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-Zobrazit [nastavení pro zjišťování koncových bodů a profily odpovědí](../protect/endpoint-security-edr-profile-settings.md).
+Zobrazit [nastavení pro zjišťování koncových bodů a profily odpovědí](endpoint-security-edr-profile-settings.md).
 
 ## <a name="prerequisites-for-edr-policies"></a>Předpoklady pro zásady EDR
 
 **Obecné**:
 
-- **Tenant pro Microsoft Defender Advanced Threat Protection** – tenant ATP v Defenderu musí být integrovaný do vašeho tenanta Microsoft Endpoint Manageru (předplatné Intune), aby bylo možné vytvářet zásady EDR. Viz [Použití ATP v programu Microsoft Defender](../protect/advanced-threat-protection.md) v dokumentaci k Intune.
+- **Tenant pro Microsoft Defender Advanced Threat Protection** – tenant ATP v Defenderu musí být integrovaný do vašeho tenanta Microsoft Endpoint Manageru (předplatné Intune), aby bylo možné vytvářet zásady EDR. Viz [Použití ATP v programu Microsoft Defender](advanced-threat-protection.md) v dokumentaci k Intune.
 
 **Podpora zařízení z Configuration Manager**:
 
@@ -67,7 +67,7 @@ Aby bylo možné podporovat používání zásad EDR se zařízeními Configurat
 
 ## <a name="edr-profiles"></a>Profily EDR
 
-[Zobrazte si nastavení](../protect/endpoint-security-edr-profile-settings.md) , která můžete nakonfigurovat pro následující platformy a profily.
+[Zobrazte si nastavení](endpoint-security-edr-profile-settings.md) , která můžete nakonfigurovat pro následující platformy a profily.
 
 **Intune** – pro zařízení, která spravujete pomocí Intune, se podporují následující možnosti:
 
@@ -138,7 +138,7 @@ Pokud plánujete povolit spolusprávu, Seznamte se s spolusprávou, jejich poža
 
       Pokud je vybrána tato možnost, průvodce nabídne další stránky k dokončení nastavení spolusprávy. Další informace najdete v tématu [Povolení spolusprávy](../../configmgr/comanage/how-to-enable.md) v obsahu Configuration Manager.
 
-     ![Konfigurovat připojení tenanta](./media/endpoint-security-edr-policy/tenant-onboarding.png)
+     ![Konfigurovat připojení tenanta](media/endpoint-security-edr-policy/tenant-onboarding.png)
 
 4. Klikněte na tlačítko **Další** a pak na **Ano** , pokud chcete přijmout oznámení o **Vytvoření aplikace AAD** . Tato akce zřídí instanční objekt a vytvoří registraci aplikace služby Azure AD, aby se usnadnila synchronizace kolekcí do centra pro správu služby Microsoft Endpoint Manager.
 
@@ -159,7 +159,7 @@ Pokud plánujete povolit spolusprávu, Seznamte se s spolusprávou, jejich poža
 3. Na kartě **Konfigurovat nahrávání** vyberte **Odeslat do centra pro správu služby Microsoft Endpoint Manager**. Klikněte na **Použít**.
    - Výchozím nastavením pro nahrávání zařízení jsou **všechna moje zařízení spravovaná pomocí koncového bodu Microsoft Configuration Manager**. Můžete taky zvolit omezení konfigurace na jednu nebo několik kolekcí zařízení.
 
-     ![Zobrazit kartu vlastnosti spolusprávy](./media/endpoint-security-edr-policy/configure-upload.png)
+     ![Zobrazit kartu vlastnosti spolusprávy](media/endpoint-security-edr-policy/configure-upload.png)
 
 4. Po zobrazení výzvy se přihlaste pomocí účtu *globálního správce* .
 
@@ -195,7 +195,7 @@ Až nakonfigurujete kolekce, které se mají synchronizovat s centrem pro správ
 
    - Tuto možnost nemůžete vybrat, pokud Configuration Manager hierarchie není připojená ke klientovi.
   
-   ![Konfigurace synchronizace cloudu](./media/endpoint-security-edr-policy/cloud-sync.png)
+   ![Konfigurace synchronizace cloudu](media/endpoint-security-edr-policy/cloud-sync.png)
 
 3. Kliknutím na **OK** uložte konfiguraci.
 
@@ -258,11 +258,17 @@ Podrobnosti o zásadách EDR, které nasadíte, můžete zobrazit v centru pro s
 
 - V případě zásad, které se zaměřují na platformu **Windows 10 a novější** (Intune), uvidíte přehled dodržování zásad. Můžete také vybrat graf pro zobrazení seznamu zařízení, která zásady obdržela, a přejít k jednotlivým zařízením a získat další podrobnosti.
 
+  U **zařízení s grafem senzorů ATP** se zobrazí jenom zařízení, která úspěšně zavedla do ATP programu Defender prostřednictvím použití profilu **Windows 10 a novějšího** . Abyste měli jistotu, že máte v tomto grafu úplná reprezentace svých zařízení, nasaďte profil registrace na všechna vaše zařízení. Zařízení, která přijímají do programu Defender ATP pomocí externích prostředků, jako je například Zásady skupiny nebo PowerShell, se počítají jako **zařízení bez snímače ATP**.
+
 - V případě zásad, které cílí na platformu **Windows 10 a Windows Server** (Configuration Manager), uvidíte přehled dodržování zásad, ale nemůžete přejít k podrobnostem a zobrazit další podrobnosti. Zobrazení je omezené, protože centrum pro správu přijímá informace o omezeném stavu od Configuration Manager, které spravuje nasazení zásad pro Configuration Manager zařízení.
 
-[Prohlédněte si nastavení](../protect/endpoint-security-edr-profile-settings.md) , která můžete nakonfigurovat pro platformy i profily.
+
+
+
+
+[Prohlédněte si nastavení](endpoint-security-edr-profile-settings.md) , která můžete nakonfigurovat pro platformy i profily.
 
 ## <a name="next-steps"></a>Další kroky
 
-- [Konfigurace zásad zabezpečení koncového bodu](../protect/endpoint-security-policy.md#create-an-endpoint-security-policy)
+- [Konfigurace zásad zabezpečení koncového bodu](endpoint-security-policy.md#create-an-endpoint-security-policy)
 - Přečtěte si další informace o [detekci a odezvě koncových bodů](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/overview-endpoint-detection-response) v dokumentaci ke službě Microsoft Defender atp.

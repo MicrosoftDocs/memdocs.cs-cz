@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e96199d9f525fa0dcbf7545d2c20b90a3a76b9cd
-ms.sourcegitcommit: b94415467831517f2aeab9c7c8a13fe8db8bc8ed
+ms.openlocfilehash: a69dbec2b8f3b169934f8547c8bae97e95f1d668
+ms.sourcegitcommit: eb51bb38d484e8ef2ca3ae3c867561249fa413f3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83401799"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84206345"
 ---
 # <a name="troubleshoot-policies-and-profiles-and-in-intune"></a>Řešení potíží se zásadami a profily a v Intune
 
@@ -98,7 +98,7 @@ Zkontrolujte [stav tenanta](../fundamentals/tenant-status.md) a potvrďte, že j
 
         **Užitečné odkazy**: 
 
-        - [Způsoby nasazení zásad dodržování předpisů zařízeními](../protect/device-compliance-get-started.md#ways-to-deploy-device-compliance-policies)
+        - [Způsoby nasazení zásad dodržování předpisů zařízeními](../protect/device-compliance-get-started.md)
         - [Monitorování zásad dodržování předpisů zařízením](../protect/compliance-policy-monitor.md)
 
 ## <a name="youre-unsure-if-a-profile-is-correctly-applied"></a>Nejste si jistí, jestli se profil správně používá

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: dd970dc1517a6fcc197b2bf39a141871b4999a02
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 82c8495391dcc22aa2784657bc1461887e412577
+ms.sourcegitcommit: 7b8921d3ea6a751de67315771d68e2d2750fa36f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268415"
+ms.lasthandoff: 05/30/2020
+ms.locfileid: "84223651"
 ---
 # <a name="desktop-analytics-data-privacy"></a>Ochrana osobních údajů v datech Desktop Analytics
 
@@ -55,7 +55,7 @@ Následující obrázek ukazuje, jak diagnostická data přecházejí z jednotli
 
     4. Nasadíte aktualizace kompatibility na všechna cílová zařízení.  
 
-3. Zařízení odesílají diagnostická data službě Microsoft Diagnostic Správa dat Service pro Windows. Tato služba je hostovaná ve USA.  
+3. Zařízení odesílají diagnostická data službě Microsoft Diagnostic Správa dat Service pro Windows. Všechna diagnostická data jsou šifrována přes protokol HTTPS a při přenosu ze zařízení do této služby používají připnutí certifikátů. Služba Microsoft Správa dat je hostována v USA.
 
 4. Každý den Microsoft vytvoří snímek přehledů zaměřených na IT. Tento snímek kombinuje diagnostická data z Windows se vstupem pro zaregistrovaná zařízení. K tomuto procesu dochází v přechodném úložišti, které se používá jenom pro Desktop Analytics. Přechodné úložiště je hostované v datových centrech Microsoftu v USA. Všechna data se odesílají přes zašifrovaný kanál SSL (HTTPS). Snímky jsou oddělené pomocí komerčního ID.  
 
