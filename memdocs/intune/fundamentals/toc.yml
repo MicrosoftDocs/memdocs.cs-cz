@@ -157,6 +157,10 @@
               href: intune-endpoints.md
             - name: Koncové body Intune pro vládu USA
               href: intune-us-government-endpoints.md
+            - name: Koncové body pro Čínu
+              href: china-endpoints.md
+            - name: Intune provozovaný společností 21Vianet v Číně
+              href: china.md
         - name: Přihlášení k Intune
           href: account-sign-up.md
         - name: Konfigurace domén
