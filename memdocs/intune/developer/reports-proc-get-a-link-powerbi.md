@@ -6,7 +6,7 @@ keywords: Intune Data Warehouse
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/26/2020
+ms.date: 05/29/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c6cd61a7a59f87e93d79d7761f9ccb5238b0be43
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: c7ba3c7397298ea25eecc1147319760892434720
+ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84165494"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84270986"
 ---
 # <a name="connect-to-the-data-warehouse-with-power-bi"></a>Připojení k datovému skladu pomocí Power BI
 
@@ -47,7 +47,7 @@ Následující kroky vám ukážou, jak stáhnout soubor Power BI a jak použív
 
 ## <a name="install-power-bi"></a>Instalace Power BI
 
-Nainstalujte nejnovější verzi [Power BI Desktop](https://aka.ms/intune/datawarehouseapi/installpowerbi). Další informace najdete v tématu [Power BI Desktop](https://powerbi.microsoft.com/desktop)
+Nainstalujte nejnovější verzi [Power BI Desktop](https://aka.ms/intune/datawarehouseapi/installpowerbi). Další informace najdete v tématu [Power BI Desktop](https://powerbi.microsoft.com/desktop).
 
 ## <a name="load-the-data-and-reports-using-the-power-bi-intune-compliance-data-warehouse-app"></a>Načtěte data a sestavy pomocí Power BI aplikace datového skladu dodržování předpisů Intune.
 
@@ -64,10 +64,10 @@ Aplikace Power BI [Intune pro dodržování předpisů (datový sklad)](https://
 9. Chcete-li zobrazit všechny dostupné sestavy, klikněte na kartu **sestavy** a potom klikněte na sestavu **dodržování předpisů v 1.0** . Procházejte stránkami sestavy kliknutím na karty v dolní části.
 10. Chcete-li se později snadno vrátit k těmto sestavám, klikněte na hvězdičku vedle sestavy **dodržování předpisů v 1.0** . Tím se sestava přidá do oblíbených Power BI.
 
-Alternativně můžete aplikaci nainstalovat z portálu Intune:
+Alternativně můžete aplikaci nainstalovat z centra pro správu Microsoft Endpoint Manageru:
 
-1. Přihlaste se k Azure Portal a vyberte **monitorování a Správa**  >  **Intune**. Můžete také vyhledat prostředky pro Intune.
-2. Otevřete okno **nastavit datový sklad Intune** .
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Vyberte **sestavy**  >  datový sklad**datového skladu Intune**  >  **Data warehouse**.
 3. Vyberte **získat Power BI aplikaci** pro přístup k předem vytvořeným Power BIm sestavám pro vašeho tenanta v prohlížeči a jejich sdílení.
 4. Postupujte podle kroků 2-10 výše.
 
@@ -75,10 +75,10 @@ Alternativně můžete aplikaci nainstalovat z portálu Intune:
 
 S klientem ověřeným v Azure AD se adresa URL pro OData připojí ke koncovému bodu RESTful v rozhraní API datového skladu, který zveřejní datový model do klienta sestav. Pokud chcete použít aplikaci Power BI Desktop pro připojení a vytvoření vlastních sestav, postupujte podle těchto pokynů. Nejste omezeni aplikací Power BI Desktop. Můžete použít oblíbený analytický nástroj s adresou URL pro OData, za předpokladu, že klient podporuje ověřování OAUTH2.0 a standard OData v4.0.
 
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. V části **Další úkoly** na pravé straně okna Přehled klikněte na **nastavit datový sklad Intune** . Zobrazí se okno **datový sklad Intune** .
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Vyberte **sestavy**  >  datový sklad**datového skladu Intune**  >  **Data warehouse**.
 3. V okně vytváření sestav načtěte adresu URL vlastního kanálu, například:<br>
-    `https://fef.{yourinfo}.manage.microsoft.com/ReportingService/DataWarehouseFEService/dates?api-version=v1.0`
+    `https://fef.{yourtenant}.manage.microsoft.com/ReportingService/DataWarehouseFEService/dates?api-version=v1.0`
 4. Otevřete **Power BI Desktop**.
 5. Vyberte **soubor**  >  **získat data**. Vyberte **Datový kanál OData**.
 6. Zvolte **Základní**.
@@ -93,7 +93,7 @@ S klientem ověřeným v Azure AD se adresa URL pro OData připojí ke koncovém
 
 ## <a name="next-steps"></a>Další kroky
 
-Můžete získat odpovědi na otázky týkající se vašeho prostředí, například týkající se počtu zařízení zaregistrovaných podle dne za poslední týden. Můžete získat přehled o naplnění tenanta a klientů Intune pomocí datových skladů Intune Power BI sestav načtených z okna v Azure. Intune ale poskytuje množství dalších způsobů, jak data rozšířit a znovu použít. Power BI a rozhraní API datového skladu Intune poskytují další funkce, například:
+Můžete získat odpovědi na otázky týkající se vašeho prostředí, například týkající se počtu zařízení zaregistrovaných podle dne za poslední týden. Můžete získat přehled o naplnění tenanta a klientů Intune pomocí datových skladů Intune Power BI sestav načtených z okna v centru pro správu Microsoft Endpoint Management. Intune ale poskytuje množství dalších způsobů, jak data rozšířit a znovu použít. Power BI a rozhraní API datového skladu Intune poskytují další funkce, například:
 
 <!-- - You can use Power BI Desktop to create additional report types with your data. For example, you could create a custom chart representing the ratio of device manufactures in your enterprise. For more information about creating custom reports with Power BI and the Intune Data Warehouse, see `BLOG POST ON POWER BI`. -->
 - Data tenanta budou uspořádána tak, aby vám pomohla získat lepší přehled. Další informace o způsobu uspořádání dat najdete v tématu [Datový model datového skladu](reports-ref-data-model.md).

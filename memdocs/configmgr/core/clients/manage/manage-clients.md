@@ -10,12 +10,12 @@ ms.assetid: 3986a992-c175-4b6f-922e-fc561e3d7cb7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2d7697f8b5a2017aa732c52512bf31598c070fbc
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7b9111e3be82424425561e0a664fee955d73ee63
+ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81714875"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84270816"
 ---
 # <a name="how-to-manage-clients-in-configuration-manager"></a>Správa klientů v nástroji Configuration Manager
 
@@ -93,7 +93,7 @@ Další informace najdete v tématu [Konfigurace nastavení klienta](../deploy/c
 
 ### <a name="start"></a>Spustit
 
-- Spusťte **Průzkumník prostředků** pro zobrazení informací o inventáři hardwaru a softwaru z klienta systému Windows. Další informace najdete v těchto článcích:
+- Spusťte **Průzkumník prostředků** pro zobrazení informací o inventáři hardwaru a softwaru z klienta systému Windows. Další informace najdete v následujících článcích:
 
   - [Použití Průzkumníka prostředků k zobrazení inventáře hardwaru](inventory/use-resource-explorer-to-view-hardware-inventory.md)
 
@@ -103,7 +103,7 @@ Další informace najdete v tématu [Konfigurace nastavení klienta](../deploy/c
 
 ### <a name="approve"></a>Schválení
 
-Pokud klient komunikuje se systémy lokality pomocí protokolu HTTP a certifikátu podepsaného svým držitelem, je nutné tyto klienty schválit, aby je identifikoval jako důvěryhodné počítače. Ve výchozím nastavení konfigurace lokality automaticky schválí klienty ze stejné doménové struktury služby Active Directory a důvěryhodných doménových struktur. Toto výchozí chování znamená, že nemusíte ručně schvalovat každého klienta. Ručně schvalte počítače v pracovní skupině, kterým důvěřujete, a všechny jiné neschválené počítače, kterým důvěřujete.
+Pokud klient komunikuje se systémy lokality pomocí protokolu HTTP a certifikátu podepsaného svým držitelem, je nutné tyto klienty schválit, aby je identifikoval jako důvěryhodné počítače. Konfigurace lokality ve výchozím nastavení automaticky schválí klienty ze stejné doménové struktury služby Active Directory, důvěryhodných doménových struktur a připojených Azure Active Directory (Azure AD).<!-- MEMDocs#318 -->. Toto výchozí chování znamená, že nemusíte ručně schvalovat každého klienta. Ručně schvalte počítače v pracovní skupině, kterým důvěřujete, a všechny jiné neschválené počítače, kterým důvěřujete.
 
 > [!IMPORTANT]  
 > I když některé funkce správy mohou fungovat pro neschválené klienty, jedná se o nepodporovaný scénář pro Configuration Manager.  
@@ -189,7 +189,7 @@ Chcete-li přiřadit klienta k nové primární lokalitě, přečtěte si téma 
 
 Chcete-li odebrat klienta z kolekce, překonfigurujte vlastnosti kolekce. Další informace najdete v tématu [Správa kolekcí](collections/manage-collections.md).
 
-### <a name="refresh"></a>Obnovení
+### <a name="refresh"></a>Aktualizovat
 
 Aktualizujte zobrazení konzoly s nejnovějšími daty v databázi. Například pokud se zařízení zobrazuje v seznamu ze zjišťování, ale nezobrazuje se jako nainstalované. Po instalaci klienta nástroje a zajistěte, aby byl přiřazen k lokalitě, vyberte **aktualizovat**.
 
@@ -310,7 +310,7 @@ Další informace o tom, jak používat tyto vlastnosti příkazového řádku p
 
 1. V klientském počítači otevřete ovládací panel **Configuration Manager** .  
 
-2. Přepněte na kartu **cache (mezipaměť** ). Nastavte vlastnosti prostor a umístění. Výchozí umístění je `%windir%\ccmcache`.  
+2. Přepněte na kartu **cache (mezipaměť** ). Nastavte vlastnosti prostor a umístění. Výchozí umístění je `%windir%\ccmcache` .  
 
 3. Chcete-li odstranit soubory ve složce mezipaměti, vyberte možnost **Odstranit soubory**.  
 
@@ -333,7 +333,7 @@ Z počítače můžete odinstalovat Configuration Manager klientský software po
 > [!TIP]  
 > Proces odinstalace zobrazí na obrazovce žádné výsledky. Postup pro ověření úspěšného odinstalace klienta najdete v následujícím souboru protokolu:`%windir%\ccmsetup\logs\CCMSetup.log`  
 >
-> Pokud potřebujete počkat na dokončení procesu odinstalace ještě předtím, než budete dělat něco jiného, `Wait-Process CCMSetup` spusťte v PowerShellu. Tento příkaz může pozastavit skript, dokud proces CCMSetup nedokončí.
+> Pokud potřebujete počkat na dokončení procesu odinstalace ještě předtím, než budete dělat něco jiného, spusťte `Wait-Process CCMSetup` v PowerShellu. Tento příkaz může pozastavit skript, dokud proces CCMSetup nedokončí.
 
 
 ## <a name="manage-conflicting-records"></a><a name="BKMK_ConflictingRecords"></a>Správa konfliktních záznamů

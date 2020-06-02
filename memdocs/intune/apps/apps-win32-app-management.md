@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/02/2020
+ms.date: 06/01/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ecf8d5b17f19110e6f2428aaf07a37b1216a9411
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: 8814e1a2c6b1af48d71a0a82c02492e48b44dda9
+ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84165698"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84271003"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Samostatná verze Intune – Správa aplikací Win32
 
@@ -456,7 +456,7 @@ V příkazu prostředí PowerShell nahraďte `<path to binary file>` cestou k so
 - Zkontrolujte verzi operačního systému – Windows 10 1607 a novější.  
 - Zkontrolujte skladovou položku Windows 10 – Windows 10 S nebo verze Windows s povoleným režimem S nepodporují instalaci pomocí instalační služby MSI.
 
-Další informace o řešení potíží s aplikacemi Win32 najdete v tématu [řešení potíží s instalací aplikací Win32](troubleshoot-app-install.md#win32-app-installation-troubleshooting).
+Další informace o řešení potíží s aplikacemi Win32 najdete v tématu [řešení potíží s instalací aplikací Win32](troubleshoot-app-install.md#win32-app-installation-troubleshooting). Informace o typech aplikací na zařízeních ARM64 najdete v tématu [typy aplikací podporované na zařízeních ARM64](../apps/troubleshoot-app-install.md#app-types-supported-on-arm64-devices).
 
 ## <a name="next-steps"></a>Další kroky
 

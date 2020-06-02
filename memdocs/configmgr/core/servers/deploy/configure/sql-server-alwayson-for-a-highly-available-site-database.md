@@ -10,12 +10,12 @@ ms.assetid: 58d52fdc-bd18-494d-9f3b-ccfc13ea3d35
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b9e2e4e85d9fb6a1ab34af8760e0ac61d6e4fab4
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 79e83a7ba111b1d7f96fb623914ffe8e11f22f3d
+ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718298"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84270867"
 ---
 # <a name="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager"></a>Příprava na používání skupin dostupnosti Always On SQL Server s Configuration Manager
 
@@ -106,7 +106,7 @@ Nakonfigurujte databázi každé repliky s následujícím nastavením:
 
     Další informace naleznete v tématu [Integrace modulu CLR](https://docs.microsoft.com/sql/relational-databases/clr-integration/clr-integration-enabling).  
 
-- Nastavte **repl velikost textu** na `2147483647`:  
+- Nastavte **repl velikost textu** na `2147483647` :  
 
     ``` SQL
     EXECUTE sp_configure 'max text repl size (B)', 2147483647
@@ -264,6 +264,8 @@ Po dokončení instalace musí zůstat tyto porty otevřené pro Configuration M
 
 Pro tyto konfigurace můžete použít vlastní porty. Použijte stejné vlastní porty pro koncový bod a na všechny repliky ve skupině dostupnosti.
 
+Aby SQL mohl replikovat data mezi lokalitami, vytvořte pravidlo vyrovnávání zatížení pro každý port v nástroji pro vyrovnávání zatížení Azure. Další informace najdete v tématu [Konfigurace portů s vysokou dostupností pro interní nástroj pro vyrovnávání zatížení](https://docs.microsoft.com/azure/load-balancer/load-balancer-configure-ha-ports).<!-- MEMDocs#252 -->
+
 #### <a name="listener"></a>Naslouchací proces
 
 Skupina dostupnosti musí mít aspoň jeden *naslouchací proces skupiny dostupnosti*. Když nakonfigurujete Configuration Manager k použití databáze lokality ve skupině dostupnosti, použije se virtuální název tohoto naslouchacího procesu. Skupina dostupnosti sice může obsahovat několik posluchačů, Configuration Manager je ale může používat jenom jednou. Další informace najdete v tématu [Vytvoření nebo konfigurace naslouchacího procesu skupiny dostupnosti SQL Server](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server).
@@ -280,11 +282,11 @@ Představte si třeba následující scénář:
 
 - Vytvoříte skupinu dostupnosti, která používá tři SQL servery.  
 
-- Server primární repliky je nová instalace systému SQL Server 2014. Ve výchozím nastavení ukládá databázi. MDF a. Soubory LDF v `C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA`.  
+- Server primární repliky je nová instalace systému SQL Server 2014. Ve výchozím nastavení ukládá databázi. MDF a. Soubory LDF v `C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA` .  
 
-- Upgradovali jste oba servery sekundární repliky na SQL Server 2014 z předchozích verzí. S upgradem tyto servery uchovávají původní cestu k ukládání souborů databáze: `C:\Program Files\Microsoft SQL Server\MSSQL10.MSSQLSERVER\MSSQL\DATA`.  
+- Upgradovali jste oba servery sekundární repliky na SQL Server 2014 z předchozích verzí. S upgradem tyto servery uchovávají původní cestu k ukládání souborů databáze: `C:\Program Files\Microsoft SQL Server\MSSQL10.MSSQLSERVER\MSSQL\DATA` .  
 
-- Než přesunete databázi lokality do této skupiny dostupnosti, vytvořte na každém sekundárním serveru repliky tuto cestu k souboru `C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA`:. Tato cesta je duplikátem používané cesty na primární replice, a to i v případě, že sekundární repliky nepoužijí toto umístění souboru.  
+- Než přesunete databázi lokality do této skupiny dostupnosti, vytvořte na každém sekundárním serveru repliky tuto cestu k souboru: `C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA` . Tato cesta je duplikátem používané cesty na primární replice, a to i v případě, že sekundární repliky nepoužijí toto umístění souboru.  
 
 - Pak udělíte účtu služby SQL Server v každé sekundární replice přístup k nově vytvořenému umístění souboru na tomto serveru.  
 

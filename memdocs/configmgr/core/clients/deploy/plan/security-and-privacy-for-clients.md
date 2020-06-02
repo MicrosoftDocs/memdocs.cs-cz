@@ -10,12 +10,12 @@ ms.assetid: c1d71899-308f-49d5-adfa-3a3ec0163ed8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e4922502b49ab2da9ce393fab809e4dc583fd962
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 84ef4e37ddf756f04101c9cdec0ec7a4ed91688d
+ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81714007"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84270833"
 ---
 # <a name="security-and-privacy-for-configuration-manager-clients"></a>Zabezpečení a ochrana osobních údajů pro klienty Configuration Manager
 
@@ -32,7 +32,7 @@ Lokalita Configuration Manager akceptuje data ze zařízení, na kterých běž�
 
 - Jako vlastnost lokality nakonfigurujte možnost **Nastavení serveru** pro položku **Pouze HTTPS**.  
 
-- Nainstalujte klienty pomocí vlastnosti `UsePKICert` CCMSetup.  
+- Nainstalujte klienty pomocí `UsePKICert` vlastnosti CCMSetup.  
 
 - Použijte seznam odvolaných certifikátů (CRL) a ujistěte se, že klienti a komunikační servery k němu mají vždycky přístup.  
 
@@ -48,7 +48,7 @@ Pokud nemůžete použít ověřování PKI, schválení identifikuje počítač
 - Automatické pro počítače v důvěryhodných doménách
 - Automaticky pro všechny počítače  
 
-Nejbezpečnější metodou schválení je automatické schválení klientů, kteří jsou členy důvěryhodných domén. Pak ručně zkontrolujte a schvalte všechny ostatní počítače. Automatické schvalování všech klientů se nedoporučuje, pokud nemáte další řízení přístupu, které brání nedůvěryhodným počítačům v přístupu k síti.  
+Nejbezpečnější metodou schválení je automatické schválení klientů, kteří jsou členy důvěryhodných domén. Tato možnost zahrnuje klienty připojené k cloudovým doménám z připojených tenantů Azure Active Directory (Azure AD).<!-- MEMDocs#318 --> Pak ručně zkontrolujte a schvalte všechny ostatní počítače. Automatické schvalování všech klientů se nedoporučuje, pokud nemáte další řízení přístupu, které brání nedůvěryhodným počítačům v přístupu k síti.  
 
 Další informace o ručním schválení počítačů najdete v tématu [Správa klientů z uzlu zařízení](../../manage/manage-clients.md#BKMK_ManagingClients_DevicesNode).  
 

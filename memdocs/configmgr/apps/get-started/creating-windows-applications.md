@@ -10,12 +10,12 @@ ms.assetid: 9181c84e-d74f-44ea-9bb9-f7805eb465fc
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 9e59d850a78a8f45f93769003e7a1de99e5634b3
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: ddd01055ac6edf2872854c93cc5172b396052ad2
+ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906390"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84270850"
 ---
 # <a name="create-windows-applications-in-configuration-manager"></a>Vytváření aplikací pro Windows v Configuration Manager
 
@@ -39,7 +39,7 @@ Zřídit aplikaci s balíčkem aplikace pro Windows pro všechny uživatele v za
 > [!Important]  
 > Buďte opatrní při instalaci, zřizování a aktualizaci různých verzí stejného balíčku aplikace pro Windows na zařízení, což může vést k neočekávaným výsledkům. K tomuto chování může dojít při použití Configuration Manager k zřízení aplikace, ale pak uživatelům umožnit aktualizaci aplikace z Microsoft Store. Další informace najdete v pokynech k dalšímu kroku při [správě aplikací z Microsoft Store pro firmy](../deploy-use/manage-apps-from-the-windows-store-for-business.md#next-steps).  
 
-Při zřizování offline licencované aplikace Configuration Manager Nedovolí, aby ho Windows automaticky aktualizoval z Microsoft Store.  
+Když do zařízení s Windows 10 nasazujete offline aplikace pomocí klienta Configuration Manager, neumožníte uživatelům aktualizovat aplikace z externích nasazení Configuration Manager. Řízení aktualizací pro offline aplikace je zvlášť důležité v prostředích s více uživateli, jako jsou například učebny. Další informace najdete v tématu [Správa aplikací z Microsoft Store pro firmy a vzdělávání pomocí Configuration Manager](../deploy-use/manage-apps-from-the-windows-store-for-business.md#next-steps).<!-- MEMDocs#316 -->
 
 Configuration Manager podporuje zřizování aplikací ve všech podporovaných verzích Windows 10.<!--SCCMDocs-pr issue 2762-->
 

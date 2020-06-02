@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/30/2020
+ms.date: 06/01/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 38598e0245b0cfe15be4b9303620aea1724933d1
-ms.sourcegitcommit: ad4b3e4874a797b755e774ff84429b5623f17c5c
+ms.openlocfilehash: b81686f645d9fce610c39266feb2675fd35cc280
+ms.sourcegitcommit: 6f67c864cf71b4a6a316f4d04a6cc43cf28b4277
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82166566"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84257031"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Nastavení zařízení s Androidem Enterprise pro povolení nebo omezení funkcí pomocí Intune
 
@@ -63,7 +63,7 @@ Tato nastavení se vztahují na typy registrace Androidu Enterprise, kde Intune 
 - **Data ze nosníku pomocí NFC**: **blok** zabraňuje použití technologie NFC (Near Field Communication) pro světlou dat z aplikací. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém standardně umožňovat sdílení dat mezi zařízeními pomocí technologie NFC.
 - **Funkce ladění**: Pokud chcete, aby uživatelé mohli používat funkce ladění na zařízení, vyberte **Povolit** . Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém zabránit uživatelům v používání funkcí ladění na zařízení.
 - **Úpravy mikrofonu**: **blok** zabraňuje uživatelům v odztlumení mikrofonu a nastavení hlasitosti mikrofonu. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém uživatelům dovolit, aby na zařízení používali a upravili hlasitost mikrofonu.
-- E- **maily pro obnovení továrního nastavení**: zvolit **e-mailové adresy účtu Google** Zadejte e-mailové adresy správců zařízení, které můžou zařízení odemknout po jeho vymazání. Tyto e-mailové adresy oddělujte středníkem, například `admin1@gmail.com;admin2@gmail.com`. Pokud nezadáte e-mail, může kdokoli zařízení po obnovení do továrního nastavení odemknout. Tyto e-maily se použijí jenom v případě, že se spustí obnovení z výroby bez uživatele, jako je třeba spuštění obnovení továrního nastavení pomocí nabídky obnovení.
+- E- **maily pro obnovení továrního nastavení**: zvolit **e-mailové adresy účtu Google** Zadejte e-mailové adresy správců zařízení, které můžou zařízení odemknout po jeho vymazání. Tyto e-mailové adresy oddělujte středníkem, například `admin1@gmail.com;admin2@gmail.com` . Pokud nezadáte e-mail, může kdokoli zařízení po obnovení do továrního nastavení odemknout. Tyto e-maily se použijí jenom v případě, že se spustí obnovení z výroby bez uživatele, jako je třeba spuštění obnovení továrního nastavení pomocí nabídky obnovení.
 
   Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
 
@@ -171,8 +171,8 @@ Pomocí těchto nastavení můžete nakonfigurovat možnosti veřejného termin�
       > [!TIP]
       > Je podporována jakákoli adresa URL prostředku souboru, která může být převedena do rastrového obrázku.
 
-    - **Počet sekund, po které zařízení zobrazuje spořič obrazovky před**vypnutím obrazovky: vyberte, jak dlouho zařízení zobrazí spořič obrazovky. Zadejte hodnotu v rozmezí 0-9999999 sekund. Výchozí hodnota `0` je sekund. Pokud je ponecháno prázdné nebo je nastaveno na`0`hodnotu nula (), je spořič obrazovky aktivní, dokud uživatel nekomunikuje se zařízením.
-    - **Počet sekund neaktivních zařízení před zobrazením spořiče obrazovky**: vyberte, jak dlouho bude zařízení nečinné, než se zobrazí. Zadejte hodnotu v rozmezí 1-9999999 sekund. Výchozí hodnota `30` je sekund. Je nutné zadat číslo větší než nula (`0`).
+    - **Počet sekund, po které zařízení zobrazuje spořič obrazovky před**vypnutím obrazovky: vyberte, jak dlouho zařízení zobrazí spořič obrazovky. Zadejte hodnotu v rozmezí 0-9999999 sekund. Výchozí hodnota je `0` sekund. Pokud je ponecháno prázdné nebo je nastaveno na hodnotu nula ( `0` ), je spořič obrazovky aktivní, dokud uživatel nekomunikuje se zařízením.
+    - **Počet sekund neaktivních zařízení před zobrazením spořiče obrazovky**: vyberte, jak dlouho bude zařízení nečinné, než se zobrazí. Zadejte hodnotu v rozmezí 1-9999999 sekund. Výchozí hodnota je `30` sekund. Je nutné zadat číslo větší než nula ( `0` ).
     - **Rozpoznat médium před spuštěním spořiče obrazovky**: **Povolit** (výchozí) nezobrazuje spořič obrazovky, pokud se na zařízení přehrává zvuk nebo video. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém zobrazit spořič obrazovky i v případě, že přehrávání zvuku nebo videa.
 
 ### <a name="password"></a>Heslo
@@ -186,7 +186,7 @@ Pomocí těchto nastavení můžete nakonfigurovat možnosti veřejného termin�
   - **Výchozí ze zařízení**
   - **Vyžaduje se heslo, žádná omezení.**
   - **Slabý biometrika**: [silný vs. slabý biometrika](https://android-developers.googleblog.com/2018/06/better-biometrics-in-android-p.html) (otevře web v Androidu)
-  - **Číselná**: heslo musí obsahovat pouze čísla, například `123456789`. Dále zadejte:
+  - **Číselná**: heslo musí obsahovat pouze čísla, například `123456789` . Dále zadejte:
     - **Minimální délka hesla**: zadejte minimální délku hesla, která musí být delší než 4 až 16 znaků.
   - **Číselná složitá**: opakující se nebo po sobě jdoucí čísla, například "1111" nebo "1234", nejsou povolena. Dále zadejte:
     - **Minimální délka hesla**: zadejte minimální délku hesla, která musí být delší než 4 až 16 znaků.
@@ -201,11 +201,11 @@ Pomocí těchto nastavení můžete nakonfigurovat možnosti veřejného termin�
     - **Počet požadovaných malých**písmen: zadejte počet malých písmen, které musí heslo obsahovat, a to v rozmezí 0 až 16 znaků.
     - **Počet požadovaných velkých znaků**: zadejte počet velkých písmen, které musí heslo obsahovat, a to v rozmezí 0 až 16 znaků.
     - **Počet požadovaných znaků bez**písmen: zadejte počet jiných než písmen (kromě písmen v abecedě), které musí heslo obsahovat, 0 až 16 znaků.
-    - **Požadovaný počet**číslic: zadejte počet číselných znaků (`1`, `2`, `3`atd.), které musí heslo obsahovat, a to v rozmezí 0 až 16 znaků.
-    - **Požadovaný počet znaků symbolů**: zadejte počet znaků symbolu (`&`, `#` `%`, atd.), které musí heslo obsahovat, 0 až 16 znaků.
+    - **Požadovaný počet**číslic: zadejte počet číselných znaků ( `1` , `2` , `3` atd.), které musí heslo obsahovat, a to v rozmezí 0 až 16 znaků.
+    - **Požadovaný počet znaků symbolů**: zadejte počet znaků symbolu (,, atd `&` `#` `%` .), které musí heslo obsahovat, 0 až 16 znaků.
 
-- **Počet dní do vypršení platnosti hesla**: zadejte počet dní, než bude nutné změnit heslo zařízení, od 1-365. Zadejte `90` například platnost hesla po 90 dnech. Po vypršení platnosti hesla se uživatelům zobrazí výzva k vytvoření nového hesla. Pokud je hodnota prázdná, Intune se nezmění ani neaktualizuje.
-- **Počet hesel vyžadovaných před opětovným použitím hesla uživatelem**: Toto nastavení použijte, pokud chcete uživatelům zabránit ve vytváření hesel, která používali dřív. Zadejte počet dříve použitých hesel, která se nedají použít, od 1-24. Například zadejte `5` , že uživatelé nemůžou nastavit nové heslo na aktuální heslo ani na žádná z předchozích čtyř hesel. Pokud je hodnota prázdná, Intune se nezmění ani neaktualizuje.
+- **Počet dní do vypršení platnosti hesla**: zadejte počet dní, než bude nutné změnit heslo zařízení, od 1-365. Zadejte například `90` platnost hesla po 90 dnech. Po vypršení platnosti hesla se uživatelům zobrazí výzva k vytvoření nového hesla. Pokud je hodnota prázdná, Intune se nezmění ani neaktualizuje.
+- **Počet hesel vyžadovaných před opětovným použitím hesla uživatelem**: Toto nastavení použijte, pokud chcete uživatelům zabránit ve vytváření hesel, která používali dřív. Zadejte počet dříve použitých hesel, která se nedají použít, od 1-24. Například zadejte, `5` že uživatelé nemůžou nastavit nové heslo na aktuální heslo ani na žádná z předchozích čtyř hesel. Pokud je hodnota prázdná, Intune se nezmění ani neaktualizuje.
 - **Počet neúspěšných přihlášení před vymazáním zařízení**: zadejte počet chybných hesel povolených před vymazáním zařízení, od 4-11. `0`(nula) může zakázat funkci vymazání zařízení. Pokud je hodnota prázdná, Intune se nezmění ani neaktualizuje.
 
   > [!NOTE]
@@ -213,7 +213,7 @@ Pomocí těchto nastavení můžete nakonfigurovat možnosti veřejného termin�
 
 ### <a name="power-settings"></a>Nastavení napájení
 
-- **Čas na zamykací obrazovku**: zadejte maximální dobu, kterou může uživatel nastavit, dokud se zařízení nezamkne. Pokud například nastavíte toto nastavení na `10 minutes`, uživatelé můžou nastavit čas od 15 sekund až po 10 minut. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
+- **Čas na zamykací obrazovku**: zadejte maximální dobu, kterou může uživatel nastavit, dokud se zařízení nezamkne. Pokud například nastavíte toto nastavení na `10 minutes` , uživatelé můžou nastavit čas od 15 sekund až po 10 minut. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
 
 - **Zapnutá obrazovka, když se zařízení napájí ze sítě**: Zvolte zdroje napájení, při jejichž použití zůstane obrazovka zařízení zapnutá.
 
@@ -231,8 +231,16 @@ Pomocí těchto nastavení můžete nakonfigurovat možnosti veřejného termin�
 
 ### <a name="applications"></a>Aplikace
 
-- **Povolit instalaci z neznámých zdrojů**: **Povolit** umožňuje uživatelům zapnout **neznámé zdroje**. Toto nastavení umožňuje aplikacím instalovat z neznámých zdrojů, včetně jiných zdrojů než Obchod Google Play. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém zabránit uživatelům v zapnutí **neznámých zdrojů**.
-- **Povolení přístupu ke všem aplikacím v Google Play Storu**: Pokud je nastavení **povolené**, uživatelé získají přístup ke všem aplikacím v obchodě Google Play Store. Nezískají přístup k aplikacím, které správce zablokuje v [klientských aplikacích](../apps/apps-add-android-for-work.md). Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém vynutit, aby uživatelé měli přístup jenom k aplikacím, které správce zpřístupňuje v Google Play Storu, nebo aplikace vyžadované v [klientských aplikacích](../apps/apps-add-android-for-work.md).
+- **Povolit instalaci z neznámých zdrojů**: **Povolit** umožňuje uživatelům zapnout **neznámé zdroje**. Toto nastavení umožňuje aplikacím instalovat z neznámých zdrojů, včetně jiných zdrojů než Obchod Google Play. Umožňuje uživatelům načítat aplikace na zařízení pomocí jiných prostředků než Obchod Google Play. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém zabránit uživatelům v zapnutí **neznámých zdrojů**.
+- **Povolení přístupu ke všem aplikacím v Google Play Storu**: Pokud je nastavení **povolené**, uživatelé získají přístup ke všem aplikacím v obchodě Google Play Store. Nezískají přístup k aplikacím, které správce zablokuje v [klientských aplikacích](../apps/apps-add-android-for-work.md).
+
+  Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém:
+  
+  - Přinutí uživatelům přístup jenom k aplikacím, které správce zpřístupní v Google Play Storu, nebo aplikace vyžadované v [klientských aplikacích](../apps/apps-add-android-for-work.md). 
+  - Automaticky odinstalujte všechny aplikace zjištěné jako nainstalované uživateli mimo Google Play Store.
+
+  Pokud chcete povolit souběžné načítání, nastavte možnost **Povolit instalaci z neznámých zdrojů** a **povolte přístup ke všem aplikacím v** nastavení služby Google Play Store **Povolit**.
+
 - **Automatické aktualizace aplikací**: zařízení kontrolují aktualizace aplikací denně. Vyberte, kdy se mají nainstalovat automatické aktualizace. Možnosti:
   - **Nenakonfigurováno**: Intune toto nastavení nemění ani neaktualizuje.
   - **Volba uživatele**: operační systém může tuto možnost výchozí. Uživatelé můžou nastavit své předvolby v aplikaci Managed Google Play.
@@ -274,7 +282,7 @@ Pomocí těchto nastavení můžete nakonfigurovat možnosti veřejného termin�
   - **Direct**: zadejte informace o proxy server ručně, včetně:
     - **Hostitel**: zadejte název hostitele nebo IP adresu vašeho proxy server. Zadejte například `proxy.contoso.com` nebo `127.0.0.1`.
     - **Číslo portu**: zadejte číslo portu TCP používaného proxy server. Zadejte například `8080`.
-    - **Vyloučení hostitelé**: Zadejte seznam názvů hostitelů nebo IP adres, které nepoužívají proxy server. Tento seznam může obsahovat zástupný znak hvězdičky (`*`) a několik hostitelů oddělených středníky`;`() bez mezer. Zadejte například `127.0.0.1;web.contoso.com;*.microsoft.com`.
+    - **Vyloučení hostitelé**: Zadejte seznam názvů hostitelů nebo IP adres, které nepoužívají proxy server. Tento seznam může obsahovat zástupný znak hvězdičky ( `*` ) a několik hostitelů oddělených středníky ( `;` ) bez mezer. Zadejte například `127.0.0.1;web.contoso.com;*.microsoft.com`.
 
   - **Automatická konfigurace proxy serveru**: zadejte **adresu URL PAC** do skriptu pro automatickou konfiguraci proxy serveru. Zadejte například `https://proxy.contoso.com/proxy.pac`.
 
@@ -302,7 +310,7 @@ Tato nastavení se vztahují na typy registrace Androidu Enterprise, kde Intune 
   - **Automaticky udělit**
   - **Automaticky odepřít**
 
-  Zásady konfigurace aplikací můžete použít také k udělení oprávnění pro jednotlivé aplikace (**zásady konfigurace aplikací****klientských aplikací** > ).
+  Zásady konfigurace aplikací můžete použít také k udělení oprávnění pro jednotlivé aplikace (**Client Apps**  >  **zásady konfigurace aplikací**klientských aplikací).
 
 - **Přidat a odebrat účty**: **blok** zabraňuje uživatelům v ručním přidávání a odebírání účtů v pracovním profilu. Pokud například nasadíte aplikaci Gmail do pracovního profilu Android, můžete uživatelům zabránit v přidávání a odebírání účtů v tomto pracovním profilu. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém přidávat účty v pracovním profilu.  
 
@@ -340,24 +348,24 @@ Tato nastavení se vztahují na typy registrace Androidu Enterprise, kde Intune 
   - Android 7,0 a novější s povoleným pracovním profilem
 
 - **Minimální délka hesla**: zadejte minimální délku hesla, která musí být delší než 4 až 16 znaků.
-- **Maximální počet minut nečinnosti, po kterém se zamkne pracovní profil**: zadejte dobu, po kterou musí být zařízení nečinné, než se automaticky uzamkne obrazovka. Uživatelé musí zadat své přihlašovací údaje, aby získali přístup. Zadejte `5` například, pokud chcete zařízení uzamknout po 5 minutách nečinnosti. Když je hodnota prázdná nebo nastavená na **nenakonfigurovaná**, Intune se nezmění ani neaktualizuje.
+- **Maximální počet minut nečinnosti, po kterém se zamkne pracovní profil**: zadejte dobu, po kterou musí být zařízení nečinné, než se automaticky uzamkne obrazovka. Uživatelé musí zadat své přihlašovací údaje, aby získali přístup. Zadejte například, `5` Pokud chcete zařízení uzamknout po 5 minutách nečinnosti. Když je hodnota prázdná nebo nastavená na **nenakonfigurovaná**, Intune se nezmění ani neaktualizuje.
 
   V zařízeních uživatelé nemůžou nastavit časovou hodnotu větší než nakonfigurovanou dobu v profilu. Uživatelé můžou nastavit nižší časovou hodnotu. Pokud je profil nastavený například na `15` minuty, uživatelé můžou hodnotu nastavit na 5 minut. Uživatelé nemůžou hodnotu nastavit na 30 minut.
 
 - **Počet neúspěšných přihlášení před vymazáním zařízení**: zadejte počet chybných hesel povolených před vymazáním zařízení, od 4-11. `0`(nula) může zakázat funkci vymazání zařízení. Pokud je hodnota prázdná, Intune se nezmění ani neaktualizuje.
 
-- **Vypršení platnosti hesla (dny)**: zadejte počet dní, než se musí změnit uživatelská hesla (od **1**-**365**).
+- **Vypršení platnosti hesla (dny)**: zadejte počet dní, než se musí změnit uživatelská hesla (od **1** - **365**).
 - **Vyžadovaný typ hesla**: zadejte požadovanou úroveň složitosti hesla a to, jestli se můžou používat biometrická zařízení. Možnosti:
   - **Výchozí ze zařízení**
   - **Biometrika s nízkou úrovní zabezpečení**: [silný vs. slabý biometrika](https://android-developers.googleblog.com/2018/06/better-biometrics-in-android-p.html) (otevře web v Androidu)
   - **Požadováno**
-  - **Aspoň číslice**: obsahuje číselné znaky, například `123456789`.
-  - **Číselná složitá**: opakující se nebo po sobě jdoucí čísla, například `1111` nebo `1234`, nejsou povolena.
+  - **Aspoň číslice**: obsahuje číselné znaky, například `123456789` .
+  - **Číselná složitá**: opakující se nebo po sobě jdoucí čísla, například `1111` nebo `1234` , nejsou povolena.
   - **Aspoň abecední**znaky: obsahuje písmena v abecedě. Čísla a symboly nejsou požadovány.
   - **Aspoň alfanumerické**znaky: obsahuje velká písmena, malá písmena a číslice.
   - **Aspoň alfanumerické se symboly**: obsahuje velká písmena, malá písmena, číslice, interpunkční znaménka a symboly.
 
-- **Zakázat opakované použití předchozích hesel**: pomocí tohoto nastavení můžete uživatelům zabránit ve vytváření hesel, která používali dřív. Zadejte počet dříve použitých hesel, která se nedají použít, od 1-24. Například zadejte `5` , že uživatelé nemůžou nastavit nové heslo na aktuální heslo ani na žádná z předchozích čtyř hesel. Pokud je hodnota prázdná, Intune se nezmění ani neaktualizuje.
+- **Zakázat opakované použití předchozích hesel**: pomocí tohoto nastavení můžete uživatelům zabránit ve vytváření hesel, která používali dřív. Zadejte počet dříve použitých hesel, která se nedají použít, od 1-24. Například zadejte, `5` že uživatelé nemůžou nastavit nové heslo na aktuální heslo ani na žádná z předchozích čtyř hesel. Pokud je hodnota prázdná, Intune se nezmění ani neaktualizuje.
 - **Odemknutí otiskem prstu**: **blok** znemožní uživatelům používat skener otisků prstů zařízení k odemknutí zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém uživatelům dovolit, aby zařízení odemkli pomocí otisku prstu.
 - **Smart Lock a jiní agenti**pro určování důvěryhodnosti: **blok** brání Smart Lock nebo jiným agentům pro určování důvěryhodnosti v nastavení zamykací obrazovky na kompatibilních zařízeních. Pokud jsou zařízení v důvěryhodném umístění, pak tato funkce, označovaná také jako agent pro určování důvěryhodnosti, umožňuje zakázat nebo obejít heslo zamykací obrazovky zařízení. Můžete například obejít heslo pracovního profilu, když jsou zařízení připojená k určitému zařízení Bluetooth nebo když jsou zařízení blízko značky NFC. Pomocí tohoto nastavení můžete uživatelům zabránit v konfiguraci funkce Smart Lock.
 
@@ -368,23 +376,23 @@ Tato nastavení se vztahují na typy registrace Androidu Enterprise, kde Intune 
 Tato nastavení hesla platí pro osobní profily na zařízeních, která používají pracovní profil.
 
 - **Minimální délka hesla**: zadejte minimální délku hesla, která musí být delší než 4 až 16 znaků.
-- **Maximální počet minut nečinnosti, po kterém se zamkne obrazovka**: zadejte dobu, po kterou musí být zařízení nečinné, než se obrazovka automaticky zamkne. Uživatelé musí zadat své přihlašovací údaje, aby získali přístup. Zadejte `5` například, pokud chcete zařízení uzamknout po 5 minutách nečinnosti. Když je hodnota prázdná nebo nastavená na **nenakonfigurovaná**, Intune se nezmění ani neaktualizuje.
+- **Maximální počet minut nečinnosti, po kterém se zamkne obrazovka**: zadejte dobu, po kterou musí být zařízení nečinné, než se obrazovka automaticky zamkne. Uživatelé musí zadat své přihlašovací údaje, aby získali přístup. Zadejte například, `5` Pokud chcete zařízení uzamknout po 5 minutách nečinnosti. Když je hodnota prázdná nebo nastavená na **nenakonfigurovaná**, Intune se nezmění ani neaktualizuje.
 
   V zařízeních uživatelé nemůžou nastavit časovou hodnotu větší než nakonfigurovanou dobu v profilu. Uživatelé můžou nastavit nižší časovou hodnotu. Pokud je profil nastavený například na `15` minuty, uživatelé můžou hodnotu nastavit na 5 minut. Uživatelé nemůžou hodnotu nastavit na 30 minut.
 
 - **Počet neúspěšných přihlášení před vymazáním zařízení**: zadejte počet chybných hesel povolených před vymazáním zařízení, od 4-11. `0`(nula) může zakázat funkci vymazání zařízení. Pokud je hodnota prázdná, Intune se nezmění ani neaktualizuje.
-- **Vypršení platnosti hesla (dny)**: zadejte počet dní, než bude nutné změnit heslo zařízení, od 1-365. Zadejte `90` například platnost hesla po 90 dnech. Po vypršení platnosti hesla se uživatelům zobrazí výzva k vytvoření nového hesla. Pokud je hodnota prázdná, Intune se nezmění ani neaktualizuje.
+- **Vypršení platnosti hesla (dny)**: zadejte počet dní, než bude nutné změnit heslo zařízení, od 1-365. Zadejte například `90` platnost hesla po 90 dnech. Po vypršení platnosti hesla se uživatelům zobrazí výzva k vytvoření nového hesla. Pokud je hodnota prázdná, Intune se nezmění ani neaktualizuje.
 - **Vyžadovaný typ hesla**: zadejte požadovanou úroveň složitosti hesla a to, jestli se můžou používat biometrická zařízení. Možnosti:
   - **Výchozí ze zařízení**
   - **Biometrika s nízkou úrovní zabezpečení**: [silný vs. slabý biometrika](https://android-developers.googleblog.com/2018/06/better-biometrics-in-android-p.html) (otevře web v Androidu)
   - **Požadováno**
-  - **Aspoň číslice**: obsahuje číselné znaky, například `123456789`.
-  - **Číselná složitá**: opakující se nebo po sobě jdoucí čísla, například `1111` nebo `1234`, nejsou povolena.
+  - **Aspoň číslice**: obsahuje číselné znaky, například `123456789` .
+  - **Číselná složitá**: opakující se nebo po sobě jdoucí čísla, například `1111` nebo `1234` , nejsou povolena.
   - **Aspoň abecední**znaky: obsahuje písmena v abecedě. Čísla a symboly nejsou požadovány.
   - **Aspoň alfanumerické**znaky: obsahuje velká písmena, malá písmena a číslice.
   - **Aspoň alfanumerické se symboly**: obsahuje velká písmena, malá písmena, číslice, interpunkční znaménka a symboly.
 
-- **Zakázat opakované použití předchozích hesel**: pomocí tohoto nastavení můžete uživatelům zabránit ve vytváření hesel, která používali dřív. Zadejte počet dříve použitých hesel, která se nedají použít, od 1-24. Například zadejte `5` , že uživatelé nemůžou nastavit nové heslo na aktuální heslo ani na žádná z předchozích čtyř hesel. Pokud je hodnota prázdná, Intune se nezmění ani neaktualizuje.
+- **Zakázat opakované použití předchozích hesel**: pomocí tohoto nastavení můžete uživatelům zabránit ve vytváření hesel, která používali dřív. Zadejte počet dříve použitých hesel, která se nedají použít, od 1-24. Například zadejte, `5` že uživatelé nemůžou nastavit nové heslo na aktuální heslo ani na žádná z předchozích čtyř hesel. Pokud je hodnota prázdná, Intune se nezmění ani neaktualizuje.
 - **Odemknutí otiskem prstu**: **blok** znemožní uživatelům používat skener otisků prstů zařízení k odemknutí zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém uživatelům dovolit, aby zařízení odemkli pomocí otisku prstu.
 - **Smart Lock a jiní agenti**pro určování důvěryhodnosti: **blok** brání Smart Lock nebo jiným agentům pro určování důvěryhodnosti v nastavení zamykací obrazovky na kompatibilních zařízeních. Pokud jsou zařízení v důvěryhodném umístění, pak tato funkce, označovaná také jako agent pro určování důvěryhodnosti, umožňuje zakázat nebo obejít heslo zamykací obrazovky zařízení. Můžete například obejít heslo pracovního profilu, když jsou zařízení připojená k určitému zařízení Bluetooth nebo když jsou zařízení blízko značky NFC. Pomocí tohoto nastavení můžete uživatelům zabránit v konfiguraci funkce Smart Lock.
 

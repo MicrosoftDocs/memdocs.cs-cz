@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7244872fa888aaee164187e62a2355a94f793499
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 4209c461877786000e01dd03e4e0dea9f76a6e84
+ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83985175"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84270952"
 ---
 # <a name="set-the-mobile-device-management-authority"></a>Nastavení autority pro správu mobilních zařízení
 
@@ -36,9 +36,9 @@ Možné konfigurace:
 
 - **Spoluspráva Intune** – integrace cloudového řešení Intune s Configuration Manager pro zařízení s Windows 10. Intune můžete konfigurovat pomocí konzoly Configuration Manager. [Konfigurace automatického zápisu zařízení do Intune](https://docs.microsoft.com/configmgr/comanage/tutorial-co-manage-clients#configure-auto-enrollment-of-devices-to-intune) 
 
-- **Správa mobilních zařízení pro Office 365** – jedná se o integraci Office 365 s cloudovým řešením Intune. Intune se konfiguruje v centru pro správu Microsoft 365. Zahrnuje dílčí sadu možností, které jsou dostupné s Intune Standalone. Viz [Nastavení správy mobilních zařízení (MDM) v sadě Office 365](https://support.office.com/en-us/article/Set-up-Mobile-Device-Management-MDM-in-Office-365-dd892318-bc44-4eb1-af00-9db5430be3cd) .
+- **Správa mobilních zařízení pro office 365** – Pokud máte aktivovaný MDM pro Office 365, uvidíte autoritu MDM nastavenou na "Office 365". Pokud chcete začít používat Intune, budete si muset koupit licence Intune.
 
-- **Koexistence Office 365 MDM** V tenantovi můžete aktivovat a používat současně službu MDM pro Office i Intune a nastavit autoritu pro správu na Intune nebo MDM pro Office pro každého uživatele, který určí, která služba se bude používat ke správě zařízení zaregistrovaných v MDM. Autorita pro správu jednotlivých uživatelů je definována na základě licence přiřazené uživateli: Pokud má uživatel pouze licenci pro Microsoft 365 Basic nebo Standard, budou jejich zařízení spravována MDM pro Office. Pokud má uživatel licenci entitling Intune, jejich zařízení se budou spravovat přes Intune. Pokud přidáte licenci entitling Intune k uživateli, který dřív spravovala služba MDM pro Office, budou jejich zařízení přepnuta do správy Intune. Ujistěte se, že jsou konfigurace Intune přiřazené uživatelům, aby před přepnutím uživatelů do Intune nahradily MDM pro Office, jinak jejich zařízení ztratí konfiguraci MDM pro Office a neobdrží žádné náhrady z Intune.
+- **Office 365 MDM koexistence** – službu Intune můžete přidat do svého tenanta, pokud už používáte MDM pro Office 365 a pro každého uživatele nastavíte autoritu pro správu na Intune nebo MDM pro Office 365 pro každého uživatele, který určí, která služba se bude používat ke správě zařízení zaregistrovaných v MDM. Autorita pro správu jednotlivých uživatelů je definována na základě licence přiřazené uživateli: Pokud má uživatel pouze licenci pro Microsoft 365 Basic nebo Standard, budou jejich zařízení spravována MDM pro Office. Pokud má uživatel licenci entitling Intune, jejich zařízení se budou spravovat přes Intune. Pokud přidáte licenci entitling Intune k uživateli, který dřív spravovala služba MDM pro Office, budou jejich zařízení přepnuta do správy Intune. Ujistěte se, že jsou konfigurace Intune přiřazené uživatelům, aby před přepnutím uživatelů do Intune nahradily MDM pro Office, jinak jejich zařízení ztratí konfiguraci MDM pro Office a neobdrží žádné náhrady z Intune.
 
 ## <a name="set-mdm-authority-to-intune"></a>Nastavení autority MDM na Intune
 

@@ -6,3 +6,9 @@
       href: device-sync-actions.md
     - name: Řešení potíží s akcemi zařízení
       href: technical-reference.md
+- name: CMPivot pro zařízení připojená k tenantovi (Preview)
+  items:
+    - name: CMPivot – přehled
+      href: cmpivot-overview-attached.md
+    - name: CMPivot – ukázkové skripty
+      href: cmpivot-samples-attached.md

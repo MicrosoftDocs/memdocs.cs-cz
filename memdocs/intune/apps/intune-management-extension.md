@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a8d75208de7cc6697699d79e3a52df742f605fdb
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 529d7a7da1257b9ebce1e1ab3cec706e8f100403
+ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990727"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84270935"
 ---
 # <a name="use-powershell-scripts-on-windows-10-devices-in-intune"></a>Použití skriptů PowerShellu na zařízeních s Windows 10 v Intune
 
@@ -68,7 +68,7 @@ Rozšíření pro správu Intune má následující požadavky. Po splnění po�
     
     - Uživatel se přihlásí k zařízení pomocí svého účtu služby Azure AD a potom se zaregistruje v Intune.
 
-  - Spoluspravovaná zařízení, která používají Configuration Manager a Intune. Ujistěte se, že úlohy **aplikace** jsou nastavené na **pilotní nasazení Intune** nebo **Intune**. Pokyny najdete v následujících článcích: 
+  - Spoluspravovaná zařízení, která používají Configuration Manager a Intune. Při instalaci aplikací Win32 se ujistěte, že je úloha **aplikace** nastavená na **pilotní nasazení Intune** nebo **Intune**. Skripty PowerShellu se spustí i v případě, že je u úlohy **aplikace** nastavená **Configuration Manager**. Rozšíření pro správu Intune se do zařízení nasadí při cílení na skript PowerShellu na zařízení. Jak je uvedeno výše, zařízení musí být Azure AD nebo hybridní zařízení připojené k Azure AD a musí používat Windows 10 verze 1607 nebo novější. Pokyny najdete v následujících článcích: 
   
     - [Co je společná správa](https://docs.microsoft.com/configmgr/comanage/overview) 
     - [Zatížení klientských aplikací](https://docs.microsoft.com/configmgr/comanage/workloads#client-apps)

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/21/2020
+ms.date: 06/01/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1c98de99eb8f72840080ca720465559c462bc77f
-ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
+ms.openlocfilehash: 2cc40eb4a8b094cd933a6bb3f4f8c7fdae927f7b
+ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82023363"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84270887"
 ---
 # <a name="troubleshoot-app-installation-issues"></a>Řešení problémů s instalací aplikací
 
@@ -107,6 +107,18 @@ Existují specifické požadavky, které je nutné dodržovat ke shromáždění
 - Pro aplikace, které splňují požadovaný, dostupný a odinstalační záměr přiřazení aplikace, je povolená kolekce protokolů instalace aplikace Win32.
 - Uložené protokoly jsou zašifrované, aby chránily jakékoli osobní identifikovatelné informace obsažené v protokolech.
 - Při otevírání lístků podpory pro chyby aplikací Win32 připojte související protokoly selhání pomocí výše uvedených kroků.
+
+## <a name="app-types-supported-on-arm64-devices"></a>Typy aplikací podporované na zařízeních ARM64
+
+Mezi typy aplikací, které jsou podporované na zařízeních ARM64, patří následující:
+- Webové aplikace, které nevyžadují otevření spravovaného prohlížeče. 
+- Microsoft Store pro obchodní aplikace nebo aplikace Windows Universal LOB ( `.appx` ) s kteroukoli z následujících kombinací `TargetDeviceFamily` `ProcessorArchitectures` prvků a:
+  - `TargetDeviceFamily`zahrnuje desktopové aplikace, univerzální aplikace a aplikace Windows8x. Aplikace Windows8x se vztahují jenom na online Microsoft Store pro obchodní aplikace.
+  - `ProcessorArchitecture`zahrnuje aplikace x86, aplikace ARM, aplikace ARM64 a neutrální aplikace.
+- Aplikace pro Windows Store
+- Mobilní aplikace pro Mobile MSI
+- Aplikace Win32 s pravidlem požadavku 32-bit.
+- Aplikace Windows Office Klikni a spusť, pokud je zvolená možnost 32-bit nebo architektura x86.
 
 ## <a name="troubleshooting-apps-from-the-microsoft-store"></a>Řešení problémů s aplikacemi z Microsoft Storu
 
