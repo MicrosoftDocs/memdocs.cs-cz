@@ -2,7 +2,7 @@
 title: Site Recovery
 titleSuffix: Configuration Manager
 description: Naučte se obnovovat své weby v Configuration Manager.
-ms.date: 08/23/2019
+ms.date: 06/02/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 19539f4d-1667-4b4c-99a1-9995f12cf5f7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: b17c8c9ed0c1f6f9a5aeb487e07ad3d3dc66cbae
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 37e4db2ad801c5923ba3db54554af0bb13968048
+ms.sourcegitcommit: 64727a4b025a589e270842da39516c4c42563a34
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82903962"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84301431"
 ---
 # <a name="recover-a-configuration-manager-site"></a>Obnovení lokality nástroje Configuration Manager
 
@@ -347,6 +347,10 @@ Tento postup opakujte pro všechny ostatní místní distribuční body s povole
     - **Spustit powershellový skript**: Pokud použijete možnost pro **spuštění tohoto kroku jako u následujícího účtu**, vyberte **nastavit**. Zadejte a potvrďte heslo a pak vyberte **ověřit**.
 
 Tento postup opakujte pro všechna pořadí úloh.
+
+### <a name="recreate-bootable-media-and-prestaged-media-in-non-pki-environments"></a>Opětovné vytvoření spouštěcího média a předzpracovaného média v prostředích bez infrastruktury veřejných klíčů
+
+V prostředích bez infrastruktury veřejných klíčů jsou certifikáty podepsané svým držitelem ve spouštěcím médiu a předzpracovaném médiu založené na klíčích počítačů serveru, na kterém se médium vytvořilo. Z tohoto důvodu je potřeba znovu vytvořit jakékoli spouštěcí médium a Předzpracované médium vytvořené na tomto serveru, pokud se změní hardware nebo se operační systém přeinstaluje jako součást obnovení. Další informace o tom, jak vytvořit spouštěcí média a předzpracovaná média, najdete v tématu [Vytvoření spouštěcího média](../../../osd/deploy-use/create-bootable-media.md) a [Vytvoření předzpracovaného média](../../../osd/deploy-use/create-prestaged-media.md).
 
 ### <a name="reenter-sideloading-keys"></a>Znovu zadat klíče pro zkušební načtení
 

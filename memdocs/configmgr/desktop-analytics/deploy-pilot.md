@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 0e90855949f5c8f249db6b2f4305c71b8ee4e768
-ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
+ms.openlocfilehash: 3aa722415248ad9275c6ad065f0120bfe78d3ce4
+ms.sourcegitcommit: 8a023e941d90c107c9769a1f7519875a31ef9393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83824014"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84311216"
 ---
 # <a name="how-to-deploy-to-pilot-with-desktop-analytics"></a>Jak nasadit do pilotního nasazení pomocí Desktop Analytics
 
@@ -104,7 +104,7 @@ Předtím, než budete moci nasadit systém Windows, nejprve vytvořte softwarov
 Configuration Manager používá data z Desktop Analytics k vytváření kolekcí pro pilotní nasazení a provozní nasazení. Tyto kolekce jsou v pracovním prostoru **prostředky a kompatibilita** , uzel **kolekce zařízení** a **plány nasazení** .
 
 > [!IMPORTANT]
-> Tyto kolekce jsou spravované pomocí Configuration Manager pro plány nasazení Desktop Analytics. Ruční změny nejsou podporovány.
+> Tyto kolekce jsou spravované pomocí Configuration Manager pro plány nasazení Desktop Analytics. Ruční změny nejsou podporovány. Pokud odstraníte jednu z těchto kolekcí, analýza plochy nebude fungovat a bude nutné se znovu [připojit Configuration Manager](connect-configmgr.md) .<!--7208090-->
 
 Chcete-li zajistit, aby zařízení byla po každé fázi nasazení v pořádku, použijte následující postup k vytvoření fáze nasazení s integrovaným prostředím Desktop Analytics:
 

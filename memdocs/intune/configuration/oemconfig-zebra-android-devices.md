@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/12/2020
+ms.date: 06/02/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2227face347e6d82cf7807bea241eda4856c1d67
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 2a38c445018200d9fe80db19142f123aba783b60
+ms.sourcegitcommit: 8a023e941d90c107c9769a1f7519875a31ef9393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988688"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84311152"
 ---
 # <a name="deploy-multiple-oemconfig-profiles-to-zebra-devices-in-microsoft-intune"></a>Nasazení několika profilů OEMConfig do zařízení Zebra v Microsoft Intune
 
@@ -44,7 +44,9 @@ Vytvořte [konfigurační profil OEMConfig](android-oem-configuration-overview.m
 
 ## <a name="use-multiple-profiles"></a>Použít více profilů
 
-Na zařízeních Zebra můžete mít každé zařízení současně spoustu profilů. Tato funkce umožňuje rozdělit nastavení Zebra OEMConfig na menší profily. Zebra schéma OEMConfig také používá **Akce**. Akce jsou operace, které se spouštějí na zařízení. Nekonfigurují žádná nastavení. Pomocí těchto akcí můžete spustit stažení souboru, vymazat schránku a další. Úplný seznam podporovaných akcí najdete v [dokumentaci k Zebra](https://techdocs.zebra.com/oemconfig/10-0/about/) (otevření webu Zebra).
+Na zařízeních Zebra můžete mít každé zařízení současně spoustu profilů. Tato funkce umožňuje rozdělit nastavení Zebra OEMConfig na menší profily. Vytvořte například základní profil, který má vliv na všechna zařízení. Pak vytvořte další profily, které konfigurují nastavení specifická pro zařízení.
+
+Zebra schéma OEMConfig také používá **Akce**. Akce jsou operace, které se spouštějí na zařízení. Nekonfigurují žádná nastavení. Pomocí těchto akcí můžete spustit stažení souboru, vymazat schránku a další. Úplný seznam podporovaných akcí najdete v [dokumentaci k Zebra](https://techdocs.zebra.com/oemconfig/10-0/about/) (otevření webu Zebra).
 
 Například vytvoříte profil Zebra OEMConfig, který na zařízení aplikuje některá nastavení. Jiný profil Zebra OEMConfig obsahuje akci, která vymaže schránku. Přiřadíte první profil ke skupině zařízení zebra. Později musíte vymazat schránku na těchto zařízeních. Druhý profil přiřadíte ke stejné skupině zařízení, aniž byste změnili první profil. Schránka zařízení se vymazala bez opětovného odeslání nebo ovlivnění nastavení konfigurace vytvořená v prvním profilu.
 
@@ -52,20 +54,26 @@ V jiném příkladu jste přiřadili profil OEMConfig, který nakonfiguroval ně
 
 ## <a name="ordering"></a>Řazení
 
-U několika profilů na každém zařízení není zaručeno pořadí, v jakém se profily nasazují. Toto chování je omezení Google Play. Chcete-li spustit operace v sekvenci, můžete použít [funkci transakce Zebra](https://techdocs.zebra.com/oemconfig/9-1/mc/) (otevře web Zebra). Pojďme se podívat na příklad.
+U několika profilů na každém zařízení není zaručeno pořadí, v jakém se profily nasazují. Toto chování je omezení Google Play. Chcete-li spustit operace v sekvenci, můžete použít [funkci kroku transakce Zebra](https://techdocs.zebra.com/oemconfig/10-0/mc/) (otevře web Zebra). 
 
-Existují dva profily:
+Chcete-li vytvořit souhrn, pokud se jedná o záležitosti, použijte [funkci kroku transakce Zebra](https://techdocs.zebra.com/oemconfig/10-0/mc/) (otevře web Zebra). Pokud se vám pořadí nezáleží, použijte víc profilů Intune. 
 
-- **Profil 1**: zapne technologii Bluetooth. Tento profil je přiřazený v pondělí ke skupině **všechna zařízení** .
-- **Profil 2**: nakonfiguruje další nastavení. Tento profil se přiřadí v úterý do skupiny **všechna zařízení** .
+Pojďme se podívat na několik příkladů:
 
-Před konfigurací jiného nastavení musí být zapnutý Bluetooth.
+- Chcete zapnout Bluetooth pro všechna nově zaregistrovaná zařízení Zebra před konfigurací jakýchkoli dalších nastavení na těchto zařízeních. Chcete-li spustit operace v sekvenci, použijte funkci **kroků** ve schématu zebra.
 
-Ve středu zaregistrujete 10 nových zařízení Zebra do Intune. Profil 1 a profil 2 jsou přiřazeni ke skupině **všechna zařízení** . Jakmile se nová zařízení synchronizují s Intune, obdrží profily. Tato zařízení mohou profil 2 získat před profilem 1.
+  Vytvořte jeden profil Intune, který má dva kroky transakce. První krok zahrnuje nastavení Bluetooth a druhý krok nakonfiguruje ostatní nastavení. Když aplikace Zebra OEMConfig obdrží profil, spustí postup v uvedeném pořadí.
 
-Pomocí funkce **kroků** ve schématu Zebra potvrďte, že operace běží v pořadí. V tomto případě vytvoříte jeden profil, který má dva kroky transakce. První krok zahrnuje nastavení Bluetooth a druhý krok nakonfiguruje ostatní nastavení. Když aplikace Zebra OEMCong obdrží profil, spustí kroky v pořadí, které garantuje zebra.
+  Další informace najdete v tématu [postup transakce Zebra](https://techdocs.zebra.com/oemconfig/10-0/mc/) (otevření webu Zebra).
 
-Další informace najdete v tématu [postup transakce Zebra](https://techdocs.zebra.com/oemconfig/9-1/mc/) (otevření webu Zebra).
+- Chcete, aby všechna zařízení Zebra zobrazovala čas ve 24hodinovém formátu. U některých z těchto zařízení je třeba vypnout fotoaparát. Nastavení času a kamery nejsou na sobě navzájem závislé.
+
+  Vytvořte dva profily Intune:
+
+  - **Profil 1**: zobrazuje čas ve 24hodinovém formátu. V pondělí se tento profil přiřadí ke skupině **všechna zařízení Zebra AE** .
+  - **Profil 2**: vypne fotoaparát. V úterý je tento profil přiřazen ke skupině **zařízení Zebra AE** .
+
+  Ve středu zaregistrujete 10 nových zařízení Zebra do Intune. Profil 1 a profil 2 jsou přiřazeny. Jakmile se nová zařízení synchronizují s Intune, obdrží profily. Zařízení mohou profil 2 získat před profilací 1.
 
 ## <a name="enhanced-reporting"></a>Rozšířené vytváření sestav
 

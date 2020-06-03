@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/13/2020
+ms.date: 06/2/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a69dbec2b8f3b169934f8547c8bae97e95f1d668
-ms.sourcegitcommit: eb51bb38d484e8ef2ca3ae3c867561249fa413f3
+ms.openlocfilehash: 8ee0603a96d7276e9e1ef0fb9bff60ac44a3ef84
+ms.sourcegitcommit: 64727a4b025a589e270842da39516c4c42563a34
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84206345"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84301380"
 ---
 # <a name="troubleshoot-policies-and-profiles-and-in-intune"></a>Řešení potíží se zásadami a profily a v Intune
 
@@ -37,7 +37,7 @@ Zkontrolujte [stav tenanta](../fundamentals/tenant-status.md) a potvrďte, že j
 
 ## <a name="use-built-in-troubleshooting"></a>Použití integrovaného řešení potíží
 
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **řešení potíží + podpora**:
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **řešení potíží +**  >  **řešení potíží s**podporou:
 
     :::image type="content" source="./media/troubleshoot-policies-in-microsoft-intune/help-and-support-troubleshoot.png" alt-text="V centru pro správu služby Endpoint Management a Intune si přečtěte řešení potíží a podpora.":::
 
@@ -123,7 +123,7 @@ Zkontrolujte [stav tenanta](../fundamentals/tenant-status.md) a potvrďte, že j
 
 - [Řešení potíží se zásadami iOS/iPadOS nebo Androidem, které se nevztahují na zařízení](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-tip-Troubleshooting-iOS-or-Android-policies-not-applying/ba-p/280154) (otevírá se další web Microsoftu)
 - [Řešení potíží s chybami zásad Windows 10 v Intune](https://blogs.technet.microsoft.com/configmgrdogs/2018/08/09/troubleshooting-windows-10-intune-policy-failures/) (otevření blogu)
-- [Řešení potíží s vlastním nastavením CSP pro Windows 10](https://support.microsoft.com/en-us/help/4055338/troubleshoot-csp-setting-windows-10-computer-intune) (otevře další web Microsoftu)
+- [Řešení potíží s vlastním nastavením CSP pro Windows 10](https://support.microsoft.com/help/4055338/troubleshoot-csp-setting-windows-10-computer-intune) (otevře další web Microsoftu)
 - Zásady správy mobilních zařízení s [Windows 10 zásady skupiny a Intune](https://blogs.technet.microsoft.com/cbernier/2018/04/02/windows-10-group-policy-vs-intune-mdm-policy-who-wins/) (otevře se další web Microsoftu)
 
 ## <a name="alert-saving-of-access-rules-to-exchange-has-failed"></a>Výstraha: Uložení pravidel přístupu do systému Exchange se nezdařilo

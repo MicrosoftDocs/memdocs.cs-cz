@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/26/2020
+ms.date: 06/02/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 20c552ff879574edc0ed497b5c99b45b8092918a
-ms.sourcegitcommit: 97fbb7db14b0c4049c0fe3a36ee16a5c0cf3407a
+ms.openlocfilehash: f469d9646fad3b247743b6017f0ecbc7917f2cdf
+ms.sourcegitcommit: 8a023e941d90c107c9769a1f7519875a31ef9393
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83864888"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84311164"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Nastavení zařízení s Windows 10 (a novějším) pro povolení nebo omezení funkcí pomocí Intune
 
@@ -200,7 +200,7 @@ Tato nastavení používají [zprostředkovatele CSP zásad EnterpriseCloudPrint
   - **Ochrana osobních údajů**: **blok** znemožní přístup k oblasti soukromí v aplikaci nastavení na zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
   - **Aktualizace a zabezpečení**: **blok** znemožní přístup k oblasti zabezpečení & aktualizace aplikace nastavení na zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
 
-## <a name="display"></a>Displej
+## <a name="display"></a>Zobrazení
 
 Tato nastavení používají [zprostředkovatele kryptografických služeb pro zobrazení](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-display), který obsahuje taky podporované edice Windows.
 
@@ -1095,7 +1095,8 @@ Tato nastavení používají [zprostředkovatele CSP v zásadách Defenderu](htt
 - **Zjišťovat potenciálně nežádoucí aplikace**: Tato funkce identifikuje a blokuje potenciálně nežádoucí aplikace (PUA) ze stahování a instalace ve vaší síti. Tyto aplikace nejsou považovány za viry, malware nebo jiné typy hrozeb. Ale můžou spouštět akce u koncových bodů, které mohou ovlivnit jejich výkon nebo použití. Vyberte úroveň ochrany, když systém Windows detekuje PUAs. Možnosti:
 
   - **Nenakonfigurováno** (výchozí): Intune toto nastavení nemění ani neaktualizuje. Ve výchozím nastavení může Microsoft Defender tuto funkci zakázat.
-  - **Blok**: Microsoft Defender detekuje PUAs a zjištěné položky jsou blokované. Tyto položky se zobrazují v historii spolu s dalšími hrozbami.
+  - **Vypnuto**: ochrana PUA vypnuto.
+  - **Povolit**: Microsoft Defender detekuje PUAs a zjištěné položky jsou blokované. Tyto položky se zobrazují v historii spolu s dalšími hrozbami.
   - **Audit**: Microsoft Defender detekuje PUAs, ale neprovede žádnou akci. Můžete zkontrolovat informace o aplikacích, které Microsoft Defender provede, na základě těchto akcí. Vyhledejte například události vytvořené v programu Microsoft Defender v Prohlížeč událostí.
 
   Další informace o potenciálně nežádoucích aplikacích najdete v tématu [zjištění a blokování potenciálně nežádoucích aplikací](https://docs.microsoft.com/windows/threat-protection/windows-defender-antivirus/detect-block-potentially-unwanted-apps-windows-defender-antivirus).
