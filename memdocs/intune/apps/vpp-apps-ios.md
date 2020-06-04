@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/02/2020
+ms.date: 06/03/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c145a4b7fa150a9d42c9bf20eca4f85f6356acf8
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 2e386d382ceb785d886dfb931bb26222bd82b1a0
+ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988512"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84347317"
 ---
 # <a name="how-to-manage-ios-and-macos-apps-purchased-through-apple-volume-purchase-program-with-microsoft-intune"></a>Jak spravovat aplikace pro iOS a macOS zakoupené prostřednictvím Apple Volume Purchase Program s využitím Microsoft Intune
 
@@ -144,11 +144,11 @@ Koncový uživatel obdrží výzvu k instalaci aplikace v rámci VPP v řadě sc
 |---|--------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------|-----------------------------------|
 | 1 | BYOD – uživatel licencovaný (nejedná se o zařízení pro zápis uživatelů)                             | Y                                                                                               | Y                                           | Y                                 |
 | 2 | Zařízení společnosti – licencovaný uživatel (zařízení není pod dohledem)     | Y                                                                                               | Y                                           | Y                                 |
-| 3 | Zařízení společnosti – licencovaný uživatel (zařízení pod dohledem)         | Y                                                                                               | Ne                                           | Y                                 |
-| 4 | Vlastní zařízení – licencované zařízení                           | Ne                                                                                               | Y                                           | Ne                                 |
-| 5 | Zařízení společnosti – licencované zařízení (zařízení není pod dohledem)                           | Ne                                                                                               | Y                                           | Ne                                 |
-| 6 | Zařízení společnosti – licencované zařízení (zařízení pod dohledem)                           | Ne                                                                                               | Ne                                           | Ne                                 |
-| 7 | Beznabídkový režim (zařízení pod dohledem) – licencované zařízení | Ne                                                                                               | Ne                                           | Ne                                 |
+| 3 | Zařízení společnosti – licencovaný uživatel (zařízení pod dohledem)         | Y                                                                                               | N                                           | Y                                 |
+| 4 | Vlastní zařízení – licencované zařízení                           | N                                                                                               | Y                                           | N                                 |
+| 5 | Zařízení společnosti – licencované zařízení (zařízení není pod dohledem)                           | N                                                                                               | Y                                           | N                                 |
+| 6 | Zařízení společnosti – licencované zařízení (zařízení pod dohledem)                           | N                                                                                               | N                                           | N                                 |
+| 7 | Beznabídkový režim (zařízení pod dohledem) – licencované zařízení | N                                                                                               | N                                           | N                                 |
 | 8 | Beznabídkový režim (zařízení pod dohledem) – licencovaný uživatel   | --- | ---                                          | ---                                |
 
 > [!Note]  
@@ -180,7 +180,13 @@ K odvolání licencí všech aplikací VPP pro daný token VPP je nutné nejprve
 
 ## <a name="renewing-app-licenses"></a>Obnovení licencí aplikací
 
-Token Apple VPP si můžete prodloužit stažením nového tokenu z Apple Business Manageru nebo Apple School Manageru a aktualizací existujícího tokenu v Intune.
+Token Apple VPP si můžete prodloužit stažením nového tokenu z [Apple Business Manageru](https://business.apple.com/) nebo [Apple School Manageru](https://school.apple.com/) a aktualizací existujícího tokenu v Intune. 
+
+K obnovení tokenu Apple VPP použijte následující postup:
+
+1. Přejděte na [Apple Business Manager](https://business.apple.com/) nebo [Apple School Manager](https://school.apple.com/).
+2. Stáhněte si nový token ve **Správci Apple Business (nebo School)**, a to tak, že vyberete **Nastavení**  >  **aplikace a kniha**  >  **Moje tokeny serveru**.
+3. Aktualizujte token v [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431) tak, že vyberete možnost konektory **pro správu tenanta**  >  **a tokeny**  >  **Apple VPP**. Pak ručně nahrajte token.
 
 ## <a name="deleting-a-vpp-app"></a>Odstranění aplikace VPP
 
@@ -190,7 +196,7 @@ V současné době nemůžete z Microsoft Intune odstranit aplikaci VPP pro iOS/
 
 Přístup k tokenům Apple VPP a aplikacím VPP se dá řídit nezávisle pomocí oprávnění přiřazených k vlastním rolím Správce v Intune.
 
-* Pokud chcete, aby vlastní role Intune spravovala tokeny programu Apple VPP v části **aplikace**  >  **tokenů**Apple VPP, přiřaďte oprávnění pro **spravované aplikace**.
+* Pokud chcete, aby vlastní role Intune spravovala tokeny programu Apple VPP, vyberte v centru pro správu Microsoft Endpoint Manageru možnost konektory **pro správu tenanta**  >  **a tokeny**  >  **Apple VPP**, přiřaďte oprávnění pro **spravované aplikace**.
 * Aby mohla vlastní role Intune spravovat aplikace zakoupené pomocí tokenů VPP pro iOS/iPadOS v části **aplikace**  >  **všechny aplikace**, přiřaďte oprávnění pro **mobilní aplikace**. 
 
 ## <a name="additional-information"></a>Další informace

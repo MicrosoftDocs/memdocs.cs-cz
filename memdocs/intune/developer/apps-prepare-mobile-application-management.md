@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cc180b4a554ceec19fb0815b028d875c32da37bf
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: 739ebebe18628279e5242ab227cf0f43993eff08
+ms.sourcegitcommit: 42a4a4454e56fa681f0ad39f5e585492dfbad286
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84166021"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84330861"
 ---
 # <a name="prepare-line-of-business-apps-for-app-protection-policies"></a>Příprava obchodních aplikací na zásady ochrany aplikací
 
@@ -71,8 +71,8 @@ Další informace o sadě SDK najdete v tématu [Přehled](app-sdk.md). Pokud ch
 
 |**Sada Intune App SDK** |**Xamarin** |**Cordova**
 |------|----|----|
-|**iOS**|Ano – Použijte [xamarinové vazby sady Intune App SDK](app-sdk-xamarin.md).|No|
-|**Android**| Ano – použijte [vazby Xamarin sady Intune App SDK](app-sdk-xamarin.md).|No|
+|**iOS**|Ano – Použijte [xamarinové vazby sady Intune App SDK](app-sdk-xamarin.md).|Ne|
+|**Android**| Ano – použijte [vazby Xamarin sady Intune App SDK](app-sdk-xamarin.md).|Ne|
 
 ## <a name="not-using-an-app-development-platform-listed-above"></a>Nepoužíváte platformu pro vývoj aplikací uvedenou výše?
 
@@ -121,7 +121,6 @@ Tato tabulka obsahuje seznam nastavení, která jsou povolená, pokud aplikace p
 |Konfigurace obsahu oznámení aplikace pro účty organizace|X|X|
 |Vyžadovat použití schválených klávesnic (jenom Android)|X|X|
 |Vyžadovat zásady ochrany aplikací (podmíněný přístup)|X||
-|Vyžadovat aplikaci schválenou klienta (podmíněný přístup)|X||
 
 ## <a name="next-steps"></a>Další kroky
 

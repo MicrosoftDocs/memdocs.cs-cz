@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3c451f01af454ec6ed495c080c74d52f9f0ae591
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: b5551e537716ed12a0a5b5de19b747ffc7c4dcac
+ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84166581"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84347334"
 ---
 # <a name="china-endpoints-for-microsoft-intune"></a>Čínské koncové body pro Microsoft Intune
 
@@ -62,6 +62,10 @@ Intune provozovaný společností 21Vianet závisí na následujících koncový
 - Azure AD Graph: https: \/ /Graph.chinacloudapi.us
 - MS Graph: https: \/ /microsoftgraph.chinacloudapi.cn
 - PRAVIDLA automatického nasazení: https: \/ /enterpriseregistration.partner.microsoftonline.cn
+
+[!INCLUDE [Intune notices](../includes/windows-push-notification-services.md)]
+
+[!INCLUDE [Intune notices](../includes/apple-device-network-information.md)]
 
 ## <a name="next-steps"></a>Další kroky
 [Další informace o Intune provozovaném společností 21Vianet v Číně](china.md)

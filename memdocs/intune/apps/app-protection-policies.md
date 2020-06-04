@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/19/2020
+ms.date: 06/02/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 91ca1e8a710e13e393af5bb3723ca1086e37887d
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: abd34733bd27ec150a92bf20cecbf7edc02c2bd6
+ms.sourcegitcommit: 42a4a4454e56fa681f0ad39f5e585492dfbad286
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988606"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84330997"
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>Vytvoření a přiřazení zásad ochrany aplikací
 
@@ -51,7 +51,7 @@ Informace o přidání obchodních aplikací organizace do Microsoft Intune kvů
 
 ## <a name="app-protection-policies-for-iosipados-and-android-apps"></a>Zásady ochrany aplikací pro iOS/iPadOS a aplikace pro Android
 
-Když vytvoříte zásady ochrany aplikací pro iOS/iPadOS a aplikace pro Android, budete postupovat podle moderního toku procesu Intune, který má za následek novou zásadu ochrany aplikací.
+Když vytvoříte zásady ochrany aplikací pro iOS/iPadOS a aplikace pro Android, budete postupovat podle moderního toku procesu Intune, který má za následek novou zásadu ochrany aplikací. Informace o vytváření zásad ochrany aplikací pro aplikace pro Windows najdete v tématu [Vytvoření a nasazení zásad pro windows Information Protection (NV) v Intune](../apps/windows-information-protection-policy-create.md).
 
 ### <a name="create-an-iosipados-or-android-app-protection-policy"></a>Vytvoření zásad ochrany aplikací pro iOS/iPadOS nebo Android
 
@@ -60,10 +60,10 @@ Když vytvoříte zásady ochrany aplikací pro iOS/iPadOS a aplikace pro Androi
 3. Vyberte **vytvořit zásadu** a vyberte možnost **iOS/iPadOS** nebo **Android**. Zobrazí se podokno **vytvořit zásadu** .
 4. Na stránce **základy** přidejte následující hodnoty:
 
-    | Hodnota | Popis |
+    | Hodnota | Description |
     |--------------|------------------------------------------------|
     | Name | Název této zásady ochrany aplikací |
-    | Popis | Volitelné Popis této zásady ochrany aplikací |
+    | Description | Volitelné Popis této zásady ochrany aplikací |
 
 
     Hodnota **platformy** je nastavená na základě výše zvolené možnosti.
@@ -73,7 +73,7 @@ Když vytvoříte zásady ochrany aplikací pro iOS/iPadOS a aplikace pro Androi
 5. Kliknutím na **Další** zobrazte stránku **aplikace** .<br>
     Stránka **aplikace** umožňuje zvolit, jak chcete tyto zásady použít pro aplikace na různých zařízeních. Musíte přidat alespoň jednu aplikaci.<p>
 
-    | Hodnota/možnost | Popis |
+    | Hodnota/možnost | Description |
     |-------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
     | Cíl pro aplikace na všech typech zařízení | Tuto možnost použijte, pokud chcete zásady zaměřit na aplikace na zařízeních libovolného stavu správy. Pokud chcete cílit aplikace na konkrétní typy zařízení, vyberte **ne** . Informace najdete v tématu [cílení zásad ochrany aplikací na základě stavu správy zařízení](#target-app-protection-policies-based-on-device-management-state) . |
     |     Typy zařízení | Tuto možnost použijte, pokud chcete určit, jestli se tato zásada vztahuje na zařízení spravovaná MDM nebo na nespravovaná zařízení. V případě zásad aplikací pro iOS/iPadOS vyberte možnost z **nespravovaných** a **spravovaných** zařízení. V případě zásad aplikací pro Android vyberte z **nespravovaného**, **Správce zařízení s Androidem**a **Android Enterprise**.  |
@@ -131,7 +131,7 @@ Aby se změny projevily hned, musí se koncový uživatel odhlásit od aplikace 
 
 4. Stránka **aplikace** umožňuje zvolit, jak chcete tyto zásady použít pro aplikace na různých zařízeních. Musíte přidat alespoň jednu aplikaci.<p>
     
-    | Hodnota/možnost | Popis |
+    | Hodnota/možnost | Description |
     |-------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
     | Cíl pro aplikace na všech typech zařízení | Tuto možnost použijte, pokud chcete zásady zaměřit na aplikace na zařízeních libovolného stavu správy. Pokud chcete cílit aplikace na konkrétní typy zařízení, vyberte **ne** . Pro toto nastavení může být vyžadována další konfigurace aplikace. Podrobnosti najdete v tématu [Cílení zásad ochrany aplikací na základě stavu správy zařízení](#target-app-protection-policies-based-on-device-management-state). |
     |     Typy zařízení | Tuto možnost použijte, pokud chcete určit, jestli se tato zásada vztahuje na zařízení spravovaná MDM nebo na nespravovaná zařízení. V případě zásad aplikací pro iOS/iPadOS vyberte možnost z **nespravovaných** a **spravovaných** zařízení. V případě zásad aplikací pro Android vyberte z **nespravovaného**, **Správce zařízení s Androidem**a **Android Enterprise**.  |

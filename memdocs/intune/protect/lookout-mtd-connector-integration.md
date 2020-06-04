@@ -1,5 +1,5 @@
 ---
-title: Nastavení integrace služby Lookout s Microsoft Intune
+title: Nastavení zabezpečení mobilních koncových bodů pomocí Microsoft Intune
 titleSuffix: Microsoft Intune
 description: Přečtěte si o integraci Intune s funkcí Mobile Endpoint Security, jako je řešení ochrany před mobilními hrozbami, pro řízení přístupu mobilních zařízení k firemním prostředkům.
 keywords: ''
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4951db457c6a49179dd38ca24463dda292b227e5
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 89d9e8d168175d841a4fb202836ce24df37b5615
+ms.sourcegitcommit: 42a4a4454e56fa681f0ad39f5e585492dfbad286
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988115"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84331014"
 ---
 # <a name="set-up-lookout-mobile-endpoint-security-integration-with-intune"></a>Nastavení integrace zabezpečení mobilních koncových bodů pomocí Intune
 S prostředím, které splňuje [požadavky](lookout-mobile-threat-defense-connector.md#prerequisites), můžete integrovat mobilní koncové body zabezpečení s Intune. Informace v tomto článku vás provedou nastavením integrace a konfigurací důležitých nastavení ve službě Intune pro použití s Intune.  

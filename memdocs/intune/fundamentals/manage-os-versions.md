@@ -1,5 +1,5 @@
 ---
-title: Správa verzí operačního systému pomocí Microsoft Intune
+title: Správa verzí operačního systému pomocí Intune
 titleSuffix: Microsoft Intune
 description: Zjistěte, jak pomocí Microsoft Intune spravovat verze operačního systému napříč platformami.
 keywords: ''
@@ -14,12 +14,12 @@ ms.localizationpriority: high
 ms.assetid: 361ef17b-1ee0-4879-b7b1-d678b0787f5a
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c25a40d288b643c289c05322e3e2d4677afb0b60
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: e4135dc90ff2739cb27ac95afa095bdfaf375d82
+ms.sourcegitcommit: 42a4a4454e56fa681f0ad39f5e585492dfbad286
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79332447"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84330929"
 ---
 # <a name="manage-operating-system-versions-with-intune"></a>Správa verzí operačního systému pomocí Intune
 Na moderních mobilních a počítačových platformách jsou velké aktualizace, opravy a nové verze vydávány rychlým tempem. Máte ovládací prvky pro plně spravované aktualizace a opravy ve Windows, ale jiné platformy, jako je iOS/iPadOS a Android, vyžadují, aby se vaši koncoví uživatelé účastnili procesu.  Microsoft Intune má možnosti, které vám pomůžou se strukturováním správy verzí operačního systému napříč různými platformami.

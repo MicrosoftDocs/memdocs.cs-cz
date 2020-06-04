@@ -77,10 +77,6 @@
           href: deploy-use/create-app-v-virtual-environments.md
         - name: Import a export aplikací
           href: deploy-use/import-export-applications.md
-    - name: "Aktualizace a vyřazení aplikací z\_provozu"
-      items:
-        - name: "Aktualizace a vyřazení aplikací z\_provozu"
-          href: deploy-use/update-and-retire-applications.md
         - name: Revidování a nahrazování aplikací
           href: deploy-use/revise-and-supersede-applications.md
         - name: Odinstalování aplikací

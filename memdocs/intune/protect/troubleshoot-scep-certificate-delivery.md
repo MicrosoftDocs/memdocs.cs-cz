@@ -1,5 +1,5 @@
 ---
-title: Řešení potíží s doručováním certifikátů do zařízení, když používáte SCEP s Microsoft Intune | Microsoft Docs
+title: Řešení potíží s doručováním certifikátů SCEP pro Intune | Microsoft Docs
 description: Řešení potíží s doručováním certifikátu do zařízení z certifikační autority při použití profilů certifikátů SCEP s Intune k nasazení certifikátů.
 keywords: ''
 author: brenduns
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3acd8f0605ffbfe4f04ea4a9f0aaf81249e38cf5
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 401bc2abe1be925f78436ff6557896ed51e37cb1
+ms.sourcegitcommit: 42a4a4454e56fa681f0ad39f5e585492dfbad286
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83991064"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84330895"
 ---
 # <a name="troubleshoot-the-delivery-of-certificates-provisioned-by-scep-to-devices-in-microsoft-intune"></a>Řešení potíží s doručováním certifikátů zajištěných pomocí protokolu SCEP do zařízení v Microsoft Intune
 
