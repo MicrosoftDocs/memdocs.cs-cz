@@ -10,12 +10,12 @@ ms.topic: overview
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: d6bbc787-83a5-44b4-ad64-016e5da7413f
-ms.openlocfilehash: e06dc0d40eb6359d11ef31045989d7ed398b3687
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 86bd566e9582c7dd7c83f93c22430edcc8ea0d0d
+ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81711319"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84347181"
 ---
 # <a name="what-is-co-management"></a>Co je spoluspráva?
 
@@ -76,7 +76,7 @@ Společná správa má tyto požadavky v následujících oblastech:
 - [Windows 10](#windows-10)  
 - [Oprávnění a role](#permissions-and-roles)  
 
-### <a name="licensing"></a>Licencování
+### <a name="licensing"></a>Licensing
 
 - Azure AD Premium
 
@@ -102,7 +102,7 @@ Povolení spolusprávy nevyžaduje, abyste svůj web připojili ke službě Azur
 
 - Zařízení s Windows 10 musí být připojená k Azure AD. Může to být jeden z následujících typů:  
 
-  - [Hybridní služba Azure AD – připojeno](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan), kde je zařízení připojené k místní službě Active Directory a připojené k vašemu Azure Active Directory.  
+  - [Hybridní služba Azure AD – připojeno](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join-hybrid), kde je zařízení připojené k místní službě Active Directory a zaregistrované ve vašem Azure Active Directory.
 
   - Pouze [Služba Azure AD – připojeno](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan) . (Tento typ se někdy označuje jako "cloudová doména připojená".<!--SCCMDocs issue 605-->  
 

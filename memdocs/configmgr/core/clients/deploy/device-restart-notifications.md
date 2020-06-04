@@ -2,7 +2,7 @@
 title: Oznámení o restartování zařízení
 titleSuffix: Configuration Manager
 description: Restartujte chování oznámení pro různá nastavení klienta v Configuration Manager.
-ms.date: 08/23/2019
+ms.date: 06/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,26 +10,22 @@ ms.assetid: 5ef1bff8-9733-4b5a-b65f-26b94accd210
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 5b6d383b2d5904f4d31fff5f549127dc21c39f29
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: b326c4dd8112a72555239f2c3eda078ebf47bf82
+ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81713391"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84347215"
 ---
 # <a name="device-restart-notifications-in-configuration-manager"></a>Oznámení o restartování zařízení v Configuration Manager
 
 *Platí pro: Configuration Manager (Current Branch)*
 
-Oznámení, která uživatel obdrží pro čekání na restartování zařízení, se můžou lišit v závislosti na [nastaveních klienta restartování počítače](about-client-settings.md#computer-restart) a na používané verzi Configuration Manager. Tento článek pomáhá správcům určit, jaké uživatelské prostředí slouží pro nedokončená oznámení o restartování zařízení.
-
->[!NOTE]
-> - Tento článek se zaměřuje na nastavení klienta nalezené v Configuration Manager verze 1902 a verze 1906.
-
+Oznámení, která uživatel obdrží pro čekání na restartování zařízení, se může lišit v závislosti na [nastaveních klienta restartování počítače](#client-settings) a na používané verzi Configuration Manager. Tento článek vám pomůže nakonfigurovat činnost koncového uživatele pro nedokončená oznámení o restartování zařízení.
 
 ## <a name="deployment-types-for-restart-notifications"></a>Typy nasazení pro oznámení o restartování
 
-[Nastavení klienta restartovat počítač](about-client-settings.md#computer-restart) změní uživatelské prostředí pro všechna požadovaná nasazení, která vyžadují restartování následujících typů:
+[Nastavení klienta restartovat počítač](#client-settings) změní uživatelské prostředí pro všechna požadovaná nasazení, která vyžadují restartování následujících typů:
 
 - [Aplikace](../../../apps/deploy-use/deploy-applications.md)
 - [Pořadí úkolů](../../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS)
@@ -37,38 +33,163 @@ Oznámení, která uživatel obdrží pro čekání na restartování zařízen�
 
 ## <a name="restart-notification-types"></a>Typy oznámení o restartování
 
-Pokud je vyžadováno restartování, koncovému uživateli se zobrazí oznámení o nadcházejícím restartování. Existují čtyři obecná oznámení, která uživatelé mohou obdržet:
+Když zařízení vyžaduje restart, klient zobrazí koncovému uživateli oznámení o nadcházejícím restartování. Existují čtyři obecná oznámení, která uživatelé mohou obdržet.
 
-**Informační zpráva oznamující** , že je potřeba restartovat počítač. Informace v oznámení informační zprávy se můžou lišit v závislosti na verzi Configuration Manager, kterou používáte. Tento typ oznámení je nativní pro operační systém Windows a pomocí tohoto typu oznámení můžete také vidět software třetí strany.
+### <a name="toast-notification"></a>Informační oznámení
+
+Informační zpráva systému Windows informuje uživatele o tom, že zařízení musí restartovat. Informace v oznámení informační zprávy se můžou lišit v závislosti na verzi Configuration Manager, kterou používáte. Tento typ oznámení je nativní pro operační systém Windows. Pomocí tohoto typu oznámení můžete také vidět software třetí strany.
 
 ![Informační zpráva o čekání na restartování](media/3555947-restart-toast.png)
 
-Oznámení centra softwaru s možností odložení, která zobrazuje zbývající čas před vysazením restartování. Tato zpráva se může lišit v závislosti na vaší verzi Configuration Manager.
+### <a name="software-center-notification-with-snooze"></a>Oznámení centra softwaru s odložením
+
+Centrum softwaru zobrazuje oznámení s možností odložení a zbývající čas před tím, než zařízení vynutí restartování. Tato zpráva se může lišit v závislosti na vaší verzi Configuration Manager.
 
 ![Čeká na restartování oznámení centra softwaru s tlačítkem pro odložení](media/3976435-snooze-restart-countdown.png)
 
-Konečné oznámení o odpočítávání centra softwaru, které uživatel nemůže zavřít. Tlačítko pro odložení je zobrazeno šedě.
+### <a name="software-center-final-countdown-notification"></a>Oznámení o konečném odpočítávání centra softwaru
+
+Centrum softwaru zobrazí toto konečné oznámení o odpočítávání, které uživatel nemůže zavřít nebo odložit.
 
 ![Oznámení o konečném odpočítávání centra softwaru](media/3976435-final-restart-countdown.png)
 
-Pokud uživatel proaktivně nainstaluje požadovaný software, který vyžaduje restart před konečným termínem, uvidí jiné oznámení. K následujícímu oznámení dojde, pokud nastavení činnost koncového uživatele umožňuje oznámení a nepoužíváte pro nasazení oznámení informační zprávy. Další informace o konfiguraci těchto nastavení najdete v tématu [nasazení nastavení **uživatelského prostředí** ](../../../apps/deploy-use/deploy-applications.md#bkmk_deploy-ux) a [oznámení uživatelů pro požadovaná nasazení](../../../apps/deploy-use/deploy-applications.md#bkmk_notify).
+Počínaje verzí 1906 se uživateli v oznámení o restartu nezobrazuje indikátor průběhu, dokud nebude čekat na restartování před méně než 24 hodinami.
+
+### <a name="software-center-notification-before-deadline"></a>Oznámení centra softwaru před konečným termínem
+
+Pokud uživatel proaktivně nainstaluje požadovaný software před konečný termín a vyžaduje restart, uvidí jiné oznámení. K následujícímu oznámení dojde, pokud nastavení činnost koncového uživatele umožňuje oznámení a nepoužíváte pro nasazení oznámení informační zprávy. Další informace o konfiguraci těchto nastavení najdete v tématu [nasazení nastavení **uživatelského prostředí** ](../../../apps/deploy-use/deploy-applications.md#bkmk_deploy-ux) a [oznámení uživatelů pro požadovaná nasazení](../../../apps/deploy-use/deploy-applications.md#bkmk_notify).
 
 ![Oznámení o proaktivním nainstalovaném softwaru](media/3976435-proactive-user-restart-notification.png)
 
-- Pokud nepoužíváte informační zprávy, bude dialog pro software označený jako **dostupný** podobný aktivnímu nainstalovanému softwaru.
+#### <a name="available-apps"></a>Dostupné aplikace
 
-  - U **dostupného** softwaru oznámení nemá konečný termín pro restartování a uživatel může zvolit vlastní interval odložení. Další informace najdete v tématu [nastavení schválení](../../../apps/deploy-use/deploy-applications.md#bkmk_approval).
+Pokud nepoužíváte informační zprávy, bude dialog pro software označený jako **dostupný** podobný aktivnímu nainstalovanému softwaru. U **dostupného** softwaru oznámení nemá konečný termín pro restartování a uživatel může zvolit vlastní interval odložení. Další informace najdete v tématu [nastavení schválení](../../../apps/deploy-use/deploy-applications.md#bkmk_approval).
 
-    ![Software označený jako "dostupný" nemá konečný termín pro restartování v oznámení.](media/3555947-deployment-marked-available-restart.png)
+![Software označený jako "dostupný" nemá konečný termín pro restartování v oznámení.](media/3555947-deployment-marked-available-restart.png)
 
-## <a name="device-restart-notifications-in-version-1902"></a>Oznámení o restartování zařízení ve verzi 1902
+## <a name="client-settings"></a>Nastavení klienta
+
+Chcete-li řídit chování při restartování klienta, nakonfigurujte následující nastavení klienta zařízení ve skupině **restartovat počítač** . Další informace najdete v tématu [Konfigurace nastavení klienta](configure-client-settings.md).
+
+### <a name="specify-the-amount-of-time-after-the-deadline-before-a-device-gets-restarted-minutes"></a>Zadejte čas po uplynutí konečného termínu, než se zařízení restartuje (minuty).
+
+Toto nastavení musí být kratší než doba trvání, než je u počítače použito nejkratší časové období údržby. Další informace o časových obdobích údržby najdete v tématu [použití časových období](../manage/collections/use-maintenance-windows.md)údržby.
+
+Výchozí hodnota je 90 minut. Počínaje verzí 1906 se maximální hodnota zvýšila ze 1440 minut (24 hodin) na 20160 minut (dva týdny).
+
+> [!NOTE]
+> Toto nastavení dříve **znamenalo zobrazit dočasné oznámení uživateli, které udává interval před odhlášením uživatele nebo restartováním počítače (minuty)**.
+
+### <a name="specify-the-amount-of-time-that-a-user-is-presented-a-final-countdown-notification-before-a-device-gets-restarted-minutes"></a>Zadejte dobu, po kterou se uživateli zobrazí konečné oznámení o odpočítávání, než se zařízení restartuje (minuty).
+
+Toto nastavení musí být kratší než doba trvání, než je u počítače použito nejkratší časové období údržby. Další informace o časových obdobích údržby najdete v tématu [použití časových období](../manage/collections/use-maintenance-windows.md)údržby.
+
+Výchozí hodnota je 15 minut.
+
+> [!NOTE]
+> Toto nastavení dříve vyvolalo **zobrazení dialogového okna, které uživatel nemůže zavřít, který zobrazuje interval odpočítávání před odhlášením uživatele nebo restartování počítače (minuty)**.
+
+### <a name="specify-the-frequency-of-reminder-notifications-presented-to-the-user-after-the-deadline-before-a-device-gets-restarted-minutes"></a>Zadejte frekvenci oznámení připomenutí, která se uživateli zobrazí po uplynutí konečného termínu, než se zařízení restartuje (minuty).
+<!--3976435-->
+_Počínaje verzí 1906_
+
+Tato hodnota trvání frekvence by měla být menší než hodnota **určující dobu, po jejímž uplynutí se zařízení restartuje (minuty)** minus hodnota **určující dobu, po kterou se uživateli zobrazí konečné oznámení o odpočítávání, než se zařízení restartuje (minuty)**. V opačném případě oznámení připomenutí nebudou fungovat.
+
+Výchozí hodnota je 240 minut.
+
+> [!NOTE]
+> Toto nastavení dříve vyvolalo **zadání doby přiložení pro oznámení odpočítávání restartování počítače (minuty)**.
+
+### <a name="when-a-deployment-requires-a-restart-show-a-dialog-window-to-the-user-instead-of-a-toast-notification"></a>Pokud nasazení vyžaduje restart, zobrazí se uživateli dialogové okno namísto informačního oznámení.
+<!--3555947-->
+Od verze 1902 se konfigurace tohoto nastavení změní na **Ano** . tím se uživatelské prostředí přizpůsobuje na více rušivých. Toto nastavení platí pro všechna nasazení aplikací, pořadí úloh a aktualizace softwaru. Další informace najdete v tématu [plánování centra softwaru](../../../apps/plan-design/plan-for-software-center.md#bkmk_impact).
+
+> [!IMPORTANT]
+> V Configuration Manager 1902 se za určitých okolností dialogová okna nebudou nahrazena informačními oznámeními. Pokud chcete tento problém vyřešit, nainstalujte [kumulativní aktualizaci pro Configuration Manager verze 1902](https://support.microsoft.com/help/4500571/update-rollup-for-configuration-manager-current-branch-1902). <!--4404715-->
+
+## <a name="device-restart-notifications-version-1906"></a>Oznámení o restartování zařízení (verze 1906)
+<!--3976435-->
+Někteří zákazníci upřednostňují časté oznámení o restartování a umožňují uživatelům krátkou dobu odložení. Ostatní umožňují uživatelům odložit restartování po delší dobu a uživatelům, kteří čekají na restartování, upozorňovat i zřídka. Od verze Configuration Manager 1906 máte větší kontrolu nad časováním a četností oznámení o restartování.
+
+### <a name="install-required-software-at-or-after-the-deadline"></a>Nainstalovat požadovaný software na konečný termín nebo za něj
+
+Pokud je požadovaný software nainstalovaný v nebo po konečném termínu, uživatelé uvidí oznámení v závislosti na nastaveních klienta, která jste vybrali.
+
+Pokud nastavení **, když nasazení vyžaduje restart, zobrazí uživateli dialogové okno místo oznámení informační** zpráva je nastaveno na:
+
+- **Ne**: systém Windows zobrazuje informační zprávy, dokud nasazení nedosáhne konečného oznámení o odpočítávání.
+
+- **Ano**: Centrum softwaru zobrazuje oznámení:
+
+  - Pokud je restartování delší než 24 hodin, zobrazí se odhadované doba restartování. Časování tohoto oznámení je založené na nastavení: **Zadejte dobu, po jejímž uplynutí se zařízení restartuje (minuty)**.
+
+    ![Doba restartu je víc než 24 hodin.](media/3976435-notification-greater-than-24-hours.png)
+
+  - Pokud je restartování kratší než 24 hodin, zobrazí se indikátor průběhu. Časování tohoto oznámení je založené na nastavení: **Zadejte dobu, po jejímž uplynutí se zařízení restartuje (minuty)**.
+
+    ![Čas restartování je pryč méně než 24 hodin.](media/3976435-notification-less-than-24-hours.png)
+
+Pokud uživatel vybere **připomenout**znovu, další dočasné oznámení se zobrazí po uplynutí doby odložení. Toto chování předpokládá, že ještě nedosáhla konečného odpočítávání. Časování dalšího oznámení je založené na nastavení: **Určete četnost oznámení připomenutí prezentovaných uživateli, po uplynutí konečného termínu, než se zařízení restartuje (minuty)**. Pokud uživatel vybere **připomenout**znovu a váš interval odložení bude jedna hodina, Centrum softwaru ho znovu upozorní uživatele za 60 minut. Toto chování předpokládá, že ještě nedosáhla konečného odpočítávání.
+
+Po dosažení konečného odpočítávání v centru softwaru se uživateli zobrazí oznámení, že se nemůžou zavřít. Indikátor průběhu je červený a uživatel ho nemůže **připomenout** odložit.
+
+![Konečné odpočítávání oznámení centra softwaru ve verzi 1906](media/3976435-1906-final-restart-countdown.png)
+
+### <a name="proactively-install-required-software-before-the-deadline"></a>Proaktivní instalace požadovaného softwaru před konečným termínem
+
+Pokud uživatel proaktivně nainstaluje požadovaný software, který potřebuje restartovat před konečným termínem, uvidí jiné oznámení. Další informace o konfiguraci těchto nastavení najdete v tématu [nasazení nastavení **uživatelského prostředí** ](../../../apps/deploy-use/deploy-applications.md#bkmk_deploy-ux) a [oznámení uživatelů pro požadovaná nasazení](../../../apps/deploy-use/deploy-applications.md#bkmk_notify).
+
+K následujícímu oznámení dojde, pokud nastavení činnost koncového uživatele umožňuje oznámení a nepoužíváte pro nasazení oznámení informační zprávy:
+
+![Oznámení o proaktivním nainstalovaném softwaru](media/3976435-proactive-user-restart-notification.png)
+
+Jakmile nasazení dosáhne svého konečného termínu, Centrum softwaru bude postupovat podle pokynů k [instalaci požadovaného softwaru do nebo po termínu](#install-required-software-at-or-after-the-deadline).
+
+## <a name="example-configurations"></a>Příklady konfigurací
+
+Následující příklady popisují, jak nakonfigurovat nastavení klienta, aby bylo dosaženo konkrétního chování.
+
+### <a name="reminders-are-off"></a>Připomenutí jsou vypnutá.
+
+| Nastavení | Hodnota |
+|---------|---------|
+|Zadejte čas po uplynutí konečného termínu, než se zařízení restartuje (minuty).|180|
+|Zadejte dobu, po kterou se uživateli zobrazí konečné oznámení o odpočítávání, než se zařízení restartuje (minuty).|60|
+|Zadejte frekvenci oznámení připomenutí, která se uživateli zobrazí po uplynutí konečného termínu, než se zařízení restartuje (minuty).|240|
+|Pokud nasazení vyžaduje restart, zobrazí se uživateli dialogové okno namísto informačního oznámení.|Ne|
+
+Zařízení se po uplynutí konečného termínu nasazení restartuje tři hodiny (**180** minut). Po jedné hodině (**60** minut) před restartováním se uživateli zobrazí odpočítávání, že se nemůže zavřít ani znovu připomenout. První oznámení o připomenutí je nastavené na začátek čtyř hodin (**240** minut) po uplynutí konečného termínu, který následuje po restartování. Takže se uživateli nezobrazí žádná připomenutí.
+
+### <a name="low-reminder-frequency"></a>Frekvence nízkého připomenutí
+
+| Nastavení | Hodnota |
+|---------|---------|
+|Zadejte čas po uplynutí konečného termínu, než se zařízení restartuje (minuty).|7200|
+|Zadejte dobu, po kterou se uživateli zobrazí konečné oznámení o odpočítávání, než se zařízení restartuje (minuty).|120|
+|Zadejte frekvenci oznámení připomenutí, která se uživateli zobrazí po uplynutí konečného termínu, než se zařízení restartuje (minuty).|900|
+|Pokud nasazení vyžaduje restart, zobrazí se uživateli dialogové okno namísto informačního oznámení.|Ano|
+
+Zařízení se restartuje 5 dní (**7200** minut) po uplynutí konečného termínu nasazení. Dvě hodiny (**120** minut) před tím, než se restartuje, uživatel uvidí odpočítávání, že se nemůžou zavřít ani znovu připomenout. Tato konfigurace umožňuje zobrazit připomenutí () 118 hodin ( `(7200 - 120) / 60` ). 15 hodin (**900** minut) po uplynutí konečného termínu zobrazí Centrum softwaru první připomenutí. Zobrazuje maximálně šest dalších připomenutí každých 15 hodin (**900 minut**). Uživatel uvidí připomenutí jako okno na obrazovce, místo upozornění, které se během několika sekund zmizí.
+
+### <a name="high-reminder-frequency"></a>Frekvence vysokého připomenutí
+
+| Nastavení | Hodnota |
+|---------|---------|
+|Zadejte čas po uplynutí konečného termínu, než se zařízení restartuje (minuty).|2880|
+|Zadejte dobu, po kterou se uživateli zobrazí konečné oznámení o odpočítávání, než se zařízení restartuje (minuty).|60|
+|Zadejte frekvenci oznámení připomenutí, která se uživateli zobrazí po uplynutí konečného termínu, než se zařízení restartuje (minuty).|30|
+|Pokud nasazení vyžaduje restart, zobrazí se uživateli dialogové okno namísto informačního oznámení.|Ano|
+
+Zařízení se restartuje dva dny (**2880** minut) po uplynutí konečného termínu nasazení. Po jedné hodině (**60** minut) před restartováním se uživateli zobrazí odpočítávání, že se nemůže zavřít ani znovu připomenout. Tato konfigurace umožňuje zobrazit připomenutí () 47 hodin ( `(2880 - 60) / 60` ). **30** minut po uplynutí konečného termínu zobrazí Centrum softwaru první připomenutí. Zobrazuje se maximálně 92 dalších připomenutí každých **30 minut**. Uživatel uvidí připomenutí jako okno na obrazovce, místo upozornění, které se během několika sekund zmizí.
+
+## <a name="device-restart-notifications-version-1902"></a>Oznámení o restartování zařízení (verze 1902)
 
 <!--3555947-->
 Někdy se uživatelům nezobrazuje zpráva informující o systému Windows o restartování nebo požadovaném nasazení. Pak nevidí prostředí, které připomíná připomenutí k odložení. Toto chování může vést k nedostatečnému uživatelskému prostředí, když klient dosáhne konečného termínu.
 
 Od verze 1902 platí, že když se vyžadují změny softwaru, nebo nasazení potřebují restartovat, máte možnost použít více rušivých dialogových oken.
 
-V okně [restartovat počítač](about-client-settings.md#computer-restart) v nastavení klienta Povolte následující možnost: **Pokud nasazení vyžaduje restart, místo oznámení informačního systému se zobrazí dialogové okno s uživatelem**.  
+V okně [restartovat počítač](#client-settings) v nastavení klienta Povolte následující možnost: **Pokud nasazení vyžaduje restart, místo oznámení informačního systému se zobrazí dialogové okno s uživatelem**.  
 
 Konfigurace tohoto nastavení klienta změní činnost koncového uživatele pro všechna požadovaná nasazení, která vyžadují restart ze zpráv oznámení:
 
@@ -100,52 +221,12 @@ Následující nastavení musí být kratší než v době trvání, než má ne
 > [!IMPORTANT]
 > V Configuration Manager 1902 se za určitých okolností dialogová okna nebudou nahrazena informačními oznámeními. Pokud chcete tento problém vyřešit, nainstalujte [kumulativní aktualizaci pro Configuration Manager verze 1902](https://support.microsoft.com/help/4500571/update-rollup-for-configuration-manager-current-branch-1902). <!--4404715-->
 
-## <a name="device-restart-notifications-starting-in-version-1906"></a>Oznámení o restartování zařízení od verze 1906
-<!--3976435-->
-Někteří správci upřednostňují časté oznámení o restartování a krátký časový rámec, který umožňuje odložené restartování. Jiní správci umožňují uživatelům odložit restartování po delší dobu a chtít, aby se uživatelům zobrazilo oznámení o nedokončeném restartování. Configuration Manager verze 1906 poskytuje správci větší kontrolu nad časováním a četností oznámení o restartování. V 1906 byly zavedeny následující položky, které správcům poskytují větší kontrolu:
-
-- **Zadejte dobu opakovaného přiložení pro odpočítávání oznámení restartování počítače (minuty)** , které se přidalo do [nastavení klienta restartovat počítač](about-client-settings.md#computer-restart).
-- Maximální hodnota pro **zobrazení dočasného oznámení uživateli, které udává interval před odhlášením uživatele nebo restartováním počítače (minuty)** od 1440 minut (24 hodin) do 20160 minut (dva týdny).
-- Uživateli se v oznámení o restartu nezobrazuje indikátor průběhu, dokud bude nedokončené restartování méně než 24 hodin.
-
-### <a name="notifications-when-required-software-is-installed-at-or-after-the-deadline"></a>Oznámení v případě, že je požadovaný software nainstalován v nebo po konečném termínu
-
-Pokud je požadovaný software nainstalovaný v nebo po konečném termínu, uživatelé uvidí oznámení v závislosti na nastaveních klienta, která jste vybrali.
-
-Pokud nastavení **, když nasazení vyžaduje restart, zobrazí uživateli dialogové okno místo oznámení informační** zpráva je nastaveno na:
-
-- **Žádná** oznámení se používají až po dosažení konečného oznámení o odpočítávání.
-- **Ano** – zobrazuje se oznámení centra softwaru.
-  - Pokud je restartování delší než 24 hodin, zobrazí se odhadovaný čas restartování. Časování tohoto oznámení je založené na nastavení: **zobrazí pro uživatele dočasné oznámení, které určuje interval před odhlášením uživatele nebo restartováním počítače (minuty)**.
-
-     ![Doba restartu je víc než 24 hodin.](media/3976435-notification-greater-than-24-hours.png)
-
-  - Pokud je restartování méně než 24 hodin pryč, zobrazí se indikátor průběhu. Časování tohoto oznámení je založené na nastavení: **Zobrazit pro uživatele dočasné oznámení, které označuje interval před odhlášením uživatele nebo restartováním počítače (minuty)** .
-
-     ![Čas restartování je pryč méně než 24 hodin.](media/3976435-notification-less-than-24-hours.png)
-
-Pokud uživatel vybere tlačítko pro **odložení** , dojde k dalšímu dočasnému oznámení po uplynutí doby pro odložení, za předpokladu, že ještě nedosáhli konečného odpočítávání. Časování dalšího oznámení je založené na nastavení: **Zadejte dobu odložení pro odpočítávání oznámení restartování počítače (hodiny)**. Pokud uživatel vybere příkaz **připomenout** a interval odložení bude jedna hodina, bude uživatel znovu upozorněn za 60 minut za předpokladu, že ještě nedosáhl konečné odpočítávání.
-
-Po dosažení konečného odpočítávání je uživateli přiděleno oznámení, které nelze zavřít. Indikátor průběhu je červený a uživatel se nemůže **připomenout**znovu.
-
-![Konečné odpočítávání oznámení centra softwaru ve verzi 1906](media/3976435-1906-final-restart-countdown.png)
-
-### <a name="the-user-proactively-installs-before-the-deadline"></a>Uživatel provede proaktivní instalaci před konečným termínem.
-
-Pokud uživatel proaktivně nainstaluje požadovaný software, který vyžaduje restart před konečným termínem, uvidí jiné oznámení. Další informace o konfiguraci těchto nastavení najdete v tématu [nasazení nastavení **uživatelského prostředí** ](../../../apps/deploy-use/deploy-applications.md#bkmk_deploy-ux) a [oznámení uživatelů pro požadovaná nasazení](../../../apps/deploy-use/deploy-applications.md#bkmk_notify). 
-
-K následujícímu oznámení dojde, pokud nastavení činnost koncového uživatele umožňuje oznámení a nepoužíváte pro nasazení oznámení informační zprávy:
-
-![Oznámení o proaktivním nainstalovaném softwaru](media/3976435-proactive-user-restart-notification.png)
-
-Jakmile je dosaženo konečného termínu pro software, budou oznámení v případě, že je [vyžadován požadovaný software, nainstalován v nebo po následování chování konečného termínu](#notifications-when-required-software-is-installed-at-or-after-the-deadline) .
-
 ## <a name="log-files"></a>Soubory protokolů
 
-Pro řešení potíží s restartováním zařízení použijte protokol **RebootCoordinator. log** a **SCNotify. log** . V závislosti na použitém typu nasazení možná budete muset použít taky další [soubory protokolů](../../plan-design/hierarchy/log-files.md) klienta.
+Pokud chcete řešit potíže s restartováním zařízení, použijte soubory **RebootCoordinator. log** a **SCNotify. log** v klientovi. Na základě konkrétního typu nasazení budete možná muset použít i další [soubory protokolů](../../plan-design/hierarchy/log-files.md)klienta.
 
 ## <a name="next-steps"></a>Další kroky
 
-- [Úvod do správy aplikací](../../../apps/understand/introduction-to-application-management.md)
-- [Úvod k nasazení operačního systému](../../../osd/understand/introduction-to-operating-system-deployment.md)
-- [Úvod ke správě aktualizací softwaru](../../../sum/understand/software-updates-introduction.md)
+- [Postup konfigurace nastavení klienta](configure-client-settings.md)
+- [Nastavení **uživatelského prostředí** nasazení aplikace](../../../apps/deploy-use/deploy-applications.md#bkmk_deploy-ux)
+- [Oznámení uživatelů pro požadovaná nasazení aplikací](../../../apps/deploy-use/deploy-applications.md#bkmk_notify)

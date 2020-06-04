@@ -2,7 +2,7 @@
 title: Konfigurace zjišťování
 titleSuffix: Configuration Manager
 description: Nakonfigurujte metody zjišťování tak, aby vyhledaly prostředky, které se mají spravovat ze sítě, Active Directory a Azure Active Directory.
-ms.date: 04/01/2020
+ms.date: 06/03/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 49505eb1-d44d-4121-8712-e0f3d8b15bf5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 3bd03cb15ae1633d8ddfc8c2f26a741d2679b083
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: cfda27df7df537ededb1f103afdd6107354af786
+ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81721042"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84347283"
 ---
 # <a name="configure-discovery-methods-for-configuration-manager"></a>Konfigurace metod zjišťování pro Configuration Manager
 
@@ -148,7 +148,7 @@ I když je každá z těchto metod zjišťování nezávislá na ostatních, sd�
 
 ### <a name="configure-active-directory-system-discovery"></a><a name="bkmk_config-adsd"></a>Konfigurace zjišťování systému služby Active Directory  
 
-1. Na kartě **Obecné** v okno Vlastnosti zjišťování systémových souborů služby Active Directory vyberte ikonu **Nová** ![ikona nové](media/Disc_new_Icon.gif) a zadejte nový kontejner služby Active Directory. V dialogovém okně **kontejner služby Active Directory** dokončete následující konfigurace:  
+1. Na kartě **Obecné** v okno Vlastnosti zjišťování systémových souborů služby Active Directory vyberte ikonu **Nová** ikona nové ![ ](media/Disc_new_Icon.gif) a zadejte nový kontejner služby Active Directory. V dialogovém okně **kontejner služby Active Directory** dokončete následující konfigurace:  
 
     1. Zadejte nebo vyhledejte umístění pro **cestu**. Tato hodnota představuje platnou cestu protokolu LDAP ke kontejneru nebo organizační jednotce (OU). Tento web se dotazuje na tuto cestu k prostředkům. Například `LDAP://CN=Computers,DC=contoso,DC=com`.  
 
@@ -183,7 +183,7 @@ I když je každá z těchto metod zjišťování nezávislá na ostatních, sd�
 
 ### <a name="configure-active-directory-user-discovery"></a><a name="bkmk_config-adud"></a>Konfigurace zjišťování uživatelů služby Active Directory  
 
-1. Na kartě **Obecné** ve okno Vlastnosti zjišťování uživatelů služby Active Directory vyberte novou ikonu **Nová** ikona ![](media/Disc_new_Icon.gif) a zadejte nový kontejner služby Active Directory. V dialogovém okně **kontejner služby Active Directory** dokončete následující konfigurace:  
+1. Na kartě **Obecné** ve okno Vlastnosti zjišťování uživatelů služby Active Directory vyberte novou ikonu **Nová** ikona ![ ](media/Disc_new_Icon.gif) a zadejte nový kontejner služby Active Directory. V dialogovém okně **kontejner služby Active Directory** dokončete následující konfigurace:  
 
     1. Zadejte jedno nebo více umístění, která chcete vyhledat.  
 
@@ -265,7 +265,7 @@ Můžete zjistit skupiny uživatelů a členy těchto skupin z Azure AD. Když l
 
 ### <a name="limitations"></a>Omezení
 
-Zjišťování rozdílů pro zjišťování skupin uživatelů Azure AD je aktuálně zakázané.
+Zjišťování rozdílů pro zjišťování skupin uživatelů Azure AD je ve verzi 1906 zakázané. Můžete ji povolit od verze Configuration Manager 1910.
 
 ### <a name="log-files"></a>Soubory protokolů
 
@@ -415,7 +415,7 @@ Následující postupy použijte k prvnímu zjištění pouze síťové topologi
     - Na kartě **podsítě** vyberte možnost **Hledat místní podsítě** .  
 
       > [!TIP]  
-      > Pokud znáte konkrétní podsítě, které tvoří vaši síť, zrušte zaškrtnutí políčka **prohledávat místní podsítě** . Pak vyberte ikonu **Nová** ikona ![nová](media/Disc_new_Icon.gif)a přidejte konkrétní podsítě, které chcete vyhledat. V případě rozsáhlých sítí můžete v jednom okamžiku vyhledávat pouze jednu nebo dvě podsítě, abyste minimalizovali využití šířky pásma sítě.  
+      > Pokud znáte konkrétní podsítě, které tvoří vaši síť, zrušte zaškrtnutí políčka **prohledávat místní podsítě** . Pak vyberte ikonu **Nová** ikona ![ Nová ](media/Disc_new_Icon.gif) a přidejte konkrétní podsítě, které chcete vyhledat. V případě rozsáhlých sítí můžete v jednom okamžiku vyhledávat pouze jednu nebo dvě podsítě, abyste minimalizovali využití šířky pásma sítě.  
 
     - Na kartě **domény** vyberte možnost **hledání v místní doméně**.  
 
@@ -424,7 +424,7 @@ Následující postupy použijte k prvnímu zjištění pouze síťové topologi
       > [!TIP]  
       > Při prvním mapování síťové topologie nakonfigurujte jenom několik směrování směrovače, aby se minimalizovalo používání šířky pásma sítě.  
 
-4. Na kartě **plán** vyberte ikonu **Nová** ikona ![nové](media/Disc_new_Icon.gif)a nastavte plán pro spuštění zjišťování.  
+4. Na kartě **plán** vyberte ikonu **Nová** ikona ![ nové ](media/Disc_new_Icon.gif) a nastavte plán pro spuštění zjišťování.  
 
     > [!NOTE]  
     > Nemůžete přiřadit jinou konfiguraci zjišťování pro samostatné plány zjišťování sítě. Pokaždé, když se zjišťování sítě spustí, použije se aktuální konfigurace zjišťování.  
@@ -451,7 +451,7 @@ Následující postupy použijte k prvnímu zjištění pouze síťové topologi
 
     - Pokud chcete vyhledat konkrétní podsíť, ujistěte se, že je podsíť uvedená v části **podsítě k hledání** a jestli má **povolenou**hodnotu **hledání** :  
 
-      1. Pokud není podsíť uvedená, ![ **vyberte novou ikonu** nová ikona](media/Disc_new_Icon.gif). V dialogovém okně **nové přiřazení podsítě** zadejte informace o **podsíti** a **masce** a pak vyberte **OK**. Ve výchozím nastavení je pro vyhledávání povolena nová podsíť.  
+      1. Pokud není podsíť uvedená, **vyberte novou ikonu** nová ikona ![ ](media/Disc_new_Icon.gif) . V dialogovém okně **nové přiřazení podsítě** zadejte informace o **podsíti** a **masce** a pak vyberte **OK**. Ve výchozím nastavení je pro vyhledávání povolena nová podsíť.  
 
       2. Chcete-li změnit hodnotu **hledání** v uvedené podsíti, vyberte ji v seznamu. Pak vyberte ikonu **přepínání** , aby se přepnula hodnota mezi **zakázaným** a **povoleným**.  
 
@@ -461,21 +461,21 @@ Následující postupy použijte k prvnímu zjištění pouze síťové topologi
 
     - Pokud chcete vyhledat konkrétní doménu, ujistěte se, že je doména uvedená v části **domény** a že má **povolenou**hodnotu **hledání** :  
 
-      1. Pokud není doména uvedená, vyberte ikonu **Nová** ![ikona](media/Disc_new_Icon.gif). V dialogovém okně **vlastnosti domény** zadejte informace o **doméně** a pak vyberte **OK**. Ve výchozím nastavení je pro prohledávání povolena nová doména.  
+      1. Pokud není doména uvedená, vyberte ikonu **Nová** ikona ![ ](media/Disc_new_Icon.gif) . V dialogovém okně **vlastnosti domény** zadejte informace o **doméně** a pak vyberte **OK**. Ve výchozím nastavení je pro prohledávání povolena nová doména.  
 
       2. Chcete-li změnit hodnotu **hledání** v uvedené doméně, vyberte ji v seznamu. Pak vyberte ikonu **přepínání** , aby se přepnula hodnota mezi **zakázaným** a **povoleným**.  
 
 7. Chcete-li nakonfigurovat zjišťování pro hledání konkrétních názvů komunit SNMP pro zařízení SNMP, přepněte na kartu **SNMP** . Pak nakonfigurujte jednu nebo více z následujících možností:  
 
-    - Chcete-li přidat název komunity SNMP do seznamu **názvů komunity SNMP**, vyberte ikonu **Nová** ikona ![nové](media/Disc_new_Icon.gif). V dialogovém okně **nový název komunity SNMP** zadejte **název** komunity SNMP a pak vyberte **OK**.  
+    - Chcete-li přidat název komunity SNMP do seznamu **názvů komunity SNMP**, vyberte ikonu **Nová** ikona ![ nové ](media/Disc_new_Icon.gif) . V dialogovém okně **nový název komunity SNMP** zadejte **název** komunity SNMP a pak vyberte **OK**.  
 
-    - Pokud chcete odebrat název komunity SNMP, vyberte název komunity a pak ![vyberte ikonu](media/Disc_delete_Icon.gif) **Odstranit ikona odstranit** .  
+    - Pokud chcete odebrat název komunity SNMP, vyberte název komunity a pak vyberte ikonu **Odstranit ikona** ![ Odstranit ](media/Disc_delete_Icon.gif) .  
 
-    - Pokud chcete upravit pořadí hledání názvů komunit SNMP, vyberte ze seznamu název komunity. Pak vyberte ikonu přesunout **položku nahoru** ikona ![](media/Disc_moveUp_Icon.gif) přesunout nahoru nebo ikonu ![](media/Disc_moveDown_Icon.gif) **přesunout položku dolů** ikona přesunout dolů. Při spuštění zjišťování se názvy komunit prohledávají v pořadí shora dolů. 
+    - Pokud chcete upravit pořadí hledání názvů komunit SNMP, vyberte ze seznamu název komunity. Pak vyberte ikonu přesunout **položku nahoru** ![ ikona přesunout nahoru ](media/Disc_moveUp_Icon.gif) nebo ikonu **přesunout položku dolů** ![ ikona přesunout dolů ](media/Disc_moveDown_Icon.gif) . Při spuštění zjišťování se názvy komunit prohledávají v pořadí shora dolů. 
 
     - Chcete-li nakonfigurovat maximální počet směrování směrovače pro použití vyhledáváním SNMP, vyberte počet směrování z rozevíracího seznamu **maximální počet směrování** .  
 
-8. Chcete-li nakonfigurovat zařízení SNMP, přepněte na kartu **zařízení SNMP** . Pokud zařízení není uvedené, vyberte ikonu **Nová** ikona ![nový](media/Disc_new_Icon.gif). V dialogovém okně **nové zařízení SNMP** zadejte IP adresu nebo název zařízení SNMP a pak vyberte **OK**.  
+8. Chcete-li nakonfigurovat zařízení SNMP, přepněte na kartu **zařízení SNMP** . Pokud zařízení není uvedené, vyberte ikonu **Nová** ikona ![ nový ](media/Disc_new_Icon.gif) . V dialogovém okně **nové zařízení SNMP** zadejte IP adresu nebo název zařízení SNMP a pak vyberte **OK**.  
 
     > [!NOTE]  
     > Pokud zadáte název zařízení, Configuration Manager musí být schopný přeložit název pro rozhraní NetBIOS na IP adresu.  
@@ -487,12 +487,12 @@ Následující postupy použijte k prvnímu zjištění pouze síťové topologi
       > [!NOTE]  
       > Chcete-li použít tuto možnost, server musí zapůjčovat svou IP adresu ze serveru DHCP a nemůže používat statickou IP adresu.  
 
-    - Pokud chcete zadat dotaz na konkrétní server DHCP, **New** vyberte ikonu ![nová ikona](media/Disc_new_Icon.gif)nový. V dialogovém okně **Nový server DHCP** Určete IP adresu nebo název serveru DHCP a pak vyberte **OK**.  
+    - Pokud chcete zadat dotaz na konkrétní server DHCP, vyberte ikonu **Nová** ikona ![ nový ](media/Disc_new_Icon.gif) . V dialogovém okně **Nový server DHCP** Určete IP adresu nebo název serveru DHCP a pak vyberte **OK**.  
 
       > [!NOTE]  
       > Pokud zadáte název serveru, Configuration Manager musí být schopný přeložit název pro rozhraní NetBIOS na IP adresu.  
 
-10. Pokud chcete nakonfigurovat, kdy se má zjišťování spustit, přepněte na kartu **plán** . Pak vyberte **novou** ikonu Nová ![ikona](media/Disc_new_Icon.gif) a nastavte plán pro spuštění zjišťování sítě. Můžete nakonfigurovat více opakovaných plánů a vícenásobné plány bez opakování.  
+10. Pokud chcete nakonfigurovat, kdy se má zjišťování spustit, přepněte na kartu **plán** . Pak vyberte **novou ikonu Nová** ikona ![ ](media/Disc_new_Icon.gif) a nastavte plán pro spuštění zjišťování sítě. Můžete nakonfigurovat více opakovaných plánů a vícenásobné plány bez opakování.  
 
     > [!NOTE]  
     > Pokud karta **plán** zobrazuje více než jeden plán současně, bude zjišťování sítě spuštěno pro všechny plány, jak jsou nakonfigurovány v době uvedené v plánu. Toto chování platí také pro opakující se plány.  

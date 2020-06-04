@@ -10,12 +10,12 @@ ms.assetid: 08f711ba-83bf-4b5f-9520-a0778c6ae7eb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d3cd21fe4b1d53ecbb0bc60818405cb795a4f289
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1b2fc0dfe37ad51ce1a549545c3eaa716395438d
+ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81710759"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84347104"
 ---
 # <a name="introduction-to-application-management-in-configuration-manager"></a>Seznámení se správou aplikací v Configuration Manager
 
@@ -95,7 +95,7 @@ Když provedete *Revize* aplikace nebo typu nasazení, Configuration Manager vyt
 - Obnovení předchozí verze aplikace
 - Odstraní starou verzi.
 
-Další informace najdete v tématu [aktualizace a vyřazení aplikací](../deploy-use/update-and-retire-applications.md).  
+Další informace najdete v tématu [Revize aplikací](../deploy-use/revise-and-supersede-applications.md#application-revisions).  
 
 ### <a name="detection-method"></a>Metoda detekce
 
@@ -183,7 +183,7 @@ Centrum softwaru je aplikace pro Windows nainstalovaná s klientem Configuration
 - Konfigurace nastavení vzdáleného řízení
 - Nastavení řízení spotřeby
 
-Další informace najdete v těchto článcích:  
+Další informace najdete v následujících článcích:  
 
 - [Plánování a konfigurace správy aplikací](../plan-design/plan-for-and-configure-application-management.md)
 - [Plánování Centra softwaru](../plan-design/plan-for-software-center.md)

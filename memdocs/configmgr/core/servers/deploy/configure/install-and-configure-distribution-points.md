@@ -2,7 +2,7 @@
 title: Správa distribučních bodů
 titleSuffix: Configuration Manager
 description: Pomocí distribučních bodů můžete hostovat obsah, který nasadíte do zařízení a uživatelů.
-ms.date: 12/03/2019
+ms.date: 06/03/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: aebafaf9-b3d5-4a0f-9ee5-685758c037a1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a1cc931bd0e02be66f608db11e0052fde571a427
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d1d93dd446a65fda0b259bb10e0c944780d41059
+ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718851"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84347087"
 ---
 # <a name="install-and-configure-distribution-points-in-configuration-manager"></a>Instalace a konfigurace distribučních bodů v Configuration Manager
 
@@ -307,12 +307,16 @@ Následující nastavení jsou na stránce **distribuční bod** v Průvodci vyt
     - Configuration Manager verze 1806 s kumulativní aktualizací (4462978) nebo novější  
 
         - Windows Server verze 1709 nebo novější
-        - Windows Server 2016 s aktualizacemi KB4132216 a KB4284833
+        - Windows Server 2016 s následujícími aktualizacemi:
+           - Kumulativní aktualizace KB4132216, vydané 21. června 2018 nebo pozdější Kumulativní aktualizace.
+           - Aktualizace servisního zásobníku KB4284833, vydání 18. května 2018 nebo novější aktualizace zásobníku údržby.
 
     - Configuration Manager verze 1810 nebo novější:
 
         - Windows Server verze 1709 nebo novější
-        - Windows Server 2016 s aktualizacemi KB4132216 a KB4284833
+        - Windows Server 2016 s následujícími aktualizacemi:
+           - Kumulativní aktualizace KB4132216, vydané 21. června 2018 nebo pozdější Kumulativní aktualizace.
+           - Aktualizace servisního zásobníku KB4284833, vydání 18. května 2018 nebo novější aktualizace zásobníku údržby.
         - Windows Server 2019  
 
 - **Povolit tento distribuční bod pro připravený obsah**: Toto nastavení umožňuje přidat obsah na server před distribucí softwaru. Protože soubory obsahu jsou již v knihovně obsahu, při distribuci softwaru se nepřenášejí po síti. Další informace najdete v tématu [připravený obsah](../../../plan-design/hierarchy/manage-network-bandwidth.md#BKMK_PrestagingContent).  

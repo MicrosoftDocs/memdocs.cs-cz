@@ -10,12 +10,12 @@ ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 127ed43fded6c66bc4395ae4d69a28ae8c9eddd5
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 21e837d5d97c42f095159a87e015f181c5e53419
+ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83877531"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84347164"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>Informace o nastavení klienta v Configuration Manager
 
@@ -98,7 +98,7 @@ Povolí sdílenou [mezipaměť](../../plan-design/hierarchy/client-peer-cache.md
 Od verze 1906 Určete minimální dobu, po kterou má klient Configuration Manager uchovávat obsah v mezipaměti. Toto nastavení klienta definuje minimální dobu Configuration Manager agenta čekat, než bude moci odebrat obsah z mezipaměti v případě, že je potřeba více místa.
 
 Ve výchozím nastavení je tato hodnota 1 440 minut (24 hodin).
-Maximální hodnota tohoto nastavení je 10 080 minut (1 týden).
+Maximální hodnota tohoto nastavení je 10 080 minut (jeden týden).
 
 Toto nastavení poskytuje větší kontrolu nad mezipamětí klienta na různých typech zařízení. Můžete snížit hodnotu v klientech s malými pevnými disky a nemusíte uchovávat stávající obsah před spuštěním jiného nasazení.
 
@@ -276,7 +276,7 @@ Konfigurace způsobu, jakým uživatelé můžou instalovat software, aktualizac
 
 Pokud počítače vyžadují zadání kódu PIN nástroje BitLocker, tato možnost obejít požadavek na zadání kódu PIN, když se počítač restartuje po instalaci softwaru.  
 
-- **Always**: Configuration Manager dočasně pozastaví nástroj BitLocker po instalaci softwaru, který vyžaduje restart, a inicializoval restartování počítače. Toto nastavení platí jenom pro restartování počítače iniciované Configuration Manager. Toto nastavení neruší požadavek na zadání kódu PIN BitLockeru, když uživatel restartuje počítač. Požadavek na zadání kódu PIN BitLockeru se obnoví po spuštění systému Windows.
+- **Always**: Configuration Manager dočasně pozastaví nástroj BitLocker po instalaci softwaru, který vyžaduje restart, a restartuje počítač. Toto nastavení platí pouze v případě, že Configuration Manager restartuje počítač. Toto nastavení neruší požadavek na zadání kódu PIN BitLockeru, když uživatel restartuje počítač. Požadavek na zadání kódu PIN BitLockeru se obnoví po spuštění systému Windows.
 
 - **Nikdy**: Configuration Manager po instalaci softwaru vyžadujícího restart Nepozastavte nástroj BitLocker. V tomto scénáři nelze instalaci softwaru dokončit, dokud uživatel nezadá kód PIN, aby bylo možné dokončit standardní proces spuštění a načíst systém Windows.
 
@@ -329,29 +329,11 @@ Pokud chcete uživatelům poskytnout více času na instalaci požadované aplik
 
 Nastavte období odkladu na 0 až 120 hodin. Toto nastavení použijte spolu s vlastností nasazení **zpoždění vynucení tohoto nasazení podle uživatelských předvoleb**. Další informace najdete v tématu [nasazení aplikací](../../../apps/deploy-use/deploy-applications.md#delay-enforcement-with-a-grace-period).
 
-
 ## <a name="computer-restart"></a>Restartování počítače
 
-Následující nastavení musí být kratší než v době trvání, než má nejkratší okno údržby, které se pro počítač použije:
+Další informace o těchto nastaveních najdete v tématu [oznámení o restartování zařízení](device-restart-notifications.md).<!-- 7182335 -->
 
-- **Zobrazit dočasné oznámení uživateli, které udává interval před odhlášením uživatele nebo restartováním počítače (minuty)**
-- **Zobrazí dialogové okno, které uživatel nemůže zavřít, který zobrazuje interval odpočítávání před odhlášením uživatele nebo restartování počítače (minuty).**
-
-
-Další informace o časových obdobích údržby najdete v tématu [použití časových období](../manage/collections/use-maintenance-windows.md)údržby.
-
-- **Zadejte dobu odložení pro odpočítávání oznámení restartování počítače (minuty)** (počínaje verzí 1906).<!--3976435-->
-  - Výchozí hodnota je 240 minut.
-  - Hodnota doby trvání přiložení by měla být menší než hodnota dočasného oznámení minus hodnota oznámení, které uživatel nemůže zavřít.
-  - Další informace najdete v tématu [oznámení o restartování zařízení](device-restart-notifications.md).
-
-**Pokud nasazení vyžaduje restart, zobrazí se uživateli dialogové okno namísto informačního oznámení.**<!--3555947-->: Od verze 1902 se konfiguruje toto nastavení na **Ano** . změní se činnost koncového uživatele, aby byla pružnější. Toto nastavení platí pro všechna nasazení aplikací, pořadí úloh a aktualizace softwaru. Další informace najdete v tématu [plánování centra softwaru](../../../apps/plan-design/plan-for-software-center.md#bkmk_impact).
-
-> [!IMPORTANT]
-> V Configuration Manager 1902 se za určitých okolností dialogová okna nebudou nahrazena informačními oznámeními. Pokud chcete tento problém vyřešit, nainstalujte [kumulativní aktualizaci pro Configuration Manager verze 1902](https://support.microsoft.com/help/4500571/update-rollup-for-configuration-manager-current-branch-1902). <!--4404715-->
-
-
-## <a name="delivery-optimization"></a>Optimalizace doručení 
+## <a name="delivery-optimization"></a>Optimalizace doručení
 
 <!-- 1324696 -->
 Skupiny hranic Configuration Manager slouží k definování a regulaci distribuce obsahu napříč podnikovou sítí a vzdálenými pobočkami. [Optimalizace doručení Windows](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) je cloudová technologie peer-to-peer pro sdílení obsahu mezi zařízeními s Windows 10. Nakonfigurujte optimalizaci doručení pro použití skupin hranic při sdílení obsahu mezi partnerskými uzly.
@@ -363,7 +345,7 @@ Skupiny hranic Configuration Manager slouží k definování a regulaci distribu
 
 ### <a name="use-configuration-manager-boundary-groups-for-delivery-optimization-group-id"></a>Pro ID skupiny pro optimalizaci doručení použijte Configuration Manager skupiny hranic.
 
-Vyberte **Ano** , pokud chcete použít identifikátor skupiny hranic jako identifikátor skupiny Optimalizace doručení na klientovi. Když klient komunikuje s cloudovou službou Optimalizace doručení, používá tento identifikátor k vyhledání partnerských uzlů s požadovaným obsahem. Když toto nastavení povolíte, nastaví se režim stažení Optimalizace doručení na skupinu (2) u cílových klientů.
+Vyberte **Ano** , pokud chcete použít identifikátor skupiny hranic jako identifikátor skupiny Optimalizace doručení na klientovi. Když klient komunikuje s cloudovou službou Optimalizace doručení, používá tento identifikátor k vyhledání partnerských uzlů s obsahem. Když toto nastavení povolíte, nastaví se režim stažení Optimalizace doručení na skupinu (2) u cílových klientů.
 
 > [!Note]
 > Microsoft doporučuje, aby klient mohl nakonfigurovat toto nastavení prostřednictvím místních zásad místo zásad skupiny. To umožňuje, aby byl identifikátor skupiny hranic nastaven jako identifikátor skupiny Optimalizace doručení na klientovi. Další informace najdete v tématu [Optimalizace doručení](../../plan-design/hierarchy/fundamental-concepts-for-content-management.md#delivery-optimization).
@@ -411,7 +393,7 @@ Kliknutím na **tlačítko Ano** potlačíte restart počítače po instalaci kl
 
 ### <a name="allowed-period-of-time-users-can-postpone-a-required-restart-to-complete-the-endpoint-protection-installation-hours"></a>Povolené období, po které mohou uživatelé odložit požadovaný restart k dokončení instalace Endpoint Protection (hodiny)
 
-Pokud je po instalaci klienta Endpoint Protection nutné restartovat, určuje toto nastavení počet hodin, po které mohou uživatelé odložit požadovaný restart. Toto nastavení vyžaduje, aby nastavení pro **potlačení všech nutných restartování počítače po instalaci klienta Endpoint Protection** **ne**.  
+Pokud je po instalaci klienta Endpoint Protection nutné restartovat, určuje toto nastavení počet hodin, po které mohou uživatelé odložit požadovaný restart. Toto nastavení vyžaduje, abyste zakázali následující nastavení: **potlačit po instalaci klienta Endpoint Protection nepotřebné restartování počítače**.
 
 ### <a name="disable-alternate-sources-such-as-microsoft-windows-update-microsoft-windows-server-update-services-or-unc-shares-for-the-initial-definition-update-on-client-computers"></a>Zakázat alternativní zdroje (například Microsoft web Windows Update, Microsoft Windows Server Update Services nebo sdílené složky UNC) pro počáteční aktualizaci definice v klientských počítačích
 
@@ -423,7 +405,7 @@ Pokud chcete Configuration Manager instalovat pouze počáteční aktualizaci de
 
 ### <a name="polling-interval-for-mobile-device-legacy-clients"></a>Interval dotazování pro starší verze klientů mobilních zařízení
 
-Vyberte **nastavit interval** , pokud chcete zadat dobu v minutách nebo v hodinách, po kterou se starší mobilní zařízení dotazují na zásadu. Mezi tato zařízení patří platformy, jako systém Windows CE, Mac OS X a UNIX nebo Linux.
+Vyberte **nastavit interval** , pokud chcete zadat dobu v minutách nebo v hodinách, po kterou se starší mobilní zařízení dotazují na zásadu. Mezi tato zařízení patří platformy, jako jsou systém Windows CE, macOS a UNIX nebo Linux.
 
 ### <a name="polling-interval-for-modern-devices-minutes"></a>Interval dotazování pro moderní zařízení (minuty)
 
@@ -529,7 +511,7 @@ Vyberte **Ano** , pokud chcete, aby uživatelé centra softwaru vyloučili svůj
 
 ### <a name="allow-network-wake-up"></a>Povolení probuzení ze sítě
 
-Přidáno v 1810. Když nastavíte možnost **Povolit**, nakonfiguruje nastavení napájení síťového adaptéru, aby síťový adaptér mohl zařízení probudit. Pokud nastavíte možnost **Zakázat**, nastavení napájení v síťovém adaptéru se nakonfiguruje tak, aby nepovolovala síťovému adaptéru probuzení zařízení.
+Když toto nastavení povolíte, klient nakonfiguruje nastavení napájení v počítači, aby síťový adaptér mohl zařízení probudit. Pokud toto nastavení zakážete, síťový adaptér počítače nemůže probudit zařízení.
 
 ### <a name="enable-wake-up-proxy"></a>Povolit proxy probuzení
 
@@ -549,7 +531,7 @@ Pak podle potřeby nakonfigurujte následující další nastavení:
     > [!IMPORTANT]  
     > Toto číslo se musí shodovat s číslem ve **vlastnostech**lokality. Pokud změníte toto číslo na jednom místě, nebude automaticky aktualizováno na druhém místě.  
 
-- **Výjimka firewallu v programu Windows Defender pro proxy probuzení**: klient Configuration Manager automaticky nakonfiguruje číslo portu proxy probuzení na zařízeních, která používají firewall v programu Windows Defender. Vyberte **Konfigurovat** a určete požadované profily brány firewall.  
+- **Výjimka firewallu v programu Windows Defender pro proxy probuzení**: klient Configuration Manager automaticky nakonfiguruje číslo portu proxy probuzení na zařízeních, která používají firewall v programu Windows Defender. Vyberte **Konfigurovat** a zadejte profily brány firewall.  
 
     Pokud klienti používají jinou bránu firewall, nakonfigurujte ji ručně, aby povolovala **číslo portu proxy probuzení (UDP)**.  
 
@@ -586,7 +568,7 @@ Před převodem obsahu ze sdílené schránky v relaci vzdáleného řízení Um
 
 ### <a name="grant-remote-control-permission-to-local-administrators-group"></a>Udělit oprávnění Vzdáleného řízení skupině místních správců
 
-Vyberte, zda mohou místní správci na serveru, který iniciují připojení vzdáleného řízení, vytvořit relace vzdáleného řízení na klientských počítačích.  
+Vyberte, zda mohou místní správci na serveru, který spouští připojení vzdáleného řízení, vytvořit relace vzdáleného řízení v klientských počítačích.  
 
 ### <a name="access-level-allowed"></a>Úroveň přístupu povolena
 
@@ -620,7 +602,7 @@ Tuto možnost nastavte, pokud chcete použít zvuk, který indikuje, že relace 
 
 Konfigurací tohoto nastavení na **Ano** umožníte Configuration Manager spravovat relace nevyžádané vzdálené pomoci.  
 
-V relaci nevyžádaná Vzdálená pomoc nepožádal uživatel na klientském počítači o pomoc při inicializaci relace.  
+V relaci nevyžádaná Vzdálená pomoc nepožádal uživatel na klientském počítači o pomoc při spuštění relace.  
 
 ### <a name="manage-solicited-remote-assistance-settings"></a>Spravovat nastavení vyžádané Vzdálené pomoci
 
@@ -630,7 +612,7 @@ V relaci vyžádané vzdálené pomoci odeslal uživatel v klientském počíta�
 
 ### <a name="level-of-access-for-remote-assistance"></a>Úroveň přístupu pro Vzdálenou pomoc
 
-Vyberte úroveň přístupu, kterou chcete přiřadit k relacím vzdálené pomoci, které jsou iniciovány v konzole Configuration Manager. Vyberte jednu z následujících možností:
+Vyberte úroveň přístupu, kterou chcete přiřadit k relacím vzdálené pomoci, které jsou spuštěny v konzole Configuration Manager. Vyberte jednu z následujících možností:
 
 - **Žádný** (výchozí)
 - **Vzdálené zobrazení**
@@ -671,7 +653,7 @@ Pokud povolíte tuto možnost, aplikace dostupné pro uživatele, které vyžadu
 
 ### <a name="hide-installed-applications-in-software-center"></a><a name="bkmk_HideInstalled"></a>Skrýt nainstalované aplikace v centru softwaru
 
-Pokud povolíte tuto možnost, aplikace, které jsou již nainstalovány, již nebudou zobrazeny na kartě aplikace. Tato možnost je nastavená jako výchozí při instalaci nebo upgradu na Configuration Manager 1802. Nainstalované aplikace jsou stále k dispozici pro kontrolu na kartě stav instalace. <!--1357592-->
+Pokud povolíte tuto možnost, aplikace, které jsou již nainstalovány, již nebudou zobrazeny na kartě aplikace. Tato možnost je nastavená jako výchozí při instalaci nebo upgradu na Configuration Manager. Nainstalované aplikace jsou stále k dispozici pro kontrolu na kartě stav instalace. <!--1357592-->
 
 ### <a name="hide-application-catalog-link-in-software-center"></a><a name="bkmk_HideAppCat"></a>Skrýt odkaz na katalog aplikací v centru softwaru
 
@@ -694,9 +676,9 @@ Karty k dispozici:
 - **Stav instalace**
 - **Dodržování předpisů zařízení**
 - **Možnosti**
-- Kliknutím na tlačítko **Přidat kartu** můžete přidat až 5 vlastních karet.
+- Kliknutím na tlačítko **Přidat kartu** přidejte až pět vlastních karet.
   - Zadejte **název karty** a **adresu URL obsahu** pro vlastní kartu.
-  - Kliknutím na **Odstranit kartu** odeberete vlastní kartu.  
+  - Vyberte **Odstranit kartu** a odeberte tak vlastní kartu.  
 
   >[!Important]  
   > - Některé funkce webu nemusí fungovat při použití jako vlastní karty v centru softwaru. Před nasazením tohoto klienta na klienty Nezapomeňte otestovat výsledky. <!--519659-->
@@ -731,9 +713,9 @@ Pokud například vaše organizace nepoužívá zásady dodržování předpisů
 
   - Centrum softwaru vždy používá vaše výchozí nastavení. Uživatelé můžou tento filtr změnit, ale Centrum softwaru neuchovává své preference.  
 
-- Nastavte **výchozí zobrazení aplikace** jako buď **zobrazení dlaždic** nebo **zobrazení seznamu**. 
+- Nastavte **výchozí zobrazení aplikace** jako buď **zobrazení dlaždic** nebo **zobrazení seznamu**.
 
-  - Pokud uživatel tuto konfiguraci změní, Centrum softwaru bude v budoucnu nadále mít přednost před uživatelem. 
+  - Pokud uživatel tuto konfiguraci změní, Centrum softwaru bude v budoucnu nadále mít přednost před uživatelem.
 
 
 ## <a name="software-deployment"></a>Nasazení softwaru  
@@ -854,7 +836,7 @@ Pomocí tohoto nastavení můžete povolit aktualizace softwaru na Configuration
 
 ### <a name="software-update-scan-schedule"></a>Naplánování prohledání aktualizací softwaru
 
-Vyberte **plán** , který určí, jak často klient zahájí kontrolu vyhodnocení dodržování předpisů. Tato kontrola určuje stav aktualizací softwaru na klientovi (například požadováno nebo nainstalováno). Další informace o vyhodnocení dodržování předpisů najdete v tématu [Software updates compliance assessment](../../../sum/understand/software-updates-introduction.md#BKMK_SUMCompliance).  
+Vyberte **plán** , který určí, jak často bude klient spouštět kontrolu vyhodnocení dodržování předpisů. Tato kontrola určuje stav aktualizací softwaru na klientovi (například požadováno nebo nainstalováno). Další informace o vyhodnocení dodržování předpisů najdete v tématu [Software updates compliance assessment](../../../sum/understand/software-updates-introduction.md#BKMK_SUMCompliance).  
 
 Ve výchozím nastavení tato kontrola používá jednoduchý plán, který se spustí každých 7 dní. Můžete vytvořit vlastní plán. Můžete zadat přesný den a čas spuštění, použít světový koordinovaný čas (UTC) nebo místní čas a nakonfigurovat periodický interval pro určitý den v týdnu.  
 
@@ -868,16 +850,16 @@ Ve výchozím nastavení tato kontrola používá jednoduchý plán, který se s
 
 Pokud chcete nakonfigurovat, jak často klientský Agent aktualizace softwaru znovu vyhodnocuje aktualizace softwaru pro stav instalace na Configuration Manager klientských počítačích, vyberte **plán** . Pokud se už dříve nainstalované aktualizace softwaru na klientech nenašly, ale pořád se vyžadují, klient znovu nainstaluje aktualizace softwaru.
 
-Upravte tento plán na základě zásad společnosti pro dodržování předpisů aktualizací softwaru a zda uživatelé mohou odinstalovat aktualizace softwaru. Každý cyklus opakovaného vyhodnocení nasazení vede k aktivitě sítě a procesoru klientského počítače. Ve výchozím nastavení toto nastavení používá jednoduchý plán k zahájení kontroly opakovaného vyhodnocení nasazení každých 7 dní.  
+Upravte tento plán na základě zásad společnosti pro dodržování předpisů aktualizací softwaru a zda uživatelé mohou odinstalovat aktualizace softwaru. Každý cyklus opakovaného vyhodnocení nasazení vede k aktivitě sítě a procesoru klientského počítače. Ve výchozím nastavení toto nastavení používá jednoduchý plán ke spuštění kontroly opakovaného vyhodnocení nasazení každých 7 dní.  
 
 > [!NOTE]  
 > Pokud zadáte interval méně než jeden den, Configuration Manager automatické výchozí nastavení na jeden den.  
 
 ### <a name="when-any-software-update-deployment-deadline-is-reached-install-all-other-software-update-deployments-with-deadline-coming-within-a-specified-period-of-time"></a>Po dosažení konečného termínu nasazení aktualizace softwaru Nainstalujte všechna ostatní nasazení aktualizace softwaru s konečným termínem v zadaném časovém období.
 
-Tuto možnost nastavte na **Ano** , pokud chcete nainstalovat všechny aktualizace softwaru z požadovaných nasazení se stejnými termíny v zadaném časovém období. Když požadované nasazení aktualizace softwaru dosáhne konečného termínu, klient inicializuje instalaci aktualizací softwaru v nasazení. Toto nastavení určuje, zda se mají instalovat aktualizace softwaru z jiných požadovaných nasazení, jejichž konečný termín spadá do určeného času.  
+Tuto možnost nastavte na **Ano** , pokud chcete nainstalovat všechny aktualizace softwaru z požadovaných nasazení se stejnými termíny v zadaném časovém období. Když požadované nasazení aktualizace softwaru dosáhne konečného termínu, klient spustí instalaci pro aktualizace softwaru v nasazení. Toto nastavení určuje, zda se mají instalovat aktualizace softwaru z jiných požadovaných nasazení, jejichž konečný termín spadá do určeného času.  
 
-Toto nastavení slouží k urychlení instalace požadovaných aktualizací softwaru. Toto nastavení také může zvýšit zabezpečení klienta, snížit oznámení uživateli a snížit restart klienta. Výchozí hodnota tohoto nastavení je **Ne**.  
+Pomocí tohoto nastavení lze zrychlit instalaci požadovaných aktualizací softwaru. Toto nastavení také může zvýšit zabezpečení klienta, snížit oznámení uživateli a snížit restart klienta. Výchozí hodnota tohoto nastavení je **Ne**.  
 
 ### <a name="period-of-time-for-which-all-pending-deployments-with-deadline-in-this-time-will-also-be-installed"></a>Časové období, po které budou také instalována všechna nevyřízená nasazení s konečným termínem v tomto čase
 
@@ -911,7 +893,7 @@ Pokud tuto možnost nastavíte na **Ano**, povolí se konfigurace nastavení ins
 
 ### <a name="enable-installation-of-software-updates-in-all-deployments-maintenance-window-when-software-update-maintenance-window-is-available"></a><a name="bkmk_SUMMaint"></a>Povolit instalaci aktualizací softwaru v časovém intervalu pro správu všech nasazení, když je k dispozici okno Údržba aktualizace softwaru
 
-Počínaje verzí 1810, pokud nastavíte tuto možnost na **Ano** a klient má alespoň jednu hodnotu aktualizace softwaru nastavenou na časové období údržby, budou aktualizace softwaru nainstalovány během časového období údržby všechna nasazení.
+Pokud nastavíte tuto možnost na **Ano**a u klienta je nadefinovaná aspoň jedna aktualizace softwaru pro správu údržby, aktualizace softwaru se budou instalovat během časového období údržby všechna nasazení.
 
 Výchozí hodnota tohoto nastavení je **Ne**. Tato hodnota používá stejné chování jako předtím: Pokud oba typy existují, ignoruje okno. <!--2839307-->
 

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 71eaa409-b955-45d6-8309-26bf3b3b0911
-ms.openlocfilehash: 33e4ecbac965206ec4043f5adf91d2dbfb9602d8
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7e9602ef5ea784dd3e97578d5ff585f2ca662c1e
+ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81714077"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84347198"
 ---
 # <a name="certificates-for-the-cloud-management-gateway"></a>Certifikáty pro bránu pro správu cloudu
 
@@ -65,7 +65,7 @@ CMG vytvoří službu HTTPS, ke které se připojují internetoví klienti. Serv
 
 Tento certifikát vyžaduje globálně jedinečný název, který identifikuje službu v Azure. Než si vyžádáte certifikát, potvrďte, že název domény Azure, který chcete, je jedinečný. Například *GraniteFalls.CloudApp.NET*.
 
-1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
+1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
 1. Vyberte **všechny prostředky**a pak vyberte **Přidat**.
 1. Vyhledejte **cloudovou službu**. Vyberte **Vytvořit**.
 1. Do pole **název DNS** zadejte požadovanou předponu, například *GraniteFalls*. Rozhraní odráží, zda je název domény k dispozici nebo již používá jiná služba.
@@ -78,7 +78,7 @@ Pokud povolíte také CMG pro obsah, zkontrolujte, že název služby CMG je tak
 - Vyhledat **účet úložiště**
 - Otestujte své jméno v poli **název účtu úložiště** .
 
-Předpona názvu DNS, například *GraniteFalls*, by měla být 3 až 24 znaků dlouhá a používejte jenom alfanumerické znaky. Nepoužívejte speciální znaky, například pomlčku (`-`).<!-- SCCMDocs#1080 -->
+Předpona názvu DNS, například *GraniteFalls*, by měla být 3 až 24 znaků dlouhá a používejte jenom alfanumerické znaky. Nepoužívejte speciální znaky, například pomlčku ( `-` ).<!-- SCCMDocs#1080 -->
 
 ### <a name="cmg-trusted-root-certificate-to-clients"></a><a name="bkmk_cmgroot"></a>CMG důvěryhodný kořenový certifikát pro klienty
 
@@ -238,15 +238,16 @@ Nakonfigurujte místní bod správy pomocí následujícího režimu připojení
 
 #### <a name="legend-of-terms"></a>Legenda podmínek
 
-- *Pracovní skupina*: zařízení není připojené k doméně nebo službě Azure AD, ale má [certifikát pro ověřování klientů](#bkmk_clientauth) .  
-- *Připojeno k doméně služby*Active Directory: připojení zařízení k místní doméně služby Active Directory  
-- *Služba Azure AD – připojeno*: taky se označuje jako cloudová doména připojená, připojíte zařízení k tenantovi Azure Active Directory.  
-- *Hybridní*připojení: Připojte zařízení k doméně služby Active Directory i k Tenantovi služby Azure AD.  
-- *Http*: ve vlastnostech bodu správy nastavíte připojení klienta na **http** .  
-- *Https*: ve vlastnostech bodu správy nastavíte připojení klienta k **https** .  
-- *E-http*: na kartě Vlastnosti lokality, **komunikace s klientským počítačem** nastavíte nastavení systému lokality na **https nebo http**a povolíte možnost **používat Configuration Manager certifikáty generované pro systémy lokality http**. Nakonfigurujete bod správy pro protokol HTTP, bod správy protokolu HTTP je připravený pro komunikaci HTTP i HTTPS (scénáře ověřování tokenů).  
+- *Pracovní skupina*: zařízení není připojené k doméně nebo službě Azure AD, ale má [certifikát pro ověřování klientů](#bkmk_clientauth).
+- *Připojeno k doméně služby*Active Directory: připojíte zařízení k místní doméně služby Active Directory.
+- *Služba Azure AD – připojeno*: taky se označuje jako cloudová doména připojená ke klientovi Azure Active Directory. Další informace najdete v tématu [zařízení připojená k Azure AD](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join).
+- *Hybridní – připojeno*: připojíte zařízení k vaší místní službě Active Directory a zaregistrujete ho do svého Azure Active Directory. Další informace najdete v tématu [zařízení připojená k hybridní službě Azure AD](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join-hybrid).
+- *Http*: ve vlastnostech bodu správy nastavíte připojení klienta na **http**.
+- *Https*: ve vlastnostech bodu správy nastavíte připojení klienta k **https**.
+- *E-http*: na kartě Vlastnosti lokality, **komunikace s klientským počítačem** nastavíte nastavení systému lokality na **https nebo http**a povolíte možnost **používat Configuration Manager certifikáty generované pro systémy lokality http**. Nakonfigurujete bod správy pro protokol HTTP, bod správy protokolu HTTP je připravený pro komunikaci HTTP i HTTPS (scénáře ověřování tokenů).
+
     > [!Note]
-    > Počínaje verzí 1906 se tato karta nazývá **zabezpečení komunikace**.<!-- SCCMDocs#1645 -->  
+    > Počínaje verzí 1906 se tato karta nazývá **zabezpečení komunikace**.<!-- SCCMDocs#1645 -->
 
 ## <a name="azure-management-certificate"></a><a name="bkmk_azuremgmt"></a>Certifikát pro správu Azure
 

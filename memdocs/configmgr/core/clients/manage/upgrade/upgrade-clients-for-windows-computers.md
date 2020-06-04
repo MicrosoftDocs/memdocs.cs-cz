@@ -2,7 +2,7 @@
 title: Upgrade klientů ve Windows
 titleSuffix: Configuration Manager
 description: Upgradujte klienty v počítačích se systémem Windows v Configuration Manager.
-ms.date: 08/27/2019
+ms.date: 06/03/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 6143fd47-48ec-4bca-b53b-5b9b9f067bc3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b3849f360b2f22f2f48bbe49159b610399158b29
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 8b0a69b07a3be633434203f93b0724cec4ea88a3
+ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83427767"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84347133"
 ---
 # <a name="how-to-upgrade-clients-for-windows-computers-in-configuration-manager"></a>Postup upgradu klientů pro počítače se systémem Windows v nástroji Configuration Manager
 
@@ -59,9 +59,6 @@ Klient nástroje se může automaticky upgradovat v následujících scénáří
 > Chcete-li identifikovat různé verze klienta Configuration Manager ve vaší hierarchii, použijte **Počet sestav Configuration Manager klientů podle verzí klientů** ve složce sestav **lokalita-informace o klientech**.  
 
 Ve výchozím nastavení vytvoří Configuration Manager balíček s upgradem. Tento balíček automaticky odešle do všech distribučních bodů v hierarchii. Pokud provedete změny klientského balíčku na certifikačních autoritách, Configuration Manager balíček automaticky aktualizuje a znovu ho distribuuje. Tato změna je příkladem, když přidáte jazykovou sadu klienta. Pokud povolíte automatický upgrade klienta, každý klient automaticky nainstaluje nový balíček jazyka klienta.
-
-> [!NOTE]  
-> Configuration Manager automaticky neodešle balíček upgradu klienta, aby Configuration Manager cloudové distribuční body.  
 
 Povolte automatický upgrade klienta napříč vaší hierarchií. Tato konfigurace udržuje klienty v aktuálním stavu s menší námahou.  
 
