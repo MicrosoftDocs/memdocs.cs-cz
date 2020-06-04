@@ -145,6 +145,8 @@
               href: app-configuration-policies-outlook.md
             - name: Konfigurace Google Chromu pro Android
               href: apps-configure-chrome-android.md
+            - name: Konfigurace sítě VPN pro Android Enterprise
+              href: app-configuration-vpn-ae.md
         - name: hromadně zakoupené aplikace a knihy
           items:
             - name: Přehled hromadných nákupů
