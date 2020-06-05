@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 69694fa39375daf436abf59fcd48edda41a9fc62
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: cfd329b7edb695c1e7316323555bfc18a2fd479e
+ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268245"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84428583"
 ---
 # <a name="troubleshoot-desktop-analytics"></a>Řešení potíží s Desktop Analytics
 
@@ -68,7 +68,7 @@ Desktop Analytics přidá do služby Azure AD následující aplikace:
 
 - **MALogAnalyticsReader**: monitoruje pracovní prostor Azure Log Analytics, aby se zajistilo úspěšné zkopírování denního snímku. Další informace najdete v tématu [aplikační role MALogAnalyticsReader](#bkmk_MALogAnalyticsReader).  
 
-- **Správce klienta Office 365**: umožňuje Configuration Manager načítání informací o plánu nasazení a stavu připravenosti zařízení z Desktop Analytics.
+- **Desktop Analytics**: umožňuje Configuration Manager načítání informací o plánu nasazení a stavu připravenosti zařízení z Desktop Analytics.
 
 Pokud po dokončení instalace potřebujete tyto aplikace zřídit, otevřete podokno **připojené služby** . Vyberte **Konfigurovat přístup uživatelů a aplikací**a zřiďte aplikace.  
 

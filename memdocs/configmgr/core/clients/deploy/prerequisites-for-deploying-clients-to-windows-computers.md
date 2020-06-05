@@ -2,7 +2,7 @@
 title: Předpoklady pro nasazení klienta Windows
 titleSuffix: Configuration Manager
 description: Přečtěte si informace o požadavcích nasazení klienta Configuration Manager do počítačů se systémem Windows.
-ms.date: 11/29/2019
+ms.date: 06/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 1a2a9b48-a95b-4643-b00c-b3079584ae2e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1d4cd7ffe38f7191a5361ad2e89817ea80f9f093
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 2aa375d0521e6088904ebe9a1f10af83f4bc261f
+ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81713972"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84428558"
 ---
 # <a name="prerequisites-for-deploying-clients-to-windows-computers-in-configuration-manager"></a>Předpoklady pro nasazení klientů do počítačů s Windows v Configuration Manager
 
@@ -28,24 +28,26 @@ Další informace o minimálních požadavcích na hardware a operační systém
 > [!NOTE]  
 > Čísla verzí softwaru uvedená v tomto článku pouze označují čísla minimálních požadovaných verzí.  
 
-
 ## <a name="prerequisites-for-windows-clients"></a><a name="BKMK_prereqs_computers"></a>Předpoklady pro klienty Windows  
 
 Pomocí následujících informací určete předpoklady pro instalaci klienta Configuration Manager do zařízení se systémem Windows.  
 
-### <a name="dependencies-external-to-configuration-manager"></a>Vnější závislosti nástroje Configuration Manager  
+### <a name="dependencies-external-to-configuration-manager"></a>Vnější závislosti nástroje Configuration Manager
 
-|Součást|Popis|  
-|---|---|  
-|Instalační služba systému Windows verze 3.1.4000.2435|Vyžadována k podpoře použití aktualizačních souborů Instalační služby systému Windows (.msp) pro balíčky a aktualizace softwaru.|  
-|Microsoft Background Intelligent Transfer Service (BITS) verze 2.5|Vyžaduje se k tomu, aby se omezily přenosy dat mezi klientským počítačem a Configuration Manager systémy lokality. Služba BITS není během instalace klienta automaticky stažena. Pokud je v počítačích nainstalována služba BITS, obvykle vyžaduje restart, aby bylo možné instalaci dokončit.<br /><br /> Většina operačních systémů obsahuje bity. Pokud ne, nainstalujte službu BITS před instalací klienta Configuration Manager.|  
-|Microsoft Task Scheduler|Povolte tuto službu na straně klienta, aby se instalace klienta dokončila.|  
+Mnohé z těchto součástí jsou služby nebo funkce, které Windows ve výchozím nastavení povoluje. Tyto komponenty nebudete v Configuration Manager klientech zakazovat.
+
+|Součást|Description|
+|---|---|
+|Instalační služba systému Windows|Vyžaduje se k podpoře použití Instalační služba systému Windows souborů pro aplikace a aktualizace softwaru.|
+|Služba inteligentního přenosu na pozadí (BITS)|Vyžaduje se k tomu, aby se omezily přenosy dat mezi klientským počítačem a Configuration Manager systémy lokality.|
+|Microsoft Task Scheduler|Vyžaduje se pro klientské operace, jako je například pravidelné vyhodnocení stavu klienta Configuration Manager.|
+|Microsoft Remote Differential Compression (RDC)|Algoritmus vyžadovaný k optimalizaci přenosu dat prostřednictvím sítě.|
 |Podpora podepisování kódu SHA-2|Počínaje verzí 1906 vyžadují klienti podporu pro podpisový algoritmus kódu SHA-2. Další informace najdete v tématu [Podpora podepisování kódu SHA-2](#bkmk_sha2).|
 
 #### <a name="sha-2-code-signing-support"></a><a name="bkmk_sha2"></a>Podpora podepisování kódu SHA-2
 
 <!--SCCMDocs-pr#3404-->
-V důsledku slabých míst v algoritmu SHA-1 a pro zajištění souladu s oborovou normou společnost Microsoft nyní pouze podepisuje Configuration Manager binárních souborů pomocí bezpečnějšího algoritmu SHA-2. Starší verze operačních systémů Windows vyžadují aktualizaci pro podporu podepisování kódu SHA-2. Další informace najdete v tématu [požadavky na podporu podepisování kódu 2019 SHA-2 pro Windows a WSUS](https://support.microsoft.com/help/4472027/2019-sha-2-code-signing-support-requirement-for-windows-and-wsus).
+Z důvodu slabých míst v algoritmu SHA-1 a pro zajištění souladu s oborovou normou společnost Microsoft nyní pouze podepisuje Configuration Manager binárních souborů pomocí bezpečnějšího algoritmu SHA-2. Starší verze operačních systémů Windows vyžadují aktualizaci pro podporu podepisování kódu SHA-2. Další informace najdete v tématu [požadavky na podporu podepisování kódu 2019 SHA-2 pro Windows a WSUS](https://support.microsoft.com/help/4472027/2019-sha-2-code-signing-support-requirement-for-windows-and-wsus).
 
 Pokud tyto verze operačních systémů neaktualizujete, nemůžete nainstalovat klienta Configuration Manager verze 1906. Toto chování se týká buď nové instalace nebo aktualizace klienta z předchozí verze.
 
@@ -64,24 +66,21 @@ Pokud potřebujete spravovat klienta ve verzi Windows, která není aktualizovan
 
 Klient Configuration Manager má vnější závislosti. Tyto závislosti závisí na verzi operačního systému a nainstalovaném softwaru na klientském počítači.  
 
-Pokud klient vyžaduje, aby tyto závislosti dokončí instalaci, nainstaluje je automaticky.  
+Pokud klient vyžaduje, aby tyto závislosti dokončí instalaci, nainstaluje je automaticky.
 
-|Součást|Popis|  
-|---|---|  
-|Agent webu Windows Update verze 7.0.6000.363|Vyžadován systémem Windows jako podpora vyhledávání a nasazování aktualizací.|  
-|Microsoft Core XML Services (MSXML) verze 6.20.5002 nebo novější|Služba vyžadovaná jako podpora zpracování dokumentů XML v systému Windows.|  
-|Microsoft Remote Differential Compression (RDC)|Algoritmus vyžadovaný k optimalizaci přenosu dat prostřednictvím sítě.|  
-|Microsoft Visual C++ 2013 Redistributable verze 12.0.21005.1|Balíček vyžadovaný jako podpora činnosti klienta. Při instalaci této aktualizace do klientských počítačů může dokončení instalace vyžadovat restart.|  
-|Distribuovatelné součásti Microsoft Visual C++ 2005 verze 8.0.50727.42|Pro verzi 1606 a starší se vyžaduje, aby podporovala operace Microsoft SQL Server Compact.|  
-|Rozhraní API součásti Windows Imaging 6.0.6001.18000|Vyžaduje se, aby Configuration Manager mohl spravovat soubory Windows Image (. wim).|  
-|Microsoft Policy Platform 1.2.3514.0|Služba vyžadovaná k tomu, aby mohli klienti vyhodnocovat nastavení shody.|  
-|Microsoft .NET Framework, verze 4.5.2|Balíček vyžadovaný jako podpora činnosti klienta. Automaticky nainstalováno v klientském počítači, pokud nemá nainstalovánu verzi Microsoft .NET Framework verze 4,5 nebo novější. Další informace najdete v tématu [Další podrobnosti o rozhraní Microsoft .NET Framework verze 4.5.2](#dotNet).|  
+|Součást|Description|
+|---|---|
+|Microsoft Core XML Services (MSXML) verze 6.20.5002 nebo novější ( `msxml6.msi` )|Služba vyžadovaná jako podpora zpracování dokumentů XML v systému Windows.|
+|Microsoft Visual C++ 2013 Redistributable verze 12.0.40660.0 ( `vcredist_x*.exe` )|Balíček vyžadovaný jako podpora činnosti klienta. Při instalaci této aktualizace do klientských počítačů může dokončení instalace vyžadovat restart.|<!-- SCCMDocs#1526 -->
+|Rozhraní API Windows Imaging 6.0.6001.18000 nebo novější ( `wimgapi.msi` )|Vyžaduje se, aby Configuration Manager mohl spravovat soubory Windows Image (. wim).|
+|Microsoft Policy Platform 1.2.3514.0 nebo novější ( `MicrosoftPolicyPlatformSetup.msi` )|Služba vyžadovaná k tomu, aby mohli klienti vyhodnocovat nastavení shody.|  
+|Microsoft .NET Framework verze 4.5.2 nebo novější ( `NDP452-KB2901907-x86-x64-AllOS-ENU.exe` )|Balíček vyžadovaný jako podpora činnosti klienta. Automaticky nainstalováno v klientském počítači, pokud nemá nainstalovánu verzi Microsoft .NET Framework verze 4,5 nebo novější. Další informace najdete v tématu [Další podrobnosti o rozhraní Microsoft .NET Framework verze 4.5.2](#dotNet).|  
 |Součásti Microsoft SQL Server Compact 4,0 SP1|Vyžadovány k ukládání informací souvisejících s činností klienta.|  
 
 > [!Important]
 > Uživatelské prostředí programu Silverlight v katalogu aplikací není v aktuální větvi verze 1806 podporováno. Počínaje verzí 1906 aktualizované klienty automaticky používají bod správy pro nasazení aplikací, které jsou k dispozici pro uživatele. Nemůžete také instalovat nové role katalogu aplikací. Podpora končí pro role katalogu aplikací s verzí 1910.  
 >
-> Další informace najdete v těchto článcích:
+> Další informace najdete v následujících článcích:
 >
 > - [Konfigurace centra softwaru](../../../apps/plan-design/plan-for-software-center.md#bkmk_userex)
 > - [Odebrané a zastaralé funkce](../../plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md)  
@@ -107,7 +106,7 @@ Po nainstalování .NET Framework 4.5.2 může vyžadovat další aktualizace. T
 
 Další informace najdete v tématu [Určení rolí systému lokality pro klienty](plan/determine-the-site-system-roles-for-clients.md)nástroje.  
 
-|Součást|Popis|  
+|Součást|Description|  
 |---|---|  
 |Bod správy|Chcete-li nasadit klienta Configuration Manager, nebudete potřebovat bod správy. Klienti vyžadují bod správy pro přenos informací s lokalitou. Bez bodu správy nemůžete spravovat klientské počítače.|  
 |Distribuční bod|Distribuční bod je volitelná, ale doporučená role systému lokality pro nasazení a správu klientů. Všechny distribuční body hostují zdrojové soubory klienta. Klienti hledají nejbližší distribuční bod, ze kterého se mají stáhnout zdrojové soubory během nasazování nebo aktualizace klienta. Pokud lokalita nemá distribuční bod, počítače stáhnou zdrojové soubory klienta ze svého bodu správy.|  
@@ -120,7 +119,7 @@ Podle konkrétní metody instalace klienta může být vyžadováno splnění t�
 
 #### <a name="client-push-installation"></a>Klientská nabízená instalace  
 
-- Lokalita používá účty klientské nabízené instalace pro připojení k počítačům pro instalaci klienta. Na kartě **účty** ve vlastnostech klientské nabízené instalace zadejte tyto účty. Účet musí být v cílovém počítači členem skupiny místních správců.  
+- Lokalita používá účty klientské nabízené instalace pro připojení k počítačům pro instalaci klienta. Na kartě **účty** ve vlastnostech klientské nabízené instalace zadejte tyto účty. Účet musí být v cílovém počítači členem místní skupiny Administrators.  
 
     Pokud nezadáte účet klientské nabízené instalace, server lokality použije svůj účet počítače.  
 

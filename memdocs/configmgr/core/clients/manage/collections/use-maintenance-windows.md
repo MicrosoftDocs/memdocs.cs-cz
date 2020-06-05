@@ -2,7 +2,7 @@
 title: Použití časových období údržby
 titleSuffix: Configuration Manager
 description: Pomocí oken kolekce a údržby můžete efektivně spravovat klienty v Configuration Manager.
-ms.date: 07/30/2018
+ms.date: 06/03/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,67 +10,93 @@ ms.assetid: 4564ebcb-41a8-4eb0-afdb-2e1f0795cfa2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6c2128c9e26137c268577e68e5ee12e3a71f8513
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 0b81599c6c5e4dda418b69c6e3c6d3b8cd144253
+ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81714441"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84428541"
 ---
 # <a name="how-to-use-maintenance-windows-in-configuration-manager"></a>Použití časových období údržby v systému Configuration Manager
 
 *Platí pro: Configuration Manager (Current Branch)*
 
-Časové intervaly pro správu a údržbu umožňují definovat čas, kdy se Configuration Manager operace můžou provádět v kolekci zařízení. Časové intervaly pro správu a údržbu vám pomůžou zajistit, aby změny konfigurace klientů probíhaly v obdobích, která neovlivňují produktivitu. Od verze Configuration Manager 1806 uvidí vaši uživatelé, když se jeho další časové období údržby nachází na kartě **stav instalace** v **centru softwaru**. <!--1358131-->
+Časová období údržby použijte k definování, kdy Configuration Manager můžou spouštět úlohy, které mají vliv na zařízení. Časová období údržby vám pomůžou zajistit, aby změny konfigurace klientů probíhaly v časech, které neovlivňují produktivitu. Pomocí centra softwaru můžou uživatelé na kartě **stav instalace** zobrazit další okno údržby zařízení. <!--1358131-->
 
- Následující operace podporují časová období údržby:  
+Následující úlohy podporují časové intervaly pro správu a údržbu:
 
-- Nasazení softwaru  
+- Nasazení aplikací a balíčků
 
-- Nasazení aktualizací softwaru  
+- Nasazení aktualizací softwaru
 
-- Nasazení a vyhodnocení nastavení dodržování předpisů  
+- Nasazení a vyhodnocení nastavení dodržování předpisů
 
-- Nasazení operačního systému  
+- Nasazení operačního systému a vlastního pořadí úkolů
 
-- Nasazení pořadí úloh  
+Nakonfigurujte časové intervaly pro správu a údržbu pomocí data účinnosti, počátečního a koncového času a způsobu opakování. Maximální doba trvání okna musí být kratší než 24 hodin. Konzola nepovoluje jedno časové období údržby delší než 24 hodin. Například pokud chcete, aby byla údržba pokaždé sobota a neděle, pak pro každý den vytvoříme časová období údržby 2 24 hodin.<!-- MEMDocs#310 -->
 
-  Nakonfigurujte časové intervaly pro správu a údržbu pomocí počátečního data, času zahájení a dokončení a způsobu opakování. Maximální doba trvání okna musí být kratší než 24 hodin. Ve výchozím nastavení se restart počítače způsobený nasazením nepovoluje mimo časové období údržby, ale můžete přepsat výchozí. Časová období údržby mají vliv jenom na čas, kdy se program nasazení spustí; aplikace nakonfigurované ke stažení a spuštění místně můžou stahovat obsah mimo okno.  
+Ve výchozím nastavení se restart počítače způsobený nasazením nepovoluje mimo časové období údržby, ale můžete přepsat výchozí. Časová období údržby mají vliv jenom na čas, kdy se nasazení spouští. Nasazení, která konfigurujete pro stahování a spouštění místně, můžou stahovat obsah mimo okno.
 
-  Když je klientský počítač členem kolekce zařízení, která má okno údržby, spustí se program nasazení pouze v případě, že maximální povolená doba běhu nepřekročí dobu nakonfigurovanou pro okno. Pokud se spuštění programu nepovede, vygeneruje se výstraha a nasazení se znova spustí v dalším plánovaném časovém období údržby, ve kterém bude dost času.  
+Když je klient členem kolekce zařízení, která má okno údržby, nasazení se spustí pouze v případě, že maximální povolená doba běhu nepřesáhne dobu trvání okna. Pokud se nasazení nepovede spustit, klient vygeneruje výstrahu. Pak znovu spustí nasazení během příštího plánovaného časového období údržby, které má dostupný čas.
 
-## <a name="using-multiple-maintenance-windows"></a>Použití více časových období údržby  
- Když je klientský počítač členem více kolekcí zařízení s časovými intervaly pro správu a údržbu, platí tato pravidla:  
+## <a name="multiple-maintenance-windows"></a>Více oken údržby
 
-- Pokud se časové intervaly pro správu a údržbu nepřekrývají, jsou považovány za dva nezávislé časové intervaly pro správu.  
+Když je klientský počítač členem více kolekcí zařízení s časovými intervaly pro správu a údržbu, platí tato pravidla:  
 
-- Pokud se časové intervaly pro správu a údržbu překrývají, jsou považovány za jedno okno údržby, včetně časového období zahrnutého v oknech údržby. Pokud například dvě okna, každá hodina v době trvání překrývá o 30 minut, bude efektivní doba trvání časového období údržby 90 minut.  
+- Pokud se okna údržby nepřekrývají, klient je považuje za dva nezávislé časové intervaly pro správu a údržbu.
 
-  Když uživatel zahájí instalaci aplikace z centra softwaru, aplikace se nainstaluje hned, bez ohledu na časové intervaly pro správu a údržbu.  
+- Pokud se časové intervaly pro správu a údržbu překrývají, klient je považuje za jedno okno pro celou dobu obou oken. V kolekci můžete například vytvořit dvě časová období údržby. První je platný od 6:00 do 7:00 a druhá je platná z 6:30 až 7:30. Vzhledem k tomu, že se překrývají po dobu 30 minut, je efektivní doba trvání kombinovaného časového období údržby 90 minut od 6:00 do 7:30.
 
-  Pokud nasazení aplikace s účelem **Požadované** dosáhne konečného termínu mimo pracovní dobu nastavenou uživatelem v Centru softwaru, aplikace se nainstaluje. 
+Když uživatel nainstaluje aplikaci z centra softwaru, klient ji okamžitě spustí. Určuje prioritu záměru uživatele v rámci správce.
 
-### <a name="how-to-configure-maintenance-windows"></a>Konfigurace časových období údržby  
+Pokud nasazení aplikace s účelem **požadované** dosáhne konečného termínu instalace v době mimo pracovní dobu, kterou uživatel nakonfiguruje v centru softwaru, klient nainstaluje aplikaci. Přinese prioritu záměr správce přes uživatele.
 
-1.  V konzole Configuration Manager klikněte na **prostředky a kompatibilita**>  **kolekce zařízení**.  
+Ve výchozím nastavení s více časovými intervaly pro správu a údržbu klient nainstaluje jenom aktualizace softwaru v oknech typu **aktualizace softwaru** . Ignoruje všechna okna údržby **nasazení** , pokud se nejedná o jediný typ. Toto chování můžete nakonfigurovat pomocí následujícího nastavení klienta ve skupině **aktualizace softwaru** : **Povolit instalaci aktualizací softwaru v okně údržby všechna nasazení, když je k dispozici okno Údržba aktualizace softwaru**. Další informace najdete v tématu [informace o nastavení klienta](../../deploy/about-client-settings.md#bkmk_SUMMaint).<!-- SCCMDocs#1317 -->
 
-3.  V seznamu **kolekce zařízení** vyberte kolekci. Pro kolekci **všechny systémy** nelze vytvořit časová období údržby.  
+> [!NOTE]
+> Toto nastavení platí i pro časové intervaly pro správu a údržbu, které nakonfigurujete pro **pořadí úkolů**.<!-- SCCMDocs-pr #4596 -->
+>
+> Pokud má klient k dispozici pouze okno **všechna nasazení** , bude nadále instalovat aktualizace softwaru nebo sekvence úloh v tomto okně.
 
-4.  Na kartě **Domů** ve skupině **vlastnosti** klikněte na možnost **vlastnosti**.  
+## <a name="configure-maintenance-windows"></a>Konfigurace oken údržby
 
-5.  Na kartě časové intervaly pro **správu a údržbu** dialogového okna ** &lt;vlastnost\> název kolekce** klikněte na ikonu **Nový** .  
+1. V konzole Configuration Manager přejdete do pracovního prostoru **prostředky a kompatibilita** .
 
-6.  Dokončete ** &lt;dialog\> nový plán** .  
+1. Vyberte uzel **kolekce zařízení** a pak vyberte kolekci.
 
-7.  Vytvořte výběr z rozevíracího seznamu **použít tento plán** .  
+    > [!NOTE]
+    > Pro kolekci **všechny systémy** nelze vytvořit časová období údržby.
 
-8.  Zvolte **OK** a pak zavřete dialogové okno ** &lt;vlastnosti\> názvu kolekce** .  
- 
-## <a name="using-powershell"></a><a name="bkmk_powershell"></a>Použití PowerShellu
+1. Na kartě **Domů** na pásu karet ve skupině **vlastnosti** klikněte na možnost **vlastnosti**.
 
-PowerShell se dá použít ke konfiguraci časových období údržby.  Další informace naleznete v tématu:
+1. Přepněte na kartu časové intervaly pro **správu a údržbu** a vyberte ikonu **Nová** .
 
-* [Set-CMMaintenanceWindow](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmmaintenancewindow)
-* [Get-CMMaintenanceWindow](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmmaintenancewindow)
-* [New-CMMaintenanceWindow](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmmaintenancewindow)
-* [Remove-CMMaintenanceWindow](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmmaintenancewindow)
+    1. Zadejte **název** pro jedinečné identifikaci tohoto časového období údržby pro kolekci.
+
+    1. Nakonfigurujte nastavení **času** :
+
+        - **Datum účinnosti**: datum, kdy se spouští časová období údržby. Výchozí hodnota je aktuální datum.
+
+        - **Začátek** a **konec**: začátek a konec časového intervalu pro správu a údržbu. Vypočítá **dobu trvání** okna. Minimální doba trvání je pět minut a maximální hodnota je 24 hodin. Výchozí doba trvání je tři hodiny, od 01:00 do 04:00.
+
+        - **Koordinovaný světový čas (UTC)**: tuto možnost povolte, aby klient mohl interpretovat čas zahájení a ukončení v časovém pásmu UTC. V případě regionálních nebo globálně distribuovaných zařízení ve stejné kolekci Tato možnost nastaví časové období údržby, které se má provádět současně na všech zařízeních v kolekci. Tuto možnost zakažte, aby klient používal místní časové pásmo zařízení. Tato možnost je ve výchozím nastavení zakázána.
+
+    1. Nakonfigurujte způsob opakování. Výchozí hodnota je jednou týdně v aktuálním dni v týdnu.
+
+    1. **Použít tento plán na**: ve výchozím nastavení se okno vztahuje na **všechna nasazení**. Můžete vybrat buď **aktualizace softwaru** , nebo **pořadí úkolů** , abyste mohli dále řídit, jaká nasazení budou během tohoto okna spuštěna.
+
+        > [!TIP]
+        > Pokud nakonfigurujete více oken údržby různých typů ve stejné kolekci, ujistěte se, že rozumíte chování klienta. Další informace najdete v tématu [více oken údržby](#multiple-maintenance-windows).
+
+1. Kliknutím na **tlačítko OK** uložte a zavřete okno.
+
+Na kartě časové intervaly pro **správu a údržbu** vlastností kolekce se zobrazí všechna nakonfigurovaná okna.
+
+## <a name="use-powershell"></a><a name="bkmk_powershell"></a>Použití PowerShellu
+
+PowerShell se dá použít ke konfiguraci časových období údržby. Další informace najdete v následujících článcích:
+
+- [Get-CMMaintenanceWindow](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmmaintenancewindow?view=sccm-ps)
+- [New-CMMaintenanceWindow](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmmaintenancewindow?view=sccm-ps)
+- [Remove-CMMaintenanceWindow](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmmaintenancewindow?view=sccm-ps)
+- [Set-CMMaintenanceWindow](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmmaintenancewindow?view=sccm-ps)

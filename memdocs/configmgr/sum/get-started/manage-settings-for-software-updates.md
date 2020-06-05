@@ -2,7 +2,7 @@
 title: Správa nastavení pro aktualizace softwaru
 titleSuffix: Configuration Manager
 description: Přečtěte si o nastaveních klienta, která jsou vhodná pro aktualizace softwaru ve vaší lokalitě po instalaci bodu aktualizace softwaru.
-ms.date: 03/30/2020
+ms.date: 06/04/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -10,12 +10,12 @@ ms.assetid: 0d484c1a-e903-4bff-9e9b-e452c62e38a8
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 0a2a45ff866ea02aacc83c42109c8cba4020ed4e
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 2b851c03424af0ba0f826716b401705879338855
+ms.sourcegitcommit: 7a5196d4d9736c5cd52a23155c479523e52a097d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906797"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84436665"
 ---
 #  <a name="manage-settings-for-software-updates"></a><a name="BKMK_ManageSUSettings"></a>Správa nastavení pro aktualizace softwaru  
 
@@ -113,13 +113,13 @@ Na kartě **Informace o nahrazení** jsou zobrazeny následující informace o n
 Ve vlastnostech můžete nakonfigurovat nastavení aktualizace softwaru pro jednu nebo více aktualizací softwaru. Většinu nastavení aktualizací softwaru můžete nakonfigurovat pouze v lokalitě centrální správy nebo samostatné primární lokalitě. Následující části vám pomohou nakonfigurovat nastavení pro aktualizace softwaru.  
 
 ####  <a name="set-maximum-run-time"></a><a name="BKMK_SetMaxRunTime"></a> Nastavení maximální doby běhu  
-Na kartě **Maximální doba běhu** můžete nastavit maximální dobu, která je vymezena pro dokončení aktualizace softwaru na klientských počítačích. Pokud bude aktualizace trvat déle, než je hodnota maximální doby běhu, Configuration Manager vytvoří stavovou zprávu a zastaví monitorování nasazení aktualizací softwaru. Toto nastavení lze upravit pouze v lokalitě centrální správy nebo samostatné primární lokalitě.  
+Na kartě **Maximální doba běhu** můžete nastavit maximální dobu, která je vymezena pro dokončení aktualizace softwaru na klientských počítačích. Pokud bude aktualizace trvat déle, než je hodnota maximální doby běhu, Configuration Manager vytvoří stavovou zprávu a zastaví instalaci aktualizací softwaru. Toto nastavení lze upravit pouze v lokalitě centrální správy nebo samostatné primární lokalitě.  
 
 Configuration Manager používá toto nastavení také k určení, jestli se má zahájit instalace aktualizace softwaru v nakonfigurovaném časovém období údržby. Pokud je hodnota maximální doby běhu větší než dostupný zbývající čas v časovém období údržby, odloží se instalace aktualizací softwaru až do zahájení dalšího časového období údržby. Když mají být na klientský počítač s nakonfigurovaným časovým obdobím údržby nainstalováno více aktualizací softwaru (časový rámec), nejprve se nainstaluje aktualizace softwaru s nejnižší maximální dobou běhu, následně se nainstaluje aktualizace softwaru s další maximální dobou běhu v pořadí a tak dále. Než klient nainstaluje všechny aktualizace softwaru, ověří, zda dostupné časové období údržby poskytne dostatek času k instalaci aktualizace softwaru. Poté, co je zahájena instalace aktualizace softwaru, bude se v instalaci pokračovat dokonce i v případě, že instalace překročí konec časového období údržby. Další informace o časových obdobích údržby najdete v [časových intervalech](../../core/clients/manage/collections/use-maintenance-windows.md)pro správu a údržbu.  
 
 Na kartě **Maximální doba běhu** můžete zobrazit a nakonfigurovat následující nastavení:  
 
-- **Maximální doba spuštění**: Určuje maximální počet minut vyhrazených pro dokončení instalace aktualizace softwaru před tím, než instalace přestane být monitorována nástrojem Configuration Manager. Toto nastavení se rovněž používá k určení faktu, zda zbývá dostatek času k instalaci aktualizace, než skončí časové období údržby. Výchozí nastavení je 60 minut pro aktualizace Service Pack. U ostatních typů aktualizací softwaru je výchozí hodnota 10 minut, pokud jste provedli novou instalaci Configuration Manager verze 1511 nebo vyšší a 5 minut, když upgradujete z předchozí verze. Hodnoty mohou být v rozsahu 5 až 9 999 minut.  
+- **Maximální doba spuštění**: Určuje maximální počet minut vyhrazených pro dokončení instalace aktualizace softwaru před zastavením instalace nástrojem Configuration Manager. Toto nastavení se rovněž používá k určení faktu, zda zbývá dostatek času k instalaci aktualizace, než skončí časové období údržby. Výchozí nastavení je 60 minut pro aktualizace Service Pack. U ostatních typů aktualizací softwaru je výchozí hodnota 10 minut, pokud jste provedli novou instalaci Configuration Manager verze 1511 nebo vyšší a 5 minut, když upgradujete z předchozí verze. Hodnoty mohou být v rozsahu 5 až 9 999 minut.  
 
 > [!IMPORTANT]  
 >  Nezapomeňte nastavit hodnotu maximální doby běhu menší než nakonfigurované časové období údržby nebo prodloužit časový interval pro správu a údržbu na hodnotu vyšší, než je maximální doba běhu. Jinak nebude instalace aktualizace softwaru nikdy zahájena.  

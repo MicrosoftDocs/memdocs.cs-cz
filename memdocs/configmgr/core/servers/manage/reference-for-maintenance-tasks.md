@@ -2,7 +2,7 @@
 title: Referenční informace k úlohám údržby
 titleSuffix: Configuration Manager
 description: Podrobnosti o jednotlivých úlohách údržby Configuration Manager lokality
-ms.date: 03/30/2020
+ms.date: 06/04/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 68dc6acd-5848-47a4-b4c1-ffa40e47890b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 9964834bf3a6bfa8e5c0a0bb70039554134490ec
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: e989de5acab778374c233862d0ab4d7077899d28
+ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81723870"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84428588"
 ---
 # <a name="reference-for-maintenance-tasks-in-configuration-manager"></a>Referenční informace pro úlohy údržby v Configuration Manager
 
@@ -35,7 +35,7 @@ Pomocí této úlohy můžete vytvořit zálohu důležitých informací k obnov
 |---------|---------|
 |**Lokalita centrální správy**|Povoleno|
 |**Primární lokalita**|Není povoleno|
-|Sekundární lokalita|Není k dispozici.|
+|Sekundární lokalita|Není k dispozici|
 
 ### <a name="check-application-title-with-inventory-information"></a>Podívejte se na název aplikace s informacemi o inventáři.
 
@@ -44,8 +44,8 @@ Pomocí této úlohy můžete zachovat konzistenci softwarových titulů mezi in
 |||
 |---------|---------|
 |**Lokalita centrální správy**|Povoleno|
-|Primární lokalita|Není k dispozici.|
-|Sekundární lokalita|Není k dispozici.|
+|Primární lokalita|Není k dispozici|
+|Sekundární lokalita|Není k dispozici|
 
 ### <a name="clear-undiscovered-clients"></a>Vymazat nezjištěné klienty
 
@@ -56,9 +56,9 @@ Pomocí této úlohy můžete odebrat nainstalovaný příznak pro klienty, kte�
 
 |||
 |---------|---------|
-|Lokalita centrální správy|Není k dispozici.|
+|Lokalita centrální správy|Není k dispozici|
 |**Primární lokalita**|Není povoleno|
-|Sekundární lokalita|Není k dispozici.|
+|Sekundární lokalita|Není k dispozici|
 
 ### <a name="delete-aged-application-request-data"></a>Odstranit stará data aplikačních požadavků
 
@@ -66,9 +66,9 @@ Pomocí této úlohy můžete z databáze odstranit zastaralá aplikační poža
 
 |||
 |---------|---------|
-|Lokalita centrální správy|Není k dispozici.|
+|Lokalita centrální správy|Není k dispozici|
 |**Primární lokalita**|Povoleno|
-|Sekundární lokalita|Není k dispozici.|
+|Sekundární lokalita|Není k dispozici|
 
 ### <a name="delete-aged-application-revisions"></a>Odstranit staré revize aplikací
 
@@ -78,7 +78,7 @@ Pomocí této úlohy můžete odstranit revize aplikací, na které se již neod
 |---------|---------|
 |**Lokalita centrální správy**|Povoleno|
 |**Primární lokalita**|Povoleno|
-|Sekundární lokalita|Není k dispozici.|
+|Sekundární lokalita|Není k dispozici|
 
 ### <a name="delete-aged-client-download-history"></a>Odstranit zastaralou historii stahování klientů
 
@@ -86,9 +86,9 @@ Pomocí této úlohy můžete odstranit historická data o zdroji stahování po
 
 |||
 |---------|---------|
-|Lokalita centrální správy|Není k dispozici.|
+|Lokalita centrální správy|Není k dispozici|
 |**Primární lokalita**|Povoleno|
-|Sekundární lokalita|Není k dispozici.|
+|Sekundární lokalita|Není k dispozici|
 
 ### <a name="delete-aged-client-operations"></a>Vymazat staré operace klientů
 
@@ -96,12 +96,13 @@ Pomocí této úlohy můžete z databáze lokality odstranit všechna zastaralá
 
 - Stará nebo prošlá oznámení klienta, například požadavky na stažení pro počítač nebo zásady uživatele
 - Endpoint Protection, jako jsou žádosti správce pro klienty, aby mohli spouštět kontrolu nebo stahovat aktualizované definice
+- Spustit výsledky stavu skriptů
 
 |||
 |---------|---------|
 |**Lokalita centrální správy**|Povoleno|
 |**Primární lokalita**|Povoleno|
-|Sekundární lokalita|Není k dispozici.|
+|Sekundární lokalita|Není k dispozici|
 
 ### <a name="delete-aged-client-presence-history"></a>Odstranit zastaralou historii přítomnosti klientů
 <!-- not listed in dogfood for either primary or CAS, was it renamed? -->
@@ -111,7 +112,7 @@ Pomocí této úlohy můžete odstranit informace o historii týkající se onli
 |---------|---------|
 |**Lokalita centrální správy**|Povoleno|
 |**Primární lokalita**|Povoleno|
-|Sekundární lokalita|Není k dispozici.|
+|Sekundární lokalita|Není k dispozici|
 
 ### <a name="delete-aged-cloud-management-gateway-traffic-data"></a>Odstranit stará data o Brána pro správu cloudu provozu
 
@@ -127,7 +128,7 @@ Pomocí této úlohy můžete z databáze lokality odstranit všechna zastaralá
 |---------|---------|
 |**Lokalita centrální správy**|Povoleno|
 |**Primární lokalita**|Povoleno|
-|Sekundární lokalita|Není k dispozici.|
+|Sekundární lokalita|Není k dispozici|
 
 ### <a name="delete-aged-cmpivot-results"></a>Odstranit zastaralá CMPivot výsledky
 
@@ -135,9 +136,9 @@ Pomocí této úlohy můžete odstranit z databáze lokality staré informace od
 
 |||
 |---------|---------|
-|Lokalita centrální správy|Není k dispozici.|
+|Lokalita centrální správy|Není k dispozici|
 |**Primární lokalita**|Povoleno|
-|Sekundární lokalita|Není k dispozici.|
+|Sekundární lokalita|Není k dispozici|
 
 ### <a name="delete-aged-collected-files"></a>Odstranit staré shromážděné soubory
 
@@ -145,9 +146,9 @@ Pomocí této úlohy můžete z databáze odstranit zastaralé informace o shrom
 
 |||
 |---------|---------|
-|Lokalita centrální správy|Není k dispozici.|
+|Lokalita centrální správy|Není k dispozici|
 |**Primární lokalita**|Povoleno|
-|Sekundární lokalita|Není k dispozici.|
+|Sekundární lokalita|Není k dispozici|
 
 ### <a name="delete-aged-computer-association-data"></a>Odstranit zastaralá data týkající se přidružení počítačů
 
@@ -155,9 +156,9 @@ Pomocí této úlohy můžete z databáze odstranit zastaralá data o přidruže
 
 |||
 |---------|---------|
-|Lokalita centrální správy|Není k dispozici.|
+|Lokalita centrální správy|Není k dispozici|
 |**Primární lokalita**|Povoleno|
-|Sekundární lokalita|Není k dispozici.|
+|Sekundární lokalita|Není k dispozici|
 
 ### <a name="delete-aged-console-connection-data"></a>Odstranit zastaralá data o připojení konzoly
 
@@ -167,7 +168,7 @@ Tento úkol vymaže z databáze lokality data o připojeních konzoly k lokalit�
 |---------|---------|
 |**Lokalita centrální správy**|Povoleno|
 |**Primární lokalita**|Povoleno|
-|Sekundární lokalita|Není k dispozici.|
+|Sekundární lokalita|Není k dispozici|
 
 ### <a name="delete-aged-delete-detection-data"></a>Odstranit stará data o detekci odstranění
 
@@ -177,7 +178,7 @@ Pomocí této úlohy můžete odstranit zastaralá data z databáze, která byla
 |---------|---------|
 |**Lokalita centrální správy**|Povoleno|
 |**Primární lokalita**|Povoleno|
-|Sekundární lokalita|Není k dispozici.|
+|Sekundární lokalita|Není k dispozici|
 
 ### <a name="delete-aged-device-wipe-record"></a>Odstranit zastaralá záznam o vymazání zařízení
 
@@ -185,9 +186,9 @@ Pomocí této úlohy můžete z databáze odstranit zastaralá data o akcích vy
 
 |||
 |---------|---------|
-|Lokalita centrální správy|Není k dispozici.|
+|Lokalita centrální správy|Není k dispozici|
 |**Primární lokalita**|Povoleno|
-|Sekundární lokalita|Není k dispozici.|
+|Sekundární lokalita|Není k dispozici|
 
 ### <a name="delete-aged-discovery-data"></a>Vymazat stará data zjišťování
 
@@ -201,9 +202,9 @@ Tato úloha také odebere zastaralá zařízení označená jako vyřazená z pr
 
 |||
 |---------|---------|
-|Lokalita centrální správy|Není k dispozici.|
+|Lokalita centrální správy|Není k dispozici|
 |**Primární lokalita**|Povoleno|
-|Sekundární lokalita|Není k dispozici.|
+|Sekundární lokalita|Není k dispozici|
 
 ### <a name="delete-aged-distribution-point-usage-stats"></a>Odstranit zastaralá statistiku využití distribučních bodů
 
@@ -213,7 +214,7 @@ Pomocí této úlohy můžete z databáze odstranit zastaralá data pro distribu
 |---------|---------|
 |**Lokalita centrální správy**|Povoleno|
 |**Primární lokalita**|Povoleno|
-|Sekundární lokalita|Není k dispozici.|
+|Sekundární lokalita|Není k dispozici|
 
 ### <a name="delete-aged-enrolled-devices"></a>Odstranit zastaralá zaregistrovaná zařízení
 
@@ -223,9 +224,9 @@ Tato úloha se týká zařízení, která jsou zaregistrovaná ve službě Confi
 
 |||
 |---------|---------|
-|Lokalita centrální správy|Není k dispozici.|
+|Lokalita centrální správy|Není k dispozici|
 |**Primární lokalita**|Není povoleno|
-|Sekundární lokalita|Není k dispozici.|
+|Sekundární lokalita|Není k dispozici|
 
 ### <a name="delete-aged-ep-health-status-history-data"></a>Odstranit stará data o historii stavu EP
 
@@ -233,9 +234,9 @@ Pomocí této úlohy můžete z databáze odstranit zastaralé informace o stavu
 
 |||
 |---------|---------|
-|Lokalita centrální správy|Není k dispozici.|
+|Lokalita centrální správy|Není k dispozici|
 |**Primární lokalita**|Povoleno|
-|Sekundární lokalita|Není k dispozici.|
+|Sekundární lokalita|Není k dispozici|
 
 ### <a name="delete-aged-exchange-partnership"></a>Odstranit zastaralá partnerství Exchange
 
@@ -246,9 +247,9 @@ Pomocí této úlohy můžete odstranit zastaralá data o mobilních zařízení
 
 |||
 |---------|---------|
-|Lokalita centrální správy|Není k dispozici.|
+|Lokalita centrální správy|Není k dispozici|
 |**Primární lokalita**|Povoleno|
-|Sekundární lokalita|Není k dispozici.|
+|Sekundární lokalita|Není k dispozici|
 
 ### <a name="delete-aged-inventory-history"></a>Odstranit starou historii inventáře
 
@@ -256,9 +257,9 @@ Pomocí této úlohy můžete odstranit data inventáře databáze, která jsou 
 
 |||
 |---------|---------|
-|Lokalita centrální správy|Není k dispozici.|
+|Lokalita centrální správy|Není k dispozici|
 |**Primární lokalita**|Povoleno|
-|Sekundární lokalita|Není k dispozici.|
+|Sekundární lokalita|Není k dispozici|
 
 ### <a name="delete-aged-log-data"></a>Odstranit stará data protokolu
 
@@ -279,9 +280,9 @@ Pomocí této úlohy můžete z databáze odstranit zastaralá data pro měřen�
 
 |||
 |---------|---------|
-|Lokalita centrální správy|Není k dispozici.|
+|Lokalita centrální správy|Není k dispozici|
 |**Primární lokalita**|Povoleno|
-|Sekundární lokalita|Není k dispozici.|
+|Sekundární lokalita|Není k dispozici|
 
 ### <a name="delete-aged-metering-summary-data"></a>Odstranit zastaralá souhrnná data měření
 
@@ -289,9 +290,9 @@ Pomocí této úlohy můžete z databáze odstranit zastaralá souhrnná data pr
 
 |||
 |---------|---------|
-|Lokalita centrální správy|Není k dispozici.|
+|Lokalita centrální správy|Není k dispozici|
 |**Primární lokalita**|Povoleno|
-|Sekundární lokalita|Není k dispozici.|
+|Sekundární lokalita|Není k dispozici|
 
 ### <a name="delete-aged-notification-server-history"></a>Odstranit zastaralou historii serveru oznámení
 
@@ -301,7 +302,7 @@ Tato úloha odstraňuje zastaralou historii přítomnosti klientů.
 |---------|---------|
 |**Lokalita centrální správy**|Povoleno|
 |**Primární lokalita**|Povoleno|
-|Sekundární lokalita|Není k dispozici.|
+|Sekundární lokalita|Není k dispozici|
 
 ### <a name="delete-aged-notification-task-history"></a>Odstranit zastaralou historii úloh oznámení
 
@@ -309,9 +310,9 @@ Pomocí této úlohy můžete odstranit informace o úlohách klientských ozná
 
 |||
 |---------|---------|
-|Lokalita centrální správy|Není k dispozici.|
+|Lokalita centrální správy|Není k dispozici|
 |**Primární lokalita**|Povoleno|
-|Sekundární lokalita|Není k dispozici.|
+|Sekundární lokalita|Není k dispozici|
 
 ### <a name="delete-aged-passcode-records"></a>Odstranit zastaralé záznamy hesla
 
@@ -321,7 +322,7 @@ Pomocí této úlohy v lokalitě nejvyšší úrovně ve vaší hierarchii odstr
 |---------|---------|
 |**Lokalita centrální správy**|Povoleno|
 |**Primární lokalita**|Povoleno|
-|Sekundární lokalita|Není k dispozici.|
+|Sekundární lokalita|Není k dispozici|
 
 ### <a name="delete-aged-replication-data"></a>Odstranit stará data o replikaci
 
@@ -351,7 +352,7 @@ Pomocí této úlohy můžete z databáze odstranit zastaralá data stavových z
 |---------|---------|
 |**Lokalita centrální správy**|Povoleno|
 |**Primární lokalita**|Povoleno|
-|Sekundární lokalita|Není k dispozici.|
+|Sekundární lokalita|Není k dispozici|
 
 ### <a name="delete-aged-threat-data"></a>Odstranit stará data o hrozbách
 
@@ -359,9 +360,9 @@ Pomocí této úlohy můžete z databáze odstranit zastaralá Endpoint Protecti
 
 |||
 |---------|---------|
-|Lokalita centrální správy|Není k dispozici.|
+|Lokalita centrální správy|Není k dispozici|
 |**Primární lokalita**|Povoleno|
-|Sekundární lokalita|Není k dispozici.|
+|Sekundární lokalita|Není k dispozici|
 
 ### <a name="delete-aged-unknown-computers"></a>Odstranit zastaralé neznámé počítače
 
@@ -369,9 +370,9 @@ Pomocí této úlohy můžete odstranit informace o neznámých počítačích z
 
 |||
 |---------|---------|
-|Lokalita centrální správy|Není k dispozici.|
+|Lokalita centrální správy|Není k dispozici|
 |**Primární lokalita**|Povoleno|
-|Sekundární lokalita|Není k dispozici.|
+|Sekundární lokalita|Není k dispozici|
 
 ### <a name="delete-aged-user-device-affinity-data"></a>Odstranit stará data o spřažení uživatelských zařízení
 
@@ -379,9 +380,9 @@ Pomocí této úlohy můžete z databáze odstranit zastaralá data o spřažen�
 
 |||
 |---------|---------|
-|Lokalita centrální správy|Není k dispozici.|
+|Lokalita centrální správy|Není k dispozici|
 |**Primární lokalita**|Povoleno|
-|Sekundární lokalita|Není k dispozici.|
+|Sekundární lokalita|Není k dispozici|
 
 ### <a name="delete-duplicate-system-discovery-data"></a>Odstranit duplicitní data zjišťování systému
 
@@ -390,8 +391,8 @@ Tato úloha slouží k odstranění duplicitních záznamů generovaných zjiš�
 |||
 |---------|---------|
 |**Lokalita centrální správy**|Povoleno|
-|Primární lokalita|Není k dispozici.|
-|Sekundární lokalita|Není k dispozici.|
+|Primární lokalita|Není k dispozici|
+|Sekundární lokalita|Není k dispozici|
 
 ### <a name="delete-expired-mdm-bulk-enroll-package-records"></a>Odstranit prošlé záznamy balíčku hromadné registrace MDM
 
@@ -401,7 +402,7 @@ Pomocí této úlohy můžete odstranit staré certifikáty hromadných zápisů
 |---------|---------|
 |**Lokalita centrální správy**|Povoleno|
 |**Primární lokalita**|Povoleno|
-|Sekundární lokalita|Není k dispozici.|
+|Sekundární lokalita|Není k dispozici|
 
 ### <a name="delete-inactive-client-discovery-data"></a>Odstranit neaktivní data zjišťování klientů
 
@@ -414,9 +415,9 @@ Tato úloha funguje pouze na prostředcích, které jsou Configuration Manager k
 
 |||
 |---------|---------|
-|Lokalita centrální správy|Není k dispozici.|
+|Lokalita centrální správy|Není k dispozici|
 |**Primární lokalita**|Není povoleno|
-|Sekundární lokalita|Není k dispozici.|
+|Sekundární lokalita|Není k dispozici|
 
 ### <a name="delete-obsolete-alerts"></a>Odstranit zastaralá upozornění
 
@@ -426,7 +427,7 @@ Pomocí této úlohy můžete z databáze odstranit výstrahy s vypršenou platn
 |---------|---------|
 |**Lokalita centrální správy**|Povoleno|
 |**Primární lokalita**|Povoleno|
-|Sekundární lokalita|Není k dispozici.|
+|Sekundární lokalita|Není k dispozici|
 
 ### <a name="delete-obsolete-client-discovery-data"></a>Odstranit zastaralá data zjišťování klientů
 
@@ -437,9 +438,9 @@ Pomocí této úlohy můžete z databáze odstranit zastaralé záznamy klientů
 
 |||
 |---------|---------|
-|Lokalita centrální správy|Není k dispozici.|
+|Lokalita centrální správy|Není k dispozici|
 |**Primární lokalita**|Není povoleno|
-|Sekundární lokalita|Není k dispozici.|
+|Sekundární lokalita|Není k dispozici|
 
 ### <a name="delete-obsolete-forest-discovery-sites-and-subnets"></a>Odstranit zastaralé lokality a podsítě prohledávání doménové struktury
 
@@ -449,7 +450,7 @@ Pomocí této úlohy můžete odstranit data o lokalitách, podsítích a domén
 |---------|---------|
 |**Lokalita centrální správy**|Povoleno|
 |**Primární lokalita**|Povoleno|
-|Sekundární lokalita|Není k dispozici.|
+|Sekundární lokalita|Není k dispozici|
 
 ### <a name="delete-orphaned-client-deployment-state-records"></a>Odstranit záznamy stavu nasazení osamoceného klienta
 
@@ -457,9 +458,9 @@ Pomocí této úlohy můžete pravidelně vyprázdnit tabulku, která obsahuje i
 
 |||
 |---------|---------|
-|Lokalita centrální správy|Není k dispozici.|
+|Lokalita centrální správy|Není k dispozici|
 |**Primární lokalita**|Povoleno|
-|Sekundární lokalita|Není k dispozici.|
+|Sekundární lokalita|Není k dispozici|
 
 ### <a name="evaluate-collection-members"></a>Vyhodnotit členy kolekce
 
@@ -467,9 +468,9 @@ Vyhodnocování členství kolekce nakonfigurujete jako součást lokality. Dal�
 
 |||
 |---------|---------|
-|Lokalita centrální správy|Není k dispozici.|
+|Lokalita centrální správy|Není k dispozici|
 |**Primární lokalita**|Povoleno|
-|Sekundární lokalita|Není k dispozici.|
+|Sekundární lokalita|Není k dispozici|
 
 ### <a name="monitor-keys"></a>Monitorování klíčů
 
@@ -479,7 +480,7 @@ Pomocí této úlohy můžete monitorovat integritu primárních klíčů datab�
 |---------|---------|
 |**Lokalita centrální správy**|Povoleno|
 |**Primární lokalita**|Povoleno|
-|Sekundární lokalita|Není k dispozici.|
+|Sekundární lokalita|Není k dispozici|
 
 ### <a name="rebuild-indexes"></a>Opětovné sestavení indexů
 
@@ -505,9 +506,9 @@ Pokud chcete shrnout data měření softwaru a šetřit místo na disku v datab�
 
 |||
 |---------|---------|
-|Lokalita centrální správy|Není k dispozici.|
+|Lokalita centrální správy|Není k dispozici|
 |**Primární lokalita**|Povoleno|
-|Sekundární lokalita|Není k dispozici.|
+|Sekundární lokalita|Není k dispozici|
 
 ### <a name="summarize-installed-software-data"></a>Shrnout nainstalovaná data softwaru
 
@@ -515,9 +516,9 @@ Pomocí této úlohy můžete shrnout data ze shromážděných informací o sof
 
 |||
 |---------|---------|
-|Lokalita centrální správy|Není k dispozici.|
+|Lokalita centrální správy|Není k dispozici|
 |**Primární lokalita**|Povoleno|
-|Sekundární lokalita|Není k dispozici.|
+|Sekundární lokalita|Není k dispozici|
 
 ### <a name="summarize-monthly-usage-metering-data"></a>Sumarizace měsíčních dat měření využití
 
@@ -527,9 +528,9 @@ Chcete-li shrnout data softwarového měření a šetřit místo v databázi, po
 
 |||
 |---------|---------|
-|Lokalita centrální správy|Není k dispozici.|
+|Lokalita centrální správy|Není k dispozici|
 |**Primární lokalita**|Povoleno|
-|Sekundární lokalita|Není k dispozici.|
+|Sekundární lokalita|Není k dispozici|
 
 ### <a name="update-application-available-targeting"></a>Aktualizovat dostupné cílení aplikace
 
@@ -539,9 +540,9 @@ Tato mapování jsou pro rychlý přístup uložená v tabulce. Když se členst
 
 |||
 |---------|---------|
-|Lokalita centrální správy|Není k dispozici.|
+|Lokalita centrální správy|Není k dispozici|
 |**Primární lokalita**|Povoleno|
-|Sekundární lokalita|Není k dispozici.|
+|Sekundární lokalita|Není k dispozici|
 
 ### <a name="update-application-catalog-tables"></a>Aktualizovat tabulky katalogu aplikací
 
@@ -549,9 +550,9 @@ Pomocí této úlohy můžete synchronizovat mezipaměť databáze webu Katalog 
 
 |||
 |---------|---------|
-|Lokalita centrální správy|Není k dispozici.|
+|Lokalita centrální správy|Není k dispozici|
 |**Primární lokalita**|Povoleno|
-|Sekundární lokalita|Není k dispozici.|
+|Sekundární lokalita|Není k dispozici|
 
 
 ## <a name="see-also"></a>Viz také

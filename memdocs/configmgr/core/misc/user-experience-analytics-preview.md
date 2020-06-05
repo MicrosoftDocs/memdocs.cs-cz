@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX, NOFOLLOW
-ms.openlocfilehash: c7a99931db27b6a55c9e0722cc12c1d7a9cc9e80
-ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
+ms.openlocfilehash: 7ddcb1ade6f39d1fc2cb824470c33d39496bcbf1
+ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83764233"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84428681"
 ---
 # <a name="endpoint-analytics-preview"></a><a name="bkmk_uea"></a>Služba Endpoint Analytics Preview
 
@@ -347,8 +347,11 @@ V druhém najdete stručný kontrolní seznam pro řešení potíží:
 1. Zařízení, která byla úspěšně nakonfigurovaná pro shromažďování dat, se musí po povolení shromažďování dat restartovat a po zobrazení zařízení na kartě výkon zařízení musíte počkat až 24 hodin.
 1. Pokud se vaše zařízení úspěšně nakonfigurovalo pro shromažďování dat, později se restartuje a po 24 hodinách ho nevidíte, může to být tím, že se zařízení nemůže dostat do našich koncových bodů kolekce. K tomuto problému může dojít, pokud vaše společnost používá proxy server a koncové body nebyly na proxy serveru povoleny. Další informace najdete v tématu [řešení potíží s koncovými body](#bkmk_uea_endpoints).
 
+### <a name="data-collection-for-intune-managed-devices"></a>Shromažďování dat pro zařízení spravovaná přes Intune
 
-### <a name="endpoints"></a><a name="bkmk_uea_endpoints"></a>Bod
+Pro shromažďování dat ze zařízení spravovaných pomocí Intune využívá služba Endpoint Analytics součást Windows 10 a prostředí Windows serveru připojené k Windows serveru a telemetrie (DiagTrack). Ujistěte se, že je spuštěná služba **prostředí a prostředí pro připojené uživatele** v zařízení.
+
+#### <a name="endpoints"></a><a name="bkmk_uea_endpoints"></a>Bod
 
 Aby bylo možné zaregistrovat zařízení do služby Endpoint Analytics, musí společnosti Microsoft odesílat požadovaná funkční data. Pokud vaše prostředí používá proxy server, použijte tyto informace k tomu, abyste mohli nakonfigurovat proxy server.
 
@@ -364,15 +367,15 @@ Pokud chcete povolit sdílení funkčních dat, nakonfigurujte proxy server tak,
 | `https://*.manage.microsoft.com` | Slouží k synchronizaci kolekce zařízení a zařízení s nástrojem Endpoint Analytics (pouze v Configuration Manager role serveru). Další informace najdete v tématu [konfigurace proxy serveru pro server systému lokality](../plan-design/network/proxy-server-support.md#configure-the-proxy-for-a-site-system-server). |
 
 
-### <a name="proxy-server-authentication"></a>Ověřování proxy serveru
+#### <a name="proxy-server-authentication"></a>Ověřování proxy serveru
 
 Pokud vaše organizace používá proxy server ověřování pro přístup k Internetu, ujistěte se, že neblokuje data kvůli ověřování. Pokud váš proxy nepovoluje, aby zařízení odesílala tato data, nebudou se zobrazovat v Desktop Analytics.
 
-#### <a name="bypass-recommended"></a>Nepoužívat (doporučeno)
+##### <a name="bypass-recommended"></a>Nepoužívat (doporučeno)
 
 Nakonfigurujte proxy servery tak, aby nevyžadovaly ověřování proxy serveru pro provoz do koncových bodů sdílení dat. Tato možnost je nejkomplexnější řešení. Funguje pro všechny verze Windows 10.  
 
-#### <a name="user-proxy-authentication"></a>Ověřování proxy uživatelů
+##### <a name="user-proxy-authentication"></a>Ověřování proxy uživatelů
 
 Nakonfigurovat zařízení tak, aby používala kontext přihlášeného uživatele pro ověřování proxy serveru. Tato metoda vyžaduje následující konfigurace:
 
@@ -385,7 +388,7 @@ Nakonfigurovat zařízení tak, aby používala kontext přihlášeného uživat
 > [!IMPORTANT]
 > Přístup k ověřování pomocí uživatelského proxy serveru je nekompatibilní s používáním rozšířené ochrany před internetovými útoky v programu Microsoft Defender. Toto chování je způsobeno tím, že toto ověřování spoléhá na klíč registru **DisableEnterpriseAuthProxy** nastavený na `0` , zatímco ATP programu Microsoft Defender vyžaduje, aby byl nastaven na `1` . Další informace najdete v tématu [Konfigurace nastavení připojení počítače a připojení k Internetu v ochraně ATP v programu Microsoft Defender](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/configure-proxy-internet-windows-defender-advanced-threat-protection).
 
-#### <a name="device-proxy-authentication"></a>Ověřování proxy zařízení
+##### <a name="device-proxy-authentication"></a>Ověřování proxy zařízení
 
 Tento přístup podporuje následující scénáře:
 
