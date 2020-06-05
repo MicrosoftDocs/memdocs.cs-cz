@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/02/2020
+ms.date: 06/04/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 379eacee731c8cdd773fc7a15f556ab85e409f7c
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 0d3b1fc1917e7567301a2d2c8a3a3b06d4892a6b
+ms.sourcegitcommit: 7a5196d4d9736c5cd52a23155c479523e52a097d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989889"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84436784"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Microsoft Intune App SDK pro iOS – Příručka pro vývojáře
 
@@ -35,13 +35,13 @@ Sada Microsoft Intune App SDK pro iOS umožňuje začlenit do vaší nativní ap
 
 ## <a name="prerequisites"></a>Požadavky
 
-* Budete potřebovat počítač s Mac OS, na kterém běží OS X 10.8.5 nebo novější, a má nainstalované taky Xcode 9 nebo novější.
+- Budete potřebovat počítač s Mac OS, na kterém běží OS X 10.12.6 nebo novější, a má nainstalované taky Xcode 9 nebo novější.
 
-* Vaše aplikace musí být zaměřená na iOS 11 nebo vyšší.
+- Vaše aplikace musí být zaměřená na iOS 11 nebo vyšší.
 
-* Přečtěte si [licenční podmínky Intune App SDK pro iOS](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios/blob/master/Microsoft%20License%20Terms%20Intune%20App%20SDK%20for%20iOS.pdf). Licenční podmínky si vytiskněte a uchovejte pro své záznamy. Stažením a použitím Intune App SDK pro iOS s licenčními podmínkami souhlasíte.  Pokud je nepřijímáte, software nepoužívejte.
+- Přečtěte si [licenční podmínky Intune App SDK pro iOS](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios/blob/master/Microsoft%20License%20Terms%20Intune%20App%20SDK%20for%20iOS.pdf). Licenční podmínky si vytiskněte a uchovejte pro své záznamy. Stažením a použitím Intune App SDK pro iOS s licenčními podmínkami souhlasíte.  Pokud je nepřijímáte, software nepoužívejte.
 
-* Stáhněte si soubory pro sadu Intune App SDK pro iOS na [GitHubu](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios).
+- Stáhněte si soubory pro sadu Intune App SDK pro iOS na [GitHubu](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios).
 
 ## <a name="whats-in-the-sdk-repository"></a>Co je v úložišti SDK
 
@@ -464,7 +464,7 @@ Z návratové hodnoty této metody sada SDK pozná, jestli požadované restarto
 
 Sada Intune App SDK má několik rozhraní API, které můžete volat, abyste získali informace o zásadách Intune APP nasazených do aplikace. Pomocí těchto dat můžete přizpůsobit chování aplikace. Následující tabulka poskytuje informace o některých základních třídách Intune, které budete používat.
 
-Třída | Popis
+Třída | Description
 ----- | -----------
 IntuneMAMPolicyManager.h | Třída IntuneMAMPolicyManager zveřejňuje zásady Intune APP nasazené do aplikace. Zveřejňuje zejména rozhraní API, která slouží k [povolení více identit](app-sdk-ios.md#enable-multi-identity-optional). |
 IntuneMAMPolicy.h | Třída IntuneMAMPolicy zveřejňuje některá nastavení zásad MAM, která se týkají aplikace. Tato nastavení zásad se zveřejňují, aby aplikace mohla přizpůsobit svoje uživatelské rozhraní. Většinu nastavení zásad vynucuje sada SDK, nikoli aplikace. Jediné nastavení, které by aplikace měla implementovat, je ovládací prvek Uložit jako. Tato třída zveřejňuje některá rozhraní API, která jsou nezbytná k implementaci ovládacího prvku Uložit jako. |
@@ -750,7 +750,7 @@ Pokud se vaše aplikace integruje s Siri záměry, nezapomeňte si přečíst po
 ## <a name="notifications"></a>Oznámení
 Pokud vaše aplikace obdrží oznámení, nezapomeňte si přečíst poznámky pro v tématu, `notificationPolicy` `IntuneMAMPolicy.h` kde najdete pokyny k podpoře tohoto scénáře.  Doporučuje se, aby se aplikace registrovaly na `IntuneMAMPolicyDidChangeNotification` popsanou v tématu `IntuneMAMPolicyManager.h` a komunikovaly s ní `UNNotificationServiceExtension` prostřednictvím řetězce klíčů.
 ## <a name="displaying-web-content-within-application"></a>Zobrazení webového obsahu v rámci aplikace
-Pokud má vaše aplikace možnost zobrazovat weby v rámci webového zobrazení a zobrazované webové stránky mají možnost přejít na libovolné weby, aplikace je responisble pro nastavení aktuální identity tak, aby se spravovaná data nedala prostřednictvím webového zobrazení úniková. Příklady tohoto příkladu jsou webové stránky navrhnout funkci nebo zpětná vazba, které mají buď přímé nebo nepřímé odkazy na vyhledávací web.
+Pokud má vaše aplikace možnost zobrazovat weby v rámci webového zobrazení a zobrazované webové stránky mají možnost přejít na libovolné weby, je aplikace zodpovědná za nastavení aktuální identity tak, aby se spravovaná data nedala prostřednictvím webového zobrazení úniková. Příklady tohoto příkladu jsou webové stránky navrhnout funkci nebo zpětná vazba, které mají buď přímé nebo nepřímé odkazy na vyhledávací web.
 Aplikace s více identitami by měly volat IntuneMAMPolicyManager setUIPolicyIdentity před zobrazením webového zobrazení v prázdném řetězci. Po ukončení webového zobrazení by aplikace měla zavolat setUIPolicyIdentity na předání v aktuální identitě.
 Aplikace s jednou identitou by měly volat IntuneMAMPolicyManager setCurrentThreadIdentity před zobrazením webového zobrazení v prázdném řetězci. Po ukončení webového zobrazení by aplikace měla volat setCurrentThreadIdentity předání v Nil.
 

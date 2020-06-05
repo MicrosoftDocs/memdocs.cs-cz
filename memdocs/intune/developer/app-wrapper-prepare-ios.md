@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/27/2020
+ms.date: 06/04/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 424778a86ebf3bac750e17359204ef6be3aaa71c
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: 69940fc8e3f495a1738f2b7b4c6769e431821f30
+ms.sourcegitcommit: 7a5196d4d9736c5cd52a23155c479523e52a097d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84166038"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84436801"
 ---
 # <a name="prepare-ios-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Příprava aplikací pro iOS na zásady ochrany aplikací pomocí nástroje Intune App Wrapping Tool
 
@@ -323,11 +323,11 @@ Aby bylo možné zaručit plnou funkčnost nástroje App Wrapping Tool pro iOS, 
 
 ## <a name="setting-app-entitlements"></a>Nastavení oprávnění aplikace
 
-Než aplikaci zabalíte, můžete jí udělit taková *oprávnění*, kterými získá další oprávnění a funkce nad rámec obvyklých možností. Při podepisování kódu se pomocí *souboru oprávnění* určí v aplikaci speciální oprávnění (například přístup ke sdílenému řetězci klíčů). Konkrétní služby App Services označované jako *Možnosti* jsou v rámci Xcode při vývoji aplikací povolené. Jakmile se tyto schopnosti povolí, odrazí se to v souboru oprávnění. Další informace o oprávněních a schopnostech najdete v článku věnovaném [přidání schopností](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/AddingCapabilities/AddingCapabilities.html) na webu iOS Developer Library. Úplný seznam podporovaných funkcí najdete v tématu [podporované funkce](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/SupportedCapabilities/SupportedCapabilities.html).
+Před zabalením aplikace můžete udělit *[nárokům](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/EntitlementKeyReference/Chapters/AboutEntitlements.html)* , aby aplikaci poskytovala další oprávnění a možnosti, které překračují to, co může aplikace obvykle dělat. Při podepisování kódu se pomocí *souboru oprávnění* určí v aplikaci speciální oprávnění (například přístup ke sdílenému řetězci klíčů). Konkrétní služby App Services označované jako *Možnosti* jsou v rámci Xcode při vývoji aplikací povolené. Jakmile se tyto schopnosti povolí, odrazí se to v souboru oprávnění. Další informace o oprávněních a schopnostech najdete v článku věnovaném [přidání schopností](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/AddingCapabilities/AddingCapabilities.html) na webu iOS Developer Library. Úplný seznam podporovaných funkcí najdete v tématu [podporované funkce](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/SupportedCapabilities/SupportedCapabilities.html).
 
 ### <a name="supported-capabilities-for-the-app-wrapping-tool-for-ios"></a>Podporované schopnosti nástroje App Wrapping pro iOS
 
-|Schopnost|Popis|Doporučené pokyny|
+|Schopnost|Description|Doporučené pokyny|
 |--------------|---------------|------------------------|
 |Skupiny aplikací|Ve skupinách aplikací můžete více aplikacím povolit přístup ke sdíleným kontejnerům a povolit mezi aplikacemi další komunikaci na úrovni procesů.<br /><br />Pokud chcete povolit skupiny aplikací, otevřete podokno **Schopnosti** a v části **Skupiny aplikací** klikněte na **ZAPNUTO**. Můžete přidat nové skupiny aplikací nebo vybrat stávající.|U skupin aplikací používejte zpětný zápis DNS:<br /><br />*group.com.companyName.AppGroup*|
 |Režimy pozadí|Pokud povolíte režimy pozadí, může vaše aplikace pro iOS běžet dál na pozadí.||

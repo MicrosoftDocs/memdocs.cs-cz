@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5562ef1eaa1cc98e3f5a654e90e4779e228768b6
-ms.sourcegitcommit: 8a023e941d90c107c9769a1f7519875a31ef9393
+ms.openlocfilehash: 90039e9bb75bcf7c266ac033408f87d37e27ef8d
+ms.sourcegitcommit: 7a5196d4d9736c5cd52a23155c479523e52a097d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84311199"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84436750"
 ---
 # <a name="in-development-for-microsoft-intune"></a>Ve vývoji pro Microsoft Intune
 
@@ -105,7 +105,7 @@ Další informace o ukládání obsahu do mezipaměti najdete v tématu [Content
 
 Pokud se chcete podívat na nastavení, která můžete konfigurovat, přejděte do části [Nastavení funkcí zařízení MacOS v Intune](../configuration/macos-device-features-settings.md).
 
-To platí pro:
+Platí pro:
 - macOS
 
 ### <a name="new-vpn-settings-for-windows-10-and-newer-devices---6602122----"></a>Nové nastavení sítě VPN pro zařízení s Windows 10 a novějšími systémy<!-- 6602122  -->
@@ -116,7 +116,7 @@ Když vytváříte profil sítě VPN pomocí typu připojení IKEv2, můžete na
 
 Pokud chcete zobrazit nastavení, která můžete nakonfigurovat, přejděte na [nastavení zařízení s Windows a přidejte připojení k síti VPN pomocí Intune](../configuration/vpn-settings-windows-10.md).
 
-To platí pro:
+Platí pro:
 - Windows 10 a novější
 
 ### <a name="block-shared-ipad-temporary-sessions-on-shared-ipad-devices---6613794---"></a>Blokovat sdílené dočasné relace iPadu na sdílených zařízeních iPad<!-- 6613794 -->
@@ -124,7 +124,7 @@ V Intune je k dispozici nový **blok sdílené dočasné relace pro iPad** , kte
 
 Další informace o nastaveních, která můžete konfigurovat, najdete v tématu [nastavení zařízení s iOS a iPadOS, které umožňuje povolit nebo zakázat funkce](../configuration/device-restrictions-ios.md).
 
-To platí pro:
+Platí pro:
 - Sdílená zařízení iPad s iOS/iPadOS 13,4 a novějšími
 
 ### <a name="use-microsoft-launcher-as-the-default-launcher-for-fully-managed-android-enterprise-devices---4927976----"></a>Jako výchozí spouštěcí spouštěč pro plně spravovaná zařízení s Androidem Enterprise použít spouštěč Microsoftu<!-- 4927976  -->
@@ -134,7 +134,7 @@ Existují taky některé další aktualizace uživatelského rozhraní, včetně
 
 Pokud chcete zobrazit všechna nastavení, která můžete omezit, přečtěte si téma [nastavení zařízení s Androidem Enterprise a povolte nebo omezte funkce pomocí Intune](../configuration/device-restrictions-android-for-work.md). 
 
-To platí pro:
+Platí pro:
 - Zařízení s plně spravovaným vlastníkem zařízení s Androidem Enterprise (COBO)
 
 ### <a name="add-new-schema-settings-and-search-for-existing-schema-settings-using-oemconfig-on-android-enterprise---6394386----"></a>Přidejte nová nastavení schématu a vyhledejte existující nastavení schématu pomocí OEMConfig v Androidu Enterprise.<!-- 6394386  -->
@@ -144,7 +144,7 @@ V Intune můžete použít OEMConfig ke správě nastavení na zařízeních s A
 
 Další informace o profilech OEMConfig v Intune najdete v tématu [používání a Správa zařízení s Androidem Enterprise pomocí OEMConfig v Microsoft Intune](../configuration/android-oem-configuration-overview.md).
 
-To platí pro:
+Platí pro:
 - Android Enterprise
 
 <!-- ***********************************************-->
@@ -161,7 +161,7 @@ Pro zařízení s iOS/iPadOS a macOS se budou hlásit nové chyby, včetně
 - Počet odebraných zařízení Apple Business Manageru se přidá na stránku Přehled, kde vidíte stav svých zařízení.
 
 ### <a name="bring-your-own-devices-can-use-vpn-to-deploy--5015344---"></a>Vlastní zařízení můžou používat k nasazení sítě VPN.<!--5015344 -->
-Tato funkce může být zpožděná.
+Nový profil pro **přeskočení kontroly připojení k doméně** pomocí nového profilu autopilotu přeskočit přepínač umožňuje nasadit hybridní zařízení služby Azure AD join bez přístupu k podnikové síti pomocí vašeho vlastního klienta Win32 VPN od jiného výrobce. Pokud se chcete podívat na nový přepínač, přejděte do [centra pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)  >  **zařízení**   >  **Windows**  >  **Windows enrollment**  >  **profily nasazení**registrace  >  **vytvořit profil**předspouštěného  >  **prostředí (OOBE)**.
 
 ### <a name="shared-ipads-for-business--6367326---"></a>Shared iPady for Business<!--6367326 -->
 Pomocí Intune a Apple Business Manageru budete moct snadno a bezpečně nastavit sdílený iPad, aby zařízení mohla sdílet víc zaměstnanců. [Sdílený iPad](https://developer.apple.com/education/shared-ipad/) společnosti Apple nabízí individuální prostředí pro více uživatelů při zachování uživatelských dat. Pomocí spravovaného Apple ID můžou uživatelé získat přístup k aplikacím, datům a nastavením po přihlášení ke všem sdíleným iPadům v jejich organizaci. Sdílený iPad spolupracuje se federované identity.

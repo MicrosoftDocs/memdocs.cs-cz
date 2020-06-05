@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/27/2020
+ms.date: 06/03/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: apps; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 33f59cc2ecd2662e2d5d09fb06a9f1c7a33f0fca
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 8605b33d8fb83fb4537182127860f0cbb098e620
+ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79326331"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84428614"
 ---
 # <a name="overview-of-the-app-lifecycle-in-microsoft-intune"></a>Přehled životního cyklu aplikace v Microsoft Intune
 
@@ -54,7 +54,7 @@ Intune poskytuje mnoho způsobů, jak pomoci chránit data ve vašich aplikacíc
 
 ## <a name="retire"></a>Vyřazení
 
-Nakonec pravděpodobně dojde k tomu, že nasazené aplikace začnou být zastaralé a bude třeba je odebrat. Intune usnadňuje [vyřazení aplikací ze služby](../remote-actions/device-management.md).
+Nakonec pravděpodobně dojde k tomu, že nasazené aplikace začnou být zastaralé a bude třeba je odebrat. Intune usnadňuje odinstalaci aplikací. Další informace najdete v tématu [odinstalace aplikace](../apps/apps-add.md#uninstall-an-app).
 
 ## <a name="next-steps"></a>Další kroky
 

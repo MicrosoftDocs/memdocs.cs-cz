@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: da78e0f80df31f5cb0f6236c4f85f93c05f0320a
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: f01baaf8ca48229242b6f65d10ef28a294a632bc
+ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989480"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84428621"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>Přidání aplikací do Microsoft Intune 
 
@@ -187,6 +187,25 @@ Intune automaticky přeinstaluje, aktualizuje nebo odebere požadovanou aplikaci
 - Pokud se požadovanou aplikaci nepodaří nainstalovat nebo aplikace na zařízení z nějakého důvodu chybí, Intune vyhodnotí dodržování předpisů a přeinstaluje aplikaci po uplynutí naplánované doby.  
 - Správce nastaví aplikaci pro skupinu uživatelů jako dostupnou a koncoví uživatelé si ji nainstalují na zařízení z Portálu společnosti. Později správce aktualizuje aplikaci z v1 na v2. Intune aktualizuje aplikaci, jakmile uplyne naplánovaná doba, za předpokladu, že je na zařízení některá z předchozích verzí dané aplikace.
 - Pokud se správce rozhodne aplikaci odinstalovat, ale aplikaci se nepodaří ze zařízení odinstalovat, Intune vyhodnotí dodržování předpisů a odinstaluje aplikaci po uplynutí naplánované doby.   
+
+## <a name="uninstall-an-app"></a>Odinstalace aplikace
+
+Pokud potřebujete odinstalovat aplikaci ze zařízení uživatele, použijte následující postup.
+
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Vybrat **aplikace**  >  **všechny aplikace**  >  *the app*  >  **přiřazení**aplikace  >  **Přidat skupinu**.
+3. V podokně **Přidat skupinu** vyberte **odinstalovat**.
+4. Vyberte možnost **zahrnuté skupiny** a vyberte skupiny uživatelů, na které se vztahuje přiřazení této aplikace.
+5. Vyberte skupiny, u kterých chcete použít přiřazení odinstalace.
+6. V podokně **Vybrat skupiny** klikněte na **Vybrat** .
+7. Nastavte přiřazení kliknutím na **OK** v podokně **přiřazení** .
+8. Pokud se rozhodnete některé skupiny uživatelů vyloučit, aby nebyly přiřazením aplikace ovlivněné, klikněte na **Vyloučit skupiny**.
+9. Pokud jste se rozhodli některé skupiny vyloučit, ve **Vybrat skupiny** zvolte **Vybrat**.
+10. V podokně **Přidat skupinu** vyberte **OK** .
+11. V podokně **přiřazení** aplikace vyberte **Uložit** .
+
+> [!IMPORTANT]
+> Aby se aplikace úspěšně odinstalovala, nezapomeňte odebrat členy nebo přiřazení skupiny pro instalaci, než je přiřadíte k odinstalování. Pokud je skupina přiřazena k instalaci aplikace i k odinstalaci aplikace, aplikace zůstane a nebude odebrána.
 
 ## <a name="app-installation-errors"></a>Chyby instalace aplikací
 

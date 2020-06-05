@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 91a63011b16a05387f09f4cc5b3fe74b9c30891e
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 9983eb211b816ae05a1f9d180a7dbb68e3fac505
+ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988967"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84428660"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot"></a>Nasazení hybridních zařízení připojených k Azure AD pomocí Intune a automatického pilotního projektu Windows
 Pomocí Intune a Windows autopilotu můžete nastavit zařízení připojená k hybridnímu Azure Active Directory (Azure AD). Pokud to chcete provést, postupujte podle kroků v tomto článku.
@@ -107,7 +107,7 @@ Organizační jednotka, která má udělena práva k vytváření počítačů, 
 
 ## <a name="install-the-intune-connector"></a>Instalace konektoru Intune
 
-Konektor Intune pro službu Active Directory musí být nainstalovaný na počítači se systémem Windows Server 2016 nebo novějším. Počítač musí mít také přístup k Internetu a ke službě Active Directory. Pokud chcete zvýšit škálování a dostupnost nebo chcete podporovat více domén Active Directory, můžete do vašeho prostředí nainstalovat více konektorů. Doporučujeme nainstalovat konektor na server, na kterém neběží žádné jiné konektory Intune.
+Konektor Intune pro službu Active Directory musí být nainstalovaný na počítači se systémem Windows Server 2016 nebo novějším. Počítač musí mít také přístup k Internetu a ke službě Active Directory. Chcete-li zvýšit rozsah a dostupnost, můžete nainstalovat více konektorů ve vašem prostředí. Doporučujeme nainstalovat konektor na server, na kterém neběží žádné jiné konektory Intune.  Všimněte si, že každý konektor musí být schopný vytvářet objekty počítače v libovolné doméně, kterou chcete podporovat.
 
 Konektor Intune vyžaduje [stejné koncové body jako Intune](../fundamentals/intune-endpoints.md).
 
