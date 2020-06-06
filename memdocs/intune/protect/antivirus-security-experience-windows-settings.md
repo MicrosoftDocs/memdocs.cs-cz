@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 089303b76f674d47767afdff72341d09f7f227d4
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 78cc6182cf8682935ecaa6c319e30ee8261fc2fb
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431329"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84455255"
 ---
 # <a name="settings-for-the-windows-security-experience-profile-in-microsoft-intune"></a>Nastavení profilu Windows Security Experience v Microsoft Intune
 
@@ -43,7 +43,7 @@ Zobrazit nastavení zásad antivirové ochrany, která můžete nakonfigurovat p
   - **Ano** – oblast ochrany před viry a hrozbami v aplikaci zabezpečení Windows je pro koncové uživatele skrytá. Oznámení související s ochranou před viry a hrozbami se potlačí.
 
   - **Skrýt možnost obnovení dat ransomwarem v aplikaci zabezpečení Windows**  
-    SLUŽEB[](https://go.microsoft.com/fwlink/?linkid=873664)
+    CSP: [HideRansomwareDataRecovery](https://go.microsoft.com/fwlink/?linkid=873664)
 
   - **Nenakonfigurováno** (*výchozí*) – nastavení se vrátí do výchozího nastavení klienta, které umožní přístup a oznámení uživateli.
   - **Ano** – oblast obnovení dat ransomwarem v aplikaci zabezpečení Windows je pro koncové uživatele skrytá. Oznámení související s ransomwarem se potlačí.
@@ -85,7 +85,7 @@ Zobrazit nastavení zásad antivirové ochrany, která můžete nakonfigurovat p
   - **Ano** – oblast možností řady v aplikaci zabezpečení Windows je pro koncové uživatele skrytá. Také se potlačí oznámení týkající se rodinných možností.
 
 - **Oznámení aplikace pro zabezpečení systému Windows**  
-  SLUŽEB[](https://go.microsoft.com/fwlink/?linkid=873675)
+  CSP: [DisableNotifications](https://go.microsoft.com/fwlink/?linkid=873675)
 
   Pomocí tohoto nastavení můžete uživatelům zablokovat oznámení zabezpečení systému Windows pro všechna předchozí nastavení funkcí. Alternativně můžete spravovat oznámení aplikací pro zabezpečení systému Windows na funkci pomocí nastavení pro pokračování.
 

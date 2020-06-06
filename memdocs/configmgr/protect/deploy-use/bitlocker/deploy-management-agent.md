@@ -10,12 +10,12 @@ ms.assetid: 39aa0558-742c-4171-81bc-9b1e6707f4ea
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ebd847e44c1acd87c316514ec9919f8a6690a647
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: e33ba8df84239b4a438ff0c526bb255c5b7d0052
+ms.sourcegitcommit: e618ea7cb864635c838b672bc71a1e926bf7c047
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83428577"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84458147"
 ---
 # <a name="deploy-bitlocker-management"></a>Nasazení správy nástroje BitLocker
 
@@ -35,7 +35,7 @@ Před vytvořením a nasazením zásad správy BitLockeru postupujte takto:
 
 - V případě potřeby [Zašifrujte klíče pro obnovení](encrypt-recovery-data.md) v databázi lokality.
 
-## <a name="create-a-policy"></a>Vytvoření zásady
+## <a name="create-a-policy"></a>Vytvoření zásad
 
 Když tuto zásadu vytvoříte a nasadíte, povolí klient Configuration Manager v zařízení agenta pro správu BitLockeru.
 
@@ -126,7 +126,7 @@ Když vytvoříte více než jednu zásadu, můžete nakonfigurovat jejich relat
 
 1. Pokud chcete, aby zařízení mohl kdykoli šifrovat nebo dešifrovat jednotky, vyberte možnost pro **Povolení nápravy mimo časové období údržby**. Pokud má kolekce nějaké časové intervaly pro správu a údržbu, pořád tuto zásadu BitLockeru opraví.
 
-1. Nakonfigurujte **jednoduchý** nebo **vlastní** plán. Ve výchozím nastavení klient vyhodnotí dodržování předpisů pomocí této zásady každých 12 hodin.
+1. Nakonfigurujte **jednoduchý** nebo **vlastní** plán. Klient vyhodnotí své dodržování předpisů na základě nastavení určeného v plánu.
 
 1. Vyberte **OK** a Nasaďte zásadu.
 

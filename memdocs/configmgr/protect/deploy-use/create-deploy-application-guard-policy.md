@@ -1,8 +1,8 @@
 ---
 title: Spravovat zásady ochrany Application Guard
 titleSuffix: Configuration Manager
-description: Naučte se vytvářet a nasazovat zásady ochrany Application Guard v programu Windows Defender.
-ms.date: 07/26/2019
+description: Naučte se vytvářet a nasazovat zásady ochrany Application Guard v programu Microsoft Defender.
+ms.date: 06/05/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -10,29 +10,29 @@ ms.assetid: 33a6c1d9-4dd8-411c-a748-693a5bd2ea5a
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: b691004742def4c126ba82b07cad1651cbe822f8
-ms.sourcegitcommit: 13ceb4e1cc8c2a10bfa199e301bf9bada8ceb268
+ms.openlocfilehash: 1189f8c89215bc228c533a88f38f5ae59b6855ee
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82923432"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84454932"
 ---
-# <a name="create-and-deploy-windows-defender-application-guard-policy"></a>Vytvoření a nasazení zásad ochrany Application Guard v programu Windows Defender
+# <a name="create-and-deploy-microsoft-defender-application-guard-policy"></a>Vytvoření a nasazení zásad ochrany Application Guard v programu Microsoft Defender
 
 *Platí pro: Configuration Manager (Current Branch)*
 <!-- 1351960 -->  
-Zásady ochrany Application Guard [(Application Guard) v programu Windows Defender](https://docs.microsoft.com/windows/threat-protection/windows-defender-application-guard/wd-app-guard-overview) můžete vytvořit a nasadit pomocí Configuration Manager Endpoint Protection. Tyto zásady chrání uživatele otevřením nedůvěryhodných webů v zabezpečeném izolovaném kontejneru, který není přístupný jiným součástem operačního systému.
+Zásady ochrany Application [Guard (Application Guard) programu Microsoft Defender](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/md-app-guard-overview) můžete vytvořit a nasadit pomocí Configuration Manager Endpoint Protection. Tyto zásady chrání uživatele otevřením nedůvěryhodných webů v zabezpečeném izolovaném kontejneru, který není přístupný jiným součástem operačního systému.
 
 ## <a name="prerequisites"></a>Požadavky
 
-Chcete-li vytvořit a nasadit zásady ochrany Application Guard v programu Windows Defender, je nutné použít aktualizaci Windows 10 Updates Creator (1709). U zařízení s Windows 10, na které zásadu nasazujete, se musí nakonfigurovat [zásada izolace sítě](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-guard/configure-wd-app-guard#network-isolation-settings). Další informace najdete v tématu [Přehled ochrany Application Guard v programu Windows Defender](https://docs.microsoft.com/windows/threat-protection/windows-defender-application-guard/wd-app-guard-overview).
+Chcete-li vytvořit a nasadit zásady ochrany Application Guard v programu Microsoft Defender, je nutné použít aktualizaci Windows 10 Updates Creator (1709). U zařízení s Windows 10, na které zásadu nasazujete, se musí nakonfigurovat [zásada izolace sítě](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/configure-md-app-guard#network-isolation-settings). Další informace najdete v tématu [Přehled ochrany Application Guard v programu Microsoft Defender](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/md-app-guard-overview).
 
 ## <a name="create-a-policy-and-to-browse-the-available-settings"></a>Vytvoření zásady a procházení dostupných nastavení
 
 1. V konzole Configuration Manager vyberte **prostředky a kompatibilita**.
 2. V pracovním prostoru **prostředky a kompatibilita** vyberte **Přehled**  >  **Endpoint Protection**  >  **ochrana Application Guard v programu Windows Defender**.
 3. Na kartě **Domů** ve skupině **vytvořit** klikněte na možnost **vytvořit zásadu Application Guard v programu Windows Defender**.
-4. Pomocí [článku](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-guard/configure-wd-app-guard) jako reference můžete procházet a konfigurovat dostupná nastavení. Configuration Manager vám umožní nastavit určitá nastavení zásad:
+4. Pomocí [článku](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/configure-md-app-guard) jako reference můžete procházet a konfigurovat dostupná nastavení. Configuration Manager vám umožní nastavit určitá nastavení zásad:
    - [Nastavení interakce hostitele](#bkmk_HIS)
    - [Chování aplikace](#bkmk_ABS)
    - [Správa souborů](#bkmk_FM)
@@ -42,7 +42,7 @@ Chcete-li vytvořit a nasadit zásady ochrany Application Guard v programu Windo
     > Počítače s Windows 10 ukládají na klientovi jenom jeden seznam izolace sítě. Můžete vytvořit dva různé druhy seznamů izolace sítě a nasadit je do klienta:
     >
     >  - jedna z Information Protection Windows
-    >  - jedna z ochrany Application Guard v programu Windows Defender
+    >  - jedna z ochrany Application Guard v programu Microsoft Defender
     >
     > Pokud nasadíte obě zásady, musí tyto seznamy izolace sítě odpovídat. Pokud nasadíte seznamy, které se neshodují se stejným klientem, nasazení se nezdaří. Další informace najdete v dokumentaci k [Windows Information Protection](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/create-wip-policy-using-configmgr).
 
@@ -78,7 +78,7 @@ Nakonfiguruje chování aplikace v relaci ochrany Application Guard. Před Confi
 
 ### <a name="file-management"></a><a name="bkmk_FM"></a>Správa souborů
 <!--3555858-->
-Od verze Configuration Manager 1906 existuje nastavení zásad, které uživatelům umožňuje důvěřovat souborům, které se normálně otevřou v ochraně Application Guard. Po úspěšném dokončení se soubory otevřou na hostitelském zařízení, nikoli v ochraně Application Guard. Další informace o zásadách ochrany Application Guard najdete v tématu [Konfigurace nastavení zásad ochrany Application Guard v programu Windows Defender](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-guard/configure-wd-app-guard).
+Od verze Configuration Manager 1906 existuje nastavení zásad, které uživatelům umožňuje důvěřovat souborům, které se normálně otevřou v ochraně Application Guard. Po úspěšném dokončení se soubory otevřou na hostitelském zařízení, nikoli v ochraně Application Guard. Další informace o zásadách ochrany Application Guard najdete v tématu [Konfigurace nastavení zásad ochrany Application Guard v programu Microsoft Defender](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/configure-md-app-guard).
 
 - **Povolit uživatelům důvěřovat souborům, které se otevřou v ochraně Application Guard v programu Windows Defender** – umožní uživateli označovat soubory jako důvěryhodné. Když je soubor důvěryhodný, otevře se na hostiteli, nikoli v ochraně Application Guard. Platí pro klienty Windows 10 verze 1809 nebo vyšší.
   - **Zakázáno:** Nedovolte uživatelům označovat soubory jako důvěryhodné (výchozí).
@@ -96,7 +96,12 @@ Pokud povolíte správu souborů, může dojít k chybám zaznamenaným v DCMRep
 
 Chcete-li upravit nastavení ochrany Application Guard, rozbalte položku **Endpoint Protection** v pracovním prostoru **prostředky a kompatibilita** a pak klikněte na uzel **ochrana Application Guard v programu Windows Defender** . Klikněte pravým tlačítkem na zásadu, kterou chcete upravit, a pak vyberte **vlastnosti**.
 
+## <a name="known-issues"></a>Známé problémy
+
+Zařízení s Windows 10 verze 2004 budou zobrazovat chyby v sestavách dodržování předpisů pro kritéria důvěryhodnosti souborů ochrany Application Guard v programu Microsoft Defender. K tomuto problému dochází, protože některé podtřídy se odebraly z třídy WMI `MDM_WindowsDefenderApplicationGuard_Settings01` ve Windows 10 verze 2004. Všechna ostatní nastavení ochrany Application Guard v programu Microsoft Defender budou stále platit, ale selžou pouze kritéria pro vztah důvěryhodnosti souborů. V současné době neexistují žádná alternativní řešení pro obejít chybu. <!--7099444,5946790-->
+
 ## <a name="next-steps"></a>Další kroky
 
-Přečtěte si další informace o ochraně Application Guard v programu Windows Defender: [Přehled ochrany Application Guard v programu Windows Defender](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-guard/wd-app-guard-overview).
-[Nejčastější dotazy k ochraně Application Guard v programu Windows Defender](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-guard/faq-wd-app-guard)
+Další informace o ochraně Application Guard v programu Microsoft Defender najdete v části
+ - [Přehled ochrany Application Guard v programu Microsoft Defender](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/md-app-guard-overview)
+- [Nejčastější dotazy k ochraně Application Guard v programu Microsoft Defender](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/faq-md-app-guard).

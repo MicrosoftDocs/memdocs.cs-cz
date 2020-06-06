@@ -10,12 +10,12 @@ ms.assetid: 9d1e8252-99e3-48aa-bfa5-0cf4cd6637b2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 184bdc58ac6dc0e311875cc1ddab8c605d8eec32
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ec465f3dee33ca311aec120e74a2994a81a90ec9
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81720622"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84455221"
 ---
 # <a name="configure-pre-cache-content-for-task-sequences"></a>Konfigurace obsahu před ukládáním do mezipaměti pro pořadí úloh
 
@@ -68,7 +68,7 @@ Vytvořte [balíčky ovladačů](../get-started/manage-drivers.md#BKMK_ManagingD
 Aby bylo možné určit, který balíček ovladače se stáhne během předběžného ukládání do mezipaměti, klient vyhodnotí model proti vlastnosti **Name** třídy **Win32_ComputerSystemProduct** WMI.
 
 > [!TIP]
-> Samotný dotaz používá `LIKE` příkaz se zástupnými znaky: `select * from win32_computersystemproduct where name like "%yourstring%"`. Například pokud zadáte `Surface` jako model, dotaz odpovídá všem modelům, které obsahují tento řetězec.<!-- 6315551 -->
+> Samotný dotaz používá `LIKE` příkaz se zástupnými znaky: `select * from win32_computersystemproduct where name like "%yourstring%"` . Například pokud zadáte `Surface` jako model, dotaz odpovídá všem modelům, které obsahují tento řetězec.<!-- 6315551 -->
 
 #### <a name="package"></a>Balíček
 
@@ -101,7 +101,6 @@ Například následující krok **upgradu operačního systému** používá ang
 >
 > Nejdřív přidejte jazyk tak, že vyberete podmínku **jazyka operačního systému** . Pak upravte dotaz rozhraní WMI tak, aby zahrnoval klauzuli Architecture.
 
-
 ### <a name="3-deploy-the-task-sequence"></a><a name="bkmk_deploy"></a>3. nasazení pořadí úkolů
 
 [Nasaďte pořadí úkolů](deploy-a-task-sequence.md). Pro funkci před ukládáním do mezipaměti nakonfigurujte následující nastavení:  
@@ -115,8 +114,7 @@ Například následující krok **upgradu operačního systému** používá ang
 - Na kartě **distribuční body** nakonfigurujte nastavení **možností nasazení** . Pokud obsah není předem uložen do mezipaměti, než uživatel spustí instalaci, klient použije tato nastavení.  
 
     > [!Important]  
-    > V případě pořadí úkolů, které nainstaluje bitovou kopii operačního systému, nepoužívejte možnost nasazení ke **stahování obsahu místně, pokud to vyžaduje běžící pořadí úloh**. Když pořadí úkolů vymaže disk dříve, než použije bitovou kopii operačního systému, odebere mezipaměť klienta. Vzhledem k tomu, že je obsah pryč, pořadí úkolů se nezdařilo.<!-- SCCMDocs-PR #1338 -->
-
+    > V případě pořadí úkolů, které nainstaluje bitovou kopii operačního systému, nepoužívejte možnost nasazení ke **stahování obsahu místně, pokud to vyžaduje běžící pořadí úloh**. Když pořadí úkolů vymaže disk dříve, než použije bitovou kopii operačního systému, odebere mezipaměť klienta. Vzhledem k tomu, že je obsah pryč, pořadí úkolů se nezdařilo.<!-- SCCMDocs-PR #1338 --> Tyto možnosti nasazení jsou dynamické na základě dalších možností, které jste vybrali pro nasazení. Další informace naleznete v části [Deploy a task sequence](deploy-a-task-sequence.md#bkmk_deploy-options).<!-- MEMDocs#328, SCCMDocs#2114 -->
 
 ## <a name="user-experience"></a>Uživatelské prostředí
 
@@ -125,7 +123,6 @@ Například následující krok **upgradu operačního systému** používá ang
 - Když klient zpřístupní nasazení pro uživatele, zobrazí se oznámení upozorňující uživatele na nové nasazení. Teď je pořadí úkolů zobrazené v centru softwaru. Uživatel může přejít do centra softwaru a kliknutím na tlačítko **nainstalovat** spustit instalaci.  
 
 - Pokud klient nemá plně uložený obsah do mezipaměti, když ho uživatel nainstaluje, pak klient použije nastavení, které zadáte na kartě **možnost nasazení** v nasazení.  
-
 
 ## <a name="see-also"></a>Viz také
 

@@ -53,7 +53,7 @@ Následující informace jsou podobné způsobu, jakým vytváříte pravidla v 
 
 1. V **pracovním prostoru pravidla**vyberte **vytvořit** . otevře se průvodce **vytvořením pravidla** .
 
-2. Zadejte název pravidla a potom klikněte na ![nové pravidlo.](media/newrule.png) Otevře se stránka s **pravidlem použitelnosti** , kde můžete nakonfigurovat pravidla.
+2. Zadejte název pravidla a potom klikněte na ![ nové pravidlo ](media/newrule.png) . Otevře se stránka s **pravidlem použitelnosti** , kde můžete nakonfigurovat pravidla.
 
 3. Jako **Typ pravidla** vyberte jednu z následujících možností. Možnosti, které je třeba nakonfigurovat, se liší pro každý typ:
 

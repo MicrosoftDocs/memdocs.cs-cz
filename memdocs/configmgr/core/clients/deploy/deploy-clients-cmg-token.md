@@ -10,12 +10,12 @@ ms.assetid: f0703475-85a4-450d-a4e8-7a18a01e2c47
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c6b33027d67329b883f401168795c1b466ded1a7
-ms.sourcegitcommit: dba89b827d7f89067dfa75a421119e0c973bb747
+ms.openlocfilehash: 5054d44371fd3114a9644f90d37dabf1e81d1997
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83709382"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84455017"
 ---
 # <a name="token-based-authentication-for-cloud-management-gateway"></a>Ověřování založené na tokenech pro bránu pro správu cloudu
 
@@ -60,10 +60,16 @@ Pokud nemůžete instalovat a registrovat klienty v interní síti, vytvořte to
 
 1. Nainstalujte klienta Configuration Manager do internetového zařízení. Zahrňte parametr instalace klienta: [**/regtoken**](about-client-installation-properties.md#regtoken). Následující příklad příkazového řádku obsahuje další požadované parametry a vlastnosti instalace:
 
-    `ccmsetup.exe /mp:https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=ABC SMSMP=https://mp1.contoso.com /regtoken:eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ik9Tbzh2Tmd5VldRUjlDYVh5T2lacHFlMDlXNCJ9.eyJTQ0NNVG9rZW5DYXRlZ29yeSI6IlN7Q01QcmVBdXRoVG9rZW4iLCJBdXRob3JpdHkiOiJTQ0NNIiwiTGljZW5zZSI6IlNDQ00iLCJUeXBlIjoiQnVsa1JlZ2lzdHJhdGlvbiIsIlRlbmFudElkIjoiQ0RDQzVFOTEtMEFERi00QTI0LTgyRDAtMTk2NjY3RjFDMDgxIiwiVW5pcXVlSWQiOiJkYjU5MWUzMy1wNmZkLTRjNWItODJmMy1iZjY3M2U1YmQwYTIiLCJpc3MiOiJ1cm46c2NjbTpvYXV0aDI6Y2RjYzVlOTEtMGFkZi00YTI0LTgyZDAtMTk2NjY3ZjFjMDgxIiwiYXVkIjoidXJuOnNjY206c2VydmljZSIsImV4cCI6MTU4MDQxNbUwNSwibmJmIjoxNTgwMTU2MzA1fQ.ZUJkxCX6lxHUZhMH_WhYXFm_tbXenEdpgnbIqI1h8hYIJw7xDk3wv625SCfNfsqxhAwRwJByfkXdVGgIpAcFshzArXUVPPvmiUGaxlbB83etUTQjrLIk-gvQQZiE5NSgJ63LCp5KtqFCZe8vlZxnOloErFIrebjFikxqAgwOO4i5ukJdl3KQ07YPRhwpuXmwxRf1vsiawXBvTMhy40SOeZ3mAyCRypQpQNa7NM3adCBwUtYKwHqiX3r1jQU0y57LvU_brBfLUL6JUpk3ri-LSpwPFarRXzZPJUu4-mQFIgrMmKCYbFk3AaEvvrJienfWSvFYLpIYA7lg-6EVYRcCAA`
+    `ccmsetup.exe /mp:https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=ABC /regtoken:eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ik9Tbzh2Tmd5VldRUjlDYVh5T2lacHFlMDlXNCJ9.eyJTQ0NNVG9rZW5DYXRlZ29yeSI6IlN7Q01QcmVBdXRoVG9rZW4iLCJBdXRob3JpdHkiOiJTQ0NNIiwiTGljZW5zZSI6IlNDQ00iLCJUeXBlIjoiQnVsa1JlZ2lzdHJhdGlvbiIsIlRlbmFudElkIjoiQ0RDQzVFOTEtMEFERi00QTI0LTgyRDAtMTk2NjY3RjFDMDgxIiwiVW5pcXVlSWQiOiJkYjU5MWUzMy1wNmZkLTRjNWItODJmMy1iZjY3M2U1YmQwYTIiLCJpc3MiOiJ1cm46c2NjbTpvYXV0aDI6Y2RjYzVlOTEtMGFkZi00YTI0LTgyZDAtMTk2NjY3ZjFjMDgxIiwiYXVkIjoidXJuOnNjY206c2VydmljZSIsImV4cCI6MTU4MDQxNbUwNSwibmJmIjoxNTgwMTU2MzA1fQ.ZUJkxCX6lxHUZhMH_WhYXFm_tbXenEdpgnbIqI1h8hYIJw7xDk3wv625SCfNfsqxhAwRwJByfkXdVGgIpAcFshzArXUVPPvmiUGaxlbB83etUTQjrLIk-gvQQZiE5NSgJ63LCp5KtqFCZe8vlZxnOloErFIrebjFikxqAgwOO4i5ukJdl3KQ07YPRhwpuXmwxRf1vsiawXBvTMhy40SOeZ3mAyCRypQpQNa7NM3adCBwUtYKwHqiX3r1jQU0y57LvU_brBfLUL6JUpk3ri-LSpwPFarRXzZPJUu4-mQFIgrMmKCYbFk3AaEvvrJienfWSvFYLpIYA7lg-6EVYRcCAA`
 
     > [!TIP]
     > Další informace o tomto příkazovém řádku najdete v tématu [instalace a registrace klienta pomocí Azure AD identity](deploy-clients-cmg-azure.md#install-and-register-the-client-using-azure-ad-identity). Tento proces je podobný, ale nepoužívá vlastnosti Azure AD.
+
+Chcete-li ověřit, zkontrolujte následující soubor protokolu pro podobnou položku:<!-- bug 7357499 -->
+
+```ClientLocation.log
+Rotating internet management point, new management point [1] is: https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 (0) with capabilities: <Capabilities SchemaVersion ="1.0"><Property Name="SSL" Version="1" /></Capabilities>
+```
 
 ### <a name="known-issues"></a>Známé problémy
 
@@ -107,23 +113,23 @@ Příklad: `BulkRegistrationTokenTool.exe /lifetime 4320`
 
 V případě potřeby můžete zobrazit dříve vytvořené registrační tokeny a jejich životnosti v konzole Configuration Manager a v případě potřeby zablokovat jejich používání. Databáze lokality však nebude ukládat tokeny hromadné registrace.
 
-#### <a name="to-review-a-bulk-registration-token"></a>Postup při kontrole hromadných registračních tokenů
+### <a name="review-a-bulk-registration-token"></a>Kontrola hromadné registračního tokenu
 
-1. V konzole Configuration Manager klikněte na možnost **Správa**.
+1. V konzole Configuration Manager otevřete pracovní prostor **Správa** .
 
-2. V pracovním prostoru Správa rozbalte položku **zabezpečení**a klikněte na položku **certifikáty**. Konzola obsahuje seznam všech certifikátů souvisejících s lokalitami a registračních tokenů pro hromadnou registraci v podokně podrobností.
+2. Rozbalte položku **zabezpečení**a vyberte uzel **certifikáty** . Konzola obsahuje seznam všech certifikátů souvisejících s lokalitami a registračních tokenů pro hromadnou registraci v podokně podrobností.
 
 3. Vyberte token hromadné registrace, který chcete zkontrolovat.
 
-Můžete identifikovat konkrétní registrační tokeny na základě identifikátoru GUID. V době vytváření tokenu se zobrazují identifikátory GUID pro tokeny hromadné registrace. V případě potřeby můžete také filtrovat nebo řadit podle sloupce **typ** .
+Můžete filtrovat nebo řadit podle sloupce **typ** . Identifikujte konkrétní registrační tokeny na základě identifikátoru GUID. Když vytváříte hromadnou registrační token, nástroj zobrazí identifikátor GUID.
 
-#### <a name="to-block-a-bulk-registration-token"></a>Blokování hromadné registračního tokenu
+### <a name="block-a-bulk-registration-token"></a>Blokování hromadné registračního tokenu
 
-1. V konzole Configuration Manager klikněte na možnost **Správa**.
+1. V konzole Configuration Manager otevřete pracovní prostor **Správa** .
 
-2. V pracovním prostoru Správa rozbalte položku **zabezpečení**, klikněte na položku **certifikáty**a vyberte token hromadné registrace, který chcete blokovat.
+2. Rozbalte položku **zabezpečení**, vyberte uzel **certifikáty** a vyberte token hromadné registrace, který chcete blokovat.
 
-3. Na kartě **Domů** na panelu nástrojů nebo v nabídce obsahu klikněte pravým tlačítkem myši na položku **blokovat**. Naopak můžete zrušit blokování dříve blokovaných hromadných registračních tokenů tak, že na kartě **Domů** na pásu karet nebo v nabídce obsah kliknete pravým tlačítkem na položku **odblokovat** .
+3. Na kartě **Domů** na pásu karet nebo v místní nabídce klikněte pravým tlačítkem myši na možnost **blokovat**. Chcete-li odblokovat dříve blokované tokeny hromadné registrace, vyberte akci **odblokovat** .
 
 ## <a name="see-also"></a>Viz také
 

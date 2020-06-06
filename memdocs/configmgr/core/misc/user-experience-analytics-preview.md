@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX, NOFOLLOW
-ms.openlocfilehash: 7ddcb1ade6f39d1fc2cb824470c33d39496bcbf1
-ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
+ms.openlocfilehash: da8c52dabf27ddf0992d9f405400b3ac984f2ecc
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84428681"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84455119"
 ---
 # <a name="endpoint-analytics-preview"></a><a name="bkmk_uea"></a>Služba Endpoint Analytics Preview
 
@@ -56,7 +56,7 @@ Pokud chcete začít používat službu Endpoint Analytics, ověřte požadavky 
 
 V této verzi Preview můžete registrovat zařízení prostřednictvím Configuration Manager nebo Microsoft Intune. 
 
-Tato verze Preview vyžaduje k registraci zařízení přes Intune:
+#### <a name="to-enroll-devices-via-intune-this-preview-requires"></a><a name="bkmk_uea__intune_prereq"></a>Tato verze Preview vyžaduje k registraci zařízení přes Intune:
 - Zařízení zaregistrovaná v Intune s Windows 10
 - Přehledy o výkonu po spuštění jsou dostupné jenom pro zařízení, na kterých běží verze 1903 nebo novější z Windows 10 Enterprise (v současné době se nepodporují edice Home a pro) a zařízení musí být připojená k Azure AD nebo připojené k hybridní službě Azure AD. Počítače připojené k pracovišti se v tuto chvíli nepodporují.
 - Síťové připojení ze zařízení k veřejnému cloudu Microsoftu. Další informace najdete v tématu [koncové body](#bkmk_uea_endpoints).
@@ -64,11 +64,12 @@ Tato verze Preview vyžaduje k registraci zařízení přes Intune:
    - Kliknutím na **Start**souhlasíte s tím, že zákaznická data můžou být uložená mimo umístění, které jste vybrali při zřizování tenanta Microsoft Intune.
    - Po kliknutí na tlačítko **Spustit** pro shromažďování dat mohou data zobrazit další role jen pro čtení.
 
-Tato verze Preview vyžaduje k registraci zařízení přes Configuration Manager:
+#### <a name="to-enroll-devices-via-configuration-manager-this-preview-requires"></a><a name="bkmk_uea__cm_prereq"></a>Tato verze Preview vyžaduje k registraci zařízení přes Configuration Manager:
 - Configuration Manager verze 2002 nebo novější
 - Klienti upgradovali na verzi 2002 nebo novější.
 - [Tenant Microsoft Endpoint Manageru se připojovat](https://docs.microsoft.com/mem/configmgr/tenant-attach/device-sync-actions) s povoleným umístěním klienta Azure Severní Amerika nebo Evropa (brzy se rozšíříme do dalších oblastí).
 
+#### <a name="proactive-remediation-scripting-requires"></a><a name="bkmk_uea__prs_prereq"></a>Proaktivní skriptování nápravy vyžaduje:
 Bez ohledu na to, jestli jsou zařízení zaregistrovaná přes Intune nebo Configuration Manager, má [**skriptování proaktivního problému**](#bkmk_uea_prs) následující požadavky:
 - Zařízení musí být připojená k Azure AD nebo být připojená k hybridní službě Azure AD a splňovat jednu z následujících podmínek:
 - Zařízení s Windows 10 Enterprise, Professional nebo vzdělávací zařízení, které je spravované přes Intune

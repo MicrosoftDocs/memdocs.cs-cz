@@ -10,12 +10,12 @@ ms.assetid: b34fe701-5d05-42be-b965-e3dccc9363ca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 58afaf564a8afaba4569755575fcc7c1757c5529
-ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
+ms.openlocfilehash: 8423af8d4c743965f627a94a07f587fd97d45bdf
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82110130"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84454966"
 ---
 # <a name="internet-access-requirements"></a>Požadavky na přístup k internetu
 
@@ -34,11 +34,11 @@ Další informace o spojovacím bodu služby najdete v tématu [o spojovacím bo
 Další funkce Configuration Manager mohou vyžadovat další koncové body ze spojovacího bodu služby. Další informace najdete v dalších částech tohoto článku.
 
 > [!TIP]  
-> Bod připojení služby používá službu Microsoft Intune při připojení ke `go.microsoft.com` službě nebo. `manage.microsoft.com` Došlo k známému problému, při kterém konektor Intune funguje, pokud není nainstalovaný kořenový certifikát Baltimore CyberTrust, vypršela jeho platnost nebo je v spojovacím bodě služby poškozený. Další informace najdete v tématu [KB 3187516: bod připojení služby nestahuje aktualizace](https://support.microsoft.com/help/3187516).  
+> Bod připojení služby používá službu Microsoft Intune při připojení ke službě `go.microsoft.com` nebo `manage.microsoft.com` . Došlo k známému problému, při kterém konektor Intune funguje, pokud není nainstalovaný kořenový certifikát Baltimore CyberTrust, vypršela jeho platnost nebo je v spojovacím bodě služby poškozený. Další informace najdete v tématu [KB 3187516: bod připojení služby nestahuje aktualizace](https://support.microsoft.com/help/3187516).  
 
 Od verze 2002, pokud se lokalita Configuration Manager nepovede připojit k požadovaným koncovým bodům pro cloudovou službu, vyvolá kritickou stavovou zprávu ID 11488. Když se nemůže připojit ke službě, stav součásti SMS_SERVICE_CONNECTOR se změní na kritický. Zobrazit podrobný stav v uzlu [Stav součásti](../../servers/manage/use-alerts-and-the-status-system.md#BKMK_MonitorSystemStatus) konzoly Configuration Manager.<!-- 5566763 -->
 
-### <a name="updates-and-servicing"></a><a name="bkmk_scp-updates"/>Aktualizace a údržba
+### <a name="updates-and-servicing"></a><a name="bkmk_scp-updates"></a>Aktualizace a údržba
 
 Další informace o této funkci najdete v tématu [aktualizace a údržba pro Configuration Manager](../../servers/manage/updates.md).
 
@@ -87,6 +87,18 @@ Pokud zařízení s Windows 10 zaregistrujete Microsoft Intune pro spolusprávu,
 
 Pokud integrujete Configuration Manager s [Microsoft Store pro firmy](../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md), ujistěte se, že spojovací bod služby a cílová zařízení mají přístup ke cloudové službě. Další informace najdete v tématu [konfigurace proxy serveru Microsoft Store pro firmy](https://docs.microsoft.com/microsoft-store/prerequisites-microsoft-store-for-business#proxy-configuration).
 
+## <a name="delivery-optimization"></a>Optimalizace doručení
+
+Pokud používáte optimalizaci doručování, klienti musí komunikovat se svou cloudovou službou:`*.do.dsp.mp.microsoft.com`
+
+Distribuční body, které podporují mezipaměť připojené Microsoftem, vyžadují také tyto koncové body.
+
+Další informace najdete v následujících článcích:
+
+- [Nejčastější dotazy k optimalizaci doručení](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions)
+- [Základní koncepty správy obsahu v nástroji Configuration Manager](../hierarchy/fundamental-concepts-for-content-management.md#delivery-optimization)
+- [Mezipaměť propojená Microsoftem v Configuration Manager](../hierarchy/microsoft-connected-cache.md)
+
 ## <a name="cloud-services"></a><a name="bkmk_cloud"></a>Cloudové služby
 
 <!-- SCCMDocs-pr #3402 -->
@@ -106,9 +118,9 @@ Pro nasazení služby CMG/CDP potřebuje **spojovací bod služby** přístup k 
 
 - Koncový bod služby Service Management:`https://management.core.windows.net/`  
 
-- Koncový bod úložiště `<name>.blob.core.windows.net` : a`<name>.table.core.windows.net`
+- Koncový bod úložiště: `<name>.blob.core.windows.net` a`<name>.table.core.windows.net`
 
-    Kde `<name>` je název cloudové služby vašeho CMG nebo CDP. Například pokud je `GraniteFalls.CloudApp.Net`vaše CMG, pak první koncový bod úložiště, který se má použít `GraniteFalls.blob.core.windows.net`, je.<!-- SCCMDocs#2288 -->
+    Kde `<name>` je název cloudové služby vašeho CMG nebo CDP. Například pokud je vaše CMG `GraniteFalls.CloudApp.Net` , pak první koncový bod úložiště, který se má použít, je `GraniteFalls.blob.core.windows.net` .<!-- SCCMDocs#2288 -->
 
 Pro získání tokenu Azure AD pomocí **konzoly Configuration Manager** a **klienta**:
 

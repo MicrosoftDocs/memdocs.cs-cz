@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/28/2020
+ms.date: 06/05/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,17 +18,17 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f39681bf954e84376e5d8e3862354a2a10b1003a
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 10c715bcff63e6ec5a9ec9002926f6ee6608360e
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988104"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84455068"
 ---
 # <a name="how-to-monitor-app-protection-policies"></a>Jak monitorovat zásady ochrany aplikací
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Stav zásad ochrany aplikací, které jste použili pro uživatele, můžete monitorovat v podokně Ochrana aplikací Intune v [Azure Portal](https://portal.azure.com). Kromě toho můžete najít informace o uživatelích ovlivněných zásadami ochrany aplikací, stavu dodržování zásad a všech problémech, se kterými se uživatelé mohou setkat.
+Stav zásad ochrany aplikací, které jste použili pro uživatele, můžete monitorovat v podokně Ochrana aplikací Intune v Intune. Kromě toho můžete najít informace o uživatelích ovlivněných zásadami ochrany aplikací, stavu dodržování zásad a všech problémech, se kterými se uživatelé mohou setkat.
 
 Existují tři různá místa, kde můžete monitorovat zásady ochrany aplikací:
 - Souhrnné zobrazení
@@ -43,10 +43,9 @@ Doba uchování dat ochrany aplikací je 90 dní. Všechny instance aplikace, kt
 ## <a name="summary-view"></a>Souhrnné zobrazení
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-3. Vyberte **aplikace**  >  **monitor**  >  **stav ochrany aplikace**.
+2. Vyberte **aplikace**  >  **monitor**  >  **stav ochrany aplikace**.
 
-   ![Snímek obrazovky s dlaždicí souhrnu v podokně Správa mobilních aplikací Intune](./media/app-protection-policies-monitor/app-protection-user-status-summary.png)
-
+Následující seznam uvádí podrobnosti o stavu ochrany aplikací: 
 - **Přiřazení uživatelé**: celkový počet přiřazených uživatelů ve vaší společnosti, kteří používají aplikaci přidruženou k zásadě v pracovním kontextu a jsou chráněni a licencováni, a také přiřazení nechráněných uživatelů a jejich nelicencovaných uživatelů.
 - **Uživatelé označení příznakem**: počet uživatelů, u kterých dochází k problémům s jejich zařízeními. Zařízení s jailbreakem (iOS/iPadOS) a rootem (Android) se hlásí v části **Uživatelé označení příznakem**. Uživatelé se zařízeními, která jsou označená kontrolou ověření identity zařízení Google SafetyNet (Pokud je zapnutá správcem IT), jsou také uvedena zde. 
 - **Uživatelé s potenciálně škodlivými aplikacemi**: počet uživatelů, kteří můžou mít v zařízení s Androidem zjištěnou škodlivou aplikaci Google Play chránit. 

@@ -10,12 +10,12 @@ ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 36ab89f1e9988adc167bf69ff7d9f53b02bbe10f
-ms.sourcegitcommit: ad4b3e4874a797b755e774ff84429b5623f17c5c
+ms.openlocfilehash: 11efada9eaf7e16a68902d7d6d78fb6708916d05
+ms.sourcegitcommit: e618ea7cb864635c838b672bc71a1e926bf7c047
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82166532"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84458130"
 ---
 # <a name="log-file-reference"></a>Referenční informace k protokolům
 
@@ -93,7 +93,7 @@ Následující části obsahují podrobné informace o různých souborech proto
 
   - [Vzdálené řízení](#BKMK_RCLog)  
 
-  - [Vytváření sestav](#BKMK_ReportLog)  
+  - [Generování sestav](#BKMK_ReportLog)  
 
   - [Správa na základě rolí](#BKMK_RBALog)  
 
@@ -481,6 +481,7 @@ Následující tabulka uvádí soubory protokolů, které obsahují informace so
 |SMSdpmon.log|Zaznamenává údaje týkající se naplánované úlohy sledování stavu distribučního bodu, která je nakonfigurovaná v distribučním bodě.|Server lokality|  
 |SoftwareCatalogUpdateEndpoint.log|Zaznamenává aktivity pro správu adresy URL pro katalog aplikací zobrazené v centru softwaru.|Klient|  
 |SoftwareCenterSystemTasks.log|Zaznamenává činnosti související s ověřením požadované součásti centra softwaru.|Klient|  
+|TSDTHandler. log|Pro typ nasazení pořadí úloh. Protokoluje proces od vynucení aplikace (při instalaci nebo odinstalaci) při spuštění pořadí úkolů. Použijte ho s AppEnforce. log a souboru Smsts. log.|Klient|<!-- MEMDocs#336 -->
 
 #### <a name="packages-and-programs"></a>Balíčky a programy
 

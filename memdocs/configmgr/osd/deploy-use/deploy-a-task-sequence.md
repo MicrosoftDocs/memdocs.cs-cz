@@ -10,12 +10,12 @@ ms.assetid: b2abcdb0-72e0-4c70-a4b8-7827480ba5b2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c2347275ffdc194e73cf792d6f83ffa75732f8c4
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 13c16e89cc75bff1ccecd03a98cd12782c419a40
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81711410"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84455149"
 ---
 # <a name="deploy-a-task-sequence"></a>Nasazení pořadí úkolů
 
@@ -146,7 +146,7 @@ Pomocí následujícího postupu můžete nasadit pořadí úloh do počítačů
 
     - **Zpracování filtru zápisu pro zařízení se systémem Windows Embedded**: Toto nastavení řídí chování při instalaci na zařízeních se systémem Windows Embedded, která jsou povolena pomocí filtru zápisu. Vyberte možnost potvrdit změny při dokončení instalace nebo během časového období údržby. Když vyberete tuto možnost, vyžaduje se restartování a změny se na zařízení zachovají. V opačném případě se aplikace nainstaluje do dočasného překrytí a potvrdí se později. Když nasadíte pořadí úloh do zařízení se systémem Windows Embedded, ujistěte se, že je zařízení členem kolekce, která má nakonfigurované časové období údržby.  
 
-    - **Povolit spuštění pořadí úloh pro klienta na internetu**: Určete, jestli se může pořadí úkolů spouštět na internetovém klientovi. Operace, které vyžadují spouštěcí médium, jako je například instalace operačního systému, nejsou tímto nastavením podporovány. Tuto možnost použijte pouze pro obecné instalace softwaru nebo pro sekvence úloh založená na skriptech, které provádějí operace v rámci standardního operačního systému.  
+    - **Povolit spuštění pořadí úloh pro klienta na internetu**: Určete, jestli se může pořadí úkolů spouštět na internetovém klientovi. Operace, které vyžadují spouštěcí médium, jako je například instalace operačního systému, nejsou tímto nastavením podporovány. Tuto možnost použijte pouze pro obecné instalace softwaru nebo sekvence úloh založená na skriptech, které spouštějí operace ve standardním operačním systému.  
 
         - Toto nastavení se podporuje pro nasazení místního upgradu pořadí úkolů Windows 10 do internetových klientů přes bránu pro správu cloudu. Další informace najdete v tématu [nasazení místního upgradu Windows 10 přes CMG](#deploy-windows-10-in-place-upgrade-via-cmg).  
 
@@ -154,19 +154,7 @@ Pomocí následujícího postupu můžete nasadit pořadí úloh do počítačů
 
 9. Na stránce **Distribuční body** zadejte následující informace:  
 
-    - **Možnosti nasazení**: Určete jednu z následujících možností:  
-
-        > [!NOTE]  
-        > Když použijete vícesměrové vysílání k nasazení operačního systému, Stáhněte obsah do počítačů podle potřeby nebo před spuštěním pořadí úloh.  
-
-        - **Pokud to vyžaduje spuštěné pořadí úkolů, stáhnout veškerý obsah místně**: Určete, že klienti stáhnou obsah z distribučního bodu, který je potřebný pro pořadí úkolů. Klient spustí pořadí úloh. Když krok v pořadí úkolů vyžaduje obsah, stáhne se před spuštěním kroku.  
-
-        - Před **spuštěním pořadí úloh stáhnout veškerý obsah místně**: Určete, že klienti stáhnou obsah z distribučního bodu předtím, než se spustí pořadí úkolů. Pokud pořadí úkolů zpřístupníte pro nasazení PXE a spouštěcí média na stránce **nastavení nasazení** , tato možnost se nezobrazí.  
-
-        - **Přístup k obsahu přímo z distribučního bodu, pokud to vyžaduje běžící pořadí úloh**: Určete, jestli klienti spouštějí obsah z distribučního bodu. Tato možnost je k dispozici pouze v případě, že povolíte všechny balíčky přidružené k pořadí úkolů pro použití sdílené složky balíčku v distribučním bodě. Chcete-li obsahu povolit použití sdílené složky balíčku, nahlédněte na kartu **Přístup k datům** v nabídce **Vlastnosti** jednotlivých balíčků.  
-
-            > [!IMPORTANT]  
-            > U největších zabezpečení vyberte možnosti pro **místní stažení obsahu v případě potřeby spuštěného pořadí úloh** nebo **stažení veškerého obsahu místně před spuštěním pořadí úkolů**. Když vyberete jednu z těchto možností, Configuration Manager vytvoří hodnotu hash balíčku, aby se zajistila integrita balíčku. Když vyberete možnost **přístupu k obsahu přímo z distribučního bodu, pokud to vyžaduje běžící pořadí úloh**, Configuration Manager před spuštěním zadaného programu neověřuje hodnotu hash balíčku. Vzhledem k tomu, že lokalita nemůže zajistit integritu balíčku, je možné, že uživatelé s právy správce mohou měnit nebo manipulovat s obsahem balíčku.  
+    - **Možnosti nasazení**: Další informace najdete v tématu [Možnosti nasazení](#bkmk_deploy-options).
 
     - **Není-li místní distribuční bod k dispozici, použijte vzdálený distribuční bod**: Určete, zda mohou klienti používat distribuční body ze sousední skupiny hranic ke stažení obsahu, který je požadovaný pořadím úloh.  
 
@@ -178,6 +166,63 @@ Pomocí následujícího postupu můžete nasadit pořadí úloh do počítačů
 10. Pokud chcete tato nastavení uložit, abyste ho mohli znovu použít, na kartě **Souhrn** vyberte **Uložit jako šablonu**. Zadejte název šablony a vyberte nastavení, které chcete uložit.  
 
 11. Dokončete průvodce.  
+
+### <a name="deployment-options"></a><a name="bkmk_deploy-options"></a>Možnosti nasazení
+
+<!-- MEMDocs#328, SCCMDocs#2114 -->
+
+Tyto možnosti jsou na kartě **distribuční body** nasazení pořadí úloh. Jsou dynamické v závislosti na dalších výběrech v nasazení a atributů pořadí úkolů. Nemusíte vždycky zobrazovat všechny možnosti.
+
+> [!NOTE]  
+> Když použijete vícesměrové vysílání k nasazení operačního systému, Stáhněte obsah do počítačů podle potřeby nebo před spuštěním pořadí úloh.  
+
+- **Pokud to vyžaduje spuštěné pořadí úkolů, stáhnout veškerý obsah místně**: Určete, že klienti stáhnou obsah z distribučního bodu, který je potřebný pro pořadí úkolů. Klient spustí pořadí úloh. Když krok v pořadí úkolů vyžaduje obsah, stáhne se před spuštěním kroku.  
+
+- Před **spuštěním pořadí úloh stáhnout veškerý obsah místně**: Určete, že klienti stáhnou obsah z distribučního bodu předtím, než se spustí pořadí úkolů. Pokud pořadí úkolů zpřístupníte pro nasazení PXE a spouštěcí média na stránce **nastavení nasazení** , tato možnost se nezobrazí.  
+
+- **Přístup k obsahu přímo z distribučního bodu, pokud to vyžaduje běžící pořadí úloh**: Určete, jestli klienti spouštějí obsah z distribučního bodu. Tato možnost je k dispozici pouze v případě, že povolíte všechny balíčky přidružené k pořadí úkolů pro použití sdílené složky balíčku v distribučním bodě. Chcete-li obsahu povolit použití sdílené složky balíčku, nahlédněte na kartu **Přístup k datům** v nabídce **Vlastnosti** jednotlivých balíčků.  
+
+> [!IMPORTANT]  
+> U největších zabezpečení vyberte možnosti pro **místní stažení obsahu v případě potřeby spuštěného pořadí úloh** nebo **stažení veškerého obsahu místně před spuštěním pořadí úkolů**. Když vyberete jednu z těchto možností, Configuration Manager vytvoří hodnotu hash balíčku, aby se zajistila integrita balíčku. Když vyberete možnost **přístupu k obsahu přímo z distribučního bodu, pokud to vyžaduje běžící pořadí úloh**, Configuration Manager před spuštěním zadaného programu neověřuje hodnotu hash balíčku. Vzhledem k tomu, že lokalita nemůže zajistit integritu balíčku, je možné, že uživatelé s právy správce mohou měnit nebo manipulovat s obsahem balíčku.  
+
+#### <a name="example-1-one-deployment-option"></a>Příklad 1: jedna možnost nasazení
+
+Nasadíte pořadí úloh nasazení operačního systému, které disk vymaže a použije obrázek. Na stránce **nastavení nasazení** je zpřístupníte pro možnost, která zahrnuje média a technologii PXE:
+
+:::image type="content" source="media/deploy-setting-make-available.png" alt-text="Nasaďte pořadí úloh a zpřístupněte je následujícímu.":::
+
+Na stránce **distribuční body** je k dispozici pouze jedna možnost nasazení:
+
+- **Stažení obsahu v místním prostředí, pokud to vyžaduje běžící pořadí úloh**
+
+:::image type="content" source="media/deploy-option-1.png" alt-text="Nasazení pořadí úloh, jedna možnost nasazení":::
+
+Možnost **stáhnout veškerý obsah místně před spuštěním pořadí úloh** není k dispozici, protože nasazení je zpřístupněno pro média a technologii PXE.
+
+Možnost přístupu k **obsahu přímo z distribučního bodu, pokud to vyžaduje běžící pořadí úloh** , není k dispozici. Ne všechny odkazované obsahy používají sdílenou složku balíčků.
+
+#### <a name="example-2-two-deployment-options"></a>Příklad 2: dvě možnosti nasazení
+
+Nasadíte pořadí úloh nasazení operačního systému, které disk vymaže a použije obrázek. Na stránce **nastavení nasazení** je zpřístupníte **pouze klientům Configuration Manager**. Na stránce **distribuční body** jsou k dispozici dvě možnosti nasazení:
+
+- **Stažení obsahu v místním prostředí, pokud to vyžaduje běžící pořadí úloh**
+- **Před spuštěním pořadí úloh stáhnout veškerý obsah místně**
+
+:::image type="content" source="media/deploy-option-2.png" alt-text="Nasazení pořadí úloh, dvě možnosti nasazení":::
+
+Možnost přístupu k **obsahu přímo z distribučního bodu, pokud to vyžaduje běžící pořadí úloh** , není k dispozici. Ne všechny odkazované obsahy používají sdílenou složku balíčků.
+
+#### <a name="example-3-three-deployment-options"></a>Příklad 3: tři možnosti nasazení
+
+Máte několik balíčků se skripty pro správu a přidruženým obsahem. Na kartě **přístup k datům** ve vlastnostech balíčku nakonfigurujte všechny, aby se **zkopíroval obsah tohoto balíčku do sdílené složky balíčků v distribučních bodech**.
+
+Vytvoříte pořadí úkolů, které obsahuje pouze několik kroků **instalace** balíčků pro tyto balíčky skriptu a nasazení. Na stránce **nastavení nasazení** je jediná možnost zpřístupněna **pouze klientům Configuration Manager**. Tato možnost je dostupná jenom. Pořadí úkolů není pro nasazení operačního systému, protože k němu není přidružena spouštěcí bitová kopie. Na stránce **distribuční body** jsou k dispozici tři možnosti nasazení:
+
+- **Stažení obsahu v místním prostředí, pokud to vyžaduje běžící pořadí úloh**
+- **Před spuštěním pořadí úloh stáhnout veškerý obsah místně**
+- **Přístup k obsahu přímo z distribučního bodu, pokud to vyžaduje běžící pořadí úloh**
+
+:::image type="content" source="media/deploy-option-3.png" alt-text="Nasazení pořadí úloh, tři možnosti nasazení":::
 
 ## <a name="deploy-windows-10-in-place-upgrade-via-cmg"></a>Nasazení místního upgradu Windows 10 přes CMG
 

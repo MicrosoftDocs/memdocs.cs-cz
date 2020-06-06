@@ -3,13 +3,13 @@ author: mestew
 ms.author: mstewart
 ms.prod: configuration-manager
 ms.topic: include
-ms.date: 05/26/2020
-ms.openlocfilehash: ad725a2aeb01984d8bce71f66307792e8d1691ee
-ms.sourcegitcommit: 0d2f6132428b5fa994e5b770ab1d2bf7d78ac179
+ms.date: 06/05/2020
+ms.openlocfilehash: 3672127798b66d857b4a1dbd5014c02dfed8a7ee
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84226661"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84466898"
 ---
 <!--This file is shared by the CMPivot overview articles for both Microsoft Endpoint Manager tenant attach and Configuration Manager-->
 
@@ -28,7 +28,7 @@ CCMRecentlyUsedApplications | where CompanyName like '%Microsoft%'
 Entity jsou objekty, na které se dá dotázat z klienta. V současné době podporujeme následující entity:
 
 
-|Entita|Popis|
+|Entita|Description|
 |---|---|
 |AadStatus|Stav Azure Active Directory|
 |Administrators|Členové místní skupiny Administrators|
@@ -128,7 +128,6 @@ Entity jsou objekty, na které se dá dotázat z klienta. V současné době pod
 |ProtectedVolumeInformation|Informace o chráněném svazku|
 |Protocol (Protokol)|Protocol (Protokol)|
 |QuickFixEngineering|Technik rychlé opravy|
-|Registr ()|Všechny hodnoty pro určitý klíč registru|
 |SCSIController|Řadič SCSI|
 |SerialPortConfiguration|Konfigurace sériového portu|
 |SerialPorts|Sériové porty|
@@ -182,7 +181,7 @@ Entity jsou objekty, na které se dá dotázat z klienta. V současné době pod
 
 Operátory tabulky lze použít k filtrování, sumarizaci a transformaci datových proudů. V současné době jsou podporovány následující operátory:
 
-|Operátory tabulky|Popis|
+|Operátory tabulky|Description|
 |---|---|
 |count|Vrátí tabulku s jedním záznamem, který obsahuje počet záznamů.|
 |distinct|Vytvoří tabulku s jedinečnou kombinací zadaných sloupců vstupní tabulky.|
@@ -219,8 +218,8 @@ Následující tabulka shrnuje operátory:
 |! StartsWith|ZAROVNÁNÍ INDIREKCE RHS není počáteční dílčí sekvence LHS.|`'abc' !startswith 'bc'`|
 |EndsWith|ZAROVNÁNÍ INDIREKCE RHS je uzavírací podsekvence LHS|`'abc' endswith 'bc'`|
 |! EndsWith|ZAROVNÁNÍ INDIREKCE RHS není uzavírací podsekvence LHS.|`'abc' !endswith 'a'`|
-|and|True pouze v případě, že zarovnání INDIREKCE RHS a LHS mají hodnotu true|`(1 == 1) and (2 == 2)`|
-|or|True pouze v případě, že je true zarovnání INDIREKCE RHS nebo LHS|`(1 == 1) or (1 == 2)`|
+|a|True pouze v případě, že zarovnání INDIREKCE RHS a LHS mají hodnotu true|`(1 == 1) and (2 == 2)`|
+|nebo|True pouze v případě, že je true zarovnání INDIREKCE RHS nebo LHS|`(1 == 1) or (1 == 2)`|
 
 ## <a name="aggregation-functions"></a>Agregační funkce
 
@@ -264,10 +263,11 @@ Skalární funkce lze použít ve výrazech. V současné době jsou podporován
 > [!Important]
 > Když spouštíte CMPivot z centra pro správu Microsoft Endpoint Manageru, tyto položky se nepodporují.
 
-|Typ|Položka|Popis|
+|Typ|Položka|Description|
 |--|--|---|
 |Entita|AccountSID|SID účtu|
 |Entita|Obsah ()|Obsah konkrétního souboru|
 |Entita|NAPClient|Klient NAP|
 |Entita|NAPSystemHealthAgent|Agent stavu systému NAP|
+|Entita|Registr ()|Všechny hodnoty pro určitý klíč registru<!--7371183-->|
 |Operátor tabulky|činit|Vykreslí výsledky jako grafický výstup.|

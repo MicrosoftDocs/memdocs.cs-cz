@@ -10,12 +10,12 @@ ms.assetid: c5cb5753-5728-4f81-b830-a6fd1a3e105c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4dead573e1744a5c8b84ff954e85be43af644486
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 70d4930da712eccff8bdb1f1986a68aa5fe77644
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83878497"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84455272"
 ---
 # <a name="microsoft-connected-cache-in-configuration-manager"></a>Mezipaměť propojená Microsoftem v Configuration Manager
 
@@ -63,7 +63,7 @@ Když nakonfigurujete klienty tak, aby používali Server připojené mezipamět
 
   - Neinstalujte funkci [směrování požadavků aplikace](https://docs.microsoft.com/iis/extensions/planning-for-arr/application-request-routing-version-2-overview) IIS (ARR). Připojená mezipaměť nainstaluje ARR a nakonfiguruje její nastavení. Společnost Microsoft nemůže zaručit, že konfigurace ARR v mezipaměti není v konfliktu s jinými aplikacemi na serveru, které tuto funkci využívají i.
 
-  - Distribuční bod vyžaduje internetový přístup ke cloudu Microsoftu. Konkrétní adresy URL se můžou lišit v závislosti na konkrétním obsahu s povoleným cloudem. Další informace najdete v tématu [požadavky na přístup k Internetu](../network/internet-endpoints.md).
+  - Distribuční bod vyžaduje internetový přístup ke cloudu Microsoftu. Konkrétní adresy URL se můžou lišit v závislosti na konkrétním obsahu s povoleným cloudem. Ujistěte se také, že jste povolili koncové body pro optimalizaci doručení. Další informace najdete v tématu [požadavky na přístup k Internetu](../network/internet-endpoints.md).
 
   - Od verze 2002 může aplikace připojené mezipaměti používat neověřené proxy server pro přístup k Internetu. Další informace najdete v tématu [konfigurace proxy serveru pro server systému lokality](../network/proxy-server-support.md#configure-the-proxy-for-a-site-system-server).<!-- 5856396 -->
 

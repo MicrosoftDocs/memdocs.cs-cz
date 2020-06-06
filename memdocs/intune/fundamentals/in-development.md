@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 90039e9bb75bcf7c266ac033408f87d37e27ef8d
-ms.sourcegitcommit: 7a5196d4d9736c5cd52a23155c479523e52a097d
+ms.openlocfilehash: 5fb4bfba0dbcdfe28b2fbce8123b0e2e919fd308
+ms.sourcegitcommit: e618ea7cb864635c838b672bc71a1e926bf7c047
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 06/05/2020
-ms.locfileid: "84436750"
+ms.locfileid: "84458083"
 ---
 # <a name="in-development-for-microsoft-intune"></a>Ve vývoji pro Microsoft Intune
 
@@ -81,14 +81,7 @@ Pokud chcete nakonfigurovat portál společnosti v Asam ve Správci Microsoft En
 ## <a name="device-configuration"></a>Konfigurace zařízení
 
 ### <a name="set-device-compliance-state-from-third-party-mdm-partners---6361689-----"></a>Nastavit stav dodržování předpisů zařízením od partnerů MDM třetích stran<!-- 6361689   -->
-Brzy budete moct umožnit, aby stav dodržování předpisů zařízení s iOS nebo Androidem, která spravuje partneři správy mobilních zařízení (MDM) třetích stran, byl nastavený v Azure Active Directory (Azure AD).
-
-Pokud je v Intune nakonfigurované dodržování předpisů pro partnery, data o dodržování předpisů pro zařízení spravovaná partnerem MDM třetí strany se odešlou do Intune pro vyhodnocení shody. Výsledky se pak předají do služby Azure AD, kde se data o dodržování předpisů používají k vymáhání zásad podmíněného přístupu pro tato zařízení.
-
-Podpora bude brzy zahrnovat následující partnery:
-- VMware WorkspaceONE (dříve označované jako vzsledováním)
-
-Pokud chcete povolit partnera pro dodržování předpisů zařízením, použijte nový uzel v centru pro správu Microsoft Endpoint Manageru: konektory **správy tenanta**  >  **a**  >  **Správa dodržování předpisů partnerům** , kde vyberete **Přidat partnera dodržování předpisů**.
+Microsoft 365 zákazníci, kteří vlastní řešení MDM třetí strany, budou moci vyhovět zásadám podmíněného přístupu pro aplikace Microsoft 365 v iOS a Androidu prostřednictvím integrace se službou Microsoft Intune dodržování předpisů zařízením. Dodavatel MDM třetí strany bude využívat službu Intune pro dodržování předpisů zařízením k odesílání dat o dodržování předpisů zařízením do Intune. Intune se pak vyhodnotí a určí, jestli je zařízení důvěryhodné, a nastavte atributy podmíněného přístupu ve službě Azure AD.  Zákazníci budou muset nastavit zásady podmíněného přístupu Azure AD z centra pro správu Microsoft Endpoint Manageru nebo z portálu Azure AD.  
 
 ### <a name="add-a-link-to-your-company-portal-support-website-to-emails-for-noncompliance---7225498------"></a>Přidání odkazu na web podpory portálu společnosti na e-maily při nedodržení předpisů<!-- 7225498    -->
 Do šablony e-mailových oznámení přidáváme nové nastavení, které přidá odkaz na web portál společnosti a pošle e-mailová oznámení, která se odesílají uživatelům nevyhovujících zařízení. (**Zabezpečení**  >  koncového bodu **Dodržování předpisů zařízením**  >  **Oznámení**  >  **Vytvořit oznámení**).  Uživatelé, kteří obdrží e-mail, protože zařízení, které nedodržuje předpisy, může pomocí odkazu otevřít web a získat další informace o tom, proč jejich zařízení nedodržuje předpisy.

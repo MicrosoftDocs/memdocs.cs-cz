@@ -10,12 +10,12 @@ ms.assetid: a44006eb-8650-49f6-94e1-18fa0ca959ee
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1b447e5c8d34a4b8758fa0fd6109113b0675a635
-ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
+ms.openlocfilehash: 39d6bf22cb24492a0f4e3f59313184ce522b5d09
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84347011"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84455000"
 ---
 # <a name="install-and-assign-configuration-manager-windows-10-clients-using-azure-ad-for-authentication"></a>Instalace a přiřazení Configuration Manager klientů s Windows 10, kteří používají Azure AD k ověřování
 
@@ -95,7 +95,7 @@ Parametr **/MP** a vlastnost **CCMHOSTNAME** určují jednu z následujících m
 - Brána pro správu cloudu
 - Internetový bod správy
 
-Vlastnost **SMSMP** Určuje buď místní, nebo internetový bod správy.
+Vlastnost **SMSMP** určuje místní bod správy. Není to nutné. Doporučuje se pro zařízení připojená k Azure AD, která se předávají do intranetu, takže můžou najít místní bod správy.
 
 V tomto příkladu se používá brána pro správu cloudu. Nahrazuje vzorové hodnoty:`ccmsetup.exe /mp:https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=ABC SMSMP=https://mp1.contoso.com AADTENANTID=daf4a1c2-3a0c-401b-966f-0b855d3abd1a AADCLIENTAPPID=7506ee10-f7ec-415a-b415-cd3d58790d97 AADRESOURCEURI=https://contososerver`
 
