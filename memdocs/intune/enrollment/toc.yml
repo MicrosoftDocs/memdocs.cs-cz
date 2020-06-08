@@ -93,10 +93,13 @@
       items:
         - name: Automatická registrace zařízení
           href: device-enrollment-program-enroll-ios.md
-        - name: Nastavení registrace uživatele pro iOS/iPadOS a iPadOS
-          href: ios-user-enrollment.md
-        - name: Podporované akce a možnosti u registrace uživatele
-          href: ios-user-enrollment-supported-actions.md
+          displayName: dep; ade; bulk enroll
+        - name: Registrace uživatelů a zařízení
+          items:
+            - name: Vytvoření profilu
+              href: ios-user-enrollment.md
+            - name: Podporované akce v rámci registrace uživatelů
+              href: ios-user-enrollment-supported-actions.md
         - name: Apple School Manager
           href: apple-school-manager-set-up-ios.md
         - name: Apple Configurator
