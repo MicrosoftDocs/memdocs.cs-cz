@@ -10,12 +10,12 @@ ms.assetid: 23e1e4dc-623a-4521-ad04-ae9482927097
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8186b45a0b0c74840582052f9c585c0557180493
-ms.sourcegitcommit: 578ad1e8088f7065b565e8a4f4619f5a26b94001
+ms.openlocfilehash: 1987ba504630ab1d4b23cdb54710f0cbaa3db28a
+ms.sourcegitcommit: 7f542c97ac55bbd329f5befda97d671213c24e9a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81721945"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84506244"
 ---
 # <a name="create-configuration-items-for-windows-devices-with-on-premises-mdm-in-configuration-manager"></a>Vytvoření položek konfigurace pro zařízení s Windows s místní správou MDM v Configuration Manager
 
@@ -62,7 +62,7 @@ Obecnější informace o nastavení dodržování předpisů v Configuration Man
 
     - **Upozornění**
 
-    - **Kritická**
+    - **Kritické**
 
     - **Kritické s událostí**: zařízení, které nesplní toto pravidlo dodržování předpisů, nahlásí u sestav Configuration Manager závažnost selhání typu **kritické** . Také protokoluje stav nedodržující předpisy jako událost systému Windows v protokolu událostí aplikace.
 
@@ -89,8 +89,8 @@ Tato nastavení platí jenom pro zařízení s Windows 10 a novějším.
 - **Počet zapamatovaných hesel**: zabraňuje opakovanému použití dřív použitých hesel.
 - **Počet neúspěšných pokusů o přihlášení před vymazáním zařízení**: Pokud tento počet pokusů o přihlášení selže, zařízení MDM ho vymaže.
 - **Doba nečinnosti před uzamčením zařízení**: zadejte dobu, po kterou může být zařízení nečinné, než bude uzamčené. Zařízení je nečinné, když není žádný uživatelský vstup.
-- **Složitost hesla**: zvolte `1234`, jestli můžete zadat číselný kód PIN, například, nebo jestli musíte zadat silné heslo.
-  - **Počet složitých znakových sad vyžadovaných v hesle**: Pokud je složitost hesla **silná**, vyberte, kolik typů znaků heslo vyžaduje: velká písmena, malá písmena, číslice nebo symboly. Ve výchozím nastavení je `2`tato hodnota.
+- **Složitost hesla**: zvolte, jestli můžete zadat číselný kód PIN, například `1234` , nebo jestli musíte zadat silné heslo.
+  - **Počet složitých znakových sad vyžadovaných v hesle**: Pokud je složitost hesla **silná**, vyberte, kolik typů znaků heslo vyžaduje: velká písmena, malá písmena, číslice nebo symboly. Ve výchozím nastavení je tato hodnota `2` .
 - **Odeslat PIN obnovení hesla na Exchange Server**
 
 ### <a name="device"></a>Zařízení
@@ -164,7 +164,7 @@ Tato nastavení jsou pro zařízení s Windows 8.1 a Windows 10.
 - **Úroveň zabezpečení pro zónu důvěryhodných lokalit**: Nastavte úroveň zabezpečení pro zónu důvěryhodných lokalit: vysoká, střední-vysoká, střední, střední, nízká nebo nízká.
 - **Úroveň zabezpečení pro zónu lokalit s omezeným přístupem**: Nastavte úroveň zabezpečení pro zónu lokalit s omezeným přístupem: vysoká.
 - **Obory názvů pro zónu intranetu**: Nakonfigurujte weby tak, aby se přidaly nebo odebraly ze zóny intranetu.
-- **Přejít na intranetový web pro použití jediného slova**: povolí nebo zakáže, aby Internet Explorer automaticky přešel na intranetový web, pokud uživatel zadá platný název lokality bez předchozího protokolu, například `https://`.
+- **Přejít na intranetový web pro použití jediného slova**: povolí nebo zakáže, aby Internet Explorer automaticky přešel na intranetový web, pokud uživatel zadá platný název lokality bez předchozího protokolu, například `https://` .
 - **Možnost nabídky podnikového režimu**: umožňuje uživatelům aktivovat a deaktivovat podnikový režim z nabídky **nástroje** Internet Exploreru.
   - **Umístění sestavy protokolování (URL)**: Pokud je aktivní režim rozlehlé sítě, zadejte adresu URL pro protokolování navštívených webů.
 - **Umístění seznamu webů podnikového režimu (URL)**: Pokud je aktivní podnikový režim, zadejte seznam webů, které ho používají.
@@ -327,7 +327,7 @@ Tato nastavení platí jenom pro zařízení s Windows 10 Team.
 
 Další informace o tom, jak nakonfigurovat ochranu podnikových dat pomocí Configuration Manager, najdete v tématu [Ochrana podnikových dat pomocí Windows Information Protection (NV)](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip).
 
-### <a name="microsoft-edge"></a>Microsoft Edge
+### <a name="microsoft-edge-legacy"></a>Microsoft Edge starší verze
 
 Tato nastavení platí jenom pro zařízení s Windows 10 a novějším.  
 
@@ -376,7 +376,7 @@ Tato nastavení platí jenom pro zařízení s Windows 10 a novějším.
 - **Detekce potenciálně nežádoucích aplikací**: chrání zařízení před spuštěním softwaru, který je klasifikován Defenderem jako potenciálně nežádoucí. Můžete chránit před těmito aplikacemi nebo použít režim auditu k hlášení, že uživatel nainstaluje potenciálně nežádoucí aplikaci.
 - **Vyloučení souborů a složek**: do seznamu vyloučení přidejte jeden nebo více souborů a složek. Příkladem je `C:\Path` nebo `%ProgramFiles%\Path\filename.exe`. Defender nezahrnuje tyto soubory a složky v reálném čase nebo v naplánovaných kontrolách.
 - **Vyloučení přípony souboru**: do seznamu vyloučení přidejte jednu nebo více přípon souborů. Příkladem je `java` nebo `exe`. Defender neobsahuje žádné soubory s těmito příponami v reálném čase nebo v plánovaných kontrolách.
-- **Vyloučení procesů**: přidejte konkrétní procesy do seznamu vyloučení. Například, `C:\path\myproc.exe`. Tento typ vyloučení podporuje pouze následující rozšíření: `exe`, `com`nebo. `scr` Defender nezahrnuje tyto procesy v reálném čase nebo v plánovaných kontrolách.
+- **Vyloučení procesů**: přidejte konkrétní procesy do seznamu vyloučení. Například, `C:\path\myproc.exe`. Tento typ vyloučení podporuje pouze následující rozšíření: `exe` , `com` nebo `scr` . Defender nezahrnuje tyto procesy v reálném čase nebo v plánovaných kontrolách.
 
 ### <a name="additional-settings"></a>Další nastavení
 

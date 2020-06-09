@@ -10,12 +10,12 @@ ms.assetid: a4d8cda2-bc9b-4fb4-aa0d-23c31b4fc60b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2523d06034f4a7effe769235cb5a4ede4df7e167
-ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
+ms.openlocfilehash: 2c03d5d06dc6b49ceff6af8ce862eb19cb4a517a
+ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83764114"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84531464"
 ---
 # <a name="plan-for-bitlocker-management"></a>Plánování správy nástroje BitLocker
 
@@ -23,7 +23,7 @@ ms.locfileid: "83764114"
 
 <!-- 3601034 -->
 
-Počínaje verzí 1910 použijte Configuration Manager ke správě nástroj BitLocker Drive Encryption (BDE) pro místní klienty Windows. Poskytuje úplnou správu životního cyklu BitLockeru, která může nahradit použití nástroje Microsoft BitLocker Administration and Monitoring (MBAM).
+Počínaje verzí 1910 použijte Configuration Manager ke správě nástroj BitLocker Drive Encryption (BDE) pro místní klienty Windows, které jsou připojené ke službě Active Directory. Azure Active Directory se připojili nebo klienti v pracovní skupině nejsou podporováni. Poskytuje úplnou správu životního cyklu BitLockeru, která může nahradit použití nástroje Microsoft BitLocker Administration and Monitoring (MBAM).
 
 > [!Note]  
 > Configuration Manager ve výchozím nastavení nepovolí tuto volitelnou funkci. Tuto funkci musíte před použitím povolit. Další informace naleznete v části [Enable optional features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_options).  
@@ -92,7 +92,7 @@ Umožněte uživatelům využít klíč s jedním klíčem k odemknutí zaříze
     > [!NOTE]
     > Nainstalujte jenom Samoobslužný portál a web pro správu a monitorování s primární databází lokality. V hierarchii nainstalujte tyto weby pro každou primární lokalitu.
 
-- Na webovém serveru, který bude hostitelem samoobslužného portálu, nainstalujte [Microsoft ASP.NET MVC 4,0](https://docs.microsoft.com/aspnet/mvc/mvc4).
+- Na webovém serveru, který bude hostitelem samoobslužného portálu, nainstalujte [Microsoft ASP.NET MVC 4,0](https://docs.microsoft.com/aspnet/mvc/mvc4) a .NET Framework 3,5 před vytvořením hvězdičky v procesu instalace. Další požadované role a funkce Windows serveru se nainstalují automaticky během procesu instalace na portálu.
 
 - Uživatelský účet, který spouští instalační skript portálu, potřebuje práva **správce** systému SQL na serveru databáze lokality. Během procesu instalace skript nastaví práva role přihlášení, uživatel a databáze SQL pro účet počítače webového serveru. Tento uživatelský účet můžete odebrat z role sysadmin po dokončení instalace samoobslužného portálu a webu pro správu a monitorování.
 

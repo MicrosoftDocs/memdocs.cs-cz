@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 04/07/2020
 ms.topic: how-to
 ms.service: microsoft-intune
+ms.subservice: apps
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 71b6468975012f41b0c34bbfbe5921bc8a60cb57
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: baaec1e48579313085c039872cc931891c367132
+ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83985804"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84531532"
 ---
 # <a name="add-microsoft-edge-for-windows-10-to-microsoft-intune"></a>Přidejte Microsoft Edge pro Windows 10 a Microsoft Intune
 

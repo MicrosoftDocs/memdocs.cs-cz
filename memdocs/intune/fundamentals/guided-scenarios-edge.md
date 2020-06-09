@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 01/09/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: fundamentals
 ms.localizationpriority: high
 ms.technology: ''
 ms.reviewer: dagerrit
@@ -16,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 49f9b9076d20c1f5d4740a6f8b1b9883e12ce629
-ms.sourcegitcommit: a1da477542fb0ff360685d6eb58ef43e37ac3950
+ms.openlocfilehash: b77fd0edf689714c3a3fbaaca44df6e042687acb
+ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83853532"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84531821"
 ---
 # <a name="guided-scenario---deploy-microsoft-edge-for-mobile"></a>Scénář s asistencí – nasazení Microsoft Edge pro mobilní zařízení
 

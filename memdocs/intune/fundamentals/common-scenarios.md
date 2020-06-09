@@ -8,6 +8,7 @@ manager: dougeby
 ms.date: 11/29/2018
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: fundamentals
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 1f37d4ff-b5a7-4a89-8884-a6184908b09c
@@ -16,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f2244f484b44673454b1bbb6ba6286c253021517
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 644235178d39ff1e7c641383c4fb45dde80cf4b5
+ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079259"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84531872"
 ---
 # <a name="common-ways-to-use-microsoft-intune"></a>Běžné způsoby použití Microsoft Intune
 

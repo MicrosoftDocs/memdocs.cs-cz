@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/07/2020
+ms.date: 06/08/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 235a79f644bf15b82eb9e8750f04519238760aca
-ms.sourcegitcommit: 5d32dd481e2a944465755ce74e14c835cce2cd1c
+ms.openlocfilehash: f52c3bced4d08d32082b424a1ee0e90a338d07a5
+ms.sourcegitcommit: 7f542c97ac55bbd329f5befda97d671213c24e9a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/18/2020
-ms.locfileid: "83551923"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84506277"
 ---
 # <a name="ios-and-ipados-device-settings-to-use-common-iosipados-features-in-intune"></a>nastavení zařízení s iOS a iPadOS pro použití běžných funkcí iOS/iPadOS v Intune
 
@@ -78,6 +78,11 @@ Tato funkce platí pro:
 - iPadOS 13,0 a novější
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Nastavení platí pro: automatický zápis zařízení (pod dohledem)
+
+> [!NOTE]
+> Do Docku, stránky nebo složky na stránce přidejte jenom jednu aplikaci. Přidání stejné aplikace na všech místech zabraňuje tomu, aby se aplikace zobrazovala na zařízeních a mohla zobrazovat chyby hlášení.
+>
+> Například pokud přidáte aplikaci kamera do Docku a stránku, aplikace kamery není zobrazená a hlášení může pro tuto zásadu zobrazovat chybu. Chcete-li přidat aplikaci kamera do rozložení domovské obrazovky, vyberte pouze Dock nebo Page, nikoli obojí.
 
 ### <a name="dock"></a>Vyjměte
 
@@ -337,7 +342,7 @@ Tato funkce platí pro:
   - **Klíč**: zadejte název položky, kterou chcete přidat, například `user name` .
   - **Typ**: zadejte typ dat. Možnosti:
 
-    - String
+    - Řetězec
     - Boolean: v **konfigurační hodnotě**zadejte `True` nebo `False` .
     - Integer: v **hodnotě konfigurace**zadejte číslo.
 

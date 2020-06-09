@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 04/07/2020
 ms.topic: how-to
 ms.service: microsoft-intune
+ms.subservice: apps
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2ab0674cdf584aac2fe3b0f8284eadf544778e5b
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: dec48b7037788c8951cd5bc5fcd4206809ca69f6
+ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83984633"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84531584"
 ---
 # <a name="add-microsoft-edge-to-macos-devices-using-microsoft-intune"></a>Přidání Microsoft Edge do zařízení macOS pomocí Microsoft Intune
 

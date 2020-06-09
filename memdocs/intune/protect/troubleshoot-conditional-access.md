@@ -8,6 +8,7 @@ ms.author: brenduns
 manager: dougeby
 ms.date: 07/23/2019
 ms.topic: troubleshooting
+ms.subservice: protect
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5d56d3982a036ace198ceae9bf2d01a8c12de6d5
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 95c4397a6f8a7c11d14cabfb9e38ee44b54fa5d1
+ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079140"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84531753"
 ---
 # <a name="troubleshoot-conditional-access"></a>Řešení potíží s podmíněným přístupem
 Tento článek popisuje, co dělat, když se vašim uživatelům nedaří získat přístup k prostředkům chráněným pomocí podmíněného přístupu, nebo když uživatelé mají přístup k chráněným prostředkům, ale měli byste je zablokovat.
@@ -42,7 +43,7 @@ Aby podmíněný přístup fungoval, musí být splněné následující požada
 
 - Uživatel i zařízení musí vyhovovat přiřazeným zásadám dodržování předpisů Intune.
 
-- Uživateli se standardně musí přiřadit zásady dodržování předpisů pro zařízení. To může záviset na konfiguraci nastavení **označení zařízení bez přiřazených zásad dodržování předpisů,** která jsou v**nastavení zásad dodržování** předpisů **zařízením** > v portálu pro správu Intune.
+- Uživateli se standardně musí přiřadit zásady dodržování předpisů pro zařízení. To může záviset na konfiguraci nastavení **označení zařízení bez přiřazených zásad dodržování předpisů,** která jsou **Device Compliance**  >  v**nastavení zásad dodržování** předpisů zařízením v portálu pro správu Intune.
 
 - Pokud uživatel nepoužívá Outlook, ale nativního poštovního klienta daného zařízení, musí být v zařízení aktivovaný protokol Exchange ActiveSync. K tomu dochází automaticky pro zařízení se systémy iOS/iPadOS, Windows Phone a Android Knox.
 

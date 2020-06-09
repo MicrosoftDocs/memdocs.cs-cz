@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 05/19/2020
 ms.topic: how-to
 ms.service: microsoft-intune
+ms.subservice: apps
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 24938f85cf85e9c5934a0e26029ec2ccfc5c33a7
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 9cc226279ea72a804a0d6ac0fa63f0b9bb90fe7a
+ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989455"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84531549"
 ---
 # <a name="add-microsoft-defender-atp-to-macos-devices-using-microsoft-intune"></a>Přidání ATP Microsoft Defenderu do zařízení macOS pomocí Microsoft Intune
 

@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 05/08/2020
-ms.togit pic: end-user-help
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: cbfdd10ce15a477fe574a486ee3d4a3779d18e90
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 2be81c19a48d89876f71293e6f868d8cee0e1192
+ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881657"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84531396"
 ---
 # <a name="enroll-device-with-android-work-profile"></a>Registrace zařízení pomocí pracovního profilu Androidu
 

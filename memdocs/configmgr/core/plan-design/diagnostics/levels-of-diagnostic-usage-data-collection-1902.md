@@ -10,12 +10,12 @@ ms.assetid: bce9e299-7b3a-4f51-8863-a322877daa2c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 77b4af9d6f5c84cc2c7aaa62d151f9c89b7f474a
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 0d9feeacf77bbd54c9ac38c2c05ee1560eeacb80
+ms.sourcegitcommit: 7f542c97ac55bbd329f5befda97d671213c24e9a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81720363"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84506311"
 ---
 # <a name="diagnostic-and-usage-data-for-version-1902"></a>Data o diagnostice a použití pro verzi 1902
 
@@ -314,7 +314,7 @@ Pro Configuration Manager verze 1902 Tato úroveň zahrnuje následující data:
 
 - Zásady Windows Hello pro firmy (vytvořené, nasazené)  
 
-- Počet nasazených zásad prohlížeče Microsoft Edge  
+- Počet nasazených zásad prohlížeče starší verze Microsoft Edge  
 
 - ***[Nové]*** Počet zásad OneDrive (vytvořených, nasazených)
 

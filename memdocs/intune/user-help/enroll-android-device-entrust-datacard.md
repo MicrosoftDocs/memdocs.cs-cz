@@ -9,6 +9,7 @@ ms.date: 04/17/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: ''
 searchScope:
@@ -18,12 +19,12 @@ ms.reviewer: jeyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 16d14a802c82918656741c137da672e501ddd41a
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: f59d3c0d06e9b12acab3292ba0c977b181e7c07e
+ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83879372"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84531787"
 ---
 # <a name="set-up-android-device-with-company-portal-and-entrust-datacard"></a>Nastavení zařízení s Androidem pomocí Portál společnosti a Entrust Datacard
 
@@ -144,7 +145,7 @@ V této části zadáte svůj token poskytovaný společností. Až budete hotov
 
 4. Vyberte **zadat kód**.  
 
-5. Na obrazovce **Kontrola nebo zadání kódu** zadejte kód, který vám vaše organizace poskytla.  Pak klikněte na **Další**.  
+5. Na obrazovce **Kontrola nebo zadání kódu** zadejte kód, který vám vaše organizace poskytla.  Potom klikněte na **Další**.  
 
    ![Příklad obrázku skenování nebo zadání kódu obrazovky, zvýraznění tlačítka Další](./media/token-intune-app-04.png)  
 

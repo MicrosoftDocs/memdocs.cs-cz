@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/21/2020
+ms.date: 06/03/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dfa830f1e7bfd87c20c1aed78b933f81e96b8dca
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 35cf4b3afb766d8729d3438d2d8c61e1d79f4791
+ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988646"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84531736"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>Vytvoření a přiřazení profilů certifikátů SCEP v Intune
 
@@ -226,7 +226,17 @@ Až [nakonfigurujete infrastrukturu](certificates-scep-configure.md) pro podporu
 
    - **Adresy URL serveru SCEP**:
 
-     Zadejte jednu nebo více adres URL pro servery NDES, které vystavují certifikáty prostřednictvím SCEP. Zadejte třeba `https://ndes.contoso.com/certsrv/mscep/mscep.dll`. V případě potřeby můžete přidat další adresy URL SCEP pro vyrovnávání zatížení, protože adresy URL se v profilu náhodně přidávají do zařízení. Pokud jeden ze serverů SCEP není dostupný, požadavek SCEP selže a je možné, že u pozdějších vrácení se změnami zařízení může být žádost o certifikát vytvořená na stejném serveru, který je mimo provoz.
+     Zadejte jednu nebo více adres URL pro servery NDES, které vystavují certifikáty prostřednictvím SCEP. Zadejte třeba `https://ndes.contoso.com/certsrv/mscep/mscep.dll`.
+
+     Podle potřeby můžete přidat další adresy URL SCEP pro vyrovnávání zatížení. Zařízení vytvářejí tři samostatná volání serveru NDES; Chcete-li získat přístup k serverům, získat veřejný klíč a odeslat žádost o podepsání. Když použijete více adres URL, může vyrovnávání zatížení mít za následek jinou adresu URL, která se používá pro následné hovory na server NDES. Pokud je při následném volání během stejné žádosti kontaktován jiný server, požadavek se nezdaří.
+
+     Chování pro správu adresy URL serveru NDES je specifické pro každou platformu zařízení:
+
+     - **Android**: zařízení náhodně vypíše seznam adres URL přijatých v zásadách SCEP a pak bude v seznamu fungovat až po nalezení přístupového serveru NDES. Zařízení pak bude nadále používat stejnou adresu URL a server prostřednictvím celého procesu. Pokud zařízení nemá přístup k žádným serverům NDES, proces se nezdařil.
+     - **iOS/iPadOS**: Intune náhodně předává adresy URL a poskytuje jednu adresu URL zařízení. Pokud zařízení nemá přístup k serveru NDES, požadavek SCEP se nezdařil.
+     - **Windows**: seznam adres URL NDES je náhodný a pak se předává do zařízení s Windows, které se pak pokusí v přijatém pořadí, dokud se nenajde ten, který je k dispozici. Pokud zařízení nemá přístup k žádným serverům NDES, proces se nezdařil.
+
+     Pokud se zařízení neúspěšně dorazí na stejný server NDES během kteréhokoliv ze tří volání na server NDES, požadavek SCEP se nezdaří. K tomu může dojít například v případě, že řešení vyrovnávání zatížení poskytuje jinou adresu URL pro druhý nebo třetí volání serveru NDES nebo poskytuje jiný skutečný server NDES založený na virtualizované adrese URL pro NDES. Po neúspěšné žádosti se zařízení znovu pokusí o postup v příštím cyklu zásad, počínaje náhodným seznamem adres URL NDES (nebo jedné adresy URL pro iOS/iPadOS).  
 
 8. Vyberte **Další**.
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8eaa636659cb9e2382f61fb668d8aec2ecd75f7a
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 5ee1f3b68a6c78ee1099f8adcbfc935d9fa61103
+ms.sourcegitcommit: 7f542c97ac55bbd329f5befda97d671213c24e9a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990172"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84506252"
 ---
 # <a name="use-and-manage-android-enterprise-devices-with-oemconfig-in-microsoft-intune"></a>Používání a Správa zařízení s Androidem Enterprise pomocí OEMConfig v Microsoft Intune
 
@@ -162,6 +162,7 @@ V porovnání se standardními aplikacemi aplikace OEMConfig rozšiřují opráv
 | HMDGlobal-7,2 | com. hmdglobal. app. oemconfig. n7_2 | 
 | HMDGlobal-4,2 | com. hmdglobal. app. oemconfig. n4_2 | 
 | Tiskárny | JP. Kyocera. enterprisedeviceconfig |  |
+| Panasonic | com. Panasonic. Mobile. oemconfig | |
 | Samsung | com. Samsung. Android. Knox. KPU | [Příručka pro správce modulů plug-in služby Knox](https://docs.samsungknox.com/knox-service-plugin/admin-guide/index.htm) |
 | Seuic | com. seuic. seuicoemconfig | |
 | Spectralink – čárové kódy | com. Spectralink. čárový kód. Service |  |

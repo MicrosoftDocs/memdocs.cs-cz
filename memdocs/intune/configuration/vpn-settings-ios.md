@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/17/2020
+ms.date: 06/08/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 74e889419dcaaa75c2a31fe16931dddd84d1a967
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 2e4bf8a9327f43efc613c7210370e29c46551182
+ms.sourcegitcommit: 7f542c97ac55bbd329f5befda97d671213c24e9a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80086539"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84506192"
 ---
 # <a name="add-vpn-settings-on-ios-and-ipados-devices-in-microsoft-intune"></a>Přidání nastavení sítě VPN v zařízeních s iOS a iPadOS v Microsoft Intune
 
@@ -49,7 +49,7 @@ Z následujícího seznamu dodavatelů vyberte typ připojení VPN:
 - **Cisco (IPSec)**
 - **Citrix VPN**
 - **Citrix SSO**
-- **Zscaler**: Pokud chcete použít podmíněný přístup, nebo pokud chcete uživatelům dovolit obejít přihlašovací obrazovku Zscaler, musíte do svého účtu Azure AD integrovat Zscaler Private Access (ZPA). Podrobné pokyny najdete v [dokumentaci k aplikaci Zscaler](https://help.zscaler.com/zpa/configuration-example-microsoft-azure-ad). 
+- **Zscaler**: Pokud chcete použít podmíněný přístup, nebo pokud chcete uživatelům dovolit obejít přihlašovací obrazovku Zscaler, musíte do svého účtu Azure AD integrovat Zscaler Private Access (ZPA). Podrobné pokyny najdete v [dokumentaci k aplikaci Zscaler](https://help.zscaler.com/zpa/configuration-guide-microsoft-azure-ad).
 - **IKEv2**: [Nastavení IKEv2](#ikev2-settings) (v tomto článku) popisuje vlastnosti.
 - **Vlastní VPN**
 
@@ -106,7 +106,7 @@ Nastavení, která jsou v následujícím seznamu, jsou ovlivněná zvoleným ty
 
 ## <a name="ikev2-settings"></a>Nastavení IKEv2
 
-Tato nastavení se použijí, když zvolíte **typ** > připojení**IKEv2**.
+Tato nastavení se použijí, když zvolíte **Typ připojení**  >  **IKEv2**.
 
 - **Vždycky zapnutá síť VPN**: **Povolit** nastaví klienta VPN tak, aby se automaticky připojoval a znovu připojil k síti VPN. Neustále aktivní připojení VPN zůstávají ve spojení nebo se ihned připojí, jakmile uživatel zamkne zařízení, zařízení se restartuje nebo se změní bezdrátová síť. Pokud je nastavené na **Zakázat** (výchozí), je vždycky zapnutá síť VPN pro všechny klienty VPN. Pokud je tato možnost povolená, nakonfigurujte taky:
 
@@ -164,8 +164,8 @@ Tato nastavení se použijí, když zvolíte **typ** > připojení**IKEv2**.
   - **Střední** (výchozí): odešle zprávu kontroly stavu kontroly každých 10 minut.
   - **Vysoká**: pošle zprávu o prohození každých 60 sekund.
 
-- **Minimální rozsah verze TLS**: zadejte minimální verzi TLS, kterou chcete použít. Zadejte `1.0`, `1.1`nebo `1.2`. Pokud necháte pole prázdné, použije se výchozí `1.0` hodnota.
-- **Maximální hodnota rozsahu verze TLS**: zadejte maximální verzi TLS, která se má použít. Zadejte `1.0`, `1.1`nebo `1.2`. Pokud necháte pole prázdné, použije se výchozí `1.2` hodnota.
+- **Minimální rozsah verze TLS**: zadejte minimální verzi TLS, kterou chcete použít. Zadejte `1.0` , `1.1` nebo `1.2` . Pokud necháte pole prázdné, použije se výchozí hodnota `1.0` .
+- **Maximální hodnota rozsahu verze TLS**: zadejte maximální verzi TLS, která se má použít. Zadejte `1.0` , `1.1` nebo `1.2` . Pokud necháte pole prázdné, použije se výchozí hodnota `1.2` .
 
 > [!NOTE]
 > Při použití ověřování uživatelů a certifikátů je potřeba nastavit minimální a maximální rozsah verze TLS.
@@ -187,7 +187,7 @@ Tato nastavení se použijí, když zvolíte **typ** > připojení**IKEv2**.
     - SHA2-256 (výchozí)
     - SHA2 – 384
     - SHA2 – 512
-  - **Skupina Diffie-Hellman**: vyberte skupinu, kterou chcete. Výchozí hodnota je `2`skupina.
+  - **Skupina Diffie-Hellman**: vyberte skupinu, kterou chcete. Výchozí hodnota je skupina `2` .
   - **Doba života** (minuty): vyberte, jak dlouho zůstane přidružení zabezpečení aktivní, dokud se klíče neotáčí. Zadejte celou hodnotu v rozsahu `10` a `1440` (1440 minut je 24 hodin). Výchozí je `1440`.
 
 - **Konfigurace samostatné sady parametrů pro podřízená přidružení zabezpečení**: iOS/iPadOS umožňuje konfigurovat samostatné parametry pro připojení IKE a všechna podřízená připojení. 
@@ -206,7 +206,7 @@ Tato nastavení se použijí, když zvolíte **typ** > připojení**IKEv2**.
     - SHA2-256 (výchozí)
     - SHA2 – 384
     - SHA2 – 512
-  - **Skupina Diffie-Hellman**: vyberte skupinu, kterou chcete. Výchozí hodnota je `2`skupina.
+  - **Skupina Diffie-Hellman**: vyberte skupinu, kterou chcete. Výchozí hodnota je skupina `2` .
   - **Doba života** (minuty): vyberte, jak dlouho zůstane přidružení zabezpečení aktivní, dokud se klíče neotáčí. Zadejte celou hodnotu v rozsahu `10` a `1440` (1440 minut je 24 hodin). Výchozí je `1440`.
 
 ## <a name="automatic-vpn-settings"></a>Automatické nastavení sítě VPN

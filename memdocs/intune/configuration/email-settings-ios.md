@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 06/08/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1ac4050e6113eba2a34099a627bf6141049d8454
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 099643f1e55c6f3e58c0cd685c2339abf00dd7dc
+ms.sourcegitcommit: 7f542c97ac55bbd329f5befda97d671213c24e9a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79333047"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84506209"
 ---
 # <a name="add-e-mail-settings-for-ios-and-ipados-devices-in-microsoft-intune"></a>Přidání nastavení e-mailu pro zařízení s iOS a iPadOS v Microsoft Intune
 
@@ -45,14 +45,14 @@ V tomto článku najdete seznam všech nastavení e-mailu, která jsou dostupná
   - **Název účtu SAM**: Vyžaduje doménu, například `domain\user1`. Dále zadejte:  
     - **Zdroj názvu domény uživatele**: Zvolte **AAD** (Azure Active Directory) nebo **Vlastní**.
       - **AAD**: Získejte atributy z Azure AD. Dále zadejte:
-        - **Atribut názvu domény uživatele z AAD**: vyberte, pokud chcete získat **úplný název domény** (`contoso.com`) nebo **název pro rozhraní NetBIOS** (`contoso`) pro uživatele.
+        - **Atribut názvu domény uživatele z AAD**: vyberte, pokud chcete získat **úplný název domény** ( `contoso.com` ) nebo **název pro rozhraní NetBIOS** ( `contoso` ) pro uživatele.
 
       - **Vlastní**: Získejte atributy z vlastního názvu domény. Dále zadejte:
-        - **Vlastní název domény, který se má použít**: zadejte hodnotu, kterou Intune používá pro název domény, `contoso.com` například `contoso`nebo.
+        - **Vlastní název domény, který se má použít**: zadejte hodnotu, kterou Intune používá pro název domény, například `contoso.com` nebo `contoso` .
 
 - **Atribut e-mailové adresy z AAD**: Zvolte, jak se generuje e-mailová adresa uživatele. Možnosti:
-  - **Hlavní název uživatele**: jako e-mailová adresa použijte úplný hlavní název, jako `user1@contoso.com` je `user1`například nebo.
-  - **Primární adresa SMTP**: k přihlášení k Exchangi použijte primární adresu SMTP, třeba `user1@contoso.com`.
+  - **Hlavní název uživatele**: jako e-mailová adresa použijte úplný hlavní název, jako je například `user1@contoso.com` nebo `user1` .
+  - **Primární adresa SMTP**: k přihlášení k Exchangi použijte primární adresu SMTP, třeba `user1@contoso.com` .
 - **Metoda ověřování**: Vyberte způsob ověřování uživatelů pro e-mailový server. Možnosti:
   - **Certifikát**: vyberte profil certifikátu SCEP nebo PKCS klienta, který jste dříve vytvořili za účelem ověřování připojení k systému Exchange. Tato možnost nabízí nejbezpečnější a bezproblémové prostředí pro vaše uživatele.
   - **Uživatelské jméno a heslo**: uživatelům se zobrazí výzva k zadání uživatelského jména a hesla.
@@ -64,7 +64,7 @@ V tomto článku najdete seznam všech nastavení e-mailu, která jsou dostupná
 - **SSL**: Při volbě **Povolit** se při posílání a přijímání e-mailů a komunikaci se serverem Exchange používá komunikace SSL (Secure Sockets Layer).
 - **OAuth**: Při volbě **Povolit** se při posílání a přijímání e-mailů a komunikaci se serverem Exchange používá komunikace OAuth (Open Authorization). Pokud server OAuth používá ověřování certifikátem, u možnosti **Metoda ověřování** zvolte **Certifikát** a zahrňte do profilu příslušný certifikát. V opačném případě u možnosti **Metoda ověřování** zvolte **Uživatelské jméno a heslo**. Při použití OAuth mějte na paměti tyto skutečnosti:
 
-  - Před zacílením tohoto profilu na uživatele potvrďte, že vaše e-mailové řešení podporuje OAuth. Office 365 se službou Exchange Online podporuje OAuth. Místní Exchange a jiná řešení od partnerů nebo třetích stran nemusí OAuth podporovat. U místního Exchange je možné nakonfigurovat moderní ověřování (viz příspěvek blogu s [oznámením hybridního moderního ověřování pro místní Exchange](https://blogs.technet.microsoft.com/exchange/2017/12/06/announcing-hybrid-modern-authentication-for-exchange-on-premises/)).
+  - Před zacílením tohoto profilu na uživatele potvrďte, že vaše e-mailové řešení podporuje OAuth. Office 365 se službou Exchange Online podporuje OAuth. Místní Exchange a jiná řešení od partnerů nebo třetích stran nemusí OAuth podporovat. Místní Exchange se dá nakonfigurovat pro moderní ověřování. Další informace najdete v tématu [Přehled hybridního moderního ověřování a požadavky na místní Skype pro firmy a servery Exchange](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview).
 
     Pokud e-mailový profil používá Oauth a e-mailová služba ho nepodporuje, bude se možnost **Zadejte heslo znovu** jevit jako nefunkční. Když například uživatel vybere možnost **Zadejte heslo znovu** v nastavení zařízení Apple, nic se nestane.
 

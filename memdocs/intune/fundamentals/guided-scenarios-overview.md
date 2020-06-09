@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 01/09/2020
 ms.topic: overview
 ms.service: microsoft-intune
+ms.subservice: fundamentals
 ms.localizationpriority: high
 ms.technology: ''
 ms.reviewer: dagerrit
@@ -16,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1ad9d641bc59b9fee99abce4d05b3871eb90e189
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: cd2d7f5412eda30a169f657434626bb406ebfaac
+ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83984841"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84531804"
 ---
 # <a name="intune-guided-scenarios-overview"></a>Přehled scénářů s asistencí pro Intune 
 
@@ -60,7 +61,7 @@ Dalším krokem je nasazení scénáře. Nasazení scénáře vytvoří a ulož�
 > Seznam uvedený na konci scénáře s asistencí není uložen a je možné jej zobrazit pouze v případě, že je otevřený scénář s asistencí.  
 Pokud při nasazení scénáře dojde k chybě, všechny změny se vrátí. 
 
-### <a name="editing"></a>Úprava 
+### <a name="editing"></a>Probíhají úpravy 
 
 Scénáře s asistencí nelze použít pro úpravu existujících prostředků. Po vytvoření se musí všechny prostředky, skupiny a přiřazení upravovat pomocí stávajících úloh.
 

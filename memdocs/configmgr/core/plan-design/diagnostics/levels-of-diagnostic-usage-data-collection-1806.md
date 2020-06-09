@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: f455615db6600a39460b0180d46039535d331f86
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: e47d9ac210d4af25070c6a9cd4b710c383370f54
+ms.sourcegitcommit: 7f542c97ac55bbd329f5befda97d671213c24e9a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81714280"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84506294"
 ---
 # <a name="diagnostic-and-usage-data-for-1806"></a>Diagnostická data a data o využití pro 1806
 
@@ -291,7 +291,7 @@ Pro Configuration Manager verze 1806 Tato úroveň zahrnuje následující data:
 
 - Zásady Windows Hello pro firmy (vytvořené, nasazené)  
 
-- ***[Nové]*** Počet nasazených zásad prohlížeče Microsoft Edge  
+- ***[Nové]*** Počet nasazených zásad prohlížeče starší verze Microsoft Edge  
 
 
 ### <a name="content"></a>Obsah  

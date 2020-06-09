@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 02/26/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: fundamentals
 ms.localizationpriority: high
 ms.technology: ''
 ms.reviewer: dagerrit
@@ -16,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ec125e1ab58e733707adb3d9f4df304e21ffabcf
-ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
+ms.openlocfilehash: 78fcd976642ad7aa4c5cb62c0f66ed80461686aa
+ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83764131"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84531855"
 ---
 # <a name="guided-scenario---cloud-managed-modern-desktop"></a>Scénář s asistencí – moderní plocha spravovaná cloudem
 

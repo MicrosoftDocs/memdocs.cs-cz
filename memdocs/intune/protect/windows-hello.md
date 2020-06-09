@@ -1,12 +1,12 @@
 ---
 title: Integrace Windows Hello pro firmy s Microsoft Intune
 titleSuffix: Microsoft Intune
-description: Naučte se vytvářet zásady pro řízení použití Windows Hello pro firmy na spravovaných zařízeních.
+description: Naučte se vytvářet zásady pro řízení použití Windows Hello pro firmy na spravovaných zařízeních během registrace zařízení.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/25/2019
+ms.date: 06/08/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,27 +17,25 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: shpate
-ms.openlocfilehash: 00f617d91541c1a580f6dec0b6b844abfc8d0d97
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 64a76911725e5d596a80ecc67e42f088666017de
+ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990921"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84531889"
 ---
 # <a name="integrate-windows-hello-for-business-with-microsoft-intune"></a>Integrace Windows Hello pro firmy s Microsoft Intune  
 
-Windows Hello pro firmy (dříve Microsoft Passport for Work) můžete integrovat s Microsoft Intune.
+V rámci registrace zařízení můžete integrovat Windows Hello pro firmy (dříve Microsoft Passport for Work) s Microsoft Intune.
 
- Hello pro firmy je alternativní metoda pro přihlašování pomocí účtu služby Active Directory nebo Azure Active Directory, která může nahradit hesla, čipové karty a virtuální čipové karty. Umožňuje používat k přihlášení místo hesla *gesto uživatele*. Gesto uživatele může být PIN, biometrické ověřování, jako je Windows Hello nebo externí zařízení, jako je třeba čtečka otisků prstů.
+Hello pro firmy je alternativní metoda pro přihlašování pomocí účtu služby Active Directory nebo Azure Active Directory, která může nahradit hesla, čipové karty a virtuální čipové karty. Umožňuje používat k přihlášení místo hesla *gesto uživatele*. Gesto uživatele může být PIN, biometrické ověřování, jako je Windows Hello nebo externí zařízení, jako je třeba čtečka otisků prstů.
 
 Intune se s Hello pro firmy integruje dvěma způsoby:
 
-- Vytvořením zásady Intune v části **Registrace zařízení**. Tato zásada cílí na celou organizaci (celého tenanta). Podporuje program Windows AutoPilot spouštěný při prvním zapnutí a použije se při registraci zařízení. 
-- Vytvořením profilu ochrany identit v části **Konfigurace zařízení**. Tento profil cílí na přiřazené uživatele a zařízení a použije se při ohlášení. 
+- **Celé tenanta**: zásady Intune se dají vytvořit v části *registrace zařízení*. Tato zásada cílí na celou organizaci (celého tenanta). Podporuje program Windows AutoPilot spouštěný při prvním zapnutí a použije se při registraci zařízení.
+- **Diskrétní skupiny**: můžete nasadit zásady, které spravují Windows Hello pro firmy na zařízení, která jsou zaregistrovaná v Intune. Typy zásad, které mohou spravovat Windows Hello, zahrnují profily *ochrany identit* , které vytvoříte v části *Konfigurace zařízení*, různé *standardní hodnoty zabezpečení*a profily *ochrany účtů* služby Endpoint Security. Tyto typy profilů cílí na přiřazené uživatele nebo zařízení a použijí se při vrácení se změnami.
 
 Pomocí tohoto článku můžete vytvořit výchozí zásadu pro službu Windows Hello pro firmy, která bude cílit na celou organizaci. Pokyny k vytváření profilů ochrany identit, které se použití u vybraných skupin uživatelů nebo zařízení, najdete v článku o [konfiguraci profilu ochrany identit](identity-protection-configure.md).  
-
-<!--- - You can store authentication certificates in the Windows Hello for Business key storage provider (KSP). For more information, see [Secure resource access with certificate profiles in Microsoft Intune](secure-resource-access-with-certificate-profiles.md). --->
 
 > [!IMPORTANT]
 > V desktopových a mobilních verzích Windows 10 před Anniversary Update šlo nastavit dva různé kódy PIN, které se daly použít k ověření prostředků:
@@ -59,8 +57,10 @@ Pomocí tohoto článku můžete vytvořit výchozí zásadu pro službu Windows
 
 3. Pro **konfiguraci Windows Hello pro firmy**vyberte z těchto možností:
 
-    - **Zakázáno**. Toto nastavení vyberte, pokud Windows Hello pro firmy nechcete používat. Pokud je tato možnost zakázaná, uživatelé nemůžou zřídit Windows Hello pro firmy s výjimkou Azure Active Directory připojených mobilních telefonů, kde se může zřizování vyžadovat.
-    - **Povoleno**. Toto nastavení vyberte, pokud chcete konfigurovat nastavení Windows Hello pro firmy.  Když vyberete *povoleno*, zobrazí se další nastavení Windows Hello.
+     - **Povoleno**. Toto nastavení vyberte, pokud chcete konfigurovat nastavení Windows Hello pro firmy.  Když vyberete *povoleno*, další nastavení pro Windows Hello jsou viditelná a můžou být nakonfigurovaná pro zařízení.
+
+    - **Zakázáno**. Pokud nechcete povolit Windows Hello pro firmy během registrace zařízení, vyberte tuto možnost. Když je tato možnost zakázaná, uživatelé nemůžou zřídit Windows Hello pro firmy s výjimkou Azure Active Directory připojených mobilních telefonů, kde se může zřizování vyžadovat. Když se nastaví jako *zakázané*, můžete nakonfigurovat další nastavení pro Windows Hello pro firmy, i když tato zásada nepovolí Windows Hello pro firmy.
+
     - **Není nakonfigurováno**. Toto nastavení vyberte, pokud k řízení nastavení Windows Hello pro firmy nechcete používat Intune. Všechna existující nastavení Windows Hello pro firmy v zařízeních s Windows 10 se nezmění. Žádná ostatní nastavení v podokně nejsou dostupná.
 
 4. Pokud jste v předchozím kroku vybrali **Povoleno**, nakonfigurujte požadovaná nastavení, která se použijí pro všechna zaregistrovaná zařízení s Windows 10 a Windows 10 Mobile. Po konfiguraci těchto nastavení vyberte **Uložit**.

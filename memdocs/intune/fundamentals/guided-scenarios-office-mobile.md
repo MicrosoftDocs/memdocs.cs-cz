@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 01/06/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: fundamentals
 ms.localizationpriority: high
 ms.technology: ''
 ms.reviewer: dagerrit
@@ -16,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7aabc09e276c723e9aeaed4ec8eb3dd4c0332b4e
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: faf63bd4d738278e41e90fe54e696f83e727a58d
+ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79332531"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84531838"
 ---
 # <a name="guided-scenario---secure-microsoft-office-mobile-apps"></a>Scénář s asistencí – zabezpečené systém Microsoft Office mobilní aplikace
 
@@ -109,7 +110,7 @@ Po výběru aplikací klikněte na tlačítko **Další**.
 
 V tomto kroku musíte nakonfigurovat požadavky pro přístup k firemním souborům a e-mailům v těchto aplikacích a jejich sdílení. Ve výchozím nastavení mohou uživatelé ukládat data do účtů OneDrive a SharePoint vaší organizace.
 
-| Nastavení | Popis | Výchozí hodnota |
+| Nastavení | Description | Výchozí hodnota |
 |---------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|
 | Typ kódu PIN | Číselné kódy PIN se skládají ze všech čísel. Hesla se skládají z alfanumerických znaků a speciálních znaků.  Pro konfiguraci typu "heslo" v systému iOS/iPadOS je nutné, aby měla aplikace sadu Intune SDK verze 7.1.12 nebo vyšší. Číselný typ nemá žádné omezení, pokud se jedná o verzi sady Intune SDK. | Numeric |
 | Vyberte minimální délku PIN kódu. | Určuje minimální počet číslic v posloupnosti kódu PIN. | 6 |
