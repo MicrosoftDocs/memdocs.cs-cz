@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 03/30/2020
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: b82efd77bd1d9df9df1e5d0efd41a0f540a97b3f
-ms.sourcegitcommit: e618ea7cb864635c838b672bc71a1e926bf7c047
+ms.openlocfilehash: 22dc48a60d03a0cc6bc10e04bc3facbf36983ff9
+ms.sourcegitcommit: 52dd59bdbad07b414db9e4209da0f4c957cf5d6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84458082"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84637577"
 ---
 Tato oznámení obsahují důležité informace, které vám pomůžou připravit se na budoucí změny a funkce Intune.
 
@@ -31,6 +31,9 @@ Můžete si prohlédnout sestavy Intune a zjistit, která zařízení nebo uživ
 Podpora starší verze správy počítačů od 15. října 2020. Upgradujte zařízení na Windows 10 a znovu je zaregistrujte jako zařízení pro správu mobilních zařízení (MDM), abyste je mohli spravovat přes Intune.
 
 [Další informace](https://go.microsoft.com/fwlink/?linkid=2107122)
+
+### <a name="move-to-the-microsoft-endpoint-manager-admin-center-for-all-your-intune-management"></a>Přejděte do centra pro správu Microsoft Endpoint Manageru pro veškerou správu Intune.
+V MC208118 zveřejněné poslední březen jsme představili novou jednoduchou adresu URL pro správu Microsoft Endpoint Manageru – Intune: [https://endpoint.microsoft.com](https://endpoint.microsoft.com) . Microsoft Endpoint Manager je jednotná platforma, která zahrnuje Microsoft Intune a Configuration Manager. **Od 1. srpna 2020**odebereme správu Intune na [https://portal.azure.com](https://portal.azure.com) místo toho, abyste ho použili [https://endpoint.microsoft.com](https://endpoint.microsoft.com) pro celou správu koncových bodů. 
 
 
 ### <a name="decreasing-support-for-android-device-administrator--7371518--"></a>Snížení podpory pro správce zařízení s Androidem<!--7371518-->
@@ -115,3 +118,8 @@ Abyste se vyhnuli snížení funkčnosti, které přichází ve čtvrtém čtvrt
 - [Blog Google o tom, co potřebujete znát o vyřazení Správce zařízení za zastaralé](https://www.blog.google/products/android-enterprise/da-migration/)
 - [Pokyny pro migraci ze strany správce zařízení na Android Enterprise](http://static.googleusercontent.com/media/android.com/en/enterprise/static/2016/pdfs/enterprise/Android-Enterprise-Migration-Bluebook_2019.pdf)
 - [Dokumentace Google pro zastaralá rozhraní API Správce zařízení](https://developers.google.com/android/work/device-admin-deprecation)
+
+
+### <a name="plan-for-change-intune-enrollment-flow-update-for-apples-automated-device-enrollment-for-iosipados"></a>Plánování změn: aktualizace toku registrace Intune pro automatické registrace zařízení společnosti Apple pro iOS/iPadOS
+V červenci Portál společnosti vydání změníme tok registrace iOS/iPadOS pro automatický zápis zařízení společnosti Apple (dříve označovaný jako DEP). Změna toku registrace se objevuje jenom během toku "zapsat s přidružením uživatele". Pokud jste dřív v rámci vaší konfigurace nastavili možnost "instalovat Portál společnosti" na hodnotu Ne, uživatelé si pořád můžou nainstalovat Portál společnosti aplikaci ze Storu, která by pak mohla aktivovat registraci, do které by uživatel přidal příslušné sériové číslo. S tímto nadcházejícím Portál společnosti verzí odebereme obrazovku s potvrzením sériového čísla. Místo toho budete chtít vytvořit odpovídající zásadu konfigurace aplikace, abyste se mohli přenést vedle Portál společnosti, abyste měli jistotu, že se uživatelé můžou úspěšně zaregistrovat, nebo nastavit "instalovat Portál společnosti" na "Ano" jako součást vaší konfigurace. 
+ - Další informace najdete v příspěvku [sem](https://techcommunity.microsoft.com/t5/intune-customer-success/intune-enrollment-flow-update-for-apple-s-automated-device/ba-p/1431629) .
