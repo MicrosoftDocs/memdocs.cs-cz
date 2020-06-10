@@ -5,17 +5,17 @@ description: Zkontrolujte informace o zařízeních Surface pomocí řídicího 
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 07/30/2018
+ms.date: 06/09/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 7397fc17-3ae8-4525-8386-aea8a9cffa06
-ms.openlocfilehash: f9b9c49bde16754b7a60112905f14da2cd5e48eb
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 7e6a98c25fabff31d3eae688edf89540c1ab71a7
+ms.sourcegitcommit: 52dd59bdbad07b414db9e4209da0f4c957cf5d6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906282"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84613943"
 ---
 # <a name="surface-device-dashboard-in-configuration-manager"></a>Řídicí panel zařízení Surface v Configuration Manager
 
@@ -59,7 +59,7 @@ Počínaje verzí 1802 řídicí panel zařízení Surface nabízí informace o 
 
 Další informace o zařízeních Surface najdete na webu [Surface](https://www.microsoft.com/surface) .
 
-Další informace o nasazení aktualizací firmwaru Surface v Configuration Manager najdete v tématu [Správa aktualizací ovladačů Surface](https://support.microsoft.com/help/4098906).
+Další informace o nasazení aktualizací firmwaru Surface v Configuration Manager najdete v tématu [Správa aktualizací ovladačů Surface](../../../sum/deploy-use/surface-drivers.md).
 
 
 

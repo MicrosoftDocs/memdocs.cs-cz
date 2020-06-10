@@ -5,17 +5,17 @@ description: Pomocí těchto kroků můžete nakonfigurovat klasifikace aktualiz
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 11/18/2019
+ms.date: 05/13/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 5ddde4e6-d553-4182-b752-6bc8b4a26745
-ms.openlocfilehash: 7e2cc1c2dc52a0bb6eb8d0dd143cbb2d005dc6e9
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 4f13ff305ba5fc2b5c5080bafb6fed2412ff8366
+ms.sourcegitcommit: 52dd59bdbad07b414db9e4209da0f4c957cf5d6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078460"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84614086"
 ---
 # <a name="configure-classifications-and-products-to-synchronize"></a>Konfigurace klasifikací a produktů k synchronizaci  
 
@@ -28,7 +28,7 @@ Metadata aktualizací softwaru se načítají během procesu synchronizace v Con
 
 ## <a name="to-configure-classifications-and-products-to-synchronize"></a>Konfigurace klasifikací a produktů k synchronizaci  
 
-1. V konzole **Configuration Manager** přejděte na **Správa** > **Konfigurace** > lokality**lokality**.
+1. V konzole **Configuration Manager** přejděte na **Správa**  >  **Konfigurace lokality**  >  **lokality**.
 
 2. Vyberte lokalitu centrální správy nebo samostatnou primární lokalitu.  
 
@@ -47,9 +47,9 @@ Metadata aktualizací softwaru se načítají během procesu synchronizace v Con
      - **Kumulativní aktualizace**: Určuje testovaný, kumulativní sadu oprav hotfix, aktualizace zabezpečení, důležité aktualizace a aktualizace, které jsou zabaleny společně pro snadné nasazení. Kumulativní aktualizace obecně řeší určitou oblast, například zabezpečení nebo součást produktu.  
      - **Aktualizace**: Určuje široce vydanou opravu konkrétního problému. Aktualizace řeší nekritickou chybu, která nesouvisí se zabezpečením.  
      - **Upgrade**: Určuje upgrade pro funkce a funkce Windows 10. Abyste získali klasifikaci **upgradu** , musí být v lokalitách a bodech aktualizace softwaru spuštěn minimálně WSUS 6,2 s [opravou hotfix 3095113](https://support.microsoft.com/kb/3095113) . Další informace o instalaci této aktualizace a dalších aktualizacích pro **upgrady**najdete v tématu [předpoklady pro aktualizace softwaru](../plan-design/prerequisites-for-software-updates.md#BKMK_wsus2012).
-
+    
     > [!NOTE]
-    > Zaškrtnutím políčka **zahrnout ovladače Microsoft Surface a aktualizace firmwaru** můžete synchronizovat ovladače Microsoft Surface.<!--1098490--> Další informace najdete v části [zahrnuté ovladače Microsoft Surface a aktualizace firmwaru](#bkmk_Surface) .
+    > Zaškrtnutím políčka **zahrnout ovladače Microsoft Surface a aktualizace firmwaru** můžete synchronizovat ovladače Microsoft Surface.<!--1098490--> Aby bylo možné úspěšně synchronizovat ovladače Surface, musí všechny body aktualizace softwaru používat systém Windows Server 2016 nebo novější. Pokud povolíte bod aktualizace softwaru na počítači s Windows Serverem 2012 po povolení ovladačů Surface, výsledky kontroly pro aktualizace ovladačů nejsou přesné. Výsledkem jsou nesprávná data o dodržování předpisů zobrazená v konzole Configuration Manager a v sestavách Configuration Manager. Další informace najdete v tématu [Správa ovladačů Surface pomocí Configuration Manager](../deploy-use/surface-drivers.md).
 
 5. Na kartě **Produkty** vyberte produkty, pro které chcete aktualizace softwaru synchronizovat, a potom klikněte na **Zavřít**.  
 
@@ -67,13 +67,6 @@ Metadata aktualizací softwaru se načítají během procesu synchronizace v Con
     > - [Pravidla automatického nasazení](../deploy-use/automatically-deploy-software-updates.md#bkmk_adr-process) obsahující produkt **Windows 10** se budou aktualizovat tak, aby zahrnovala **Windows 10, verze 1903 a novější**.
     > - [Plány údržby](../../osd/deploy-use/manage-windows-as-a-service.md#servicing-plan-workflow) se aktualizují tak, aby zahrnovaly **Windows 10, verze 1903 a novější** produkt.
 
-## <a name="include-microsoft-surface-drivers-and-firmware-updates"></a><a name="bkmk_Surface"></a>Zahrnout ovladače a aktualizace firmwaru Microsoft Surface
-
-Zaškrtnutím políčka **zahrnout ovladače Microsoft Surface a aktualizace firmwaru** můžete synchronizovat ovladače Microsoft Surface.<!--1098490--> Všechny body aktualizace softwaru musí mít nainstalovaný systém Windows Server 2016 s kumulativní aktualizací [KB4025339](https://support.microsoft.com/help/4025339) nebo novějším, aby bylo možné úspěšně synchronizovat ovladače Surface. Pokud povolíte bod aktualizace softwaru na počítači s Windows Serverem 2012 po povolení ovladačů Surface, výsledky kontroly pro aktualizace ovladačů nejsou přesné. Výsledkem jsou nesprávná data o dodržování předpisů zobrazená v konzole Configuration Manager a v sestavách Configuration Manager.  
-
-- Tato funkce byla poprvé představena ve verzi 1706 jako [funkce předběžné verze](../../core/servers/manage/pre-release-features.md). Počínaje verzí 1710 Tato funkce už není součástí předběžné verze.  
-- Configuration Manager ve výchozím nastavení nepovolí tuto volitelnou funkci. Tuto funkci musíte před použitím povolit. Další informace naleznete v části [Enable optional features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_options).<!--505213-->  
-- Ovladače pro zařízení ARM nejsou podporované pro synchronizaci.
 
 ## <a name="configuring-products-for-versions-of-windows-10"></a>Konfigurace produktů pro verze Windows 10
 
@@ -98,7 +91,7 @@ Když schválíte aktualizace funkcí pro Windows 10 verze 1909, zobrazí se ně
   - Požadavky balíčku pro povolení zahrnují:
     - Minimální kumulativní aktualizace [KB4517389](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4517389)vydaná 8. října 2019.
     - Minimální aktualizace servisního zásobníku [KB4520390](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4520390)vydané 24. září 2019.
-  - Tato aktualizace, stejně jako jakákoli jiná aktualizace funkcí, není k dispozici `https:\\catalog.update.microsoft.com`pro import z.
+  - Tato aktualizace, stejně jako jakákoli jiná aktualizace funkcí, není k dispozici pro import z `https:\\catalog.update.microsoft.com` .
   - Aktualizace se automaticky synchronizuje se službou WSUS, pokud máte **Windows 10, verze 1903 a novější** klasifikace produktů a **upgradů** vybrané k synchronizaci.
   - V konzole Configuration Manager otevřete pracovní prostor **Knihovna softwaru** , rozbalte položku **Údržba Windows 10**a vyberte uzel **všechny aktualizace Windows 10** . Vyhledejte výraz "Enable" nebo "4517245".
 
@@ -143,7 +136,7 @@ Další informace o podpoře Windows Insider v Configuration Manager najdete v t
 
 Je potřeba povolit produkty a klasifikace pro upgrady a aktualizace Windows Insider. Aktualizace funkcí, kumulativní aktualizace a další aktualizace programu Windows Insider jsou uvedené v kategorii produkt **Předběžná verze Windows Insider** .
 
-1. V konzole **Configuration Manager** přejděte na **Správa** > **Konfigurace** > lokality**lokality**.
+1. V konzole **Configuration Manager** přejděte na **Správa**  >  **Konfigurace lokality**  >  **lokality**.
 2. Vyberte lokalitu centrální správy nebo samostatnou primární lokalitu.  
 3. Na kartě **Domů** v části **Nastavení** klikněte na **Konfigurovat součásti pracoviště**a potom na možnost **Bod aktualizace softwaru**.
 4. Na kartě **produkty** zajistěte, aby byly pro synchronizaci vybrány následující produkty:
@@ -157,7 +150,7 @@ Je potřeba povolit produkty a klasifikace pro upgrady a aktualizace Windows Ins
 
 ### <a name="upgrading-windows-insider-devices"></a>Upgrade zařízení se systémem Windows Insider
 
-Po synchronizaci upgradů pro Windows Insider je můžete zobrazit z **knihovny** > softwaru**Windows 10 – Údržba** > **všech aktualizací Windows 10**.
+Po synchronizaci upgradů pro Windows Insider je můžete zobrazit z **knihovny softwaru**  >  **Windows 10 – Údržba**  >  **všech aktualizací Windows 10**.
 
 ![Aktualizace funkcí Windows Insider pro údržbu Windows 10](media/3556023-windows-insiders-pre-release-feature-update.png)
 

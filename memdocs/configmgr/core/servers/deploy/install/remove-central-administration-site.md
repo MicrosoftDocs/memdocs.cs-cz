@@ -2,7 +2,7 @@
 title: Odebrání certifikačních autorit
 titleSuffix: Configuration Manager
 description: Odeberte lokalitu centrální správy (CAS), aby se zjednodušila Configuration Manager infrastruktura pro jednu samostatnou primární lokalitu.
-ms.date: 04/01/2020
+ms.date: 06/09/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 16975644-8dfa-4f22-b45a-c54a9250dbd2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6704075d707306f55a50a937185c9bdd28b18cc5
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 237c326c4420aec13ad6c9ca9b07d9f5304b6945
+ms.sourcegitcommit: 52dd59bdbad07b414db9e4209da0f4c957cf5d6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718109"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84613977"
 ---
 # <a name="remove-the-central-administration-site"></a>Odebrat lokalitu centrální správy
 
@@ -93,9 +93,9 @@ Pokud se v rámci verze 2002 skládá hierarchie z lokality centrální správy 
 
     - V nabídce **Start** vyberte **Configuration Manager nastavení**.
 
-    - V adresáři pro *instalační médium*Configuration Manager otevřete `\SMSSETUP\BIN\X64\setup.exe`. Ujistěte se, že je tato verze stejná jako verze lokality.
+    - V adresáři pro *instalační médium*Configuration Manager otevřete `\SMSSETUP\BIN\X64\setup.exe` . Ujistěte se, že je tato verze stejná jako verze lokality.
 
-    - V adresáři, ve kterém je *nainstalováno*Configuration Manager `\BIN\X64\setup.exe`, otevřete.
+    - V adresáři, ve kterém je *nainstalováno*Configuration Manager, otevřete `\BIN\X64\setup.exe` .
 
 1. Přečtěte si informace na stránce **než začnete** .
 
@@ -143,7 +143,7 @@ Po odebrání certifikačních autorit si Projděte následující kroky, které
 
 - Pokud připojíte Configuration Manager s [Azure monitor](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm?context=configmgr/core/context/core-context), musíte resetovat připojení. Prvním krokem při řešení potíží je [obnovení tajného klíče](../configure/azure-services-wizard.md#bkmk_renew). Pokud se tím problém nevyřeší, vytvořte připojení znovu.<!-- 5584635 -->
 
-- Pokud v části verze 2002 povolíte synchronizaci ovladačů Surface, překonfigurujte tuto funkci po odebrání certifikačních autorit. Další informace najdete v tématu [zahrnují ovladače Microsoft Surface a aktualizace firmwaru](../../../../sum/get-started/configure-classifications-and-products.md#bkmk_Surface).<!-- 5728727 -->
+- Pokud v části verze 2002 povolíte synchronizaci ovladačů Surface, překonfigurujte tuto funkci po odebrání certifikačních autorit. Další informace najdete v tématu [ovladače Microsoft Surface a aktualizace firmwaru](../../../../sum/deploy-use/surface-drivers.md).<!-- 5728727 -->
 
 - Pokud spravujete aktualizace softwaru třetích stran:
 

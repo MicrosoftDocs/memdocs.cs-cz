@@ -2,7 +2,7 @@
 title: Dokumentace konzoly
 titleSuffix: Configuration Manager
 description: Tento článek se zobrazí pouze v konzole Configuration Manager.
-ms.date: 05/11/2020
+ms.date: 06/08/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 678f19d4ec69bea2bc5b3863e3e2a8332c10f3be
-ms.sourcegitcommit: 5d32dd481e2a944465755ce74e14c835cce2cd1c
+ms.openlocfilehash: e2ace9e8a0fb8ba9e9071a2dc9db09434fe5279e
+ms.sourcegitcommit: 52dd59bdbad07b414db9e4209da0f4c957cf5d6e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/18/2020
-ms.locfileid: "83551600"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84613952"
 ---
 <!-- 
 - Feature 1357546
@@ -27,7 +27,7 @@ ms.locfileid: "83551600"
 
 # <a name="microsoft-endpoint-configuration-manager-documentation"></a>Dokumentace k produktu Microsoft Endpoint Configuration Manager
 
-*Poslední aktualizace: Květen 11, 2020*
+*Poslední aktualizace: 8. června 2020*
 
 Tento obsah vám může pomoct při učení a podpoře Configuration Manager.
 
@@ -55,22 +55,22 @@ Seznam důležitých článků.
 
 ## <a name="trending"></a>Populární
 
-Nejoblíbenější články v rozmezí od 1 do 30. dubna 2020.
+Nejoblíbenější články mezi 1. května a 31. května 2020.
 
 | Zobrazení stránek | Nadpis |
 |------------|-------|
-| 37071 | [Plánování brány pro správu cloudu](https://docs.microsoft.com/mem/configmgr/core/clients/manage/cmg/plan-cloud-management-gateway) |
-| 19105 | [Referenční informace k protokolům](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/log-files) |
-| 17942 | [Porty používané pro připojení](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/ports) |
-| 15564 | [Aktualizace a údržba](https://docs.microsoft.com/mem/configmgr/core/servers/manage/updates) |
-| 15389 | [Povolení přehledu TLS (Transport Layer Security) 1,2](https://docs.microsoft.com/mem/configmgr/core/plan-design/security/enable-tls-1-2) |
-| 15316 | [Spoluspráva pro zařízení s Windows 10](https://docs.microsoft.com/mem/configmgr/comanage/overview) |
-| 15229 | [Uživatelská příručka Centra softwaru](https://docs.microsoft.com/mem/configmgr/core/understand/software-center) |
-| 14978 | [Postup povolení protokolu TLS (Transport Layer Security) 1,2 na klientech](https://docs.microsoft.com/mem/configmgr/core/plan-design/security/enable-tls-1-2-client) |
-| 13522 | [Desktop Analytics](https://docs.microsoft.com/mem/configmgr/desktop-analytics/overview) |
-| 13017 | [Nastavení klienta](https://docs.microsoft.com/mem/configmgr/core/clients/deploy/about-client-settings) |
+| 22624 | [Plánování brány pro správu cloudu](https://docs.microsoft.com/mem/configmgr/core/clients/manage/cmg/plan-cloud-management-gateway) |
+| 18451 | [Novinky ve verzi 2002](https://docs.microsoft.com/mem/configmgr/core/plan-design/changes/whats-new-in-version-2002) |
+| 17763 | [Referenční informace k protokolům](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/log-files) |
+| 16718 | [Postup povolení protokolu TLS (Transport Layer Security) 1,2 na klientech](https://docs.microsoft.com/mem/configmgr/core/plan-design/security/enable-tls-1-2-client) |
+| 16004 | [Porty používané pro připojení](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/ports) |
+| 13965 | [Povolení přehledu TLS (Transport Layer Security) 1,2](https://docs.microsoft.com/mem/configmgr/core/plan-design/security/enable-tls-1-2) |
+| 13398 | [Aktualizace a údržba](https://docs.microsoft.com/mem/configmgr/core/servers/manage/updates) |
+| 13279 | [Spoluspráva pro zařízení s Windows 10](https://docs.microsoft.com/mem/configmgr/comanage/overview) |
+| 13260 | [Uživatelská příručka Centra softwaru](https://docs.microsoft.com/mem/configmgr/core/understand/software-center) |
+| 12624 | [Desktop Analytics](https://docs.microsoft.com/mem/configmgr/desktop-analytics/overview) |
 
-[Stránka centra Configuration Manager](https://docs.microsoft.com/mem/configmgr/) přijala během tohoto časového období zobrazení stránky 41 479.
+[Stránka centra Configuration Manager](https://docs.microsoft.com/mem/configmgr/) přijala během tohoto časového období zobrazení stránky 34 986.
 
 ## <a name="recently-updated"></a>Nedávno aktualizované
 
@@ -78,16 +78,16 @@ Nejoblíbenější články v rozmezí od 1 do 30. dubna 2020.
 
 | Poslední revize | Nadpis |
 |---------------|-------|
-| 30. dubna 2020 | [Technical Preview 2004](https://docs.microsoft.com/mem/configmgr/core/get-started/2020/technical-preview-2004) |
-| 4/29/2020 | [Ověřování na základě tokenů pro CMG](https://docs.microsoft.com/mem/configmgr/core/clients/deploy/deploy-clients-cmg-token) |
-| 4/28/2020 | [Skupiny Orchestration](https://docs.microsoft.com/mem/configmgr/sum/deploy-use/orchestration-groups) |
-| 15. dubna 2020 | [Proces schvalování aplikace](https://docs.microsoft.com/mem/configmgr/develop/apps/application-approval-process) |
-| 15. dubna 2020 | [Registrace zařízení v Desktop Analytics](https://docs.microsoft.com/mem/configmgr/desktop-analytics/enroll-devices) |
-| 4/10/2020 | [Připojení tenanta Microsoft Endpoint Manageru](https://docs.microsoft.com/mem/configmgr/tenant-attach/device-sync-actions) |
-| 4/8/2020 | [Integrace se Serverem sestav Power BI](https://docs.microsoft.com/mem/configmgr/core/servers/manage/powerbi-report-server) |
-| 4/8/2020 | [Poznámky k verzi](https://docs.microsoft.com/mem/configmgr/core/servers/deploy/install/release-notes) |
-| 4/1/2020 | [Co je služba pro správu](https://docs.microsoft.com/mem/configmgr/develop/adminservice/overview) |
-| 4/1/2020 | [Novinky ve verzi 2002](https://docs.microsoft.com/mem/configmgr/core/plan-design/changes/whats-new-in-version-2002) |
+| 5/29/2020 | [Technical Preview 2005](https://docs.microsoft.com/mem/configmgr/core/get-started/2020/technical-preview-2005) |
+| 5/27/2020 | [Podpora pro Windows 10](https://docs.microsoft.com/mem/configmgr/core/plan-design/configs/support-for-windows-10) |
+| 5/26/2020 | [CMPivot – přehled](https://docs.microsoft.com/mem/configmgr/core/servers/manage/cmpivot-overview) |
+| 5/26/2020 | [CMPivot – přehled připojených klientů](https://docs.microsoft.com/mem/configmgr/tenant-attach/cmpivot-overview-attached) |
+| 5/26/2020 | [Ukázkové skripty CMPivot připojené ke klientovi](https://docs.microsoft.com/mem/configmgr/tenant-attach/cmpivot-samples-attached) |
+| 5/26/2020 | [Novinky ve verzi 2002](https://docs.microsoft.com/mem/configmgr/core/plan-design/changes/whats-new-in-version-2002) |
+| 5/21/2020 | [Zpráva k vydání verze](https://docs.microsoft.com/mem/configmgr/core/servers/deploy/install/release-notes) |
+| 5/14/2020 | [Doporučený hardware](https://docs.microsoft.com/mem/configmgr/core/plan-design/configs/recommended-hardware) |
+| 11. května 2020 | [Prostředky v Desktop Analytics](https://docs.microsoft.com/mem/configmgr/desktop-analytics/about-assets) |
+| 11. května 2020 | [Co je nového v Desktop Analytics](https://docs.microsoft.com/mem/configmgr/desktop-analytics/whats-new) |
 
 ## <a name="troubleshooting-articles"></a>Články věnované řešení potíží
 
