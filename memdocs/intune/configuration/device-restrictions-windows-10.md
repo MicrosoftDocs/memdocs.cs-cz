@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/02/2020
+ms.date: 06/10/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f469d9646fad3b247743b6017f0ecbc7917f2cdf
-ms.sourcegitcommit: 8a023e941d90c107c9769a1f7519875a31ef9393
+ms.openlocfilehash: bc06434a082ffa801d014eafe9dfd64c6bfec3bf
+ms.sourcegitcommit: 1d8bf691780b94a945e94945115d4d1df4242808
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84311164"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84663329"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Nastavení zařízení s Windows 10 (a novějším) pro povolení nebo omezení funkcí pomocí Intune
 
@@ -31,7 +31,7 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
 > [!Note]
 > Ne všechny možnosti jsou k dispozici ve všech edicích systému Windows. Pokud chcete zobrazit podporované edice, přečtěte si téma [zásady CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider) (otevře se další web společnosti Microsoft).
 
-## <a name="before-you-begin"></a>Před zahájením
+## <a name="before-you-begin"></a>Než začnete
 
 [Vytvořte profil omezení zařízení s Windows 10](device-restrictions-configure.md#create-the-profile).
 
@@ -322,6 +322,9 @@ Tato nastavení používají [CSP zásady zasílání zpráv](https://docs.micro
 ## <a name="microsoft-edge-browser"></a>Prohlížeč Microsoft Edge
 
 Tato nastavení používají [zprostředkovatele CSP zásad prohlížeče](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser), který také uvádí podporované edice systému Windows.
+
+> [!NOTE]
+> Použití zprostředkovatele kryptografických služeb zásad prohlížeče se vztahuje na Microsoft Edge verze 45 a starší. Informace o Microsoft Edge Enterprise verze 77 a novějších najdete v tématu [Konfigurace nastavení zásad pro Microsoft Edge pomocí Microsoft Intune](/DeployEdge/configure-edge-with-intune).
 
 ### <a name="use-microsoft-edge-kiosk-mode"></a>Použít celoobrazovkový režim Microsoft Edge
 
@@ -1135,7 +1138,7 @@ Můžete vyloučit určité soubory z kontroly antivirové ochrany v programu Mi
 > [!WARNING]
 > **Definování vyloučení snižuje ochranu, kterou nabízí antivirová ochrana v programu Microsoft Defender**. Vždy vyhodnotit rizika spojená s implementací vyloučení. Vylučte jenom soubory, které víte, že nejsou škodlivé.
 
-- **Soubory a složky, které se mají vyloučit z kontrol a ochrany v reálném**čase: přidá do seznamu vyloučení jeden nebo víc souborů a složek, jako je **c:\Cesta** nebo **%ProgramFiles%\cesta\soubor.exe** . Tyto soubory a složky nejsou zahrnuté do kontrol probíhajících v reálném čase ani do plánovaných kontrol.
+- **Soubory a složky, které se mají vyloučit z kontrol a ochrany v reálném**čase: přidá do seznamu vyloučení jeden nebo víc souborů a složek, jako je **C:\Cesta** nebo **% ProgramFiles% \Path\filename.exe** . Tyto soubory a složky nejsou zahrnuté do kontrol probíhajících v reálném čase ani do plánovaných kontrol.
 - **Přípony souborů, které se mají vyloučit z kontrol a ochrany v reálném čase**: do seznamu vyloučení přidejte jednu nebo víc přípon souborů, jako je **jpg** nebo **txt** . Všechny soubory s těmito příponami nejsou zahrnuté do kontrol probíhajících v reálném čase ani do plánovaných kontrol.
 - **Procesy, které se mají vyloučit z kontrol a ochrany v reálném**čase: přidejte jeden nebo více procesů typu **. exe**, **. com**nebo **. scr** do seznamu vyloučení. Tyto procesy nejsou zahrnuté do kontrol prováděných v reálném čase ani do plánovaných kontrol.
 

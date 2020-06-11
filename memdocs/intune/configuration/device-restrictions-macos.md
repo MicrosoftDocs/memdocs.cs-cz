@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e48ba131d97e68570f1d6cb85b285ddc3198971c
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: a4f4ef6bab42f2f1b97c32a422d92247a3e564f7
+ms.sourcegitcommit: a198e4efa52b16f87049853b9d8c9854fd9fa057
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83429748"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84680400"
 ---
 # <a name="macos-device-settings-to-allow-or-restrict-features-using-intune"></a>macOS nastavení zařízení pro povolení nebo omezení funkcí pomocí Intune
 
@@ -33,7 +33,7 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
 > [!NOTE]
 > Uživatelské rozhraní nemusí odpovídat typům registrace v tomto článku. Informace v tomto článku jsou správné. Uživatelské rozhraní se aktualizuje v nadcházející verzi.
 
-## <a name="before-you-begin"></a>Před zahájením
+## <a name="before-you-begin"></a>Než začnete
 
 [Vytvoří konfigurační profil omezení zařízení MacOS](device-restrictions-configure.md).
 
@@ -190,7 +190,7 @@ Tato funkce platí pro:
 
   - **Požadavek na kód**: zadejte podpis kódu pro aplikaci nebo proces.
 
-    Podpis kódu se vytvoří, když je aplikace nebo binární podepsána certifikátem vývojáře. Pokud chcete zjistit označení, spusťte `codesign` příkaz ručně v aplikaci Terminal: `codesign --display -r -/path/to/app/binary` . Podpis kódu je vše, co se zobrazí po `=>` .
+    Podpis kódu se vytvoří, když je aplikace nebo binární podepsána certifikátem vývojáře. Pokud chcete zjistit označení, spusťte `codesign` příkaz ručně v aplikaci Terminal: `codesign --display -r - /path/to/app/binary` . Podpis kódu je vše, co se zobrazí po `=>` .
 
   - **Povolit ověřování statického kódu**: Pokud chcete aplikaci nebo proces staticky ověřit požadavek kódu, vyberte **Ano** . Pokud je nastavené na **Nenakonfigurováno**, Intune toto nastavení nezmění ani neaktualizuje.
 

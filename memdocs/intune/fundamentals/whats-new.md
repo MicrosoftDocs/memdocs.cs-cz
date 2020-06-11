@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 67a0ad9eeb7e5ced358a44b17fd8f1c0b05fa2b8
-ms.sourcegitcommit: 7b8921d3ea6a751de67315771d68e2d2750fa36f
+ms.openlocfilehash: 46333ab8826c6e10bfea8126079dd665ba0eef81
+ms.sourcegitcommit: a198e4efa52b16f87049853b9d8c9854fd9fa057
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84223674"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84680434"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
@@ -63,6 +63,20 @@ Aplikace Windows 32-bit (x86), které jsou nasazeny jako dostupné pro zařízen
 
 #### <a name="windows-company-portal-app-icon---7114635---"></a>Ikona aplikace pro Windows Portál společnosti<!-- 7114635 -->
 Změnila se ikona aplikace Portál společnosti pro Windows. Další informace o Portál společnosti najdete v tématu [přizpůsobení aplikace Portál společnosti Intune, portál společnosti webu a aplikace Intune](../apps/company-portal-app.md).
+
+### <a name="device-management"></a>Správa zařízení
+
+#### <a name="tenant-attach-device-timeline-in-the-admin-center--7220536-cm7141381----"></a>Připojení tenanta: časová osa zařízení v centru pro správu<!--7220536, CM7141381  -->
+Když Configuration Manager synchronizuje zařízení s Microsoft Endpoint Managerem prostřednictvím připojení tenanta, uvidíte časovou osu událostí. Tato časová osa zobrazuje minulou aktivitu v zařízení, která vám může pomoct při řešení problémů. Další informace najdete v tématu [Configuration Manager Technical preview 2005](../../configmgr/core/get-started/2020/technical-preview-2005.md#bkmk_timeline) .  
+
+#### <a name="tenant-attach-install-an-application-from-the-admin-center---7220536-cm6024389----"></a>Připojení tenanta: instalace aplikace z centra pro správu<!-- 7220536, CM6024389  -->
+Instalaci aplikace můžete iniciovat v reálném čase pro připojené zařízení klienta z centra pro správu služby Microsoft Endpoint Management. Další informace najdete v tématu [Configuration Manager Technical preview 2005](../../configmgr/core/get-started/2020/technical-preview-2005.md#bkmk_apps) . 
+
+#### <a name="tenant-attach-cmpivot-from-the-admin-center--7220536-cm6024392----"></a>Připojení tenanta: CMPivot z centra pro správu<!--7220536, CM6024392  -->
+Můžete využít sílu [CMPivot] ((.. /.. /ConfigMgr/tenant-Attach/cmpivot-Overview-Attached.MD) do centra pro správu služby Microsoft Endpoint Manager. Umožněte dalším osoby, jako je helpdesk, aby bylo možné iniciovat dotazy v reálném čase z cloudu proti jednotlivým zařízením spravovaným nástrojem ConfigMgr a vracet výsledky zpátky do centra pro správu. To poskytuje všechny tradiční výhody CMPivot, které správcům IT a dalším určeným osoby schopnost rychle vyhodnotit stav zařízení ve svém prostředí a provést akci. Další informace najdete v tématu [Configuration Manager Technical preview 2005](../../configmgr/core/get-started/2020/technical-preview-2005.md#bkmk_cmpivot) . 
+
+#### <a name="tenant-attach-run-scripts-from-the-admin-center--7220536-cm6234688----"></a>Připojení tenanta: spuštění skriptů z centra pro správu<!--7220536, CM6234688  -->
+Výkon funkce Configuration Manager místní [spuštění skriptu](../../configmgr/apps/deploy-use/create-deploy-scripts.md) můžete přenést do centra pro správu služby Microsoft Endpoint Manager. Povolí další osoby, jako je helpdesk, aby se spouštěly skripty PowerShellu z cloudu proti jednotlivým Configuration Manager spravovaným zařízením. To poskytuje všechny tradiční výhody skriptů PowerShellu, které již byly definovány a schváleny správcem Configuration Manager k tomuto novému prostředí. Další informace najdete v tématu [Configuration Manager Technical preview 2005](../../configmgr/core/get-started/2020/technical-preview-2005.md#bkmk_scripts) . 
 
 ## <a name="week-of-may-18-2020"></a>Týden od 18. května 2020
 
@@ -143,7 +157,7 @@ Další informace najdete v tématu [nasazení více profilů OEMConfig do zař�
 
 U jiných výrobců OEM se nemění chování OEMConfig.
 
-To platí pro:
+Platí pro:
 - Android Enterprise
 - Zařízení Zebra Technologies, která podporují OEMConfig. Konkrétní podrobnosti o podpoře získáte od zebra.
 
@@ -156,7 +170,7 @@ V Intune můžete nakonfigurovat rozšíření jádra i systémová rozšířen�
 
 Další informace o těchto rozšířeních na zařízeních macOS najdete v tématu [Přidání rozšíření MacOS](../configuration/kernel-extensions-overview-macos.md).
 
-To platí pro:
+Platí pro:
 - macOS 10,15 a novější
 
 #### <a name="configure-app-and-process-privacy-preferences-on-macos-devices---2934232-----"></a>Konfigurace předvoleb ochrany osobních údajů aplikací a procesů na zařízeních macOS<!-- 2934232   --> 
@@ -164,7 +178,7 @@ S vydáním verze macOS Catalina 10,15 Společnost Apple přidala nové vylepše
 
 Další informace o nastaveních, která můžete spravovat, najdete v tématu [předvolby ochrany osobních údajů pro MacOS](../configuration/device-restrictions-macos.md#privacy-preferences).
 
-To platí pro:
+Platí pro:
 - macOS 10,14 a novější
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -321,7 +335,7 @@ V seznamu se respektuje jenom první pravidlo. Toto chování je opravené a Int
 >
 > Pokud používáte certifikáty SCEP k ověřování, tato změna způsobí, že se certifikáty pro tento profil sítě VPN znovu vystaví.
 
-To platí pro:
+Platí pro:
 - iOS/iPadOS
 - macOS
 
@@ -333,7 +347,7 @@ Na zařízeních s iOS/iPadOS můžete:
 - V části profily jednotného**Devices**přihlašování (  >  **konfigurační profily zařízení**  >  **vytvořit profil**  >  **iOS/iPadOS** pro platformu > **funkce zařízení** pro profil > **jednotné přihlašování**) nastavte hlavní název protokolu Kerberos jako název účtu správce zabezpečení účtů (SAM) v profilech jednotného přihlašování. 
 - V profilech rozšíření aplikace jednotného přihlašování (konfigurace**zařízení**  >  **profily**  >  **vytvořit profil**  >  **iOS/iPadOS** pro platformu > **funkce zařízení** pro profil > **rozšíření aplikace s jednotným přihlašováním**) nakonfigurujte rozšíření iOS/iPadOS Microsoft Azure AD s menším počtem kliknutí pomocí nového typu rozšíření aplikace jednotného přihlašování. Můžete povolit rozšíření Azure AD pro zařízení v režimu sdíleného zařízení a odeslat data specifická pro rozšíření do tohoto rozšíření.
 
-To platí pro:
+Platí pro:
 - iOS/iPadOS 13.0 +
 
 Další informace o použití jednotného přihlašování na zařízeních s iOS/iPadOS najdete v tématu [Přehled rozšíření aplikace jednotného přihlašování](../configuration/device-features-configure.md#single-sign-on-app-extension) a [seznam nastavení jednotného přihlašování](../configuration/ios-device-features-settings.md#single-sign-on-app-extension).
@@ -500,7 +514,7 @@ Tyto změny se budou zavádět postupně po celém měsíci od března po nasaze
 #### <a name="new-user-experience-when-creating-administrative-templates-on-windows-devices--5096036---"></a>Nové uživatelské prostředí při vytváření šablon pro správu na zařízeních s Windows<!--5096036 -->
 Na základě zpětné vazby od zákazníků a našeho přechodu na nové prostředí Azure na celé obrazovce jsme znovu vytvořili prostředí pro Šablony pro správu profilování pomocí zobrazení složek. Neudělali jsme žádné změny nastavení ani stávajících profilů. Stávající profily tak zůstanou stejné a budou použitelné v novém zobrazení. Můžete i nadále procházet všechny možnosti nastavení tím, že vyberete **všechna nastavení**a použijete hledání. Stromové zobrazení je rozdělené podle konfigurace počítačů a uživatelů. Nastavení pro Windows, Office a Edge najdete v přidružených složkách.  
 
-To platí pro:
+Platí pro:
 - Windows 10 a novější
 
 #### <a name="vpn-profiles-with-ikev2-vpn-connections-can-use-always-on-with-iosipados-devices---1947932-----"></a>Profily sítě VPN s připojením IKEv2 VPN můžou používat Always On se zařízeními se systémem iOS/iPadOS.<!-- 1947932   -->
@@ -510,7 +524,7 @@ V systému iOS/iPadOS je vždycky zapnutá síť VPN omezená na profily IKEv2.
 
 Pokud chcete zobrazit nastavení IKEv2, která můžete nakonfigurovat, přejděte na téma [Přidání nastavení sítě VPN na zařízení s iOS v Microsoft Intune](../configuration/vpn-settings-ios.md#ikev2-settings).
 
-To platí pro:
+Platí pro:
 - iOS/iPadOS
 
 #### <a name="delete-bundles-and-bundle-arrays-in-oemconfig-device-configuration-profiles-on-android-enterprise-devices---5550355-----"></a>Odstranění sad a polí sady prostředků v profilech konfigurace zařízení OEMConfig na zařízeních s Androidem Enterprise<!-- 5550355   -->
@@ -518,13 +532,13 @@ Na zařízeních s Androidem Enterprise vytvoříte a aktualizujete profily OEMC
 
 Další informace o profilech OEMConfig najdete v tématu [použití a Správa zařízení se systémem Android Enterprise pomocí nástroje OEMConfig v Microsoft Intune](../configuration/android-oem-configuration-overview.md).
 
-To platí pro:
+Platí pro:
 - Android Enterprise
 
 #### <a name="configure-the-iosipados-microsoft-azure-ad-sso-app-extension---5672534-----"></a>Konfigurace rozšíření iOS/iPadOS Microsoft Azure AD App Extension pro jednotné přihlašování<!-- 5672534   -->
 Tým Microsoft Azure AD vytvořil rozšíření aplikace jednotného přihlašování (SSO) pro přesměrování, které umožňuje uživatelům iOS/iPadOS 13.0 + získat přístup k aplikacím a webům Microsoftu s jedním přihlašováním. Všechny aplikace, které dříve používaly zprostředkované ověřování pomocí aplikace Microsoft Authenticator, budou i nadále získávat jednotné přihlašování s novým rozšířením jednotného přihlašování. V případě verze rozšíření aplikace jednotného přihlašování k Azure AD můžete nakonfigurovat rozšíření jednotného přihlašování (SSO) s typem rozšíření aplikace jednotného přihlašování (konfigurace**zařízení**  >  **profily**  >  **vytvořit profil**  >  **iOS/iPadOS** for Platform > pro typ profilu > **rozšíření aplikace jednotného přihlašování**). **Device features**
 
-To platí pro:
+Platí pro:
 - iOS 13,0 a novější
 - iPadOS 13,0 a novější
 
@@ -533,7 +547,7 @@ Další informace o rozšířeních aplikace jednotného přihlašování pro iO
 #### <a name="enterprise-app-trust-settings-modification-setting-is-removed-from-iosipados-device-restriction-profiles---6225131-----"></a>Nastavení pro změnu nastavení vztahu důvěryhodnosti podnikových aplikací se odebere z profilů omezení zařízení s iOS/iPadOS.<!-- 6225131   -->
 Na zařízeních se systémem iOS/iPadOS vytvoříte profil omezení zařízení (konfigurace**zařízení**  >  **profily**  >  **vytvořit profil**  >  **iOS/iPadOS** pro platformu > **omezení zařízení** pro typ profilu). Nastavení pro **změnu nastavení vztahu důvěryhodnosti podnikových aplikací** se odeberou od společnosti Apple a odebere se z Intune. Pokud toto nastavení aktuálně používáte v profilu, nemá žádný vliv a odebere se z existujících profilů. Toto nastavení se taky odebere z jakéhokoli vytváření sestav v Intune.
 
-To platí pro:
+Platí pro:
 - iOS/iPadOS
 
 Pokud chcete zobrazit nastavení, která můžete omezit, přejděte na [nastavení zařízení s iOS a iPadOS a povolte nebo zakažte funkce](../configuration/device-restrictions-ios.md).
@@ -897,7 +911,7 @@ Když teď zvolíte typ podniku, můžete taky zadat automatické nastavení pro
 
 Pokud chcete zobrazit aktuální nastavení Wi-Fi, která můžete nakonfigurovat, přejděte na [Přidat nastavení Wi-Fi pro zařízení s Androidem Enterprise a Androidem v Microsoft Intune](../configuration/wi-fi-settings-android-enterprise.md#work-profile-only).
 
-To platí pro:
+Platí pro:
 - Pracovní profil Android Enterprise
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -992,7 +1006,7 @@ Od 9. října 2018 se Windows 10 1703 (RS2) přesunul z podpory platformy Micros
 
 Další informace o šablonách ADMX v Intune najdete v tématu [použití šablon Windows 10 ke konfiguraci nastavení zásad skupiny v Microsoft Intune](../configuration/administrative-templates-windows.md).
 
-To platí pro:
+Platí pro:
 
 - Windows 10 a novější
 
@@ -1030,7 +1044,7 @@ Tato nová nastavení se rozšíří na předchozí nastavení rozšíření apl
 
 Pokud chcete zobrazit celou škálu nastavení rozšíření aplikace jednotného přihlašování, přejděte na adresu [SSO v iOS](../configuration/ios-device-features-settings.md#single-sign-on-app-extension) a [jednotné přihlašování v MacOS](../configuration/macos-device-features-settings.md#single-sign-on-app-extension).
 
-To platí pro:
+Platí pro:
 
 - iOS/iPadOS
 - macOS
@@ -1136,7 +1150,7 @@ K dispozici jsou nová nastavení Exchange ActiveSync, včetně:
 
 Další informace o těchto nastaveních najdete [v nastavení e-mailového profilu pro zařízení s iOS v Intune](../configuration/email-settings-ios.md). 
 
-To platí pro:
+Platí pro:
 
 - iOS 13,0 a novější
 - iPadOS 13,0 a novější
@@ -1146,7 +1160,7 @@ U plně spravovaných a vyhrazených zařízení s Androidem Enterprise je k dis
 
 Pokud chcete zobrazit nastavení, která můžete nakonfigurovat, přejděte na [nastavení zařízení s Androidem Enterprise a povolte nebo omezte funkce pomocí Intune](../configuration/device-restrictions-android-for-work.md).
 
-To platí pro:
+Platí pro:
 
 - Zařízení se systémem Android Enterprise s plnou správou
 - Zařízení se systémem Android Enterprise vyhrazená
@@ -1158,7 +1172,7 @@ Toto nastavení nemá na zařízeních žádný vliv. Chcete-li odebrat nastaven
 
 Pokud chcete zobrazit všechna nastavení, která můžete konfigurovat, přečtěte si téma [nastavení zařízení s iOS a iPadOS, abyste mohli povolit nebo zakázat funkce využívající Intune](../configuration/device-restrictions-ios.md).
 
-To platí pro:
+Platí pro:
 
 - iOS/iPadOS
 
@@ -1176,7 +1190,7 @@ Pouze některé aplikace podporují spravované předvolby a tyto aplikace vám 
 
 Další informace o této funkci najdete v tématu [Přidání souboru se seznamem vlastností do zařízení MacOS pomocí Microsoft Intune](../configuration/preference-file-settings-macos.md).
 
-To platí pro:
+Platí pro:
 
 - zařízení macOS se systémem 10,7 a novějším
 
