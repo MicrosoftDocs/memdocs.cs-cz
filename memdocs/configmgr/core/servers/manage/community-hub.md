@@ -2,7 +2,7 @@
 title: Komunitní centrum a GitHub
 titleSuffix: Configuration Manager
 description: Povolení a použití centra komunity v Configuration Manager
-ms.date: 06/02/2020
+ms.date: 06/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 88cead9a-64fe-471e-b57c-81707cefe46c
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: d3dd8f8af7a3add38d8003da12078d393041631d
-ms.sourcegitcommit: 5e339c07001e911cf75ef922e6c66a7efdeab6f1
+ms.openlocfilehash: 606c9490e56d932176b17eef95ea4ed0c956770e
+ms.sourcegitcommit: a198e4efa52b16f87049853b9d8c9854fd9fa057
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84637727"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84680417"
 ---
 # <a name="community-hub-and-github"></a>Komunitní centrum a GitHub
 <!--3555935, 3555936-->
@@ -36,10 +36,11 @@ Centrum komunity podporuje následující objekty:
 
 ## <a name="prerequisites"></a>Požadavky
 
-- Zařízení, které používá konzolu Configuration Manager používané pro přístup k centru, potřebuje následující položky:
-   - Windows 10 Build 17110 nebo vyšší
+- Zařízení, které používá konzolu Configuration Manager používané pro přístup k centru komunit, potřebuje následující položky:
    - .NET Framework verze 4,6 nebo vyšší
-
+   - Windows 10 Build 17110 nebo vyšší
+      - Windows Server není podporovaný, takže konzola Configuration Manager musí být nainstalovaná na zařízení s Windows 10 oddělená od serveru lokality.
+   - Přihlášený uživatelský účet nemůže být předdefinovaným účtem správce.
 
 - Chcete-li stáhnout sestavy, je třeba zapnout možnost **použít Configuration Manager vygenerované certifikáty pro systémy lokality protokolu HTTP** v lokalitě, do které provádíte import. Další informace najdete v tématu [Rozšířená http](/sccm/core/plan-design/hierarchy/enhanced-http).
    1. Přejít na **Administration**  >  **stránku Správa konfigurace lokality**  >  **lokality**.
