@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f52c3bced4d08d32082b424a1ee0e90a338d07a5
-ms.sourcegitcommit: 7f542c97ac55bbd329f5befda97d671213c24e9a
+ms.openlocfilehash: 936375f55c61e719657ee1e770d05834739a4f6f
+ms.sourcegitcommit: 7a099ff53668f50b37adab97ecd7ba98c5324676
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84506277"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84746625"
 ---
 # <a name="ios-and-ipados-device-settings-to-use-common-iosipados-features-in-intune"></a>nastavení zařízení s iOS a iPadOS pro použití běžných funkcí iOS/iPadOS v Intune
 
@@ -31,7 +31,7 @@ Pomocí těchto funkcí můžete řídit zařízení s iOS/iPadOS jako součást
 
 Tento článek uvádí tato nastavení a popisuje, co jednotlivé nastavení dělá. Další informace o těchto funkcích najdete v [Přidání nastavení funkcí zařízení s iOS/iPadOS nebo MacOS](device-features-configure.md).
 
-## <a name="before-you-begin"></a>Před zahájením
+## <a name="before-you-begin"></a>Než začnete
 
 [Vytvořte profil funkcí zařízení s iOS/iPadOS](device-features-configure.md).
 
@@ -319,6 +319,10 @@ Tato funkce platí pro:
 - **Režim sdíleného zařízení** (jenom Microsoft Azure AD): Pokud nasazujete modul plug-in Microsoft Enterprise SSO do zařízení s iOS/iPadOS nakonfigurovaných pro funkci režimu sdíleného zařízení Azure AD, vyberte **Povolit** . Zařízení ve sdíleném režimu umožňují mnoha uživatelům globálně přihlašovat se k aplikacím, které podporují režim sdíleného zařízení. Pokud je nastavené na **Nenakonfigurováno**, Intune toto nastavení nezmění ani neaktualizuje. Ve výchozím nastavení nejsou zařízení s iOS/iPadOS určená ke sdílení mezi více uživateli.
 
   Další informace o režimu sdíleného zařízení a jeho povolení najdete v tématu Přehled režimu [sdíleného zařízení](https://docs.microsoft.com/azure/active-directory/develop/msal-shared-devices) a [sdíleného zařízení pro zařízení s iOS](https://docs.microsoft.com/azure/active-directory/develop/msal-ios-shared-devices).  
+
+  Tato funkce platí pro:
+  
+  - iOS/iPadOS 13,5 a novější
 
 - **ID rozšíření** (přesměrování a přihlašovací údaje): zadejte identifikátor sady prostředků, který identifikuje vaše rozšíření aplikace jednotného přihlašování, například `com.apple.extensiblesso` .
 

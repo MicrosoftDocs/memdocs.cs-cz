@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/28/2020
+ms.date: 06/11/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 46333ab8826c6e10bfea8126079dd665ba0eef81
-ms.sourcegitcommit: a198e4efa52b16f87049853b9d8c9854fd9fa057
+ms.openlocfilehash: 46d440f070f8fcc726cb3978eee3e34358ac0907
+ms.sourcegitcommit: 9a8a9cc7dcb6ca333b87e89e6b325f40864e4ad8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84680434"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84740805"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
@@ -53,6 +53,18 @@ Podívejte se, co je nového v jednom týdnu v Microsoft Intune v [centru pro sp
 ### Monitor and troubleshoot
 
 <!-- ########################## -->
+
+
+## <a name="week-of-june-8-2020"></a>Týden od 8. června 2020   
+
+### <a name="app-management"></a>Správa aplikací  
+
+#### <a name="updates-to-informational-screen-in-company-portal-for-iosipados---7032452---"></a>Aktualizace informativní obrazovky v Portál společnosti pro iOS/iPadOS <!--7032452 -->
+Informační obrazovka v Portál společnosti pro iOS/iPadOS se aktualizovala, aby lépe vysvětlil, co správce může zobrazit a dělat na zařízeních. Tato objasnění se týkají pouze zařízení vlastněných společností. Aktualizovali jsme jenom text, neudělaly se žádné skutečné úpravy, které správce uvidí nebo na uživatelských zařízeních nevidí. Aktualizované obrazovky zobrazíte tak, že přejdete na [aktualizace uživatelského rozhraní pro aplikace Intune pro koncové uživatele](./whats-new-app-ui.md).
+
+#### <a name="android-company-portal-user-experience---5736084---"></a>Uživatelské prostředí pro Android Portál společnosti<!-- 5736084 -->
+Verze 2006 Portál společnosti pro Android obsahuje změny, které jsou sestavené s aktualizacemi ze verze 2005. V 2005 jsme zavedli aktualizaci, kde koncoví uživatelé zařízení se systémem Android, kteří vystavili upozornění, zablokování nebo vymazání pomocí zásad ochrany aplikací, uvidí celou stránku s popisem důvodu upozornění, blokování nebo vymazání a kroků k nápravě problémů. V 2006 se uživatelé aplikací pro Android, kteří mají přiřazenou zásadu ochrany aplikací, provedou pomocí průvodce, aby opravili problémy, které způsobují zablokování přístupu k aplikaci. 
+
 
 ## <a name="week-of-may-25-2020"></a>Týden od 25. května 2020
 
@@ -96,6 +108,7 @@ Pokud chcete používat zásady pro Configuration Manager zařízení, musíte [
 - Nakonfigurujte Správce konfigurace pro *připojení tenanta*.
 - Pokud chcete povolit podporu zásad EDR, nainstalujte konzolovou aktualizaci pro Configuration Manager. Tato aktualizace se vztahuje jenom na hierarchie, které mají povolené *připojení tenanta*.
 - Synchronizujte svoje kolekce zařízení s vaší hierarchií do centra pro správu služby Microsoft Endpoint Manager.
+
 
 
 ## <a name="week-of-may-11-2020-2005-service-release"></a>Týden od 11. května 2020 (2005 Service Release)

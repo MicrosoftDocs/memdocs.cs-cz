@@ -6,7 +6,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/26/2020
+ms.date: 06/11/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: efa965bc3dff2436a98602e3cb9dda96a1fe580d
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: 11aba38d63621472b5e8513b066b96120d649c31
+ms.sourcegitcommit: 9a8a9cc7dcb6ca333b87e89e6b325f40864e4ad8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84166149"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84740862"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Aktualizace uživatelského rozhraní pro aplikace Intune pro koncové uživatele
 
@@ -34,6 +34,14 @@ Přečtěte si o nejnovějších aktualizacích aplikace Microsoft Intune. Pravi
 
 Pokud jste zaměstnancem nebo studentem, nezapomeňte se podívat na snímky obrazovky a odkazy na Portál společnosti dokumentaci k nápovědě. Další informace o tom, jak používat aplikaci Portál společnosti, najdete v [dokumentaci k nápovědě pro uživatele portál společnosti](https://docs.microsoft.com/mem/intune/user-help/use-managed-devices-to-get-work-done).  
 
+
+## <a name="week-of-june-8-2020"></a>Týden od 8. června 2020 
+
+### <a name="updates-to-informational-screen-in-company-portal-for-iosipados----7032452---"></a>Aktualizace informativní obrazovky v Portál společnosti pro iOS/iPadOS <!-- 7032452 -->
+Aktualizovali jsme informační obrazovku v Portál společnosti pro iOS/iPadOS, která vám umožní lépe vysvětlit, co správce může zobrazit a dělat na zařízeních. Tato objasnění se týkají pouze zařízení vlastněných společností. Aktualizovali jsme jenom text, neudělaly se žádné skutečné úpravy, které správce uvidí nebo na uživatelských zařízeních nevidí. Další informace o tom, co je pro správce viditelné, najdete v tématu [Jaké informace může moje organizace zobrazit při registraci zařízení?](../user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md) .  
+
+
+[![Snímek obrazovky Portál společnosti informační obrazovky zobrazující aktualizovaný text](./media/whats-new-app-ui/device-management-privacy-2005-02.png)](./media/whats-new-app-ui/device-management-privacy-2005-03.png#lightbox)
 
 
 ## <a name="week-of-may-18-2020"></a>Týden od 18. května 2020  
@@ -62,12 +70,6 @@ Uživatelům se na levé straně Portál společnosti zobrazí také nový odkaz
 Aby bylo možné tyto nové a vylepšené prostředí vytvořit, karta **aplikace** zobrazená na následujícím obrázku byla odstraněna.  
 
 ![Příklad obrázku nově odebrané Portál společnosti, karty aplikace](./media/whats-new-app-ui/apps-tab-android-removed-2005.png)  
-
-
-
-
-
-
 
 ## <a name="week-of-march-2-2020"></a>Týden od 2. března 2020   
 ### <a name="improved-sign-in-experience-in-company-portal-for-android"></a>Vylepšené prostředí pro přihlašování v Portál společnosti pro Android   

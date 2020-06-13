@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b94146cc429f2a7f7b196f15527e8687368e6d78
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 3031e909b5bd330f9ec84f05f2c83c504022d50e
+ms.sourcegitcommit: 7a099ff53668f50b37adab97ecd7ba98c5324676
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988241"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84746591"
 ---
 # <a name="use-teamviewer-to-remotely-administer-intune-devices"></a>Vzdálená správa zařízení s Intune pomocí TeamVieweru
 
@@ -69,6 +69,6 @@ Když spustíte vzdálenou relaci, uživatelé uvidí na svém zařízení pří
 > [!NOTE]
 > Zařízení s Windows, která jsou zaregistrovaná pomocí metod bez uživatelů, jako je třeba správce registrace zařízení (DEM) a Windows Configuration Designer (WCD), nezobrazují oznámení o TeamVieweru v aplikaci Portál společnosti. V těchto scénářích doporučujeme k vygenerování relace použít portál TeamViewer.
 
-V TeamVieweru můžete provést na zařízení řadu akcí, včetně převzetí řízení zařízení. Úplné podrobnosti s informacemi, co můžete dělat, najdete v tématu [Pokyny k TeamVieweru](https://www.teamviewer.com/support/documents/).
+V TeamVieweru můžete provést na zařízení řadu akcí, včetně převzetí řízení zařízení. Úplné podrobnosti o tom, co můžete dělat, najdete na [stránce komunity TeamViewer](https://community.teamviewer.com/).
 
 Až budete mít hotovo, okno TeamVieweru zavřete.

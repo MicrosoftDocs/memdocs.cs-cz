@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2e386d382ceb785d886dfb931bb26222bd82b1a0
-ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
+ms.openlocfilehash: 750bc9411e93ac09f857518a1e794f8d69d8575c
+ms.sourcegitcommit: 7a099ff53668f50b37adab97ecd7ba98c5324676
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84347317"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84746608"
 ---
 # <a name="how-to-manage-ios-and-macos-apps-purchased-through-apple-volume-purchase-program-with-microsoft-intune"></a>Jak spravovat aplikace pro iOS a macOS zakoupené prostřednictvím Apple Volume Purchase Program s využitím Microsoft Intune
 
@@ -134,7 +134,6 @@ Můžete synchronizovat názvy aplikací, metadata a informace o licencích pro 
 > [!NOTE]  
 > Intune (nebo jakákoli jiná MDM) pro tuto skutečnost neinstaluje aplikace VPP. Místo toho se Intune připojí k účtu VPP a sdělí Apple, které licence k aplikacím přiřadí k těmto zařízením. Odtud se veškerá vlastní instalace zpracuje mezi společností Apple a zařízením.
 > 
-> [Referenční informace o protokolu Apple MDM, stránka 135](https://developer.apple.com/business/documentation/MDM-Protocol-Reference.pdf)
 
 ## <a name="end-user-prompts-for-vpp"></a>Výzvy k VPP pro koncové uživatele
 
@@ -142,11 +141,11 @@ Koncový uživatel obdrží výzvu k instalaci aplikace v rámci VPP v řadě sc
 
 | # | Scénář                                | Pozvánka do programu Apple VPP                              | Výzva při instalaci aplikace | Výzva k zadání Apple ID |
 |---|--------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------|-----------------------------------|
-| 1 | BYOD – uživatel licencovaný (nejedná se o zařízení pro zápis uživatelů)                             | Y                                                                                               | Y                                           | Y                                 |
-| 2 | Zařízení společnosti – licencovaný uživatel (zařízení není pod dohledem)     | Y                                                                                               | Y                                           | Y                                 |
-| 3 | Zařízení společnosti – licencovaný uživatel (zařízení pod dohledem)         | Y                                                                                               | N                                           | Y                                 |
-| 4 | Vlastní zařízení – licencované zařízení                           | N                                                                                               | Y                                           | N                                 |
-| 5 | Zařízení společnosti – licencované zařízení (zařízení není pod dohledem)                           | N                                                                                               | Y                                           | N                                 |
+| 1 | BYOD – uživatel licencovaný (nejedná se o zařízení pro zápis uživatelů)                             | Ano                                                                                               | Ano                                           | Ano                                 |
+| 2 | Zařízení společnosti – licencovaný uživatel (zařízení není pod dohledem)     | Ano                                                                                               | Ano                                           | Ano                                 |
+| 3 | Zařízení společnosti – licencovaný uživatel (zařízení pod dohledem)         | Ano                                                                                               | N                                           | Ano                                 |
+| 4 | Vlastní zařízení – licencované zařízení                           | N                                                                                               | Ano                                           | N                                 |
+| 5 | Zařízení společnosti – licencované zařízení (zařízení není pod dohledem)                           | N                                                                                               | Ano                                           | N                                 |
 | 6 | Zařízení společnosti – licencované zařízení (zařízení pod dohledem)                           | N                                                                                               | N                                           | N                                 |
 | 7 | Beznabídkový režim (zařízení pod dohledem) – licencované zařízení | N                                                                                               | N                                           | N                                 |
 | 8 | Beznabídkový režim (zařízení pod dohledem) – licencovaný uživatel   | --- | ---                                          | ---                                |
@@ -188,6 +187,9 @@ K obnovení tokenu Apple VPP použijte následující postup:
 2. Stáhněte si nový token ve **Správci Apple Business (nebo School)**, a to tak, že vyberete **Nastavení**  >  **aplikace a kniha**  >  **Moje tokeny serveru**.
 3. Aktualizujte token v [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431) tak, že vyberete možnost konektory **pro správu tenanta**  >  **a tokeny**  >  **Apple VPP**. Pak ručně nahrajte token.
 
+>[!NOTE]
+>Pokud chcete, aby uživatel, který nastavil token v Apple Business Manageru, změnil heslo nebo uživatel zůstane v organizaci Apple Business Manageru, musíte si z Apple Business Manageru stáhnout nový token pro Apple VPP nebo location a aktualizovat existující token v Intune. Tokeny, které se neobnovily, zobrazí v Intune stav "neplatný".
+
 ## <a name="deleting-a-vpp-app"></a>Odstranění aplikace VPP
 
 V současné době nemůžete z Microsoft Intune odstranit aplikaci VPP pro iOS/iPadOS.
@@ -217,7 +219,7 @@ Licence by se měly aktualizovat do několika hodin od instalace nebo odinstalac
 
 ### <a name="is-it-possible-to-oversubscribe-an-app-and-if-so-in-what-circumstance"></a>Je možné přidělit aplikaci nadměrnému počtu subjektů? A pokud ano, za jakých okolností?
 
-Yes. Správce Intune může aplikaci přidělit nadměrnému počtu uživatelů nebo zařízení. A to například tehdy, když zakoupí sto licencí k aplikaci XYZ a potom ji zacílí na skupinu s pěti sty členy. Prvnímu stu členů (uživatelům nebo zařízením) se licence přiřadí a u zbylých členů se přiřazení licence nezdaří.
+Ano. Správce Intune může aplikaci přidělit nadměrnému počtu uživatelů nebo zařízení. A to například tehdy, když zakoupí sto licencí k aplikaci XYZ a potom ji zacílí na skupinu s pěti sty členy. Prvnímu stu členů (uživatelům nebo zařízením) se licence přiřadí a u zbylých členů se přiřazení licence nezdaří.
 
 ## <a name="next-steps"></a>Další kroky
 

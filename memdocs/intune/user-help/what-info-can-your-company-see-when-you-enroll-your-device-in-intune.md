@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/31/2019
+ms.date: 06/11/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
 ms.collection: ''
-ms.openlocfilehash: 028a568b9a588697139f97f292c70c50347217f3
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 696969c2d80519d0c0aac2f33c72756aff700f14
+ms.sourcegitcommit: 9a8a9cc7dcb6ca333b87e89e6b325f40864e4ad8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83882082"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84740756"
 ---
 # <a name="what-information-can-my-organization-see-when-i-enroll-my-device"></a>Jaké informace moje organizace uvidí, když zaregistruji své zařízení?
 
@@ -64,6 +64,6 @@ Při registraci zařízení do Microsoft Intune nevidí organizace vaše osobní
 
 - Telefonní číslo: U zařízení ve firemním vlastnictví může být viditelné celé telefonní číslo. U zařízení v osobním vlastnictví vidí organizace jen poslední čtyři číslice vašeho telefonního čísla. Na stránce **Podrobnosti o zařízení** můžete zobrazit typ vlastnictví každého jednotlivého zařízení.
 - Úložné místo v zařízení: Pokud nemůžete nainstalovat požadovanou aplikaci, může organizace zjistit, jestli ve vašem zařízení není nedostatek úložného místa.  
-- Umístění: vaše organizace si nikdy nevidí umístění vašeho zařízení, pokud nepotřebujete obnovit ztracené, pod dohledem zařízení s iOS. Další informace o zařízeních pod dohledem najdete v [dokumentaci k Apple iOS](https://go.microsoft.com/fwlink/?linkid=853816) .  
-- Podrobnosti inventáře aplikací: Pokud vaše organizace používá ochranu před mobilními hrozbami, bude moct zobrazit podrobnosti o aplikacích, které jsou na vašem zařízení s iOS. Přečtěte si další informace o [ochraně před mobilním hrozbami](set-up-mobile-threat-defense.md). Pokud máte osobní zařízení, může vaše organizace zobrazit jenom inventář spravovaných aplikací. Pokud máte zařízení vlastněné společností, může vaše organizace Zobrazit všechny inventáře aplikací.
+- Umístění: u zařízení vlastněných společností může vaše organizace zobrazit umístění ztraceného zařízení. V případě zařízení vlastněných osobním časem vaše organizace nikdy nevidí umístění zařízení, pokud se nepokouší najít ztracená zařízení s iOS pod dohledem. Další informace o zařízeních pod dohledem najdete v [dokumentaci k Apple iOS](https://go.microsoft.com/fwlink/?linkid=853816) .  
+- Podrobnosti inventáře aplikací: Pokud vaše organizace používá ochranu před mobilními hrozbami, bude moct zobrazit podrobnosti o aplikacích, které jsou na vašem zařízení s iOS. Přečtěte si další informace o [ochraně před mobilním hrozbami](set-up-mobile-threat-defense.md). V opačném případě můžou vaše organizace zobrazit jenom inventář spravovaných aplikací, a to v jiném osobním zařízení. U zařízení vlastněných společností může vaše organizace Zobrazit všechny inventáře aplikací.
 - Informace o síti: Některé informace o připojení k síti na zařízeních s Androidem mohou být dostupné podpoře vaší organizace. Pokud vaše organizace například vyžaduje, aby zařízení zůstala v určité budově, identifikuje vaše zařízení síť, ke které je připojené. 

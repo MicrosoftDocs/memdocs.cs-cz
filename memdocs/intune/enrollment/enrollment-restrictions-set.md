@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c1bbcfc953945f7e8525cb7dc7edf3b1dd8a2f5c
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: f807eabd2fabd51f7a7bb8eb43225a579784148c
+ms.sourcegitcommit: 7a099ff53668f50b37adab97ecd7ba98c5324676
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989073"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84746489"
 ---
 # <a name="set-enrollment-restrictions"></a>Nastavení omezení registrace
 
@@ -64,7 +64,7 @@ Pro omezení registrace typu i limitu počtu zařízení se automaticky poskytno
 3. Kliknutím na tlačítko **Další** přejdete na stránku **Nastavení platformy** .
 4. V části **platforma**vyberte možnost **Povolení** pro platformy, u kterých chcete toto omezení omezit.
     ![Zakončení obrazovky pro výběr nastavení platformy](./media/enrollment-restrictions-set/choose-platform-settings.png)
-5. V části **verze**vyberte minimální a maximální verze, které mají povolené platformy podporovat. Omezení verze se vztahují jenom na zařízení zaregistrovaná ve Portál společnosti.
+5. V části **verze**vyberte minimální a maximální verze, které mají povolené platformy podporovat. Pro iOS a Android platí omezení verze jenom na zařízení zaregistrovaná ve Portál společnosti.
      Podporované formáty verzí:
     - Správce zařízení s Androidem a pracovní profil Android Enterprise podporují hlavní. podverze. rev. Build.
     - iOS/iPadOS podporuje hlavní_verze. podverze. rev. Verze operačního systému se nevztahují na zařízení Apple, která se registrují pomocí Program registrace zařízení, Apple School Manageru nebo aplikace Apple Configuratoru.

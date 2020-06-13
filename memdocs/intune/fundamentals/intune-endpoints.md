@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8fea0e1de6389083f09c51c5cf73196290693a56
-ms.sourcegitcommit: 52dd59bdbad07b414db9e4209da0f4c957cf5d6e
+ms.openlocfilehash: 88140f54067607e11f3b24c3ca8d196067dda50e
+ms.sourcegitcommit: 5f15a3abf33ce7bfd6855ffeef2ec3cd4cd48a7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84614062"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84721835"
 ---
 # <a name="network-endpoints-for-microsoft-intune"></a>Koncové body sítě pro Microsoft Intune  
 
@@ -126,3 +126,7 @@ Pro metadata Optimalizace doručení:
 |Různé funkce, včetně přístupu k webu, obchodu iTunes, macOS App Storu, iCloud, zasílání zpráv atd. |phobos.apple.com<br>ocsp.apple.com<br>ax.itunes.apple.com<br>ax.itunes.apple.com.edgesuite.net| HTTP/HTTPS |  80 nebo 443   |
 
 Další informace najdete v tématu [porty TCP a UDP společnosti Apple používané softwarovými produkty společnosti Apple](https://support.apple.com/HT202944), [informace o připojeních hostitele MacOS, iOS/iPadOS a iTunes serveru iTunes a o procesech na pozadí iTunes](https://support.apple.com/HT201999)a [v případě, že klienti MacOS a iOS/iPadOS nezískávají nabízená oznámení Apple](https://support.apple.com/HT203609).  
+
+## <a name="android-port-information"></a>Informace o portu Android
+
+Informace o portech pro Android najdete v tématu [FCM porty Google a brána firewall](https://firebase.google.com/docs/cloud-messaging/concept-options#messaging-ports-and-your-firewall).

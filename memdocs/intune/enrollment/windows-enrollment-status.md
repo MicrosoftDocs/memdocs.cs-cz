@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 33c57e5641934200120839ad48a9a4c8b8d0a8fa
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 93ff5ba088b04af155ea05e69c7d1f25deb33419
+ms.sourcegitcommit: 7a099ff53668f50b37adab97ecd7ba98c5324676
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988894"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84746642"
 ---
 # <a name="set-up-an-enrollment-status-page"></a>Nastavení stránky stavu registrace
  
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
  
-Stránka stavu registrace (ESP) zobrazuje informace o instalaci zařízení s Windows 10 (verze 1803 a novější) během úvodní registrace zařízení. Příklad:
+Stránka stavu registrace (ESP) zobrazuje informace o instalaci zařízení s Windows 10 (verze 1803 a novější) během úvodní registrace zařízení. Například:
 - Při použití [Windows autopilotu](https://docs.microsoft.com/windows/deployment/windows-autopilot/) 
 - nebo kdykoli se spravované zařízení poprvé spustí po použití zásady stránky stavu registrace. 
 
@@ -41,7 +41,7 @@ Stránka stavu registrace pomáhá uživatelům pochopit stav svých zařízení
 Můžete také nastavit pořadí priority pro každý profil na účet pro konfliktní přiřazení profilů pro stejného uživatele.
 
 > [!NOTE]
-> Stránka stavu registrace se může zaměřit jenom na uživatele, který patří do přiřazené skupiny, a v případě registrace pro všechny uživatele, kteří zařízení používají, se v zařízení nastavila zásada.  Zařízení cílící na profily stránky stavu registrace se v tuto chvíli nepodporuje.
+> Stránka stavu registrace se může zaměřit jenom na uživatele, který patří do přiřazené skupiny, a v případě registrace pro všechny uživatele, kteří zařízení používají, se v zařízení nastavila zásada.  Zařízení cílící na profily stránky stavu registrace se v tuto chvíli nepodporuje. Pokud používáte šetrnější nebo samoobslužný režim automatického pilotního nasazení, zajistěte, aby byla pro první nastavení v následující tabulce povolena výchozí zásada ESP (s názvem Všichni uživatelé a všechna zařízení).
 
 ## <a name="available-settings"></a>Dostupná nastavení
 
@@ -56,7 +56,7 @@ Můžete také nastavit pořadí priority pro každý profil na účet pro konfl
 <tr><td>Povolí uživatelům používat zařízení, pokud dojde k chybě instalace.<td>Pokud dojde k chybě instalace, zobrazí se tlačítko <b>pokračovat</b> .<td>Pokud dojde k chybě instalace, tlačítko <b>pokračovat</b> se nezobrazí.
 <tr><td>Zobrazit chybu časového limitu v případě, že instalace trvá déle než zadaný počet minut<td colspan="2">Zadejte počet minut, po které se má čekat na dokončení instalace. Je zadaná výchozí hodnota 60 minut.
 <tr><td>Zobrazit vlastní zprávu, když dojde k chybě<td>Je k dispozici textové pole, kde můžete zadat vlastní zprávu, která se zobrazí, pokud dojde k chybě instalace.<td>Zobrazí se výchozí zpráva: <br><b>Instalace překročila časový limit nastavený vaší organizací. Zkuste to znovu, nebo se obraťte na pracovníky podpory IT a požádejte ho o pomoc.<b>
-<tr><td>Dovolit uživatelům shromažďovat protokoly o chybách instalace<td>Pokud dojde k chybě instalace, zobrazí se tlačítko <b>shromáždit protokoly</b> . <br>Pokud uživatel klikne na toto tlačítko, zobrazí se výzva k výběru umístění pro uložení souboru protokolu <b>MDMDiagReport. cab.</b><td>Pokud dojde k chybě instalace, tlačítko <b>shromáždit protokoly</b> se nezobrazí.
+<tr><td>Dovolit uživatelům shromažďovat protokoly o chybách instalace<td>Pokud dojde k chybě instalace, zobrazí se tlačítko <b>shromáždit protokoly</b> . <br>Pokud uživatel klikne na toto tlačítko, zobrazí se výzva k výběru umístění pro uložení souboru protokolu <b>MDMDiagReport.cab</b><td>Pokud dojde k chybě instalace, tlačítko <b>shromáždit protokoly</b> se nezobrazí.
 <tr><td>Zablokovat používání zařízení, dokud se tyto požadované aplikace neinstalují, pokud jsou přiřazené uživateli/zařízení<td colspan="2">Vyberte <b>vše</b> nebo <b>vybrané</b>. <br><br>Pokud <b>vyberete</b> tuto možnost, zobrazí se tlačítko <b>vybrat aplikace</b> , které vám umožní vybrat, které aplikace se musí nainstalovat, než zařízení povolí.
 </table>
 
