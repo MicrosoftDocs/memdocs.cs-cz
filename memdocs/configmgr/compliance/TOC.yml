@@ -56,7 +56,7 @@
       href: deploy-use/create-remote-connection-profiles.md
     - name: Upgrade zařízení s Windows na novou edici
       href: deploy-use/upgrade-windows-version.md
-    - name: Konfigurace nastavení Microsoft Edge
+    - name: Konfigurace nastavení starší verze Microsoft Edge
       href: deploy-use/browser-profiles.md
     - name: Monitorování nastavení dodržování předpisů
       href: deploy-use/monitor-compliance-settings.md

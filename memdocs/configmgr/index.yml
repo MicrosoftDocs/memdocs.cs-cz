@@ -3,12 +3,12 @@ title: Dokumentace k produktu Microsoft Endpoint Configuration Manager
 summary: 'Oficiální dokumentace k následujícím komponentám produktu Microsoft Endpoint Configuration Manager: Configuration Manager, spoluspráva a Desktop Analytics'
 metadata:
   ms.topic: hub-page
-  ms.openlocfilehash: 0f8c1c2b9618b841053df58d580d8cee4d0e88fc
-  ms.sourcegitcommit: 8a023e941d90c107c9769a1f7519875a31ef9393
+  ms.openlocfilehash: f3251366204ef8954b87bcd630117f341844554b
+  ms.sourcegitcommit: 7f542c97ac55bbd329f5befda97d671213c24e9a
   ms.translationtype: HT
   ms.contentlocale: cs-CZ
-  ms.lasthandoff: 06/03/2020
-  ms.locfileid: "84311153"
+  ms.lasthandoff: 06/08/2020
+  ms.locfileid: "84506226"
 highlightedContent:
   items:
   - title: Novinky
@@ -162,7 +162,7 @@ conceptualContent:
     - text: Vytváření položek konfigurace
       url: ./compliance/deploy-use/create-configuration-items.md
       itemType: how-to-guide
-    - text: Nastavení Microsoft Edge
+    - text: Nastavení starší verze Microsoft Edge
       url: ./compliance/deploy-use/browser-profiles.md
       itemType: how-to-guide
     - text: Upgrade edice Windows
