@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/15/2020
+ms.date: 06/15/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,16 +16,16 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: f98d7a30d219aee63e38a63a74d8f1713deb198a
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: aa518036aa99d5de003fbc56f99748267f3cc87b
+ms.sourcegitcommit: 7b2f7918d517005850031f30e705e5a512959c3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431293"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84776867"
 ---
 # <a name="firewall-policy-for-endpoint-security-in-intune"></a>Zásady brány firewall pro zabezpečení koncových bodů v Intune
 
-Pomocí zásad brány firewall zabezpečení koncového bodu v Intune můžete nakonfigurovat vestavěnou bránu firewall pro zařízení, která používají macOS a Windows 10. Mezi integrované brány firewall patří BitLocker pro zařízení s Windows a trezor pro macOS.
+Pomocí zásad brány firewall zabezpečení koncového bodu v Intune můžete nakonfigurovat vestavěnou bránu firewall pro zařízení, která používají macOS a Windows 10.
 
 I když můžete nakonfigurovat stejné nastavení brány firewall pomocí Endpoint Protection profilů pro konfiguraci zařízení, profily konfigurace zařízení obsahují další kategorie nastavení. Tato další nastavení se netýkají bran firewall a můžou zkomplikovat úlohy konfigurace pouze nastavení brány firewall pro vaše prostředí.
 
@@ -60,11 +60,11 @@ Naplánujte, aby se zásady brány firewall používaly na zařízení jenom v j
 
 Když použijete profily **pravidel firewallu v programu Microsoft Defender** , můžete na stejné zařízení použít několik profilů pravidel. Pokud však existují různá pravidla pro stejnou věc s různými konfiguracemi, obě jsou odesílány do zařízení a v tomto zařízení vytvoří konflikt.
 
-- Pokud třeba jedno pravidlo zablokuje *Teams. exe* přes bránu firewall a druhé pravidlo umožňuje *týmům. exe*, budou se do klienta doručovat obě pravidla. Tento výsledek se liší od konfliktů vytvořených prostřednictvím jiných zásad pro nastavení brány firewall.
+- Pokud například jedno pravidlo blokuje *Teams.exe* přes bránu firewall a druhé pravidlo povoluje *Teams.exe*, budou se obě pravidla doručovat do klienta. Tento výsledek se liší od konfliktů vytvořených prostřednictvím jiných zásad pro nastavení brány firewall.
 
 Když pravidla z různých pravidel nekolidují mezi sebou, zařízení sloučí pravidla z jednotlivých profilů a vytvoří na zařízení kombinovanou konfiguraci pravidel brány firewall. Toto chování umožňuje nasadit více než 150 pravidel, které jednotlivé profily podporují pro zařízení.
 
-- Máte například dva profily pravidla firewallu v programu Microsoft Defender. První profil umožňuje *týmům. exe* přes bránu firewall. Druhý profil umožňuje *aplikaci Outlook. exe* přes bránu firewall. Když zařízení obdrží oba profily, zařízení se nakonfiguruje tak, aby umožňovalo obě aplikace přes bránu firewall.
+- Máte například dva profily pravidla firewallu v programu Microsoft Defender. První profil umožňuje *Teams.exe* přes bránu firewall. Druhý profil umožňuje *Outlook.exe* přes bránu firewall. Když zařízení obdrží oba profily, zařízení se nakonfiguruje tak, aby umožňovalo obě aplikace přes bránu firewall.
 
 ## <a name="next-steps"></a>Další kroky
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d277b47b2d753b5068e871fe33ce0cab48cfb1e4
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: f4e98a9c25121bacf1759dc73464e3a51dfe61d9
+ms.sourcegitcommit: c333fc6627f5577cde9d2fa8f59e642202a7027b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79330947"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84795682"
 ---
 # <a name="identify-mobile-device-management-use-case-scenarios"></a>Identifikace scénářů použití při správě mobilních zařízení
 
@@ -46,7 +46,7 @@ Zjistěte, jestli každý scénář použití také obsahuje dílčí scénáře
 
 - Informatik
 
-- Manažer
+- Manažerský
 
 - Kiosk
 
@@ -60,19 +60,18 @@ Tady je několik příkladů scénářů použití a dílčích scénářů pou�
 | BYOD | Informatik |           
 | BYOD | Vedení |
 
-Můžete [si stáhnout šablonu výše uvedené tabulky](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) a zadat scénáře použití a dílčí scénáře použití ve vaší organizaci.
 
 ## <a name="organizational-groups-for-your-scenarios"></a>Organizační skupiny pro scénáře
 
-Teď potřebujete určit organizační skupiny přidružené ke každému hlavnímu a dílčímu scénáři použití. Příklad:
+Teď potřebujete určit organizační skupiny přidružené ke každému hlavnímu a dílčímu scénáři použití. Například:
 
 | **Případy použití** | **Dílčí případy použití** | **Organizační skupiny** |
 |:---:|:---:|:---:|
 | Firemní | Informatik | Personalistika, finance |               
-| Firemní | Manažer | Personalistika, finance |            
-| Firemní | Kiosk | Maloobchod |
+| Firemní | Manažerský | Personalistika, finance |            
+| Firemní | Kiosk | Retail |
 | BYOD | Informatik | Marketing, prodej |            
-| BYOD | Manažer | Marketing, prodej |
+| BYOD | Manažerský | Marketing, prodej |
 
 
 ## <a name="mobile-device-platforms-for-your-scenarios"></a>Platformy mobilních zařízení pro vaše scénáře
@@ -85,7 +84,7 @@ Scénář firemního použití může například podporovat platformy zařízen
 |:---:|:---:|:---:|:---:|
 | Firemní | Informatik | Personalistika, finance | iOS/iPadOS |                                                           
 | Firemní | Vedení | Personalistika, finance | iOS/iPadOS |                                                           
-| Firemní | Kiosk | Maloobchod | Android |
+| Firemní | Kiosk | Retail | Android |
 | BYOD | Informatik | Marketing, prodej | iOS/iPadOS |                                                           
 | BYOD | Vedení | Marketing, prodej | iOS/iPadOS |
 

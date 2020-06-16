@@ -19,16 +19,16 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 27bf115e6382b429d6555a19f655f0d5ba554ce7
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 4120e73c803085fafda755d5bf845befb1ead046
+ms.sourcegitcommit: 7b2f7918d517005850031f30e705e5a512959c3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881803"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84776918"
 ---
 # <a name="sync-your-ios-device-manually"></a>Ruční synchronizace zařízení s iOS
 
-Někdy může stažení aplikace z Portálu společnosti trvat příliš dlouho. Pokud taková situace nastane, zkuste zařízení synchronizovat ručně. Zařízení se pokusí získat informace, které nemohlo stáhnout.
+V některých případech může aplikace trvat příliš dlouho, než se stáhnou z Portál společnosti. Pokud taková situace nastane, zkuste zařízení synchronizovat ručně. Zařízení se pokusí získat informace, které nemohlo stáhnout.
 
 1. Otevřete aplikaci Portál společnosti.
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 88140f54067607e11f3b24c3ca8d196067dda50e
-ms.sourcegitcommit: 5f15a3abf33ce7bfd6855ffeef2ec3cd4cd48a7f
+ms.openlocfilehash: 473f356f4f867cdb7a03c6b419f4e789b8301f80
+ms.sourcegitcommit: c333fc6627f5577cde9d2fa8f59e642202a7027b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84721835"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84795563"
 ---
 # <a name="network-endpoints-for-microsoft-intune"></a>Koncové body sítě pro Microsoft Intune  
 
@@ -129,4 +129,16 @@ Další informace najdete v tématu [porty TCP a UDP společnosti Apple použív
 
 ## <a name="android-port-information"></a>Informace o portu Android
 
-Informace o portech pro Android najdete v tématu [FCM porty Google a brána firewall](https://firebase.google.com/docs/cloud-messaging/concept-options#messaging-ports-and-your-firewall).
+V závislosti na tom, jak se rozhodnete spravovat zařízení s Androidem, možná budete muset otevřít porty Google Android Enterprise nebo nabízené oznámení Androidu. Další informace o podporovaných metodách správy Androidu najdete v [dokumentaci k registraci Androidu](https://docs.microsoft.com/mem/intune/enrollment/android-enroll). 
+
+[!NOTE]
+Protože Google Mobile Services není k dispozici v Číně, zařízení v Číně spravovaná službou Intune nemůžou používat funkce, které vyžadují Google Mobile Services. Mezi tyto funkce patří: Google Play Ochrana zařízení, jako je SafetyNet ověřování zařízení, Správa aplikací z Obchod Google Play funkcí Android Enterprise (viz tato [dokumentace k Google](https://support.google.com/work/android/answer/6270910)). Kromě toho Portál společnosti Intune aplikace pro Android používá Google Mobile Services ke komunikaci se službou Microsoft Intune. Vzhledem k tomu, že služba Google Play Services není k dispozici v Číně, můžou některé úlohy vyžadovat dokončení až 8 hodin. Další informace najdete v tomto [článku](https://docs.microsoft.com/mem/intune/apps/manage-without-gms#limitations-of-intune-device-administrator-management-when-gms-is-unavailable).
+
+### <a name="google-android-enterprise"></a>Google Android Enterprise 
+
+Google poskytuje dokumentaci k požadovaným síťovým portům a cílovým názvům hostitelů ve svých [Androidech Bluebook Enterprise](https://static.googleusercontent.com/media/www.android.com/en//static/2016/pdfs/enterprise/Android-Enterprise-Migration-Bluebook_2019.pdf)v části **Brána firewall** v tomto dokumentu. 
+
+### <a name="android-push-notification"></a>Nabízené oznámení Androidu
+
+Intune využívá pro nabízené oznámení Google Firebase Cloud Messaging (FCM) k aktivaci akcí zařízení a vrácení se změnami. To je vyžadováno pro správce zařízení s Androidem i pro Android Enterprise. Informace o požadavcích na FCM sítě najdete v tématu [FCM porty Google a brána firewall](https://firebase.google.com/docs/cloud-messaging/concept-options#messaging-ports-and-your-firewall).
+

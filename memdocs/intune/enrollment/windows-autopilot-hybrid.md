@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9983eb211b816ae05a1f9d180a7dbb68e3fac505
-ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
+ms.openlocfilehash: 23eecaea3db452dc873eeb69c3bf36959dff6d0f
+ms.sourcegitcommit: c333fc6627f5577cde9d2fa8f59e642202a7027b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84428660"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84795546"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot"></a>Nasazení hybridních zařízení připojených k Azure AD pomocí Intune a automatického pilotního projektu Windows
 Pomocí Intune a Windows autopilotu můžete nastavit zařízení připojená k hybridnímu Azure Active Directory (Azure AD). Pokud to chcete provést, postupujte podle kroků v tomto článku.
@@ -111,20 +111,18 @@ Konektor Intune pro službu Active Directory musí být nainstalovaný na počí
 
 Konektor Intune vyžaduje [stejné koncové body jako Intune](../fundamentals/intune-endpoints.md).
 
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení**  >  **Windows**  >  **Windows registrace**  >  **Intune Connector pro Active Directory**  >  **Přidat**. 
-2. Podle pokynů stáhněte konektor.
-3. Otevřete stažený instalační soubor konektoru *ODJConnectorBootstrapper. exe*a nainstalujte konektor.
-4. Na konci instalace vyberte **Konfigurovat**.
-5. Vyberte **Přihlásit se**.
-6. Zadejte globální správce uživatele nebo přihlašovací údaje role správce Intune.  
+1. Vypnout konfiguraci rozšířeného zabezpečení aplikace Internet Explorer. Ve výchozím nastavení má Windows Server zapnutou konfiguraci rozšířeného zabezpečení aplikace Internet Explorer. Pokud se nemůžete přihlásit ke službě Intune Connector pro službu Active Directory, pak pro správce vypněte konfiguraci rozšířeného zabezpečení aplikace Internet Explorer. [Vypnutí konfigurace rozšířeného zabezpečení aplikace Internet Explorer](https://blogs.technet.microsoft.com/chenley/2011/03/10/how-to-turn-off-internet-explorer-enhanced-security-configuration). 
+2. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení**  >  **Windows**  >  **Windows registrace**  >  **Intune Connector pro Active Directory**  >  **Přidat**. 
+3. Podle pokynů stáhněte konektor.
+4. Otevřete instalační soubor staženého konektoru, *ODJConnectorBootstrapper.exe*pro instalaci konektoru.
+5. Na konci instalace vyberte **Konfigurovat**.
+6. Vyberte **Přihlásit se**.
+7. Zadejte globální správce uživatele nebo přihlašovací údaje role správce Intune.  
    Uživatelský účet musí mít přiřazenou licenci Intune.
-7. V části **zařízení**  >  **Windows**  >  **Windows registrace**  >  **konektoru Intune pro Active Directory**a potvrďte, že stav připojení je **aktivní**.
+8. V části **zařízení**  >  **Windows**  >  **Windows registrace**  >  **konektoru Intune pro Active Directory**a potvrďte, že stav připojení je **aktivní**.
 
 > [!NOTE]
 > Po přihlášení ke konektoru může trvat několik minut, než se objeví v [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431). Zobrazuje se jenom v případě, že může úspěšně komunikovat se službou Intune.
-
-### <a name="turn-off-ie-enhanced-security-configuration"></a>Vypnout konfiguraci rozšířeného zabezpečení aplikace Internet Explorer
-Ve výchozím nastavení má Windows Server zapnutou konfiguraci rozšířeného zabezpečení aplikace Internet Explorer. Pokud se nemůžete přihlásit ke službě Intune Connector pro službu Active Directory, pak pro správce vypněte konfiguraci rozšířeného zabezpečení aplikace Internet Explorer. [Vypnutí konfigurace rozšířeného zabezpečení aplikace Internet Explorer](https://blogs.technet.microsoft.com/chenley/2011/03/10/how-to-turn-off-internet-explorer-enhanced-security-configuration)
 
 ### <a name="configure-web-proxy-settings"></a>Konfigurace nastavení webového proxy serveru
 

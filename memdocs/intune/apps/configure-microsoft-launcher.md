@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/22/2020
+ms.date: 06/09/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 228c6758feca348d2caed4eb3b54207cadf7a037
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 09ebf7fde0cedb907e105e42abe7338237d231af
+ms.sourcegitcommit: c333fc6627f5577cde9d2fa8f59e642202a7027b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83985841"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84795699"
 ---
 # <a name="configure-microsoft-launcher"></a>Konfigurace Microsoft Launcheru
 
@@ -70,7 +70,7 @@ V následující tabulce jsou uvedeny dostupné konfigurační klíče pro spou�
 |    Povolení informačního kanálu    |    Logická hodnota    |    True    |    Umožňuje povolit informační kanál spouštěče zařízení v případě, že uživatel přetáhne přímo na domovské obrazovce.<ul><li>Pokud je nastaveno na **true**, kanál bude povolen.</li><li>Pokud je hodnota nastavena na **false**, kanál bude zakázán.</li></ul><br>Název klíče JSON:<br>`com.microsoft.launcher.Feed.Enabled`    |
 |    Povolit změnu uživatele v informačním kanálu povolen    |    Logická hodnota    |    True    |     Umožňuje určit, jestli může koncový uživatel změnit nastavení **Povolení kanálu** .<ul><li>Pokud je nastavená **hodnota true**, informační kanál se vynutil jenom pro počáteční nasazení. Následně se zásada neuplatní, aby se projevily změny, které uživatel mohl udělat.</li><li>Pokud je nastavená **hodnota false**, bude se při každé synchronizaci vyžadovat informační kanál.</li></ul><br>Název klíče JSON:`com.microsoft.launcher.Feed.Enabled.UserChangeAllowed`    |
 |    Umístění panelu hledání   |    Řetězec    |    Dole    |  Umožňuje určit **umístění panelu hledání** na domovské obrazovce. <ul><li>Pokud je nastavené na **konec**, panel hledání se umístí do dolní části domovské obrazovky.</li><li>Pokud je nastaveno na **začátek**, panel hledání bude umístěn v horní části domovské obrazovky.</li><li>Pokud je nastavené na hodnotu **Skrýt**, panel hledání se odebere z domovské obrazovky.</li></ul><br>Název klíče JSON:<br>`com.microsoft.launcher.Search.SearchBar.Placement`    |
-|    Umístění panelu hledání povolených změn uživatele   |    Logická hodnota    |    True    |  Umožňuje určit, jestli může koncový uživatel změnit nastavení **umístění panelu hledání** . <ul><li>Pokud je nastavená **hodnota true**, umístění panelu hledání se vynutilo jenom při počátečním nasazení. Následně se zásada neuplatní, aby se projevily změny, které uživatel mohl udělat.</li><li>Pokud je nastavena **hodnota false**, bude při každé synchronizaci vyhledáno umístění panelu hledání.</li></ul><br>Název klíče JSON:<br>`com.microsoft.launcher.Search.SearchBar.Placement.UserChangeAllowed`    |
+|    Umístění panelu hledání povolených změn uživatele   |    Logická hodnota    |    True    |  Umožňuje určit, jestli může koncový uživatel změnit nastavení **umístění panelu hledání** . <ul><li>Pokud je nastavená **hodnota true**, umístění panelu hledání se vynutilo jenom při počátečním nasazení. Následně se zásada neuplatní, aby se projevily změny, které uživatel mohl udělat.</li><li>Pokud je nastavena **hodnota false**, bude při každé synchronizaci vyhledáno umístění panelu hledání.</li></ul><br>Název klíče JSON:<br>`com.microsoft.launcher.Search.SearchBar.Placement.UserChangeAllowed`<p>**Poznámka:** U Microsoft spouštěče v 6,2 a novějších se toto nastavení už nebude vymáhat. Proto nastavení této hodnoty na `True` nebude mít žádný vliv. Koncoví uživatelé nebudou moci přizpůsobit umístění umístění panelu hledání na svém zařízení.    |
 |    Režim Dock  |    Řetězec    |    Zobrazit    | Umožňuje zapnout Docker na zařízení, když uživatel potáhne přímo na domovské obrazovce.<ul><li>Pokud je nastaveno na hodnotu **Zobrazit**, Dock bude povolen.</li><li>Pokud je tato možnost nastavená na hodnotu **Skrýt**, Docker se skryje z domovské obrazovky, ale uživatel ji může zobrazit, když je to potřeba.</li><li>Pokud je nastavené na **zakázáno**, Dock se zakáže.</li></ul><br>Název klíče JSON:<br>`com.microsoft.launcher.Dock.Mode`    |
 |   Změna uživatele režimu Dock Mode povolena   |    Řetězec    |    True    |  Umožňuje určit, zda může být nastavení režimu Docker změněno koncovým uživatelem.<ul><li>Pokud je nastavená **hodnota true**, nastaví se nastavení režimu Docker jenom pro počáteční nasazení. Následně se zásada neuplatní, aby se projevily změny, které uživatel mohl udělat.</li><li>Pokud je nastavena **hodnota false**, bude nastavení režimu Docker při každé synchronizaci vynutilo.</li></ul><br>Název klíče JSON:<br>`com.microsoft.launcher.Dock.Mode.UserChangeAllowed`    |
 
