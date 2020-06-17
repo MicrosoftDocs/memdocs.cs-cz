@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 99ac1e069386c69011543ac40878dd62a0d50527
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: e3ab2e31aa8a35ef04c150972cd7bb7650e46040
+ms.sourcegitcommit: 97f150f8ba8be8746aa32ebc9b909bb47e22121c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990824"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84879715"
 ---
 # <a name="manage-endpoint-security-in-microsoft-intune"></a>Správa zabezpečení koncového bodu v Microsoft Intune
 
@@ -31,15 +31,15 @@ Uzel zabezpečení koncového bodu seskupuje nástroje, které jsou k dispozici 
 
 - **Zkontrolujte stav všech spravovaných zařízení**. Použijte zobrazení [všechna zařízení](#manage-devices) , kde můžete zobrazit dodržování předpisů zařízením z vysoké úrovně a pak přejít na konkrétní zařízení, abyste zjistili, které zásady dodržování předpisů nejsou splněné, abyste je mohli vyřešit.
 
-- **Nasaďte standardní hodnoty zabezpečení, které vytvoří konfigurace zabezpečení osvědčených postupů pro zařízení**. Intune zahrnuje [základní hodnoty zabezpečení](#manage-security-baselines) pro zařízení s Windows a rostoucí seznam aplikací, jako je Microsoft Defender Advanced Threat Protection (Defender ATP) a Microsoft Edge. Směrné plány zabezpečení jsou předem nakonfigurované skupiny nastavení Windows, které vám pomůžou použít známou skupinu nastavení a výchozí hodnoty, které doporučují příslušné bezpečnostní týmy.
+- **Nasaďte standardní hodnoty zabezpečení, které vytvoří konfigurace zabezpečení osvědčených postupů pro zařízení**. Intune zahrnuje [základní hodnoty zabezpečení](#manage-security-baselines) pro zařízení s Windows a rostoucí seznam aplikací, jako je Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP) a Microsoft Edge. Směrné plány zabezpečení jsou předem nakonfigurované skupiny nastavení Windows, které vám pomůžou použít známou skupinu nastavení a výchozí hodnoty, které doporučují příslušné bezpečnostní týmy.
 
-- **Spravujte konfigurace zabezpečení na zařízeních prostřednictvím úzce zaměřeného zásad**.  Každá [zásada zabezpečení koncového bodu](#use-policies-to-manage-device-security) se zaměřuje na aspekty zabezpečení zařízení, jako je antivirová ochrana, šifrování disků, brány firewall a několik oblastí, které jsou dostupné prostřednictvím integrace s ATP pro Defender.
+- **Spravujte konfigurace zabezpečení na zařízeních prostřednictvím úzce zaměřeného zásad**.  Každá [zásada zabezpečení koncového bodu](#use-policies-to-manage-device-security) se zaměřuje na aspekty zabezpečení zařízení, jako je antivirová ochrana, šifrování disků, brány firewall a několik oblastí, které jsou dostupné prostřednictvím integrace s Microsoft Defender atp.
 
 - **Navažte požadavky na zařízení a uživatele prostřednictvím zásad dodržování předpisů**. Pomocí [zásad dodržování předpisů](../protect/device-compliance-get-started.md)nastavíte pravidla, která musí zařízení a uživatelé splňovat, aby se považovaly za vyhovující. Pravidla můžou zahrnovat verze operačních systémů, požadavky na heslo, úroveň hrozeb zařízení a další.
 
   Při integraci se [zásadami podmíněného přístupu](#configure-conditional-access) Azure Active Directory (Azure AD) pro vykonání zásad dodržování předpisů můžete používat přístup k podnikovým prostředkům pro spravovaná zařízení i pro zařízení, která ještě nejsou spravovaná.
 
-- **Integrujte Intune s týmem ATP v programu Microsoft Defender**. [Integrací s programem Defender ATP](#set-up-integration-with-defender-atp) získáte přístup k [úlohám zabezpečení](#review-security-tasks-from-defender-atp). Úkoly zabezpečení úzce spojuje ATP a Intune s tím, aby usnadnily vašemu bezpečnostnímu týmu identifikaci zařízení, která jsou ohrožená a mají jistotu, že správci Intune můžou pracovat s podrobnými kroky nápravy.
+- **Integrujte Intune s týmem ATP v programu Microsoft Defender**. Díky [integraci s ATP programu Microsoft Defender](#set-up-integration-with-microsoft-defender-atp) získáte přístup k [úlohám zabezpečení](#review-security-tasks-from-microsoft-defender-atp). Úkoly zabezpečení úzce propojují ATP a Intune v programu Microsoft Defender a pomohou vašemu týmu zabezpečení identifikovat zařízení, která jsou ohrožená a mají jistotu, že správci Intune můžou pracovat s podrobnými kroky nápravy.
 
 Následující části tohoto článku popisují různé úlohy, které můžete provádět z uzlu Security Center v centru pro správu, a oprávnění řízení přístupu na základě role (RBAC), která jsou potřeba k jejich použití.
 
@@ -61,13 +61,13 @@ Další informace najdete v tématu [použití směrných plánů zabezpečení 
 
 Standardní hodnoty zabezpečení jsou v Intune jedním z několika způsobů konfigurace nastavení na zařízeních. Při správě nastavení je důležité pochopit, jaké jiné metody se ve vašem prostředí používají, aby bylo možné zařízení nakonfigurovat, abyste se vyhnuli konfliktům. Další informace najdete v tématu [předcházení konfliktům zásad](#avoid-policy-conflicts) dále v tomto článku.
 
-## <a name="review-security-tasks-from-defender-atp"></a>Kontrola úloh zabezpečení z programu Defender ATP
+## <a name="review-security-tasks-from-microsoft-defender-atp"></a>Kontrola úloh zabezpečení z ochrany ATP v programu Microsoft Defender
 
-Když integruje Intune s pokročilou ochranou před internetovými útoky v programu Microsoft Defender (ATP), můžete zkontrolovat *úlohy zabezpečení* v Intune, které identifikují rizikové zařízení, a poskytnout kroky pro zmírnění tohoto rizika. Pak můžete úlohy použít k hlášení zpět do programu Defender ATP v případě, že dojde k úspěšnému zmírnění rizika.
+Při integraci Intune s rozšířenou ochranou před internetovými útoky v programu Microsoft Defender (Microsoft Defender ATP) můžete zkontrolovat *úlohy zabezpečení* v Intune, které identifikují rizikové zařízení, a poskytnout kroky pro zmírnění tohoto rizika. Pak můžete úlohy použít k hlášení zpět do ATP v programu Microsoft Defender v případě jejich úspěšného zmírnění rizika.
 
-- Váš tým ATP v programu Defender určí, jaká zařízení jsou v ohrožení, a předá tyto informace vašemu týmu Intune jako bezpečnostní úlohu. Po několika kliknutích vytvoří úkol zabezpečení pro Intune, který identifikuje ohrožená zařízení, ohrožení zabezpečení a poskytuje pokyny k tomu, jak toto riziko zmírnit.
+- Váš tým ATP v programu Microsoft Defender určí, která zařízení jsou v ohrožení, a předá tyto informace vašemu týmu Intune jako bezpečnostní úlohu. Po několika kliknutích vytvoří úkol zabezpečení pro Intune, který identifikuje ohrožená zařízení, ohrožení zabezpečení a poskytuje pokyny k tomu, jak toto riziko zmírnit.
 
-- Správci Intune kontrolují úlohy zabezpečení a pak jednají v rámci Intune, aby tyto úkoly opravili. Po omezení nastavili úkol na dokončeno, který tento stav sdělí týmu ATP.
+- Správci Intune kontrolují úlohy zabezpečení a pak jednají v rámci Intune, aby tyto úkoly opravili. Po omezení nastavili úkol na dokončeno, který tento stav sdělí týmu ATP v programu Microsoft Defender.
 
 Díky bezpečnostním úlohám oba týmy zůstávají v synchronizaci, jako u kterých jsou ohrožená zařízení, a jak a kdy se tato rizika napravují.
 
@@ -93,7 +93,7 @@ Pomocí zásad dodržování předpisů pro zařízení navažte podmínky, podl
 
 - Vyžaduje se, aby zařízení spouštěla minimální nebo konkrétní verzi operačního systému.
 - Nastavení požadavků na heslo
-- Určení maximální povolené úrovně zařízení na hrozbách, která je určená pro program Defender ATP nebo jiný partner ochrany před mobilními hrozbami
+- Zadání maximální povolené úrovně pro hrozby zařízení, která je určená ATP Microsoft Defender nebo jiným partnerem ochrany před mobilními hrozbami
 
 Kromě pravidel zásad podporuje zásady dodržování předpisů:
 
@@ -119,18 +119,18 @@ Níže jsou uvedené dvě běžné metody použití podmíněného přístupu s 
 
 Další informace o použití podmíněného přístupu v Intune najdete v tématu [informace o podmíněném přístupu a Intune](../protect/conditional-access.md).
 
-## <a name="set-up-integration-with-defender-atp"></a>Nastavení integrace s ATP Defender
+## <a name="set-up-integration-with-microsoft-defender-atp"></a>Nastavení integrace s Microsoft Defender ATP
 
-Při integraci programu Microsoft Defender Advanced Threat Protection (Defender ATP) s Intune Vylepšete schopnost identifikovat a reagovat na rizika.
+Když integrujete Microsoft Defender ATP s Intune, Vylepšete svou schopnost identifikovat a reagovat na rizika.
 
-I když se Intune dá integrovat s několika [partnerskými servery ochrany před mobilními hrozbami](../protect/mobile-threat-defense.md), při použití programu Defender ATP získáte těsnou integraci mezi ATP a Intune a s přístupem k možnostem vysoké ochrany zařízení, včetně těchto:
+I když se může Intune integrovat s několika [partnery ochrany před mobilními hrozbami](../protect/mobile-threat-defense.md), při použití ATP Microsoft Defenderu získáte úzkou integraci mezi Microsoft Defender ATP a Intune s přístupem k možnostem ochrany hlubokých zařízení, včetně těchto:
 
 - Úkoly zabezpečení – bezproblémová komunikace mezi ATP a správci Intune o riziku zařízení, jejich nápravě a potvrzení, že se rizika sníží.
-- Zjednodušené připojování pro ATP v programu Defender na klienty.
+- Zjednodušená registrace pro Microsoft Defender ATP na klientech.
 - Používání rizikových signálů zařízení ATP v zásadách dodržování předpisů v Intune.
 - Přístup k možnostem *neoprávněné ochrany* .
 
- Další informace o používání programu Defender ATP s Intune najdete v tématu [vymáhání dodržování předpisů pro Microsoft Defender ATP s podmíněným přístupem v Intune](../protect/advanced-threat-protection.md).
+ Další informace o používání služby Microsoft Defender ATP s Intune najdete v tématu [vymáhání dodržování předpisů pro Microsoft Defender ATP s podmíněným přístupem v Intune](../protect/advanced-threat-protection.md).
 
 ## <a name="role-based-access-control-requirements"></a>Požadavky na řízení přístupu na základě rolí
 
@@ -218,7 +218,7 @@ Například nastavení zjištěná v zásadách zabezpečení koncového bodu js
 
 Jedním ze způsobů, jak zabránit konfliktům, je nepoužívat jiné směrné plány, instance stejného směrného plánu nebo různé typy a instance zásad pro správu stejných nastavení na zařízení. To vyžaduje plánování, které metody použijete k nasazení konfigurací do různých zařízení. Pokud ke konfiguraci stejného nastavení použijete více metod nebo instancí stejné metody, zajistěte, aby vaše různé metody buď souhlasily, nebo nebyly nasazeny do stejného zařízení.
 
-Pokud dojde ke konfliktům, můžete k identifikaci a řešení zdroje těchto konfliktů použít integrované nástroje Intune. Další informace naleznete v tématu:
+Pokud dojde ke konfliktům, můžete k identifikaci a řešení zdroje těchto konfliktů použít integrované nástroje Intune. Další informace:
 
 - [Řešení potíží se zásadami a profily v Intune](../configuration/troubleshoot-policies-in-microsoft-intune.md)
 - [Monitorování standardních hodnot zabezpečení](../protect/security-baselines-monitor.md#troubleshoot-using-per-setting-status)
@@ -230,4 +230,4 @@ Konfigurace
 - [Základní nastavení zabezpečení](../protect/security-baselines.md)
 - [Zásady dodržování předpisů](../protect/device-compliance-get-started.md)
 - [Zásady podmíněného přístupu](#configure-conditional-access)
-- [Integrace s ATP pro Defender](../protect/advanced-threat-protection.md)
+- [Integrace s ATP v programu Microsoft Defender](../protect/advanced-threat-protection.md)

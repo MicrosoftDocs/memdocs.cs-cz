@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 11/18/2019
+ms.date: 06/16/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 07612080f170c5f2bef448aa616a4422508218d1
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 97e837d99ee6f3558a408c443e32eb86fd803de6
+ms.sourcegitcommit: 02635469d684d233fef795d2a15615658e62db10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326940"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84814884"
 ---
 # <a name="troubleshoot-iosipados-device-enrollment-problems-in-microsoft-intune"></a>Řešení potíží s registrací zařízení s iOS nebo iPadOS v Microsoft Intune
 
@@ -52,7 +52,7 @@ Shromážděte následující informace o problému:
 #### <a name="resolution"></a>Řešení
 
 1. Aby nedošlo ke ztrátě dat v následujících krocích (obnovení iOS/iPadOS odstraní všechna data v zařízení), ujistěte se, že zálohujete data.
-2. Zařízení umístěte do režimu obnovení a pak ho obnovte. Ujistěte se, že jste ji nastavili jako nové zařízení. Další informace o tom, jak obnovit zařízení s iOS/iPadOS, [https://support.apple.com/HT201263](https://support.apple.com/HT201263)najdete v tématu.
+2. Zařízení umístěte do režimu obnovení a pak ho obnovte. Ujistěte se, že jste ji nastavili jako nové zařízení. Další informace o tom, jak obnovit zařízení s iOS/iPadOS, najdete v tématu [https://support.apple.com/HT201263](https://support.apple.com/HT201263) .
 3. Zařízení znovu zaregistrujte.
 
 ### <a name="profile-installation-failed-connection-to-the-server-could-not-be-established"></a>Instalace profilu se nezdařila. Nepovedlo se navázat spojení se serverem.
@@ -62,29 +62,10 @@ Shromážděte následující informace o problému:
 #### <a name="resolution"></a>Řešení
 1. Přihlaste se k portálu Azure.
 2. Vyberte **Další služby**, vyhledejte Intune a pak vyberte **Intune**.
-3. Vyberte **registrace** > zařízení**omezení registrace**.
-4. V části **omezení typů zařízení**vyberte omezení, které chcete nastavit > **vlastnosti** > **Vybrat platformy** > vyberte možnost **Povolení** pro **iOS**a pak klikněte na **OK**.
+3. Vyberte **registrace zařízení**  >  **omezení registrace**.
+4. V části **omezení typů zařízení**vyberte omezení, které chcete nastavit > **vlastnosti**  >  **Vybrat platformy** > vyberte možnost **Povolení** pro **iOS**a pak klikněte na **OK**.
 5. Vyberte **Konfigurovat platformy**, vyberte možnost **povoleno** pro zařízení s iOS a iPadOS v osobním vlastnictví a pak klikněte na **OK**.
 6. Zařízení znovu zaregistrujte.
-
-**Příčina:** Nezbytné záznamy CNAME v DNS neexistují.
-
-#### <a name="resolution"></a>Řešení
-Vytvořte záznamy o prostředcích DNS CNAME pro doménu vaší společnosti. Pokud je například doména vaší společnosti contoso.com, vytvořte ve službě DNS záznam CNAME, který přesměruje EnterpriseEnrollment.contoso.com na EnterpriseEnrollment-s.manage.microsoft.com.
-
-Vytváření položek CNAME DNS není povinné, ale záznamy CNAME usnadňují uživatelům registraci. Pokud se nenajde žádný záznam CNAME pro registraci, zobrazí se uživatelům výzva, aby ručně zadali název serveru MDM: enrollment.manage.microsoft.com.
-
-Pokud existuje více než jedna ověřená doména, vytvořte záznam CNAME pro každou doménu. Záznamy o prostředcích CNAME musí obsahovat tyto informace:
-
-|TYP|Název hostitele|Odkazuje na|Hodnota TTL|
-|------|------|------|------|
-|CNAME|EnterpriseEnrollment.doména_společnosti.com|EnterpriseEnrollment-s.manage.microsoft.com|1 hr|
-|CNAME|EnterpriseRegistration.doména_společnosti.com|EnterpriseRegistration.windows.net|1 hr|
-
-Pokud vaše společnost používá více domén pro přihlašovací údaje uživatelů, vytvořte záznamy CNAME pro každou doménu.
-
-> [!NOTE]
-> Změny záznamů DNS se mohou projevit až po 72 hodinách. Před rozšířením záznamu DNS nemůžete v Intune ověřit změnu DNS.
 
 **Příčina:** Zaregistrujete zařízení, které bylo dříve zaregistrováno pod jiným uživatelským účtem, a předchozí uživatel nebyl ze služby Intune odpovídajícím způsobem odebrán.
 
@@ -136,10 +117,10 @@ Pokud vaše společnost používá více domén pro přihlašovací údaje uživ
 **Příčina:** Uživatel se pokusí zaregistrovat více zařízení, než je limit pro registraci zařízení.
 
 #### <a name="resolution"></a>Řešení
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **všechna zařízení**a ověřte počet zařízení, která uživatel zaregistroval.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení**  >  **všechna zařízení**a ověřte počet zařízení, která uživatel zaregistroval.
     > [!NOTE]
     > Měli byste také mít vliv na přihlášení ovlivněného uživatele na [uživatelský portál Intune](https://portal.manage.microsoft.com/) a ověřit zařízení, která jsou zaregistrovaná. Můžou existovat zařízení, která se zobrazují na [uživatelském portálu Intune](https://portal.manage.microsoft.com/) , ale ne na [portálu pro správu Intune](https://portal.azure.com/?Microsoft_Intune=1&Microsoft_Intune_DeviceSettings=true&Microsoft_Intune_Enrollment=true&Microsoft_Intune_Apps=true&Microsoft_Intune_Devices=true#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade/overview). Tato zařízení se také počítají do limitu registrace zařízení.
-2. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **omezení registrace** > ověřte limit registrace zařízení. Ve výchozím nastavení je limit nastavený na 15. 
+2. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení**  >  **omezení registrace** > ověřte limit registrace zařízení. Ve výchozím nastavení je limit nastavený na 15. 
 3. Pokud počet zaregistrovaných zařízení dosáhl limitu, odeberte nepotřebná zařízení nebo zvyšte limit pro registraci zařízení. Vzhledem k tomu, že všechna zaregistrovaná zařízení využívají licenci Intune, doporučujeme, abyste nejdřív odebrali nepotřebná zařízení.
 4. Zařízení znovu zaregistrujte.
 
@@ -157,8 +138,8 @@ Pokud vaše společnost používá více domén pro přihlašovací údaje uživ
 **Příčina:** Uživatel, který se pokouší zaregistrovat zařízení, nemá platnou licenci Intune.
 
 #### <a name="resolution"></a>Řešení
-1. Otevřete centrum pro [správu Microsoft 365](https://admin.microsoft.com)a pak zvolte **Uživatelé** > **aktivní uživatelé**.
-2. Vyberte ovlivněný uživatelský účet > **licence** > k produktům**Upravit**.
+1. Otevřete centrum pro [správu Microsoft 365](https://admin.microsoft.com)a pak zvolte **Uživatelé**  >  **aktivní uživatelé**.
+2. Vyberte ovlivněný uživatelský účet > **licence k produktům**  >  **Upravit**.
 3. Ověřte, jestli se tomuto uživateli přiřadí platná licence Intune.
 4. Zařízení znovu zaregistrujte.
 
@@ -166,8 +147,8 @@ Pokud vaše společnost používá více domén pro přihlašovací údaje uživ
 
 **Příčina:** Uživatel, který se pokouší zaregistrovat zařízení, nemá platnou licenci Intune.
 
-1. Otevřete centrum pro [správu Microsoft 365](https://admin.microsoft.com)a pak zvolte **Uživatelé** > **aktivní uživatelé**.
-2. Vyberte ovlivněný uživatelský účet a pak zvolte **licence** > na produkt**Upravit**.
+1. Otevřete centrum pro [správu Microsoft 365](https://admin.microsoft.com)a pak zvolte **Uživatelé**  >  **aktivní uživatelé**.
+2. Vyberte ovlivněný uživatelský účet a pak zvolte **licence na produkt**  >  **Upravit**.
 3. Ověřte, jestli se tomuto uživateli přiřadí platná licence Intune.
 4. Zařízení znovu zaregistrujte.
 
@@ -177,7 +158,7 @@ Pokud vaše společnost používá více domén pro přihlašovací údaje uživ
 
 #### <a name="resolution"></a>Řešení
 
-1. Otevřete **Nastavení** zařízení se systémem iOS/iPadOS > **Obecná** > **Správa zařízení**.
+1. Otevřete **Nastavení** zařízení se systémem iOS/iPadOS > **Obecná**  >  **Správa zařízení**.
 2. Klepněte na existující profil pro správu a klepněte na **Odebrat správu**.
 3. Zařízení znovu zaregistrujte.
 
@@ -229,7 +210,7 @@ Když zapnete zařízení spravované přes ADE, které má přiřazený profil 
 #### <a name="resolution"></a>Řešení
 
 1. Upravte registrační profil. V profilu můžete provádět změny. Účelem je aktualizovat čas změny profilu.
-2. Synchronizovat zařízení spravovaná přes ADE: v [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **iOS** > **iOS registrace** > **tokeny programu** > zvolit token > **synchronizovat hned**. Žádost o synchronizaci se pošle společnosti Apple.
+2. Synchronizovat zařízení spravovaná přes ADE: v [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení**  >  **iOS**iOS  >  **registrace**  >  **tokeny programu** > zvolit token > **synchronizovat hned**. Žádost o synchronizaci se pošle společnosti Apple.
 
 ### <a name="ade-enrollment-stuck-at-user-login"></a>Registrace ADE zablokovaná při přihlášení uživatele
 Když zapnete zařízení spravované přes ADE, které má přiřazený profil registrace, počáteční nastavení po zadání přihlašovacích údajů se vytvoří.

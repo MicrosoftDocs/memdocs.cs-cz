@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 8b56d902980c9e4b51ccbb62e84b4eccd9eb6395
-ms.sourcegitcommit: 7b2f7918d517005850031f30e705e5a512959c3d
+ms.openlocfilehash: 071cab69b652193b835282603e187e4f3d0c7b0d
+ms.sourcegitcommit: 97f150f8ba8be8746aa32ebc9b909bb47e22121c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84776901"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84879717"
 ---
 # <a name="manage-device-security-with-endpoint-security-policies-in-microsoft-intune"></a>Správa zabezpečení zařízení pomocí zásad zabezpečení Endpoint v Microsoft Intune
 
@@ -35,13 +35,13 @@ Tyto zásady najdete v části *Správa* v uzlu **Security Endpoint** v [centru 
 
 Níže najdete stručný popis každého typu zásad zabezpečení koncového bodu. Pokud se o nich chcete dozvědět víc, včetně dostupných profilů pro každou z nich, postupujte podle odkazů na obsah vyhrazený pro jednotlivé typy zásad:
 
-- [Antivirová](../protect/endpoint-security-antivirus-policy.md) ochrana – zásady antivirové ochrany se zaměřují na správu diskrétní skupiny nastavení antivirové ochrany pro spravovaná zařízení. Pokud chcete používat zásady antivirové ochrany, Integrujte Intune s pokročilou ochranou před internetovými útoky v programu Microsoft Defender jako řešení ochrany před mobilními hrozbami.
+- [Antivirová](../protect/endpoint-security-antivirus-policy.md) ochrana – zásady antivirové ochrany se zaměřují na správu diskrétní skupiny nastavení antivirové ochrany pro spravovaná zařízení. Pokud chcete používat zásady antivirové ochrany, Integrujte Intune s rozšířenou ochranou před internetovými útoky v programu Microsoft Defender (Microsoft Defender) jako řešením ochrany před mobilními hrozbami
 
 - [Šifrování disku](../protect/endpoint-security-disk-encryption-policy.md) – profily šifrování disku Endpoint Security se zaměřují jenom na nastavení, která jsou relevantní pro vestavěnou metodu šifrování zařízení, jako je trezor úložiště nebo BitLocker. Díky tomuto zaměření můžou správci zabezpečení spravovat nastavení šifrování disků bez nutnosti přecházet na hostitele nesouvisejícího nastavení.
 
 - [Brána firewall](../protect/endpoint-security-firewall-policy.md) – pomocí zásad brány firewall zabezpečení koncového bodu v Intune můžete nakonfigurovat vestavěnou bránu firewall pro zařízení, která používají MacOS a Windows 10. 
 
-- [Detekce a reakce koncového bodu](../protect/endpoint-security-edr-policy.md) – při integraci služby Defender ATP s Intune použijte zásady zabezpečení koncového bodu pro zjišťování koncových bodů a odpověď (EDR) ke správě nastavení EDR a připojení zařízení ke službě Defender atp.
+- [Detekce a reakce koncového bodu](../protect/endpoint-security-edr-policy.md) – při integraci služby Microsoft Defender ATP s Intune použijte zásady zabezpečení koncového bodu pro zjišťování koncových bodů a odpověď (EDR) ke správě nastavení EDR a připojení zařízení k ATP v programu Microsoft Defender.
 
 - [Omezení možností útoku](../protect/endpoint-security-asr-policy.md) – když se antivirová ochrana používá v zařízeních s Windows 10, použijte zásady zabezpečení koncového bodu služby Intune, abyste mohli spravovat tato nastavení pro vaše zařízení.
 

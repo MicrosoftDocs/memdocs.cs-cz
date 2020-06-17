@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 936375f55c61e719657ee1e770d05834739a4f6f
-ms.sourcegitcommit: 7a099ff53668f50b37adab97ecd7ba98c5324676
+ms.openlocfilehash: 32d46374186596e8c8721b77510738caadcf78b8
+ms.sourcegitcommit: 02635469d684d233fef795d2a15615658e62db10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84746625"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84814950"
 ---
 # <a name="ios-and-ipados-device-settings-to-use-common-iosipados-features-in-intune"></a>nastavení zařízení s iOS a iPadOS pro použití běžných funkcí iOS/iPadOS v Intune
 
@@ -215,7 +215,7 @@ Tato funkce platí pro:
 
 - **Poznámka pod čarou na zamykací obrazovce**: Pokud dojde ke ztrátě nebo odcizení zařízení, zadejte poznámku, která může přispět k vrácení zařízení zpět. Můžete zadat libovolný text, který chcete. Zadejte třeba `If found, call Contoso at ...`.
 
-  Tokeny zařízení lze také použít k přidání informací o jednotlivých zařízeních do těchto polí. Chcete-li například zobrazit sériové číslo, zadejte `Serial Number: {{serialnumber}}` . Na zamykací obrazovce se text zobrazí jako podobný `Serial Number 123456789ABC` . Při zadávání proměnných nezapomeňte použít složené závorky `{{ }}` . [Tokeny konfigurace aplikace](../apps/app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) obsahují seznam proměnných, které se dají použít. Můžete také použít `deviceName` nebo libovolná jiná hodnota specifická pro zařízení.
+  Tokeny zařízení lze také použít k přidání informací o jednotlivých zařízeních do těchto polí. Chcete-li například zobrazit sériové číslo, zadejte `Serial Number: {{serialnumber}}` nebo `Device ID: {{DEVICEID}}` . Na zamykací obrazovce se text zobrazí jako podobný `Serial Number 123456789ABC` . Při zadávání proměnných nezapomeňte použít složené závorky `{{ }}` . [Tokeny konfigurace aplikace](../apps/app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) obsahují seznam proměnných, které se dají použít. Můžete také použít `DEVICENAME` nebo libovolná jiná hodnota specifická pro zařízení.
 
   > [!NOTE]
   > Proměnné nejsou v uživatelském rozhraní ověřeny a rozlišují se velká a malá písmena. V důsledku toho mohou být profily uloženy s nesprávným vstupem. Pokud například zadáte `{{DeviceID}}` místo `{{deviceid}}` nebo {{DEVICEID}}, pak se místo jedinečného ID zařízení zobrazí literální řetězec. Nezapomeňte zadat správné informace. Podporují se všechna malá a velká písmena, ale ne kombinace. 

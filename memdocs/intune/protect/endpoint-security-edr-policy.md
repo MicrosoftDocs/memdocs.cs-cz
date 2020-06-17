@@ -16,20 +16,20 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: d0ba328f1976d0463c6be042dfd6f8a7570d6dac
-ms.sourcegitcommit: eb51bb38d484e8ef2ca3ae3c867561249fa413f3
+ms.openlocfilehash: ae95fb48296f778fb98affa2270ba763d79fb766
+ms.sourcegitcommit: 97f150f8ba8be8746aa32ebc9b909bb47e22121c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84206328"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84879672"
 ---
 # <a name="endpoint-detection-and-response-policy-for-endpoint-security-in-intune"></a>Zjišťování koncových bodů a zásady odezvy pro zabezpečení koncového bodu v Intune
 
-Když integrujete službu Microsoft Defender Advanced Threat Protection (ATP) s Intune, můžete použít zásady zabezpečení koncového bodu pro zjišťování koncových bodů a odpověď (EDR) a spravovat nastavení EDR a zařadit zařízení do ATP v Defenderu.
+Když integrujete integraci programu Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP) s Intune, můžete použít zásady zabezpečení koncového bodu pro zjišťování koncových bodů a odpověď (EDR) ke správě nastavení EDR a připojení zařízení k ATP v programu Microsoft Defender.
 
-Funkce detekce koncového bodu ATP a odpovědí v programu Defender poskytují pokročilé detekce útoků téměř v reálném čase a napadnutelné. Analytici zabezpečení můžou efektivně upřednostňovat výstrahy, získávat přehled o plném rozsahu porušení a reagovat na reakce na nápravu hrozeb.
+Možnosti detekce a reakce koncových bodů ATP v programu Microsoft Defender poskytují pokročilé detekce útoků téměř v reálném čase a napadnutelné. Analytici zabezpečení můžou efektivně upřednostňovat výstrahy, získávat přehled o plném rozsahu porušení a reagovat na reakce na nápravu hrozeb.
 
-Zásady EDR obsahují profily specifické pro platformu ke správě nastavení pro EDR. Profily automaticky zahrnují *balíček připojování* pro ATP v programu Defender. Balíčky připojování jsou konfigurace zařízení pro práci s ATP pro Defender. Po zprovoznění zařízení můžete začít používat data o ohroženích z tohoto zařízení.
+Zásady EDR obsahují profily specifické pro platformu ke správě nastavení pro EDR. Profily automaticky zahrnují *balíček připojování* pro ATP v programu Microsoft Defender. Balíčky pro připojování jsou konfigurace zařízení pro práci s ATP Microsoft Defenderu. Po zprovoznění zařízení můžete začít používat data o ohroženích z tohoto zařízení.
 
 Zásady EDR se nasazují do skupin zařízení v Azure Active Directory (Azure AD), které spravujete přes Intune, a ke kolekcím místních zařízení, která spravujete pomocí nástroje Configuration Manager, včetně serverů Windows. Zásady EDR pro různé cesty pro správu vyžadují různé balíčky připojování. Proto vytvoříte samostatné zásady EDR pro různé typy zařízení, která spravujete.
 
@@ -44,7 +44,7 @@ Zobrazit [nastavení pro zjišťování koncových bodů a profily odpovědí](e
 
 **Obecné**:
 
-- **Tenant pro Microsoft Defender Advanced Threat Protection** – tenant ATP v Defenderu musí být integrovaný do vašeho tenanta Microsoft Endpoint Manageru (předplatné Intune), aby bylo možné vytvářet zásady EDR. Viz [Použití ATP v programu Microsoft Defender](advanced-threat-protection.md) v dokumentaci k Intune.
+- **Tenant pro Microsoft Defender Advanced Threat Protection** – váš tenant Microsoft Defender ATP musí být integrovaný do vašeho tenanta Microsoft Endpoint Manageru (předplatné Intune), aby bylo možné vytvářet zásady EDR. Viz [Použití ATP v programu Microsoft Defender](advanced-threat-protection.md) v dokumentaci k Intune.
 
 **Podpora zařízení z Configuration Manager**:
 
@@ -258,12 +258,9 @@ Podrobnosti o zásadách EDR, které nasadíte, můžete zobrazit v centru pro s
 
 - V případě zásad, které se zaměřují na platformu **Windows 10 a novější** (Intune), uvidíte přehled dodržování zásad. Můžete také vybrat graf pro zobrazení seznamu zařízení, která zásady obdržela, a přejít k jednotlivým zařízením a získat další podrobnosti.
 
-  U **zařízení s grafem senzorů ATP** se zobrazí jenom zařízení, která úspěšně zavedla do ATP programu Defender prostřednictvím použití profilu **Windows 10 a novějšího** . Abyste měli jistotu, že máte v tomto grafu úplná reprezentace svých zařízení, nasaďte profil registrace na všechna vaše zařízení. Zařízení, která přijímají do programu Defender ATP pomocí externích prostředků, jako je například Zásady skupiny nebo PowerShell, se počítají jako **zařízení bez snímače ATP**.
+  U **zařízení s grafem senzorů ATP** se zobrazí jenom zařízení, která se úspěšně připojila k ochraně ATP programu Microsoft Defender prostřednictvím použití profilu **Windows 10 a novějšího** . Abyste měli jistotu, že máte v tomto grafu úplná reprezentace svých zařízení, nasaďte profil registrace na všechna vaše zařízení. Zařízení, která docházejí do ochrany ATP Microsoft Defenderu externím způsobem, jako je například Zásady skupiny nebo PowerShell, se počítají jako **zařízení bez senzoru ATP**.
 
 - V případě zásad, které cílí na platformu **Windows 10 a Windows Server** (Configuration Manager), uvidíte přehled dodržování zásad, ale nemůžete přejít k podrobnostem a zobrazit další podrobnosti. Zobrazení je omezené, protože centrum pro správu přijímá informace o omezeném stavu od Configuration Manager, které spravuje nasazení zásad pro Configuration Manager zařízení.
-
-
-
 
 
 [Prohlédněte si nastavení](endpoint-security-edr-profile-settings.md) , která můžete nakonfigurovat pro platformy i profily.
