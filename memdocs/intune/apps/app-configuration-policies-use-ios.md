@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 65ecc658b0a63b943a1008c879ae63cfc2c4e8a1
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 15c1e1e943d9fd03476c0605c4d41cd417354fce
+ms.sourcegitcommit: c7afcc3a2232573091c8f36d295a803595708b6c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988743"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84973022"
 ---
 # <a name="add-app-configuration-policies-for-managed-iosipados-devices"></a>Přidání zásad konfigurace aplikací pro spravovaná zařízení s iOS nebo iPadOS
 
@@ -106,7 +106,7 @@ Znaky \{\{ a \}\} se používají jenom pro typy tokenů a nesmí se používat 
 
 ### <a name="allow-only-configured-organization-accounts-in-multi-identity-apps"></a>Povolte jenom nakonfigurované účty organizace v aplikacích s více identitami 
 
-Jako správce Microsoft Intune můžete určit, které uživatelské účty se přidají do aplikací Microsoftu na spravovaných zařízeních. Můžete omezit přístup jenom na povolené uživatelské účty organizace a zablokovat osobní účty na zaregistrovaných zařízeních. Pro zařízení s iOS/iPadOS použijte následující páry klíč/hodnota:
+Jako správce Microsoft Intune můžete určit, které pracovní nebo školní účty se přidají do aplikací Microsoftu na spravovaných zařízeních. Můžete omezit přístup jenom na povolené uživatelské účty organizace a zablokovat osobní účty na zaregistrovaných zařízeních. U zařízení se systémem iOS/iPadOS použijte následující páry klíč/hodnota v zásadách konfigurace aplikace spravovaných zařízení:
 
 | **Klíč** | **Hodnoty** |
 |----|----|

@@ -1,12 +1,12 @@
 ---
-title: Správa Edge pro iOS a Android pro iOS a Android s Intune
+title: Správa Edge pro iOS a Android pomocí Intune
 titleSuffix: ''
-description: Pomocí zásad ochrany aplikací Intune s Edge pro iOS a Android můžete zajistit, aby se k podnikovým webům vždycky používaly bezpečnostní opatření.
+description: Použijte zásady ochrany aplikací a konfigurace Intune s Edgem pro iOS a Android a zajistěte, aby se k podnikovým webům vždycky používala ochrana na pracovišti.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/19/2020
+ms.date: 06/09/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ad0a886aba8e1966e47e9ea11c99cb97c35c4f5a
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 4d32c496fc094879943fc15102bbb5061d830092
+ms.sourcegitcommit: c7afcc3a2232573091c8f36d295a803595708b6c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988374"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84973056"
 ---
 # <a name="manage-web-access-by-using-edge-for-ios-and-android-with-microsoft-intune"></a>Správa webového přístupu pomocí Edge pro iOS a Android s využitím Microsoft Intune
 
@@ -63,7 +63,7 @@ Pokud chcete zobrazit konkrétní doporučení pro jednotlivé úrovně konfigur
 
 Bez ohledu na to, jestli je zařízení zaregistrované v řešení UEM (Unified Endpoint Management), je potřeba vytvořit zásady ochrany aplikací Intune pro aplikace pro iOS i Android, a to pomocí kroků v tématu [jak vytvořit a přiřadit zásady ochrany aplikací](app-protection-policies.md). Tyto zásady musí splňovat minimálně tyto podmínky:
 
-1. Zahrnují všechny mobilní aplikace Microsoftu, jako je například Outlook, OneDrive, Office nebo týmy. tím zajistíte, že uživatelé budou mít zabezpečený přístup k pracovním nebo školním datům v rámci libovolné aplikace Microsoftu.
+1. Zahrnují všechny Microsoft 365 mobilní aplikace, jako je například Edge, Outlook, OneDrive, Office nebo týmy. tím zajistíte, že uživatelé budou mít zabezpečený přístup k pracovním nebo školním datům v rámci libovolné aplikace Microsoftu.
 
 2. Jsou přiřazeny všem uživatelům. Tím se zajistí, že všichni uživatelé budou chráněni bez ohledu na to, jestli používají Edge pro iOS nebo Android.
 
@@ -189,7 +189,7 @@ Pro usnadnění přístupu můžete nakonfigurovat záložky, které chcete, aby
 
 |    Klíč    |    Hodnota    |
 |---------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    com.microsoft.intune.mam.managedbrowser.bookmarks    |    Hodnota této konfigurace je seznam záložek. Každá záložka se skládá z názvu záložky a adresy URL záložky. Název a adresu URL oddělte `|` znakem.<br> Příklad: `Microsoft Bing|https://www.bing.com`<p>Chcete-li nakonfigurovat více záložek, oddělte každou dvojici dvojitým znakem `||` .<br>Příklad:<br>`Microsoft Bing|https://www.bing.com||Contoso|https://www.contoso.com`    |
+|    com.microsoft.intune.mam.managedbrowser.bookmarks    |    Hodnota této konfigurace je seznam záložek. Každá záložka se skládá z názvu záložky a adresy URL záložky. Název a adresu URL oddělte `|` znakem.<br> Příklad: `Microsoft Bing|https://www.bing.com`<p>Chcete-li nakonfigurovat více záložek, oddělte každou dvojici dvojitým znakem `||` .<br>Například:<br>`Microsoft Bing|https://www.bing.com||Contoso|https://www.contoso.com`    |
 
 #### <a name="my-apps-bookmark"></a>Záložka moje aplikace
 
@@ -343,7 +343,7 @@ K vytvoření seznamu povolených a blokovaných webů můžete použít různé
 
 ### <a name="manage-proxy-configuration"></a>Správa konfigurace proxy serveru
 
-Můžete použít Edge pro iOS a Android a [Azure proxy aplikací služby AD](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started) společně a poskytnout uživatelům přístup k intranetovým webům na svých mobilních zařízeních. Příklad: 
+Můžete použít Edge pro iOS a Android a [Azure proxy aplikací služby AD](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started) společně a poskytnout uživatelům přístup k intranetovým webům na svých mobilních zařízeních. Například: 
 
 - Uživatel používá mobilní aplikaci Outlook, která je chráněná službou Intune. Pak klikněte na odkaz na intranetový server v e-mailu a hraniční aplikace pro iOS a Android rozpozná, že tento intranetový server byl uživateli zpřístupněn prostřednictvím proxy aplikací. Uživatel je automaticky směrován prostřednictvím proxy aplikace, aby před dosažením intranetového serveru provedl ověřování pomocí služby Multi-Factor Authentication a podmíněného přístupu. Uživatel teď může získat přístup k interním webům i na jejich mobilních zařízeních a odkaz v Outlooku funguje podle očekávání.
 - Uživatel otevře Edge pro iOS a Android na svém zařízení s iOS nebo Androidem. Pokud je Edge pro iOS a Android chráněný pomocí Intune a proxy aplikací je povolený, může uživatel přejít na intranetový server pomocí interní adresy URL, ke které se používá. Hraniční aplikace pro iOS a Android rozpozná, že tento intranetový server byl uživateli zpřístupněn prostřednictvím proxy aplikací. Uživatel je automaticky směrován prostřednictvím proxy aplikace, aby bylo možné provést ověření před dosažením intranetového webu. 
@@ -443,3 +443,4 @@ Informace o tom, jak zobrazit protokoly na zařízeních s Androidem, najdete v 
 ## <a name="next-steps"></a>Další kroky
 
 - [Co jsou zásady ochrany aplikací?](app-protection-policy.md) 
+- [Zásady konfigurace aplikací v Microsoft Intune](app-configuration-policies-overview.md)

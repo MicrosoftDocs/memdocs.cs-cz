@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/02/2020
+ms.date: 06/09/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: abd34733bd27ec150a92bf20cecbf7edc02c2bd6
-ms.sourcegitcommit: 42a4a4454e56fa681f0ad39f5e585492dfbad286
+ms.openlocfilehash: e6f7b84015c8aef62f5b4db1e4f9fbbcca499739
+ms.sourcegitcommit: c7afcc3a2232573091c8f36d295a803595708b6c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84330997"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84973005"
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>Vytvoření a přiřazení zásad ochrany aplikací
 
@@ -31,7 +31,7 @@ ms.locfileid: "84330997"
 
 Naučte se vytvářet a přiřazovat Microsoft Intune zásady ochrany aplikací (APP) pro uživatele vaší organizace. Toto téma také popisuje, jak změnit existující zásady.
 
-## <a name="before-you-begin"></a>Před zahájením
+## <a name="before-you-begin"></a>Než začnete
 
 Zásady ochrany aplikací lze použít pro aplikace běžící na zařízeních, která může nebo nemusí spravovat Intune. Podrobnější popis toho, jak zásady ochrany aplikací fungují, a scénáře podporované zásadami ochrany aplikací Intune najdete v tématu [Přehled zásad ochrany aplikací](app-protection-policy.md).
 
@@ -190,7 +190,7 @@ Pokud chcete vytvořit tyto zásady, vyhledejte **Apps**  >  v konzole Intune ap
 
 V Androidu se zařízení s Androidem zobrazí výzva k instalaci aplikace Portál společnosti Intune bez ohledu na to, který typ zařízení zvolíte. Pokud například vyberete možnost Android Enterprise, budou se stále zobrazovat uživatelé s nespravovanými zařízeními s Androidem.
 
-Pro iOS/iPadOS se pro výběr typu zařízení vynutilo nespravované zařízení, vyžaduje se další nastavení konfigurace aplikace. Tyto konfigurace budou komunikovat se službou APP Service, že konkrétní aplikace je spravovaná a že nastavení aplikace nebudou platit:
+Pro iOS/iPadOS se pro výběr typu zařízení vynutilo pro spravovaná zařízení Intune, vyžadují se další nastavení konfigurace aplikace. Tyto konfigurace budou komunikovat se službou APP Service, že konkrétní aplikace je spravovaná a že nastavení aplikace nebudou platit:
 
 - **IntuneMAMUPN** musí být nakonfigurované pro všechny aplikace spravované pomocí správy mobilních zařízení (MDM). Další informace najdete v tématu [Správa přenosu dat mezi aplikacemi pro iOS/iPadOS v Microsoft Intune](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm).
 - **IntuneMAMDeviceID** musí být nakonfigurované pro všechny aplikace spravované pro správu MDM od třetích stran. **IntuneMAMDeviceID** by mělo být nakonfigurované na token ID zařízení. Například, `key=IntuneMAMDeviceID, value={{deviceID}}`. Další informace najdete v tématu [Přidání zásad konfigurace aplikací pro spravovaná zařízení s iOS/iPadOS](app-configuration-policies-use-ios.md).

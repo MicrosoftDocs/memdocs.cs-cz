@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eb376e9574dcbbbefca3c089dc4180356b1d5a89
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 0edb497b2dd9e4853f3fbc378992158c0757e1f6
+ms.sourcegitcommit: c7afcc3a2232573091c8f36d295a803595708b6c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988760"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84973090"
 ---
 # <a name="add-app-configuration-policies-for-managed-android-enterprise-devices"></a>Přidání zásad konfigurace aplikací pro spravovaná zařízení s Androidem Enterprise
 
@@ -76,7 +76,7 @@ Zásady konfigurace aplikací v Microsoft Intune poskytují nastavení spravovan
 
 Pokud je aplikace navržená tak, aby podporovala nastavení konfigurace, můžete použít návrháře konfigurace pro spravované aplikace Google Play. Konfigurace se týká zařízení zaregistrovaných v Intune. Návrhář vám umožní nakonfigurovat konkrétní hodnoty konfigurace pro nastavení vystavené aplikací.
 
-1. Vyberte **Přidat**. Vyberte seznam nastavení konfigurace, která chcete pro aplikaci zadat.
+1. Vyberte možnost **Přidat**. Vyberte seznam nastavení konfigurace, která chcete pro aplikaci zadat.
 
     Pokud pro e-mailovou aplikaci používáte GMail nebo devět práce, v části [nastavení zařízení s Androidem Enterprise nakonfigurujte e-mail](../configuration/email-settings-android-enterprise.md) , kde najdete další informace o těchto nastaveních.
 
@@ -103,7 +103,7 @@ Pokud jako typ hodnoty zvolíte proměnnou, můžete vybírat z následujících
 
 ### <a name="allow-only-configured-organization-accounts-in-multi-identity-apps"></a>Povolte jenom nakonfigurované účty organizace v aplikacích s více identitami 
 
-Jako správce Microsoft Intune můžete určit, které uživatelské účty se přidají do aplikací Microsoftu na spravovaných zařízeních. Můžete omezit přístup jenom na povolené uživatelské účty organizace a zablokovat osobní účty na zaregistrovaných zařízeních. Pro zařízení s Androidem použijte následující dvojice klíč/hodnota:
+Jako správce Microsoft Intune můžete určit, které pracovní nebo školní účty se přidají do aplikací Microsoftu na spravovaných zařízeních. Můžete omezit přístup jenom na povolené uživatelské účty organizace a zablokovat osobní účty na zaregistrovaných zařízeních. U zařízení s Androidem použijte následující páry klíč/hodnota v zásadách konfigurace aplikace spravovaných zařízení:
 
 | **Klíč** | com.microsoft.intune.mam.AllowedAccountUPNs |
 |---|---|
