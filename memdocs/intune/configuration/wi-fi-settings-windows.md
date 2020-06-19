@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/14/2020
+ms.date: 06/10/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ea4b196a6b2fade8ca926d13c3436207cb4b764e
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: ee6ccebc9610f74f9f34c08bc8204e652e0a01db
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83429775"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85092896"
 ---
 # <a name="add-wi-fi-settings-for-windows-10-and-later-devices-in-intune"></a>Přidání nastavení Wi-Fi pro zařízení s Windows 10 a novější verzí v Intune
 
@@ -29,11 +29,13 @@ Můžete vytvořit profil s konkrétním nastavením Wi-Fi a potom ho nasadit na
 
 Těmito nastaveními se zabývá tento článek.
 
-## <a name="before-you-begin"></a>Před zahájením
+## <a name="before-you-begin"></a>Než začnete
 
 [Vytvořte profil zařízení](wi-fi-settings-configure.md).
 
 ## <a name="basic-profile"></a>Základní profil
+
+Základní nebo osobní profily používají WPA/WPA2 k zabezpečení připojení Wi-Fi na zařízeních. Standard WPA/WPA2 se obvykle používá v domácích sítích nebo v osobních sítích. K ověření připojení můžete také přidat předsdílený klíč.
 
 - **Typ Wi-Fi**: Zvolte **Základní**. 
 
@@ -70,6 +72,8 @@ Těmito nastaveními se zabývá tento článek.
   - **Automaticky nakonfigurovat**: Zadejte adresu URL, která odkazuje na skript PAC (automatická konfigurace proxy). Zadejte například `http://proxy.contoso.com/proxy.pac`.
 
 ## <a name="enterprise-profile"></a>Profil Enterprise
+
+Podnikové profily používají k ověřování připojení Wi-Fi protokol EAP (Extensible Authentication Protocol). Společnost často používá protokol EAP, protože k ověřování a zabezpečení připojení a konfiguraci dalších možností zabezpečení slouží certifikáty.
 
 - **Typ Wi-Fi**: Zvolte **Enterprise**.
 
@@ -116,7 +120,7 @@ Těmito nastaveními se zabývá tento článek.
     **Další nastavení EAP-TLS, EAP-TTLS a PEAP**:
 
     > [!NOTE]
-    > V současné době jsou při použití typu protokolu EAP podporované pouze profily certifikátů SCEP. Profily certifikátů PKCS podporované nejsou. Kdykoli je uživatel vyzván k zadání certifikátu, nezapomeňte vybrat certifikát SCEP.
+    > Profily certifikátů SCEP a PKCS se podporují při použití typu protokolu EAP.
 
     - **Vztah důvěryhodnosti serveru**  
 

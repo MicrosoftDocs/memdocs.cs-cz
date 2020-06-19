@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bf413dc551d8be8fd646a03826fb3e5507f4d272
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: ba44cca323dd2a3fbf756b86743dea403ce0b156
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988934"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093063"
 ---
 # <a name="enroll-iosipados-devices-in-intune"></a>Registrace zařízení s iOS/iPadOS v Intune
 
@@ -61,7 +61,7 @@ Zařízení s iOS/iPadOS vlastněná společností můžete také zaregistrovat 
 
 ## <a name="automated-device-enrollment"></a>Automatická registrace zařízení
 
-Organizace si můžou koupit zařízení s iOS/iPadOS prostřednictvím automatického zápisu zařízení (ADE) společnosti Apple. ADE umožňuje nasadit registrační profil přes Air, aby bylo možné zařízení spravovat. Další informace najdete v tématu [program registrace zařízení](device-enrollment-program-enroll-ios.md).
+Organizace si můžou koupit zařízení s iOS/iPadOS prostřednictvím automatického zápisu zařízení (ADE) společnosti Apple. ADE umožňuje nasadit registrační profil přes Air, aby bylo možné zařízení spravovat. Další informace najdete v tématu [Automatická registrace zařízení s iOS/iPadOS pomocí automatizované registrace zařízení společnosti Apple](device-enrollment-program-enroll-ios.md).
 
 ## <a name="user-enrollment"></a>Registrace uživatele
 Registrace uživatele umožňuje správcům podmnožinu možností správy ve srovnání s jinými metodami registrace. Další informace najdete v tématech [podporované akce při registraci uživatelů, hesla a další možnosti](ios-user-enrollment-supported-actions.md) a [Nastavení registrace uživatelů pro iOS/iPadOS a iPadOS](ios-user-enrollment.md).

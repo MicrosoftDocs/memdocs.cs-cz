@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b836d3d2f319ca5ec9833e5902e6fcbb94b8dd65
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 7101ad9bffcd80bd608690f22db37abbbc7a7895
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83987114"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093783"
 ---
 # <a name="set-up-iosipados-device-enrollment-with-apple-configurator"></a>Nastavení registrace zařízení se systémem iOS/iPadOS pomocí nástroje Apple Configurator
 
@@ -48,24 +48,26 @@ Metoda registrace pomocí Apple Configuratoru se nedá použít se [Správcem re
 
 Profil registrace zařízení definuje nastavení, která se během registrace použijí. Tato nastavení se použijí jenom jednou. Pomocí těchto kroků vytvořte registrační profil pro registraci zařízení se systémem iOS/iPadOS pomocí Apple Configuratoru.
 
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **Devices**  >  **iOS**  >  **registrace**  >  **Apple Configuratoru**  >  **profily**  >  **vytvořit**.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení**  >  **iOS/iPadOS**  >  **iOS/iPadOS registrace**  >  **Apple Configuratoru**.
 
-    ![Vytvoření profilu pro Apple Configurator](./media/apple-configurator-enroll-ios/apple-config-create-profile.png)
+    ![Vytvoření profilu pro Apple Configurator](./media/apple-configurator-enroll-ios/apple-configurator.png)
 
-2. V části **Vytvořit registrační profil** zadejte **Název** a **Popis** profilu pro účely správy. Uživatelům se tyto údaje nezobrazí. Pole Název můžete využít k vytvoření dynamické skupiny v Azure Active Directory. Název profilu použijte k definování parametru enrollmentProfileName pro přiřazení zařízení s tímto registračním profilem. Přečtěte si další informace o dynamických skupinách Azure Active Directory.
+2. Vyberte **profily**  >  **vytvořit**.
+
+3. V části **Vytvořit registrační profil** zadejte **Název** a **Popis** profilu pro účely správy. Uživatelům se tyto údaje nezobrazí. Pole Název můžete využít k vytvoření dynamické skupiny v Azure Active Directory. Název profilu použijte k definování parametru enrollmentProfileName pro přiřazení zařízení s tímto registračním profilem. Přečtěte si další informace o dynamických skupinách Azure Active Directory.
 
     ![Snímek obrazovky Vytvořit profil s vybranou volbou Zaregistrovat s přidružením uživatele](./media/apple-configurator-enroll-ios/apple-configurator-profile-create.png)
 
-3. V části **Přidružení uživatele** zvolte, jestli se zařízení s tímto profilem musí registrovat s přiřazeným uživatelem nebo bez něj.
+4. V části **Přidružení uživatele** zvolte, jestli se zařízení s tímto profilem musí registrovat s přiřazeným uživatelem nebo bez něj.
 
-    - **Zaregistrovat s přidružením uživatele** – tuto možnost vyberte pro zařízení, která patří uživatelům a chtějí používat portál společnosti pro služby, jako je instalace aplikací. Zařízení musí mít přidruženého uživatele (pomocí Průvodce nastavením), aby mohlo dostat přístup k firemním datům a e-mailu. Tato možnost je podporovaná jenom pro registraci Pomocníka s nastavením. Přidružení uživatelů vyžaduje [koncový bod WS-Trust 1.3 Username/Mixed](https://technet.microsoft.com/library/adfs2-help-endpoints). [Další informace](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).
+    - **Zaregistrovat s přidružením uživatele** – tuto možnost vyberte pro zařízení, která patří uživatelům a chtějí používat portál společnosti pro služby, jako je instalace aplikací. Zařízení musí mít přidruženého uživatele (pomocí Průvodce nastavením), aby mohlo dostat přístup k firemním datům a e-mailu. Tato možnost je podporovaná jenom pro registraci Pomocníka s nastavením. Přidružení uživatelů vyžaduje [koncový bod WS-Trust 1.3 Username/Mixed](https://technet.microsoft.com/library/adfs2-help-endpoints). [Přečtěte si další informace](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).
 
     - **Zaregistrovat bez přidružení uživatele** – Tuto možnost zvolte pro zařízení nespojená s jedním uživatelem. Použijte ji pro zařízení určená k plnění úkolů, u kterých není potřeba přístup k místním uživatelským datům. Aplikace, které vyžadují přidružení uživatele (včetně aplikace Portál společnosti používané pro instalaci obchodních aplikací), nebudou fungovat. Vyžaduje se pro přímou registraci.
 
      > [!NOTE]
      > Když je vybraná možnost **zaregistrovat s přidružením uživatele** , ujistěte se, že je zařízení přidružené k uživateli s průvodcem nastavením během prvních 24 hodin zaregistrovaných zařízení. Jinak může registrace selhat a k registraci zařízení bude potřeba obnovení továrního nastavení.
 
-4. Pokud jste zvolili **Zaregistrovat s přidružením uživatele**, máte možnost povolit, aby se uživatelé ověřovali pomocí portálu společnosti místo v Průvodci nastavením společnosti Apple.
+5. Pokud jste zvolili **Zaregistrovat s přidružením uživatele**, máte možnost povolit, aby se uživatelé ověřovali pomocí portálu společnosti místo v Průvodci nastavením společnosti Apple.
 
     > [!NOTE]
     > Pokud chcete provést některou z následujících akcí, nastavte možnost **ověření na Portálu společnosti místo v Průvodci nastavením Applu** na **Ano**.
@@ -88,7 +90,7 @@ Profil registrace zařízení definuje nastavení, která se během registrace p
     DLXQPCWVGHMJ,podrobnosti o zařízení
 
    Přečtěte si, [Jak najít sériové číslo zařízení se systémem iOS/iPadOS](https://support.apple.com/HT204073).
-2. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení**  >  **iOS**iOS  >  **registrace**  >  **zařízení Apple Configuratoru**  >  **Devices**  >  **Přidat**.
+2. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení**  >  **iOS/iPadOS**  >  **iOS/iPadOS registrace**  >  **zařízení Apple Configuratoru**  >  **Devices**  >  **Přidat**.
 
 5. Vyberte **profil registrace**, jehož prostřednictvím použijete importovaná sériová čísla. Pokud chcete, aby podrobnosti nového sériového čísla přepsaly všechny existující podrobnosti, zvolte **Přepište podrobnosti u existujících identifikátorů**.
 6. V části **Importovat zařízení** přejděte k souboru CSV se sériovými čísly a vyberte **Přidat**.
@@ -100,18 +102,18 @@ Registrační profil můžete přiřadit při importu sériových čísel iOS/iP
 - **Profily AC**
 
 #### <a name="assign-from-apple-configurator-devices"></a>Přiřazení v části Zařízení Apple Configuratoru
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení**  >  **iOS**iOS  >  **registrace**  >  **zařízení Apple Configuratoru**  >  **Devices** > vyberte sériová čísla > **přiřadit profil**.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení**  >  **iOS/iPadOS**  >  **iOS/iPadOS registrace**  >  **zařízení Apple Configuratoru**  >  **Devices** > vyberte sériová čísla > **přiřadit profil**.
 2. V části **Přiřadit profil** zvolte **nový profil**, který chcete přiřadit, a pak zvolte **Přiřadit**.
 
 #### <a name="assign-from-profiles"></a>Přiřazení z profilů
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **Devices**  >  **iOS**  >  **registrace**  >  **Apple Configuratoru**  >  **profily** > vyberte profil.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení**  >  **iOS/iPadOS**  >  **iOS/iPadOS registrace**  >  **Apple Configuratoru**  >  **profily** > vyberte profil.
 2. V profilu zvolte **Přiřazená zařízení** a pak **Přiřadit**.
 3. Pomocí filtru vyhledejte sériová čísla zařízení, která chcete k profilu přiřadit, vyberte zařízení a zvolte **Přiřadit**.
 
 ### <a name="export-the-profile"></a>Export profilu
 Po vytvoření profilu a přiřazení sériových čísel je potřeba profil exportovat z Intune jako adresu URL. Tu pak importujete do Apple Configuratoru na počítači Mac, odkud můžete profil nasadit do zařízení.
 
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **Devices**  >  **iOS**  >  **registrace**  >  **Apple Configuratoru**  >  **profily** > vyberte profil, který chcete exportovat.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení**  >  **iOS/iPadOS**  >  **iOS/iPadOS registrace**  >  **Apple Configuratoru**  >  **Profiles** > vyberte profil, který chcete exportovat.
 2. V profilu vyberte **Exportovat profil**.
 3. Zkopírujte **adresu URL profilu**. Pak ho můžete přidat do Apple Configuratoru a definovat profil Intune používaný zařízeními se systémem iOS/iPadOS.
 
@@ -147,7 +149,7 @@ Aplikace, které vyžadují přidruženého uživatele (včetně aplikace Portá
 
 ### <a name="export-the-profile-as-mobileconfig-to-iosipados-devices"></a>Exportovat profil jako. mobileconfig do zařízení se systémem iOS/iPadOS
 
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **Devices**  >  **iOS**  >  **registrace**  >  **Apple Configuratoru**  >  **profily** > vyberte profil, který chcete exportovat > **exportovat profil**.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení**  >  **iOS/iPadOS**  >  **iOS/iPadOS registrace**  >  **Apple Configuratoru**  >  **profily** > vyberte profil pro export > **exportovat profil**.
 2. V části **Přímá registrace** zvolte **Stáhnout profil** a soubor uložte. Soubor registračního profilu je platný jenom po dobu dvou týdnů, po které ho bude nutné znovu vytvořit.
 3. Přeneste soubor do počítače Mac, na kterém běží [Apple Configuratoru](https://itunes.apple.com/us/app/apple-configurator-2/id1037126344?mt=12) , a nahrajte ho přímo jako profil pro správu do zařízení se systémem iOS/iPadOS.
 4. Připravte zařízení pomocí Apple Configuratoru podle následujících kroků:

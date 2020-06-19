@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic;seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ac29e27c85ad43ccc078c54dd9d5b8b659206f57
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: e8f400c946f26de272b782194df3f1b1930ab0b4
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81397760"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093502"
 ---
 # <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>Řešení potíží při registraci zařízení v Microsoft Intune
 
@@ -57,15 +57,15 @@ K těmto problémům může docházet na všech platformách zařízení.
 ### <a name="device-cap-reached"></a>Dosáhlo se maximálního počtu zařízení
 **Problém:** Uživatel obdrží při registraci chybu (například **portál společnosti dočasně nedostupné**).
 
-**Rozhodnutí**
+**Řešení:**
 
 #### <a name="check-number-of-devices-enrolled-and-allowed"></a>Kontrola počtu zaregistrovaných a povolených zařízení
 
 Podle následujícího postupu zkontrolujte, jestli nemá uživatel přiřazeno více zařízení, než je maximální povolený počet:
 
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **omezení** > registrace**zařízení omezení limitu**. Poznamenejte si hodnotu uvedenou ve sloupci **Limit počtu zařízení**.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení**  >  **omezení registrace**  >  **zařízení omezení limitu**. Poznamenejte si hodnotu uvedenou ve sloupci **Limit počtu zařízení**.
 
-2. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)zvolte **Uživatelé** > **Všichni uživatelé** > vyberte **zařízení**> uživatele. Poznamenejte si počet zařízení.
+2. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)zvolte **Uživatelé**  >  **Všichni uživatelé** > vyberte **zařízení**> uživatele. Poznamenejte si počet zařízení.
 
 3. Pokud počet zaregistrovaných zařízení uživatele se už rovná počtu uvedenému v omezení limitu počtu zařízení, nemůže si daný uživatel žádná další zařízení zaregistrovat, dokud:
     - [nebudou odebrána existující zařízení](../remote-actions/devices-wipe.md), nebo
@@ -82,11 +82,11 @@ Pokud se chcete vyhnout dosažení limitu počtu zařízení, nezapomínejte ode
 ### <a name="company-portal-temporarily-unavailable"></a>Portál společnosti není dočasně k dispozici
 **Problém:** Uživateli se na zařízení zobrazí chyba **Portál společnosti není dočasně k dispozici**.
 
-**Rozhodnutí**
+**Řešení:**
 
 1. Odeberte ze zařízení aplikaci Portál společnosti Intune.
 
-2. V zařízení otevřete prohlížeč, přejděte na [https://portal.manage.microsoft.com](https://portal.manage.microsoft.com)adresu a zkuste přihlášení uživatele.
+2. V zařízení otevřete prohlížeč, přejděte na [https://portal.manage.microsoft.com](https://portal.manage.microsoft.com) adresu a zkuste přihlášení uživatele.
 
 3. Pokud se uživateli nepodaří přihlásit se, měl by zkusit jinou síť.
 
@@ -97,7 +97,7 @@ Pokud se chcete vyhnout dosažení limitu počtu zařízení, nezapomínejte ode
 ### <a name="mdm-authority-not-defined"></a>Není definována autorita MDM
 **Problém:** Zobrazí se chyba **Není definována autorita MDM**.
 
-**Rozhodnutí**
+**Řešení:**
 
 1. Ověřte, že je [správně nastavená](../fundamentals/mdm-authority-set.md) autorita MDM.
     
@@ -159,7 +159,7 @@ Software Samsung Smart Manager, který se dodává s některými zařízeními S
 
 **#2 řešení:**
 
-Řekněte uživatelům, aby se pokusili upgradovat na Android 6.0. Problém s deaktivací neplatí pro zařízení s Androidem 6.0. Pokud chcete zjistit, jestli je aktualizace k dispozici, přejděte na **Nastavení** > **o** > **ručním stažení aktualizací** zařízení > postupujte podle pokynů.
+Řekněte uživatelům, aby se pokusili upgradovat na Android 6.0. Problém s deaktivací neplatí pro zařízení s Androidem 6.0. Pokud chcete zjistit, jestli je aktualizace k dispozici, přejděte na **Nastavení**  >  **o**  >  **ručním stažení aktualizací** zařízení > postupujte podle pokynů.
 
 **#3 řešení:**
 
@@ -193,7 +193,7 @@ Pokud řešení 2 nefunguje, nechte uživatele provést následující postup, a
 ### <a name="profile-installation-failed"></a>Neúspěch instalace profilu
 **Problém:** Na zařízení s Androidem se zobrazí chybová zpráva **Instalace profilu se nezdařila**.
 
-**Rozhodnutí**
+**Řešení:**
 
 1. Zkontrolujte, jestli má uživatel přiřazenou příslušnou licenci pro verzi služby Intune, kterou používáte.
 
@@ -219,19 +219,19 @@ Příčinou chyby certifikátu je, že zařízení s Androidem vyžadují zahrnu
 
 Pokud chcete problém vyřešit, naimportujte certifikáty do osobních certifikátů počítačů na serveru nebo proxy serverech AD FS následujícím způsobem:
 
-1. Na serverech ADFS a proxy serveru klikněte pravým tlačítkem na **Start** > **Spustit** > **Certlm. msc** a spusťte konzolu pro správu certifikátů místního počítače.
+1. Na serverech ADFS a proxy serveru klikněte pravým tlačítkem na **Start**  >  **Spustit**  >  **Certlm. msc** a spusťte konzolu pro správu certifikátů místního počítače.
 2. Rozbalte **Osobní** a zvolte **Certifikáty**.
 3. Najděte certifikát pro vaši komunikaci služby AD FS (veřejně podepsaný certifikát) a poklikáním zobrazte jeho vlastnosti.
 4. Vyberte kartu **cesta** k certifikátu pro zobrazení nadřazených certifikátů certifikátu/s.
 5. U každého nadřazeného certifikátu zvolte **Zobrazit certifikát**.
-6. Zvolit **Podrobnosti** > **Kopírovat do souboru...**
+6. Zvolit **Podrobnosti**  >  **Kopírovat do souboru...**
 7. Postupujte podle pokynů průvodce a vyexportujte nebo uložte veřejný klíč nadřazeného certifikátu do umístění souborů podle vlastního výběru.
-8. Klikněte pravým tlačítkem na **certifikáty** > **všechny úkoly** > **importovat**.
+8. Klikněte pravým tlačítkem na **certifikáty**  >  **všechny úkoly**  >  **importovat**.
 9. Postupujte podle pokynů průvodce a naimportujte nadřazené certifikáty do **Místní počítač\Osobní\Certifikáty**.
 10. Restartujte servery AD FS.
 11. Výše uvedené kroky zopakujte na všech serverech a proxy serverech AD FS.
 
-K ověření správné instalace certifikátu můžete použít diagnostický nástroj, který je k dispozici [https://www.digicert.com/help/](https://www.digicert.com/help/)na. Do pole **Adresa serveru** zadejte plně kvalifikovaný název domény serveru ADFS (IE: STS.contso.com) a klikněte na **ověřit server**.
+K ověření správné instalace certifikátu můžete použít diagnostický nástroj, který je k dispozici na [https://www.digicert.com/help/](https://www.digicert.com/help/) . Do pole **Adresa serveru** zadejte plně kvalifikovaný název domény serveru ADFS (IE: STS.contso.com) a klikněte na **ověřit server**.
 
 **Pokud chcete ověřit, jestli se certifikát správně nainstaloval**:
 
@@ -310,7 +310,7 @@ Další informace najdete v tématu [Doporučené postupy zabezpečení služby
 
 3. Zkontrolujte, jestli už v zařízení není nainstalovaný profil správy.
 
-4. Po zobrazení [https://portal.manage.microsoft.com](https://portal.manage.microsoft.com) výzvy přejděte na adresu a pokuste se nainstalovat profil.
+4. [https://portal.manage.microsoft.com](https://portal.manage.microsoft.com)Po zobrazení výzvy přejděte na adresu a pokuste se nainstalovat profil.
 
 5. Potvrďte, že je prohlížeč Safari pro iOS/iPadOS výchozím prohlížečem a že jsou soubory cookie povolené.
 
@@ -318,7 +318,7 @@ Další informace najdete v tématu [Doporučené postupy zabezpečení služby
 
 **Problém**: Při registraci zařízení může dojít k uvíznutí na některé z těchto dvou obrazovek:
 - Čeká se na konečnou konfiguraci od "Microsoft".
-- Aplikace Asistovaný přístup není k dispozici. Kontaktujte správce.
+- Aplikace Asistovaný přístup není k dispozici. Obraťte se prosím na správce.
 
 Tento problém může nastat, když:
 - dojde k dočasnému výpadku služeb Apple, nebo
@@ -339,7 +339,7 @@ Tento problém může nastat, když:
 4. Předání pokynu uživateli, aby proces registrace znovu zahájil
 
 #### <a name="determine-if-theres-something-wrong-with-the-vpp-token"></a>Určení, jestli je s tokenem VPP něco v nepořádku
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **iOS** > iOS**Enrollment** > **program tokens** > název tokenu > **profily** > název profilu > **Spravovat** > **vlastnosti**.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení**  >  **iOS/iPadOS**  >  **iOS**  >  **tokeny programu registrace** > název tokenu > **profily** > název profilu > **Spravovat**  >  **vlastnosti**.
 2. Zkontrolujte vlastnosti, abyste zjistili, jestli se zobrazují nějaké chyby, které se podobají těmto:
     - Platnost tohoto tokenu vypršela.
     - Na tento token se nevztahují licence pro Portál společnosti.
@@ -349,13 +349,13 @@ Tento problém může nastat, když:
 3. Odstraňte problémy s tokenem.
 
 #### <a name="identify-which-devices-are-blocked-by-the-vpp-token"></a>Identifikace zařízení, která token VPP blokuje
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **iOS**k > **iOS enrollment** > **tokeny programu registrace** iOS > název tokenu > **zařízení**.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení**  >  **iOS/iPadOS**k > **iOS enrollment**  >  **tokeny programu registrace** iOS > název tokenu > **zařízení**.
 2. Vyfiltrujte sloupec **Stav profilu** podle hodnoty **Blokováno**.
 3. Poznamenejte si sériová čísla všech zařízení s hodnotou **Blokováno**.
 
 #### <a name="remotely-wipe-the-blocked-devices"></a>Vzdálené vymazání blokovaných zařízení
 Po dokončení řešení problémů s tokenem VPP musíte zařízení, která jsou blokovaná, vymazat.
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **všechna zařízení** > **Columns** > **. sériové číslo** > se**vztahuje**. 
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení**  >  **všechna zařízení**  >  **Columns**  >  .**sériové číslo**se  >  **vztahuje**. 
 2. Každé blokované zařízení vyberte v seznamu **Všechna zařízení** a zvolte **Vymazání** > **Ano**.
 
 #### <a name="tell-the-users-to-restart-the-enrollment-process"></a>Předání pokynu uživatelům, aby proces registrace znovu zahájili
@@ -380,7 +380,7 @@ Po vymazání blokovaných zařízení můžete uživatelům předat pokyn, aby 
 - Pokud je zařízení v Intune pořád přiřazené k jinému uživateli, nepoužil jeho předchozí vlastník aplikaci Portál společnosti, aby ho odebral nebo obnovil tovární nastavení. Záznam zastaralého zařízení vyčistíte v Intune takto:  
 
     1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)se přihlaste pomocí přihlašovacích údajů pro správu.
-    2. Vyberte **zařízení** > **všechna zařízení**.  
+    2. Vyberte **zařízení**  >  **všechna zařízení**.  
     3. Najděte zařízení s problematickou registrací. Výsledky můžete upřesnit hledáním podle názvu zařízení nebo adresy MAC/hardwaru.
     4. Vyberte toto zařízení > **Odstranit**. Odstraňte všechny ostatní záznamy spojené s tímto zařízením.  
 
@@ -400,10 +400,10 @@ Důvodem může být to, že počítač:
 - je na něm klonovaná image počítače, který už je zaregistrovaný.
 Na počítači se stále nachází certifikát předchozího účtu.
 
-**Rozhodnutí**
+**Řešení:**
 
 1. V nabídce **Start** zadejte **Spustit** -> **MMC**.
-1. Vyberte **soubor** > **Přidat/odebrat moduly snap-in**.
+1. Vyberte **soubor**  >  **Přidat/odebrat moduly snap-in**.
 1. Poklikejte na **Certifikáty**, zvolte **Účet počítače** > **Další** a vyberte **Místní počítač**.
 1. Poklikejte na **Certifikáty (místní počítač)** a zvolte **Osobní/Certifikáty**.
 1. Vyhledejte certifikát Intune, který vystavila certifikační autorita Sc_Online_Issuing. Pokud existuje, odstraňte ho.

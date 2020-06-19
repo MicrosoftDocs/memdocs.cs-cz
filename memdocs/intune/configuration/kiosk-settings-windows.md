@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ae89a939e35f68f55d2e63e7495a9b743cc0fa34
-ms.sourcegitcommit: fb77170957f50aa386ff825fb4183b4fd9e3e488
+ms.openlocfilehash: bc3ef945351529ce0db3e40108fef135414c4fab
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83791770"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093627"
 ---
 # <a name="windows-10-and-later-device-settings-to-run-as-a-kiosk-in-intune"></a>Nastavení zařízení s Windows 10 a novějším, která se mají spustit jako veřejný terminál v Intune
 
@@ -32,7 +32,7 @@ Jako správce Intune můžete vytvořit a přiřadit tato nastavení k vašim za
 
 Další informace o funkci veřejného terminálu Windows v Intune najdete v tématu [Konfigurace nastavení veřejného terminálu](kiosk-settings.md).
 
-## <a name="before-you-begin"></a>Před zahájením
+## <a name="before-you-begin"></a>Než začnete
 
 - [Vytvořte profil](kiosk-settings.md#create-the-profile).
 
@@ -116,7 +116,7 @@ Spustí na zařízení jenom jednu aplikaci.
 
 ## <a name="multi-app-kiosk"></a>Veřejný terminál s více aplikacemi
 
-Aplikace v tomto režimu jsou k dispozici v nabídce Start. Tyto aplikace jsou jedinými aplikacemi, které může uživatel spustit. Pokud má aplikace závislost na jiné aplikaci, musí být v seznamu povolené aplikace zahrnutá obě. Například v aplikaci Internet Explorer 64-bit je závislá na aplikaci Internet Explorer 32-bit, takže je třeba umožnit možnost "C:\Program Files\internet Explorer\iexplore.exe" a "C:\Program Files (x86) \Internet Explorer\iexplore.exe". 
+Aplikace v tomto režimu jsou k dispozici v nabídce Start. Tyto aplikace jsou jedinými aplikacemi, které může uživatel spustit. Pokud má aplikace závislost na jiné aplikaci, musí být v seznamu povolené aplikace zahrnutá obě. Například v aplikaci Internet Explorer 64-bit je závislá na aplikaci Internet Explorer 32-bit, takže je třeba umožnit možnost "C:\Program Files\internet explorer\iexplore.exe" a "C:\Program Files (x86) \Internet Explorer\iexplore.exe". 
 
 - **Vyberte celoobrazovkový režim**: Vyberte veřejný **terminál s více aplikacemi**.
 
@@ -213,6 +213,6 @@ Aplikace v tomto režimu jsou k dispozici v nabídce Start. Tyto aplikace jsou j
 
 [Přiřaďte profil](device-profile-assign.md)a [sledujte jeho stav](device-profile-monitor.md).
 
-Můžete také vytvořit profily celoobrazovkového pro zařízení s [Androidem](device-restrictions-android.md#kiosk), [Androidem Enterprise](device-restrictions-android-for-work.md#dedicated-devices)a [Windows holografickým pro firmy](kiosk-settings-holographic.md) .
+Můžete také vytvořit profily celoobrazovkového pro zařízení s [Androidem](device-restrictions-android.md#kiosk), [Androidem Enterprise](device-restrictions-android-for-work.md#device-experience)a [Windows holografickým pro firmy](kiosk-settings-holographic.md) .
 
 Viz také [Nastavení veřejného terminálu pro jednu aplikaci](https://docs.microsoft.com/windows/configuration/kiosk-single-app) nebo [Nastavení veřejného terminálu s více aplikacemi](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps) v doprovodné příručce k Windows.

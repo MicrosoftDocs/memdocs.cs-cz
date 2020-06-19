@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/19/2019
+ms.date: 06/16/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 8094f9739f05a7e7c0ffc10e9b4835c67c5539b3
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 83a00368c7f47568497669c940e3c2904a479372
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881991"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85094031"
 ---
 # <a name="upload-and-email-logs"></a>Nahrávání a posílání protokolů e-mailem  
 
@@ -34,6 +34,8 @@ Podrobnosti o skutečných chybách se v zařízení uchovávají ve speciální
 
 > [!Note]
 > Aby mohla firemní podpora najít příčinu problému, zapněte _podrobné protokolování_ portál společnosti. Pokud používáte aplikaci Microsoft Intune, nastavte **úroveň podrobností protokolu** na **verbose**. Podrobné protokolování zaznamenává všechny podrobnosti o chybách, které pak zahrne do zprávy. Postup, jak [zapnout podrobné protokolování, najdete tady](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md).  
+>
+> Pokud používáte síťové prostředí svrchovaného cloudu, funkce Odeslat protokoly v Portál společnosti nebude k dispozici. Protokoly je nutné odesílat prostřednictvím e-mailu. 
 
 ## <a name="upload-and-email-logs-from-company-portal"></a>Nahrávání a e-mailové protokoly z Portál společnosti  
 

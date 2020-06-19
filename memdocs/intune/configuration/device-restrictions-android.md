@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5fc11d7302c30dd53314eb2312d37842b081a6b3
-ms.sourcegitcommit: 5f9d5d22114ae5aeb0270c7fb59c5dced5f48826
+ms.openlocfilehash: 02e07ec75b7c0d07a81a9c6f555cf119310a9a9f
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82862356"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093693"
 ---
 # <a name="android-and-samsung-knox-standard-device-restriction-settings-lists-in-intune"></a>Seznamy nastavení omezení zařízení s Androidem a Samsung KNOX standard v Intune
 
@@ -30,7 +30,7 @@ Tento článek ukazuje všechna nastavení omezení zařízení v Microsoft Intu
 >[!TIP]
 >Pokud požadovaná nastavení nejsou k dispozici, možná budete moct zařízení nakonfigurovat pomocí [vlastního profilu](custom-settings-android.md).
 
-## <a name="before-you-begin"></a>Před zahájením
+## <a name="before-you-begin"></a>Než začnete
 
 [Vytvořte profil konfigurace zařízení](device-restrictions-configure.md).
 
@@ -63,17 +63,17 @@ Tento článek ukazuje všechna nastavení omezení zařízení v Microsoft Intu
     > [!NOTE]
     > Při registraci MDM zařízení Samsung Knox automaticky vyžadují 4místný číselný kód PIN. Nativní zařízení s Androidem můžou automaticky vyžadovat PIN kód, aby mohl být kompatibilní s podmíněným přístupem.
 
-- **Minimální délka hesla**: zadejte minimální počet požadovaných znaků od 4-16. Zadejte `6` například, pokud chcete pro délku hesla vyžadovat alespoň šest číslic nebo znaků.
-- **Maximální počet minut nečinnosti, po kterém se zamkne obrazovka**: zadejte dobu, po kterou musí být zařízení nečinné, než se automaticky uzamkne obrazovka. Zadejte `5` například, pokud chcete zařízení zamknout po 5 minutách nečinnosti. Když je hodnota prázdná nebo nastavená na **nenakonfigurovaná**, Intune se nezmění ani neaktualizuje.
+- **Minimální délka hesla**: zadejte minimální počet požadovaných znaků od 4-16. Zadejte například, pokud `6` chcete pro délku hesla vyžadovat alespoň šest číslic nebo znaků.
+- **Maximální počet minut nečinnosti, po kterém se zamkne obrazovka**: zadejte dobu, po kterou musí být zařízení nečinné, než se automaticky uzamkne obrazovka. Zadejte například, `5` Pokud chcete zařízení zamknout po 5 minutách nečinnosti. Když je hodnota prázdná nebo nastavená na **nenakonfigurovaná**, Intune se nezmění ani neaktualizuje.
 
   V zařízení uživatelé nemůžou nastavit časovou hodnotu větší než nakonfigurovanou dobu v profilu. Uživatelé můžou nastavit nižší časovou hodnotu. Pokud je profil nastavený například na `15` minuty, uživatelé můžou hodnotu nastavit na 5 minut. Uživatelé nemůžou hodnotu nastavit na 30 minut.
 
 - **Počet neúspěšných přihlášení před vymazáním zařízení**: zadejte počet chybných hesel povolených před vymazáním zařízení, od 4-11. `0`(nula) může zakázat funkci vymazání zařízení. Pokud je hodnota prázdná, Intune se nezmění ani neaktualizuje.
-- **Vypršení platnosti hesla (dny)**: zadejte počet dní, než bude nutné změnit heslo zařízení, od 1-365. Zadejte `90` například platnost hesla po 90 dnech. Po vypršení platnosti hesla se uživatelům zobrazí výzva k vytvoření nového hesla. Pokud je hodnota prázdná, Intune se nezmění ani neaktualizuje.
+- **Vypršení platnosti hesla (dny)**: zadejte počet dní, než bude nutné změnit heslo zařízení, od 1-365. Zadejte například `90` platnost hesla po 90 dnech. Po vypršení platnosti hesla se uživatelům zobrazí výzva k vytvoření nového hesla. Pokud je hodnota prázdná, Intune se nezmění ani neaktualizuje.
 - **Vyžadovaný typ hesla**: zadejte požadovanou úroveň složitosti hesla a to, jestli se můžou používat biometrická zařízení. Možnosti:
   - **Výchozí ze zařízení**
   - **Biometrika s nízkou úrovní zabezpečení**: [silný vs. slabý biometrika](https://android-developers.googleblog.com/2018/06/better-biometrics-in-android-p.html) (otevře web v Androidu)
-  - **Aspoň číslice**: obsahuje číselné znaky, například `123456789`.
+  - **Aspoň číslice**: obsahuje číselné znaky, například `123456789` .
   - **Číselná složitá**: opakující se nebo po sobě jdoucí čísla, například "1111" nebo "1234", nejsou povolena. Před přiřazením tohoto nastavení k zařízením nezapomeňte aktualizovat aplikaci Portál společnosti na nejnovější verzi na těchto zařízeních.
 
     Když nastavíte **číselnou složitost**a přiřadíte nastavení k zařízením s verzí Androidu starší než 5,0, platí následující chování:
@@ -85,7 +85,7 @@ Tento článek ukazuje všechna nastavení omezení zařízení v Microsoft Intu
   - **Aspoň alfanumerické**znaky: obsahuje velká písmena, malá písmena a číslice.
   - **Aspoň alfanumerické se symboly**: obsahuje velká písmena, malá písmena, číslice, interpunkční znaménka a symboly.
 
-- **Zakázat opakované použití předchozích hesel**: pomocí tohoto nastavení můžete uživatelům zabránit ve vytváření hesel, která používali dřív. Zadejte počet dříve použitých hesel, která se nedají použít, od 1-24. Například zadejte `5` , že uživatelé nemůžou nastavit nové heslo na aktuální heslo ani na žádná z předchozích čtyř hesel. Pokud je hodnota prázdná, Intune se nezmění ani neaktualizuje.
+- **Zakázat opakované použití předchozích hesel**: pomocí tohoto nastavení můžete uživatelům zabránit ve vytváření hesel, která používali dřív. Zadejte počet dříve použitých hesel, která se nedají použít, od 1-24. Například zadejte, `5` že uživatelé nemůžou nastavit nové heslo na aktuální heslo ani na žádná z předchozích čtyř hesel. Pokud je hodnota prázdná, Intune se nezmění ani neaktualizuje.
 - **Odemknutí otiskem prstu (jenom Samsung KNOX)**: **blok** zabraňuje použití otisku prstu k odemknutí zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém uživatelům dovolit, aby zařízení odemkli pomocí otisku prstu.
 - **Smart Lock a jiní agenti**pro určování důvěryhodnosti: **blok** brání Smart Lock nebo jiným agentům pro určování důvěryhodnosti v nastavení zamykací obrazovky. Pokud je zařízení v důvěryhodném umístění, pak tato funkce, označovaná také jako agent pro určování důvěryhodnosti, umožňuje zakázat nebo obejít heslo zamykací obrazovky zařízení. Tuto funkci můžete například použít, když jsou zařízení připojená k určitému zařízení Bluetooth nebo když jsou zařízení blízko značky NFC. Pomocí tohoto nastavení můžete uživatelům zabránit v konfiguraci funkce Smart Lock.
 
@@ -98,7 +98,7 @@ Tento článek ukazuje všechna nastavení omezení zařízení v Microsoft Intu
 - **Šifrování**: vyberte **vyžadovat** , aby byly soubory v zařízení šifrované. Ne všechna zařízení podporují šifrování. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Pokud chcete nakonfigurovat toto nastavení a správně ohlásit dodržování předpisů, nakonfigurujte taky:
   1. **Heslo**: nastavte na **vyžadovat**.
   2. **Požadovaný typ hesla**: nastavte **aspoň na číslo**.
-  3. **Minimální délka hesla**: Nastavte aspoň `4`na.
+  3. **Minimální délka hesla**: Nastavte aspoň na `4` .
 
   > [!NOTE]
   > Pokud se vynucují zásady šifrování, zařízení Samsung Knox po uživatelích vyžadují nastavení šestiznakového složitého hesla jako hesla k zařízení.
@@ -116,12 +116,12 @@ Pomocí těchto nastavení můžete na zařízeních zapnout nebo zakázat konkr
 - **Schválené aplikace**: seznam aplikací, které můžou uživatelé instalovat. Aby bylo možné zachovat dodržování předpisů, uživatelé nesmí instalovat jiné aplikace.  Aplikace spravované přes Intune se automaticky povolují, včetně aplikace Portál společnosti.
 - **Seznam aplikací**: **přidejte** svoji aplikaci:
   - **ID sady prostředků aplikace**: Zadejte ID sady prostředků aplikace.
-  - **Adresa URL obchodu s aplikacemi**: zadejte adresu URL obchod Google Play aplikace, kterou chcete. Pokud například chcete přidat aplikaci Vzdálená plocha Microsoft pro Android, zadejte `https://play.google.com/store/apps/details?id=com.microsoft.rdc.android`.
+  - **Adresa URL obchodu s aplikacemi**: zadejte adresu URL obchod Google Play aplikace, kterou chcete. Pokud například chcete přidat aplikaci Vzdálená plocha Microsoft pro Android, zadejte `https://play.google.com/store/apps/details?id=com.microsoft.rdc.android` .
 
-    Pokud chcete najít adresu URL aplikace, otevřete [Google Play Store](https://play.google.com/store/apps)a vyhledejte aplikaci. Vyhledejte například `Microsoft Remote Desktop Play Store` nebo `Microsoft Planner`. Vyberte aplikaci a zkopírujte adresu URL.
+    Pokud chcete najít adresu URL aplikace, otevřete [Google Play Store](https://play.google.com/store/apps)a vyhledejte aplikaci. Vyhledejte například `Microsoft Remote Desktop Play Store` nebo `Microsoft Planner` . Vyberte aplikaci a zkopírujte adresu URL.
   
   - **Název aplikace**: zadejte název, který chcete. Tento název se zobrazí uživatelům.
-  - **Vydavatel** (volitelné): zadejte vydavatele aplikace, například `Microsoft`.
+  - **Vydavatel** (volitelné): zadejte vydavatele aplikace, například `Microsoft` .
 
 Můžete také **naimportovat** soubor CSV s podrobnostmi o aplikaci, včetně adresy URL. Použijte *adresu URL aplikace* <>, <*název aplikace*> <formát *vydavatele aplikace*>. Případně **exportujte** existující seznam obsahující seznam aplikací s omezeným přístupem ve stejném formátu.
 
@@ -193,4 +193,4 @@ Nastavení platí jen pro zařízení se zabezpečením Samsung Knox Standard a 
 
 [Přiřaďte profil](device-profile-assign.md) a [monitorujte jeho stav](device-profile-monitor.md).
 
-Můžete také vytvořit profily celoobrazovkového pro zařízení s [Androidem Enterprise](device-restrictions-android-for-work.md#dedicated-devices) a [Windows 10](kiosk-settings.md) .
+Můžete také vytvořit profily celoobrazovkového pro zařízení s [Androidem Enterprise](device-restrictions-android-for-work.md#device-experience) a [Windows 10](kiosk-settings.md) .

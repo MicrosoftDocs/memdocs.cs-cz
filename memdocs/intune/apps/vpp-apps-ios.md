@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/03/2020
+ms.date: 06/17/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 750bc9411e93ac09f857518a1e794f8d69d8575c
-ms.sourcegitcommit: 7a099ff53668f50b37adab97ecd7ba98c5324676
+ms.openlocfilehash: 9012cf55bcd74ab0786c3d961bc60914f9ade04e
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84746608"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093310"
 ---
 # <a name="how-to-manage-ios-and-macos-apps-purchased-through-apple-volume-purchase-program-with-microsoft-intune"></a>Jak spravovat aplikace pro iOS a macOS zakoupené prostřednictvím Apple Volume Purchase Program s využitím Microsoft Intune
 
@@ -206,6 +206,8 @@ Přístup k tokenům Apple VPP a aplikacím VPP se dá řídit nezávisle pomoc�
 Při vytváření a obnovování tokenů VPP můžete využít přímou podporu od společnosti Apple. Podrobnosti najdete v článku [Distribuce obsahu vašim uživatelům v rámci programu hromadných nákupů (VPP)](https://go.microsoft.com/fwlink/?linkid=2014661) v dokumentaci Apple. 
 
 Pokud se na portálu Intune uvádí **Přiřazeno k externí správě MDM**, můžete v Intune použít token VPP až poté, co jste ho (vy jako správce) odebrali ze správy MDM třetí strany.
+
+Pokud je stav pro token **duplicitní** , nahrálo se několik tokenů se stejným **umístěním tokenu** . Odstraňte duplicitní token pro opětovné zahájení synchronizace tokenu. K tokenům, které jsou označené jako duplicitní, můžete i nadále přiřazovat licence a odvolat je. Licence pro nové aplikace a koupené knihy se ale neprojeví, když je token označený jako duplicitní.
 
 ## <a name="frequently-asked-questions"></a>Nejčastější dotazy
 

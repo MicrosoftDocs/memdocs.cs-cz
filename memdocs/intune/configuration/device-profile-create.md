@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/14/2020
+ms.date: 06/11/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,16 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 74e365e50d73bb14f20376c92b43061b12d00003
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 886f572212a1af3e38fd5ea10afa21ce24c23411
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988463"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093295"
 ---
 # <a name="create-a-device-profile-in-microsoft-intune"></a>Vytvořte profil zařízení v Microsoft Intune
 
-Profily zařízení umožňují přidat a nakonfigurovat nastavení a potom tato nastavení nasdílet do zařízení ve vaší organizaci. Použití [funkcí a nastavení na vašich zařízeních pomocí profilů zařízení](device-profiles.md) obsahuje více podrobností, včetně toho, co můžete dělat.
+Profily zařízení umožňují přidat a nakonfigurovat nastavení a potom tato nastavení nasdílet do zařízení ve vaší organizaci. Další informace, včetně toho, co můžete dělat, najdete v tématu [použití funkcí a nastavení v zařízeních pomocí profilů zařízení](device-profiles.md).
 
 Tento článek:
 
@@ -66,7 +66,7 @@ Pak zvolte typ profilu. Nastavení, která můžete konfigurovat, se liší podl
 - [Připojení k doméně (Windows)](domain-join-configure.md)
 - [Upgrade edice a přepínač režimu (Windows)](edition-upgrade-configure-windows-10.md)
 - [Vzdělávání (iOS, iPadOS)](../fundamentals/education-settings-configure-ios.md)
-- [E-mail](email-settings-configure.md)
+- [E-mailu](email-settings-configure.md)
 - [Endpoint Protection (macOS, Windows)](../protect/endpoint-protection-configure.md)
 - [Rozšíření (macOS)](kernel-extensions-overview-macos.md)
 - [Identity Protection (Windows)](../protect/identity-protection-configure.md)
@@ -84,6 +84,7 @@ Pak zvolte typ profilu. Nastavení, která můžete konfigurovat, se liší podl
 - [Důvěryhodný certifikát](../protect/certificates-configure.md)
 - [VPN](vpn-settings-configure.md)
 - [Wi-Fi](wi-fi-settings-configure.md)
+- [Kabelové sítě (macOS)](wired-network-settings-macos.md)
 
 Pokud třeba pro platformu vyberete **iOS/iPadOS** , možnosti vašeho profilu vypadají podobně jako v následujícím profilu:
 
@@ -97,7 +98,7 @@ Další informace o značkách oboru a o tom, co můžete dělat, najdete v tém
 
 ## <a name="applicability-rules"></a>Pravidla použitelnosti
 
-To platí pro:
+Platí pro:
 
 - Windows 10 a novější
 
@@ -178,7 +179,7 @@ Při vytváření profilů Vezměte v úvahu následující doporučení:
 
   :::image type="content" source="./media/device-profile-create/setting-applies-to-user-and-device.png" alt-text="Šablona správce Intune, která se vztahuje na uživatele a zařízení":::
 
-- Pokaždé, když vytvoříte omezující zásadu, sdělte tuto změnu vašim uživatelům. Pokud například měníte požadavek na přístupový kód ze 4 znaků na 6 znaků, dejte uživatelům informace o tom, než zásadu přiřadíte.
+- Pokaždé, když vytvoříte omezující zásadu, sdělte tuto změnu vašim uživatelům. Pokud například měníte požadavek na heslo ze čtyř (4) znaků na šest (6) znaků, dejte uživatelům informace o tom, než zásadu přiřadíte.
 
 ## <a name="next-steps"></a>Další kroky
 

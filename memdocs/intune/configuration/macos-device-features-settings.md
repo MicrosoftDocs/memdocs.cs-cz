@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/05/2020
+ms.date: 06/15/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9d7929fcd01a4e105b26b856ee4031a450bd47a1
-ms.sourcegitcommit: 7a099ff53668f50b37adab97ecd7ba98c5324676
+ms.openlocfilehash: 91bf09a122031b7186840bc17cd44cc5738b2ffe
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84746514"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093560"
 ---
 # <a name="macos-device-feature-settings-in-intune"></a>nastavení funkcí zařízení macOS v Intune
 
@@ -106,11 +106,114 @@ Tato funkce platí pro:
 > [!TIP]
 > Pokud chcete řešit potíže, otevřete na zařízení MacOS **profily Předvolby systému**  >  **Profiles**. Ověřte, že profil, který jste vytvořili, je v seznamu profily zařízení. Pokud je v seznamu uveden, ujistěte se, že je **Konfigurace přidružených domén** v profilu a obsahuje správné ID aplikace a domény.
 
+## <a name="content-caching"></a>Ukládání obsahu do mezipaměti
+
+Ukládání obsahu do mezipaměti ukládá místní kopii obsahu. Tyto informace mohou být načteny jinými zařízeními Apple bez připojení k Internetu. Toto ukládání do mezipaměti zrychluje stahování uložením aktualizací softwaru, aplikací, fotek a dalšího obsahu při prvním stažení. Vzhledem k tomu, že se aplikace stahují jednou a sdílí se s ostatními zařízeními, školám a organizacím s mnoha zařízeními šetří šířku pásma.
+
+> [!NOTE]
+> Pro tato nastavení použijte pouze jeden profil. Pokud s těmito nastaveními přiřadíte více profilů, dojde k chybě.
+>
+> Další informace o sledování ukládání obsahu do mezipaměti najdete v tématu [zobrazení protokolů a statistik ukládání obsahu do mezipaměti](https://support.apple.com/guide/mac-help/view-content-caching-logs-statistics-mac-mchl0d8533cd/10.15/mac/10.15) (otevření webu společnosti Apple).
+
+Tato funkce platí pro:
+
+- macOS 10.13.4 a novější
+
+### <a name="settings-apply-to-all-enrollment-types"></a>Nastavení platí pro: všechny typy registrace
+
+Další informace o těchto nastaveních najdete v tématu [nastavení datové části mezipaměti obsahu](https://support.apple.com/guide/mdm/content-caching-mdm163612d39/1/web/1) (otevření webu společnosti Apple).
+
+**Povolit ukládání obsahu do mezipaměti**: **Ano** zapne ukládání obsahu do mezipaměti a uživatelé ho nemůžou zakázat. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém vypnout.
+
+- **Typ obsahu, který se má ukládat do mezipaměti**: vaše možnosti:
+  - **Veškerý obsah**: ukládá do mezipaměti obsah iCloud a sdílený obsah.
+  - **Pouze obsah uživatele**: ukládá do mezipaměti obsah iCloud uživatele, včetně fotek a dokumentů.
+  - **Pouze sdílený obsah**: ukládá do mezipaměti aplikace a aktualizace softwaru.
+
+- **Maximální velikost mezipaměti**: zadejte maximální množství místa na disku (v bajtech), které se používá k ukládání obsahu do mezipaměti. Pokud necháte pole prázdné (výchozí), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém nastavit hodnotu nula ( `0` ) bajtů, která poskytuje neomezené místo na disku mezipaměti.
+
+  Ujistěte se, že nepřekračujete prostor, který je k dispozici na zařízeních. Další informace o kapacitě úložiště zařízení najdete v tématu [jak kapacitu úložiště pro iOS a MacOS](https://support.apple.com/HT201402) (se otevírá na webu společnosti Apple).
+
+- **Umístění mezipaměti**: zadejte cestu pro uložení obsahu uloženého v mezipaměti. Výchozí umístění je `/Library/Application Support/Apple/AssetCache/Data` . Doporučuje se, abyste toto umístění nezměnili.
+
+  Pokud toto nastavení změníte, obsah uložený v mezipaměti nebude přesunut do nového umístění. Aby je bylo možné automaticky přesunout, uživatelé musí změnit umístění na zařízení (**Předvolby systému**pro  >  **sdílení**  >  **obsahu do mezipaměti**).
+
+- **Port**: zadejte číslo portu TCP na zařízeních, kde má mezipaměť přijímat požadavky na stažení a nahrání, od 0-65535. Zadáním hodnoty nula ( `0` ) (výchozí) použijte libovolný port, který je k dispozici.
+- **Blokovat připojení k Internetu a sdílení obsahu v mezipaměti**: označuje se také jako připojené do mezipaměti. **Ano** zabraňuje sdílení připojení k Internetu a zabraňuje sdílení obsahu uloženého v mezipaměti pomocí zařízení s iOS/iPadOS, která jsou připojená k počítači Mac. Uživatelé tuto funkci nemůžou povolit. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
+
+- **Povolit sdílení připojení k Internetu**: taky se označuje jako připojené do mezipaměti. **Ano** , umožňuje sdílení připojení k Internetu a umožňuje sdílení obsahu v mezipaměti pomocí zařízení s iOS/iPadOS, která jsou připojená k počítači Mac. Uživatelé tuto funkci nemůžou zakázat. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém tuto funkci vypnout.
+
+  Tato funkce platí pro:
+
+  - macOS 10.15.4 a novější
+
+- **Povolit mezipaměť pro protokolování podrobností klienta**: **Ano** zaznamená IP adresu a číslo portu zařízení, které požaduje obsah.Pokud řešíte problémy se zařízením, může vám tento soubor protokolu pomáhat. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení operační systém nemusí tyto informace zaprotokolovat.
+
+- **Vždycky uchovávat obsah z mezipaměti, i když systém potřebuje místo na disku pro jiné aplikace**: **Ano** uchovává obsah mezipaměti a zajišťuje, že se nic neodstraní, i když je nedostatek místa na disku. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém vyprázdnit obsah z mezipaměti automaticky, když bude potřebovat prostor úložiště pro ostatní aplikace.
+
+  Tato funkce platí pro:
+
+  - macOS 10,15 a novější
+
+- **Zobrazit upozornění na stav**: **Ano** zobrazuje výstrahy jako systémová oznámení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení operační systém nemusí tyto výstrahy zobrazit jako systémová oznámení.
+
+  Tato funkce platí pro:
+
+  - macOS 10,15 a novější
+
+- **Zabránit pozastavení zařízení v režimu spánku, když je zapnuté ukládání do mezipaměti**: **Ano** zabraňuje počítači přejít do režimu spánku, pokud je ukládání do mezipaměti zapnuté. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém zařízení nechat v režimu spánku.
+
+  Tato funkce platí pro:
+
+  - macOS 10,15 a novější
+
+- **Zařízení do mezipaměti**: Vyberte zařízení, která můžou obsah ukládat do mezipaměti. Možnosti:
+  - **Nenakonfigurováno** (výchozí): Intune toto nastavení nemění ani neaktualizuje. 
+  - **Zařízení používající stejnou místní síť**: mezipaměť obsahu nabízí obsah pro zařízení ve stejné bezprostřední místní síti. Zařízení v jiných sítích nenabízí žádný obsah, včetně zařízení, která jsou dostupná pro mezipaměť obsahu.
+  - **Zařízení používající stejnou veřejnou IP adresu**: mezipaměť obsahu nabízí obsah pro zařízení, která používají stejnou veřejnou IP adresu. Zařízení v jiných sítích nenabízí žádný obsah, včetně zařízení, která jsou dostupná pro mezipaměť obsahu.
+  - **Zařízení využívající vlastní místní sítě**: mezipaměť obsahu poskytuje obsah pro zařízení v rozsahu IP adres, které zadáte.
+    - **Rozsahy naslouchání klientů**: zadejte rozsah IP adres, které mohou přijímat mezipaměť obsahu.
+  - **Zařízení používající vlastní místní sítě s Fallback**: mezipaměť obsahu poskytuje obsah pro zařízení v oblasti poslechu, rozsahy naslouchání v partnerském prostředí a IP adresy rodičů.
+    - **Rozsahy naslouchání klientů**: zadejte rozsah IP adres, které mohou přijímat mezipaměť obsahu.
+
+- **Vlastní veřejné IP adresy**: zadejte rozsah veřejných IP adres. Cloudové servery používají tento rozsah ke spárování klientských zařízení s mezipamětí.
+
+- **Sdílet obsah s jinými mezipamětmi**: Pokud vaše síť obsahuje více než jednu mezipaměť obsahu, mezipaměti obsahu v jiných zařízeních se automaticky stanou partnerskými uzly. Tato zařízení můžou prostudovat a sdílet software uložený v mezipaměti. 
+
+  Když požadovaná položka není dostupná pro jednu mezipaměť obsahu, zkontroluje její partnerské uzly pro danou položku. Pokud je položka k dispozici, je stažena z mezipaměti obsahu na partnerském zařízení. Pokud není stále k dispozici, mezipaměť obsahu stáhne položku z:
+
+  - Nadřazená IP adresa, pokud je nakonfigurovaná
+  
+    ANI
+    
+  - Od společnosti Apple přes Internet
+
+  Pokud je k dispozici více než jedna mezipaměť obsahu, zařízení automaticky vyberou správnou mezipaměť obsahu. 
+
+  Možnosti:
+
+  - **Nenakonfigurováno** (výchozí): Intune toto nastavení nemění ani neaktualizuje.
+  - **Mezipaměti obsahu pomocí stejných místních sítí**: mezipaměť obsahu se dá použít jenom pro jiné mezipaměti obsahu v stejné bezprostřední místní síti.
+  - **Mezipaměti obsahu používající stejnou veřejnou IP adresu**: mezipaměť obsahu se dá použít jenom u ostatních mezipamětí obsahu na stejné veřejné IP adrese.
+  - **Mezipaměti obsahu s použitím vlastních místních sítí**: mezipaměť obsahu je v rozsahu naslouchání IP adres, kterou zadáte, jenom Peers s dalšími mezipaměťmi obsahu:
+
+    - **Rozsahy partnerských naslouchání**: Zadejte počáteční a koncové IP adresy IPv4 nebo IPv6 pro váš rozsah. Mezipaměť obsahu reaguje jenom na žádosti sdílené mezipaměti z mezipaměti obsahu v rozsahu IP adres, které zadáte.
+    - **Rozsahy rovnocenného filtru**: Zadejte počáteční a koncové IP adresy IPv4 nebo IPv6 pro váš rozsah. Mezipaměť obsahu filtruje svůj seznam partnerských uzlů pomocí rozsahů IP adres, které zadáte.
+
+- **Nadřazené IP adresy**: Zadejte místní IP adresu jiné mezipaměti obsahu, kterou chcete přidat jako nadřazenou mezipaměť. Mezipaměť odesílá a stahuje obsah do těchto mezipamětí a místo toho se nahrává a stahuje přímo pomocí společnosti Apple. Jenom jednu nadřazenou IP adresu přidejte jenom jednou.
+- **Zásada nadřazeného výběru**: Pokud existuje mnoho nadřazených mezipamětí, vyberte, jak se vybere nadřazená IP adresa. Možnosti:
+  - **Nenakonfigurováno** (výchozí): Intune toto nastavení nemění ani neaktualizuje.
+  - **Kruhové dotazování**: použijte nadřazené IP adresy v daném pořadí. Tato možnost je vhodná pro scénáře vyrovnávání zatížení.
+  - **První k dispozici**: vždy použijte první dostupnou IP adresu v seznamu.
+  - **Hash**: vytvoří hodnotu hash pro část cesty požadované adresy URL. Tato možnost zajistí, že stejná nadřazená IP adresa se vždycky používá pro stejnou adresu URL.
+  - **Náhodný**: náhodně použijte IP adresu v seznamu. Tato možnost je vhodná pro scénáře vyrovnávání zatížení.
+  - **Rychlé dostupnosti**: vždy použijte první IP adresu v seznamu. Pokud není k dispozici, použijte druhou IP adresu v seznamu. Pokračujte v používání druhé IP adresy, dokud není k dispozici, a tak dále.
+
 ## <a name="login-items"></a>Přihlašovací položky
 
 ### <a name="settings-apply-to-all-enrollment-types"></a>Nastavení platí pro: všechny typy registrace
 
-- **Přidat soubory, složky a vlastní aplikace, které se spustí při přihlášení**: **přidejte** cestu k souboru, složce, vlastní aplikaci nebo systémové aplikaci, kterou chcete otevřít, když se uživatelé přihlašují ke svým zařízením. Dále zadejte:
+- **Přidat soubory, složky a vlastní aplikace, které se spustí při přihlášení**: **přidejte** cestu k souboru, složce, vlastní aplikaci nebo systémové aplikaci, která se otevře, když se uživatelé přihlásí ke svým zařízením. Dále zadejte:
 
   - **Cesta položky**: zadejte cestu k souboru, složce nebo aplikaci. Systémové aplikace nebo aplikace sestavené nebo přizpůsobené pro vaši organizaci jsou obvykle ve `Applications` složce s cestou podobnou `/Applications/AppName.app` .
 
@@ -124,7 +227,7 @@ Tato funkce platí pro:
     Při přidávání libovolné aplikace, složky nebo souboru Nezapomeňte zadat správnou cestu. Ne všechny položky jsou ve `Applications` složce. Pokud uživatel přesune položku z jednoho umístění do jiného, pak se cesta změní. Tato přesunutá položka nebude otevřena, když se uživatel přihlásí.
 
   - **Skrýt**: tuto možnost vyberte, pokud chcete aplikaci zobrazit nebo skrýt. Možnosti:
-    - **Nenakonfigurováno**: Toto je výchozí nastavení. Intune toto nastavení nezmění ani neaktualizuje. Ve výchozím nastavení zobrazí operační systém položky v seznamu Uživatelé & skupiny přihlášení a možnost skrýt nebude zaškrtnuto.
+    - **Nenakonfigurováno** (výchozí): Intune toto nastavení nemění ani neaktualizuje. Ve výchozím nastavení může operační systém zobrazit položky v seznamu uživatelů & skupiny přihlášení s možností skrýt nezaškrtnutou.
     - **Ano**: skryje aplikaci v seznamu Uživatelé & skupiny přihlášení.
 
 ## <a name="login-window"></a>Přihlašovací okno
@@ -186,7 +289,7 @@ Tato funkce platí pro:
 - **Adresy URL** (pouze přesměrované): zadejte PŘEDPONY adresy URL vašich zprostředkovatelů identity, na jejichž základě rozšíření pro přesměrování aplikace používá jednotné přihlašování. Když budou uživatelé přesměrováni na tyto adresy URL, rozšíření aplikace jednotného přihlašování se zasáhne a zobrazí výzvu k přihlášení SSO.
 
   - Všechny adresy URL v profilech rozšíření aplikace jednotného přihlašování Intune musí být jedinečné. Doménu nejde opakovat v žádném profilu rozšíření aplikace jednotného přihlašování, a to ani v případě, že používáte různé typy rozšíření aplikace jednotného přihlašování.
-  - Adresy URL musí začínat na http://nebo https://.
+  - Adresy URL musí začínat na `http://` nebo `https://` .
 
 - **Další konfigurace** (přesměrování a přihlašovací údaje): zadejte další data specifická pro rozšíření, která chcete předat rozšíření aplikace jednotného přihlašování:
   - **Klíč**: zadejte název položky, kterou chcete přidat, například `user name` .
@@ -214,10 +317,10 @@ Tato funkce platí pro:
 - **Synchronizace hesel** (jenom Kerberos): Pokud chcete synchronizovat místní hesla uživatelů do Azure AD, vyberte **Povolit** . Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém zakázat synchronizaci hesel do služby Azure AD. Toto nastavení použijte jako alternativu nebo zálohu k jednotnému přihlašování. Toto nastavení nefunguje, pokud jsou uživatelé přihlášení pomocí mobilního účtu Apple.
 - **Složitost hesla služby Active Directory systému Windows Server** (pouze Kerberos): vyberte možnost **vyžadovat** , pokud chcete vynutit uživatelská hesla pro splnění požadavků na složitost hesla služby Active Directory. Další informace najdete v tématu [heslo musí splňovat požadavky na složitost](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/password-must-meet-complexity-requirements). Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení operační systém nemusí vyžadovat, aby uživatelé splnili požadavky na heslo služby Active Directory.
 - **Minimální délka hesla** (jenom Kerberos): zadejte minimální počet znaků, které můžou vytvářet hesla uživatelů. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení operační systém nemusí pro uživatele vymáhat minimální délku hesla.
-- **Omezení opakovaného použití hesla** (jenom Kerberos): zadejte počet nových hesel, od 1-24, které se musí použít, až bude možné znovu použít předchozí heslo v doméně. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení operační systém nemusí vynutilit omezení opakovaného použití hesla.
-- **Minimální stáří hesla** (pouze Kerberos): zadejte počet dní, po které musí být heslo v doméně použito, než je může uživatel změnit. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení operační systém nemusí vyhovět minimálnímu stáří hesla, aby bylo možné je změnit.
+- **Omezení opakovaného použití hesla** (jenom Kerberos): zadejte počet nových hesel, od 1-24, která se použijí, až bude možné znovu použít předchozí heslo v doméně. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení operační systém nemusí vynutilit omezení opakovaného použití hesla.
+- **Minimální stáří hesla** (jenom Kerberos): zadejte počet dní, po které se heslo v doméně používá, než je může uživatel změnit. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení operační systém nemusí vyhovět minimálnímu stáří hesla, aby bylo možné je změnit.
 - **Oznámení vypršení platnosti hesla** (jenom Kerberos): zadejte počet dní, než heslo vyprší, uživatelé obdrží oznámení o vypršení platnosti hesla. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém používat `15` dny.
-- **Vypršení platnosti hesla** (pouze Kerberos): zadejte počet dní, než bude nutné změnit heslo zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém nikdy vypršení platnosti hesel.
+- **Vypršení platnosti hesla** (jenom Kerberos): zadejte počet dní, než se musí změnit heslo zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém nikdy vypršení platnosti hesel.
 - **Adresa URL pro změnu hesla** (jenom Kerberos): zadejte adresu URL, která se otevře, když uživatelé spustí změnu hesla protokolu Kerberos.
 - **Hlavní název** (jenom Kerberos): zadejte uživatelské jméno objektu zabezpečení protokolu Kerberos. Nemusíte zahrnovat název sféry. Například v `user@contoso.com` , `user` je hlavní název a `contoso.com` je název sféry.
 
@@ -227,7 +330,7 @@ Tato funkce platí pro:
   
 - **Kód lokality služby Active Directory** (pouze Kerberos): zadejte název lokality služby Active Directory, kterou má rozšíření protokolu Kerberos použít. Tuto hodnotu pravděpodobně nebudete muset měnit, protože rozšíření protokolu Kerberos může automaticky najít kód lokality služby Active Directory.
 - **Název mezipaměti** (jenom Kerberos): zadejte název obecné služby zabezpečení (GSS) mezipaměti protokolu Kerberos. Tuto hodnotu pravděpodobně nemusíte nastavovat.  
-- **Zpráva požadavky na heslo** (jenom Kerberos): zadejte textovou verzi požadavků na heslo vaší organizace, které se zobrazují uživatelům. Zpráva se zobrazí, pokud nepožadujete požadavky na složitost hesla služby Active Directory nebo nezadáte minimální délku hesla.  
+- **Zpráva požadavky na heslo** (jenom Kerberos): zadejte textovou verzi požadavků na heslo vaší organizace, které se zobrazují uživatelům. Tato zpráva se zobrazí, pokud nepožadujete požadavky na složitost hesla služby Active Directory nebo nezadáte minimální délku hesla.  
 - **ID sady prostředků aplikace** (jenom Kerberos): **přidejte** identifikátory sady prostředků aplikace, které by měly na svých zařízeních používat jednotné přihlašování. Těmto aplikacím je udělen přístup k lístku pro udělení lístku protokolu Kerberos a ověřovacímu lístku. Aplikace také ověřují uživatele pro služby, kterým má oprávnění k přístupu.
 - **Mapování sféry domény** (jenom Kerberos): **přidejte** přípony DNS domény, které by se měly namapovat do vaší sféry. Toto nastavení použijte, pokud názvy DNS hostitelů neodpovídají názvu sféry. Pravděpodobně nemusíte vytvářet vlastní mapování domén na sféru.
 - **PKINIT certifikát** (jenom Kerberos): **Vyberte** certifikát kryptografie s veřejným klíčem pro počáteční ověřování (PKINIT), který se dá použít pro ověřování protokolem Kerberos. Můžete si vybrat z certifikátů [PKCS](../protect/certficates-pfx-configure.md) nebo [SCEP](../protect/certificates-scep-configure.md) , které jste přidali v Intune. Další informace o certifikátech najdete v tématu [použití certifikátů k ověřování v Microsoft Intune](../protect/certificates-configure.md).

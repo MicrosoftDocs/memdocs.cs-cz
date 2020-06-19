@@ -1,12 +1,12 @@
 ---
 title: Konfigurace nastavení Wi-Fi pro zařízení macOS v Microsoft Intune – Azure | Microsoft Docs
 titleSuffix: ''
-description: Vytvořte nebo přidejte konfigurační profil zařízení s připojením Wi-Fi pro zařízení s macOS. Podívejte se na různá nastavení, včetně přidání certifikátů, volby typu protokolu EAP a výběru metody ověřování v Microsoft Intune.
+description: Vytvořte nebo přidejte konfigurační profil zařízení s připojením Wi-Fi pro zařízení s macOS. Podívejte se na různá nastavení, přidejte certifikáty, zvolte typ protokolu EAP a vyberte metodu ověřování v Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 06/10/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,22 +16,22 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0e878294a9af6b80358aa495aa4d10ac6ed93404
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: e1cd60b8a9a8612034972e8357d2e346d194ca3a
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80086350"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85092885"
 ---
 # <a name="add-wi-fi-settings-for-macos-devices-in-microsoft-intune"></a>Přidání nastavení Wi-Fi pro zařízení s macOS v Microsoft Intune
 
-Můžete vytvořit profil s konkrétním nastavením Wi-Fi a potom ho nasadit na zařízení s macOS. Microsoft Intune nabízí mnoho funkcí, například ověřování v síti, přidání certifikátu PKS nebo SCEP a další.
+Můžete vytvořit profil s konkrétním nastavením Wi-Fi a potom tento profil nasadit do zařízení macOS. Microsoft Intune nabízí mnoho funkcí, včetně ověřování ve vaší síti, přidání certifikátu PKCS nebo SCEP a dalších.
 
-Tato nastavení Wi-Fi jsou rozdělena do dvou kategorií: základní nastavení a nastavení Enterprise.
+Tato nastavení sítě Wi-Fi jsou rozdělená do dvou kategorií: základní nastavení a podniková nastavení.
 
 Těmito nastaveními se zabývá tento článek.
 
-## <a name="before-you-begin"></a>Před zahájením
+## <a name="before-you-begin"></a>Než začnete
 
 [Vytvořte profil zařízení](wi-fi-settings-configure.md).
 
@@ -39,6 +39,8 @@ Těmito nastaveními se zabývá tento článek.
 > Tato nastavení jsou k dispozici pro všechny typy registrace. Další informace o typech registrace najdete v tématu [registrace MacOS](../enrollment/macos-enroll.md).
 
 ## <a name="basic-profiles"></a>Základní profily
+
+Základní nebo osobní profily používají WPA/WPA2 k zabezpečení připojení Wi-Fi na zařízeních. Standard WPA/WPA2 se obvykle používá v domácích sítích nebo v osobních sítích. K ověření připojení můžete také přidat předsdílený klíč.
 
 - **Typ Wi-Fi**: Zvolte **Základní**.
 - **Název sítě**: Zadejte název pro toto připojení Wi-Fi. Tato hodnota představuje název, který uživatelé na svém zařízení uvidí při procházení seznamu dostupných připojení.
@@ -58,6 +60,8 @@ Těmito nastaveními se zabývá tento článek.
 
 ## <a name="enterprise-profiles"></a>Profily Enterprise
 
+Podnikové profily používají k ověřování připojení Wi-Fi protokol EAP (Extensible Authentication Protocol). Společnost často používá protokol EAP, protože k ověřování a zabezpečení připojení a konfiguraci dalších možností zabezpečení slouží certifikáty.
+
 - **Typ Wi-Fi**: Zvolte **Enterprise**.
 - **SSID**: Zkratka pro **Service Set Identifier**. Tato vlastnost je reálným názvem bezdrátové sítě, ke které se zařízení připojí. Název sítě, který jste nakonfigurovali, ale uživatelé uvidí jen při zvolení připojení.
 - **Připojovat automaticky**: Zvolte **Povolit**, pokud se chcete automaticky připojovat k této síti, když je zařízení v rozsahu. Zvolte **Zakázat**, pokud chcete zařízením zabránit v automatickém připojování.
@@ -75,15 +79,15 @@ Těmito nastaveními se zabývá tento článek.
 
   - **EAP-TLS**: Dále zadejte:
 
-    - **Názvy důvěryhodných** - **certifikátů**serveru: **přidejte** jeden nebo více běžných názvů používaných v certifikátech vydaných vaší důvěryhodnou certifikační autoritou (CA). Když tento údaj zadáte, můžete obejít okno dynamického vztahu důvěryhodnosti, které se zobrazí na zařízeních uživatelů při připojování k Wi-Fi síti.
-    - **Kořenový certifikát pro ověřování serveru**: Zvolte existující profil důvěryhodného kořenového certifikátu. Tento certifikát se předloží serveru při připojení klienta k síti a slouží k ověření připojení.
+    - **Vztah důvěryhodnosti serveru**  -  **Názvy certifikačních serverů**: **přidejte** jeden nebo více běžných názvů používaných v certifikátech vydaných vaší důvěryhodnou certifikační autoritou (CA). Když tento údaj zadáte, můžete obejít okno dynamického vztahu důvěryhodnosti, které se zobrazí na zařízeních uživatelů při připojování k Wi-Fi síti.
+    - **Kořenový certifikát pro ověření serveru**: vyberte jeden nebo více existujících profilů důvěryhodných kořenových certifikátů. Když se klient připojí k síti, tyto certifikáty se zobrazí na serveru. Ověřují připojení.
 
-    - **Client Authentication** - **Klientský certifikát pro ověření klienta pro ověření klienta (certifikát identity)**: vyberte profil certifikátu klienta SCEP nebo PKCS, který je také nasazený do zařízení. Tento certifikát představuje identitu, kterou zařízení předloží serveru pro ověření připojení.
+    - **Ověřování klienta**  -  **Klientský certifikát pro ověření klienta (certifikát identity)**: vyberte profil certifikátu klienta SCEP nebo PKCS, který je také nasazený do zařízení. Tento certifikát představuje identitu, kterou zařízení předloží serveru pro ověření připojení.
 
   - **EAP-TTLS**: Dále zadejte:
 
-    - **Názvy důvěryhodných** - **certifikátů**serveru: **přidejte** jeden nebo více běžných názvů používaných v certifikátech vydaných vaší důvěryhodnou certifikační autoritou (CA). Když tento údaj zadáte, můžete obejít okno dynamického vztahu důvěryhodnosti, které se zobrazí na zařízeních uživatelů při připojování k Wi-Fi síti.
-    - **Kořenový certifikát pro ověřování serveru**: Zvolte existující profil důvěryhodného kořenového certifikátu. Tento certifikát se předloží serveru při připojení klienta k síti a slouží k ověření připojení.
+    - **Vztah důvěryhodnosti serveru**  -  **Názvy certifikačních serverů**: **přidejte** jeden nebo více běžných názvů používaných v certifikátech vydaných vaší důvěryhodnou certifikační autoritou (CA). Když tento údaj zadáte, můžete obejít okno dynamického vztahu důvěryhodnosti, které se zobrazí na zařízeních uživatelů při připojování k Wi-Fi síti.
+    - **Kořenový certifikát pro ověření serveru**: vyberte jeden nebo více existujících profilů důvěryhodných kořenových certifikátů. Když se klient připojí k síti, tyto certifikáty se zobrazí na serveru. Ověřují připojení.
 
     - **Ověřování klientů**: Zvolte **metodu ověřování**. Možnosti:
 
@@ -100,8 +104,8 @@ Těmito nastaveními se zabývá tento článek.
 
   - **PEAP**: Dále zadejte:
 
-    - **Názvy důvěryhodných** - **certifikátů**serveru: **přidejte** jeden nebo více běžných názvů používaných v certifikátech vydaných vaší důvěryhodnou certifikační autoritou (CA). Když tento údaj zadáte, můžete obejít okno dynamického vztahu důvěryhodnosti, které se zobrazí na zařízeních uživatelů při připojování k Wi-Fi síti.
-    - **Kořenový certifikát pro ověřování serveru**: Zvolte existující profil důvěryhodného kořenového certifikátu. Tento certifikát se předloží serveru při připojení klienta k síti a slouží k ověření připojení.
+    - **Vztah důvěryhodnosti serveru**  -  **Názvy certifikačních serverů**: **přidejte** jeden nebo více běžných názvů používaných v certifikátech vydaných vaší důvěryhodnou certifikační autoritou (CA). Když tento údaj zadáte, můžete obejít okno dynamického vztahu důvěryhodnosti, které se zobrazí na zařízeních uživatelů při připojování k Wi-Fi síti.
+    - **Kořenový certifikát pro ověření serveru**: vyberte jeden nebo více existujících profilů důvěryhodných kořenových certifikátů. Když se klient připojí k síti, tyto certifikáty se zobrazí na serveru. Ověřují připojení.
 
     - **Ověřování klientů**: Zvolte **metodu ověřování**. Možnosti:
 

@@ -5,29 +5,29 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/01/2020
+ms.date: 06/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
 ms.technology: ''
-ms.reviewer: chmaguir, chrisbal
+ms.reviewer: chmaguir, chrisbal, priyar
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b81686f645d9fce610c39266feb2675fd35cc280
-ms.sourcegitcommit: 6f67c864cf71b4a6a316f4d04a6cc43cf28b4277
+ms.openlocfilehash: 88843cfa1c4f98d87e5eaaefdc0dcd87daf8cb68
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84257031"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093710"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Nastavení zařízení s Androidem Enterprise pro povolení nebo omezení funkcí pomocí Intune
 
 Tento článek obsahuje seznam a popisuje různá nastavení, která můžete řídit na zařízeních s Androidem Enterprise. Jako součást řešení správy mobilních zařízení (MDM) pomocí těchto nastavení můžete povolit nebo zakázat funkce, spouštět aplikace na vyhrazených zařízeních, zabezpečení řízení a další.
 
-## <a name="before-you-begin"></a>Před zahájením
+## <a name="before-you-begin"></a>Než začnete
 
 [Vytvořte profil konfigurace zařízení](device-restrictions-configure.md).
 
@@ -87,93 +87,124 @@ Tato nastavení se vztahují na typy registrace Androidu Enterprise, kde Intune 
 
 - **Kontrola hrozeb v aplikacích**: **vyžadovat** (výchozí) umožňuje Google Play chránit před instalací a po jejich instalaci. Pokud zjistí hrozbu, může upozornit uživatele na odebrání aplikace ze zařízení. Pokud je nastavené na **Nenakonfigurováno**, Intune toto nastavení nezmění ani neaktualizuje. Ve výchozím nastavení operační systém nemusí povolit nebo spustit Google Play chránit pro prohledávání aplikací.
 
-### <a name="dedicated-devices"></a>Vyhrazená zařízení
+### <a name="device-experience"></a>Prostředí zařízení
 
-Pomocí těchto nastavení můžete nakonfigurovat možnosti veřejného terminálu na vyhrazených zařízeních. Můžete nakonfigurovat zařízení tak, aby spouštěla jednu aplikaci nebo spouštěla spoustu aplikací. Když je zařízení nastavené s beznabídkovým režimem, k dispozici jsou jenom aplikace, které přidáte. Tato nastavení platí pro zařízení s Androidem Enterprise vyhrazená. Nevztahují se na zařízení s plně spravovaným systémem Android Enterprise.
+Pomocí těchto nastavení můžete nakonfigurovat možnosti veřejného terminálu na vyhrazených zařízeních nebo plně spravovaných zařízeních. Můžete nakonfigurovat zařízení tak, aby spouštěla jednu aplikaci nebo spouštěla spoustu aplikací. Když je zařízení nastavené s beznabídkovým režimem, k dispozici jsou jenom aplikace, které přidáte.
 
-**Celoobrazovkový režim**: vyberte, jestli má zařízení spuštěnou jednu aplikaci, nebo spustí víc aplikací.
+**Typ profilu registrace**: Vyberte typ profilu registrace a začněte konfigurovat spouštěč Microsoftu nebo domovskou obrazovku Microsoft spravované na vašich zařízeních. Možnosti:
 
-- **Nenakonfigurováno**: Intune toto nastavení nemění ani neaktualizuje.
-- **Jediná aplikace**: uživatelé mají přístup jenom k jedné aplikaci na zařízení. Po spuštění zařízení se spustí jenom konkrétní aplikace. Uživatelé nemůžou otevírat nové aplikace ani měnit spuštěnou aplikaci.
+- **Nenakonfigurováno**: Intune toto nastavení nemění ani neaktualizuje. Ve výchozím nastavení se uživatelům může zobrazit výchozí prostředí domovské obrazovky zařízení.
+- **Vyhrazené zařízení**: Nakonfigurujte na vyhrazených zařízeních možnosti veřejného terminálu. Před konfigurací těchto nastavení nezapomeňte [Přidat](../apps/apps-add-android-for-work.md) a [přiřadit](../apps/apps-deploy.md) aplikace, které chcete na zařízeních.
 
-  - **Vyberte spravovanou aplikaci**: ze seznamu vyberte spravovanou aplikaci Google Play.
+  - **Celoobrazovkový režim**: vyberte, jestli má zařízení spuštěnou jednu aplikaci, nebo spustí víc aplikací. Možnosti:
 
-    Pokud nemáte uvedené žádné aplikace, přidejte do zařízení [některé aplikace pro Android](../apps/apps-add-android-for-work.md) . Nezapomeňte [aplikaci přiřadit ke skupině zařízení vytvořené pro vaše vyhrazená zařízení](../apps/apps-deploy.md).
+    - **Nenakonfigurováno**: Intune toto nastavení nemění ani neaktualizuje.
+    - **Jediná aplikace**: uživatelé mají přístup jenom k jedné aplikaci na zařízení. Po spuštění zařízení se spustí jenom konkrétní aplikace. Uživatelé nemůžou otevírat nové aplikace ani měnit spuštěnou aplikaci.
 
-  > [!IMPORTANT]
-  > Pokud používáte celoobrazovkový režim s jednou aplikací, aplikace Dial/Phone nemusí správně fungovat.
+      - **Vyberte aplikaci, kterou chcete použít pro celoobrazovkový režim**: ze seznamu vyberte spravovanou aplikaci Google Play.
+
+      > [!IMPORTANT]
+      > Pokud používáte celoobrazovkový režim s jednou aplikací, aplikace Dial/Phone nemusí správně fungovat.
   
-- **Multi-aplikace**: uživatelé mají přístup k omezené sadě aplikací na zařízení. Po spuštění zařízení se spustí jenom aplikace, které přidáte. Můžete také přidat některé webové odkazy, které mohou uživatelé otevřít. Když se zásada použije, uživatelé uvidí na domovské obrazovce ikony povolených aplikací.
+    - **Multi-aplikace**: uživatelé mají přístup k omezené sadě aplikací na zařízení. Po spuštění zařízení se spustí jenom aplikace, které přidáte. Můžete také přidat některé webové odkazy, které mohou uživatelé otevřít. Když se zásada použije, uživatelé uvidí na domovské obrazovce ikony povolených aplikací.
 
-  > [!IMPORTANT]
-  > U vyhrazených zařízení s více aplikacemi **musí být** [aplikace spravované domovské obrazovky](https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise) z Google Play:
-  >   - [Přidáno jako klientská aplikace](../apps/apps-add-android-for-work.md) v Intune
-  >   - [Přiřazeno ke skupině zařízení](../apps/apps-deploy.md) vytvořené pro vyhrazená zařízení
-  >
-  > Aplikace **spravované domovské obrazovky** nemusí být v konfiguračním profilu, ale je nutné ji přidat jako klientskou aplikaci. Když se **spravovaná aplikace pro domovskou obrazovku** přidá jako klientská aplikace, všechny ostatní aplikace, které přidáte do konfiguračního profilu, se zobrazí jako ikony v aplikaci **spravované domovské obrazovky** .
-  >
-  > Při použití celoobrazovkového režimu s více aplikacemi nemusí aplikace Dial/Phone fungovat správně. 
+      > [!IMPORTANT]
+      > U vyhrazených zařízení s více aplikacemi **musí být** [aplikace spravované domovské obrazovky](https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise) z Google Play:
+      >   - [Přidáno v Intune](../apps/apps-add-android-for-work.md)
+      >   - [Přiřazeno ke skupině zařízení](../apps/apps-deploy.md) vytvořené pro vyhrazená zařízení
+      >
+      > Aplikace **spravované domovské obrazovky** nemusí být v konfiguračním profilu, ale je nutné ji přidat jako aplikaci. Po přidání **spravované aplikace pro domovskou obrazovku** se všechny ostatní aplikace, které přidáte do konfiguračního profilu, zobrazují jako ikony v aplikaci **spravované domovské obrazovky** .
+      >
+      > Při použití celoobrazovkového režimu s více aplikacemi nemusí aplikace Dial/Phone fungovat správně. 
 
-  - **Přidat**: vyberte své aplikace ze seznamu.
+      - **Přidat**: vyberte své aplikace ze seznamu.
 
-    Pokud není uvedená aplikace **spravované na domovské obrazovce** , [přidejte ji z Google Play](https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise). Nezapomeňte [aplikaci přiřadit](../apps/apps-deploy.md) ke skupině zařízení vytvořené pro vaše vyhrazená zařízení.
+        Pokud není uvedená aplikace **spravované na domovské obrazovce** , [přidejte ji z Google Play](https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise). Nezapomeňte [aplikaci přiřadit](../apps/apps-deploy.md) ke skupině zařízení vytvořené pro vaše vyhrazená zařízení.
 
-    Do zařízení můžete přidat i další [aplikace pro Android](../apps/apps-add-android-for-work.md) a [webové aplikace](../apps/web-app.md) , které vytvořila vaše organizace. Nezapomeňte [aplikaci přiřadit ke skupině zařízení vytvořené pro vaše vyhrazená zařízení](../apps/apps-deploy.md).
+        Do zařízení můžete přidat i další [aplikace pro Android](../apps/apps-add-android-for-work.md) a [webové aplikace](../apps/web-app.md) , které vytvořila vaše organizace. Nezapomeňte [aplikaci přiřadit ke skupině zařízení vytvořené pro vaše vyhrazená zařízení](../apps/apps-deploy.md).
 
-  - **Tlačítko virtuální domů**: tlačítko měkkého klíče, které vrátí uživatele do spravované domovské obrazovky, aby uživatelé mohli přepínat mezi aplikacemi. Možnosti:
+      - **Tlačítko virtuální domů**: tlačítko měkkého klíče, které vrátí uživatele do spravované domovské obrazovky, aby uživatelé mohli přepínat mezi aplikacemi. Možnosti:
+        - **Nenakonfigurováno** (výchozí): tlačítko domů není zobrazeno. Uživatelé musí použít tlačítko zpět k přepínání mezi aplikacemi.
+        - **Potažení nahoru**: na domovském tlačítku se zobrazí, když uživatel na zařízení potáhne.
+        - **Float**: zobrazuje na zařízení trvalé a plovoucí tlačítko domů.
 
-    - **Nenakonfigurováno** (výchozí): tlačítko domů není zobrazeno. Uživatelé musí použít tlačítko zpět k přepínání mezi aplikacemi.
-    - **Potažení nahoru**: na domovském tlačítku se zobrazí, když uživatel na zařízení potáhne.
-    - **Float**: zobrazuje na zařízení trvalé a plovoucí tlačítko domů.
-
-  - **Opustit celoobrazovkový režim**: **Povolit** umožňuje správcům dočasně pozastavit celoobrazovkový režim a aktualizovat zařízení. Chcete-li použít tuto funkci, správce:
+      - **Opustit celoobrazovkový režim**: **Povolit** umožňuje správcům dočasně pozastavit celoobrazovkový režim a aktualizovat zařízení. Chcete-li použít tuto funkci, správce:
   
-    1. Pokračuje v výběru tlačítka zpět, dokud se nezobrazí tlačítko **ukončit veřejný terminál** . 
-    2. Vybere tlačítko **ukončit veřejný terminál** a přejde do kódu PIN pro **celoobrazovkový režim** .
-    3. Po dokončení vyberte aplikaci **spravovaná domovskou obrazovku** . Tento krok znovu zamkne zařízení do celoobrazovkového režimu s více aplikacemi.
+        1. Pokračuje v výběru tlačítka zpět, dokud se nezobrazí tlačítko **ukončit veřejný terminál** . 
+        2. Vybere tlačítko **ukončit veřejný terminál** a přejde do kódu PIN pro **celoobrazovkový režim** .
+        3. Po dokončení vyberte aplikaci **spravovaná domovskou obrazovku** . Tento krok znovu zamkne zařízení do celoobrazovkového režimu s více aplikacemi.
 
-      Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém zabránit správcům v pozastavení celoobrazovkového režimu. Pokud správce pokračuje v výběru tlačítka zpět a vybere tlačítko **ukončit veřejný terminál** , pak se zobrazí zpráva, že je vyžadováno heslo.
+        Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém zabránit správcům v pozastavení celoobrazovkového režimu. Pokud správce pokračuje v výběru tlačítka zpět a vybere tlačítko **ukončit veřejný terminál** , pak se zobrazí zpráva, že je vyžadováno heslo.
 
-    - **Opustit beznabídkový režim**: zadejte číslici a kód PIN pro číslo 4-6. Správce použije tento PIN kód k dočasnému pozastavení celoobrazovkového režimu.
+      - **Opustit beznabídkový režim**: zadejte číslici a kód PIN pro číslo 4-6. Správce použije tento PIN kód k dočasnému pozastavení celoobrazovkového režimu.
 
-  - **Nastavit vlastní adresu URL pozadí**: zadejte adresu URL pro přizpůsobení obrazovky na pozadí na vyhrazeném zařízení. Zadejte například `http://contoso.com/backgroundimage.jpg`.
+      - **Nastavit vlastní adresu URL pozadí**: zadejte adresu URL pro přizpůsobení obrazovky na pozadí na vyhrazeném zařízení. Zadejte například `http://contoso.com/backgroundimage.jpg`.
 
-    > [!NOTE]
-    > Ve většině případů doporučujeme začít s imagemi alespoň následujících velikostí:
-    >
-    > - Telefon: 1080x1920 px
-    > - Tablet: 1080 px
-    >
-    > Pro dosažení co nejlepších výsledků a zaostření podrobností je navrženo, že se pro jednotlivé položky obrázku zařízení vytvořily specifikace zobrazení.
-    >
-    > Moderní displeje mají vyšší hustotu pixelů a můžou zobrazovat ekvivalentní image definice 2K/4K.
+        > [!NOTE]
+        > Ve většině případů doporučujeme začít s imagemi alespoň následujících velikostí:
+        >
+        > - Telefon: 1080x1920 px
+        > - Tablet: 1080 px
+        >
+        > Pro dosažení co nejlepších výsledků a zaostření podrobností je navrženo, že se pro jednotlivé položky obrázku zařízení vytvořily specifikace zobrazení.
+        >
+        > Moderní displeje mají vyšší hustotu pixelů a můžou zobrazovat ekvivalentní image definice 2K/4K.
 
-  - **Konfigurace Wi-Fi**: **možnost Povolit** zobrazí ovládací prvek Wi-Fi na spravované domovské obrazovce a umožňuje uživatelům připojit zařízení k různým sítím Wi-Fi. Povolením této funkce se taky zapne umístění zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení operační systém nemusí na spravované domovské obrazovce zobrazit ovládací prvek Wi-Fi. Zabraňuje uživatelům v připojení k sítím Wi-Fi při použití spravované domovské obrazovky.
+      - **Konfigurace Wi-Fi**: **možnost Povolit** zobrazí ovládací prvek Wi-Fi na spravované domovské obrazovce a umožňuje uživatelům připojit zařízení k různým sítím Wi-Fi. Povolením této funkce se taky zapne umístění zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení operační systém nemusí na spravované domovské obrazovce zobrazit ovládací prvek Wi-Fi. Zabraňuje uživatelům v připojení k sítím Wi-Fi při použití spravované domovské obrazovky.
 
-  - **Konfigurace Bluetooth**: **Povolit** zobrazí ovládací prvek Bluetooth na spravované domovské obrazovce a umožní uživatelům párovat zařízení přes Bluetooth. Povolením této funkce se taky zapne umístění zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení se operační systém nemusí na spravované domovské obrazovce zobrazovat na ovládacím prvku Bluetooth. Brání tak uživatelům v konfiguraci zařízení Bluetooth a párování zařízení při použití spravované domovské obrazovky.
+      - **Konfigurace Bluetooth**: **Povolit** zobrazí ovládací prvek Bluetooth na spravované domovské obrazovce a umožní uživatelům párovat zařízení přes Bluetooth. Povolením této funkce se taky zapne umístění zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení se operační systém nemusí na spravované domovské obrazovce zobrazovat na ovládacím prvku Bluetooth. Brání tak uživatelům v konfiguraci zařízení Bluetooth a párování zařízení při použití spravované domovské obrazovky.
 
-  - **Svítící Access**: **Enable** zobrazí ovládací prvek svítící na spravované domovské obrazovce a umožňuje uživatelům zapnout nebo vypnout svítící. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení se operační systém nemusí na spravované domovské obrazovce zobrazovat na ovládacím prvku svítící. Zabraňuje uživatelům v používání svítící při použití spravované domovské obrazovky.
+      - **Svítící Access**: **Enable** zobrazí ovládací prvek svítící na spravované domovské obrazovce a umožňuje uživatelům zapnout nebo vypnout svítící. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení se operační systém nemusí na spravované domovské obrazovce zobrazovat na ovládacím prvku svítící. Zabraňuje uživatelům v používání svítící při použití spravované domovské obrazovky.
 
-  - **Ovládání hlasitosti médií**: **Povolit** zobrazí ovládací prvek hlasitost média na spravované domovské obrazovce a umožňuje uživatelům upravit hlasitost média zařízení pomocí posuvníku. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení se operační systém nemusí na spravované domovské obrazovce zobrazovat na ovládacím prvku Media Volume Control. Zabraňuje uživatelům upravovat hlasitost médií zařízení při použití spravované domovské obrazovky, pokud jim jejich hardwarová tlačítka nepodporují.
+      - **Ovládání hlasitosti médií**: **Povolit** zobrazí ovládací prvek hlasitost média na spravované domovské obrazovce a umožňuje uživatelům upravit hlasitost média zařízení pomocí posuvníku. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení se operační systém nemusí na spravované domovské obrazovce zobrazovat na ovládacím prvku Media Volume Control. Zabraňuje uživatelům upravovat hlasitost médií zařízení při použití spravované domovské obrazovky, pokud jim jejich hardwarová tlačítka nepodporují.
 
-  - **Režim spořiče obrazovky**: **možnost Povolit** zobrazí na spravované domovské obrazovce spořič obrazovky, když je zařízení uzamčeno nebo vypršel časový limit. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení se v operačním systému na spravované domovské obrazovce nemusí zobrazovat spořič obrazovky.
+      - **Režim spořiče obrazovky**: **možnost Povolit** zobrazí na spravované domovské obrazovce spořič obrazovky, když je zařízení uzamčeno nebo vypršel časový limit. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení se v operačním systému na spravované domovské obrazovce nemusí zobrazovat spořič obrazovky.
 
-    Pokud je tato možnost povolená, nakonfigurujte taky:
+        Pokud je tato možnost povolená, nakonfigurujte taky:
 
-    - **Nastavit vlastní obrázek spořiče obrazovky**: zadejte adresu URL pro vlastní PNG, jpg, JPEG, GIF, BMP, WEBP nebo ICOimage. Zadejte například .
+        - **Nastavit vlastní obrázek spořiče obrazovky**: zadejte adresu URL pro vlastní PNG, jpg, JPEG, GIF, BMP, WEBP nebo ICOimage. Pokud adresu URL nezadáte, použije se výchozí image zařízení, pokud je k dispozici výchozí image. 
+        
+          Zadejte například .
 
-      - `http://www.contoso.com/image.jpg`
-      - `www.contoso.com/image.bmp`
-      - `https://www.contoso.com/image.webp`
+          - `http://www.contoso.com/image.jpg`
+          - `www.contoso.com/image.bmp`
+          - `https://www.contoso.com/image.webp`          
 
-      Pokud adresu URL nezadáte, použije se výchozí image zařízení, pokud je k dispozici výchozí image.
+          > [!TIP]
+          > Je podporována jakákoli adresa URL prostředku souboru, která může být převedena do rastrového obrázku.
 
-      > [!TIP]
-      > Je podporována jakákoli adresa URL prostředku souboru, která může být převedena do rastrového obrázku.
+        - **Počet sekund, po které zařízení zobrazuje spořič obrazovky před**vypnutím obrazovky: vyberte, jak dlouho zařízení zobrazí spořič obrazovky. Zadejte hodnotu v rozmezí 0-9999999 sekund. Výchozí hodnota je `0` sekund. Pokud je ponecháno prázdné nebo je nastaveno na hodnotu nula ( `0` ), je spořič obrazovky aktivní, dokud uživatel nekomunikuje se zařízením.
+        - **Počet sekund neaktivních zařízení před zobrazením spořiče obrazovky**: vyberte, jak dlouho bude zařízení nečinné, než se zobrazí. Zadejte hodnotu v rozmezí 1-9999999 sekund. Výchozí hodnota je `30` sekund. Je nutné zadat číslo větší než nula ( `0` ).
+        - **Rozpoznat médium před spuštěním spořiče obrazovky**: **Povolit** (výchozí) nezobrazuje spořič obrazovky, pokud se na zařízení přehrává zvuk nebo video. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém zobrazit spořič obrazovky i v případě, že přehrávání zvuku nebo videa.
 
-    - **Počet sekund, po které zařízení zobrazuje spořič obrazovky před**vypnutím obrazovky: vyberte, jak dlouho zařízení zobrazí spořič obrazovky. Zadejte hodnotu v rozmezí 0-9999999 sekund. Výchozí hodnota je `0` sekund. Pokud je ponecháno prázdné nebo je nastaveno na hodnotu nula ( `0` ), je spořič obrazovky aktivní, dokud uživatel nekomunikuje se zařízením.
-    - **Počet sekund neaktivních zařízení před zobrazením spořiče obrazovky**: vyberte, jak dlouho bude zařízení nečinné, než se zobrazí. Zadejte hodnotu v rozmezí 1-9999999 sekund. Výchozí hodnota je `30` sekund. Je nutné zadat číslo větší než nula ( `0` ).
-    - **Rozpoznat médium před spuštěním spořiče obrazovky**: **Povolit** (výchozí) nezobrazuje spořič obrazovky, pokud se na zařízení přehrává zvuk nebo video. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém zobrazit spořič obrazovky i v případě, že přehrávání zvuku nebo videa.
+- **Plně spravovaná**: konfiguruje aplikaci spouštěče Microsoft na plně spravovaných zařízeních.
+
+  - **Nastavit jako výchozí spouštěč spouštěč Microsoftu**: **Povolit** nastaví jako výchozí spouštěč na domovské obrazovce Microsoft Launcher. Pokud nastavíte jako výchozí spouštěč, uživatelé nemůžou použít jiný spouštěč. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení není spouštěč Microsoftu vynucený jako výchozí spouštěč.
+
+<!-- The following settings are in a future release. Per PM, we can leave them in GitHub, not live. Remove comment tags when they release.
+
+  - **Configure custom wallpaper**: **Enable** lets you apply your own image as the home screen wallpaper, and choose if users can change the image. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the device keeps its current wallpaper.
+    - **Enter URL of wallpaper image**: Enter the URL of your wallpaper image. This image shows on the device home screen. For example, enter `http://www.contoso.com/image.jpg`. 
+    - **Allow user to modify wallpaper**: **Enable** allows users to change the wallpaper image. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, users are prevented from changing the wallpaper.
+  - **Enable launcher feed**: **Enable** turns on the launcher feed, which shows calendars, documents, and recent activities. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, this feed isn't shown.
+    - **Allow user to enable/disable feed**: **Enable** lets users enable or disable the launcher feed. **Enable** only forces this setting the first time the profile is assigned. Any future profile assignments don't force this setting. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, users are prevented from changing the launcher feed settings.
+  - **Dock presence**: The dock gives users quick access to their apps and tools. Your options:
+    - **Not configured** (default): Intune doesn't change or update this setting.
+    - **Show**: The dock is shown on devices.
+    - **Hide**: The dock is hidden. Users must swipe up to access the dock.
+    - **Disabled**: The dock isn't shown on devices, and users are prevented from showing it.
+
+  - **Allow user to change dock presence**: **Enable** allows users to show or hide the dock. **Enable** only forces this setting the first time the profile is assigned. Any future profile assignments don't force this setting. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, users aren't allowed to change the device dock configuration.
+
+  - **Search bar replacement**: Choose where to put the search bar. Your options:
+    - **Not configured** (default): Intune doesn't change or update this setting.
+    - **Top**: Search bar is shown at the top of devices.
+    - **Bottom**: Search bar is shown at the bottom of devices.
+    - **Hide**: Search bar is hidden.
+
+  - **Allow user to change search bar placement**: **Enable** allows users to change the location of the search bar. **Enable** only forces this setting the first time the profile is assigned. Any future profile assignments don't force this setting. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, users are prevented from changing the location.
+
+End of comment -->
 
 ### <a name="password"></a>Heslo
 
@@ -298,8 +329,9 @@ Tato nastavení se vztahují na typy registrace Androidu Enterprise, kde Intune 
 
 - **Kopírování a vkládání mezi pracovními a osobními profily**: **blok** zabraňuje kopírování a vkládání mezi pracovními a osobními aplikacemi. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém uživatelům dovolit sdílet data pomocí kopírování a vkládání s aplikacemi v osobním profilu.
 - **Sdílení dat mezi pracovními a osobními profily**: vyberte, jestli aplikace v pracovním profilu můžou sdílet s aplikacemi v osobním profilu. Můžete například řídit akce sdílení v aplikacích, jako je například **sdílená složka...** v aplikaci prohlížeče Chrome. Toto nastavení se nevztahuje na chování schránky při kopírování/vkládání. Možnosti:
-  - **Výchozí nastavení zařízení**: výchozí chování zařízení při sdílení, které se liší v závislosti na verzi Androidu. Ve výchozím nastavení je povolené sdílení z osobního profilu do pracovního profilu. Ve výchozím nastavení je také blokované sdílení z pracovního profilu do osobního profilu. Toto nastavení zabraňuje sdílení dat z pracovního do osobního profilu. Google neblokuje sdílení z osobního do pracovního profilu na zařízeních, která používají verze 6.0 a novější.
-  - **Zabránit jakémukoli sdílení přes hranice**: zabraňuje sdílení mezi pracovními a osobními profily.
+  - **Výchozí nastavení zařízení**: výchozí chování zařízení při sdílení se liší v závislosti na verzi Androidu:
+    - Na zařízeních se systémem Android 6,0 a novějším je zablokované sdílení z pracovního profilu do osobního profilu. Sdílení z osobního profilu do pracovního profilu je povoleno.
+    - V zařízeních se systémem Android 5,0 a starším je sdílení mezi pracovním profilem a osobním profilem blokované v obou směrech.
   - **Aplikace v pracovním profilu můžou zpracovat žádost o sdílení z osobního profilu**: povoluje integrovanou funkci Androidu, která umožňuje sdílet data z osobního do pracovního profilu. Pokud je tato možnost povolená, žádost o sdílení z aplikace v osobním profilu může sdílet data s aplikacemi v pracovním profilu. Toto nastavení je výchozí chování zařízení s Androidem, která používají verze starší než 6.0.
   - **Žádná omezení sdílení**: umožňuje sdílení přes hranice pracovního profilu v obou směrech. Když vyberete toto nastavení, můžou aplikace v pracovním profilu sdílet data s neoznačenými aplikacemi v osobním profilu. Toto nastavení povoluje spravovaným aplikacím v pracovním profilu sdílení s aplikacemi v nespravované oblasti zařízení. Proto ho používejte opatrně.
 

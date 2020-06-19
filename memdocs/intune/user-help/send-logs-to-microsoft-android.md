@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/12/2018
+ms.date: 06/16/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 7a842e97e0c276926c07f615a7f9089a64132b50
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: f83b5ae8cc621a6fab813267216900638ff27269
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881040"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85094116"
 ---
 # <a name="send-logs-to-the-company-portal-developers-for-android-devices"></a>Odeslání protokolů ze zařízení s Androidem vývojářům Portálu společnosti
 
@@ -43,6 +43,9 @@ Protokoly odešlete do Microsoftu takto:
     > Podle toho, jaké zařízení s Androidem máte, může být **Nabídka** buď softwarové, nebo hardwarové tlačítko.
 
 3. Klepněte na **Jen nahrát protokoly**.
+
+    > [!NOTE]
+    > Pokud používáte síťové prostředí svrchovaného cloudu, funkce Odeslat protokoly v Portál společnosti nebude k dispozici. Protokoly je nutné odesílat prostřednictvím e-mailu. 
 
 4. Jakmile se nahrávání dokončí, zobrazí se ID incidentu. Toto ID si uložte pro svoje potřeby.
 

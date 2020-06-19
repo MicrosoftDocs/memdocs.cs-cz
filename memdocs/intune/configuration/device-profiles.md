@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/07/2020
+ms.date: 06/11/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3437a1b9fe3c663844d366bbfda6c0bcb463c3ab
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 5bf114edf17fa1f8959b5f26b83c771b711b83f5
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83983801"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093173"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Použití funkcí a nastavení v zařízeních pomocí profilů zařízení v Microsoft Intune
 
@@ -41,7 +41,7 @@ Tento článek obsahuje přehled různých typů profilů, které můžete vytvo
 
 ## <a name="administrative-templates"></a>Šablony pro správu
 
-[Šablony pro správu](administrative-templates-windows.md) obsahují stovky nastavení, která můžete nakonfigurovat pro Internet Explorer, OneDrive, vzdálenou plochu, Word, Excel a další programy Office.
+[Šablony pro správu](administrative-templates-windows.md) obsahují stovky nastavení, která můžete nakonfigurovat pro Internet Explorer, Microsoft Edge, OneDrive, Vzdálená plocha, Word, Excel a další programy Office.
 
 Tyto šablony poskytují správcům zjednodušené zobrazení nastavení, které se podobá zásadám skupiny, ale jsou 100% cloudu.
 
@@ -132,7 +132,7 @@ Tato funkce podporuje:
 
 - Windows 10 a novější
 
-## <a name="edition-upgrade"></a>Upgrade edice
+## <a name="edition-upgrade-and-mode-switch"></a>Upgrade edice a přepínač režimů
 
 [Upgrady edice Windows 10](edition-upgrade-configure-windows-10.md) automaticky upgradují zařízení s některými verzemi Windows 10 na novější edici.
 
@@ -146,7 +146,7 @@ Tato funkce podporuje:
 
 [Nastavení vzdělávání – iOS/iPadOS](../fundamentals/education-settings-configure-ios-shared.md) používá aplikaci učebny pro iOS/iPadOS k seznámení s učením a řízení zařízení studenta v učebně. Můžete nakonfigurovat zařízení iPad, aby mohli několik studentů sdílet jedno zařízení.
 
-## <a name="email"></a>E-mail
+## <a name="email"></a>E-mailu
 
 [Nastavení e-mailu](email-settings-configure.md) vytvoří, přiřadí a monitoruje nastavení e-mailů Exchange ActiveSync na zařízeních. E-mailové profily vám pomůžou s konzistencí, omezit volání podpory a umožnit koncovým uživatelům přístup k firemnímu e-mailu na svých osobních zařízeních, aniž by museli nastavovat. 
 
@@ -202,9 +202,17 @@ Tato funkce podporuje:
 
 - Windows 10 a novější
 
-Nastavení veřejného terminálu je dostupné taky jako omezení zařízení pro [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#dedicated-devices)a [iOS/iPadOS](device-restrictions-ios.md#kiosk).
+Nastavení veřejného terminálu je dostupné taky jako omezení zařízení pro [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#device-experience)a [iOS/iPadOS](device-restrictions-ios.md#kiosk).
 
-## <a name="microsoft-defender-atp"></a>Microsoft Defender ATP
+## <a name="mx-profile-zebra"></a>Profil MX (Zebra)
+
+[Rozšíření mobility (MX)](android-zebra-mx-overview.md) rozšiřují nastavení integrovaná v Intune, aby bylo možné přizpůsobit nebo přidat další nastavení specifická pro zařízení zebra. Zařízení Zebra se běžně používají v produkčních podlahových prostředích a v maloobchodních prostředích. Pokud máte stovky nebo tisíce zařízení Zebra, můžete ke konfiguraci a správě těchto zařízení použít Intune.
+
+Tato funkce podporuje:
+
+- Správce zařízení s Androidem
+
+## <a name="microsoft-defender-atp"></a>Ochrana ATP v programu Microsoft Defender
 
 [Microsoft Defender Advanced Threat Protection (ATP)](../protect/advanced-threat-protection.md) se integruje s Intune, aby monitoroval a chránil zařízení. Nastavíte úrovně rizika a určíte, co se stane, když zařízení překročí tuto úroveň. V kombinaci s podmíněným přístupem můžete přispět k tomu, abyste zabránili škodlivé aktivitě ve vaší organizaci.
 
@@ -214,7 +222,7 @@ Tato funkce podporuje:
 
 ## <a name="oemconfig"></a>OEMConfig
 
-[OEMConfig](android-oem-configuration-overview.md) je standard, který umožňuje výrobcům OEM (Original Equipment Manufacturer) a žádnou Emms (Enterprise Mobility Management) vytvářet a podporovat funkce specifické pro výrobce OEM standardizovaným způsobem na zařízeních s Androidem Enterprise. Pomocí OEMConfig vytvoří výrobce OEM schéma, které definuje funkce pro správu specifické pro výrobce OEM, a vloží je do aplikace nahrané do Google Play. Intune čte schéma z aplikace, umožňuje správcům Intune konfigurovat nastavení ve schématu.
+Na zařízeních s Androidem Enterprise je [OEMConfig](android-oem-configuration-overview.md) standardem, který umožňuje výrobcům OEM (Original Equipment Manufacturer) a žádnou Emms (Enterprise Mobility Management) sestavovat a podporovat standardizované funkce specifické pro výrobce OEM. Pomocí OEMConfig vytvoří výrobce OEM schéma, které definuje funkce pro správu specifické pro výrobce OEM, a vloží je do aplikace nahrané do Google Play. Intune čte schéma z aplikace a umožňuje správcům Intune konfigurovat nastavení ve schématu.
 
 Tato funkce podporuje:
 
@@ -222,7 +230,7 @@ Tato funkce podporuje:
 
 ## <a name="powershell-scripts"></a>Skripty prostředí PowerShell
 
-[Skripty PowerShellu na zařízeních s Windows 10](../apps/intune-management-extension.md) používají rozšíření pro správu Intune k nahrání skriptů PowerShellu v Intune a pak tyto skripty na svých zařízeních spustíte. Podívejte se také na to, co je potřeba k používání tohoto rozšíření, jak je přidat do Intune a další důležité informace.
+[Skripty PowerShellu](../apps/intune-management-extension.md) používají rozšíření pro správu Intune k nahrání skriptů PowerShellu v Intune a pak tyto skripty na svých zařízeních spustíte. Podívejte se také na to, co je potřeba k používání tohoto rozšíření, jak je přidat do Intune a další důležité informace.
 
 Tato funkce podporuje:
 
@@ -278,7 +286,7 @@ Tato funkce podporuje:
 
 [Nastavení Wi-Fi](wi-fi-settings-configure.md) přiřadí uživatelům a zařízením nastavení bezdrátové sítě. Po přiřazení profilu Wi-Fi získají uživatelé přístup k vaší podnikové síti, aniž by ji museli konfigurovat sami. 
 
-Tato funkce podporuje: 
+Tato funkce podporuje:
 
 - Správce zařízení s Androidem
 - Android Enterprise
@@ -286,6 +294,16 @@ Tato funkce podporuje:
 - macOS
 - Windows 8.1 (pouze import)
 - Windows 10 a novější
+
+## <a name="wired-networks"></a>Drátové sítě
+
+[Kabelové sítě](wired-networks-configure.md) umožňují vytvářet a spravovat drátová připojení 802.1 x pro stolní počítače s MacOS. Ve vašem profilu zvolíte síťové rozhraní, vyberete přijatý typ protokolu EAP a zadáte nastavení důvěryhodnosti serveru, včetně certifikátů PKCS a SCEP.
+
+Když přiřadíte profil, uživatelé macOS desktopu získají přístup k vaší firemní kabelové síti, aniž by ji museli konfigurovat sami.
+
+Tato funkce podporuje:
+
+- macOS
 
 ## <a name="zebra-mobility-extensions-mx"></a>Zebra mobility Extensions (MX)
 

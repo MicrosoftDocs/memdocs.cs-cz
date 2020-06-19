@@ -18,34 +18,37 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 93ff5ba088b04af155ea05e69c7d1f25deb33419
-ms.sourcegitcommit: 7a099ff53668f50b37adab97ecd7ba98c5324676
+ms.openlocfilehash: 4f8991b772f5562538403492735f1f4c2fdc87e8
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84746642"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093447"
 ---
-# <a name="set-up-an-enrollment-status-page"></a>Nastavení stránky stavu registrace
+# <a name="set-up-the-enrollment-status-page"></a>Nastavení stránky stavu registrace
  
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
  
-Stránka stavu registrace (ESP) zobrazuje informace o instalaci zařízení s Windows 10 (verze 1803 a novější) během úvodní registrace zařízení. Například:
-- Při použití [Windows autopilotu](https://docs.microsoft.com/windows/deployment/windows-autopilot/) 
-- nebo kdykoli se spravované zařízení poprvé spustí po použití zásady stránky stavu registrace. 
+Stránka stavu registrace (ESP) zobrazuje průběh zřizování po registraci nového zařízení a také při přihlášení nových uživatelů k zařízení.  Správci IT tak můžou volitelně zabránit (blokovat) přístup k zařízení, dokud nebude plně zajištěný, a zároveň uživatelům poskytnout informace o úkolech zbývajících v procesu zřizování.
 
-Stránka stavu registrace pomáhá uživatelům pochopit stav svých zařízení během instalace zařízení. Můžete vytvořit více profilů stránek stavu registrace a použít je v různých skupinách, které obsahují uživatele. Profily můžete nastavit tak, aby:
-- Zobrazovaly průběh instalace.
-- Blokovaly používání, než se instalace dokončí.
-- Určovaly, co může uživatel udělat, pokud se instalace zařízení nezdaří.
+Protokol ESP se dá použít jako součást jakéhokoli scénáře zřizování služby [Windows autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/) a dá se použít odděleně od Windows autopilota jako součást výchozího spouštěného prostředí (OOBE) pro službu Azure AD JOIN a také pro všechny nové uživatele, kteří se do zařízení přihlašují poprvé.
 
-Můžete také nastavit pořadí priority pro každý profil na účet pro konfliktní přiřazení profilů pro stejného uživatele.
+Můžete vytvořit více profilů stránek stavu registrace s různými konfiguracemi, které určují:
 
-> [!NOTE]
-> Stránka stavu registrace se může zaměřit jenom na uživatele, který patří do přiřazené skupiny, a v případě registrace pro všechny uživatele, kteří zařízení používají, se v zařízení nastavila zásada.  Zařízení cílící na profily stránky stavu registrace se v tuto chvíli nepodporuje. Pokud používáte šetrnější nebo samoobslužný režim automatického pilotního nasazení, zajistěte, aby byla pro první nastavení v následující tabulce povolena výchozí zásada ESP (s názvem Všichni uživatelé a všechna zařízení).
+- Zobrazení průběhu instalace
+- Blokování přístupu až do dokončení procesu zřizování
+- Časové limity
+- Povolené operace řešení potíží
+
+Tyto profily jsou určené v pořadí podle priority. použije se nejvyšší platná priorita.  Každý profil protokolu ESP může být zaměřen na skupiny obsahující zařízení nebo uživatele.  Při určování, který profil se má použít, se budou dodržovat následující kritéria:
+
+- Nejdřív se použije profil nejvyšší priority, který se na zařízení zacílí.
+- Pokud se na zařízení necílí žádné profily, použije se profil nejvyšší priority cílený na aktuálního uživatele.  (To platí jenom ve scénářích, kdy je nějaký uživatel. Ve scénářích White šetrnější a samoobslužného nasazení se dá použít jenom cílení na zařízení.)
+- Pokud nejsou žádné profily cílené na konkrétní skupiny, použije se výchozí profil protokolu ESP.
 
 ## <a name="available-settings"></a>Dostupná nastavení
 
- K přizpůsobení chování stránky stavu registrace můžete nakonfigurovat následující nastavení:
+K přizpůsobení chování stránky stavu registrace můžete nakonfigurovat následující nastavení:
 
 <table>
 <th align="left">Nastavení<th align="left">Ano<th align="left">Ne
@@ -80,7 +83,7 @@ Pokud chcete zapnout stránku Stav registrace, postupujte podle následujících
 
 ## <a name="set-the-enrollment-status-page-priority"></a>Nastavení priority stránky stavu registrace
 
-Uživatel může být v mnoha skupinách a mít velký počet profilů stránek stavu registrace. Chcete-li tyto konflikty zpracovat, můžete nastavit priority pro jednotlivé profily. Pokud má někdo více než jeden profil stránky stavu registrace, použije se k registraci zařízení jenom profil s nejvyšší prioritou.
+Zařízení nebo uživatel může být v mnoha skupinách a má více cílových profilů stránky stavu registrace. Abyste mohli řídit, které profily se považují za první, můžete nastavit priority pro jednotlivé profily. ty s vyšší prioritou se považují za první.
 
 1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení**  >  **Windows**  >  **Windows registrace registrace**  >  **stavová stránka**.
 2. Najeďte myší na profil v seznamu.
@@ -88,7 +91,7 @@ Uživatel může být v mnoha skupinách a mít velký počet profilů stránek 
 
 ## <a name="block-access-to-a-device-until-a-specific-application-is-installed"></a>Zablokovat přístup k zařízení, dokud není nainstalovaná konkrétní aplikace
 
-Můžete určit, které aplikace se musí nainstalovat, než uživatel bude moci získat přístup k ploše.
+Můžete určit, které aplikace se musí nainstalovat předtím, než se dokončí stránka stavu registrace (ESP).
 
 1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení**  >  **Windows**  >  **Windows registrace registrace**  >  **stavová stránka**.
 2. Vyberte profil > **Nastavení**.
@@ -99,7 +102,7 @@ Můžete určit, které aplikace se musí nainstalovat, než uživatel bude moci
 
 V Intune se používají aplikace, které jsou zahrnuté v tomto seznamu, aby se vyfiltroval seznam, který by se měl považovat za blokující.  Neurčuje, které aplikace se mají nainstalovat.  Pokud například nakonfigurujete tento seznam tak, aby zahrnoval "App 1," App 2, "a" App 3 "a" App 3 "a" App 4 "jsou zaměřené na zařízení nebo uživatele, bude stránka stavu registrace sledovat pouze" App 3 ".  Aplikace "App 4" bude stále nainstalována, ale na stránce Stav registrace nebude čekat na dokončení.
 
-Je možné zadat maximálně 25 aplikací.
+Je možné zadat maximálně 100 aplikací.
 
 ## <a name="enrollment-status-page-tracking-information"></a>Informace o sledování stránky stavu registrace
 
@@ -108,14 +111,16 @@ Existují tři fáze, ve kterých stránka stavu registrace sleduje informace pr
 ### <a name="device-preparation"></a>Příprava zařízení
 
 V případě přípravy zařízení se stránka stavu registrace sleduje:
-- Ověření identity klíče čipu TPM (Trusted Platform Module) (Pokud je k dispozici)
-- průběh přidávání Azure Active Directory
-- Registrace do Intune
-- Instalace rozšíření pro správu Intune
+
+- Ověření identity klíče TPM (Trusted Platform Module) (je-li k dispozici)
+- Proces připojení Azure Active Directory
+- Registrace v Intune (MDM)
+- Instalace rozšíření pro správu Intune (slouží k instalaci aplikací Win32)
 
 ### <a name="device-setup"></a>Nastavení zařízení
 
-Na stránce Stav registrace se sledují následující položky instalace zařízení (pokud jsou přiřazené ke všem zařízením nebo skupině zařízení, ve které je zařízení pro registraci členem):
+Stránka stav registrace sleduje následující položky nastavení zařízení:
+
 - Zásady zabezpečení
   - Jeden poskytovatel konfiguračních služeb pro všechny registrace.
   - Skuteční poskytovatelé konfiguračních služeb nakonfigurovaných službou Intune se zde nesledují.
@@ -129,7 +134,9 @@ Na stránce Stav registrace se sledují následující položky instalace zaří
 - Profily certifikátů přiřazené ke skupině **Všechna zařízení** nebo ke skupině zařízení, jejímž členem je zařízení, které se registruje. Platí pouze pro zařízení Autopilot.
 
 ### <a name="account-setup"></a>Nastavení účtu
+
 U nastavení účtu se na stránce Stav registrace sleduje následující položky, pokud jsou přiřazené k aktuálně přihlášenému uživateli:
+
 - Zásady zabezpečení
   - Jeden poskytovatel konfiguračních služeb pro všechny registrace.
   - Skuteční poskytovatelé konfiguračních služeb nakonfigurovaných službou Intune se zde nesledují.
@@ -147,7 +154,8 @@ U nastavení účtu se na stránce Stav registrace sleduje následující polož
   - Profily certifikátů, které jsou přiřazeny ke všem uživatelům nebo skupině uživatelů, jejímž členem uživatel provádějící registraci zařízení je.
 
 ### <a name="troubleshooting"></a>Řešení potíží
-Nejčastější dotazy k řešení potíží.
+
+Níže najdete běžné otázky týkající se řešení potíží týkajících se stránky stavu registrace.
 
 - Proč byly moje aplikace nainstalovány a sledovány pomocí stránky stavu registrace?
   - Chcete-li zaručit, že aplikace jsou nainstalovány a sledovány pomocí stránky stav registrace, ujistěte se, že:
@@ -193,14 +201,16 @@ Nejčastější dotazy k řešení potíží.
       ```
 
 ### <a name="known-issues"></a>Známé problémy
-Níže jsou uvedené známé problémy. 
+
+Níže jsou uvedené známé problémy související se stránkou stavu registrace.
+
 - Když se profil ESP zakáže, neodebere se zásada protokolu ESP ze zařízení a uživatelé budou při prvním přihlášení do zařízení získat protokol ESP. Zásada není odebrána, pokud je profil protokolu ESP zakázán. Chcete-li zakázat protokol ESP, je nutné nasadit OMA-URI. Pokyny k zakázání protokolu ESP pomocí OMA-URI najdete výše. 
 - Restartování během instalace zařízení vynutí, aby uživatel před přechodem ke fázi nastavení účtu zadal svoje přihlašovací údaje. Přihlašovací údaje uživatele se během restartování neuchovávají. Uživatel musí zadat své přihlašovací údaje, aby mohla stránka stavu registrace pokračovat. 
 - Při registraci pracovního a školního účtu ve verzích Windows 10, které jsou nižší než 1903, se na stránce Stav registrace vždycky vyprší časový limit. Stránka stavu registrace čeká na dokončení registrace Azure AD. Problém je opravený ve Windows 10 verze 1903 a novějším.  
 - Hybridní nasazení Azure AD autopilotu s protokolem ESP trvá déle, než je doba trvání definovaná v profilu ESP. V hybridních nasazeních autopilotu služby Azure AD bude protokol ESP trvat 40 minut déle než hodnota nastavená v profilu ESP. Tato prodleva udává čas, po který konektor on-Prem AD vytvoří nový záznam zařízení ve službě Azure AD. 
 - Přihlašovací stránka Windows není předem naplněná uživatelským jménem v režimu řízeného uživatelem automatického pilotního nasazení. Pokud dojde k restartování během fáze instalace zařízení v protokolu ESP:
-    - přihlašovací údaje uživatele nejsou zachovány.
-    - uživatel musí znovu zadat přihlašovací údaje, než bude pokračovat ve fázi nastavení zařízení do fáze nastavení účtu.
+  - přihlašovací údaje uživatele nejsou zachovány.
+  - uživatel musí znovu zadat přihlašovací údaje, než bude pokračovat ve fázi nastavení zařízení do fáze nastavení účtu.
 - Protokol ESP je zablokovaný po dlouhou dobu, nebo nikdy nedokončuje "identifikační" fázi. Intune počítá zásady protokolu ESP v rámci identifikační fáze. Pokud aktuálnímu uživateli není přiřazená licence Intune, nemůže zařízení nikdy dokončit výpočetní zásady ESP.  
 - Konfigurace řízení aplikací v programu Microsoft Defender způsobí při autopilotu dotaz na restartování. Konfigurace aplikace v programu Microsoft Defender (AppLocker CSP) vyžaduje restart. Pokud je tato zásada nakonfigurovaná, může při autopilotu dojít k restartování zařízení. V současné době neexistuje způsob, jak potlačit nebo odložit restartování.
 - Pokud je zásada DeviceLock ( https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock) povolená jako součást profilu ESP, automatické přihlášení k počátečnímu počítači nebo ploše uživatele by mohlo selhat unexpectantly ze dvou důvodů.
@@ -208,4 +218,5 @@ Níže jsou uvedené známé problémy.
   - Automatické přihlašování se nepovede, pokud se zařízení restartuje po zadání přihlašovacích údajů Azure AD, ale ještě před tím, než se ukončí fáze nastavení zařízení ESP. K této chybě dochází, protože fáze nastavení zařízení ESP nebyla nikdy dokončena. Alternativním řešením je resetování zařízení.
 
 ## <a name="next-steps"></a>Další kroky
+
 Po nastavení stránek registrace zařízení s Windows se naučte spravovat zařízení s Windows. Další informace najdete v tématu [co je Správa zařízení Microsoft Intune?](../remote-actions/device-management.md)

@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 97e837d99ee6f3558a408c443e32eb86fd803de6
-ms.sourcegitcommit: 02635469d684d233fef795d2a15615658e62db10
+ms.openlocfilehash: 2b0c65e12349f8b4c887b5a633a1cd94c272ca5a
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84814884"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093344"
 ---
 # <a name="troubleshoot-iosipados-device-enrollment-problems-in-microsoft-intune"></a>Řešení potíží s registrací zařízení s iOS nebo iPadOS v Microsoft Intune
 
@@ -220,6 +220,16 @@ Když zapnete zařízení spravované přes ADE, které má přiřazený profil 
 #### <a name="resolution"></a>Řešení
 Zakažte MFA a pak zařízení znovu zaregistrujte.
 
+### <a name="authentication-doesnt-redirect-to-the-government-cloud"></a>Ověřování se nepřesměrovává do cloudu státní správy. 
+
+Uživatelé státní správy přihlašování z jiného zařízení se přesměrují do veřejného cloudu pro ověřování a nikoli pro státní Cloud. 
+
+**Příčina:** Azure AD ještě nepodporuje přesměrování na Cloud státní správy při přihlašování z jiného zařízení. 
+
+#### <a name="resolution"></a>Řešení 
+Pomocí nastavení **cloudu** portál společnosti pro iOS v aplikaci **Nastavení** přesměrujte ověřování uživatelů státní správy do cloudu pro státní správu. Ve výchozím nastavení je nastavení **cloudu** nastavené na **Automatické** a portál společnosti směruje ověřování směrem ke cloudu, který zařízení automaticky detekuje (třeba veřejné nebo státní správy). Uživatelé státní správy, kteří se přihlásí z jiného zařízení, budou muset pro ověřování ručně vybrat Cloud pro státní správu. 
+
+Otevřete aplikaci **Nastavení** a vyberte portál společnosti. V nastavení Portál společnosti vyberte **Cloud**. Nastavte **Cloud** na státní správu.  
 
 ## <a name="next-steps"></a>Další kroky
 

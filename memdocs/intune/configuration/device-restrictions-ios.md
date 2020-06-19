@@ -6,22 +6,23 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/06/2020
+ms.date: 06/09/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
 ms.technology: ''
+ms.reviewer: kakyker
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 49ecd2a1aaa5408a721b06264703720be601c73c
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: aa3cf14b6afd8504a0918b5d61d2a7cae0c308b9
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83269010"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093664"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>nastavení zařízení s iOS a iPadOS pro povolení nebo omezení funkcí pomocí Intune
 
@@ -32,7 +33,7 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
 > [!TIP]
 > Tato nastavení používají nastavení MDM od společnosti Apple. Další informace o těchto nastaveních najdete v tématu [Nastavení správy mobilních zařízení společnosti Apple](https://support.apple.com/guide/mdm/welcome/web) (otevření webu společnosti Apple).
 
-## <a name="before-you-begin"></a>Před zahájením
+## <a name="before-you-begin"></a>Než začnete
 
 [Vytvoří konfigurační profil omezení zařízení](device-restrictions-configure.md).
 
@@ -72,7 +73,7 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
   - iOS 9,3 a novější
   - iPadOS 13,0 a novější
 
-- **Sledování obrazovky s nezodpovězenými obrazovkami podle aplikace učeben**: **Povolit** umožní učitelům tiše sledovat obrazovku zařízení s iOS a iPadOS studenty pomocí aplikace učebny bez vědomí studentů. Studentská zařízení zaregistrovaná ve třídě pomocí aplikace učebny automaticky poskytnou oprávnění učiteli tohoto kurzu. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém zabránit této funkci.
+- **Sledování obrazovky s nezodpovězenými obrazovkami podle aplikace učebny**: **Povolit** umožní učitelům tiše sledovat obrazovky iOS/iPadOS v studentech pomocí aplikace učebny bez vědomí studentů. Studentská zařízení zaregistrovaná ve třídě pomocí aplikace učebny automaticky poskytnou oprávnění učiteli tohoto kurzu. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém zabránit této funkci.
 
   Chcete-li použít toto nastavení, nastavte nastavení **zachycení obrazovky** na **blokovat**.
 
@@ -198,7 +199,7 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
   - **10**: po 10 minutách nečinnosti se zamkne obrazovka.
   - **15**: po 15 minutách nečinnosti se zamkne obrazovka.
 
-  Pokud se hodnota nevztahuje na iOS a iPadOS, pak Apple používá nejbližší *nejnižší* hodnotu. Pokud například zadáte `4` minuty, zařízení iPadOS budou používat `2` minuty. Pokud zadáte `10` minuty, zařízení s iOS budou používat `5` minuty. Toto je omezení Apple.
+  Pokud se hodnota nevztahuje na iOS a iPadOS, pak Apple používá nejbližší *nejnižší* hodnotu. Pokud například zadáte `4` minuty, zařízení iPadOS budou používat `2` minuty. Pokud zadáte `10` minuty, zařízení s iOS budou používat `5` minuty. Toto chování je omezení Apple.
   
   > [!NOTE]
   > Uživatelské rozhraní Intune pro toto nastavení nedělí podporované hodnoty pro iOS a iPadOS. Uživatelské rozhraní může být v budoucí verzi aktualizováno.
@@ -429,6 +430,25 @@ Pokud chcete do těchto seznamů přidat aplikace, můžete:
 > [!IMPORTANT]
 > Profily zařízení, které používají nastavení aplikací s omezeným přístupem, se musí přiřadit ke skupinám uživatelů.
 
+## <a name="shared-ipad"></a>Sdílený iPad
+
+Tato funkce platí pro:
+
+- iPadOS 13,4 a novější
+- Sdílený iPad
+
+### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Nastavení platí pro: automatický zápis zařízení (pod dohledem)
+
+- **Blokovat sdílené dočasné relace pro iPad**: dočasné relace umožňují uživatelům přihlašovat se jako host a uživatelé nemusejí zadávat spravované Apple ID nebo heslo.
+
+  Při nastavení na **Ano**:
+
+  - Uživatelé iPadu se sdílenými uživateli iPad nemůžou používat dočasné relace.
+  - Uživatelé se musí k zařízení přihlásit pomocí spravovaného Apple ID a hesla.
+  - Možnost účet hosta není na zařízeních zobrazená na zamykací obrazovce.
+
+  Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení operační systém umožňuje sdílenému uživateli iPad přihlásit se k zařízení pomocí účtu Guest. Když se uživatel odhlásí, žádná z dat uživatele se neuloží ani nesynchronizuje do iCloud.
+
 ## <a name="show-or-hide-apps"></a>Zobrazit nebo skrýt aplikace
 
 Tato funkce platí pro:
@@ -599,12 +619,17 @@ Pokud chcete přidat aplikace, můžete:
 
 Pomocí těchto nastavení můžete nakonfigurovat zařízení s iOS/iPadOS, aby spouštěla konkrétní aplikace v autonomním režimu jedné aplikace (ASAM). Když je tento režim nakonfigurovaný a uživatelé spouštějí jednu z nakonfigurovaných aplikací, zařízení je do této aplikace uzamčené. Přepínání aplikace nebo úlohy je zakázané, dokud uživatelé neukončí povolenou aplikaci.
 
-Například ve škole nebo univerzitním prostředí přidejte aplikaci, která umožní uživatelům provést test na zařízení. Nebo zařízení uzamkněte do aplikace Portál společnosti, dokud se uživatel neověří. Pokud jsou akce aplikace dokončené uživateli nebo pokud tuto zásadu odeberete, zařízení se vrátí do normálního stavu.
+- Například ve škole nebo univerzitním prostředí přidejte aplikaci, která umožní uživatelům provést test na zařízení. Nebo zařízení uzamkněte do aplikace Portál společnosti, dokud se uživatel neověří. Pokud jsou akce aplikace dokončené uživateli nebo pokud tuto zásadu odeberete, zařízení se vrátí do normálního stavu.
 
-> [!NOTE]
-> Ne všechny aplikace podporují autonomní režim jedné aplikace. K umístění aplikace v autonomním režimu jedné aplikace se obvykle vyžadují ID sady prostředků nebo dvojice klíč-hodnota, které jsou poskytovány zásadami konfigurace aplikace. Další informace najdete v části [ `autonomousSingleAppModePermittedAppIDs` omezení](https://developer.apple.com/documentation/devicemanagement/restrictions) v dokumentaci k MDM společnosti Apple. Další informace o konkrétním nastavení požadovaném pro aplikaci, kterou konfigurujete, najdete v dokumentaci od dodavatele.
+- Ne všechny aplikace podporují autonomní režim jedné aplikace. K umístění aplikace v autonomním režimu jedné aplikace se obvykle vyžadují ID sady prostředků nebo dvojice klíč-hodnota, které jsou poskytovány zásadami konfigurace aplikace. Další informace najdete v části [ `autonomousSingleAppModePermittedAppIDs` omezení](https://developer.apple.com/documentation/devicemanagement/restrictions) v dokumentaci k MDM společnosti Apple. Další informace o konkrétním nastavení požadovaném pro aplikaci, kterou konfigurujete, najdete v dokumentaci od dodavatele.
 
-Pokud třeba chcete nakonfigurovat místnosti lupy v autonomním režimu jedné aplikace, přiblížením říkáte, že se má použít `us.zoom.zpcontroller` ID sady prostředků. V této instanci provedete také změnu webového portálu zoom. Další informace najdete v centru pro [nápovědu lupy](https://support.zoom.us/hc/articles/360021322632-Autonomous-Single-App-Mode-for-Zoom-Rooms-with-a-Third-Party-MDM).
+  Pokud třeba chcete nakonfigurovat místnosti lupy v autonomním režimu jedné aplikace, přiblížením říkáte, že se má použít `us.zoom.zpcontroller` ID sady prostředků. V této instanci provedete také změnu webového portálu zoom. Další informace najdete v centru pro [nápovědu lupy](https://support.zoom.us/hc/articles/360021322632-Autonomous-Single-App-Mode-for-Zoom-Rooms-with-a-Third-Party-MDM).
+
+- V zařízeních se systémem iOS/iPadOS podporuje aplikace Portál společnosti ASAM. Když je aplikace Portál společnosti v ASAM, zařízení je v aplikaci Portál společnosti uzamčené, dokud se uživatel neověří. Když se uživatelé přihlásí k aplikaci Portál společnosti, můžou na zařízení používat jiné aplikace a tlačítko na domovské obrazovce. Když se odhlásí z aplikace Portál společnosti, zařízení se vrátí do režimu jedné aplikace a zamkne se v Portál společnosti aplikaci.
+
+  Pokud chcete aplikaci Portál společnosti převést do aplikace pro přihlášení a odhlášení (Povolit ASAM), zadejte do těchto nastavení název Portál společnosti aplikace, jako `Microsoft Intune Company Portal` je, a ID sady ( `com.microsoft.CompanyPortal` ). Po přiřazení tohoto profilu musíte otevřít aplikaci Portál společnosti, abyste aplikaci zamkli, aby se uživatelé mohli přihlašovat a odhlásit.
+  
+  Když se odebere konfigurační profil zařízení a uživatel se odhlásí, zařízení není v aplikaci Portál společnosti uzamčené.
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Nastavení platí pro: automatický zápis zařízení (pod dohledem)
 
@@ -698,7 +723,7 @@ režim iOS/iPadOS pod dohledem se dá povolit jenom při počátečním nastaven
 - Hostitelské párování 
 - Synchronizace cloudu 
 - Vyhledávání Spotlight 
-- Předání 
+- Handoff 
 - Vymazání zařízení 
 - Uživatelské rozhraní pro omezení 
 - Instalace konfiguračních profilů uživatelským rozhraním 

@@ -1,11 +1,11 @@
 ---
 title: Zpráva a akce při nedodržení předpisů v Microsoft Intune – Azure | Microsoft Docs
-description: Vytvořte e-mailové oznámení, které se odešle do zařízení nedodržujícího předpisy. Přidejte akce, které se provedou, když je zařízení označeno jako nedodržující předpisy. Můžete třeba přidat období odkladu, během kterého musí uživatel dodržení předpisů zajistit, nebo vytvořit plán k zablokování přístupu, dokud zařízení nebude předpisy dodržovat. Použijte k tomu Microsoft Intune v Azure.
+description: Vytvořte e-mailové oznámení, které se odešle do zařízení nedodržujícího předpisy. Přidejte akce, které se použijí u zařízení, která nevyhovují zásadám dodržování předpisů. Akce můžou zahrnovat dobu odkladu k získání kompatibilního, blokování přístupu k síťovým prostředkům nebo vyřazení zařízení nesplňujících požadavky.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/26/2020
+ms.date: 06/19/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.reviewer: samyada
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fff21eac61f7b68e00989aefc1f9ea6dc3ad7c0a
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 330dd566599d6bdb1fa667d8797878ea8c92f098
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989311"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093748"
 ---
 # <a name="configure-actions-for-noncompliant-devices-in-intune"></a>Konfigurace akcí pro zařízení nedodržující předpisy v Intune
 
@@ -29,11 +29,11 @@ U zařízení, která nevyhovují zásadám nebo pravidlům dodržování předp
 
 ## <a name="overview"></a>Přehled
 
-Ve výchozím nastavení Každá zásada dodržování předpisů zahrnuje akci při nedodržení předpisů **Označit zařízení jako nekompatibilní** s plánem nula dnů (**0**). Výsledkem tohoto výchozího nastavení je, že Intune zjistí, že zařízení nedodržuje předpisy, Intune hned zařízení označí jako nedodržující předpisy. Pak bude [podmíněný přístup](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) Azure Active Directory (AD) moci zařízení blokovat.
+Ve výchozím nastavení Každá zásada dodržování předpisů zahrnuje akci při nedodržení předpisů **Označit zařízení jako nekompatibilní** s plánem nula dnů (**0**). Výsledkem tohoto výchozího nastavení je, že Intune zjistí, že zařízení nedodržuje předpisy, Intune hned zařízení označí jako nedodržující předpisy. Jakmile se zařízení označí jako nedodržující předpisy, Azure Active Directory (AD) [podmíněný přístup](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) může zařízení blokovat.
 
 Konfigurací **akcí při nedodržení předpisů** získáte flexibilitu při rozhodování o tom, co dělat pro zařízení nedodržující předpisy, a kdy to udělat. Například můžete zvolit, aby zařízení neblokovalo okamžitě, a dát uživateli možnost, aby se zajistilo, že bude dodržovat předpisy.
 
-Pro každou akci, kterou můžete nastavit, můžete nakonfigurovat plán, který určuje, kdy se tato akce projeví na základě počtu dní, po kterých je zařízení označeno jako nedodržující předpisy. Můžete také nakonfigurovat více instancí akce. Když v zásadě nastavíte více instancí akce, akce se spustí znovu v pozdějším naplánovaném čase, pokud zařízení zůstává nekompatibilní.
+Pro každou akci, kterou nastavíte, můžete nakonfigurovat plán, který určuje, kdy se tato akce projeví. Plán je počet dnů, po jejichž uplynutí je zařízení označeno jako nedodržující předpisy. Můžete také nakonfigurovat více instancí akce. Když v zásadě nastavíte více instancí akce, akce se spustí znovu v pozdějším naplánovaném čase, pokud zařízení zůstává nekompatibilní.
 
 Ne všechny akce jsou k dispozici pro všechny platformy.
 
@@ -48,7 +48,7 @@ K dispozici jsou následující akce při nedodržení předpisů. Pokud není u
 - **Odeslat e-mail koncovému uživateli**: Tato akce odešle uživateli e-mailové oznámení.
 Když povolíte tuto akci:
 
-  - Vyberte *šablonu zprávy s oznámením* , kterou tato akce odešle. Než budete moct přiřadit jednu tuto akci, musíte [vytvořit šablonu zprávy s oznámením](#create-a-notification-message-template) . Když vytvoříte vlastní oznámení, přizpůsobíte předmět, text zprávy a může obsahovat logo společnosti, název společnosti a další kontaktní informace.
+  - Vyberte *šablonu zprávy s oznámením* , kterou tato akce odešle. Před přiřazením jedné k této akci můžete [vytvořit šablonu zprávy s oznámením](#create-a-notification-message-template) . Když vytvoříte vlastní oznámení, přizpůsobíte předmět, text zprávy a může obsahovat logo společnosti, název společnosti a další kontaktní informace.
   - Zvolte, že se má zpráva odeslat dalším příjemcům výběrem jedné nebo více skupin Azure AD.
 
 Po odeslání e-mailu Intune zahrne do e-mailového oznámení podrobnosti o zařízení, které nedodržuje předpisy.
@@ -100,14 +100,14 @@ Po odeslání e-mailu Intune zahrne do e-mailového oznámení podrobnosti o za�
   
   Například můžete naplánovat první akci na 0 dní a pak přidat druhou instanci akce nastavenou na tři dny. Tato prodleva před druhým oznámením uživateli přiřadí několik dní k vyřešení problému a zabrání druhému oznámení.
 
-  Chcete-li zabránit uživatelům s e-maily s příliš velkým počtem duplicitních zpráv, přečtěte si a zjednodušte, které zásady dodržování předpisů zahrnují nabízené oznámení o nedodržení předpisů, a Projděte si plány, abyste se vyhnuli opakovanému odesílání oznámení pro stejný problém
+  Chcete-li zabránit uživatelům s e-maily s příliš velkým počtem duplicitních zpráv, přečtěte si a zjednodušte, které zásady dodržování předpisů zahrnují nabízené oznámení o nedodržení předpisů, a Projděte si plány, abyste zabránili opakovanému opakování oznámení
 
   Rozmyslete si:
   - Pro jednu zásadu, která zahrnuje více instancí nabízených oznámení nastavených na stejný den, se za tento den pošle jenom jedno oznámení.
 
-  - Pokud více zásad dodržování předpisů zahrnuje stejné podmínky dodržování předpisů a zahrnuje akci nabízených oznámení se stejným plánem, na stejné zařízení se ve stejný den pošle víc oznámení.
+  - Pokud několik zásad dodržování předpisů zahrnuje stejné podmínky dodržování předpisů a zahrnuje akci nabízených oznámení se stejným plánem, pošle se stejnému zařízení více oznámení na stejný den.
 
-## <a name="before-you-begin"></a>Před zahájením
+## <a name="before-you-begin"></a>Než začnete
 
 Při konfiguraci zásad dodržování předpisů zařízením nebo později můžete [Přidat akce, které nedodržují předpisy](#add-actions-for-noncompliance) , a to úpravou zásad. Do každé zásady můžete přidat další akce, které budou vyhovovat vašim potřebám. Mějte na paměti, že každá zásada dodržování předpisů automaticky zahrnuje výchozí akci při nedodržení předpisů, která označuje zařízení jako nedodržující předpisy s plánem nastaveným na 0 dní.
 
@@ -126,22 +126,22 @@ Pokud chcete vytvořit zásady dodržování předpisů pro zařízení, přečt
 Pokud chcete svým uživatelům odeslat e-mail, vytvořte šablonu zprávy s oznámením. Pokud zařízení nedodržuje předpisy, musíte do šablony zadat podrobnosti, které se zobrazují v e-mailu odeslaném vašim uživatelům.
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **zařízení**  >  **oznámení zásady dodržování předpisů**  >  **Notifications**  >  **vytvořit oznámení**.
+2. Vybrat oznámení dodržování předpisů pro zařízení **zabezpečení Endpoint Security**  >  **Device compliance**  >  **Notifications**  >  **vytvořit oznámení**
 3. V části *základy*zadejte následující informace:
 
    - **Název**
    - **Subjekt**
    - **Zpráva**
 
-4. V části *základy*nakonfigurujte pro oznámení následující možnosti, které jsou *povolené*pro všechny výchozí hodnoty:
+4. V části *základy*můžete taky nakonfigurovat následující možnosti pro oznámení:
 
-   - **Záhlaví e-mailu – zahrnout logo společnosti**
-   - **Zápatí e-mailu – uveďte název společnosti**
-   - **Zápatí e-mailu – zahrnutí informací o kontaktu**
+   - **Záhlaví e-mailu – zahrňte logo společnosti** (výchozí nastavení = *Povolit*) – logo, které jste nahráli jako součást brandingu portál společnosti, se používá pro e-mailové šablony. Další informace o značce Portálu společnosti najdete v tématu o [přizpůsobení brandingu firemní identity](../apps/company-portal-app.md#customizing-the-user-experience).
+   - **Zápatí e-mailu – uveďte název společnosti** (výchozí = *Povolit*)
+   - **Zápatí e-mailu – zahrnout kontaktní informace** (výchozí = *Povolit*)
+   - **Portál společnosti odkaz na web** (výchozí nastavení = *Zakázat*) – Pokud je nastavená možnost *Povolit*, e-mail obsahuje odkaz na portál společnosti Web.
 
-   Logo, které nahrajete jako součást brandingu Portál společnosti, se používá pro e-mailové šablony. Další informace o značce Portálu společnosti najdete v tématu o [přizpůsobení brandingu firemní identity](../apps/company-portal-app.md#customizing-the-user-experience).
-
-   ![Příklad oznámení o dodržování předpisů v Intune](./media/actions-for-noncompliance/actionsfornoncompliance-1.PNG)
+   > [!div class="mx-imgBorder"]
+   > ![Příklad oznámení o dodržování předpisů v Intune](./media/actions-for-noncompliance/actionsfornoncompliance-1.PNG)
 
    Pokračujte výběrem tlačítka **Next** (Další).
 
@@ -185,7 +185,7 @@ Můžete přidat volitelné akce při vytváření zásad dodržování předpis
 
    V zásadách dodržování předpisů můžete například chtít uživatele informovat. Můžete přidat akci **Odeslat e-mail pro koncového uživatele** . U této akce **Odeslat e-mail** nastavte **plán** na dva dny. Pokud je zařízení nebo koncový uživatel stále vyhodnoceno jako nedodržující předpisy, pošle se vám e-mail na dva dny. Pokud chcete uživateli poslat znovu e-mail s pěti dny nedodržení předpisů, přidejte další akci a nastavte **plán** na pět dní.
 
-  Další informace o dodržování předpisů a integrovaných akcích najdete v tématu [Přehled dodržování předpisů](device-compliance-get-started.md).
+   Další informace o dodržování předpisů a integrovaných akcích najdete v tématu [Přehled dodržování předpisů](device-compliance-get-started.md).
 
 6. Po dokončení vyberte **Přidat**  >  **OK** a uložte provedené změny.
 

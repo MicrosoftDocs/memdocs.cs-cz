@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/20/2020
+ms.date: 06/19/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5562199d3490085aca26517170745802a0aef489
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 6fef418394a37f0074ddb17cc170a61603b1d7f8
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989496"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093112"
 ---
 # <a name="how-to-get-support-for-microsoft-intune"></a>Jak získat podporu pro Microsoft Intune
 
@@ -41,9 +41,6 @@ Jako správce Intune můžete použít možnost **pomoc a podpora** k zavedení 
 Pomoc a podpora pro Intune je k dispozici v [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431) a ze všech oken (nebo stránek) v Intune v Azure Portal.
 
 Prostředí pro *nápovědu a podporu* se podobá prostředí, které se zobrazuje v [centru pro správu Microsoft 365](https://admin.microsoft.com/), a nahrazuje předchozí nápovědu a *podporu*, která zůstává na místě pro ostatní služby v Azure.
-
-> [!TIP]
-> Od 18. listopadu 2019 se aktualizovaly a zjednodušilo prostředí v konzole pro získání pomoci a podpory pro klienty. Pokud toto nové prostředí zatím není k dispozici, bude brzy.
 
 ### <a name="options-to-access-help-and-support"></a>Možnosti pro přístup k nápovědě a podpoře
 
@@ -66,16 +63,21 @@ K tomuto problému dochází, když jste svůj nový účet tenanta neověřili 
 
 - **Z centra pro správu Microsoft Endpoint Manageru**
 
-  - Z libovolného uzlu v centru pro správu Microsoft Endpoint Manageru vyberte **?** v pravém horním rohu portálu a pak pomocí rozevíracího seznamu vyberte typ správy, ke kterému chcete získat informace. Centrum pro správu Microsoft Endpoint Manageru podporuje následující typy správy a Vy musíte vybrat tu, na kterou chcete pomoct, jako je Intune:
+  - Z libovolného uzlu v centru pro správu Microsoft Endpoint Manageru vyberte **?** ikona v pravém horním rohu portálu a otevřete tak podokno **nápovědy** . Kliknutím na tlačítko **help + podpora** otevřete stránku **Vybrat typ správy** .
 
-    - Configuration Manager (zahrnuje analýzu stolního počítače)
+    > [!div class="mx-imgBorder"]
+    > ![Otevře stránku pro výběr typu správy.](./media/get-support/management-types.png)
+
+    Pomocí rozevíracího seznamu vyberte typ správy, se kterým chcete pomoci, který otevře příslušnou stránku pomoci a podpory. Centrum pro správu Microsoft Endpoint Manageru podporuje následující typy správy a Vy musíte vybrat tu, na kterou chcete pomoct, jako je Intune:
+
+    - Configuration Manager
     - Intune
-    - Spoluspráva  
+    - Spoluspráva
 
     > [!div class="mx-imgBorder"]
     > ![Vyberte typ správy.](./media/get-support/select-management-type.png)
 
-    Po výběru typu správy se otevře stránka pro *nápovědu a podporu* , kde můžete zadat podrobnosti pro [hledání řešení](#find-solutions) pro konkrétní problém. Podrobnosti se filtrují podle typu vybrané správy.
+    Po výběru typu správy se otevře příslušná stránka *pomoc a podpora* , kde můžete zadat podrobnosti pro [hledání řešení](#find-solutions) pro konkrétní problém. Podrobnosti se filtrují podle typu vybrané správy.
 
      Pokud není vybraný správný typ správy **(1)**, klikněte na *Vybrat typ správy* **(2)** , který se vrátí do rozevíracího seznamu pro výběr typu správy:
 

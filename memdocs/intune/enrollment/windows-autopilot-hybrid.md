@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 23eecaea3db452dc873eeb69c3bf36959dff6d0f
-ms.sourcegitcommit: c333fc6627f5577cde9d2fa8f59e642202a7027b
+ms.openlocfilehash: be9a4257fec357c3dc124318fda98807df6c26b7
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84795546"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093488"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot"></a>Nasazení hybridních zařízení připojených k Azure AD pomocí Intune a automatického pilotního projektu Windows
 Pomocí Intune a Windows autopilotu můžete nastavit zařízení připojená k hybridnímu Azure Active Directory (Azure AD). Pokud to chcete provést, postupujte podle kroků v tomto článku.
@@ -191,12 +191,13 @@ Profily nasazení Autopilotu slouží ke konfiguraci zařízení s AutoPilotem.
 4. Vyberte **Další**.
 5. Na stránce spouštěné při **prvním spuštění počítače (OOBE)** pro **režim nasazení**vyberte možnost **řízeno uživatelem**.
 6. V poli **připojit ke službě Azure AD** vyberte možnost **připojené k hybridní službě Azure AD**.
-7. Podle potřeby konfigurujte zbývající možnosti na stránce s **počátečním prostředím (OOBE)** .
-8. Vyberte **Další**.
-9. Na stránce **značky oboru** vyberte [značky oboru](../fundamentals/scope-tags.md) pro tento profil.
-10. Vyberte **Další**.
-11. Na stránce **přiřazení** vyberte **možnost vybrat skupiny, které chcete zahrnout** > hledání, a vyberte skupinu zařízení > **Vybrat**.
-12. Vyberte **Další**  >  **vytvořit**.
+7. Pokud nasazujete zařízení ze sítě organizace s využitím podpory sítě VPN, nastavte možnost **Přeskočit možnosti připojení k doméně** na **Ano**.  Další informace najdete v tématu [režim založený na uživateli pro hybridní Azure Active Directory připojení k síti VPN](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven#user-driven-mode-for-hybrid-azure-active-directory-join-with-VPN-support) .
+8. Podle potřeby konfigurujte zbývající možnosti na stránce s **počátečním prostředím (OOBE)** .
+9. Vyberte **Další**.
+10. Na stránce **značky oboru** vyberte [značky oboru](../fundamentals/scope-tags.md) pro tento profil.
+11. Vyberte **Další**.
+12. Na stránce **přiřazení** vyberte **možnost vybrat skupiny, které chcete zahrnout** > hledání, a vyberte skupinu zařízení > **Vybrat**.
+13. Vyberte **Další**  >  **vytvořit**.
 
 Změna stavu profilu zařízení z *nepřiřazeného* *přiřazení* a nakonec trvá přibližně 15 minut, *než se přiřadí.*
 

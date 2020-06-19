@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 196fc4f551596a6146513d25166b1b167aa44186
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: bfcc4a8e867041e0053697bbee605f9798e45bec
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83986686"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093884"
 ---
 # <a name="automatically-enroll-macos-devices-with-the-apple-business-manager-or-apple-school-manager"></a>Automatická registrace zařízení macOS pomocí Apple Business Manageru nebo Apple School Manageru
 
@@ -46,7 +46,7 @@ Pomocí [správce registrace zařízení](device-enrollment-manager-enroll.md)ne
 -->
 ## <a name="prerequisites"></a>Požadavky
 
-- Zařízení zakoupená v [Apple School Manageru](https://school.apple.com/) nebo [od společnosti Apple program registrace zařízení](http://deploy.apple.com)
+- Zařízení zakoupená v [Apple School Manageru](https://school.apple.com/) nebo v programu [automatizované registrace zařízení společnosti Apple](http://deploy.apple.com)
 - Seznam sériových čísel nebo čísel nákupních objednávek
 - [Autorita MDM](../fundamentals/mdm-authority-set.md)
 - [Apple MDM push Certificate](../enrollment/apple-mdm-push-certificate-get.md)
@@ -62,24 +62,25 @@ K vytvoření tokenu použijete portál Apple. K přiřazení zařízení do Int
 
 ### <a name="step-1-download-the-intune-public-key-certificate-required-to-create-the-token"></a>Krok 1. Stáhněte si certifikát veřejného klíče Intune, který je potřebný k vytvoření tokenu.
 
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení**  >  **MacOS**  >  **MacOS registrace**  >  **tokeny programu registrace**  >  **Přidat**.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení**  >  **MacOS**  >  **MacOS registrace**. 
+> **Tokeny**  >  programu registrace **Přidat**.
 
-    ![Stažení tokenu programu registrace zařízení](./media/device-enrollment-program-enroll-macos/image01.png)
+    ![Get an enrollment program token.](./media/device-enrollment-program-enroll-macos/image01.png)
 
 2. Výběrem možnosti **Souhlasím** udělte Microsoftu oprávnění k odesílání informací o uživatelích a zařízeních do společnosti Apple.
 
-   ![Snímek obrazovky s podoknem Token Programu registrace v pracovním prostoru Certifikáty Apple pro stažení veřejného klíče](./media/device-enrollment-program-enroll-macos/add-enrollment-program-token-pane.png)
+   ![Snímek obrazovky s podoknem Token Programu registrace v pracovním prostoru Certifikáty Apple pro stažení veřejného klíče](./media/device-enrollment-program-enroll-ios/add-enrollment-program-token-pane.png)
 
 3. Vyberte **Stáhnout veřejný klíč** a stáhněte si a místně uložte soubor šifrovacího klíče (.pem). Soubor. pem slouží k vyžádání certifikátu vztahu důvěryhodnosti z portálu Apple.
 
 ### <a name="step-2-use-your-key-to-download-a-token-from-apple"></a>Krok 2. Použijte svůj klíč ke stažení tokenu od společnosti Apple.
 
-1. Vyberte možnost **vytvořit token pro program registrace zařízení od společnosti Apple** nebo **pomocí Apple School Manageru** otevřete příslušný portál Apple a přihlaste se pomocí Apple ID vaší společnosti. Toto Apple ID můžete použít k obnovení tokenu.
+1. Vyberte **vytvořit token pro prostřednictvím Apple Business Manageru** nebo **vytvořte token prostřednictvím Apple School Manageru** a otevřete příslušný portál Apple a přihlaste se pomocí Apple ID vaší společnosti. Toto Apple ID můžete použít k obnovení tokenu.
 2. V případě programu DEP na portálu Apple vyberte **Začínáme** pro **program registrace zařízení**  >  **Spravovat servery**  >  **Přidat MDM Server**.
 3. V případě správy Apple School klikněte na portálu Apple na **servery MDM**  >  **Přidat MDM Server**.
 4. Zadejte **název serveru MDM** a zvolte **Další**. Název serveru slouží pro vaši informaci, abyste mohli identifikovat server pro správu mobilních zařízení (MDM). Není to název serveru Microsoft Intune ani jeho URL.
 
-5. Otevře se dialogové okno pro **přidání&lt;názvu serveru&gt;**, ve kterém se zobrazí výzva, abyste **nahráli svůj veřejný klíč**. Vyberte **Zvolit soubor**, abyste mohli nahrát soubor .pem, a pak zvolte **Další**.
+5. Otevře se dialogové okno pro **přidání&lt;názvu serveru&gt;**, ve kterém se zobrazí výzva, abyste **nahráli svůj veřejný klíč**. Vyberte **zvolit soubor...** abyste mohli nahrát soubor .pem, a pak zvolte **Další**.
 
 6. Přejděte na **Deployment Programs (Programy nasazení) ** &gt; **Device Enrollment Program (Program registrace zařízení) ** &gt; **Manage Devices** (Spravovat zařízení).
 7. V části se **způsobem výběru zařízení** určete způsob identifikace zařízení:
@@ -95,7 +96,7 @@ K vytvoření tokenu použijete portál Apple. K přiřazení zařízení do Int
 
 V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)zadejte Apple ID pro budoucí referenci.
 
-![Snímek obrazovky s Apple ID použitým k vytvoření tokenu programu registrace a přechodem na token programu registrace](./media/device-enrollment-program-enroll-macos/image03.png)
+![Snímek obrazovky s Apple ID použitým k vytvoření tokenu programu registrace a přechodem na token programu registrace](./media/device-enrollment-program-enroll-ios/image03.png)
 
 ### <a name="step-4-upload-your-token"></a>Krok 4. Nahrajte token.
 V poli **Token Apple** přejděte k souboru certifikátu (.pem), zvolte **Otevřít** a pak zvolte **Vytvořit**. Certifikát Push Certificate umožňuje Intune registrovat a spravovat zařízení s macOS tím, že do registrovaných zařízení doručí zásady. Intune se automaticky synchronizuje s Apple, aby bylo možné zobrazit účet registračního programu.
@@ -109,24 +110,28 @@ Teď, když máte nainstalovaný token, můžete pro zařízení vytvořit profi
 
     ![Snímek obrazovky pro vytvoření profilu](./media/device-enrollment-program-enroll-macos/image04.png)
 
-3. V části **Vytvořit profil** zadejte **Název** a **Popis** profilu pro účely správy. Uživatelům se tyto údaje nezobrazí. Pole **Název** můžete využít k vytvoření dynamické skupiny v Azure Active Directory. Název profilu použijte k definování parametru enrollmentProfileName pro přiřazení zařízení s tímto registračním profilem. Přečtěte si další informace o [Azure Active Directory dynamických skupinách](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices).
+3. Na stránce **základy** zadejte **název** a **Popis** profilu pro účely správy. Uživatelům se tyto údaje nezobrazí. Pole **Název** můžete využít k vytvoření dynamické skupiny v Azure Active Directory. Název profilu použijte k definování parametru enrollmentProfileName pro přiřazení zařízení s tímto registračním profilem. Přečtěte si další informace o [Azure Active Directory dynamických skupinách](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices).
 
     ![Název a popis profilu](./media/device-enrollment-program-enroll-macos/createprofile.png)
 
 4. Jako **platformu** zvolte **macOS**.
 
-5. V části **Přidružení uživatele** vyberte, jestli zařízení s tímto profilem musí mít při registraci přiřazeného uživatele.
+5. Kliknutím na tlačítko **Další** přejdete na stránku **Nastavení správy** .
+
+6. V části **Přidružení uživatele** vyberte, jestli zařízení s tímto profilem musí mít při registraci přiřazeného uživatele.
     - **Zaregistrovat s přidružením uživatele** – tuto možnost vyberte u zařízení patřících uživatelům, kteří chtějí aplikaci Portál společnosti používat pro služby, jako je instalace aplikací. Při použití ADFS vyžaduje přidružení uživatelů [koncový bod WS-Trust 1.3 Username/Mixed](https://technet.microsoft.com/library/adfs2-help-endpoints). [Další informace](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint) Vícefaktorové ověřování se nepodporuje u zařízení macOS ADE s přidružením uživatele.
 
     - **Zaregistrovat bez přidružení uživatele** – Tuto možnost zvolte pro zařízení nespojená s jedním uživatelem. Použijte ji pro zařízení určená k plnění úkolů, u kterých není potřeba přístup k místním uživatelským datům. Aplikace, jako je Portál společnosti aplikace, nefungují.
 
-6. Zvolte **Nastavení správy zařízení** a vyberte, jestli chcete zařízením, která používají tento profil, povolit uzamčenou registraci. **Uzamčená registrace** zakáže nastavení macOS, která umožňují odebrání profilu správy z nabídky **Předvolby systému** nebo přes **Terminál**. Po registraci zařízení nemůžete toto nastavení změnit bez vymazání zařízení.
+6. Pokud jste zvolili možnost **registrovat s přidružením uživatele**, vyberte v části **metoda ověřování** možnost **Pomocník s nastavením (starší verze)** nebo **Pomocník s nastavením moderního ověřování**.
 
-    ![Snímek obrazovky s nastaveními správy zařízení](./media/device-enrollment-program-enroll-macos/devicemanagementsettingsblade-macos.png)
+7. V případě **zamčené registrace**vyberte, jestli chcete pro zařízení, která používají tento profil, uzamčenou registraci. Hodnota **Ano** zakáže nastavení MacOS, která umožňují odebrání profilu správy z nabídky **Předvolby systému** nebo prostřednictvím **terminálu**. Po registraci zařízení nemůžete toto nastavení změnit bez vymazání zařízení.
 
-7. Vyberte **OK**.
+8. Kliknutím na tlačítko **Další** přejdete na stránku **Pomocníka s nastavením** .
 
-8. Vyberte **nastavení Průvodce nastavením** a nakonfigurujte následující nastavení profilu: ![ přizpůsobení pomocníka s nastavením.](./media/device-enrollment-program-enroll-macos/setupassistantcustom-macos.png)
+9. Na stránce **Pomocník s nastavením** nakonfigurujte následující nastavení profilu:
+
+    ![Přizpůsobení pomocníka s nastavením.](./media/device-enrollment-program-enroll-macos/setupassistantcustom-macos.png)
 
     | Nastavení oddělení | Popis |
     |---|---|
@@ -139,34 +144,36 @@ Teď, když máte nainstalovaný token, můžete pro zařízení vytvořit profi
 
     | Nastavení na obrazovce Průvodce nastavením | Pokud zvolíte **Zobrazit**, zařízení při nastavování: |
     |------------------------------------------|------------------------------------------|
-    | <strong>Heslo</strong> | Vyzve uživatele k zadání hesla. Vyžaduje vždy heslo, pokud zařízení nebude zabezpečené nebo nebude mít přístup kontrolovaný jiným způsobem (třeba pomocí celoobrazovkového režimu, který omezuje zařízení na jednu aplikaci). |
-    | <strong>Zjišťování polohy</strong> | Vyzve uživatele k poskytnutí polohy. |
-    | <strong>Obnovení</strong> | Zobrazí obrazovku aplikace & data. Tato obrazovka nabídne uživateli při nastavování zařízení možnost obnovit nebo přenést data ze zálohy v iCloudu. |
-    | <strong>iCloud a Apple ID</strong> | Umožní uživateli přihlásit se pomocí svého **Apple ID** a používat **iCloud**.                         |
-    | <strong>Podmínky a ujednání</strong> | Požaduje, aby uživatel přijal podmínky a ujednání společnosti Apple. |
-    | <strong>Touch ID</strong> | Umožní uživateli nastavit pro zařízení identifikaci otiskem prstu. |
-    | <strong>Apple Pay</strong> | Umožní uživateli nastavit na zařízení Apple Pay. |
-    | <strong>Zoom</strong> | Umožní uživateli zvětšit zobrazení při nastavování zařízení. |
-    | <strong>Siri</strong> | Umožní uživateli nastavit Siri. |
-    | <strong>Diagnostická data</strong> | Zobrazí uživateli obrazovku Diagnostická data. Tato obrazovka umožní uživateli poslat společnosti Apple diagnostická data. |
-    | <strong>FileVault</strong> | Umožní uživateli nastavit šifrování FileVault. |
-    | <strong>Diagnostika iCloudu</strong> | Umožní uživateli poslat společnosti Apple diagnostická data iCloudu. |
-    | <strong>Úložiště iCloud</strong> | Poskytněte uživateli možnost použít úložiště iCloud. |    
-    | <strong>Tón zobrazení</strong> | Poskytněte uživateli možnost zapnout tónový displej. |
-    | <strong>Příznaky</strong> | Zobrazit obrazovku vzhled pro uživatele |
-    | <strong>Registrace</strong>| Vyžaduje, aby uživatel zařízení zaregistroval. |
-    | <strong>Ochrana osobních údajů</strong>| Zobrazit obrazovku ochrany osobních údajů uživateli. |
-    | <strong>Čas obrazovky</strong>| Zobrazit obrazovku čas obrazovky uživateli |
+    | <strong>Heslo</strong> | Vyzve uživatele k zadání hesla. Vždy vyžadovat heslo pro nezabezpečená zařízení, pokud není přístup kontrolován jiným způsobem (například celoobrazovkový režim, který zařízení omezuje na jednu aplikaci). Pro iOS/iPadOS 7,0 a novější. |
+    | <strong>Zjišťování polohy</strong> | Vyzve uživatele k poskytnutí polohy. Pro macOS 10,11 a novější a iOS/iPadOS 7,0 a novější. |
+    | <strong>Obnovení</strong> | Zobrazí obrazovku aplikace & data. Tato obrazovka nabídne uživateli při nastavování zařízení možnost obnovit nebo přenést data ze zálohy v iCloudu. Pro macOS 10,9 a novější a iOS/iPadOS 7,0 a novější. |
+    | <strong>Apple ID</strong> | Umožní uživateli přihlásit se pomocí svého Apple ID a používat iCloud. Pro macOS 10,9 a novější a iOS/iPadOS 7,0 a novější.   |
+    | <strong>Podmínky a ujednání</strong> | Požaduje, aby uživatel přijal podmínky a ujednání společnosti Apple. Pro macOS 10,9 a novější a iOS/iPadOS 7,0 a novější. |
+    | <strong>Touch ID</strong> | Umožní uživateli nastavit pro zařízení identifikaci otiskem prstu. Pro macOS 10.12.4 a novější a iOS/iPadOS 8,1 a novější. |
+    | <strong>Apple Pay</strong> | Umožní uživateli nastavit na zařízení Apple Pay. Pro macOS 10.12.4 a novější a iOS/iPadOS 7,0 a novější. |
+    | <strong>Zoom</strong> | Umožní uživateli zvětšit zobrazení při nastavování zařízení. Pro iOS/iPadOS 8,3 a novější. |
+    | <strong>Siri</strong> | Umožní uživateli nastavit Siri. Pro macOS 10,12 a novější a iOS/iPadOS 7,0 a novější. |
+    | <strong>Diagnostická data</strong> | Zobrazí uživateli obrazovku Diagnostická data. Tato obrazovka umožní uživateli poslat společnosti Apple diagnostická data. Pro macOS 10,9 a novější a iOS/iPadOS 7,0 a novější. |
+    | <strong>FileVault</strong> | Zobrazit na uživateli obrazovku šifrování trezoru 2. Pro macOS 10,10 a novější. |
+    | <strong>Diagnostika iCloud</strong> | Zobrazit obrazovku analýzy iCloud pro uživatele Pro macOS 10.12.4 a novější. |
+    | <strong>Úložiště iCloud</strong> | Zobrazí uživateli iCloud dokumenty a plochu obrazovky. Pro macOS 10.13.4 a novější. |
+    | <strong>Tón zobrazení</strong> | Poskytněte uživateli možnost zapnout tónový displej. Pro macOS 10.13.6 a novější a iOS/iPadOS 9.3.2 a novější. |
+    | <strong>Příznaky</strong> | Zobrazit obrazovku vzhled pro uživatele Pro macOS 10,14 a novější a iOS/iPadOS 13,0 a novější. |
+    | <strong>Registrace</strong> | Zobrazit registrační obrazovku uživateli Pro macOS 10,9 a novější. |
+    | <strong>Čas obrazovky</strong> | Zobrazí obrazovku čas obrazovky. Pro macOS 10,15 a novější a iOS/iPadOS 12,0 a novější. |
+    | <strong>Ochrana osobních údajů</strong> | Zobrazit obrazovku ochrany osobních údajů uživateli. Pro macOS 10.13.4 a novější a iOS/iPadOS 11,3 a novější. |
+    
+10. Kliknutím na tlačítko **Další** přejdete na stránku **Revize + vytvořit** .
 
-9. Vyberte **OK**.
-
-10. Pokud chcete profil uložit, zvolte **Vytvořit**.
+11. Pokud chcete profil uložit, zvolte **Vytvořit**.
 
 ## <a name="sync-managed-devices"></a>Synchronizace spravovaných zařízení
 
 Teď, když má Intune oprávnění spravovat vaše zařízení, můžete synchronizovat Intune s Apple, aby se spravovaná zařízení zobrazila v Intune na portálu Azure Portal.
 
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **MacOS** > **MacOS registrace** > **tokenů programu** > vyberte token v seznamu > **zařízení** > **synchronizovat**. ![ Snímek obrazovky s vybraným uzlem zařízení programu registrace a vybraným odkazem pro synchronizaci](./media/device-enrollment-program-enroll-macos/image06.png)
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení**  >  **MacOS**  >  **MacOS registrace**  >  **tokenů programu registrace**.
+
+2. Vyberte token v seznamu > **Devices** > **synchronizace**zařízení. ![ Snímek obrazovky s vybraným uzlem zařízení programu registrace a vybraným odkazem pro synchronizaci](./media/device-enrollment-program-enroll-macos/image06.png)
 
    Pro zajištění souladu s podmínkami společnosti Apple za účelem přijatelného provozu registračního programu ukládá Intune následující omezení:
    - Úplná synchronizace se nesmí pouštět častěji než jednou za sedm dní. Během úplné synchronizace načte Intune úplný aktualizovaný seznam sériových čísel přiřazených k serveru Apple MDM připojenému k Intune. Po odstranění zařízení programu registrace z portálu Intune bez jeho přiřazení ze serveru Apple MDM na portálu Apple se nebude znovu naimportovat do Intune, dokud se nespustí Úplná synchronizace.   
@@ -201,10 +208,10 @@ Povolili jste správu a synchronizaci mezi společností Apple a Intune a přiř
 
 4. Zvolte **Your Server Token** (Token vašeho serveru).  
 5. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **registrace zařízení**registrace  >  **Apple**  >  **tokeny programu registrace** > vyberte token.
-    ![Snímek obrazovky s možností Tokeny programu registrace](./media/device-enrollment-program-enroll-macos/enrollmentprogramtokens.png)
+    ![Snímek obrazovky s možností Tokeny programu registrace](./media/device-enrollment-program-enroll-ios/enrollmentprogramtokens.png)
 
 6. Vyberte možnost **Obnovit token** a zadejte Apple ID, které jste použili k vytvoření původního tokenu.  
-    ![Snímek obrazovky s možností Generate New Token (Vygenerovat nový token)](./media/device-enrollment-program-enroll-macos/renewtoken.png)
+    ![Snímek obrazovky s možností Generate New Token (Vygenerovat nový token)](./media/device-enrollment-program-enroll-ios/renewtoken.png)
 
 7. Nahrajte nově stažený token.  
 8. Zvolte **Obnovit token**. Zobrazí se potvrzení, že se token obnovil.

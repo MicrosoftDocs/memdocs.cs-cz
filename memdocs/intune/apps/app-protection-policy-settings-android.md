@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/28/2020
+ms.date: 06/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6ce5424dee1b968684a792f594abde18f5223679
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 60fa6177bc127fc36ceb66e7b3a59572f8cfee90
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990021"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85092911"
 ---
 # <a name="android-app-protection-policy-settings-in-microsoft-intune"></a>Nastavení zásad ochrany aplikací pro Android v Microsoft Intune
 Tento článek popisuje nastavení zásad ochrany aplikací pro zařízení s Androidem. Popsaná nastavení zásad lze [nakonfigurovat](app-protection-policies.md) pro zásady ochrany aplikací v podokně **Nastavení** v Azure Portal.
@@ -42,7 +42,10 @@ Existují tři kategorie nastavení zásad: nastavení ochrany dat, požadavky n
 | **Posílání organizačních dat do jiných aplikací** | Určete, jaké aplikace můžou přijímat data z této aplikace: <ul><li> **Aplikace spravované podle zásad:** Povoluje přenos jenom do jiných aplikací spravovaných podle zásad.</li> <li>**Všechny aplikace**: povoluje přenos do libovolné aplikace. </li> <li>**Žádné**: Nepovoluje přenos dat do žádné aplikace, včetně ostatních aplikací spravovaných podle zásad.</li></ul> <p>U některých aplikací a služeb, které mají výjimku, může být v Intune standardně povolený přenos dat. Pokud potřebujete povolit přenos dat do aplikace, která nepodporuje zásady ochrany aplikací Intune, můžete vytvořit vlastní výjimky. Další informace najdete v tématu [výjimky přenosu dat](app-protection-policy-settings-android.md#data-transfer-exemptions).<p>Tato zásada může platit také pro odkazy na aplikace pro Android.  Obecné webové odkazy se spravují pomocí **odkazů otevřít aplikace v** nastavení zásad Intune Managed Browser.<p><div class="NOTE"><p>Poznámka</p><p>Intune v současné době nepodporuje funkci rychlých aplikací pro Android. Intune jakékoli datové připojení k aplikaci nebo z aplikace zablokuje. Další informace najdete v tématu [Android Instant Apps](https://developer.android.com/topic/instant-apps/index.html) v dokumentaci pro vývojáře pro Android.</p><p>Pokud jsou pro **všechny aplikace**nakonfigurované **údaje pro odesílání organizačních dat do jiných aplikací** , můžou se textová data dál přenášet prostřednictvím sdílení operačního systému do schránky.</p></div> | **Všechny aplikace** | 
 |<ul><ui>**Vybrat aplikace, které se mají vyloučit** | Tato možnost je k dispozici, když pro předchozí možnost vyberete možnost *aplikace spravované zásadou* . | |
 |<ul><ui>**Uložení kopií dat org** | Zvolením možnosti **blokovat** zakážete použití možnosti Uložit jako v této aplikaci. Vyberte možnost **povoleno** , pokud chcete povolí použití možnosti Uložit jako. **Poznámka:** *Toto nastavení je podporováno pro aplikace Microsoft Excel, OneNote, PowerPoint a Word. Můžou je podporovat i obchodní aplikace třetích stran.*| **Povolit** |  
-|<ul><ui>**Umožňuje uživateli ukládat kopie do vybraných služeb.** |Uživatelé můžou k ukládání používat vybrané služby (OneDrive pro firmy, SharePoint a místní úložiště). Všechny ostatní služby budou blokované.  | **0 vybráno** |
+|<ul><ui><ul><ui>**Umožňuje uživateli ukládat kopie do vybraných služeb.** |Uživatelé můžou k ukládání používat vybrané služby (OneDrive pro firmy, SharePoint a místní úložiště). Všechny ostatní služby budou blokované.  | **0 vybráno** |
+|<ul><ui>**Přenos dat do telekomunikací** | Když uživatel v aplikaci vybere telefonní číslo s hypertextovými odkazy, otevře se aplikace pro vytáčené telefonní číslo, které se předem vyplní a které se bude volat. Pro toto nastavení vyberte, jak se má tento typ přenosu obsahu zpracovat při zahájení z aplikace spravované zásadou:<ul><li>**Žádné, nepřeneste tato data mezi aplikacemi**: při zjištění telefonního čísla nepřeneste data komunikace.</li><li>**Konkrétní aplikace pro vytáčené připojení**: umožňuje, aby konkrétní aplikace pro vytáčené připojení zahájily kontakt při zjištění telefonního čísla.</li><li>**Libovolná aplikace pro telefonickou správu**: povoluje, aby aplikace pro telefonickou správu zásad spouštěla kontakt, když se zjistí telefonní číslo.</li><li>**Libovolná aplikace pro vytáčené připojení**: umožňuje, aby se při zjištění telefonního čísla spouštěla aplikace, která se má použít k zahájení kontaktu.</li></ul>| **Libovolná aplikace pro telefonování** |  
+|<ul><ui><ul><ui>**ID balíčku aplikace pro vytáčení** | Pokud jste vybrali konkrétní aplikaci pro telefonování, musíte zadat [ID balíčku aplikace](../apps/app-configuration-vpn-ae.md#get-the-app-package-id). | **Trhnout** |
+|<ul><ui><ul><ui>**Název aplikace pro vytáčení** | Pokud jste vybrali konkrétní aplikaci pro telefonování, musíte zadat název aplikace pro vytáčené připojení. | **Trhnout** |
 | **Příjem dat z jiných aplikací** | Určete, jaké aplikace můžou převádět data do této aplikace: <ul><li>**Aplikace spravované podle zásad:** Povoluje přenos jenom z jiných aplikací spravovaných podle zásad.</li><li>**Všechny aplikace**: povoluje přenos dat ze všech aplikací.</li><li>**Žádné:** Nepovoluje přenos dat z žádné aplikace, včetně ostatních aplikací spravovaných podle zásad. </li></ul> <p>Z některých aplikací a služeb, které mají výjimku, může Intune povolit přenos dat. Úplný seznam takových aplikací a služeb najdete v části [Výjimky přenosu dat](app-protection-policy-settings-android.md#data-transfer-exemptions). | **Všechny aplikace** |
 | **Omezit vyjmutí, kopírování a vkládání mezi ostatními aplikacemi** | Určete, kdy se můžou v této aplikaci použít akce vyjmutí, kopírování a vložení. Vybírejte z těchto možností: <ul><li>**Blokováno:** Nepovoluje akce vyjmutí, kopírování a vložení mezi touto a jakoukoliv jinou aplikací.</li><li>**Aplikace spravované podle zásad:** Povoluje operace vyjmutí, kopírování a vložení mezi touto aplikací a jinými aplikacemi spravovanými podle zásad.</li><li>**Aplikace s vložením spravované podle zásad:** Povoluje vyjmutí a kopírování mezi touto aplikací a jinými aplikacemi spravovanými podle zásad. Povoluje vložení dat z jakékoliv aplikace do této aplikace.</li><li>**Libovolná aplikace:** Operace vyjmutí, kopírování a vložení do a z této aplikace nejsou nijak omezené. | **Libovolná aplikace** |
 | <ul><ui>**Vyjmutí a zkopírování omezení znaků pro libovolnou aplikaci** | Zadejte počet znaků, které mohou být vyjmuty nebo zkopírovány z dat a účtů organizace.  To umožní sdílet zadaný počet znaků, pokud by byl jinak zablokován nastavením "Omezit vyjmutí, kopírování a vložení s jinými aplikacemi".<p>Výchozí hodnota = 0<p>**Poznámka**: vyžaduje portál společnosti Intune verze 5.0.4364.0 nebo novější.  | **0** |

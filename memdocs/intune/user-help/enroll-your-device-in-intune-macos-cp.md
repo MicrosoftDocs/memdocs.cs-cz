@@ -5,7 +5,7 @@ keywords: Mac OS X, macOS, OS X
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 12/16/2019
+ms.date: 06/18/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,27 +19,27 @@ ms.reviewer: kakyker
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 2f3fe39285542199cf214c4b5bf505a176663657
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: fe405b66892ec7777d8d1572b2fb6ab6ce1aaa91
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83882421"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85094191"
 ---
 # <a name="enroll-your-macos-device-using-the-company-portal-app"></a>Registrace zařízení macOS pomocí aplikace Portál společnosti  
 
 Pokud chcete získat zabezpečený přístup k pracovnímu nebo školnímu e-mailu, souborům a aplikacím, zaregistrujte zařízení macOS pomocí aplikace Portál společnosti Intune.
 
-Organizace obvykle vyžadují, abyste si zařízení zaregistrovali předtím, než budete mít přístup ke speciálním datům. Po registraci zařízení se bude *Spravovat*. Vaše organizace může k zařízení přiřadit zásady a aplikace prostřednictvím poskytovatele správy mobilních zařízení (MDM), jako je třeba Intune. Pokud chcete mít nepřetržitý přístup k pracovním nebo školním informacím na zařízení, musíte nakonfigurovat zařízení tak, aby odpovídalo nastavení zásad vaší organizace.  
+Organizace obvykle vyžadují, abyste si zařízení zaregistrovali předtím, než budete mít přístup ke speciálním datům. Po registraci zařízení se bude *Spravovat*. Vaše organizace může k zařízení přiřadit zásady a aplikace prostřednictvím poskytovatele správy mobilních zařízení (MDM), jako je třeba Intune. Pokud chcete mít nepřetržitý přístup k pracovním nebo školním informacím na zařízení, musíte zařízení nastavit tak, aby odpovídalo nastavení zásad vaší organizace.  
 
-Tento článek popisuje, jak používat aplikaci Portál společnosti pro macOS k registraci, konfiguraci a údržbě svého zařízení, abyste splnili požadavky vaší organizace.  
+Tento článek popisuje, jak používat aplikaci Portál společnosti pro macOS k nastavení a údržbě zařízení, abyste splnili požadavky vaší organizace.  
 
 
 ## <a name="what-to-expect-from-the-company-portal-app"></a>Co čekat od aplikace Portál společnosti
 
 Při počáteční instalaci aplikace Portál společnosti vyžaduje, abyste se přihlásili a ověřili ve své organizaci. Portál společnosti pak informuje o všech nastaveních, která potřebujete ke konfiguraci, aby splňovala požadavky vaší organizace. Organizace si například často určují požadavky na minimální a maximální délku hesla, které musíte splnit.    
 
-Po registraci zařízení se Portál společnosti vždycky ujistěte, že je zařízení chráněné podle požadavků vaší organizace. Pokud například nainstalujete aplikaci z nedůvěryhodného zdroje, Portál společnosti vás upozorní a může omezit přístup k prostředkům vaší organizace. Zásady ochrany aplikací, jako je tato, jsou běžné. Pokud chcete znovu získat přístup, budete pravděpodobně muset odinstalovat nedůvěryhodnou aplikaci. 
+Po registraci zařízení se Portál společnosti vždycky ujistěte, že je zařízení chráněné podle požadavků vaší organizace. Pokud například nainstalujete aplikaci ze zdroje, který není důvěryhodný, Portál společnosti vás upozorní a může omezit přístup k prostředkům vaší organizace. Zásady ochrany aplikací, jako je tato, jsou běžné. Chcete-li znovu získat přístup, budete pravděpodobně muset aplikaci odinstalovat. 
 
 Pokud po registraci vaše organizace vynutila nový požadavek na zabezpečení, jako je například vícefaktorové ověřování, Portál společnosti vás upozorní. Budete tak mít možnost si nastavení upravit, abyste se zařízením mohli dále pracovat.  
 
@@ -67,19 +67,20 @@ Pomocí následujících kroků zaregistrujete zařízení macOS ve vaší organ
 
 1. Přihlaste se k Portál společnosti pomocí svého pracovního nebo školního účtu.  
 2. Po otevření aplikace vyberte **začít**.  
-3. Přečtěte si, co vaše organizace uvidí a neuvidí na zaregistrovaném zařízení. Potom vyberte **Pokračovat**.
-4.  Pokud se zobrazí výzva, zadejte heslo zařízení na obrazovce **Instalace profilu správy** .
+3. Přečtěte si [, co vaše organizace uvidí a](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md) neuvidí na zaregistrovaném zařízení. Potom vyberte **Pokračovat**.
+4. Na obrazovce **Instalace profilu správy** vyberte **Stáhnout profil**.  
 
-    ![Příklad obrazovky Portál společnosti, obrazovky pro instalaci profilu správy, zvýrazňování výzvy k zadání hesla](./media/install-management-profile-macos-1912.PNG)   
-5. Na obrazovce **Potvrdit správu zařízení** vyberte **Otevřít Předvolby systému**.  
+    ![Příklad obrazovky Portál společnosti, obrazovky pro instalaci profilu správy, zvýrazňování výzvy k zadání hesla](./media/install-management-profile-macos-2006.png)   
 
-    ![Příklad obrazovky s potvrzením obrazovky potvrdit správu zařízení, zvýraznění "otevřené Předvolby systému".](./media/confirm-device-management-macos-1912.PNG)  
-6. Spustí se Předvolby systému vašeho zařízení. V seznamu profily zařízení vyberte možnost **Profil správy** a pak vyberte **schválit**  >  **schválení**.  
-    ![Příklad obrazovky Předvolby systému, obrazovka profilu správy, zvýrazňování tlačítka "schválit".](./media/management-profile-approve-macos-1912.PNG)   
-1. Vraťte se do Portál společnosti a vyberte **pokračovat**.    
-2. Vaše organizace může vyžadovat, abyste aktualizovali nastavení zařízení. Po dokončení aktualizace nastavení vyberte možnost **kontrolovat nastavení**.  
+5. Spustí se Předvolby systému vašeho zařízení.  
+    a. Vyberte **nainstalovat** a pak znovu vyberte **nainstalovat** .  
+    b. Pokud budete vyzváni k zadání hesla zařízení.   
+6. Po instalaci se profil zobrazí v seznamu profily v části **Profil správy**.
+    ![Příklad obrazovky Předvolby systému, obrazovka profilu správy, zvýrazňování tlačítka "schválit".](./media/management-profile-approve-macos-2006.png)   
+7. Vraťte se na Portál společnosti.    
+8. Vaše organizace může vyžadovat, abyste aktualizovali nastavení zařízení. Po dokončení aktualizace nastavení vyberte **Opakovat**.  
 
-    ![Ukázkový snímek obrazovky Portál společnosti, aktualizace nastavení zařízení, zvýraznění tlačítka "kontrolovat nastavení".](./media/update-settings-mac-1911.PNG)  
+    ![Příklad obrazovky Portál společnosti, aktualizace nastavení zařízení, zvýraznění tlačítka opakovat.](./media/update-settings-mac-2006.png)  
 9. Po dokončení instalace vyberte **Hotovo**.  
 
 

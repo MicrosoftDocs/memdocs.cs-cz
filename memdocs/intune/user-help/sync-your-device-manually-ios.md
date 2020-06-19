@@ -1,11 +1,11 @@
 ---
-title: Ruční synchronizace zařízení s iOSem | Dokumentace Microsoftu
-description: ''
+title: Ruční synchronizace zařízení s iOS pomocí Portál společnosti Intune
+description: Inicializujte ruční synchronizaci z Portál společnosti, abyste opravili prodlevy a zpoždění, jako jsou například pomalé nebo zastavené instalace aplikací.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/02/2018
+ms.date: 06/18/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,32 +15,42 @@ ms.assetid: 2780101b-f703-4b78-9d33-f68490b9382d
 searchScope:
 - User help
 ROBOTS: ''
-ms.reviewer: esmich
+ms.reviewer: kakyker
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 4120e73c803085fafda755d5bf845befb1ead046
-ms.sourcegitcommit: 7b2f7918d517005850031f30e705e5a512959c3d
+ms.openlocfilehash: f9b4424bc7eed109846b497684e6859c5f407011
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84776918"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85094133"
 ---
 # <a name="sync-your-ios-device-manually"></a>Ruční synchronizace zařízení s iOS
 
-V některých případech může aplikace trvat příliš dlouho, než se stáhnou z Portál společnosti. Pokud taková situace nastane, zkuste zařízení synchronizovat ručně. Zařízení se pokusí získat informace, které nemohlo stáhnout.
+Inicializujte ruční synchronizaci z Portál společnosti, abyste opravili prodlevy a zpoždění, jako jsou například pomalé nebo zastavené instalace aplikací. Během synchronizace se Portál společnosti v zařízení kontrolují, aby se zajistilo, že bude splňovat požadavky vaší organizace. Synchronizuje vaše zařízení se zásadami nebo aktualizacemi, které ještě nemáte, a může vám pomáhat vyřešit stahování nebo jiné procesy, které probíhají. 
+
+Portál společnosti pravidelně kontrolují vaše zařízení, ale můžete pomocí následujících kroků spustit synchronizaci kdykoli z aplikace. 
 
 1. Otevřete aplikaci Portál společnosti.
 
-2. Klepněte na **Zařízení**. Pokud máte více zařízení, zobrazí se jejich seznam. Zvolte zařízení, které právě používáte. Pokud máte jenom jedno zařízení, přejdete přímo na stránku s podrobnostmi o zařízení.
+2. Klepněte na **Zařízení**. 
+3. Pokud máte jenom jedno zařízení, přejdete přímo na obrazovku s podrobnostmi o zařízení a můžete přejít ke kroku 4. Pokud máte více zařízení, zobrazí se v seznamu všechna zařízení. Klepněte na zařízení, které právě používáte. 
 
-    ![Snímek obrazovky Zařízení se dvěma zařízeními; u horního zařízení je text „Toto je zařízení iPhone 6, které v tuto chvíli používáte“](./media/ios_sync_1_CP_after_1804.png)
+    ![Snímek obrazovky zařízení se zobrazením tří zařízení a zvýrazněním toho, který uživatel aktuálně používá. V horním zařízení je text "Toto je iPhone, který aktuálně používáte."](./media/ios-sync-1-company-portal-2006.png)
 
-3. Pokud chcete zařízení synchronizovat, klepněte na **Zkontrolovat nastavení**. Dokud synchronizace neskončí, uvidíte na obrazovce načítací pruh.
+4. Klepnutím na možnost **kontrolovat stav** synchronizujte zařízení. 
 
-    ![Snímek obrazovky s podrobnostmi o zařízení, časem posledního vrácení se změnami a odkazem Zkontrolovat nastavení](./media/ios_sync_2_CP_after_1804.png)  
+    ![Snímek obrazovky s odkazem na stav kontroly zvýraznění podrobností o zařízení](./media/ios-sync-2-company-portal-2006.png)  
 
-   ![Snímek obrazovky s podrobnostmi o zařízení a načítacím pruhem, když uživatel klikl na Zkontrolovat nastavení](./media/ios_sync_3_CP-after_1804.png)
+ 5. Počkejte, než Portál společnosti potvrdí stav zařízení. Stav se aktualizuje na obrazovce a upozorní vás, jestli splňujete požadavky na zabezpečení vaší organizace. 
 
-Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).
+       ![Snímek obrazovky s podrobnostmi o zařízení, který zvýrazňuje panel načítání.](./media/ios-sync-3-company-portal-2006.png)
+
+
+## <a name="next-steps"></a>Další kroky  
+Po dokončení těchto kroků zkontrolujte, zda je vyřešen původní problém. Pokud tomu tak není, může to být užitečné při restartování instalačního nástroje nebo úlohy. Potřebujete ještě další pomoc? Obraťte se na pracovníky podpory IT. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).  
+
+
+
 

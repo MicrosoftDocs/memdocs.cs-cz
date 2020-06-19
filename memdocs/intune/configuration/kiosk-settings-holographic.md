@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3d54e02c7bb88354ec59a9a8ce780ff559377466
-ms.sourcegitcommit: 169e279ba686c28d9a23bc0a54f0a2a0d20bdee4
+ms.openlocfilehash: d18ea0a12f0525b71fbcb8660187af36f1148bee
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83556094"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093161"
 ---
 # <a name="windows-holographic-for-business-device-settings-to-run-as-a-kiosk-in-intune"></a>Nastavení zařízení s Windows holografickým pro firmy, která se mají spustit jako veřejný terminál v Intune
 
@@ -32,7 +32,7 @@ Jako správce Intune můžete vytvořit a přiřadit tato nastavení k vašim za
 
 Další informace o funkci veřejného terminálu Windows v Intune najdete v tématu [Konfigurace nastavení veřejného terminálu](kiosk-settings.md).
 
-## <a name="before-you-begin"></a>Před zahájením
+## <a name="before-you-begin"></a>Než začnete
 
 - [Vytvoří konfigurační profil zařízení s Windows 10 v celoobrazovkovém](kiosk-settings.md#create-the-profile)režimu.
 
@@ -112,4 +112,4 @@ Aplikace v tomto režimu jsou k dispozici v nabídce Start. Tyto aplikace jsou j
 
 [Přiřaďte profil](device-profile-assign.md) a [monitorujte jeho stav](device-profile-monitor.md).
 
-Můžete také vytvořit profily pro celoobrazovkový režim pro zařízení s [Androidem](device-restrictions-android.md#kiosk), [Androidem Enterprise](device-restrictions-android-for-work.md#dedicated-devices)a [Windows 10 a novějším](kiosk-settings-windows.md) .
+Můžete také vytvořit profily pro celoobrazovkový režim pro zařízení s [Androidem](device-restrictions-android.md#kiosk), [Androidem Enterprise](device-restrictions-android-for-work.md#device-experience)a [Windows 10 a novějším](kiosk-settings-windows.md) .

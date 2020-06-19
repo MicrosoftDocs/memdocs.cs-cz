@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/12/2020
+ms.date: 06/10/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5ee1f3b68a6c78ee1099f8adcbfc935d9fa61103
-ms.sourcegitcommit: 7f542c97ac55bbd329f5befda97d671213c24e9a
+ms.openlocfilehash: 47cf8819c29a3e766a5f475acdd9bbbf5bf7d584
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84506252"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093605"
 ---
 # <a name="use-and-manage-android-enterprise-devices-with-oemconfig-in-microsoft-intune"></a>Používání a Správa zařízení s Androidem Enterprise pomocí OEMConfig v Microsoft Intune
 
@@ -51,7 +51,7 @@ Když výrobce OEM přidá a vylepšuje funkce správy, výrobce OEM také aktua
 > [!TIP]
 > OEMConfig můžete použít jenom u zařízení, která tuto funkci podporují, a mít odpovídající aplikaci OEMConfig. Konkrétní podrobnosti získáte od výrobce OEM.
 
-## <a name="before-you-begin"></a>Před zahájením
+## <a name="before-you-begin"></a>Než začnete
 
 Při používání OEMConfig si pamatujte na následující informace:
 
@@ -116,6 +116,8 @@ Ujistěte se, že zařízení podporuje OEMConfig, do Intune se přidá správn�
       - Mnoho nastavení má výchozí hodnoty, které dodává výrobce OEM. Pokud chcete zjistit, jestli je výchozí hodnota, najeďte myší na ikonu informace vedle nastavení. Popisek zobrazuje výchozí hodnoty pro toto nastavení (Pokud je k dispozici) a další podrobnosti poskytované výrobcem OEM.
 
       - Kliknutím na tlačítko **Vymazat** odstraníte nastavení z profilu. Pokud nastavení není v profilu, při použití profilu se jeho hodnota v zařízení nezmění.
+      
+      - Pro vyhledání nastavení použijte tlačítko **Najít** . Na bočním panelu zadejte klíčové slovo pro zobrazení všech relevantních nastavení a jejich popisů. Vyberte libovolné nastavení, pokud chcete automaticky přidat nastavení do stromu návrháře konfigurace, pokud tam ještě není. Také automaticky otevře strom, aby bylo možné toto nastavení zobrazit. 
 
       - Pokud vytvoříte prázdnou (nenakonfigurovanou) sadu prostředků v Návrháři konfigurace, odstraní se při přepnutí do editoru JSON.
 
