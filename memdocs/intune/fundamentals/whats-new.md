@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/11/2020
+ms.date: 06/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 46d440f070f8fcc726cb3978eee3e34358ac0907
-ms.sourcegitcommit: 9a8a9cc7dcb6ca333b87e89e6b325f40864e4ad8
+ms.openlocfilehash: 9e6e9ec3e5f97d48bda63f66bbbd39dd1f23b870
+ms.sourcegitcommit: 3217778ebe7fd0318810696e8931e427a85da897
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84740805"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85107541"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
@@ -51,10 +51,207 @@ Podívejte se, co je nového v jednom týdnu v Microsoft Intune v [centru pro sp
 ### Device security
 ### Intune apps
 ### Monitor and troubleshoot
+### Scripts
+
 
 <!-- ########################## -->
 
 
+## <a name="week-of-june-15-2020--2006-service-release"></a>Týden od 15. června 2020 (vydání služby 2006)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="app-management"></a>Správa aplikací  
+
+#### <a name="telecommunications-data-transfer-protection-for-managed-apps---6884491----"></a>Ochrana přenosu dat pro spravované aplikace v telekomunikačních aplikacích<!-- 6884491  -->
+Když se v chráněné aplikaci zjistí telefonní číslo s hypertextovými odkazy, Intune zkontroluje, jestli se nastavily zásady ochrany, které jim umožní přenášet číslo do aplikace pro vytáčené připojení. Můžete zvolit, jak se má tento typ přenosu obsahu zpracovat při zahájení z aplikace spravované zásadou. Při vytváření zásad ochrany aplikací v Microsoft Endpoint Manageru vyberte možnost spravovaná aplikace z **dat odeslat organizaci ostatním aplikacím**a pak vyberte možnost z **přenosu dat do**. Další informace o tomto nastavení ochrany dat najdete v tématu nastavení [zásad ochrany aplikací pro Android v](../apps/app-protection-policy-settings-android.md) tématu [nastavení zásad ochrany aplikací](../apps/app-protection-policy-settings-ios.md)pro Microsoft Intune a iOS. 
+
+#### <a name="unified-delivery-of-azure-ad-enterprise-and-office-online-applications-in-the-company-portal---7414033----"></a>Jednotné doručování aplikací Azure AD Enterprise a Office Online v Portál společnosti<!-- 7414033  -->
+V podokně **přizpůsobení** služby Intune můžete vybrat možnost **Skrýt** nebo **Zobrazit** **podnikové aplikace Azure AD** a **aplikace Office Online** v portál společnosti. Každý koncový uživatel uvidí ze zvolené služby Microsoftu celý katalog aplikací. Ve výchozím nastavení se každý další zdroj aplikace nastaví jako **skrytý**. Tato funkce se nejprve projeví na webu Portál společnosti, kde se očekává podpora Portál společnosti systému Windows. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **přizpůsobení správy tenanta**  >  **Customization** a najděte toto nastavení konfigurace. Související informace najdete v tématu [Postup přizpůsobení aplikací portál společnosti Intune, portál společnosti webu a aplikace Intune](../apps/company-portal-app.md).
+
+#### <a name="improvements-to-the-company-portal-for-macos-enrollment-experience---6444452----"></a>Vylepšení Portál společnosti možností registrace macOS<!-- 6444452  -->
+Portál společnosti pro zápis do macOS má jednodušší proces registrace, který se podrobněji zarovnává s Portál společnostim pro možnosti registrace v iOS. Uživatelům zařízení se zobrazí:  
+- Elegantní uživatelské rozhraní.  
+- Vylepšený kontrolní seznam pro registraci.  
+- Informace o tom, jak zaregistrovat svá zařízení.  
+- Vylepšené možnosti řešení potíží.  
+
+Další informace o Portál společnosti najdete v tématu [přizpůsobení aplikace Portál společnosti Intune, portál společnosti webu a aplikace Intune](../apps/company-portal-app.md).
+
+#### <a name="improvements-to-devices-page-of-iosipados-and-macos-company-portals---6055001---"></a>Stránka vylepšení zařízení v portálech společnosti pro iOS/iPadOS a macOS<!-- 6055001 -->
+Provedli jsme změny na stránce Portál společnosti **zařízení** , aby se vylepšilo prostředí aplikací pro uživatele se systémem iOS/IPadOS a Mac. Kromě toho, že jsme vytvořili mnohem moderní vzhled a atmosféru, jsme změnili uspořádání podrobností o zařízení v rámci jednoho sloupce s definovanými záhlavími oddílů, aby uživatelé viděli stav zařízení. Pro uživatele, jejichž zařízení nedodržují předpisy, jsme také přidali jasné zprávy a kroky pro řešení potíží. Další informace o Portál společnosti najdete v tématu [přizpůsobení aplikace Portál společnosti Intune, portál společnosti webu a aplikace Intune](../apps/company-portal-app.md). Postup ruční synchronizace zařízení najdete v tématu [Ruční synchronizace zařízení s iOS](../user-help/sync-your-device-manually-ios.md).  
+
+#### <a name="cloud-setting-for-iosipados-company-portal-app---7071303----"></a>Nastavení cloudu pro iOS/iPadOS Portál společnosti aplikaci<!-- 7071303  -->
+Nové nastavení **cloudu** pro iOS/iPadOS portál společnosti umožňuje uživatelům přesměrovat ověřování do příslušného cloudu pro vaši organizaci. Ve výchozím nastavení je nastavení nakonfigurováno na **Automatické**, které směruje ověřování do cloudu automaticky zjištěného zařízením uživatele. Pokud se ověřování pro vaši organizaci musí přesměrovat do jiného cloudu, než je Cloud, který se automaticky detekuje (například veřejná nebo státní správa), můžou uživatelé ručně vybrat příslušný Cloud tak, že si vyberete **Nastavení** aplikace > **portál společnosti**  >  **cloudu**. Vaši uživatelé by měli změnit nastavení **cloudu** jenom z **automatického** , pokud se přihlásí z jiného zařízení a příslušný Cloud se nedetekuje automaticky podle zařízení. 
+
+#### <a name="duplicate-apple-vpp-tokens---7101606----"></a>Duplicitní tokeny programu Apple VPP<!-- 7101606  -->
+Tokeny programu Apple VPP se stejným **umístěním tokenu** jsou teď označené jako **duplicitní** a dají se po odebrání duplicitního tokenu synchronizovat znovu. K tokenům, které jsou označené jako duplicitní, můžete i nadále přiřazovat licence a odvolat je. Licence pro nové aplikace a koupené knihy se ale neprojeví, když je token označený jako duplicitní. Pokud chcete najít tokeny programu Apple VPP pro vašeho tenanta, z [centra pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte konektory **pro správu tenanta**  >  **a tokeny**  >  **Apple VPP**. Další informace o tokenech VPP najdete v tématu [Správa aplikací pro iOS a MacOS zakoupených prostřednictvím Apple Volume purchase program s Microsoft Intune](../apps/vpp-apps-ios.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-configuration"></a>Konfigurace zařízení
+
+#### <a name="add-multiple-root-certificates-for-eap-tls-authentication-in-wi-fi-profiles-on-macos-devices---2077871----"></a>Přidání více kořenových certifikátů pro ověřování EAP-TLS v profilech sítě Wi-Fi na zařízeních macOS<!-- 2077871  -->
+
+Na zařízeních MacOS můžete vytvořit profil Wi-Fi a vybrat typ ověřování protokolem EAP (Extensible Authentication Protocol) (konfigurace**zařízení**  >  **profily**  >  **vytvořit profil**  >  **MacOS** pro platformu > **Wi-Fi** pro cloudovou > **typ Wi-Fi** nastavenou na Enterprise).
+
+Když nastavíte **typ protokolu EAP** na ověřování **EAP-TLS**, **EAP-TTLS**nebo **PEAP** , můžete přidat několik kořenových certifikátů. Dřív jste mohli přidat jenom jeden kořenový certifikát.
+
+Další informace o nastaveních, která můžete konfigurovat, najdete v tématu [Přidání nastavení Wi-Fi pro zařízení MacOS v Microsoft Intune](../configuration/wi-fi-settings-macos.md).
+
+Platí pro:
+- macOS
+
+#### <a name="use-pkcs-certificates-with-wi-fi-profiles-on-windows-10-and-newer-devices---3246388-----"></a>Použití certifikátů PKCS se profily sítě Wi-Fi na Windows 10 a novějších zařízeních<!-- 3246388   -->
+Profily Wi-Fi pro Windows můžete ověřit pomocí certifikátů SCEP (**Konfigurace zařízení**  >  **profily**  >  **vytvořit profil**  >  **Windows 10 a novější** pro Platform > **Wi-Fi** pro typ profilu > **Podnikový**  >  **typ protokolu EAP**). Nyní můžete použít certifikáty PKCS se profily sítě Windows Wi-Fi. Tato funkce umožňuje uživatelům ověřovat profily sítě Wi-Fi pomocí nových nebo existujících profilů certifikátů PKCS ve vašem tenantovi. 
+
+Další informace o nastavení Wi-Fi, která můžete nakonfigurovat, najdete [v tématu Přidání nastavení Wi-Fi pro zařízení s Windows 10 a novějším v Intune](../configuration/wi-fi-settings-windows.md).
+
+Platí pro:
+- Windows 10 a novější
+
+#### <a name="wired-network-device-configuration-profiles-for-macos-devices---3508686----"></a>Profily konfigurace síťových zařízení s drátovou sítí pro zařízení macOS<!-- 3508686  -->
+K dispozici je nový profil konfigurace zařízení MacOS, který konfiguruje drátové sítě (**zařízení** > * * konfigurační profily > **vytvořit profil**  >  **MacOS** pro > **drátovou síť** platformy pro profil). Pomocí této funkce můžete vytvořit profily 802.1 x ke správě drátových sítí a tyto drátové sítě nasadit do zařízení macOS.
+
+Další informace o této funkci najdete v tématu [kabelové sítě na zařízeních MacOS](../configuration/wired-networks-configure.md).
+
+Platí pro:
+- macOS
+
+#### <a name="use-microsoft-launcher-as-the-default-launcher-for-fully-managed-android-enterprise-devices---4927976-----"></a>Jako výchozí spouštěcí spouštěč pro plně spravovaná zařízení s Androidem Enterprise použít spouštěč Microsoftu<!-- 4927976   -->
+Na zařízeních pro vlastníka zařízení s Androidem Enterprise můžete nastavit spouštěč Microsoftu jako výchozí spouštěcí spouštěč pro plně spravovaná zařízení (konfigurace**zařízení**  >  **profily**  >  **vytvořit profil**  >  **Android Enterprise** for Platform > **pro zařízení profily**  >  **Device restrictions** pro > **prostředí zařízení**). Ke konfiguraci všech dalších nastavení spouštěče Microsoftu použijte [zásady konfigurace aplikací](../apps/configure-microsoft-launcher.md). 
+
+Existují taky některé další aktualizace uživatelského rozhraní, včetně **vyhrazených zařízení** , která se přejmenují do **prostředí zařízení**.
+
+Pokud chcete zobrazit všechna nastavení, která můžete omezit, přečtěte si téma [nastavení zařízení s Androidem Enterprise a povolte nebo omezte funkce pomocí Intune](../configuration/device-restrictions-android-for-work.md). 
+
+Platí pro:
+- Zařízení s plně spravovaným vlastníkem zařízení s Androidem Enterprise (COBO)
+
+#### <a name="use-autonomous-single-app-mode-settings-to-configure-the-ios-company-portal-app-to-be-a-sign-insign-out-app---7055619-----"></a>Použít autonomní nastavení samostatného režimu aplikace ke konfiguraci aplikace Portál společnosti pro iOS na přihlášení a odhlášení aplikace<!-- 7055619   -->
+V zařízeních s iOS/iPadOS můžete nakonfigurovat aplikace tak, aby běžely v autonomním režimu jedné aplikace (ASAM). Nyní aplikace Portál společnosti podporuje ASAM a lze ji nakonfigurovat tak, aby byla aplikací "přihlášení a odhlášení". V tomto režimu se uživatelé musí přihlašovat do aplikace Portál společnosti, aby mohli používat jiné aplikace a tlačítko na domovské obrazovce zařízení. Když se odhlásí z aplikace Portál společnosti, zařízení se vrátí do režimu jedné aplikace a zamkne se v Portál společnosti aplikaci.
+
+Pokud chcete nakonfigurovat portál společnosti v Asam, přečtěte si v části **zařízení**  >  **konfigurační profily**  >  **vytvořit profil**  >  **iOS/iPadOS** pro **omezení** platformy > zařízení pro profil > **autonomní režim jedné aplikace**.
+
+Další informace najdete v tématu [autonomní režim jedné aplikace (Asam)](../configuration/device-restrictions-ios.md#autonomous-single-app-mode-asam) a [režim jedné aplikace](https://support.apple.com/guide/mdm/single-app-mode-mdm80a981/1/web/1) (otevře web společnosti Apple).
+
+Platí pro:
+- iOS/iPadOS
+
+#### <a name="configure-content-caching-on-macos-devices---7106872-----"></a>Konfigurace ukládání obsahu do mezipaměti na zařízeních macOS<!-- 7106872   -->
+Na zařízeních MacOS můžete vytvořit konfigurační profil, který konfiguruje ukládání obsahu do mezipaměti (**Devices**  >  **Konfigurace zařízení profily**  >  **vytvořit profil**  >  **MacOS** pro **funkce** platformy > pro profil). Pomocí těchto nastavení můžete odstranit mezipaměť, zapnout sdílenou mezipaměť, nastavit limit mezipaměti na disku a další.
+
+Další informace o ukládání obsahu do mezipaměti najdete v tématu [ContentCaching](https://developer.apple.com/documentation/devicemanagement/contentcaching) (otevření webu společnosti Apple).
+
+Nastavení, která můžete nakonfigurovat, najdete [v tématu Nastavení funkcí zařízení MacOS v Intune](../configuration/macos-device-features-settings.md).
+
+Platí pro:
+- macOS
+
+#### <a name="add-new-schema-settings-and-search-for-existing-schema-settings-using-oemconfig-on-android-enterprise---6394386-----"></a>Přidejte nová nastavení schématu a vyhledejte existující nastavení schématu pomocí OEMConfig v Androidu Enterprise.<!-- 6394386   -->
+V Intune můžete použít OEMConfig ke správě nastavení na zařízeních s Androidem Enterprise (**Devices**  >  **Konfigurace zařízení profily**  >  **vytvořit profil**  >  **Android Enterprise** for Platform > **OEMConfig** for Profile). Když použijete **Návrháře konfigurace**, zobrazí se vlastnosti ve schématu aplikace. Nyní můžete v **Návrháři konfigurace**:
+
+- Přidejte do schématu aplikace nová nastavení.
+- Ve schématu aplikace vyhledejte nová a stávající nastavení.
+
+Další informace o profilech OEMConfig v Intune najdete v tématu [používání a Správa zařízení s Androidem Enterprise pomocí OEMConfig v Microsoft Intune](../configuration/android-oem-configuration-overview.md).
+
+Platí pro:
+- Android Enterprise
+
+#### <a name="block-shared-ipad-temporary-sessions-on-shared-ipad-devices---6613794----"></a>Blokovat sdílené dočasné relace iPadu na sdílených zařízeních iPad<!-- 6613794  -->
+V Intune je k dispozici nový **blok sdílené dočasné relace pro iPad** , který blokuje dočasné relace na sdílených zařízeních iPadu (konfigurace**zařízení**  >  **profily**  >  **vytvořit profil**  >  **iOS/iPadOS** pro > **omezení zařízení** pro typ profilu > **sdíleného iPadu**). Pokud je tato možnost povolená, koncoví uživatelé nemůžou používat účet hosta. Musí se přihlásit k zařízení pomocí spravovaného Apple ID a hesla. 
+
+Další informace najdete v tématu [nastavení zařízení s iOS a iPadOS, která umožňují povolit nebo zakázat funkce](../configuration/device-restrictions-ios.md).
+
+Platí pro:
+- Sdílená zařízení iPad s iOS/iPadOS 13,4 a novějšími
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-enrollment"></a>Registrace zařízení
+
+#### <a name="bring-your-own-devices-can-use-vpn-to-deploy--5015344----"></a>Vlastní zařízení můžou používat k nasazení sítě VPN.<!--5015344  -->
+Nový profil pro **přeskočení kontroly připojení k doméně** pomocí nového profilu autopilotu přeskočit přepínač umožňuje nasadit hybridní zařízení služby Azure AD join bez přístupu k podnikové síti pomocí vašeho vlastního klienta Win32 VPN od jiného výrobce. Pokud se chcete podívat na nový přepínač, přejděte do [centra pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)  >  **zařízení**   >  **Windows**  >  **Windows enrollment**  >  **profily nasazení**registrace  >  **vytvořit profil**předspouštěného  >  **prostředí (OOBE)**.
+
+#### <a name="enrollment-status-page-profiles-can-be-set-to-device-groups--3952138---"></a>Profily stránky stavu registrace se dají nastavit na skupiny zařízení.<!--3952138 -->
+Dříve mohli profily na stránce stavu registrace (ESP) cílit jenom na skupiny uživatelů. Nyní je můžete nastavit také na cílové skupiny zařízení. Další informace najdete v části {set a stránka stavu registrace] (.. /enrollment/windows-enrollment-status.md).
+
+#### <a name="automated-device-enrollment-sync-errors---6988214---"></a>Automatizované chyby synchronizace registrace zařízení<!-- 6988214 -->
+Pro zařízení s iOS/iPadOS a macOS se budou hlásit nové chyby, včetně
+- Telefonní číslo obsahuje neplatné znaky nebo je toto pole prázdné. 
+- Neplatný nebo prázdný název konfigurace pro profil. 
+- Neplatná hodnota kurzoru/neplatné nebo, pokud se nenajde žádný kurzor.
+- Odmítnuto nebo vypršela platnost tokenu. 
+- Pole oddělení je prázdné nebo je jeho délka příliš dlouhá. 
+- V Apple se nenašel profil a je potřeba vytvořit nový. 
+- Počet odebraných zařízení Apple Business Manageru se přidá na stránku Přehled, kde vidíte stav svých zařízení.
+
+#### <a name="shared-ipads-for-business--6367326-----"></a>Shared iPady for Business<!--6367326   -->
+Službu Intune a Apple Business Manager můžete použít ke snadnému a bezpečnému nastavení sdíleného iPadu tak, aby zařízení mohla sdílet více zaměstnanců. [Sdílený iPad](https://developer.apple.com/education/shared-ipad/) společnosti Apple nabízí individuální prostředí pro více uživatelů při zachování uživatelských dat. Pomocí spravovaného Apple ID můžou uživatelé získat přístup k aplikacím, datům a nastavením po přihlášení ke všem sdíleným iPadům v jejich organizaci. Sdílený iPad spolupracuje se federované identity.
+
+Tuto funkci zobrazíte tak, že přejdete do [centra pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431)  >  **zařízení**.  >  **iOS**  >  **iOS enrollment**  >  **tokeny programu registrace** iOS > vyberte token * * > **profily**  >  **vytvořit profil**  >  **iOS**. Na stránce **Nastavení správy** vyberte **zaregistrovat bez přidružení uživatele** a zobrazí se možnost **sdílené iPady** .
+
+Vyžaduje: iPadOS 13,4 a novější. Tato verze přidala podporu pro dočasné relace se sdíleným iPadem, takže uživatelé budou mít přístup k zařízení bez spravovaného Apple ID. Po odhlášení zařízení vymaže všechna uživatelská data, aby bylo zařízení hned připravené k použití, což eliminuje nutnost vymazání zařízení. 
+
+#### <a name="updated-user-interface-for-apples-automated-device-enrollment--7430322---"></a>Aktualizované uživatelské rozhraní pro automatizované registrace zařízení společnosti Apple<!--7430322 -->
+Uživatelské rozhraní bylo aktualizováno, aby nahradilo Program registrace zařízení od Applu k automatizované registraci zařízení, aby odráželo terminologii Apple.
+
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-management"></a>Správa zařízení
+
+#### <a name="device-remote-lock-pin-available-for-macos--7281557-----"></a>PIN kód pro vzdálené uzamčení zařízení je k dispozici pro macOS<!--7281557   -->
+Dostupnost pro vzdálené zámky zařízení macOS se zvýšila z 7 dnů na 30 dnů.
+
+#### <a name="change-primary-user-on-co-managed-devices--7319183----"></a>Změna primárního uživatele na spoluspravovaných zařízeních<!--7319183  -->
+Pro spoluspravovaná zařízení s Windows můžete změnit primárního uživatele zařízení. Další informace o tom, jak ho najít a změnit, najdete v tématu [vyhledání primárního uživatele zařízení v Intune](../remote-actions/find-primary-user.md).
+
+#### <a name="setting-the-intune-primary-user-also-sets-the-azure-ad-owner-property--7319227---"></a>Nastavení primárního uživatele Intune také nastaví vlastnost Owner služby Azure AD.<!--7319227 -->
+Tato nová funkce automaticky nastaví vlastnost Owner u nově zaregistrovaných zařízení připojených k hybridní službě Azure AD současně s nastaveným primárním uživatelem Intune. Další informace o primárním uživateli najdete v tématu [vyhledání primárního uživatele zařízení v Intune](../remote-actions/find-primary-user.md).
+
+Toto je změna procesu registrace a vztahuje se jenom na nově zaregistrovaná zařízení. Pro existující zařízení připojená k hybridní službě Azure AD musíte ručně aktualizovat vlastnost vlastníka Azure AD. K tomu můžete použít [funkci změnit primárního uživatele](../remote-actions/find-primary-user.md#change-a-devices-primary-user) nebo [skript](https://github.com/microsoftgraph/powershell-intune-samples/tree/master/ManagedDevices).
+
+Když se zařízení s Windows 10 stanou připojenými k adresáři Azure Azure Hybrid, stane se prvním uživatelem tohoto zařízení primárním uživatelem ve Správci koncových bodů.  V současné době se uživatel nenastavuje na odpovídajícím objektu zařízení Azure AD. To způsobuje nekonzistenci při porovnání vlastnosti *Owner* z portálu Azure AD s vlastností *primárního uživatele* v centru pro správu služby Microsoft Endpoint Manager. Vlastnost Owner služby Azure AD se používá pro zabezpečení přístupu k klíčům pro obnovení BitLockeru. Tato vlastnost není naplněná na zařízeních připojených k hybridní službě Azure AD. Toto omezení brání nastavení samoobslužného obnovení BitLockeru ze služby Azure AD. Tato funkce toto omezení řeší.
+
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-security"></a>Zabezpečení zařízení
+
+#### <a name="hide-the-recovery-key-from-users-during-filevault-2-encryption-for-macos-devices---5459801----"></a>Skrýt obnovovací klíč od uživatelů během šifrování trezoru 2 pro zařízení macOS<!-- 5459801  -->
+Do kategorie *trezoru úložišť* jsme přidali nové nastavení v rámci šablony [MacOS Endpoint Protection](../protect/endpoint-protection-macos.md#filevault) : **skryjte obnovovací klíč**. Toto nastavení skrývá osobní klíč od koncového uživatele během šifrování trezoru 2. 
+
+Chcete-li zobrazit osobní obnovovací klíč šifrovaného zařízení macOS, může uživatel zařízení přejít do některého z následujících umístění a kliknout na tlačítko *získat obnovovací klíč* pro zařízení MacOS: 
+
+- Aplikace Portál společnosti pro iOS/iPadOS
+- Aplikace Intune
+- Web portálu společnosti
+- Aplikace Portál společnosti pro Android
+
+#### <a name="support-for-smime-signing-and-encryption-certificates-with-outlook-on-android-fully-managed--5896415-----"></a>Podpora podpisových a šifrovacích certifikátů S/MIME s Outlookem v plně spravovaném Androidu<!--5896415   -->
+Nyní můžete používat certifikáty pro podepisování S/MIME a šifrování pomocí Outlooku na zařízeních, na kterých běží plně spravovaná platforma Android Enterprise.
+
+Tím se rozšíří podpora přidaná za poslední měsíc pro jiné verze Androidu (podpora podpisových a šifrovacích certifikátů S aplikací s Outlookem v Androidu). Tyto certifikáty můžete zřídit pomocí profilů certifikátů SCEP a PKCS.
+
+Další informace o této podpoře najdete v tématu [citlivostní označování a ochrana v Outlooku pro iOS a Android](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/sensitive-labeling-and-protection-outlook-for-ios-android) v dokumentaci k Exchangi.
+
+#### <a name="add-a-link-to-your-company-portal-support-website-to-emails-for-noncompliance---7225498------"></a>Přidání odkazu na web podpory portálu společnosti na e-maily při nedodržení předpisů<!-- 7225498    -->
+Když [nakonfigurujete šablonu zprávy s oznámením](../protect/actions-for-noncompliance.md#create-a-notification-message-template) pro odesílání e-mailových oznámení o nedodržení předpisů, použijte nové nastavení **portál společnosti odkaz na web** , který automaticky zahrne odkaz na portál společnosti Web. Když je tato možnost nastavená na *Povolit*, můžou uživatelé s nekompatibilními zařízeními, kteří přijímají e-mail na základě této šablony, použít odkaz k otevření webu, kde se dozvíte víc o tom, proč jejich zařízení nedodržuje předpisy. 
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="licensing"></a>Licensing
+
+#### <a name="admins-no-longer-require-an-intune-license-to-access-microsoft-endpoint-manager-admin-console--1335430---"></a>Správci už nepotřebují licenci Intune pro přístup ke konzole pro správu Microsoft Endpoint Manageru.<!--1335430 -->
+Teď můžete nastavit přepínač na úrovni tenanta, který odebere licenční požadavek Intune pro správce pro přístup k konzole správce paměti a rozhraní API pro grafy dotazů. Po odebrání licenčního požadavku ho nikdy nemůžete obnovit. 
+
+
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="scripts"></a>Scripts 
+
+#### <a name="availability-of-shell-scripts-on-macos-devices---7134839----"></a>Dostupnost skriptů prostředí na zařízeních macOS<!-- 7134839  -->
+Skripty prostředí pro zařízení macOS jsou teď dostupné pro státní Cloud a čínské zákazníky. Další informace o skriptech prostředí najdete v tématu [použití skriptů prostředí v zařízeních MacOS v Intune](../apps/macos-shell-scripts.md).
+
+
+
+<!-- ########################## -->
 ## <a name="week-of-june-8-2020"></a>Týden od 8. června 2020   
 
 ### <a name="app-management"></a>Správa aplikací  
@@ -62,10 +259,10 @@ Podívejte se, co je nového v jednom týdnu v Microsoft Intune v [centru pro sp
 #### <a name="updates-to-informational-screen-in-company-portal-for-iosipados---7032452---"></a>Aktualizace informativní obrazovky v Portál společnosti pro iOS/iPadOS <!--7032452 -->
 Informační obrazovka v Portál společnosti pro iOS/iPadOS se aktualizovala, aby lépe vysvětlil, co správce může zobrazit a dělat na zařízeních. Tato objasnění se týkají pouze zařízení vlastněných společností. Aktualizovali jsme jenom text, neudělaly se žádné skutečné úpravy, které správce uvidí nebo na uživatelských zařízeních nevidí. Aktualizované obrazovky zobrazíte tak, že přejdete na [aktualizace uživatelského rozhraní pro aplikace Intune pro koncové uživatele](./whats-new-app-ui.md).
 
-#### <a name="android-company-portal-user-experience---5736084---"></a>Uživatelské prostředí pro Android Portál společnosti<!-- 5736084 -->
+#### <a name="updated-android-app-conditional-launch-end-user-experience---5736084---"></a>Aktualizovaná činnost podmíněného spuštění aplikace pro Android a činnost koncového uživatele<!-- 5736084 -->
 Verze 2006 Portál společnosti pro Android obsahuje změny, které jsou sestavené s aktualizacemi ze verze 2005. V 2005 jsme zavedli aktualizaci, kde koncoví uživatelé zařízení se systémem Android, kteří vystavili upozornění, zablokování nebo vymazání pomocí zásad ochrany aplikací, uvidí celou stránku s popisem důvodu upozornění, blokování nebo vymazání a kroků k nápravě problémů. V 2006 se uživatelé aplikací pro Android, kteří mají přiřazenou zásadu ochrany aplikací, provedou pomocí průvodce, aby opravili problémy, které způsobují zablokování přístupu k aplikaci. 
 
-
+<!-- ########################## -->
 ## <a name="week-of-may-25-2020"></a>Týden od 25. května 2020
 
 ### <a name="app-management"></a>Správa aplikací
@@ -76,20 +273,8 @@ Aplikace Windows 32-bit (x86), které jsou nasazeny jako dostupné pro zařízen
 #### <a name="windows-company-portal-app-icon---7114635---"></a>Ikona aplikace pro Windows Portál společnosti<!-- 7114635 -->
 Změnila se ikona aplikace Portál společnosti pro Windows. Další informace o Portál společnosti najdete v tématu [přizpůsobení aplikace Portál společnosti Intune, portál společnosti webu a aplikace Intune](../apps/company-portal-app.md).
 
-### <a name="device-management"></a>Správa zařízení
 
-#### <a name="tenant-attach-device-timeline-in-the-admin-center--7220536-cm7141381----"></a>Připojení tenanta: časová osa zařízení v centru pro správu<!--7220536, CM7141381  -->
-Když Configuration Manager synchronizuje zařízení s Microsoft Endpoint Managerem prostřednictvím připojení tenanta, uvidíte časovou osu událostí. Tato časová osa zobrazuje minulou aktivitu v zařízení, která vám může pomoct při řešení problémů. Další informace najdete v tématu [Configuration Manager Technical preview 2005](../../configmgr/core/get-started/2020/technical-preview-2005.md#bkmk_timeline) .  
-
-#### <a name="tenant-attach-install-an-application-from-the-admin-center---7220536-cm6024389----"></a>Připojení tenanta: instalace aplikace z centra pro správu<!-- 7220536, CM6024389  -->
-Instalaci aplikace můžete iniciovat v reálném čase pro připojené zařízení klienta z centra pro správu služby Microsoft Endpoint Management. Další informace najdete v tématu [Configuration Manager Technical preview 2005](../../configmgr/core/get-started/2020/technical-preview-2005.md#bkmk_apps) . 
-
-#### <a name="tenant-attach-cmpivot-from-the-admin-center--7220536-cm6024392----"></a>Připojení tenanta: CMPivot z centra pro správu<!--7220536, CM6024392  -->
-Můžete využít sílu [CMPivot] ((.. /.. /ConfigMgr/tenant-Attach/cmpivot-Overview-Attached.MD) do centra pro správu služby Microsoft Endpoint Manager. Umožněte dalším osoby, jako je helpdesk, aby bylo možné iniciovat dotazy v reálném čase z cloudu proti jednotlivým zařízením spravovaným nástrojem ConfigMgr a vracet výsledky zpátky do centra pro správu. To poskytuje všechny tradiční výhody CMPivot, které správcům IT a dalším určeným osoby schopnost rychle vyhodnotit stav zařízení ve svém prostředí a provést akci. Další informace najdete v tématu [Configuration Manager Technical preview 2005](../../configmgr/core/get-started/2020/technical-preview-2005.md#bkmk_cmpivot) . 
-
-#### <a name="tenant-attach-run-scripts-from-the-admin-center--7220536-cm6234688----"></a>Připojení tenanta: spuštění skriptů z centra pro správu<!--7220536, CM6234688  -->
-Výkon funkce Configuration Manager místní [spuštění skriptu](../../configmgr/apps/deploy-use/create-deploy-scripts.md) můžete přenést do centra pro správu služby Microsoft Endpoint Manager. Povolí další osoby, jako je helpdesk, aby se spouštěly skripty PowerShellu z cloudu proti jednotlivým Configuration Manager spravovaným zařízením. To poskytuje všechny tradiční výhody skriptů PowerShellu, které již byly definovány a schváleny správcem Configuration Manager k tomuto novému prostředí. Další informace najdete v tématu [Configuration Manager Technical preview 2005](../../configmgr/core/get-started/2020/technical-preview-2005.md#bkmk_scripts) . 
-
+<!-- ########################## -->
 ## <a name="week-of-may-18-2020"></a>Týden od 18. května 2020
 
 ### <a name="app-management"></a>Správa aplikací  
@@ -97,6 +282,7 @@ Výkon funkce Configuration Manager místní [spuštění skriptu](../../configm
 #### <a name="update-to-icons-in-company-portal-app-for-iosipados-and-macos--6057697---"></a>Aktualizace ikon v aplikaci Portál společnosti pro iOS/iPadOS a macOS<!--6057697 -->
 V Portál společnosti jsme aktualizovali ikony, aby bylo možné vytvořit pokročilejší vzhled a chování, které se podporuje na zařízeních s duální obrazovkou a zarovnává se se systémem Microsoft Fluent design System. Aktualizované ikony zobrazíte tak, že přejdete na [aktualizace uživatelského rozhraní pro aplikace Intune pro koncové uživatele](./whats-new-app-ui.md). 
 
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="device-security"></a>Zabezpečení zařízení
 
 #### <a name="use-endpoint-detection-and-response-policy-to-onboard-devices-to-defender-atp---7130165----"></a>Použití zjišťování koncových bodů a zásad odezvy k zapojení zařízení do ATP pro Defender<!-- 7130165  -->
@@ -110,7 +296,7 @@ Pokud chcete používat zásady pro Configuration Manager zařízení, musíte [
 - Synchronizujte svoje kolekce zařízení s vaší hierarchií do centra pro správu služby Microsoft Endpoint Manager.
 
 
-
+<!-- ########################## -->
 ## <a name="week-of-may-11-2020-2005-service-release"></a>Týden od 11. května 2020 (2005 Service Release)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -128,9 +314,7 @@ Další informace najdete v tématu [Akce zařízení Samoobslužná služba z p
 Aplikace, které se publikují jako dostupné aplikace programu Volume purchase program (VPP), se automaticky aktualizují, pokud je pro token VPP povolená **Automatická aktualizace aplikací** . Dříve dostupné aplikace VPP se neaktualizovaly automaticky. Místo toho museli koncoví uživatelé přejít na Portál společnosti a znovu nainstalovat aplikaci, pokud byla k dispozici novější verze. Požadované aplikace nadále podporují automatické aktualizace.
 
 
-#### <a name="unified-delivery-of-azure-ad-enterprise-and-office-online-applications-in-the-company-portal---4404429-----"></a>Jednotné doručování aplikací Azure AD Enterprise a Office Online v Portál společnosti<!-- 4404429   -->
-*Tato funkce byla zpožděna.*
-V podokně **přizpůsobení** služby Intune můžete vybrat možnost **Skrýt** nebo **Zobrazit** **podnikové aplikace Azure AD** a **aplikace Office Online** v portál společnosti. Každý koncový uživatel uvidí ze zvolené služby Microsoftu celý katalog aplikací. Ve výchozím nastavení se každý další zdroj aplikace nastaví jako **skrytý**. Tato funkce se nejprve projeví na webu Portál společnosti, s podporou na portálech Windows, iOS/iPadOS a macOS společnosti, které by měly dodržovat. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **přizpůsobení správy tenanta**  >  **Customization** a najděte toto nastavení konfigurace. Související informace najdete v tématu [Postup přizpůsobení aplikací portál společnosti Intune, portál společnosti webu a aplikace Intune](../apps/company-portal-app.md).
+
 
 #### <a name="android-company-portal-user-experience---5736084----"></a>Uživatelské prostředí pro Android Portál společnosti<!-- 5736084  -->
 Ve vydání 2005 Portál společnosti Androidu se koncovým uživatelům zařízení s Androidem, kteří mají v zásadách ochrany aplikací vystavili upozornění, zablokování nebo vymazání, se zobrazí nové uživatelské prostředí. Místo aktuálního prostředí dialogu se koncovým uživatelům zobrazí celá stránka popisující důvod upozornění, blokování nebo vymazání a postup, jak problém vyřešit. Další informace najdete v tématu [prostředí ochrany aplikací pro zařízení s Androidem](../apps/app-protection-policy.md#app-protection-experience-for-android-devices) a [nastavení zásad ochrany aplikací pro Android v Microsoft Intune](../apps/app-protection-policy-settings-android.md).
@@ -490,6 +674,7 @@ Tato funkce platí pro:
 
 - macOS
 
+<!-- ########################## -->
 ## <a name="week-of-march-16-2020-2003-service-release"></a>Týden od 16. března 2020 (2003 vydání služby)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -584,7 +769,7 @@ Nové možnosti organizace jsou ty, které jsou k dispozici pro základní profi
 Aktualizovali jsme [prostředí pro uživatele](../configuration/device-profile-create.md) v centru pro správu správy koncových**Devices**bodů (  >  **konfigurační profily**zařízení  >  **vytvořit profil**) pro vytváření a úpravu následujících typů profilů. Nové prostředí prezentuje stejné nastavení jako předtím, ale používá i průvodce, který nepotřebuje tolik horizontální posouvání. Pro nové prostředí nebudete muset měnit existující konfigurace.
 
 - Odvozené přihlašovací údaje
-- E-mail
+- E-mailu
 - Certifikát PKCS
 - Importovaný certifikát PKCS
 - Certifikát SCEP
@@ -1075,10 +1260,6 @@ Další informace o nastavení, které můžete nakonfigurovat, najdete v témat
 Tato funkce platí pro:
 
 - Operační systém/iPadOS
-
-#### <a name="wired-network-device-configuration-profiles-for-macos-devices---3508686----"></a>Profily konfigurace síťových zařízení s drátovou sítí pro zařízení macOS<!-- 3508686  -->
-   > [!NOTE]
-   > Tato funkce byla zpožděna, ale brzy bude vydána.
 
 #### <a name="block-users-from-configuring-certificate-credentials-in-the-managed-keystore-on-android-enterprise-device-owner-devices---3311998---"></a>Zablokovat uživatelům nastavení přihlašovacích údajů certifikátu ve spravovaném úložišti klíčů na zařízeních s Androidem Enterprise Device Owner<!-- 3311998 -->
 Na zařízeních pro vlastníka zařízení s Androidem Enterprise můžete nakonfigurovat nové nastavení, které uživatelům zablokuje konfiguraci svých přihlašovacích údajů k certifikátu ve spravovaném úložišti klíčů (**Konfigurace zařízení**  >  **profily**  >  **vytvořit profil**  >  **Android Enterprise** pro Platform > **Owner jenom > omezení zařízení** > **Uživatelé a účty**).

@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/09/2019
+ms.date: 06/19/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dfcedebf32c8f08450e3eaa87c99f9bc11dd7431
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 972596cd3973c84c4f00409464f2fe621efc1369
+ms.sourcegitcommit: 3217778ebe7fd0318810696e8931e427a85da897
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906899"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85107420"
 ---
 # <a name="windows-10-and-later-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Nastavení Windows 10 a novějších označení zařízení jako kompatibilních nebo nekompatibilních s Intune
 
@@ -35,7 +35,7 @@ Tato funkce platí pro:
 
 Jako správce Intune můžete pomocí těchto nastavení dodržování předpisů ochránit prostředky vaší organizace. Další informace o zásadách dodržování předpisů a o tom, co dělají, najdete v tématu [Začínáme s dodržováním předpisů pro zařízení](device-compliance-get-started.md).
 
-## <a name="before-you-begin"></a>Před zahájením
+## <a name="before-you-begin"></a>Než začnete
 
 [Vytvořte zásady dodržování předpisů](create-compliance-policy.md#create-the-policy). V části **platforma**vyberte **Windows 10 a novější**.
 
@@ -46,13 +46,12 @@ Jako správce Intune můžete pomocí těchto nastavení dodržování předpis�
 - **Vyžadovat nástroj BitLocker**:  
    Windows BitLocker Drive Encryption šifruje všechna data uložená na svazku operačního systému Windows. BitLocker používá čip TPM (Trusted Platform Module) k ochraně operačního systému Windows a uživatelských dat. Pomáhá také ověřit, že počítač není úmyslně poškozen, a to ani v případě, že je jeho levý bezobslužný, ztracený nebo odcizený. Pokud je počítač vybavený kompatibilním čipem TPM, nástroj BitLocker pomocí čipu TPM uzamkne šifrovací klíče, které chrání data. K těmto klíčům proto nelze přistupovat, dokud čip TPM neověří stav počítače.  
 
-   - **Nenakonfigurováno** (*výchozí*) – Toto nastavení není vyhodnoceno pro dodržování předpisů nebo nedodržování předpisů.
-   - **Vyžadovat** – zařízení může chránit data uložená na disku před neoprávněným přístupem, když je systém vypnutý nebo v režimu hibernace.  
-
+  - **Nenakonfigurováno** (*výchozí*) – Toto nastavení není vyhodnoceno pro dodržování předpisů nebo nedodržování předpisů.
+  - **Vyžadovat** – zařízení může chránit data uložená na disku před neoprávněným přístupem, když je systém vypnutý nebo v režimu hibernace.  
 
 - **Vyžadovat, aby na zařízení bylo povolené zabezpečené spouštění**:  
-    - **Nenakonfigurováno** (*výchozí*) – Toto nastavení není vyhodnoceno pro dodržování předpisů nebo nedodržování předpisů.
-    - **Vyžadovat** – systém je nucen spouštět do důvěryhodného stavu výroby. Základní komponenty, které se používají ke spouštění počítače, musí mít správné kryptografické podpisy, které jsou důvěryhodné pro organizaci, která zařízení vyrobila. Firmware UEFI nejdříve ověří podpis a až potom povolí spuštění počítače. Pokud jsou nějaké soubory úmyslně poškozeny, což přeruší svůj podpis, systém se nespustí.
+  - **Nenakonfigurováno** (*výchozí*) – Toto nastavení není vyhodnoceno pro dodržování předpisů nebo nedodržování předpisů.
+  - **Vyžadovat** – systém je nucen spouštět do důvěryhodného stavu výroby. Základní komponenty, které se používají ke spouštění počítače, musí mít správné kryptografické podpisy, které jsou důvěryhodné pro organizaci, která zařízení vyrobila. Firmware UEFI nejdříve ověří podpis a až potom povolí spuštění počítače. Pokud jsou nějaké soubory úmyslně poškozeny, což přeruší svůj podpis, systém se nespustí.
 
   > [!NOTE]
   > U některých zařízení s čipem TPM 1,2 a 2,0 je nastavení **vyžadovat, aby bylo povolené zabezpečené spuštění na zařízení** . Pokud zařízení nepodporují TPM 2.0 nebo novější, zobrazí se v Intune stav zásady jako **nevyhovující**. Další informace o podporovaných verzích najdete v tématu [ověření stavu zařízení](https://docs.microsoft.com/windows/security/information-protection/tpm/trusted-platform-module-overview#device-health-attestation).
@@ -60,7 +59,7 @@ Jako správce Intune můžete pomocí těchto nastavení dodržování předpis�
 - **Vyžadovat integritu kódu**:  
   Integrita kódu je funkce, která ověřuje integritu ovladače nebo systémového souboru pokaždé, když je načten do paměti.
   - **Nenakonfigurováno** (*výchozí*) – Toto nastavení není vyhodnoceno pro dodržování předpisů nebo nedodržování předpisů.
-  -  **Vyžadovat** – vyžaduje integritu kódu, která detekuje, jestli se do jádra nenačítá nepodepsaný ovladač nebo systémový soubor. Také zjistí, zda je systémový soubor změněn škodlivým softwarem nebo spuštěn pomocí uživatelského účtu s oprávněními správce.
+  - **Vyžadovat** – vyžaduje integritu kódu, která detekuje, jestli se do jádra nenačítá nepodepsaný ovladač nebo systémový soubor. Také zjistí, zda je systémový soubor změněn škodlivým softwarem nebo spuštěn pomocí uživatelského účtu s oprávněními správce.
 
 Další zdroje informací:
 
@@ -104,7 +103,7 @@ Platí jenom pro spoluspravovaná zařízení s Windows 10 a novějším. Zaří
 
 - **Vyžadovat Configuration Manager dodržování předpisů zařízením**:  
   - **Nenakonfigurováno** (*výchozí*) – Intune nekontroluje žádné nastavení Configuration Manager pro dodržování předpisů.
-  - **Vyžadovat** – vyžaduje, aby všechna nastavení (konfigurační položky) v Configuration Manager splňovala předpisy.  
+  - **Vyžadovat** – vyžaduje, aby všechna nastavení (konfigurační položky) v Configuration Manager splňovala předpisy.
 
     Můžete například vyžadovat, aby v zařízeních byly nainstalované všechny aktualizace softwaru. V Configuration Manager má tento požadavek stav nainstalováno. Pokud jsou některé programy v zařízení v neznámém stavu, zařízení nedodržuje předpisy v Intune.
 
@@ -128,7 +127,7 @@ Platí jenom pro spoluspravovaná zařízení s Windows 10 a novějším. Zaří
   
   Pokud je nastaveno na *alfanumerické*, jsou k dispozici následující nastavení:  
   - **Složitost hesla**:  
-    Možnosti: 
+    Možnosti:
     - **Vyžadovat číslice a malá písmena** (*výchozí*)
     - **Vyžadovat číslice, malá písmena a velká písmena**
     - **Vyžadovat číslice, malá písmena, Velká písmena a speciální znaky**
@@ -172,7 +171,7 @@ Platí jenom pro spoluspravovaná zařízení s Windows 10 a novějším. Zaří
 
 - **Brána firewall**:  
   - **Nenakonfigurováno** (*výchozí*) – Intune neřídí firewall v programu Microsoft Defender ani nemění stávající nastavení.
-  - **Vyžadovat** – zapnout firewall v programu Microsoft Defender a zabránit uživatelům v jeho vypnutí.  
+  - **Vyžadovat** – zapnout firewall v programu Microsoft Defender a zabránit uživatelům v jeho vypnutí.
 
   [Zprostředkovatel CSP brány firewall](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp)
 
@@ -181,27 +180,21 @@ Platí jenom pro spoluspravovaná zařízení s Windows 10 a novějším. Zaří
 
 - **Čip TPM (Trusted Platform Module)**:  
   - **Nenakonfigurováno** (*výchozí*) – Intune nekontroluje u zařízení verzi čipu TPM.
-  - **Vyžadovat** – Intune kontroluje dodržování předpisů ve verzi čipu TPM. Zařízení splňuje předpisy, pokud je verze čipu TPM větší než **0** (nula). Zařízení nedodržuje předpisy, pokud na zařízení není verze TPM.  
+  - **Vyžadovat** – Intune kontroluje dodržování předpisů ve verzi čipu TPM. Zařízení splňuje předpisy, pokud je verze čipu TPM větší než **0** (nula). Zařízení nedodržuje předpisy, pokud na zařízení není verze TPM.
 
   [DeviceStatus CSP – DeviceStatus/TPM/SpecificationVersion uzel](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
   
 - **Antivirová ochrana**:  
-  - **Nenakonfigurováno** (*výchozí*) – Intune nekontroluje žádná antivirová řešení nainstalovaná na zařízení. 
+  - **Nenakonfigurováno** (*výchozí*) – Intune nekontroluje žádná antivirová řešení nainstalovaná na zařízení.
   - **Vyžadovat** – kontroluje dodržování předpisů pomocí antivirových řešení, která jsou zaregistrovaná ve [Windows Security Center](https://blogs.windows.com/windowsexperience/2017/01/23/introducing-windows-defender-security-center/), jako je Symantec a Microsoft Defender.
-  
-  [DeviceStatus CSP – DeviceStatus/Antivirus/status](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
 
-  > [!NOTE]
-  > DeviceStatus CSP pro antivirový program není podporován pro *Windows 10 Home* a oznamuje stav není k *dispozici*. Tým Intune pracuje na opravě. Pokud chcete toto omezení obejít, zvažte použití nastavení [Windows Defenderu](#defender) v zásadách dodržování předpisů pro zařízení. Nastavení Windows Defenderu jsou podporovaná s Windows 10 Home.  
+  [DeviceStatus CSP – DeviceStatus/Antivirus/status](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
 
 - **Antispywarový**program:  
   - **Nenakonfigurováno** (*výchozí*) – Intune nekontroluje žádná antispywarová řešení nainstalovaná na zařízení.
-  - **Vyžadovat** – kontroluje dodržování předpisů pomocí antispywarových řešení, která jsou zaregistrovaná ve [Windows Security Center](https://blogs.windows.com/windowsexperience/2017/01/23/introducing-windows-defender-security-center/), jako je Symantec a Microsoft Defender.  
-  
-  [DeviceStatus CSP – DeviceStatus/antispywarový/status](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
+  - **Vyžadovat** – kontroluje dodržování předpisů pomocí antispywarových řešení, která jsou zaregistrovaná ve [Windows Security Center](https://blogs.windows.com/windowsexperience/2017/01/23/introducing-windows-defender-security-center/), jako je Symantec a Microsoft Defender.
 
-  > [!NOTE]
-  > DeviceStatus CSP pro antispywar není podporován pro *Windows 10 Home* a oznamuje stav *není k dispozici*. Tým Intune pracuje na opravě. Pokud chcete toto omezení obejít, zvažte použití nastavení [Windows Defenderu](#defender) v zásadách dodržování předpisů pro zařízení. Nastavení Windows Defenderu jsou podporovaná s Windows 10 Home. 
+  [DeviceStatus CSP – DeviceStatus/antispywarový/status](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
 
 ### <a name="defender"></a>Defender
 
@@ -212,7 +205,7 @@ Platí jenom pro spoluspravovaná zařízení s Windows 10 a novějším. Zaří
   - **Vyžadovat** – zapnout službu Microsoft Defender anti-malware a zabránit uživatelům v jejich vypnutí.
 
 - **Minimální verze antimalwaru v programu Microsoft Defender**:  
-  Zadejte minimální povolenou verzi služby Microsoft Defender anti-malware. Zadejte například `4.11.0.0`. Pokud je ponecháno prázdné, bude možné použít jakoukoli verzi služby Microsoft Defender anti-malware.  
+  Zadejte minimální povolenou verzi služby Microsoft Defender anti-malware. Zadejte například `4.11.0.0`. Pokud je ponecháno prázdné, bude možné použít jakoukoli verzi služby Microsoft Defender anti-malware.
 
   *Ve výchozím nastavení není nakonfigurována žádná verze*.
 
@@ -231,7 +224,7 @@ Platí jenom pro spoluspravovaná zařízení s Windows 10 a novějším. Zaří
 
   [Defender/AllowRealtimeMonitoring CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
 
-## <a name="microsoft-defender-atp"></a>Microsoft Defender ATP
+## <a name="microsoft-defender-atp"></a>Ochrana ATP v programu Microsoft Defender
 
 ### <a name="microsoft-defender-advanced-threat-protection-rules"></a>Pravidla rozšířené ochrany před internetovými útoky v programu Microsoft Defender
 
@@ -245,12 +238,11 @@ Platí jenom pro spoluspravovaná zařízení s Windows 10 a novějším. Zaří
   
   Informace o nastavení ochrany ATP Microsoft Defenderu (Rozšířená ochrana před internetovými útoky) jako služby ochrany před hrozbami najdete v tématu [Povolení ATP Microsoft Defenderu s podmíněným přístupem](advanced-threat-protection.md).
 
-
 ## <a name="windows-holographic-for-business"></a>Windows Holographic for Business
 
 Windows Holographic for Business používá platformu **Windows 10 a novější**. Windows Holographic for Business podporuje následující nastavení:
 
-- **System Security** > **Šifrování**zabezpečení > systému**datového úložiště na zařízení**.
+- **Zabezpečení systému**  >  **Šifrování**  >  **Šifrování datového úložiště na zařízení**.
 
 Pokud chcete ověřit šifrování u zařízení Microsoft HoloLens, přečtěte si článek [Ověření šifrování zařízení](https://docs.microsoft.com/hololens/hololens-encryption#verify-device-encryption).
 

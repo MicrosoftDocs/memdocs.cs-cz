@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 761f46cdf8865694ba8960044954a16c415a3eba
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 4319435b170203f6dfd3763f1d05d2752fc76f8e
+ms.sourcegitcommit: 3217778ebe7fd0318810696e8931e427a85da897
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988229"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85107515"
 ---
 # <a name="find-the-primary-user-of-an-intune-device"></a>Vyhledání primárního uživatele zařízení v Intune
 
@@ -45,9 +45,8 @@ Primárního uživatele zařízení je možné aktualizovat pro zařízení s Wi
 Až se primární uživatel aktualizuje, aktualizuje se taky v okně Intune a na Azure AD Device Blade.
 >[!NOTE]
 >1. Aktualizace primárního uživatele napříč správcem koncových bodů a Azure AD může trvat až 10 minut, než se odrážejí.
->2. Primární uživatel se aktuálně nemůže změnit na spoluspravovaných zařízeních s Windows 10. 
->3. Změna primárního uživatele zařízení neprovede žádné změny členství v místní skupině, jako je přidání nebo odebrání uživatelů z místní skupiny Administrators.
->4. Změna primárního uživatele nemění uživatele zaregistrovaného uživatelem. 
+>2. Změna primárního uživatele zařízení neprovede žádné změny členství v místní skupině, jako je přidání nebo odebrání uživatelů z místní skupiny Administrators.
+>3. Změna primárního uživatele nemění uživatele zaregistrovaného uživatelem. 
 
 
 ## <a name="what-is-the-primary-user"></a>Co je primární uživatel?
@@ -89,6 +88,8 @@ Intune automaticky přidá primárního uživatele do zařízení během nebo po
 
 ## <a name="primary-user-and-azure-ad-device-owner"></a>Vlastník zařízení s primárním uživatelem a Azure AD
 V některých případech se primární uživatel Intune může lišit od vlastnosti **vlastníka** zařízení Azure AD (zobrazitelné v **zařízeních**  >  **Azure AD**). Vlastník zařízení Azure AD se přidá během registrace zařízení do Azure Active Directory.
+
+U nově zaregistrovaných zařízení Azure AD se vlastnost **Owner** služby Azure AD automaticky nastaví současně s nastaveným primárním uživatelem Intune.
 
 ## <a name="next-steps"></a>Další kroky
 [Spravujte zařízení Intune.](device-management.md)

@@ -18,12 +18,12 @@ ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
 ms.collection: ''
-ms.openlocfilehash: 696969c2d80519d0c0aac2f33c72756aff700f14
-ms.sourcegitcommit: 9a8a9cc7dcb6ca333b87e89e6b325f40864e4ad8
+ms.openlocfilehash: 740d9b68a0101e04e6bf690d09ecce7eaff4509e
+ms.sourcegitcommit: 3217778ebe7fd0318810696e8931e427a85da897
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84740756"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85107313"
 ---
 # <a name="what-information-can-my-organization-see-when-i-enroll-my-device"></a>Jaké informace moje organizace uvidí, když zaregistruji své zařízení?
 
@@ -55,7 +55,7 @@ Při registraci zařízení do Microsoft Intune nevidí organizace vaše osobní
  
  > [!NOTE]
  > Aplikace se považuje za **spravovanou aplikaci** , když je nainstalovaná jedním z následujících způsobů:
- > 1. Uživatel si ho nainstaluje z aplikace Portál společnosti po jeho publikování jako **k dispozici** správcem Intune.
+ > 1. Uživatel ho nainstaluje z aplikace Portál společnosti po jeho publikování jako **k dispozici** správcem Intune.
  > 2. Aplikace je publikovaná podle **požadavku** správce Intune a je na zařízení nainstalovaná. 
  >
  > Pokud jste správcem IT nebo pracovníkem podpory ve vaší organizaci a chcete získat další informace o správě aplikací v Intune, přečtěte si téma [porozumění možnostem nespravovaných aplikací, spravovaných aplikací a aplikací mam](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/understanding-the-capabilities-of-unmanaged-apps-managed-apps/ba-p/249164).
