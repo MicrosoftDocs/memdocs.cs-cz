@@ -17,7 +17,7 @@
         - name: Funkce ve vývoji
           href: in-development.md
         - name: Důležitá oznámení
-          href: 'whats-new.md#notices'
+          href: whats-new.md#notices
 - name: Rychlé starty
   items:
     - name: Vyzkoušejte si Intune zdarma
@@ -163,6 +163,8 @@
               href: china.md
         - name: Přihlášení k Intune
           href: account-sign-up.md
+        - name: Nelicencovaní správci
+          href: unlicensed-admins.md
         - name: Konfigurace domén
           href: custom-domain-name-configure.md
         - name: Přidávání uživatelů

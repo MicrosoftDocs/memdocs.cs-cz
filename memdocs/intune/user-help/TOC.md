@@ -83,7 +83,7 @@
 ### [Co se stane, když resetujete zařízení pomocí Portálu společnosti?](effects-of-device-reset-company-portal-ios.md)
 ### [Zrušení registrace zařízení](unenroll-your-device-from-intune-ios.md)
 #### [Co se stane, když zrušíte registraci zařízení?](what-happens-if-you-unenroll-your-device-from-intune-ios.md)
-### [Ruční synchronizace zařízení](sync-your-device-manually-ios.md)
+### [Ruční synchronizace zařízení s iOSem](sync-your-device-manually-ios.md)
 
 ### [Řešení běžných problémů s iOSem](troubleshoot-your-device-iOS.md)
 #### [Opakované připojení k ohroženému zařízení s iOSem](how-to-reconnect-a-compromised-ios-device.md)
@@ -115,6 +115,7 @@
 ### [Registrace zařízení s macOS](enroll-your-device-in-intune-macos-cp.md)
 ### [Registrace zařízení s macOS poskytnutého vaší organizací](enroll-company-device-macos.md)  
 ### [Zrušení registrace zařízení s macOS](unenroll-your-device-from-intune-macos.md)  
+### [Ruční synchronizace zařízení s macOSem](sync-your-device-manually-macos.md)
 ### [Řešení běžných problémů s macOS](troubleshoot-your-device-macos.md)
 #### [Moje verze macOS ještě není podporovaná](your-macos-version-isnt-yet-supported.md)
 #### [Aktualizace zařízení s macOS](you-need-to-update-your-macos-device.md)
