@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9e6e9ec3e5f97d48bda63f66bbbd39dd1f23b870
-ms.sourcegitcommit: 3217778ebe7fd0318810696e8931e427a85da897
+ms.openlocfilehash: ed51e7ace2f12d68c1f31e5616b5fa33732f5673
+ms.sourcegitcommit: d76731f1b54aef6184e240292516561ce5c5c467
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85107541"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85133307"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
@@ -202,7 +202,7 @@ Uživatelské rozhraní bylo aktualizováno, aby nahradilo Program registrace za
 Dostupnost pro vzdálené zámky zařízení macOS se zvýšila z 7 dnů na 30 dnů.
 
 #### <a name="change-primary-user-on-co-managed-devices--7319183----"></a>Změna primárního uživatele na spoluspravovaných zařízeních<!--7319183  -->
-Pro spoluspravovaná zařízení s Windows můžete změnit primárního uživatele zařízení. Další informace o tom, jak ho najít a změnit, najdete v tématu [vyhledání primárního uživatele zařízení v Intune](../remote-actions/find-primary-user.md).
+Pro spoluspravovaná zařízení s Windows můžete změnit primárního uživatele zařízení. Další informace o tom, jak ho najít a změnit, najdete v tématu [vyhledání primárního uživatele zařízení v Intune](../remote-actions/find-primary-user.md). Tato funkce se bude postupně nacházet během několika dalších týdnů.
 
 #### <a name="setting-the-intune-primary-user-also-sets-the-azure-ad-owner-property--7319227---"></a>Nastavení primárního uživatele Intune také nastaví vlastnost Owner služby Azure AD.<!--7319227 -->
 Tato nová funkce automaticky nastaví vlastnost Owner u nově zaregistrovaných zařízení připojených k hybridní službě Azure AD současně s nastaveným primárním uživatelem Intune. Další informace o primárním uživateli najdete v tématu [vyhledání primárního uživatele zařízení v Intune](../remote-actions/find-primary-user.md).
@@ -769,7 +769,7 @@ Nové možnosti organizace jsou ty, které jsou k dispozici pro základní profi
 Aktualizovali jsme [prostředí pro uživatele](../configuration/device-profile-create.md) v centru pro správu správy koncových**Devices**bodů (  >  **konfigurační profily**zařízení  >  **vytvořit profil**) pro vytváření a úpravu následujících typů profilů. Nové prostředí prezentuje stejné nastavení jako předtím, ale používá i průvodce, který nepotřebuje tolik horizontální posouvání. Pro nové prostředí nebudete muset měnit existující konfigurace.
 
 - Odvozené přihlašovací údaje
-- E-mailu
+- E-mail
 - Certifikát PKCS
 - Importovaný certifikát PKCS
 - Certifikát SCEP

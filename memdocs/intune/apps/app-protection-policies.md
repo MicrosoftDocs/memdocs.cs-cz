@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/09/2020
+ms.date: 06/22/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e6f7b84015c8aef62f5b4db1e4f9fbbcca499739
-ms.sourcegitcommit: c7afcc3a2232573091c8f36d295a803595708b6c
+ms.openlocfilehash: d4beb6c5a91f9f379006df482ff10066831389b6
+ms.sourcegitcommit: 79ffc8afed164c408db6994806d71f64d1fc0b8f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84973005"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85216395"
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>Vytvoření a přiřazení zásad ochrany aplikací
 
@@ -183,7 +183,7 @@ Pokud chcete vytvořit tyto zásady, vyhledejte **Apps**  >  v konzole Intune ap
 
 ### <a name="device-types"></a>Typy zařízení
 
-- **Nespravované**: nespravovaná zařízení jsou zařízení, ve kterých se nezjistila Správa služby Intune MDM. Patří sem zařízení, která spravuje dodavatel MDM třetích stran.
+- **Nespravované**: u zařízení se systémem iOS/iPadOS jsou nespravovaná zařízení všechna zařízení, ve kterých neprošla Správa Intune MDM nebo řešení MDM/EMM jiného výrobce `IntuneMAMUPN` . U zařízení s Androidem jsou nespravovaná zařízení zařízení, ve kterých se nezjistila Správa MDM pro Intune. Patří sem zařízení, která spravuje dodavatel MDM třetích stran.
 - **Zařízení spravovaná pomocí Intune**: spravovaná zařízení se spravují přes Intune MDM.
 - **Správce zařízení s Androidem**: zařízení spravovaná přes Intune, která používají rozhraní API pro správu zařízení s Androidem.
 - **Android Enterprise**: zařízení spravovaná pomocí Intune s využitím podnikových profilů Androidu nebo úplné správy zařízení s Androidem Enterprise.

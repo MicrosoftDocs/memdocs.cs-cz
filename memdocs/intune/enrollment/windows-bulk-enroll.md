@@ -17,12 +17,12 @@ ms.reviewer: spshumwa
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ecbde2f6e6a40379cd37a6ddebe09fa9dab8e3b1
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 7894e2648b58b1afd313250dc9724f117fe6c93a
+ms.sourcegitcommit: 79ffc8afed164c408db6994806d71f64d1fc0b8f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988923"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85216531"
 ---
 # <a name="bulk-enrollment-for-windows-devices"></a>Hromadná registrace pro zařízení s Windows
 
@@ -37,7 +37,7 @@ Uživatelé Azure AD jsou na těchto zařízeních standardními uživateli a ob
 
 ## <a name="create-a-provisioning-package"></a>Vytvoření zřizovacího balíčku
 
-1. Stáhněte si [Windows Configuration Designer (WCD)](https://www.microsoft.com/store/apps/9nblggh4tx22) z Microsoft Storu.
+1. Stáhněte si [Windows Configuration Designer (WCD)](https://www.microsoft.com/p/windows-configuration-designer/9nblggh4tx22) z Microsoft Storu.
    ![Snímek obrazovky s aplikací Windows Configuration Designer ve Storu](./media/windows-bulk-enroll/bulk-enroll-store.png)
 
 2. Otevřete aplikaci **Windows Configuration Designer** a vyberte **Provision desktop devices** (Zřídit počítačová zařízení).
