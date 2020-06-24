@@ -2,7 +2,7 @@
 title: Služba Endpoint Analytics Preview
 titleSuffix: Configuration Manager
 description: Pokyny pro službu Endpoint Analytics Preview
-ms.date: 05/11/2020
+ms.date: 06/12/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX, NOFOLLOW
-ms.openlocfilehash: da8c52dabf27ddf0992d9f405400b3ac984f2ecc
-ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
+ms.openlocfilehash: f33f79d1a2fb6144e25d6153c48caa90d86006e6
+ms.sourcegitcommit: 97f150f8ba8be8746aa32ebc9b909bb47e22121c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84455119"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84879764"
 ---
 # <a name="endpoint-analytics-preview"></a><a name="bkmk_uea"></a>Služba Endpoint Analytics Preview
 
@@ -67,7 +67,7 @@ V této verzi Preview můžete registrovat zařízení prostřednictvím Configu
 #### <a name="to-enroll-devices-via-configuration-manager-this-preview-requires"></a><a name="bkmk_uea__cm_prereq"></a>Tato verze Preview vyžaduje k registraci zařízení přes Configuration Manager:
 - Configuration Manager verze 2002 nebo novější
 - Klienti upgradovali na verzi 2002 nebo novější.
-- [Tenant Microsoft Endpoint Manageru se připojovat](https://docs.microsoft.com/mem/configmgr/tenant-attach/device-sync-actions) s povoleným umístěním klienta Azure Severní Amerika nebo Evropa (brzy se rozšíříme do dalších oblastí).
+- [Připojení tenanta Microsoft Endpoint Manageru](https://docs.microsoft.com/mem/configmgr/tenant-attach/device-sync-actions) je povolené.
 
 #### <a name="proactive-remediation-scripting-requires"></a><a name="bkmk_uea__prs_prereq"></a>Proaktivní skriptování nápravy vyžaduje:
 Bez ohledu na to, jestli jsou zařízení zaregistrovaná přes Intune nebo Configuration Manager, má [**skriptování proaktivního problému**](#bkmk_uea_prs) následující požadavky:
@@ -136,9 +136,13 @@ Před registrací zařízení Configuration Manager ověřte [požadavky](#bkmk_
 ### <a name="onboard-in-the-endpoint-analytics-portal"></a><a name="bkmk_uea_onboard"></a>Zprovoznění na portálu pro analýzu koncových bodů
 Připojování z portálu pro službu Endpoint Analytics se vyžaduje pro zařízení spravovaná Configuration Manager i Intune.
 
-1. Přejděte na `https://endpoint.microsoft.com/#blade/Microsoft_Intune_Enrollment/UXAnalyticsMenu`.
+1. Přejděte na `https://aka.ms/endpointanalytics`.
 1. Klikněte na tlačítko **Start**. Tím se automaticky přiřadí konfigurační profil pro shromažďování údajů o výkonu spouštění ze všech oprávněných zařízení. [Přiřazená zařízení](#bkmk_uea_profile) můžete později změnit. Po restartování může trvat až 24 hodin, než se data o výkonu po spuštění naplní ze zařízení zaregistrovaných v Intune.
-   - Další informace o běžných problémech najdete v tématu [řešení potíží s registrací spouštěcího zařízení](#bkmk_uea_enrollment_tshooter).
+
+> [!Important]  
+> Anonymizovatme a agregujeme skóre ze všech zaregistrovaných organizací, aby bylo možné všechny směry **všech organizací (medián)** udržovat v aktuálním stavu. [Shromažďování dat](#bkmk_uea_stop) můžete kdykoli ukončit.
+
+   - Další informace o běžných problémech najdete v tématu [řešení potíží s registrací zařízení a výkonem při spuštění](#bkmk_uea_enrollment_tshooter).
 
 ## <a name="overview-page"></a>Stránka Přehled
 
@@ -151,8 +155,6 @@ Jakmile budou data připravena, všimnete si některých informací na stránce 
    - Pro celkové skóre a dílčí skóre jsou zobrazeny základní značky. Pokud se některá z skóre překročí o více než konfigurovatelné prahové hodnotě z vybraného směrného plánu, zobrazí se skóre červeně a skóre nejvyšší úrovně se označí jako potřeba pozornost.
   - Stav **nedostatečných dat** znamená, že nemáte dostatečná zařízení, která by poskytovala smysluplné skóre. V současnosti vyžadujeme aspoň pět zařízení.
 
-- **Filtry** vám umožní zobrazit skóre pro podmnožinu zařízení nebo uživatelů. Funkce filtru ale v této verzi Preview nejsou povolené.
-
 - **Přehledy a doporučení** jsou seznam s určenými prioritami, který vylepšuje vaše skóre. Tento seznam je filtrován na kontext poduzlu při přechodu na **osvědčené postupy** nebo **doporučený software**.
 
 [![Stránka s přehledem služby Endpoint Analytics](media/overview-page.png)](media/overview-page.png#lightbox)
@@ -160,7 +162,7 @@ Jakmile budou data připravena, všimnete si některých informací na stránce 
 ## <a name="recommended-software"></a><a name="bkmk_uea_rs"></a>Doporučený software
 
 > [!Important]  
-> Služba Endpoint Analytics vypočítá skóre **přijetí softwaru** pro všechna vaše zařízení spravovaná přes Intune bez ohledu na to, jestli se zaregistrovala v rámci služby Endpoint Analytics, nebo ne.
+> Služba Endpoint Analytics vypočítá skóre **přijetí softwaru** pro všechna vaše zařízení Intune a spoluspravovaná zařízení bez ohledu na to, jestli jsou nakonfigurovaná pomocí [zásad shromažďování dat Intune](#bkmk_uea_profile) , nebo ne. U zařízení spravovaných Configuration Manager se skóre vypočítávají jenom pro [zaregistrovaná zařízení](#bkmk_uea_cm_enroll) . 
 
 Určitý software je známý pro zlepšení činnosti koncového uživatele bez ohledu na metriky stavu nižší úrovně. Například Windows 10 má mnohem vyšší skóre síťového vyvýšení, než je Windows 7. Skóre **přijetí softwaru** je číslo mezi 0 a 100, které představuje vážený průměr zařízení, která nasadila různé doporučený software. Aktuální váha je vyšší pro Windows než pro ostatní metriky, protože uživatelé s nimi pracují častěji. Metriky jsou popsány níže: 
 
@@ -192,9 +194,11 @@ Vaše zařízení spravovaná přes Microsoft Intune jsou už registrovaná v Az
 
 ### <a name="cloud-management"></a><a name="bkmk_uea_intune"></a>Správa cloudu
 
-Microsoft Intune poskytuje uživatelům několik výhod produktivity, včetně povolení přístupu k podnikovým prostředkům, i když jsou mimo podnikovou síť, a eliminuje nutnost zásahu z provozu a výkon Zásady skupiny a výsledkem je lepší prostředí pro koncové uživatele. Tato metrika měří procento počítačů zaregistrovaných v Microsoft Intune. Podívejte se, jak [to Microsoft umožňuje pro naše zaměstnance](https://www.microsoft.com/en-us/itshowcase/managing-windows-10-devices-with-microsoft-intune).
+Configuration Manager a Intune poskytují integrované cloudové nástroje pro správu a jedinečné možnosti spolusprávy pro zřizování, nasazování, správu a zabezpečení koncových bodů a aplikací v rámci organizace. Díky výkonné správě cloudu můžete dosáhnout několika výhod produktivity, včetně povolení přístupu k podnikovým prostředkům, i když jsou mimo podnikovou síť, a eliminují nutnost zásahu z Zásady skupiny, což má za následek lepší prostředí pro koncové uživatele. 
 
-K doporučené nápravné akci pro zařízení spravovaná Configuration Manager, která ještě nejsou zaregistrovaná v Intune, se dají [společně spravovat](../../comanage/overview.md).
+Tato metrika měří procento počítačů, které jsou připojené ke cloudu Microsoft 365 k odemknutí dalších možností. Podívejte se, jak [to Microsoft umožňuje pro naše zaměstnance](https://www.microsoft.com/en-us/itshowcase/managing-windows-10-devices-with-microsoft-intune).
+
+Doporučená akce pro zařízení spravovaná pomocí Configuration Manager, která ještě nejsou zaregistrovaná v Intune, je [společná jejich správa](../../comanage/overview.md) , aby se uvolnily další možnosti cloudu, jako je podmíněný přístup.
 
 ### <a name="no-commercial-median"></a><a name="bkmk_uea_np"></a>Žádná komerční medián
 
@@ -203,7 +207,7 @@ Předdefinované základní hodnoty **komerčního mediánu** v současnosti neo
 ## <a name="startup-performance"></a><a name="bkmk_uea_bp"></a>Výkon při spuštění
 
 > [!NOTE]
-> Pokud nevidíte data o výkonu při spuštění ze všech svých zařízení, přečtěte si téma [řešení potíží s registrací spouštěcího zařízení](#bkmk_uea_enrollment_tshooter).
+> Pokud nevidíte data o výkonu při spuštění ze všech svých zařízení, přečtěte si téma [řešení potíží s registrací a výkonem zařízení](#bkmk_uea_enrollment_tshooter).
 
 Skóre výkonu při spuštění pomáhá rychle získat uživatele z elektrického napájení do produktivity bez nutnosti zdlouhavého spouštění a zpoždění přihlášení. **Skóre spuštění** je číslo mezi 0 a 100. Toto skóre je vážený průměr **spouštěcího skóre** a skóre **přihlášení** , které se vypočítávají takto:
 
@@ -330,45 +334,52 @@ Aktuální skóre a dílčí skóre můžete porovnat s ostatními nastavením s
 
 Následující části vám pomůžou při řešení problémů, se kterými se můžete setkat.
 
-### <a name="troubleshooting-startup-performance-device-enrollment"></a><a name="bkmk_uea_enrollment_tshooter"></a>Řešení potíží s registrací zařízení výkonu při spuštění
+### <a name="troubleshooting-device-enrollment-and-startup-performance"></a><a name="bkmk_uea_enrollment_tshooter"></a>Řešení potíží při registraci zařízení a výkonu při spuštění
 
 Pokud se na stránce Přehled zobrazuje skóre výkonu při spuštění, které se doprovází proužkovou kartou s informací o tom, že čeká na data, nebo pokud karta výkon zařízení výkonu při spuštění zobrazuje méně zařízení, než očekáváte, je třeba provést několik kroků, které můžete provést při odstraňování problému.
 
-Nejdřív je zde stručný přehled omezení pro shromažďování dat o výkonu při spuštění:
-1. Zařízení musí mít Windows 10 verze 1903 nebo novější.
-2. Zařízení musí být připojená k Azure AD. V tuto chvíli nepodporujeme zařízení připojená k síti na pracovišti, i když aktivně zkoumáte proveditelnost přidávání této funkce do Windows.
-3. Zařízení musí být Windows 10 Enterprise Edition. Windows 10 Home a Professional se v současné době nepodporují, i když aktivně zkoumá proveditelnost přidávání této funkce do Windows.
+Nejdřív zajistěte, aby zařízení splňovala [technické požadavky](#technical-prerequisites) .
 
-Všimněte si, že tyto problémy nebudou platit pro data přicházející z nadcházejícího konektoru Configuration Manager. bude moct shromažďovat data ze všech Configuration Manager klientských počítačů bez ohledu na konfiguraci verze, edice nebo adresáře.
-
-V druhém najdete stručný kontrolní seznam pro řešení potíží:
-1. Ujistěte se, že máte profil sledování stavu systému Windows, který je zaměřený na všechna zařízení, pro která chcete data o výkonu. Odkaz na tento profil můžete najít na stránce nastavení služby Endpoint Analytics nebo na něj přejít stejným způsobem jako jakýkoli jiný profil Intune. Podívejte se na kartu přiřazení a ujistěte se, že je přiřazená k očekávané sadě zařízení. 
-1. Podívá se na to, která zařízení byla úspěšně nakonfigurovaná pro shromažďování dat. Tyto informace můžete zobrazit také na stránce Přehled profilů.  
+Pro zařízení s Intune nebo spoluspravovaná se zásadami nakonfigurovanými pomocí zásad shromažďování dat Intune:
+1. Ujistěte se, že máte zásady [shromažďování dat Intune](#bkmk_uea_profile) určený všechna zařízení, která chcete zobrazit data o výkonu. Podívejte se na kartu přiřazení a ujistěte se, že je přiřazená k očekávané sadě zařízení. 
+1. Vyhledejte zařízení, která nebyla úspěšně nakonfigurovaná pro shromažďování dat. Tyto informace můžete zobrazit také na stránce Přehled profilů.  
    - Existuje známý problém, kdy se zákazníkům zobrazí Chyby přiřazení profilu, kde ovlivněná zařízení zobrazují kód chyby `-2016281112 (Remediation failed)` . Aktivně zkoumáme tento problém.
-1. Zařízení, která byla úspěšně nakonfigurovaná pro shromažďování dat, se musí po povolení shromažďování dat restartovat a po zobrazení zařízení na kartě výkon zařízení musíte počkat až 24 hodin.
-1. Pokud se vaše zařízení úspěšně nakonfigurovalo pro shromažďování dat, později se restartuje a po 24 hodinách ho nevidíte, může to být tím, že se zařízení nemůže dostat do našich koncových bodů kolekce. K tomuto problému může dojít, pokud vaše společnost používá proxy server a koncové body nebyly na proxy serveru povoleny. Další informace najdete v tématu [řešení potíží s koncovými body](#bkmk_uea_endpoints).
+1. Zařízení, která byla úspěšně nakonfigurovaná pro shromažďování dat, se musí po povolení shromažďování dat restartovat a po zobrazení zařízení na kartě výkon zařízení musíte počkat až 25 hodin. Zobrazit [tok dat](#data-flow)
+1. Pokud se vaše zařízení úspěšně nakonfigurovalo pro shromažďování dat, později se restartuje a po 25 hodinách se ho ještě nezobrazuje, zařízení možná nebude možné komunikovat s požadovanými koncovými body. Viz [konfigurace proxy serveru](#bkmk_uea_endpoints).
 
-### <a name="data-collection-for-intune-managed-devices"></a>Shromažďování dat pro zařízení spravovaná přes Intune
+Pro Configuration Manager spravovaná zařízení:
+1. Ujistěte se, že všechna zařízení, která chcete zobrazit data o výkonu, jsou [zaregistrovaná](#bkmk_uea_cm_enroll) .
+1. Ověřte, zda se data odesílaná z Configuration Manager do služby brány úspěšně nacházela, a to tak, že si prohlédněte chybové zprávy v souboru **UXAnalyticsUploadWorker. log** na serveru lokality.
+1. Zkontroluje, jestli má správce vlastní přepsání pro nastavení klienta.  V konzole Configuration Manager otevřete pracovní prostor **zařízení** , vyhledejte cílová zařízení a ve skupině **nastavení klienta** vyberte **výsledná nastavení klienta**. Pokud je služba Endpoint Analytics zakázaná, je k dispozici přepsání nastavení klienta. Vyhledejte přepsání nastavení klienta a povolte na něm službu Endpoint Analytics.  
+1. Zkontrolujte, jestli chybějící klientská zařízení odesílají data na server lokality, v souboru **SensorEndpoint. log** , který se nachází v `C:\Windows\CCM\Logs\` na klientských zařízeních. Vyhledejte zprávy *odeslané* zprávou.
+1. Zkontrolujte a vyřešte všechny chyby, které ocurring při zpracování spouštěcích událostí, v souboru **SensorManagedProvider. log** , který se nachází v `C:\Windows\CCM\Logs\` na klientských zařízeních.
 
-Pro shromažďování dat ze zařízení spravovaných pomocí Intune využívá služba Endpoint Analytics součást Windows 10 a prostředí Windows serveru připojené k Windows serveru a telemetrie (DiagTrack). Ujistěte se, že je spuštěná služba **prostředí a prostředí pro připojené uživatele** v zařízení.
 
-#### <a name="endpoints"></a><a name="bkmk_uea_endpoints"></a>Bod
+### <a name="proxy-configuration"></a><a name="bkmk_uea_endpoints"></a>Konfigurace proxy serveru
 
-Aby bylo možné zaregistrovat zařízení do služby Endpoint Analytics, musí společnosti Microsoft odesílat požadovaná funkční data. Pokud vaše prostředí používá proxy server, použijte tyto informace k tomu, abyste mohli nakonfigurovat proxy server.
+Pokud vaše prostředí používá proxy server, nakonfigurujte proxy server tak, aby povoloval následující koncové body:
 
-Pokud chcete povolit sdílení funkčních dat, nakonfigurujte proxy server tak, aby umožňoval následující koncové body:
+#### <a name="endpoints-required-for-configuration-manager-managed-devices"></a>Koncové body vyžadované pro Configuration Manager spravovaná zařízení
+
+Configuration Manager spravovaná zařízení odesílají data do Intune prostřednictvím konektoru v roli Configuration Manager a nepotřebují přímý přístup k veřejnému cloudu Microsoftu.
+
+| Koncový bod  | Funkce  |
+|-----------|-----------|
+| `https://graph.windows.net` | Slouží k automatickému načítání nastavení při připojování hierarchie ke službě Endpoint Analytics v Configuration Manager role serveru. Další informace najdete v tématu [konfigurace proxy serveru pro server systému lokality](../plan-design/network/proxy-server-support.md#configure-the-proxy-for-a-site-system-server). |
+| `https://*.manage.microsoft.com` | Slouží k synchronizaci kolekce zařízení a zařízení s nástrojem Endpoint Analytics pouze v roli serveru Configuration Manager. Další informace najdete v tématu [konfigurace proxy serveru pro server systému lokality](../plan-design/network/proxy-server-support.md#configure-the-proxy-for-a-site-system-server). |
+
+#### <a name="endpoints-required-for-intune-managed-devices"></a>Koncové body vyžadované pro zařízení spravovaná přes Intune
+
+K registraci zařízení do služby Endpoint Analytics je potřeba odesílat požadovaná funkční data do veřejného cloudu Microsoftu. Pro shromažďování dat ze zařízení spravovaných pomocí Intune využívá služba Endpoint Analytics součást Windows 10 a prostředí Windows serveru připojené k Windows serveru a telemetrie (DiagTrack). Ujistěte se, že je spuštěná služba **prostředí a prostředí pro připojené uživatele** v zařízení.
+
+| Koncový bod  | Funkce  |
+|-----------|-----------|
+| `https://*.events.data.microsoft.com` | Používá se zařízením spravovaným v Intune k odesílání [požadovaných funkčních dat](#bkmk_uea_datacollection) do koncového bodu shromažďování dat Intune. |
 
 > [!Important]  
 > V případě ochrany osobních údajů a integrity dat systém Windows při komunikaci s požadovanými koncovými body sdílení dat kontroluje certifikát Microsoft SSL (připnutí certifikátů). Zachycení a kontrola SSL nejsou možné. Pokud chcete použít službu Endpoint Analytics, vylučte tyto koncové body z kontroly SSL.<!-- BUG 4647542 -->
 
-| Koncový bod  | Funkce  |
-|-----------|-----------|
-| `https://*.events.data.microsoft.com` | Slouží k odeslání [požadovaných funkčních dat](#bkmk_uea_datacollection) do koncového bodu shromažďování dat Intune. |
-| `https://graph.windows.net` | Slouží k automatickému načítání nastavení při připojování hierarchie ke službě Endpoint Analytics (na Configuration Manager role serveru). Další informace najdete v tématu [konfigurace proxy serveru pro server systému lokality](../plan-design/network/proxy-server-support.md#configure-the-proxy-for-a-site-system-server). |
-| `https://*.manage.microsoft.com` | Slouží k synchronizaci kolekce zařízení a zařízení s nástrojem Endpoint Analytics (pouze v Configuration Manager role serveru). Další informace najdete v tématu [konfigurace proxy serveru pro server systému lokality](../plan-design/network/proxy-server-support.md#configure-the-proxy-for-a-site-system-server). |
-
-
-#### <a name="proxy-server-authentication"></a>Ověřování proxy serveru
+##### <a name="proxy-server-authentication"></a>Ověřování proxy serveru
 
 Pokud vaše organizace používá proxy server ověřování pro přístup k Internetu, ujistěte se, že neblokuje data kvůli ověřování. Pokud váš proxy nepovoluje, aby zařízení odesílala tato data, nebudou se zobrazovat v Desktop Analytics.
 
@@ -443,7 +454,7 @@ Tato tabulka zobrazuje názvy skriptů, popisy, detekce, nápravy a konfigurovat
 
 ## <a name="powershell-scripts"></a><a name="bkmk_uea_ps_scripts"></a>PowerShellové skripty
 
-### <a name="detect_stale_group_policiesps1"></a>Detect_stale_Group_Policies. ps1
+### <a name="detect_stale_group_policiesps1"></a>Detect_stale_Group_Policies.ps1
 
 ```powershell
 #=============================================================================================================================
@@ -482,7 +493,7 @@ catch {
 }
 ```
 
-### <a name="remediate_stale_grouppoliciesps1"></a>Remediate_stale_GroupPolicies. ps1
+### <a name="remediate_stale_grouppoliciesps1"></a>Remediate_stale_GroupPolicies.ps1
 
 ```powershell
 #=============================================================================================================================
@@ -505,7 +516,7 @@ catch{
 }
 ```
 
-### <a name="detect_click_to_run_service_stateps1"></a>Detect_Click_To_Run_Service_State. ps1
+### <a name="detect_click_to_run_service_stateps1"></a>Detect_Click_To_Run_Service_State.ps1
 
 ```powershell
 #=============================================================================================================================
@@ -552,7 +563,7 @@ Else{
 }
 ```
 
-### <a name="remediate_click_to_run_service_stateps1"></a>Remediate_Click_To_Run_Service_State. ps1
+### <a name="remediate_click_to_run_service_stateps1"></a>Remediate_Click_To_Run_Service_State.ps1
 
 ```powershell
 #=============================================================================================================================
@@ -614,7 +625,7 @@ Catch{
 Return $curSvcStat
 ```
 
-### <a name="detect_expired_issuer_certificatesps1"></a>Detect_Expired_Issuer_Certificates. ps1
+### <a name="detect_expired_issuer_certificatesps1"></a>Detect_Expired_Issuer_Certificates.ps1
 
 ```powershell
 #=============================================================================================================================
@@ -656,7 +667,7 @@ catch{
 }
 ```
 
-### <a name="remediate_expired_issuer_certificatesps1"></a>Remediate_Expired_Issuer_Certificates. ps1
+### <a name="remediate_expired_issuer_certificatesps1"></a>Remediate_Expired_Issuer_Certificates.ps1
 
 ```powershell
 #=============================================================================================================================
@@ -700,7 +711,7 @@ $toast = New-Object Windows.UI.Notifications.ToastNotification $xml
 [Windows.UI.Notifications.ToastNotificationManager]::CreateToastNotifier($APP_ID).Show($toast)
 ```
 
-### <a name="detect_expired_user_certificatesps1"></a>Detect_Expired_User_Certificates. ps1
+### <a name="detect_expired_user_certificatesps1"></a>Detect_Expired_User_Certificates.ps1
 
 ```powershell
 #=============================================================================================================================
@@ -737,7 +748,7 @@ catch{
 }
 ```
 
-### <a name="remediate_expired_user_certificatesps1"></a>Remediate_Expired_User_Certificates. ps1
+### <a name="remediate_expired_user_certificatesps1"></a>Remediate_Expired_User_Certificates.ps1
 
 ```powershell
 #=============================================================================================================================
@@ -767,27 +778,30 @@ catch{
 
 ### <a name="data-flow"></a>Tok dat
 
-Následující obrázek znázorňuje způsob, jakým jsou povinná funkční data z jednotlivých zařízení přenášena prostřednictvím našich datových služeb, přechodného úložiště a vašeho tenanta. Data procházejí prostřednictvím našich stávajících podnikových kanálů bez spoléhání na diagnostická data Windows.
+Následující obrázek znázorňuje způsob, jakým jsou povinná funkční data z jednotlivých zařízení přenášena prostřednictvím našich datových služeb, přechodného úložiště a vašeho tenanta. 
 
-[![Diagram toku dat zkušeností uživatele](media/dataflow.png)](media/dataflow.png#lightbox)
+[![Diagram toku dat zkušeností uživatele](media/endpoint-analytics-dataflow.png)](media/endpoint-analytics-dataflow.png#lightbox)
 
-1. Nakonfigurujte zásady **shromažďování dat Intune** pro zaregistrovaná zařízení. Ve výchozím nastavení se tato zásada při **spuštění** služby Endpoint Analytics přiřadí všem zařízením. Přiřazení můžete ale kdykoli [změnit](#bkmk_uea_set) na podmnožinu zařízení nebo vůbec žádná zařízení.
+1. [Role správce služby Intune](../../../intune/fundamentals/role-based-access-control.md) [začne shromažďovat data](#bkmk_uea_start).
 
-2. Zařízení odesílají požadovaná funkční data.
+    - V případě zařízení spravovaných přes Intune tento krok nakonfiguruje zásady **shromažďování dat v Intune** . Ve výchozím nastavení se tato zásada přiřazuje všem zařízením. Přiřazení můžete kdykoli [změnit](#bkmk_uea_set) na podmnožinu zařízení nebo vůbec žádná zařízení.
 
-    - Pro zařízení Intune s přiřazenou zásadou se data odesílají z rozšíření pro správu Intune. Další informace najdete v tématu [požadavky](#bkmk_uea_prereq).
-    - U Configuration Manager spravovaných zařízení můžou data taky přesměrovat do služby Microsoft Endpoint Management prostřednictvím konektoru nástroje ConfigMgr. Konektor nástroje ConfigMgr je připojen ke cloudu. Vyžaduje jenom připojení k tenantovi Intune, ale nezapne spolusprávu.
+    - U zařízení spravovaných Configuration Manager povolte [shromažďování dat a registraci zařízení služby Endpoint Analytics](#bkmk_uea_cm_enroll).
+
+1. Zařízení odesílají požadovaná funkční data.
+
+    - Pro zařízení s Intune a spoluspravovaná pomocí přiřazených zásad odesílají zařízení požadavky přímo do služby Microsoft Endpoint Management ve veřejném cloudu Microsoftu, kde se zpracovávají prakticky v reálném čase. Další informace najdete v tématu [koncové body vyžadované pro zařízení spravovaná přes Intune](#bkmk_uea_endpoints).
+
+    - U Configuration Manager spravovaných zařízení se data proudí do správy koncových bodů Microsoft prostřednictvím konektoru nástroje ConfigMgr. Zařízení nepotřebují přímý přístup ke veřejnému cloudu Microsoftu, ale konektor nástroje ConfigMgr je připojený ke cloudu a vyžaduje připojení k tenantovi Intune. Zařízení odesílají data do role Configuration Manager serveru každých 24 hodin a konektor Configuration Manager odesílá každou hodinu data službě brány.
+
+1. Služba Microsoft Endpoint Management zpracovává data pro každé zařízení a v konzole pro správu zveřejňuje výsledky jednotlivých zařízení i organizačních agregací pomocí rozhraní API pro MS Graph. Maximální latence od konce do konce je 25 hodin a je zavedená v době, kdy bude trvat každodenní zpracování přehledů a doporučení.
 
 > [!Note]  
-> Data potřebná k výpočtu skóre spouštění pro zařízení se generují během spouštění. V závislosti na nastavení napájení a chování uživatelů může trvat i týdny, než se zařízení správně přiřadilo k zásadě, aby zobrazovalo skóre spouštění v konzole pro správu.  
-
-3. Služba Microsoft Endpoint Management zpracovává data pro každé zařízení a v konzole pro správu zveřejňuje výsledky jednotlivých zařízení i organizačních agregací pomocí rozhraní API pro MS Graph.
-
-Průměrná latence od konce do konce je zhruba 12 hodin a je zavedená v době, kdy bude trvat každodenní zpracování. Všechny ostatní části toku dat jsou téměř v reálném čase.
+> Když nakonfigurujete službu Endpoint Analytics, přidáte nové klienty do [zásad shromažďování dat služby Intune](#bkmk_uea_profile)nebo [povolíte nahrávání zařízení](../../tenant-attach/device-sync-actions.md#enable-device-upload) pro novou kolekci, sestavy na portálu Endpoint Analytics nemusí okamžitě zobrazovat úplná data. Data potřebná k výpočtu skóre spouštění pro zařízení se generují během spouštění. V závislosti na nastavení napájení a chování uživatelů může trvat i týdny, než se zařízení zaregistruje, aby se zobrazilo skóre spuštění v konzole pro správu.
 
 ### <a name="data-collection"></a><a name="bkmk_uea_datacollection"></a>Shromažďování dat
 
-Základní funkce služby Endpoint Analytics v současné době shromažďují informace přidružené k záznamům o výkonu spouštění, které spadají do [identifikovaných](https://docs.microsoft.com/mem/intune/protect/privacy-data-collect#identified-data) a [pseudonymních](https://docs.microsoft.com/mem/intune/protect/privacy-data-collect#pseudonymized-data) kategorií. Jak přidáváme další funkce v průběhu času, shromážděná data se budou podle potřeby lišit. Aktuálně shromažďované hlavní databody:
+Základní funkce služby Endpoint Analytics v současné době shromažďují informace přidružené k záznamům o výkonu spouštění, které spadají do [identifikovaných](../../../intune/protect/privacy-data-collect.md#identified-data) a [pseudonymních](../../../intune/protect/privacy-data-collect.md#pseudonymized-data) kategorií. Jak přidáváme další funkce v průběhu času, shromážděná data se budou podle potřeby lišit. Aktuálně shromažďované hlavní databody:
 
 #### <a name="identified-data"></a>Identifikované údaje
 
@@ -809,9 +823,9 @@ Základní funkce služby Endpoint Analytics v současné době shromažďují i
   - **totalBootTimeInMilliseconds:** Celkový čas spuštění
   - **updateTimeInMilliseconds:** Doba, po kterou se aktualizace operačního systému dokončí
   - **gpLogonDurationInMilliseconds**: čas, kdy se mají zpracovat zásady skupiny
-  - **desktopShownDurationInMilliseconds:** Čas, kdy se má načítat plocha (Explorer. exe)
-  - **desktopUsableDurationInMilliseconds:** Čas, kdy se má použít Desktop (Explorer. exe)
-  - **topProcesses:** Seznam procesů načtených během spouštění s názvem, včetně statistik využití procesoru a podrobností aplikace (název, vydavatel, verze) Například *{ \" Process \" : \" svchost \" , \" CpuUsage \" : 43, \" ProcessFullPath \" : \" C: \\ \\ Windows \\ \\ system32 \\ \\ svchost. exe \" , \" ProductName \" : \" &reg; operační systém Microsoft Windows &reg; \" , \" Vydavatel \" : \" Microsoft Corporation \" , \" ProductVersion \" : \" 10.0.18362.1 \" }*
+  - **desktopShownDurationInMilliseconds:** Čas, kdy se má načítat plocha (explorer.exe)
+  - **desktopUsableDurationInMilliseconds:** Čas, kdy se má použít Desktop (explorer.exe)
+  - **topProcesses:** Seznam procesů načtených během spouštění s názvem, včetně statistik využití procesoru a podrobností aplikace (název, vydavatel, verze) Například *{ \" Process \" : \" svchost \" , \" CpuUsage \" : 43, \" ProcessFullPath \" : \" C: \\ \\ Windows \\ \\ system32 \\ \\svchost.exe\" , \" ProductName \" : \" &reg; operační systém Microsoft Windows &reg; \" , \" Vydavatel \" : \" Microsoft Corporation \" , \" ProductVersion \" : \" 10.0.18362.1 \" }*
 - Data zařízení nesvázaná se zařízením nebo uživatelem (jsou-li svázaná se zařízením nebo uživatelem, Intune s nimi nakládá jako s identifikovanými údaji)
   - **ID:** Jedinečné ID zařízení, které používá web Windows Update
   - **LocalId:** Místně definované jedinečné ID pro zařízení. Nejedná se o název zařízení srozumitelně pro čtení. Nejpravděpodobnější s hodnotou uloženou v HKLM\Software\Microsoft\SQMClient\MachineId.
@@ -819,8 +833,25 @@ Základní funkce služby Endpoint Analytics v současné době shromažďují i
   - **OrgID:** Jedinečný identifikátor GUID reprezentující tenanta Microsoft O365
   
 > [!Important]  
-> Naše zásady pro zpracování dat jsou popsané v [Microsoft Intune prohlášení o zásadách ochrany osobních údajů](https://docs.microsoft.com/legal/intune/microsoft-intune-privacy-statement). Zákaznická data používáme jenom k poskytování služeb, ke kterým jste se zaregistrovali. Jak je popsáno v procesu připojování, anonymizovatme a agregujeme skóre ze všech zaregistrovaných organizací, aby se směrné plány zachovaly v aktuálním stavu.
+> Naše zásady pro zpracování dat jsou popsané v [Microsoft Intune prohlášení o zásadách ochrany osobních údajů](https://docs.microsoft.com/legal/intune/microsoft-intune-privacy-statement). Zákaznická data používáme jenom k poskytování služeb, ke kterým jste se zaregistrovali. Jak je popsáno během procesu připojování, anonymizovat a agregujeme skóre ze všech zaregistrovaných organizací, aby bylo možné všechny směry **všech organizací (medián)** udržovat v aktuálním stavu.
 
+### <a name="stop-gathering-data"></a><a name="bkmk_uea_stop"></a>Zastavit shromažďování dat
+
+- Pokud zaregistrujete jenom zařízení spravovaná přes Intune, odstraňte [zásady shromažďování dat Intune](#bkmk_uea_gen) vytvořené při registraci.
+
+- Pokud zaregistrujete zařízení, která jsou spravovaná nástrojem Configuration Manager, budete muset pomocí následujících kroků zakázat nahrávání dat v Configuration Manager:
+
+   1. V konzole Configuration Manager, navštivte **Správa**  >  **Cloud Services**  >  **spoluspráva**.
+   1. Vyberte **CoMgmtSettingsProd** a pak klikněte na **vlastnosti**.
+   1. Na kartě **Konfigurovat nahrávání** zrušte zaškrtnuté políčko pro **Povolení služby Endpoint Analytics pro zařízení odeslaná do Microsoft Endpoint Manageru**.
+
+- Zakázat shromažďování dat služby Endpoint Analytics v Configuration Manager (volitelné):
+
+   1. V konzole Configuration Manager klikněte na **Správa**  >  **nastavení klienta**  >  **výchozí nastavení klienta**.
+   1. Klikněte pravým tlačítkem a vyberte **vlastnosti** a pak vyberte nastavení **agenta počítače** .
+   1. Nastavte **možnost Povolit shromažďování dat služby Endpoint Analytics** na hodnotu **ne**.
+   > [!Important]
+   > Pokud máte existující vlastní nastavení klientského agenta, které je nasazené na vaše zařízení, budete muset v tomto vlastním nastavení aktualizovat možnost **Povolit shromažďování dat služby Endpoint Analytics** a pak ji znovu nasadit do vašich počítačů, aby se projevila.
 
 ### <a name="resources"></a>Zdroje a prostředky
 

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: b8d8af88-e8ac-4deb-921b-975e2d2afd80
-ms.openlocfilehash: 4093eafe9f8a337ce322165a529f630a759b365f
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ff018bc81ecdb3d11ebb71f1850804a5679c67f7
+ms.sourcegitcommit: 7a099ff53668f50b37adab97ecd7ba98c5324676
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718641"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84746574"
 ---
 # <a name="manage-express-installation-files-for-windows-10-updates"></a>Správa souborů Expresní instalace pro aktualizace Windows 10
 
@@ -59,7 +59,9 @@ Po nasazení nastavení klienta pro povolení této funkce v klientovi se pokus�
 3. Vyberte odpovídající nastavení klienta a klikněte na pásu karet na **vlastnosti** .  
 
 4. Vyberte skupinu **aktualizace softwaru** . Nastavte na **Ano** , pokud chcete na **klientech povolit instalaci expresních aktualizací**. Nakonfigurujte **port používaný ke stahování obsahu pro expresní aktualizace** s portem použitým naslouchacím procesem protokolu HTTP na klientovi.
+    - Ve verzi 1902 se **možnost Povolit instalaci expresních aktualizací v klientech** změnila tak, aby **umožňovala klientům stahovat v případě dostupnosti rozdílový obsah**.
     - Ve verzi 1902 se **port používaný ke stahování obsahu pro expresní aktualizace** změnil na **port, který klienti používají pro příjem požadavků na rozdílový obsah**.
+    
 
 ## <a name="next-steps"></a>Další kroky
 

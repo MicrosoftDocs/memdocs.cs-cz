@@ -5,17 +5,17 @@ description: Configuration Manager synchronizuje aktualizace ovladačů Surface 
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 06/09/2020
+ms.date: 06/18/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: e9f9f4e6-5b4f-4b8f-94d6-db9b2b239113
-ms.openlocfilehash: 6428b6e1992af6dbb1f6d49b9ef1eac3010dd833
-ms.sourcegitcommit: 52dd59bdbad07b414db9e4209da0f4c957cf5d6e
+ms.openlocfilehash: 04793a053e85be051ce9ffafd2f15d274cf166f0
+ms.sourcegitcommit: c7afcc3a2232573091c8f36d295a803595708b6c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84614980"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84973073"
 ---
 # <a name="manage-surface-drivers-with-configuration-manager"></a>Správa ovladačů Surface pomocí Configuration Manager
 
@@ -85,28 +85,27 @@ Většina ovladačů patří do následujících skupin produktů:
 
 ## <a name="surface-models"></a><a name="bkmk_models"></a>Modely Surface
 
-Následující tabulka obsahuje modely Surface a verze Windows 10, na kterých Configuration Manager můžou instalovat ovladače. Aktualizace ovladačů Surface nejsou k dispozici v Configuration Manager stejný den, kdy jsou publikovány do katalogu Microsoft Update. Configuration Manager udržuje svůj vlastní seznam ovladačů Surface, které budou naimportovány. Tento seznam se pravidelně publikuje a obsahuje ovladače, které se publikovaly v nebo před určitým datem. Jsou popsána zařízení, která vyžadují produkty Windows 10 S.
+Následující tabulka obsahuje modely Surface a verze Windows 10, na kterých Configuration Manager můžou instalovat ovladače. Aktualizace ovladačů Surface nejsou k dispozici v Configuration Manager stejný den, kdy jsou publikovány do katalogu Microsoft Update. Configuration Manager udržuje svůj vlastní seznam ovladačů Surface, které budou naimportovány. Jsou popsána zařízení, která vyžadují produkty Windows 10 S. Společnost Microsoft se zaměřuje na přidání ovladačů Surface do seznamu povolených druhých úterý každý měsíc, aby byly k dispozici pro synchronizaci Configuration Manager. Další informace najdete v článku [Nejčastější dotazy](#bkmk_faq).
 
-**Ovladače Surface publikované do 9. června 2020 jsou k dispozici v Configuration Manager**. 
-
+</br>
 
 |Model Surface|Systém Windows 10 1709| Systém Windows 10 1803|Systém Windows 10 1809|Systém Windows 10 1903|Systém Windows 10 1909|
 |----|----|----|----|----|----|
 |Povrchový pro 3|Ano| Ano| Ano |Ano|Ano|
 |Plocha pro 4|Ano| Ano| Ano |Ano|Ano|
-|Plocha pro 6|Není k dispozici| Ano| Ano |Ano|Ano|
-|Plocha pro 7|Není k dispozici| Není k dispozici| Není k dispozici |Ano|Ano|
-|Plocha pro X|Není k dispozici| Není k dispozici| Není k dispozici |Ano|Ano|
+|Plocha pro 6|–| Ano| Ano |Ano|Ano|
+|Plocha pro 7|–| –| – |Ano|Ano|
+|Plocha pro X|–| –| – |Ano|Ano|
 |Povrchová kniha|Ano| Ano| Ano |Ano|Ano|
 |Povrchový kniha 2|Ano| Ano| Ano |Ano|Ano|
-|Povrchový kniha 3|Není k dispozici| Není k dispozici| Není k dispozici |Není k dispozici|Yes|
+|Povrchový kniha 3|–| –| – |Ano|Ano|
 |Surface notebooku|Ano, je vybrána položka "Windows 10 S verze 1709 a novější ovladače pro údržbu".| Ano, je vybrána položka "Windows 10 S verze 1803 a novější ovladače pro údržbu".|Ano, s produktem "Windows 10 S verze 1809 a novější upgrade & vybrané ovladače pro obsluhu"|Ano, s produktem "Windows 10 S verze 1903 a novější upgrade & vybrané ovladače pro obsluhu"|Ano, s produktem "Windows 10 S verze 1903 a novější upgrade & vybrané ovladače pro obsluhu"|
-|Surface notebooku 2|Ano| Ano |Ano|Ano|Ano|
-|Surface notebook 3|Není k dispozici| Není k dispozici|Není k dispozici|Ano |Ano|
-|Přejít na plochu|Není k dispozici| Ano, je vybrána položka "Windows 10 S verze 1803 a novější ovladače pro údržbu".|Ano, s produktem "Windows 10 S verze 1809 a novější upgrade & vybrané ovladače pro obsluhu"|Ano, s produktem "Windows 10 S verze 1903 a novější upgrade & vybrané ovladače pro obsluhu"|Ano, s produktem "Windows 10 S verze 1903 a novější upgrade & vybrané ovladače pro obsluhu"|
-|Plocha – přejít 2|Není k dispozici| Ano| Ano |Ano|Ano, s produktem "Windows 10 S verze 1903 a novější upgrade & vybrané ovladače pro obsluhu"|
+|Surface notebooku 2|–| Ano |Ano|Ano|Ano|
+|Surface notebook 3|–| –|–|Ano |Ano|
+|Přejít na plochu|–| Ano, je vybrána položka "Windows 10 S verze 1803 a novější ovladače pro údržbu".|Ano, s produktem "Windows 10 S verze 1809 a novější upgrade & vybrané ovladače pro obsluhu"|Ano, s produktem "Windows 10 S verze 1903 a novější upgrade & vybrané ovladače pro obsluhu"|Ano, s produktem "Windows 10 S verze 1903 a novější upgrade & vybrané ovladače pro obsluhu"|
+|Plocha – přejít 2|–| –| Ano |Ano|Ano, s produktem "Windows 10 S verze 1903 a novější upgrade & vybrané ovladače pro obsluhu"|
 |Plocha – Studio|Ano| Ano| Ano |Ano|Ano|
-|Plocha Studio 2|Není k dispozici| Ano| Ano |Ano|Ano|
+|Plocha Studio 2|–| Ano| Ano |Ano|Ano|
 
 ## <a name="verify-the-configuration"></a>Ověření konfigurace
 
@@ -137,42 +136,25 @@ Chcete-li ověřit, zda je bod aktualizace softwaru správně nakonfigurován, p
    Tato položka je element XML, který obsahuje seznam všech skupin produktů a klasifikace, které jsou aktuálně synchronizovány serverem bodu aktualizace softwaru. Pokud nemůžete najít produkty, které jste vybrali, dvakrát ověřte, zda jsou uloženy produkty pro bod aktualizace softwaru.
 1. Můžete také počkat na dokončení další synchronizace. Potom zkontrolujte, zda jsou ovladače povrchu a aktualizace firmwaru uvedeny v části aktualizace softwaru v konzole Configuration Manager. Například konzola může zobrazit následující informace: ![ synchronizované ovladače Surface v konzole Configuration Manageru.](media/synchronized-surface-drivers.png)
 
-## <a name="frequently-asked-questions-faq"></a>Nejčastější dotazy
+##  <a name="frequently-asked-questions-faq"></a><a name="bkmk_faq"></a>Nejčastější dotazy – Nejčastější dotazy
 
 ### <a name="after-i-follow-the-steps-in-this-article-my-surface-drivers-are-still-not-synchronized-why"></a>Po provedení kroků v tomto článku pořád nejsou synchronizované ovladače Surface. Proč?
 
-Pokud synchronizujete z nadřazeného serveru Windows Server Update Services (WSUS) místo Microsoft Update, ujistěte se, že je nadřazený server WSUS nakonfigurovaný tak, aby podporoval a synchronizoval aktualizace ovladačů Surface. Všechny podřízené servery jsou omezené na aktualizace, které jsou k dispozici v nadřazené databázi serveru WSUS.
+Pokud synchronizujete z nadřazeného serveru Windows Server Update Services (WSUS), místo Microsoft Update se ujistěte, že je nadřazený server WSUS nakonfigurovaný tak, aby podporoval a synchronizoval aktualizace ovladačů Surface. Všechny podřízené servery jsou omezené na aktualizace, které jsou k dispozici v nadřazené databázi serveru WSUS.
 
-### <a name="after-i-follow-the-steps-in-this-article-some-surface-drivers-are-synchronized-but-not-the-expected-drivers-why"></a>Po provedení kroků v tomto článku se synchronizují některé ovladače Surface, ale ne očekávané ovladače. Proč?
+Existuje více než 68 000 aktualizací, které jsou klasifikovány jako ovladače ve službě WSUS. Abyste zabránili synchronizaci ovladačů nesouvisejících s plochou od Configuration Manager, proveďte synchronizaci ovladačů Microsoft Filters se seznamem povolených. Po publikování a začlenění nového seznamu povolených součástí do nástroje Configuration Manager jsou nové ovladače přidány do konzoly následující při příští synchronizaci. Společnost Microsoft se zaměřuje na přidání ovladačů Surface do seznamu povolených druhých úterý každý měsíc, aby byly k dispozici pro synchronizaci Configuration Manager.
 
-Doba zpracování pro testování ovladačů a jejich potvrzení pro nasazení prostřednictvím služby WSUS a Configuration Manager se liší. Proto aktualizace ovladačů Surface nejsou nutně k dispozici na stejný den pro ruční instalaci i nasazení konzoly Configuration Manager.
+Pokud je prostředí Configuration Manager v režimu offline, importuje se nový seznam povolených pokaždé, když naimportujete [aktualizace údržby](../../core/servers/manage/use-the-service-connection-tool.md) do Configuration Manager. Bude také nutné importovat [Nový katalog služby WSUS](../get-started/synchronize-software-updates-disconnected.md) , který obsahuje ovladače před tím, než se aktualizace zobrazí v konzole Configuration Manager. Protože samostatné prostředí WSUS obsahuje více ovladačů než Configuration Manager SUP, doporučujeme vytvořit Configuration Manager prostředí, které obsahuje možnosti online, a nakonfigurovat ho tak, aby synchronizoval ovladače Surface. To poskytuje menší export služby WSUS, který se velmi podobá prostředí offline.
 
-Kromě toho je k dispozici více než 68 000 aktualizací, které jsou klasifikovány jako ovladače ve službě WSUS. Abyste zabránili synchronizaci ovladačů nesouvisejících s plochou od Configuration Manager, proveďte synchronizaci ovladačů Microsoft Filters se seznamem povolených. Ovladače Surface musí projít dalším testováním, aby je bylo možné přidat do tohoto seznamu. Po publikování a začlenění nového seznamu povolených součástí do nástroje Configuration Manager jsou nové ovladače přidány do konzoly následující při příští synchronizaci.
+Pokud je vaše Configuration Manager prostředí online a dokáže detekovat nové aktualizace, automaticky se zobrazí aktualizace tohoto seznamu. Pokud nevidíte očekávané ovladače, přečtěte si prosím v protokolu WCM. log a souboru wsyncmgr. log případné chyby synchronizace.
 
-### <a name="is-the-driver-allow-list-published-is-it-downloadable"></a>Je seznam povolených ovladačů publikovaný? Je to ke stažení?
+### <a name="my-configuration-manager-environment-is-offline-can-i-manually-import-surface-drivers-into-wsus"></a>Moje Configuration Manager prostředí je offline, můžu ovladače Surface ručně importovat do služby WSUS?
 
-Seznam povolených ovladačů Surface není publikovaný online. Tento seznam se doručí Configuration Manager prostřednictvím kanálů pro aktualizace a údržbu. Pokud je vaše Configuration Manager prostředí online a dokáže detekovat nové aktualizace, automaticky se zobrazí aktualizace tohoto seznamu.
+Ne. I v případě, že je aktualizace naimportována do služby WSUS, aktualizace nebude naimportována do konzoly Configuration Manager pro nasazení, pokud není uvedena v seznamu povolených. Chcete-li aktualizovat seznam povolených služeb, je nutné použít [Nástroj pro připojení služby](../../core/servers/manage/use-the-service-connection-tool.md) k importu aktualizací údržby Configuration Manager.
 
-Pokud je prostředí Configuration Manager v režimu offline, importuje se nový seznam povolených pokaždé, když naimportujete aktualizace údržby do Configuration Manager. Také budete muset importovat nový katalog služby WSUS, který obsahuje ovladače před tím, než se aktualizace zobrazí v konzole Configuration Manager. Vzhledem k tomu, že samostatná prostředí WSUS obsahuje více ovladačů než Configuration Manager bod aktualizace softwaru, doporučujeme vytvořit Configuration Manager prostředí, které obsahuje možnosti online, a nakonfigurovat ho tak, aby synchronizoval ovladače Surface. To poskytuje menší export služby WSUS, který se velmi podobá prostředí offline.
+### <a name="what-alternative-methods-do-i-have-to-deploy-surface-driver-and-firmware-updates"></a>Jaké alternativní metody mám nasadit ovladače a aktualizace firmwaru?
 
-Dalším řešením je použití [alternativních metod](#bkmk_alt) k nasazení ovladačů Surface a aktualizací firmwaru.
-
-### <a name="i-require-the-latest-firmware-update-and-i-cant-wait-for-it-to-be-approved-for-import-into-configuration-manager-can-i-manually-import-the-driver-into-wsus"></a>Vyžadujem nejnovější aktualizaci firmwaru a nemůžu čekat, než se schválí pro import do Configuration Manager. Můžu ovladač ručně naimportovat do služby WSUS? 
-
-Ne. I v případě, že je aktualizace naimportována do služby WSUS, aktualizace nebude naimportována do konzoly Configuration Manager pro nasazení, pokud není uvedena v seznamu povolených.
-
-Dalším řešením je použití [alternativních metod](#bkmk_alt) k nasazení ovladačů Surface a aktualizací firmwaru.
-
-### <a name="can-i-manually-add-a-driver-to-the-allow-list"></a>Můžu ručně přidat ovladač do seznamu povolených? 
-
-Ne. Seznam je uložený v databázi Configuration Manager. Všechny změny v seznamu budou při příštím zpracování souboru CAB přepsány.
-
-
-### <a name="what-alternative-methods-do-i-have-to-deploy-surface-driver-and-firmware-updates"></a><a name="bkmk_alt"></a>Jaké alternativní metody mám nasadit ovladače a aktualizace firmwaru?
-
-Informace o tom, jak nasadit ovladače Surface a aktualizace firmwaru pomocí alternativních kanálů, najdete v tématu [Správa ovladačů Surface a aktualizací firmwaru](https://docs.microsoft.com/surface/manage-surface-pro-3-firmware-updates).
-
-Pokud chcete stáhnout soubor. msi nebo. exe a pak ho nasadit pomocí tradičních kanálů nasazení softwaru, přečtěte si téma [uchování aktualizovaného firmwaru surface Configuration Manager](https://blogs.technet.microsoft.com/thejoncallahan/2016/06/20/keeping-surface-firmware-updated-with-configuration-manager/).
+Informace o tom, jak nasadit ovladače Surface a aktualizace firmwaru pomocí alternativních kanálů, najdete v tématu [Správa ovladačů Surface a aktualizací firmwaru](https://docs.microsoft.com/surface/manage-surface-driver-and-firmware-updates). Pokud chcete stáhnout soubor. msi nebo. exe a pak ho nasadit pomocí tradičních kanálů nasazení softwaru, přečtěte si téma [uchování aktualizovaného firmwaru surface Configuration Manager](https://docs.microsoft.com/archive/blogs/thejoncallahan/keeping-surface-firmware-updated-with-configuration-manager).
 
 ## <a name="next-steps"></a>Další kroky
 

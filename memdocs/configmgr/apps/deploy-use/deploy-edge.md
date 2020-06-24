@@ -10,12 +10,12 @@ ms.assetid: 73b420be-5d6a-483a-be66-c4d274437508
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 2c3a542355dfa01e5f4f5be12f7b1bac10f30250
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 141a60a72038156fff2579419e92e558dab5a9b8
+ms.sourcegitcommit: 7b2f7918d517005850031f30e705e5a512959c3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81710269"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84776929"
 ---
 # <a name="microsoft-edge-management"></a>Správa Microsoft Edge
 
@@ -126,7 +126,7 @@ V níže uvedených třídách [inventáře hardwaru](../../core/clients/manage/
 - **Výchozí prohlížeč (SMS_DefaultBrowser)**
    - ID programu prohlížeče
 
-- **SMS_BrowserUsage (SMS_BrowserUsage)**
+- **Použití prohlížeče (SMS_BrowserUsage)**
    - Browser
    - UsagePercentage
 

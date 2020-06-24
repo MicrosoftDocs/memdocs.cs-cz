@@ -5,17 +5,17 @@ description: Umožňuje rychle povolit spolusprávu v Configuration Manager, aby
 ms.date: 07/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 8fac7ac5-96a3-4ec1-85cb-623b26bf5b1c
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: d0dd6bd9db3f49c7444e0c9877854a7851200864
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 949b1f23d6ec816db4a801f7f14b9b6468737576
+ms.sourcegitcommit: 7b2f7918d517005850031f30e705e5a512959c3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81710878"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84776986"
 ---
 # <a name="how-to-enable-co-management-in-configuration-manager"></a>Jak povolit spolusprávu v Configuration Manager
 

@@ -10,12 +10,12 @@ ms.assetid: 1cd8ac9f-b7ba-4cf4-8cd2-d548b0d6b1df
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cbd7c516515718cca96bff9b1715233964cb2aa5
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 53fc4f694579fb8c53a4aea1054cf49dff21e1d2
+ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81717360"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84715675"
 ---
 # <a name="set-up-bitlocker-portals"></a>Nastavení portálů nástroje BitLocker
 
@@ -28,7 +28,7 @@ Chcete-li použít následující komponenty správy nástroje BitLocker v Confi
 - Samoobslužný portál uživatele
 - Web pro správu a monitorování (portál helpdesk)
 
-Portály můžete nainstalovat na existující server lokality se službou IIS, nebo k jejich hostování použít samostatný webový server.
+Portály můžete nainstalovat na existující server lokality nebo server systému lokality s nainstalovanou službou IIS nebo k jejich hostování použít samostatný webový server.
 
 > [!NOTE]
 > Nainstalujte jenom Samoobslužný portál a web pro správu a monitorování s primární databází lokality. V hierarchii nainstalujte tyto weby pro každou primární lokalitu.
@@ -37,29 +37,29 @@ Než začnete, potvrďte [předpoklady](../../plan-design/bitlocker-management.m
 
 ## <a name="script-usage"></a>Použití skriptu
 
-Tento proces používá skript prostředí PowerShell MBAMWebSiteInstaller. ps1, který slouží k instalaci těchto součástí na webový server. Přijímá následující parametry:
+Tento proces používá skript prostředí PowerShell, MBAMWebSiteInstaller.ps1 k instalaci těchto součástí na webový server. Přijímá následující parametry:
 
 - `-SqlServerName <ServerName>`(povinné): plně kvalifikovaný název domény serveru databáze primární lokality.
 
 - `-SqlInstanceName <InstanceName>`: SQL Server název instance databáze primární lokality. Pokud SQL používá výchozí instanci, nezahrnujte tento parametr.
 
-- `-SqlDatabaseName <DatabaseName>`(povinné): název databáze primární lokality, například `CM_ABC`.
+- `-SqlDatabaseName <DatabaseName>`(povinné): název databáze primární lokality, například `CM_ABC` .
 
 - `-ReportWebServiceUrl <ReportWebServiceUrl>`: URL webové služby bodu služby generování sestav primární lokality. Je to hodnota **URL webové služby** ve **službě Reporting Services Configuration Manager**.
 
     > [!NOTE]
     > Tento parametr slouží k instalaci **sestavy auditu obnovení** , která je propojena z webu pro správu a monitorování. Ve výchozím nastavení Configuration Manager zahrnuje další sestavy správy nástroje BitLocker.
 
-- `-HelpdeskUsersGroupName <DomainUserGroup>`: Například `contoso\BitLocker help desk users`. Skupina uživatelů domény, jejíž členové mají přístup ke **správě čipu TPM** a k řízení oblastí **obnovení** na webu pro správu a monitorování. Při použití těchto možností musí tato role vyplnit všechna pole, včetně názvu domény a účtu uživatele.
+- `-HelpdeskUsersGroupName <DomainUserGroup>`: Například `contoso\BitLocker help desk users` . Skupina uživatelů domény, jejíž členové mají přístup ke **správě čipu TPM** a k řízení oblastí **obnovení** na webu pro správu a monitorování. Při použití těchto možností musí tato role vyplnit všechna pole, včetně názvu domény a účtu uživatele.
 
-- `-HelpdeskAdminsGroupName <DomainUserGroup>`: Například `contoso\BitLocker help desk admins`. Skupina uživatelů domény, jejíž členové mají přístup ke všem oblastem obnovení webu pro správu a monitorování. Při pomoci uživatelům obnovit své jednotky stačí, aby tato role zadala obnovovací klíč.
+- `-HelpdeskAdminsGroupName <DomainUserGroup>`: Například `contoso\BitLocker help desk admins` . Skupina uživatelů domény, jejíž členové mají přístup ke všem oblastem obnovení webu pro správu a monitorování. Při pomoci uživatelům obnovit své jednotky stačí, aby tato role zadala obnovovací klíč.
 
-- `-MbamReportUsersGroupName <DomainUserGroup>`: Například `contoso\BitLocker report users`. Skupina uživatelů domény, jejíž členové mají přístup jen pro čtení k oblasti **sestav** na webu Správa a monitorování.
+- `-MbamReportUsersGroupName <DomainUserGroup>`: Například `contoso\BitLocker report users` . Skupina uživatelů domény, jejíž členové mají přístup jen pro čtení k oblasti **sestav** na webu Správa a monitorování.
 
     > [!NOTE]
     > Skript instalačního programu nevytvoří skupiny uživatelů domény, které zadáte v parametrech **-HelpdeskUsersGroupName**, **-HelpdeskAdminsGroupName**a **-MbamReportUsersGroupName** . Před spuštěním skriptu Nezapomeňte tyto skupiny vytvořit.
     >
-    > Když zadáte parametry **-HelpdeskUsersGroupName**, **-HelpdeskAdminsGroupName**a **-MbamReportUsersGroupName** , nezapomeňte zadat název domény i název skupiny. Použijte formát `"domain\user_group"`. Vylučte název domény. Pokud název domény nebo název skupiny obsahuje mezery nebo speciální znaky, uzavřete parametr do uvozovek (`"`).
+    > Když zadáte parametry **-HelpdeskUsersGroupName**, **-HelpdeskAdminsGroupName**a **-MbamReportUsersGroupName** , nezapomeňte zadat název domény i název skupiny. Použijte formát `"domain\user_group"`. Vylučte název domény. Pokud název domény nebo název skupiny obsahuje mezery nebo speciální znaky, uzavřete parametr do uvozovek ( `"` ).
 
 - `-SiteInstall Both`: Určete, které součásti se mají nainstalovat. Mezi platné možnosti patří:
   - `Both`: Nainstalovat obě součásti
@@ -68,7 +68,7 @@ Tento proces používá skript prostředí PowerShell MBAMWebSiteInstaller. ps1,
 
 - `-IISWebSite`: Web, na který skript nainstaluje webové aplikace MBAM. Ve výchozím nastavení používá výchozí web služby IIS. Před použitím tohoto parametru vytvořte vlastní web.
 
-- `-InstallDirectory`: Cesta, kam skript nainstaluje soubory webových aplikací. Ve výchozím nastavení je `C:\inetpub`tato cesta. Před použitím tohoto parametru vytvořte vlastní adresář.
+- `-InstallDirectory`: Cesta, kam skript nainstaluje soubory webových aplikací. Ve výchozím nastavení je tato cesta `C:\inetpub` . Před použitím tohoto parametru vytvořte vlastní adresář.
 
 - `-Uninstall`: Odinstaluje webové portály pro správu nástroje BitLocker a samoobslužné webové portály na webovém serveru, kde byly dříve nainstalovány.
 
@@ -91,7 +91,7 @@ Na cílovém webovém serveru proveďte následující akce:
     .\MBAMWebSiteInstaller.ps1 -SqlServerName <ServerName> -SqlInstanceName <InstanceName> -SqlDatabaseName <DatabaseName> -ReportWebServiceUrl <ReportWebServiceUrl> -HelpdeskUsersGroupName <DomainUserGroup> -HelpdeskAdminsGroupName <DomainUserGroup> -MbamReportUsersGroupName <DomainUserGroup> -SiteInstall Both
     ```
 
-    Například:
+    Třeba
 
     ``` PowerShell
     .\MBAMWebSiteInstaller.ps1 -SqlServerName sql.contoso.com -SqlInstanceName instance1 -SqlDatabaseName CM_ABC -ReportWebServiceUrl https://rsp.contoso.com/ReportServer -HelpdeskUsersGroupName "contoso\BitLocker help desk users" -HelpdeskAdminsGroupName "contoso\BitLocker help desk admins" -MbamReportUsersGroupName "contoso\BitLocker report users" -SiteInstall Both

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: d5900fd4cb4fdebea23e626ffbe17c5289712b31
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: f87c4cc1bcbe8039acb5876dc8e26ac597f12e59
+ms.sourcegitcommit: 3217778ebe7fd0318810696e8931e427a85da897
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268908"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85107302"
 ---
 # <a name="assets-in-desktop-analytics"></a>Prostředky v Desktop Analytics
 
@@ -56,7 +56,7 @@ Nakonfigurujte **důležitost** aplikací nastavením jedné z následujících 
 
 Pokud je nastavení **Podrobnosti verze aplikace** vypnuté, zobrazí se v podokně podrobností aplikace počet verzí aplikací a jazyků, které kombinuje. Pokud všechny změny v podrobnostech aplikace uložíte, platí pro všechny verze. Nastavte například **důležitost** nebo **vlastník**. Některé hodnoty zobrazí "vícenásobné", což znamená, že ve všech verzích není jedna konzistentní hodnota.
 
-### <a name="automatic-upgrade-decision-of-system-and-store-apps"></a><a name="bkmk_plan-autoapp" />Automatické rozhodnutí o upgradu pro systém a aplikace ze Storu
+### <a name="automatic-upgrade-decision-of-system-and-store-apps"></a><a name="bkmk_plan-autoapp"> </a> Automatické rozhodnutí o upgradu pro systém a aplikace ze Storu
 
 <!-- 3587232 -->
 Určení **důležitosti** a **rozhodnutí o upgradu** je klíčové pro všechny aplikace zajímavosti v pracovním postupu Desktop Analytics. Aby bylo možné snížit úsilí při přidávání poznámek k těmto aplikacím, určité typy aplikací jsou automaticky označeny jako *nedůležité*. Rozhodnutí o upgradu plánu nasazení pro tyto aplikace je také označeno jako *připravené*. Následující aplikace jsou kompatibilní a měly by po upgradu Windows i nadále fungovat:

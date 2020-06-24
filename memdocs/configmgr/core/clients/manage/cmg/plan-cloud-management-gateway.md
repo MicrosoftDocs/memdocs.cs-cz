@@ -2,7 +2,7 @@
 title: Plánování brány pro správu cloudu
 titleSuffix: Configuration Manager
 description: Naplánujte a navrhněte bránu pro správu cloudu (CMG), abyste zjednodušili správu internetových klientů.
-ms.date: 04/21/2020
+ms.date: 06/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 2dc8c9f1-4176-4e35-9794-f44b15f4e55f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 67b6fc51493dce4ee1718586cbf454da91883409
-ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
+ms.openlocfilehash: 136e11f97849e5fd8a27d9f83ea1bd44791c492e
+ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82254618"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84715641"
 ---
 # <a name="plan-for-the-cloud-management-gateway-in-configuration-manager"></a>Plánování brány pro správu cloudu v Configuration Manager
 
@@ -85,9 +85,12 @@ Nasazení a provoz CMG zahrnuje následující komponenty:
 
 - Role systému lokality [**spojovacího bodu služby**](../../../servers/deploy/configure/about-the-service-connection-point.md) spouští komponentu Cloud Service Manager, která zpracovává všechny úlohy nasazení CMG. Kromě toho monitoruje a hlásí informace o stavu a protokolování služby z Azure AD. Ujistěte se, že je váš spojovací bod služby v [online režimu](../../../servers/deploy/configure/about-the-service-connection-point.md#bkmk_modes).  
 
-- Požadavky klientů služby role systému lokality **bodu správy** na normální.  
+- Požadavky klientů služby role systému lokality **bodu správy** na normální.
 
-- Požadavky klientů na službu role systému lokality **bodu aktualizace softwaru** na normální.  
+- Požadavky klientů na službu role systému lokality **bodu aktualizace softwaru** na normální.
+
+    > [!NOTE]
+    > Pokyny pro změnu velikosti pro body správy a body aktualizace softwaru se nemění bez ohledu na to, zda jsou místní nebo internetové klienty. Další informace najdete v tématu věnovaném [velikostem a škálováním čísel](../../../plan-design/configs/size-and-scale-numbers.md#management-point).
 
 - **Internetoví klienti** se připojují k CMG pro přístup k místním součástem Configuration Manager.
 
@@ -151,15 +154,33 @@ Když klienti přecházejí do Internetu, komunikují s CMG v oblasti Západní 
 > [!TIP]
 > Pro účely geografického umístění není nutné nasazovat více než jednu bránu pro správu cloudu. Configuration Manager klient se většinou netýká mírné latence, ke které může dojít u cloudové služby, a to i v případě geograficky vzdálené.
 
+### <a name="test-environments"></a>Testovací prostředí
+<!-- SCCMDocs#1225 -->
+Mnoho organizací má samostatná prostředí pro produkční, testovací, vývojové nebo kvalitní zajištění. Při plánování nasazení CMG Vezměte v úvahu následující otázky:
+
+- Kolik tenantů Azure AD má vaše organizace?
+  - Existuje samostatný tenant pro testování?
+  - Jsou identity uživatelů a zařízení ve stejném tenantovi?
+
+- Kolik předplatných je v každém tenantovi?
+  - Jsou k dispozici předplatná, která jsou specifická pro testování?
+
+Služba Azure pro **správu cloudu** Configuration Manager podporuje víc klientů. Ke stejnému tenantovi se může připojit více Configuration Manager lokalit. Jedna lokalita může nasadit několik služeb CMG do různých předplatných. Do stejného předplatného může nasadit více lokalit služby CMG Services. Configuration Manager poskytuje flexibilitu v závislosti na vašem prostředí a obchodních požadavcích.
+
+Další informace najdete v následujících nejčastějších dotazech: [účty uživatelů musí být ve stejném Tenantovi Azure AD jako tenant přidružený k předplatnému, které hostuje cloudovou službu CMG?](cloud-management-gateway-faq.md#bkmk_tenant)
+
 ## <a name="requirements"></a>Požadavky
 
 - **Předplatné Azure** , které bude HOSTOVAT službu CMG.
+
+    > [!IMPORTANT]
+    > CMG nepodporuje předplatné s poskytovatelem Cloud Service (CSP) Azure.<!-- MEMDocs#320 -->
 
 - Váš uživatelský účet musí být ve Configuration Manager správce infrastruktury s **úplnými oprávněními** nebo **správcem infrastruktury** .<!-- SCCMDocs#2146 -->
 
 - **Správce Azure** se musí zúčastnit prvotního vytváření určitých součástí v závislosti na vašem návrhu. To může být stejné jako správce Configuration Manager, nebo oddělení. Pokud se liší, nevyžaduje oprávnění v Configuration Manager.
 
-  - K nasazení CMG potřebujete **Správce předplatného** .
+  - K nasazení CMG potřebujete **vlastníka předplatného** .
   - Pokud chcete web integrovat se službou Azure AD pro nasazení CMG pomocí Azure Resource Manager, budete potřebovat **globální správce** .
 
 - Aspoň jeden místní Windows Server pro hostování **spojovacího bodu CMG**. Tuto roli můžete společně najít pomocí jiných Configuration Manager rolí systému lokality.  
@@ -193,7 +214,7 @@ Když klienti přecházejí do Internetu, komunikují s CMG v oblasti Západní 
 
 - Body aktualizace softwaru používající nástroj pro vyrovnávání zatížení sítě nefungují s CMG. <!--505311-->  
 
-- CMG nasazení pomocí modelu prostředků Azure nepovolí podporu pro poskytovatele cloudových služeb Azure (CSP). Nasazení CMG s Azure Resource Manager nadále používá klasickou cloudovou službu, kterou CSP nepodporuje. Další informace najdete v tématu [dostupné služby Azure ve zprostředkovateli CSP Azure](https://docs.microsoft.com/azure/cloud-solution-provider/overview/azure-csp-available-services) .  
+- CMG nasazení pomocí modelu prostředků Azure nepovolí podporu pro poskytovatele cloudových služeb Azure (CSP). Nasazení CMG s Azure Resource Manager nadále používá klasickou cloudovou službu, kterou CSP nepodporuje. Další informace najdete v tématu [služby Azure dostupné v programu Azure CSP](https://docs.microsoft.com/partner-center/azure-plan-available).
 
 ### <a name="support-for-configuration-manager-features"></a>Podpora funkcí Configuration Manager
 
@@ -202,7 +223,7 @@ V následující tabulce jsou uvedeny CMG podpora pro funkce Configuration Manag
 |Funkce  |Podpora  |
 |---------|---------|
 | Aktualizace softwaru     | ![Podporuje se](media/green_check.png) |
-| Ochrana koncového bodu     | ![Podporovaná](media/green_check.png) <sup>[Poznámka 1](#bkmk_note1)</sup> |
+| Ochrana koncového bodu     | ![Podporovaná ](media/green_check.png) <sup> [Poznámka 1](#bkmk_note1)</sup> |
 | Inventář hardwaru a softwaru     | ![Podporuje se](media/green_check.png) |
 | Stav klienta a oznámení     | ![Podporuje se](media/green_check.png) |
 | Spustit skripty     | ![Podporuje se](media/green_check.png) |
@@ -228,10 +249,10 @@ V následující tabulce jsou uvedeny CMG podpora pro funkce Configuration Manag
 | Místní správa MDM     | ![Nepodporuje se](media/Red_X.png) |
 | Správa nástroje BitLocker     | ![Nepodporuje se](media/Red_X.png) |
 
-|Key|
+|Klíč|
 |--|
 |![Podporuje se](media/green_check.png) = Tato funkce je podporována u CMG pro všechny podporované verze Configuration Manager  |
-|![Podporováno](media/green_check.png) (*YYMM*) = Tato funkce je podporována u CMG počínaje verzí *YYMM* Configuration Manager  |
+|![Podporováno ](media/green_check.png) (*YYMM*) = Tato funkce je podporována u CMG počínaje verzí *YYMM* Configuration Manager  |
 |![Nepodporuje se](media/Red_X.png) = Tato funkce není u CMG podporována. |
 
 #### <a name="note-1-support-for-endpoint-protection"></a><a name="bkmk_note1"></a>Poznámka 1: podpora pro Endpoint Protection
@@ -333,6 +354,9 @@ Následující diagram je základní koncepční datový tok pro CMG:
 
 3. Klient se připojí k CMG přes port HTTPS 443. Ověřuje se pomocí služby Azure AD nebo certifikátu pro ověřování klientů.  
 
+    > [!NOTE]
+    > Pokud povolíte, aby služba CMG poskytovala obsah nebo používala cloudový distribuční bod, klient se připojí přímo ke službě Azure Blob Storage přes port HTTPS 443. Další informace najdete v tématu [Použití cloudového distribučního bodu](../../../plan-design/hierarchy/use-a-cloud-based-distribution-point.md#bkmk_dataflow).<!-- SCCMDocs#2332 -->
+
 4. CMG předává komunikaci klienta přes existující připojení k místnímu spojovacímu bodu CMG. Nemusíte otevírat žádné porty brány firewall pro příchozí spojení.  
 
 5. Bod připojení CMG předává komunikaci klienta s místním bodem správy a bodem aktualizace softwaru.  
@@ -343,13 +367,14 @@ Další informace o hostování obsahu v Azure najdete v tématu [Použití clou
 
 V této tabulce jsou uvedené požadované síťové porty a protokoly. *Klient* je zařízení iniciované připojením a vyžaduje odchozí port. *Server* je zařízení, které přijímá připojení, vyžaduje port pro příchozí spojení.
 
-| Klient | Protocol (Protokol) | Port | Server | Popis |
+| Klient | Protocol (Protokol) | Port | Server | Description |
 |--------|----------|------|--------|-------------|
 | Spojovací bod služby | HTTPS | 443 | Azure | Nasazení CMG |
 | Bod připojení CMG | TCP-TLS | 10140-10155 | Služba CMG | Upřednostňovaný protokol pro sestavení CMG kanálu <sup> [Poznámka 1](#bkmk_port-note1)</sup> |
 | Bod připojení CMG | HTTPS | 443 | Služba CMG | Záložní protokol pro sestavení kanálu CMG jenom na jednu instanci virtuálního počítače <sup> [2. Poznámka 2](#bkmk_port-note2)</sup> |
 | Bod připojení CMG | HTTPS | 10124-10139 | Služba CMG | Záložní protokol pro sestavení kanálu CMG do dvou nebo více instancí virtuálních počítačů <sup> [Poznámka 3](#bkmk_port-note3)</sup> |
 | Klient | HTTPS | 443 | CMG | Obecná komunikace s klientem |
+| Klient | HTTPS | 443 | Blob Storage | Stažení obsahu založeného na cloudu |
 | Bod připojení CMG | HTTPS nebo HTTP | 443 nebo 80 | Bod správy | Místní provoz, port závisí na konfiguraci bodu správy. |
 | Bod připojení CMG | HTTPS nebo HTTP | 443 nebo 80 | Bod aktualizace softwaru | Místní provoz, port závisí na konfiguraci bodu aktualizace softwaru. |
 

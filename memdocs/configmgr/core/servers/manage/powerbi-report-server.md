@@ -10,12 +10,12 @@ ms.assetid: 315e2613-dc71-46b1-80cb-26161d08103a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0c596ba410adc979b92a000c28d815e89695a9b0
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: f4089f52d912491b3b1396906fe391c5c334e061
+ms.sourcegitcommit: 02635469d684d233fef795d2a15615658e62db10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81713664"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84814894"
 ---
 # <a name="integrate-with-power-bi-report-server"></a>Integrace se Serverem sestav Power BI
 
@@ -43,6 +43,8 @@ Uložit Power BI Desktop soubory sestav (. PBIX) a nasaďte je do Server sestav 
     > - Použijte pouze verzi [Power BI Desktop, která uvádí, že je **optimalizovaná pro server sestav Power BI**](https://docs.microsoft.com/power-bi/report-server/install-powerbi-desktop).
 
 - Power BI Integration používá ke generování sestav stejnou správu na základě rolí.
+    > [!NOTE]
+    > Server sestav Power BI nepodporuje sestavy s povolenými RBAC, takže všichni čtenáři sestav uvidí stejné výsledky bez ohledu na jejich přiřazený obor.
 
 ## <a name="configure-the-reporting-services-point"></a>Konfigurace bodu služby Reporting Services
 

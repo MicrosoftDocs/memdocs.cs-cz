@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 47cf8819c29a3e766a5f475acdd9bbbf5bf7d584
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 68f8eb2ab3b7e348daa99e982e640e9bd28692d8
+ms.sourcegitcommit: 397ec824f1368dcf06c3870c89f52347852062bd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093605"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85264120"
 ---
 # <a name="use-and-manage-android-enterprise-devices-with-oemconfig-in-microsoft-intune"></a>Používání a Správa zařízení s Androidem Enterprise pomocí OEMConfig v Microsoft Intune
 
@@ -157,16 +157,23 @@ V porovnání se standardními aplikacemi aplikace OEMConfig rozšiřují opráv
 
 | OEM | ID sady prostředků | Dokumentace OEM (je-li k dispozici) |
 | --- | --- | ---|
+| Archos | com. Archos. oemconfig | |
 | Ascom | com. Ascom. MyCo. oemconfig | |
+| Bluebird | com. Bluebird. Android. oemconfig | |
 | Cipherlab | com. CipherLab. oemconfig | |
 | Datalogic | com. Datalogic. Settings. oemconfig | |
-| Honeywell | com. Honeywell. oemconfig |  |
+| Honeywell | com. Honeywell. oemconfig | |
 | HMDGlobal-7,2 | com. hmdglobal. app. oemconfig. n7_2 | 
-| HMDGlobal-4,2 | com. hmdglobal. app. oemconfig. n4_2 | 
+| HMDGlobal-4,2 | com. hmdglobal. app. oemconfig. n4_2 |
+| HMDGlobal-5,3 | com. hmdglobal. app. oemconfig. n5_3 |
+| Lenovo | com. Lenovo. oemconfig. rel | |
+| LG | com. LGE. Android. oemconfig | |
 | Tiskárny | JP. Kyocera. enterprisedeviceconfig |  |
 | Panasonic | com. Panasonic. Mobile. oemconfig | |
+| Point Mobile | zařízení. Apps. emkitagent | |
 | Samsung | com. Samsung. Android. Knox. KPU | [Příručka pro správce modulů plug-in služby Knox](https://docs.samsungknox.com/knox-service-plugin/admin-guide/index.htm) |
 | Seuic | com. seuic. seuicoemconfig | |
+| Sociální mobilní zařízení | com. rhinomobility. oemconfig | |
 | Spectralink – čárové kódy | com. Spectralink. čárový kód. Service |  |
 | Spectralink – tlačítka | com. Spectralink. Buttons |  |
 | Spectralink – zařízení | com. Spectralink. slnkdevicesettings  |  |

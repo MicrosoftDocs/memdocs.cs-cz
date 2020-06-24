@@ -10,12 +10,12 @@ ms.assetid: 39aa0558-742c-4171-81bc-9b1e6707f4ea
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e33ba8df84239b4a438ff0c526bb255c5b7d0052
-ms.sourcegitcommit: e618ea7cb864635c838b672bc71a1e926bf7c047
+ms.openlocfilehash: 4a050ab523730adbfdd2ecf541557fabbf95081b
+ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84458147"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84715692"
 ---
 # <a name="deploy-bitlocker-management"></a>Nasazení správy nástroje BitLocker
 
@@ -173,7 +173,7 @@ Další informace najdete v tématu [šifrování dat pro obnovení](encrypt-rec
 Pokud aktuálně používáte nástroj Microsoft BitLocker Administration and Monitoring (MBAM), můžete plynule migrovat správu na Configuration Manager. Když nasadíte zásady správy BitLockeru v Configuration Manager, klienti automaticky odesílají klíče a balíčky pro obnovení do služby Configuration Manager Recovery Services.
 
 > [!IMPORTANT]
-> Pokud provádíte migraci ze samostatného MBAMu na Configuration Manager správu BitLockeru a potřebujete existující funkce samostatného MBAM, nepoužívejte samostatné servery MBAM nebo komponenty se správou nástroje BitLocker Configuration Manager. Pokud tyto servery znovu použijete, samostatné MBAM přestane fungovat, když Configuration Manager Správa BitLockeru nainstaluje své komponenty na tyto servery. Nespouštějte skript MBAMWebSiteInstaller. ps1 a nastavte portály BitLocker na samostatné servery MBAM. Při nastavování Configuration Manager správy BitLockeru použijte samostatné servery.
+> Pokud provádíte migraci ze samostatného MBAMu na Configuration Manager správu BitLockeru a potřebujete existující funkce samostatného MBAM, nepoužívejte samostatné servery MBAM nebo komponenty se správou nástroje BitLocker Configuration Manager. Pokud tyto servery znovu použijete, samostatné MBAM přestane fungovat, když Configuration Manager Správa BitLockeru nainstaluje své komponenty na tyto servery. Nespouštějte skript MBAMWebSiteInstaller.ps1 pro nastavení portálů BitLockeru na samostatných serverech MBAM. Při nastavování Configuration Manager správy BitLockeru použijte samostatné servery.
 
 ### <a name="group-policy"></a>Zásady skupiny
 
@@ -191,7 +191,7 @@ Pokud aktuálně používáte nástroj Microsoft BitLocker Administration and Mo
 
 Configuration Manager nešifruje jednotky, které jsou již chráněny pomocí nástroj BitLocker Drive Encryption. Pokud nasadíte zásadu správy BitLockeru, která neodpovídá aktuální ochraně jednotky, ohlásí se jako nedodržující předpisy. Jednotka je pořád chráněná.
 
-Například jste použili MBAM k zašifrování jednotky bez ochrany kódem PIN, ale zásady Configuration Manager vyžadují PIN kód. Tato jednotka není kompatibilní se zásadami, a to i v případě, že je jednotka zašifrovaná.
+Například jste použili MBAM k šifrování jednotky pomocí šifrovacího algoritmu AES-XTS 128, ale zásady Configuration Manager vyžadují AES-XTS 256. Tato jednotka není kompatibilní se zásadami, a to i v případě, že je jednotka zašifrovaná.
 
 Pokud chcete tento problém obejít, nejdřív na zařízení zakažte nástroj BitLocker. Pak nasaďte novou zásadu s novým nastavením.
 
@@ -201,7 +201,7 @@ Pokud chcete tento problém obejít, nejdřív na zařízení zakažte nástroj 
 
 Obslužná rutina klienta Configuration Manager pro BitLocker se spolupracuje. Pokud je zařízení spoluspravované a přepnete [Endpoint Protection úlohy](../../../comanage/workloads.md#endpoint-protection) do Intune, bude klient Configuration Manager ignorovat zásady BitLockeru. Zařízení získá zásady šifrování Windows z Intune.
 
-Když přepnete autority pro správu šifrování, naplánujte [opakované šifrování](#re-encryption).
+Když přepnete autority pro správu šifrování a také požadovaný šifrovací algoritmus, budete muset naplánovat [nové šifrování](#re-encryption) .
 
 Další informace o správě nástroje BitLocker s Intune najdete v následujících článcích:
 

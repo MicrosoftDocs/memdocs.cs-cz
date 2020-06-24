@@ -8,14 +8,14 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.date: 09/06/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 60e2022f-a4f9-40dd-af01-9ecb37b43878
-ms.openlocfilehash: 4874d12149f213351740c9e5b300bf04fc536571
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 88c8b34437ba52e700ef97885aafed40734a0f32
+ms.sourcegitcommit: 7b2f7918d517005850031f30e705e5a512959c3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81711361"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84776952"
 ---
 # <a name="how-to-switch-configuration-manager-workloads-to-intune"></a>Postup přepnutí úloh Configuration Manager do Intune
 

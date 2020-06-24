@@ -2,7 +2,7 @@
 title: Novinky ve verzi 2002
 titleSuffix: Configuration Manager
 description: Získejte podrobnosti o změnách a nových funkcích zavedených ve verzi 2002 Configuration Manager aktuální větve.
-ms.date: 05/26/2020
+ms.date: 06/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: de718cdc-d0a9-47e2-9c99-8fa2cb25b5f8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: afdcc608133d306042c9c6dc817396bb2fc3f387
-ms.sourcegitcommit: b0ae4a9972bac3518d0d4f33e033ac492eefe3c1
+ms.openlocfilehash: 4100f8747418bff769a7830fa63383ce545895ce
+ms.sourcegitcommit: 5f15a3abf33ce7bfd6855ffeef2ec3cd4cd48a7f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84126477"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84721852"
 ---
 # <a name="whats-new-in-version-2002-of-configuration-manager-current-branch"></a>Co je nového ve verzi 2002 Configuration Manager Current Branch
 
@@ -329,7 +329,7 @@ Další informace najdete v tématu [synchronizace aktualizací Office 365 z odp
 <!-- 5229962 -->
 Configuration Manager rozšířila podporu pro zařízení s připojováním do ochrany ATP v programu Microsoft Defender. Další informace najdete v tématu [Rozšířená ochrana před internetovými útoky v programu Microsoft Defender](../../../protect/deploy-use/windows-defender-advanced-threat-protection.md#onboard-devices).
 
-## <a name="onboard-configuration-manager-clients-to-microsoft-defender-atp-via-the-microsoft-endpoint-manager-admin-center"></a><a name="bkmk_atp"></a>Připojení klientů Configuration Manager k ochraně ATP v programu Microsoft Defender prostřednictvím centra pro správu Microsoft Endpoint Manageru
+### <a name="onboard-configuration-manager-clients-to-microsoft-defender-atp-via-the-microsoft-endpoint-manager-admin-center"></a><a name="bkmk_atp"></a>Připojení klientů Configuration Manager k ochraně ATP v programu Microsoft Defender prostřednictvím centra pro správu Microsoft Endpoint Manageru
 <!--5691658-->
 Teď můžete nasadit zásady registrace a odezvy EDR (Microsoft Defender ATP) pro Configuration Manager spravované klienty. Tito klienti nevyžadují registraci v Azure AD ani MDM a zásady jsou zaměřené na kolekce nástroje ConfigMgr místo skupin Azure AD.
 
@@ -386,6 +386,16 @@ Další informace najdete v tématu o [zpětné vazbě produktu](../../understan
 <!--5891241-->
 
 Podobně jako u vylepšení v předchozích verzích teď můžete použít možnost vyhledávání **všech podsložek** v uzlech **položky konfigurace** a **standardní hodnoty konfigurace** .
+
+### <a name="community-hub"></a>Centrum komunity
+
+<!--3555935, 3555936-->
+
+_Poprvé představeno v červnu 2020_
+
+Komunita správce IT vyvinula spoustu znalostí během let. Místo rezásobování položek, jako jsou skripty a sestavy od začátku, jsme sestavili Configuration Manager **Centrum komunity** , kde můžete navzájem sdílet. Využitím práce ostatních můžete ušetřit hodiny práce. Centrum komunity podporuje kreativitu tím, že sestaví na práci ostatních a má na vás jiné uživatele. GitHub již obsahuje procesy a nástroje pro sdílení v celém oboru. Centrum komunity teď bude tyto nástroje využívat přímo v konzole Configuration Manager jako základní části pro řízení této nové komunity.
+
+Další informace najdete v tématu [komunitní centrum a GitHub](../../servers/manage/community-hub.md).
 
 ## <a name="tools"></a><a name="bkmk_tools"></a>Nástroje
 
@@ -451,7 +461,7 @@ Až budete připraveni k instalaci této verze, přečtěte si téma [instalace 
 > [!TIP]
 > Chcete-li nainstalovat novou lokalitu, použijte základní verzi Configuration Manager.
 >
-> Další informace:
+> Přečtěte si další informace:
 >
 > - [Instalace nových lokalit](../../servers/deploy/install/installing-sites.md)
 > - [Základní a aktualizační verze](../../servers/manage/updates.md#bkmk_Baselines)

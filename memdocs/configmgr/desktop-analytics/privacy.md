@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 82c8495391dcc22aa2784657bc1461887e412577
-ms.sourcegitcommit: 7b8921d3ea6a751de67315771d68e2d2750fa36f
+ms.openlocfilehash: 34005a63b372198bbc2e3079f8ab560ef6b2b791
+ms.sourcegitcommit: c333fc6627f5577cde9d2fa8f59e642202a7027b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84223651"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84795631"
 ---
 # <a name="desktop-analytics-data-privacy"></a>Ochrana osobních údajů v datech Desktop Analytics
 
@@ -57,6 +57,8 @@ Následující obrázek ukazuje, jak diagnostická data přecházejí z jednotli
 
 3. Zařízení odesílají diagnostická data službě Microsoft Diagnostic Správa dat Service pro Windows. Všechna diagnostická data jsou šifrována přes protokol HTTPS a při přenosu ze zařízení do této služby používají připnutí certifikátů. Služba Microsoft Správa dat je hostována v USA.
 
+      - Chyby aplikací, chyby jádra, nereagující aplikace a další problémy specifické pro aplikace používají rozhraní Zasílání zpráv o chybách systému Windows API k posílání sestav problémů specifických pro aplikace do Microsoftu. Konkrétní podrobnosti o tomto toku dat najdete v tématu [použití služby wer](https://docs.microsoft.com/windows/win32/wer/using-wer) .
+      
 4. Každý den Microsoft vytvoří snímek přehledů zaměřených na IT. Tento snímek kombinuje diagnostická data z Windows se vstupem pro zaregistrovaná zařízení. K tomuto procesu dochází v přechodném úložišti, které se používá jenom pro Desktop Analytics. Přechodné úložiště je hostované v datových centrech Microsoftu v USA. Všechna data se odesílají přes zašifrovaný kanál SSL (HTTPS). Snímky jsou oddělené pomocí komerčního ID.  
 
 5. Snímky se pak zkopírují do vašeho pracovního prostoru Azure Log Analytics. K přenosu dat dojde přes protokol HTTPS prostřednictvím protokolu ingestování Webhooku, což je funkce Log Analytics. Desktop Analytics nemá žádná oprávnění ke čtení nebo zápisu do úložiště Log Analytics. Desktop Analytics volá rozhraní API Webhooku s identifikátorem URI sdíleného přístupového podpisu (SAS). Pak Log Analytics získá data z tabulek úložiště přes protokol HTTPS.
@@ -78,6 +80,8 @@ Další informace o souvisejících aspektech ochrany osobních údajů najdete 
 - [Windows 10, verze 1809 úrovně Basic diagnostické události a pole Windows](https://docs.microsoft.com/windows/privacy/basic-level-windows-diagnostic-events-and-fields-1809)  
 
 - [Windows 10, verze 1709 rozšířené události diagnostických dat a pole používaná analýzou pro stolní počítače](https://docs.microsoft.com/windows/privacy/enhanced-diagnostic-data-windows-analytics-events-and-fields)  
+
+- [instalační program systému Windows zasílání zpráv o chybách](https://docs.microsoft.com/windows/deployment/upgrade/windows-error-reporting)
 
 - [Přehled prohlížeče diagnostických dat](https://docs.microsoft.com/windows/privacy/diagnostic-data-viewer-overview)  
 

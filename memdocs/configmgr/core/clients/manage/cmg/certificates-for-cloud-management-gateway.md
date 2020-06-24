@@ -5,17 +5,17 @@ description: Přečtěte si o různých digitálních certifikátech, které se 
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 04/15/2020
+ms.date: 06/10/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 71eaa409-b955-45d6-8309-26bf3b3b0911
-ms.openlocfilehash: 7e9602ef5ea784dd3e97578d5ff585f2ca662c1e
-ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
+ms.openlocfilehash: b5a9a4a7f23942ac06dc16a0b54b657c7fd617a9
+ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84347198"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84715607"
 ---
 # <a name="certificates-for-the-cloud-management-gateway"></a>Certifikáty pro bránu pro správu cloudu
 
@@ -28,7 +28,8 @@ V závislosti na scénáři, který používáte ke správě klientů na interne
   - [Certifikát ověřování serveru vydaný veřejným poskytovatelem](#bkmk_serverauthpublic)  
   - [Certifikát ověřování serveru vydaný z podnikové infrastruktury veřejných klíčů](#bkmk_serverauthpki)  
 
-- [Certifikát pro ověřování klientů](#bkmk_clientauth)  
+- [Certifikát pro ověřování klientů](#bkmk_clientauth)
+  - [Bod připojení CMG](#bkmk_cmgcp)
   - [Důvěryhodný kořenový certifikát klienta pro CMG](#bkmk_clientroot)  
 
 - [Povolit bod správy pro protokol HTTPS](#bkmk_mphttps)  
@@ -65,7 +66,7 @@ CMG vytvoří službu HTTPS, ke které se připojují internetoví klienti. Serv
 
 Tento certifikát vyžaduje globálně jedinečný název, který identifikuje službu v Azure. Než si vyžádáte certifikát, potvrďte, že název domény Azure, který chcete, je jedinečný. Například *GraniteFalls.CloudApp.NET*.
 
-1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
 1. Vyberte **všechny prostředky**a pak vyberte **Přidat**.
 1. Vyhledejte **cloudovou službu**. Vyberte **Vytvořit**.
 1. Do pole **název DNS** zadejte požadovanou předponu, například *GraniteFalls*. Rozhraní odráží, zda je název domény k dispozici nebo již používá jiná služba.
@@ -90,7 +91,7 @@ Klienti musí důvěřovat ověřovacímu certifikátu serveru CMG. Existují dv
 
   - K zřizování certifikátů na klientech můžete také použít Configuration Manager profily certifikátů. Další informace najdete v tématu [Úvod do profilů certifikátů](../../../../protect/deploy-use/introduction-to-certificate-profiles.md).
 
-  - Pokud plánujete [instalaci klienta Configuration Manager z Intune](../../../../comanage/how-to-prepare-Win10.md#install-the-configuration-manager-client), můžete k zřizování certifikátů na klientech použít taky profily certifikátů Intune. Další informace najdete v tématu [Konfigurace profilu certifikátu](https://docs.microsoft.com/intune/certificates-configure).
+  - Pokud plánujete [instalaci klienta Configuration Manager z Intune](../../../../comanage/how-to-prepare-Win10.md#install-the-configuration-manager-client), můžete k zřizování certifikátů na klientech použít taky profily certifikátů Intune. Další informace najdete v tématu [Konfigurace profilu certifikátu](../../../../../intune/protect/certificates-configure.md).
 
 ### <a name="server-authentication-certificate-issued-by-public-provider"></a><a name="bkmk_serverauthpublic"></a>Certifikát ověřování serveru vydaný veřejným poskytovatelem
 
@@ -129,18 +130,35 @@ Vytvořte si vlastní certifikát SSL pro CMG stejně jako u cloudového distrib
 
 ## <a name="client-authentication-certificate"></a><a name="bkmk_clientauth"></a>Certifikát pro ověřování klientů
 
-*Tento certifikát je vyžadován pro internetové klienty se systémem Windows 8.1 a zařízení s Windows 10 nepřipojená k Azure Active Directory (Azure AD). Je také vyžadováno v bodu připojení CMG. Nevyžaduje se pro klienty Windows 10 připojené ke službě Azure AD.*
+Požadavky na certifikát ověřování klientů:
+
+- Tento certifikát je vyžadován pro internetové klienty se systémem Windows 8.1 a zařízení s Windows 10 nepřipojená k Azure Active Directory (Azure AD).
+- Může být vyžadováno u spojovacího bodu CMG. Další informace najdete v tématu [bod připojení CMG](#bkmk_cmgcp).
+- Nevyžaduje se pro klienty Windows 10 připojené ke službě Azure AD.
+- Pokud je vaše lokalita verze 2002 nebo novější, zařízení můžou použít token vydaný lokalitou. Další informace najdete v tématu [ověřování založené na tokenech pro CMG](../../deploy/deploy-clients-cmg-token.md).
 
 Klienti používají tento certifikát k ověřování pomocí CMG. Zařízení s Windows 10, která jsou hybridní nebo cloudová doména, tento certifikát nevyžadují, protože k ověřování používají službu Azure AD.
 
 Tento certifikát zřiďte mimo kontext Configuration Manager. K vystavování certifikátů ověřování klientů můžete například použít službu AD CS (Active Directory Certificate Services) a zásady skupiny. Další informace najdete v tématu [nasazení klientského certifikátu pro počítače se systémem Windows](../../../plan-design/network/example-deployment-of-pki-certificates.md#BKMK_client2008_cm2012).
 
-Pro bezpečné přeposílání požadavků klienta vyžaduje spojovací bod CMG certifikát ověřování klienta, který odpovídá ověřovacímu certifikátu serveru v bodu správy HTTPS. Pokud klienti používají ověřování Azure AD nebo nakonfigurujete bod správy pro rozšířený protokol HTTP, tento certifikát se nevyžaduje. Další informace najdete v tématu [Povolení bodu správy pro protokol HTTPS](#bkmk_mphttps).
-
 > [!NOTE]
 > Microsoft doporučuje připojit zařízení k Azure AD. Internetová zařízení můžou pomocí Azure AD ověřit pomocí Configuration Manager. Také umožňuje scénářům zařízení i uživatele, zda je zařízení na internetu nebo připojeno k interní síti. Další informace najdete v tématu [instalace a registrace klienta pomocí Azure AD identity](../../deploy/deploy-clients-cmg-azure.md#install-and-register-the-client-using-azure-ad-identity).
 >
-> Počínaje verzí 2002,<!--5686290--> Configuration Manager rozšiřuje podporu internetových zařízení, která se často nepřipojují k interní síti, nelze se připojit k Azure Active Directory (Azure AD) a nemusíte mít k dispozici metodu pro instalaci certifikátu vystaveného infrastrukturou veřejných klíčů. Další informace najdete v tématu [ověřování založené na tokenech pro CMG](../../deploy/deploy-clients-cmg-token.md).
+> Počínaje verzí 2002,<!--5686290--> Configuration Manager rozšiřuje podporu internetových zařízení, která se často nepřipojují k interní síti, nejde se připojit ke službě Azure AD a nemáte metodu instalovat certifikát vydaný PKI. Další informace najdete v tématu [ověřování založené na tokenech pro CMG](../../deploy/deploy-clients-cmg-token.md).
+
+### <a name="cmg-connection-point"></a><a name="bkmk_cmgcp"></a>Bod připojení CMG
+
+Aby bylo možné bezpečně přesměrovat požadavky klientů, bod připojení CMG vyžaduje zabezpečené připojení k bodu správy. V závislosti na tom, jak nakonfigurujete zařízení a body správy, určuje konfiguraci spojovacího bodu CMG.
+
+- Bod správy je HTTPS.
+
+  - Klienti mají certifikát pro ověřování klientů: bod připojení CMG vyžaduje certifikát ověřování klienta, který odpovídá ověřovacímu certifikátu serveru v bodu správy HTTPS.
+
+  - Klienti používají ověřování Azure AD nebo Configuration Manager token: Tento certifikát se nevyžaduje.
+
+- Pokud nakonfigurujete bod správy pro rozšířený protokol HTTP: Tento certifikát se nevyžaduje.
+
+Další informace najdete v tématu [Povolení bodu správy pro protokol HTTPS](#bkmk_mphttps).
 
 ### <a name="client-trusted-root-certificate-to-cmg"></a><a name="bkmk_clientroot"></a>Důvěryhodný kořenový certifikát klienta pro CMG
 
@@ -150,8 +168,8 @@ Tento certifikát zadáte při vytváření CMG v konzole Configuration Manager.
 
 CMG musí důvěřovat certifikátům pro ověřování klientů. Chcete-li dosáhnout tohoto vztahu důvěryhodnosti, zadejte důvěryhodný kořenový řetěz certifikátů. Nezapomeňte přidat všechny certifikáty v řetězu důvěryhodnosti. Pokud je třeba certifikát pro ověřování klientů vydaný zprostředkující certifikační autoritou, přidejte jak certifikáty zprostředkující, tak i kořenových certifikačních autorit.
 
-> [!Note]  
-> Při vytváření CMG už nebudete muset poskytovat důvěryhodný kořenový certifikát na stránce nastavení. Tento certifikát se nevyžaduje při použití Azure Active Directory (Azure AD) pro ověřování klientů, ale používá se v průvodci. Pokud používáte certifikáty pro ověřování klientů PKI, musíte do CMG Přidat důvěryhodný kořenový certifikát.<!--SCCMDocs-pr issue #2872 SCCMDocs issue #1319-->
+> [!NOTE]  
+> Při vytváření CMG už nebudete muset poskytovat důvěryhodný kořenový certifikát na stránce nastavení. Tento certifikát se nevyžaduje při použití Azure AD pro ověřování klientů, ale používá se v průvodci jako povinné. Pokud používáte certifikáty pro ověřování klientů PKI, musíte do CMG Přidat důvěryhodný kořenový certifikát.<!--SCCMDocs-pr issue #2872 SCCMDocs issue #1319-->
 >
 > Ve verzi 1902 a starší můžete přidat pouze dva důvěryhodné kořenové certifikační autority a čtyři zprostředkující (podřízené) certifikační autority.
 
@@ -193,7 +211,7 @@ Tento certifikát zřiďte mimo kontext Configuration Manager. K vydání certif
 
 Při použití možnosti web k **použití Configuration Manager generovaných certifikátů pro systémy lokality http**může být bod správy http. Další informace najdete v tématu [Rozšířená http](../../../plan-design/hierarchy/enhanced-http.md).
 
-> [!Tip]  
+> [!TIP]
 > Pokud nepoužíváte rozšířené požadavky HTTP a vaše prostředí má více bodů správy, nemusíte je povolit pro CMG. Nakonfigurujte body správy s povoleným CMG jako **pouze Internet**. Místní klienti je pak nezkusí použít.<!-- SCCMDocs#1676 -->
 
 ### <a name="enhanced-http-certificate-for-management-points"></a>Rozšířený certifikát HTTP pro body správy
@@ -240,14 +258,14 @@ Nakonfigurujte místní bod správy pomocí následujícího režimu připojení
 
 - *Pracovní skupina*: zařízení není připojené k doméně nebo službě Azure AD, ale má [certifikát pro ověřování klientů](#bkmk_clientauth).
 - *Připojeno k doméně služby*Active Directory: připojíte zařízení k místní doméně služby Active Directory.
-- *Služba Azure AD – připojeno*: taky se označuje jako cloudová doména připojená ke klientovi Azure Active Directory. Další informace najdete v tématu [zařízení připojená k Azure AD](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join).
-- *Hybridní – připojeno*: připojíte zařízení k vaší místní službě Active Directory a zaregistrujete ho do svého Azure Active Directory. Další informace najdete v tématu [zařízení připojená k hybridní službě Azure AD](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join-hybrid).
+- *Služba Azure AD – připojeno*: taky se označuje jako cloudová doména, připojíte zařízení k TENANTOVI Azure AD. Další informace najdete v tématu [zařízení připojená k Azure AD](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join).
+- *Hybridní – připojeno*: připojíte zařízení k místní službě Active Directory a zaregistrujete ho do služby Azure AD. Další informace najdete v tématu [zařízení připojená k hybridní službě Azure AD](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join-hybrid).
 - *Http*: ve vlastnostech bodu správy nastavíte připojení klienta na **http**.
 - *Https*: ve vlastnostech bodu správy nastavíte připojení klienta k **https**.
-- *E-http*: na kartě Vlastnosti lokality, **komunikace s klientským počítačem** nastavíte nastavení systému lokality na **https nebo http**a povolíte možnost **používat Configuration Manager certifikáty generované pro systémy lokality http**. Nakonfigurujete bod správy pro protokol HTTP, bod správy protokolu HTTP je připravený pro komunikaci HTTP i HTTPS (scénáře ověřování tokenů).
+- *E-http*: na kartě Vlastnosti lokality, **zabezpečení komunikace** můžete nastavit nastavení systému lokality na **https nebo HTTP**a povolit možnost **používat Configuration Manager certifikáty generované pro systémy lokality http**. Nakonfigurujete bod správy pro protokol HTTP, bod správy protokolu HTTP je připravený pro komunikaci HTTP i HTTPS (scénáře ověřování tokenů).
 
     > [!Note]
-    > Počínaje verzí 1906 se tato karta nazývá **zabezpečení komunikace**.<!-- SCCMDocs#1645 -->
+    > Ve verzi 1902 a starší se tato karta nazývá **komunikace s klientským počítačem**.<!-- SCCMDocs#1645 -->
 
 ## <a name="azure-management-certificate"></a><a name="bkmk_azuremgmt"></a>Certifikát pro správu Azure
 

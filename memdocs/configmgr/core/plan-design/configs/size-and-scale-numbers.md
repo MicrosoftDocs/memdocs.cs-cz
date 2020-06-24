@@ -10,12 +10,12 @@ ms.assetid: c5a42100-2f60-4952-b495-918025ea6559
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 0861bb73769beb6c7595b896afc8d0e156eef94d
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 5109ababd00011784618f9c989e1d2b756a322d9
+ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81709639"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84715624"
 ---
 # <a name="size-and-scale-numbers-for-configuration-manager"></a>Dimenzování a škálování nástroje Configuration Manager
 
@@ -23,7 +23,7 @@ ms.locfileid: "81709639"
 
 Každé nasazení Configuration Manager má maximální počet webů, rolí systému lokality a zařízení, která může podporovat. Tato čísla se liší v závislosti na struktuře hierarchie, typu a počtu lokalit, které používáte, a rolím systému lokality, které nasadíte. Informace v tomto článku vám pomůžou určit počet rolí systému lokality a lokalit, které potřebujete k podpoře zařízení, která chcete spravovat.
 
-Další informace najdete v těchto článcích:
+Další informace najdete v následujících článcích:
 
 - [Doporučený hardware](recommended-hardware.md)
 - [Podporované operační systémy pro servery systému lokality](supported-operating-systems-for-site-system-servers.md)  
@@ -57,7 +57,7 @@ Tato čísla podpory jsou založená na použití doporučeného hardwaru pro Co
 > [!Important]
 > Uživatelské prostředí programu Silverlight v katalogu aplikací není v aktuální větvi verze 1806 podporováno. Počínaje verzí 1906 aktualizované klienty automaticky používají bod správy pro nasazení aplikací, které jsou k dispozici pro uživatele. Nemůžete také instalovat nové role katalogu aplikací. Podpora končí pro role katalogu aplikací s verzí 1910.  
 >
-> Další informace najdete v těchto článcích:
+> Další informace najdete v následujících článcích:
 >
 > - [Konfigurace centra softwaru](../../../apps/plan-design/plan-for-software-center.md#bkmk_userex)
 > - [Odebrané a zastaralé funkce](../changes/deprecated/removed-and-deprecated-cmfeatures.md)  
@@ -69,7 +69,7 @@ Tato čísla podpory jsou založená na použití doporučeného hardwaru pro Co
 > [!Important]
 > Uživatelské prostředí programu Silverlight v katalogu aplikací není v aktuální větvi verze 1806 podporováno. Počínaje verzí 1906 aktualizované klienty automaticky používají bod správy pro nasazení aplikací, které jsou k dispozici pro uživatele. Nemůžete také instalovat nové role katalogu aplikací. Podpora končí pro role katalogu aplikací s verzí 1910.  
 >
-> Další informace najdete v těchto článcích:
+> Další informace najdete v následujících článcích:
 >
 > - [Konfigurace centra softwaru](../../../apps/plan-design/plan-for-software-center.md#bkmk_userex)
 > - [Odebrané a zastaralé funkce](../changes/deprecated/removed-and-deprecated-cmfeatures.md)  
@@ -136,6 +136,9 @@ Další informace najdete v tématu CMG [Performance and Scale](../../clients/ma
 
 Informace o počtu klientů a zařízení, které může bod správy podporovat, najdete v části [body správy](#bkmk_mp) .  
 
+> [!NOTE]
+> Pokud povolíte, aby bod správy podporoval [bránu pro správu cloudu](../../clients/manage/cmg/plan-cloud-management-gateway.md), klientské požadavky na internetové služby se budou na normální úrovni. Pokyny pro změnu velikosti bodu správy se nemění bez ohledu na to, jestli místní nebo internetové klienty IT služby.
+
 ### <a name="software-update-point"></a>Bod aktualizace softwaru  
 
 Jako základ použijte následující doporučení. Tato základní hodnota vám pomůže určit informace pro plánování kapacity aktualizací softwaru, které je vhodné pro vaši organizaci. Skutečné požadavky na kapacitu se mohou lišit od doporučení uvedených v tomto článku v závislosti na následujících kritériích:
@@ -144,6 +147,9 @@ Jako základ použijte následující doporučení. Tato základní hodnota vám
 - Hardware, který slouží k hostování systému lokality bodu aktualizace softwaru
 - Počet spravovaných klientů
 - Ostatní role systému lokality nainstalované na serveru  
+
+> [!NOTE]
+> Pokud povolíte, aby bod aktualizace softwaru podporoval [bránu pro správu cloudu](../../clients/manage/cmg/plan-cloud-management-gateway.md), klientské požadavky na internetové služby jsou na normální. Pokyny pro změnu velikosti bodu aktualizace softwaru se nemění bez ohledu na to, jestli místní nebo internetové klienty IT služby.
 
 #### <a name="capacity-planning-for-the-software-update-point"></a><a name="BKMK_SUMCapacity"></a> Plánování kapacity pro bod aktualizace softwaru  
 

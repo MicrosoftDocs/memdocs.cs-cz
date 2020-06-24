@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 0811c695acba4859bf32de535a28ea55cf8eee07
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 7403dc26f5fe1789fcda6b3eddf30136a4cd6e68
+ms.sourcegitcommit: c333fc6627f5577cde9d2fa8f59e642202a7027b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268738"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84795647"
 ---
 # <a name="enable-data-sharing-for-desktop-analytics"></a>Povolení sdílení dat pro desktopovou analýzu
 
@@ -35,8 +35,8 @@ Základní funkce Desktop Analytics funguje na **základní** [úrovni diagnosti
 
 - Použití aplikace
 - [Další App Insights](compat-assessment.md#additional-insights)
-- Data o stavu nasazení
-- Data monitorování stavu
+- [Data o stavu nasazení](deploy-prod.md#address-deployment-alerts)
+- [Data monitorování stavu](health-status-monitoring.md)
 
 Microsoft doporučuje, abyste povolili **vylepšenou (omezená)** úroveň diagnostických dat s desktopovou analýzou, která vám umožní maximalizovat výhody, které z ní získáte.
 

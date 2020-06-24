@@ -2,7 +2,7 @@
 title: Referenční informace k protokolům
 titleSuffix: Configuration Manager
 description: Odkaz na všechny soubory protokolu pro Configuration Manager klienta, server a závislé součásti.
-ms.date: 04/24/2020
+ms.date: 06/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 11efada9eaf7e16a68902d7d6d78fb6708916d05
-ms.sourcegitcommit: e618ea7cb864635c838b672bc71a1e926bf7c047
+ms.openlocfilehash: 63f8ad6827a1aa72c3aaa51e21fecbf639fbb405
+ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84458130"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84715573"
 ---
 # <a name="log-file-reference"></a>Referenční informace k protokolům
 
@@ -93,7 +93,7 @@ Následující části obsahují podrobné informace o různých souborech proto
 
   - [Vzdálené řízení](#BKMK_RCLog)  
 
-  - [Generování sestav](#BKMK_ReportLog)  
+  - [Vytváření sestav](#BKMK_ReportLog)  
 
   - [Správa na základě rolí](#BKMK_RBALog)  
 
@@ -190,10 +190,10 @@ Následující tabulka uvádí soubory protokolů, které obsahují informace t�
 
 |Název protokolu|Description|  
 |--------------|-----------------|  
-|ccmsetup.log|Zaznamenává úlohy nástroje CCMSetup. exe pro instalaci klienta, upgrade klienta a odebrání klienta. Dá se použít k odstraňování problémů instalace klienta.|  
-|ccmsetup-ccmeval.log|Zaznamenává úlohy programu CCMSetup. exe pro stav a nápravu klienta.|  
+|ccmsetup.log|Zaznamenává úlohy ccmsetup.exe pro instalaci klienta, upgrade klienta a odebrání klienta. Dá se použít k odstraňování problémů instalace klienta.|  
+|ccmsetup-ccmeval.log|Zaznamenává úlohy ccmsetup.exe pro stav a nápravu klienta.|  
 |CcmRepair.log|Zaznamenává činnosti oprav agenta klienta.|  
-|client.msi.log|Zaznamenává úlohy instalace, které provádí soubor Client. msi. Lze použít k odstraňování problémů instalace nebo odebrání klienta.|  
+|client.msi.log|Zaznamenává úlohy instalace, které provádí client.msi. Lze použít k odstraňování problémů instalace nebo odebrání klienta.|  
 
 ### <a name="client-for-linux-and-unix"></a><a name="BKMK_LogFilesforLnU"></a>Klient pro systémy Linux a UNIX
 
@@ -366,7 +366,7 @@ Následující tabulka uvádí soubory protokolů, které obsahují informace t�
 |--------------|-----------------|----------------------------|  
 |DWSSMSI. log|Zaznamenává zprávy vygenerované instalací bodu služby datového skladu.|Server systému lokality|  
 |DWSSSetup. log|Zaznamenává zprávy vygenerované instalací bodu služby datového skladu.|Server systému lokality|  
-|Microsoft. ConfigMgrDataWarehouse. log|Zaznamenává informace o synchronizaci dat mezi databází lokality a databází datového skladu.|Server systému lokality|  
+|Microsoft.ConfigMgrDataWarehouse. log|Zaznamenává informace o synchronizaci dat mezi databází lokality a databází datového skladu.|Server systému lokality|  
 
 ### <a name="fallback-status-point"></a><a name="BKMK_FSPLog"></a>Bod záložního stavu
 
@@ -384,7 +384,9 @@ Následující tabulka uvádí protokolové soubory, které obsahují informace 
 
 |Název protokolu|Description|Počítač obsahující soubor protokolu|  
 |--------------|-----------------|----------------------------|  
-|CcmIsapi.log|Zaznamenává činnost zpracování zpráv klienta na koncovém bodě.|Server systému lokality|  
+|CcmIsapi.log|Zaznamenává činnost zpracování zpráv klienta na koncovém bodě.|Server systému lokality|
+|CCM_STS. log|Zaznamenává činnosti pro tokeny ověřování, buď od Azure Active Directory nebo tokenů klientů vydaných serverem.|Server systému lokality|
+|ClientAuth.log|Zaznamenává aktivitu podepisování a ověřování.|Server systému lokality|
 |MP_CliReg.log|Zaznamenává činnost registrace klienta zpracovávané bodem správy.|Server systému lokality|  
 |MP_Ddr.log|Zaznamenává převod záznamů XML. DDR z klientů a kopíruje je do serveru lokality.|Server systému lokality|  
 |MP_Framework.log|Zaznamenává činnosti základního bodu správy a součástí architektury klienta.|Server systému lokality|  
@@ -394,6 +396,7 @@ Následující tabulka uvádí protokolové soubory, které obsahují informace 
 |MP_Location.log|Zaznamenává činnost dotazů a odpovědí na umístění od klientů.|Server systému lokality|  
 |MP_OOBMgr.log|Zaznamenává činnosti bodu správy související s přijímáním jednorázového hesla od klienta.|Server systému lokality|  
 |MP_Policy.log|Zaznamenává komunikaci zásad.|Server systému lokality|  
+|MP_RegistrationManager. log|Zaznamenává činnosti týkající se registrace klienta, jako je například ověřování certifikátů, seznamů CRL a tokenů.|Server systému lokality|
 |MP_Relay.log|Zaznamenává přenos shromažďovaných souborů od klienta.|Server systému lokality|  
 |MP_Retry.log|Zaznamenává opakované procesy inventáře hardwaru.|Server systému lokality|  
 |MP_Sinv.log|Zaznamenává údaje o převodu záznamů inventáře softwaru XML od klientů a o kopírování těchto souborů do serveru lokality.|Server systému lokality|  
@@ -472,7 +475,7 @@ Následující tabulka uvádí soubory protokolů, které obsahují informace so
 |NotiCtrl. log|Oznámení žádostí o aplikace|Server lokality|  
 |portlctl.log|Zaznamenává aktivity sledování pro roli systému lokality bodu webu katalogu aplikací.|Server systému lokality|  
 |portlwebMSI.log|Zaznamenává aktivitu instalace MSI pro role webu katalogu aplikací.|Server systému lokality|  
-|PrestageContent.log|Zaznamenává údaje o použití nástroje ExtractContent. exe ve vzdáleném, připraveném distribučním bodě. Tento nástroj rozbaluje obsah, který se exportoval do souboru.|Server systému lokality|  
+|PrestageContent.log|Zaznamenává údaje o použití nástroje ExtractContent.exe ve vzdáleném, připraveném distribučním bodě. Tento nástroj rozbaluje obsah, který se exportoval do souboru.|Server systému lokality|  
 |ServicePortalWebService.log|Zaznamenává aktivitu obsluhy webu katalogu aplikací.|Server systému lokality|  
 |ServicePortalWebSite.log|Zaznamenává aktivitu webu katalogu aplikací.|Server systému lokality|  
 |SettingsAgent. log|Vynucování konkrétních aplikací, zaznamená orchestraci vyhodnocení skupin aplikací a podrobnosti o zásadách spolusprávy.|Klient|
@@ -607,10 +610,10 @@ Následující tabulka uvádí soubory protokolů, které obsahují informace so
 |CloudMgr.log|Zaznamenává údaje týkající se zřizování obsahu, shromažďování statistik úložiště a šířky pásma a akcí iniciované správcem pro zastavení nebo spuštění cloudové služby, která spouští cloudový distribuční bod.|Server systému lokality|  
 |DataTransferService.log|Zaznamenává veškerou komunikaci služby BITS pro přístup k zásadám nebo balíčkům. Tento protokol se taky používá pro správu obsahu pomocí distribučních bodů pro vyžádání obsahu.|Počítač, který je nakonfigurován jako distribuční bod pro vyžádání obsahu|  
 |PullDP.log|Zaznamenává údaje o obsahu, který převádí vyžadování distribučního bodu ze zdrojových distribučních bodů.|Počítač, který je nakonfigurován jako distribuční bod pro vyžádání obsahu|  
-|PrestageContent.log|Zaznamenává údaje o použití nástroje ExtractContent. exe ve vzdáleném, připraveném distribučním bodě. Tento nástroj rozbaluje obsah, který se exportoval do souboru.|Role systému lokality|  
+|PrestageContent.log|Zaznamenává údaje o použití nástroje ExtractContent.exe ve vzdáleném, připraveném distribučním bodě. Tento nástroj rozbaluje obsah, který se exportoval do souboru.|Role systému lokality|  
 |SMSdpmon.log|Zaznamenává údaje o plánovaných úlohách sledování stavu distribučního bodu, které jsou konfigurovány v distribučním bodě.|Role systému lokality|  
 |smsdpprov.log|Zaznamenává údaje o extrahování komprimovaných souborů přijatých z primární lokality. Tento protokol je generovaný zprostředkovatelem rozhraní WMI vzdáleného distribučního bodu.|Počítač distribučního bodu, který není společně umístěn na serveru lokality|  
-|smsdpusage. log|Zaznamenává údaje o souboru smsdpusage. exe, který se spouští, a shromažďuje data pro sestavu Souhrn využití distribučních bodů.|Role systému lokality|  
+|smsdpusage. log|Zaznamenává údaje o smsdpusage.exe, které běží, a shromažďuje data pro sestavu Souhrn využití distribučních bodů.|Role systému lokality|  
 
 ### <a name="desktop-analytics"></a>Desktop Analytics
 

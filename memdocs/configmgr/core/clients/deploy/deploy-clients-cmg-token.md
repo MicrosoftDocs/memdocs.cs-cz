@@ -2,7 +2,7 @@
 title: Ověřování na základě tokenů pro CMG
 titleSuffix: Configuration Manager
 description: Zaregistrujte klienta v interní síti pro jedinečný token nebo vytvořte token pro hromadnou registraci pro Internetová zařízení.
-ms.date: 04/29/2020
+ms.date: 06/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: f0703475-85a4-450d-a4e8-7a18a01e2c47
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5054d44371fd3114a9644f90d37dabf1e81d1997
-ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
+ms.openlocfilehash: 8146c9c2605f8693ad7375b974a5dd13c089d946
+ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84455017"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84715658"
 ---
 # <a name="token-based-authentication-for-cloud-management-gateway"></a>Ověřování založené na tokenech pro bránu pro správu cloudu
 
@@ -70,6 +70,16 @@ Chcete-li ověřit, zkontrolujte následující soubor protokolu pro podobnou po
 ```ClientLocation.log
 Rotating internet management point, new management point [1] is: https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 (0) with capabilities: <Capabilities SchemaVersion ="1.0"><Property Name="SSL" Version="1" /></Capabilities>
 ```
+
+Pokud chcete řešit potíže s instalací, zkontrolujte `%WinDir%\ccmsetup\logs\ccmsetup.log` klienta. Po instalaci si projděte téma `%WinDir%\ccm\logs\ClientIDManagerStartup.log` .
+
+Na serveru zkontrolujte následující protokoly:
+
+- [Protokoly CMG](../../plan-design/hierarchy/log-files.md#cloud-management-gateway)
+- Bod správy
+  - CCM_STS. log
+  - MP_RegistrationManager. log
+  - ClientAuth.log
 
 ### <a name="known-issues"></a>Známé problémy
 

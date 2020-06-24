@@ -5,17 +5,17 @@ description: Tento podrobný postup slouží k nastavení brány pro správu clo
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 07/26/2019
+ms.date: 06/10/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: e0ec7d66-1502-4b31-85bb-94996b1bc66f
-ms.openlocfilehash: 8c585473ec80ad4c6dfe49d22e527e99175bfbb4
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 0960637f534bfe1361b55b2d63be87abc7894d7b
+ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83877418"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84715233"
 ---
 # <a name="set-up-cloud-management-gateway-for-configuration-manager"></a>Nastavení brány pro správu cloudu pro Configuration Manager
 
@@ -26,8 +26,7 @@ Tento proces zahrnuje kroky potřebné k nastavení brány pro správu cloudu (C
 > [!Note]  
 > Configuration Manager ve výchozím nastavení nepovolí tuto volitelnou funkci. Tuto funkci musíte před použitím povolit. Další informace naleznete v části [Enable optional features from updates](../../../servers/manage/install-in-console-updates.md#bkmk_options).
 
-
-## <a name="before-you-begin"></a>Před zahájením
+## <a name="before-you-begin"></a>Než začnete
 
 Začněte tím, že si přečtete [plán článků pro bránu pro správu cloudu](plan-cloud-management-gateway.md). Pomocí tohoto článku můžete určit návrh CMG.
 
@@ -39,11 +38,11 @@ Pomocí následujícího kontrolního seznamu se ujistěte, že máte potřebné
 
 - Pro [Azure Resource Manager](plan-cloud-management-gateway.md#azure-resource-manager) nasazení CMG potřebujete následující požadavky:  
 
-    - Integrace se službou [Azure AD](../../../servers/deploy/configure/azure-services-wizard.md) pro **správu cloudu**. Zjišťování uživatelů služby Azure AD není vyžadováno.  
+  - Integrace se službou [Azure AD](../../../servers/deploy/configure/azure-services-wizard.md) pro **správu cloudu**. Zjišťování uživatelů služby Azure AD není vyžadováno. Pokud chcete web integrovat se službou Azure AD pro nasazení CMG pomocí Azure Resource Manager, budete potřebovat **globální správce**.
 
-    - Poskytovatelé prostředků Microsoft. **ClassicCompute**  &  **Microsoft. Storage** musí být zaregistrovaní v rámci předplatného Azure. Další informace najdete v tématu [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/resource-manager-supported-services).
+  - Poskytovatelé prostředků Microsoft. **ClassicCompute**  &  **Microsoft. Storage** musí být zaregistrovaní v rámci předplatného Azure. Další informace najdete v tématu [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/resource-manager-supported-services).
 
-    - Musí se přihlásit Správce předplatného.  
+  - K nasazení CMG se musí přihlásit **vlastník předplatného** .
 
 - Globálně jedinečný název služby. Tento název pochází z [ověřovacího certifikátu serveru CMG](certificates-for-cloud-management-gateway.md#bkmk_serverauth).  
 
@@ -60,10 +59,9 @@ Pomocí následujícího kontrolního seznamu se ujistěte, že máte potřebné
     >
     > Počínaje verzí 1902 Configuration Manager Azure Resource Manager je jediným mechanismem nasazení pro nové instance brány pro správu cloudu.<!-- 3605704 -->
 
-    - ID předplatného Azure  
+  - ID předplatného Azure  
 
-    - Certifikát pro správu Azure  
-
+  - Certifikát pro správu Azure  
 
 ## <a name="set-up-a-cmg"></a>Nastavení CMG
 
@@ -73,7 +71,7 @@ Tento postup proveďte v lokalitě nejvyšší úrovně. Tato lokalita je buď s
 
 2. Na pásu karet vyberte **vytvořit brána pro správu cloudu** .  
 
-3. Na stránce Obecné v průvodci vyberte **Přihlásit**se. Proveďte ověření pomocí účtu správce předplatného Azure. Průvodce automaticky vyplní zbývající pole z informací uložených během předpokladu integrace služby Azure AD. Pokud vlastníte více předplatných, vyberte **ID předplatného** požadovaného předplatného, které chcete použít.
+3. Na stránce Obecné v průvodci vyberte **Přihlásit**se. Proveďte ověření pomocí účtu **vlastníka předplatného** Azure. Průvodce automaticky vyplní zbývající pole z informací uložených během předpokladu integrace služby Azure AD. Pokud vlastníte více předplatných, vyberte **ID předplatného** , které chcete použít.
 
     > [!Note]  
     > Od verze 1810 se nasazení klasických služeb v Azure už nepoužívá v Configuration Manager. Ve verzi 1902 a starší vyberte jako metodu nasazení CMG **Azure Resource Manager nasazení** .
@@ -92,7 +90,7 @@ Tento postup proveďte v lokalitě nejvyšší úrovně. Tato lokalita je buď s
 7. Vyberte rozevírací seznam **oblast** a zvolte oblast Azure pro tento CMG.  
 
 8. Vyberte možnost **skupiny prostředků** .
-   1. Pokud zvolíte možnost **použít existující**, pak v rozevíracím seznamu vyberte existující skupinu prostředků. Vybraná skupina prostředků už musí existovat v oblasti, kterou jste vybrali v kroku 7. Pokud vyberete existující skupinu prostředků, která se nachází v jiné oblasti než dříve vybraná oblast, CMG se nepovede zřídit.
+   1. Pokud zvolíte možnost **použít existující**, pak v rozevíracím seznamu vyberte existující skupinu prostředků. Vybraná skupina prostředků už musí existovat v oblasti, kterou jste vybrali v kroku 7. Pokud vyberete existující skupinu prostředků, která je v jiné oblasti než dříve vybraná oblast, CMG se nepodaří zřídit.
    2. Pokud se rozhodnete **vytvořit nový**, zadejte nový název skupiny prostředků.
 
 9. Do pole **instance virtuálního počítače** zadejte počet virtuálních počítačů pro tuto službu. Výchozí hodnota je jedna, ale můžete škálovat až 16 virtuálních počítačů na CMG.  
@@ -100,7 +98,7 @@ Tento postup proveďte v lokalitě nejvyšší úrovně. Tato lokalita je buď s
 10. Vyberte **certifikáty** pro přidání důvěryhodných kořenových certifikátů klienta. Přidejte všechny certifikáty do řetězce důvěryhodnosti.  
 
     > [!Note]  
-    > Když ve verzi 1806 vytvoříte CMG, nebudete už muset na stránce nastavení poskytnout důvěryhodný kořenový certifikát. Tento certifikát se nevyžaduje při použití Azure Active Directory (Azure AD) pro ověřování klientů, ale používá se v průvodci. Pokud používáte certifikáty pro ověřování klientů PKI, musíte do CMG Přidat důvěryhodný kořenový certifikát.<!--SCCMDocs-pr issue #2872-->  
+    > Důvěryhodný kořenový certifikát se nevyžaduje při použití Azure Active Directory (Azure AD) pro ověřování klientů. Pokud používáte certifikáty pro ověřování klientů PKI, musíte do CMG Přidat důvěryhodný kořenový certifikát.<!--SCCMDocs-pr issue #2872-->
     >
     > Ve verzi 1902 a starší můžete přidat pouze dva důvěryhodné kořenové certifikační autority a čtyři zprostředkující (podřízené) certifikační autority.<!-- SCCMDocs-pr#4022 -->
 
@@ -108,7 +106,7 @@ Tento postup proveďte v lokalitě nejvyšší úrovně. Tato lokalita je buď s
 
 12. Počínaje verzí 1906 můžete **Vynutilit TLS 1,2**. Toto nastavení platí jenom pro virtuální počítač Azure Cloud Service. Nevztahuje se na žádné místní Configuration Manager servery lokality nebo klienty. Další informace o TLS 1,2 najdete v článku [Jak povolit tls 1,2](../../../plan-design/security/enable-tls-1-2.md).<!-- SCCMDocs-pr#4021 -->
 
-13. Ve výchozím nastavení má průvodce ve verzi 1806 následující možnost: povolit, aby služba **CMG fungovala jako distribuční bod cloudu a poskytovala obsah z Azure Storage**. Nyní může CMG také poskytovat obsah klientům. Tato funkce snižuje nároky na požadované certifikáty a náklady na virtuální počítače Azure.  
+13. Ve výchozím nastavení umožňuje průvodce následující možnost: povolit, **aby služba CMG fungovala jako distribuční bod cloudu a poskytovala obsah z Azure Storage**. CMG může také poskytovat obsah klientům. Tato funkce snižuje nároky na požadované certifikáty a náklady na virtuální počítače Azure.
 
 14. Vyberte **Další**.  
 
@@ -116,9 +114,8 @@ Tento postup proveďte v lokalitě nejvyšší úrovně. Tato lokalita je buď s
 
 16. Zkontrolujte nastavení a klikněte na tlačítko **Další**. Configuration Manager spustí nastavování služby. Po ukončení průvodce bude trvat pět až 15 minut, než se služba zřídí v Azure. Zkontrolujte sloupec **stav** nového CMG a určete, kdy bude služba připravena.  
 
-    > [!Note]  
+    > [!NOTE]
     > K řešení potíží s nasazeními CMG použijte **CloudMgr. log** a **CMGSetup. log**. Další informace najdete v tématu [soubory protokolu](../../../plan-design/hierarchy/log-files.md#cloud-management-gateway).
-
 
 ## <a name="configure-primary-site-for-client-certificate-authentication"></a>Konfigurace primárního webového serveru pro ověřování klientských certifikátů
 
@@ -128,23 +125,21 @@ Pokud používáte certifikáty pro [ověřování](certificates-for-cloud-manag
 
 2. Vyberte primární lokalitu, ke které jsou přiřazeni vaši internetoví klienti, a zvolte **vlastnosti**.  
 
-3. Přepněte na kartu **komunikace s klientským počítačem** v seznamu vlastností primární lokality, v **případě, že je k dispozici, zaškrtnout použít klientský certifikát PKI (ověřování klientů)**.  
+3. Přepněte na seznam vlastností primární lokality na kartu **zabezpečení komunikace** , v případě, **že je k dispozici, zaškrtnout použít klientský certifikát PKI (ověřování klientů)**.  
 
-    > [!Note]
-    > Počínaje verzí 1906 se tato karta nazývá **zabezpečení komunikace**.<!-- SCCMDocs#1645 -->  
+    > [!NOTE]
+    > Ve verzi 1902 a starší se tato karta nazývá **komunikace s klientským počítačem**.<!-- SCCMDocs#1645 -->
 
 4. Pokud seznam CRL nepublikujete, zrušte výběr možnosti pro **klienty, kteří kontrolují seznam odvolaných certifikátů (CRL) pro systémy lokality**.  
-
 
 ## <a name="add-the-cmg-connection-point"></a>Přidání spojovacího bodu CMG
 
 Bod připojení CMG je role systému lokality pro komunikaci s CMG. Chcete-li přidat bod připojení CMG, postupujte podle obecných pokynů pro [instalaci rolí systému lokality](../../../servers/deploy/configure/install-site-system-roles.md). Na stránce Výběr role systému v průvodci Přidat roli systému lokality vyberte **bod připojení brány pro správu cloudu**. Pak vyberte **název brány pro správu cloudu** , ke které se tento server připojuje. Průvodce zobrazí oblast pro vybrané CMG.
 
-> [!Important]
+> [!IMPORTANT]
 > Bod připojení CMG musí mít v některých scénářích [certifikát pro ověřování klientů](certificates-for-cloud-management-gateway.md#bkmk_clientauth) .
 
 Pokud chcete řešit potíže se stavem služby CMG, použijte **CMGService. log** a **SMS_Cloud_ProxyConnector. log**. Další informace najdete v tématu [soubory protokolu](../../../plan-design/hierarchy/log-files.md#cloud-management-gateway).
-
 
 ## <a name="configure-client-facing-roles-for-cmg-traffic"></a>Konfigurace klientských rolí pro provoz CMG
 
@@ -162,7 +157,6 @@ Konfigurujte body správy a systémy lokality bodu aktualizace softwaru pro př�
 
 Opakujte tyto kroky pro další body správy podle potřeby a pro všechny body aktualizace softwaru.
 
-
 ## <a name="configure-boundary-groups"></a>Konfigurace skupin hranic
 
 <!--3640932-->
@@ -172,17 +166,16 @@ Další informace o skupinách hranic najdete v tématu [Konfigurace skupin hran
 
 Když [vytváříte nebo konfigurujete skupinu hranic](../../../servers/deploy/configure/boundary-group-procedures.md), na kartě **odkazy** přidejte bránu pro správu cloudu. Tato akce přidruží CMG k této skupině hranic.
 
-
 ## <a name="configure-clients-for-cmg"></a>Konfigurace klientů pro CMG
 
-Jakmile CMG a role systému lokality běží, klienti získají automaticky umístění služby CMG při žádosti o další umístění. Klienti musí být na intranetu, aby mohli přijímat umístění služby CMG, pokud při [ověřování nenainstalujete a přiřadíte klienty s Windows 10 pomocí Azure AD](../../deploy/deploy-clients-cmg-azure.md). Cyklus cyklického dotazování na požadavky na umístění je každých 24 hodin. Pokud nechcete čekat na běžně naplánovaný požadavek na umístění, můžete žádost vynutit restartováním služby Hostitel agenta serveru SMS (Ccmexec. exe) v počítači.  
+Jakmile CMG a role systému lokality běží, klienti získají automaticky umístění služby CMG při žádosti o další umístění. Klienti musí být na intranetu, aby mohli přijímat umístění služby CMG, pokud při [ověřování nenainstalujete a přiřadíte klienty s Windows 10 pomocí Azure AD](../../deploy/deploy-clients-cmg-azure.md). Cyklus cyklického dotazování na požadavky na umístění je každých 24 hodin. Pokud nechcete čekat na běžně naplánovaný požadavek na umístění, můžete žádost vynutit. Požadavek vynutíte restartováním služby Hostitel agenta serveru SMS (ccmexec.exe) v počítači.
 
-> [!Note]
+> [!NOTE]
 > Ve výchozím nastavení obdrží všichni klienti zásady CMG. Řízení tohoto chování pomocí nastavení klienta [umožní klientům používat bránu pro správu cloudu](../../deploy/about-client-settings.md#enable-clients-to-use-a-cloud-management-gateway).
 
 Klient Configuration Manager automaticky určí, zda je na intranetu nebo Internetu. Pokud klient může kontaktovat řadič domény nebo místní bod správy, nastaví jeho typ připojení na **aktuálně intranet**. V opačném případě se přepne na **aktuálně Internet**a používá umístění služby CMG ke komunikaci s lokalitou.
 
->[!NOTE]
+> [!NOTE]
 > Můžete vynutit, aby klient vždy používal CMG bez ohledu na to, jestli je na intranetu nebo Internetu. Tato konfigurace je užitečná pro účely testování nebo pro klienty, u kterých chcete vynutit, aby vždy používali CMG. V klientovi nastavte následující klíč registru:
 >
 > `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCM\Security, ClientAlwaysOnInternet = 1`
@@ -191,17 +184,20 @@ Klient Configuration Manager automaticky určí, zda je na intranetu nebo Intern
 >
 > Toto nastavení se bude používat vždycky, i když se klient bude přesouvat do umístění, kde by konfigurace skupiny hranic jinak využily místní prostředky.
 
+Pokud chcete ověřit, že klienti mají zásady určující CMG, otevřete příkazový řádek prostředí Windows PowerShell jako správce na klientském počítači a spusťte následující příkaz:
 
-Pokud chcete ověřit, že klienti mají zásady určující CMG, otevřete příkazový řádek prostředí Windows PowerShell jako správce na klientském počítači a spusťte následující příkaz:`Get-WmiObject -Namespace Root\Ccm\LocationServices -Class SMS_ActiveMPCandidate | Where-Object {$_.Type -eq "Internet"}`
+```powershell
+Get-WmiObject -Namespace Root\Ccm\LocationServices -Class SMS_ActiveMPCandidate | Where-Object {$_.Type -eq "Internet"}`
+```
 
 Tento příkaz zobrazí všechny internetové body správy, o kterých ví klient. I když CMG není technicky součástí internetového bodu správy, klienti ho budou zobrazovat jako jeden.
 
-> [!Note]  
+> [!NOTE]  
 > K řešení potíží s klientskými přenosy CMG použijte **CMGHttpHandler. log**, **CMGService. log**a **SMS_Cloud_ProxyConnector. log**. Další informace najdete v tématu [soubory protokolu](../../../plan-design/hierarchy/log-files.md#cloud-management-gateway).
 
 ### <a name="install-off-premises-clients-using-a-cmg"></a>Instalace místních klientů pomocí CMG
 
-Pro instalaci agenta klienta na systémy, které nejsou aktuálně připojené k intranetu, musí být splněna jedna z následujících podmínek. Ve všech případech se vyžaduje účet místního správce v cílových systémech.
+Pro instalaci klienta Configuration Manager do systémů, které nejsou aktuálně připojené k intranetu, musí být jedna z následujících podmínek pravdivá. Ve všech případech se vyžaduje účet místního správce v cílových systémech.
 
 1. Lokalita Configuration Manager je správně nakonfigurována tak, aby používala certifikáty PKI pro ověřování klientů. Kromě toho klientské systémy mají každý z nich již platný, jedinečný a důvěryhodný certifikát pro ověřování klientů.
 
@@ -209,35 +205,37 @@ Pro instalaci agenta klienta na systémy, které nejsou aktuálně připojené k
 
 3. Web používá Configuration Manager verze 2002 nebo novější.
 
-V případě možností 1 a 2 použijte parametr **/MP** k určení adresy URL CMG při volání programu **CCMSetup. exe**. Další informace najdete v tématu [informace o parametrech instalace a vlastnostech klienta](../../deploy/about-client-installation-properties.md#mp).
+Pokud pro možnosti 1 a 2 spustíte **ccmsetup.exe**, zadejte adresu URL CMG pomocí parametru **/MP** . Další informace najdete v tématu [informace o parametrech instalace a vlastnostech klienta](../../deploy/about-client-installation-properties.md#mp).
 
-V případě možnosti 3 Configuration Manager počínaje verzí 2002 můžete nainstalovat agenta klienta na systémy, které nejsou připojené k intranetu pomocí velkokapacitní registračního tokenu. Další informace o této metodě najdete v tématu [vytvoření registračního tokenu pro hromadnou registraci](../../deploy/deploy-clients-cmg-token.md#create-a-bulk-registration-token).
+V případě možnosti 3 Configuration Manager počínaje verzí 2002 můžete nainstalovat klienta nástroje na systémy nepřipojené k intranetu pomocí hromadné registračního tokenu. Další informace o této metodě najdete v tématu [vytvoření registračního tokenu pro hromadnou registraci](../../deploy/deploy-clients-cmg-token.md#create-a-bulk-registration-token).
 
 ### <a name="configure-off-premises-clients-for-cmg"></a>Konfigurace místních klientů pro CMG
 
 Systémy můžete propojit s nedávno nakonfigurovaným CMG, kde jsou splněné následující podmínky:  
 
-- Systémy již mají nainstalovaného klientského agenta Configuration Manager.
+- Systémy již mají nainstalovaného klienta Configuration Manager.
 
 - Systémy nejsou připojené a nejde je připojit k intranetu.
 
 - Systémy splňují jednu z následujících podmínek:
 
-  - Každý z nich má dříve vystavený platný, jedinečný a důvěryhodný certifikát pro ověřování klientů.
+  - Každý z nich má certifikát s platným, jedinečným a důvěryhodným certifikátem pro ověření klienta.
 
   - Připojeno k doméně Azure AD
 
-  - Služba Azure AD s připojením k doméně
+  - Připojení k doméně Hybrid Azure AD
 
-- Nechcete nebo nemůžete úplně přeinstalovat stávajícího klientského agenta.
+- Nechcete nebo nemůžete úplně přeinstalovat stávajícího klienta.
 
 - Máte způsob, jak změnit hodnotu registru počítače a restartovat službu **Hostitel agenta serveru SMS** pomocí účtu místního správce.
 
-Pokud chcete vynutit připojení k těmto systémům, vytvořte hodnotu registru **CMGFQDNs** (typu REG_SZ) v části **HKLM\Software\Microsoft\CCM**. Nastavte tuto hodnotu na adresu URL CMG (například `https://contoso-cmg.contoso.com` ). Po nastavení restartujte službu **Hostitel agenta serveru SMS** v klientském systému.
+Pokud chcete vynutit připojení k těmto systémům, **REG_SZ** vytvořte `CMGFQDNs` v klíči položku registru REG_SZ `HKLM\Software\Microsoft\CCM` . Nastavte jeho hodnotu na adresu URL CMG, například `https://contoso-cmg.contoso.com` . Pak na zařízení restartujte službu systému Windows **hostitele agenta serveru SMS** .
 
-Pokud klient Configuration Manager v registru nemá nastavenou aktuální CMG nebo internetový bod správy, automaticky zkontroluje hodnotu registru **CMGFQDNs** . Tato kontrolu probíhá každých 25 hodin, při spuštění služby **Hostitel agenta serveru SMS** nebo při zjištění změny sítě. Když se klient připojí k lokalitě a zjistí se CMG, tato hodnota se automaticky aktualizuje.
+Pokud klient Configuration Manager v registru nemá nastavenou aktuální CMG nebo internetový bod správy, automaticky zkontroluje `CMGFQDNs` hodnotu registru. Tato kontrolu probíhá každých 25 hodin, při spuštění služby **Hostitel agenta serveru SMS** nebo při zjištění změny sítě. Když se klient připojí k lokalitě a zjistí se CMG, tato hodnota se automaticky aktualizuje.
 
 ## <a name="modify-a-cmg"></a>Úprava CMG
+
+### <a name="cmg-properties"></a>Vlastnosti CMG
 
 Po vytvoření CMG můžete změnit některá z jeho nastavení. V konzole Configuration Manager vyberte CMG a vyberte **vlastnosti**. Nakonfigurujte nastavení na následujících kartách:  
 
@@ -255,12 +253,11 @@ Po vytvoření CMG můžete změnit některá z jeho nastavení. V konzole Confi
 
 - **Ověřit odvolání klientského certifikátu**: Pokud jste při vytváření CMG nepovolili toto nastavení, můžete ho po publikování seznamu odvolaných certifikátů povolit později. Další informace najdete v tématu [publikování seznamu odvolaných certifikátů](security-and-privacy-for-cloud-management-gateway.md#bkmk_crl).  
 
-- **Povolit, aby CMG fungoval jako distribuční bod cloudu a poskytoval obsah ze služby Azure Storage**: počínaje verzí 1806 je tato nová možnost ve výchozím nastavení povolená. Nyní může CMG také poskytovat obsah klientům. Tato funkce snižuje nároky na požadované certifikáty a náklady na virtuální počítače Azure.<!--1358651-->  
+- **Povolit, aby CMG fungoval jako distribuční bod cloudu a poskytoval obsah z Azure Storage**: Tato možnost je ve výchozím nastavení povolená. CMG může také poskytovat obsah klientům. Tato funkce snižuje nároky na požadované certifikáty a náklady na virtuální počítače Azure.<!--1358651-->
 
 #### <a name="alerts"></a>Výstrahy
 
 Překonfigurujte výstrahy kdykoli po vytvoření CMG.
-
 
 ### <a name="redeploy-the-service"></a>Opětovné nasazení služby
 
@@ -272,7 +269,7 @@ Důležitější změny, například následující konfigurace, vyžadují opě
 - Privátní infrastruktura veřejných klíčů
 - Oblast
 
-Vždy udržujte aspoň jeden aktivní CMG pro internetové klienty pro příjem aktualizovaných zásad. internetoví klienti nemůžou komunikovat s odebraným CMG. Klienti neznají o novém, dokud nebudou moct přejít zpátky do intranetu. Při vytváření druhé instance CMG, aby se první odstranil, vytvořte také další spojovací bod CMG.
+Vždy udržujte aspoň jeden aktivní CMG pro internetové klienty pro příjem aktualizovaných zásad. internetoví klienti nemůžou komunikovat s odebraným CMG. Klienti neznají o novém, dokud nebudou moct přejít zpátky do intranetu. Při vytváření druhé instance CMG, která první odstraní, vytvoří také další spojovací bod CMG.
 
 Klienti aktualizují zásady ve výchozím nastavení každých 24 hodin, takže před odstraněním staré CMG je třeba počkat aspoň jeden den po vytvoření nové. Pokud jsou klienti vypnuti nebo bez připojení k Internetu, možná budete muset počkat déle.
 
@@ -296,7 +293,7 @@ Pokud máte v klasické metodě nasazení existující CMG, musíte nasadit novo
 
     4. Odstraňte klasický CMG.  
 
-> [!Tip]  
+> [!TIP]
 > Chcete-li zjistit aktuální model nasazení CMG:<!--SCCMDocs issue #611-->  
 >
 > 1. V konzole Configuration Manager otevřete pracovní prostor **Správa** , rozbalte položku **Cloud Services**a vyberte uzel **Brána pro správu cloudu** .  
@@ -312,7 +309,6 @@ CMG se dá změnit jenom z konzoly Configuration Manager. Úpravy služby nebo p
 ### <a name="delete-the-service"></a>Odstranit službu
 
 Pokud potřebujete odstranit CMG, provedete to také z konzoly Configuration Manager. Ruční odebráním všech komponent v Azure dojde k nekonzistenci systému. Tento stav opouští osamocené informace a může dojít k neočekávanému chování.
-
 
 ## <a name="next-steps"></a>Další kroky
 

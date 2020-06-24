@@ -10,12 +10,12 @@ ms.assetid: c5cb5753-5728-4f81-b830-a6fd1a3e105c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 70d4930da712eccff8bdb1f1986a68aa5fe77644
-ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
+ms.openlocfilehash: 5bea4fab3b32464cc0d03469d4966fe3611d2f76
+ms.sourcegitcommit: 02635469d684d233fef795d2a15615658e62db10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84455272"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84814908"
 ---
 # <a name="microsoft-connected-cache-in-configuration-manager"></a>Mezipaměť propojená Microsoftem v Configuration Manager
 
@@ -37,7 +37,7 @@ Tato mezipaměť je oddělená od obsahu distribučního bodu Configuration Mana
 
 ## <a name="how-it-works"></a>Jak to funguje
 
-Když nakonfigurujete klienty tak, aby používali Server připojené mezipaměti, už nepožadují obsah spravovaný přes Microsoft Cloud. Klienti požadují tento obsah ze serveru mezipaměti nainstalovaného v distribučním bodě. Místní server ukládá tento obsah do mezipaměti pomocí funkce služby IIS pro směrování žádostí na aplikace (ARR). Server mezipaměti pak může rychle reagovat na jakékoli budoucí požadavky na stejný obsah. Pokud server připojené mezipaměti není k dispozici nebo obsah ještě není uložen do mezipaměti, klienti stáhnou obsah z Internetu. Klienti také využívají optimalizaci doručování, takže stáhnou části obsahu od partnerských uzlů v jejich síti.
+Když nakonfigurujete klienty tak, aby používali Server připojené mezipaměti, už nepožadují obsah spravovaný přes Microsoft Cloud. Klienti požadují tento obsah ze serveru mezipaměti nainstalovaného v distribučním bodě. Místní server ukládá tento obsah do mezipaměti pomocí funkce služby IIS pro směrování žádostí na aplikace (ARR). Server mezipaměti pak může rychle reagovat na jakékoli budoucí požadavky na stejný obsah. Pokud server připojené mezipaměti není k dispozici nebo obsah ještě není uložen do mezipaměti, klienti stáhnou obsah z Internetu. Klienti také využívají optimalizaci doručování ke stahování částí obsahu od partnerských uzlů v jejich síti.
 
 ![Diagram fungování připojené mezipaměti](media/3555764-microsoft-connected-cache.png)
 

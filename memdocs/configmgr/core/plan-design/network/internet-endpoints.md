@@ -2,7 +2,7 @@
 title: Požadavky na přístup k internetu
 titleSuffix: Configuration Manager
 description: Přečtěte si o internetových koncových bodech, které umožní plnou funkčnost funkcí Configuration Manager.
-ms.date: 04/21/2020
+ms.date: 06/12/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: b34fe701-5d05-42be-b965-e3dccc9363ca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8423af8d4c743965f627a94a07f587fd97d45bdf
-ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
+ms.openlocfilehash: fb965ec6547ff1c06586464780b6db224b943000
+ms.sourcegitcommit: 9a8a9cc7dcb6ca333b87e89e6b325f40864e4ad8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84454966"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84740760"
 ---
 # <a name="internet-access-requirements"></a>Požadavky na přístup k internetu
 
@@ -77,7 +77,8 @@ Další informace o této funkci najdete v tématu [Správa systému Windows jak
 
 Další informace o této funkci najdete v tématu [Konfigurace služeb Azure pro použití s Configuration Manager](../../servers/deploy/configure/azure-services-wizard.md).
 
-- `management.azure.com`  
+- `management.azure.com`(Veřejný cloud Azure)
+- `management.usgovcloudapi.net`(Cloudová Správa Azure USA)
 
 ## <a name="co-management"></a>Spoluspráva
 
@@ -110,31 +111,66 @@ Tato část obsahuje následující funkce:
 - Integrace Azure Active Directory (Azure AD)
 - Zjišťování založené na službě Azure AD
 
-Pro nasazení služby CMG/CDP potřebuje **spojovací bod služby** přístup k těmto akcím:
+Další informace o CMG najdete v tématu [Plan for CMG](../../clients/manage/cmg/plan-cloud-management-gateway.md).
 
-- Konkrétní koncové body Azure se v závislosti na konfiguraci liší v jednotlivých prostředích. Configuration Manager ukládá tyto koncové body do databáze lokality. Dotaz na tabulku **AzureEnvironments** v SQL Server pro seznam koncových bodů Azure.  
+V následujících částech jsou uvedeny koncové body podle role. Některé koncové body odkazují na službu podle `<name>` , což je název cloudové služby CMG nebo CDP. Pokud je váš CMG například `GraniteFalls.CloudApp.Net` , skutečný koncový bod úložiště je `GraniteFalls.blob.core.windows.net` .<!-- SCCMDocs#2288 -->
 
-**Bod připojení CMG** potřebuje přístup k následujícím koncovým bodům služby:
+### <a name="service-connection-point"></a>Spojovací bod služby
+
+Pro nasazení služby CMG/CDP potřebuje spojovací bod služby přístup k těmto akcím:
+
+- Konkrétní koncové body Azure se v závislosti na konfiguraci liší v jednotlivých prostředích. Configuration Manager ukládá tyto koncové body do databáze lokality. Dotaz na tabulku **AzureEnvironments** v SQL Server pro seznam koncových bodů Azure.
+
+- [Služby Azure](#azure-services)
+
+- Pro zjišťování uživatelů Azure AD:
+
+  - Verze 1902 a novější: Microsoft Graph koncový bod`https://graph.microsoft.com/`
+
+  - Verze 1810 a starší: koncový bod Azure AD graphu`https://graph.windows.net/`  
+
+### <a name="cmg-connection-point"></a>Bod připojení CMG
+
+Bod připojení CMG potřebuje přístup k následujícím koncovým bodům služby:
+
+- Název cloudové služby (pro CMG nebo CDP):
+  - `<name>.cloudapp.net`(Veřejný cloud Azure)
+  - `<name>.usgovcloudapp.net`(Cloudová Správa Azure USA)
 
 - Koncový bod služby Service Management:`https://management.core.windows.net/`  
 
-- Koncový bod úložiště: `<name>.blob.core.windows.net` a`<name>.table.core.windows.net`
+- Koncový bod úložiště (pro CMG nebo CDP s povoleným obsahem):
+  - `<name>.blob.core.windows.net`(Veřejný cloud Azure)
+  - `<name>.blob.core.usgovcloudapi.net`(Cloudová Správa Azure USA)
+<!--  and `<name>.table.core.windows.net` per DC, only used internally -->
 
-    Kde `<name>` je název cloudové služby vašeho CMG nebo CDP. Například pokud je vaše CMG `GraniteFalls.CloudApp.Net` , pak první koncový bod úložiště, který se má použít, je `GraniteFalls.blob.core.windows.net` .<!-- SCCMDocs#2288 -->
+Systém lokality bodu připojení CMG podporuje používání webového proxy serveru. Další informace o konfiguraci této role proxy serveru najdete v tématu [Podpora proxy serveru](proxy-server-support.md#configure-the-proxy-for-a-site-system-server). Bod připojení CMG se musí připojit pouze k koncovým bodům služby CMG. Nepotřebuje přístup k jiným koncovým bodům Azure.
 
-Pro získání tokenu Azure AD pomocí **konzoly Configuration Manager** a **klienta**:
+### <a name="configuration-manager-client"></a>Klient Configuration Manager
 
-- ActiveDirectoryEndpoint`https://login.microsoftonline.com/`  
+- Název cloudové služby (pro CMG nebo CDP):
+  - `<name>.cloudapp.net`(Veřejný cloud Azure)
+  - `<name>.usgovcloudapp.net`(Cloudová Správa Azure USA)
 
-Pro zjišťování uživatelů Azure AD potřebuje **spojovací bod služby** přístup k:
+- Koncový bod úložiště (pro CMG nebo CDP s povoleným obsahem):
+  - `<name>.blob.core.windows.net`(Veřejný cloud Azure)
+  - `<name>.blob.core.usgovcloudapi.net`(Cloudová Správa Azure USA)
 
-- Verze 1810 a starší: koncový bod Azure AD graphu`https://graph.windows.net/`  
+- Pro získání tokenu Azure AD se jedná o koncový bod Azure AD:
+  - `login.microsoftonline.com`(Veřejný cloud Azure)
+  - `login.microsoftonline.us`(Cloudová Správa Azure USA)
 
-- Verze 1902 a novější: Microsoft Graph koncový bod`https://graph.microsoft.com/`
+### <a name="configuration-manager-console"></a>Konzola nástroje Configuration Manager
 
-Systém lokality bodu správy v cloudu (CMG) podporuje používání webového proxy serveru. Další informace o konfiguraci této role proxy serveru najdete v tématu [Podpora proxy serveru](proxy-server-support.md#configure-the-proxy-for-a-site-system-server). Bod připojení CMG se musí připojit pouze k koncovým bodům služby CMG. Nepotřebuje přístup k jiným koncovým bodům Azure.
+- Pro získání tokenu Azure AD se jedná o koncový bod Azure AD:
 
-Další informace o CMG najdete v tématu [Plan for CMG](../../clients/manage/cmg/plan-cloud-management-gateway.md).
+  - Veřejný cloud Azure
+    - `login.microsoftonline.com`
+    - `aadcdn.msauth.net`<!-- MEMDocs#351 -->
+    - `aadcdn.msftauth.net`
+
+  - Cloud Azure pro státní správu USA
+    - `login.microsoftonline.us`
 
 ## <a name="software-updates"></a><a name="bkmk_sum"></a>Aktualizace softwaru
 
@@ -204,18 +240,23 @@ Počítače s konzolou Configuration Manager vyžadují přístup k následujíc
 
 Další informace o této funkci najdete v tématu o [zpětné vazbě produktu](../../understand/find-help.md#product-feedback).
 
-### <a name="community-workspace-documentation-node"></a>Pracovní prostor komunity, uzel dokumentace
+### <a name="community-workspace"></a>Pracovní prostor komunity
+
+#### <a name="documentation-node"></a>Uzel dokumentace
+
+Další informace o tomto uzlu konzoly najdete v tématu [použití konzoly Configuration Manager](../../servers/manage/admin-console.md).
 
 - `https://aka.ms`
 
 - `https://raw.githubusercontent.com`
 
-Další informace o tomto uzlu konzoly najdete v tématu [použití konzoly Configuration Manager](../../servers/manage/admin-console.md).
+#### <a name="community-hub"></a>Centrum komunity
 
-<!-- 
-Community Hub
-when in current branch, get details from SCCMDocs-pr #3403 
- -->
+Další informace o této funkci najdete v tématu [komunitní centrum](../../servers/manage/community-hub.md).
+
+- `https://github.com`
+
+- `https://communityhub.microsoft.com`
 
 ### <a name="monitoring-workspace-site-hierarchy-node"></a>Pracovní prostor monitorování, uzel hierarchie lokality
 

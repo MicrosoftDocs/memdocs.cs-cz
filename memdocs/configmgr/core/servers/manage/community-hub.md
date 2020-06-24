@@ -2,7 +2,7 @@
 title: Komunitní centrum a GitHub
 titleSuffix: Configuration Manager
 description: Povolení a použití centra komunity v Configuration Manager
-ms.date: 06/10/2020
+ms.date: 06/12/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 88cead9a-64fe-471e-b57c-81707cefe46c
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 606c9490e56d932176b17eef95ea4ed0c956770e
-ms.sourcegitcommit: a198e4efa52b16f87049853b9d8c9854fd9fa057
+ms.openlocfilehash: e0ef065cce691ce6f0b251d70ea8c4bd08904071
+ms.sourcegitcommit: 9a8a9cc7dcb6ca333b87e89e6b325f40864e4ad8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84680417"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84740788"
 ---
 # <a name="community-hub-and-github"></a>Komunitní centrum a GitHub
 <!--3555935, 3555936-->
@@ -29,7 +29,7 @@ Komunita správce IT vyvinula spoustu znalostí během let. Místo rezásobován
 
 Centrum komunity podporuje následující objekty:
 - Skripty PowerShellu
-- Sestavy
+- sestavy
 - Pořadí úloh
 - Aplikace
 - Položky konfigurace  
@@ -46,6 +46,8 @@ Centrum komunity podporuje následující objekty:
    1. Přejít na **Administration**  >  **stránku Správa konfigurace lokality**  >  **lokality**.
    1. Vyberte lokalitu a na pásu karet zvolte **vlastnosti** .
    1. Na kartě **zabezpečení komunikace** vyberte možnost **použití Configuration Manager generovaných certifikátů pro systémy lokality http**.
+
+- Pokud vaše organizace omezuje síťovou komunikaci s Internetem pomocí brány firewall nebo proxy zařízení, je nutné povolit konzole Configuration Manager přístup k internetovým koncovým bodům. Další informace najdete v tématu [požadavky na přístup k Internetu](../../plan-design/network/internet-endpoints.md#community-hub).
 
 ## <a name="permissions"></a>Oprávnění
 

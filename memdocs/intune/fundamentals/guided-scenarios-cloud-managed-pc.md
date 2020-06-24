@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 78fcd976642ad7aa4c5cb62c0f66ed80461686aa
-ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
+ms.openlocfilehash: c43b74b6ca20fa3f140ad688be49daa928c54b5f
+ms.sourcegitcommit: 397ec824f1368dcf06c3870c89f52347852062bd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84531855"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85264035"
 ---
 # <a name="guided-scenario---cloud-managed-modern-desktop"></a>Scénář s asistencí – moderní plocha spravovaná cloudem
 
@@ -127,5 +127,5 @@ Jakmile uživatel připojí zařízení k Azure Active Directory, na zařízení
 
 ## <a name="next-steps"></a>Další kroky
 
-- Pokud používáte pokročilou detekci hrozeb v programu Microsoft Defender, vytvořte [zásady dodržování předpisů Intune](../protect/advanced-threat-protection.md#create-and-assign-the-compliance-policy) , které budou vyžadovat analýzu hrozeb v Defenderu, aby splňovaly dodržování předpisů.
+- Pokud používáte pokročilou detekci hrozeb v programu Microsoft Defender, vytvořte [zásady dodržování předpisů Intune](../protect/advanced-threat-protection.md#create-and-assign-compliance-policy-to-set-device-risk-level) , které budou vyžadovat analýzu hrozeb v Defenderu, aby splňovaly dodržování předpisů.
 - Vytvořte [zásady podmíněného přístupu na základě zařízení](../protect/advanced-threat-protection.md#create-a-conditional-access-policy) , které zablokují přístup, pokud zařízení nesplňuje podmínky Intune.

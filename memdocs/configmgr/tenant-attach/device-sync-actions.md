@@ -10,12 +10,12 @@ ms.assetid: 7a597d9e-a878-48d0-a7ce-56a1dbfd0e5c
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: e2b8c07a64265d33ade0b1c2c08c2d9c4096b741
-ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
+ms.openlocfilehash: be1c938cfcf332edb37e24e4094567f88f363560
+ms.sourcegitcommit: c333fc6627f5577cde9d2fa8f59e642202a7027b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82693473"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84795614"
 ---
 # <a name="microsoft-endpoint-manager-tenant-attach-device-sync-and-device-actions"></a><a name="bkmk_attach"></a>Připojení tenanta Microsoft Endpoint Manageru: synchronizace zařízení a akce zařízení
 <!--3555758 live 3/4/2020-->
@@ -39,10 +39,7 @@ Configuration Manager počínaje verzí 2002 můžete do cloudové služby nahr�
 ## <a name="internet-endpoints"></a>Internetové koncové body
 
 - `https://aka.ms/configmgrgateway`
-- `https://gateway.configmgr.manage.microsoft.com`
-- `https://us.gateway.configmgr.manage.microsoft.com`
-- `https://eu.gateway.configmgr.manage.microsoft.com`
-
+- `https://*.manage.microsoft.com` <!--7424742-->
 
 ## <a name="enable-device-upload"></a>Povolit nahrávání zařízení
 
@@ -55,7 +52,7 @@ Configuration Manager počínaje verzí 2002 můžete do cloudové služby nahr�
 
 Pokud máte aktuálně povolenou spolusprávu, upravte vlastnosti spolusprávy tak, aby bylo možné nahrávat zařízení pomocí následujících pokynů:
 
-1. V konzole pro správu Configuration Manager najdete v části **Administration** > **Přehled** > **správy Cloud Services** > **spoluspráva**.
+1. V konzole pro správu Configuration Manager najdete v části **Administration**  >  **Přehled**správy  >  **Cloud Services**  >  **spoluspráva**.
 1. Klikněte pravým tlačítkem na nastavení spolusprávy a vyberte **vlastnosti**.
 1. Na kartě **Konfigurovat nahrávání** vyberte **Odeslat do centra pro správu služby Microsoft Endpoint Manager**. Klikněte na **Použít**.
    - Výchozím nastavením pro nahrávání zařízení jsou **všechna moje zařízení spravovaná pomocí koncového bodu Microsoft Configuration Manager**. V případě potřeby můžete nahrávání omezit na jednu kolekci zařízení.
@@ -69,7 +66,7 @@ Pokud máte aktuálně povolenou spolusprávu, upravte vlastnosti spolusprávy t
 ### <a name="use-the-configure-co-management-wizard-to-enable-device-upload"></a><a name="bkmk_config"></a>Použití Průvodce konfigurací spolusprávy k povolení nahrávání zařízení
 Pokud nemáte povolenou spolusprávu, pomocí průvodce **konfigurací spolusprávy** povolte nahrávání zařízení. Zařízení můžete nahrát bez povolení automatické registrace pro spolusprávu nebo přepínání úloh do Intune. Pomocí následujících pokynů povolte nahrávání zařízení:
 
-1. V konzole pro správu Configuration Manager najdete v části **Administration** > **Přehled** > **správy Cloud Services** > **spoluspráva**.
+1. V konzole pro správu Configuration Manager najdete v části **Administration**  >  **Přehled**správy  >  **Cloud Services**  >  **spoluspráva**.
 1. Na pásu karet klikněte na **Konfigurovat spolusprávu** a otevřete průvodce.
 1. Na stránce registrace **tenanta** vyberte **AzurePublicCloud** pro vaše prostředí. Cloud Azure Government není podporovaný.
 1. Klikněte na **Přihlásit se**. Přihlaste se pomocí účtu *globálního správce* .
@@ -86,9 +83,9 @@ Pokud nemáte povolenou spolusprávu, pomocí průvodce **konfigurací spoluspr�
 
 ## <a name="review-your-upload"></a><a name="bkmk_review"></a>Kontrola nahrávání
 
-1. Otevřete **CMGatewaySyncUploadWorker. log** z &lt;instalačního adresáře nástroje ConfigMgr> \Logs.
-1. Čas další synchronizace je zaznamenán podle záznamů protokolu podobných `Next run time will be at approximately: 02/28/2020 16:35:31`.
-1. V případě nahrávání zařízení vyhledejte položky protokolu podobné `Batching N records`. **N** je počet zařízení odeslaných do cloudu. 
+1. Otevřete **CMGatewaySyncUploadWorker. log** z &lt; instalačního adresáře nástroje ConfigMgr> \Logs.
+1. Čas další synchronizace je zaznamenán podle záznamů protokolu podobných `Next run time will be at approximately: 02/28/2020 16:35:31` .
+1. V případě nahrávání zařízení vyhledejte položky protokolu podobné `Batching N records` . **N** je počet zařízení odeslaných do cloudu. 
 1. Nahrávání probíhá každých 15 minut, než se změny projeví. Po nahrání změn může trvat dalších 5 až 10 minut, než se změny klienta zobrazí v centru pro **správu Microsoft Endpoint Manager**.
 
 ## <a name="perform-device-actions"></a>Provést akce zařízení

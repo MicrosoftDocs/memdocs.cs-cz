@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 361f0ff36b78daddd08954953744f3f95191d4f3
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 5c4b06e8c81e04e067156929dfe7637cf04fb9d1
+ms.sourcegitcommit: bc8c9d957dac46d95070c433d3a83408e5e48d82
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990613"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85289457"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-the-windows-autopilot"></a>Registrace zařízení s Windows v Intune pomocí automatických pilotů Windows  
 Automatický pilotní modul Windows zjednodušuje registraci zařízení v Intune. Vytváření a udržování přizpůsobených imagí operačního systému je proces, který zabere hodně času. Další čas můžete také strávit aplikováním těchto vlastních imagí operačního systému na nová zařízení, abyste je připravili k použití, než je předáte koncovým uživatelům. S Microsoft Intune a Autopilotem můžete nová zařízení koncovým uživatelům poskytovat, aniž by bylo nutné vlastní image operačního systému vytvářet, udržovat a aplikovat na zařízení. Když zařízení s Autopilotem spravujete pomocí Intune, můžete v zařízeních po registraci spravovat zásady, profily, aplikace a mnoho dalšího. Přehled výhod, scénáře a požadavky najdete v [přehledu Windows Autopilotu](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot).
@@ -83,7 +83,7 @@ Zařízení Windows Autopilot můžete přidat importováním souboru CSV s jeji
 3. Pokud jste v předchozím kroku zvolili možnost **přiřazeno** pro **typ členství** , pak v okně **Skupina** zvolte **Členové** a do skupiny přidejte zařízení autopilot.
     Zařízení Autopilot, která ještě nejsou zaregistrovaná, jsou zařízení, jejichž název se rovná sériovému číslu zařízení.
 4. Pokud jste výše pro **Typ členství** zvolili **Dynamické zařízení**, potom v okně **Skupina** zvolte **Členové s dynamickými zařízeními** a do pole **Pokročilé pravidlo** zadejte některý z následujících kódů. Tato pravidla shromažďují jenom zařízení s autopilotem, protože cílí na atributy, které mají jenom zařízení s autopilotem. Vytváření skupin založených na autopilotních atributech nezaručuje, že zařízení zahrnutá do skupiny jsou ve skutečnosti zaregistrovaná do automatického pilotního projektu.
-    - Pokud chcete vytvořit skupinu, která bude obsahovat všechna vaše zařízení s vaším autopilotem, zadejte:`(device.devicePhysicalIDs -any _ -contains "[ZTDId]")`
+    - Pokud chcete vytvořit skupinu, která bude obsahovat všechna vaše zařízení s vaším autopilotem, zadejte:`(device.devicePhysicalIDs -any (_ -contains "[ZTDId]"))`
     - Pole značky skupiny v Intune se mapuje na atribut ČísloObjednávky na zařízeních Azure AD. Pokud chcete vytvořit skupinu, která bude obsahovat všechna vaše zařízení autopilotu s konkrétní značkou skupiny (ČísloObjednávky pro zařízení Azure AD), musíte zadat:`(device.devicePhysicalIds -any _ -eq "[OrderID]:179887111881")`
     - Pokud chcete vytvořit skupinu, která obsahuje všechna vaše zařízení Autopilot s konkrétním ID nákupní objednávky, zadejte: `(device.devicePhysicalIds -any _ -eq "[PurchaseOrderId]:76222342342")`
     
@@ -222,7 +222,7 @@ Pokud nemáte zájem o správu mobilních zařízení, můžete Autopilot použ�
 
 ## <a name="windows-autopilot-for-existing-devices"></a>Windows Autopilot pro existující zařízení
 
-Zařízení s Windows můžete seskupit podle ID korelátoru, pokud se registrují s použitím [Autopilotu pro existující zařízení](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) v nástroji Configuration Manager. ID korelátoru je parametr konfiguračního souboru Autopilotu. [Atribut enrollmentProfileName zařízení služby Azure AD](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices) se automaticky nastaví tak, aby odpovídal nastavení OfflineAutopilotprofile-\<ID korelátoru\>. Umožní se tím, aby se vytvořily libovolné dynamické skupiny Azure AD na základě ID korelátoru pomocí atributu enrollmentprofileName.
+Zařízení s Windows můžete seskupit podle ID korelátoru, pokud se registrují s použitím [Autopilotu pro existující zařízení](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) v nástroji Configuration Manager. ID korelátoru je parametr konfiguračního souboru Autopilotu. [Atribut enrollmentProfileName zařízení služby Azure AD](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices) se automaticky nastaví tak, aby odpovídal nastavení OfflineAutopilotprofile-\<correlator ID\>. Umožní se tím, aby se vytvořily libovolné dynamické skupiny Azure AD na základě ID korelátoru pomocí atributu enrollmentprofileName.
 
 >[!WARNING] 
 > ID korelátoru není v Intune přednastavené, takže zařízení může ohlásit libovolné ID korelátoru. Pokud uživatel vytvoří ID korelace, které odpovídá autopilotu nebo názvu profilu Apple ADE, zařízení se přidá do jakékoli dynamické skupiny zařízení Azure AD na základě atributu enrollmentProfileName. Pokud se chcete tomuto konfliktu vyhnout:

@@ -10,12 +10,12 @@ ms.assetid: b3d755bd-0870-4f1f-a56d-bfd3c7b492b9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d694f9985e6d1e5118f2620e5cbd556de249788a
-ms.sourcegitcommit: 568f8f8c19fafdd0f4352d0682f1ca7a4d665d25
+ms.openlocfilehash: 31f9b1cb083400abd36858a177e87804a916362c
+ms.sourcegitcommit: 7a099ff53668f50b37adab97ecd7ba98c5324676
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81771319"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84746507"
 ---
 # <a name="how-to-use-the-configuration-manager-docs"></a>Jak používat Configuration Manager docs
 
@@ -36,9 +36,9 @@ Následující tipy vám můžou pomoct při hledání požadovaných informací
 
 - Pokud používáte preferovaný vyhledávací web k vyhledání obsahu pro Configuration Manager, zahrňte `ConfigMgr` společně s klíčovými slovy hledání.
 
-  - Vyhledejte výsledky z `docs.microsoft.com/configmgr` pro Configuration Manager aktuální větev. Výsledky `docs.microsoft.com/previous-versions` jsou pro starší verze produktu.
+  - Vyhledejte výsledky z `docs.microsoft.com/mem/configmgr` pro Configuration Manager aktuální větev. Výsledky `docs.microsoft.com/previous-versions` jsou pro starší verze produktu.
 
-  - Chcete-li se zaměřit na výsledky hledání do aktuální knihovny obsahu, `site:docs.microsoft.com` zahrňte do oboru vyhledávacího modulu.
+  - Chcete-li se zaměřit na výsledky hledání do aktuální knihovny obsahu, zahrňte `site:docs.microsoft.com` do oboru vyhledávacího modulu.
 
 - Použijte hledané výrazy, které odpovídají terminologii v uživatelském rozhraní a online dokumentaci. Vyhněte se neoficiálním podmínkám nebo zkratkám, které by se vám mohly zobrazit v obsahu komunity. Vyhledejte například:
 
@@ -46,13 +46,13 @@ Následující tipy vám můžou pomoct při hledání požadovaných informací
   - "typ nasazení" místo "DT"
   - "aktualizace softwaru" místo "SUM"
 
-- Pokud chcete hledat v aktuálním článku, použijte funkci **Najít** v prohlížeči. V případě většiny moderních webových prohlížečů stiskněte **kombinaci kláves CTRL**+**F** a zadejte hledané výrazy.
+- Pokud chcete hledat v aktuálním článku, použijte funkci **Najít** v prohlížeči. V případě většiny moderních webových prohlížečů stiskněte **kombinaci kláves CTRL** + **F** a zadejte hledané výrazy.
 
-- Každý článek v `docs.microsoft.com` systému obsahuje následující pole, která vám pomůžou při hledání obsahu:
+- Každý článek v systému `docs.microsoft.com` obsahuje následující pole, která vám pomůžou při hledání obsahu:
 
-  - **Vyhledejte** v pravém horním rohu. Pokud chcete vyhledat všechny články, zadejte do tohoto pole výrazy. Články v knihovně Configuration Manager automaticky obsahují obor pro `ConfigMgr` hledání v této knihovně dokumentace.
+  - **Vyhledejte** v pravém horním rohu. Pokud chcete vyhledat všechny články, zadejte do tohoto pole výrazy. Články v knihovně Configuration Manager automaticky obsahují `ConfigMgr` obor pro hledání v této knihovně dokumentace.
 
-  - **Filtrovat podle názvu** nad levou tabulku obsahu Pokud chcete vyhledat aktuální obsah, zadejte do tohoto pole výrazy. Toto pole odpovídá pouze podmínkám, které se zobrazí v nadpisech článků pro aktuální uzel. Například **základní infrastruktura** (`docs.microsoft.com/configmgr/core`) nebo **Správa aplikací** (`docs.microsoft.com/configmgr/apps`).
+  - **Filtrovat podle názvu** nad levou tabulku obsahu Pokud chcete vyhledat aktuální obsah, zadejte do tohoto pole výrazy. Toto pole odpovídá pouze podmínkám, které se zobrazí v nadpisech článků pro aktuální uzel. Například **základní infrastruktura** ( `docs.microsoft.com/configmgr/core` ) nebo **Správa aplikací** ( `docs.microsoft.com/configmgr/apps` ).
 
 - Máte problémy s jejich hledáním? [Váš názor na soubor](#bkmk_docfeedback) Při nastavování problému poskytněte vyhledávací web, který používáte, klíčová slova, která jste zkusili, a cílový článek. Tato zpětná vazba pomáhá Microsoftu optimalizovat obsah pro lepší vyhledávání.
 

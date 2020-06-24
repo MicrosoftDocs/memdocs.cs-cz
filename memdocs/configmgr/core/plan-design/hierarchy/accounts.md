@@ -4,18 +4,18 @@ titleSuffix: Configuration Manager
 description: Identifikujte a spravujte skupiny systému Windows, účty a objekty SQL používané v Configuration Manager.
 ms.date: 05/08/2020
 ms.prod: configuration-manager
-ms.technology: Configuration Manager-core
+ms.technology: configmgr-core
 ms.topic: conceptual
 ms.assetid: 72d7b174-f015-498f-a0a7-2161b9929198
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5bd1284b96e1739126b8d6ee19f20699d47e5880
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 176280452039fd42dfef1d63cfdbb48169cda545
+ms.sourcegitcommit: 7b2f7918d517005850031f30e705e5a512959c3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83267979"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84777020"
 ---
 # <a name="accounts-used-in-configuration-manager"></a>Účty používané v Configuration Manager
 

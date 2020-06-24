@@ -6,16 +6,16 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.date: 05/14/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 101de2ba-9b4d-4890-b087-5d518a4aa624
-ms.openlocfilehash: 66e6156466d0432aaa8b3b162263f8207bdc9d78
-ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
+ms.openlocfilehash: d58faa57fa1459bbc8d821d117d20b3f404dc8e0
+ms.sourcegitcommit: 7b2f7918d517005850031f30e705e5a512959c3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84455102"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84776884"
 ---
 # <a name="how-to-prepare-internet-based-devices-for-co-management"></a>Příprava internetových zařízení na spolusprávu
 
@@ -110,7 +110,7 @@ Další informace najdete v tématu [vlastnosti instalace klienta](../core/clien
 
 3. V části **jiné**vyberte **obchodní aplikaci**.  
 
-4. Nahrajte soubor balíčku aplikace **CCMSetup. msi** . Tento soubor vyhledejte v následující složce na serveru Configuration Manager lokality: `<ConfigMgr installation directory>\bin\i386` .  
+4. Nahrajte soubor balíčku aplikace **ccmsetup.msi** . Tento soubor vyhledejte v následující složce na serveru Configuration Manager lokality: `<ConfigMgr installation directory>\bin\i386` .  
 
     > [!Tip]  
     > Při aktualizaci lokality se ujistěte, že tuto aplikaci aktualizujete také v Intune.  

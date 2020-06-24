@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: fdc15860f2d093a4c9c61b787ba0b780051d3f3d
-ms.sourcegitcommit: 97fbb7db14b0c4049c0fe3a36ee16a5c0cf3407a
+ms.openlocfilehash: db70eab54f319197f267173fe857d0fb147a7eba
+ms.sourcegitcommit: 7a099ff53668f50b37adab97ecd7ba98c5324676
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83864867"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84746557"
 ---
 # <a name="monitor-connection-health"></a>Monitorování stavu připojení
 
@@ -217,7 +217,7 @@ V opačném případě se může zobrazit jedna z následujících chyb:
 
 - Nejde nakonfigurovat shromažďování dat kompatibility aplikací zařízení (SetRequestAllAppraiserVersions). Podrobnosti o výjimce najdete v protokolech.  
 
-- Nelze zapsat RequestAllAppraiserVersions do klíče registru `HKLM:\SOFTWARE\Microsoft\WindowsNT\CurrentVersion\AppCompatFlags\Appraiser` . Kontrolovat oprávnění  
+- Nelze zapsat RequestAllAppraiserVersions do klíče registru `HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Appraiser` . Kontrolovat oprávnění  
 
 Ověřte oprávnění pro tento klíč registru. Ujistěte se, že účet Local System má přístup k tomuto klíči, aby bylo možné nastavit klienta Configuration Manager.  
 
@@ -226,7 +226,7 @@ Další informace najdete v části M365AHandler. log v klientovi.
 ### <a name="minimum-compatibility-update"></a>Minimální aktualizace kompatibility
 
 <!--18,19,32-->
-Aktualizace kompatibility (posouzení. dll) není v zařízení nainstalovaná nebo zastaralá. Je starší než minimální požadavek na Desktop Analytics, 10.0.17763.
+Aktualizace kompatibility (appraiser.dll) není na zařízení nainstalovaná nebo je neaktuální. Je starší než minimální požadavek na Desktop Analytics, 10.0.17763.
 
 Nainstalujte nejnovější aktualizaci kompatibility. Další informace najdete v tématu [aktualizace kompatibility](enroll-devices.md#update-devices).
 
@@ -248,7 +248,7 @@ Pokud se to nepodaří, může se zobrazit jedna z následujících chyb:
 
 - Nejde shromáždit data o kompatibilitě aplikací (RunAppraiser). Podrobnosti najdete v protokolech.  
 
-- Shromažďování dat o kompatibilitě aplikací (CompatTelRunner. exe) skončilo kódem chyby.  
+- Shromažďování dat o kompatibilitě aplikací (CompatTelRunner.exe) skončilo s kódem chyby.  
 
 Další informace najdete v části M365AHandler. log v klientovi.
 
@@ -299,7 +299,7 @@ Pokud se to nepodaří, může se zobrazit jedna z následujících chyb:
 
 - Nejde shromáždit data o zařízení a jeho konfiguraci (RunCensus). Podrobnosti o výjimce najdete v protokolech.  
 
-- Nástroj pro shromažďování dat zařízení a konfigurace (devicecensus. exe) se nenašel.  
+- Nástroj pro shromažďování dat zařízení a konfigurace (devicecensus.exe) se nenašel.  
 
 Další informace najdete v části M365AHandler. log v klientovi.
 
@@ -343,7 +343,7 @@ Nastavení DisableEnterpriseAuthProxy je ve výchozím nastavení povoleno pro s
 
 Tato vlastnost může zobrazit následující chyby:
 
-- Je povolený proxy server pro ověřování. Nastavit DisableEnterpriseAuthProxy na 0 v`HKLM\Software\Policies\Microsoft\Windows\DataCollection`
+- Je povolený proxy server pro ověřování. Nastavit DisableEnterpriseAuthProxy na 0 v`HKLM:\Software\Policies\Microsoft\Windows\DataCollection`
 
 - Nejde zjistit stav proxy serveru pro ověřování. Podrobnosti o výjimce najdete v protokolech.
 
@@ -412,12 +412,12 @@ Pokud je tato kontrolu úspěšná, komponenta DiagTrack je na zařízení sprá
 
 V opačném případě se může zobrazit jedna z následujících chyb:
 
-- Součást prostředí připojené uživatele a telemetrie (DiagTrack. dll) je zastaralá. Ověřit požadavky  
+- Součást prostředí připojené uživatele a telemetrie (diagtrack.dll) je zastaralá. Ověřit požadavky  
 
     > [!TIP]
     > Došlo k známému problému s kumulativní aktualizací zabezpečení z dubna 2020 (EVJ) pro Windows 7, která způsobuje, že zařízení tuto chybu nehlásí. Další informace najdete v [poznámkách k verzi](../core/servers/deploy/install/release-notes.md#dawin7-diagtrack).<!-- 7283186 -->
 
-- Nelze najít součást prostředí připojené uživatele a telemetrie (DiagTrack. dll). Ověřit požadavky  
+- Nelze najít součást prostředí připojené uživatele a telemetrie (diagtrack.dll). Ověřit požadavky  
 
 - Povolit a spustit službu prostředí a telemetrie připojené uživatele pro odesílání dat společnosti Microsoft  
 
