@@ -584,6 +584,8 @@
               href: servers/manage/introduction-to-reporting.md
             - name: Integrace se Serverem sestav Power BI
               href: servers/manage/powerbi-report-server.md
+            - name: Instalace ukázkových sestav Power BI
+              href: servers/manage/powerbi-sample-reports.md
             - name: Plánování vytváření sestav
               items:
                 - name: Plánování vytváření sestav
