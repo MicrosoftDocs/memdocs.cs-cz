@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: e2ace9e8a0fb8ba9e9071a2dc9db09434fe5279e
-ms.sourcegitcommit: 52dd59bdbad07b414db9e4209da0f4c957cf5d6e
+ms.openlocfilehash: 0e38f35f49e827893be5e7763a52dd3b5a901bf7
+ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84613952"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353526"
 ---
 <!-- 
 - Feature 1357546
@@ -107,12 +107,10 @@ Návody s asistencí, které vám pomůžou při řešení potíží s Configura
 
 ## <a name="new-and-updated-support-articles"></a>Nové a aktualizované články podpory
 
-Články podpory, které jsou nové nebo aktualizované v rozmezí 20. března a května 2020.
+Články podpory, které jsou nové nebo aktualizované v rozmezí od 16. června 2020.
 
-- [Nepovedlo se vytvořit aplikaci Microsoft Edge v KB 4561494 Configuration Manager](https://support.microsoft.com/help/4561494)
-- [Konzola pro vzdálenou Configuration Manager v KB 4551059 zamrzne 20 sekund každých 10 minut.](https://support.microsoft.com/help/4551059)
-- [Shrnutí KB 4556203 změn ve Configuration Manager aktuální větve Microsoft Endpoint, verze 2002](https://support.microsoft.com/help/4556203)
-- [Aktualizace KB 4553501 pro Microsoft Endpoint Configuration Manager verze 2002, úvodní aktualizační kanál](https://support.microsoft.com/help/4553501)
-- [KB 4561945 "v případě, že nástroj pro připojení služby stahuje soubor ConfigMgr. AdminUIContent. cab, došlo k chybě" základní připojení bylo ukončeno ".](https://support.microsoft.com/help/4561945)
+- [Nasazení Windows 10 KB 4564442 se nezdaří s nástrojem Microsoft Deployment Toolkit v počítačích se systémem BIOS Type firmware](https://support.microsoft.com/help/4564442)
+- [Kumulativní aktualizace KB 4563473 pro problémy s připojením klienta Configuration Manager verze 2002](https://support.microsoft.com/help/4563473)
+- [KB 4567007 selhání spuštění PXE nebo zpoždění pořadí úkolů po aktualizaci na Configuration Manager aktuální větev verze 2002](https://support.microsoft.com/help/4567007)
 
 Pokud se chcete přihlásit k odběru oznámení Atom nebo RSS o nových článcích podpory Configuration Manager, přečtěte si článek [podpora aktualizací obsahu](https://support.microsoft.com/help/4089498/) a výběr **koncového bodu Microsoft Configuration Manager**.  

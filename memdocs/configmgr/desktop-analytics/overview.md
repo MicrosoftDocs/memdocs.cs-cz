@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: a2829c5bd86192c4f2421550af9f27aef64aa353
-ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
+ms.openlocfilehash: 774e77f62ee31daa89eeb4273f3c1e7db68a374d
+ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84428651"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353475"
 ---
 # <a name="what-is-desktop-analytics"></a>Co je Desktop Analytics?
 
@@ -81,7 +81,7 @@ Pokud chcete použít desktopovou analýzu, ujistěte se, že vaše prostředí 
 
     - Pokud chcete mít přístup k portálu po registraci, budete potřebovat:
 
-      - Role a [**vlastník**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#owner) [**správce stolního počítače**](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#desktop-analytics-administrator-permissions) , nebo oprávnění [**přispěvatele**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#contributor) u skupiny prostředků, ve které se pracovní prostor vytvořil.
+      - Role a [**vlastník**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#owner)pro [**správce Desktop Analytics**](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#desktop-analytics-administrator-permissions) nebo oprávnění [**přispěvatele**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#contributor) vytvořeného pracovního prostoru Log Analytics.
 
 - Configuration Manager verze 1902 s kumulativní aktualizací (4500571) nebo novější. Další informace najdete v tématu [aktualizace Configuration Manager](connect-configmgr.md#bkmk_hotfix).  
 

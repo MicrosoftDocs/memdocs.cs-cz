@@ -2,7 +2,7 @@
 title: Parametry a vlastnosti instalace klienta
 titleSuffix: Configuration Manager
 description: Přečtěte si o parametrech a vlastnostech příkazového řádku služby CCMSetup pro instalaci klienta Configuration Manager.
-ms.date: 04/01/2020
+ms.date: 06/14/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,40 +10,40 @@ ms.assetid: c890fd27-7a8c-4f51-bbe2-f9908af1f42b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: fda1e877f8e0bc211b36e288af13de204305cc5a
-ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
+ms.openlocfilehash: 4065f320ec27f53e50c64bc7ca0c97d3f6923853
+ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84455034"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353271"
 ---
 # <a name="about-client-installation-parameters-and-properties-in-configuration-manager"></a>Informace o parametrech instalace a vlastnostech klienta v Configuration Manager
 
 *Platí pro: Configuration Manager (Current Branch)*
 
-K instalaci klienta Configuration Manager použijte příkaz CCMSetup. exe. Pokud zadáte *parametry* instalace klienta na příkazovém řádku, upraví se chování při instalaci. Pokud do příkazového řádku zadáte *vlastnosti* instalace klienta, upraví počáteční konfiguraci nainstalovaného agenta klienta.
+Pomocí příkazu CCMSetup.exe nainstalujte klienta Configuration Manager. Pokud zadáte *parametry* instalace klienta na příkazovém řádku, upraví se chování při instalaci. Pokud do příkazového řádku zadáte *vlastnosti* instalace klienta, upraví počáteční konfiguraci nainstalovaného agenta klienta.
 
-## <a name="about-ccmsetupexe"></a><a name="aboutCCMSetup"></a>O programu CCMSetup. exe
+## <a name="about-ccmsetupexe"></a><a name="aboutCCMSetup"></a>O CCMSetup.exe
 
-Příkaz CCMSetup. exe stáhne potřebné soubory pro instalaci klienta z bodu správy nebo ze zdrojového umístění. Tyto soubory mohou zahrnovat:  
+Příkaz CCMSetup.exe stáhne potřebné soubory pro instalaci klienta z bodu správy nebo ze zdrojového umístění. Tyto soubory mohou zahrnovat:  
 
-- Balíček Instalační služba systému Windows Client. msi, který nainstaluje klientský software
+- Balíček Instalační služba systému Windows client.msi, který nainstaluje klientský software.
 
 - Požadavky klienta
 
 - Aktualizace a opravy pro klienta Configuration Manager
 
 > [!NOTE]
-> Soubor Client. msi nejde nainstalovat přímo.  
+> Nemůžete přímo nainstalovat client.msi.  
 
-Program CCMSetup. exe poskytuje *parametry* příkazového řádku pro přizpůsobení instalace. Parametry mají předponu lomítka ( `/` ) a podle konvence malými písmeny. V případě potřeby určíte hodnotu parametru pomocí dvojtečky (), `:` a to hned za následováním hodnoty. Další informace najdete v tématu [parametry příkazového řádku CCMSetup. exe](#ccmsetupexe-command-line-parameters).
+CCMSetup.exe poskytuje *parametry* příkazového řádku pro přizpůsobení instalace. Parametry mají předponu lomítka ( `/` ) a podle konvence malými písmeny. V případě potřeby určíte hodnotu parametru pomocí dvojtečky (), `:` a to hned za následováním hodnoty. Další informace najdete v tématu [CCMSetup.exe parametry příkazového řádku](#ccmsetupexe-command-line-parameters).
 
-*Vlastnosti* na příkazovém řádku programu CCMSetup. exe můžete také uvést, chcete-li upravit chování souboru Client. msi. Properties podle konvence je velká písmena. Zadejte hodnotu pro vlastnost pomocí znaku rovná se ( `=` ) ihned následovaný hodnotou. Další informace najdete v tématu [vlastnosti Client. msi](#clientMsiProps).
+*Vlastnosti* můžete také uvést na příkazovém řádku CCMSetup.exe a upravit tak chování client.msi. Vlastnosti podle konvence jsou velkými písmeny. Zadejte hodnotu pro vlastnost pomocí znaku rovná se ( `=` ) ihned následovaný hodnotou. Další informace najdete v tématu [Client.msi Properties](#clientMsiProps).
 
 > [!IMPORTANT]  
-> Před zadáním vlastností souboru Client. msi zadejte parametry CCMSetup.  
+> Před zadáním vlastností pro client.msi zadejte parametry CCMSetup.  
 
-Program CCMSetup. exe a podpůrné soubory jsou umístěny na serveru lokality ve složce **klienta** instalační složky nástroje Configuration Manager. Configuration Manager sdílí tuto složku do sítě ve sdílené složce lokality. Například, `\\SiteServer\SMS_ABC\Client`.
+CCMSetup.exe a podpůrné soubory jsou na serveru lokality ve složce **klienta** Configuration Manager instalační složky. Configuration Manager sdílí tuto složku do sítě ve sdílené složce lokality. Například, `\\SiteServer\SMS_ABC\Client`.
 
 Příkaz CCMSetup.exe používá v příkazovém řádku tento formát:  
 
@@ -68,11 +68,11 @@ Tento příklad provádí následující akce:
 
 Pokud rozšíříte schéma služby Active Directory pro Configuration Manager, lokalita publikuje mnoho vlastností instalace klienta v Active Directory Domain Services. Configuration Manager klient tyto vlastnosti automaticky přečte. Další informace najdete v tématu [o vlastnostech instalace klienta publikovaných ve službě Active Directory Domain Services](about-client-installation-properties-published-to-active-directory-domain-services.md)  
 
-## <a name="ccmsetupexe-command-line-parameters"></a>Parametry příkazového řádku CCMSetup. exe
+## <a name="ccmsetupexe-command-line-parameters"></a>Parametry příkazového řádku CCMSetup.exe
 
 ### <a name=""></a><a name="bkmk_help"></a> /?
 
-Zobrazuje dostupné parametry příkazového řádku pro soubor CCMSetup. exe.  
+Zobrazuje dostupné parametry příkazového řádku pro ccmsetup.exe.  
 
 Příklad: `ccmsetup.exe /?`
 
@@ -142,13 +142,13 @@ Následující příklad příkazového řádku obsahuje další požadované pa
 
 ### <a name="retry"></a>/retry
 
-Pokud se programu CCMSetup. exe nepovede stáhnout instalační soubory, použijte tento parametr k zadání intervalu opakování v minutách. Program CCMSetup se bude pokoušet opakovat, dokud nedosáhne limitu zadaného v parametru [**/downloadtimeout**](#downloadtimeout) .
+Pokud se CCMSetup.exe nepovede stáhnout instalační soubory, použijte tento parametr k zadání intervalu opakování v minutách. Program CCMSetup se bude pokoušet opakovat, dokud nedosáhne limitu zadaného v parametru [**/downloadtimeout**](#downloadtimeout) .
 
 Příklad: `ccmsetup.exe /retry:20`  
 
 ### <a name="noservice"></a>/noservice
 
-Tento parametr brání spuštění programu CCMSetup jako služby, což je ve výchozím nastavení. Když je program CCMSetup spuštěn jako služba, běží v kontextu účtu místního systému počítače. Tento účet nemusí mít dostatečná oprávnění pro přístup k požadovaným síťovým prostředkům pro instalaci. Pomocí **/noservice**spustí program CCMSetup. exe v kontextu uživatelského účtu, který používáte ke spuštění instalace.
+Tento parametr brání spuštění programu CCMSetup jako služby, což je ve výchozím nastavení. Když je program CCMSetup spuštěn jako služba, běží v kontextu účtu místního systému počítače. Tento účet nemusí mít dostatečná oprávnění pro přístup k požadovaným síťovým prostředkům pro instalaci. V **/noservice**se CCMSetup.exe spouští v kontextu uživatelského účtu, který používáte ke spuštění instalace.
 
 Příklad: `ccmsetup.exe /noservice`  
 
@@ -157,7 +157,7 @@ Příklad: `ccmsetup.exe /noservice`
 Určuje, že má být program CCMSetup spuštěn jako služba, která používá účet místního systému.  
 
 > [!TIP]
-> Pokud ke spuštění programu CCMSetup. exe s parametrem **/Service** používáte skript, program CCMSetup. exe se po spuštění služby ukončí. Nemusí správně nahlásit podrobnosti o instalaci skriptu.
+> Pokud používáte skript ke spuštění CCMSetup.exe s parametrem **/Service** , CCMSetup.exe po spuštění služby ukončen. Nemusí správně nahlásit podrobnosti o instalaci skriptu.
 
 Příklad: `ccmsetup.exe /service`  
 
@@ -224,7 +224,7 @@ Tento parametr určuje textový soubor se seznamem vlastností instalace klienta
 
 - Pokud je program CCMSetup spuštěn jako služba, umístěte tento soubor do systémové složky CCMSetup: `%Windir%\Ccmsetup` .
 
-- Pokud zadáte parametr [**/noservice**](#noservice) , umístěte tento soubor do stejné složky jako CCMSetup. exe.
+- Pokud zadáte parametr [**/noservice**](#noservice) , umístěte tento soubor do stejné složky jako CCMSetup.exe.
 
 Příklad: `CCMSetup.exe /config:"configuration file name.txt"`
 
@@ -234,7 +234,7 @@ Příklad `[Client Install]` položky oddílu:`Install=INSTALL=ALL SMSSITECODE=A
 
 ### <a name="skipprereq"></a>/skipprereq
 
-Tento parametr určuje, že program CCMSetup. exe neinstaluje zadaný požadavek. Můžete zadat více než jednu hodnotu. `;`Jednotlivé hodnoty oddělte pomocí středníku ().
+Tento parametr určuje, že CCMSetup.exe neinstaluje určenou součást. Můžete zadat více než jednu hodnotu. `;`Jednotlivé hodnoty oddělte pomocí středníku ().
 
 Příklady:
 
@@ -246,20 +246,35 @@ Další informace o požadavcích klienta najdete v tématu [požadavky klienta 
 
 ### <a name="forceinstall"></a>/forceinstall
 
-Určete, že program CCMSetup. exe odinstaluje všechny existující klienty a nainstaluje nového klienta.  
+Určete, že CCMSetup.exe odinstaluje všechny existující klienty a nainstaluje nového klienta.  
 
 ### <a name="excludefeatures"></a>/ExcludeFeatures
 
-Tento parametr určuje, že program CCMSetup. exe nenainstaluje zadanou funkci.
+Tento parametr určuje, že CCMSetup.exe nenainstaluje zadanou funkci.
 
 Příklad: `CCMSetup.exe /ExcludeFeatures:ClientUI` nenainstaluje na klienta Centrum softwaru.  
 
 > [!NOTE]  
 > `ClientUI`je jediná hodnota, kterou podporuje parametr **/ExcludeFeatures** .
 
-## <a name="ccmsetupexe-return-codes"></a><a name="ccmsetupReturnCodes"></a>Návratové kódy CCMSetup. exe
+### <a name="alwaysexcludeupgrade"></a>/AlwaysExcludeUpgrade
 
-Příkaz CCMSetup. exe poskytuje následující návratové kódy. Chcete-li vyřešit potíže, přečtěte si `%WinDir%\ccmsetup\ccmsetup.log` v klientovi kontext a další podrobnosti o návratových kódech.
+Tento parametr určuje, zda se má klient automaticky upgradovat, když povolíte [**Automatický upgrade klienta**](../manage/upgrade/upgrade-clients-for-windows-computers.md#bkmk_autoupdate).
+
+Podporované hodnoty:
+
+- `TRUE`: Klient nebude automaticky upgradován.
+- `FALSE`: Klient se automaticky upgraduje (výchozí).
+
+Příklad:  
+
+`CCMSetup.exe /AlwaysExcludeUpgrade:TRUE`
+
+Další informace najdete v tématu [Rozšířený klient interoperability](../../understand/interoperability-client.md).
+
+## <a name="ccmsetupexe-return-codes"></a><a name="ccmsetupReturnCodes"></a>Návratové kódy CCMSetup.exe
+
+Příkaz CCMSetup.exe poskytuje následující návratové kódy. Chcete-li vyřešit potíže, přečtěte si `%WinDir%\ccmsetup\ccmsetup.log` v klientovi kontext a další podrobnosti o návratových kódech.
 
 |Návratový kód|Význam|  
 |-----------|-------|  
@@ -270,9 +285,9 @@ Příkaz CCMSetup. exe poskytuje následující návratové kódy. Chcete-li vy�
 |9|Selhání vyhodnocení požadavků|  
 |10|Selhání ověření hodnoty hash manifestu instalačního programu|  
 
-## <a name="ccmsetupmsi-properties"></a><a name="ccmsetupMsiProps"></a>Vlastnosti CCMSetup. msi
+## <a name="ccmsetupmsi-properties"></a><a name="ccmsetupMsiProps"></a>Vlastnosti Ccmsetup.msi
 
-Následující vlastnosti mohou upravit chování souboru CCMSetup. msi v rámci instalace.
+Následující vlastnosti mohou změnit chování při instalaci ccmsetup.msi.
 
 ### <a name="ccmsetupcmd"></a>CCMSETUPCMD
 
@@ -283,9 +298,9 @@ Příklad: `ccmsetup.msi CCMSETUPCMD="/mp:https://mp.contoso.com CCMHOSTNAME=mp.
 > [!Tip]
 > Microsoft Intune omezuje příkazový řádek na 1024 znaků.
 
-## <a name="clientmsi-properties"></a><a name="clientMsiProps"></a>Vlastnosti souboru Client. msi
+## <a name="clientmsi-properties"></a><a name="clientMsiProps"></a>Vlastnosti Client.msi
 
-Následující vlastnosti mohou změnit chování instalace souboru Client. msi, který program CCMSetup. exe nainstaluje. Pokud používáte [metodu nabízené instalace klienta](plan/client-installation-methods.md#client-push-installation), určete tyto vlastnosti na kartě **klient** **vlastností klientské nabízené instalace** v konzole Configuration Manager.
+Následující vlastnosti mohou změnit chování při instalaci client.msi, které ccmsetup.exe nainstalovat. Pokud používáte [metodu nabízené instalace klienta](plan/client-installation-methods.md#client-push-installation), určete tyto vlastnosti na kartě **klient** **vlastností klientské nabízené instalace** v konzole Configuration Manager.
 
 ### <a name="aadclientappid"></a>AADCLIENTAPPID
 
@@ -429,7 +444,7 @@ Další informace najdete v tématu [informace o souborech protokolu](../../plan
 
 ### <a name="ccmevalinterval"></a>CCMEVALINTERVAL
 
-Frekvence v minutách, po které se nástroj pro vyhodnocení stavu klienta (ccmeval. exe) spustí. Zadejte celočíselnou hodnotu z hodnoty `1` do `1440` . Ve výchozím nastavení se ccmeval spustí jednou denně (1440 minut).
+Frekvence v minutách, kdy se spustí nástroj pro vyhodnocení stavu klienta (ccmeval.exe). Zadejte celočíselnou hodnotu z hodnoty `1` do `1440` . Ve výchozím nastavení se ccmeval spustí jednou denně (1440 minut).
 
 Příklad: `CCMSetup.exe CCMEVALINTERVAL=1440`
 
@@ -437,7 +452,7 @@ Další informace o vyhodnocení stavu klienta najdete v tématu [monitorování
 
 ### <a name="ccmevalhour"></a>CCMEVALHOUR
 
-Hodiny v den, kdy se nástroj pro vyhodnocení stavu klienta (ccmeval. exe) spouští. Zadejte celočíselnou hodnotu od `0` (půlnoc) do `23` (11:00 odp). Ve výchozím nastavení se ccmeval spouští na půlnoci.
+Hodina během dne, kdy se nástroj pro vyhodnocení stavu klienta (ccmeval.exe) spouští. Zadejte celočíselnou hodnotu od `0` (půlnoc) do `23` (11:00 odp). Ve výchozím nastavení se ccmeval spouští na půlnoci.
 
 Další informace o vyhodnocení stavu klienta najdete v tématu [monitorování klientů](../manage/monitor-clients.md#bkmk_health).
 
@@ -489,7 +504,7 @@ Příklad: `CCMSetup.exe /UsePKICert CCMHTTPSPORT=443`
 Tato vlastnost slouží k nastavení složky pro instalaci Configuration Manager klientských souborů. Ve výchozím nastavení používá `%WinDir%\CCM` .
 
 > [!TIP]
-> Bez ohledu na to, kam nainstalujete soubory klienta, vždy nainstaluje soubor **Ccmcore. dll** do `%WinDir%\System32` složky. V 64 operačním systému nainstaluje kopii Ccmcore. dll do `%WinDir%\SysWOW64` složky. Tento soubor podporuje 32 aplikací, které používají 32 verzi klientských rozhraní API ze sady Configuration Manager SDK.
+> Bez ohledu na to, kam nainstalujete soubory klienta, vždy nainstaluje soubor **ccmcore.dll** do `%WinDir%\System32` složky. V 64 operačním systému nainstaluje kopii ccmcore.dll do `%WinDir%\SysWOW64` složky. Tento soubor podporuje 32 aplikací, které používají 32 verzi klientských rozhraní API ze sady Configuration Manager SDK.
 
 Příklad: `CCMSetup.exe CCMINSTALLDIR="C:\ConfigMgr"`
 

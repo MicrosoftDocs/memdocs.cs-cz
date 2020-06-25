@@ -12,16 +12,34 @@ ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
 ROBOTS: NOINDEX
-ms.openlocfilehash: 75dd74e3c1019c9819b44a0ffa8936eeb9eee366
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 18e703691696a2cfc02a5b9715fb6062360229e2
+ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268347"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353458"
 ---
 # <a name="ready-for-modern-desktop-retirement-faq"></a>Nejčastější dotazy k vyřazení moderních desktopových prostředí
 
 <!-- placeholder -->
+
+## <a name="ready-for-windows-adoption-status"></a>Připraveno pro stav přijetí Windows
+
+Stav přijetí je založený na informacích z komerčních zařízení, která sdílejí data s Microsoftem. Stav je integrován s příkazy podpory od dodavatelů softwaru.
+
+Desktop Analytics poskytuje stav přijetí pro každou verzi assetu, která se nachází v komerčních zařízeních. Tento stav nezahrnuje data ze zařízení uživatelů nebo zařízení, která nesdílejí data. Stav nemusí být zástupcem míry přijetí ve všech zařízeních s Windows 10.
+
+Možné kategorie:
+
+- **Vysoce přijato**: Tato aplikace nainstalovala aspoň 100 000 komerční zařízení s Windows 10.
+
+- **Přijato**: Tato aplikace nainstalovala aspoň 10 000 komerční zařízení s Windows 10.
+
+- **Nedostatečná data**: příliš málo komerčních zařízení s Windows 10 nesdílí informace pro tuto aplikaci, aby mohla společnost Microsoft zařazovat své přijetí.
+
+- **Vývojář kontaktu**: v této verzi aplikace může dojít k problémům s kompatibilitou. Společnost Microsoft doporučuje kontaktovat poskytovatele softwaru a získat další informace.
+
+- **Neznámé**: k dispozici nejsou žádné informace pro tuto verzi této aplikace. Informace mohou být k dispozici pro jiné verze aplikace.
 
 ## <a name="general"></a>Obecné
 

@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 623a8dab52e13c4674b961e825033430d34a8f88
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: fe50aad3cb35ab5908f604560f4dcd22800919a5
+ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906567"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353441"
 ---
 # <a name="cryptographic-controls-technical-reference"></a>Technické informace o kryptografických ovládacích prvcích
 
@@ -24,7 +24,7 @@ Configuration Manager používá podepisování a šifrování, které vám pom�
 
  Primární algoritmus hash, který Configuration Manager používá k podepisování, je SHA-256. Když vzájemně komunikují dvě Configuration Manager lokality, podepisují svoji komunikaci pomocí algoritmu SHA-256. Primární šifrovací algoritmus implementovaný v Configuration Manager je 3DES. Slouží k ukládání dat do Configuration Manager databáze a pro komunikaci klienta s protokolem HTTP. Pokud používáte komunikaci klienta přes protokol HTTPS, můžete nakonfigurovat infrastrukturu veřejných klíčů (PKI) tak, aby používala certifikáty RSA s maximálními algoritmy hash a délkou klíčů, které jsou zdokumentovány v [požadavcích na certifikát PKI](../network/pki-certificate-requirements.md).  
 
- Pro většinu kryptografických operací pro operační systémy Windows Configuration Manager používat algoritmy SHA-2, 3DES a AES a RSA z knihovny CryptoAPI systému Windows Rsaenh. dll.  
+ Pro většinu kryptografických operací pro operační systémy Windows Configuration Manager používat algoritmy SHA-2, 3DES a AES a RSA z knihovny Windows CryptoAPI rsaenh.dll.  
 
 > [!IMPORTANT]  
 >  Viz informace o doporučovaných změnách v reakci na slabá místa zabezpečení SSL v tématu [About SSL Vulnerabilities](#about-ssl-vulnerabilities).  
@@ -70,7 +70,7 @@ Ne všechna zařízení mohou podporovat hashování obsahu. Mezi výjimky patř
  Při přenosu balíčku pomocí vícesměrového vysílání máte možnost povolit šifrování, a to v případě každého balíčku nasazení operačního systému. Šifrování používá rozšířený standard šifrování (AES). Pokud šifrování povolíte, nebude vyžadována konfigurace dalšího certifikátu. Distribuční bod s povoleným vícesměrovým vysíláním automaticky vygeneruje symetrické klíče pro šifrování balíčku. Každý balíček obsahuje odlišný šifrovací klíč. Klíče je uložen v distribučním bodě s vícesměrovým vysíláním pomocí standardních API systému Windows. Když se klient připojí do relace vícesměrového vysílání, dojde k výměně klíčů pomocí šifrovaného kanálu pomocí certifikátu ověřování klienta vydaného PKI (pokud klient používá protokol HTTPS) nebo certifikátu podepsaného držitelem (pokud klient používá protokol HTTP). Klient uloží klíč do paměti pouze po dobu trvání relace vícesměrového vysílání.  
 
 ### <a name="encryption-for-media-to-deploy-operating-systems"></a>Šifrování médií pro nasazení operačních systémů  
- Pokud používáte média k nasazení operačních systémů a určení hesla k ochraně média, jsou proměnné prostředí šifrovány pomocí rozšířeného standardu šifrování (AES). Další data v médiu, včetně balíčků a obsahu aplikací, nejsou šifrována.  
+ Použijete-li k nasazení operačních systémů médium a zadáte heslo pro ochranu média, jsou proměnné prostředí šifrovány pomocí standard AES (Advanced Encryption Standard) (AES) s 128 bitovou velikostí klíče. Další data v médiu, včetně balíčků a obsahu aplikací, nejsou šifrována.  
 
 ### <a name="encryption-for-content-that-is-hosted-on-cloud-based-distribution-points"></a>Šifrování obsahu, který je hostován v cloudových distribučních bodech  
  Od verze System Center 2012 Configuration Manager SP1 Pokud používáte cloudové distribuční body, je obsah, který nahrajete do těchto distribučních bodů, zašifrovaný pomocí standard AES (Advanced Encryption Standard) (AES) s velikostí klíče 256. Obsah je znovu zašifrován kdykoliv ho aktualizujete. Pokud klient stáhne obsah, je zašifrován a chráněn pomocí připojení HTTPS.  
@@ -260,5 +260,5 @@ Chcete-li zvýšit zabezpečení Configuration Manager klientů a serverů, post
 - Zakázání SSL 3,0, TLS 1,0 a TLS 1,1 
 - Změna pořadí šifrovacích sad souvisejících s protokolem TLS 
 
-Další informace najdete v tématu [jak omezit použití určitých kryptografických algoritmů a protokolů v souboru Schannel. dll](https://support.microsoft.com/help/245030/) a [určit prioritu šifrovacích sad Schannel](https://docs.microsoft.com/windows/win32/secauthn/prioritizing-schannel-cipher-suites). Tyto postupy neovlivňují Configuration Manager funkce.
+Další informace najdete v tématu [jak omezit použití určitých kryptografických algoritmů a protokolů v Schannel.dll](https://support.microsoft.com/help/245030/) a [stanovení priorit šifrovacích sad Schannel](https://docs.microsoft.com/windows/win32/secauthn/prioritizing-schannel-cipher-suites). Tyto postupy neovlivňují Configuration Manager funkce.
 

@@ -10,12 +10,12 @@ ms.assetid: 7c888a6f-8e37-4be5-8edb-832b218f266d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 385a7222b33275951de294554a870d8e490a5ddc
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 114a0a18b3eb5d416b45379ccb3ac68128e529c5
+ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81719089"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353594"
 ---
 # <a name="task-sequence-steps"></a>Kroky pořadí úkolů
 
@@ -148,7 +148,7 @@ Zadejte balíček ovladačů, který obsahuje potřebné ovladače zařízení. 
 
 #### <a name="install-driver-package-via-running-dism-with-recurse-option"></a>Instalovat balíček ovladačů přes spuštění DISM s možností rekurze
 
-Tuto možnost vyberte, pokud chcete `/recurse` přidat parametr do příkazového řádku DISM, když systém Windows použije balíček ovladačů.
+Tuto možnost vyberte, pokud chcete přidat `/recurse` parametr do příkazového řádku DISM, když systém Windows použije balíček ovladačů.
 
 Pokud povolíte tuto možnost, můžete také zadat další parametry příkazového řádku DISM. K zahrnutí dalších možností použijte proměnnou pořadí úloh [OSDInstallDriversAdditionalOptions](task-sequence-variables.md#OSDInstallDriversAdditionalOptions) . Další informace najdete v tématu [Možnosti příkazového řádku Windows 10 DISM](https://docs.microsoft.com/windows-hardware/manufacture/desktop/deployment-image-servicing-and-management--dism--command-line-options).<!-- SCCMDocs#2125 -->
 
@@ -215,11 +215,11 @@ Tuto možnost vyberte, pokud chcete mít cílový počítač připojený ke konk
 
 #### <a name="join-a-domain"></a>Připojení k doméně
 
-Tuto možnost vyberte, pokud chcete mít cílový počítač připojený ke konkrétní doméně. Zadejte nebo přejděte k doméně, například `fabricam.com`. Zadejte nebo vyhledejte cestu protokolu LDAP (Lightweight Directory Access Protocol) pro organizační jednotku. Například: `LDAP//OU=computers, DC=Fabricam.com, C=com`.  
+Tuto možnost vyberte, pokud chcete mít cílový počítač připojený ke konkrétní doméně. Zadejte nebo přejděte k doméně, například `fabricam.com` . Zadejte nebo vyhledejte cestu protokolu LDAP (Lightweight Directory Access Protocol) pro organizační jednotku. Příklad: `LDAP//OU=computers, DC=Fabricam.com, C=com`.  
 
 #### <a name="account"></a>Účet
 
-Vyberte možnost **nastavit** a zadejte účet s potřebnými oprávněními pro připojení počítače k doméně. V dialogovém okně **uživatelský účet systému Windows** zadejte uživatelské jméno v následujícím formátu: `Domain\User`. Další informace najdete v tématu [účet pro připojení k doméně](../../core/plan-design/hierarchy/accounts.md#task-sequence-domain-join-account).
+Vyberte možnost **nastavit** a zadejte účet s potřebnými oprávněními pro připojení počítače k doméně. V dialogovém okně **uživatelský účet systému Windows** zadejte uživatelské jméno v následujícím formátu: `Domain\User` . Další informace najdete v tématu [účet pro připojení k doméně](../../core/plan-design/hierarchy/accounts.md#task-sequence-domain-join-account).
 
 #### <a name="adapter-settings"></a>Nastavení adaptéru
 
@@ -274,25 +274,25 @@ Tento krok provádí různé akce v závislosti na tom, jestli používá bitovo
 
 Při použití bitové kopie operačního systému provede krok **použít bitovou kopii operačního systému** následující akce:  
 
-1. Odstraňte veškerý obsah na cílovém svazku s výjimkou souborů ve složce určené proměnnou ** \_SMSTSUserStatePath** .  
+1. Odstraňte veškerý obsah na cílovém svazku s výjimkou souborů ve složce určené proměnnou ** \_ SMSTSUserStatePath** .  
 
 2. Extrahuje obsah zadaného souboru. wim do zadaného cílového oddílu.  
 
 3. Připravte soubor odpovědí:  
 
-    1. Vytvoří nový výchozí soubor odpovědí instalační program systému Windows (Sysprep. inf nebo Unattend. XML) pro nasazený operační systém.  
+    1. Vytvoří nový výchozí soubor odpovědí instalační program systému Windows (Sysprep. inf nebo unattend.xml) pro nasazený operační systém.  
 
     2. Sloučí všechny hodnoty ze souboru odpovědí zadaného uživatelem.  
 
 4. Zkopírujte do aktivního oddílu zavaděče spouštění systému Windows.  
 
-5. Nastavte soubor Boot. ini nebo konfigurační databázi BCD (Boot Configuration Database) tak, aby odkazovaly na nově nainstalovaný operační systém.  
+5. Nastavte boot.ini nebo konfigurační databázi BCD (Boot Configuration Database) tak, aby odkazovaly na nově nainstalovaný operační systém.  
 
 #### <a name="os-upgrade-package-actions"></a>Akce balíčku pro upgrade operačního systému
 
 Když použijete balíček s upgradem operačního systému, provede krok **použít bitovou kopii operačního systému** následující akce:  
 
-1. Odstraňte veškerý obsah na cílovém svazku s výjimkou souborů ve složce určené proměnnou ** \_SMSTSUserStatePath** .  
+1. Odstraňte veškerý obsah na cílovém svazku s výjimkou souborů ve složce určené proměnnou ** \_ SMSTSUserStatePath** .  
 
 2. Připravte soubor odpovědí:  
 
@@ -321,10 +321,10 @@ Nainstaluje operační systém pomocí balíčku s upgradem operačního systém
 
 #### <a name="use-an-unattended-or-sysprep-answer-file-for-a-custom-installation"></a>Pro vlastní instalaci použít bezobslužný soubor odpovědi nebo soubor odpovědi Sysprep
 
-Tuto možnost použijte, pokud chcete zadat soubor odpovědí instalačního programu systému Windows (**Unattend. XML**, **Unattend. txt**nebo **Sysprep. inf**) v závislosti na verzi operačního systému a metodě instalace. Soubor, který zadáte, může zahrnovat kteroukoliv ze standardních možností konfigurace podporovanou soubory odpovědí systému Windows. Například můžete pomocí něj určit výchozí domovskou stránku Internet Exploreru. Zadejte balíček, který obsahuje soubor odpovědí, a přidruženou cestu k souboru v balíčku.  
+Pomocí této možnosti můžete zadat soubor odpovědí instalačního programu systému Windows (**unattend.xml**, **unattend.txt**nebo **Sysprep. inf**) v závislosti na verzi operačního systému a metodě instalace. Soubor, který zadáte, může zahrnovat kteroukoliv ze standardních možností konfigurace podporovanou soubory odpovědí systému Windows. Například můžete pomocí něj určit výchozí domovskou stránku Internet Exploreru. Zadejte balíček, který obsahuje soubor odpovědí, a přidruženou cestu k souboru v balíčku.  
 
 > [!NOTE]  
-> Soubor odpovědí instalačního programu systému Windows, který zadáte, může obsahovat vložené proměnné pořadí `%varname%`úkolů ve formuláři, kde *název_proměnné* je název proměnné. Krok **nastavit systém Windows a nástroj ConfigMgr** nahradí proměnnou řetězcem pro skutečnou hodnotu proměnné. Tyto vložené proměnné pořadí úkolů nemůžete používat v souboru odpovědí Unattend. XML jenom v číselném poli.  
+> Soubor odpovědí instalačního programu systému Windows, který zadáte, může obsahovat vložené proměnné pořadí úkolů ve formuláři `%varname%` , kde *název_proměnné* je název proměnné. Krok **nastavit systém Windows a nástroj ConfigMgr** nahradí proměnnou řetězcem pro skutečnou hodnotu proměnné. Tyto vložené proměnné pořadí úkolů nemůžete použít v souboru odpovědí unattend.xml jenom v číselném poli.  
 
 Pokud soubor odpovědí instalace systému Windows nezadáte, pořadí úloh automaticky vygeneruje soubor odpovědí.  
 
@@ -450,7 +450,7 @@ Nakonfigurujte tahle nastavení:
 Další informace o těchto hodnotách souboru odpovědí instalačního programu systému Windows najdete v tématu [Microsoft-Windows-International-Core](https://docs.microsoft.com/windows-hardware/customize/desktop/unattend/microsoft-windows-international-core).
 
 > [!NOTE]
-> Pokud vytvoříte vlastní soubor odpovědí instalačního programu systému Windows (Unattend. XML), tento krok přepíše všechny existující hodnoty. K automatizaci dynamického procesu pro tato nastavení použijte související proměnné pořadí úkolů. Například [OSDWindowsSettingsInputLocale](task-sequence-variables.md#OSDWindowsSettingsInputLocale). 
+> Pokud vytvoříte vlastní soubor odpovědí instalačního programu systému Windows (unattend.xml), přepíše tento krok všechny existující hodnoty. K automatizaci dynamického procesu pro tato nastavení použijte související proměnné pořadí úkolů. Například [OSDWindowsSettingsInputLocale](task-sequence-variables.md#OSDWindowsSettingsInputLocale). 
 
 ## <a name="auto-apply-drivers"></a><a name="BKMK_AutoApplyDrivers"></a>Automaticky použít ovladače
 
@@ -628,7 +628,7 @@ Volitelný uživatelsky definovaný popis zachycené image operačního systému
 
 Volitelné uživatelsky definované číslo verze, které se má přiřadit k zaznamenané bitové kopii operačního systému. Tato hodnota může být libovolná kombinace písmen a číslic. Je uložen v souboru obrázku.  
 
-#### <a name="created-by"></a>Autor  
+#### <a name="created-by"></a>Vytvořil(a)  
 
 Volitelné jméno uživatele, který vytvořil bitovou kopii operačního systému. Je uložen v souboru obrázku.  
 
@@ -704,7 +704,7 @@ Tuto možnost vyberte, abyste mohli vybrat konfigurační soubory v balíčku US
 
 #### <a name="enable-verbose-logging"></a>Zapnout podrobné protokolování
 
-Tuto možnost povolte, pokud chcete v souboru protokolu vygenerovat podrobnější informace. Při zaznamenávání stavu se ve výchozím nastavení pořadí úkolů ve složce protokolu pořadí úkolů generuje příkaz `%WinDir%\ccm\logs` **Scanstate. log** .  
+Tuto možnost povolte, pokud chcete v souboru protokolu vygenerovat podrobnější informace. Při zaznamenávání stavu se ve výchozím nastavení pořadí úkolů ve složce protokolu pořadí úkolů generuje příkaz **Scanstate. log** `%WinDir%\ccm\logs` .  
 
 #### <a name="skip-files-using-encrypted-file-system"></a>Přeskočit soubory používající systém souborů EFS 
 
@@ -856,7 +856,7 @@ Počínaje verzí 2002 ověřte, zda aktuální operační systém používá ve
 
 #### <a name="minimum-client-version"></a>Minimální verze klienta
 
-Od verze 2002 ověřte, zda je verze Configuration Manager klienta alespoň zadané verze. Zadejte verzi klienta v následujícím formátu: `5.00.8913.1005`.
+Od verze 2002 ověřte, zda je verze Configuration Manager klienta alespoň zadané verze. Zadejte verzi klienta v následujícím formátu: `5.00.8913.1005` .
 
 #### <a name="language-of-current-os"></a>Jazyk aktuálního operačního systému
 
@@ -1019,7 +1019,7 @@ Vyberte možnost Uložit balíček v jednom z následujících umístění:
 
 - **Pracovní adresář pořadí úkolů**: Toto umístění je také označováno jako mezipaměť pořadí úloh.  
 
-- **Mezipaměť klienta Configuration Manager**: tuto možnost použijte, pokud chcete uložit obsah do mezipaměti klienta. Ve výchozím nastavení je `%WinDir%\ccmcache`tato cesta.  
+- **Mezipaměť klienta Configuration Manager**: tuto možnost použijte, pokud chcete uložit obsah do mezipaměti klienta. Ve výchozím nastavení je tato cesta `%WinDir%\ccmcache` .  
 
 - **Vlastní cesta**: modul pořadí úkolů nejprve stáhne balíček do pracovního adresáře pořadí úkolů. Pak přesune obsah do této cesty, kterou zadáte. Modul pořadí úloh připojuje cestu k ID balíčku.  
 
@@ -1027,7 +1027,7 @@ Vyberte možnost Uložit balíček v jednom z následujících umístění:
 
 Uložte cestu balíčku do vlastní proměnné pořadí úkolů. Pak tuto proměnnou použijte v jiném kroku pořadí úkolů.
 
-Configuration Manager přidá k názvu proměnné číselnou příponu. Například zadáte proměnnou `%MyContent%` jako vlastní proměnná. Je to kořenový adresář, kde pořadí úkolů ukládá veškerý odkazovaný obsah pro tento krok. Tento obsah může obsahovat více balíčků. Když odkazujete na proměnnou, přidejte číselnou příponu. První balíček najdete v tématu `%MyContent01%`. Když v následujících krocích, jako je například **upgrade operačního systému**, provedete ukazatel na `%MyContent02%` proměnnou `%MyContent03%`, použijte nebo, kde číslo odpovídá pořadí, v jakém krok **Stáhnout obsah balíčku** vypíše balíčky.  
+Configuration Manager přidá k názvu proměnné číselnou příponu. Například zadáte proměnnou `%MyContent%` jako vlastní proměnná. Je to kořenový adresář, kde pořadí úkolů ukládá veškerý odkazovaný obsah pro tento krok. Tento obsah může obsahovat více balíčků. Když odkazujete na proměnnou, přidejte číselnou příponu. První balíček najdete v tématu `%MyContent01%` . Když v následujících krocích, jako je například **upgrade operačního systému**, provedete ukazatel na proměnnou, použijte `%MyContent02%` nebo `%MyContent03%` , kde číslo odpovídá pořadí, v jakém krok **Stáhnout obsah balíčku** vypíše balíčky.  
 
 #### <a name="if-a-package-download-fails-continue-downloading-other-packages-in-the-list"></a>Když stahování balíčku selže, pokračovat ve stahování dalších balíčků v seznamu
 
@@ -1530,7 +1530,7 @@ V případě potřeby zadejte nebo vyhledejte organizační jednotku (OU) v zada
 
 #### <a name="enter-the-account-which-has-permission-to-join-the-domain"></a>Zadejte účet, který má oprávnění pro připojení do domény
 
-Vyberte **nastavit** a zadejte uživatelské jméno a heslo pro účet s oprávněním pro připojení k doméně. Zadejte účet ve formátu: `Domain\account`. Další informace o účtu připojení k doméně pořadí úkolů najdete v tématu [účty](../../core/plan-design/hierarchy/accounts.md#task-sequence-domain-join-account).  
+Vyberte **nastavit** a zadejte uživatelské jméno a heslo pro účet s oprávněním pro připojení k doméně. Zadejte účet ve formátu: `Domain\account` . Další informace o účtu připojení k doméně pořadí úkolů najdete v tématu [účty](../../core/plan-design/hierarchy/accounts.md#task-sequence-domain-join-account).  
 
 
 
@@ -1861,13 +1861,19 @@ Pokračuje v obnovování stavu a nastavení uživatele i v případě, že nás
 
 #### <a name="enable-verbose-logging"></a>Zapnout podrobné protokolování
 
-Tuto možnost povolte, pokud chcete v souboru protokolu vygenerovat podrobnější informace. Při obnovování stavu se ve výchozím nastavení pořadí úkolů ve složce protokolu pořadí úkolů generuje **LoadState. log** `%WinDir%\ccm\logs`.  
+Tuto možnost povolte, pokud chcete v souboru protokolu vygenerovat podrobnější informace. Při obnovování stavu se ve výchozím nastavení pořadí úkolů ve složce protokolu pořadí úkolů generuje **LoadState. log** `%WinDir%\ccm\logs` .  
 
 
 
 ## <a name="run-command-line"></a><a name="BKMK_RunCommandLine"></a>Spustit příkazový řádek
 
 Pomocí tohoto kroku spustíte zadaný příkazový řádek.  
+
+Spuštěný příkaz musí splňovat následující kritéria:  
+
+- Neměl by spolupracovat s plochou. Příkaz musí běžet v tichém režimu nebo v bezobslužném režimu.  
+
+- Nesmí iniciovat svoje vlastní restartování. Příkaz musí požádat o restart pomocí standardního kódu pro restartování, 3010. Tím se zajistí, že pořadí úkolů správně zpracuje restart. Pokud příkaz vrátí ukončovací kód 3010, modul pořadí úkolů restartuje počítač. Po restartování bude pořadí úkolů automaticky pokračovat.
 
 Tento krok lze spustit v úplném operačním systému nebo prostředí Windows PE.
 
@@ -1901,7 +1907,7 @@ Na kartě **vlastnosti** tohoto kroku nakonfigurujte nastavení popsaná v této
 
 Určuje příkazový řádek, který pořadí úkolů spouští. Toto pole je vyžadováno. Zadejte přípony názvů souborů, například. vbs a. exe. Zahrňte všechny požadované soubory nastavení a možnosti příkazového řádku.  
 
-Pokud nezadáte příponu názvu souboru, Configuration Manager pokusy. com,. exe a. bat. Pokud má název souboru příponu, která není typu spustitelného souboru, Configuration Manager se pokusí použít místní přidružení. Například pokud je příkazový řádek Readme. gif, Configuration Manager spustí aplikaci určenou v cílovém počítači pro otevírání souborů. gif.  
+Pokud nezadáte příponu názvu souboru, Configuration Manager pokusy. com,. exe a. bat. Pokud má název souboru příponu, která není typu spustitelného souboru, Configuration Manager se pokusí použít místní přidružení. Například pokud je příkazový řádek readme.gif, Configuration Manager spustí aplikaci určenou v cílovém počítači pro otevírání souborů. gif.  
 
 Příklady:  
 
@@ -1910,7 +1916,7 @@ Příklady:
 `cmd.exe /c copy Jan98.dat c:\sales\Jan98.dat`  
 
 > [!NOTE]  
-> Aby bylo možné úspěšně spustit, před akcemi příkazového řádku použijte příkaz **cmd. exe/c** . Mezi tyto akce patří například přesměrování výstupu, potrubí a příkazy kopírování.  
+> Chcete-li úspěšně spustit, před akcemi příkazového řádku pomocí příkazu **cmd.exe/c** . Mezi tyto akce patří například přesměrování výstupu, potrubí a příkazy kopírování.  
 
 #### <a name="output-to-task-sequence-variable"></a>Výstup do proměnné pořadí úkolů
 
@@ -1976,6 +1982,12 @@ Do skriptu zahrňte další ukončovací kódy, které by měl krok vyhodnotit j
 ## <a name="run-powershell-script"></a><a name="BKMK_RunPowerShellScript"></a>Spustit skript prostředí PowerShell
 
 Pomocí tohoto kroku spustíte zadaný skript prostředí Windows PowerShell.  
+
+Skript musí splňovat následující kritéria:  
+
+- Neměl by spolupracovat s plochou. Skript musí běžet v tichém nebo v bezobslužném režimu.  
+
+- Nesmí iniciovat svoje vlastní restartování. Sscript musí požádat o restart pomocí standardního kódu pro restartování, 3010. Tím se zajistí, že pořadí úkolů správně zpracuje restart. Pokud skript vrátí ukončovací kód 3010, modul pořadí úkolů restartuje počítač. Po restartování bude pořadí úkolů automaticky pokračovat.
 
 Tento krok lze spustit v úplném operačním systému nebo prostředí Windows PE. Pokud chcete tento krok spustit v prostředí Windows PE, povolte ve spouštěcí imagi PowerShell. Na kartě **volitelné součásti** ve vlastnostech pro spouštěcí bitovou kopii povolte komponentu WinPE-PowerShell. Další informace o tom, jak změnit spouštěcí image, najdete v tématu [Správa spouštěcích imagí](../get-started/manage-boot-images.md).  
 
@@ -2050,11 +2062,11 @@ Následující příklad obsahuje neplatné parametry. První dvě položky jsou
 `-NoLogo -ExecutionPolicy Unrestricted -File MyScript.ps1 -MyParameter1 MyValue1 -MyParameter2 MyValue2`
 
 <!-- SCCMDocs-pr issue 3561 -->
-Pokud hodnota parametru obsahuje speciální znak, použijte kolem hodnoty jednoduché uvozovky (`'`). Použití dvojitých uvozovek (`"`) může způsobit, že krok pořadí úkolů nesprávně zpracuje parametr.
+Pokud hodnota parametru obsahuje speciální znak, použijte kolem hodnoty jednoduché uvozovky ( `'` ). Použití dvojitých uvozovek ( `"` ) může způsobit, že krok pořadí úkolů nesprávně zpracuje parametr.
 
 Příklad: `-Arg1 '%TSVar1%' -Arg2 '%TSVar2%'`
 
-Počínaje verzí 2002 nastavte tuto vlastnost na proměnnou.<!-- 5690481 --> Pokud například zadáte `%MyScriptVariable%`, když pořadí úkolů spustí skript, přidá hodnotu této vlastní proměnné do příkazového řádku PowerShellu.
+Počínaje verzí 2002 nastavte tuto vlastnost na proměnnou.<!-- 5690481 --> Pokud například zadáte `%MyScriptVariable%` , když pořadí úkolů spustí skript, přidá hodnotu této vlastní proměnné do příkazového řádku PowerShellu.
 
 #### <a name="powershell-execution-policy"></a>Zásady spouštění skriptu PowerShell
 
@@ -2223,7 +2235,7 @@ Chcete-li nastavit dynamickou proměnnou pro použití v pořadí úkolů, přid
 
 - **Značka a model**: vyhodnotit hodnoty pro model a model počítače. Aby se pravidlo vyhodnotilo jako true, musí se jako true vyhodnotit jak hodnota značky, tak hodnota modelu.
 
-    Zadejte hvězdičku (`*`) a otazník (`?`) jako zástupné znaky zástupných karet. Hvězdička odpovídá více znakům a otazník odpovídá jednomu znaku. Například řetězec `DELL*900?` odpovídá `DELL-ABC-9001` a. `DELL9009`  
+    Zadejte hvězdičku ( `*` ) a otazník ( `?` ) jako zástupné znaky zástupných karet. Hvězdička odpovídá více znakům a otazník odpovídá jednomu znaku. Například řetězec `DELL*900?` odpovídá `DELL-ABC-9001` a `DELL9009` .  
 
 - **Proměnná pořadí úloh**: Přidání proměnné, podmínky a hodnoty pořadí úkolů k vyhodnocení. Pravidlo se vyhodnotí jako true, pokud sada hodnot pro proměnnou splňuje zadanou podmínku.  
 
@@ -2282,7 +2294,7 @@ Tuto možnost povolte, pokud chcete maskovat citlivá data uložená v proměnn�
 
 #### <a name="value"></a>Hodnota  
 
-Pořadí úkolů nastaví proměnnou na tuto hodnotu. Nastavte tuto proměnnou pořadí úloh na hodnotu jiné proměnné pořadí úkolů s syntaxí `%varname%`.  
+Pořadí úkolů nastaví proměnnou na tuto hodnotu. Nastavte tuto proměnnou pořadí úloh na hodnotu jiné proměnné pořadí úkolů s syntaxí `%varname%` .  
 
 
 
@@ -2292,7 +2304,7 @@ Pomocí tohoto kroku můžete provést přechod z prostředí Windows PE do nov�
 
 Tento krok zodpovídá za přechod pořadí úloh z Windows PE do úplného operačního systému. Tento krok v systému Windows PE a v plném operačním systému spouští z důvodu tohoto přechodu. Protože se ale přechod spustí v prostředí Windows PE, dá se přidat jenom během části pořadí úkolů v prostředí Windows PE.  
 
-Tento krok nahrazuje proměnné adresáře Sysprep. inf nebo Unattend. XML, například `%WINDIR%` a `%ProgramFiles%`, v instalačním adresáři systému Windows PE. `X:\Windows` Pořadí úkolů ignoruje proměnné určené pomocí těchto proměnných prostředí.  
+Tento krok nahrazuje soubor Sysprep. inf nebo unattend.xml proměnných adresáře, například `%WINDIR%` a `%ProgramFiles%` , v instalačním adresáři systému Windows PE `X:\Windows` . Pořadí úkolů ignoruje proměnné určené pomocí těchto proměnných prostředí.  
 
 Chcete-li přidat tento krok v editoru pořadí úloh, vyberte možnost **Přidat**, vyberte možnost **bitové kopie**a vyberte možnost **nastavit systém Windows a nástroj ConfigMgr**.
 
@@ -2302,7 +2314,7 @@ Tento krok provádí následující akce:
 
 #### <a name="preliminaries-windows-pe"></a>Nezbytné úkony: prostředí Windows PE  
 
-1. Nahraďte proměnné pořadí úkolů v souboru Unattend. XML.  
+1. Nahraďte proměnné pořadí úkolů v souboru unattend.xml.  
 
 2. Stáhněte balíček, který obsahuje klienta Configuration Manager. Přidejte balíček do nasazené bitové kopie.  
 
@@ -2316,7 +2328,7 @@ Tento krok provádí následující akce:
 
     3. Restartujte počítač s nasazeným operačním systémem.  
 
-    4. Zkrácená instalace Windows se spustí pomocí dříve zadaného souboru odpovědí Sysprep. inf nebo Unattend. XML, který má potlačenou veškerou interakci koncového uživatele. Pokud použijete krok **použít nastavení sítě** pro připojení k doméně, pak jsou tyto informace v souboru odpovědí. Zkrácená instalace Windows připojí počítač k doméně.  
+    4. Zkrácená instalace Windows se spustí s dříve zadaným souborem Sysprep. inf nebo unattend.xml odpovědí, který má potlačenou veškerou interakci s koncovým uživatelem. Pokud použijete krok **použít nastavení sítě** pro připojení k doméně, pak jsou tyto informace v souboru odpovědí. Zkrácená instalace Windows připojí počítač k doméně.  
 
 - Instalace ze souboru Setup.exe. Spustí soubor Setup.exe, který se drží typického procesu instalace systému Windows:  
 
@@ -2324,7 +2336,7 @@ Tento krok provádí následující akce:
 
     2. Restartujte nově nasazený operační systém.  
 
-    3. Zkrácená instalace Windows se spustí s dříve zadaným souborem odpovědí Sysprep. inf nebo Unattend. XML, který má potlačené veškeré nastavení uživatelského rozhraní. Pokud použijete krok **použít nastavení sítě** pro připojení k doméně, pak jsou tyto informace v souboru odpovědí. Zkrácená instalace Windows připojí počítač k doméně.  
+    3. Zkrácená instalace Windows se spustí s dříve zadaným souborem Sysprep. inf nebo unattend.xml odpovědí, který má potlačené veškeré nastavení uživatelského rozhraní. Pokud použijete krok **použít nastavení sítě** pro připojení k doméně, pak jsou tyto informace v souboru odpovědí. Zkrácená instalace Windows připojí počítač k doméně.  
 
 #### <a name="set-up-the-configuration-manager-client"></a>Nastavení klienta Configuration Manager  
 
@@ -2375,7 +2387,7 @@ Pokud je k dispozici předprodukční klientský balíček a počítač je člen
 
 Krok pořadí úkolů automaticky určuje přiřazení lokality a výchozí konfiguraci. Pomocí tohoto pole můžete určit jakékoli další vlastnosti instalace, které se mají použít při instalaci klienta. Pokud chcete zadat víc vlastností instalace, oddělte je mezerami.  
 
-Zadejte parametry příkazového řádku, které se mají použít při instalaci klienta. Zadejte `/skipprereq: silverlight.exe` například, aby informoval program CCMSetup. exe, aby nenainstaloval požadavky programu Microsoft Silverlight. Další informace o dostupných parametrech příkazového řádku pro CCMSetup. exe najdete v tématu [informace o vlastnostech instalace klienta](../../core/clients/deploy/about-client-installation-properties.md).  
+Zadejte parametry příkazového řádku, které se mají použít při instalaci klienta. Zadejte například, `/skipprereq: silverlight.exe` abyste informovali CCMSetup.exe, že nechcete instalovat požadované součásti Microsoft Silverlightu. Další informace o dostupných možnostech příkazového řádku pro CCMSetup.exe najdete v tématu [informace o vlastnostech instalace klienta](../../core/clients/deploy/about-client-installation-properties.md).  
 
 ### <a name="options-for-setup-windows-and-configmgr"></a>Možnosti pro nastavení systému Windows a nástroje ConfigMgr
 
@@ -2424,9 +2436,9 @@ Tuto možnost vyberte, pokud chcete zadat balíček s upgradem operačního syst
 
 #### <a name="source-path"></a>Zdrojová cesta
 
-Určuje místní nebo síťovou cestu k médiu Windows 10, které instalační program systému Windows používá. Toto nastavení odpovídá možnosti `/InstallFrom`příkazového řádku Instalační program systému Windows.
+Určuje místní nebo síťovou cestu k médiu Windows 10, které instalační program systému Windows používá. Toto nastavení odpovídá možnosti příkazového řádku instalační program systému Windows `/InstallFrom` .
 
-Můžete také zadat proměnnou, například `%MyContentPath%` nebo. `%DPC01%` Pokud pro zdrojovou cestu použijete proměnnou, nastavte její hodnotu dříve v pořadí úkolů. Můžete například použít krok [Stáhnout obsah balíčku](#BKMK_DownloadPackageContent) a zadat proměnnou pro umístění balíčku upgradu operačního systému. Pak použijte tuto proměnnou pro zdrojovou cestu pro tento krok.  
+Můžete také zadat proměnnou, například `%MyContentPath%` nebo `%DPC01%` . Pokud pro zdrojovou cestu použijete proměnnou, nastavte její hodnotu dříve v pořadí úkolů. Můžete například použít krok [Stáhnout obsah balíčku](#BKMK_DownloadPackageContent) a zadat proměnnou pro umístění balíčku upgradu operačního systému. Pak použijte tuto proměnnou pro zdrojovou cestu pro tento krok.  
 
 #### <a name="edition"></a>Edice
 
@@ -2438,7 +2450,7 @@ Zadejte kód Product Key, který se má použít pro proces upgradu.
 
 #### <a name="provide-the-following-driver-content-to-windows-setup-during-upgrade"></a>Při upgradu zadejte do instalačního programu systému Windows následující obsah ovladače
 
-Během procesu upgradu přidejte do cílového počítače ovladače. Ovladače musí být kompatibilní s Windows 10. Toto nastavení odpovídá možnosti `/InstallDriver`příkazového řádku Instalační program systému Windows. Další informace najdete v tématu [instalační program systému Windows možnosti příkazového řádku](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options#installdrivers).
+Během procesu upgradu přidejte do cílového počítače ovladače. Ovladače musí být kompatibilní s Windows 10. Toto nastavení odpovídá možnosti příkazového řádku instalační program systému Windows `/InstallDriver` . Další informace najdete v tématu [instalační program systému Windows možnosti příkazového řádku](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options#installdrivers).
 
 Zadejte jednu z následujících možností:  
 
@@ -2459,7 +2471,7 @@ Zadejte počet minut, po kterém Configuration Manager tento krok neprojde. Tato
 
 #### <a name="perform-windows-setup-compatibility-scan-without-starting-upgrade"></a>Provést kontrolu kompatibility instalačního programu systému Windows bez spuštění upgradu
 
-Proveďte kontrolu kompatibility instalační program systému Windows bez spuštění procesu upgradu. Toto nastavení odpovídá možnosti `/Compat ScanOnly`příkazového řádku Instalační program systému Windows. Pomocí této možnosti nasaďte celý balíček s upgradem operačního systému.
+Proveďte kontrolu kompatibility instalační program systému Windows bez spuštění procesu upgradu. Toto nastavení odpovídá možnosti příkazového řádku instalační program systému Windows `/Compat ScanOnly` . Pomocí této možnosti nasaďte celý balíček s upgradem operačního systému.
 
 <!--SCCMDocs-pr issue 2812-->
 Když tuto možnost povolíte, tento krok nepřepne klienta Configuration Manager do režimu zřizování. Instalační program systému Windows běží tiše na pozadí a klient bude i nadále fungovat jako normální. Další informace najdete v tématu [režim zřizování](provisioning-mode.md).
@@ -2478,11 +2490,11 @@ Další informace o tomto parametru najdete v tématu [instalační program syst
 
 #### <a name="ignore-any-dismissible-compatibility-messages"></a>Ignorovat všechny zprávy o kompatibilitě, které jde přeskočit
 
-Určuje, že instalační program dokončí instalaci a ignoruje všechny zprávy o kompatibilitě přeskočit. Toto nastavení odpovídá možnosti `/Compat IgnoreWarning`příkazového řádku Instalační program systému Windows.  
+Určuje, že instalační program dokončí instalaci a ignoruje všechny zprávy o kompatibilitě přeskočit. Toto nastavení odpovídá možnosti příkazového řádku instalační program systému Windows `/Compat IgnoreWarning` .  
 
 #### <a name="dynamically-update-windows-setup-with-windows-update"></a>Dynamicky aktualizovat instalační program Windows přes Windows Update
 
-Povolit instalačnímu programu provádět dynamické operace aktualizace, jako je hledání, stahování a instalace aktualizací. Toto nastavení odpovídá možnosti `/DynamicUpdate`příkazového řádku Instalační program systému Windows. Toto nastavení není kompatibilní s Configuration Managermi aktualizacemi softwaru. Tuto možnost povolte, když spravujete aktualizace se samostatnými Windows Server Update Services (WSUS) nebo web Windows Update pro firmy.  
+Povolit instalačnímu programu provádět dynamické operace aktualizace, jako je hledání, stahování a instalace aktualizací. Toto nastavení odpovídá možnosti příkazového řádku instalační program systému Windows `/DynamicUpdate` . Toto nastavení není kompatibilní s Configuration Managermi aktualizacemi softwaru. Tuto možnost povolte, když spravujete aktualizace se samostatnými Windows Server Update Services (WSUS) nebo web Windows Update pro firmy.  
 
 #### <a name="override-policy-and-use-default-microsoft-update"></a>Přepsat zásady a použít výchozí Microsoft Update
 
