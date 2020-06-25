@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/23/2020
+ms.date: 06/24/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 87cf4d9fc21b951386c496e49fe482810febcda3
-ms.sourcegitcommit: 397ec824f1368dcf06c3870c89f52347852062bd
+ms.openlocfilehash: 3ddfb0b2d7c8fa0b185416fc493bde5da8f0a475
+ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85263950"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353645"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
@@ -59,6 +59,9 @@ Podívejte se, co je nového v jednom týdnu v Microsoft Intune v [centru pro sp
 ## <a name="week-of-june-22-2020"></a>Týden od 22. června 2020
 
 ### <a name="monitor-and-troubleshoot"></a>Monitorování a odstraňování potíží
+
+#### <a name="use-endpoint-analytics-to-improve-user-productivity-and-reduce-it-support-costs---5653063---"></a>Využijte službu Endpoint Analytics ke zvýšení produktivity uživatelů a snížení nákladů na podporu.<!-- 5653063 --> 
+V průběhu příštího týdne bude tato funkce zahrnuta. Služba Endpoint Analytics je cílem zlepšit produktivitu uživatelů a snížit náklady na podporu tím, že poskytuje přehled o prostředí uživatele. Přehledy umožňují optimalizovat činnost koncového uživatele pomocí proaktivní podpory a detekovat regrese uživatelského prostředí tím, že vyhodnotí dopad změn konfigurace na uživatele. Další informace najdete v tématu Služba [Endpoint Analytics ve verzi Preview](https://aka.ms/uea).
 
 #### <a name="proactively-remediate-end-user-device-issues-using-script-packages---5933328---"></a>Proaktivně napravit problémy zařízení koncových uživatelů pomocí balíčků skriptů<!-- 5933328 -->
 Můžete vytvořit a spustit balíčky skriptů na zařízeních koncových uživatelů, abyste proaktivně našli a opravili hlavní problémy podpory ve vaší organizaci. Nasazení balíčků skriptů vám pomůže omezit volání podpory. Vyberte si vytvořit vlastní balíčky skriptů nebo nasaďte jeden ze skriptovacích balíčků, které jsme napsali a použili v našem prostředí, aby se snížily lístky podpory. Intune umožňuje zobrazit stav nasazených balíčků skriptu a monitorovat výsledky detekce a nápravy. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **sestavy**  >  **Endpoint analytics**  >  **proaktivní nápravy služby**Endpoint Analytics. Další informace najdete v tématu [proaktivní nápravy](https://aka.ms/uea_prs).

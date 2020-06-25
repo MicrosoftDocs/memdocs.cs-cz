@@ -5,7 +5,7 @@ keywords: co je Intune
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 10/14/2019
+ms.date: 06/23/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -17,16 +17,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3a10709972b0387681d00c8fe848079807c6293a
-ms.sourcegitcommit: 4381afb515c06f078149bd52528d1f24b63a2df9
+ms.openlocfilehash: 28a5bc7a1ee00e9595c50d274605af1b33c1ea90
+ms.sourcegitcommit: 411e9d93cbafc7585f5a0f9a05097fe589de804f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82538098"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85332805"
 ---
 # <a name="microsoft-intune-is-an-mdm-and-mam-provider-for-your-devices"></a>Microsoft Intune je poskytovatel MDM a MAM pro vaše zařízení.
 
-Microsoft Intune je cloudová služba, která se zaměřuje na správu mobilních zařízení (MDM) a správu mobilních aplikací (MAM). Intune je součástí [sady Microsoft Enterprise mobility + Securitye (EMS)](https://www.microsoft.com/microsoft-365/enterprise-mobility-security)a umožňuje uživatelům zvýšit produktivitu při zachování chráněných dat vaší organizace. Integruje se s dalšími službami, včetně Microsoft 365 a Azure Active Directory (Azure AD) k řízení, kdo má přístup a k čemu mají přístup, a Azure Information Protection pro ochranu dat. Když ji použijete s Microsoft 365, můžete pracovníkům umožnit, aby byli produktivní na všech svých zařízeních, a současně chránit informace vaší organizace.
+Microsoft Intune je cloudová služba, která se zaměřuje na správu mobilních zařízení (MDM) a správu mobilních aplikací (MAM). Můžete řídit, jak se používají zařízení vaší organizace, včetně mobilních telefonů, tabletů a notebooků. Můžete taky nakonfigurovat konkrétní zásady pro řízení aplikací. Můžete například zabránit posílání e-mailů lidem mimo vaši organizaci. Intune také umožňuje lidem ve vaší organizaci používat jejich osobní zařízení pro školní nebo pracovní práci. V osobních zařízeních Intune pomáhá zajistit, aby data vaší organizace zůstala chráněná a mohla izolovat data organizace od osobních dat.
+
+Intune je součástí [sady Microsoft Enterprise mobility + Securitye (EMS)](https://www.microsoft.com/microsoft-365/enterprise-mobility-security). Intune se integruje s Azure Active Directory (Azure AD), která řídí, kdo má přístup a k čemu mají přístup. Integruje se také s Azure Information Protection pro ochranu dat. Dá se použít s Microsoft 365ovou sadou produktů. Do zařízení můžete například nasadit Microsoft teams, OneNote a jiné aplikace Microsoft 365. Tato funkce umožňuje lidem ve vaší organizaci zvýšit produktivitu na všech svých zařízeních a současně chránit informace vaší organizace pomocí zásad, které vytvoříte.
 
 [![Obrázek architektury Intune](./media/what-is-intune/intunearch_sm.png )](./media/what-is-intune/intunearchitecture.svg#lightbox)
 

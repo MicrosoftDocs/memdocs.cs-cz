@@ -4,7 +4,7 @@ description: Součástí Microsoft 365 Enterprise je Microsoft Intune. Podívejt
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/28/2020
+ms.date: 06/24/2020
 ms.topic: overview
 audience: microsoft-business
 ms.service: microsoft-intune
@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: microsoft-intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 540faaca71d3694b95d32a24c947a977989a3223
-ms.sourcegitcommit: 7b8921d3ea6a751de67315771d68e2d2750fa36f
+ms.openlocfilehash: 0dedb4746c40ff1cc2f5a2f166b1e0277997cb88
+ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84223624"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353611"
 ---
 # <a name="device-management-overview"></a>Přehled správy zařízení
 
-Hlavní úlohou každého správce je ochrana a zabezpečení prostředků a dat příslušné organizace. Tato úloha je *Správa zařízení*. Uživatelé mají mnoho zařízení, kde otevřou a sdílejí osobní soubory, navštíví weby a instalují aplikace a hry. Tito uživatelé jsou také zaměstnanci a studenti. Chtějí používat svoje zařízení pro přístup k pracovním a školním prostředkům, jako je e-mail a OneNote.
+Klíčovým úkolem každého správce je chránit a zabezpečovat prostředky a data organizace na zařízeních uživatelů v jejich organizaci. Tato úloha je **Správa zařízení**. Uživatelé přijímají a odesílají e-maily z osobních účtů, procházejí weby z domova a z restaurací a instalují aplikace a hry. Tito uživatelé jsou také zaměstnanci a studenti. Na svých zařízeních chtějí přistupovat k pracovním a školním prostředkům, jako je e-mail a OneNote, a přistupovat k nim rychle. Jako správce je vaším cílem chránit tyto prostředky a poskytovat uživatelům snadný přístup pro celou řadu zařízení, a to vše současně.
 
 Správa zařízení umožňuje organizacím chránit a zabezpečovat své prostředky a data a z různých zařízení.
 
@@ -104,7 +104,7 @@ V centru pro správu správy zařízení můžete:
 - [Správa aplikací](../apps/app-management.md)  
 - [E-knihy pro iOS](../apps/vpp-ebooks-ios.md)  
 - [Instalace konektoru Exchange On-Premises Connector](../protect/exchange-connector-install.md)  
-- [Spravovat role](role-based-access-control.md)  
+- [Správa rolí](role-based-access-control.md)  
 - Správa aktualizací softwaru
   - [Správa aktualizací Windows 10](../protect/windows-update-for-business-configure.md)  
   - [Správa aktualizací pro iOS/iPadOS](../protect/software-updates-ios.md)  

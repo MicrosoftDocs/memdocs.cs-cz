@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5cb6b4df9e3834ce447b176b5dfab158deb0d543
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 8fe0b1748a40858bca55cc66b250c96725bfd9f1
+ms.sourcegitcommit: 411e9d93cbafc7585f5a0f9a05097fe589de804f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85094076"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85332877"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-automated-device-enrollment"></a>Automatická registrace zařízení se systémem iOS/iPadOS pomocí Automatické registrace zařízení společnosti Apple
 
@@ -69,7 +69,7 @@ Podpora pro zařízení s nekontrolovaným ADE je v iOS/iPadOS 11 zastaralá. V 
 - Maximální počet profilů zápisu na token: 1 000  
 - Maximální počet automatizovaných zařízení pro zápis zařízení na profil: bez omezení (v rámci maximálního počtu zařízení na token)
 - Maximální počet automatizovaných tokenů registrace zařízení na účet Intune: 2 000
-- Maximální počet automatizovaných zařízení pro zápis zařízení na token: 75 000
+- Maximální počet automatizovaných zařízení pro zápis zařízení na token: limit první synchronizace je 75000-80000 zařízení. Intune bude při každém přidání dalších zařízení 80 000 dál synchronizovat s ABM nebo ASM a každých 12 hodin vrácení se změnami. Ruční synchronizace taky přidá další další zařízení 80 000. Synchronizace budou pořád k dispozici a zařízení budou dál synchronizovaná z ABM/ASM přes Intune v dávkách zařízení 75000-80000. 
 
 ## <a name="get-an-apple-ade-token"></a>Získání tokenu Apple ADE
 

@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/17/2020
+ms.date: 06/24/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 99facc87d068239962ab0d40874aa081f5e19189
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 1f2a6955a430427fe3f4e2791da6bbaecdd90523
+ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989686"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353563"
 ---
 # <a name="use-filevault-disk-encryption-for--macos-with-intune"></a>Použití šifrování disku trezoru pro macOS s Intune
 
@@ -30,18 +30,18 @@ Intune podporuje šifrování disku trezoru macOS. Trezor úložišť je program
 
 Pro konfiguraci trezoru úložišť na spravovaných zařízeních použijte jeden z následujících typů zásad:
 
-- **[Zásady zabezpečení koncového bodu pro MacOS úložiště](#create-an-endpoint-security-policy-for-filevault)**. Profil trezoru souborů v *Endpoint Security* je zaměřený na skupinu nastavení, která je vyhrazená pro konfiguraci trezoru souborů.
+- **[Zásady zabezpečení koncového bodu pro MacOS úložiště](#create-endpoint-security-policy-for-filevault)**. Profil trezoru souborů v *Endpoint Security* je zaměřený na skupinu nastavení, která je vyhrazená pro konfiguraci trezoru souborů.
 
   Podívejte se na [Nastavení trezoru úložišť, která jsou k dispozici v části profily pro zásady šifrování disku](../protect/endpoint-security-disk-encryption-profile-settings.md).
 
-- **[Konfigurační profil zařízení pro službu Endpoint Protection pro MacOS trezor](#create-an-endpoint-security-policy-for-filevault)**. Nastavení trezoru úložiště je jednou z dostupných kategorií nastavení pro macOS Endpoint Protection. Další informace o použití profilu konfigurace zařízení najdete v tématu [Vytvoření profilu zařízení v Inunte](../configuration/device-profile-create.md).
+- **[Konfigurační profil zařízení pro službu Endpoint Protection pro MacOS trezor](#create-endpoint-security-policy-for-filevault)**. Nastavení trezoru úložiště je jednou z dostupných kategorií nastavení pro macOS Endpoint Protection. Další informace o použití profilu konfigurace zařízení najdete v tématu [Vytvoření profilu zařízení v Inunte](../configuration/device-profile-create.md).
 
   Zobrazit [Nastavení trezoru úložišť, která jsou k dispozici v profilech Endpoint Protection pro zásady konfigurace zařízení](../protect/endpoint-protection-macos.md#filevault).
 
 Informace o správě nástroje BitLocker pro Windows 10 najdete v tématu [Správa zásad BitLockeru](../protect/encrypt-devices.md).
 
 > [!TIP]
-> [Zpráva o šifrování](encryption-monitor.md) , která obsahuje podrobnosti o stavu šifrování zařízení ve všech spravovaných zařízeních.
+> Intune poskytuje integrovanou [sestavu šifrování](encryption-monitor.md) , která obsahuje podrobnosti o stavu šifrování zařízení ve všech spravovaných zařízeních.
 
 Když vytvoříte zásadu pro šifrování zařízení pomocí trezoru, zásada se použije na zařízení ve dvou fázích. Nejdřív je zařízení připravené k tomu, aby Intune mohl načíst a zálohovat obnovovací klíč. Tato akce se označuje jako v úschově. Po uloží klíče se může šifrování disku spustit.
 
@@ -60,17 +60,15 @@ Níže jsou uvedené oprávnění trezoru úložišť, která jsou součástí k
 - **Otočit klíč trezoru**
   - Operátor helpdesku
 
-## <a name="create-and-deploy-policy"></a>Vytvoření a nasazení zásad
-
-### <a name="create-an-endpoint-security-policy-for-filevault"></a>Vytvoření zásady zabezpečení koncového bodu pro trezor úložiště
+## <a name="create-endpoint-security-policy-for-filevault"></a>Vytvořit zásady zabezpečení Endpoint pro trezor úložiště
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Vyberte **Endpoint Security**  >  **šifrování disku**  >  **vytvořit zásadu**.
 
 3. Na stránce **základy** zadejte následující vlastnosti a pak klikněte na tlačítko **Další**.
-   1. **Platforma**: MacOS
-   2. **Profil**: trezor
+   - **Platforma**: MacOS
+   - **Profil**: trezor
 
    ![Vyberte profil trezoru úložiště.](./media/encrypt-devices-filevault/select-macos-filevault-es.png)
 
@@ -94,33 +92,49 @@ Vyberte **Další**.
 
 8. Po dokončení na stránce **Revize + vytvořit** klikněte na **vytvořit**. Nový profil se zobrazí v seznamu, když vyberete typ zásady pro profil, který jste vytvořili.
 
-### <a name="create-a-device-configuration-policy-for-filevault"></a>Vytvoření zásady konfigurace zařízení pro trezor
+## <a name="create-device-configuration-policy-for-filevault"></a>Vytvoření zásad konfigurace zařízení pro trezor úložiště
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Vyberte **Devices**  >  **Konfigurace zařízení profily konfigurace**  >  **vytvořit profil**.
 
-3. Nastavte následující možnosti:
-   1. **Platforma**: MacOS
-   2. **Profil**: Endpoint Protection
+3. Na stránce **vytvořit profil** nastavte následující možnosti a pak klikněte na **vytvořit**:
+   - **Platforma**: MacOS
+   - **Profil**: Endpoint Protection
 
    ![Vyberte profil trezoru úložiště.](./media/encrypt-devices-filevault/select-macos-filevault-dc.png)
 
-4. Vyberte **Nastavení**  >  **trezoru úložišť**.
+4. Na stránce **základy** zadejte následující vlastnosti:
 
-   ![Nastavení trezoru úložišť](./media/encrypt-devices-filevault/filevault-settings.png)
+   - **Název**: zadejte popisný název zásady. Své zásady pojmenujte, abyste je později mohli snadno identifikovat. Dobrý název zásad může například zahrnovat typ profilu a platformu.
 
-5. V případě *trezoru úložišť*vyberte **Povolit**.
+   - **Popis**: zadejte popis zásady. Toto nastavení není povinné, ale doporučujeme ho zadat.
 
-6. Pro *typ obnovovacího klíče*se podporuje jenom **osobní klíč** .
+5. Na stránce **nastavení konfigurace** vyberte **trezor úložiště** a rozbalte dostupná nastavení:
 
-   Zvažte přidání zprávy, která pomůže uživatelům získat obnovovací klíč pro zařízení. Tato informace může být užitečná pro uživatele, když použijete nastavení pro rotaci klíče pro obnovení, což může pravidelně automaticky generovat nový obnovovací klíč pro zařízení.
+   > [!div class="mx-imgBorder"]
+   > ![Nastavení trezoru úložišť](./media/encrypt-devices-filevault/filevault-settings.png)
 
-   Příklad: Chcete-li načíst ztracený nebo nedávno otočený obnovovací klíč, přihlaste se k webu Portál společnosti Intune z libovolného zařízení. Na portálu klikněte na *zařízení* a vyberte zařízení s povoleným trezorem úložiště a pak vyberte *získat obnovovací klíč*. Zobrazí se aktuální obnovovací klíč.
+6. Nakonfigurujte tahle nastavení:
+  
+   - V případě *Povolení trezoru úložišť*vyberte **Ano**.
 
-7. Nakonfigurujte zbývající [Nastavení trezoru úložišť](endpoint-protection-macos.md#filevault) tak, aby splňovalo vaše obchodní potřeby, a pak vyberte **OK**.
+   - Jako *typ obnovovacího klíče*vyberte **osobní klíč**.
 
-8. Dokončete konfiguraci dalšího nastavení a potom profil uložte.
+   - V *části umístění v úschově popis osobního obnovovacího klíče*přidejte zprávu, která uživatelům pomůže získat obnovovací klíč pro svoje zařízení. Tato informace může být užitečná pro uživatele, když použijete nastavení pro rotaci klíče pro obnovení, což může pravidelně automaticky generovat nový obnovovací klíč pro zařízení.
+
+     Příklad: Chcete-li načíst ztracený nebo nedávno otočený obnovovací klíč, přihlaste se k webu Portál společnosti Intune z libovolného zařízení. Na portálu klikněte na *zařízení* a vyberte zařízení s povoleným trezorem úložiště a pak vyberte *získat obnovovací klíč*. Zobrazí se aktuální obnovovací klíč.
+
+   Nakonfigurujte zbývající [Nastavení trezoru úložišť](endpoint-protection-macos.md#filevault) tak, aby splňovalo vaše obchodní potřeby, a pak vyberte **Další**.
+
+7. Na stránce **obor (značky)** zvolte **Vybrat značky oboru** a otevřete tak podokno vybrat značky, abyste přiřadili značky oboru k profilu.
+
+   Pokračujte výběrem tlačítka **Next** (Další).
+
+8. Na stránce **přiřazení** vyberte skupiny, které získají tento profil. Další informace o přiřazování profilů najdete v tématu Přiřazení profilů uživatelů a zařízení.
+Vyberte **Další**.
+
+9. Po dokončení na stránce **Revize + vytvořit** klikněte na **vytvořit**. Nový profil se zobrazí v seznamu, když vyberete typ zásady pro profil, který jste vytvořili.
 
 ## <a name="manage-filevault"></a>Správa trezoru úložišť
 

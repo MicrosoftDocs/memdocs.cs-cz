@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: b988e4ddeb306c7da290c87e8a32fa0571627257
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: a8eeb8263e337fa7427818c05f183fdea3c9dbea
+ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431309"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353628"
 ---
 # <a name="disk-encryption-policy-for-endpoint-security-in-intune"></a>Zásady šifrování disku pro zabezpečení koncového bodu v Intune
 
@@ -64,5 +64,5 @@ Po nasazení zásad pro šifrování disku zařízení si přečtěte následuj�
 
 ## <a name="next-steps"></a>Další kroky
 
-- [Vytvoření profilu trezoru úložiště](../protect/encrypt-devices-filevault.md#create-an-endpoint-security-policy-for-filevault)
+- [Vytvoření profilu trezoru úložiště](../protect/encrypt-devices-filevault.md#create-endpoint-security-policy-for-filevault)
 - [Postup vytvoření profilu nástroje BitLocker](../protect/encrypt-devices.md#create-an-endpoint-security-policy-for-bitlocker)

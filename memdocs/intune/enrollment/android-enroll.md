@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a0739b27d5b2b6bb21809b2a9f109c894765ea7e
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 17f1d045d89df3ad5bb37d85957e872ec6692b7e
+ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988557"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353492"
 ---
 # <a name="enroll-android-devices"></a>Registrace zařízení s Androidem
 
@@ -39,6 +39,8 @@ Jako správce Intune můžete zařízení s Androidem registrovat následující
 ## <a name="prerequisites"></a>Požadavky
 
 Při přípravě na správu mobilních zařízení musíte nastavit autoritu pro správu mobilních zařízení (MDM) na **Microsoft Intune**. Pokyny k tomu najdete v článku [Nastavení autority MDM](../fundamentals/mdm-authority-set.md). Tato možnost se nastavuje jenom jednou při prvním nastavování Intune pro správu mobilních zařízení.
+
+V případě Androidu Enterprise se podívejte na následující článek podpory od společnosti Google a ujistěte se, že je Android Enterprise k dispozici ve vaší zemi nebo oblasti:https://support.google.com/work/android/answer/6270910
 
 Pro zařízení vyráběná technologiemi Zebra může být potřeba udělit Portál společnosti dodatečná oprávnění v závislosti na možnostech konkrétního zařízení. [Rozšíření mobility na zařízeních Zebra](../configuration/android-zebra-mx-overview.md) obsahují další podrobnosti.
 

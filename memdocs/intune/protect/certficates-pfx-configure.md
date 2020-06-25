@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2694897e0a9e0ebf0744615e65d76f29416811d0
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 609f7209d79acd944d141930f2287b5572a51c89
+ms.sourcegitcommit: 411e9d93cbafc7585f5a0f9a05097fe589de804f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990400"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85332838"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>Konfigurace a používání certifikátů PKCS pomocí Intune
 
@@ -57,7 +57,7 @@ Pokud chcete používat certifikáty PKCS s Intune, musíte mít následující 
   Je třeba mít vyexportovanou kopii kořenového certifikátu z vaší certifikační autority organizace.
 
 - **Microsoft Intune Certificate Connector** (označovaný také jako *konektor pro NDES Certificate Connector*):  
-  Na portálu Intune přejděte na **Konfigurace zařízení**  >  **konektory certifikátů**  >  **Přidat**a postupujte podle *pokynů k instalaci konektoru pro PKCS #12*. Pomocí odkazu ke stažení na portálu začněte stahovat instalační program konektoru Certificate Connector **NDESConnectorSetup. exe**.  
+  Na portálu Intune přejděte na **Konfigurace zařízení**  >  **konektory certifikátů**  >  **Přidat**a postupujte podle *pokynů k instalaci konektoru pro PKCS #12*. Pomocí odkazu ke stažení na portálu začněte stahovat instalační program konektoru Certificate **NDESConnectorSetup.exe**.  
 
   Intune podporuje až 100 instancí tohoto konektoru na každého tenanta. Každá instance připojení musí být na samostatném Windows serveru. Instanci tohoto konektoru můžete nainstalovat na stejný server jako instanci konektoru certifikátů PFX pro Microsoft Intune. Když použijete více konektorů, infrastruktura konektoru podporuje vysokou dostupnost a vyrovnávání zatížení, protože kterákoli dostupná instance konektoru může zpracovávat žádosti o certifikát PKCS. 
 
@@ -66,7 +66,7 @@ Pokud chcete používat certifikáty PKCS s Intune, musíte mít následující 
   Microsoft Intune Certificate Connector podporuje také režim FIPS (Federal Information Processing Standard). Režim FIPS není povinný, ale pokud ho aktivujete, můžete vydávat a odvolávat certifikáty.
 
 - **Konektor certifikátu PFX pro Microsoft Intune**:  
-  Pokud plánujete používat e-mailové šifrování S/MIME, Stáhněte si pomocí portálu Intune *Certificate Connector* , který podporuje import certifikátů PFX.  Přejděte na **Konfigurace zařízení**  >  **konektory certifikátů**  >  **Přidat**a postupujte podle *pokynů k instalaci konektoru pro importované certifikáty PFX*. Pomocí odkazu ke stažení na portálu začněte stahovat instalační program **PfxCertificateConnectorBootstrapper. exe**.
+  Pokud plánujete používat e-mailové šifrování S/MIME, Stáhněte si pomocí portálu Intune *Certificate Connector* , který podporuje import certifikátů PFX.  Přejděte na **Konfigurace zařízení**  >  **konektory certifikátů**  >  **Přidat**a postupujte podle *pokynů k instalaci konektoru pro importované certifikáty PFX*. Pomocí odkazu ke stažení na portálu spusťte stahování instalačního **PfxCertificateConnectorBootstrapper.exe**.
 
   Každý tenant Intune podporuje jednu instanci tohoto konektoru. Tento konektor můžete nainstalovat na stejný server jako instanci konektoru Microsoft Intune Certificate Connector.
 
@@ -344,7 +344,7 @@ Aktualizace pro dvě konektory certifikátů jsou vydávány pravidelně. Když 
   Změny v této verzi:  
   - Interval dotazování konektoru se zkracuje z 5 minut na 30 sekund.
 
-### <a name="april-2-2019"></a>2. dubna 2019
+### <a name="april-2-2019"></a>2\. dubna 2019
 
 - **Intune Certificate Connector – verze 6.1904.1.0**  
   Změny v této verzi:  
@@ -365,3 +365,5 @@ Aktualizace pro dvě konektory certifikátů jsou vydávány pravidelně. Když 
 Profil je vytvořený, ale zatím se nepoužívá. Dále [Přiřaďte profil](../configuration/device-profile-assign.md) a [sledujte jeho stav](../configuration/device-profile-monitor.md).
 
 [Použijte SCEP pro certifikáty](certificates-scep-configure.md)nebo [vydejte certifikáty PKCS z webové služby správce infrastruktury veřejných klíčů Symantec](certificates-digicert-configure.md).
+
+[Řešení potíží s profily certifikátů PKCS](../protect/troubleshoot-pkcs-certificate-profiles.md)
