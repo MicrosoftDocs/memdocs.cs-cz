@@ -75,3 +75,6 @@
                 - name: Připojení tenanta
                   tocHref: /mem/configmgr/tenant-attach/
                   topicHref: /mem/configmgr/tenant-attach/
+            - name: Analýza koncového bodu
+              tocHref: /mem/analytics/
+              topicHref: /mem/analytics/

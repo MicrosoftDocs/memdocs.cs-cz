@@ -258,6 +258,8 @@
               href: troubleshoot-scep-certificate-delivery.md
             - name: Vytváření sestav pro nasazování certifikátů
               href: troubleshoot-scep-certificate-reporting.md
+        - name: Řešení potíží s profily certifikátů PKCS
+          href: troubleshoot-pkcs-certificate-profiles.md
         - name: Řešení problémů s konektorem Exchange
           items:
             - name: Řešení problémů s konektorem Exchange
