@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 41b85299057f172fec224873607509aaaec60024
-ms.sourcegitcommit: c7afcc3a2232573091c8f36d295a803595708b6c
+ms.openlocfilehash: 5d23eaeee839122bad46cd9619a790b9ca6332a6
+ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84977236"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85383253"
 ---
 # <a name="manage-collaboration-experiences-using-office-for-ios-and-android-with-microsoft-intune"></a>Spravujte prostředí pro spolupráci pomocí Office pro iOS a Android s Microsoft Intune
 
@@ -108,7 +108,13 @@ Tato nastavení se dají nasadit do aplikace bez ohledu na stav registrace zař�
 
 ### <a name="manage-file-transfers"></a>Správa přenosů souborů
 
-Ve výchozím nastavení sada Office umožňuje uživatelům sdílet soubory s okolními uživateli a přenášet soubory do stolních systémů.
+Ve výchozím nastavení poskytuje Office pro iOS a Android uživatelům sdílení obsahu pomocí různých mechanismů:
+
+- Pokud je soubor hostovaný na OneDrivu nebo SharePointu, můžou uživatelé iniciovat žádost o sdílení přímo v rámci souboru.
+- Uživatelé mohou přenášet soubory do stolních systémů pomocí akce **přenést soubory** .
+- Uživatelé můžou sdílet soubory s okolními mobilními zařízeními pomocí akce **sdílet okolní** .
+
+**Soubory pro přenos** a **sdílení okolních** akcí fungují jenom s médii, místními soubory a soubory, které nejsou chráněné zásadami ochrany aplikací. 
 
 |    Klíč    |    Hodnota    |
 |-------------------------------------------------------------------|-------------|

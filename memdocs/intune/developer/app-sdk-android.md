@@ -15,14 +15,14 @@ ms.assetid: 0100e1b5-5edd-4541-95f1-aec301fb96af
 ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-classic
+ms.custom: intune-classic, has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ef5f423b6ea33e4eeb77b8173cfc6355ae7daf71
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 163a0d231192277f27c69d7bcf983e817393d526
+ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093031"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85383117"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Microsoft Intune App SDK pro Android – Příručka pro vývojáře
 
@@ -178,11 +178,11 @@ Pokud je odpověď na obě otázky Ano, musíte danou knihovnu do `includeExtern
 
 | Scénář | Zahrnout ano či ne? |
 |--|--|
-| Do aplikace zahrnete prohlížeč PDF a když se uživatelé pokusí zobrazit PDF, použijete v aplikaci prohlížeč `Activity`. | Ano |
-| Do aplikace zahrnete knihovnu HTTP za účelem rozšířeného webového výkonu. | Ne |
-| Zahrnete knihovnu, jako je React Native, která obsahuje třídy odvozené z `Activity`, `Application` a `Fragment`, a v aplikaci tyto třídy použijete nebo dále odvodíte. | Ano |
-| Zahrnete knihovnu, jako je React Native, která obsahuje třídy odvozené z `Activity`, `Application` a `Fragment`, ale použijete pouze statické pomocné rutiny nebo nástrojové třídy. | Ne |
-| Zahrnete knihovnu, která obsahuje třídy odvozené z `TextView`, a v aplikaci tyto třídy použijete nebo dále odvodíte. | Ano |
+| Do aplikace zahrnete prohlížeč PDF a když se uživatelé pokusí zobrazit PDF, použijete v aplikaci prohlížeč `Activity`. | Yes |
+| Do aplikace zahrnete knihovnu HTTP za účelem rozšířeného webového výkonu. | No |
+| Zahrnete knihovnu, jako je React Native, která obsahuje třídy odvozené z `Activity`, `Application` a `Fragment`, a v aplikaci tyto třídy použijete nebo dále odvodíte. | Yes |
+| Zahrnete knihovnu, jako je React Native, která obsahuje třídy odvozené z `Activity`, `Application` a `Fragment`, ale použijete pouze statické pomocné rutiny nebo nástrojové třídy. | No |
+| Zahrnete knihovnu, která obsahuje třídy odvozené z `TextView`, a v aplikaci tyto třídy použijete nebo dále odvodíte. | Yes |
 
 #### <a name="reporting"></a>Generování sestav
 Modul plug-in sestavení může vygenerovat sestavu HTML změn, které dělá. Chcete-li vyžádat generování této sestavy, zadejte `report = true` v `intunemam` konfiguračním bloku. Pokud je tato sestava vygenerována, bude `outputs/logs` v adresáři buildu zapsána.
@@ -421,7 +421,7 @@ Intune App SDK vyžaduje tři [oprávnění pro systém Android](https://develop
 
 Azure Active Directory Authentication Library ([ADAL](https://azure.microsoft.com/documentation/articles/active-directory-authentication-libraries/)) vyžaduje tato oprávnění ke zprostředkovanému ověřování. Pokud nejsou tato oprávnění udělená aplikaci nebo je uživatel odvolá, zakážou se toky ověřování, které vyžadují zprostředkovatele (aplikace Portál společnosti).
 
-## <a name="logging"></a>Protokolování
+## <a name="logging"></a>protokolování
 
 Abyste ze zaprotokolovaných dat získali co nejvíce, měli byste protokolování zahájit brzy. Nejlepším místem k zahájení protokolování je obvykle `Application.onMAMCreate()`.
 
@@ -1136,7 +1136,7 @@ mAuthContext.acquireToken(this, RESOURCE_ID, CLIENT_ID, REDIRECT_URI, PromptBeha
 
 ### <a name="important-implementation-notes"></a>Důležité poznámky k implementaci
 
-#### <a name="authentication"></a>Authentication
+#### <a name="authentication"></a>Ověřování
 
 * Když aplikace volá `registerAccountForMAM()`, může brzy poté obdržet zpětné volání na rozhraní `MAMServiceAuthenticationCallback`, ale na odlišném vláknu. V ideálním případě aplikace získala svůj vlastní token z knihovny ADAL před registrací účtu za účelem urychlení získání požadovaného tokenu. Pokud aplikace vrátí platný token ze zpětného volání, registrace bude pokračovat a aplikace získá konečný výsledek prostřednictvím oznámení.
 
@@ -1465,7 +1465,7 @@ Pokud vaše aplikace používá `Service` kontext ke spouštění, použití př
 Chcete-li zpracovat zvláštní případy při aktualizaci identity uživatelského rozhraní pomocí `setUIPolicyIdentity` nebo `switchMAMIdentity` , lze obě metody předat sadu `IdentitySwitchOption` hodnot.
 
 * `IGNORE_INTENT`: Použijte, pokud požadujete přepínač identity, který by měl ignorovat záměr přidružený k aktuální aktivitě.
-  Příklad:
+  Například:
 
   1. Vaše aplikace obdrží záměr ze spravované identity obsahující spravovaného dokumentu a aplikace zobrazí dokument.
   2. Uživatel přepne na svou osobní identitu, takže vaše aplikace si vyžádá přepínač identity uživatelského rozhraní. V osobní identitě už aplikace nezobrazuje dokument, takže ho použijete `IGNORE_INTENT` při žádosti o přepínač identity.
@@ -1634,7 +1634,7 @@ Ty je nutné použít, pokud asynchronní operace může zapisovat podniková da
 
 #### <a name="mamasynctask"></a>MAMAsyncTask
 
-Chcete-li použít `MAMAsyncTask` , jednoduše dědit z něj namísto `AsyncTask` a nahraďte `doInBackground` a `onPreExecute` v `doInBackgroundMAM` a v `onPreExecuteMAM` . Konstruktor `MAMAsyncTask` převezme kontext aktivity. Příklad:
+Chcete-li použít `MAMAsyncTask` , jednoduše dědit z něj namísto `AsyncTask` a nahraďte `doInBackground` a `onPreExecute` v `doInBackgroundMAM` a v `onPreExecuteMAM` . Konstruktor `MAMAsyncTask` převezme kontext aktivity. Například:
 
 ```java
 AsyncTask<Object, Object, Object> task = new MAMAsyncTask<Object, Object, Object>(thisActivity) {

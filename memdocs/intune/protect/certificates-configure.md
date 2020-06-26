@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4441fdaf8c3fb8bfb6613805df9eca27cc3ebf0c
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: e5de1268b8b04c98ac7a9cfa96d42349fc0f8890
+ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990376"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85383202"
 ---
 # <a name="use-certificates-for-authentication-in-microsoft-intune"></a>Použití certifikátů pro ověřování v Microsoft Intune
 
@@ -30,7 +30,7 @@ Pomocí certifikátů s Intune můžete ověřovat uživatele s aplikacemi a pod
 
 ## <a name="intune-supported-certificates-and-usage"></a>Podporované certifikáty a využití v Intune
 
-| Typ              | Authentication | Podepisování S/MIME | Šifrování S/MIME  |
+| Typ              | Ověřování | Podepisování S/MIME | Šifrování S/MIME  |
 |--|--|--|--|
 | Importovaný certifikát PKCS (Public Key Cryptography Standards) |  | ![Podporuje se](./media/certificates-configure/green-check.png) | ![Podporuje se](./media/certificates-configure/green-check.png)|
 | PKCS#12 (nebo PFX)    | ![Podporuje se](./media/certificates-configure/green-check.png) | ![Podporuje se](./media/certificates-configure/green-check.png) |  |
@@ -104,6 +104,11 @@ Vytvořte a nasaďte profil důvěryhodného certifikátu před vytvořením pro
 Profily certifikátů SCEP přímo odkazují na profil důvěryhodného certifikátu. Profily certifikátů PKCS přímo neodkazují na profil důvěryhodného certifikátu, ale přímo odkazují na server, který je hostitelem vaší certifikační autority. Profily certifikátů PKCS importované přímo neodkazují na profil důvěryhodného certifikátu, ale můžou ho použít na zařízení. Nasazení profilu důvěryhodného certifikátu na zařízení zajistí, že se tento vztah důvěryhodnosti naváže. Když zařízení nedůvěřuje kořenové certifikační autoritě, zásada profilu certifikátu SCEP nebo PKCS se nezdaří.
 
 Vytvořte samostatný profil důvěryhodného certifikátu pro každou platformu zařízení, kterou chcete podporovat, stejně jako u profilů certifikátů SCEP, PKCS a PKCS.
+
+> [!IMPORTANT]
+> Důvěryhodné kořenové profily, které vytvoříte pro platformu *Windows 10 a novější*, se zobrazí v centru pro správu Microsoft Endpoint Manageru jako profily pro platformu *Windows 8.1 a novější*. 
+>
+> Jedná se o známý problém s prezentací platformy pro profily důvěryhodných certifikátů. I když profil zobrazuje platformu Windows 8.1 a novější, je funkční pro Windows 10 a novější.
 
 ### <a name="to-create-a-trusted-certificate-profile"></a>Vytvoření profilu důvěryhodného certifikátu
 

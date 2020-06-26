@@ -15,14 +15,14 @@ ms.assetid: 38ebd3f5-cfcc-4204-8a75-6e2f162cd7c1
 ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune
+ms.custom: intune, has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6427c2bf77255399813edd62519fd365c3cb2a68
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: 42362d2c4ccc83718721f5ca314b232274ade46a
+ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84166089"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85383219"
 ---
 # <a name="get-started-with-the-microsoft-intune-app-sdk"></a>Začínáme s Microsoft Intune App SDK
 
@@ -132,7 +132,7 @@ Android i iOS používají pro aplikace jak čísla verzí, tak buildů. V obou 
 
 Když vyvíjíte obchodní aplikaci pro použití v Intune, nezapomeňte použít jak číslo verze, tak i číslo buildu. Funkce správy aplikací Intune vyžadují smysluplné číslo **CFBundleVersion** (iOS) a **PackageVersionCode** (Android). Tato čísla jsou součástí manifestu aplikace. 
 
-Intune|iOS|Android|Popis|
+Intune|iOS|Android|Description|
 |---|---|---|---|
 Číslo verze|CFBundleShortVersionString|PackageVersionName |Toto číslo označuje konkrétní vydanou verzi aplikace pro koncové uživatele.|
 Číslo buildu|CFBundleVersion|PackageVersionCode |Toto číslo slouží k označení iterace v kódu aplikace.|
@@ -144,7 +144,7 @@ Intune|iOS|Android|Popis|
 - **CFBundleVersion**  
   Verze buildu sady, která označuje iteraci sady. Číslo může označovat vydanou verzi nebo nevydanou sadu. Slouží ke zjištění aplikace.
 
-#### <a name="android"></a>Telefon
+#### <a name="android"></a>Android
 
 - **PackageVersionName**  
   Číslo verze, které se zobrazuje uživatelům. Tento atribut je možné nastavit jako nezpracovaný řetězec nebo jako odkaz na prostředek řetězce. Řetězec nemá žádný jiný účel než ten, že se zobrazuje uživatelům.
