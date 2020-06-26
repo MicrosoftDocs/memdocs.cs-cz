@@ -10,12 +10,12 @@ ms.assetid: 7591e386-a9ab-4640-8643-332dce5aa006
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8d87b2cde9a9fadb7326939b7fe473ba2a757e91
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 6ad36978f3f3dc5207068a65d76bf8f5c7c3078c
+ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83430123"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85383236"
 ---
 # <a name="create-a-task-sequence-to-upgrade-an-os-in-configuration-manager"></a>Vytvoření pořadí úkolů pro upgrade operačního systému v Configuration Manager
 
@@ -124,7 +124,7 @@ Pokud vrátí všechny výsledky, zařízení běží na Wi-Fi. V opačném př�
 
 Do této skupiny přidejte kroky, pokud chcete odebrat všechny aplikace, které nejsou kompatibilní s touto verzí Windows 10. Způsob odinstalace aplikace se liší.  
 
-Pokud aplikace používá Instalační služba systému Windows, zkopírujte příkazový řádek **odinstalačního programu** na kartě **programy** v části vlastnosti typu nasazení Instalační služba systému Windows aplikace. Pak v této skupině přidejte krok **Spustit příkazový** řádek pomocí příkazového řádku Uninstall program. Příklad:
+Pokud aplikace používá Instalační služba systému Windows, zkopírujte příkazový řádek **odinstalačního programu** na kartě **programy** v části vlastnosti typu nasazení Instalační služba systému Windows aplikace. Pak v této skupině přidejte krok **Spustit příkazový** řádek pomocí příkazového řádku Uninstall program. Například:
 
 `msiexec /x {150031D8-1234-4BA8-9F52-D6E5190D1CBA} /q`  
 
@@ -222,8 +222,10 @@ Jedním z těchto nástrojů je Windows [SetupDiag](https://docs.microsoft.com/w
 - V Configuration Manager [vytvořte balíček](../../apps/deploy-use/packages-and-programs.md#create-a-package-and-program) pro nástroj.  
 
 - Přidejte krok [Spustit příkazový řádek](../understand/task-sequence-steps.md#BKMK_RunCommandLine) do této skupiny pořadí úkolů. K odkazování na nástroj použijte možnost **balíček** . Následující řetězec je příkladem **příkazového řádku**:  
-    `SetupDiag.exe /Output:"%_SMSTSLogPath%\SetupDiagResults.log" /Mode:Online`  
+    `SetupDiag.exe /Output:"%_SMSTSLogPath%\SetupDiagResults.log"`  
 
+> [!TIP]
+> Pro nejnovější funkce a opravy známých problémů vždy používejte nejnovější verzi SetupDiag. Další informace najdete v tématu [SetupDiag](https://docs.microsoft.com/windows/deployment/upgrade/setupdiag).
 
 ## <a name="additional-recommendations"></a>Další doporučení
 

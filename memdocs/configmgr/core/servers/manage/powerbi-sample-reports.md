@@ -2,7 +2,7 @@
 title: Instalace ukázkových sestav Power BI
 titleSuffix: Configuration Manager
 description: Naučte se instalovat ukázkové sestavy Power BI v Configuration Manager
-ms.date: 06/23/2020
+ms.date: 06/25/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 7e9bc22c-67ac-4a86-b613-944a4928e583
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 340f10a486594f78053dcfd0febde40bb5a6697f
-ms.sourcegitcommit: c5c17af545fd9df94f9b99fd44b56f10ff1f695e
+ms.openlocfilehash: 39bec7e8b01b35a8411400399a74eb352406c023
+ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85310630"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85383185"
 ---
 # <a name="install-power-bi-sample-reports"></a>Instalace ukázkových sestav Power BI
 <!--5679791-->
@@ -34,9 +34,12 @@ Počínaje verzí 2002 můžete integrovat [server sestav Power BI](https://docs
 
 ## <a name="download-the-sample-reports"></a>Stažení ukázkových sestav
 
+> [!IMPORTANT]
+> Ukázkové sestavy nejsou aktuálně k dispozici ke stažení. Dočasně se odebraly kvůli opravě nahlášených problémů.
+
 Stažení ukázkových sestav:
 
-1. Stažení ukázkových sestav Power BI z [webu Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=101452).
+1. Stažení ukázkových sestav Power BI<!-- from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=101452)-->.
 1. Uložte soubor `ConfigMgrSamplePowerBIReports.exe`. 
 1. Přesune soubor do počítače s Microsoft Power BI Desktop (optimalizováno pro Server sestav Power BI), pokud jste ho stáhli z jiného zařízení.
 1. Spusťte `ConfigMgrSamplePowerBIReports.exe` soubor pro extrakci souborů. PBIT.

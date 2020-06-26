@@ -10,12 +10,12 @@ ms.assetid: 58d52fdc-bd18-494d-9f3b-ccfc13ea3d35
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 79e83a7ba111b1d7f96fb623914ffe8e11f22f3d
-ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
+ms.openlocfilehash: 576f909be15a35f4c29e803236c220cdde33c0ac
+ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84270867"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85383151"
 ---
 # <a name="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager"></a>Příprava na používání skupin dostupnosti Always On SQL Server s Configuration Manager
 
@@ -85,7 +85,7 @@ Každá instance SQL Server může běžet pod účtem uživatele domény (**ú�
 - Další informace najdete v tématu [Vytvoření koncového bodu zrcadlení databáze pro skupiny dostupnosti Always On](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell).  
 
 
-### <a name="database"></a>databáze
+### <a name="database"></a>Databáze
 
 #### <a name="configure-the-database-on-a-new-replica"></a>Konfigurace databáze na nové replice
 
@@ -256,11 +256,7 @@ Configuration Manager instalační program se musí připojit ke každé replice
 
 - SQL přes TCP: **tcp 1433**
 
-Po dokončení instalace musí zůstat tyto porty otevřené pro Configuration Manager:  
-
-- SQL Server Service Broker: **TCP 4022**  
-
-- SQL přes TCP: **tcp 1433**  
+Po dokončení instalace musí tyto porty zůstat otevřené pro Configuration Manager a analyzátor propojení replikace.<!-- MEMDocs#375 -->
 
 Pro tyto konfigurace můžete použít vlastní porty. Použijte stejné vlastní porty pro koncový bod a na všechny repliky ve skupině dostupnosti.
 

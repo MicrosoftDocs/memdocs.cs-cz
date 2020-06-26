@@ -10,12 +10,12 @@ ms.assetid: c890fd27-7a8c-4f51-bbe2-f9908af1f42b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4065f320ec27f53e50c64bc7ca0c97d3f6923853
-ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
+ms.openlocfilehash: 02a281b800c1156cf8492e8a897a5cf1b412006e
+ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85353271"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85383032"
 ---
 # <a name="about-client-installation-parameters-and-properties-in-configuration-manager"></a>Informace o parametrech instalace a vlastnostech klienta v Configuration Manager
 
@@ -49,7 +49,7 @@ Příkaz CCMSetup.exe používá v příkazovém řádku tento formát:
 
 `CCMSetup.exe [<Ccmsetup parameters>] [<client.msi setup properties>]`  
 
-Příklad:  
+Například:  
 
 `CCMSetup.exe /mp:SMSMP01 /logon SMSSITECODE=S01 FSP=SMSFSP01`  
 
@@ -266,11 +266,18 @@ Podporované hodnoty:
 - `TRUE`: Klient nebude automaticky upgradován.
 - `FALSE`: Klient se automaticky upgraduje (výchozí).
 
-Příklad:  
+Například:  
 
 `CCMSetup.exe /AlwaysExcludeUpgrade:TRUE`
 
 Další informace najdete v tématu [Rozšířený klient interoperability](../../understand/interoperability-client.md).
+
+> [!NOTE]  
+> Při použití parametru **/AlwaysExcludeUpgrade** stále běží automatický upgrade. Pokud se ale pro provedení upgradu spustí program CCMSetup, Upozorňujeme, že se nastavil parametr **/AlwaysExcludeUpgrade** a v souboru **CCMSetup. log**se zaprotokoluje následující řádek:
+>
+> `Client is stamped with /alwaysexcludeupgrade. Stop proceeding.`
+>
+> Program CCMSetup pak okamžitě ukončí a neprovede upgrade.
 
 ## <a name="ccmsetupexe-return-codes"></a><a name="ccmsetupReturnCodes"></a>Návratové kódy CCMSetup.exe
 

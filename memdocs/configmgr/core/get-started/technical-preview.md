@@ -2,7 +2,7 @@
 title: Verze Technical Preview
 titleSuffix: Configuration Manager
 description: Přečtěte si o větvi Technical Preview, která vám umožní testovat nové funkce a funkce v Configuration Manager.
-ms.date: 05/29/2020
+ms.date: 06/25/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e4c0842a3e23eb8503c945073a4be35db5173086
-ms.sourcegitcommit: 0d2f6132428b5fa994e5b770ab1d2bf7d78ac179
+ms.openlocfilehash: 5dfa3b33a46166cfa4e1233eb71125696f5aa39d
+ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84226259"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85383134"
 ---
 # <a name="technical-preview-for-configuration-manager"></a>Technical Preview pro Configuration Manager
 
@@ -116,9 +116,41 @@ Enable this section if needed to include any broad change to the tech preview br
 This is the full list of new features in the latest TP release
 
 bullet format:
-<!-- - [title](2020/technical-preview-2005.md) <!--ID-->
+<!-- - [title](2020/technical-preview-2006.md) <!--ID-->
 
 V nejnovější verzi Configuration Manager Technical Preview jsou k dispozici následující funkce:
+
+### <a name="technical-preview-version-2006"></a>Technical Preview verze 2006
+
+- [Použití Portál společnosti aplikace na spoluspravovaných zařízeních](2020/technical-preview-2006.md#bkmk_portal) <!--3601237-->
+- [Vylepšení dostupných aplikací prostřednictvím CMG](2020/technical-preview-2006.md#bkmk_availapp) <!--7033501-->
+- [Intranetové klienty můžou používat CMG bod aktualizace softwaru.](2020/technical-preview-2006.md#bkmk_cmg-sup) <!--7102873-->
+- [Vylepšení pořadí úloh prostřednictvím CMG](2020/technical-preview-2006.md#bkmk_osdcmg) <!--6983320-->
+- [Přehledy správy pro optimalizaci pro vzdálené pracovníky](2020/technical-preview-2006.md#bkmk_wfhmi) <!--6982226-->
+- [Vylepšení typu hranice sítě VPN](2020/technical-preview-2006.md#bkmk_vpn) <!--7020519-->
+- [Připojení tenanta: vylepšení Configuration Manager akcí v centru pro správu Microsoft Endpoint Manageru](2020/technical-preview-2006.md#bkmk_apps) <!--7518897-->
+- [Podpora CMG pro zásady ochrany koncových bodů](2020/technical-preview-2006.md#bkmk_epcmg) <!--4773948-->
+- [Importovat dřív vytvořenou aplikaci Azure AD během připojování klienta](2020/technical-preview-2006.md#bkmk_aad-app) <!--6479246-->
+- [Vylepšení upgradu klienta na připojení účtované podle objemu dat](2020/technical-preview-2006.md#bkmk_meter) <!--6976145-->
+- [Vylepšení správy restartování zařízení](2020/technical-preview-2006.md#bkmk_restart) <!--3601213-->
+- [Vylepšená podpora pro virtuální počítače s Windows](2020/technical-preview-2006.md#bkmk_wvd) <!--6527576-->
+- [Přímé odkazy na Configuration Manager položky centra komunity](2020/technical-preview-2006.md#bkmk_deeplink) <!--4224406-->
+
+> [!NOTE]
+> Funkce, které byly k dispozici v předchozí verzi Technical Preview, zůstávají dostupné v novějších verzích. Podobně funkce, které jsou přidány do Configuration Manager aktuální větve, zůstávají dostupné ve větvi Technical Preview.
+
+## <a name="features-in-recent-technical-previews"></a>Funkce v posledních technických náhledech
+
+<!-- (explanatory comment)
+This is the full list of new features in the past TP releases since the last CB release.
+Each month, add features from the list above to a new H3 section at the top of this section.
+When there's a new CB, add any features not in that CB to the table in H2 "Features in previous technical previews"
+-->
+
+Následující funkce byly vydány s předchozími verzemi větve Configuration Manager Technical Preview od aktuální větve verze 2002:
+
+> [!TIP]
+> Když je k dispozici nová verze aktuální větve, funkce, které jsou v této verzi k dispozici, jsou uvedeny v článku *co je nového* . Další informace najdete v tématu [co je nového v přírůstkových verzích](../plan-design/changes/whats-new-incremental-versions.md#supported-versions).
 
 ### <a name="technical-preview-version-2005"></a>Technical Preview verze 2005
 
@@ -138,22 +170,6 @@ V nejnovější verzi Configuration Manager Technical Preview jsou k dispozici n
 - [Vylepšení kroků pořadí úloh nástroje BitLocker](2020/technical-preview-2005.md#bkmk_tsbitlocker) <!--6995601-->
 - [Vylepšení nástroje pro vyčištění knihovny obsahu](2020/technical-preview-2005.md#bkmk_content) <!--6887878-->
 - [Odebrání příkazového řádku během místního upgradu Windows 10](2020/technical-preview-2005.md#bkmk_ipucmd) <!--2837795-->
-
-> [!NOTE]
-> Funkce, které byly k dispozici v předchozí verzi Technical Preview, zůstávají dostupné v novějších verzích. Podobně funkce, které jsou přidány do Configuration Manager aktuální větve, zůstávají dostupné ve větvi Technical Preview.
-
-## <a name="features-in-recent-technical-previews"></a>Funkce v posledních technických náhledech
-
-<!-- (explanatory comment)
-This is the full list of new features in the past TP releases since the last CB release.
-Each month, add features from the list above to a new H3 section at the top of this section.
-When there's a new CB, add any features not in that CB to the table in H2 "Features in previous technical previews"
--->
-
-Následující funkce byly vydány s předchozími verzemi větve Configuration Manager Technical Preview od aktuální větve verze 2002:
-
-> [!TIP]
-> Když je k dispozici nová verze aktuální větve, funkce, které jsou v této verzi k dispozici, jsou uvedeny v článku *co je nového* . Další informace najdete v tématu [co je nového v přírůstkových verzích](../plan-design/changes/whats-new-incremental-versions.md#supported-versions).
 
 ### <a name="technical-preview-version-2004"></a>Technical Preview verze 2004
 
@@ -188,7 +204,7 @@ With each CB release, review and remove from this list for anything that's now a
 
 Následující funkce byly vydány s předchozími verzemi větve Configuration Manager Technical Preview. Tyto funkce zůstanou dostupné v novějších verzích, ale ještě nejsou k dispozici v aktuální větvi.
 
-| Příznak        | Verze Technical Preview |
+| Funkce        | Verze Technical Preview |
 |----------------|---------------------------|
 | Připojit soubory k názoru <!--3556011--> | [Verze Tech Preview 1910](2019/technical-preview-1910.md#attach-files-to-feedback) |
 | Vylepšení distribučních bodů s povoleným vícesměrovým vysíláním <!--3785535--> | [Verze Tech Preview 1908,2](2019/technical-preview-1908-2.md#bkmk_multicast) |
