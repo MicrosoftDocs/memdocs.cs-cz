@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/24/2020
+ms.date: 06/25/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3ddfb0b2d7c8fa0b185416fc493bde5da8f0a475
-ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
+ms.openlocfilehash: 89703c8aec11517417f9459391c431b9db75456c
+ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85353645"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85502285"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
@@ -58,6 +58,17 @@ Podívejte se, co je nového v jednom týdnu v Microsoft Intune v [centru pro sp
 
 ## <a name="week-of-june-22-2020"></a>Týden od 22. června 2020
 
+### <a name="app-management"></a>Správa aplikací
+
+#### <a name="newly-available-protected-apps-for-intune---7248952---"></a>Nově dostupné chráněné aplikace pro Intune<!-- 7248952 -->
+K dispozici jsou teď tyto chráněné aplikace:
+- Videokonference BlueJeans
+- Cisco Jabber pro Intune
+- Tableau Mobile pro Intune
+- NULA pro Intune
+
+Další informace o chráněných aplikacích najdete v tématu [Microsoft Intune Protected Apps](../apps/apps-supported-intune-apps.md).
+
 ### <a name="monitor-and-troubleshoot"></a>Monitorování a odstraňování potíží
 
 #### <a name="use-endpoint-analytics-to-improve-user-productivity-and-reduce-it-support-costs---5653063---"></a>Využijte službu Endpoint Analytics ke zvýšení produktivity uživatelů a snížení nákladů na podporu.<!-- 5653063 --> 
@@ -68,11 +79,11 @@ Můžete vytvořit a spustit balíčky skriptů na zařízeních koncových uži
 
 ### <a name="device-security"></a>Zabezpečení zařízení
 
-### <a name="use-microsoft-defender-atp-in-compliance-policies-for-android---4425686----"></a>Používání ATP v programu Microsoft Defender v zásadách dodržování předpisů pro Android<!-- 4425686  -->
+#### <a name="use-microsoft-defender-atp-in-compliance-policies-for-android---4425686----"></a>Používání ATP v programu Microsoft Defender v zásadách dodržování předpisů pro Android<!-- 4425686  -->
 
 Teď můžete pomocí Intune připojit [zařízení s Androidem k Rozšířené ochraně před internetovými útoky v programu Microsoft Defender](../protect/advanced-threat-protection.md#onboard-android-devices) (MicrosoftDefender ATP). Po zaregistrování registrovaných zařízení můžou zásady dodržování předpisů pro Android využívat signály *úrovně hrozby z ochrany* ATP v programu Microsoft Defender. Jedná se o stejné signály, které jste předtím mohli použít pro zařízení s Windows 10.
 
-### <a name="configure-defender-atp-web-protection-for-android-devices---6185563-wnready---"></a>Konfigurace webové ochrany v programu Defender ATP pro zařízení s Androidem<!-- 6185563 WNReady -->
+#### <a name="configure-defender-atp-web-protection-for-android-devices---6185563-wnready---"></a>Konfigurace webové ochrany v programu Defender ATP pro zařízení s Androidem<!-- 6185563 WNReady -->
 
 Při použití rozšířené ochrany před internetovými útoky v programu Microsoft Defender (Microsoft Defender ATP) pro zařízení s Androidem můžete [nakonfigurovat ochranu ATP na webu Microsoft Defender ATP](../protect/advanced-threat-protection.md#configure-web-protection-on-devices-that-run-android) , aby se zakázala funkce vyhledávání phishing, nebo zakázat kontrolu v používání sítě VPN.
 

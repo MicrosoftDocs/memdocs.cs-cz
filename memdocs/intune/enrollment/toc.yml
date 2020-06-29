@@ -88,6 +88,20 @@
         - name: Registrace mobilního zařízení Samsung Knox
           href: android-samsung-knox-mobile-enroll.md
           displayName: kda; kme
+        - name: Architektura konfigurace zabezpečení pro Android Enterprise
+          items:
+            - name: Architektura konfigurace zabezpečení pro Android Enterprise
+              href: android-configuration-framework.md
+            - name: Metodologie nasazení architektury
+              href: framework-deployment-methodology.md
+            - name: Omezení registrace zařízení
+              href: device-enrollment-restrictions.md
+            - name: Nastavení zásad konfigurace aplikací
+              href: android-app-configuration-policies.md
+            - name: Nastavení zabezpečení pracovního profilu Androidu
+              href: android-work-profile-security-settings.md
+            - name: Plně spravované nastavení zabezpečení pro Android
+              href: android-fully-managed-security-settings.md
     - name: Nastavení registrace zařízení se systémem iOS/iPadOS
       href: ios-enroll.md
       items:

@@ -2,7 +2,7 @@
 title: Požadavky na přístup k internetu
 titleSuffix: Configuration Manager
 description: Přečtěte si o internetových koncových bodech, které umožní plnou funkčnost funkcí Configuration Manager.
-ms.date: 06/12/2020
+ms.date: 06/26/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: b34fe701-5d05-42be-b965-e3dccc9363ca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: fb965ec6547ff1c06586464780b6db224b943000
-ms.sourcegitcommit: 9a8a9cc7dcb6ca333b87e89e6b325f40864e4ad8
+ms.openlocfilehash: 78958809aeed5db9d2a36d960b91572b91eafe05
+ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84740760"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85502353"
 ---
 # <a name="internet-access-requirements"></a>Požadavky na přístup k internetu
 
@@ -230,6 +230,8 @@ Pokud používáte Configuration Manager k nasazení a aktualizaci Microsoft 365
 
 - `config.office.com`Vytvoření vlastních konfigurací pro aplikace Microsoft 365 pro podniková nasazení
 
+- `contentstorage.osi.office.net`Podpora hodnocení připravenosti doplňku pro Office<!-- MEMDocs#410 -->
+
 ## <a name="configuration-manager-console"></a>Konzola nástroje Configuration Manager
 
 Počítače s konzolou Configuration Manager vyžadují přístup k následujícím koncovým bodům Internetu pro konkrétní funkce:
@@ -267,6 +269,10 @@ Pokud používáte **zeměpisné zobrazení**, povolte přístup k následujíc�
 ## <a name="desktop-analytics"></a>Desktop Analytics
 
 Další informace o požadovaných koncových bodech pro cloudovou službu Desktop Analytics najdete v tématu [Povolení sdílení dat](../../../desktop-analytics/enable-data-sharing.md#endpoints).
+
+## <a name="tenant-attach"></a>Připojení tenanta
+
+Další informace o požadovaných koncových bodech pro funkce připojení klienta najdete v tématu [Povolení připojení tenanta](../../../tenant-attach/device-sync-actions.md#internet-endpoints).
 
 ## <a name="microsoft-public-ip-addresses"></a>Veřejné IP adresy Microsoftu
 

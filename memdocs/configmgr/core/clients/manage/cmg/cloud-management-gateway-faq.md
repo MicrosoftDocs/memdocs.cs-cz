@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 4c1a128d-22fb-49f1-8e0b-36513a8dc117
-ms.openlocfilehash: bd846b0155a0baddad76d6027ffbd239d7dbf26f
-ms.sourcegitcommit: 5f15a3abf33ce7bfd6855ffeef2ec3cd4cd48a7f
+ms.openlocfilehash: ecc91168cc90af58c40903ea3d288eeaa82be7a0
+ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84721886"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85502234"
 ---
 # <a name="frequently-asked-questions-about-the-cloud-management-gateway"></a>Nejčastější dotazy týkající se brány pro správu cloudu
 
@@ -87,6 +87,16 @@ Aby bylo možné zabezpečit citlivý přenos odeslaný přes CMG, buď nakonfig
 Pokud se rozhodnete nasadit CMG a používat certifikáty PKI pro komunikaci pomocí protokolu HTTPS v bodu správy s povoleným CMG, vyberte možnost **povolení pouze internetových klientů** ve vlastnostech bodu správy. Toto nastavení zajistí, aby interní klienti dál používali body správy protokolu HTTP ve vašem prostředí.
 
 Pokud používáte rozšířené HTTP, nemusíte konfigurovat toto nastavení. Klienti i nadále používají protokol HTTP při komunikaci přímo s bodem správy s povolenou CMG. Další informace najdete v tématu [Rozšířená http](../../../plan-design/hierarchy/enhanced-http.md).
+
+### <a name="what-are-the-differences-with-client-authentication-between-azure-ad-and-certificates"></a>Jaké jsou rozdíly mezi ověřováním klientů mezi Azure AD a certifikáty?
+<!-- MEMDocs#277 -->
+Pro zařízení, která se mají ověřit ve službě CMG, můžete použít certifikát služby Azure AD nebo [certifikát pro ověřování klientů](certificates-for-cloud-management-gateway.md#bkmk_clientauth) .
+
+Pokud spravujete tradiční klienty se systémem Windows s identitou připojenou k doméně služby Active Directory, potřebují k zabezpečení komunikačního kanálu certifikáty PKI. Tito klienti můžou zahrnovat Windows 8.1 a Windows 10. Můžete použít všechny funkce podporované CMG, ale distribuce softwaru je omezená jenom na zařízení. Nainstalujte klienta Configuration Manager předtím, než se zařízení přemístí do Internetu, nebo verze 2002 nebo novější, použijte ověřování pomocí tokenu.
+
+Můžete také spravovat klienty Windows 10 s moderní identitou, a to buď z hybridních, nebo čistě cloudových domén – připojených k Azure AD. Klienti používají Azure AD k ověřování místo certifikátů PKI. Použití Azure AD je jednodušší k nastavení, konfiguraci a údržbě než složitější systémy PKI. Můžete provádět všechny stejné aktivity správy a distribuci softwaru uživateli. Umožňuje taky další metody instalace klienta na vzdáleném zařízení.
+
+Microsoft doporučuje připojit zařízení k Azure AD. Internetová zařízení můžou pomocí Azure AD ověřit pomocí Configuration Manager. Také umožňuje scénářům zařízení i uživatele, zda je zařízení na internetu nebo připojeno k interní síti. Další informace najdete v tématu [instalace a registrace klienta pomocí Azure AD identity](../../deploy/deploy-clients-cmg-azure.md#install-and-register-the-client-using-azure-ad-identity).
 
 ## <a name="next-steps"></a>Další kroky
 

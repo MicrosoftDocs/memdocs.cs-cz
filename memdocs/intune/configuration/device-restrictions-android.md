@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 02e07ec75b7c0d07a81a9c6f555cf119310a9a9f
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 62348a4e551112a93f960388d6e21b398c447dfc
+ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093693"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85502370"
 ---
 # <a name="android-and-samsung-knox-standard-device-restriction-settings-lists-in-intune"></a>Seznamy nastavení omezení zařízení s Androidem a Samsung KNOX standard v Intune
 
@@ -178,7 +178,7 @@ Pro každé nastavení přidejte své aplikace:
 
 Nastavení platí jen pro zařízení se zabezpečením Samsung Knox Standard a jen pro aplikace, které spravujete přes Intune.
 
-- Přidejte aplikace, které chcete spustit, když je zařízení v celoobrazovkovém režimu. V celoobrazovkovém režimu se spustí jenom aplikace, které přidáte. Nepřidání aplikací neběží. Předem nainstalované prohlížeče se nespouštějí jako aplikace, když je zařízení v celoobrazovkovém režimu. Pokud se vyžaduje prohlížeč, zvažte použití řešení [Managed Browser](../apps/app-configuration-managed-browser.md).
+- Přidejte aplikace, které chcete spustit, když je zařízení v celoobrazovkovém režimu. V celoobrazovkovém režimu se spustí jenom aplikace, které přidáte. Nepřidání aplikací neběží. Předem nainstalované prohlížeče se nespouštějí jako aplikace, když je zařízení v celoobrazovkovém režimu. Pokud se vyžaduje prohlížeč, zvažte použití řešení [Managed Browser](../apps/manage-microsoft-edge.md).
 
   Možnosti vaší aplikace:
 

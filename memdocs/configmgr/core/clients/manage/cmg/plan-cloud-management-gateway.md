@@ -10,12 +10,12 @@ ms.assetid: 2dc8c9f1-4176-4e35-9794-f44b15f4e55f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 136e11f97849e5fd8a27d9f83ea1bd44791c492e
-ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
+ms.openlocfilehash: 2d6165678331811f4b04e8b1f540f3dcbb7f015d
+ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84715641"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85502251"
 ---
 # <a name="plan-for-the-cloud-management-gateway-in-configuration-manager"></a>Plánování brány pro správu cloudu v Configuration Manager
 
@@ -227,15 +227,16 @@ V následující tabulce jsou uvedeny CMG podpora pro funkce Configuration Manag
 | Inventář hardwaru a softwaru     | ![Podporuje se](media/green_check.png) |
 | Stav klienta a oznámení     | ![Podporuje se](media/green_check.png) |
 | Spustit skripty     | ![Podporuje se](media/green_check.png) |
+| CMPivot     | ![Podporuje se](media/green_check.png) |
 | Nastavení dodržování předpisů     | ![Podporuje se](media/green_check.png) |
-| Instalace klienta<br>(s integrací Azure AD)     | ![Podporuje se](media/green_check.png) |
+| Instalace klienta<br>(s [integrací Azure AD](../../deploy/deploy-clients-cmg-azure.md)) | ![Podporuje se](media/green_check.png) |
+| Instalace klienta<br>(s [ověřováním tokenu](../../deploy/deploy-clients-cmg-token.md)) | ![Podporuje se](media/green_check.png) (2002) |
 | Distribuce softwaru (zaměřená na zařízení)     | ![Podporuje se](media/green_check.png) |
 | Distribuce softwaru (vyžaduje se pro uživatele)<br>(s integrací Azure AD)     | ![Podporuje se](media/green_check.png) |
 | Distribuce softwaru (cílová a dostupná pro uživatele)<br>([všechny požadavky](../../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications-on-azure-ad-joined-devices)) | ![Podporuje se](media/green_check.png) |
-| Pořadí úkolů místního upgradu Windows 10      | ![Podporuje se](media/green_check.png) |
-| Sekvence úloh, které nepoužívají spouštěcí image a jsou nasazené s možností: **před spuštěním pořadí úloh stáhnout veškerý obsah místně**      | ![Podporuje se](media/green_check.png) |
-| Sekvence úloh, které nepoužívají spouštěcí bitové kopie  | ![Podporuje se](media/green_check.png) (1910)|
-| CMPivot     | ![Podporuje se](media/green_check.png) |
+| [Pořadí úkolů místního upgradu](../../../../osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md) Windows 10 | ![Podporuje se](media/green_check.png) |
+| Sekvence úloh, které nepoužívají spouštěcí image a jsou nasazené s možností: **před spuštěním pořadí úloh stáhnout veškerý obsah místně** | ![Podporuje se](media/green_check.png) |
+| Sekvence úloh, které nepoužívají spouštěcí bitové kopie s [možností stažení](../../../../osd/deploy-use/deploy-a-task-sequence.md#deploy-windows-10-in-place-upgrade-via-cmg) | ![Podporuje se](media/green_check.png) (1910)|
 | Jakýkoli jiný scénář pořadí úkolů     | ![Nepodporuje se](media/Red_X.png) |
 | Klientská nabízená instalace     | ![Nepodporuje se](media/Red_X.png) |
 | Automatické přiřazení lokality     | ![Nepodporuje se](media/Red_X.png) |
@@ -367,7 +368,7 @@ Další informace o hostování obsahu v Azure najdete v tématu [Použití clou
 
 V této tabulce jsou uvedené požadované síťové porty a protokoly. *Klient* je zařízení iniciované připojením a vyžaduje odchozí port. *Server* je zařízení, které přijímá připojení, vyžaduje port pro příchozí spojení.
 
-| Klient | Protocol (Protokol) | Port | Server | Description |
+| Klient | Protocol (Protokol) | Port | Server | Popis |
 |--------|----------|------|--------|-------------|
 | Spojovací bod služby | HTTPS | 443 | Azure | Nasazení CMG |
 | Bod připojení CMG | TCP-TLS | 10140-10155 | Služba CMG | Upřednostňovaný protokol pro sestavení CMG kanálu <sup> [Poznámka 1](#bkmk_port-note1)</sup> |

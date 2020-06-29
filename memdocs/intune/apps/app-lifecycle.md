@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: apps; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8605b33d8fb83fb4537182127860f0cbb098e620
-ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
+ms.openlocfilehash: 890a42e3668b00a59f12498ab4f2ba3769225a96
+ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84428614"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85502693"
 ---
 # <a name="overview-of-the-app-lifecycle-in-microsoft-intune"></a>Přehled životního cyklu aplikace v Microsoft Intune
 
@@ -34,7 +34,7 @@ ms.locfileid: "84428614"
 
 Prvním krokem při nasazení aplikací je přidání aplikací, které chcete spravovat a přiřazovat, do Intune. Můžete pracovat s mnoha různými typy aplikací, ale základní postupy jsou stejné. Pomocí Intune můžete přidat různé typy aplikací, včetně aplikací, které jsou zapsané interně (obchodní), aplikací ze Storu, aplikací, které jsou integrované, a aplikací na webu. Další informace o těchto typech aplikací najdete v článku [Přidání aplikací do Microsoft Intune](apps-add.md).
 
-## <a name="deploy"></a>Nasazení
+## <a name="deploy"></a>Nasadit
 
 Po přidání aplikace do Intune ji pak můžete [přiřadit uživatelům a zařízením, která spravujete](apps-deploy.md). Intune tento proces usnadňuje a po nasazení aplikace můžete [monitorovat úspěšnost](apps-monitor.md) nasazení z Intune v rámci Azure Portal. Kromě toho některé obchody s aplikacemi, jako jsou obchody pro [Apple](vpp-apps-ios.md) a [Windows](windows-store-for-business.md), umožňují vaší společnosti nákup hromadných licencí k aplikaci. Intune může synchronizovat data s těmito obchody, abyste mohli nasazovat a sledovat využití licencí pro tyto typy aplikací přímo z konzoly pro správu Intune.
 
@@ -43,7 +43,7 @@ Po přidání aplikace do Intune ji pak můžete [přiřadit uživatelům a zař
 Jako součást životního cyklu aplikace jsou pravidelně vydávány nové verze aplikace. Intune poskytuje nástroje ke snadné [aktualizaci aplikací](apps-add.md), které jste nasadili, na novější verzi. Kromě toho můžete pro některé aplikace konfigurovat další funkce, například:
 
 - [zásady konfigurace aplikací pro iOS/iPadOS](app-configuration-policies-use-ios.md) poskytují nastavení pro kompatibilní aplikace pro iOS/iPadOS, které se používají při spuštění aplikace. Aplikace může například vyžadovat konkrétní nastavení brandingu nebo název serveru, ke kterému se musí připojit.
-- [Zásady spravovaného prohlížeče](app-configuration-managed-browser.md) vám pomůžou nakonfigurovat nastavení pro [Microsoft Edge](apps-supported-intune-apps.md#microsoft-apps), které nahradí výchozí prohlížeč zařízení a umožní vám omezit weby, které můžou uživatelé navštěvovat.
+- [Zásady spravovaného prohlížeče](manage-microsoft-edge.md) vám pomůžou nakonfigurovat nastavení pro [Microsoft Edge](apps-supported-intune-apps.md#microsoft-apps), které nahradí výchozí prohlížeč zařízení a umožní vám omezit weby, které můžou uživatelé navštěvovat.
 
 ## <a name="protect"></a>Ochrana
 

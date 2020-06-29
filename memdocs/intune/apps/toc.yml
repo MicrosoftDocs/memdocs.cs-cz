@@ -135,8 +135,6 @@
               href: app-configuration-managed-home-screen-app.md
             - name: Konfigurace Portálu společnosti
               href: company-portal-app.md
-            - name: Konfigurace Managed Browseru
-              href: app-configuration-managed-browser.md
             - name: Konfigurace Microsoft Launcheru
               href: configure-microsoft-launcher.md
             - name: Konfigurace Microsoft Edge

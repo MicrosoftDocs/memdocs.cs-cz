@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: de83a021343b733816330bc9be94c57a57afd9f1
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 43d412fda772fd36710895496087e97d782b8dba
+ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989834"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85502625"
 ---
 # <a name="enrolled-device-management-capabilities-of-microsoft-intune"></a>Možnosti správy zaregistrovaných zařízení v Microsoft Intune
 
@@ -55,7 +55,7 @@ Uživatelé získají přístup k portálu společnosti, odkud můžou instalova
 |Správa mobilních aplikací|Konfiguruje omezení pro aplikace pomocí správy mobilních aplikací jak pro zařízení, která spravujete v Intune, tak pro zařízení, která Intune nespravuje. Můžete zvýšit zabezpečení firemních dat omezením operací, jako je kopírování a vkládání, externí zálohování dat a přenos dat mezi aplikacemi.|[Konfigurace a nasazení zásad správy mobilních aplikací v konzole Microsoft Intune](../developer/app-wrapper-prepare-android.md)|
 |Konfigurace mobilních aplikací pro iOS|Pomocí zásad konfigurace mobilních aplikací poskytuje nastavení pro aplikace pro iOS/iPadOS, které se můžou požadovat, když uživatel spustí aplikaci. Aplikace může například vyžadovat, aby uživatel zadal číslo portu nebo přihlašovací informace. Můžete zjednodušit konfiguraci aplikace a snížit počet volání podpory.|[Konfigurace aplikací pro iOS/iPadOS pomocí zásad konfigurace mobilních aplikací v Microsoft Intune](../apps/app-configuration-policies-use-ios.md)|
 |profily zřizování mobilních aplikací pro iOS/iPadOS|Pomůže vám nasadit zřizovací profily pro aplikace iOS/iPadOS, které se blíží vypršení platnosti. |[Použití mobilních zásad zřizovacích profilů pro iOS/iPadOS k zabránění vypršení platnosti vašich aplikací](../apps/app-provisioning-profile-ios.md)|
-|Spravovaný prohlížeč|Konfiguruje zásady spravovaného prohlížeče pro kontrolu nad weby, které uživatelé můžou navštěvovat. Pro spravovaný prohlížeč můžete taky použít zásady správy mobilních aplikací.|[Správa přístupu k Internetu pomocí zásad spravovaného prohlížeče pomocí Microsoft Intune](../apps/app-configuration-managed-browser.md)|
+|Spravovaný prohlížeč|Konfiguruje zásady spravovaného prohlížeče pro kontrolu nad weby, které uživatelé můžou navštěvovat. Pro spravovaný prohlížeč můžete taky použít zásady správy mobilních aplikací.|[Správa přístupu k Internetu pomocí zásad spravovaného prohlížeče pomocí Microsoft Intune](../apps/manage-microsoft-edge.md)|
 |Windows Hello pro firmy|Umožňuje integraci se službou Microsoft Hello pro firmy. Tato alternativní metoda pro přihlašování do Windows 10 pomocí místní služby Active Directory nebo Azure Active Directory může nahradit hesla, čipové karty a virtuální čipové karty.|[Řízení nastavení Windows Hello pro firmy na zařízeních pomocí Microsoft Intune](../protect/windows-hello.md)|
 |Hromadně zakoupené aplikace|Pomůže spravovat aplikace, které jste koupili prostřednictvím programu hromadného nákupu, importováním licenčních informací z App Storu, sledováním, kolik licencí jste už použili, a zabráněním instalace více aplikací, než na kolik máte licence.|[Správa hromadně koupených aplikací v Microsoft Intune](../apps/vpp-apps.md)|
 

@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1881e43c1725d92a81d794fa240e6394eff1cbd4
-ms.sourcegitcommit: 397ec824f1368dcf06c3870c89f52347852062bd
+ms.openlocfilehash: 2cf8e493ed1318fbf1e1fee6ca8a50001a586cd6
+ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85264069"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85502387"
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Novinky v Microsoft Intune – předchozí měsíce
 
@@ -1674,7 +1674,7 @@ Chcete-li zobrazit podrobnosti o stavu šifrování zařízení s Windows 10, po
 Pomocí Intune teď můžete [Zobrazit podrobnosti](../protect/encryption-monitor.md) o ID klíče BitLockeru a obnovovacích klíčích BitLockeru z Azure Active Directory.
 
 #### <a name="microsoft-edge-support-for-intune-scenarios-on-ios-and-android-devices---3411007---"></a>Podpora Microsoft Edge pro scénáře Intune na zařízeních s iOS a Androidem<!-- 3411007 -->
-Microsoft Edge bude podporovat všechny stejné scénáře správy jako Intune Managed Browser s přidáním vylepšení pro činnost koncového uživatele. Mezi funkce Microsoft Edge Enterprise, které jsou povolené v zásadách Intune, patří podpora duální identity, integrace zásad ochrany aplikací, integrace služby Azure Application proxy a spravovaných zástupců a domovské stránky. Další informace najdete v tématu [Podpora Microsoft Edge](../apps/app-configuration-managed-browser.md#microsoft-edge-support).
+Microsoft Edge bude podporovat všechny stejné scénáře správy jako Intune Managed Browser s přidáním vylepšení pro činnost koncového uživatele. Mezi funkce Microsoft Edge Enterprise, které jsou povolené v zásadách Intune, patří podpora duální identity, integrace zásad ochrany aplikací, integrace služby Azure Application proxy a spravovaných zástupců a domovské stránky. Další informace najdete v tématu [Podpora Microsoft Edge](../apps/manage-microsoft-edge.md).
 
 #### <a name="exchange-onlineintune-connector-deprecate-support-for-eas-only-devices--3105122----"></a>Exchange Online/Intune Connector zastaralá podpora pro zařízení jenom s EAS<!--3105122  -->
 Konzola Intune už nepodporuje prohlížení a správu zařízení jenom pro EAS připojených k Exchangi Online s konektorem Intune. Místo toho máte následující možnosti:
@@ -1721,7 +1721,7 @@ Do zřizovacího profilu aplikace pro iOS můžete přidat značku oboru, aby k 
 Můžete přidat značku oboru do zásad konfigurace aplikace, aby k zásadám konfigurace aplikací měli přístup jenom lidé s rolemi přiřazenými k této značce oboru. Zásady konfigurace aplikací se můžou zaměřit na nebo přidružit k aplikacím, které mají přiřazenou stejnou značku oboru. Další informace najdete v tématu [použití značek RBAC a Scope](scope-tags.md).
 
 #### <a name="microsoft-edge-support-for-intune-scenarios-on-ios-and-android-devices---3411007---"></a>Podpora Microsoft Edge pro scénáře Intune na zařízeních s iOS a Androidem<!-- 3411007 -->
-Microsoft Edge bude podporovat všechny stejné scénáře správy jako Intune Managed Browser s přidáním vylepšení prostředí pro koncové uživatele. Mezi funkce Microsoft Edge Enterprise, které jsou povolené v zásadách Intune, patří podpora duální identity, integrace zásad ochrany aplikací, integrace služby Azure Application proxy a spravovaných zástupců a domovské stránky. Další informace najdete v tématu [Podpora Microsoft Edge](../apps/app-configuration-managed-browser.md#microsoft-edge-support).
+Microsoft Edge bude podporovat všechny stejné scénáře správy jako Intune Managed Browser s přidáním vylepšení prostředí pro koncové uživatele. Mezi funkce Microsoft Edge Enterprise, které jsou povolené v zásadách Intune, patří podpora duální identity, integrace zásad ochrany aplikací, integrace služby Azure Application proxy a spravovaných zástupců a domovské stránky. Další informace najdete v tématu [Podpora Microsoft Edge](../apps/manage-microsoft-edge.md).
 
 
 
@@ -3269,7 +3269,7 @@ Vytvořit profil\Ochrana koncového bodu\Ochrana Exploit Guard v programu Window
 
 #### <a name="attack-surface-reduction"></a>Omezení možností útoku
 
-|Název nastavení  |Možnosti nastavení  |Description  |
+|Název nastavení  |Možnosti nastavení  |Popis  |
 |---------|---------|---------|
 |Advanced ransomware protection (Rozšířená ochrana před ransonwarem)|Povoleno, Audit, Nenakonfigurováno|Umožňuje použít agresivní ochranu před ransomwarem.|
 |Flag credential stealing from the Windows local security authority subsystem (Označit příznakem použití jiných přihlašovacích údajů ze subsystému Windows Local Security Authority)|Povoleno, Audit, Nenakonfigurováno|Umožňuje označit příznakem použití jiných přihlašovacích údajů ze subsystému Windows Local Security Authority (lsass.exe).|
@@ -3279,7 +3279,7 @@ Vytvořit profil\Ochrana koncového bodu\Ochrana Exploit Guard v programu Window
 
 #### <a name="controlled-folder-access"></a>Řízený přístup ke složkám
 
-|              Název nastavení               |                                                              Možnosti nastavení                                                              | Description |
+|              Název nastavení               |                                                              Možnosti nastavení                                                              | Popis |
 |-----------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|-------------|
 | Ochrana složek (již implementováno) | Nenakonfigurováno, Povolit, Pouze audit (již implementováno)<br><br> <strong>Nový</strong><br>Block disk modification (Blokovat změny disku), Audit disk modification (Auditovat změny disku) |             |
 
@@ -3442,7 +3442,7 @@ Můžete vytvořit jedinečný účet prostředku, aby se Surface Hub mohl zobra
 
 ##### <a name="attack-surface-reduction"></a>Omezení možností útoku
 
-|Název nastavení  |Možnosti nastavení  |Description  |
+|Název nastavení  |Možnosti nastavení  |Popis  |
 |---------|---------|---------|
 |Execution of password-protected executable content from email (Spuštění spustitelného obsahu chráněného heslem z e-mailu)|Blokovat, Audit, Nenakonfigurováno|Umožňuje zabránit spuštění spustitelných souborů chráněných heslem, které se stáhly prostřednictvím e-mailu.|
 |Advanced ransomware protection (Rozšířená ochrana před ransonwarem)|Povoleno, Audit, Nenakonfigurováno|Umožňuje použít agresivní ochranu před ransomwarem.|
@@ -3453,7 +3453,7 @@ Můžete vytvořit jedinečný účet prostředku, aby se Surface Hub mohl zobra
 
 ##### <a name="controlled-folder-access"></a>Řízený přístup ke složkám
 
-|              Název nastavení               |                                                              Možnosti nastavení                                                              | Description |
+|              Název nastavení               |                                                              Možnosti nastavení                                                              | Popis |
 |-----------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|-------------|
 | Ochrana složek (již implementováno) | Nenakonfigurováno, Povolit, Pouze audit (již implementováno)<br><br> <strong>Nový</strong><br>Block disk modification (Blokovat změny disku), Audit disk modification (Auditovat změny disku) |             |
 
@@ -3927,7 +3927,7 @@ Když je profil doručený do zařízení, bude další krok záviset na tom, ja
 #### <a name="access-to-managed-app-logs-for-ios---1469920---"></a>Přístup k protokolům spravovaných aplikací pro iOS <!-- 1469920 -->
 Koncoví uživatelé, kteří mají nainstalovaný Managed Browser, teď můžou zobrazit stav správy všech aplikací publikovaných Microsoftem a posílat protokoly pro řešení problémů se spravovanými aplikacemi pro iOS.
 
-Informace o tom, jak na zařízení s iOSem povolit v Managed Browseru režim pro řešení problémů, najdete v tématu [Jak se dostat k protokolům spravovaných aplikací pomocí Managed Browseru na zařízení s iOSem](../apps/app-configuration-managed-browser.md).
+Informace o tom, jak na zařízení s iOSem povolit v Managed Browseru režim pro řešení problémů, najdete v tématu [Jak se dostat k protokolům spravovaných aplikací pomocí Managed Browseru na zařízení s iOSem](../apps/manage-microsoft-edge.md).
 
 #### <a name="improvements-to-device-setup-workflow-in-the-company-portal-for-ios-in-version-290---1417174---"></a>Vylepšení pracovního postupu instalace zařízení na Portálu společnosti pro iOS verze 2.9.0 <!-- 1417174 -->
 
@@ -4347,11 +4347,11 @@ Aplikace Offline zakoupené v Microsoft Storu pro firmy se teď budou synchroniz
 Aplikace Microsoft Teams pro iOS a Android je teď součástí schválených aplikací pro zásady podmíněného přístupu na základě aplikací pro Exchange a SharePoint Online. Aplikaci můžete nakonfigurovat pomocí okna Intune App Protection v Azure Portal pro všechny klienty, kteří aktuálně používají podmíněný přístup na základě aplikace.
 
 #### <a name="managed-browser-and-app-proxy-integration---1287310---"></a>Spravovaný prohlížeč (Managed Browser) a integrace proxy aplikace <!-- 1287310 -->
-Spravovaný prohlížeč Intune Managed Browser je nyní možné integrovat do služby Azure AD Application Proxy, což umožní uživatelům získat přístup k interním webům, i když pracují vzdáleně. Uživatelé prohlížeče jako obvykle zadají adresu URL webu a Managed Browser požadavek prostřednictvím webové brány proxy aplikace přesměruje. Další informace najdete v tématu [Správa přístupu k Internetu pomocí zásad spravovaného prohlížeče](../apps/app-configuration-managed-browser.md).
+Spravovaný prohlížeč Intune Managed Browser je nyní možné integrovat do služby Azure AD Application Proxy, což umožní uživatelům získat přístup k interním webům, i když pracují vzdáleně. Uživatelé prohlížeče jako obvykle zadají adresu URL webu a Managed Browser požadavek prostřednictvím webové brány proxy aplikace přesměruje. Další informace najdete v tématu [Správa přístupu k Internetu pomocí zásad spravovaného prohlížeče](../apps/manage-microsoft-edge.md).
 
 #### <a name="new-app-configuration-settings-for-the-intune-managed-browser---682951---"></a>Nová nastavení konfigurace aplikace pro Intune Managed Browser <!-- 682951 -->
 V této verzi jsme pro aplikaci Intune Managed Browser pro iOS a Android přidali další konfigurace. Pomocí zásad konfigurace aplikace nyní můžete prohlížeči nakonfigurovat výchozí domovskou stránku a záložky.
-Další informace najdete v tématu [Správa přístupu k internetu pomocí zásad spravovaného prohlížeče](../apps/app-configuration-managed-browser.md).
+Další informace najdete v tématu [Správa přístupu k internetu pomocí zásad spravovaného prohlížeče](../apps/manage-microsoft-edge.md).
 
 #### <a name="bitlocker-settings-for-windows-10----951707---"></a>Nastavení nástroje BitLocker pro Windows 10   <!-- 951707 -->
 Nyní můžete nastavení nástroje BitLocker konfigurovat pro zařízení s Windows 10 pomocí nového profilu zařízení Intune. Například můžete vyžadovat, aby se zařízení šifrovala, a také nakonfigurovat další nastavení, která se použijí při zapnutí nástroje BitLocker.
@@ -4364,7 +4364,7 @@ V této verzi jsme přidali nová nastavení pro profil omezení zařízení s�
 - Mobilní síť a připojení
 - Prostředí zamknuté obrazovky
 - Ochrana osobních údajů
-- Search
+- Hledat
 - Windows Spotlight
 - Prohlížeč Microsoft Edge
 
@@ -4438,10 +4438,10 @@ Další informace najdete v [Nastavení zásad ochrany aplikací pro iOS](../app
 Některé aplikace pro Android z obchodu podporují možnosti spravované konfigurace, které správci IT umožňují řídit, jak aplikace běží v pracovním profilu. S Intune teď můžete zobrazit konfigurace podporované aplikací a nakonfigurovat je z Azure Portalu pomocí návrháře konfigurace nebo editoru JSON. Další informace najdete v článku o [používání konfigurací aplikací pro Android for Work](../apps/app-configuration-policies-use-android.md).
 
 #### <a name="new-app-configuration-capability-for-mam-without-enrollment---677969---"></a>Nová možnost konfigurace aplikací pro MAM bez registrace <!-- 677969 -->
-Teď můžete vytvářet zásady konfigurace aplikací prostřednictvím MAM bez kanálu registrace. Tato funkce je ekvivalentní zásadám konfigurace aplikací dostupným v konfiguraci aplikací ve správě mobilních zařízení (MDM). Příklad konfigurace aplikací pomocí MAM bez registrace najdete v článku o [správě přístupu k internetu pomocí zásad Managed Browseru v Microsoft Intune](../apps/app-configuration-managed-browser.md).
+Teď můžete vytvářet zásady konfigurace aplikací prostřednictvím MAM bez kanálu registrace. Tato funkce je ekvivalentní zásadám konfigurace aplikací dostupným v konfiguraci aplikací ve správě mobilních zařízení (MDM). Příklad konfigurace aplikací pomocí MAM bez registrace najdete v článku o [správě přístupu k internetu pomocí zásad Managed Browseru v Microsoft Intune](../apps/manage-microsoft-edge.md).
 
 #### <a name="configure-allowed-and-blocked-url-lists-for-the-managed-browser---682960---"></a>Konfigurace seznamů povolených a blokovaných adres URL pro Managed Browser <!-- 682960 -->
-Teď můžete nakonfigurovat seznam povolených a blokovaných domén a adres URL pro Intune Managed Browser pomocí nastavení konfigurace aplikací na portálu Azure Portal. Tato nastavení jde nakonfigurovat bez ohledu na to, jestli se používá na spravovaném nebo nespravovaném zařízení. Další informace najdete v tématu [Správa přístupu k Internetu pomocí zásad spravovaného prohlížeče v Microsoft Intune](../apps/app-configuration-managed-browser.md).
+Teď můžete nakonfigurovat seznam povolených a blokovaných domén a adres URL pro Intune Managed Browser pomocí nastavení konfigurace aplikací na portálu Azure Portal. Tato nastavení jde nakonfigurovat bez ohledu na to, jestli se používá na spravovaném nebo nespravovaném zařízení. Další informace najdete v tématu [Správa přístupu k Internetu pomocí zásad spravovaného prohlížeče v Microsoft Intune](../apps/manage-microsoft-edge.md).
 
 #### <a name="app-protection-policy-helpdesk-view---1069473---"></a>Zobrazení zásad ochrany aplikací v helpdesku <!-- 1069473 -->
 Uživatelé IT Helpdesku teď můžou zkontrolovat stav licencí uživatelů a stav zásad ochrany aplikací přiřazených uživatelům v okně Řešení potíží. Podrobnosti najdete v tématu o [řešení potíží](./help-desk-operators.md).
