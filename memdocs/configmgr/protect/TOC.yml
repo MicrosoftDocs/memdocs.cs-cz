@@ -59,7 +59,7 @@
         - name: Zásady brány Windows Firewall
           href: deploy-use/create-windows-firewall-policies.md
         - name: Rozšířená ochrana před internetovými útoky v programu Microsoft Defender
-          href: deploy-use/windows-defender-advanced-threat-protection.md
+          href: deploy-use/defender-advanced-threat-protection.md
         - name: Vytvoření a nasazení zásad ochrany Exploit Guard
           href: deploy-use/create-deploy-exploit-guard-policy.md
         - name: Vytvoření a nasazení zásad ochrany Application Guard

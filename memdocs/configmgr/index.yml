@@ -3,12 +3,12 @@ title: Dokumentace k produktu Microsoft Endpoint Configuration Manager
 summary: 'Oficiální dokumentace k následujícím komponentám produktu Microsoft Endpoint Configuration Manager: Configuration Manager, spoluspráva a Desktop Analytics'
 metadata:
   ms.topic: hub-page
-  ms.openlocfilehash: f3251366204ef8954b87bcd630117f341844554b
-  ms.sourcegitcommit: 7f542c97ac55bbd329f5befda97d671213c24e9a
+  ms.openlocfilehash: 3c668312b27017fa499914cee74597aae0f19bba
+  ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
   ms.translationtype: HT
   ms.contentlocale: cs-CZ
-  ms.lasthandoff: 06/08/2020
-  ms.locfileid: "84506226"
+  ms.lasthandoff: 07/01/2020
+  ms.locfileid: "85590928"
 highlightedContent:
   items:
   - title: Novinky
@@ -173,11 +173,11 @@ conceptualContent:
       url: ./compliance/index.yml
   - title: Ochrana
     links:
-    - text: Windows Defender
+    - text: Ochrana koncového bodu
       url: ./protect/deploy-use/endpoint-protection.md
       itemType: overview
-    - text: WDATP
-      url: ./protect/deploy-use/windows-defender-advanced-threat-protection.md
+    - text: Rozšířená ochrana před internetovými útoky v programu Microsoft Defender
+      url: ./protect/deploy-use/defender-advanced-threat-protection.md
       itemType: how-to-guide
     - text: Správa nástroje BitLocker
       url: ./protect/plan-design/bitlocker-management.md
