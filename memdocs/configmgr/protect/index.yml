@@ -11,12 +11,12 @@ metadata:
   author: mestew
   ms.author: mstewart
   ms.date: 01/10/2020
-  ms.openlocfilehash: 44481f1b0fb304ed12a40d100352a9f7a6d8dd39
-  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.openlocfilehash: ec89ed51d43a04dff91f580cd3700e54f1a33984
+  ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
   ms.translationtype: HT
   ms.contentlocale: cs-CZ
-  ms.lasthandoff: 04/21/2020
-  ms.locfileid: "81741846"
+  ms.lasthandoff: 07/01/2020
+  ms.locfileid: "85590860"
 landingContent:
 - title: Správa nástroje BitLocker Drive Encryption (BDE)
   linkLists:
@@ -61,7 +61,7 @@ landingContent:
   - linkListType: how-to-guide
     links:
     - text: Zprovoznění Rozšířené ochrany před internetovými útoky v programu Microsoft Defender
-      url: deploy-use/windows-defender-advanced-threat-protection.md
+      url: deploy-use/defender-advanced-threat-protection.md
     - text: Řešení potíží s programem Windows Defender nebo klientem Endpoint Protection
       url: deploy-use/troubleshoot-endpoint-client.md
     - text: Správa antimalwarových zásad a nastavení brány firewall

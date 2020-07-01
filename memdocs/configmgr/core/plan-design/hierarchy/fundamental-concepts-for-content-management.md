@@ -10,12 +10,12 @@ ms.assetid: c201be2a-692c-4d67-ac95-0a3afa5320fe
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cb91e62c4ffce37068b2de5e125865e28ff8c53b
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: ffd6487297bb682ef9bda7c5bf5ee9cb3beede15
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83878958"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85590452"
 ---
 # <a name="fundamental-concepts-for-content-management-in-configuration-manager"></a>Základní koncepty správy obsahu v nástroji Configuration Manager
 
@@ -116,7 +116,7 @@ K porovnání hlavních funkcí těchto technologií použijte následující ta
 | Velikost mezipaměti ovládacího prvku na disku | Ano | Ano | Ano |
 | Zjišťování zdrojů partnerského vztahu | Ruční (nastavení klienta) | Automaticky | Automaticky |
 | Rovnocenné zjišťování | Přes bod správy používající skupiny hranic | DO cloudové služby | To |
-| Vytváření sestav | Řídicí panel zdrojů dat klienta | Řídicí panel zdrojů dat klienta | Řídicí panel zdrojů dat klienta |
+| Generování sestav | Řídicí panel zdrojů dat klienta | Řídicí panel zdrojů dat klienta | Řídicí panel zdrojů dat klienta |
 | Řízení využití sítě WAN | Skupiny hranic | DO GroupID | Pouze podsíť |
 | Podporovaný obsah | Veškerý obsah nástroje ConfigMgr | Aktualizace Windows, ovladače, aplikace pro Store | Veškerý obsah nástroje ConfigMgr |
 | Řízení pomocí zásad | Nastavení agenta klienta | Nastavení agenta klienta (částečně) | Nastavení agenta klienta |
@@ -147,7 +147,7 @@ Další informace najdete v tématu [Podpora služby Windows BranchCache](../con
 <!-- 1324696 -->
 Skupiny hranic Configuration Manager slouží k definování a regulaci distribuce obsahu napříč podnikovou sítí a vzdálenými pobočkami. [Optimalizace doručení Windows](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) je cloudová technologie peer-to-peer pro sdílení obsahu mezi zařízeními s Windows 10. Nakonfigurujte optimalizaci doručení pro použití skupin hranic při sdílení obsahu mezi partnerskými uzly. Nastavení klienta použije identifikátor skupiny hranic jako identifikátor skupiny Optimalizace doručení na klientovi. Když klient komunikuje s cloudovou službou Optimalizace doručení, používá tento identifikátor k vyhledání partnerských uzlů s obsahem. Další informace najdete v tématu Nastavení klienta [Optimalizace doručení](../../clients/deploy/about-client-settings.md#delivery-optimization) .
 
-Optimalizace doručování je doporučená technologie pro optimalizaci doručování aktualizací Windows 10 souborů Expresní instalace pro aktualizace kvality Windows 10. Configuration Manager počínaje verzí 1910 je DeliveryInternet přístup k cloudové službě optimalizace doručování, který je požadavkem na využití funkce peer-to-peer. Informace o potřebných koncových bodech internetu najdete v tématu [Nejčastější dotazy k optimalizaci doručení](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions). Optimalizaci lze použít pro všechny aktualizace systému Windows. Další informace najdete v tématu [optimalizace doručování aktualizací Windows 10](../../../sum/deploy-use/optimize-windows-10-update-delivery.md).
+Optimalizace doručování je doporučená technologie pro optimalizaci doručování aktualizací Windows 10 souborů Expresní instalace pro aktualizace kvality Windows 10. Počínaje verzí 1910 je internetový přístup k cloudové službě Optimalizace doručení k disConfiguration Manager požadavek na využití funkce peer-to-peer. Informace o potřebných koncových bodech internetu najdete v tématu [Nejčastější dotazy k optimalizaci doručení](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions). Optimalizaci lze použít pro všechny aktualizace systému Windows. Další informace najdete v tématu [optimalizace doručování aktualizací Windows 10](../../../sum/deploy-use/optimize-windows-10-update-delivery.md).
 
 
 ## <a name="microsoft-connected-cache"></a>Microsoft Connected Cache

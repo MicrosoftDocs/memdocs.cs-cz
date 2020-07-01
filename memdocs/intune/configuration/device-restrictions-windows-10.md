@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/22/2020
+ms.date: 06/30/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 96b547c50cda0ef623370bae20d347d4ccf1976b
-ms.sourcegitcommit: 79ffc8afed164c408db6994806d71f64d1fc0b8f
+ms.openlocfilehash: 6f4fd580a2e36a1cf7a29766c7a5e325e17fc528
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85216480"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85591064"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Nastavení zařízení s Windows 10 (a novějším) pro povolení nebo omezení funkcí pomocí Intune
 
@@ -30,6 +30,8 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
 
 > [!Note]
 > Ne všechny možnosti jsou k dispozici ve všech edicích systému Windows. Pokud chcete zobrazit podporované edice, přečtěte si téma [zásady CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider) (otevře se další web společnosti Microsoft).
+>  
+> Nejbezpečnější nastavení v profilu omezení pro zařízení s Windows 10 se nasazují na úrovni zařízení. Zásady, které se nasazují do skupin uživatelů, začnou platit pro cílového uživatele i všechny další uživatele, kteří se následně přihlásí k tomuto zařízení a mají licenci Intune.
 
 ## <a name="before-you-begin"></a>Než začnete
 
@@ -675,7 +677,7 @@ Tato nastavení používají [zprostředkovatele CSP zásad WirelessDisplay](htt
 
   [CSP pro System/TelemetryProxy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-system#system-telemetryproxy)
 
-## <a name="search"></a>Search
+## <a name="search"></a>Hledat
 
 Tato nastavení používají [CSP v zásadách hledání](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-search), ve kterém jsou uvedeny také podporované edice systému Windows.
 

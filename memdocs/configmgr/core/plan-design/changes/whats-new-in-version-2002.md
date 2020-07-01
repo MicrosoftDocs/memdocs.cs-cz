@@ -10,12 +10,12 @@ ms.assetid: de718cdc-d0a9-47e2-9c99-8fa2cb25b5f8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 4100f8747418bff769a7830fa63383ce545895ce
-ms.sourcegitcommit: 5f15a3abf33ce7bfd6855ffeef2ec3cd4cd48a7f
+ms.openlocfilehash: 58819d764f69ab7e1cc928e14189e01470deb73b
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84721852"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85590435"
 ---
 # <a name="whats-new-in-version-2002-of-configuration-manager-current-branch"></a>Co je nového ve verzi 2002 Configuration Manager Current Branch
 
@@ -325,9 +325,9 @@ Další informace najdete v tématu [synchronizace aktualizací Office 365 z odp
 ## <a name="protection"></a><a name="bkmk_protect"></a>Antivirový
 
 ### <a name="expand-microsoft-defender-advanced-threat-protection-atp-onboarding"></a>Rozbalit registraci v programu Microsoft Defender Advanced Threat Protection (ATP)
-
+ 
 <!-- 5229962 -->
-Configuration Manager rozšířila podporu pro zařízení s připojováním do ochrany ATP v programu Microsoft Defender. Další informace najdete v tématu [Rozšířená ochrana před internetovými útoky v programu Microsoft Defender](../../../protect/deploy-use/windows-defender-advanced-threat-protection.md#onboard-devices).
+Configuration Manager rozšířila podporu pro zařízení s připojováním do ochrany ATP v programu Microsoft Defender. Další informace najdete v tématu [Rozšířená ochrana před internetovými útoky v programu Microsoft Defender](../../../protect/deploy-use/defender-advanced-threat-protection.md).
 
 ### <a name="onboard-configuration-manager-clients-to-microsoft-defender-atp-via-the-microsoft-endpoint-manager-admin-center"></a><a name="bkmk_atp"></a>Připojení klientů Configuration Manager k ochraně ATP v programu Microsoft Defender prostřednictvím centra pro správu Microsoft Endpoint Manageru
 <!--5691658-->

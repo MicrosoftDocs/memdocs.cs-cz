@@ -10,12 +10,12 @@ ms.assetid: 76c90f64-d729-456b-8304-01852cd66fb6
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 5bdfd566682156e39e1dbed7c55af85b20a78671
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 0a7ee54e3bfa4a4231d0d57b48caa49cf9869b76
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906683"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85591098"
 ---
 # <a name="endpoint-protection"></a>Funkce Endpoint Protection
 
@@ -80,7 +80,7 @@ Od počítačů s Windows 10 a Windows Server 2016 už je Windows Defender nains
 
 ## <a name="microsoft-defender-advanced-threat-protection"></a>Rozšířená ochrana před internetovými útoky v programu Microsoft Defender
 
-Endpoint Protection spravuje a monitoruje program Microsoft Defender Advanced Threat Protection (ATP), dříve označovaný jako ochrana ATP v programu Windows Defender. Služba ATP v programu Microsoft Defender pomáhá podnikům zjišťovat, zkoumat a reagovat na pokročilé útoky v podnikové síti. Další informace najdete v tématu [Rozšířená ochrana před internetovými útoky v programu Microsoft Defender](windows-defender-advanced-threat-protection.md).
+Endpoint Protection spravuje a monitoruje program Microsoft Defender Advanced Threat Protection (ATP), dříve označovaný jako ochrana ATP v programu Windows Defender. Služba ATP v programu Microsoft Defender pomáhá podnikům zjišťovat, zkoumat a reagovat na pokročilé útoky v podnikové síti. Další informace najdete v tématu [Rozšířená ochrana před internetovými útoky v programu Microsoft Defender](defender-advanced-threat-protection.md).
 
 ## <a name="endpoint-protection-workflow"></a>Pracovní postup aplikace Endpoint Protection  
  Následující diagram vám pomůže pochopit pracovní postup, který implementuje Endpoint Protection ve vaší Configuration Manager hierarchii.  

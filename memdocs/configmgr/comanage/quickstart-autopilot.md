@@ -10,12 +10,12 @@ ms.assetid: e3e3c97f-5945-49ab-a622-9f6fe6b9737e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b97f9bb6be00129e0b88dc3943af1de166a801d4
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 91b938b5ab64616a35773406cd18b54de80b40e7
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81711284"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85590408"
 ---
 # <a name="windows-autopilot-with-co-management"></a>Windows Autopilot se spolusprávou
 
@@ -77,9 +77,9 @@ Pomocí automatického pilotního nasazení teď můžete poskytnout bezplatná 
 
 ## <a name="case-study"></a>Případová studie
 
-Německý logistická a železniční dopravní společnost Shenker používá k zvýšení produktivity zaměstnanců a uvolnění IT týmů, aby na každodenních úkolech podpory pracovali. Shenker se přesunul z tradičního vytváření obrazu a nahradil ho pomocí zřizování přes Cloud. Nyní používají Azure AD – připojení a Intune, aby bylo možné rychle začít pracovat s novými zařízeními. 
+Německý logistická a železniční dopravní společnost Schenker používá k zvýšení produktivity zaměstnanců a uvolnění IT týmů, aby na každodenních úkolech podpory pracovali. DATABÁZE Schenker se přesunula z tradičních imagí a nahradila ji prostřednictvím zřizování přes Cloud. Nyní používají Azure AD – připojení a Intune, aby bylo možné rychle začít pracovat s novými zařízeními. 
 
-Místo toho, aby se jejich vzdálení zaměstnanci nemuseli cestovat do umístění se službami IT, teď Shenker používá autopilot Windows autopilot. Dodávají své pracovníky hardwaru přímo od výrobce do své místní kanceláře. Pracovní proces připojí nové zařízení k Internetu a přihlásí se pomocí svých přihlašovacích údajů Azure AD. Zařízení se pak připojí k aplikacím a službám, které Schenker IT oddělení přiřadí k individuálnímu profilu uživatele.
+Místo toho, aby se jejich vzdálené pracovní procesy vyčistily do umístění se službami IT, používá DB Schenker nyní Windows autopiloting. Dodávají své pracovníky hardwaru přímo od výrobce do své místní kanceláře. Pracovní proces připojí nové zařízení k Internetu a přihlásí se pomocí svých přihlašovacích údajů Azure AD. Zařízení se pak připojí k aplikacím a službám, které Schenker IT oddělení DB přiřadí k individuálnímu profilu uživatele.
 
 Další informace najdete v tématu [globální logistická jednotka, která je v ní zaměstnanci s moderními digitálními pracovišti](https://customers.microsoft.com/story/db-schenker-travel-transportation-windows-10).
 
@@ -93,7 +93,7 @@ Vytvořte si ve své organizaci uspokojivý zážitek tím, že vytvoříte lep�
 
 ## <a name="configure"></a>Konfigurace
 
-Další informace najdete v těchto článcích:
+Další informace najdete v následujících článcích:
 
 [Vytváření profilů Windows autopilotu pomocí Intune](https://docs.microsoft.com/intune/enrollment-autopilot)
 

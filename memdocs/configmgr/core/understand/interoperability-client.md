@@ -10,12 +10,12 @@ ms.assetid: 600086d5-bd9e-4ac1-8ace-c7a62de80dc2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 61296321251be45cfa0449a3e4f21ba79a024753
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 78e89307e66107b259d818a84fa4dbca878a843c
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81722778"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85590894"
 ---
 # <a name="use-the-configuration-manager-client-software-for-extended-interoperability-with-future-versions-of-a-current-branch-site"></a>Použití Configuration Manager klientského softwaru pro rozšířenou interoperabilitu s budoucími verzemi Current Branch lokality
 
@@ -48,8 +48,10 @@ Naplánujte aktualizaci rozšířeného klienta interoperability na zařízeníc
 
 1. Získejte podporovanou verzi EIC ze `\SMSSETUP\Client` složky instalačního média aktualizace Configuration Manager. Ujistěte se, že kopírujete celý obsah složky.  
 
-    > [!TIP]  
-    > Chcete-li najít Configuration Manager média na webu [Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx) (VLSC), klikněte na kartu **soubory ke stažení a klíče** , vyhledejte `System Center Config`a vyberte možnost **System Center Configuration správce (aktuální větev)**.
+<!--
+    > [!TIP]
+    > To find Configuration Manager media in the [Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx) (VLSC), go to the **Downloads and Keys** tab, and search for **Microsoft Endpoint Configmgr (current branch)**.
+-->
 
 1. Ručně nainstalujte EIC do těchto zařízení. Další informace najdete v tématu [Ruční instalace klienta](../clients/deploy/deploy-clients-to-windows-computers.md#BKMK_Manual).  
 

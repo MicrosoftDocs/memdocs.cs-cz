@@ -10,12 +10,12 @@ ms.assetid: a1f099f1-e9b5-4189-88b3-f53e3b4e4add
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b38b0c8f28645fa0aae66058b0c93bd8beffc470
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: f79829b7cd6ec70764a20fb05f4438176c41b470
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078477"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85591030"
 ---
 # <a name="manage-task-sequences-to-automate-tasks"></a>Správa pořadí úkolů pro automatizaci úloh
 
@@ -190,7 +190,8 @@ Když se pořadí úkolů spustí, ve většině případů zaznamenává aktuá
 
 <!-- 5554928 -->
 
-Pro zajištění vysokého výkonu je potřeba vytvořit nové nasazení pořadí úloh a povolit nebo zakázat toto nastavení. Nové nastavení se zobrazí ve stávajících nasazeních, ale nevztahuje se na něj.<!-- SCCMDocs#2107 -->
+Při změně nastavení ve vlastnostech pořadí úloh se obvykle aktualizují všechna existující nasazení. Když změníte toto nastavení výkonu ve vlastnostech pořadí úloh, nebude to mít vliv na žádná existující nasazení pořadí úkolů. Chcete-li povolit nebo zakázat toto nastavení pro zajištění vysokého výkonu, vytvořte nové nasazení pořadí úloh.
+<!-- MEMDocs#437, SCCMDocs#2107 -->
 
 ## <a name="distribute-referenced-content"></a><a name="BKMK_DistributeTS"></a>Distribuovat odkazovaný obsah  
 
@@ -313,7 +314,7 @@ Pořadí úkolů můžete spravovat pomocí dalších akcí, když vyberete poř
 
 Další informace najdete v tématu [použití editoru pořadí úloh](../understand/task-sequence-editor.md#bkmk_edit).
 
-### <a name="enable"></a>Povolení
+### <a name="enable"></a>Povolit
 
 Povolí pořadí úkolů, aby je klienti mohli spustit. Pořadí úkolů nemusíte po jeho povolení znovu nasazovat.  
 
@@ -331,7 +332,7 @@ Zhotoví kopii vybraného pořadí úloh. Tato akce je užitečná pro vytvořen
 
 Když zhotovíte kopii pořadí úkolů ve složce, kopie je uvedena v této složce do doby, než aktualizujete uzel pořadí úkolů. Po aktualizování se kopie objeví v kořenové složce.  
 
-### <a name="refresh"></a>Obnovení
+### <a name="refresh"></a>Aktualizovat
 
 Aktualizuje podrobnosti pro vybrané pořadí úkolů.
 
@@ -343,7 +344,7 @@ Odstraní vybrané pořadí úkolů.
 
 Další informace najdete v tématu [Vytvoření dvoufázové nasazení](create-phased-deployment-for-task-sequence.md).
 
-### <a name="deploy"></a>Nasazení
+### <a name="deploy"></a>Nasadit
 
 Další informace naleznete v části [Deploy a task sequence](deploy-a-task-sequence.md).
 

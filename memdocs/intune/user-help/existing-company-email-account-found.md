@@ -1,11 +1,11 @@
 ---
-title: Našel se existující e-mailový účet společnosti | Dokumentace Microsoftu
-description: Popisuje postup instalace aktualizací do zařízení tak, abyste znovu měli přístup ke svému pracovnímu nebo školnímu e-mailu.
+title: Našel se stávající pracovní e-mailový účet | Microsoft Docs
+description: Popisuje, jak aktualizovat zařízení, abyste mohli znovu získat přístup k pracovnímu nebo školnímu e-mailu.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 12/17/2018
+ms.date: 06/29/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,29 +15,28 @@ ms.assetid: 74c51f7b-7bd8-45cf-99bd-02d1972267cb
 searchScope:
 - User help
 ROBOTS: ''
-ms.reviewer: chrisgre
+ms.reviewer: samyada
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: c6917c2ad2650ae093293ba172934661a4f9863f
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 78beb08555a9c276bec79a65bb10bb9dad816926
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881277"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85590979"
 ---
-# <a name="an-existing-company-email-account-was-found"></a>Našel se existující e-mailový účet společnosti
+# <a name="an-existing-email-account-was-found"></a>Našel se stávající e-mailový účet.
 
-Mohli jste mít přístup k vašemu pracovnímu nebo školnímu e-mailovému *účtu, abyste mohli zařízení* spravovat. Pokud je vaše zařízení teď spravované, doporučujeme vám:
+Pokud jste na svém zařízení nastavili pracovní e-mail před registrací, může vaše organizace vyžadovat její odebrání. 
 
-* Odpojte stávající pracovní e-mailový účet od svého zařízení.
-* Opětovná synchronizace nastavení zařízení z aplikace Portál společnosti.  
+Díky tomu může vaše organizace nastavit si e-mailový profil, který splňuje požadavky na síť a zabezpečení. Po odpojení budete muset zařízení synchronizovat a znovu získáte přístup k e-mailu. 
 
-Tento postup zajistí, že vaše zařízení bude splňovat požadavky na zabezpečení vaší společnosti a že vaše e-maily zůstanou zabezpečené.
+Provedením následujících kroků odpojíte existující účet a aktualizujete nastavení zařízení. Pokud tento postup nedokončíte, můžete ztratit nebo mít omezený mobilní přístup k vašemu pracovnímu účtu.
 
-1. V zařízení klikněte na **Nastavení** a Najděte připojené účty. V zařízení se systémem iOS 11 + vyberte například možnost **heslo & účty**.
+1. V zařízení klikněte na **Nastavení** a Najděte připojené účty. V zařízení se systémem iOS 11 + můžete například vybrat možnost **heslo & účty**.
  
-2. Vyberte a odstraňte pracovní e-mailový účet.
+2. Vyberte a odeberte účet, který jste připojili k pracovnímu e-mailu. 
 
 3. Na svém zařízení otevřete aplikaci Portál společnosti.  
 
@@ -45,6 +44,8 @@ Tento postup zajistí, že vaše zařízení bude splňovat požadavky na zabezp
 
 5. Vyberte možnost **kontrolovat nastavení**. Během chvilky bude vaše zařízení synchronizovat vaše nové nastavení e-mailu.
 
-6. Přihlaste se ke svému pracovnímu nebo školnímu e-mailovému účtu.
+6. Přihlaste se ke svému e-mailovému účtu. 
+
+## <a name="next-steps"></a>Další kroky
 
 Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Jeho kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).

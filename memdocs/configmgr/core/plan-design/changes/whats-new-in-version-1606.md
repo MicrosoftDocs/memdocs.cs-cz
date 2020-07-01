@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 4298a6a66d60d79d05f8b5cdc9ff8caa0e7f4426
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 070c616ed8411bcd90b2d3edb12b04edd57241e1
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82074023"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85590469"
 ---
 # <a name="what39s-new-in-version-1606-of-configuration-manager"></a>Co&#39;s novinkou ve verzi 1606 Configuration Manager
 
@@ -24,7 +24,7 @@ ms.locfileid: "82074023"
 
 Aktualizace 1606 pro Configuration Manager je k dispozici jako aktualizace konzoly pro dříve nainstalované lokality, na kterých běží verze 1511 nebo 1602. Verze 1511 je počáteční základní verze, kterou použijete k instalaci nových lokalit Configuration Manager.
 > [!TIP]  
-> Další informace:  
+> Přečtěte si další informace:  
 >   
 > - [Instalace nových lokalit](../../servers/deploy/install/prepare-to-install-sites.md) (pomocí základní verze, jako je 1511)  
 > - [Instalace aktualizací v lokalitách](../../servers/manage/updates.md) (například aktualizace 1602 nebo 1606)  
@@ -198,7 +198,7 @@ Nástroj Configuration Manager vám může pomoci se správou zámku aktivace dv
 
 Endpoint Protection může pomáhat spravovat a monitorovat rozšířenou ochranu před internetovými útoky v programu Microsoft Defender (ATP). Microsoft Defender ATP je nová služba, která podnikům pomůže odhalit, prozkoumat a reagovat na pokročilé útoky v jejich sítích. Zásady Configuration Manager vám můžou pomáhat s připojováním a monitorováním spravovaných počítačů se systémem Windows 10 verze 1607 (Build 14328) nebo novějším.
 
-Podrobnosti najdete v tématu [Rozšířená ochrana před internetovými útoky v programu Microsoft Defender](../../../protect/deploy-use/windows-defender-advanced-threat-protection.md).
+Podrobnosti najdete v tématu [Rozšířená ochrana před internetovými útoky v programu Microsoft Defender](../../../protect/deploy-use/defender-advanced-threat-protection.md).
 
 ### <a name="device-categories"></a>Kategorie zařízení
 Můžete vytvořit kategorie zařízení, které se dají použít k automatickému umísťování zařízení do kolekcí zařízení, když používáte Configuration Manager s Microsoft Intune. Uživatelé pak při registraci zařízení v Intune potřebují zvolit kategorii zařízení. Kategorii zařízení můžete také změnit z konzoly Configuration Manager.

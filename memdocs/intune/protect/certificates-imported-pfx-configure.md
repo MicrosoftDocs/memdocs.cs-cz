@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/20/2020
+ms.date: 06/29/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 13824c82b426e1efb00dce2db7c9f4a2dd5bb9ee
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 9bf55564cabce9a060c15100ad974c59bf858b15
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990332"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85591115"
 ---
 # <a name="configure-and-use-imported-pkcs-certificates-with-intune"></a>Konfigurace a používání importovaných certifikátů PKCS pomocí Intune
 
@@ -47,7 +47,7 @@ Intune podporuje import certifikátů PFX pro následující platformy:
 - Android Enterprise – pracovní profil
 - iOS/iPadOS
 - macOS
-- Windows 10
+- Windows 10
 
 ## <a name="requirements"></a>Požadavky
 
@@ -95,7 +95,7 @@ Když použijete Intune k nasazení **importovaného certifikátu PFX** pro uži
 
 3. Postupujte podle pokynů ke stažení *Certificate Connectoru PFX pro Microsoft Intune* do umístění, které je přístupné ze serveru, na který budete konektor instalovat.
 
-4. Po dokončení stahování se přihlaste k serveru a spusťte instalační program (PfxCertificateConnectorBootstrapper. exe).  
+4. Po dokončení stahování se přihlaste k serveru a spusťte instalační program (PfxCertificateConnectorBootstrapper.exe).  
    - Když přijmete výchozí umístění instalace, konektor se nainstaluje do `Program Files\Microsoft Intune\PFXCertificateConnector` .
    - Služba konektoru běží pod místním systémovým účtem. Pokud je pro přístup k Internetu vyžadován proxy server, ověřte, že účet místní služby má přístup k nastavení proxy serveru.
 
@@ -271,6 +271,12 @@ Následující partneři poskytují podporované metody nebo nástroje, které m
 Pokud používáte službu DigiCert PKI, můžete k importu certifikátů PFX do Intune použít **Nástroj pro import DigiCert pro certifikáty Intune S/MIME** . Použití tohoto nástroje nahrazuje pokyny v části [Import certifikátů PFX do Intune](#import-pfx-certificates-to-intune) , které jsou popsané dříve v tomto článku.
 
 Další informace o nástroji pro import DigiCert, včetně toho, jak tento nástroj získat, najdete https://knowledge.digicert.com/tutorials/microsoft-intune.html v článku znalostní báze DigiCert.
+
+### <a name="keytalk"></a>Rozhovor
+
+Pokud používáte službu pohovorů, můžete nakonfigurovat jejich službu pro import certifikátů PFX do Intune. Po dokončení integrace nebudete muset postupovat podle pokynů v části [Import certifikátů PFX do Intune](#import-pfx-certificates-to-intune) do Intune, který je podrobně popsaný výše v tomto článku.
+
+Další informace o integraci služby v rámci služby Intune najdete https://keytalk.com/support v článku znalostní báze s informacemi o promluvě.
 
 ## <a name="next-steps"></a>Další kroky
 

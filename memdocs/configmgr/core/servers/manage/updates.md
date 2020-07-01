@@ -2,7 +2,7 @@
 title: Aktualizace a údržba
 titleSuffix: Configuration Manager
 description: Seznamte se s konzolovou metodou služby nazvanou aktualizace a údržba, která usnadňuje vyhledání a instalaci doporučených aktualizací.
-ms.date: 04/15/2020
+ms.date: 06/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 3a832943-580a-4a40-b454-961d0854ac2b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: ffee9d851f00bcac5ed7ba562bdc9db8e0fa2767
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 4f92d95b4e1cc814db72b45cfb92cb989b7767c8
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82903943"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85591013"
 ---
 # <a name="updates-and-servicing-for-configuration-manager"></a>Aktualizace a údržba pro Configuration Manager
 
@@ -73,11 +73,11 @@ Následující podporované verze Configuration Manager jsou aktuálně k dispoz
 > [!Note]  
 > <sup>**Poznámka 1:**</sup> Základní médium je k dispozici jako součást následujících vydání na [službě Volume License Service Center](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx) (VLSC):
 >
-> - Správce konfigurace softwaru System Center (aktuální větev)
-> - System Center 2016 Datacenter
-> - System Center 2016 Standard  
+> - Microsoft Endpoint ConfigMgr (aktuální větev)
+> - System Center Datacenter
+> - System Center Standard  
 >
-> Vyhledejte například VLSC pro `System Center Config Mgr (current branch)` . V seznamu souborů Najděte základní médium a Stáhněte si ho pro tuto verzi.  
+> Vyhledejte například VLSC pro `Microsoft Endpoint Configmgr (current branch)` . V seznamu souborů Najděte základní médium a Stáhněte si ho pro tuto verzi.  
 
 #### <a name="historical-versions"></a>Historické verze
 

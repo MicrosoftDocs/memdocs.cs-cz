@@ -11,17 +11,21 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 1c79db413f8e37424b84d98d51fb584d168e3819
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 96a014f4919480854b57bae82e982ce783f5f59b
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268925"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85590962"
 ---
 # <a name="updates-in-desktop-analytics"></a>Aktualizace v Desktop Analytics
 
 Na portálu Desktop Analytics si prohlédněte stav aktualizací zabezpečení a funkcí. Vyberte tyto uzly ve skupině monitorování v hlavní nabídce nástroje Desktop Analytics. Tyto uzly vám poskytnou přehled o stavu těchto aktualizací ve vašem prostředí.
 
+<!--7362999-->
+
+> [!IMPORTANT]
+> Desktop Analytics zobrazuje stav aktualizace zabezpečení a funkcí u zařízení s komerčním ID přidruženým k pracovnímu prostoru Desktop Analytics. K tomuto chování dochází bez ohledu na to, jestli jste zařízení zaregistrovali Configuration Manager. Celkový počet zařízení v těchto dlaždicích nemusí odpovídat počtu zaregistrovaných zařízení v [**připojených službách**](monitor-connection-health.md#commercial-id-configuration).
 
 ## <a name="security-updates"></a>Aktualizace zabezpečení
 

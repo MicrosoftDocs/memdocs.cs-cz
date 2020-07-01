@@ -9,12 +9,12 @@ ms.assetid: 7610bbd3-a67f-4a09-8115-e35d40d43b42
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 720b5060c913ff3157624c4b6060802af396d221
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 2c733ef03482ddfc1f3e6502d7f5fe8ae0d20b76
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81722169"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85590503"
 ---
 # <a name="planning-for-endpoint-protection-in-configuration-manager"></a>Plánování pro Endpoint Protection v Configuration Manager
 
@@ -81,7 +81,7 @@ Endpoint Protection v Configuration Manager umožňuje vytvářet antimalwarové
 
 ## <a name="microsoft-defender-advanced-threat-protection"></a>Rozšířená ochrana před internetovými útoky v programu Microsoft Defender
 
-Počínaje verzí 1606 Configuration Manager (Current Branch) může Endpoint Protection spravovat a monitorovat rozšířenou ochranu před internetovými útoky v programu Microsoft Defender, dříve označované jako ochrana ATP v programu Windows Defender. Microsoft Defender ATP je služba, která podnikům pomůže odhalit, prozkoumat a reagovat na pokročilé útoky v jejich sítích. Viz [Rozšířená ochrana před internetovými útoky v programu Microsoft Defender](../deploy-use/windows-defender-advanced-threat-protection.md).
+Počínaje verzí 1606 Configuration Manager (Current Branch) může Endpoint Protection spravovat a monitorovat rozšířenou ochranu před internetovými útoky v programu Microsoft Defender, dříve označované jako ochrana ATP v programu Windows Defender. Microsoft Defender ATP je služba, která podnikům pomůže odhalit, prozkoumat a reagovat na pokročilé útoky v jejich sítích. Viz [Rozšířená ochrana před internetovými útoky v programu Microsoft Defender](../deploy-use/defender-advanced-threat-protection.md).
 
 ## <a name="endpoint-protection-workflow"></a>Pracovní postup aplikace Endpoint Protection  
  Následující diagram vám pomůže pochopit pracovní postup, který implementuje Endpoint Protection ve vaší Configuration Manager hierarchii.  
