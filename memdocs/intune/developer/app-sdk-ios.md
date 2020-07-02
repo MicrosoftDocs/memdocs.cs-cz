@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b34235f5e8a2badd61e39f43f8a5cc724f64dbd9
-ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
+ms.openlocfilehash: 60147f6b54ce608183914e00b65317abe0a580b6
+ms.sourcegitcommit: 2c5fd7c8603b88b753765f3cc298d0a0bacaf521
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85383270"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85820031"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Microsoft Intune App SDK pro iOS – Příručka pro vývojáře
 
@@ -120,22 +120,22 @@ Pokud chcete povolit sadu Intune App SDK, postupujte takto:
      ![Intune App SDK iOS: kopírování prostředků sady](./media/app-sdk-ios/intune-app-sdk-ios-copy-bundle-resources.png)
          
 2. Do projektu přidejte tyto modely iOS:  
--  MessageUI.framework  
--  Security.framework  
--  CoreServices. Framework  
--  SystemConfiguration.framework  
--  libsqlite3.tbd  
--  libc++.tbd  
--  ImageIO.framework  
--  LocalAuthentication.framework  
--  AudioToolbox.framework  
--  QuartzCore.framework  
--  WebKit.framework
+   -  MessageUI.framework  
+   -  Security.framework  
+   -  CoreServices. Framework  
+   -  SystemConfiguration.framework  
+   -  libsqlite3.tbd  
+   -  libc++.tbd  
+   -  ImageIO.framework  
+   -  LocalAuthentication.framework  
+   -  AudioToolbox.framework  
+   -  QuartzCore.framework  
+   -  WebKit.framework
 
 3. Povolte sdílení řetězce klíčů (pokud ještě není povolené) tak, že v každém cíli projektu kliknete na **Možnosti** a zapnete přepínač **Sdílení řetězce klíčů**. Sdílení řetězce klíčů se vyžaduje pro přechod k dalšímu kroku.
 
    > [!NOTE]
-   > Profil zřizování musí podporovat nové hodnoty sdílení řetězce klíčů. Přístupové skupiny pro řetězce klíčů by měly podporovat zástupné znaky. Můžete to zjistit tak, že otevřete soubor. mobileprovision v textovém editoru, vyhledáte klíčová slova pro **přístup do klíčů**a ověříte, že máte zástupný znak. Například:
+   > Profil zřizování musí podporovat nové hodnoty sdílení řetězce klíčů. Přístupové skupiny pro řetězce klíčů by měly podporovat zástupné znaky. Můžete to zjistit tak, že otevřete soubor. mobileprovision v textovém editoru, vyhledáte klíčová slova pro **přístup do klíčů**a ověříte, že máte zástupný znak. Příklad:
    >
    >  ```xml
    >  <key>keychain-access-groups</key>
@@ -154,7 +154,7 @@ Pokud chcete povolit sadu Intune App SDK, postupujte takto:
     
       ![Intune App SDK iOS: sdílení řetězců klíčů](./media/app-sdk-ios/intune-app-sdk-ios-keychain-sharing.png)
     
-    d. Pokud přímo upravujete soubor nároků a nepoužíváte k vytvoření přístupové skupiny pro řetězce klíčů výše popsané uživatelské rozhraní Xcode, dejte na začátek přístupové skupiny pro řetězce klíčů předponu `$(AppIdentifierPrefix)` (Xcode to dělá automaticky). Například:
+    d. Pokud přímo upravujete soubor nároků a nepoužíváte k vytvoření přístupové skupiny pro řetězce klíčů výše popsané uživatelské rozhraní Xcode, dejte na začátek přístupové skupiny pro řetězce klíčů předponu `$(AppIdentifierPrefix)` (Xcode to dělá automaticky). Příklad:
     
       - `$(AppIdentifierPrefix)com.microsoft.intune.mam`
       - `$(AppIdentifierPrefix)com.microsoft.adalcache`
@@ -464,7 +464,7 @@ Z návratové hodnoty této metody sada SDK pozná, jestli požadované restarto
 
 Sada Intune App SDK má několik rozhraní API, které můžete volat, abyste získali informace o zásadách Intune APP nasazených do aplikace. Pomocí těchto dat můžete přizpůsobit chování aplikace. Následující tabulka poskytuje informace o některých základních třídách Intune, které budete používat.
 
-Třída | Description
+Třída | Popis
 ----- | -----------
 IntuneMAMPolicyManager.h | Třída IntuneMAMPolicyManager zveřejňuje zásady Intune APP nasazené do aplikace. Zveřejňuje zejména rozhraní API, která slouží k [povolení více identit](app-sdk-ios.md#enable-multi-identity-optional). |
 IntuneMAMPolicy.h | Třída IntuneMAMPolicy zveřejňuje některá nastavení zásad MAM, která se týkají aplikace. Tato nastavení zásad se zveřejňují, aby aplikace mohla přizpůsobit svoje uživatelské rozhraní. Většinu nastavení zásad vynucuje sada SDK, nikoli aplikace. Jediné nastavení, které by aplikace měla implementovat, je ovládací prvek Uložit jako. Tato třída zveřejňuje některá rozhraní API, která jsou nezbytná k implementaci ovládacího prvku Uložit jako. |
@@ -496,13 +496,14 @@ Rozhraní API `isSaveToAllowedForLocation` poskytuje konstanty ke kontrole, jest
 * IntuneMAMSaveLocationOneDriveForBusiness
 * IntuneMAMSaveLocationSharePoint
 * IntuneMAMSaveLocationLocalDrive
+* IntuneMAMSaveLocationCameraRoll
 * IntuneMAMSaveLocationAccountDocument
 
 Aplikace by měly konstanty v `isSaveToAllowedForLocation` používat k zjištění, jestli je možné data ukládat do umístění považovaných za „spravovaná“, jako je OneDrive pro firmy, nebo za „osobní“. Kromě toho by se mělo rozhraní API použít, když aplikace není schopná zjistit, jestli je umístění „spravované“, nebo „osobní“.
 
-Konstanta `IntuneMAMSaveLocationLocalDrive` by se měla použít, když aplikace ukládá data do jakéhokoli umístění na místním zařízení.
+Konstanta `IntuneMAMSaveLocationLocalDrive` by se měla použít, když aplikace ukládá data do jakéhokoli umístění na místním zařízení. Podobně by se `IntuneMAMSaveLocationCameraRoll` měla použít konstanta, pokud aplikace ukládá fotografii do snímku kamery.
 
-Pokud není účet pro cílové umístění známý, `nil` měl by být předán. `IntuneMAMSaveLocationLocalDrive`Umístění by mělo být vždy spárováno s `nil` účtem.
+Pokud není účet pro cílové umístění známý, `nil` měl by být předán. `IntuneMAMSaveLocationLocalDrive`Umístění a `IntuneMAMSaveLocationCameraRoll` by měly vždy být párovány s `nil` účtem.
 
 ### <a name="supported-open-locations"></a>Podporovaná otevřená umístění
 
@@ -545,7 +546,7 @@ Od verze 8.0.2 může sada Intune App SDK filtrovat akce `UIActivityViewControll
 
 Při sdílení dokumentů přes `UIActivityViewController` a `UIDocumentInteractionController` iOS se zobrazí akce kopírovat do pro každou aplikaci, která podporuje otevření sdíleného dokumentu. Aplikace deklarují podporované typů dokumentů prostřednictvím nastavení `CFBundleDocumentTypes` ve svém souboru Info.plist. Pokud zásady zakazují sdílení s nespravovanými aplikacemi, nebude už tento typ sdílení k dispozici. Místo toho bude potřeba přidat do aplikace rozšíření akce, které se nevztahuje k uživatelskému rozhraní, a propojit ho se sadou Intune App SDK. Rozšíření akce je jenom zástupná procedura. Sada SDK implementuje chování sdílení souborů. Postupujte následovně:
 
-1. Vaše aplikace musí mít alespoň jednu schemeURL definovanou v souboru info. plist `CFBundleURLTypes` společně se svým `-intunemam` protějškem. Například:
+1. Vaše aplikace musí mít alespoň jednu schemeURL definovanou v souboru info. plist `CFBundleURLTypes` společně se svým `-intunemam` protějškem. Příklad:
     ```objc
     <key>CFBundleURLSchemes</key>
     <array>
