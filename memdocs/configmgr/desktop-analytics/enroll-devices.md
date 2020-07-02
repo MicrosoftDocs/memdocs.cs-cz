@@ -2,7 +2,7 @@
 title: Registrace zařízení v Desktop Analytics
 titleSuffix: Configuration Manager
 description: Naučte se registrovat zařízení v Desktop Analytics.
-ms.date: 04/15/2020
+ms.date: 07/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 22b5461df3a560449316009471ea029967118f5d
-ms.sourcegitcommit: 97fbb7db14b0c4049c0fe3a36ee16a5c0cf3407a
+ms.openlocfilehash: 8f3a2cfd2cb18d6247c35ae46efab2ab9f89b254
+ms.sourcegitcommit: 2c5fd7c8603b88b753765f3cc298d0a0bacaf521
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83864887"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85819997"
 ---
 # <a name="how-to-enroll-devices-in-desktop-analytics"></a>Jak zaregistrovat zařízení v Desktop Analytics
 
@@ -36,6 +36,7 @@ V následující tabulce jsou uvedeny aktualizace pro jednotlivé komponenty v p
 
 | Verze operačního systému | Ohodnocovatel | DiagTrack |
 | --------------| ----------------------- | -------------------|
+| Systém Windows 10 2004 | Zahrnutá <sup> [Poznámka 1](#bkmk_note1)</sup> | [Nejnovější kumulativní aktualizace](https://support.microsoft.com/help/4555932) |
 | Systém Windows 10 1909 | Zahrnutá <sup> [Poznámka 1](#bkmk_note1)</sup> | [Nejnovější kumulativní aktualizace](https://support.microsoft.com/help/4529964) |
 | Systém Windows 10 1903 | Zahrnutá <sup> [Poznámka 1](#bkmk_note1)</sup> | [Nejnovější kumulativní aktualizace](https://support.microsoft.com/help/4498140) |
 | Systém Windows 10 1809 | Zahrnutá <sup> [Poznámka 1](#bkmk_note1)</sup> | [Nejnovější kumulativní aktualizace](https://support.microsoft.com/help/4464619) |

@@ -2,7 +2,7 @@
 title: Požadavky na přístup k internetu
 titleSuffix: Configuration Manager
 description: Přečtěte si o internetových koncových bodech, které umožní plnou funkčnost funkcí Configuration Manager.
-ms.date: 06/26/2020
+ms.date: 07/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: b34fe701-5d05-42be-b965-e3dccc9363ca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 78958809aeed5db9d2a36d960b91572b91eafe05
-ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
+ms.openlocfilehash: 986b8d83c705be84b04a89c99d9559471c6345c4
+ms.sourcegitcommit: 2c5fd7c8603b88b753765f3cc298d0a0bacaf521
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85502353"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85819946"
 ---
 # <a name="internet-access-requirements"></a>Požadavky na přístup k internetu
 
@@ -274,11 +274,15 @@ Další informace o požadovaných koncových bodech pro cloudovou službu Deskt
 
 Další informace o požadovaných koncových bodech pro funkce připojení klienta najdete v tématu [Povolení připojení tenanta](../../../tenant-attach/device-sync-actions.md#internet-endpoints).
 
+## <a name="endpoint-analytics"></a>Analýza koncového bodu
+
+Další informace o požadovaných koncových bodech pro službu Endpoint Analytics najdete v tématu [konfigurace proxy serveru Endpoint Analytics](../../../../analytics/troubleshoot.md#bkmk_endpoints).
+
 ## <a name="microsoft-public-ip-addresses"></a>Veřejné IP adresy Microsoftu
 
 Další informace o rozsahu IP adres společnosti Microsoft najdete v tématu věnovaném [veřejné IP adrese Microsoftu](https://www.microsoft.com/download/details.aspx?id=53602). Tyto adresy se pravidelně aktualizují. Služba nenabízí žádnou členitost, proto by mohla být použita jakákoli IP adresa v těchto rozsahech.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Porty používané v Configuration Manager](../hierarchy/ports.md)
 

@@ -2,7 +2,7 @@
 title: Řešení potíží s Desktop Analytics
 titleSuffix: Configuration Manager
 description: Technické podrobnosti, které vám pomůžou při řešení problémů s desktopovou analýzou.
-ms.date: 04/01/2020
+ms.date: 07/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: cfd329b7edb695c1e7316323555bfc18a2fd479e
-ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
+ms.openlocfilehash: 68506ba11e356a1e9f14d58880a80bdf3cfcb5f4
+ms.sourcegitcommit: fb03634b8494903fc6855ad7f86c8694ffada8df
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84428583"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85828971"
 ---
 # <a name="troubleshoot-desktop-analytics"></a>Řešení potíží s Desktop Analytics
 
@@ -53,7 +53,7 @@ Od verze 2002, pokud se lokalita Configuration Manager nepovede připojit k pož
 
 Další informace najdete v tématu [soubory protokolů pro Desktop Analytics](../core/plan-design/hierarchy/log-files.md#desktop-analytics) .
 
-Od verze Configuration Manager 1906 použijte nástroj **DesktopAnalyticsLogsCollector. ps1** z instalačního adresáře Configuration Manager, abyste pomohli řešit problémy s nástrojem Desktop Analytics. Spustí se základní kroky pro řešení potíží a shromáždí příslušné protokoly do jednoho pracovního adresáře. Další informace najdete v tématu [kolektor protokolů](log-collector.md).
+Od verze Configuration Manager 1906 použijte nástroj **DesktopAnalyticsLogsCollector.ps1** z instalačního adresáře Configuration Manager instalace, abyste pomohli řešit problémy s desktopovou analýzou. Spustí se základní kroky pro řešení potíží a shromáždí příslušné protokoly do jednoho pracovního adresáře. Další informace najdete v tématu [kolektor protokolů](log-collector.md).
 
 ### <a name="enable-verbose-logging"></a>Zapnout podrobné protokolování
 
@@ -205,7 +205,7 @@ V portálu pro Desktop Analytics existují dva typy dat: **data správců** a **
 
 - **Diagnostická data** odkazují na metadata systému odeslaná z klientských zařízení do společnosti Microsoft. Tato data se vyjedná z desktopové analýzy. Zahrnuje atributy jako inventář zařízení a stav aktualizace zabezpečení a funkcí.
 
-Ve výchozím nastavení se všechna data na portálu Desktop Analytics automaticky aktualizují každý den. Tato aktualizace zahrnuje změny v diagnostických datech a všechny změny provedené v konfiguraci (data správců). Měl by se zobrazit na portálu Desktop Analytics o každý den v čase 08:00 UTC.
+Ve výchozím nastavení se všechna data na portálu Desktop Analytics automaticky aktualizují každý den. Tato aktualizace zahrnuje změny v diagnostických datech před dvěma dny a všechny změny provedené v konfiguraci (data správců). Měl by se zobrazit na portálu Desktop Analytics o každý den v čase 08:00 UTC.
 
 Když provedete změny dat správců, můžete aktivovat aktualizaci dat správců na vyžádání v pracovním prostoru. Na libovolné stránce portálu Desktop Analytics otevřete informační rámeček měna data:
 
@@ -221,3 +221,39 @@ Pokud se změny v časových snímcích, které jsou uvedené výše, nezobrazuj
 
 > [!IMPORTANT]
 > Možnost Analytics pro stolní počítače, která **zobrazuje poslední data** , je zastaralá. Tato akce bude odebrána v budoucí verzi služby Desktop Analytics. Další informace najdete v tématu [zastaralé funkce](../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).<!--7080949-->  
+
+## <a name="service-notifications"></a>Oznámení služby
+
+<!-- 4982509 -->
+
+Portál pro Desktop Analytics může zobrazit bannery oznámení správcům. Tato oznámení umožňují Microsoftu komunikovat s vámi o důležitých událostech a problémech. Následující části obsahují podrobnosti o oznámeních, která se mohou zobrazit.
+
+### <a name="see-whats-new-this-month-in-desktop-analytics"></a>Podívejte se, co je nového v tomto měsíci v Desktop Analytics.
+
+Toto informativní oznámení vám poskytne informace o změnách služby. Další informace najdete v tématu [co je nového v Desktop Analytics](whats-new.md) ( `https://aka.ms/danews` ).
+
+### <a name="there-are-new-prerequisites-to-continue-using-desktop-analytics-review-the-new-requirements"></a>Existují nové požadavky. Pokud chcete pokračovat v používání Desktop Analytics, přečtěte si nové požadavky.
+
+Toto informativní oznámení vám poskytne informace o změnách požadavků. Například nový koncový bod sítě Internet nebo aktualizace softwaru. Další informace najdete v tématu [předpoklady](overview.md#prerequisites) ( `https://aka.ms/daprereqs` ).
+
+### <a name="were-investigating-an-issue-that-impacts-desktop-analytics"></a>Zkoumáme problém, který ovlivňuje analýzu stolních počítačů.
+
+Toto upozornění indikuje, že společnost Microsoft ví o problému, který ovlivňuje službu Desktop Analytics. Problém obvykle vygeneruje snímky. Když se zobrazí toto oznámení, společnost Microsoft prozkoumá problém, který určí rozsah a zdroj dopadu. Nemusíte kontaktovat podpora Microsoftu. Další informace najdete v tématu [tok dat](privacy.md#data-flow).
+
+### <a name="were-investigating-an-issue-with-data-latency-if-you-enrolled-new-devices-or-changed-any-assets-in-the-last-24-hours-they-may-not-appear-right-away"></a>Zkoumáme problém s latencí dat. Pokud jste během posledních 24 hodin zaregistrovali nová zařízení nebo jste změnili nějaké prostředky, nemusí se zdát hned.
+
+Toto upozornění indikuje, že společnost Microsoft ví o problému, který ovlivňuje službu Desktop Analytics. Microsoft nepřetržitě monitoruje službu a potvrzuje, že všechny součásti aktualizují snímky ve správný čas. Během tohoto monitorování se jedna z těchto komponent nedokončila podle očekávání. Jakmile se zobrazí toto oznámení, vyzkoumá Microsoft problém. Nemusíte kontaktovat podpora Microsoftu. Další informace najdete v tématu [tok dat](privacy.md#data-flow).
+
+Pokud jste nedávno [zaregistrovaná zařízení](enroll-devices.md) nebo [změnili prostředky,](about-assets.md)počkejte, až společnost Microsoft problém vyřeší. Nemusíte opakovat žádné akce.
+
+### <a name="weve-resolved-a-temporary-issue-with-data-latency-daily-refresh-of-portal-data-is-delayed"></a>Vyřešili jsme dočasný problém s latencí dat. Denní aktualizace dat portálu je zpožděná.
+
+Toto oznámení vám oznamuje, že došlo k potížím s latencí dat. Služba stále zpracovává snímek a aktualizace dat je zpožděna. Další informace najdete v tématu [latence dat](#data-latency).
+
+### <a name="weve-resolved-an-issue-with-data-latency-if-you-enrolled-new-devices-or-changed-any-assets-in-the-last-24-hours-they-may-not-appear-right-away"></a>Vyřešili jsme problém s latencí dat. Pokud jste během posledních 24 hodin zaregistrovali nová zařízení nebo jste změnili nějaké prostředky, nemusí se zdát hned.
+
+Toto oznámení vám umožní zjistit, že společnost Microsoft vyřešila dříve nahlášený problém s latencí dat. Můžou se zobrazit zastaralá data pro zítřejší snímek. Pokud jste [zaregistrovali zařízení](enroll-devices.md) nebo udělali změny konfigurace zařízení za posledních 24 hodin, neuvidíte je hned na portálu. K kategorizaci [prostředků](about-assets.md) a přípravě [plánů nasazení](about-deployment-plans.md)můžete dál používat desktopovou analýzu. Tyto akce mohou použít data z předchozího snímku.
+
+### <a name="weve-resolved-an-issue-with-desktop-analytics-daily-refresh-of-the-portal-data-is-on-track"></a>Vyřešili jsme problém s desktopovou analýzou. Denní aktualizace dat portálu se sleduje.
+
+Toto oznámení vám oznamuje, že Microsoft identifikoval komponentu snímku, která během zpracování zastavila práci. Společnost Microsoft restartovala komponentu, což bude trvat čas na zpracování snímku. Microsoft nepřetržitě monitoruje službu a potvrzuje, že všechny součásti aktualizují snímky ve správný čas.
