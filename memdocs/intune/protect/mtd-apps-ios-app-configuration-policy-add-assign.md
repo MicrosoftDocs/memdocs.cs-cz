@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 03dbdccd1626db5ad97bc230a3d6b9a82060ee2e
-ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
+ms.openlocfilehash: 4782c2a8f2c8791929ca4e585dab96031bf550fa
+ms.sourcegitcommit: f999131e513d50967f88795e400d5b089ebc5878
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85590486"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85914611"
 ---
 # <a name="add-and-assign-mobile-threat-defense-mtd-apps-with-intune"></a>Přidání a přiřazení aplikací pro ochranu před mobilními hrozbami (MTD) pomocí Intune
 
@@ -136,21 +136,21 @@ Vytvořte zásady konfigurace aplikace pro iOS, jak je popsáno v článku [pou�
 - **Android**
   - V pokynech k [použití Microsoft Intune zásady konfigurace aplikací pro Android](../apps/app-configuration-policies-use-android.md) přidejte zásady konfigurace aplikací pro Android Wandera pomocí informací uvedených níže po zobrazení výzvy.
 
-1. Na **portálu Wandera pro paprsky**klikněte na tlačítko **Přidat +** v části formát **nastavení konfigurace** .
+1. Na **portálu Wandera pro paprsky**klikněte na tlačítko **Přidat** v části formát **nastavení konfigurace** .
 2. V seznamu **konfiguračních klíčů**vyberte **URL aktivačního profilu** . Klikněte na **OK**.
-3. V poli **Adresa URL profilu aktivace** vyberte **řetězec** z nabídky **typ hodnoty** a pak zkopírujte a vložte **adresu URL odkazu ke sdílení** z požadovaného aktivačního profilu v paprsku.
-4. V **Nastavení**definujte **formát nastavení konfigurace > použijte návrháře konfigurace** a postupujte podle následujících kroků.
+3. V poli **Adresa URL profilu aktivace** vyberte **řetězec** z nabídky **typ hodnoty** a potom zkopírujte **adresu URL odkazu ke sdílení** z požadovaného aktivačního profilu v paprskovém umístění.
+4. V **uživatelském rozhraní konfigurace aplikace konzoly správce Intune**vyberte **Nastavení**, definujte **formát nastavení konfigurace > použijte návrháře konfigurace** a vložte **adresu URL odkazu ke sdílení**.  
 
 > [!NOTE] 
-> Na rozdíl od iOS budete muset pro každý Wandera aktivační profil definovat jedinečnou zásadu konfigurace podnikových aplikací pro Android. Pokud nepotřebujete více profilů aktivace Wandera, můžete pro všechna cílová zařízení použít jednu konfiguraci aplikace pro Android. Při vytváření profilů aktivace v Wandera nezapomeňte v přidružené konfiguraci uživatele vybrat Azure Active Directory, abyste zajistili, že Wandera bude moct synchronizovat zařízení s Microsoft Endpoint Managerem přes UEM Connect.
+> Na rozdíl od iOS budete muset pro každý Wandera aktivační profil definovat jedinečnou zásadu konfigurace podnikových aplikací pro Android. Pokud nepotřebujete více profilů aktivace Wandera, můžete pro všechna cílová zařízení použít jednu konfiguraci aplikace pro Android. Při vytváření profilů aktivace v Wandera nezapomeňte v přidružené konfiguraci uživatele vybrat Azure Active Directory, abyste zajistili, že Wandera bude moci synchronizovat zařízení s Intune prostřednictvím UEM Connect.
 
 - **iOS**
   - V pokynech k [použití Microsoft Intune zásad konfigurace aplikací pro iOS](../apps/app-configuration-policies-use-ios.md) můžete přidat zásady konfigurace aplikace Wandera pro iOS pomocí informací uvedených níže po zobrazení výzvy.
 
 1. V **paprskovém portálu Wandera**přejděte na **zařízení > aktivace** a vyberte libovolný aktivační profil. Klikněte na **strategie nasazení > spravovaná zařízení > Microsoft Intune** a vyhledejte **nastavení konfigurace aplikace pro iOS**.  
 2. Rozbalením tohoto pole zobrazíte soubor XML konfigurace aplikace pro iOS a zkopírujete ho do systémové schránky.  
-3. V **Nastavení** definujte **formát nastavení konfigurace > zadejte XML data** a postupujte podle následujících kroků:
-4. Vložte XML do textového pole konfigurace aplikace ve službě Microsoft Endpoint Manager.
+3. V **konzole pro správu Intune nastavení uživatelského rozhraní konfigurace aplikace** definujte **formát nastavení konfigurace > zadejte XML data**. 
+4. Vložte XML do textového pole konfigurace aplikace.
 
 > [!NOTE]
 > U všech zařízení, která se mají zřídit pomocí Wandera, se dají použít jedna zásada konfigurace pro iOS.  

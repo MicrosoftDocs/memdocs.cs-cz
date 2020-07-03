@@ -2,7 +2,7 @@
 title: CMPivot pro data v reálném čase
 titleSuffix: Configuration Manager
 description: Naučte se používat CMPivot v Configuration Manager k dotazování klientů v reálném čase.
-ms.date: 04/08/2020
+ms.date: 07/02/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 32e2d6b9-148f-45e2-8083-98c656473f82
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: dcd441c7f35748f42adc8824c68ec703291a13e0
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7bf9d6018acb74ccd1a33b6101d5cceb119ca982
+ms.sourcegitcommit: f999131e513d50967f88795e400d5b089ebc5878
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81719138"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85914635"
 ---
 # <a name="cmpivot-for-real-time-data-in-configuration-manager"></a>CMPivot pro data v reálném čase v Configuration Manager
 
@@ -46,6 +46,7 @@ Pro použití CMPivot jsou vyžadovány následující komponenty:
   - Příkazu
   - SMBConfig
 
+- CMPivot a instalační program [Microsoft Edge](../../../apps/deploy-use/deploy-edge.md) se podepisují pomocí certifikátu **Microsoft Code Signing** Certificate. Pokud tento certifikát není uvedený v úložišti **důvěryhodných vydavatelů** , budete ho muset přidat. V opačném případě CMPivot a instalační program Microsoft Edge se nespustí, když jsou zásady spouštění prostředí PowerShell nastavené na **AllSigned**. <!--7585106-->
 
 - Oprávnění pro CMPivot:
   - Oprávnění **číst** pro objekt **skripty SMS**
@@ -56,6 +57,8 @@ Pro použití CMPivot jsou vyžadovány následující komponenty:
 
 >[!NOTE]
 > **Spouštění skriptů** je nadmnožinou oprávnění **Run CMPivot** .
+
+CMPivot a instalační program Edge jsou podepsané certifikátem **Microsoft Code Signing** Certificate. Pokud tento certifikát není uvedený v úložišti **důvěryhodných vydavatelů** , budete ho muset přidat. V opačném případě se instalátor CMPivot a Edge nespustí, pokud jsou zásady spouštění prostředí PowerShell nastavené na **AllSigned**.
  
 ## <a name="limitations"></a>Omezení
 
@@ -129,7 +132,7 @@ Okno CMPivot obsahuje následující prvky:
 
     - Vyjmutí, zkopírování nebo vložení obsahu do podokna dotazu.  
     <!-- markdownlint-disable MD038 -->
-    - Ve výchozím nastavení toto podokno používá technologii IntelliSense. Například pokud začnete psát `D`, IntelliSense navrhne všechny entity, které začínají tímto písmenem. Vyberte možnost a stisknutím klávesy TAB ji vložte. Zadejte znak kanálu a mezeru `| `a potom IntelliSense navrhne všechny operátory tabulky. Vložení `summarize` a zadání prostoru a IntelliSense navrhne všechny agregační funkce. Další informace o těchto operátorech a funkcích získáte kliknutím na kartu **Domů** v CMPivot.  
+    - Ve výchozím nastavení toto podokno používá technologii IntelliSense. Například pokud začnete psát `D` , IntelliSense navrhne všechny entity, které začínají tímto písmenem. Vyberte možnost a stisknutím klávesy TAB ji vložte. Zadejte znak kanálu a mezeru `| ` a potom IntelliSense navrhne všechny operátory tabulky. Vložení `summarize` a zadání prostoru a IntelliSense navrhne všechny agregační funkce. Další informace o těchto operátorech a funkcích získáte kliknutím na kartu **Domů** v CMPivot.  
 
     - Podokno dotazu také nabízí následující možnosti:  
 
@@ -217,7 +220,7 @@ Vyberete více zařízení, kliknete pravým tlačítkem myši na výběr a zvol
 
 ### <a name="example-2-proactively-resolve-application-failures"></a>Příklad 2: proaktivně vyřešit selhání aplikace  
 
-Pokud chcete být aktivní provozní údržbou, jednou týden, který spustíte CMPivot, na kolekci serverů, které spravujete, a v entitě **AppCrash** vyberte **Query All** . Kliknete pravým tlačítkem na sloupec **filename** a vyberete **Seřadit vzestupně**. Jedno zařízení vrátí sedm výsledků pro soubor SQLSQM. exe s časovým razítkem 03:00 každý den. Vyberte název souboru v jednom z řádků, klikněte na něj pravým tlačítkem myši a vyberte **Bing**. Procházení výsledků hledání ve webovém prohlížeči: Další informace a řešení najdete v článku o podpoře společnosti Microsoft pro tento problém. 
+Pokud chcete být aktivní provozní údržbou, jednou týden, který spustíte CMPivot, na kolekci serverů, které spravujete, a v entitě **AppCrash** vyberte **Query All** . Kliknete pravým tlačítkem na sloupec **filename** a vyberete **Seřadit vzestupně**. Jedno zařízení vrátí sedm výsledků pro sqlsqm.exe s časovým razítkem 03:00 každý den. Vyberte název souboru v jednom z řádků, klikněte na něj pravým tlačítkem myši a vyberte **Bing**. Procházení výsledků hledání ve webovém prohlížeči: Další informace a řešení najdete v článku o podpoře společnosti Microsoft pro tento problém. 
 
 
 ### <a name="example-3-bios-version"></a>Příklad 3: verze systému BIOS
@@ -385,15 +388,15 @@ Vyberte například počet zařízení se stavem selhání. Podívejte se na kon
 
 ### <a name="cmpivot-audit-status-messages"></a>CMPivot auditní stavové zprávy
 
-Když ve verzi 1810 spustíte CMPivot, vytvoří se zpráva o stavu auditu s parametrem **MessageID 40805**. Stavové zprávy můžete zobrazit tak, že kliknete na **monitorování** > stav**systému** > **dotazy stavových**zpráv. Můžete spustit **všechny auditní stavové zprávy pro konkrétního uživatele**, **všechny auditní stavové zprávy pro určitou lokalitu**nebo vytvořit vlastní dotaz na stavovou zprávu.
+Když ve verzi 1810 spustíte CMPivot, vytvoří se zpráva o stavu auditu s parametrem **MessageID 40805**. Stavové zprávy můžete zobrazit tak, že kliknete na **monitorování**stav  >  **systému**  >  **dotazy stavových**zpráv. Můžete spustit **všechny auditní stavové zprávy pro konkrétního uživatele**, **všechny auditní stavové zprávy pro určitou lokalitu**nebo vytvořit vlastní dotaz na stavovou zprávu.
 
 Pro zprávu se používá následující formát:
 
-MessageId 40805: uživatelské &lt;jméno> spuštění skriptu &lt;skriptu – identifikátor GUID> s &lt;algoritmem hash-hash> &lt;na kolekci kolekcí-ID>.
+MessageId 40805: uživatelské &lt; jméno> spuštění skriptu skriptu &lt; – identifikátor GUID> s algoritmem hash &lt; -hash> na kolekci kolekcí &lt; -ID>.
 
 - 7DC6B6F1-E7F6-43C1-96E0-E1D16BC25C14 je identifikátor GUID skriptu pro CMPivot.
 - Hodnota hash skriptu se dá zobrazit v souboru Scripts. log klienta.
-- Můžete také zobrazit hodnotu hash uloženou v úložišti skriptů klienta. Název souboru na klientovi je &lt;Script-GUID>_&lt;Script-hash>.
+- Můžete také zobrazit hodnotu hash uloženou v úložišti skriptů klienta. Název souboru na klientovi je &lt; Script-Guid>_ &lt; Script-hash>.
     - Příklad názvu souboru: C:\Windows\CCM\ScriptStore\7DC6B6F1-E7F6-43C1-96E0-E1D16BC25C14_abc1d23e45678901fabc123d456ce789fa1b2cd3e456789123fab4c56789d0123. PS
    
 
@@ -566,7 +569,7 @@ Výkon CMPivot můžete sdílet s ostatními osoby, jako jsou Helpdesk nebo spr�
 #### <a name="install-cmpivot-standalone"></a>Nainstalovat samostatnou CMPivot
 
 1. Nastavte oprávnění potřebná ke spuštění CMPivot. Další informace najdete v tématu [předpoklady](#prerequisites). Pokud jsou oprávnění vhodná pro uživatele, můžete také použít [roli správce zabezpečení](#bkmk_cmpivot_secadmin1906) .
-2. V následující cestě Najděte instalační program aplikace CMPivot: `<site install path>\tools\CMPivot\CMPivot.msi`. Můžete ji spustit z této cesty nebo ji zkopírovat do jiného umístění.
+2. V následující cestě Najděte instalační program aplikace CMPivot: `<site install path>\tools\CMPivot\CMPivot.msi` . Můžete ji spustit z této cesty nebo ji zkopírovat do jiného umístění.
 3. Po spuštění samostatné aplikace CMPivot se zobrazí výzva, abyste se připojili k webu. Zadejte plně kvalifikovaný název domény nebo název počítače buď centrální správy, nebo primárního serveru lokality.
    - Pokaždé, když otevřete samostatnou CMPivot, budete vyzváni k připojení k serveru lokality.
 4. Přejděte do kolekce, ve které chcete spustit CMPivot, a pak spusťte dotaz.
@@ -617,7 +620,7 @@ Optimalizace CMPivot významně omezují zatížení sítě a procesoru serveru 
    | project Device, MalwareFound = iif( isnull(FileName), 'No', 'Yes')
    ```
 
-### <a name="wineventlognametimespan"></a><a name="bkmk_WinEvent"></a>WinEvent (\<název protokolu>; [\<TimeSpan>])
+### <a name="wineventlognametimespan"></a><a name="bkmk_WinEvent"></a>WinEvent ( \<logname> , [ \<timespan> ])
 
 Tato entita se používá k získání událostí z protokolů událostí a souborů protokolu trasování událostí. Entita získává data z protokolů událostí generovaných technologií protokolu událostí systému Windows. Entita také získává události v protokolových souborech generovaných trasováním událostí pro Windows (ETW). WinEvent vyhledá události, ke kterým došlo během posledních 24 hodin, ve výchozím nastavení. Nicméně výchozí 24hodinový parametr lze přepsat zahrnutím TimeSpan.
 
@@ -627,7 +630,7 @@ WinEvent('Microsoft-Windows-HelloForBusiness/Operational', 1d)
 | summarize count() by Device
 ```
 
-### <a name="filecontentfilename"></a><a name="bkmk_File"></a>Obsah souboru (\<filename>)
+### <a name="filecontentfilename"></a><a name="bkmk_File"></a>Obsah ( \<filename> )
 
 Obsah souboru se používá k získání obsahu textového souboru.
 
@@ -637,7 +640,7 @@ FileContent('c:\\windows\\SMSCFG.ini')
 | project Device, SMSId= substring(Content,22)
 ```
 
-### <a name="processmoduleprocessname"></a><a name="bkmk_ProcessModule"></a>ProcessModule (\<process>)  
+### <a name="processmoduleprocessname"></a><a name="bkmk_ProcessModule"></a>ProcessModule ( \<processname> )  
 
 Tato entita se používá k vytvoření výčtu modulů (DLL) zavedených daným procesem. ProcessModule je užitečné při lovu malwaru, který se skrývá v legitimních procesech.  
 
@@ -682,7 +685,7 @@ Pokud používáte CMPivot mimo konzolu Configuration Manager, můžete dotazova
 
 ### <a name="other-enhancements"></a><a name="bkmk_Other"></a>Další vylepšení
 
-- Dotazy typu regulárních výrazů můžete provádět pomocí operátoru `like` New. Příklad:<!--3056858-->
+- Dotazy typu regulárních výrazů můžete provádět pomocí `like` operátoru new. Příklad:<!--3056858-->
   
    ```kusto
    //Find BIOS manufacture that contains any word like Micro, such as Microsoft

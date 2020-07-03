@@ -2,7 +2,7 @@
 title: Nejčastější dotazy k produktu a licencování
 titleSuffix: Configuration Manager
 description: Vyhledejte odpovědi na nejčastější dotazy k produktu a licenci pro Configuration Manager.
-ms.date: 02/12/2020
+ms.date: 07/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: ee8d611f-aa0c-4efd-b0ad-dbd14d0a0623
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 63e53c502e67d2bfbfc5f8a706006c6ec14f8fcd
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7b2c785fb41fa78ea0bd5d480560d45a3a7a7eda
+ms.sourcegitcommit: efe89408a3948b79b38893174cb19268ee37c8f3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81722680"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85854418"
 ---
 # <a name="frequently-asked-questions-for-configuration-manager-branches-and-licensing"></a>Nejčastější dotazy týkající se Configuration Manager větví a licencování
 
@@ -68,19 +68,54 @@ https://www.microsoft.com/microsoft-365/enterprise-mobility-security/compare-pla
 > [!IMPORTANT]
 > Configuration Manager není součástí plánu [Microsoft 365 Business](https://www.microsoft.com/microsoft-365/business) .
 
-### <a name="does-anything-change-with-the-rebrand-to-microsoft-endpoint-manager"></a><a name="bkmk_mem"></a>Mění se i změna příruční značky na Microsoft Endpoint Manager?
+### <a name="what-changes-with-licensing-for-co-management-in-microsoft-endpoint-manager"></a><a name="bkmk_mem"></a>Jaké změny mají licencování pro spolusprávu ve službě Microsoft Endpoint Manager?
 
-Ano. Od 1. prosince 2019 platí, že pokud už máte licenci pro Configuration Manager, pak automaticky získáte licenci na Intune pro registraci počítačů s Windows v [rámci společné správy](../../comanage/overview.md). Tato změna vám usnadní správu zařízení s Windows pomocí Microsoft Endpoint Manageru.
+<!-- 7202432 -->
 
-K dispozici je nová licence, která umožňuje Configuration Manager zákazníkům s Software Assurance získat práva pro správu počítačů Intune bez nutnosti koupit další licenci Intune pro spolusprávu. Už nemusíte kupovat a přiřazovat jednotlivé licence Intune vašim uživatelům.
+Licence spolusprávy umožňuje Configuration Manager zákazníkům se Software Assurance získat práva pro správu počítačů v Intune, aniž by museli kupovat a přiřazovat jednotlivé licence Intune uživatelům. Tato licence usnadňuje správu zařízení s Windows pomocí služby Microsoft Endpoint Manager.
 
-- Zařízení spravovaná pomocí Configuration Manager a zaregistrovaná do spolusprávy mají skoro stejná práva jako samostatný počítač spravovaný službou Intune. Po obnovení se ale nedá znovu zřídit pomocí automatického pIlotního nasazení.
+- Zařízení, která jsou už spravovaná pomocí Configuration Manager kterou zaregistrujete do Intune pro spolusprávu, mají skoro stejná práva jako samostatný počítač spravovaný pomocí Intune. Pokud na tomto zařízení resetujete Windows, nemůžete ho zřídit pomocí Windows autopilotu. Autopilot vyžaduje úplnou licenci Intune.
 
-- Zařízení s Windows 10 zaregistrovaná v Intune jiným způsobem vyžadují úplné licence Intune.
+- Pokud zařízení s Windows 10 zaregistrujete do Intune jiným způsobem, budete ještě potřebovat úplnou licenci Intune. Pomocí nástroje autopilot můžete například zřídit zařízení nebo uživatel ručně provede samoobslužnou registraci.
+
+- U stávajících zařízení spravovaných Configuration Manager k registraci do Intune pro spolusprávu se škálováním bez zásahu uživatele používá spoluspráva funkci Azure Active Directory (Azure AD) s názvem Windows 10 Autoenrollment. Automatický zápis vyžaduje licenci Azure AD Premium (AADP1), která je oddělená od Microsoft Endpoint Manageru. Aby spoluspráva fungovala v tomto scénáři, používá se k tomu, abyste každému uživateli přiřadili licenci AADP1 i Intune. Licence pro spolusprávu se změnily od 1. prosince 2019. Pro tento scénář teď nemusíte přiřazovat jednotlivé licence Intune, ale pořád se vyžadují v dalších scénářích registrace. Požadavek na licencování AADP1 zůstává stejný pro fungování automatického zápisu a spolusprávy.
 
 - Pokud chcete Intune používat ke správě zařízení se systémem iOS, Android nebo macOS, budete potřebovat příslušné předplatné Intune prostřednictvím samostatné licence Intune, Enterprise Mobility + Security (EMS) nebo Microsoft 365.
 
+- Pokud nemáte žádný plán předplatného s Intune, abyste mohli podporovat spolusprávu, musíte si koupit aspoň jednu licenci Intune. Tato licence je určena pro správce pro přístup k centru pro správu služby Microsoft Endpoint Manager.
+
+- Pokud používáte Microsoft 365 integrovanou [základní mobilitu a zabezpečení](https://support.microsoft.com/office/capabilities-of-built-in-mobile-device-management-for-microsoft-365-a1da44e5-7475-4992-be91-9ccec25905b0), nemůžete použít novou licenci spolusprávy pro uživatele, který má také zařízení spravovaná základní mobilitou a zabezpečením. Chcete-li použít licenci spolusprávy pro zařízení spravované uživatelem Configuration Manager, proveďte jednu z následujících akcí:
+
+  - Přiřaďte uživateli úplnou licenci na Intune a spravujte svá zařízení přes Intune.
+  - Zruší registraci zařízení ze základní mobility a zabezpečení.
+
 - Licencování, které jste předtím používali pro System Center Configuration Manager, se stále vztahuje na službu Microsoft Endpoint Configuration Manager. Pokud instalujete novou lokalitu, použijte existující kódy Product Key.
+
+|Funkce | Licence pro spolusprávu | Úplná licence Intune |
+|---------|---------|---------|
+|Registrace Windows 10|Ano (jenom pro existující zařízení spravovaná nástrojem ConfigMgr)|Ano|
+|iOS, Android, registrace macOS|No|Ano|
+|Autopilot|No|Ano|
+|Správa mobilních aplikací (MAM)|No|Ano|
+|Podmíněný přístup<br>(vyžaduje se další AADP1.)|Ano|Ano|
+|profily zařízení|Ano|Ano|
+|Správa aktualizací softwaru|Ano|Ano|
+|Inventory (Inventář)|Ano|Ano|
+|Správa aplikací|Ano|Ano|
+|Vzdálená pomoc<br>(Vyžaduje se licence TeamVieweru)|Ano|Ano|
+|Desktop Analytics<br>(Vyžaduje se licence předplatného systému Windows|Ano|–|
+|Připojení tenanta|Ano|–|
+|Analýza koncového bodu|Ano|Ano|
+
+Další informace najdete v následujících článcích:
+
+- [Požadavky společné správy](../../comanage/overview.md#prerequisites)
+- [Požadavky na Windows autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot-requirements)
+- [Požadavky na Desktop Analytics](../../desktop-analytics/overview.md#prerequisites)
+- [Předpoklady pro připojení tenanta](../../tenant-attach/device-sync-actions.md#prerequisites)
+- [Požadavky na licencování služby Endpoint Analytics](../../../analytics/overview.md#licensing-prerequisites)
+- [Použití podmíněného přístupu s Intune](../../../intune/protect/conditional-access.md#use-conditional-access-with-intune)
+- [Požadavky TeamVieweru](../../../intune/remote-actions/teamviewer-support.md#prerequisites)
 
 ### <a name="i-have-enterprise-mobility--security-and-it-expired-what-must-i-do-now"></a><a name="bkmk_ems-expires"></a>Mám Enterprise Mobility + Security a její platnost vypršela, co se teď musí udělat?  
 
@@ -96,11 +131,11 @@ Pokud používáte System Center Endpoint Protection a platnost vašeho přidru�
 
 ### <a name="do-i-own-the-current-branch"></a><a name="bkmk_owncb"></a>Mám "vlastní" aktuální větev?
 
-Ne. Máte licenci na používání aktuální větve, když máte aktivní SA. Pokud třeba *SA* vyprší, můžete například prostřednictvím služby *l&SA*použít jenom *L (licence)* , která nezahrnují práva k používání aktuální větve. Pokud vaše L poskytuje trvalá práva, můžete místo aktuální větve použít Configuration Manager LTSB. Pokud vaše přidružení zabezpečení vypršelo před 1. října 2016, můžete také použít System Center 2012 R2 Configuration Manager.
+No. Máte licenci na používání aktuální větve, když máte aktivní SA. Pokud třeba *SA* vyprší, můžete například prostřednictvím služby *l&SA*použít jenom *L (licence)* , která nezahrnují práva k používání aktuální větve. Pokud vaše L poskytuje trvalá práva, můžete místo aktuální větve použít Configuration Manager LTSB. Pokud vaše přidružení zabezpečení vypršelo před 1. října 2016, můžete také použít System Center 2012 R2 Configuration Manager.
 
 ### <a name="can-i-purchase-configuration-manager-standalone-without-sa"></a><a name="bkmk_standalone"></a>Můžu Configuration Manager samostatně koupit bez SA?
 
-Ne. Jediným způsobem, jak získat práva k používání Configuration Manager, je získat licenci pomocí SA nebo přes ekvivalentní předplatné. K dispozici jsou vývojářské programy, jako je například MSDN, kde se Configuration Manager nabízet pro účely vývoje a testování, ale ne produkční využití.
+No. Jediným způsobem, jak získat práva k používání Configuration Manager, je získat licenci pomocí SA nebo přes ekvivalentní předplatné. K dispozici jsou vývojářské programy, jako je například MSDN, kde se Configuration Manager nabízet pro účely vývoje a testování, ale ne produkční využití.
 
 ### <a name="does-a-non-production-environment-for-testing-or-development-require-an-explicit-license"></a><a name="bkmk_lab"></a>Vyžaduje prostředí, které není v provozu, pro testování nebo vývoj určitou explicitní licenci?
 

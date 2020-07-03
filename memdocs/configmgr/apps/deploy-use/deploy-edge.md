@@ -2,7 +2,7 @@
 title: Nasazení a aktualizace Microsoft Edge verze 77 a novější
 titleSuffix: Configuration Manager
 description: Jak nasadit a aktualizovat Microsoft Edge verze 77 a novější pomocí Configuration Manager
-ms.date: 04/01/2020
+ms.date: 07/02/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 73b420be-5d6a-483a-be66-c4d274437508
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 141a60a72038156fff2579419e92e558dab5a9b8
-ms.sourcegitcommit: 7b2f7918d517005850031f30e705e5a512959c3d
+ms.openlocfilehash: 2061a6701bf40233593e2e5d683e36f2814d3978
+ms.sourcegitcommit: f999131e513d50967f88795e400d5b089ebc5878
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84776929"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85914568"
 ---
 # <a name="microsoft-edge-management"></a>Správa Microsoft Edge
 
@@ -33,6 +33,8 @@ Pro klienty cílené na nasazení Microsoft Edge:
 
 - [Zásady spouštění](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_execution_policies) prostředí PowerShell nemůžou být nastavené na omezené.
   - K provedení instalace se provede PowerShell.
+
+- Instalační program Microsoft Edge a [CMPivot](../../core/servers/manage/cmpivot.md) se podepisují pomocí certifikátu **Microsoft Code Signing** Certificate. Pokud tento certifikát není uvedený v úložišti **důvěryhodných vydavatelů** , budete ho muset přidat. V opačném případě se instalační program Microsoft Edge a CMPivot nespustí, pokud jsou zásady spouštění prostředí PowerShell nastavené na **AllSigned**. <!--7585106-->
 
 Zařízení, na kterém běží Konzola Configuration Manager, potřebuje přístup k následujícím koncovým bodům:
 
@@ -135,6 +137,22 @@ V níže uvedených třídách [inventáře hardwaru](../../core/clients/manage/
 V pracovním prostoru **softwarová knihovna** klikněte na **Správa Microsoft Edge** a zobrazte řídicí panel. Změňte kolekci dat grafu kliknutím na **Procházet** a výběrem jiné kolekce. Ve výchozím nastavení se v rozevíracím seznamu nacházejí pět největších kolekcí. Když vyberete kolekci, která není v seznamu, nově vybraná kolekce vezme v rozevíracím seznamu na spodní místo.
 
 [![Řídicí panel pro správu Microsoft Edge](./media/3871913-microsoft-edge-dashboard.png)](./media/3871913-microsoft-edge-dashboard.png#lightbox)
+
+## <a name="known-issues"></a>Známé problémy
+
+### <a name="hardware-inventory-may-fail-to-process"></a>Zpracování inventáře hardwaru se nemusí zdařit.
+<!--7535675-->
+Zpracování inventáře hardwaru pro zařízení se nemusí zdařit. V souboru Dataldr. log se mohou zobrazit chyby podobné následujícímu:
+
+```text
+Begin transaction: Machine=<machine>
+*** [23000][2627][Microsoft][SQL Server Native Client 11.0][SQL Server]Violation of PRIMARY KEY constraint 'BROWSER_USAGE_HIST_PK'. Cannot insert duplicate key in object 'dbo.BROWSER_USAGE_HIST'. The duplicate key value is (XXXX, Y). : dbo.dBROWSER_USAGE_DATA
+ERROR - SQL Error in
+ERROR - is NOT retyrable.
+Rollback transaction: XXXX
+```
+
+**Omezení rizik:** Pokud chcete tento problém obejít, zakažte shromažďování třídy inventáře hardwaru využití prohlížeče (SMS_BrowerUsage). Tato třída se v tuto chvíli nevyužívá.
 
 ## <a name="next-steps"></a>Další kroky
 

@@ -10,12 +10,12 @@ ms.assetid: c890fd27-7a8c-4f51-bbe2-f9908af1f42b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 02a281b800c1156cf8492e8a897a5cf1b412006e
-ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
+ms.openlocfilehash: 388a051f899369aa6a7754f94b0a7727f943f0ec
+ms.sourcegitcommit: efe89408a3948b79b38893174cb19268ee37c8f3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85383032"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85854401"
 ---
 # <a name="about-client-installation-parameters-and-properties-in-configuration-manager"></a>Informace o parametrech instalace a vlastnostech klienta v Configuration Manager
 
@@ -49,7 +49,7 @@ Příkaz CCMSetup.exe používá v příkazovém řádku tento formát:
 
 `CCMSetup.exe [<Ccmsetup parameters>] [<client.msi setup properties>]`  
 
-Například:  
+Příklad:  
 
 `CCMSetup.exe /mp:SMSMP01 /logon SMSSITECODE=S01 FSP=SMSFSP01`  
 
@@ -266,7 +266,7 @@ Podporované hodnoty:
 - `TRUE`: Klient nebude automaticky upgradován.
 - `FALSE`: Klient se automaticky upgraduje (výchozí).
 
-Například:  
+Příklad:  
 
 `CCMSetup.exe /AlwaysExcludeUpgrade:TRUE`
 
@@ -601,7 +601,11 @@ Další informace najdete v tématu [Postup konfigurace stavu klienta](configure
 
 Počínaje verzí 2002 můžete pomocí této vlastnosti spustit pořadí úkolů na klientovi po úspěšné registraci v lokalitě.
 
+> [!NOTE]
+> Pokud pořadí úkolů nainstaluje aktualizace softwaru nebo aplikace, klienti potřebují platný certifikát pro ověřování klientů. Samotný ověřovací token nefunguje. Další informace najdete v tématu [poznámky k verzi – nasazení operačního systému](../../servers/deploy/install/release-notes.md#os-deployment).<!--7527072-->
+      
 Můžete třeba zřídit nové zařízení s Windows 10 pomocí automatického pilotního projektu Windows, automaticky ho zapsat do Microsoft Intune a pak nainstalovat klienta Configuration Manager pro spolusprávu. Pokud zadáte tuto novou možnost, nově zřízený klient pak spustí pořadí úkolů. Tento proces poskytuje větší flexibilitu při instalaci aplikací a aktualizací softwaru nebo konfiguraci nastavení.
+
 
 Použijte následující postup:
 
@@ -617,6 +621,8 @@ Použijte následující postup:
       > Tato metoda může mít další požadavky. Například zápis lokality do Azure Active Directory nebo vytvoření brány pro správu cloudu s povoleným obsahem.
 
 Po instalaci a správné registraci klienta s lokalitou se spustí odkazované pořadí úkolů. Pokud se registrace klienta nezdařila, pořadí úkolů se nespustí.
+
+
 
 ### <a name="resetkeyinformation"></a>RESETKEYINFORMATION
 

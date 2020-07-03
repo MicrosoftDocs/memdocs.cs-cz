@@ -5,17 +5,17 @@ description: Naučte se souběžně spravovat zařízení s Windows 10 pomocí C
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 01/24/2020
+ms.date: 07/01/2020
 ms.topic: overview
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: d6bbc787-83a5-44b4-ad64-016e5da7413f
-ms.openlocfilehash: 86bd566e9582c7dd7c83f93c22430edcc8ea0d0d
-ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
+ms.openlocfilehash: a7f38f48946244deb6026d040c44159d0384f7b1
+ms.sourcegitcommit: efe89408a3948b79b38893174cb19268ee37c8f3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84347181"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85854435"
 ---
 # <a name="what-is-co-management"></a>Co je spoluspráva?
 
@@ -88,7 +88,7 @@ Společná správa má tyto požadavky v následujících oblastech:
     > [!Tip]
     > Ujistěte se, že přiřadíte licenci pro Intune k účtu, který používáte k přihlášení do svého tenanta. V opačném případě se přihlášení nezdařilo s chybovou zprávou "uživatel nebyl rozpoznán".
     >
-    > Už nemusíte kupovat a přiřazovat k vašim uživatelům jednotlivé licence Intune ani EMS. Další informace najdete v tématu [Nejčastější dotazy k produktu a licencování](../core/understand/product-and-licensing-faq.md#bkmk_mem).
+    > Možná nebudete muset kupovat a přiřazovat k vašim uživatelům jednotlivé licence Intune ani EMS. Další informace najdete v tématu [Nejčastější dotazy k produktu a licencování](../core/understand/product-and-licensing-faq.md#bkmk_mem).
 
 ### <a name="configuration-manager"></a>Configuration Manager
 
