@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: aa518036aa99d5de003fbc56f99748267f3cc87b
-ms.sourcegitcommit: 7b2f7918d517005850031f30e705e5a512959c3d
+ms.openlocfilehash: 5b33be56975713c801d2ad3fdea17e6303687274
+ms.sourcegitcommit: 03d2331876ad61d0a6bb1efca3aa655b88f73119
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84776867"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85946908"
 ---
 # <a name="firewall-policy-for-endpoint-security-in-intune"></a>Zásady brány firewall pro zabezpečení koncových bodů v Intune
 
@@ -56,7 +56,7 @@ Naplánujte, aby se zásady brány firewall používaly na zařízení jenom v j
 
 - Tato forma konfliktu zásad platí pro profil **firewallu v programu Microsoft Defender** , který může být v konfliktu s jinými profily firewallu v programu Microsoft Defender, nebo konfigurací brány firewall, která se doručuje jiným typem zásad, jako je konfigurace zařízení.
 
-  *Profily firewallu* v programu Microsoft Defender nejsou v konfliktu s profily *pravidel firewallu v programu Microsoft Defender* .
+  *Profily firewallu v programu Microsoft Defender* nejsou v konfliktu s profily *pravidel firewallu v programu Microsoft Defender* .
 
 Když použijete profily **pravidel firewallu v programu Microsoft Defender** , můžete na stejné zařízení použít několik profilů pravidel. Pokud však existují různá pravidla pro stejnou věc s různými konfiguracemi, obě jsou odesílány do zařízení a v tomto zařízení vytvoří konflikt.
 

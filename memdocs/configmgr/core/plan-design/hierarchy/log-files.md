@@ -10,12 +10,12 @@ ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 63f8ad6827a1aa72c3aaa51e21fecbf639fbb405
-ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
+ms.openlocfilehash: 0f69b42ce0396148c67eaade967ef4fd87dea7bb
+ms.sourcegitcommit: 03d2331876ad61d0a6bb1efca3aa655b88f73119
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84715573"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85946891"
 ---
 # <a name="log-file-reference"></a>Referenční informace k protokolům
 
@@ -117,7 +117,7 @@ V následujících oddílech jsou uvedeny soubory protokolu týkající se opera
 
 Následující tabulka uvádí soubory protokolů, které se nacházejí v klientovi Configuration Manager.  
 
-|Název protokolu|Description|  
+|Název protokolu|Popis|  
 |--------------|-----------------|  
 |ADALOperationProvider. log|Informace o požadavcích tokenu ověřování klienta s Azure Active Directory (služba Azure AD) Authentication Library (ADAL).|
 |BitLockerManagementHandler. log|Zaznamenává informace o zásadách správy BitLockeru.|
@@ -188,7 +188,7 @@ Následující tabulka uvádí soubory protokolů, které se nacházejí v klien
 
 Následující tabulka uvádí soubory protokolů, které obsahují informace týkající se instalace klienta Configuration Manager.  
 
-|Název protokolu|Description|  
+|Název protokolu|Popis|  
 |--------------|-----------------|  
 |ccmsetup.log|Zaznamenává úlohy ccmsetup.exe pro instalaci klienta, upgrade klienta a odebrání klienta. Dá se použít k odstraňování problémů instalace klienta.|  
 |ccmsetup-ccmeval.log|Zaznamenává úlohy ccmsetup.exe pro stav a nápravu klienta.|  
@@ -263,7 +263,7 @@ V následujících oddílech jsou uvedeny soubory protokolů, které jsou na ser
 
 Následující tabulka uvádí soubory protokolů, které jsou na serveru Configuration Manager lokality a na serverech systému lokality.  
 
-|Název protokolu|Description|Počítač obsahující soubor protokolu|  
+|Název protokolu|Popis|Počítač obsahující soubor protokolu|  
 |--------------|-----------------|----------------------------|  
 |adctrl.log|Zaznamenává činnost zpracování zápisu.|Server lokality|  
 |ADForestDisc.log|Zaznamenává akce funkce zjišťování doménové struktury služby Active Directory.|Server lokality|  
@@ -350,7 +350,7 @@ Následující tabulka uvádí soubory protokolů, které jsou na serveru Config
 
 Následující tabulka uvádí protokolové soubory, které obsahují informace týkající se instalace lokality.  
 
-|Název protokolu|Description|Počítač obsahující soubor protokolu|  
+|Název protokolu|Popis|Počítač obsahující soubor protokolu|  
 |--------------|-----------------|----------------------------|  
 |ConfigMgrPrereq.log|Zaznamenává požadavky na vyhodnocení požadovaných součástí a instalační činnosti.|Server lokality|  
 |ConfigMgrSetup.log|Zaznamenává podrobný výstup z nastavení serveru lokality.|Server lokality|  
@@ -362,7 +362,7 @@ Následující tabulka uvádí protokolové soubory, které obsahují informace 
 
 Následující tabulka uvádí soubory protokolů, které obsahují informace týkající se bodu služby datového skladu.  
 
-|Název protokolu|Description|Počítač obsahující soubor protokolu|  
+|Název protokolu|Popis|Počítač obsahující soubor protokolu|  
 |--------------|-----------------|----------------------------|  
 |DWSSMSI. log|Zaznamenává zprávy vygenerované instalací bodu služby datového skladu.|Server systému lokality|  
 |DWSSSetup. log|Zaznamenává zprávy vygenerované instalací bodu služby datového skladu.|Server systému lokality|  
@@ -372,7 +372,7 @@ Následující tabulka uvádí soubory protokolů, které obsahují informace t�
 
 Následující tabulka uvádí protokolové soubory, které obsahují informace týkající se záložního stavového bodu.  
 
-|Název protokolu|Description|Počítač obsahující soubor protokolu|  
+|Název protokolu|Popis|Počítač obsahující soubor protokolu|  
 |--------------|-----------------|----------------------------|  
 |FspIsapi|Zaznamenává údaje o komunikacích se záložním stavovým bodem ze starších klientů a počítačů klientů mobilních zařízení.|Server systému lokality|  
 |fspMSI.log|Zaznamenává zprávy vytvářené instalací záložního stavového bodu.|Server systému lokality|  
@@ -382,7 +382,7 @@ Následující tabulka uvádí protokolové soubory, které obsahují informace 
 
 Následující tabulka uvádí protokolové soubory, které obsahují informace týkající se bodu správy.  
 
-|Název protokolu|Description|Počítač obsahující soubor protokolu|  
+|Název protokolu|Popis|Počítač obsahující soubor protokolu|  
 |--------------|-----------------|----------------------------|  
 |CcmIsapi.log|Zaznamenává činnost zpracování zpráv klienta na koncovém bodě.|Server systému lokality|
 |CCM_STS. log|Zaznamenává činnosti pro tokeny ověřování, buď od Azure Active Directory nebo tokenů klientů vydaných serverem.|Server systému lokality|
@@ -412,7 +412,7 @@ Následující tabulka uvádí protokolové soubory, které obsahují informace 
 
 Následující tabulka uvádí soubory protokolů, které obsahují informace týkající se spojovacího bodu služby.  
 
-|Název protokolu|Description|Počítač obsahující soubor protokolu|  
+|Název protokolu|Popis|Počítač obsahující soubor protokolu|  
 |--------------|-----------------|----------------------------|  
 |CertMgr.log|Zaznamenává informace o certifikátech a proxy účtu.|Server lokality|  
 |CollEval.log|Podrobnosti záznamu týkající se vytvoření, změny a odstranění kolekcí nástrojem Collection Evaluator.|Primární lokalita a lokalita centrální správy|  
@@ -427,6 +427,7 @@ Následující tabulka uvádí soubory protokolů, které obsahují informace t�
 |objreplmgr.log|Zaznamenává zpracování zásad a přiřazení.|Server primární lokality|  
 |PolicyPV.log|Zaznamenává generování zásad u všech zásad.|Server lokality|  
 |outgoingcontentmanager.log|Zaznamenává obsah odeslaný do Microsoft Intune.|Počítač se spojovacím bodem služby|  
+|ServiceConnectionTool. log|Zaznamenává údaje o použití nástroje pro [připojení služby](../../servers/manage/use-the-service-connection-tool.md) na základě parametru, který používáte. Pokaždé, když nástroj spustíte, nahradí se veškerý stávající soubor protokolu.|Stejné umístění jako nástroj|
 |Sitecomp.log|Zaznamenává údaje o instalaci spojovacího bodu služby.|Server lokality|  
 |SmsAdminUI.log|Zaznamenává činnost konzoly Configuration Manager.|Počítač se spuštěnou konzolou Configuration Manager|  
 |SMS_CLOUDCONNECTION. log|Zaznamenává informace o cloudových službách.|Počítač se spojovacím bodem služby|
@@ -438,7 +439,7 @@ Následující tabulka uvádí soubory protokolů, které obsahují informace t�
 
 Následující tabulka uvádí soubory protokolů, které obsahují informace týkající se bodu aktualizace softwaru.  
 
-|Název protokolu|Description|Počítač obsahující soubor protokolu|  
+|Název protokolu|Popis|Počítač obsahující soubor protokolu|  
 |--------------|-----------------|----------------------------|  
 |objreplmgr.log|Zaznamenává údaje o replikaci souborů oznámení o aktualizacích softwaru z nadřazené lokality do podřízených lokalit.|Server lokality|  
 |PatchDownloader.log|Zaznamenává údaje o procesu stahování aktualizací softwaru ze zdroje aktualizací do cílového umístění stahování na serveru lokality.|Při ručním stažení aktualizací se tento soubor nachází ve vašem `%temp%` adresáři na počítači, kde používáte konzolu nástroje. V případě pravidel automatického nasazení je-li klient Configuration Manager nainstalován na serveru lokality, je tento soubor na serveru lokality v nástroji `%windir%\CCM\Logs` .|  
@@ -459,7 +460,7 @@ V následujících oddílech jsou uvedeny soubory protokolu týkající se funkc
 
 Následující tabulka uvádí soubory protokolů, které obsahují informace související se správou aplikací.  
 
-|Název protokolu|Description|Počítač obsahující soubor protokolu|  
+|Název protokolu|Popis|Počítač obsahující soubor protokolu|  
 |--------------|-----------------|----------------------------|  
 |AppIntentEval.log|Zaznamenává údaje týkající se aktuálního a zamýšleného stavu aplikací, jejich použitelnosti, splnění požadavků, typů nasazení a závislostí.|Klient|  
 |AppDiscovery.log|Zaznamenává údaje týkající se zjišťování nebo detekce aplikací na klientských počítačích.|Klient|  
@@ -490,7 +491,7 @@ Následující tabulka uvádí soubory protokolů, které obsahují informace so
 
 Následující tabulka uvádí soubory protokolů, které obsahují informace související s nasazováním balíčků a programů.  
 
-|Název protokolu|Description|Počítač obsahující soubor protokolu|  
+|Název protokolu|Popis|Počítač obsahující soubor protokolu|  
 |--------------|-----------------|----------------------------|  
 |colleval.log|Podrobnosti záznamu týkající se vytvoření, změny a odstranění kolekcí nástrojem Collection Evaluator.|Server lokality|  
 |execmgr.log|Zaznamenává údaje týkající se běžících balíčků a sekvencí úloh.|Klient|  
@@ -499,7 +500,7 @@ Následující tabulka uvádí soubory protokolů, které obsahují informace so
 
 Následující tabulka uvádí soubory protokolů, které obsahují informace související s funkcí Asset Intelligence.  
 
-|Název protokolu|Description|Počítač obsahující soubor protokolu|  
+|Název protokolu|Popis|Počítač obsahující soubor protokolu|  
 |--------------|-----------------|----------------------------|  
 |AssetAdvisor.log|Zaznamenává aktivity akcí inventáře Asset Intelligence.|Klient|  
 |aikbmgr.log|Zaznamenává údaje týkající se zpracování souborů XML z doručené pošty pro aktualizaci katalogu Asset Intelligence.|Server lokality|  
@@ -513,7 +514,7 @@ Následující tabulka uvádí soubory protokolů, které obsahují informace so
 
 Následující tabulka uvádí soubory protokolů, které obsahují informace související s akcemi zálohování a obnovení, včetně resetování lokalit a změn u poskytovatele serveru SMS.  
 
-|Název protokolu|Description|Počítač obsahující soubor protokolu|  
+|Název protokolu|Popis|Počítač obsahující soubor protokolu|  
 |--------------|-----------------|----------------------------|  
 |ConfigMgrSetup.log|Zaznamenává informace týkající se úloh nastavení a obnovení, když Configuration Manager obnovuje lokalitu ze zálohy.|Server lokality|  
 |Smsbkup.log|Zaznamenává údaje týkající se aktivity zálohování lokality.|Server lokality|  
@@ -524,7 +525,7 @@ Následující tabulka uvádí soubory protokolů, které obsahují informace so
 
 V následující tabulce jsou uvedeny soubory protokolu Configuration Manager, které obsahují informace související s zápisem certifikátu. Zápis certifikátu používá bod registrace certifikátu a modul zásad Configuration Manager na serveru, na kterém je spuštěná služba zápisu síťových zařízení (NDES).  
 
-|Název protokolu|Description|Počítač obsahující soubor protokolu|  
+|Název protokolu|Popis|Počítač obsahující soubor protokolu|  
 |--------------|-----------------|----------------------------|  
 |Crp.log|Zaznamenává činnosti registrace.|Bod registrace certifikátu|  
 |Crpctrl.log|Zaznamenává provozní stav bodu registrace certifikátu.|Bod registrace certifikátu|  
@@ -549,7 +550,7 @@ Můžete taky použít následující soubory protokolů:
 
 Následující tabulka uvádí soubory protokolů, které obsahují informace související s klientským oznámením.  
 
-|Název protokolu|Description|Počítač obsahující soubor protokolu|  
+|Název protokolu|Popis|Počítač obsahující soubor protokolu|  
 |--------------|-----------------|----------------------------|  
 |bgbmgr.log|Zaznamenává údaje o aktivitách serveru lokality souvisejících s úlohami klientských oznámení a zpracování online a se soubory stavu úloh.|Server lokality|  
 |BGBServer.log|Zaznamenává aktivity serveru oznámení, jako je komunikace mezi klientem a serverem a doručování úloh klientům. Také zaznamenává informace o generaci online a souborů stavu úloh, které se mají odeslat na server lokality.|Bod správy|  
@@ -562,7 +563,7 @@ Následující tabulka uvádí soubory protokolů, které obsahují informace so
 
 Následující tabulka uvádí soubory protokolů, které obsahují informace související s bránou pro správu cloudu.
 
-|Název protokolu|Description|Počítač obsahující soubor protokolu|
+|Název protokolu|Popis|Počítač obsahující soubor protokolu|
 |--------------|-----------------|----------------------------|  
 |CloudMgr.log|Zaznamenává údaje o nasazení služby brány pro správu cloudu, stavu průběžné služby a k používání dat přidružených k této službě. Pokud chcete nakonfigurovat úroveň protokolování, upravte hodnotu **úrovně protokolování** v následujícím klíči registru:`HKLM\SOFTWARE\ Microsoft\SMS\COMPONENTS\ SMS_CLOUD_ SERVICES_MANAGER`|Složka *INSTALLDIR* na serveru primární lokality nebo CAS.|
 |CMGSetup. log – <sup> [Poznámka 1](#bkmk_note1)</sup>|Zaznamenává údaje o druhé fázi nasazení brány pro správu cloudu (místní nasazení v Azure). Pokud chcete nakonfigurovat úroveň protokolování, použijte nastavení **úroveň trasování** (**informace** (výchozí), **verbose**, **Chyba**) na kartě **Konfigurace služby Azure portal\Cloud** .|**%AppRoot%\Logs** na serveru Azure nebo ve složce SMS/protokolů na serveru systému lokality|
@@ -582,7 +583,7 @@ Jedná se o místní soubory Configuration Manager protokolů, které Cloud Serv
 
 Následující tabulka uvádí soubory protokolů, které obsahují informace související s nastavením dodržování předpisů a přístupem k prostředkům společnosti.  
 
-|Název protokolu|Description|Počítač obsahující soubor protokolu|  
+|Název protokolu|Popis|Počítač obsahující soubor protokolu|  
 |--------------|-----------------|----------------------------|  
 |CIAgent.log|Zaznamenává údaje týkající se procesu nápravy a souladu s nastavením dodržování předpisů, aktualizace softwaru a správy aplikací.|Klient|  
 |CITaskManager.log|Zaznamenává informace týkající se plánování úloh položek konfigurace.|Klient|  
@@ -594,7 +595,7 @@ Následující tabulka uvádí soubory protokolů, které obsahují informace so
 
 Následující tabulka uvádí soubory protokolů, které obsahují informace související s konzolou Configuration Manager.  
 
-|Název protokolu|Description|Počítač obsahující soubor protokolu|  
+|Název protokolu|Popis|Počítač obsahující soubor protokolu|  
 |--------------|-----------------|----------------------------|  
 |ConfigMgrAdminUISetup.log|Zaznamenává instalaci konzoly Configuration Manager.|Počítač se spuštěnou konzolou Configuration Manager|  
 |SmsAdminUI.log|Zaznamenává informace o operaci konzoly Configuration Manager.|Počítač se spuštěnou konzolou Configuration Manager|  
@@ -604,7 +605,7 @@ Následující tabulka uvádí soubory protokolů, které obsahují informace so
 
 Následující tabulka uvádí soubory protokolů, které obsahují informace související se správou obsahu.  
 
-|Název protokolu|Description|Počítač obsahující soubor protokolu|  
+|Název protokolu|Popis|Počítač obsahující soubor protokolu|  
 |--------------|-----------------|----------------------------|  
 |Souboru CloudDP- &lt; GUID \> . log|Zaznamenává údaje pro konkrétní cloudový distribuční bod, včetně informací o skladování a přístupu k obsahu.|Server systému lokality|  
 |CloudMgr.log|Zaznamenává údaje týkající se zřizování obsahu, shromažďování statistik úložiště a šířky pásma a akcí iniciované správcem pro zastavení nebo spuštění cloudové služby, která spouští cloudový distribuční bod.|Server systému lokality|  
@@ -622,7 +623,7 @@ Pomocí následujících souborů protokolu můžete pomoct řešit problémy s 
 Soubory protokolu ve spojovacím bodu služby jsou v následujícím adresáři: `%ProgramFiles%\Configuration Manager\Logs\M365A` .
 Soubory protokolu v klientovi Configuration Manager jsou v následujícím adresáři: `%WinDir%\CCM\logs` .
 
-| Protokol | Description |Počítač obsahující soubor protokolu|
+| Protokol | Popis |Počítač obsahující soubor protokolu|
 |---------|---------|---------|
 | M365ADeploymentPlanWorker. log | Informace o plánu nasazení synchronizovaném s cloudovou službou Desktop Analytics do místních Configuration Manager |Spojovací bod služby|
 | M365ADeviceHealthWorker. log | Informace o nahrání stavu zařízení z Configuration Manager do cloudu Microsoftu |Spojovací bod služby|
@@ -634,7 +635,7 @@ Soubory protokolu v klientovi Configuration Manager jsou v následujícím adres
 
 Následující tabulka uvádí soubory protokolů, které obsahují informace související se zjišťováním.  
 
-|Název protokolu|Description|Počítač obsahující soubor protokolu|  
+|Název protokolu|Popis|Počítač obsahující soubor protokolu|  
 |--------------|-----------------|----------------------------|  
 |adsgdis.log|Zaznamenává akce funkce zjišťování skupiny zabezpečení služby Active Directory.|Server lokality|  
 |adsysdis.log|Zaznamenává akce funkce zjišťování systému služby Active Directory.|Server lokality|  
@@ -648,7 +649,7 @@ Následující tabulka uvádí soubory protokolů, které obsahují informace so
 
 Následující tabulka uvádí soubory protokolů, které obsahují informace související s ochranou koncového bodu Endpoint Protection.  
 
-|Název protokolu|Description|Počítač obsahující soubor protokolu|  
+|Název protokolu|Popis|Počítač obsahující soubor protokolu|  
 |--------------|-----------------|----------------------------|  
 |EndpointProtectionAgent.log|Zaznamenává údaje o instalaci klienta ochrany koncového bodu Endpoint Protection a o zásadách aplikace Antimalware pro tohoto klienta.|Klient|  
 |EPCtrlMgr.log|Zaznamenává údaje o synchronizaci informací o hrozbách malwaru ze serveru Endpoint Protection role s databází Configuration Manager.|Server systému lokality|  
@@ -659,7 +660,7 @@ Následující tabulka uvádí soubory protokolů, které obsahují informace so
 
 Následující tabulka uvádí soubory protokolů, které obsahují informace související s rozšířeními.  
 
-|Název protokolu|Description|Počítač obsahující soubor protokolu|  
+|Název protokolu|Popis|Počítač obsahující soubor protokolu|  
 |--------------|-----------------|----------------------------|  
 |AdminUI.ExtensionInstaller.log|Zaznamenává informace o stažení rozšíření od Microsoftu a instalace a odinstalace všech rozšíření.|Počítač se spuštěnou konzolou Configuration Manager|  
 |FeatureExtensionInstaller.log|Zaznamenává informace o instalaci a odebrání jednotlivých rozšíření, pokud jsou povolené nebo zakázané v konzole Configuration Manager.|Počítač se spuštěnou konzolou Configuration Manager|  
@@ -669,7 +670,7 @@ Následující tabulka uvádí soubory protokolů, které obsahují informace so
 
 Následující tabulka uvádí soubory protokolů, které obsahují informace související se zpracováním dat inventáře.  
 
-|Název protokolu|Description|Počítač obsahující soubor protokolu|  
+|Název protokolu|Popis|Počítač obsahující soubor protokolu|  
 |--------------|-----------------|----------------------------|  
 |dataldr.log|Zaznamenává informace o zpracování souborů MIF a inventáře hardwaru v databázi Configuration Manager.|Server lokality|  
 |invproc.log|Zaznamenává odesílání souborů MIF ze sekundární lokality do její nadřazené lokality.|Server sekundární lokality|  
@@ -679,7 +680,7 @@ Následující tabulka uvádí soubory protokolů, které obsahují informace so
 
 Následující tabulka uvádí soubory protokolů, které obsahují informace související s měřením.  
 
-|Název protokolu|Description|Počítač obsahující soubor protokolu|  
+|Název protokolu|Popis|Počítač obsahující soubor protokolu|  
 |--------------|-----------------|----------------------------|  
 |mtrmgr.log|Monitoruje všechny procesy kontroly softwaru.|Klient|  
 |SWMTRReportGen.log|Vygeneruje sestavu použití dat, která je shromažďována agentem měření. Tato data se protokolují v souboru Mtrmgr.log.|Klient|
@@ -689,7 +690,7 @@ Následující tabulka uvádí soubory protokolů, které obsahují informace so
 
 Následující tabulka uvádí soubory protokolů, které obsahují informace související s migrací.  
 
-|Název protokolu|Description|Počítač obsahující soubor protokolu|  
+|Název protokolu|Popis|Počítač obsahující soubor protokolu|  
 |--------------|-----------------|----------------------------|  
 |migmctrl.log|Zaznamenává informace o akcích migrace zahrnujících úlohy migrace, sdílené distribuční body a upgradování distribučních bodů.|Lokalita nejvyšší úrovně v hierarchii Configuration Manager a každá podřízená primární lokalita. V hierarchii vícenásobných primárních lokalit použijte protokolový soubor vytvořený v lokalitě centrální správy.|  
 
@@ -701,7 +702,7 @@ V následujících oddílech jsou uvedeny soubory protokolů, které obsahují i
 
 Následující tabulka uvádí protokoly, které obsahují informace související s registrací mobilních zařízení.  
 
-|Název protokolu|Description|Počítač obsahující soubor protokolu|  
+|Název protokolu|Popis|Počítač obsahující soubor protokolu|  
 |--------------|-----------------|----------------------------|  
 |DMPRP.log|Zaznamenává komunikaci mezi body správy, které jsou povolené pro mobilní zařízení, a koncovými body bodu správy.|Server systému lokality|  
 |dmpmsi.log|Zaznamenává data Instalační služby systému Windows pro konfiguraci bodu správy, který je povolený pro mobilní zařízení.|Server systému lokality|  
@@ -716,7 +717,7 @@ Následující tabulka uvádí protokoly, které obsahují informace souvisejíc
 
 Následující protokoly obsahují informace týkající se konektoru serveru Exchange Server.  
 
-|Název protokolu|Description|Počítač obsahující soubor protokolu|  
+|Název protokolu|Popis|Počítač obsahující soubor protokolu|  
 |--------------|-----------------|----------------------------|  
 |easdisc.log|Zaznamenává aktivity a stav konektoru Exchange Serveru.|Server lokality|  
 
@@ -724,7 +725,7 @@ Následující protokoly obsahují informace týkající se konektoru serveru Ex
 
 Následující tabulka uvádí protokoly, které obsahují informace související se staršími mobilními zařízeními.  
 
-|Název protokolu|Description|Počítač obsahující soubor protokolu|  
+|Název protokolu|Popis|Počítač obsahující soubor protokolu|  
 |--------------|-----------------|----------------------------|  
 |DmCertEnroll.log|Zaznamenává údaje o datech zápisu certifikátu u starších verzí klientů mobilních zařízení.|Klient|  
 |DMCertResp.htm|Zaznamenává odpověď protokolu HTML z certifikačního serveru, pokud program registrace klientů mobilních zařízení starších verzí vyžaduje certifikát PKI.|Klient|  
@@ -749,7 +750,7 @@ Následující tabulka uvádí protokoly, které obsahují informace souvisejíc
 
 Následující tabulka uvádí soubory protokolů, které obsahují informace související s nasazením operačního systému.  
 
-|Název protokolu|Description|Počítač obsahující soubor protokolu|  
+|Název protokolu|Popis|Počítač obsahující soubor protokolu|  
 |--------------|-----------------|----------------------------|  
 |CAS.log|Zaznamenává údaje, pokud jsou nalezené distribuční body pro odkazovaný obsah.|Klient|  
 |ccmsetup.log|Zaznamenává úlohy nástroje ccmsetup pro instalaci, upgrade a odebrání klienta. Dá se použít k odstraňování problémů instalace klienta.|Klient|  
@@ -787,7 +788,7 @@ Následující tabulka uvádí soubory protokolů, které obsahují informace so
 
 Následující tabulka uvádí soubory protokolů, které obsahují informace související s řízením spotřeby.  
 
-|Název protokolu|Description|Počítač obsahující soubor protokolu|  
+|Název protokolu|Popis|Počítač obsahující soubor protokolu|  
 |--------------|-----------------|----------------------------|  
 |pwrmgmt.log|Zaznamenává údaje o aktivitách řízení spotřeby na klientském počítači, včetně monitorování a vynucení nastavení klientským agentem pro řízení spotřeby.|Klient|  
 
@@ -795,7 +796,7 @@ Následující tabulka uvádí soubory protokolů, které obsahují informace so
 
 Následující tabulka uvádí soubory protokolů, které obsahují informace týkající se vzdáleného řízení.  
 
-|Název protokolu|Description|Počítač obsahující soubor protokolu|  
+|Název protokolu|Popis|Počítač obsahující soubor protokolu|  
 |--------------|-----------------|----------------------------|  
 |CMRcViewer.log|Zaznamenává údaje o aktivitě prohlížeče vzdáleného řízení.|V počítači, na kterém je spuštěný prohlížeč vzdáleného řízení, ve složce% Temp%.|  
 
@@ -803,7 +804,7 @@ Následující tabulka uvádí soubory protokolů, které obsahují informace t�
 
 V následující tabulce jsou uvedeny soubory protokolu Configuration Manager, které obsahují informace související s vytvářením sestav.  
 
-|Název protokolu|Description|Počítač obsahující soubor protokolu|  
+|Název protokolu|Popis|Počítač obsahující soubor protokolu|  
 |--------------|-----------------|----------------------------|  
 |srsrp.log|Zaznamenává údaje o aktivitě a stavu bodu služeb generování sestav.|Server systému lokality|  
 |srsrpMSI.log|Zaznamenává podrobné výsledky procesu instalace bodu služeb generování sestav z výstupu MSI.|Server systému lokality|  
@@ -813,7 +814,7 @@ V následující tabulce jsou uvedeny soubory protokolu Configuration Manager, k
 
 Následující tabulka uvádí soubory protokolů, které obsahují informace související s řízením správy na základě rolí.  
 
-|Název protokolu|Description|Počítač obsahující soubor protokolu|  
+|Název protokolu|Popis|Počítač obsahující soubor protokolu|  
 |--------------|-----------------|----------------------------|  
 |hman.log|Zaznamenává informace o změnách konfigurace lokality a o publikování informací o lokalitě pro Active Directory Domain Services.|Server lokality|  
 |SMSProv.log|Zaznamenává přístup poskytovatele služby WMI k databázi lokality.|Počítač obsahující poskytovatele serveru SMS|  
@@ -822,7 +823,7 @@ Následující tabulka uvádí soubory protokolů, které obsahují informace so
 
 Následující tabulka uvádí soubory protokolů, které obsahují informace související s měřením softwaru.  
 
-|Název protokolu|Description|Počítač obsahující soubor protokolu|  
+|Název protokolu|Popis|Počítač obsahující soubor protokolu|  
 |--------------|-----------------|----------------------------|  
 |mtrmgr.log|Monitoruje všechny procesy kontroly softwaru.|Server lokality|  
 
@@ -830,7 +831,7 @@ Následující tabulka uvádí soubory protokolů, které obsahují informace so
 
 Následující tabulka uvádí soubory protokolu, které obsahují informace týkající se aktualizací softwaru.  
 
-|Název protokolu|Description|Počítač obsahující soubor protokolu|  
+|Název protokolu|Popis|Počítač obsahující soubor protokolu|  
 |--------------|-----------------|----------------------------|  
 |AlternateHandler. log|Zaznamenává údaje, když klient zavolá rozhraní COM Klikni a spusť ke stažení a instalaci aplikací Microsoft 365 pro aktualizace podnikového klienta. Je podobná použití WuaHandler při volání rozhraní API agenta web Windows Update ke stažení a instalaci aktualizací Windows.<!-- SCCMDocs#888 -->|Klient|
 |ccmperf.log|Zaznamenává činnosti týkající se správy a sběru dat v závislosti na čítačích výkonu klienta.|Klient|
@@ -861,7 +862,7 @@ Následující tabulka uvádí soubory protokolů, které obsahují informace so
 > [!NOTE]  
 > Když doplníte Wake On LAN pomocí proxy probuzení, tato aktivita se zaprotokoluje na straně klienta. Příklad naleznete v části Ccmexec. log a SleepAgent_<*Domain* \> @SYSTEM_0.log v části [operace klienta](#BKMK_ClientOpLogs) tohoto článku.  
 
-|Název protokolu|Description|Počítač obsahující soubor protokolu|  
+|Název protokolu|Popis|Počítač obsahující soubor protokolu|  
 |--------------|-----------------|----------------------------|  
 |wolcmgr.log|Zaznamenává údaje o tom, kterým klientům se mají odeslat pakety pro buzení ze spánku, počet odeslaných paketů pro buzení a počet paketů pro buzení s opakovaným pokusem o odeslání.|Server lokality|  
 |wolmgr.log|Zaznamenává údaje o postupech buzení, jako např. kdy budit nasazení, která jsou nakonfigurovaná pro funkci Wake On LAN.|Server lokality|  
@@ -871,7 +872,7 @@ Následující tabulka uvádí soubory protokolů, které obsahují informace so
 Následující tabulka uvádí soubory protokolů, které obsahují informace týkající se údržby Windows 10.  
 Údržba používá stejnou infrastrukturu a proces jako aktualizace softwaru. Další protokoly použitelné pro scénář údržby najdete v tématu [aktualizace softwaru](#BKMK_SU_NAPLog).
 
-|Název protokolu|Description|Počítač obsahující soubor protokolu|  
+|Název protokolu|Popis|Počítač obsahující soubor protokolu|  
 |--------------|-----------------|----------------------------|  
 |CBS. log|Zaznamenává selhání obsluhy související se změnami pro aktualizace nebo role a funkce systému Windows.|Klient|
 |DISM. log|Zaznamenává všechny akce pomocí nástroje DISM. V případě potřeby bude nástroj DISM. log odkazovat na protokol CBS. log, kde najdete další podrobnosti.|Klient|
@@ -883,7 +884,7 @@ Další informace najdete v tématu [soubory protokolu týkající se údržby o
 
 Následující tabulka uvádí soubory protokolu, které obsahují informace týkající se agenta služby Windows Update.  
 
-|Název protokolu|Description|Počítač obsahující soubor protokolu|  
+|Název protokolu|Popis|Počítač obsahující soubor protokolu|  
 |--------------|-----------------|----------------------------|  
 |WindowsUpdate.log|Zaznamenává údaje o tom, kdy se agent web Windows Update připojí k serveru WSUS a načítá aktualizace softwaru pro posouzení dodržování předpisů a zda jsou k dispozici aktualizace komponent agenta.|Klient|  
 
@@ -893,7 +894,7 @@ Další informace najdete v tématu [web Windows Update souborů protokolu](http
 
 Následující tabulka uvádí soubory protokolů, které obsahují informace týkající se serveru WSUS.  
 
-|Název protokolu|Description|Počítač obsahující soubor protokolu|  
+|Název protokolu|Popis|Počítač obsahující soubor protokolu|  
 |--------------|-----------------|----------------------------|  
 |Change.log|Zaznamenává údaje o informacích o databázi serveru WSUS, které se změnily.|Server služby WSUS|  
 |SoftwareDistribution.log|Zaznamenává údaje o aktualizacích softwaru synchronizovaných z nakonfigurovaného zdroje aktualizací s databází serveru WSUS.|Server služby WSUS|  

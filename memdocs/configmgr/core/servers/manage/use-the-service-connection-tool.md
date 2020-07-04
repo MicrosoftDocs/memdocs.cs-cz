@@ -2,7 +2,7 @@
 title: Nástroj pro připojení služby
 titleSuffix: Configuration Manager
 description: Přečtěte si o tomto nástroji, který vám umožní připojit se ke cloudové službě Configuration Manager a ručně odeslat informace o využití.
-ms.date: 09/06/2017
+ms.date: 07/02/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,180 +10,250 @@ ms.assetid: 6e4964c5-43cb-4372-9a89-b62ae6a4775c
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: e535653e0f31e186a6bdbde8da77750f2afdfdb0
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 48aa08f3318aaa4629691bfb30b60580cd3e25f0
+ms.sourcegitcommit: 03d2331876ad61d0a6bb1efca3aa655b88f73119
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81710815"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85946840"
 ---
 # <a name="use-the-service-connection-tool-for-configuration-manager"></a>Použití nástroje pro připojení služby pro Configuration Manager
 
 *Platí pro: Configuration Manager (Current Branch)*
 
-Použijte **Nástroj pro připojení služby** , když je spojovací bod služby v režimu offline nebo když vaše servery systému lokality Configuration Manager nejsou připojené k Internetu. Tento nástroj vám může přispět k aktuálnosti vašeho webu s nejnovějšími aktualizacemi pro Configuration Manager.  
+Pokud je spojovací bod služby v režimu offline, použijte **Nástroj pro připojení služby** . Můžete ji použít i v případě, že servery systému lokality Configuration Manager nejsou připojené k Internetu. Tento nástroj vám může přispět k aktuálnosti vašeho webu s nejnovějšími aktualizacemi pro Configuration Manager.
 
-Při spuštění se nástroj ručně připojí ke cloudové službě Configuration Manager, aby mohl odeslat informace o využití vaší hierarchie a stáhnout aktualizace. Odesílání dat o využití je potřeba, aby mohla cloudová služba poskytnout správné aktualizace pro vaše nasazení.  
+Když nástroj spustíte, připojí se ke cloudové službě Configuration Manager, nahraje informace o využití vaší hierarchie a stáhne aktualizace. Odesílání dat o využití je potřeba, aby cloudová služba mohla poskytovat správné aktualizace pro vaše prostředí.
 
-## <a name="prerequisites-for-using-the-service-connection-tool"></a>Předpoklady použití nástroje pro připojení služby
-Následují předpoklady a známé problémy.
+## <a name="prerequisites"></a>Požadavky
 
-**Požadovaný**
+- Lokalita má bod připojení služby a konfiguruje ji pro **offline připojení na vyžádání**.
 
-- Máte nainstalovaný spojovací bod služby, který je nastavený na možnost **Offline, připojení na vyžádání**.  
+- Spusťte nástroj z příkazového řádku jako správce. Neexistuje žádné uživatelské rozhraní.
 
-- Nástroj se musí spustit z příkazového řádku.  
+- Nástroj spustíte ze spojovacího bodu služby a počítače, který se může připojit k Internetu. Každý z těchto počítačů musí mít 64bitový operační systém a musí mít následující součásti:
 
-- Každý počítač, ve kterém se nástroj spustí (počítač se spojovacím bodem služby a počítač připojený k internetu), musí mít systém pro platformu x64 a musí mít nainstalované tyto položky:  
+  - Soubory **Distribuovatelných součástí Visual C++** x86 a x64. Ve výchozím nastavení Configuration Manager nainstaluje verzi x64 do počítače, který je hostitelem spojovacího bodu služby. Chcete-li stáhnout tuto součást, přečtěte si téma [Visual C++ distribuovatelných balíčků pro Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=40784).
 
-  - Soubory **Distribuovatelných součástí Visual C++** x86 a x64.   Ve výchozím nastavení Configuration Manager nainstaluje verzi x64 do počítače, který je hostitelem spojovacího bodu služby.  
+  - **.NET Framework 4.5.2** nebo novější
 
-    Chcete-li stáhnout kopii souborů Visual C++, přejděte na stránku [Balíčky distribuovatelných součástí Visual C++ pro Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=40784) na webu Microsoft Download Center.  
+- Účet, který použijete ke spuštění nástroje, potřebuje následující oprávnění:
 
-  - .NET Framework 4.5.2 nebo novější.  
+  - **Místní správce** v počítači, který je hostitelem spojovacího bodu služby
 
-- Účet, který používáte ke spouštění nástroje, musí mít:
-  - Oprávnění**místního správce** v počítači, který je hostitelem spojovacího bodu služby (ve kterém se nástroj spouští).
-  - Oprávnění**Číst** k databázi lokality.  
+  - Oprávnění **ke čtení** pro databázi lokality
 
+- Potřebujete metodu přenosu souborů mezi počítačem s přístupem k Internetu a spojovacím bodem služby. Například jednotka USB s dostatkem volného místa pro uložení souborů a aktualizací.
 
+## <a name="overview"></a>Přehled
 
-- Budete potřebovat jednotku USB s dostatečným volným místem pro uložení souborů a aktualizací nebo jiný způsob přenosu souborů mezi počítačem se spojovacím bodem služby a počítačem, který má přístup k internetu. (Tento scénář vychází z předpokladu, že vaše lokalita a spravované počítače nemají přímé připojení k internetu.)  
+1. **Příprava**: Spusťte nástroj ve spojovacím bodě služby. Data o využití se umístí do souboru. cab v umístění, které zadáte. Zkopírujte datový soubor do počítače s připojením k Internetu.
 
+2. **Připojit**: Spusťte nástroj na počítači s připojením k Internetu. Nahraje data o využití a pak stáhne Configuration Manager aktualizace. Zkopírujte stažené aktualizace do spojovacího bodu služby.
 
+    Můžete nahrát několik datových souborů najednou, z různých hierarchií. Můžete také zadat proxy server a uživatele pro proxy server.
 
-## <a name="use-the-service-connection-tool"></a>Použití nástroje pro připojení služby  
+3. **Import**: Spusťte nástroj ve spojovacím bodě služby. Naimportuje aktualizace a přidá je do vašeho webu. [Tyto aktualizace](install-in-console-updates.md) pak můžete zobrazit a nainstalovat v konzole Configuration Manager.
 
- Nástroj pro připojení služby (**serviceconnectiontool. exe**) najdete na instalačním médiu Configuration Manager ve složce **%path%\smssetup\tools\ServiceConnectionTool** . Vždy používejte Nástroj pro připojení služby, který odpovídá používané verzi Configuration Manager.
+### <a name="upload-multiple-data-files"></a>Nahrávání více datových souborů
 
+- Všechny exportované datové soubory umístěte z různých hierarchií do stejné složky. Každému souboru zadejte jedinečný název. V případě potřeby je můžete ručně přejmenovat.
 
- V tomto postupu se v příkladech příkazového řádku používají následující názvy souborů a umístění složek (tyto cesty a názvy souborů nemusíte použít, můžete je nahradit alternativami, které odpovídají vašemu prostředí a předvolbám):  
+- Když spustíte nástroj pro nahrání dat společnosti Microsoft, zadáte složku, která obsahuje datové soubory.
 
-- Cesta k jednotce USB, na které jsou uložená data pro přenos mezi servery: **D:\USB\\**  
+- Když spustíte nástroj pro import dat, nástroj importuje pouze data pro tuto hierarchii.
 
-- Název souboru .cab, který obsahuje data exportovaná z lokality: **UsageData.cab**  
+### <a name="specify-a-proxy-server"></a>Zadejte proxy server
 
-- Název prázdné složky, do které se uloží stažené aktualizace nástroje Configuration Manager pro přenos mezi servery: **UpdatePacks**  
+Pokud počítač s připojením k Internetu vyžaduje proxy server, nástroj podporuje základní konfiguraci proxy serveru. Použijte volitelné parametry **-proxyserveruri** a **-proxyusername**. Další informace najdete v tématu [parametry příkazového řádku](#bkmk_cmd).
 
-V počítači, který je hostitelem spojovacího bodu služby:  
+### <a name="specify-the-type-of-updates-to-download"></a>Zadejte typ aktualizací, které se mají stáhnout.
 
-- Otevřete příkazový řádek s oprávněními správce a poté změňte adresáře na umístění, které obsahuje nástroj **serviceconnectiontool.exe**.  
+Nástroj podporuje možnosti, které určují, jaké soubory se mají stáhnout. Ve výchozím nastavení nástroj stáhne pouze nejnovější dostupnou aktualizaci, která se vztahuje na verzi vaší lokality. Nestahují opravy hotfix.
 
-  Ve výchozím nastavení můžete tento nástroj najít na instalačním médiu Configuration Manager ve složce **%path%\smssetup\tools\ServiceConnectionTool** . Všechny soubory v této složce musí být ve stejné složce, aby nástroj pro připojení služby fungoval.  
+Chcete-li toto chování změnit, použijte jeden z následujících parametrů pro změnu souborů, které stahuje:
 
-Když spustíte následující příkaz, nástroj připraví soubor .cab, který obsahuje informace o využití, a zkopíruje ho do zadaného umístění. Data v souboru .cab jsou založená na úrovni diagnostických dat o využití, které je lokalita nakonfigurovaná shromažďovat. (viz [data o využití a Diagnostika pro Configuration Manager](../../../core/plan-design/diagnostics/diagnostics-and-usage-data.md)).  Spusťte následující příkaz pro vytvoření souboru .cab:  
+- **-DownloadAll**: Stáhněte všechny aktualizace včetně aktualizací a oprav hotfix bez ohledu na verzi vaší lokality.
+- **-downloadhotfix**: Stáhněte všechny opravy hotfix bez ohledu na verzi vašeho webu.
+- **-downloadsiteversion**: stáhne aktualizace a opravy hotfix s novější verzí, než je verze vašeho webu.
 
-- **serviceconnectiontool.exe -prepare -usagedatadest D:\USB\UsageData.cab**  
+    > [!IMPORTANT]
+    > Kvůli známému problému ve verzi Configuration Manager 2002 není výchozí chování fungovat podle očekávání. Pomocí parametru **-downloadsiteversion** stáhněte potřebné aktualizace pro verzi 2002.<!-- 7594517 -->
 
-Také je třeba zkopírovat složku ServiceConnectionTool s veškerým jejím obsahem na jednotku USB nebo ji jinak zpřístupnit v počítači, který budete používat pro kroky 3 a 4.  
+Další informace najdete v tématu [parametry příkazového řádku](#bkmk_cmd).
 
-### <a name="overview"></a>Přehled
-#### <a name="there-are-three-primary-steps-to-using-the-service-connection-tool"></a>Existují tři hlavní kroky pro použití nástroje pro připojení služby.  
+> [!TIP]
+> Nástroj určuje verzi vašeho webu z datového souboru. Verzi ověříte tak, že v souboru. cab vyhledáte textový soubor s názvem s verzí webu.
 
-1.  **Příprava**: Tento krok je spuštěn v počítači, který je hostitelem spojovacího bodu služby. Když je nástroj spuštěný, převede data o využití do souboru. cab a uloží ho na jednotku USB (nebo do jiného umístění pro přenos, které zadáte).  
+## <a name="use-the-tool"></a>Použití nástroje  
 
-2.  **Připojit**: pro účely tohoto kroku spustíte nástroj ve vzdáleném počítači, který se připojuje k Internetu, abyste mohli nahrát data o využití a pak stahovat aktualizace.  
+Nástroj pro připojení služby je v instalačním médiu Configuration Manager v následující cestě: `SMSSETUP\TOOLS\ServiceConnectionTool\ServiceConnectionTool.exe` . Vždy používejte Nástroj pro připojení služby, který odpovídá používané verzi Configuration Manager. Všechny tyto soubory musí být ve stejné složce, aby nástroj pro připojení služby fungoval.
 
-3.  **Importovat**: Tento krok běží na počítači, který je hostitelem spojovacího bodu služby. Při spuštění nástroj importuje aktualizace, které jste stáhli, a přidá je do vaší lokality, abyste je mohli zobrazit a nainstalovat z konzoly Configuration Manager.  
+Zkopírujte složku **ServiceConnectionTool** s veškerým jejím obsahem do počítače s připojením k Internetu.
 
-Počínaje verzí 1606 můžete při připojení k Microsoftu odeslat více souborů .cab najednou (každý z jiné hierarchie) a zadat proxy server a uživatele pro proxy server.   
+V tomto postupu používají příklady příkazového řádku následující názvy souborů a umístění složek. Tyto cesty a názvy souborů nemusíte používat. Můžete použít alternativy, které odpovídají vašemu prostředí a předvolbách.
 
-#### <a name="to-upload-multiple-cab-files"></a>Nahrání více souborů. cab
-- Umístěte všechny soubory .cab exportované z jednotlivých hierarchií do stejné složky. Název každého souboru musí být jedinečný, v případě potřeby je můžete ručně přejmenovat.
-- Následně při spuštění příkazu k odeslání dat do Microsoftu zadejte složku obsahující soubory .cab. (Před aktualizací 1606 bylo možné odeslat data pouze z jedné hierarchie najednou, a nástroj vyžadoval zadání názvu souboru .cab ve složce)
-- Později, když spustíte úlohu importu na spojovacím bodu služby v hierarchii, nástroj automaticky importuje pouze data pro danou hierarchii.  
+- Cesta ke zdrojovému instalačnímu souboru médií Configuration Manager ve spojovacím bodu služby:`C:\Source`
 
-#### <a name="to-specify-a-proxy-server"></a>Určení proxy server
-Pomocí následujících volitelných parametrů můžete zadat proxy server (Další informace o používání těchto parametrů najdete v oddílu Parametry příkazového řádku v tomto tématu):
-- **-proxyserveruri [FQDN_of_proxy_server]**  Pomocí tohoto parametru můžete určit proxy server, který se má použít pro toto připojení.
-- **-proxyusername [uživatelské_jméno]**  Tento parametr použijte v případě, že musíte zadat uživatele pro proxy server.
+- Cesta k jednotce USB, kam ukládáte data pro přenos mezi počítači:`D:\USB\`
 
-#### <a name="specify-the-type-of-updates-to-download"></a>Zadejte typ aktualizací, které se mají stáhnout.
-Od verze 1706 se změnila výchozí chování nástrojů a nástroj podporuje možnosti, které určují, jaké soubory si stáhnete.
-- Ve výchozím nastavení nástroj stáhne pouze nejnovější dostupnou aktualizaci, která se vztahuje na verzi vaší lokality. Nestahují opravy hotfix.
+- Název datového souboru, který exportujete z lokality:`UsageData.cab`
 
-Chcete-li toto chování změnit, použijte jeden z následujících parametrů pro změnu souborů, které jsou staženy. 
+- Název prázdné složky, do které nástroj ukládá stažené aktualizace pro Configuration Manager:`UpdatePacks`
 
-> [!NOTE]
-> Verze vaší lokality se určí z dat v souboru. cab, který se nahraje při spuštění nástroje.
->
-> Verzi můžete ověřit tak, že v souboru. cab vyhledáte soubor *SiteVersion*. txt.
+### <a name="prepare"></a>Příprava
 
-- **– DownloadAll**  Tato možnost stáhne vše, včetně aktualizací a oprav hotfix, bez ohledu na verzi vaší lokality.
-- **– downloadhotfix**  Tato možnost stáhne všechny opravy hotfix bez ohledu na verzi vašeho webu.
-- **– downloadsiteversion**  Tato možnost stáhne aktualizace a opravy hotfix, jejichž verze je vyšší než verze vaší lokality.
+1. V počítači, který je hostitelem spojovacího bodu služby, otevřete příkazový řádek jako správce a změňte adresář na umístění nástroje. Například:
 
-Příklad příkazového řádku, který používá *-downloadsiteversion*:
-- **serviceconnectiontool. exe-Connect *-downloadsiteversion* -usagedatasrc D:\USB-updatepackdest D:\USB\UpdatePacks**
+    `cd C:\Source\SMSSETUP\TOOLS\ServiceConnectionTool\`
 
+1. Spuštěním následujícího příkazu Připravte datový soubor:
 
+    `ServiceConnectionTool.exe -prepare -usagedatadest D:\USB\UsageData.cab`
 
+    > [!NOTE]
+    > Pokud budete nahrávat datové soubory z více než jedné hierarchie současně, poskytněte každému datovému souboru jedinečný název. V případě potřeby můžete soubory přejmenovat později.
 
-### <a name="to-use-the-service-connection-tool"></a>Postup použití nástroje pro připojení služby  
+    Data v souboru jsou založená na úrovni diagnostických dat a dat o využití, která pro lokalitu nakonfigurujete. Další informace najdete v tématu [Přehled diagnostiky a dat o využití](../../plan-design/diagnostics/diagnostics-and-usage-data.md). Pomocí tohoto nástroje můžete exportovat data do souboru CSV a zobrazit obsah. Další informace najdete v tématu [-Export](#-export).
 
-1. V počítači, který je hostitelem spojovacího bodu služby:  
+1. Poté, co nástroj dokončí export dat o použití, zkopírujte datový soubor do počítače, který má přístup k Internetu.
 
-   - Otevřete příkazový řádek s oprávněními správce a poté změňte adresáře na umístění, které obsahuje nástroj **serviceconnectiontool.exe**.   
+### <a name="connect"></a>Připojit
 
-2. Spusťte následující příkaz, aby nástroj připravil soubor .cab, který obsahuje informace o využití, a zkopíroval ho do zadaného umístění:  
+1. Na počítači s přístupem k Internetu otevřete příkazový řádek jako správce a změňte adresář na umístění nástroje. Toto umístění je kopií celé složky **ServiceConnectionTool** . Například:
 
-   - **serviceconnectiontool.exe -prepare -usagedatadest D:\USB\UsageData.cab**  
+    `cd D:\USB\ServiceConnectionTool\`
 
-   Pokud odesíláte soubory .cab z více než jedné hierarchie najednou, musí mít každý soubor .cab ve složce jedinečný název. Soubory, které přidáte do složky, můžete ručně přejmenovat.
+1. Spuštěním následujícího příkazu nahrajte datový soubor a stáhněte Configuration Manager aktualizace:
 
-   Chcete-li zobrazit informace o využití, které se shromáždily k odeslání do cloudové služby nástroje Configuration Manager, spusťte následující příkaz, který data exportuje do souboru .csv, který následně můžete zobrazit pomocí aplikace, jako je Excel:  
+    `ServiceConnectionTool.exe -connect -usagedatasrc D:\USB -updatepackdest D:\USB\UpdatePacks`
 
-   - **serviceconnectiontool.exe -export -dest D:\USB\UsageData.csv**  
+    Další příklady najdete v tématu [parametry příkazového řádku](#bkmk_cmd).
 
-3. Až dokončíte přípravný krok, připojte jednotku USB (nebo jinak přeneste exportovaná data) k počítači, který má přístup k internetu.  
+    > [!NOTE]  
+    > Při spuštění tohoto příkazového řádku se může zobrazit následující chyba:
+    >
+    > **Neošetřená výjimka: System. UnauthorizedAccessException: přístup k cestě ' C:\Users\jqpublic\AppData\Local\Temp\extractmanifestcab\95F8A562.sql ' byl odepřen.**
+    >
+    > Tuto chybu můžete bezpečně ignorovat. Pokud chcete pokračovat, zavřete okno chyb.
 
-4. Na počítači s přístupem k internetu otevřete příkazový řádek s oprávněním správce a poté změňte adresáře na umístění, které obsahuje kopii nástroje  **serviceconnectiontool.exe** a další soubory z této složky.  
+1. Poté, co nástroj dokončí stahování aktualizací, je zkopírujte do spojovacího bodu služby.
 
-5. Spuštěním následujícího příkazu zahajte odesílání informací o využití a stahování aktualizací pro Configuration Manager:  
+### <a name="import"></a>Import
 
-   - **serviceconnectiontool. exe-Connect-usagedatasrc D:\USB-updatepackdest D:\USB\UpdatePacks**
+1. V počítači, který je hostitelem spojovacího bodu služby, otevřete příkazový řádek jako správce a změňte adresář na umístění nástroje. Například:
 
-   Další příklady tohoto příkazového řádku najdete v oddílu [Možnosti příkazového řádku](../../../core/servers/manage/use-the-service-connection-tool.md#bkmk_cmd) dále v tomto tématu.
+    `cd C:\Source\SMSSETUP\TOOLS\ServiceConnectionTool\`
 
-   > [!NOTE]  
-   >  Při spuštění příkazového řádku pro připojení ke cloudové službě Configuration Manageru se může zobrazit chyba podobná této:  
-   >   
-   > - Neošetřená výjimka: System.UnauthorizedAccessException:  
-   >   
-   >      Přístup k cestě C:\  
-   >     Users\br\AppData\Local\Temp\extractmanifestcab\95F8A562.sql byl odepřen.  
-   >   
-   > Tuto chybu můžete bezpečně ignorovat, zavřít okno chyby a pokračovat.  
+1. Spuštěním následujícího příkazu importujte aktualizace:
 
-6. Po stažení aktualizací pro Configuration Manager připojte jednotku USB (nebo jinak přeneste exportovaná data) k počítači, který je hostitelem spojovacího bodu služby.  
+    `ServiceConnectionTool.exe -import -updatepacksrc D:\USB\UpdatePacks`
 
-7. Na počítači, který je hostitelem spojovacího bodu služby, otevřete příkazový řádek s oprávněním správce, změňte adresáře na umístění, které obsahuje nástroj **serviceconnectiontool.exe**, a poté spusťte následující příkaz:  
+1. Po dokončení importu Zavřete příkazový řádek. Importuje pouze aktualizace pro příslušnou hierarchii.
 
-   - **serviceconnectiontool.exe -import -updatepacksrc D:\USB\UpdatePacks**  
+1. V konzole Configuration Manager otevřete pracovní prostor **Správa** a vyberte uzel **aktualizace a údržba** . Importované aktualizace jsou teď dostupné k instalaci. Další informace najdete v tématu [instalace konzolových aktualizací](install-in-console-updates.md).
 
-8. Po dokončení importu můžete příkazový řádek zavřít. (Importují se pouze aktualizace pro příslušnou hierarchii).  
+## <a name="log-files"></a>Soubory protokolů
 
-9. Otevřete konzolu Configuration Manager a přejděte do části **Správa** > **aktualizace a údržba**. Importované aktualizace jsou teď dostupné k instalaci. (Před verzí 1702 se aktualizace a údržba **Administration** > **Cloud Services**.)
+- **ServiceConnectionTool. log**: pokaždé, když spustíte nástroj pro připojení služby, se zapisuje do tohoto souboru protokolu. Cesta k souboru protokolu je vždy stejné jako nástroj. Tento soubor protokolu poskytuje jednoduché podrobnosti o využití nástroje na základě parametrů, které používáte. Při každém spuštění tohoto nástroje se nahradí existující soubor protokolu.
 
-   Informace o instalaci aktualizací najdete v tématu [instalace konzolových aktualizací pro Configuration Manager](../../../core/servers/manage/install-in-console-updates.md).  
+- **ConfigMgrSetup. log**: během fáze [připojení](#connect) nástroj zapisuje do tohoto souboru protokolu v kořenovém adresáři systémového disku. Tento soubor protokolu poskytuje podrobnější informace. Například jaké soubory nástroj stáhne a zda jsou kontroly hodnoty hash úspěšné.
 
-## <a name="log-files"></a><a name="bkmk_cmd"></a>Soubory protokolu
+## <a name="command-line-parameters"></a><a name="bkmk_cmd"></a>Parametry příkazového řádku
 
-**ServiceConnectionTool. log**
+V této části jsou uvedeny v abecedním pořadí všechny dostupné parametry pro nástroj pro připojení služby.
 
-Pokaždé, když spustíte nástroj pro připojení služby, se soubor protokolu vygeneruje ve stejném umístění jako nástroj s názvem **ServiceConnectionTool. log**.  Tento soubor protokolu poskytne jednoduché informace o spuštění nástroje na základě toho, jaké příkazy se používají.  Existující soubor protokolu bude nahrazen při každém spuštění nástroje.
+### <a name="-connect"></a>– připojit
 
-**ConfigMgrSetup.log**
+Použijte během fáze [připojení](#connect) na počítači s přístupem k Internetu. Připojuje se ke cloudové službě Configuration Manager, aby mohl nahrát datový soubor a stahovat aktualizace.
 
-Při použití nástroje k připojení a stažení aktualizací se soubor protokolu vygeneruje v kořenovém adresáři systémové jednotky s názvem **ConfigMgrSetup. log**.  Tento soubor protokolu vám poskytne podrobnější informace, například jaké soubory se stáhnou, extrahují a jestli jsou kontroly hash úspěšné.
+Vyžaduje následující parametry:
 
-## <a name="command-line-options"></a><a name="bkmk_cmd"></a> Možnosti příkazového řádku  
-Chcete-li zobrazit informace o nástroji spojovacího bodu služby, otevřete příkazový řádek ve složce, která nástroj obsahuje, a spusťte tento příkaz:  **serviceconnectiontool.exe**.  
+- **-usagedatasrc**: umístění datového souboru, který se má nahrát.
+- **-updatepackdest**: cesta ke staženým aktualizacím
 
+Můžete použít také následující volitelné parametry:
 
-|Možnosti příkazového řádku|Podrobnosti|  
-|---------------------------|-------------|  
-|**-prepare -usagedatadest [jednotka:][cesta][název_souboru.cab]**|Tento příkaz uloží aktuální data o využití do souboru .cab.<br /><br /> Spusťte tento příkaz jako **místní správce** na serveru, který je hostitelem spojovacího bodu služby.<br /><br /> Příklad:   **-prepare -usagedatadest D:\USB\Usagedata.cab**|    
-|**-connect -usagedatasrc [jednotka:][cesta] -updatepackdest [jednotka:][cesta] -proxyserveruri [plně kvalifikovaný název domény proxy serveru] -proxyusername [uživatelské jméno]** <br /> <br /> Pokud používáte nástroj Configuration Manager verze nižší než 1606, musíte zadat název souboru .cab, a nemůžete použít možnosti pro proxy server.  Podporované parametry příkazu jsou: <br /> **-connect -usagedatasrc [jednotka:][cesta][název souboru] -updatepackdest [jednotka:][cesta]** |Tento příkaz se připojí ke cloudové službě nástroje Configuration Manager, odešle soubory .cab s daty o využití ze zadaného umístění a stáhne dostupné balíčky aktualizace a obsah konzoly. Možnosti pro proxy servery jsou volitelné.<br /><br /> Spusťte tento příkaz jako **místní správce** na počítači, který se může připojit k internetu.<br /><br /> Příklad připojení bez proxy serveru: **-connect -usagedatasrc D:\USB\ -updatepackdest D:\USB\UpdatePacks** <br /><br /> Příklad připojení s použitím proxy serveru: **-connect -usagedatasrc D:\USB\Usagedata.cab -updatepackdest D:\USB\UpdatePacks -proxyserveruri itgproxy.redmond.corp.microsoft.com -proxyusername Meg** <br /><br /> Pokud používáte verzi nižší než 1606, musíte zadat název souboru .cab, a nemůžete použít možnosti pro proxy server. Použijte následující příklad příkazového řádku: **-connect -usagedatasrc D:\USB\Usagedata.cab -updatepackdest D:\USB\UpdatePacks**|      
-|**-import -updatepacksrc [jednotka:][cesta]**|Tento příkaz importuje balíčky aktualizací a obsah konzoly, které jste předtím stáhli do konzoly Configuration Manageru.<br /><br /> Spusťte tento příkaz jako **místní správce** na serveru, který je hostitelem spojovacího bodu služby.<br /><br /> Příklad:  **-import -updatepacksrc D:\USB\UpdatePacks**|  
-|**-export -dest [jednotka:][cesta][název_souboru.csv]**|Tento příkaz exportuje data o využití do souboru .csv, který potom můžete zobrazit.<br /><br /> Spusťte tento příkaz jako **místní správce** na serveru, který je hostitelem spojovacího bodu služby.<br /><br /> Příklad: **-export -dest D:\USB\usagedata.csv**|  
+- **-proxyserveruri**: plně kvalifikovaný název domény proxy server
+- **-proxyusername**: uživatelské jméno pro proxy server
+- **-DownloadAll**: Stáhněte si všechno, včetně aktualizací a oprav hotfix, bez ohledu na verzi vaší lokality.
+- **-downloadhotfix**: Stáhněte všechny opravy hotfix bez ohledu na verzi vašeho webu.
+- **-downloadsiteversion**: Stáhněte aktualizace a opravy hotfix, které mají novější verzi než verze vašeho webu.
+
+#### <a name="example-of-connect-without-a-proxy-server"></a>Příklad připojení bez proxy server
+
+`ServiceConnectionTool.exe -connect -usagedatasrc D:\USB\ -updatepackdest D:\USB\UpdatePacks`
+
+#### <a name="example-of-connect-with-a-proxy-server"></a>Příklad připojení pomocí proxy server
+
+`ServiceConnectionTool.exe -connect -usagedatasrc D:\USB\Usagedata.cab -updatepackdest D:\USB\UpdatePacks -proxyserveruri itproxy.contoso.com -proxyusername jqpublic`
+
+#### <a name="example-of-connect-to-download-only-site-version-applicable-updates"></a>Příklad připojení ke stažení jenom pro verzi webu použitelné aktualizace
+
+`ServiceConnectionTool.exe -connect -downloadsiteversion -usagedatasrc D:\USB -updatepackdest D:\USB\UpdatePacks`
+
+### <a name="-dest"></a>-cíl
+
+Požadovaný parametr s parametrem **-Export** pro zadání cesty a názvu souboru CSV, který se má exportovat. Další informace najdete v tématu [-Export](#-export).
+
+### <a name="-downloadall"></a>-downloadall
+
+Volitelný parametr s parametrem **-Connect** ke stažení všeho, včetně aktualizací a oprav hotfix, bez ohledu na verzi vaší lokality. Další informace najdete v tématu [– připojení](#connect).
+
+### <a name="-downloadhotfix"></a>-downloadhotfix
+
+Volitelný parametr s parametrem **-Connect** , aby se stáhly jenom všechny opravy hotfix bez ohledu na verzi vašeho webu. Další informace najdete v tématu [– připojení](#-connect).
+
+### <a name="-downloadsiteversion"></a>-downloadsiteversion
+
+Volitelný parametr s parametrem **-Connect** , aby bylo možné stahovat pouze aktualizace a opravy hotfix, které mají novější verzi než verze vašeho webu. Další informace najdete v tématu [– připojení](#-connect).
+
+### <a name="-export"></a>– Export
+
+Použijte během fáze [přípravy](#prepare) k exportu údajů o využití do souboru CSV. Spusťte ji jako správce spojovacího bodu služby. Tato akce vám umožní zkontrolovat obsah údajů o využití před nahráním do Microsoftu. K určení umístění souboru CSV vyžaduje parametr **-cíl** .
+
+#### <a name="example-of-export"></a>Příklad exportu
+
+`-export -dest D:\USB\usagedata.csv`
+
+### <a name="-import"></a>-Import
+
+Použijte během fáze [importu](#import) u spojovacího bodu služby k importu aktualizací do lokality. K určení umístění stažených aktualizací vyžaduje parametr **-updatepacksrc** .
+
+#### <a name="example-of-import"></a>Příklad importu
+
+`ServiceConnectionTool.exe -import -updatepacksrc D:\USB\UpdatePacks`
+
+### <a name="-prepare"></a>– Příprava
+
+Použijte během fáze [přípravy](#prepare) u spojovacího bodu služby k exportu údajů o využití z lokality. K určení umístění exportovaného datového souboru vyžaduje parametr **-usagedatadest** .
+
+#### <a name="example-of-prepare"></a>Příklad přípravy
+
+`ServiceConnectionTool.exe -prepare -usagedatadest D:\USB\UsageData.cab`
+
+### <a name="-proxyserveruri"></a>– proxyserveruri
+
+Volitelný parametr s parametrem **-Connect** pro určení plně kvalifikovaného názvu domény vašeho proxy server. Další informace najdete v tématu [– připojení](#-connect).
+
+### <a name="-proxyusername"></a>– proxyusername
+
+Volitelný parametr s parametrem **-Connect** pro určení uživatelského jména k ověření pomocí proxy server. Další informace najdete v tématu [– připojení](#-connect).
+
+### <a name="-updatepackdest"></a>– updatepackdest
+
+Požadovaný parametr s parametrem **-Connect** , který určuje cestu pro stažené aktualizace. Další informace najdete v tématu [– připojení](#-connect).
+
+### <a name="-updatepacksrc"></a>– updatepacksrc
+
+Požadovaný parametr s parametrem **-Import** , který určuje cestu stažených aktualizací. Další informace najdete v tématu [-Import](#-import).
+
+### <a name="-usagedatadest"></a>– usagedatadest
+
+Požadovaný parametr s parametrem **-Prepare** pro určení cesty a názvu souboru exportovaného datového souboru. Další informace najdete v tématu [– Příprava](#-prepare).
+
+## <a name="next-steps"></a>Další kroky
+
+[Instalace konzolových aktualizací](install-in-console-updates.md)
+
+[Jak zobrazit data o využití a diagnostiku](../../plan-design/diagnostics/view-diagnostics-and-usage-data.md)
