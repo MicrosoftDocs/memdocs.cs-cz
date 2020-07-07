@@ -10,12 +10,11 @@ ms.assetid: bc7de742-9e5c-4a70-945c-df4153a61cc3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c043cfabc411dbd5ae4984110fc2904d37669300
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
-ms.translationtype: MT
+ms.openlocfilehash: 1cf428b479e9311c92f6d14d9c376817ee5e3ab5
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81717822"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86022258"
 ---
 # <a name="how-to-use-task-sequence-variables-in-configuration-manager"></a>Použití proměnných pořadí úkolů v Configuration Manager
 
@@ -35,7 +34,7 @@ Existuje několik typů proměnných:
 
 - [Integrované](#bkmk_built-in)  
 - [Akce](#bkmk_action)  
-- [Vlastní](#bkmk_custom)  
+- [Uživatelská](#bkmk_custom)  
 - [Jen pro čtení](#bkmk_read-only)  
 - [Pole](#bkmk_array)  
 
@@ -51,9 +50,9 @@ Pořadí úkolů vyhodnotí některé proměnné před každým krokem. Napřík
 
 Proměnné akcí pořadí úkolů určují nastavení konfigurace, které používá jeden krok pořadí úkolů. Ve výchozím nastavení krok inicializuje jeho nastavení před spuštěním. Tato nastavení jsou dostupná jenom v případě, že se spustí přidružený krok pořadí úkolů. Pořadí úkolů přidá hodnotu proměnné akce do prostředí před tím, než spustí krok. Po spuštění tohoto kroku pak odstraní hodnotu z prostředí.
 
-Například můžete přidat krok **Spustit příkazový řádek** do pořadí úkolů. Tento krok zahrnuje vlastnost **Spustit v** . Pořadí úkolů ukládá jako `WorkingDirectory` proměnnou výchozí hodnotu této vlastnosti. Pořadí úkolů Inicializuje tuto hodnotu před spuštěním kroku **Spustit příkazový řádek** . I když je tento krok spuštěný, přejděte k hodnotě vlastnosti **Spustit v** z `WorkingDirectory` hodnoty. Po dokončení kroku pořadí úloh odebere hodnotu `WorkingDirectory` proměnné z prostředí. Pokud pořadí úkolů obsahuje jiný krok **Spustit příkazový řádek** , Inicializuje novou `WorkingDirectory` proměnnou. V tuto chvíli pořadí úkolů nastaví proměnnou na počáteční hodnotu pro aktuální krok. Další informace najdete v tématu [WorkingDirectory](task-sequence-variables.md#WorkingDirectory).  
+Například můžete přidat krok **Spustit příkazový řádek** do pořadí úkolů. Tento krok zahrnuje vlastnost **Spustit v** . Pořadí úkolů ukládá jako proměnnou výchozí hodnotu této vlastnosti `WorkingDirectory` . Pořadí úkolů Inicializuje tuto hodnotu před spuštěním kroku **Spustit příkazový řádek** . I když je tento krok spuštěný, přejděte k hodnotě vlastnosti **Spustit v** z `WorkingDirectory` hodnoty. Po dokončení kroku pořadí úloh odebere hodnotu `WorkingDirectory` proměnné z prostředí. Pokud pořadí úkolů obsahuje jiný krok **Spustit příkazový řádek** , Inicializuje novou `WorkingDirectory` proměnnou. V tuto chvíli pořadí úkolů nastaví proměnnou na počáteční hodnotu pro aktuální krok. Další informace najdete v tématu [WorkingDirectory](task-sequence-variables.md#WorkingDirectory).  
 
-*Výchozí* hodnota pro proměnnou akce je přítomna při spuštění kroku. Pokud nastavíte *novou* hodnotu, je k dispozici pro několik kroků v pořadí úkolů. Pokud přepíšete výchozí hodnotu, nová hodnota zůstane v prostředí. Tato nová hodnota přepisuje výchozí hodnotu pro další kroky v pořadí úkolů. Například přidáte jako první krok pořadí úloh nastavit krok s **proměnným pořadí úloh** . Tento krok nastaví `WorkingDirectory` proměnnou na `C:\`. Libovolný krok **příkazového řádku pro spuštění** v pořadí úkolů používá novou hodnotu počátečního adresáře.  
+*Výchozí* hodnota pro proměnnou akce je přítomna při spuštění kroku. Pokud nastavíte *novou* hodnotu, je k dispozici pro několik kroků v pořadí úkolů. Pokud přepíšete výchozí hodnotu, nová hodnota zůstane v prostředí. Tato nová hodnota přepisuje výchozí hodnotu pro další kroky v pořadí úkolů. Například přidáte jako první krok pořadí úloh nastavit krok s **proměnným pořadí úloh** . Tento krok nastaví `WorkingDirectory` proměnnou na `C:\` . Libovolný krok **příkazového řádku pro spuštění** v pořadí úkolů používá novou hodnotu počátečního adresáře.  
 
 Některé kroky pořadí úkolů označují určité proměnné akcí jako *výstup*. Kroky níže v pořadí úkolů čtou tyto výstupní proměnné.
 
@@ -66,11 +65,11 @@ Tyto proměnné jsou všechny, které Configuration Manager nevytváří. Inicia
 
 Když zadáte název nové proměnné pořadí úkolů, postupujte podle těchto pokynů:  
 
-- Název proměnné pořadí úloh může obsahovat písmena, číslice, podtržítko (`_`) a spojovník (`-`).  
+- Název proměnné pořadí úloh může obsahovat písmena, číslice, podtržítko ( `_` ) a spojovník ( `-` ).  
 
 - Názvy proměnných pořadí úloh mají minimální délku jednoho znaku a maximální délku 256 znaků.  
 
-- Uživatelem definované proměnné musí začínat písmenem (`A-Z` nebo `a-z`).  
+- Uživatelem definované proměnné musí začínat písmenem ( `A-Z` nebo `a-z` ).  
 
 - Uživatelsky definované názvy proměnných nemůžou začínat znakem podtržítka. Znakem podtržítka předchází pouze proměnné pořadí úkolů jen pro čtení.  
 
@@ -82,7 +81,7 @@ Pro počet proměnných pořadí úkolů, které můžete vytvořit, není nasta
 
 ### <a name="read-only-variables"></a><a name="bkmk_read-only"></a>Proměnné jen pro čtení
 
-Nemůžete změnit hodnotu některých proměnných, které jsou jen pro čtení. Název obvykle začíná znakem podtržítka (`_`). Pořadí úkolů je používá pro své operace. Proměnné jen pro čtení jsou viditelné v prostředí pořadí úloh.
+Nemůžete změnit hodnotu některých proměnných, které jsou jen pro čtení. Název obvykle začíná znakem podtržítka ( `_` ). Pořadí úkolů je používá pro své operace. Proměnné jen pro čtení jsou viditelné v prostředí pořadí úloh.
 
 Tyto proměnné jsou užitečné ve skriptech nebo příkazových řádcích. Například spuštění příkazového řádku a zřetězení výstupu do souboru protokolu v `_SMSTSLogPath` nástroji pomocí dalších souborů protokolu.
 
@@ -126,7 +125,7 @@ Pokud jste stejnou proměnnou nastavili pomocí různých metod, modul pořadí 
 
 - Hodnoty proměnných pořadí úloh nemůžou být delší než 4 000 znaků.  
 
-- Proměnnou pořadí úkolů jen pro čtení nemůžete změnit. Proměnné jen pro čtení mají názvy, které začínají znakem podtržítka (`_`).  
+- Proměnnou pořadí úkolů jen pro čtení nemůžete změnit. Proměnné jen pro čtení mají názvy, které začínají znakem podtržítka ( `_` ).  
 
 - Hodnoty proměnných pořadí úloh mohou rozlišovat velká a malá písmena v závislosti na použití hodnoty. Ve většině případů hodnoty proměnných pořadí úkolů nerozlišují velká a malá písmena. Proměnná, která obsahuje heslo, rozlišuje velká a malá písmena.  
 
@@ -157,7 +156,7 @@ Další informace o tomto kroku najdete v tématu [spuštění skriptu PowerShel
 
 #### <a name="example-scenario-with-run-powershell-script-step"></a>Ukázkový scénář s krokem spuštění skriptu PowerShellu
 
-Vaše prostředí obsahuje uživatele ve více zemích, takže chcete zadat dotaz na jazyk operačního systému, který se má nastavit jako podmínka pro použití v rámci více kroků **operačního systému** pro konkrétní jazyk.
+Vaše prostředí obsahuje uživatele ve více zemích nebo oblastech, takže chcete zadat dotaz na jazyk operačního systému, který se má nastavit jako podmínka pro použití v rámci více kroků **operačního systému** pro konkrétní jazyk.
 
 1. Přidejte instanci **skriptu Run PowerShell** do pořadí úkolů před kroky **použít operační systém** .
 
@@ -169,7 +168,7 @@ Vaše prostředí obsahuje uživatele ve více zemích, takže chcete zadat dota
 
     Další informace o této rutině naleznete v tématu [Get-Culture](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/get-culture). Další informace o názvech jazyka ISO se dvěma písmeny najdete v [seznamu kódů iso 639-1](https://wikipedia.org/wiki/List_of_ISO_639-1_codes).
 
-1. Pro možnost **výstup do proměnné pořadí úkolů**zadejte `CurrentOSLanguage`.
+1. Pro možnost **výstup do proměnné pořadí úkolů**zadejte `CurrentOSLanguage` .
 
     ![Snímek obrazovky s příkladem, jak spustit krok skriptu PowerShellu](media/run-powershell-script-example-language.png)
 
@@ -182,7 +181,7 @@ Vaše prostředí obsahuje uživatele ve více zemích, takže chcete zadat dota
 
 1. Uložte a nasaďte pořadí úkolů.
 
-Když se krok **Spustit skript PowerShellu** spustí na zařízení s anglickou jazykovou verzí Windows, příkaz vrátí hodnotu `en`. Pak tuto hodnotu uloží do vlastní proměnné. Když se na stejném zařízení spustí krok **použít operační systém** pro bitovou kopii v anglickém jazyce, podmínka se vyhodnotí jako true. Pokud máte více instancí kroku **použít operační systém** pro různé jazyky, pořadí úkolů dynamicky spustí krok, který odpovídá jazyku operačního systému.
+Když se krok **Spustit skript PowerShellu** spustí na zařízení s anglickou jazykovou verzí Windows, příkaz vrátí hodnotu `en` . Pak tuto hodnotu uloží do vlastní proměnné. Když se na stejném zařízení spustí krok **použít operační systém** pro bitovou kopii v anglickém jazyce, podmínka se vyhodnotí jako true. Pokud máte více instancí kroku **použít operační systém** pro různé jazyky, pořadí úkolů dynamicky spustí krok, který odpovídá jazyku operačního systému.
 
 ### <a name="collection-and-device-variables"></a><a name="bkmk_set-coll-var"></a>Kolekce a proměnné zařízení
 
@@ -273,7 +272,7 @@ Pro přístup k proměnným hodnotám v prostředí pořadí úloh použijte ná
   
 ### <a name="use-in-a-step"></a><a name="bkmk_access-step"></a>Použití v kroku
 
-Zadejte hodnotu proměnné pro nastavení v kroku pořadí úloh. V editoru pořadí úloh upravte krok a jako hodnotu pole zadejte název proměnné. V části znaky procenta (`%`) vložte název proměnné.
+Zadejte hodnotu proměnné pro nastavení v kroku pořadí úloh. V editoru pořadí úloh upravte krok a jako hodnotu pole zadejte název proměnné. V části znaky procenta () vložte název proměnné `%` .
 
 Například použijte název proměnné jako součást pole **příkazový řádek** v kroku **Spustit příkazový řádek** . Následující příkazový řádek zapíše název počítače do textového souboru.
 
@@ -331,7 +330,7 @@ $tsenv.Value("startTime") = (Get-Date -Format HH:mm:ss) + ".000+000"
 
 ### <a name="windows-setup-answer-file"></a><a name="bkmk_access-answer"></a>Soubor odpovědí instalačního programu systému Windows
 
-Soubor odpovědí instalačního programu systému Windows, který zadáte, může obsahovat vložené proměnné pořadí úkolů. Použijte formulář `%varname%`, kde *název_proměnné* je název proměnné. Krok **nastavit systém Windows a nástroj ConfigMgr** nahrazuje řetězec názvu proměnné pro skutečnou hodnotu proměnné. Tyto vložené proměnné pořadí úkolů se nedají používat v souboru odpovědí Unattend. XML jenom v číselném poli.
+Soubor odpovědí instalačního programu systému Windows, který zadáte, může obsahovat vložené proměnné pořadí úkolů. Použijte formulář `%varname%` , kde *název_proměnné* je název proměnné. Krok **nastavit systém Windows a nástroj ConfigMgr** nahrazuje řetězec názvu proměnné pro skutečnou hodnotu proměnné. Tyto vložené proměnné pořadí úkolů nelze použít v souboru odpovědí unattend.xml pouze v číselném poli.
 
 Další informace najdete v části [Setup Windows and ConfigMgr](task-sequence-steps.md#BKMK_SetupWindowsandConfigMgr).
 

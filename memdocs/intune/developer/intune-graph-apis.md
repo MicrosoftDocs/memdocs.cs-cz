@@ -17,12 +17,11 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e3c83859d56b23974e95299c76b0d65512da0a0e
-ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
-ms.translationtype: MT
+ms.openlocfilehash: cda39ad145e6293b94a1551c47b964cbceef4f40
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84455085"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86022445"
 ---
 # <a name="how-to-use-azure-ad-to-access-the-intune-apis-in-microsoft-graph"></a>Používání Azure AD pro přístup k rozhraním Intune API v Microsoft Graphu
 
@@ -81,6 +80,10 @@ Postup pro registraci aplikace k používání rozhraní Microsoft Graph API:
     2. Hodnoty **Typ aplikace** a **Identifikátor URI pro přesměrování**
 
         Tyto hodnoty se budou lišit podle vašich požadavků. Pokud používáte například Azure AD [Authentication Library](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-libraries) (ADAL), nastavte **Typ aplikace** na `Native` a **Identifikátor URI pro přesměrování** na `urn:ietf:wg:oauth:2.0:oob`.
+
+        > [!NOTE]
+        > Azure Active Directory (Azure AD) Authentication Library (ADAL) a Azure AD Graph API budou zastaralé. Další informace najdete v tématu [aktualizace aplikací pro použití knihovny Microsoft Authentication Library (MSAL) a rozhraní Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
+
 
         <img src="../media/azure-ad-app-new.png" width="209" height="140" alt="New app properties and values" />
 
@@ -342,6 +345,10 @@ Tento příklad ukazuje, jak pomocí C# načíst seznam zařízení přidružen�
     <img src="../media/aad-auth-cpp-new-console.png" width="624" height="433" alt="Creating a C# console app project in Visual Studio"  />
 
 3. Pomocí Průzkumníka řešení do projektu přidejte balíček NuGet pro Microsoft ADAL.
+
+  > [!NOTE]
+  > Azure Active Directory (Azure AD) Authentication Library (ADAL) a Azure AD Graph API budou zastaralé. Další informace najdete v tématu [aktualizace aplikací pro použití knihovny Microsoft Authentication Library (MSAL) a rozhraní Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
+
 
     1. Klikněte pravým tlačítkem myši na Průzkumníka řešení.
     2. Zvolte **Spravovat balíčky NuGet** &gt;**Procházet**.

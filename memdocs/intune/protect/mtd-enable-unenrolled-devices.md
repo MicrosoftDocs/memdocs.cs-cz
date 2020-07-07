@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/20/2020
+ms.date: 06/26/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,11 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b6c762aafbc1d82e7e51746806f8ba15cc5ad83c
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
-ms.translationtype: MT
+ms.openlocfilehash: 933810cb079ac405d15a18a26efd07fb69a6e3f1
+ms.sourcegitcommit: 7de54acc80a2092b17fca407903281435792a77e
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83984922"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85972028"
 ---
 # <a name="enable-the-mobile-threat-defense-connector-in-intune-for-unenrolled-devices"></a>Povolení konektoru ochrany před mobilními hrozbami v Intune pro neregistrovaná zařízení
 
@@ -33,8 +32,9 @@ Při instalaci ochrany před mobilními hrozbami (MTD) jste nakonfigurovali zás
 > Tento článek se týká všech partnerů ochrany před mobilními hrozbami, které podporují zásady ochrany aplikací:
 >
 > - Lepší mobilní zařízení (Android, iOS/iPadOS)
-> - Zimperium (Android, iOS/iPadOS)
 > - Lookout for Work (Android, iOS/iPadOS)
+> - Wandera (Android, iOS/iPadOS)
+> - Zimperium (Android, iOS/iPadOS)
 
 ## <a name="classic-conditional-access-policies-for-mtd-apps"></a>Klasické zásady podmíněného přístupu pro aplikace MTD
 
@@ -74,9 +74,9 @@ Podle požadavků organizace se můžete rozhodnout, jaké možnosti přepínán
 
 **Nastavení zásad ochrany aplikací**
 
-- **Připojit zařízení s Androidem verze 4,4 a novější pro * \< MTD partnerský název>* pro vyhodnocení zásad ochrany aplikací**: když tuto možnost povolíte, zásady ochrany aplikací pomocí pravidla úrovně hrozby zařízení vyhodnotí zařízení, včetně dat z tohoto konektoru.
+- **Připojit zařízení s Androidem verze 4,4 a novější *\<MTD partner name>* pro vyhodnocení zásad ochrany aplikací**: když tuto možnost povolíte, zásady ochrany aplikací využívající pravidlo úrovně hrozby zařízení vyhodnotí zařízení, včetně dat z tohoto konektoru.
 
-- **Připojení zařízení s iOS verze 11 a novější k * \< MTD partner Name>* pro vyhodnocení zásad ochrany aplikací**: Pokud povolíte tuto možnost, zásady ochrany aplikací pomocí pravidla úrovně hrozby zařízení vyhodnotí zařízení, včetně dat z této spojnice.
+- **Připojit zařízení s iOS verze 11 a vyšší *\<MTD partner name>* pro vyhodnocení zásad ochrany aplikací**: Pokud povolíte tuto možnost, zásady ochrany aplikací pomocí pravidla úrovně hrozby zařízení vyhodnotí zařízení, včetně dat z tohoto konektoru.
 
 **Společné sdílené nastavení**
 

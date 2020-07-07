@@ -17,12 +17,11 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 879cb5d1659b886a01e564574452bd9e5370664c
-ms.sourcegitcommit: b0ae4a9972bac3518d0d4f33e033ac492eefe3c1
-ms.translationtype: MT
+ms.openlocfilehash: f82664cbc9f6970d494945cfdf6fc72e8d95ae8b
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84126800"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86022343"
 ---
 # <a name="intune-operated-by-21vianet-in-china"></a>Intune provozovaný společností 21Vianet v Číně  
 
@@ -50,7 +49,7 @@ Vzhledem k tomu, že čínské služby provozuje partner z Číny v Číně, exi
 - Aplikace Portál společnosti Intune pro Android používá ke komunikaci se službou Microsoft Intune Google Mobile Services. Vzhledem k tomu, že služba Google Play Services není k dispozici v Číně, můžou některé úlohy vyžadovat dokončení až 8 hodin. Další informace najdete v tomto [článku](https://docs.microsoft.com/mem/intune/apps/manage-without-gms#limitations-of-intune-device-administrator-management-when-gms-is-unavailable). 
 - Pro sledování místních předpisů a poskytování lepších funkcí se může klient Intune a prostředí klienta Intune (Portál společnosti aplikace) v Číně lišit.
 - Oplocení není dostupné.
-- Dostupnost správy mobilních aplikací (MAM) je podmíněná pro tyto aplikace, které jsou dostupné v pevninské Číně.
+- Dostupnost správy mobilních aplikací (MAM) je podmíněná pro tyto aplikace, které jsou k dispozici v Číně v Čínské lidové republice.
 
 ## <a name="you-control-customer-data"></a>Můžete kontrolovat zákaznická data
 

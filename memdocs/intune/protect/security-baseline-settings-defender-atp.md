@@ -5,7 +5,7 @@ description: Nastavení standardních hodnot zabezpečení, které Intune podpor
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/01/2020
+ms.date: 07/06/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,11 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 zone_pivot_groups: atp-baseline-versions
-ms.openlocfilehash: 330a4387ef1a079b2a0f691bfb0b887117dd9e4b
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
-ms.translationtype: MT
+ms.openlocfilehash: 8046318c55e2a9791f01fca4a5a54de3f1487782
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83429339"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86022177"
 ---
 <!-- Pivots in use: 
 ::: zone pivot="atp-april-2020"
@@ -291,7 +290,7 @@ Další informace najdete v dokumentaci k Windows v části [nastavení zásady 
 
   Tato zásada může poskytovat další zabezpečení proti externímu zařízení podporujícím technologii DMA. Umožňuje lepší kontrolu nad výčtem externích zařízení s technologií DMA, která nejsou kompatibilní s přemapováním DMA/izolací paměti zařízení a sandboxing.
   
-  Tato zásada se projeví jenom v případě, že je ochrana DMA pro jádro podporovaná a povolená systémovým firmwarem. Ochrana pomocí rozhraní DMA pro jádro je funkce platformy, kterou musí systém podporovat v době výroby. Pokud chcete zjistit, jestli systém podporuje ochranu před nejenom jádrem, na stránce Souhrn v souboru MSINFO32. exe se podívejte na pole ochrana pro jádro DMA.
+  Tato zásada se projeví jenom v případě, že je ochrana DMA pro jádro podporovaná a povolená systémovým firmwarem. Ochrana pomocí rozhraní DMA pro jádro je funkce platformy, kterou musí systém podporovat v době výroby. Pokud chcete zjistit, jestli systém podporuje ochranu před nejenom jádrem, na stránce Souhrn v MSINFO32.exe ověřte pole ochrana jádra DMA.
 
   - **Nenakonfigurováno** – (*výchozí*)
   - **Blokovat vše**
@@ -806,13 +805,13 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
   - **Blokovat** (*výchozí*) – nedůvěryhodné a nepodepsané procesy, které se spouštějí z USB jednotky, jsou blokovány.
   - **Režim auditu** – místo blokování se vyvolají události systému Windows.
 
-- **Blokovat odcizení přihlašovacích údajů ze subsystému místního úřadu zabezpečení systému Windows (Lsass. exe)**  
+- **Blokovat odcizení přihlašovacích údajů ze subsystému místního úřadu zabezpečení systému Windows (lsass.exe)**  
   [Chránit zařízení před zneužitím](https://go.microsoft.com/fwlink/?linkid=874499)
 
   Toto pravidlo ASR se ovládá pomocí následujícího identifikátoru GUID: 9e6c4e1f-7d60-472f-ba1a-a39ef669e4b2
   - **Nenakonfigurováno** – nastavení se vrátí do výchozího nastavení systému Windows, které je vypnuté.
   - **Definováno uživatelem**
-  - **Povolit** (*výchozí*) – pokusy o odcizení přihlašovacích údajů prostřednictvím Lsass. exe jsou blokované.
+  - **Povolit** (*výchozí*) – pokusy o odcizení přihlašovacích údajů prostřednictvím lsass.exe jsou blokované.
   - **Režim auditu** – uživatelé nejsou zablokovaných z nebezpečných domén a místo toho se vyvolají události Windows.
 
 - **Blokovat stahování spustitelného obsahu z e-mailu a klientů webové pošty**  
@@ -859,9 +858,9 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
 - **Zablokovat uživatelům ignorovat upozornění filtru SmartScreen**  
   CSP: [SmartScreen/PreventOverrideForFilesInShell](https://go.microsoft.com/fwlink/?linkid=872783)
 
-   Toto nastavení vyžaduje, aby bylo povolené nastavení vynutí filtr SmartScreen pro aplikace a soubory.
-  - **Ano** (*výchozí*) – filtr SmartScreen nenabídne možnost pro uživateli ignorovat upozornění a spustit aplikaci. Zobrazí se upozornění, ale uživatel ji bude moci obejít.
-  - **Nenakonfigurováno** – vrátí nastavení do výchozího nastavení systému Windows, které umožňuje přepsání uživatelem.
+   Toto nastavení vyžaduje, aby se nastavení zapnout filtr SmartScreen pro Windows nastavilo na Ano.
+  - **Ano** (*výchozí*) – filtr SmartScreen je povolen a uživatelé nemohou obejít upozornění na soubory nebo škodlivé aplikace.
+  - **Nenakonfigurováno** – uživatelé můžou ignorovat upozornění filtru SmartScreen pro soubory a škodlivé aplikace.
 
 - **Vyžadovat pouze aplikace ze Storu**  
 

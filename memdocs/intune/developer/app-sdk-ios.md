@@ -17,12 +17,11 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 60147f6b54ce608183914e00b65317abe0a580b6
-ms.sourcegitcommit: 2c5fd7c8603b88b753765f3cc298d0a0bacaf521
-ms.translationtype: MT
+ms.openlocfilehash: 95a2eb50a77d70164f4895bd7bc8266c61a5a186
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85820031"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86022275"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Microsoft Intune App SDK pro iOS – Příručka pro vývojáře
 
@@ -178,6 +177,9 @@ Pokud není parametr -o zadaný, upraví se vstupní soubor na místě. Nástroj
 
 ## <a name="configure-adalmsal"></a>Konfigurace ADAL/MSAL
 
+> [!NOTE]
+> Azure Active Directory (Azure AD) Authentication Library (ADAL) a Azure AD Graph API budou zastaralé. Další informace najdete v tématu [aktualizace aplikací pro použití knihovny Microsoft Authentication Library (MSAL) a rozhraní Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
+
 Sada Intune App SDK může pro své scénáře ověřování a podmíněného spuštění použít buď [knihovnu ověřování Azure Active Directory](https://github.com/AzureAD/azure-activedirectory-library-for-objc) , nebo [knihovnu Microsoft Authentication Library](https://github.com/AzureAD/microsoft-authentication-library-for-objc) . Také spoléhá na knihovnu ADAL/MSAL k registraci identity uživatele ve službě MAM pro správu bez scénářů registrace zařízení.
 
 ADAL/MSAL obvykle vyžaduje, aby se aplikace registrovaly s Azure Active Directory (AAD) a vytvořily jedinečné ID klienta a identifikátor URI pro přesměrování, aby bylo zaručeno zabezpečení tokenů udělených aplikaci. Pokud už vaše aplikace používá ADAL nebo MSAL k ověřování uživatelů, musí aplikace používat své existující registrační hodnoty a přepsat výchozí hodnoty Intune App SDK. Tím se zajistí, že se uživatelům nebude výzva k ověřování zobrazovat dvakrát (jednou ze sady Intune App SDK a jednou z aplikace).
@@ -287,6 +289,9 @@ Kvůli příjmu zásad ochrany aplikací Intune musí aplikace inicializovat ž�
 > Sada Intune App SDK pro iOS používá 256 šifrovacích klíčů, pokud je šifrování povoleno zásadami ochrany aplikací. Všechny aplikace budou muset mít aktuální verzi sady SDK, aby bylo možné chráněné sdílení dat.
 
 ### <a name="apps-that-already-use-adal-or-msal"></a>Aplikace, které už používají ADAL nebo MSAL
+
+> [!NOTE]
+> Azure Active Directory (Azure AD) Authentication Library (ADAL) a Azure AD Graph API budou zastaralé. Další informace najdete v tématu [aktualizace aplikací pro použití knihovny Microsoft Authentication Library (MSAL) a rozhraní Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
 
 Aplikace, které už používají ADAL nebo MSAL, by měly volat `registerAndEnrollAccount` metodu na `IntuneMAMEnrollmentManager` instanci po úspěšném ověření uživatele:
 
@@ -464,7 +469,7 @@ Z návratové hodnoty této metody sada SDK pozná, jestli požadované restarto
 
 Sada Intune App SDK má několik rozhraní API, které můžete volat, abyste získali informace o zásadách Intune APP nasazených do aplikace. Pomocí těchto dat můžete přizpůsobit chování aplikace. Následující tabulka poskytuje informace o některých základních třídách Intune, které budete používat.
 
-Třída | Popis
+Třída | Description
 ----- | -----------
 IntuneMAMPolicyManager.h | Třída IntuneMAMPolicyManager zveřejňuje zásady Intune APP nasazené do aplikace. Zveřejňuje zejména rozhraní API, která slouží k [povolení více identit](app-sdk-ios.md#enable-multi-identity-optional). |
 IntuneMAMPolicy.h | Třída IntuneMAMPolicy zveřejňuje některá nastavení zásad MAM, která se týkají aplikace. Tato nastavení zásad se zveřejňují, aby aplikace mohla přizpůsobit svoje uživatelské rozhraní. Většinu nastavení zásad vynucuje sada SDK, nikoli aplikace. Jediné nastavení, které by aplikace měla implementovat, je ovládací prvek Uložit jako. Tato třída zveřejňuje některá rozhraní API, která jsou nezbytná k implementaci ovládacího prvku Uložit jako. |

@@ -18,12 +18,11 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cf43608bd6eb9132cef1b97198e724bcada81d30
-ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
-ms.translationtype: MT
+ms.openlocfilehash: afc823a906d76edfe8d3d635bcbfdbe845867266
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82693357"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86022292"
 ---
 # <a name="mdm-security-baseline-settings-for-intune"></a>Nastavení standardních hodnot zabezpečení MDM pro Intune  
 
@@ -341,7 +340,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Dev
 ## <a name="dma-guard"></a>Ochrana DMA  
 Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – DmaGuard](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dmaguard) .
 - **Výčet externích zařízení nekompatibilních s režimem ochrany DMA v jádře**  
-  Cílem této zásady je zajistit další zabezpečení proti externímu zařízení podporujícím technologii DMA. Umožňuje lepší kontrolu nad výčtem externích zařízení s technologií DMA, která nejsou kompatibilní s přemapováním DMA/izolací paměti zařízení a sandboxing. Tato zásada se projeví jenom v případě, že je ochrana DMA pro jádro podporovaná a povolená systémovým firmwarem. Ochrana pomocí jádra DMA je funkce platformy, kterou nelze řídit pomocí zásad nebo koncového uživatele. Musí být podporován systémem v době výroby. Pokud chcete zjistit, jestli systém podporuje ochranu před nejenom jádrem, zkontrolujte prosím na stránce Souhrn v souboru MSINFO32. exe pole ochrana za jádro DMA.  
+  Cílem této zásady je zajistit další zabezpečení proti externímu zařízení podporujícím technologii DMA. Umožňuje lepší kontrolu nad výčtem externích zařízení s technologií DMA, která nejsou kompatibilní s přemapováním DMA/izolací paměti zařízení a sandboxing. Tato zásada se projeví jenom v případě, že je ochrana DMA pro jádro podporovaná a povolená systémovým firmwarem. Ochrana pomocí jádra DMA je funkce platformy, kterou nelze řídit pomocí zásad nebo koncového uživatele. Musí být podporován systémem v době výroby. Pokud chcete zjistit, jestli systém podporuje ochranu před nejenom jádrem, zkontrolujte prosím na stránce Souhrn v MSINFO32.exe pole ochrana jádra DMA.  
   [Další informace](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dmaguard#dmaguard-deviceenumerationpolicy)
 
   **Výchozí**: Blokovat vše   
@@ -1437,7 +1436,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Rem
   **Výchozí**: povoleno
   
 - **Blokovat přesměrování jednotky**  
-  Nastavení této zásady určuje, jestli se má zabránit mapování klientských jednotek v relaci vzdálené plochy (přesměrování jednotky). Ve výchozím nastavení server Hostitel relace VP mapuje jednotky klienta automaticky po připojení. Mapované jednotky se zobrazí ve stromu složky relace v Průzkumníkovi souborů nebo v počítači ve formátu * \<písmeno_jednotky>* v * \<>ComputerName *. Toto chování můžete přepsat pomocí tohoto nastavení zásad. Pokud toto nastavení zásad povolíte, přesměrování jednotky klienta není v relacích služby Vzdálená plocha povoleno a přesměrování kopírování souborů ve schránce není povoleno v počítačích se systémem Windows Server 2003, Windows 8 a Windows XP. Pokud nastavení této zásady zakážete, přesměrování klientské jednotky je vždycky povolené. I když je povolené přesměrování schránky, přesměrování kopírování souborů ve schránce je vždycky povolené. Pokud nastavení této zásady nenakonfigurujete, přesměrování jednotky klienta a přesměrování kopírování souborů ve schránce nejsou zadané na úrovni Zásady skupiny.  
+  Nastavení této zásady určuje, jestli se má zabránit mapování klientských jednotek v relaci vzdálené plochy (přesměrování jednotky). Ve výchozím nastavení server Hostitel relace VP mapuje jednotky klienta automaticky po připojení. Mapované jednotky se zobrazí ve stromu složky relace v Průzkumníkovi souborů nebo v počítači ve formátu *\<driveletter>* zapnuto *\<computername>* . Toto chování můžete přepsat pomocí tohoto nastavení zásad. Pokud toto nastavení zásad povolíte, přesměrování jednotky klienta není v relacích služby Vzdálená plocha povoleno a přesměrování kopírování souborů ve schránce není povoleno v počítačích se systémem Windows Server 2003, Windows 8 a Windows XP. Pokud nastavení této zásady zakážete, přesměrování klientské jednotky je vždycky povolené. I když je povolené přesměrování schránky, přesměrování kopírování souborů ve schránce je vždycky povolené. Pokud nastavení této zásady nenakonfigurujete, přesměrování jednotky klienta a přesměrování kopírování souborů ve schránce nejsou zadané na úrovni Zásady skupiny.  
   [Další informace](https://go.microsoft.com/fwlink/?linkid=2067197)  
   
   **Výchozí**: povoleno
@@ -1511,7 +1510,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Rem
 
   **Výchozí**: ověřeno
 
-## <a name="search"></a>Search 
+## <a name="search"></a>Hledat 
 Další informace najdete v tématu [zásady CSP – hledání](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-search) v dokumentaci k Windows.  
 
 - **Zakázat indexování šifrovaných položek**  
@@ -1521,10 +1520,10 @@ Další informace najdete v tématu [zásady CSP – hledání](https://docs.mic
   **Výchozí**: Ano
   
 ## <a name="smart-screen"></a>Inteligentní obrazovka  
-Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – filtr](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-smartscreen) .  
+Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – filtr](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-smartscreen) . 
 
 - **Zablokovat provádění neověřených souborů**  
-  Zablokuje uživateli spouštění neověřených souborů. 
+  Zablokuje uživateli spouštění neověřených souborů.
   - *Nenakonfigurováno* – zaměstnanci můžou ignorovat upozornění filtru SmartScreen a spouštět škodlivé soubory. 
   - *Ano* – zaměstnanci nemůžou ignorovat upozornění filtru SmartScreen a spouštět škodlivé soubory.
 

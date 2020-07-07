@@ -18,12 +18,11 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8746a6dee0b35dec7886a596d0448874dfb04f16
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
-ms.translationtype: MT
+ms.openlocfilehash: f9669625225f8ad3960ece39e2a6b04849421ce6
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79329303"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86022176"
 ---
 # <a name="protect-office-365-exchange-online-without-requiring-device-management"></a>Ochrana Office 365 Exchange Online bez nutnosti správy zařízení
 
@@ -36,7 +35,7 @@ Pokud se rozhodnete zavést systém pro správu zřízení, můžete. Tento typ 
 1. [Přečtěte si o podmíněném přístupu](conditional-access.md). 
 2. [Přečtěte si o podmíněném přístupu na základě aplikace](app-based-conditional-access-intune.md).
 3. [Nastavte zásady podmíněného přístupu na základě aplikace pro Exchange Online](app-based-conditional-access-intune-create.md).
-4. [Zablokujte aplikace, které nelze spravovat](app-modern-authentication-block.md), konkrétně aplikace, které nepoužívají ADAL (Azure Active Directory Authentication Library).
+4. [Blokuje aplikace, které se nedají spravovat](app-modern-authentication-block.md), konkrétně aplikace, které neAzure Active Directory používají knihovnu MSAL Authentication Library (ADAL) nebo Microsoft Authentication Library ().
 5. Volitelné [Nastavte zásady podmíněného přístupu na základě aplikace pro SharePoint Online](app-based-conditional-access-intune-create.md). Tyto zásady blokují přístup k firemním datům z aplikací, které nelze spravovat a zabezpečit. Tyto zásady také omezují přístup přes mobilní SharePoint. 
 
 ## <a name="what-to-tell-employees-and-students"></a>Co sdělit zaměstnancům a studentům

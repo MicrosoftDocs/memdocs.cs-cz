@@ -19,12 +19,11 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 82272fd4239b50657b887bf6c310b280eeecae7a
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
-ms.translationtype: MT
+ms.openlocfilehash: 2ef0cf3909442cec818fd775bef4f848d6be5a83
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83880067"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86022309"
 ---
 # <a name="enroll-your-device-with-company-portal"></a>Registrace zařízení pomocí Portál společnosti  
 Pokud chcete získat zabezpečený přístup k firemnímu e-mailu, aplikacím a datům, zaregistrujte své osobní nebo firemní zařízení s Androidem. Portál společnosti podporuje zařízení s Androidem, včetně Samsung KNOX, se systémem Android 4,4 a novějším.  
@@ -35,7 +34,7 @@ Pokud chcete získat zabezpečený přístup k firemnímu e-mailu, aplikacím a 
 > Samsung KNOX je typ zabezpečení, který některá zařízení Samsung využívají k další ochraně mimo rámec toho, co poskytuje nativní Android. Pokud chcete zjistit, jestli máte zařízení Samsung KNOX, > přejít na **Nastavení**  >  **o zařízení**. Pokud se tam uvedená **verze Knox** nezobrazuje, máte nativní zařízení s Androidem.
 
 ## <a name="enroll-device"></a>Registrace zařízení  
-Nezapomeňte nainstalovat aplikaci Portál společnosti Intune [z Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal). Seznam obchodů, které nabízejí aplikaci v kontinentální Číně, najdete v tématu [instalace portál společnosti aplikace v části pevninská Čína](install-company-portal-android-china.md) .    
+Nezapomeňte nainstalovat aplikaci Portál společnosti Intune [z Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal). Seznam obchodů, které nabízejí aplikaci v Čínské lidové republice, najdete v tématu [instalace portál společnosti aplikace v Čínské lidové republice](install-company-portal-android-china.md) .
 
 Během registrace můžete být požádáni, abyste zvolili kategorii, která nejlépe popisuje způsob používání zařízení. Vaše firemní podpora používá vaši odpověď ke kontrole aplikací, ke kterým máte přístup.  
 

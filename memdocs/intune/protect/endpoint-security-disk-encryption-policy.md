@@ -16,12 +16,11 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: a8eeb8263e337fa7427818c05f183fdea3c9dbea
-ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
-ms.translationtype: MT
+ms.openlocfilehash: 3e01e54eb6e74c8139c266d677a6406554119273
+ms.sourcegitcommit: 7de54acc80a2092b17fca407903281435792a77e
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85353628"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85972062"
 ---
 # <a name="disk-encryption-policy-for-endpoint-security-in-intune"></a>Zásady šifrování disku pro zabezpečení koncového bodu v Intune
 
@@ -29,7 +28,7 @@ Profily šifrování disku Endpoint Security se zaměřují jenom na nastavení,
 
 I když můžete nakonfigurovat stejné nastavení zařízení pomocí profilů *Endpoint Protection* pro konfiguraci zařízení, profily konfigurace zařízení obsahují další kategorie nastavení. Tato další nastavení nejsou v souvislosti s šifrováním disku a mohou zkomplikovat úlohy konfigurace pouze šifrování disku.
 
-Zásady zabezpečení koncového bodu pro zásady šifrování disku najdete v části *Správa* v uzlu **zabezpečení koncového bodu** v [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+V části *Správa* v uzlu **zabezpečení koncového** bodu v [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)najdete zásady zabezpečení koncového bodu pro šifrování disku.
 
 ## <a name="prerequisites-for-disk-encryption-policy"></a>Předpoklady pro zásady šifrování disků
 

@@ -18,12 +18,11 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5aa91a84b2fe5d8870afc93022ab5a468b30e0db
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
-ms.translationtype: MT
+ms.openlocfilehash: 7955afb2aef88e3787546843cc477bce22369a4d
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82074788"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86022377"
 ---
 # <a name="how-to-use-intune-in-environments-without-google-mobile-services"></a>Jak používat Intune v prostředích bez Google Mobile Services
 
@@ -31,13 +30,13 @@ Microsoft Intune používá Google Mobile Services (GMS) ke komunikaci s portál
 
 ## <a name="install-the-intune-company-portal-app-without-access-to-the-google-play-store"></a>Instalace aplikace Portál společnosti Intune bez přístupu k Obchod Google Play 
 
-### <a name="for-users-outside-of-mainland-china"></a>Pro uživatele mimo kontinentální Čínu 
+### <a name="for-users-outside-of-peoples-republic-of-china"></a>Pro uživatele mimo Čínskou lidovou republiku
 
 Pokud Google Play není k dispozici, zařízení s Androidem můžou stáhnout [Microsoft Intune portál společnosti pro Android](https://www.microsoft.com/en-us/download/details.aspx?id=49140) a aplikace bokem. Při instalaci tímto způsobem aplikace neobdrží aktualizace nebo opravy automaticky. Je nutné, abyste aplikaci pravidelně aktualizovali a ručně aktualizovali. 
 
-### <a name="for-users-in-mainland-china"></a>Pro uživatele v pevninské Číně 
+### <a name="for-users-in-peoples-republic-of-china"></a>Pro uživatele v Čínské lidové republice
 
-Vzhledem k tomu, že Obchod Google Play aktuálně není v pevninské Číně k dispozici, musí zařízení s Androidem získávat aplikace z čínských tržiště aplikací. Další informace najdete v tématu [instalace aplikace Portál společnosti v části kontinentální Čína](../user-help/install-company-portal-android-china.md).
+Protože Obchod Google Play v současnosti není k dispozici v Číně, musí zařízení s Androidem získávat aplikace z čínských tržiště aplikací. Další informace najdete v tématu [instalace aplikace Portál společnosti v Číně v Čínské lidové republice](../user-help/install-company-portal-android-china.md).
 
 ## <a name="limitations-of-intune-device-administrator-management-when-gms-is-unavailable"></a>Omezení správy Správce zařízení Intune, když GMS není k dispozici 
 

@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/15/2020
+ms.date: 07/06/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,11 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 7f200e5cb5bb4aa0f29cbd3adc0f177bb14e5476
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
-ms.translationtype: MT
+ms.openlocfilehash: ac5b4685249ffa46be63e9ad55ca6067edec1b03
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431317"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86022394"
 ---
 # <a name="attack-surface-reduction-policy-settings-for-endpoint-security-in-intune"></a>Nastavení zásad pro omezení možností útoku pro zabezpečení koncového bodu v Intune
 
@@ -92,7 +91,7 @@ Podporované platformy a profily:
 - **Ochrana Application Guard povoluje tisk na místních tiskárnách**  
 
   - **Nenakonfigurováno** (*výchozí*)
-  - **Ano** – povolí tisk tiskových tiskáren na místních tiskárnách.
+  - **Ano** – povolí tisk na místních tiskárnách.
 
 - **Ochrana Application Guard povoluje tisk na síťových tiskárnách**  
 
@@ -114,7 +113,7 @@ Podporované platformy a profily:
   - **Nenakonfigurováno** (*výchozí*)
   - **Ano** – nakonfigurujte zásady izolace sítě systému Windows.  
   
-  Po nastavení *Konfigurace*můžete nakonfigurovat následující nastavení.
+  Pokud nastavíte *Ano*, můžete nakonfigurovat následující nastavení.
 
   - **Rozsahy IP adres**  
     Rozbalte rozevírací seznam, vyberte **Přidat**a potom zadejte *nižší adresu* a pak *horní adresu*.
@@ -186,9 +185,9 @@ Podporované platformy a profily:
 - **Zablokovat uživatelům ignorovat upozornění filtru SmartScreen**  
   [PreventOverrideForFilesInShell](https://go.microsoft.com/fwlink/?linkid=872783)
 
-  Toto nastavení vyžaduje, aby bylo povolené nastavení vynutí filtr SmartScreen pro aplikace a soubory.
-  - **Nenakonfigurováno** (*výchozí*) – vrátí nastavení do výchozího nastavení systému Windows, které umožňuje přepsání uživatelem.
-  - **Ano** – filtr SmartScreen nebude prezentovat možnost pro uživatele, aby upozornění popsal a spouštěl aplikaci. Zobrazí se upozornění, ale uživatel ho nebude moct obejít.
+  - **Nenakonfigurováno** (*výchozí*) – uživatelé můžou ignorovat upozornění filtru SmartScreen pro soubory a škodlivé aplikace.
+  - **Ano** – filtr SmartScreen je povolen a uživatelé nemohou obejít upozornění na soubory nebo škodlivé aplikace.
+
 
 - **Zapnout filtr Windows SmartScreen**  
   CSP: [SmartScreen/EnableSmartScreenInShell](https://go.microsoft.com/fwlink/?linkid=872784)
@@ -200,14 +199,14 @@ Podporované platformy a profily:
 
 ### <a name="attack-surface-reduction-rules"></a>Pravidla pro omezení možností útoku
 
-- **Blokovat odcizení přihlašovacích údajů ze subsystému místního úřadu zabezpečení systému Windows (Lsass. exe)**  
+- **Blokovat odcizení přihlašovacích údajů ze subsystému místního úřadu zabezpečení systému Windows (lsass.exe)**  
   <!-- Defender ATP security baseline, Device configuration Endpoint protection profile -->
   [Chránit zařízení před zneužitím](https://go.microsoft.com/fwlink/?linkid=874499)
 
   Toto pravidlo pro omezení možností útoku (ASR) se řídí pomocí tohoto identifikátoru GUID: 9e6c4e1f-7d60-472f-ba1a-a39ef669e4b2
   - **Nenakonfigurováno** (*výchozí*) – nastavení se vrátí do výchozího nastavení systému Windows, které je vypnuté.
   - **Definováno uživatelem**
-  - **Enable** – pokusy o odcizení přihlašovacích údajů prostřednictvím Lsass. exe jsou blokované.
+  - **Povolit** – pokusy o odcizení přihlašovacích údajů prostřednictvím lsass.exe jsou blokované.
   - **Režim auditu** – uživatelé nejsou zablokovaných z nebezpečných domén a místo toho se vyvolají události Windows.
 
 - **Blokovat Adobe Reader v vytváření podřízených procesů**  

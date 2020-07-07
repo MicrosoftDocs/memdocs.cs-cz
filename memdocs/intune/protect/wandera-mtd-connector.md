@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/09/2020
+ms.date: 07/2/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,12 +15,11 @@ ms.technology: ''
 ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 382bf47807634fa9a5d6abde768fe6ee9bed23d1
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
-ms.translationtype: MT
+ms.openlocfilehash: 1655c7b18262d0515308a00c617f06d917d976de
+ms.sourcegitcommit: 7de54acc80a2092b17fca407903281435792a77e
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990943"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85972168"
 ---
 # <a name="wandera-mobile-threat-defense-connector-with-intune"></a>Konektor ochrany před mobilními hrozbami Wandera s Intune  
 
@@ -32,9 +31,6 @@ ms.locfileid: "83990943"
 
 Můžete nakonfigurovat zásady *podmíněného přístupu* , které jsou založené na posouzení rizik v Wandera, povolené prostřednictvím zásad dodržování předpisů zařízením v Intune. Zásady hodnocení rizik můžou zařízením nesplňujících požadavky dovolit nebo blokovat přístup k podnikovým prostředkům na základě zjištěných hrozeb.  
 
-> [!NOTE]
-> Tento dodavatel ochrany před mobilními hrozbami není u neregistrovaných zařízení podporován.
-
 ## <a name="how-do-intune-and-wandera-mobile-threat-defense-help-protect-your-company-resources"></a>Jak ochrany před mobilními hrozbami Intune a Wandera chrání vaše firemní prostředky?  
 
 Mobilní aplikace Wandera se bez problémů nainstaluje pomocí Microsoft Intune. Tato aplikace zachycuje systém souborů, síťový zásobník a telemetrii zařízení a aplikací (kde je dostupná). Tyto informace se synchronizují do cloudové služby Wandera a vyhodnotí riziko pro mobilní hrozby zařízení. Tyto klasifikace úrovně rizika je možné konfigurovat tak, aby vyhovovaly vašim potřebám v konzole Wandera, PAPRSKu.
@@ -42,6 +38,14 @@ Mobilní aplikace Wandera se bez problémů nainstaluje pomocí Microsoft Intune
 Zásady dodržování předpisů v Intune obsahují pravidlo pro MTD na základě posouzení rizik Wandera. Když je toto pravidlo aktivní, Intune vyhodnocuje soulad zařízení se zásadami, které jste povolili.
 
 U zařízení, která nedodržují předpisy, může být přístup k prostředkům, jako je Office 365, blokovaný. Uživatelům blokovaných zařízení se dostanou pokyny z aplikace Wandera, aby problém vyřešili a znovu získali přístup.
+
+Wandera aktualizuje Intune při každé změně nejnovější úrovně hrozby zařízení (Secure, nízká, střední nebo vysoká). Tato úroveň hrozby se neustále přepočítává v cloudu zabezpečení Wandera a je založená na stavu zařízení, aktivitě sítě a mnoha kanálech pro analýzu mobilních hrozeb napříč různými kategoriemi hrozeb.
+
+Tyto kategorie a jejich přidružené úrovně hrozeb se v RADARové konzole Wandera dají konfigurovat tak, aby Celková vypočítaná úroveň hrozeb pro každé zařízení byla přizpůsobitelná podle požadavků na zabezpečení vaší organizace. S úrovní hrozeb jsou k dispozici dva typy zásad Intune, které využívají tyto informace ke správě přístupu k podnikovým datům:
+
+* Pomocí **zásad dodržování předpisů pro zařízení** s podmíněným přístupem správci nastavují zásady tak, aby automaticky označily spravované zařízení jako "nedodržování předpisů" na základě úrovně hrozeb hlášené v Wandera. Tento příznak dodržování předpisů následně řídí zásady podmíněného přístupu, které umožňují povolit nebo odepřít přístup k aplikacím, které využívají moderní ověřování.  Podrobnosti o konfiguraci najdete v tématu [Vytvoření zásad dodržování předpisů zařízením MTD (Mobile Threat obrany)](../protect/mtd-device-compliance-policy-create.md) s Intune.
+
+* Pomocí **zásad ochrany aplikací** s podmíněným spuštěním můžou správci nastavit zásady, které se vynutily na úrovni nativní aplikace (třeba Android a iOS/aplikace pro Android s operačním systémem, jako je Outlook, OneDrive atd.), na základě úrovně hrozeb hlášené v Wandera.  Tyto zásady se taky dají používat s nespravovanými zařízeními (MAM-WE) k zajištění jednotných zásad napříč všemi platformami a režimy zařízení. Podrobnosti o konfiguraci najdete v tématu [Vytvoření zásady ochrany aplikací pro ochranu před mobilními hrozbami](../protect/mtd-app-protection-policy.md) v Intune.
 
 ## <a name="supported-platforms"></a>Podporované platformy  
 
@@ -104,17 +108,15 @@ Zjišťuje ohrožení vaší sítě, například útoky prostředníkem, a zabra
 
 ![Příklad přístupu uděleného při nápravě pro SharePoint](./media/wandera-mtd-connector/wandera-network-spo-unblocked.png)  
 
-<!-- 
-### Control access on unenrolled devices based on threats from malicious apps
+### <a name="control-access-on-unenrolled-devices-based-on-threats-from-malicious-apps"></a>Řízení přístupu na nezaregistrovaných zařízeních na základě hrozeb ze škodlivých aplikací
 
-When the Wandera Mobile Threat Defense solution considers a device to be infected:
+Když řešení ochrany před mobilními hrozbami Wandera považuje zařízení za infikované:
 
-![App protection policy blocks due to detected malware](./media/wandera-mtd-connector/wandera-mobile-app-policy-block.png)
+![Blokování zásad ochrany aplikací z důvodu zjištěného malwaru](./media/wandera-mtd-connector/wandera-mobile-app-policy-block.png)
 
-Access is granted on remediation:
+Přístup se udělí při nápravě:
 
-![Access is granted on remediation for App protection policy](./media/wandera-mtd-connector/wandera-mobile-app-policy-remediated.png)
--->
+![Pro zásady ochrany aplikací se udělí přístup k nápravě.](./media/wandera-mtd-connector/wandera-mobile-app-policy-remediated.png)
 
 ## <a name="next-steps"></a>Další kroky
 

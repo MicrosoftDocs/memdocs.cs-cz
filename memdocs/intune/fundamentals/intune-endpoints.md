@@ -17,12 +17,11 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 13623f92ac68855aefbd1900c5040004acba1f09
-ms.sourcegitcommit: 79ffc8afed164c408db6994806d71f64d1fc0b8f
-ms.translationtype: MT
+ms.openlocfilehash: b57d6112b8a1467eb068f04e4e3041f91ceeb8a7
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85216497"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86021867"
 ---
 # <a name="network-endpoints-for-microsoft-intune"></a>Koncové body sítě pro Microsoft Intune  
 
@@ -67,7 +66,6 @@ Následující tabulky obsahují seznam portů a služeb, ke kterým přistupuje
 |fef.msua05.manage.microsoft.com|138.91.244.151|
 |fef.msua06.manage.microsoft.com|13.78.185.97|
 |fef.msub01.manage.microsoft.com|137.135.128.214|
-|fef.msub03.manage.microsoft.com|52.169.82.238|
 |fef.msub05.manage.microsoft.com|23.97.166.52|
 |fef.msuc03.manage.microsoft.com|23.101.0.100|
 |fef.amsua0502.manage.microsoft.com|13.85.68.142|
@@ -141,3 +139,6 @@ Google poskytuje dokumentaci k požadovaným síťovým portům a cílovým náz
 
 Intune využívá pro nabízené oznámení Google Firebase Cloud Messaging (FCM) k aktivaci akcí zařízení a vrácení se změnami. To je vyžadováno pro správce zařízení s Androidem i pro Android Enterprise. Informace o požadavcích na FCM sítě najdete v tématu [FCM porty Google a brána firewall](https://firebase.google.com/docs/cloud-messaging/concept-options#messaging-ports-and-your-firewall).
 
+## <a name="endpoint-analytics"></a>Analýza koncového bodu
+
+Další informace o požadovaných koncových bodech pro službu Endpoint Analytics najdete v tématu [konfigurace proxy serveru Endpoint Analytics](https://docs.microsoft.com/mem/analytics/troubleshoot#bkmk_endpoints).

@@ -5,7 +5,7 @@ description: Zkontrolujte výchozí a dostupná nastavení pro různé verze sta
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/04/2020
+ms.date: 07/06/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,11 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 67bb805df6406226c67084ed832f5cc590b1664a
-ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
-ms.translationtype: MT
+ms.openlocfilehash: 9cc2cf4531c2e2d7a2847ccdbce87c8b938a46d6
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82943905"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86022224"
 ---
 # <a name="windows-mdm-security-baseline-settings-for-intune"></a>Nastavení standardních hodnot zabezpečení Windows MDM pro Intune
 
@@ -439,7 +438,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Dev
 Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – DmaGuard](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dmaguard) .
 
 - **Výčet externích zařízení nekompatibilních s režimem ochrany DMA v jádře**:  
-  Cílem této zásady je zajistit další zabezpečení proti externímu zařízení podporujícím technologii DMA. Umožňuje lepší kontrolu nad výčtem externích zařízení s technologií DMA, která nejsou kompatibilní s přemapováním DMA/izolací paměti zařízení a sandboxing. Tato zásada se projeví jenom v případě, že je ochrana DMA pro jádro podporovaná a povolená systémovým firmwarem. Ochrana pomocí jádra DMA je funkce platformy, kterou nelze řídit pomocí zásad nebo koncového uživatele. Musí být podporován systémem v době výroby. Pokud chcete zjistit, jestli systém podporuje ochranu před nejenom jádrem, na stránce Souhrn v souboru MSINFO32. exe se podívejte na pole ochrana pro jádro DMA.  
+  Cílem této zásady je zajistit další zabezpečení proti externímu zařízení podporujícím technologii DMA. Umožňuje lepší kontrolu nad výčtem externích zařízení s technologií DMA, která nejsou kompatibilní s přemapováním DMA/izolací paměti zařízení a sandboxing. Tato zásada se projeví jenom v případě, že je ochrana DMA pro jádro podporovaná a povolená systémovým firmwarem. Ochrana pomocí jádra DMA je funkce platformy, kterou nelze řídit pomocí zásad nebo koncového uživatele. Musí být podporován systémem v době výroby. Pokud chcete zjistit, jestli systém podporuje ochranu před nejenom jádrem, na stránce Souhrn v MSINFO32.exe ověřte pole ochrana jádra DMA.  
   [Další informace](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dmaguard#dmaguard-deviceenumerationpolicy)
 
   **Výchozí**: Blokovat vše
@@ -1665,7 +1664,7 @@ Toto pravidlo zabraňuje útokům blokováním aplikace Adobe Reader v vytváře
 - **Zabránit krádeži pověření typu**:  
   [Chránit zařízení před zneužitím](https://go.microsoft.com/fwlink/?linkid=874499)
   
-  Pokud je nastaveno na Ano, pokusy o odcizení přihlašovacích údajů prostřednictvím Lsass. exe budou zablokovány. Pokud je nastaveno pouze na audit, budou namísto blokování zavolány události systému Windows. Nastavení Nenakonfigurováno vrátí nastavení výchozí nastavení systému Windows, které je vypnuté. Toto pravidlo ASR se ovládá pomocí následujícího identifikátoru GUID: 9e6c4e1f-7d60-472f-ba1a-a39ef669e4b2
+  Pokud je nastaveno na Ano, pokusy o odcizení přihlašovacích údajů prostřednictvím lsass.exe budou zablokovány. Pokud je nastaveno pouze na audit, budou namísto blokování zavolány události systému Windows. Nastavení Nenakonfigurováno vrátí nastavení výchozí nastavení systému Windows, které je vypnuté. Toto pravidlo ASR se ovládá pomocí následujícího identifikátoru GUID: 9e6c4e1f-7d60-472f-ba1a-a39ef669e4b2
 
   **Výchozí**: Povolit
 
@@ -1851,7 +1850,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Rem
   **Výchozí**: povoleno
 
 - **Zablokovat přesměrování jednotky**:  
-  Nastavení této zásady určuje, jestli se má zabránit mapování klientských jednotek v relaci vzdálené plochy (přesměrování jednotky). Ve výchozím nastavení server Hostitel relace VP mapuje jednotky klienta automaticky po připojení. Mapované jednotky se zobrazí ve stromu složky relace v Průzkumníkovi souborů nebo v počítači ve formátu * \<písmeno_jednotky>* v * \<>ComputerName *. Toto chování můžete přepsat pomocí tohoto nastavení zásad. Pokud toto nastavení zásad povolíte, přesměrování jednotky klienta není v relacích služby Vzdálená plocha povoleno a přesměrování kopírování souborů ve schránce není povoleno v počítačích se systémem Windows Server 2003, Windows 8 a Windows XP. Pokud nastavení této zásady zakážete, přesměrování klientské jednotky je vždycky povolené. I když je povolené přesměrování schránky, přesměrování kopírování souborů ve schránce je vždycky povolené. Pokud nastavení této zásady nenakonfigurujete, přesměrování jednotky klienta a přesměrování kopírování souborů ve schránce nejsou zadané na úrovni Zásady skupiny.  
+  Nastavení této zásady určuje, jestli se má zabránit mapování klientských jednotek v relaci vzdálené plochy (přesměrování jednotky). Ve výchozím nastavení server Hostitel relace VP mapuje jednotky klienta automaticky po připojení. Mapované jednotky se zobrazí ve stromu složky relace v Průzkumníkovi souborů nebo v počítači ve formátu *\<driveletter>* zapnuto *\<computername>* . Toto chování můžete přepsat pomocí tohoto nastavení zásad. Pokud toto nastavení zásad povolíte, přesměrování jednotky klienta není v relacích služby Vzdálená plocha povoleno a přesměrování kopírování souborů ve schránce není povoleno v počítačích se systémem Windows Server 2003, Windows 8 a Windows XP. Pokud nastavení této zásady zakážete, přesměrování klientské jednotky je vždycky povolené. I když je povolené přesměrování schránky, přesměrování kopírování souborů ve schránce je vždycky povolené. Pokud nastavení této zásady nenakonfigurujete, přesměrování jednotky klienta a přesměrování kopírování souborů ve schránce nejsou zadané na úrovni Zásady skupiny.  
   [Další informace](https://go.microsoft.com/fwlink/?linkid=2067197)
 
   **Výchozí**: povoleno
@@ -1933,7 +1932,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Rem
 
   **Výchozí**: ověřeno
 
-## <a name="search"></a>Vyhledávání
+## <a name="search"></a>Hledat
 
 Další informace najdete v tématu [zásady CSP – hledání](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-search) v dokumentaci k Windows.
 
@@ -1968,7 +1967,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – fil
   **Výchozí**: Ano
 
 ::: zone-end
-::: zone pivot="mdm-may-201"
+::: zone pivot="mdm-may-2019"
 
 - **Zapnout filtr Windows SmartScreen**  
   CSP: [SmartScreen/EnableSmartScreenInShell](https://go.microsoft.com/fwlink/?linkid=872784)
@@ -1980,7 +1979,9 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – fil
 - **Zablokovat uživatelům ignorovat upozornění filtru SmartScreen**  
   CSP: [SmartScreen/PreventOverrideForFilesInShell](https://go.microsoft.com/fwlink/?linkid=872783)
 
-  Když tuto možnost nastavíte na Ano, filtr SmartScreen nenabídne uživateli možnost upozornění a spustí aplikaci. Zobrazí se upozornění, ale uživatel ji bude moci obejít. Když toto nastavení zakážete, vrátí se výchozí nastavení systému Windows, které umožní uživateli přepsat. Toto nastavení vyžaduje, aby bylo povolené nastavení vynutí filtr SmartScreen pro aplikace a soubory.
+  Pokud je nastaveno na Ano, je povolen filtr SmartScreen a uživatelé nemohou obejít upozornění pro soubory nebo škodlivé aplikace. Pokud je nastavené na Nenakonfigurováno, uživatelé můžou ignorovat upozornění filtru SmartScreen pro soubory a škodlivé aplikace.  
+
+  Toto nastavení vyžaduje, aby se nastavení zapnout filtr SmartScreen pro Windows nastavilo na Ano.
 
   **Výchozí**: Ano
 

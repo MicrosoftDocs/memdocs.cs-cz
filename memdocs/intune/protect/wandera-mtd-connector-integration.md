@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/18/2019
+ms.date: 06/26/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,110 +15,124 @@ ms.technology: ''
 ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 02ee6eb85e5ce330233711fe276a585eb80553cc
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
-ms.translationtype: MT
+ms.openlocfilehash: fc44bb114d6ff9089a01da2d0b7db7aa7527f4b5
+ms.sourcegitcommit: 7de54acc80a2092b17fca407903281435792a77e
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990976"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85972143"
 ---
 # <a name="integrate-wandera-mobile-threat-protection-with-intune"></a>Integrace ochrany před mobilními hrozbami Wandera pomocí Intune  
 
 Provedením následujících kroků Integrujte řešení ochrany před mobilními hrozbami Wandera do Intune.  
 
-> [!NOTE]
-> Tento dodavatel ochrany před mobilními hrozbami není u neregistrovaných zařízení podporován.
-
-## <a name="before-you-begin"></a>Před zahájením  
+## <a name="before-you-begin"></a>Než začnete  
 
 Než začnete s integrací Wandera do Intune, ujistěte se, že jsou splněné následující požadavky:
-- Odběr služby Microsoft Intune  
-- Přihlašovací údaje správce Azure Active Directory pro udělení následujících oprávnění:  
-  - Přihlášení a čtení profilu uživatele  
-  - Přístup k adresáři jako přihlášený uživatel  
-  - Čtení dat z adresáře  
-  - Odeslání informací o zařízení do Intune  
 
-- Předplatné Wandera:
-  - Jeden nebo více účtů Wandera, které mají licenci pro modul EMM Connect  
-  - Účet s oprávněními superuživatele v Wandera  
+- Předplatné Intune
+- Azure Active Directory přihlašovací údaje správce a přiřazenou roli, která může udělit následující oprávnění:
+
+    - Přihlášení a čtení profilu uživatele
+    - Přístup k adresáři jako přihlášený uživatel
+    - Čtení dat z adresáře
+    - Odesílání informací o rizikech zařízení do Intune
  
-### <a name="wandera-mobile-threat-defense-app-authorization"></a>Autorizace aplikace pro ochranu před mobilními hrozbami Wandera  
+- Platné předplatné Wandera
+    - Účet správce s oprávněními správce superuživatele
 
-Proces autorizace aplikace ochrany před mobilními hrozbami Wandera:  
-- Povolí službě ochrany před mobilními hrozbami Wandera komunikovat informace týkající se stavu zařízení zpátky do Intune.  
-- Wandera se synchronizuje s členstvím skupiny registrace Azure AD, aby se naplnila databáze zařízení.  
-- Povolte použití jednotného přihlašování (SSO) Azure AD na portálu Wandera pro správu PAPRSKů.  
-- Povolí aplikaci ochrany před mobilními hrozbami Wandera přihlašovat se pomocí jednotného přihlašování Azure AD.  
+## <a name="integration-overview"></a>Přehled integrace
 
+Povolení integrace ochrany před mobilními hrozbami mezi Wandera a Intune zahrnuje:
 
-## <a name="set-up-wandera-mobile-threat-defense-integration"></a>Nastavení integrace ochrany před mobilními hrozbami Wandera  
-Nastavení modulu *EMM Connect* for Wandera vyžaduje jednorázový proces konfigurace, který dokončíte v konzolách Intune a Wandera. Proces konfigurace trvá přibližně 15 minut. Konfiguraci můžete dokončit bez koordinace s technickým účtem Wandera nebo zástupcem podpory.  
+- Povolení služby UEM Connect pro Wandera k synchronizaci informací s Azure a Intune To zahrnuje metadata správy životního cyklu uživatelů a zařízení (LCM), spolu s úrovní hrozby pro zařízení ochrany před mobilními hrozbami (MTD).
+- Vytvořte v Wandera profily aktivace, které definují chování při registraci zařízení.
+- Nasaďte Wandera přes Air na spravovaná zařízení s iOS a Androidem.
+- Nakonfigurujte Wandera pro samoobslužné služby koncového uživatele pomocí MAM – máme nespravovaná zařízení s iOS a Androidem.
+
+## <a name="set-up-wandera-mobile-threat-defense-integration"></a>Nastavení integrace ochrany před mobilními hrozbami Wandera
+
+Nastavení integrace mezi Wandera a Intune nevyžaduje žádnou podporu od zaměstnanců Wandera a dá se snadno dosáhnout v řádu minut.
 
 ### <a name="enable-support-for-wandera-in-intune"></a>Povolení podpory pro Wandera v Intune
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Vyberte možnost konektory **správy tenanta**  >  **a tokeny**  >  **ochrany před mobilními hrozbami**  >  **Přidat**.
 3. Na stránce **Přidat konektor** použijte rozevírací seznam a vyberte **Wandera**. A pak vyberte **vytvořit**.  
-4. V podokně obrana proti mobilním hrozbám vyberte konektor **Wandera** MTD ze seznamu konektorů a otevřete tak podokno *Upravit konektor* . Vyberte **otevřít konzolu pro správu Wandera** , otevřete [paprskový](https://radar.wandera.com/login), konzolu pro správu Wandera a přihlaste se. 
-5. V konzole Wandera přejděte na **Nastavení**  >  **Integrace modulu EMM**a vyberte kartu **EMM Connect** . použijte rozevírací seznam dodavatel modulu *EMM* a vyberte *Microsoft Intune*.
-
-   ![Výběr Intune](./media/wandera-mtd-connector-integration/set-up-intune-in-radar.png)
-
-6. Vyberte **udělit oprávnění** k otevření připojení k portálu Intune. Přihlaste se pomocí přihlašovacích údajů správce Intune, zaškrtněte políčko a pak **přijměte** žádost o oprávnění.  
-
-   ![Přijmout oprávnění](./media/wandera-mtd-connector-integration/permissions.png) 
-
-7. Wandera dokončí připojení a vrátí se do konzoly pro správu PAPRSKů. Opakujte postup pro **udělení** přístupu k dalším konfiguracím podle potřeby.  
+4. V podokně obrana proti mobilním hrozbám vyberte konektor **Wandera** MTD ze seznamu konektorů a otevřete tak podokno **Upravit konektor** . Vyberte **otevřít konzolu pro správu Wandera** , otevřete [paprskový](https://radar.wandera.com/login), konzolu pro správu Wandera a přihlaste se. 
+5. V konzole Wandera PAPRSKy přejděte na **integrace > UEM Integration**a vyberte kartu **UEM připojit** . použijte rozevírací seznam dodavatel modulu EMM a vyberte možnost **Microsoft Intune**.
+6. Zobrazí se obrazovka podobná následujícímu, která značí, že udělení oprávnění je nutné k dokončení integrace:
 
    ![Integrace a oprávnění](./media/wandera-mtd-connector-integration/integrations-and-permissions.png) 
 
-8. V konzole PAPRSKů zkopírujte název skupiny **SyncOnly** , která se zobrazuje pod **popiskem EMM**. Tento název použijete ke konfiguraci skupiny v Intune pro synchronizaci s Wandera.
+7. Vedle synchronizace uživatelů a zařízení Intune klikněte na tlačítko udělení a zahajte tak proces poskytování souhlasu Wandera k provádění funkcí řízení životního cyklu (LCM) pomocí Azure a Intune.
+8. Po zobrazení výzvy vyberte nebo zadejte svoje přihlašovací údaje správce Azure. Zkontrolujte požadovaná oprávnění a potom zaškrtněte políčko pro vyjádření souhlasu jménem vaší organizace. Nakonec kliknutím na přijmout potvrďte integraci LCM.
 
-   ![Skupina synchronizace](./media/wandera-mtd-connector-integration/sync-group-name.png) 
+   ![Přijmout oprávnění](./media/wandera-mtd-connector-integration/permissions.png)
 
-9. Vraťte se do konzoly [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) a upravte konektor Wandera MTD. Nastavte přepínač k dispozici na **zapnuto**a **uložte** konfiguraci.  
+10. Vrátíte se automaticky zpátky do konzoly pro správu PAPRSKů.  Pokud byla autorizace úspěšná, zobrazí se vedle tlačítka pro udělení zelený znak zaškrtnutí.
+11. Opakujte postup souhlasu pro zbývající uvedená integrace kliknutím na jejich odpovídající tlačítka udělit, dokud nebudete mít zelený symbol zaškrtnutí vedle každého.
 
-   ![Povolit Wandera](./media/wandera-mtd-connector-integration/enable-wandera.png) 
+    ![Skupina synchronizace](./media/wandera-mtd-connector-integration/sync-group-name.png)
 
-Intune a Wandera jsou teď připojené.  
+12. Vraťte se do konzoly Intune a pokračujte v úpravách konektoru Wandera MTD. Nastavte všechny dostupné přepínače na zapnuto a pak konfiguraci uložte.
 
-## <a name="configure-the-wandera-applications-and-synchronization-group"></a>Konfigurace aplikací a skupin synchronizace Wandera  
-K nasazení Wandera přidáte mobilní aplikace Wandera pro platformy, které používáte (iOS a Android), do Intune a přiřadíte je ke konkrétní skupině pro synchronizaci. skupina *SyncOnly* 
+    ![Povolit Wandera](./media/wandera-mtd-connector-integration/enable-wandera.png)
 
-Tento postup vás provede následujícími oddíly a postupy.
+Intune a Wandera jsou teď připojené.
 
-Další informace o tomto procesu z Wandera se přihlaste k Wandera [paprsku](https://radar.wandera.com/login). V části **Nastavení**  >  **Integrace modulu EMM**vyberte kartu **nabízení aplikace** a pak vyberte **Microsoft Intune**. Karta nabízených oznámení aplikací se aktualizuje pomocí pokynů, které jsou specifické pro Intune.  
+## <a name="create-activation-profiles-in-wandera"></a>Vytvoření profilů aktivace v Wandera
 
-### <a name="add-the-wandera-apps"></a>Přidání aplikací Wandera  
-Vytvořte klientské aplikace v Intune, abyste mohli nasadit aplikaci Wandera na zařízení s Androidem a iOS/iPadOS. Další informace najdete v tématu [Přidání aplikací MTD](mtd-apps-ios-app-configuration-policy-add-assign.md) pro postupy a vlastní podrobnosti specifické pro aplikace Wandera.  
+Nasazení založená na Intune se usnadňují pomocí profilů aktivace Wandera definovaných v PAPRSKech.  Každý aktivační profil definuje konkrétní možnosti konfigurace, jako jsou požadavky na ověřování, možnosti služby a počáteční členství ve skupině.
 
-Po vytvoření aplikací se sem vraťte, abyste vytvořili skupinu synchronizace a přiřadíte aplikace.
+Po vytvoření profilu aktivace v Wandera ho přiřadíte uživatelům a zařízením v Intune.  I když je aktivační profil univerzální napříč platformami zařízení a strategiemi správy, níže uvedené kroky definují, jak nakonfigurovat Intune na základě těchto rozdílů.
 
-### <a name="create-the-synchronization-group-and-assign-the-apps"></a>Vytvořte synchronizační skupinu a přiřaďte aplikace.
+Tento postup předpokládá, že jste v Wandera vytvořili aktivační profil, který chcete nasadit přes Intune na cílová zařízení. Další podrobnosti o vytváření a používání profilů aktivace Wandera najdete v [Průvodci aktivačními profily](https://radar.wandera.com/?return_to=https://wandera.force.com/Customer/s/article/Enrollment-Links) .
 
-1. Získá název skupiny **SyncOnly** , která se zobrazí pod **popiskem EMM** v konzole Wandera paprsky. Tento název jste mohli uložit během kroku 7 při [povolování podpory Wandera v Intune](#enable-support-for-wandera-in-intune). Použijte tento název jako název skupiny v Intune for Wandera Synchronization.  
+> [!NOTE]
+> Když vytváříte aktivační profily pro nasazení prostřednictvím Intune nebo MAM-WE, nezapomeňte nastavit přidruženého uživatele na ověřování od poskytovatele identity > Azure Active Directory možnost pro maximální zabezpečení, kompatibilitu s více platformami a jednodušší prostředí koncového uživatele.
 
-2. V centru pro správu Správce koncových bodů, přejít na **skupiny** a vyberte **Nová skupina**. Chcete-li nakonfigurovat skupinu synchronizace pro použití v Wandera, zadejte následující:
-   - **Typ skupiny**: **zabezpečení**
-   - **Název skupiny**: zadejte název **SyncOnly** , který jste získali z konzoly pro správu Wandera pro paprsky.
+## <a name="deploying-wandera-over-the-air-to-mdm-managed-devices"></a>Nasazení Wandera do zařízení spravovaných přes MDM
 
-   ![Konfigurovat skupinu synchronizace](./media/wandera-mtd-connector-integration/configure-sync-group.png)
+U zařízení s iOS a Androidem, která jsou spravovaná pomocí Intune, se Wandera dá nasadit přes Air pro rychlé aktivace založené na nabízených oznámeních. Ujistěte se, že jste už vytvořili aktivační profily, které potřebujete, než budete pokračovat v této části. Nasazení Wandera do spravovaných zařízení zahrnuje:
+- Přidání profilů konfigurace Wandera do Intune a přiřazení k cílovým zařízením
+- Přidání aplikace Wandera a příslušných konfigurací aplikace do Intune a přiřazení k cílovým zařízením.
 
-3. Vyberte **členy** a přiřaďte skupiny, které zahrnují zařízení s Androidem a iOS/iPadOS, která chcete používat s Wandera.
+### <a name="configure-and-deploy-ios-configuration-profiles"></a>Konfigurace a nasazení konfiguračních profilů pro iOS 
 
-4. Vyberte **vytvořit** a uložte skupinu.
+V této části stáhnete **požadované** konfigurační soubory zařízení s iOS a pak je doručíte přes Air přes MDM na vaše zařízení spravovaná přes Intune.
 
-Další informace najdete v tématu [nasazení aplikací](../apps/apps-deploy.md) .
+1. V **paprskovém**prostředí přejděte do aktivačního profilu, který chcete nasadit (zařízení > aktivace), a pak klikněte na **kartu strategie nasazení > spravovaná zařízení > Microsoft Endpoint Manager**.
+2. Rozbalte oddíly **Apple iOS pod dohledem** nebo Apple iOS, které nejsou **pod dohledem** , na základě konfigurace loďstva zařízení.
+3. Stáhněte si poskytnuté konfigurační profily a připravte je, abyste je nahráli v následujícím kroku.
+4. Otevřete **Microsoft Intune konzolu pro správu** a přejděte na **zařízení > iOS/iPadOS > konfiguračních profilů**.  Klikněte na **Vytvořit profil**.
+5. Na panelu, který se zobrazí, zvolte v části **platforma**možnost **iOS/iPadOS** a pak na **vlastní** v části profil. Pak klikněte na **vytvořit**.
+6. Do pole **název** zadejte popisný název pro konfiguraci. v ideálním případě se přiřadíte k tomu, co jste pojmenovali profil aktivace v paprskech. To vám usnadní křížové odkazy v budoucnu. Případně můžete v případě potřeby zadat kód aktivačního profilu. Doporučujeme, abyste zjistili, jestli je konfigurace pro zařízení pod dohledem nebo bez dohledu, podle přípony názvu jako takového.
+7. Volitelně můžete zadat **Popis** poskytující další podrobnosti pro ostatní správce týkající se účelu nebo použití konfigurace. Klikněte na **Další**.
+8. Klikněte na **Vybrat soubor** a vyhledejte stažený konfigurační profil, který odpovídá příslušnému aktivačnímu profilu staženému v kroku 3. Pokud jste stáhli obojí, je vhodné vybrat profil v režimu pod dohledem nebo bez dohledu. Klikněte na **Další**.
+   <!-- image placeholder - ending future availability -->
+9.  Definujte **značky oboru** podle požadavků v postupech správy RBAC v Intune.  Klikněte na **Další**.
+10. **Přiřaďte** konfigurační profil skupinám uživatelů nebo zařízení, které by měly mít nainstalované Wandera.  Doporučujeme začít se skupinou testu a potom po ověření správné práce s aktivací rozšířit. Klikněte na **Další**.
+11. Podle potřeby zkontrolujte konfiguraci správných úprav a kliknutím na **vytvořit** vytvořte a nasaďte konfigurační profil.
 
-### <a name="assign-the-wandera-apps-to-the-synchronization-group"></a>Přiřaďte aplikace Wandera ke skupině synchronizace.  
-Pro aplikaci Wandera, kterou jste vytvořili pro iOS/iPadOS a pro Android, opakujte následující postup.
+> [!NOTE]
+> Wandera nabízí profil rozšířeného nasazení pro zařízení s iOS pod dohledem. Pokud máte smíšené loďstvo zařízení pod dohledem a bez dohledu, podle potřeby opakujte výše uvedené kroky pro jiný typ profilu. Pro všechny budoucí aktivační profily, které se mají nasadit přes Intune, se musí použít stejný postup. Pokud máte smíšené loďstvo zařízení s iOS pod dohledem a bez dohledu a potřebujete pomoc s dohledem na základě přiřazení zásad založených na režimu, obraťte se prosím na podporu Wandera. 
 
-1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **aplikace**  >  **všechny aplikace** a vyberte aplikaci Wandera.
-3. Vyberte **přiřazení** a pak **Přidat skupinu**.  
-4. V podokně *Přidat skupinu* pro *Typ přiřazení* vyberte **požadované**.
-5. Vyberte **zahrnuté skupiny**a pak **Vyberte skupiny, které chcete zahrnout**. Určete skupinu, kterou jste vytvořili pro Wandera synchronizaci, a pak klikněte na **Vybrat**  >  **OK**  >  **OK**. Kliknutím na **Uložit** dokončete přiřazení skupiny. 
+## <a name="deploying-wandera-to-mam-we-devices"></a>Nasazení Wandera do zařízení MAM
+Pro zařízení, která nespravuje Intune a jsou (MAM), využívá Wandera integrované prostředí pro registraci na základě ověřování k aktivaci a ochraně firemních dat v aplikacích s podporou MAM. 
 
-## <a name="next-steps"></a>Další kroky  
-Teď, když jste nakonfigurovali integraci, můžete začít konfigurovat zásady, nastavit pokročilý podmíněný přístup a zobrazovat sestavy v konzole pro správu Wandera. Další informace o správě a konfiguraci Wandera najdete v tématu [průvodce Začínáme Support Center](https://radar.wandera.com/?return_to=https://wandera.force.com/Customer/s/getting-started) v dokumentaci k Wandera. 
+Následující části popisují, jak nakonfigurovat Wandera a Intune, aby koncoví uživatelé mohli bezproblémově aktivovat Wandera předtím, než budou mít přístup k firemním datům. 
+
+### <a name="configure-azure-device-provisioning-in-a-wandera-activation-profile"></a>Konfigurace zřizování zařízení Azure v profilu aktivace Wandera
+Aktivační profily, které se mají používat s MAM – k dispozici je potřeba, abyste měli přidružené uživatelské nastavení > Azure Active Directory možnost ověřený zprostředkovatelem identity.
+1. V **paprskovém portálu Wandera** vyberte existující nebo vytvořte nový, aktivační profil, který mam – zařízení budou používána během registrace v zařízeních > aktivací. 
+2. Klikněte na **kartu strategie nasazení a pak na nespravovaná zařízení** přejděte do části **Azure Device Provisioning** .
+3. Do příslušného textového pole zadejte **ID tenanta Azure AD** . Pokud nemáte ID tenanta na ruce, klikněte na odkaz **získat ID tenanta** a otevřete službu Azure AD na nové kartě, kde můžete tuto hodnotu snadno zkopírovat do schránky.
+4. Volitelné Zadejte **ID skupiny** pro omezení aktivací uživatelů na konkrétní skupiny.
+   - Pokud je definováno jedno nebo více **ID skupiny** , uživatel aktivuje mam-musíme být členem aspoň jedné z určených skupin pro aktivaci pomocí tohoto aktivačního profilu.
+   - Můžete nastavit víc aktivačních profilů nakonfigurovaných se stejným ID tenanta Azure, ale s různými ID skupin. To umožňuje registrovat zařízení do Wandera na základě členství ve skupinách Azure a povolit v době aktivace odlišné možnosti podle skupin.
+   - Můžete nakonfigurovat jeden "výchozí" aktivační profil, který neurčuje žádné ID skupiny.  Tato skupina bude sloužit jako zachytávací vše pro všechny aktivace, ve kterých ověřený uživatel není členem skupiny s přidružením k jinému aktivačnímu profilu.
+5. V pravém horním rohu stránky klikněte na **Uložit** .
+
+## <a name="next-steps"></a>Další kroky
+- Když máte profily aktivace Wandera načtené v PAPRSKech, vytvořte v Intune klientské aplikace, které nasadí aplikaci Wandera na zařízení s Androidem a iOS/iPadOS. Konfigurace aplikace Wandera poskytuje základní funkce pro bezplatné navýšení konfiguračních profilů zařízení a doporučuje se pro všechna nasazení. Další informace najdete v tématu [Přidání aplikací MTD](mtd-apps-ios-app-configuration-policy-add-assign.md) pro postupy a vlastní podrobnosti specifické pro aplikace Wandera. 
+- Teď, když máte Wandera integrovanou se správcem koncových bodů, teď můžete ladit konfiguraci, zobrazovat sestavy a v rámci vašeho loďstva mobilních zařízení mnohem nasazovat. Podrobné pokyny pro konfiguraci najdete v tématu [průvodce Začínáme Support Center](https://radar.wandera.com/?return_to=https://wandera.force.com/Customer/s/getting-started) v dokumentaci k Wandera.

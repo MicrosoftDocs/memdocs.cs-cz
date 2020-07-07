@@ -17,12 +17,11 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic, has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 163a0d231192277f27c69d7bcf983e817393d526
-ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
-ms.translationtype: MT
+ms.openlocfilehash: a222a1f4adfd2f73731c40946169338989162e5e
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85383117"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86022360"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Microsoft Intune App SDK pro Android – Příručka pro vývojáře
 
@@ -79,7 +78,10 @@ Knihovny **Microsoft.Intune.MAM.SDK.Support.XXX.jar** navíc obsahují varianty 
 
 Pokud je jako krok sestavení použitý [ProGuard](http://proguard.sourceforge.net/) (případně jiný mechanismus zmenšování nebo obfuskace), obsahuje sada SDK další konfigurační pravidla, která je nutné zahrnout. Při zahrnutí. AAR v sestavení jsou naše pravidla automaticky integrována do kroku ProGuard a jsou zachovány potřebné soubory třídy.
 
-Knihovna ADAL (Azure Active Directory Authentication Libraries) může mít vlastní omezení pro ProGuard. Pokud je součástí vaší aplikace, informujte se o těchto omezeních v dokumentaci pro ADAL.
+[Knihovna Microsoft Authentication Library (MSAL)](https://docs.microsoft.com/azure/active-directory/develop/msal-overview#languages-and-frameworks) může mít vlastní omezení ProGuard. Pokud vaše aplikace integruje MSAL, musíte postupovat podle těchto omezení v dokumentaci MSAL.
+
+> [!NOTE]
+> Azure Active Directory (Azure AD) Authentication Library (ADAL) a Azure AD Graph API budou zastaralé. Další informace najdete v tématu [aktualizace aplikací pro použití knihovny Microsoft Authentication Library (MSAL) a rozhraní Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
 
 ### <a name="policy-enforcement"></a>Vynucování zásad
 Sada Intune App SDK je knihovna Androidu, která umožňuje vaší aplikaci podporovat zásady Intune a podílet se na jejich vynucení. 
@@ -92,7 +94,7 @@ Pro zásady, které se automaticky vynutily, se vyžadují, aby se aplikace nahr
 ### <a name="build-tooling"></a>Nástroje sestavení
 Sada SDK poskytuje nástroje pro sestavení (modul plug-in pro Gradle buildy a nástroj příkazového řádku pro sestavení bez Gradle), které provádějí MAM ekvivalentní náhrady automaticky. Tyto nástroje transformují soubory tříd vygenerované při kompilaci Java a nezmění původní zdrojový kód.
 
-Nástroje provádějí pouze [přímé náhrady](#class-and-method-replacements) . Nástroje neprovádí žádné složitější integrace SDK, jako jsou [zásady uložení jako](#enable-features-that-require-app-participation), [použití více identit](#multi-identity-optional), [registrace App-WE](#app-protection-policy-without-device-enrollment), [změny souboru AndroidManifest](#manifest-replacements) nebo [konfigurace ADAL](#configure-azure-active-directory-authentication-library-adal), a proto je třeba tyto kroky provést dříve, než u aplikace povolíte plnou podporu Intune. Pečlivě si pročtěte zbývající část této dokumentace, abyste se seznámili s body integrace, které se týkají vaší aplikace.
+Nástroje provádějí pouze [přímé náhrady](#class-and-method-replacements) . Neprovádí žádné složitější integrace sady SDK, jako je například [zásada Save-as](#enable-features-that-require-app-participation), [multi-identity](#multi-identity-optional), [Registrace aplikací](#app-protection-policy-without-device-enrollment)nebo souboru AndroidManifest, takže je třeba tyto [změny](#manifest-replacements)dokončit, aby byla vaše aplikace plně Intune zapnutá. Pečlivě si pročtěte zbývající část této dokumentace, abyste se seznámili s body integrace, které se týkají vaší aplikace.
 
 > [!NOTE]
 > Tyto nástroje můžete spustit u projektu, u kterého jste již provedli částečnou nebo úplnou integraci sady SDK MAM prostřednictvím ručních nahrazení. Váš projekt musí i nadále uvádět sadu SDK MAM jako závislost.
@@ -184,7 +186,7 @@ Pokud je odpověď na obě otázky Ano, musíte danou knihovnu do `includeExtern
 | Zahrnete knihovnu, jako je React Native, která obsahuje třídy odvozené z `Activity`, `Application` a `Fragment`, ale použijete pouze statické pomocné rutiny nebo nástrojové třídy. | No |
 | Zahrnete knihovnu, která obsahuje třídy odvozené z `TextView`, a v aplikaci tyto třídy použijete nebo dále odvodíte. | Yes |
 
-#### <a name="reporting"></a>Generování sestav
+#### <a name="reporting"></a>Přehledy
 Modul plug-in sestavení může vygenerovat sestavu HTML změn, které dělá. Chcete-li vyžádat generování této sestavy, zadejte `report = true` v `intunemam` konfiguračním bloku. Pokud je tato sestava vygenerována, bude `outputs/logs` v adresáři buildu zapsána.
 
 ```groovy
@@ -420,6 +422,9 @@ Intune App SDK vyžaduje tři [oprávnění pro systém Android](https://develop
 * `android.permission.USE_CREDENTIALS`
 
 Azure Active Directory Authentication Library ([ADAL](https://azure.microsoft.com/documentation/articles/active-directory-authentication-libraries/)) vyžaduje tato oprávnění ke zprostředkovanému ověřování. Pokud nejsou tato oprávnění udělená aplikaci nebo je uživatel odvolá, zakážou se toky ověřování, které vyžadují zprostředkovatele (aplikace Portál společnosti).
+
+> [!NOTE]
+> Azure Active Directory (Azure AD) Authentication Library (ADAL) a Azure AD Graph API budou zastaralé. Další informace najdete v tématu [aktualizace aplikací pro použití knihovny Microsoft Authentication Library (MSAL) a rozhraní Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
 
 ## <a name="logging"></a>protokolování
 
@@ -886,6 +891,9 @@ Jakmile se příjemce vaší aplikace vrátí, už nebude mít přístup k šifr
 
 ## <a name="configure-azure-active-directory-authentication-library-adal"></a>Konfigurace knihovny ADAL (Azure Active Directory Authentication Library)
 
+> [!NOTE]
+> Azure Active Directory (Azure AD) Authentication Library (ADAL) a Azure AD Graph API budou zastaralé. Další informace najdete v tématu [aktualizace aplikací pro použití knihovny Microsoft Authentication Library (MSAL) a rozhraní Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
+
 Nejprve si přečtěte pokyny pro integraci knihovny ADAL, které najdete v [úložišti na GitHubu](https://github.com/AzureAD/azure-activedirectory-library-for-android).
 
 Sada SDK spoléhá na [knihovnu ADAL](https://azure.microsoft.com/documentation/articles/active-directory-authentication-libraries/) s jejími scénáři [ověření](https://azure.microsoft.com/documentation/articles/active-directory-authentication-scenarios/) a podmíněného spuštění, což vyžaduje, aby byly aplikace nakonfigurovány s [Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-whatis/). Hodnoty konfigurace se předávají sadě SDK prostřednictvím metadat AndroidManifest.
@@ -989,6 +997,9 @@ Aplikace se také může sady Intune App SDK dotazovat na stav zaregistrovaného
 
 Aplikace musí provést zpětné volání, aby mohla jménem sady SDK získat z knihovny ADAL příslušné přístupové tokeny. Předpokládá se, že aplikace už pro ověřování uživatelů ADAL využívá a získává vlastní přístupové tokeny.
 
+> [!NOTE]
+> Azure Active Directory (Azure AD) Authentication Library (ADAL) a Azure AD Graph API budou zastaralé. Další informace najdete v tématu [aktualizace aplikací pro použití knihovny Microsoft Authentication Library (MSAL) a rozhraní Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
+
 Pokud aplikace zcela odebere účet, měla by ho také odregistrovat a tím aplikaci sdělit, že se na tohoto uživatele už nemají vztahovat zásady. Pokud byl uživatel zaregistrován ke službě MAM, dojde ke zrušení jeho registrace a vymazání aplikace.
 
 
@@ -1064,6 +1075,9 @@ void updateToken(String upn, String aadId, String resourceId, String token);
 
 1. Aby bylo možné povolit sadě SDK žádat token ADAL pro daného uživatele a ID prostředku, musí aplikace implementovat rozhraní `MAMServiceAuthenticationCallback`. Voláním metody `registerAuthenticationCallback()` musí být rozhraní `MAMEnrollmentManager` poskytnutá instance zpětného volání. V brzké fázi životního cyklu aplikace může být token potřeba k pokusům o registraci nebo ohlášení aktualizací zásad ochrany aplikací, takže zpětné volání je nejlepší zaregistrovat v metodě `onMAMCreate()` podtřídy `MAMApplication` aplikace.
 
+  > [!NOTE]
+  > Azure Active Directory (Azure AD) Authentication Library (ADAL) a Azure AD Graph API budou zastaralé. Další informace najdete v tématu [aktualizace aplikací pro použití knihovny Microsoft Authentication Library (MSAL) a rozhraní Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
+
 2. Metoda `acquireToken()` by měla získat přístupový token pro požadované ID prostředku daného uživatele. Pokud ho získat nedokáže, měla by vrátit hodnotu null.
 
     > [!NOTE]
@@ -1099,6 +1113,9 @@ Result getRegisteredAccountStatus(String upn);
 2. Vzhledem k tomu, že je vyžadováno ověřování AAD, je nejlepší čas k registraci uživatelského účtu po přihlášení uživatele k aplikaci a úspěšném ověření pomocí ADAL. ID AAD a ID tenanta uživatele se vrátí z ověřovacího volání ADAL jako součást [`AuthenticationResult`](https://github.com/AzureAD/azure-activedirectory-library-for-android) objektu.
     * ID klienta pochází z metody `AuthenticationResult.getTenantID()`.
     * Informace o uživateli se nachází v podobjektu typu `UserInfo`, který pochází z `AuthenticationResult.getUserInfo()`, a ID uživatele AAD se získává z tohoto objektu voláním metody `UserInfo.getUserId()`.
+
+  > [!NOTE]
+  > Azure Active Directory (Azure AD) Authentication Library (ADAL) a Azure AD Graph API budou zastaralé. Další informace najdete v tématu [aktualizace aplikací pro použití knihovny Microsoft Authentication Library (MSAL) a rozhraní Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
 
 3. Pokud chcete zrušit registraci účtu ve správě Intune, měla by aplikace provést volání metody `unregisterAccountForMAM()`. Pokud byl účet úspěšně zaregistrován a je spravován, sada SDK zruší jeho registraci a vymaže jeho data. Kromě toho se zastaví pravidelné pokusy o registraci. Sada SDK poskytuje asynchronní stav žádosti o zrušení registrace prostřednictvím oznámení.
 
@@ -1139,6 +1156,9 @@ mAuthContext.acquireToken(this, RESOURCE_ID, CLIENT_ID, REDIRECT_URI, PromptBeha
 #### <a name="authentication"></a>Ověřování
 
 * Když aplikace volá `registerAccountForMAM()`, může brzy poté obdržet zpětné volání na rozhraní `MAMServiceAuthenticationCallback`, ale na odlišném vláknu. V ideálním případě aplikace získala svůj vlastní token z knihovny ADAL před registrací účtu za účelem urychlení získání požadovaného tokenu. Pokud aplikace vrátí platný token ze zpětného volání, registrace bude pokračovat a aplikace získá konečný výsledek prostřednictvím oznámení.
+
+> [!NOTE]
+> Azure Active Directory (Azure AD) Authentication Library (ADAL) a Azure AD Graph API budou zastaralé. Další informace najdete v tématu [aktualizace aplikací pro použití knihovny Microsoft Authentication Library (MSAL) a rozhraní Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
 
 * V případě, že aplikace nevrátí platný token AAD, konečný výsledek pokusu o registraci bude `AUTHORIZATION_NEEDED`. Pokud aplikace obdrží tento výsledek prostřednictvím oznámení, důrazně se doporučuje urychlit proces registrace tím, že získá token pro uživatele a prostředek, který si dřív požadoval, `acquireToken()` a zavolá `updateToken()` metodu pro zahájení procesu registrace znovu.
 
@@ -1204,6 +1224,9 @@ Knihovna ADAL má nový kód chyby, který informuje aplikaci o tom, že selhán
 
 > [!NOTE]
 > Tento nový kód chyby a další podpora pro certifikační autoritu aplikací pomocí zásad správy vyžaduje verzi 1.15.0 (nebo vyšší) knihovny ADAL.
+
+> [!NOTE]
+> Azure Active Directory (Azure AD) Authentication Library (ADAL) a Azure AD Graph API budou zastaralé. Další informace najdete v tématu [aktualizace aplikací pro použití knihovny Microsoft Authentication Library (MSAL) a rozhraní Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
 
 ### <a name="mamcompliancemanager"></a>MAMComplianceManager
 
@@ -1465,7 +1488,7 @@ Pokud vaše aplikace používá `Service` kontext ke spouštění, použití př
 Chcete-li zpracovat zvláštní případy při aktualizaci identity uživatelského rozhraní pomocí `setUIPolicyIdentity` nebo `switchMAMIdentity` , lze obě metody předat sadu `IdentitySwitchOption` hodnot.
 
 * `IGNORE_INTENT`: Použijte, pokud požadujete přepínač identity, který by měl ignorovat záměr přidružený k aktuální aktivitě.
-  Například:
+  Příklad:
 
   1. Vaše aplikace obdrží záměr ze spravované identity obsahující spravovaného dokumentu a aplikace zobrazí dokument.
   2. Uživatel přepne na svou osobní identitu, takže vaše aplikace si vyžádá přepínač identity uživatelského rozhraní. V osobní identitě už aplikace nezobrazuje dokument, takže ho použijete `IGNORE_INTENT` při žádosti o přepínač identity.
@@ -1634,7 +1657,7 @@ Ty je nutné použít, pokud asynchronní operace může zapisovat podniková da
 
 #### <a name="mamasynctask"></a>MAMAsyncTask
 
-Chcete-li použít `MAMAsyncTask` , jednoduše dědit z něj namísto `AsyncTask` a nahraďte `doInBackground` a `onPreExecute` v `doInBackgroundMAM` a v `onPreExecuteMAM` . Konstruktor `MAMAsyncTask` převezme kontext aktivity. Například:
+Chcete-li použít `MAMAsyncTask` , jednoduše dědit z něj namísto `AsyncTask` a nahraďte `doInBackground` a `onPreExecute` v `doInBackgroundMAM` a v `onPreExecuteMAM` . Konstruktor `MAMAsyncTask` převezme kontext aktivity. Příklad:
 
 ```java
 AsyncTask<Object, Object, Object> task = new MAMAsyncTask<Object, Object, Object>(thisActivity) {
@@ -2067,6 +2090,9 @@ Následující část obsahuje postup pro vyžadování výzvy uživateli při s
 Pomocí následujících kroků povolte výchozí registraci:
 
 1. Pokud vaše aplikace integruje ADAL nebo potřebujete povolit jednotné přihlašování, [nakonfigurujte knihovnu ADAL](#configure-azure-active-directory-authentication-library-adal) po [běžné konfiguraci #2 konfigurace ADAL](#common-adal-configurations) . V takovém případě tento krok můžete přeskočit.
+
+  > [!NOTE]
+  > Azure Active Directory (Azure AD) Authentication Library (ADAL) a Azure AD Graph API budou zastaralé. Další informace najdete v tématu [aktualizace aplikací pro použití knihovny Microsoft Authentication Library (MSAL) a rozhraní Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
    
 2. Povolte výchozí registraci přidáním následující hodnoty do manifestu pod `<application>` značku:
 

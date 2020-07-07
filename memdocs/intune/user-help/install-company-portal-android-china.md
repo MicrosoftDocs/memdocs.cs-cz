@@ -1,5 +1,5 @@
 ---
-title: Instalace aplikace Portál společnosti Intune v části kontinentální Čína | Microsoft Docs
+title: Instalace aplikace Portál společnosti Intune do Čínské lidové republiky | Microsoft Docs
 description: ''
 keywords: ''
 author: lenewsad
@@ -19,16 +19,15 @@ ms.reviewer: jeyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 39aa0108d160aea74e1ac47b19877763a9ffefa5
-ms.sourcegitcommit: 411e9d93cbafc7585f5a0f9a05097fe589de804f
-ms.translationtype: MT
+ms.openlocfilehash: 58ba595b65ade57fee0ff3fe40242b27a2ff8ba4
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85332790"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86021833"
 ---
-# <a name="install-company-portal-app-in-mainland-china"></a>Instalace aplikace Portál společnosti v části kontinentální Čína   
+# <a name="install-company-portal-app-in-peoples-republic-of-china"></a>Instalace aplikace Portál společnosti do Čínské lidové republiky
 
-Nainstalujte aplikaci Portál společnosti Intune pro přístup do školních nebo pracovních prostředků ze zařízení s Androidem. Aplikace je dostupná v pevninské Číně a je možné ji nainstalovat z následujících obchodů s aplikacemi: 
+Nainstalujte aplikaci Portál společnosti Intune pro přístup do školních nebo pracovních prostředků ze zařízení s Androidem. Aplikace je k dispozici v Čínské lidové republice a je možné ji nainstalovat z následujících obchodů s aplikacemi: 
 
 
 * [Xiaomi](https://go.microsoft.com/fwlink/?linkid=836947) 
