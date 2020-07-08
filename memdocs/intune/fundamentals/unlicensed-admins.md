@@ -1,6 +1,6 @@
 ---
-title: Registrace nebo přihlášení k Microsoft Intune
-description: Jak se zaregistrovat k předplatnému Microsoft Intune nebo se přihlásit, abyste mohli začít s vaším předplatným.
+title: Nelicencovaná správci v Microsoft Intune
+description: Přečtěte si, jak udělit nelicencovaným správcům oprávnění k přístupu k Intune.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -17,25 +17,25 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ae30e03a03b4d690bdaa9e6a4c73da6ab15226f7
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: c6dcd41377234bbb1b40e513f16c3393d763b17f
+ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85095697"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86088186"
 ---
-# <a name="unlicensed-admins"></a>Správci nelicencovaných licencí
+# <a name="unlicensed-admins"></a>Nelicencovaní správci
 
 Správci služby Intune a správce koncového bodu Microsoftu můžete udělit přístup ke správcům bez licencí Intune.
 
-1. Přihlaste se k [centru pro správu portálu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431)Správa  >  **Tenant administration**  >  **licencování správce**.
+1. Přihlaste se k centru pro správu [služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431)  >  **Tenant administration**  >  **role**  >  **Správce klienta Správa licencí**.
 2. Vyberte možnost **Povolení přístupu k nelicencovaným správcům**  >  **Ano**.
     >[!WARNING]
     >Po kliknutí na **Ano**toto nastavení nemůžete zrušit.
 
 3. Od této chvíle se uživatelé, kteří se přihlásí do centra pro správu služby Microsoft Endpoint Manager, nemusejí zažádat o licenci Intune. Jejich rozsah přístupu je definován rolemi, které jsou jim přiřazeny.
 
-Intune podporuje až 350 správců s nelicencovanými licencemi na jednu skupinu zabezpečení. Správci nad tímto limitem budou mít nepředvídatelné chování.
+Intune podporuje až 350 správců s nelicencovanými licencemi na jednu skupinu zabezpečení a vztahuje se jenom na přímé členy. Správci nad tímto limitem budou mít nepředvídatelné chování.
 
 
 

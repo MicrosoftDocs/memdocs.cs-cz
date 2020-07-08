@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/15/2020
+ms.date: 07/15/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 8171eb3cf484c61e2b99046b36553a633d92044e
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 55a73806e343ac23525dbd2a28950d46285bf9a3
+ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431245"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86088526"
 ---
 # <a name="manage-devices-with-endpoint-security-in-microsoft-intune"></a>Správa zařízení pomocí zabezpečení koncového bodu v Microsoft Intune
 
@@ -66,6 +66,8 @@ Vezměte v úvahu následující pole:
     Díky spolusprávě můžete [zvolit různé úlohy spolusprávy](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads) , abyste zjistili, jaké aspekty jsou spravované Configuration Manager nebo Intune. Tyto možnosti budou mít vliv na to, které zásady zařízení použije a jak budou data o dodržování předpisů hlášena v centru pro správu.
 
     Pomocí Intune můžete například nakonfigurovat zásady pro antivirovou ochranu, bránu firewall a šifrování. Tyto typy zásad se považují za zásady pro *Endpoint Protection*. Pokud chcete, aby spoluspravované zařízení používalo zásady Intune a ne zásady Configuration Manager, nastavte pro Endpoint Protection posuvník pro spolusprávu na *Intune* nebo *pilotní Intune*. Pokud je posuvník nastavený na Configuration Manager, zařízení místo toho použije zásady a nastavení z Configuration Manager.
+
+  - **Pracovní prostor jedno** – tato zařízení spravuje partner dodržování předpisů zařízením třetí strany, jeden pracovní prostor. Další informace najdete v tématu [partneři dodržování předpisů zařízením](../protect/device-compliance-partners.md).
 
 - **Dodržování předpisů**: dodržování předpisů se vyhodnocuje na základě zásad dodržování předpisů, které jsou přiřazené k zařízení. Zdroj těchto zásad a informace v konzole nástroje závisí na tom, jak je zařízení spravované. Intune, Configuration Manager nebo spoluspráva. Pro spoluspravovaná zařízení pro nahlášení dodržování předpisů nastavte posuvník spolusprávy pro dodržování předpisů zařízením pro Intune nebo pilotní Intune.  
 

@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/24/2020
+ms.date: 07/02/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -18,16 +18,17 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d26040c5a009a9c3877abbc25512e317f584f114
-ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
+ms.openlocfilehash: 6629f416dbbc9555514dfc305db8f224f6b76526
+ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85502846"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86088441"
 ---
 # <a name="android-enterprise-device-enrollment-restrictions"></a>Omezení registrace zařízení s Androidem Enterprise
 
-Před registrací zařízení pro platformu pro [konfiguraci Android Enterprise Security]()musí organizace nakonfigurovat vhodná omezení. Tato omezení zajistí, že se uživatelé můžou zaregistrovat jenom
+Před registrací zařízení pro platformu pro [konfiguraci Android Enterprise Security](android-configuration-framework.md)musí organizace nakonfigurovat vhodná omezení. Tato omezení zajistí, že se uživatelé můžou zaregistrovat jenom
+
 - schválená zařízení.
 - zadaný počet zařízení.
 - zařízení se zadanými platformami.
@@ -54,7 +55,12 @@ Pro zajištění vysokého zabezpečení pracovních profilů pro Android Enterp
 | Správce zařízení s Androidem| Blok | Všechny verze | Yes |
 
 ## <a name="fully-managed-security-restrictions"></a>Plně spravovaná omezení zabezpečení
-Ujistěte se, že organizace podporuje registraci zařízení s plně spravovaným Androidem Enterprise, a to kontrolou plně spravované registrace Android Enterprise. 
+Ujistěte se, že organizace podporuje registraci zařízení s plnou správou Android Enterprise tím, že zkontroluje [registraci plně spravovaných zařízení](android-fully-managed-enroll.md#enroll-the-fully-managed-devices). 
+
+## <a name="conditional-access-policies"></a>Zásady podmíněného přístupu
+Organizace můžou pomocí zásad podmíněného přístupu Azure AD zajistit, aby uživatelé měli přístup k pracovnímu nebo školnímu obsahu jenom na registrovaných zařízeních s Androidem. K tomu budete potřebovat zásadu podmíněného přístupu, která cílí na všechny potenciální uživatele. Podrobnosti o vytvoření této zásady najdete v v [vyžadovat spravovaná zařízení pro cloudovou aplikaci přístup s podmíněným přístupem](https://docs.microsoft.com/azure/active-directory/conditional-access/require-managed-devices). 
+
+Postupujte podle kroků v části [scénář: vyžadovat registraci zařízení pro zařízení s iOS a Androidem](https://docs.microsoft.com/azure/active-directory/conditional-access/require-managed-devices#scenario-require-device-enrollment-for-ios-and-android-devices), která zajistí, aby se k koncovým bodům Office 365 mohla připojit jenom zaregistrovaná mobilní zařízení, která jsou kompatibilní.
 
 ## <a name="next-steps"></a>Další kroky
 

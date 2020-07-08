@@ -18,18 +18,20 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1d70123eab1847dd1b2cd3eb7583d397d97543e1
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: d6e57f062a3440ea922684d7ad746060ac7788f3
+ms.sourcegitcommit: ba36a60b08bb85d592bfb8c4bbe6d02a47858b09
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83986914"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86052472"
 ---
 # <a name="connect-your-intune-account-to-your-managed-google-play-account"></a>Připojte svůj účet Intune k vašemu spravovanému účtu Google Play
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Aby bylo možné podporovat [pracovní profil pro Android Enterprise](android-work-profile-enroll.md), [plně spravovanou platformu Android Enterprise](android-fully-managed-enroll.md)a [zařízení s Androidem Enterprise](android-kiosk-enroll.md), musíte svůj účet tenanta Intune připojit ke spravovanému účtu Google Play.  
+
+Pokud chcete mít jistotu, že je Android Enterprise dostupný ve vaší zemi nebo oblasti, přečtěte si následující článek o podpoře od společnosti Google:https://support.google.com/work/android/answer/6270910
 
 Aby bylo snazší konfigurovat a používat podnikovou správu Androidu, při připojení k Google Play Intune automaticky přidá čtyři běžné aplikace pro Android Enterprise v konzole pro správu Intune. Čtyři aplikace pro Android Enterprise jsou následující:
 

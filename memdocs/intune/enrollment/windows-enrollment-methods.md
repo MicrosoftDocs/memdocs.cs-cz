@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: ''
-ms.openlocfilehash: a6b45cef3cc13357638753efd5b8179c5ce41f6c
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: f1d4e483f02cf73b2c7afe949e4145692adccc9d
+ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80085699"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86088339"
 ---
 # <a name="intune-enrollment-methods-for-windows-devices"></a>Metody registrace zařízení s Windows v Intune
 
@@ -36,7 +36,7 @@ Existují dva způsoby, jak získat zařízení zaregistrovaná v Intune:
 
 Uživatelé můžou svoje zařízení s Windows sami zaregistrovat pomocí kterékoli z těchto metod:
 
-- [Přineste si vlastní zařízení (BYOD)](https://docs.microsoft.com/mem/intune/user-help/enroll-windows-10-device): uživatelé si zaregistrují svá zařízení v osobním vlastnictví tím, že se z **Nastavení** zařízení připojí **pracovní a školní** účet. Tento proces:
+- [Přineste si vlastní zařízení (BYOD)](https://docs.microsoft.com/mem/intune/user-help/enroll-windows-10-device): uživatelé registrují svá zařízení v osobním vlastnictví stažením a instalací **aplikace Portál společnosti** tohoto procesu:
   - Zaregistruje zařízení Azure Active Directory, aby získalo přístup k firemním prostředkům, jako je e-mail.
   - Zaregistruje zařízení v Intune jako zařízení s osobním vlastnictvím (BYOD).
 Pokud správce nakonfiguroval automatický zápis (dostupný s předplatnými Azure AD Premium), musí jenom zadat svoje přihlašovací údaje jenom jednou. V opačném případě se bude muset registrovat samostatně jenom přes registraci MDM a znovu zadat přihlašovací údaje.  

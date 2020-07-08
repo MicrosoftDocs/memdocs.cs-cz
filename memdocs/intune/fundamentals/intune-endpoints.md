@@ -17,11 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b57d6112b8a1467eb068f04e4e3041f91ceeb8a7
-ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
+ms.openlocfilehash: 74152e28d1c78ea911b1f4e2cca31d6382283c19
+ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86021867"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86088475"
 ---
 # <a name="network-endpoints-for-microsoft-intune"></a>Koncové body sítě pro Microsoft Intune  
 
@@ -128,8 +129,8 @@ Další informace najdete v tématu [porty TCP a UDP společnosti Apple použív
 
 V závislosti na tom, jak se rozhodnete spravovat zařízení s Androidem, možná budete muset otevřít porty Google Android Enterprise nebo nabízené oznámení Androidu. Další informace o podporovaných metodách správy Androidu najdete v [dokumentaci k registraci Androidu](https://docs.microsoft.com/mem/intune/enrollment/android-enroll). 
 
-[!NOTE]
-Protože Google Mobile Services není k dispozici v Číně, zařízení v Číně spravovaná službou Intune nemůžou používat funkce, které vyžadují Google Mobile Services. Mezi tyto funkce patří: Google Play Ochrana zařízení, jako je SafetyNet ověřování zařízení, Správa aplikací z Obchod Google Play funkcí Android Enterprise (viz tato [dokumentace k Google](https://support.google.com/work/android/answer/6270910)). Kromě toho Portál společnosti Intune aplikace pro Android používá Google Mobile Services ke komunikaci se službou Microsoft Intune. Vzhledem k tomu, že služba Google Play Services není k dispozici v Číně, můžou některé úlohy vyžadovat dokončení až 8 hodin. Další informace najdete v tomto [článku](https://docs.microsoft.com/mem/intune/apps/manage-without-gms#limitations-of-intune-device-administrator-management-when-gms-is-unavailable).
+> [!NOTE]
+> Protože Google Mobile Services není k dispozici v Číně, zařízení v Číně spravovaná službou Intune nemůžou používat funkce, které vyžadují Google Mobile Services. Mezi tyto funkce patří: Google Play Ochrana zařízení, jako je SafetyNet ověřování zařízení, Správa aplikací z Obchod Google Play funkcí Android Enterprise (viz tato [dokumentace k Google](https://support.google.com/work/android/answer/6270910)). Kromě toho Portál společnosti Intune aplikace pro Android používá Google Mobile Services ke komunikaci se službou Microsoft Intune. Vzhledem k tomu, že služba Google Play Services není k dispozici v Číně, můžou některé úlohy vyžadovat dokončení až 8 hodin. Další informace najdete v tomto [článku](https://docs.microsoft.com/mem/intune/apps/manage-without-gms#limitations-of-intune-device-administrator-management-when-gms-is-unavailable).
 
 ### <a name="google-android-enterprise"></a>Google Android Enterprise 
 

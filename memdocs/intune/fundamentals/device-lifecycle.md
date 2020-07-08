@@ -15,16 +15,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c65235caa7e53dbe8dee4605803a6e58d6ab31a0
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: b9580a5cb99192f81fc83f8d61119f5368f0a5ee
+ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79326871"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86088390"
 ---
 # <a name="overview-of-the-microsoft-intune-mobile-device-management-mdm-lifecycle"></a>Přehled životního cyklu správy mobilních zařízení (MDM) v Microsoft Intune
 
-Všechna zařízení, která spravujete, mají *životní cyklus*. Intune vám může pomoci při správě tohoto životního cyklu od registrace přes konfiguraci a ochranu až po vyřazení zařízení, když už nebude potřeba.
+Všechna zařízení, která spravujete, mají *životní cyklus*. Intune vám může pomoci při správě tohoto životního cyklu od registrace přes konfiguraci a ochranu až po vyřazení zařízení, když už nebude potřeba. Tady je příklad: iPad zakoupený vaší společností nejdřív musí být zaregistrovaný s vaším účtem Microsoft Intune, aby ho vaše společnost mohla spravovat. pak je potřeba nakonfigurovat míru vaší společnosti; pak je nutné chránit data, která jsou na něm uložena uživatelem. a konečně, pokud už tento iPad nepotřebujete, musíte na něm [vyřadit nebo vymazat](https://docs.microsoft.com/mem/intune/remote-actions/devices-wipe) všechna citlivá data.
 
 ![Životní cyklus zařízení](./media/device-lifecycle/device-lifecycle.png "životní cyklus zařízení v Intune")
 

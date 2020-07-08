@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8fe0b1748a40858bca55cc66b250c96725bfd9f1
-ms.sourcegitcommit: 411e9d93cbafc7585f5a0f9a05097fe589de804f
+ms.openlocfilehash: 299b09c57f0cff44c465102d85628c8f2605adea
+ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85332877"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86088492"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-automated-device-enrollment"></a>Automatická registrace zařízení se systémem iOS/iPadOS pomocí Automatické registrace zařízení společnosti Apple
 
@@ -69,7 +69,7 @@ Podpora pro zařízení s nekontrolovaným ADE je v iOS/iPadOS 11 zastaralá. V 
 - Maximální počet profilů zápisu na token: 1 000  
 - Maximální počet automatizovaných zařízení pro zápis zařízení na profil: bez omezení (v rámci maximálního počtu zařízení na token)
 - Maximální počet automatizovaných tokenů registrace zařízení na účet Intune: 2 000
-- Maximální počet automatizovaných zařízení pro zápis zařízení na token: limit první synchronizace je 75000-80000 zařízení. Intune bude při každém přidání dalších zařízení 80 000 dál synchronizovat s ABM nebo ASM a každých 12 hodin vrácení se změnami. Ruční synchronizace taky přidá další další zařízení 80 000. Synchronizace budou pořád k dispozici a zařízení budou dál synchronizovaná z ABM/ASM přes Intune v dávkách zařízení 75000-80000. 
+- Maximální počet automatizovaných zařízení pro zápis zařízení na token: limit první synchronizace je 75000-80000 zařízení. Intune se bude dál synchronizovat s ABM nebo ASM a každých 12 hodin se vrátit se změnami, aby se při každém přidání dalších zařízení. Ruční synchronizace (která se dá aktivovat každých 15 minut) taky přidá do Intune další dávku zařízení. Synchronizace budou pořád k dispozici a zařízení budou uchovávat synchronizaci z ABM/ASM přes Intune ve velkém množství. 
 
 ## <a name="get-an-apple-ade-token"></a>Získání tokenu Apple ADE
 
@@ -233,7 +233,7 @@ Teď, když jste nainstalovali token, můžete vytvořit profil zápisu pro zař
 17. Na stránce **vlastní nastavení Pomocníka s nastavením** nakonfigurujte následující nastavení profilu: ![ přizpůsobení pomocníka s nastavením.](./media/device-enrollment-program-enroll-ios/setupassistantcustom.png)
 
 
-    | Nastavení oddělení | Popis |
+    | Nastavení oddělení | Description |
     |---|---|
     | <strong>Department Name</strong> | Zobrazí se, když uživatelé klepnou při aktivaci na <strong>O konfiguraci</strong>. |
     |    <strong>Telefon na oddělení</strong>     | Zobrazí se, když uživatel při aktivaci klikne na tlačítko <strong>Potřebuji nápovědu</strong>. |

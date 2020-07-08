@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d9e3d03211907f31008b31d68c4ed5cd11ae1a6e
-ms.sourcegitcommit: fb77170957f50aa386ff825fb4183b4fd9e3e488
+ms.openlocfilehash: 2095fdd349437e03c673fb9f7906511c5e3af388
+ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "84262152"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86088373"
 ---
 # <a name="microsoft-endpoint-manager-overview"></a>Přehled k produktu Microsoft Endpoint Manager
 
@@ -43,7 +43,6 @@ Správce koncových bodů zahrnuje následující služby:
   Pokud máte místní infrastrukturu, jako je Exchange nebo Active Directory, jsou k dispozici také konektory Intune:
 
   - **Konektor Intune pro Active Directory** přidává položky do místní domény služby Active Directory pro počítače, které se registrují pomocí automatického pilotního projektu Windows. Další informace najdete v tématu [nasazení hybridních zařízení připojených k Azure AD](/mem/intune/enrollment/windows-autopilot-hybrid).
-  - **Intune Exchange Connector** umožňuje (nebo blokuje) přístup k serverům Exchange, pokud jsou zařízení zaregistrovaná v Intune a vyhovují vašim zásadám. Další informace najdete v tématu [nastavení místního Intune Exchange Connectoru](/mem/intune/protect/exchange-connector-install).
   - **Intune Certificate Connector** zpracovává žádosti o certifikát ze zařízení, která používají certifikáty k ověřování a šifrování S/MIME e-mailu. Další informace najdete v tématu [použití certifikátů k ověřování](/mem/intune/protect/certificates-configure).
 
   Jako součást Správce koncových bodů můžete pomocí Intune vytvářet a kontrolovat dodržování předpisů a nasazovat aplikace, funkce a nastavení do zařízení pomocí cloudu.

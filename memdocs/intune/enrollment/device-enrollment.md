@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8d907aaac6c37cbe7cad71e850fbc44322c93841
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: d3ca95db3297a6ca251f91a79fda705aebb6d18d
+ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83986389"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86088458"
 ---
 # <a name="what-is-device-enrollment"></a>Co je registrace zařízení?
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -38,46 +38,47 @@ Standardně se do Intune můžou registrovat zařízení pro všechny platformy.
 | **Metoda** | **Vyžadováno resetování** | [**Spřažení uživatele**](device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile) | **Uzamčeno** | **Podrobnosti** |
 |:---:|:---:|:---:|:---:|:---:|
 | | Zařízení se vymažou při registraci. | Jednotlivá zařízení se přidruží k uživateli.| Pokud ano, uživatelé nemůžou zrušit registraci zařízení. | |
-|**[BYOD](#bring-your-own-device)** | Ne| Ano | Ne | [Další informace](apple-mdm-push-certificate-get.md)|
-|**[DEM](#device-enrollment-manager)**| Ne |Ne |Ne | [Další informace](device-enrollment-manager-enroll.md)|
-|**[ADE](#apple-automated-device-enrollment)**| Ano | Volitelné | Volitelné|[Další informace](device-enrollment-program-enroll-ios.md)|
-|**[USB (SA)](#usb-sa)**| Ano | Volitelné | Ne| [Další informace](apple-configurator-enroll-ios.md)|
-|**[USB (přímo)](#usb-direct)**| Ne | Ne | Ne|[Další informace](apple-configurator-enroll-ios.md)|
+|**[BYOD](#bring-your-own-device)** | No| Yes | No | [Další informace](apple-mdm-push-certificate-get.md)|
+|**[DEM](#device-enrollment-manager)**| No |No |No | [Další informace](device-enrollment-manager-enroll.md)|
+|**[ADE](#apple-automated-device-enrollment)**| Yes | Volitelné | Volitelné|[Další informace](device-enrollment-program-enroll-ios.md)|
+|**[USB (SA)](#usb-sa)**| Yes | Volitelné | No| [Další informace](apple-configurator-enroll-ios.md)|
+|**[USB (přímo)](#usb-direct)**| No | No | No|[Další informace](apple-configurator-enroll-ios.md)|
 
 ## <a name="macos-enrollment-methods"></a>Metody registrace zařízení s macOS
+
 | **Metoda** |  **Vyžadováno resetování** |  **Spřažení uživatele** | **Uzamčeno** | **Podrobnosti**|
 |:---:|:---:|:---:|:---:|:---:|
-|**[BYOD](#bring-your-own-device)** | Ne| Ano | Ne | [Další informace](macos-enroll.md)|
-|**[DEM](#device-enrollment-manager)**| Ne |Ne |Ne  | [Další informace](device-enrollment-manager-enroll.md)|
-|**[ADE](#apple-automated-device-enrollment)**| Ano | Volitelné | Volitelné|[Další informace](device-enrollment-program-enroll-macos.md)|
+|**[BYOD](#bring-your-own-device)** | No| Yes | No | [Další informace](macos-enroll.md)|
+|**[DEM](#device-enrollment-manager)**| No |No |No  | [Další informace](device-enrollment-manager-enroll.md)|
+|**[ADE](#apple-automated-device-enrollment)**| Yes | Volitelné | Volitelné|[Další informace](device-enrollment-program-enroll-macos.md)|
 
 ## <a name="windows-enrollment-methods"></a>Metody registrace zařízení s Windows
 
 | **Metoda** | **Vyžadováno resetování** | **Spřažení uživatele** | **Uzamčeno** | **Podrobnosti**|
-|:---:|:---:|:---:|:---:|:---:|:---:|
-|**[BYOD](#bring-your-own-device)** | Ne | Ano | Ne | [Další informace](windows-enroll.md)|
-|**[DEM](#device-enrollment-manager)**| Ne |Ne |Ne |[Další informace](device-enrollment-manager-enroll.md)|
-|**Automatická registrace** | Ne |Ano |Ne | [Další informace](windows-enroll.md#enable-windows-10-automatic-enrollment)|
-|**Autopilot** |Ano |Ano |Ne | [Další informace](enrollment-autopilot.md)
-|**Hromadná registrace** |Ne |Ne |Ne | [Další informace](windows-bulk-enroll.md) |
-|**Spoluspráva** |Ne |Ano |Ne | [Další informace](https://docs.microsoft.com/configmgr/core/clients/manage/co-management-overview)
-|**GPO** |Ne |Ano |Ne | [Další informace](https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)
+|:---:|:---:|:---:|:---:|:---:|
+|**[BYOD](#bring-your-own-device)** | No | Yes | No | [Další informace](windows-enroll.md)|
+|**[DEM](#device-enrollment-manager)**| No |No |No |[Další informace](device-enrollment-manager-enroll.md)|
+|**Automatická registrace** | No |Yes |No | [Další informace](windows-enroll.md#enable-windows-10-automatic-enrollment)|
+|**Autopilot** |Ano |Ano |No | [Další informace](enrollment-autopilot.md)
+|**Hromadná registrace** |No |No |No | [Další informace](windows-bulk-enroll.md) |
+|**Spoluspráva** |No |Yes |No | [Další informace](https://docs.microsoft.com/configmgr/core/clients/manage/co-management-overview)
+|**GPO** |No |Yes |No | [Další informace](https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)
 
 ## <a name="android-enrollment-methods"></a>Metody registrace zařízení s Androidem
 
 | **Osobní** | **Enrollment Methods** | **Vyžadováno resetování** | **Spřažení uživatele** | **Uzamčeno** | **Podrobnosti**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|**Správce zařízení s Androidem**|**Uživatel inicioval prostřednictvím Portál společnosti** | Ne | Ano | Ne | [Další informace](https://docs.microsoft.com/mem/intune/user-help/enroll-device-android-company-portal)|
-|**Pracovní profil Android Enterprise**|**Uživatel inicioval prostřednictvím Portál společnosti**| Ne | Ano | Ne | [Další informace](android-work-profile-enroll.md)|
+|**Správce zařízení s Androidem**|**Uživatel inicioval prostřednictvím Portál společnosti** | No | Yes | No | [Další informace](https://docs.microsoft.com/mem/intune/user-help/enroll-device-android-company-portal)|
+|**Pracovní profil Android Enterprise**|**Uživatel inicioval prostřednictvím Portál společnosti**| No | Yes | No | [Další informace](android-work-profile-enroll.md)|
 
 
 | **Firemní** | **Enrollment Methods** | **Vyžadováno resetování** | **Spřažení uživatele** | **Uzamčeno** | **Podrobnosti**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|**Správce zařízení s Androidem**|**[DEM](#device-enrollment-manager) iniciované prostřednictvím portál společnosti**| Ne | Ne | Ne |[Další informace](device-enrollment-manager-enroll.md)|
-|**Správce zařízení s Androidem**|**(Předem deklarované IMEI nebo SN) Uživatel inicioval prostřednictvím Portál společnosti**| Ne | Ano | Ne | [Další informace](corporate-identifiers-add.md)|
-|**Správce zařízení s Androidem s rozšířeními mobility Zebra**|**Uživatel nebo [DEM](#device-enrollment-manager) iniciované prostřednictvím portál společnosti**| Ne | Ano, pokud se uživatel inicioval, ne při zahájení [DEM](#device-enrollment-manager) | Ne | [Další informace](../configuration/android-zebra-mx-overview.md)|
-|**Vyhrazená Enterprise v Androidu**|**NFC, token, kód QR, nulové dotykové ovládání**| Ano | Ne | Konfigurovatelné prostřednictvím zásad | [Další informace](android-kiosk-enroll.md)|
-|**Plně spravovaná platforma Android Enterprise**|**NFC, token, kód QR, nulové dotykové ovládání**| Ano | Odpoví Ne, pokud je zahájeno [DEM](device-enrollment.md#device-enrollment-manager) | Konfigurovatelné prostřednictvím zásad | [Další informace](android-dedicated-devices-fully-managed-enroll.md)|
+|**Správce zařízení s Androidem**|**[DEM](#device-enrollment-manager) iniciované prostřednictvím portál společnosti**| No | No | No |[Další informace](device-enrollment-manager-enroll.md)|
+|**Správce zařízení s Androidem**|**(Předem deklarované IMEI nebo SN) Uživatel inicioval prostřednictvím Portál společnosti**| No | Yes | No | [Další informace](corporate-identifiers-add.md)|
+|**Správce zařízení s Androidem s rozšířeními mobility Zebra**|**Uživatel nebo [DEM](#device-enrollment-manager) iniciované prostřednictvím portál společnosti**| No | Ano, pokud se uživatel inicioval, ne při zahájení [DEM](#device-enrollment-manager) | No | [Další informace](../configuration/android-zebra-mx-overview.md)|
+|**Vyhrazená Enterprise v Androidu**|**NFC, token, kód QR, nulové dotykové ovládání**| Yes | No | Konfigurovatelné prostřednictvím zásad | [Další informace](android-kiosk-enroll.md)|
+|**Plně spravovaná platforma Android Enterprise**|**NFC, token, kód QR, nulové dotykové ovládání**| Ano | Ano | Konfigurovatelné prostřednictvím zásad | [Další informace](android-dedicated-devices-fully-managed-enroll.md)|
 
 
 ## <a name="bring-your-own-device"></a>Přineste si vlastní zařízení

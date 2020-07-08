@@ -17,11 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 95a2eb50a77d70164f4895bd7bc8266c61a5a186
-ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
+ms.openlocfilehash: a69176e347453131c76d669b14fd7ec37b331071
+ms.sourcegitcommit: ba36a60b08bb85d592bfb8c4bbe6d02a47858b09
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86022275"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86052489"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Microsoft Intune App SDK pro iOS – Příručka pro vývojáře
 
@@ -472,7 +473,7 @@ Sada Intune App SDK má několik rozhraní API, které můžete volat, abyste z�
 Třída | Description
 ----- | -----------
 IntuneMAMPolicyManager.h | Třída IntuneMAMPolicyManager zveřejňuje zásady Intune APP nasazené do aplikace. Zveřejňuje zejména rozhraní API, která slouží k [povolení více identit](app-sdk-ios.md#enable-multi-identity-optional). |
-IntuneMAMPolicy.h | Třída IntuneMAMPolicy zveřejňuje některá nastavení zásad MAM, která se týkají aplikace. Tato nastavení zásad se zveřejňují, aby aplikace mohla přizpůsobit svoje uživatelské rozhraní. Většinu nastavení zásad vynucuje sada SDK, nikoli aplikace. Jediné nastavení, které by aplikace měla implementovat, je ovládací prvek Uložit jako. Tato třída zveřejňuje některá rozhraní API, která jsou nezbytná k implementaci ovládacího prvku Uložit jako. |
+IntuneMAMPolicy.h | Třída IntuneMAMPolicy zveřejňuje některá nastavení zásad MAM, která se týkají aplikace. Většina těchto nastavení zásad je zveřejněná, takže aplikace může přizpůsobit své uživatelské rozhraní. Většinu nastavení zásad vynucuje sada SDK, nikoli aplikace. Existují však některé výjimky. Vývojáři aplikací by si měli projít komentáře v této hlavičce a určit, která rozhraní API se vztahují na scénáře jejich aplikace. |
 IntuneMAMFileProtectionManager.h | Třída IntuneMAMFileProtectionManager zveřejňuje rozhraní API, pomocí kterých může aplikace explicitně zabezpečit soubory a adresáře na základě zadané identity. Tato identita může být spravovaná přes Intune nebo nespravovaná a sada SDK použije příslušné zásady MAM. Použití této třídy je volitelné. |
 IntuneMAMDataProtectionManager.h | Třída IntuneMAMDataProtectionManager zveřejňuje rozhraní API, pomocí kterých může aplikace zabezpečit datové vyrovnávací paměti na základě zadané identity. Tato identita může být spravovaná přes Intune nebo nespravovaná a sada SDK podle toho použije šifrování. |
 
@@ -483,6 +484,12 @@ Intune umožňuje správcům IT určit, které účty může uživatel přihlás
 K dotazování na povolené účty by měla aplikace kontrolovat `allowedAccounts` vlastnost v `IntuneMAMEnrollmentManager` . `allowedAccounts`Vlastnost je buď pole obsahující povolené účty, nebo hodnotu Nil. Pokud má vlastnost hodnotu Nil, nebyly zadány žádné povolené účty.
 
 Aplikace mohou také reagovat na změny vlastnosti tím, že proreagují `allowedAccounts` `IntuneMAMAllowedAccountsDidChangeNotification` oznámení. Oznámení se publikuje vždy, když se `allowedAccounts` změní vlastnost v hodnotě.
+
+## <a name="implement-file-encryption-required"></a>Je nutné implementovat šifrování souborů.
+
+`isFileEncryptionRequired`Rozhraní API definované v aplikaci `IntuneMAMPolicy.h` informují aplikace, když správce IT vyžaduje, aby aplikace používaly šifrování Intune u všech souborů uložených na disk. Pokud `isFileEncryptionRequired` má hodnotu true, pak je zodpovědností aplikace na to, že všechny soubory uložené na disku aplikace jsou šifrované pomocí rozhraní API v `IntuneMAMFile.h` , `IntuneMAMFileProtectionManager.h` a `IntuneMAMFDataProtectionManager.h` .
+
+Aplikace mohou reagovat na změny v této zásadě tím, že observinbg `IntuneMAMDataProtectionDidChangeNotification` oznámení definované v `IntuneMAMFDataProtectionManager.h` .
 
 ## <a name="implement-save-as-and-open-from-controls"></a>Implementace ovládacích prvků Uložit jako a otevřít z
 

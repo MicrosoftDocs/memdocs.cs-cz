@@ -2,7 +2,7 @@
 title: Skupiny Orchestration
 titleSuffix: Configuration Manager
 description: Vytvořte skupiny Orchestration a nasaďte do nich aktualizace.
-ms.date: 04/28/2020
+ms.date: 07/07/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: cddbebea-b418-4839-b0a8-7809486c8a4c
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: e9a307df23900abb985535b2ab59a5ff172cafb7
-ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
+ms.openlocfilehash: 5b42a0260b347fb12444e8611e7ec02be38cc387
+ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82254907"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86088407"
 ---
 # <a name="orchestration-groups-in-configuration-manager"></a>Skupiny orchestrace v Configuration Manager
 <!--3098816-->
@@ -89,7 +89,7 @@ Funkce **skupin Orchestration** je vývojem funkce [skupiny serveru](service-a-s
 
 1. Na stránce **předzálohovací skript** zadejte powershellový skript, který se spustí na každém zařízení *před* spuštěním nasazení. Skript by měl vrátit hodnotu `0` pro úspěch nebo `3010` pro úspěch s restartem.
 
-1. Na stránce **pozálohovací skript** zadejte powershellový skript, který se spustí na každém zařízení *po* spuštění nasazení. Chování je jinak stejné jako u skriptu.
+1. Na stránce **pozálohovací skript** zadejte powershellový skript, který se spustí na každém zařízení *po* spuštění nasazení a dojde k restartování, pokud je to potřeba. Chování je jinak stejné jako u skriptu.
 
 1. Dokončete průvodce.
 
@@ -123,7 +123,8 @@ Pokud chcete skupinu Orchestration odstranit, vyberte ji a pak na pásu karet ne
        - *Před* spuštěním nasazení zadejte powershellový skript, který se spustí na každém zařízení. Skript by měl vrátit hodnotu `0` pro úspěch nebo `3010` pro úspěch s restartem.
        
    - **Po skriptu**:
-      - *Po* spuštění nasazení zadejte powershellový skript, který se spustí na každém zařízení. Skript by měl vrátit hodnotu `0` pro úspěch nebo `3010` pro úspěch s restartem.
+      - Zadejte skript prostředí PowerShell, který se spustí na každém zařízení *po* spuštění nasazení a dojde k restartování, pokud je to potřeba. Skript by měl vrátit hodnotu `0` pro úspěch nebo `3010` pro úspěch s restartem.
+  
    > [!WARNING]
    > Před jejich použitím pro skupiny orchestrace zajistěte, aby byly testovány předběžné skripty a následné skripty. Předzálohovací a pozálohovací skripty nekončí časovým limitem a budou spuštěny, dokud nedosáhnete časového limitu členů skupiny Orchestration.
 
