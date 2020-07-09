@@ -7,7 +7,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 06/25/2020
-ms.topic: conceptual
+ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 89703c8aec11517417f9459391c431b9db75456c
-ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
+ms.openlocfilehash: dda9199f8122614af3e723a37a7e7e293d8207ae
+ms.sourcegitcommit: 01c1ca337e82c5e8e92153079ed89f79e20bde9e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85502285"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86157871"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
@@ -271,7 +271,7 @@ Další informace o této podpoře najdete v tématu [citlivostní označování
 Když [nakonfigurujete šablonu zprávy s oznámením](../protect/actions-for-noncompliance.md#create-a-notification-message-template) pro odesílání e-mailových oznámení o nedodržení předpisů, použijte nové nastavení **portál společnosti odkaz na web** , který automaticky zahrne odkaz na portál společnosti Web. Když je tato možnost nastavená na *Povolit*, můžou uživatelé s nekompatibilními zařízeními, kteří přijímají e-mail na základě této šablony, použít odkaz k otevření webu, kde se dozvíte víc o tom, proč jejich zařízení nedodržuje předpisy. 
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
-### <a name="licensing"></a>Licensing
+### <a name="licensing"></a>Licencování
 
 #### <a name="admins-no-longer-require-an-intune-license-to-access-microsoft-endpoint-manager-admin-console--1335430---"></a>Správci už nepotřebují licenci Intune pro přístup ke konzole pro správu Microsoft Endpoint Manageru.<!--1335430 -->
 Teď můžete nastavit přepínač na úrovni tenanta, který odebere licenční požadavek Intune pro správce pro přístup k konzole správce paměti a rozhraní API pro grafy dotazů. Po odebrání licenčního požadavku ho nikdy nemůžete obnovit. 

@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6f4fd580a2e36a1cf7a29766c7a5e325e17fc528
-ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
+ms.openlocfilehash: 3d5da1bcf3f36a909b513665266be1607917f1cd
+ms.sourcegitcommit: 678104677ad36b789630befdc5e0f1efc572c14b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85591064"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86137339"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Nastavení zařízení s Windows 10 (a novějším) pro povolení nebo omezení funkcí pomocí Intune
 
@@ -1108,7 +1108,7 @@ Tato nastavení používají [zprostředkovatele CSP v zásadách Defenderu](htt
   - **Povolit**: Microsoft Defender detekuje PUAs a zjištěné položky jsou blokované. Tyto položky se zobrazují v historii spolu s dalšími hrozbami.
   - **Audit**: Microsoft Defender detekuje PUAs, ale neprovede žádnou akci. Můžete zkontrolovat informace o aplikacích, které Microsoft Defender provede, na základě těchto akcí. Vyhledejte například události vytvořené v programu Microsoft Defender v Prohlížeč událostí.
 
-  Další informace o potenciálně nežádoucích aplikacích najdete v tématu [zjištění a blokování potenciálně nežádoucích aplikací](https://docs.microsoft.com/windows/threat-protection/windows-defender-antivirus/detect-block-potentially-unwanted-apps-windows-defender-antivirus).
+  Další informace o potenciálně nežádoucích aplikacích najdete v tématu [zjištění a blokování potenciálně nežádoucích aplikací](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-antivirus/detect-block-potentially-unwanted-apps-microsoft-defender-antivirus).
 
   [Defender/PUAProtection CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)
 

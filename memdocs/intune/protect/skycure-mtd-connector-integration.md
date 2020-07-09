@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 250c94250346eb84ad6b1661768d27b8c14fdf62
-ms.sourcegitcommit: 42a4a4454e56fa681f0ad39f5e585492dfbad286
+ms.openlocfilehash: b9f6b117855430af281db7087d77f53bb0e11c61
+ms.sourcegitcommit: 678104677ad36b789630befdc5e0f1efc572c14b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84330980"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86137419"
 ---
 # <a name="set-up-symantec-endpoint-protection-mobile-integration-with-intune"></a>Nastavení integrace Symantec Endpoint Protection Mobile s Intune
 
@@ -32,7 +32,7 @@ Pomocí následujících kroků integrujete řešení Symantec Endpoint Protecti
 > [!NOTE]
 > Tento dodavatel ochrany před mobilními hrozbami není u neregistrovaných zařízení podporován.
 
-## <a name="before-you-begin"></a>Před zahájením
+## <a name="before-you-begin"></a>Než začnete
 
 ### <a name="azure-ad-account-used-to-integrate-intune-and-sep-mobile"></a>Účet Azure AD použitý k integraci Intune a SEP Mobile
 
@@ -40,7 +40,7 @@ Pomocí následujících kroků integrujete řešení Symantec Endpoint Protecti
 - K provedení integrace musí být účet Azure AD účtem globálního správce.
 ### <a name="network-setup"></a>Nastavení sítě
 
-Můžete zajistit, aby byla síť správně nakonfigurovaná pro integraci s nastavením nástroje SEP Mobile, a to odkazem na článek od Symantecu s [konfigurací Správce SEP po instalaci](http://techdocs.broadcom.com/content/broadcom/techdocs/us/en/symantec-security-software/endpoint-security-and-management/endpoint-protection/all/Managing_a_Custom_Installation_3/Planning_the_Installation_0/network-architecture-considerations-v19543152-d23e65.html).
+Můžete zajistit, aby byla síť správně nakonfigurovaná pro integraci s nastavením nástroje SEP Mobile, a to odkazem na článek od Symantecu s [konfigurací Správce SEP po instalaci](https://techdocs.broadcom.com/content/broadcom/techdocs/us/en/symantec-security-software/endpoint-security-and-management/endpoint-protection/all/getting-up-and-running-on-for-the-first-time-v45150512-d43e1033/installing-v16194271-d23e1332/configuring-after-installation-v18374552-d23e1454.html).
 
 ### <a name="full-integration-vs-read-only"></a>Úplná integrace vs. jen pro čtení
 
@@ -101,7 +101,7 @@ Služba SEP Mobile sesynchronizuje zařízení, na kterých běží její služb
 
 ### <a name="retrieve-the-directory-id-in-azure-ad"></a>Načtení ID adresáře v Azure AD
 
-1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
 
 2. Do vyhledávacího pole zadejte „Active Directory“ a pak vyberte **Azure Active Directory**.
 

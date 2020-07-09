@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/09/2020
+ms.date: 07/08/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aa3cf14b6afd8504a0918b5d61d2a7cae0c308b9
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 2a0e211a5cea6296f944cda517ecb6fd591291b8
+ms.sourcegitcommit: 678104677ad36b789630befdc5e0f1efc572c14b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093664"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86137404"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>nastavení zařízení s iOS a iPadOS pro povolení nebo omezení funkcí pomocí Intune
 
@@ -161,6 +161,10 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
   - **Výchozí ze zařízení**
   - **Číselná**: heslo musí obsahovat jenom čísla, třeba 123456789.
   - **Alfanumerické**znaky: obsahuje velká písmena, malá písmena a číslice.
+
+  > [!NOTE]
+  > Výběr alfanumerických může mít vliv na spárované Apple Watch. Další informace najdete v tématu [Nastavení omezení hesla pro Apple Watch](https://support.apple.com/HT204953) (otevře web společnosti Apple).
+
 - **Počet nealfanumerických znaků v hesle**: zadejte počet znaků symbolu, například `#` nebo `@` , které musí heslo obsahovat, od 1-4. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
 
 - **Minimální délka hesla**: zadejte minimální délku hesla, která musí být delší než 4-16 znaků. Do zařízení zaregistrovaných uživatelem zadejte délku 4 až 6 znaků.

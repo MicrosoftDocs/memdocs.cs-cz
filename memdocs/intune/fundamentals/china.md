@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/27/2020
+ms.date: 07/07/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -17,11 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f82664cbc9f6970d494945cfdf6fc72e8d95ae8b
-ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
+ms.openlocfilehash: 1c4e567c7812f53a7497f368ded47d72640443f6
+ms.sourcegitcommit: 678104677ad36b789630befdc5e0f1efc572c14b
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86022343"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86137378"
 ---
 # <a name="intune-operated-by-21vianet-in-china"></a>Intune provozovaný společností 21Vianet v Číně  
 
@@ -38,6 +39,7 @@ Vzhledem k tomu, že čínské služby provozuje partner z Číny v Číně, exi
 - Intune provozovaný společností 21Vianet podporuje jenom samostatná nasazení. Podpora spolusprávy pomocí System Center Configuration Manager je aktuálně ve vývoji.
 - Migrace z veřejných cloudů do svrchovaného cloudu není podporovaná. Zákazníci, kteří mají zájem o přechod na Intune provozovaný společností 21Vianet, se musí migrovat ručně.
 - Funkce připojení tenanta (synchronizace zařízení s Intune bez registrace pro podporu scénářů cloudové konzoly) není v současné době podporovaná.
+- Odvozené přihlašovací údaje se v Intune provozovaném společností 21Vianet nepodporují.
 - Intune provozovaný společností 21Vianet nepodporuje agenta Intune, a proto nepodporuje správu starších počítačů.
 - Správa Windows 10 je podporovaná pomocí moderního kanálu MDM.
 - Intune provozovaný společností 21Vianet nepodporuje místní Exchange Connector.

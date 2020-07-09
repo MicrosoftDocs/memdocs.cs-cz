@@ -2,7 +2,7 @@
 title: Požadavky na přístup k internetu
 titleSuffix: Configuration Manager
 description: Přečtěte si o internetových koncových bodech, které umožní plnou funkčnost funkcí Configuration Manager.
-ms.date: 07/01/2020
+ms.date: 07/07/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,18 +10,25 @@ ms.assetid: b34fe701-5d05-42be-b965-e3dccc9363ca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 986b8d83c705be84b04a89c99d9559471c6345c4
-ms.sourcegitcommit: 2c5fd7c8603b88b753765f3cc298d0a0bacaf521
+ms.openlocfilehash: 71f2a75d59af6f8d5c77e96d780e6d02352e5045
+ms.sourcegitcommit: 678104677ad36b789630befdc5e0f1efc572c14b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85819946"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86137344"
 ---
 # <a name="internet-access-requirements"></a>Požadavky na přístup k internetu
 
 Některé funkce Configuration Manager spoléhají na možnosti připojení k Internetu, které mají plnou funkčnost. Pokud vaše organizace omezuje síťovou komunikaci s Internetem pomocí brány firewall nebo proxy zařízení, nezapomeňte tyto koncové body povolit.
 
 <!-- SCCMDocs-pr #3403 -->
+
+Configuration Manager používá v rámci produktu následující předávací služby URL Microsoftu:
+
+- `https://aka.ms`
+- `https://go.microsoft.com`
+
+I když nejsou výslovně uvedeny v následujících oddílech, měli byste tyto koncové body vždy povolovat.
 
 ## <a name="service-connection-point"></a><a name="bkmk_scp"></a>Bod připojení služby
 
@@ -278,11 +285,19 @@ Další informace o požadovaných koncových bodech pro funkce připojení klie
 
 Další informace o požadovaných koncových bodech pro službu Endpoint Analytics najdete v tématu [konfigurace proxy serveru Endpoint Analytics](../../../../analytics/troubleshoot.md#bkmk_endpoints).
 
+## <a name="asset-intelligence"></a>Funkce Asset Intelligence
+
+<!-- memdocs#470 -->
+Pokud používáte funkci [Asset Intelligence](../../clients/manage/asset-intelligence/introduction-to-asset-intelligence.md), povolte synchronizaci následujících koncových bodů služby:
+
+- `https://sc.microsoft.com`
+- `https://ssu2.manage.microsoft.com`
+
 ## <a name="microsoft-public-ip-addresses"></a>Veřejné IP adresy Microsoftu
 
 Další informace o rozsahu IP adres společnosti Microsoft najdete v tématu věnovaném [veřejné IP adrese Microsoftu](https://www.microsoft.com/download/details.aspx?id=53602). Tyto adresy se pravidelně aktualizují. Služba nenabízí žádnou členitost, proto by mohla být použita jakákoli IP adresa v těchto rozsahech.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Porty používané v Configuration Manager](../hierarchy/ports.md)
 
