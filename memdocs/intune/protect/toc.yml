@@ -52,6 +52,8 @@
       items:
         - name: Přehled dodržování předpisů
           href: device-compliance-get-started.md
+        - name: Partneři dodržování předpisů pro zařízení
+          href: device-compliance-partners.md
         - name: Vytvoření zásady
           href: create-compliance-policy.md
         - name: Dodržování předpisů podle umístění
