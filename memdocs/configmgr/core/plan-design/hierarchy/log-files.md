@@ -2,7 +2,7 @@
 title: Referenční informace k protokolům
 titleSuffix: Configuration Manager
 description: Odkaz na všechny soubory protokolu pro Configuration Manager klienta, server a závislé součásti.
-ms.date: 06/10/2020
+ms.date: 07/09/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0f69b42ce0396148c67eaade967ef4fd87dea7bb
-ms.sourcegitcommit: 03d2331876ad61d0a6bb1efca3aa655b88f73119
+ms.openlocfilehash: 296ac8448292b46318921cb952b5b8545a34f1fa
+ms.sourcegitcommit: 3806a1850813b7a179d703e002bcc5c7eb1cb621
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "85946891"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86210331"
 ---
 # <a name="log-file-reference"></a>Referenční informace k protokolům
 
@@ -75,13 +75,15 @@ Následující části obsahují podrobné informace o různých souborech proto
 
   - [Desktop Analytics](#desktop-analytics)
 
-  - [Rozpoznávání](#BKMK_DiscoveryLog)  
+  - [Zjišťování](#BKMK_DiscoveryLog)  
 
+  - [Analýza koncového bodu](#bkmk_analytics)
+  
   - [Endpoint Protection](#BKMK_EPLog)  
 
   - [Rozšíření](#BKMK_Extensions)  
 
-  - [Inventory (Inventář)](#BKMK_InventoryLog)  
+  - [Inventář](#BKMK_InventoryLog)  
 
   - [Migrace](#BKMK_MigrationLog)  
 
@@ -171,7 +173,10 @@ Následující tabulka uvádí soubory protokolů, které se nacházejí v klien
 |SCClient_ &lt; *doména* \> @ &lt; *username* \> _2. log|Zaznamenává historickou činnost centra softwaru pro určeného uživatele na klientském počítači.|  
 |Scheduler.log|Zaznamenává činnosti plánovaných úloh pro všechny operace klienta.|  
 |SCNotify_ &lt; *doména* \> @ &lt; *username* \> _1. log|Zaznamenává činnost oznamujících uživatelů o softwaru pro určeného uživatele.|  
-|SCNotify_ &lt; *doména* \> @ &lt; *username* \> _1- &lt; *date_time*>. log|Zaznamenává historické informace oznamujících uživatelů o softwaru pro určeného uživatele.|  
+|SCNotify_ &lt; *doména* \> @ &lt; *username* \> _1- &lt; *date_time*>. log|Zaznamenává historické informace oznamujících uživatelů o softwaru pro určeného uživatele.|
+|SensorWmiProvider. log|Zaznamenává činnost zprostředkovatele rozhraní WMI pro senzor služby Endpoint Analytics.|
+|SensorEndpoint. log|Zaznamenává spuštění zásad služby Endpoint Analytics a odeslání klientských dat na server lokality.|
+|SensorManagedProvider. log|Zaznamenává shromažďování a zpracování událostí a informací pro službu Endpoint Analytics.|
 |setuppolicyevaluator.log|Zaznamenává konfiguraci a vytváření zásad inventáře ve službě WMI.|  
 |&lt;*Doména* SleepAgent_\>@SYSTEM_0.log|Hlavní protokolový soubor pro proxy probuzení.|  
 |smscliui.log|Zaznamenává použití klienta Configuration Manager v Ovládacích panelech.|  
@@ -344,7 +349,8 @@ Následující tabulka uvádí soubory protokolů, které jsou na serveru Config
 |srsrpsetup.log|Zaznamenává výsledky procesu instalace bodu generování sestav.|Server systému lokality|  
 |statesys.log|Zaznamenává zpracování stavových zpráv systému.|Server lokality|  
 |statmgr.log|Zaznamenává zápis všech stavových zpráv do databáze.|Server lokality|  
-|swmproc.log|Zaznamenává zpracování souborů a nastavení měření.|Server lokality|  
+|swmproc.log|Zaznamenává zpracování souborů a nastavení měření.|Server lokality|
+|UXAnalyticsUploadWorker. log|Zaznamenává nahrávání dat do služby pro službu Endpoint Analytics.|Server lokality|   
 
 ### <a name="site-server-installation"></a><a name="BKMK_SiteInstallLog"></a>Instalace serveru lokality
 
@@ -644,6 +650,15 @@ Následující tabulka uvádí soubory protokolů, které obsahují informace so
 |ddm.log|Činnosti záznamů nástroje Discovery Data Manager.|Server lokality|  
 |InventoryAgent.log|Zaznamenává činnosti inventáře hardwaru, inventáře softwaru a akce zjišťování prezenčního signálu na klientovi.|Klient|  
 |netdisc.log|Zaznamenává akce funkce zjišťování sítě.|Server lokality|  
+
+### <a name="endpoint-analytics"></a><a name="bkmk_analytics"></a>Analýza koncových bodů
+
+|Název protokolu|Popis|Počítač obsahující soubor protokolu|  
+|--------------|-----------------|----------------------------|  
+|UXAnalyticsUploadWorker. log|Zaznamenává nahrávání dat do služby pro službu Endpoint Analytics.|Server lokality|  
+|SensorWmiProvider. log|Zaznamenává činnost zprostředkovatele rozhraní WMI pro senzor služby Endpoint Analytics.|Klient|  
+|SensorEndpoint. log|Zaznamenává spuštění zásad služby Endpoint Analytics a odeslání klientských dat na server lokality.|Klient|
+|SensorManagedProvider. log|Zaznamenává shromažďování a zpracování událostí a informací pro službu Endpoint Analytics.|Klient|
 
 ### <a name="endpoint-protection"></a><a name="BKMK_EPLog"></a>Endpoint Protection
 

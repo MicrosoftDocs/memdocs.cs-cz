@@ -5,17 +5,17 @@ description: Ukázky skriptů pro CMPivot pro zařízení připojená ke kliento
 ms.date: 05/26/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: sample
 ms.assetid: 1d589306-9537-4306-a9bf-02c9771df514
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: cbd8df9fb6fe605e0bdb60564d2c43935bb891da
-ms.sourcegitcommit: 0d2f6132428b5fa994e5b770ab1d2bf7d78ac179
+ms.openlocfilehash: b2e3202a58737e2559d295e5177675300ee8f0ee
+ms.sourcegitcommit: 3806a1850813b7a179d703e002bcc5c7eb1cb621
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84226626"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86210340"
 ---
 # <a name="tenant-attach-cmpivot-sample-scripts"></a>Připojení tenanta: ukázkové skripty CMPivot
 <!---->

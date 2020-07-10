@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 3a1aa67c51998de62f6390db848a458876327ea7
-ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
+ms.openlocfilehash: 0ef2d09423e7bb51e94cb626bf513aa7e98992c9
+ms.sourcegitcommit: d647eefa23c8849f49584442df568284d51d7525
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85590911"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86195646"
 ---
 # <a name="what-is-desktop-analytics"></a>Co je Desktop Analytics?
 
@@ -72,7 +72,7 @@ Pokud chcete použít desktopovou analýzu, ujistěte se, že vaše prostředí 
 - Aktivní globální předplatné Azure s oprávněními [globálního správce](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#company-administrator-permissions) . [Účty Microsoft](https://docs.microsoft.com/windows/security/identity-protection/access-control/microsoft-accounts) se nepodporují.  
 
     > [!IMPORTANT]
-    > Desktop Analytics je služba systému Windows hostovaná v Azure Global, která využívá diagnostická data Windows. Služba Azure Global Service je dostupná pro zákazníky ze státní správy USA, ale nesplňuje žádné atributy [dodržování předpisů komunity pro státní správu USA (RSZ)](https://docs.microsoft.com/office365/servicedescriptions/office-365-platform-service-description/office-365-us-government/gcc#us-government-community-compliance) . Seznam nabídek dodržování předpisů pro produkty a služby společnosti Microsoft najdete na [webu Microsoft Trust Center](https://docs.microsoft.com/microsoft-365/compliance/offering-home?view=o365-worldwide). Desktop Analytics není k dispozici pro zákazníky v oblasti RSZ vysoké nebo USA. Používání předplatných Azure Government pro pracovní prostory pro hostování Desktop Analytics se nepodporuje.
+    > Desktop Analytics je služba systému Windows hostovaná v Azure Global, která využívá diagnostická data Windows. Zatímco Desktop Analytics je globální služba Azure, která je k dispozici pro zákazníky ze státní správy USA, nesplňuje žádné atributy [(RSZ) pro státní správu USA (Community)](https://docs.microsoft.com/office365/servicedescriptions/office-365-platform-service-description/office-365-us-government/gcc#us-government-community-compliance) . Seznam nabídek dodržování předpisů pro produkty a služby společnosti Microsoft najdete na [webu Microsoft Trust Center](https://docs.microsoft.com/microsoft-365/compliance/offering-home?view=o365-worldwide). Desktop Analytics není k dispozici pro zákazníky v oblasti RSZ vysoké nebo USA. Používání předplatných Azure Government pro pracovní prostory pro hostování Desktop Analytics se nepodporuje.
 
     - Oprávnění **vlastníka pracovního prostoru** k **Nastavení pracovního prostoru**a následujících rolí:  
 

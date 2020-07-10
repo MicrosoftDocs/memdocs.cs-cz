@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bfcc4a8e867041e0053697bbee605f9798e45bec
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 8c4d66638ffbeded5bf514bba1501e5797e38aac
+ms.sourcegitcommit: 3806a1850813b7a179d703e002bcc5c7eb1cb621
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093884"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86210375"
 ---
 # <a name="automatically-enroll-macos-devices-with-the-apple-business-manager-or-apple-school-manager"></a>Automatická registrace zařízení macOS pomocí Apple Business Manageru nebo Apple School Manageru
 
@@ -62,10 +62,9 @@ K vytvoření tokenu použijete portál Apple. K přiřazení zařízení do Int
 
 ### <a name="step-1-download-the-intune-public-key-certificate-required-to-create-the-token"></a>Krok 1. Stáhněte si certifikát veřejného klíče Intune, který je potřebný k vytvoření tokenu.
 
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení**  >  **MacOS**  >  **MacOS registrace**. 
-> **Tokeny**  >  programu registrace **Přidat**.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení**  >  **MacOS**  >  **MacOS registrace**  >  **tokeny programu registrace**  >  **Přidat**.
 
-    ![Get an enrollment program token.](./media/device-enrollment-program-enroll-macos/image01.png)
+    ![Stažení tokenu programu registrace zařízení](./media/device-enrollment-program-enroll-macos/image01.png)
 
 2. Výběrem možnosti **Souhlasím** udělte Microsoftu oprávnění k odesílání informací o uživatelích a zařízeních do společnosti Apple.
 
@@ -98,7 +97,7 @@ V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwli
 
 ![Snímek obrazovky s Apple ID použitým k vytvoření tokenu programu registrace a přechodem na token programu registrace](./media/device-enrollment-program-enroll-ios/image03.png)
 
-### <a name="step-4-upload-your-token"></a>Krok 4. Nahrajte token.
+### <a name="step-4-upload-your-token"></a>Krok 4: Nahrajte token.
 V poli **Token Apple** přejděte k souboru certifikátu (.pem), zvolte **Otevřít** a pak zvolte **Vytvořit**. Certifikát Push Certificate umožňuje Intune registrovat a spravovat zařízení s macOS tím, že do registrovaných zařízení doručí zásady. Intune se automaticky synchronizuje s Apple, aby bylo možné zobrazit účet registračního programu.
 
 ## <a name="create-an-apple-enrollment-profile"></a>Vytvoření registračního profilu Apple
@@ -106,7 +105,7 @@ V poli **Token Apple** přejděte k souboru certifikátu (.pem), zvolte **Otevř
 Teď, když máte nainstalovaný token, můžete pro zařízení vytvořit profil zápisu. Registrační profil zařízení definuje nastavení, která se během registrace použijí pro skupinu zařízení.
 
 1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení**  >  **MacOS**  >  **MacOS registrace**  >  **tokenů programu registrace**.
-2. Vyberte token, zvolte **Profily** a potom zvolte **Vytvořit profil**.
+2. Vyberte token, zvolte **profily**a pak zvolte **vytvořit profil**  >  **MacOS**.
 
     ![Snímek obrazovky pro vytvoření profilu](./media/device-enrollment-program-enroll-macos/image04.png)
 
@@ -123,13 +122,11 @@ Teď, když máte nainstalovaný token, můžete pro zařízení vytvořit profi
 
     - **Zaregistrovat bez přidružení uživatele** – Tuto možnost zvolte pro zařízení nespojená s jedním uživatelem. Použijte ji pro zařízení určená k plnění úkolů, u kterých není potřeba přístup k místním uživatelským datům. Aplikace, jako je Portál společnosti aplikace, nefungují.
 
-6. Pokud jste zvolili možnost **registrovat s přidružením uživatele**, vyberte v části **metoda ověřování** možnost **Pomocník s nastavením (starší verze)** nebo **Pomocník s nastavením moderního ověřování**.
+6. V případě **zamčené registrace**vyberte, jestli chcete pro zařízení, která používají tento profil, uzamčenou registraci. Hodnota **Ano** zakáže nastavení MacOS, která umožňují odebrání profilu správy z nabídky **Předvolby systému** nebo prostřednictvím **terminálu**. Po registraci zařízení nemůžete toto nastavení změnit bez vymazání zařízení.
 
-7. V případě **zamčené registrace**vyberte, jestli chcete pro zařízení, která používají tento profil, uzamčenou registraci. Hodnota **Ano** zakáže nastavení MacOS, která umožňují odebrání profilu správy z nabídky **Předvolby systému** nebo prostřednictvím **terminálu**. Po registraci zařízení nemůžete toto nastavení změnit bez vymazání zařízení.
+7. Kliknutím na tlačítko **Další** přejdete na stránku **Pomocníka s nastavením** .
 
-8. Kliknutím na tlačítko **Další** přejdete na stránku **Pomocníka s nastavením** .
-
-9. Na stránce **Pomocník s nastavením** nakonfigurujte následující nastavení profilu:
+8. Na stránce **Pomocník s nastavením** nakonfigurujte následující nastavení profilu:
 
     ![Přizpůsobení pomocníka s nastavením.](./media/device-enrollment-program-enroll-macos/setupassistantcustom-macos.png)
 
@@ -159,13 +156,13 @@ Teď, když máte nainstalovaný token, můžete pro zařízení vytvořit profi
     | <strong>Úložiště iCloud</strong> | Zobrazí uživateli iCloud dokumenty a plochu obrazovky. Pro macOS 10.13.4 a novější. |
     | <strong>Tón zobrazení</strong> | Poskytněte uživateli možnost zapnout tónový displej. Pro macOS 10.13.6 a novější a iOS/iPadOS 9.3.2 a novější. |
     | <strong>Příznaky</strong> | Zobrazit obrazovku vzhled pro uživatele Pro macOS 10,14 a novější a iOS/iPadOS 13,0 a novější. |
-    | <strong>Registrace</strong> | Zobrazit registrační obrazovku uživateli Pro macOS 10,9 a novější. |
+    | <strong>Evidenc</strong> | Zobrazit registrační obrazovku uživateli Pro macOS 10,9 a novější. |
     | <strong>Čas obrazovky</strong> | Zobrazí obrazovku čas obrazovky. Pro macOS 10,15 a novější a iOS/iPadOS 12,0 a novější. |
     | <strong>Ochrana osobních údajů</strong> | Zobrazit obrazovku ochrany osobních údajů uživateli. Pro macOS 10.13.4 a novější a iOS/iPadOS 11,3 a novější. |
     
-10. Kliknutím na tlačítko **Další** přejdete na stránku **Revize + vytvořit** .
+9. Kliknutím na tlačítko **Další** přejdete na stránku **Revize + vytvořit** .
 
-11. Pokud chcete profil uložit, zvolte **Vytvořit**.
+10. Pokud chcete profil uložit, zvolte **Vytvořit**.
 
 ## <a name="sync-managed-devices"></a>Synchronizace spravovaných zařízení
 

@@ -7,7 +7,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 1/28/2020
-ms.topic: archived
+ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: medium
@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2cf8e493ed1318fbf1e1fee6ca8a50001a586cd6
-ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
+ms.openlocfilehash: 9a1c47a157e4ee5bd4337d840515a340dcf1fd9c
+ms.sourcegitcommit: d647eefa23c8849f49584442df568284d51d7525
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85502387"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86195714"
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Novinky v Microsoft Intune – předchozí měsíce
 
@@ -1782,7 +1782,7 @@ Platí pro:
 - macOS
 
 #### <a name="intune-conditional-access-ui-update---2432313-----"></a>Aktualizace uživatelského rozhraní pro podmíněný přístup v Intune<!-- 2432313   -->
-Provedli jsme vylepšení uživatelského rozhraní pro podmíněný přístup v konzole Intune. Zde jsou některé z nich:
+Provedli jsme vylepšení uživatelského rozhraní pro podmíněný přístup v konzole Intune. Mezi ně patří:
 - Okno *podmíněného přístupu* v Intune se nahradilo oknem z Azure Active Directory. Tím zajistíte, že v konzole Intune budete mít přístup k celé škále nastavení a konfigurací pro [podmíněný přístup](../protect/conditional-access.md) (což zůstává technologie Azure AD). 
 - Přejmenovali jsme *místní okno přístupu* na přístup k *Exchangi*a přejmenovali jste nastavení *konektoru Exchange Service Connector* na toto přejmenované okno.  Tato změna slučuje, kde [konfigurujete a sledujete podrobnosti týkající se Exchange Online a místního](../protect/exchange-connector-install.md)prostředí.  
 
@@ -2760,7 +2760,7 @@ Přečtěte si další informace o [správě konfiguračních profilů](../confi
 #### <a name="new-status-for-devices-in-device-compliance---2308882---"></a>Nové stavy pro zařízení na stránce Dodržování předpisů zařízením <!-- 2308882 -->
 V části zásady **dodržování předpisů zařízení**  >  **Policies** > vyberte zásadu > **Přehled**, přidají se tyto nové stavy:
 - succeeded
-- error
+- chyba
 - Konflikt
 - pending
 - Nepoužitelné Také se zobrazí obrázek, který ukazuje počet zařízení s jinou platformou. Když se třeba díváte na profil iOSu, na nové dlaždici se zobrazí počet zařízení s jiným systémem než iOS, která jsou také přiřazená k tomuto profilu. Viz [Zásady dodržování předpisů zařízením](../protect/compliance-policy-monitor.md#view-status-of-device-policies).
@@ -3006,7 +3006,7 @@ Platí pro: Zařízení s pracovním profilem Android v systému Android OS v6.0
 
 V této aktualizaci zahrnuje [ochrana Credential Guard v programu Windows Defender](https://docs.microsoft.com/windows/access-protection/credential-guard/credential-guard) (**Konfigurace zařízení** > **Profily** > **Ochrana koncového bodu**) následující nastavení: 
 
-- **Ochrana Credential Guard v programu Windows Defender**: Zapne ochranu přihlašovacích údajů Credential Guard se zabezpečením na základě virtualizace. Pokud je tato funkce zapnutá, budou po dalším restartování přihlašovací údaje chráněny **úrovní zabezpečení platformy, která je nastavená na zabezpečené spouštění,** a zapnutým **zabezpečením založeným na virtualizaci**. Mezi možnosti patří:
+- **Ochrana Credential Guard v programu Windows Defender**: Zapne ochranu přihlašovacích údajů Credential Guard se zabezpečením na základě virtualizace. Pokud je tato funkce zapnutá, budou po dalším restartování přihlašovací údaje chráněny **úrovní zabezpečení platformy, která je nastavená na zabezpečené spouštění,** a zapnutým **zabezpečením založeným na virtualizaci**. Vaše možnosti jsou:
   - **Zakázáno**: Pokud byla ochrana Credential Guard dříve zapnutá možností **Povoleno bez zámku**, vzdáleně vypne ochranu Credential Guard.
 
   - **Povoleno s uzamčením UEFI**: Zajistí, že ochrana Credential Guard nepůjde vypnout v klíčích registru ani v zásadách skupiny. Pokud jste použili toto nastavení a chcete ochranu Credential Guard zakázat, musíte nastavit zásady skupiny na Zakázáno. Potom bezpečnostní funkci odeberte z každého počítače, u kterého je uživatel fyzicky přítomen. Tyto kroky smažou konfiguraci uloženou v rozhraní UEFI. Dokud je uložená konfigurace UEFI, je povolená i ochrana přihlašovacích údajů Credential Guard.
@@ -3900,7 +3900,7 @@ Můžete definovat podnikové cloudové prostředky, rozsahy IP adres a interní
 | | |
 |---|---|
 | Nenakonfigurováno | Nastavení **Nenakonfigurováno** používá výchozí úroveň blokování Antivirové ochrany v programu Windows Defender a zajišťuje silnou detekci bez zvýšeného rizika detekování legitimních souborů. |
-| Vysoká | Nastavení **Vysoká** aplikuje silnou úroveň zjišťování.
+| Vysoké | Nastavení **Vysoká** aplikuje silnou úroveň zjišťování.
 | Vysoká +  | Nastavení **Vysoká +** poskytuje vysokou úroveň s dalšími ochrannými opatřeními, která můžou mít vliv na výkon klienta.
 | Žádná tolerance  | Nastavení **Žádná tolerance** blokuje všechny neznámé spustitelné soubory. |
 
@@ -4364,7 +4364,7 @@ V této verzi jsme přidali nová nastavení pro profil omezení zařízení s�
 - Mobilní síť a připojení
 - Prostředí zamknuté obrazovky
 - Ochrana osobních údajů
-- Hledat
+- Search
 - Windows Spotlight
 - Prohlížeč Microsoft Edge
 
@@ -4459,7 +4459,7 @@ Další informace najdete v článku o [nastavení filtru webového obsahu pro z
 U aplikací nasazených do pracovních profilů zařízení Android for Work můžete teď nakonfigurovat stav oprávnění pro jednotlivé aplikace.  Aplikace pro Android, které vyžadují oprávnění zařízení, jako je například přístup k umístění nebo fotoaparátu zařízení, ve výchozím nastavení vyzvou uživatele, aby oprávnění přijali nebo odmítli.  Pokud například aplikace používá mikrofon zařízení, potom bude koncový uživatel vyzván, aby aplikaci udělil oprávnění používat mikrofon. Tato funkce umožňuje definovat oprávnění jménem koncového uživatele.  Můžete nakonfigurovat oprávnění k a) automatickému odmítnutí bez upozornění uživatele, b) automatickému schválení bez upozornění uživatele nebo c) vyzvání uživatele k přijmutí nebo odmítnutí. Další informace najdete v článku [Nastavení omezení pro zařízení s Androidem for Work v Microsoft Intune](../configuration/device-restrictions-android-for-work.md).
 
 #### <a name="define-app-specific-pin-for-android-for-work-devices---728976-1102534---"></a>Definice PIN kódu aplikace pro zařízení s Androidem for Work <!-- 728976, 1102534 -->
-Zařízení s Androidem 7.0 a vyšším s pracovním profilem spravovaným jako zařízení s Androidem for Work umožňují správci definovat zásady hesla, které se vztahují jenom na aplikace v pracovním profilu.  Mezi možnosti patří:
+Zařízení s Androidem 7.0 a vyšším s pracovním profilem spravovaným jako zařízení s Androidem for Work umožňují správci definovat zásady hesla, které se vztahují jenom na aplikace v pracovním profilu.  Vaše možnosti jsou:
 
 - Definovat jenom zásady hesla pro celé zařízení – jedná se o heslo, které musí uživatel používat k odemknutí celého zařízení.
 - Definovat jenom zásady hesla pracovního profilu – uživatelé budou vyzváni k zadání hesla při každém otevření jakékoli aplikace v pracovním profilu.

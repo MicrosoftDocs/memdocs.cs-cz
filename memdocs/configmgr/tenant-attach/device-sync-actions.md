@@ -2,20 +2,20 @@
 title: Připojení tenanta Microsoft Endpoint Manageru
 titleSuffix: Configuration Manager
 description: Nahrajte zařízení Configuration Manager do cloudové služby a proveďte akce z centra pro správu.
-ms.date: 04/10/2020
+ms.date: 07/10/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
-ms.technology: configmgr-sum
+ms.technology: configmgr-core
 ms.assetid: 7a597d9e-a878-48d0-a7ce-56a1dbfd0e5c
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: be1c938cfcf332edb37e24e4094567f88f363560
-ms.sourcegitcommit: c333fc6627f5577cde9d2fa8f59e642202a7027b
+ms.openlocfilehash: a9e97c74e4825dc49ce628b3ae176c55f4288966
+ms.sourcegitcommit: 3806a1850813b7a179d703e002bcc5c7eb1cb621
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84795614"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86210316"
 ---
 # <a name="microsoft-endpoint-manager-tenant-attach-device-sync-and-device-actions"></a><a name="bkmk_attach"></a>Připojení tenanta Microsoft Endpoint Manageru: synchronizace zařízení a akce zařízení
 <!--3555758 live 3/4/2020-->
@@ -56,8 +56,9 @@ Pokud máte aktuálně povolenou spolusprávu, upravte vlastnosti spolusprávy t
 1. Klikněte pravým tlačítkem na nastavení spolusprávy a vyberte **vlastnosti**.
 1. Na kartě **Konfigurovat nahrávání** vyberte **Odeslat do centra pro správu služby Microsoft Endpoint Manager**. Klikněte na **Použít**.
    - Výchozím nastavením pro nahrávání zařízení jsou **všechna moje zařízení spravovaná pomocí koncového bodu Microsoft Configuration Manager**. V případě potřeby můžete nahrávání omezit na jednu kolekci zařízení.
+1. Pokud chcete získat přehledy pro optimalizaci prostředí koncových uživatelů v rámci služby [Endpoint Analytics](../../analytics/overview.md), zaškrtněte možnost **Povolit službu Endpoint Analytics pro zařízení nahraná službě Microsoft Endpoint Manager** .
 
-   [![Průvodce konfigurací spolusprávy](./media/3555758-configure-upload.png)](./media/3555758-configure-upload.png#lightbox)
+   [![Nahrávání zařízení do centra pro správu Microsoft Endpoint Manageru](../../analytics/media/6051638-configure-upload-configmgr.png)](../../analytics/media/6051638-configure-upload-configmgr.png#lightbox)
 1. Po zobrazení výzvy se přihlaste pomocí účtu *globálního správce* .
 1. Kliknutím na **Ano** přijměte oznámení o **Vytvoření aplikace AAD** . Tato akce zřídí instanční objekt a vytvoří registraci aplikace služby Azure AD, která usnadňuje synchronizaci.
 1. Kliknutím na tlačítko **OK** zavřete vlastnosti spolusprávy poté, co provedete změny.
@@ -77,6 +78,7 @@ Pokud nemáte povolenou spolusprávu, pomocí průvodce **konfigurací spoluspr�
    [![Průvodce konfigurací spolusprávy](./media/3555758-comanagement-wizard.png)](./media/3555758-comanagement-wizard.png#lightbox)
 1. Klikněte na tlačítko **Další** a pak na **Ano** , pokud chcete přijmout oznámení o **Vytvoření aplikace AAD** . Tato akce zřídí instanční objekt a vytvoří registraci aplikace služby Azure AD, která usnadňuje synchronizaci.
 1. Na stránce **Konfigurace nahrávání** vyberte Doporučené nastavení nahrávání zařízení pro **všechna moje zařízení spravovaná pomocí koncového bodu Microsoft Configuration Manager**. V případě potřeby můžete nahrávání omezit na jednu kolekci zařízení.
+1. Pokud chcete získat přehledy pro optimalizaci prostředí koncových uživatelů v nástroji [Endpoint Analytics](../../analytics/overview.md) , zaškrtněte možnost **Povolení služby Endpoint Analytics pro zařízení nahraná v Microsoft Endpoint Manageru** .
 1. Kliknutím na **Souhrn** zkontrolujte výběr a pak klikněte na **Další**.
 1. Po dokončení průvodce klikněte na tlačítko **Zavřít**.  
 
@@ -112,7 +114,7 @@ Je možné, že konkrétní zařízení, která jsou Configuration Manager klien
 
 **Chování:** Při provádění připojení tenanta během fáze zprovoznění se provede Úplná synchronizace poprvé. Následné synchronizační cykly jsou rozdílové synchronizace. Jakákoli aktualizace ovlivněných zařízení způsobí odebrání zařízení z synchronizace.
 
-## <a name="log-files"></a>Soubory protokolů
+## <a name="log-files"></a>Soubory protokolu
 Použijte následující protokoly umístěné ve spojovacím bodu služby:
 
 - **CMGatewaySyncUploadWorker. log**
@@ -120,4 +122,4 @@ Použijte následující protokoly umístěné ve spojovacím bodu služby:
 
 ## <a name="next-steps"></a>Další kroky
 
-Další informace o tom, jak klient připojovat soubory protokolů, najdete v tématu [řešení potíží s připojením tenanta](technical-reference.md).
+Další informace o tom, jak klient připojovat soubory protokolů, najdete v tématu [řešení potíží s připojením tenanta](troubleshoot.md).

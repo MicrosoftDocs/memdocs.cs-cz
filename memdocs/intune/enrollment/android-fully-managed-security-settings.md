@@ -7,7 +7,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 06/24/2020
-ms.topic: how-to
+ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a4c2a9aa48d17b9cb2b386a4e4cb4df8fb36caac
-ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
+ms.openlocfilehash: 99b17cc165fc8d24fdf1b0f48525f3b23d8cc9b7
+ms.sourcegitcommit: d647eefa23c8849f49584442df568284d51d7525
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85502850"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86195629"
 ---
 # <a name="android-enterprise-fully-managed-security-configurations"></a>Konfigurace plně spravovaných zabezpečení pro Android Enterprise
 
@@ -47,7 +47,7 @@ Zásady na úrovni 1 vynutily rozumnou úroveň přístupu k datům a současně
 
 | Sekce | Nastavení | Hodnota | Poznámky |
 | ----- | ----- | ----- | ----- |
-| Ochrana ATP v programu Microsoft Defender | Vyžadovat, aby zařízení bylo na nebo pod hodnocením rizika počítače | Nenakonfigurováno ||
+| Microsoft Defender ATP | Vyžadovat, aby zařízení bylo na nebo pod hodnocením rizika počítače | Nenakonfigurováno ||
 | Stav zařízení | Vyžadovat, aby zařízení bylo na úrovni hrozby pro zařízení nebo pod ní | Nenakonfigurováno||
 | Stav zařízení | Ověření zařízení SafetyNet | Kontrola základní integrity & certifikovaných zařízeních | Toto nastavení konfiguruje ověřování SafetyNet Google na zařízeních koncových uživatelů. Základní integrita ověřuje integritu zařízení. Zařízení s rootem, emulátory, virtuální zařízení a zařízení se znaménkem neoprávněného selhání základní integrity.<br>Základní integrita a certifikovaná zařízení ověřují kompatibilitu zařízení se službami Google. Tuto kontrolu můžou předat jenom nezměněná zařízení, která získala certifikace od společnosti Google. |
 | Vlastnosti zařízení | Minimální verze operačního systému | Formát: Hlavní_verze. podverze<br>Příklad: 8,0| Microsoft doporučuje nakonfigurovat minimální hlavní verzi Androidu tak, aby odpovídala podporovaným verzím Androidu pro aplikace Microsoftu. Výrobci OEM a zařízení, kteří dodržují doporučené požadavky na Android Enterprise, musí podporovat aktuální dodací verzi a jeden upgrade na jedno písmeno. V současné době Android doporučuje Android 8,0 a novější pro pracovníky znalostní báze. Nejnovější doporučení pro Android najdete v tématu [Doporučené požadavky pro Android Enterprise](https://www.android.com/enterprise/recommended/requirements/). |
@@ -157,7 +157,7 @@ Nastavení zásad vyžadované v úrovni 3 zahrnují všechna nastavení zásad 
 
 | Sekce | Nastavení | Hodnota | Poznámky |
 | ----- | ----- | ----- | ----- |
-| Ochrana ATP v programu Microsoft Defender | Vyžadovat, aby zařízení bylo na nebo pod hodnocením rizika počítače | Vymazat | Toto nastavení vyžaduje ATP programu Microsoft Defender. Další informace najdete v tématu vymáhání dodržování předpisů pro [Microsoft Defender ATP s podmíněným přístupem v Intune](../protect/advanced-threat-protection.md).<p> Zákazníci by měli zvážit implementaci řešení ochrany před mobilními hrozbami v programu Microsoft Defender. Není nutné nasazovat obojí. |
+| Microsoft Defender ATP | Vyžadovat, aby zařízení bylo na nebo pod hodnocením rizika počítače | Vymazat | Toto nastavení vyžaduje ATP programu Microsoft Defender. Další informace najdete v tématu vymáhání dodržování předpisů pro [Microsoft Defender ATP s podmíněným přístupem v Intune](../protect/advanced-threat-protection.md).<p> Zákazníci by měli zvážit implementaci řešení ochrany před mobilními hrozbami v programu Microsoft Defender. Není nutné nasazovat obojí. |
 | Stav zařízení | Vyžadovat, aby zařízení bylo na úrovni hrozby pro zařízení nebo pod ní | Psán | Toto nastavení vyžaduje produkt ochrany před mobilními hrozbami. Další informace najdete v tématu Ochrana před [mobilními hrozbami u zaregistrovaných zařízení](../protect/mtd-device-compliance-policy-create.md).<p>Zákazníci by měli zvážit implementaci řešení ochrany před mobilními hrozbami v programu Microsoft Defender. Není nutné nasazovat obojí.|
 | Vlastnosti zařízení | Minimální verze operačního systému | Formát: Hlavní_verze. podverze<br>Příklad: 10,0| Microsoft doporučuje nakonfigurovat minimální hlavní verzi Androidu tak, aby odpovídala podporovaným verzím Androidu pro aplikace Microsoftu. Výrobci OEM a zařízení, kteří dodržují doporučené požadavky na Android Enterprise, musí podporovat aktuální dodací verzi a jeden upgrade na jedno písmeno. V současné době Android doporučuje Android 8,0 a novější pro pracovníky znalostní báze. Nejnovější doporučení pro Android najdete v tématu Doporučené požadavky pro Android Enterprise |
 

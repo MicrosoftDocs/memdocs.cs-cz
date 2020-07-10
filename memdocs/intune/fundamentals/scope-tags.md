@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 665b88932c88f523b19fec596bfd969bb93ecdd4
-ms.sourcegitcommit: 5f15a3abf33ce7bfd6855ffeef2ec3cd4cd48a7f
+ms.openlocfilehash: 3a7e8d463f82bc2ef70296b713cb8dcd591b67a6
+ms.sourcegitcommit: 3806a1850813b7a179d703e002bcc5c7eb1cb621
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84721903"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86210205"
 ---
 # <a name="use-role-based-access-control-rbac-and-scope-tags-for-distributed-it"></a>Použití řízení přístupu na základě role (RBAC) a značek oboru pro distribuci
 
@@ -87,7 +87,6 @@ Při práci s štítky oboru si pamatujte tyto podrobnosti:
     - Umístění dodržování předpisů pro zařízení
     - Zařízení Jamf
 - Aplikace VPP a e-knihy přidružené k tokenu VPP dědí značky oboru přiřazené k přidruženému tokenu VPP.
-- Zařízení Program registrace zařízení (DEP) a profily DEP přidružené k tomuto tokenu DEP dědí značky oboru přiřazené k přidruženému tokenu DEP.
 - Když správce vytvoří v Intune objekt, všechny značky oboru přiřazené tomuto správci se automaticky přiřadí k novému objektu.
 - Pro role Azure Active Directory se nepoužívá nastavení RBAC pro Intune. Role Správci služby Intune a globální Správci proto mají úplný přístup správce k Intune bez ohledu na to, jaké obory mají.
 - Pokud přiřazení role nemá žádnou značku oboru, může správce IT Zobrazit všechny objekty na základě oprávnění správců IT. Správci, kteří nemají značky oboru v podstatě mají všechny značky oboru.

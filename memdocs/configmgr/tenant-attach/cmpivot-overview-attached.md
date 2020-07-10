@@ -5,17 +5,17 @@ description: CMPivot přehled pro zařízení připojená ke klientovi Microsoft
 ms.date: 05/26/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 31bf1359-54e5-4416-9f39-6bb0070db542
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: e37e336970b023a61968ba45ac80cf292ea71116
-ms.sourcegitcommit: 0d2f6132428b5fa994e5b770ab1d2bf7d78ac179
+ms.openlocfilehash: dc5734d6b0fd188ee0a5c3fb735b1d6f18c01970
+ms.sourcegitcommit: 3806a1850813b7a179d703e002bcc5c7eb1cb621
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84226675"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86210347"
 ---
 # <a name="tenant-attach-cmpivot-overview"></a>Připojení tenanta: Přehled CMPivot
 

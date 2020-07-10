@@ -10,12 +10,12 @@ ms.assetid: 73b420be-5d6a-483a-be66-c4d274437508
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 2061a6701bf40233593e2e5d683e36f2814d3978
-ms.sourcegitcommit: f999131e513d50967f88795e400d5b089ebc5878
+ms.openlocfilehash: 423864c2c954cc67da4ef54d55d7263ae346e786
+ms.sourcegitcommit: 24ce7df7dadf2385afe364b817ec58feeb04c700
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85914568"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86212296"
 ---
 # <a name="microsoft-edge-management"></a>Správa Microsoft Edge
 
@@ -152,7 +152,7 @@ ERROR - is NOT retyrable.
 Rollback transaction: XXXX
 ```
 
-**Omezení rizik:** Pokud chcete tento problém obejít, zakažte shromažďování třídy inventáře hardwaru využití prohlížeče (SMS_BrowerUsage). Tato třída se v tuto chvíli nevyužívá.
+**Omezení rizik:** Pokud chcete tento problém obejít, zakažte shromažďování třídy inventáře hardwaru využití prohlížeče (SMS_BrowerUsage).
 
 ## <a name="next-steps"></a>Další kroky
 

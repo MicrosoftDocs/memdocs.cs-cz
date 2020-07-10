@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/25/2020
+ms.date: 07/09/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dda9199f8122614af3e723a37a7e7e293d8207ae
-ms.sourcegitcommit: 01c1ca337e82c5e8e92153079ed89f79e20bde9e
+ms.openlocfilehash: 56ab90da58091b67c403179ecd13239047e154d0
+ms.sourcegitcommit: 3806a1850813b7a179d703e002bcc5c7eb1cb621
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 07/09/2020
-ms.locfileid: "86157871"
+ms.locfileid: "86210233"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
@@ -56,8 +56,21 @@ Podívejte se, co je nového v jednom týdnu v Microsoft Intune v [centru pro sp
 
 <!-- ########################## -->
 
-## <a name="week-of-june-22-2020"></a>Týden od 22. června 2020
 
+## <a name="week-of-july-06-2020"></a>Týden od 6. července 2020
+
+### <a name="app-management"></a>Správa aplikací
+
+#### <a name="update-to-device-icons-in-company-portal-and-intune-apps-on-android---6057023---"></a>Aktualizace ikon zařízení v Portál společnosti a aplikacích Intune v Androidu<!-- 6057023 -->
+Na zařízeních s Androidem jsme aktualizovali ikony zařízení v aplikacích Portál společnosti a Intune, aby bylo možné vytvořit pokročilejší vzhled a atmosféru a sjednotit se s návrhovým systémem Microsoft Fluent. Související informace najdete v tématu [aktualizace ikon v aplikaci Portál společnosti App pro iOS/iPadOS a MacOS](../fundamentals/whats-new-app-ui.md#update-to-icons-in-company-portal-app-for-iosipados-and-macos-). 
+
+### <a name="device-management"></a>Správa zařízení
+
+#### <a name="tenant-attach-configmgr-client-details-in-the-admin-center-preview---7552762---"></a>Připojení tenanta: podrobnosti o klientovi nástroje ConfigMgr v centru pro správu (Preview)<!-- 7552762 -->
+
+V centru pro správu Microsoft Endpoint Manageru se teď můžete podívat na podrobnosti o klientech nástroje ConfigMgr, včetně kolekcí, členství ve skupině hranic a informací o klientovi v reálném čase pro konkrétní zařízení. Další informace najdete v tématu [připojení klienta: podrobnosti o klientovi nástroje ConfigMgr v centru pro správu (Preview)](../../configmgr/tenant-attach/client-details.md).
+
+## <a name="week-of-june-22-2020"></a>Týden od 22. června 2020
 ### <a name="app-management"></a>Správa aplikací
 
 #### <a name="newly-available-protected-apps-for-intune---7248952---"></a>Nově dostupné chráněné aplikace pro Intune<!-- 7248952 -->

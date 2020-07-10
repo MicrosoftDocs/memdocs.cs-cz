@@ -1,5 +1,5 @@
 ---
-title: Rozhraní Android Enterprise Security Configuration Framework
+title: Architektura konfigurace zabezpečení pro Android Enterprise
 titleSuffix: Microsoft Intune
 description: Přečtěte si o omezeních a nastaveních navrhovaných pro základní a vysoké zabezpečení zařízení s Androidem Enterprise.
 keywords: ''
@@ -7,7 +7,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 06/24/2020
-ms.topic: how-to
+ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 23d8b972be753da2ff0c2c75d839e5a5a7e8b077
-ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
+ms.openlocfilehash: 05d0cb3db60ed0f54a66bc4128e5528e789537a8
+ms.sourcegitcommit: d647eefa23c8849f49584442df568284d51d7525
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85502848"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86195697"
 ---
 # <a name="android-enterprise-work-profile-security-configurations"></a>Konfigurace zabezpečení pracovního profilu Android Enterprise
 
@@ -47,7 +47,7 @@ Pro zařízení pracovních profilů vlastněných osobně jsou k dispozici dvě
 
 | Sekce | Nastavení | Hodnota | Poznámky |
 | ----- | ----- | ----- | ----- |
-| Ochrana ATP v programu Microsoft Defender | Vyžadovat, aby zařízení bylo na nebo pod hodnocením rizika počítače | Nenakonfigurováno ||
+| Microsoft Defender ATP | Vyžadovat, aby zařízení bylo na nebo pod hodnocením rizika počítače | Nenakonfigurováno ||
 | Stav zařízení | Zařízení s rootem | Blok ||
 | Stav zařízení | Vyžadovat, aby zařízení bylo na úrovni hrozby pro zařízení nebo pod ní | Nenakonfigurováno||
 | Stav zařízení | Aplikace Služby Google Play je nakonfigurovaná | Vyžadovat ||
@@ -77,12 +77,12 @@ Pro zařízení pracovních profilů vlastněných osobně jsou k dispozici dvě
 | Nastavení pracovního profilu | Oznámení z pracovního profilu, když je zařízení uzamčené | Nenakonfigurováno | Blokování tohoto nastavení zajistí, že citlivá data nebudou vystavena v oznámeních pracovních profilů, která mohou mít dopad na použitelnost. |
 | Nastavení pracovního profilu | Výchozí oprávnění aplikace | Výchozí nastavení zařízení | Správci musí kontrolovat a upravovat oprávnění udělená aplikacemi, které nasazují. |
 | Nastavení pracovního profilu | Přidat nebo odebrat účty | Blok ||
-| Nastavení pracovního profilu | Sdílení kontaktů přes Bluetooth | Povolení | Ve výchozím nastavení není přístup k pracovním kontaktům k dispozici na jiných zařízeních, jako jsou Automobiles přes integraci Bluetooth. Povolením tohoto nastavení dojde k lepšímu používání bezplatného uživatelského prostředí. Zařízení Bluetooth ale může kontakty při prvním připojení Uložit do mezipaměti. Organizace by měly zvážit vyrovnávání scénářů použitelnosti s aspekty ochrany dat při implementaci tohoto nastavení. |
+| Nastavení pracovního profilu | Sdílení kontaktů přes Bluetooth | Povolit | Ve výchozím nastavení není přístup k pracovním kontaktům k dispozici na jiných zařízeních, jako jsou Automobiles přes integraci Bluetooth. Povolením tohoto nastavení dojde k lepšímu používání bezplatného uživatelského prostředí. Zařízení Bluetooth ale může kontakty při prvním připojení Uložit do mezipaměti. Organizace by měly zvážit vyrovnávání scénářů použitelnosti s aspekty ochrany dat při implementaci tohoto nastavení. |
 | Nastavení pracovního profilu | Snímek obrazovky | Blok ||
 | Nastavení pracovního profilu | Zobrazit v osobním profilu ID volajícího pracovního kontaktu | Nenakonfigurováno ||
 | Nastavení pracovního profilu | Hledat pracovní kontakty z osobního profilu | Nenakonfigurováno | Blokování přístupu uživatelů k pracovním kontaktům z osobního profilu může mít vliv na určité scénáře použitelnosti, jako je textové zasílání zpráv a prostředí vytáčení v rámci osobního profilu. Organizace by měly zvážit vyrovnávání scénářů použitelnosti s aspekty ochrany dat při implementaci tohoto nastavení. |
 | Nastavení pracovního profilu | Camera | Nenakonfigurováno ||
-| Nastavení pracovního profilu | Povoluje widgety z pracovních profilů aplikací. | Povolení ||
+| Nastavení pracovního profilu | Povoluje widgety z pracovních profilů aplikací. | Povolit ||
 | Nastavení pracovního profilu | Vyžadovat heslo pracovního profilu | Vyžadovat ||
 | Nastavení pracovního profilu | Minimální délka hesla | 6 | Organizace možná budou muset aktualizovat toto nastavení tak, aby odpovídalo zásadám hesel. |
 | Nastavení pracovního profilu | Maximální počet minut nečinnosti, po kterém se zamkne pracovní profil| 5 | Organizace možná budou muset aktualizovat toto nastavení tak, aby odpovídalo zásadám hesel. |
@@ -119,7 +119,7 @@ Nastavení zásad vyžadované v úrovni 3 zahrnují všechna nastavení zásad 
 
 | Sekce | Nastavení | Hodnota | Poznámky |
 | ----- | ----- | ----- | ----- |
-| Ochrana ATP v programu Microsoft Defender | Vyžadovat, aby zařízení bylo na nebo pod hodnocením rizika počítače | Vymazat | Toto nastavení vyžaduje ATP programu Microsoft Defender. Další informace najdete v tématu vymáhání dodržování předpisů pro [Microsoft Defender ATP s podmíněným přístupem v Intune](../protect/advanced-threat-protection.md).<p>Zákazníci by měli zvážit implementaci řešení ochrany před mobilními hrozbami v programu Microsoft Defender. Není nutné nasazovat obojí. |
+| Microsoft Defender ATP | Vyžadovat, aby zařízení bylo na nebo pod hodnocením rizika počítače | Vymazat | Toto nastavení vyžaduje ATP programu Microsoft Defender. Další informace najdete v tématu vymáhání dodržování předpisů pro [Microsoft Defender ATP s podmíněným přístupem v Intune](../protect/advanced-threat-protection.md).<p>Zákazníci by měli zvážit implementaci řešení ochrany před mobilními hrozbami v programu Microsoft Defender. Není nutné nasazovat obojí. |
 | Stav zařízení | Vyžadovat, aby zařízení bylo na úrovni hrozby pro zařízení nebo pod ní | Psán | Toto nastavení vyžaduje produkt ochrany před mobilními hrozbami. Další informace najdete v tématu Ochrana před [mobilními hrozbami u zaregistrovaných zařízení](../protect/mtd-device-compliance-policy-create.md).<p>Zákazníci by měli zvážit implementaci řešení ochrany před mobilními hrozbami v programu Microsoft Defender. Není nutné nasazovat obojí.|
 | Vlastnosti zařízení | Minimální verze operačního systému | Formát: Hlavní_verze. podverze<br>Příklad: 8,0| Microsoft doporučuje nakonfigurovat minimální hlavní verzi Androidu tak, aby odpovídala podporovaným verzím Androidu pro aplikace Microsoftu. Výrobci OEM a zařízení, kteří dodržují doporučené požadavky na Android Enterprise, musí podporovat aktuální dodací verzi a jeden upgrade na jedno písmeno. V současné době Android doporučuje Android 8,0 a novější pro pracovníky znalostní báze. Nejnovější doporučení pro Android najdete v tématu Doporučené požadavky pro Android Enterprise |
 | Zabezpečení systému | Počet dní do vypršení platnosti hesla | 365 | Organizace možná budou muset aktualizovat toto nastavení tak, aby odpovídalo zásadám hesel. |
