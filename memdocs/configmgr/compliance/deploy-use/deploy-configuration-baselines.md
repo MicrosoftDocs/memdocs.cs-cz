@@ -7,15 +7,15 @@ ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
 ms.assetid: 9be8aaf3-075e-4acd-abd2-7459254e16e2
-author: aczechowski
+author: mestew
 manager: dougeby
-ms.author: aaroncz
-ms.openlocfilehash: 55b559f9b16eabfe2c2096497e6f63816b400803
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.author: mstewart
+ms.openlocfilehash: 94a5d0af5636236ffba3f15c05823ead083f2948
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81712334"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240265"
 ---
 # <a name="how-to-deploy-configuration-baselines-in-configuration-manager"></a>Postup nasazení standardních hodnot konfigurace v Configuration Manager
 
@@ -27,7 +27,7 @@ Pomocí dialogového okna **Nasadit standardní hodnoty konfigurace** definujte 
 
 ## <a name="deploy-a-configuration-baseline"></a>Nasazení standardních hodnot konfigurace  
 
-1.  V konzole Configuration Manager klikněte na **prostředky a dodržování předpisů** > **Nastavení** > dodržování předpisů**standardní hodnoty konfigurace**.  
+1.  V konzole Configuration Manager klikněte na **prostředky a dodržování předpisů**  >  **Nastavení dodržování**předpisů  >  **standardní hodnoty konfigurace**.  
 
 3.  V seznamu **Standardní hodnoty konfigurace** vyberte standardní hodnoty konfigurace, které chcete nasadit, a pak na kartě **Domů** ve skupině **Nasazení** klikněte na **Nasadit**.  
 

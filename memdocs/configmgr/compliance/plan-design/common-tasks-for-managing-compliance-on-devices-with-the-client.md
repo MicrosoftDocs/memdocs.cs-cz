@@ -7,15 +7,15 @@ ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
 ms.assetid: 4e345791-74db-41ad-b472-024ce6521daf
-author: aczechowski
+author: mestew
 manager: dougeby
-ms.author: aaroncz
-ms.openlocfilehash: 1ccb0f0a042a0dd82817e030f96bbbc729e752f0
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.author: mstewart
+ms.openlocfilehash: 5920229331bca8d2a47b0bf1ab663530ef63c51e
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81712173"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240656"
 ---
 # <a name="common-tasks-for-managing-compliance-on-devices-with-the-configuration-manager-client"></a>Běžné úlohy správy dodržování předpisů u zařízení s klientem Configuration Manager
 
@@ -30,7 +30,7 @@ V tomto článku se seznámíte s používáním Configuration Manager nastaven�
 ## <a name="general-information-for-each-scenario"></a>Obecné informace pro všechny scénáře  
  V každém scénáři vytvoříte položku konfigurace, která provede určitou úlohu. Chcete-li otevřít Průvodce vytvořením položky konfigurace a začít, proveďte následující kroky:  
 
-1.  V konzole Configuration Manager vyberte > **položky konfigurace****Nastavení dodržování předpisů** **prostředky a kompatibilita** > .  
+1.  V konzole Configuration Manager vyberte **Assets and Compliance**  >  položky konfigurace**Nastavení dodržování předpisů**prostředky a kompatibilita  >  **Configuration Items**.  
 
 1.  Na kartě **Domů** ve skupině **vytvořit** vyberte možnost **vytvořit položku konfigurace**.  
 
@@ -77,25 +77,25 @@ V tomto článku se seznámíte s používáním Configuration Manager nastaven�
 
 4. Na kartě **Obecné** v dialogovém okně **vytvořit nastavení** nakonfigurujte tato nastavení:  
 
-   -   **Name** > **Příklad nastavení** názvu  
+   -   **Název**  >  **Příklad nastavení**  
 
-   -   **Nastavení** > **hodnoty registru** typu  
+   -   **Typ nastavení**  >  **Hodnota registru**  
 
-   -   **Datový typ** > **celé číslo** (protože hodnota obsahuje jenom číslo)  
+   -   **Datový typ**  >  **Celé číslo** (protože hodnota obsahuje jenom číslo)  
 
-   -   **HKEY_LOCAL_MACHINE podregistru** > **HKEY_LOCAL_MACHINE**  
+   -   **Podregistr**  >  **HKEY_LOCAL_MACHINE**  
 
-   -   **App\Configuration\Configuration1 Key** > **SOFTWARE\Woodgrove\LOB**  
+   -   **Klíč**  >  **SOFTWARE\Woodgrove\LOB App\Configuration\Configuration1**  
 
-   -   **Hodnota** > **1** (požadovaná hodnota)  
+   -   **Hodnota**  >  **1** (požadovaná hodnota)  
 
 5. Na kartě **pravidla shody** v dialogovém okně **vytvořit nastavení** vyberte **Nový**. V dialogovém okně **vytvořit pravidlo** nakonfigurujte tato nastavení:  
 
-   -   **Name** > **Ukázkové pravidlo** názvu  
+   -   **Název**  >  **Příklad pravidla**  
 
    -   **Vybraná nastavení** > ověří, jestli je vybrané nastavení **Příklad nastavení**.
 
-   -   **Hodnota typu pravidla** > **Value**  
+   -   **Typ pravidla**  >  **Hodnota**  
 
    -   **Nastavení musí odpovídat následujícímu pravidlu** > ověřte, zda je název nastavení správný, a nakonfigurujte možnost, aby určovala, že se hodnota nastavení musí rovnat **1**.  
 

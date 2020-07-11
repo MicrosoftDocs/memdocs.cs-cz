@@ -7,15 +7,15 @@ ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
 ms.assetid: 113984fa-6150-41a1-89ed-d2a83b979732
-author: aczechowski
+author: mestew
 manager: dougeby
-ms.author: aaroncz
-ms.openlocfilehash: d194d9e80c037a13dde3d694793b695dfa5902e8
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.author: mstewart
+ms.openlocfilehash: 319f673200244d4451b957dcb778ce378f9569fa
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81712866"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240316"
 ---
 # <a name="how-to-create-child-configuration-items-in-configuration-manager"></a>Vytvoření podřízených položek konfigurace v Configuration Manager
 

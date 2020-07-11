@@ -7,15 +7,15 @@ ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
 ms.assetid: 722d5bf5-bedc-4dfc-b324-6eeb773874e9
-author: aczechowski
+author: mestew
 manager: dougeby
-ms.author: aaroncz
-ms.openlocfilehash: 219ddd4c828cdabd022deb9fe372718184a4c024
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.author: mstewart
+ms.openlocfilehash: 9323fc3c1203d20c77af1f2fd27cee0a377e8d68
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81713020"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240078"
 ---
 # <a name="create-configuration-items-for-mac-os-x-devices"></a>Vytvoření položek konfigurace pro zařízení Mac OS X
 Pomocí položky konfigurace Configuration Manager **Mac OS X (vlastní)** můžete spravovat nastavení pro Mac OS X zařízení, která spravuje klient Configuration Manager.  
@@ -99,7 +99,7 @@ Mac OS X operační systém používá k ukládání nastavení aplikace soubory
   
         -   **Nastavení musí odpovídat následujícímu pravidlu**: vyberte operátor a hodnotu, která bude vyhodnocená z hlediska dodržování předpisů s vybraným nastavením. Můžete použít následující operátory:  
   
-            -   **Rovná**  
+            -   **Je rovno**  
   
             -   **Není rovno**  
   
@@ -107,11 +107,11 @@ Mac OS X operační systém používá k ukládání nastavení aplikace soubory
   
             -   **Menší než**  
   
-            -   **Mezi**  
+            -   **Jednotlivých**  
   
-            -   **Větší nebo rovno**  
+            -   **Je větší než nebo rovno**  
   
-            -   **Menší nebo rovno**  
+            -   **Je menší než nebo rovno**  
   
             -   **Jedna z**: v textovém poli zadejte jednu položku na každý řádek.  
   

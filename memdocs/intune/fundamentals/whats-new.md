@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 07/09/2020
+ms.date: 07/10/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 56ab90da58091b67c403179ecd13239047e154d0
-ms.sourcegitcommit: 3806a1850813b7a179d703e002bcc5c7eb1cb621
+ms.openlocfilehash: c9e65171c0eb723f338e87cdf1f7a99601c0833f
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86210233"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240725"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
@@ -58,6 +58,11 @@ Podívejte se, co je nového v jednom týdnu v Microsoft Intune v [centru pro sp
 
 
 ## <a name="week-of-july-06-2020"></a>Týden od 6. července 2020
+
+### <a name="device-enrollment"></a>Registrace zařízení
+
+#### <a name="ios-company-portal-will-support-apples-automated-device-enrollment-without-user-affinity---7282707---"></a>iOS Portál společnosti bude podporovat automatické registrace zařízení společnosti Apple bez přidružení uživatele.<!-- 7282707 --> 
+Portál společnosti iOS se teď podporuje na zařízeních zaregistrovaných pomocí automatizované registrace zařízení společnosti Apple bez přiřazeného uživatele. Koncový uživatel se může přihlásit k Portál společnosti iOS, aby se sám navázal jako primární uživatel na zařízení se systémem iOS/iPadOS, které je zaregistrované bez spřažení zařízení. Další informace o automatizované registraci zařízení najdete v tématu [Automatická registrace zařízení s iOS/iPadOS pomocí automatizované registrace zařízení společnosti Apple](../enrollment/device-enrollment-program-enroll-ios.md).
 
 ### <a name="app-management"></a>Správa aplikací
 

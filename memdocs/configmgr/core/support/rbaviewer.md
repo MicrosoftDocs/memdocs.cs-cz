@@ -2,7 +2,7 @@
 title: Nástroj pro správu na základě rolí
 titleSuffix: Configuration Manager
 description: Pomocí nástroje pro správu a auditování na základě rolí můžete modelovat a auditovat role a obory zabezpečení v Configuration Manager.
-ms.date: 07/30/2018
+ms.date: 07/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 6372ff17-7f56-4d7b-a21b-87fb8bdd6d3a
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: ff940db21711aabb5d57a45b05d90d04415639bb
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 4cf9d4d3f9d1b2f439d2e87d41cc280e7af0805a
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81723184"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86239704"
 ---
 # <a name="role-based-administration-and-auditing-tool"></a>Nástroj pro správu a auditování na základě rolí
 
@@ -31,7 +31,7 @@ Nástroj pro správu a auditování na základě rolí je jedním z [Configurati
 
 ## <a name="requirements"></a>Požadavky
 
-- Spusťte ji na stejném počítači jako konzolu Configuration Manager.  
+- Spusťte ji na stejném počítači jako Configuration Manager Server lokality. 
 
 - Máte správce s **úplnými oprávněními**, **analytik jen pro čtení**nebo role **Správce zabezpečení** .  
 
@@ -50,7 +50,7 @@ Nástroj pro správu a auditování na základě rolí je jedním z [Configurati
 
 K modelování oprávnění k nové roli, kterou chcete vytvořit, použijte následující postup: 
 
-1. Spusťte **RBAViewer. exe**.  
+1. Spusťte **RBAViewer.exe**.  
 
 2. Vyberte základní role zabezpečení, na kterých chcete vytvořit, nebo začněte z prázdné sady oprávnění. Vyberte nezbytná oprávnění.  
 
@@ -66,7 +66,7 @@ K modelování oprávnění k nové roli, kterou chcete vytvořit, použijte ná
 
 Pomocí následujícího postupu můžete auditovat všechny existující administrativní uživatele, kolekce a obory zabezpečení v Configuration Manager:
 
-1. Spusťte **RBAViewer. exe**.  
+1. Spusťte **RBAViewer.exe**.  
 
 2. Na panelu nástrojů vyberte tlačítko **audit RBA** .  
 
@@ -79,7 +79,7 @@ Pomocí následujícího postupu můžete auditovat všechny existující admini
 
 Pomocí následujícího postupu můžete auditovat konfiguraci správy na základě rolí pro konkrétního uživatele:
 
-1. Spusťte **RBAViewer. exe**.  
+1. Spusťte **RBAViewer.exe**.  
 
 2. Na panelu nástrojů vyberte tlačítko **Spustit jako** .  
 

@@ -2,7 +2,7 @@
 title: Vylepšený protokol HTTP
 titleSuffix: Configuration Manager
 description: Pomocí moderního ověřování Zabezpečte komunikaci s klienty bez nutnosti certifikátů PKI.
-ms.date: 03/28/2020
+ms.date: 07/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 4deac022-e397-4f1f-bc0a-cea6c6c6368d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: bb14830e99600da1b71c516a44d51a0090cdc673
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1a6ec98bd350eb0ac8643254f64a9480f156bb13
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81720174"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86239755"
 ---
 # <a name="enhanced-http"></a>Vylepšený protokol HTTP
 
@@ -93,8 +93,6 @@ Následující funkce Configuration Manager podporují nebo vyžadují rozšíř
 - Distribuční bod konfigurovaný pro připojení klienta pomocí protokolu HTTP. Tuto možnost nastavte na kartě **komunikace** vlastností role distribučního bodu. Nepovolujte možnost **Povolit anonymní připojení klientů**.  
 
 - Připojte lokalitu k Azure AD pro správu cloudu.  
-
-    - Pokud jste už tento požadavek splnili pro vaši lokalitu, musíte aktualizovat aplikaci Azure AD. V konzole Configuration Manager otevřete pracovní prostor **Správa** , rozbalte položku **Cloud Services**a vyberte možnost **Azure Active Directory klienti**. Vyberte tenanta Azure AD, vyberte webovou aplikaci v podokně **aplikace** a pak na pásu karet vyberte **aktualizovat nastavení aplikace** .  
 
 - *Jenom pro [scénáře 3](#bkmk_scenario3) *: klient se systémem Windows 10 verze 1803 nebo novější a připojený k Azure AD. Klient vyžaduje tuto konfiguraci pro ověřování zařízení Azure AD.<!-- SCCMDocs issue 1126 -->
 

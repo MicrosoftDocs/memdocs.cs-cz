@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 02/04/2020
+ms.date: 07/10/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 299b09c57f0cff44c465102d85628c8f2605adea
-ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
+ms.openlocfilehash: 9a7943fb33cf670eedd600db083b77e981da9029
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86088492"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240775"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-automated-device-enrollment"></a>Automatická registrace zařízení se systémem iOS/iPadOS pomocí Automatické registrace zařízení společnosti Apple
 
@@ -126,11 +126,11 @@ V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwli
 
 ![Snímek obrazovky s Apple ID použitým k vytvoření tokenu programu registrace a přechodem na token programu registrace](./media/device-enrollment-program-enroll-ios/image03.png)
 
-### <a name="step-4-upload-your-token-and-choose-scope-tags"></a>Krok 4. Nahrajte token a vyberte značky oboru.
+### <a name="step-4-upload-your-token-and-choose-scope-tags"></a>Krok 4: Nahrajte token a vyberte značky oboru.
 
 1. V poli **token Apple** vyhledejte soubor certifikátu (. p7m), vyberte **otevřít**.
 2. Pokud chcete pro tento token DEP použít [značky oboru](../fundamentals/scope-tags.md) , zvolte **rozsah (značky)** a vyberte požadované značky oboru. Značky oboru použité u tokenu budou děděny profily a zařízeními přidanými do tohoto tokenu.
-3. Zvolte **Vytvořit**.
+3. Vyberte **vytvořit**.
 
 Pomocí nabízeného certifikátu může Intune registrovat a spravovat zařízení s iOS/iPadOS tím, že zapisuje zásady do zaregistrovaných mobilních zařízení. Intune se automaticky synchronizuje s Apple, aby bylo možné zobrazit účet registračního programu.
 
@@ -156,7 +156,7 @@ Teď, když jste nainstalovali token, můžete vytvořit profil zápisu pro zař
 5. V části **Přidružení uživatele** zvolte, jestli se zařízení s tímto profilem musí registrovat s přiřazeným uživatelem nebo bez něj.
     - **Zaregistrovat s přidružením uživatele** – tuto možnost vyberte pro zařízení, která patří uživatelům a chtějí používat portál společnosti pro služby, jako je instalace aplikací. Pokud používáte službu AD FS a používáte pomocníka s nastavením k ověřování, je třeba zadat [uživatelské jméno/Smíšený Koncový bod WS-Trust 1,3](https://technet.microsoft.com/library/adfs2-help-endpoints) [Další informace](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint) .
 
-    - **Zaregistrovat bez přidružení uživatele** – Tuto možnost zvolte pro zařízení nespojená s jedním uživatelem. Tuto možnost použijte pro zařízení, která nemají přístup k místním uživatelským datům a zařízením Apple Shared iPad pro firmy. Aplikace, jako je Portál společnosti aplikace, nefungují.
+    - **Zaregistrovat bez přidružení uživatele** – Tuto možnost zvolte pro zařízení nespojená s jedním uživatelem. Tuto možnost použijte pro zařízení, která nemají přístup k místním uživatelským datům. Pokud chcete koncovému uživateli povolit, aby se přihlásil k Portál společnosti iOS a navázal jako primárního uživatele zařízení, pošlete `IntuneUDAUserlessDevice` klíč do portál společnosti pro iOS v zásadách konfigurace aplikace pro spravovaná zařízení. Všimněte si, že jako primární uživatel se naváže jenom první přihlášený uživatel. Pokud se první uživatel odhlásí a druhý uživatel přihlásí, první uživatel zůstane primárním uživatelem zařízení. Další informace najdete v tématu [Konfigurace aplikace Portál společnosti pro podporu zařízení se systémem iOS a IPADOS DEP](../apps/app-configuration-policies-use-ios.md#configure-the-company-portal-app-to-support-ios-and-ipados-dep-devices). 
 
 6. Pokud jste zvolili možnost **registrovat s přidružením uživatele**, můžete uživatelům povolit ověřování pomocí portál společnosti namísto pomocníka s nastavením Apple.
 
@@ -268,7 +268,7 @@ Teď, když jste nainstalovali token, můžete vytvořit profil zápisu pro zař
     | <strong>Jazyk Express</strong>| Zobrazit obrazovku jazyka Express pro uživatele |
     | <strong>Preferovaný jazyk</strong> | Poskytněte uživateli možnost zvolit si **preferovaný jazyk**. |
     | <strong>Migrace zařízení do zařízení</strong> | Poskytněte uživateli možnost migrovat data ze starého zařízení do tohoto zařízení. Pro iOS/iPadOS 13,0 a novější. |
-    | <strong>Registrace</strong> | Zobrazit registrační obrazovku uživateli Pro macOS 10,9 a novější. |
+    | <strong>Evidenc</strong> | Zobrazit registrační obrazovku uživateli Pro macOS 10,9 a novější. |
     | <strong>FileVault</strong> | Zobrazit na uživateli obrazovku šifrování trezoru 2. Pro macOS 10,10 a novější. |
     | <strong>Diagnostika iCloud</strong> | Zobrazit obrazovku analýzy iCloud pro uživatele Pro macOS 10.12.4 a novější. |
     | <strong>Úložiště iCloud</strong> | Zobrazí uživateli iCloud dokumenty a plochu obrazovky. Pro macOS 10.13.4 a novější. |

@@ -7,15 +7,15 @@ ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
 ms.assetid: 92c1ccca-a748-44cd-a52e-e41d34bf981d
-author: aczechowski
+author: mestew
 manager: dougeby
-ms.author: aaroncz
-ms.openlocfilehash: 839c08c8782a815703a19999bf1315fd65980ed8
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.author: mstewart
+ms.openlocfilehash: e2a378c1f54eb9bccbcc21f50419176bd39cb3ac
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81712292"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240044"
 ---
 # <a name="monitor-compliance-settings-in-configuration-manager"></a>Monitorování nastavení dodržování předpisů v Configuration Manager
 
@@ -31,7 +31,7 @@ Po nasazení Configuration Manager standardních hodnot konfigurace do zařízen
 
 ### <a name="view-compliance-results-in-the-configuration-manager-console"></a>Zobrazení výsledků kontroly kompatibility v konzole nástroje Configuration Manager  
 
-1.  V konzole Configuration Manager klikněte na **monitorování** > **nasazení**.  
+1.  V konzole Configuration Manager klikněte na **monitorování**  >  **nasazení**.  
 
 3.  V seznamu **Nasazení** vyberte nasazení standardních hodnot konfigurace, u kterých chcete zkontrolovat informace o dodržování předpisů.  
 
@@ -56,7 +56,7 @@ Po nasazení Configuration Manager standardních hodnot konfigurace do zařízen
  Nastavení dodržování předpisů v Configuration Manager zahrnuje řadu předdefinovaných sestav, které umožňují monitorovat informace o položkách konfigurace, standardních hodnotách konfigurace a nasazeních. Tyto sestavy obsahují kategorii sestav **Správa nastavení a kompatibility**.  
 
 > [!IMPORTANT]  
->  Při použití parametrů **Filtr zařízení** a**%** filtr uživatelů v sestavách nastavení dodržování předpisů je nutné použít zástupný znak ().  
+>  **%** Při použití parametrů **Filtr zařízení** a filtr uživatelů v sestavách nastavení dodržování předpisů je nutné použít zástupný znak ().  
 
  Další informace o tom, jak nakonfigurovat vytváření sestav v Configuration Manager, najdete v tématu [Úvod do vytváření sestav](../../core/servers/manage/introduction-to-reporting.md).
 
@@ -83,7 +83,7 @@ Po nasazení Configuration Manager standardních hodnot konfigurace do zařízen
         > [!NOTE]  
         >  Pokud máte na klientském počítači přihlašovací údaje místního správce, můžete zobrazit podrobnosti pro každé standardní hodnoty konfigurace a určit, která položka konfigurace hlásí nekompatibilní stav. Pokud chcete to provést, vyberte standardní hodnoty konfigurace a pak klikněte na **Zobrazit sestavu**.  
 
-4.  Klikněte na tlačítko **OK**.  
+4.  Klikněte na **OK**.  
 
 ##  <a name="create-collections-based-on-configuration-baseline-compliance"></a>Vytvoření kolekcí na základě dodržování předpisů standardních hodnot konfigurace  
  Pomocí následujícího postupu můžete vytvořit kolekci Configuration Manager založenou na zařízeních se zadaným dodržováním předpisů. Můžete vytvořit kolekce založené na následujících stavech dodržováním předpisů:  
@@ -94,9 +94,9 @@ Po nasazení Configuration Manager standardních hodnot konfigurace do zařízen
 
 -   **Nedodržující předpisy**  
 
--   **Není známo**  
+-   **Neznámý**  
 
-1.  V konzole Configuration Manager klikněte na **prostředky a dodržování předpisů** > **Nastavení** > dodržování předpisů**standardní hodnoty konfigurace**.  
+1.  V konzole Configuration Manager klikněte na **prostředky a dodržování předpisů**  >  **Nastavení dodržování**předpisů  >  **standardní hodnoty konfigurace**.  
 
 3.  V seznamu **Standardní hodnoty konfigurace** vyberte standardní hodnoty konfigurace, ze kterých chcete vytvořit kolekci.  
 

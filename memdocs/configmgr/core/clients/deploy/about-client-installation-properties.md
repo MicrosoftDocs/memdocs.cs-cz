@@ -2,7 +2,7 @@
 title: Parametry a vlastnosti instalace klienta
 titleSuffix: Configuration Manager
 description: Přečtěte si o parametrech a vlastnostech příkazového řádku služby CCMSetup pro instalaci klienta Configuration Manager.
-ms.date: 06/14/2020
+ms.date: 07/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c890fd27-7a8c-4f51-bbe2-f9908af1f42b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 388a051f899369aa6a7754f94b0a7727f943f0ec
-ms.sourcegitcommit: efe89408a3948b79b38893174cb19268ee37c8f3
+ms.openlocfilehash: 1de2cd1645687740986cc62514dbc990461cbbf6
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85854401"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240571"
 ---
 # <a name="about-client-installation-parameters-and-properties-in-configuration-manager"></a>Informace o parametrech instalace a vlastnostech klienta v Configuration Manager
 
@@ -43,13 +43,13 @@ CCMSetup.exe poskytuje *parametry* příkazového řádku pro přizpůsobení in
 > [!IMPORTANT]  
 > Před zadáním vlastností pro client.msi zadejte parametry CCMSetup.  
 
-CCMSetup.exe a podpůrné soubory jsou na serveru lokality ve složce **klienta** Configuration Manager instalační složky. Configuration Manager sdílí tuto složku do sítě ve sdílené složce lokality. Například, `\\SiteServer\SMS_ABC\Client`.
+CCMSetup.exe a podpůrné soubory jsou na serveru lokality ve složce **klienta** Configuration Manager instalační složky. Configuration Manager sdílí tuto složku do sítě ve sdílené složce lokality. Například `\\SiteServer\SMS_ABC\Client`.
 
 Příkaz CCMSetup.exe používá v příkazovém řádku tento formát:  
 
 `CCMSetup.exe [<Ccmsetup parameters>] [<client.msi setup properties>]`  
 
-Příklad:  
+Například:  
 
 `CCMSetup.exe /mp:SMSMP01 /logon SMSSITECODE=S01 FSP=SMSFSP01`  
 
@@ -238,9 +238,9 @@ Tento parametr určuje, že CCMSetup.exe neinstaluje určenou součást. Můžet
 
 Příklady:
 
-- `CCMSetup.exe /skipprereq:dotnetfx40_client_x86_x64.exe`
+- `CCMSetup.exe /skipprereq:filename.exe`
 
-- `CCMSetup.exe /skipprereq:dotnetfx40_client_x86_x64.exe;windowsupdateagent30_x86.exe`
+- `CCMSetup.exe /skipprereq:filename1.exe;filename2.exe`
 
 Další informace o požadavcích klienta najdete v tématu [požadavky klienta Windows](prerequisites-for-deploying-clients-to-windows-computers.md).
 
@@ -266,7 +266,7 @@ Podporované hodnoty:
 - `TRUE`: Klient nebude automaticky upgradován.
 - `FALSE`: Klient se automaticky upgraduje (výchozí).
 
-Příklad:  
+Například:  
 
 `CCMSetup.exe /AlwaysExcludeUpgrade:TRUE`
 

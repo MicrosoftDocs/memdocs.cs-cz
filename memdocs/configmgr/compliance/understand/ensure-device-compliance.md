@@ -7,15 +7,15 @@ ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
 ms.assetid: 7568c9aa-b99e-4466-bfc8-0301aa376930
-author: aczechowski
+author: mestew
 manager: dougeby
-ms.author: aaroncz
-ms.openlocfilehash: e9844c20373f2442be2c5c1f06f893eae3b0fe57
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.author: mstewart
+ms.openlocfilehash: 4c0d78eb1ba6d8306d40fdb1e05b70b0f462b5be
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81712131"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240621"
 ---
 # <a name="ensure-device-compliance-with-configuration-manager"></a>Zajištění dodržování předpisů pro zařízení s nástrojem Configuration Manager
 

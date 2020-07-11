@@ -5,17 +5,17 @@ description: Automaticky nasazovat aktualizace softwaru pomocí pravidel automat
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 05/20/2020
+ms.date: 07/10/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: b27682de-adf8-4edd-9572-54886af8f7fb
-ms.openlocfilehash: bf172c4cb34a17ac793ea5568b0505505baf97a0
-ms.sourcegitcommit: dba89b827d7f89067dfa75a421119e0c973bb747
+ms.openlocfilehash: ae1f52b0744f79f79e00e5dfe2d6a76c903cf4a4
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83709430"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240027"
 ---
 #  <a name="automatically-deploy-software-updates"></a>Automatické nasazení aktualizací softwaru  
 
@@ -197,7 +197,7 @@ Automatické schvalování a nasazování aktualizací softwaru pomocí pravidla
 
         -  **Priorita odeslání**: Zadejte prioritu odeslání balíčku pro nasazení. Configuration Manager používá tuto prioritu při posílání balíčku do distribučních bodů. Balíčky pro nasazení se odesílají v pořadí podle priority: vysoká, střední nebo nízká. Balíčky se stejnou prioritou jsou zasílány v pořadí podle data vytvoření. Pokud neexistují žádné nevyřízené položky, balíček okamžitě zpracuje bez ohledu na jeho prioritu.  
 
-        - **Povolit binární rozdílovou replikaci**: Toto nastavení povolte, pokud chcete minimalizovat síťový provoz mezi lokalitami. Binární rozdílová replikace (binární ROZDÍLOVÁ replikace) aktualizuje jenom obsah, který se v balíčku změnil, místo aktualizace obsahu celého balíčku. Další informace najdete v tématu [binární rozdílová replikace](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#binary-differential-replication).  
+        - **Povolit binární rozdílovou replikaci**: Toto nastavení povolte, pokud chcete pro balíček pro nasazení použít binární rozdílovou replikaci. Další informace najdete v tématu [binární rozdílová replikace](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#binary-differential-replication).  
 
     - **Žádný balíček pro nasazení**: od verze 1806 nasaďte aktualizace softwaru do zařízení bez předchozího stažení a distribuce obsahu do distribučních bodů. Toto nastavení je užitečné při práci s extrémně velkým obsahem aktualizace. Můžete ho také použít, když chcete, aby klienti získali obsah z cloudové služby Microsoft Update. Klienti v tomto scénáři si také můžou stáhnout obsah od partnerských uzlů, které už mají potřebný obsah. Klient Configuration Manager nadále spravuje stahování obsahu, proto může využít funkci Configuration Manager sdílené mezipaměti nebo jiné technologie, jako je Optimalizace doručení. Tato funkce podporuje libovolný typ aktualizace, který podporuje Configuration Manager Správa aktualizací softwaru, včetně aktualizací Windows a Office.<!--1357933-->  
 

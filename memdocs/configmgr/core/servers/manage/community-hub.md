@@ -2,7 +2,7 @@
 title: Komunitní centrum a GitHub
 titleSuffix: Configuration Manager
 description: Povolení a použití centra komunity v Configuration Manager
-ms.date: 06/12/2020
+ms.date: 07/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 88cead9a-64fe-471e-b57c-81707cefe46c
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: e0ef065cce691ce6f0b251d70ea8c4bd08904071
-ms.sourcegitcommit: 9a8a9cc7dcb6ca333b87e89e6b325f40864e4ad8
+ms.openlocfilehash: 8aadc391c5c0b259ab1a1736f3654f25b98dbae0
+ms.sourcegitcommit: aa876a9b5aa9437ae59a68e1cc6355d7070f89f4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84740788"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86236405"
 ---
 # <a name="community-hub-and-github"></a>Komunitní centrum a GitHub
 <!--3555935, 3555936-->
@@ -28,11 +28,13 @@ Komunita správce IT vyvinula spoustu znalostí během let. Místo rezásobován
 ## <a name="about-community-hub"></a>O komunitním centru
 
 Centrum komunity podporuje následující objekty:
-- Skripty PowerShellu
-- sestavy
-- Pořadí úloh
+
+- Dotazy CMPivot
 - Aplikace
-- Položky konfigurace  
+- Pořadí úloh
+- Položky konfigurace
+- Skripty PowerShellu
+- Sestavy
 
 ## <a name="prerequisites"></a>Požadavky
 

@@ -7,15 +7,15 @@ ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
 ms.assetid: b0c9db74-841e-46eb-8924-957cde968bf7
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 77ef255a820104ef2042a370b5056677fddb9d12
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 57f8c503d8a8ac54604a2435641bb29d0b4a1847
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81712229"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240673"
 ---
 # <a name="upgrade-windows-devices-to-a-new-edition-with-configuration-manager"></a>Upgrade zařízení s Windows na novou edici pomocí Configuration Manager
 

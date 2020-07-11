@@ -7,15 +7,15 @@ ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
 ms.assetid: 6271259d-e0ea-432b-90ec-5a452fba4264
-author: aczechowski
+author: mestew
 manager: dougeby
-ms.author: aaroncz
-ms.openlocfilehash: 830f0b1a6f7dce900572c3a97b49d6d77c50126d
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.author: mstewart
+ms.openlocfilehash: 5de091364f4764890e52b0513c171fa50f45f9a6
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81712390"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240299"
 ---
 # <a name="create-configuration-items-in-configuration-manager"></a>Vytvoření položek konfigurace v Configuration Manager
 

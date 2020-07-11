@@ -7,15 +7,15 @@ ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
 ms.assetid: 1eb2fcaf-acac-4388-9b31-6cccafacaabe
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 63f11066918854d72af0f1160d7d7569a93d7ebe
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 24637862326b029f974843c18ccba835ee5501ba
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81712383"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240418"
 ---
 # <a name="create-custom-configuration-items-for-windows-desktop-and-server-computers-managed-with-the-configuration-manager-client"></a>Vytváření vlastních položek konfigurace pro desktopové a serverové počítače s Windows spravované pomocí klienta Configuration Manager
 
@@ -97,7 +97,7 @@ Na stránce **podporované platformy** v **Průvodci vytvořením položky konfi
 **Verzi Windows můžete zadat také ručně**. Vyberte **Přidat** a zadejte jednotlivé části čísla sestavení Windows.
 
 > [!NOTE]
-> Při zadávání systému Windows Server 2016 zahrnuje i výběr `All Windows Server 2016 and higher 64-bit)` pro systém windows server 2019. Chcete-li zadat pouze Windows Server 2016, použijte možnost k **Určení verze systému Windows ručně**. <!--5866480-->
+> Při zadávání systému Windows Server 2016 `All Windows Server 2016 and higher 64-bit)` zahrnuje i výběr pro systém Windows server 2019. Chcete-li zadat pouze Windows Server 2016, použijte možnost k **Určení verze systému Windows ručně**. <!--5866480-->
 
 
 
@@ -117,7 +117,7 @@ Nastavení představuje obchodní nebo technické podmínky, které se používa
 
     - **Typ nastavení**: v seznamu vyberte jeden z následujících typů nastavení, který se má použít pro toto nastavení:  
         - [Dotaz služby Active Directory](#bkmk_adquery)
-        - [Assembly](#bkmk_assembly)
+        - [Sestavení](#bkmk_assembly)
         - [Systém souborů](#bkmk_file)
         - [Metabáze služby IIS](#bkmk_iis)
         - [Klíč registru](#bkmk_regkey)
@@ -139,11 +139,11 @@ Nastavení představuje obchodní nebo technické podmínky, které se používa
 
 ### <a name="active-directory-query"></a><a name="bkmk_adquery"></a>Dotaz služby Active Directory
 
-- **Předpona protokolu LDAP**: Zadejte platnou předponu pro dotaz Active Directory Domain Services pro vyhodnocení dodržování předpisů v klientských počítačích. Chcete-li provést hledání globálního katalogu, použijte `LDAP://` buď `GC://`nebo.  
+- **Předpona protokolu LDAP**: Zadejte platnou předponu pro dotaz Active Directory Domain Services pro vyhodnocení dodržování předpisů v klientských počítačích. Chcete-li provést hledání globálního katalogu, použijte buď `LDAP://` nebo `GC://` .  
 
 - **Rozlišující název (DN)**: zadejte rozlišující název objektu Active Directory Domain Services, u kterého je vyhodnocena shoda v klientských počítačích.  
 
-- **Vyhledávací filtr**: Určete volitelný filtr LDAP pro upřesnění výsledků z dotazu Active Directory Domain Services pro vyhodnocení dodržování předpisů v klientských počítačích. Chcete-li vrátit všechny výsledky z dotazu, `(objectclass=*)`zadejte.  
+- **Vyhledávací filtr**: Určete volitelný filtr LDAP pro upřesnění výsledků z dotazu Active Directory Domain Services pro vyhodnocení dodržování předpisů v klientských počítačích. Chcete-li vrátit všechny výsledky z dotazu, zadejte `(objectclass=*)` .  
 
 - **Obor vyhledávání**: zadejte obor vyhledávání v Active Directory Domain Services  
 
@@ -162,7 +162,7 @@ Nastavení představuje obchodní nebo technické podmínky, které se používa
 
 ### <a name="assembly"></a><a name="bkmk_assembly"></a>Shromážděním
 
-Sestavení je úsek kódu, který může být sdílen mezi různými aplikacemi. Sestavení mohou mít souborovou příponu .dll nebo .exe. Globální mezipaměť sestavení (GAC) je `%SystemRoot%\Assembly` složka v klientských počítačích. Tato mezipaměť je tam, kde Windows ukládá všechna sdílená sestavení.  
+Sestavení je úsek kódu, který může být sdílen mezi různými aplikacemi. Sestavení mohou mít souborovou příponu .dll nebo .exe. Globální mezipaměť sestavení (GAC) je složka `%SystemRoot%\Assembly` v klientských počítačích. Tato mezipaměť je tam, kde Windows ukládá všechna sdílená sestavení.  
 
 - **Název sestavení:** Určuje název objektu sestavení, který chcete vyhledat. Název nemůže být stejný jako jiné objekty sestavení stejného typu. Nejprve ji Zaregistrujte v globální mezipaměti sestavení (GAC). Název sestavení může mít délku až 256 znaků.  
 
@@ -181,14 +181,14 @@ Sestavení je úsek kódu, který může být sdílen mezi různými aplikacemi.
     > [!Tip]  
     > Vyberte **Procházet** a nakonfigurujte nastavení z hodnot v referenčním počítači.   
 
-- **Název souboru nebo složky**: zadejte název objektu souboru nebo složky, který chcete vyhledat. V názvu souboru nebo složky můžete zadat proměnné `%USERPROFILE%` prostředí systému a proměnnou prostředí. Můžete také použít zástupné znaky `*` a `?` v názvu souboru.  
+- **Název souboru nebo složky**: zadejte název objektu souboru nebo složky, který chcete vyhledat. V názvu souboru nebo složky můžete zadat proměnné prostředí systému a `%USERPROFILE%` proměnnou prostředí. Můžete také použít zástupné znaky `*` a `?` v názvu souboru.  
 
     > [!NOTE]  
     > Pokud zadáte název souboru nebo složky a použijete zástupné znaky, může tato kombinace způsobit velký počet výsledků. Může to také způsobit vysoké využití prostředků v klientském počítači a vysoký síťový provoz při vytváření sestav Configuration Manager.  
 
 - **Zahrnout podsložky**: Vyhledá také všechny podsložky v zadané cestě.  
 
-- **Tento soubor nebo složka jsou přidruženy k 64 bitové aplikaci**: Pokud je tato možnost povolena, prohledejte pouze 64 umístění souborů, `%ProgramFiles%` jako je například na 64-bitové počítače. Pokud tato možnost není povolená, hledejte jak v 64 umístění, tak na 32 umístění, jako `%ProgramFiles(x86)%`je například.  
+- **Tento soubor nebo složka jsou přidruženy k 64 bitové aplikaci**: Pokud je tato možnost povolena, prohledejte pouze 64 umístění souborů, jako je například `%ProgramFiles%` na 64-bitové počítače. Pokud tato možnost není povolená, hledejte jak v 64 umístění, tak na 32 umístění, jako je například `%ProgramFiles(x86)%` .  
 
     > [!NOTE]  
     > Pokud jeden soubor nebo složka existuje v jednom 64bitovém počítači v 64bitovém i 32bitovém umístění se systémovými soubory, zjistí globální podmínka více souborů.  
@@ -198,7 +198,7 @@ Sestavení je úsek kódu, který může být sdílen mezi různými aplikacemi.
 
 ### <a name="iis-metabase"></a><a name="bkmk_iis"></a>Metabáze služby IIS
 
-- **Cesta k metabázi**: Zadejte platnou cestu k metabázi Internetová informační služba (IIS). Například, `/LM/W3SVC/`.  
+- **Cesta k metabázi**: Zadejte platnou cestu k metabázi Internetová informační služba (IIS). Například `/LM/W3SVC/`.  
 
 - **ID vlastnosti**: zadejte číselnou vlastnost nastavení metabáze služby IIS.  
 
@@ -274,7 +274,7 @@ Hodnota vrácená skriptem se použije k vyhodnocení dodržování předpisů g
 
 - **Vlastnost**: zadejte cílovou vlastnost rozhraní WMI ve výše uvedené třídě.  
 
-- **Klauzule WHERE dotazu jazyka WQL**: Určete klauzuli opravňující k omezení výsledků. Například pro dotazování služby DHCP ve třídě Win32_Service může být `Name = 'DHCP' and StartMode = 'Auto'`klauzule WHERE.   
+- **Klauzule WHERE dotazu jazyka WQL**: Určete klauzuli opravňující k omezení výsledků. Například pro dotazování služby DHCP ve třídě Win32_Service může být klauzule WHERE `Name = 'DHCP' and StartMode = 'Auto'` .   
 
 
 ### <a name="xpath-query"></a><a name="bkmk_xpath"></a>Dotaz XPath
@@ -285,7 +285,7 @@ Hodnota vrácená skriptem se použije k vyhodnocení dodržování předpisů g
 
 - **Zahrnout podsložky**: tuto možnost povolte, pokud chcete prohledávat všechny podsložky v zadané cestě.  
 
-- **Tento soubor je přidružen k 64 bitové aplikaci**: 32 kromě umístění `%Windir%\System32` `%Windir%\Syswow64` systémových souborů v systému Configuration Manager klientů, na kterých je 64 spuštěná 16bitová verze systému Windows, hledejte umístění systémového souboru systému 64.  
+- **Tento soubor je přidružen k 64 bitové aplikaci**: `%Windir%\System32` 32 kromě umístění systémových souborů v systému `%Windir%\Syswow64` Configuration Manager klientů, na kterých je 64 spuštěná 16bitová verze systému Windows, hledejte umístění systémového souboru systému 64.  
 
 - **Dotaz XPath**: Zadejte platný úplný dotaz XPath (XML Path Language).  
 
@@ -348,10 +348,10 @@ Pravidla dodržování předpisů určují podmínky, které definují dodržov�
 - **Pokud není nalezena instance tohoto nastavení, nahlásit neshodu**: Pokud toto nastavení není v klientských počítačích nalezeno, povolte tuto možnost, aby položka konfigurace nahlásila nedodržení předpisů.  
 
 - **Závažnost neshody pro sestavy**: Zadejte úroveň závažnosti, která se nahlásí v Configuration Manager sestavy, pokud toto pravidlo dodržování předpisů selhává. K dispozici jsou následující úrovně závažnosti:  
-    - **Žádné**  
+    - **Žádný**  
     - **Informace**  
     - **Upozornění**  
-    - **Kritická**  
+    - **Kritické**  
     - **Kritické s událostí**: počítače, které nesplní toto pravidlo dodržování předpisů, nahlásí u **kritického**selhání závažnost. Tato úroveň závažnosti je rovněž zaznamenána jako událost systému Windows v protokolu událostí aplikací.  
 
 
@@ -367,10 +367,10 @@ Pravidla dodržování předpisů určují podmínky, které definují dodržov�
 - **Počet výskytů tohoto nastavení:**  
 
 - **Závažnost neshody pro sestavy**: Zadejte úroveň závažnosti, která se nahlásí v Configuration Manager sestavy, pokud toto pravidlo dodržování předpisů selhává. K dispozici jsou následující úrovně závažnosti:  
-    - **Žádné**  
+    - **Žádný**  
     - **Informace**  
     - **Upozornění**  
-    - **Kritická**  
+    - **Kritické**  
     - **Kritické s událostí**: počítače, které nesplní toto pravidlo dodržování předpisů, nahlásí u **kritického**selhání závažnost. Tato úroveň závažnosti je rovněž zaznamenána jako událost systému Windows v protokolu událostí aplikací.  
 
 
@@ -380,7 +380,7 @@ Pravidla dodržování předpisů určují podmínky, které definují dodržov�
 
 Od verze Configuration Manager 2002 můžete **sledovat historii oprav, pokud** je tato možnost podporovaná ve vašich pravidlech dodržování předpisů v položkách konfigurace. Pokud je tato možnost povolena, jakákoli náprava, ke které dojde v klientovi pro položku konfigurace, vygeneruje stavovou zprávu. Historie je uložena v databázi Configuration Manager.
 
-Sestavujte vlastní sestavy, abyste zobrazili historii oprav pomocí **v_CIRemediationHistory**veřejného zobrazení. `RemediationDate` Sloupec je čas ve standardu UTC, kdy klient spustil nápravu. `ResourceID` Identifikuje zařízení. Vytváření vlastních sestav pomocí zobrazení **v_CIRemediationHistory** vám pomůže:
+Sestavujte vlastní sestavy, abyste zobrazili historii oprav pomocí **v_CIRemediationHistory**veřejného zobrazení. `RemediationDate`Sloupec je čas ve standardu UTC, kdy klient spustil nápravu. `ResourceID`Identifikuje zařízení. Vytváření vlastních sestav pomocí zobrazení **v_CIRemediationHistory** vám pomůže:
 
 - Identifikujte možné problémy se skripty pro nápravu
 - Vyhledá trendy v nápravách, jako je například klient, který je konzistentně nekompatibilní s jednotlivými zkušebními cykly.

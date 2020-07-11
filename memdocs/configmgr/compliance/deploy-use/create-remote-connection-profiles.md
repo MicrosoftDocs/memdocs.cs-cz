@@ -7,15 +7,15 @@ ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
 ms.assetid: 8c6eabc4-5dda-4682-b03e-3a450e6ef65a
-author: aczechowski
+author: mestew
 manager: dougeby
-ms.author: aaroncz
-ms.openlocfilehash: c9a06e1b7c14cda02a8029925785c2109ea4204b
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.author: mstewart
+ms.openlocfilehash: f9f4e1ffe8b28efda0f59e6a252f39c95e2b7749
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81712348"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240112"
 ---
 # <a name="remote-connection-profiles-in-configuration-manager"></a>Profily vzdáleného připojení v Configuration Manager
 
@@ -37,10 +37,10 @@ Configuration Manager vytvoří skupinu zabezpečení na klientech, **připojí 
 
 - Pokud chcete uživatelům povolit připojení z Internetu, nainstalujte a nakonfigurujte Brána vzdálené plochy Server. Další informace o tom, jak nainstalovat a nakonfigurovat Brána vzdálené plochy Server, najdete v tématu [Vzdálená plocha – přístup odkudkoli](https://docs.microsoft.com/windows-server/remote/remote-desktop-services/rds-plan-access-from-anywhere).
 
-- Pokud klienti používají bránu firewall založenou na hostiteli, musí povolit program Mstsc. exe. Pokud konfigurujete profil vzdáleného připojení, povolte nastavení **Povolit výjimku brány Windows Firewall pro připojení v doménách systému Windows a v privátních sítích**. Toto nastavení umožňuje Configuration Manager automatickou konfiguraci brány Windows Firewall.
+- Pokud klienti používají bránu firewall založenou na hostiteli, musí povolit mstsc.exe program. Pokud konfigurujete profil vzdáleného připojení, povolte nastavení **Povolit výjimku brány Windows Firewall pro připojení v doménách systému Windows a v privátních sítích**. Toto nastavení umožňuje Configuration Manager automatickou konfiguraci brány Windows Firewall.
 
     > [!TIP]
-    > Konfigurace brány Windows Firewall pomocí nastavení zásad skupiny může potlačit konfiguraci nastavenou v nástroji Configuration Manager. Pokud ke konfiguraci brány Windows Firewall používáte Zásady skupiny, ujistěte se, že nastavení Zásady skupiny neblokuje mstsc. exe.
+    > Konfigurace brány Windows Firewall pomocí nastavení zásad skupiny může potlačit konfiguraci nastavenou v nástroji Configuration Manager. Pokud používáte Zásady skupiny ke konfiguraci brány Windows Firewall, ujistěte se, že nastavení Zásady skupiny neblokuje mstsc.exe.
 
     Pokud klienti používají jinou bránu firewall hostitele, nakonfigurujte tuto závislost brány firewall ručně.  
 
@@ -80,7 +80,7 @@ Když se uživatel vzdáleně připojí k pracovnímu počítači, stáhne soubo
 
         - Název serveru nemůže být delší než 256 znaků.
         - Může obsahovat velká písmena, malá písmena a číselné znaky.
-        - Kromě teček`.`() mezi segmenty a dvojtečkou (`:`) před portem jsou jedinými speciálními znaky pomlčky (`–`) a podtržítko (`_`).
+        - Kromě teček () `.` mezi segmenty a dvojtečkou ( `:` ) před portem jsou jedinými speciálními znaky pomlčky ( `–` ) a podtržítko ( `_` ).
         - Configuration Manager nepodporuje použití mezinárodního názvu domény pro tuto hodnotu.
 
     - **Povolit připojení pouze z počítačů, v nichž je spuštěna Vzdálená plocha s ověřování na úrovni sítě**: Toto nastavení ve výchozím nastavení přidá další úroveň zabezpečení pro připojení. Další informace najdete v tématu [udělení přístupu ke vzdálené ploše](https://docs.microsoft.com/windows-server/remote/remote-desktop-services/clients/remote-desktop-allow-access#why-allow-connections-only-with-network-level-authentication).
@@ -102,7 +102,7 @@ Když se uživatel vzdáleně připojí k pracovnímu počítači, stáhne soubo
 
 Nový profil se zobrazí v uzlu **profily vzdáleného připojení** v pracovním prostoru **prostředky a kompatibilita** .  
 
-## <a name="deploy"></a>Nasazení
+## <a name="deploy"></a>Nasadit
 
 1. V konzole Configuration Manager otevřete pracovní prostor **prostředky a kompatibilita** , rozbalte položku **Nastavení dodržování předpisů**a vyberte **profily vzdáleného připojení**.
 
@@ -132,7 +132,7 @@ Pokud zařízení opustí kolekci, do které nasadíte profil vzdáleného přip
 
 Nesaďte více než jeden profil vzdáleného připojení s konfliktním nastavením do stejného zařízení. Například nasadíte dva profily s různými nastaveními do stejné kolekce. Nakonfigurujete jenom jedno nasazení profilu, aby se napravila **pravidla nesplňující požadavky, pokud se podporuje**. Toto nasazení může potlačit nastavení ve druhém profilu. Configuration Manager nepodporuje tento typ nasazení profilu vzdáleného připojení.
 
-## <a name="monitor"></a>Monitorování
+## <a name="monitor"></a>Monitor
 
 V konzole Configuration Manager otevřete pracovní prostor **monitorování** a vyberte **nasazení**. V seznamu **nasazení** vyberte nasazení profilu vzdáleného připojení.
 
@@ -160,6 +160,6 @@ V podokně **Podrobnosti o aktivech** jsou zobrazena zařízení s vybraným sta
 Configuration Manager obsahují předdefinované sestavy, pomocí kterých můžete monitorovat informace o profilech vzdáleného připojení. Tyto sestavy obsahují kategorii sestav **Správa nastavení a kompatibility**.  
 
 > [!IMPORTANT]  
-> Zástupný znak (`%`) použijte při použití parametrů **Filtr zařízení** a **Filtr uživatelů** v sestavách pro nastavení dodržování předpisů.  
+> Zástupný znak () použijte `%` při použití parametrů **Filtr zařízení** a **Filtr uživatelů** v sestavách pro nastavení dodržování předpisů.  
 
 Další informace o tom, jak nakonfigurovat vytváření sestav v Configuration Manager, najdete v tématu [Úvod do vytváření sestav](../../core/servers/manage/introduction-to-reporting.md).  

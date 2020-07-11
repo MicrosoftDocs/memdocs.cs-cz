@@ -2,7 +2,7 @@
 title: Vytváření aplikací
 titleSuffix: Configuration Manager
 description: Vytvářejte aplikace s typy nasazení, detekčními metodami a požadavky pro instalaci softwaru.
-ms.date: 04/01/2020
+ms.date: 07/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: cc230ff4-7056-4339-a0a6-6a44cdbb2857
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 33a95ae78fdc80c6c08b59cfe5ec5b2e88485a8f
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 60ca31b73e31ea59b7a854f87262be7fdc4ab5c5
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82074652"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240333"
 ---
 # <a name="create-applications-in-configuration-manager"></a>Vytváření aplikací v Configuration Manager
 
@@ -40,7 +40,7 @@ Tento článek obsahuje také následující informace o konfiguraci typu nasaze
 - [Obsah](#bkmk_dt-content)
 - [Pořadí úloh](#bkmk_dt-ts)
 - [Metoda detekce](#bkmk_dt-detect)
-- [Zkušenosti uživatele](#bkmk_dt-ux)
+- [Činnost koncového uživatele](#bkmk_dt-ux)
 - [Požadavky](#bkmk_dt-require)
 - [Návratové kódy](#bkmk_dt-return)
 - [Závislosti](#bkmk_dt-depend)
@@ -63,10 +63,10 @@ Potom automaticky zjistí nebo ručně určí informace o aplikaci:
 
 2. V rozevíracím seznamu **typ** vyberte typ instalačního souboru aplikace, který chcete použít k detekci informací o aplikaci. Další informace o dostupných typech instalace najdete v tématu [typy nasazení podporované nástrojem Configuration Manager](create-applications.md#bkmk_deploy-types).  
 
-3. Do pole **umístění** zadejte instalační soubor aplikace, který chcete použít k detekci informací o aplikaci. Toto umístění je buď síťová cesta (`\\server\share\filename`), nebo odkaz na Store. Musíte mít přístup k síťové cestě a ke všem podsložkám, které obsahují obsah aplikace.  
+3. Do pole **umístění** zadejte instalační soubor aplikace, který chcete použít k detekci informací o aplikaci. Toto umístění je buď síťová cesta ( `\\server\share\filename` ), nebo odkaz na Store. Musíte mít přístup k síťové cestě a ke všem podsložkám, které obsahují obsah aplikace.  
 
     > [!IMPORTANT]  
-    > Když jako typ aplikace vyberete možnost **Instalační služba systému Windows (\*soubor. msi)** , lokalita importuje všechny soubory v zadané složce. Pak tyto soubory pošle do distribučních bodů. Ujistěte se, že Zadaná složka obsahuje pouze soubory, které jsou nezbytné k instalaci aplikace. Microsoft testuje Configuration Manager pro podporu až 20 000 souborů v balíčku aplikace. Pokud má vaše aplikace více souborů, zvažte vytvoření více aplikací s menšími soubory.  
+    > Když jako typ aplikace vyberete možnost **Instalační služba systému Windows ( \* soubor. msi)** , lokalita importuje všechny soubory v zadané složce. Pak tyto soubory pošle do distribučních bodů. Ujistěte se, že Zadaná složka obsahuje pouze soubory, které jsou nezbytné k instalaci aplikace. Microsoft testuje Configuration Manager pro podporu až 20 000 souborů v balíčku aplikace. Pokud má vaše aplikace více souborů, zvažte vytvoření více aplikací s menšími soubory.  
 
 4. Na stránce **importovat informace** v nástroji Průvodce vytvořením aplikace zkontrolujte informace a pak vyberte **Další**. V případě potřeby vyberte **Předchozí** , vraťte se zpátky a opravte všechny chyby.  
 
@@ -166,7 +166,7 @@ Pokud [automaticky zjistíte informace o aplikaci](#bkmk_auto-app), možná nebu
 > - [Obsah](#bkmk_dt-content)
 > - [Pořadí úloh](#bkmk_dt-ts)
 > - [Metoda detekce](#bkmk_dt-detect)
-> - [Zkušenosti uživatele](#bkmk_dt-ux)
+> - [Činnost koncového uživatele](#bkmk_dt-ux)
 > - [Požadavky](#bkmk_dt-require)
 > - [Návratové kódy](#bkmk_dt-return)
 > - [Závislosti](#bkmk_dt-depend)
@@ -193,7 +193,7 @@ Pak použijte jeden z následujících postupů k [Automatické identifikaci](#b
 
     2. Vyberte možnost **automaticky zjišťovat informace o tomto typu nasazení z instalačních souborů**.  
 
-    3. Do pole **umístění** zadejte instalační soubor aplikace, který chcete použít k detekci informací o typu nasazení. Toto umístění je buď síťová cesta (`\\server\share\filename`), nebo odkaz na Store. Musíte mít přístup k síťové cestě a ke všem podsložkám, které obsahují obsah aplikace.  
+    3. Do pole **umístění** zadejte instalační soubor aplikace, který chcete použít k detekci informací o typu nasazení. Toto umístění je buď síťová cesta ( `\\server\share\filename` ), nebo odkaz na Store. Musíte mít přístup k síťové cestě a ke všem podsložkám, které obsahují obsah aplikace.  
 
 2. Na stránce **importovat informace** v Průvodci vytvořením typu nasazení zkontrolujte informace a pak vyberte **Další**. V případě potřeby vyberte **Předchozí** , vraťte se zpátky a opravte všechny chyby.  
 
@@ -307,17 +307,17 @@ Tento postup nastaví metodu detekce, která označuje přítomnost typu nasazen
 
         - **Typ**: vyberte, jestli se jedná o soubor nebo složku.  
 
-        - **Cesta** (povinné): zadejte nebo vyhledejte místní cestu k zařízení, které obsahuje soubor nebo složku. Například, `C:\Program Files`. Nelze zadat sdílenou cestu k síti. Pokud vyberete **Procházet**, přejděte do místního systému souborů nebo se připojte k zástupci, který chcete procházet.  
+        - **Cesta** (povinné): zadejte nebo vyhledejte místní cestu k zařízení, které obsahuje soubor nebo složku. Například `C:\Program Files`. Nelze zadat sdílenou cestu k síti. Pokud vyberete **Procházet**, přejděte do místního systému souborů nebo se připojte k zástupci, který chcete procházet.  
 
         - **Název souboru nebo složky** (povinné): zadejte konkrétní název souboru nebo složky, který se má zjistit ve výše uvedené cestě. Pokud klient zjistí tento soubor nebo složku v zařízení, považuje aplikace za nainstalovanou na zařízení.  
 
-        - **Tento soubor nebo složka jsou přidruženy k 32 bitové aplikaci v systémech 64**: Tato možnost je vybrána jako výchozí. Klient nejprve zkontroluje 32 umístění souborů pro zadaný soubor nebo složku. Pokud se soubor nebo složka nenajde, klient vyhledá 64 umístění.  
+        - **Tento soubor nebo složka jsou přidruženy k 32 bitové aplikaci v systémech 64**: klient nejprve kontroluje 32 umístění souborů pro zadaný soubor nebo složku. Pokud se soubor nebo složka nenajde, klient vyhledá 64 umístění.  
 
     - **Registr**: zjišťuje, zda zadaný klíč registru nebo hodnota registru existují v klientském zařízení. Tato detekce indikuje, že je aplikace nainstalovaná. Zadejte následující další podrobnosti:  
 
-        - **Podregistr** (povinné): z rozevíracího seznamu vyberte podregistr registru. Například, `HKEY_LOCAL_MACHINE`.  
+        - **Podregistr** (povinné): z rozevíracího seznamu vyberte podregistr registru. Například `HKEY_LOCAL_MACHINE`.  
 
-        - **Key** (povinné): Zadejte klíč registru, ve kterém se má hledat ve výše uvedeném podregistru. Například, `SOFTWARE\Microsoft\Office`.  
+        - **Key** (povinné): Zadejte klíč registru, ve kterém se má hledat ve výše uvedeném podregistru. Například `SOFTWARE\Microsoft\Office`.  
 
         - **Hodnota** (volitelné): zadejte konkrétní hodnotu, která se má zjistit ve výše uvedeném klíči. Pokud chcete, aby klient rozpoznal (výchozí) hodnotu, povolte možnost **použít (výchozí) hodnotu klíče registru pro detekci**. Když zadáte hodnotu nebo povolíte tuto možnost, budete muset vybrat **datový typ**.  
 
@@ -343,7 +343,7 @@ Když vytvoříte více než jednu metodu detekce pro typ nasazení, můžete se
     |------------|----|------------------|-----|
     |            |    | Kód produktu MSI |     |
     | Nebo         | (  | Soubor1. text existuje|     |
-    | And        |    | Soubor2. txt existuje. | )   |
+    | And        |    | file2.txt existuje | )   |
 
 3. Pokud chcete skupinu odebrat, vyberte seskupené klauzule a pak vyberte zrušit **seskupení**.  
 
@@ -379,7 +379,7 @@ Pomocí následujících tabulek ověřte, zda je aplikace nainstalována z výs
 |STDOUT|STDERR|Výsledek skriptu|Stav detekce aplikace|
 |---------|---------|---------|---------|
 |Obsahovat|Obsahovat|Úspěch|Nenainstalováno|
-|Obsahovat|Není prázdné|Selhání|Není známo|
+|Obsahovat|Není prázdné|Selhání|Neznámý|
 |Není prázdné|Obsahovat|Úspěch|Nainstalovaný|
 |Není prázdné|Není prázdné|Úspěch|Nainstalovaný|
 
@@ -387,10 +387,10 @@ Pomocí následujících tabulek ověřte, zda je aplikace nainstalována z výs
 
 |STDOUT|STDERR|Výsledek skriptu|Stav detekce aplikace|
 |---------|---------|---------|---------|
-|Obsahovat|Obsahovat|Selhání|Není známo|
-|Obsahovat|Není prázdné|Selhání|Není známo|
-|Není prázdné|Obsahovat|Selhání|Není známo|
-|Není prázdné|Není prázdné|Selhání|Není známo|
+|Obsahovat|Obsahovat|Selhání|Neznámý|
+|Obsahovat|Není prázdné|Selhání|Neznámý|
+|Není prázdné|Obsahovat|Selhání|Neznámý|
+|Není prázdné|Není prázdné|Selhání|Neznámý|
 
 ##### <a name="examples"></a>Příklady
 
@@ -540,7 +540,7 @@ Configuration Manager ověří tyto požadavky na zařízeních před instalací
 
 3. V rozevíracím seznamu **Podmínka** vyberte podmínku, která vyhodnotí, jestli uživatel nebo zařízení splňuje požadavky na instalaci. Obsah tohoto seznamu se liší v závislosti na vybrané kategorii.  
 
-4. V rozevíracím seznamu **operátor** vyberte operátor, který chcete použít. Tento operátor porovnává vybranou podmínku se zadanou hodnotou. Vyhodnocuje, zda uživatel nebo zařízení splňuje požadavek na instalaci. Dostupné operátory se liší v závislosti na zvolené podmínce.  
+4. V rozevíracím seznamu **operátor** vyberte operátor, který chcete použít. Tento operátor porovnává vybranou podmínku se zadanou hodnotou. Vyhodnocuje, zda uživatel nebo zařízení splňuje požadavek na instalaci. Dostupné operátory se liší v závislosti na zvolené podmínce. Při použití `One Of` operátoru pole hodnoty obsahuje ověření, že je nutné zadat jednu položku na řádek.
 
     > [!Note]  
     > Dostupné požadavky se liší v závislosti na typu zařízení, které používá typ nasazení.  
@@ -587,7 +587,7 @@ Zadejte návratové kódy pro řízení chování po dokončení typu nasazení.
 
 1. Na kartě **návratové kódy** v okně vlastnosti typu nasazení vyberte **Přidat**.  
 
-2. V okně Přidat návratový kód zadejte **hodnotu návratového kódu** , který jste od tohoto typu nasazení očekávali. Tato hodnota je libovolné kladné nebo záporné celé číslo `-2147483648` v `2147483647`rozsahu od do.  
+2. V okně Přidat návratový kód zadejte **hodnotu návratového kódu** , který jste od tohoto typu nasazení očekávali. Tato hodnota je libovolné kladné nebo záporné celé číslo v rozsahu od `-2147483648` do `2147483647` .  
 
 3. Z rozevíracího seznamu vyberte **typ kódu** . Toto nastavení definuje způsob, jakým Configuration Manager interpretuje zadaný návratový kód z tohoto typu nasazení. Dostupné typy se liší v závislosti na technologii typu nasazení.  
 
@@ -607,13 +607,13 @@ Zadejte návratové kódy pro řízení chování po dokončení typu nasazení.
 
 #### <a name="example-non-zero-success"></a>Příklad: nenulová úspěch
 
-Nasazujete aplikaci, která `1` po úspěšné instalaci vrátí ukončovací kód. Ve výchozím nastavení Configuration Manager detekuje tento nenulový návratový kód jako selhání. Zadejte hodnotu `1`návratového kódu a vyberte typ kódu **úspěch (bez restartování)**. Nyní Configuration Manager interpretuje návratový kód jako úspěch pro tento typ nasazení.
+Nasazujete aplikaci, která `1` po úspěšné instalaci vrátí ukončovací kód. Ve výchozím nastavení Configuration Manager detekuje tento nenulový návratový kód jako selhání. Zadejte hodnotu návratového kódu `1` a vyberte typ kódu **úspěch (bez restartování)**. Nyní Configuration Manager interpretuje návratový kód jako úspěch pro tento typ nasazení.
 
 #### <a name="default-return-codes"></a>Výchozí návratové kódy
 
 Když vytvoříte některé typy nasazení, Configuration Manager automaticky přidá následující návratové kódy, které jsou pro tuto technologii běžné:  
 
-##### <a name="windows-installer-msi-file"></a>Instalační služba systému Windows (\*soubor. msi)
+##### <a name="windows-installer-msi-file"></a>Instalační služba systému Windows ( \* soubor. msi)
 
 |Hodnota    |Typ kódu|
 |---------|---------|
@@ -632,7 +632,7 @@ Když vytvoříte některé typy nasazení, Configuration Manager automaticky p�
 |3010     |Rychlé restartování|
 |1618     |Rychlé opakování|
 
-##### <a name="windows-app-package-appx-appxbundle-msix-msixbundle"></a>Balíček aplikace pro systém\*Windows (. \*appx,. \*appxbundle,. \*msix,. msixbundle)
+##### <a name="windows-app-package-appx-appxbundle-msix-msixbundle"></a>Balíček aplikace pro systém Windows ( \* . appx, \* . appxbundle, \* . msix, \* . msixbundle)
 
 |Hodnota    |Typ kódu|
 |---------|---------|
@@ -679,7 +679,7 @@ K importu aplikace do Configuration Manager použijte následující postup:
 
 2. Na pásu karet na kartě **Domů** a **vytvořit** skupinu vyberte **importovat aplikaci**.  
 
-3. Na stránce **Obecné** v Průvodci importem aplikace zadejte síťovou cestu k **souboru** , který se má importovat. Například, `\\server\share\file.zip`. Tento soubor je platný komprimovaný archivní program (formát ZIP) exportované aplikace Configuration Manager.  
+3. Na stránce **Obecné** v Průvodci importem aplikace zadejte síťovou cestu k **souboru** , který se má importovat. Například `\\server\share\file.zip`. Tento soubor je platný komprimovaný archivní program (formát ZIP) exportované aplikace Configuration Manager.  
 
 4. Na stránce **obsah souboru** vyberte akci, která se má provést, pokud je tato aplikace duplikátem existující aplikace. Vytvořte novou aplikaci nebo ignorujte duplicitní a přidejte novou revizi do existující aplikace.  
 
@@ -696,19 +696,19 @@ Další informace o exportu aplikace najdete v tématu [úlohy správy pro aplik
 
 Configuration Manager podporuje pro aplikace následující typy nasazení:
 
-| Název typu závislosti | Popis |
+| Název typu závislosti | Description |
 |--------------------------|----------------------|  
-| **Instalační služba systému Windows (\*soubor. msi)** | Soubor Instalační služba systému Windows. |  
-| **Balíček aplikace pro systém\*Windows (. \*appx,. \*appxbundle,. \*msix,. msixbundle)** | Soubor balíčku aplikace systému Windows (. appx), balíček sady prostředků aplikace systému Windows (. appxbundle), balíček aplikace pro Windows 10 (. msix) nebo sada prostředků aplikace Windows 10 (. msixbundle).<!--1357427--> |  
+| **Instalační služba systému Windows ( \* soubor. msi)** | Soubor Instalační služba systému Windows. |  
+| **Balíček aplikace pro systém Windows ( \* . appx, \* . appxbundle, \* . msix, \* . msixbundle)** | Soubor balíčku aplikace systému Windows (. appx), balíček sady prostředků aplikace systému Windows (. appxbundle), balíček aplikace pro Windows 10 (. msix) nebo sada prostředků aplikace Windows 10 (. msixbundle).<!--1357427--> |  
 | **Balíček aplikace systému Windows (ve Windows Store)** | Zadejte odkaz na aplikaci ve Windows Storu nebo přejděte do Storu a vyberte aplikaci.<sup>[Poznámka 1](#bkmk_note1)</sup> |  
-| **Instalační služba skriptů** | Určete skript nebo program, který je spuštěn na klientech Windows pro instalaci obsahu nebo provedení akce. Tento typ nasazení použijte pro instalátory Setup. exe nebo pro obálky skriptu. |  
+| **Instalační služba skriptů** | Určete skript nebo program, který je spuštěn na klientech Windows pro instalaci obsahu nebo provedení akce. Tento typ nasazení použijte pro setup.exe instalátory nebo obálky skriptu. |  
 | **Microsoft Application Virtualization 4** | Manifest Microsoft App-V v4. |  
 | **Microsoft Application Virtualization 5** | Soubor balíčku Microsoft App-V v5. |  
-| **Balíček aplikace Windows Phone (\*soubor. XAP)** | Soubor balíčku aplikace Windows Phone. |  
+| **Balíček aplikace Windows Phone ( \* soubor. XAP)** | Soubor balíčku aplikace Windows Phone. |  
 | **Balíček aplikací systému Windows Phone (ve skladu systému Windows Phone)** | Zadejte odkaz na aplikaci ve Windows Storu. |  
 | **Mac OS X** | Pro počítače s macOS, na kterých běží klient Configuration Manager. Vytvořte soubor. cmmac pomocí nástroje **CMAppUtil** . |  
 | **Webová aplikace** | Zadejte odkaz na webovou aplikaci. Tento typ nasazení nainstaluje zástupce webové aplikace do zařízení uživatele. |  
-| **Instalační služba systému Windows přes MDM (\*. msi)** | Umožňuje vytvářet a nasazovat aplikace založené na Instalační služba systému Windows na zařízeních s Windows 10. Další informace najdete v tématu [nasazení Instalační služba systému Windows aplikací do zařízení s Windows 10 zaregistrovaných v MDM](../get-started/creating-windows-applications.md#bkmk_mdm-msi). |
+| **Instalační služba systému Windows přes MDM ( \* . msi)** | Umožňuje vytvářet a nasazovat aplikace založené na Instalační služba systému Windows na zařízeních s Windows 10. Další informace najdete v tématu [nasazení Instalační služba systému Windows aplikací do zařízení s Windows 10 zaregistrovaných v MDM](../get-started/creating-windows-applications.md#bkmk_mdm-msi). |
 | **Pořadí úkolů** | Počínaje verzí 2002 nainstalujte nebo odinstalujte komplexní aplikace s využitím pořadí úkolů. Další informace najdete v tématu [typ nasazení pořadí úloh](../get-started/creating-windows-applications.md#bkmk_tsdt). <!--3555953--> |
 
 > [!NOTE]

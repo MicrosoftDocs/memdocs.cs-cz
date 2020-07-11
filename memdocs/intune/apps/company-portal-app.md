@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/26/2020
+ms.date: 07/10/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8f79ac0ef70eb9eccf47837517e3e69df3fdb3e8
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: 89e3111ef902b0ea0f7f66e6be6aa0c227fdb3c4
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84165715"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86239942"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>Přizpůsobení aplikací Portál společnosti Intune, Portál společnosti webu a Intune
 
@@ -33,14 +33,14 @@ Aplikace Portál společnosti, Portál společnosti web a Intune v Androidu jsou
 
 Přizpůsobením prostředí pro koncové uživatele umožníte vašim koncovým uživatelům získat známé a užitečné možnosti. Provedete to tak, že přejdete do [centra pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)a vyberete přizpůsobení **správy tenanta**  >  **Customization**, kde můžete buď upravit výchozí zásadu, nebo vytvořit až 10 cílových zásad skupiny. Tato nastavení se použijí pro aplikace Portál společnosti, Portál společnosti webu a Intune v Androidu.
 
-## <a name="branding"></a>Branding
+## <a name="branding"></a>Značka
 
 Následující tabulka uvádí podrobnosti přizpůsobení značky pro činnost koncového uživatele:
 
 | Název pole | Další informace |
 |---|---|---|
 | **Název organizace** | Tento název se zobrazí v rámci zasílání zpráv v prostředí koncového uživatele. Můžete ji nastavit tak, aby se zobrazila v hlavičkách i v nastavení **Zobrazit v hlavičce** . Maximální délka je 40 znaků. |
-| **Barva** | Vyberte možnost **Standard** pro výběr z pěti standardních barev. Zvolte **vlastní** pro výběr konkrétní barvy na základě hexadecimální hodnoty kódu. |
+| **Color** | Vyberte možnost **Standard** pro výběr z pěti standardních barev. Zvolte **vlastní** pro výběr konkrétní barvy na základě hexadecimální hodnoty kódu. |
 | **Barva motivu** | Nastavením barvy motivu zobrazíte činnost koncového uživatele. Barva textu automaticky nastavíme na černou nebo bílou, aby se zobrazila nad vybranou barvou motivu. |
 | **Zobrazit v záhlaví** | Vyberte, jestli má záhlaví v prostředí koncových uživatelů zobrazovat **logo a název organizace**, **jenom logo organizace**nebo **název organizace**. Níže uvedená pole pro náhled budou zobrazovat pouze loga, nikoli název.  |
 | **Nahrát logo pro barvu motivu na pozadí** | Nahrajte logo, které chcete zobrazit, nad vybranou barvou motivu. Pro nejlepší vzhled nahrajte logo s průhledným pozadím. Uvidíte, jak se bude zobrazovat v poli Náhled pod nastavením.<p>Maximální velikost obrázku: 400 × 400 px<br>Maximální velikost souboru: 750 KB<br>Typ souboru: PNG, JPG nebo JPEG |
@@ -94,7 +94,7 @@ Následující tabulka uvádí podrobnosti konfigurace specifické pro registrac
 
 | Název pole | Maximální délka | Další informace |
 |------------------------------------------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Registrace zařízení | Není k dispozici | Určete, jestli a jak se má uživatelům zobrazit výzva k registraci do správy mobilních zařízení. Další informace najdete v tématu [Možnosti nastavení registrace zařízení](../apps/company-portal-app.md#device-enrollment-setting-options). |
+| Registrace zařízení | Nelze použít | Určete, jestli a jak se má uživatelům zobrazit výzva k registraci do správy mobilních zařízení. Další informace najdete v tématu [Možnosti nastavení registrace zařízení](../apps/company-portal-app.md#device-enrollment-setting-options). |
 
 #### <a name="device-enrollment-setting-options"></a>Možnosti nastavení registrace zařízení
 
@@ -106,13 +106,11 @@ Následující tabulka uvádí podrobnosti konfigurace specifické pro registrac
 > [!IMPORTANT]
 > Následující nastavení se nevztahují na zařízení s iOS/iPadOS konfigurovaná pro registraci pomocí [automatizované registrace zařízení](../enrollment/device-enrollment-program-enroll-ios.md). Bez ohledu na to, jak jsou tato nastavení nakonfigurovaná, se zařízení se systémem iOS/iPadOS nakonfigurovaná k registraci pomocí automatizované registrace zařízení zaregistrují během natékání toku a uživatelé budou vyzváni k přihlášení při spuštění Portál společnosti.
 
-|    Možnosti registrace zařízení    |    Popis    |    Výzvy kontrolního seznamu    |    Oznámení    |    Stav podrobnosti o zařízení    |    Podrobnosti o stavu aplikace (aplikace, která vyžaduje registraci)    |
+|    Možnosti registrace zařízení    |    Description    |    Výzvy kontrolního seznamu    |    Notification (Oznámení)    |    Stav podrobnosti o zařízení    |    Podrobnosti o stavu aplikace (aplikace, která vyžaduje registraci)    |
 |-----------------------------------|-------------------------------------------------------------------------------------------------------------------------|-------------------------|--------------------|-----------------------------|--------------------------------------------------------------------|
 |    K dispozici, s výzvami    |    Výchozí prostředí s výzvou k registraci ve všech možných umístěních.    |    Ano    |    Ano    |    Ano    |    Ano    |
-|    K dispozici, žádné výzvy    |    Uživatel se může zaregistrovat přes stav v podrobnostech o zařízení pro svoje aktuální zařízení nebo aplikace, které vyžadují registraci.    |    Ne    |    No    |    Ano    |    Ano    |
-|    Neaktivní    |    Pro uživatele neexistuje žádný způsob, jak ho zaregistrovat.    |    Ne    |    Ne    |    Ne    |    Ne<sup>(1)</sup>    |
-
-<sup>(1)</sup> **známý problém:** Pokud nakonfigurujete aplikace, aby vyžadovaly registraci pro instalaci, a také nastavení registrace zařízení na "nedostupné", aplikace Portál společnosti v Androidu pořád budou uživatele registrovat. Tato akce bude brzy odebrána.
+|    K dispozici, žádné výzvy    |    Uživatel se může zaregistrovat přes stav v podrobnostech o zařízení pro svoje aktuální zařízení nebo aplikace, které vyžadují registraci.    |    No    |    No    |    Ano    |    Ano    |
+|    Neaktivní    |    Pro uživatele neexistuje žádný způsob, jak ho zaregistrovat.    |    No    |    No    |    No    |    No    |
 
 ### <a name="privacy"></a>Ochrana osobních údajů
 
@@ -129,7 +127,7 @@ Následující tabulka uvádí podrobnosti konfigurace konkrétního oznámení:
 
 | Název pole | Maximální délka | Další informace |
 |------------------------------------------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Odeslání nabízených oznámení uživatelům, když se jejich typ vlastnictví zařízení změní z osobní na firemní (jenom Android a iOS/iPadOS) | Není k dispozici | Odeslání nabízeného oznámení do uživatelů pro Android i iOS Portál společnosti, když se jejich typ vlastnictví zařízení změnil z osobních na firemní. Ve výchozím nastavení je toto nabízené oznámení nastaveno na vypnuto. Když je vlastnictví zařízení nastavené na vlastnictví firmy, má Intune větší přístup k zařízení, které zahrnuje plný inventář aplikací, rotaci klíčů trezoru souborů, načtení telefonního čísla a několik vzdálených akcí. Další informace najdete v tématu [Změna vlastnictví zařízení](../enrollment/corporate-identifiers-add.md#change-device-ownership).  |
+| Odeslání nabízených oznámení uživatelům, když se jejich typ vlastnictví zařízení změní z osobní na firemní (jenom Android a iOS/iPadOS) | Nelze použít | Odeslání nabízeného oznámení do uživatelů pro Android i iOS Portál společnosti, když se jejich typ vlastnictví zařízení změnil z osobních na firemní. Ve výchozím nastavení je toto nabízené oznámení nastaveno na vypnuto. Když je vlastnictví zařízení nastavené na vlastnictví firmy, má Intune větší přístup k zařízení, které zahrnuje plný inventář aplikací, rotaci klíčů trezoru souborů, načtení telefonního čísla a několik vzdálených akcí. Další informace najdete v tématu [Změna vlastnictví zařízení](../enrollment/corporate-identifiers-add.md#change-device-ownership).  |
 
 ### <a name="app-sources"></a>Zdroje aplikací
 
@@ -137,8 +135,8 @@ Můžete zvolit, které další zdroje aplikací se budou zobrazovat v Portál s
 
 | Název pole | Maximální délka | Další informace |
 |------------------------------------------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Podnikové aplikace Azure AD | Není k dispozici | Vyberte **Skrýt** nebo **Zobrazit** pro zobrazení **podnikových aplikací Azure AD** v portál společnosti pro každého koncového uživatele. Další informace najdete v tématu [Možnosti nastavení zdroje aplikace](../apps/company-portal-app.md#app-source-setting-options). |
-| Aplikace Office Online | Není k dispozici | Vyberte možnost **Skrýt** nebo **Zobrazit** pro zobrazení **online aplikací Office** v portál společnosti pro každého koncového uživatele. Další informace najdete v tématu [Možnosti nastavení zdroje aplikace](../apps/company-portal-app.md#app-source-setting-options). |
+| Podnikové aplikace Azure AD | Nelze použít | Vyberte **Skrýt** nebo **Zobrazit** pro zobrazení **podnikových aplikací Azure AD** v portál společnosti pro každého koncového uživatele. Další informace najdete v tématu [Možnosti nastavení zdroje aplikace](../apps/company-portal-app.md#app-source-setting-options). |
+| Aplikace Office Online | Nelze použít | Vyberte možnost **Skrýt** nebo **Zobrazit** pro zobrazení **online aplikací Office** v portál společnosti pro každého koncového uživatele. Další informace najdete v tématu [Možnosti nastavení zdroje aplikace](../apps/company-portal-app.md#app-source-setting-options). |
 
 #### <a name="app-source-setting-options"></a>Možnosti nastavení zdroje aplikace
 
@@ -179,7 +177,7 @@ Koncoví uživatelé mohou aktivovat akce navigace, aplikace a zařízení ve Wi
 
 V aplikaci Portál společnosti pro Windows jsou k dispozici následující klávesové zkratky.
 
-| Oblast | Popis | Klávesová zkratka |
+| Oblast | Description | Klávesová zkratka |
 |--------------------|----------------|-------------------|
 | Navigační nabídka | Navigace | Alt+M |
 |  | Domů | Alt+H |
@@ -221,7 +219,7 @@ Chcete-li přizpůsobit dostupné akce samoobslužných uživatelů, přečtěte
 
 Některé platformy a konfigurace neumožňují akce zařízení samoobslužné služby. V této tabulce najdete další podrobnosti o akcích samoobslužných služeb:
 
-|  | Windows 10<sup>(3)</sup> | iOS/iPadOS<sup>(3)</sup> | MacOS<sup>(3)</sup> | Android<sup>(3)</sup> |
+| Akce | Windows 10<sup>(3)</sup> | iOS/iPadOS<sup>(3)</sup> | MacOS<sup>(3)</sup> | Android<sup>(3)</sup> |
 |----------------------|--------------------------|-------------------|-----------------------------------|-------------------------|
 | Vyřazení | K dispozici<sup>(1)</sup> | K dispozici<sup>(9)</sup> | K dispozici | K dispozici<sup>(7)</sup> |
 | Vymazání | K dispozici | K dispozici<sup>(5)</sup><sup>(9)</sup> | NA | K dispozici<sup>(7)</sup> |

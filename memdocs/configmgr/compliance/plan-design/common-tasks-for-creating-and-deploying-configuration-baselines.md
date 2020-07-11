@@ -7,15 +7,15 @@ ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
 ms.assetid: 4bb6afeb-d267-4f9b-ade2-26e5400c223b
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 52e83639029db9eeb4ef64657e70e3dc11aab8f2
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 40f0fe1adc723587316dcc5f03d710ae4b31b78b
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81712201"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240690"
 ---
 # <a name="common-tasks-for-creating-and-deploying-configuration-baselines-with-configuration-manager"></a>Běžné úlohy pro vytváření a nasazování standardních hodnot konfigurace pomocí Configuration Manager
 
@@ -34,7 +34,7 @@ Toto téma obsahuje běžné scénáře, které vám pomůžou zjistit, jak vytv
 
 Pomocí následujícího postupu se dozvíte, jak přidat tuto položku konfigurace do standardních hodnot konfigurace a připravit ji pro nasazení.  
 
-1. V konzole Configuration Manager klikněte na **prostředky a dodržování předpisů** > **Nastavení** > dodržování předpisů**standardní hodnoty konfigurace**.  
+1. V konzole Configuration Manager klikněte na **prostředky a dodržování předpisů**  >  **Nastavení dodržování**předpisů  >  **standardní hodnoty konfigurace**.  
 
 2. Na kartě **Domů** ve skupině **Vytvořit** klikněte na **Vytvořit standardní hodnoty konfigurace**.  
 
@@ -42,7 +42,7 @@ Pomocí následujícího postupu se dozvíte, jak přidat tuto položku konfigur
 
    -   **Název** – zadejte **Windows 10 - vynucení hesla** (nebo jiný název, který si vyberete)  
 
-4. Klikněte na **Přidat** > **položky konfigurace**.  
+4. Klikněte na **Přidat**  >  **položky konfigurace**.  
 
 5. V dialogovém okně **Přidat položky konfigurace** vyberte položku konfigurace **Windows 10 - vynucení hesla** , kterou jste vytvořili výše, a klikněte na **Přidat**.  
 
@@ -55,7 +55,7 @@ Pomocí následujícího postupu se dozvíte, jak přidat tuto položku konfigur
 ## <a name="deploy-the-configuration-baseline"></a>Nasazení standardních hodnot konfigurace  
  V tomto příkladu nasadíte standardní hodnoty konfigurace, které jste vytvořili v předchozím postupu, do kolekce počítačů.  
 
-1. V konzole Configuration Manager klikněte na **prostředky a dodržování předpisů** > **Nastavení** > dodržování předpisů**standardní hodnoty konfigurace**.  
+1. V konzole Configuration Manager klikněte na **prostředky a dodržování předpisů**  >  **Nastavení dodržování**předpisů  >  **standardní hodnoty konfigurace**.  
 
 2. Ze seznamu standardních hodnot konfigurace vyberte **Windows 10 - vynucení hesla**.  
 

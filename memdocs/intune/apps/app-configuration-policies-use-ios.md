@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/11/2020
+ms.date: 07/10/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 15c1e1e943d9fd03476c0605c4d41cd417354fce
-ms.sourcegitcommit: c7afcc3a2232573091c8f36d295a803595708b6c
+ms.openlocfilehash: 730a8974753575b2726d821106f7b3c937b30207
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84973022"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86239976"
 ---
 # <a name="add-app-configuration-policies-for-managed-iosipados-devices"></a>Přidání zásad konfigurace aplikací pro spravovaná zařízení s iOS nebo iPadOS
 
@@ -193,20 +193,33 @@ Registrace programu DEP (Apple Program registrace zařízení) nejsou kompatibil
 2. Pokud chcete **Apps**  >  vytvořit zásady konfigurace aplikace pro portál společnosti aplikaci, v části aplikace**zásady konfigurace**aplikace.
 3. V níže uvedeném XML vytvořte zásadu konfigurace aplikace. Další informace o tom, jak vytvořit zásadu konfigurace aplikace a zadat data XML, najdete v tématu [Přidání zásad konfigurace aplikací pro spravovaná zařízení s iOS/iPadOS](app-configuration-policies-use-ios.md).
 
-    ``` xml
-    <dict>
-        <key>IntuneCompanyPortalEnrollmentAfterUDA</key>
-        <dict>
-            <key>IntuneDeviceId</key>
-            <string>{{deviceid}}</string>
-            <key>UserId</key>
-            <string>{{userid}}</string>
-        </dict>
-    </dict>
-    ```
+    - **Použití Portál společnosti na zařízení DEP zaregistrovaném s přidružením uživatele:**
 
-3. Nasaďte Portál společnosti do zařízení se zásadami konfigurace aplikace, které cílí na požadované skupiny. Nezapomeňte zásadu nasadit jenom do skupin zařízení, která jsou už zaregistrovaná v DEP.
-4. Sdělte koncovým uživatelům, aby se k aplikaci Portál společnosti přihlásili při automatické instalaci.
+        ``` xml
+        <dict>
+            <key>IntuneCompanyPortalEnrollmentAfterUDA</key>
+            <dict>
+                <key>IntuneDeviceId</key>
+                <string>{{deviceid}}</string>
+                <key>UserId</key>
+                <string>{{userid}}</string>
+            </dict>
+        </dict>
+        ```
+    - **Použití portál společnosti na zařízení DEP zaregistrovaném bez přidružení uživatele**:
+
+        > [!NOTE]
+        > Uživatel, který se přihlašuje k Portál společnosti, je nastaven jako primární uživatel zařízení.
+
+        ``` xml
+        <dict>
+            <key>IntuneUDAUserlessDevice</key>
+            <string>{{SIGNEDDEVICEID}}</string>
+        </dict>
+        ```     
+
+4. Nasaďte Portál společnosti do zařízení se zásadami konfigurace aplikace, které cílí na požadované skupiny. Nezapomeňte zásadu nasadit jenom do skupin zařízení, která jsou už zaregistrovaná v DEP.
+5. Sdělte koncovým uživatelům, aby se k aplikaci Portál společnosti přihlásili při automatické instalaci.
 
 ## <a name="monitor-iosipados--app-configuration-status-per-device"></a>Monitorování stavu konfigurace aplikace pro iOS/iPadOS na zařízení 
 Po přiřazení zásady konfigurace můžete monitorovat stav konfigurace aplikace pro iOS/iPadOS pro každé spravované zařízení. V části **Microsoft Intune** na portálu Azure Portal vyberte **Zařízení** > **Všechna zařízení**. V seznamu spravovaných zařízení vyberte konkrétní zařízení, ve kterém se má zobrazit podokno pro zařízení. V podokně zařízení vyberte **Konfigurace aplikace**.  

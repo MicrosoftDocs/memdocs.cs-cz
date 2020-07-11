@@ -7,15 +7,15 @@ ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
 ms.assetid: 915f866e-7559-4c9c-aee2-f9ca92e637b3
-author: aczechowski
+author: mestew
 manager: dougeby
-ms.author: aaroncz
-ms.openlocfilehash: 5ef46a0d7a49480bb5930a7a22b69e1b3ee4c4b8
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.author: mstewart
+ms.openlocfilehash: 13b93de07a908ce3d708e2693bf30ad11bba12ac
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81712166"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240588"
 ---
 # <a name="common-tasks-for-managing-compliance-with-configuration-manager"></a>Běžné úlohy správy dodržování předpisů pomocí Configuration Manager
 

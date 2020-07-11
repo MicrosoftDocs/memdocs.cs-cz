@@ -7,15 +7,15 @@ ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
 ms.assetid: 9ea20b01-676a-4cc2-b328-0098a41b202e
-author: aczechowski
+author: mestew
 manager: dougeby
-ms.author: aaroncz
-ms.openlocfilehash: 73ccec4ca318b522c0714bc8e5cc89f6c8899edd
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.author: mstewart
+ms.openlocfilehash: 5e048b6155e9ba7b1f4146498afec6be5af30fba
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81712152"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240605"
 ---
 # <a name="plan-for-and-configure-compliance-settings-in-configuration-manager"></a>Plánování a konfigurace nastavení dodržování předpisů v Configuration Manager
 
@@ -38,7 +38,7 @@ Tento postup nakonfiguruje výchozí nastavení klienta pro nastavení dodržov�
 > [!TIP]  
 >  Ostatní typy zařízení nevyžadují pro vyhodnocení nastavení dodržování předpisů žádnou speciální konfiguraci.  
 
-1.  V konzole Configuration Manager klikněte na **Správa** > **Nastavení** > klienta**výchozí nastavení**.  
+1.  V konzole Configuration Manager klikněte na **Správa**  >  **nastavení klienta**  >  **výchozí nastavení**.  
 2.  Na kartě **Domů** ve skupině **Vlastnosti** klikněte na možnost **Vlastnosti**.  
 3.  V dialogovém okně **Výchozí nastavení** klikněte na **Nastavení dodržování předpisů**.  
 4.  Nakonfigurujte následující klientská nastavení pro nastavení dodržování předpisů:

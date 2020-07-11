@@ -10,12 +10,12 @@ ms.assetid: 946b0f74-0794-4e8f-a6af-9737d877179b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f5461f888bfa2b749061eef4000f0d7c5f756b84
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 2f5aa622ca5d98f2cb5eb0b0c3154625df11a42e
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906748"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240758"
 ---
 # <a name="enable-third-party-updates"></a>Povolení aktualizací třetích stran 
 
@@ -35,6 +35,7 @@ Od verze 1806 se uzel **katalogů aktualizací softwaru třetích stran** v konz
     - Pro seznam katalogů partnerů je potřeba download.microsoft.com přes port HTTPS 443. 
     -  Přístup k Internetu pro všechny katalogy třetích stran a aktualizace souborů obsahu. Můžou být potřeba další porty, které jsou jiné než 443.
     - Aktualizace třetích stran používají stejné nastavení proxy serveru jako SUP.
+- U Configuration Manager verzí starších než 1910 nemůže role zabezpečení **správce aktualizací softwaru** synchronizovat katalogy třetích stran. K synchronizaci katalogů budete potřebovat roli zabezpečení **správce s úplnými oprávněními** .
 
 
 ## <a name="additional-requirements-when-the-sup-is-remote-from-the-top-level-site-server"></a>Další požadavky, pokud je server SUP vzdálený od serveru lokality nejvyšší úrovně 
@@ -239,7 +240,7 @@ Synchronizace aktualizací softwaru třetích stran je zpracována komponentou S
 
 ## <a name="status-messages"></a>Stavové zprávy
 
-| Parametr       | Severity           | Description | Možná příčina| Možné řešení
+| Parametr       | Závažnost           | Popis | Možná příčina| Možné řešení
 | ------------- |-------------| -----|----|----|
 | 11516     | Chyba |Publikování obsahu pro aktualizaci ID aktualizace se nezdařilo, protože obsah je nepodepsaný.  Publikovat lze pouze obsah s platnými podpisy.  |Configuration Manager nepovoluje publikování nepodepsaných aktualizací.| Publikujte aktualizaci alternativním způsobem. </br></br>Podívejte se, jestli je od dodavatele k dispozici podepsaná aktualizace.|
 | 11523  | Upozornění |  Katalog "X" neobsahuje certifikáty podepisování obsahu, pokusy o publikování obsahu aktualizace pro aktualizace z tohoto katalogu můžou být neúspěšné, dokud nebudou přidané a schválené certifikáty pro podepisování obsahu. | Tato zpráva se může vyskytnout při importu katalogu, který používá starší verzi formátu souboru CAB.|Kontaktujte poskytovatele katalogu a získejte aktualizovaný katalog, který obsahuje certifikáty podepisování obsahu. </br> </br> Certifikáty pro binární soubory nejsou zahrnuté do souboru CAB, takže se obsah nepodaří publikovat. Tento problém můžete obejít tak, že vyhledáte certifikát v uzlu **certifikáty** , odblokujete ho a pak znovu publikujete aktualizaci. Pokud publikujete více aktualizací podepsaných pomocí různých certifikátů, budete muset odblokovat každý použitý certifikát.|

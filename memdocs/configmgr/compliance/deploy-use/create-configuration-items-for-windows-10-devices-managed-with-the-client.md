@@ -7,15 +7,15 @@ ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
 ms.assetid: 14226fbe-dd07-4432-910b-130790624a4e
-author: aczechowski
+author: mestew
 manager: dougeby
-ms.author: aaroncz
-ms.openlocfilehash: 9a1bda440ab3ccd02432f0b023a134b9f54cdafb
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.author: mstewart
+ms.openlocfilehash: ade07cf23807d340ee5e0c7955a042a44f9031c5
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81712397"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240435"
 ---
 # <a name="create-configuration-items-for-windows-10-devices"></a>Vytváření položek konfigurace pro zařízení s Windows 10
 

@@ -7,15 +7,15 @@ ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
 ms.assetid: 309b9a09-a611-4ba2-90ab-dde51582cf87
-author: aczechowski
+author: mestew
 manager: dougeby
-ms.author: aaroncz
-ms.openlocfilehash: 4f70a956051858fce5b4ba5f519c7e1035600793
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.author: mstewart
+ms.openlocfilehash: 3c31f97e2a494fa4b0d3e9e825a81b562859e5dd
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81712306"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240350"
 ---
 # <a name="import-configuration-data-with-configuration-manager"></a>Import konfiguračních dat pomocí Configuration Manager
 
@@ -47,7 +47,7 @@ Mezi další příčiny, které můžou proces importu narušit, patří:
 
 ### <a name="import-configuration-data"></a>Import konfiguračních dat  
 
-1.  V konzole Configuration Manager klikněte na **prostředky a** > **položky konfigurace** dodržování předpisů nebo **standardní hodnoty konfigurace** .
+1.  V konzole Configuration Manager klikněte na **prostředky a**  >  **položky konfigurace** dodržování předpisů nebo **standardní hodnoty konfigurace** .
 2.  Na kartě **Domů** ve skupině **vytvořit** klikněte na **importovat konfigurační data**.  
 3.  Na stránce **Vybrat soubory** v **Průvodci importem dat konfigurace**klikněte na tlačítko **Přidat**, a potom v dialogovém okně **Otevřít** vyberte soubory CAB, které chcete importovat.  
 4.  Zaškrtněte políčko **vytvořit novou kopii importovaných standardních hodnot konfigurace a položek konfigurace** , pokud chcete, aby byla importovaná konfigurační data upravitelná v konzole Configuration Manager.  

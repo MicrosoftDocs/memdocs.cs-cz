@@ -2,7 +2,7 @@
 title: Endpoint Protection nejčastějších dotazech klienta
 titleSuffix: Configuration Manager
 description: Získejte odpovědi na nejčastější dotazy k programu Windows Defender a Endpoint Protection.
-ms.date: 12/09/2017
+ms.date: 07/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: e3aaa9d2-a40e-42b1-ad75-5a115351729e
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 3b206c1556c2e9550ade5c2322acd65ad2b19412
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 0eafa09275220cdf07f837388aa6cb848fbd5e5a
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906837"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240282"
 ---
 # <a name="endpoint-protection-client-frequently-asked-questions"></a>Endpoint Protection nejčastějších dotazech klienta
 
@@ -34,7 +34,6 @@ Tyto nejčastější dotazy jsou určené uživatelům, kterým správce IT nasa
 -   [Odkud pocházejí viry, spyware a další potenciálně nežádoucí software?](#where-do-viruses-spyware-and-other-potentially-unwanted-software-come-from)  
 -   [Můžu získat škodlivý software bez vědomí?](#can-i-get-malicious-software-without-knowing-it)  
 -   [Proč je důležité si před instalací softwaru číst licenční smlouvy?](#why-is-it-important-to-review-license-agreements-before-installing-software)  
--   [Jaký je rozdíl mezi aplikací Endpoint Protection a programem Windows Defender?](#whats-the-difference-between-endpoint-protection-and-windows-defender)  
 -   [Proč program Windows Defender nezjistí soubory cookie?](#why-doesnt-windows-defender-detect-cookies)  
 -   [Jak můžu zabránit malwaru?](#how-can-i-prevent-malware)  
 -   [Co jsou definice virů a spywaru?](#what-are-virus-and-spyware-definitions)  
@@ -132,9 +131,6 @@ Pokud chcete rychle a snadno odebrat všechny nežádoucí nebo potenciálně š
 ##  <a name="why-is-it-important-to-review-license-agreements-before-installing-software"></a>Proč je důležité si před instalací softwaru číst licenční smlouvy?  
  Při návštěvě webů nesouhlasí automaticky stahování všeho, co web nabízí. Pokud stahujete bezplatný software, například programy pro sdílení souborů nebo šetřiče obrazovky, pozorně si přečtěte licenční smlouvu. Hledejte věty, které říkají, že musíte přijmout reklamy a automaticky otevíraná okna od dané společnosti nebo že bude daný software odesílat nějaké informace svému vydavateli.  
 
-##  <a name="whats-the-difference-between-endpoint-protection-and-windows-defender"></a>Jaký je rozdíl mezi aplikací Endpoint Protection a programem Windows Defender?  
- Endpoint Protection je antimalwarový software, což znamená, že je určený ke zjišťování přítomnosti široké škály škodlivého softwaru, včetně virů, spywaru a dalšího potenciálně nežádoucího softwaru, a k ochraně před ním. Program Windows Defender automaticky nainstalovaný v operačním systému Windows je software, který zjišťuje přítomnost spywaru a zastavuje jeho činnost.  
-
 ##  <a name="why-doesnt-windows-defender-detect-cookies"></a> Proč program Windows Defender nezjistí soubory cookie?  
  Soubory cookie jsou malé textové soubory, které weby ukládají do vašeho počítače za účelem ukládání informací o vás a vašich předvolbách. Weby používají soubory cookie k tomu, aby vám nabízely přizpůsobené prostředí a shromáždily informace o používání webu. Windows Defender nezjistí soubory cookie, protože je nepovažuje za hrozbu pro vaše osobní údaje nebo zabezpečení vašeho počítače. Většina internetových prohlížečů umožňuje blokovat soubory cookie.  
 
@@ -200,9 +196,8 @@ Pokud chcete rychle a snadno odebrat všechny nežádoucí nebo potenciálně š
 
   Můžete zvolit software a nastavení, které chcete monitorovat pomocí programu Windows Defender, ale doporučujeme vám zapnout ochranu v reálném čase a povolit všechny možnosti ochrany v reálném čase. Následující tabulka obsahuje vysvětlení dostupných možností.  
 
-|||  
-|-|-|  
 |**Možnost ochrany v reálném čase**|**Účel**|  
+|-|-|  
 |Kontrolovat všechny stahované soubory|Tato možnost monitoruje stahované soubory a programy, včetně souborů automaticky stahovaných prostřednictvím aplikací Windows Internet Explorer a Microsoft Outlook® Express, jako jsou ovládací prvky ActiveX® a programy pro instalaci softwaru. Tyto soubory můžete stáhnout, nainstalovat nebo spustit přímo z prohlížeče. Mohou obsahovat škodlivý software, včetně virů, spywaru a dalšího potenciálně nežádoucího softwaru, který se může nainstalovat bez vašeho vědomí.<br /><br /> Pomocí možnosti ochrany v reálném čase program Windows Defender neustále monitoruje váš počítač a vyhledává škodlivé soubory nebo programy, které jste mohli stáhnout. Tato funkce monitorování znamená, že program Windows Defender nemusí zpomalovat práci na internetu nebo s e-maily tím, že by vyžadoval kontrolu souborů nebo programů, které chcete stáhnout.|  
 |Monitorovat v tomto počítači aktivitu programů a souborů|Tato možnost monitoruje spouštění souborů a programů v počítači a upozorní vás na případné akce, které tyto soubory a programy provádějí a ke kterým u nich dochází. Tato funkce je důležitá, protože škodlivý software může využít chyby zabezpečení v programech, které nainstalujete, ke spuštění škodlivého nebo nežádoucího softwaru bez vašeho vědomí. Například když spustíte program, který často používáte, může se na pozadí spustit spyware. Windows Defender monitoruje programy a upozorní vás, pokud zjistí podezřelou aktivitu.|  
 |Povolit monitorování chování|Tato možnost monitoruje sady chování a hledá v nich podezřelé postupy, které nemusí odhalit tradiční metody zjišťování virů.|  

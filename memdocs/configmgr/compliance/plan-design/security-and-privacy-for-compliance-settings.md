@@ -7,15 +7,15 @@ ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
 ms.assetid: 1c409244-6778-4970-a99c-d2508c9cf62b
-author: aczechowski
+author: mestew
 manager: dougeby
-ms.author: aaroncz
-ms.openlocfilehash: eae705b97add7515403549eb668e68f1489d6756
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.author: mstewart
+ms.openlocfilehash: 5021a88966c6c57a3b49a907e14bbe06e28286ff
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81712145"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240637"
 ---
 # <a name="security-and-privacy-for-compliance-settings-in-configuration-manager"></a>Zabezpečení a ochrana osobních údajů pro nastavení dodržování předpisů v Configuration Manager
 

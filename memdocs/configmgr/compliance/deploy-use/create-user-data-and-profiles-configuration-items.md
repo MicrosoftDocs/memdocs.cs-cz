@@ -7,21 +7,21 @@ ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
 ms.assetid: 9fcbcc81-cd6f-496e-b075-ef1afa2b8ccc
-author: aczechowski
+author: mestew
 manager: dougeby
-ms.author: aaroncz
-ms.openlocfilehash: 2a99384772895ff2675ade671076163b74cecee2
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.author: mstewart
+ms.openlocfilehash: 51c97ae3cd947e0bdfa82c595cb6446351412d21
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82075298"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240367"
 ---
 # <a name="create-user-data-and-profiles-configuration-items-in-configuration-manager"></a>Vytvoření položek konfigurace profilů a dat uživatele v Configuration Manager
 
 *Platí pro: Configuration Manager (Current Branch)*
 
-Položky konfigurace profilů a dat uživatele v Configuration Manager obsahují nastavení, která můžou spravovat přesměrování složek, offline soubory a cestovní profily na počítačích se systémem Windows 8 a novějším pro uživatele ve vaší hierarchii. Můžete například provést následující věci:  
+Položky konfigurace profilů a dat uživatele v Configuration Manager obsahují nastavení, která můžou spravovat přesměrování složek, offline soubory a cestovní profily na počítačích se systémem Windows 8 a novějším pro uživatele ve vaší hierarchii. Můžete například:  
 
 - Přesměrujte složku Dokumenty uživatele do sdílené síťové složky.  
 
@@ -37,7 +37,7 @@ Položky konfigurace profilů a dat uživatele v Configuration Manager obsahují
 ## <a name="enable-user-data-and-profiles-for-compliance-settings"></a>Povolení profilů a dat uživatele pro nastavení dodržování předpisů  
  Pomocí následujícího postupu nakonfigurujete výchozí nastavení klienta pro nastavení dodržování předpisů profilů a dat uživatele, které bude platit pro všechny počítače ve vaší hierarchii. Pokud chcete toto nastavení použít jenom pro některé počítače, vytvořte vlastní nastavení klientského zařízení a přiřaďte ho ke kolekci obsahující počítače, pro které chcete použít nastavení dodržování předpisů profilů a dat uživatele. Další informace o tom, jak vytvořit vlastní nastavení zařízení, najdete v tématu [Postup konfigurace nastavení klienta](../../core/clients/deploy/configure-client-settings.md).  
 
-1.  V konzole Configuration Manager klikněte na **Správa** > **Nastavení** > klienta**výchozí nastavení**.  
+1.  V konzole Configuration Manager klikněte na **Správa**  >  **nastavení klienta**  >  **výchozí nastavení**.  
 
 4.  Na kartě **Domů** ve skupině **Vlastnosti** klikněte na možnost **Vlastnosti**.  
 
@@ -49,7 +49,7 @@ Položky konfigurace profilů a dat uživatele v Configuration Manager obsahují
 
 ## <a name="create-a-user-data-and-profiles-configuration-item"></a>Vytvoření položky konfigurace profilů a dat uživatele  
 
-1. V konzole Configuration Manager klikněte na **prostředky a** > dodržování předpisů**Nastavení** > dodržování předpisů**uživatelská data a profily**.  
+1. V konzole Configuration Manager klikněte na **prostředky a**dodržování předpisů  >  **Nastavení dodržování**předpisů  >  **uživatelská data a profily**.  
 
 2. Na kartě **Domů** ve skupině **Vytvořit** klikněte na **Vytvořit uživatelská data a položku konfigurace profilu**.  
 
@@ -86,7 +86,7 @@ Položky konfigurace profilů a dat uživatele v Configuration Manager obsahují
 
 ## <a name="deploy-a-user-data-and-profiles-configuration-item"></a>Nasazení položky konfigurace profilů a dat uživatele  
 
-1.  V konzole Configuration Manager klikněte na **prostředky a** > dodržování předpisů**Nastavení** > dodržování předpisů**uživatelská data a profily**.  
+1.  V konzole Configuration Manager klikněte na **prostředky a**dodržování předpisů  >  **Nastavení dodržování**předpisů  >  **uživatelská data a profily**.  
 
 3.  Vyberte položku konfigurace profilů a dat uživatele, kterou chcete nasadit, a potom na kartě **Domů** ve skupině **Nasazení** klikněte na **Nasadit**.  
 

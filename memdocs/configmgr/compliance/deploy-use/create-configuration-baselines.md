@@ -7,15 +7,15 @@ ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
 ms.assetid: 678c9622-c61b-47d1-ba25-690616e431c7
-author: aczechowski
+author: mestew
 manager: dougeby
-ms.author: aaroncz
-ms.openlocfilehash: 1365aec90093ee24ad967e1d68e7c414b4efa254
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.author: mstewart
+ms.openlocfilehash: 01355230d0dc8969555740cc25a08e0b8d2967d0
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906664"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240469"
 ---
 # <a name="create-configuration-baselines-in-configuration-manager"></a>Vytvoření standardních hodnot konfigurace v Configuration Manager
 
@@ -96,7 +96,7 @@ Pokud chcete jako součást vyhodnocení zásad dodržování předpisů zahrnou
 
 ### <a name="example-evaluation-scenario"></a>Ukázkový scénář pro vyhodnocení
 
-Když je uživatel součástí kolekce, která je cílem zásady dodržování předpisů, která zahrnuje podmínku pravidla, **zahrnuje nakonfigurované směrné plány v hodnocení zásad dodržování předpisů**. všechny směrné plány s vyhodnocením této standardní hodnoty v rámci vybrané možnosti **vyhodnocení zásad dodržování předpisů** , které jsou nasazené pro uživatele nebo zařízení uživatele, se vyhodnocují pro dodržování předpisů. Příklad:
+Když je uživatel součástí kolekce, která je cílem zásady dodržování předpisů, která zahrnuje podmínku pravidla, **zahrnuje nakonfigurované směrné plány v hodnocení zásad dodržování předpisů**. všechny směrné plány s vyhodnocením této standardní hodnoty v rámci vybrané možnosti **vyhodnocení zásad dodržování předpisů** , které jsou nasazené pro uživatele nebo zařízení uživatele, se vyhodnocují pro dodržování předpisů. Například:
 
 - `User1`je součástí `User Collection 1` .
 - `User1`používá `Device1` , který je v `Device Collection 1` a `Device Collection 2` .
