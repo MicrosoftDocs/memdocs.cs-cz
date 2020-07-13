@@ -4,11 +4,17 @@
   items:
     - name: Povolení připojení tenanta
       href: device-sync-actions.md
-    - name: Řešení potíží s akcemi zařízení
-      href: technical-reference.md
+    - name: Podrobnosti o klientovi (Preview)
+      href: client-details.md
 - name: CMPivot pro zařízení připojená k tenantovi (Preview)
   items:
     - name: CMPivot – přehled
       href: cmpivot-overview-attached.md
     - name: CMPivot – ukázkové skripty
       href: cmpivot-samples-attached.md
+- name: Odstraňování potíží
+  items:
+    - name: Připojení tenanta a akce zařízení
+      href: troubleshoot.md
+    - name: Podrobnosti o klientovi (Preview)
+      href: troubleshoot-client-details.md
