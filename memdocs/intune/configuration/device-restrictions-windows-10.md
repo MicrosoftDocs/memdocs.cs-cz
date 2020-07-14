@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/30/2020
+ms.date: 07/13/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3d5da1bcf3f36a909b513665266be1607917f1cd
-ms.sourcegitcommit: 678104677ad36b789630befdc5e0f1efc572c14b
+ms.openlocfilehash: e6304c35d93d717be13a564b5bf5dd2bdc0f84d5
+ms.sourcegitcommit: d56e1c84e687fe18810f3b81e0a0617925fe6044
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86137339"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86303449"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Nastavení zařízení s Windows 10 (a novějším) pro povolení nebo omezení funkcí pomocí Intune
 
@@ -31,7 +31,7 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
 > [!Note]
 > Ne všechny možnosti jsou k dispozici ve všech edicích systému Windows. Pokud chcete zobrazit podporované edice, přečtěte si téma [zásady CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider) (otevře se další web společnosti Microsoft).
 >  
-> Nejbezpečnější nastavení v profilu omezení pro zařízení s Windows 10 se nasazují na úrovni zařízení. Zásady, které se nasazují do skupin uživatelů, začnou platit pro cílového uživatele i všechny další uživatele, kteří se následně přihlásí k tomuto zařízení a mají licenci Intune.
+> V profilu omezení zařízení s Windows 10 se většina konfigurovatelných nastavení nasadí na úrovni zařízení pomocí skupin zařízení. Zásady nasazené do skupin uživatelů se vztahují na cílové uživatele a vztahují se na uživatele, kteří mají licenci Intune, a přihlaste se k tomuto zařízení.
 
 ## <a name="before-you-begin"></a>Než začnete
 

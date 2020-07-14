@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/01/2020
+ms.date: 07/13/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2cc40eb4a8b094cd933a6bb3f4f8c7fdae927f7b
-ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
+ms.openlocfilehash: 8a1ed521067548f43dbcdca3dcbbf7455f255adf
+ms.sourcegitcommit: 6e9375afc0ba21893f51a40cce16d03a8ed21038
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84270887"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86285279"
 ---
 # <a name="troubleshoot-app-installation-issues"></a>Řešení problémů s instalací aplikací
 
@@ -119,6 +119,9 @@ Mezi typy aplikací, které jsou podporované na zařízeních ARM64, patří n�
 - Mobilní aplikace pro Mobile MSI
 - Aplikace Win32 s pravidlem požadavku 32-bit.
 - Aplikace Windows Office Klikni a spusť, pokud je zvolená možnost 32-bit nebo architektura x86.
+
+> [!NOTE]
+> K lepšímu rozpoznávání ARM64 aplikací v Portál společnosti zvažte přidání **ARM64** do názvu vašich aplikací pro ARM64. 
 
 ## <a name="troubleshooting-apps-from-the-microsoft-store"></a>Řešení problémů s aplikacemi z Microsoft Storu
 

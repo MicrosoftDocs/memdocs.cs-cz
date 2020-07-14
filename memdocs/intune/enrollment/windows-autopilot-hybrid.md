@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: be9a4257fec357c3dc124318fda98807df6c26b7
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: c26af63691fc4b198d308f39a7c1cc0d719933cb
+ms.sourcegitcommit: 6e9375afc0ba21893f51a40cce16d03a8ed21038
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093488"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86285296"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot"></a>Nasazení hybridních zařízení připojených k Azure AD pomocí Intune a automatického pilotního projektu Windows
 Pomocí Intune a Windows autopilotu můžete nastavit zařízení připojená k hybridnímu Azure Active Directory (Azure AD). Pokud to chcete provést, postupujte podle kroků v tomto článku.
@@ -35,7 +35,7 @@ Pomocí Intune a Windows autopilotu můžete nastavit zařízení připojená k 
 Zařízení, která chcete zaregistrovat, musí:
 - S Windows 10 v1809 nebo novějším.
 - Musí mít přístup k Internetu podle [dokumentovaných požadavků na síť Windows autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot-requirements#networking-requirements).
-- Mít přístup k řadiči domény služby Active Directory, musí být připojený k síti organizace (kde může přeložit záznamy DNS pro doménu AD a řadič domény služby AD) a komunikovat s řadičem domény za účelem ověření uživatele. Připojení VPN se v tuto chvíli nepodporuje.
+- Mít přístup k řadiči domény služby Active Directory, musí být připojený k síti organizace (kde může přeložit záznamy DNS pro doménu AD a řadič domény služby AD) a komunikovat s řadičem domény za účelem ověření uživatele.
 - Být schopné testovat řadič domény domény, ke které se pokoušíte připojit.
 - Pokud používáte proxy server, musí být povolená a nakonfigurovaná možnost nastavení proxy serveru WPAD.
 - Absolvujte integrované prostředí (OOBE).
@@ -96,7 +96,7 @@ Organizační jednotka, která má udělena práva k vytváření počítačů, 
 
     ![Podokno typu objektu služby Active Directory](./media/windows-autopilot-hybrid/only-following-objects.png)
     
-1. Vyberte **Další**.
+1. Vyberte **Next** (Další).
 
 1. V části **oprávnění**zaškrtněte políčko **Úplné řízení** .  
     Tato akce vybere všechny ostatní možnosti.
@@ -188,14 +188,14 @@ Profily nasazení Autopilotu slouží ke konfiguraci zařízení s AutoPilotem.
 1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení**  >  **Windows**  >  **Windows enrollment**  >  **profily nasazení**registrace Windows Windows  >  **vytvořit profil**.
 2. Na stránce **základy** zadejte **název** a volitelný **Popis**.
 3. Pokud chcete, aby se všechna zařízení v přiřazených skupinách automaticky převedla na Autopilot, nastavte možnost **Převést všechna cílová zařízení na Autopilot** na **Ano**. Všechna vlastněná podniková zařízení, která nejsou v přiřazených skupinách, se budou registrovat v rámci služby nasazení autopilotu. Zařízení v osobním vlastnictví nebudou převedena na autopilot. Vyřízení registrace trvá 48 hodin. Jakmile bude registrace zařízení zrušena a zařízení bude resetováno, Autopilot ho zaregistruje. Jakmile se zařízení tímto způsobem zaregistruje, nedojde zakázáním této možnosti ani odebráním přiřazení profilu k odebrání zařízení ze služby nasazení Autopilot. [Zařízení musíte odebrat přímo](enrollment-autopilot.md#delete-autopilot-devices).
-4. Vyberte **Další**.
+4. Vyberte **Next** (Další).
 5. Na stránce spouštěné při **prvním spuštění počítače (OOBE)** pro **režim nasazení**vyberte možnost **řízeno uživatelem**.
 6. V poli **připojit ke službě Azure AD** vyberte možnost **připojené k hybridní službě Azure AD**.
 7. Pokud nasazujete zařízení ze sítě organizace s využitím podpory sítě VPN, nastavte možnost **Přeskočit možnosti připojení k doméně** na **Ano**.  Další informace najdete v tématu [režim založený na uživateli pro hybridní Azure Active Directory připojení k síti VPN](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven#user-driven-mode-for-hybrid-azure-active-directory-join-with-VPN-support) .
 8. Podle potřeby konfigurujte zbývající možnosti na stránce s **počátečním prostředím (OOBE)** .
-9. Vyberte **Další**.
+9. Vyberte **Next** (Další).
 10. Na stránce **značky oboru** vyberte [značky oboru](../fundamentals/scope-tags.md) pro tento profil.
-11. Vyberte **Další**.
+11. Vyberte **Next** (Další).
 12. Na stránce **přiřazení** vyberte **možnost vybrat skupiny, které chcete zahrnout** > hledání, a vyberte skupinu zařízení > **Vybrat**.
 13. Vyberte **Další**  >  **vytvořit**.
 

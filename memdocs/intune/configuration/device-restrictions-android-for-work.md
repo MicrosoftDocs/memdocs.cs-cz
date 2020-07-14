@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/16/2020
+ms.date: 07/13/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 88843cfa1c4f98d87e5eaaefdc0dcd87daf8cb68
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 7aee865b2a16ce3a9114433f9e10e185b26997f7
+ms.sourcegitcommit: d56e1c84e687fe18810f3b81e0a0617925fe6044
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093710"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86303466"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Nastavení zařízení s Androidem Enterprise pro povolení nebo omezení funkcí pomocí Intune
 
@@ -89,7 +89,7 @@ Tato nastavení se vztahují na typy registrace Androidu Enterprise, kde Intune 
 
 ### <a name="device-experience"></a>Prostředí zařízení
 
-Pomocí těchto nastavení můžete nakonfigurovat možnosti veřejného terminálu na vyhrazených zařízeních nebo plně spravovaných zařízeních. Můžete nakonfigurovat zařízení tak, aby spouštěla jednu aplikaci nebo spouštěla spoustu aplikací. Když je zařízení nastavené s beznabídkovým režimem, k dispozici jsou jenom aplikace, které přidáte.
+Pomocí těchto nastavení můžete nakonfigurovat možnosti veřejného terminálu na vyhrazených zařízeních nebo si můžete přizpůsobit prostředí domovské obrazovky na plně spravovaných zařízeních. Můžete nakonfigurovat zařízení tak, aby spouštěla jednu aplikaci nebo spouštěla spoustu aplikací. Když je zařízení nastavené s beznabídkovým režimem, k dispozici jsou jenom aplikace, které přidáte.
 
 **Typ profilu registrace**: Vyberte typ profilu registrace a začněte konfigurovat spouštěč Microsoftu nebo domovskou obrazovku Microsoft spravované na vašich zařízeních. Možnosti:
 
@@ -279,7 +279,7 @@ End of comment -->
   - **Jenom Wi-Fi**: aktualizace se nainstalují jenom v případě, že je zařízení připojené k síti Wi-Fi.
   - **Always**: aktualizace se instalují, když jsou k dispozici.
 
-### <a name="connectivity"></a>Připojení
+### <a name="connectivity"></a>Možnosti připojení
 
 - **Vždy zapnutá síť VPN**: **možnost Povolit** nastaví klienta VPN tak, aby se automaticky připojoval a znovu připojil k síti VPN. Připojení k síti VPN Always On zůstane připojené. Nebo se okamžitě připojí, když uživatelé uzamkne zařízení, dojde k restartování zařízení nebo ke změně bezdrátové sítě.
 
@@ -443,7 +443,7 @@ Tato nastavení hesla platí pro osobní profily na zařízeních, která použ�
   - Pracovní profil spravovaný pomocí MDM.
   - Osobní profil, který je izolovaný od správy MDM.
 
-### <a name="connectivity"></a>Připojení
+### <a name="connectivity"></a>Možnosti připojení
 
 - **Vždycky zapnutá síť VPN**: **Povolit** nastaví klienta VPN tak, aby se automaticky připojoval a znovu připojil k síti VPN. Připojení k síti VPN Always On zůstane připojené. Nebo se okamžitě připojí, když uživatelé uzamkne zařízení, dojde k restartování zařízení nebo ke změně bezdrátové sítě.
 

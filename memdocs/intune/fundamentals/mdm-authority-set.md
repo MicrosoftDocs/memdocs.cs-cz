@@ -17,11 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9b0fab472f9bef682666d743c8a53b1308f32b40
-ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
+ms.openlocfilehash: 974636ae787be0d454cc3a4fea98832aa4400c7c
+ms.sourcegitcommit: d56e1c84e687fe18810f3b81e0a0617925fe6044
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86022428"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86303483"
 ---
 # <a name="set-the-mobile-device-management-authority"></a>Nastavení autority pro správu mobilních zařízení
 
@@ -41,12 +42,14 @@ Možné konfigurace:
 
 ## <a name="set-mdm-authority-to-intune"></a>Nastavení autority MDM na Intune
 
-Pokud jste ještě nenastavili autoritu MDM, proveďte postup uvedený níže.
+Pro klienty používající verzi 1911 a novější se Autorita MDM automaticky nastaví do Intune.
+
+Pokud jste ještě nestavili autoritu pro správu mobilních zařízení (MDM) pro klienty verze pre-1911, postupujte podle následujících kroků.
 
 1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte oranžový banner a otevřete nastavení **autority pro správu mobilních zařízení** . Oranžová informační zpráva se zobrazí jenom v případě, že jste autoritu MDM ještě nenastavili.
 2. V oblasti **Autorita pro správu mobilních zařízení** zvolte některou autoritu MDM z následujících možností:
    - **Autorita MDM Intune**
-   - **Žádné**
+   - **Žádný**
 
    ![Snímek obrazovky Intune s nastavením autority pro správu mobilních zařízení](./media/mdm-authority-set/set-mdm-auth.png)
 

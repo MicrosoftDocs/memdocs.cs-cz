@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/08/2020
+ms.date: 07/13/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2a0e211a5cea6296f944cda517ecb6fd591291b8
-ms.sourcegitcommit: 678104677ad36b789630befdc5e0f1efc572c14b
+ms.openlocfilehash: d2c3e663b7bc5dfb263d8caad0a7c21d89ed2a93
+ms.sourcegitcommit: d56e1c84e687fe18810f3b81e0a0617925fe6044
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86137404"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86303432"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>nastavení zařízení s iOS a iPadOS pro povolení nebo omezení funkcí pomocí Intune
 
@@ -418,7 +418,7 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
 - **Typ seznamu omezených aplikací**: vytvoří seznam aplikací, které uživatelé nemůžou instalovat ani používat. Možnosti:
 
   - **Nenakonfigurováno** (výchozí): Intune toto nastavení nemění ani neaktualizuje. Ve výchozím nastavení může operační systém umožňovat přístup k aplikacím, které přiřadíte, a integrovaným aplikacím.
-  - **Zakázané aplikace**: seznam aplikací (nespravovaných pomocí Intune), které uživatelé nemůžou instalovat a spouštět. Uživatelům není instalace zakázané aplikace znemožněna. Pokud uživatel z tohoto seznamu nainstaluje aplikaci, nahlásí se v Intune.
+  - **Zakázané aplikace**: seznam aplikací (nespravovaných pomocí Intune), které uživatelé nemůžou instalovat a spouštět. Uživatelům není instalace zakázané aplikace znemožněna. Pokud uživatel z tohoto seznamu nainstaluje aplikaci, zařízení se nahlásí v sestavě **zařízení s omezenými aplikacemi** (zařízení[centra pro správu Správce koncových bodů](https://go.microsoft.com/fwlink/?linkid=2109431)  >  **Devices**  >  **monitorují**  >  **zařízení s omezenými aplikacemi**). 
   - **Schválené aplikace**: seznam aplikací, které můžou uživatelé instalovat. Aby bylo možné zachovat dodržování předpisů, uživatelé nesmí instalovat jiné aplikace. Aplikace spravované přes Intune se automaticky povolují, včetně aplikace Portál společnosti. Uživatelům není znemožněna instalace aplikace, která není na seznamu schválených. Pokud tomu tak je, nahlásí se v Intune.
 
 Pokud chcete do těchto seznamů přidat aplikace, můžete:
@@ -623,15 +623,17 @@ Pokud chcete přidat aplikace, můžete:
 
 Pomocí těchto nastavení můžete nakonfigurovat zařízení s iOS/iPadOS, aby spouštěla konkrétní aplikace v autonomním režimu jedné aplikace (ASAM). Když je tento režim nakonfigurovaný a uživatelé spouštějí jednu z nakonfigurovaných aplikací, zařízení je do této aplikace uzamčené. Přepínání aplikace nebo úlohy je zakázané, dokud uživatelé neukončí povolenou aplikaci.
 
+Aby se mohla konfigurace ASAM použít, uživatelé musí ručně otevřít konkrétní aplikaci. Tato úloha se vztahuje také na Portál společnosti aplikaci.
+
 - Například ve škole nebo univerzitním prostředí přidejte aplikaci, která umožní uživatelům provést test na zařízení. Nebo zařízení uzamkněte do aplikace Portál společnosti, dokud se uživatel neověří. Pokud jsou akce aplikace dokončené uživateli nebo pokud tuto zásadu odeberete, zařízení se vrátí do normálního stavu.
 
 - Ne všechny aplikace podporují autonomní režim jedné aplikace. K umístění aplikace v autonomním režimu jedné aplikace se obvykle vyžadují ID sady prostředků nebo dvojice klíč-hodnota, které jsou poskytovány zásadami konfigurace aplikace. Další informace najdete v části [ `autonomousSingleAppModePermittedAppIDs` omezení](https://developer.apple.com/documentation/devicemanagement/restrictions) v dokumentaci k MDM společnosti Apple. Další informace o konkrétním nastavení požadovaném pro aplikaci, kterou konfigurujete, najdete v dokumentaci od dodavatele.
 
   Pokud třeba chcete nakonfigurovat místnosti lupy v autonomním režimu jedné aplikace, přiblížením říkáte, že se má použít `us.zoom.zpcontroller` ID sady prostředků. V této instanci provedete také změnu webového portálu zoom. Další informace najdete v centru pro [nápovědu lupy](https://support.zoom.us/hc/articles/360021322632-Autonomous-Single-App-Mode-for-Zoom-Rooms-with-a-Third-Party-MDM).
 
-- V zařízeních se systémem iOS/iPadOS podporuje aplikace Portál společnosti ASAM. Když je aplikace Portál společnosti v ASAM, zařízení je v aplikaci Portál společnosti uzamčené, dokud se uživatel neověří. Když se uživatelé přihlásí k aplikaci Portál společnosti, můžou na zařízení používat jiné aplikace a tlačítko na domovské obrazovce. Když se odhlásí z aplikace Portál společnosti, zařízení se vrátí do režimu jedné aplikace a zamkne se v Portál společnosti aplikaci.
+- V zařízeních se systémem iOS/iPadOS podporuje aplikace Portál společnosti ASAM. Když je aplikace Portál společnosti v ASAM, uživatelé musí aplikaci Portál společnosti otevřít ručně. Zařízení je pak uzamčené v aplikaci Portál společnosti, dokud se uživatel neověří. Když se uživatelé přihlásí k aplikaci Portál společnosti, můžou na zařízení používat jiné aplikace a tlačítko na domovské obrazovce. Když se odhlásí z aplikace Portál společnosti, zařízení se vrátí do režimu jedné aplikace a zamkne se v Portál společnosti aplikaci.
 
-  Pokud chcete aplikaci Portál společnosti převést do aplikace pro přihlášení a odhlášení (Povolit ASAM), zadejte do těchto nastavení název Portál společnosti aplikace, jako `Microsoft Intune Company Portal` je, a ID sady ( `com.microsoft.CompanyPortal` ). Po přiřazení tohoto profilu musíte otevřít aplikaci Portál společnosti, abyste aplikaci zamkli, aby se uživatelé mohli přihlašovat a odhlásit.
+  Pokud chcete aplikaci Portál společnosti převést do aplikace pro přihlášení a odhlášení (Povolit ASAM), zadejte do těchto nastavení název Portál společnosti aplikace, jako `Microsoft Intune Company Portal` je, a ID sady ( `com.microsoft.CompanyPortal` ). Po přiřazení tohoto profilu musíte otevřít aplikaci Portál společnosti, abyste aplikaci zamkli, aby se uživatelé mohli přihlašovat a odhlásit. Aby se konfigurace ASAM mohla použít, musí uživatelé aplikaci Portál společnosti otevřít ručně.
   
   Když se odebere konfigurační profil zařízení a uživatel se odhlásí, zařízení není v aplikaci Portál společnosti uzamčené.
 
