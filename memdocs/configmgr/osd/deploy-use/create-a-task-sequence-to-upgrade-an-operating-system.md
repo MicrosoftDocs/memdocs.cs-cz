@@ -2,7 +2,7 @@
 title: Vytvoření pořadí úkolů při upgradu operačního systému
 titleSuffix: Configuration Manager
 description: Použití pořadí úkolů k automatickému upgradu ze systému Windows 7 nebo novějšího na Windows 10
-ms.date: 07/26/2019
+ms.date: 07/13/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 7591e386-a9ab-4640-8643-332dce5aa006
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6ad36978f3f3dc5207068a65d76bf8f5c7c3078c
-ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
+ms.openlocfilehash: 84e6ea21f2bb9627ae6b40c62f8f856fb426bdaf
+ms.sourcegitcommit: 488db8a6ab272f5d639525d70718145c63d0de8f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85383236"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86384888"
 ---
 # <a name="create-a-task-sequence-to-upgrade-an-os-in-configuration-manager"></a>Vytvoření pořadí úkolů pro upgrade operačního systému v Configuration Manager
 
@@ -63,7 +63,7 @@ Chcete-li upgradovat operační systém na klientských počítačích, vytvořt
 
     - **Index edice**: Pokud je v balíčku k dispozici více indexů OS Edition, vyberte požadovaný index edice. Ve výchozím nastavení Průvodce vybere první index.  
 
-    - **Kód Product Key**: zadejte kód Product Key systému Windows pro operační systém, který chcete nainstalovat. Zadejte kódované klíče multilicencí nebo standardní kódy Product Key. Použijete-li standardní kód Product Key, oddělte každou skupinu pěti znaky pomlčkou ( `-` ). Příklad: `XXXXX-XXXXX-XXXXX-XXXXX-XXXXX`. Pokud je upgrade pro multilicenční edici, nemusí se kód Product Key vyžadovat.  
+    - **Kód Product Key**: zadejte kód Product Key systému Windows pro operační systém, který chcete nainstalovat. Zadejte kódované klíče multilicencí nebo standardní kódy Product Key. Použijete-li standardní kód Product Key, oddělte každou skupinu pěti znaky pomlčkou ( `-` ). Například: `XXXXX-XXXXX-XXXXX-XXXXX-XXXXX`. Pokud je upgrade pro multilicenční edici, nemusí se kód Product Key vyžadovat.  
 
         > [!Note]  
         > Tento kód Product Key může být klíč k vícenásobné aktivaci (MAK) nebo obecný multilicenční klíč (GVLK). GVLK se také označuje jako klíč pro nastavení klienta služby správy klíčů (KMS). Další informace najdete v tématu [plánování aktivace multilicence](https://docs.microsoft.com/windows/deployment/volume-activation/plan-for-volume-activation-client). Seznam klíčů pro instalaci klienta služby správy klíčů najdete v [příloze a](https://docs.microsoft.com/windows-server/get-started/kmsclientkeys) v příručce k aktivaci Windows serveru.
@@ -124,7 +124,7 @@ Pokud vrátí všechny výsledky, zařízení běží na Wi-Fi. V opačném př�
 
 Do této skupiny přidejte kroky, pokud chcete odebrat všechny aplikace, které nejsou kompatibilní s touto verzí Windows 10. Způsob odinstalace aplikace se liší.  
 
-Pokud aplikace používá Instalační služba systému Windows, zkopírujte příkazový řádek **odinstalačního programu** na kartě **programy** v části vlastnosti typu nasazení Instalační služba systému Windows aplikace. Pak v této skupině přidejte krok **Spustit příkazový** řádek pomocí příkazového řádku Uninstall program. Například:
+Pokud aplikace používá Instalační služba systému Windows, zkopírujte příkazový řádek **odinstalačního programu** na kartě **programy** v části vlastnosti typu nasazení Instalační služba systému Windows aplikace. Pak v této skupině přidejte krok **Spustit příkazový** řádek pomocí příkazového řádku Uninstall program. Příklad:
 
 `msiexec /x {150031D8-1234-4BA8-9F52-D6E5190D1CBA} /q`  
 
@@ -253,13 +253,17 @@ Pro opakované stažení zásad použijte [proměnnou pořadí úloh](../underst
 
     `cmd /c exit %_SMSTSOSUpgradeActionReturnCode%`
 
+    Tento příkaz způsobí, že se příkazový řádek ukončí se zadaným nenulovým ukončovacím kódem, který pořadí úkolů posuzuje selhání.
+
 1. Na kartě **Možnosti** přidejte následující podmínku:
 
     `Task Sequence Variable _SMSTSOSUpgradeActionReturnCode not equals 3247440400`
 
-Tento návratový kód je desítkovým ekvivalentem MOSETUP_E_COMPAT_SCANONLY (0xC1900210), což je úspěšná kontrola kompatibility bez problémů. Pokud krok *posouzení upgradu* uspěje a vrátí tento kód, pořadí úkolů tento krok přeskočí. V opačném případě, pokud krok vyhodnocení vrátí jiný návratový kód, tento krok pořadí úkolů neprojde návratovým kódem z kontroly kompatibility instalační program systému Windows. Další informace o **_SMSTSOSUpgradeActionReturnCode**najdete v tématu [proměnné pořadí úkolů](../understand/task-sequence-variables.md#SMSTSOSUpgradeActionReturnCode).
+    Tato podmínka znamená, že pořadí úkolů spustí tento krok **Spustit** pouze v případě, že návratový kód není kód úspěchu.
 
-Další informace najdete v tématu [upgrade operačního systému](../understand/task-sequence-steps.md#BKMK_UpgradeOS).  
+Návratový kód `3247440400` je desítková ekvivalent MOSETUP_E_COMPAT_SCANONLY (0xC1900210), což je úspěšná kontrola kompatibility bez problémů. Pokud krok *posouzení upgradu* uspěje a vrátí `3247440400` , pořadí úkolů tento krok **Spustit příkazového řádku** přeskočí a pokračuje. Pokud krok vyhodnocení vrátí jiný návratový kód, spustí se tento krok **spuštění příkazového řádku** . Vzhledem k tomu, že se příkaz ukončí s nenulovým návratovým kódem, pořadí úkolů se také nezdařilo. Protokol sekvence úloh a stavové zprávy obsahují návratový kód z kontroly kompatibility instalační program systému Windows. Další informace o **_SMSTSOSUpgradeActionReturnCode**najdete v tématu [proměnné pořadí úkolů](../understand/task-sequence-variables.md#SMSTSOSUpgradeActionReturnCode).
+
+Další informace najdete v kroku pořadí úkolů [upgradovat operační systém](../understand/task-sequence-steps.md#BKMK_UpgradeOS) .
 
 ### <a name="convert-from-bios-to-uefi"></a>Převod ze systému BIOS na rozhraní UEFI
 

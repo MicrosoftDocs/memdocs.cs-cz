@@ -2,7 +2,7 @@
 title: Verze Technical Preview
 titleSuffix: Configuration Manager
 description: Přečtěte si o větvi Technical Preview, která vám umožní testovat nové funkce a funkce v Configuration Manager.
-ms.date: 06/25/2020
+ms.date: 07/14/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5dfa3b33a46166cfa4e1233eb71125696f5aa39d
-ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
+ms.openlocfilehash: 64e784ec7313dfa778ee39f6e1f52e7c09fcfd95
+ms.sourcegitcommit: 488db8a6ab272f5d639525d70718145c63d0de8f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85383134"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86384821"
 ---
 # <a name="technical-preview-for-configuration-manager"></a>Technical Preview pro Configuration Manager
 
@@ -91,9 +91,10 @@ Microsoft podporuje každou verzi Technical Preview až do doby, kdy jsou k disp
 
 ### <a name="active-baseline-versions"></a>Aktivní základní verze
 
-Nainstalujte základní verzi po dobu až jednoho roku po jejím vydání. Při instalaci nového webu Technical Preview použijte nejnovější základní verzi.
+Nainstalujte základní verzi po dobu až jednoho roku po jejím vydání. Při instalaci nového webu Technical Preview použijte nejnovější základní verzi. Následující verze Configuration Manager verze Technical Preview jsou k dispozici jako konzolové aktualizace i jako nové základní verze:
 
-- **Technical Preview verze 2002**: větev Configuration Manager Technical preview verze 2002 je k dispozici jako aktualizace v konzole i jako nová základní verze.
+- **Technical Preview verze 2007**
+- **Technical Preview verze 2002**
 
 Stáhněte si základní verzi z [centra hodnocení](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview).
 
@@ -116,25 +117,17 @@ Enable this section if needed to include any broad change to the tech preview br
 This is the full list of new features in the latest TP release
 
 bullet format:
-<!-- - [title](2020/technical-preview-2006.md) <!--ID-->
+<!-- - [title](2020/technical-preview-2007.md) <!--ID-->
 
 V nejnovější verzi Configuration Manager Technical Preview jsou k dispozici následující funkce:
 
-### <a name="technical-preview-version-2006"></a>Technical Preview verze 2006
+### <a name="technical-preview-version-2007"></a>Technical Preview verze 2007
 
-- [Použití Portál společnosti aplikace na spoluspravovaných zařízeních](2020/technical-preview-2006.md#bkmk_portal) <!--3601237-->
-- [Vylepšení dostupných aplikací prostřednictvím CMG](2020/technical-preview-2006.md#bkmk_availapp) <!--7033501-->
-- [Intranetové klienty můžou používat CMG bod aktualizace softwaru.](2020/technical-preview-2006.md#bkmk_cmg-sup) <!--7102873-->
-- [Vylepšení pořadí úloh prostřednictvím CMG](2020/technical-preview-2006.md#bkmk_osdcmg) <!--6983320-->
-- [Přehledy správy pro optimalizaci pro vzdálené pracovníky](2020/technical-preview-2006.md#bkmk_wfhmi) <!--6982226-->
-- [Vylepšení typu hranice sítě VPN](2020/technical-preview-2006.md#bkmk_vpn) <!--7020519-->
-- [Připojení tenanta: vylepšení Configuration Manager akcí v centru pro správu Microsoft Endpoint Manageru](2020/technical-preview-2006.md#bkmk_apps) <!--7518897-->
-- [Podpora CMG pro zásady ochrany koncových bodů](2020/technical-preview-2006.md#bkmk_epcmg) <!--4773948-->
-- [Importovat dřív vytvořenou aplikaci Azure AD během připojování klienta](2020/technical-preview-2006.md#bkmk_aad-app) <!--6479246-->
-- [Vylepšení upgradu klienta na připojení účtované podle objemu dat](2020/technical-preview-2006.md#bkmk_meter) <!--6976145-->
-- [Vylepšení správy restartování zařízení](2020/technical-preview-2006.md#bkmk_restart) <!--3601213-->
-- [Vylepšená podpora pro virtuální počítače s Windows](2020/technical-preview-2006.md#bkmk_wvd) <!--6527576-->
-- [Přímé odkazy na Configuration Manager položky centra komunity](2020/technical-preview-2006.md#bkmk_deeplink) <!--4224406-->
+- [Připojení tenanta: zobrazení inventáře hardwaru v centru pro správu Microsoft Endpoint Manageru](2020/technical-preview-2007.md#bkmk_mem) <!--6479284-->
+- [Vylepšení řídicího panelu zdrojů dat klienta](2020/technical-preview-2007.md#bkmk_content) <!--7102084-->
+- [V některých oblastech konzoly se teď používá písmo s pevnou šířkou.](2020/technical-preview-2007.md#bkmk_font) <!--7632637-->
+- [Správa velikosti zásad pořadí úloh](2020/technical-preview-2007.md#bkmk_tspol) <!--6888853-->
+- [Vylepšení časové osy zařízení v centru pro správu](2020/technical-preview-2007.md#bkmk_timeline)<!--7141381-->
 
 > [!NOTE]
 > Funkce, které byly k dispozici v předchozí verzi Technical Preview, zůstávají dostupné v novějších verzích. Podobně funkce, které jsou přidány do Configuration Manager aktuální větve, zůstávají dostupné ve větvi Technical Preview.
@@ -151,6 +144,22 @@ Následující funkce byly vydány s předchozími verzemi větve Configuration 
 
 > [!TIP]
 > Když je k dispozici nová verze aktuální větve, funkce, které jsou v této verzi k dispozici, jsou uvedeny v článku *co je nového* . Další informace najdete v tématu [co je nového v přírůstkových verzích](../plan-design/changes/whats-new-incremental-versions.md#supported-versions).
+
+### <a name="technical-preview-version-2006"></a>Technical Preview verze 2006
+
+- [Použití Portál společnosti aplikace na spoluspravovaných zařízeních](2020/technical-preview-2006.md#bkmk_portal) <!--3601237-->
+- [Vylepšení dostupných aplikací prostřednictvím CMG](2020/technical-preview-2006.md#bkmk_availapp) <!--7033501-->
+- [Intranetové klienty můžou používat CMG bod aktualizace softwaru.](2020/technical-preview-2006.md#bkmk_cmg-sup) <!--7102873-->
+- [Vylepšení pořadí úloh prostřednictvím CMG](2020/technical-preview-2006.md#bkmk_osdcmg) <!--6983320-->
+- [Přehledy správy pro optimalizaci pro vzdálené pracovníky](2020/technical-preview-2006.md#bkmk_wfhmi) <!--6982226-->
+- [Vylepšení typu hranice sítě VPN](2020/technical-preview-2006.md#bkmk_vpn) <!--7020519-->
+- [Připojení tenanta: vylepšení Configuration Manager akcí v centru pro správu Microsoft Endpoint Manageru](2020/technical-preview-2006.md#bkmk_apps) <!--7518897-->
+- [Podpora CMG pro zásady ochrany koncových bodů](2020/technical-preview-2006.md#bkmk_epcmg) <!--4773948-->
+- [Importovat dřív vytvořenou aplikaci Azure AD během připojování klienta](2020/technical-preview-2006.md#bkmk_aad-app) <!--6479246-->
+- [Vylepšení upgradu klienta na připojení účtované podle objemu dat](2020/technical-preview-2006.md#bkmk_meter) <!--6976145-->
+- [Vylepšení správy restartování zařízení](2020/technical-preview-2006.md#bkmk_restart) <!--3601213-->
+- [Vylepšená podpora pro virtuální počítače s Windows](2020/technical-preview-2006.md#bkmk_wvd) <!--6527576-->
+- [Přímé odkazy na Configuration Manager položky centra komunity](2020/technical-preview-2006.md#bkmk_deeplink) <!--4224406-->
 
 ### <a name="technical-preview-version-2005"></a>Technical Preview verze 2005
 

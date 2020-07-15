@@ -2,7 +2,7 @@
 title: AlwaysOn SQL Serveru
 titleSuffix: Configuration Manager
 description: Plánování použití skupiny dostupnosti Always On SQL Server s Configuration Manager
-ms.date: 07/26/2019
+ms.date: 07/13/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 58d52fdc-bd18-494d-9f3b-ccfc13ea3d35
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 576f909be15a35f4c29e803236c220cdde33c0ac
-ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
+ms.openlocfilehash: 9ce8c10d9d59d97caa53ece12dd43d90c78546bb
+ms.sourcegitcommit: 488db8a6ab272f5d639525d70718145c63d0de8f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85383151"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86384838"
 ---
 # <a name="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager"></a>Příprava na používání skupin dostupnosti Always On SQL Server s Configuration Manager
 
@@ -85,7 +85,7 @@ Každá instance SQL Server může běžet pod účtem uživatele domény (**ú�
 - Další informace najdete v tématu [Vytvoření koncového bodu zrcadlení databáze pro skupiny dostupnosti Always On](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell).  
 
 
-### <a name="database"></a>Databáze
+### <a name="database"></a>databáze
 
 #### <a name="configure-the-database-on-a-new-replica"></a>Konfigurace databáze na nové replice
 
@@ -247,6 +247,9 @@ Každý člen repliky musí mít následující konfiguraci:
 #### <a name="replica-member-location"></a>Umístění člena repliky
 
 Buď můžete hostovat všechny repliky ve skupině dostupnosti místně, nebo je hostovat na Microsoft Azure. Skupina, která obsahuje místního člena a člena v Azure, se nepodporuje.
+
+> [!NOTE]
+> Pokud pro SQL Server používáte virtuální počítač Azure, povolte **plovoucí IP adresu**. Další informace najdete v tématu [Konfigurace nástroje pro vyrovnávání zatížení pro skupinu dostupnosti Always On SQL Server ve virtuálních počítačích Azure](https://docs.microsoft.com/azure/azure-sql/virtual-machines/windows/availability-group-load-balancer-portal-configure).<!-- SCCMDocs#1928 -->
 
 Configuration Manager instalační program se musí připojit ke každé replice. Když nastavíte skupinu dostupnosti v Azure a skupina je za interním nebo externím nástrojem pro vyrovnávání zatížení, otevřete následující výchozí porty:
 

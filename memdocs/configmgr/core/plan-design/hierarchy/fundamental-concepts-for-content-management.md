@@ -2,7 +2,7 @@
 title: Správa obsahu – základy
 titleSuffix: Configuration Manager
 description: Pro správu obsahu, který nasazujete, použijte nástroje a možnosti v Configuration Manager.
-ms.date: 12/17/2019
+ms.date: 07/13/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c201be2a-692c-4d67-ac95-0a3afa5320fe
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ffd6487297bb682ef9bda7c5bf5ee9cb3beede15
-ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
+ms.openlocfilehash: d8f29ed1e3201da139daeaa1fadca739ff44dc8e
+ms.sourcegitcommit: 488db8a6ab272f5d639525d70718145c63d0de8f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85590452"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86384940"
 ---
 # <a name="fundamental-concepts-for-content-management-in-configuration-manager"></a>Základní koncepty správy obsahu v nástroji Configuration Manager
 
@@ -85,7 +85,7 @@ Následující seznam shrnuje rozdíly mezi *binární rozdílovou replikací* (
 - Rozdíly na úrovni *bloku*
 - Vždy povoleno pro aplikace
 - Volitelné na starších verzích balíčků
-- Pokud soubor již v distribučním bodě existuje a dojde ke změně, lokalita používá binární ROZDÍLOVÁ replikace k replikaci změn na úrovni bloku místo celého souboru.
+- Pokud soubor již v distribučním bodě existuje a dojde ke změně, lokalita používá binární ROZDÍLOVÁ replikace k replikaci změn na úrovni bloku místo celého souboru. Toto chování platí pouze v případě, že povolíte objektu použití binární ROZDÍLOVÁ replikace.<!-- SCCMDocs#2026 -->
 
 #### <a name="summary-of-delta-replication"></a>Shrnutí rozdílové replikace
 
@@ -110,13 +110,13 @@ K porovnání hlavních funkcí těchto technologií použijte následující ta
 
 | Funkce  | Sdílená &nbsp; mezipaměť  | &nbsp;Optimalizace doručení  | Služba BranchCache  |
 |---------|---------|---------|---------|
-| V různých podsítích | Ano | Ano | Ne |
+| V různých podsítích | Ano | Ano | No |
 | Omezení šířky pásma | Ano (bity) | Ano (nativní) | Ano (bity) |
 | Částečný obsah | Ano | Ano | Ano |
 | Velikost mezipaměti ovládacího prvku na disku | Ano | Ano | Ano |
 | Zjišťování zdrojů partnerského vztahu | Ruční (nastavení klienta) | Automaticky | Automaticky |
 | Rovnocenné zjišťování | Přes bod správy používající skupiny hranic | DO cloudové služby | To |
-| Generování sestav | Řídicí panel zdrojů dat klienta | Řídicí panel zdrojů dat klienta | Řídicí panel zdrojů dat klienta |
+| Přehledy | Řídicí panel zdrojů dat klienta | Řídicí panel zdrojů dat klienta | Řídicí panel zdrojů dat klienta |
 | Řízení využití sítě WAN | Skupiny hranic | DO GroupID | Pouze podsíť |
 | Podporovaný obsah | Veškerý obsah nástroje ConfigMgr | Aktualizace Windows, ovladače, aplikace pro Store | Veškerý obsah nástroje ConfigMgr |
 | Řízení pomocí zásad | Nastavení agenta klienta | Nastavení agenta klienta (částečně) | Nastavení agenta klienta |
@@ -220,7 +220,9 @@ Klienti přistupují k obsahu z těchto umístění:
 
 ## <a name="content-source-priority"></a>Priorita zdroje obsahu
 
-Když klient potřebuje obsah, provede požadavek na umístění obsahu do bodu správy. Bod správy vrátí seznam zdrojových umístění, která jsou platná pro požadovaný obsah. Tento seznam se liší v závislosti na konkrétním scénáři, používaných technologiích, návrhu lokality, skupinách hranic a nastavení nasazení. Následující seznam obsahuje všechna možná umístění zdroje obsahu, která může klient použít, v pořadí, ve kterém je bude upřednostňovat:  
+Když klient potřebuje obsah, provede požadavek na umístění obsahu do bodu správy. Bod správy vrátí seznam zdrojových umístění, která jsou platná pro požadovaný obsah. Tento seznam se liší v závislosti na konkrétním scénáři, používaných technologiích, návrhu lokality, skupinách hranic a nastavení nasazení. Například když je spuštěno pořadí úloh, kompletní klient Configuration Manager vždy neběží, takže chování se může lišit.<!-- SCCMDocs#1960 -->
+
+Následující seznam obsahuje všechna možná umístění zdroje obsahu, která může klient Configuration Manager použít, v pořadí, ve kterém je bude upřednostňovat:  
 
 1. Distribuční bod ve stejném počítači jako klient nástroje
 2. Partnerský zdroj ve stejné podsíti sítě

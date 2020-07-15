@@ -3,13 +3,13 @@ author: mestew
 ms.author: mstewart
 ms.prod: configuration-manager
 ms.topic: include
-ms.date: 06/05/2020
-ms.openlocfilehash: 3672127798b66d857b4a1dbd5014c02dfed8a7ee
-ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
+ms.date: 07/13/2020
+ms.openlocfilehash: 80302a1c369c36a08cc1a55e20cf339dbc8d2883
+ms.sourcegitcommit: 6d987bb69d0eb9955a3003202864f58d6aaa426a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84466898"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86381040"
 ---
 <!--This file is shared by the CMPivot overview articles for both Microsoft Endpoint Manager tenant attach and Configuration Manager-->
 
@@ -20,7 +20,7 @@ Dotazy se dají použít k vyhledávání podmínek, identifikaci trendů, anal�
 V následujícím příkladu je entita `CCMRecentlyUsedApplications` (odkaz na naposledy použité aplikace) a operátor, kde (který odfiltruje záznamy z jeho vstupu na základě některého predikátu pro záznam):
 
 ```
-CCMRecentlyUsedApplications | where CompanyName like '%Microsoft%'
+CCMRecentlyUsedApplications | where CompanyName like '%Microsoft%' | project CompanyName, ExplorerFileName, LastUsedTime, LaunchCount, FolderPath
 ```
 
 ## <a name="entities"></a>Entity
@@ -56,7 +56,7 @@ Entity jsou objekty, na které se dá dotázat z klienta. V současné době pod
 |ComputerSystemProduct|Produkt počítačového systému|
 |ConnectedDevice|Připojené zařízení|
 |Připojení|Aktivní připojení TCP v zařízení nebo mimo něj|
-|Plocha|Plocha|
+|Aplikace klasické pracovní plochy|Aplikace klasické pracovní plochy|
 |DesktopMonitor|Stolní monitor|
 |Zařízení|Základní informace o zařízení|
 |Disk|Informace o místním úložném zařízení v systému počítače se systémem Windows|
@@ -68,7 +68,7 @@ Entity jsou objekty, na které se dá dotázat z klienta. V současné době pod
 |EPStatus|Stav antimalwarového softwaru v počítači|
 |EventLog ()|Události do 24 hodin (ve výchozím nastavení) z protokolu událostí|
 |Soubor ()|Informace o konkrétním souboru|
-|Sdílení souborů|Informace o aktivních sdílených souborech|
+|Sdílená složka|Informace o aktivních sdílených souborech|
 |Firmware|Firmware|
 |IDEController|Kontroler IDE|
 |InstalledExecutable|Instalovaný spustitelný soubor|
@@ -126,7 +126,7 @@ Entity jsou objekty, na které se dá dotázat z klienta. V současné době pod
 |ProcessModule()|Moduly načtené zadanými procesy|
 |Procesor|Procesor|
 |ProtectedVolumeInformation|Informace o chráněném svazku|
-|Protocol (Protokol)|Protocol (Protokol)|
+|Protokol|Protokol|
 |QuickFixEngineering|Technik rychlé opravy|
 |SCSIController|Řadič SCSI|
 |SerialPortConfiguration|Konfigurace sériového portu|
@@ -189,7 +189,7 @@ Operátory tabulky lze použít k filtrování, sumarizaci a transformaci datov�
 |Řadit podle|Seřadit řádky vstupní tabulky do pořadí podle jednoho nebo více sloupců|
 |projekt|Vyberte sloupce, které se mají zahrnout, přejmenovat nebo vyřadit a vložit nové počítané sloupce.|
 |Souhrn|Vytvoří tabulku, která agreguje obsah vstupní tabulky.|
-|nezbytná|Vrátit se k zadanému počtu řádků|
+|take|Vrátit se k zadanému počtu řádků|
 |top|Vrátí prvních N záznamů seřazených podle zadaných sloupců.|
 |where|Filtruje tabulku na podmnožinu řádků, které odpovídají predikátu.|
 
@@ -265,7 +265,7 @@ Skalární funkce lze použít ve výrazech. V současné době jsou podporován
 
 |Typ|Položka|Description|
 |--|--|---|
-|Entita|AccountSID|SID účtu|
+|Entita|AccountSID|Account SID (identifikátor zabezpečení účtu)|
 |Entita|Obsah ()|Obsah konkrétního souboru|
 |Entita|NAPClient|Klient NAP|
 |Entita|NAPSystemHealthAgent|Agent stavu systému NAP|

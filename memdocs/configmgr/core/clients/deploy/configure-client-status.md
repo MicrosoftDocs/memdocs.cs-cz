@@ -2,7 +2,7 @@
 title: Konfigurace stavu klienta
 titleSuffix: Configuration Manager
 description: V Configuration Manager vyberte nastavení stavu klienta.
-ms.date: 04/23/2017
+ms.date: 07/13/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,100 +10,100 @@ ms.assetid: a2275ba2-c83d-43e7-90ed-418963a707fe
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5bb77e1e9f55919a03368d549946ee4dd1cda58a
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: a352e53a672f7fb47416214884fe7adf0fb829cc
+ms.sourcegitcommit: 488db8a6ab272f5d639525d70718145c63d0de8f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81713573"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86384906"
 ---
 # <a name="how-to-configure-client-status-in-configuration-manager"></a>Postup konfigurace stavu klienta v Configuration Manager
 
 *Platí pro: Configuration Manager (Current Branch)*
 
-Než budete moci monitorovat Configuration Manager stav klienta a opravit nalezené problémy, je nutné nakonfigurovat lokalitu tak, aby určovala parametry používané k označení klientů jako neaktivních, a nakonfigurovat možnosti, které vás upozorní, pokud aktivita klienta klesne pod určenou prahovou hodnotu. Můžete také zakázat možnost automaticky oprava všechny problémy, které najde stav klienta.  
+Než budete moci monitorovat Configuration Manager klienty a opravit problémy, nakonfigurujte nastavení stavu klienta lokality. Tato nastavení určují parametry, které lokalita používá k označení klientů jako neaktivních. Také nakonfigurujte možnosti, které vás upozorní, pokud aktivita klienta klesne pod určenou prahovou hodnotu.
 
-##  <a name="to-configure-client-status"></a><a name="BKMK_1"></a>Konfigurace stavu klienta  
+## <a name="configure-client-status"></a>Konfigurace stavu klienta
 
-1.  V konzole Configuration Manager klikněte na **monitorování**.  
+1. V konzole Configuration Manager otevřete pracovní prostor **monitorování** a vyberte uzel **stav klienta** . Na kartě **Domů** na pásu karet ve skupině **stav klienta** vyberte **Nastavení stavu klienta**.
 
-2.  V pracovním prostoru **monitorování** klikněte na **stav klienta**a pak na kartě **Domů** ve skupině **stav klienta** klikněte na **Nastavení stavu klienta**.  
+1. Nakonfigurujte tahle nastavení:
 
-3.  V dialogovém okně **Vlastnosti nastavení stavu klienta** zadejte následující hodnoty pro určení aktivity klienta:  
+    > [!NOTE]
+    > Pokud klient nesplňuje žádné nastavení, lokalita ho označí jako neaktivní.
 
-    > [!NOTE]  
-    >  Pokud není splněno žádné nastavení, bude klient označen jako neaktivní.  
+    - **Požadavky na zásady klienta v průběhu následujících dnů:** Zadejte počet dnů od doby, kdy klient požádal o zásady z lokality. Výchozí hodnota je `7` dnů.
 
-    -   **Požadavky na zásady klienta v průběhu následujících dnů:** Zadejte počet dnů od doby, kdy klient požádal o zásady. Aktuální hodnota činí **7** dní.  
+      Porovnejte tuto hodnotu s nastavením **intervalu dotazování zásad klienta** ve skupině **zásad klienta** nastavení klienta. Výchozí hodnota je 60 minut. Jinými slovy, klient by měl každou hodinu dotazovat lokalitu na zásadu. Pokud po jednom týdnu zásady nevyžadují, lokalita ji označí jako neaktivní.
 
-    -   **Zjišťování prezenčního signálu v průběhu následujících dnů:** Zadejte počet dnů od doby, kdy klientský počítač odeslal do databáze lokality záznam zjišťování prezenčního signálu. Aktuální hodnota činí **7** dní.  
+    - **Zjišťování prezenčního signálu v průběhu následujících dnů:** Zadejte počet dnů od doby, kdy klient odeslal do lokality záznam zjišťování prezenčního signálu. Výchozí hodnota je `7` dnů.
 
-    -   **Inventář hardwaru v průběhu následujících dnů:** Zadejte počet dnů od doby, kdy klientský počítač odeslal do databáze lokality záznam inventáře hardwaru. Aktuální hodnota činí **7** dní.  
+      Porovnejte tuto hodnotu s plánem pro [metodu zjišťování prezenčního signálu](../../servers/deploy/configure/about-discovery-methods.md). Ve výchozím nastavení lokalita spouští zjišťování prezenčního signálu jednou týdně.
 
-    -   **Inventář softwaru v průběhu následujících dnů:** Zadejte počet dnů od doby, kdy klientský počítač odeslal do databáze lokality záznam inventáře softwaru. Aktuální hodnota činí **7** dní.  
+    - **Inventář hardwaru v průběhu následujících dnů:** Zadejte počet dnů od doby, kdy klient odeslal do lokality záznam inventáře hardwaru. Výchozí hodnota je `7` dnů.
 
-    -   **Stavové zprávy v průběhu následujících dnů:** Zadejte počet dnů od doby, kdy klientský počítač odeslal do databáze lokality stavové zprávy. Aktuální hodnota činí **7** dní.  
+      Porovnejte tuto hodnotu s nastavením **plánu inventarizace hardwaru** ve skupině **inventáře hardwaru** nastavení klienta. Výchozí hodnota je 7 dní.
 
-4.  V dialogovém okně **Vlastnosti nastavení stavu klienta** zadejte následující hodnotu, abyste zjistili, jak dlouho se uchovávají data historie stavu klienta:  
+    - **Inventář softwaru v průběhu následujících dnů:** Zadejte počet dnů od doby, kdy klient odeslal do webu záznam inventáře softwaru. Výchozí hodnota je `7` dnů.
 
-    -   **Uchovat historii stavu klienta po následující počet dnů:** Určete, jak dlouho má historie stavu klienta zůstat v databázi lokality. Výchozí hodnota je **31** dní.  
+      Porovnejte tuto hodnotu s nastavením **Naplánování inventáře softwaru a kolekce souborů** ve skupině **inventáře softwaru** nastavení klienta. Výchozí hodnota je 7 dní.
 
-5.  Kliknutím na tlačítko **OK** uložte vlastnosti a zavřete dialogové okno **Vlastnosti nastavení stavu klienta** .  
+    - **Stavové zprávy v průběhu následujících dnů:** Zadejte počet dní od okamžiku, kdy klient odeslal do lokality všechny stavové zprávy. Výchozí hodnota je `7` dnů. Klient může odesílat stavové zprávy pro různé druhy aktivit, jako je například spuštění pořadí úkolů. Lokalita odstraní staré stavové zprávy jako součást úlohy údržby a **odstraní zastaralé stavové zprávy**.
 
-##  <a name="to-configure-the-schedule-for-client-status"></a><a name="BKMK_Schedule"></a>Postup konfigurace plánu pro stav klienta  
+1. Zadejte následující hodnotu, která určuje, jak dlouho lokalita udržuje data historie stavu klienta:
 
-1.  V konzole Configuration Manager klikněte na **monitorování**.  
+    - **Uchovat historii stavu klienta po následující počet dnů:** Ve výchozím nastavení lokalita udržuje informace o stavu klienta pro `31` dny. Toto nastavení nemá žádný vliv na chování klienta nebo webu. Je podobný úloze údržby pro historii stavu klienta.
 
-2.  V pracovním prostoru **monitorování** klikněte na **stav klienta**a potom na kartě **Domů** ve skupině **stav klienta** klikněte na položku **naplánovat aktualizaci stavu klienta**.  
+## <a name="configure-the-schedule"></a>Konfigurace plánu
 
-3.  V dialogovém okně **aktualizace stavu klienta naplánovat** nastavte interval, ve kterém chcete aktualizovat stav klienta, a klikněte na tlačítko OK.  
+1. V konzole Configuration Manager otevřete pracovní prostor **monitorování** a vyberte uzel **stav klienta** . Na kartě **Domů** na pásu karet ve skupině **stav klienta** vyberte **naplánovat aktualizaci stavu klienta**.
 
-    > [!NOTE]  
-    >  Když změníte plán aktualizací stavu klienta, aktualizace se projeví až po další plánované aktualizaci stavu klienta (pro dříve nakonfigurovaný plán).  
+1. Nakonfigurujte interval, ve kterém chcete aktualizovat stav klienta.
 
-##  <a name="to-configure-alerts-for-client-status"></a><a name="BKMK_2"></a>Konfigurace výstrah pro stav klienta  
+    > [!NOTE]
+    > Když změníte plán pro aktualizace stavu klienta, projeví se to až do další plánované aktualizace stavu klienta v předchozím plánu.
 
-1. V konzole Configuration Manageru klikněte na **Prostředky a kompatibilita**.  
+## <a name="configure-alerts"></a>Konfigurace upozornění
 
-2. V pracovním prostoru **Prostředky a kompatibilita** klikněte na možnost **Kolekce zařízení**.  
+1. V konzole Configuration Manager otevřete pracovní prostor **prostředky a kompatibilita** a vyberte uzel **kolekce zařízení** .
 
-3. V seznamu **Kolekce zařízení** vyberte kolekci, pro kterou chcete nakonfigurovat výstrahy, a poté na kartě **Domů** ve skupině **Vlastnosti** klikněte na možnost **Vlastnosti**.  
+1. Vyberte kolekci, pro kterou chcete nakonfigurovat výstrahy. Na kartě **Domů** na pásu karet ve skupině **vlastnosti** vyberte možnost **vlastnosti**.
 
-   > [!NOTE]  
-   >  Výstrahy nelze nakonfigurovat pro kolekce uživatelů.  
+    > [!NOTE]
+    > Nemůžete konfigurovat výstrahy pro kolekce uživatelů.
 
-4. Na kartě **výstrahy** v dialogovém okně**vlastnosti** <em> &lt;názvu\>kolekce</em>klikněte na tlačítko **Přidat**.  
+1. Přepněte na kartu **výstrahy** a vyberte **Přidat**.
 
-   > [!NOTE]  
-   >  Karta **Výstrahy** je viditelná jen v případě, že role zabezpečení, k níž jste přidruženi, má oprávnění pro výstrahy.  
+   > [!TIP]
+   > Kartu **výstrahy** můžete zobrazit pouze v případě, že vaše role zabezpečení má oprávnění pro výstrahy.
 
-5. V dialogovém okně **Přidat nové výstrahy kolekce** vyberte výstrahy, jež mají být vygenerovány, když prahové hodnoty stavu klienta klesnou pod zadanou hodnotu, a poté klikněte na tlačítko **OK**.  
+    Zvolte výstrahy, které má lokalita generovat pro prahové hodnoty stavu klienta, a vyberte **OK**.
 
-6. V seznamu **Podmínky** na kartě **Výstrahy** vyberte jednotlivé výstrahy stavu klienta a zadejte následující informace.  
+1. V seznamu **podmínky** na kartě **výstrahy** vyberte jednotlivé výstrahy stavu klienta a zadejte následující informace:
 
-   -   **Název výstrahy** – přijměte výchozí název nebo zadejte nový název výstrahy.  
+    - **Název výstrahy**: přijměte výchozí název nebo zadejte nový název výstrahy.
 
-   -   **Závažnost výstrahy** – v rozevíracím seznamu vyberte úroveň výstrahy, která se zobrazí v konzole Configuration Manager.  
+    - **Závažnost výstrahy**: vyberte úroveň výstrahy, kterou zobrazuje konzola Configuration Manager.
 
-   -   **Vyvolat výstrahu** – zadejte procento prahové hodnoty pro výstrahu.  
+    - **Vyvolat výstrahu**: zadejte procento prahové hodnoty pro výstrahu.
 
-7. Kliknutím na tlačítko **OK** zavřete dialogové okno**vlastnosti** <em> &lt;názvu\>kolekce</em>.  
+## <a name="automatic-remediation-exclusion"></a>Automatické vyloučení nápravy
 
-##  <a name="to-exclude-computers-from-automatic-remediation"></a><a name="BKMK_3"></a>Vyloučení počítačů z automatické nápravy  
+1. V klientském počítači, kde chcete zakázat automatickou nápravu, otevřete Editor registru.
 
-1. Otevřete Editor registru v klientském počítači, pro který chcete zakázat automatickou nápravu.  
+    > [!WARNING]
+    > Pokud používáte Editor registru nesprávně, můžete způsobit vážné problémy, které by mohly vyžadovat přeinstalaci systému Windows. Společnost Microsoft nemůže zaručit, že můžete vyřešit problémy, které jsou výsledkem nesprávného použití Editoru registru. Využijte ji na vlastní riziko.
 
-   > [!WARNING]  
-   >  Pokud používáte Editor registru nesprávně, může dojít k vážným problémům, které by mohly vyžadovat přeinstalaci operačního systému. Společnost Microsoft nemůže zaručit, že budete schopni vyřešit problémy vzniklé z nesprávného použití Editoru registru. Editor registru používáte na vlastní nebezpečí.  
+1. Přejděte do klíče registru **HKEY_LOCAL_MACHINE \software\microsoft\ccm\ccmeval**.
 
-2. Přejděte na **HKEY_LOCAL_MACHINE \software\microsoft\ccm\ccmeval\notifyonly**.  
+1. Změňte hodnotu položky **NotifyOnly** :
 
-3. Pro tento klíč registru zadejte jednu z následujících hodnot:  
+    - `TRUE`: Klient nebude automaticky opravovat žádné nalezené problémy. Tato lokalita vás stále upozorní v pracovním prostoru **monitorování** o všech problémech s tímto klientem.
 
-   -   **True** – klientský počítač nebude automaticky opravovat žádné nalezené problémy. V pracovním prostoru **monitorování** však budete upozorněni na případné potíže s tímto klientem.  
+    - `FALSE`: Toto nastavení je výchozí. Klient automaticky opraví problémy při jejich hledání a tato lokalita vás upozorní v pracovním prostoru **monitorování** .
 
-   -   **False** – klientský počítač bude automaticky opravovat problémy při jejich nalezení a v pracovním prostoru **monitorování** budete upozorněni. Toto je výchozí nastavení.  
+Když instalujete klienty nástroje, můžete je vyloučit z automatické nápravy pomocí vlastnosti instalace **NotifyOnly** . Další informace najdete v tématu [o vlastnostech instalace klienta](about-client-installation-properties.md).
 
-4. Zavřete editor registru.  
+## <a name="next-steps"></a>Další kroky
 
-   Můžete taky nainstalovat klienty pomocí vlastnosti instalace CCMSetup **NotifyOnly** , aby se vyloučily z automatické nápravy. Další informace o této vlastnosti instalace klienta najdete v tématu [informace o vlastnostech instalace klienta](../../../core/clients/deploy/about-client-installation-properties.md).  
+[Monitorování klientů](../manage/monitor-clients.md)

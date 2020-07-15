@@ -2,7 +2,7 @@
 title: Upgrade zařízení s Windows na jinou verzi
 titleSuffix: Configuration Manager
 description: Pomocí Configuration Manager můžete automaticky upgradovat zařízení s Windows 10 na jinou edici Windows.
-ms.date: 09/03/2019
+ms.date: 07/14/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: b0c9db74-841e-46eb-8924-957cde968bf7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 57f8c503d8a8ac54604a2435641bb29d0b4a1847
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: 7a82a635eafcc0ecb5251457db9d4fbb301fce33
+ms.sourcegitcommit: 1edcfb3ce4350ba1a6f36a6150e86301d35c631b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86240673"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86390836"
 ---
 # <a name="upgrade-windows-devices-to-a-new-edition-with-configuration-manager"></a>Upgrade zařízení s Windows na novou edici pomocí Configuration Manager
 
@@ -37,7 +37,7 @@ Než začnete s upgradem zařízení na nejnovější verzi, Projděte si násle
 
 - Pro desktopové edice Windows 10: platný kód Product Key pro novou verzi Windows ve všech zařízeních, na která tato zásada cílíte. Tento kód Product Key může být klíč k vícenásobné aktivaci (MAK) nebo obecný multilicenční klíč (GVLK). GVLK se také označuje jako klíč pro nastavení klienta služby správy klíčů (KMS). Další informace najdete v tématu [plánování aktivace multilicence](https://docs.microsoft.com/windows/deployment/volume-activation/plan-for-volume-activation-client). Seznam klíčů pro instalaci klienta služby správy klíčů najdete v [příloze a](https://docs.microsoft.com/windows-server/get-started/kmsclientkeys) v příručce k aktivaci Windows serveru. <!--496871-->  
 
-- Pro Windows 10 Mobile: soubor s licencí XML z Microsoft Volume Licensing Service Center (VLSC). Tento soubor obsahuje informace o licencích pro novou verzi Windows ve všech zařízeních, na která tato zásada cílíte.
+- Pro Windows 10 Mobile: soubor s licencí XML z Microsoft Volume Licensing Service Center (VLSC). Tento soubor obsahuje informace o licencích pro novou verzi Windows ve všech zařízeních, na která tato zásada cílíte. Stáhněte si soubor ISO pro **Windows 10 Mobile Enterprise**, který obsahuje kód XML pro licencování.<!-- SCCMDocs#2033 -->
 
 - Pokud chcete spravovat tento typ zásad, musíte být v roli zabezpečení **správce s úplnými oprávněními** Configuration Manager.
 

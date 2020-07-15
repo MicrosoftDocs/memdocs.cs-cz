@@ -10,12 +10,13 @@ ms.assetid: 05d42234-2f82-450a-841b-8490605aeadc
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: a4516e2e4fa1ebec9470aeaacee5ddcde5ef54c4
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ROBOTS: NOINDEX
+ms.openlocfilehash: 2e46a641035eeeece45e8c22498ec5de6f6e5e2a
+ms.sourcegitcommit: 488db8a6ab272f5d639525d70718145c63d0de8f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81711655"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86384931"
 ---
 # <a name="features-in-configuration-manager-technical-preview-version-2003"></a>Funkce v Configuration Manager Technical Preview verze 2003
 
