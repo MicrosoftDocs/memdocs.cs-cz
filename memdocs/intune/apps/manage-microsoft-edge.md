@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/09/2020
+ms.date: 07/08/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4d32c496fc094879943fc15102bbb5061d830092
-ms.sourcegitcommit: c7afcc3a2232573091c8f36d295a803595708b6c
+ms.openlocfilehash: aa70da636d619a52c0ec8591a43e85e11ff7f9f2
+ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84973056"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86410891"
 ---
 # <a name="manage-web-access-by-using-edge-for-ios-and-android-with-microsoft-intune"></a>Správa webového přístupu pomocí Edge pro iOS a Android s využitím Microsoft Intune
 
@@ -189,7 +189,7 @@ Pro usnadnění přístupu můžete nakonfigurovat záložky, které chcete, aby
 
 |    Klíč    |    Hodnota    |
 |---------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    com.microsoft.intune.mam.managedbrowser.bookmarks    |    Hodnota této konfigurace je seznam záložek. Každá záložka se skládá z názvu záložky a adresy URL záložky. Název a adresu URL oddělte `|` znakem.<br> Příklad: `Microsoft Bing|https://www.bing.com`<p>Chcete-li nakonfigurovat více záložek, oddělte každou dvojici dvojitým znakem `||` .<br>Například:<br>`Microsoft Bing|https://www.bing.com||Contoso|https://www.contoso.com`    |
+|    com.microsoft.intune.mam.managedbrowser.bookmarks    |    Hodnota této konfigurace je seznam záložek. Každá záložka se skládá z názvu záložky a adresy URL záložky. Název a adresu URL oddělte `|` znakem.<br> Příklad: `Microsoft Bing|https://www.bing.com`<p>Chcete-li nakonfigurovat více záložek, oddělte každou dvojici dvojitým znakem `||` .<br>Příklad:<br>`Microsoft Bing|https://www.bing.com||Contoso|https://www.contoso.com`    |
 
 #### <a name="my-apps-bookmark"></a>Záložka moje aplikace
 
@@ -289,8 +289,8 @@ Pomocí následujících párů klíč/hodnota můžete nakonfigurovat seznam po
 
 |Klíč  |Hodnota  |
 |---------|---------|
-|com.microsoft.intune.mam.managedbrowser.AllowListURLs     |Odpovídající hodnotou klíče je seznam adres URL. Všechny adresy URL, které chcete použít, můžete zadat jako jednu hodnotu oddělenou `|` znakem kanálu.<p>**4.6**<br>`URL1|URL2|URL3`<br>`http://.contoso.com/|https://.bing.com/|https://expenses.contoso.com`         |
-|com.microsoft.intune.mam.managedbrowser.BlockListURLs     |Odpovídající hodnotou klíče je seznam adres URL. Zadejte všechny adresy URL, které chcete blokovat, jako jednu hodnotu oddělenou znakem svislé čáry `|` .<br>**4.6**<br>`URL1|URL2|URL3`<br>`http://.contoso.com/|https://.bing.com/|https://expenses.contoso.com`         |
+|com.microsoft.intune.mam.managedbrowser.AllowListURLs     |Odpovídající hodnotou klíče je seznam adres URL. Všechny adresy URL, které chcete použít, můžete zadat jako jednu hodnotu oddělenou `|` znakem kanálu.<p>**Příklady:**<br>`URL1|URL2|URL3`<br>`http://.contoso.com/|https://.bing.com/|https://expenses.contoso.com`         |
+|com.microsoft.intune.mam.managedbrowser.BlockListURLs     |Odpovídající hodnotou klíče je seznam adres URL. Zadejte všechny adresy URL, které chcete blokovat, jako jednu hodnotu oddělenou znakem svislé čáry `|` .<br>**Příklady:**<br>`URL1|URL2|URL3`<br>`http://.contoso.com/|https://.bing.com/|https://expenses.contoso.com`         |
 |com. Microsoft. Intune. mam. managedbrowser. AllowTransitionOnBlock     |**true** (výchozí) umožňuje hraničním systémům pro iOS a Android přejít na servery s omezeným přístupem. Pokud nejsou osobní účty zakázané, zobrazí se uživatelům výzva k přepnutí do osobního kontextu pro otevření webu s omezeným přístupem nebo k přidání osobního účtu. Pokud je com. Microsoft. Intune. mam. managedbrowser. openInPrivateIfBlocked nastavené na true, uživatelé můžou v kontextu InPrivate otevřít lokalitu s omezeným přístupem.<p>**false** zabraňuje přechodu uživatelů na Edge pro iOS a Android. Uživatelům se zobrazí zpráva s informacemi o tom, že lokalita, ke které se pokouší získat přístup, je blokovaná.         |
 |com. Microsoft. Intune. mam. managedbrowser. openInPrivateIfBlocked     |**hodnota true** umožňuje otevírání webů s omezeným přístupem v kontextu InPrivate účtu služby Azure AD. Pokud je účet Azure AD jediným účtem konfigurovaným pro iOS a Android, automaticky se otevře lokalita s omezeným přístupem v kontextu InPrivate. Pokud má uživatel nakonfigurovaný osobní účet, zobrazí se uživateli výzva k výběru mezi otevřením InPrivate nebo přepnutím na osobní účet.<p> **false** (výchozí) vyžaduje otevření webu s omezeným přístupem v osobním účtu uživatele. Pokud jsou osobní účty zakázané, bude lokalita blokovaná.<p>Aby se toto nastavení projevilo, com. Microsoft. Intune. mam. managedbrowser. AllowTransitionOnBlock musí být nastavené na true.          |
 |com. Microsoft. Intune. mam. managedbrowser. durationOfOpenInPrivateSnackBar     | Zadejte počet sekund, po který se uživatelům zobrazí odkaz s oznámením na panelu kávu otevřeném v režimu InPrivate. Vaše organizace vyžaduje použití režimu InPrivate pro tento obsah. " Ve výchozím nastavení se oznámení na panelu kávu zobrazí po dobu 7 sekund.
@@ -343,7 +343,7 @@ K vytvoření seznamu povolených a blokovaných webů můžete použít různé
 
 ### <a name="manage-proxy-configuration"></a>Správa konfigurace proxy serveru
 
-Můžete použít Edge pro iOS a Android a [Azure proxy aplikací služby AD](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started) společně a poskytnout uživatelům přístup k intranetovým webům na svých mobilních zařízeních. Například: 
+Můžete použít Edge pro iOS a Android a [Azure proxy aplikací služby AD](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started) společně a poskytnout uživatelům přístup k intranetovým webům na svých mobilních zařízeních. Příklad: 
 
 - Uživatel používá mobilní aplikaci Outlook, která je chráněná službou Intune. Pak klikněte na odkaz na intranetový server v e-mailu a hraniční aplikace pro iOS a Android rozpozná, že tento intranetový server byl uživateli zpřístupněn prostřednictvím proxy aplikací. Uživatel je automaticky směrován prostřednictvím proxy aplikace, aby před dosažením intranetového serveru provedl ověřování pomocí služby Multi-Factor Authentication a podmíněného přístupu. Uživatel teď může získat přístup k interním webům i na jejich mobilních zařízeních a odkaz v Outlooku funguje podle očekávání.
 - Uživatel otevře Edge pro iOS a Android na svém zařízení s iOS nebo Androidem. Pokud je Edge pro iOS a Android chráněný pomocí Intune a proxy aplikací je povolený, může uživatel přejít na intranetový server pomocí interní adresy URL, ke které se používá. Hraniční aplikace pro iOS a Android rozpozná, že tento intranetový server byl uživateli zpřístupněn prostřednictvím proxy aplikací. Uživatel je automaticky směrován prostřednictvím proxy aplikace, aby bylo možné provést ověření před dosažením intranetového webu. 
@@ -378,7 +378,7 @@ Organizace můžou povolit ukládání přihlašovacích údajů NTLM do mezipam
 
 |Klíč  |Hodnota  |
 |---------|---------|
-|com. Microsoft. Intune. mam. managedbrowser. NTLMSSOURLs     |Odpovídající hodnotou klíče je seznam adres URL. Všechny adresy URL, které chcete použít, můžete zadat jako jednu hodnotu oddělenou `|` znakem kanálu.<p>**4.6**<br>`URL1|URL2`<br>`http://app.contoso.com/|https://expenses.contoso.com`<p>Další informace o typech podporovaných formátů adres URL naleznete v tématu [formáty URL pro seznam povolených a blokovaných webů](#url-formats-for-allowed-and-blocked-site-list).         |
+|com. Microsoft. Intune. mam. managedbrowser. NTLMSSOURLs     |Odpovídající hodnotou klíče je seznam adres URL. Všechny adresy URL, které chcete použít, můžete zadat jako jednu hodnotu oddělenou `|` znakem kanálu.<p>**Příklady:**<br>`URL1|URL2`<br>`http://app.contoso.com/|https://expenses.contoso.com`<p>Další informace o typech podporovaných formátů adres URL naleznete v tématu [formáty URL pro seznam povolených a blokovaných webů](#url-formats-for-allowed-and-blocked-site-list).         |
 |com. Microsoft. Intune. mam. managedbrowser. durationOfNTLMSSO     |Počet hodin pro přihlašovací údaje do mezipaměti, výchozí hodnota je 720 hodin.         |
 
 ## <a name="deploy-app-configuration-scenarios-with-microsoft-endpoint-manager"></a>Nasazení scénářů konfigurace aplikací pomocí služby Microsoft Endpoint Manager
@@ -436,7 +436,7 @@ Uživatelé s hranou pro iOS a Android nainstalovaný na svém zařízení s iOS
 2. Do pole adresy zadejte `about:intunehelp`.
 3. Hraniční režim pro iOS a Android se spouští v režimu odstraňování potíží.
 
-Seznam nastavení uložených v aplikačních protokolech najdete v tématu [Kontrola protokolů ochrany aplikace v aplikaci Managed Browser](app-protection-policy-settings-log.md).
+Seznam nastavení uložených v protokolech aplikací najdete v tématu [Kontrola protokolů ochrany klientských aplikací](app-protection-policy-settings-log.md).
 
 Informace o tom, jak zobrazit protokoly na zařízeních s Androidem, najdete v tématu [odeslání protokolů správci IT e-mailem](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android).
 

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: e0ec7d66-1502-4b31-85bb-94996b1bc66f
-ms.openlocfilehash: 0960637f534bfe1361b55b2d63be87abc7894d7b
-ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
+ms.openlocfilehash: d1e7b2c359e21ac4a12219d27655603954702fa8
+ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84715233"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86410860"
 ---
 # <a name="set-up-cloud-management-gateway-for-configuration-manager"></a>Nastavení brány pro správu cloudu pro Configuration Manager
 
@@ -80,7 +80,7 @@ Tento postup proveďte v lokalitě nejvyšší úrovně. Tato lokalita je buď s
 
 4. Zadejte **prostředí Azure** pro tento CMG. Možnosti v rozevíracím seznamu se mohou lišit v závislosti na metodě nasazení.  
 
-5. Vyberte **Další**. Počkejte, než lokalita otestuje připojení k Azure.  
+5. Vyberte **Next** (Další). Počkejte, než lokalita otestuje připojení k Azure.  
 
 6. Na stránce nastavení v průvodci vyberte možnost **Procházet** a zvolte. Soubor PFX pro ověřovací certifikát serveru CMG Název z tohoto certifikátu naplní požadovaná pole **plně kvalifikovaného názvu domény služby** a **názvu služby** .  
 
@@ -108,7 +108,7 @@ Tento postup proveďte v lokalitě nejvyšší úrovně. Tato lokalita je buď s
 
 13. Ve výchozím nastavení umožňuje průvodce následující možnost: povolit, **aby služba CMG fungovala jako distribuční bod cloudu a poskytovala obsah z Azure Storage**. CMG může také poskytovat obsah klientům. Tato funkce snižuje nároky na požadované certifikáty a náklady na virtuální počítače Azure.
 
-14. Vyberte **Další**.  
+14. Vyberte **Next** (Další).  
 
 15. Pokud chcete monitorovat provoz CMG s prahovou hodnotou 14 dní, zaškrtněte políčko, aby se výstraha prahové hodnoty zapnula. Pak zadejte prahovou hodnotu a procento, ve kterém chcete zvýšit počet různých úrovní výstrahy. Až budete hotovi, klikněte na tlačítko **Další** .  
 
@@ -247,6 +247,9 @@ Po vytvoření CMG můžete změnit některá z jeho nastavení. V konzole Confi
 
 - **Soubor certifikátu**: Změňte ověřovací certifikát serveru pro CMG. Tato možnost je užitečná, když aktualizujete certifikát před jeho vypršením jeho platnosti.  
 
+  > [!NOTE]
+  > Po obnovení ověřovacího certifikátu serveru pro CMG se v plně kvalifikovaném názvu domény (CN) pro běžný název certifikátu rozlišují malá a velká písmena.  Pokud má aktuálně používaný certifikát například CN `https://contoso-cmg.contoso.com` , vytvoří nový certifikát se stejnou malým počtem CN. Průvodce nepřijme certifikát s CN `https://CONTOSO-CMG.CONTOSO.COM` .
+
 - **Instance virtuálního počítače**: změňte počet virtuálních počítačů, které služba používá v Azure. Toto nastavení vám umožní dynamicky škálovat službu nahoru nebo dolů na základě informací o využití a nákladech.  
 
 - **Certifikáty**: přidejte nebo odeberte certifikáty důvěryhodných kořenových certifikátů nebo zprostředkující certifikační autority. Tato možnost je užitečná při přidávání nových certifikačních autorit nebo vyřazování certifikátů s vypršenou platností.  
@@ -267,7 +270,7 @@ Důležitější změny, například následující konfigurace, vyžadují opě
 - Předplatné
 - Název služby
 - Privátní infrastruktura veřejných klíčů
-- Oblast
+- Region
 
 Vždy udržujte aspoň jeden aktivní CMG pro internetové klienty pro příjem aktualizovaných zásad. internetoví klienti nemůžou komunikovat s odebraným CMG. Klienti neznají o novém, dokud nebudou moct přejít zpátky do intranetu. Při vytváření druhé instance CMG, která první odstraní, vytvoří také další spojovací bod CMG.
 

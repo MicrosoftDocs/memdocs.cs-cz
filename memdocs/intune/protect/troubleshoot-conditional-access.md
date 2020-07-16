@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 95c4397a6f8a7c11d14cabfb9e38ee44b54fa5d1
-ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
+ms.openlocfilehash: 233bc5bbdf983069ed60c8a9afbe165fb2e6b9b1
+ms.sourcegitcommit: 764142960005ea0cb5afa00757f2b403ce5032c6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84531753"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86405813"
 ---
 # <a name="troubleshoot-conditional-access"></a>Řešení potíží s podmíněným přístupem
 Tento článek popisuje, co dělat, když se vašim uživatelům nedaří získat přístup k prostředkům chráněným pomocí podmíněného přístupu, nebo když uživatelé mají přístup k chráněným prostředkům, ale měli byste je zablokovat.
@@ -73,7 +73,7 @@ Tyto podmínky si můžete prohlédnout u každého zařízení na webu Azure Po
 - Některá zařízení s Androidem se můžou zdát šifrovat, ale Portál společnosti aplikace tato zařízení rozpoznává jako nevyhovující. V tomto scénáři se uživateli zobrazí oznámení aplikace Portál společnosti s výzvou k nastavení hesla pro spuštění zařízení. Po klepnutí na oznámení a potvrzení stávajícího PIN kódu nebo hesla zvolte na obrazovce **Zabezpečené spuštění** možnost **Ke spuštění zařízení vyžadovat PIN kód** a pak v aplikaci Portál společnosti klepněte na tlačítko **Zkontrolovat dodržování předpisů** pro toto zařízení. Zařízení by se teď mělo rozpoznat jako zašifrované. 
 
   > [!NOTE]
-  > Někteří výrobci zařízení šifrují svoje zařízení bu pomocí výchozího PIN kódu místo PIN kódu nastaveného uživatelem. V Intune se šifrují šifrování, které používá výchozí PIN kód jako nezabezpečené, a tato zařízení označí jako nedodržující předpisy, dokud uživatel nevytvoří nový, jiný než výchozí PIN kód.
+  > Někteří výrobci zařízení šifrují svá zařízení pomocí výchozího PIN kódu místo PIN kódu nastaveného uživatelem. V Intune se šifrují šifrování, které používá výchozí PIN kód jako nezabezpečené, a tato zařízení označí jako nedodržující předpisy, dokud uživatel nevytvoří nový, jiný než výchozí PIN kód.
 
 - Zařízení s Androidem, které je zaregistrované a kompatibilní, může být i nadále blokované a při prvním pokusu o přístup k podnikovým prostředkům dostávat karanténní oznámení. Pokud k tomu dojde, zajistěte, aby aplikace Portál společnosti neběžela, a potom vyberte odkaz **Začínáme nyní** v e-mailu o karanténě pro aktivaci vyhodnocení. Toto by mělo být potřeba udělat jenom při prvním povolení podmíněného přístupu.
 

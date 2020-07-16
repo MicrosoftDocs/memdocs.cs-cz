@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9a1c47a157e4ee5bd4337d840515a340dcf1fd9c
-ms.sourcegitcommit: d647eefa23c8849f49584442df568284d51d7525
+ms.openlocfilehash: d6c3b64bbcc9b661f5ec582f2963ceeb2e544ff8
+ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86195714"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86410977"
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Novinky v Microsoft Intune – předchozí měsíce
 
@@ -1623,7 +1623,7 @@ V případě, že vlastníte licence pro tyto aplikace, teď můžete nasadit Mi
 **Microsoft Visio pro for Office 365** se teď označuje jako **Microsoft Visio Online Plan 2**.  Další informace o aplikaci Microsoft Visio najdete v tématu [plán 2 pro Visio online](https://products.office.com/visio/visio-online-plan-2). Další informace o aplikacích Office 365 pro zařízení s Windows 10 najdete v článku [přiřazení aplikací office 365 k zařízením s Windows 10 pomocí Microsoft Intune](../apps/apps-add-office365.md).
 
 #### <a name="intune-app-protection-policy-app-character-limit-setting---3291302----"></a>Nastavení limitu počtu znaků v zásadách ochrany aplikací Intune (APP)<!-- 3291302  -->
-Správci Intune můžou zadat výjimku pro aplikaci Intune omezit nastavení zásad **vyjmutí, kopírování a vložení s jinými aplikacemi** .  Jako správce můžete zadat počet znaků, které mohou být vyjmuty nebo zkopírovány ze spravované aplikace. Toto nastavení umožní sdílet zadaný počet znaků do libovolné aplikace bez ohledu na nastavení omezit vyjmutí, kopírování a vložení s jinými aplikacemi. Všimněte si, že verze Portál společnosti Intune aplikace pro Android vyžaduje verzi 5.0.4364.0 nebo novější. Další informace najdete v tématech [Ochrana dat iOS](../apps/app-protection-policy-settings-ios.md#data-protection), [Ochrana dat Android](../apps/app-protection-policy-settings-android.md#data-protection)a [Kontrola protokolů ochrany klientských aplikací](../apps/app-protection-policy-settings-log.md#app-protection-policy-settings).
+Správci Intune můžou zadat výjimku pro aplikaci Intune omezit nastavení zásad **vyjmutí, kopírování a vložení s jinými aplikacemi** .  Jako správce můžete zadat počet znaků, které mohou být vyjmuty nebo zkopírovány ze spravované aplikace. Toto nastavení umožní sdílet zadaný počet znaků do libovolné aplikace bez ohledu na nastavení omezit vyjmutí, kopírování a vložení s jinými aplikacemi. Všimněte si, že verze Portál společnosti Intune aplikace pro Android vyžaduje verzi 5.0.4364.0 nebo novější. Další informace najdete v tématech [Ochrana dat iOS](../apps/app-protection-policy-settings-ios.md#data-protection), [Ochrana dat Android](../apps/app-protection-policy-settings-android.md#data-protection)a [Kontrola protokolů ochrany klientských aplikací](../apps/app-protection-policy-settings-log.md).
 
 #### <a name="office-deployment-tool-odt-xml-for-office-proplus-deployment---3192477-----"></a>Office Deployment Tool (ODT) XML pro nasazení Office ProPlus<!-- 3192477   -->
 Při vytváření instance Office pro plus v konzole pro správu Intune budete moct zadat XML nástroje pro nasazení Office (ODT). To umožní větší úpravou, pokud existující možnosti uživatelského rozhraní Intune nevyhovují vašim potřebám. Další informace najdete v tématu [přiřazení aplikací Office 365 k zařízením s Windows 10 pomocí Microsoft Intune](../apps/apps-add-office365.md) a [možností konfigurace pro nástroj pro nasazení Office](https://docs.microsoft.com/DeployOffice/configuration-options-for-the-office-2016-deployment-tool).
@@ -1710,7 +1710,7 @@ Přístup ke všem datům Intune je určený jen pro čtení:
 
 - Správce zabezpečení
 - Operátor zabezpečení
-- Čtecí modul zabezpečení
+- Čtenář zabezpečení
 
 Další informace najdete v tématu [řízení přístupu na základě role](role-based-access-control.md).
 
@@ -1846,7 +1846,7 @@ Tato funkce platí pro:
 #### <a name="enabling-restrictions-in-the-device-settings-is-renamed-to-screen-time-on-ios-devices---3699164-----"></a>Povolení omezení v nastavení zařízení se přejmenují na čas obrazovky na zařízeních s iOS.<!-- 3699164   -->
 **Omezení povolení v nastavení zařízení** v zařízení s iOS můžete nakonfigurovat na zařízeních s iOS (**profily konfigurace zařízení**  >  **Profiles**  >  **Nový profil**  >  **iOS** pro > **omezení zařízení** pro typ profilu > **Obecné**). V této aktualizaci je toto nastavení přejmenováno na **čas obrazovky (jenom pod dohledem)**.
 
-Chování je stejné. Konkrétně:
+Chování je stejné. Konkrétně se jedná o tyto:
 
 - iOS 11.4.1 a starší: **blok** brání koncovým uživatelům v nastavení vlastních omezení v nastavení zařízení. 
 - iOS 12,0 a novější: **blok** znemožní koncovým uživatelům v nastavení zařízení nastavit vlastní **čas obrazovky** , včetně obsahu & omezení ochrany osobních údajů. V zařízeních upgradovaných na iOS 12,0 se už nebudou zobrazovat karty omezení v nastavení zařízení. Tato nastavení se nacházejí v **čase obrazovky**. 
@@ -2760,7 +2760,7 @@ Přečtěte si další informace o [správě konfiguračních profilů](../confi
 #### <a name="new-status-for-devices-in-device-compliance---2308882---"></a>Nové stavy pro zařízení na stránce Dodržování předpisů zařízením <!-- 2308882 -->
 V části zásady **dodržování předpisů zařízení**  >  **Policies** > vyberte zásadu > **Přehled**, přidají se tyto nové stavy:
 - succeeded
-- chyba
+- error
 - Konflikt
 - pending
 - Nepoužitelné Také se zobrazí obrázek, který ukazuje počet zařízení s jinou platformou. Když se třeba díváte na profil iOSu, na nové dlaždici se zobrazí počet zařízení s jiným systémem než iOS, která jsou také přiřazená k tomuto profilu. Viz [Zásady dodržování předpisů zařízením](../protect/compliance-policy-monitor.md#view-status-of-device-policies).
@@ -2918,7 +2918,7 @@ U zařízení spravovaných pomocí Microsoft Intune MDM může občas dojít k 
 Prohlížeč Microsoft Edge pro mobilní zařízení (iOS a Android) teď podporuje zásady ochrany aplikací Microsoft Intune. Uživatelé zařízení s iOS a Androidem, kteří se přihlásí pomocí podnikových účtů Azure AD v aplikaci Microsoft Edge, budou chráněni službou Intune. Na zařízeních s iOSem umožní zásada **Vyžadovat spravovaný prohlížeč pro webový obsah** uživatelům otevírat odkazy v Microsoft Edgi, pokud je spravovaný.
 
 <!-- ########################## -->
-## <a name="may-2018"></a>Květen 2018
+## <a name="may-2018"></a>May 2018
 
 ### <a name="app-management"></a>Správa aplikací
 
@@ -4142,7 +4142,7 @@ Na obrazovku Podrobnosti o zařízení ve všech aplikacích Portál společnost
 <!-- ########################## -->
 ### <a name="september-2017"></a>Září 2017
 
-#### <a name="intune-supports-ios-11--1428975--"></a>Intune podporuje iOS 11 <!--1428975-->
+#### <a name="intune-supports-ios-11--1428975--"></a>Intune podporuje iOS 11.<!--1428975-->
 Intune podporuje iOS 11. Tuto podporu jsme již dříve oznámili na [blogu podpory Intune](https://blogs.technet.microsoft.com/intunesupport/2017/09/12/support-tip-intune-support-for-ios-11/).
 
 #### <a name="end-of-support-for-ios-80---1164477---"></a>Konec podpory pro systém iOS 8.0 <!-- 1164477 -->
@@ -4364,7 +4364,7 @@ V této verzi jsme přidali nová nastavení pro profil omezení zařízení s�
 - Mobilní síť a připojení
 - Prostředí zamknuté obrazovky
 - Ochrana osobních údajů
-- Search
+- Hledat
 - Windows Spotlight
 - Prohlížeč Microsoft Edge
 

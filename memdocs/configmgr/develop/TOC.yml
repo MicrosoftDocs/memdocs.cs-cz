@@ -1,0 +1,998 @@
+- name: Dokumentace k sadě Configuration Manager SDK
+  href: index.yml
+- name: Přehled
+  items:
+    - name: Přehled sady Configuration Manager SDK
+      href: core/misc/system-center-configuration-manager-sdk.md
+    - name: Informace o ochraně osobních údajů
+      href: core/misc/privacy/privacy-information.md
+    - name: Co je nového v sadě SDK
+      href: core/changes/what-s-new-in-the-system-center-configuration-manager-sdk.md
+- name: Požadavky
+  items:
+    - name: O požadavcích na sadu SDK
+      href: core/reqs/about-configuration-manager-sdk-requirements.md
+    - name: Požadavky na modul runtime klienta
+      href: core/reqs/client-runtime-requirements.md
+    - name: Požadavky na modul runtime serveru
+      href: core/reqs/server-runtime-requirements.md
+    - name: Požadavky na vývoj klienta
+      href: core/reqs/client-development-requirements.md
+    - name: Požadavky na vývoj serveru
+      href: core/reqs/server-development-requirements.md
+    - name: Knihovny a soubory hlaviček sady SDK
+      href: core/reqs/configuration-manager-sdk-libraries-and-header-files.md
+- name: Ukázky sady SDK
+  href: core/understand/configuration-manager-sdk-samples.md
+- name: Základy programování
+  items:
+    - name: Začínáme s programováním Configuration Manageru
+      items:
+        - name: Začínáme s programováním Configuration Manageru
+          href: core/understand/getting-started-with-configuration-manager-programming.md
+        - name: Přehled architektury
+          href: core/understand/architectural-overview.md
+        - name: Základní informace o programu WBEMTEST
+          href: core/understand/introduction-to-wbemtest.md
+        - name: 'Jednoduchý příklad: seznam, vytvoření, úpravy a odstranění'
+          href: core/understand/simple-example-of-list--create--modify--and-delete.md
+    - name: Volání fragmentů kódu Configuration Manageru
+      href: core/understand/calling-code-snippets.md
+    - name: Zašifrování hesel nebo dat pro lokalitu
+      href: core/understand/how-to-encrypt-passwords-or-data-for-a-site.md
+    - name: Chyby
+      items:
+        - name: O chybách
+          href: core/understand/about-configuration-manager-errors.md
+        - name: Zpracování asynchronních chyb pomocí spravovaného kódu
+          href: core/understand/how-to-handle-configuration-manager-asynchronous-errors-by-using-managed-code.md
+        - name: Zpracování synchronních chyb pomocí spravovaného kódu
+          href: core/understand/how-to-handle-configuration-manager-synchronous-errors-by-using-managed-code.md
+        - name: Zpracování asynchronních chyb pomocí rozhraní WMI
+          href: core/understand/how-to-handle-configuration-manager-asynchronous-errors-by-using-wmi.md
+        - name: Zpracování synchronních chyb pomocí rozhraní WMI
+          href: core/understand/how-to-handle-configuration-manager-synchronous-errors-by-using-wmi.md
+    - name: Objekty
+      items:
+        - name: O objektech
+          items:
+            - name: Přehled objektů
+              href: core/understand/configuration-manager-objects-overview.md
+            - name: Zabezpečení objektů
+              href: core/understand/configuration-manager-object-security.md
+            - name: Vložené objekty
+              href: core/understand/embedded-objects.md
+            - name: Třídy přidružení
+              href: core/understand/association-classes.md
+            - name: Formáty data a času
+              href: core/understand/date-and-time-formats.md
+            - name: Vlastnosti bitového pole
+              href: core/understand/configuration-manager-bit-field-properties.md
+            - name: Opožděné vlastnosti
+              href: core/understand/configuration-manager-lazy-properties.md
+            - name: Jazyk rozšířeného dotazu rozhraní WMI
+              href: core/understand/extended-wmi-query-language.md
+            - name: Sady výsledků
+              href: core/understand/result-sets.md
+            - name: Speciální dotazy
+              href: core/understand/special-queries.md
+        - name: Použití objektů se spravovaným kódem
+          items:
+            - name: Vytvoření objektu
+              href: core/understand/how-to-create-a-configuration-manager-object-by-using-managed-code.md
+            - name: Čtení objektu
+              href: core/understand/how-to-read-a-configuration-manager-object-by-using-managed-code.md
+            - name: Úprava objektu
+              href: core/understand/how-to-modify-a-configuration-manager-object-by-using-managed-code.md
+            - name: Odstranění objektu
+              href: core/understand/how-to-delete-a-configuration-manager-object-by-using-managed-code.md
+            - name: Provedení asynchronního dotazu
+              href: core/understand/how-to-perform-an-asynchronous-query-by-using-managed-code.md
+            - name: Provedení synchronního dotazu
+              href: core/understand/how-to-perform-a-synchronous-configuration-manager-query-by-using-managed-code.md
+            - name: Čtení opožděných vlastností
+              href: core/understand/how-to-read-lazy-properties-by-using-managed-code.md
+            - name: Volání metody třídy objektu
+              href: core/understand/how-to-call-a-configuration-manager-object-class-method-by-using-managed-code.md
+        - name: Použití objektů s rozhraním WMI
+          items:
+            - name: Vytvoření objektu
+              href: core/understand/how-to-create-a-configuration-manager-object-by-using-wmi.md
+            - name: Čtení objektu
+              href: core/understand/how-to-read-a-configuration-manager-object-by-using-wmi.md
+            - name: Úprava objektu
+              href: core/understand/how-to-modify-a-configuration-manager-object-by-using-wmi.md
+            - name: Odstranění objektu
+              href: core/understand/how-to-delete-a-configuration-manager-object-by-using-wmi.md
+            - name: Provedení synchronního dotazu
+              href: core/understand/how-to-perform-a-synchronous-configuration-manager-query-by-using-wmi.md
+            - name: Provedení asynchronního dotazu
+              href: core/understand/how-to-perform-an-asynchronous-configuration-manager-query-by-using-wmi.md
+            - name: Čtení opožděných vlastností
+              href: core/understand/how-to-read-lazy-properties-by-using-wmi.md
+            - name: Volání metody třídy objektu
+              href: core/understand/how-to-call-a-configuration-manager-object-class-method-by-using-wmi.md
+    - name: Dotazy
+      items:
+        - name: O dotazech
+          href: core/understand/about-configuration-manager-queries.md
+        - name: Spuštění dotazu
+          href: core/understand/how-to-run-a-query.md
+        - name: Vytvoření dotazu
+          href: core/understand/how-to-create-a-configuration-manager-query.md
+    - name: SEDO
+      items:
+        - name: Přehled SEDO
+          href: core/understand/sedo.md
+        - name: Získání zámku objektu s povoleným SEDO
+          href: core/understand/how-to-acquire-a-lock-on-a-sedo-enabled-object.md
+        - name: Uvolnění zámku objektu s povoleným SEDO
+          href: core/understand/how-to-release-a-lock-on-a-sedo-enabled-object.md
+    - name: Plány
+      items:
+        - name: O plánech
+          href: core/understand/about-configuration-manager-schedules.md
+        - name: Vytvoření tokenu plánu
+          href: core/understand/how-to-create-a-schedule-token.md
+    - name: Řídicí soubor lokality
+      items:
+        - name: O řídicím souboru lokality
+          href: core/understand/about-the-configuration-manager-site-control-file.md
+        - name: Čtení a zápis spravovaných metadat
+          href: core/understand/how-to-read-and-write-to-the-site-control-file-by-using-managed-code.md
+        - name: Čtení a zápis s rozhraním WMI
+          href: core/understand/how-to-read-and-write-to-the-site-control-file-by-using-wmi.md
+        - name: Čtení seznamu vložených vlastností řídicího souboru lokality
+          href: core/understand/how-to-read-a-configuration-manager-site-control-file-embedded-property-list.md
+        - name: Nasazení role systému lokality
+          href: core/understand/how-to-deploy-a-site-system-role--example---fallback-status-point-.md
+    - name: Schéma třídy
+      items:
+        - name: Přehled schématu třídy
+          href: core/understand/configuration-manager-class-schema.md
+        - name: Formáty data a času
+          href: core/understand/date-and-time-formats.md
+        - name: Interpretace vlastností bitového pole
+          href: core/understand/interpreting-bitfield-properties.md
+        - name: Opožděné vlastnosti
+          href: core/understand/lazy-properties.md
+        - name: Omezení délky pole poskytovatele serveru SMS
+          href: core/understand/sms-provider-field-length-restrictions.md
+    - name: Schéma a zobrazení databáze
+      items:
+        - name: O schématu databáze
+          items:
+            - name: Přehled schématu
+              href: core/understand/configuration-manager-schema-overview.md
+            - name: Zobrazení SQL schématu
+              href: core/understand/configuration-manager-schema-sql-views.md
+            - name: Mapování zobrazení schématu
+              href: core/understand/configuration-manager-schema-view-mapping.md
+            - name: Zabezpečení zobrazení SQL
+              href: core/understand/sql-view-security.md
+        - name: Prohlížení zobrazení Configuration Manageru pomocí SQL Serveru
+          href: core/understand/how-to-see-a-configuration-manager-view-by-using-sql-server.md
+        - name: Vytváření vlastních sestav pomocí zobrazení SQL Serveru
+          items:
+            - name: Přehled
+              href: core/understand/sqlviews/create-custom-reports-using-sql-server-views.md
+            - name: Zobrazení SQL Serveru
+              items:
+                - name: Přehled
+                  href: core/understand/sqlviews/sql-server-views-configuration-manager.md
+                - name: Zobrazení správy aplikací
+                  href: core/understand/sqlviews/application-management-views-configuration-manager.md
+                - name: Zobrazení nasazení klienta
+                  href: core/understand/sqlviews/client-deployment-views-configuration-manager.md
+                - name: Zobrazení stavu klienta
+                  href: core/understand/sqlviews/client-status-views-configuration-manager.md
+                - name: Zobrazení kolekcí
+                  href: core/understand/sqlviews/collection-views-configuration-manager.md
+                - name: Zobrazení nastavení dodržování předpisů
+                  href: core/understand/sqlviews/compliance-settings-views-configuration-manager.md
+                - name: Zobrazení správy obsahu
+                  href: core/understand/sqlviews/content-management-views-configuration-manager.md
+                - name: Zobrazení zjišťování
+                  href: core/understand/sqlviews/discovery-views-configuration-manager.md
+                - name: Zobrazení služby Endpoint Protection
+                  href: core/understand/sqlviews/endpoint-protection-views-configuration-manager.md
+                - name: Zobrazení inventáře
+                  items:
+                    - name: Přehled zobrazení inventáře
+                      href: core/understand/sqlviews/inventory-views-configuration-manager.md
+                    - name: Zobrazení inventáře hardwaru
+                      href: core/understand/sqlviews/hardware-inventory-views-configuration-manager.md
+                    - name: Zobrazení inventáře softwaru
+                      href: core/understand/sqlviews/software-inventory-views-configuration-manager.md
+                    - name: Zobrazení funkce Asset Intelligence
+                      href: core/understand/sqlviews/asset-intelligence-views-configuration-manager.md
+                - name: Zobrazení migrace
+                  href: core/understand/sqlviews/migration-views-configuration-manager.md
+                - name: Zobrazení MDM
+                  href: core/understand/sqlviews/mobile-device-management-views-configuration-manager.md
+                - name: Zobrazení nasazení operačního systému
+                  href: core/understand/sqlviews/operating-system-deployment-views-configuration-manager.md
+                - name: Zobrazení řízení spotřeby
+                  href: core/understand/sqlviews/power-management-views-configuration-manager.md
+                - name: Zobrazení dotazu
+                  href: core/understand/sqlviews/query-views-configuration-manager.md
+                - name: Vytváření sestav
+                  href: core/understand/sqlviews/reporting-views-configuration-manager.md
+                - name: Zobrazení schémat
+                  href: core/understand/sqlviews/schema-views-configuration-manager.md
+                - name: Zobrazení zabezpečení
+                  href: core/understand/sqlviews/security-views-configuration-manager.md
+                - name: Zobrazení správy lokalit
+                  href: core/understand/sqlviews/site-admin-views-configuration-manager.md
+                - name: Zobrazení pro monitorování míry využití softwaru
+                  href: core/understand/sqlviews/software-metering-views-configuration-manager.md
+                - name: Zobrazení aktualizací softwaru
+                  href: core/understand/sqlviews/software-updates-views-configuration-manager.md
+                - name: Zobrazení stavu a výstrah
+                  href: core/understand/sqlviews/status-alert-views-configuration-manager.md
+                - name: Zobrazení Wake On LAN
+                  href: core/understand/sqlviews/wake-lan-views-configuration-manager.md
+            - name: Práce se sestavami
+              items:
+                - name: Vyhodnocení existujících sestav
+                  items:
+                    - name: Vyhodnocení sestavy Všechny kolekce
+                      href: core/understand/sqlviews/evaluation-all-collections-report-configuration-manager.md
+                    - name: Vyhodnocení sestavy Informace o počítači
+                      href: core/understand/sqlviews/evaluation-computer-information-report-configuration-manager.md
+                - name: Zobrazení příkazu SQL pro sestavy
+                  href: core/understand/sqlviews/how-to-view-sql-statement-configuration-manager-reports.md
+                - name: Úpravy sestav
+                  href: core/understand/sqlviews/how-to-modify-configuration-manager-reports.md
+                - name: Vytváření sestav
+                  href: core/understand/sqlviews/how-to-create-configuration-manager-reports.md
+                - name: Spouštění sestav
+                  href: core/understand/sqlviews/how-to-run-configuration-manager-reports.md
+                - name: Cvičení na vytváření vlastních sestav
+                  items:
+                    - name: Cvičení 1 – spuštění existující sestavy
+                      href: core/understand/sqlviews/exercise-1-run-existing-configuration-manager-report.md
+                    - name: Cvičení 2 – úprava existující sestavy
+                      href: core/understand/sqlviews/exercise-2-modify-existing-configuration-manager-report.md
+                    - name: Cvičení 3 – vytvoření nové sestavy
+                      href: core/understand/sqlviews/exercise-3-create-new-configuration-manager-report.md
+                    - name: Pokročilé cvičení 1 – vytvoření nové sestavy pro nastavení dodržování předpisů
+                      href: core/understand/sqlviews/advanced-exercise-1-create-new-report-compliance-settings-configuration-manager.md
+                    - name: Pokročilé cvičení 1 – řešení
+                      href: core/understand/sqlviews/advanced-exercise-1-solution-create-new-report-compliance-settings-configuration-manager.md
+                    - name: Pokročilé cvičení 2 – vytvoření nové sestavy pro inventář hardwaru
+                      href: core/understand/sqlviews/advanced-exercise-2-create-new-report-hardware-inventory-configuration-manager.md
+                    - name: Pokročilé cvičení 2 – řešení
+                      href: core/understand/sqlviews/advanced-exercise-2-solution-create-new-report-hardware-inventory-configuration-manager.md
+            - name: Technické reference pro zobrazení SQL Serveru
+              items:
+                - name: Ukázkové dotazy pomocí zobrazení SQL
+                  items:
+                    - name: Správa aplikací
+                      href: core/understand/sqlviews/sample-queries-application-management-configuration-manager.md
+                    - name: Nasazení klienta
+                      href: core/understand/sqlviews/sample-queries-client-deployment-configuration-manager.md
+                    - name: Stav klienta
+                      href: core/understand/sqlviews/sample-queries-client-status-configuration-manager.md
+                    - name: Kolekce
+                      href: core/understand/sqlviews/sample-queries-collections-configuration-manager.md
+                    - name: Nastavení dodržování předpisů
+                      href: core/understand/sqlviews/sample-queries-compliance-settings-configuration-manager.md
+                    - name: Správa obsahu
+                      href: core/understand/sqlviews/sample-queries-content-management-configuration-manager.md
+                    - name: Zjišťování
+                      href: core/understand/sqlviews/sample-queries-discovery-configuration-manager.md
+                    - name: Funkce Endpoint Protection
+                      href: core/understand/sqlviews/sample-queries-endpoint-protection-configuration-manager.md
+                    - name: inventář
+                      items:
+                        - name: Inventář hardwaru
+                          href: core/understand/sqlviews/sample-queries-hardware-inventory-configuration-manager.md
+                        - name: Inventář softwaru
+                          href: core/understand/sqlviews/sample-queries-software-inventory-configuration-manager.md
+                        - name: Funkce Asset Intelligence
+                          href: core/understand/sqlviews/sample-queries-asset-intelligence-configuration-manager.md
+                    - name: MDM
+                      href: core/understand/sqlviews/sample-queries-mobile-device-management-configuration-manager.md
+                    - name: Nasazení operačního systému
+                      href: core/understand/sqlviews/sample-queries-operating-system-deployment-configuration-manager.md
+                    - name: Řízení spotřeby
+                      href: core/understand/sqlviews/sample-queries-power-management-configuration-manager.md
+                    - name: Dotazy
+                      href: core/understand/sqlviews/sample-queries-for-queries-configuration-manager.md
+                    - name: Zabezpečení
+                      href: core/understand/sqlviews/sample-queries-security-configuration-manager.md
+                    - name: Správa lokality
+                      href: core/understand/sqlviews/sample-queries-site-administration-configuration-manager.md
+                    - name: Monitorování míry využití softwaru
+                      href: core/understand/sqlviews/sample-queries-software-metering-configuration-manager.md
+                    - name: Aktualizace softwaru
+                      href: core/understand/sqlviews/sample-queries-software-updates-configuration-manager.md
+                    - name: Stav a upozornění
+                      href: core/understand/sqlviews/sample-queries-status-alerts-configuration-manager.md
+                    - name: Funkce vzdáleného probuzení Wake On LAN
+                      href: core/understand/sqlviews/sample-queries-wake-lan-views-configuration-manager.md
+                - name: Reference SQL Serveru pro sestavy v Configuration Manageru
+                  items:
+                    - name: Reference příkazů SQL pro sestavy
+                      href: core/understand/sqlviews/sql-statement-reference-configuration-manager-reports.md
+                    - name: Použití Návrháře dotazů k zápisu příkazů SQL pro sestavy
+                      href: core/understand/sqlviews/use-query-designer-write-configuration-manager-report-sql-statements.md
+                    - name: Vytvoření příkazu SQL pomocí Návrháře dotazů
+                      href: core/understand/sqlviews/how-to-create-sql-statement-using-query-designer.md
+                - name: Odkaz schématu WMI poskytovatele serveru SMS
+                  items:
+                    - name: Přehled
+                      href: core/understand/sqlviews/sms-provider-wmi-schema-reference-configuration-manager.md
+                    - name: Obory názvů a třídy rozhraní WMI pro sestavy
+                      href: core/understand/sqlviews/wmi-namespaces-classes-configuration-manager-reports.md
+            - name: Seznam sestav v nástroji Configuration Manager
+              href: core/understand/sqlviews/reports-supplied-with-configuration-manager.md
+    - name: poskytovatele serveru SMS
+      items:
+        - name: O poskytovateli serveru SMS
+          items:
+            - name: Základní informace o poskytovateli serveru SMS
+              href: core/understand/sms-provider-fundamentals.md
+            - name: Základní informace o zprostředkovateli rozhraní WMI
+              href: core/understand/wmi-configuration-manager-provider-fundamentals.md
+            - name: Základní informace o poskytovateli spravovaného serveru SMS
+              href: core/understand/managed-sms-provider-fundamentals-in-configuration-manager.md
+            - name: Kvalifikátory kontextu Configuration Manageru
+              href: core/understand/context-qualifiers.md
+            - name: Omezení délky pole poskytovatele serveru SMS
+              href: core/understand/sms-provider-field-length-restrictions-in-configuration-manager.md
+        - name: Připojení k poskytovateli serveru SMS pomocí spravovaného kódu
+          href: core/understand/how-to-connect-to-an-sms-provider-by-using-managed-code.md
+        - name: Přidání kvalifikátoru kontextu pomocí spravovaného kódu
+          href: core/understand/how-to-add-a-configuration-manager-context-qualifier-by-using-managed-code.md
+        - name: Připojení k poskytovateli serveru SMS pomocí rozhraní WMI
+          href: core/understand/how-to-connect-to-an-sms-provider-in-configuration-manager-by-using-wmi.md
+        - name: Přidání kvalifikátoru kontextu pomocí rozhraní WMI
+          href: core/understand/how-to-add-a-configuration-manager-context-qualifier-by-using-wmi.md
+    - name: Zabezpečení aplikací Configuration Manageru
+      href: core/understand/securing-configuration-manager-applications.md
+- name: Správa aplikací
+  items:
+    - name: Vytvoření aplikace s typem nasazení skriptu
+      href: apps/how-to-create-an-application-with-the-script-deployment-type.md
+    - name: Proces schvalování aplikace
+      href: apps/application-approval-process.md
+    - name: Rozšíření správy aplikací
+      items:
+        - name: Správa verzí rozšíření typu nasazení
+          href: apps/deployment-type-extension-versioning.md
+        - name: Scénář - rozšíření správy aplikací
+          items:
+            - name: Přehled scénáře
+              href: apps/extending-application-management-overview.md
+            - name: Vytvoření vlastního sestavení sady SDK
+              items:
+                - name: Definování technologie nasazení
+                  href: apps/how-to-define-the-deployment-technology.md
+                - name: Definování technologie hostování
+                  href: apps/how-to-define-the-hosting-technology.md
+                - name: Definování technologie instalačního programu
+                  href: apps/how-to-define-the-installer-technology.md
+                - name: Definování nástroje pro import obsahu
+                  href: apps/how-to-define-the-content-importer.md
+                - name: Definování instalačního programu
+                  href: apps/how-to-define-the-installer.md
+                - name: Definování prostředků
+                  href: apps/how-to-define-the-resources.md
+            - name: Vytvoření registračních souborů XML
+              items:
+                - name: Definování registračního souboru technologie nasazení
+                  href: apps/how-to-define-the-deployment-technology-registration-file.md
+                - name: Definování registračního souboru technologie hostování
+                  href: apps/how-to-define-the-hosting-technology-registration-file.md
+                - name: Definování registračního souboru technologie instalačního programu
+                  href: apps/how-to-define-the-installer-technology-registration-file.md
+            - name: Vytvoření rozšíření uživatelského rozhraní
+              items:
+                - name: Definování sestavení rozšíření uživatelského rozhraní
+                  href: apps/how-to-define-the-ui-extension-assembly.md
+                - name: Definování souboru XML Průvodce vytvořením aplikace
+                  href: apps/how-to-define-the-create-application-wizard-xml-file.md
+                - name: Definování souboru XML Průvodce vytvořením typu nasazení
+                  href: apps/how-to-define-the-create-deployment-type-wizard-xml-file.md
+                - name: Definování souboru XML se seznamem vlastností typu nasazení
+                  href: apps/how-to-define-the-deployment-type-property-sheet-xml-file.md
+            - name: Vytvoření souborů klienta
+              items:
+                - name: Definování souboru MOF AppSynclet
+                  href: apps/how-to-define-the-appsynclet-mof-file.md
+                - name: Definování obslužné rutiny na straně klienta
+                  href: apps/how-to-define-the-client-side-handler.md
+            - name: Instalace rozšíření správy aplikací
+              items:
+                - name: Vytvoření souboru rozšíření typu nasazení (cmdtx)
+                  href: apps/how-to-create-the-deployment-type-extension-file-cmdtx.md
+                - name: Vytvoření souboru Instalační služby systému Windows (msi)
+                  href: apps/how-to-create-the-windows-installer-file-msi.md
+            - name: Ověření rozšíření správy aplikací
+              href: apps/verifying-the-application-management-extension.md
+- name: Programování klienta
+  items:
+    - name: Programování rozhraní WMI klienta Configuration Manageru
+      items:
+        - name: O programování rozhraní WMI
+          href: core/clients/programming/about-configuration-manager-wmi-programming.md
+        - name: Připojení k oboru názvů rozhraní WMI klienta přes System.Management
+          href: core/clients/programming/how-to-connect-to-the-client-wmi-namespace.md
+        - name: Čtení objektu rozhraní WMI přes System.Management
+          href: core/clients/programming/how-to-read-a-wmi-object-by-using-system.management.md
+        - name: Provedení synchronního dotazu přes System.Management
+          href: core/clients/programming/how-to-perform-a-synchronous-query-by-using-system.management.md
+        - name: Provedení synchronního dotazu přes System.Management
+          href: core/clients/programming/how-to-perform-an-asynchronous-query-by-using-system.management.md
+        - name: Volání metody třídy služby WMI přes System.Management
+          href: core/clients/programming/how-to-call-a-wmi-class-method-by-using-system.management.md
+    - name: Podmínky prostředku klienta
+      href: core/clients/programming/client-resource-conditions.md
+    - name: Použití vlastního nastavení klienta
+      href: core/clients/programming/how-to-apply-custom-client-settings.md
+- name: Kolekce
+  items:
+    - name: Vytvoření dynamické kolekce
+      href: core/clients/collections/how-to-create-a-dynamic-collection.md
+    - name: Vytvoření statické kolekce
+      href: core/clients/collections/how-to-create-a-static-collection.md
+    - name: Výčet členů kolekce
+      href: core/clients/collections/how-to-enumerate-the-members-of-a-collection.md
+    - name: Úpravy kolekce
+      href: core/clients/collections/how-to-modify-a-collection.md
+    - name: Odstranění kolekce
+      href: core/clients/collections/how-to-delete-a-collection.md
+    - name: Získání vlastností kolekce
+      href: core/clients/collections/how-to-get-the-properties-of-a-collection.md
+    - name: Spuštění jednorázového hodnocení členství
+      href: core/clients/collections/how-to-initiate-a-one-time-membership-evaluation-for-a-collection.md
+- name: Nastavení dodržování předpisů
+  items:
+    - name: Nastavení a konfigurace
+      items:
+        - name: O nastavení a konfiguraci
+          href: compliance/about-compliance-settings--dcm--setup-and-configuration.md
+        - name: Povolení nebo zakázání agenta nastavení dodržování předpisů
+          href: compliance/how-to-enable-or-disable-the-compliance-settings--dcm--agent.md
+        - name: Konfigurace výchozího plánu vyhodnocování dodržování předpisů
+          href: compliance/how-to-configure-the-default-compliance-evaluation-schedule.md
+    - name: Standardní hodnoty konfigurace a položky konfigurace
+      items:
+        - name: O standardních hodnotách a položkách konfigurace
+          href: compliance/about-configuration-baselines-and-configuration-items.md
+        - name: Import standardních hodnot a položek konfigurace
+          href: compliance/how-to-import-configuration-baselines-and-configuration-items.md
+        - name: Export standardních hodnot a položek konfigurace
+          href: compliance/how-to-export-configuration-baselines-and-configuration-items.md
+        - name: Přiřazení standardních hodnot konfigurace
+          href: compliance/how-to-assign-configuration-baselines.md
+        - name: Zobrazení seznamu přiřazení konfigurace
+          href: compliance/how-to-list-configuration-assignments.md
+    - name: Rozšiřitelnost nastavení dodržování předpisů
+      href: compliance/about-compliance-settings--dcm--extensibility.md
+    - name: Vytváření standardních hodnot a položek konfigurace
+      items:
+        - name: O vytváření standardních hodnot a položek konfigurace
+          href: compliance/about-authoring-configuration-baselines-and-configuration-items.md
+        - name: Standardní hodnoty konfigurace – příklad
+          items:
+            - name: O standardních hodnotách konfigurace
+              href: compliance/about-configuration-baselines.md
+            - name: Standardní hodnoty konfigurace – příklad
+              href: compliance/configuration-baseline-example-1.md
+        - name: Příklady položek konfigurace aplikace
+          items:
+            - name: O položkách konfigurace aplikace
+              href: compliance/about-application-configuration-items.md
+            - name: Položky konfigurace aplikace – příklad 1
+              href: compliance/application-configuration-item-example-1.md
+            - name: Položky konfigurace aplikace – příklad 2
+              href: compliance/application-configuration-item-example-2.md
+        - name: Položka konfigurace operačního systému – příklad
+          items:
+            - name: O položkách konfigurace operačního systému
+              href: compliance/about-operating-system-configuration-item-examples.md
+            - name: Položka konfigurace operačního systému – příklad
+              href: compliance/operating-system-configuration-item-example-1.md
+        - name: Obecná položka konfigurace – příklad
+          items:
+            - name: O obecných položkách konfigurace
+              href: compliance/about-general-configuration-items.md
+            - name: Obecná položka konfigurace – příklad
+              href: compliance/general-configuration-item-example-1.md
+- name: Rozšíření konzoly
+  items:
+    - name: O rozšířeních konzoly
+      href: core/servers/console/about-configuration-manager-console-extension.md
+    - name: Architektura rozšíření konzoly
+      href: core/servers/console/console-extension-architecture.md
+    - name: Nasazení rozšíření konzoly
+      href: core/servers/console/console-extension-deployment.md
+    - name: Akce konzoly
+      items:
+        - name: O akcích konzoly
+          items:
+            - name: Akce
+              href: core/servers/console/configuration-manager-actions.md
+            - name: XML akce
+              href: core/servers/console/configuration-manager-action-xml.md
+            - name: Podmíněné akce
+              href: core/servers/console/conditional-actions.md
+            - name: Spustitelná akce
+              href: core/servers/console/executable-action.md
+            - name: Akce ShowDialog
+              href: core/servers/console/showdialog-action.md
+            - name: Akce sestavy
+              href: core/servers/console/report-action.md
+            - name: Akce AssemblyType
+              href: core/servers/console/assemblytype-action.md
+            - name: Akce skupiny
+              href: core/servers/console/group-action.md
+        - name: Vytvoření akce
+          href: core/servers/console/how-to-create-a-configuration-manager-action.md
+    - name: Formuláře konzoly
+      items:
+        - name: O formulářích konzoly
+          href: core/servers/console/about-configuration-manager-console-forms.md
+        - name: Vytvoření seznamu vlastností
+          href: core/servers/console/how-to-create-a-configuration-manager-property-sheet.md
+        - name: Vytvoření XML formuláře pro seznam vlastností
+          href: core/servers/console/how-to-create-form-xml-for-a-configuration-manager-property-sheet.md
+        - name: Přidání stránky vlastností do existujícího seznamu vlastností
+          href: core/servers/console/how-to-add-a-property-page-to-an-existing-configuration-manager-property-sheet.md
+        - name: Vytvoření XML akce pro seznam vlastností
+          href: core/servers/console/how-to-create-action-xml-for-a-configuration-manager-property-sheet.md
+        - name: Vytvoření dialogového okna
+          href: core/servers/console/how-to-create-a-configuration-manager-dialog-box.md
+        - name: Vytvoření XML formuláře pro dialogové okno
+          href: core/servers/console/how-to-create-form-xml-for-a-configuration-manager-dialog-box.md
+        - name: Vytvoření XML akce pro dialogové okno
+          href: core/servers/console/how-to-create-action-xml-for-a-configuration-manager-dialog-box.md
+        - name: Použití objektů předaných do formuláře
+          href: core/servers/console/how-to-use-objects-passed-to-a-configuration-manager-form.md
+        - name: Svázání dat s formulářem
+          href: core/servers/console/how-to-bind-configuration-manager-data-to-a-form.md
+    - name: Třídy správy konzoly
+      items:
+        - name: O třídách správy konzoly
+          href: core/servers/console/about-configuration-manager-console-management-classes.md
+        - name: XML třídy správy konzoly
+          href: core/servers/console/console-management-class-xml.md
+    - name: Uzly konzoly
+      items:
+        - name: O uzlech konzoly
+          href: core/servers/console/about-configuration-manager-console-nodes.md
+        - name: XML uzlu konzoly
+          href: core/servers/console/console-node-xml.md
+        - name: Element RootNodes konzoly
+          href: core/servers/console/console-rootnodes-element.md
+        - name: Element ResourceAssembly konzoly
+          href: core/servers/console/console-resourceassembly-element.md
+        - name: Vytvoření uzlu konzoly
+          href: core/servers/console/how-to-create-a-configuration-manager-console-node.md
+        - name: Nalezení identifikátoru GUID kódu konzoly
+          href: core/servers/console/how-to-find-a-configuration-manager-console-node-guid.md
+    - name: Zobrazení konzoly
+      items:
+        - name: O zobrazeních konzoly
+          href: core/servers/console/about-configuration-manager-console-views.md
+        - name: Vytvoření vlastního zobrazení
+          href: core/servers/console/how-to-create-a-configuration-manager-console-custom-view.md
+        - name: Vytvoření XML uzlu pro zobrazení mřížky
+          href: core/servers/console/how-to-create-node-xml-for-a-configuration-manager-console-grid-view.md
+- name: Zjišťování
+  items:
+    - name: Konfigurace zjišťování prezenčního signálu
+      href: core/servers/configure/how-to-configure-heartbeat-discovery.md
+    - name: Konfigurace zjišťování sítě
+      href: core/servers/configure/how-to-configure-network-discovery.md
+    - name: Konfigurace zjišťování skupin služby Active Directory
+      href: core/servers/configure/how-to-configure-active-directory-group-discovery.md
+    - name: Konfigurace zjišťování systémových prostředků služby Active Directory
+      href: core/servers/configure/how-to-configure-active-directory-system-discovery.md
+    - name: Konfigurace zjišťování uživatelů služby Active Directory
+      href: core/servers/configure/how-to-configure-active-directory-user-discovery.md
+    - name: Rozšíření zjišťování prostředků
+      items:
+        - name: Použití DDR při zjišťování prostředků
+          items:
+            - name: O vlastnostech DDR
+              href: core/servers/configure/about-ddr-properties.md
+            - name: Aktualizace existující instance prostředku
+              href: core/servers/configure/about-updating-an-existing-resource-instance.md
+            - name: Vytvoření záznamu zjišťování dat (DDR)
+              href: core/servers/configure/about-creating-a-data-discovery-record.md
+            - name: O hodnotě jedinečného identifikátoru pro prostředek
+              href: core/servers/configure/about-the-unique-identifier-value-for-a-resource.md
+        - name: Získání hodnoty jedinečného identifikátoru pro klienta
+          href: core/servers/configure/how-to-get-the-unique-identifier-value-for-a-client.md
+        - name: Přidání nových vlastností do existujícího typu prostředku
+          href: core/servers/configure/how-to-add-new-properties-to-an-existing-resource-type.md
+        - name: Vytvoření záznamu dat zjišťování
+          href: core/servers/configure/how-to-create-a-data-discovery-record.md
+- name: inventář
+  items:
+    - name: O inventáři
+      href: core/clients/inventory/about-configuration-manager-inventory.md
+    - name: Inventář hardwaru
+      items:
+        - name: Povolení inventáře hardwaru
+          href: core/clients/inventory/how-to-enable-hardware-inventory.md
+        - name: Konfigurace nastavení inventáře hardwaru
+          href: core/clients/inventory/how-to-configure-hardware-inventory-settings.md
+        - name: Požadavky souborů IDMIF
+          href: core/clients/inventory/requirements-of-idmif-files.md
+        - name: Resetování mezipaměti inventáře hardwaru
+          href: core/clients/inventory/how-to-reset-the-hardware-inventory-cache.md
+    - name: Inventář softwaru
+      items:
+        - name: Povolení inventáře softwaru
+          href: core/clients/inventory/how-to-enable-software-inventory.md
+        - name: Konfigurace nastavení inventáře softwaru
+          href: core/clients/inventory/how-to-configure-software-inventory-settings.md
+        - name: Resetování mezipaměti inventáře softwaru
+          href: core/clients/inventory/how-to-reset-the-software-inventory-cache.md
+    - name: Import souboru MOF pro rozšíření inventáře
+      href: core/clients/inventory/how-to-import-a-mof-file-to-extend-inventory.md
+    - name: Zahájení synchronizace funkce Asset Intelligence
+      href: core/clients/asset-intelligence/how-to-initiate-a-synchronization.md
+- name: Starší verze klienta MDM
+  items:
+    - name: Konfigurace nastavení klientského agenta mobilního zařízení
+      href: mdm/how-to-configure-mobile-device-client-agent-settings.md
+    - name: 'Vytvoření balíčků pro distribuci softwaru, programů a oznámení o inzerovaných programech pro mobilní zařízení'
+      href: mdm/how-to-create-software-distribution-packages-for-mobile-devices.md
+- name: Nasazení operačního systému
+  items:
+    - name: Konfigurace role lokality nasazení operačního systému
+      items:
+        - name: O konfiguraci role lokality nasazení operačního systému
+          href: osd/about-operating-system-deployment-site-role-configuration.md
+        - name: Vytvoření role bodu migrace stavu
+          href: osd/how-to-create-a-state-migration-point-role.md
+        - name: Odstranění role bodu migrace stavu
+          href: osd/how-to-delete-a-state-migration-point-role.md
+        - name: Přidání složky bodu migrace stavu
+          href: osd/how-to-add-a-state-migration-point-folder.md
+        - name: Nastavení režimu Pouze obnovení pro bod migrace stavu
+          href: osd/how-to-set-the-restore-only-mode-for-a-state-migration-point.md
+        - name: Nastavení zásad odstraňování pro bod migrace stavu
+          href: osd/how-to-set-the-deletion-policy-for-a-state-migration-point.md
+        - name: Povolení role Distribuční bod s povoleným PXE
+          href: osd/how-to-enable-a-pxe-service-point-role.md
+        - name: Zakázání role Distribuční bod s povoleným PXE
+          href: osd/how-to-disable-a-pxe-service-point-role.md
+        - name: Povolení podpory neznámých počítačů
+          href: osd/how-to-enable-unknown-computer-support-for-a-pxe-service-point.md
+        - name: Nastavení odezvy na požadavky PXE
+          href: osd/how-to-set-the-pxe-service-point-response-to-pxe-requests.md
+        - name: Nastavení zpoždění odezvy PXE
+          href: osd/how-to-set-the-response-delay-for-a-pxe-service-point.md
+        - name: Nastavení odezvy PXE pro všechna síťová rozhraní
+          href: osd/how-to-set-the-pxe-service-point-response-to-all-network-interfaces.md
+        - name: Nastavení odezvy PXE pro konkrétní síťové rozhraní
+          href: osd/how-to-set-the-pxe-service-point-response-for-a-specific-network-interface.md
+        - name: Nastavení informací o značce u nasazení operačního systému
+          href: osd/how-to-set-operating-system-deployment-branding-information.md
+    - name: Pořadí úloh nasazení operačního systému
+      items:
+        - name: O pořadí úloh
+          items:
+            - name: Přehled pořadí úloh
+              href: osd/operating-system-deployment-task-sequences-overview.md
+            - name: Objektový model pořadí úloh
+              href: osd/operating-system-deployment-task-sequence-object-model.md
+        - name: Vytvoření pořadí úloh
+          href: osd/how-to-create-an-operating-system-deployment-task-sequence.md
+        - name: Vytvoření balíčku pořadí úloh
+          href: osd/how-to-create-an-operating-system-deployment-task-sequence-package.md
+        - name: Čtení pořadí úloh z balíčku pořadí úloh
+          href: osd/how-to-read-a-task-sequence-from-a-task-sequence-package.md
+        - name: Výčet dostupných pořadí úloh
+          href: osd/how-to-enumerate-the-available-operating-system-deployment-task-sequences.md
+        - name: Přidání akce pořadí úloh
+          href: osd/how-to-add-an-operating-system-deployment-task-sequence-action.md
+        - name: Odstranění akce pořadí úloh
+          href: osd/how-to-delete-an-operating-system-deployment-task-sequence-action.md
+        - name: Přidání podmínky do kroku pořadí úloh
+          href: osd/how-to-add-a-condition-to-an-operating-system-deployment-task-sequence-step.md
+        - name: Výčet kroků v pořadí úloh
+          href: osd/how-to-enumerate-the-steps-in-an-operating-system-deployment-task-sequence.md
+        - name: Ladění pořadí úloh
+          href: osd/how-to-reorder-an-operating-system-deployment-task-sequence.md
+        - name: Vytvoření skupiny pořadí úloh
+          href: osd/how-to-create-an-operating-system-deployment-task-sequence-group.md
+        - name: Přidání kroku do skupiny pořadí úloh
+          href: osd/how-to-add-a-step-to-an-operating-system-deployment-group.md
+        - name: Odebrání kroku ze skupiny pořadí úloh
+          href: osd/how-to-remove-a-step-from-an-operating-system-deployment-group.md
+        - name: Přesunutí kroku do jiné skupiny pořadí úloh
+          href: osd/how-to-move-a-step-to-a-different-task-sequence-group.md
+        - name: Použití proměnných pořadí úloh
+          href: osd/how-to-use-task-sequence-variables-in-a-running-task-sequence.md
+        - name: Nastavení proměnné pořadí úloh
+          href: osd/how-to-set-an-operating-system-deployment-task-sequence-variable.md
+    - name: Správa počítačů při nasazení operačního systému
+      items:
+        - name: O správě počítačů
+          href: osd/about-computer-management.md
+        - name: Import nového počítače
+          href: osd/how-to-import-a-new-computer-into-configuration-manager.md
+        - name: Vytvoření přidružení mezi dvěma počítači
+          href: osd/how-to-create-an-association-between-two-computers-in-configuration-manager.md
+        - name: Vytvoření proměnné kolekce
+          href: osd/how-to-create-a-collection-variable.md
+        - name: Vytvoření proměnné počítače
+          href: osd/how-to-create-a-computer-variable.md
+        - name: Sledování migrací nasazení operačního systému
+          href: osd/how-to-track-operating-system-deployment-migrations.md
+    - name: Správa imagí pro nasazení operačního systému
+      items:
+        - name: O správě imagí
+          href: osd/about-operating-system-deployment-image-management.md
+        - name: Přidání balíčku image operačního systému
+          href: osd/how-to-add-an-operating-system-image-package-in-configuration-manager.md
+        - name: Aktualizace balíčku image operačního systému
+          href: osd/how-to-update-an-operating-system-image-package.md
+        - name: Zobrazení vlastností image operačního systému
+          href: osd/how-to-view-the-properties-for-an-operating-system-image.md
+        - name: Přidání spouštěcí image ze souboru WIM
+          href: osd/how-to-add-a-boot-image-from-a-wim-file.md
+        - name: Přidání balíčku s upgradem operačního systému
+          href: osd/how-to-add-an-operating-system-install-package.md
+        - name: Vymazání oznámení o inzerovaném programu služby PXE pro kolekci
+          href: osd/how-to-clear-a-pxe-advertisement-for-a-configuration-manager-collection.md
+        - name: Vymazání oznámení o inzerovaném programu služby PXE pro prostředek
+          href: osd/how-to-clear-a-pxe-advertisement-for-a-configuration-manager-resource.md
+    - name: Správa ovladačů nasazení operačního systému
+      items:
+        - name: O správě ovladačů
+          href: osd/about-operating-system-deployment-driver-management.md
+        - name: Import ovladače popsaného souborem INF
+          href: osd/how-to-import-a-windows-driver-described-by-an-inf-file.md
+        - name: Import ovladače popsaného souborem txtsetup.oem
+          href: osd/how-to-import-a-windows-driver-described-by-a-txtsetup-oem-file.md
+        - name: Vytvoření balíčku konkrétního ovladače
+          href: osd/how-to-create-a-driver-package-for-a-windows-driver.md
+        - name: Přidání ovladače do spouštěcí image
+          href: osd/how-to-add-a-windows-driver-to-a-configuration-manager-boot-image-package.md
+        - name: Odebrání ovladače ze spouštěcí image
+          href: osd/how-to-remove-a-windows-driver-from-a-boot-image-package.md
+        - name: Povolení nebo zakázání ovladače
+          href: osd/how-to-enable-or-disable-a-windows-driver.md
+        - name: Odstranění ovladače
+          href: osd/how-to-delete-a-windows-driver-from-configuration-manager.md
+        - name: Vytvoření balíčku ovladače
+          href: osd/how-to-delete-a-driver-package-in-configuration-manager.md
+        - name: Určení podporovaných platforem pro ovladač
+          href: osd/how-to-specify-the-supported-platforms-for-a-driver.md
+        - name: Přidání kategorie do ovladače
+          href: osd/how-to-add-a-category-to-a-windows-driver.md
+        - name: Odebrání kategorie z ovladače
+          href: osd/how-to-remove-a-category-from-a-windows-driver.md
+    - name: Rozšířené nasazení operačního systému
+      items:
+        - name: O vlastních akcích Configuration Manageru
+          href: osd/about-configuration-manager-custom-actions.md
+        - name: O klientských aplikacích pro vlastní akce
+          href: osd/about-configuration-manager-custom-action-client-applications.md
+        - name: O souborech MOF pro vlastní akce
+          href: osd/about-configuration-manager-custom-action-mof-files.md
+        - name: O vykazování průběhu vlastních akcí
+          href: osd/about-reporting-configuration-manager-custom-action-progress.md
+        - name: Vytvoření ovládacího prvku pro vlastní akci
+          href: osd/how-to-create-a-configuration-manager-custom-action-control.md
+        - name: Vytvoření souboru MOF pro vlastní akci
+          href: osd/how-to-create-a-mof-file-for-a-configuration-manager-custom-action.md
+        - name: Použití ovládacího prvku pro vlastní akci
+          href: osd/how-to-use-a-configuration-manager-custom-action-control.md
+- name: Správa na základě rolí
+  items:
+    - name: Přehled správy na základě rolí
+      href: core/servers/configure/role-based-administration.md
+    - name: Správa administrativních uživatelů
+      items:
+        - name: 'Ověření, jestli má uživatel oprávnění pro objekt'
+          href: core/servers/configure/how-to-check-if-a-user-has-permissions-for-an-object.md
+        - name: 'Ověření, jestli má uživatel oprávnění pro prostředek'
+          href: core/servers/configure/how-to-check-if-a-user-has-permissions-for-a-resource.md
+        - name: Výčet administrativních přiřazení pro uživatele nebo skupinu zabezpečení
+          href: core/servers/configure/how-to-enumerate-the-administrative-assignments-for-a-user-or-security-group.md
+        - name: Vytvoření nového správce
+          href: core/servers/configure/how-to-create-a-new-administrator.md
+        - name: Vytvoření nové role zabezpečení
+          href: core/servers/configure/how-to-create-a-new-security-role.md
+    - name: Správa oborů zabezpečení
+      items:
+        - name: Vytvoření nový obor zabezpečení
+          href: core/servers/configure/how-to-create-a-new-security-scope.md
+        - name: Odstranění oboru zabezpečení
+          href: core/servers/configure/how-to-delete-a-security-scope.md
+        - name: Přidružení objektu k oboru zabezpečení
+          href: core/servers/configure/how-to-associate-an-object-with-a-security-scope.md
+        - name: Odebrání přidružení objektu k oboru zabezpečení
+          href: core/servers/configure/how-to-remove-an-object-association-with-a-security-scope.md
+- name: Vzdálené nástroje
+  items:
+    - name: Povolení a zakázání vzdálených nástrojů
+      href: core/clients/remote-control/how-to-enable-and-disable-remote-tools.md
+    - name: Konfigurace nastavení vzdálených nástrojů
+      href: core/clients/remote-control/how-to-configure-remote-tools-settings.md
+- name: Distribuce softwaru
+  items:
+    - name: Přehled distribuce softwaru
+      href: core/servers/configure/software-distribution-overview.md
+    - name: Balíčky
+      items:
+        - name: O definičních souborech balíčku
+          href: core/servers/configure/about-package-definition-files.md
+        - name: Vytvoření balíčku
+          href: core/servers/configure/how-to-create-a-package.md
+        - name: Vytvoření balíčku pomocí šablony definičního souboru balíčku
+          href: core/servers/configure/how-to-create-a-package-by-using-a-package-definition-file-template.md
+        - name: Konfigurace vlastností balíčku
+          href: core/servers/configure/how-to-configure-package-properties.md
+        - name: Konfigurace balíčku pro použití binární rozdílové replikace
+          href: core/servers/configure/how-to-configure-a-package-to-use-binary-delta-replication.md
+        - name: Odstranění balíčku
+          href: core/servers/configure/how-to-delete-a-package.md
+        - name: Přiřazení balíčku k distribučnímu bodu
+          href: core/servers/configure/how-to-assign-a-package-to-a-distribution-point.md
+    - name: Programy
+      items:
+        - name: O programech
+          href: core/servers/configure/about-software-distribution-programs.md
+        - name: Vytvoření programu
+          href: core/servers/configure/how-to-create-a-program.md
+        - name: Úpravy vlastností programu
+          href: core/servers/configure/how-to-modify-program-properties.md
+        - name: Změna maximální doby spuštění programu
+          href: core/servers/configure/how-to-change-the-maximum-run-time-for-a-program.md
+        - name: Zobrazení seznamu všech programů a jejich maximálních dob spuštění
+          href: core/servers/configure/how-to-list-all-programs-and-their-maximum-run-time-value.md
+        - name: Úpravy podporovaných platforem pro program
+          href: core/servers/configure/how-to-modify-the-supported-platforms-for-a-program.md
+    - name: Nasazení
+      items:
+        - name: O nasazeních
+          href: core/servers/configure/about-software-distribution-deployments.md
+        - name: Vytvoření nasazení
+          href: core/servers/configure/how-to-create-an-advertisement.md
+        - name: Přiřazení nasazení ke kolekci počítačů
+          href: core/servers/configure/how-to-assign-an-advertisement-to-a-collection-of-computers.md
+        - name: Úpravy vlastností nasazení
+          href: core/servers/configure/how-to-modify-advertisement-properties.md
+        - name: 'Konfigurace nasazení, které umožňuje restartování mimo časové období údržby'
+          href: core/servers/configure/how-to-allow-reboots-outside-of-a-maintenance-window.md
+        - name: 'Konfigurace nasazení, které přepisuje časové období údržby'
+          href: core/servers/configure/how-to-configure-an-advertisement-to-override-a-maintenance-window.md
+    - name: Časové intervaly pro správu a údržbu
+      items:
+        - name: O časových obdobích údržby
+          href: core/servers/configure/about-maintenance-windows.md
+        - name: Vytvoření časového období údržby
+          href: core/servers/configure/how-to-create-a-maintenance-window-for-a-collection.md
+        - name: Změna vlastností časového období údržby
+          href: core/servers/configure/how-to-change-the-maintenance-window-properties-for-a-collection.md
+        - name: Odstranění časového období údržby
+          href: core/servers/configure/how-to-delete-a-maintenance-window-for-a-collection.md
+        - name: Zobrazení seznamu časových období údržby a vlastností pro konkrétní kolekci
+          href: core/servers/configure/how-to-list-the-maintenance-windows-and-properties-for-a-specific-collection.md
+    - name: Nastavení a konfigurace
+      items:
+        - name: O instalaci a konfiguraci distribuce softwaru
+          href: core/servers/configure/about-software-distribution-setup-and-configuration.md
+        - name: Povolení nebo zakázání klientského agenta inzerovaných programů
+          href: core/servers/configure/how-to-enable-or-disable-the-advertised-programs-client-agent.md
+        - name: Konfigurace nastavení klientského agenta inzerovaných programů
+          href: core/servers/configure/how-to-configure-advertised-programs-client-agent-settings.md
+        - name: Přizpůsobení informací o značce u nasazení operačního systému
+          href: core/servers/configure/how-to-customize-advertisement-branding-information.md
+    - name: Funkce vzdáleného probuzení Wake On LAN
+      items:
+        - name: Konfigurace požadovaného nasazení pro Wake On LAN
+          href: core/servers/configure/how-to-configure-a-mandatory-advertisement-for-wake-on-lan.md
+        - name: Povolení rozhraní Partner Notification API
+          href: core/servers/configure/how-to-enable-the-partner-notification-api.md
+    - name: Distribuční body
+      items:
+        - name: Zobrazení seznamu distribučních bodů pro lokalitu
+          href: core/servers/configure/how-to-list-distribution-points-for-a-site.md
+        - name: Nastavení příznaku distribuce na vyžádání
+          href: core/servers/configure/how-to-set-the-distribute-on-demand-flag.md
+- name: Monitorování míry využití softwaru
+  items:
+    - name: Povolení nebo zakázání monitorování míry využívání softwaru
+      href: apps/how-to-enable-or-disable-software-metering.md
+    - name: Konfigurace automatického generování pravidel monitorování míry využívání softwaru
+      href: apps/how-to-configure-automatic-software-metering-rule-generation.md
+    - name: Vytvoření pravidla monitorování míry využívání softwaru
+      href: apps/how-to-create-a-software-metering-rule.md
+    - name: Odstranění pravidla monitorování míry využívání softwaru
+      href: apps/how-to-delete-a-software-metering-rule.md
+    - name: Povolení nebo zakázání pravidla monitorování míry využívání softwaru
+      href: apps/how-to-enable-or-disable-a-software-metering-rule.md
+    - name: Zobrazení souhrnných informací o využití souboru
+      href: apps/how-to-view-file-usage-summary-information.md
+    - name: Zobrazení měsíčních souhrnných informací o využití
+      href: apps/how-to-view-monthly-usage-summary-information.md
+- name: Aktualizace softwaru
+  items:
+    - name: Nastavení a konfigurace
+      items:
+        - name: O instalaci a konfiguraci aktualizací softwaru
+          href: sum/about-software-updates-setup-and-configuration.md
+        - name: Konfigurace bodu aktualizace softwaru
+          href: sum/how-to-configure-the-software-update-point.md
+        - name: Konfigurace nastavení WSUS
+          href: sum/how-to-configure-the-wsus-settings.md
+        - name: Povolení nebo zakázání klientského agenta aktualizací softwaru
+          href: sum/how-to-enable-or-disable-the-software-updates-client-agent.md
+        - name: Nastavení informací o konfiguraci aktualizací softwaru
+          href: sum/how-to-set-software-updates-branding-information.md
+    - name: Nasazení
+      items:
+        - name: O nasazení aktualizací softwaru
+          href: sum/about-software-updates-deployments.md
+        - name: 'Výčet aktualizací, které odpovídají konkrétním kritériím'
+          href: sum/how-to-enumerate-updates-matching-a-specific-criteria.md
+        - name: Vytvoření seznamu aktualizací
+          href: sum/how-to-create-an-update-list.md
+        - name: Vytvoření šablony nasazení
+          href: sum/how-to-create-a-deployment-template.md
+        - name: Vytvoření balíčku pro nasazení
+          href: sum/how-to-create-a-deployment-package.md
+        - name: Přidání aktualizací do balíčku pro nasazení
+          href: sum/how-to-add-updates-to-a-deployment-package.md
+        - name: Odstranění aktualizací z balíčku pro nasazení
+          href: sum/how-to-delete-updates-from-a-deployment-package.md
+        - name: Konfigurace a nasazení aktualizací
+          href: sum/how-to-configure-and-deploy-updates.md
+        - name: Změna zdroje balíčku pro nasazení
+          href: sum/how-to-change-the-deployment-package-source.md
+    - name: Synchronizace bodu aktualizace softwaru
+      items:
+        - name: O synchronizaci bodu aktualizace softwaru
+          href: sum/about-synchronizing-the-software-update-point.md
+        - name: Synchronizace bodu aktualizace softwaru
+          href: sum/how-to-synchronize-with-the-software-update-point.md
+    - name: 'Konfigurace aktualizací softwaru, která přepisuje časová období údržby'
+      href: sum/how-to-configure-software-updates-to-override-maintenance-windows.md
+- name: Stav a shrnutí
+  items:
+    - name: O stavu Configuration Manageru
+      items:
+        - name: O stavových zprávách
+          href: core/servers/manage/about-configuration-manager-status-messages.md
+        - name: O stavových zprávách k součástem
+          href: core/servers/manage/about-configuration-manager-component-status-messages.md
+        - name: O použití SMSCSTAT.DLL k vytvoření stavových zpráv
+          href: core/servers/manage/about-using-smscstat.dll-to-create-status-messages.md
+        - name: O hlášení stavových zpráv od klientů
+          href: core/servers/manage/about-reporting-status-messages-from-configuration-manager-clients.md
+    - name: O shrnutích stavu
+      items:
+        - name: O shrnutích stavu Configuration Manageru
+          href: core/servers/manage/about-configuration-manager-status-summarizers.md
+        - name: O intervalech záznamů Configuration Manageru
+          href: core/servers/manage/about-configuration-manager-tally-intervals.md
+    - name: Určení stavu lokality
+      href: core/servers/manage/how-to-determine-the-health-of-a-configuration-manager-site.md
+    - name: Čtení intervalů záznamů pro lokalitu
+      href: core/servers/manage/how-to-read-the-tally-intervals-for-a-configuration-manager-site.md
+    - name: Čtení uživatelem definovaných stavových zpráv
+      href: core/servers/manage/how-to-read-user-defined-status-messages.md
+    - name: Hlášení uživatelem definovaných stavových zpráv
+      href: core/servers/manage/how-to-report-user-defined-status-messages.md
+    - name: Odstranění stavových zpráv
+      href: core/servers/manage/how-to-delete-status-messages.md
+    - name: Zjištění stavu balíčku
+      href: core/servers/manage/how-to-determine-package-status.md
+    - name: Zjištění stavu oznámení o inzerovaném programu
+      href: core/servers/manage/how-to-determine-advertisement-status.md
+- name: Referenční informace o rozhraní API Configuration Manageru
+  href: reference/configuration-manager-reference.md
+- name: Rozhraní REST API služby pro správu
+  href: adminservice/index.yml

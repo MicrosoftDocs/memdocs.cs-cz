@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/19/2020
+ms.date: 07/09/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 91683280a2e48d82fd145bf19228c33b432b6b49
-ms.sourcegitcommit: a1da477542fb0ff360685d6eb58ef43e37ac3950
+ms.openlocfilehash: 444fb116150cf3d7a3ab4dcfe4eb450b20119df0
+ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83853566"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86410925"
 ---
 # <a name="data-protection-framework-using-app-protection-policies"></a>Architektura ochrany dat pomocí zásad APP (App Protection Policies) 
 
@@ -49,7 +49,7 @@ Společnost Microsoft doporučuje pro architekturu ochrany dat aplikací násled
 |--------------------|------------------------|-------------------------------------------------------------------|----------------------------------------------------------|----------------------------------------|
 | Kontrola kvality  | Předprodukční tenant  | Vlastníci funkce, zabezpečení, posouzení rizik, soukromí, uživatelské rozhraní  | Ověřování funkčních scénářů, koncept dokumentace  | 0-30 dní  |
 | Preview  | Provozní tenant  | Vlastníci mobilních funkcí, UX  | Ověření scénáře koncového uživatele, dokumentace k uživateli  | 7-14 dní, vyúčtování kvality  |
-| Produkce  | Provozní tenant  | Vlastníci na mobilní funkce, IT oddělení technické podpory  | –  | 7 dní do několika týdnů, po verzi Preview  |
+| Provoz  | Provozní tenant  | Vlastníci na mobilní funkce, IT oddělení technické podpory  | Nelze použít  | 7 dní do několika týdnů, po verzi Preview  |
 
 Jak uvádí výše uvedená tabulka, všechny změny zásad ochrany aplikací by se měly nejdřív provést v předprodukčním prostředí, aby se porozumělo nastavení zásad. Po dokončení testování je možné změny přesunout do produkčního prostředí a použít na podmnožinu produkčních uživatelů, obecně, IT oddělení a dalších příslušných skupin. A nakonec můžete zavedení dokončit pro ostatní uživatele mobilní komunity. Zavedení do produkčního prostředí může trvat delší dobu v závislosti na rozsahu dopadu na změnu. Pokud nedochází k žádnému dopadu na uživatele, změna by se měla rychle vymezit, zatímco pokud změna vznikne vlivem na uživatele, může být potřeba, aby se povedlo zpomalit, protože je potřeba sdělit změny naplnění uživatele.
 
@@ -99,7 +99,7 @@ Zásady na úrovni 1 vynutily rozumnou úroveň přístupu k datům a současně
 | Přenos dat |       Příjem dat z jiných aplikací  |             Všechny aplikace  |             iOS/iPadOS, Android        |
 | Přenos dat |       Omezit vyjmutí, kopírování a vložení mezi aplikacemi  |             Libovolná aplikace  |             iOS/iPadOS, Android        |
 | Přenos dat |       Klávesnice třetích stran  |             Povolit  |             iOS/iPadOS        |
-| Přenos dat |       Schválené klávesnice  |             Není požadováno  |             Android        |
+| Přenos dat |       Schválené klávesnice  |             Nevyžadováno  |             Android        |
 | Přenos dat |       Snímek obrazovky a pomocník Google  |             Povolit  |             Android        |
 | Šifrování |             Šifrování dat organizace  |             Vyžadovat  |             iOS/iPadOS, Android        |
 | Šifrování |       Šifrování dat organizace v zaregistrovaných zařízeních  |             Vyžadovat  |             Android        |
@@ -113,7 +113,7 @@ Zásady na úrovni 1 vynutily rozumnou úroveň přístupu k datům a současně
 | Nastavení  | Hodnota  | Platforma  | Poznámky  |
 |----------------------------------------------------------------|---------------|----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Připnout pro přístup  | Vyžadovat  | iOS/iPadOS, Android  |   |
-| Typ kódu PIN  | Numeric  | iOS/iPadOS, Android  |   |
+| Typ kódu PIN  | Číselný  | iOS/iPadOS, Android  |   |
 | Jednoduchý PIN kód  | Povolit  | iOS/iPadOS, Android  |   |
 | Vyberte minimální délku PIN kódu.  | 4  | iOS/iPadOS, Android  |   |
 | Biometrika místo kódu PIN pro přístup  | Povolit  | iOS/iPadOS, Android  |   |
@@ -122,7 +122,7 @@ Zásady na úrovni 1 vynutily rozumnou úroveň přístupu k datům a současně
 | ID obličeje místo kódu PIN pro přístup  | Povolit  | iOS/iPadOS  |   |
 | Resetovat PIN kód po počtu dní  | Ne  | iOS/iPadOS, Android  |   |
 | PIN kód aplikace, když je nastavený PIN kód zařízení  | Vyžadovat  | iOS/iPadOS, Android  | Pokud je zařízení zaregistrované v Intune, můžou správci zvážit nastavení "Nepožadováno", pokud vynucuje silný PIN kód zařízení pomocí zásad dodržování předpisů zařízením.  |
-| Přihlašovací údaje k pracovnímu nebo školnímu účtu pro přístup  | Není požadováno  | iOS/iPadOS, Android  |   |
+| Přihlašovací údaje k pracovnímu nebo školnímu účtu pro přístup  | Nevyžadováno  | iOS/iPadOS, Android  |   |
 | Znovu ověřit požadavky na přístup po (minuty neaktivity)  | 30  | iOS/iPadOS, Android  |   |
 
 #### <a name="conditional-launch"></a>Podmíněné spouštění 
@@ -148,8 +148,10 @@ Nastavení zásad vyžadované v úrovni 2 zahrnuje všechna nastavení zásad d
 |---------------|----------------------------------------------------------|-----------------------------------------------|---------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Přenos dat |       Zálohovat organizační data do...  |          Blok  |          iOS/iPadOS, Android  |                  |
 | Přenos dat |       Posílání organizačních dat do jiných aplikací  |          Aplikace spravované podle zásad  |          iOS/iPadOS, Android  |          <p>S iOS/iPadOS můžou správci nakonfigurovat tuto hodnotu jako "aplikace spravované zásadou", "aplikace spravované zásadou" s funkcí sdílení operačního systému "nebo" aplikace spravované podle zásad s filtrováním Open-in/sdílení ". </p><p>Aplikace spravované podle zásad se sdílením operačního systému jsou dostupné, pokud je zařízení také zaregistrované v Intune. Toto nastavení umožňuje přenos dat do jiných aplikací spravovaných zásadou a také přenos souborů do jiných aplikací spravovaných pomocí Intune. </p><p>Aplikace spravované podle zásad s filtrováním Open-in/sdílení vyfiltrují dialogová okna otevřít v operačním systému nebo sdílet, aby zobrazovala jenom aplikace spravované zásadami. </p><p> Další informace najdete v tématu [nastavení zásad ochrany aplikací pro iOS](app-protection-policy-settings-ios.md).</p> |
+| Přenos dat |       Vybrat aplikace, které se mají vyloučit  |          Výchozí/Skype; app-Settings; calshow; ITMS; itmss; ITMS-Apps; ITMS-Apps; ITMS-Services;  |          iOS/iPadOS  |                  |
 | Přenos dat |       Uložení kopií dat org  |          Blok  |          iOS/iPadOS, Android  |                  |
 | Přenos dat |       Umožňuje uživatelům ukládat kopie do vybraných služeb.  |          OneDrive pro firmy, SharePoint Online |          iOS/iPadOS, Android  |                  |
+| Přenos dat |       Přenést telekomunikační data do  |          Všechny aplikace |          iOS/iPadOS, Android  |                  |
 | Přenos dat |       Omezit vyjmutí, kopírování a vložení mezi aplikacemi  |          Aplikace s vložením spravované podle zásad  |          iOS/iPadOS, Android  |                  |
 | Přenos dat |       Snímek obrazovky a pomocník Google  |          Blok  |          Android  |                  |
 | Funkce |       Omezení přenosu webového obsahu u jiných aplikací  |          Microsoft Edge  |          iOS/iPadOS, Android  |                  |
@@ -173,9 +175,12 @@ Nastavení zásad vyžadované v úrovni 3 zahrnuje všechna nastavení zásad d
 
 | Nastavení | Popis nastavení |             Hodnota  |             Platforma        | Poznámky |
 |---------------|---------------------------------------|----------------------------------------|--------------------------------------|---------------------------------------------------------------------------------------------------------|
+| Přenos dat |       Přenést telekomunikační data do  |          Libovolná aplikace pro vyžádané připojení spravovaná pomocí zásad |          Android  | Správci můžou toto nastavení nakonfigurovat i tak, aby používali aplikaci pro telefonování, která nepodporuje zásady ochrany aplikací, a to tak, že vybere **konkrétní aplikaci pro telefonování** a **ID balíčku aplikace** vytáčení a hodnoty **název aplikace vytáčení** .   |
+| Přenos dat |       Přenést telekomunikační data do  |          Konkrétní aplikace pro telefonování |          iOS/iPadOS  |  |
+| Přenos dat |       Schéma adresy URL aplikace vytáčení  |          *replace_with_dialer_app_url_scheme* |          iOS/iPadOS  | V systému iOS/iPadOS musí být tato hodnota nahrazena schématem adresy URL vlastní používané aplikace. Pokud není schéma adresy URL známé, obraťte se na vývojáře aplikace, kde najdete další informace. Další informace o schématech URL najdete v tématu [Definování vlastního schématu adresy URL pro vaši aplikaci](https://developer.apple.com/documentation/uikit/inter-process_communication/allowing_apps_and_websites_to_link_to_your_content/defining_a_custom_url_scheme_for_your_app).|
 | Přenos dat |       Příjem dat z jiných aplikací  |          Aplikace spravované podle zásad  |          iOS/iPadOS, Android         |  |
-| Přenos dat |       Klávesnice třetích stran  |          Blok  |          iOS/iPadOS        | V systému iOS to blokuje fungování všech klávesnic třetích stran v rámci aplikace.  |
-| Přenos dat |       Schválené klávesnice  |          Vyžadovat  |          Android        | V případě Androidu je třeba vybrat klávesnice, aby bylo možné je použít v závislosti na nasazených zařízeních s Androidem.  |
+| Přenos dat |       Klávesnice třetích stran  |          Blok  |          iOS/iPadOS        | V systému iOS/iPadOS to blokuje fungování všech klávesnic třetích stran v rámci aplikace.  |
+| Přenos dat |       Schválené klávesnice  |          Vyžadovat  |          Android        |  |
 | Přenos dat |       Vybrat klávesnice ke schválení  |          *Přidat nebo odebrat klávesnice*  |          Android        | V případě Androidu je třeba vybrat klávesnice, aby bylo možné je použít v závislosti na nasazených zařízeních s Androidem.  |
 | Funkce |       Tisk organizačních dat  |          Blok  |          iOS/iPadOS, Android         |  |
 

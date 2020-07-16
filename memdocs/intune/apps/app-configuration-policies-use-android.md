@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/15/2020
+ms.date: 07/13/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0edb497b2dd9e4853f3fbc378992158c0757e1f6
-ms.sourcegitcommit: c7afcc3a2232573091c8f36d295a803595708b6c
+ms.openlocfilehash: da9c7b1f9a85f42b18dcba4d2349698cbb77daeb
+ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84973090"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86410974"
 ---
 # <a name="add-app-configuration-policies-for-managed-android-enterprise-devices"></a>Přidání zásad konfigurace aplikací pro spravovaná zařízení s Androidem Enterprise
 
@@ -76,7 +76,7 @@ Zásady konfigurace aplikací v Microsoft Intune poskytují nastavení spravovan
 
 Pokud je aplikace navržená tak, aby podporovala nastavení konfigurace, můžete použít návrháře konfigurace pro spravované aplikace Google Play. Konfigurace se týká zařízení zaregistrovaných v Intune. Návrhář vám umožní nakonfigurovat konkrétní hodnoty konfigurace pro nastavení vystavené aplikací.
 
-1. Vyberte možnost **Přidat**. Vyberte seznam nastavení konfigurace, která chcete pro aplikaci zadat.
+1. Vyberte **Přidat**. Vyberte seznam nastavení konfigurace, která chcete pro aplikaci zadat.
 
     Pokud pro e-mailovou aplikaci používáte GMail nebo devět práce, v části [nastavení zařízení s Androidem Enterprise nakonfigurujte e-mail](../configuration/email-settings-android-enterprise.md) , kde najdete další informace o těchto nastaveních.
 
@@ -94,8 +94,8 @@ Pokud jako typ hodnoty zvolíte proměnnou, můžete vybírat z následujících
 | ID zařízení AAD | dc0dc142-11d8-4b12-bfea-cae2a8514c82 |
 | Account ID | fc0dc142-71d8-4B12-bbea-bae2a8514c81 |
 | ID zařízení Intune | b9841cd9-9843-405F-be28-b2265c59ef97 |
-| Domain (Doména) | contoso.com |
-| Pošta | john@contoso.com |
+| Doména | contoso.com |
+| Poštovní | john@contoso.com |
 | Částečný hlavní název uživatele | Jan |
 | ID uživatele | 3ec2c00f-b125-4519-acf0-302ac3761822 |
 | Uživatelské jméno | Jan Karásek |
@@ -115,6 +115,7 @@ Jako správce Microsoft Intune můžete určit, které pracovní nebo školní �
    > - Office, Word, Excel, PowerPoint pro Android (16.0.9327.1000 a novější)
    > - OneDrive pro Android (5,28 a novější)
    > - Outlook pro Android (2.2.222 a novější)
+   > - Týmy pro Android (1416/1.0.0.2020061103 a novější)
 
 ## <a name="enter-json-data"></a>Zadat data JSON
 

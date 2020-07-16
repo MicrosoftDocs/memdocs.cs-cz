@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/10/2020
+ms.date: 07/13/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 730a8974753575b2726d821106f7b3c937b30207
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: b60d37c4da0b706dc109b5800b362d448224f116
+ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86239976"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86410959"
 ---
 # <a name="add-app-configuration-policies-for-managed-iosipados-devices"></a>Přidání zásad konfigurace aplikací pro spravovaná zařízení s iOS nebo iPadOS
 
@@ -117,7 +117,8 @@ Jako správce Microsoft Intune můžete určit, které pracovní nebo školní �
    > Následující aplikace zpracovávají výše uvedenou konfiguraci aplikace a povolují jenom účty organizace:
    > - Edge pro iOS (44.8.7 a novější)
    > - OneDrive pro iOS (10,34 a novější)
-   > - Outlook pro (iOS 2.99.0 nebo novější)
+   > - Outlook pro iOS (2.99.0 a novější)
+   > - Týmy pro iOS (2.0.15 a novější)
 
 ## <a name="enter-xml-data"></a>Zadání XML dat
 

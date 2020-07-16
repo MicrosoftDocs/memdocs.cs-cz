@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/09/2020
+ms.date: 07/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 16ba955c1d40f0298c17bd9e5826a7674ddc9cab
-ms.sourcegitcommit: c7afcc3a2232573091c8f36d295a803595708b6c
+ms.openlocfilehash: 4ebc719d65024f26d1661d311bfbf9077bcdcbe3
+ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84977237"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86410908"
 ---
 # <a name="manage-team-collaboration-access-by-using-teams-for-ios-and-android-with-microsoft-intune"></a>Správa přístupu k týmové spolupráci pomocí týmů pro iOS a Android s využitím Microsoft Intune
 
@@ -89,9 +89,6 @@ Další informace o konfiguraci nastavení režimu pro povolení účtů organiz
 - [nastavení iOS](app-configuration-policies-use-ios.md#allow-only-configured-organization-accounts-in-multi-identity-apps)
 
 Tento scénář konfigurace funguje jenom se zaregistrovanými zařízeními. Nicméně jakýkoli poskytovatel UEM je podporován. Pokud nepoužíváte Microsoft Endpoint Manager, budete se muset obrátit na dokumentaci k UEM, jak tyto konfigurační klíče nasadit.
-
-> [!IMPORTANT]
-> Režim účtů s povolenými orgs se bude podporovat v týmech pro iOS a Android v pozdě. června. Pro minimální verzi aplikace se podívejte na výše uvedené články.
 
 ## <a name="next-steps"></a>Další kroky
 

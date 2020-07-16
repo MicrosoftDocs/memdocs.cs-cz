@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 0ef2d09423e7bb51e94cb626bf513aa7e98992c9
-ms.sourcegitcommit: d647eefa23c8849f49584442df568284d51d7525
+ms.openlocfilehash: 09f829bd1695426211ff94381a63b8f23d1b4fe8
+ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86195646"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86411010"
 ---
 # <a name="what-is-desktop-analytics"></a>Co je Desktop Analytics?
 
@@ -63,7 +63,7 @@ Desktop Analytics nabízí následující výhody:
 
 - **Configuration Manager Integration**: Cloud služby – umožňuje vaši stávající místní infrastrukturu. Tato data a analýza použijte k nasazení a správě Windows na svých zařízeních.  
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 Pokud chcete použít desktopovou analýzu, ujistěte se, že vaše prostředí splňuje následující požadavky.
 
@@ -103,7 +103,7 @@ Pokud chcete použít desktopovou analýzu, ujistěte se, že vaše prostředí 
     - Zařízení musí mít také klienta Configuration Manager, verze 1902 s kumulativní aktualizací (4500571) nebo novější. Další informace najdete v tématu [aktualizace Configuration Manager](connect-configmgr.md#bkmk_hotfix).  
 
     > [!Note]  
-    > Desktop Analytics nepodporuje upgrady na kanál pro dlouhodobé obsluhy Windows 10 (LTSC). Další informace najdete v tématu [Přehled služby Windows as](https://docs.microsoft.com/windows/deployment/update/waas-overview#long-term-servicing-channel).
+    > Desktop Analytics nepodporuje upgrady na nebo z kanálu pro dlouhodobé obsluhy Windows 10 (LTSC). Další informace najdete v tématu [Přehled služby Windows as](https://docs.microsoft.com/windows/deployment/update/waas-overview#long-term-servicing-channel).
     >
     > Desktop Analytics je navržený tak, aby nejlépe podporoval scénář místního upgradu. Pokud potřebujete provést významné změny, jako je například z 32-bitové architektury na 64, použijte scénář pro vytváření imagí. Přehledy Desktop Analytics jsou v těchto scénářích nasazení klasického operačního systému stále důležité, ale můžete ignorovat konkrétní pokyny pro upgrade na místě. Další informace najdete v tématu [scénáře nasazení podnikových operačních systémů pomocí Configuration Manager](../osd/deploy-use/scenarios-to-deploy-enterprise-operating-systems.md).
 
