@@ -232,8 +232,6 @@
           href: plan-design/security/plan-for-security.md
         - name: Osvědčené postupy zabezpečení a ochrany osobních údajů
           href: plan-design/security/security-best-practices-and-privacy-information.md
-        - name: Prohlášení o zásadách ochrany osobních údajů – knihovna rutin Configuration Manageru
-          href: plan-design/security/privacy-statement-cmdlet-library.md
         - name: Další informace o ochraně osobních údajů
           href: plan-design/security/additional-privacy.md
         - name: Konfigurace zabezpečení
