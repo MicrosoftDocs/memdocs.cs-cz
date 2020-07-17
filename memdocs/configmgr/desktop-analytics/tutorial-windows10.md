@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: b991c2ddd0ea121251eb19afbdb032844be8738d
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 15cf7f3621f25a82f0e16d5275369ec93225bbf7
+ms.sourcegitcommit: 034226b5a60de49a75c7b54e856814f81c03a112
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268194"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86422839"
 ---
 # <a name="tutorial-deploy-windows-10-to-pilot"></a>Kurz: nasazení Windows 10 do pilotního nasazení
 
@@ -30,7 +30,7 @@ V tomto kurzu se naučíte:
 > * Vytvoření plánu nasazení Desktop Analytics pro Windows 10  
 > * Použití Configuration Manager k nasazení Windows 10 do pilotní skupiny  
 
-Pokud ještě nemáte předplatné Azure, [vytvořte si bezplatný účet](https://azure.microsoft.com/free), ještě než začnete. Když se správně nakonfiguruje, používání Desktop Analytics nenese žádné náklady na Azure.
+Pokud ještě nemáte předplatné Azure, vytvořte si [bezplatný účet](https://azure.microsoft.com/free) před tím, než začnete. Když se správně nakonfiguruje, používání Desktop Analytics nenese žádné náklady na Azure.
 
 Desktop Analytics používá *Log Analytics pracovní prostor* ve vašem předplatném Azure. Pracovní prostor je v podstatě kontejner, který obsahuje informace o účtu a jednoduché konfigurační informace. Další informace najdete v tématu [Správa pracovních prostorů](https://docs.microsoft.com/azure/log-analytics/log-analytics-manage-access?toc=/azure/azure-monitor/toc.json).
 
@@ -94,7 +94,7 @@ Pomocí tohoto postupu se můžete přihlásit k portálu Analytics a nakonfigur
 
 2. Na stránce **přijmout licenční smlouvu** si přečtěte smlouvu o poskytování služeb a vyberte **přijmout**.  
 
-3. Na stránce **potvrďte předplatné** jsou seznam požadovaných opravňujících licencí pro funkce stavu zařízení s Windows v Desktop Analytics. Pokračujte výběrem tlačítka **Next** (Další).  
+3. Na stránce **potvrďte předplatné** jsou seznam požadovaných opravňujících licencí pro funkce stavu zařízení s Windows v Desktop Analytics. Pokračujte výběrem tlačítka **Další**.  
 
 4. Na stránce **udělení přístupu uživatelům** :
 
@@ -166,7 +166,7 @@ Pro podporu integrace s desktopovou analýzou nainstalujte Configuration Manager
 
     - Výběr funkce **Desktop Analytics** ze seznamu dostupných služeb  
   
-   Vyberte **Další**.  
+   Vyberte **Next** (Další).  
 
 3. Na stránce **aplikace** vyberte příslušné **prostředí Azure**. Pak vyberte **Vyhledat** webovou aplikaci.
 
@@ -197,7 +197,7 @@ Pro podporu integrace s desktopovou analýzou nainstalujte Configuration Manager
 
     - **Povolit název zařízení v diagnostických datech**: vyberte **Povolit** .  
   
-   Vyberte **Další**. Stránka **dostupné funkce** zobrazuje funkce Desktop Analytics, která je dostupná s nastavením diagnostických dat z předchozí stránky. Vyberte **Další**.  
+   Vyberte **Next** (Další). Stránka **dostupné funkce** zobrazuje funkce Desktop Analytics, která je dostupná s nastavením diagnostických dat z předchozí stránky. Vyberte **Next** (Další).  
 
 7. Na stránce **kolekce** nakonfigurujte následující nastavení:  
 
@@ -236,7 +236,7 @@ Pomocí tohoto postupu můžete vytvořit plán nasazení v Desktop Analytics.
 
     - **Název**: jedinečný název plánu nasazení, například`Windows 10 pilot`  
 
-    - **Produkty a verze**: Vyberte produkt **systému Windows** a nejnovější dostupnou verzi. Například **Windows 10 verze 1809 (doporučeno)**.  
+    - **Produkty a verze**: vyberte verzi Windows 10, kterou chcete nasadit. Microsoft doporučuje vytvářet plány nasazení, které používají nejnovější verzi.
 
     - **Skupiny zařízení**: vyberte jednu nebo víc skupin na kartě Configuration Manager a pak vyberte **nastavit jako cílové skupiny**. Tyto skupiny jsou kolekce synchronizované z Configuration Manager.  
 
@@ -298,10 +298,10 @@ Pomocí tohoto postupu můžete nasadit Windows 10 v Configuration Manager do pi
 
 2. Na kartě **Domů** na pásu karet ve skupině **vytvořit** vyberte možnost **Přidat balíček s upgradem operačního systému**. Tato akce spustí Průvodce přidáním upgradu operačního systému.  
 
-3. Na stránce **zdroj dat** zadejte síťovou **cestu** k instalačním zdrojovým souborům balíčku s upgradem operačního systému. Například, `\\server\share\path`.  
+3. Na stránce **zdroj dat** zadejte síťovou **cestu** k instalačním zdrojovým souborům balíčku s upgradem operačního systému. Například `\\server\share\path`.  
 
     > [!NOTE]  
-    > Zdrojové instalační soubory obsahují soubor Setup. exe a další soubory a složky pro instalaci operačního systému.  
+    > Zdrojové instalační soubory obsahují setup.exe a další soubory a složky pro instalaci operačního systému.  
 
 4. Na stránce **Obecné** zadejte jedinečný **název** balíčku upgradu operačního systému.  
 

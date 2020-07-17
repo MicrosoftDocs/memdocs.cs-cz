@@ -18,11 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1fa3f6e96b46b27be4f6cbbe475d03eed007b0d4
-ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
+ms.openlocfilehash: 4f00ba5049401c07f5112061172dc3e7cda4f46c
+ms.sourcegitcommit: 16bc2ed5b64eab7f5ae74391bd9d7b66c39d8ca6
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86022411"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86437357"
 ---
 # <a name="get-data-from-the-intune-data-warehouse-api-with-a-rest-client"></a>Získání dat z rozhraní API datového skladu Intune pomocí klienta REST
 
@@ -62,10 +63,11 @@ Teď máte v Azure definovanou aplikaci. Udělte z této nativní aplikace pří
 6. Vyberte pole **delegovaná oprávnění** a klikněte na pole **získat informace o datovém skladu z Microsoft Intune** .
 7. Klikněte na tlačítko **Přidat oprávnění**.
 8. Volitelně můžete v podokně nakonfigurovaná oprávnění vybrat **udělit souhlas správce pro Microsoft** a pak vybrat **Ano**. Tím udělíte přístup všem účtům v aktuálním adresáři. Zabráníte tím tomu, aby se dialogové okno souhlasu zobrazilo pro každého uživatele v tenantovi. Další informace najdete v článku [Integrace aplikací s Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications).
+9. Vyberte **certifikáty & tajných klíčů**  >  **+ nový tajný klíč klienta** a vygenerujte nový tajný klíč. Nezapomeňte si ho zkopírovat někde došlo bezpečně, protože k němu už nebudete mít přístup.
 
 ## <a name="get-data-from-the-microsoft-intune-api-with-postman"></a>Získání dat z rozhraní API Microsoft Intune pomocí nástroje Postman
 
-S rozhraním API datového skladu Intune můžete pracovat pomocí obecného klienta REST, jako je Postman. Postman dokáže využívat funkce tohoto rozhraní API, podkladový datový model OData a řešit problémy s připojením k prostředkům rozhraní API. V této části najdete informace o vygenerování tokenu OAuth 2.0 pro místního klienta. Klient bude tento token potřebovat k ověření vůči službě Azure AD a přístupu k prostředkům rozhraní API.
+S rozhraním API datového skladu Intune můžete pracovat pomocí obecného klienta REST, jako je Postman. Publikování může poskytovat přehled o funkcích rozhraní API, podkladovém datovém modelu OData a řešit potíže s připojením k prostředkům rozhraní API. V této části najdete informace o vygenerování tokenu OAuth 2.0 pro místního klienta. Klient bude tento token potřebovat k ověření vůči službě Azure AD a přístupu k prostředkům rozhraní API.
 
 ### <a name="information-you-will-need-to-make-the-call"></a>Informace, které budete potřebovat k uskutečnění volání
 
@@ -78,6 +80,7 @@ Abyste mohli nástrojem Postman uskutečnit volání REST, budete potřebovat n�
 | Ověřovací adresa URL         | Toto je adresa URL sloužící k ověření. | https://login.microsoftonline.com/common/oauth2/authorize?resource=https://api.manage.microsoft.com/ |
 | Adresa URL přístupového tokenu | Toto je adresa URL sloužící k udělení tokenu.                                                                                                                                              | https://login.microsoftonline.com/common/oauth2/token |
 | ID klienta        | Tento atribut jste vytvořili a poznačili si při vytváření nativní aplikace v Azure.                                                                                               | 4184c61a-e324-4f51-83d7-022b6a81b991                                                          |
+| Tajný klíč klienta        | Tento atribut jste vytvořili a poznačili si při vytváření nativní aplikace v Azure.                                                                                               | Ksml3dhDJs + jfK1f8Mwc8                                                          |
 | Rozsah (nepovinné) | Funkce Blank                                                                                                                                                                               | Toto pole můžete nechat prázdné.                                                                     |
 | Typ udělení       | Tento token představuje autorizační kód.                                                                                                                                                  | Autorizační kód                                                                            |
 
@@ -121,14 +124,18 @@ Abyste získali nový přístupový token pro nástroj Postman, musíte přidat 
 
      `88C8527B-59CB-4679-A9C8-324941748BB4`
 
-11. Vyberte **Authorization Code** (Autorizační kód) a místně si vyžádejte přístupový token.
+11. Přidejte **tajný klíč klienta** , který jste vygenerovali v rámci nativní aplikace, kterou jste vytvořili v Azure. Výsledek by měl vypadat přibližně takto:  
 
-12. Vyberte **Request Token** (Vyžádat token).
+     `Ksml3dhDJs+jfK1f8Mwc8 `
+
+12. Jako typ udělení vyberte **autorizační kód** .
+
+13. Vyberte **Request Token** (Vyžádat token).
 
     ![Informace o přístupovém tokenu](./media/reports-proc-data-rest/reports-postman_getnewtoken.png)
 
-13. Na autorizační stránku služby Azure AD zadejte svoje přihlašovací údaje. Seznam tokenů v nástroji Postman teď obsahuje token s názvem `Bearer`.
-14. Vyberte **Use Token** (Použít token). Seznam hlaviček obsahuje novou hodnotu klíče pro autorizaci a hodnotu `Bearer <your-authorization-token>`.
+14. Na autorizační stránku služby Azure AD zadejte svoje přihlašovací údaje. Seznam tokenů v nástroji Postman teď obsahuje token s názvem `Bearer`.
+15. Vyberte **Use Token** (Použít token). Seznam hlaviček obsahuje novou hodnotu klíče pro autorizaci a hodnotu `Bearer <your-authorization-token>`.
 
 #### <a name="send-the-call-to-the-endpoint-using-postman"></a>Odeslání volání koncovému bodu pomocí nástroje Postman
 

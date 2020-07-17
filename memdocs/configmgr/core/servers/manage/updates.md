@@ -10,12 +10,12 @@ ms.assetid: 3a832943-580a-4a40-b454-961d0854ac2b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 4f92d95b4e1cc814db72b45cfb92cb989b7767c8
-ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
+ms.openlocfilehash: 5eb1a5ef844a8dbf94cbde9d2c99986ce0634260
+ms.sourcegitcommit: 034226b5a60de49a75c7b54e856814f81c03a112
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85591013"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86422797"
 ---
 # <a name="updates-and-servicing-for-configuration-manager"></a>Aktualizace a údržba pro Configuration Manager
 
@@ -60,11 +60,11 @@ Následující podporované verze Configuration Manager jsou aktuálně k dispoz
 
 | Verze | Datum dostupnosti | [Datum ukončení podpory](current-branch-versions-supported.md) | Standardní hodnoty | Aktualizace v konzole |  
 |-------------|-----------|------------|--------------|------------------------|  
-| [**2002**](../../plan-design/changes/whats-new-in-version-2002.md)<br /> (5.00.8968) | 1. dubna 2020 | Od 1. října 2021 | Ano,<sup>[Poznámka: 1](#bkmk_note1)</sup> | Ano |
-| [**1910**](../../plan-design/changes/whats-new-in-version-1910.md)<br /> (5.00.8913) | 29. listopadu 2019 | 29. května 2021 | Ne | Ano |
-| [**1906**](../../plan-design/changes/whats-new-in-version-1906.md)<br /> (5.00.8853) | 26. července 2019 | 26. ledna 2021 | Ne | Ano |
-| [**1902**](../../plan-design/changes/whats-new-in-version-1902.md)<br /> (5.00.8790) | 27. března 2019 | 27. září 2020 | Ano,<sup>[Poznámka: 1](#bkmk_note1)</sup> | Ano |
-| [**1810**](../../plan-design/changes/whats-new-in-version-1810.md)<br /> (5.00.8740) | 27. listopadu 2018 | 1. prosince 2020 | Ne | Ano |
+| [**2002**](../../plan-design/changes/whats-new-in-version-2002.md)<br /> (5.00.8968) | 1. dubna 2020 | Od 1. října 2021 | Ano,<sup>[Poznámka: 1](#bkmk_note1)</sup> | Yes |
+| [**1910**](../../plan-design/changes/whats-new-in-version-1910.md)<br /> (5.00.8913) | 29. listopadu 2019 | 29. května 2021 | No | Yes |
+| [**1906**](../../plan-design/changes/whats-new-in-version-1906.md)<br /> (5.00.8853) | 26. července 2019 | 26. ledna 2021 | No | Yes |
+| [**1902**](../../plan-design/changes/whats-new-in-version-1902.md)<br /> (5.00.8790) | 27. března 2019 | 27. září 2020 | Ano | Ano |
+| [**1810**](../../plan-design/changes/whats-new-in-version-1810.md)<br /> (5.00.8740) | 27. listopadu 2018 | 1. prosince 2020 | No | Yes |
 
 **Datum dostupnosti** je, když je uvolněna [úvodní aktualizační kanál](checklist-for-installing-update-2002.md#early-update-ring) . Pokud je aktualizace globálně dostupná, bude na službě Volume License Service Center k dispozici základní médium.
 
@@ -85,16 +85,16 @@ V následující tabulce jsou uvedené historické verze Configuration Manager a
 
 | Verze | Datum dostupnosti | Datum ukončení podpory | Standardní hodnoty | Aktualizace v konzole |  
 |-------------|-----------|------------|--------------|------------------------|  
-| **1806** <br /> (5.00.8692) | 31. července 2018 | 31. ledna 2020 | Ne | Ano |
+| **1806** <br /> (5.00.8692) | 31. července 2018 | 31. ledna 2020 | No | Yes |
 | **1802** <br /> (5.00.8634) | 22. března 2018 | 22. září 2019 | Ano | Ano |
-| **1710** <br /> (5.00.8577) | 20. listopadu 2017 | 20. května 2019 | Ne | Ano |
-| **1706** <br /> (5.00.8540) | 31. července 2017 | 31. července 2018 | Ne | Ano |
+| **1710** <br /> (5.00.8577) | 20. listopadu 2017 | 20. května 2019 | No | Yes |
+| **1706** <br /> (5.00.8540) | 31. července 2017 | 31. července 2018 | No | Yes |
 | **1702** <br /> (5.00.8498) | 27. března 2017 | 27. března 2018 | Ano | Ano |
-| **1610** <br /> (5.00.8458) | 18. listopadu 2016 | 18. listopadu 2017 | Ne | Ano |
-| **1606** <br /> (5.00.8412.1000) | 22. července 2016 | 22. července 2017 | Ne | Ano |
-| **1606 s KB3186654** <br />5.00.8412.1307) | 12. října 2016 | 12. října 2017 | Ano | Ne |
-| **1602** <br /> (5.00.8355) | 11. března 2016 | 11. března 2017 | Ne | Ano |
-| **1511** <br /> (5.00.8325) | 8. prosince 2015 | 8. prosince 2016 | Ano | Ne |  
+| **1610** <br /> (5.00.8458) | 18. listopadu 2016 | 18. listopadu 2017 | No | Yes |
+| **1606** <br /> (5.00.8412.1000) | 22. července 2016 | 22. července 2017 | No | Yes |
+| **1606 s KB3186654** <br />5.00.8412.1307) | 12. října 2016 | 12. října 2017 | Yes | No |
+| **1602** <br /> (5.00.8355) | 11. března 2016 | 11. března 2017 | No | Yes |
+| **1511** <br /> (5.00.8325) | 8. prosince 2015 | 8. prosince 2016 | Yes | No |  
 
 #### <a name="how-to-check-the-version"></a>Jak ověřit verzi
 

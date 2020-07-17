@@ -7,7 +7,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 03/09/2017
-ms.topic: conceptual
+ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 91c79ae7ca7fc70c361fba0a7ad6becf8d035b5a
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: d48ecc13d58d510a56aad6d7214d0e8f2a932a59
+ms.sourcegitcommit: 034226b5a60de49a75c7b54e856814f81c03a112
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79332611"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86422690"
 ---
 # <a name="help-end-users-understand-company-portal-app-messages"></a>Vysvětlení zpráv aplikace Portál společnosti pro koncové uživatele
 
@@ -50,7 +50,7 @@ Přijetím této výzvy uživatel umožní, aby se telefonní číslo a číslo 
 > [!NOTE]
 > **Aplikace Portál společnosti nikdy netelefonuje ani nespravuje telefonní hovory!** Text zprávy je pod kontrolu Googlu a nejde ho změnit.
 
-Stránku **Hardware** zobrazíte tak, že přejdete na **Skupiny** > **Všechna mobilní zařízení** > **Zařízení**. Vyberte zařízení uživatele a pak přejít na **Zobrazit vlastnosti** > **hardware**.
+Stránku **Hardware** zobrazíte tak, že přejdete na **Skupiny** > **Všechna mobilní zařízení** > **Zařízení**. Vyberte zařízení uživatele a pak přejít na **Zobrazit vlastnosti**  >  **hardware**.
 
 ### <a name="what-happens-if-users-deny-access"></a>Co se stane, když uživatel přístup zamítne
 
@@ -58,7 +58,7 @@ Pokud uživatel přístup zamítne, může aplikaci Portál společnosti dál po
 
 Pokud uživatel povolí přístup, ale později ho zamítne, zobrazí se tato zpráva při přihlášení k aplikaci Portál společnosti, které následuje po registraci zařízení.
 
-Pokud se uživatel později rozhodne povolit přístup, může přejít na **Nastavení** > **aplikace** > **portál společnosti** > **oprávnění** > **telefon**a zapnout ho.
+Pokud se uživatel později rozhodne povolit přístup, může přejít na **Nastavení**  >  **aplikace**  >  **portál společnosti**  >  **oprávnění**  >  **telefon**a zapnout ho.
 
 ### <a name="how-to-explain-this-to-your-users"></a>Jak to vysvětlit uživatelům
 
@@ -83,7 +83,7 @@ Pokud uživatel přístup zamítne, nebude zařízení v Intune zaregistrováno 
 
 Pokud uživatel povolí přístup, ale později ho zamítne, zobrazí se tato zpráva při přihlášení k aplikaci Portál společnosti, které následuje po registraci zařízení.
 
-Pokud se uživatel později rozhodne povolit přístup, může přejít na **Nastavení** > **aplikace** > **portál společnosti** > **oprávnění** > **telefon**a zapnout ho.
+Pokud se uživatel později rozhodne povolit přístup, může přejít na **Nastavení**  >  **aplikace**  >  **portál společnosti**  >  **oprávnění**  >  **telefon**a zapnout ho.
 
 ### <a name="how-to-explain-this-to-your-users"></a>Jak to vysvětlit uživatelům
 
@@ -106,7 +106,7 @@ Přijetím této výzvy umožní uživatel zápis datových protokolů na SD kar
 
 Pokud uživatel přístup zamítne, může pořád odesílat datové protokoly e-mailem, ale tyto protokoly se nezkopírují na SD kartu zařízení.
 
-Při druhém přihlášení k aplikaci Portál společnosti po odepření přístupu se ve zprávě zobrazí zaškrtávací políčko **Příště se už neptat**, takže uživatel může určit, že se tato zpráva už nebude zobrazovat. Pokud uživatel povolí přístup, ale později ho zamítne, zobrazí se tato zpráva při příštím pokusu o odeslání protokolů. Pokud se ale uživatel později rozhodne povolit přístup, může přejít na **Nastavení** > **aplikace** > **portál společnosti** > **oprávnění** > **úložiště**a toto oprávnění zapnout.
+Při druhém přihlášení k aplikaci Portál společnosti po odepření přístupu se ve zprávě zobrazí zaškrtávací políčko **Příště se už neptat**, takže uživatel může určit, že se tato zpráva už nebude zobrazovat. Pokud uživatel povolí přístup, ale později ho zamítne, zobrazí se tato zpráva při příštím pokusu o odeslání protokolů. Pokud se ale uživatel později rozhodne povolit přístup, může přejít na **Nastavení**  >  **aplikace**  >  **portál společnosti**  >  **oprávnění**  >  **úložiště**a toto oprávnění zapnout.
 
 
 ### <a name="how-to-explain-this-to-your-users"></a>Jak to vysvětlit uživatelům
@@ -142,11 +142,11 @@ Když tyto aplikace nainstalujete pomocí Portál společnosti a aplikaci spust�
 
 1. Po spuštění nainstalované firemní aplikace (obchodní aplikace) se zobrazí zpráva "nedůvěryhodná verze Enterprise Developer". <br>
    Stiskněte **Zrušit**.
-2. Přejděte na **Nastavení** > **Obecné** > **Správa zařízení**.
+2. Přejděte na **Nastavení**  >  **Obecné**  >  **Správa zařízení**.
 
    ![uživatelské rozhraní zařízení s iOS – Správa zařízení](./media/end-user-company-portal-messages/end-user-company-portal-messages-02.png)
 
-3. Vyberte možnost **profil** > správy**podniková aplikace**.
+3. Vyberte možnost **Profil správy**  >  **podniková aplikace**.
 4. Vyberte název vývojáře.
 5. Stiskněte klávesu **Trust _název vývojáře_**.
 6. Potvrďte aplikaci tak, že v místní zprávě pro instalaci aplikace vyberete **důvěřovat** .

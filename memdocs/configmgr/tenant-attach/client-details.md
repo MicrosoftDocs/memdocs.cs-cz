@@ -10,12 +10,12 @@ ms.assetid: 7a597d9e-a878-48d0-a7ce-56a1dbfd0e5c
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 07b24621fbf12fe7a7c513ea2daaed25abca0f4c
-ms.sourcegitcommit: 3806a1850813b7a179d703e002bcc5c7eb1cb621
+ms.openlocfilehash: e8db4a7f877b5bd07f1aac76fc49b6efef31802e
+ms.sourcegitcommit: 16bc2ed5b64eab7f5ae74391bd9d7b66c39d8ca6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86210750"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86437429"
 ---
 # <a name="tenant-attach-configmgr-client-details-in-the-admin-center-preview"></a><a name="bkmk_mem"></a>Připojení tenanta: podrobnosti o klientovi nástroje ConfigMgr v centru pro správu (Preview)
 <!--6024387, 6374854, 6521921, intune 7552762 pubpreview July 7, 2020-->
@@ -32,7 +32,7 @@ V centru pro správu Microsoft Endpoint Manageru se teď můžete podívat na po
 - Jeden z následujících prohlížečů:
   - Microsoft Edge, verze 77 a novější
   - Google Chrome
-- Byl zjištěn uživatelský účet s vyhledáváním [uživatelů služby Azure Active Directory (Azure AD)](../core/servers/deploy/configure/about-discovery-methods.md#azureaddisc) a [zjišťováním uživatelů služby Active Directory](/../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser).
+- Byl zjištěn uživatelský účet s vyhledáváním [uživatelů služby Azure Active Directory (Azure AD)](https://docs.microsoft.com/mem/configmgr/core/servers/deploy/configure/about-discovery-methods#azureaddisc) a [zjišťováním uživatelů služby Active Directory](https://docs.microsoft.com/mem/configmgr/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutUser).
   - To znamená, že uživatelský účet musí být synchronizovaný objekt uživatele v Azure.
 
 ## <a name="permissions"></a>Oprávnění

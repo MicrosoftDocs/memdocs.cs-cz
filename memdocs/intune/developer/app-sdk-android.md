@@ -17,11 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic, has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a222a1f4adfd2f73731c40946169338989162e5e
-ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
+ms.openlocfilehash: 99fa22d351d8d0672d2745f18bb70dfd096ac1d7
+ms.sourcegitcommit: 16bc2ed5b64eab7f5ae74391bd9d7b66c39d8ca6
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86022360"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86437415"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Microsoft Intune App SDK pro Android – Příručka pro vývojáře
 
@@ -76,7 +77,7 @@ Knihovny **Microsoft.Intune.MAM.SDK.Support.XXX.jar** navíc obsahují varianty 
 
 #### <a name="proguard"></a>ProGuard
 
-Pokud je jako krok sestavení použitý [ProGuard](http://proguard.sourceforge.net/) (případně jiný mechanismus zmenšování nebo obfuskace), obsahuje sada SDK další konfigurační pravidla, která je nutné zahrnout. Při zahrnutí. AAR v sestavení jsou naše pravidla automaticky integrována do kroku ProGuard a jsou zachovány potřebné soubory třídy.
+Pokud je jako krok sestavení použitý [ProGuard](https://www.guardsquare.com/en/products/proguard) (případně jiný mechanismus zmenšování nebo obfuskace), obsahuje sada SDK další konfigurační pravidla, která je nutné zahrnout. Při zahrnutí. AAR v sestavení jsou naše pravidla automaticky integrována do kroku ProGuard a jsou zachovány potřebné soubory třídy.
 
 [Knihovna Microsoft Authentication Library (MSAL)](https://docs.microsoft.com/azure/active-directory/develop/msal-overview#languages-and-frameworks) může mít vlastní omezení ProGuard. Pokud vaše aplikace integruje MSAL, musíte postupovat podle těchto omezení v dokumentaci MSAL.
 
@@ -186,7 +187,7 @@ Pokud je odpověď na obě otázky Ano, musíte danou knihovnu do `includeExtern
 | Zahrnete knihovnu, jako je React Native, která obsahuje třídy odvozené z `Activity`, `Application` a `Fragment`, ale použijete pouze statické pomocné rutiny nebo nástrojové třídy. | No |
 | Zahrnete knihovnu, která obsahuje třídy odvozené z `TextView`, a v aplikaci tyto třídy použijete nebo dále odvodíte. | Yes |
 
-#### <a name="reporting"></a>Přehledy
+#### <a name="reporting"></a>Generování sestav
 Modul plug-in sestavení může vygenerovat sestavu HTML změn, které dělá. Chcete-li vyžádat generování této sestavy, zadejte `report = true` v `intunemam` konfiguračním bloku. Pokud je tato sestava vygenerována, bude `outputs/logs` v adresáři buildu zapsána.
 
 ```groovy
@@ -962,7 +963,7 @@ Podívejte se také na požadavky pro [podmíněný přístup](#conditional-acce
 |Požadovaný parametr ADAL| Hodnota |
 |--|--|
 | ClientID | ClientID aplikace (u zaregistrovaných aplikací je generuje AzureAD) |
-| SkipBroker | **Podmínka** |
+| SkipBroker | **Ano** |
 
 V případě potřeby můžete zadat pole Authority a NonBrokerRedirectURI.
 
@@ -2017,7 +2018,7 @@ if (appConfig.hasConflict("foo")) {
 Long barValue = appConfig.getIntegerForKey("bar", MAMAppConfig.NumberQueryType.Min);
 ```
 
-### <a name="notification"></a>Oznámení
+### <a name="notification"></a>Notification (Oznámení)
 Konfigurace aplikace přidá nový typ oznámení:
 * **REFRESH_APP_CONFIG**: Toto oznámení se odesílá v rámci `MAMUserNotification` a do aplikace posílá informace, že jsou k dispozici nová konfigurační data aplikace.
 
@@ -2072,9 +2073,9 @@ Níže najdete kompletní seznam povolených atributů stylu, prvků uživatelsk
 
 |Atribut stylu | Ovlivněné prvky uživatelského rozhraní | Název položky atributu | Očekávaný typ prostředku |
 | -- | -- | -- | -- |
-| Barva pozadí | Barva pozadí obrazovky pro zadání PIN kódu <Br>Barva výplně pole pro zadání PIN kódu | background_color | Barva |
-| Barva popředí | Barva textu na popředí <br> Ohraničení pole pro zadání PIN kódu ve výchozím stavu <br> Znaky (včetně obfuskovaných znaků) v poli po zadání PIN kódu uživatelem| foreground_color | Barva|
-| Doplňková barva | Ohraničení pole pro zadání PIN kódu při zvýraznění <br> Hypertextové odkazy |accent_color | Barva |
+| Barva pozadí | Barva pozadí obrazovky pro zadání PIN kódu <Br>Barva výplně pole pro zadání PIN kódu | background_color | Color |
+| Barva popředí | Barva textu na popředí <br> Ohraničení pole pro zadání PIN kódu ve výchozím stavu <br> Znaky (včetně obfuskovaných znaků) v poli po zadání PIN kódu uživatelem| foreground_color | Color|
+| Doplňková barva | Ohraničení pole pro zadání PIN kódu při zvýraznění <br> Hypertextové odkazy |accent_color | Color |
 | Logo aplikace | Velká ikona, která se zobrazuje na obrazovce pro zadání PIN kódu aplikace Intune | logo_image | Nákres |
 
 ## <a name="default-enrollment-optional"></a>Výchozí registrace (volitelná)
