@@ -1,12 +1,12 @@
 ---
-title: Integreate mobilní koncový bod s Microsoft Intune
+title: Integrace mobilního koncového bodu pro hledání pomocí Microsoft Intune
 titleSuffix: Microsoft Intune
 description: Přečtěte si o integraci Intune se službou Lookout Mobile Threat Defense (MTD) za účelem regulace přístupu mobilních zařízení k firemním prostředkům.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/09/2020
+ms.date: 07/17/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1083e195cee20c3df9572db94395d462f9531a39
-ms.sourcegitcommit: 42a4a4454e56fa681f0ad39f5e585492dfbad286
+ms.openlocfilehash: 9bf06c5057cecd63b5717440eba8bad0542ab642
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84330946"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461313"
 ---
 # <a name="lookout-mobile-endpoint-security-connector-with-intune"></a>Podívejte se na mobilní koncový bod Security Connector s Intune
 
@@ -57,7 +57,7 @@ Pro Lookout se podporují tyto platformy, pokud jsou zaregistrované v Intune:
 
 Další informace o podpoře platforem a jazyků najdete na webu pro [hledání](https://personal.support.lookout.com/hc/articles/114094140253).  
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 - Předplatné Lookout Mobile Endpoint Security pro podniky  
 - Odběr služby Microsoft Intune

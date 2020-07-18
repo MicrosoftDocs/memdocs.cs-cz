@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6e99922c920966f4f0bb1037b5fc74799cfca7c5
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: eeab1155a7a0035c5e0db15c3a5402d3636edaca
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988786"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461653"
 ---
 # <a name="app-configuration-policies-for-microsoft-intune"></a>Zásady konfigurace aplikací v Microsoft Intune
 
@@ -75,15 +75,15 @@ Výběr **spravovaných aplikací** jako **typ registrace zařízení** konkrét
 
 ## <a name="android-app-configuration-policies"></a>Zásady konfigurace aplikací pro Android
 
-Pro zásady konfigurace aplikací pro Android můžete před vytvořením konfiguračního profilu aplikace vybrat typ registrace zařízení. Můžete si účet použít pro profily certifikátů založené na typu registrace (pracovní profil nebo vlastník zařízení). Tato aktualizace poskytuje následující:
+Pro zásady konfigurace aplikací pro Android můžete před vytvořením konfiguračního profilu aplikace vybrat typ registrace zařízení. Můžete si přihlédnout k profilům certifikátů, které jsou založeny na typu registrace (pracovní profil, plně spravované, vyhrazené a pracovní profilování vlastněné firmou). Tato aktualizace poskytuje následující:
 
-1. Pokud je vytvořený nový profil a pro typ registrace zařízení je vybraný profil pracovního profilu a vlastníka zařízení, nebudete moct k zásadě konfigurace aplikace přidružit profil certifikátu.
+1. Pokud se vytvoří nový profil a pro typ registrace zařízení se vybere **všechny typy profilů** , nebudete moct k zásadě konfigurace aplikace přidružit profil certifikátu.
 2. Pokud je vytvořen nový profil a je vybrán pouze pracovní profil, mohou být využívány Zásady certifikátů pracovního profilu vytvořené v části Konfigurace zařízení.
-3. Pokud je vytvořen nový profil a je vybrán pouze vlastník zařízení, může být využita zásada certifikátu vlastníka zařízení vytvořená v části Konfigurace zařízení. 
+3. Pokud se vytvoří nový profil, který je **plně spravovaný, vyhrazený a vlastněný podnikovým profilem** , je možné využít Zásady certifikátů **pracovních profilů, které** jsou ve vlastnictví firmy, a které se dají použít v konfiguraci zařízení. 
 4. Pokud nasadíte konfigurační profil Gmail nebo devět na vyhrazené zařízení s Androidem Enterprise, které nezahrnuje uživatele, selže, protože Intune nebude moct uživatele vyřešit.
 
 > [!IMPORTANT]
-> Stávající zásady vytvořené před vydáním této funkce (duben 2020 Release-2004), které nemají žádné profily certifikátů přidružené k zásadám, budou ve výchozím nastavení funkční profil a profil vlastníka zařízení pro typ registrace zařízení. Existující zásady vytvořené před vydáním této funkce, které mají profily certifikátů, které jsou k nim přidružené, budou také nastavené jako výchozí pouze pracovní profil.
+> Stávající zásady vytvořené před vydáním této funkce (duben 2020 Release-2004), které nemají žádné profily certifikátů přidružené k zásadám, budou ve výchozím nastavení pro **všechny typy profilů** pro typ registrace zařízení. Existující zásady vytvořené před vydáním této funkce, které mají profily certifikátů, které jsou k nim přidružené, budou také nastavené jako výchozí pouze pracovní profil.
 > 
 > Stávající zásady nebudou opravovat ani vydávat nové certifikáty.
 
@@ -114,7 +114,7 @@ Konfiguraci iOS/iPadOS můžete ověřit pomocí **diagnostického protokolu Int
 3. Klikněte **na Začínáme.**
 4. Klikněte na **sdílet protokoly**.
 5. Pomocí e-mailové aplikace dle vašeho výběru můžete protokol odeslat sami sobě, aby se mohl zobrazit v počítači. 
-6. Zkontrolujte soubor **IntuneMAMDiagnostics. txt** v prohlížeči textových souborů.
+6. Zkontrolujte **IntuneMAMDiagnostics.txt** v prohlížeči textových souborů.
 7. Vyhledejte `ApplicationConfiguration`. Výsledky budou vypadat takto:
 
     ``` JSON
@@ -158,14 +158,14 @@ Konfiguraci iOS/iPadOS můžete ověřit pomocí **diagnostického protokolu Int
 3. Klikněte **na Začínáme.**
 4. Klikněte na **sdílet protokoly**.
 5. Pomocí e-mailové aplikace dle vašeho výběru můžete protokol odeslat sami sobě, aby se mohl zobrazit v počítači. 
-6. Zkontrolujte soubor **IntuneMAMDiagnostics. txt** v prohlížeči textových souborů.
+6. Zkontrolujte **IntuneMAMDiagnostics.txt** v prohlížeči textových souborů.
 7. Vyhledejte `AppConfig`. Výsledky by měly odpovídat zásadám konfigurace aplikací nakonfigurovaným pro vašeho tenanta.
 
 ### <a name="android-configuration-on-managed-devices"></a>Konfigurace Androidu na spravovaných zařízeních
 
 Konfiguraci Androidu můžete ověřit pomocí **diagnostického protokolu Intune** na spravovaných zařízeních pro konfiguraci spravované aplikace.
 
-Pokud chcete shromažďovat protokoly ze zařízení s Androidem, musíte vy nebo koncový uživatel stáhnout protokoly ze zařízení přes připojení USB (nebo v **Průzkumníku souborů** ekvivalentní na zařízení). Postupujte takto:
+Pokud chcete shromažďovat protokoly ze zařízení s Androidem, musíte vy nebo koncový uživatel stáhnout protokoly ze zařízení přes připojení USB (nebo v **Průzkumníku souborů** ekvivalentní na zařízení). Tady je postup:
 
 1. Připojte zařízení s Androidem k počítači pomocí kabelu USB.
 2. V počítači vyhledejte adresář, který má název vašeho zařízení. V tomto adresáři Najděte `Android Device\Phone\Android\data\com.microsoft.windowsintune.companyportal` .
@@ -178,7 +178,7 @@ Pokud chcete shromažďovat protokoly ze zařízení s Androidem, musíte vy neb
 
 K provádění úloh konfigurace aplikace můžete použít Graph API. Podrobnosti najdete v tématu [Graph API cílené konfigurace mam reference](https://docs.microsoft.com/graph/api/resources/intune-shared-targetedmanagedappconfiguration?view=graph-rest-beta). Další informace o Intune a graphu najdete [v tématu práce s Intune v Microsoft Graph](https://docs.microsoft.com/graph/api/resources/intune-graph-overview?view=graph-rest-beta).
 
-## <a name="troubleshooting"></a>Řešení potíží
+## <a name="troubleshooting"></a>Poradce při potížích
 
 ### <a name="using-logs-to-show-a-configuration-parameter"></a>Použití protokolů k zobrazení konfiguračního parametru
 Když se v protokolech zobrazí parametr konfigurace, u kterého se potvrdí, že se má použít, ale zdá se, že nebude fungovat, může se jednat o problém s implementací konfigurace vývojářem aplikace. Vyzkoušejte si nejprve konkrétního vývojáře aplikace nebo ověřte jeho znalostní bázi, může vám pomoci s Microsoftem. Pokud se jedná o problém s tím, jak se konfigurace zpracovává v rámci aplikace, bude nutné ji vyřešit v budoucí aktualizované verzi této aplikace.

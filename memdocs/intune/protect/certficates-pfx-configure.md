@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 609f7209d79acd944d141930f2287b5572a51c89
-ms.sourcegitcommit: 411e9d93cbafc7585f5a0f9a05097fe589de804f
+ms.openlocfilehash: 29cb970dd7148496f1a4f200ba32505e6f2c0e16
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85332838"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461585"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>Konfigurace a používání certifikátů PKCS pomocí Intune
 
@@ -187,7 +187,7 @@ K ověření zařízení pomocí sítě VPN, Wi-Fi nebo jiných prostředků pot
    - **Název**: zadejte popisný název profilu. Své profily pojmenujte, abyste je později mohli snadno identifikovat. Dobrým názvem profilu je například *profil důvěryhodného certifikátu pro celou firmu*.
    - **Popis**: Zadejte popis profilu. Toto nastavení není povinné, ale doporučujeme ho zadat.
 
-6. Vyberte **Další**.
+6. Vyberte **Next** (Další).
 
 7. V části **nastavení konfigurace**zadejte soubor. cer kořenový certifikát certifikační autority, který jste předtím exportovali.
 
@@ -196,15 +196,15 @@ K ověření zařízení pomocí sítě VPN, Wi-Fi nebo jiných prostředků pot
 
    ![Vytvoření profilu a nahrání důvěryhodného certifikátu](./media/certficates-pfx-configure/certificates-pfx-configure-profile-fill.png)
 
-8. Vyberte **Další**.
+8. Vyberte **Next** (Další).
 
 9. V části **značky oboru** (volitelné) přiřaďte značku pro filtrování profilu pro konkrétní IT skupiny, například `US-NC IT Team` nebo `JohnGlenn_ITDepartment` . Další informace o značkách oboru naleznete v tématu [použití značek RBAC a Scope pro distribuci](../fundamentals/scope-tags.md).
 
-   Vyberte **Další**.
+   Vyberte **Next** (Další).
 
 10. V části **přiřazení**vyberte uživatele nebo skupiny, které obdrží váš profil. Naplánujte nasazení tohoto profilu certifikátu do stejných skupin, které obdrží profil certifikátu PKCS. Další informace o přiřazování profilů najdete v tématu [přiřazení profilů uživatelů a zařízení](../configuration/device-profile-assign.md).
 
-    Vyberte **Další**.
+    Vyberte **Next** (Další).
 
 11. (*Platí jenom pro Windows 10*) V části **pravidla použitelnosti**zadejte pravidla použitelnosti pro upřesnění přiřazení tohoto profilu. Můžete vybrat, že chcete profil přiřadit nebo nepřiřadit, na základě edice nebo verze operačního systému zařízení.
 
@@ -221,7 +221,7 @@ K ověření zařízení pomocí sítě VPN, Wi-Fi nebo jiných prostředků pot
 3. Zadejte tyto vlastnosti:
    - **Platforma**: vyberte platformu zařízení. Možnosti:
      - Správce zařízení s Androidem
-     - Jenom Android Enterprise > vlastník zařízení
+     - Android Enterprise > plně spravovaný, vyhrazený a podnikový pracovní profil
      - Jenom pracovní profil pro Android Enterprise >
      - iOS/iPadOS
      - macOS
@@ -236,7 +236,7 @@ K ověření zařízení pomocí sítě VPN, Wi-Fi nebo jiných prostředků pot
    - **Název**: zadejte popisný název profilu. Své profily pojmenujte, abyste je později mohli snadno identifikovat. Dobrým názvem profilu je například *profil PKCS pro celou firmu*.
    - **Popis**: Zadejte popis profilu. Toto nastavení není povinné, ale doporučujeme ho zadat.
 
-6. Vyberte **Další**.
+6. Vyberte **Next** (Další).
 7. Nastavení, která můžete konfigurovat v **nastavení konfigurace**, se liší v závislosti na zvolené platformě. Pro podrobnější nastavení vyberte vaši platformu: – Správce zařízení s Androidem – Android Enterprise – iOS/iPadOS-Windows 10
    
    |Nastavení     | Platforma     | Podrobnosti   |
@@ -254,15 +254,15 @@ K ověření zařízení pomocí sítě VPN, Wi-Fi nebo jiných prostředků pot
    |**Povolí všem aplikacím přístup k privátnímu klíči.** |<ul><li>macOS  |Nastavením této vlastnosti **povolíte** aplikacím, které jsou nakonfigurované pro přidružené zařízení Mac, přístup k privátnímu klíči certifikátů PKCS. <br><br> Další informace o tomto nastavení najdete v tématu *AllowAllAppsAccess* v části referenční část certifikátu [konfiguračního profilu](https://developer.apple.com/business/documentation/Configuration-Profile-Reference.pdf) v dokumentaci pro vývojáře Apple. |
    |**Kořenový certifikát**             |<ul><li>Správce zařízení s Androidem </li><li>Android Enterprise (*vlastník zařízení*, *pracovní profil*) |Vyberte profil certifikátu od kořenové certifikační autority, který byl dříve přiřazen. |
 
-8. Vyberte **Další**.
+8. Vyberte **Next** (Další).
 
 9. V části **značky oboru** (volitelné) přiřaďte značku pro filtrování profilu pro konkrétní IT skupiny, například `US-NC IT Team` nebo `JohnGlenn_ITDepartment` . Další informace o značkách oboru naleznete v tématu [použití značek RBAC a Scope pro distribuci](../fundamentals/scope-tags.md).
 
-   Vyberte **Další**.
+   Vyberte **Next** (Další).
 
 10. V části **přiřazení**vyberte uživatele nebo skupiny, které obdrží váš profil. Naplánujte nasazení tohoto profilu certifikátu do stejných skupin, které obdrží profil důvěryhodného certifikátu. Další informace o přiřazování profilů najdete v tématu [přiřazení profilů uživatelů a zařízení](../configuration/device-profile-assign.md).
 
-    Vyberte **Další**.
+    Vyberte **Next** (Další).
 
 11. V rámci **Revize a vytvoření**zkontrolujte nastavení. Když vyberete vytvořit, vaše změny se uloží a profil se přiřadí. Tato zásada se taky zobrazuje v seznamu profily.
 

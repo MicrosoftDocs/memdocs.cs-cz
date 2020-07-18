@@ -18,12 +18,12 @@ ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
 ms.collection: ''
-ms.openlocfilehash: 740d9b68a0101e04e6bf690d09ecce7eaff4509e
-ms.sourcegitcommit: 3217778ebe7fd0318810696e8931e427a85da897
+ms.openlocfilehash: bc3ff7b10d3b0ae5779db26fae711bc335c8ec62
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85107313"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461670"
 ---
 # <a name="what-information-can-my-organization-see-when-i-enroll-my-device"></a>Jaké informace moje organizace uvidí, když zaregistruji své zařízení?
 
@@ -38,13 +38,14 @@ Při registraci zařízení do Microsoft Intune nevidí organizace vaše osobní
 - Hesla
 - Obrázky, včetně těch, které jsou ve fotografických aplikacích nebo mezi obrázky z fotoaparátu
 - Soubory
+- Pro zařízení vlastněná společností s pracovním profilem, aplikacemi a daty v osobním profilu. 
 
 **Údaje, které vaše organizace uvidí vždy:**
 
 - Model zařízení, jako je Google Pixel
 - Výrobce zařízení, například Microsoft
 - Operační systém a jeho verzi, například iOS 12.0.1
-- Inventář aplikací a názvy aplikací, jako je Microsoft Word Na osobních zařízeních může vaše organizace zobrazit jenom inventář spravovaných aplikací. Na zařízeních ve firemním vlastnictví uvidí vaše organizace inventář všech aplikací.
+- Inventář aplikací a názvy aplikací, jako je Microsoft Word Na osobních zařízeních může vaše organizace zobrazit jenom inventář spravovaných aplikací. Pro plně spravovaná a vyhrazená zařízení vlastněná společností může vaše organizace Zobrazit všechny inventáře aplikací. U zařízení vlastněných společností s pracovním profilem může vaše organizace zobrazit v pracovním profilu jenom inventář aplikací.
 - Vlastník zařízení
 - Název zařízení
 - Sériové číslo zařízení

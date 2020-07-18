@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/29/2020
+ms.date: 07/17/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: ae95fb48296f778fb98affa2270ba763d79fb766
-ms.sourcegitcommit: 97f150f8ba8be8746aa32ebc9b909bb47e22121c
+ms.openlocfilehash: b1711dad8163409d05c5299e8d3b54ad619b48ec
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84879672"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86462061"
 ---
 # <a name="endpoint-detection-and-response-policy-for-endpoint-security-in-intune"></a>Zjišťování koncových bodů a zásady odezvy pro zabezpečení koncového bodu v Intune
 
@@ -32,9 +32,6 @@ Možnosti detekce a reakce koncových bodů ATP v programu Microsoft Defender po
 Zásady EDR obsahují profily specifické pro platformu ke správě nastavení pro EDR. Profily automaticky zahrnují *balíček připojování* pro ATP v programu Microsoft Defender. Balíčky pro připojování jsou konfigurace zařízení pro práci s ATP Microsoft Defenderu. Po zprovoznění zařízení můžete začít používat data o ohroženích z tohoto zařízení.
 
 Zásady EDR se nasazují do skupin zařízení v Azure Active Directory (Azure AD), které spravujete přes Intune, a ke kolekcím místních zařízení, která spravujete pomocí nástroje Configuration Manager, včetně serverů Windows. Zásady EDR pro různé cesty pro správu vyžadují různé balíčky připojování. Proto vytvoříte samostatné zásady EDR pro různé typy zařízení, která spravujete.
-
-> [!TIP]
-> Podpora pro zařízení, která spravujete pomocí Configuration Manager, je ve *verzi Public Preview*.
 
 Zásady zabezpečení koncového bodu pro EDR najdete v části *Správa* v uzlu **Security Endpoint** v [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -74,10 +71,10 @@ Aby bylo možné podporovat používání zásad EDR se zařízeními Configurat
 - Platforma: **Windows 10 a novější** – Intune nasadí zásady do zařízení ve skupinách Azure AD.
 - Profil: **detekce a odpověď koncového bodu (MDM)**
 
-**Configuration Manager** *(ve verzi Preview)* – pro zařízení, která spravujete pomocí nástroje Configuration Manager, se podporují tyto možnosti:
+**Configuration Manager** – pro zařízení, která spravujete pomocí nástroje Configuration Manager, se podporují tyto možnosti:
 
 - Platforma: **Windows 10 a Windows Server** – Configuration Manager nasadí zásady do zařízení v kolekcích Configuration Manager.
-- Profil: **detekce a odpověď koncového bodu (ConfigMgr) (Preview)**
+- Profil: **detekce a odpověď koncového bodu (ConfigMgr)**
 
 ## <a name="set-up-configuration-manager-to-support-edr-policy"></a>Nastavit Configuration Manager pro podporu zásad EDR
 
@@ -223,7 +220,7 @@ Než budete moct nasadit zásady do zařízení spravovaných pomocí Configurat
 
    - Configuration Manager – Configuration Manager nasadí zásady do zařízení v kolekcích Configuration Manager. Když vytváříte zásadu, vyberte:
      - Platforma: **Windows 10 a Windows Server**
-     - Profil: **detekce a odpověď koncového bodu (ConfigMgr) (Preview)**
+     - Profil: **detekce a odpověď koncového bodu (ConfigMgr)**
 
 4. Vyberte **Vytvořit**.
 
@@ -237,7 +234,7 @@ Než budete moct nasadit zásady do zařízení spravovaných pomocí Configurat
 
    Na stránce **značky oboru** zvolte **možnost vybrat značky oboru** a otevřete tak podokno *Vybrat značky* , abyste přiřadili značky oboru k profilu.
   
-   Pokračujte výběrem tlačítka **Next** (Další).
+   Pokračujte výběrem tlačítka **Další**.
 
 8. Na stránce **přiřazení** vyberte skupiny nebo kolekce, které tyto zásady dostanou. Volba závisí na zvolené platformě a profilu:
 

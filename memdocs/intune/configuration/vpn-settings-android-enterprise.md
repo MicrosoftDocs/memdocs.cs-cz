@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8bc627e7b9efb68e8d5cb777b5d8e659b06cab92
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 3981f40650544cdfdbfd0208e127a3e0aaecb823
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80086808"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86462010"
 ---
 # <a name="android-enterprise-device-settings-to-configure-vpn-in-intune"></a>Nastavení zařízení s Androidem Enterprise pro konfiguraci sítě VPN v Intune
 
@@ -33,11 +33,11 @@ Další informace o profilech sítě VPN v Intune najdete v tématu [Profily sí
 > [!NOTE]
 > Pokud chcete nakonfigurovat vždycky zapnutou síť VPN, je nutné vytvořit profil sítě VPN a také vytvořit profil [omezení pro zařízení](device-restrictions-android-for-work.md#connectivity) s nakonfigurovaným nastavením pro připojení k síti VPN.
 
-## <a name="before-you-begin"></a>Před zahájením
+## <a name="before-you-begin"></a>Než začnete
 
 [Vytvořte konfigurační profil zařízení](vpn-settings-configure.md)a vyberte **Android Enterprise**.
 
-## <a name="device-owner-only"></a>Pouze vlastník zařízení
+## <a name="fully-managed-dedicated-and-corporate-owned-work-profile"></a>Plně spravovaný, vyhrazený a podnikový pracovní profil
 
 - **Název připojení**: zadejte název tohoto připojení. Tento název uživatelé vidí, když na svém zařízení procházejí dostupná připojení VPN. Zadejte například `Contoso VPN`.
 - **IP adresa nebo plně kvalifikovaný název domény**: zadejte IP adresu nebo plně kvalifikovaný název domény serveru VPN, ke kterému se zařízení připojí. Zadejte například **192.168.1.1** nebo **vpn.contoso.com**.

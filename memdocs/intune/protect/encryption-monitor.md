@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/18/2019
+ms.date: 07/17/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 1199c6db96325a103394cfb53a4ca70092cd3767
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: c20d2ef806df46036d3a785bb5f8603d485d3880
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989645"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86460463"
 ---
 # <a name="monitor-device-encryption-with-intune"></a>Monitorování šifrování zařízení pomocí Intune
 
@@ -34,7 +34,7 @@ Sestavu můžete najít tak, že se přihlásíte do [centra pro správu Microso
 
 Sestava šifrování zobrazuje společné podrobnosti napříč podporovanými zařízeními, která spravujete. Následující části obsahují podrobné informace o informacích, které Intune prezentuje v sestavě.
 
-### <a name="prerequisites"></a>Požadavky
+### <a name="prerequisites"></a>Předpoklady
 
 Sestava šifrování podporuje vytváření sestav na zařízeních, na kterých běží následující verze operačního systému:
 
@@ -107,7 +107,7 @@ Když vyberete zařízení ze sestavy šifrování, Intune zobrazí podokno **st
 
   Následují příklady podrobností o stavu, které může Intune hlásit:
 
-  **MacOS**:
+  **macOS**:
   - Obnovovací klíč nebyl dosud načten a uložen. Pravděpodobně zařízení není odemknuté nebo nebylo vráceno se změnami.
 
     *Vezměte v úvahu: Tento výsledek nemusí nutně představovat chybový stav, ale dočasný stav, který může být z důvodu časování na zařízení, kde v úschově pro obnovovací klíče musí být nastavené před odesláním požadavku na šifrování do zařízení. Tento stav může také indikovat, že zařízení zůstává uzamčené nebo se v nedávné době nevrátilo s Intune. Vzhledem k tomu, že šifrování trezoru se nespustí, dokud není zařízení zapojené do elektrické sítě (zpoplatněné), může uživatel obdržet obnovovací klíč pro zařízení, které ještě není zašifrované*.
@@ -118,7 +118,7 @@ Když vyberete zařízení ze sestavy šifrování, Intune zobrazí podokno **st
 
   - Zařízení je už zašifrované. Aby bylo možné pokračovat, musí uživatel zařízení zařízení dešifrovat.
 
-    *Vezměte v úvahu: Intune nemůže na zařízení, které je už zašifrované, nastavit trezor. Místo toho musí uživatel ručně dešifrovat svoje zařízení, aby ho bylo možné spravovat pomocí zásad konfigurace zařízení a Intune*.
+    *Vezměte v úvahu: Intune nemůže na zařízení, které je už zašifrované, nastavit trezor. Když ale zařízení obdrží zásadu, která povoluje trezor souborů, může uživatel [nahrát svůj osobní obnovovací klíč, aby Intune mohl spravovat šifrování na tomto zařízení](../protect/encrypt-devices-filevault.md#assume-management-of-filevault-on-previously-encrypted-devices). Alternativně, ale nedoporučujeme, aby se zařízení po určitou dobu nešifroval, uživatel může zařízení před tím, než ho bude zašifrovat pomocí zásad Intune, ručně dešifrovat.*
 
   - Trezor úložiště potřebuje, aby uživatel schválil svůj profil pro správu v macOS Catalina a vyšších.
 
@@ -174,7 +174,7 @@ Tato sestava může být používána při identifikaci problémů pro skupiny z
 Podrobnosti o správě klíčů pro obnovení najdete v dokumentaci k Intune v následujících tématech:
 
 macOS úložiště:
-- [Načíst osobní obnovovací klíč](../protect/encrypt-devices-filevault.md#retrieve-personal-recovery-key)
+- [Načíst osobní obnovovací klíč](../protect/encrypt-devices-filevault.md#retrieve-a-personal-recovery-key)
 - [Otočení obnovovacích klíčů](../protect/encrypt-devices-filevault.md#rotate-recovery-keys)
 - [Obnovit obnovovací klíče](../protect/encrypt-devices-filevault.md#recover-recovery-keys)
 

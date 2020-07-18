@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/02/2019
+ms.date: 07/17/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,16 +18,23 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8a2cee7e57f303f798f3484e52462a22e981ed59
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 3e7f9c984b81bbe98269b0123371d8097d960ffb
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079123"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86462129"
 ---
 # <a name="troubleshoot-the-intune-exchange-connector"></a>Řešení potíží s Intune Exchange Connectorem
 
 Tento článek popisuje, jak řešit problémy související s Intune Exchange Connectorem.
+
+> [!IMPORTANT]
+>
+> Od 1. července 2020 se podpora pro Exchange Connector zastaralá a nahrazuje ji pomocí [hybridního moderního ověřování](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview) Exchange (HMA) a možnost přidat konektor Exchange Connector do Intune se odebere.
+>
+> Zákazníci, kteří dřív nakonfigurovali a používali Exchange Connector, budou mít i nadále podporu konektoru.
+
 
 ## <a name="before-you-start"></a>Než začnete
 

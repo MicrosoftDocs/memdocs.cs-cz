@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 077318d4b55c7e1f2a83864aba51e2282630b9fb
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: cb1d4917e94528dc64fa336df8eacc085a4d685c
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990148"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461976"
 ---
 # <a name="use-and-manage-zebra-devices-with-zebra-mobility-extensions-in-microsoft-intune"></a>Používání a Správa zařízení Zebra s rozšířeními mobility Zebra v Microsoft Intune
 
@@ -47,7 +47,7 @@ Pomocí Intune můžete zaregistrovat zařízení Zebra, abyste mohli do zaříz
 >
 > Další informace najdete v tématu [uzamčení zařízení](https://developer.zebra.com/community/home/blog/2017/04/11/locking-down-your-device) na webu zebra.
 
-## <a name="before-you-begin"></a>Před zahájením
+## <a name="before-you-begin"></a>Než začnete
 
 - Ujistěte se, že máte nejnovější verzi aplikace StageNow Desktop z technologií zebra.
 - Ujistěte se, že jste zkontrolovali [úplnou matrici funkcí Zebra](http://techdocs.zebra.com/mx/compatibility) (otevře web Zebra), abyste potvrdili, že profily, které vytvoříte, jsou kompatibilní s verzí MX zařízení, verzí operačního systému a modelu.
@@ -117,7 +117,7 @@ Když vytvoříte profil v StageNow, vyberte v posledním kroku možnost **expor
   Nebo můžete pomocí integrovaných funkcí v Intune získat tyto změny, včetně:
 
   - Funkce správy aplikací, které umožňují [přidávat](../apps/apps-add.md), [nasazovat](../apps/apps-deploy.md), aktualizovat a [monitorovat](../apps/apps-monitor.md) aplikace.
-  - Správa [aktualizací systému a aplikací](device-restrictions-android-for-work.md#device-owner-only) na zařízeních s Androidem Enterprise
+  - Správa [aktualizací systému a aplikací](device-restrictions-android-for-work.md#fully-managed-dedicated-and-corporate-owned-work-profile) na zařízeních s Androidem Enterprise
 
 Po otestování souboru je dalším krokem nasazení profilu do zařízení pomocí Intune.
 

@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/08/2017
+ms.date: 07/15/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: shburbid
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: f29cc024b34736a0a6d759179af70ceb51e12ea1
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 2169abf9955446d6299a64c7ce2ae03723faa792
+ms.sourcegitcommit: 5c15b59cde085787b85f032f88add70a11d8e9a2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881105"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86447972"
 ---
 # <a name="turn-on-windows-defender-to-access-company-resources"></a>Zapnutí přístupu k prostředkům společnosti pro program Windows Defender
 
@@ -41,12 +41,12 @@ Některá nastavení programu Windows Defender bude možná potřeba při řeše
 
 ## <a name="turn-on-real-time-protection"></a>Zapnutí ochrany v reálném čase
 
-Zkontrolujte, jestli je zapnutá ochrana v reálném čase. Uděláte to tak, že přejdete na **Start** a vyhledáte **Centrum zabezpečení v programu Windows Defender**. Vyberete **Nastavení ochrany před viry a hrozbami ** a ověříte, že možnosti **Ochrana v reálném čase** a **Cloudová ochrana** jsou přepnuté na **Zapnuto**. Pokud se tyto možnosti nezobrazují, zapněte je takto:
+Zkontrolujte, jestli je zapnutá ochrana v reálném čase, a to tak, že **spustíte** a vyhledáte **zabezpečení systému Windows**. Vyberete **Nastavení ochrany před viry a hrozbami ** a ověříte, že možnosti **Ochrana v reálném čase** a **Cloudová ochrana** jsou přepnuté na **Zapnuto**. Pokud se tyto možnosti nezobrazují, zapněte je takto:
 
 1. V nabídce **Start** otevřete **Ovládací panely**.
 2. Otevřete **Nástroje pro správu**  >  **upravit zásady skupiny**. V novém okně se otevře **Editor místních zásad skupiny**.
-3. Otevřete položku **Konfigurace počítače**  >  **šablony pro správu**  >  **součásti systému Windows**  >  **Defender Security Center**  >  **antivirová a hrozbová ochrana**.
-4. Otevřete nastavení **ochrany před viry a hrozbami** a nastavte je na **Zakázáno**.
+3. Otevřete okno **Konfigurace počítače**  >  **šablony pro správu**  >  **součásti systému Windows**  >  Ochrana proti**Windows Security**  >  **virům a hrozbám**zabezpečení systému Windows.
+4. Otevřete nastavení **Skrýt oblast ochrana před viry a hrozbami** a nastavte ji na **zakázané**.
 
 ## <a name="update-your-antivirus-definitions"></a>Aktualizace antivirových definic
 

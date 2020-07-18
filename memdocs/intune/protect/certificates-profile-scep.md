@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 35cf4b3afb766d8729d3438d2d8c61e1d79f4791
-ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
+ms.openlocfilehash: 03e29f7c0256a5cd1c9cdabdd24394a2f390286b
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84531736"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86462146"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>Vytvoření a přiřazení profilů certifikátů SCEP v Intune
 
@@ -40,9 +40,9 @@ Až [nakonfigurujete infrastrukturu](certificates-scep-configure.md) pro podporu
    - **Platforma**: vyberte platformu zařízení.
    - **Profil**: vyberte **certifikát SCEP** .
 
-     Pro platformu **Android Enterprise** se *typ profilu* dělí na dvě kategorie, *jenom vlastníkem zařízení* a *pracovní profil*. Nezapomeňte vybrat správný profil certifikátu SCEP pro zařízení, která spravujete.  
+     Pro platformu **Android Enterprise** je *typ profilu* rozdělen do dvou kategorií, *plně spravovaných, vyhrazených a pracovních profilů* a *pracovních*profilů vlastněných společností. Nezapomeňte vybrat správný profil certifikátu SCEP pro zařízení, která spravujete.  
 
-     Profily certifikátů SCEP pro profil *jenom vlastníkem zařízení* mají následující omezení:
+     Profily certifikátů SCEP pro profil *plně spravovaných, vyhrazených a podnikových profilů pracovního profilu* mají následující omezení:
 
       1. V části monitorování není oznamování certifikátů k dispozici pro profily certifikátů SCEP vlastníka zařízení.
 
@@ -56,7 +56,7 @@ Až [nakonfigurujete infrastrukturu](certificates-scep-configure.md) pro podporu
    - **Název**: zadejte popisný název profilu. Své profily pojmenujte, abyste je později mohli snadno identifikovat. Dobrým názvem profilu je například *profil SCEP pro celou firmu*.
    - **Popis**: Zadejte popis profilu. Toto nastavení není povinné, ale doporučujeme ho zadat.
 
-6. Vyberte **Další**.
+6. Vyberte **Next** (Další).
 
 7. V **nastavení konfigurace**dokončete následující konfigurace:
 
@@ -112,7 +112,7 @@ Až [nakonfigurujete infrastrukturu](certificates-scep-configure.md) pro podporu
 
          Tento příklad zahrnuje formát názvu subjektu, který používá proměnné CN a E a řetězce pro hodnoty organizační jednotky, organizace, umístění, stav a země. Článek [Funkce CertStrToName](https://msdn.microsoft.com/library/windows/desktop/aa377160.aspx) popisuje tuto funkci a její podporované řetězce.
          
-         \*Pro profily jenom pro vlastníka zařízení s Androidem nebude nastavení **CN = {{userPrincipalName}}** fungovat. Profily jenom pro vlastníka zařízení s Androidem se dají použít pro zařízení bez uživatele, takže tento profil nebude moct získat hlavní název uživatele (UPN). Pokud opravdu potřebujete tuto možnost pro zařízení s uživateli, můžete použít alternativní řešení: **CN = {{UserName}} \@ contoso.com** bude poskytovat uživatelské jméno a doménu, kterou jste přidali ručně, napříkladjanedoe@contoso.com
+         \*Pro profily pracovních profilů, které jsou plně spravované, vyhrazené a podnikové vlastnictví v Androidu, nebude nastavení **CN = {{userPrincipalName}}** fungovat. Pro zařízení bez uživatele se dají používat profily pracovních profilů s plnou správou Androidu, vyhrazené a podnikové vlastnictví, takže tento profil nebude moct získat hlavní název uživatele (UPN). Pokud opravdu potřebujete tuto možnost pro zařízení s uživateli, můžete použít alternativní řešení: **CN = {{UserName}} \@ contoso.com** bude poskytovat uživatelské jméno a doménu, kterou jste přidali ručně, napříkladjanedoe@contoso.com
 
       - **Typ certifikátu zařízení**
 
@@ -238,15 +238,15 @@ Až [nakonfigurujete infrastrukturu](certificates-scep-configure.md) pro podporu
 
      Pokud se zařízení neúspěšně dorazí na stejný server NDES během kteréhokoliv ze tří volání na server NDES, požadavek SCEP se nezdaří. K tomu může dojít například v případě, že řešení vyrovnávání zatížení poskytuje jinou adresu URL pro druhý nebo třetí volání serveru NDES nebo poskytuje jiný skutečný server NDES založený na virtualizované adrese URL pro NDES. Po neúspěšné žádosti se zařízení znovu pokusí o postup v příštím cyklu zásad, počínaje náhodným seznamem adres URL NDES (nebo jedné adresy URL pro iOS/iPadOS).  
 
-8. Vyberte **Další**.
+8. Vyberte **Next** (Další).
 
 9. V části **značky oboru** (volitelné) přiřaďte značku pro filtrování profilu pro konkrétní IT skupiny, například `US-NC IT Team` nebo `JohnGlenn_ITDepartment` . Další informace o značkách oboru naleznete v tématu [použití značek RBAC a Scope pro distribuci](../fundamentals/scope-tags.md).
 
-   Vyberte **Další**.
+   Vyberte **Next** (Další).
 
 10. V části **přiřazení**vyberte uživatele nebo skupiny, které obdrží váš profil. Další informace o přiřazování profilů najdete v tématu [přiřazení profilů uživatelů a zařízení](../configuration/device-profile-assign.md).
 
-    Vyberte **Další**.
+    Vyberte **Next** (Další).
 
 11. (*Platí jenom pro Windows 10*) V části **pravidla použitelnosti**zadejte pravidla použitelnosti pro upřesnění přiřazení tohoto profilu. Můžete vybrat, že chcete profil přiřadit nebo nepřiřadit, na základě edice nebo verze operačního systému zařízení.
 

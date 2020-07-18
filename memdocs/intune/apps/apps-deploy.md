@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b80527921172201dc86c5f3241e9978525afa083
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 665e06e6aca0a4ba4f71147325eb587b1b8b4d40
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83984821"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461534"
 ---
 # <a name="assign-apps-to-groups-with-microsoft-intune"></a>Přiřazení aplikací do skupin pomocí Microsoft Intune
 
@@ -36,16 +36,16 @@ Po [Přidání aplikace](apps-add.md) pro Microsoft Intune můžete aplikaci př
 
 Následující tabulka obsahuje různé možnosti pro přiřazení aplikací uživatelům a zařízením:
 
-|   | Zařízení zaregistrovaná v Intune | Zařízení nezaregistrovaná v Intune |
+| Možnost  | Zařízení zaregistrovaná v Intune | Zařízení nezaregistrovaná v Intune |
 |-------------------------------------------------------------------------------------------|------------------------------|----------------------------------|
 | Přiřadit uživatelům | Ano | Ano |
-| Přiřadit zařízením | Ano | Ne |
+| Přiřadit zařízením | Yes | No |
 | Přiřadit zabalené aplikace nebo aplikace obsahující sadu Intune SDK (kvůli zásadám ochrany aplikací) | Ano | Ano |
 | Přiřadit aplikace jako K dispozici | Ano | Ano |
-| Přiřadit aplikace jako Povinné | Ano | Ne |
-| Odinstalovat aplikace | Ano | Ne |
-| Dostávat aktualizace aplikací z Intune | Ano | Ne |
-| Koncoví uživatelé instalují dostupné aplikace z aplikace Portál společnosti | Ano | Ne |
+| Přiřadit aplikace jako Povinné | Yes | No |
+| Odinstalovat aplikace | Yes | No |
+| Dostávat aktualizace aplikací z Intune | Yes | No |
+| Koncoví uživatelé instalují dostupné aplikace z aplikace Portál společnosti | Yes | No |
 | Koncoví uživatelé instalují dostupné aplikace z webového Portálu společnosti | Ano | Ano |
 
 > [!NOTE]
@@ -122,7 +122,7 @@ U zařízení s Androidem v neregistrovaných zásadách ochrany aplikací bez n
 
 Postup přiřazení spravované aplikace Google Play k nespravovaným zařízením:
 
-1. Připojte svého tenanta Intune ke spravovaným Google Play. Pokud jste to už udělali kvůli tomu, abyste mohli spravovat pracovní profil platformy Android Enterprise, vyhrazená nebo plně spravovaná zařízení, nemusíte to dělat znovu.
+1. Připojte svého tenanta Intune ke spravovaným Google Play. Pokud jste to už udělali za účelem správy pracovního profilu Android Enterprise, vyhrazeného, plně spravovaného nebo podnikového pracovního profilu, nemusíte to dělat znovu.
 2. Do konzoly Intune přidejte aplikace ze spravovaných Google Play.
 3. Cílit na spravované Google Play aplikace jako **k dispozici s registrací nebo bez registrace** do požadované skupiny uživatelů. **Vyžadované** a **odinstalace** cílení aplikace nejsou pro neregistrovaná zařízení podporovaná.
 4. Přiřaďte zásady ochrany aplikací ke skupině uživatelů.
@@ -138,10 +138,10 @@ Výchozí hodnoty pro nastavení jsou předem vyplněné pro nová přiřazení 
 
 |Typ aplikace pro iOS | Výchozí nastavení pro možnost odinstalovat při odebrání zařízení |
 |--------------------|----------------|
-| Obchodní aplikace | Ano |
-| Aplikace pro Store | Ne |
-| Aplikace VPP | Ne |
-| Integrovaná aplikace | Ne |
+| Obchodní aplikace | Yes |
+| Aplikace pro Store | No |
+| Aplikace VPP | No |
+| Integrovaná aplikace | No |
 
 >[!NOTE]
 >**Typy přiřazení "dostupné":** Pokud aktualizujete toto nastavení pro skupiny "k dispozici pro zaregistrovaná zařízení" nebo "k dispozici v rámci nebo bez registrace", uživatelé, kteří už mají spravovanou aplikaci, nebudou mít aktualizované nastavení, dokud zařízení nesynchronizují s Intune a znovu nenainstaluje aplikaci. 

@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/24/2020
+ms.date: 07/17/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,16 +18,26 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 390a80f6333229a99daec9627e3810c27ca6b580
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: e646ce40acaa156910f516c475cd6b0885989941
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990844"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86462183"
 ---
 # <a name="set-up-the-on-premises-intune-exchange-connector"></a>Nastavení místního Intune Exchange Connectoru
 
+> [!IMPORTANT]
+> Informace v tomto článku se vztahují na zákazníky, kteří jsou podporováni pro použití konektoru Exchange.
+>
+> Od 1. července 2020 se podpora pro Exchange Connector zastaralá a nahrazuje ji pomocí [hybridního moderního ověřování](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview) Exchange (HMA).  Pokud máte ve svém prostředí nastavený Exchange Connector, zůstane klient Intune pro jeho použití podporovaný a vy budete mít přístup k uživatelskému rozhraní, které podporuje jeho konfiguraci. Můžete dál používat konektor nebo nakonfigurovat HMA a pak konektor odinstalovat.
+>
+>Použití paměti HMA nevyžaduje instalaci Intune a použití konektoru Exchange. Díky této změně se uživatelské rozhraní pro konfiguraci a správu Exchange Connectoru pro Intune odebralo z centra pro správu Microsoft Endpoint Manageru, pokud už nepoužíváte Exchange Connector s vaším předplatným.
+
 Aby se chránil přístup k Exchangi, Intune spoléhá na místní komponentu, která se označuje jako konektor Microsoft Intune Exchange. Tento konektor se také označuje jako *konektor Exchange ActiveSync On-Premises Connector* v některých umístěních konzoly Intune.
+
+> [!IMPORTANT]
+> V Intune se odebere podpora funkce konektoru On-Premises Connector ze služby Intune počínaje verzí 2007 (červenec). Stávající zákazníci s aktivním konektorem budou v tuto chvíli moci pokračovat s aktuálními funkcemi. Noví zákazníci a stávající zákazníci, kteří nemají aktivní konektor, už nebudou moct vytvářet nové konektory ani spravovat zařízení Exchange ActiveSync (EAS) z Intune. Pro tyto klienty Microsoft doporučuje používat [hybridní moderní ověřování Exchange (HMA)](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview) k ochraně přístupu k místnímu Exchangi. HMA umožňuje Intune App Protection zásady (označované také jako MAM) a podmíněný přístup prostřednictvím Outlook Mobile pro místní Exchange.
 
 Informace v tomto článku vám pomůžou nainstalovat a monitorovat konektor Intune Exchange Connector. Konektor se [zásadami podmíněného přístupu](conditional-access-exchange-create.md) můžete použít k povolení nebo blokování přístupu k místním poštovním schránkám Exchange.
 
@@ -45,6 +55,35 @@ Při nastavování připojení, které Intune umožňuje komunikaci s místním 
 2. Nainstalujte a nakonfigurujte Exchange Connector na počítači v místní organizaci Exchange.
 3. Ověřte připojení k Exchangi.
 4. Tento postup opakujte pro každou další organizaci Exchange, kterou chcete připojit k Intune.
+
+## <a name="how-conditional-access-for-exchange-on-premises-works"></a>Jak podmíněný přístup pro místní Exchange funguje
+
+Podmíněný přístup pro místní Exchange funguje jinak než zásady založené na podmíněném přístupu Azure. Intune Exchange On-Premises Connector nainstalujete k přímé interakci se systémem Exchange Server. Konektor Intune Exchange si vyžádá všechny záznamy Exchange Active Sync (EAS), které existují na serveru Exchange, aby Intune mohl tyto záznamy EAS namapovat na záznamy zařízení Intune. Tyto záznamy jsou zařízení zaregistrovaná a rozpoznaná službou Intune. Tento proces povolí nebo zablokuje přístup k e-mailu.
+
+Pokud je záznam EAS nový a Intune o něm není vědět, Intune vydá rutinu (příkaz-let), která přesměruje Exchange Server, aby blokoval přístup k e-mailu. Níže najdete další podrobnosti o tom, jak tento proces funguje:
+
+> [!div class="mx-imgBorder"]
+> ![Vývojový diagram místního Exchange s podmíněným přístupem](./media/exchange-connector-install/ca-intune-common-ways-1.png)
+
+1. Uživatel se pokusí o přístup k podnikovému e-mailu, který je hostovaný na místním Exchangi 2010 SP1 nebo novějším.
+
+2. Pokud zařízení nespravuje Intune, bude přístup k e-mailu blokovaný. Intune pošle klientovi EAS oznámení o blokování.
+
+3. EAS obdrží oznámení o zablokování, přesune zařízení do karantény a odešle e-mail o karanténě s kroky k nápravě, které obsahují odkazy, aby uživatelé mohli svá zařízení zaregistrovat.
+
+4. Provede se proces připojení k pracovišti, který je prvním krokem k tomu, aby se zařízení spravovalo pomocí Intune.
+
+5. Zařízení se zaregistruje v Intune.
+
+6. Intune namapuje záznam EAS na záznam zařízení a uloží stav dodržování předpisů zařízením.
+
+7. ID klienta EAS se zaregistruje prostřednictvím procesu registrace zařízení Azure AD. Tím se vytvoří vztah mezi záznamem zařízení v Intune a ID klienta EAS.
+
+8. Registrace zařízení Azure AD uloží informace o stavu zařízení.
+
+9. Pokud uživatel splňuje zásady podmíněného přístupu, Intune vydá rutinu prostřednictvím Intune Exchange Connectoru, která umožňuje synchronizaci poštovní schránky.
+
+10. Server Exchange odešle oznámení klientovi EAS, aby uživatel získal přístup k e-mailu.
 
 ## <a name="intune-exchange-connector-requirements"></a>Požadavky Intune Exchange Connectoru
 
@@ -98,11 +137,11 @@ Na Windows serveru, který může podporovat Intune Exchange Connector:
 
 Pomocí těchto kroků nainstalujete Intune Exchange Connector. Pokud máte více organizací Exchange, opakujte postup u každého konektoru Exchange, který chcete nastavit.
 
-1. V podporovaném operačním systému pro Intune Exchange Connector extrahujte soubory v souboru **Exchange_Connector_Setup. zip** do zabezpečeného umístění.
+1. V podporovaném operačním systému pro Intune Exchange Connector extrahujte soubory z **Exchange_Connector_Setup.zip** do zabezpečeného umístění.
    > [!IMPORTANT]
    > Soubory, které jsou ve složce *Exchange_Connector_Setup* , nemusíte přejmenovat ani přesouvat. Tyto změny by způsobily selhání instalace konektoru.
 
-2. Po extrahování souborů otevřete extrahovanou složku a dvojím kliknutím na **Exchange_Connector_Setup. exe** nainstalujte konektor.
+2. Po extrahování souborů otevřete extrahovanou složku a dvojím kliknutím na **Exchange_Connector_Setup.exe** instalaci konektoru nainstalujte.
 
    > [!IMPORTANT]
    > Pokud cílová složka není v zabezpečeném umístění, po dokončení instalace místních konektorů odstraňte soubor certifikátu *MicrosoftIntune. accountcert* .
@@ -174,7 +213,7 @@ Ve výchozím nastavení je povoleno zjišťování dalších servery CAS. Pokud
 
 2. V textovém editoru otevřete soubor **OnPremisesExchangeConnectorServiceConfiguration.xml**.
 
-3. Změňte ** \< IsCasFailoverEnabled>*true* \< /IsCasFailoverEnabled>** na ** \< IsCasFailoverEnabled>*false* \< /IsCasFailoverEnabled>**.
+3. Změňte ** \<IsCasFailoverEnabled> *hodnotu true* \</IsCasFailoverEnabled> ** na ** \<IsCasFailoverEnabled> *false*false \</IsCasFailoverEnabled> **.
 
 ## <a name="performance-tune-the-exchange-connector-optional"></a>Výkon – ladění Exchange Connectoru (volitelné)
 
@@ -188,11 +227,11 @@ Zlepšení výkonu konektoru Exchange Connector:
 
 1. Na serveru, na kterém je nainstalovaný konektor, otevřete instalační adresář konektoru.  Výchozí umístění je *C:\ProgramData\Microsoft\Windows Intune Exchange Connector*.
 
-2. Upravte soubor *OnPremisesExchangeConnectorServiceConfiguration. XML*.
+2. Upravte soubor *OnPremisesExchangeConnectorServiceConfiguration.xml*.
 
 3. Vyhledejte **EnableParallelCommandSupport** a nastavte hodnotu na **true**:
 
-   \<EnableParallelCommandSupport>true \< /EnableParallelCommandSupport>
+   \<EnableParallelCommandSupport>true\</EnableParallelCommandSupport>
 
 4. Uložte soubor a pak restartujte službu Microsoft Intune Exchange Connector.
 

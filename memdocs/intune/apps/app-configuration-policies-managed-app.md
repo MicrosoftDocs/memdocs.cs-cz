@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/23/2020
+ms.date: 07/09/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1ed731cdb4efddaedbfcde47acce3fc24d344d80
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: b493443a86d7cd1769ce6f66c77acc87063521f6
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988805"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461636"
 ---
 # <a name="add-app-configuration-policies-for-managed-apps-without-device-enrollment"></a>Přidání zásad konfigurace aplikací pro spravované aplikace bez registrace zařízení
 
@@ -39,11 +39,19 @@ Zásady konfigurace aplikací můžete používat se spravovanými aplikacemi, k
     - **Typ registrace zařízení**: je vybraná možnost spravované aplikace.
 4. Zvolte **Vybrat veřejné aplikace** nebo **zvolte vlastní aplikace** a zvolte aplikaci, kterou chcete konfigurovat. Ze seznamu vyberte některou z aplikací, kterou jste schválili a synchronizovali s Intune.
 5. Kliknutím na **Další** zobrazte stránku **Nastavení** .
-6. Pro každé nastavení konfigurace podporované aplikací zadejte **název** a **hodnotu**. 
+6. Na **stránce nastavení** najdete možnosti, které se zobrazují v závislosti na aplikaci, kterou konfigurujete:
 
-   Aplikace s povolenou sadou Intune App SDK podporují konfigurace v párech klíč-hodnota. Nahlédněte do dokumentace k jednotlivým aplikacím, kde zjistíte, které konfigurace klíč-hodnota se podporují. Připomínáme, že můžete používat tokeny, které se budou dynamicky plnit daty generovanými aplikací. Další informace najdete v tématu [konfigurační hodnoty pro používání tokenů](app-configuration-policies-managed-app.md#configuration-values-for-using-tokens). Informace o nastavení zásad konfigurace aplikace Outlook pro iOS/iPadOS najdete v tématu [Správa konfigurace aplikací pro iOS/iPadOS pomocí Microsoft Intune](https://technet.microsoft.com/library/mt813789(v=exchg.150).aspx).
+    - **Obecná nastavení konfigurace** – pro každé Obecné nastavení konfigurace, které aplikace podporuje, zadejte **název** a **hodnotu**. 
+ 
+        Aplikace s povolenou sadou Intune App SDK podporují konfigurace v párech klíč-hodnota. Nahlédněte do dokumentace k jednotlivým aplikacím, kde zjistíte, které konfigurace klíč-hodnota se podporují. Připomínáme, že můžete používat tokeny, které se budou dynamicky plnit daty generovanými aplikací. Pokud chcete odstranit Obecné nastavení konfigurace, zvolte tři tečky (**...**) a vyberte **Odstranit**. Další informace najdete v tématu [konfigurační hodnoty pro používání tokenů](app-configuration-policies-managed-app.md#configuration-values-for-using-tokens). 
 
-    Pokud chcete konfiguraci odstranit, zvolte tři tečky (**…**) a vyberte **Odstranit**.  
+    - **Nastavení konfigurace Outlooku** – Outlook pro iOS a Android nabízí správcům možnost přizpůsobení výchozí konfigurace pro několik nastavení v aplikaci. Další informace najdete v tématu [scénáře konfigurace aplikací pro iOS a Android – obecné](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune#general-app-configuration-scenarios).
+   
+    - **S/** MIME – Secure Multipurpose Internet Mail Extensions (s/MIME) je specifikace, která uživatelům umožňuje odesílat a přijímat digitálně podepsané a šifrované e-maily.
+        - **Povolit S/MIME** – určuje, jestli se mají povolit ovládací prvky s/MIME při vytváření e-mailu. Výchozí hodnota: **není nakonfigurováno**.
+        - **Povolit uživateli změnu nastavení** – určuje, jestli má uživatel povoleno změnit nastavení. Musí být povolený Standard S/MIME. Výchozí hodnota: **Ano**.
+        
+    Informace o nastavení zásad konfigurace aplikace Outlook najdete v tématu [nasazení aplikace Outlook pro iOS a nastavení konfigurace aplikací pro Android](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune).
 
 7. Kliknutím na tlačítko **Další** zobrazíte stránku **přiřazení** .
 8. Klikněte na **Vybrat skupiny, které chcete zahrnout**.

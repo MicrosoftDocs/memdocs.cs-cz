@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: de23dc438ac176383cf5f5fbfac4da22f91bd4b2
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: e541eb04f8de689ee76a68556bb1b2eb90914b96
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988828"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461432"
 ---
 # <a name="create-a-compliance-policy-in-microsoft-intune"></a>Vytvoření zásady dodržování předpisů v Microsoft Intune
 
@@ -36,7 +36,7 @@ Tento článek:
 - V této části najdete popis dalších funkcí, včetně tagů oboru pro filtrování zásad a kroků, které můžete provést na zařízeních, která nedodržují předpisy.
 - Vypíše časy obnovení při vracení se změnami, když zařízení dostanou aktualizace zásad.
 
-## <a name="before-you-begin"></a>Před zahájením
+## <a name="before-you-begin"></a>Než začnete
 
 Pokud chcete používat zásady dodržování předpisů zařízením, ujistěte se, že jste:
 
@@ -75,7 +75,7 @@ Pokud chcete používat zásady dodržování předpisů zařízením, ujistěte
    - *Windows 10 a novější*
 
     Pro *Android Enterprise*vyberete také **Typ zásady**:
-     - *Zásady dodržování předpisů pro vlastníka zařízení s Androidem*
+     - *Zásady pracovního profilu pro Android plně spravované, vyhrazené a podnikové vlastnictví*
      - *Zásady dodržování předpisů pracovního profilu Androidu*
 
     Pak vyberte **vytvořit** a otevřete tak okno **vytvořit konfiguraci zásad** .
@@ -161,7 +161,7 @@ Pokud má nějaké zařízení několik zásad dodržování předpisů a pro dv
 
 |Status  |Severity  |
 |---------|---------|
-|Není známo     |1|
+|Neznámý     |1|
 |NotApplicable     |2|
 |Odpovídající|3|
 |V období odkladu|4|

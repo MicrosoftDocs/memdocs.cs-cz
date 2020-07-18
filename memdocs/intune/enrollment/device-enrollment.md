@@ -17,14 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d3ca95db3297a6ca251f91a79fda705aebb6d18d
-ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
+ms.openlocfilehash: e5d673c5688c4ab4f3219256412a098855af63ec
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86088458"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461874"
 ---
-# <a name="what-is-device-enrollment"></a>Co je registrace zařízení?
+# <a name="what-is-device-enrollment-in-intune"></a>Co je registrace zařízení v Intune?
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Intune umožňuje spravovat zařízení a aplikace vašich zaměstnanců a jejich přístup k firemním datům. Abyste správu mobilních zařízení (MDM) mohli používat, musí být zařízení napřed zaregistrované ve službě Intune. Když je zařízení zaregistrované, vystavuje se certifikát MDM. Tento certifikát slouží ke komunikaci se službou Intune.
@@ -72,6 +72,8 @@ Standardně se do Intune můžou registrovat zařízení pro všechny platformy.
 |**Pracovní profil Android Enterprise**|**Uživatel inicioval prostřednictvím Portál společnosti**| No | Yes | No | [Další informace](android-work-profile-enroll.md)|
 
 
+&nbsp;
+
 | **Firemní** | **Enrollment Methods** | **Vyžadováno resetování** | **Spřažení uživatele** | **Uzamčeno** | **Podrobnosti**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
 |**Správce zařízení s Androidem**|**[DEM](#device-enrollment-manager) iniciované prostřednictvím portál společnosti**| No | No | No |[Další informace](device-enrollment-manager-enroll.md)|
@@ -79,7 +81,7 @@ Standardně se do Intune můžou registrovat zařízení pro všechny platformy.
 |**Správce zařízení s Androidem s rozšířeními mobility Zebra**|**Uživatel nebo [DEM](#device-enrollment-manager) iniciované prostřednictvím portál společnosti**| No | Ano, pokud se uživatel inicioval, ne při zahájení [DEM](#device-enrollment-manager) | No | [Další informace](../configuration/android-zebra-mx-overview.md)|
 |**Vyhrazená Enterprise v Androidu**|**NFC, token, kód QR, nulové dotykové ovládání**| Yes | No | Konfigurovatelné prostřednictvím zásad | [Další informace](android-kiosk-enroll.md)|
 |**Plně spravovaná platforma Android Enterprise**|**NFC, token, kód QR, nulové dotykové ovládání**| Ano | Ano | Konfigurovatelné prostřednictvím zásad | [Další informace](android-dedicated-devices-fully-managed-enroll.md)|
-
+|**Podniková platforma Androidu – vlastněná pracovním profilem** | **NFC, token, kód QR, nulové dotykové ovládání** | Ano | Ano | Konfigurovatelné prostřednictvím zásad | [Další informace](android-corporate-owned-work-profile-enroll.md)|
 
 ## <a name="bring-your-own-device"></a>Přineste si vlastní zařízení
 Přineste si vlastní zařízení (BYOD), včetně telefonů, tabletů a počítačů vlastněných osobně. Kvůli registraci vlastního zařízení uživatelé nainstalují a používají aplikaci Portál společnosti. Tento program umožňuje uživatelům přístup k firemním prostředkům, jako je třeba e-mail.

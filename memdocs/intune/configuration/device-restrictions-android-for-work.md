@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/13/2020
+ms.date: 07/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7aee865b2a16ce3a9114433f9e10e185b26997f7
-ms.sourcegitcommit: d56e1c84e687fe18810f3b81e0a0617925fe6044
+ms.openlocfilehash: de1f1bc3b21a8e4ebd2aca6730cae68af730f94e
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86303466"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461899"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Nastavení zařízení s Androidem Enterprise pro povolení nebo omezení funkcí pomocí Intune
 
@@ -31,9 +31,18 @@ Tento článek obsahuje seznam a popisuje různá nastavení, která můžete ř
 
 [Vytvořte profil konfigurace zařízení](device-restrictions-configure.md).
 
-## <a name="device-owner-only"></a>Pouze vlastník zařízení
+## <a name="fully-managed-dedicated-and-corporate-owned-work-profile"></a>Plně spravovaný, vyhrazený a podnikový pracovní profil
 
-Tato nastavení se vztahují na typy registrace Androidu Enterprise, kde Intune řídí celé zařízení, jako jsou například plně spravovaná nebo vyhrazená zařízení se systémem Android Enterprise.
+Tato nastavení se vztahují na typy registrace Androidu Enterprise, kde Intune řídí celé zařízení, jako jsou zařízení se systémem Android Enterprise plně spravovaná, vyhrazená a firemní pracovní profil.
+
+Některá nastavení nejsou podporovaná všemi typy registrace. Pokud chcete zjistit, která nastavení jsou podporovaná typy registrace, přečtěte si téma uživatelské rozhraní. Každé nastavení je pod hlavičkou, která určuje, které typy zápisu můžou toto nastavení použít.
+
+![Nastavení hlaviček.](./media/device-restrictions-android-for-work/setting-headers.png)
+
+Některá nastavení platí jenom na úrovni pracovního profilu pro zařízení vlastněná společností s pracovním profilem. Tato nastavení stále platí pro plně spravovaná a vyhrazená zařízení, která jsou v plném rozsahu. Tato nastavení jsou v uživatelském rozhraní označena popisovačem na *úrovni pracovního profilu* .
+
+![Nastavení hlaviček.](./media/device-restrictions-android-for-work/work-profile-level.png)
+
 
 ### <a name="general"></a>Obecné
 
@@ -115,7 +124,9 @@ Pomocí těchto nastavení můžete nakonfigurovat možnosti veřejného termin�
       >
       > Aplikace **spravované domovské obrazovky** nemusí být v konfiguračním profilu, ale je nutné ji přidat jako aplikaci. Po přidání **spravované aplikace pro domovskou obrazovku** se všechny ostatní aplikace, které přidáte do konfiguračního profilu, zobrazují jako ikony v aplikaci **spravované domovské obrazovky** .
       >
-      > Při použití celoobrazovkového režimu s více aplikacemi nemusí aplikace Dial/Phone fungovat správně. 
+      > Při použití celoobrazovkového režimu s více aplikacemi nemusí aplikace Dial/Phone fungovat správně.
+      >
+      > Další informace o spravované domovské obrazovce najdete v tématu [nastavení domovské obrazovky spravované Microsoftem na vyhrazených zařízeních v celoobrazovkovém režimu s více aplikacemi](https://techcommunity.microsoft.com/t5/intune-customer-success/how-to-setup-microsoft-managed-home-screen-on-dedicated-devices/ba-p/1388060).
 
       - **Přidat**: vyberte své aplikace ze seznamu.
 
@@ -123,6 +134,25 @@ Pomocí těchto nastavení můžete nakonfigurovat možnosti veřejného termin�
 
         Do zařízení můžete přidat i další [aplikace pro Android](../apps/apps-add-android-for-work.md) a [webové aplikace](../apps/web-app.md) , které vytvořila vaše organizace. Nezapomeňte [aplikaci přiřadit ke skupině zařízení vytvořené pro vaše vyhrazená zařízení](../apps/apps-deploy.md).
 
+      - **Ikona složky**: vyberte barvu a tvar ikony složky, která je zobrazená na spravované domovské obrazovce. Možnosti:
+        - Tmavý obdélník motivu
+        - Tmavý kroužek s motivem
+        - Rámeček světlého motivu
+        - Světlý kruh motivu
+      - **Velikost ikony aplikace a složky**: vyberte velikost ikony složky, která je zobrazená na spravované domovské obrazovce. Možnosti:
+        - Velmi malý
+        - Malá
+        - Průměr
+        - Velká
+        - Velmi velký
+
+          V závislosti na velikosti obrazovky může být skutečná velikost ikony odlišná.
+
+      - **Orientace obrazovky**: vyberte směr, ve kterém se na zařízeních zobrazuje spravovaná Domovská obrazovka. Možnosti:
+        - Na výšku
+        - Na šířku
+        - Automatické otočení
+      - **Oznámení aplikace**: **možnost Povolit** zobrazuje počet nových a nepřečtených oznámení ikon aplikací. Pokud je nastavené na **Nenakonfigurováno**, Intune toto nastavení nezmění ani neaktualizuje.
       - **Tlačítko virtuální domů**: tlačítko měkkého klíče, které vrátí uživatele do spravované domovské obrazovky, aby uživatelé mohli přepínat mezi aplikacemi. Možnosti:
         - **Nenakonfigurováno** (výchozí): tlačítko domů není zobrazeno. Uživatelé musí použít tlačítko zpět k přepínání mezi aplikacemi.
         - **Potažení nahoru**: na domovském tlačítku se zobrazí, když uživatel na zařízení potáhne.
@@ -150,7 +180,31 @@ Pomocí těchto nastavení můžete nakonfigurovat možnosti veřejného termin�
         >
         > Moderní displeje mají vyšší hustotu pixelů a můžou zobrazovat ekvivalentní image definice 2K/4K.
 
+      - **Zástupce na nabídku nastavení**: **Zakázat** skryje zástupce spravovaného nastavení na spravované domovské obrazovce. Uživatelé si můžou přístup k nastavení dál potáhnout. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení se na zařízeních zobrazuje zástupce spravovaná nastavení. Uživatelé můžou také k těmto nastavením přistupovat potáhnutím dolů.
+
+      - **Rychlý přístup k nabídce ladění**: Toto nastavení určuje, jak uživatelé přistupují k nabídce ladění. Možnosti:
+
+        - **Povolit**: uživatelé mají přístup k nabídce ladění jednodušší. Konkrétně je mohou potáhnutím dolů nebo použít zástupce spravovaného nastavení. Stejně jako vždycky můžou dál vybírat tlačítko zpět.
+        - **Nenakonfigurováno** (výchozí): Intune toto nastavení nemění ani neaktualizuje. Ve výchozím nastavení je snadný přístup k nabídce ladění vypnut. Aby si uživatelé mohli otevřít nabídku ladění, musí si vybrat tlačítko zpět (15).
+
+        Pomocí nabídky Ladit můžou uživatelé:
+
+        - Zobrazení a nahrání protokolů spravované domovské obrazovky
+        - Otevřít aplikaci správce zásad zařízení pro Android Google
+        - Otevření [aplikace Microsoft Intune](https://play.google.com/store/apps/details?id=com.microsoft.intune)
+        - Opustit celoobrazovkový režim
+
       - **Konfigurace Wi-Fi**: **možnost Povolit** zobrazí ovládací prvek Wi-Fi na spravované domovské obrazovce a umožňuje uživatelům připojit zařízení k různým sítím Wi-Fi. Povolením této funkce se taky zapne umístění zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení operační systém nemusí na spravované domovské obrazovce zobrazit ovládací prvek Wi-Fi. Zabraňuje uživatelům v připojení k sítím Wi-Fi při použití spravované domovské obrazovky.
+
+        - **Seznam povolených sítí Wi-Fi**: Vytvořte seznam platných názvů bezdrátové sítě, označovaný také jako identifikátor SSID (Service Set Identifier). Uživatelé spravované domovské obrazovky se můžou připojit jenom k identifikátorům SSID, které zadáte.
+
+          Pokud je ponecháno prázdné, Intune toto nastavení nezmění ani neaktualizuje. Ve výchozím nastavení jsou povolené všechny dostupné sítě Wi-Fi.
+
+          **Importujte** soubor. csv, který obsahuje seznam platných identifikátorů SSID.
+
+          **Exportujte** aktuální seznam do souboru. csv.
+
+        - **SSID**: můžete taky zadat názvy sítě Wi-Fi, které se můžou připojit k uživatelům domácí obrazovky. Nezapomeňte zadat platné identifikátory SSID.
 
       - **Konfigurace Bluetooth**: **Povolit** zobrazí ovládací prvek Bluetooth na spravované domovské obrazovce a umožní uživatelům párovat zařízení přes Bluetooth. Povolením této funkce se taky zapne umístění zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení se operační systém nemusí na spravované domovské obrazovce zobrazovat na ovládacím prvku Bluetooth. Brání tak uživatelům v konfiguraci zařízení Bluetooth a párování zařízení při použití spravované domovské obrazovky.
 
@@ -158,17 +212,19 @@ Pomocí těchto nastavení můžete nakonfigurovat možnosti veřejného termin�
 
       - **Ovládání hlasitosti médií**: **Povolit** zobrazí ovládací prvek hlasitost média na spravované domovské obrazovce a umožňuje uživatelům upravit hlasitost média zařízení pomocí posuvníku. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení se operační systém nemusí na spravované domovské obrazovce zobrazovat na ovládacím prvku Media Volume Control. Zabraňuje uživatelům upravovat hlasitost médií zařízení při použití spravované domovské obrazovky, pokud jim jejich hardwarová tlačítka nepodporují.
 
+      - **Rychlý přístup k informacím o zařízení**: **možnost Povolit** uživatelům umožňuje potáhnutím dolů zobrazit informace o zařízení na spravované domovské obrazovce, jako je sériové číslo, číslo a číslo modelu a úroveň sady SDK. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení se nemusí zobrazovat informace o zařízení.
+
       - **Režim spořiče obrazovky**: **možnost Povolit** zobrazí na spravované domovské obrazovce spořič obrazovky, když je zařízení uzamčeno nebo vypršel časový limit. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení se v operačním systému na spravované domovské obrazovce nemusí zobrazovat spořič obrazovky.
 
         Pokud je tato možnost povolená, nakonfigurujte taky:
 
-        - **Nastavit vlastní obrázek spořiče obrazovky**: zadejte adresu URL pro vlastní PNG, jpg, JPEG, GIF, BMP, WEBP nebo ICOimage. Pokud adresu URL nezadáte, použije se výchozí image zařízení, pokud je k dispozici výchozí image. 
-        
+        - **Nastavit vlastní obrázek spořiče obrazovky**: zadejte adresu URL pro vlastní PNG, jpg, JPEG, GIF, BMP, WEBP nebo ICOimage. Pokud adresu URL nezadáte, použije se výchozí image zařízení, pokud je k dispozici výchozí image.
+
           Zadejte například .
 
           - `http://www.contoso.com/image.jpg`
           - `www.contoso.com/image.bmp`
-          - `https://www.contoso.com/image.webp`          
+          - `https://www.contoso.com/image.webp`
 
           > [!TIP]
           > Je podporována jakákoli adresa URL prostředku souboru, která může být převedena do rastrového obrázku.
@@ -180,30 +236,27 @@ Pomocí těchto nastavení můžete nakonfigurovat možnosti veřejného termin�
 - **Plně spravovaná**: konfiguruje aplikaci spouštěče Microsoft na plně spravovaných zařízeních.
 
   - **Nastavit jako výchozí spouštěč spouštěč Microsoftu**: **Povolit** nastaví jako výchozí spouštěč na domovské obrazovce Microsoft Launcher. Pokud nastavíte jako výchozí spouštěč, uživatelé nemůžou použít jiný spouštěč. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení není spouštěč Microsoftu vynucený jako výchozí spouštěč.
+  - **Konfigurace vlastní tapety**: **možnost Povolit** umožňuje použít vlastní obrázek jako tapetu domovské obrazovky a vybrat, jestli uživatelé můžou obrázek změnit. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení zařízení udržuje aktuální tapetu.
+    - **Zadejte adresu URL obrázku tapety**: zadejte adresu URL obrázku tapety. Tento obrázek se zobrazí na domovské obrazovce zařízení. Zadejte například `http://www.contoso.com/image.jpg`. 
+    - **Povolit uživateli změnit tapetu**: **možnost Povolit** umožňuje uživatelům změnit obrázek tapety. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení se uživatelům brání ve změně tapety.
+  - **Povolit kanál spouštěče**: **možnost Povolit** zapne spouštěcí kanál, který zobrazuje kalendáře, dokumenty a nedávné aktivity. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení se tento informační kanál nezobrazuje.
+    - **Povolit uživateli povolit/zakázat informační kanál**: **Povolit** umožňuje uživatelům povolit nebo zakázat informační kanál spouštěče. **Možnost Povolit** toto nastavení vynutí pouze při prvním přiřazení profilu. Toto nastavení nenutí všechna budoucí přiřazení profilu. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení se uživatelům brání v změně nastavení informačního kanálu spouštěče.
+  - **Přítomnost Dock**: Dock poskytuje uživatelům rychlý přístup k jejich aplikacím a nástrojům. Možnosti:
+    - **Nenakonfigurováno** (výchozí): Intune toto nastavení nemění ani neaktualizuje.
+    - **Zobrazit**: Dock se zobrazuje na zařízeních.
+    - **Skrýt**: ukotvení je skryté. Uživatelé musí pro přístup k Docku potáhnutím prstem.
+    - **Zakázáno**: Dock se nezobrazuje na zařízeních a uživatelé je zabraňují zobrazovat.
 
-<!-- The following settings are in a future release. Per PM, we can leave them in GitHub, not live. Remove comment tags when they release.
+  - **Povolit uživateli změnu přítomnosti Dock**: **Povolit** umožňuje uživatelům zobrazit nebo skrýt Dock. **Možnost Povolit** toto nastavení vynutí pouze při prvním přiřazení profilu. Toto nastavení nenutí všechna budoucí přiřazení profilu. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení uživatelé nemůžou měnit konfiguraci Docker zařízení.
 
-  - **Configure custom wallpaper**: **Enable** lets you apply your own image as the home screen wallpaper, and choose if users can change the image. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the device keeps its current wallpaper.
-    - **Enter URL of wallpaper image**: Enter the URL of your wallpaper image. This image shows on the device home screen. For example, enter `http://www.contoso.com/image.jpg`. 
-    - **Allow user to modify wallpaper**: **Enable** allows users to change the wallpaper image. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, users are prevented from changing the wallpaper.
-  - **Enable launcher feed**: **Enable** turns on the launcher feed, which shows calendars, documents, and recent activities. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, this feed isn't shown.
-    - **Allow user to enable/disable feed**: **Enable** lets users enable or disable the launcher feed. **Enable** only forces this setting the first time the profile is assigned. Any future profile assignments don't force this setting. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, users are prevented from changing the launcher feed settings.
-  - **Dock presence**: The dock gives users quick access to their apps and tools. Your options:
-    - **Not configured** (default): Intune doesn't change or update this setting.
-    - **Show**: The dock is shown on devices.
-    - **Hide**: The dock is hidden. Users must swipe up to access the dock.
-    - **Disabled**: The dock isn't shown on devices, and users are prevented from showing it.
+  - **Nahrazení panelu hledání**: Určete, kam se má vložit panel hledání. Možnosti:
+    - **Nenakonfigurováno** (výchozí): Intune toto nastavení nemění ani neaktualizuje.
+    - **Top**: panel hledání se zobrazuje v horní části zařízení.
+    - **Bottom**: panel hledání se zobrazuje v dolní části zařízení.
+    - **Skrýt**: panel hledání je skrytý.
 
-  - **Allow user to change dock presence**: **Enable** allows users to show or hide the dock. **Enable** only forces this setting the first time the profile is assigned. Any future profile assignments don't force this setting. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, users aren't allowed to change the device dock configuration.
-
-  - **Search bar replacement**: Choose where to put the search bar. Your options:
-    - **Not configured** (default): Intune doesn't change or update this setting.
-    - **Top**: Search bar is shown at the top of devices.
-    - **Bottom**: Search bar is shown at the bottom of devices.
-    - **Hide**: Search bar is hidden.
-
+<!-- MandiA (7.16.2020) The following settings may be in a future release. Per PM, we can leave it in GitHub, not live. Remove comment tags if/when it releases.
   - **Allow user to change search bar placement**: **Enable** allows users to change the location of the search bar. **Enable** only forces this setting the first time the profile is assigned. Any future profile assignments don't force this setting. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, users are prevented from changing the location.
-
 End of comment -->
 
 ### <a name="password"></a>Heslo
@@ -240,7 +293,7 @@ End of comment -->
 - **Počet neúspěšných přihlášení před vymazáním zařízení**: zadejte počet chybných hesel povolených před vymazáním zařízení, od 4-11. `0`(nula) může zakázat funkci vymazání zařízení. Pokud je hodnota prázdná, Intune se nezmění ani neaktualizuje.
 
   > [!NOTE]
-  > Zařízení vlastníka zařízení nebudou vyzvána k nastavení hesla. Nastavení se vynutilo a budete muset heslo nastavit ručně. Zásady, které vynucují tuto zásadu, budou hlásit jako neúspěšné, dokud nenastavíte heslo, které vyhovuje vašim požadavkům.
+  > Plně spravovaná, vyhrazená a podnikově vlastněná zařízení pracovních profilů nebudou vyzváni k nastavení hesla. Nastavení se vynutilo a budete muset heslo nastavit ručně. Zásady, které vynucují tuto zásadu, budou hlásit jako neúspěšné, dokud nenastavíte heslo, které vyhovuje vašim požadavkům.
 
 ### <a name="power-settings"></a>Nastavení napájení
 
@@ -255,7 +308,7 @@ End of comment -->
 - **Změny účtu** (jenom vyhrazená zařízení): **blok** brání uživatelům v úpravách účtů. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém uživatelům dovolit aktualizovat uživatelské účty v zařízení.
 
   > [!NOTE]
-  > Toto nastavení se nedodržuje u zařízení vlastníka zařízení (plně spravovaná). Pokud toto nastavení nakonfigurujete, nastavení se ignoruje a nemá žádný vliv.
+  > Toto nastavení se nedodržuje u plně spravovaných, vyhrazených a podnikových zařízení s pracovními profily. Pokud toto nastavení nakonfigurujete, nastavení se ignoruje a nemá žádný vliv.
 
 - **Uživatel může nakonfigurovat přihlašovací údaje**: **blok** znemožní uživatelům konfigurovat certifikáty přiřazené k zařízením, dokonce i zařízení, která nejsou přidružená k uživatelskému účtu. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém umožnit uživatelům konfigurovat nebo měnit své přihlašovací údaje, když k nim přistupují v úložišti klíčů.
 - **Osobní účty Google**: **blok** zabraňuje uživatelům v přidávání osobního účtu Google do zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém uživatelům dovolit přidat svůj osobní účet Google.

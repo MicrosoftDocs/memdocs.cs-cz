@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.reviewer: samyada
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 330dd566599d6bdb1fa667d8797878ea8c92f098
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 9e5786289e54071d54c11fbb08790e95e54a9377
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093748"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461857"
 ---
 # <a name="configure-actions-for-noncompliant-devices-in-intune"></a>Konfigurace akcí pro zařízení nedodržující předpisy v Intune
 
@@ -58,7 +58,7 @@ Po odeslání e-mailu Intune zahrne do e-mailového oznámení podrobnosti o za�
   Tuto akci podporují následující platformy:
   - Android:
     - Správce zařízení s Androidem
-    - Vlastník zařízení se systémem Android Enterprise
+    - Plně spravovaný, vyhrazený a vlastněný pracovní profil pro Android
     - Pracovní profil Android Enterprise
     - Firemní veřejná zařízení s Androidem
   - iOS/iPadOS
@@ -130,7 +130,7 @@ Pokud chcete svým uživatelům odeslat e-mail, vytvořte šablonu zprávy s ozn
 3. V části *základy*zadejte následující informace:
 
    - **Název**
-   - **Subjekt**
+   - **Předmět**
    - **Zpráva**
 
 4. V části *základy*můžete taky nakonfigurovat následující možnosti pro oznámení:
@@ -143,7 +143,7 @@ Pokud chcete svým uživatelům odeslat e-mail, vytvořte šablonu zprávy s ozn
    > [!div class="mx-imgBorder"]
    > ![Příklad oznámení o dodržování předpisů v Intune](./media/actions-for-noncompliance/actionsfornoncompliance-1.PNG)
 
-   Pokračujte výběrem tlačítka **Next** (Další).
+   Pokračujte výběrem tlačítka **Další**.
 
 5. V části **Revize + vytvořit**Zkontrolujte konfigurace a ověřte, že je šablona zprávy s oznámením připravená k použití. Vytvoření oznámení dokončíte výběrem **vytvořit** .
 

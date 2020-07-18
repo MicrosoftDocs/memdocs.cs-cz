@@ -6,7 +6,7 @@ keywords: Intune Data Warehouse
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/28/2020
+ms.date: 07/09/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,18 +18,37 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 90d1ab0792e329616fce525cfe672c07219908b5
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: d6f460039aaff282476c3e8e3d074a332cde716f
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84165851"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461211"
 ---
 # <a name="change-log-for-the-intune-data-warehouse-api"></a>Protokol změn pro rozhraní API datového skladu Intune
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Udržujte si přehled o aktualizacích datového skladu Intune.
+
+## <a name="2007"></a>2007 
+_Vydáno v červenci 2020_
+
+### <a name="v10-changes"></a>změny v 1.0
+
+Následující tabulka uvádí přidanou vlastnost pro entitu [zařízení](../developer/intune-data-warehouse-collections.md#devices) v datovém skladu Intune.
+
+|    Shromažďování                          |    Změnit     |    Informace o popisu                                                                                                                                                                                                                                                                                                                                                                 |
+|----------------------------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    ethernetMacAddress    |    Přidáno    |    Jedinečný identifikátor sítě tohoto zařízení.                                                                                                                                                                                                                                                                     |
+|    office365Version    |    Přidáno    |    Verze Office 365, která je na zařízení nainstalovaná.                                                                                                                                                                                                                                                                     |
+
+V následující tabulce je uvedena přidaná vlastnost k entitě [devicePropertyHistories](../developer/intune-data-warehouse-collections.md#devicepropertyhistories) v datovém skladu Intune.
+
+|    Shromažďování                          |    Změnit     |    Informace o popisu                                                                                                                                                                                                                                                                                                                                                                 |
+|----------------------------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    physicalMemoryInBytes    |    Přidáno    |    Fyzická paměť v bajtech.                                                                                                                                                                                                                                                                     |
+|    totalStorageSpaceInBytes    |    Přidáno    |    Celková kapacita úložiště v bajtech                                                                                                                                                                                                                                                                     |
 
 ## <a name="2004"></a>2004 
 _Vydáno v dubnu 2020_
@@ -38,7 +57,7 @@ _Vydáno v dubnu 2020_
 
 Následující tabulka uvádí přidanou vlastnost pro entitu **zařízení** v datovém skladu Intune.
 
-|    Kolekce                          |    Změnit     |    Informace o popisu                                                                                                                                                                                                                                                                                                                                                                 |
+|    Shromažďování                          |    Změnit     |    Informace o popisu                                                                                                                                                                                                                                                                                                                                                                 |
 |----------------------------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    windowsOsEdition     |    Přidáno    |    Edice operačního systému Windows.                                                                                                                                                                                                                                                                     |
 
@@ -49,7 +68,7 @@ _Vydáno v březnu 2020_
 
 Následující tabulka obsahuje seznam přidaných vlastností k entitě **zařízení** v datovém skladu Intune.
 
-|    Kolekce                          |    Změnit     |    Informace o popisu                                                                                                                                                                                                                                                                                                                                                                 |
+|    Shromažďování                          |    Změnit     |    Informace o popisu                                                                                                                                                                                                                                                                                                                                                                 |
 |----------------------------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    ethernetMacAddress    |    Přidáno    |    Jedinečný identifikátor sítě tohoto zařízení.                                                                                                                                                                                                                                                                     |
 |    model    |    Přidáno    |    Model zařízení.                                                                                                                                                                                                                                                                     |
@@ -57,7 +76,7 @@ Následující tabulka obsahuje seznam přidaných vlastností k entitě **zař�
 
 Následující tabulka obsahuje seznam přidaných vlastností k entitě **devicePropertyHistory** v datovém skladu Intune.
 
-|    Kolekce                          |    Změnit     |    Informace o popisu                                                                                                                                                                                                                                                                                                                                                                 |
+|    Shromažďování                          |    Změnit     |    Informace o popisu                                                                                                                                                                                                                                                                                                                                                                 |
 |----------------------------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    physicalMemoryInBytes    |    Přidáno    |    Fyzická paměť v bajtech.                                                                                                                                                                                                                                                                     |
 |    totalStorageSpaceInBytes     |    Přidáno    |    Celková velikost úložiště v bajtech                                                                                                                                                                                                                                                                     |
@@ -69,7 +88,7 @@ _Vydáno v dubnu 2019_
 
 V následující tabulce je uveden seznam nedávných odebraných kolekcí a kolekcí nahrazení v datovém skladu Intune.
 
-|    Kolekce                          |    Změnit     |    Další informace                                                                                                                                                                                                                                                                                                                                                                 |
+|    Shromažďování                          |    Změnit     |    Další informace                                                                                                                                                                                                                                                                                                                                                                 |
 |----------------------------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    mobileAppDeviceUserInstallStatus    |    Odebráno    |    Místo toho použijte [mobileAppInstallStatusCounts](intune-data-warehouse-collections.md#mobileappinstallstatuscounts) .                                                                                                                                                                                                                                                                     |
 |    Entita enrollmenttypes                     |    Odebráno    |    Místo toho použijte [deviceEnrollmentTypes](intune-data-warehouse-collections.md#deviceenrollmenttypes) .                                                                                                                                                                                                                                                                                      |

@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: db23ee1742934e8545c03c529d6a05c13cc59f1a
-ms.sourcegitcommit: 6ca5e75ed7a6fd2186fbe51c177960004d5ec81f
+ms.openlocfilehash: 3760aa9820495db6c2460bf2e6d2e9a08d705a10
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83633290"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86462027"
 ---
 # <a name="disk-encryption-policy-settings-for-endpoint-security-in-intune"></a>Nastavení zásad šifrování disku pro zabezpečení koncového bodu v Intune
 
@@ -29,7 +29,7 @@ Podívejte se na nastavení, která můžete nakonfigurovat v části profily pr
 
 Podporované platformy a profily:
 
-- **MacOS**:
+- **macOS**:
   - Profil: **trezor**
 - **Windows 10 a novější**:
   - Profil: **BitLocker**
@@ -66,6 +66,11 @@ Podporované platformy a profily:
     Zabrání uživateli zobrazit výzvu, aby povolila trezor úložiště při odhlášení. Pokud je nastavení zakázat, výzva při odhlášení je zakázaná a místo toho se uživateli zobrazí výzva, když se přihlásí.
     - **Nenakonfigurováno** (*výchozí*)
     - **Ano** – zakáže výzvu k povolení trezoru úložišť, který se zobrazí při odhlášení.
+
+  - **Skrýt obnovovací klíč**  
+     Během šifrování skryjte osobní obnovovací klíč od uživatele zařízení macOS. Po zašifrování disku může uživatel pomocí libovolného zařízení zobrazit svůj osobní obnovovací klíč prostřednictvím webu Portál společnosti Intune nebo aplikace Portál společnosti na podporované platformě.
+    - **Nenakonfigurováno** (*výchozí*)
+    - **Ano** – při šifrování zařízení skrýt osobní obnovovací klíč.
 
 ## <a name="bitlocker"></a>BitLocker
 
@@ -114,7 +119,7 @@ Podporované platformy a profily:
 
   Přidat pracovní účet (AWA, napravo na pracovišti pracoviště) nejsou podporovaná pro rotaci klíčů.
   - **Nenakonfigurováno** (*výchozí*) – klient nebude otáčet klíče pro obnovení nástroje BitLocker.
-  - **Disabled** (Zakázáno)
+  - **Zakázáno**
   - **Zařízení připojená k Azure AD**
   - **Zařízení Azure AD a Hybrid-JOINED**
 

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/10/2020
+ms.date: 07/14/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 89e3111ef902b0ea0f7f66e6be6aa0c227fdb3c4
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: 0ad862ff1f04558bd699db2ef0c09d4da4654e23
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86239942"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461959"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>Přizpůsobení aplikací Portál společnosti Intune, Portál společnosti webu a Intune
 
@@ -106,7 +106,7 @@ Následující tabulka uvádí podrobnosti konfigurace specifické pro registrac
 > [!IMPORTANT]
 > Následující nastavení se nevztahují na zařízení s iOS/iPadOS konfigurovaná pro registraci pomocí [automatizované registrace zařízení](../enrollment/device-enrollment-program-enroll-ios.md). Bez ohledu na to, jak jsou tato nastavení nakonfigurovaná, se zařízení se systémem iOS/iPadOS nakonfigurovaná k registraci pomocí automatizované registrace zařízení zaregistrují během natékání toku a uživatelé budou vyzváni k přihlášení při spuštění Portál společnosti.
 
-|    Možnosti registrace zařízení    |    Description    |    Výzvy kontrolního seznamu    |    Notification (Oznámení)    |    Stav podrobnosti o zařízení    |    Podrobnosti o stavu aplikace (aplikace, která vyžaduje registraci)    |
+|    Možnosti registrace zařízení    |    Popis    |    Výzvy kontrolního seznamu    |    Notification (Oznámení)    |    Stav podrobnosti o zařízení    |    Podrobnosti o stavu aplikace (aplikace, která vyžaduje registraci)    |
 |-----------------------------------|-------------------------------------------------------------------------------------------------------------------------|-------------------------|--------------------|-----------------------------|--------------------------------------------------------------------|
 |    K dispozici, s výzvami    |    Výchozí prostředí s výzvou k registraci ve všech možných umístěních.    |    Ano    |    Ano    |    Ano    |    Ano    |
 |    K dispozici, žádné výzvy    |    Uživatel se může zaregistrovat přes stav v podrobnostech o zařízení pro svoje aktuální zařízení nebo aplikace, které vyžadují registraci.    |    No    |    No    |    Ano    |    Ano    |
@@ -158,6 +158,17 @@ K dispozici jsou následující akce:
 > [!NOTE]
 > Tyto akce se dají použít k omezení akcí zařízení v Portál společnosti aplikaci a na webu a neimplementují žádné zásady omezení zařízení. Pokud chcete omezit, aby uživatelé prováděli obnovení továrního nastavení nebo odebrání MDM z nastavení, musíte nakonfigurovat zásady omezení zařízení. 
 
+## <a name="opening-web-company-portal-applications"></a>Otevírání webových Portál společnostich aplikací
+Pro webové Portál společnosti aplikace, pokud má koncový uživatel nainstalovanou aplikaci Portál společnosti, koncovým uživatelům se zobrazí dialogové okno s dotazem, jak chce aplikaci otevřít, když se otevírá mimo prohlížeč. Pokud aplikace není v cestě Portál společnosti, otevře Portál společnosti domovskou stránku. Pokud se aplikace nachází v cestě, Portál společnosti otevře konkrétní aplikaci. 
+
+Po výběru Portál společnosti bude uživatel přesměrován na odpovídající stránku aplikace v případě, že cesta k identifikátoru URI je jedna z následujících:
+
+- `/apps`– Web Portál společnosti otevře stránku aplikace se seznamem všech aplikací.
+- `/apps/[appID]`– Web Portál společnosti otevře stránku podrobností příslušné aplikace.
+- *Cesta k identifikátoru URI je jiná nebo neočekávaná* – zobrazí se Domovská stránka web portál společnosti.
+
+Pokud uživatel nemá nainstalovanou aplikaci Portál společnosti, uživatel přejde k webovému Portál společnosti.
+
 ## <a name="company-portal-derived-credentials-for-iosipados-devices"></a>Portál společnosti odvozené přihlašovací údaje pro zařízení s iOS/iPadOS
 
 Intune podporuje ověřování osobních identit (PIV) a služby Common Access Card (CAC) odvozené přihlašovací údaje v partnerství s poskytovateli přihlašovacích údajů DISA purebred, Entrust Datacard a Intercede. Koncoví uživatelé procházejí dalšími kroky po registraci zařízení s iOS/iPadOS a ověřují jejich identitu v aplikaci Portál společnosti. Odvozená pověření budou pro uživatele povolena tím, že nejprve nastaví poskytovatele pověření pro vašeho tenanta a pak zacílíte na profil, který používá odvozená pověření pro uživatele nebo zařízení.
@@ -177,13 +188,13 @@ Koncoví uživatelé mohou aktivovat akce navigace, aplikace a zařízení ve Wi
 
 V aplikaci Portál společnosti pro Windows jsou k dispozici následující klávesové zkratky.
 
-| Oblast | Description | Klávesová zkratka |
+| Plošný | Popis | Klávesová zkratka |
 |--------------------|----------------|-------------------|
 | Navigační nabídka | Navigace | Alt+M |
 |  | Domů | Alt+H |
 |  | Všechny aplikace | Alt+A |
 |  | Nainstalované aplikace | Alt+I |
-|  | Odeslat názor | Alt+F |
+|  | Váš názor | Alt+F |
 |  | Můj profil | Alt+U |
 |  | Nastavení | Alt+T |
 | Úvodní stránka – dlaždice Zařízení | přejmenování | F2 |
@@ -222,12 +233,12 @@ Některé platformy a konfigurace neumožňují akce zařízení samoobslužné 
 | Akce | Windows 10<sup>(3)</sup> | iOS/iPadOS<sup>(3)</sup> | MacOS<sup>(3)</sup> | Android<sup>(3)</sup> |
 |----------------------|--------------------------|-------------------|-----------------------------------|-------------------------|
 | Vyřazení | K dispozici<sup>(1)</sup> | K dispozici<sup>(9)</sup> | K dispozici | K dispozici<sup>(7)</sup> |
-| Vymazání | K dispozici | K dispozici<sup>(5)</sup><sup>(9)</sup> | NA | K dispozici<sup>(7)</sup> |
+| Vymazání | K dispozici | K dispozici<sup>(5)</sup><sup>(9)</sup> | Není k dispozici | K dispozici<sup>(7)</sup> |
 | Přejmenovat<sup>(4)</sup> | K dispozici | K dispozici | K dispozici | K dispozici |
 | Sync | K dispozici | K dispozici | K dispozici | K dispozici |
 | Vzdálené uzamčení | Pouze Windows Phone | K dispozici | K dispozici | K dispozici |
-| Resetovat heslo | Pouze Windows Phone | K dispozici<sup>(8)</sup> | NA | K dispozici<sup>(6)</sup> |
-| Key Recovery | NA | NA | K dispozici<sup>(2)</sup> | NA |
+| Resetovat heslo | Pouze Windows Phone | K dispozici<sup>(8)</sup> | Není k dispozici | K dispozici<sup>(6)</sup> |
+| Key Recovery | Není k dispozici | Není k dispozici | K dispozici<sup>(2)</sup> | Není k dispozici |
 
 <sup>(1)</sup> **vyřazení** je vždycky blokované na zařízeních s Windows připojená k Azure AD.<br>
 <sup>(2)</sup> **obnovení klíče** pro MacOS je dostupné jenom přes webový portál.<br>

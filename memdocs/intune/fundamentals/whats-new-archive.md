@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d6c3b64bbcc9b661f5ec582f2963ceeb2e544ff8
-ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
+ms.openlocfilehash: 8073cb1dbe872d9c7fd1ad05235707be4b969519
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86410977"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461415"
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Novinky v Microsoft Intune – předchozí měsíce
 
@@ -801,7 +801,7 @@ Přidali jsme následující podporu pro plně spravovaná zařízení s Android
     - propojení certifikátů SCEP pro ověřování e-mailových profilů (přes AppConfig)
 - Systémové aplikace jsou podporované na zařízeních s Androidem Enterprise. V Intune přidejte aplikaci pro Android Enterprise System tak, že vyberete aplikace **klientské aplikace**  >  **Apps**  >  **Přidat**. V seznamu **Typ aplikace** vyberte aplikace pro **Android Enterprise System**. Další informace najdete v tématu [Přidání aplikací pro Android Enterprise System do Microsoft Intune](../apps/apps-ae-system.md). <!-- 4062195 -->
 - V části **dodržování předpisů zařízení**–  >  vlastník zařízení s**Androidem Enterprise**  >  **Device Owner**můžete vytvořit zásady dodržování předpisů, které nastaví úroveň ověřování Google SafetyNet.   <!-- 4631425 -->
-- Na zařízeních s plnou správou Androidu Enterprise se podporují poskytovatelé ochrany před mobilními hrozbami. V možnosti **dodržování předpisů zařízením**v zařízení s  >  **Androidem Enterprise**  >  **Owner**si můžete vybrat přijatelnou úroveň hrozeb. <!-- 4631440 --> [Nastavení Androidu Enterprise k označení zařízení jako kompatibilních nebo nekompatibilních s použitím Intune](../protect/compliance-policy-create-android-for-work.md#device-owner) seznam aktuálních nastavení.
+- Na zařízeních s plnou správou Androidu Enterprise se podporují poskytovatelé ochrany před mobilními hrozbami. V možnosti **dodržování předpisů zařízením**v zařízení s  >  **Androidem Enterprise**  >  **Owner**si můžete vybrat přijatelnou úroveň hrozeb. <!-- 4631440 --> [Nastavení Androidu Enterprise k označení zařízení jako kompatibilních nebo nekompatibilních s použitím Intune](../protect/compliance-policy-create-android-for-work.md) seznam aktuálních nastavení.
 - Na zařízeních s plnou správou Androidu Enterprise se teď dá nakonfigurovat aplikace spouštěče Microsoftu prostřednictvím zásad konfigurace aplikací, které umožňují standardizované prostředí koncového uživatele na plně spravovaném zařízení. K přizpůsobení zařízení s Androidem se dá použít aplikace Microsoft spouštěče. Pomocí aplikace spolu s účet Microsoft nebo pracovním nebo školním účtem máte přístup k vašemu kalendáři, dokumentům a posledním aktivitám v přizpůsobeném kanálu. <!-- 5334044 -->
 
 V této aktualizaci jsme spokojeni s oznámením, že podpora Intune pro plně spravovanou platformu Android Enterprise je teď všeobecně dostupná.
@@ -833,7 +833,7 @@ Použijte nastavení Endpoint Protection Intune ke konfiguraci [rotace hesla pro
 Toto nastavení inicializuje obnovení hesla na základě klienta po obnovení jednotky operačního systému (buď pomocí programu Bootmgr nebo WinRE) a odemknutí hesla pro obnovení na pevné datové jednotce. Toto nastavení aktualizuje specifické heslo pro obnovení, které bylo použito, a jiná nepoužívaná hesla na svazku zůstanou beze změny. Další informace najdete v dokumentaci k nástroji BitLocker CSP pro [ConfigureRecoveryPasswordRotation](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp).
 
 #### <a name="tamper-protection-for-windows-defender-antivirus---4705448----------"></a>Ochrana proti úmyslné ochraně pro antivirovou ochranu v programu Windows Defender<!-- 4705448        -->
-Použijte Intune ke správě *ochrany před zneužitím antivirové ochrany* v programu Windows Defender. Pokud použijete konfigurační profily zařízení pro Windows 10 Endpoint Protection, najdete [nastavení pro ochranu proti falšování](../protect/endpoint-protection-windows-10.md#microsoft-defender-security-center) ve skupině Security Center programu Microsoft Defender. Ochranu proti neoprávněným nastavením ochrany proti chybám můžete *nastavit tak, aby se* zapnulo omezení ochrany před odesláním, nastavení *zakázáno* pro jejich vypnutí, nebo nastavit, aby se zařízení*nenakonfigurovalo* jako aktuální konfigurace.  
+Použijte Intune ke správě *ochrany před zneužitím antivirové ochrany* v programu Windows Defender. Pokud použijete konfigurační profily zařízení pro Windows 10 Endpoint Protection, najdete [nastavení pro ochranu proti falšování](../protect/endpoint-protection-windows-10.md#microsoft-defender-security-center) ve skupině Security Center programu Microsoft Defender. Ochranu proti neoprávněným nastavením ochrany proti chybám můžete **nastavit tak, aby se** zapnulo omezení ochrany proti chybám, nastavení **zakázáno** pro jejich vypnutí, nebo nastavit, aby nezůstala aktuální konfigurace **zařízení nastavená** .  
 
 Další informace o ochraně před zneužitím najdete v dokumentaci k Windows v tématu [zabránění změnám nastavení zabezpečení pomocí ochrany před neoprávněnými](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-antivirus/prevent-changes-to-security-settings-with-tamper-protection) změnami.
 
@@ -1603,7 +1603,7 @@ Tato funkce byla zpožděna a plánuje se pro budoucí verzi.
 V případě, že verze 1.0 byla poprvé představena v 1808, liší se v několika významných způsobech z verze beta rozhraní API. V 1903 se tyto změny projeví zpátky v beta verzi rozhraní API. Pokud máte důležité sestavy, které používají verzi beta rozhraní API, důrazně doporučujeme, abyste tyto sestavy přepnuli na V 1.0, aby nedocházelo k nepodstatným změnám. Další informace najdete v tématu [protokol změn pro rozhraní API datového skladu Intune](../developer/reports-changelog.md#1903-part-2).
 
 #### <a name="monitor-security-baseline-status-public-preview----3082047---"></a>Monitorovat stav standardních hodnot zabezpečení (Public Preview) <!-- 3082047 --> 
-Přidali jsme zobrazení pro [jednotlivé kategorie](../protect/security-baselines-monitor.md#per-category-view) do monitorování standardních hodnot zabezpečení. (Standardní hodnoty zabezpečení zůstávají ve verzi Preview.) Zobrazení podle kategorií zobrazuje každou kategorii ze směrného plánu společně s procentem zařízení, která spadají do každé skupiny stavů pro danou kategorii. Teď můžete zjistit, kolik zařízení se neshoduje s jednotlivými kategoriemi, jsou nesprávně nakonfigurované nebo se nedají použít.
+Přidali jsme zobrazení pro [jednotlivé kategorie](../protect/security-baselines-monitor.md) do monitorování standardních hodnot zabezpečení. (Standardní hodnoty zabezpečení zůstávají ve verzi Preview.) Zobrazení podle kategorií zobrazuje každou kategorii ze směrného plánu společně s procentem zařízení, která spadají do každé skupiny stavů pro danou kategorii. Teď můžete zjistit, kolik zařízení se neshoduje s jednotlivými kategoriemi, jsou nesprávně nakonfigurované nebo se nedají použít.
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="role-based-access-control"></a>Řízení přístupu na základě role
@@ -3897,7 +3897,7 @@ Můžete definovat podnikové cloudové prostředky, rozsahy IP adres a interní
 #### <a name="two-additional-settings-for-windows-defender-antivirus---1338409---"></a>Další dvě nastavení pro Antivirovou ochranu v programu Windows Defender <!-- 1338409 -->  
 **Úroveň blokování souborů**
 
-| | |
+| Nastavení | Podrobnosti |
 |---|---|
 | Nenakonfigurováno | Nastavení **Nenakonfigurováno** používá výchozí úroveň blokování Antivirové ochrany v programu Windows Defender a zajišťuje silnou detekci bez zvýšeného rizika detekování legitimních souborů. |
 | Vysoké | Nastavení **Vysoká** aplikuje silnou úroveň zjišťování.
@@ -3909,7 +3909,7 @@ Doporučujeme nastavit úroveň blokování souborů na výchozí hodnotu **Nena
 
 **Prodloužení časového limitu pro kontrolu souborů v cloudu**  
 
-| | |
+| Nastavení | Podrobnosti |
 |--|--|
 | Počet sekund (0–50) | Zadejte maximální dobu, po kterou má Antivirová ochrana v programu Windows Defender blokovat soubor při čekání na výsledek z cloudu. Výchozí doba je 10 sekund: dodatečná doba, kterou tady zadáte (až 50 sekund), se k těmto 10 sekundám přičte. Ve většině případů trvá kontrola mnohem kratší dobu než maximální. Prodloužení doby umožňuje, aby cloud podezřelé soubory důkladně prozkoumal. Doporučujeme, abyste toto nastavení povolili a zadali aspoň dalších 20 sekund. |
 

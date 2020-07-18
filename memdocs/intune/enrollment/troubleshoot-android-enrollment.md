@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bcc524a69d0fb41da84a2e882b81a205fe7192cc
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: b51ed6653dff5b7d0aeef40892e16e2826f30204
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79332783"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461245"
 ---
 # <a name="troubleshoot-android-enterprise-device-problems-in-microsoft-intune"></a>Řešení potíží se zařízeními s Androidem Enterprise v Microsoft Intune
 
@@ -49,7 +49,7 @@ Toto chování je očekávané.
 Toto chování je očekávané. V okně zjištěné aplikace jsou v inventáři pouze systémové aplikace nainstalované v pracovním profilu. Pokud chcete zobrazit nainstalované spravované aplikace Google Play, použijte okno **spravované aplikace** .
 
 ### <a name="are-web-applications-supported-for-work-profile-enrolled-devices"></a>Jsou webové aplikace podporované pro zařízení zaregistrovaná v pracovním profilu?
-Ano. Další informace najdete v tématu [spravované Google Play webové odkazy](../apps/apps-add-android-for-work.md#managed-google-play-web-links) .
+Yes. Další informace najdete v tématu [spravované Google Play webové odkazy](../apps/apps-add-android-for-work.md#managed-google-play-web-links) .
 
 ## <a name="device-management"></a>Správa zařízení
 
@@ -59,7 +59,7 @@ Ano. Další informace najdete v tématu [spravované Google Play webové odkazy
 
   Pokud chcete shromažďovat protokoly Portál společnosti, postupujte takto:
 
-  1. V aplikaci Portál společnosti s označením klepněte na **nabídku** > **pomocná** > **e-mailová podpora**a potom klepněte na **Odeslat e-mail & Odeslat protokoly**. 
+  1. V aplikaci Portál společnosti s označením klepněte na **nabídku**  >  **pomocná**  >  **e-mailová podpora**a potom klepněte na **Odeslat e-mail & Odeslat protokoly**. 
   2. Až se vám zobrazí výzva k **odeslání žádosti o podporu**, vyberte jednu z e-mailových aplikací.
   3. Správci IT se vygeneruje e-mail s ID incidentu, které je možné poskytnout podpoře produktů Microsoftu.
 
@@ -76,6 +76,8 @@ Společnost Samsung začala toto omezení na zařízeních s Androidem 8.0 a nov
 
 ### <a name="wipe-factory-reset-option-isnt-available-for-work-profile-enrolled-device"></a>Možnost vymazání (obnovení továrního nastavení) není k dispozici pro zařízení zaregistrovaná v pracovním profilu.
 Toto chování je očekávané. Ve scénáři pracovního profilu nemá poskytovatel MDM úplnou kontrolu nad zařízením. Jediná dostupná možnost je vyřadit z provozu (odebrat firemní data), která odebere celý pracovní profil a veškerý jeho obsah.
+
+Vymazání je podporované pro [podnikovou firmu v Androidu, která je vlastněná pomocí zařízení s pracovním profilem](android-corporate-owned-work-profile-enroll.md).
 
 ### <a name="is-device-passcode-reset-supported"></a>Podporuje se resetování hesla zařízení?
 U zaregistrovaných zařízení pracovního profilu můžete resetovat jenom heslo pracovního profilu na zařízeních s Androidem 8,0 a novějším, když:

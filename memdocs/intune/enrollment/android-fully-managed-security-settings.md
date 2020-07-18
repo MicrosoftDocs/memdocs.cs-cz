@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 99b17cc165fc8d24fdf1b0f48525f3b23d8cc9b7
-ms.sourcegitcommit: d647eefa23c8849f49584442df568284d51d7525
+ms.openlocfilehash: 01c8c0ffba349966c99e1cbd90dbdfc10a5c9782
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86195629"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461160"
 ---
 # <a name="android-enterprise-fully-managed-security-configurations"></a>Konfigurace plně spravovaných zabezpečení pro Android Enterprise
 
-V [rámci architektury konfigurace podnikového zabezpečení Androidu](android-configuration-framework.md)použijte následující nastavení pro uživatele s plnou správou Androidu Enterprise. Další informace o jednotlivých nastaveních zásad najdete v tématu [Nastavení vlastníka zařízení s Androidem Enterprise a označení zařízení jako kompatibilních nebo nekompatibilních s použitím nastavení Intune](../protect/compliance-policy-create-android-for-work.md#device-owner) a [zařízení s Androidem Enterprise k povolení nebo omezení funkcí v Intune](../configuration/device-restrictions-android-for-work.md#device-owner-only).
+V [rámci architektury konfigurace podnikového zabezpečení Androidu](android-configuration-framework.md)použijte následující nastavení pro uživatele s plnou správou Androidu Enterprise. Další informace o jednotlivých nastaveních zásad najdete v tématu [Nastavení vlastníka zařízení s Androidem Enterprise a označení zařízení jako kompatibilních nebo nekompatibilních s použitím nastavení Intune](../protect/compliance-policy-create-android-for-work.md#fully-managed-dedicated-and-corporate-owned-work-profile) a [zařízení s Androidem Enterprise k povolení nebo omezení funkcí v Intune](../configuration/device-restrictions-android-for-work.md#fully-managed-dedicated-and-corporate-owned-work-profile).
 
 Při volbě nastavení nezapomeňte zkontrolovat a zařadit do kategorií scénáře používání. Pak nakonfigurujte uživatele podle pokynů pro zvolenou úroveň zabezpečení. Navrhovaná nastavení můžete upravit podle potřeb vaší organizace. Ujistěte se, že váš tým zabezpečení vyhodnotil hrozbu, riziko později a dopad na použitelnost.
 
@@ -47,7 +47,7 @@ Zásady na úrovni 1 vynutily rozumnou úroveň přístupu k datům a současně
 
 | Sekce | Nastavení | Hodnota | Poznámky |
 | ----- | ----- | ----- | ----- |
-| Microsoft Defender ATP | Vyžadovat, aby zařízení bylo na nebo pod hodnocením rizika počítače | Nenakonfigurováno ||
+| Ochrana ATP v programu Microsoft Defender | Vyžadovat, aby zařízení bylo na nebo pod hodnocením rizika počítače | Nenakonfigurováno ||
 | Stav zařízení | Vyžadovat, aby zařízení bylo na úrovni hrozby pro zařízení nebo pod ní | Nenakonfigurováno||
 | Stav zařízení | Ověření zařízení SafetyNet | Kontrola základní integrity & certifikovaných zařízeních | Toto nastavení konfiguruje ověřování SafetyNet Google na zařízeních koncových uživatelů. Základní integrita ověřuje integritu zařízení. Zařízení s rootem, emulátory, virtuální zařízení a zařízení se znaménkem neoprávněného selhání základní integrity.<br>Základní integrita a certifikovaná zařízení ověřují kompatibilitu zařízení se službami Google. Tuto kontrolu můžou předat jenom nezměněná zařízení, která získala certifikace od společnosti Google. |
 | Vlastnosti zařízení | Minimální verze operačního systému | Formát: Hlavní_verze. podverze<br>Příklad: 8,0| Microsoft doporučuje nakonfigurovat minimální hlavní verzi Androidu tak, aby odpovídala podporovaným verzím Androidu pro aplikace Microsoftu. Výrobci OEM a zařízení, kteří dodržují doporučené požadavky na Android Enterprise, musí podporovat aktuální dodací verzi a jeden upgrade na jedno písmeno. V současné době Android doporučuje Android 8,0 a novější pro pracovníky znalostní báze. Nejnovější doporučení pro Android najdete v tématu [Doporučené požadavky pro Android Enterprise](https://www.android.com/enterprise/recommended/requirements/). |
@@ -157,7 +157,7 @@ Nastavení zásad vyžadované v úrovni 3 zahrnují všechna nastavení zásad 
 
 | Sekce | Nastavení | Hodnota | Poznámky |
 | ----- | ----- | ----- | ----- |
-| Microsoft Defender ATP | Vyžadovat, aby zařízení bylo na nebo pod hodnocením rizika počítače | Vymazat | Toto nastavení vyžaduje ATP programu Microsoft Defender. Další informace najdete v tématu vymáhání dodržování předpisů pro [Microsoft Defender ATP s podmíněným přístupem v Intune](../protect/advanced-threat-protection.md).<p> Zákazníci by měli zvážit implementaci řešení ochrany před mobilními hrozbami v programu Microsoft Defender. Není nutné nasazovat obojí. |
+| Ochrana ATP v programu Microsoft Defender | Vyžadovat, aby zařízení bylo na nebo pod hodnocením rizika počítače | Vymazat | Toto nastavení vyžaduje ATP programu Microsoft Defender. Další informace najdete v tématu vymáhání dodržování předpisů pro [Microsoft Defender ATP s podmíněným přístupem v Intune](../protect/advanced-threat-protection.md).<p> Zákazníci by měli zvážit implementaci řešení ochrany před mobilními hrozbami v programu Microsoft Defender. Není nutné nasazovat obojí. |
 | Stav zařízení | Vyžadovat, aby zařízení bylo na úrovni hrozby pro zařízení nebo pod ní | Psán | Toto nastavení vyžaduje produkt ochrany před mobilními hrozbami. Další informace najdete v tématu Ochrana před [mobilními hrozbami u zaregistrovaných zařízení](../protect/mtd-device-compliance-policy-create.md).<p>Zákazníci by měli zvážit implementaci řešení ochrany před mobilními hrozbami v programu Microsoft Defender. Není nutné nasazovat obojí.|
 | Vlastnosti zařízení | Minimální verze operačního systému | Formát: Hlavní_verze. podverze<br>Příklad: 10,0| Microsoft doporučuje nakonfigurovat minimální hlavní verzi Androidu tak, aby odpovídala podporovaným verzím Androidu pro aplikace Microsoftu. Výrobci OEM a zařízení, kteří dodržují doporučené požadavky na Android Enterprise, musí podporovat aktuální dodací verzi a jeden upgrade na jedno písmeno. V současné době Android doporučuje Android 8,0 a novější pro pracovníky znalostní báze. Nejnovější doporučení pro Android najdete v tématu Doporučené požadavky pro Android Enterprise |
 

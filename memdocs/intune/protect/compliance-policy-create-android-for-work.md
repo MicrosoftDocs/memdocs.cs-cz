@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d419eb341d3d15a8307396d1bcf13235201606f4
-ms.sourcegitcommit: 56bb5419c41c2e150ffed0564350123135ea4592
+ms.openlocfilehash: 9897f824bb1bd13c1d12ff0c705b42cea275b9d4
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82729239"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86462078"
 ---
 # <a name="android-enterprise-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Nastavení Androidu Enterprise k označení zařízení jako kompatibilních nebo nekompatibilních s Intune
 
@@ -37,23 +37,23 @@ Jako správce Intune můžete pomocí těchto nastavení dodržování předpis�
 > [!IMPORTANT]
 > Zásady dodržování předpisů také používají vyhrazená zařízení s Androidem Enterprise. Pokud je zásada dodržování předpisů přiřazená vyhrazenému zařízení, může se zařízení zobrazovat jako **nevyhovující předpisům**. Podmíněný přístup a vynucování dodržování předpisů není na vyhrazených zařízeních k dispozici. Ujistěte se, že jste dokončili všechny úkoly nebo akce, abyste získali vyhrazená zařízení, která vyhovují vašim přiřazeným zásadám.
 
-## <a name="before-you-begin"></a>Před zahájením
+## <a name="before-you-begin"></a>Než začnete
 
 [Vytvořte zásady dodržování předpisů](create-compliance-policy.md#create-the-policy). Jako **platformu**vyberte **Android Enterprise**.
 
 
-## <a name="device-owner"></a>Vlastník zařízení
+## <a name="fully-managed-dedicated-and-corporate-owned-work-profile"></a>Plně spravovaný, vyhrazený a podnikový pracovní profil
 
-### <a name="microsoft-defender-atp"></a>Microsoft Defender ATP
+### <a name="microsoft-defender-atp"></a>Ochrana ATP v programu Microsoft Defender
 
 - **Vyžadovat, aby zařízení bylo na nebo pod hodnocením rizika počítače**  
 
   Vyberte maximální povolené skóre rizika počítače pro zařízení vyhodnocená ATP programu Microsoft Defender. Zařízení, která překračují toto skóre, se označí jako nedodržující předpisy.
   - **Nenakonfigurováno** (*výchozí*)
   - **Vymazat**
-  - **Nízká**
+  - **Nízké**
   - **Medium**
-  - **Maximální**
+  - **Vysoké**
 
 ### <a name="device-health"></a>Stav zařízení
 
@@ -67,7 +67,7 @@ Jako správce Intune můžete pomocí těchto nastavení dodržování předpis�
   - **Vysoká** – Tato možnost je nejméně bezpečná, protože umožňuje všechny úrovně hrozeb. Může být užitečná, pokud toto řešení používáte jen ke generování sestav.
   
 > [!NOTE]
-> Všichni poskytovatelé ochrany před mobilními hrozbami (MTD) jsou podporováni v nasazeních vlastníků zařízení s Androidem Enterprise pomocí konfigurace aplikace. Projděte si poskytovatele MTD, kde najdete přesnou konfiguraci potřebnou k podpoře platforem pro vlastníka zařízení s Androidem Enterprise v Intune.
+> Všichni poskytovatelé ochrany před mobilními hrozbami (MTD) se podporují pomocí konfigurace aplikací v rámci plně spravovaných, vyhrazených a podnikových nasazení v pracovních profilech v Androidu. U svého poskytovatele MTD se obraťte na přesnou konfiguraci, která je nutná pro podporu plně spravovaných, vyhrazených a podnikových profilů pracovních profilů pro Android v Intune.
 
 #### <a name="google-play-protect"></a>Google Play chránit
 
@@ -106,8 +106,8 @@ Jako správce Intune můžete pomocí těchto nastavení dodržování předpis�
   Vyberte, jestli má heslo obsahovat jenom číselné znaky, nebo kombinaci číslic a dalších znaků. Možnosti:
   - **Výchozí nastavení zařízení** – vyhodnotit dodržování předpisů heslem, nezapomeňte vybrat jinou sílu hesla než *výchozí zařízení*.
   - **Vyžaduje se heslo, žádná omezení.**
-  - **Slabý biometrická** - [silný vs. slabý biometrika](https://android-developers.googleblog.com/2018/06/better-biometrics-in-android-p.html) (otevře se web Androidu)
-  - **Numeric** (*výchozí*): heslo musí obsahovat jenom čísla, třeba `123456789`. Zadejte **minimální délku hesla** , kterou musí uživatel zadat, a to v rozmezí 4 až 16 znaků.
+  - **Slabý biometrika**  -  [Silný vs. slabý biometrika](https://android-developers.googleblog.com/2018/06/better-biometrics-in-android-p.html) (otevře web v Androidu)
+  - **Numeric** (*výchozí*): heslo musí obsahovat jenom čísla, třeba `123456789` . Zadejte **minimální délku hesla** , kterou musí uživatel zadat, a to v rozmezí 4 až 16 znaků.
   - **Číselná komplexní** – opakující se nebo po sobě jdoucí čísla, například "1111" nebo "1234", nejsou povolena. Zadejte **minimální délku hesla** , kterou musí uživatel zadat, a to v rozmezí 4 až 16 znaků.
   - **Abecední** písmena v abecedě jsou povinná. Čísla a symboly nejsou požadovány. Zadejte **minimální délku hesla** , kterou musí uživatel zadat, a to v rozmezí 4 až 16 znaků.
   - **Alfanumerické** – obsahuje velká písmena, malá písmena a číselné znaky. Zadejte **minimální délku hesla** , kterou musí uživatel zadat, a to v rozmezí 4 až 16 znaků.
@@ -130,16 +130,16 @@ Jako správce Intune můžete pomocí těchto nastavení dodržování předpis�
     Zadejte počet nepísmenových znaků (cokoli kromě písmen v abecedě), které musí heslo obsahovat, a to v rozmezí 0 až 16 znaků.
 
   - **Počet požadovaných číselných znaků**  
-    Zadejte počet číselných znaků (`1`, `2`, `3`atd.), které musí heslo obsahovat, a to v rozmezí 0 až 16 znaků.
+    Zadejte počet číselných znaků ( `1` , `2` , `3` atd.), které musí heslo obsahovat, a to v rozmezí 0 až 16 znaků.
 
   - **Počet požadovaných znaků symbolů**  
-    Zadejte počet znaků symbolu (`&`, `#`, `%`atd.), které musí heslo obsahovat, a to v rozmezí 0 až 16 znaků.
+    Zadejte počet znaků symbolu (,, `&` `#` `%` atd.), které musí heslo obsahovat, a to v rozmezí 0 až 16 znaků.
 
   - **Maximální počet minut nečinnosti před vyžadováním hesla**  
     Zadejte dobu nečinnosti, než uživatel musí znovu zadat heslo. Mezi možnosti patří výchozí hodnota *není nakonfigurovaná*a *1 minuta* až *8 hodin*.
 
   - **Počet dní do vypršení platnosti hesla**  
-    Zadejte počet dnů od 1-365, po jehož uplynutí se musí změnit heslo zařízení. Pokud například chcete změnit heslo po 60 dnech, zadejte `60`. Po vypršení platnosti hesla se uživatelům zobrazí výzva k vytvoření nového hesla.
+    Zadejte počet dnů od 1-365, po jehož uplynutí se musí změnit heslo zařízení. Pokud například chcete změnit heslo po 60 dnech, zadejte `60` . Po vypršení platnosti hesla se uživatelům zobrazí výzva k vytvoření nového hesla.
 
     *Ve výchozím nastavení není nakonfigurována žádná hodnota*.
 
@@ -164,9 +164,9 @@ Jako správce Intune můžete pomocí těchto nastavení dodržování předpis�
   Vyberte maximální povolené skóre rizika počítače pro zařízení vyhodnocená ATP programu Microsoft Defender. Zařízení, která překračují toto skóre, se označí jako nedodržující předpisy.
   - **Nenakonfigurováno** (*výchozí*)
   - **Vymazat**
-  - **Nízká**
+  - **Nízké**
   - **Medium**
-  - **Maximální**
+  - **Vysoké**
 
 ### <a name="device-health---for-work-profile"></a>Profil Stav zařízení- *for Work*
 
@@ -239,7 +239,7 @@ Pokud zařízení používá verzi operačního systému, která je novější n
     Zadejte dobu nečinnosti, než uživatel musí znovu zadat heslo. Mezi možnosti patří výchozí hodnota *není nakonfigurovaná*a *1 minuta* až *8 hodin*.
 
   - **Počet dní do vypršení platnosti hesla**  
-    Zadejte počet dnů od 1-365, po jehož uplynutí se musí změnit heslo zařízení. Pokud například chcete změnit heslo po 60 dnech, zadejte `60`. Po vypršení platnosti hesla se uživatelům zobrazí výzva k vytvoření nového hesla.
+    Zadejte počet dnů od 1-365, po jehož uplynutí se musí změnit heslo zařízení. Pokud například chcete změnit heslo po 60 dnech, zadejte `60` . Po vypršení platnosti hesla se uživatelům zobrazí výzva k vytvoření nového hesla.
 
   - **Minimální délka hesla**  
     Zadejte minimální délku hesla, které musí mít 4 až 16 znaků.
@@ -259,7 +259,7 @@ Pokud zařízení používá verzi operačního systému, která je novější n
 
 - **Blokovat aplikace z neznámých zdrojů**  
   - **Nenakonfigurováno** (*výchozí*) – Toto nastavení není vyhodnoceno pro dodržování předpisů nebo nedodržování předpisů.
-  - **Blokové** zařízení s povolenými zdroji **zabezpečení** > **neznámými zdroji** (*podporované v Androidu 4,0 až Android 7. x. Nepodporováno Androidem 8,0 a novějším*.  
+  - **Blokové** zařízení s **Security**  >  povolenými zdroji zabezpečení**neznámými zdroji** (*podporované v Androidu 4,0 až Android 7. x. Nepodporováno Androidem 8,0 a novějším*.  
 
   Pokud chcete instalovat aplikace bokem, musí být povoleny neznámé zdroje. Pokud aplikace pro Android neinstalujete bokem, nastavte tuto funkci na **Blokovat**, abyste tuto zásadu dodržování předpisů povolili.
 

@@ -1,11 +1,11 @@
 ---
 title: Nastavení sítě VPN pro Windows 10 v Microsoft Intune – Azure | Microsoft Docs
-description: Přečtěte si a přečtěte si informace o všech dostupných nastaveních sítě VPN v Microsoft Intune, k čemu se používají, a o tom, co dělají, včetně pravidel přenosů, podmíněného přístupu a nastavení DNS a proxy serveru pro zařízení s Windows 10 a Windows holografickým pro firmy.
+description: Přečtěte si a přečtěte si o všech dostupných nastaveních sítě VPN v Microsoft Intune, k čemu se používají, a o tom, co dělají. Podívejte se na pravidla přenosů, podmíněný přístup a DNS a proxy serveru pro zařízení s Windows 10 a Windows holografickým pro firmy.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/14/2020
+ms.date: 06/22/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,16 +16,16 @@ search.appverid: MET150
 ms.reviewer: tycast
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9fbe28a6585fe9fe5cf7772b559924675ac39a30
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 25950311b5a6936340dbdba01961a5dab6f6ff91
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83429476"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461348"
 ---
 # <a name="windows-10-and-windows-holographic-device-settings-to-add-vpn-connections-using-intune"></a>Nastavení zařízení s Windows 10 a Windows holografické pro přidání připojení k síti VPN pomocí Intune
 
-Pomocí Microsoft Intune můžete přidat a nakonfigurovat připojení k síti VPN pro zařízení. Tento článek obsahuje seznam a popisuje běžně používaná nastavení a funkce při vytváření virtuálních privátních sítí (VPN). Tato nastavení a funkce sítě VPN se používají v profilech konfigurace zařízení v Intune, která jsou vložená nebo nasazená do zařízení.
+Pomocí Microsoft Intune můžete přidat a nakonfigurovat připojení k síti VPN pro zařízení. Tento článek obsahuje seznam a popisuje běžná nastavení a funkce při vytváření virtuálních privátních sítí (VPN). Tato nastavení a funkce sítě VPN se používají v profilech konfigurace zařízení v Intune, která jsou vložená nebo nasazená do zařízení.
 
 V rámci řešení pro správu mobilních zařízení (MDM) pomocí těchto nastavení můžete povolit nebo zakázat funkce, včetně použití dodavatele sítě VPN, povolení funkcí Always On, DNS, přidání proxy serveru a dalších.
 
@@ -36,7 +36,7 @@ Tato nastavení platí pro zařízení se systémem:
 
 V závislosti na tom, jaká nastavení zvolíte, nemusí být všechny uvedené hodnoty konfigurovatelné.
 
-## <a name="before-you-begin"></a>Před zahájením
+## <a name="before-you-begin"></a>Než začnete
 
 [Vytvořte profil konfigurace zařízení VPN](vpn-settings-configure.md).
 
@@ -65,16 +65,69 @@ V závislosti na tom, jaká nastavení zvolíte, nemusí být všechny uvedené 
   - **L2TP**
   - **PPTP**
 
-  Když zvolíte typ připojení VPN, můžete být také vyzváni k zadání těchto nastavení:  
+  Když zvolíte typ připojení VPN, můžete být také vyzváni k zadání těchto nastavení:
+
   - **Always On**: **Povolit** automatické připojení k připojení VPN, když dojde k následujícím událostem:
     - Při přihlášení uživatelů do zařízení
     - Při změně sítě na zařízení
     - Při opětovném zapnutí obrazovky na zařízení po vypnutí
 
-  - **Metoda ověřování**: vyberte, jak chcete, aby se uživatelé vůči serveru VPN ověřovali. Používání **certifikátů** nabízí rozšířené funkce, třeba bezobslužné prostředí, VPN na vyžádání a VPN pro aplikaci.
+    Pokud chcete použít připojení zařízení, jako je IKEv2, **Povolte** toto nastavení.
+
+  - **Metoda ověřování**: vyberte, jak chcete, aby se uživatelé vůči serveru VPN ověřovali. Možnosti:
+    - **Uživatelské jméno a heslo**: vyžaduje, aby uživatelé zadali své uživatelské jméno a heslo domény k ověření, například `user@contoso.com` nebo `contoso\user` .
+    - **Certifikáty**: Vyberte existující profil certifikátu klienta uživatele pro ověření uživatele. Tato možnost poskytuje vylepšené funkce, jako je například nulové prostředí, síť VPN na vyžádání a síť VPN pro jednotlivé aplikace.
+
+      Informace o vytváření profilů certifikátů v Intune najdete v tématu [použití certifikátů k ověřování](../protect/certificates-configure.md).
+
+    - **Certifikáty počítače** (jenom IKEv2): Vyberte existující profil certifikátu klienta zařízení pro ověření zařízení.
+
+      Pokud používáte [připojení zařízení pomocí tunelového propojení](https://docs.microsoft.com/windows-server/remote/remote-access/vpn/vpn-device-tunnel-config), musíte tuto možnost vybrat.
+
+      Informace o vytváření profilů certifikátů v Intune najdete v tématu [použití certifikátů k ověřování](../protect/certificates-configure.md).
+
+    - **EAP** (jenom IKEv2): Vyberte existující profil certifikátu klienta EAP (Extensible Authentication Protocol), který se má ověřit. V nastavení **protokolu EAP XML** zadejte parametry ověřování.
   - **Zapamatovat si přihlašovací údaje při každém přihlášení**: při zvolení této možnosti se přihlašovací údaje uloží do mezipaměti.
   - **Vlastní XML**: zadejte vlastní příkazy XML pro konfiguraci připojení VPN.
-  - **EAP XML**: zadejte příkazy EAP XML pro konfiguraci připojení VPN.
+  - **XML protokolu EAP**: Zadejte libovolné příkazy protokolu EAP XML, které KONFIGURUJÍ připojení VPN. Další informace najdete v tématu [Konfigurace protokolu EAP](https://docs.microsoft.com/windows/client-management/mdm/eap-configuration).
+
+  - **Tunelové zařízení** (pouze IKEv2): **povolí možnost** připojit zařízení k síti VPN automaticky bez zásahu uživatele nebo přihlášení. Toto nastavení platí pro počítače, které jsou připojené k Azure Active Directory (AD).
+
+    Pro použití této funkce jsou potřeba následující:
+
+    - Nastavení **Typ připojení** je nastaveno na **IKEv2**.
+    - Nastavení **Always On** je nastaveno na **Povolit**.
+    - Nastavení **metody ověřování** je nastaveno na **certifikáty počítače**.
+
+    Přiřaďte pouze jeden profil na zařízení s povoleným **tunelovým propojením zařízení** .
+
+  **Parametry přidružení zabezpečení IKE** (jenom IKEv2): Tato nastavení kryptografie se používají během vyjednávání přidružení zabezpečení IKE (označuje se taky jako `main mode` nebo `phase 1` ) pro připojení IKEv2. Tato nastavení se musí shodovat s nastavením serveru VPN. Pokud se nastavení neshodují, profil VPN se nepřipojí.
+
+  - **Šifrovací algoritmus**: Vyberte šifrovací algoritmus, který se používá na serveru VPN. Pokud například server VPN používá algoritmus AES 128, vyberte v seznamu možnost **AES-128** .
+
+    Pokud je nastavené na **Nenakonfigurováno**, Intune toto nastavení nezmění ani neaktualizuje.
+
+  - **Algoritmus kontroly integrity**: vyberte algoritmus integrity, který se používá na serveru VPN. Pokud například server VPN používá SHA1-96, vyberte ze seznamu možnost **SHA1-96** .
+
+    Pokud je nastavené na **Nenakonfigurováno**, Intune toto nastavení nezmění ani neaktualizuje.
+
+  - **Skupina Diffie-Hellman**: vyberte výpočetní skupinu Diffie-Hellman použitou na serveru VPN. Pokud například server VPN používá skupina2 (1024 bitů), pak v seznamu vyberte **2** .
+
+    Pokud je nastavené na **Nenakonfigurováno**, Intune toto nastavení nezmění ani neaktualizuje.
+
+  **Parametry přidružení podřízeného zabezpečení** (jenom IKEv2): Tato nastavení kryptografie se používají během vyjednávání podřízených přidružení zabezpečení (označuje se také jako `quick mode` nebo `phase 2` ) pro připojení IKEv2. Tato nastavení se musí shodovat s nastavením serveru VPN. Pokud se nastavení neshodují, profil VPN se nepřipojí.
+
+  - **Algoritmus transformace šifry**: vyberte algoritmus, který se používá na serveru VPN. Pokud například server VPN používá algoritmus AES-CBC 128, vyberte ze seznamu možnost **CBC-AES-128** .
+
+    Pokud je nastavené na **Nenakonfigurováno**, Intune toto nastavení nezmění ani neaktualizuje.
+
+  - **Algoritmus transformace ověřování**: vyberte algoritmus, který se používá na serveru VPN. Pokud například server VPN používá algoritmus AES-GCM 128, vyberte ze seznamu možnost **GCM-AES-128** .
+
+    Pokud je nastavené na **Nenakonfigurováno**, Intune toto nastavení nezmění ani neaktualizuje.
+
+  - **Skupina PFS (Perfect Forward Secrecy)**: vyberte výpočetní skupinu Diffie-Hellman, která se používá pro PFS (Perfect Forward Secrecy) na serveru VPN. Pokud například server VPN používá skupina2 (1024 bitů), pak v seznamu vyberte **2** .
+
+    Pokud je nastavené na **Nenakonfigurováno**, Intune toto nastavení nezmění ani neaktualizuje.
 
 ### <a name="pulse-secure-example"></a>Příklad pro Pulse Secure
 

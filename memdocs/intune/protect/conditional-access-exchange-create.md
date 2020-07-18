@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/15/2020
+ms.date: 07/17/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 530d6de8194a1ca74b72567c98c5d2afcb327170
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 6b0a22d24a67364df3d3aa064489db67e2c97e98
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990313"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86462231"
 ---
 # <a name="configure-exchange-on-premises-access-for-intune"></a>Konfigurace přístupu k místnímu Exchangi pro Intune
 
@@ -31,7 +31,14 @@ V tomto článku se dozvíte, jak nakonfigurovat podmíněný přístup pro mís
 
 Pokud máte vyhrazené prostředí Exchange Online a potřebujete zjistit, jestli má novou, nebo starší verzi konfigurace, obraťte se prosím na správce svého účtu. Pokud chcete řídit přístup k e-mailům v místním systému Exchange nebo ve starším vyhrazeném prostředí Exchange Online, nakonfigurujte podmíněný přístup na místní Exchange v Intune.
 
-## <a name="before-you-begin"></a>Před zahájením
+> [!IMPORTANT]
+> Informace v tomto článku se vztahují na zákazníky, kteří jsou podporováni pro použití konektoru Exchange.
+>
+> Od 1. července 2020 se podpora pro Exchange Connector zastaralá a nahrazuje ji pomocí [hybridního moderního ověřování](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview) Exchange (HMA).  Pokud máte ve svém prostředí nastavený Exchange Connector, zůstane klient Intune pro jeho použití podporovaný a vy budete mít přístup k uživatelskému rozhraní, které podporuje jeho konfiguraci. Můžete dál používat konektor nebo nakonfigurovat HMA a pak konektor odinstalovat.
+>
+> Použití paměti HMA nevyžaduje instalaci Intune a použití konektoru Exchange. Díky této změně se uživatelské rozhraní pro konfiguraci a správu Exchange Connectoru pro Intune odebralo z centra pro správu Microsoft Endpoint Manageru, pokud už nepoužíváte Exchange Connector s vaším předplatným.
+
+## <a name="before-you-begin"></a>Než začnete
 
 Než budete moct nakonfigurovat podmíněný přístup, ověřte, že existují následující konfigurace:
 

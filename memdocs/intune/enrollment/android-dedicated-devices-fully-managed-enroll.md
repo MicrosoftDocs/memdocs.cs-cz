@@ -1,7 +1,7 @@
 ---
-title: Registrace vyhrazených zařízení s Androidem Enterprise nebo plně spravovaných zařízení v Intune
+title: Registrace zařízení s pracovními profily v systému Android Enterprise vyhrazených, plně spravovaných nebo podnikových pracovních profilů v Intune
 titleSuffix: Microsoft Intune
-description: Přečtěte si, jak v Intune zaregistrovat podniková vyhrazená zařízení s Androidem nebo plně spravovaná zařízení.
+description: Přečtěte si, jak v Intune registrovat zařízení s pracovními profily v systému Android Enterprise vyhrazená, plně spravovaná nebo vlastněná společností.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 93cd7c7e852e3d8d8fe576cec66ce7a7020f06b7
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 858d813d3df2b020a869e1f18327d35e68bde7e0
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990213"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461721"
 ---
-# <a name="enroll-your-android-enterprise-dedicated-devices-or-fully-managed-devices"></a>Registrace vyhrazených zařízení s Androidem Enterprise nebo plně spravovaných zařízení
+# <a name="enroll-your-android-enterprise-dedicated-fully-managed-or-corporate-owned-with-work-profile-devices"></a>Registrace firemních zařízení s Androidem, plně spravovaných nebo vlastněných společností s pracovními profily
 
-Po nastavení [podnikových vyhrazených zařízení s Androidem](android-kiosk-enroll.md) nebo [plně spravovaných zařízení](android-fully-managed-enroll.md) v Intune můžete zařízení zaregistrovat. Registrace v Intune pro vyhrazená zařízení i pro plně spravovaná zařízení začíná Obnovením továrního nastavení. Způsob registrace zařízení s Androidem Enterprise závisí na operačním systému.
+Po nastavení podnikových [zařízení](android-kiosk-enroll.md)s Androidem, [plně spravovaných zařízení](android-fully-managed-enroll.md)nebo [zařízení pracovních profilů vlastněných společností](android-corporate-owned-work-profile-enroll.md) v Intune můžete zařízení zaregistrovat. Registrace v Intune pro vyhrazená zařízení i pro plně spravovaná zařízení začíná Obnovením továrního nastavení. Způsob registrace zařízení s Androidem Enterprise závisí na operačním systému.
 
 | Způsob registrace | Minimální verze operačního systému Android pro vyhrazená a plně spravovaná zařízení |
 | ----- | ----- |

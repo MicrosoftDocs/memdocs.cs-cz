@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e270afc0c2ef84af0f44c0b9fc767319bdf2d30b
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 78ed3fe234fb4ab236fe35b5e1778582f3eb731d
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990426"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461704"
 ---
 # <a name="set-up-intune-enrollment-of-android-enterprise-fully-managed-devices"></a>Nastavení registrace Intune pro plně spravovaná zařízení s Androidem Enterprise 
 
@@ -68,6 +68,6 @@ Pokud je toto nastavení nastaveno na **Ano**, poskytne vám token pro zápis (n
 Nyní můžete [zaregistrovat plně spravovaná zařízení](android-dedicated-devices-fully-managed-enroll.md) (ale ne při použití účtů DEM).
 
 ## <a name="next-steps"></a>Další kroky
-- [Přidat zásady konfigurace zařízení s plnou správou pro Android Enterprise](../configuration/device-restrictions-android-for-work.md#device-owner-only)
+- [Přidat zásady konfigurace zařízení s plnou správou pro Android Enterprise](../configuration/device-restrictions-android-for-work.md#fully-managed-dedicated-and-corporate-owned-work-profile)
 - [Konfigurace zásad konfigurace aplikací pro plně spravovaná zařízení s Androidem Enterprise](../apps/app-configuration-policies-use-android.md)
 

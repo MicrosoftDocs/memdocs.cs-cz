@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 205c892c885682d10877aae4c92429cf59adb0ac
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: a7b78cc76464ddee07b53366bbeeab4e19c54be3
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989158"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461143"
 ---
 # <a name="add-email-settings-to-devices-using-intune"></a>Přidání nastavení e-mailu do zařízení pomocí Intune
 
@@ -60,7 +60,7 @@ V tomto článku se dozvíte, jak vytvořit e-mailový profil v Microsoft Intune
     - **Název**: zadejte popisný název zásady. Své zásady pojmenujte, abyste je později mohli snadno identifikovat. Dobrým názvem zásad je například **Windows 10: nastavení e-mailu pro všechna zařízení s Windows 10**.
     - **Popis**: zadejte popis zásady. Toto nastavení není povinné, ale doporučujeme ho zadat.
 
-6. Vyberte **Další**.
+6. Vyberte **Next** (Další).
 
 7. Nastavení, která můžete konfigurovat v **nastavení konfigurace**, se liší v závislosti na zvolené platformě. Pro podrobnější nastavení vyberte platformu:
 
@@ -70,14 +70,14 @@ V tomto článku se dozvíte, jak vytvořit e-mailový profil v Microsoft Intune
     - [Windows 10](email-settings-windows-10.md)
     - [Windows Phone 8.1](email-settings-windows-phone-8-1.md)
 
-8. Vyberte **Další**.
+8. Vyberte **Next** (Další).
 9. V části **značky oboru** (volitelné) přiřaďte značku pro filtrování profilu pro konkrétní IT skupiny, například `US-NC IT Team` nebo `JohnGlenn_ITDepartment` . Další informace o značkách oboru naleznete v tématu [použití značek RBAC a Scope pro distribuci](../fundamentals/scope-tags.md).
 
-    Vyberte **Další**.
+    Vyberte **Next** (Další).
 
 10. V části **přiřazení**vyberte uživatele nebo skupiny, které obdrží váš profil. Další informace o přiřazování profilů najdete v tématu [přiřazení profilů uživatelů a zařízení](device-profile-assign.md).
 
-    Vyberte **Další**.
+    Vyberte **Next** (Další).
 
 11. V rámci **Revize a vytvoření**zkontrolujte nastavení. Když vyberete **vytvořit**, vaše změny se uloží a profil se přiřadí. Tato zásada se taky zobrazuje v seznamu profily.
 
@@ -111,7 +111,7 @@ Pokud si už uživatel e-mailový účet nakonfiguroval, přiřadí se e-mailov�
 
 - **Android Samsung KNOX Standard**: na základě e-mailové adresy se detekuje existující duplicitní e-mailový profil a přepíše ho profilem Intune. Android nepoužívá k identifikaci profilu název hostitele. Nevytvářejte více e-mailových profilů se stejnou e-mailovou adresou na různých hostitelích. Profily se vzájemně přepíší.
 
-- **Pracovní profily Androidu**: Intune nabízí dva pracovní e-mailové profily pro Android: jednu pro aplikaci Gmail a jednu pro devět pracovních aplikací. Tyto aplikace jsou dostupné v obchodě Google Play a instalují se v pracovním profilu zařízení. Tyto aplikace nevytvářejí duplicitní profily. Obě aplikace podporují připojení k Exchangi. Pokud chcete zajistit připojení k e-mailu, nasaďte do zařízení uživatelů jednu z těchto e-mailových aplikací. Pak vytvořte a nasaďte příslušný e-mailový profil. Můžete použít konfigurační profily gmail a devět e-mailů, které budou fungovat pro typy registrace pracovního profilu a vlastníka zařízení, včetně použití profilů certifikátů v obou typech konfigurace e-mailu. Všechny zásady Gmail nebo devět, které jste vytvořili v části Konfigurace zařízení pro pracovní profily, se budou i nadále používat pro zařízení a není nutné je přesouvat do zásad konfigurace aplikací. E-mailové aplikace, jako je Nine Work, nemusí být bezplatné. Přečtěte si podrobnosti o licencování aplikace nebo se obraťte na společnost s případnými dotazy. 
+- **Pracovní profily Androidu**: Intune nabízí dva pracovní e-mailové profily pro Android: jednu pro aplikaci Gmail a jednu pro devět pracovních aplikací. Tyto aplikace jsou dostupné v obchodě Google Play a instalují se v pracovním profilu zařízení. Tyto aplikace nevytvářejí duplicitní profily. Obě aplikace podporují připojení k Exchangi. Pokud chcete zajistit připojení k e-mailu, nasaďte do zařízení uživatelů jednu z těchto e-mailových aplikací. Pak vytvořte a nasaďte příslušný e-mailový profil. Můžete použít konfigurační profily gmail a devět e-mailů, které budou fungovat pro pracovní profil i plně spravované, vyhrazené a podnikové typy registrace pracovních profilů, včetně použití profilů certifikátů v obou typech konfigurace e-mailu. Všechny zásady Gmail nebo devět, které jste vytvořili v části Konfigurace zařízení pro pracovní profily, se budou i nadále používat pro zařízení a není nutné je přesouvat do zásad konfigurace aplikací. E-mailové aplikace, jako je Nine Work, nemusí být bezplatné. Přečtěte si podrobnosti o licencování aplikace nebo se obraťte na společnost s případnými dotazy. 
 
 ## <a name="changes-to-assigned-email-profiles"></a>Změny přiřazených e-mailových profilů
 

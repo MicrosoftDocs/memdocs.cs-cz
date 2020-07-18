@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/15/2020
+ms.date: 07/17/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: be850b2351de138ddacb087b2acf198e164dcd67
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 0eae6837ff2ef1d8b2e47118a20d4aa4e6b0f22b
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83430098"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461279"
 ---
 # <a name="settings-for-windows-10-microsoft-defender-antivirus-policy-in-microsoft-intune"></a>Nastavení pro zásady antivirové ochrany v Microsoft Defenderu pro Windows 10 v Microsoft Intune
 
@@ -152,7 +152,7 @@ Pro každé nastavení v této skupině můžete rozbalit nastavení, vybrat **P
   - **Ne** – nastavení je zakázané. Uživatelé zařízení nemůžou toto nastavení změnit.
   - **Ano** – zapněte kontrolu e-mailů. Uživatelé zařízení nemůžou toto nastavení změnit.
 
-## <a name="remediation"></a>Odstranění rizika
+## <a name="remediation"></a>Náprava
 
 - **Počet dní (0-90) pro udržení malwaru v karanténě**  
   CSP: [DaysToRetainCleanedMalware](https://go.microsoft.com/fwlink/?linkid=2114055)
@@ -282,6 +282,18 @@ Další informace
   CSP: [SignatureUpdateInterval](https://go.microsoft.com/fwlink/?linkid=2113936)
 
   Zadejte interval od nuly do 24 (v hodinách), který se používá ke kontrole podpisů. Nulová hodnota nemá za následek kontrolu nových podpisů. Hodnota 2 bude kontrolovat každé dvě hodiny atd.
+
+- **Definovat sdílené složky pro stahování aktualizací definic**  
+  CSP: [SignatureUpdateFallbackOrder](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-signatureupdatefallbackorder)
+
+  Spravujte umístění, jako je například sdílená složka UNC, jako umístění zdroje ke stažení pro získání aktualizací definic. Po úspěšném stažení aktualizací definic z jednoho zadaného zdroje nebudou kontaktovány zbývající zdroje v seznamu.
+
+  Můžete **Přidat** jednotlivá umístění nebo **importovat** seznam umístění jako soubor. csv.
+
+- **Definování pořadí zdrojů pro stahování aktualizací definic**  
+  CSP: [SignatureUpdateFileSharesSources](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-signatureupdatefilesharessources)
+
+  Určete, v jakém pořadí mají být kontaktována zdrojová umístění, která jste zadali, abyste získali aktualizace definic. Po úspěšném stažení aktualizací definic z jednoho zadaného zdroje nebudou kontaktovány zbývající zdroje v seznamu.
 
 ## <a name="user-experience"></a>Uživatelské prostředí
 

@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/21/2020
+ms.date: 07/17/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.reviewer: laarrizz
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d533acfa60672bed3d6919116f11f43d525b6551
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: a3a9ae0c697cb6cd60f0f9bddce50057bcfcd3a3
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988322"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86462095"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Konfigurace zařízení s Windows 10 v Intune pomocí směrných plánů zabezpečení
 
@@ -38,7 +38,7 @@ Samostatné typy standardních hodnot můžou zahrnovat stejná nastavení, ale 
 > [!NOTE]
 > Microsoft nedoporučuje používat verze Preview standardních hodnot zabezpečení v produkčním prostředí. Nastavení v směrném plánu Preview se může v průběhu verze Preview změnit.
 
-Směrné plány zabezpečení vám můžou při práci s Microsoft 365 mít komplexní zabezpečený pracovní postup. Mezi výhody patří:
+Směrné plány zabezpečení vám můžou při práci s Microsoft 365 mít komplexní zabezpečený pracovní postup. Některé výhody tohoto postupu:
 
 - Základní hodnoty zabezpečení obsahují osvědčené postupy a doporučení týkající se nastavení, která mají vliv na zabezpečení. Partneři Intune se stejným týmem zabezpečení systému Windows, který vytváří standardní hodnoty zabezpečení zásad skupiny. Tato doporučení jsou založená na pokynech a rozsáhlém prostředí.
 - Pokud s Intune začínáte a nejste si jistí, kde začít, pak vám standardní hodnoty zabezpečení poskytnou výhodu. Můžete rychle vytvořit a nasadit zabezpečený profil s vědomím, že pomáháte chránit prostředky a data vaší organizace.
@@ -75,12 +75,12 @@ Až budete připraveni přejít na novější verzi používaného směrného pl
 Každá nová instance verze směrného plánu může přidat nebo odebrat nastavení nebo zavést další změny. Například protože nové nastavení Windows 10 bude k dispozici v nových verzích Windows 10, základní hodnota zabezpečení MDM může obdržet novou instanci verze, která bude obsahovat nejnovější nastavení.
 
 V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)v části základní hodnoty zabezpečení **Endpoint Security**se  >  **Security baselines** zobrazí seznam dostupných směrných plánů. Seznam obsahuje:
-- název šablony standardních hodnot
-- Kolik profilů používá daný typ standardních hodnot
-- kolik různých instancí typu základní (verze) je dostupných
-- datum *posledního publikování* , které určuje, kdy byla k dispozici nejnovější verze šablony standardních hodnot
+- Název šablony směrného plánu.
+- Kolik profilů používá daný typ standardních hodnot.
+- Kolik různých instancí typu základní (verze) je k dispozici.
+- Datum *posledního publikování* , které určuje, kdy byla k dispozici nejnovější verze šablony standardních hodnot.
 
-Chcete-li zobrazit další informace o základních verzích, které používáte, vyberte směrný plán a otevřete jeho podokno *přehledu* a pak vyberte možnost **verze**. Intune zobrazí podrobnosti o verzích tohoto směrného plánu, které používají vaše profily. Podrobnosti zahrnují nejnovější a aktuální základní verzi. Pro zobrazení podrobných podrobností o profilech, které používají tuto verzi, můžete vybrat jednu verzi.
+Chcete-li zobrazit další informace o základních verzích, které používáte, vyberte typ standardních hodnot, jako je například *směrný plán zabezpečení MDM* , a otevřete jeho podokno *profily* a pak vyberte možnost **verze**. Intune zobrazí podrobnosti o verzích tohoto směrného plánu, které používají vaše profily. Podrobnosti zahrnují nejnovější a aktuální základní verzi. Pro zobrazení podrobných podrobností o profilech, které používají tuto verzi, můžete vybrat jednu verzi.
 
 Můžete zvolit [změnu verze](#change-the-baseline-version-for-a-profile) směrného plánu, který se používá s daným profilem. Když změníte verzi, nemusíte vytvářet nový základní profil, abyste mohli využívat aktualizované verze. Místo toho můžete vybrat profil standardních hodnot a použít vestavěnou možnost ke změně verze instance pro tento profil na nový.
 
@@ -116,7 +116,7 @@ Mezi běžné úlohy při práci se standardními hodnotami zabezpečení patř�
 - [Odebrání přiřazení standardních hodnot](#remove-a-security-baseline-assignment) – Zjistěte, co se stane, když zastavíte správu nastavení se směrným plánem zabezpečení.
 
 
-### <a name="prerequisites"></a>Požadavky
+### <a name="prerequisites"></a>Předpoklady
 
 - Aby bylo možné spravovat směrné plány v Intune, musí mít váš účet předdefinovanou roli [správce zásad a profilů](../fundamentals/role-based-access-control.md#built-in-roles) .
 

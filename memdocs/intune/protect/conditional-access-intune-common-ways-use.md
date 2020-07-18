@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/23/2019
+ms.date: 07/17/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,17 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9c8c78106125b45f52b45cb5fc6494b8e13b7a15
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 9c1d4dacf29aa0c87a8356306d10bf05acbf3afb
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80084952"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86462163"
 ---
 # <a name="what-are-common-ways-to-use-conditional-access-with-intune"></a>Jaké jsou běžné způsoby použití podmíněného přístupu s Intune?
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
-
 
 Existují dva typy podmíněného přístupu s Intune: podmíněný přístup podle zařízení a podle aplikace. K zavedení dodržování předpisů podmíněného přístupu ve vaší organizaci musíte nakonfigurovat související zásady dodržování předpisů. Podmíněný přístup se často používá k provádění akcí, jako je povolení nebo blokování přístupu k Exchangi, řízení přístupu k síti nebo integrace s řešením ochrany před mobilními hrozbami.
  
@@ -113,34 +110,44 @@ Při použití zásad dodržování předpisů zařízením a podmíněného př
 
 Pokud zařízení nesplňuje podmínky nastavené, koncový uživatel se provede procesem registrace zařízení za účelem vyřešení problému, který zařízení nedodržuje.
 
-#### <a name="how-conditional-access-for-exchange-on-premises-works"></a>Jak podmíněný přístup pro místní Exchange funguje
+> [!NOTE]
+> Od 1. července 2020 se podpora pro Exchange Connector zastaralá a nahrazuje ji pomocí [hybridního moderního ověřování](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview) Exchange (HMA). Použití paměti HMA nevyžaduje instalaci Intune a použití konektoru Exchange. Díky této změně se uživatelské rozhraní pro konfiguraci a správu Exchange Connectoru pro Intune odebralo z centra pro správu Microsoft Endpoint Manageru, pokud už nepoužíváte Exchange Connector s vaším předplatným.
+>
+> Pokud máte ve svém prostředí nastavený Exchange Connector, zůstane klient Intune pro jeho použití podporovaný a vy budete mít přístup k uživatelskému rozhraní, které podporuje jeho konfiguraci. Další informace najdete v tématu věnovaném [instalaci konektoru Exchange On-Premises Connector](../protect/exchange-connector-install.md) . Můžete dál používat konektor nebo nakonfigurovat HMA a pak konektor odinstalovat.
+>
+> Hybridní moderní ověřování nabízí funkce, které dříve poskytoval Exchange Connector pro Intune: mapování identity zařízení na záznam Exchange.  Toto mapování se teď stane mimo konfiguraci, kterou provedete v Intune, nebo požadavek konektoru Intune, aby se zajistilo přemostění Intune a Exchange. S HMA je nutné odebrat požadavek na použití konfigurace specifické pro Intune (konektor).
 
-Podmíněný přístup pro místní Exchange funguje jinak než zásady založené na podmíněném přístupu Azure. Intune Exchange On-Premises Connector nainstalujete k přímé interakci se systémem Exchange Server. Konektor Intune Exchange si vyžádá všechny záznamy Exchange Active Sync (EAS), které existují na serveru Exchange, aby Intune mohl tyto záznamy EAS namapovat na záznamy zařízení Intune. Tyto záznamy jsou zařízení zaregistrovaná a rozpoznaná službou Intune. Tento proces povolí nebo zablokuje přístup k e-mailu.
 
-Pokud je záznam EAS nový a Intune o něm není vědět, Intune vydá rutinu (příkaz-let), která přesměruje Exchange Server, aby blokoval přístup k e-mailu. Níže najdete další podrobnosti o tom, jak tento proces funguje:
+<!-- Deprecated with change from the connector to Exchange hybrid modern authentication)
 
-![Vývojový diagram místního Exchange s podmíněným přístupem](./media/conditional-access-intune-common-ways-use/ca-intune-common-ways-1.png)
+#### How conditional access for Exchange on-premises works
 
-1. Uživatel se pokusí o přístup k podnikovému e-mailu, který je hostovaný na místním Exchangi 2010 SP1 nebo novějším.
+Conditional access for Exchange on-premises works differently than Azure Conditional Access based policies. You install the Intune Exchange on-premises connector to directly interact with Exchange server. The Intune Exchange connector pulls in all the Exchange Active Sync (EAS) records that exist at the Exchange server so Intune can take these EAS records and map them to Intune device records. These records are devices enrolled and recognized by Intune. This process allows or blocks e-mail access.
 
-2. Pokud zařízení nespravuje Intune, bude přístup k e-mailu blokovaný. Intune pošle klientovi EAS oznámení o blokování.
+If the EAS record is new and Intune isn't aware of it, Intune issues a cmdlet (pronounced "command-let") that directs the Exchange server to block access to e-mail. Following are more details on how this process works:
 
-3. EAS obdrží oznámení o zablokování, přesune zařízení do karantény a odešle e-mail o karanténě s kroky k nápravě, které obsahují odkazy, aby uživatelé mohli svá zařízení zaregistrovat.
+![Exchange on-premises with CA flow-chart](./media/conditional-access-intune-common-ways-use/ca-intune-common-ways-1.png)
 
-4. Provede se proces připojení k pracovišti, který je prvním krokem k tomu, aby se zařízení spravovalo pomocí Intune.
+1. User tries to access corporate email, which is hosted on Exchange on-premises 2010 SP1 or later.
 
-5. Zařízení se zaregistruje v Intune.
+2. If the device is not managed by Intune, access to email will be blocked. Intune sends a block notification to the EAS client.
 
-6. Intune namapuje záznam EAS na záznam zařízení a uloží stav dodržování předpisů zařízením.
+3. EAS receives the block notification, moves the device to quarantine, and sends the quarantine email with remediation steps that contain links so the users can enroll their devices.
 
-7. ID klienta EAS se zaregistruje prostřednictvím procesu registrace zařízení Azure AD. Tím se vytvoří vztah mezi záznamem zařízení v Intune a ID klienta EAS.
+4. The Workplace join process happens, which is the first step to have the device managed by Intune.
 
-8. Registrace zařízení Azure AD uloží informace o stavu zařízení.
+5. The device gets enrolled into Intune.
 
-9. Pokud uživatel splňuje zásady podmíněného přístupu, Intune vydá rutinu prostřednictvím Intune Exchange Connectoru, která umožňuje synchronizaci poštovní schránky.
+6. Intune maps the EAS record to a device record, and saves the device compliance state.
 
-10. Server Exchange odešle oznámení klientovi EAS, aby uživatel získal přístup k e-mailu.
+7. The EAS client ID gets registered by the Azure AD Device Registration process, which creates a relationship between the Intune device record, and the EAS client ID.
 
+8. The Azure AD Device Registration saves the device state information.
+
+9. If the user meets the conditional access policies, Intune issues a cmdlet through the Intune Exchange connector that allows the mailbox to sync.
+
+10. Exchange server sends the notification to EAS client so the user can access e-mail.
+-->
 
 #### <a name="whats-the-intune-role"></a>Jaká je role Intune?
 
@@ -158,7 +165,5 @@ Exchange Server poskytuje rozhraní API a infrastrukturu pro přesunutí zaříz
 [Postup konfigurace podmíněného přístupu v Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)
 
 [Nastavení zásad podmíněného přístupu k aplikacím](app-based-conditional-access-intune-create.md)
-
-[Jak nainstalovat místní konektor Exchange v Intune](exchange-connector-install.md)
 
 [Vytvoření zásady podmíněného přístupu pro místní Exchange](conditional-access-exchange-create.md)

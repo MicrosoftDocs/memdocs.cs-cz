@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 17f1d045d89df3ad5bb37d85957e872ec6692b7e
-ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
+ms.openlocfilehash: d8506661c49fa4f9c8481a3caa96883c91e6d8bb
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85353492"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461755"
 ---
 # <a name="enroll-android-devices"></a>Registrace zařízení s Androidem
 
@@ -33,10 +33,11 @@ Jako správce Intune můžete zařízení s Androidem registrovat následující
 - Android Enterprise (nabízí sadu možností registrace, které uživatelům poskytují nejaktuálnější a zabezpečené funkce):
     - [**Pracovní profil Android Enterprise**](android-work-profile-enroll.md): pro osobní zařízení udělená oprávnění pro přístup k podnikovým datům. Správci můžou spravovat pracovní účty, aplikace a data. Osobní údaje na zařízení jsou oddělené od pracovních dat a správci neovládají osobní nastavení ani data. 
     - [**Vyhrazená podniková**](android-kiosk-enroll.md)platforma pro Android: pro zařízení vlastněná společností, jako je digitální podpis, tisk lístku nebo Správa inventáře. Správci omezí použití zařízení na omezenou sadu aplikací a webových odkazů. Uživatelé zároveň nemůžou na tomto zařízení přidávat jiné aplikace ani provádět jiné akce.
-    - [**Plně spravovaná platforma Android Enterprise**](android-fully-managed-enroll.md): pro samostatná zařízení vlastněná společností, která slouží výhradně pro práci a nikoli pro osobní použití. Správci můžou spravovat celé zařízení a vynutilit ovládací prvky zásad nedostupné pro pracovní profily. 
+    - [**Plně spravovaná platforma Android Enterprise**](android-fully-managed-enroll.md): pro samostatná zařízení vlastněná společností, která slouží výhradně pro práci a nikoli pro osobní použití. Správci můžou spravovat celé zařízení a vynutilit ovládací prvky zásad nedostupné pro pracovní profily.
+    - [**Android Enterprise – vlastněný s pracovním profilem**](android-corporate-owned-work-profile-enroll.md): pro samostatná zařízení vlastněná společností, která jsou určená pro podnikové a osobní použití.
 - [**Správce zařízení s Androidem**](android-enroll-device-administrator.md), včetně zařízení se zabezpečením Samsung KNOX Standard a [zařízení Zebra](../configuration/android-zebra-mx-overview.md). 
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 Při přípravě na správu mobilních zařízení musíte nastavit autoritu pro správu mobilních zařízení (MDM) na **Microsoft Intune**. Pokyny k tomu najdete v článku [Nastavení autority MDM](../fundamentals/mdm-authority-set.md). Tato možnost se nastavuje jenom jednou při prvním nastavování Intune pro správu mobilních zařízení.
 

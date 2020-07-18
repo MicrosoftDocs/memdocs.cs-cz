@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/01/2020
+ms.date: 07/17/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,16 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 038dfccd49b25546b5edddc785c7ee4c86bf83a3
-ms.sourcegitcommit: fb03634b8494903fc6855ad7f86c8694ffada8df
+ms.openlocfilehash: 25d3813d79ec20cc396c3127be6be5371c20247f
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85828988"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461178"
 ---
 # <a name="use-derived-credentials-in-microsoft-intune"></a>Použití odvozených přihlašovacích údajů v Microsoft Intune
 
-*Tento článek se vztahuje na zařízení s iOS/iPadOS a Androidem Enterprise s plnou správou, na kterých běží verze 7,0 a vyšší.*
+*Tento článek se týká zařízení se systémem iOS/iPadOS, Android Enterprise s plnou správou, na kterých běží verze 7,0 a vyšší, a na zařízeních, která používají Windows*
 
 V prostředí, kde se pro ověřování, šifrování a podepisování vyžadují čipové karty, teď můžete pomocí Intune zřídit mobilní zařízení s certifikátem, který je odvozený od čipové karty uživatele. Tento certifikát se nazývá *odvozené přihlašovací údaje*. Intune [podporuje několik odvozených vystavitelů přihlašovacích údajů](#supported-issuers), i když v jednom okamžiku můžete použít jenom jednoho vystavitele na tenanta.
 
@@ -37,19 +37,22 @@ Odvozené přihlašovací údaje jsou implementací pokynů National Institute o
 - Správce Intune nakonfiguruje svého tenanta tak, aby fungoval s podporovaným vystavitelem odvozeného pověření. Nemusíte konfigurovat žádné konkrétní nastavení Intune v systému odvozeného vystavitele přihlašovacích údajů.
 - Správce Intune Určuje **odvozená pověření** jako *metodu ověřování* pro následující objekty:
   
+  **Pro zařízení se systémem Android Enterprise s plnou správou**:
+  - Běžné typy profilů, jako jsou Wi-Fi a VPN
+  - Ověřování aplikací
+
   **Pro iOS/iPadOS**:
   - Běžné typy profilů, jako jsou Wi-Fi, VPN a e-maily, včetně aplikace pro iOS/iPadOS Native mail
   - Ověřování aplikací
   - Podepisování a šifrování S/MIME
 
-  **Pro zařízení se systémem Android Enterprise s plnou správou**:
+  **Pro Windows**:
   - Běžné typy profilů, jako jsou Wi-Fi a VPN
-  - Ověřování aplikací
   
-- Uživatelé získávají odvozené přihlašovací údaje pomocí své čipové karty na počítači, aby se ověřily u odvozeného vystavitele přihlašovacích údajů. Vystavitel pak vydá mobilnímu zařízení certifikát, který je odvozený z čipové karty.
+- Pro Android a iOS/iPadOS uživatelé získávají odvozené přihlašovací údaje pomocí své čipové karty na počítači, aby se ověřily u odvozeného vystavitele přihlašovacích údajů. Vystavitel pak vydá mobilnímu zařízení certifikát, který je odvozený z čipové karty. Pro Windows uživatelé nainstalují aplikaci od odvozeného poskytovatele pověření, který do zařízení nainstaluje certifikát pro pozdější použití.
 - Jakmile zařízení obdrží odvozená pověření, použije se k ověřování a podepisování a šifrování S/MIME, když aplikace nebo profily přístupu k prostředkům vyžadují odvozená pověření.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 Než nakonfigurujete svého tenanta na použití odvozených přihlašovacích údajů, přečtěte si následující informace.
 
@@ -59,6 +62,8 @@ Intune podporuje odvozená pověření na těchto platformách:
 
 - iOS/iPadOS
 - Android Enterprise – plně spravovaná zařízení (verze 7,0 a vyšší)
+- Android Enterprise – pracovní profil vlastněný podnikem
+- Windows 10 a novější
 
 ### <a name="supported-issuers"></a>Podporovaná Vystavitelé
 
@@ -84,7 +89,9 @@ Naplánujte nasazení aplikace Portál společnosti Intune do zařízení, kter�
 
 ## <a name="plan-for-derived-credentials"></a>Plánování odvozených přihlašovacích údajů
 
-Před nastavením odvozeného vystavitele přihlašovacích údajů si probereme následující skutečnosti.
+Před nastavením odvozeného vystavitele přihlašovacích údajů pro Android a iOS/iPadOS je třeba pochopit následující skutečnosti.
+
+Zařízení s Windows najdete v části [odvozené přihlašovací údaje pro Windows](#derived-credentials-for-windows)dále v tomto článku.
 
 ### <a name="1-review-the-documentation-for-your-chosen-derived-credential-issuer"></a>1) Přečtěte si dokumentaci k vybranému vystaviteli odvozeného pověření.
 
@@ -274,7 +281,7 @@ Použijte odvozená pověření pro ověřování pomocí certifikátů u webů 
    - **Název**: zadejte popisný název profilu. Své profily pojmenujte, abyste je později mohli snadno identifikovat. Dobrým názvem profilu je například **odvozená pověření pro profil zařízení s Androidem Enterprise**.
    - **Popis:** Zadejte popis, který nastavení stručně charakterizuje, a další důležité podrobnosti.
    - **Platforma**: vyberte **Android Enterprise**.
-   - **Typ profilu**: jenom v části *vlastník zařízení*vyberte **odvozené přihlašovací údaje**.
+   - **Typ profilu**: v oblasti *plně spravovaná, vyhrazená a firemní pracovní profil*vyberte **odvozené přihlašovací údaje**.
 
 4. Výběrem **OK** uložte změny.
 5. Po dokončení vyberte **OK**  >  **vytvořit** a vytvořte profil Intune. Po dokončení se Váš profil zobrazí v seznamu **zařízení – konfigurační profily** .
@@ -282,9 +289,29 @@ Použijte odvozená pověření pro ověřování pomocí certifikátů u webů 
 
 Uživatelé obdrží aplikaci nebo e-mailové oznámení v závislosti na nastaveních, která jste zadali při vytváření odvozeného vystavitele přihlašovacích údajů. Oznámení informuje uživatele o spuštění Portál společnosti tak, aby bylo možné zpracovat odvozené zásady pověření.
 
+## <a name="derived-credentials-for-windows"></a>Odvozené přihlašovací údaje pro Windows
+
+Odvozené certifikáty můžete použít jako metodu ověřování pro profily sítě Wi-Fi a VPN na zařízeních s Windows. Jako zprostředkovatelé pro Windows se podporují jenom poskytovatelé zařízení s Androidem a iOS nebo iPadOS:
+
+- **DISA purebred**
+- **Entrust Datacard**
+- **Intercede**
+
+Pro Windows uživatelé nefungují prostřednictvím procesu registrace čipové karty, aby získali certifikát, který se má použít jako odvozené přihlašovací údaje. Místo toho musí uživatel nainstalovat aplikaci pro Windows, která se získá od odvozeného zprostředkovatele přihlašovacích údajů. Chcete-li použít odvozené přihlašovací údaje v systému Windows, dokončete následující konfigurace:
+
+1. **Nainstalujte aplikaci z odvozeného zprostředkovatele přihlašovacích údajů na zařízení s Windows**.
+
+   Když nainstalujete aplikaci pro Windows z odvozeného poskytovatele přihlašovacích údajů na zařízení s Windows, přidá se k tomuto zařízení certifikát Windows Store. Po přidání certifikátu do zařízení bude k dispozici pro použití odvozené metody ověřování přihlašovacích údajů.
+
+   Po získání aplikace od zvoleného poskytovatele se aplikace může nasadit uživatelům nebo přímo nainstalovat uživatelem tohoto zařízení.
+
+2. **Nakonfigurujte profily sítě Wi-Fi a VPN tak, aby jako metodu ověřování používaly odvozené přihlašovací údaje**.
+
+   Když konfigurujete profil Windows pro Wi-Fi nebo VPN, vyberte pro *metodu ověřování*možnost **odvozená pověření** . V této konfiguraci profil používá certifikát, který se nainstaluje na zařízení při instalaci aplikace Providers.
+
 ## <a name="renew-a-derived-credential"></a>Obnovení odvozeného pověření
 
-Odvozené přihlašovací údaje se nedají rozšířit ani prodloužit. Místo toho musí uživatelé použít pracovní postup žádosti o přihlašovací údaje k vyžádání nového odvozeného pověření pro zařízení.
+Odvozené přihlašovací údaje pro zařízení s Androidem nebo iOS/iPadOS se nedají rozšířit ani prodloužit. Místo toho musí uživatelé použít pracovní postup žádosti o přihlašovací údaje k vyžádání nového odvozeného pověření pro zařízení. Zařízení s Windows najdete v dokumentaci k aplikaci od odvozeného poskytovatele přihlašovacích údajů.
 
 Pokud nakonfigurujete jednu nebo více metod pro **Typ oznámení**, Intune automaticky upozorní uživatele, když aktuální odvozené přihlašovací údaje dosáhnou 80% svého životního rozsahu. Oznámení směruje uživatele, aby procházeli procesem žádosti o přihlašovací údaje, aby získal nové odvozené přihlašovací údaje.
 

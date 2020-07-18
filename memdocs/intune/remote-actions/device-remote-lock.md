@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0ac6a5d848a0d02b72a4f7275a6b6df47b2cd834
-ms.sourcegitcommit: 3217778ebe7fd0318810696e8931e427a85da897
+ms.openlocfilehash: 220a2ac92d46c1279d4498c8673e2ceef28c470f
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85107332"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86462044"
 ---
 # <a name="remotely-lock-devices-with-intune"></a>Vzdálené uzamčení zařízení přes Intune
 
@@ -34,8 +34,10 @@ Akce zařízení **Vzdálené uzamčení** uzamkne zařízení. Vlastník zaří
 **Vzdálené uzamčení** je podporované u těchto platforem:
 
 - Android
-- Zařízení s beznabídkovým režimem Androidu Enterprise
-- Zařízení Android Enterprise s pracovním profilem
+- Firemní veřejná zařízení s Androidem
+- Zařízení se systémem Android Enterprise Work Profile
+- Zařízení se systémem Android Enterprise s plnou správou
+- Android Enterprise – vlastněná pomocí zařízení s pracovním profilem
 - iOS
 - macOS
 - Windows 10 Mobile
@@ -45,7 +47,7 @@ Akce zařízení **Vzdálené uzamčení** uzamkne zařízení. Vlastník zaří
 - Stolní počítač s Windows 10
 
 > [!NOTE]
-> Pro zařízení s macOS nastavíte šestimístní číselný kód PIN pro obnovení. Když se zařízení zamkne, **přehled zařízení** bude zobrazovat kód PIN, dokud se nepošle jiná akce zařízení. Nezapomeňte si kód PIN zapsat, protože bude k dispozici až 30 dní od odeslání příkazu vzdáleného zámku. Po uplynutí 30 dnů Intune už nebude mít PIN kód. Tento příkaz také nespouštějte pro stejné zařízení, dokud se nepoužije původní PIN kód k úspěšnému odemknutí zařízení. Tento příkaz byste měli odeslat, zapište si PIN kód a dokud ho nepoužijete k úspěšnému přihlášení do zařízení macOS, neodešlete znovu tento příkaz do stejného zařízení.  
+> Pro zařízení s macOS nastavíte šestimístní číselný kód PIN pro obnovení. Když se zařízení zamkne, **přehled zařízení** bude zobrazovat kód PIN, dokud se nepošle jiná akce zařízení. Nezapomeňte si kód PIN zapsat, protože bude k dispozici až 30 dní od odeslání příkazu vzdáleného zámku. Po uplynutí 30 dnů Intune už nebude mít PIN kód. Pokud tento příkaz znovu spustíte pro stejné zařízení a původní kód PIN se nepoužil k úspěšnému odemknutí zařízení, zobrazí se v části vytváření sestav stav selhání. Tento příkaz byste měli odeslat jenom jednou, zapsat PIN kód a dokud ho nepoužijete k úspěšnému přihlášení do zařízení macOS, nepokoušejte se znovu odeslat tento příkaz do stejného zařízení.
 
 
 ## <a name="remote-lock-a-device"></a>Vzdáleně uzamknout zařízení
