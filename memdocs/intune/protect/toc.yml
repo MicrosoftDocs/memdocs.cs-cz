@@ -52,8 +52,6 @@
       items:
         - name: Přehled dodržování předpisů
           href: device-compliance-get-started.md
-        - name: Partneři dodržování předpisů pro zařízení
-          href: device-compliance-partners.md
         - name: Vytvoření zásady
           href: create-compliance-policy.md
         - name: Dodržování předpisů podle umístění
@@ -93,6 +91,8 @@
               href: endpoint-security-account-protection-policy.md
         - name: Microsoft Defender ATP
           href: advanced-threat-protection.md
+        - name: Migrace pravidel firewallu
+          href: endpoint-security-firewall-rule-tool.md
         - name: Šifrování disků
           items:
             - name: Správa zásad nástroje BitLocker

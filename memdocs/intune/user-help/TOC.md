@@ -171,6 +171,7 @@
 
 ## [Použití webu Portál společnosti Intune](using-the-intune-company-portal-website.md)
 ### [Správa aplikací](manage-apps-cpweb.md)  
+### [Uložení obnovovacího klíče](store-recovery-key.md)
 ### [Získat obnovovací klíč](get-recovery-key-cpweb.md)
 ### [Vzdálené uzamčení zařízení](remote-lock-your-device-cpwebsite.md)  
 ### [Přejmenování zařízení](rename-your-device-cpwebsite.md)  
