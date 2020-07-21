@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e4d664d67041c4ef223f324d77efdbeb9e8a30db
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: b9796df0da4974b860348bf52ef06db202219136
+ms.sourcegitcommit: cb9b452f8e566fe026717b59c142b65f426e5033
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83986886"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86491112"
 ---
 # <a name="identify-devices-as-corporate-owned"></a>Identifikace zařízení jako vlastněných společností
 
@@ -49,10 +49,10 @@ Tato funkce je podporovaná pro následující platformy:
 
 | Platforma | Čísla IMEI | Sériová čísla |
 |---|---|---|
-| Windows | Podporováno (Windows Phone) | Nepodporuje se |
-| iOS/macOS | Nepodporuje se | Podporuje se |
-| V10 za účelem spravovaného operačního systému Android pro správu zařízení | Nepodporuje se | Nepodporuje se |
-| Ostatní systémy Android | Nepodporuje se | Podporuje se |
+| Windows | Podporováno (Windows Phone) | Nepodporováno |
+| iOS/macOS | Nepodporováno (viz důležité informace níže)  | Podporováno |
+| V10 za účelem spravovaného operačního systému Android pro správu zařízení | Nepodporováno | Nepodporováno |
+| Ostatní systémy Android | Nepodporováno | Podporováno |
 
 <!-- When you upload serial numbers for corporate-owned iOS/iPadOS devices, they must be paired with a corporate enrollment profile. Devices must then be enrolled using either Apple's Automated Device Enrollment or Apple Configurator to have them appear as corporate-owned. -->
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 74152e28d1c78ea911b1f4e2cca31d6382283c19
-ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
+ms.openlocfilehash: 58c3db997e8ec5ec45f93ce466f2efd0792ca3cb
+ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86088475"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86565627"
 ---
 # <a name="network-endpoints-for-microsoft-intune"></a>Koncové body sítě pro Microsoft Intune  
 
@@ -66,7 +66,6 @@ Následující tabulky obsahují seznam portů a služeb, ke kterým přistupuje
 |fef.msua04.manage.microsoft.com|23.96.112.28|
 |fef.msua05.manage.microsoft.com|138.91.244.151|
 |fef.msua06.manage.microsoft.com|13.78.185.97|
-|fef.msub01.manage.microsoft.com|137.135.128.214|
 |fef.msub05.manage.microsoft.com|23.97.166.52|
 |fef.msuc03.manage.microsoft.com|23.101.0.100|
 |fef.amsua0502.manage.microsoft.com|13.85.68.142|
@@ -117,7 +116,7 @@ Pro metadata Optimalizace doručení:
 
 ## <a name="apple-device-network-information"></a>Informace o síti pro zařízení Apple  
 
-|Použití|Název hostitele (IP adresa/podsíť)|Protocol (Protokol)|Port|
+|Použití|Název hostitele (IP adresa/podsíť)|Protokol|Port|
 |-----|--------|------|-------|
 |Načítání a zobrazování obsahu ze serverů Apple|itunes.apple.com<br>\*. itunes.apple.com<br>\*. mzstatic.com<br>\*. phobos.apple.com<br> \*. phobos.itunes-apple.com.akadns.net |    HTTP    |      80      |
 |Komunikace se servery APNS|# – courier.push.apple.com<br>' # ' je náhodné číslo od 0 do 50.|    TCP     |  5223 a 443  |

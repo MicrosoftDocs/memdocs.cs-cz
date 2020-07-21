@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 07/20/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -18,36 +18,48 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4d7e3b5b9a169baf336b0d4e7d8d66b06af38061
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 717ad28625b5eac97c26bcd09a21ef34250a7d39
+ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79332195"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86565712"
 ---
 # <a name="common-issues-and-resolutions-with-email-profiles-in-microsoft-intune"></a>Běžné problémy a řešení v e-mailových profilech v Microsoft Intune
 
 Projděte si některé běžné problémy s e-mailovými profily a zjistěte, jak je řešit.
 
-## <a name="what-you-need-to-know"></a>Co je potřeba vědět
+## <a name="users-are-repeatedly-prompted-to-enter-their-password"></a>Uživatelům se opakovaně zobrazí výzva k zadání hesla.
 
-- E-mailové profily se nasazují pro uživatele, který zařízení zaregistroval. Pokud chcete nakonfigurovat e-mailový profil, Intune v e-mailovém profilu uživatele během registrace používá vlastnosti Azure Active Directory (AD). [Přidání nastavení e-mailu do zařízení](email-settings-configure.md) může být dobrým prostředkem.
-- V případě Androidu Enterprise nasaďte pomocí spravovaného Obchod Google Play Gmail nebo 9 pro práci. [Přidat spravované aplikace Google Play](../apps/apps-add-android-for-work.md) zobrazí seznam kroků.
-- Microsoft Outlook pro iOS/iPadOS a Android nepodporují e-mailové profily. Místo toho Nasaďte zásadu konfigurace aplikace. Další informace najdete v tématu [nastavení konfigurace pro Outlook](../apps/app-configuration-policies-outlook.md).
-- Do zařízení se nemusí doručovat e-mailové profily cílené na skupiny zařízení (ne skupiny uživatelů). Pokud má zařízení primárního uživatele, bude mít cílení na zařízení fungovat. Pokud e-mailový profil obsahuje uživatelské certifikáty, ujistěte se, že zacílíte na skupiny uživatelů.
-- Uživatelům se zobrazí výzva k zadání hesla pro e-mailový profil. V tomto scénáři ověřte všechny certifikáty, na které se odkazuje v e-mailovém profilu. Pokud není jeden z certifikátů zaměřený na uživatele, pokusí se Intune znovu nasadit e-mailový profil.
+Uživatelům se opakovaně zobrazí výzva k zadání hesla pro e-mailový profil. Pokud se k ověřování a autorizaci uživatele používají certifikáty, Projděte si přiřazení všech profilů certifikátů. Tyto profily certifikátů se obvykle přiřazují skupinám uživatelů, nikoli ke skupinám zařízení. Pokud jeden z profilů certifikátů není zaměřený na uživatele, Intune se znovu pokusí o nasazení e-mailového profilu.
+
+Pokud je tento řetězec e-mailového profilu přiřazen skupinám uživatelů, ujistěte se, že jsou profily certifikátů také přiřazeny skupinám uživatelů.
+
+## <a name="profiles-deployed-to-device-groups-show-errors-and-latency"></a>Profily nasazené do skupin zařízení zobrazují chyby a latenci.
+
+E-mailové profily se obvykle přiřazují skupinám uživatelů. Mohou nastat případy, kdy jsou přiřazeny ke skupinám zařízení.
+
+- Například chcete nasadit e-mailový profil založený na certifikátech jenom na Surface zařízení, ne na stolních počítačích. V tomto scénáři můžou být smysl skupiny zařízení. Víte, že tato zařízení se mohou zobrazovat jako nevyhovující předpisům, může vracet chyby a nemusí okamžitě dostávat e-mailové profily.
+
+  V tomto příkladu vytvoříte e-mailový profil a přiřadíte tento profil ke skupinám zařízení. Zařízení se restartuje a před přihlášením uživatele nastane prodleva. Během této prodlevy se nasadí váš profil certifikátu PKCS, který je přiřazený skupinám uživatelů. Vzhledem k tomu, že zatím není žádný uživatel, profil certifikátu PKCS způsobí, že zařízení nedodržuje předpisy. Prohlížeč událostí může také na zařízení zobrazovat chyby.
+
+  Aby bylo možné získat vyhovující předpisy, uživatel se přihlásí k zařízení a synchronizuje se se službou Intune, aby přijímala zásady. Uživatelé se můžou znovu synchronizovat ručně nebo počkat na další synchronizaci.
+
+- Například používáte dynamické skupiny. Pokud Azure AD okamžitě neaktualizuje dynamické skupiny, pak se tato zařízení můžou zobrazovat jako nekompatibilní.
+
+V těchto scénářích se rozhodujete, jestli je pro používání skupin zařízení důležitější, nebo je důležitější Zobrazit všechny zásady jako vyhovující předpisům.
 
 ## <a name="device-already-has-an-email-profile-installed"></a>Zařízení už má nainstalovaný e-mailový profil
 
 Pokud uživatelé vytvoří e-mailový profil před registrací v Intune nebo Office 365 MDM, e-mailový profil nasazený službou Intune nemusí fungovat podle očekávání:
 
-- **iOS/iPadOS**: Intune detekuje stávající duplicitní e-mailový profil na základě názvu hostitele a e-mailové adresy. Uživatelem vytvořený e-mailový profil zablokuje nasazení profilu vytvořeného v Intune. Toto je běžný problém, když uživatelé iOS/iPadOS obvykle vytvoří e-mailový profil a potom se zaregistrují. Portál společnosti aplikace uvádí, že uživatel není kompatibilní, a může uživateli požádat o odebrání e-mailového profilu.
+- **iOS/iPadOS**: Intune detekuje stávající duplicitní e-mailový profil na základě názvu hostitele a e-mailové adresy. Uživatelem vytvořený e-mailový profil zablokuje nasazení profilu vytvořeného v Intune. Tento scénář je běžným problémem, protože uživatelé iOS/iPadOS obvykle vytvoří e-mailový profil a potom se zaregistrují. Portál společnosti aplikace uvádí, že uživatel není kompatibilní, a může uživateli požádat o odebrání e-mailového profilu.
 
   Uživatel by měl odebrat svůj e-mailový profil, aby bylo možné nasadit profil Intune. Pokud chcete tomuto problému zabránit, řekněte uživatelům, aby si zaregistrovali a povolili v Intune nasazení e-mailového profilu. Pak uživatelé můžou vytvořit svůj e-mailový profil.
 
 - **Windows**: Intune detekuje stávající duplicitní e-mailový profil na základě názvu hostitele a e-mailové adresy. Intune přepíše existující e-mailový profil vytvořený uživatelem.
 
-- **Samsung KNOX Standard**: Intune identifikuje duplicitní e-mailový účet na základě e-mailové adresy a přepíše ho profilem Intune. Pokud uživatel tento účet nakonfiguruje, profil Intune ho znovu přepíše. To může způsobit nejasnost uživatele, jehož konfigurace účtu bude přepsána.
+- **Samsung KNOX Standard**: Intune identifikuje duplicitní e-mailový účet na základě e-mailové adresy a přepíše ho profilem Intune. Pokud uživatel tento účet nakonfiguruje, profil Intune ho znovu přepíše. Toto chování může způsobit nejasnost uživatele, jehož konfigurace účtu bude přepsána.
 
 Samsung KNOX nepoužívá k identifikaci profilu název hostitele. Doporučujeme nevytvářet více e-mailových profilů pro nasazení na stejné e-mailové adresy na různých hostitelích, protože se navzájem přepíší.
 
@@ -62,8 +74,8 @@ Zkontrolujte konfiguraci svého profilu EAS pro zařízení Samsung KNOX a zdroj
 Uživatelé, kteří mají automaticky nastavené e-mailové účty, nemůžou ze svých zařízení odesílat obrázky ani obrázky. K tomuto scénáři může dojít, pokud není povolená **možnost povolit odesílání e-mailů z aplikací třetích stran** .
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte možnost**profily konfigurace** **zařízení** > .
-3. Vyberte váš e-mailový profil >**Nastavení** **vlastností** > .
+2. Vyberte **Devices**možnost  >  **profily konfigurace**zařízení.
+3. Vyberte váš e-mailový profil > **Properties**  >  **Nastavení**vlastností.
 4. Nastavte povolení **odesílání e-mailů z aplikací třetích stran** na hodnotu **Povolit**.
 
 ## <a name="next-steps"></a>Další kroky

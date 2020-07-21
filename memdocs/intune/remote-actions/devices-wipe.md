@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c910b840d51a1db94702bc8e095255e557246bea
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: eccb45ee4a0aade230ba8c18f68c4f0bc992e011
+ms.sourcegitcommit: cb9b452f8e566fe026717b59c142b65f426e5033
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988185"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86491316"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>Odebrání zařízení vymazáním, vyřazením nebo ručním zrušením registrace
 
@@ -36,10 +36,10 @@ Zařízení, která už nepotřebujete, která využíváte k jinému účelu ne
 
 Akce **Vymazání** obnoví výchozí tovární nastavení zařízení. Data uživatele se zachovají, pokud zaškrtnete políčko **Zachovat stav registrace a uživatelský účet**. Jinak se odeberou všechna data, aplikace a nastavení.
 
-|Akce vymazání|**Zachovat stav registrace a uživatelský účet**|Odebráno ze správy v Intune|Popis|
+|Akce vymazání|**Zachovat stav registrace a uživatelský účet**|Odebráno ze správy v Intune|Description|
 |:-------------:|:------------:|:------------:|------------|
 |**Vymazání**| Není zaškrtnuto | Ano | Vymaže všechny uživatelské účty, data, zásady MDM a nastavení. Obnoví operační systém do výchozího stavu a nastavení.|
-|**Vymazání**| Zaškrtnuté | Ne | Vymaže všechny zásady MDM. Zachová uživatelské účty a data. Obnoví nastavení uživatele zpět na výchozí nastavení. Obnoví operační systém do výchozího stavu a nastavení.|
+|**Vymazání**| Zaškrtnuto | Ne | Vymaže všechny zásady MDM. Zachová uživatelské účty a data. Obnoví nastavení uživatele zpět na výchozí nastavení. Obnoví operační systém do výchozího stavu a nastavení.|
 
 
 > [!NOTE]
@@ -96,7 +96,7 @@ Následující tabulky popisují, jaká data se odeberou a jaký vliv má akce *
 
 ### <a name="android-device-administrator"></a>Správce zařízení s Androidem
 
-|Datový typ|Android|Android Samsung Knox Standard|
+|Datový typ|Telefon|Android Samsung Knox Standard|
 |-------------|-----------|------------------------|
 |Webové odkazy|Odebrány.|Odebrány.|
 |Nespravované aplikace Google Play|Aplikace a data zůstanou nainstalována. <br /> <br />Odeberou se data firemních aplikací chráněná šifrováním pomocí správy mobilních aplikací (MAM) v rámci aplikace v místním úložišti. Data chráněná šifrováním MAM mimo aplikaci zůstávají šifrovaná a nepoužitelná, ale neodstraňují se. |Aplikace a data zůstanou nainstalována. <br /> <br />Odeberou se data firemních aplikací chráněná šifrováním pomocí správy mobilních aplikací (MAM) v rámci aplikace v místním úložišti. Data chráněná šifrováním MAM mimo aplikaci zůstávají šifrovaná a nepoužitelná, ale neodstraňují se.|
@@ -136,10 +136,10 @@ Zařízení s Androidem v beznabídkovém režimu můžete jen vymazat. Vyřazen
 |-------------|----------------------------------------------------------------|--------------|-----------------------------------------|--------|
 |Firemní aplikace a související data instalovaná službou Intune|Odvolají se klíče pro soubory, které jsou chráněné systémem souborů EFS. Uživatel nemůže soubory otevřít.|Firemní aplikace se neodeberou.|Odinstalují se aplikace původně nainstalované prostřednictvím Portálu společnosti. Odeberou se data firemních aplikací.|Odinstalují se aplikace. Odeberou se klíče pro zkušební načtení.<br>V případě Windows 10 verze 1709 (Creators Update) a novějších Microsoft 365 aplikace se neodeberou. Rozšíření pro správu Intune nainstalované aplikace Win32 se odinstalují na nezaregistrovaných zařízeních. Správci můžou využít vyloučení přiřazení, aby nenabízeli aplikacím Win32 možnost BYOD zařízení.|
 |Nastavení|Konfigurace nastavené zásadami Intune se už nevynucují. Uživatelé můžou nastavení změnit.|Konfigurace nastavené zásadami Intune se už nevynucují. Uživatelé můžou nastavení změnit.|Konfigurace nastavené zásadami Intune se už nevynucují. Uživatelé můžou nastavení změnit.|Konfigurace nastavené zásadami Intune se už nevynucují. Uživatelé můžou nastavení změnit.|
-|Nastavení profilu sítě Wi-Fi a VPN|Odebrány.|Odebrány.|Není podporováno.|Odebrány.|
-|Nastavení profilu certifikátu|Certifikáty jsou odebrané a odvolané.|Certifikáty jsou odebrané a odvolané.|Není podporováno.|Certifikáty jsou odebrané a odvolané.|
-|E-mail|Odeberou se e-maily s povoleným systémem souborů EFS. To zahrnuje e-maily a přílohy v aplikaci Pošta pro Windows.|Není podporováno.|Odeberou se e-mailové profily, které jsou zřízené prostřednictvím Intune. Odstraní se e-maily v mezipaměti zařízení.|Odeberou se e-maily s povoleným systémem souborů EFS. To zahrnuje e-maily a přílohy v aplikaci Pošta pro Windows. Odebere e-mailové účty, které byly zřízené Intune.|
-|Zrušení připojení k Azure AD|No.|No.|Odebere se záznam Azure AD.|Odebere se záznam Azure AD.|
+|Nastavení profilu sítě Wi-Fi a VPN|Odebrány.|Odebrány.|Nepodporováno|Odebrány.|
+|Nastavení profilu certifikátu|Certifikáty jsou odebrané a odvolané.|Certifikáty jsou odebrané a odvolané.|Nepodporováno|Certifikáty jsou odebrané a odvolané.|
+|E-mail|Odeberou se e-maily s povoleným systémem souborů EFS. To zahrnuje e-maily a přílohy v aplikaci Pošta pro Windows.|Nepodporováno|Odeberou se e-mailové profily, které jsou zřízené prostřednictvím Intune. Odstraní se e-maily v mezipaměti zařízení.|Odeberou se e-maily s povoleným systémem souborů EFS. To zahrnuje e-maily a přílohy v aplikaci Pošta pro Windows. Odebere e-mailové účty, které byly zřízené Intune.|
+|Zrušení připojení k Azure AD|Ne.|Ne.|Odebere se záznam Azure AD.|Odebere se záznam Azure AD.|
 
 > [!NOTE]
 > Pro zařízení s Windows 10, která se připojují k Azure AD při počátečním nastavení (OOBE), příkaz vyřadit ze zařízení odeberou všechny účty Azure AD. Postupujte podle kroků v části [spuštění počítače v bezpečném režimu](https://support.microsoft.com/en-us/help/12376/windows-10-start-your-pc-in-safe-mode) , abyste se mohli přihlásit jako místní správce a znovu získat přístup k místním datům uživatele. 
@@ -161,7 +161,7 @@ Pokud chcete odebrat zařízení z portálu Intune, můžete je odstranit z podo
 2. Vyberte **zařízení**  >  **všechna zařízení** > vyberte zařízení, která chcete odstranit > **Odstranit**.
 
 ### <a name="automatically-delete-devices-with-cleanup-rules"></a>Automatické odstranění zařízení pomocí pravidel čištění
-Můžete nakonfigurovat Intune tak, aby automaticky odstraňoval zařízení, která jsou neaktivní, zastaralá nebo nereagující. Tato pravidla čištění průběžně monitorují váš inventář zařízení, aby záznamy vašich zařízení byly stále aktuální. Zařízení odstraněná tímto způsobem se odeberou ze správy Intune.
+Můžete nakonfigurovat Intune tak, aby automaticky odstraňoval zařízení, která jsou neaktivní, zastaralá nebo nereagující. Tato pravidla čištění průběžně monitorují váš inventář zařízení, aby záznamy vašich zařízení byly stále aktuální. Zařízení odstraněná tímto způsobem se odeberou ze správy Intune. Toto nastavení má vliv na všechna zařízení spravovaná pomocí Intune, ne jen konkrétní.
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Vyberte **zařízení**  >  **pravidla čištění zařízení**  >  **Ano**.
 3. V poli **Odstranit zařízení, která se pro tento počet dnů nevrátila** , zadejte číslo mezi 30 a 270.

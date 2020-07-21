@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8b70d1e8b64a9000d10e46a17b0d3cb6133088f5
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 479dd1fede23c902d7be0f38ad0f16aa9f4917cf
+ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989127"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86565519"
 ---
 # <a name="integrate-jamf-pro-with-intune-for-compliance"></a>Integrace Jamf Pro s Intune pro dodržování předpisů
 
@@ -102,7 +102,7 @@ Postup připojení Intune s Jamf pro:
 
 9. Na stránce **požádat o oprávnění API** vyberte **Intune**a pak vyberte **oprávnění aplikace**. Zaškrtněte políčko pouze pro **update_device_attributes** a uložte nové oprávnění.
 
-10. Potom pro tuto aplikaci udělte souhlas správce výběrem možnosti **udělit souhlas správce pro _ \< vašeho tenanta>_ ** v levém horním rohu stránky **oprávnění k rozhraní API** . Je možné, že budete muset znovu ověřit účet v novém okně a udělit přístup k aplikaci podle pokynů.  
+10. Potom pro tuto aplikaci udělte souhlas správce tak, že v levém horním rohu stránky **oprávnění k rozhraní API** vyberete ** _\<your tenant>_ udělit souhlas správce** . Je možné, že budete muset znovu ověřit účet v novém okně a udělit přístup k aplikaci podle pokynů.  
 
 11. Aktualizujte stránku kliknutím na tlačítko **aktualizovat** v horní části stránky. Potvrďte, že byl udělen souhlas správce pro **update_device_attributes** oprávnění. 
 
@@ -110,10 +110,10 @@ Postup připojení Intune s Jamf pro:
 
    ![Úspěšná oprávnění](./media/conditional-access-integrate-jamf/sucessfull-app-registration.png)
 
-   Proces registrace aplikace v Azure AD je dokončený.
+Proces registrace aplikace v Azure AD je dokončený.
 
-    > [!NOTE]
-    > Pokud platnost tajného klíče klienta vyprší, musíte v Azure vytvořit nový tajný klíč klienta a potom aktualizovat data podmíněného přístupu v Jamf pro. Azure umožňuje mít aktivní jak starý tajný klíč, tak i nový klíč, aby nedošlo k přerušení služeb.
+> [!NOTE]
+> Pokud platnost tajného klíče klienta vyprší, musíte v Azure vytvořit nový tajný klíč klienta a potom aktualizovat data podmíněného přístupu v Jamf pro. Azure umožňuje mít aktivní jak starý tajný klíč, tak i nový klíč, aby nedošlo k přerušení služeb.
 
 ### <a name="enable-intune-to-integrate-with-jamf-pro"></a>Povolení integrace Intune s Jamf Pro
 

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/13/2020
+ms.date: 07/20/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 08d53bd7ffedc2679fca675b88e021301d15fb62
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 5259fe84b11ce5d1ec4a3110dcbc188afb2e6d3e
+ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989025"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86565678"
 ---
 # <a name="assign-user-and-device-profiles-in-microsoft-intune"></a>Přiřazení profilů uživatelů a zařízení v Microsoft Intune
 
@@ -37,7 +37,7 @@ V tomto článku se dozvíte, jak přiřadit profil, a obsahuje některé inform
 >
 > Při konfiguraci těchto nastavení doporučujeme nasazení do pilotní skupiny. Další Rady k zavedení Intune najdete v tématu [Vytvoření plánu zavedení](../fundamentals/planning-guide-rollout-plan.md).
 
-## <a name="before-you-begin"></a>Před zahájením
+## <a name="before-you-begin"></a>Než začnete
 
 Ujistěte se, že máte odpovídající roli pro přiřazení profilů. Další informace najdete v tématu [řízení přístupu na základě role (RBAC) pomocí Microsoft Intune](../fundamentals/role-based-access-control.md).
 
@@ -85,11 +85,13 @@ Příklad:
 
 - Na některých specifických zařízeních s Windows vždycky chcete řídit některá nastavení Microsoft Edge bez ohledu na to, kdo zařízení používá. Například chcete blokovat všechna stahování, omezit všechny soubory cookie na aktuální relaci procházení a odstranit historii procházení. V tomto scénáři vložte tato konkrétní zařízení s Windows do skupiny zařízení. Pak vytvořte [v Intune šablonu pro správu](administrative-templates-windows.md), přidejte tato nastavení zařízení a přiřaďte tento profil ke skupině zařízení.
 
-Pokud si nejste vědomi, kdo se k zařízení přihlásil, nebo pokud je někdo přihlášený, můžete ho vytvořit pomocí skupin zařízení. Přejete si, aby na zařízení byla vždycky tato nastavení.
+Pokud si nejste vědomi, kdo se k zařízení přihlásil, nebo když se někdo přihlásí, můžete ho vytvořit pomocí skupin zařízení. Přejete si, aby na zařízení byla vždycky tato nastavení.
 
 ### <a name="user-groups"></a>Skupiny uživatelů
 
 Nastavení profilu použité pro skupiny uživatelů vždycky přejdou na uživatele a při přihlášení ke svému množství zařízení se dostanete k uživateli. Pro uživatele je běžné mít mnoho zařízení, jako je například Surface pro práci, a osobní zařízení s iOS/iPadOS. A je normální pro uživatele, kteří mají přístup k e-mailu a jiným prostředkům organizace z těchto zařízení.
+
+Použijte toto obecné pravidlo: Pokud funkce patří uživateli, například e-mailem nebo uživatelským certifikátům, přiřaďte jim skupiny uživatelů.
 
 Příklad:
 

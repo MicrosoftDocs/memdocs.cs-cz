@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: de1f1bc3b21a8e4ebd2aca6730cae68af730f94e
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 7f49ba4fffd84ffae3e5b47ad74088b65d599533
+ms.sourcegitcommit: cb9b452f8e566fe026717b59c142b65f426e5033
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461899"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86491248"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Nastavení zařízení s Androidem Enterprise pro povolení nebo omezení funkcí pomocí Intune
 
@@ -135,11 +135,13 @@ Pomocí těchto nastavení můžete nakonfigurovat možnosti veřejného termin�
         Do zařízení můžete přidat i další [aplikace pro Android](../apps/apps-add-android-for-work.md) a [webové aplikace](../apps/web-app.md) , které vytvořila vaše organizace. Nezapomeňte [aplikaci přiřadit ke skupině zařízení vytvořené pro vaše vyhrazená zařízení](../apps/apps-deploy.md).
 
       - **Ikona složky**: vyberte barvu a tvar ikony složky, která je zobrazená na spravované domovské obrazovce. Možnosti:
+        - Nenakonfigurováno 
         - Tmavý obdélník motivu
         - Tmavý kroužek s motivem
         - Rámeček světlého motivu
         - Světlý kruh motivu
       - **Velikost ikony aplikace a složky**: vyberte velikost ikony složky, která je zobrazená na spravované domovské obrazovce. Možnosti:
+        - Nenakonfigurováno 
         - Velmi malý
         - Malá
         - Průměr
@@ -149,6 +151,7 @@ Pomocí těchto nastavení můžete nakonfigurovat možnosti veřejného termin�
           V závislosti na velikosti obrazovky může být skutečná velikost ikony odlišná.
 
       - **Orientace obrazovky**: vyberte směr, ve kterém se na zařízeních zobrazuje spravovaná Domovská obrazovka. Možnosti:
+        - Nenakonfigurováno
         - Na výšku
         - Na šířku
         - Automatické otočení
@@ -204,7 +207,7 @@ Pomocí těchto nastavení můžete nakonfigurovat možnosti veřejného termin�
 
           **Exportujte** aktuální seznam do souboru. csv.
 
-        - **SSID**: můžete taky zadat názvy sítě Wi-Fi, které se můžou připojit k uživatelům domácí obrazovky. Nezapomeňte zadat platné identifikátory SSID.
+        - **SSID**: můžete taky zadat názvy sítě Wi-Fi, ke kterým se uživatelé můžou připojit přes domovskou obrazovku. Nezapomeňte zadat platné identifikátory SSID.
 
       - **Konfigurace Bluetooth**: **Povolit** zobrazí ovládací prvek Bluetooth na spravované domovské obrazovce a umožní uživatelům párovat zařízení přes Bluetooth. Povolením této funkce se taky zapne umístění zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení se operační systém nemusí na spravované domovské obrazovce zobrazovat na ovládacím prvku Bluetooth. Brání tak uživatelům v konfiguraci zařízení Bluetooth a párování zařízení při použití spravované domovské obrazovky.
 
@@ -332,7 +335,7 @@ End of comment -->
   - **Jenom Wi-Fi**: aktualizace se nainstalují jenom v případě, že je zařízení připojené k síti Wi-Fi.
   - **Always**: aktualizace se instalují, když jsou k dispozici.
 
-### <a name="connectivity"></a>Možnosti připojení
+### <a name="connectivity"></a>Připojení
 
 - **Vždy zapnutá síť VPN**: **možnost Povolit** nastaví klienta VPN tak, aby se automaticky připojoval a znovu připojil k síti VPN. Připojení k síti VPN Always On zůstane připojené. Nebo se okamžitě připojí, když uživatelé uzamkne zařízení, dojde k restartování zařízení nebo ke změně bezdrátové sítě.
 
@@ -496,7 +499,7 @@ Tato nastavení hesla platí pro osobní profily na zařízeních, která použ�
   - Pracovní profil spravovaný pomocí MDM.
   - Osobní profil, který je izolovaný od správy MDM.
 
-### <a name="connectivity"></a>Možnosti připojení
+### <a name="connectivity"></a>Připojení
 
 - **Vždycky zapnutá síť VPN**: **Povolit** nastaví klienta VPN tak, aby se automaticky připojoval a znovu připojil k síti VPN. Připojení k síti VPN Always On zůstane připojené. Nebo se okamžitě připojí, když uživatelé uzamkne zařízení, dojde k restartování zařízení nebo ke změně bezdrátové sítě.
 

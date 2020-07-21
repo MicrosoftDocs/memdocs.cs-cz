@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/07/2020
+ms.date: 07/20/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c1f6edaf4a58d25f7aaa4c45039e84912fb901a3
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 1916004d8e61239d7de92a77769ee970cc7a3118
+ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461738"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86565619"
 ---
 # <a name="create-vpn-profiles-to-connect-to-vpn-servers-in-intune"></a>Vytvoření profilů sítě VPN pro připojení k serverům VPN v Intune
 
@@ -49,6 +49,7 @@ Profily VPN můžete vytvářet pomocí následujících typů připojení:
 - Check Point Capsule VPN
   - Správce zařízení s Androidem
   - Podnikové pracovní profily Androidu
+  - Plně spravovaný podnik s Androidem Enterprise a pracovní profil ve vlastnictví firmy: použití [zásad konfigurace aplikací](../apps/app-configuration-vpn-ae.md)
   - iOS/iPadOS
   - macOS
   - Windows 10
@@ -58,7 +59,7 @@ Profily VPN můžete vytvářet pomocí následujících typů připojení:
 - Cisco AnyConnect
   - Správce zařízení s Androidem
   - Podnikové pracovní profily Androidu
-  - Android Enterprise (plně spravovaný a podnikový pracovní profil)
+  - Plně spravovaný podnik pro Android Enterprise a pracovní profil ve vlastnictví firmy
   - iOS/iPadOS
   - macOS
 
@@ -67,8 +68,8 @@ Profily VPN můžete vytvářet pomocí následujících typů připojení:
 
 - Citrix SSO
   - Správce zařízení s Androidem
-  - Android Enterprise Working Profiles: použití [zásad konfigurace aplikací](../apps/app-configuration-policies-use-android.md)
-  - Vlastník zařízení se systémem Android Enterprise (plně spravovaný): použít [zásadu konfigurace aplikace](../apps/app-configuration-policies-use-android.md)
+  - Android Enterprise Working Profiles: použití [zásad konfigurace aplikací](../apps/app-configuration-vpn-ae.md)
+  - Plně spravované podnikové pracovní profily pro Android Enterprise a vlastněné společností: použití [zásad konfigurace aplikací](../apps/app-configuration-vpn-ae.md)
   - iOS/iPadOS
   - Windows 10
 
@@ -81,7 +82,7 @@ Profily VPN můžete vytvářet pomocí následujících typů připojení:
 - F5 Access
   - Správce zařízení s Androidem
   - Podnikové pracovní profily Androidu
-  - Android Enterprise (plně spravovaný a podnikový pracovní profil)
+  - Plně spravovaný podnik pro Android Enterprise a pracovní profil ve vlastnictví firmy
   - iOS/iPadOS
   - macOS
   - Windows 10
@@ -96,7 +97,8 @@ Profily VPN můžete vytvářet pomocí následujících typů připojení:
   - Windows 10
 
 - Palo Alto Networks GlobalProtect
-  - Android Enterprise Working Profiles: použití [zásad konfigurace aplikací](../apps/app-configuration-policies-use-android.md)
+  - Android Enterprise Working Profiles: použití [zásad konfigurace aplikací](../apps/app-configuration-vpn-ae.md)
+  - Plně spravovaný podnik s Androidem Enterprise a pracovní profil ve vlastnictví firmy: použití [zásad konfigurace aplikací](../apps/app-configuration-vpn-ae.md)
   - iOS/iPadOS
   - Windows 10
 
@@ -106,7 +108,7 @@ Profily VPN můžete vytvářet pomocí následujících typů připojení:
 - Pulse Secure
   - Správce zařízení s Androidem
   - Podnikové pracovní profily Androidu
-  - Android Enterprise (plně spravovaný a podnikový pracovní profil)
+  - Plně spravovaný podnik pro Android Enterprise a pracovní profil ve vlastnictví firmy
   - iOS/iPadOS
   - Windows 10
   - Windows 8.1
@@ -115,6 +117,7 @@ Profily VPN můžete vytvářet pomocí následujících typů připojení:
 - SonicWall Mobile Connect
   - Správce zařízení s Androidem
   - Podnikové pracovní profily Androidu
+  - Plně spravovaný podnik pro Android Enterprise a pracovní profil ve vlastnictví firmy
   - iOS/iPadOS
   - macOS
   - Windows 10
@@ -122,7 +125,8 @@ Profily VPN můžete vytvářet pomocí následujících typů připojení:
   - Windows Phone 8.1
 
 - Zscaler
-  - Android Enterprise Working Profiles: použití [zásad konfigurace aplikací](../apps/app-configuration-policies-use-android.md)
+  - Android Enterprise Working Profiles: použití [zásad konfigurace aplikací](../apps/app-configuration-vpn-ae.md)
+  - Plně spravovaný podnik s Androidem Enterprise a pracovní profil ve vlastnictví firmy: použití [zásad konfigurace aplikací](../apps/app-configuration-vpn-ae.md)
   - iOS/iPadOS
 
 > [!IMPORTANT]
@@ -136,8 +140,8 @@ Profily VPN můžete vytvářet pomocí následujících typů připojení:
 
     - **Platforma**: vyberte platformu zařízení. Možnosti:
       - **Správce zařízení s Androidem**
-      - **Android Enterprise**  >  **Pouze vlastník zařízení**
-      - **Android Enterprise**  >  **Pouze pracovní profil**
+      - **Android Enterprise**  >  **Plně spravovaný, vyhrazený a podnikový pracovní profil**
+      - **Android Enterprise**  >  **Pracovní profil**
       - **iOS/iPadOS**
       - **macOS**
       - **Windows 10 a novější**
@@ -151,7 +155,7 @@ Profily VPN můžete vytvářet pomocí následujících typů připojení:
     - **Název**: zadejte popisný název profilu. Své profily pojmenujte, abyste je později mohli snadno identifikovat. Dobrým názvem profilu je například **profil sítě VPN pro celou firmu**.
     - **Popis**: Zadejte popis profilu. Toto nastavení není povinné, ale doporučujeme ho zadat.
 
-6. Vyberte **Next** (Další).
+6. Vyberte **Další**.
 7. Nastavení, která můžete konfigurovat v **nastavení konfigurace**, se liší v závislosti na zvolené platformě. Pro podrobnější nastavení vyberte svou platformu:
 
     - [Správce zařízení s Androidem](vpn-settings-android.md)
@@ -162,14 +166,14 @@ Profily VPN můžete vytvářet pomocí následujících typů připojení:
     - [Windows 8.1](vpn-settings-windows-8-1.md)
     - [Windows Phone 8.1](vpn-settings-windows-phone-8-1.md)
 
-8. Vyberte **Next** (Další).
+8. Vyberte **Další**.
 9. V části **značky oboru** (volitelné) přiřaďte značku pro filtrování profilu pro konkrétní IT skupiny, například `US-NC IT Team` nebo `JohnGlenn_ITDepartment` . Další informace o značkách oboru naleznete v tématu [použití značek RBAC a Scope pro distribuci](../fundamentals/scope-tags.md).
 
-    Vyberte **Next** (Další).
+    Vyberte **Další**.
 
 10. V části **přiřazení**vyberte uživatele nebo skupiny, které obdrží váš profil. Další informace o přiřazování profilů najdete v tématu [přiřazení profilů uživatelů a zařízení](device-profile-assign.md).
 
-    Vyberte **Next** (Další).
+    Vyberte **Další**.
 
 11. V rámci **Revize a vytvoření**zkontrolujte nastavení. Když vyberete **vytvořit**, vaše změny se uloží a profil se přiřadí. Tato zásada se taky zobrazuje v seznamu profily.
 

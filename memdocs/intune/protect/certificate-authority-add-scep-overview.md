@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/03/2019
+ms.date: 07/20/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b3b7316cd496f7ae8ae97bd2d896695c0c11e156
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 1a94fc1276f0b2c99a3faf32f88aad4bfc126a24
+ms.sourcegitcommit: cb9b452f8e566fe026717b59c142b65f426e5033
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990362"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86491146"
 ---
 # <a name="add-partner-certification-authority-in-intune-using-scep"></a>Přidání partnerské certifikační autority pomocí protokolu SCEP do Intune
 
@@ -101,10 +101,6 @@ Ujistěte se, že máte k registraci aplikace Azure AD potřebná oprávnění. 
    
    Proces registrace aplikace v Azure AD je dokončený.
 
-
-
-
-
 ### <a name="configure-and-deploy-a-scep-certificate-profile"></a>Konfigurace a nasazení profilu certifikátu SCEP
 Vytvořte jako správce profil certifikátu SCEP, který bude cílit na uživatele nebo zařízení. Pak profil přiřaďte.
 
@@ -119,15 +115,16 @@ Po zrušení registrace nebo vymazání zařízení se certifikáty odeberou. Ce
 ## <a name="third-party-certification-authority-partners"></a>Partneři externí certifikační autority
 Následující externí certifikační autority podporují Intune:
 
+- [DigiCert](https://knowledge.digicert.com/tutorials/microsoft-intune.html)
+- [EJBCA](https://www.ejbca.org/)
 - [Entrust Datacard](https://go.entrustdatacard.com/pki/intune/)
-- [GitHub EJBCA – verze open-source](https://github.com/agerbergt/intune-ejbca-connector)
 - [EverTrust](https://evertrust.fr/en/products/)
 - [GlobalSign](https://downloads.globalsign.com/acton/attachment/2674/f-6903f60b-9111-432d-b283-77823cc65500/1/-/-/-/-/globalsign-aeg-microsoft-intune-integration-guide.pdf)
 - [IDnomic](https://www.idnomic.com/)
-- [Sectigo](https://sectigo.com/products)
-- [DigiCert](https://knowledge.digicert.com/tutorials/microsoft-intune.html)
-- [Venafi](https://www.venafi.com/platform/enterprise-mobility)
 - [SCEPman](https://azuremarketplace.microsoft.com/marketplace/apps/gluckkanja.scepman)
+- [Sectigo](https://sectigo.com/products)
+- [Venafi](https://www.venafi.com/platform/enterprise-mobility)
+
 
 Pokud jste externí certifikační autoritou a máte zájem o integraci svého produktu s Intune, projděte si pokyny rozhraní API:
 

@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/15/2020
+ms.date: 07/20/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: bfefdee7e949faf9e484ea20e7fc203ee72a9784
-ms.sourcegitcommit: 97f150f8ba8be8746aa32ebc9b909bb47e22121c
+ms.openlocfilehash: b0d0bbeb174d8f90d47ea6242ce6bd4be2dcfac6
+ms.sourcegitcommit: cb9b452f8e566fe026717b59c142b65f426e5033
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84879663"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86491163"
 ---
 # <a name="antivirus-policy-for-endpoint-security-in-intune"></a>Zásady antivirové ochrany pro zabezpečení koncového bodu v Intune
 
@@ -40,8 +40,7 @@ Zásady antivirové ochrany obsahují stejná nastavení, která najdete v čás
   - Aby mohla Intune spravovat nastavení antivirové ochrany na zařízení, musí být na tomto zařízení nainstalovaná ochrana ATP programu Microsoft Defender. Si. [Microsoft Defender ATP pro MacOS](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) (v dokumentaci ke službě Microsoft Defender ATP)
 
 - **Windows 10 a novější**
-  - Aby mohla Intune spravovat nastavení antivirové ochrany na zařízení, musí být na tomto zařízení nainstalovaná ochrana ATP programu Microsoft Defender. Viz téma [Microsoft Defender ATP pro Windows](../protect/advanced-threat-protection.md)v dokumentaci k Intune.
-  - Aplikace zabezpečení systému Windows je nainstalovaná na všech zařízeních, na kterých běží Window 10, a nevyžaduje žádné další požadavky.
+  - Nevyžadují se žádné další požadavky. 
 
 ## <a name="antivirus-profiles"></a>Profily antivirové ochrany
 

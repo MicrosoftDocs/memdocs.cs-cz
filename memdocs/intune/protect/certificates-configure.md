@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e5de1268b8b04c98ac7a9cfa96d42349fc0f8890
-ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
+ms.openlocfilehash: 0242e7725afa23ed94400c79eae27118b7dbb8c5
+ms.sourcegitcommit: cb9b452f8e566fe026717b59c142b65f426e5033
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85383202"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86491180"
 ---
 # <a name="use-certificates-for-authentication-in-microsoft-intune"></a>Použití certifikátů pro ověřování v Microsoft Intune
 
@@ -30,11 +30,11 @@ Pomocí certifikátů s Intune můžete ověřovat uživatele s aplikacemi a pod
 
 ## <a name="intune-supported-certificates-and-usage"></a>Podporované certifikáty a využití v Intune
 
-| Typ              | Ověřování | Podepisování S/MIME | Šifrování S/MIME  |
+| Typ              | Authentication | Podepisování S/MIME | Šifrování S/MIME  |
 |--|--|--|--|
-| Importovaný certifikát PKCS (Public Key Cryptography Standards) |  | ![Podporuje se](./media/certificates-configure/green-check.png) | ![Podporuje se](./media/certificates-configure/green-check.png)|
-| PKCS#12 (nebo PFX)    | ![Podporuje se](./media/certificates-configure/green-check.png) | ![Podporuje se](./media/certificates-configure/green-check.png) |  |
-| Protokol SCEP (Simple Certificate Enrollment Protocol)  | ![Podporuje se](./media/certificates-configure/green-check.png) | ![Podporuje se](./media/certificates-configure/green-check.png) | |
+| Importovaný certifikát PKCS (Public Key Cryptography Standards) |  | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png)|
+| PKCS#12 (nebo PFX)    | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) |  |
+| Protokol SCEP (Simple Certificate Enrollment Protocol)  | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) | |
 
 K nasazení těchto certifikátů vytvoříte a přiřadíte profily certifikátů k zařízením.
 
@@ -79,15 +79,15 @@ Používáte-li certifikační autoritu (CA) třetí strany (od společnosti Mic
 
 | Platforma              | Profil důvěryhodného certifikátu | Profil certifikátu PKCS | Profil certifikátu SCEP | Profil certifikátu importovaného PKCS  |
 |--|--|--|--|---|
-| Správce zařízení s Androidem | ![Podporuje se](./media/certificates-configure/green-check.png) | ![Podporuje se](./media/certificates-configure/green-check.png) | ![Podporuje se](./media/certificates-configure/green-check.png)|  ![Podporuje se](./media/certificates-configure/green-check.png) |
-| Android Enterprise <br> – Plně spravované (vlastník zařízení)   | ![Podporuje se](./media/certificates-configure/green-check.png) |   | ![Podporuje se](./media/certificates-configure/green-check.png) |   |
-| Android Enterprise <br> -Vyhrazené (vlastník zařízení)   | ![Podporuje se](./media/certificates-configure/green-check.png)  |   | ![Podporuje se](./media/certificates-configure/green-check.png)  |   |
-| Android Enterprise <br> – Pracovní profil    | ![Podporuje se](./media/certificates-configure/green-check.png) | ![Podporuje se](./media/certificates-configure/green-check.png) | ![Podporuje se](./media/certificates-configure/green-check.png) | ![Podporuje se](./media/certificates-configure/green-check.png) |
-| iOS/iPadOS                   | ![Podporuje se](./media/certificates-configure/green-check.png) | ![Podporuje se](./media/certificates-configure/green-check.png) | ![Podporuje se](./media/certificates-configure/green-check.png) | ![Podporuje se](./media/certificates-configure/green-check.png) |
-| macOS                 | ![Podporuje se](./media/certificates-configure/green-check.png) |  ![Podporuje se](./media/certificates-configure/green-check.png) |![Podporuje se](./media/certificates-configure/green-check.png)|![Podporuje se](./media/certificates-configure/green-check.png)|
-| Windows Phone 8.1     |![Podporuje se](./media/certificates-configure/green-check.png)  |  | ![Podporuje se](./media/certificates-configure/green-check.png)| ![Podporuje se](./media/certificates-configure/green-check.png) |
-| Windows 8.1 a vyšší |![Podporuje se](./media/certificates-configure/green-check.png)  |  |![Podporuje se](./media/certificates-configure/green-check.png) |   |
-| Windows 10 a novější  | ![Podporuje se](./media/certificates-configure/green-check.png) | ![Podporuje se](./media/certificates-configure/green-check.png) | ![Podporuje se](./media/certificates-configure/green-check.png) | ![Podporuje se](./media/certificates-configure/green-check.png) |
+| Správce zařízení s Androidem | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png)|  ![Podporováno](./media/certificates-configure/green-check.png) |
+| Android Enterprise <br> – Plně spravované (vlastník zařízení)   | ![Podporováno](./media/certificates-configure/green-check.png) |   | ![Podporováno](./media/certificates-configure/green-check.png) |   |
+| Android Enterprise <br> -Vyhrazené (vlastník zařízení)   | ![Podporováno](./media/certificates-configure/green-check.png)  |   | ![Podporováno](./media/certificates-configure/green-check.png)  |   |
+| Android Enterprise <br> – Pracovní profil    | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) |
+| iOS/iPadOS                   | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) |
+| macOS                 | ![Podporováno](./media/certificates-configure/green-check.png) |  ![Podporováno](./media/certificates-configure/green-check.png) |![Podporováno](./media/certificates-configure/green-check.png)|![Podporováno](./media/certificates-configure/green-check.png)|
+| Windows Phone 8.1     |![Podporováno](./media/certificates-configure/green-check.png)  |  | ![Podporováno](./media/certificates-configure/green-check.png)| ![Podporováno](./media/certificates-configure/green-check.png) |
+| Windows 8.1 a vyšší |![Podporováno](./media/certificates-configure/green-check.png)  |  |![Podporováno](./media/certificates-configure/green-check.png) |   |
+| Windows 10 a novější  | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) |
 
 ## <a name="export-the-trusted-root-ca-certificate"></a>Exportujte certifikát důvěryhodné kořenové certifikační autority.
 
@@ -109,6 +109,9 @@ Vytvořte samostatný profil důvěryhodného certifikátu pro každou platformu
 > Důvěryhodné kořenové profily, které vytvoříte pro platformu *Windows 10 a novější*, se zobrazí v centru pro správu Microsoft Endpoint Manageru jako profily pro platformu *Windows 8.1 a novější*. 
 >
 > Jedná se o známý problém s prezentací platformy pro profily důvěryhodných certifikátů. I když profil zobrazuje platformu Windows 8.1 a novější, je funkční pro Windows 10 a novější.
+
+> [!NOTE]
+> Profil *důvěryhodného certifikátu* v Intune se dá použít jenom k doručování kořenových nebo zprostředkujících certifikátů. Účelem nasazení takových certifikátů je vytvořit řetěz důvěryhodnosti. Použití profilu důvěryhodného certifikátu k doručování certifikátů jiných než kořenových nebo zprostředkujících certifikátů není společností Microsoft podporováno. Při výběru profilu důvěryhodného certifikátu na portálu Intune může být zablokovaný import certifikátů, které se nepovažují za kořenové nebo zprostředkující certifikáty. I když můžete importovat a nasadit certifikát, který není ani kořenovým nebo zprostředkujícím certifikátem, který používá tento typ profilu, pravděpodobně dojde k neočekávaným výsledkům mezi různými platformami, jako je iOS nebo Android.
 
 ### <a name="to-create-a-trusted-certificate-profile"></a>Vytvoření profilu důvěryhodného certifikátu
 

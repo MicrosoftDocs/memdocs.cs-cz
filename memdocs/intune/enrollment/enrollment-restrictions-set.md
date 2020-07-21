@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f807eabd2fabd51f7a7bb8eb43225a579784148c
-ms.sourcegitcommit: 7a099ff53668f50b37adab97ecd7ba98c5324676
+ms.openlocfilehash: 535def8c7504d8cd1ea1890c419c2f8b98d4f6f6
+ms.sourcegitcommit: cb9b452f8e566fe026717b59c142b65f426e5033
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84746489"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86491197"
 ---
 # <a name="set-enrollment-restrictions"></a>Nastavení omezení registrace
 
@@ -164,7 +164,7 @@ Zablokují se také následující metody osobní registrace:
 
 ## <a name="blocking-personal-iosipados-devices"></a>Blokování osobních zařízení s iOS/iPadOS
 Ve výchozím nastavení Intune klasifikuje zařízení s iOS/iPadOS jako osobně vlastněná. Aby bylo možné klasifikovat zařízení se systémem iOS nebo iPadOS ve vlastnictví firmy, musí splňovat jednu z následujících podmínek:
-- Registrováno se sériovým číslem nebo IMEI.
+- [Registrováno se sériovým číslem](corporate-identifiers-add.md).
 - Zaregistrováno pomocí automatického zápisu zařízení (dříve Program registrace zařízení)
 
 
@@ -178,7 +178,7 @@ Registrace zařízení obsahuje výchozí omezení jak pro omezení typu zaříz
 
 Prioritu kteréhokoli nevýchozího omezení můžete změnit.
 
-1. Přihlaste se k portálu Azure.
+1. Přihlaste se k webu Azure Portal.
 2. Zvolte **Další služby**, vyhledejte **Intune** a zvolte **Intune**.
 3. Vyberte **registrace zařízení**  >  **omezení registrace**.
 4. Najeďte kurzorem myši na omezení v seznamu priorit.
