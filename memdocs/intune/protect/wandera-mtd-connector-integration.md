@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/26/2020
+ms.date: 07/20/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,11 +15,12 @@ ms.technology: ''
 ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fc44bb114d6ff9089a01da2d0b7db7aa7527f4b5
-ms.sourcegitcommit: 7de54acc80a2092b17fca407903281435792a77e
+ms.openlocfilehash: b227148a6e16f7c9f8d62cb58eeb628afbd84123
+ms.sourcegitcommit: 2e0bc4859f7e27dea20c6cc59d537a31f086c019
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85972143"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86872014"
 ---
 # <a name="integrate-wandera-mobile-threat-protection-with-intune"></a>Integrace ochrany před mobilními hrozbami Wandera pomocí Intune  
 
@@ -69,12 +70,10 @@ Nastavení integrace mezi Wandera a Intune nevyžaduje žádnou podporu od zamě
 
    ![Přijmout oprávnění](./media/wandera-mtd-connector-integration/permissions.png)
 
-10. Vrátíte se automaticky zpátky do konzoly pro správu PAPRSKů.  Pokud byla autorizace úspěšná, zobrazí se vedle tlačítka pro udělení zelený znak zaškrtnutí.
-11. Opakujte postup souhlasu pro zbývající uvedená integrace kliknutím na jejich odpovídající tlačítka udělit, dokud nebudete mít zelený symbol zaškrtnutí vedle každého.
+9. Vrátíte se automaticky zpátky do konzoly pro správu PAPRSKů.  Pokud byla autorizace úspěšná, zobrazí se vedle tlačítka pro udělení zelený znak zaškrtnutí.
+10. Opakujte postup souhlasu pro zbývající uvedená integrace kliknutím na jejich odpovídající tlačítka udělit, dokud nebudete mít zelený symbol zaškrtnutí vedle každého.
 
-    ![Skupina synchronizace](./media/wandera-mtd-connector-integration/sync-group-name.png)
-
-12. Vraťte se do konzoly Intune a pokračujte v úpravách konektoru Wandera MTD. Nastavte všechny dostupné přepínače na zapnuto a pak konfiguraci uložte.
+11. Vraťte se do konzoly Intune a pokračujte v úpravách konektoru Wandera MTD. Nastavte všechny dostupné přepínače na zapnuto a pak konfiguraci uložte.
 
     ![Povolit Wandera](./media/wandera-mtd-connector-integration/enable-wandera.png)
 
@@ -105,13 +104,13 @@ V této části stáhnete **požadované** konfigurační soubory zařízení s 
 2. Rozbalte oddíly **Apple iOS pod dohledem** nebo Apple iOS, které nejsou **pod dohledem** , na základě konfigurace loďstva zařízení.
 3. Stáhněte si poskytnuté konfigurační profily a připravte je, abyste je nahráli v následujícím kroku.
 4. Otevřete **Microsoft Intune konzolu pro správu** a přejděte na **zařízení > iOS/iPadOS > konfiguračních profilů**.  Klikněte na **Vytvořit profil**.
-5. Na panelu, který se zobrazí, zvolte v části **platforma**možnost **iOS/iPadOS** a pak na **vlastní** v části profil. Pak klikněte na **vytvořit**.
+5. Na panelu, který se zobrazí, zvolte v části **platforma**možnost **iOS/iPadOS** a pak na **vlastní** v části profil. Pak klikněte na **Create** (Vytvořit).
 6. Do pole **název** zadejte popisný název pro konfiguraci. v ideálním případě se přiřadíte k tomu, co jste pojmenovali profil aktivace v paprskech. To vám usnadní křížové odkazy v budoucnu. Případně můžete v případě potřeby zadat kód aktivačního profilu. Doporučujeme, abyste zjistili, jestli je konfigurace pro zařízení pod dohledem nebo bez dohledu, podle přípony názvu jako takového.
-7. Volitelně můžete zadat **Popis** poskytující další podrobnosti pro ostatní správce týkající se účelu nebo použití konfigurace. Klikněte na **Další**.
-8. Klikněte na **Vybrat soubor** a vyhledejte stažený konfigurační profil, který odpovídá příslušnému aktivačnímu profilu staženému v kroku 3. Pokud jste stáhli obojí, je vhodné vybrat profil v režimu pod dohledem nebo bez dohledu. Klikněte na **Další**.
+7. Volitelně můžete zadat **Popis** poskytující další podrobnosti pro ostatní správce týkající se účelu nebo použití konfigurace. Klikněte na **Next** (Další).
+8. Klikněte na **Vybrat soubor** a vyhledejte stažený konfigurační profil, který odpovídá příslušnému aktivačnímu profilu staženému v kroku 3. Pokud jste stáhli obojí, je vhodné vybrat profil v režimu pod dohledem nebo bez dohledu. Klikněte na **Next** (Další).
    <!-- image placeholder - ending future availability -->
-9.  Definujte **značky oboru** podle požadavků v postupech správy RBAC v Intune.  Klikněte na **Další**.
-10. **Přiřaďte** konfigurační profil skupinám uživatelů nebo zařízení, které by měly mít nainstalované Wandera.  Doporučujeme začít se skupinou testu a potom po ověření správné práce s aktivací rozšířit. Klikněte na **Další**.
+9.  Definujte **značky oboru** podle požadavků v postupech správy RBAC v Intune.  Klikněte na **Next** (Další).
+10. **Přiřaďte** konfigurační profil skupinám uživatelů nebo zařízení, které by měly mít nainstalované Wandera.  Doporučujeme začít se skupinou testu a potom po ověření správné práce s aktivací rozšířit. Klikněte na **Next** (Další).
 11. Podle potřeby zkontrolujte konfiguraci správných úprav a kliknutím na **vytvořit** vytvořte a nasaďte konfigurační profil.
 
 > [!NOTE]

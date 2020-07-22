@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9a7943fb33cf670eedd600db083b77e981da9029
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: fa06e5fee4658ad3c7f19ec39bd126ce69d8cd41
+ms.sourcegitcommit: 4dc2e3c54a18fca98553dd46703e91819e2433d7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86240775"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86891509"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-automated-device-enrollment"></a>Automatická registrace zařízení se systémem iOS/iPadOS pomocí Automatické registrace zařízení společnosti Apple
 
@@ -59,7 +59,7 @@ Podpora pro zařízení s nekontrolovaným ADE je v iOS/iPadOS 11 zastaralá. V 
 4. [Assign DEP profile to devices](#assign-an-enrollment-profile-to-devices)
 5. [Distribute devices to users](#end-user-experience-with-managed-devices)
 -->
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 - Zařízení zakoupená v nástroji [ADE společnosti Apple](https://deploy.apple.com)
 - [Autorita pro správu mobilních zařízení (MDM)](../fundamentals/mdm-authority-set.md)
 - [Apple MDM push Certificate](apple-mdm-push-certificate-get.md)
@@ -71,7 +71,7 @@ Podpora pro zařízení s nekontrolovaným ADE je v iOS/iPadOS 11 zastaralá. V 
 - Maximální počet automatizovaných tokenů registrace zařízení na účet Intune: 2 000
 - Maximální počet automatizovaných zařízení pro zápis zařízení na token: limit první synchronizace je 75000-80000 zařízení. Intune se bude dál synchronizovat s ABM nebo ASM a každých 12 hodin se vrátit se změnami, aby se při každém přidání dalších zařízení. Ruční synchronizace (která se dá aktivovat každých 15 minut) taky přidá do Intune další dávku zařízení. Synchronizace budou pořád k dispozici a zařízení budou uchovávat synchronizaci z ABM/ASM přes Intune ve velkém množství. 
 
-## <a name="get-an-apple-ade-token"></a>Získání tokenu Apple ADE
+## <a name="get-an-apple-automated-device-enrollment-token"></a>Získání tokenu registrace Apple Automated Device
 
 Než budete moct registrovat zařízení s iOS/iPadOS pomocí ADE, budete potřebovat soubor tokenu ADE (. p7m) od společnosti Apple. Tento token umožňuje Intune synchronizovat informace o zařízeních ADE, která vaše společnost vlastní. Umožňuje také Intune odeslat společnosti Apple registrační profily a přiřazovat k těmto profilům zařízení.
 
@@ -268,7 +268,7 @@ Teď, když jste nainstalovali token, můžete vytvořit profil zápisu pro zař
     | <strong>Jazyk Express</strong>| Zobrazit obrazovku jazyka Express pro uživatele |
     | <strong>Preferovaný jazyk</strong> | Poskytněte uživateli možnost zvolit si **preferovaný jazyk**. |
     | <strong>Migrace zařízení do zařízení</strong> | Poskytněte uživateli možnost migrovat data ze starého zařízení do tohoto zařízení. Pro iOS/iPadOS 13,0 a novější. |
-    | <strong>Evidenc</strong> | Zobrazit registrační obrazovku uživateli Pro macOS 10,9 a novější. |
+    | <strong>Registrace</strong> | Zobrazit registrační obrazovku uživateli Pro macOS 10,9 a novější. |
     | <strong>FileVault</strong> | Zobrazit na uživateli obrazovku šifrování trezoru 2. Pro macOS 10,10 a novější. |
     | <strong>Diagnostika iCloud</strong> | Zobrazit obrazovku analýzy iCloud pro uživatele Pro macOS 10.12.4 a novější. |
     | <strong>Úložiště iCloud</strong> | Zobrazí uživateli iCloud dokumenty a plochu obrazovky. Pro macOS 10.13.4 a novější. |
@@ -323,7 +323,7 @@ Povolili jste správu a synchronizaci mezi společností Apple a Intune a přiř
 
 Další informace najdete [v tématu Registrace zařízení se systémem iOS/iPadOS v Intune pomocí program registrace zařízení](../user-help/enroll-your-device-dep-ios.md).
 
-## <a name="renew-an-ade-token"></a>Prodloužit platnost tokenu ADE  
+## <a name="renew-an-automated-device-enrollment-token"></a>Obnovit automatický token pro zápis zařízení  
 
 > [!NOTE]
 > Kromě prodloužení platnosti tokenu ADE je potřeba obnovit token programu registrace v Intune a Apple Business Manageru, když se změní heslo spravovaného Apple ID pro uživatele, který nastavil token v Apple Business Manageru, nebo tento uživatel opouští vaši organizaci Apple Business Manageru.
@@ -347,7 +347,7 @@ Další informace najdete [v tématu Registrace zařízení se systémem iOS/iPa
 9. Zvolte **Obnovit token**. Zobrazí se potvrzení, že se token obnovil.   
     ![Snímek obrazovky s potvrzením](./media/device-enrollment-program-enroll-ios/confirmation.png)
 
-## <a name="delete-an-ade-token-from-intune"></a>Odstranění tokenu ADE z Intune
+## <a name="delete-an-automated-device-enrollment-token-from-intune"></a>Odstranění automatického tokenu pro zápis zařízení z Intune
 
 Tokeny registračního profilu můžete z Intune odstranit, pokud
 - k tokenu nejsou přiřazená žádná zařízení.

@@ -2,7 +2,7 @@
 title: Aktualizace a údržba
 titleSuffix: Configuration Manager
 description: Seznamte se s konzolovou metodou služby nazvanou aktualizace a údržba, která usnadňuje vyhledání a instalaci doporučených aktualizací.
-ms.date: 06/30/2020
+ms.date: 07/17/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 3a832943-580a-4a40-b454-961d0854ac2b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 5eb1a5ef844a8dbf94cbde9d2c99986ce0634260
-ms.sourcegitcommit: 034226b5a60de49a75c7b54e856814f81c03a112
+ms.openlocfilehash: a177c51aad6bfd85adc0da8019646453eb969517
+ms.sourcegitcommit: 2e0bc4859f7e27dea20c6cc59d537a31f086c019
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86422797"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871963"
 ---
 # <a name="updates-and-servicing-for-configuration-manager"></a>Aktualizace a údržba pro Configuration Manager
 
@@ -40,7 +40,7 @@ Po dokončení instalace základní verze jsou další verze Configuration Manag
 
 - Konzolové aktualizace se instalují, když chcete aktualizovat verzi lokality nejvyšší úrovně.  
 
-- Aktualizace, které nainstalujete na lokalitu centrální správy, se automaticky instalují v podřízených primárních lokalitách. Řízení tohoto časování pomocí časového období údržby v primární lokalitě.  
+- Aktualizace, které nainstalujete na lokalitu centrální správy, se automaticky instalují v podřízených primárních lokalitách. Řízení tohoto časování pomocí okna služby v primární lokalitě. Další informace najdete v tématu o [oknech služby](service-windows.md).  
 
 - Ručně aktualizujte sekundární lokality na novou verzi aktualizace v konzole nástroje.  
 

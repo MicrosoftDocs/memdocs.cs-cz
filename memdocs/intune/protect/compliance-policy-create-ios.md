@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/01/2020
+ms.date: 07/20/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 536ad36120a8fb5dc4ad0d16b8f265e56260d461
-ms.sourcegitcommit: 56bb5419c41c2e150ffed0564350123135ea4592
+ms.openlocfilehash: e57cd425ca89fa875b89c73a9eba30cecb7516d7
+ms.sourcegitcommit: 2e0bc4859f7e27dea20c6cc59d537a31f086c019
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82729264"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871912"
 ---
 # <a name="iosipados-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>nastavení iOS/iPadOS pro označení zařízení jako kompatibilních nebo nekompatibilních s Intune
 
@@ -35,11 +35,11 @@ Tato funkce platí pro:
 
 Jako správce Intune můžete pomocí těchto nastavení dodržování předpisů ochránit prostředky vaší organizace. Další informace o zásadách dodržování předpisů a o tom, co dělají, najdete v tématu [Začínáme s dodržováním předpisů pro zařízení](device-compliance-get-started.md).
 
-## <a name="before-you-begin"></a>Před zahájením
+## <a name="before-you-begin"></a>Než začnete
 
 [Vytvořte zásady dodržování předpisů](create-compliance-policy.md#create-the-policy). V případě **platformy**vyberte **iOS/iPadOS**.
 
-## <a name="email"></a>E-mailu
+## <a name="email"></a>E-mail
 
 - **Na zařízení se nepovedlo nastavit e-mail.**  
   - **Nenakonfigurováno** (*výchozí*) – Toto nastavení není vyhodnoceno pro dodržování předpisů nebo nedodržování předpisů.
@@ -121,7 +121,7 @@ Podrobnosti o e-mailových profilech najdete v tématu [Konfigurace přístupu k
   Vyberte, jestli má heslo obsahovat jenom **číselné** znaky, nebo jestli má být kombinace čísel a dalších znaků (**alfanumerické**).
 
 - **Počet nealfanumerických znaků v hesle**  
-  Zadejte minimální počet speciálních znaků ( `&`například, `#`, `%`, `!`atd.), které musí být v hesle.
+  Zadejte minimální počet speciálních znaků (například `&` , `#` ,, atd.), `%` `!` které musí být v hesle.
 
   Po nastavení vyššího čísla bude uživatel muset vytvořit složitější heslo.
 
@@ -149,7 +149,7 @@ Podrobnosti o e-mailových profilech najdete v tématu [Konfigurace přístupu k
   Aplikace můžete omezit přidáním jejich ID sady prostředků do zásady. Pokud je aplikace v zařízení nainstalovaná, zařízení se označí jako nevyhovující.
 
   - **Název aplikace** – zadejte uživatelsky přívětivý název, který vám usnadní identifikaci ID sady prostředků.
-  - **ID sady prostředků aplikace** – zadejte jedinečný identifikátor sady přiřazený poskytovatelem aplikace. ID sady najdete v tématu [Jak najít ID sady prostředků pro aplikaci pro iOS/iPadOS](https://support.microsoft.com/help/4294074/how-to-find-the-bundle-id-for-an-ios-app) (otevře se další web Microsoftu).  
+  - **ID sady prostředků aplikace** – zadejte jedinečný identifikátor sady přiřazený poskytovatelem aplikace. Pokud chcete najít ID sady prostředků, přečtěte si téma [ID sady pro nativní aplikace pro iOS a iPadOS](https://support.apple.com/guide/mdm/native-ios-and-ipados-app-bundle-ids-mdm90f60c1ce/web) na adrese support.Apple.com, nebo se obraťte na dodavatele softwaru aplikace.
 
 ## <a name="next-steps"></a>Další kroky
 

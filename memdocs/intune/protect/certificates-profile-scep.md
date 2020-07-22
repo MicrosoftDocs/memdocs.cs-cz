@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/03/2020
+ms.date: 07/21/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 03e29f7c0256a5cd1c9cdabdd24394a2f390286b
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: ebf6a71a4d462e1025b6c44557a9513887488673
+ms.sourcegitcommit: 4dc2e3c54a18fca98553dd46703e91819e2433d7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86462146"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86891526"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>Vytvoření a přiřazení profilů certifikátů SCEP v Intune
 
@@ -48,7 +48,7 @@ Až [nakonfigurujete infrastrukturu](certificates-scep-configure.md) pro podporu
 
       2. Intune nemůžete použít k odvolání certifikátů, které se zřídily profily certifikátů SCEP pro vlastníky zařízení. Můžete spravovat odvolání prostřednictvím externího procesu nebo přímo s certifikační autoritou.
 
-      3. U vyhrazených zařízení s Androidem Enterprise se profily certifikátů SCEP podporují jenom v konfiguraci sítě Wi-Fi a jenom ověřování.  Profily certifikátů SCEP na vyhrazených zařízeních s Androidem Enterprise se nepodporují pro ověřování pomocí sítě VPN nebo aplikací.
+      3. U vyhrazených zařízení s Androidem Enterprise se pro konfiguraci sítě Wi-Fi, VPN a ověřování podporují profily certifikátů SCEP. Pro ověřování aplikací se nepodporují profily certifikátů SCEP na vyhrazených zařízeních s Androidem Enterprise.
 
 4. Vyberte **Vytvořit**.
 
@@ -56,7 +56,7 @@ Až [nakonfigurujete infrastrukturu](certificates-scep-configure.md) pro podporu
    - **Název**: zadejte popisný název profilu. Své profily pojmenujte, abyste je později mohli snadno identifikovat. Dobrým názvem profilu je například *profil SCEP pro celou firmu*.
    - **Popis**: Zadejte popis profilu. Toto nastavení není povinné, ale doporučujeme ho zadat.
 
-6. Vyberte **Next** (Další).
+6. Vyberte **Další**.
 
 7. V **nastavení konfigurace**dokončete následující konfigurace:
 
@@ -71,6 +71,9 @@ Až [nakonfigurujete infrastrukturu](certificates-scep-configure.md) pro podporu
 
        Použijte **zařízení** pro scénáře, jako jsou například zařízení bez uživatele, jako jsou veřejné terminály nebo pro zařízení s Windows. Na zařízeních s Windows se certifikát nachází v úložišti certifikátů místního počítače.
 
+     > [!NOTE]
+     > V macOS se certifikáty zřízené pomocí protokolu SCEP vždycky ukládají do systémového řetězce klíčů (systémové úložiště) daného zařízení.
+ 
    - **Formát názvu subjektu**:
 
      Vyberte, jak má Intune automaticky vytvořit název subjektu v žádosti o certifikát. Možnosti pro formát názvu subjektu závisí na zvoleném typu certifikátu – buď **uživatel** , nebo **zařízení**.
@@ -238,15 +241,15 @@ Až [nakonfigurujete infrastrukturu](certificates-scep-configure.md) pro podporu
 
      Pokud se zařízení neúspěšně dorazí na stejný server NDES během kteréhokoliv ze tří volání na server NDES, požadavek SCEP se nezdaří. K tomu může dojít například v případě, že řešení vyrovnávání zatížení poskytuje jinou adresu URL pro druhý nebo třetí volání serveru NDES nebo poskytuje jiný skutečný server NDES založený na virtualizované adrese URL pro NDES. Po neúspěšné žádosti se zařízení znovu pokusí o postup v příštím cyklu zásad, počínaje náhodným seznamem adres URL NDES (nebo jedné adresy URL pro iOS/iPadOS).  
 
-8. Vyberte **Next** (Další).
+8. Vyberte **Další**.
 
 9. V části **značky oboru** (volitelné) přiřaďte značku pro filtrování profilu pro konkrétní IT skupiny, například `US-NC IT Team` nebo `JohnGlenn_ITDepartment` . Další informace o značkách oboru naleznete v tématu [použití značek RBAC a Scope pro distribuci](../fundamentals/scope-tags.md).
 
-   Vyberte **Next** (Další).
+   Vyberte **Další**.
 
 10. V části **přiřazení**vyberte uživatele nebo skupiny, které obdrží váš profil. Další informace o přiřazování profilů najdete v tématu [přiřazení profilů uživatelů a zařízení](../configuration/device-profile-assign.md).
 
-    Vyberte **Next** (Další).
+    Vyberte **Další**.
 
 11. (*Platí jenom pro Windows 10*) V části **pravidla použitelnosti**zadejte pravidla použitelnosti pro upřesnění přiřazení tohoto profilu. Můžete vybrat, že chcete profil přiřadit nebo nepřiřadit, na základě edice nebo verze operačního systému zařízení.
 

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 07/20/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,32 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7893e845d2f4c73d4fc6fdecd8691b288c33bb48
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: b6004526d8c9340e70e5149f2261eea07a916ed7
+ms.sourcegitcommit: 2e0bc4859f7e27dea20c6cc59d537a31f086c019
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078239"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871976"
 ---
-# <a name="common-questions-issues-and-resolutions-with-device-policies-and-profiles-in-microsoft-intune"></a>Běžné otázky, problémy a řešení se zásadami a profily zařízení v Microsoft Intune
+# <a name="common-questions-and-answers-with-device-policies-and-profiles-in-microsoft-intune"></a>Běžné dotazy a odpovědi se zásadami a profily zařízení v Microsoft Intune
 
 Získejte odpovědi na běžné otázky při práci s profily a zásadami zařízení v Intune. Tento článek také uvádí časové intervaly vrácení se změnami, zajišťuje více zadržených konfliktů a další.
-
-## <a name="why-doesnt-a-user-get-a-new-profile-when-changing-a-password-or-passphrase-on-an-existing-wi-fi-profile"></a>Proč uživatel nezíská nový profil, když změníte heslo u existujícího profilu Wi-Fi?
-
-Vytvoříte profil podnikové sítě Wi-Fi, nasadíte profil u skupiny, změníte heslo a profil uložíte. Když se profil změní, nemusí někteří uživatelé nový profil obdržet.
-
-Abyste zmírnili následky tohoto problému, nastavte Wi-Fi pro hosty. Když selže podniková síť Wi-Fi, můžou se uživatelé připojit k Wi-Fi pro hosty. Je nutné povolit veškerá nastavení automatického připojení. Nasaďte profil sítě Wi-Fi pro hosty všem uživatelům.
-
-Další doporučení:  
-
-- Pokud síť Wi-Fi, ke které se připojujete, používá heslo nebo přístupové heslo, ujistěte se, že se můžete připojit k směrovači sítě Wi-Fi přímo. Můžete testovat pomocí zařízení s iOS/iPadOS.
-- Až se úspěšně připojíte ke koncovému bodu sítě Wi-Fi (směrovači sítě Wi-Fi), zapište si identifikátor SSID a použité přihlašovací údaje (heslo).
-- Zadejte identifikátor SSID a přihlašovací údaje (heslo) do pole Předsdílený klíč. 
-- Nasaďte profil u testovací skupiny, která má omezený počet uživatelů, nejlépe jenom u IT týmu. 
-- Synchronizujte zařízení s iOS/iPadOS s Intune. Pokud jste to ještě nezaregistrovali, zaregistrujte se. 
-- Vyzkoušejte připojení ke stejnému koncovému bodu sítě Wi-Fi (jak je uvedeno v prvním kroku).
-- Zaveďte profil u větších skupin a nakonec u všech předpokládaných uživatelů ve vaší organizaci. 
 
 ## <a name="how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned"></a>Jak dlouho trvá, než zařízení získá zásadu, profil nebo aplikaci po jejich přiřazení?
 
@@ -56,23 +40,23 @@ Pokud se zařízení po prvním oznámení nevrátí se změnami, zobrazí se v 
 | --- | --- |
 | iOS/iPadOS | Přibližně každých 8 hodin |
 | macOS | Přibližně každých 8 hodin |
-| Android | Přibližně každých 8 hodin |
+| Telefon | Přibližně každých 8 hodin |
 | Počítače s Windows 10 zaregistrované jako zařízení | Přibližně každých 8 hodin |
 | telefon se systémem Windows | Přibližně každých 8 hodin |
 | Windows 8.1 | Přibližně každých 8 hodin |
 
 Pokud se zařízení nedávno zaregistrovalo, spouští se ověření dodržování předpisů, nedodržování předpisů a konfigurace častěji, což je **Odhadované** na:
 
-| Platforma | Frequency |
+| Platforma | Frekvence |
 | --- | --- |
 | iOS/iPadOS | Každých 15 minut po dobu 1 hodiny a pak přibližně každých 8 hodin |  
 | macOS | Každých 15 minut po dobu 1 hodiny a pak přibližně každých 8 hodin | 
-| Android | Každé 3 minuty každé 3 minuty, potom každých 15 minut, 2 hodiny a pak každých 8 hodin. | 
+| Telefon | Každé 3 minuty každé 3 minuty, potom každých 15 minut, 2 hodiny a pak každých 8 hodin. | 
 | Počítače s Windows 10 zaregistrované jako zařízení | Každé 3 minuty každé 3 minuty, potom každých 15 minut, 2 hodiny a pak každých 8 hodin. | 
 | telefon se systémem Windows | Každých 15 minut každých 5 minut, potom každých 15 minut a pak přibližně každých 8 hodin | 
 | Windows 8.1 | Každých 15 minut každých 5 minut, potom každých 15 minut a pak přibližně každých 8 hodin | 
 
-Když uživatelé můžou aplikaci Portál společnosti otevřít, **Nastavení** > se**synchronizuje** , aby se okamžitě kontrolovala aktualizace zásad nebo profilů.
+Když uživatelé můžou aplikaci Portál společnosti otevřít, **Nastavení**  >  se**synchronizuje** , aby se okamžitě kontrolovala aktualizace zásad nebo profilů.
 
 ## <a name="what-actions-cause-intune-to-immediately-send-a-notification-to-a-device"></a>Které akce způsobí, že Intune hned pošle oznámení do zařízení?
 
@@ -154,7 +138,7 @@ Když odstraníte profil nebo odeberete zařízení ze skupiny, která má profi
 
 Po nastavení zařízení Windows Phone nedovolí, aby se v zabezpečení snížily zásady zabezpečení nastavené pomocí MDM nebo EAS. Například nastavíte **minimální počet znaků hesla** na hodnotu 8. Pokusíte se ho zmenšit na 4. V zařízení se už používá více omezující profil.
 
-Pokud chcete profil změnit na méně bezpečnou hodnotu, resetujte zásady zabezpečení. Například v Windows 8.1 na ploše potáhnutím prstem vpravo > vyberte **Nastavení** > **Ovládací panely**. Vyberte aplet **Uživatelské účty** . V navigační nabídce vlevo najdete odkaz **resetovat zásady zabezpečení** (směrem k dolnímu). Vyberte ho a potom zvolte **Resetovat zásady**.
+Pokud chcete profil změnit na méně bezpečnou hodnotu, resetujte zásady zabezpečení. Například v Windows 8.1 na ploše potáhnutím prstem vpravo > vyberte **Nastavení**  >  **Ovládací panely**. Vyberte aplet **Uživatelské účty** . V navigační nabídce vlevo najdete odkaz **resetovat zásady zabezpečení** (směrem k dolnímu). Vyberte ho a potom zvolte **Resetovat zásady**.
 
 Jiná zařízení MDM, například Android, Windows Phone 8,1 a novější, iOS/iPadOS a Windows 10, může být potřeba vyřadit a znovu zaregistrovat do Intune a použít tak méně omezující profil.
 

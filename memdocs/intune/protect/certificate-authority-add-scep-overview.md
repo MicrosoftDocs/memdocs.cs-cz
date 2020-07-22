@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1a94fc1276f0b2c99a3faf32f88aad4bfc126a24
-ms.sourcegitcommit: cb9b452f8e566fe026717b59c142b65f426e5033
+ms.openlocfilehash: c757688dec9d7c484ec2c71f86177ffbdf3a92d3
+ms.sourcegitcommit: 2e0bc4859f7e27dea20c6cc59d537a31f086c019
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86491146"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871997"
 ---
 # <a name="add-partner-certification-authority-in-intune-using-scep"></a>Přidání partnerské certifikační autority pomocí protokolu SCEP do Intune
 
@@ -116,7 +116,7 @@ Po zrušení registrace nebo vymazání zařízení se certifikáty odeberou. Ce
 Následující externí certifikační autority podporují Intune:
 
 - [DigiCert](https://knowledge.digicert.com/tutorials/microsoft-intune.html)
-- [EJBCA](https://www.ejbca.org/)
+- [EJBCA](https://doc.primekey.com/ejbca/ejbca-integration/integrating-with-third-party-applications/microsoft-intune-device-certificate-enrollment)
 - [Entrust Datacard](https://go.entrustdatacard.com/pki/intune/)
 - [EverTrust](https://evertrust.fr/en/products/)
 - [GlobalSign](https://downloads.globalsign.com/acton/attachment/2674/f-6903f60b-9111-432d-b283-77823cc65500/1/-/-/-/-/globalsign-aeg-microsoft-intune-integration-guide.pdf)

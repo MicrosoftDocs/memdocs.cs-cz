@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 55cecac47accf6dfa2efdc3b0905497260a652e5
-ms.sourcegitcommit: 1edcfb3ce4350ba1a6f36a6150e86301d35c631b
+ms.openlocfilehash: e7d80d2f528365e7759ce7ceb50639b0d474e329
+ms.sourcegitcommit: 4dc2e3c54a18fca98553dd46703e91819e2433d7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86390870"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86891458"
 ---
 <!-- 
 - Feature 1357546
@@ -108,8 +108,11 @@ Návody s asistencí, které vám pomůžou při řešení potíží s Configura
 
 ## <a name="new-and-updated-support-articles"></a>Nové a aktualizované články podpory
 
-Články podpory, které jsou nové nebo aktualizované v rozmezí od 16. června 2020.
+Články podpory, které jsou nové nebo aktualizované v rozmezí od 16. července 2020.
 
+- [Kumulativní aktualizace KB 4560496 pro Microsoft Endpoint Configuration Manager verze 2002](https://support.microsoft.com/help/4560496)
+- [V případě, že se pokusíte upravit tabulky aktualizací katalogu aplikací, dojde k chybě KB 4569513 "Nenalezeno".](https://support.microsoft.com/help/4569513)
+- [Chyba vypršení časového limitu KB 4574419 v centru pro správu Microsoft Endpoint Configuration Manager](https://support.microsoft.com/help/4574416)
 - [Nasazení Windows 10 KB 4564442 se nezdaří s nástrojem Microsoft Deployment Toolkit v počítačích se systémem BIOS Type firmware](https://support.microsoft.com/help/4564442)
 - [Kumulativní aktualizace KB 4563473 pro problémy s připojením klienta Configuration Manager verze 2002](https://support.microsoft.com/help/4563473)
 - [KB 4567007 selhání spuštění PXE nebo zpoždění pořadí úkolů po aktualizaci na Configuration Manager aktuální větev verze 2002](https://support.microsoft.com/help/4567007)

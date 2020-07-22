@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6884be3ef2d311ea810434d06be38d930b5ed143
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: da2f2b1155e6760d23d4ead65899b82e277fbd3e
+ms.sourcegitcommit: 4dc2e3c54a18fca98553dd46703e91819e2433d7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86460514"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86891543"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
@@ -481,7 +481,7 @@ Další informace o této podpoře najdete v tématu [citlivostní označování
 Když [nakonfigurujete šablonu zprávy s oznámením](../protect/actions-for-noncompliance.md#create-a-notification-message-template) pro odesílání e-mailových oznámení o nedodržení předpisů, použijte nové nastavení **portál společnosti odkaz na web** , který automaticky zahrne odkaz na portál společnosti Web. Když je tato možnost nastavená na *Povolit*, můžou uživatelé s nekompatibilními zařízeními, kteří přijímají e-mail na základě této šablony, použít odkaz k otevření webu, kde se dozvíte víc o tom, proč jejich zařízení nedodržuje předpisy. 
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
-### <a name="licensing"></a>Licensing
+### <a name="licensing"></a>Licencování
 
 #### <a name="admins-no-longer-require-an-intune-license-to-access-microsoft-endpoint-manager-admin-console--1335430---"></a>Správci už nepotřebují licenci Intune pro přístup ke konzole pro správu Microsoft Endpoint Manageru.<!--1335430 -->
 Teď můžete nastavit přepínač na úrovni tenanta, který odebere licenční požadavek Intune pro správce pro přístup k konzole správce paměti a rozhraní API pro grafy dotazů. Po odebrání licenčního požadavku ho nikdy nemůžete obnovit. 
@@ -801,7 +801,7 @@ Další informace o použití jednotného přihlašování na zařízeních s iO
 Dřív jste nedokázali odstranit výchozí profil, což znamená, že se k němu nepodařilo odstranit token automatického zápisu zařízení, který je k němu přidružený. Nyní můžete token odstranit v těchto případech:
 - k tokenu nejsou přiřazená žádná zařízení.
 - v takovém případě je k dispozici výchozí profil, odstraňte výchozí profil a pak odstraňte přidružený token.
-Další informace najdete v tématu [odstranění tokenu ADE z Intune](../enrollment/device-enrollment-program-enroll-ios.md#delete-an-ade-token-from-intune).
+Další informace najdete v tématu [odstranění tokenu ADE z Intune](../enrollment/device-enrollment-program-enroll-ios.md#delete-an-automated-device-enrollment-token-from-intune).
 
 #### <a name="scaled-up-support-for-apple-automated-device-enrollment-and-apple-configurator-2-devices-profiles-and-tokens--3542402---"></a>Podpora škálované podpory pro Apple Automated Device Enrollment a zařízení, profily a tokeny Apple Configuratoru 2<!--3542402 -->
 Intune teď pro distribuované IT oddělení a organizace podporuje až 1000 profilů zápisu na tokeny, 2000 automatické registrace zařízení (dříve označované jako DEP) tokeny na jeden účet Intune a 75 000 zařízení na token. Neexistují žádné zvláštní limity pro zařízení na registrační profil, a to pod maximálním počtem zařízení na token.
@@ -1121,7 +1121,7 @@ Níže jsou uvedené nové typy zásad, které jsou všechny ve verzi Preview, a
   - Windows 10 a novější:
     - **Izolace aplikací a prohlížečů**
     - **Ochrana webu**
-    - **Řízení aplikací**
+    - **Řízení aplikace**
     - **Pravidla pro omezení možností útoku**
     - **Řízení zařízení**
     - **Ochrana Exploit Protection**

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 07/20/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 82706356f82008798dc8c9b9de02ad55606ee87b
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 78b7a0ea6e25754e2839e1fda788b3440eaf3880
+ms.sourcegitcommit: 2e0bc4859f7e27dea20c6cc59d537a31f086c019
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83987843"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86872048"
 ---
 # <a name="troubleshoot-wi-fi-device-configuration-profiles-in-microsoft-intune"></a>Řešení potíží s profily konfigurace zařízení Wi-Fi v Microsoft Intune
 
@@ -31,11 +31,11 @@ Tento článek ukazuje, jak profil sítě Wi-Fi vypadá, když se na zařízení
 
 Další informace o profilech sítě Wi-Fi v Intune najdete v tématu [Přidání a použití nastavení Wi-Fi na vašich zařízeních](wi-fi-settings-configure.md).
 
-## <a name="before-you-begin"></a>Před zahájením
+## <a name="before-you-begin"></a>Než začnete
 
 Příklady v tomto článku používají pro profily Intune ověřování pomocí certifikátu SCEP. Také předpokládá, že důvěryhodné kořenové a profily SCEP fungují na zařízení správně.
 
-## <a name="android"></a>Android
+## <a name="android"></a>Telefon
 
 V této části jsme při instalaci konfiguračních profilů na zařízení s Androidem provedli kroky koncového uživatele.
 
@@ -177,7 +177,7 @@ WiFiConfigurationServiceProvider: Node set value, type: (0x4), Result: (The oper
 
 ## <a name="common-issues"></a>Běžné problémy
 
-### <a name="issue-1-the-wi-fi-profile-isnt-deployed-to-the-device"></a>Problém 1: profil sítě Wi-Fi není v zařízení nasazený.
+### <a name="the-wi-fi-profile-isnt-deployed-to-the-device"></a>Profil Wi-Fi není v zařízení nasazený.
 
 - Potvrďte, že je profil sítě Wi-Fi přiřazen ke správné skupině:
 
@@ -248,7 +248,7 @@ WiFiConfigurationServiceProvider: Node set value, type: (0x4), Result: (The oper
 
     Pokud se v protokolu zobrazí chyba, zkopírujte časové razítko chyby a Odfiltrujte protokol. Pak použijte možnost najít s časovým razítkem, abyste zjistili, co se stalo hned před chybou.
 
-### <a name="issue-2-the-wi-fi-profile-is-deployed-to-the-device-but-the-device-cant-connect-to-the-network"></a>Problém 2: profil Wi-Fi se nasadí do zařízení, ale zařízení se nemůže připojit k síti.
+### <a name="the-wi-fi-profile-is-deployed-to-the-device-but-the-device-cant-connect-to-the-network"></a>Profil Wi-Fi se nasadí do zařízení, ale zařízení se nemůže připojit k síti.
 
 K tomuto problému obvykle dochází z nějakého důvodu mimo Intune. Následující úkoly vám můžou pomoct pochopit a řešit potíže s připojením:
 
@@ -256,6 +256,22 @@ K tomuto problému obvykle dochází z nějakého důvodu mimo Intune. Následuj
 
   Pokud se můžete připojit, podívejte se na vlastnosti certifikátu v ručním připojení. Pak aktualizujte profil Wi-Fi v Intune se stejnými vlastnostmi certifikátu.
 - Chyby připojení se obvykle protokolují v protokolu serveru RADIUS. Například by se mělo zobrazit, jestli se zařízení pokusilo připojit k profilu sítě Wi-Fi.
+
+### <a name="users-dont-get-new-profile-after-changing-password-on-existing-profile"></a>Po změně hesla v existujícím profilu uživatelé nezískají nový profil
+
+Vytvoříte profil podnikové sítě Wi-Fi, nasadíte profil u skupiny, změníte heslo a profil uložíte. Když se profil změní, nemusí někteří uživatelé nový profil obdržet.
+
+Abyste zmírnili následky tohoto problému, nastavte Wi-Fi pro hosty. Když selže podniková síť Wi-Fi, můžou se uživatelé připojit k Wi-Fi pro hosty. Je nutné povolit veškerá nastavení automatického připojení. Nasaďte profil sítě Wi-Fi pro hosty všem uživatelům.
+
+Další doporučení:  
+
+- Pokud síť Wi-Fi, ke které se připojujete, používá heslo nebo přístupové heslo, ujistěte se, že se můžete připojit k směrovači sítě Wi-Fi přímo. Můžete testovat pomocí zařízení s iOS/iPadOS.
+- Až se úspěšně připojíte ke koncovému bodu sítě Wi-Fi (směrovači sítě Wi-Fi), zapište si identifikátor SSID a použité přihlašovací údaje (heslo).
+- Zadejte identifikátor SSID a přihlašovací údaje (heslo) do pole Předsdílený klíč. 
+- Nasaďte profil u testovací skupiny, která má omezený počet uživatelů, nejlépe jenom u IT týmu. 
+- Synchronizujte zařízení s iOS/iPadOS s Intune. Pokud jste to ještě nezaregistrovali, zaregistrujte se. 
+- Vyzkoušejte připojení ke stejnému koncovému bodu sítě Wi-Fi (jak je uvedeno v prvním kroku).
+- Zaveďte profil u větších skupin a nakonec u všech předpokládaných uživatelů ve vaší organizaci. 
 
 ## <a name="need-more-help"></a>Potřebujete další podrobnější informace
 
