@@ -15,12 +15,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d246ea2811e0fb561bc623ae29d3fb5ef0de66f9
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 70f8033f694dfafefc92696df0b0e6ea652e2feb
+ms.sourcegitcommit: 24fcf19054dcd62429f6181cdc568d894e01b99a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989374"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86946656"
 ---
 # <a name="manage-windows-10-software-updates-in-intune"></a>Správa softwarových aktualizací Windows 10 v Intune
 
@@ -40,7 +40,7 @@ Pro skupiny zařízení přiřadíte zásady pro aktualizační kanály Windows 
 
 Další informace najdete v tématu o [správě aktualizací pomocí Windows Update pro firmy](https://technet.microsoft.com/itpro/windows/manage/waas-manage-updates-wufb).
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 Aby se pro zařízení s Windows 10 v Intune používaly aktualizace Windows, musí se splnit následující požadavky.
 
@@ -90,7 +90,7 @@ Aktualizační kanály Windows 10 podporují [značky oboru](../fundamentals/sco
 
    Až budete připraveni, vyberte **Další** a pokračujte v *přiřazení*.
 
-6. V části **přiřazení**zvolte **+ Vybrat skupiny, které chcete zahrnout** , a potom přiřaďte aktualizační kanál k jedné nebo více skupinám. Pomocí **+ Vyberte skupiny, které se vyloučí** , abyste mohli přiřazení vyladit. Pokračujte výběrem tlačítka **Next** (Další).
+6. V části **přiřazení**zvolte **+ Vybrat skupiny, které chcete zahrnout** , a potom přiřaďte aktualizační kanál k jedné nebo více skupinám. Pomocí **+ Vyberte skupiny, které se vyloučí** , abyste mohli přiřazení vyladit. Pokračujte výběrem tlačítka **Další**.
 
 7. V nabídce **Revize + vytvořit**zkontrolujte nastavení a potom vyberte **vytvořit** , jakmile budete připraveni Uložit aktualizační kanál Windows 10. Nový aktualizační kanál se zobrazí v seznamu aktualizačních kanálů.
 
@@ -222,6 +222,8 @@ Aby bylo možné v Intune používat aktualizace funkcí Windows 10, musí být 
 
 - Zásady aktualizace funkcí Windows 10 se nedají použít při počátečním nastavování funkce autopilot (OOBE) a budou se používat jenom při první web Windows Update kontrole po dokončení zřizování zařízení (což je obvykle den).
 
+- I když aktualizace funkcí Windows 10 zůstávají ve verzi Public Preview, pokud spoluspravujete zařízení s Configuration Manager a Intune, existuje omezení, ve kterém se zásady aktualizace funkcí nemusí projevit okamžitě, což způsobí, že se zařízení budou aktualizovat na pozdější aktualizaci funkcí, než je nakonfigurované v Intune. Toto omezení se odebere s budoucí aktualizací Configuration Manager.
+
 ### <a name="create-and-assign-windows-10-feature-updates"></a>Vytvoření a přiřazení aktualizací funkcí Windows 10
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
@@ -230,7 +232,7 @@ Aby bylo možné v Intune používat aktualizace funkcí Windows 10, musí být 
 
 3. V části **základy**zadejte název, popis (volitelný) a **aktualizaci funkcí k nasazení**, vyberte verzi Windows se sadou funkcí, kterou chcete použít, a pak vyberte **Další**.
 
-4. V části **přiřazení**zvolte **+ Vybrat skupiny, které se mají zahrnout** , a potom přiřaďte nasazení aktualizace funkcí do jedné nebo víc skupin. Pokračujte výběrem tlačítka **Next** (Další).
+4. V části **přiřazení**zvolte **+ Vybrat skupiny, které se mají zahrnout** , a potom přiřaďte nasazení aktualizace funkcí do jedné nebo víc skupin. Pokračujte výběrem tlačítka **Další**.
 
 5. V části **zkontrolovat + vytvořit**zkontrolujte nastavení a vyberte **vytvořit** , až budete připraveni Uložit zásady aktualizací funkcí Windows 10.  
 
