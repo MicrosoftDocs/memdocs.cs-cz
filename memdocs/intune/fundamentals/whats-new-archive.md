@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8073cb1dbe872d9c7fd1ad05235707be4b969519
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 0c1029c4641d9ff07bf4254427cb08dfa583b5f8
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461415"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262604"
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Novinky v Microsoft Intune – předchozí měsíce
 
@@ -2562,7 +2562,7 @@ Od této aktualizace funkcí můžete vytvářet profil konfigurace zařízení,
 Platí pro: nejnovější build [Windows Insider](https://docs.microsoft.com/windows-insider/at-work-pro/) (v období verze Preview).
 
 #### <a name="windows-defender-atp-configuration-package-automatically-added-to-configuration-profile---2144658---"></a>Automatické přidání konfiguračního balíčku Ochrany ATP v programu Windows Defender do konfiguračního profilu <!-- 2144658 -->
-Když používáte [Rozšířenou ochranu před internetovými útoky (ATP) a připojujete](../protect/advanced-threat-protection.md#onboard-windows-devices-by-using-a-configuration-profile) zařízení k Intune, museli jste si dříve stáhnout konfigurační balíček a přidat ho do konfiguračního profilu. Od této aktualizace Intune automaticky načítá balíček z Centra zabezpečení v programu Windows Defender a přidává ho do profilu za vás.
+Když používáte [Rozšířenou ochranu před internetovými útoky (ATP) a připojujete](../protect/advanced-threat-protection-configure.md#onboard-devices) zařízení k Intune, museli jste si dříve stáhnout konfigurační balíček a přidat ho do konfiguračního profilu. Od této aktualizace Intune automaticky načítá balíček z Centra zabezpečení v programu Windows Defender a přidává ho do profilu za vás.
 Platí pro Windows 10 a novější.
 
 #### <a name="require-users-to-connect-during-device-setup--2311457--"></a>Povinnost připojit se během nastavení zařízení <!--2311457-->
@@ -2760,7 +2760,7 @@ Přečtěte si další informace o [správě konfiguračních profilů](../confi
 #### <a name="new-status-for-devices-in-device-compliance---2308882---"></a>Nové stavy pro zařízení na stránce Dodržování předpisů zařízením <!-- 2308882 -->
 V části zásady **dodržování předpisů zařízení**  >  **Policies** > vyberte zásadu > **Přehled**, přidají se tyto nové stavy:
 - succeeded
-- error
+- chyba
 - Konflikt
 - pending
 - Nepoužitelné Také se zobrazí obrázek, který ukazuje počet zařízení s jinou platformou. Když se třeba díváte na profil iOSu, na nové dlaždici se zobrazí počet zařízení s jiným systémem než iOS, která jsou také přiřazená k tomuto profilu. Viz [Zásady dodržování předpisů zařízením](../protect/compliance-policy-monitor.md#view-status-of-device-policies).
@@ -2918,7 +2918,7 @@ U zařízení spravovaných pomocí Microsoft Intune MDM může občas dojít k 
 Prohlížeč Microsoft Edge pro mobilní zařízení (iOS a Android) teď podporuje zásady ochrany aplikací Microsoft Intune. Uživatelé zařízení s iOS a Androidem, kteří se přihlásí pomocí podnikových účtů Azure AD v aplikaci Microsoft Edge, budou chráněni službou Intune. Na zařízeních s iOSem umožní zásada **Vyžadovat spravovaný prohlížeč pro webový obsah** uživatelům otevírat odkazy v Microsoft Edgi, pokud je spravovaný.
 
 <!-- ########################## -->
-## <a name="may-2018"></a>May 2018
+## <a name="may-2018"></a>Květen 2018
 
 ### <a name="app-management"></a>Správa aplikací
 
@@ -3389,7 +3389,7 @@ Uživatelé teď můžou používat Správce registrace zařízení při registr
 
 Klíčem ke správě počítačů s Windows je pochopení stavu programu Windows Defender.  Touto aktualizací Intune přidá do stavu agenta Windows Defender nové sestavy a akce. Pomocí souhrnné sestavy stavu v [úloze dodržování předpisů zařízením](../protect/compliance-policy-monitor.md) zjistíte, která zařízení vyžadují:
 - aktualizaci signatur,
-- Restartovat
+- Restartování
 - ruční zásah,
 - úplnou kontrolu,
 - stavy ostatních agentů vyžadujících zásah.
@@ -3618,7 +3618,7 @@ Správci mohou nakonfigurovat následující nastavení:
 
     Používá se pouze v případě nezdařeného automatického zjišťování.
 
-  - **E-mail**
+  - **Elektron**
 
     E-mailová adresu účtu zdroje nebo zařízení.
 
@@ -4364,7 +4364,7 @@ V této verzi jsme přidali nová nastavení pro profil omezení zařízení s�
 - Mobilní síť a připojení
 - Prostředí zamknuté obrazovky
 - Ochrana osobních údajů
-- Hledat
+- Search
 - Windows Spotlight
 - Prohlížeč Microsoft Edge
 

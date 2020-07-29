@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/14/2020
+ms.date: 07/27/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0ad862ff1f04558bd699db2ef0c09d4da4654e23
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 69ef6a0b368a712a35cc377a51325836b6e7aaf6
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461959"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262609"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>Přizpůsobení aplikací Portál společnosti Intune, Portál společnosti webu a Intune
 
@@ -94,7 +94,7 @@ Následující tabulka uvádí podrobnosti konfigurace specifické pro registrac
 
 | Název pole | Maximální délka | Další informace |
 |------------------------------------------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Registrace zařízení | Nelze použít | Určete, jestli a jak se má uživatelům zobrazit výzva k registraci do správy mobilních zařízení. Další informace najdete v tématu [Možnosti nastavení registrace zařízení](../apps/company-portal-app.md#device-enrollment-setting-options). |
+| Registrace zařízení | – | Určete, jestli a jak se má uživatelům zobrazit výzva k registraci do správy mobilních zařízení. Další informace najdete v tématu [Možnosti nastavení registrace zařízení](../apps/company-portal-app.md#device-enrollment-setting-options). |
 
 #### <a name="device-enrollment-setting-options"></a>Možnosti nastavení registrace zařízení
 
@@ -109,8 +109,8 @@ Následující tabulka uvádí podrobnosti konfigurace specifické pro registrac
 |    Možnosti registrace zařízení    |    Popis    |    Výzvy kontrolního seznamu    |    Notification (Oznámení)    |    Stav podrobnosti o zařízení    |    Podrobnosti o stavu aplikace (aplikace, která vyžaduje registraci)    |
 |-----------------------------------|-------------------------------------------------------------------------------------------------------------------------|-------------------------|--------------------|-----------------------------|--------------------------------------------------------------------|
 |    K dispozici, s výzvami    |    Výchozí prostředí s výzvou k registraci ve všech možných umístěních.    |    Ano    |    Ano    |    Ano    |    Ano    |
-|    K dispozici, žádné výzvy    |    Uživatel se může zaregistrovat přes stav v podrobnostech o zařízení pro svoje aktuální zařízení nebo aplikace, které vyžadují registraci.    |    No    |    No    |    Ano    |    Ano    |
-|    Neaktivní    |    Pro uživatele neexistuje žádný způsob, jak ho zaregistrovat.    |    No    |    No    |    No    |    No    |
+|    K dispozici, žádné výzvy    |    Uživatel se může zaregistrovat přes stav v podrobnostech o zařízení pro svoje aktuální zařízení nebo aplikace, které vyžadují registraci.    |    Ne    |    Ne    |    Ano    |    Ano    |
+|    Neaktivní    |    Pro uživatele neexistuje žádný způsob, jak ho zaregistrovat.    |    Ne    |    Ne    |    Ne    |    Ne    |
 
 ### <a name="privacy"></a>Ochrana osobních údajů
 
@@ -127,7 +127,7 @@ Následující tabulka uvádí podrobnosti konfigurace konkrétního oznámení:
 
 | Název pole | Maximální délka | Další informace |
 |------------------------------------------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Odeslání nabízených oznámení uživatelům, když se jejich typ vlastnictví zařízení změní z osobní na firemní (jenom Android a iOS/iPadOS) | Nelze použít | Odeslání nabízeného oznámení do uživatelů pro Android i iOS Portál společnosti, když se jejich typ vlastnictví zařízení změnil z osobních na firemní. Ve výchozím nastavení je toto nabízené oznámení nastaveno na vypnuto. Když je vlastnictví zařízení nastavené na vlastnictví firmy, má Intune větší přístup k zařízení, které zahrnuje plný inventář aplikací, rotaci klíčů trezoru souborů, načtení telefonního čísla a několik vzdálených akcí. Další informace najdete v tématu [Změna vlastnictví zařízení](../enrollment/corporate-identifiers-add.md#change-device-ownership).  |
+| Odeslání nabízených oznámení uživatelům, když se jejich typ vlastnictví zařízení změní z osobní na firemní (jenom Android a iOS/iPadOS) | – | Odeslání nabízeného oznámení do uživatelů pro Android i iOS Portál společnosti, když se jejich typ vlastnictví zařízení změnil z osobních na firemní. Ve výchozím nastavení je toto nabízené oznámení nastaveno na vypnuto. Když je vlastnictví zařízení nastavené na vlastnictví firmy, má Intune větší přístup k zařízení, které zahrnuje plný inventář aplikací, rotaci klíčů trezoru souborů, načtení telefonního čísla a několik vzdálených akcí. Další informace najdete v tématu [Změna vlastnictví zařízení](../enrollment/corporate-identifiers-add.md#change-device-ownership).  |
 
 ### <a name="app-sources"></a>Zdroje aplikací
 
@@ -135,8 +135,8 @@ Můžete zvolit, které další zdroje aplikací se budou zobrazovat v Portál s
 
 | Název pole | Maximální délka | Další informace |
 |------------------------------------------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Podnikové aplikace Azure AD | Nelze použít | Vyberte **Skrýt** nebo **Zobrazit** pro zobrazení **podnikových aplikací Azure AD** v portál společnosti pro každého koncového uživatele. Další informace najdete v tématu [Možnosti nastavení zdroje aplikace](../apps/company-portal-app.md#app-source-setting-options). |
-| Aplikace Office Online | Nelze použít | Vyberte možnost **Skrýt** nebo **Zobrazit** pro zobrazení **online aplikací Office** v portál společnosti pro každého koncového uživatele. Další informace najdete v tématu [Možnosti nastavení zdroje aplikace](../apps/company-portal-app.md#app-source-setting-options). |
+| Podnikové aplikace Azure AD | – | Vyberte **Skrýt** nebo **Zobrazit** pro zobrazení **podnikových aplikací Azure AD** v portál společnosti pro každého koncového uživatele. Další informace najdete v tématu [Možnosti nastavení zdroje aplikace](../apps/company-portal-app.md#app-source-setting-options). |
+| Aplikace Office Online | – | Vyberte možnost **Skrýt** nebo **Zobrazit** pro zobrazení **online aplikací Office** v portál společnosti pro každého koncového uživatele. Další informace najdete v tématu [Možnosti nastavení zdroje aplikace](../apps/company-portal-app.md#app-source-setting-options). |
 
 #### <a name="app-source-setting-options"></a>Možnosti nastavení zdroje aplikace
 
@@ -178,9 +178,9 @@ Intune podporuje ověřování osobních identit (PIV) a služby Common Access C
 
 Další informace o odvozených přihlašovacích údajích pro zařízení s iOS/iPadOS najdete v tématu [použití odvozených přihlašovacích údajů v Microsoft Intune](../protect/derived-credentials.md).
 
-## <a name="dark-mode-for-iosipados-company-portal"></a>Tmavý režim pro iOS/iPadOS Portál společnosti
+## <a name="dark-mode-for-iosipados-and-windows-company-portal"></a>Tmavý režim pro iOS/iPadOS a Windows Portál společnosti
 
-Pro iOS/iPadOS Portál společnosti je k dispozici tmavý režim. Uživatelé můžou stahovat aplikace, spravovat jejich zařízení a získávat v nich podporu v barevném schématu podle nastavení zařízení. Portál společnosti iOS/iPadOS bude automaticky odpovídat nastavení zařízení koncového uživatele pro tmavý nebo lehký režim.
+Pro iOS/iPadOS a Windows Portál společnosti je k dispozici tmavý režim. Uživatelé můžou stahovat aplikace, spravovat jejich zařízení a získávat v nich podporu v barevném schématu podle nastavení zařízení. Systémy iOS/iPadOS a Windows Portál společnosti budou automaticky odpovídat nastavení zařízení koncového uživatele pro tmavý nebo lehký režim.
 
 ## <a name="windows-company-portal-keyboard-shortcuts"></a>Klávesové zkratky v Portálu společnosti pro Windows
 
@@ -188,7 +188,7 @@ Koncoví uživatelé mohou aktivovat akce navigace, aplikace a zařízení ve Wi
 
 V aplikaci Portál společnosti pro Windows jsou k dispozici následující klávesové zkratky.
 
-| Plošný | Popis | Klávesová zkratka |
+| Oblast | Popis | Klávesová zkratka |
 |--------------------|----------------|-------------------|
 | Navigační nabídka | Navigace | Alt+M |
 |  | Domů | Alt+H |

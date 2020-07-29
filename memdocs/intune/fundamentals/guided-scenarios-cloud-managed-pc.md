@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c43b74b6ca20fa3f140ad688be49daa928c54b5f
-ms.sourcegitcommit: 397ec824f1368dcf06c3870c89f52347852062bd
+ms.openlocfilehash: 4991ced4517ffe5902f876c196b47c2c2b50a8a6
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85264035"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262757"
 ---
 # <a name="guided-scenario---cloud-managed-modern-desktop"></a>Scénář s asistencí – moderní plocha spravovaná cloudem
 
@@ -47,7 +47,7 @@ Pokud chcete vyhodnotit cloudovou moderní plochu ve vaší vlastní organizaci,
 
 ## <a name="step-1---introduction"></a>Krok 1 – Úvod
 
-V tomto průvodci nastavíte testovacího uživatele, zaregistrujete zařízení v Intune a nasadíte zařízení s použitím nastavení doporučeného pro Intune i pro Windows 10 a Microsoft 365 aplikace. Pokud se rozhodnete [tuto ochranu povolit v Intune](../protect/advanced-threat-protection.md#enable-microsoft-defender-atp-in-intune), vaše zařízení se taky nakonfiguruje pro rozšířenou ochranu před internetovými útoky v programu Microsoft Defender. Uživatel, kterého jste nastavili, a zařízení, které zaregistrujete, bude přidáno do nových skupin zabezpečení a bude nakonfigurováno s doporučeným nastavením pro zabezpečení a produktivitu.
+V tomto průvodci nastavíte testovacího uživatele, zaregistrujete zařízení v Intune a nasadíte zařízení s použitím nastavení doporučeného pro Intune i pro Windows 10 a Microsoft 365 aplikace. Pokud se rozhodnete [tuto ochranu povolit v Intune](../protect/advanced-threat-protection-configure.md#enable-microsoft-defender-atp-in-intune), vaše zařízení se taky nakonfiguruje pro rozšířenou ochranu před internetovými útoky v programu Microsoft Defender. Uživatel, kterého jste nastavili, a zařízení, které zaregistrujete, bude přidáno do nových skupin zabezpečení a bude nakonfigurováno s doporučeným nastavením pro zabezpečení a produktivitu.
 
 ### <a name="what-you-will-need-to-continue"></a>Co budete potřebovat k pokračování
 
@@ -127,5 +127,5 @@ Jakmile uživatel připojí zařízení k Azure Active Directory, na zařízení
 
 ## <a name="next-steps"></a>Další kroky
 
-- Pokud používáte pokročilou detekci hrozeb v programu Microsoft Defender, vytvořte [zásady dodržování předpisů Intune](../protect/advanced-threat-protection.md#create-and-assign-compliance-policy-to-set-device-risk-level) , které budou vyžadovat analýzu hrozeb v Defenderu, aby splňovaly dodržování předpisů.
-- Vytvořte [zásady podmíněného přístupu na základě zařízení](../protect/advanced-threat-protection.md#create-a-conditional-access-policy) , které zablokují přístup, pokud zařízení nesplňuje podmínky Intune.
+- Pokud používáte pokročilou detekci hrozeb v programu Microsoft Defender, vytvořte [zásady dodržování předpisů Intune](../protect/advanced-threat-protection-configure.md#create-and-assign-compliance-policy-to-set-device-risk-level) , které budou vyžadovat analýzu hrozeb v Defenderu, aby splňovaly dodržování předpisů.
+- Vytvořte [zásady podmíněného přístupu na základě zařízení](../protect/advanced-threat-protection-configure.md#create-a-conditional-access-policy) , které zablokují přístup, pokud zařízení nesplňuje podmínky Intune.

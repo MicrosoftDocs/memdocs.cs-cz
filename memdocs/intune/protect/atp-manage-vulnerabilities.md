@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 72fb278070e2d5b8581fb1b2e263aa06c90b5df9
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: a1d410da2cbedb9bcd2418fac1ddb783529ee8c6
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989753"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262587"
 ---
 # <a name="use-intune-to-remediate-vulnerabilities-identified-by-microsoft-defender-atp"></a>Použití Intune k nápravě ohrožení zabezpečení identifikovaných ATP v programu Microsoft Defender
 
@@ -75,7 +75,7 @@ Příklad pracovního postupu:
 - Konfigurace služby pro připojení k Microsoft Defender ATP.
 - Nasaďte zásady konfigurace zařízení s typem profilu **ATP Microsoft Defender (Windows 10 Desktop)** do zařízení, která budou mít riziko vyhodnocené atp.
 
-  Informace o tom, jak nastavit Intune pro práci s ATP, najdete v tématu [vymáhání dodržování předpisů pro Microsoft Defender ATP s podmíněným přístupem v Intune](advanced-threat-protection.md#enable-microsoft-defender-atp-in-intune).
+  Informace o tom, jak nastavit Intune pro práci s ATP, najdete v tématu [vymáhání dodržování předpisů pro Microsoft Defender ATP s podmíněným přístupem v Intune](advanced-threat-protection-configure.md#enable-microsoft-defender-atp-in-intune).
 
 ## <a name="work-with-security-tasks"></a>Práce s úlohami zabezpečení
 
@@ -103,6 +103,7 @@ Příklad pracovního postupu:
 Po úspěšné opravě se může skóre rizika v ATP na základě nových informací z opravených zařízení vyřadit.
 
 ## <a name="next-steps"></a>Další kroky
+
 Přečtěte si další informace o službě Intune a [ATP Microsoft Defender](advanced-threat-protection.md).
 
 Zkontrolujte ochranu před [mobilními hrozbami](mobile-threat-defense.md)Intune.

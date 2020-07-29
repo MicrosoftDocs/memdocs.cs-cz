@@ -1,11 +1,11 @@
 ---
-title: Vlastní profil VPN pro jednotlivé aplikace pro Android v Microsoft Intune – Azure | Microsoft Docs
-description: Naučte se vytvořit profil sítě VPN pro jednotlivé aplikace pro zařízení s Androidem, která spravuje Microsoft Intune.
+title: Vlastní profil VPN pro jednotlivé aplikace pro správce zařízení s Androidem v Microsoft Intune – Azure | Microsoft Docs
+description: Použijte vlastní profil pro profily sítě VPN pro jednotlivé aplikace na stránce Správce zařízení s Androidem s typy připojení Pulse Secure nebo Citrix VPN v Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 07/22/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,25 +17,28 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a351255fa0574e9b92d096b3895f9469ed9ced2a
-ms.sourcegitcommit: 678104677ad36b789630befdc5e0f1efc572c14b
+ms.openlocfilehash: 3c8e09b6010f7fc846fd81281053eaaa722e5ef4
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86137367"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262791"
 ---
 # <a name="use-a-microsoft-intune-custom-profile-to-create-a-per-app-vpn-profile-for-android-devices"></a>K vytvoření profilu VPN pro aplikaci pro zařízení s Androidem můžete použít vlastní profil Microsoft Intune.
 
 Pro zařízení s Androidem verze 5.0 a novější spravovaná pomocí Intune můžete vytvořit profil VPN pro jednotlivé aplikace. Nejdříve vytvoříte profil VPN, který používá typ připojení Pulse Secure nebo Citrix. Potom vytvoříte vlastní zásadu konfigurace, která přidruží tento profil ke konkrétním aplikacím.
 
-> [!NOTE]
-> Pokud chcete používat síť VPN pro jednotlivé aplikace na zařízeních s Androidem Enterprise, můžete použít i tyto kroky. Doporučuje se ale použít [zásady konfigurace aplikací](../apps/app-configuration-vpn-ae.md) pro klientská aplikace VPN.
+Tato funkce platí pro:
+
+- Správce zařízení s Androidem
+
+Pokud chcete používat síť VPN pro jednotlivé aplikace na zařízeních s Androidem Enterprise, použijte [zásady konfigurace aplikace](../apps/app-configuration-vpn-ae.md). Zásady konfigurace aplikací podporují více klientských aplikací VPN. Na zařízeních s Androidem Enterprise můžete použít kroky v tomto článku. Nedoporučuje se to ale, ale nedoporučujeme jenom připojení Pulse Secure a Citrix VPN.
 
 Po přiřazení zásad pro skupiny zařízení nebo uživatelů Android by uživatelé měli spustit klienta VPN Pulse Secure nebo Citrix. Klient VPN pak umožní jenom provoz ze zadaných aplikací na používání otevřeného připojení VPN.
 
 > [!NOTE]
 >
-> Pro tento profil se podporují jenom připojení Pulse Secure a Citrix.
+> Pro správce zařízení s Androidem jsou podporovány pouze typy připojení Pulse Secure a Citrix. Na zařízeních s Androidem Enterprise použijte [zásady konfigurace aplikací](../apps/app-configuration-vpn-ae.md).
 
 ## <a name="step-1-create-a-vpn-profile"></a>Krok 1: Vytvoření profilu sítě VPN
 
@@ -80,10 +83,9 @@ Po přiřazení zásad pro skupiny zařízení nebo uživatelů Android by uživ
     - **Datový typ**: zadejte **řetězec**.
     - **Hodnota**: zadejte středníkem oddělený seznam balíčků, které chcete přidružit k profilu. Například pokud chcete, aby připojení k síti VPN používal Excel a prohlížeč Google Chrome, zadejte `com.microsoft.office.excel;com.android.chrome` .
 
-    > [!div class="mx-imgBorder"]
-    >![Příklad vlastních zásad sítě VPN pro správce zařízení s Androidem](./media/android-pulse-secure-per-app-vpn/android_per_app_vpn_oma_uri.png)
+    :::image type="content" source="./media/android-pulse-secure-per-app-vpn/android_per_app_vpn_oma_uri.png" alt-text="Vlastní zásady VPN pro aplikace pro správu zařízení s Androidem v Microsoft Intune":::
 
-### <a name="set-your-app-list-to-blacklist-or-whitelist-optional"></a>Nastavení seznamu aplikací jako zakázaných nebo povolených (volitelné)
+### <a name="set-your-blocked-and-allowed-app-list-optional"></a>Nastavení seznamu blokovaných a povolených aplikací (volitelné)
 
 Pomocí hodnoty **zakázané** zadejte seznam aplikací, které *nemůžou* používat připojení VPN. Všechny ostatní aplikace se připojují prostřednictvím VPN. Nebo pomocí hodnoty seznamu **povolených** adres zadejte seznam aplikací, které *můžou* používat připojení VPN. Aplikace, které nejsou v seznamu, se nepřipojují prostřednictvím sítě VPN.
 

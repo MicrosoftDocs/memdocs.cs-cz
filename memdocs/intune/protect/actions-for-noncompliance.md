@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/19/2020
+ms.date: 07/27/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.reviewer: samyada
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9e5786289e54071d54c11fbb08790e95e54a9377
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 2e881dc386fa0fe0b98b5e3d4480e1957c251808
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461857"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262672"
 ---
 # <a name="configure-actions-for-noncompliant-devices-in-intune"></a>Konfigurace akcí pro zařízení nedodržující předpisy v Intune
 
@@ -147,8 +147,12 @@ Pokud chcete svým uživatelům odeslat e-mail, vytvořte šablonu zprávy s ozn
 
 5. V části **Revize + vytvořit**Zkontrolujte konfigurace a ověřte, že je šablona zprávy s oznámením připravená k použití. Vytvoření oznámení dokončíte výběrem **vytvořit** .
 
-> [!NOTE]
-> Můžete také vybrat stávající šablonu oznámení, kterou jste vytvořili dříve, a **Upravit** její informace, abyste šablonu aktualizovali.
+### <a name="view-and-edit-notifications"></a>Zobrazení a úpravy oznámení
+
+Vytvořená oznámení jsou k dispozici na stránce *oznámení zásad dodržování předpisů*  >  *Notifications* . Na stránce můžete vybrat oznámení a zobrazit jeho konfiguraci a:
+
+- Vyberte možnost **Odeslat náhled e-mailu** , abyste odeslali náhled e-mailu s oznámením na účet, který jste použili k přihlášení do Intune. 
+- Vyberte možnost **Upravit** pro *základy* nebo *značky oboru* a proveďte změnu.
 
 ## <a name="add-actions-for-noncompliance"></a>Přidání akcí při nedodržení předpisů
 

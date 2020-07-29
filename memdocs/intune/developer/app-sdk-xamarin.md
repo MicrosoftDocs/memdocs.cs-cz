@@ -15,14 +15,14 @@ ms.assetid: 275d574b-3560-4992-877c-c6aa480717f4
 ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune
+ms.custom: intune, has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b29069d4543d4abb4bc403c446441e181d963bdd
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 13b2c69a0bf4e031717847b700e60e873fbda157
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79327315"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262842"
 ---
 # <a name="microsoft-intune-app-sdk-xamarin-bindings"></a>Xamarinové vazby sady Microsoft Intune App SDK
 
@@ -120,9 +120,9 @@ Ukázkové aplikace zvýrazňování MAM funkcí v aplikacích Xamarin. iOS jsou
 Úplný přehled integrace sady Intune App SDK najdete v [příručce pro vývojáře sady Microsoft Intune App SDK pro Android](app-sdk-android.md). Jak si přečtete příručku a integrujte sadu Intune App SDK s vaší aplikací Xamarin. následující oddíly jsou určené k zdůraznění rozdílů mezi implementací nativní aplikace pro Android vyvinuté v jazyce Java a aplikací Xamarin vyvinutou v jazyce C#. Tyto části by se měly považovat za doplňkové a nemůžou fungovat jako náhrada za celý průvodce.
 
 #### <a name="remapper"></a>Remapper
-Od verze 1.4428.1 se `Microsoft.Intune.MAM.Remapper` balíček dá přidat do aplikace Xamarin. Android jako nástroje pro [vytváření](app-sdk-android.md#build-tooling) , aby se prováděly přemístění třídy, metody a služeb systému mam. Pokud je přemapování zahrnuto, MAM ekvivalentní části přejmenovaných metod a oddílů aplikace MAM budou automaticky provedeny při sestavení aplikace.
+Od verze 1.4428.1 se `Microsoft.Intune.MAM.Remapper` balíček dá přidat do aplikace Xamarin. Android jako [Nástroje pro vytváření](app-sdk-android.md#build-tooling) , aby se prováděly přemístění třídy, metody a služeb systému mam. Pokud je přemapování zahrnuto, MAM ekvivalentní části přejmenovaných metod a oddílů aplikace MAM budou automaticky provedeny při sestavení aplikace.
 
-Chcete-li vyloučit třídu z MAM sjednocení přemapováním, lze do souboru projektu `.csproj` přidat následující vlastnost.
+Chcete-li vyloučit třídu z MAM sjednocení přemapováním, lze do souboru projektu přidat následující vlastnost `.csproj` .
 
 ```xml
   <PropertyGroup>
@@ -137,7 +137,7 @@ Chcete-li vyloučit třídu z MAM sjednocení přemapováním, lze do souboru pr
 V mnoha případech je metoda dostupná ve třídě Androidu označená v náhradní třídě MAM jako finální. Náhradní třída MAM pak poskytuje metodu s podobným názvem (s příponou `MAM`), kterou byste měli přepsat místo toho. Třeba při odvozování od třídy `MAMActivity` musí `Activity` místo přepsání `OnCreate()` a volání `base.OnCreate()` přepsat `OnMAMCreate()` a volat `base.OnMAMCreate()`.
 
 #### <a name="mam-application"></a>[Aplikace MAM](app-sdk-android.md#mamapplication)
-Vaše aplikace musí definovat `Android.App.Application` třídu. Pokud manuálně integruje MAM, musí dědit `MAMApplication`z. Zkontrolujte, že podtřída je správně doplněna o atribut `[Application]` a že přepisuje konstruktor `(IntPtr, JniHandleOwnership)`.
+Vaše aplikace musí definovat `Android.App.Application` třídu. Pokud manuálně integruje MAM, musí dědit z `MAMApplication` . Zkontrolujte, že podtřída je správně doplněna o atribut `[Application]` a že přepisuje konstruktor `(IntPtr, JniHandleOwnership)`.
 
 ```csharp
     [Application]
@@ -171,7 +171,7 @@ MAMPolicyManager.GetPolicy(currentActivity).GetIsSaveToLocationAllowed(SaveLocat
 ```
 
 #### <a name="register-for-notifications-from-the-sdk"></a>[Registrace k oznámením z SDK](app-sdk-android.md#register-for-notifications-from-the-sdk)
-Vaše aplikace se musí zaregistrovat pro oznámení ze sady SDK vytvořením `MAMNotificationReceiver` a registrací v `MAMNotificationReceiverRegistry`. To se provádí tím, že poskytne přijímač a typ oznámení požadované v `App.OnMAMCreate`, jak ukazuje následující příklad:
+Vaše aplikace se musí zaregistrovat pro oznámení ze sady SDK vytvořením `MAMNotificationReceiver` a registrací v `MAMNotificationReceiverRegistry` . To se provádí tím, že poskytne přijímač a typ oznámení požadované v `App.OnMAMCreate` , jak ukazuje následující příklad:
 
 ```csharp
 public override void OnMAMCreate()
@@ -198,7 +198,7 @@ Pro `Xamarin.Forms` aplikace `Microsoft.Intune.MAM.Remapper` balíček provádí
 > [!NOTE]
 > Integraci Xamarin. Forms je třeba provést společně s výše podrobnější integrací Xamarin. Android. Remapovače se chová jinak než u aplikací Xamarin. Forms, takže je nutné ruční MAM náhrady provést.
 
-Po přidání remapovače do projektu budete muset provést přemístění ekvivalenty MAM. Například a `FormsAppCompatActivity` `FormsApplicationActivity` lze nadále používat ve vaší aplikaci, která poskytuje přepsání k `OnCreate` `OnResume` a jsou nahrazena ekvivalenty mam `OnMAMCreate` a `OnMAMResume` v uvedeném pořadí.
+Po přidání remapovače do projektu budete muset provést přemístění ekvivalenty MAM. Například `FormsAppCompatActivity` a `FormsApplicationActivity` lze nadále používat ve vaší aplikaci, která poskytuje přepsání k `OnCreate` a `OnResume` jsou nahrazena ekvivalenty mam `OnMAMCreate` a v `OnMAMResume` uvedeném pořadí.
 
 ```csharp
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
@@ -212,9 +212,9 @@ Po přidání remapovače do projektu budete muset provést přemístění ekviv
 ```
 
 Pokud nejsou náhrady provedeny, může dojít k následujícím chybám při kompilaci, dokud neprovedete náhrady:
-* [Chyba kompilátoru CS0239](https://docs.microsoft.com/dotnet/csharp/misc/cs0239). Tato chyba se obvykle objevuje v tomto formuláři ``'MainActivity.OnCreate(Bundle)': cannot override inherited member 'MAMAppCompatActivityBase.OnCreate(Bundle)' because it is sealed``.
-To je očekáváno, protože když přemapování mění dědění tříd Xamarin, budou provedeny `sealed` určité funkce a místo toho je přidána nová varianta mam k přepsání.
-* [Chyba kompilátoru CS0507](https://docs.microsoft.com/dotnet/csharp/language-reference/compiler-messages/cs0507): Tato chyba se běžně zobrazuje v tomto formuláři ``'MyActivity.OnRequestPermissionsResult()' cannot change access modifiers when overriding 'public' inherited member ...``. Pokud přemapování změní dědění některých tříd Xamarin, budou některé členské funkce změněny na `public`. Pokud přepíšete některou z těchto funkcí, budete muset změnit tyto modifikátory přístupu, aby byly `public` u těchto přepsání také.
+* [Chyba kompilátoru CS0239](https://docs.microsoft.com/dotnet/csharp/misc/cs0239). Tato chyba se obvykle objevuje v tomto formuláři ``'MainActivity.OnCreate(Bundle)': cannot override inherited member 'MAMAppCompatActivityBase.OnCreate(Bundle)' because it is sealed`` .
+To je očekáváno, protože když přemapování mění dědění tříd Xamarin, budou provedeny určité funkce `sealed` a místo toho je přidána nová varianta mam k přepsání.
+* [Chyba kompilátoru CS0507](https://docs.microsoft.com/dotnet/csharp/language-reference/compiler-messages/cs0507): Tato chyba se běžně zobrazuje v tomto formuláři ``'MyActivity.OnRequestPermissionsResult()' cannot change access modifiers when overriding 'public' inherited member ...`` . Pokud přemapování změní dědění některých tříd Xamarin, budou některé členské funkce změněny na `public` . Pokud přepíšete některou z těchto funkcí, budete muset změnit tyto modifikátory přístupu, aby byly u těchto přepsání `public` také.
 
 > [!NOTE]
 > Remapper znovu zapíše závislost, kterou Visual Studio používá pro automatické dokončování IntelliSense. Proto může být nutné znovu načíst a znovu sestavit projekt při přidání nového mapování pro technologii IntelliSense, aby byly změny správně rozpoznány.

@@ -1,12 +1,12 @@
 ---
-title: Konfigurace sítě VPN pro zařízení s Androidem Enterprise
+title: Konfigurace sítě VPN nebo sítě VPN vázané na aplikaci pro zařízení s Androidem Enterprise v Microsoft Intune | Microsoft Docs
 titleSuffix: Microsoft Intune
-description: Použijte zásadu ochrany aplikací v obsahu konfigurace sítě VPN pro zařízení s Androidem Enterprise.
+description: Pomocí zásad konfigurace aplikací přidejte nebo vytvořte profil sítě VPN pro jednotlivé aplikace pro zařízení s Androidem Enterprise v Microsoft Intune.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/01/2020
+ms.date: 07/23/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,155 +18,209 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bcb7bd506d92befa3c73faf7270de28765f5b192
-ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
+ms.openlocfilehash: 7e869ad933e86d9330dbb8d6a26b1886a71cee07
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84347348"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262893"
 ---
-# <a name="configure-a-vpn-for-android-enterprise-devices"></a>Konfigurace sítě VPN pro zařízení s Androidem Enterprise
+# <a name="use-a-vpn-and-per-app-vpn-policy-on-android-enterprise-devices-in-microsoft-intune"></a>Použití zásad sítě VPN a VPN pro aplikaci na zařízeních s Androidem Enterprise v Microsoft Intune
 
-Toto téma popisuje, jak vytvořit zásady konfigurace aplikace, které se dají nasadit ve spojení s klientem VPN na zařízeních s Androidem Enterprise. Tato konfigurace umožní síťovému provozu pro vybrané aplikace přistupovat k podnikovým prostředkům.
+Virtuální privátní sítě (VPN) umožňují uživatelům přístup k prostředkům organizace vzdáleně, včetně domácích, hotelů, kavárnách a dalších. V Microsoft Intune můžete nakonfigurovat klientské aplikace VPN na zařízeních s Androidem Enterprise pomocí zásad konfigurace aplikace. Pak tyto zásady nasaďte s konfigurací sítě VPN do zařízení ve vaší organizaci.
+
+Můžete také vytvořit zásady sítě VPN, které používají konkrétní aplikace. Tato funkce se označuje jako síť VPN pro jednotlivé aplikace. Když je aplikace aktivní, může se připojit k síti VPN a přistupovat k prostředkům prostřednictvím sítě VPN. Pokud aplikace není aktivní, síť VPN se nepoužije.
+
+Tato funkce platí pro:
+
+- Android Enterprise
+
+Existují dva způsoby, jak vytvořit zásady konfigurace aplikace pro klientská aplikace VPN:
+
+- Návrhář konfigurace
+- Data JSON
+
+V tomto článku se dozvíte, jak vytvořit zásadu konfigurace aplikace VPN pro jednotlivé aplikace a síť VPN pomocí obou možností.
 
 > [!NOTE]
-> Platforma Android momentálně nepodporuje automatické spouštění připojení klienta VPN, když je otevřená jedna z vybraných aplikací. Připojení VPN se musí nejdřív iniciovat ručně, nebo můžete použít [vždycky zapnutou síť VPN](../configuration/vpn-settings-android-enterprise.md).
+> Mnoho parametrů konfigurace klienta VPN je podobné. Každá aplikace ale má jedinečné klíče a možnosti. Pokud máte nějaké dotazy, obraťte se na dodavatele sítě VPN.
 
-Požadavky na vytvoření zásady konfigurace pro dosažení úspěšného přístupu k síti VPN zahrnují možnosti zvoleného klienta VPN pro podporu konfiguračních profilů spravované aplikace. Klienti VPN, kteří podporují zásady konfigurace aplikací Intune v současné době, zahrnují:
-- Cisco AnyConnect
-- Citrix SSO
-- F5 Access
-- Globální připojení Palo Alto
-- Pulse Secure
-- SonicWall Mobile Connect
+## <a name="before-you-begin"></a>Než začnete
 
-Pokud metoda pro přístup k tomuto koncovému bodu VPN vyžaduje použití klientských certifikátů, pak je potřeba profily certifikátů vytvořit předem, abyste mohli naplnit požadované hodnoty pro zásady konfigurace aplikace.
+- Android při otevření aplikace automaticky neaktivuje připojení klienta VPN. Připojení VPN musí být spuštěno ručně. Nebo můžete k zahájení připojení použít [vždycky zapnutou síť VPN](../configuration/vpn-settings-android-enterprise.md) .
 
-> [!NOTE]
-> I když scénáře podnikového pracovního profilu Androidu podporují certifikáty SCEP a PKCS, v současné době podporují jenom certifikáty SCEP. 
+- Následující klienti VPN podporují zásady konfigurace aplikací Intune:
 
-Základní postup pro vytváření a testování profilu sítě VPN pro jednotlivé aplikace je následující:
-1.  Vyberte odpovídající aplikaci klienta VPN pro vaši infrastrukturu.
-2.  Identifikujte ID balíčků aplikací pro kancelářské aplikace, které chcete používat s připojením VPN.
-3.  Nasaďte všechny profily certifikátů, které jsou potřebné pro splnění požadavků na ověření připojení VPN. Ujistěte se, že jste ověřili úspěšné nasazení.
-4.  Nasaďte klientskou aplikaci VPN.
-5.  Připravte profil VPN založený na konfiguraci aplikace s využitím informací shromážděných během předchozích kroků.
-6.  Nasaďte nově vytvořený profil sítě VPN.
-7.  Ověřte, že se klientská aplikace VPN úspěšně připojí k infrastruktuře serveru VPN.
-8.  Ověřte, že provoz z vybraných kancelářských aplikací úspěšně provedl přenos sítě VPN, když je aktivní.
+  - Cisco AnyConnect
+  - Citrix SSO
+  - F5 Access
+  - Palo Alto Networks GlobalProtect
+  - Pulse Secure
+  - SonicWall Mobile Connect
+
+- Při vytváření zásad sítě VPN v Intune vyberete jiné klíče ke konfiguraci. Tyto názvy klíčů se liší u různých klientských aplikací VPN. Názvy klíčů ve vašem prostředí se tak můžou lišit od příkladů v tomto článku.
+
+- Návrhář konfigurace a data JSON můžou úspěšně používat ověřování pomocí certifikátů. Pokud ověřování pomocí sítě VPN vyžaduje klientské certifikáty, vytvořte profily certifikátů ještě před vytvořením zásad sítě VPN. Zásady konfigurace aplikace VPN používají hodnoty z profilů certifikátů.
+
+  Zařízení se systémem Android Enterprise Work Profiles podporují certifikáty SCEP a PKCS. Zařízení s pracovními profily v Androidu Enterprise plně spravovaná, vyhrazená a podnikově vlastně podporují jenom certifikáty SCEP. Další informace najdete v tématu [použití certifikátů pro ověřování v Microsoft Intune](../protect/certificates-configure.md).
+
+## <a name="per-app-vpn-overview"></a>Přehled sítě VPN pro jednotlivé aplikace
+
+Při vytváření a testování sítě VPN pro jednotlivé aplikace zahrnuje základní tok následující kroky:
+
+1. Vyberte aplikaci klienta VPN. [Než začnete](#before-you-begin) (v tomto článku), zobrazí seznam podporovaných aplikací.
+2. Získejte ID balíčků aplikací pro aplikace, které budou používat připojení VPN. Postup [získání ID balíčku aplikace](#get-the-app-package-id) (v tomto článku) ukazuje, jak.
+3. Pokud používáte certifikáty k ověření připojení VPN, pak vytvořte a nasaďte profily certifikátů ještě před nasazením zásad sítě VPN. Ujistěte se, že se profily certifikátů úspěšně nasazují. Další informace najdete v tématu [použití certifikátů pro ověřování v Microsoft Intune](../protect/certificates-configure.md).
+4. Přidejte [aplikaci klienta VPN](apps-add-android-for-work.md) do Intune a nasaďte aplikaci pro vaše uživatele a zařízení.
+5. Vytvořte zásady konfigurace aplikace VPN. Použijte v zásadách ID balíčku aplikace a informace o certifikátu.
+6. Nasaďte nové zásady sítě VPN.
+7. Potvrďte, že se aplikace klienta VPN úspěšně připojí k vašemu serveru VPN.
+8. Když je aplikace aktivní, potvrďte, že provoz z vaší aplikace úspěšně prochází přes síť VPN.
 
 ## <a name="get-the-app-package-id"></a>Získat ID balíčku aplikace
 
-Identifikujte ID balíčku pro každou aplikaci, ke které chcete udělit přístup k síti VPN. Pro veřejně dostupné aplikace zvažte získání ID balíčku pro každou aplikaci v Google Play Storu. Zobrazovaná adresa URL pro každou aplikaci zahrnuje ID balíčku. Například ID balíčku pro verzi Android prohlížeče Microsoft Edge je `com.microsoft.emmx` . ID balíčku je součástí adresy URL.
+Získejte ID balíčku pro každou aplikaci, která bude používat síť VPN. Pro veřejně dostupné aplikace můžete získat ID balíčku aplikace v Google Play Storu. Zobrazovaná adresa URL pro každou aplikaci zahrnuje ID balíčku.
 
-![Příklad hledání ID balíčku aplikace](./media/app-configuration-vpn-ae/app-configuration-vpn-ae-01.png)
+V následujícím příkladu je ID balíčku aplikace Microsoft Edge Browser `com.microsoft.emmx` . ID balíčku je součástí adresy URL:
 
-U obchodních aplikací požádejte svého dodavatele nebo vývojový tým aplikace, aby poskytoval příslušné ID balíčku.
+:::image type="content" source="./media/app-configuration-vpn-ae/app-configuration-vpn-ae-01.png" alt-text="Získejte ID balíčku aplikace v adrese URL v Google Play Storu.":::
+
+Pro obchodní aplikace (LOB) Získejte ID balíčku od vývojáře dodavatele nebo aplikace.
 
 ## <a name="certificates"></a>Certifikáty
 
-V tomto tématu předpokládáme, že připojení VPN bude používat ověřování založené na certifikátech a že jste úspěšně nasadili všechny certifikáty v řetězu, které jsou potřeba k úspěšnému ověření klienta. Obvykle to bude klientský certifikát, všechny zprostředkující certifikáty i kořenový certifikát.
-Chcete-li získat další informace o nasazení certifikátů pro Android Enterprise, začněte tím, že si projděte téma [použití certifikátů k ověřování v Microsoft Intune](../protect/certificates-configure.md).
+Tento článek předpokládá, že připojení VPN používá ověřování založené na certifikátech. Také předpokládá, že jste úspěšně nasadili všechny certifikáty v řetězu, které jsou potřeba pro úspěšné ověření klientů. Tento řetěz certifikátů obvykle zahrnuje certifikát klienta, všechny zprostředkující certifikáty a kořenový certifikát.
 
-Po nasazení profilu certifikátu pro ověřování klientů potřebujete nějaké podrobnosti o tomto profilu, abyste mohli vytvořit zásady konfigurace aplikace VPN.
-Pokud nejste obeznámeni s vytvářením konfiguračních profilů aplikací, přečtěte si téma [Přidání zásad konfigurace aplikací pro spravovaná zařízení s Androidem Enterprise](../apps/app-configuration-policies-use-android.md).
- 
+Další informace o certifikátech najdete v tématu [použití certifikátů pro ověřování v Microsoft Intune](../protect/certificates-configure.md).
 
-## <a name="build-the-vpn-profile"></a>Sestavení profilu sítě VPN
+Po nasazení profilu certifikátu pro ověřování klienta se v profilu certifikátu vytvoří token certifikátu. Tento token se používá k vytvoření zásady konfigurace aplikace VPN.
 
-Existují dva způsoby, jak vytvořit zásady konfigurace aplikací pro aplikaci VPN. Můžete použít **Návrhář konfigurace** nebo **datovou položku JSON** . Pokud nejsou v metodě **Návrháře konfigurace** dostupná všechna požadovaná nastavení sítě VPN, je potřeba možnost **data JSON** . Pokud určíte, že je pro podporu nutná možnost JSON, obraťte se na dodavatele sítě VPN. V tomto tématu zobrazíme příklady obou metod. V metodách **JSON data** a **Configuration Designer** můžete úspěšně začlenit ověřování na základě certifikátů. Při použití metody **dat JSON** můžete začít pomocí **Návrháře konfigurace** extrahovat potřebné hodnoty profilu.
+Pokud nejste obeznámeni s vytvářením zásad konfigurace aplikací, přečtěte si téma [Přidání zásad konfigurace aplikací pro spravovaná zařízení s Androidem Enterprise](app-configuration-policies-use-android.md).
 
-> [!NOTE]
-> Přestože je mnoho parametrů konfigurace klienta VPN podobné, každá aplikace má jedinečné klíče a možnosti. Pokud vznikne otázky, obraťte se na dodavatele sítě VPN. 
+## <a name="use-the-configuration-designer"></a>Použití návrháře konfigurace
 
-## <a name="use-the-configuration-designer-flow"></a>Použití toku návrháře konfigurace
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Vyberte **aplikace**  >  **zásady konfigurace aplikace**  >  **Přidat**  >  **spravovaná zařízení**.
+3. V části **základy**zadejte následující vlastnosti:
 
-1.  Začněte přidáním nové zásady konfigurace aplikací pro **spravovaná zařízení**.
-2.  Zadejte vhodný název.
-3.  Jako platformu vyberte **Android Enterprise** .
-4.  Pokud je vyžadováno ověřování založené na certifikátech, vyberte buď možnost **pracovní profil** , nebo pouze **vlastník zařízení** jako typ profilu. **Profil pracovní vlastník a vlastník zařízení** není kompatibilní s ověřováním pomocí certifikátu.
-5.  U cílové aplikace vyberte klienta VPN, který jste nasadili. v tomto příkladu používáme dříve nasazeného klienta Cisco AnyConnect VPN.
+    - **Název**: zadejte popisný název zásady. Své zásady pojmenujte, abyste je později mohli snadno identifikovat. Dobrým názvem zásad je například **Zásada Konfigurace aplikace: zásady sítě VPN Cisco AnyConnect pro zařízení s Androidem Enterprise Work Profile**.
+    - **Popis**: zadejte popis zásady. Toto nastavení není povinné, ale doporučujeme ho zadat.
+    - **Platforma**: vyberte **Android Enterprise**.
+    - **Typ profilu**: vaše možnosti:
+      - **Všechny typy profilů**: Tato možnost podporuje ověřování uživatelského jména a hesla. Pokud používáte ověřování založené na certifikátech, tuto možnost nepoužívejte.
+      - **Jenom plně spravovaný, vyhrazený a podnikový pracovní profil**: Tato možnost podporuje ověřování na základě certifikátů a uživatelské jméno a heslo.
+      - **Pouze pracovní profil**: Tato možnost podporuje ověřování na základě certifikátů a uživatelské jméno a ověřování hesla.
+    - **Cílová aplikace**: vyberte aplikaci klienta VPN, kterou jste předtím přidali. V následujícím příkladu se používá klientská aplikace VPN Cisco AnyConnect:
 
-  ![Příklad vytvoření základních zásad konfigurace aplikace](./media/app-configuration-vpn-ae/app-configuration-vpn-ae-02.png)
+      :::image type="content" source="./media/app-configuration-vpn-ae/app-configuration-vpn-ae-02.png" alt-text="Vytvoření zásady konfigurace aplikace pro konfiguraci sítě VPN nebo sítě VPN pro jednotlivé aplikace v Microsoft Intune":::
 
-6. Na další stránce použijte rozevírací seznam nastavení konfigurace a vyberte možnost **použít návrháře konfigurace** .
+4. Vyberte **Další**.
+5. Do pole **Nastavení**zadejte následující vlastnosti:
 
-  ![Příklad použití nastavení Flow návrháře konfigurace.](./media/app-configuration-vpn-ae/app-configuration-vpn-ae-03.png)
+    - **Formát nastavení konfigurace**: vyberte **použít návrháře konfigurace**:
 
-7. Kliknutím na tlačítko **Přidat** zobrazte seznam konfiguračních klíčů.
-8.  Vyberte všechny konfigurační klíče, které požadujete pro zvolenou konfiguraci. V tomto příkladu používáme minimální seznam pro nastavení AnyConnect VPN, včetně ověřování založeného na certifikátech a sítě VPN pro aplikaci.
+      :::image type="content" source="./media/app-configuration-vpn-ae/app-configuration-vpn-ae-03.png" alt-text="Vytvořte zásadu sítě VPN konfigurace aplikace v Microsoft Intune pomocí návrháře konfigurace – příklad.":::
+
+    - **Přidat**: zobrazí seznam konfiguračních klíčů. Vyberte všechny konfigurační klíče potřebné pro vaši konfiguraci > **OK**.
+
+      V následujícím příkladu jsme vybrali minimální seznam pro AnyConnect VPN, včetně ověřování založeného na certifikátech a sítě VPN pro jednotlivé aplikace:
   
-  <img alt="Example of using the Configuration Designer Flow - Configuration keys." src="./media/app-configuration-vpn-ae/app-configuration-vpn-ae-04.png" width="350">
+      :::image type="content" source="./media/app-configuration-vpn-ae/app-configuration-vpn-ae-04.png" alt-text="Přidejte konfigurační klíče do zásad konfigurace aplikace VPN v Microsoft Intune pomocí návrháře konfigurace – příklad.":::
 
-9. Zadejte odpovídající hodnoty pro **název připojení**, **hostitele**a klíče **protokolu** .
+    - **Hodnota konfigurace**: zadejte hodnoty pro konfigurační klíče, které jste vybrali. Mějte na paměti, že se názvy klíčů liší v závislosti na aplikaci klienta VPN, kterou používáte. V části klíče vybrané v našem příkladu:
 
-  ![Příklad použití výběru konfiguračního klíče toku návrháře konfigurace.](./media/app-configuration-vpn-ae/app-configuration-vpn-ae-05.png)  
+      - **Povolené aplikace sítě VPN pro jednotlivé aplikace**: Zadejte ID balíčků aplikací, které jste shromáždili dříve. Například:
 
-  > [!NOTE]
-  > Názvy těchto klíčů se můžou lišit v závislosti na tom, která klientská aplikace VPN zásadu vytváří.
+        :::image type="content" source="./media/app-configuration-vpn-ae/app-configuration-vpn-ae-06.png" alt-text="V Microsoft Intune pomocí návrháře konfigurace zadejte povolené identifikátory balíčku aplikace do zásad konfigurace aplikace VPN.":::
 
-10. Zadejte ID balíčků aplikací, které jste shromáždili dříve v klíči **povolených aplikací VPN pro aplikaci VPN** .
+      - **Alias certifikátu řetězce klíčů** (volitelné): změňte **typ hodnoty** z **řetězce** na **certifikát**. Vyberte profil certifikátu klienta, který se má používat s ověřováním VPN. Například:
 
-  ![Příklad použití ID balíčku aplikace Flow návrháře konfigurace.](./media/app-configuration-vpn-ae/app-configuration-vpn-ae-06.png)  
+        :::image type="content" source="./media/app-configuration-vpn-ae/app-configuration-vpn-ae-07.png" alt-text="Změňte alias certifikátu klienta řetězce klíčů v zásadách konfigurace aplikace VPN v Microsoft Intune pomocí návrháře konfigurace – příklad.":::
 
-11. V klíčovém **aliasu certifikátu řetězce klíčů** (volitelné) přepněte **typ hodnoty** z **řetězce** na **certifikát**, což vám umožní vybrat správný profil klientského certifikátu, který se má používat s ověřováním VPN.
+      - **Protokol**: Vyberte protokol **SSL** nebo protokol **IPSec** tunelu sítě VPN.
+      - **Název připojení**: zadejte uživatelsky přívětivý název pro připojení VPN. Uživatelé uvidí tento název připojení na svých zařízeních. Zadejte například `ContosoVPN`.
+      - **Hostitel**: zadejte adresu URL názvu hostitele k headend směrovači. Zadejte například `vpn.contoso.com`.
 
-  ![Příklad použití toku návrháře konfigurace – aktualizace aliasu certifikátu řetězce klíčů](./media/app-configuration-vpn-ae/app-configuration-vpn-ae-07.png)  
+        :::image type="content" source="./media/app-configuration-vpn-ae/app-configuration-vpn-ae-05.png" alt-text="Příklady protokolů, názvu připojení a názvů hostitelů v zásadách konfigurace aplikace VPN v Microsoft Intune pomocí návrháře konfigurace":::
 
-12. Na další stránce vyberte všechny příslušné značky oboru.
-13. Na další stránce zadejte příslušné skupiny, do kterých chcete nasadit zásady konfigurace aplikace.
-14. Výběrem **vytvořit** dokončete vytvoření a nasazení zásady.
+6. Vyberte **Další**.
+7. V části **přiřazení**vyberte skupiny, kterým chcete přiřadit zásadu konfigurace aplikace VPN.
 
-  ![Příklad použití návrháře konfigurace tok – přezkoumání.](./media/app-configuration-vpn-ae/app-configuration-vpn-ae-08.png)  
+    Vyberte **Další**.
 
-## <a name="use-the-json-flow"></a>Použití toku JSON
+8. V rámci **Revize a vytvoření**zkontrolujte nastavení. Když vyberete **vytvořit**, vaše změny se uloží a zásady se nasadí do vašich skupin. Tato zásada se taky zobrazuje v seznamu zásady konfigurace aplikací.
 
-Vytvořte dočasný profil:
-1.  Začněte přidáním nové zásady konfigurace aplikací pro **spravovaná zařízení**.
-2.  Zadejte vhodný název (použití tohoto profilu je dočasné, protože ho nebude možné uložit).
-3.  Jako platformu vyberte **Android Enterprise** .
-4.  U cílové aplikace vyberte klienta VPN, který jste nasadili.
-5.  Pokud je vyžadováno ověřování založené na certifikátech, vyberte buď možnost **pracovní profil** , nebo pouze **vlastník zařízení** jako typ profilu. **Profil pracovní vlastník a vlastník zařízení** není kompatibilní s ověřováním pomocí certifikátu.
+    :::image type="content" source="./media/app-configuration-vpn-ae/app-configuration-vpn-ae-08.png" alt-text="V Microsoft Intune příkladu Zkontrolujte zásady konfigurace aplikací pomocí toku návrháře konfigurace.":::
 
-  ![Příklad použití základních informací o toku JSON.](./media/app-configuration-vpn-ae/app-configuration-vpn-ae-09.png)  
+## <a name="use-json"></a>Použít JSON
 
-6.  Na další stránce použijte rozevírací seznam **nastavení konfigurace** a vyberte možnost **použít návrháře konfigurace**.
+Tuto možnost použijte, pokud nemáte, nebo neznáte všechna požadovaná nastavení sítě VPN použitá v **Návrháři konfigurace**. Pokud potřebujete nápovědu, obraťte se na dodavatele sítě VPN.
 
-  ![Příklad použití formátu nastavení konfigurace toku JSON.](./media/app-configuration-vpn-ae/app-configuration-vpn-ae-10.png)  
+### <a name="get-the-certificate-token"></a>Získání tokenu certifikátu
 
-7.  Kliknutím na tlačítko **Přidat** zobrazte seznam konfiguračních klíčů.
-8.  Vyberte jeden z klíčů s **typem hodnoty** **řetězec**a klikněte na **OK**.
+V tomto postupu vytvořte dočasnou zásadu. Zásada se neuloží. Záměrem je zkopírovat token certifikátu. Tento token použijete při vytváření zásad VPN pomocí JSON (další oddíl).
 
-  <img alt="Example of using the JSON Flow - Select a key." src="./media/app-configuration-vpn-ae/app-configuration-vpn-ae-11.png" width="350">
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **aplikace**  >  **zásady konfigurace aplikace**  >  **Přidat**  >  **spravovaná zařízení**.
+2. V části **základy**zadejte následující vlastnosti:
 
-9.  Nyní změňte **typ hodnoty** z **řetězce** na **certifikát**. To vám umožní vybrat správný profil klientského certifikátu, který se má používat s ověřováním VPN.
+    - **Název**: zadejte libovolný název. Tato zásada je dočasná a nebude uložena.
+    - **Platforma**: vyberte **Android Enterprise**.
+    - **Typ profilu**: vyberte **pouze pracovní profil**.
+    - **Cílová aplikace**: vyberte aplikaci klienta VPN, kterou jste předtím přidali.
 
-  ![Příklad použití názvu datového připojení toku JSON.](./media/app-configuration-vpn-ae/app-configuration-vpn-ae-12.png)  
+3. Vyberte **Další**.
+4. Do pole **Nastavení**zadejte následující vlastnosti:
 
-10. Okamžitě změňte **typ hodnoty** zpět na **řetězec**. Všimněte si, že **hodnota konfigurace** se změní na token formátu `{{cert:GUID}}` .
-11. Vyberte a zkopírujte reprezentace certifikátu tokenu do alternativního umístění, jako je textový editor.
+    - **Formát nastavení konfigurace**: vyberte **použít návrháře konfigurace**.
+    - **Přidat**: zobrazí seznam konfiguračních klíčů. Vyberte libovolný klíč s **typem hodnoty** **String**. Vyberte **OK**.
 
-  ![Příklad použití hodnoty konfigurace toku JSON.](./media/app-configuration-vpn-ae/app-configuration-vpn-ae-13.png)  
+      :::image type="content" source="./media/app-configuration-vpn-ae/app-configuration-vpn-ae-11.png" alt-text="V Návrháři konfigurace vyberte libovolný klíč s řetězcovou hodnotou v Microsoft Intune zásady konfigurace aplikace VPN.":::
 
-12. Vyřaďte vytvořený profil – jediným účelem předchozích kroků bylo určit token certifikátu.
+5. Změňte **typ hodnoty** z **řetězce** na **certifikát**. Tento krok vám umožní vybrat správný profil klientského certifikátu, který ověřuje síť VPN:
 
-### <a name="create-the-vpn-profile"></a>Vytvoření profilu sítě VPN
+    :::image type="content" source="./media/app-configuration-vpn-ae/app-configuration-vpn-ae-12.png" alt-text="V Microsoft Intune příkladu změňte název připojení v zásadách konfigurace aplikace VPN.":::
 
-1.  Začněte přidáním nového profilu konfigurace aplikace pro **spravovaná zařízení**.
-2.  Zadejte vhodný název.
-3.  Jako platformu vyberte **Android Enterprise** .
-4.  U cílové aplikace vyberte klienta VPN, který jste nasadili.
-5.  Pokud je vyžadováno ověřování založené na certifikátech, vyberte buď možnost **pracovní profil** , nebo pouze **vlastník zařízení** jako typ profilu. **Profil pracovní vlastník a vlastník zařízení** není kompatibilní s ověřováním pomocí certifikátu.
-6.  Použijte rozevírací seznam **nastavení konfigurace** a vyberte možnost **zadat data JSON**.
-7.  JSON můžete přímo nebo pokud dáváte přednost, pomocí tlačítka **Stáhnout šablonu JSON** Stáhněte a pak upravte šablonu v externím editoru podle vašeho výběru. Buďte opatrní s textovými editory, které mají možnost používat **inteligentní uvozovky**, protože jejich zahrnutí by vygenerovalo neplatný kód JSON.
+6. Okamžitě změňte **typ hodnoty** zpět na **řetězec**. **Hodnota konfigurace** se změní na token `{{cert:GUID}}` :
 
-  ![Příklad použití formátu JSON pro úpravu toku JSON.](./media/app-configuration-vpn-ae/app-configuration-vpn-ae-14.png)  
+    :::image type="content" source="./media/app-configuration-vpn-ae/app-configuration-vpn-ae-13.png" alt-text="Hodnota konfigurace zobrazuje token certifikátu v zásadách konfigurace aplikace VPN v Microsoft Intune":::
 
-8.  Bez ohledu na to, kterou metodu použijete, se po naplnění hodnot požadovaných pro požadovanou konfiguraci všechna zbývající nastavení s hodnotou STRING_VALUE nebo STRING_VALUE v celém formátu JSON musí odebrat.
+7. Zkopírujte tento token certifikátu a vložte ho do jiného souboru, jako je textový editor.
 
-#### <a name="example-json-for-f5-access-vpn"></a>Příklad JSON pro přístup k síti VPN pro F5
+8. Zahodí tuto zásadu. Neukládejte ho. Jediným účelem je zkopírovat a vložit token certifikátu.
 
-Následuje příklad dat JSON pro přístup k síti VPN nástroje F5.
+### <a name="create-the-vpn-policy-using-json"></a>Vytvoření zásady VPN pomocí formátu JSON
+
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **aplikace**  >  **zásady konfigurace aplikace**  >  **Přidat**  >  **spravovaná zařízení**.
+
+2. V části **základy**zadejte následující vlastnosti:
+
+    - **Název**: zadejte popisný název zásady. Své zásady pojmenujte, abyste je později mohli snadno identifikovat. Dobrý název zásady je třeba **Zásada Konfigurace aplikace: zásady sítě VPN pro zařízení s Androidem Enterprise Work Profile v celé společnosti**.
+    - **Popis**: zadejte popis zásady. Toto nastavení není povinné, ale doporučujeme ho zadat.
+    - **Platforma**: vyberte **Android Enterprise**.
+    - **Typ profilu**: vaše možnosti:
+      - **Všechny typy profilů**: Tato možnost podporuje ověřování uživatelského jména a hesla. Pokud používáte ověřování založené na certifikátech, tuto možnost nepoužívejte.
+      - **Jenom plně spravovaný, vyhrazený a podnikový pracovní profil**: Tato možnost podporuje ověřování na základě certifikátů a uživatelské jméno a heslo.
+      - **Pouze pracovní profil**: Tato možnost podporuje ověřování na základě certifikátů a uživatelské jméno a ověřování hesla.
+    - **Cílová aplikace**: vyberte aplikaci klienta VPN, kterou jste předtím přidali. 
+
+3. Vyberte **Další**.
+4. Do pole **Nastavení**zadejte následující vlastnosti:
+
+    - **Formát nastavení konfigurace**: vyberte **zadat data JSON**. JSON můžete přímo upravit.
+    - **Stáhnout šablonu JSON**: tuto možnost použijte, pokud chcete stáhnout a aktualizovat šablonu v jakémkoli externím editoru. Buďte opatrní s textovými editory, které používají **inteligentní uvozovky**, protože můžou vytvořit neplatný kód JSON.
+
+    Po zadání hodnot potřebných pro vaši konfiguraci odeberte všechna nastavení, která mají `"STRING_VALUE"` nebo `STRING_VALUE` .
+
+    :::image type="content" source="./media/app-configuration-vpn-ae/app-configuration-vpn-ae-14.png" alt-text="Příklad použití formátu JSON pro úpravu toku JSON.":::
+
+5. Vyberte **Další**.
+6. V části **přiřazení**vyberte skupiny, kterým chcete přiřadit zásadu konfigurace aplikace VPN.
+
+    Vyberte **Další**.
+
+7. V rámci **Revize a vytvoření**zkontrolujte nastavení. Když vyberete **vytvořit**, vaše změny se uloží a zásady se nasadí do vašich skupin. Tato zásada se taky zobrazuje v seznamu zásady konfigurace aplikací.
+
+#### <a name="json-example-for-f5-access-vpn"></a>Příklad JSON pro přístup k síti VPN pro F5
 
 ``` JSON
 {
@@ -238,14 +292,9 @@ Následuje příklad dat JSON pro přístup k síti VPN nástroje F5.
 }
 ```
 
-## <a name="summary"></a>Souhrn
-
-Použití zásad konfigurace aplikací pro zaregistrovaná zařízení s Androidem Enterprise umožňuje využívat chování sítě VPN pro jednotlivé aplikace bez ohledu na to, že v této platformě není přímá podpora. 
-
 ## <a name="additional-information"></a>Další informace
 
-Související informace najdete v následujících tématech:
-- [Přidání zásad konfigurace aplikací pro spravovaná zařízení s Androidem Enterprise](../apps/app-configuration-policies-use-android.md)
+- [Přidání zásad konfigurace aplikací pro spravovaná zařízení s Androidem Enterprise](app-configuration-policies-use-android.md)
 - [Nastavení zařízení s Androidem Enterprise pro konfiguraci sítě VPN v Intune](../configuration/vpn-settings-android-enterprise.md)
 
 ## <a name="next-steps"></a>Další kroky

@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/08/2020
+ms.date: 07/27/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: shpate
-ms.openlocfilehash: 64a76911725e5d596a80ecc67e42f088666017de
-ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
+ms.openlocfilehash: d120ee0f55651ab1661e426e5889aaf8a4c7e670
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84531889"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262859"
 ---
 # <a name="integrate-windows-hello-for-business-with-microsoft-intune"></a>Integrace Windows Hello pro firmy s Microsoft Intune  
 
@@ -32,13 +32,21 @@ Hello pro firmy je alternativní metoda pro přihlašování pomocí účtu slu�
 
 Intune se s Hello pro firmy integruje dvěma způsoby:
 
-- **Celé tenanta**: zásady Intune se dají vytvořit v části *registrace zařízení*. Tato zásada cílí na celou organizaci (celého tenanta). Podporuje program Windows AutoPilot spouštěný při prvním zapnutí a použije se při registraci zařízení.
-- **Diskrétní skupiny**: můžete nasadit zásady, které spravují Windows Hello pro firmy na zařízení, která jsou zaregistrovaná v Intune. Typy zásad, které mohou spravovat Windows Hello, zahrnují profily *ochrany identit* , které vytvoříte v části *Konfigurace zařízení*, různé *standardní hodnoty zabezpečení*a profily *ochrany účtů* služby Endpoint Security. Tyto typy profilů cílí na přiřazené uživatele nebo zařízení a použijí se při vrácení se změnami.
+- **Celé tenanta** (*Tento článek)*: zásadu Intune je možné vytvořit v části *registrace zařízení*. Tato zásada cílí na celou organizaci (celého tenanta). Podporuje program Windows AutoPilot spouštěný při prvním zapnutí a použije se při registraci zařízení.
+- **Diskrétní skupiny**: u zařízení, která byla dřív zaregistrovaná v Intune, použijte ke [**konfiguraci zařízení**](../protect/identity-protection-configure.md) pro Windows Hello pro firmy profil konfigurace zařízení. Profily Identity Protection mohou cílit na přiřazené uživatele nebo zařízení a použít při vrácení se změnami.
 
-Pomocí tohoto článku můžete vytvořit výchozí zásadu pro službu Windows Hello pro firmy, která bude cílit na celou organizaci. Pokyny k vytváření profilů ochrany identit, které se použití u vybraných skupin uživatelů nebo zařízení, najdete v článku o [konfiguraci profilu ochrany identit](identity-protection-configure.md).  
+Intune navíc podporuje následující typy zásad ke správě některých nastavení pro Windows Hello pro firmy:
+
+- [**Směrné plány zabezpečení**](../protect/security-baselines.md) Následující standardní hodnoty obsahují nastavení pro Windows Hello pro firmy:
+  - [Základní nastavení služby Microsoft Defender Advanced Threat Protection](../protect/security-baseline-settings-defender-atp.md#windows-hello-for-business)
+  - [Nastavení standardních hodnot zabezpečení Windows MDM](../protect/security-baseline-settings-mdm-all.md#windows-hello-for-business)
+- Zásady [**ochrany účtů**](../protect/endpoint-security-account-protection-policy.md) zabezpečení koncového bodu. Zobrazit [nastavení ochrany účtu](../protect/endpoint-security-account-protection-profile-settings.md#account-protection).
+
+Zbývající část tohoto článku se zaměřuje na vytvoření výchozích zásad Windows Hello pro firmy, které cílí na celou organizaci.
 
 > [!IMPORTANT]
 > V desktopových a mobilních verzích Windows 10 před Anniversary Update šlo nastavit dva různé kódy PIN, které se daly použít k ověření prostředků:
+>
 > - **PIN zařízení** se používal k odemknutí zařízení a připojení k prostředkům cloudu.
 > - **Pracovní PIN kód** se použil pro přístup k prostředkům Azure AD na osobních zařízeních uživatelů (BYOD).
 > 

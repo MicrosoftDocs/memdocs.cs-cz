@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: da2f2b1155e6760d23d4ead65899b82e277fbd3e
-ms.sourcegitcommit: 4dc2e3c54a18fca98553dd46703e91819e2433d7
+ms.openlocfilehash: 2cd5e8f6e1975adf33131ca47049eb2d4a6f68cd
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86891543"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262876"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
@@ -290,11 +290,11 @@ Můžete vytvořit a spustit balíčky skriptů na zařízeních koncových uži
 
 #### <a name="use-microsoft-defender-atp-in-compliance-policies-for-android---4425686----"></a>Používání ATP v programu Microsoft Defender v zásadách dodržování předpisů pro Android<!-- 4425686  -->
 
-Teď můžete pomocí Intune připojit [zařízení s Androidem k Rozšířené ochraně před internetovými útoky v programu Microsoft Defender](../protect/advanced-threat-protection.md#onboard-android-devices) (MicrosoftDefender ATP). Po zaregistrování registrovaných zařízení můžou zásady dodržování předpisů pro Android využívat signály *úrovně hrozby z ochrany* ATP v programu Microsoft Defender. Jedná se o stejné signály, které jste předtím mohli použít pro zařízení s Windows 10.
+Teď můžete pomocí Intune připojit [zařízení s Androidem k Rozšířené ochraně před internetovými útoky v programu Microsoft Defender](../protect/advanced-threat-protection-configure.md#onboard-devices) (MicrosoftDefender ATP). Po zaregistrování registrovaných zařízení můžou zásady dodržování předpisů pro Android využívat signály *úrovně hrozby z ochrany* ATP v programu Microsoft Defender. Jedná se o stejné signály, které jste předtím mohli použít pro zařízení s Windows 10.
 
 #### <a name="configure-defender-atp-web-protection-for-android-devices---6185563----"></a>Konfigurace webové ochrany v programu Defender ATP pro zařízení s Androidem<!-- 6185563  -->
 
-Při použití rozšířené ochrany před internetovými útoky v programu Microsoft Defender (Microsoft Defender ATP) pro zařízení s Androidem můžete [nakonfigurovat ochranu ATP na webu Microsoft Defender ATP](../protect/advanced-threat-protection.md#configure-web-protection-on-devices-that-run-android) , aby se zakázala funkce vyhledávání phishing, nebo zakázat kontrolu v používání sítě VPN.
+Při použití rozšířené ochrany před internetovými útoky v programu Microsoft Defender (Microsoft Defender ATP) pro zařízení s Androidem můžete [nakonfigurovat ochranu ATP na webu Microsoft Defender ATP](../protect/advanced-threat-protection-manage-android.md) , aby se zakázala funkce vyhledávání phishing, nebo zakázat kontrolu v používání sítě VPN.
 
 V závislosti na tom, jak se zařízení s Androidem zaregistruje v Intune, jsou k dispozici tyto možnosti:
 

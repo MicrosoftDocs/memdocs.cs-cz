@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/13/2020
+ms.date: 07/27/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8404c475bc5a84177abeba3a96fb613f04b9aa2b
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: bc8fb5b50475c523741128d64582be29d4bf5ffe
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461942"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262655"
 ---
 # <a name="add-managed-google-play-apps-to-android-enterprise-devices-with-intune"></a>Přidání spravovaných aplikací Google Play do zařízení s Androidem Enterprise pomocí Intune
 
@@ -122,6 +122,8 @@ Existují dva způsoby, jak přidat obchodní aplikace do spravovaných Google P
 5. V okně Google Play vyberte **soukromé aplikace** (vedle ikony *zámku* ). 
 6. Kliknutím na tlačítko **"+"** v pravém dolním rohu přidejte novou aplikaci.
 7. Přidejte **název** aplikace a klikněte na **nahrát APK** přidat balíček aplikace APK.
+   > [!NOTE]
+   > Název balíčku vaší aplikace musí být globálně jedinečný v Google Play (nejenom jedinečný v rámci vašeho podnikového nebo Google Playho vývojářského účtu). V opačném případě obdržíte **odeslání nového souboru APK s jinou chybou názvu balíčku** .
 8. Klikněte na **Vytvořit**.
 9. Pokud jste dokončili přidávání aplikací, zavřete podokno spravované Google Play.
 10. V podokně **aplikace aplikace** klikněte na **synchronizovat** a synchronizujte se se službou Managed Google Play Service. 

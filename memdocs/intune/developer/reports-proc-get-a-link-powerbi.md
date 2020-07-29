@@ -6,7 +6,7 @@ keywords: Intune Data Warehouse
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/29/2020
+ms.date: 07/27/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c7ba3c7397298ea25eecc1147319760892434720
-ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
+ms.openlocfilehash: a6cabb4f89d1ad105b88f54ac7a1c43405d1a65d
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84270986"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262570"
 ---
 # <a name="connect-to-the-data-warehouse-with-power-bi"></a>Připojení k datovému skladu pomocí Power BI
 
@@ -52,6 +52,9 @@ Nainstalujte nejnovější verzi [Power BI Desktop](https://aka.ms/intune/datawa
 ## <a name="load-the-data-and-reports-using-the-power-bi-intune-compliance-data-warehouse-app"></a>Načtěte data a sestavy pomocí Power BI aplikace datového skladu dodržování předpisů Intune.
 
 Aplikace Power BI [Intune pro dodržování předpisů (datový sklad)](https://aka.ms/intune/datawarehouseapi/getpowerbiapp) obsahuje informace pro vašeho tenanta a sadu předem připravených sestav založených na datovém modelu datového skladu.
+
+> [!NOTE]
+> Aplikace datového skladu dodržování předpisů v Intune Power BI není pro cloudová prostředí Azure Government podporovaná.
 
 1. Přejděte na stránku **AppSource** aplikace pro [dodržování předpisů v Intune (datový sklad)](https://aka.ms/intune/datawarehouseapi/getpowerbiapp) , abyste zahájili proces instalace.
 2. Klikněte na tlačítko **získat nyní** a potom klikněte na tlačítko **pokračovat**.

@@ -17,19 +17,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dd4ece62215d48f3481923e099feecc992d7aa6d
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: b47361bf4812de91d12c779a6eb58fef35e9d0f2
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093369"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262043"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developers-testing-guide"></a>Průvodce testováním sady Microsoft Intune App SDK pro vývojáře v Androidu
 
 Průvodce testováním sady Microsoft Intune App SDK pro Android je navržený tak, aby vám pomohla při testování aplikace pro Android spravované v Intune.
 
 ## <a name="demo-tenant-setup"></a>Ukázková instalace tenanta
-Pokud ještě nemáte tenanta s vaší společností, můžete vytvořit ukázkového tenanta s předem generovanými daty nebo bez něj. Pro přístup k Microsoft CDX se musíte zaregistrovat jako [partner Microsoftu](https://partner.microsoft.com/en-us/business-opportunities/why-microsoft) . Vytvoření nového účtu:
+Pokud ještě nemáte tenanta s vaší společností, můžete vytvořit ukázkového tenanta s předem generovanými daty nebo bez něj. Pro přístup k Microsoft CDX se musíte zaregistrovat jako [partner Microsoftu](https://partner.microsoft.com/business-opportunities/why-microsoft) . Vytvoření nového účtu:
 1. Přejděte na [web pro vytvoření tenanta Microsoft CDX](https://cdx.transform.microsoft.com/my-tenants/create-tenant) a vytvořte tenanta Microsoft 365 Enterprise.
 2. [Nastavte Intune](../fundamentals/setup-steps.md) pro povolení správy mobilních zařízení (MDM).
 3. [Vytvořte uživatele](../fundamentals/users-add.md).
