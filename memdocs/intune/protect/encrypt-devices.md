@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/18/2020
+ms.date: 07/28/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 16a2558a0f4b002528e749f4a66d3341e83c8576
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: a9fad599342cf358409c7be09ebb8b4eb1c0c4a5
+ms.sourcegitcommit: e8076576f5c0ea7e72358d233782f8c38c184c8f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989665"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87334619"
 ---
 # <a name="manage-bitlocker-policy-for-windows-10-in-intune"></a>Správa zásad BitLockeru pro Windows 10 v Intune
 
@@ -79,7 +79,7 @@ Použijte jeden z následujících postupů k vytvoření typu zásad, které d�
 
 5. Na stránce **obor (značky)** zvolte **Vybrat značky oboru** a otevřete tak podokno vybrat značky, abyste přiřadili značky oboru k profilu.
 
-   Pokračujte výběrem tlačítka **Next** (Další).
+   Pokračujte výběrem tlačítka **Další**.
 
 6. Na stránce **přiřazení** vyberte skupiny, které získají tento profil. Další informace o přiřazování profilů najdete v tématu Přiřazení profilů uživatelů a zařízení.
 
@@ -162,17 +162,17 @@ Informace pro BitLocker se získávají pomocí [poskytovatele služby BitLocker
 
 Pomocí akce zařízení v Intune můžete vzdáleně otočit obnovovací klíč BitLockeru zařízení se systémem Windows 10 verze 1909 nebo novějším.
 
-#### <a name="prerequisites"></a>Požadavky
+#### <a name="prerequisites"></a>Předpoklady
 
 Zařízení musí splňovat následující požadavky, aby podporovaly rotaci obnovovacího klíče nástroje BitLocker:
 
 - Zařízení musí používat Windows 10 verze 1909 nebo novější.
 
-- Zařízení, která jsou připojená k Azure AD a která jsou připojená hybridem, musí mít podporu pro rotaci klíčů:
+- Zařízení připojená k Azure AD, která jsou připojená k Azure AD, musí mít podporu pro rotaci klíčů povolenou pomocí konfigurace zásad BitLockeru:
 
-  - **Otočení hesla pro obnovení na základě klienta**
-
-  Toto nastavení se vztahuje na *šifrování Windows* jako součást zásad konfigurace zařízení pro Windows 10 Endpoint Protection.
+  - **Otočení hesla pro obnovení na základě klienta** pro *umožnění rotace na zařízeních připojených k Azure AD* nebo *umožnění rotace na Azure AD a zařízeních s hybridem připojená*
+  - **Uložit informace pro obnovení BitLockeru do Azure Active Directory** *povolených*
+  - **Před povolením BitLockeru ukládat informace pro obnovení do Azure Active Directory** *Required*
 
 #### <a name="to-rotate-the-bitlocker-recovery-key"></a>Otočení obnovovacího klíče BitLockeru
 

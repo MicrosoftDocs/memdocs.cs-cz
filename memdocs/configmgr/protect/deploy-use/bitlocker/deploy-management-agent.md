@@ -2,7 +2,7 @@
 title: Nasazení správy nástroje BitLocker
 titleSuffix: Configuration Manager
 description: Nasazení agenta pro správu nástroje BitLocker pro Configuration Manager klientů a služby obnovení do bodů správy
-ms.date: 04/01/2020
+ms.date: 07/27/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 39aa0558-742c-4171-81bc-9b1e6707f4ea
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4a050ab523730adbfdd2ecf541557fabbf95081b
-ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
+ms.openlocfilehash: 786a7a528c027ab46237dac92378224705b0e026
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84715692"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262825"
 ---
 # <a name="deploy-bitlocker-management"></a>Nasazení správy nástroje BitLocker
 
@@ -179,7 +179,13 @@ Pokud aktuálně používáte nástroj Microsoft BitLocker Administration and Mo
 
 - Nastavení správy BitLockeru jsou plně kompatibilní s nastavením zásad skupiny MBAM. Pokud zařízení dostanou nastavení zásad skupiny i zásady Configuration Manager, nakonfigurujte je tak, aby odpovídaly.
 
+  > [!NOTE]
+  > Pokud pro samostatnou MBAM existuje nastavení zásad skupiny, přepíše se ekvivalentní nastavení, které se Configuration Manager. Samostatná MBAM používá zásady skupiny domény, zatímco Configuration Manager nastavuje místní zásady pro správu BitLockeru. Zásady domény budou přepisovat místní Configuration Manager zásady správy BitLockeru. Pokud se samostatná zásada skupiny MBAM domény neshoduje se zásadou Configuration Manager, Configuration Managerá Správa BitLockeru se nezdaří. Pokud například zásada skupiny domény nastaví samostatný server MBAM pro službu Key Recovery Services, Configuration Manager Správa BitLockeru nemůže pro bod správy nastavit stejné nastavení. Toto chování způsobí, že klienti nebudou hlásit své klíče pro obnovení do Configuration Manager služby BitLocker Key Management Key Recovery v bodu správy.
+
 - Configuration Manager neimplementuje všechna nastavení zásad skupiny MBAM. Pokud v zásadách skupiny nakonfigurujete další nastavení, agent pro správu BitLockeru na Configuration Manager klientech respektují tato nastavení.
+
+  > [!IMPORTANT]
+  > Nenastavte zásady skupiny pro nastavení, které již určuje Configuration Manager Správa BitLockeru. Nastavte jenom zásady skupiny pro nastavení, která v Configuration Manager správě BitLockeru momentálně neexistují. Configuration Manager verze 2002 má paritu funkcí se samostatnou MBAM. U Configuration Manager verze 2002 a novějších by ve většině případů nemělo existovat žádný důvod k nastavení zásad skupiny domény pro konfiguraci zásad BitLockeru. Aby nedocházelo ke konfliktům a problémům, vyhněte se použití zásad skupiny pro BitLocker. Nakonfigurujte všechna nastavení prostřednictvím Configuration Manager zásady správy BitLockeru.
 
 ### <a name="tpm-password-hash"></a>Hodnota hash hesla TPM
 

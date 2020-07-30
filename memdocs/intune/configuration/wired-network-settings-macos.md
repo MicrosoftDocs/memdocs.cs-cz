@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/11/2020
+ms.date: 07/28/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,16 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 41b11a29cdfd61382e68130479a1ab465bf354c6
-ms.sourcegitcommit: 3217778ebe7fd0318810696e8931e427a85da897
+ms.openlocfilehash: 1da738611dd5fe114054645170d2b49ef12f0523
+ms.sourcegitcommit: e8076576f5c0ea7e72358d233782f8c38c184c8f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85107403"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87334602"
 ---
 # <a name="add-wired-network-settings-for-macos-devices-in-microsoft-intune"></a>Přidat nastavení pevné sítě pro zařízení macOS v Microsoft Intune
 
-Můžete vytvořit profil s konkrétními nastaveními drátové sítě a potom tento profil nasadit do zařízení macOS. Microsoft Intune nabízí mnoho funkcí, včetně ověřování ve vaší síti, přidání certifikátu PKCS nebo SCEP a dalších.
+Můžete vytvořit profil s konkrétními nastaveními drátové sítě a potom tento profil nasadit do zařízení macOS. Microsoft Intune nabízí mnoho funkcí, včetně ověřování ve vaší síti, přidání certifikátu SCEP a dalších.
 
 Tento článek popisuje nastavení, která můžete konfigurovat.
 
@@ -63,7 +63,7 @@ Tento článek popisuje nastavení, která můžete konfigurovat.
 
     - **Vztah důvěryhodnosti serveru**  -  **Názvy certifikačních serverů**: **přidejte** jeden nebo více běžných názvů používaných v certifikátech vydaných vaší důvěryhodnou certifikační autoritou (CA). Když zadáte tyto informace, můžete obejít okno dynamického vztahu důvěryhodnosti zobrazené na zařízeních uživatelů při připojování k této síti.
     - **Kořenový certifikát pro ověření serveru**: Vyberte existující profil důvěryhodného kořenového certifikátu. Když se klient připojí k síti, zobrazí se tento certifikát serveru. Slouží k ověření připojení.
-    - **Ověřování klienta**  -  **Certifikáty**: vyberte profil certifikátu SCEP nebo PKCS klienta, který je také nasazený do zařízení. Tento certifikát představuje identitu, kterou zařízení předloží serveru pro ověření připojení.
+    - **Ověřování klienta**  -  **Certifikáty**: vyberte profil klientského certifikátu SCEP, který je taky nasazený do zařízení. Tento certifikát představuje identitu, kterou zařízení předloží serveru pro ověření připojení. Certifikáty PKCS se nepodporují.
     - **Ochrana identity (vnější identita)**: Zadejte text odeslaný v odpovědi na žádost o identitu EAP. Tento text může být libovolná hodnota, například `anonymous`. Při ověřování se nejdřív pošle tato anonymní identita a po ní následuje skutečná identifikace poslaná přes zabezpečené tunelové propojení.
 
   - **EAP-TTLS**: Dále zadejte:
@@ -77,7 +77,7 @@ Tento článek popisuje nastavení, která můžete konfigurovat.
           - **Protokol CHAP (Challenge Handshake Authentication Protocol)**
           - **Protokol Microsoft CHAP (MS-CHAP)**
           - **Protokol Microsoft CHAP verze 2 (MS-CHAP v2)**
-      - **Certifikáty**: vyberte profil certifikátu SCEP nebo PKCS klienta, který je také nasazený do zařízení. Tento certifikát představuje identitu, kterou zařízení předloží serveru pro ověření připojení.
+      - **Certifikáty**: vyberte profil klientského certifikátu SCEP, který je taky nasazený do zařízení. Tento certifikát představuje identitu, kterou zařízení předloží serveru pro ověření připojení. Certifikáty PKCS se nepodporují.
       - **Ochrana identity (vnější identita)**: Zadejte text odeslaný v odpovědi na žádost o identitu EAP. Tento text může být libovolná hodnota, například `anonymous`. Při ověřování se nejdřív pošle tato anonymní identita a po ní následuje skutečná identifikace poslaná přes zabezpečené tunelové propojení.
 
   - **LEAP**
@@ -88,7 +88,7 @@ Tento článek popisuje nastavení, která můžete konfigurovat.
     - **Kořenový certifikát pro ověření serveru**: Vyberte existující profil důvěryhodného kořenového certifikátu. Když se klient připojí k síti, zobrazí se tento certifikát serveru. Slouží k ověření připojení.
     - **Ověřování klientů**: vyberte **metodu ověřování**. Možnosti:
       - **Uživatelské jméno a heslo**: vyzve uživatele k ověření připojení a zadáním uživatelského jména a hesla.
-      - **Certifikáty**: vyberte profil certifikátu SCEP nebo PKCS klienta, který je také nasazený do zařízení. Tento certifikát představuje identitu, kterou zařízení předloží serveru pro ověření připojení.
+      - **Certifikáty**: vyberte profil klientského certifikátu SCEP, který je taky nasazený do zařízení. Tento certifikát představuje identitu, kterou zařízení předloží serveru pro ověření připojení. Certifikáty PKCS se nepodporují.
       - **Ochrana identity (vnější identita)**: Zadejte text odeslaný v odpovědi na žádost o identitu EAP. Tento text může být libovolná hodnota, například `anonymous`. Při ověřování se nejdřív pošle tato anonymní identita a po ní následuje skutečná identifikace poslaná přes zabezpečené tunelové propojení.
 
 ## <a name="next-steps"></a>Další kroky

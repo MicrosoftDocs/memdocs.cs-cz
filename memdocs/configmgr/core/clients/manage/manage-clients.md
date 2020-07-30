@@ -10,12 +10,12 @@ ms.assetid: 3986a992-c175-4b6f-922e-fc561e3d7cb7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7b9111e3be82424425561e0a664fee955d73ee63
-ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
+ms.openlocfilehash: b6d1ee82e116a6d4375e37ccca84c8b35707f8e1
+ms.sourcegitcommit: e8076576f5c0ea7e72358d233782f8c38c184c8f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84270816"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87334585"
 ---
 # <a name="how-to-manage-clients-in-configuration-manager"></a>Správa klientů v nástroji Configuration Manager
 
@@ -249,22 +249,24 @@ Výchozí umístění mezipaměti klienta Configuration Manager je `%windir%\ccm
 
 ### <a name="about-the-client-cache"></a>O mezipaměti klienta  
 
-Klient Configuration Manager stáhne obsah pro požadovaný software krátce po přijetí nasazení, ale čeká na jeho spuštění až do naplánovaného času nasazení. V naplánovaném čase klient Configuration Manager zkontroluje, zda je obsah v mezipaměti k dispozici. Pokud je obsah v mezipaměti a jedná se o správnou verzi, klient použije obsah uložený v mezipaměti. Pokud se požadovaná verze změny obsahu nebo pokud klient odstraní obsah, aby uvolnil místo pro jiný balíček, klient stáhne obsah do mezipaměti znovu.  
+Klient Configuration Manager stáhne obsah pro požadovaný software krátce po dostupném čase nasazení, ale počká ho spustit až do naplánovaného času nasazení. V naplánovaném čase klient Configuration Manager zkontroluje, zda je obsah v mezipaměti k dispozici. Pokud je obsah v mezipaměti a jedná se o správnou verzi, klient použije obsah uložený v mezipaměti. Pokud se požadovaná verze změny obsahu nebo pokud klient odstraní obsah, aby uvolnil místo pro jiný balíček, klient stáhne obsah do mezipaměti znovu.  
 
 Pokud se klient pokusí stáhnout obsah pro program nebo aplikaci, která je větší než velikost mezipaměti, nasazení se nezdařilo z důvodu nedostatečné velikosti mezipaměti. Klient generuje stavovou zprávu 10050 pro nedostatečnou velikost mezipaměti. Pokud velikost mezipaměti později zvětšíte, výsledek je následující:  
 
 - Požadovaný program: klient se automaticky znovu nepokouší stáhnout obsah. Znovu nasaďte balíček a program do klienta.  
 - Požadovaná aplikace: klient se automaticky pokusí stáhnout obsah při stahování zásad klienta.  
 
-Pokud se klient pokusí stáhnout balíček, který je menší než velikost mezipaměti, ale mezipaměť je plná, všechna *požadovaná* nasazení budou pokračovat až do:
+Pokud se klient pokusí stáhnout obsah, který je menší než velikost mezipaměti, ale mezipaměť je plná, všechna *požadovaná* nasazení budou pokračovat až do:
 
 - K dispozici je místo v mezipaměti.
 - Doba stahování vypršela.
 - Počet opakování dosáhne svého limitu.
 
-Pokud později zvětšíte velikost mezipaměti, klient se pokusí stáhnout balíček znovu během intervalu příštího opakování. Klient se pokusí stáhnout obsah každé čtyři hodiny, dokud nezkusí o 18 časů.  
+Pokud později zvětšíte velikost mezipaměti, pokusí se klient stáhnout obsah znovu během intervalu příštího opakování. Klient se pokusí stáhnout obsah každé čtyři hodiny, dokud nezkusí o 18 časů.  
 
-Obsah uložený v mezipaměti není automaticky odstraněn. Zůstane v mezipaměti alespoň jeden den po použití tohoto obsahu klientem. Pokud nakonfigurujete vlastnosti balíčku s možností zachovat obsah v mezipaměti klienta, klient je automaticky neodstraní. Pokud je místo mezipaměti používáno balíčky, které byly staženy během posledních 24 hodin, a klient musí stáhnout nové balíčky, buď zvětšete velikost mezipaměti, nebo vyberte možnost odstranění trvalého obsahu mezipaměti.  
+Obsah uložený v mezipaměti není automaticky odstraněn. Zůstane v mezipaměti alespoň jeden den po použití tohoto obsahu klientem. Pokud nakonfigurujete obsah s možností zachovat obsah v mezipaměti klienta, klient ho automaticky neodstraní. Pokud je místo mezipaměti používáno obsahem, který byl stažen během posledních 24 hodin, a klient musí stáhnout nový obsah, buď zvětšete velikost mezipaměti, nebo vyberte možnost odstranění trvalého obsahu mezipaměti.
+
+V případě aplikací pouze v případě, že obsah pro související nasazení v tuto mezipaměť aktuálně existuje, klient stáhne pouze nové nebo změněné soubory. Související nasazení zahrnují pro starší revize stejného typu nasazení a nahrazené aplikace.
 
 Pomocí následujících postupů lze nakonfigurovat mezipaměť klienta během ruční instalace klienta, nebo až když je klient nainstalován.  
 
@@ -283,7 +285,7 @@ Ze zdrojového umístění instalace spusťte příkaz CCMSetup.exe a zadejte n�
     > [!NOTE]
     > Místo SMSCACHESIZE použijte nastavení velikosti mezipaměti dostupné v **nastavení klienta** v konzole Configuration Manager. Další informace najdete v tématu [nastavení mezipaměti klienta](../deploy/about-client-settings.md#client-cache-settings).
 
-Další informace o tom, jak používat tyto vlastnosti příkazového řádku pro CCMSetup. exe, najdete v tématu [informace o vlastnostech instalace klienta](../deploy/about-client-installation-properties.md).
+Další informace o tom, jak používat tyto vlastnosti příkazového řádku pro CCMSetup.exe, najdete v tématu [informace o vlastnostech instalace klienta](../deploy/about-client-installation-properties.md).
 
 ### <a name="configure-the-cache-during-client-push-installation"></a>Konfigurace mezipaměti během nabízené instalace klienta  
 
@@ -304,7 +306,7 @@ Další informace o tom, jak používat tyto vlastnosti příkazového řádku p
      > [!NOTE]
      > Místo SMSCACHESIZE použijte nastavení velikosti mezipaměti dostupné v **nastavení klienta** v konzole Configuration Manager. Další informace najdete v tématu [nastavení mezipaměti klienta](../deploy/about-client-settings.md#client-cache-settings).
 
-     Další informace o tom, jak používat tyto vlastnosti příkazového řádku pro CCMSetup. exe, najdete v tématu [informace o vlastnostech instalace klienta](../deploy/about-client-installation-properties.md).  
+     Další informace o tom, jak používat tyto vlastnosti příkazového řádku pro CCMSetup.exe, najdete v tématu [informace o vlastnostech instalace klienta](../deploy/about-client-installation-properties.md).  
 
 ### <a name="configure-the-cache-on-the-client-computer"></a>Konfigurace mezipaměti v klientském počítači  
 
@@ -321,12 +323,12 @@ Upravte velikost mezipaměti klienta bez nutnosti přeinstalovat klienta. Použi
 
 ## <a name="uninstall-the-client"></a><a name="BKMK_UninstalClient"></a>Odinstalace klienta
 
-Z počítače můžete odinstalovat Configuration Manager klientský software pomocí nástroje **CCMSetup. exe** s vlastností **/Uninstall** . Spusťte program CCMSetup. exe v samostatném počítači z příkazového řádku nebo nasaďte balíček pro odinstalaci klienta pro kolekci počítačů.  
+Configuration Manager klientský software můžete odinstalovat z počítače pomocí **CCMSetup.exe** s vlastností **/Uninstall** . Spusťte CCMSetup.exe v jednotlivém počítači z příkazového řádku nebo nasaďte balíček pro odinstalaci klienta pro kolekci počítačů.  
 
 > [!NOTE]  
 > Klienta Configuration Manager nelze odinstalovat z mobilního zařízení. Pokud je nutné odebrat klienta Configuration Manager z mobilního zařízení, je nutné zařízení vymazat, čímž dojde k odstranění všech dat v mobilním zařízení.  
 
-1. Otevřete příkazový řádek systému Windows jako správce. Změňte složku na umístění, ve kterém je umístěn program CCMSetup. exe, například:`cd %windir%\ccmsetup`
+1. Otevřete příkazový řádek systému Windows jako správce. Změňte složku na umístění, ve kterém je umístěn CCMSetup.exe, například:`cd %windir%\ccmsetup`
 
 2. Spusťte následující příkaz:`CCMSetup.exe /uninstall`
 

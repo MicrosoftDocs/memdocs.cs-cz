@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 24663f8338f03fab53369689b4a61b5bd1bec63f
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 1d52e968b5e35490027c7887b597608e25476e24
+ms.sourcegitcommit: 19f5838eb3eb8724d22382f36f9564ac9a978b97
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83991209"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87365453"
 ---
 # <a name="set-up-per-app-virtual-private-network-vpn-for-iosipados-devices-in-intune"></a>Nastavení virtuální privátní sítě (VPN) pro jednotlivé aplikace v Intune pro zařízení s iOS/iPadOS
 
@@ -38,6 +38,9 @@ Zkontrolujte si dokumentaci poskytovatele sítě VPN a zjistěte, jestli vaše s
 V tomto článku se dozvíte, jak vytvořit profil sítě VPN pro jednotlivé aplikace a přiřadit tento profil k vašim aplikacím. Pomocí těchto kroků můžete pro koncové uživatele vytvořit bezproblémové prostředí sítě VPN pro jednotlivé aplikace. U většiny sítí VPN, které podporují síť VPN pro jednotlivé aplikace, uživatel otevře aplikaci a automaticky se připojí k síti VPN.
 
 Některé sítě VPN umožňují ověřování uživatelského jména a hesla u sítě VPN pro jednotlivé aplikace. To znamená, že uživatelé musí zadat uživatelské jméno a heslo pro připojení k síti VPN.
+
+> [!IMPORTANT]
+> Při použití ověřování založeného na certifikátech se v iOS 13 nebrání profily sítě VPN pro jednotlivé aplikace v připojení k prostředím pro zápis uživatelů. Apple plánuje tuto opravu v budoucí verzi iOS.
 
 > [!IMPORTANT]
 > SÍŤ VPN pro jednotlivé aplikace není pro profily IKEv2 VPN pro iOS/iPadOS podporovaná.

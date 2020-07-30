@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/23/2020
+ms.date: 07/29/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,16 +18,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1b9aedb7595db5ff0f40f2d12b8cee985fb7be99
-ms.sourcegitcommit: 411e9d93cbafc7585f5a0f9a05097fe589de804f
+ms.openlocfilehash: 7bc7f526db4cb9fd269d2d48845cc5dc4096b5df
+ms.sourcegitcommit: 0c5d09bfefbedeb561658cf7274483896e84e5d3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85332847"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87412337"
 ---
 # <a name="mobile-threat-defense-integration-with-intune"></a>Integrace ochrany před mobilními hrozbami do Intune
 
 Intune může integrovat data od dodavatele ochrany před mobilními hrozbami (MTD) jako zdroj informací pro zásady dodržování předpisů zařízením a pravidla podmíněného přístupu zařízení. Tyto informace můžete použít k ochraně firemních prostředků, jako jsou Exchange a SharePoint, blokováním přístupu z ohrožených mobilních zařízení.
+
+> [!NOTE]
+> Tento článek se týká dodavatelů ochrany před mobilními hrozbami třetí strany. Další informace o programu Microsoft Defender najdete v tématu [ATP v programu Microsoft Defender](../protect/advanced-threat-protection.md).
 
 Intune může používat stejná data jako zdroj pro neregistrovaná zařízení pomocí zásad ochrany aplikací Intune. Správci tak můžou tyto informace použít k ochraně podnikových dat v rámci [aplikace Microsoft Intune Protected](../apps/apps-supported-intune-apps.md)a vystavení bloku nebo selektivního vymazání.
 
@@ -97,3 +100,4 @@ Zjistěte, jak zabezpečit přístup k prostředkům společnosti na základě r
 - [Better Mobile](better-mobile-threat-defense-connector.md)
 - [Sophos Mobile](sophos-mtd-connector.md)
 - [Obrana proti mobilním hrozbám Wandera](wandera-mtd-connector.md)
+- [Microsoft Defender](../protect/advanced-threat-protection.md)

@@ -2,7 +2,7 @@
 title: Nastavení klienta
 titleSuffix: Configuration Manager
 description: Přečtěte si o výchozím a vlastním nastavení pro řízení chování klienta.
-ms.date: 04/21/2020
+ms.date: 07/28/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 21e837d5d97c42f095159a87e015f181c5e53419
-ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
+ms.openlocfilehash: 9f6bb29930a6e2d4faf4ffdd141d3c9cd1831305
+ms.sourcegitcommit: 19f5838eb3eb8724d22382f36f9564ac9a978b97
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84347164"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87365504"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>Informace o nastavení klienta v Configuration Manager
 
@@ -328,6 +328,11 @@ Pokud klienti musí instalovat požadované aktualizace softwaru v konečném te
 Pokud chcete uživatelům poskytnout více času na instalaci požadované aplikace nebo nasazení aktualizace softwaru po uplynutí konečného termínu, nastavte hodnotu pro tuto možnost. Tato lhůta odkladu je pro počítač vypnutý po delší dobu a uživatel musí instalovat mnoho nasazení aplikace nebo aktualizace. Toto nastavení je užitečné například v případě, že se uživatel vrátí z dovolené a musí počkat delší dobu, než klient nainstaluje zpožděná nasazení aplikace.
 
 Nastavte období odkladu na 0 až 120 hodin. Toto nastavení použijte spolu s vlastností nasazení **zpoždění vynucení tohoto nasazení podle uživatelských předvoleb**. Další informace najdete v tématu [nasazení aplikací](../../../apps/deploy-use/deploy-applications.md#delay-enforcement-with-a-grace-period).
+
+
+### <a name="enable-endpoint-analytics-data-collection"></a>Povolit shromažďování dat služby Endpoint Analytics
+
+Povolí místní shromažďování dat na klientovi pro nahrání do služby Endpoint Analytics. Nastavte na **Ano** , pokud chcete nakonfigurovat zařízení pro místní shromažďování dat. Nastavte na **ne** , pokud chcete zakázat místní shromažďování dat. Další informace najdete v tématu [registrace zařízení Configuration Manager do služby Endpoint Analytics](../../../../analytics/enroll-configmgr.md).
 
 ## <a name="computer-restart"></a>Restartování počítače
 
@@ -919,15 +924,15 @@ Od verze Configuration Manager 1902 můžete upravit prioritu, s jakou klienti W
 
 Toto nastavení klienta nabízí následující možnosti:
 
-- **Nenakonfigurováno**: Configuration Manager nemění nastavení. Správci mohou předem připravit vlastní soubor setupconfig. ini. Tato hodnota je výchozí.
+- **Nenakonfigurováno**: Configuration Manager nemění nastavení. Správci mohou předem připravit vlastní soubor setupconfig.ini. Tato hodnota je výchozí.
 
 - **Normální**: Instalační program systému Windows využívá více systémových prostředků a aktualizace rychleji. Využívá více času procesoru, takže celkový čas instalace je kratší, ale výpadek uživatele trvá.  
 
-    - Nakonfiguruje na zařízení soubor setupconfig. ini pomocí `/Priority Normal` [Možnosti příkazového řádku instalačního programu systému Windows](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options).
+    - Nakonfiguruje setupconfig.ini soubor na zařízení pomocí `/Priority Normal` [Možnosti příkazového řádku instalačního programu systému Windows](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options).
 
 - **Nízká**: během stahování a aktualizace na pozadí můžete pokračovat v práci na zařízení. Celková doba instalace je delší, ale výpadek uživatele je kratší. Možná bude nutné zvýšit maximální dobu běhu aktualizace, aby nedocházelo k vypršení časového limitu při použití této možnosti.  
 
-    - Odebere `/Priority` [možnost příkazového řádku instalačního programu systému Windows](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options) ze souboru setupconfig. ini.
+    - Odebere `/Priority` z setupconfig.ini souboru [možnost příkazového řádku instalačního programu systému Windows](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options) .
 
 
 ### <a name="enable-third-party-software-updates"></a>Povolit aktualizace softwaru třetích stran

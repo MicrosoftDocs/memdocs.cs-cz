@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0242e7725afa23ed94400c79eae27118b7dbb8c5
-ms.sourcegitcommit: cb9b452f8e566fe026717b59c142b65f426e5033
+ms.openlocfilehash: 33464c6e0abff9f28e18f9bf6a82e2601dbf115f
+ms.sourcegitcommit: 7ee69b207261ffc282e535f793a536540d160557
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86491180"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87400728"
 ---
 # <a name="use-certificates-for-authentication-in-microsoft-intune"></a>Použití certifikátů pro ověřování v Microsoft Intune
 
@@ -81,7 +81,7 @@ Používáte-li certifikační autoritu (CA) třetí strany (od společnosti Mic
 |--|--|--|--|---|
 | Správce zařízení s Androidem | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png)|  ![Podporováno](./media/certificates-configure/green-check.png) |
 | Android Enterprise <br> – Plně spravované (vlastník zařízení)   | ![Podporováno](./media/certificates-configure/green-check.png) |   | ![Podporováno](./media/certificates-configure/green-check.png) |   |
-| Android Enterprise <br> -Vyhrazené (vlastník zařízení)   | ![Podporováno](./media/certificates-configure/green-check.png)  |   | ![Podporováno](./media/certificates-configure/green-check.png)  |   |
+| Android Enterprise <br> -Vyhrazené (vlastník zařízení)   | ![Podporováno](./media/certificates-configure/green-check.png)  | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png)  |   |
 | Android Enterprise <br> – Pracovní profil    | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) |
 | iOS/iPadOS                   | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) |
 | macOS                 | ![Podporováno](./media/certificates-configure/green-check.png) |  ![Podporováno](./media/certificates-configure/green-check.png) |![Podporováno](./media/certificates-configure/green-check.png)|![Podporováno](./media/certificates-configure/green-check.png)|
@@ -159,7 +159,7 @@ Vytvořte samostatný profil důvěryhodného certifikátu pro každou platformu
 
 12. V rámci **Revize a vytvoření**zkontrolujte nastavení. Když vyberete vytvořit, vaše změny se uloží a profil se přiřadí. Tato zásada se taky zobrazuje v seznamu profily.
 
-## <a name="additional-resources"></a>Další zdroje
+## <a name="additional-resources"></a>Další zdroje informací
 
 - [Přiřazení profilů zařízení](../configuration/device-profile-assign.md)  
 - [Podepisování a šifrování e-mailů pomocí S/MIME](certificates-s-mime-encryption-sign.md)  

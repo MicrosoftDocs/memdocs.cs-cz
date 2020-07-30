@@ -2,7 +2,7 @@
 title: Komunitní centrum a GitHub
 titleSuffix: Configuration Manager
 description: Povolení a použití centra komunity v Configuration Manager
-ms.date: 07/10/2020
+ms.date: 07/27/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 88cead9a-64fe-471e-b57c-81707cefe46c
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 8aadc391c5c0b259ab1a1736f3654f25b98dbae0
-ms.sourcegitcommit: aa876a9b5aa9437ae59a68e1cc6355d7070f89f4
+ms.openlocfilehash: c0b812fa3b373d6bd5bd2bebed8b1540ceb7bdd6
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86236405"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262077"
 ---
 # <a name="community-hub-and-github"></a>Komunitní centrum a GitHub
 <!--3555935, 3555936-->
@@ -36,7 +36,7 @@ Centrum komunity podporuje následující objekty:
 - Skripty PowerShellu
 - Sestavy
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 - Zařízení, které používá konzolu Configuration Manager používané pro přístup k centru komunit, potřebuje následující položky:
    - .NET Framework verze 4,6 nebo vyšší
@@ -44,10 +44,7 @@ Centrum komunity podporuje následující objekty:
       - Windows Server není podporovaný, takže konzola Configuration Manager musí být nainstalovaná na zařízení s Windows 10 oddělená od serveru lokality.
    - Přihlášený uživatelský účet nemůže být předdefinovaným účtem správce.
 
-- Chcete-li stáhnout sestavy, je třeba zapnout možnost **použít Configuration Manager vygenerované certifikáty pro systémy lokality protokolu HTTP** v lokalitě, do které provádíte import. Další informace najdete v tématu [Rozšířená http](/sccm/core/plan-design/hierarchy/enhanced-http).
-   1. Přejít na **Administration**  >  **stránku Správa konfigurace lokality**  >  **lokality**.
-   1. Vyberte lokalitu a na pásu karet zvolte **vlastnosti** .
-   1. Na kartě **zabezpečení komunikace** vyberte možnost **použití Configuration Manager generovaných certifikátů pro systémy lokality http**.
+- [Služba správy](../../../develop/adminservice/set-up.md) v Configuration Manager musí být nastavená a funkční.
 
 - Pokud vaše organizace omezuje síťovou komunikaci s Internetem pomocí brány firewall nebo proxy zařízení, je nutné povolit konzole Configuration Manager přístup k internetovým koncovým bodům. Další informace najdete v tématu [požadavky na přístup k Internetu](../../plan-design/network/internet-endpoints.md#community-hub).
 

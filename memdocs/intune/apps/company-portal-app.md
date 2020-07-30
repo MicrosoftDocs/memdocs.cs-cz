@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 69ef6a0b368a712a35cc377a51325836b6e7aaf6
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: d979001f159b427314f8bc53788ccce0acd13d11
+ms.sourcegitcommit: 19f5838eb3eb8724d22382f36f9564ac9a978b97
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262609"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87365538"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>Přizpůsobení aplikací Portál společnosti Intune, Portál společnosti webu a Intune
 
@@ -178,9 +178,9 @@ Intune podporuje ověřování osobních identit (PIV) a služby Common Access C
 
 Další informace o odvozených přihlašovacích údajích pro zařízení s iOS/iPadOS najdete v tématu [použití odvozených přihlašovacích údajů v Microsoft Intune](../protect/derived-credentials.md).
 
-## <a name="dark-mode-for-iosipados-and-windows-company-portal"></a>Tmavý režim pro iOS/iPadOS a Windows Portál společnosti
+## <a name="dark-mode-for-the-company-portal"></a>Tmavý režim pro Portál společnosti
 
-Pro iOS/iPadOS a Windows Portál společnosti je k dispozici tmavý režim. Uživatelé můžou stahovat aplikace, spravovat jejich zařízení a získávat v nich podporu v barevném schématu podle nastavení zařízení. Systémy iOS/iPadOS a Windows Portál společnosti budou automaticky odpovídat nastavení zařízení koncového uživatele pro tmavý nebo lehký režim.
+Pro iOS/iPadOS, macOS a Windows Portál společnosti je k dispozici tmavý režim. Uživatelé můžou stahovat aplikace, spravovat jejich zařízení a získávat v nich podporu v barevném schématu podle nastavení zařízení. Portál společnosti pro iOS/iPadOS, macOS a Windows budou automaticky odpovídat nastavení zařízení koncového uživatele pro tmavý nebo lehký režim.
 
 ## <a name="windows-company-portal-keyboard-shortcuts"></a>Klávesové zkratky v Portálu společnosti pro Windows
 

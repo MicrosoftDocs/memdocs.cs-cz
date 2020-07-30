@@ -2,7 +2,7 @@
 title: Plány nasazení v Desktop Analytics
 titleSuffix: Configuration Manager
 description: Přečtěte si o plánech nasazení v Desktop Analytics.
-ms.date: 05/11/2020
+ms.date: 07/28/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: ccc325ac4b8e02142a1442862ad661a77b0561f2
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: acaa7c8a906edd78f0c54c5735c97c55434d848b
+ms.sourcegitcommit: 7ee69b207261ffc282e535f793a536540d160557
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268483"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87400711"
 ---
 # <a name="about-deployment-plans-in-desktop-analytics"></a>O plánech nasazení v Desktop Analytics
 
@@ -47,6 +47,8 @@ V rámci plánu nasazení provedete následující akce:
 Ve výchozím nastavení Desktop Analytics aktualizuje data plánu nasazení každý den. Všechny změny, které provedete v rámci plánu nasazení, jako je například přiřazení důležitosti aplikaci nebo volba zařízení, které se má zahrnout do pilotního projektu, trvá až 24 hodin. Pokud chcete tento proces urychlit, požádejte o aktualizaci dat na vyžádání. Další informace najdete v tématu [Nejčastější dotazy k Desktop Analytics](faq.md#can-i-reduce-the-amount-of-time-it-takes-for-data-to-refresh-in-my-desktop-analytics-portal).  
 
 Po připojení Desktop Analytics k Configuration Manager vyberte kolekce v plánech nasazení. Tato integrace pak umožní nasadit Windows do kolekce na základě dat z Desktop Analytics.
+
+Plány nasazení podporují cílení na tři nejnovější verze Windows 10. Desktop Analytics přidá podporu nové verze Windows 10 do 45 dnů od jejího zpřístupnění. V tuto chvíli služba také vynechá nejstarší verzi. Nebudete moct používat žádné plány nasazení, které cílí na nejstarší verzi. Pokud máte nějaké probíhající plány nasazení, které cílí na nejstarší podporovanou verzi v Desktop Analytics, dokončete nasazení během 45 dnů od dostupnosti nové verze Windows 10.
 
 ## <a name="readiness-rules"></a>Pravidla připravenosti
 
@@ -89,7 +91,7 @@ Rozhodnutí o **opětovné instalaci** Windows Upgrade znamená, že upgrade bud
 
 - Data inventáře pro toto zařízení jsou neúplná a Desktop Analytics nemůže provádět úplné posouzení kompatibility.
 
-### <a name="apps"></a>Aplikace
+### <a name="apps"></a>Apps
 
 Nastavte **rozhodnutí o upgradu** a **důležitost** této aplikace v tomto plánu nasazení. Další informace najdete v tématu [vytvoření plánů nasazení](create-deployment-plans.md).
 
