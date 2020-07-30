@@ -10,12 +10,12 @@ ms.assetid: 4deac022-e397-4f1f-bc0a-cea6c6c6368d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1a6ec98bd350eb0ac8643254f64a9480f156bb13
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: 79b4119a12826596fcc91fa1b4ead4e151e2ddd8
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86239755"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262094"
 ---
 # <a name="enhanced-http"></a>Vylepšený protokol HTTP
 
@@ -53,10 +53,10 @@ Následující scénáře mají výhodu z těchto vylepšení:
 ### <a name="scenario-1-client-to-management-point"></a><a name="bkmk_scenario1"></a>Scénář 1: klient do bodu správy
 
 <!--1356889-->
-[Zařízení připojená k Azure Active Directory (Azure AD)](/azure/active-directory/devices/concept-azure-ad-join) můžou komunikovat s bodem správy nakonfigurovaným pro protokol HTTP. Webový server vygeneruje certifikát pro bod správy, který umožňuje komunikaci přes zabezpečený kanál.
+Zařízení a zařízení připojená pomocí [Configuration Manager s vydaným tokenem](../../clients/deploy/deploy-clients-cmg-token.md) [Azure Active Directory (Azure AD)](/azure/active-directory/devices/concept-azure-ad-join) můžou komunikovat s bodem správy nakonfigurovaným pro protokol HTTP, pokud pro lokalitu povolíte rozšířené protokol HTTP. S povoleným rozšířeným protokolem HTTP server lokality vygeneruje certifikát pro bod správy, který umožňuje komunikaci přes zabezpečený kanál.
 
 > [!Note]  
-> Toto chování se mění z Configuration Manager aktuální větve verze 1802, která vyžaduje bod správy s povoleným protokolem HTTPS pro klienty připojené k Azure AD, kteří komunikují přes bránu pro správu cloudu. Další informace najdete v tématu [Povolení bodu správy pro protokol HTTPS](../../clients/manage/cmg/certificates-for-cloud-management-gateway.md#bkmk_mphttps).  
+> Tento scénář nevyžaduje použití bodu správy s povoleným protokolem HTTPS, ale je podporován jako alternativa k použití rozšířené protokolu HTTP. Další informace o použití bodu správy s povoleným protokolem HTTPS najdete v tématu [Povolení bodu správy pro protokol HTTPS](../../clients/manage/cmg/certificates-for-cloud-management-gateway.md#bkmk_mphttps).  
 
 ### <a name="scenario-2-client-to-distribution-point"></a><a name="bkmk_scenario2"></a>Scénář 2: klient s distribučním bodem
 
@@ -86,7 +86,7 @@ Následující funkce Configuration Manager podporují nebo vyžadují rozšíř
 > Bod aktualizace softwaru a související scénáře vždy podporují zabezpečený provoz HTTP s klienty i bránou pro správu cloudu. Používá mechanismus s bodem správy, který se liší od ověřování založeného na certifikátech nebo na základě tokenů.<!-- SCCMDocs issue #1148 -->
 
 
-## <a name="prerequisites"></a>Požadavky  
+## <a name="prerequisites"></a>Předpoklady  
 
 - Bod správy nakonfigurovaný pro připojení klienta pomocí protokolu HTTP. Tuto možnost nastavte na kartě **Obecné** ve vlastnostech role bodu správy.  
 
@@ -119,7 +119,7 @@ Tyto certifikáty můžete zobrazit v konzole Configuration Manager. Otevřete p
 Další informace o tom, jak klient komunikuje s bodem správy a distribučním bodem s touto konfigurací, najdete v tématu [komunikace mezi klienty a systémy lokality a služby](communications-between-endpoints.md#Planning_Client_to_Site_System).
 
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Plánování zabezpečení](../security/plan-for-security.md)  
 
