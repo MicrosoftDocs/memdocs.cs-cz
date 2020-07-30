@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2d300be679d54a5f565fb2c42f889a7dcd23894a
-ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
+ms.openlocfilehash: 7acbd455ef720dd0ab17cce40eae8060c7a68c87
+ms.sourcegitcommit: 8a4a86ee8044f273dcece26155132a801f3d8f9a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86088543"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87438639"
 ---
 # <a name="how-to-use-azure-ad-to-access-the-intune-apis-in-microsoft-graph"></a>Používání Azure AD pro přístup k rozhraním Intune API v Microsoft Graphu
 
@@ -279,7 +279,7 @@ V současné době všechny obory oprávnění Intune vyžadují přístup sprá
   - Podmínky a ujednání
   - Služba TEM (Telecom Expense Management)
   - Cloudová infrastruktura veřejných klíčů
-  - Branding
+  - Značka
   - Mobile Threat Defense
 
 ### <a name="devicemanagementserviceconfigreadwriteall"></a><a name="svc-rw"></a>DeviceManagementServiceConfig.ReadWrite.All
@@ -297,7 +297,7 @@ V současné době všechny obory oprávnění Intune vyžadují přístup sprá
   - Podmínky a ujednání
   - Služba TEM (Telecom Expense Management)
   - Cloudová infrastruktura veřejných klíčů
-  - Branding
+  - Značka
   - Mobile Threat Defense
 
 ## <a name="azure-ad-authentication-examples"></a>Příklady ověřování Azure AD
@@ -351,11 +351,11 @@ Tento příklad ukazuje, jak pomocí C# načíst seznam zařízení přidružen�
   > Azure Active Directory (Azure AD) Authentication Library (ADAL) a Azure AD Graph API budou zastaralé. Další informace najdete v tématu [aktualizace aplikací pro použití knihovny Microsoft Authentication Library (MSAL) a rozhraní Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
 
 
-    1. Klikněte pravým tlačítkem myši na Průzkumníka řešení.
-    2. Zvolte **Spravovat balíčky NuGet** &gt;**Procházet**.
-    3. Vyberte `Microsoft.IdentityModel.Clients.ActiveDirectory` a pak zvolte **Nainstalovat**.
+   1. Klikněte pravým tlačítkem myši na Průzkumníka řešení.
+   2. Zvolte **Spravovat balíčky NuGet** &gt;**Procházet**.
+   3. Vyberte `Microsoft.IdentityModel.Clients.ActiveDirectory` a pak zvolte **Nainstalovat**.
 
-    <img src="../media/aad-auth-cpp-install-package.png" width="624" height="458" alt="Selecting the Azure AD identity model module" />
+   <img src="../media/aad-auth-cpp-install-package.png" width="624" height="458" alt="Selecting the Azure AD identity model module" />
 
 4. Přidejte do horní části **Program.cs** následující příkazy:
 
@@ -447,7 +447,7 @@ namespace IntuneGraphExample
 
 ### <a name="authenticate-azure-ad-powershell"></a>Ověřování služby Azure AD (PowerShell)
 
-Následující skript PowerShellu používá k ověřování modul AzureAD PowerShell.  Další informace najdete v tématech [Azure Active Directory PowerShell verze 2](https://docs.microsoft.com/powershell/azure/install-adv2?view=azureadps-2.0) a [Intune PowerShell – příklady](https://github.com/microsoftgraph/powershell-intune-samples).
+Následující skript PowerShellu používá k ověřování modul AzureAD PowerShell.  Další informace najdete v tématech [Azure Active Directory PowerShell verze 2](/powershell/azure/active-directory/install-adv2) a [Intune PowerShell – příklady](https://github.com/microsoftgraph/powershell-intune-samples).
 
 V tomto příkladu se hodnota `$clientID` aktualizuje tak, aby odpovídala platnému ID aplikace.
 

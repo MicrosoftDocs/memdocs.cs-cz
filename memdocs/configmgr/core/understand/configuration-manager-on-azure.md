@@ -10,12 +10,12 @@ ms.assetid: d24257d8-8136-47f4-8e0d-34021356dc37
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c12372325573c6795396ff0832ca60cba68b8c29
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: c9d398d7fddab61014547fc0f8f64cd180e58ab6
+ms.sourcegitcommit: 8a4a86ee8044f273dcece26155132a801f3d8f9a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078494"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87438566"
 ---
 # <a name="configuration-manager-on-azure---frequently-asked-questions"></a>Configuration Manager na Azure – Nejčastější dotazy
 
@@ -62,7 +62,7 @@ Síť je velice důležité rozhodnutí. Síťové rychlosti a latence můžou o
 Možnosti, které vyberete, závisí na scénáři, který implementujete, a na množství dat, která plánujete distribuovat. Přenos Configuration Managerch dat lze ovládat mezi servery lokality a distribučními body, ale komunikace serveru typu Site-to-site nelze kontrolovat.   Když použijete měřený datový tarif, umístíte konkrétní lokality (a systémy lokality) místně a pomocí [předdefinovaných ovládacích prvků šířky pásma Configuration Manager](../plan-design/hierarchy/fundamental-concepts-for-content-management.md) můžete řídit náklady na používání Azure.
 
 ### <a name="what-about-installation-requirements-like-active-directory-domains-do-i-still-need-to-join-my-site-servers-to-an-active-directory-domain"></a>Jaké jsou požadavky na instalaci, jako jsou domény služby Active Directory? Musím stále připojovat servery lokality k doméně služby Active Directory?
-Ano. Když přejdete na Azure, [podporované konfigurace](../plan-design/configs/supported-configurations.md) zůstanou stejné, včetně požadavků na službu Active Directory pro instalaci Configuration Manager.
+Yes. Když přejdete na Azure, [podporované konfigurace](../plan-design/configs/supported-configurations.md) zůstanou stejné, včetně požadavků na službu Active Directory pro instalaci Configuration Manager.
 
 ### <a name="i-understand-the-need-to-join-my-site-servers-to-an-active-directory-domain-but-can-i-use-azure-active-directory"></a>Beru na vyznámení s nutností připojit servery k webu k doméně služby Active Directory, ale můžu použít Azure Active Directory?
 Ne, Azure Active Directory se v tuto chvíli nepodporuje. Servery lokality stále musí být členy [domény služby Windows Active Directory](../plan-design/configs/support-for-active-directory-domains.md).
@@ -71,7 +71,7 @@ Ne, Azure Active Directory se v tuto chvíli nepodporuje. Servery lokality stál
 
 ## <a name="availability"></a>Dostupnost
 ### <a name="one-of-the-reasons-i-am-moving-infrastructure-to-azure-is-the-promise-of-high-availability-can-i-take-advantage-of-high-availability-options-like-azure-vm-availability-sets-for-vms-that-i-will-use-for-configuration-manager"></a>Jedním z důvodů, proč přesouváte infrastrukturu do Azure, je příslib vysoké dostupnosti. Můžu využít možnosti vysoké dostupnosti, jako jsou skupiny dostupnosti virtuálních počítačů Azure pro virtuální počítače, které využijete pro Configuration Manager?
-Ano! Skupiny dostupnosti virtuálních počítačů Azure je možné použít k redundantním rolím systému lokality, jako jsou distribuční body nebo body správy.
+Ano. Skupiny dostupnosti virtuálních počítačů Azure je možné použít k redundantním rolím systému lokality, jako jsou distribuční body nebo body správy.
 
 Můžete je také použít pro Configuration Manager servery lokality. Například lokality centrální správy a primární lokality mohou být ve stejné skupině dostupnosti, které vám pomohou zajistit, že nebudou restartovány současně.
 
@@ -84,7 +84,7 @@ I když se Configuration Manager netestuje pomocí nástrojů pro vyrovnávání
 
 ## <a name="performance"></a>Výkon
 ### <a name="what-factors-affect-performance-in-this-scenario"></a>Jaké faktory ovlivňují výkon v tomto scénáři?
-[Velikost a typ virtuálního počítače Azure](https://azure.microsoft.com/documentation/articles/virtual-machines-size-specs), disky virtuálních počítačů Azure (doporučuje se Premium Storage, zejména u SQL Server), latence sítě a rychlost jsou nejdůležitějšími oblastmi.
+[Velikost a typ virtuálního počítače Azure](/azure/virtual-machines/sizes), disky virtuálních počítačů Azure (doporučuje se Premium Storage, zejména u SQL Server), latence sítě a rychlost jsou nejdůležitějšími oblastmi.
 
 ### <a name="so-tell-me-more-about-azure-virtual-machines-what-size-vms-should-i-use"></a>Podrobnější informace o virtuálních počítačích Azure Jakou velikost virtuálních počítačů mám použít?
 Obecně platí, že výpočetní výkon (procesor a paměť) musí splňovat [doporučený hardware pro Configuration Manager](../plan-design/configs/recommended-hardware.md). Existují však určité rozdíly mezi běžným hardwarem počítače a virtuálními počítači Azure, zejména pokud se nacházejí na discích, které tyto virtuální počítače používají.  Velikost používaných virtuálních počítačů závisí na velikosti vašeho prostředí, ale tady je několik doporučení:
@@ -113,7 +113,7 @@ V následujících tabulkách je seznam počátečních navrhovaných disků, kt
 |**25k na 50 tis**      | Webový server: F4S úrovně </br>Databázový server: DS13_V2 | Webový server: 1xP30 </br>Databázový server: 2xP30 (prokládaný)   |
 |**50 tis na 100 tisíc**     | Webový server: F8S úrovně </br>Databázový server: DS14_V2 | Webový server: 2xP30 (prokládaný)   </br>Databázový server: 3xP30 (prokládaný)   |
 
-V následující části najdete příklad konfigurace 50 tis pro 100 tisíc klientů na DS14_V2 s disky 3xP30 v prokládaném svazku se samostatnými logickými svazky pro Configuration Manager instalaci a soubory databáze: ![VM).](media/vm_disks.png)  
+V následující části najdete příklad konfigurace 50 tis pro 100 tisíc klientů na DS14_V2 s disky 3xP30 v prokládaném svazku se samostatnými logickými svazky pro Configuration Manager instalaci a soubory databáze: ![ VM).](media/vm_disks.png)  
 
 
 
@@ -137,7 +137,7 @@ Přístup ke správě obsahu je stejný jako u serverů lokality a systémů lok
 
 
 ### <a name="while-i-am-ok-with-the-limitations-of-cloud-based-distribution-points-i-dont-want-to-put-my-management-point-into-a-dmz-even-though-that-is-needed-to-support-my-internet-based-clients-do-i-have-any-other-options"></a>I když mám v pořádku omezení cloudových distribučních bodů, nechci do DMZ umístit svůj bod správy, i když to je potřeba pro podporu mých internetových klientů. Mám nějaké další možnosti?
-Ano! V Configuration Manager verze 1610 jsme zavedli [Brána pro správu cloudu](../clients/manage/manage-clients-internet.md#cloud-management-gateway) jako funkci předběžného vydání. (Tato funkce se nejdřív objevila ve verzi Technical Preview 1606 jako [cloudová proxy služba](../get-started/capabilities-in-technical-preview-1606.md#cloud_proxy)).
+Ano. V Configuration Manager verze 1610 jsme zavedli [Brána pro správu cloudu](../clients/manage/manage-clients-internet.md#cloud-management-gateway) jako funkci předběžného vydání. (Tato funkce se nejdřív objevila ve verzi Technical Preview 1606 jako [cloudová proxy služba](../get-started/capabilities-in-technical-preview-1606.md#cloud_proxy)).
 
 **Brána pro správu cloudu** poskytuje jednoduchý způsob, jak spravovat klienty Configuration Manager na internetu. Služba, která je nasazená do Microsoft Azure a vyžaduje předplatné Azure, se připojí k místní infrastruktuře Configuration Manager pomocí nové role, která se nazývá bod konektoru služby Cloud Management Gateway. Po nasazení a konfiguraci budou mít klienti přístup k místním Configuration Manager rolím systému lokality bez ohledu na to, jestli jsou připojené k interní privátní síti nebo k Internetu.
 
@@ -153,11 +153,11 @@ Můžete nakonfigurovat libovolného klienta jako zdroj sdílené mezipaměti. K
 ### <a name="ok-tell-me-a-bit-about-the-cost-will-this-be-a-cost-effective-solution-for-me"></a>V části informace o nákladech se dozvíte něco. Bude toto řešení pro mě finančně výhodné?
 Těžko se říká, protože každé prostředí je jiné. Nejlepší je, že se vám vaše prostředí používá Microsoft Azure cenové kalkulačky:https://azure.microsoft.com/pricing/calculator/
 
-## <a name="additional-resources"></a>Další zdroje
+## <a name="additional-resources"></a>Další materiály
 **Základy:**https://azure.microsoft.com/documentation/articles/fundamentals-introduction-to-azure/
 
 **Typy počítačů virtuálních počítačů Azure:**
-- Velikosti počítačů Azure:https://azure.microsoft.com/documentation/articles/virtual-machines-size-specs/  
+- Velikosti počítačů Azure:https://docs.microsoft.com/azure/virtual-machines/sizes  
 - Ceny za virtuální počítače:https://azure.microsoft.com/pricing/details/virtual-machines/  
 - Ceny za Storage:https://azure.microsoft.com/pricing/details/storage/
 
@@ -169,7 +169,7 @@ Těžko se říká, protože každé prostředí je jiné. Nejlepší je, že se
 
 **Dostupnosti**
 - Smlouva SLA pro Azure IaaS-Time:https://azure.microsoft.com/support/legal/sla/virtual-machines/v1_0/  
-- Vysvětlené sady dostupnosti:https://azure.microsoft.com/documentation/articles/virtual-machines-manage-availability/
+- Vysvětlené sady dostupnosti:https://docs.microsoft.com/azure/virtual-machines/windows/manage-availability
 
 **Komunikační**
 - Expresní směrování vs. Azure VPN:https://azure.microsoft.com/blog/2014/06/10/expressroute-or-virtual-network-vpn-whats-right-for-me/

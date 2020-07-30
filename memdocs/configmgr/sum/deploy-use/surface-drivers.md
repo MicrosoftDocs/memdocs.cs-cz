@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: e9f9f4e6-5b4f-4b8f-94d6-db9b2b239113
-ms.openlocfilehash: 04793a053e85be051ce9ffafd2f15d274cf166f0
-ms.sourcegitcommit: c7afcc3a2232573091c8f36d295a803595708b6c
+ms.openlocfilehash: f276db618a2e67832ffa5575622e00eea02c7422
+ms.sourcegitcommit: 8a4a86ee8044f273dcece26155132a801f3d8f9a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84973073"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87438626"
 ---
 # <a name="manage-surface-drivers-with-configuration-manager"></a>Správa ovladačů Surface pomocí Configuration Manager
 
@@ -162,4 +162,4 @@ Další informace o ovladačích Surface najdete v následujících článcích:
 
 - [Požadavky na Surface a System Center Configuration Manager](https://docs.microsoft.com/surface/considerations-for-surface-and-system-center-configuration-manager#deploy-surface-app-with-configuration-manager)
 - [Historie aktualizací povrchu](https://support.microsoft.com/help/4036283/surface-surface-update-history)
-- [Stažení nejnovějšího firmwaru a ovladačů pro zařízení Surface](https://docs.microsoft.com/surface/deploy-the-latest-firmware-and-drivers-for-surface-devices)
+- [Stažení nejnovějšího firmwaru a ovladačů pro zařízení Surface](/surface/manage-surface-driver-and-firmware-updates)

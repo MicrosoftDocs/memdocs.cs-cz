@@ -10,12 +10,12 @@ ms.assetid: 58d52fdc-bd18-494d-9f3b-ccfc13ea3d35
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9ce8c10d9d59d97caa53ece12dd43d90c78546bb
-ms.sourcegitcommit: 488db8a6ab272f5d639525d70718145c63d0de8f
+ms.openlocfilehash: 05553af3e973805eed62c68f13afc3cf7d3d2ee3
+ms.sourcegitcommit: 8a4a86ee8044f273dcece26155132a801f3d8f9a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86384838"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87438594"
 ---
 # <a name="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager"></a>Příprava na používání skupin dostupnosti Always On SQL Server s Configuration Manager
 
@@ -28,7 +28,7 @@ Configuration Manager podporuje používání skupin dostupnosti:
 - V primárních lokalitách a lokalitě centrální správy.
 - Místně nebo v Microsoft Azure.
 
-Když v Microsoft Azure použijete skupiny dostupnosti, můžete dál zvýšit dostupnost vaší databáze lokality pomocí skupin *dostupnosti Azure*. Další informace o skupinách dostupnosti služby Azure najdete v tématu [Správa dostupnosti virtuálních počítačů](https://azure.microsoft.com/documentation/articles/virtual-machines-windows-manage-availability/).
+Když v Microsoft Azure použijete skupiny dostupnosti, můžete dál zvýšit dostupnost vaší databáze lokality pomocí skupin *dostupnosti Azure*. Další informace o skupinách dostupnosti služby Azure najdete v tématu [Správa dostupnosti virtuálních počítačů](/azure/virtual-machines/windows/manage-availability).
 
 > [!Important]
 > Než budete pokračovat, je vhodné nakonfigurovat skupiny dostupnosti SQL Server a SQL Server. Níže uvedené informace odkazují na knihovnu a postupy dokumentace k SQL Server.
@@ -45,7 +45,7 @@ Následující scénáře jsou podporovány pro používání skupin dostupnosti
 - [Přesun databáze lokality ze skupiny dostupnosti do výchozí nebo pojmenované instance samostatného SQL Server](configure-aoag.md#bkmk_stop)  
 
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 Následující požadavky platí pro všechny scénáře. Pokud se další předpoklady vztahují na konkrétní scénář, jsou v tomto scénáři podrobně popsané.
 
@@ -85,7 +85,7 @@ Každá instance SQL Server může běžet pod účtem uživatele domény (**ú�
 - Další informace najdete v tématu [Vytvoření koncového bodu zrcadlení databáze pro skupiny dostupnosti Always On](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell).  
 
 
-### <a name="database"></a>databáze
+### <a name="database"></a>Databáze
 
 #### <a name="configure-the-database-on-a-new-replica"></a>Konfigurace databáze na nové replice
 

@@ -10,12 +10,12 @@ ms.assetid: 1401a35e-4312-4d3b-8ceb-0abbb10d4f05
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: def7a40091f6c9a45e67f5e4de7d7dca94b3cba2
-ms.sourcegitcommit: 034226b5a60de49a75c7b54e856814f81c03a112
+ms.openlocfilehash: 7eccc3bf6b7ded9db93f5af78d55f090e9704cbc
+ms.sourcegitcommit: 8a4a86ee8044f273dcece26155132a801f3d8f9a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86422820"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87438603"
 ---
 # <a name="how-to-create-collections-in-configuration-manager"></a>Vytváření kolekcí v Configuration Manager
 
@@ -229,11 +229,12 @@ Synchronizaci členství v kolekci můžete povolit do skupiny Azure Active Dire
 
 Synchronizace služby Azure AD proběhne každých pět minut. Jedná se o jednosměrný proces, od Configuration Manager do Azure AD. Změny provedené v Azure AD se neprojeví v kolekcích Configuration Manager, ale Configuration Manager se nepřepíší. Pokud má například kolekce Configuration Manager dvě zařízení a skupina Azure AD má tři různá zařízení, po synchronizaci má skupina Azure AD pět zařízení.
 
-### <a name="prerequisites"></a>Požadavky
+### <a name="prerequisites"></a>Předpoklady
 
 - Integrace se službou Azure AD pro [správu cloudu](../../../servers/deploy/configure/azure-services-wizard.md)
 - [Azure Active Directory zjišťování uživatelů](../../../servers/deploy/configure/about-discovery-methods.md#azureaddisc)
 - Protokol HTTPS nebo vylepšený bod správy s povoleným [protokolem HTTP](../../../plan-design/hierarchy/enhanced-http.md)
+- Přístup ke kolekci **všechny systémy**
 
 ### <a name="create-a-group-and-set-the-owner-in-azure-ad"></a>Vytvoření skupiny a nastavení vlastníka ve službě Azure AD
 
@@ -255,7 +256,7 @@ Synchronizace služby Azure AD proběhne každých pět minut. Jedná se o jedno
 
 1. V konzole Configuration Manager přejdete na **prostředky a kompatibilita**  >  **Přehled**  >  **kolekce zařízení**.
 1. Klikněte pravým tlačítkem na kolekci, kterou chcete synchronizovat, a pak klikněte na **vlastnosti**. 
-1. Na kartě **synchronizace skupiny AAD** klikněte na **Přidat**.
+1. Na kartě **synchronizace cloudu** klikněte na **Přidat**.
 1. V rozevírací nabídce vyberte **tenanta** , ve kterém jste skupinu Azure AD vytvořili.
 1. Do pole **název začíná** polem zadejte kritéria hledání a klikněte na **Hledat**.
   - Pokud se zobrazí výzva k přihlášení, použijte identitu, kterou jste zadali jako vlastníka pro skupinu Azure AD.
@@ -277,7 +278,7 @@ Synchronizace služby Azure AD proběhne každých pět minut. Jedná se o jedno
 
 ## <a name="using-powershell"></a><a name="bkmk_powershell"></a>Použití PowerShellu
 
-K vytváření a importu kolekcí můžete použít PowerShell. Další informace najdete tady:
+K vytváření a importu kolekcí můžete použít PowerShell. Další informace naleznete v tématu:
 
 * [New-CMCollection](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmcollection)
 * [Set-CMCollection](https://docs.microsoft.com/powershell/module/ConfigurationManager/Set-CMCollection)
