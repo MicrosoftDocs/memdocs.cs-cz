@@ -149,7 +149,7 @@
               href: manage-microsoft-teams.md
             - name: Konfigurace Google Chromu pro Android
               href: apps-configure-chrome-android.md
-            - name: Konfigurace sítě VPN pro Android Enterprise
+            - name: Síť VPN a síť VPN pro jednotlivé aplikace v Androidu Enterprise
               href: app-configuration-vpn-ae.md
         - name: hromadně zakoupené aplikace a knihy
           items:
