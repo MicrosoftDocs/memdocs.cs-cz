@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 535def8c7504d8cd1ea1890c419c2f8b98d4f6f6
-ms.sourcegitcommit: cb9b452f8e566fe026717b59c142b65f426e5033
+ms.openlocfilehash: 1f706b2bb898f0969bf33d118291551d0f98d9ef
+ms.sourcegitcommit: 45657123a5db50aaecdb96d068712623d775f31c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86491197"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87443910"
 ---
 # <a name="set-enrollment-restrictions"></a>Nastavení omezení registrace
 
@@ -175,6 +175,10 @@ Priorita se používá, když uživatel existuje v několika skupinách, ke kter
 Když vytvoříte omezení, přidá se do seznamu bezprostředně nad výchozí omezení.
 
 Registrace zařízení obsahuje výchozí omezení jak pro omezení typu zařízení, tak pro omezení limitu počtu zařízení. Tato dvě omezení platí pro všechny uživatele, pokud je nepřepíšete omezeními s vyšší prioritou.
+
+>[!NOTE]
+>Omezení registrace se vztahují na uživatele. V případech registrace, které nejsou založené na uživatelích (například režim samoobslužného nasazování Windows autopilot nebo White šetrnější zřizování), se vynutily jenom výchozí omezení priority (cílená na všechny uživatele).
+
 
 Prioritu kteréhokoli nevýchozího omezení můžete změnit.
 

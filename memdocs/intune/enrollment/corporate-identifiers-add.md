@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b9796df0da4974b860348bf52ef06db202219136
-ms.sourcegitcommit: cb9b452f8e566fe026717b59c142b65f426e5033
+ms.openlocfilehash: b90051e9062978fbc016e461d67fbf081f50c616
+ms.sourcegitcommit: 5a58af4f7d40bbde88a273fba859bf69eeff6107
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86491112"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87473674"
 ---
 # <a name="identify-devices-as-corporate-owned"></a>Identifikace zařízení jako vlastněných společností
 
@@ -52,7 +52,10 @@ Tato funkce je podporovaná pro následující platformy:
 | Windows | Podporováno (Windows Phone) | Nepodporováno |
 | iOS/macOS | Nepodporováno (viz důležité informace níže)  | Podporováno |
 | V10 za účelem spravovaného operačního systému Android pro správu zařízení | Nepodporováno | Nepodporováno |
-| Ostatní systémy Android | Nepodporováno | Podporováno |
+| Pracovní profil Android Enterprise | Nepodporováno | Podporováno |
+| Plně spravovaná platforma Android Enterprise | Nepodporováno | Podporováno |
+| Zařízení se systémem Android Enterprise vyhrazená | Nepodporováno | Nepodporováno |
+| Pracovní profil vlastněný podnikem v Androidu Enterprise | Nepodporováno | Podporováno |
 
 <!-- When you upload serial numbers for corporate-owned iOS/iPadOS devices, they must be paired with a corporate enrollment profile. Devices must then be enrolled using either Apple's Automated Device Enrollment or Apple Configurator to have them appear as corporate-owned. -->
 
@@ -63,11 +66,6 @@ Tato funkce je podporovaná pro následující platformy:
 Pokud chcete vytvořit seznam, vytvořte seznam hodnot oddělených čárkami se dvěma sloupci (.csv) bez záhlaví. Přidejte do levého sloupce číslo IMEI nebo sériová čísla a podrobnosti v pravém sloupci. V rámci jednoho souboru .csv můžete importovat pouze jeden typ identifikačního čísla: buď IMEI, nebo sériové číslo. Podrobnosti jsou omezené na 128 znaků a používají se jenom pro účely správy. Na zařízení se podrobnosti nezobrazují. Současný limit jednoho souboru CSV je 5 000 řádků.
 
 **Nahráním souboru .csv se sériovými čísly** – Vytvořte seznam oddělený čárkami (.csv), který bude mít dva sloupce, a nebude mít záhlaví. Soubor .csv může obsahovat maximálně 5000 zařízení, ale jeho velikost nesmí překročit 5 MB.
-
-|||
-|-|-|
-|&lt;ID č. 1&gt;|&lt;Podrobnosti o zařízení č. 1&gt;|
-|&lt;ID č. 2&gt;|&lt;Podrobnosti o zařízení č. 2&gt;|
 
 V textovém editoru vypadá soubor .csv takhle:
 

@@ -6,7 +6,7 @@ keywords: Intune Data Warehouse
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/27/2020
+ms.date: 07/30/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a6cabb4f89d1ad105b88f54ac7a1c43405d1a65d
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: c3a20477b643da961f5c7281d92f3d24a4e7313d
+ms.sourcegitcommit: 45657123a5db50aaecdb96d068712623d775f31c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262570"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87443845"
 ---
 # <a name="connect-to-the-data-warehouse-with-power-bi"></a>Připojení k datovému skladu pomocí Power BI
 
@@ -40,6 +40,9 @@ Aplikaci Power BI dodržování předpisů můžete použít k načtení interak
 - Protokoly inventáře zařízení
 
 Jsou tu také zvýrazněné trendy pro registraci, dodržování předpisů, konfigurační profil zařízení a aktualizace softwaru. Ukázkové grafy a sestavy používají uživatelsky přívětivé filtry plátna. Pokud chcete použít rozšířené filtry, podívejte se na podokno **Filtr** v aplikaci Power BI Desktop.
+
+> [!NOTE]
+> Power BI šablonových aplikací umožňují Power BI partnerům vytvářet Power BI aplikace s malým nebo žádným kódováním a nasazovat je na jakéhokoli Power BIho zákazníka. Můžete například použít šablonu sestavy dodržování předpisů Power BI v 2.0. Verze 2.0 zahrnuje vylepšený návrh a také změny výpočtů a dat, která jsou v rámci šablony Surface. Další informace najdete v tématu [aktualizace aplikace šablony](https://docs.microsoft.com/power-bi/service-template-apps-install-distribute#update-a-template-app), [aplikace pro dodržování předpisů v Intune (datový sklad)](https://appsource.microsoft.com/product/power-bi/pbi_intune.intune_compliance_dw_app-preview?flightCodes=65ede247-5273-43b8-8a25-b89c7d211fbd)a [co jsou Power BIch aplikací šablon](https://docs.microsoft.com/power-bi/service-template-apps-overview) .
 
 Následující kroky vám ukážou, jak stáhnout soubor Power BI a jak používat odkaz OData s Power BI.
 

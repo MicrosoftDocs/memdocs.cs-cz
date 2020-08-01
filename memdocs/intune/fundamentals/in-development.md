@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 81f5dcb29bb7c161de6b838bbb70568b6361bb4d
-ms.sourcegitcommit: 0c5d09bfefbedeb561658cf7274483896e84e5d3
+ms.openlocfilehash: e76816768090a624247db7a84da8c6bdffb800bc
+ms.sourcegitcommit: 45657123a5db50aaecdb96d068712623d775f31c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87412354"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87443843"
 ---
 # <a name="in-development-for-microsoft-intune"></a>Ve vývoji pro Microsoft Intune
 
@@ -66,8 +66,8 @@ Aktualizujeme ikony zařízení v aplikacích Portál společnosti a Intune na z
 ### <a name="ios-company-portal-will-support-apples-automated-device-enrollment-without-user-affinity---7282707----"></a>iOS Portál společnosti bude podporovat automatické registrace zařízení společnosti Apple bez přidružení uživatele.<!-- 7282707  --> 
 v zařízeních zaregistrovaných pomocí automatizované registrace zařízení společnosti Apple se bude podporovat iOS Portál společnosti, aniž by museli přiřazeného uživatele. Koncový uživatel se může přihlásit k Portál společnosti iOS, aby se sám navázal jako primární uživatel na zařízení se systémem iOS/iPadOS, které je zaregistrované bez spřažení zařízení. Další informace o automatizované registraci zařízení najdete v tématu [Automatická registrace zařízení s iOS/iPadOS pomocí automatizované registrace zařízení společnosti Apple](../enrollment/device-enrollment-program-enroll-ios.md).
 
-### <a name="the-company-portal-adds-configuration-manager-application-support---4297660---"></a>Portál společnosti přidává podporu aplikací Configuration Manager<!-- 4297660 -->
-Portál společnosti teď podporuje Configuration Manager aplikace. Tato funkce umožňuje koncovým uživatelům zobrazit Configuration Manager i aplikace nasazené v Intune v Portál společnosti pro spoluspravované zákazníky. Tato podpora pomůže správcům konsolidovat různé prostředí portálu pro koncové uživatele. Další informace najdete v tématu [použití portál společnosti aplikace na spoluspravovaných zařízeních](https://docs.microsoft.com/mem/configmgr/core/get-started/2020/technical-preview-2006#bkmk_portal).
+### <a name="the-windows-company-portal-adds-configuration-manager-application-support---4297660---"></a>Windows Portál společnosti přidává podporu aplikací Configuration Manager<!-- 4297660 -->
+Windows Portál společnosti teď podporuje Configuration Manager aplikace. Tato funkce umožňuje koncovým uživatelům zobrazit Configuration Manager i nasazené aplikace Intune v Portál společnosti Windows pro spoluspravované zákazníky. Tato podpora pomůže správcům konsolidovat různé prostředí portálu pro koncové uživatele. Další informace najdete v tématu [použití portál společnosti aplikace na spoluspravovaných zařízeních](https://docs.microsoft.com/mem/configmgr/core/get-started/2020/technical-preview-2006#bkmk_portal).
 
 <!-- ***********************************************-->
 ## <a name="device-configuration"></a>Konfigurace zařízení
@@ -209,6 +209,6 @@ Zavádíme dvě změny pro správu seznamů vyloučení antivirové ochrany v pr
 
 [!INCLUDE [Intune notices](../includes/intune-notices.md)]
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 Podrobnosti o posledním vývoji najdete v tématu [co je nového v Microsoft Intune](whats-new.md).

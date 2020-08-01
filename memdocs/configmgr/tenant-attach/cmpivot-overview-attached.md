@@ -2,7 +2,7 @@
 title: CMPivot – přehled připojených klientů
 titleSuffix: Configuration Manager
 description: CMPivot přehled pro zařízení připojená ke klientovi Microsoft Endpoint Manager.
-ms.date: 07/13/2020
+ms.date: 07/31/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
@@ -10,12 +10,12 @@ ms.assetid: 31bf1359-54e5-4416-9f39-6bb0070db542
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f334bcce832c07a4d4394305b9aa33189166a9cf
-ms.sourcegitcommit: 6d987bb69d0eb9955a3003202864f58d6aaa426a
+ms.openlocfilehash: 07bb8cd913c945198d181e6191c540eeb8b2dffc
+ms.sourcegitcommit: 5a58af4f7d40bbde88a273fba859bf69eeff6107
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86381039"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87473664"
 ---
 # <a name="tenant-attach-cmpivot-overview"></a>Připojení tenanta: Přehled CMPivot
 
@@ -34,6 +34,10 @@ Pokud používáte CMPivot z konzoly pro správu Microsoft Endpoint Manageru, uj
 - Použijte `project` , pokud potřebujete pouze konkrétní sloupce.
 - Slouží `take` k návratu až k zadanému počtu řádků.
 - Slouží `top` k vrácení prvních N záznamů seřazených podle zadaných sloupců.
+
+> [!Important]
+> Při použití CMPivot k dotazování na zařízení, pokud odpověď není během 10 minut, bude časový limit dotazu. <!--7802754-->
+
 
 [!INCLUDE [Overview article sections for both Microsoft Endpoint Manager and Configuration Manager use](../core/servers/manage/includes/cmpivot-overview-shared.md)]
 

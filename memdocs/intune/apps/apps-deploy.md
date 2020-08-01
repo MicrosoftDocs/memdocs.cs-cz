@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/27/2020
+ms.date: 07/30/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 665e06e6aca0a4ba4f71147325eb587b1b8b4d40
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: cafc7549dfb04bff14b0cdfe8c737ee4971d4db1
+ms.sourcegitcommit: 45657123a5db50aaecdb96d068712623d775f31c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461534"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87443820"
 ---
 # <a name="assign-apps-to-groups-with-microsoft-intune"></a>Přiřazení aplikací do skupin pomocí Microsoft Intune
 
@@ -32,20 +32,20 @@ ms.locfileid: "86461534"
 Po [Přidání aplikace](apps-add.md) pro Microsoft Intune můžete aplikaci přiřadit uživatelům a zařízením. Je důležité si uvědomit, že aplikaci můžete zařízení přiřadit bez ohledu na to, jestli je zařízení spravované pomocí Intune.
 
 > [!NOTE]
-> Dostupný záměr nasazení není pro skupiny zařízení podporován, jsou podporovány pouze skupiny uživatelů.
+> **Dostupný** záměr nasazení se podporuje jenom pro **skupiny zařízení** , když cílíte na zařízení s Androidem Enterprise Full MANAGED Devices (Cobo) a Android Enterprise-standarded (odolat) firemních zařízení.
 
 Následující tabulka obsahuje různé možnosti pro přiřazení aplikací uživatelům a zařízením:
 
-| Možnost  | Zařízení zaregistrovaná v Intune | Zařízení nezaregistrovaná v Intune |
+| Parametr  | Zařízení zaregistrovaná v Intune | Zařízení nezaregistrovaná v Intune |
 |-------------------------------------------------------------------------------------------|------------------------------|----------------------------------|
 | Přiřadit uživatelům | Ano | Ano |
-| Přiřadit zařízením | Yes | No |
+| Přiřadit zařízením | Ano | Ne |
 | Přiřadit zabalené aplikace nebo aplikace obsahující sadu Intune SDK (kvůli zásadám ochrany aplikací) | Ano | Ano |
 | Přiřadit aplikace jako K dispozici | Ano | Ano |
-| Přiřadit aplikace jako Povinné | Yes | No |
-| Odinstalovat aplikace | Yes | No |
-| Dostávat aktualizace aplikací z Intune | Yes | No |
-| Koncoví uživatelé instalují dostupné aplikace z aplikace Portál společnosti | Yes | No |
+| Přiřadit aplikace jako Povinné | Ano | Ne |
+| Odinstalovat aplikace | Ano | Ne |
+| Dostávat aktualizace aplikací z Intune | Ano | Ne |
+| Koncoví uživatelé instalují dostupné aplikace z aplikace Portál společnosti | Ano | Ne |
 | Koncoví uživatelé instalují dostupné aplikace z webového Portálu společnosti | Ano | Ano |
 
 > [!NOTE]
@@ -93,7 +93,7 @@ Informace v následující tabulce vám pomohou pochopit výsledný záměr při
 | Záměr skupiny 1 | Záměr skupiny 2 | Výsledný záměr |
 |-----------------------------------|-----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |Uživatel: Povinné|Uživatel: K dispozici|Povinné a K dispozici|
-|Uživatel: Povinné|Uživatel: Odinstalace|Vyžadováno|
+|Uživatel: Povinné|Uživatel: Odinstalace|Povinné|
 |Uživatel: K dispozici|Uživatel: Odinstalace|Odinstalace|
 |Uživatel: Povinné|Zařízení: Povinné|Existuje obojí, Intune zpracovává Povinné.
 |Uživatel: Povinné|Zařízení: Odinstalace|Existuje obojí, Intune překládá Povinné.
@@ -101,13 +101,13 @@ Informace v následující tabulce vám pomohou pochopit výsledný záměr při
 |Uživatel: K dispozici|Zařízení: Odinstalace|Existuje obojí, Intune překládá K dispozici.<br><br>Aplikace se zobrazí na Portálu společnosti.<br><br>Pokud je už aplikace nainstalovaná (jako požadovaná aplikace s předchozím záměrem), aplikace se odinstaluje.<br><br>Pokud ale uživatel vybere **instalaci z Portálu společnosti**, aplikace se instaluje a záměr odinstalace se nedodrží.|
 |Uživatel: Odinstalace|Zařízení: Povinné|Existuje obojí, Intune překládá Povinné.|
 |Uživatel: Odinstalace|Zařízení: Odinstalace|Existuje obojí, Intune překládá Odinstalaci.|
-|Zařízení: Povinné|Zařízení: Odinstalace|Vyžadováno|
+|Zařízení: Povinné|Zařízení: Odinstalace|Povinné|
 |Uživatel: Povinné a K dispozici|Uživatel: K dispozici|Povinné a K dispozici|
 |Uživatel: Povinné a K dispozici|Uživatel: Odinstalace|Povinné a K dispozici|
 |Uživatel: Povinné a K dispozici|Zařízení: Povinné|Existuje obojí, Povinné a K dispozici
 |Uživatel: Povinné a K dispozici|Zařízení: Odinstalace|Existuje obojí, Intune překládá Povinné (Povinné a K dispozici).
 |Uživatel: K dispozici bez registrace|Uživatel: Povinné a K dispozici|Povinné a K dispozici
-|Uživatel: K dispozici bez registrace|Uživatel: Povinné|Vyžadováno
+|Uživatel: K dispozici bez registrace|Uživatel: Povinné|Povinné
 |Uživatel: K dispozici bez registrace|Uživatel: K dispozici|K dispozici|
 |Uživatel: K dispozici bez registrace|Zařízení: Povinné|Povinné a K dispozici bez registrace|
 |Uživatel: K dispozici bez registrace|Zařízení: Odinstalace|Odinstalace a K dispozici bez registrace.<br><br>Pokud uživatel nenainstaloval aplikaci z Portál společnosti, bude tato odinstalace dodržena.<br><br>Pokud uživatel aplikaci nainstaluje z Portálu společnosti, bude mít instalace prioritu před odinstalací.|
@@ -138,10 +138,10 @@ Výchozí hodnoty pro nastavení jsou předem vyplněné pro nová přiřazení 
 
 |Typ aplikace pro iOS | Výchozí nastavení pro možnost odinstalovat při odebrání zařízení |
 |--------------------|----------------|
-| Obchodní aplikace | Yes |
-| Aplikace pro Store | No |
-| Aplikace VPP | No |
-| Integrovaná aplikace | No |
+| Obchodní aplikace | Ano |
+| Aplikace pro Store | Ne |
+| Aplikace VPP | Ne |
+| Integrovaná aplikace | Ne |
 
 >[!NOTE]
 >**Typy přiřazení "dostupné":** Pokud aktualizujete toto nastavení pro skupiny "k dispozici pro zaregistrovaná zařízení" nebo "k dispozici v rámci nebo bez registrace", uživatelé, kteří už mají spravovanou aplikaci, nebudou mít aktualizované nastavení, dokud zařízení nesynchronizují s Intune a znovu nenainstaluje aplikaci. 

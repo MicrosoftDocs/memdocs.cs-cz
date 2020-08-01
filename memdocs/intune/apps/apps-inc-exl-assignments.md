@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/28/2020
+ms.date: 07/30/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a7f382c604d4cddef487871e47ad004389669982
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 8bbeb0c3db963e858230ce9a45f45f976bbfbbef
+ms.sourcegitcommit: 45657123a5db50aaecdb96d068712623d775f31c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83984292"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87443892"
 ---
 # <a name="include-and-exclude-app-assignments-in-microsoft-intune"></a>Zahrnutí a vyloučení přiřazení aplikací v Microsoft Intune
 
@@ -88,7 +88,12 @@ Přiřazení aplikace ke skupinám pomocí zahrnutí a vyloučení přiřazení:
 
 Když provedete přiřazení skupin, pak už přiřazené skupiny nejsou k dispozici pro změny. Pokud chcete vybrat skupinu, která aktuálně není k dispozici, odeberte ji nejprve ze seznamu přiřazených aplikací.
 
-Přiřazení můžete upravit tak, že ze seznamu **Přiřazení** aplikací vyberete řádek obsahující konkrétní přiřazení, které chcete změnit. Kromě toho můžete odebrat přiřazení tak, že kliknete na tři tečky (**...**) na konci řádku a vyberete **Odebrat**. Zobrazení seznamu **Přiřazení** můžete změnit seskupením podle možnosti **Typ přiřazení** nebo **Zahrnuto/Vyloučeno**.
+Přiřazení můžete upravit tak, že ze seznamu **Přiřazení** aplikací vyberete řádek obsahující konkrétní přiřazení, které chcete změnit. Kromě toho můžete odebrat přiřazení tak, že kliknete na tři tečky (**...**) na konci řádku a vyberete **Odebrat**. 
+
+> [!NOTE]
+> Odebráním přiřazení skupiny nedojde k odebrání související aplikace. Nainstalována aplikace zůstane na zařízení.  
+
+Zobrazení seznamu **Přiřazení** můžete změnit seskupením podle možnosti **Typ přiřazení** nebo **Zahrnuto/Vyloučeno**.
 
 ![Přiřazení aplikací Intune – dokončení](./media/apps-inc-exl-assignments/apps-inc-exl-05.png)
 

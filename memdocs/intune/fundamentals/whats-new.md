@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 07/17/2020
+ms.date: 07/30/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2cd5e8f6e1975adf33131ca47049eb2d4a6f68cd
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: 773be58733e4bf154fe994852ce72a8ad3a6dc54
+ms.sourcegitcommit: 45657123a5db50aaecdb96d068712623d775f31c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262876"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87443864"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
@@ -54,6 +54,14 @@ Podívejte se, co je nového v jednom týdnu v Microsoft Intune v [centru pro sp
 ### Role-based access control
 ### Scripts
 
+<!-- ########################## -->
+## <a name="week-of-july-27-2020"></a>Týden od 27. července 2020
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="monitor-and-troubleshoot"></a>Monitorování a odstraňování potíží
+
+#### <a name="power-bi-compliance-report-template-v20---636958---"></a>Šablona sestavy dodržování předpisů Power BI V 2.0<!-- 636958 -->
+Power BI šablonových aplikací umožňují Power BI partnerům vytvářet Power BI aplikace s malým nebo žádným kódováním a nasazovat je na jakéhokoli Power BIho zákazníka. Správci mohou aktualizovat verzi šablony sestavy dodržování předpisů Power BI z verze 1.0 až V 2.0. Verze 2.0 zahrnuje vylepšený návrh a také změny výpočtů a dat, která jsou v rámci šablony Surface. Další informace najdete v tématu [připojení k datovému skladu pomocí Power BI](../developer/reports-proc-get-a-link-powerbi.md) a [aktualizace šablony aplikace](https://docs.microsoft.com/power-bi/service-template-apps-install-distribute#update-a-template-app). Další informace najdete v blogovém příspěvku [s oznámením o nové verzi sestavy dodržování předpisů PowerBI s datovým skladem Intune](https://aka.ms/new_compliance_report).
 
 <!-- ########################## -->
 ## <a name="week-of-july-13-2020--2007-service-release"></a>Týden od 13. července 2020 (2007 vydání služby)
@@ -1090,7 +1098,7 @@ S výjimkou nových *antivirových zásad pro antivirová ochrana v programu Mic
 Níže jsou uvedené nové typy zásad, které jsou všechny ve verzi Preview, a jejich dostupné typy profilů:
 
 - **Antivirus (Preview)**:
-  - MacOS
+  - macOS:
     - **Antivirová ochrana** – Správa [nastavení zásad](../protect/antivirus-microsoft-defender-settings-macos.md) pro MACOS pro správu ochrany [ATP v programu Microsoft Defender pro Mac](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac).
 
   - Windows 10 a novější:
@@ -1106,12 +1114,12 @@ Níže jsou uvedené nové typy zásad, které jsou všechny ve verzi Preview, a
   - **Prostředí zabezpečení systému Windows** – Spravujte nastavení zabezpečení systému Windows, která koncoví uživatelé mohou zobrazit v centru zabezpečení v programu Microsoft Defender a v oznámeních, která obdrží. Tato nastavení se nezměnila z těch, která jsou k dispozici jako konfigurace zařízení Endpoint Protection Profile.
 
 - **Šifrování disku (Preview)**:
-  - MacOS
+  - macOS:
     - **FileVault**
   - Windows 10 a novější:
     - **BitLocker**
 - **Firewall (Preview)**:
-  - MacOS
+  - macOS:
     - **macOS firewall**
   - Windows 10 a novější:
     - **Firewall v programu Microsoft Defender**
