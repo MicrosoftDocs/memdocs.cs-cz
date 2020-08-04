@@ -136,5 +136,7 @@
           href: troubleshoot-ios-enrollment-errors.md
         - name: Řešení potíží s registrací zařízení s Windows
           href: troubleshoot-windows-enrollment-errors.md
+        - name: Řešení potíží s automatickou registrací Windows
+          href: troubleshoot-windows-auto-enrollment.md
         - name: Řešení potíží s registrací zařízení s Androidem
           href: troubleshoot-android-enrollment.md
