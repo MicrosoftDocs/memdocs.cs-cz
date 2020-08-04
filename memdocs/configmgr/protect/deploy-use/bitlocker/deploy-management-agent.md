@@ -10,12 +10,12 @@ ms.assetid: 39aa0558-742c-4171-81bc-9b1e6707f4ea
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 786a7a528c027ab46237dac92378224705b0e026
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: ba72e9accb7cbc5a7dc1149c6c9d947cb3e0692b
+ms.sourcegitcommit: 7e34b561d43aa086fc07ab4edf2230d09c04f05b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262825"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87526079"
 ---
 # <a name="deploy-bitlocker-management"></a>Nasazení správy nástroje BitLocker
 
@@ -131,6 +131,10 @@ Když vytvoříte více než jednu zásadu, můžete nakonfigurovat jejich relat
 1. Vyberte **OK** a Nasaďte zásadu.
 
 Můžete vytvořit více nasazení stejné zásady. Chcete-li zobrazit další informace o každém nasazení, vyberte zásadu v uzlu **Správa nástroje BitLocker** a potom v podokně podrobností přepněte na kartu **nasazení** .
+
+> [!IMPORTANT]
+> Klient MBAM nespustí nástroj BitLocker Drive Encryption akce, pokud je aktivní připojení pomocí protokolu vzdálené plochy. Všechna připojení vzdálené konzoly se musí zavřít a uživatel musí být přihlášený k fyzické relaci konzoly, než začne nástroj BitLocker Drive Encryption.
+
 
 ## <a name="monitor"></a>Monitorování
 

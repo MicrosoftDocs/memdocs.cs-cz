@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: ed3f53b6e2e9557def20fc459dfcf4641b0e396d
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: be1401f28ccbd15de2561a19169ed67a81a91550
+ms.sourcegitcommit: 7e34b561d43aa086fc07ab4edf2230d09c04f05b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905831"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87526028"
 ---
 # <a name="capabilities-in-technical-preview-1601-for-configuration-manager"></a>Funkce ve verzi Technical Preview 1601 pro Configuration Manager
 
@@ -130,8 +130,8 @@ Klient je online, pokud je aktuálně připojen k roli systému lokality bodu sp
 
 ### <a name="icons-for-client-status"></a>Ikony stavu klienta  
 
-|||  
-|-|-|  
+| Ikona | Description |
+| ---- | ----------- |
 |![ikona online stavu pro klienty](media/online-status-icon.png)|Klient je online.|  
 |![ikona offline stavu pro klienty](media/offline-status-icon.png)|Klient je offline.|  
 |![ikona neznámého stavu pro klienty](media/unknown-status-icon.png)|Stav klienta není známý.|  

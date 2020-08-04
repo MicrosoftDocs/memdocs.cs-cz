@@ -10,12 +10,12 @@ ms.assetid: 2a216814-ca8c-4d2e-bcef-dc00966a3c9f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 53a30f376bd288e8d50d88ea8f33af37f3cd599e
-ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
+ms.openlocfilehash: b15b3017dd49c75f4281a3c0bfd1c8a695ab8bae
+ms.sourcegitcommit: 7e34b561d43aa086fc07ab4edf2230d09c04f05b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82110147"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87525994"
 ---
 # <a name="plan-for-security-in-configuration-manager"></a>Plánování zabezpečení v Configuration Manager
 
@@ -70,7 +70,7 @@ Pro všechny Configuration Manager komunikačních cest se doporučuje používa
 
 ### <a name="certificates-for-cmg-and-cdp"></a><a name="bkmk_plan-cmgcdp"></a>Certifikáty pro CMG a CDP
 
-Správa klientů na internetu prostřednictvím brány pro správu cloudu (CMG) a distribučního bodu cloudu (CDP) vyžaduje použití certifikátů. Počet a typ certifikátů se liší v závislosti na konkrétních scénářích. Další informace najdete v těchto článcích:
+Správa klientů na internetu prostřednictvím brány pro správu cloudu (CMG) a distribučního bodu cloudu (CDP) vyžaduje použití certifikátů. Počet a typ certifikátů se liší v závislosti na konkrétních scénářích. Další informace najdete v následujících článcích:
 - [Certifikáty pro bránu pro správu cloudu](../../clients/manage/cmg/certificates-for-cloud-management-gateway.md)  
 - [Certifikáty pro distribuční bod cloudu](../hierarchy/use-a-cloud-based-distribution-point.md#bkmk_certs)  
 
@@ -97,7 +97,7 @@ Klienti nemohou bezpečně získat kopii certifikátu serveru lokality v násled
 
 2.  Exportujte certifikát bez privátního klíče, bezpečně soubor uložte a přistoupit k němu jenom z zabezpečeného kanálu.  
 
-3.  Nainstalujte klienta pomocí následující vlastnosti Client. msi:`SMSSIGNCERT=<full path and file name>`  
+3.  Nainstalujte klienta pomocí následující client.msi vlastnosti:`SMSSIGNCERT=<full path and file name>`  
 
 
 ###  <a name="plan-for-pki-certificate-revocation"></a><a name="BKMK_PlanningForCRLs"></a>Plánování odvolání certifikátu PKI  
@@ -160,9 +160,11 @@ V mnoha případech je výchozí konfigurace a chování dostačující. Klient 
 
 3.  Certifikát je platný, není odvolaný ani s prošlou platností. Při kontrole platnosti se taky ověří, jestli je privátní klíč přístupný.  
 
-4.  Certifikát má schopnost ověřování klienta, nebo je vydaný pro název počítače.  
+4.  Certifikát má schopnost ověřování klienta.
 
-5.  Certifikát má nejdelší dobu platnosti.  
+5.  Název subjektu certifikátu obsahuje název místního počítače jako podřetězec.  
+
+6.  Certifikát má nejdelší dobu platnosti.  
 
 Nakonfigurujte klienty tak, aby používali seznam vystavitelů certifikátů, a to pomocí následujících mechanismů:  
 
@@ -172,7 +174,7 @@ Nakonfigurujte klienty tak, aby používali seznam vystavitelů certifikátů, a
 
 - Klienti ho stáhnou z bodu správy poté, co jsou úspěšně přiřazeni ke své lokalitě.  
 
-- Zadejte v průběhu instalace klienta jako vlastnost CCMSetup Client. msi CCMCERTISSUERS.  
+- Zadejte během instalace klienta jako vlastnost CCMSetup client.msi CCMCERTISSUERS.  
 
 Klienti, kteří nemají seznam vydavatelů certifikátů při první instalaci a ještě nejsou přiřazeni k lokalitě, tuto kontrolu přeskočí. Když klienti mají seznam vystavitelů certifikátů a nemají certifikát PKI, který je v seznamu vystavitelů certifikátů zřetězený s důvěryhodným kořenovým certifikátem, výběr certifikátu se nezdařil. Klienti nepokračují s dalšími kritérii výběru certifikátu.  
 
@@ -208,7 +210,10 @@ Následující tabulka uvádí hodnoty atributů, které Configuration Manager p
 |2.5.4.12|T nebo Title|Nadpis|  
 |2.5.4.42|G nebo GN nebo GivenName|Křestní jméno|  
 |2.5.4.43|I nebo Initials|Iniciály|  
-|2.5.29.17|(žádná hodnota)|Alternativní název subjektu|  
+|2.5.29.17|(žádná hodnota)|Alternativní název subjektu| 
+
+  > [!NOTE]
+  > Pokud nakonfigurujete některou z výše uvedených metod výběru alternativních certifikátů, název subjektu certifikátu nemusí obsahovat název místního počítače.
 
 Pokud je po použití kritérií výběru použit více než jeden vhodný certifikát, můžete přepsat výchozí konfiguraci a vybrat certifikát s nejdelší dobou platnosti a místo toho určit, že není vybrán žádný certifikát. V tomto scénáři klient nebude moci komunikovat se systémy lokality IIS pomocí certifikátu PKI. Klient pošle do přiřazeného záložního stavového bodu chybovou zprávu, která vás upozorní na selhání výběru certifikátu, abyste mohli změnit nebo Upřesnit kritéria výběru certifikátu. Chování klienta poté bude záviset na tom, že připojení, jež selhalo, bylo založeno na protokolu HTTPS nebo HTTP:  
 
@@ -242,15 +247,15 @@ Z důvodu počtu možností konfigurace a voleb v Configuration Manager neexistu
 
 6. Sledujte, kolik klientů používá certifikát klienta PKIm, zobrazením sloupce **Certifikát klienta** v pracovním prostoru **Prostředky a kompatibilita** v uzlu **Zařízení** .  
 
-    Do počítačů lze také nasadit nástroj pro vyhodnocení připravenosti HTTPS Configuration Manager (**cmHttpsReadiness. exe**). Pak můžete pomocí sestav zobrazit, kolik počítačů může používat klientský certifikát PKI s Configuration Manager.  
+    Do počítačů lze také nasadit nástroj pro vyhodnocení připravenosti HTTPS Configuration Manager (**cmHttpsReadiness.exe**). Pak můžete pomocí sestav zobrazit, kolik počítačů může používat klientský certifikát PKI s Configuration Manager.  
 
    > [!NOTE]
-   >  Při instalaci klienta Configuration Manager nainstaluje nástroj **CMHttpsReadiness. exe** do `%windir%\CCM` složky. Při spuštění tohoto nástroje jsou k dispozici následující možnosti příkazového řádku:  
+   >  Při instalaci klienta Configuration Manager nainstaluje nástroj **CMHttpsReadiness.exe** do `%windir%\CCM` složky. Při spuštění tohoto nástroje jsou k dispozici následující možnosti příkazového řádku:  
    > 
-   > - `/Store:<name>`: Tato možnost je stejná jako vlastnost Client. msi **CCMCERTSTORE** .  
-   > - `/Issuers:<list>`: Tato možnost je stejná jako vlastnost Client. msi **CCMCERTISSUERS** .    
-   > - `/Criteria:<criteria>`: Tato možnost je stejná jako vlastnost Client. msi **CCMCERTSEL** .    
-   > - `/SelectFirstCert`: Tato možnost je stejná jako vlastnost Client. msi **CCMFIRSTCERT** .    
+   > - `/Store:<name>`: Tato možnost je stejná jako vlastnost **CCMCERTSTORE** client.msi.  
+   > - `/Issuers:<list>`: Tato možnost je stejná jako vlastnost **CCMCERTISSUERS** client.msi.    
+   > - `/Criteria:<criteria>`: Tato možnost je stejná jako vlastnost **CCMCERTSEL** client.msi.    
+   > - `/SelectFirstCert`: Tato možnost je stejná jako vlastnost **CCMFIRSTCERT** client.msi.    
    > 
    >   Další informace najdete v tématu [o vlastnostech instalace klienta](../../clients/deploy/about-client-installation-properties.md).  
 
@@ -315,10 +320,10 @@ Pomocí následujících postupů můžete předem zřídit a ověřit důvěryh
 
 4.  Uložte soubor do umístění, kam k němu mají přístup všechny počítače, ale v případě, že je soubor bezpečný proti falšování.  
 
-5.  Nainstalujte klienta pomocí libovolné metody instalace, která podporuje vlastnosti Client. msi. Zadejte následující vlastnost:`SMSROOTKEYPATH=<full path and file name>`  
+5.  Nainstalujte klienta pomocí libovolné metody instalace, která akceptuje client.msi vlastnosti. Zadejte následující vlastnost:`SMSROOTKEYPATH=<full path and file name>`  
 
     > [!IMPORTANT]  
-    > Pokud během instalace klienta určíte důvěryhodný kořenový klíč, zadejte také kód lokality. Použijte následující vlastnost Client. msi:`SMSSITECODE=<site code>`   
+    > Pokud během instalace klienta určíte důvěryhodný kořenový klíč, zadejte také kód lokality. Použijte následující vlastnost client.msi:`SMSSITECODE=<site code>`   
 
 
 ### <a name="pre-provision-a-client-with-the-trusted-root-key-without-using-a-file"></a><a name="bkmk_trk-provision-nofile"></a>Předem zřídit klienta s důvěryhodným kořenovým klíčem bez použití souboru  
@@ -327,10 +332,10 @@ Pomocí následujících postupů můžete předem zřídit a ověřit důvěryh
 
 2.  Vyhledejte položku **SMSPublicRootKey =**. Zkopírujte klíč z daného řádku a zavřete soubor bez jakýchkoli změn.  
 
-3.  Nainstalujte klienta pomocí libovolné metody instalace, která podporuje vlastnosti Client. msi. Zadejte následující vlastnost Client. msi: `SMSPublicRootKey=<key>` kde `<key>` je řetězec, který jste zkopírovali z MobileClient. tcf.  
+3.  Nainstalujte klienta pomocí libovolné metody instalace, která akceptuje client.msi vlastnosti. Zadejte následující vlastnost client.msi: `SMSPublicRootKey=<key>` kde `<key>` je řetězec, který jste zkopírovali z MobileClient. tcf.  
 
     > [!IMPORTANT]  
-    >  Pokud během instalace klienta určíte důvěryhodný kořenový klíč, zadejte také kód lokality. Použijte následující vlastnost Client. msi:`SMSSITECODE=<site code>`   
+    >  Pokud během instalace klienta určíte důvěryhodný kořenový klíč, zadejte také kód lokality. Použijte následující vlastnost client.msi:`SMSSITECODE=<site code>`   
 
 
 ### <a name="verify-the-trusted-root-key-on-a-client"></a><a name="bkmk_trk-verify"></a>Ověření důvěryhodného kořenového klíče na klientovi  
@@ -348,9 +353,9 @@ Vrácený řetězec je důvěryhodný kořenový klíč. Ověřte, že se shoduj
 
 ### <a name="remove-or-replace-the-trusted-root-key"></a><a name="bkmk_trk-reset"></a>Odeberte nebo nahraďte důvěryhodný kořenový klíč.  
 
-Odeberte důvěryhodný kořenový klíč z klienta pomocí vlastnosti Client. msi, **RESETKEYINFORMATION = true**. 
+Odeberte důvěryhodný kořenový klíč z klienta pomocí vlastnosti client.msi **RESETKEYINFORMATION = true**. 
 
-Pokud chcete důvěryhodný kořenový klíč nahradit, přeinstalujte klienta společně s novým důvěryhodným kořenovým klíčem. Použijte například nabízenou klientské nabízení nebo určete vlastnost Client. msi **SMSPublicRootKey**.  
+Pokud chcete důvěryhodný kořenový klíč nahradit, přeinstalujte klienta společně s novým důvěryhodným kořenovým klíčem. Použijte například nabízenou nápovědu klienta nebo zadejte vlastnost client.msi **SMSPublicRootKey**.  
 
 Další informace o těchto vlastnostech instalace najdete v tématu [informace o parametrech instalace a vlastnostech klienta](../../clients/deploy/about-client-installation-properties.md).
 

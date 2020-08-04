@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: fb13844dd05049b9186909884aa0c457a8cfacd9
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 98a82d118442a7ca37ff7b2df62bf4702c15ba2c
+ms.sourcegitcommit: 7e34b561d43aa086fc07ab4edf2230d09c04f05b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83428413"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87526011"
 ---
 # <a name="capabilities-in-technical-preview-1703-for-configuration-manager"></a>Funkce ve verzi Technical Preview 1703 pro Configuration Manager
 
@@ -31,24 +31,23 @@ V tomto článku se seznámíte s funkcemi, které jsou k dispozici v Technical 
 
 Můžete teď nasadit licencované aplikace do zařízení i pro uživatele. V závislosti na možnosti aplikace podporovat licencování zařízení bude při nasazování k vhodné licence, a to následujícím způsobem:
 
-|||||
-|-|-|-|-|
-|Verze Configuration Manager|Aplikace podporuje licencování zařízení?|Typ kolekce nasazení|Deklarovaná licence|
-|Starší než 1702|Ano|Uživatel|Uživatelská licence|
-|Starší než 1702|Ne|Uživatel|Uživatelská licence|
-|Starší než 1702|Ano|Zařízení|Uživatelská licence|
-|Starší než 1702|Ne|Zařízení|Uživatelská licence|
-|1702 a novější|Ano|Uživatel|Uživatelská licence|
-|1702 a novější|Ne|Uživatel|Uživatelská licence|
-|1702 a novější|Ano|Zařízení|Licence zařízení|
-|1702 a novější|Ne|Zařízení|Uživatelská licence|
+| Verze Configuration Manager | Aplikace podporuje licencování zařízení? | Typ kolekce nasazení | Deklarovaná licence |
+| ----------------------------- | ------------------------------ | -------------------------- | --------------- |
+|Starší než 1702|Yes|Uživatel|Uživatelská licence|
+|Starší než 1702|No|Uživatel|Uživatelská licence|
+|Starší než 1702|Yes|Zařízení|Uživatelská licence|
+|Starší než 1702|No|Zařízení|Uživatelská licence|
+|1702 a novější|Yes|Uživatel|Uživatelská licence|
+|1702 a novější|No|Uživatel|Uživatelská licence|
+|1702 a novější|Yes|Zařízení|Licence zařízení|
+|1702 a novější|No|Zařízení|Uživatelská licence|
 
 
 ## <a name="direct-links-to-applications-in-software-center"></a>Přímé odkazy na aplikace v centru softwaru
 
 Koncovým uživatelům teď můžete poskytnout přímý odkaz na aplikaci v centru softwaru. To znamená, že už nebudou muset otevírat Centrum softwaru a hledat aplikaci dřív, než ji budou moct nainstalovat. To je dostupné jenom pro Configuration Manager aplikace, ne balíčky a programy nebo sekvence úloh.
 
-### <a name="try-it-out"></a>Vyzkoušejte si to.                 
+### <a name="try-it-out"></a>Vyzkoušet                 
 
 Pomocí následujícího formátu adresy URL otevřete Centrum softwaru pro konkrétní aplikaci:
 
@@ -70,7 +69,7 @@ Pomocí tohoto odkazu můžou koncoví uživatelé otevřít Centrum softwaru p�
 
 Nyní můžete nasadit profily certifikátů PFX, které jste importovali, do Configuration Manager klientských počítačů se systémem Windows 10.
 
-### <a name="try-it-out"></a>Vyzkoušejte si to.
+### <a name="try-it-out"></a>Vyzkoušet
 
 Pomocí pokynů v tématu [Vytvoření profilů certifikátů PFX](../../mdm/deploy-use/create-pfx-certificate-profiles.md) IMPORTUJTE profil PFX, nasaďte profil a potom zkontrolujte, jestli byl certifikát nainstalovaný pro cílového uživatele.
 

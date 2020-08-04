@@ -10,12 +10,12 @@ ms.assetid: 2c8f57cf-1968-48de-87fb-4897432ed6e0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1f31ac96f29fc302e601b8da071b1486f4e7df90
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 00a10e169db36c62b083c56114159b54185a1040
+ms.sourcegitcommit: 7e34b561d43aa086fc07ab4edf2230d09c04f05b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81715344"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87525909"
 ---
 # <a name="how-to-monitor-clients-in-configuration-manager"></a>Postup monitorování klientů v Configuration Manager
 
@@ -53,8 +53,8 @@ Configuration Manager poskytuje následující typy informací jako stav klienta
 
     Ikony na začátku každého řádku označují online stav zařízení:  
 
-    |||  
-    |-|-|  
+    | Ikona | Description |
+    | ---- | ----------- |  
     |![ikona online stavu pro klienty](../../../core/clients/manage/media/online-status-icon.png)|Zařízení je online.|  
     |![ikona offline stavu pro klienty](../../../core/clients/manage/media/offline-status-icon.png)|Zařízení je offline.|  
     |![ikona neznámého stavu pro klienty](../../../core/clients/manage/media/unknown-status-icon.png)|Online stav není známý.|  
