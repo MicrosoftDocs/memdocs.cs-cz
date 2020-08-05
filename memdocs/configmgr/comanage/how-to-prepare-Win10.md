@@ -5,17 +5,17 @@ description: Přečtěte si, jak připravit Internetová zařízení s Windows 1
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 05/14/2020
+ms.date: 07/06/2020
 ms.topic: how-to
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 101de2ba-9b4d-4890-b087-5d518a4aa624
-ms.openlocfilehash: d58faa57fa1459bbc8d821d117d20b3f404dc8e0
-ms.sourcegitcommit: 7b2f7918d517005850031f30e705e5a512959c3d
+ms.openlocfilehash: 076a4b6d1bf5773287d4a0b32109023039a3b399
+ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84776884"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87546412"
 ---
 # <a name="how-to-prepare-internet-based-devices-for-co-management"></a>Příprava internetových zařízení na spolusprávu
 
@@ -25,7 +25,7 @@ Tento článek se zaměřuje na druhou cestu ke společné správě pro nová in
 
 Pro nová zařízení s Windows 10 můžete použít službu autopilotu ke konfiguraci funkce out of box (OOBE). Tento proces zahrnuje připojení zařízení ke službě Azure AD a registraci zařízení v Intune.  
 
-Další informace najdete v tématu [Přehled modulu Windows autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot).
+Další informace najdete v tématu [Přehled modulu Windows autopilot](../../autopilot/windows-autopilot.md).
 
 Pokud chcete nakonfigurovat, aby se zařízení automaticky zaregistrovala do Intune, když se připojí k Azure AD, přečtěte si téma [registrace zařízení s Windows pro Microsoft Intune](https://docs.microsoft.com/intune/windows-enroll).  
 
@@ -46,9 +46,9 @@ Další informace najdete v tématu [Přidání zařízení v Intune](https://do
 ### <a name="autopilot-for-existing-devices"></a>Autopilot pro existující zařízení
 <!--1358333-->
 
-[Windows autopilot pro stávající zařízení](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) je k dispozici ve Windows 10 verze 1809 nebo novější. Tato funkce umožňuje obnovení image a zřízení zařízení se systémem Windows 7 pro [uživatele se systémem Windows autopilot na základě](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven) jednoho nativního Configuration Managerho pořadí úloh.
+[Windows autopilot pro stávající zařízení](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) je k dispozici ve Windows 10 verze 1809 nebo novější. Tato funkce umožňuje obnovení image a zřízení zařízení se systémem Windows 7 pro [uživatele se systémem Windows autopilot na základě](../../autopilot/user-driven.md) jednoho nativního Configuration Managerho pořadí úloh.
 
-Další informace najdete v tématu [Windows autopilot pro existující zařízení pořadí úkolů](../osd/deploy-use/windows-autopilot-for-existing-devices.md).
+Další informace najdete v tématu [Windows autopilot pro existující zařízení pořadí úkolů](../../autopilot/existing-devices.md).
 
 ## <a name="install-the-configuration-manager-client"></a>Instalace klienta Configuration Manager
 

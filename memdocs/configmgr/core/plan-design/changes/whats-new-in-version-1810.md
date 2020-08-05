@@ -2,7 +2,7 @@
 title: Novinky ve verzi 1810
 titleSuffix: Configuration Manager
 description: Získejte podrobnosti o změnách a nových funkcích zavedených ve verzi 1810 Configuration Manager aktuální větve.
-ms.date: 04/23/2019
+ms.date: 07/06/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 4812324b-e6aa-4431-bf1d-9fcd763a8caa
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 2a3b322f868c5c203114de4d974ba6682272c5d7
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: f08b7449b4232d55c4be6227d23965231aa7a273
+ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906256"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87546446"
 ---
 # <a name="whats-new-in-version-1810-of-configuration-manager-current-branch"></a>Co je nového ve verzi 1810 Configuration Manager Current Branch
 
@@ -237,7 +237,7 @@ Další informace najdete v tématech o [vytváření aplikací](../../../apps/d
 <!--3607717, fka 1358333-->
 [Windows autopilot pro stávající zařízení](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) je teď k dispozici ve Windows 10 verze 1809 nebo novější. Tato nová funkce umožňuje obnovení image a zřízení zařízení se systémem Windows 7 pro [uživatele se systémem Windows autopilot na základě](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven) jednoho nativního Configuration Managerho pořadí úloh.
 
-Další informace najdete v tématu [Windows Autopilot pro existující zařízení](../../../osd/deploy-use/windows-autopilot-for-existing-devices.md).
+Další informace najdete v tématu [Windows Autopilot pro existující zařízení](../../../../autopilot/existing-devices.md).
 
 
 ### <a name="specify-the-drive-for-offline-os-image-servicing"></a>Zadejte jednotku pro obsluhu bitové kopie operačního systému offline
@@ -449,7 +449,7 @@ Až budete připraveni k instalaci této verze, přečtěte si téma [instalace 
 > [!TIP]  
 > Chcete-li nainstalovat novou lokalitu, použijte základní verzi Configuration Manager.  
 >
-> Další informace:
+> Přečtěte si další informace:
 >
 > - [Instalace nových lokalit](../../servers/deploy/install/installing-sites.md)  
 > - [Základní a aktualizační verze](../../servers/manage/updates.md#bkmk_Baselines)  

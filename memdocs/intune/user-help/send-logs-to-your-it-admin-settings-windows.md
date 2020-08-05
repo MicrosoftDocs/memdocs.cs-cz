@@ -1,5 +1,5 @@
 ---
-title: Odeslání protokolů firemní podpoře pro zařízení s Windows 10 | Dokumentace Microsoftu
+title: Odeslání protokolů pomocí aplikace nastavení pro Windows
 description: Registrace zařízení s Windows 10 1511 v Intune
 keywords: ''
 author: lenewsad
@@ -19,12 +19,12 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: ef75b3a678c60fd2683feb269210d70baed9c46a
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 4d7ae7fd722918d6d88d96b0c2114dd6c9dd49fc
+ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881964"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87546721"
 ---
 # <a name="send-logs-to-your-company-support-from-the-settings-app-for-windows-10"></a>Odeslání protokolů firemní podpoře z aplikace Nastavení pro Windows 10
 

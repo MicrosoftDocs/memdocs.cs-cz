@@ -8,13 +8,13 @@ metadata:
   author: dougeby
   ms.author: dougeby
   manager: mtillman
-  ms.date: 04/20/2020
-  ms.openlocfilehash: b72bb3a86129b67622f1f22b4e78814d3dfee574
-  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.date: 07/06/2020
+  ms.openlocfilehash: bb5f93471e8fab39d3fb4e4baef895d6acff2aa3
+  ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
   ms.translationtype: HT
   ms.contentlocale: cs-CZ
-  ms.lasthandoff: 04/21/2020
-  ms.locfileid: "81741302"
+  ms.lasthandoff: 08/04/2020
+  ms.locfileid: "87546755"
 highlightedContent:
   items:
   - title: Přehled produktu Microsoft Endpoint Manager
@@ -85,12 +85,12 @@ conceptualContent:
       text: Ochrany infrastruktury a dat
   - title: Windows Autopilot
     links:
-    - url: https://docs.microsoft.com/windows/deployment/windows-autopilot/
+    - url: ./autopilot/index.yml
       itemType: concept
       text: Dokumentace pro Windows Autopilot
     - url: /mem/intune/enrollment/enrollment-autopilot
       itemType: how-to-guide
       text: 'Intune: Registrace zařízení s Windows pomocí Windows Autopilotu'
-    - url: ./configmgr/osd/deploy-use/windows-autopilot-for-existing-devices.md
+    - url: ./autopilot/existing-devices.md
       itemType: how-to-guide
       text: 'Configuration Manager: Použití Windows Autopilot u stávajících zařízení'

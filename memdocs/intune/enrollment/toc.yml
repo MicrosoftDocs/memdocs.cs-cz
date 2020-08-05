@@ -56,10 +56,6 @@
           href: windows-bulk-enroll.md
         - name: Stránka stavu registrace
           href: windows-enrollment-status.md
-        - name: Program Windows AutoPilot Deployment
-          href: enrollment-autopilot.md
-        - name: Hybridní Azure AD s Autopilotem
-          href: windows-autopilot-hybrid.md
         - name: Konfigurace proxy pro Intune AD Connector
           href: autopilot-hybrid-connector-proxy.md
     - name: Nastavení registrace zařízení s Androidem

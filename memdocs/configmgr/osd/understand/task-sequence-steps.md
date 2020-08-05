@@ -2,7 +2,7 @@
 title: Kroky pořadí úkolů
 titleSuffix: Configuration Manager
 description: Přečtěte si o krocích, které můžete přidat do Configuration Manager pořadí úkolů.
-ms.date: 04/01/2020
+ms.date: 07/06/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 7c888a6f-8e37-4be5-8edb-832b218f266d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 114a0a18b3eb5d416b45379ccb3ac68128e529c5
-ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
+ms.openlocfilehash: 61070d98c5b7d453f493cf7ea2995705ee43f325
+ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85353594"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87546616"
 ---
 # <a name="task-sequence-steps"></a>Kroky pořadí úkolů
 
@@ -215,7 +215,7 @@ Tuto možnost vyberte, pokud chcete mít cílový počítač připojený ke konk
 
 #### <a name="join-a-domain"></a>Připojení k doméně
 
-Tuto možnost vyberte, pokud chcete mít cílový počítač připojený ke konkrétní doméně. Zadejte nebo přejděte k doméně, například `fabricam.com` . Zadejte nebo vyhledejte cestu protokolu LDAP (Lightweight Directory Access Protocol) pro organizační jednotku. Příklad: `LDAP//OU=computers, DC=Fabricam.com, C=com`.  
+Tuto možnost vyberte, pokud chcete mít cílový počítač připojený ke konkrétní doméně. Zadejte nebo přejděte k doméně, například `fabricam.com` . Zadejte nebo vyhledejte cestu protokolu LDAP (Lightweight Directory Access Protocol) pro organizační jednotku. Například: `LDAP//OU=computers, DC=Fabricam.com, C=com`.  
 
 #### <a name="account"></a>Účet
 
@@ -1599,7 +1599,7 @@ Tuto možnost vyberte, pokud chcete nástroji Sysprep zabránit v resetování p
 <!--SCCMDocs-pr issue 2695-->
 Tato možnost instruuje nástroj Sysprep, aby vypnul počítač namísto výchozího chování při restartování.
 
-Pořadí úloh [Windows autopilot pro stávající zařízení](../deploy-use/windows-autopilot-for-existing-devices.md) používá tento krok s touto možností.
+Pořadí úloh [Windows autopilot pro stávající zařízení](../../../autopilot/existing-devices.md) používá tento krok s touto možností.
 
 - Pokud chcete, aby pořadí úkolů aktualizovalo zařízení a pak hned spouštělo počáteční nastavení pro autopilot, nechte tuto možnost Vypnuto.  
 
@@ -1933,7 +1933,7 @@ Ve výchozím nastavení používají 64 operační systémy přesměrovač syst
 
 #### <a name="start-in"></a>Spustit v:
 
-Určuje složku spustitelného souboru programu (maximálně 127 znaků). Tato složka může představovat absolutní cestu k cílovému počítači nebo relativní cestu ke složce distribučního bodu obsahující balíček. Toto pole je nepovinné.  
+Určuje složku spustitelného souboru programu (maximálně 127 znaků). Tato složka může představovat absolutní cestu k cílovému počítači nebo relativní cestu ke složce distribučního bodu obsahující balíček. Toto pole je volitelné.  
 
 Příklady:  
 
@@ -2094,7 +2094,7 @@ Příklad použití této vlastnosti kroku naleznete v tématu [jak nastavit pro
 #### <a name="start-in"></a>Spustit v:
 
 <!-- 3556028 -->
-Počínaje verzí 1902 zadejte spouštěcí složku pro skript, maximálně 127 znaků. Tato složka může představovat absolutní cestu k cílovému počítači nebo relativní cestu ke složce distribučního bodu obsahující balíček. Toto pole je nepovinné.  
+Počínaje verzí 1902 zadejte spouštěcí složku pro skript, maximálně 127 znaků. Tato složka může představovat absolutní cestu k cílovému počítači nebo relativní cestu ke složce distribučního bodu obsahující balíček. Toto pole je volitelné.  
 
 > [!NOTE]  
 > Tlačítko **Procházet** prochází místní počítač se soubory a složkami. Cokoli, co vyberete, musí existovat také v cílovém počítači. Musí existovat ve stejném umístění a se stejnými názvy souborů a složek.  

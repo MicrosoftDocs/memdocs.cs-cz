@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 773be58733e4bf154fe994852ce72a8ad3a6dc54
-ms.sourcegitcommit: 45657123a5db50aaecdb96d068712623d775f31c
+ms.openlocfilehash: 46c58437fab66b0a4fd22ea8452856ca701e9eb7
+ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87443864"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87546805"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
@@ -75,8 +75,8 @@ Koncoví uživatelé se teď můžou rozhodnout, jestli se aplikace uvedené ve 
 #### <a name="exchange-on-premises-connector-support---7138486----"></a>Podpora konektoru On-Premises Exchange<!-- 7138486  -->
 Intune odebírá podporu funkce konektoru On-Premises Connector ze služby Intune počínaje verzí 2007 (červenec). Stávající zákazníci s aktivním konektorem budou v tuto chvíli moci pokračovat s aktuálními funkcemi. Noví zákazníci a stávající zákazníci, kteří nemají aktivní konektor, už nebudou moct vytvářet nové konektory ani spravovat zařízení Exchange ActiveSync (EAS) z Intune. Pro tyto zákazníky společnost Microsoft doporučuje používat [hybridní moderní ověřování Exchange (HMA)](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview) k ochraně přístupu k místnímu Exchangi. HMA umožňuje Intune App Protection zásady (označované také jako MAM) a podmíněný přístup prostřednictvím Outlook Mobile pro místní Exchange.
 
-#### <a name="smime-for-outlook-on-ios-and-android-enterprise-devices-managed-without-enrollment---6517155----"></a>S/MIME pro Outlook na zařízeních s iOS a Androidem Enterprise spravovaná bez registrace<!-- 6517155  -->
-V zařízení S iOS a Androidem Enterprise teď můžete povolit S/MIME v zařízeních S iOS a Androidem pomocí zásad konfigurace aplikací pro zařízení spravovaná bez registrace. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **aplikace**  >  **zásady konfigurace aplikace**  >  **Přidat**  >  **spravované aplikace**. Kromě toho můžete zvolit, jestli chcete uživatelům dovolit, aby toto nastavení v Outlooku změnili. Obecné informace o S/MIME najdete v tématu [s/MIME – přehled pro podepsání a šifrování e-mailu v Intune](../protect/certificates-s-mime-encryption-sign.md). Další informace o nastavení konfigurace Outlooku najdete v tématu [nastavení konfigurace Microsoft Outlooku](../apps/app-configuration-policies-outlook.md) a [Přidání zásad konfigurace aplikací pro spravované aplikace bez registrace zařízení](../apps/app-configuration-policies-managed-app.md). Informace o specifických S/MIME pro Microsoft Exchange najdete v tématu [scénáře s/MIME](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune#smime-scenarios) a [konfigurační klíče nastavení s/MIME](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune#smime-settings).
+#### <a name="smime-for-outlook-on-ios-and-android-devices-without-enrollment---6517155---"></a>S/MIME pro Outlook na zařízeních s iOS a Androidem bez registrace<!-- 6517155 -->
+Teď můžete povolit S/MIME pro Outlook na zařízeních s iOS a Androidem pomocí zásad konfigurace aplikací pro spravované aplikace. To umožňuje doručování zásad bez ohledu na stav registrace zařízení. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **aplikace**  >  **zásady konfigurace aplikace**  >  **Přidat**  >  **spravované aplikace**. Kromě toho můžete zvolit, jestli chcete uživatelům dovolit, aby toto nastavení v Outlooku změnili. K automatickému nasazení certifikátů S/MIME do Outlooku pro iOS a Android se ale musí zařízení zaregistrovat. Obecné informace o S/MIME najdete v tématu [s/MIME – přehled pro podepsání a šifrování e-mailu v Intune](https://docs.microsoft.com/mem/intune/protect/certificates-s-mime-encryption-sign). Další informace o nastavení konfigurace Outlooku najdete v tématu [nastavení konfigurace Microsoft Outlooku](../apps/app-configuration-policies-outlook.md) a [Přidání zásad konfigurace aplikací pro spravované aplikace bez registrace zařízení](../apps/app-configuration-policies-managed-app.md). Informace o aplikaci Outlook pro iOS a Android S/MIME najdete v tématu [scénáře S/MIME](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune#smime-scenarios) a [konfigurační klíče nastavení s/MIME](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune#smime-settings). 
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="device-configuration"></a>Konfigurace zařízení

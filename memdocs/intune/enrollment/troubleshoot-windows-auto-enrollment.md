@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dd84d50fb7e1ad9d67cd106d6da2b187dfd6adb4
-ms.sourcegitcommit: 7e34b561d43aa086fc07ab4edf2230d09c04f05b
+ms.openlocfilehash: 968aa9b2f7127e9b7f092f36a99b491a75f0b78c
+ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87528203"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87546862"
 ---
 # <a name="troubleshoot-windows-10-group-policy-based-auto-enrollment-in-intune"></a>Řešení potíží s automatickým zápisem na základě zásad skupiny Windows 10 v Intune
 
@@ -33,11 +33,11 @@ Pomocí zásad skupiny můžete aktivovat automatickou registraci MDM pro zaří
 
 Než začnete řešit potíže, je nejlepší ověřit, jestli je vše nakonfigurované správně. Pokud se problém během ověřování nedá opravit, můžete k dalšímu odstraňování potíží zkontrolovat některé důležité soubory protokolu.
 
-1. Ověřte, jestli se uživateli, který se pokouší zaregistrovat zařízení, přiřadí platná licence Intune.
+- Ověřte, jestli se uživateli, který se pokouší zaregistrovat zařízení, přiřadí platná licence Intune.
 
    ![Ověřit licenci Intune](./media/troubleshoot-windows-auto-enrollment/intune-license.png)
 
-2. Ověřte, jestli je automatický zápis povolený pro všechny uživatele, kteří budou zařízení registrovat v Intune. Další informace najdete v tématu [Azure AD a Microsoft Intune: Automatická registrace MDM na novém portálu](https://docs.microsoft.com/windows/client-management/mdm/azure-ad-and-microsoft-intune-automatic-mdm-enrollment-in-the-new-portal).
+- Ověřte, jestli je automatický zápis povolený pro všechny uživatele, kteří budou zařízení registrovat v Intune. Další informace najdete v tématu [Azure AD a Microsoft Intune: Automatická registrace MDM na novém portálu](https://docs.microsoft.com/windows/client-management/mdm/azure-ad-and-microsoft-intune-automatic-mdm-enrollment-in-the-new-portal).
 
    ![Ověřit automatickou registraci](./media/troubleshoot-windows-auto-enrollment/verify-auto-enrollment.png)
 
@@ -45,9 +45,9 @@ Než začnete řešit potíže, je nejlepší ověřit, jestli je vše nakonfigu
    - Ověřte, zda je **obor uživatele mam** nastaven na **hodnotu None**. V opačném případě bude mít toto nastavení přednost před rozsahem MDM a způsobovat problémy.
    - Ověřte, jestli je **Adresa URL zjišťování MDM** nastavená na **https://enrollment.manage.microsoft.com/enrollmentserver/discovery** .
 
-3. Ověřte, že na zařízení běží Windows 10 verze 1709 nebo novější.
+- Ověřte, že na zařízení běží Windows 10 verze 1709 nebo novější.
 
-4. Ověřte, že jsou zařízení nastavená na **hybridní službu Azure AD**. Toto nastavení znamená, že jsou zařízení připojená k doméně i k Azure AD.
+- Ověřte, že jsou zařízení nastavená na **hybridní službu Azure AD**. Toto nastavení znamená, že jsou zařízení připojená k doméně i k Azure AD.
 
    Nastavení ověříte spuštěním **dsregcmd/status** na příkazovém řádku. Pak ověřte následující hodnoty stavu ve výstupu:
 
@@ -68,16 +68,16 @@ Než začnete řešit potíže, je nejlepší ověřit, jestli je vše nakonfigu
 
    ![Seznam zařízení připojených k Azure AD](./media/troubleshoot-windows-auto-enrollment/ad-joined-devices.png)
 
-5. **Microsoft Intune**   V okně Azure AD se můžou v části **mobilita (MDM a mam)** uvést jak **registrace** Microsoft Intune, tak Microsoft Intune   . Pokud jsou k dispozici obě, ujistěte se, že jste nakonfigurovali nastavení automatického zápisu v části **Microsoft Intune**.
+- **Microsoft Intune**   V okně Azure AD se můžou v části **mobilita (MDM a mam)** uvést jak **registrace** Microsoft Intune, tak Microsoft Intune   . Pokud jsou k dispozici obě, ujistěte se, že jste nakonfigurovali nastavení automatického zápisu v části **Microsoft Intune**.
 
-6. Ověřte, jestli se následující nastavení zásad Zásady skupiny úspěšně nasadilo do všech zařízení, která by se měla zaregistrovat v Intune:
+- Ověřte, jestli se následující nastavení zásad Zásady skupiny úspěšně nasadilo do všech zařízení, která by se měla zaregistrovat v Intune:
 
    **Konfigurace počítače**  >  **Zásady**  >  **Šablony pro správu**  >  **Součásti**  >  systému Windows **MDM**  >  **Povolit automatickou registraci MDM pomocí výchozích přihlašovacích údajů Azure AD**
 
    Můžete se obrátit na správce domény a ověřit, jestli se nastavení zásad Zásady skupiny úspěšně nasadilo.
 
-7. Ujistěte se, že zařízení není zaregistrované v Intune pomocí klasického agenta pro počítače PC.
-8. Ověřte následující nastavení v Azure AD a Intune:
+- Ujistěte se, že zařízení není zaregistrované v Intune pomocí klasického agenta pro počítače PC.
+- Ověřte následující nastavení v Azure AD a Intune:
 
    **V nastavení zařízení Azure AD:**
 
@@ -92,7 +92,7 @@ Než začnete řešit potíže, je nejlepší ověřit, jestli je vše nakonfigu
 
      ![Povolená registrace zařízení s Windows](./media/troubleshoot-windows-auto-enrollment/restrictions.png)
 
-## <a name="troubleshooting"></a>Řešení potíží
+## <a name="troubleshooting"></a>Poradce při potížích
 
 Pokud se problém opakuje, Projděte si protokoly MDM na zařízení v následujícím umístění v Prohlížeč událostí:
 
@@ -138,3 +138,6 @@ Událost s ID 75 není zaznamenána v následujících situacích:
     **gpupdate/force**
 
     Pokud se problém opakuje, proveďte další řešení potíží ve službě Active Directory.
+
+## <a name="next-steps"></a>Další kroky
+[Řešení potíží s registrací zařízení s Windows](troubleshoot-windows-enrollment-errors.md)

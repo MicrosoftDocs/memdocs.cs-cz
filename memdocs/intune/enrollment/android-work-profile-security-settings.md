@@ -1,5 +1,5 @@
 ---
-title: Architektura konfigurace zabezpečení pro Android Enterprise
+title: Pracovní profil konfigurace pro Android Enterprise
 titleSuffix: Microsoft Intune
 description: Přečtěte si o omezeních a nastaveních navrhovaných pro základní a vysoké zabezpečení zařízení s Androidem Enterprise.
 keywords: ''
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 05d0cb3db60ed0f54a66bc4128e5528e789537a8
-ms.sourcegitcommit: d647eefa23c8849f49584442df568284d51d7525
+ms.openlocfilehash: 4283caf8f21e87736b09a3d6c7b31f8daf1f6075
+ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86195697"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87546822"
 ---
 # <a name="android-enterprise-work-profile-security-configurations"></a>Konfigurace zabezpečení pracovního profilu Android Enterprise
 
@@ -47,7 +47,7 @@ Pro zařízení pracovních profilů vlastněných osobně jsou k dispozici dvě
 
 | Sekce | Nastavení | Hodnota | Poznámky |
 | ----- | ----- | ----- | ----- |
-| Microsoft Defender ATP | Vyžadovat, aby zařízení bylo na nebo pod hodnocením rizika počítače | Nenakonfigurováno ||
+| Ochrana ATP v programu Microsoft Defender | Vyžadovat, aby zařízení bylo na nebo pod hodnocením rizika počítače | Nenakonfigurováno ||
 | Stav zařízení | Zařízení s rootem | Blok ||
 | Stav zařízení | Vyžadovat, aby zařízení bylo na úrovni hrozby pro zařízení nebo pod ní | Nenakonfigurováno||
 | Stav zařízení | Aplikace Služby Google Play je nakonfigurovaná | Vyžadovat ||
@@ -119,7 +119,7 @@ Nastavení zásad vyžadované v úrovni 3 zahrnují všechna nastavení zásad 
 
 | Sekce | Nastavení | Hodnota | Poznámky |
 | ----- | ----- | ----- | ----- |
-| Microsoft Defender ATP | Vyžadovat, aby zařízení bylo na nebo pod hodnocením rizika počítače | Vymazat | Toto nastavení vyžaduje ATP programu Microsoft Defender. Další informace najdete v tématu vymáhání dodržování předpisů pro [Microsoft Defender ATP s podmíněným přístupem v Intune](../protect/advanced-threat-protection.md).<p>Zákazníci by měli zvážit implementaci řešení ochrany před mobilními hrozbami v programu Microsoft Defender. Není nutné nasazovat obojí. |
+| Ochrana ATP v programu Microsoft Defender | Vyžadovat, aby zařízení bylo na nebo pod hodnocením rizika počítače | Vymazat | Toto nastavení vyžaduje ATP programu Microsoft Defender. Další informace najdete v tématu vymáhání dodržování předpisů pro [Microsoft Defender ATP s podmíněným přístupem v Intune](../protect/advanced-threat-protection.md).<p>Zákazníci by měli zvážit implementaci řešení ochrany před mobilními hrozbami v programu Microsoft Defender. Není nutné nasazovat obojí. |
 | Stav zařízení | Vyžadovat, aby zařízení bylo na úrovni hrozby pro zařízení nebo pod ní | Psán | Toto nastavení vyžaduje produkt ochrany před mobilními hrozbami. Další informace najdete v tématu Ochrana před [mobilními hrozbami u zaregistrovaných zařízení](../protect/mtd-device-compliance-policy-create.md).<p>Zákazníci by měli zvážit implementaci řešení ochrany před mobilními hrozbami v programu Microsoft Defender. Není nutné nasazovat obojí.|
 | Vlastnosti zařízení | Minimální verze operačního systému | Formát: Hlavní_verze. podverze<br>Příklad: 8,0| Microsoft doporučuje nakonfigurovat minimální hlavní verzi Androidu tak, aby odpovídala podporovaným verzím Androidu pro aplikace Microsoftu. Výrobci OEM a zařízení, kteří dodržují doporučené požadavky na Android Enterprise, musí podporovat aktuální dodací verzi a jeden upgrade na jedno písmeno. V současné době Android doporučuje Android 8,0 a novější pro pracovníky znalostní báze. Nejnovější doporučení pro Android najdete v tématu Doporučené požadavky pro Android Enterprise |
 | Zabezpečení systému | Počet dní do vypršení platnosti hesla | 365 | Organizace možná budou muset aktualizovat toto nastavení tak, aby odpovídalo zásadám hesel. |

@@ -1,5 +1,5 @@
 ---
-title: Dosáhlo se limitu počtu zaregistrovaných zařízení | Microsoft Docs
+title: Bylo dosaženo limitu registrovaných zařízení macOS.
 titlesuffix: Intune Company Portal
 description: ''
 keywords: ''
@@ -19,14 +19,14 @@ ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 94be96db8596fbc6a5d8f17e923e687c7972433d
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 2e07e7ebd2c209aabf8c0094f9f1220f249fcf6e
+ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83880538"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87546463"
 ---
-# <a name="the-limit-of-devices-you-can-register-has-been-reached"></a>Dosáhlo se limitu počtu zařízení, která můžete zaregistrovat
+# <a name="the-limit-of-macos-devices-you-can-register-has-been-reached"></a>Bylo dosaženo limitu macOS zařízení, která můžete zaregistrovat.
 
 Každá společnost si určuje limit počtu zařízení, přes která můžou jednotliví lidé přistupovat k prostředkům společnosti. Toto opatření pomáhá udržovat informace společnosti v bezpečí a zajišťuje, že každý uživatel je k přístupu k informacím autorizovaný z konkrétních zařízení a lokalit. Když se vám zobrazí zpráva s oznámením, že jste **nemohli zaregistrovat svoje zařízení**, protože jste dosáhli limitu počtu zařízení, můžete udělat tři věci:
 

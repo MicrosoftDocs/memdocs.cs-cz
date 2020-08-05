@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 03/30/2020
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: 22dc48a60d03a0cc6bc10e04bc3facbf36983ff9
-ms.sourcegitcommit: 52dd59bdbad07b414db9e4209da0f4c957cf5d6e
+ms.openlocfilehash: 79e2694cfd34f1db8bf11969506ec3d8cbc453d4
+ms.sourcegitcommit: 8a9b85d1c879060ea541f7c8ad1ae34a4ed33ed0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84637577"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87507232"
 ---
 Tato oznámení obsahují důležité informace, které vám pomůžou připravit se na budoucí změny a funkce Intune.
 
@@ -75,6 +75,9 @@ Tato zařízení nebudou mít vliv, pokud jsou některá z následujících:
 - Nastavit **minimální délku hesla**
 - Nastavit **počet dní do vypršení platnosti hesla**
 - Nastavte **počet předchozích hesel, aby se zabránilo opakovanému použití**
+
+
+![Snímek obrazovky videa stránky zásad dodržování předpisů pro Android](../fundamentals/media/notices/android-compliance-settings.png)
 
 ###### <a name="additional-impacts-based-on-android-os-version"></a>Další dopady na základě verze operačního systému Android
 
