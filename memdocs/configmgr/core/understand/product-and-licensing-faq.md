@@ -10,12 +10,12 @@ ms.assetid: ee8d611f-aa0c-4efd-b0ad-dbd14d0a0623
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1ce9024fa610c6af19eb40ccf0da662a3e99234f
-ms.sourcegitcommit: 01c1ca337e82c5e8e92153079ed89f79e20bde9e
+ms.openlocfilehash: 7c92423316f83841875aed2493442881bc3a1d74
+ms.sourcegitcommit: 9eebe77af18045fceb3d41b43d76b370fe92b30e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86157820"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87821593"
 ---
 # <a name="frequently-asked-questions-for-configuration-manager-branches-and-licensing"></a>Nejčastější dotazy týkající se Configuration Manager větví a licencování
 
@@ -58,7 +58,7 @@ Configuration Manager je zahrnutý v následujících plánech:
 - EMS E5
 - Microsoft 365 E3
 - Microsoft 365 E5
-- Microsoft 365 F1
+- Microsoft 365 F3 (dříve Microsoft 365 F1)
 
 <!-- Sources:
 https://www.microsoft.com/microsoft-365/compare-all-microsoft-365-plans
@@ -91,7 +91,7 @@ Licence spolusprávy umožňuje Configuration Manager zákazníkům se Software 
 
 - Licencování, které jste předtím používali pro System Center Configuration Manager, se stále vztahuje na službu Microsoft Endpoint Configuration Manager. Pokud instalujete novou lokalitu, použijte existující kódy Product Key.
 
-|Funkce | Licence pro spolusprávu | Úplná licence Intune |
+|Příznak | Licence pro spolusprávu | Úplná licence Intune |
 |---------|---------|---------|
 |Registrace Windows 10|Ano (jenom pro existující zařízení spravovaná nástrojem ConfigMgr)|Ano|
 |iOS, Android, registrace macOS|Ne|Ano|
@@ -100,7 +100,7 @@ Licence spolusprávy umožňuje Configuration Manager zákazníkům se Software 
 |Podmíněný přístup<br>(vyžaduje se další AADP1.)|Ano|Ano|
 |profily zařízení|Ano|Ano|
 |Správa aktualizací softwaru|Ano|Ano|
-|Inventory (Inventář)|Ano|Ano|
+|inventář|Ano|Ano|
 |Správa aplikací|Ano|Ano|
 |Vzdálená pomoc<br>(Vyžaduje se licence TeamVieweru)|Ano|Ano|
 |Desktop Analytics<br>(Vyžaduje se licence předplatného systému Windows|Ano|–|
