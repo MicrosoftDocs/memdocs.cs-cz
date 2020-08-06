@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bc8fb5b50475c523741128d64582be29d4bf5ffe
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: b8ce02a86236e390983b4e1ecca8d48d4767e49e
+ms.sourcegitcommit: 9eebe77af18045fceb3d41b43d76b370fe92b30e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262655"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87821627"
 ---
 # <a name="add-managed-google-play-apps-to-android-enterprise-devices-with-intune"></a>Přidání spravovaných aplikací Google Play do zařízení s Androidem Enterprise pomocí Intune
 
@@ -175,8 +175,8 @@ Webové odkazy se otevřou pomocí Microsoft Edge nebo jakékoli jiné aplikace 
 Pokud jste aplikaci schválili ze Storu a nevidíte ji v úloze **aplikace** , vynuťte okamžitou synchronizaci následujícím způsobem:
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-3. Vyberte **aplikace**  >  konektory**pro správu tenanta**  >  **a tokeny**  >  **spravované Google Play**.
-5. V podokně **Spravovaný obchod Google Play** zvolte **Aktualizovat**.  
+3. Vyberte konektory **správy tenanta**  >  **a**  >  **spravované Google Play**tokeny.
+5. V podokně **spravované Google Play** klikněte na možnost **synchronizovat**.  
     Stránka aktualizuje čas a stav poslední synchronizace.
 6. V centru pro správu Microsoft Endpoint Manageru vyberte **aplikace**  >  **všechny aplikace**.  
     Zobrazí se nově dostupná aplikace ze spravovaného obchodu Google Play.

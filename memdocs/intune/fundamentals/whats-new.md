@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 46c58437fab66b0a4fd22ea8452856ca701e9eb7
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: d44da952be6d01daa19f7c8227976cfa46299c88
+ms.sourcegitcommit: 9eebe77af18045fceb3d41b43d76b370fe92b30e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87546805"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87821644"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
@@ -68,9 +68,6 @@ Power BI šablonových aplikací umožňují Power BI partnerům vytvářet Powe
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="app-management"></a>Správa aplikací
-
-#### <a name="win32-app-installation-notifications-and-the-company-portal---7485945----"></a>Oznámení o instalaci aplikace Win32 a Portál společnosti<!-- 7485945  -->
-Koncoví uživatelé se teď můžou rozhodnout, jestli se aplikace uvedené ve [Microsoft Intune Web portál společnosti](https://portal.manage.microsoft.com/) mají otevřít pomocí aplikace Portál společnosti nebo webu portál společnosti. Tato možnost je dostupná jenom v případě, že má koncový uživatel nainstalovanou aplikaci Portál společnosti a spustí webovou aplikaci Portál společnosti mimo prohlížeč. 
 
 #### <a name="exchange-on-premises-connector-support---7138486----"></a>Podpora konektoru On-Premises Exchange<!-- 7138486  -->
 Intune odebírá podporu funkce konektoru On-Premises Connector ze služby Intune počínaje verzí 2007 (červenec). Stávající zákazníci s aktivním konektorem budou v tuto chvíli moci pokračovat s aktuálními funkcemi. Noví zákazníci a stávající zákazníci, kteří nemají aktivní konektor, už nebudou moct vytvářet nové konektory ani spravovat zařízení Exchange ActiveSync (EAS) z Intune. Pro tyto zákazníky společnost Microsoft doporučuje používat [hybridní moderní ověřování Exchange (HMA)](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview) k ochraně přístupu k místnímu Exchangi. HMA umožňuje Intune App Protection zásady (označované také jako MAM) a podmíněný přístup prostřednictvím Outlook Mobile pro místní Exchange.
@@ -1098,7 +1095,7 @@ S výjimkou nových *antivirových zásad pro antivirová ochrana v programu Mic
 Níže jsou uvedené nové typy zásad, které jsou všechny ve verzi Preview, a jejich dostupné typy profilů:
 
 - **Antivirus (Preview)**:
-  - macOS:
+  - MacOS
     - **Antivirová ochrana** – Správa [nastavení zásad](../protect/antivirus-microsoft-defender-settings-macos.md) pro MACOS pro správu ochrany [ATP v programu Microsoft Defender pro Mac](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac).
 
   - Windows 10 a novější:
@@ -1114,12 +1111,12 @@ Níže jsou uvedené nové typy zásad, které jsou všechny ve verzi Preview, a
   - **Prostředí zabezpečení systému Windows** – Spravujte nastavení zabezpečení systému Windows, která koncoví uživatelé mohou zobrazit v centru zabezpečení v programu Microsoft Defender a v oznámeních, která obdrží. Tato nastavení se nezměnila z těch, která jsou k dispozici jako konfigurace zařízení Endpoint Protection Profile.
 
 - **Šifrování disku (Preview)**:
-  - macOS:
+  - MacOS
     - **FileVault**
   - Windows 10 a novější:
     - **BitLocker**
 - **Firewall (Preview)**:
-  - macOS:
+  - MacOS
     - **macOS firewall**
   - Windows 10 a novější:
     - **Firewall v programu Microsoft Defender**
