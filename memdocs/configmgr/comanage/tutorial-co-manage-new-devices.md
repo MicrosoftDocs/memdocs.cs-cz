@@ -10,12 +10,12 @@ ms.topic: tutorial
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 7fb02a5c-e286-46b1-a972-6335c858429a
-ms.openlocfilehash: 67d86850dc0440481916984af8635d9e005044c6
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 742cd1e86ac0bff6563c0d3ee4edce7324629480
+ms.sourcegitcommit: c1afc8abd0d7da48815bd2b0e45147774c72c2df
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83428623"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87815459"
 ---
 # <a name="tutorial-enable-co-management-for-new-internet-based-devices"></a>Kurz: povolení spolusprávy pro nová zařízení na internetu
 
@@ -40,7 +40,7 @@ Tento kurz použijte v těchto případech:
 > * Povolit spolusprávu v Configuration Manager
 > * Konfigurace Intune pro instalaci klienta Configuration Manager
 
-## <a name="prerequisites"></a>Požadavky  
+## <a name="prerequisites"></a>Předpoklady  
 
 ### <a name="azure-services-and-environment"></a>Služby a prostředí Azure
 
@@ -96,14 +96,14 @@ O tomto certifikátu:
 
 ### <a name="identify-a-unique-name-for-your-cloud-management-gateway-in-azure"></a>Identifikace jedinečného názvu pro bránu pro správu cloudu v Azure
 
-Když vyžádáte ověřovací certifikát serveru CMG, určíte, co musí být jedinečný název, abyste identifikovali *cloudovou službu (Classic)* v Azure. Ve výchozím nastavení používá veřejný cloud Azure *cloudapp.NET*a CMG je hostovaný v rámci domény cloudapp.NET jako * \< YourUniqueDnsName>. cloudapp.NET*.  
+Když vyžádáte ověřovací certifikát serveru CMG, určíte, co musí být jedinečný název, abyste identifikovali *cloudovou službu (Classic)* v Azure. Ve výchozím nastavení používá veřejný cloud Azure *cloudapp.NET*a CMG je hostovaný v doméně cloudapp.NET jako * \<YourUniqueDnsName> . cloudapp.NET*.  
 
 > [!TIP]  
 > V tomto kurzu používá **ověřovací certifikát serveru CMG** plně kvalifikovaný název domény, který končí na *contoso.com*.  Po vytvoření CMG nakonfigurujeme záznam kanonického názvu (CNAME) ve veřejném DNS naší organizace. Tento záznam vytvoří alias pro CMG, který se mapuje na název, který používáme ve veřejném certifikátu.  
 
 Před podáním žádosti o veřejný certifikát potvrďte, že je název, který chcete použít, dostupný v Azure. Službu nevytváříte přímo v Azure. Místo toho se k vytvoření cloudové služby při instalaci CMG Configuration Manager používá název zadaný ve veřejném certifikátu, který požadujete.  
 
-1. Přihlaste se na web [Microsoft Azure Portal](https://portal.azure.com/).  
+1. Přihlaste se k webu [Microsoft Azure Portal](https://portal.azure.com/).  
 
 2. Vyberte **vytvořit prostředek**, zvolte kategorii **COMPUTE** a pak vyberte **cloudová služba**. Otevře se stránka cloudová služba (Classic).
 
@@ -125,7 +125,9 @@ Když vygenerujete CSR, požádejte o typ poskytovatele klíčů verze 2. Podpor
 > [!TIP]  
 > Když nasadíme CMG, nainstalujeme zároveň také distribuční bod cloudu (CDP). Ve výchozím nastavení, když nasadíte CMG, možnost **POVOLÍ CMG fungovat jako distribuční bod cloudu a vybere se obsah z úložiště Azure** . Společné umístění CDP na serveru pomocí nástroje CMG odstraňuje nutnost samostatného certifikátu a konfigurací pro podporu CDP. I když se CDP nepožaduje pro použití spolusprávy, je užitečný ve většině prostředí.  
 >
-> Pokud budete pro spolusprávu používat další distribuční body cloudu, budete muset pro každý další server požádat o samostatné certifikáty. Pro vyžádání veřejného certifikátu pro CDP použijte stejné podrobnosti jako u CSR pro bránu pro správu cloudu. Je potřeba změnit pouze běžný název, aby byl jedinečný pro každý CDP.  
+> Pokud používáte jakékoli další samostatné CDP, musíte pro každý další CDP požádat o samostatné certifikáty. Pro vyžádání veřejného certifikátu pro CDP použijte stejné podrobnosti jako u CSR pro bránu pro správu cloudu. Musíte změnit pouze běžný název, aby byl jedinečný pro každý CDP.
+>
+> Použití dalšího samostatného objektu CDP je zastaralé a už se nedoporučuje. Další informace najdete v tématu [zastaralé funkce](../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md#deprecated-features).
 
 #### <a name="details-for-the-cloud-management-gateway-csr"></a>Podrobnosti o CSR pro bránu pro správu cloudu
 
@@ -160,7 +162,7 @@ Poskytovatelé veřejných certifikátů obvykle poskytují pokyny k importu cer
 
 6. Na **stránce úložiště certifikátů**vyberte možnost **automaticky vybrat úložiště certifikátů na základě typu certifikátu**a poté vyberte možnost **Další**.  
 
-7. Vyberte **Finish** (Dokončit).
+7. Vyberte **Dokončit**.
 
 ### <a name="export-the-certificate"></a>Export certifikátu
 
@@ -270,7 +272,7 @@ Tento postup slouží k instalaci brány pro správu cloudu jako služby v Azure
   
    3. **Přihlaste** se ke svému předplatnému Azure. Configuration Manager vyplní Další informace na základě informací, které jste nakonfigurovali, když jste povolili Azure Cloud Services pro Configuration Manager.  
 
-   Pokračujte výběrem tlačítka **Next** (Další).  
+   Pokračujte výběrem tlačítka **Další**.  
 
 3. Na stránce **Nastavení** vyhledejte a vyberte soubor s názvem **ConfigMgrCloudMGServer. pfx**, který je soubor, který jste exportovali po importu ověřovacího certifikátu serveru CMG. Po zadání hesla se **název služby** a **název nasazení** automaticky vyplní na základě podrobností v souboru certifikátu. pfx.
 
@@ -284,7 +286,7 @@ Tento postup slouží k instalaci brány pro správu cloudu jako služby v Azure
 
 8. Zaškrtněte políčko **Povolit funkci CMG jako distribuční bod cloudu a obsluhu obsahu z Azure Storage** , pokud chcete nasadit distribuční bod cloudu s CMG.
 
-9. Pokračujte výběrem tlačítka **Next** (Další).
+9. Pokračujte výběrem tlačítka **Další**.
 
 10. Zkontrolujte hodnoty na stránce **Výstraha** a pak vyberte **Další**.
 
@@ -327,7 +329,7 @@ Umožňuje nakonfigurovat lokalitu tak, aby podporovala rozšířené protokoly 
 
 5. Vyberte **bod připojení brány pro správu cloudu** a pokračujte výběrem **Další** .  
 
-6. Zkontrolujte výchozí výběry na stránce **bod připojení brány pro správu cloudu** a ujistěte se, že je vybraná možnost správné CMG. Pokud máte více bran pro správu cloudu, můžete použít rozevírací seznam a zadat jiný CMG. Po instalaci můžete také změnit CMG, které se používají. Pokračujte výběrem tlačítka **Next** (Další).
+6. Zkontrolujte výchozí výběry na stránce **bod připojení brány pro správu cloudu** a ujistěte se, že je vybraná možnost správné CMG. Pokud máte více bran pro správu cloudu, můžete použít rozevírací seznam a zadat jiný CMG. Po instalaci můžete také změnit CMG, které se používají. Pokračujte výběrem tlačítka **Další**.
 
 7. Výběrem **Další** spusťte instalaci a potom zobrazte výsledky na stránce dokončení.  Kliknutím na tlačítko **Zavřít** dokončete instalaci bodu připojení.
 
@@ -387,7 +389,7 @@ Pak když se dřív nespravované zařízení s Windows 10 zaregistruje do Intun
 
 2. Jako typ aplikace vyberte **obchodní aplikaci** v části **jiné**.
 
-3. V **souboru balíčku aplikace**vyhledejte umístění souboru Configuration Manager **CCMSetup. msi**a pak vyberte **Otevřít > OK**.
+3. V **souboru balíčku aplikace**přejděte do umístění souboru Configuration Manager **ccmsetup.msi**a pak vyberte **otevřít > ok**.
 Například *C:\Program Files\Microsoft Configuration Manager\bin\i386\ccmsetup.msi*
 
 4. Vyberte **informace o aplikaci**a pak zadejte následující podrobnosti:
@@ -395,7 +397,7 @@ Například *C:\Program Files\Microsoft Configuration Manager\bin\i386\ccmsetup.
 
    - **Vydavatel**: Microsoft  
 
-   - **Argumenty příkazového řádku**: * \< Zadejte příkaz **CCMSETUPCMD** Command line. Můžete použít příkazový řádek, který jste uložili* na stránce povolení v *Průvodci konfigurací spolusprávy. Tento příkazový řádek obsahuje názvy vaší cloudové služby a další hodnoty, které zařízením umožňují nainstalovat Configuration Manager klientský software. >*  
+   - **Argumenty příkazového řádku**:*\<Specify the **CCMSETUPCMD** command line. You can use the command line you saved from the* Enablement *page of the Co-management Configuration Wizard. This command line includes the names of your cloud service and additional values that enable devices to install the Configuration Manager client software.>*  
 
      Struktura příkazového řádku by se měla podobat tomuto příkladu pouze pomocí parametrů CCMSETUPCMD a SMSSiteCode:  
 
@@ -414,7 +416,7 @@ Následující postup nasadí aplikaci pro instalaci klienta Configuration Manag
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://endpoint.microsoft.com). Vyberte **aplikace**  >  **všechny aplikace** a pak vyberte **bootstrap instalace klienta nástroje ConfigMgr**, aplikaci, kterou jste vytvořili pro nasazení klienta Configuration Manager.  
 
-2. Klikněte na **vlastnosti** a pak na **Upravit** pro **přiřazení**. V části **požadovaná** přiřazení vyberte **Přidat skupinu** , abyste nastavili skupiny Azure Active Directory (AD), které mají uživatele a zařízení, které chcete zapojit do společné správy.  
+2. Vyberte **vlastnosti** a pak **Upravit** pro **přiřazení**. V části **požadovaná** přiřazení vyberte **Přidat skupinu** , abyste nastavili skupiny Azure Active Directory (AD), které mají uživatele a zařízení, které chcete zapojit do společné správy.  
 
 3. Vyberte **zkontrolovat + Uložit** a pak konfiguraci **uložte** .
 Tuto aplikaci teď vyžadují uživatelé a zařízení, ke kterým jste jim přiřadili. Poté, co aplikace nainstaluje klienta Configuration Manager do zařízení, je spravován spolusprávou.

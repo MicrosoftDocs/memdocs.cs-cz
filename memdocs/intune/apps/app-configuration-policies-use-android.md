@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/13/2020
+ms.date: 08/03/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5fca2bfab84807311f7a23dd5b4cf42090246353
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 1bed9fe2ce2f674b5202deecce512802520f6a1d
+ms.sourcegitcommit: 41b2b50d5870dc127a8848a6657d56112f92515a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461619"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87758172"
 ---
 # <a name="add-app-configuration-policies-for-managed-android-enterprise-devices"></a>Přidání zásad konfigurace aplikací pro spravovaná zařízení s Androidem Enterprise
 
@@ -89,7 +89,7 @@ Pokud je aplikace navržená tak, aby podporovala nastavení konfigurace, může
 
 Pokud jako typ hodnoty zvolíte proměnnou, můžete vybírat z následujících možností:
 
-| Možnost | Příklad |
+| Parametr | Příklad |
 |----|----|
 | ID zařízení AAD | dc0dc142-11d8-4b12-bfea-cae2a8514c82 |
 | Account ID | fc0dc142-71d8-4B12-bbea-bae2a8514c81 |
@@ -115,7 +115,7 @@ Jako správce Microsoft Intune můžete určit, které pracovní nebo školní �
    > - Office, Word, Excel, PowerPoint pro Android (16.0.9327.1000 a novější)
    > - OneDrive pro Android (5,28 a novější)
    > - Outlook pro Android (2.2.222 a novější)
-   > - Týmy pro Android (1416/1.0.0.2020061103 a novější)
+   > - Týmy pro Android (1416/1.0.0.2020073101 a novější)
 
 ## <a name="enter-json-data"></a>Zadat data JSON
 

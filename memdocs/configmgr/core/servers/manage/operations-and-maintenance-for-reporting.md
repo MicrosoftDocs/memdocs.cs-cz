@@ -10,12 +10,12 @@ ms.assetid: b89bcfbf-f5b6-4fb1-bb5e-a5cc18ec0c78
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 5e154f2859a7541ac8f67b8588da7dfb8877c940
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 414d1138a7682d6b9acbc7731035fff1842a1fe7
+ms.sourcegitcommit: c1afc8abd0d7da48815bd2b0e45147774c72c2df
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81713713"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87815408"
 ---
 # <a name="operations-and-maintenance-for-reporting-in-configuration-manager"></a>Operace a údržba pro vytváření sestav v Configuration Manager
 
@@ -33,7 +33,7 @@ Configuration Manager ukládá své sestavy do SQL Server Reporting Services. Se
 Při spuštění sestavy se v jazyce místního operačního systému zobrazí název, popis a kategorie sestavy. Další informace najdete v tématu [jazyky pro sestavy](configuring-reporting.md#-languages-for-reports).
 
 > [!NOTE]  
-> Správce sestav je webový přístup k sestavě a nástroj pro správu. Můžete ji použít ke správě jedné instance serveru sestav přes připojení HTTPS. Použití Správce sestav pro provozní úlohy: zobrazit sestavy, upravit vlastnosti sestavy a spravovat související odběry sestav. Tento článek popisuje kroky pro zobrazení sestavy a úpravě vlastností sestav ve Správci sestav. Další informace o dalších možnostech ve Správci sestav najdete v tématu [co je správce sestav?](https://docs.microsoft.com/sql/reporting-services/report-manager-ssrs-native-mode)
+> Správce sestav je webový přístup k sestavě a nástroj pro správu. Můžete ji použít ke správě jedné instance serveru sestav přes připojení HTTPS. Použití Správce sestav pro provozní úlohy: zobrazit sestavy, upravit vlastnosti sestavy a spravovat související odběry sestav. Tento článek popisuje kroky pro zobrazení sestavy a úpravě vlastností sestav ve Správci sestav. Další informace o dalších možnostech ve Správci sestav najdete v tématu [co je správce sestav?](https://docs.microsoft.com/sql/reporting-services/report-server/manage-a-reporting-services-native-mode-report-server)
 
 Pro spuštění sestavy Configuration Manager použijte následující postupy.
 
@@ -50,7 +50,7 @@ Pro spuštění sestavy Configuration Manager použijte následující postupy.
 
 ### <a name="run-a-report-in-a-web-browser"></a>Spuštění sestavy ve webovém prohlížeči
 
-1. Ve webovém prohlížeči, přejít na adresu URL správce sestav, například `https://Server1/Reports`. Tuto adresu najdete na stránce **Adresa URL správce sestav** ve službě Reporting Services Configuration Manager.
+1. Ve webovém prohlížeči, přejít na adresu URL správce sestav, například `https://Server1/Reports` . Tuto adresu najdete na stránce **Adresa URL správce sestav** ve službě Reporting Services Configuration Manager.
 
 1. Ve Správci sestav vyberte složku sestav pro Configuration Manager, například **ConfigMgr_CAS**.
 
@@ -67,7 +67,7 @@ Mezi vlastnosti sestavy patří název a popis sestavy. Můžete zobrazit vlastn
 
 Chcete-li změnit vlastnosti, použijte Správce sestav:
 
-1. Ve webovém prohlížeči, přejít na adresu URL správce sestav, například `https://Server1/Reports`.
+1. Ve webovém prohlížeči, přejít na adresu URL správce sestav, například `https://Server1/Reports` .
 
 1. Ve Správci sestav vyberte složku sestav pro Configuration Manager, například **ConfigMgr_CAS**.
 
@@ -84,7 +84,7 @@ Když sestava existující Configuration Manager nenačte požadované informace
 Chcete-li upravit sestavu, potřebujete oprávnění **Upravit oprávnění lokality** a **Upravit sestavu** pro konkrétní objekty v sestavě.
 
 > [!IMPORTANT]
-> Aktualizace webu uchovávají předdefinované sestavy. Pokud upravíte standardní sestavu, při aktualizaci lokality přejmenuje sestavu pomocí předpony podtržítka (`_`). Tím se zajistí, že aktualizace lokality nepřepisuje upravenou sestavu standardní sestavou.
+> Aktualizace webu uchovávají předdefinované sestavy. Pokud upravíte standardní sestavu, při aktualizaci lokality přejmenuje sestavu pomocí předpony podtržítka ( `_` ). Tím se zajistí, že aktualizace lokality nepřepisuje upravenou sestavu standardní sestavou.
 >
 > Pokud upravíte předdefinované sestavy před instalací aktualizace lokality, zálohujte vlastní sestavy. Po aktualizaci obnovte sestavu ve službě Reporting Services. Pokud v předdefinované sestavě uděláte významné změny, vytvořte místo toho novou sestavu. Nové sestavy, které vytvoříte před upgradem lokality, nebudou přepsány.
 
@@ -96,7 +96,7 @@ Pro úpravu vlastností sestavy Configuration Manager použijte následující p
 
 1. V Tvůrce sestav upravte odpovídající nastavení sestavy. Vyberte **Uložit** a uložte sestavu na server sestav.
 
-## <a name="create-reports"></a>Vytvářet sestavy
+## <a name="create-reports"></a>Vytváření sestav
 
 Existují dva typy sestav, které můžete vytvořit:
 
@@ -141,9 +141,9 @@ Pomocí následujícího postupu můžete vytvořit sestavu Configuration Manage
 
 ### <a name="create-a-sql-based-report"></a>Vytvoření sestavy založené na jazyce SQL
 
-Když vytvoříte příkaz SQL pro vlastní sestavu, neodkazujte přímo na SQL Server tabulky. Vždy odkaz na podporované SQL Server zobrazení z databáze lokality. Tato zobrazení mají jména, která začínají `v_`na. Další informace najdete v tématu [vytváření vlastních sestav pomocí SQL Server zobrazení v Configuration Manager](../../../develop/core/understand/sqlviews/create-custom-reports-using-sql-server-views.md).
+Když vytvoříte příkaz SQL pro vlastní sestavu, neodkazujte přímo na SQL Server tabulky. Vždy odkaz na podporované SQL Server zobrazení z databáze lokality. Tato zobrazení mají jména, která začínají na `v_` . Další informace najdete v tématu [vytváření vlastních sestav pomocí SQL Server zobrazení v Configuration Manager](../../../develop/core/understand/sqlviews/create-custom-reports-using-sql-server-views.md).
 
-Na veřejné uložené procedury lze také odkazovat z databáze lokality. Tyto uložené procedury mají názvy, které začínají `sp_`na.
+Na veřejné uložené procedury lze také odkazovat z databáze lokality. Tyto uložené procedury mají názvy, které začínají na `sp_` .
 
 K vytvoření sestavy Configuration Manager založené na jazyce SQL použijte následující postup.
 
@@ -181,7 +181,7 @@ Odběry sestav v SQL Server Reporting Services umožňují konfigurovat automati
 
 Když vytvoříte odběr sestavy pro doručení sestavy do sdílené složky, služba Reporting Services zkopíruje sestavu v zadaném formátu do sdílené složky, kterou určíte. Můžete se přihlásit k odběru a požádat o doručení pouze pro jednu sestavu najednou.
 
-Když vytvoříte odběr, který používá sdílenou složku, zadejte jako cíl existující sdílenou složku. Server sestav nevytvoří složku nebo síťovou sdílenou složku. Když zadáte cílovou složku v předplatném, použijte cestu UNC a nezahrnujte koncová lomítka (`\`) do cesty ke složce. V následujícím příkladu je platná cesta UNC k cílové složce: `\\server\reportfiles\operations\2001`.
+Když vytvoříte odběr, který používá sdílenou složku, zadejte jako cíl existující sdílenou složku. Server sestav nevytvoří složku nebo síťovou sdílenou složku. Když zadáte cílovou složku v předplatném, použijte cestu UNC a nezahrnujte koncová lomítka ( `\` ) do cesty ke složce. V následujícím příkladu je platná cesta UNC k cílové složce: `\\server\reportfiles\operations\2001` .
 
 > [!NOTE]
 > Při vytváření odběru zadáte uživatelské jméno a heslo. Tento účet potřebuje přístup k této sdílené složce s oprávněním k **zápisu** do cílové složky.
@@ -286,7 +286,7 @@ Pomocí následujícího postupu můžete vytvořit odběr sestavy pro doručen�
     - **Komu**: Zadejte platnou e-mailovou adresu jako příjemce.
 
         > [!NOTE]
-        > Chcete-li zadat více příjemců, jednotlivé e-mailové adresy`;`oddělte středníkem ().
+        > Chcete-li zadat více příjemců, jednotlivé e-mailové adresy oddělte středníkem ( `;` ).
 
     - **CC**: Volitelně můžete zadat e-mailovou adresu pro příjem kopie této sestavy.
 

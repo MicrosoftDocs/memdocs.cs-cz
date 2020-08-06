@@ -10,12 +10,12 @@ ms.assetid: e63f2394-6eb1-4a33-bec5-8377fc62a34e
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: a7640fade49c70c013cf1d7c0939957a07f223fd
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: f8d116879b0a85f3276d848b01c69d575b8b69fd
+ms.sourcegitcommit: 41b2b50d5870dc127a8848a6657d56112f92515a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 08/04/2020
-ms.locfileid: "87546896"
+ms.locfileid: "87758308"
 ---
 # <a name="configure-endpoint-protection-on-a-standalone-client"></a>Konfigurace Endpoint Protection na samostatném klientovi
 
@@ -101,3 +101,7 @@ C:\Program Files\Microsoft Security Client\ConfigSecurityPolicy.exe <full path>\
 ```
 
 Nahraďte `full path` cestou, kam jste uložili nový soubor XML antimalwarové zásady a `policy file` názvem souboru antimalwarové zásady.
+
+## <a name="next-steps"></a>Další kroky
+
+Informace o tom, jak pomocí Endpoint Protection spravovat zabezpečení a malware v Configuration Manager klientských počítačích, najdete v tématu [konfigurace Endpoint Protection](endpoint-protection-configure.md).

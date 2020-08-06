@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8405ef9c8d83583fe2ceb5da668ccfd79d23a39a
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: b91751e9879d06b40bdd9518926759da2331115f
+ms.sourcegitcommit: 41b2b50d5870dc127a8848a6657d56112f92515a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79323787"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87758257"
 ---
 # <a name="troubleshoot-mobile-application-management"></a>Řešení potíží se správou mobilních aplikací
 
@@ -82,11 +82,11 @@ Android | **Vyžaduje se aplikace Portál společnosti**: Pokud chcete s touto a
 
 ### <a name="error-messages-and-dialogs-on-ios"></a>Chybové zprávy a dialogy v iOS
 
-Chybová zpráva nebo dialog | Příčina | Odstranění rizika |
+Chybová zpráva nebo dialog | Příčina | Náprava |
 -- | --- | --- |
 **Aplikace není nastavená**: Tato aplikace není nastavená, abyste ji mohli používat. Požádejte o pomoc správce IT. | Nepovedlo se zjistit požadované zásady ochrany aplikací pro aplikaci. |Zkontrolujte, jestli jsou ve skupině zabezpečení uživatele nasazené zásady ochrany aplikací iOS a cílí na tuto aplikaci.
 **Vítá vás Intune Managed Browser**: Tato aplikace funguje nejlépe, když je spravována službou Microsoft Intune. Aplikaci můžete kdykoli použít k procházení webu, a pokud k její správě použijete Microsoft Intune, získáte přístup k dalším funkcím ochrany dat. | Nepovedlo se zjistit požadované zásady ochrany aplikací pro Intune Managed Browser aplikaci. <br><br>Uživatel může aplikaci stále používat k procházení webu, ale aplikaci nespravuje Intune. | Zkontrolujte, jestli jsou ve skupině zabezpečení uživetele nasazené zásady ochrany aplikací pro iOS a cílí na aplikaci Intune Managed Browser.
-**Přihlášení se nezdařilo**: Teď vás nemůžeme přihlásit. Zkuste to prosím znovu později. | Nepodařilo se zaregistrovat uživatele ke službě MAM po tom, co se uživatel pokusil přihlásit pomocí svého pracovního nebo školního účtu. | Zkontrolujte, jestli jsou ve skupině zabezpečení uživatele nasazené zásady ochrany aplikací iOS a cílí na tuto aplikaci.
+**Přihlášení se nezdařilo**: Teď vás nemůžeme přihlásit. Zkuste to později. | Nepodařilo se zaregistrovat uživatele ke službě MAM po tom, co se uživatel pokusil přihlásit pomocí svého pracovního nebo školního účtu. | Zkontrolujte, jestli jsou ve skupině zabezpečení uživatele nasazené zásady ochrany aplikací iOS a cílí na tuto aplikaci.
 **Nenastaven účet**: Vaše organizace nenastavila váš účet tak, aby měl přístup k pracovním nebo školním datům. Požádejte prosím o pomoc svého správce IT. | Uživatelský účet nemá licenci pro Intune A Direct. | Ujistěte se, že účet uživatele má přiřazenou licenci Intune v [centru pro správu Microsoft 365](https://admin.microsoft.com).
 **Zařízení nesplňuje požadavky**: Tuto aplikaci nejde použít, protože používáte zařízení s jailbreakem. Požádejte o pomoc správce IT. | Intune zjistil, že uživatel je na zařízení s jailbreakem. | Resetujte zařízení na výchozí tovární nastavení. Postupujte podle [těchto pokynů](https://support.apple.com/HT201274) z webu podpory Apple.
 **Vyžaduje se připojení k internetu **: Musíte být připojení k internetu, abychom mohli ověřit, že můžete používat tuto aplikaci. | Zařízení není připojené k internetu. | Připojte zařízení k síti Wi-Fi nebo mobilní síti.
@@ -98,11 +98,11 @@ Chybová zpráva nebo dialog | Příčina | Odstranění rizika |
 
 ### <a name="error-messages-and-dialogs-on-android"></a>Chybové zprávy a dialogy v Androidu
 
-Dialog / chybová zpráva | Příčina | Odstranění rizika |
+Dialog / chybová zpráva | Příčina | Náprava |
 -- | --- | --- |
 **Nenastavena aplikace**: Tato aplikace zatím není nastavená tak, abyste ji mohli používat. Požádejte o pomoc správce IT. | Nepovedlo se zjistit požadované zásady ochrany aplikací pro aplikaci. |Zkontrolujte, jestli jsou ve skupině zabezpečení uživatele nasazené zásady ochrany aplikací pro Android a jestli cílí na tuto aplikaci.
 **Aplikaci se nepodařilo spustit**: Při spouštění vaší aplikace se objevil problém. Zkuste aplikaci (nebo aplikaci Portál společnosti Intune) aktualizovat. Pokud potřebujete pomoc, obraťte se na správce IT. | Intune zjistil platné zásady ochrany aplikací pro aplikaci, ale aplikace selhává během inicializace MAM. | Zkontrolujte, jestli je verze aplikace aktuální. <br><br> Zkontrolujte, jestli je na zařízení nainstalovaná aktuální aplikace Portál společnosti Intune a jestli je aktuální. <br><br> Pokud chyba přetrvává, použijte aplikaci Portál společnosti k odeslání protokolů do Intune nebo vytvoření [lístku podpory](../fundamentals/get-support.md#create-an-online-support-ticket).
-**Nenašla se žádná aplikace**: Na tomto zařízení nejsou žádné aplikace, ve kterých by vaše organizace povolovala otevření tohoto obsahu. Požádejte o pomoc správce IT. | Uživatel se pokusil otevřít pracovní nebo školní data pomocí jiné aplikace, ale Intune nemůže najít žádné jiné spravované aplikace, které jsou k otevírání těchto dat povolené. | Zkontrolujte, jestli jsou ve skupině zabezpečení uživatele nasazené zásady ochrany aplikací pro Android a cílí aspoň na jednu další aplikaci povolenou v MAM, která může požadovaná data otevírat.
+**Nenašla se žádná aplikace**: Na tomto zařízení nejsou žádné aplikace, ve kterých by vaše organizace povolovala otevření tohoto obsahu. Požádejte o pomoc správce IT. | Uživatel se pokusil otevřít pracovní nebo školní data pomocí jiné aplikace, ale Intune nemůže najít žádné jiné spravované aplikace, které jsou k otevírání těchto dat povolené. | Ujistěte se, že jsou do skupiny zabezpečení uživatele nasazené zásady ochrany aplikací pro Android a že se cílí aspoň na jednu další aplikaci s podporou MAM, která může otevřít příslušné údaje.
 **Přihlášení se nezdařilo**: Zkuste se znovu přihlásit. Pokud s tím budou dál problémy, požádejte o pomoc správce IT. | Nepodařilo se ověřit účet, pomocí kterého se uživatel pokusil přihlásit. | Zkontrolujte, jestli se uživatel přihlašuje pomocí pracovního nebo školního účtu, který je už zaregistrovaný službou Intune MAM (první pracovní nebo školní účet, který se do této aplikace úspěšně přihlásil). <br><br> Vymažte data aplikace. <br><br> Zkontrolujte, jestli je verze aplikace aktuální. <br><br> Zkontrolujte, jestli je verze Portálu společnosti aktuální.
 **Vyžaduje se připojení k Internetu**: musíte být připojení k Internetu, abyste mohli ověřit, že můžete používat tuto aplikaci. | Zařízení není připojené k internetu. | Připojte zařízení k síti Wi-Fi nebo mobilní síti.
 **Zařízení nesplňuje požadavky**: Tuto aplikaci nejde použít, protože používáte zařízení s rootem. Požádejte o pomoc správce IT. | Intune zjistil, že uživatel je na rootovaném zařízení. | Resetujte zařízení na výchozí tovární nastavení.

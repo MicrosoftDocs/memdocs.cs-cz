@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6629f416dbbc9555514dfc305db8f224f6b76526
-ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
+ms.openlocfilehash: 5c2689e010c0ec75340e1a96952cf6ac162322da
+ms.sourcegitcommit: 41b2b50d5870dc127a8848a6657d56112f92515a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86088441"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87758274"
 ---
 # <a name="android-enterprise-device-enrollment-restrictions"></a>Omezení registrace zařízení s Androidem Enterprise
 
@@ -43,16 +43,16 @@ Pro základní zabezpečení pracovního profilu Android Enterprise (úroveň 1)
 
 | Typ | Platforma | Verze | Umožňuje osobní zařízení. |
 |--------|--------|--------|--------|
-| Android Enterprise | Povolit | Android 5,0 a novější.<p>Microsoft doporučuje nakonfigurovat minimální hlavní verzi Androidu tak, aby odpovídala podporovaným verzím Androidu pro aplikace Microsoftu. Výrobci OEM a zařízení, kteří dodržují doporučené požadavky na Android Enterprise, musí podporovat aktuální dodací verzi a jeden upgrade na jedno písmeno.   V současné době Android doporučuje Android 8,0 a novější pro pracovníky znalostní báze. Další informace najdete v tématu [Doporučené požadavky pro Android Enterprise](https://www.android.com/enterprise/recommended/requirements/). | Yes |
-| Správce zařízení s Androidem| Blok | Všechny verze | Yes |
+| Android Enterprise | Povolit | Android 5,0 a novější.<p>Microsoft doporučuje nakonfigurovat minimální hlavní verzi Androidu tak, aby odpovídala podporovaným verzím Androidu pro aplikace Microsoftu. Výrobci OEM a zařízení, kteří dodržují doporučené požadavky na Android Enterprise, musí podporovat aktuální dodací verzi a jeden upgrade na jedno písmeno.   V současné době Android doporučuje Android 8,0 a novější pro pracovníky znalostní báze. Další informace najdete v tématu [Doporučené požadavky pro Android Enterprise](https://www.android.com/enterprise/recommended/requirements/). | Ano |
+| Správce zařízení s Androidem| Blok | Všechny verze | Ano |
 
 ## <a name="work-profile-high-level-3-security-restrictions"></a>Omezení zabezpečení pracovního profilu high (Level 3)
 Pro zajištění vysokého zabezpečení pracovních profilů pro Android Enterprise (úroveň 3) by se měly implementovat následující omezení zařízení:
 
 | Typ | Platforma | Verze | Umožňuje osobní zařízení. |
 |--------|--------|--------|--------|
-| Android Enterprise | Povolit | Android 8,0 a novější | Yes |
-| Správce zařízení s Androidem| Blok | Všechny verze | Yes |
+| Android Enterprise | Povolit | Android 8,0 a novější | Ano |
+| Správce zařízení s Androidem| Blok | Všechny verze | Ano |
 
 ## <a name="fully-managed-security-restrictions"></a>Plně spravovaná omezení zabezpečení
 Ujistěte se, že organizace podporuje registraci zařízení s plnou správou Android Enterprise tím, že zkontroluje [registraci plně spravovaných zařízení](android-fully-managed-enroll.md#enroll-the-fully-managed-devices). 

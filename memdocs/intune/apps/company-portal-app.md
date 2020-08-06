@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/27/2020
+ms.date: 08/04/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d979001f159b427314f8bc53788ccce0acd13d11
-ms.sourcegitcommit: 19f5838eb3eb8724d22382f36f9564ac9a978b97
+ms.openlocfilehash: 33977676b4c144573965477154a7939f6061280a
+ms.sourcegitcommit: 41b2b50d5870dc127a8848a6657d56112f92515a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87365538"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87758342"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>Přizpůsobení aplikací Portál společnosti Intune, Portál společnosti webu a Intune
 
@@ -105,6 +105,8 @@ Následující tabulka uvádí podrobnosti konfigurace specifické pro registrac
 
 > [!IMPORTANT]
 > Následující nastavení se nevztahují na zařízení s iOS/iPadOS konfigurovaná pro registraci pomocí [automatizované registrace zařízení](../enrollment/device-enrollment-program-enroll-ios.md). Bez ohledu na to, jak jsou tato nastavení nakonfigurovaná, se zařízení se systémem iOS/iPadOS nakonfigurovaná k registraci pomocí automatizované registrace zařízení zaregistrují během natékání toku a uživatelé budou vyzváni k přihlášení při spuštění Portál společnosti.
+> 
+> Následující nastavení platí pro zařízení s Androidem nakonfigurovaná pomocí [zápisu na mobilních zařízeních Samsung KNOX](../enrollment/android-samsung-knox-mobile-enroll.md) (KME). Pokud je zařízení nakonfigurované pro KME a registrace zařízení je nastavená na nedostupné, zařízení se nebude moct zaregistrovat během toku mimo box.
 
 |    Možnosti registrace zařízení    |    Popis    |    Výzvy kontrolního seznamu    |    Notification (Oznámení)    |    Stav podrobnosti o zařízení    |    Podrobnosti o stavu aplikace (aplikace, která vyžaduje registraci)    |
 |-----------------------------------|-------------------------------------------------------------------------------------------------------------------------|-------------------------|--------------------|-----------------------------|--------------------------------------------------------------------|
@@ -194,7 +196,7 @@ V aplikaci Portál společnosti pro Windows jsou k dispozici následující klá
 |  | Domů | Alt+H |
 |  | Všechny aplikace | Alt+A |
 |  | Nainstalované aplikace | Alt+I |
-|  | Váš názor | Alt+F |
+|  | Odeslat názor | Alt+F |
 |  | Můj profil | Alt+U |
 |  | Nastavení | Alt+T |
 | Úvodní stránka – dlaždice Zařízení | přejmenování | F2 |
@@ -204,7 +206,7 @@ V aplikaci Portál společnosti pro Windows jsou k dispozici následující klá
 |  | Odebrat | Ctrl+D nebo Delete |
 |  | Kontrola přístupu | Ctrl+M nebo F9 |
 | Podrobnosti aplikace | Instalace | Ctrl+I |
-| Zařízení | K dispozici | Ctrl+D |
+| Zařízení | K dispozici. | Ctrl+D |
 
 Koncoví uživatelé budou také moci zobrazit dostupné zkratky v aplikaci pro Windows Portál společnosti.
 
@@ -232,8 +234,8 @@ Některé platformy a konfigurace neumožňují akce zařízení samoobslužné 
 
 | Akce | Windows 10<sup>(3)</sup> | iOS/iPadOS<sup>(3)</sup> | MacOS<sup>(3)</sup> | Android<sup>(3)</sup> |
 |----------------------|--------------------------|-------------------|-----------------------------------|-------------------------|
-| Vyřazení | K dispozici<sup>(1)</sup> | K dispozici<sup>(9)</sup> | K dispozici | K dispozici<sup>(7)</sup> |
-| Vymazání | K dispozici | K dispozici<sup>(5)</sup><sup>(9)</sup> | Není k dispozici | K dispozici<sup>(7)</sup> |
+| Vyřazení | K dispozici<sup>(1)</sup> | K dispozici<sup>(9)</sup> | K dispozici. | K dispozici<sup>(7)</sup> |
+| Vymazání | K dispozici. | K dispozici<sup>(5)</sup><sup>(9)</sup> | Není k dispozici | K dispozici<sup>(7)</sup> |
 | Přejmenovat<sup>(4)</sup> | K dispozici | K dispozici | K dispozici | K dispozici |
 | Sync | K dispozici | K dispozici | K dispozici | K dispozici |
 | Vzdálené uzamčení | Pouze Windows Phone | K dispozici | K dispozici | K dispozici |
