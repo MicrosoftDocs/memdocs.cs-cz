@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a1641efe6899c46a797a8ccf7979b533cb620d19
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: d9e6806e8d755163d5ae1701ca49ad2daeff464f
+ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79331439"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865869"
 ---
 # <a name="install-the-intune-software-client-on-windows-pcs"></a>Instalace klientského softwaru Intune na počítače se systémem Windows
 
@@ -70,7 +70,7 @@ Na počítačích, kam se bude klientský software instalovat, přejděte do slo
 
 1. Ve složce, která obsahuje soubory **Microsoft_Intune_Setup.exe** a **MicrosoftIntune.accountcert**, spusťte následující příkaz k extrakci instalačních programů založených na Instalační službě systému Windows pro 32bitové a 64bitové počítače:
 
-    ```
+    ```cmd
     Microsoft_Intune_Setup.exe/Extract <destination folder>
     ```
 
@@ -86,7 +86,7 @@ Na počítačích, kam se bude klientský software instalovat, přejděte do slo
 ## <a name="deploy-the-client-software-as-part-of-an-image"></a>Nasazení klientského softwaru jako součásti image
 Klientský software Intune můžete do počítače nasadit jako součást image operačního systému. Jako příklad poslouží tento postup:
 
-1. Zkopírujte instalační soubory klienta **Microsoft_Intune_Setup. exe** a **MicrosoftIntune. accountcert**do složky **%systemdrive%\temp\ Microsoft_Intune_Setup** na referenčním počítači.
+1. Zkopírujte instalační soubory klienta **Microsoft_Intune_Setup.exe** a **MicrosoftIntune. accountcert**do složky **%systemdrive%\temp\ Microsoft_Intune_Setup** na referenčním počítači.
 
 2. Vytvořte položku registru **WindowsIntuneEnrollPending** přidáním následujícího příkazu do skriptu **SetupComplete.cmd** :
 
@@ -198,7 +198,7 @@ Existují dva způsoby, jak zrušit registraci klientského softwaru Windows:
 
 ### <a name="unenroll-by-using-the-intune-admin-console"></a>Zrušení registrace pomocí konzoly pro správu Intune
 
-Pokud chcete zrušit registraci softwarového klienta pomocí konzoly pro správu Intune, klikněte na **skupiny** > **všechny počítače** > **zařízení**. Klikněte pravým tlačítkem na klienta a vyberte **Vyřadit/vymazat**.
+Pokud chcete zrušit registraci softwarového klienta pomocí konzoly pro správu Intune, klikněte na **skupiny**  >  **všechny počítače**  >  **zařízení**. Klikněte pravým tlačítkem na klienta a vyberte **Vyřadit/vymazat**.
 
 ### <a name="unenroll-by-using-a-command-prompt-on-the-client"></a>Zrušení registrace pomocí příkazového řádku v klientovi
 
@@ -206,42 +206,46 @@ Na příkazovém řádku se zvýšenými oprávněními spusťte jeden z násled
 
 **Metoda 1**:
 
-    "C:\Program Files\Microsoft\OnlineManagement\Common\ProvisioningUtil.exe" /UninstallAgents /MicrosoftIntune
+```cmd
+"C:\Program Files\Microsoft\OnlineManagement\Common\ProvisioningUtil.exe" /UninstallAgents /MicrosoftIntune
+```
 
 **Metoda 2** (všimněte si, že všichni toto agenti jsou nainstalováni v každé verzi SKU systému Windows):
 
-    wmic product where name="Microsoft Endpoint Protection Management Components" call uninstall
-    wmic product where name="Microsoft Intune Notification Service" call uninstall
-    wmic product where name="System Center 2012 - Operations Manager Agent" call uninstall
-    wmic product where name="Microsoft Online Management Policy Agent" call uninstall
-    wmic product where name="Microsoft Policy Platform" call uninstall
-    wmic product where name="Microsoft Security Client" call uninstall
-    wmic product where name="Microsoft Online Management Client" call uninstall
-    wmic product where name="Microsoft Online Management Client Service" call uninstall
-    wmic product where name="Microsoft Easy Assist v2" call uninstall
-    wmic product where name="Microsoft Intune Monitoring Agent" call uninstall
-    wmic product where name="Windows Intune Endpoint Protection Agent" call uninstall
-    wmic product where name="Windows Firewall Configuration Provider" call uninstall
-    wmic product where name="Microsoft Intune Center" call uninstall
-    wmic product where name="Microsoft Online Management Update Manager" call uninstall
-    wmic product where name="Microsoft Online Management Agent Installer" call uninstall
-    wmic product where name="Microsoft Intune" call uninstall
-    wmic product where name="Windows Endpoint Protection Management Components" call uninstall
-    wmic product where name="Windows Intune Notification Service" call uninstall
-    wmic product where name="System Center 2012 - Operations Manager Agent" call uninstall
-    wmic product where name="Windows Online Management Policy Agent" call uninstall
-    wmic product where name="Windows Policy Platform" call uninstall
-    wmic product where name="Windows Security Client" call uninstall
-    wmic product where name="Windows Online Management Client" call uninstall
-    wmic product where name="Windows Online Management Client Service" call uninstall
-    wmic product where name="Windows Easy Assist v2" call uninstall
-    wmic product where name="Windows Intune Monitoring Agent" call uninstall
-    wmic product where name="Windows Intune Endpoint Protection Agent" call uninstall
-    wmic product where name="Windows Firewall Configuration Provider" call uninstall
-    wmic product where name="Windows Intune Center" call uninstall
-    wmic product where name="Windows Online Management Update Manager" call uninstall
-    wmic product where name="Windows Online Management Agent Installer" call uninstall
-    wmic product where name="Windows Intune" call uninstall
+```cmd
+wmic product where name="Microsoft Endpoint Protection Management Components" call uninstall
+wmic product where name="Microsoft Intune Notification Service" call uninstall
+wmic product where name="System Center 2012 - Operations Manager Agent" call uninstall
+wmic product where name="Microsoft Online Management Policy Agent" call uninstall
+wmic product where name="Microsoft Policy Platform" call uninstall
+wmic product where name="Microsoft Security Client" call uninstall
+wmic product where name="Microsoft Online Management Client" call uninstall
+wmic product where name="Microsoft Online Management Client Service" call uninstall
+wmic product where name="Microsoft Easy Assist v2" call uninstall
+wmic product where name="Microsoft Intune Monitoring Agent" call uninstall
+wmic product where name="Windows Intune Endpoint Protection Agent" call uninstall
+wmic product where name="Windows Firewall Configuration Provider" call uninstall
+wmic product where name="Microsoft Intune Center" call uninstall
+wmic product where name="Microsoft Online Management Update Manager" call uninstall
+wmic product where name="Microsoft Online Management Agent Installer" call uninstall
+wmic product where name="Microsoft Intune" call uninstall
+wmic product where name="Windows Endpoint Protection Management Components" call uninstall
+wmic product where name="Windows Intune Notification Service" call uninstall
+wmic product where name="System Center 2012 - Operations Manager Agent" call uninstall
+wmic product where name="Windows Online Management Policy Agent" call uninstall
+wmic product where name="Windows Policy Platform" call uninstall
+wmic product where name="Windows Security Client" call uninstall
+wmic product where name="Windows Online Management Client" call uninstall
+wmic product where name="Windows Online Management Client Service" call uninstall
+wmic product where name="Windows Easy Assist v2" call uninstall
+wmic product where name="Windows Intune Monitoring Agent" call uninstall
+wmic product where name="Windows Intune Endpoint Protection Agent" call uninstall
+wmic product where name="Windows Firewall Configuration Provider" call uninstall
+wmic product where name="Windows Intune Center" call uninstall
+wmic product where name="Windows Online Management Update Manager" call uninstall
+wmic product where name="Windows Online Management Agent Installer" call uninstall
+wmic product where name="Windows Intune" call uninstall
+```
 
 > [!TIP]
 > Zrušení registrace klienta zanechá pro tohoto klienta zastaralý záznam na straně serveru. Proces zrušení registrace je asynchronní a odinstalovává se devět agentů. Dokončení odinstalace tak může trvat až 30 minut.
@@ -259,7 +263,9 @@ Zkontrolujte cestu %ProgramFiles%\Microsoft\OnlineManagement a ujistěte se, že
 
 Proces zrušení registrace neodebere složku OnlineManagement. Po dokončení odinstalace počkejte 30 minut a spusťte tento příkaz. Pokud byste ho spustili příliš brzy, odinstalace by mohla zůstat v neznámém stavu. Složku odeberte spuštěním příkazového řádku se zvýšenými oprávněními a spuštěním následujícího příkazu:
 
-    "rd /s /q %ProgramFiles%\Microsoft\OnlineManagement".
+```cmd
+rd /s /q %ProgramFiles%\Microsoft\OnlineManagement
+```
 
 ## <a name="next-steps"></a>Další kroky
 [Běžné úlohy správy počítačů s Windows pomocí klientského softwaru Intune](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)

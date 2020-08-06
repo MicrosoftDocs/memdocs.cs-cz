@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic;seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e8f400c946f26de272b782194df3f1b1930ab0b4
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 87f81c9f33fd267bcd57a14b59c88d36a937fecd
+ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093502"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865818"
 ---
 # <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>Řešení potíží při registraci zařízení v Microsoft Intune
 
@@ -57,7 +57,7 @@ K těmto problémům může docházet na všech platformách zařízení.
 ### <a name="device-cap-reached"></a>Dosáhlo se maximálního počtu zařízení
 **Problém:** Uživatel obdrží při registraci chybu (například **portál společnosti dočasně nedostupné**).
 
-**Řešení:**
+**Rozhodnutí**
 
 #### <a name="check-number-of-devices-enrolled-and-allowed"></a>Kontrola počtu zaregistrovaných a povolených zařízení
 
@@ -67,7 +67,7 @@ Podle následujícího postupu zkontrolujte, jestli nemá uživatel přiřazeno 
 
 2. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)zvolte **Uživatelé**  >  **Všichni uživatelé** > vyberte **zařízení**> uživatele. Poznamenejte si počet zařízení.
 
-3. Pokud počet zaregistrovaných zařízení uživatele se už rovná počtu uvedenému v omezení limitu počtu zařízení, nemůže si daný uživatel žádná další zařízení zaregistrovat, dokud:
+3. Pokud se počet zaregistrovaných zařízení, která se už shodují s omezením limitu počtu zařízení, nemůžou zaregistrovat, dokud:
     - [nebudou odebrána existující zařízení](../remote-actions/devices-wipe.md), nebo
     - nezvýšíte limit počtu zařízení [nastavením omezení zařízení](enrollment-restrictions-set.md).
 
@@ -82,7 +82,7 @@ Pokud se chcete vyhnout dosažení limitu počtu zařízení, nezapomínejte ode
 ### <a name="company-portal-temporarily-unavailable"></a>Portál společnosti není dočasně k dispozici
 **Problém:** Uživateli se na zařízení zobrazí chyba **Portál společnosti není dočasně k dispozici**.
 
-**Řešení:**
+**Rozhodnutí**
 
 1. Odeberte ze zařízení aplikaci Portál společnosti Intune.
 
@@ -97,7 +97,7 @@ Pokud se chcete vyhnout dosažení limitu počtu zařízení, nezapomínejte ode
 ### <a name="mdm-authority-not-defined"></a>Není definována autorita MDM
 **Problém:** Zobrazí se chyba **Není definována autorita MDM**.
 
-**Řešení:**
+**Rozhodnutí**
 
 1. Ověřte, že je [správně nastavená](../fundamentals/mdm-authority-set.md) autorita MDM.
     
@@ -193,7 +193,7 @@ Pokud řešení 2 nefunguje, nechte uživatele provést následující postup, a
 ### <a name="profile-installation-failed"></a>Neúspěch instalace profilu
 **Problém:** Na zařízení s Androidem se zobrazí chybová zpráva **Instalace profilu se nezdařila**.
 
-**Řešení:**
+**Rozhodnutí**
 
 1. Zkontrolujte, jestli má uživatel přiřazenou příslušnou licenci pro verzi služby Intune, kterou používáte.
 
@@ -225,7 +225,7 @@ Pokud chcete problém vyřešit, naimportujte certifikáty do osobních certifik
 4. Vyberte kartu **cesta** k certifikátu pro zobrazení nadřazených certifikátů certifikátu/s.
 5. U každého nadřazeného certifikátu zvolte **Zobrazit certifikát**.
 6. Zvolit **Podrobnosti**  >  **Kopírovat do souboru...**
-7. Postupujte podle pokynů průvodce a vyexportujte nebo uložte veřejný klíč nadřazeného certifikátu do umístění souborů podle vlastního výběru.
+7. Postupujte podle pokynů průvodce a exportujte nebo uložte veřejný klíč nadřazeného certifikátu do zvoleného umístění souboru.
 8. Klikněte pravým tlačítkem na **certifikáty**  >  **všechny úkoly**  >  **importovat**.
 9. Postupujte podle pokynů průvodce a naimportujte nadřazené certifikáty do **Místní počítač\Osobní\Certifikáty**.
 10. Restartujte servery AD FS.
@@ -290,7 +290,9 @@ Po registraci se zařízení vrátí do stavu správné funkce a znovu získá p
 
 Registrace zařízení ADE s přidružením uživatele vyžaduje, aby bylo povoleno zadání uživatelského jména/smíšeného koncového bodu WS-Trust 1,3, aby bylo možné žádat o tokeny uživatelů. Active Directory má tento koncový bod ve výchozím nastavení povolený. Seznam povolených koncových bodů získáte použitím rutiny PowerShellu Get-AdfsEndpoint a vyhledáním koncového bodu trust/13/UsernameMixed. Příklad:
 
-      Get-AdfsEndpoint -AddressPath "/adfs/services/trust/13/UsernameMixed"
+```powershell
+Get-AdfsEndpoint -AddressPath "/adfs/services/trust/13/UsernameMixed"
+```
 
 Další informace najdete v [dokumentaci k rutině Get-AdfsEndpoint](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).
 
@@ -400,7 +402,7 @@ Důvodem může být to, že počítač:
 - je na něm klonovaná image počítače, který už je zaregistrovaný.
 Na počítači se stále nachází certifikát předchozího účtu.
 
-**Řešení:**
+**Rozhodnutí**
 
 1. V nabídce **Start** zadejte **Spustit** -> **MMC**.
 1. Vyberte **soubor**  >  **Přidat/odebrat moduly snap-in**.

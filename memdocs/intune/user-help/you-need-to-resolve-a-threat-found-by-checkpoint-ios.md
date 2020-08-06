@@ -17,14 +17,14 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 7ce384a835bbc4b8d990bbd3ebf93b812647aa1d
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 9ef18bc6554f5db364eaf320c66da12e7a5ffe7d
+ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83882236"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866158"
 ---
-# <a name="resolve-a-threat-found-by-sandblast-mobile-protect"></a>Vyřešení hrozby, kterou objevila aplikace SandBlast Mobile Protect
+# <a name="resolve-a-threat-found-by-sandblast-mobile-protect-on-ios"></a>Vyřešit hrozbu, kterou zjistila aplikace SandBlast Mobile Protect v iOS
 
 Aplikace SandBlast Mobile Protect je mobilní služba ochrany před hrozbami, která na zařízeních s iOSem rozpoznává a vyhodnocuje potenciální hrozby. Ty následně uživateli oznámí, aby si je mohl prohlédnout v aplikaci Portál společnosti. Zobrazují se zde jako nevyřešené problémy nevyhovující předpisům. Dokud hrozby neodstraníte, možná nebudete moci provádět tyto akce:   
 

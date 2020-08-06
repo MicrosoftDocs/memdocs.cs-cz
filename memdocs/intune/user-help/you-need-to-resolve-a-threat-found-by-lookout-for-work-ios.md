@@ -17,14 +17,14 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: b2bc8ffdbfabe8c1159c37abdde18076fda3ca5d
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 0745a1a9f78eadab8f6576f4c617e82a3bdadf89
+ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83880564"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865665"
 ---
-# <a name="resolve-a-threat-found-by-lookout-for-work"></a>Vyřešení hrozby, kterou zjistila aplikace Lookout for Work  
+# <a name="resolve-a-threat-found-by-lookout-for-work-on-ios"></a>Řešení hrozby nalezené Lookout for Work v iOS
 
 Aplikace Lookout for Work je mobilní služba ochrany před hrozbami, která na zařízeních s iOSem rozpoznává potenciální hrozby. Ty se oznamují aplikaci Portál společnosti a zobrazují jako nevyřešené problémy nevyhovující předpisům. Dokud hrozby neodstraníte, možná nebudete moci provádět tyto akce:
 

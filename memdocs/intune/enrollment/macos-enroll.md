@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1de1b015daad50837142ce9628543f0b2d7587d7
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 7c0973805a0646ec7df87f36eea183a9456f7e39
+ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093761"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865502"
 ---
 # <a name="set-up-enrollment-for-macos-devices-in-intune"></a>Nastavení registrace pro zařízení s macOSem v Intune
 
@@ -62,6 +62,7 @@ Informace o dalších úlohách koncových uživatelů najdete v článcích:
 U organizací, které svým uživatelům zařízení pořizují, Intune podporuje následující způsoby registrace zařízení s macOS ve vlastnictví společnosti:
 - [Automatický zápis zařízení (ADE) společnosti Apple](device-enrollment-program-enroll-macos.md): organizace si můžou koupit zařízení MACOS přes ADE. ADE umožňuje nasadit registrační profil přes Air, aby bylo možné zařízení spravovat.
 - [Správce registrace zařízení (DEM)](device-enrollment-manager-enroll.md): Pomocí účtu DEM můžete zaregistrovat až 1 000 zařízení.
+- [Přímá registrace](device-enrollment-direct-enroll-macos.md): Přímá registrace zařízení nevymaže.
 
 ## <a name="block-macos-enrollment"></a>Blokování registrace zařízení s macOS
 Intune ve výchozím nastavení umožňuje registraci zařízení s macOS. Pokud chcete u zařízení se systémem macOS registraci blokovat, přečtěte si téma [Nastavení omezení typu zařízení](enrollment-restrictions-set.md).

@@ -17,14 +17,14 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 41c80ee092e61f016c02e66690cf7f3601f89618
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: f72415900067793d41b0e6086cf3ee0c78e9ee85
+ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83882545"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865648"
 ---
-# <a name="resolve-a-threat-found-by-zimperium-zips"></a>Řešení hrozeb zjištěných aplikací Zimperium zIPS
+# <a name="resolve-a-threat-found-by-zimperium-zips-on-ios"></a>Vyřešit hrozbu, kterou zjistila aplikace Zimperium zIPS v iOS
 
 Aplikace Zimperium zIPS je mobilní služba ochrany před hrozbami, která na zařízeních s iOSem rozpoznává potenciální hrozby. Ty se oznamují aplikaci Portál společnosti a zobrazují jako nevyřešené problémy nevyhovující předpisům. Pokud aplikace vaše zařízení vyhodnotí jako nesplňující předpisy, možná nebudete moci provádět tyto akce:
 

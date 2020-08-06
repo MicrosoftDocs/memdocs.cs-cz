@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2b0c65e12349f8b4c887b5a633a1cd94c272ca5a
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 37724c4d9acdfcdb9e371a21a7b15c509de78c60
+ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093344"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865468"
 ---
 # <a name="troubleshoot-iosipados-device-enrollment-problems-in-microsoft-intune"></a>Řešení potíží s registrací zařízení s iOS nebo iPadOS v Microsoft Intune
 
@@ -60,7 +60,7 @@ Shromážděte následující informace o problému:
 **Příčina:** Váš tenant Intune je nakonfigurovaný tak, aby povoloval jenom zařízení vlastněná společností. 
 
 #### <a name="resolution"></a>Řešení
-1. Přihlaste se k portálu Azure.
+1. Přihlaste se k webu Azure Portal.
 2. Vyberte **Další služby**, vyhledejte Intune a pak vyberte **Intune**.
 3. Vyberte **registrace zařízení**  >  **omezení registrace**.
 4. V části **omezení typů zařízení**vyberte omezení, které chcete nastavit > **vlastnosti**  >  **Vybrat platformy** > vyberte možnost **Povolení** pro **iOS**a pak klikněte na **OK**.
@@ -109,8 +109,9 @@ Shromážděte následující informace o problému:
 1. Odeberte ze zařízení aplikaci Portál společnosti.
 2. Stáhněte si a nainstalujte aplikaci **Microsoft Intune portál společnosti** z **App Storu**.
 3. Zařízení znovu zaregistrujte.
- > [!NOTE]
-    > K této chybě může dojít také v případě, že se uživatel pokouší zaregistrovat více zařízení, než je registrace zařízení nakonfigurovaná tak, aby povolovala. Pokud tyto kroky problém nevyřeší, postupujte podle kroků v části řešení pro limit **zařízení** .
+
+> [!NOTE]
+> K této chybě může dojít také v případě, že se uživatel pokouší zaregistrovat více zařízení, než je registrace zařízení nakonfigurovaná tak, aby povolovala. Pokud tyto kroky problém nevyřeší, postupujte podle kroků v části řešení pro limit **zařízení** .
 
 ### <a name="device-cap-reached"></a>Dosáhlo se maximálního počtu zařízení
 
@@ -186,7 +187,7 @@ Obnovte certifikát APNs a pak zařízení znovu zaregistrujte.
 
 Když zapnete zařízení spravované přes ADE, které má přiřazený profil registrace, registrace se nepovede a zobrazí se tato chybová zpráva:
 
-```
+```output
 asciidoc
 mobileassetd[83] <Notice>: 0x1a49aebc0 Client connection: XPC_TYPE_ERROR Connection invalid <error: 0x1a49aebc0> { count = 1, transaction: 0, voucher = 0x0, contents = "XPCErrorDescription" => <string: 0x1a49aee18> { length = 18, contents = "Connection invalid" } }
 iPhone mobileassetd[83] <Notice>: Client connection invalid (Connection invalid); terminating connection

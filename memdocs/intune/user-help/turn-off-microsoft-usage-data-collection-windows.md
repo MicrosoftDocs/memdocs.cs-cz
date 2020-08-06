@@ -19,14 +19,14 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 9b29f8378cf2c3c25e0e830bb97f6363ff0740af
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 9f41bc7a67551f9820fbb3764f64d828fcbb51b3
+ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881133"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865988"
 ---
-# <a name="how-to-turn-off-microsoft-data-collection"></a>Vypnutí shromažďování dat Microsoftem
+# <a name="how-to-turn-off-microsoft-data-collection-for-windows"></a>Vypnutí shromažďování dat Microsoftu pro Windows
 
 Microsoft automaticky shromažďuje určitá data o našich produktech a službách. Děláme to za účelem zvýšení spolehlivosti a výkonu našich produktů, mezi které patří i aplikace Portál společnosti. I když se tato data upravují tak, aby byla anonymní, nemusí být toto shromažďování dat některým uživatelům příjemné. Vaše firemní podpora nemá nad shromažďováním těchto dat kontrolu a nemůže u tohoto nastavení změnit vaši volbu.
 

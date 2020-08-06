@@ -10,12 +10,12 @@ ms.assetid: 1401a35e-4312-4d3b-8ceb-0abbb10d4f05
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7eccc3bf6b7ded9db93f5af78d55f090e9704cbc
-ms.sourcegitcommit: 8a4a86ee8044f273dcece26155132a801f3d8f9a
+ms.openlocfilehash: 5e81bc9b2135d17c445f8a86ff2214db394f63db
+ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87438603"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865485"
 ---
 # <a name="how-to-create-collections-in-configuration-manager"></a>Vytváření kolekcí v Configuration Manager
 
@@ -171,9 +171,8 @@ V dialogovém okně **Vlastnosti dotazového pravidla** zadejte následující i
 
 - **Upravit příkaz dotazu**: otevře dialogové okno **vlastnosti příkazu dotazu** , kde můžete napsat dotaz, který chcete použít jako pravidlo pro kolekci. Další informace o dotazech najdete v tématu [Úvod do dotazů](../../../servers/manage/introduction-to-queries.md).  
 
-        
-        > [!TIP]  
-        > On the General tab, selecting the checkbox to **Omit duplicate rows (select distinct)** may result in less rows returned and potentially quicker results. 
+    > [!TIP]  
+    > Na kartě Obecné můžete zaškrtnutím políčka **vynechat duplicitní řádky (SELECT DISTINCT)** způsobit vrácení méně řádků a potenciálně rychlejší výsledky.
 
 ### <a name="device-category-rule"></a><a name="bkmk-category"></a>Pravidlo kategorie zařízení
 
@@ -229,7 +228,7 @@ Synchronizaci členství v kolekci můžete povolit do skupiny Azure Active Dire
 
 Synchronizace služby Azure AD proběhne každých pět minut. Jedná se o jednosměrný proces, od Configuration Manager do Azure AD. Změny provedené v Azure AD se neprojeví v kolekcích Configuration Manager, ale Configuration Manager se nepřepíší. Pokud má například kolekce Configuration Manager dvě zařízení a skupina Azure AD má tři různá zařízení, po synchronizaci má skupina Azure AD pět zařízení.
 
-### <a name="prerequisites"></a>Předpoklady
+### <a name="prerequisites"></a>Požadavky
 
 - Integrace se službou Azure AD pro [správu cloudu](../../../servers/deploy/configure/azure-services-wizard.md)
 - [Azure Active Directory zjišťování uživatelů](../../../servers/deploy/configure/about-discovery-methods.md#azureaddisc)
@@ -278,7 +277,7 @@ Synchronizace služby Azure AD proběhne každých pět minut. Jedná se o jedno
 
 ## <a name="using-powershell"></a><a name="bkmk_powershell"></a>Použití PowerShellu
 
-K vytváření a importu kolekcí můžete použít PowerShell. Další informace naleznete v tématu:
+K vytváření a importu kolekcí můžete použít PowerShell. Další informace:
 
 * [New-CMCollection](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmcollection)
 * [Set-CMCollection](https://docs.microsoft.com/powershell/module/ConfigurationManager/Set-CMCollection)

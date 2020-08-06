@@ -17,14 +17,14 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 86e2305692c1e50af7cc2518f394b5c91cfed4f3
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 2f6ba59ccc2832a66eb1a7b081008aa43b0c75bc
+ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83882278"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866226"
 ---
-# <a name="resolve-a-threat-found-by-sandblast-mobile-protect"></a>Vyřešení hrozby, kterou objevila aplikace SandBlast Mobile Protect
+# <a name="resolve-a-threat-found-by-sandblast-mobile-protect-on-android"></a>Vyřešit hrozbu, kterou zjistila aplikace SandBlast Mobile Protect na Androidu
 
 Aplikace SandBlast Mobile Protect je mobilní služba ochrany před hrozbami, která na zařízeních s Androidem rozpoznává potenciální hrozby. Hrozby, které ohlásí, si následně můžete prohlédnout v aplikaci Portál společnosti. Zobrazují se zde jako nevyřešené problémy nevyhovující předpisům. Dokud hrozby neodstraníte, možná nebudete moci provádět tyto akce:   
 

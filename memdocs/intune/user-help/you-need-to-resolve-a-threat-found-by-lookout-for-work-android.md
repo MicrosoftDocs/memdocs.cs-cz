@@ -17,14 +17,14 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 225006df484d0e65d6a78960d96a7fc70f251991
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 38f5b4ba6d243af74462046c243de34dc5cd8544
+ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83878121"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866039"
 ---
-# <a name="resolve-a-threat-found-by-lookout-for-work"></a>Vyřešení hrozby, kterou zjistila aplikace Lookout for Work  
+# <a name="resolve-a-threat-found-by-lookout-for-work-on-android"></a>Vyřešit hrozbu, kterou zjistila Lookout for Work v Androidu
 
 Aplikace Lookout for Work je služba ochrany před hrozbami, která na zařízeních s Androidem rozpoznává potenciální hrozby. Ty se oznamují aplikaci Portál společnosti a zobrazují jako nevyřešené problémy nevyhovující předpisům. Dokud hrozby neodstraníte, možná nebudete moci provádět tyto akce:
 

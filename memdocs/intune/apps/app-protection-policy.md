@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/19/2020
+ms.date: 08/06/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, get-started, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 28401c314d70f1d810fe12e815d8558afc8aab89
-ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
+ms.openlocfilehash: 5685a9d8738fa3f2303902d439fe73e8d45b35e7
+ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85502591"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865716"
 ---
 # <a name="app-protection-policies-overview"></a>Přehled zásad ochrany aplikací
 
@@ -62,7 +62,7 @@ Mezi důležité výhody použití zásad ochrany aplikací patří následujíc
 
 - **Produktivita koncového uživatele není ovlivněná a při použití aplikace pro osobní účely se neaplikují zásady.** Zásady se použijí jenom v pracovním kontextu, což umožňuje chránit podniková data bez zásahu do osobních dat.
 
-- **Zásady ochrany aplikací zajišťují, že jsou zavedena ochrana aplikační vrstvy.** Můžete například provést následující věci:
+- **Zásady ochrany aplikací zajišťují, že jsou zavedena ochrana aplikační vrstvy.** Můžete například:
   - Vyžadovat PIN k otevření aplikace v pracovním kontextu 
   - Řídit sdílení dat mezi aplikacemi 
   - Zabránit ukládání dat firemních aplikací do osobního úložiště
@@ -323,6 +323,11 @@ Zásady ochrany aplikací Intune umožňují řídit přístup k aplikacím jen 
   
 ### <a name="ios-share-extension"></a>rozšíření pro sdílení iOS
 Rozšíření sdílené složky pro iOS/iPadOS můžete použít k otevření pracovních nebo školních dat v nespravovaných aplikacích, a to i v případě, že zásady přenosu dat nastavily **jenom na spravované aplikace** nebo **žádné aplikace**. Zásady ochrany aplikací Intune nemůžou řídit rozšíření sdílené složky iOS/iPadOS bez správy zařízení. Proto Intune _**podniková data před jejich sdílením mimo příslušnou aplikaci zašifruje**_. Toto chování šifrování můžete ověřit tak, že se pokusíte otevřít podnikový soubor mimo spravovanou aplikaci. Soubor by měl být zašifrovaný a mimo spravovanou aplikaci by ho nemělo být možné otevřít.
+
+### <a name="universal-links-support"></a>Podpora univerzálních odkazů
+Ve výchozím nastavení zásady ochrany aplikací Intune zabrání přístupu k neoprávněnému obsahu aplikace. V systému iOS/iPadOS je k dispozici funkce pro otevření konkrétního obsahu nebo aplikací pomocí [univerzálních odkazů](https://developer.apple.com/universal-links/). 
+
+Uživatelé můžou zakázat univerzální odkazy aplikace jejich návštěvou v Safari a vybrat **otevřít na nové kartě** nebo **otevřít**. Aby mohli uživatelé používat univerzální odkazy na zásady ochrany aplikací Intune, je důležité znovu povolit univerzální odkazy. Koncový uživatel by musel **Open in**  < po dlouhou dobu stisknout odpovídající odkaz, aby v prohlížeči Safari otevřel otevřený***název aplikace***>. Měla by se zobrazit výzva k zadání všech dalších chráněných aplikací, které budou směrovat všechny univerzální odkazy na zařízení do chráněné aplikace.
 
 ### <a name="multiple-intune-app-protection-access-settings-for-same-set-of-apps-and-users"></a>Více nastavení přístupu k ochraně aplikací Intune pro stejnou sadu aplikací a uživatelů
 Zásady ochrany aplikací Intune pro přístup se použijí v konkrétním pořadí na zařízeních koncových uživatelů, aby se pokusily o přístup k cílové aplikaci ze svého podnikového účtu. Obecně má přednost vymazání, pak blokování, a pak upozornění, které se dá zavřít. Například pokud se vztahuje na konkrétního uživatele nebo aplikaci, nastavení minimálního operačního systému iOS/iPadOS, které uživatele upozorní na aktualizaci verze iOS/iPadOS, se použije po nastavení minimálního operačního systému iOS/iPadOS, které uživateli zablokuje přístup. Proto ve scénáři, kde správce IT nakonfiguruje minimální operační systém iOS na 11.0.0.0 a minimální operační systém iOS (pouze upozornění) na 11.1.0.0, zatímco zařízení pokoušející se o přístup k aplikaci má iOS 10, by byl koncový uživatel zablokován na základě přísnějšího nastavení pro minimální verzi operačního systému iOS, které vede k zablokování přístupu.

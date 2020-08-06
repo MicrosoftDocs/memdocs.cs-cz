@@ -17,14 +17,14 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 605d31f2f7a32c9344ca1e24fc3f78da57fb46a0
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 5a4f96b260a9e534dac5345510f16e142e694456
+ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83877153"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865971"
 ---
-# <a name="resolve-a-threat-found-by-symantec-endpoint-protection-mobile"></a>Vyřešení hrozby, kterou zjistila aplikace Symantec Endpoint Protection Mobile
+# <a name="resolve-a-threat-found-by-symantec-endpoint-protection-mobile-on-ios"></a>Řešení hrozby, kterou zjistil Symantec Endpoint Protection Mobile v iOS
 
 Symantec Endpoint Protection (SEP) Mobile je mobilní služba ochrany před hrozbami, která na zařízeních s Androidem rozpoznává potenciální hrozby. Ty se oznamují aplikaci Portál společnosti a zobrazují jako nevyřešené problémy nevyhovující předpisům. Pokud aplikace vaše zařízení vyhodnotí jako nesplňující předpisy, možná nebudete moci provádět tyto akce:
 

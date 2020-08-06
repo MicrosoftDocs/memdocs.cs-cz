@@ -19,14 +19,14 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: a9ea1274ca231cd60da9158ff19bf717e47316c2
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 2cfdd7d65fd1f474588fcb225853835654a8fa5e
+ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881729"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866056"
 ---
-# <a name="how-to-turn-off-microsoft-data-collection"></a>Vypnutí shromažďování dat Microsoftem
+# <a name="how-to-turn-off-microsoft-data-collection-for-ios-devices"></a>Vypnutí shromažďování dat Microsoftu pro zařízení s iOS
 
 Microsoft automaticky shromažďuje určitá data o našich produktech a službách. Děláme to za účelem zvýšení spolehlivosti a výkonu našich produktů, mezi které patří i aplikace Portál společnosti. I když se tato data upravují tak, aby byla anonymní, nemusí být toto shromažďování dat některým uživatelům příjemné. Vaše firemní podpora nemá nad shromažďováním těchto dat kontrolu a nemůže u tohoto nastavení změnit vaši volbu.
 
