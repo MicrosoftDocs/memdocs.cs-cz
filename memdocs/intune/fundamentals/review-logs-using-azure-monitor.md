@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 010bbd18c09424ed2434dc19405851bb5c254591
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: f71bbc2022068616b90f37c209d41d28ea5970d0
+ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990767"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87912541"
 ---
 # <a name="send-log-data-to-storage-event-hubs-or-log-analytics-in-intune-preview"></a>Odeslání dat protokolu do úložiště, centra událostí nebo Log Analytics v Intune (Preview)
 
@@ -139,8 +139,8 @@ V následujících tabulkách je uveden odhad nákladů v závislosti na velikos
 
 **Protokol auditu s 100 000 uživateli**
 
-| | |
-|---|---|
+| Kategorie | Hodnota |
+| -------- | ----- |
 |Počet událostí za den| 1,5 milionu|
 |Odhadovaný objem dat za měsíc| 90 GB|
 |Odhadované náklady za měsíc (USD)| 1,93 USD|
@@ -148,8 +148,8 @@ V následujících tabulkách je uveden odhad nákladů v závislosti na velikos
 
 **Protokol auditu s 1 000 uživateli**
 
-| | |
-|---|---|
+| Kategorie | Hodnota |
+| -------- | ----- |
 |Počet událostí za den| 15 000|
 |Odhadovaný objem dat za měsíc| 900 MB|
 |Odhadované náklady za měsíc (USD)| 0,02 USD|
@@ -165,8 +165,8 @@ Následující tabulka obsahuje odhad měsíčních nákladů na základní cent
 
 **Protokol auditu s 100 000 uživateli**
 
-| | |
-|---|---|
+| Kategorie | Hodnota |
+| -------- | ----- |
 |Počet událostí za sekundu| 18|
 |Počet událostí za pětiminutový interval| 5 400|
 |Objem za interval| 10,8 MB|
@@ -176,8 +176,8 @@ Následující tabulka obsahuje odhad měsíčních nákladů na základní cent
 
 **Protokol auditu s 1 000 uživateli**
 
-| | |
-|---|---|
+| Kategorie | Hodnota |
+| -------- | ----- |
 |Počet událostí za sekundu|0.1 |
 |Počet událostí za pětiminutový interval| 52|
 |Objem za interval|104 kB |
@@ -227,7 +227,7 @@ V současné době je Azure Monitor podporován [logikou](https://help.sumologic
 
 ### <a name="can-i-access-the-data-from-an-event-hub-without-using-an-external-siem-tool"></a>Můžu získat přístup k datům z centra událostí bez použití externího nástroje SIEM?
 
-Yes. Pro přístup k protokolům z vlastní aplikace můžete použít [rozhraní API služby Event Hubs](https://docs.microsoft.com/azure/event-hubs/event-hubs-dotnet-standard-getstarted-receive-eph).
+Ano. Pro přístup k protokolům z vlastní aplikace můžete použít [rozhraní API služby Event Hubs](https://docs.microsoft.com/azure/event-hubs/event-hubs-dotnet-standard-getstarted-receive-eph).
 
 ### <a name="what-data-is-stored"></a>Jaká data jsou uložená?
 

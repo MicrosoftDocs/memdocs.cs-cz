@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 89f6c1d4498151eed87cf90ae24d0cc7a846d3f7
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: 2c6152b4380abacde6dd6e8e014ebe91aa258edb
+ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262553"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87912589"
 ---
 # <a name="how-to-manage-ios-and-macos-apps-purchased-through-apple-volume-purchase-program-with-microsoft-intune"></a>Jak spravovat aplikace pro iOS a macOS zakoupené prostřednictvím Apple Volume Purchase Program s využitím Microsoft Intune
 
@@ -46,8 +46,8 @@ Tokeny umístění jsou známé také jako tokeny programu Volume purchase progr
 ## <a name="how-are-purchased-apps-licensed"></a>Jak se aplikace koupily jako licencované?
 Zakoupené aplikace je možné přiřadit ke skupinám pomocí dvou typů licencí, které Apple nabízí pro zařízení s iOS/iPadOS a macOS.
 
-|  | Licencování zařízení | Licencování uživatelů |
-|-----------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Akce | Licencování zařízení | Licencování uživatelů |
+|------- | -----------------| ---------------|
 | Přihlášení do App Storu | Nepožadováno. | Každý koncový uživatel musí při zobrazení výzvy k přihlášení do App Storu použít jedinečné Apple ID. |
 | Konfigurace zařízení blokující přístup k obchodu s aplikacemi | Aplikace se dají nainstalovat a aktualizovat pomocí Portál společnosti. | Pozvánka k připojení k programu Apple VPP vyžaduje přístup k App Storu. Pokud jste nastavili zásadu pro zakázání App Storu, Licencování uživatelů pro aplikace VPP nebude fungovat. |
 | Automatická aktualizace aplikace | Jak je nakonfiguroval správce Intune v nastavení tokenu Apple VPP.<p>Pokud je typ přiřazení dostupný pro zaregistrovaná zařízení, můžete z Portál společnosti nainstalovat taky dostupné aktualizace aplikací, a to tak, že na stránce podrobností aplikace vyberete akci **aktualizovat** . | Jak je nakonfigurované koncovým uživatelem v nastavení osobního obchodu s aplikacemi. Tuto funkci nemůže spravovat správce Intune. |
@@ -157,8 +157,8 @@ Koncový uživatel obdrží výzvu k instalaci aplikace v rámci VPP v řadě sc
 
 Můžete odvolat všechny přidružené licence aplikací pro iOS/iPadOS nebo macOS programu Volume purchase program (VPP) na základě daného zařízení, uživatele nebo aplikace.  Existují však určité rozdíly mezi platformami iOS/iPadOS a macOS. 
 
-|  | iOS/iPadOS | macOS |
-|-----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Akce | iOS/iPadOS | macOS |
+|------- | ---------- | ----- |
 | Odebrat přiřazení aplikace | Když odeberete aplikaci, která byla přiřazena uživateli, Intune znovu vyřadí licenci uživatele nebo zařízení a odinstaluje aplikaci ze zařízení. | Když odeberete aplikaci, která byla přiřazena uživateli, Intune znovu získá licenci uživatele nebo zařízení. Aplikace se ze zařízení neodinstaluje. |
 | Odvolat licenci aplikace | Odvolání licence aplikace znovu získá licenci aplikace od uživatele nebo zařízení. Aby bylo možné aplikaci odebrat ze zařízení, je nutné změnit přiřazení pro **odinstalaci** . | Odvolání licence aplikace znovu získá licenci aplikace od uživatele nebo zařízení. Aplikace macOS s odvolanými licencemi zůstává v zařízení použitelná, ale nedá se aktualizovat, dokud uživatel nebo zařízení nepřidá licenci. Podle Applu se takové aplikace po uplynutí 30denní lhůty odeberou. Společnost Apple ale neposkytuje způsob, jak Intune aplikaci odebrat, a to pomocí akce odinstalovat přiřazení. |
 
@@ -221,7 +221,7 @@ Licence by se měly aktualizovat do několika hodin od instalace nebo odinstalac
 
 ### <a name="is-it-possible-to-oversubscribe-an-app-and-if-so-in-what-circumstance"></a>Je možné přidělit aplikaci nadměrnému počtu subjektů? A pokud ano, za jakých okolností?
 
-Yes. Správce Intune může aplikaci přidělit nadměrnému počtu uživatelů nebo zařízení. A to například tehdy, když zakoupí sto licencí k aplikaci XYZ a potom ji zacílí na skupinu s pěti sty členy. Prvnímu stu členů (uživatelům nebo zařízením) se licence přiřadí a u zbylých členů se přiřazení licence nezdaří.
+Ano. Správce Intune může aplikaci přidělit nadměrnému počtu uživatelů nebo zařízení. A to například tehdy, když zakoupí sto licencí k aplikaci XYZ a potom ji zacílí na skupinu s pěti sty členy. Prvnímu stu členů (uživatelům nebo zařízením) se licence přiřadí a u zbylých členů se přiřazení licence nezdaří.
 
 ## <a name="next-steps"></a>Další kroky
 

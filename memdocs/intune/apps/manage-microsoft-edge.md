@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/08/2020
+ms.date: 08/05/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 35ee8b225abe48aa4b8b0ca78b9e5b137d0721f6
-ms.sourcegitcommit: 41b2b50d5870dc127a8848a6657d56112f92515a
+ms.openlocfilehash: 49d731ef6e9508367ded8ed5d711b744be7d2db1
+ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87758359"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87912552"
 ---
 # <a name="manage-web-access-by-using-edge-for-ios-and-android-with-microsoft-intune"></a>Správa webového přístupu pomocí Edge pro iOS a Android s využitím Microsoft Intune
 
@@ -114,7 +114,7 @@ Tento scénář konfigurace funguje jenom se zaregistrovanými zařízeními. Ni
 
 ## <a name="general-app-configuration-scenarios"></a>Obecné scénáře konfigurace aplikací
 
-Edge pro iOS a Android nabízí správcům možnost přizpůsobení výchozí konfigurace pro několik nastavení v aplikaci. Tato funkce se teď nabízí jenom v případě, že Edge pro iOS a Android má pro pracovní nebo školní účet, který se přihlásí do aplikace, nastavené zásady Intune App Protection.
+Edge pro iOS a Android nabízí správcům možnost přizpůsobení výchozí konfigurace pro několik nastavení v aplikaci. Tato možnost se v současné době nabízí jenom v případě, že Edge pro iOS a Android má Intune App Protection zásady použité pro pracovní nebo školní účet, který je přihlášený k aplikaci, a nastavení zásad se doručují prostřednictvím zásad konfigurace aplikací spravovaných aplikací.
 
 > [!IMPORTANT]
 > Edge pro Android nepodporuje nastavení Chromu, která jsou k dispozici ve spravovaných Google Play.
@@ -246,12 +246,12 @@ Edge pro Android se dá povolit jako veřejná aplikace s následujícími nasta
 |    Klíč    |    Hodnota    |
 |-----------|-------------|
 |    com. Microsoft. Intune. mam. managedbrowser. enableKioskMode    |    **true** povolí celoobrazovkový režim pro Edge pro Android<br>**false** (výchozí) zakáže celoobrazovkový režim.    |
-|    com. Microsoft. Intune. mam. managedbrowser. showAddressBarInKioskMode    |    **hodnota true** zobrazí panel Adresa v celoobrazovkovém režimu.<br> **false** (výchozí) skryje adresní řádek v celoobrazovkovém režimu.    |
-|    com. Microsoft. Intune. mam. managedbrowser. showBottomBarInKioskMode    |    **hodnota true** zobrazí dolní panel akcí v celoobrazovkovém režimu.<br> **false** (výchozí) skryje spodní panel v celoobrazovkovém režimu.    |
+|    com. Microsoft. Intune. mam. managedbrowser. showAddressBarInKioskMode    |    **hodnota true** zobrazí panel Adresa v celoobrazovkovém režimu.<br> **false** (výchozí) skryje adresní řádek, když je povolený celoobrazovkový režim.    |
+|    com. Microsoft. Intune. mam. managedbrowser. showBottomBarInKioskMode    |    **hodnota true** zobrazí dolní panel akcí v celoobrazovkovém režimu.<br> **false** (výchozí) skryje spodní panel, když je povolený celoobrazovkový režim.    |
 
 ## <a name="data-protection-app-configuration-scenarios"></a>Scénáře konfigurace aplikace pro ochranu dat
 
-Edge pro iOS a Android podporuje zásady konfigurace aplikací pro následující nastavení ochrany dat, když je aplikace spravovaná pomocí Microsoft Endpoint Manageru se zásadami Intune App Protection použitými pro pracovní nebo školní účet, který je přihlášený k aplikaci:
+Edge pro iOS a Android podporuje zásady konfigurace aplikací pro následující nastavení ochrany dat, když je aplikace spravovaná pomocí Microsoft Endpoint Manageru se zásadami Intune App Protection použitými pro pracovní nebo školní účet, který je přihlášený k aplikaci, a nastavení zásad se doručují prostřednictvím zásad konfigurace aplikací spravovaných aplikací:
 
 - Správa synchronizace účtu
 - Správa omezených webů

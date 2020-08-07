@@ -5,7 +5,7 @@ keywords: SDK, Xamarin, Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/28/2020
+ms.date: 08/06/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune, has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 13b2c69a0bf4e031717847b700e60e873fbda157
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: 3d54a03290b7d2020b6ec13b64f985613c0a292d
+ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262842"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87912306"
 ---
 # <a name="microsoft-intune-app-sdk-xamarin-bindings"></a>Xamarinové vazby sady Microsoft Intune App SDK
 
@@ -56,9 +56,9 @@ Xamarinové aplikace vytvořené xamarinovými vazbami sady Intune App SDK přij
 
 Přečtěte si [licenční smlouvy](https://github.com/msintuneappsdk/intune-app-sdk-xamarin/blob/master/Microsoft%20License%20Terms%20Intune%20App%20SDK%20Xamarin%20Component.pdf). Licenční podmínky si vytiskněte a uchovejte pro své záznamy. Stažením a použitím xamarinových vazeb sady Intune App SDK přijímáte tyto licenční podmínky. Pokud je nepřijímáte, software nepoužívejte.
 
-Intune SDK se spoléhá na [Active Directory Authentication Library (ADAL)](https://azure.microsoft.com/documentation/articles/active-directory-authentication-libraries/) pro své scénáře [ověřování](https://azure.microsoft.com/documentation/articles/active-directory-authentication-scenarios/) a podmíněného spuštění, které vyžadují konfiguraci aplikací pomocí [Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-whatis/). 
+Sada Intune SDK se spoléhá na [knihovnu Microsoft Authentication Library (MSAL)](https://docs.microsoft.com/azure/active-directory/develop/v2-overview) pro své scénáře [ověřování](https://azure.microsoft.com/documentation/articles/active-directory-authentication-scenarios/) a podmíněného spuštění, které vyžadují konfiguraci aplikací pomocí [Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-whatis/). 
 
-Pokud je vaše aplikace už nakonfigurovaná tak, aby používala ADAL nebo MSAL, a má vlastní ID klienta, které se používá k ověřování pomocí Azure Active Directory, zajistěte, aby se sledovaly vaše oprávnění aplikace Xamarin pro správu mobilních aplikací (MAM) služby Intune. Postupujte podle pokynů v části "[poskytnutí přístupu aplikace ke službě Intune App Protection](app-sdk-get-started.md#give-your-app-access-to-the-intune-app-protection-service-optional)" v tématu [Začínáme s Intune SDK](app-sdk-get-started.md).
+Pokud je vaše aplikace už nakonfigurovaná tak, aby používala MSAL, a má své vlastní ID klienta, které se používá k ověřování pomocí Azure Active Directory, zajistěte, aby se použila vaše oprávnění aplikace Xamarin pro správu mobilních aplikací (MAM) služby Intune. Postupujte podle pokynů v části "[poskytnutí přístupu aplikace ke službě Intune App Protection](app-sdk-get-started.md#give-your-app-access-to-the-intune-app-protection-service-optional)" v tématu [Začínáme s Intune SDK](app-sdk-get-started.md).
 
 ## <a name="security-considerations"></a>Aspekty zabezpečení
 
@@ -83,7 +83,7 @@ Další informace najdete v tématu [instalace podepsaných balíčků](https://
       using Microsoft.Intune.MAM;
       ```
 
-4. Aby aplikace mohly začít přijímat zásady ochrany, musíte je zaregistrovat do služby Intune MAM. Pokud vaše aplikace nepoužívá k ověřování uživatelů knihovnu [ADAL](https://www.nuget.org/packages/Microsoft.IdentityModel.Clients.ActiveDirectory) (Azure Active Directory Authentication Library) ani [MSAL](https://www.nuget.org/packages/Microsoft.Identity.Client) (Microsoft Authentication Library) a chtěli byste ověřování svěřit sadě Intune SDK, měla by aplikace poskytovat metodě LoginAndEnrollAccount třídy IntuneMAMEnrollmentManager hlavní název uživatele (UPN):
+4. Aby aplikace mohly začít přijímat zásady ochrany, musíte je zaregistrovat do služby Intune MAM. Pokud vaše aplikace nepoužívá k ověřování uživatelů [knihovnu Microsoft Authentication Library](https://www.nuget.org/packages/Microsoft.Identity.Client) (MSAL) a vy chcete, aby sada Intune SDK zpracovávala ověřování, měla by vaše aplikace poskytnout hlavní název uživatele (UPN) k LoginAndEnrollAccount metodě IntuneMAMEnrollmentManager:
 
       ```csharp
        IntuneMAMEnrollmentManager.Instance.LoginAndEnrollAccount([NullAllowed] string identity);
@@ -91,7 +91,7 @@ Další informace najdete v tématu [instalace podepsaných balíčků](https://
 
       Aplikace mohou předat hodnotu null, pokud hlavní název uživatele není v době volání známý. V takovém případě budou uživatelé vyzváni k zadání e-mailové adresy a hesla.
       
-      Pokud vaše aplikace už k ověřování uživatelů používá knihovnu ADAL nebo MSAL, můžete mezi aplikací a sadou Intune SDK nakonfigurovat jednotné přihlašování. Nejdřív budete muset přepsat výchozí nastavení AAD používané sadou Intune SDK pomocí těch, které vaše aplikace používá. To můžete provést prostřednictvím slovníku IntuneMAMSettings v souboru info. plist aplikace, jak je uvedeno v [sadě Intune App SDK pro iOS](app-sdk-ios.md#configure-settings-for-the-intune-app-sdk), nebo to můžete provést v kódu prostřednictvím vlastností přepisu AAD třídy IntuneMAMSettings. Způsob se souborem Info.plist se doporučuje použít u aplikací se statickým nastavením ADAL. Vlastnosti přepisu se doporučují použít u aplikací, které tyto hodnoty zjišťují za běhu. Po konfiguraci všech nastavení jednotného přihlašování by vaše aplikace měla metodě RegisterAndEnrollAccount třídy IntuneMAMEnrollmentManager po úspěšném ověření poskytnout hlavní název uživatele (UPN):
+      Pokud už vaše aplikace používá MSAL k ověřování uživatelů, můžete nakonfigurovat jednotné přihlašování (SSO) mezi vaší aplikací a sadou Intune SDK. Nejdřív budete muset přepsat výchozí nastavení AAD používané sadou Intune SDK pomocí těch, které vaše aplikace používá. To můžete provést prostřednictvím slovníku IntuneMAMSettings v souboru info. plist aplikace, jak je uvedeno v [sadě Intune App SDK pro iOS](app-sdk-ios.md#configure-settings-for-the-intune-app-sdk), nebo to můžete provést v kódu prostřednictvím vlastností přepisu AAD třídy IntuneMAMSettings. Přístup k informacím. plist se doporučuje u aplikací, jejichž nastavení MSAL je statické, zatímco vlastnosti přepsání jsou doporučené pro aplikace, které tyto hodnoty určují za běhu. Po konfiguraci všech nastavení jednotného přihlašování by vaše aplikace měla metodě RegisterAndEnrollAccount třídy IntuneMAMEnrollmentManager po úspěšném ověření poskytnout hlavní název uživatele (UPN):
 
       ```csharp
       IntuneMAMEnrollmentManager.Instance.RegisterAndEnrollAccount(string identity);

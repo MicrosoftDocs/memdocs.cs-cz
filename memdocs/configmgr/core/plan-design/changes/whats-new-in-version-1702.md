@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: eacf64245f4cfc779dc92be73e8d7e387b34f909
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: fa29c1b2474d6a0a42b7ff8e3624a3ec8d6a090e
+ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83427940"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87912296"
 ---
 # <a name="what39s-new-in-version-1702-of-configuration-manager"></a>Co&#39;s novinkou ve verzi 1702 Configuration Manager
 
@@ -27,7 +27,7 @@ Aktualizace 1702 pro Configuration Manager aktuální větev je k dispozici jako
 > [!TIP]  
 > Chcete-li nainstalovat novou lokalitu, je nutné použít základní verzi Configuration Manager.  
 >
-> Další informace:    
+> Přečtěte si další informace:    
 > - [Instalace nových lokalit](../../servers/deploy/install/installing-sites.md)  
 > - [Instalace aktualizací v lokalitách](../../servers/manage/updates.md)  
 > - [Základní a aktualizační verze](../../servers/manage/updates.md#bkmk_Baselines)
@@ -271,9 +271,8 @@ Počínaje 1702 se v hybridní správě mobilních zařízení s Microsoft Intun
 
 Můžete teď nasadit licencované aplikace do zařízení i pro uživatele. V závislosti na možnosti aplikace podporovat licencování zařízení bude při nasazování k vhodné licence, a to následujícím způsobem:
 
-|||||
-|-|-|-|-|
-|Verze Configuration Manager|Aplikace podporuje licencování zařízení?|Typ kolekce nasazení|Deklarovaná licence|
+| Verze Configuration Manager | Aplikace podporuje licencování zařízení? | Typ kolekce nasazení | Deklarovaná licence |
+| ----------------------------- | ------------------------------ | -------------------------- | --------------- |
 |Starší než 1702|Ano|Uživatel|Uživatelská licence|
 |Starší než 1702|Ne|Uživatel|Uživatelská licence|
 |Starší než 1702|Ano|Zařízení|Uživatelská licence|

@@ -10,12 +10,12 @@ ms.assetid: 97f2d81a-2c58-442c-88bc-defd5a1cd48f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4403c8d0c57fba8fb63e3df729fb8a48ff123362
-ms.sourcegitcommit: d8dc05476ecd5db7ecb36dc649b566b349ba263d
+ms.openlocfilehash: 76e0fd3ad8ceaecb43d2a61c3abe15accda5e5d8
+ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83732869"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87912382"
 ---
 # <a name="manage-boot-images-with-configuration-manager"></a>Správa spouštěcích imagí pomocí Configuration Manager
 
@@ -80,8 +80,8 @@ Je-li spouštěcí image založena na jiné verzi sady Windows ADK nainstalovan�
 
 Během instalace lokality Configuration Manager automaticky přidávají spouštěcí bitové kopie, které jsou založené na verzi prostředí WinPE z podporované verze sady Windows ADK. V závislosti na verzi Configuration Manager můžete přidat spouštěcí bitové kopie založené na jiné verzi prostředí WinPE z podporované verze sady Windows ADK. Pokud se pokusíte přidat spouštěcí bitovou kopii, která obsahuje nepodporovanou verzi prostředí WinPE, dojde k chybě. V následujícím seznamu jsou aktuálně podporované verze Windows ADK a WinPE:
 
-|  |  |
-|---------|---------|
+| Typ Windows | Podporované verze |
+|--------------|--------------------|
 | Verze sady Windows ADK | Sada Windows ADK pro Windows 10 |
 | Verze prostředí Windows PE pro spouštěcí bitové kopie přizpůsobitelné z konzoly Configuration Manager | Windows PE 10 |
 | Podporované verze prostředí Windows PE pro spouštěcí bitové kopie, *které nelze přizpůsobit* z konzoly Configuration Manager | – Windows PE 3,1<sup>[Poznámka 1](#bkmk_note1)</sup> <br> – Windows PE 5 |
@@ -297,6 +297,6 @@ Pomocí následujícího postupu můžete nastavit jazyk WinPE pro nasazení ope
 
 ### <a name="set-the-windows-pe-language-for-a-pxe-or-media-initiated-os-deployment"></a>Nastavení jazyka Windows PE pro nasazení operačního systému inicializovaného technologií PXE nebo médií  
 
-1. Před aktualizací spouštěcí image ověřte, zda se příslušný soubor prostředků pořadí úkolů (tsres. dll) nachází v odpovídající složce jazyka na serveru lokality. Například soubor prostředků English je v následujícím umístění:`<ConfigMgrInstallationFolder>\OSD\bin\x64\00000409\tsres.dll`  
+1. Před aktualizací spouštěcí image ověřte, zda je příslušný soubor prostředků pořadí úkolů (tsres.dll) v odpovídající složce jazyka na serveru lokality. Například soubor prostředků English je v následujícím umístění:`<ConfigMgrInstallationFolder>\OSD\bin\x64\00000409\tsres.dll`  
 
 2. Jako součást předstartovního příkazu nastavte proměnnou prostředí **SMSTSLanguageFolder** na příslušné ID jazyka. ID jazyka musí být zadáno pomocí desítkového a nešestnáctkového formátu. Chcete-li například nastavit ID jazyka na angličtinu, zadejte desítkovou hodnotu **1033**, nikoli hexadecimální hodnotu 00000409 názvu složky.  

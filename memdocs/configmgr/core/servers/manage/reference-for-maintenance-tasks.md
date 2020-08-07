@@ -10,12 +10,12 @@ ms.assetid: 68dc6acd-5848-47a4-b4c1-ffa40e47890b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: e989de5acab778374c233862d0ab4d7077899d28
-ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
+ms.openlocfilehash: f686547e4698f1941a64f5b0346ba2d723248c31
+ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84428588"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87912520"
 ---
 # <a name="reference-for-maintenance-tasks-in-configuration-manager"></a>Referenční informace pro úlohy údržby v Configuration Manager
 
@@ -31,8 +31,8 @@ Další informace najdete v tématu [nastavení úloh údržby](maintenance-task
 
 Pomocí této úlohy můžete vytvořit zálohu důležitých informací k obnovení lokality a databáze Configuration Manager. Další informace najdete v tématu [zálohování Configuration Manager lokality](backup-and-recovery.md).  
 
-|||
-|---------|---------|
+| Typ lokality | Status |
+| --------- | ------ |
 |**Lokalita centrální správy**|Povoleno|
 |**Primární lokalita**|Není povoleno|
 |Sekundární lokalita|Není k dispozici|
@@ -41,8 +41,8 @@ Pomocí této úlohy můžete vytvořit zálohu důležitých informací k obnov
 
 Pomocí této úlohy můžete zachovat konzistenci softwarových titulů mezi inventářem softwaru a katalogem funkce Asset Intelligence. Další informace najdete v tématu [Úvod do funkce Asset Intelligence](../../clients/manage/asset-intelligence/introduction-to-asset-intelligence.md).  
 
-|||
-|---------|---------|
+| Typ lokality | Status |
+| --------- | ------ |
 |**Lokalita centrální správy**|Povoleno|
 |Primární lokalita|Není k dispozici|
 |Sekundární lokalita|Není k dispozici|
@@ -54,8 +54,8 @@ Pomocí této úlohy můžete zachovat konzistenci softwarových titulů mezi in
 
 Pomocí této úlohy můžete odebrat nainstalovaný příznak pro klienty, kteří neodesílají záznam zjišťování prezenčního signálu během období opakovaného **vyhledávání klienta** . Instalovaný příznak zabraňuje automatickému nabízené instalaci klienta do počítače, který může mít klienta služby Active Configuration Manager.  
 
-|||
-|---------|---------|
+| Typ lokality | Status |
+| --------- | ------ |
 |Lokalita centrální správy|Není k dispozici|
 |**Primární lokalita**|Není povoleno|
 |Sekundární lokalita|Není k dispozici|
@@ -64,8 +64,8 @@ Pomocí této úlohy můžete odebrat nainstalovaný příznak pro klienty, kte�
 
 Pomocí této úlohy můžete z databáze odstranit zastaralá aplikační požadavky. Další informace najdete v tématu [Vytvoření a nasazení aplikace](../../../apps/get-started/create-and-deploy-an-application.md).  
 
-|||
-|---------|---------|
+| Typ lokality | Status |
+| --------- | ------ |
 |Lokalita centrální správy|Není k dispozici|
 |**Primární lokalita**|Povoleno|
 |Sekundární lokalita|Není k dispozici|
@@ -74,8 +74,8 @@ Pomocí této úlohy můžete z databáze odstranit zastaralá aplikační poža
 
 Pomocí této úlohy můžete odstranit revize aplikací, na které se již neodkazuje. Další informace najdete v tématu [postup revize a nahrazování aplikací](../../../apps/deploy-use/revise-and-supersede-applications.md).
 
-|||
-|---------|---------|
+| Typ lokality | Status |
+| --------- | ------ |
 |**Lokalita centrální správy**|Povoleno|
 |**Primární lokalita**|Povoleno|
 |Sekundární lokalita|Není k dispozici|
@@ -84,8 +84,8 @@ Pomocí této úlohy můžete odstranit revize aplikací, na které se již neod
 
 Pomocí této úlohy můžete odstranit historická data o zdroji stahování používanému klienty. Lokalita nástroje používá zdrojové informace ke stažení k naplnění [řídicího panelu zdrojů dat klienta](../deploy/configure/monitor-content-you-have-distributed.md#client-data-sources-dashboard).
 
-|||
-|---------|---------|
+| Typ lokality | Status |
+| --------- | ------ |
 |Lokalita centrální správy|Není k dispozici|
 |**Primární lokalita**|Povoleno|
 |Sekundární lokalita|Není k dispozici|
@@ -98,8 +98,8 @@ Pomocí této úlohy můžete z databáze lokality odstranit všechna zastaralá
 - Endpoint Protection, jako jsou žádosti správce pro klienty, aby mohli spouštět kontrolu nebo stahovat aktualizované definice
 - Spustit výsledky stavu skriptů
 
-|||
-|---------|---------|
+| Typ lokality | Status |
+| --------- | ------ |
 |**Lokalita centrální správy**|Povoleno|
 |**Primární lokalita**|Povoleno|
 |Sekundární lokalita|Není k dispozici|
@@ -108,8 +108,8 @@ Pomocí této úlohy můžete z databáze lokality odstranit všechna zastaralá
 <!-- not listed in dogfood for either primary or CAS, was it renamed? -->
 Pomocí této úlohy můžete odstranit informace o historii týkající se online stavu klientů zaznamenaných klientským oznámením. Odstraní informace pro klienty se stavem, který je starší než určený čas. Další informace najdete v tématu [monitorování klientů](../../clients/manage/monitor-clients.md).
 
-|||
-|---------|---------|
+| Typ lokality | Status |
+| --------- | ------ |
 |**Lokalita centrální správy**|Povoleno|
 |**Primární lokalita**|Povoleno|
 |Sekundární lokalita|Není k dispozici|
@@ -124,8 +124,8 @@ Pomocí této úlohy můžete z databáze lokality odstranit všechna zastaralá
 - Počet neúspěšných žádostí
 - Maximální počet souběžných požadavků
 
-|||
-|---------|---------|
+| Typ lokality | Status |
+| --------- | ------ |
 |**Lokalita centrální správy**|Povoleno|
 |**Primární lokalita**|Povoleno|
 |Sekundární lokalita|Není k dispozici|
@@ -134,8 +134,8 @@ Pomocí této úlohy můžete z databáze lokality odstranit všechna zastaralá
 
 Pomocí této úlohy můžete odstranit z databáze lokality staré informace od klientů v dotazech CMPivot. Další informace najdete v tématu [CMPivot for data v reálném čase](cmpivot.md).
 
-|||
-|---------|---------|
+| Typ lokality | Status |
+| --------- | ------ |
 |Lokalita centrální správy|Není k dispozici|
 |**Primární lokalita**|Povoleno|
 |Sekundární lokalita|Není k dispozici|
@@ -144,8 +144,8 @@ Pomocí této úlohy můžete odstranit z databáze lokality staré informace od
 
 Pomocí této úlohy můžete z databáze odstranit zastaralé informace o shromážděných souborech. Tato úloha rovněž odstraňuje shromážděné soubory ze struktury složky serveru lokality ve vybrané lokalitě. Ve výchozím nastavení se pět nejnovějších kopií shromážděných souborů ukládá na server lokality v adresáři **Inboxes\sinv.box\Filecol** . Další informace najdete v tématu [Úvod do inventáře softwaru](../../clients/manage/inventory/introduction-to-software-inventory.md).  
 
-|||
-|---------|---------|
+| Typ lokality | Status |
+| --------- | ------ |
 |Lokalita centrální správy|Není k dispozici|
 |**Primární lokalita**|Povoleno|
 |Sekundární lokalita|Není k dispozici|
@@ -154,8 +154,8 @@ Pomocí této úlohy můžete z databáze odstranit zastaralé informace o shrom
 
 Pomocí této úlohy můžete z databáze odstranit zastaralá data o přidružení počítačů s nasazením operačního systému. Tyto informace se použijí při obnovení stavu uživatele během pořadí úkolů. Další informace najdete v tématu [Správa stavu uživatele](../../../osd/get-started/manage-user-state.md).  
 
-|||
-|---------|---------|
+| Typ lokality | Status |
+| --------- | ------ |
 |Lokalita centrální správy|Není k dispozici|
 |**Primární lokalita**|Povoleno|
 |Sekundární lokalita|Není k dispozici|
@@ -164,8 +164,8 @@ Pomocí této úlohy můžete z databáze odstranit zastaralá data o přidruže
 
 Tento úkol vymaže z databáze lokality data o připojeních konzoly k lokalitě nástroje.<!-- SCCMDocs#528 -->
 
-|||
-|---------|---------|
+| Typ lokality | Status |
+| --------- | ------ |
 |**Lokalita centrální správy**|Povoleno|
 |**Primární lokalita**|Povoleno|
 |Sekundární lokalita|Není k dispozici|
@@ -174,8 +174,8 @@ Tento úkol vymaže z databáze lokality data o připojeních konzoly k lokalit�
 
 Pomocí této úlohy můžete odstranit zastaralá data z databáze, která byla vytvořena pomocí zobrazení extrakce. Odstraní staré informace o změnách dat používané externími systémy extrakce dat z databáze.<!--SCCMDocs#1590--><!--By default, Extraction Views are disabled. You only enable them by using the Configuration Manager SDK. Unless Extraction Views are enabled, there is no data for this task to delete.-->
 
-|||
-|---------|---------|
+| Typ lokality | Status |
+| --------- | ------ |
 |**Lokalita centrální správy**|Povoleno|
 |**Primární lokalita**|Povoleno|
 |Sekundární lokalita|Není k dispozici|
@@ -184,8 +184,8 @@ Pomocí této úlohy můžete odstranit zastaralá data z databáze, která byla
 
 Pomocí této úlohy můžete z databáze odstranit zastaralá data o akcích vymazání mobilního zařízení. Další informace najdete v tématu [Ochrana dat pomocí vzdáleného vymazání, zámku nebo resetování hesla](../../../mdm/deploy-use/wipe-lock-reset-devices.md).  
 
-|||
-|---------|---------|
+| Typ lokality | Status |
+| --------- | ------ |
 |Lokalita centrální správy|Není k dispozici|
 |**Primární lokalita**|Povoleno|
 |Sekundární lokalita|Není k dispozici|
@@ -200,8 +200,8 @@ Pomocí této úlohy můžete z databáze odstranit zastaralá data zjišťován
 
 Tato úloha také odebere zastaralá zařízení označená jako vyřazená z provozu. Při spuštění této úlohy v určité lokalitě se odstraní data přidružená k dané lokalitě a tyto změny se replikují do ostatních lokalit. Další informace najdete v tématu [spuštění zjišťování](../deploy/configure/run-discovery.md).
 
-|||
-|---------|---------|
+| Typ lokality | Status |
+| --------- | ------ |
 |Lokalita centrální správy|Není k dispozici|
 |**Primární lokalita**|Povoleno|
 |Sekundární lokalita|Není k dispozici|
@@ -210,8 +210,8 @@ Tato úloha také odebere zastaralá zařízení označená jako vyřazená z pr
 
 Pomocí této úlohy můžete z databáze odstranit zastaralá data pro distribuční body, které jsou uložené déle než určitou dobu.  
 
-|||
-|---------|---------|
+| Typ lokality | Status |
+| --------- | ------ |
 |**Lokalita centrální správy**|Povoleno|
 |**Primární lokalita**|Povoleno|
 |Sekundární lokalita|Není k dispozici|
@@ -222,8 +222,8 @@ Pomocí této úlohy můžete z databáze lokality Odstranit zastaralá data o m
 
 Tato úloha se týká zařízení, která jsou zaregistrovaná ve službě Configuration Manager [místní MDM](../../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md). Další informace o těchto zařízeních najdete v tématu [podporované operační systémy pro klienty a zařízení](../../plan-design/configs/supported-operating-systems-for-clients-and-devices.md#bkmk_OnpremOS).
 
-|||
-|---------|---------|
+| Typ lokality | Status |
+| --------- | ------ |
 |Lokalita centrální správy|Není k dispozici|
 |**Primární lokalita**|Není povoleno|
 |Sekundární lokalita|Není k dispozici|
@@ -232,8 +232,8 @@ Tato úloha se týká zařízení, která jsou zaregistrovaná ve službě Confi
 
 Pomocí této úlohy můžete z databáze odstranit zastaralé informace o stavu pro Endpoint Protection (EP). Další informace najdete v tématu [monitorování Endpoint Protection](../../../protect/deploy-use/monitor-endpoint-protection.md).
 
-|||
-|---------|---------|
+| Typ lokality | Status |
+| --------- | ------ |
 |Lokalita centrální správy|Není k dispozici|
 |**Primární lokalita**|Povoleno|
 |Sekundární lokalita|Není k dispozici|
@@ -245,8 +245,8 @@ Pomocí této úlohy můžete z databáze odstranit zastaralé informace o stavu
 
 Pomocí této úlohy můžete odstranit zastaralá data o mobilních zařízeních, která spravuje konektor systému Exchange Server. Lokalita tato data odstraní v závislosti na nastavení **Ignorovat mobilní zařízení, která jsou neaktivní po dobu více než (dnů)** na kartě **zjišťování** vlastností konektoru serveru Exchange Server. Další informace najdete v tématu [Správa mobilních zařízení pomocí Configuration Manager a Exchange](../../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md).
 
-|||
-|---------|---------|
+| Typ lokality | Status |
+| --------- | ------ |
 |Lokalita centrální správy|Není k dispozici|
 |**Primární lokalita**|Povoleno|
 |Sekundární lokalita|Není k dispozici|
@@ -255,8 +255,8 @@ Pomocí této úlohy můžete odstranit zastaralá data o mobilních zařízení
 
 Pomocí této úlohy můžete odstranit data inventáře databáze, která jsou uložená déle než zadanou dobu. Další informace najdete v tématu [použití Průzkumník prostředků k zobrazení inventáře hardwaru](../../clients/manage/inventory/use-resource-explorer-to-view-hardware-inventory.md).
 
-|||
-|---------|---------|
+| Typ lokality | Status |
+| --------- | ------ |
 |Lokalita centrální správy|Není k dispozici|
 |**Primární lokalita**|Povoleno|
 |Sekundární lokalita|Není k dispozici|
@@ -268,8 +268,8 @@ Pomocí této úlohy můžete z databáze odstranit stará data protokolu použ�
 > [!IMPORTANT]  
 > Tato úloha je standardně spouštěna každý den na každé lokalitě. V lokalitě centrální správy a primárních lokalitách Tato úloha odstraňuje data, která jsou starší než 30 dní. Při použití SQL Server Express v sekundární lokalitě se ujistěte, že je tato úloha spouštěna denně, a odstraní data, která jsou neaktivní po dobu sedmi dnů.  
 
-|||
-|---------|---------|
+| Typ lokality | Status |
+| --------- | ------ |
 |**Lokalita centrální správy**|Povoleno|
 |**Primární lokalita**|Povoleno|
 |**Sekundární lokalita**|Povoleno|
@@ -278,8 +278,8 @@ Pomocí této úlohy můžete z databáze odstranit stará data protokolu použ�
 
 Pomocí této úlohy můžete z databáze odstranit zastaralá data pro měření softwaru, která jsou uložená déle než určitou dobu. Další informace najdete v tématu [monitorování míry využívání softwaru](../../../apps/deploy-use/monitor-app-usage-with-software-metering.md).
 
-|||
-|---------|---------|
+| Typ lokality | Status |
+| --------- | ------ |
 |Lokalita centrální správy|Není k dispozici|
 |**Primární lokalita**|Povoleno|
 |Sekundární lokalita|Není k dispozici|
@@ -288,8 +288,8 @@ Pomocí této úlohy můžete z databáze odstranit zastaralá data pro měřen�
 
 Pomocí této úlohy můžete z databáze odstranit zastaralá souhrnná data pro měření softwaru, která jsou uložená déle než určitou dobu. Další informace najdete v tématu [monitorování míry využívání softwaru](../../../apps/deploy-use/monitor-app-usage-with-software-metering.md).
 
-|||
-|---------|---------|
+| Typ lokality | Status |
+| --------- | ------ |
 |Lokalita centrální správy|Není k dispozici|
 |**Primární lokalita**|Povoleno|
 |Sekundární lokalita|Není k dispozici|
@@ -298,8 +298,8 @@ Pomocí této úlohy můžete z databáze odstranit zastaralá souhrnná data pr
 
 Tato úloha odstraňuje zastaralou historii přítomnosti klientů.
 
-|||
-|---------|---------|
+| Typ lokality | Status |
+| --------- | ------ |
 |**Lokalita centrální správy**|Povoleno|
 |**Primární lokalita**|Povoleno|
 |Sekundární lokalita|Není k dispozici|
@@ -308,8 +308,8 @@ Tato úloha odstraňuje zastaralou historii přítomnosti klientů.
 
 Pomocí této úlohy můžete odstranit informace o úlohách klientských oznámení z databáze lokality. Tato úloha se vztahuje na data, která se po určitou dobu neaktualizovala. Další informace najdete v tématu [oznámení klienta](../../clients/manage/client-notification.md).
 
-|||
-|---------|---------|
+| Typ lokality | Status |
+| --------- | ------ |
 |Lokalita centrální správy|Není k dispozici|
 |**Primární lokalita**|Povoleno|
 |Sekundární lokalita|Není k dispozici|
@@ -318,8 +318,8 @@ Pomocí této úlohy můžete odstranit informace o úlohách klientských ozná
 
 Pomocí této úlohy v lokalitě nejvyšší úrovně ve vaší hierarchii odstraňte zastaralá data o resetování hesla pro zařízení Windows Phone. Data pro resetování hesla jsou šifrovaná, ale zahrnují kód PIN pro zařízení. Ve výchozím nastavení je tato úloha povolená a odstraňuje data, která jsou starší než jeden den.  
 
-|||
-|---------|---------|
+| Typ lokality | Status |
+| --------- | ------ |
 |**Lokalita centrální správy**|Povoleno|
 |**Primární lokalita**|Povoleno|
 |Sekundární lokalita|Není k dispozici|
@@ -328,8 +328,8 @@ Pomocí této úlohy v lokalitě nejvyšší úrovně ve vaší hierarchii odstr
 
 Pomocí této úlohy můžete z databáze odstranit zastaralá data o replikaci databáze mezi lokalitami Configuration Manager. Když změníte konfiguraci této úlohy údržby, bude konfigurace platit pro každou příslušnou lokalitu v hierarchii. Další informace najdete v tématu [monitorování replikace databáze](monitor-replication.md).  
 
-|||
-|---------|---------|
+| Typ lokality | Status |
+| --------- | ------ |
 |**Lokalita centrální správy**|Povoleno|
 |**Primární lokalita**|Povoleno|
 |**Sekundární lokalita**|Povoleno|
@@ -338,8 +338,8 @@ Pomocí této úlohy můžete z databáze odstranit zastaralá data o replikaci 
 
 Pomocí této úlohy můžete z databáze lokality Odstranit zastaralá souhrnná data replikace, když se po určitou dobu neaktualizovala. Další informace najdete v tématu [monitorování replikace databáze](monitor-replication.md).  
 
-|||
-|---------|---------|
+| Typ lokality | Status |
+| --------- | ------ |
 |**Lokalita centrální správy**|Povoleno|
 |**Primární lokalita**|Povoleno|
 |**Sekundární lokalita**|Povoleno|
@@ -348,8 +348,8 @@ Pomocí této úlohy můžete z databáze lokality Odstranit zastaralá souhrnn�
 
 Pomocí této úlohy můžete z databáze odstranit zastaralá data stavových zpráv, jak jsou nakonfigurovaná v pravidlech filtru zpráv. Další informace najdete v tématu [monitorování stavového systému Configuration Manager](use-alerts-and-the-status-system.md#BKMK_MonitorSystemStatus).
 
-|||
-|---------|---------|
+| Typ lokality | Status |
+| --------- | ------ |
 |**Lokalita centrální správy**|Povoleno|
 |**Primární lokalita**|Povoleno|
 |Sekundární lokalita|Není k dispozici|
@@ -358,8 +358,8 @@ Pomocí této úlohy můžete z databáze odstranit zastaralá data stavových z
 
 Pomocí této úlohy můžete z databáze odstranit zastaralá Endpoint Protectioná data o ohroženích, která jsou uložená déle než určitou dobu. Další informace najdete v tématu [Endpoint Protection](../../../protect/deploy-use/endpoint-protection.md).
 
-|||
-|---------|---------|
+| Typ lokality | Status |
+| --------- | ------ |
 |Lokalita centrální správy|Není k dispozici|
 |**Primární lokalita**|Povoleno|
 |Sekundární lokalita|Není k dispozici|
@@ -368,8 +368,8 @@ Pomocí této úlohy můžete z databáze odstranit zastaralá Endpoint Protecti
 
 Pomocí této úlohy můžete odstranit informace o neznámých počítačích z databáze lokality, když se po určitou dobu neaktualizovala. Další informace najdete v tématu [Příprava pro nasazení do neznámých počítačů](../../../osd/get-started/prepare-for-unknown-computer-deployments.md).
 
-|||
-|---------|---------|
+| Typ lokality | Status |
+| --------- | ------ |
 |Lokalita centrální správy|Není k dispozici|
 |**Primární lokalita**|Povoleno|
 |Sekundární lokalita|Není k dispozici|
@@ -378,8 +378,8 @@ Pomocí této úlohy můžete odstranit informace o neznámých počítačích z
 
 Pomocí této úlohy můžete z databáze odstranit zastaralá data o spřažení uživatelských zařízení. Další informace najdete v tématu [propojení uživatelů a zařízení pomocí spřažení uživatelských zařízení](../../../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md).
 
-|||
-|---------|---------|
+| Typ lokality | Status |
+| --------- | ------ |
 |Lokalita centrální správy|Není k dispozici|
 |**Primární lokalita**|Povoleno|
 |Sekundární lokalita|Není k dispozici|
@@ -388,8 +388,8 @@ Pomocí této úlohy můžete z databáze odstranit zastaralá data o spřažen�
 
 Tato úloha slouží k odstranění duplicitních záznamů generovaných zjišťováním systému z databáze lokality.<!-- SCCMDocs#1339 -->
 
-|||
-|---------|---------|
+| Typ lokality | Status |
+| --------- | ------ |
 |**Lokalita centrální správy**|Povoleno|
 |Primární lokalita|Není k dispozici|
 |Sekundární lokalita|Není k dispozici|
@@ -398,8 +398,8 @@ Tato úloha slouží k odstranění duplicitních záznamů generovaných zjiš�
 
 Pomocí této úlohy můžete odstranit staré certifikáty hromadných zápisů a odpovídající profily po vypršení platnosti certifikátu zápisu. Další informace najdete v tématu [Vytvoření profilů certifikátů](../../../protect/deploy-use/create-certificate-profiles.md).
 
-|||
-|---------|---------|
+| Typ lokality | Status |
+| --------- | ------ |
 |**Lokalita centrální správy**|Povoleno|
 |**Primární lokalita**|Povoleno|
 |Sekundární lokalita|Není k dispozici|
@@ -413,8 +413,8 @@ Tato úloha funguje pouze na prostředcích, které jsou Configuration Manager k
 > [!IMPORTANT]  
 > Pokud je povolená, nakonfigurujte tuto úlohu tak, aby běžela v intervalu větším, než je plán **zjišťování prezenčního signálu** . Tato konfigurace umožňuje aktivním klientům odeslat záznam zjišťování prezenčního signálu, aby označil svůj záznam klienta jako aktivní, aby ho tato úloha neodstranila.  
 
-|||
-|---------|---------|
+| Typ lokality | Status |
+| --------- | ------ |
 |Lokalita centrální správy|Není k dispozici|
 |**Primární lokalita**|Není povoleno|
 |Sekundární lokalita|Není k dispozici|
@@ -423,8 +423,8 @@ Tato úloha funguje pouze na prostředcích, které jsou Configuration Manager k
 
 Pomocí této úlohy můžete z databáze odstranit výstrahy s vypršenou platností, které jsou uložené déle než určitou dobu. Další informace najdete v tématu [použití výstrah a stavového systému](use-alerts-and-the-status-system.md).
 
-|||
-|---------|---------|
+| Typ lokality | Status |
+| --------- | ------ |
 |**Lokalita centrální správy**|Povoleno|
 |**Primární lokalita**|Povoleno|
 |Sekundární lokalita|Není k dispozici|
@@ -436,8 +436,8 @@ Pomocí této úlohy můžete z databáze odstranit zastaralé záznamy klientů
 > [!IMPORTANT]  
 > Pokud je povolená, nakonfigurujte tuto úlohu tak, aby běžela v intervalu větším, než je plán zjišťování prezenčního signálu. Tato konfigurace umožňuje klientovi odeslat záznam zjišťování prezenčního signálu, který správně nastaví zastaralý stav.  
 
-|||
-|---------|---------|
+| Typ lokality | Status |
+| --------- | ------ |
 |Lokalita centrální správy|Není k dispozici|
 |**Primární lokalita**|Není povoleno|
 |Sekundární lokalita|Není k dispozici|
@@ -446,8 +446,8 @@ Pomocí této úlohy můžete z databáze odstranit zastaralé záznamy klientů
 
 Pomocí této úlohy můžete odstranit data o lokalitách, podsítích a doménách služby Active Directory. V posledních 30 dnech dojde k odebrání dat, která lokalita nezjistila metodou zjišťování doménové struktury služby Active Directory. Tato úloha odebere data zjišťování, ale neovlivní hranice, které vytvoříte z těchto dat zjišťování. Další informace najdete v tématu [spuštění zjišťování](../deploy/configure/run-discovery.md).
 
-|||
-|---------|---------|
+| Typ lokality | Status |
+| --------- | ------ |
 |**Lokalita centrální správy**|Povoleno|
 |**Primární lokalita**|Povoleno|
 |Sekundární lokalita|Není k dispozici|
@@ -456,8 +456,8 @@ Pomocí této úlohy můžete odstranit data o lokalitách, podsítích a domén
 
 Pomocí této úlohy můžete pravidelně vyprázdnit tabulku, která obsahuje informace o stavu nasazení klienta. Tento úkol vyčistí záznamy přidružené k zastaralým nebo vyřazeným zařízením.  
 
-|||
-|---------|---------|
+| Typ lokality | Status |
+| --------- | ------ |
 |Lokalita centrální správy|Není k dispozici|
 |**Primární lokalita**|Povoleno|
 |Sekundární lokalita|Není k dispozici|
@@ -466,8 +466,8 @@ Pomocí této úlohy můžete pravidelně vyprázdnit tabulku, která obsahuje i
 
 Vyhodnocování členství kolekce nakonfigurujete jako součást lokality. Další informace najdete v tématu [součásti lokality](../deploy/configure/site-components.md).
 
-|||
-|---------|---------|
+| Typ lokality | Status |
+| --------- | ------ |
 |Lokalita centrální správy|Není k dispozici|
 |**Primární lokalita**|Povoleno|
 |Sekundární lokalita|Není k dispozici|
@@ -476,8 +476,8 @@ Vyhodnocování členství kolekce nakonfigurujete jako součást lokality. Dal�
 
 Pomocí této úlohy můžete monitorovat integritu primárních klíčů databáze Configuration Manager. Primární klíč je sloupec nebo kombinace sloupců, které jedinečně identifikují jeden řádek. Klíč rozlišuje řádek od jakéhokoli jiného řádku v Microsoft SQL Server tabulce databáze.
 
-|||
-|---------|---------|
+| Typ lokality | Status |
+| --------- | ------ |
 |**Lokalita centrální správy**|Povoleno|
 |**Primární lokalita**|Povoleno|
 |Sekundární lokalita|Není k dispozici|
@@ -492,8 +492,8 @@ Pro zvýšení výkonu se indexy Configuration Managerch databází často aktua
 - Zruší indexy sloupců, které jsou menší než 50 procent.
 - Znovu sestaví všechny stávající indexy, které splňují kritéria jedinečnosti dat.
 
-|||
-|---------|---------|
+| Typ lokality | Status |
+| --------- | ------ |
 |**Lokalita centrální správy**|Není povoleno|
 |**Primární lokalita**|Není povoleno|
 |**Sekundární lokalita**|Není povoleno|
@@ -504,8 +504,8 @@ Pomocí této úlohy můžete shrnout data z několika záznamů pro použití s
 
 Pokud chcete shrnout data měření softwaru a šetřit místo na disku v databázi, použijte tuto úlohu s úlohou **shrnout měsíční data o využití softwaru pro měření softwaru** . Další informace najdete v tématu [monitorování míry využívání softwaru](../../../apps/deploy-use/monitor-app-usage-with-software-metering.md).
 
-|||
-|---------|---------|
+| Typ lokality | Status |
+| --------- | ------ |
 |Lokalita centrální správy|Není k dispozici|
 |**Primární lokalita**|Povoleno|
 |Sekundární lokalita|Není k dispozici|
@@ -514,8 +514,8 @@ Pokud chcete shrnout data měření softwaru a šetřit místo na disku v datab�
 
 Pomocí této úlohy můžete shrnout data ze shromážděných informací o softwaru katalogu Asset Intelligence prostřednictvím inventáře hardwaru a sloučit více záznamů do jednoho celkového záznamu. Souhrn dat může komprimovat množství dat uložených v databázi Configuration Manager. Další informace najdete v tématu [Konfigurace úloh údržby funkce Asset Intelligence](../../clients/manage/asset-intelligence/configuring-asset-intelligence.md#BKMK_ConfigureMaintenanceTasks).
 
-|||
-|---------|---------|
+| Typ lokality | Status |
+| --------- | ------ |
 |Lokalita centrální správy|Není k dispozici|
 |**Primární lokalita**|Povoleno|
 |Sekundární lokalita|Není k dispozici|
@@ -526,8 +526,8 @@ Pomocí této úlohy můžete shrnout data z několika záznamů pro měsíční
 
 Chcete-li shrnout data softwarového měření a šetřit místo v databázi, použijte tuto úlohu s daty o **využití souborů měření softwaru na Shrnutí** . Další informace najdete v tématu [monitorování míry využívání softwaru](../../../apps/deploy-use/monitor-app-usage-with-software-metering.md).
 
-|||
-|---------|---------|
+| Typ lokality | Status |
+| --------- | ------ |
 |Lokalita centrální správy|Není k dispozici|
 |**Primární lokalita**|Povoleno|
 |Sekundární lokalita|Není k dispozici|
@@ -538,8 +538,8 @@ Tato úloha slouží k tomu, aby Configuration Manager přepočítala mapování
 
 Tato mapování jsou pro rychlý přístup uložená v tabulce. Když se členství v kolekci změní, lokalita tyto uložené mapování aktualizuje, aby odrážela tyto změny. Je ale možné, že tato mapování přestanou být synchronizovaná. Například pokud lokalita nedokáže správně zpracovat soubor oznámení, tato změna se nemusí projevit při změně mapování. Tato úloha aktualizuje mapování na základě aktuálního členství v kolekci.  
 
-|||
-|---------|---------|
+| Typ lokality | Status |
+| --------- | ------ |
 |Lokalita centrální správy|Není k dispozici|
 |**Primární lokalita**|Povoleno|
 |Sekundární lokalita|Není k dispozici|
@@ -548,8 +548,8 @@ Tato mapování jsou pro rychlý přístup uložená v tabulce. Když se členst
 
 Pomocí této úlohy můžete synchronizovat mezipaměť databáze webu Katalog aplikací s nejnovějšími informacemi o aplikaci. Když změníte konfiguraci této úlohy údržby, bude platit pro všechny primární lokality v hierarchii.  
 
-|||
-|---------|---------|
+| Typ lokality | Status |
+| --------- | ------ |
 |Lokalita centrální správy|Není k dispozici|
 |**Primární lokalita**|Povoleno|
 |Sekundární lokalita|Není k dispozici|

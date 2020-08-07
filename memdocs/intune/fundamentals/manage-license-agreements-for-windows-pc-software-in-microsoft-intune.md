@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7f1bd1b5da0a45ce4291eba765742405e1e4ba43
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 080b7237eb95ba729e4152e646ff8de7466309a0
+ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82077882"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87912273"
 ---
 # <a name="manage-license-agreements-for-windows-pc-software-in-microsoft-intune"></a>Správa licenčních smluv pro software počítačů s Windows v Microsoft Intune
 
@@ -102,7 +102,7 @@ Multilicenční smlouvy Intune poskytují informace o licenci pro software, kter
         > [!NOTE]
         > Pokud přidáte několik párů čísel smluv, Intune vytvoří jednu smlouvu s vámi určeným názvem a všechny vámi přidané páry budou součástí této smlouvy.
 
-    Můžete zvolit **+** , že chcete přidat další dvojici čísel smlouvy **-** , nebo odebrat dvojici čísel smlouvy, kterou jste již zadali.
+    Můžete zvolit **+** , že chcete přidat další dvojici čísel smlouvy, nebo **-** Odebrat dvojici čísel smlouvy, kterou jste již zadali.
 
 4. V oblasti **Vybrat skupinu licencí** proveďte některou z těchto akcí:
 
@@ -178,10 +178,8 @@ Zobrazí se zobrazení seznamu **Všechny smlouvy**.
 ## <a name="manage-license-agreements"></a>Správa licenčních smluv
 Licenční smlouvy na software se dají přidat do skupin licencí. Skupiny licencí můžete použít k uspořádání licenčních smluv v jednotkách vhodných pro vaši organizaci. Můžete taky odstranit licenční smlouvy, které jste vytvořili v minulosti.
 
-
-|                            |                                                                                                                                                                                                                                                                                                                                                                          |
-|----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|            Úkol            |                                                                                                                                                                                 Podrobnosti                                                                                                                                                                                  |
+| Úkol | Podrobnosti |
+| ---- | ------- |
 |   Vytvoření skupiny licencí   |                                                            V pracovním prostoru <strong>Licence</strong> na stránce <strong>Přehled</strong> vyberte v nabídce <strong>Úlohy</strong> možnost <strong>Vytvořit skupinu licencí</strong>. <strong>Poznámka:</strong> Můžete vytvořit maximálně 500 skupin licencí.                                                             |
 |   Přejmenování skupiny licencí   |                                                                                                      V pracovním prostoru <strong>Licence</strong> zvolte skupinu licencí a pak v nabídce <strong>Úlohy</strong> klikněte na <strong>Upravit skupinu licencí</strong>.                                                                                                       |
 |   Odstranění skupiny licencí   |                                 V pracovním prostoru <strong>Licence</strong> zvolte skupinu licencí a pak v nabídce <strong>Úlohy</strong> klikněte na <strong>Odstranit skupinu licencí</strong>. <strong>Tip:</strong> Všechny licence se z odstraněné skupiny přesunou do skupiny licencí <strong>Nepřiřazené smlouvy</strong>.                                 |
