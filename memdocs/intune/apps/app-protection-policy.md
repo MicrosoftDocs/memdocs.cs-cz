@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, get-started, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5685a9d8738fa3f2303902d439fe73e8d45b35e7
-ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
+ms.openlocfilehash: 9688397218539ef3cc16f6fed91380e1820dbb15
+ms.sourcegitcommit: 693932432270ab3df1df9f5e6783c7f5c6f31252
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865716"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87997976"
 ---
 # <a name="app-protection-policies-overview"></a>Přehled zásad ochrany aplikací
 
@@ -325,7 +325,7 @@ Zásady ochrany aplikací Intune umožňují řídit přístup k aplikacím jen 
 Rozšíření sdílené složky pro iOS/iPadOS můžete použít k otevření pracovních nebo školních dat v nespravovaných aplikacích, a to i v případě, že zásady přenosu dat nastavily **jenom na spravované aplikace** nebo **žádné aplikace**. Zásady ochrany aplikací Intune nemůžou řídit rozšíření sdílené složky iOS/iPadOS bez správy zařízení. Proto Intune _**podniková data před jejich sdílením mimo příslušnou aplikaci zašifruje**_. Toto chování šifrování můžete ověřit tak, že se pokusíte otevřít podnikový soubor mimo spravovanou aplikaci. Soubor by měl být zašifrovaný a mimo spravovanou aplikaci by ho nemělo být možné otevřít.
 
 ### <a name="universal-links-support"></a>Podpora univerzálních odkazů
-Ve výchozím nastavení zásady ochrany aplikací Intune zabrání přístupu k neoprávněnému obsahu aplikace. V systému iOS/iPadOS je k dispozici funkce pro otevření konkrétního obsahu nebo aplikací pomocí [univerzálních odkazů](https://developer.apple.com/universal-links/). 
+Ve výchozím nastavení zásady ochrany aplikací Intune zabrání přístupu k neoprávněnému obsahu aplikace. V systému iOS/iPadOS je k dispozici funkce pro otevření konkrétního obsahu nebo aplikací pomocí [univerzálních odkazů](https://developer.apple.com/ios/universal-links/). 
 
 Uživatelé můžou zakázat univerzální odkazy aplikace jejich návštěvou v Safari a vybrat **otevřít na nové kartě** nebo **otevřít**. Aby mohli uživatelé používat univerzální odkazy na zásady ochrany aplikací Intune, je důležité znovu povolit univerzální odkazy. Koncový uživatel by musel **Open in**  < po dlouhou dobu stisknout odpovídající odkaz, aby v prohlížeči Safari otevřel otevřený***název aplikace***>. Měla by se zobrazit výzva k zadání všech dalších chráněných aplikací, které budou směrovat všechny univerzální odkazy na zařízení do chráněné aplikace.
 

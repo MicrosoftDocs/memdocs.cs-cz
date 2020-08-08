@@ -2,7 +2,7 @@
 title: Vylepšený protokol HTTP
 titleSuffix: Configuration Manager
 description: Pomocí moderního ověřování Zabezpečte komunikaci s klienty bez nutnosti certifikátů PKI.
-ms.date: 07/10/2020
+ms.date: 08/07/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 4deac022-e397-4f1f-bc0a-cea6c6c6368d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 79b4119a12826596fcc91fa1b4ead4e151e2ddd8
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: 5d28e0ccef767770092d03898489104ae6f8c674
+ms.sourcegitcommit: 693932432270ab3df1df9f5e6783c7f5c6f31252
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262094"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87997901"
 ---
 # <a name="enhanced-http"></a>Vylepšený protokol HTTP
 
@@ -86,7 +86,7 @@ Následující funkce Configuration Manager podporují nebo vyžadují rozšíř
 > Bod aktualizace softwaru a související scénáře vždy podporují zabezpečený provoz HTTP s klienty i bránou pro správu cloudu. Používá mechanismus s bodem správy, který se liší od ověřování založeného na certifikátech nebo na základě tokenů.<!-- SCCMDocs issue #1148 -->
 
 
-## <a name="prerequisites"></a>Předpoklady  
+## <a name="prerequisites"></a>Požadavky  
 
 - Bod správy nakonfigurovaný pro připojení klienta pomocí protokolu HTTP. Tuto možnost nastavte na kartě **Obecné** ve vlastnostech role bodu správy.  
 
@@ -118,8 +118,13 @@ Tyto certifikáty můžete zobrazit v konzole Configuration Manager. Otevřete p
 
 Další informace o tom, jak klient komunikuje s bodem správy a distribučním bodem s touto konfigurací, najdete v tématu [komunikace mezi klienty a systémy lokality a služby](communications-between-endpoints.md#Planning_Client_to_Site_System).
 
+## <a name="validate-the-certificate"></a>Ověřit certifikát
 
-## <a name="see-also"></a>Viz také:
+Pokud povolíte rozšířené protokolu HTTP, server lokality vygeneruje certifikát podepsaný svým držitelem s názvem **certifikát SSL role serveru SMS**. Tento certifikát vydává kořenový certifikát **vydávající zprávy SMS** . Bod správy přidá tento certifikát do výchozího webu služby IIS vázaného na port 443.
+
+Chcete-li zobrazit stav konfigurace, zkontrolujte **protokol mpcontrol. log**.
+
+## <a name="see-also"></a>Viz také
 
 - [Plánování zabezpečení](../security/plan-for-security.md)  
 

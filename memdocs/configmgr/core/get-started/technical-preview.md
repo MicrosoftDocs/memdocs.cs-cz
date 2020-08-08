@@ -2,7 +2,7 @@
 title: Verze Technical Preview
 titleSuffix: Configuration Manager
 description: Přečtěte si o větvi Technical Preview, která vám umožní testovat nové funkce a funkce v Configuration Manager.
-ms.date: 07/14/2020
+ms.date: 08/07/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 64e784ec7313dfa778ee39f6e1f52e7c09fcfd95
-ms.sourcegitcommit: 488db8a6ab272f5d639525d70718145c63d0de8f
+ms.openlocfilehash: 1d67ba33e2f2f9783b903e60aa64170e1fbb61a5
+ms.sourcegitcommit: 693932432270ab3df1df9f5e6783c7f5c6f31252
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86384821"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87997930"
 ---
 # <a name="technical-preview-for-configuration-manager"></a>Technical Preview pro Configuration Manager
 
@@ -94,7 +94,6 @@ Microsoft podporuje každou verzi Technical Preview až do doby, kdy jsou k disp
 Nainstalujte základní verzi po dobu až jednoho roku po jejím vydání. Při instalaci nového webu Technical Preview použijte nejnovější základní verzi. Následující verze Configuration Manager verze Technical Preview jsou k dispozici jako konzolové aktualizace i jako nové základní verze:
 
 - **Technical Preview verze 2007**
-- **Technical Preview verze 2002**
 
 Stáhněte si základní verzi z [centra hodnocení](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview).
 
@@ -121,13 +120,15 @@ bullet format:
 
 V nejnovější verzi Configuration Manager Technical Preview jsou k dispozici následující funkce:
 
-### <a name="technical-preview-version-2007"></a>Technical Preview verze 2007
+### <a name="technical-preview-version-2008"></a>Technical Preview verze 2008
 
-- [Připojení tenanta: zobrazení inventáře hardwaru v centru pro správu Microsoft Endpoint Manageru](2020/technical-preview-2007.md#bkmk_mem) <!--6479284-->
-- [Vylepšení řídicího panelu zdrojů dat klienta](2020/technical-preview-2007.md#bkmk_content) <!--7102084-->
-- [V některých oblastech konzoly se teď používá písmo s pevnou šířkou.](2020/technical-preview-2007.md#bkmk_font) <!--7632637-->
-- [Správa velikosti zásad pořadí úloh](2020/technical-preview-2007.md#bkmk_tspol) <!--6888853-->
-- [Vylepšení časové osy zařízení v centru pro správu](2020/technical-preview-2007.md#bkmk_timeline)<!--7141381-->
+- [Náhled dotazu na kolekci](2020/technical-preview-2008.md#collection-query-preview) <!--7380401-->
+- [Analýza chyb SetupDiag pro aktualizace funkcí](2020/technical-preview-2008.md#bkmk_setupdiag) <!--4385028-->
+- [Monitorování stavu scénáře](2020/technical-preview-2008.md#bkmk_health) <!--7699463-->
+- [Zobrazení vyhodnocení kolekce](2020/technical-preview-2008.md#bkmk_colleval) <!--6251274-->
+- [Zobrazení velikosti pořadí úloh v konzole nástroje](2020/technical-preview-2008.md#bkmk_tssize) <!--7645732-->
+- [Úloha odstranění starých shromážděných diagnostických souborů](2020/technical-preview-2008.md#bkmk_logs) <!--6503308-->
+- [Importovat objekty do aktuální složky](2020/technical-preview-2008.md#bkmk_folder) <!--6601203-->
 
 > [!NOTE]
 > Funkce, které byly k dispozici v předchozí verzi Technical Preview, zůstávají dostupné v novějších verzích. Podobně funkce, které jsou přidány do Configuration Manager aktuální větve, zůstávají dostupné ve větvi Technical Preview.
@@ -144,6 +145,14 @@ Následující funkce byly vydány s předchozími verzemi větve Configuration 
 
 > [!TIP]
 > Když je k dispozici nová verze aktuální větve, funkce, které jsou v této verzi k dispozici, jsou uvedeny v článku *co je nového* . Další informace najdete v tématu [co je nového v přírůstkových verzích](../plan-design/changes/whats-new-incremental-versions.md#supported-versions).
+
+### <a name="technical-preview-version-2007"></a>Technical Preview verze 2007
+
+- [Připojení tenanta: zobrazení inventáře hardwaru v centru pro správu Microsoft Endpoint Manageru](2020/technical-preview-2007.md#bkmk_mem) <!--6479284-->
+- [Vylepšení řídicího panelu zdrojů dat klienta](2020/technical-preview-2007.md#bkmk_content) <!--7102084-->
+- [V některých oblastech konzoly se teď používá písmo s pevnou šířkou.](2020/technical-preview-2007.md#bkmk_font) <!--7632637-->
+- [Správa velikosti zásad pořadí úloh](2020/technical-preview-2007.md#bkmk_tspol) <!--6888853-->
+- [Vylepšení časové osy zařízení v centru pro správu](2020/technical-preview-2007.md#bkmk_timeline)<!--7141381-->
 
 ### <a name="technical-preview-version-2006"></a>Technical Preview verze 2006
 
@@ -213,7 +222,7 @@ With each CB release, review and remove from this list for anything that's now a
 
 Následující funkce byly vydány s předchozími verzemi větve Configuration Manager Technical Preview. Tyto funkce zůstanou dostupné v novějších verzích, ale ještě nejsou k dispozici v aktuální větvi.
 
-| Funkce        | Verze Technical Preview |
+| Příznak        | Verze Technical Preview |
 |----------------|---------------------------|
 | Připojit soubory k názoru <!--3556011--> | [Verze Tech Preview 1910](2019/technical-preview-1910.md#attach-files-to-feedback) |
 | Vylepšení distribučních bodů s povoleným vícesměrovým vysíláním <!--3785535--> | [Verze Tech Preview 1908,2](2019/technical-preview-1908-2.md#bkmk_multicast) |
