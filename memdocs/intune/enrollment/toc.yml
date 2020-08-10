@@ -121,6 +121,8 @@
       items:
         - name: Automatická registrace zařízení
           href: device-enrollment-program-enroll-macos.md
+        - name: Přímá registrace pro zařízení s macOS
+          href: device-enrollment-direct-enroll-macos.md
     - name: Sestava nedokončených registrací
       href: enrollment-report-company-portal-abandon.md
     - name: Řešení potíží s registrací
