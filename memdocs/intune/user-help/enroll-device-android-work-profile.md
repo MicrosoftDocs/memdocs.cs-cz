@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/08/2020
+ms.date: 08/07/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,16 +19,18 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 2be81c19a48d89876f71293e6f868d8cee0e1192
-ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
+ms.openlocfilehash: 39d68f7cec9cdd4baef84d07d7284f6407f659c5
+ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84531396"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88048051"
 ---
 # <a name="enroll-device-with-android-work-profile"></a>Registrace zařízení pomocí pracovního profilu Androidu
 
-Pokud chcete získat přístup k pracovním nebo školním e-mailům, aplikacím a dalším datům, zaregistrujte svoje osobní zařízení s Androidem. Během registrace nastavíte pracovní profil Androidu. Tento profil odděluje osobní údaje na vašem zařízení od vašich pracovních dat. Vaše organizace spravuje pracovní profil, který se skládá z pracovních souborů a dat. Vaše firemní podpora nemůže spravovat osobní údaje na vašem zařízení.  
+Pokud chcete získat přístup k pracovním nebo školním e-mailům, aplikacím a dalším datům, zaregistrujte svoje osobní zařízení s Androidem. Během registrace nastavíte pracovní profil Androidu, který odděluje osobní údaje na vašem zařízení od vašich pracovních dat. Pokud je tento typ instalace něco, co je potřeba udělat, vaše organizace vám pomůže s jeho upřednostňovaným komunikačním kanálem nebo s Portál společnosti Intuneou aplikací. 
+
+Po nastavení vašeho profilu bude vaše organizace spravovat pracovní stranu, která je tvořená jenom pracovními soubory a pracovními daty. Vaše firemní podpora nemůže spravovat osobní údaje na vašem zařízení.  
 </br>
 > [!VIDEO https://www.youtube.com/embed/9Dl8HsGk4tI]
 

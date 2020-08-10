@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/05/2019
+ms.date: 08/07/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: aed17d518213f875e15f2261ec1a18640357203a
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 4f53aa731dbe7483f7fbe97c509a82677072c25c
+ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83880938"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88047968"
 ---
 # <a name="device-password-requirements-for-enrolled-devices"></a>Požadavky na heslo zařízení pro zaregistrovaná zařízení
 
@@ -89,13 +89,15 @@ Pokud potřebujete další pomoc nebo zjistit konkrétní požadavky vaší orga
 | Platnost hesla vypršela. | Nastavte nové heslo. Vaše organizace vyžaduje, abyste po určitém počtu dnů změnili heslo. |
 | Heslo bylo použito v nedávné době. | Vyberte heslo, které jste předtím nepoužili. Vaše organizace vyžaduje, abyste před opětovným použitím hesla prošli určitou dobu. |
 
-## <a name="next-steps"></a>Další kroky
+## <a name="update-password-passcode-pin"></a>Aktualizovat heslo, heslo, PIN kód
 
-Pokud chcete vytvořit nebo změnit heslo, heslo nebo PIN kód zařízení, přečtěte si následující články.  
+V následujících článcích se naučíte, jak změnit heslo, heslo nebo PIN kód zařízení. Nejaktuálnější pokyny najdete v dokumentaci k zařízení od výrobce zařízení. 
 
 - [Nastavení hesla zařízení s Windows 10](set-or-change-your-password-windows.md)  
 - [Nastavení hesla pro zařízení s iOS](set-or-change-your-passcode-ios.md)  
 - [Nastavení PIN kódu nebo hesla zařízení s Androidem](set-your-pin-or-password-android.md)  
+
+## <a name="next-steps"></a>Další kroky
 
 Potřebujete ještě další pomoc? Obraťte se na pracovníky podpory. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).  
 

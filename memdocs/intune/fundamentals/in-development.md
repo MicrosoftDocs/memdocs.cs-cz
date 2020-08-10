@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 07/24/2020
+ms.date: 08/06/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e76816768090a624247db7a84da8c6bdffb800bc
-ms.sourcegitcommit: 45657123a5db50aaecdb96d068712623d775f31c
+ms.openlocfilehash: 0b7f1a4280b409ec4a12c6371fd2e6cba8a571ca
+ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87443843"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88048017"
 ---
 # <a name="in-development-for-microsoft-intune"></a>Ve vývoji pro Microsoft Intune
 
@@ -126,9 +126,6 @@ Pokud chcete zobrazit aktuální nastavení rozšíření aplikace jednotného p
 Platí pro:
 - iOS/iPadOS
 
-### <a name="improvement-to-update-device-settings-page-in-company-portal-app-for-android-to-show-descriptions---7414768---"></a>Vylepšení aktualizace stránky nastavení zařízení v Portál společnosti aplikaci pro Android, aby zobrazovala popisy<!-- 7414768 -->
-Na stránce Portál společnosti aplikace na zařízeních s Androidem se na stránce **aktualizovat nastavení zařízení** zobrazí seznam nastavení, která musí uživatel aktualizovat, aby splňoval předpisy. Vylepšili jsme činnost koncového uživatele, takže uvedená nastavení se ve výchozím nastavení rozbalí, aby se zobrazil popis a tlačítko **vyřešit** (Pokud je k dispozici). Dříve byly ve výchozím nastavení sbaleny. Toto nové výchozí chování omezuje počet kliknutí, takže uživatelé mohou rychleji řešit problémy.
-
 <!-- ***********************************************-->
 <!-- ## Device enrollment-->
 
@@ -209,6 +206,6 @@ Zavádíme dvě změny pro správu seznamů vyloučení antivirové ochrany v pr
 
 [!INCLUDE [Intune notices](../includes/intune-notices.md)]
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 Podrobnosti o posledním vývoji najdete v tématu [co je nového v Microsoft Intune](whats-new.md).

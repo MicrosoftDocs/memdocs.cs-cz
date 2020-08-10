@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/21/2020
+ms.date: 08/10/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ebf6a71a4d462e1025b6c44557a9513887488673
-ms.sourcegitcommit: 4dc2e3c54a18fca98553dd46703e91819e2433d7
+ms.openlocfilehash: 77a69af395aee293f927682f9d1a095c11a1d8a5
+ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86891526"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88048085"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>Vytvoření a přiřazení profilů certifikátů SCEP v Intune
 
@@ -315,6 +315,8 @@ Než budete pokračovat, zvažte následující:
 
 > [!NOTE]
 > - Když se na zařízeních s iOS/iPadOS přihlásí profil certifikátu SCEP nebo profil certifikátu PKCS k dalšímu profilu, jako je například profil sítě Wi-Fi nebo VPN, zařízení obdrží certifikát pro každý z těchto dalších profilů. Výsledkem je, že zařízení se systémem iOS/iPadOS má několik certifikátů dodaných žádostí o certifikát SCEP nebo PKCS. 
+> 
+>   Certifikáty dodávané pomocí protokolu SCEP jsou všechny jedinečné. Certifikáty dodávané standardem PKCS jsou stejný certifikát, ale zobrazují se jinak, protože každá instance profilu je reprezentována samostatným řádkem v profilu správy.
 > - V systémech iOS 13 a macOS 10,15 jsou k dispozici některé [Další požadavky na zabezpečení, které jsou zdokumentovány společností Apple](https://support.apple.com/HT210176) .  
 
 

@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 3ebca81f459f0e49345db08f992c288514a7331a
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: a0d1ee33e3aca6dbb6ff6e349eb9a578aad6ae88
+ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461602"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88048068"
 ---
 # <a name="attack-surface-reduction-policy-settings-for-endpoint-security-in-intune"></a>Nastavení zásad pro omezení možností útoku pro zabezpečení koncového bodu v Intune
 
@@ -181,10 +181,10 @@ Podporované platformy a profily:
   - **Vynutilit komponenty a aplikace ze Storu**
   - **Komponenty auditu a aplikace pro Store**
   - **Vynutilit komponenty, aplikace pro Store a Smartlocker**
-  - **Auditovat komponenty, aplikace pro Store a SMartlocker**
+  - **Auditovat komponenty, aplikace pro Store a Smartlocker** CSP: [CSP pro AppLocker](https://docs.microsoft.com/windows/client-management/mdm/applocker-csp)
 
 - **Zablokovat uživatelům ignorovat upozornění filtru SmartScreen**  
-  [PreventOverrideForFilesInShell](https://go.microsoft.com/fwlink/?linkid=872783)
+  CSP: [SmartScreen/PreventOverrideForFilesInShell](https://go.microsoft.com/fwlink/?linkid=872783)
 
   - **Nenakonfigurováno** (*výchozí*) – uživatelé můžou ignorovat upozornění filtru SmartScreen pro soubory a škodlivé aplikace.
   - **Ano** – filtr SmartScreen je povolen a uživatelé nemohou obejít upozornění na soubory nebo škodlivé aplikace.

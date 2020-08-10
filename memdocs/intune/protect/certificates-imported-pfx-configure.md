@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d09f3a2e734709f769aebcd4e8aab4fec774d4fc
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 630d270202f1064c9e80e7cb87df3929138ee54a
+ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461823"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88048102"
 ---
 # <a name="configure-and-use-imported-pkcs-certificates-with-intune"></a>Konfigurace a používání importovaných certifikátů PKCS pomocí Intune
 
@@ -56,7 +56,8 @@ K používání importovaných certifikátů PKCS s Intune budete potřebovat n�
 
 - **Konektor certifikátu PFX pro Microsoft Intune**:
 
-  Každý tenant Intune podporuje jednu instanci tohoto konektoru. Tento konektor můžete nainstalovat na stejný server jako instanci konektoru Microsoft Intune Certificate Connector.
+  Každý tenant Intune podporuje několik instancí tohoto konektoru. Zajistěte, aby měl každý konektor přístup k privátnímu klíči, který slouží k šifrování hesel nahraných souborů PFX.
+  Tento konektor můžete nainstalovat na stejný server jako instanci konektoru Microsoft Intune Certificate Connector.
 
   Tento konektor zpracovává požadavky na soubory PFX importované do Intune pro šifrování e-mailu S/MIME pro konkrétního uživatele.
 
@@ -234,7 +235,7 @@ Po importování certifikátů do Intune vytvořte profil **importovaného certi
    - **Název**: zadejte popisný název profilu. Své profily pojmenujte, abyste je později mohli snadno identifikovat. Dobrým názvem profilu je například *Profil certifikátu importovaný přes PKCS pro celou firmu*.
    - **Popis**: Zadejte popis profilu. Toto nastavení není povinné, ale doporučujeme ho zadat.
 
-6. Vyberte **Next** (Další).
+6. Vyberte **Další**.
 
 7. V **nastavení konfigurace**zadejte následující vlastnosti:
 
@@ -245,21 +246,21 @@ Po importování certifikátů do Intune vytvořte profil **importovaného certi
    -->
    - **Zprostředkovatel úložiště klíčů (KSP):** U systému Windows vyberte, kde na zařízení se mají klíče ukládat.
 
-8. Vyberte **Next** (Další).
+8. Vyberte **Další**.
 
 9. V části **značky oboru** (volitelné) přiřaďte značku pro filtrování profilu pro konkrétní IT skupiny, například `US-NC IT Team` nebo `JohnGlenn_ITDepartment` . Další informace o značkách oboru naleznete v tématu [použití značek RBAC a Scope pro distribuci](../fundamentals/scope-tags.md).
 
-   Vyberte **Next** (Další).
+   Vyberte **Další**.
 
 10. V části **přiřazení**vyberte uživatele nebo skupiny, které obdrží váš profil. Další informace o přiřazování profilů najdete v tématu [přiřazení profilů uživatelů a zařízení](../configuration/device-profile-assign.md).
 
-    Vyberte **Next** (Další).
+    Vyberte **Další**.
 
 11. (*Platí jenom pro Windows 10*) V části **pravidla použitelnosti**zadejte pravidla použitelnosti pro upřesnění přiřazení tohoto profilu. Můžete vybrat, že chcete profil přiřadit nebo nepřiřadit, na základě edice nebo verze operačního systému zařízení.
 
     Další informace najdete v tématu [pravidla použitelnosti](../configuration/device-profile-create.md#applicability-rules) v tématu *Vytvoření profilu zařízení v Microsoft Intune*.
 
-    Vyberte **Next** (Další).
+    Vyberte **Další**.
 
 12. V rámci **Revize a vytvoření**zkontrolujte nastavení. Když vyberete vytvořit, vaše změny se uloží a profil se přiřadí. Tato zásada se taky zobrazuje v seznamu profily.
 

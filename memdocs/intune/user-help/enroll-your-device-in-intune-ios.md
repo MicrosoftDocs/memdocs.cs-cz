@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 12/18/2019
+ms.date: 08/07/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: tisilv
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: a8d48235141c0b5ad07fbdce4d24e894f8103e6f
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 2e32b6e1c5e976669e78d3cf00610fbd57b68dd1
+ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83882396"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88048034"
 ---
 # <a name="set-up-ios-device-access-to-your-company-resources"></a>Nastavení přístupu zařízení s iOSem k prostředkům společnosti  
 
@@ -35,12 +35,12 @@ Po registraci zařízení se bude *Spravovat*. Vaše organizace může k zaříz
 > [!NOTE]
 > Žádná data shromážděná naší službou neprodávají z jakéhokoli důvodu žádné třetí straně.  
 
-Pokud chcete zachovat přístup k pracovním nebo školním informacím ze zařízení, budete muset nakonfigurovat zařízení tak, aby odpovídalo preferovanému nastavení vaší organizace. Tento článek popisuje, jak použít Portál společnosti k registraci zařízení a udržování požadavků na nastavení vaší organizace.  
+Pokud chcete zachovat přístup k pracovním nebo školním informacím ze zařízení, budete muset nakonfigurovat zařízení tak, aby odpovídalo preferovanému nastavení vaší organizace. Tento článek popisuje, jak použít Portál společnosti k registraci zařízení a udržování požadavků na přístup.  
 </br>
 > [!VIDEO https://www.youtube.com/embed/mJyv6YcHi7c?rel=0]
 
 > [!NOTE]
-> Pokud jste se pokusili přistoupit k podnikovému e-mailu v aplikaci Pošta a zobrazila se vám výzva ke správě vašeho zařízení, jste na správném místě. Podle pokynů uvedených níže získáte přístup ke svému e-mailu a dalším prostředkům společnosti na zařízení s iOSem.  
+> Pokud jste se pokusili získat přístup k pracovnímu e-mailu v aplikaci Pošta a dostali jste výzvu k získání spravovaného zařízení, jste na správném místě. Postupujte podle pokynů níže, které vám pomůžou znovu získat přístup k e-mailu a dalším pracovním prostředkům na zařízení s iOS.  
 
 
 ## <a name="what-to-expect-from-the-company-portal-app"></a>Co čekat od aplikace Portál společnosti  
@@ -56,13 +56,17 @@ Pokud po registraci vaše organizace vynucuje nový požadavek na zabezpečení 
 
 Další informace o registraci najdete v tématu s informacemi o tom, [co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení](https://docs.microsoft.com//mem/intune/user-help/what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios).  
 
+## <a name="prerequisties"></a>Prerequisties  
+
+* Pokud si chcete stáhnout a nainstalovat [aplikaci Portál společnosti Intune](install-and-sign-in-to-the-intune-company-portal-app-ios.md) do svého zařízení, přejdete do obchodu App Store. 
+* Udržujte připojení Wi-Fi, dokud se nedokončí všechny kroky.
+* Mít přístup k webovému prohlížeči Safari na vašem zařízení.
+
 ## <a name="enroll-your-ios-device"></a>Registrace zařízení s iOSem  
 
-Pokud si chcete stáhnout a nainstalovat [aplikaci Portál společnosti Intune](install-and-sign-in-to-the-intune-company-portal-app-ios.md) do svého zařízení, přejdete do obchodu App Store. Budete také muset udržovat připojení Wi-Fi a mít přístup k Safari během registrace. 
+Pozastavení instalace po dobu delší než několik minut může způsobit, že aplikace Portál společnosti ukončí nebo ukončí instalaci. Pokud k tomu dojde, znovu otevřete aplikaci a zkuste to znovu.  
 
-Pozastavení aplikace po dobu delší než několik minut může způsobit ukončení nebo ukončení instalace aplikace. Pokud k tomu dojde, otevřete aplikaci Portál společnosti a zkuste to znovu.  
-
-1. Otevřete Portál společnosti a přihlaste se pomocí svého pracovního nebo školního účtu.  
+1. Otevřete aplikaci Portál společnosti a přihlaste se pomocí svého pracovního nebo školního účtu.  
 
 2. Po zobrazení výzvy k přijetí oznámení Portál společnosti klepněte na možnost **povolení.** Portál společnosti používá oznámení k upozornění, pokud například potřebujete aktualizovat nastavení zařízení.  
 

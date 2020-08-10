@@ -1,12 +1,12 @@
 ---
-title: Aktualizace uživatelského rozhraní pro aplikace Intune pro koncové uživatele
+title: Aktualizace uživatelského rozhraní pro aplikace Intune pro koncové uživatele | Microsoft Docs
 titleSuffix: Microsoft Intune
 description: Zjistěte, co se změnilo v uživatelském rozhraní aplikací, které fungují s Microsoft Intune na zařízeních pro koncové uživatele.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 06/11/2020
+ms.date: 08/06/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 11aba38d63621472b5e8513b066b96120d649c31
-ms.sourcegitcommit: 9a8a9cc7dcb6ca333b87e89e6b325f40864e4ad8
+ms.openlocfilehash: cbb66833397d16ec18ce015d26a19bd28a1113c4
+ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84740862"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88048153"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Aktualizace uživatelského rozhraní pro aplikace Intune pro koncové uživatele
 
@@ -34,6 +34,13 @@ Přečtěte si o nejnovějších aktualizacích aplikace Microsoft Intune. Pravi
 
 Pokud jste zaměstnancem nebo studentem, nezapomeňte se podívat na snímky obrazovky a odkazy na Portál společnosti dokumentaci k nápovědě. Další informace o tom, jak používat aplikaci Portál společnosti, najdete v [dokumentaci k nápovědě pro uživatele portál společnosti](https://docs.microsoft.com/mem/intune/user-help/use-managed-devices-to-get-work-done).  
 
+## <a name="week-of-august-10-2020"></a>Týden od 10. srpna 2020
+
+### <a name="improvement-to-update-device-settings-page-in-company-portal-app-for-android-to-shows-descriptions---7414768---"></a>Vylepšení aktualizace stránky nastavení zařízení v Portál společnosti aplikaci pro Android, která zobrazuje popisy<!-- 7414768 -->
+
+V aplikaci Portál společnosti na zařízeních s Androidem se na stránce **aktualizovat nastavení zařízení** zobrazí seznam nastavení, která je potřeba aktualizovat, aby splňovala předpisy. Uživatelé rozbalí problém a zobrazí se další informace a zobrazí se tlačítko **vyřešit** .
+
+Toto uživatelské prostředí je vylepšené. Uvedená nastavení se ve výchozím nastavení rozbalí a zobrazí se popis a v případě potřeby se zobrazí tlačítko **vyřešit** . Dříve byly problémy sbaleny ve výchozím nastavení. Toto nové výchozí chování omezuje počet kliknutí, takže uživatelé mohou rychleji řešit problémy.
 
 ## <a name="week-of-june-8-2020"></a>Týden od 8. června 2020 
 
@@ -649,7 +656,7 @@ Zde najdete plánované aktualizace našeho uživatelského rozhraní, které vy
 > Níže uvedené obrázky mohou být verze Preview a uvedený produkt se může lišit od prezentovaných verzí.  
 
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 * [Blog Microsoft Intune](https://www.microsoft.com/microsoft-365/blog/microsoft-intune/)
 * [Plán cloudové platformy](https://www.microsoft.com/cloud-platform/roadmap)
 * [Co je nového v Intune](whats-new.md)

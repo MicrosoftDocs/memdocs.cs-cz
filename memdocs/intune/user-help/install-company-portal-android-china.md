@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 06/23/2020
+ms.date: 07/17/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,21 +19,23 @@ ms.reviewer: jeyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 58ba595b65ade57fee0ff3fe40242b27a2ff8ba4
-ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
+ms.openlocfilehash: 2880ef5ba044f616f3b14e54c5e42b89eb58912a
+ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86021833"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88048000"
 ---
 # <a name="install-company-portal-app-in-peoples-republic-of-china"></a>Instalace aplikace Portál společnosti do Čínské lidové republiky
 
-Nainstalujte aplikaci Portál společnosti Intune pro přístup do školních nebo pracovních prostředků ze zařízení s Androidem. Aplikace je k dispozici v Čínské lidové republice a je možné ji nainstalovat z následujících obchodů s aplikacemi: 
+Nainstalujte aplikaci Portál společnosti Intune pro přístup do školních nebo pracovních prostředků ze zařízení s Androidem. Aplikace je dostupná v Číně v Čínské lidové republice a je možné ji nainstalovat z následujících obchodů s aplikacemi: 
 
-
+* [Google Play](https://go.microsoft.com/fwlink/?linkid=871947) (není k dispozici všude)
 * [Xiaomi](https://go.microsoft.com/fwlink/?linkid=836947) 
 * OPPO
 * [Lenovo](https://go.microsoft.com/fwlink/?linkid=2125082)
 * [Huawei](https://go.microsoft.com/fwlink/?linkid=836948)
+
 
 Portál společnosti je také k dispozici v [obchodě s aplikacemi Baidu](https://go.microsoft.com/fwlink/?linkid=2133565). Vyhledání:  
  
