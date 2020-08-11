@@ -2,7 +2,7 @@
 title: Řešení potíží s Desktop Analytics
 titleSuffix: Configuration Manager
 description: Technické podrobnosti, které vám pomůžou při řešení problémů s desktopovou analýzou.
-ms.date: 07/01/2020
+ms.date: 08/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 68506ba11e356a1e9f14d58880a80bdf3cfcb5f4
-ms.sourcegitcommit: fb03634b8494903fc6855ad7f86c8694ffada8df
+ms.openlocfilehash: e83e8d5d967b4cd3bbcb817c149cd40284bb5f9c
+ms.sourcegitcommit: 66c58078a32af3872d98f7c62af4f8047ee81b50
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85828971"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88089941"
 ---
 # <a name="troubleshoot-desktop-analytics"></a>Řešení potíží s Desktop Analytics
 
@@ -49,7 +49,7 @@ Další informace najdete v tématu [monitorování stavu připojení](monitor-c
 
 Od verze 2002, pokud se lokalita Configuration Manager nepovede připojit k požadovaným koncovým bodům pro cloudovou službu, vyvolá kritickou stavovou zprávu ID 11488. Když se nemůže připojit ke službě, stav součásti SMS_SERVICE_CONNECTOR se změní na kritický. Zobrazit podrobný stav v uzlu [Stav součásti](../core/servers/manage/use-alerts-and-the-status-system.md#BKMK_MonitorSystemStatus) konzoly Configuration Manager.<!-- 5566763 -->
 
-## <a name="log-files"></a>Soubory protokolů
+## <a name="log-files"></a>Soubory protokolu
 
 Další informace najdete v tématu [soubory protokolů pro Desktop Analytics](../core/plan-design/hierarchy/log-files.md#desktop-analytics) .
 
@@ -73,6 +73,9 @@ Desktop Analytics přidá do služby Azure AD následující aplikace:
 Pokud po dokončení instalace potřebujete tyto aplikace zřídit, otevřete podokno **připojené služby** . Vyberte **Konfigurovat přístup uživatelů a aplikací**a zřiďte aplikace.  
 
 - **Aplikace Azure AD pro Configuration Manager**. Pokud po dokončení instalace potřebujete zřídit nebo vyřešit problémy s připojením, přečtěte si téma [Vytvoření a import aplikace pro Configuration Manager](#create-and-import-app-for-configuration-manager). Tato aplikace vyžaduje **zápis dat kolekce cm** a **čtení dat kolekce cm** v rozhraní API **služby Configuration Manager** .  
+
+    > [!NOTE]
+    > Funkce Desktop Analytics podporuje vytváření sestav několika hierarchií Configuration Manager do jednoho tenanta služby Azure AD.<!-- 4814075 --> Pokud máte ve svém prostředí nakonfigurováno více hierarchií se stejným komerčním ID, aby bylo možné sdílet instanci Azure AD tenant a Desktop Analytics, použijte pro každou hierarchii [různé aplikace](connect-configmgr.md#bkmk_connect) .
 
 ### <a name="create-and-import-app-for-configuration-manager"></a>Vytvoření a import aplikace pro Configuration Manager
 
