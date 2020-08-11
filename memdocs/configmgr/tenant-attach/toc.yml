@@ -6,6 +6,8 @@
       href: device-sync-actions.md
     - name: Podrobnosti o klientovi (Preview)
       href: client-details.md
+    - name: Instalace aplikací (Preview)
+      href: applications.md
 - name: CMPivot pro zařízení připojená k tenantovi (Preview)
   items:
     - name: CMPivot – přehled
@@ -18,3 +20,5 @@
       href: troubleshoot.md
     - name: Podrobnosti o klientovi (Preview)
       href: troubleshoot-client-details.md
+    - name: Instalace aplikací (Preview)
+      href: troubleshoot-applications.md
