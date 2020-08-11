@@ -10,15 +10,17 @@ ms.assetid: 44c2eb8a-3ccc-471f-838b-55d7971bb79e
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 2a30e141bb5ea4d7508bf81f53f173e2a3154f08
-ms.sourcegitcommit: 3806a1850813b7a179d703e002bcc5c7eb1cb621
+ms.openlocfilehash: d983e0c3d84f5bcbf411af1243ddc045d66d9199
+ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86210746"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88051580"
 ---
 # <a name="troubleshoot-configmgr-client-details-in-the-admin-center-preview"></a>Řešení potíží s podrobnostmi klienta nástroje ConfigMgr v centru pro správu (Preview)
 <!--6374854, 6521921-->
+*Platí pro: Configuration Manager (Current Branch)*
+
 K řešení potíží s podrobnostmi klienta nástroje ConfigMgr v centru pro správu Microsoft Endpoint Manager použijte následující informace:
 
 > [!Important]
@@ -50,7 +52,7 @@ Při prohlížení podrobností klienta nástroje ConfigMgr můžete spustit jed
 
     - **ID tenanta Azure Active Directory**: Tato hodnota by měla být identifikátorem GUID pro TENANTA Azure AD.
     - **ID uživatele Azure Active Directory**: Tato hodnota by měla být identifikátorem GUID pro tento účet ve službě Azure AD.
-    - **Hlavní název uživatele**: formát této hodnoty je user@domain . Například `jqpublic@contoso.com`.
+    - **Hlavní název uživatele**: formát této hodnoty je user@domain . Například, `jqpublic@contoso.com`.
 
     Pokud jsou vlastnosti služby Azure AD prázdné, ověřte konfiguraci [zjišťování uživatelů služby Azure AD](../core/servers/deploy/configure/about-discovery-methods.md#azureaddisc).
 
@@ -63,7 +65,7 @@ Při prohlížení podrobností klienta nástroje ConfigMgr můžete spustit jed
 
 1. Ověřte, zda je spojovací bod služby připojen ke cloudu pomocí **protokolu CMGatewayNotificationWorker. log**.
 1. Ověřte, zda je služba pro správu v pořádku, kontrolou součásti SMS_REST_PROVIDER z monitorování součástí lokality v centrální lokalitě.
-1. Služba IIS musí být nainstalována na počítači poskytovatele. Další informace najdete v tématu [předpoklady pro službu správy](../develop/adminservice/overview.md#prerequisites) .
+1. Služba IIS musí být nainstalována na počítači poskytovatele. Další informace najdete v tématu [předpoklady pro službu správy](../develop/adminservice/overview.md#prerequisites).
 1. Ověřte, zda jsou hodiny spojovacího bodu služby synchronizovány. Pokud je hodiny spojovacího bodu služby mírně na konci, použijte [kumulativní aktualizaci KB4563473-Update pro Configuration Manager problémy s připojením klienta ve verzi 2002](https://support.microsoft.com/help/4563473). Ověřte všechny chyby v počítači poskytovatele na **AdminService. log** .
 
 ## <a name="known-issues"></a>Známé problémy

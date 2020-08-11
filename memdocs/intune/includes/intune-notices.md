@@ -4,27 +4,24 @@ description: zahrnout soubor
 author: ErikjeMS
 ms.service: microsoft-intune
 ms.topic: include
-ms.date: 03/30/2020
+ms.date: 08/10/2020
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: 79e2694cfd34f1db8bf11969506ec3d8cbc453d4
-ms.sourcegitcommit: 8a9b85d1c879060ea541f7c8ad1ae34a4ed33ed0
+ms.openlocfilehash: af506f9eee80d167b42827f93958fc2a3a5741a4
+ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87507232"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88051620"
 ---
 Tato oznámení obsahují důležité informace, které vám pomůžou připravit se na budoucí změny a funkce Intune.
 
-### <a name="microsoft-intune-support-for-windows-10-mobile-ending--3544938--"></a>Microsoft Intune podpora pro Windows 10 Mobile<!--3544938-->
-Hlavní podpora Microsoftu pro Windows 10 Mobile skončila v prosinci 2019. Jak je uvedeno v tomto prohlášení o podpoře, uživatelé s Windows 10 Mobile už nebudou mít nárok na příjem nových aktualizací zabezpečení, opravy hotfix bez zabezpečení, bezplatné podpory s asistencí nebo online aktualizace obsahu od Microsoftu. V závislosti na podpoře všech mobilních operačních systémů se Microsoft Intune nyní ukončí podpora obou Portál společnosti pro mobilní aplikace Windows 10 a Windows 10 Mobile na 10. srpna 2020.
+### <a name="microsoft-intune-ends-support-for-windows-phone-81-and-windows-10-mobile---3544938-3544909---"></a>Microsoft Intune ukončí podporu pro Windows Phone 8,1 a Windows 10 Mobile.<!-- 3544938, 3544909 -->
+Hlavní podpora společnosti Microsoft pro Windows Phone 8,1 skončila v červenci 2017 a rozšířená podpora skončila v červnu 2019. Aplikace Portál společnosti pro Windows Phone 8,1 byla v režimu Sustained od října 2017. Kromě toho Microsoft Intune od 20. února 2020 pro Windows Phone 8,1 skončila podpora. 
 
-#### <a name="how-does-this-affect-me"></a>Co to pro mě znamená?
-Pokud máte zařízení s Windows 10 Mobile nasazená ve vaší organizaci mezi teď a 10. srpna 2020, můžete registrovat nová zařízení, přidávat nebo odebírat zásady a aplikace nebo aktualizovat nastavení pro správu. Po 10. srpna zastavíme nové registrace a nakonec odebereme správu Windows 10 Mobile z uživatelského rozhraní Intune. Zařízení už nebudou zaregistrovaná ve službě Intune a odstraníme data zařízení a zásad.  
+Hlavní podpora Microsoftu pro Windows 10 Mobile skončila v prosinci 2019. Jak je uvedeno v příkazu podpory, uživatelé s Windows 10 Mobile už nebudou mít nárok na přijímání nových aktualizací zabezpečení, oprav hotfix bez zabezpečení, bezplatné podpory s asistencí nebo online aktualizace obsahu od Microsoftu. V závislosti na podpoře všech mobilních operačních systémů Microsoft Intune ukončí podporu jak pro Portál společnosti mobilní aplikace pro Windows 10, tak i pro mobilní operační systém Windows 10 od 10. srpna 2020.
 
-#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Jak se mám na tuto změnu připravit?
-Můžete si prohlédnout sestavy Intune a zjistit, která zařízení nebo uživatelé to mohou mít vliv. Přejít na **zařízení**  >  **všechna zařízení** a filtrovat podle operačního systému. Můžete přidat další sloupce, které vám pomůžou identifikovat, kdo ve vaší organizaci má zařízení s Windows 10 Mobile. Zajistěte, aby vaši koncoví uživatelé upgradovali svoje zařízení, nebo aby zařízení nepoužívali pro podnikový přístup.
-
+Od 10. srpna se registrace pro Windows Phone 8,1 a zařízení s Windows 10 Mobile nezdaří a z uživatelského rozhraní Intune se odeberou typy profilů Windows Mobile. Zařízení, která jsou už zaregistrovaná, už nebudou kontrolovat službu Intune a odstraníme data zařízení a zásad.
 
 ### <a name="end-of-support-for-legacy-pc-management"></a>Konec podpory pro správu starších počítačů
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d44da952be6d01daa19f7c8227976cfa46299c88
-ms.sourcegitcommit: 9eebe77af18045fceb3d41b43d76b370fe92b30e
+ms.openlocfilehash: 894ef12107b8e8b520ca69a463be47ef339bd9b4
+ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87821644"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88051621"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
@@ -53,6 +53,15 @@ Podívejte se, co je nového v jednom týdnu v Microsoft Intune v [centru pro sp
 ### Monitor and troubleshoot
 ### Role-based access control
 ### Scripts
+
+<!-- ########################## -->
+## <a name="week-of-august-10-2020"></a>Týden od 10. srpna 2020
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-management"></a>Správa zařízení
+
+#### <a name="tenant-attach-install-an-application-from-the-admin-center----in7220536-cm6024389--"></a>Připojení tenanta: instalace aplikace z centra pro správu <!-- IN7220536 CM6024389-->
+Nyní můžete spustit instalaci aplikace v reálném čase pro zařízení připojené k tenantovi z centra pro správu služby Microsoft Endpoint Manager. Další informace najdete v tématu věnovaném [připojení tenanta: instalace aplikace z centra pro správu](../../configmgr/tenant-attach/applications.md).
 
 <!-- ########################## -->
 ## <a name="week-of-july-27-2020"></a>Týden od 27. července 2020

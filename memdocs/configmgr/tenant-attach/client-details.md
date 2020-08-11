@@ -10,17 +10,18 @@ ms.assetid: 7a597d9e-a878-48d0-a7ce-56a1dbfd0e5c
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: e8db4a7f877b5bd07f1aac76fc49b6efef31802e
-ms.sourcegitcommit: 16bc2ed5b64eab7f5ae74391bd9d7b66c39d8ca6
+ms.openlocfilehash: d966f0a509f5402846d0e671dbfaed571ac70d2a
+ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86437429"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88051699"
 ---
 # <a name="tenant-attach-configmgr-client-details-in-the-admin-center-preview"></a><a name="bkmk_mem"></a>Připojení tenanta: podrobnosti o klientovi nástroje ConfigMgr v centru pro správu (Preview)
 <!--6024387, 6374854, 6521921, intune 7552762 pubpreview July 7, 2020-->
+*Platí pro: Configuration Manager (Current Branch)*
 
-V centru pro správu Microsoft Endpoint Manageru se teď můžete podívat na podrobnosti o klientech nástroje ConfigMgr, včetně kolekcí, členství ve skupině hranic a informací o klientovi v reálném čase pro konkrétní zařízení.
+Microsoft Endpoint Manager je integrované řešení pro správu všech vašich zařízení. Společnost Microsoft spojuje Configuration Manager a Intune s jednou konzolou s názvem **Centrum pro správu Microsoft Endpoint Manager**. Podrobnosti o klientech nástroje ConfigMgr můžete zobrazit, včetně kolekcí, členství ve skupině hranic a informací o klientech v reálném čase pro konkrétní zařízení v centru pro správu.
 
 > [!Important]
 > - Tyto informace se vztahují k funkci ve verzi Preview, která se podstatně změnila předtím, než se komerční verze uvolní. Microsoft neposkytuje žádné záruky, výslovné ani předpokládané, týkající se zde uváděných informací.
@@ -42,6 +43,8 @@ Uživatelský účet potřebuje následující oprávnění:
 - Oprávnění **číst** pro **kolekci** zařízení v Configuration Manager.
 - Role **uživatele správce** pro Configuration Manager aplikace mikroslužeb ve službě Azure AD.
   - Přidejte roli ve službě Azure AD z části **podnikové aplikace**  >  **Configuration Manager**  >  **Uživatelé a skupiny**mikroslužeb  >  **Přidat uživatele**. Pokud máte Azure AD Premium, podporují se skupiny.
+   > [!TIP]
+   > [Role Správce aplikací v Azure AD](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles) má dostatečná oprávnění pro přidání uživatele do role **uživatele správce** aplikace.
 
 ## <a name="view-configmgr-client-details"></a>Zobrazit podrobnosti o klientovi nástroje ConfigMgr
 

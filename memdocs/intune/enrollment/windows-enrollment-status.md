@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 08/10/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4f8991b772f5562538403492735f1f4c2fdc87e8
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 75f6585144f62636033c94f701a57cb70e018c26
+ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093447"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88051576"
 ---
 # <a name="set-up-the-enrollment-status-page"></a>Nastavení stránky stavu registrace
  
@@ -31,7 +31,7 @@ ms.locfileid: "85093447"
  
 Stránka stavu registrace (ESP) zobrazuje průběh zřizování po registraci nového zařízení a také při přihlášení nových uživatelů k zařízení.  Správci IT tak můžou volitelně zabránit (blokovat) přístup k zařízení, dokud nebude plně zajištěný, a zároveň uživatelům poskytnout informace o úkolech zbývajících v procesu zřizování.
 
-Protokol ESP se dá použít jako součást jakéhokoli scénáře zřizování služby [Windows autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/) a dá se použít odděleně od Windows autopilota jako součást výchozího spouštěného prostředí (OOBE) pro službu Azure AD JOIN a také pro všechny nové uživatele, kteří se do zařízení přihlašují poprvé.
+Protokol ESP se dá použít jako součást jakéhokoli scénáře zřizování služby [Windows autopilot](../../autopilot/index.yml) a dá se použít odděleně od Windows autopilota jako součást výchozího spouštěného prostředí (OOBE) pro službu Azure AD JOIN a také pro všechny nové uživatele, kteří se do zařízení přihlašují poprvé.
 
 Můžete vytvořit více profilů stránek stavu registrace s různými konfiguracemi, které určují:
 
@@ -76,7 +76,7 @@ Pokud chcete zapnout stránku Stav registrace, postupujte podle následujících
 
 1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení**  >  **Windows**  >  **Windows registrace registrace**  >  **Stránka stav**  >  **vytvořit profil**.
 2. Zadejte **Název** a **Popis**.
-3. Zvolte **Vytvořit**.
+3. Vyberte **vytvořit**.
 4. Nový profil vyberte v seznamu **Stránka stavu registrace**.
 5. Zvolte **přiřazení**  >  **Vybrat skupiny** > zvolte skupiny, které chcete použít pro tento profil > **Vyberte**  >  **Uložit**.
 6. Vyberte **Nastavení** > vyberte nastavení, která chcete pro tento profil použít > **Uložit**.

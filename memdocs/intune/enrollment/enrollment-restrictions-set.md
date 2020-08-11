@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1f706b2bb898f0969bf33d118291551d0f98d9ef
-ms.sourcegitcommit: 45657123a5db50aaecdb96d068712623d775f31c
+ms.openlocfilehash: e5ed799d01ea4fdae1f9ecb013b4cf73deb0e6f0
+ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87443910"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88051651"
 ---
 # <a name="set-enrollment-restrictions"></a>Nastavení omezení registrace
 
@@ -147,7 +147,7 @@ K registraci zařízení s Windows ve společnosti jsou povoleny následující 
 - Uživatel se registruje pomocí [účtu správce registrace zařízení]( device-enrollment-manager-enroll.md).
 - Zařízení se registruje pomocí automatických [pilotů Windows](enrollment-autopilot.md).
 - Zařízení se zaregistruje u automatického pilotního nasazení Windows, ale v nastavení Windows se nejedná o možnost jenom registrace MDM.
-- Číslo IMEI zařízení je uvedené v části **registrace zařízení**  >  **[identifikátory podnikových zařízení](corporate-identifiers-add.md)**. (Nepodporuje se ve Windows Phone 8.1.)
+- Číslo IMEI zařízení je uvedené v části **registrace zařízení**  >  **[identifikátory podnikových zařízení](corporate-identifiers-add.md)**.
 - Zařízení se registruje v rámci [balíčku hromadného zřizování](windows-bulk-enroll.md).
 - Zařízení se registruje prostřednictvím objektu zásad skupiny nebo [automatického zápisu z Configuration Manager pro spolusprávu](https://docs.microsoft.com/configmgr/comanage/quickstart-paths#bkmk_path1).
  
@@ -182,7 +182,7 @@ Registrace zařízení obsahuje výchozí omezení jak pro omezení typu zaříz
 
 Prioritu kteréhokoli nevýchozího omezení můžete změnit.
 
-1. Přihlaste se k webu Azure Portal.
+1. Přihlaste se k portálu Azure.
 2. Zvolte **Další služby**, vyhledejte **Intune** a zvolte **Intune**.
 3. Vyberte **registrace zařízení**  >  **omezení registrace**.
 4. Najeďte kurzorem myši na omezení v seznamu priorit.

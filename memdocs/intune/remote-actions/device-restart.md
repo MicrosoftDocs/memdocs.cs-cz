@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 45317cc9c43f4f25f0adc043ce784a7b3dc4b9fd
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: d68f09c6163ff613e5e4387a0e2d09a5eeea56c4
+ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461772"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88051685"
 ---
 # <a name="remotely-restart-devices-with-intune"></a>Vzdálené restartování zařízení přes Intune
 
@@ -33,7 +33,6 @@ Akce **restartovat** zařízení způsobí, že se zařízení, které se rozhod
 ## <a name="supported-platforms"></a>Podporované platformy
 
 - Windows – podporováno ve Windows 8.1 a novějších verzích
-- Windows Phone – podporováno ve Windows Phone 8.1 a novějších verzích
 - Zařízení se systémem Android Enterprise standarded – podpora v Androidu 7,0 a novějších verzích
 - Zařízení s plnou správou Androidu Enterprise – podporováno v Androidu 6,0 a novějších verzích
 - Android Enterprise – vlastněná pomocí zařízení s pracovním profilem – podporované v Androidu 8,0 a novějších verzích

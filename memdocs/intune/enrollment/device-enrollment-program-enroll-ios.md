@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fa06e5fee4658ad3c7f19ec39bd126ce69d8cd41
-ms.sourcegitcommit: 4dc2e3c54a18fca98553dd46703e91819e2433d7
+ms.openlocfilehash: 05a0c4e5a78281f78a986d0512abfeca155494dd
+ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86891509"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88051668"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-automated-device-enrollment"></a>Automatická registrace zařízení se systémem iOS/iPadOS pomocí Automatické registrace zařízení společnosti Apple
 
@@ -59,7 +59,7 @@ Podpora pro zařízení s nekontrolovaným ADE je v iOS/iPadOS 11 zastaralá. V 
 4. [Assign DEP profile to devices](#assign-an-enrollment-profile-to-devices)
 5. [Distribute devices to users](#end-user-experience-with-managed-devices)
 -->
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 - Zařízení zakoupená v nástroji [ADE společnosti Apple](https://deploy.apple.com)
 - [Autorita pro správu mobilních zařízení (MDM)](../fundamentals/mdm-authority-set.md)
 - [Apple MDM push Certificate](apple-mdm-push-certificate-get.md)
@@ -233,7 +233,7 @@ Teď, když jste nainstalovali token, můžete vytvořit profil zápisu pro zař
 17. Na stránce **vlastní nastavení Pomocníka s nastavením** nakonfigurujte následující nastavení profilu: ![ přizpůsobení pomocníka s nastavením.](./media/device-enrollment-program-enroll-ios/setupassistantcustom.png)
 
 
-    | Nastavení oddělení | Description |
+    | Nastavení oddělení | Popis |
     |---|---|
     | <strong>Department Name</strong> | Zobrazí se, když uživatelé klepnou při aktivaci na <strong>O konfiguraci</strong>. |
     |    <strong>Telefon na oddělení</strong>     | Zobrazí se, když uživatel při aktivaci klikne na tlačítko <strong>Potřebuji nápovědu</strong>. |
@@ -328,23 +328,28 @@ Další informace najdete [v tématu Registrace zařízení se systémem iOS/iPa
 > [!NOTE]
 > Kromě prodloužení platnosti tokenu ADE je potřeba obnovit token programu registrace v Intune a Apple Business Manageru, když se změní heslo spravovaného Apple ID pro uživatele, který nastavil token v Apple Business Manageru, nebo tento uživatel opouští vaši organizaci Apple Business Manageru.
 
-1. Přejít na business.apple.com.  
-2. V části **Manage Servers** (Spravovat servery) zvolte server MDM přidružený k souboru tokenu, který chcete obnovit.
-3. Zvolte **Generate New Token** (Vygenerovat nový token).
+1. Přejít na business.apple.com.
+2. Klikněte na **Nastavení** (vlevo dole).
+3. V části **servery MDM**vyberte svůj server MDM přidružený k tokenu ADE/DEP, který chcete obnovit.
+4. Klikněte na **Stáhnout token**.
 
     ![Snímek obrazovky s možností Generate New Token (Vygenerovat nový token)](./media/device-enrollment-program-enroll-ios/generatenewtoken.png)
 
-4. Zvolte **Your Server Token** (Token vašeho serveru).  
-5. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení**  >  **iOS/iPadOS**  >  **iOS/iPadOS**  >  **tokeny programu registrace** > vyberte token.
+5. Na příkazovém řádku vyberte možnost stáhnout token serveru.
+> [!NOTE]
+> Neklepejte na možnost **"Stáhnout token serveru"** , pokud nechcete obnovit token, jak je uvedeno v příkazovém řádku. tím dojde k zrušení platnosti tokenu aktuálně používaného službou Intune (nebo jakéhokoli jiného řešení MDM). Pokud jste token již stáhli, ujistěte se, že jste pokračovali v dalších krocích až do obnovení tokenu.
+
+6. Po stažení tokenu v [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)zvolte **zařízení**  >  **iOS/iPadOS**  >  **iOS/iPadOS**registrace tokenů  >  **programu** > zvolte token.
     ![Snímek obrazovky s možností Tokeny programu registrace](./media/device-enrollment-program-enroll-ios/enrollmentprogramtokens.png)
 
-6. Vyberte možnost **Obnovit token** a zadejte Apple ID, které jste použili k vytvoření původního tokenu.  
+7. Vyberte **obnovit token** a zadejte Apple ID, které jste použili k vytvoření původního tokenu (Pokud není automaticky vyplněné).  
     ![Snímek obrazovky s možností Generate New Token (Vygenerovat nový token)](./media/device-enrollment-program-enroll-ios/renewtoken.png)
 
-7. Kliknutím na tlačítko **Další** přejdete na stránku **značky oboru** a v případě potřeby přiřadíte značky oboru.
+8. Nahrajte nově stažený token.
 
-8. Vyberte **Další** a nahrajte nově stažený token.  
-9. Zvolte **Obnovit token**. Zobrazí se potvrzení, že se token obnovil.   
+9. Kliknutím na tlačítko **Další** přejdete na stránku **značky oboru** a v případě potřeby přiřadíte značky oboru.
+
+10. Zvolte **Obnovit token**. Zobrazí se potvrzení, že se token obnovil.   
     ![Snímek obrazovky s potvrzením](./media/device-enrollment-program-enroll-ios/confirmation.png)
 
 ## <a name="delete-an-automated-device-enrollment-token-from-intune"></a>Odstranění automatického tokenu pro zápis zařízení z Intune
