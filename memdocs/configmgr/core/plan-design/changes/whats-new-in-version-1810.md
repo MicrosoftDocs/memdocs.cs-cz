@@ -10,12 +10,13 @@ ms.assetid: 4812324b-e6aa-4431-bf1d-9fcd763a8caa
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f08b7449b4232d55c4be6227d23965231aa7a273
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ROBOTS: NOINDEX
+ms.openlocfilehash: a0d7f561a324d20f503b8fee3e8a869774c70d89
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87546446"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128963"
 ---
 # <a name="whats-new-in-version-1810-of-configuration-manager-current-branch"></a>Co je nového ve verzi 1810 Configuration Manager Current Branch
 

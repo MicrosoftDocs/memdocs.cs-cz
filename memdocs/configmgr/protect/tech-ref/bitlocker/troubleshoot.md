@@ -5,17 +5,17 @@ description: Naučte se řešit problémy se správou BitLockeru v Configuration
 ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.assetid: 134c5b50-edeb-4d60-aaca-944d26deb9ba
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ed8e464e0ab7c17e87e3de2bf72aa0dfb0acd071
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 0158738f77a0070835bec2385dd85c42dfd763fd
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81723919"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127810"
 ---
 # <a name="troubleshoot-bitlocker"></a>Řešení potíží s nástrojem BitLocker
 
@@ -25,7 +25,7 @@ Informace v tomto článku vám pomůžou při řešení potíží se správou B
 
 ## <a name="server-error-in-self-service"></a>Chyba serveru v samoobslužné službě
 
-Při prvním pokusu o otevření samoobslužného portálu (`https://webserver.contoso.com/SelfService`) se zobrazí následující chybová zpráva:
+Při prvním pokusu o otevření samoobslužného portálu ( `https://webserver.contoso.com/SelfService` ) se zobrazí následující chybová zpráva:
 
 ``` error
 Configuration Error - Server Error in '/SelfService' Application

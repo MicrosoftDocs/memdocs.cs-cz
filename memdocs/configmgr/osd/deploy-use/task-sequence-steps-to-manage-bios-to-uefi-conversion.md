@@ -5,17 +5,17 @@ description: Naučte se přizpůsobit sekvenci úloh nasazení operačního syst
 ms.date: 05/14/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: bd3df04a-902f-4e91-89eb-5584b47d9efa
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0118dd448520a6f0c21bfeea5f8509bd8e49fd46
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 761270fe9419330e2d60d0483554ee6c932c1b26
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83429392"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88124881"
 ---
 # <a name="task-sequence-steps-to-manage-bios-to-uefi-conversion"></a>Kroky pořadí úloh pro správu převodu systému BIOS na UEFI
 
@@ -89,9 +89,9 @@ Windows 10 obsahuje jednoduchý nástroj pro převod, **MBR2GPT**. Automatizuje 
     1. Přidejte krok **Spustit příkazový řádek** . Zadejte příkazový řádek pro nástroj MBR2GPT. Při spuštění v úplném operačním systému ho nakonfigurujte tak, aby se disk přetajnal z MBR na GPT, aniž by bylo potřeba upravovat nebo odstraňovat data. Do **příkazového řádku**zadejte následující příkaz:`MBR2GPT.exe /convert /disk:0 /AllowFullOS`
 
     > [!TIP]
-    > Můžete také zvolit, že se má spustit MBR2GPT. Nástroj EXE v systému Windows PE, nikoli v plném operačním systému. Přidejte krok pro restartování počítače v prostředí Windows PE před krokem ke spuštění MBR2GPT. Nástroj EXE. Pak z příkazového řádku odeberte možnost **/AllowFullOS** .
+    > Můžete se také rozhodnout spustit nástroj MBR2GPT.EXE v prostředí Windows PE, nikoli v plném operačním systému. Přidejte krok pro restartování počítače v prostředí Windows PE před krokem pro spuštění nástroje MBR2GPT.EXE. Pak z příkazového řádku odeberte možnost **/AllowFullOS** .
 
-    Další informace o nástroji a dostupných možnostech najdete v tématu [MBR2GPT. EXE](https://docs.microsoft.com/windows/deployment/mbr-to-gpt).
+    Další informace o nástroji a dostupných možnostech najdete v tématu [MBR2GPT.EXE](https://docs.microsoft.com/windows/deployment/mbr-to-gpt).
 
     1. Přidejte krok ke spuštění nástroje výrobce OEM, který převede firmware ze systému BIOS na rozhraní UEFI. Tento krok je obvykle **spouštěn z příkazového řádku**s příkazovým řádkem pro spuštění nástroje OEM.
 

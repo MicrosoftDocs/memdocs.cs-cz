@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: e0ec7d66-1502-4b31-85bb-94996b1bc66f
-ms.openlocfilehash: d1e7b2c359e21ac4a12219d27655603954702fa8
-ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
+ms.openlocfilehash: 9ba4466a40d49c4b78b75e6f85137dfd0a4ff5ce
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86410860"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129133"
 ---
 # <a name="set-up-cloud-management-gateway-for-configuration-manager"></a>Nastavení brány pro správu cloudu pro Configuration Manager
 
@@ -80,7 +80,7 @@ Tento postup proveďte v lokalitě nejvyšší úrovně. Tato lokalita je buď s
 
 4. Zadejte **prostředí Azure** pro tento CMG. Možnosti v rozevíracím seznamu se mohou lišit v závislosti na metodě nasazení.  
 
-5. Vyberte **Next** (Další). Počkejte, než lokalita otestuje připojení k Azure.  
+5. Vyberte **Další**. Počkejte, než lokalita otestuje připojení k Azure.  
 
 6. Na stránce nastavení v průvodci vyberte možnost **Procházet** a zvolte. Soubor PFX pro ověřovací certifikát serveru CMG Název z tohoto certifikátu naplní požadovaná pole **plně kvalifikovaného názvu domény služby** a **názvu služby** .  
 
@@ -108,7 +108,7 @@ Tento postup proveďte v lokalitě nejvyšší úrovně. Tato lokalita je buď s
 
 13. Ve výchozím nastavení umožňuje průvodce následující možnost: povolit, **aby služba CMG fungovala jako distribuční bod cloudu a poskytovala obsah z Azure Storage**. CMG může také poskytovat obsah klientům. Tato funkce snižuje nároky na požadované certifikáty a náklady na virtuální počítače Azure.
 
-14. Vyberte **Next** (Další).  
+14. Vyberte **Další**.  
 
 15. Pokud chcete monitorovat provoz CMG s prahovou hodnotou 14 dní, zaškrtněte políčko, aby se výstraha prahové hodnoty zapnula. Pak zadejte prahovou hodnotu a procento, ve kterém chcete zvýšit počet různých úrovní výstrahy. Až budete hotovi, klikněte na tlačítko **Další** .  
 
@@ -141,7 +141,7 @@ Bod připojení CMG je role systému lokality pro komunikaci s CMG. Chcete-li p�
 
 Pokud chcete řešit potíže se stavem služby CMG, použijte **CMGService. log** a **SMS_Cloud_ProxyConnector. log**. Další informace najdete v tématu [soubory protokolu](../../../plan-design/hierarchy/log-files.md#cloud-management-gateway).
 
-## <a name="configure-client-facing-roles-for-cmg-traffic"></a>Konfigurace klientských rolí pro provoz CMG
+## <a name="configure-client-facing-roles-for-cmg-traffic"></a><a name="bkmk_role"></a>Konfigurace klientských rolí pro provoz CMG
 
 Konfigurujte body správy a systémy lokality bodu aktualizace softwaru pro příjem provozu CMG. Tento postup proveďte v primární lokalitě pro všechny body správy a body aktualizace softwaru, které používají internetové klienty.  
 
@@ -158,7 +158,7 @@ Konfigurujte body správy a systémy lokality bodu aktualizace softwaru pro př�
 Opakujte tyto kroky pro další body správy podle potřeby a pro všechny body aktualizace softwaru.
 
 ## <a name="configure-boundary-groups"></a>Konfigurace skupin hranic
-
+ 
 <!--3640932-->
 Počínaje verzí 1902 můžete přidružit CMG k hraniční skupině. Tato konfigurace umožňuje klientům výchozí nebo záložní CMG pro komunikaci klientů podle vztahů skupin hranic.
 
@@ -270,7 +270,7 @@ Důležitější změny, například následující konfigurace, vyžadují opě
 - Předplatné
 - Název služby
 - Privátní infrastruktura veřejných klíčů
-- Region
+- Oblast
 
 Vždy udržujte aspoň jeden aktivní CMG pro internetové klienty pro příjem aktualizovaných zásad. internetoví klienti nemůžou komunikovat s odebraným CMG. Klienti neznají o novém, dokud nebudou moct přejít zpátky do intranetu. Při vytváření druhé instance CMG, která první odstraní, vytvoří také další spojovací bod CMG.
 

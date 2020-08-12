@@ -1,8 +1,8 @@
 ---
-title: Synchronizace aktualizací Office 365 bez připojení k Internetu
+title: Synchronizace aktualizací Microsoft 365 aplikací bez připojení k Internetu
 titleSuffix: Configuration Manager
-description: Synchronizuje aktualizace Office 365 v bodu aktualizace softwaru nejvyšší úrovně, který je odpojený od Internetu.
-ms.date: 04/21/2020
+description: Synchronizuje aktualizace Microsoft 365 aplikací v bodu aktualizace softwaru nejvyšší úrovně, který je odpojený od Internetu.
+ms.date: 08/11/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -10,18 +10,18 @@ ms.assetid: a8fa7e7a-bf55-42de-b0c2-c56777dc1508
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 3627d2f7772b7b9e133d742b0ee4f94dba6e457a
-ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
+ms.openlocfilehash: 4739703436d7feec7c4c899e60b33d38ce28babf
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82110351"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88125725"
 ---
-# <a name="synchronize-office-365-updates-from-a-disconnected-software-update-point"></a><a name="bkmk_O365"></a>Synchronizace aktualizací Office 365 z odpojeného bodu aktualizace softwaru
+# <a name="synchronize-microsoft-365-apps-updates-from-a-disconnected-software-update-point"></a><a name="bkmk_O365"></a>Synchronizace aktualizací Microsoft 365ch aplikací z odpojeného bodu aktualizace softwaru
 
 *Platí pro: Configuration Manager (Current Branch)*
 <!--4065163-->
-Configuration Manager počínaje verzí 2002 můžete pomocí nástroje importovat aktualizace Office 365 ze serveru WSUS připojeného k Internetu do odpojeného Configuration Manager prostředí. Dříve, když jste exportovali a importovali metadata pro software aktualizovaný v odpojených prostředích, nemůžete nasadit aktualizace Office 365. Aktualizace Office 365 vyžadují další metadata stažená z rozhraní Office API a CDN Office, což není u odpojených prostředí možné.
+Configuration Manager počínaje verzí 2002 můžete pomocí nástroje importovat aktualizace Microsoft 365 aplikací ze serveru WSUS připojeného k Internetu do odpojeného Configuration Manager prostředí. Předtím, když jste exportovali a importovali metadata pro software aktualizovaný v odpojených prostředích, nemůžete nasadit aktualizace aplikací Microsoft 365. Aktualizace Microsoft 365 aplikací vyžadují další metadata stažená z rozhraní Office API a CDN, které není pro odpojená prostředí možné.
 
 > [!Note]
 > Od 21. dubna 2020 se sada Office 365 ProPlus přejmenovává na **Microsoft 365 aplikace pro podniky**. Další informace najdete v tématu [Změna názvu pro Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change). V konzole Configuration Manager se pořád zobrazují odkazy na starý název a podpůrná dokumentace, zatímco se konzola aktualizuje.
@@ -33,87 +33,87 @@ Configuration Manager počínaje verzí 2002 můžete pomocí nástroje importov
    - `officecdn.microsoft.com`
    - `config.office.com`
 - Zkopírujte nástroj OfflineUpdateExporter a jeho závislosti na server služby WSUS připojený k Internetu.
-  - Nástroj a jeho závislosti jsou v adresáři ** &lt;ConfigMgrInstallDir>/Tools/offlineupdateexporter** .
+  - Nástroj a jeho závislosti jsou v adresáři ** &lt; ConfigMgrInstallDir>/Tools/offlineupdateexporter** .
 - Uživatel, který nástroj spustil, musí být součástí skupiny **Správci služby WSUS** .
-- Adresář vytvořený pro uložení metadat a obsahu aktualizace Office by měl mít odpovídající seznamy řízení přístupu (ACL) k zabezpečení souborů.
+- Adresář vytvořený pro uložení Microsoft 365ch aktualizací metadat a obsah by měl mít vhodné seznamy řízení přístupu (ACL) k zabezpečení souborů.
     - Tento adresář musí být také prázdný.
 - Data přesunovaná z online serveru WSUS do odpojeného prostředí by se měla bezpečně přesunout.
 
 > [!IMPORTANT]
-> Obsah bude stažen pro všechny jazyky Office 365. Každá aktualizace může mít přibližně 10 GB obsahu.
+> Obsah bude stažen pro všechny jazyky Microsoft 365 aplikací. Každá aktualizace může mít přibližně 10 GB obsahu.
 
-## <a name="synchronize-then-decline-unneeded-office-365-updates"></a>Synchronizovat a odmítat nepotřebné aktualizace Office 365
+## <a name="synchronize-then-decline-unneeded-microsoft-365-apps-updates"></a>Synchronizovat a odmítat nepotřebné aktualizace Microsoft 365 aplikací
 
 1. Na serveru WSUS připojené k Internetu otevřete konzolu služby WSUS.
 1. Vyberte **možnost možnosti** **a produkty a klasifikace**.
-1. Na kartě **produkty** vyberte **klienta Office 365** a na kartě **klasifikace** vyberte **aktualizace** . [ ![produkty a klasifikace pro aktualizace sady Office 365 ve službě WSUS](./media/4065163-o365-updates-product-classification.png)](./media/4065163-o365-updates-product-classification.png#lightbox)
-1. Pokud chcete aktualizace Office 365 stáhnout do WSUS, klikněte na **synchronizace** a vyberte **synchronizovat** .
-1. Po dokončení synchronizace odmítněte všechny aktualizace Office 365, které nechcete nasadit, pomocí Configuration Manager. Nemusíte schvalovat aktualizace Office 365, aby je bylo možné stáhnout.  
-   - Odmítnutí nechtěných aktualizací Office 365 ve službě WSUS neukončí jejich export během exportu WsusUtil. exe, ale zastaví nástroj OfflineUpdateExporter ze stahování obsahu pro ně.
-   - Nástroj OfflineUpdateExporter provede stažení aktualizací Office 365. Pokud exportujete aktualizace pro tyto produkty, budete je muset i nadále schvalovat ke stažení.
-    - Vytvořte [nové zobrazení aktualizace ve službě WSUS](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/manage/viewing-and-managing-updates#to-create-a-new-update-view-on-wsus) , abyste mohli snadno zobrazit a odmítnout nepotřebné aktualizace Office 365 ve službě WSUS.
-1. Pokud schvalujete jiné aktualizace produktů ke stažení a exportu, počkejte na dokončení stažení obsahu před spuštěním WsusUtil. exe export a zkopírování obsahu složky WSUSContent. Další informace najdete v tématu [synchronizace aktualizací softwaru z odpojeného bodu aktualizace softwaru](synchronize-software-updates-disconnected.md) .
+1. Na kartě **produkty** vyberte **klienta Office 365** a na kartě **klasifikace** vyberte **aktualizace** . [ ![ produkty a klasifikace pro Microsoft 365 aktualizace aplikací ve službě WSUS](./media/4065163-o365-updates-product-classification.png)](./media/4065163-o365-updates-product-classification.png#lightbox)
+1. Když přejdete na **synchronizace** a vyberete **synchronizovat** , získáte aktualizace Microsoft 365ch aplikací do WSUS.
+1. Po dokončení synchronizace odmítněte všechny aktualizace Microsoft 365 aplikací, které nechcete nasadit pomocí Configuration Manager. Nemusíte schvalovat aktualizace aplikací Microsoft 365, aby je bylo možné stáhnout.  
+   - Odmítání aktualizací nežádoucích Microsoft 365 aplikací ve službě WSUS nebrání jejich exportu během WsusUtil.exe exportu, ale nástroj OfflineUpdateExporter zastaví stahování obsahu pro tyto aplikace.
+   - Nástroj OfflineUpdateExporter stahuje aktualizace aplikací Microsoft 365 za vás. Pokud exportujete aktualizace pro tyto produkty, budete je muset i nadále schvalovat ke stažení.
+    - Vytvořte [nové zobrazení aktualizace ve službě WSUS](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/manage/viewing-and-managing-updates#to-create-a-new-update-view-on-wsus) , abyste mohli snadno zobrazit a odmítnout nepotřebné aktualizace Microsoft 365 aplikací ve službě WSUS.
+1. Pokud schvalujete jiné aktualizace produktů ke stažení a exportu, počkejte na dokončení stažení obsahu, než spustíte WsusUtil.exe export a zkopírování obsahu složky WSUSContent. Další informace najdete v tématu [synchronizace aktualizací softwaru z odpojeného bodu aktualizace softwaru](synchronize-software-updates-disconnected.md) .
 
-## <a name="exporting-the-office-365-updates"></a>Exportují se aktualizace Office 365.
+## <a name="exporting-the-microsoft-365-apps-updates"></a>Export aktualizací Microsoft 365 Apps
 
 1. Zkopírujte složku OfflineUpdateExporter z Configuration Manager na server služby WSUS připojený k Internetu.
-    - Nástroj a jeho závislosti jsou v adresáři ** &lt;ConfigMgrInstallDir>/Tools/offlineupdateexporter** .
-1. Z příkazového řádku na serveru WSUS připojeném k Internetu spusťte nástroj s následujícím použitím: **OfflineUpdateExporter. exe-O-D &lt;cílová cesta>**
+    - Nástroj a jeho závislosti jsou v adresáři ** &lt; ConfigMgrInstallDir>/Tools/offlineupdateexporter** .
+1. Z příkazového řádku na serveru WSUS připojeném k Internetu spusťte nástroj s následujícím použitím: **OfflineUpdateExporter.exe-O-D &lt; cílová cesta>**
 
    |Parametr OfflineUpdateExporter|Popis|
    |---|---|
-   |**– O**|  **– Office**. Určuje produkt pro export aktualizací je Office 365.|
+   |**– O**|  **– Office**. Určuje produkt pro export aktualizací je Office 365 nebo aplikace Microsoft 365.|
    |**– D**|**– Cíl**. Cíl je povinný parametr a je nutná úplná cesta k cílové složce.|
 
    - Nástroj **OfflineUpdateExporter** provádí následující akce:
       - Připojí se ke službě WSUS.
-      - Přečte metadata aktualizace Office 365 ve službě WSUS.
-      - Stáhne obsah a veškerá další metadata potřebná pro aktualizaci Office 365 do cílové složky.
+      - Přečte metadata aktualizace Microsoft 365 Apps ve službě WSUS.
+      - Stáhne obsah a veškerá další metadata potřebná pro Microsoft 365 aplikace se aktualizují do cílové složky.
 
-1. Na příkazovém řádku na serveru WSUS připojeném k Internetu přejděte do složky, která obsahuje WsusUtil. exe. Ve výchozím nastavení se nástroj nachází ve složce%*ProgramFiles*% \ Update Services\Tools. Třeba pokud se nástroj nachází ve výchozím umístění, zadejte příkaz **cd %ProgramFiles%\Update Services\Tools**.
+1. Na příkazovém řádku na serveru WSUS připojeném k Internetu přejděte do složky, která obsahuje WsusUtil.exe. Ve výchozím nastavení se nástroj nachází ve složce%*ProgramFiles*% \ Update Services\Tools. Třeba pokud se nástroj nachází ve výchozím umístění, zadejte příkaz **cd %ProgramFiles%\Update Services\Tools**.
    - Pokud používáte Windows Server 2012, ujistěte se, že je na serverech WSUS nainstalovaný [KB2819484](https://support.microsoft.com/help/2819484/cab-file-that-is-exported-by-using-the-wsusutil-exe-command-is-display) .
    - Uživatel, který spouští nástroj WsusUtil, musí být členem místní skupiny Administrators na serveru.
 
 1. Pro export metadat aktualizací softwaru do souboru GZIP zadejte následující text:  
 
-    **WsusUtil. exe Export souboru s příponou***packagename**logfile*      
+    **WsusUtil.exe exportovat***soubor* s*balíčkem*      
 
-    Příklad:  
+    Například:  
 
-    **WsusUtil. exe export export. XML. gz export. log**
+    **WsusUtil.exe export export.xml. gz export. log**
 
-1. Do serveru WSUS na nejvyšší úrovni v odpojené síti zkopírujte soubor **Export. XML. gz** .
+1. Zkopírujte soubor **export.xml. gz** na server WSUS na nejvyšší úrovni v odpojené síti.
 1. Pokud jste schválili aktualizace pro jiné produkty, zkopírujte obsah složky WSUSContent do složky WSUSContent odpojeného serveru WSUS, který je na nejvyšší úrovni.
 1. Zkopírujte cílovou složku, která se používá pro **OfflineUpdateExporter** , do serveru lokality nejvyšší úrovně Configuration Manager v odpojené síti.
 
-## <a name="import-the-office-365-updates"></a>Import aktualizací Office 365
+## <a name="import-the-microsoft-365-apps-updates"></a>Import aktualizací Microsoft 365 Apps
 
-1. Na odpojeném serveru WSUS nejvyšší úrovně importujte metadata aktualizace z **souboru export. XML. gz** , který jste vygenerovali na serveru WSUS připojeném k Internetu.
+1. Na odpojeném serveru WSUS nejvyšší úrovně importujte metadata aktualizace z **export.xml. gz** , kterou jste vygenerovali na serveru WSUS připojeném k Internetu.
    
-    Příklad:  
+    Například:  
 
-    **WsusUtil. exe import export. XML. gz import. log**
+    **WsusUtil.exe import export.xml. gz importu. log**
     
-    Ve výchozím nastavení se nástroj WsusUtil. exe nachází ve složce%*ProgramFiles*% \ Update Services\Tools.
+    Ve výchozím nastavení se nástroj WsusUtil.exe nachází ve složce%*ProgramFiles*% \ Update Services\Tools.
 
-1. Po dokončení importu budete muset nakonfigurovat vlastnost řízení lokality na odpojeném serveru Configuration Manager lokality nejvyšší úrovně. Tyto body změny konfigurace Configuration Manager k obsahu pro Office 365. Změna konfigurace vlastnosti:
+1. Po dokončení importu budete muset nakonfigurovat vlastnost řízení lokality na odpojeném serveru Configuration Manager lokality nejvyšší úrovně. Tyto body změny konfigurace Configuration Manager k obsahu pro Microsoft 365 aplikace. Změna konfigurace vlastnosti:
    1. Zkopírujte [skript prostředí PowerShell O365OflBaseUrlConfigured](#bkmk_o365_script) na nejvyšší úroveň odpojeného serveru Configuration Manager lokality.
-   1. Změňte `"D:\Office365updates\content"` na úplnou cestu ke zkopírovanému adresáři, který obsahuje obsah Office a metadata generovaná nástrojem OfflineUpdateExporter.
+   1. Přejděte `"D:\Office365updates\content"` na úplnou cestu ke zkopírovanému adresáři, který obsahuje obsah aplikace Microsoft 365 Apps a metadata generovaná nástrojem OfflineUpdateExporter.
       > [!IMPORTANT]
       > Pouze místní cesty fungují pro vlastnost O365OflBaseUrlConfigured.
    1. Uložte skript jako`O365OflBaseUrlConfigured.ps1`
-   1. Z okna PowerShellu se zvýšenými oprávněními na odpojené Configuration Manager serveru lokality na nejvyšší `.\O365OflBaseUrlConfigured.ps1`úrovni spusťte.
+   1. Z okna PowerShellu se zvýšenými oprávněními na odpojené Configuration Manager serveru lokality na nejvyšší úrovni spusťte `.\O365OflBaseUrlConfigured.ps1` .
    1. Restartujte službu **SMS_Executive** na serveru lokality.
-1. V konzole **Configuration Manager** přejděte na **Správa** > **Konfigurace** > lokality**lokality**.
-1. Klikněte pravým tlačítkem myši na lokalitu nejvyšší úrovně a pak vyberte **Konfigurovat součásti** > lokality**bod aktualizace softwaru**.
+1. V konzole **Configuration Manager** přejděte na **Správa**  >  **Konfigurace lokality**  >  **lokality**.
+1. Klikněte pravým tlačítkem myši na lokalitu nejvyšší úrovně a pak vyberte **Konfigurovat součásti lokality**  >  **bod aktualizace softwaru**.
 1. Na kartě **klasifikace** vyberte *aktualizace*. Na kartě **produkty** vyberte *klienta Office 365*.
 1. [Synchronizovat aktualizace softwaru](synchronize-software-updates.md#manually-start-software-updates-synchronization) pro Configuration Manager
-1. Po dokončení synchronizace použijte běžný postup nasazení aktualizací Office 365.
+1. Po dokončení synchronizace použijte běžný proces nasazení aktualizací aplikace Microsoft 365.
 
 ## <a name="proxy-configuration"></a><a name="bkmk_O365_ki"></a>Konfigurace proxy serveru
 
 - Konfigurace proxy serveru není do nástroje nativně integrovaná. Pokud je proxy server nastaven v možnostech internetu na serveru, na kterém je nástroj spuštěný, v teorie se použije a musí fungovat správně.
-   - Na příkazovém řádku spusťte `netsh winhttp show proxy` příkaz, který zobrazí nakonfigurovaný proxy server.
+   - Na příkazovém řádku spusťte příkaz, který `netsh winhttp show proxy` zobrazí nakonfigurovaný proxy server.
 
 
 

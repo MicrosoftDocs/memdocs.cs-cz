@@ -10,12 +10,13 @@ ms.assetid: b87ac054-9b37-4725-a3f3-2340cfb10bff
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 7f4acb19d1b3a28a4a53b30dd7838d24eda6c260
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ROBOTS: NOINDEX
+ms.openlocfilehash: a0e20915a8f3cda71fa3b23170ad6d3a6a34a756
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81723205"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126184"
 ---
 # <a name="checklist-for-installing-update-1810-for-configuration-manager"></a>Kontrolní seznam pro instalaci aktualizace 1810 pro Configuration Manager
 
@@ -31,7 +32,7 @@ Chcete-li získat aktualizaci verze 1810, je nutné použít spojovací bod slu�
 
     -   Dmpdownloader. log může znamenat, že proces dmpdownloader čeká na interval před vyhledáním aktualizací. Chcete-li znovu spustit stahování souborů opětovné distribuce aktualizace, restartujte službu **SMS_Executive** na serveru lokality.
 
-    -   K dalšímu problému se stahování dochází, když proxy server nastavení brání `silverlight.dlservice.microsoft.com`stažení `download.microsoft.com`z, `go.microsoft.com`a.
+    -   K dalšímu problému se stahování dochází, když proxy server nastavení brání stažení z `silverlight.dlservice.microsoft.com` , `download.microsoft.com` a `go.microsoft.com` .
 
 Další informace o instalaci aktualizací najdete v tématu [aktualizace a údržba v konzole](updates.md#bkmk_inconsole).
 
@@ -126,7 +127,7 @@ Před instalací aktualizace zakažte všechny úlohy údržby lokality, které 
 
 Pokud se během instalace aktualizace spustí některá úloha údržby databáze lokality, při instalaci aktualizace může dojít k chybě. Než úlohu zakážete, zaznamenejte plán úlohy, abyste po instalaci aktualizace mohli obnovit její konfiguraci.
 
-Další informace najdete v tématech [úlohy](maintenance-tasks.md) údržby a [referenční informace pro úlohy údržby](reference-for-maintenance-tasks.md).
+Další informace najdete v tématech [úlohy údržby](maintenance-tasks.md)   a [referenční informace pro úlohy údržby](reference-for-maintenance-tasks.md).
 
 #### <a name="temporarily-stop-any-antivirus-software"></a>Dočasné zastavení veškerého antivirového softwaru 
 Před aktualizací lokality zastavte antivirový software na serverech Configuration Manager. <!--SMS.503481--> 
@@ -139,7 +140,7 @@ Další informace najdete v tématu [zálohování a obnovení](backup-and-reco
 #### <a name="plan-for-client-piloting"></a>Plánování pilotního nasazení klientů   
 Když nainstalujete aktualizaci, která aktualizuje klienta, můžete novou aktualizaci klienta otestovat v předprodukčním prostředí ještě před tím, než se nasadí a upgraduje všechny aktivní klienty. Pokud chcete tuto možnost využít, musíte nakonfigurovat lokalitu tak, aby podporovala automatické upgrady pro předprodukční prostředí před zahájením instalace aktualizace.
 
-Další informace najdete v tématu [upgrade klientů](../../clients/manage/upgrade/upgrade-clients.md) a [testování upgradu klienta v předprodukční kolekci](../../clients/manage/upgrade/test-client-upgrades.md).
+Další informace najdete v tématu [upgrade klientů](../../clients/manage/upgrade/upgrade-clients.md)   a [testování upgradu klienta v předprodukční kolekci](../../clients/manage/upgrade/test-client-upgrades.md).
 
 #### <a name="plan-to-use-service-windows"></a>Plánování použití oken služby   
 Chcete-li definovat dobu, během které lze nainstalovat aktualizace serveru lokality, použijte systémovou službu. Můžou vám pomůžou řídit, kdy weby v hierarchii tuto aktualizaci instalují. Další informace najdete v tématu [Služba pro servery lokality](service-windows.md).
@@ -156,7 +157,7 @@ Chcete-li spustit kontrolu požadovaných součástí z konzoly, otevřete ovlá
 Další informace najdete v části **spuštění kontroly požadovaných součástí před instalací aktualizace v nástroji** [předtím, než nainstalujete konzolovou aktualizaci](install-in-console-updates.md#bkmk_beforeinstall).
 
 > [!IMPORTANT]  
-> Po spuštění kontroly požadovaných součástí proces aktualizuje některé zdrojové soubory produktu, které se používají pro úlohy údržby lokality. Proto po spuštění kontroly požadovaných součástí, ale před instalací aktualizace, potřebujete-li provést úlohu údržby lokality, spusťte **Setupwpf. exe** (Configuration Manager instalační program) z disku CD-ROM. Poslední složka na serveru lokality.
+> Po spuštění kontroly požadovaných součástí proces aktualizuje některé zdrojové soubory produktu, které se používají pro úlohy údržby lokality. Proto po spuštění kontroly požadovaných součástí, ale před instalací aktualizace, potřebujete-li provést úlohu údržby lokality, spusťte **Setupwpf.exe**   (Configuration Manager instalační program) z disku CD-ROM. Poslední složka na serveru lokality.
 
 #### <a name="update-sites"></a>Aktualizovat weby   
 Nyní jste připraveni zahájit instalaci aktualizace pro vaši hierarchii. Další informace o instalaci aktualizace najdete [v tématu Instalace konzolových aktualizací](install-in-console-updates.md#bkmk_install).
@@ -185,7 +186,7 @@ V konzole Configuration Manager pro zobrazení stavu použijte následující um
 
 -   Pracovní prostor **monitorování** , uzel **replikace databáze**  
 
-Další informace najdete v těchto článcích:  
+Další informace najdete v následujících článcích:  
 
 - [Monitorování hierarchie](monitor-hierarchy.md)
 - [Monitorování replikace](monitor-replication.md)

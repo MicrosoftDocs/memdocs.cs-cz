@@ -10,12 +10,12 @@ ms.assetid: 230be984-d2cd-4d53-bd7a-bc24dd93fc22
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 1aae76845d18d8191b6f773df5491d3a144940c1
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d28638cdf332adbb1d57526179222bb96d6d5c92
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81713804"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128065"
 ---
 # <a name="introduction-to-reporting-in-configuration-manager"></a>Úvod do vytváření sestav v Configuration Manager
 
@@ -41,7 +41,7 @@ Configuration Manager používá SQL Server Reporting Services jako své primár
 
 Další informace najdete v tématu [co je SQL Server Reporting Services (SSRS)?](https://docs.microsoft.com/sql/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports?view=sql-server-ver15)
 
-## <a name="power-bi-report-server"></a>serveru sestav Power BI
+## <a name="power-bi-report-server"></a>Server sestav Power BI
 
 <!-- 3721603 -->
 
@@ -93,7 +93,7 @@ Při spuštění sestavy výzva vyžádá hodnotu požadovaného parametru. Na z
 
 Odkazy na sestavy v Configuration Manager se používají ve zdrojové sestavě pro zajištění snadného přístupu k dalším datům. Například může odkazovat na podrobnější informace o jednotlivých položkách ve zdrojové sestavě. Pokud cílová sestava vyžaduje spuštění jedné nebo více výzev, zdrojová sestava musí obsahovat sloupec s příslušnými hodnotami pro jednotlivé výzvy.
 
-Odkaz musí zadat číslo sloupce s hodnotou pro příkazový řádek. Příklad:
+Odkaz musí zadat číslo sloupce s hodnotou pro příkazový řádek. Například:
 
 - K dispozici je jedna sestava obsahující seznam počítačů, které lokalita nedávno zjistila.
 - Propojíte je s jinou sestavou, která obsahuje poslední zprávy, které lokalita obdrží pro určitý počítač.
@@ -124,7 +124,7 @@ Pro sestavy založené na službě Reporting Services Configuration Manager pou�
 
  Instalace Tvůrce sestav přidává podporu pro více než 20 jazyků. Když spustíte Tvůrce sestav, zobrazí data v jazyce operačního systému místního počítače. Pokud Tvůrce sestav jazyk nepodporuje, zobrazí data v angličtině. Tvůrce sestav podporuje plné možnosti SQL Server Reporting Services, které zahrnují následující funkce:
 
-- Zajišťuje intuitivní prostředí pro vytváření sestav vzhledově podobné prostředí sady aplikací Microsoft Office.  
+- Poskytuje intuitivní prostředí pro vytváření sestav s podobným vzhledem jako aplikace Microsoft 365.  
 
 - Nabízí flexibilní rozložení sestavy SQL Server RDL (Report Definition Language).  
 

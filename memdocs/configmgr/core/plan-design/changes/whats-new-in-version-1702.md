@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: fa29c1b2474d6a0a42b7ff8e3624a3ec8d6a090e
-ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
+ms.openlocfilehash: f2486e838e01415786e24c077af1997b3dfb7638
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87912296"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129065"
 ---
 # <a name="what39s-new-in-version-1702-of-configuration-manager"></a>Co&#39;s novinkou ve verzi 1702 Configuration Manager
 
@@ -121,7 +121,7 @@ Nástroj pro [Vyčištění knihovny obsahu](../hierarchy/content-library-cleanu
 Konektor OMS můžete použít pro připojení k OMS Log Analytics v Microsoft Azure Government cloudu. To vyžaduje, abyste před instalací konektoru OMS upravili konfigurační soubor, aby konektor mohl pracovat s cloudem pro státní správu. Další informace najdete v tématu [použití konektoru OMS s Azure Governmentm cloudem](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm).
 
 ### <a name="software-update-points-are-added-to-boundary-groups"></a>Body aktualizace softwaru se přidají do skupin hranic.
-Počínaje verzí 1702 používají klienti skupiny hranic k nalezení nového bodu aktualizace softwaru, k zálohování a hledání nového bodu aktualizace softwaru, pokud už jejich stávající bod aktualizace není dostupný. Jednotlivé body aktualizace softwaru můžete přidat do různých skupin hranic, abyste mohli řídit, které servery může klient najít. Další informace najdete v tématu [body aktualizace softwaru](../../servers/deploy/configure/boundary-groups.md#software-update-points) v tématu [Konfigurace skupin hranic](../../servers/deploy/configure/boundary-groups.md) .
+Počínaje verzí 1702 používají klienti skupiny hranic k nalezení nového bodu aktualizace softwaru, k zálohování a hledání nového bodu aktualizace softwaru, pokud už jejich stávající bod aktualizace není dostupný. Jednotlivé body aktualizace softwaru můžete přidat do různých skupin hranic, abyste mohli řídit, které servery může klient najít. Další informace najdete v tématu [body aktualizace softwaru](../../servers/deploy/configure/boundary-groups.md#bkmk_sup) v tématu [Konfigurace skupin hranic](../../servers/deploy/configure/boundary-groups.md) .
 
 
 <!-- ## Migration  -->
@@ -221,7 +221,7 @@ Od této verze, když upgradujete verzi Windows ADK a pak pomocí aktualizace a 
 ## <a name="software-updates"></a>Aktualizace softwaru
 
 ### <a name="deploy-office-365-apps-to-clients"></a>Nasazení aplikací Office 365 na klienty
-Počínaje verzí 1702 na řídicím panelu pro správu klientů Office 365 můžete spustit instalační program sady Office 365, který vám umožní nakonfigurovat nastavení instalace systému Office 365, stahovat soubory ze sítí Office Content Delivery Network (sítě CDN) a nasazovat soubory jako aplikace v Configuration Manager. Podrobnosti najdete v tématu [Správa aktualizací Office 365 ProPlus](../../../sum/deploy-use/manage-office-365-proplus-updates.md#deploy-office-365-apps).
+Počínaje verzí 1702 na řídicím panelu pro správu klientů Office 365 můžete spustit instalační program sady Office 365, který vám umožní nakonfigurovat nastavení instalace systému Office 365, stahovat soubory ze sítí Office Content Delivery Network (sítě CDN) a nasazovat soubory jako aplikace v Configuration Manager. Podrobnosti najdete v tématu [Správa aktualizací Office 365 ProPlus](../../../sum/deploy-use/manage-office-365-proplus-updates.md#bkmk_deploy).
 
 > [!IMPORTANT]
 > Aplikaci Office 365, kterou vytvoříte a nasadíte pomocí Průvodce aplikací Office 365 v Configuration Manager není automaticky spravovaná pomocí Configuration Manager, dokud nepovolíte možnost **Povolit správu klienta aktualizace softwaru pro klienta sady office 365 znovu** . Podrobnosti najdete v tématu [informace o nastavení klienta](../../clients/deploy/about-client-settings.md).

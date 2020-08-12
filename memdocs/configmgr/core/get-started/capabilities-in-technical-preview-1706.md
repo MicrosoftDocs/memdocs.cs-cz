@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: d554f4f6e0c68912f4fac91bc1a8db2807b26a04
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 79258786b56cc3e7fe4971391903772700768a89
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078783"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126752"
 ---
 # <a name="capabilities-in-technical-preview-1706-for-configuration-manager"></a>Funkce ve verzi Technical Preview 1706 pro Configuration Manager
 
@@ -72,7 +72,7 @@ Tato verze zahrnuje vylepšení způsobu práce bodů aktualizace softwaru se sk
   - Tento cyklus pokračuje, dokud se klient nepřipojí k bodu aktualizace softwaru, který může použít.
   - Dokud klient nenajde bod aktualizace softwaru, přidají se další servery do fondu dostupných serverů, když se splní záložní čas každé sousední skupiny hranic.
 
-Další informace najdete v tématu [body aktualizace softwaru](../servers/deploy/configure/boundary-groups.md#software-update-points) v tématu skupiny hranic pro Current Branch.
+Další informace najdete v tématu [body aktualizace softwaru](../servers/deploy/configure/boundary-groups.md#bkmk_sup) v tématu skupiny hranic pro Current Branch.
 
 
 ## <a name="site-server-role-high-availability"></a>Vysoká dostupnost role serveru lokality
@@ -129,7 +129,7 @@ V této verzi se v konzole zobrazí **stav** z následujících podmínek jako �
 - 851967 – neúspěšné převzetí služeb při selhání
 
 ### <a name="add-a-site-server-in-passive-mode"></a>Přidání serveru lokality v pasivním režimu
-1. V konzole nástroje klikněte na **Správa** > **Konfigurace** > lokality**lokality** a spusťte [Průvodce Přidat role systému lokality](../servers/deploy/configure/install-site-system-roles.md). Můžete také použít **Průvodce vytvořením serveru systému lokality**.
+1. V konzole nástroje klikněte na **Správa**  >  **Konfigurace lokality**  >  **lokality** a spusťte [Průvodce Přidat role systému lokality](../servers/deploy/configure/install-site-system-roles.md). Můžete také použít **Průvodce vytvořením serveru systému lokality**.
 
 2. Na stránce **Obecné** zadejte server, který bude hostitelem serveru lokality pasivního režimu. Server, který zadáte, nemůže hostovat žádné role systému lokality před instalací serveru lokality v pasivním režimu.
 
@@ -142,7 +142,7 @@ V této verzi se v konzole zobrazí **stav** z následujících podmínek jako �
 
 5. Configuration Manager pak na určený server nainstaluje server lokality v pasivním režimu.
 
-Podrobný stav instalace naleznete v umístění **Správa** > **Konfigurace** > lokality**lokality**.
+Podrobný stav instalace naleznete v umístění **Správa**  >  **Konfigurace lokality**  >  **lokality**.
 - Stav serveru lokality v pasivním režimu se zobrazí jako **instalace**.
 
 - Vyberte server a potom kliknutím na **Zobrazit stav** otevřete **stav instalace serveru lokality** , kde najdete podrobnější informace.
@@ -150,15 +150,15 @@ Podrobný stav instalace naleznete v umístění **Správa** > **Konfigurace** >
 
 
 ### <a name="promote-the-passive-mode-site-server-to-active-mode"></a>Zvýšit úroveň serveru lokality pasivního režimu na aktivní režim
-Pokud chcete změnit server lokality pasivního režimu na aktivní režim, provedete to v podokně **uzly** v části **Správa** > **Konfigurace** > lokality**lokality**. Pokud budete mít přístup k instanci SMS_Provider, můžete k webu přejít, abyste tuto změnu provedli.
+Pokud chcete změnit server lokality pasivního režimu na aktivní režim, provedete to v podokně **uzly** v části **Správa**  >  **Konfigurace lokality**  >  **lokality**. Pokud budete mít přístup k instanci SMS_Provider, můžete k webu přejít, abyste tuto změnu provedli.
 1. V podokně **uzly** konzoly Configuration Manager vyberte server lokality v pasivním režimu a pak na pásu karet zvolte možnost **povýšit na aktivní**.
 
 2. Jednoduchý **stav** serveru, který podporujete, se zobrazí v podokně **uzly** při **zvyšování úrovně**.
 
 3. Po dokončení povýšení se ve sloupci **stav** zobrazí **OK** pro nový server lokality *aktivního* režimu i pro nový server lokality v *pasivním* režimu.
 
-4. V části **Správa** > **Konfigurace** > lokality**lokality**se v názvu serveru primární lokality nyní zobrazuje název nového serveru lokality *aktivního* režimu.
-Podrobný stav najdete na stránce **monitorování** > **stav serveru lokality**.
+4. V části **Správa**  >  **Konfigurace lokality**  >  **lokality**se v názvu serveru primární lokality nyní zobrazuje název nového serveru lokality *aktivního* režimu.
+Podrobný stav najdete na stránce **monitorování**  >  **stav serveru lokality**.
     - Sloupec **Mode (režim** ) určuje, který server je *aktivní* nebo *pasivní*.
 
     - Při povýšení serveru z pasivního režimu na aktivní režim vyberte server lokality, který chcete zvýšit na aktivní, a pak na pásu karet zvolte **Zobrazit stav** . Otevře se okno **stav zvýšení úrovně serveru lokality** , ve kterém se zobrazí další podrobnosti o procesu.
@@ -167,7 +167,7 @@ Když se server lokality v aktivním režimu přepne do pasivního režimu, stan
 
 
 ### <a name="daily-monitoring"></a>Denní monitorování
-Pokud máte primární lokalitu v pasivním režimu, Sledujte ji denně, abyste zajistili, že zůstane synchronizovaná se serverem lokality aktivního režimu a je připraveno k použití. Provedete to tak, že přejdete na **monitorování** > **stav serveru lokality**. Tady můžete zobrazit servery lokality aktivního režimu i pasivního režimu.
+Pokud máte primární lokalitu v pasivním režimu, Sledujte ji denně, abyste zajistili, že zůstane synchronizovaná se serverem lokality aktivního režimu a je připraveno k použití. Provedete to tak, že přejdete na **monitorování**  >  **stav serveru lokality**. Tady můžete zobrazit servery lokality aktivního režimu i pasivního režimu.
 
 Karta **Souhrn** :
 - Sloupec **Mode (režim** ) určuje, který server je aktivní nebo pasivní.
@@ -231,7 +231,7 @@ Chcete-li tento problém vyřešit, můžete nyní zadat umístění obsahu inst
 
 ## <a name="accessibility-improvements"></a>Vylepšení přístupnosti  
 <!--1253000 -->
-Tato verze Preview přináší několik vylepšení [funkcí usnadnění](../understand/accessibility-features.md) v konzole Configuration Manager. Mezi ně patří:     
+Tato verze Preview přináší několik vylepšení [funkcí usnadnění](../understand/accessibility-features.md) v konzole Configuration Manager. Tady jsou některé z nich:     
 
 **Nové klávesové zkratky pro pohyb v konzole:**
 - CTRL + M – nastaví fokus do hlavního (centrálního) podokna.
@@ -271,7 +271,7 @@ Požadavky na připojení k Upgrade Readiness se nezměnily od těch, které jso
 Po dokončení konfigurace požadavků budete připraveni k vytvoření připojení použít průvodce.
 
 ### <a name="use-the-azure-services-wizard-to-configure-upgrade-readiness"></a>Pomocí Průvodce službami Azure nakonfigurujte Upgrade Readiness
-1. V konzole nástroje v části**Přehled** >  **správy** > **Cloud Services** > **služby Azure**a pak zvolte **Konfigurovat služby Azure** na kartě **Domů** na pásu karet a spusťte **Průvodce službami Azure**.
+1. V konzole nástroje v části Přehled **správy**  >  **Overview**  >  **Cloud Services**  >  **služby Azure**a pak zvolte **Konfigurovat služby Azure** na kartě **Domů** na pásu karet a spusťte **Průvodce službami Azure**.
 
 2. Na stránce **služby Azure** vyberte **konektor upgrade Readiness**a pak klikněte na **Další**.
 
@@ -309,7 +309,7 @@ Pokud připojení odeberete, zařízení se nezaregistrují, ale nebudou se regi
    - **Povolit klientům používat bránu pro správu cloudu** – nastavte na **Ano** (výchozí) nebo **ne**.
 2. Nasaďte nastavení klienta do požadované kolekce zařízení.
 
-Pokud chcete potvrdit, že je zařízení připojené ke službě Azure AD, spusťte příkaz **dsregcmd. exe/status** v okně příkazového řádku. Pokud je zařízení připojené k Azure AD, zobrazí se v poli **AzureAdjoined** ve výsledcích hodnota **Ano** .
+Pokud chcete potvrdit, že je zařízení připojené k Azure AD, spusťte příkaz **dsregcmd.exe/status** v okně příkazového řádku. Pokud je zařízení připojené k Azure AD, zobrazí se v poli **AzureAdjoined** ve výsledcích hodnota **Ano** .
 
 ## <a name="create-and-run-powershell-scripts-from-the-configuration-manager-console"></a>Vytvoření a spuštění PowerShellových skriptů z konzoly Configuration Manager
 <!-- 1236459 -->
@@ -396,7 +396,7 @@ Nyní můžete povolit podporu spouštění sítě PXE pro protokol IPv6 pro spu
 #### <a name="to-enable-pxe-boot-support-for-ipv6"></a>Povolení podpory spouštění PXE pro protokol IPv6
 Pomocí následujícího postupu povolte možnost podpory protokolu IPv6 pro technologii PXE.
 
-1. V konzole Configuration Manager přejděte na **Správa** > **Přehled** > **distribučních bodů**a klikněte na **vlastnosti** distribučních bodů s podporou technologie PXE.
+1. V konzole Configuration Manager přejděte na **Správa**  >  **Přehled**  >  **distribučních bodů**a klikněte na **vlastnosti** distribučních bodů s podporou technologie PXE.
 2. Na kartě **PXE** vyberte **podporovat IPv6** , aby se povolila podpora IPv6 pro PXE.
 
 ## <a name="manage-microsoft-surface-driver-updates"></a>Spravovat aktualizace ovladačů Microsoft Surface
@@ -414,13 +414,13 @@ Zkuste provést následující úkoly a pak nám poslat **zpětnou vazbu** z kar
 
 ## <a name="configure-windows-update-for-business-deferral-policies"></a>Konfigurace zásad odložení web Windows Update pro firmy
 <!-- 1290890 -->
-Teď můžete nakonfigurovat zásady odložení pro aktualizace funkcí Windows 10 nebo aktualizace kvality pro zařízení s Windows 10 spravovaná přímo pomocí web Windows Update pro firmy. Zásady odložení můžete spravovat v uzlu nové **zásady web Windows Update pro firmy** v části **softwarová knihovna** > **Windows 10 – Údržba**.
+Teď můžete nakonfigurovat zásady odložení pro aktualizace funkcí Windows 10 nebo aktualizace kvality pro zařízení s Windows 10 spravovaná přímo pomocí web Windows Update pro firmy. Zásady odložení můžete spravovat v uzlu nové **zásady web Windows Update pro firmy** v části **softwarová knihovna**  >  **Windows 10 – Údržba**.
 
 ### <a name="prerequisites"></a>Požadavky
 Zařízení s Windows 10 spravovaná pomocí web Windows Update pro firmy musí mít připojení k Internetu.
 
 #### <a name="to-create-a-windows-update-for-business-deferral-policy"></a>Vytvoření zásady pro odložení web Windows Update pro firmy
-1. V **knihovně** > **softwaru Windows 10 Údržba** > **web Windows Update pro podnikové zásady**
+1. V **knihovně softwaru**  >  **Windows 10 Údržba**  >  **web Windows Update pro podnikové zásady**
 2. Na kartě **Domů** ve skupině **vytvořit** vyberte **vytvořit web Windows Update pro firmy** a otevřete tak Průvodce vytvořením zásad web Windows Update pro firmy.
 3. Na stránce **Obecné** zadejte název a popis zásady.
 4. Na stránce **zásady odložení** nakonfigurujte, jestli se mají odložit nebo pozastavit aktualizace funkcí.    
@@ -437,7 +437,7 @@ Zařízení s Windows 10 spravovaná pomocí web Windows Update pro firmy musí 
 8. Dokončete průvodce a vytvořte novou zásadu odložení.
 
 #### <a name="to-deploy-a-windows-update-for-business-deferral-policy"></a>Nasazení zásad pro odložení web Windows Update pro firmy
-1. V **knihovně** > **softwaru Windows 10 Údržba** > **web Windows Update pro podnikové zásady**
+1. V **knihovně softwaru**  >  **Windows 10 Údržba**  >  **web Windows Update pro podnikové zásady**
 2. Na kartě **Domů** ve skupině **nasazení** vyberte **nasadit web Windows Update pro podnikové zásady**.
 3. Nakonfigurujte tahle nastavení:
     - **Zásady konfigurace, které se mají nasadit**: vyberte zásady web Windows Update pro firmy, které chcete nasadit.
@@ -483,7 +483,7 @@ V této verzi jsme přidali následující nová nastavení, která můžete pou
 - **Změna systémového času**
 - **Úprava názvu zařízení**
 
-### <a name="store"></a>Store
+### <a name="store"></a>Uložení
 
 - **Automaticky aktualizovat aplikace ze Storu**
 - **Použít pouze privátní úložiště**
@@ -543,7 +543,7 @@ Od této verze můžete použít tři nová nastavení zásad správy mobilních
 <!-- 1290826 -->
 Od této verze můžou správci teď určit, že uživatelé nebudou moct do svého hybridního prostředí registrovat osobní zařízení s Androidem nebo iOS. To vám umožní omezit registrovaná zařízení na předem deklarovaná zařízení, která patří společnosti nebo zařízení s iOS registrovaná jenom pomocí Program registrace zařízení.
 
-### <a name="try-it-out"></a>Vyzkoušejte si to.
+### <a name="try-it-out"></a>Vyzkoušet
 1. V konzole nástroje Configuration Manager přejděte v pracovním prostoru **Správa** do části **Cloudové služby** > **Předplatné Microsoft Intune**.
 2. Na kartě **Domů** ve skupině **předplatné** zvolte **Konfigurovat platformy** a pak vyberte **Android** nebo **iOS**.
 3. Vyberte možnost **blokovat zařízení v osobním vlastnictví**.
@@ -564,8 +564,8 @@ Aktualizovali jsme popisy nastavení pro položky konfigurace Androidu for Work 
 
 Nastavení DisallowCrossProfileCopyPaste na hodnotu true brání chování funkce kopírování a vkládání mezi osobními a pracovními profily Androidu for Work.
 
-### <a name="try-it-out"></a>Vyzkoušejte si to.
-1. V konzole Configuration Manager vyberte **prostředky a kompatibilita** > **Přehled** > **Nastavení** > dodržování předpisů**položky konfigurace**.
+### <a name="try-it-out"></a>Vyzkoušet
+1. V konzole Configuration Manager vyberte **prostředky a kompatibilita**  >  **Přehled**  >  **Nastavení dodržování předpisů**  >  **položky konfigurace**.
 2. Zvolte **vytvořit** a vytvořte novou položku konfigurace a zadejte **název** a **Android for Work**.
 3. Ve skupinách nastavení zařízení ke konfiguraci vyberte **pracovní profil**a klikněte na tlačítko **Další**.
 4. Vyberte hodnotu pro **Povolení sdílení dat mezi pracovními a osobními profily**a pak dokončete průvodce.
@@ -574,5 +574,5 @@ Nastavení DisallowCrossProfileCopyPaste na hodnotu true brání chování funkc
 <!-- 1097546 -->
 Od této verze můžete použít Ověření stavu zařízení stav jako pravidlo zásad dodržování předpisů pro podmíněný přístup k prostředkům společnosti.
 
-### <a name="try-it-out"></a>Vyzkoušejte si to.
+### <a name="try-it-out"></a>Vyzkoušet
 Vyberte pravidlo Ověření stavu zařízení jako součást hodnocení zásad dodržování předpisů.

@@ -10,12 +10,12 @@ ms.assetid: 140c522f-d09a-40b6-a4b0-e0d14742834a
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: bb770a559904421f6bf01616504331dbebb9b549
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 9cb8097fbdd57184e5cd0e229cf96dcb317cf1e5
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268075"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127337"
 ---
 # <a name="tutorial-enable-co-management-for-existing-configuration-manager-clients"></a>Kurz: povolení spolusprávy pro stávající klienty Configuration Manager
 
@@ -169,13 +169,9 @@ Když máte na začátku hybridní konfigurace a Configuration Manager klienta A
 
 ### <a name="enable-co-management-starting-in-version-1906"></a>Povolit spolusprávu počínaje verzí 1906
 
-Pokud chcete povolit spolusprávu od verze Configuration Manager 1906, postupujte podle následujících pokynů:
-
 [!INCLUDE [Enable Co-management in version 1906 and later](includes/enable-co-management-1906-and-higher.md)]
 
 ### <a name="enable-co-management-in-version-1902-and-earlier"></a>Povolit spolusprávu ve verzi 1902 a novější
-
-Pokud chcete povolit spolusprávu pro Configuration Manager verze 1902 a starší, postupujte podle následujících pokynů:
 
 [!INCLUDE [Enable Co-management in version 1902 and earlier](includes/enable-co-management-1902-and-earlier.md)]
 

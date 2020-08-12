@@ -5,17 +5,17 @@ description: Naučte se používat Configuration Manager k upgradu operačního 
 ms.date: 08/27/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: c21eec87-ad1c-4465-8e45-5feb60b92707
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8bfb45ba835851c33d6017f7f0a884bd2c1e9421
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: a9ed8e1ece27117993761a3ce52c462e94e9f79a
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83429323"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88124769"
 ---
 # <a name="upgrade-windows-to-the-latest-version-with-configuration-manager"></a>Upgrade Windows na nejnovější verzi pomocí Configuration Manager
 

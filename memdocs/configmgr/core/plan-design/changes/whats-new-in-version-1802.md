@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: e7bc30c4350d96654a0f6a6ae548d63c2928e791
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 87056482f098a440e5950b76520ab410844a1888
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82904659"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128997"
 ---
 # <a name="whats-new-in-version-1802-of-configuration-manager"></a>Co je nového ve verzi 1802 Configuration Manager
 
@@ -32,7 +32,7 @@ Nyní jsou k dispozici i následující další aktualizace této verze:
 > [!TIP]  
 > Chcete-li nainstalovat novou lokalitu, je nutné použít základní verzi Configuration Manager.  
 >
-> Další informace:    
+> Přečtěte si další informace:    
 > - [Instalace nových lokalit](../../servers/deploy/install/installing-sites.md)  
 > - [Instalace aktualizací v lokalitách](../../servers/manage/updates.md)  
 > - [Základní a aktualizační verze](../../servers/manage/updates.md#bkmk_Baselines)
@@ -208,7 +208,7 @@ Výchozí šablona pořadí úkolů pro místní upgrade systému Windows 10 nyn
 
 ### <a name="improvements-to-operating-system-deployment"></a>Vylepšení nasazení operačního systému
 Tato verze zahrnuje následující vylepšení nasazení operačního systému:
-- Při spuštění CMTrace. exe v systému Windows PE již nebudete vyzváni k výběru, zda má být program nastaven jako výchozí prohlížeč pro soubory protokolu. <!-- SMS 500897 -->
+- Když v systému Windows PE spouštíte cmtrace.exe, nebudete již vyzváni, abyste zvolili, zda chcete tento program nastavit jako výchozí prohlížeč pro soubory protokolu. <!-- SMS 500897 -->
 - Přidejte spouštěcí bitové kopie do kroku [Stáhnout obsah balíčku](../../../osd/understand/task-sequence-steps.md#BKMK_DownloadPackageContent) pořadí úkolů.
 - Vylepšení kroku [pořadí úkolů spuštění](../../../osd/understand/task-sequence-steps.md#child-task-sequence) : <!-- 1261338 -->   
   - Podpora všech scénářů nasazení operačního systému z centra softwaru, technologie PXE a médií.
@@ -236,7 +236,7 @@ Pokud chce koncový uživatel nebo stolní počítač nainstalovat na zařízen�
 
 ### <a name="use-software-center-to-browse-and-install-user-available-applications-on-azure-ad-joined-devices"></a>Použití centra softwaru k procházení a instalaci aplikací dostupných uživatelům na zařízeních připojených k Azure AD
 <!-- 1322613 -->
-Pokud nasadíte aplikace jako dostupné pro uživatele, mohou je nyní procházet a instalovat prostřednictvím centra softwaru v Azure Active Directory (Azure AD). Další informace najdete v tématu [nasazení aplikací dostupných pro uživatele na zařízeních připojených k Azure AD](../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications-on-azure-ad-joined-devices).
+Pokud nasadíte aplikace jako dostupné pro uživatele, mohou je nyní procházet a instalovat prostřednictvím centra softwaru v Azure Active Directory (Azure AD). Další informace najdete v tématu [nasazení aplikací dostupných pro uživatele](../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications).
 
 ### <a name="hide-installed-applications-in-software-center"></a>Skrýt nainstalované aplikace v centru softwaru
 <!--1357592-->
@@ -259,7 +259,7 @@ Pravidla automatického nasazení je možné naplánovat tak, aby vyhodnotila po
 
 
 
-## <a name="reporting"></a>Vytváření sestav
+## <a name="reporting"></a>Generování sestav
 
 ### <a name="report-for-default-browser-counts"></a>Sestava pro výchozí počty prohlížečů
 <!-- 1357830 -->

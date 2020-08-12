@@ -2,20 +2,20 @@
 title: Nasazení aplikací
 titleSuffix: Configuration Manager
 description: Vytvoření nebo simulace nasazení aplikace na kolekci zařízení nebo uživatelů
-ms.date: 07/26/2019
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-app
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 2629c376-ec43-4f0e-a78b-4223cc9302bf
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a7bbf395a5de98459043609986e51647362e7a0b
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 6c2fcd583e860273e2fbfc9fcda1e08053336345
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82075332"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127509"
 ---
 # <a name="deploy-applications-with-configuration-manager"></a>Nasazení aplikací pomocí Configuration Manager
 
@@ -29,56 +29,51 @@ Počínaje verzí 1906 můžete vytvořit skupinu aplikací, které můžete ode
 
 Můžete také simulovat nasazení aplikace. Tato simulace testuje použitelnost nasazení bez instalování nebo odinstalování aplikace. Simulované nasazení vyhodnocuje detekční metodu, požadavky a závislosti pro typ nasazení a hlásí výsledky v uzlu **nasazení** pracovního prostoru **monitorování** . Další informace najdete v tématu [Simulace nasazení aplikace](simulate-application-deployments.md).
 
-> [!Note]
+> [!NOTE]
 > Můžete simulovat jenom nasazení požadovaných aplikací, ale ne balíčky nebo aktualizace softwaru.
 >
 > Zařízení zaregistrovaná v MDM nepodporují simulovaná nasazení, uživatelské prostředí ani nastavení plánování.
-
-
 
 ## <a name="deploy-an-application"></a><a name="bkmk_deploy"></a>Nasazení aplikace
 
 1. V konzole Configuration Manager otevřete pracovní prostor **Knihovna softwaru** , rozbalte položku **Správa aplikací**a vyberte uzel **aplikace** nebo **skupiny aplikací** .
 
-2. Vyberte aplikaci nebo skupinu aplikací ze seznamu, který chcete nasadit. Na pásu karet klikněte na **nasadit**.  
+1. Vyberte aplikaci nebo skupinu aplikací ze seznamu, který chcete nasadit. Na pásu karet vyberte **nasadit**.  
 
-> [!Note]  
+> [!NOTE]
 > Po zobrazení vlastností stávajícího nasazení budou v následujících oddílech odpovídat kartám okna Vlastnosti nasazení:  
 >
 > - [Obecné](#bkmk_deploy-general)
 > - [Obsah](#bkmk_deploy-content)
 > - [Nastavení nasazení](#bkmk_deploy-settings)
 > - [Plánování](#bkmk_deploy-sched)
-> - [Zkušenosti uživatele](#bkmk_deploy-ux)
+> - [Činnost koncového uživatele](#bkmk_deploy-ux)
 > - [Výstrahy](#bkmk_deploy-alerts)
-
 
 ### <a name="deployment-general-information"></a><a name="bkmk_deploy-general"></a>**Obecné** informace o nasazení
 
 Na stránce **Obecné** v nástroji Průvodce nasazením softwaru zadejte následující informace:  
 
-- **Software**: Tato hodnota zobrazí aplikaci, která se má nasadit. Klikněte na tlačítko **Procházet** a vyberte jinou aplikaci.  
+- **Software**: Tato hodnota zobrazí aplikaci, která se má nasadit. Vyberte **Procházet** a zvolte jinou aplikaci.  
 
-- **Kolekce**: kliknutím na tlačítko **Procházet** vyberte kolekci, do které chcete aplikaci nasadit.  
+- **Kolekce**: vyberte **Procházet** a zvolte cílovou kolekci pro toto nasazení aplikace.
 
 - **Použít výchozí skupiny distribučních bodů přidružené k této kolekci**: Uložte obsah aplikace ve výchozí skupině distribučních bodů kolekce. Pokud jste vybranou kolekci nepřidali se skupinou distribučních bodů, je tato možnost zobrazena šedě.  
 
 - **Automaticky distribuovat obsah pro závislosti**: Pokud některý z typů nasazení v aplikaci obsahuje závislosti, pak lokalita také pošle závislý obsah aplikace do distribučních bodů.  
 
-    >[!Note]  
-    > Pokud aktualizujete závislou aplikaci po nasazení primární aplikace, lokalita nebude automaticky distribuovat žádný nový obsah pro závislost.  
+    >[!NOTE]
+    > Pokud aktualizujete závislou aplikaci po nasazení primární aplikace, lokalita nebude automaticky distribuovat žádný nový obsah pro závislost.
 
-- **Komentáře (volitelné)**: Volitelně můžete zadat popis tohoto nasazení.  
-
+- **Komentáře (volitelné)**: Volitelně můžete zadat popis tohoto nasazení.
 
 ### <a name="deployment-content-options"></a><a name="bkmk_deploy-content"></a>Možnosti **obsahu** nasazení
 
-Na stránce **obsah** klikněte na tlačítko **Přidat** a distribuujte obsah této aplikace do distribučního bodu nebo skupiny distribučních bodů.
+Na stránce **obsah** vyberte **Přidat** a distribuujte obsah této aplikace do distribučního bodu nebo skupiny distribučních bodů.
 
 Pokud jste na stránce Obecné vybrali možnost **použít výchozí distribuční body přidružené k této kolekci** , pak se tato možnost vyplní automaticky. Pouze člen role zabezpečení **Správce aplikací** ho může upravit.
 
 Pokud je obsah aplikace již distribuován, zobrazí se zde.
-
 
 ### <a name="deployment-settings"></a><a name="bkmk_deploy-settings"></a>**Nastavení nasazení**
 
@@ -110,11 +105,10 @@ Na stránce **nastavení nasazení** zadejte následující informace:
 
 - **Automaticky upgradovat všechny nahrazené verze této aplikace**: klient upgraduje všechny nahrazené verze aplikace pomocí nahrazující aplikace.
 
-    > [!Note]  
+    > [!NOTE]
     > Tato možnost funguje bez ohledu na schválení správce. Pokud správce již schválil nahrazenou verzi, nemusí také schvalovat nahrazující verzi. Schválení je pouze pro nové požadavky, nikoli pro nahrazující upgrady.<!--515824-->  
     >
     > V případě **dostupného** účelu instalace můžete tuto možnost povolit nebo zakázat. <!--1351266-->
-
 
 #### <a name="approval-settings"></a><a name="bkmk_approval"></a>Nastavení schválení
 
@@ -126,14 +120,11 @@ Chování při schvalování aplikací závisí na tom, jestli povolíte doporu�
 
 Další informace najdete v tématu [schvalování aplikací](app-approval.md).
 
-
 #### <a name="deployment-properties-deployment-settings"></a>Vlastnosti nasazení – **nastavení nasazení**
 
 Pokud zobrazíte vlastnosti nasazení, je-li podporováno technologií typu nasazení, na kartě **nastavení nasazení** se zobrazí následující možnost:
 
 **Automaticky zavřete všechny spuštěné spustitelné soubory, které jste zadali na kartě chování při instalaci v dialogovém okně vlastnosti typu nasazení**. Další informace najdete v tématu [kontroly spouštění spustitelných souborů před instalací aplikace](#bkmk_exe-check).
-
-
 
 ### <a name="deployment-scheduling-settings"></a><a name="bkmk_deploy-sched"></a>Nastavení **plánování** nasazení
 
@@ -143,10 +134,9 @@ Ve výchozím nastavení Configuration Manager zásady nasazení zpřístupnit k
 
 Pokud je nasazení **požadováno**, zadejte také **konečný termín instalace**. Ve výchozím nastavení je tento konečný termín co nejrychleji.
 
-Například je třeba nasadit novou obchodní aplikaci. Všichni uživatelé ji potřebují nainstalovat v určitou dobu, ale chcete jim dát možnost se k brzkému přihlášení přihlásit. Také je nutné zajistit, aby lokalita rozšíří obsah do všech distribučních bodů. Naplánujete, aby byla aplikace k dispozici po dobu 5 dní od dnešního dne. Tento plán vám poskytne čas k distribuci obsahu a potvrzení jeho stavu. Potom nastavíte konečný termín instalace na jeden měsíc od dnešního dne. Uživatelé uvidí aplikaci v centru softwaru, když jsou k dispozici během pěti dnů. Pokud to neudělá, klient v konečném termínu instalace automaticky nainstaluje aplikaci.
+Například je třeba nasadit novou obchodní aplikaci. Všichni uživatelé ji potřebují nainstalovat v určitou dobu, ale chcete jim dát možnost se k brzkému souhlasu vyjádřit. Také je nutné zajistit, aby lokalita rozšíří obsah do všech distribučních bodů. Naplánujete, aby byla aplikace k dispozici po dobu 5 dní od dnešního dne. Tento plán vám poskytne čas k distribuci obsahu a potvrzení jeho stavu. Potom nastavíte konečný termín instalace na jeden měsíc od dnešního dne. Uživatelé uvidí aplikaci v centru softwaru, když jsou k dispozici během pěti dnů. Pokud to neudělá, klient v konečném termínu instalace automaticky nainstaluje aplikaci.
 
 Pokud aplikace, kterou nasazujete, nahrazuje jinou aplikaci, nastavte konečný termín instalace, kdy uživatelé obdrží novou aplikaci. Nastavte **konečný termín instalace** pro upgrade uživatelů pomocí nahrazené aplikace.
-
 
 #### <a name="delay-enforcement-with-a-grace-period"></a>Zpoždění vynucení s obdobím odkladu
 
@@ -158,11 +148,11 @@ Může být vhodné dát uživatelům větší čas na instalaci požadovaných 
 
 Po uplynutí konečného termínu klient nainstaluje aplikaci v prvním nefiremním okně, které uživatel nakonfigurovali, až do této lhůty odkladu. Uživatel ale přesto může spustit Centrum softwaru a nainstalovat aplikaci kdykoli. Jakmile vyprší lhůta odkladu, vynucení se vrátí do normálního chování pro zpožděná nasazení.
 
-![Diagram časové osy období odkladu](media/grace-period.svg)
+:::image type="content" source="media/grace-period.svg" alt-text="DIagram časové osy období odkladu":::
 
 <!-- SCCMDocs issue #1599 -->
 
-> [!Note]  
+> [!NOTE]
 > Ve většině případů tato funkce řeší situaci, kdy je zařízení vypnuté, když je uživatel mimo kancelář. Technicky, období odkladu začíná, když klient získá zásady po konečném termínu nasazení. Ke stejnému chování dojde, pokud zastavíte službu Configuration Manager klienta (CcmExec) a pak ji znovu spustíte později po konečném termínu nasazení.
 
 ### <a name="deployment-user-experience-settings"></a><a name="bkmk_deploy-ux"></a>Nastavení **uživatelského prostředí** nasazení
@@ -171,46 +161,40 @@ Na stránce **činnost koncového uživatele** zadejte informace o tom, jak mů�
 
 - **Oznámení uživateli**: Určuje, jestli se má v centru softwaru v nakonfigurovaném čase zobrazovat oznámení. Toto nastavení také určuje, zda mají být uživatelé upozorněni na klientské počítače. U dostupných nasazení nemůžete vybrat možnost, která se má **Skrýt v nástroji Software Center a všech oznámeních**.  
 
-    - **Když se vyžadují změny softwaru, zobrazí se uživateli dialogové okno namísto informačního oznámení.**<!--3555947-->: Od verze 1902 vyberte tuto možnost, chcete-li změnit činnost uživatele, aby byla více rušivá. Platí jenom pro požadovaná nasazení. Další informace najdete v tématu [plánování centra softwaru](../plan-design/plan-for-software-center.md#bkmk_impact).
+  - **Když se vyžadují změny softwaru, zobrazí se uživateli dialogové okno namísto informačního oznámení.**<!--3555947-->: Od verze 1902 vyberte tuto možnost, chcete-li změnit činnost uživatele, aby byla více rušivá. Platí jenom pro požadovaná nasazení. Další informace najdete v tématu [plánování centra softwaru](../plan-design/plan-for-software-center.md#bkmk_impact).
 
 - **Instalace softwaru** a **restart systému**: Nakonfigurujte tato nastavení jenom pro požadovaná nasazení. Určují chování, když nasazení dosáhne konečného termínu mimo jakákoli definovaná časová období údržby. Další informace o časových obdobích údržby najdete v tématu [použití časových období](../../core/clients/manage/collections/use-maintenance-windows.md)údržby.  
 
 - **Zpracování filtru zápisu pro zařízení se systémem Windows Embedded**: Toto nastavení řídí chování při instalaci na zařízeních se systémem Windows Embedded, která jsou povolena pomocí filtru zápisu. Vyberte možnost potvrdit změny při dokončení instalace nebo během časového období údržby. Když vyberete tuto možnost, vyžaduje se restartování a změny se na zařízení zachovají. V opačném případě se aplikace nainstaluje do dočasného překrytí a potvrdí se později.  
 
-    - Když nasadíte aktualizaci softwaru do zařízení se systémem Windows Embedded, ujistěte se, že je zařízení členem kolekce, která má nakonfigurované časové období údržby. Další informace o oknech údržby a zařízeních se systémem Windows Embedded najdete v tématu [vytváření aplikací pro Windows Embedded](../get-started/creating-windows-embedded-applications.md).  
-
+  - Když nasadíte aktualizaci softwaru do zařízení se systémem Windows Embedded, ujistěte se, že je zařízení členem kolekce, která má nakonfigurované časové období údržby. Další informace o oknech údržby a zařízeních se systémem Windows Embedded najdete v tématu [vytváření aplikací pro Windows Embedded](../get-started/creating-windows-embedded-applications.md).  
 
 ### <a name="deployment-alerts"></a><a name="bkmk_deploy-alerts"></a>**Výstrahy** nasazení
 
-Na stránce **výstrahy** nakonfigurujte, jak Configuration Manager generuje výstrahy pro toto nasazení. Pokud používáte i System Center Operations Manager, nakonfigurujte také jeho výstrahy. Pro požadovaná nasazení můžete nakonfigurovat pouze některé výstrahy. 
-
+Na stránce **výstrahy** nakonfigurujte, jak Configuration Manager generuje výstrahy pro toto nasazení. Pokud používáte i System Center Operations Manager, nakonfigurujte také jeho výstrahy. Pro požadovaná nasazení můžete nakonfigurovat pouze některé výstrahy.
 
 ## <a name="create-a-phased-deployment"></a><a name="bkmk_phased"></a>Vytvoření postupného nasazení
 
 <!--1358147-->
-Počínaje verzí 1806 vytvořte dvoufázové nasazení pro aplikaci. Postupné nasazení vám umožní orchestrovat koordinované, sekvenční zavedení softwaru na základě přizpůsobitelných kritérií a skupin. Například Nasaďte aplikaci do pilotní kolekce a potom automaticky pokračuje v zavedení na základě kritérií úspěchů.
+Postupné nasazení vám umožní orchestrovat koordinované, sekvenční zavedení softwaru na základě přizpůsobitelných kritérií a skupin. Například Nasaďte aplikaci do pilotní kolekce a potom automaticky pokračuje v zavedení na základě kritérií úspěchů.
 
-Další informace najdete v těchto článcích:  
+Další informace najdete v následujících článcích:  
 
 - [Vytvoření postupného nasazení](../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json)  
 
 - [Správa a sledování postupných nasazení](../../osd/deploy-use/manage-monitor-phased-deployments.md?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json)  
 
-
-
 ## <a name="delete-a-deployment"></a><a name="bkmk_delete"></a>Odstranění nasazení
 
 1. V konzole Configuration Manager otevřete pracovní prostor **Knihovna softwaru** , rozbalte položku **Správa aplikací**a vyberte uzel **aplikace** nebo **skupiny aplikací** .  
 
-2. Vyberte aplikaci nebo skupinu aplikací, které obsahují nasazení, které chcete odstranit.  
+1. Vyberte aplikaci nebo skupinu aplikací, které obsahují nasazení, které chcete odstranit.  
 
-3. Přepněte na kartu **nasazení** v podokně podrobností a vyberte nasazení.  
+1. Přepněte na kartu **nasazení** v podokně podrobností a vyberte nasazení.  
 
-4. Na pásu karet na kartě **nasazení** a ve skupině **nasazení** klikněte na **Odstranit**.  
+1. Na pásu karet klikněte na kartě **nasazení** ve skupině **nasazení** na možnost **Odstranit**.  
 
-Při odstranění nasazení aplikace nebudou odebrány všechny instance aplikace, které již klienti nainstalovali. Chcete-li odebrat tyto aplikace, nasaďte aplikaci na počítače, které chcete **odinstalovat**. Pokud odstraníte nasazení aplikace nebo odeberete prostředek z kolekce, do které nasazujete, aplikace se už nebude zobrazovat v centru softwaru.
-
-
+Při odstranění nasazení aplikace nebudou odebrány všechny instance aplikace, které již klienti nainstalovali. Chcete-li odebrat tyto aplikace, nasaďte aplikaci na počítače, které chcete **odinstalovat**. Pokud odstraníte nasazení aplikace, aplikace se už nebude zobrazovat v centru softwaru. K stejnému chování dochází, když odeberete prostředek z cílové kolekce pro nasazení.
 
 ## <a name="user-notifications-for-required-deployments"></a><a name="bkmk_notify"></a>Oznámení uživatelů pro požadovaná nasazení
 
@@ -220,9 +204,9 @@ Když uživatelé dostanou požadovaný software, vyberte nastavení připomenou
 
 - **Pevná doba**: Určuje, zda má být u oznámení naplánováno zobrazení po zvoleném čase. Pokud například vyberete 30 minut, oznámení se znovu zobrazí za 30 minut.  
 
-![Skupina Počítačový agent ve výchozím nastavení klienta](media/ComputerAgentSettings.png)
+:::image type="content" source="media/ComputerAgentSettings.png" alt-text="Skupina Počítačový agent ve výchozím nastavení klienta":::
 
-Maximální doba odložení je vždy založena na hodnotách oznámení nakonfigurovaných v nastavení klienta při každé časové ose nasazení. Příklad:  
+Maximální doba odložení je vždy založena na hodnotách oznámení nakonfigurovaných v nastavení klienta při každé časové ose nasazení. Například:  
 
 - **Konečný termín nasazení je delší než 24 hodin a nastavení připomenout uživatele po dobu (hodiny)** na stránce **Počítačový agent** po dobu 10 hodin.  
 
@@ -232,27 +216,25 @@ Maximální doba odložení je vždy založena na hodnotách oznámení nakonfig
 
 - V případě, že se blíží konečný termín nasazení, zobrazuje dialogové okno méně možností. Tyto možnosti jsou v souladu s příslušnými nastaveními klienta pro každou součást časové osy nasazení.  
 
-V případě nasazení s vysokým rizikem, jako je pořadí úkolů, které nasazuje operační systém, je uživatelské prostředí upozorňovánější. Místo dočasného oznámení na hlavním panelu se zobrazí dialogové okno podobné následujícímu: pokaždé, když se vám zobrazí upozornění, že je nutná údržba nejdůležitějšího softwaru:
+V případě nasazení s vysokým rizikem, jako je například pořadí úkolů, které nasazuje operační systém, je uživatelské prostředí upozorňovánější. Místo dočasného oznámení na hlavním panelu se zobrazí dialogové okno podobné následujícímu: pokaždé, když se vám zobrazí upozornění, že je nutná údržba nejdůležitějšího softwaru:
 
-![Požadovaný softwarový Dialog upozorňuje na údržbu kritického softwaru.](media/client-toast-notification.png)
-
-
+:::image type="content" source="media/client-toast-notification.png" alt-text="Požadovaný softwarový Dialog upozorňuje na údržbu kritického softwaru.":::
 
 ## <a name="check-for-running-executable-files"></a><a name="bkmk_exe-check"></a>Kontrolovat spouštění spustitelných souborů
 
 Nakonfigurujte nasazení, aby kontrolovalo, jestli jsou na klientovi spuštěné některé spustitelné soubory. Tato možnost slouží ke kontrole procesů, které mohou narušit instalaci aplikace. Pokud je některý z těchto spustitelných souborů spuštěný, klient zablokuje instalaci typu nasazení. Aby mohl uživatel nainstalovat typ nasazení, musí zavřít spuštěný spustitelný soubor. Pro nasazení s účelem požadováno může klient automaticky zavřít běžící spustitelný soubor.
 
-1. Otevřete dialogové okno **vlastnosti** pro typ nasazení.  
+1. Otevřete **vlastnosti** pro typ nasazení.
 
-2. Přepněte na kartu **chování instalace** a klikněte na **Přidat**.  
+1. Přepněte na kartu **chování instalace** a vyberte **Přidat**.
 
-3. V dialogovém okně **Přidat spustitelný soubor** zadejte název cílového spustitelného souboru. Volitelně můžete zadat popisný název aplikace, který vám usnadní jeho identifikaci v seznamu.  
+1. V okně **Přidat spustitelný soubor** zadejte název cílového spustitelného souboru. Volitelně můžete zadat popisný název aplikace, který vám usnadní jeho identifikaci v seznamu.
 
-4. Klikněte na tlačítko **OK**a potom kliknutím na tlačítko **OK** zavřete okno Vlastnosti typu nasazení.  
+1. Výběrem **OK** uložte a zavřete okno Vlastnosti typu nasazení.
 
-5. Když nasadíte aplikaci, vyberte možnost **automaticky zavřít všechny spuštěné spustitelné soubory, které jste zadali na kartě chování při instalaci v dialogovém okně vlastnosti typu nasazení**. Tato možnost je na kartě **nastavení nasazení** ve vlastnostech nasazení.  
+1. Když nasadíte aplikaci, vyberte možnost **automaticky zavřít všechny spuštěné spustitelné soubory, které jste zadali na kartě chování při instalaci v dialogovém okně vlastnosti typu nasazení**. Tato možnost je na kartě **nastavení nasazení** ve vlastnostech nasazení.  
 
-> [!Note]
+> [!NOTE]
 > Pokud nakonfigurujete aplikaci pro kontrolu spouštění spustitelných souborů a zahrnete ji do kroku pořadí úloh [instalovat aplikaci](../../osd/understand/task-sequence-steps.md#BKMK_InstallApplication) , pořadí úkolů ji nepůjde nainstalovat. Pokud tento krok pořadí úkolů nenastavíte tak, aby pokračoval při chybě, pak celé pořadí úkolů se nezdařilo.
 
 ### <a name="client-behaviors-and-user-notifications"></a>Chování klienta a oznámení uživateli
@@ -263,30 +245,30 @@ Jakmile klienti dostanou nasazení, platí následující chování:
 
 - Pokud jste aplikaci nasadili podle **potřeby**a zadali **jste k automatickému zavření všech spuštěných spustitelných souborů, které jste zadali na kartě chování při instalaci v dialogovém okně vlastnosti typu nasazení**, klient zobrazí oznámení. Informuje uživatele o tom, že zadané spustitelné soubory se automaticky zavřou, když je dosaženo konečného termínu instalace aplikace.  
 
-    - Naplánujte Tato dialogová okna ve skupině **Počítačový agent** v nastavení klienta. Další informace najdete v tématu [Počítačový agent](../../core/clients/deploy/about-client-settings.md#computer-agent).  
+  - Naplánujte Tato dialogová okna ve skupině **Počítačový agent** v nastavení klienta. Další informace najdete v tématu [Počítačový agent](../../core/clients/deploy/about-client-settings.md#computer-agent).  
 
-    - Pokud nechcete, aby uživatel tyto zprávy zobrazil, vyberte možnost **Skrýt v nástroji Software Center a všech oznámeních** na kartě **činnost koncového uživatele** ve vlastnostech nasazení. Další informace najdete v tématu [nasazení nastavení uživatelského prostředí](#bkmk_deploy-ux).  
+  - Pokud nechcete, aby uživatel tyto zprávy zobrazil, vyberte možnost **Skrýt v nástroji Software Center a všech oznámeních** na kartě **činnost koncového uživatele** ve vlastnostech nasazení. Další informace najdete v tématu [nasazení nastavení uživatelského prostředí](#bkmk_deploy-ux).  
 
 - Pokud jste aplikaci nasadili podle **potřeby**a neurčili jste **automaticky zavřít všechny spuštěné spustitelné soubory zadané na kartě chování při instalaci v dialogovém okně vlastnosti typu nasazení**, pak se instalace aplikace nezdařila, pokud je spuštěna jedna nebo více zadaných aplikací.  
 
+## <a name="deploy-user-available-applications"></a>Nasazení aplikací dostupných pro uživatele
 
+Když nasadíte aplikace jako **dostupné** pro kolekce uživatelů, můžou uživatelé procházet Centrum softwaru a instalovat aplikace, které potřebují. Pro místní klienty připojené k doméně používá Centrum softwaru přihlašovací údaje domény uživatele k získání seznamu dostupných aplikací z bodu správy.
 
-## <a name="deploy-user-available-applications-on-azure-ad-joined-devices"></a>Nasazení aplikací dostupných pro uživatele na zařízeních připojených k Azure AD
+K dispozici jsou další požadavky na klienty, kteří jsou připojení k Azure Active Directory (Azure AD) nebo obojí.
 
+### <a name="azure-ad-joined-devices"></a>Zařízení připojená k Azure AD
 <!-- 1322613 -->
-Pokud nasadíte aplikace jako dostupné pro uživatele, mohou je Procházet a instalovat prostřednictvím centra softwaru v Azure Active Directory (Azure AD).  
 
-### <a name="prerequisites"></a>Požadavky
+Pokud nasadíte aplikace jako dostupné pro uživatele, mohou je Procházet a instalovat prostřednictvím centra softwaru na zařízeních Azure AD. Pro povolení tohoto scénáře nakonfigurujte následující předpoklady:
 
 - Povolit HTTPS v bodu správy  
 
 - Integrace lokality se službou [Azure AD](../../core/servers/deploy/configure/azure-services-wizard.md) pro **správu cloudu**  
 
-    - Konfigurace [zjišťování uživatelů Azure AD](../../core/servers/deploy/configure/configure-discovery-methods.md#azureaadisc)  
+  - Konfigurace [zjišťování uživatelů Azure AD](../../core/servers/deploy/configure/configure-discovery-methods.md#azureaadisc)  
 
 - Nasazení aplikace jako dostupné pro kolekci uživatelů ze služby Azure AD  
-
-- Distribuce libovolného obsahu aplikace do [distribučního bodu cloudu](../../core/plan-design/hierarchy/use-a-cloud-based-distribution-point.md)  
 
 - Povolit nastavení klienta **použít nové centrum softwaru** ve skupině [Počítačový agent](../../core/clients/deploy/about-client-settings.md#computer-agent)  
 
@@ -294,17 +276,20 @@ Pokud nasadíte aplikace jako dostupné pro uživatele, mohou je Procházet a in
 
 - Podpora internetových klientů:  
 
-    - [Brána pro správu cloudu](../../core/clients/manage/cmg/plan-cloud-management-gateway.md)  
+  - [Brána pro správu cloudu](../../core/clients/manage/cmg/plan-cloud-management-gateway.md) (CMG)
 
-    - Povolit nastavení klienta: **Povolit žádosti o zásady uživatele od internetových klientů** ve skupině [zásad klienta](../../core/clients/deploy/about-client-settings.md#client-policy)  
+  - Distribuce libovolného obsahu aplikace do CMG s povoleným obsahem nebo do [cloudového distribučního bodu](../../core/plan-design/hierarchy/use-a-cloud-based-distribution-point.md)  
+
+  - Povolit nastavení klienta: **Povolit žádosti o zásady uživatele od internetových klientů** ve skupině [zásad klienta](../../core/clients/deploy/about-client-settings.md#client-policy)  
 
 - Pro podporu klientů na intranetu:  
 
-    - Přidat distribuční bod cloudu do hraniční skupiny používané klienty  
+  - Přidání distribučního bodu CMG s povoleným obsahem nebo cloudu do hraniční skupiny používané klienty  
 
-    - Klienti musí přeložit plně kvalifikovaný název domény (FQDN) bodu správy s povoleným protokolem HTTPS.  
+  - Klienti musí přeložit plně kvalifikovaný název domény (FQDN) bodu správy s povoleným protokolem HTTPS.  
 
-
+  > [!NOTE]
+  > Pro klienta, který se zjistil jako na intranetu, ale komunikuje přes bránu pro správu cloudu (CMG) v Configuration Manager verze 2002 a starší, Centrum softwaru používá ověřování systému Windows. Když se pokusí získat seznam aplikací dostupných uživateli prostřednictvím CMG, selže. Počínaje verzí 2006 používá identita Azure Active Directory (Azure AD) pro zařízení připojená k Azure AD. Tato zařízení můžou být připojená ke cloudu nebo se připojila k hybridnímu připojení.<!--6935376-->
 
 ## <a name="next-steps"></a>Další kroky
 

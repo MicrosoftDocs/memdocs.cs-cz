@@ -5,17 +5,17 @@ description: Pomocí předzpracovaného média v Configuration Manager můžete 
 ms.date: 05/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: ff6e7267-302a-4563-815e-cdc0d1a4b60f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d5219b518d46ccca174c7aa3fef62fe3334def35
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 82bb02d8154939b4b0e0ee89bcc6637e9393acff
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81711109"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88125215"
 ---
 # <a name="create-prestaged-media"></a>Vytvoření předzpracovaného média
 
@@ -100,7 +100,7 @@ Před použitím předzpracovaného média musí být pevný disk cílového po�
 
     - **Mediální soubor**: Zadejte název výstupních souborů a cestu ke složce, ve které se uloží. Průvodce uloží výstupní soubory do tohoto umístění. Příklad: `\\servername\folder\outputfile.wim`  
 
-    - **Pracovní složka**<!--1359388-->: Proces vytváření médií může vyžadovat mnoho místa na dočasném disku. Ve výchozím nastavení je toto umístění podobné následující cestě: `%UserProfile%\AppData\Local\Temp`. Od verze 1902 získáte větší flexibilitu, kam chcete ukládat tyto dočasné soubory, změňte tuto hodnotu na jinou jednotku a cestu.  
+    - **Pracovní složka**<!--1359388-->: Proces vytváření médií může vyžadovat mnoho místa na dočasném disku. Ve výchozím nastavení je toto umístění podobné následující cestě: `%UserProfile%\AppData\Local\Temp` . Od verze 1902 získáte větší flexibilitu, kam chcete ukládat tyto dočasné soubory, změňte tuto hodnotu na jinou jednotku a cestu.  
 
 6. Na stránce **zabezpečení** zadejte následující možnosti:  
 

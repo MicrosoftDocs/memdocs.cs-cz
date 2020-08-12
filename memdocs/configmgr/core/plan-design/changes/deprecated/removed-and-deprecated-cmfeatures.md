@@ -2,7 +2,7 @@
 title: 'Zastaralé funkce:'
 titleSuffix: Configuration Manager
 description: Přečtěte si o funkcích, které Configuration Manager už nepodporují.
-ms.date: 05/01/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 287a6324-ae65-4d38-b2ef-198d47c91231
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 40eda7184d7be5010bf51e3ac0d30d6d9442203c
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 5ee84a41a5c47ce554e4618b897c8e4933bdbe73
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905059"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129048"
 ---
 # <a name="removed-and-deprecated-features-for-configuration-manager"></a>Odebrané a zastaralé funkce pro Configuration Manager
 
@@ -29,9 +29,8 @@ Tyto informace se mohou v budoucích verzích změnit. Nemusí obsahovat všechn
 
 Následující funkce jsou zastaralé. Můžete je dál používat teď, ale Microsoft plánuje ukončit podporu v budoucnu.
 
-|Funkce|Zastarání poprvé oznámeno|Podpora &nbsp; odebrána|
+|Příznak|Zastarání poprvé oznámeno|Podpora &nbsp; odebrána|
 |-----------|---|--------------|
-| Možnost Analytics pro stolní počítače, která **zobrazí poslední data** pro registraci zařízení a aktualizace zabezpečení.<!-- 7080949 --> Další informace najdete v tématu [latence dat](../../../../desktop-analytics/troubleshooting.md#data-latency).|Květen 2020|Červenec 2020|
 |Implementace pro sdílení obsahu z Azure se změnila. Použijte bránu pro správu cloudu s podporou obsahu. V budoucnu nebudete moci vytvořit tradiční distribuční bod cloudu.|Únor 2019|TBD –<sup>[Poznámka 1](#bkmk_note1)</sup>|
 |Nasazení klasické služby do Azure pro bránu pro správu cloudu a distribuční bod cloudu. Další informace najdete v tématu [plánování pro CMG](../../../clients/manage/cmg/plan-cloud-management-gateway.md#azure-resource-manager).|Listopad 2018|TBD –<sup>[Poznámka 1](#bkmk_note1)</sup>|
 
@@ -43,8 +42,9 @@ Konkrétní časový rámec má být stanoven (TBD). Microsoft doporučuje, abys
 
 Následující funkce již nejsou podporovány. V některých případech už nejsou v produktu.
 
-|Funkce|Zastarání poprvé oznámeno|Podpora &nbsp; odebrána|  
+|Příznak|Zastarání poprvé oznámeno|Podpora &nbsp; odebrána|  
 |-----------|---|--------------|  
+| Možnost Analytics pro stolní počítače, která **zobrazí poslední data** pro registraci zařízení a aktualizace zabezpečení.<!-- 7080949 --> Další informace najdete v tématu [latence dat](../../../../desktop-analytics/troubleshooting.md#data-latency).|Květen 2020|Červenec 2020|
 | Integrace Windows Analytics a Upgrade Readiness. Další informace najdete v [článku KB 4521815: vyřazení služby Windows Analytics na 31. ledna 2020](https://support.microsoft.com/help/4521815/windows-analytics-retirement). | 14. října 2019 | 31. ledna 2020 |
 | Vyhodnocení ověření stavu zařízení pro zásady dodržování předpisů podmíněného přístupu <!--1235616 aka 3608202--> Další informace najdete v tématu [co se stalo s hybridní MDM](../../../../mdm/understand/what-happened-to-hybrid.md).| 3. července 2019 | Verze 1910 |
 | Aplikace Configuration Manager Portál společnosti | 21. května 2019 | Verze 1910 |

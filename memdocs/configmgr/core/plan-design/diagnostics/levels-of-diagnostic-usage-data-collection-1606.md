@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: cd58fb2ad105d3fb94fcc1d2fe56f0ae64f766f1
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 157adee0ce6bbf677bb88c4ae404f92ed0506c42
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81715568"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128810"
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1606-of-configuration-manager"></a>Úrovně shromažďování diagnostických dat o využití pro verzi 1606 Configuration Manager
 

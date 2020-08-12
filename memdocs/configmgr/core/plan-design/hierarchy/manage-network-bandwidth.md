@@ -10,12 +10,12 @@ ms.assetid: e80d1151-91db-4a27-8411-a957297b67d0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b8ee7d00f3b5c98528d9999b83b07aa393b72e36
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: df3188e827623db8faa0b27be2fe282031e9fa50
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81720587"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126388"
 ---
 # <a name="manage-network-bandwidth-for-content"></a>Správa šířky pásma sítě pro obsah
 Aby vám pomohla spravovat šířku pásma sítě, která se používá pro proces správy obsahu Configuration Manager, můžete použít předdefinované ovládací prvky pro plánování a omezování. Můžete také použít připravený obsah. V následujících částech najdete podrobnější popis uvedených možností.
@@ -61,7 +61,7 @@ Volitelně můžete nakonfigurovat distribuční bod jako **připravený** , aby
 
     -   **Automaticky stahovat obsah, když jsou balíčky přiřazeny distribučním bodům**: tuto možnost použijte, pokud máte menší balíčky a nastavení plánování a omezení poskytuje dostatečnou kontrolu pro distribuci obsahu.  
 
-    -   **Stahovat do distribučního bodu pouze změny obsahu**: tuto možnost použijte, pokud očekáváte, že budoucí aktualizace obsahu v balíčku budou obecně menší než počáteční balíček. Můžete například připravit aplikaci, například systém Microsoft Office, protože počáteční velikost balíčku je větší než 700 MB a je příliš velká pro odeslání přes síť. Aktualizace obsahu tohoto balíčku ale můžou být méně než 10 MB a je přijatelné, aby se mohly distribuovat přes síť. Dalším příkladem mohou být balíčky ovladačů, kde počáteční velikost balíčku je velká, ale přírůstkové přidávání ovladačů do balíčku může být malé.  
+    -   **Stahovat do distribučního bodu pouze změny obsahu**: tuto možnost použijte, pokud očekáváte, že budoucí aktualizace obsahu v balíčku budou obecně menší než počáteční balíček. Můžete například připravit aplikaci, například Microsoft 365 aplikace, protože počáteční velikost balíčku je větší než 700 MB a je příliš velká pro odeslání přes síť. Aktualizace obsahu tohoto balíčku ale můžou být méně než 10 MB a je přijatelné, aby se mohly distribuovat přes síť. Dalším příkladem mohou být balíčky ovladačů, kde počáteční velikost balíčku je velká, ale přírůstkové přidávání ovladačů do balíčku může být malé.  
 
     -   **Ručně kopírovat obsah tohoto balíčku do distribučního bodu**: tuto možnost použijte, pokud máte velké balíčky s obsahem, jako je například operační systém, a nikdy nechcete používat síť k distribuci obsahu do distribučního bodu. Když vyberete tuto možnost, musíte připravit obsah v distribučním bodě.  
 

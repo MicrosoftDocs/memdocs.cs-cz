@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 295940337f191b791d8c7a86de4003466213df6b
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ae2846c2a5f7fea86287a05c8cc8f6013d660df6
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81719313"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128946"
 ---
 # <a name="whats-new-in-version-1806-of-configuration-manager-current-branch"></a>Co je nového ve verzi 1806 Configuration Manager Current Branch
 
@@ -60,7 +60,7 @@ Další informace najdete v tématu [CMPivot](../../servers/manage/cmpivot.md).
 <!--1128774-->
 Vysoká dostupnost samostatné role serveru primární lokality je řešení založené na Configuration Manager k instalaci dalšího serveru lokality v pasivním režimu. Server lokality v pasivním režimu je navíc k vašemu stávajícímu serveru lokality, který je v aktivním režimu. Server lokality v pasivním režimu je k dispozici pro okamžité použití v případě potřeby. 
 
-Další informace najdete v těchto článcích: 
+Další informace najdete v následujících článcích: 
 - [Vysoká dostupnost serveru lokality](../../servers/deploy/configure/site-server-high-availability.md) 
 - [Vývojový diagram – nastavení serveru lokality v pasivním režimu](../../servers/deploy/configure/passive-site-server-flowchart.md)
 - [Vývojový diagram – zvýšení úrovně serveru lokality (plánované)](../../servers/deploy/configure/promote-site-server-flowchart.md)
@@ -98,7 +98,7 @@ Další informace najdete v tématu [Konfigurace zjišťování systémových so
 <!--1357525-->
 Chcete-li konfigurovat vysokou dostupnost serveru lokality nebo uvolnit místo na pevném disku v centrální správě nebo serverech primární lokality, přemístěte knihovnu obsahu do jiného umístění úložiště. Přesuňte knihovnu obsahu na jinou jednotku na serveru lokality, na samostatný server nebo disky odolné vůči chybám v síti SAN (Storage Area Network). 
 
-Další informace najdete v těchto článcích: 
+Další informace najdete v následujících článcích: 
 - [Knihovna obsahu](../hierarchy/the-content-library.md)
 - [Vývojový diagram – správa knihovny obsahu](../hierarchy/manage-content-library-flowchart.md)
 
@@ -107,7 +107,7 @@ Další informace najdete v těchto článcích:
 <!--1322209-->
 Průvodce teď při vytváření cloudového distribučního bodu nabízí možnost vytvořit **nasazení Azure Resource Manager**. Azure Resource Manager je moderní platforma pro správu všech prostředků řešení jako jedné entity, která se označuje jako skupina prostředků. Při nasazování distribučního bodu cloudu s Azure Resource Manager lokalita používá Azure Active Directory k ověření a vytvoření nezbytných cloudových prostředků. Toto moderní nasazení nevyžaduje klasický certifikát pro správu Azure. 
 
-Dokumentace k funkcím distribučního bodu cloudu je také revidována a vylepšena. Další informace najdete v těchto článcích:
+Dokumentace k funkcím distribučního bodu cloudu je také revidována a vylepšena. Další informace najdete v následujících článcích:
 - [Použití distribučního bodu cloudu](../hierarchy/use-a-cloud-based-distribution-point.md)   
 - [Instalace distribučního bodu cloudu](../../servers/deploy/configure/install-cloud-based-distribution-points-in-microsoft-azure.md)  
 
@@ -183,7 +183,7 @@ Další informace najdete v tématu [Rozšířená http](../hierarchy/enhanced-h
 
 ### <a name="cmtrace-installed-with-client"></a>CMTrace nainstalované s klientem
 <!--1357971-->
-Nástroj pro zobrazení protokolu CMTrace se teď automaticky nainstaluje společně s klientem Configuration Manager. Přidá se do instalačního adresáře klienta, který je `%WinDir%\ccm\cmtrace.exe`ve výchozím nastavení. 
+Nástroj pro zobrazení protokolu CMTrace se teď automaticky nainstaluje společně s klientem Configuration Manager. Přidá se do instalačního adresáře klienta, který je ve výchozím nastavení `%WinDir%\ccm\cmtrace.exe` . 
 
 Další informace najdete v tématu [CMTrace](../../support/cmtrace.md).
 
@@ -278,7 +278,7 @@ Převede obsah protokolu SCAP (Security Content Automation Protocol) na směrné
 <!--1358147-->
 Vytvoření postupného nasazení pro aplikaci. Postupné nasazení vám umožní orchestrovat koordinované, sekvenční zavedení softwaru na základě přizpůsobitelných kritérií a skupin. Například Nasaďte aplikaci do pilotní kolekce a potom automaticky pokračuje v zavedení na základě kritérií úspěchů. 
 
-Další informace najdete v těchto článcích:  
+Další informace najdete v následujících článcích:  
 
 - [Vytvoření postupného nasazení](../../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json)  
 
@@ -296,7 +296,7 @@ Další informace najdete v tématu [vytváření aplikací pro Windows](../../.
 <!--1358149-->
 Nástroj pro přizpůsobení sady Office je nyní integrovaný s instalačním programem sady Office 365 v konzole Configuration Manager. Při vytváření nasazení pro Office 365 je možné dynamicky konfigurovat nejnovější nastavení spravovatelnosti Office. Společnost Microsoft aktualizuje Nástroj pro přizpůsobení Office při vydání nových sestavení sady Office 365. Tato integrace vám umožní využít nové nastavení spravovatelnosti v Office 365, jakmile budou k dispozici. 
 
-Další informace najdete v tématu [nasazení aplikací Office 365](../../../sum/deploy-use/manage-office-365-proplus-updates.md#deploy-office-365-apps).
+Další informace najdete v tématu [nasazení aplikací Office 365](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
 
 
 ### <a name="support-for-new-windows-app-package-formats"></a>Podpora pro nové formáty balíčků aplikací pro Windows
@@ -503,7 +503,7 @@ Další informace najdete v tématu [sestavy aktualizací softwaru](../../../sum
 
 
 
-## <a name="inventory"></a>Inventarizace
+## <a name="inventory"></a>inventář
 
 ### <a name="improvement-to-hardware-inventory-for-large-integer-values"></a><a name="bkmk_bigint"></a>Zlepšení inventáře hardwaru pro velké celočíselné hodnoty
 <!--1357880-->
@@ -544,9 +544,9 @@ Následující oblasti pracovního prostoru **monitorování** teď podporují k
 
 - Rozbalte uzel **stav distribuce** a vyberte možnost **stav obsahu**. Vyberte část softwaru a klikněte na **Zobrazit stav**. V podokně **Podrobnosti o aktivech** v zobrazení stav obsahu vyberte jeden nebo více distribučních bodů. 
 
-Klikněte pravým tlačítkem na Asset a vyberte **Kopírovat**. Tato akce zkopíruje vybrané prostředky jako seznam s oddělovači, který obsahuje úplné podrobnosti. Klávesová zkratka **CTRL +** + **C** funguje také v těchto zobrazeních. 
+Klikněte pravým tlačítkem na Asset a vyberte **Kopírovat**. Tato akce zkopíruje vybrané prostředky jako seznam s oddělovači, který obsahuje úplné podrobnosti. Klávesová zkratka **CTRL +**  +  **C** funguje také v těchto zobrazeních. 
 
-Další informace najdete v tématu [vylepšení konzoly ve verzi 1806](../../servers/manage/admin-console.md#copy-details-in-monitoring-views).
+Další informace najdete v tématu [vylepšení konzoly ve verzi 1806](../../servers/manage/admin-console-tips.md#copy-details-in-monitoring-views).
 
 
 ### <a name="improvements-to-the-surface-dashboard"></a>Vylepšení řídicího panelu Surface
@@ -568,7 +568,7 @@ Další informace najdete na [řídicím panelu Surface](../../clients/manage/su
 <!--1358202-->
 Teď uzel **zařízení** v pracovním prostoru **prostředky a kompatibilita** zobrazuje sloupec pro **aktuálně přihlášeného uživatele**. Zobrazí se také pro všechny seznamy zařízení specifických pro kolekci. Tato hodnota je jako [stav klienta](../../clients/manage/monitor-clients.md#bkmk_indStatus)jako aktuální. Když se uživatel odhlásí, klient tuto hodnotu vymaže. Pokud není přihlášen žádný uživatel, hodnota je prázdná. 
 
-Další informace najdete v tématu [vylepšení konzoly ve verzi 1806](../../servers/manage/admin-console.md#view-users-for-a-device).
+Další informace najdete v tématu [vylepšení konzoly ve verzi 1806](../../servers/manage/admin-console-tips.md#view-users-for-a-device).
 
 
 ### <a name="submit-feedback-from-the-configuration-manager-console"></a>Odeslat názor z konzoly Configuration Manager  
@@ -576,7 +576,7 @@ Další informace najdete v tématu [vylepšení konzoly ve verzi 1806](../../se
 
 Poslat smajlíka! Configuration Manager tým teď můžete přímo informovat o svých prostředích. Zasílání názorů je snadné z konzoly Configuration Manager. Chceme slyšet váš názor: Praise, problémy a návrhy. V konzole Configuration Manager klikněte na tlačítko smajlíka v pravém horním rohu nad pásem karet. Tato zpětná vazba směřuje přímo k produktu Microsoft Product Team pro Configuration Manager. I když se používá centrum Feedback pro Windows 10, doporučujeme použít mechanismus zpětné vazby v konzole.  
 
-Další informace najdete v tématu [vylepšení konzoly ve verzi 1806](../../servers/manage/admin-console.md#send-feedback) a [názory na produkt](../../understand/find-help.md#BKMK_1806Feedback).
+Další informace najdete v tématu [vylepšení konzoly ve verzi 1806](../../servers/manage/admin-console-tips.md#send-feedback) a [názory na produkt](../../understand/find-help.md#BKMK_1806Feedback).
 
 
 
@@ -608,7 +608,7 @@ Až budete připraveni k instalaci této verze, přečtěte si téma [instalace 
 > [!TIP]  
 > Chcete-li nainstalovat novou lokalitu, použijte základní verzi Configuration Manager.  
 >
-> Další informace:    
+> Přečtěte si další informace:    
 > - [Instalace nových lokalit](../../servers/deploy/install/installing-sites.md)  
 > - [Základní a aktualizační verze](../../servers/manage/updates.md#bkmk_Baselines)
 

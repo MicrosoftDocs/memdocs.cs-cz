@@ -10,12 +10,12 @@ ms.assetid: 3e1ddb65-1193-46ce-a7c0-a48dfd9fd833
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: a52b70b0a753036c506e5d515cbac048d6771295
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 1567531ed83586f47ba2f79372e0b7962c1341dc
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83879052"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128912"
 ---
 # <a name="whats-new-in-version-1910-of-configuration-manager-current-branch"></a>Co je nového ve verzi 1910 Configuration Manager Current Branch
 
@@ -98,19 +98,19 @@ Další informace o měsíčních změnách v cloudové službě Desktop Analyti
 <!--3197353-->
 Do modulu CMPivot jsme přidali nějaké významné optimalizace. Nyní můžete do klienta nástroje ConfigMgr vložit další zpracování. Optimalizace výrazně snižují zatížení procesoru sítě a serveru potřebné ke spouštění dotazů CMPivot. S těmito optimalizacemi teď můžete v reálném čase prosift až gigabajty dat klientů. 
 
-Další informace najdete v tématu [optimalizace pro modul CMPivot](../../servers/manage/cmpivot.md#bkmk_optimization).
+Další informace najdete v tématu [optimalizace pro modul CMPivot](../../servers/manage/cmpivot-changes.md#bkmk_optimization).
 
 ### <a name="additional-cmpivot-entities-and-enhancements"></a>Další entity a vylepšení CMPivot
 <!--5410930-->
 Přidali jsme řadu nových entit CMPivot a vylepšení entit, která pomáhají při řešení potíží a lovu. Do dotazu jsme zahrnuli následující entity:
 
-- Protokoly událostí systému Windows ([WinEvent](../../servers/manage/cmpivot.md#bkmk_WinEvent))
-- Obsah souboru ([obsah](../../servers/manage/cmpivot.md#bkmk_File)souboru)
-- Knihovny DLL načtené procesy ([ProcessModule](../../servers/manage/cmpivot.md#bkmk_ProcessModule))
-- Informace o Azure Active Directory ([AADStatus](../../servers/manage/cmpivot.md#bkmk_AadStatus))
-- Stav služby Endpoint Protection ([EPStatus](../../servers/manage/cmpivot.md#bkmk_EPStatus))
+- Protokoly událostí systému Windows ([WinEvent](../../servers/manage/cmpivot-changes.md#bkmk_WinEvent))
+- Obsah souboru ([obsah](../../servers/manage/cmpivot-changes.md#bkmk_File)souboru)
+- Knihovny DLL načtené procesy ([ProcessModule](../../servers/manage/cmpivot-changes.md#bkmk_ProcessModule))
+- Informace o Azure Active Directory ([AADStatus](../../servers/manage/cmpivot-changes.md#bkmk_AadStatus))
+- Stav služby Endpoint Protection ([EPStatus](../../servers/manage/cmpivot-changes.md#bkmk_EPStatus))
 
-Tato verze také obsahuje několik [dalších vylepšení](../../servers/manage/cmpivot.md#bkmk_Other) CMPivot. Další informace najdete v tématu [CMPivot počínaje verzí 1910](../../servers/manage/cmpivot.md#bkmk_cmpivot1910).
+Tato verze také obsahuje několik [dalších vylepšení](../../servers/manage/cmpivot-changes.md#bkmk_Other) CMPivot. Další informace najdete v tématu [CMPivot počínaje verzí 1910](../../servers/manage/cmpivot-changes.md#bkmk_cmpivot1910).
 
 ## <a name="content-management"></a><a name="bkmk_content"></a>Správa obsahu
 
@@ -276,7 +276,7 @@ Další informace najdete v tématu [Povolení aktualizací třetích stran](../
 <!--4699118-->
 Dříve jste mohli použít optimalizaci doručování pouze pro expresní aktualizace. S Configuration Manager verze 1910 je teď možné použít optimalizaci doručování pro distribuci veškerého web Windows Update obsahu pro klienty se systémem Windows 10 verze 1709 nebo novější.
 
-Další informace naleznete v tématu:
+Další informace:
 - [Optimalizace doručování aktualizací Windows 10](../../../sum/deploy-use/optimize-windows-10-update-delivery.md#bkmk_DO-1910)
 - [Nastavení klienta pro aktualizace softwaru](../../clients/deploy/about-client-settings.md#software-updates)
 - [Nastavení klienta pro optimalizaci doručení](../../clients/deploy/about-client-settings.md#delivery-optimization)
@@ -385,7 +385,7 @@ Až budete připraveni k instalaci této verze, přečtěte si téma [instalace 
 > [!TIP]
 > Chcete-li nainstalovat novou lokalitu, použijte základní verzi Configuration Manager.
 >
-> Další informace:
+> Přečtěte si další informace:
 >
 > - [Instalace nových lokalit](../../servers/deploy/install/installing-sites.md) 
 > - [Základní a aktualizační verze](../../servers/manage/updates.md#bkmk_Baselines) 

@@ -10,12 +10,12 @@ ms.assetid: 121e0341-4f51-4d54-a357-732c26caf7c5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0a8c975798c506339a981e8648003387dc1e9838
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: a08b74552d5d17a737ec9e1802e10c87621f5b97
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83878101"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126354"
 ---
 # <a name="troubleshoot-microsoft-connected-cache-in-configuration-manager"></a>Řešení potíží s propojenou mezipamětí Microsoft v Configuration Manager
 
@@ -24,7 +24,7 @@ Tento článek poskytuje technické podrobnosti o mezipaměti připojené k Micr
 > [!NOTE]
 > Počínaje verzí 1910 je tato funkce nyní označována jako **propojená s mezipamětí Microsoft**. Dříve byla známá jako Optimalizace doručení v síťové mezipaměti.
 
-## <a name="verify"></a>Ověřit
+## <a name="verify"></a>Ověření
 
 Když nainstalujete správně server mezipaměti pro optimalizaci doručení a správně nakonfigurujete klienty, stahují se ze serveru mezipaměti nainstalovaného v distribučním bodě místo z Internetu.
 
@@ -36,7 +36,7 @@ Ověřte toto chování [na klientovi](#bkmk_verify-client) nebo [na serveru](#b
 
 2. Otevřete PowerShell a spusťte následující příkaz:`Get-DeliveryOptimizationStatus`
 
-Příklad:
+Například:
 
 ```PowerShell
 PS C:\> Get-DeliveryOptimizationStatus
@@ -112,7 +112,7 @@ Následující atributy označují úspěch:
 - `StatusCode : 200`
 - `StatusDescription : OK`
 
-## <a name="log-files"></a>Soubory protokolů
+## <a name="log-files"></a>Soubory protokolu
 
 - Protokol nastavení ARR:`%temp%\arr_setup.log`
 
@@ -131,13 +131,13 @@ Když Configuration Manager nainstaluje součást připojené mezipaměti do dis
 
 | Kód chyby | Popis chyby |
 |------------|-------------------|
-| 0x00000000 | Úspěch |
+| 0x00000000 | Success |
 | 0x00000BC2 | Úspěch, vyžadováno restartování |
 | 0x00000643 | Obecná chyba instalace |
 | 0x00D00001 | Nastavení připojené mezipaměti se dá spustit jenom v případě, že je nainstalovaná služba Internetová informační služba (IIS). |
 | 0x00D00002 | Nastavení připojené mezipaměti lze spustit pouze v případě, že na serveru existuje výchozí web. |
 | 0x00D00003 | Nemůžete nainstalovat připojenou mezipaměť, pokud je už služba Směrování žádostí na aplikace (ARR) nainstalovaná. |
-| 0x00D00004 | Nastavení připojené mezipaměti se dá spustit jenom v případě, že se do skriptu install. ps1 nainstalovalo směrování žádostí na aplikace (ARR). |
+| 0x00D00004 | Nastavení připojené mezipaměti se dá spustit jenom v případě, že je služba Install.ps1 skriptu nainstalovaná směrování žádostí na aplikace (ARR). |
 | 0x00D00005 | Nastavení připojené mezipaměti vyžaduje relaci PowerShellu spuštěnou jako správce. |
 | 0x00D00006 | Nastavení připojené mezipaměti se dá spustit jenom z 64 prostředí PowerShellu. |
 | 0x00D00007 | Nastavení připojené mezipaměti se dá spustit jenom na Windows serveru. |
@@ -148,21 +148,21 @@ Když Configuration Manager nainstaluje součást připojené mezipaměti do dis
 | 0x00D0000C | Chyba: je potřeba zadat platnou procentuální hodnotu velikosti jednotky mezipaměti nebo velikost jednotky mezipaměti v GB. |
 | 0x00D0000D | Chyba: není možné zadat platnou hodnotu velikosti jednotky mezipaměti a velikost jednotky mezipaměti v GB. |
 | 0x00D0000E | Chyba: počet zadaných jednotek mezipaměti se musí shodovat s počtem velikostí jednotky mezipaměti v GB určených. |
-| 0x00D0000F | Chyba: soubor ApplicationHost. config se nepovedlo zálohovat z $AppHostConfig na $AppHostConfigDestinationName |
-| 0x00D00010 | Chyba: nepovedlo se zálohovat výchozí webový soubor Web. config z $WebsiteConfigFilePath na $WebConfigDestinationName |
-| 0x00D00011 | Chyba: v SetupARRWebFarm. ps1 došlo k výjimce. |
-| 0x00D00012 | Chyba: v SetupARRWebFarmRewriteRules. ps1 došlo k výjimce. |
-| 0x00D00013 | Chyba: v SetupARRWebFarmProperties. ps1 došlo k výjimce. |
-| 0x00D00014 | Chyba: v SetupAllowableServerVariables. ps1 došlo k výjimce. |
-| 0x00D00015 | Chyba: v SetupFirewallRules. ps1 došlo k výjimce. |
-| 0x00D00016 | Chyba: v SetupAppPoolProperties. ps1 došlo k výjimce. |
-| 0x00D00017 | Chyba: v SetupARROutboundRules. ps1 došlo k výjimce. |
-| 0x00D00018 | Chyba: v SetupARRDiskCache. ps1 došlo k výjimce. |
-| 0x00D00019 | Chyba: v SetupARRProperties. ps1 došlo k výjimce. |
-| 0x00D0001A | Chyba: v SetupARRHealthProbes. ps1 došlo k výjimce. |
-| 0x00D0001B | Chyba: v VerifyIISSItesStarted. ps1 došlo k výjimce. |
-| 0x00D0001C | Chyba: v SetDrivesToHealthy. ps1 došlo k výjimce. |
-| 0x00D0001D | Chyba: v VerifyCacheNodeSetup. ps1 došlo k výjimce. |
+| 0x00D0000F | Chyba: soubor applicationhost.config nelze zálohovat z $AppHostConfig na $AppHostConfigDestinationName |
+| 0x00D00010 | Chyba: nepovedlo se zálohovat výchozí web web.config souboru z $WebsiteConfigFilePath na $WebConfigDestinationName |
+| 0x00D00011 | Chyba: v SetupARRWebFarm.ps1 došlo k výjimce. |
+| 0x00D00012 | Chyba: v SetupARRWebFarmRewriteRules.ps1 došlo k výjimce. |
+| 0x00D00013 | Chyba: v SetupARRWebFarmProperties.ps1 došlo k výjimce. |
+| 0x00D00014 | Chyba: v SetupAllowableServerVariables.ps1 došlo k výjimce. |
+| 0x00D00015 | Chyba: v SetupFirewallRules.ps1 došlo k výjimce. |
+| 0x00D00016 | Chyba: v SetupAppPoolProperties.ps1 došlo k výjimce. |
+| 0x00D00017 | Chyba: v SetupARROutboundRules.ps1 došlo k výjimce. |
+| 0x00D00018 | Chyba: v SetupARRDiskCache.ps1 došlo k výjimce. |
+| 0x00D00019 | Chyba: v SetupARRProperties.ps1 došlo k výjimce. |
+| 0x00D0001A | Chyba: v SetupARRHealthProbes.ps1 došlo k výjimce. |
+| 0x00D0001B | Chyba: v VerifyIISSItesStarted.ps1 došlo k výjimce. |
+| 0x00D0001C | Chyba: v SetDrivesToHealthy.ps1 došlo k výjimce. |
+| 0x00D0001D | Chyba: v VerifyCacheNodeSetup.ps1 došlo k výjimce. |
 | 0x00D0001E | Připojenou mezipaměť nejde nainstalovat, pokud výchozí web není na portu 80. |
 | 0x00D0001F | Chyba: přidělení jednotky mezipaměti v procentech nemůže překročit 100. |
 | 0x00D00020 | Selhání: přidělení jednotky mezipaměti v GB nemůže přesáhnout volné místo na jednotce. |
@@ -223,7 +223,7 @@ Server do mezipaměti přidá následující pravidla přepisu:
 Požadované místo na disku pro každý server mezipaměti se může lišit v závislosti na požadavcích na aktualizace vaší organizace. 100 GB by mělo být dostatek místa pro ukládání následujícího obsahu do mezipaměti:
 
 - Aktualizace funkcí
-- Od 2 do tří měsíců z hlediska kvality a aktualizací Office
+- Od 2 do tří měsíců aktualizace kvality a Microsoft 365 aplikací
 - Microsoft Intune aplikace a aplikace pro doručenou poštu Windows
 
 Server do mezipaměti by neměl spotřebovat mnoho systémové paměti nebo času procesoru. Pokud si po instalaci serveru do mezipaměti všimnete významné spotřeby prostředků procesu nebo paměti, analyzujte soubory protokolu IIS a ARR.

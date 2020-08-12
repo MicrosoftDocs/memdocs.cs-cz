@@ -1,77 +1,89 @@
 ---
 title: Nasazení Windows pomocí samostatného média
 titleSuffix: Configuration Manager
-description: Použití samostatného média v Configuration Manager k nasazení systému Windows, kde je šířka pásma omezená jako možnost aktualizace, instalace nebo upgradu počítačů.
-ms.date: 10/06/2016
+description: Použít samostatná média v Configuration Manager k nasazení systému Windows, kde je šířka pásma omezená jako možnost aktualizace, instalace nebo upgradu počítačů.
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 58a0d2ae-de76-401f-b854-7a5243949033
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a840636ae1be0d8d38819d0465be1211ff6d2f60
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 51b39e450fb5f8ffd7d83b4122d7514489383dfb
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81724220"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88124648"
 ---
-# <a name="use-stand-alone-media-to-deploy-windows-without-using-the-network"></a>Nasazení Windows pomocí samostatného média bez použití sítě
+# <a name="use-standalone-media-to-deploy-windows-without-using-the-network"></a>Použití samostatného média k nasazení Windows bez použití sítě
 
 *Platí pro: Configuration Manager (Current Branch)*
 
-Samostatné médium v Configuration Manager obsahuje všechno, co je potřeba k nasazení operačního systému na počítači. To zahrnuje spouštěcí image, image operačního systému a pořadí úkolů pro instalaci operačního systému včetně aplikací, ovladačů a tak dál. Nasazení ze samostatného média umožňuje nasadit operační systém za následujících podmínek:  
+Samostatné médium v Configuration Manager obsahuje vše potřebné k nasazení operačního systému v počítači. Médium obsahuje spouštěcí bitovou kopii, image operačního systému, zásady pořadí úkolů, aplikace, ovladače a další. Nasazení samostatného média umožňuje nasadit operační systémy v následujících podmínkách:
 
--   V prostředích, v nichž není praktické kopírovat bitovou kopii operačního systému nebo další velké balíčky prostřednictvím sítě.  
+- V prostředích, kde není praktické kopírovat bitovou kopii operačního systému nebo další velké balíčky přes síť.
 
--   V prostředích bez připojení k síti nebo se síťovým připojením s malou šířkou pásma.  
+- V prostředích bez připojení k síti nebo s nízkou šířkou pásma.
 
-Samostatné médium můžete použít v následujících scénářích nasazení operačního systému:  
+Samostatné médium můžete použít v následujících scénářích nasazení operačního systému:
 
-- [Aktualizace existujícího počítače na novou verzi Windows](refresh-an-existing-computer-with-a-new-version-of-windows.md)  
+- [Aktualizace existujícího počítače na novou verzi Windows](refresh-an-existing-computer-with-a-new-version-of-windows.md)
 
-- [Instalace nové verze Windows do nového počítače (holý počítač)](install-new-windows-version-new-computer-bare-metal.md)  
+- [Instalace nové verze Windows do nového počítače (holý počítač)](install-new-windows-version-new-computer-bare-metal.md)
 
-- [Upgrade systému Windows na nejnovější verzi](upgrade-windows-to-the-latest-version.md)  
+- [Upgrade systému Windows na nejnovější verzi](upgrade-windows-to-the-latest-version.md)
 
-  Proveďte kroky v jednom ze scénářů nasazení operačního systému, potom se podle následujících částí připravte na vytvoření samostatného média a nakonec ho vytvořte.  
+Proveďte kroky v jednom z těchto scénářů nasazení operačního systému. Pak použijte následující části k přípravě a vytvoření samostatného média.
 
-## <a name="task-sequence-actions-not-supported-when-using-stand-alone-media"></a>Nepodporované akce pořadí úkolů při použití samostatného média  
- Pokud jste provedli kroky uvedené v jednom z podporovaných scénářů nasazení operačního systému, vytvořilo se pořadí úkolů pro nasazení nebo upgrade operačního systému a všechen přidružený obsah se distribuoval do distribučního bodu. Při použití samostatného média není v pořadí úkolů dostupná podpora následujících akcí:  
+## <a name="unsupported-task-sequence-actions"></a>Nepodporované akce pořadí úkolů
 
--   Krok Automaticky použít ovladače v pořadí úkolů. Automatické použití ovladačů zařízení z katalogu ovladačů se nepodporuje, ale můžete zvolit krok Použít balíček ovladače a zpřístupnit zadanou sadu ovladačů pro instalační program systému Windows.  
+Pokud používáte samostatná média, Configuration Manager v pořadí úkolů nepodporuje následující akce:
 
--   Instalování aktualizací softwaru.  
+- Krok [automaticky použít ovladače](../understand/task-sequence-steps.md#BKMK_AutoApplyDrivers) Automatické použití ovladačů zařízení z katalogu ovladačů se nepodporuje. K zpřístupnění konkrétní sady ovladačů pro instalační program systému Windows použijte krok [použít balíček ovladače](../understand/task-sequence-steps.md#BKMK_ApplyDriverPackage) .
 
--   Instalování softwaru před nasazením operačního systému.  
+- Instalování aktualizací softwaru.
 
--   Spojování uživatelů s cílovým počítačem pro podporu spřažení uživatelských zařízení.  
+- Instalace softwaru před nasazením operačního systému.
 
--   Dynamický balíček se nainstaluje prostřednictvím úkolu instalace balíčků.  
+- Přidružování uživatelů k cílovému počítači pro spřažení uživatelských zařízení.
 
--   Dynamická aplikace se instaluje prostřednictvím úkolu instalace aplikace.  
+- Dynamický balíček se nainstaluje pomocí kroku [instalovat balíček](../understand/task-sequence-steps.md#BKMK_InstallPackage) .
 
-> [!NOTE]  
->  Pokud pořadí úkolů pro nasazení operačního systému zahrnuje krok [Install Package](../understand/task-sequence-steps.md#BKMK_InstallPackage) a vy vytvoříte samostatné médium v lokalitě centrální správy, může dojít k chybě. Lokalita centrální správy nemusí obsahovat zásady konfigurace klienta, které jsou požadovány pro povolení agenta distribuce softwaru při provádění pořadí úloh. V souboru CreateTsMedia.log se může objevit následující chyba:  
->   
->  `"WMI method SMS_TaskSequencePackage.GetClientConfigPolicies failed (0x80041001)"`
->   
->  U samostatného média, které obsahuje krok **Instalovat balíček** , musíte samostatné médium vytvořit v primární lokalitě s povoleným agentem distribuce softwaru, případně přidat krok [Run Command Line](../understand/task-sequence-steps.md#BKMK_RunCommandLine) za krok [Setup Windows and ConfigMgr](../understand/task-sequence-steps.md#BKMK_SetupWindowsandConfigMgr) a před první krok **Instalovat balíček** v pořadí úkolů. Krok **Spustit příkazový řádek** spustí příkaz WMIC, který povolí agenta distribuce softwaru před prvním spuštěním kroku Instalovat balíček. V kroku pořadí úloh **Spustit příkazový řádek** můžete použít následující zadání:  
->   
->  **Příkazový řádek**: **WMIC /namespace:\\\root\ccm\policy\machine\requestedconfig path ccm_SoftwareDistributionClientConfig CREATE ComponentName="Enable SWDist", Enabled="true", LockSettings="TRUE", PolicySource="local", PolicyVersion="1.0", SiteSettingsKey="1" /NOINTERACTIVE**  
+- Dynamická aplikace se instaluje s krokem [instalovat aplikaci](../understand/task-sequence-steps.md#BKMK_InstallApplication) .
 
-## <a name="configure-deployment-settings"></a>Konfigurace nastavení nasazení  
- Když používáte samostatné médium k zahájení procesu nasazení operačního systému, musíte nakonfigurovat nasazení, aby byl operační systém v médiu dostupný. To můžete nakonfigurovat na stránce **Nastavení nasazení** Průvodce nasazením softwaru nebo na kartě **Nastavení nasazení** ve vlastnostech nasazení.  U nastavení **Zpřístupnit pro následující** nakonfigurujte jednu z následujících možností:  
+> [!NOTE]
+> Pokud pořadí úkolů pro nasazení operačního systému zahrnuje krok **instalovat balíček** a Vy vytvoříte samostatné médium v lokalitě centrální správy (CAS), může dojít k chybě. Certifikační autorita nemá potřebné zásady konfigurace klienta, aby povolila agenta distribuce softwaru při spuštění pořadí úkolů. V souboru **CreateTSMedia. log** se může zobrazit následující chyba:
+>
+> `"WMI method SMS_TaskSequencePackage.GetClientConfigPolicies failed (0x80041001)"`
+>
+> U samostatného média, které obsahuje krok **instalovat balíček** , vytvořte samostatné médium v primární lokalitě s povoleným agentem distribuce softwaru.
+>
+> Případně můžete upravit pořadí úkolů a přidat krok [Spustit příkazový řádek](../understand/task-sequence-steps.md#BKMK_RunCommandLine) za krok [nastavit systém Windows a nástroj ConfigMgr](../understand/task-sequence-steps.md#BKMK_SetupWindowsandConfigMgr) . Tento krok **spuštění příkazového řádku** spustí následující příkaz WMI, který povolí agenta distribuce softwaru před prvním spuštěním kroku **instalace balíčku** :
+>
+> ```command
+> WMIC /namespace:\\root\ccm\policy\machine\requestedconfig path ccm_SoftwareDistributionClientConfig CREATE ComponentName="Enable SWDist", Enabled="true", LockSettings="TRUE", PolicySource="local", PolicyVersion="1.0", SiteSettingsKey="1" /NOINTERACTIVE
+> ```
 
--   **Klienti aplikace Configuration Manager, média a technologie PXE**  
+## <a name="configure-deployment-settings"></a>Konfigurace nastavení nasazení
 
--   **Pouze média a technologie PXE**  
+Když použijete samostatné médium k zahájení procesu nasazení operačního systému, nakonfigurujte nasazení tak, aby byl operační systém dostupný pro média. Na stránce **nastavení nasazení** v nasazení vyberte u položky **zpřístupnit pro následující** nastavení jednu z následujících možností:
 
--   **Pouze média a technologie PXE (skryté)**  
+- Configuration Manager klienty, média a technologie PXE
 
-## <a name="create-the-stand-alone-media"></a>Vytvoření samostatného média  
- Můžete určit, jestli chcete jako samostatné médium použít USB flash disk nebo sadu disků CD/DVD. Počítač, který médium spustí, musí podporovat možnost, kterou zvolíte jako spouštěcí jednotku. Další informace najdete v tématu [vytvoření samostatného média](create-stand-alone-media.md).  
+- Pouze média a technologie PXE
 
-## <a name="install-the-operating-system-from-stand-alone-media"></a>Instalace operačního systému ze samostatného média  
- Vložte samostatné médium do spouštěcí jednotky v počítači a potom počítač zapněte, aby se nainstaloval operační systém.  
+- Pouze média a technologie PXE (skryté)
+
+## <a name="create-the-standalone-media"></a>Vytvoření samostatného média
+
+Můžete určit, jestli je samostatné médium jednotka USB flash nebo sada disků CD/DVD. Počítač, který spustí médium, musí podporovat možnost, kterou zvolíte jako spouštěcí jednotku. Další informace najdete v tématu [vytvoření samostatného média](create-stand-alone-media.md).
+
+## <a name="install-the-os-from-standalone-media"></a>Instalace operačního systému ze samostatného média
+
+Pokud chcete nainstalovat operační systém, vložte do počítače samostatné médium a pak ho zapněte.
+
+## <a name="next-steps"></a>Další kroky
+
+[Uživatelská prostředí pro nasazení operačního systému](../understand/user-experience.md#task-sequence-wizard)

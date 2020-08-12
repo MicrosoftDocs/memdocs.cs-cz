@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 4c90befe-9c4e-4c27-a947-625887e15052
-ms.openlocfilehash: 928ef8a8ebc90807912f22901743725df9aa67e7
-ms.sourcegitcommit: 79fb3b0f0486de1644904be348b7e08048e93b18
+ms.openlocfilehash: b03b57ff9797eb4fbe5a269723e98d39ae438803
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82842219"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127218"
 ---
 # <a name="co-management-workloads"></a>Úlohy spolusprávy
 
@@ -104,7 +104,7 @@ Další informace o funkci Intune najdete v tématu [Vytvoření profilu zaříz
 
 <!--1357841-->
 
-Toto zatížení spravuje aplikace Office 365 na spoluspravovaných zařízeních.
+Toto zatížení spravuje Microsoft 365 aplikace na spoluspravovaných zařízeních.
 
 - Po přesunutí úlohy se aplikace zobrazí v **portál společnosti** na zařízení.  
 
@@ -139,7 +139,7 @@ Pokud ve verzi 1910 povolíte v Configuration Manager distribučních bodech Mic
 
 Po přesunutí úlohy Endpoint Protection do Intune může klient nadále dodržovat zásady nastavené pomocí Configuration Manager a programu Microsoft Defender. <!--5024559-->
 
-Pokud chcete tento problém obejít, použijte CleanUpPolicy. XML, až po přijetí zásad Intune z klienta použijte následující postup:
+Pokud chcete tento problém obejít, použijte CleanUpPolicy.xml pomocí ConfigSecurityPolicy.exe po přijetí zásad Intune klientem pomocí následujících kroků:
 
 1. Zkopírujte a uložte níže uvedený text `CleanUpPolicy.xml` .
 

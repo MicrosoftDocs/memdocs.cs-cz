@@ -2,20 +2,20 @@
 title: Požadavky na přístup k internetu
 titleSuffix: Configuration Manager
 description: Přečtěte si o internetových koncových bodech, které umožní plnou funkčnost funkcí Configuration Manager.
-ms.date: 07/07/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: b34fe701-5d05-42be-b965-e3dccc9363ca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 71f2a75d59af6f8d5c77e96d780e6d02352e5045
-ms.sourcegitcommit: 678104677ad36b789630befdc5e0f1efc572c14b
+ms.openlocfilehash: bc3e1312c214f871635a65d8d0031e06ea4ad8d9
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86137344"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126444"
 ---
 # <a name="internet-access-requirements"></a>Požadavky na přístup k internetu
 
@@ -201,8 +201,6 @@ Povolí aktivnímu bodu aktualizace softwaru přístup k následujícím koncov�
 
 - `http://*.download.windowsupdate.com`  
 
-- `http://test.stats.update.microsoft.com`  
-
 - `http://ntservicepack.microsoft.com`  
 
 Další informace o aktualizacích softwaru najdete v tématu [Plánování aktualizací softwaru](../../../sum/plan-design/plan-for-software-updates.md).
@@ -224,7 +222,7 @@ Je možné, že budete muset přidat koncové body do brány firewall, která je
 
 - `https://<FQDN for software update point on parent site>`  
 
-## <a name="manage-office-365"></a>Správa Office 365
+## <a name="manage-microsoft-365-apps"></a>Správa aplikací Microsoft 365
 
 > [!NOTE]
 > Od 21. dubna 2020 se sada Office 365 ProPlus přejmenovává na **Microsoft 365 aplikace pro podniky**. Další informace najdete v tématu [Změna názvu pro Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change). V konzole Configuration Manager se pořád zobrazují odkazy na starý název a podpůrná dokumentace, zatímco se konzola aktualizuje.
@@ -275,15 +273,21 @@ Pokud používáte **zeměpisné zobrazení**, povolte přístup k následujíc�
 
 ## <a name="desktop-analytics"></a>Desktop Analytics
 
-Další informace o požadovaných koncových bodech pro cloudovou službu Desktop Analytics najdete v tématu [Povolení sdílení dat](../../../desktop-analytics/enable-data-sharing.md#endpoints).
+Další informace najdete v tématu [Povolení sdílení dat](../../../desktop-analytics/enable-data-sharing.md#endpoints).
+
+[!INCLUDE [Internet endpoints for Desktop Analytics](includes/internet-endpoints-desktop-analytics.md)]
 
 ## <a name="tenant-attach"></a>Připojení tenanta
 
-Další informace o požadovaných koncových bodech pro funkce připojení klienta najdete v tématu [Povolení připojení tenanta](../../../tenant-attach/device-sync-actions.md#internet-endpoints).
+Další informace najdete v tématu [Povolení připojení tenanta](../../../tenant-attach/device-sync-actions.md).
+
+[!INCLUDE [Internet endpoints for tenant attach](includes/internet-endpoints-tenant-attach.md)]
 
 ## <a name="endpoint-analytics"></a>Analýza koncového bodu
 
-Další informace o požadovaných koncových bodech pro službu Endpoint Analytics najdete v tématu [konfigurace proxy serveru Endpoint Analytics](../../../../analytics/troubleshoot.md#bkmk_endpoints).
+Další informace najdete v tématu [konfigurace proxy serveru Endpoint Analytics](../../../../analytics/troubleshoot.md#bkmk_endpoints).
+
+[!INCLUDE [Internet endpoints for Endpoint analytics](includes/internet-endpoints-endpoint-analytics.md)]
 
 ## <a name="asset-intelligence"></a>Funkce Asset Intelligence
 

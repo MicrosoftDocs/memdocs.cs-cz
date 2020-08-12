@@ -10,12 +10,12 @@ ms.assetid: 035b7f73-8b78-4ed1-835e-a31f9a5c4a02
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 95b8bf41d74e7011eed40116f4fe34e2c356d67e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 6c702916f73d1fbc842966161a6958a61d24044a
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81722834"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126065"
 ---
 # <a name="fundamentals-of-security-for-configuration-manager"></a>Základy zabezpečení pro Configuration Manager
 
@@ -34,7 +34,7 @@ Zabezpečení pro Configuration Manager se skládá z následujících vrstev:
 - [OPERAČNÍ systém Windows a zabezpečení sítě](#bkmk_layer-windows)
 - [Síťová infrastruktura: brány firewall, zjišťování neoprávněných vniknutí, infrastruktura veřejných klíčů (PKI)](#bkmk_layer-network)
 - [Configuration Manager kontroly zabezpečení](#bkmk_layer-cm)
-- [SMS Provider](#bkmk_layer-provider)
+- [poskytovatele serveru SMS](#bkmk_layer-provider)
 - [Oprávnění databáze webu](#bkmk_layer-db)
 
 #### <a name="windows-os-and-network-security"></a><a name="bkmk_layer-windows"></a>OPERAČNÍ systém Windows a zabezpečení sítě
@@ -82,7 +82,7 @@ Poslední vrstva zabezpečení je založena na oprávněních k objektům v data
 
  Správce přiřadí *role zabezpečení* správcům a oprávněním skupin. Oprávnění jsou propojena s různými typy objektů Configuration Manager, například k vytvoření nebo změně nastavení klienta. 
 
- *Obory zabezpečení* seskupují určité instance objektů, za jejichž správu je správce zodpovědný, například aplikace, která instaluje systém Microsoft Office. 
+ *Obory zabezpečení* seskupují určité instance objektů, za jejichž správu je správce zodpovědný, například aplikace, která instaluje aplikace Microsoft 365. 
 
  Kombinace rolí zabezpečení, oborů zabezpečení a kolekcí definuje objekty, které může administrativní uživatel zobrazit a spravovat. Configuration Manager nainstaluje některé výchozí role zabezpečení pro typické úlohy správy. Vytvořte vlastní role zabezpečení pro podporu specifických podnikových požadavků.  
 

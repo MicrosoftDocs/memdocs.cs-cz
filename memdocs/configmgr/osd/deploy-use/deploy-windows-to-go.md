@@ -5,17 +5,17 @@ description: Naučte se, jak zřídit Windows to in v Configuration Manager k vy
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 8eed50f5-80a4-422e-8aa6-a7ccb2171475
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: add0d17205cc82b30f3a88558c690a813239b92a
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: a3cf735dfa2dd73ed39a24c2d674a966acddf05a
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906936"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88125113"
 ---
 # <a name="deploy-windows-to-go-with-configuration-manager"></a>Nasazení Windows to-přejít pomocí Configuration Manager
 
@@ -311,7 +311,7 @@ V tomto tématu najdete postup, jak zajistit, aby Windows to přešel do Configu
 
     1.  **Název**: Zadejte název pro příkazový řádek, třeba **Enable BitLocker for Windows To Go**.  
 
-    2.  **Příkazový řádek**: i386 \ osdbitlocker_wtg. exe/Enable/pwd: < *žádná & #124; Služba AD*>  
+    2.  **Příkazový řádek**: i386\osdbitlocker_wtg.exe/Enable/pwd: < *none&#124;AD*>  
 
          Parametry:  
 

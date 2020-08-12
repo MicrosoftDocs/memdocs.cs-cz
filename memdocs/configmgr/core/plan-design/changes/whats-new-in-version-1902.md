@@ -10,12 +10,12 @@ ms.assetid: 4812324b-e6aa-4431-bf1d-9fcd763a8caa
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 4972f6e8689ad44dbd1a19adcde104cd5f59038c
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: c192db8ccab336d05ef965e837fe17fc16a19200
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81719355"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128929"
 ---
 # <a name="whats-new-in-version-1902-of-configuration-manager-current-branch"></a>Co je nového ve verzi 1902 Configuration Manager Current Branch
 
@@ -121,7 +121,7 @@ Další informace najdete v tématu [Návrh hierarchie CMG](../../clients/manage
 <!--3610960-->
 Configuration Manager nyní podporuje spouštění CMPivot z lokality centrální správy v hierarchii. Primární lokalita stále zpracovává komunikaci s klientem. Při spuštění CMPivot z lokality centrální správy komunikuje s primární lokalitou prostřednictvím vysokorychlostního kanálu pro odběr zpráv. Tato komunikace nespoléhá na standardní replikaci SQL mezi lokalitami.
 
-Další informace najdete v tématu [CMPivot for data v reálném čase](../../servers/manage/cmpivot.md#bkmk_cmpivot1902).
+Další informace najdete v tématu [CMPivot for data v reálném čase](../../servers/manage/cmpivot-changes.md#bkmk_cmpivot1902).
 
 ### <a name="edit-or-copy-powershell-scripts"></a>Úpravy nebo kopírování skriptů PowerShellu
 
@@ -224,7 +224,7 @@ Tato verze zahrnuje několik vylepšení, která vám pomůžou lépe vytvářet
 
 Když vytváříte médium pořadí úkolů, teď můžete přizpůsobit umístění, které lokalita používá k dočasnému ukládání dat. Tento proces může vyžadovat mnoho místa na dočasném disku. Tato změna poskytuje větší flexibilitu při výběru místa pro uložení těchto dočasných souborů.
 
-V **Průvodci vytvořením média pořadí úloh**zadejte umístění **pracovní složky**. Ve výchozím nastavení je toto umístění podobné následující cestě: `%UserProfile%\AppData\Local\Temp`.
+V **Průvodci vytvořením média pořadí úloh**zadejte umístění **pracovní složky**. Ve výchozím nastavení je toto umístění podobné následující cestě: `%UserProfile%\AppData\Local\Temp` .
 
 #### <a name="add-a-label-to-the-media"></a>Přidání popisku na médium
 
@@ -413,7 +413,7 @@ Na základě zpětné vazby od zákazníků na konferenci Středozápadě Manage
 - Zobrazení řazení podle celočíselných hodnot v uzlu **nasazení** pracovního prostoru **monitorování**
 - Přesunutí upozornění na velký počet výsledků
 
-Další informace najdete v tématu [použití konzoly Configuration Manager](../../servers/manage/admin-console.md#tips).
+Další informace najdete v tématu [Configuration Manager tipů konzoly](../../servers/manage/admin-console-tips.md).
 
 ### <a name="configuration-manager-console-notifications"></a>Oznámení konzoly Configuration Manager
 
@@ -425,7 +425,7 @@ Abyste měli lepší informace, abyste mohli provádět příslušné akce, Conf
 
 Toto oznámení je pruhem v horní části okna konzoly pod pás karet. Nahrazuje předchozí prostředí, když Configuration Manager aktualizace k dispozici. Tato oznámení v konzole stále zobrazují důležité informace, ale nebrání v práci v konzole nástroje. Nemůžete zavřít kritická oznámení. Konzola zobrazí všechna oznámení v nové oblasti oznámení v záhlaví.
 
-Další informace najdete v tématu [použití konzoly Configuration Manager](../../servers/manage/admin-console.md).
+Další informace najdete v tématu [Configuration Manager oznámení konzoly](../../servers/manage/admin-console-notifications.md).
 
 ### <a name="confirmation-of-console-feedback"></a>Potvrzení zpětné vazby z konzoly
 
@@ -453,7 +453,7 @@ Další informace najdete v tématu [použití konzoly Configuration Manager](..
 <!--3600878-->
 Adresu MAC teď můžete vyhledat v zobrazení zařízení konzoly Configuration Manager. Tato vlastnost je užitečná pro Správce nasazení operačního systému při řešení potíží s nasazeními založenými na technologii PXE. Když si zobrazíte seznam zařízení, přidejte do zobrazení sloupec **adresa MAC** . Pomocí vyhledávacího pole přidejte kritéria hledání **adresy MAC** .
 
-Další informace najdete v tématu [použití konzoly Configuration Manager](../../servers/manage/admin-console.md#tips).
+Další informace najdete v tématu [Configuration Manager tipů konzoly](../../servers/manage/admin-console-tips.md).
 
 ### <a name="use-net-47-for-improved-console-accessibility"></a>Použití .NET 4,7 pro lepší přístupnost konzoly
 
@@ -467,10 +467,10 @@ Další informace najdete v tématu [funkce usnadnění v Configuration Manager]
 <!-- 3612513 -->
 Při instalaci konzoly Configuration Manager jsou vyžadovány nové součásti. Pokud vytvoříte balíček pro instalaci konzoly nástroje do jiných počítačů, ujistěte se, že balíček obsahuje následující soubory:
 
-- ConsoleSetup. exe
-- AdminConsole. msi
-- ConfigMgr. AC_Extension. i386. cab
-- ConfigMgr. AC_Extension. amd64. cab
+- ConsoleSetup.exe
+- AdminConsole.msi
+- ConfigMgr.AC_Extension.i386.cab
+- ConfigMgr.AC_Extension.amd64.cab
 
 Při instalaci nebo aktualizaci serveru lokality zkopírují tyto instalační soubory a podporované jazykové sady pro lokalitu do podsložky **Tools\ConsoleSetup** . Další informace najdete v tématu [Instalace konzoly Configuration Manager](../../servers/deploy/install/install-consoles.md).
 
@@ -504,7 +504,7 @@ Až budete připraveni k instalaci této verze, přečtěte si téma [instalace 
 > [!TIP]  
 > Chcete-li nainstalovat novou lokalitu, použijte základní verzi Configuration Manager.  
 >
-> Další informace:    
+> Přečtěte si další informace:    
 > - [Instalace nových lokalit](../../servers/deploy/install/installing-sites.md)  
 > - [Základní a aktualizační verze](../../servers/manage/updates.md#bkmk_Baselines)  
 

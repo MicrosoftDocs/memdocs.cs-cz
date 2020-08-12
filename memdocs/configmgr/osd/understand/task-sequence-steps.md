@@ -2,20 +2,20 @@
 title: Kroky pořadí úkolů
 titleSuffix: Configuration Manager
 description: Přečtěte si o krocích, které můžete přidat do Configuration Manager pořadí úkolů.
-ms.date: 07/06/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 7c888a6f-8e37-4be5-8edb-832b218f266d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 61070d98c5b7d453f493cf7ea2995705ee43f325
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: bab2050448e1c870aac8f3237c21b19498cdb674
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87546616"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88124232"
 ---
 # <a name="task-sequence-steps"></a>Kroky pořadí úkolů
 
@@ -216,6 +216,9 @@ Tuto možnost vyberte, pokud chcete mít cílový počítač připojený ke konk
 #### <a name="join-a-domain"></a>Připojení k doméně
 
 Tuto možnost vyberte, pokud chcete mít cílový počítač připojený ke konkrétní doméně. Zadejte nebo přejděte k doméně, například `fabricam.com` . Zadejte nebo vyhledejte cestu protokolu LDAP (Lightweight Directory Access Protocol) pro organizační jednotku. Například: `LDAP//OU=computers, DC=Fabricam.com, C=com`.  
+
+> [!NOTE]
+> Když klient připojený k Azure Active Directory (Azure AD) spustí pořadí úloh nasazení operačního systému, klient v novém operačním systému se automaticky nepřipojí k Azure AD. I když není připojený k Azure AD, klient se pořád spravuje.
 
 #### <a name="account"></a>Účet
 
@@ -773,7 +776,6 @@ Zachyťte názvy registrovaných uživatelů a organizací z počítače.
 Zachyťte nastavení časového pásma v počítači.  
 
 
-
 ## <a name="check-readiness"></a><a name="BKMK_CheckReadiness"></a>Kontrolovat připravenost
 
 Pomocí tohoto kroku ověříte, že cílový počítač splňuje zadané předpoklady pro nasazení.  
@@ -791,6 +793,8 @@ Počínaje verzí 2002 tento krok zahrnuje osm nových kontrol. Žádná z těch
 - **Síťový adaptér připojen**
   - **Síťový adaptér není bezdrátový.**
 
+Počínaje verzí 2006 tento krok zahrnuje kontrolu a určení, jestli zařízení používá rozhraní UEFI, **je počítač v režimu UEFI**.<!--6452769-->
+
 > [!IMPORTANT]
 > Pokud chcete tuto novou funkci Configuration Manager využít, po aktualizaci lokality aktualizujte také klienty na nejnovější verzi. I když se nové funkce zobrazí v konzole Configuration Manager, když aktualizujete lokalitu a konzolu, kompletní scénář nebude funkční, dokud nebude verze klienta zároveň nejnovější.
 
@@ -804,14 +808,15 @@ V tomto kroku použijte následující proměnné pořadí úkolů:
 - [_TS_CRSPEED](task-sequence-variables.md#TSCRSPEED)
 - [_TS_CRDISK](task-sequence-variables.md#TSCRDISK)
 - [_TS_CROSTYPE](task-sequence-variables.md#TSCROSTYPE)
-- [_TS_CRARCH](task-sequence-variables.md#TSCRARCH)
-- [_TS_CRMINOSVER](task-sequence-variables.md#TSCRMINOSVER)
-- [_TS_CRMAXOSVER](task-sequence-variables.md#TSCRMAXOSVER)
-- [_TS_CRCLIENTMINVER](task-sequence-variables.md#TSCRCLIENTMINVER)
-- [_TS_CROSLANGUAGE](task-sequence-variables.md#TSCROSLANGUAGE)
-- [_TS_CRACPOWER](task-sequence-variables.md#TSCRACPOWER)
-- [_TS_CRNETWORK](task-sequence-variables.md#TSCRNETWORK)
-- [_TS_CRWIRED](task-sequence-variables.md#TSCRWIRED)
+- [_TS_CRARCH](task-sequence-variables.md#TSCRARCH) (počínaje verzí 2002)
+- [_TS_CRMINOSVER](task-sequence-variables.md#TSCRMINOSVER) (počínaje verzí 2002)
+- [_TS_CRMAXOSVER](task-sequence-variables.md#TSCRMAXOSVER) (počínaje verzí 2002)
+- [_TS_CRCLIENTMINVER](task-sequence-variables.md#TSCRCLIENTMINVER) (počínaje verzí 2002)
+- [_TS_CROSLANGUAGE](task-sequence-variables.md#TSCROSLANGUAGE) (počínaje verzí 2002)
+- [_TS_CRACPOWER](task-sequence-variables.md#TSCRACPOWER) (počínaje verzí 2002)
+- [_TS_CRNETWORK](task-sequence-variables.md#TSCRNETWORK) (počínaje verzí 2002)
+- [_TS_CRUEFI](task-sequence-variables.md#TSCRUEFI) (počínaje verzí 2006)
+- [_TS_CRWIRED](task-sequence-variables.md#TSCRWIRED) (počínaje verzí 2002)
 
 ### <a name="cmdlets-for-check-readiness"></a>Rutiny pro kontrolu připravenosti
 
@@ -869,6 +874,10 @@ Od verze 2002 ověřte, že je zařízení napájené ze sítě, a ne na baterii
 #### <a name="network-adapter-connected"></a>Síťový adaptér připojen
 
 Od verze 2002 ověřte, že zařízení má síťový adaptér, který je připojený k síti. Můžete také vybrat závislou kontrolu a ověřit, že **síťový adaptér není bezdrátový**.
+
+#### <a name="computer-is-in-uefi-mode"></a>Počítač je v režimu UEFI.
+
+Od verze 2006 Zjistěte, jestli je zařízení nakonfigurované pro rozhraní UEFI nebo BIOS.
 
 ### <a name="options-for-check-readiness"></a>Možnosti kontroly připravenosti
 
@@ -1054,12 +1063,9 @@ Pokud nakonfigurujete [vlastnosti pořadí úkolů](../deploy-use/manage-task-se
 
 ## <a name="enable-bitlocker"></a><a name="BKMK_EnableBitLocker"></a>Zapnout nástroj BitLocker
 
-Tento krok použijte, pokud chcete povolit šifrování BitLockeru aspoň na dvou oddílech na pevném disku. První aktivní oddíl obsahuje kód pro spuštění systému Windows. Jiný oddíl obsahuje operační systém. Spouštěcí oddíl musí zůstat nezašifrovaný.  
+Nástroj BitLocker Drive Encryption poskytuje nižší úroveň šifrování obsahu svazku disku. Tento krok použijte, pokud chcete povolit šifrování BitLockeru aspoň na dvou oddílech na pevném disku. První aktivní oddíl obsahuje kód pro spuštění systému Windows. Jiný oddíl obsahuje operační systém. Spouštěcí oddíl musí zůstat nezašifrovaný.  
 
-K zapnutí nástroje BitLocker na jednotce v prostředí Windows PE použijte **předem zřízený krok nástroje BitLocker** . Další informace naleznete v části [Pre-provision BitLocker](#BKMK_PreProvisionBitLocker).  
-
-> [!NOTE]  
-> Nástroj BitLocker Drive Encryption poskytuje nižší úroveň šifrování obsahu svazku disku.  
+Chcete-li povolit nástroj BitLocker na jednotce v prostředí Windows PE, použijte krok [před poskytnutím nástroje BitLocker](#BKMK_PreProvisionBitLocker) .
 
 Tento krok se spouští jenom v plném operačním systému. Neběží v systému Windows PE.
 
@@ -1071,7 +1077,9 @@ Když zadáte **pouze TPM**, **TPM a spouštěcí klíč na sběrnici USB**nebo 
 - Aktivováno  
 - Vlastnictví povoleno  
 
-Tento krok dokončí veškerou zbývající inicializaci čipu TPM. Zbývající kroky nevyžadují fyzickou přítomnost ani restartování. Krok **zapnout nástroj BitLocker** transparentně provede následující zbývající kroky inicializace čipu TPM, pokud je to nutné:  
+Počínaje verzí 2006 můžete tento krok přeskočit pro počítače, které nemají TPM, nebo když není čip TPM povolený. Nové nastavení usnadňuje správu chování pořadí úkolů na zařízeních, která nemůžou plně podporovat nástroj BitLocker.<!--6995601-->
+
+Tento krok dokončí veškerou zbývající inicializaci čipu TPM. Zbývající akce nevyžadují fyzickou přítomnost ani restartování. Krok **zapnout nástroj BitLocker** transparentně provede následující zbývající akce inicializace čipu TPM v případě potřeby:
 
 - Vytvoření dvojice ověřovacích klíčů  
 - Vytvoření hodnoty autorizace vlastníka a úschovy v adresáři služby Active Directory, která se musí rozšířit pro zajištění podpory této hodnoty  
@@ -1118,6 +1126,18 @@ Určuje jednotku, která se má šifrovat. Pokud chcete zašifrovat aktuální j
 
 Pokud chcete zašifrovat určitou datovou jednotku bez operačního systému, vyberte **konkrétní jednotka**. Pak vyberte jednotku ze seznamu.  
 
+#### <a name="disk-encryption-mode"></a>Režim šifrování disku
+
+<!--6995601-->
+Počínaje verzí 2006 vyberte jeden z následujících šifrovacích algoritmů:
+
+- AES_128
+- AES_256
+- XTS_AES256
+- XTS_AES128
+
+Ve výchozím nastavení nebo pokud není zadaný, bude tento krok dál používat výchozí metodu šifrování pro verzi operačního systému. Pokud tento krok běží na verzi Windows, která nepodporuje zadaný algoritmus, vrátí se k výchozímu operačnímu systému. V této situaci modul pořadí úkolů odešle stavovou zprávu 11911.
+
 #### <a name="use-full-disk-encryption"></a>Použít úplné šifrování disku
 
 <!--SCCMDocs-pr issue 2671-->
@@ -1136,6 +1156,10 @@ Tuto možnost vyberte, pokud chcete, aby nástroj BitLocker Drive Encryption byl
 
 Proces šifrování může trvat hodiny na dokončení při šifrování velkého pevného disku. Pokud tuto možnost nevyberete, můžete pořadí úkolů okamžitě pokračovat.  
 
+#### <a name="skip-this-step-for-computers-that-do-not-have-a-tpm-or-when-tpm-is-not-enabled"></a>Přeskočit tento krok pro počítače, které nemají TPM, nebo když není TPM povoleno
+
+<!--6995601-->
+Počínaje verzí 2006 vyberte tuto možnost, pokud chcete přeskočit šifrování jednotky v počítači, který neobsahuje podporovaný nebo povolený čip TPM. Tuto možnost můžete například použít při nasazování operačního systému do virtuálního počítače. Ve výchozím nastavení je toto nastavení zakázáno pro krok **zapnout nástroj BitLocker** . Pokud toto nastavení povolíte a zařízení nemá funkční čip TPM, modul pořadí úkolů zaznamená chybu do protokolu souboru Smsts. log a odešle stavovou zprávu 11912. Pořadí úkolů pokračuje v předchozím kroku.
 
 
 ## <a name="format-and-partition-disk"></a><a name="BKMK_FormatandPartitionDisk"></a>Formátovat a rozdělit disk na oddíly
@@ -1174,6 +1198,31 @@ Na kartě **vlastnosti** tohoto kroku nakonfigurujte nastavení popsaná v této
 #### <a name="disk-number"></a>Číslo disku
 
 Číslo fyzického disku, který se má formátovat Počet je založený na řazení výčtu disků v systému Windows.  
+
+#### <a name="variable-name-to-store-disk-number"></a>Název proměnné pro uložení čísla disku
+
+<!--6610288-->
+
+Počínaje verzí 2006 použijte proměnnou pořadí úkolů k určení cílového disku, který chcete formátovat. Možnost této proměnné podporuje složitější pořadí úkolů s dynamickým chováním. Vlastní skript například může disk rozpoznat a nastavit proměnnou na základě typu hardwaru. Pak můžete použít více instancí tohoto kroku ke konfiguraci různých typů hardwaru a oddílů.
+
+Pokud vyberete tuto vlastnost, zadejte název vlastní proměnné. Přidejte v pořadí úkolů předchozí krok pro nastavení hodnoty této vlastní proměnné na celočíselnou hodnotu pro fyzický disk.
+
+Následující vzorové kroky ukazují jeden příklad:
+
+- **Spustit skript prostředí PowerShell**: vlastní skript pro shromažďování cílových disků
+  - Nastaví `myOSDisk` na`1`
+  - Nastaví `myDataDisk` na`2`
+
+- **Formátovat a rozdělit disk na oddíly** pro disk s operačním systémem: Určuje `myOSDisk` proměnnou.
+  - Nakonfiguruje disk 1 jako systémový disk.
+
+- **Formátovat a rozdělit disk na oddíly** pro datový disk: Určuje `myDataDisk` proměnnou.
+  - Nakonfiguruje disk 2 pro nezpracované úložiště.
+
+Variace tohoto příkladu používá pro různé typy hardwaru čísla disků a plány dělení na oddíly.
+
+> [!NOTE]
+> Stávající proměnnou pořadí úloh můžete dál používat **OSDDiskIndex**. Každá instance kroku **Format a partition disk** ale používá stejnou hodnotu indexu. Chcete-li programově nastavit číslo disku pro více instancí tohoto kroku, použijte tuto vlastnost proměnné.
 
 #### <a name="disk-type"></a>Typ disku
 
@@ -1489,6 +1538,9 @@ Pokud jedna z aktualizací neočekávaně restartuje počítač, opakujte tento 
 
 Pomocí tohoto kroku přidáte cílový počítač do pracovní skupiny nebo domény.  
 
+> [!NOTE]
+> Když klient připojený k Azure Active Directory (Azure AD) spustí pořadí úloh nasazení operačního systému, klient v novém operačním systému se automaticky nepřipojí k Azure AD. I když není připojený k Azure AD, klient se pořád spravuje.
+
 Tento krok pořadí úkolů se spouští jenom v plném operačním systému. Neběží v systému Windows PE.
 
 Chcete-li přidat tento krok v editoru pořadí úloh, vyberte možnost **Přidat**, vyberte možnost **Obecné**a vyberte možnost **připojit k doméně nebo pracovní skupině**.
@@ -1635,6 +1687,18 @@ Na kartě **vlastnosti** tohoto kroku nakonfigurujte nastavení popsaná v této
 
 Zadejte jednotku, pro kterou chcete nástroj BitLocker povolit. BitLocker zašifruje jenom využité místo na jednotce.  
 
+#### <a name="disk-encryption-mode"></a>Režim šifrování disku
+
+<!--6995601-->
+Počínaje verzí 2006 vyberte jeden z následujících šifrovacích algoritmů:
+
+- AES_128
+- AES_256
+- XTS_AES256
+- XTS_AES128
+
+Ve výchozím nastavení nebo pokud není zadaný, bude tento krok dál používat výchozí metodu šifrování pro verzi operačního systému. Pokud tento krok běží na verzi Windows, která nepodporuje zadaný algoritmus, vrátí se k výchozímu operačnímu systému. V této situaci modul pořadí úkolů odešle stavovou zprávu 11911.
+
 #### <a name="use-full-disk-encryption"></a>Použít úplné šifrování disku
 
 <!--SCCMDocs-pr issue 2671-->
@@ -1642,7 +1706,7 @@ Ve výchozím nastavení tento krok zašifruje jenom využité místo na jednotc
 
 #### <a name="skip-this-step-for-computers-that-do-not-have-a-tpm-or-when-tpm-is-not-enabled"></a>Přeskočit tento krok pro počítače, které nemají TPM, nebo když není TPM povoleno
 
-Tuto možnost vyberte, pokud chcete přeskočit šifrování jednotky v počítači, který neobsahuje podporovaný nebo povolený čip TPM. Tuto možnost můžete například použít při nasazování operačního systému do virtuálního počítače.  
+Tuto možnost vyberte, pokud chcete přeskočit šifrování jednotky v počítači, který neobsahuje podporovaný nebo povolený čip TPM. Tuto možnost můžete například použít při nasazování operačního systému do virtuálního počítače. Ve výchozím nastavení je toto nastavení povoleno pro krok **předem zřídit nástroj BitLocker** . Tento krok se nezdařil v zařízení bez čipu TPM nebo čipu TPM, který neinicializuje. Pokud zařízení nemá funkční čip TPM, počínaje verzí 2006, modul pořadí úkolů zaznamená upozornění do protokolu souboru Smsts. log a odešle stavovou zprávu 11912.
 
 
 
@@ -2169,10 +2233,10 @@ Při přidávání podřízeného pořadí úloh do pořadí úloh Vezměte v ú
 
 Od verze 1906 spravujte tento krok pomocí následujících rutin PowerShellu:<!-- 2839943, SCCMDocs#1118 -->
 
-- **Get-CMTSStepRunTaskSequence**
-- **New-CMTSStepRunTaskSequence**
-- **Remove-CMTSStepRunTaskSequence**
-- **Set-CMTSStepRunTaskSequence**
+- [Get-CMTSStepRunTaskSequence](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmtsstepruntasksequence?view=sccm-ps)
+- [New-CMTSStepRunTaskSequence](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtsstepruntasksequence?view=sccm-ps)
+- [Remove-CMTSStepRunTaskSequence](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtsstepruntasksequence?view=sccm-ps)
+- [Set-CMTSStepRunTaskSequence](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtsstepruntasksequence?view=sccm-ps)
 
 Další informace najdete v [poznámkách k verzi 1906 – nové rutiny](https://docs.microsoft.com/powershell/sccm/1906-release-notes?view=sccm-ps#new-cmdlets).
 
@@ -2241,15 +2305,19 @@ Chcete-li nastavit dynamickou proměnnou pro použití v pořadí úkolů, přid
 
     Zadejte jednu nebo více proměnných pro nastavení pravidla, které se vyhodnotí jako true, nebo nastavte proměnné bez použití pravidla. Vyberte existující proměnnou nebo vytvořte vlastní proměnnou.  
 
-    - **Existující proměnné pořadí úkolů**: vyberte jednu nebo více proměnných ze seznamu existujících proměnných pořadí úkolů. Proměnné pole nejsou k dispozici pro výběr.  
+  - **Existující proměnné pořadí úkolů**: vyberte jednu nebo více proměnných ze seznamu existujících proměnných pořadí úkolů. Proměnné pole nejsou k dispozici pro výběr.  
 
-    - **Vlastní proměnné pořadí úkolů**: Definujte vlastní proměnnou pořadí úkolů. Můžete taky určit existující proměnnou pořadí úkolů. Toto nastavení je užitečné při určení existujícího pole proměnných, jako je například **OSDAdapter**, protože pole proměnných nejsou v seznamu existujících proměnných pořadí úkolů.  
+  - **Vlastní proměnné pořadí úkolů**: Definujte vlastní proměnnou pořadí úkolů. Můžete taky určit existující proměnnou pořadí úkolů. Toto nastavení je užitečné při určení existujícího pole proměnných, jako je například **OSDAdapter**, protože pole proměnných nejsou v seznamu existujících proměnných pořadí úkolů.  
 
-Po výběru proměnných pro pravidlo zadejte hodnotu pro každou proměnnou. Proměnná se nastaví na zadanou hodnotu, pokud se pravidlo vyhodnotí jako true. Pro každou proměnnou můžete vybrat možnost **Tajná hodnota**, která hodnotu proměnné skryje. Ve výchozím nastavení některé existující proměnné skrývají hodnoty, jako je například proměnná **Proměnná OSDCaptureAccountPassword** .  
+Po výběru proměnných pro pravidlo zadejte hodnotu pro každou proměnnou. Proměnná se nastaví na zadanou hodnotu, pokud se pravidlo vyhodnotí jako true. Pro každou proměnnou můžete vybrat možnost **Nezobrazovat tuto hodnotu** pro skrytí hodnoty proměnné. Ve výchozím nastavení některé existující proměnné skrývají hodnoty, jako je například proměnná **Proměnná OSDCaptureAccountPassword** .  
 
 > [!IMPORTANT]  
-> Když naimportujete pořadí úkolů s krokem **nastavit dynamické proměnné** , Configuration Manager odebere všechny hodnoty proměnných označené jako **tajné hodnoty** . Po importu pořadí úkolů znovu zadejte hodnotu pro dynamickou proměnnou.  
+> Když naimportujete pořadí úkolů s krokem **nastavit dynamické proměnné** , Configuration Manager odebere všechny hodnoty proměnných označené jako **Nezobrazovat tuto hodnotu**. Po importu pořadí úkolů znovu zadejte hodnotu pro dynamickou proměnnou.
 
+Když použijete možnost **tuto hodnotu nezobrazovat**, hodnota proměnné se nezobrazí v editoru pořadí úloh. Soubor protokolu pořadí úkolů (**souboru Smsts. log**) nebo ladicí program sekvence úloh nezobrazuje hodnotu proměnné buď. Proměnnou lze v pořadí úkolů používat i v případě, že je spuštěna. Pokud již nechcete tyto proměnné skrývat, nejprve je odstraňte. Pak předefinujte proměnné bez výběru možnosti jejich skrytí.  
+
+> [!WARNING]  
+> Pokud zahrnete proměnné do příkazového řádku kroku **Spustit příkazový řádek** , zobrazí se v souboru protokolu pořadí úloh úplný příkazový řádek, včetně hodnot proměnných. Chcete-li zabránit tomu, aby se potenciálně citlivá data zobrazovala v souboru protokolu, nastavte proměnnou pořadí úloh **OSDDoNotLogCommand** na `TRUE` .
 
 
 ## <a name="set-task-sequence-variable"></a><a name="BKMK_SetTaskSequenceVariable"></a>Nastavit proměnnou pořadí úloh
@@ -2289,8 +2357,13 @@ Zadejte název předdefinované nebo proměnné akce pořadí úkolů nebo zadej
 <!--1358330-->
 Tuto možnost povolte, pokud chcete maskovat citlivá data uložená v proměnných pořadí úkolů. Například při zadávání hesla.
 
-> [!Note]  
+> [!NOTE]
 > Tuto možnost povolte a pak nastavte hodnotu proměnné pořadí úkolů. V opačném případě se hodnota proměnné nenastaví podle vašich záměrů, což může způsobit neočekávané chování při spuštění pořadí úkolů.<!--SCCMdocs issue #800-->
+
+Když použijete možnost **tuto hodnotu nezobrazovat**, hodnota proměnné se nezobrazí v editoru pořadí úloh. Soubor protokolu pořadí úkolů (**souboru Smsts. log**) nebo ladicí program sekvence úloh nezobrazuje hodnotu proměnné buď. Proměnnou lze v pořadí úkolů používat i v případě, že je spuštěna. Pokud už nechcete, aby tato proměnná byla skrytá, odstraňte ji jako první. Pak proměnnou znovu definujte bez výběru možnosti k jejímu skrytí.
+
+> [!WARNING]
+> Pokud zahrnete proměnné do příkazového řádku kroku **Spustit příkazový řádek** , zobrazí se v souboru protokolu pořadí úloh úplný příkazový řádek, včetně hodnot proměnných. Chcete-li zabránit tomu, aby se potenciálně citlivá data zobrazovala v souboru protokolu, nastavte proměnnou pořadí úloh **OSDDoNotLogCommand** na `TRUE` .<!-- 6963278 -->
 
 #### <a name="value"></a>Hodnota  
 
@@ -2388,6 +2461,8 @@ Pokud je k dispozici předprodukční klientský balíček a počítač je člen
 Krok pořadí úkolů automaticky určuje přiřazení lokality a výchozí konfiguraci. Pomocí tohoto pole můžete určit jakékoli další vlastnosti instalace, které se mají použít při instalaci klienta. Pokud chcete zadat víc vlastností instalace, oddělte je mezerami.  
 
 Zadejte parametry příkazového řádku, které se mají použít při instalaci klienta. Zadejte například, `/skipprereq: silverlight.exe` abyste informovali CCMSetup.exe, že nechcete instalovat požadované součásti Microsoft Silverlightu. Další informace o dostupných možnostech příkazového řádku pro CCMSetup.exe najdete v tématu [informace o vlastnostech instalace klienta](../../core/clients/deploy/about-client-installation-properties.md).  
+
+Při spuštění pořadí úloh nasazení operačního systému v internetovém klientovi, který je připojen k Azure AD nebo používá ověřování založené na tokenech, je nutné zadat vlastnost [CCMHOSTNAME](../../core/clients/deploy/about-client-installation-properties.md#ccmhostname) v kroku **nastavit systém Windows a nástroj ConfigMgr** . Například, `CCMHOSTNAME=OTTERFALLS.CLOUDAPP.NET/CCM_Proxy_MutualAuth/12345678907927939`.
 
 ### <a name="options-for-setup-windows-and-configmgr"></a>Možnosti pro nastavení systému Windows a nástroje ConfigMgr
 

@@ -5,17 +5,17 @@ description: Všechna nastavení správy BitLockeru dostupná v Configuration Ma
 ms.date: 04/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: f7ade768-2b2b-4aab-8ee1-73624d03a9c5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9ce6a9c566fec22e69c0a4a7fde01b911330ec1d
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: cb95a05fd3d347b70dd5d53ce972bce0c23c18cc
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81723926"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127878"
 ---
 # <a name="bitlocker-settings-reference"></a>Reference k nastavení BitLockeru
 
@@ -94,7 +94,7 @@ Pokud tuto zásadu nenakonfigurujete, BitLocker při restartování počítače 
 
 Nakonfigurujte tuto zásadu tak, aby používala ochranu BitLockerem založenou na certifikátech SmartCard. Pak zadejte **identifikátor objektu**certifikátu.
 
-Pokud tuto zásadu nenakonfigurujete, BitLocker použije k určení certifikátu výchozí identifikátor `1.3.6.1.4.1.311.67.1.1` objektu.
+Pokud tuto zásadu nenakonfigurujete, BitLocker použije k určení certifikátu výchozí identifikátor objektu `1.3.6.1.4.1.311.67.1.1` .
 
 ### <a name="organization-unique-identifiers"></a>Jedinečné identifikátory organizace
 
@@ -125,10 +125,10 @@ V zařízeních s kompatibilním čipem TPM lze při spuštění použít dva ty
 
 - **Vyberte ochranu pro jednotku operačního systému**: nakonfigurujte ji tak, aby používala čip TPM a kód PIN, nebo jenom čip TPM.
 
-- **Nakonfigurovat minimální délku PIN kódu pro spuštění**: Pokud POŽADUJETE kód PIN, je tato hodnota nejkratší délka, kterou může uživatel zadat. Uživatel zadá tento kód PIN, když se počítač spustí k odemknutí jednotky. Ve výchozím nastavení je `4`minimální délka kódu PIN.
+- **Nakonfigurovat minimální délku PIN kódu pro spuštění**: Pokud POŽADUJETE kód PIN, je tato hodnota nejkratší délka, kterou může uživatel zadat. Uživatel zadá tento kód PIN, když se počítač spustí k odemknutí jednotky. Ve výchozím nastavení je minimální délka kódu PIN `4` .
 
 > [!TIP]
-> Pokud pro zajištění vyšší úrovně zabezpečení povolíte zařízení s technologií TPM + PIN, *zvažte zakázání* následujících nastavení zásad skupiny v**nastaveních režimu spánku****nástroje řízení** > spotřeby **systému** > :
+> Pokud pro zajištění vyšší úrovně zabezpečení povolíte zařízení s technologií TPM + PIN, zvažte *zakázání* následujících nastavení zásad skupiny v **System**  >  **Power Management**  >  **nastaveních režimu spánku**nástroje řízení spotřeby systému:
 >
 > - Při přechodu do režimu spánku (napájení ze sítě) povolí stavy v pohotovostním režimu (S1-S3)
 >
@@ -157,7 +157,7 @@ Pomocí těchto nastavení můžete nastavit omezení pro hesla pro odemknutí j
 
 - **Konfigurace složitosti hesla pro jednotky operačního systému**: Pokud chcete vynutit požadavky na složitost hesla, vyberte **vyžadovat složitost hesla**.
 
-- **Minimální délka hesla pro jednotku operačního systému**: ve výchozím nastavení je `8`minimální délka.
+- **Minimální délka hesla pro jednotku operačního systému**: ve výchozím nastavení je minimální délka `8` .
 
 - **Vyžadovat hesla jenom standardu ASCII pro vyměnitelné jednotky operačního systému**
 
@@ -165,7 +165,7 @@ Pokud nastavení této zásady povolíte, můžou uživatelé nakonfigurovat hes
 
 #### <a name="general-usage-notes-for-os-drive-password-policy"></a>Obecné poznámky k používání pro zásady hesel pro jednotky operačního systému
 
-- Aby tato nastavení požadavků na složitost byla účinná, musí také**Windows Settings** > **Povolit nastavení zásad** > skupiny, aby **heslo splňovalo požadavky na složitost** v části **Konfigurace** > počítače**zásady hesel****Zásady účtů Zásady** > pro hesla.
+- Aby tato nastavení požadavků na složitost byla účinná, musí také povolit nastavení zásad skupiny, aby **heslo splňovalo požadavky na složitost** v části **Konfigurace počítače**  >  **Windows Settings**  >  **Security Settings**  >  zásady hesel**Zásady účtů Zásady**pro  >  **hesla**.
 
 - BitLocker toto nastavení vynutil, když ho zapnete, ne při odemčení svazku. BitLocker umožňuje odemknout jednotku s jakýmkoli ochranou, která je na disku k dispozici.
 
@@ -214,7 +214,7 @@ Pokud nástroj BitLocker nepožaduje zásah uživatele při přidání ochrany, 
 
 Pokud toto nastavení zakážete nebo nenakonfigurujete, Configuration Manager nepožaduje, aby uživatelé dodržovali zásady BitLockeru.
 
-Pokud chcete zásady vymáhat hned, nastavte období odkladu `0`.
+Pokud chcete zásady vymáhat hned, nastavte období odkladu `0` .
 
 ## <a name="fixed-drive"></a>Pevná jednotka
 
@@ -264,7 +264,7 @@ Pro vyšší zabezpečení povolte toto nastavení a pak nakonfigurujte následu
 
 - **Konfigurace složitosti hesla pro pevné datové jednotky**: Pokud chcete vynutit požadavky na složitost hesla, vyberte **vyžadovat složitost hesla**.
 
-- **Minimální délka hesla pro pevný datový disk**: ve výchozím nastavení je `8`minimální délka.
+- **Minimální délka hesla pro pevný datový disk**: ve výchozím nastavení je minimální délka `8` .
 
 Pokud toto nastavení zakážete, uživatelé nemůžou nakonfigurovat heslo.
 
@@ -272,7 +272,7 @@ Pokud zásada není nakonfigurovaná, BitLocker podporuje hesla s výchozími na
 
 #### <a name="general-usage-notes-for-fixed-data-drive-password-policy"></a>Obecné poznámky k používání zásad pro hesla pro pevné datové jednotky
 
-- Aby tato nastavení požadavků na složitost byla účinná, musí také**Windows Settings** > **Povolit nastavení zásad** > skupiny, aby **heslo splňovalo požadavky na složitost** v části **Konfigurace** > počítače**zásady hesel****Zásady účtů Zásady** > pro hesla.
+- Aby tato nastavení požadavků na složitost byla účinná, musí také povolit nastavení zásad skupiny, aby **heslo splňovalo požadavky na složitost** v části **Konfigurace počítače**  >  **Windows Settings**  >  **Security Settings**  >  zásady hesel**Zásady účtů Zásady**pro  >  **hesla**.
 
 - BitLocker toto nastavení vynutil, když ho zapnete, ne při odemčení svazku. BitLocker umožňuje odemknout jednotku s jakýmkoli ochranou, která je na disku k dispozici.
 
@@ -290,7 +290,7 @@ Pokud nástroj BitLocker nepožaduje zásah uživatele při přidání ochrany, 
 
 Pokud toto nastavení zakážete nebo nenakonfigurujete, Configuration Manager nepožaduje, aby uživatelé dodržovali zásady BitLockeru.
 
-Pokud chcete zásady vymáhat hned, nastavte období odkladu `0`.
+Pokud chcete zásady vymáhat hned, nastavte období odkladu `0` .
 
 ## <a name="removable-drive"></a>Vyměnitelná jednotka
 
@@ -312,7 +312,7 @@ Když zapnete toto nastavení:
 
 - Povolit nastavení **zásad hesla pro vyměnitelné datové jednotky**
 
-- *Zakažte* následující nastavení zásad skupiny v **nástroji** > pro**přístup k vyměnitelnému úložišti** pro uživatele & konfigurací počítačů:
+- *Zakažte* následující nastavení zásad skupiny v **nástroji**  >  pro**přístup k vyměnitelnému úložišti** pro uživatele & konfigurací počítačů:
 
   - **Všechny třídy vyměnitelného úložiště: Odepřít přístup všem**
   - **Vyměnitelné disky: Odepřít přístup pro zápis**
@@ -337,7 +337,7 @@ Když zapnete toto nastavení:
 Když toto nastavení zakážete nebo nenakonfigurujete, Windows připojí všechny vyměnitelné jednotky s přístupem pro čtení a zápis.
 
 > [!NOTE]
-> Toto nastavení můžete přepsat pomocí nastavení zásad skupiny v **systému** > **přístup k vyměnitelnému úložišti**. Pokud povolíte nastavení zásad skupiny **Vyměnitelné disky: Odepřít přístup pro zápis**, pak BitLocker ignoruje toto nastavení Configuration Manager.
+> Toto nastavení můžete přepsat pomocí nastavení zásad skupiny v **systému**  >  **přístup k vyměnitelnému úložišti**. Pokud povolíte nastavení zásad skupiny **Vyměnitelné disky: Odepřít přístup pro zápis**, pak BitLocker ignoruje toto nastavení Configuration Manager.
 
 <!-- ### Allow access to BitLocker-protected removable data drives from earlier versions of Windows -->
 
@@ -355,7 +355,7 @@ Pro vyšší zabezpečení povolte toto nastavení a pak nakonfigurujte následu
 
 - **Konfigurace složitosti hesla pro vyměnitelné datové jednotky**: Pokud chcete vynutit požadavky na složitost hesla, vyberte **vyžadovat složitost hesla**.
 
-- **Minimální délka hesla pro vyměnitelnou datovou jednotku**: ve výchozím nastavení je `8`minimální délka.
+- **Minimální délka hesla pro vyměnitelnou datovou jednotku**: ve výchozím nastavení je minimální délka `8` .
 
 Pokud toto nastavení zakážete, uživatelé nemůžou nakonfigurovat heslo.
 
@@ -363,7 +363,7 @@ Pokud zásada není nakonfigurovaná, BitLocker podporuje hesla s výchozími na
 
 #### <a name="general-usage-notes-for-removable-data-drive-password-policy"></a>Obecné poznámky k používání pro zásady hesel pro vyměnitelné datové jednotky
 
-- Aby tato nastavení požadavků na složitost byla účinná, musí také**Windows Settings** > **Povolit nastavení zásad** > skupiny, aby **heslo splňovalo požadavky na složitost** v části **Konfigurace** > počítače**zásady hesel****Zásady účtů Zásady** > pro hesla.
+- Aby tato nastavení požadavků na složitost byla účinná, musí také povolit nastavení zásad skupiny, aby **heslo splňovalo požadavky na složitost** v části **Konfigurace počítače**  >  **Windows Settings**  >  **Security Settings**  >  zásady hesel**Zásady účtů Zásady**pro  >  **hesla**.
 
 - BitLocker toto nastavení vynutil, když ho zapnete, ne při odemčení svazku. BitLocker umožňuje odemknout jednotku s jakýmkoli ochranou, která je na disku k dispozici.
 
@@ -393,17 +393,17 @@ Nakonfigurujte způsob kontaktu pro uživatele, aby si vyžádal výjimku z šif
 
 Pokud nastavení této zásady povolíte, zadejte následující informace:
 
-- **Maximální počet dnů do odložení**: počet dní, po které může uživatel odložit vynucované zásadu. Ve výchozím nastavení je `7` tato hodnota dny (jeden týden).
+- **Maximální počet dnů do odložení**: počet dní, po které může uživatel odložit vynucované zásadu. Ve výchozím nastavení je tato hodnota `7` dny (jeden týden).
 
 - **Kontaktní metoda**: Určete, jak můžou uživatelé požádat o výjimku: adresu URL, e-mailovou adresu nebo telefonní číslo.
 
 - **Kontakt**: zadejte adresu URL, e-mailovou adresu nebo telefonní číslo. Když si uživatel vyžádá výjimku z ochrany BitLockerem, zobrazí se dialogové okno Windows s pokyny, jak použít. Configuration Manager neověřuje zadané informace.
 
-  - **Adresa URL**: použijte standardní formát adresy URL `https://website.domain.tld`,. Systém Windows zobrazí adresu URL jako hypertextový odkaz.
+  - **Adresa URL**: použijte standardní formát adresy URL, `https://website.domain.tld` . Systém Windows zobrazí adresu URL jako hypertextový odkaz.
 
-  - **E-mailová adresa**: použijte standardní formát e `user@domain.tld`-mailové adresy,. Systém Windows zobrazí adresu jako následující hypertextový odkaz `mailto:user@domain.tld?subject=Request exemption from BitLocker protection`:.
+  - **E-mailová adresa**: použijte standardní formát e-mailové adresy, `user@domain.tld` . Systém Windows zobrazí adresu jako následující hypertextový odkaz: `mailto:user@domain.tld?subject=Request exemption from BitLocker protection` .
 
-  - **Telefonní číslo**: zadejte číslo, které budou vaši uživatelé volat. Systém Windows zobrazí číslo s následujícím popisem: `Please call <your number> for applying exemption`.
+  - **Telefonní číslo**: zadejte číslo, které budou vaši uživatelé volat. Systém Windows zobrazí číslo s následujícím popisem: `Please call <your number> for applying exemption` .
 
 Pokud toto nastavení zakážete nebo nenakonfigurujete, Windows nezobrazí uživatelům pokyny pro žádosti o výjimku.
 

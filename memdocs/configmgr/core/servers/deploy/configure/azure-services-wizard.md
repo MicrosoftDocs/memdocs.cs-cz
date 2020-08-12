@@ -2,20 +2,20 @@
 title: Konfigurace služeb Azure
 titleSuffix: Configuration Manager
 description: Připojte své Configuration Manager prostředí se službami Azure pro správu cloudu, Microsoft Store pro firmy a Log Analytics.
-ms.date: 06/10/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: a26a653e-17aa-43eb-ab36-0e36c7d29f49
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 6ca5307de5c7df54c3cf7924bc91b0175b1bfa39
-ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
+ms.openlocfilehash: ebdd07874f09ff6d97747826d6056df177e2c735
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84715318"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128473"
 ---
 # <a name="configure-azure-services-for-use-with-configuration-manager"></a>Konfigurace služeb Azure pro použití s Configuration Manager
 
@@ -62,9 +62,9 @@ V následující tabulce jsou uvedeny podrobnosti o jednotlivých službách.
 
 |Služba  |Tenanti  |Cloudy  |Webová aplikace  |Native app  |Akce  |
 |---------|---------|---------|---------|---------|---------|
-|Správa cloudu pomocí<br>Zjišťování Azure AD | Několik | Veřejné, soukromé | ![Podporuje se](media/green_check.png) | ![Podporuje se](media/green_check.png) | Importovat, vytvořit |
-|Konektor Log Analytics | Jeden | Veřejné, soukromé | ![Podporuje se](media/green_check.png) | ![Nepodporuje se](media/Red_X.png) | Import |
-|Microsoft Store pro<br>Do zaměstnání | Jeden | Public | ![Podporuje se](media/green_check.png) | ![Nepodporuje se](media/Red_X.png) | Importovat, vytvořit |
+|Správa cloudu pomocí<br>Zjišťování Azure AD | Několik | Veřejné, soukromé | ![Podporováno](media/green_check.png) | ![Podporováno](media/green_check.png) | Importovat, vytvořit |
+|Konektor Log Analytics | Jednu | Veřejné, soukromé | ![Podporováno](media/green_check.png) | ![Nepodporováno](media/Red_X.png) | Import |
+|Microsoft Store pro<br>Do zaměstnání | Jednu | Veřejný | ![Podporováno](media/green_check.png) | ![Nepodporováno](media/Red_X.png) | Importovat, vytvořit |
 
 ### <a name="about-azure-ad-apps"></a>O aplikacích Azure AD
 
@@ -229,6 +229,17 @@ Po zadání webových a nativních aplikací na stránce aplikace Průvodce slu�
 Nakonec dokončete Průvodce službami Azure pomocí stránek souhrn, průběh a dokončení. Dokončili jste konfiguraci služby Azure v Configuration Manager. Zopakováním tohoto postupu nakonfigurujete další služby Azure.
 
 ## <a name="renew-secret-key"></a><a name="bkmk_renew"></a>Obnovit tajný klíč
+
+Tajný klíč aplikace Azure AD musíte obnovit před koncem období platnosti. Pokud zadáte vypršení platnosti klíče, Configuration Manager se nemůže ověřit ve službě Azure AD, což způsobí, že vaše připojené služby Azure přestanou fungovat.
+
+Počínaje verzí 2006 konzola Configuration Manager zobrazuje oznámení v následujících situacích:<!--6386392-->
+
+- Brzo vyprší platnost jednoho nebo více tajných klíčů aplikací Azure AD.
+- Platnost jednoho nebo více tajných klíčů aplikace Azure AD vypršela.
+
+Pokud chcete oba případy zmírnit, obnovte tajný klíč.
+
+Další informace o tom, jak s těmito oznámeními pracovat, najdete v tématu [Configuration Manager oznámení konzoly](../../manage/admin-console-notifications.md).
 
 ### <a name="renew-key-for-created-app"></a>Obnovit klíč pro vytvořenou aplikaci
 

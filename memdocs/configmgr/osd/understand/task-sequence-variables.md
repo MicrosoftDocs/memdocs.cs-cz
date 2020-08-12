@@ -2,20 +2,20 @@
 title: Reference k proměnným pořadí úkolů
 titleSuffix: Configuration Manager
 description: Přečtěte si o proměnných pro řízení a přizpůsobení Configuration Manager sekvence úloh.
-ms.date: 04/01/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 62f15230-d3a6-4afc-abd4-1e07e7ba6c97
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b3ddd1a4b59ba750e9fca5f8386762b4a5dddb13
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 667d7451f467592bd0645b54d7068a20628ec98e
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83429838"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88124137"
 ---
 # <a name="task-sequence-variables"></a>Proměnné pořadí úkolů
 
@@ -373,6 +373,13 @@ Proměnná, která je určená jen pro čtení, má za **následek** to, že nap
 
 Proměnná určená jen pro čtení, která kontroluje, zda je v **připojeném síťovém adaptéru** vrácena hodnota true ( `1` ) nebo false ( `0` ). Pokud tuto kontrolu nepovolíte, hodnota této proměnné jen pro čtení bude prázdná.
 
+### <a name="_ts_cruefi"></a><a name="TSCRUEFI"></a>_TS_CRUEFI
+
+*Počínaje verzí 2006* <!--6452769-->
+*Platí pro krok [kontrolovat připravenost](task-sequence-steps.md#BKMK_CheckReadiness) .*
+
+Proměnná určená jen pro čtení, která má **počítač v režimu UEFI** , vrátila hodnotu BIOS ( `0` ) nebo UEFI ( `1` ). Pokud tuto kontrolu nepovolíte, hodnota této proměnné jen pro čtení bude prázdná.
+
 ### <a name="_ts_crwired"></a><a name="TSCRWIRED"></a>_TS_CRWIRED
 
 *Počínaje verzí 2002* <!--6005561-->  
@@ -416,7 +423,7 @@ Následující názvy proměnných použijte k definování vlastností *prvníh
 
 #### <a name="osdadapter0enabledhcp"></a>OSDAdapter0EnableDHCP
 
-Toto nastavení je povinné. Možné hodnoty jsou `True` nebo `False`. Příklad:
+Toto nastavení je povinné. Možné hodnoty jsou `True` nebo `False`. Například:
 
 `true`: Povolte pro adaptér protokol DHCP (Dynamic Host Configuration Protocol).
 

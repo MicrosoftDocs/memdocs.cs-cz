@@ -5,17 +5,17 @@ description: Vysvětlení použití editoru pořadí úloh v konzole Configurati
 ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: a4e8bb56-ee85-49fd-8b1c-c8f513cec671
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2047ae9e276ac94b633d1dc30814ed641cd34d03
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 405617277953eae61fbfce4fdb9b3a7d280aedcf
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81711424"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88124444"
 ---
 # <a name="use-the-task-sequence-editor"></a>Použití editoru pořadí úloh
 
@@ -121,9 +121,9 @@ Chcete-li upravit existující pořadí úloh, použijte následující postup:
 
         Můžete vyjmout, kopírovat a vložit skupinu nebo krok. Klikněte na položku pravým tlačítkem a vyberte akci. Pro každou akci můžete použít také standardní klávesové zkratky:
 
-        - Vyjmout: **CTRL** + **X**
-        - Kopírovat: **CTRL** + **C**
-        - Vložit: **CTRL** + **V**
+        - Vyjmout: **CTRL**  +  **X**
+        - Kopírovat: **CTRL**  +  **C**
+        - Vložit: **CTRL**  +  **V**
 
     - **Odebrat krok nebo skupinu**: Vyberte krok nebo skupinu a zvolte **Odebrat**.  
 
@@ -194,7 +194,7 @@ Chcete-li znovu použít podmínky z jednoho kroku na jiný, počínaje verzí 1
 - Vložit za
 - Vložit do (platí pouze pro vnořené podmínky)
 
-Pomocí standardních klávesových zkratek můžete kopírovat (**CTRL** + **C**) a vyjmout (**CTRL** + **X**). Standardní klávesová**zkratka v** **kombinaci kláves CTRL +** + provede **vložení po** akci.
+Pomocí standardních klávesových zkratek můžete kopírovat (**CTRL**  +  **C**) a vyjmout (**CTRL**  +  **X**). Standardní klávesová zkratka v **kombinaci kláves CTRL +**  +  **V** provede **vložení po** akci.
 
 K dispozici jsou také nové možnosti přesunutí podmínek v seznamu nahoru nebo dolů.
 
@@ -243,10 +243,10 @@ Při hledání se okno editoru zvýrazní žlutým postupem, který odpovídá k
 
 Pomocí následujících klávesových zkratek získáte rychlý přístup k těmto vyhledávacím polím a procházejte výsledky hledání:
 
-- **CTRL** + **F**: Zadejte hledaný řetězec.
-- **CTRL** + **O**: vyberte možnosti hledání pro určení rozsahu výsledků.
+- **CTRL**  +  **F**: Zadejte hledaný řetězec.
+- **CTRL**  +  **O**: vyberte možnosti hledání k určení rozsahu výsledků.
 - **F3** nebo **ENTER**: krok dopřed výsledky
-- **Shift** + **F3**: krok zpět výsledky
+- **Posun**  +  **F3**: krok zpět výsledky
 
 ## <a name="see-also"></a>Viz také
 

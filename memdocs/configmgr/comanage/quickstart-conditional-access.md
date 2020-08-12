@@ -10,12 +10,12 @@ ms.assetid: 4cf640b3-610c-4c3c-b966-c62e9f5654ff
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 94f002ecd12d08ffd5f3d4767e315e0d83714929
-ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
+ms.openlocfilehash: f2ada7bfcef5714d8df3c476a6bbba695dc398e0
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83764046"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127269"
 ---
 # <a name="conditional-access-with-co-management"></a>Podmíněný přístup s spolusprávou
 
@@ -81,7 +81,7 @@ Mezi další příklady patří:
 
 - Nestlé, kdo používá podmíněný přístup na základě aplikace pro více než 150 000 zaměstnanců  
 
-- Společnost pro automatizaci softwaru tempo, která teď může zajistit, aby přístup k aplikacím Office 365, jako jsou týmy a intranetu společnosti, měla jenom spravovaná zařízení. Mohou také nabídnout pracovníkům "bezpečnější přístup k jiným cloudovým aplikacím, jako je například Workday a Salesforce." Další informace o zkušenostech s tempo s Intune najdete v článku [tempo zvyšuje tempo podnikání pomocí nástrojů pro mobilní spolupráci v Microsoft 365](https://customers.microsoft.com/story/cadence-partner-professional-services-microsoft-365).
+- Společnost pro automatizaci softwaru, tempo, která teď může zajistit, aby přístup k aplikacím Microsoft 365, jako jsou týmy a intranetu společnosti, měla jenom spravovaná zařízení. Mohou také nabídnout pracovníkům "bezpečnější přístup k jiným cloudovým aplikacím, jako je například Workday a Salesforce." Další informace o zkušenostech s tempo s Intune najdete v článku [tempo zvyšuje tempo podnikání pomocí nástrojů pro mobilní spolupráci v Microsoft 365](https://customers.microsoft.com/story/cadence-partner-professional-services-microsoft-365).
 
 Intune se taky plně integruje s partnery, jako je Cisco ISE, Aruba Clear Pass a Citrix NetScaler. U těchto partnerů můžete spravovat řízení přístupu na základě registrace Intune a stavu dodržování předpisů zařízením napříč těmito platformami.
 

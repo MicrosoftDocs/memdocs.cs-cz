@@ -2,7 +2,7 @@
 title: Použití hranic a skupin hranic
 titleSuffix: Configuration Manager
 description: Pomocí hranic a skupin hranic definujte síťová umístění a přístupné systémy lokality pro zařízení, která spravujete.
-ms.date: 06/18/2019
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 54aa20d5-791e-4416-9db4-5aaea472c0b7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 0b1a6bb6ff9fdffad65db884fe8c3b68d3fc3263
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 385dc1b2f542c964b52515e755a9202ee951bc5c
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81711242"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126371"
 ---
 # <a name="define-site-boundaries-and-boundary-groups"></a>Definice hranic lokality a skupin hranic
 
@@ -29,6 +29,7 @@ Hierarchie může obsahovat libovolný počet skupin hranic. Každá skupina hra
 - název lokality služby Active Directory,  
 - Předpona IPv6  
 - Rozsah IP adres  
+- VPN (počínaje verzí 2006)
 
 Klienti v intranetu vyhodnotí svoje aktuální umístění v síti a potom pomocí těchto informací identifikují skupiny hranic, ke kterým patří.  
 

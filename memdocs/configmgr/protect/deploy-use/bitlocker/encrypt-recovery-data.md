@@ -2,20 +2,20 @@
 title: Šifrování dat pro obnovení
 titleSuffix: Configuration Manager
 description: Šifrujte klíče pro obnovení BitLockeru, balíčky pro obnovení a hodnoty hash hesel TPM napříč sítí a v databázi Configuration Manager.
-ms.date: 04/15/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 1ee6541a-e243-43ea-be16-d0349f7f0c6e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 79f50cf4b0d241df2fc8d12dc46c833af278bd5a
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: e887d594e80c0f92340081d9b922bfc334d1b3a5
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81724437"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129184"
 ---
 # <a name="encrypt-recovery-data"></a>Šifrování dat pro obnovení
 
@@ -36,7 +36,7 @@ S ohledem na citlivou povahu těchto informací je nutné chránit je v následu
     > [!NOTE]
     > V současné době nepodporuje rozšířené požadavky HTTP.
 
-- Zvažte také šifrování těchto dat při ukládání do databáze lokality. Můžete použít SQL Server šifrování na úrovni buněk s vlastním certifikátem.
+- Zvažte také šifrování těchto dat při ukládání do databáze lokality. Pokud nainstalujete certifikát SQL, Configuration Manager šifruje data v SQL.
 
     Pokud nechcete vytvořit šifrovací certifikát pro správu BitLockeru, přihlaste se k ukládání dat pro obnovení do prostého textu. Když vytváříte zásadu správy BitLockeru, povolte možnost **Povolit ukládání informací pro obnovení do prostého textu**.
 
@@ -68,7 +68,7 @@ Nyní může být vlastnost **připojení klienta** bodu správy **http** nebo *
 > [!TIP]
 > Pouze klienti, kteří potřebují komunikovat se službou Recovery Services, jsou klienti, u kterých chcete cílit na zásadu správy nástroje BitLocker a které obsahují pravidlo **správy klienta** .
 
-Na straně klienta použijte k řešení potíží s tímto připojením **protokol BitLockerManagementHandler. log** . V případě připojení ke službě Recovery Services se v protokolu zobrazuje adresa URL, kterou klient používá. Vyhledejte položku, která začíná na `Checking for Recovery Service at`.
+Na straně klienta použijte k řešení potíží s tímto připojením **protokol BitLockerManagementHandler. log** . V případě připojení ke službě Recovery Services se v protokolu zobrazuje adresa URL, kterou klient používá. Vyhledejte položku, která začíná na `Checking for Recovery Service at` .
 
 > [!NOTE]
 > Pokud má lokalita více než jeden bod správy, povolte protokol HTTPS u všech bodů správy v lokalitě, pomocí kterých může klient spravovaný pomocí nástroje BitLocker potenciálně komunikovat. Pokud bod správy HTTPS není k dispozici, může klient převzít služby při selhání do bodu správy protokolu HTTP a pak selže v úschově obnovovacího klíče.
@@ -77,9 +77,9 @@ Na straně klienta použijte k řešení potíží s tímto připojením **proto
 
 ### <a name="sql-encryption-certificate"></a>Certifikát pro šifrování SQL
 
-Tento certifikát použijte k povolení SQL Server šifrování na úrovni buněk pro data obnovení nástroje BitLocker. Pomocí vlastního procesu můžete vytvořit a nasadit šifrovací certifikát pro správu nástroje BitLocker, pokud splňuje následující požadavky:
+Tento certifikát SQL použijte k Configuration Manager k šifrování dat obnovení nástroje BitLocker v databázi lokality. Pomocí vlastního procesu můžete vytvořit a nasadit šifrovací certifikát pro správu nástroje BitLocker, pokud splňuje následující požadavky:
 
-- Název šifrovacího certifikátu správy BitLockeru musí být `BitLockerManagement_CERT`.
+- Název šifrovacího certifikátu správy BitLockeru musí být `BitLockerManagement_CERT` .
 
 - Zašifrujte tento certifikát pomocí hlavního klíče databáze.
 
@@ -90,7 +90,7 @@ Tento certifikát použijte k povolení SQL Server šifrování na úrovni buně
 
 - Nasaďte stejný certifikát do každé databáze lokality ve vaší hierarchii.
 
-- Vytvořte certifikát s nejnovější verzí SQL Server ve vašem prostředí. Příklad:
+- Vytvořte certifikát s nejnovější verzí SQL Server ve vašem prostředí. Například:
   - Certifikáty vytvořené pomocí SQL Server 2016 nebo novější jsou kompatibilní s SQL Server 2014 nebo starším.
   - Certifikáty vytvořené pomocí SQL Server 2014 nebo starší nejsou kompatibilní s SQL Server 2016 nebo novějším.
 
@@ -108,9 +108,9 @@ Tento ukázkový skript provádí následující akce:
 
 Než použijete tento skript v produkčním prostředí, změňte následující hodnoty:
 
-- Název databáze webu (`CM_ABC`)
-- Heslo pro vytvoření hlavního klíče (`MyMasterKeyPassword`)
-- Datum vypršení platnosti certifikátu`20391022`()
+- Název databáze webu ( `CM_ABC` )
+- Heslo pro vytvoření hlavního klíče ( `MyMasterKeyPassword` )
+- Datum vypršení platnosti certifikátu ( `20391022` )
 
 ``` SQL
 USE CM_ABC
@@ -136,9 +136,9 @@ Tento ukázkový skript zálohuje certifikát. Když certifikát uložíte do so
 
 Než použijete tento skript v produkčním prostředí, změňte následující hodnoty:
 
-- Název databáze webu (`CM_ABC`)
-- Cesta k souboru a název`C:\BitLockerManagement_CERT_KEY`()
-- Exportovat heslo klíče (`MyExportKeyPassword`)
+- Název databáze webu ( `CM_ABC` )
+- Cesta k souboru a název ( `C:\BitLockerManagement_CERT_KEY` )
+- Exportovat heslo klíče ( `MyExportKeyPassword` )
 
 ``` SQL
 USE CM_ABC
@@ -156,10 +156,10 @@ Tento ukázkový skript obnoví certifikát ze souboru. Tento postup použijte k
 
 Než použijete tento skript v produkčním prostředí, změňte následující hodnoty:
 
-- Název databáze webu (`CM_ABC`)
-- Heslo hlavního klíče (`MyMasterKeyPassword`)
-- Cesta k souboru a název`C:\BitLockerManagement_CERT_KEY`()
-- Exportovat heslo klíče (`MyExportKeyPassword`)
+- Název databáze webu ( `CM_ABC` )
+- Heslo hlavního klíče ( `MyMasterKeyPassword` )
+- Cesta k souboru a název ( `C:\BitLockerManagement_CERT_KEY` )
+- Exportovat heslo klíče ( `MyExportKeyPassword` )
 
 ``` SQL
 USE CM_ABC
@@ -197,7 +197,7 @@ if(@count >= 3) select 1
 else select 0
 ```
 
-Pokud je certifikát platný, skript vrátí hodnotu `1`.
+Pokud je certifikát platný, skript vrátí hodnotu `1` .
 
 ## <a name="see-also"></a>Viz také
 

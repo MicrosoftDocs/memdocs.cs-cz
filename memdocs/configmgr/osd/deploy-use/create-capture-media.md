@@ -5,17 +5,17 @@ description: K zachycení image operačního systému z referenčního počíta�
 ms.date: 05/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: article
+ms.topic: how-to
 ms.assetid: 10eb8958-3848-49d7-95c0-16119b624580
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: fbbec355356a74d61f263fe2b16d44c0cd15ba80
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d85ab7e9d66c1206c6741117d7b379c998078708
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81711144"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88125368"
 ---
 # <a name="create-capture-media"></a>Vytvoření záznamového média
 
@@ -74,7 +74,7 @@ Před spuštěním Průvodce vytvořením média pořadí úloh pro vytvoření 
         > [!IMPORTANT]  
         > Pokud vyberete stávající bitovou kopii .iso, průvodce média pořadí úlohy odstraní tuto bitovou kopii z disku nebo zruší její sdílení okamžitě po otevření další stránky průvodce. Existující bitová kopie je odstraněna, i když pak průvodce zrušíte.  
 
-    - **Pracovní složka**<!--1359388-->: Proces vytváření médií může vyžadovat mnoho místa na dočasném disku. Ve výchozím nastavení je toto umístění podobné následující cestě: `%UserProfile%\AppData\Local\Temp`. Od verze 1902 získáte větší flexibilitu, kam chcete ukládat tyto dočasné soubory, změňte tuto hodnotu na jinou jednotku a cestu.  
+    - **Pracovní složka**<!--1359388-->: Proces vytváření médií může vyžadovat mnoho místa na dočasném disku. Ve výchozím nastavení je toto umístění podobné následující cestě: `%UserProfile%\AppData\Local\Temp` . Od verze 1902 získáte větší flexibilitu, kam chcete ukládat tyto dočasné soubory, změňte tuto hodnotu na jinou jednotku a cestu.  
 
     - **Popisek média**<!--1359388-->: Od verze 1902 přidejte popisek k médiu pořadí úloh. Tento popisek vám pomůže lépe identifikovat médium po jeho vytvoření. Výchozí hodnota je `Configuration Manager`. Toto textové pole se zobrazí v následujících umístěních:  
 
@@ -82,7 +82,7 @@ Před spuštěním Průvodce vytvořením média pořadí úloh pro vytvoření 
 
         - Pokud naformátujete jednotku USB, použije se jako název prvních 11 znaků popisku.  
 
-        - Configuration Manager zapíše textový soubor s `MediaLabel.txt` názvem do kořenového adresáře média. Ve výchozím nastavení soubor obsahuje jeden řádek textu: `label=Configuration Manager`. Pokud přizpůsobíte popisek pro médium, tento řádek používá vlastní popisek místo výchozí hodnoty.  
+        - Configuration Manager zapíše textový soubor s názvem `MediaLabel.txt` do kořenového adresáře média. Ve výchozím nastavení soubor obsahuje jeden řádek textu: `label=Configuration Manager` . Pokud přizpůsobíte popisek pro médium, tento řádek používá vlastní popisek místo výchozí hodnoty.  
 
     - **Zahrnout soubor Autorun. inf na médium**<!-- 4090666 -->: Počínaje verzí 1906 Configuration Manager ve výchozím nastavení nepřidá soubor Autorun. inf. Tento soubor je pro antimalwarové produkty často blokovaný. Další informace o funkci AutoRun systému Windows najdete v tématu [Vytvoření aplikace CD-ROM s podporou automatického spuštění](https://docs.microsoft.com/windows/desktop/shell/autoplay). Pokud to pro váš scénář pořád potřebujete, vyberte tuto možnost, chcete-li soubor zahrnout.  
 

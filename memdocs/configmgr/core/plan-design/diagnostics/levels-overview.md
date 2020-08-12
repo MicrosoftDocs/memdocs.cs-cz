@@ -2,7 +2,7 @@
 title: Úrovně diagnostických dat o využití
 titleSuffix: Configuration Manager
 description: Seznamte se s úrovněmi diagnostiky a dat o využití, která Configuration Manager shromažďuje.
-ms.date: 04/01/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -11,12 +11,12 @@ ms.assetid: 3c46bdb2-5bda-47c8-b5f4-9365a4b3521c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9de63280786d620229c7d408f09ef2fe583e231d
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 0d27e4a2f82de75cde853f3ce95c98ea8a12c465
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81720335"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126500"
 ---
 # <a name="levels-of-diagnostic-usage-data"></a>Úrovně diagnostických dat o využití
 
@@ -63,11 +63,11 @@ Chcete-li změnit úroveň shromažďování dat, potřebujete oprávnění **zm
 
 Následující články podrobně popisují konkrétní data, která Configuration Manager shromažďuje na jednotlivých úrovních s každou podporovanou verzí:
 
+- [Diagnostická data a data o využití pro 2006](levels-of-diagnostic-usage-data-collection-2006.md)
 - [Diagnostická data a data o využití pro 2002](levels-of-diagnostic-usage-data-collection-2002.md)
 - [Diagnostická data a data o využití pro 1910](levels-of-diagnostic-usage-data-collection-1910.md)
 - [Diagnostická data a data o využití pro 1906](levels-of-diagnostic-usage-data-collection-1906.md)
 - [Diagnostická data a data o využití pro 1902](levels-of-diagnostic-usage-data-collection-1902.md)
-- [Diagnostická data a data o využití pro 1810](levels-of-diagnostic-usage-data-collection-1810.md)
 
 ## <a name="next-steps"></a>Další kroky
 

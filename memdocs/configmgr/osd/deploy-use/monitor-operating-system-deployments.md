@@ -5,17 +5,17 @@ description: Pro usnadnění monitorování objektů nasazení operačního syst
 ms.date: 05/04/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 08085d94-295c-432f-b5e3-9736bce0193b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7afab9fbbb443b2f9fb4af15a3805c0b7df7a014
-ms.sourcegitcommit: 14d7dd0a99ebd526c9274d5781c298c828323ebf
+ms.openlocfilehash: ebae877e8a74c67f1ffd869a75db21209c0b5b9c
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82802162"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88124976"
 ---
 # <a name="monitor-operating-system-deployments-in-configuration-manager"></a>Monitorování nasazení operačního systému v Configuration Manager
 

@@ -10,12 +10,12 @@ ms.assetid: 2a216814-ca8c-4d2e-bcef-dc00966a3c9f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b15b3017dd49c75f4281a3c0bfd1c8a695ab8bae
-ms.sourcegitcommit: 7e34b561d43aa086fc07ab4edf2230d09c04f05b
+ms.openlocfilehash: 6fa5ebf25de0f695661b18c4379c080dad42cf08
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87525994"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128490"
 ---
 # <a name="plan-for-security-in-configuration-manager"></a>Plánování zabezpečení v Configuration Manager
 
@@ -391,7 +391,7 @@ Configuration Manager se integruje s Azure Active Directory (Azure AD), aby mohl
 
 - [Spoluspráva](../../../comanage/overview.md)  
 
-- [Nasazení aplikací dostupných pro uživatele](../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications-on-azure-ad-joined-devices)  
+- [Nasazení aplikací dostupných pro uživatele](../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications)
 
 - [Aplikace pro online Microsoft Store pro firmy](../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md)  
 

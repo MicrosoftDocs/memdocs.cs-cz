@@ -2,20 +2,20 @@
 title: Nastavení klienta
 titleSuffix: Configuration Manager
 description: Přečtěte si o výchozím a vlastním nastavení pro řízení chování klienta.
-ms.date: 07/28/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9f6bb29930a6e2d4faf4ffdd141d3c9cd1831305
-ms.sourcegitcommit: 19f5838eb3eb8724d22382f36f9564ac9a978b97
+ms.openlocfilehash: e70a44fee7b4805884faeda0a5fb1eab72d3371e
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87365504"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126997"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>Informace o nastavení klienta v Configuration Manager
 
@@ -139,7 +139,7 @@ Tuto možnost nastavte na **Ano** , pokud uživatelé obdrží zásady uživatel
 
 - Internetový bod správy úspěšně ověří uživatele pomocí ověřování systému Windows (Kerberos nebo NTLM). Další informace najdete v tématu [požadavky na komunikaci klienta z Internetu](../../plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan).  
 
-- Brána pro správu cloudu úspěšně ověřuje uživatele pomocí Azure Active Directory. Další informace najdete v tématu [nasazení aplikací dostupných pro uživatele na zařízeních připojených k Azure AD](../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications-on-azure-ad-joined-devices).  
+- Brána pro správu cloudu úspěšně ověřuje uživatele pomocí Azure Active Directory. Další informace najdete v tématu [nasazení aplikací dostupných pro uživatele](../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications).
 
 Pokud tuto možnost nastavíte na **ne**, nebo některý z předchozích požadavků není splněn, počítač v Internetu přijme pouze zásady počítače. V tomto scénáři uživatelé stále můžou zobrazit, žádat a instalovat aplikace z internetového katalogu aplikací. Pokud toto **nastavení není k dispozici, ale** **možnost povolit zásady uživatele u klientů** je **Ano**, uživatelé neobdrží zásady uživatele, dokud se počítač nepřipojí k intranetu.  
 
@@ -244,7 +244,7 @@ Další informace o tomto nastavení najdete v tématu [certifikáty pro Microso
 
 ### <a name="organization-name-displayed-in-software-center"></a>Název organizace zobrazený v centru softwaru
 
-Zadejte název, který uživatelé uvidí v centru softwaru. Tyto informace o značce pomáhají uživatelům identifikovat tuto aplikaci jako důvěryhodný zdroj. Další informace o prioritě tohoto nastavení najdete v tématu [brandinging Software Center](../../../apps/plan-design/plan-for-software-center.md#branding-software-center).  
+Zadejte název, který uživatelé uvidí v centru softwaru. Tyto informace o značce pomáhají uživatelům identifikovat tuto aplikaci jako důvěryhodný zdroj. Další informace o prioritě tohoto nastavení najdete v tématu [brandinging Software Center](../../../apps/plan-design/plan-for-software-center.md#brand-software-center).  
 
 ### <a name="use-new-software-center"></a>Použít nové Centrum softwaru
 
@@ -468,41 +468,40 @@ Aby soubor MIF mohl shromažďovat inventář hardwaru, musí být ve správném
 > [!NOTE]  
 > Toto nastavení je dostupné pouze ve výchozím nastavení klienta.
 
+## <a name="metered-internet-connections"></a>Měřené připojení k Internetu
 
+Spravujte, jak počítače se systémem Windows 8 a novějším používají ke komunikaci s Configuration Manager měřené internetové připojení. Poskytovatelé připojení k internetu někdy účtují podle množství dat, která odesíláte a přijímáte, když máte měřené připojení k Internetu.
 
-## <a name="metered-internet-connections"></a>Měřené připojení k Internetu  
-
-Spravujte, jak počítače se systémem Windows 8 a novějším používají ke komunikaci s Configuration Manager měřené internetové připojení. Poskytovatelé připojení k internetu někdy účtují podle množství dat, která odesíláte a přijímáte, když používáte měřené připojení k Internetu.  
-
-> [!NOTE]  
-> Nakonfigurované nastavení klienta se nepoužívá v následujících scénářích:  
+> [!NOTE]
+> Nakonfigurované nastavení klienta se nepoužívá v následujících scénářích:
 >
 > - Pokud je počítač v roamingovém datovém připojení, klient Configuration Manager neprovádí žádné úlohy, které vyžadují přenos dat do Configuration Managerch lokalit.  
 > - Pokud jsou vlastnosti síťového připojení systému Windows nakonfigurovány jako neměřené, klient Configuration Manager se chová, jako by připojení neměřené, a tak přenáší data do lokality.  
 
 ### <a name="client-communication-on-metered-internet-connections"></a>Komunikace klienta u měřených připojení k Internetu
 
-Pro toto nastavení vyberte jednu z následujících možností:  
+Pro toto nastavení vyberte jednu z následujících možností:
 
-- **Povolit**: veškerá komunikace s klienty se povoluje přes měřené připojení k Internetu, pokud klientské zařízení nepoužívá Roamingové datové připojení.  
+- **Povolit**: veškerá komunikace s klienty se povoluje přes měřené připojení k Internetu, pokud klientské zařízení nepoužívá Roamingové datové připojení.
 
-- **Limit**: přes měřené připojení k Internetu je povolené jenom následující komunikace klientů:  
+- **Omezení**: klient komunikuje pouze s měřeným připojením k Internetu pro následující chování:
 
-    - Načtení zásad klienta  
+  - Stáhnout zásady klienta
 
-    - Klient uvádí zprávy k odeslání do lokality  
+  - Odeslat zprávy o stavu klienta
 
-    - Požadavky na instalaci softwaru z centra softwaru  
+  - Žádost o instalaci softwaru z centra softwaru
 
-    - Požadovaná nasazení (je-li dosažen konečný termín instalace)  
+  - Stažení dalších zásad a obsahu pro požadovaná nasazení v konečném termínu instalace
 
-    Pokud klient dosáhne limitu přenosu dat u měřeného připojení k Internetu, klient se již nebude pokoušet o komunikaci s Configuration Manager lokalitami.  
+  Pokud klient dosáhne limitu přenosu dat u měřeného připojení k Internetu, klient již nebude komunikovat s lokalitou nástroje.
 
-- **Blok**: klient Configuration Manager se nebude pokoušet o komunikaci s Configuration Manager weby, pokud se nachází na měřeném připojení k Internetu. Tato možnost je výchozí.  
+- **Blok**: když je zařízení na měřeném připojení k Internetu, klient Configuration Manager se nebude pokoušet o komunikaci s lokalitou. Tato možnost je výchozí.
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > Klient vždy povoluje softwarové instalace z centra softwaru bez ohledu na nastavení měřeného připojení k Internetu. Pokud uživatel požádá o instalaci softwaru, když je zařízení v měřené síti, Centrum softwaru respektuje záměr uživatele.<!-- MEMDocs#285 -->
 
+Od verze 2006 klient nainstaluje a aktualizuje při konfiguraci nastavení tohoto klienta na hodnotu **Povolení** nebo **omezení**obě tyto činnosti: Díky tomuto chování může klient zůstat aktuální, ale stále spravovat komunikaci klienta v měřené síti. Toto chování můžete řídit při instalaci klienta s parametrem CCMSetup **/AllowMetered**. Další informace najdete v tématu [informace o parametrech instalace a vlastnostech klienta](../../clients/deploy/about-client-installation-properties.md#allowmetered).<!--6976145-->
 
 ## <a name="power-management"></a>Řízení spotřeby  
 
@@ -894,7 +893,7 @@ Toto nastavení nakonfiguruje místní port pro naslouchací proces HTTP, aby st
 
 ### <a name="enable-management-of-the-office-365-client-agent"></a>Povolit správu klientského agenta Office 365
 
-Pokud tuto možnost nastavíte na **Ano**, povolí se konfigurace nastavení instalace Office 365. Umožňuje taky stahovat soubory ze sítí pro doručování obsahu (sítě CDN) pro Office a nasazovat soubory jako aplikaci v Configuration Manager. Další informace najdete v tématu [Správa Office 365 ProPlus](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
+Pokud tuto možnost nastavíte na **Ano**, povolí se nastavení instalace Microsoft 365 aplikací. Umožňuje taky stahovat soubory ze sítí pro doručování obsahu (sítě CDN) pro Office a nasazovat soubory jako aplikaci v Configuration Manager. Další informace najdete v tématu [Správa aplikací Microsoft 365](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
 
 ### <a name="enable-installation-of-software-updates-in-all-deployments-maintenance-window-when-software-update-maintenance-window-is-available"></a><a name="bkmk_SUMMaint"></a>Povolit instalaci aktualizací softwaru v časovém intervalu pro správu všech nasazení, když je k dispozici okno Údržba aktualizace softwaru
 
@@ -980,9 +979,9 @@ Pokud chcete vytvořit automatické spřažení uživatelských zařízení na z
 <!--3485366-->
 Pokud je toto nastavení **Ano**, uživatelé můžou identifikovat svá vlastní primární zařízení v centru softwaru. Další informace najdete v [uživatelské příručce k centru softwaru](../../understand/software-center.md#work-information).
 
-## <a name="windows-analytics"></a>Analýzy ve Windows
+## <a name="windows-diagnostic-data"></a>Diagnostická data Windows
 
-> [!Important]  
-> Služba Windows Analytics se vyřadí od 31. ledna 2020. Další informace najdete v [článku KB 4521815: vyřazení služby Windows Analytics na 31. ledna 2020](https://support.microsoft.com/help/4521815/windows-analytics-retirement).
+> [!IMPORTANT]
+> Tato skupina se dřív nazývala **Windows Analytics**. Microsoft vyřazení služby Windows Analytics od 31. ledna 2020. Další informace najdete v [článku KB 4521815: vyřazení služby Windows Analytics na 31. ledna 2020](https://support.microsoft.com/help/4521815/windows-analytics-retirement).
 >
-> Desktop Analytics je vývoj Windows Analytics. Další informace najdete v tématu [co je Desktop Analytics](../../../desktop-analytics/overview.md).
+> Desktop Analytics je vývoj Windows Analytics. Pomocí desktopové analýzy můžete spravovat nastavení diagnostických dat Windows. Další informace najdete v tématu [co je Desktop Analytics](../../../desktop-analytics/overview.md).

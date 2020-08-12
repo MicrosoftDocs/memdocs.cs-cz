@@ -1,40 +1,54 @@
 ---
 title: Použití Centra softwaru k nasazení Windows přes síť
 titleSuffix: Configuration Manager
-description: Operační systém můžete nasadit do centra softwaru a aktualizovat existující počítač pomocí nové verze Windows nebo upgradovat Windows na nejnovější verzi.
-ms.date: 06/16/2017
+description: Nasazení operačního systému z centra softwaru pro aktualizaci existujícího počítače s novou verzí Windows nebo upgrade Windows na nejnovější verzi.
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 919e3636-53fe-4119-ad14-2d03702b391b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4b9946f6204c2e95645c932cd4e9aab691f1d95d
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 6bd10240ebc7ec478efe122bf7f8a45d3afe9f10
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81724213"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88124597"
 ---
 # <a name="use-software-center-to-deploy-windows-over-the-network-with-configuration-manager"></a>Použití centra softwaru k nasazení Windows přes síť s Configuration Manager
 
 *Platí pro: Configuration Manager (Current Branch)*
 
-Můžete vytvořit pořadí úkolů, které nainstaluje operační systém v Configuration Manager k dispozici v centru softwaru. Operační systém můžete nasadit do centra softwaru v následujících scénářích nasazení operačního systému:
+Můžete vytvořit pořadí úkolů, které nainstaluje operační systém, který je k dispozici v centru softwaru. Uživatel může spustit pořadí úkolů z centra softwaru pro následující scénáře nasazení operačního systému:
 
--   [Aktualizace existujícího počítače na novou verzi Windows](refresh-an-existing-computer-with-a-new-version-of-windows.md)
+- [Aktualizace existujícího počítače na novou verzi Windows](refresh-an-existing-computer-with-a-new-version-of-windows.md)
 
--   [Upgrade systému Windows na nejnovější verzi](upgrade-windows-to-the-latest-version.md)
+- [Upgrade systému Windows na nejnovější verzi](upgrade-windows-to-the-latest-version.md)
 
-Proveďte kroky v jednom ze scénářů nasazení operačního systému. Pak pomocí následujících částí připravte nasazení, která jsou k dispozici v centru softwaru.
+- [Vytvoření pořadí úkolů pro nasazení jiného softwaru než operačního systému](create-a-task-sequence-for-non-operating-system-deployments.md)
 
-## <a name="configure-deployment-settings"></a>Konfigurace nastavení nasazení  
-Aby bylo nasazení operačního systému dostupné v centru softwaru, nakonfigurujte nasazení. Nasazení můžete nakonfigurovat na stránce **nastavení nasazení** v nástroji Průvodce nasazením softwaru nebo na kartě **nastavení nasazení** ve vlastnostech nasazení. U nastavení **Zpřístupnit pro následující** nakonfigurujte buď **Pouze klienti aplikace Configuration Manager** , nebo **Klienti aplikace Configuration Manager, média a technologie PXE**. Po nasazení operačního systému systémem se operační systém zobrazí v centru softwaru pro členy cílové kolekce.
+Proveďte kroky v jednom z těchto scénářů nasazení operačního systému. Pak pomocí následujících částí připravte nasazení, která jsou k dispozici v centru softwaru.
 
-##  <a name="deploy-the-task-sequence-to-computers"></a><a name="BKMK_Deploy"></a>Nasazení pořadí úkolů na počítače  
-Nasaďte operační systém do cílové kolekce. Další informace naleznete v části [Deploy a task sequence](deploy-a-task-sequence.md). Když nasazujete operační systémy pro Centrum softwaru, můžete nakonfigurovat, jestli je nasazení požadované, nebo dostupné.
+## <a name="deploy-the-task-sequence"></a><a name="BKMK_Deploy"></a> Nasazení pořadí úkolů
 
--   **Požadované nasazení**: Požadovaná nasazení zpřístupní operační systém v Centru softwaru, ale spustí se automaticky podle nakonfigurovaného plánu přiřazení.
+Nasaďte pořadí úkolů do cílové kolekce. Další informace naleznete v části [Deploy a task sequence](deploy-a-task-sequence.md).
 
--   **Dostupné nasazení**: Operační systém bude dostupný v Centru softwaru a uživatel ho může na požádání nainstalovat.
+Na stránce **nastavení nasazení** v nasazení vyberte u položky **zpřístupnit pro následující** nastavení jednu z následujících možností:
+
+- Pouze klienti Configuration Manager
+
+- Klienti aplikace Configuration Manager, média a technologie PXE
+
+Také nakonfigurujte, zda je nasazení požadováno nebo k dispozici:
+
+- Požadované nasazení: požadovaná nasazení zpřístupňují pořadí úkolů v centru softwaru. Automaticky se spustí s nakonfigurovaným konečným termínem.
+
+- Dostupné nasazení: pořadí úkolů je dostupné v centru softwaru a uživatel ho může nainstalovat na vyžádání.
+
+Po vytvoření nasazení budou klienti v cílové kolekci zobrazovat pořadí úkolů v centru softwaru.
+
+## <a name="next-steps"></a>Další kroky
+
+[Uživatelská prostředí pro nasazení operačního systému](../understand/user-experience.md#software-center)

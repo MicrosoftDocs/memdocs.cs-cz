@@ -1,8 +1,8 @@
 ---
-title: Řešení potíží s připojením klienta a akcemi zařízení
+title: Odstraňování potíží s připojením tenanta a akcemi zařízení
 titleSuffix: Configuration Manager
 description: Řešení potíží s připojením klienta a akcemi zařízení pro Configuration Manager
-ms.date: 07/07/2020
+ms.date: 08/11/2020
 ms.topic: troubleshooting
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -10,12 +10,12 @@ ms.assetid: 44c2eb8a-3ccc-471f-838b-55d7971bb79e
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 67daa42fa6a8c107e7563302ccbcf8d7b2b4f69f
-ms.sourcegitcommit: 3806a1850813b7a179d703e002bcc5c7eb1cb621
+ms.openlocfilehash: 6dfe7bb44a70d26a68c6d3743ecdb05e5d55e3f1
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86210745"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129324"
 ---
 # <a name="troubleshooting-tenant-attach-and-device-actions"></a>Řešení potíží s připojením klienta a akcemi zařízení
 
@@ -33,13 +33,36 @@ K dispozici jsou tyto akce:
   
 Když správce spustí akci z centra pro správu služby Microsoft Endpoint Manager, požadavek na oznámení se přesměruje na Configuration Manager lokalita a z lokality do klienta.
 
-## <a name="configuration-manager-components"></a>Configuration Manager komponenty
+## <a name="log-files"></a>Soubory protokolu
+
+Použijte následující protokoly umístěné ve spojovacím bodu služby:
+
+- **CMGatewaySyncUploadWorker. log**
+- **CMGatewayNotificationWorker. log**
+
+Použijte následující protokoly umístěné v bodu správy:
+
+- **BgbServer. log**
+
+Použijte následující protokoly umístěné na klientovi:
+
+- **CcmNotificationAgent.log**
+
+## <a name="review-your-upload"></a><a name="bkmk_review"></a>Kontrola nahrávání
+
+1. Otevřete **CMGatewaySyncUploadWorker. log** z &lt; instalačního adresáře nástroje ConfigMgr> \Logs.
+1. Čas další synchronizace je zaznamenán podle záznamů protokolu podobných `Next run time will be at approximately: 02/28/2020 16:35:31` .
+1. V případě nahrávání zařízení vyhledejte položky protokolu podobné `Batching N records` . **N** je počet změněných zařízení odeslaných od posledního nahrání.
+1. Nahrávání probíhá každých 15 minut, než se změny projeví. Po nahrání změn může trvat dalších 5 až 10 minut, než se změny klienta zobrazí v centru pro **správu Microsoft Endpoint Manager**.
+
+
+## <a name="configuration-manager-components-and-log-flow"></a>Configuration Manager komponenty a tok protokolu
 
 - **SMS_SERVICE_CONNECTOR**: používá pracovní proces oznámení brány ke zpracování oznámení z centra pro správu služby Microsoft Endpoint Manager.
 - **SMS_NOTIFICATION_SERVER**: načte oznámení a vytvoří klientské oznámení.
 - **BgbAgent**: klient získá úlohu a spustí požadovanou akci.
 
-## <a name="sms_service_connector"></a>SMS_SERVICE_CONNECTOR
+### <a name="sms_service_connector"></a>SMS_SERVICE_CONNECTOR
 
 Když se v centru pro správu Microsoft Endpoint Manager iniciuje akce, zpracovává se žádost **CMGatewayNotificationWorker. log** .  
 
@@ -70,7 +93,7 @@ Forwarded BGB remote task. TemplateID: 1 TaskGuid: a43dd1b3-a006-4604-b012-55293
     ```
 
 
-## <a name="sms_notification_server"></a>SMS_NOTIFICATION_SERVER
+### <a name="sms_notification_server"></a>SMS_NOTIFICATION_SERVER
 
 Po odeslání zprávy do SMS_NOTIFICATION_SERVER je úloha odeslána z bodu správy do odpovídajícího klienta. Uvidíte níže v **BgbServer. log**, který je v bodu správy:
 
@@ -79,7 +102,7 @@ Get one push message from database.
 Starting to send push task (PushID: 7 TaskID: 8 TaskGUID: A43DD1B3-A006-4604-B012-5529380B3B6F TaskType: 1 TaskParam: ) to 1 clients  with throttling (strategy: 1 param: 42)
 ```
 
-## <a name="bgbagent"></a>BgbAgent
+### <a name="bgbagent"></a>BgbAgent
 
 Poslední krok probíhá na klientovi a může se zobrazit v **CcmNotificationAgent. log**. Po přijetí úkolu vyžádá Plánovač, aby provedl akci. Po provedení akce se zobrazí potvrzovací zpráva:
 
@@ -102,6 +125,17 @@ Unauthorized to perform client action. TemplateID: RequestMachinePolicy TenantId
 ```  
 
 Ujistěte se, že uživatel, který spustil akci z centra pro správu Microsoft Endpoint Manageru, má požadovaná oprávnění na Configuration Manager lokalitě. Další informace najdete v tématu [připojení požadavků klienta služby Microsoft Endpoint Manager](device-sync-actions.md#prerequisites).
+
+## <a name="known-issues"></a>Známé problémy
+
+### <a name="specific-devices-dont-synchronize"></a>Konkrétní zařízení se nesynchronizují
+
+<!--7099564-->
+Je možné, že konkrétní zařízení, která jsou Configuration Manager klientech, se do této služby neodešlou.
+
+**Ovlivněná zařízení:** Pokud je zařízení distribuční bod, který používá stejný certifikát PKI pro funkci distribučního bodu i jeho agenta klienta, nebude toto zařízení zahrnuto do synchronizace zařízení připojit klienta.
+
+**Chování:** Při provádění připojení tenanta během fáze zprovoznění se provede Úplná synchronizace poprvé. Následné synchronizační cykly jsou rozdílové synchronizace. Jakákoli aktualizace ovlivněných zařízení způsobí odebrání zařízení z synchronizace.
 
 
 ## <a name="next-steps"></a>Další kroky

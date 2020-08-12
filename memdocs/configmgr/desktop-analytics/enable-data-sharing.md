@@ -2,7 +2,7 @@
 title: Povolení sdílení dat
 titleSuffix: Configuration Manager
 description: Referenční příručka pro sdílení diagnostických dat s desktopovou analýzou
-ms.date: 04/01/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 7403dc26f5fe1789fcda6b3eddf30136a4cd6e68
-ms.sourcegitcommit: c333fc6627f5577cde9d2fa8f59e642202a7027b
+ms.openlocfilehash: 40ebeabaaf236377388660a2a1a328e308a708ab
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84795647"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88125937"
 ---
 # <a name="enable-data-sharing-for-desktop-analytics"></a>Povolení sdílení dat pro desktopovou analýzu
 
@@ -24,32 +24,43 @@ Aby bylo možné zaregistrovat zařízení do Desktop Analytics, musí posílat 
 
 ## <a name="diagnostic-data-levels"></a>Úrovně diagnostických dat
 
-![Diagram úrovní diagnostických dat pro desktopovou analýzu](media/diagnostic-data-levels.png)
+:::image type="content" source="media/diagnostic-data-levels.png" alt-text="Diagram úrovní diagnostických dat pro desktopovou analýzu":::
 
 Když integrujete Configuration Manager s desktopovou analýzou, použijete ji také ke správě úrovně diagnostiky dat v zařízeních. Pro dosažení co nejlepších výsledků použijte Configuration Manager.
 
-> [!Important]  
+> [!IMPORTANT]
 > Ve většině případů se tato nastavení konfigurují jenom pomocí Configuration Manager. Tato nastavení nepoužívejte také v objektech zásad skupiny domén. Další informace najdete v tématu věnovaném [řešení konfliktů](enroll-devices.md#conflict-resolution).
 
-Základní funkce Desktop Analytics funguje na **základní** [úrovni diagnostických dat](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization#diagnostic-data-levels). Pokud nenastavíte **rozšířenou (omezenou)** úroveň v Configuration Manager, nebudete dostávat následující funkce Desktop Analytics:
+Základní funkce Desktop Analytics funguje na **požadované** [úrovni diagnostických dat](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization#diagnostic-data-levels). Pokud nenastavíte **volitelnou (omezenou)** úroveň v Configuration Manager, nebudete dostávat následující funkce Desktop Analytics:
 
 - Použití aplikace
 - [Další App Insights](compat-assessment.md#additional-insights)
 - [Data o stavu nasazení](deploy-prod.md#address-deployment-alerts)
 - [Data monitorování stavu](health-status-monitoring.md)
 
-Microsoft doporučuje, abyste povolili **vylepšenou (omezená)** úroveň diagnostických dat s desktopovou analýzou, která vám umožní maximalizovat výhody, které z ní získáte.
+Microsoft doporučuje, abyste povolili **volitelnou (omezená)** úroveň diagnostických dat s desktopovou analýzou, která vám umožní maximalizovat výhody, které z ní získáte.
 
-> [!Tip]
-> **Rozšířené (omezené)** nastavení v Configuration Manager je stejné nastavení jako **omezit rozšířená diagnostická data na minimum vyžadované zásadami Windows Analytics** dostupnými na zařízeních s Windows 10 verze 1709 a novějšími verzemi.
+> [!TIP]
+> **Volitelné (omezené)** nastavení v Configuration Manager je stejné nastavení jako **omezit rozšířená diagnostická data na minimum vyžadované zásadami Windows Analytics** dostupnými na zařízeních s Windows 10 verze 1709 a novějšími verzemi.
 >
-> Zařízení s Windows 10, verze 1703 a starší, Windows 8.1 nebo Windows 7 Toto nastavení zásad nemají. Když nakonfigurujete **Rozšířené (omezené)** nastavení v Configuration Manager, tato zařízení se vrátí zpět na úroveň **Basic** .
+> Zařízení s Windows 10, verze 1703 a starší, Windows 8.1 nebo Windows 7 Toto nastavení zásad nemají. Když nakonfigurujete **volitelné (omezené)** nastavení v Configuration Manager, přejdou tato zařízení na **požadovanou** úroveň.
 >
-> Nastavení této zásady mají zařízení s Windows 10 verze 1709. Pokud však nakonfigurujete **Rozšířené (omezené)** nastavení v Configuration Manager, tato zařízení se také vrátí zpět na úroveň **Basic** .
+> Nastavení této zásady mají zařízení s Windows 10 verze 1709. Když ale v Configuration Manager nakonfigurujete **volitelné (omezené)** nastavení, tato zařízení se také vrátí na **požadovanou** úroveň.
+>
+> V Configuration Manager verze 2002 a starší mají nastavení jiné názvy:<!-- 7363467 -->
+>
+> | Verze 2006 a novější | Verze 2002 a starší |
+> |---------|---------|
+> | Vyžadováno | Základní |
+> | Volitelné (omezené) | Rozšířené (omezené) |
+> | – | Rozšířené |
+> | Volitelné | Do bloku |
+>
+> Pokud jste dříve nakonfigurovali všechna zařízení na **vyšší** úrovni při upgradu na verzi 2006, vrátí se k **volitelnému (omezenému)**. Pak budou do Microsoftu posílat méně dat. Tato změna by neměla mít vliv na to, co vidíte v Desktop Analytics.
 
-Další informace o diagnostických datech, která jsou sdílena s Microsoftem s **rozšířeným (omezeným)**, najdete v tématu [Rozšířené události a pole diagnostických dat Windows 10](https://docs.microsoft.com/windows/privacy/enhanced-diagnostic-data-windows-analytics-events-and-fields).
+Další informace o diagnostických datech, která jsou sdílena s Microsoftem, s **volitelnou (omezená)**, najdete v tématu [Rozšířené události a pole diagnostických dat Windows 10](https://docs.microsoft.com/windows/privacy/enhanced-diagnostic-data-windows-analytics-events-and-fields).
 
-> [!Important]
+> [!IMPORTANT]
 > Microsoft má silné závazky na poskytování nástrojů a prostředků, které vám povedou kontrolu nad vaším soukromím. V důsledku toho, zatímco Desktop Analytics podporuje Windows 8.1 zařízení, Microsoft neshromažďuje diagnostická data Windows ze Windows 8.1 zařízení umístěných v zemích Evropské země (EHP a Švýcarsko).
 
 Další informace najdete v tématu [Ochrana osobních údajů Desktop Analytics](privacy.md).
@@ -60,8 +71,8 @@ Následující články jsou také dobrými prostředky pro lepší porozumění
 
 - [Konfigurace diagnostických dat Windows ve vaší organizaci](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization)  
 
-> [!Note]  
-> Klienti s nakonfigurovaným omezením rozšířených diagnostických dat odesílají do cloudu Microsoftu přibližně 2 MB dat při počátečním úplném prohledávání. Denní rozdíl se liší od 250-400 KB za den.
+> [!NOTE]
+> Klienti, kteří jsou nakonfigurováni k odesílání **nepovinných (omezených)** diagnostických dat, budou do cloudu Microsoftu při počátečním úplném prohledávání posílat přibližně 2 MB dat. Denní rozdíl se liší od 250-400 KB za den.
 >
 > Denní rozdílová kontrola probíhá v 3:00 AM (místní čas zařízení). Některé události jsou odesílány na první dostupný čas v průběhu dne. Tyto časy se nedají konfigurovat.
 >
@@ -71,7 +82,7 @@ Následující články jsou také dobrými prostředky pro lepší porozumění
 
 Pokud chcete povolit sdílení dat, nakonfigurujte proxy server tak, aby umožňoval následující internetové koncové body.
 
-> [!Important]  
+> [!IMPORTANT]
 > V případě ochrany osobních údajů a integrity dat systém Windows při komunikaci s koncovými body diagnostických dat kontroluje certifikát Microsoft SSL (připnutí certifikátů). Zachycení a kontrola SSL nejsou možné. Pokud chcete použít desktopovou analýzu, vylučte tyto koncové body z kontroly SSL.<!-- BUG 4647542 -->
 
 Od verze 2002, pokud se lokalita Configuration Manager nepovede připojit k požadovaným koncovým bodům pro cloudovou službu, vyvolá kritickou stavovou zprávu ID 11488. Když se nemůže připojit ke službě, stav součásti SMS_SERVICE_CONNECTOR se změní na kritický. Zobrazit podrobný stav v uzlu [Stav součásti](../core/servers/manage/use-alerts-and-the-status-system.md#BKMK_MonitorSystemStatus) konzoly Configuration Manager.<!-- 5566763 -->
@@ -79,47 +90,7 @@ Od verze 2002, pokud se lokalita Configuration Manager nepovede připojit k pož
 > [!NOTE]
 > Další informace o rozsahu IP adres společnosti Microsoft najdete v tématu věnovaném [veřejné IP adrese Microsoftu](https://www.microsoft.com/download/details.aspx?id=53602). Tyto adresy se pravidelně aktualizují. Služba nenabízí žádnou členitost, proto by mohla být použita jakákoli IP adresa v těchto rozsahech.
 
-### <a name="server-connectivity-endpoints"></a>Koncové body připojení serveru
-
-Spojovací bod služby musí komunikovat s následujícími koncovými body:
-
-| Koncový bod  | Funkce  |
-|-----------|-----------|
-| `https://aka.ms` | Slouží k vyhledání služby. |
-| `https://graph.windows.net` | Slouží k automatickému načítání nastavení, jako je CommercialId při připojování hierarchie k Desktop Analytics (na Configuration Manager role serveru). Další informace najdete v tématu [konfigurace proxy serveru pro server systému lokality](../core/plan-design/network/proxy-server-support.md#configure-the-proxy-for-a-site-system-server). |
-| `https://*.manage.microsoft.com` | Slouží k synchronizaci členství kolekce zařízení, plánů nasazení a stavu připravenosti zařízení s desktopovou analýzou (jenom na Configuration Manager role serveru). Další informace najdete v tématu [konfigurace proxy serveru pro server systému lokality](../core/plan-design/network/proxy-server-support.md#configure-the-proxy-for-a-site-system-server). |
-
-### <a name="user-experience-and-diagnostic-component-endpoints"></a>Uživatelské prostředí a koncové body komponenty diagnostiky
-
-Klientská zařízení musí komunikovat s následujícími koncovými body:
-
-| Koncový bod  | Funkce  |
-|-----------|-----------|
-| `https://v10c.events.data.microsoft.com` | Prostředí připojeného uživatele a koncový bod komponenty diagnostiky. Používá se v zařízeních se systémem Windows 10 verze 1809 nebo novějším nebo verze 1803 s nainstalovanou kumulativní aktualizací 2018-09 nebo novější. |
-| `https://v10.events.data.microsoft.com` | Prostředí připojeného uživatele a koncový bod komponenty diagnostiky. Používá se v zařízeních se systémem Windows 10 verze 1803 _bez_ nainstalované kumulativní aktualizace 2018-09. |
-| `https://v10.vortex-win.data.microsoft.com` | Prostředí připojeného uživatele a koncový bod komponenty diagnostiky. Používá se v zařízeních se systémem Windows 10 verze 1709 nebo starším. |
-| `https://vortex-win.data.microsoft.com` | Prostředí připojeného uživatele a koncový bod komponenty diagnostiky. Používá se zařízeními se systémem Windows 7 a Windows 8.1 |
-
-### <a name="client-connectivity-endpoints"></a>Koncové body připojení klienta
-
-Klientská zařízení musí komunikovat s následujícími koncovými body:
-
-| Index | Koncový bod  | Funkce  |
-|-------|-----------|-----------|
-| 1 | `https://settings-win.data.microsoft.com` | Umožňuje aktualizaci kompatibility odeslat data společnosti Microsoft. |
-| 2 | `http://adl.windows.com` | Umožňuje aktualizaci kompatibility získat nejnovější data kompatibility od Microsoftu. |
-| 3 | `https://watson.telemetry.microsoft.com` | [Zasílání zpráv o chybách systému Windows (WER)](https://docs.microsoft.com/windows/win32/wer/windows-error-reporting). Vyžaduje se ke sledování stavu nasazení ve Windows 10 verze 1803 nebo starší. |
-| 4 | `https://umwatsonc.events.data.microsoft.com` | [Zasílání zpráv o chybách systému Windows (WER)](https://docs.microsoft.com/windows/win32/wer/windows-error-reporting). Vyžaduje se pro sestavy stavu zařízení ve Windows 10 verze 1809 nebo novější. |
-| 5 | `https://ceuswatcab01.blob.core.windows.net` | [Zasílání zpráv o chybách systému Windows (WER)](https://docs.microsoft.com/windows/win32/wer/windows-error-reporting). Vyžaduje se ke sledování stavu nasazení ve Windows 10 verze 1809 nebo novější. |
-| 6 | `https://ceuswatcab02.blob.core.windows.net` | [Zasílání zpráv o chybách systému Windows (WER)](https://docs.microsoft.com/windows/win32/wer/windows-error-reporting). Vyžaduje se ke sledování stavu nasazení ve Windows 10 verze 1809 nebo novější. |
-| 7 | `https://eaus2watcab01.blob.core.windows.net` | [Zasílání zpráv o chybách systému Windows (WER)](https://docs.microsoft.com/windows/win32/wer/windows-error-reporting). Vyžaduje se ke sledování stavu nasazení ve Windows 10 verze 1809 nebo novější. |
-| 8 | `https://eaus2watcab02.blob.core.windows.net` | [Zasílání zpráv o chybách systému Windows (WER)](https://docs.microsoft.com/windows/win32/wer/windows-error-reporting). Vyžaduje se ke sledování stavu nasazení ve Windows 10 verze 1809 nebo novější. |
-| 9 | `https://weus2watcab01.blob.core.windows.net` | [Zasílání zpráv o chybách systému Windows (WER)](https://docs.microsoft.com/windows/win32/wer/windows-error-reporting). Vyžaduje se ke sledování stavu nasazení ve Windows 10 verze 1809 nebo novější. |
-| 10 | `https://weus2watcab02.blob.core.windows.net` | [Zasílání zpráv o chybách systému Windows (WER)](https://docs.microsoft.com/windows/win32/wer/windows-error-reporting). Vyžaduje se ke sledování stavu nasazení ve Windows 10 verze 1809 nebo novější. |
-| 11 | `https://kmwatsonc.events.data.microsoft.com` | [Online Crash Analysis (OCA)](https://docs.microsoft.com/windows/win32/dxtecharts/crash-dump-analysis). Vyžaduje se pro sestavy stavu zařízení ve Windows 10 verze 1809 nebo novější. |
-| 12 | `https://oca.telemetry.microsoft.com`  | [Online Crash Analysis (OCA)](https://docs.microsoft.com/windows/win32/dxtecharts/crash-dump-analysis). Vyžaduje se ke sledování stavu nasazení ve Windows 10 verze 1803 nebo starší. |
-| 13 | `https://login.live.com` | Je potřeba, abyste poskytovali spolehlivější identitu zařízení pro desktopovou analýzu. <br> <br>Pokud chcete zakázat přístup účet Microsoft koncovým uživatelům, místo blokování tohoto koncového bodu použijte nastavení zásad. Další informace najdete v tématu [účet Microsoft v podniku](https://docs.microsoft.com/windows/security/identity-protection/access-control/microsoft-accounts#block-all-consumer-microsoft-account-user-authentication). |
-| 14 | `https://v20.events.data.microsoft.com` | Prostředí připojeného uživatele a koncový bod komponenty diagnostiky. |
+[!INCLUDE [Internet endpoints for Desktop Analytics](../core/plan-design/network/includes/internet-endpoints-desktop-analytics.md)]
 
 ## <a name="proxy-server-authentication"></a>Ověřování proxy serveru
 

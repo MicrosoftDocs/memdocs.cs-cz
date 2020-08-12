@@ -2,7 +2,7 @@
 title: Podpora pro Windows 10
 titleSuffix: Configuration Manager
 description: Přečtěte si o verzích Windows 10, které jsou podporované jako klienti nebo pro OSD s Configuration Manager
-ms.date: 05/27/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: a1626a65-da22-49e0-9564-d2f752ea3f4b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: a67a22f788af39dacb9f3a39e91e0f28444c6988
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 6a30fc55fb4129b8ea3493b76fd6871a2a62f881
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83879074"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126735"
 ---
 # <a name="support-for-windows-10-in-configuration-manager"></a>Podpora pro Windows 10 v Configuration Manager  
 
@@ -26,7 +26,7 @@ Přečtěte si o verzích Windows 10, které Configuration Manager podporuje, v�
 - [Windows 10 jako klient Configuration Manager](#windows-10-as-a-client)
 - [Sada Windows Assessment and Deployment Kit (ADK) pro Windows 10](#windows-10-adk)
 
-> [!Tip]
+> [!TIP]
 > Sestavení Windows serveru jako klient se podporují stejně jako přidružená verze Windows 10. Například Windows Server 2016 je stejná verze buildu jako Windows 10 LTSB 2016 a Windows Server verze 1803 je stejná verze buildu jako Windows 10 verze 1803.
 >
 > Další informace o systému Windows Server jako systému lokality najdete v tématu [podporované operační systémy pro Configuration Manager servery systému lokality](supported-operating-systems-for-site-system-servers.md#bkmk_core).
@@ -39,7 +39,7 @@ Configuration Manager verze v matici po [podpoře pro tuto verzi](../../servers/
 
 - Nejnovější verze Configuration Manager aktuální větve obdrží aktualizace zabezpečení i důležité aktualizace, které můžou zahrnovat opravy pro problémy s verzemi Windows 10. Když společnost Microsoft vydává novou verzi Configuration Manager aktuální větev, předchozí verze dostávají pouze aktualizace zabezpečení. Další informace najdete v tématu [podpora Configuration Manager aktuální verze větví](../../servers/manage/current-branch-versions-supported.md).  
 
-    > [!Note]  
+    > [!NOTE]
     > Nejlepším způsobem, jak si udržet aktuálnost s Windows 10, je zůstat aktuální Configuration Manager. Další informace najdete v tématu [Configuration Manager a Windows jako služba](../../understand/configuration-manager-and-windows-as-service.md).  
 
 - Tyto informace doplňují [podporované operační systémy pro klienty a zařízení](supported-operating-systems-for-clients-and-devices.md).  
@@ -48,21 +48,22 @@ Configuration Manager verze v matici po [podpoře pro tuto verzi](../../servers/
 
 V následující tabulce jsou uvedeny verze systému Windows 10, které lze použít jako klient s různými verzemi nástroje Configuration Manager.
 
-| Verze Windows 10 | ConfigMgr 1810 | ConfigMgr 1902 | ConfigMgr 1906 | ConfigMgr 1910 | ConfigMgr 2002 |
-|---------------------|-----|-----|-----|-----|-----|
-| **Enterprise 2015 LTSB** <!--10/14/2025-->   | ![Podporuje se](media/green_check.png) | ![Podporuje se](media/green_check.png) | ![Podporuje se](media/green_check.png) | ![Podporuje se](media/green_check.png) | ![Podporuje se](media/green_check.png) |
-| **Enterprise 2016 LTSB** <!--10/13/2026-->   | ![Podporuje se](media/green_check.png) | ![Podporuje se](media/green_check.png) | ![Podporuje se](media/green_check.png) | ![Podporuje se](media/green_check.png) | ![Podporuje se](media/green_check.png) |
-| **Enterprise LTSC 2019** <!--01/09/2029-->   | ![Podporuje se](media/green_check.png) | ![Podporuje se](media/green_check.png) | ![Podporuje se](media/green_check.png) | ![Podporuje se](media/green_check.png) | ![Podporuje se](media/green_check.png) |
-| **1709**<br>(10.0.16299)   <!--10/13/2020-->   | ![Podporuje se](media/green_check.png) | ![Podporuje se](media/green_check.png) | ![Podporuje se](media/green_check.png) | ![Podporuje se](media/green_check.png) | ![Podporuje se](media/green_check.png) |
-| **1803**<br>(10.0.17134)   <!--11/10/2020-->   | ![Podporuje se](media/green_check.png) | ![Podporuje se](media/green_check.png) | ![Podporuje se](media/green_check.png) | ![Podporuje se](media/green_check.png) | ![Podporuje se](media/green_check.png) |
-| **1809**<br>(10.0.17763)   <!--05/11/2021-->   | ![Podporuje se](media/green_check.png) | ![Podporuje se](media/green_check.png) | ![Podporuje se](media/green_check.png) | ![Podporuje se](media/green_check.png) | ![Podporuje se](media/green_check.png) |
-| **1903**<br>(10.0.18362)   <!--12/08/2020-->   | ![Nepodporuje se](media/Red_X.png) | ![Podporuje se](media/green_check.png) | ![Podporuje se](media/green_check.png) | ![Podporuje se](media/green_check.png) | ![Podporuje se](media/green_check.png) |
-| **1909**<br>(10.0.18363)   <!--05/10/2022-->   | ![Nepodporuje se](media/Red_X.png) | ![Nepodporuje se](media/Red_X.png) | ![Podporuje se](media/green_check.png) | ![Podporuje se](media/green_check.png) | ![Podporuje se](media/green_check.png) |
-| **2004**<br>(10.0.19041)   <!--??/??/2021-->   | ![Nepodporuje se](media/Red_X.png) | ![Nepodporuje se](media/Red_X.png) | ![Nepodporuje se](media/Red_X.png) | ![Nepodporuje se](media/Red_X.png) | ![Podporuje se](media/green_check.png) |
+| Verze Windows 10 | ConfigMgr 1810 | ConfigMgr 1902 | ConfigMgr 1906 | ConfigMgr 1910 | ConfigMgr 2002 | ConfigMgr 2006 |
+|---------------------|-----|-----|-----|-----|-----|-----|
+| **1709**<br>(10.0.16299)   <!--10/13/2020-->   | ![Podporováno](media/green_check.png) | ![Podporováno](media/green_check.png) | ![Podporováno](media/green_check.png) | ![Podporováno](media/green_check.png) | ![Podporováno](media/green_check.png) | ![Podporováno](media/green_check.png) |
+| **1803**<br>(10.0.17134)   <!--11/10/2020-->   | ![Podporováno](media/green_check.png) | ![Podporováno](media/green_check.png) | ![Podporováno](media/green_check.png) | ![Podporováno](media/green_check.png) | ![Podporováno](media/green_check.png) | ![Podporováno](media/green_check.png) |
+| **1809**<br>(10.0.17763)   <!--05/11/2021-->   | ![Podporováno](media/green_check.png) | ![Podporováno](media/green_check.png) | ![Podporováno](media/green_check.png) | ![Podporováno](media/green_check.png) | ![Podporováno](media/green_check.png) | ![Podporováno](media/green_check.png) |
+| **1903**<br>(10.0.18362)   <!--12/08/2020-->   | ![Nepodporováno](media/Red_X.png) | ![Podporováno](media/green_check.png) | ![Podporováno](media/green_check.png) | ![Podporováno](media/green_check.png) | ![Podporováno](media/green_check.png) | ![Podporováno](media/green_check.png) |
+| **1909**<br>(10.0.18363)   <!--05/10/2022-->   | ![Nepodporováno](media/Red_X.png) | ![Nepodporováno](media/Red_X.png) | ![Podporováno](media/green_check.png) | ![Podporováno](media/green_check.png) | ![Podporováno](media/green_check.png) | ![Podporováno](media/green_check.png) |
+| **2004**<br>(10.0.19041)   <!--12/14/2021-->   | ![Nepodporováno](media/Red_X.png) | ![Nepodporováno](media/Red_X.png) | ![Nepodporováno](media/Red_X.png) | ![Nepodporováno](media/Red_X.png) | ![Podporováno](media/green_check.png) | ![Podporováno](media/green_check.png) |
 
-<!-- lifecycle reference: https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet -->
+Všechny aktuálně podporované verze Configuration Manager aktuální větve podporují následující edice Windows 10 LTSB/LTSC:
 
-Další informace o životním cyklu Windows najdete na [listu faktu pro životní cyklus Windows](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet) .
+- **Enterprise 2015 LTSB** <!--10/14/2025-->
+- **Enterprise 2016 LTSB** <!--10/13/2026-->
+- **Enterprise LTSC 2019** <!--01/09/2029-->
+
+Další informace o životním cyklu Windows najdete na [listu faktu pro životní cyklus Windows](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet).
 
 | Klíč |
 |--|
@@ -107,13 +108,13 @@ Pokud nasazujete operační systémy pomocí Configuration Manager, ADK Windows 
 
 V následující tabulce jsou uvedeny verze ADK Windows 10, které můžete použít s různými verzemi Configuration Manager.
 
-| Verze ADK Windows 10  | ConfigMgr 1810 | ConfigMgr 1902 | ConfigMgr 1906 | ConfigMgr 1910 | ConfigMgr 2002 |
-|--------------------|-----|-----|-----|-----|-----|
-| **1709**<br>(10.1.16299) | ![Nepodporuje se](media/Red_X.png)   | ![Nepodporuje se](media/Red_X.png) | ![Nepodporuje se](media/Red_X.png) | ![Nepodporuje se](media/Red_X.png) | ![Nepodporuje se](media/Red_X.png) |
-| **1803**<br>(10.1.17134) | ![Zpětně kompatibilní](media/blue_compat.png) | ![Zpětně kompatibilní](media/blue_compat.png) | ![Nepodporuje se](media/Red_X.png) | ![Nepodporuje se](media/Red_X.png) | ![Nepodporuje se](media/Red_X.png) |
-| **1809**<br>(10.1.17763) | ![Podporuje se](media/green_check.png) | ![Podporuje se](media/green_check.png) | ![Zpětně kompatibilní](media/blue_compat.png) | ![Zpětně kompatibilní](media/blue_compat.png) | ![Nepodporuje se](media/Red_X.png) |
-| **1903**<br>(10.1.18362) | ![Nepodporuje se](media/Red_X.png) | ![Podporuje se](media/green_check.png) | ![Podporuje se](media/green_check.png) | ![Podporuje se](media/green_check.png) | ![Podporuje se](media/green_check.png) |
-| **2004**<br>(10.1.19041) | ![Nepodporuje se](media/Red_X.png) | ![Nepodporuje se](media/Red_X.png) | ![Nepodporuje se](media/Red_X.png) | ![Nepodporuje se](media/Red_X.png) | ![Podporuje se](media/green_check.png) |
+| Verze ADK Windows 10  | ConfigMgr 1810 | ConfigMgr 1902 | ConfigMgr 1906 | ConfigMgr 1910 | ConfigMgr 2002 | ConfigMgr 2006 |
+|--------------------|-----|-----|-----|-----|-----|-----|
+| **1709**<br>(10.1.16299) | ![Nepodporováno](media/Red_X.png)   | ![Nepodporováno](media/Red_X.png) | ![Nepodporováno](media/Red_X.png) | ![Nepodporováno](media/Red_X.png) | ![Nepodporováno](media/Red_X.png) | ![Nepodporováno](media/Red_X.png) |
+| **1803**<br>(10.1.17134) | ![Zpětně kompatibilní](media/blue_compat.png) | ![Zpětně kompatibilní](media/blue_compat.png) | ![Nepodporováno](media/Red_X.png) | ![Nepodporováno](media/Red_X.png) | ![Nepodporováno](media/Red_X.png) | ![Nepodporováno](media/Red_X.png) |
+| **1809**<br>(10.1.17763) | ![Podporováno](media/green_check.png) | ![Podporováno](media/green_check.png) | ![Zpětně kompatibilní](media/blue_compat.png) | ![Zpětně kompatibilní](media/blue_compat.png) | ![Nepodporováno](media/Red_X.png) | ![Nepodporováno](media/Red_X.png) |
+| **1903**<br>(10.1.18362) | ![Nepodporováno](media/Red_X.png) | ![Podporováno](media/green_check.png) | ![Podporováno](media/green_check.png) | ![Podporováno](media/green_check.png) | ![Podporováno](media/green_check.png) | ![Zpětně kompatibilní](media/blue_compat.png) |
+| **2004**<br>(10.1.19041) | ![Nepodporováno](media/Red_X.png) | ![Nepodporováno](media/Red_X.png) | ![Nepodporováno](media/Red_X.png) | ![Nepodporováno](media/Red_X.png) | ![Podporováno](media/green_check.png) | ![Podporováno](media/green_check.png) |
 
 |Klíč|
 |--|

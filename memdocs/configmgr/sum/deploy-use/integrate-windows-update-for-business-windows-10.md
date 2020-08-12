@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 183315fe-27bd-456f-b2c5-e8d25e05229b
-ms.openlocfilehash: 8bfd535c93cb9f1dcfc42705f3cce61874dfe226
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 8ea95a04977038514c00f0199df42c8070e813c3
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81724416"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127650"
 ---
 # <a name="integrate-with-windows-update-for-business"></a>Integrace s web Windows Update pro firmy
 
@@ -38,7 +38,7 @@ Web Windows Update for Business (WUfB) umožňuje udržovat zařízení s Window
 
 - Celkový Endpoint Protection vytváření sestav pro Defender na základě stavu dodržování předpisů aktualizací nevrátí přesné výsledky, protože chybí data kontroly.  
 
-- Configuration Manager nepůjde nasadit aktualizace Microsoftu, jako je Office, IE a Visual Studio, na klienty, kteří jsou připojení k WUfB, aby dostávali aktualizace.  
+- Configuration Manager nepůjde nasadit aktualizace Microsoftu, jako jsou aplikace Microsoft 365, IE a Visual Studio, na klienty, kteří jsou připojení k WUfB, aby dostávali aktualizace.  
 
 - Configuration Manager stále můžou nasazovat aktualizace od jiných výrobců, které jsou publikované ve službě WSUS a spravované prostřednictvím Configuration Manager klientům, kteří jsou připojení k WUfB, aby dostávali aktualizace. Pokud nechcete, aby se aktualizace od jiných výrobců nainstalovaly do klientů připojujících se k WUfB, zakažte nastavení klienta s názvem [Povolit aktualizace softwaru na klientech](../../core/clients/deploy/about-client-settings.md#software-updates).
 
@@ -70,7 +70,7 @@ Pomocí následujícího postupu Identifikujte klienty, kteří používají WUf
 
 ## <a name="configure-windows-update-for-business-deferral-policies"></a>Konfigurace zásad odložení web Windows Update pro firmy
 <!-- 1290890 -->
-Od verze Configuration Manager 1706 můžete nakonfigurovat zásady odložení pro aktualizace funkcí Windows 10 nebo aktualizace kvality pro zařízení s Windows 10 spravovaná přímo pomocí web Windows Update pro firmy. Zásady odložení můžete spravovat v uzlu nové **zásady web Windows Update pro firmy** v části **softwarová knihovna** > **Windows 10 – Údržba**.
+Od verze Configuration Manager 1706 můžete nakonfigurovat zásady odložení pro aktualizace funkcí Windows 10 nebo aktualizace kvality pro zařízení s Windows 10 spravovaná přímo pomocí web Windows Update pro firmy. Zásady odložení můžete spravovat v uzlu nové **zásady web Windows Update pro firmy** v části **softwarová knihovna**  >  **Windows 10 – Údržba**.
 
 > [!NOTE]
 > Od verze Configuration Manager 1802 můžete nastavit zásady odložení pro Windows Insider. <!--507201-->  
@@ -83,7 +83,7 @@ Další informace o programu Windows Insider najdete v tématu [Začínáme s pr
 
 #### <a name="to-create-a-windows-update-for-business-deferral-policy"></a>Vytvoření zásady pro odložení web Windows Update pro firmy
 
-1. V **knihovně** > **softwaru Windows 10 Údržba** > **web Windows Update pro podnikové zásady**
+1. V **knihovně softwaru**  >  **Windows 10 Údržba**  >  **web Windows Update pro podnikové zásady**
 1. Na kartě **Domů** ve skupině **vytvořit** vyberte **vytvořit web Windows Update pro firmy** a otevřete tak Průvodce vytvořením zásad web Windows Update pro firmy.
 1. Na stránce **Obecné** zadejte název a popis zásady.
 1. Na stránce **zásady odložení** nakonfigurujte, jestli se mají odložit nebo pozastavit aktualizace funkcí. Aktualizace funkcí jsou obecně nové funkce pro Windows. Po konfiguraci nastavení **úrovně připravenosti větve** můžete definovat, jestli a jak dlouho chcete odložit příjem aktualizací funkcí po jejich dostupnosti od Microsoftu.
@@ -105,7 +105,7 @@ Další informace o programu Windows Insider najdete v tématu [Začínáme s pr
 
 #### <a name="to-deploy-a-windows-update-for-business-deferral-policy"></a>Nasazení zásad pro odložení web Windows Update pro firmy
 
-1. V **knihovně** > **softwaru Windows 10 Údržba** > **web Windows Update pro podnikové zásady**
+1. V **knihovně softwaru**  >  **Windows 10 Údržba**  >  **web Windows Update pro podnikové zásady**
 1. Na kartě **Domů** ve skupině **nasazení** vyberte **nasadit web Windows Update pro podnikové zásady**.
 1. Nakonfigurujte tahle nastavení:
     - **Zásady konfigurace, které se mají nasadit**: vyberte zásady web Windows Update pro firmy, které chcete nasadit.

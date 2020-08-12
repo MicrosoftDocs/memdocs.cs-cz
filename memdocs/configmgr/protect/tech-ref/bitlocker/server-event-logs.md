@@ -5,17 +5,17 @@ description: Technické informace o možných položkách serveru BitLocker (MBA
 ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: c3279b7d-654d-444b-bd17-1262894590c3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8d49a24b6fea08f12d1fe70c1e0b7415adf98719
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: fe7d24bc1cad27094d720a5cb5aa487caec9199d
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82074805"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127861"
 ---
 # <a name="server-event-logs"></a>Protokoly serverových událostí
 
@@ -33,7 +33,7 @@ Na serveru, který je hostitelem jedné nebo více těchto součástí, otevřet
 
 Následující části obsahují zprávy a informace o odstraňování potíží pro ID událostí, ke kterým může docházet pomocí komponent management server BitLockeru.
 
-## <a name="admin"></a>Správce
+## <a name="admin"></a>správce
 
 ### <a name="1-webappspnerror"></a>1: WebAppSpnError
 
@@ -83,7 +83,7 @@ Možné chybové zprávy:
 
 - Nelze zjistit účet klientského počítače nebo uživatelský účet migrace dat.
 
-    Pokaždé, když se provede volání `PostKeyRecoveryInfo`metod `IsRecoveryKeyResetRequired`, `CommitRecoveryKeyRest`, a `GetTpmHash` , načte volající kontext pro získání přihlašovacích údajů volajícího. Pokud má volající kontext hodnotu null nebo je prázdný, služba protokoluje tuto zprávu.
+    Pokaždé, když se provede volání `PostKeyRecoveryInfo` `IsRecoveryKeyResetRequired` metod,, `CommitRecoveryKeyRest` a, `GetTpmHash` načte volající kontext pro získání přihlašovacích údajů volajícího. Pokud má volající kontext hodnotu null nebo je prázdný, služba protokoluje tuto zprávu.
 
 - Ověření účtu pro identitu volajícího se nezdařilo.
 
@@ -93,7 +93,7 @@ Možné chybové zprávy:
 
 Připojovací řetězec databáze dodržování předpisů v registru je prázdný.
 
-Tato zpráva se zaprotokoluje vždy, když je připojovací řetězec databáze dodržování předpisů neplatný. Ověřte hodnotu v klíči `HKLM\Software\Microsoft\MBAM Server\Web\ComplianceDBConnectionString`registru.
+Tato zpráva se zaprotokoluje vždy, když je připojovací řetězec databáze dodržování předpisů neplatný. Ověřte hodnotu v klíči registru `HKLM\Software\Microsoft\MBAM Server\Web\ComplianceDBConnectionString` .
 
 ### <a name="105-statusservicecompliancedberror"></a>105: StatusServiceComplianceDbError
 
@@ -137,7 +137,7 @@ Známé chyby a možné příčiny:
 
 - Při překladu názvu domény {domainname} došlo k chybě. došlo k chybě přidělení paměti.
 
-    K překladu názvu domény volá rozhraní API `DsGetDcName` systému Windows. Tato zpráva se zaznamená do protokolu, `ERROR_NOT_ENOUGH_MEMORY`když toto rozhraní API vrátí, což znamená selhání přidělení paměti.
+    K překladu názvu domény volá `DsGetDcName` rozhraní API systému Windows. Tato zpráva se zaznamená do protokolu, když toto rozhraní API vrátí `ERROR_NOT_ENOUGH_MEMORY` , což znamená selhání přidělení paměti.
 
 - Nepovedlo se vyvolat metodu DsGetDcName.
 
@@ -149,7 +149,7 @@ Známé chyby a možné příčiny:
 
 - Při čtení konfigurace databáze pro obnovení došlo k chybě. Připojovací řetězec k databázi pro obnovení není nakonfigurován.
 
-    Tato zpráva znamená, že informace o připojovacím řetězci `HKLM\Software\Microsoft\MBAM Server\Web\RecoveryDBConnectionString` databáze obnovení nejsou platné. Ověřte zadanou hodnotu klíče registru.
+    Tato zpráva znamená, že informace o připojovacím řetězci databáze obnovení `HKLM\Software\Microsoft\MBAM Server\Web\RecoveryDBConnectionString` nejsou platné. Ověřte zadanou hodnotu klíče registru.
 
 Pokud se zobrazí některá z následujících zpráv, ověřte, zda pověření fondu aplikací ze serveru služby IIS může vytvořit připojení k databázi obnovení:
 
@@ -164,7 +164,7 @@ Známé chyby a možné příčiny:
 
 - Při čtení konfigurace databáze dodržování předpisů došlo k chybě. Připojovací řetězec k databázi dodržování předpisů není nakonfigurován.
 
-    Tato zpráva znamená, že informace o připojovacím řetězci `HKLM\Software\Microsoft\MBAM Server\Web\ComplianceDBConnectionString` databáze dodržování předpisů na je neplatná. Ověřte hodnotu tohoto klíče registru.
+    Tato zpráva znamená, že informace o připojovacím řetězci databáze dodržování předpisů na `HKLM\Software\Microsoft\MBAM Server\Web\ComplianceDBConnectionString` je neplatná. Ověřte hodnotu tohoto klíče registru.
 
 Pokud se zobrazí některá z následujících zpráv, ověřte, jestli přihlašovací údaje fondu aplikací ze serveru IIS můžou navázání spojení s databází dodržování předpisů:
 
@@ -187,11 +187,11 @@ Ověřte, že se účet fondu aplikací může připojit k databázím dodržov�
 
 Při ověřování registrace hlavního názvu služby (SPN) došlo k chybě.
 
-Chcete-li ověřit hlavní název služby (SPN), dotazuje se na službu Active Directory, aby získala Seznam mapovaných spouštěcích účtů Také se dotazuje `ApplicationHost.config` na, aby získal vazby webu. Tato chybová zpráva znamená, že nemůže komunikovat se službou Active Directory, nebo nemůže `ApplicationHost.config` soubor načíst.
+Chcete-li ověřit hlavní název služby (SPN), dotazuje se na službu Active Directory, aby získala Seznam mapovaných spouštěcích účtů Také se dotazuje na, `ApplicationHost.config` aby získal vazby webu. Tato chybová zpráva znamená, že nemůže komunikovat se službou Active Directory, nebo nemůže soubor načíst `ApplicationHost.config` .
 
-Ověřte, že účet fondu aplikací má oprávnění k dotazování služby Active Directory `ApplicationHost.config` nebo souboru. Ověřte také položky vazby webu v `ApplicationHost.config` souboru.
+Ověřte, že účet fondu aplikací má oprávnění k dotazování služby Active Directory nebo `ApplicationHost.config` souboru. Ověřte také položky vazby webu v `ApplicationHost.config` souboru.
 
-## <a name="operational"></a>Funkční
+## <a name="operational"></a>Provoz
 
 ### <a name="4-performancecountererror"></a>4: PerformanceCounterError
 
@@ -212,7 +212,7 @@ Zpráva trasování obsahuje skutečnou zprávu o výjimce, jejíž seznam najde
 
 Zpráva v události poskytuje další podrobnosti o výjimce.
 
-V `System.UnauthorizedAccessException`případě nástroje ověřte, zda má účet fondu aplikací přístup k rozhraním API čítače výkonu.
+V případě nástroje `System.UnauthorizedAccessException` Ověřte, zda má účet fondu aplikací přístup k rozhraním API čítače výkonu.
 
 ### <a name="200-helpdeskinformation"></a>200: HelpDeskInformation
 

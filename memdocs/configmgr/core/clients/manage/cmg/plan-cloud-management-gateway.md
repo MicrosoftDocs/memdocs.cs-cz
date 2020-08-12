@@ -2,7 +2,7 @@
 title: Plánování brány pro správu cloudu
 titleSuffix: Configuration Manager
 description: Naplánujte a navrhněte bránu pro správu cloudu (CMG), abyste zjednodušili správu internetových klientů.
-ms.date: 06/10/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 2dc8c9f1-4176-4e35-9794-f44b15f4e55f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2d6165678331811f4b04e8b1f540f3dcbb7f015d
-ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
+ms.openlocfilehash: 7c57e6568ce60680d9febc533c60533055595bc3
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85502251"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126929"
 ---
 # <a name="plan-for-the-cloud-management-gateway-in-configuration-manager"></a>Plánování brány pro správu cloudu v Configuration Manager
 
@@ -125,6 +125,8 @@ V Azure můžete vytvořit několik služeb CMG a můžete vytvořit několik p�
 
 Počínaje verzí 1902 můžete přidružit CMG k hraniční skupině. Tato konfigurace umožňuje klientům výchozí nebo záložní CMG pro komunikaci klientů podle [vztahů skupin hranic](../../../servers/deploy/configure/boundary-groups.md). Toto chování je užitečné hlavně v scénářích firemních poboček a VPN. Místo toho můžete směrovat klientský provoz z nákladných i pomalých připojení WAN, aby používal rychlejší služby v Microsoft Azure.<!--3640932-->
 
+Počínaje verzí 2006 můžou intranetové klienty získat přístup k bodu aktualizace softwaru CMG při jeho přiřazení ke skupině hranic. Další informace najdete v tématu [Konfigurace skupin hranic](../../../servers/deploy/configure/boundary-groups.md#bkmk_cmg-sup). <!--7102873-->
+
 > [!NOTE]
 > Internetoví klienti nespadají do žádné skupiny hranic.
 >
@@ -220,49 +222,56 @@ Další informace najdete v následujících nejčastějších dotazech: [účty
 
 V následující tabulce jsou uvedeny CMG podpora pro funkce Configuration Manager:
 
-|Funkce  |Podpora  |
+|Příznak  |Podpora  |
 |---------|---------|
-| Aktualizace softwaru     | ![Podporuje se](media/green_check.png) |
-| Ochrana koncového bodu     | ![Podporovaná ](media/green_check.png) <sup> [Poznámka 1](#bkmk_note1)</sup> |
-| Inventář hardwaru a softwaru     | ![Podporuje se](media/green_check.png) |
-| Stav klienta a oznámení     | ![Podporuje se](media/green_check.png) |
-| Spustit skripty     | ![Podporuje se](media/green_check.png) |
-| CMPivot     | ![Podporuje se](media/green_check.png) |
-| Nastavení dodržování předpisů     | ![Podporuje se](media/green_check.png) |
-| Instalace klienta<br>(s [integrací Azure AD](../../deploy/deploy-clients-cmg-azure.md)) | ![Podporuje se](media/green_check.png) |
-| Instalace klienta<br>(s [ověřováním tokenu](../../deploy/deploy-clients-cmg-token.md)) | ![Podporuje se](media/green_check.png) (2002) |
-| Distribuce softwaru (zaměřená na zařízení)     | ![Podporuje se](media/green_check.png) |
-| Distribuce softwaru (vyžaduje se pro uživatele)<br>(s integrací Azure AD)     | ![Podporuje se](media/green_check.png) |
-| Distribuce softwaru (cílová a dostupná pro uživatele)<br>([všechny požadavky](../../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications-on-azure-ad-joined-devices)) | ![Podporuje se](media/green_check.png) |
-| [Pořadí úkolů místního upgradu](../../../../osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md) Windows 10 | ![Podporuje se](media/green_check.png) |
-| Sekvence úloh, které nepoužívají spouštěcí image a jsou nasazené s možností: **před spuštěním pořadí úloh stáhnout veškerý obsah místně** | ![Podporuje se](media/green_check.png) |
-| Sekvence úloh, které nepoužívají spouštěcí bitové kopie s [možností stažení](../../../../osd/deploy-use/deploy-a-task-sequence.md#deploy-windows-10-in-place-upgrade-via-cmg) | ![Podporuje se](media/green_check.png) (1910)|
-| Jakýkoli jiný scénář pořadí úkolů     | ![Nepodporuje se](media/Red_X.png) |
-| Klientská nabízená instalace     | ![Nepodporuje se](media/Red_X.png) |
-| Automatické přiřazení lokality     | ![Nepodporuje se](media/Red_X.png) |
-| Žádosti o schválení softwaru     | ![Nepodporuje se](media/Red_X.png) |
-| Konzola nástroje Configuration Manager     | ![Nepodporuje se](media/Red_X.png) |
-| Vzdálené nástroje     | ![Nepodporuje se](media/Red_X.png) |
-| Web vytváření sestav     | ![Nepodporuje se](media/Red_X.png) |
-| Funkce vzdáleného probuzení Wake on LAN     | ![Nepodporuje se](media/Red_X.png) |
-| Klienti se systémem Mac, Linux a UNIX     | ![Nepodporuje se](media/Red_X.png) |
-| Sdílená mezipaměť     | ![Nepodporuje se](media/Red_X.png) |
-| Místní správa MDM     | ![Nepodporuje se](media/Red_X.png) |
-| Správa nástroje BitLocker     | ![Nepodporuje se](media/Red_X.png) |
+| Aktualizace softwaru     | ![Podporováno](media/green_check.png) |
+| Ochrana koncového bodu     | ![Podporovaná ](media/green_check.png) <sup> [Poznámka &nbsp; 1](#bkmk_note1)</sup> |
+| Inventář hardwaru a softwaru     | ![Podporováno](media/green_check.png) |
+| Stav klienta a oznámení     | ![Podporováno](media/green_check.png) |
+| Spustit skripty     | ![Podporováno](media/green_check.png) |
+| CMPivot     | ![Podporováno](media/green_check.png) |
+| Nastavení dodržování předpisů     | ![Podporováno](media/green_check.png) |
+| Instalace klienta<br>(s [integrací Azure AD](../../deploy/deploy-clients-cmg-azure.md)) | ![Podporováno](media/green_check.png) |
+| Instalace klienta<br>(s [ověřováním tokenu](../../deploy/deploy-clients-cmg-token.md)) | ![Podporováno](media/green_check.png) (2002) |
+| Distribuce softwaru (zaměřená na zařízení)     | ![Podporováno](media/green_check.png) |
+| Distribuce softwaru (vyžaduje se pro uživatele)<br>(s integrací Azure AD)     | ![Podporováno](media/green_check.png) |
+| Distribuce softwaru (cílová a dostupná pro uživatele)<br>([všechny požadavky](../../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications)) | ![Podporováno](media/green_check.png) |
+| [Pořadí úkolů místního upgradu](../../../../osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md) Windows 10 | ![Podporováno](media/green_check.png) |
+| Pořadí úkolů bez spouštěcí bitové kopie nasazené s možností **stažení veškerého obsahu místně před spuštěním pořadí úkolů** | ![Podporováno](media/green_check.png) |
+| Pořadí úloh bez spouštěcí bitové kopie nasazené s [možností stažení](../../../../osd/deploy-use/deploy-a-task-sequence.md#deploy-windows-10-in-place-upgrade-via-cmg) | ![Podporováno](media/green_check.png) (1910) |
+| Pořadí úkolů se spouštěcí imagí spuštěnou z centra softwaru | ![Podporováno](media/green_check.png) (2006) |
+| Jakýkoli jiný scénář pořadí úkolů     | ![Nepodporováno](media/Red_X.png) |
+| Klientská nabízená instalace     | ![Nepodporováno](media/Red_X.png) |
+| Automatické přiřazení lokality     | ![Nepodporováno](media/Red_X.png) |
+| Žádosti o schválení softwaru     | ![Nepodporováno](media/Red_X.png) |
+| Konzola nástroje Configuration Manager     | ![Nepodporováno](media/Red_X.png) |
+| Vzdálené nástroje     | ![Nepodporováno](media/Red_X.png) |
+| Web vytváření sestav     | ![Nepodporováno](media/Red_X.png) |
+| Funkce vzdáleného probuzení Wake on LAN     | ![Nepodporováno](media/Red_X.png) |
+| Klienti se systémem Mac, Linux a UNIX     | ![Nepodporováno](media/Red_X.png) |
+| Sdílená mezipaměť     | ![Nepodporováno](media/Red_X.png) |
+| Místní správa MDM     | ![Nepodporováno](media/Red_X.png) |
+| Správa nástroje BitLocker     | ![Nepodporováno](media/Red_X.png) |
 
 |Klíč|
 |--|
-|![Podporuje se](media/green_check.png) = Tato funkce je podporována u CMG pro všechny podporované verze Configuration Manager  |
+|![Podporováno](media/green_check.png) = Tato funkce je podporována u CMG pro všechny podporované verze Configuration Manager  |
 |![Podporováno ](media/green_check.png) (*YYMM*) = Tato funkce je podporována u CMG počínaje verzí *YYMM* Configuration Manager  |
-|![Nepodporuje se](media/Red_X.png) = Tato funkce není u CMG podporována. |
+|![Nepodporováno](media/Red_X.png) = Tato funkce není u CMG podporována. |
 
 #### <a name="note-1-support-for-endpoint-protection"></a><a name="bkmk_note1"></a>Poznámka 1: podpora pro Endpoint Protection
+
+Od verze 2006 mohou klienti, kteří komunikují prostřednictvím CMG, okamžitě použít zásady ochrany koncových bodů bez aktivního připojení ke službě Active Directory.<!--4773948-->
+
 <!-- 4350561 -->
-Aby zařízení připojená k doméně mohla použít zásady ochrany koncových bodů, vyžadují přístup k této doméně. Zařízení s nečastým přístupem k interní síti se můžou setkat s prodlevami při aplikování zásad ochrany koncových bodů. Pokud vyžadujete, aby zařízení ihned po jejich přijetí použili zásady ochrany koncových bodů, vezměte v úvahu jednu z následujících možností:
+U zařízení připojených k doméně ve verzi 2002 a starší vyžadují přístup k doméně. Zařízení s nečastým přístupem k interní síti se můžou setkat s prodlevami při aplikování zásad ochrany koncových bodů. Pokud vyžadujete, aby zařízení ihned po jejich přijetí použili zásady ochrany koncových bodů, vezměte v úvahu jednu z následujících možností:
+
+- Aktualizujte lokalitu a klienty na verzi 2006.
 
 - Využijte spolusprávu a přepněte [Endpoint Protection úlohy](../../../../comanage/workloads.md#endpoint-protection) do Intune a spravujte [antivirovou ochranu v programu Microsoft Defender](https://docs.microsoft.com/mem/intune/configuration/device-restrictions-windows-10#microsoft-defender-antivirus) z cloudu.
 
 - Použijte [položky konfigurace](../../../../compliance/deploy-use/create-configuration-items.md) namísto nativní funkce [antimalwarových](../../../../protect/deploy-use/endpoint-antimalware-policies.md) zásad, aby se použily zásady ochrany koncových bodů.
+
 
 ## <a name="cost"></a>Náklady
 
@@ -368,7 +377,7 @@ Další informace o hostování obsahu v Azure najdete v tématu [Použití clou
 
 V této tabulce jsou uvedené požadované síťové porty a protokoly. *Klient* je zařízení iniciované připojením a vyžaduje odchozí port. *Server* je zařízení, které přijímá připojení, vyžaduje port pro příchozí spojení.
 
-| Klient | Protocol (Protokol) | Port | Server | Popis |
+| Klient | Protokol | Port | Server | Popis |
 |--------|----------|------|--------|-------------|
 | Spojovací bod služby | HTTPS | 443 | Azure | Nasazení CMG |
 | Bod připojení CMG | TCP-TLS | 10140-10155 | Služba CMG | Upřednostňovaný protokol pro sestavení CMG kanálu <sup> [Poznámka 1](#bkmk_port-note1)</sup> |

@@ -10,12 +10,12 @@ ms.assetid: c5cb5753-5728-4f81-b830-a6fd1a3e105c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5bea4fab3b32464cc0d03469d4966fe3611d2f76
-ms.sourcegitcommit: 02635469d684d233fef795d2a15615658e62db10
+ms.openlocfilehash: 0103ba8923698a31b86e7d34119caaeb54d54c90
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84814908"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128524"
 ---
 # <a name="microsoft-connected-cache-in-configuration-manager"></a>Mezipaměť propojená Microsoftem v Configuration Manager
 
@@ -123,7 +123,7 @@ Když aktualizujete instanci **SMS_SCI_SysResUse** pro distribuční bod, nastav
 - **RetainDOINCCache**: nastavte na `0` nebo`1`
 - **LocalDriveDOINC**: nastavte na `Automatic` nebo konkrétní písmeno jednotky, například `C:` nebo.`D:`
 
-## <a name="verify"></a>Ověřit
+## <a name="verify"></a>Ověření
 
 Když klienti stáhnou obsah spravovaný přes Cloud, využívají optimalizaci doručování ze serveru mezipaměti nainstalovaného v distribučním bodě. Obsah spravovaný přes Cloud zahrnuje následující typy:
 
@@ -132,7 +132,7 @@ Když klienti stáhnou obsah spravovaný přes Cloud, využívají optimalizaci 
 - Pokud povolíte [zásady web Windows Update pro firmy](../../../sum/deploy-use/integrate-windows-update-for-business-windows-10.md): aktualizace funkcí a kvality Windows 10
 - Pro [úlohy spolusprávy](../../../comanage/workloads.md):
   - Web Windows Update pro firmy: aktualizace funkcí a kvality Windows 10
-  - Aplikace Office Klikni a spusť: aplikace Office a aktualizace
+  - Aplikace pro Office Klikni a spusť: Microsoft 365 aplikace a aktualizace
   - Klientské aplikace: Microsoft Store aplikace a aktualizace
   - Endpoint Protection: aktualizace definic v programu Windows Defender
 

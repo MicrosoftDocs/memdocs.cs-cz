@@ -5,17 +5,17 @@ description: K řešení potíží s pořadím úloh použijte nástroj pro lad�
 ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 4b60b0e1-ffa4-4fd5-864e-70a0546c8b3b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 66f460b7ba5c870a9ee81d10835ceb9f660cba89
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 99ed8232a74b038b9b1cde4af257353252454c2b
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81711032"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88125147"
 ---
 # <a name="debug-a-task-sequence"></a>Ladění pořadí úkolů
 
@@ -45,7 +45,7 @@ Počínaje verzí 1906 je ladicí program sekvence úloh novým nástrojem pro �
 1. Vyberte pořadí úkolů. Ve skupině nasazení na pásu karet vyberte možnost **ladit**.
 
     > [!Tip]  
-    > Alternativně nastavte proměnnou **TSDebugMode** na objekt `TRUE` na kolekci nebo počítači, do kterého je pořadí úkolů nasazeno. Jakékoli zařízení, které má tuto sadu proměnných, vloží do režimu ladění jakékoli nasazené pořadí úkolů.
+    > Alternativně nastavte proměnnou **TSDebugMode** na `TRUE` objekt na kolekci nebo počítači, do kterého je pořadí úkolů nasazeno. Jakékoli zařízení, které má tuto sadu proměnných, vloží do režimu ladění jakékoli nasazené pořadí úkolů.
 
 1. Vytvoření ladicího nasazení. Nastavení nasazení jsou shodná s normálním nasazením pořadí úloh. Další informace naleznete v části [Deploy a task sequence](deploy-a-task-sequence.md#process).
 

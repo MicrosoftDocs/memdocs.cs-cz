@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: a8a4ce1c3d54311db18decc85f57d3e03298d339
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: f6087011a0390997d704278af6ffd5e6071bf031
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82904692"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129014"
 ---
 # <a name="what39s-new-in-version-1706-of-configuration-manager"></a>Co&#39;s novinkou ve verzi 1706 Configuration Manager
 
@@ -27,7 +27,7 @@ Aktualizace 1706 pro Configuration Manager aktuální větev je k dispozici jako
 > [!TIP]  
 > Chcete-li nainstalovat novou lokalitu, je nutné použít základní verzi Configuration Manager.  
 >
-> Další informace:    
+> Přečtěte si další informace:    
 > - [Instalace nových lokalit](../../servers/deploy/install/installing-sites.md)  
 > - [Instalace aktualizací v lokalitách](../../servers/manage/updates.md)  
 > - [Základní a aktualizační verze](../../servers/manage/updates.md#bkmk_Baselines)  
@@ -65,7 +65,7 @@ Další informace najdete v tématu [Příprava na používání skupin dostupno
 
 ### <a name="update-reset-tool"></a>Nástroj pro resetování aktualizací
 <!-- 1324589 -->
-Počínaje verzí 1706, Configuration Manager primárními lokalitami a lokalitami centrální správy zahrnuje nástroj pro resetování aktualizací Configuration Manager **CMUpdateReset. exe**. Tento nástroj použijte u libovolné verze aktuální větve, která zůstává v rámci podpory, a opravte problémy, když mají aktualizace v konzole problémy při stahování nebo replikaci. Další informace najdete v tématu [Nástroj pro obnovení aktualizací](../../servers/manage/update-reset-tool.md).
+Počínaje verzí 1706 Configuration Manager primární lokality a lokality centrální správy zahrnují nástroj Configuration Manager resetování aktualizace **CMUpdateReset.exe**. Tento nástroj použijte u libovolné verze aktuální větve, která zůstává v rámci podpory, a opravte problémy, když mají aktualizace v konzole problémy při stahování nebo replikaci. Další informace najdete v tématu [Nástroj pro obnovení aktualizací](../../servers/manage/update-reset-tool.md).
 
 ### <a name="high-dpi-console-support"></a>Podpora konzoly s vysokým rozlišením DPI  
 <!-- 1353476 -->
@@ -78,7 +78,7 @@ Tato verze zahrnuje vylepšení způsobu práce bodů aktualizace softwaru se sk
 - Nezávisle na záložní konfiguraci se klient pokusí spojit s posledním bodem aktualizace softwaru, který se použil po dobu 120 minut. Po neúspěšném pokusu o dosažení tohoto serveru na 120 minut klient zkontroluje svůj fond dostupných bodů aktualizace softwaru, aby mohl najít nový.
 - Po neúspěšném přístupu k původnímu serveru po dobu dvou hodin se klient přepne na kratší cyklus, aby se obrátil na nový bod aktualizace softwaru. To znamená, že pokud se klient nemůže připojit k novému serveru, rychle vybere další server z fondu dostupných serverů a pokusí se ho kontaktovat.
 
-Další informace najdete v tématu [body aktualizace softwaru](../../servers/deploy/configure/boundary-groups.md#software-update-points) v tématu skupiny hranic pro Current Branch.
+Další informace najdete v tématu [body aktualizace softwaru](../../servers/deploy/configure/boundary-groups.md#bkmk_sup) v tématu skupiny hranic pro Current Branch.
 
 ### <a name="azure-ad-integration-with-configuration-manager"></a>Integrace Azure AD s Configuration Manager
 <!-- 1248187, 1290765, 1258052, 1298097, 1319334, 1319883, 1352135, 1353331 -->
@@ -125,7 +125,7 @@ V této verzi jsme přidali nové nastavení položky konfigurace pro zařízen�
   - Změny nastavení jazyka
   - Změna systémového času
   - Úprava názvu zařízení
-- **Store**
+- **Uložení**
   - Automaticky aktualizovat aplikace ze Storu
   - Použít pouze privátní úložiště
   - Spuštění aplikace pocházející ze Storu
@@ -228,9 +228,9 @@ Teď můžete nakonfigurovat zásady odložení pro aktualizace funkcí Windows 
 Podrobnosti najdete v tématu [integrace s web Windows Update pro firmy ve Windows 10](../../../sum/deploy-use/integrate-windows-update-for-business-windows-10.md#configure-windows-update-for-business-deferral-policies).
 
 ### <a name="improved-user-notifications-for-office-365-updates"></a>Vylepšená uživatelská oznámení pro aktualizace Office 365
-V případě, že klient nainstaluje aktualizaci Office 365, provedli jsme vylepšení využití uživatelského prostředí Klikni a spusť pro Office. To zahrnuje automaticky otevíraná okna a oznámení v aplikaci a možnosti odpočítávání. Další informace najdete v tématu [chování při restartování a oznámení klientů pro aktualizace Office 365](../../../sum/deploy-use/manage-office-365-proplus-updates.md#restart-behavior-and-client-notifications-for-office-365-updates) .
+V případě, že klient nainstaluje aktualizaci Office 365, provedli jsme vylepšení využití uživatelského prostředí Klikni a spusť pro Office. To zahrnuje automaticky otevíraná okna a oznámení v aplikaci a možnosti odpočítávání. Další informace najdete v tématu [chování při restartování a oznámení klientů pro aktualizace Office 365](../../../sum/deploy-use/manage-office-365-proplus-updates.md) .
 
-## <a name="reporting"></a>Vytváření sestav
+## <a name="reporting"></a>Generování sestav
 
 ### <a name="use-windows-analytics-with-configuration-manager"></a>Použití Windows Analytics s Configuration Manager
 <!-- 1318608 -->

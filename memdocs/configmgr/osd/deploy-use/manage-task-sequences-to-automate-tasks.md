@@ -2,20 +2,20 @@
 title: Správa pořadí úkolů
 titleSuffix: Configuration Manager
 description: Vytváření, úpravy, nasazování, importování a exportování pořadí úloh pro jejich správu a automatizaci úloh ve vašem prostředí.
-ms.date: 02/26/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: a1f099f1-e9b5-4189-88b3-f53e3b4e4add
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f79829b7cd6ec70764a20fb05f4438176c41b470
-ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
+ms.openlocfilehash: 609f5d010018fa23dd4a533b2f1079f07d8c2283
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85591030"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88125061"
 ---
 # <a name="manage-task-sequences-to-automate-tasks"></a>Správa pořadí úkolů pro automatizaci úloh
 
@@ -40,6 +40,30 @@ Pořadí úloh lze vytvořit pomocí průvodce vytvořením pořadí úloh. Pomo
 ## <a name="edit"></a><a name="BKMK_ModifyTaskSequence"></a>Úpravě  
 
 Upravte pořadí úkolů přidáním nebo odebráním kroků, přidáním nebo odebráním skupin nebo změnou pořadí kroků. Další informace najdete v tématu [použití editoru pořadí úloh](../understand/task-sequence-editor.md).
+
+## <a name="reduce-the-size-of-task-sequence-policy"></a><a name="bkmk_policysize"></a>Zmenšení velikosti zásad pořadí úkolů
+
+<!--6982275-->
+Když velikost zásad pořadí úkolů překročí 32 MB, klient nedokáže zpracovat velkou zásadu. Klient pak nemůže spustit nasazení pořadí úloh.
+
+Velikost pořadí úkolů, jak je uloženo v databázi lokality, je menší, ale může přesto způsobit problémy, pokud jsou příliš velké. Když klient zpracuje celé zásady pořadí úkolů, může rozšířená velikost způsobit problémy větší než 32 MB.
+
+Pokud chcete na klientech kontrolovat velikost zásad pořadí úkolů 32-MB, počínaje verzí 2006, použijte [přehledy správy](../../core/servers/manage/management-insights.md#operating-system-deployment).
+
+Chcete-li snížit celkovou velikost zásad nasazení pořadí úloh, proveďte následující akce:
+
+- Oddělte funkční segmenty na podřízená pořadí úloh a použijte krok [Spustit pořadí úkolů](../understand/task-sequence-steps.md#child-task-sequence) . Každé pořadí úloh má na velikost zásad samostatný limit 32 MB.
+
+    > [!NOTE]
+    > Snížení celkového počtu kroků a skupin v pořadí úkolů má minimální dopad na velikost zásad. Každý krok je obecně v zásadě pár KB. Přesunutí skupin kroků do podřízeného pořadí úkolů je více ovlivněno.
+
+- Snižte počet aktualizací softwaru v nasazeních na stejnou kolekci, jako je pořadí úkolů.
+
+- Místo zadání skriptu do kroku [Spustit skript PowerShellu](../understand/task-sequence-steps.md#BKMK_RunPowerShellScript) se na něj odkázat prostřednictvím balíčku.
+
+- Při spuštění prostředí pořadí úkolů je omezena velikost 8 KB. Projděte si použití vlastních proměnných pořadí úkolů, které mohou také přispívat do velikosti zásad.
+
+- Jako poslední možnost rozdělení komplexního a dynamického pořadí úloh do samostatných pořadí úkolů s různými nasazeními do různých kolekcí.
 
 ## <a name="software-center-properties"></a><a name="bkmk_prop-general"></a>Vlastnosti centra softwaru
 
@@ -344,7 +368,7 @@ Odstraní vybrané pořadí úkolů.
 
 Další informace najdete v tématu [Vytvoření dvoufázové nasazení](create-phased-deployment-for-task-sequence.md).
 
-### <a name="deploy"></a>Nasadit
+### <a name="deploy"></a>Nasazení
 
 Další informace naleznete v části [Deploy a task sequence](deploy-a-task-sequence.md).
 

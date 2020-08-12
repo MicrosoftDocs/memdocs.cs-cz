@@ -2,7 +2,7 @@
 title: Komunitní centrum a GitHub
 titleSuffix: Configuration Manager
 description: Povolení a použití centra komunity v Configuration Manager
-ms.date: 07/27/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 88cead9a-64fe-471e-b57c-81707cefe46c
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: c0b812fa3b373d6bd5bd2bebed8b1540ceb7bdd6
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: ae0abdd4a159759037768c8f27d5643bdf612f6e
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262077"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128167"
 ---
 # <a name="community-hub-and-github"></a>Komunitní centrum a GitHub
 <!--3555935, 3555936-->
@@ -36,7 +36,7 @@ Centrum komunity podporuje následující objekty:
 - Skripty PowerShellu
 - Sestavy
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 
 - Zařízení, které používá konzolu Configuration Manager používané pro přístup k centru komunit, potřebuje následující položky:
    - .NET Framework verze 4,6 nebo vyšší
@@ -66,6 +66,37 @@ Centrum komunity podporuje následující objekty:
 
 [![Všechny položky stažené z centra komunity](./media/3555935-community-hub-downloads.png)](./media/3555935-community-hub-downloads.png#lightbox)
 
+
+## <a name="direct-links-to-community-hub-items"></a><a name="bkmk_deeplink"></a>Přímé odkazy na položky centra komunity
+<!--4224406-->
+*(Představené ve verzi 2006)* Můžete snadno přejít na položky v uzlu centra komunity konzoly Configuration Manager a odkazovat na ně s přímým odkazem. Záměrem této funkce je usnadnit spolupráci a sdílet odkazy na položky centra komunity se svými kolegy. Tato hluboká propojení jsou aktuálně pouze pro položky v uzlu centra komunity konzoly.
+
+### <a name="prerequisites-for-direct-links"></a>Předpoklady pro přímé odkazy
+
+- Konzola Configuration Manager verze 2006 nebo novější
+- Při použití odkazu centra komunity nemůžete použít místní předdefinovaný účet správce.
+
+### <a name="sharing-and-opening-direct-links"></a>Sdílení a otevírání přímých odkazů
+
+Chcete-li sdílet položku:
+1. Přejít na položku v centru a vyberte **sdílet**.
+1. Vložte zkopírovaný odkaz a nasdílejte ho s ostatními.
+
+Otevření sdíleného odkazu:
+1. Klikněte na odkaz z počítače, na kterém je nainstalovaná konzola Configuration Manager.
+   - Například pomocí tohoto odkazu můžete sdílet [skript automatické aktualizace hraničního nastavení](https://communityhub.microsoft.com/item/7200) ( `https://communityhub.microsoft.com/item/7200` ).
+1. Po zobrazení výzvy vyberte **Spustit centrum komunity** .
+1. Konzola se otevře přímo ve skriptu v centru komunity.
+
+## <a name="known-issues"></a><a name="bkmk_known"></a>Známé problémy
+
+### <a name="unable-to-access-community-hub-node-when-running-console-as-a-different-user"></a>Při spuštění konzoly jako jiný uživatel není přístupný uzel centra komunity.
+<!--7826897-->
+Pokud jste přihlášeni jako uživatel s nižšími právy a chcete otevřít konzolu Configuration Manager **Spustit jako** jiný uživatel, možná nebudete mít přístup k uzlu **komunity komunity** .
+
+### <a name="downloaded-reports-dont-get-removed-from-your-downloads-page"></a>Stažené sestavy se ze stránky stahování neodebraly
+<!--7851305-->
+Pokud odstraníte staženou sestavu z uzlu sestavy **monitorování**  >  **Reports** , sestava se neodstraní z **centra komunity**  >  **vaše soubory ke stažení** a sestavu nemůžete znovu stáhnout. 
 
 ## <a name="next-steps"></a>Další kroky
 

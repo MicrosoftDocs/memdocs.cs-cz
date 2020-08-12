@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 119f787f15b8c907d0c760a12b973ca984f4348c
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: b4663ca5640bcfea4338912ff471a3253b744d5f
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268534"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88125827"
 ---
 # <a name="health-status-monitoring-in-desktop-analytics"></a>Monitorování stavu v Desktop Analytics
 
@@ -27,7 +27,7 @@ Další informace o tom, jak tuto funkci používat, najdete v tématu [monitoro
 ![Snímek obrazovky se stránkou monitorování stavu Desktop Analytics](media/monitor-health.png)
 
 > [!NOTE]  
-> Desktop Analytics shromažďuje jenom data o stavu ze zařízení, která poskytují data o využití, která může použít jako jmenovatel. To znamená, že neobsahují zařízení s Windows 7 a Windows 10, která nemají nastavená na sdílení diagnostických dat na rozšířené (omezené) úrovni. Pokud je více než 10% zařízení s Windows 10 nastavené na sdílení diagnostických dat na jiných úrovních než rozšířené (omezené), zobrazí se na stránce **sledování stavu** upozornění v oblasti banner.  
+> Desktop Analytics shromažďuje jenom data o stavu ze zařízení, která poskytují data o využití, která může použít jako jmenovatel. To znamená, že neobsahují zařízení s Windows 7 a Windows 10, která nejsou nastavená tak, aby se diagnostická data sdílela na volitelné (omezené) úrovni. Pokud je více než 10% zařízení s Windows 10 nastavené na sdílení diagnostických dat na jiných úrovních než volitelné (omezené), zobrazí se na stránce **sledování stavu** upozornění v oblasti banner.  
 
 Pokud chcete zobrazit další informace o konkrétní aplikaci, vyberte ji v seznamu.
 

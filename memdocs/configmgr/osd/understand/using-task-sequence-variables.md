@@ -2,7 +2,7 @@
 title: Jak používat proměnné pořadí úkolů
 titleSuffix: Configuration Manager
 description: Přečtěte si, jak používat proměnné v Configuration Manager pořadí úkolů.
-ms.date: 11/29/2019
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,11 +10,12 @@ ms.assetid: bc7de742-9e5c-4a70-945c-df4153a61cc3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1cf428b479e9311c92f6d14d9c376817ee5e3ab5
-ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
+ms.openlocfilehash: 433896e55b7701009e2870af8b0015fb15c1eda3
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86022258"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88123932"
 ---
 # <a name="how-to-use-task-sequence-variables-in-configuration-manager"></a>Použití proměnných pořadí úkolů v Configuration Manager
 
@@ -34,9 +35,9 @@ Existuje několik typů proměnných:
 
 - [Integrované](#bkmk_built-in)  
 - [Akce](#bkmk_action)  
-- [Uživatelská](#bkmk_custom)  
+- [Vlastní](#bkmk_custom)  
 - [Jen pro čtení](#bkmk_read-only)  
-- [Pole](#bkmk_array)  
+- [Skupin](#bkmk_array)  
 
 ### <a name="built-in-variables"></a><a name="bkmk_built-in"></a>Předdefinované proměnné
 
@@ -77,7 +78,7 @@ Když zadáte název nové proměnné pořadí úkolů, postupujte podle těchto
 
 - Názvy proměnných pořadí úloh nemůžou začínat ani končit mezerou. Nemůžou mít taky vložené mezery. Pořadí úkolů ignoruje všechny mezery na začátku nebo konci názvu proměnné.  
 
-Pro počet proměnných pořadí úkolů, které můžete vytvořit, není nastavené žádné omezení. Počet proměnných je však limitován velikostí prostředí pořadí úloh. Limit celkové velikosti prostředí pořadí úkolů je 32 MB.  
+Pro počet proměnných pořadí úkolů, které můžete vytvořit, není nastavené žádné omezení. Počet proměnných je však limitován velikostí prostředí pořadí úloh. Omezení celkové velikosti pro prostředí pořadí úkolů je 8 KB. Další informace najdete v tématu [zmenšení velikosti zásad pořadí úkolů](../deploy-use/manage-task-sequences-to-automate-tasks.md#bkmk_policysize).
 
 ### <a name="read-only-variables"></a><a name="bkmk_read-only"></a>Proměnné jen pro čtení
 
@@ -189,10 +190,10 @@ Pro zařízení a kolekce můžete definovat vlastní proměnné pořadí úkol�
 
 Například zařízení XYZ je členem kolekce ABC. Přiřadíte MojePromenna ke kolekci ABC s hodnotou 1. Přiřadíte také MojePromenna k zařízení XYZ s hodnotou 2. Proměnná přiřazená k XYZ má vyšší prioritu než proměnná přiřazená kolekci ABC. Když pořadí úkolů s touto proměnnou běží na XYZ, MojePromenna má hodnotu 2.
 
-Proměnné pro zařízení a pro kolekci můžete skrýt, aby nebyly viditelné v konzole Configuration Manager. Když použijete možnost **nezobrazit tuto hodnotu v konzole Configuration Manager**, hodnota proměnné se nezobrazí v konzole nástroje. Proměnnou lze v pořadí úkolů používat i v případě, že je spuštěna. Pokud již nechcete tyto proměnné skrývat, nejprve je odstraňte. Pak předefinujte proměnné bez výběru možnosti jejich skrytí.  
+Proměnné pro zařízení a pro kolekci můžete skrýt, aby nebyly viditelné v konzole Configuration Manager. Když použijete možnost **nezobrazit tuto hodnotu v konzole Configuration Manager**, hodnota proměnné se nezobrazí v konzole nástroje. Soubor protokolu pořadí úkolů (**souboru Smsts. log**) nebo ladicí program sekvence úloh nezobrazuje hodnotu proměnné buď. Proměnnou lze v pořadí úkolů používat i v případě, že je spuštěna. Pokud již nechcete tyto proměnné skrývat, nejprve je odstraňte. Pak předefinujte proměnné bez výběru možnosti jejich skrytí.  
 
 > [!WARNING]  
-> Nastavení pro **zobrazení této hodnoty v konzole Configuration Manager** se vztahuje pouze na konzolu Configuration Manager. Hodnoty proměnných jsou stále zobrazeny v souboru protokolu pořadí úkolů (**souboru Smsts. log**).
+> Pokud zahrnete proměnné do příkazového řádku kroku **Spustit příkazový řádek** , zobrazí se v souboru protokolu pořadí úloh úplný příkazový řádek, včetně hodnot proměnných. Chcete-li zabránit tomu, aby se potenciálně citlivá data zobrazovala v souboru protokolu, nastavte proměnnou pořadí úloh **OSDDoNotLogCommand** na `TRUE` .
 
 Proměnné pro zařízení můžete spravovat v primární lokalitě nebo v lokalitě centrální správy. Configuration Manager nepodporuje pro zařízení více než 1 000 přiřazených proměnných.  
 

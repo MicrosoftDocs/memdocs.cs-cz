@@ -10,12 +10,12 @@ ms.assetid: e217699a-28b2-471a-b421-8fbd1d1fd638
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 47d44c96e0ae63504278c58a5838c54648665505
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 4d13d9dfd75abb656a765ce8c91ce6f177636cd3
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81712236"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127167"
 ---
 # <a name="onedrive-for-business-profiles"></a>Profily OneDrivu pro firmy
 
@@ -23,7 +23,7 @@ Od verze Configuration Manager 1902 můžete vytvořit profily OneDrivu pro firm
 
 ## <a name="prerequisites"></a>Požadavky
 
-- [Vyhledání ID tenanta Office 365](https://docs.microsoft.com/onedrive/find-your-office-365-tenant-id)  
+- [Najít ID tenanta Microsoft 365](https://docs.microsoft.com/onedrive/find-your-office-365-tenant-id)  
 
 - Nasazení synchronizačního klienta OneDrive verze 18.111.0603.0004 nebo novější. Další informace najdete v tématu [nasazení aplikací OneDrive pomocí Configuration Manager](https://docs.microsoft.com/onedrive/deploy-on-windows).  
 
@@ -44,7 +44,7 @@ Pomocí Configuration Manager můžete přesunout známé složky Windows na One
 
 5. Na stránce **Nastavení** :
 
-    1. Zadejte ID tenanta Office 365.  
+    1. Zadejte ID tenanta Microsoft 365.  
 
     2. Vyberte jednu z následujících možností pro přesunutí známých složek na OneDrive:  
 

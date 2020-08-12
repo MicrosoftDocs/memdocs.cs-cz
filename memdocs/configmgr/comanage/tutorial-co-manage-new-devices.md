@@ -10,12 +10,12 @@ ms.topic: tutorial
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 7fb02a5c-e286-46b1-a972-6335c858429a
-ms.openlocfilehash: 742cd1e86ac0bff6563c0d3ee4edce7324629480
-ms.sourcegitcommit: c1afc8abd0d7da48815bd2b0e45147774c72c2df
+ms.openlocfilehash: 0d7122942fe6a1455518b56159b48a11a2519d3e
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87815459"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127294"
 ---
 # <a name="tutorial-enable-co-management-for-new-internet-based-devices"></a>Kurz: povolení spolusprávy pro nová zařízení na internetu
 
@@ -40,7 +40,7 @@ Tento kurz použijte v těchto případech:
 > * Povolit spolusprávu v Configuration Manager
 > * Konfigurace Intune pro instalaci klienta Configuration Manager
 
-## <a name="prerequisites"></a>Předpoklady  
+## <a name="prerequisites"></a>Požadavky  
 
 ### <a name="azure-services-and-environment"></a>Služby a prostředí Azure
 
@@ -367,13 +367,9 @@ S konfiguracemi Azure, rolemi systému lokality a nastaveními klienta můžete 
 
 ### <a name="enable-co-management-starting-in-version-1906"></a>Povolit spolusprávu počínaje verzí 1906
 
-Pokud chcete povolit spolusprávu od verze Configuration Manager 1906, postupujte podle následujících pokynů:
-
 [!INCLUDE [Enable Co-management in version 1906 and later](includes/enable-co-management-1906-and-higher.md)]
 
 ### <a name="enable-co-management-in-version-1902-and-earlier"></a>Povolit spolusprávu ve verzi 1902 a novější
-
-Pokud chcete povolit spolusprávu pro Configuration Manager verze 1902 a starší, postupujte podle následujících pokynů:
 
 [!INCLUDE [Enable Co-management in version 1902 and earlier](includes/enable-co-management-1902-and-earlier.md)]
 
@@ -421,7 +417,7 @@ Následující postup nasadí aplikaci pro instalaci klienta Configuration Manag
 3. Vyberte **zkontrolovat + Uložit** a pak konfiguraci **uložte** .
 Tuto aplikaci teď vyžadují uživatelé a zařízení, ke kterým jste jim přiřadili. Poté, co aplikace nainstaluje klienta Configuration Manager do zařízení, je spravován spolusprávou.
 
-## <a name="summary"></a>Souhrn
+## <a name="summary"></a>Shrnutí
 
 Po dokončení kroků konfigurace tohoto kurzu můžete začít společně spravovat vaše zařízení.
 

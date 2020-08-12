@@ -5,17 +5,17 @@ description: Použití samostatného média k nasazení operačního systému na
 ms.date: 05/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: c6b9ccd2-78d9-4f0e-b25a-70d0866300ba
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0e477d08ed97fe46bbe51b62a0ed024d437c2626
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 62c667706a9d77b3bb7d2b6bbdfde3cde8bb8365
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81711004"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88125181"
 ---
 # <a name="create-stand-alone-media"></a>Vytvoření samostatného média
 
@@ -130,7 +130,7 @@ Před spuštěním Průvodce vytvořením média pořadí úloh pro vytvoření 
         > [!IMPORTANT]  
         > Pokud vyberete stávající bitovou kopii .iso, průvodce média pořadí úlohy odstraní tuto bitovou kopii z disku nebo zruší její sdílení okamžitě po otevření další stránky průvodce. Existující bitová kopie je odstraněna, i když pak průvodce zrušíte.  
 
-    - **Pracovní složka**<!--1359388-->: Proces vytváření médií může vyžadovat mnoho místa na dočasném disku. Ve výchozím nastavení je toto umístění podobné následující cestě: `%UserProfile%\AppData\Local\Temp`. Od verze 1902 získáte větší flexibilitu, kam chcete ukládat tyto dočasné soubory, změňte tuto hodnotu na jinou jednotku a cestu.  
+    - **Pracovní složka**<!--1359388-->: Proces vytváření médií může vyžadovat mnoho místa na dočasném disku. Ve výchozím nastavení je toto umístění podobné následující cestě: `%UserProfile%\AppData\Local\Temp` . Od verze 1902 získáte větší flexibilitu, kam chcete ukládat tyto dočasné soubory, změňte tuto hodnotu na jinou jednotku a cestu.  
 
     - **Popisek média**<!--1359388-->: Od verze 1902 přidejte popisek k médiu pořadí úloh. Tento popisek vám pomůže lépe identifikovat médium po jeho vytvoření. Výchozí hodnota je `Configuration Manager`. Toto textové pole se zobrazí v následujících umístěních:  
 
@@ -138,7 +138,7 @@ Před spuštěním Průvodce vytvořením média pořadí úloh pro vytvoření 
 
         - Pokud naformátujete jednotku USB, použije se jako název prvních 11 znaků popisku.  
 
-        - Configuration Manager zapíše textový soubor s `MediaLabel.txt` názvem do kořenového adresáře média. Ve výchozím nastavení soubor obsahuje jeden řádek textu: `label=Configuration Manager`. Pokud přizpůsobíte popisek pro médium, tento řádek používá vlastní popisek místo výchozí hodnoty.  
+        - Configuration Manager zapíše textový soubor s názvem `MediaLabel.txt` do kořenového adresáře média. Ve výchozím nastavení soubor obsahuje jeden řádek textu: `label=Configuration Manager` . Pokud přizpůsobíte popisek pro médium, tento řádek používá vlastní popisek místo výchozí hodnoty.  
 
     - **Zahrnout soubor Autorun. inf na médium**<!-- 4090666 -->: Počínaje verzí 1906 Configuration Manager ve výchozím nastavení nepřidá soubor Autorun. inf. Tento soubor je pro antimalwarové produkty často blokovaný. Další informace o funkci AutoRun systému Windows najdete v tématu [Vytvoření aplikace CD-ROM s podporou automatického spuštění](https://docs.microsoft.com/windows/desktop/shell/autoplay). Pokud to pro váš scénář pořád potřebujete, vyberte tuto možnost, chcete-li soubor zahrnout.  
 
@@ -151,7 +151,7 @@ Před spuštěním Průvodce vytvořením média pořadí úloh pro vytvoření 
         >
         > Na samostatném médiu zašifruje pouze kroky pořadí úloh a jejich proměnné. Nešifruje zbývající obsah média. Do skriptů pořadí úloh nezahrnujte žádné citlivé informace. Ukládání a implementace všech citlivých informací pomocí proměnných pořadí úkolů.  
 
-    - **Vyberte platný rozsah kalendářních dat pro toto samostatné médium**: nastavte volitelná data začátku a konce platnosti média. Toto nastavení je ve výchozím nastavení zakázáno. Data jsou porovnána se systémovým časem v počítači před spuštěním samostatného média. Pokud je systémový čas dřívější než čas spuštění nebo pozdější než čas vypršení platnosti, nespustí se samostatné médium. Tyto možnosti jsou dostupné taky pomocí rutiny [New-CMStandaloneMedia](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmstandalonemedia?view=sccm-ps) prostředí PowerShell.  
+    - **Vyberte platný rozsah kalendářních dat pro toto samostatné médium**: nastavte volitelná data začátku a konce platnosti média. Standardně je toto nastavení zakázané. Data jsou porovnána se systémovým časem v počítači před spuštěním samostatného média. Pokud je systémový čas dřívější než čas spuštění nebo pozdější než čas vypršení platnosti, nespustí se samostatné médium. Tyto možnosti jsou dostupné taky pomocí rutiny [New-CMStandaloneMedia](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmstandalonemedia?view=sccm-ps) prostředí PowerShell.  
 
 6. Na stránce **samostatný disk CD/DVD** vyberte pořadí úloh, které NASADÍ operační systém. Můžete vybrat jenom ta pořadí úloh, která jsou přidružená ke spouštěcí imagi. Ověřte seznam obsahu, na který odkazuje pořadí úkolů.  
 

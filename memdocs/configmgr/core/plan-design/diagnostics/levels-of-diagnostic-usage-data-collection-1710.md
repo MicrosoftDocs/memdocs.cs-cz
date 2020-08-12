@@ -5,18 +5,18 @@ description: Přečtěte si o úrovních diagnostiky a dat o využití, které s
 ms.date: 11/20/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 8fce5391-8e75-4f99-813a-76f8842be5bc
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: fcc3d2e34c9387e158b3b35cd104c9fc43136ace
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 925595b0e810f89bed6d79de1e0cd89450e45e9a
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81715547"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128742"
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1710-of-configuration-manager"></a>Úrovně shromažďování diagnostických dat o využití pro verzi 1710 Configuration Manager
 
@@ -35,7 +35,7 @@ Změny z předchozích verzí jsou označeny ***[New]***, ***[Aktualizováno]***
 ##  <a name="how-to-change-the-level"></a><a name="bkmk_change"></a> Postup pro změnu úrovně
  Správci, kteří mají obor správy na základě rolí, který zahrnuje oprávnění **změnit** u třídy objektů **lokalita** , můžou měnit úroveň dat shromažďovaných pomocí nastavení dat o diagnostice a dat o využití v konzole Configuration Manager.
 
-Úroveň shromažďování dat můžete změnit v konzole nástroje tak, že přejdete do části **Správa** > **Přehled** > **Konfigurace** > **lokality lokality.** Otevřete **Nastavení hierarchie**a pak vyberte úroveň dat, kterou chcete použít.  
+Úroveň shromažďování dat můžete změnit v konzole nástroje tak, že přejdete do části **Správa**  >  **Přehled**  >  **Konfigurace**  >  **lokality lokality**. Otevřete **Nastavení hierarchie**a pak vyberte úroveň dat, kterou chcete použít.  
 
 
 

@@ -5,17 +5,17 @@ description: Naučte se spravovat balíčky s upgradem operačního systému v C
 ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: b9b22655-b8c1-461f-8047-3a7e906f647a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cc50fc60601b63bca7b4a4b01ba3fb4a39fd8b91
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: a50592815ed4581c01489f90b6c3701e53bb4981
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81724101"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88124410"
 ---
 # <a name="manage-os-upgrade-packages-with-configuration-manager"></a>Správa balíčků s upgradem operačního systému pomocí Configuration Manager
 
@@ -39,7 +39,7 @@ Než budete moct použít balíček s upgradem operačního systému, přidejte 
     - Síťová **cesta** k instalačním zdrojovým souborům balíčku s UPGRADEM operačního systému. Například, `\\server\share\path`.  
 
         > [!NOTE]  
-        >  Zdrojové instalační soubory obsahují soubor Setup. exe a další soubory a složky pro instalaci operačního systému.  
+        >  Zdrojové instalační soubory obsahují setup.exe a další soubory a složky pro instalaci operačního systému.  
 
         > [!IMPORTANT]  
         >  Omezte přístup k těmto zdrojovým souborům instalace, abyste zabránili nežádoucí manipulaci.  

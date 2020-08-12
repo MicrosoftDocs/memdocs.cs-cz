@@ -5,17 +5,17 @@ description: Seznamte se s metodami správy imagí operačního systému uložen
 ms.date: 07/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: fab13949-371c-4a4c-978e-471db1e54966
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 190a203494cecfd28c198197f3a582adff745265
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: aa574cd3db2e7a3d3277912ed4a383f71d33e59c
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81724115"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88124283"
 ---
 # <a name="manage-os-images-with-configuration-manager"></a>Správa imagí operačního systému pomocí Configuration Manager
 
@@ -30,7 +30,7 @@ Můžete použít [výchozí image operačního systému](#default-image)nebo se
 
 ### <a name="default-image"></a>Výchozí image
 
-Instalační soubory systému Windows obsahují výchozí bitovou kopii operačního systému. Tato Image je základní image operačního systému, která obsahuje standardní sadu ovladačů. Když použijete výchozí image operačního systému, pomocí kroků pořadí úkolů nainstalujete aplikace a po instalaci operačního systému do zařízení můžete provést další konfigurace. Vyhledejte výchozí bitovou kopii operačního systému ve zdrojových souborech systému `\Sources\install.wim`Windows:.  
+Instalační soubory systému Windows obsahují výchozí bitovou kopii operačního systému. Tato Image je základní image operačního systému, která obsahuje standardní sadu ovladačů. Když použijete výchozí image operačního systému, pomocí kroků pořadí úkolů nainstalujete aplikace a po instalaci operačního systému do zařízení můžete provést další konfigurace. Vyhledejte výchozí bitovou kopii operačního systému ve zdrojových souborech systému Windows: `\Sources\install.wim` .  
 
 #### <a name="default-image-advantages"></a>Výchozí výhody imagí
 

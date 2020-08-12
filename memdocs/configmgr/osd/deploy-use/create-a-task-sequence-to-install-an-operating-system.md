@@ -5,17 +5,17 @@ description: Pomocí pořadí úkolů v Configuration Manager automaticky nainst
 ms.date: 07/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 217c8a0e-5112-420e-a325-2a6d75326290
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6e1b298856edea3f81cab2e9cd5ab75af49dff51
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: dae4287b1e4a4a69209672f01f45eeaeb3b540d7
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81723009"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88125470"
 ---
 # <a name="create-a-task-sequence-to-install-an-os"></a>Vytvoření pořadí úkolů pro instalaci operačního systému
 
@@ -31,7 +31,7 @@ Existuje několik scénářů nasazení operačního systému do počítačů ve
 
 Než vytvoříte pořadí úkolů pro instalaci operačního systému, musí být zavedeny tyto požadavky:
 
-#### <a name="required"></a>Požaduje se
+#### <a name="required"></a>Vyžadováno
 
 - [Spouštěcí bitová kopie](../get-started/manage-boot-images.md)  
 
@@ -70,7 +70,7 @@ Než vytvoříte pořadí úkolů pro instalaci operačního systému, musí bý
 
     - **Rozdělení a naformátování cílového počítače**, na který se instaluje operační systém: Určete, jestli má pořadí úkolů před instalací operačního systému vytvořit oddíly a naformátovat cílový počítač.  
 
-    - **Kód Product Key**: v případě potřeby zadejte kód Product Key systému Windows. Zadávat lze šifrované aktivační kódy VLK a standardní kódy Product Key. Pokud používáte nekódovaný kód Product Key, musí být každá skupina pěti znaků oddělená pomlčkou (`-`). Příklad: *xxxxx-xxxxx-xxxxx-xxxxx-xxxxx*  
+    - **Kód Product Key**: v případě potřeby zadejte kód Product Key systému Windows. Zadávat lze šifrované aktivační kódy VLK a standardní kódy Product Key. Pokud používáte nekódovaný kód Product Key, musí být každá skupina pěti znaků oddělená pomlčkou ( `-` ). Příklad: *xxxxx-xxxxx-xxxxx-xxxxx-xxxxx*  
 
     - **Režim licence serveru**: Zadejte, jestli serverová licence je **Na stanici**, **Na server**nebo není zadaná žádná licence. Pokud je licence serveru **Na server**, zadejte také maximální počet připojení serverů.  
 

@@ -5,17 +5,17 @@ description: Pochopte, jak spravovat a monitorovat dvoufázové nasazení softwa
 ms.date: 04/16/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: dc245916-bc11-4983-9c4d-015f655007c1
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 419b91365d80062baabc289d0dbcf064c89b71a0
-ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
+ms.openlocfilehash: 66f31983e34ff37cd2df8532cd9d45d372ef1f3b
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82110470"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88125096"
 ---
 # <a name="manage-and-monitor-phased-deployments"></a>Správa a sledování postupných nasazení
 

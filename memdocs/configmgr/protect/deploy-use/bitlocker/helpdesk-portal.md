@@ -5,17 +5,17 @@ description: Jak používat web pro správu a monitorování BitLockeru (portál
 ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 81f03922-90f6-4e8f-be65-da64ccb21cf2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 84725ac494e1d9497524303b841207bd05cd3859
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7b64e09561def3d19c306b9cfcd4f7eb808763fd
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81717507"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129252"
 ---
 # <a name="bitlocker-administration-and-monitoring-website"></a>Web pro správu a monitorování BitLockeru
 
@@ -53,7 +53,7 @@ Další informace o vlastnictví čipu TPM najdete v tématu [Konfigurace MBAM p
 > [!NOTE]
 > Od verze 1607 Windows 10 neuchovává Windows při zřizování čipu TPM heslo vlastníka čipu TPM.
 
-1. Ve webovém prohlížeči přejdete na web pro správu a monitorování, například `https://webserver.contoso.com/HelpDesk`.
+1. Ve webovém prohlížeči přejdete na web pro správu a monitorování, například `https://webserver.contoso.com/HelpDesk` .
 
 1. V levém podokně vyberte **Spravovat oblast TPM** .
 
@@ -70,7 +70,7 @@ Další informace o vlastnictví čipu TPM najdete v tématu [Konfigurace MBAM p
     - Vypnout čip TPM
     - Změnit heslo TPM
     - Vymazat čip TPM
-    - Ostatní
+    - Další
 
     Po **odeslání** formuláře webová stránka vrátí jednu z následujících odpovědí:
 
@@ -103,7 +103,7 @@ Chcete-li získat heslo pro obnovení, použijte oblast **obnovení jednotky** n
 > [!IMPORTANT]
 > Platnost hesel pro obnovení vyprší po jednom použití. Na jednotkách operačního systému a pevných datových jednotkách se pravidlo jediného použití automaticky použije. Na vyměnitelných jednotkách se použije, když jednotku odeberete a znovu vložíte.
 
-1. Ve webovém prohlížeči přejdete na web pro správu a monitorování, například `https://webserver.contoso.com/HelpDesk`.
+1. Ve webovém prohlížeči přejdete na web pro správu a monitorování, například `https://webserver.contoso.com/HelpDesk` .
 
 1. V levém podokně vyberte oblast **obnovení jednotky** .
 
@@ -123,7 +123,7 @@ Chcete-li získat heslo pro obnovení, použijte oblast **obnovení jednotky** n
     - Resetování čipu TPM
     - Ztracené heslo
     - Ztracená karta SmartCard
-    - Ostatní
+    - Další
 
     Po **odeslání** formuláře webová stránka vrátí jednu z následujících odpovědí:
 
@@ -180,7 +180,7 @@ K získání balíčku obnovovacího klíče z webu pro správu a monitorování
     - `<key package>`: Umístění balíčku obnovovacího klíče
     - `<recovery password>`: Přidružené heslo pro obnovení
 
-    Příklad:
+    Například:
 
     `repair-bde C: D: -kp F:\RecoveryKeyPackage -rp 111111-222222-333333-444444-555555-666666-777777-888888`
 
@@ -190,7 +190,7 @@ Další informace o tomto příkazu najdete v tématu [Repair-BDE](https://docs.
 
 Web pro správu a monitorování zahrnuje **sestavu audit Recovery**. Další sestavy jsou k dispozici v Configuration Manager bodu služby Reporting Services. Další informace najdete v tématu [zobrazení sestav nástroje BitLocker](view-reports.md).
 
-1. Ve webovém prohlížeči přejdete na web pro správu a monitorování, například `https://webserver.contoso.com/HelpDesk`.
+1. Ve webovém prohlížeči přejdete na web pro správu a monitorování, například `https://webserver.contoso.com/HelpDesk` .
 
 1. V levém podokně vyberte oblast **sestavy** .
 

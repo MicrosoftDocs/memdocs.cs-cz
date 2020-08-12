@@ -5,17 +5,17 @@ description: Technické informace o možných záznamech klienta BitLocker (MBAM
 ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: c38b6963-cb1f-40ed-a888-e19d401ec3fc
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4043af4aa30942a5e8e1f7d2a3d1017c1e72d89f
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d108f56032b1ca3cf4a41a836a7e9096afe41d0d
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81722057"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127963"
 ---
 # <a name="client-event-logs"></a>Protokoly klientských událostí
 
@@ -25,7 +25,7 @@ ms.locfileid: "81722057"
 
 V klientovi Configuration Manager, do kterého nasazujete zásadu správy BitLockeru, použijte Prohlížeč událostí Windows k zobrazení protokolů událostí klienta BitLockeru. Přejít na **protokoly aplikací a služeb**, **Microsoft**, **Windows**, **MBAM** pro protokoly událostí [správce](#admin) i [operační](#operational) systémy.
 
-## <a name="admin"></a>Správce
+## <a name="admin"></a>správce
 
 ### <a name="2-volumeenactmentfailed"></a>2: VolumeEnactmentFailed
 
@@ -129,7 +129,7 @@ Nepovedlo se aktualizovat cestu pro hledání knihovny DLL pro zprostředkovatel
 
 Agent se zastavuje. Vypršel časový limit při čekání na instanci zprostředkovatele rozhraní WMI MBAM.
 
-## <a name="operational"></a>Funkční
+## <a name="operational"></a>Provoz
 
 ### <a name="1-volumeenactmentsuccessful"></a>1: VolumeEnactmentSuccessful
 

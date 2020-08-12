@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: d1f18c135f200b2a9e40b970871c73a0d98893a2
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: b70a375eb35599a487eeeee95235d638de35e5e1
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83429824"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88125861"
 ---
 # <a name="desktop-analytics-faq"></a>Časté otázky k Desktop Analytics
 
@@ -69,7 +69,7 @@ Další informace najdete v tématu [Aktualizace existujícího počítače s no
 
 ### <a name="can-i-change-from-bios-to-uefi-when-upgrading-windows"></a>Můžu při upgradu systému Windows změnit stav systému BIOS na rozhraní UEFI?
 
-Yes. Další informace najdete v tématu [převedení ze systému BIOS na rozhraní UEFI během místního upgradu](../osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md#bkmk_ipu).
+Ano. Další informace najdete v tématu [převedení ze systému BIOS na rozhraní UEFI během místního upgradu](../osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md#bkmk_ipu).
 
 ### <a name="can-i-use-desktop-analytics-with-windows-10-ltsc"></a>Můžu použít desktopovou analýzu s Windows 10 LTSC?
 
@@ -106,7 +106,7 @@ Diagnostická data Windows z vašich počítačů se šifrují, odesílají a zp
 
 ### <a name="can-i-use-update-compliance-together-with-desktop-analytics"></a>Můžu použít Update Compliance společně s desktopovou analýzou?
 
-Yes. Pokud v Azure Portal dnes používáte [Update Compliance](https://docs.microsoft.com/windows/deployment/update/update-compliance-get-started) , můžete to provést i po uplynutí ledna 2020.
+Ano. Pokud v Azure Portal dnes používáte [Update Compliance](https://docs.microsoft.com/windows/deployment/update/update-compliance-get-started) , můžete to provést i po uplynutí ledna 2020.
 
 Další informace najdete v [článku KB 4521815: vyřazení služby Windows Analytics na 31. ledna 2020](https://support.microsoft.com/help/4521815/windows-analytics-retirement).
 
@@ -126,7 +126,7 @@ Ano, následující funkce Windows Analytics byly buď vyřazené, nebo ještě 
 #### <a name="upgrade-readiness"></a>Upgrade Readiness
 
 - Data zjišťování webu aplikace Internet Explorer
-- Doplňky Office Insights (teď [dostupné v Configuration Manager](#bkmk_office))
+- Přehled doplňku Microsoft 365 Apps (teď [dostupné v Configuration Manager](#bkmk_office))
 - Přehledy centra Feedback
 
 #### <a name="update-compliance"></a>Update Compliance
@@ -149,11 +149,11 @@ Ano, následující funkce Windows Analytics byly buď vyřazené, nebo ještě 
 - Windows Information Protection
 - Podpora pro Windows Server
 
-## <a name="other"></a>Jiné
+## <a name="other"></a>Další
 
-### <a name="can-i-use-desktop-analytics-for-my-office-365-proplus-upgrades"></a><a name="bkmk_office"></a>Můžu použít desktopovou analýzu pro upgrady sady Office 365 ProPlus?
+### <a name="can-i-use-desktop-analytics-for-my-microsoft-365-apps-upgrades"></a><a name="bkmk_office"></a>Můžu pro upgrady Microsoft 365 aplikací použít desktopovou analýzu?
 
-Ne, analýza stolních počítačů se zaměřuje na Windows. Vývoj desktopových analýz od Microsoftu v těsné spolupráci s mnoha zákazníky. Názory na zákazníky jsou informace o tom, jak Analytics Desktop vylepšuje schopnost spolehlivě spravovat nasazení Windows. Také nám řekněte, že chtějí lépe integrovat [připravenost sady office 365 ProPlus](../sum/deploy-use/office-365-dashboard.md#bkmk_o365_readiness) s nástroji pro správu office v Configuration Manager a Intune. Společnost Microsoft bude v těchto oblastech nadále investovat a přitom se zaměřuje na scénáře ve Windows v oblasti Desktop Analytics.
+Ne, analýza stolních počítačů se zaměřuje na Windows. Vývoj desktopových analýz od Microsoftu v těsné spolupráci s mnoha zákazníky. Názory na zákazníky jsou informace o tom, jak Analytics Desktop vylepšuje schopnost spolehlivě spravovat nasazení Windows. Také nám sdělí, že chtějí [Microsoft 365 aplikace](../sum/deploy-use/office-365-dashboard.md#bkmk_o365_readiness) lépe integrovat s nástroji pro správu Microsoft 365ch aplikací v Configuration Manager a Intune. Společnost Microsoft bude v těchto oblastech nadále investovat a přitom se zaměřuje na scénáře ve Windows v oblasti Desktop Analytics.
 
 ### <a name="how-can-i-provide-feedback-about-desktop-analytics"></a>Jak můžu sdělit svůj názor na Desktop Analytics?
 

@@ -2,20 +2,20 @@
 title: Nástroj pro připojení služby
 titleSuffix: Configuration Manager
 description: Přečtěte si o tomto nástroji, který vám umožní připojit se ke cloudové službě Configuration Manager a ručně odeslat informace o využití.
-ms.date: 07/02/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 6e4964c5-43cb-4372-9a89-b62ae6a4775c
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 48aa08f3318aaa4629691bfb30b60580cd3e25f0
-ms.sourcegitcommit: 03d2331876ad61d0a6bb1efca3aa655b88f73119
+ms.openlocfilehash: 8b56b849be6abd2634e29d35e58494d4d3215857
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "85946840"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126082"
 ---
 # <a name="use-the-service-connection-tool-for-configuration-manager"></a>Použití nástroje pro připojení služby pro Configuration Manager
 
@@ -78,7 +78,7 @@ Chcete-li toto chování změnit, použijte jeden z následujících parametrů 
 - **-downloadsiteversion**: stáhne aktualizace a opravy hotfix s novější verzí, než je verze vašeho webu.
 
     > [!IMPORTANT]
-    > Kvůli známému problému ve verzi Configuration Manager 2002 není výchozí chování fungovat podle očekávání. Pomocí parametru **-downloadsiteversion** stáhněte potřebné aktualizace pro verzi 2002.<!-- 7594517 -->
+    > Kvůli známému problému ve verzi Configuration Manager 2002 není výchozí chování fungovat podle očekávání. Aktualizujte na verzi 2006 nebo pomocí parametru **-downloadsiteversion** stáhněte potřebné aktualizace verze 2002.<!-- 7594517 -->
 
 Další informace najdete v tématu [parametry příkazového řádku](#bkmk_cmd).
 
@@ -153,7 +153,7 @@ V tomto postupu používají příklady příkazového řádku následující n�
 
 1. V konzole Configuration Manager otevřete pracovní prostor **Správa** a vyberte uzel **aktualizace a údržba** . Importované aktualizace jsou teď dostupné k instalaci. Další informace najdete v tématu [instalace konzolových aktualizací](install-in-console-updates.md).
 
-## <a name="log-files"></a>Soubory protokolů
+## <a name="log-files"></a>Soubory protokolu
 
 - **ServiceConnectionTool. log**: pokaždé, když spustíte nástroj pro připojení služby, se zapisuje do tohoto souboru protokolu. Cesta k souboru protokolu je vždy stejné jako nástroj. Tento soubor protokolu poskytuje jednoduché podrobnosti o využití nástroje na základě parametrů, které používáte. Při každém spuštění tohoto nástroje se nahradí existující soubor protokolu.
 

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 15cf7f3621f25a82f0e16d5275369ec93225bbf7
-ms.sourcegitcommit: 034226b5a60de49a75c7b54e856814f81c03a112
+ms.openlocfilehash: fc4309d3d09cd35c17b23bc46dcb1a28d210aa8e
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86422839"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88125742"
 ---
 # <a name="tutorial-deploy-windows-10-to-pilot"></a>Kurz: nasazení Windows 10 do pilotního nasazení
 
@@ -30,7 +30,7 @@ V tomto kurzu se naučíte:
 > * Vytvoření plánu nasazení Desktop Analytics pro Windows 10  
 > * Použití Configuration Manager k nasazení Windows 10 do pilotní skupiny  
 
-Pokud ještě nemáte předplatné Azure, vytvořte si [bezplatný účet](https://azure.microsoft.com/free) před tím, než začnete. Když se správně nakonfiguruje, používání Desktop Analytics nenese žádné náklady na Azure.
+Pokud ještě nemáte předplatné Azure, vytvořte si napřed [bezplatný účet](https://azure.microsoft.com/free). Když se správně nakonfiguruje, používání Desktop Analytics nenese žádné náklady na Azure.
 
 Desktop Analytics používá *Log Analytics pracovní prostor* ve vašem předplatném Azure. Pracovní prostor je v podstatě kontejner, který obsahuje informace o účtu a jednoduché konfigurační informace. Další informace najdete v tématu [Správa pracovních prostorů](https://docs.microsoft.com/azure/log-analytics/log-analytics-manage-access?toc=/azure/azure-monitor/toc.json).
 
@@ -56,7 +56,7 @@ Než začnete s tímto kurzem, ujistěte se, že máte následující požadavky
 
     - Configuration Manager klienta verze 1902 s kumulativní aktualizací (4500571) nebo novější  
 
-- Schválení firmy pro konfiguraci úrovně diagnostických dat Windows na **Rozšířené (omezené)** na pilotních zařízeních  
+- Schválení firmy pro konfiguraci úrovně diagnostických dat Windows na **volitelné (omezené)** na pilotních zařízeních  
 
     Další informace najdete v tématu [Ochrana osobních údajů Desktop Analytics](privacy.md).
 
@@ -166,7 +166,7 @@ Pro podporu integrace s desktopovou analýzou nainstalujte Configuration Manager
 
     - Výběr funkce **Desktop Analytics** ze seznamu dostupných služeb  
   
-   Vyberte **Next** (Další).  
+   Vyberte **Další**.  
 
 3. Na stránce **aplikace** vyberte příslušné **prostředí Azure**. Pak vyberte **Vyhledat** webovou aplikaci.
 
@@ -193,11 +193,11 @@ Pro podporu integrace s desktopovou analýzou nainstalujte Configuration Manager
 
     - **Komerční ID**: Tato hodnota by se měla automaticky naplnit ID vaší organizace.  
 
-    - **Úroveň diagnostických dat Windows 10**: vyberte aspoň **Rozšířené (omezené)** .  
+    - **Windows 10 úroveň diagnostických dat**: vyberte aspoň **volitelné (omezené)** .  
 
     - **Povolit název zařízení v diagnostických datech**: vyberte **Povolit** .  
   
-   Vyberte **Next** (Další). Stránka **dostupné funkce** zobrazuje funkce Desktop Analytics, která je dostupná s nastavením diagnostických dat z předchozí stránky. Vyberte **Next** (Další).  
+   Vyberte **Další**. Stránka **dostupné funkce** zobrazuje funkce Desktop Analytics, která je dostupná s nastavením diagnostických dat z předchozí stránky. Vyberte **Další**.  
 
 7. Na stránce **kolekce** nakonfigurujte následující nastavení:  
 
@@ -298,7 +298,7 @@ Pomocí tohoto postupu můžete nasadit Windows 10 v Configuration Manager do pi
 
 2. Na kartě **Domů** na pásu karet ve skupině **vytvořit** vyberte možnost **Přidat balíček s upgradem operačního systému**. Tato akce spustí Průvodce přidáním upgradu operačního systému.  
 
-3. Na stránce **zdroj dat** zadejte síťovou **cestu** k instalačním zdrojovým souborům balíčku s upgradem operačního systému. Například `\\server\share\path`.  
+3. Na stránce **zdroj dat** zadejte síťovou **cestu** k instalačním zdrojovým souborům balíčku s upgradem operačního systému. Například, `\\server\share\path`.  
 
     > [!NOTE]  
     > Zdrojové instalační soubory obsahují setup.exe a další soubory a složky pro instalaci operačního systému.  

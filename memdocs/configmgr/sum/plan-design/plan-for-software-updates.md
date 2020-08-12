@@ -5,17 +5,17 @@ description: Plán pro infrastrukturu bodu aktualizace softwaru je nezbytný, ne
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 10/22/2019
+ms.date: 08/11/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: d071b0ec-e070-40a9-b7d4-564b92a5465f
-ms.openlocfilehash: dca6f3e4bf67ac4c947f785016d781e538ee0a4e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: b7b3ef78924389232ea292d16c6840fbef9bb321
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81724017"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88123587"
 ---
 # <a name="plan-for-software-updates-in-configuration-manager"></a>Plánování aktualizací softwaru v Configuration Manager
 
@@ -71,7 +71,7 @@ Klient náhodně vybere bod aktualizace softwaru ze seznamu. Určuje prioritu bo
 ###  <a name="software-update-point-switching"></a><a name="BKMK_SUPSwitching"></a>Přepínání bodů aktualizace softwaru  
 
 > [!NOTE]  
-> Klienti používají skupiny hranic k vyhledání nového bodu aktualizace softwaru. Pokud jejich aktuální bod aktualizace softwaru již není přístupný, používají skupiny hranic k záložnímu a hledání nového. Přidejte jednotlivé body aktualizace softwaru do různých skupin hranic, abyste mohli řídit, které servery může klient najít. Další informace najdete v tématu [body aktualizace softwaru](../../core/servers/deploy/configure/boundary-groups.md#software-update-points).  
+> Klienti používají skupiny hranic k vyhledání nového bodu aktualizace softwaru. Pokud jejich aktuální bod aktualizace softwaru již není přístupný, používají skupiny hranic k záložnímu a hledání nového. Přidejte jednotlivé body aktualizace softwaru do různých skupin hranic, abyste mohli řídit, které servery může klient najít. Další informace najdete v tématu [body aktualizace softwaru](../../core/servers/deploy/configure/boundary-groups.md#bkmk_sup).  
 
 Máte-li v jedné lokalitě více bodů aktualizace softwaru a jeden z nich selže nebo je nedostupný, klienti se připojí k jinému bodu aktualizace softwaru. U tohoto nového serveru budou klienti pokračovat ve vyhledávání nejnovějších aktualizací softwaru. Když se klientovi poprvé přiřadí bod aktualizace softwaru, zůstane přiřazený k tomuto bodu aktualizace softwaru, pokud se nepovede zkontrolovat.  
 
@@ -111,7 +111,7 @@ Pokud dojde k problémům s aktivním bodem aktualizace softwaru, přepínejte C
 > [!IMPORTANT]    
 > Když přepnete zařízení na použití nového serveru, zařízení k vyhledání nového serveru použije zálohu. Klienti v průběhu příštího cyklu prověřování aktualizací softwaru přepnou na nový bod aktualizace softwaru.<!-- SCCMDocs#1537 -->
 >
-> Než začnete s touto změnou, zkontrolujte konfigurace skupin hranic a ujistěte se, že jsou body aktualizace softwaru ve správných skupinách hranic. Další informace najdete v tématu [body aktualizace softwaru](../../core/servers/deploy/configure/boundary-groups.md#software-update-points).  
+> Než začnete s touto změnou, zkontrolujte konfigurace skupin hranic a ujistěte se, že jsou body aktualizace softwaru ve správných skupinách hranic. Další informace najdete v tématu [body aktualizace softwaru](../../core/servers/deploy/configure/boundary-groups.md#bkmk_sup).  
 >
 > Přepnutí na nový bod aktualizace softwaru vygeneruje další síťový provoz. Množství provozu závisí na nastavení konfigurace služby WSUS, například na synchronizovaných klasifikacích a produktech nebo na použití sdílené databáze služby WSUS. Pokud máte v úmyslu přepínat více zařízení, zvažte jejich použití při údržbě systému Windows. Tento čas omezuje dopad na vaši síť, když klienti prohledají pomocí nového bodu aktualizace softwaru.  
 
@@ -151,7 +151,7 @@ Pokud potřebujete spravovat zařízení, která se v síti přecházejí z vaš
 #### <a name="cloud-management-gateway"></a>Brána pro správu cloudu
 Vytvořte bránu pro správu cloudu v Microsoft Azure a povolte aspoň jeden místní bod aktualizace softwaru, aby bylo možné povolit přenosy z internetových klientů. Když klienti přecházejí na Internet, budou i nadále kontrolovat body aktualizace softwaru. Všichni internetoví klienti vždycky získají obsah z cloudové služby Microsoft Update. 
 
-Další informace najdete v tématu [Plánování brány pro správu cloudu](../../core/clients/manage/cmg/plan-cloud-management-gateway.md).  
+Další informace najdete v tématu [Plánování brány pro správu cloudu](../../core/clients/manage/cmg/plan-cloud-management-gateway.md) a [Konfigurace skupin hranic](../../core/servers/deploy/configure/boundary-groups.md#bkmk_sup).  
 
 #### <a name="internet-based-client-management"></a>Internetová správa klientů
 Umístěte bod aktualizace softwaru do internetové sítě a umožněte mu povolit provoz z internetových klientů. Když klienti přecházejí na Internet, přepnou se do tohoto bodu aktualizace softwaru pro kontrolu. Všichni internetoví klienti vždycky získají obsah z cloudové služby Microsoft Update.
@@ -290,7 +290,7 @@ Tato část obsahuje následující podtémata:
 - [Zdroj synchronizace](#BKMK_SyncSource)
 - [Plán synchronizace](#BKMK_SyncSchedule)
 - [Klasifikace aktualizací](#BKMK_UpdateClassifications)
-- [Produkty](#BKMK_UpdateProducts)
+- [Produktech](#BKMK_UpdateProducts)
 - [Pravidla nahrazení](#BKMK_SupersedenceRules)
 - [Jazyky](#BKMK_UpdateLanguages)  
 - [Maximální doba běhu](#bkmk_maxruntime)
@@ -372,7 +372,7 @@ Aktualizace softwaru, která nahrazuje jinou aktualizaci softwaru, má typicky n
 
 -   Zlepšuje efektivitu balíčku balíčku aktualizací, který je nainstalován v klientech nástroje, pokud je aktualizace schválena k instalaci. Nahrazená aktualizace může například obsahovat soubory, které již nejsou důležité pro opravu nebo pro operační systémy, které jsou podporovány novou aktualizací. Tyto soubory nejsou zahrnuty v nahrazujícím balíčku souboru aktualizace.  
 
--   Aktualizuje novější verze produktu. Jinými slovy, aktualizuje verze, které již nejsou použitelné pro starší verze nebo konfigurace produktu. Aktualizace mohou rovněž nahrazovat jiné aktualizace, pokud byly provedeny úpravy za účelem rozšíření jazykové podpory. Například pozdější revize aktualizace produktu pro systém Microsoft Office může odebrat podporu pro starší operační systém, ale může přidat další podporu nových jazyků v úvodním vydání aktualizace.  
+-   Aktualizuje novější verze produktu. Jinými slovy, aktualizuje verze, které již nejsou použitelné pro starší verze nebo konfigurace produktu. Aktualizace mohou rovněž nahrazovat jiné aktualizace, pokud byly provedeny úpravy za účelem rozšíření jazykové podpory. Například pozdější revize aktualizace produktu pro Microsoft 365 aplikace může odebrat podporu pro starší operační systém, ale může přidat další podporu nových jazyků v úvodním vydání aktualizace.  
 
 Ve vlastnostech bodu aktualizace softwaru určete, že Nahrazené aktualizace softwaru budou okamžitě vypršet. Toto nastavení brání zahrnutí do nových nasazení. Také označí existující nasazení, aby označovala, že obsahují jednu nebo více aktualizací softwaru s vypršenou platností. Nebo zadejte časový interval, po jehož uplynutí vyprší platnost nahrazených aktualizací softwaru. Tato akce vám umožní pokračovat v jejich nasazení. 
 
@@ -461,7 +461,8 @@ Když je u Configuration Manager aktualizace softwaru čeká na restartování, 
 
 ## <a name="evaluate-software-updates-after-a-servicing-stack-update"></a><a name="bkmk_ssu"></a>Vyhodnotit aktualizace softwaru po aktualizaci servisního zásobníku
 <!--4639943-->
-Počínaje verzí 2002 Configuration Manager zjistí, zda je aktualizace cestou nadřazené (Servicing Stack) součástí instalace více aktualizací. Po zjištění cestou nadřazené se nainstalují jako první. Po instalaci cestou nadřazené se spustí cyklus vyhodnocení aktualizace softwaru, který nainstaluje zbývající aktualizace. Tato změna umožňuje instalaci závislé kumulativní aktualizace po aktualizaci zásobníku pro údržbu. Zařízení není nutné restartovat mezi instalacemi a nemusíte vytvářet další časové období údržby. SSUs se instalují jenom pro instalace, které neinicioval uživatel. Například pokud uživatel zahájí instalaci pro více aktualizací z centra softwaru, cestou nadřazené nemusí být nainstalován jako první.
+Počínaje verzí 2002 Configuration Manager zjistí, zda je aktualizace cestou nadřazené (Servicing Stack) součástí instalace více aktualizací. Po zjištění cestou nadřazené se nainstalují jako první. Po instalaci cestou nadřazené se spustí cyklus vyhodnocení aktualizace softwaru, který nainstaluje zbývající aktualizace. Tato změna umožňuje instalaci závislé kumulativní aktualizace po aktualizaci zásobníku pro údržbu. Zařízení není nutné restartovat mezi instalacemi a nemusíte vytvářet další časové období údržby. SSUs se instalují jenom pro instalace, které neinicioval uživatel. Například pokud uživatel zahájí instalaci pro více aktualizací z centra softwaru, cestou nadřazené nemusí být nainstalován jako první. Instalace SSUs není k dispozici pro operační systémy Windows Server při použití Configuration Manager verze 2002. <!--7813007-->Tato funkce se přidala ve verzi Configuration Manager 2006 pro operační systémy Windows Server.
+
 
 
 ## <a name="next-steps"></a>Další kroky

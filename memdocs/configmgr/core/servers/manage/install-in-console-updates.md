@@ -2,7 +2,7 @@
 title: Konzolové aktualizace
 titleSuffix: Configuration Manager
 description: Instalace aktualizací pro Configuration Manager z Microsoft cloudu
-ms.date: 06/02/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c14a3607-253b-41fb-8381-ae2d534a9022
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: a0d7f36c921f782c0baad740d8e643f54cee0309
-ms.sourcegitcommit: 5e339c07001e911cf75ef922e6c66a7efdeab6f1
+ms.openlocfilehash: 65071493834c33dac7581075b835e023c74f5706
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84637665"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128082"
 ---
 # <a name="install-in-console-updates-for-configuration-manager"></a>Instalace konzolových aktualizací pro Configuration Manager
 
@@ -96,13 +96,13 @@ Než nainstalujete aktualizaci z konzoly Configuration Manager, přečtěte si n
 
 Před zahájením aktualizace si přečtěte příslušný kontrolní seznam aktualizací, který bude trvat:
 
+- [Kontrolní seznam pro instalaci aktualizace 2006](checklist-for-installing-update-2006.md)
+
 - [Kontrolní seznam pro instalaci aktualizace 2002](checklist-for-installing-update-2002.md)
 
 - [Kontrolní seznam pro instalaci aktualizace 1910](checklist-for-installing-update-1910.md)  
 
 - [Kontrolní seznam pro instalaci aktualizace 1906](checklist-for-installing-update-1906.md)  
-
-- [Kontrolní seznam pro instalaci aktualizace 1902](checklist-for-installing-update-1902.md)
 
 ### <a name="step-2-run-the-prerequisite-checker-before-installing-an-update"></a><a name="bkmk_step2"></a>Krok 2: spuštění kontroly požadovaných součástí před instalací aktualizace  
 
@@ -362,13 +362,13 @@ V pracovním prostoru **monitorování** vyberte uzel **stav údržby lokality**
 
 Po aktualizaci lokality si projděte kontrolní seznam po aktualizaci pro příslušnou verzi:  
 
+- [Kontrolní seznam po aktualizaci pro verzi 2006](checklist-for-installing-update-2006.md#post-update-checklist)
+
 - [Kontrolní seznam po aktualizaci pro verzi 2002](checklist-for-installing-update-2002.md#post-update-checklist)
 
 - [Kontrolní seznam po aktualizaci pro verzi 1910](checklist-for-installing-update-1910.md#post-update-checklist)  
 
 - [Kontrolní seznam po aktualizaci pro verzi 1906](checklist-for-installing-update-1906.md#post-update-checklist)  
-
-- [Kontrolní seznam po aktualizaci pro verzi 1902](checklist-for-installing-update-1902.md#post-update-checklist)  
 
 ## <a name="enable-optional-features-from-updates"></a><a name="bkmk_options"></a>Povolit volitelné funkce z aktualizací  
 
@@ -378,7 +378,7 @@ Chcete-li zobrazit dostupné funkce a jejich stav, v konzole nástroje přejdete
 
 Pokud funkce není volitelná, nainstaluje se automaticky. Nezobrazuje se v uzlu **funkce** .  
 
-> [!Important]  
+> [!IMPORTANT]
 > V hierarchii s více lokalitami povolte volitelné nebo předběžné verze funkcí pouze z centrální lokality pro správu. Toto chování zajistí, že v hierarchii nejsou žádné konflikty. <!--507197-->  
 
 Pokud povolíte novou funkci nebo předběžnou verzi funkce, Správce hierarchie Configuration Manager (HMAN) musí před tím, než bude tato funkce dostupná, zpracovat změnu. Zpracování změny je často okamžité. V závislosti na cyklu zpracování HMAN může trvat až 30 minut, než se dokončí. Po zpracování změny restartujte konzolu, než budete moci funkci použít.
@@ -391,19 +391,20 @@ Následující funkce jsou volitelné v nejnovější verzi Configuration Manage
 
 <!--Note to include in target articles
 
-> [!Note]  
+> [!NOTE]
 > Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](install-in-console-updates.md#bkmk_options).  
 
 -->
 
 - [Centrum komunity](community-hub.md)<!--3555935, C098DA03-C33C-4E15-B337-6C0FEEB3CB8A-->
+- [Skupiny orchestrace](../../../sum/deploy-use/orchestration-groups.md)<!--3098816, 290B66D8-C735-4895-B59A-DD732D84A697-->
+- [Typ nasazení pořadí úloh](../../../apps/get-started/creating-windows-applications.md#bkmk_tsdt) <!-- 3555953, CB0CDFFB-9C6F-4B18-8954-A43A387302A2-->
 - [Správa nástroje BitLocker](../../../protect/plan-design/bitlocker-management.md) <!-- 3601034,6DD56E46-C3EC-4E38-A16F-E98644BB6434 -->
 - [Synchronizovat výsledky členství kolekce s Azure Active Directory](../../clients/manage/collections/create-collections.md#bkmk_aadcollsync) <!--3607475,C2127144-C8DE-49F6-9CB3-D4F5B59F9515-->
 - [Azure Active Directory zjišťování skupiny uživatelů](../deploy/configure/configure-discovery-methods.md#bkmk_azuregroupdisco) <!--3611956,023715E7-BFBA-4E9E-A80F-B5B626464ADD-->
 - [Skupiny aplikací](../../../apps/deploy-use/create-app-groups.md) <!--3555907,EE16A1D8-EF1B-4094-845F-AC107E7C621D-->
 - [Ladicí program pořadí úloh](../../../osd/deploy-use/debug-task-sequence.md) <!--3612274,C3F37661-69E4-4D53-A39C-5D02F97E0E71-->
 - [Package Conversion Manager](../../../apps/pcm/package-conversion-manager.md) <!--1357861,4E0C09AF-7FC1-4412-A8BB-166D9BCD0093-->
-- [Klientské aplikace pro spoluspravovaná zařízení](../../../comanage/workloads.md#client-apps) (dříve označovaná jako *mobilní aplikace pro spoluspravovaná zařízení*) <!--1357892,CC3AE625-BF72-49B1-8AB1-AF0DCF2D6F4C-->
 - [Aktualizace softwaru třetích stran](../../../sum/deploy-use/third-party-software-updates.md)<!--1357605,1352101,1358714;B5E192AE-C81F-4348-9EF9-07A3C0FBE597-->
 - [Schvalovat žádosti o aplikace pro uživatele na zařízení](../../../apps/deploy-use/deploy-applications.md#bkmk_deploy-settings) <!--1357015,4BA987C9-08FC-48E2-BFFE-C9DCF35B496A-->  
 - [Vytváření a spouštění skriptů](../../../apps/deploy-use/create-deploy-scripts.md) <!--1236459,566F8720-F415-4E10-9A51-CDE682BA2B2E-->
@@ -416,7 +417,7 @@ Následující funkce jsou volitelné v nejnovější verzi Configuration Manage
 - [Údržba kolekce podporující clustery (skupiny serverů)](../../../sum/deploy-use/service-a-server-group.md) <!--1081776,290B66D8-C735-4895-B59A-DD732D84A697-->
 - [Windows Hello pro firmy](../../../protect/deploy-use/windows-hello-for-business-settings.md) (dříve označované jako *Passport for Work*) <!--1245704,8BCA2642-3719-4862-A355-9D39C979E1B4-->
 
-> [!Tip]  
+> [!TIP]
 > Další informace o funkcích, které vyžadují souhlas s povolením, najdete v tématu [předběžné verze funkcí](pre-release-features.md).  
 >
 > Další informace o funkcích, které jsou k dispozici pouze ve větvi Technical Preview, najdete v tématu [Technical Preview](../../get-started/technical-preview.md).

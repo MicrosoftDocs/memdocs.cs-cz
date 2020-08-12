@@ -2,20 +2,20 @@
 title: Poznámky k verzi
 titleSuffix: Configuration Manager
 description: Seznamte se s naléhavými problémy, které zatím nejsou v produktu opravené nebo jsou uvedené v článku znalostní báze podpora Microsoftu Knowledge Base.
-ms.date: 05/21/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.assetid: 030947fd-f5e0-4185-8513-2397fb2ec96f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 131b6104d5724c8a4eeb0bb68c4afd9a5319abb7
-ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
+ms.openlocfilehash: 9c1152b14da7c0a473e266b1ac1e6da2778aa105
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83823958"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126287"
 ---
 # <a name="release-notes-for-configuration-manager"></a>Poznámky k verzi pro Configuration Manager
 
@@ -29,10 +29,10 @@ Tento článek obsahuje poznámky k verzi pro aktuální větev Configuration Ma
 
 Informace o nových funkcích zavedených s různými verzemi najdete v následujících článcích:
 
+- [Co je nového ve verzi 2006](../../../plan-design/changes/whats-new-in-version-2006.md)
 - [Novinky ve verzi 2002](../../../plan-design/changes/whats-new-in-version-2002.md)
 - [Novinky ve verzi 1910](../../../plan-design/changes/whats-new-in-version-1910.md)
 - [Novinky ve verzi 1906](../../../plan-design/changes/whats-new-in-version-1906.md)  
-- [Novinky ve verzi 1902](../../../plan-design/changes/whats-new-in-version-1902.md)
 
 Informace o nových funkcích v Desktop Analytics najdete v tématu [co je nového v rámci služby Desktop Analytics](../../../../desktop-analytics/whats-new.md).
 
@@ -121,24 +121,15 @@ V zařízení, které komunikuje přes bránu pro správu cloudu (CMG), existuj�
 
 - Nakonfigurujete lokalitu pro rozšířený protokol HTTP a bod správy je HTTP.<!-- 6358851 -->
 
-    Pokud chcete tento problém obejít, nakonfigurujte bod správy pro protokol HTTPS.
+    Pokud chcete tento problém obejít, aktualizujte na verzi 2006. Případně nakonfigurujte bod správy pro protokol HTTPS.
 
 - Nainstalovali jste a zaregistrovali klienta s hromadnou registračním tokenem pro ověřování.<!-- 6377921 -->
 
-    Pokud chcete tento problém obejít, použijte jednu z následujících metod ověřování:
+    Pokud chcete tento problém obejít, aktualizujte na verzi 2006. Případně použijte jednu z následujících metod ověřování:
 
   - Předem zaregistrujte zařízení v interní síti.
   - Konfigurace zařízení pomocí certifikátu pro ověřování klientů
   - Připojení zařízení k Azure AD
-
-### <a name="after-passive-site-server-is-promoted-the-default-boot-image-packages-still-have-package-source-on-the-previous-active-server"></a>Po zvýšení úrovně pasivního serveru lokality má výchozí balíčky spouštěcích imagí stále zdroj balíčku na předchozím aktivním serveru.
-
-<!--3453224, SCCMDocs-pr issue 3097-->
-*Platí pro: Configuration Manager verze 1810*
-
-Pokud máte server lokality v pasivním režimu (Server B), když ho povýšíte na aktivní, umístění obsahu pro výchozí spouštěcí image nadále odkazuje na předchozí aktivní server (Server A). Pokud server A má selhání hardwaru, nemůžete aktualizovat ani změnit výchozí spouštěcí image.
-
-Pro tento problém neexistuje žádné alternativní řešení.
 
 ## <a name="software-updates"></a>Aktualizace softwaru
 
@@ -162,7 +153,7 @@ Pokud chcete tento problém obejít, vytvořte vlastní roli zabezpečení. Zkop
 - Vytvořit  
 - Odstranit  
 - Modify  
-- Čtení  
+- Číst  
 
 Další informace najdete v tématu [Vytvoření vlastních rolí zabezpečení](../configure/configure-role-based-administration.md#BKMK_CreateSecRole) .
 
@@ -171,9 +162,9 @@ Další informace najdete v tématu [Vytvoření vlastních rolí zabezpečení]
 ### <a name="an-extended-security-update-for-windows-7-causes-them-to-show-as-unable-to-enroll"></a><a name="dawin7-diagtrack"></a>Rozšířená aktualizace zabezpečení pro systém Windows 7 způsobí, že se můžou zobrazit jako **neregistrované** .
 
 <!-- 7283186 -->
-_Platí pro: Configuration Manager verze 1902, 1906, 1910 a 2002_
+_Platí pro: Configuration Manager verze 2002 a starší_
 
-Aktualizace rozšířeného zabezpečení z dubna 2020 (EVJ) pro systém Windows 7 změnila minimální požadovanou verzi souboru DiagTrack. dll z 10586 na 10240. Tato změna způsobí, že se zařízení se systémem Windows 7 zobrazují jako **neschopná se zaregistrovat** na řídicím panelu **stavu připojení** Desktop Analytics. Když přejdete do zobrazení zařízení pro tento stav, vlastnost **Konfigurace služby DiagTrack** zobrazí následující stav:`Connected User Experience and Telemetry (diagtrack.dll) component is outdated. Check requirements.`
+Aktualizace rozšířeného zabezpečení z dubna 2020 (EVJ) pro systém Windows 7 změnila minimální požadovanou verzi diagtrack.dll z 10586 na 10240. Tato změna způsobí, že se zařízení se systémem Windows 7 zobrazují jako **neschopná se zaregistrovat** na řídicím panelu **stavu připojení** Desktop Analytics. Když přejdete do zobrazení zařízení pro tento stav, vlastnost **Konfigurace služby DiagTrack** zobrazí následující stav:`Connected User Experience and Telemetry (diagtrack.dll) component is outdated. Check requirements.`
 
 Pro tento problém není nutné žádné alternativní řešení. Odinstalujte EVJ. dubna. Pokud je v opačném případě správně nakonfigurovaná, zařízení s Windows 7 pořád hlásí diagnostická data do služby Desktop Analytics a pořád se na portálu zobrazují.
 

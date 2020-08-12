@@ -2,7 +2,7 @@
 title: Řešení potíží s instalací aplikace
 titleSuffix: Configuration Manager
 description: Řešení potíží s instalací aplikace pro připojení klienta Configuration Manager
-ms.date: 08/10/2020
+ms.date: 08/11/2020
 ms.topic: troubleshooting
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -10,12 +10,12 @@ ms.assetid: 75f47456-cd8d-4c83-8dc5-98b336a7c6c8
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 6960c85f8e01e3686541e537dfb4823826a77920
-ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
+ms.openlocfilehash: 93b793dfbc6d7d0b5f4b24db65588ee1390604e9
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88057570"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129283"
 ---
 # <a name="troubleshoot-application-installation-for-devices-uploaded-to-the-admin-center-preview"></a>Řešení potíží s instalací aplikace pro zařízení odeslaná do centra pro správu (Preview)
 <!--6374854, 6521921-->
@@ -60,11 +60,28 @@ Při zobrazení nebo instalaci aplikací z centra pro správu Microsoft Endpoint
 
 **Chybová zpráva:** Stala se neočekávaná chyba.
 
-**Možné příčiny:** Neočekávané chyby jsou obvykle způsobeny buď [spojovacím bodem služby](../core/servers/deploy/configure/about-the-service-connection-point.md), [službou správy](../develop/adminservice/overview.md)nebo problémy s připojením.
+#### <a name="error-code-500-with-an-unexpected-error-occurred-message"></a>Kód chyby 500 s neočekávanou chybou při výskytu zprávy
+
+1. Pokud se zobrazí `System.Security.SecurityException` v **protokolu AdminService. log**, ověřte, že vaše hlavní uživatelské jméno (UPN) zjištěné [zjišťováním uživatelů služby Active Directory](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser) není nastavené na hlavní název uživatele (UPN), nikoli na místní hlavní název uživatele (UPN). Je také přijatelná prázdná hodnota hlavního názvu uživatele (UPN), která znamená, že se používá název domény zjištěné službou Active Directory. Pokud se zobrazí název UPN jenom pro Cloud (například onmicrosoft.com), který není platným hlavním názvem uživatele (contoso.com), máte problém a možná budete muset [nastavit příponu hlavního názvu uživatele (UPN) ve službě Active Directory](https://docs.microsoft.com/office365/enterprise/prepare-a-non-routable-domain-for-directory-synchronization#add-upn-suffixes-and-update-your-users-to-them).
+1. Pokud se v **protokolu AdminService. log**zobrazí tato chyba, v [centru pro správu Microsoft Endpoint Manageru se vyprší doba instalace KB4576782 – okno aplikace](https://support.microsoft.com/help/4576782) .
+   ```log 
+   System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details.
+   System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+   System.ComponentModel.Win32Exception: The wait operation timed out
+   ```
+
+#### <a name="error-code-3-with-an-unexpected-error-occurred-message"></a>Kód chyby 3 s neočekávanou chybou při výskytu zprávy
+
+Služba správy není spuštěná nebo není nainstalovaná služba IIS. Služba IIS musí být nainstalována na počítači poskytovatele. Další informace najdete v tématu [předpoklady pro službu správy](../develop/adminservice/overview.md#prerequisites).
+
+#### <a name="other-possible-causes-of-unexpected-errors"></a>Další možné příčiny neočekávaných chyb
+
+Neočekávané chyby jsou obvykle způsobeny buď [spojovacím bodem služby](../core/servers/deploy/configure/about-the-service-connection-point.md), [službou správy](../develop/adminservice/overview.md)nebo problémy s připojením.
 
 1. Ověřte, zda je spojovací bod služby připojen ke cloudu pomocí **protokolu CMGatewayNotificationWorker. log**.
 1. Ověřte, zda je služba pro správu v pořádku, kontrolou součásti SMS_REST_PROVIDER z monitorování součástí lokality v centrální lokalitě.
 1. Služba IIS musí být nainstalována na počítači poskytovatele. Další informace najdete v tématu [předpoklady pro službu správy](../develop/adminservice/overview.md#prerequisites).
+
 
 ### <a name="the-site-information-hasnt-yet-synchronized"></a><a name="bkmk_sync"></a>Informace o lokalitě zatím nebyly synchronizovány.
 
@@ -89,20 +106,6 @@ Při zobrazení nebo instalaci aplikací z centra pro správu Microsoft Endpoint
 **Možná příčina:**  Ujistěte se, že je nainstalovaná [kumulativní aktualizace pro Microsoft Endpoint Configuration Manager verze 2002](https://support.microsoft.com/help/4560496/) a odpovídající verze konzoly. Další informace najdete v tématu [předpoklady pro instalaci aplikace z centra pro správu](applications.md#prerequisites).
 
 ## <a name="known-issues"></a>Známé problémy
-
-### <a name="unexpected-error-occurred-when-gettingapplications"></a>Při získávání aplikací došlo k neočekávané chybě.
-
-**Scénář:** Načítání seznamu aplikací trvá déle, než se čekalo, pokud používáte Configuration Manager verze 2002 a vidíte `unexpected error occurred` .
-
-**Chybová zpráva:** AdminService. log bude obsahovat:
-
-```log 
-System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details.
-System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
-System.ComponentModel.Win32Exception: The wait operation timed out
-```
-
-**Alternativní řešení:** V současné době není k dispozici alternativní řešení.
 
 ### <a name="application-installation-times-out-if-application-requires-restart"></a>Časový limit instalace aplikace vypršel, pokud aplikace vyžaduje restart.
 

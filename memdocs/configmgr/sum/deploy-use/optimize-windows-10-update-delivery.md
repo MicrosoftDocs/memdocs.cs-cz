@@ -10,12 +10,12 @@ ms.assetid: b670cfaf-96a4-4fcb-9caa-0f2e8c2c6198
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 835dcd0c86244c1731cb6c6e040d577160759614
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 6c42015880cae09be48feff9c42b6b2a0d2c8544
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83267786"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129310"
 ---
 # <a name="optimize-windows-10-update-delivery-with-configuration-manager"></a>Optimalizace doručování aktualizací Windows 10 pomocí Configuration Manager
 
@@ -70,7 +70,7 @@ Chcete-li použít optimalizaci doručování pro všechny instalační soubory 
 > [!IMPORTANT]
 > - Optimalizace doručení musí být povolená (výchozí) a nepoužívá se. Další informace najdete v tématu [referenční informace k optimalizaci Windows Delivery](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference).
 > - Při změně [nastavení klienta aktualizace softwaru](../../core/clients/deploy/about-client-settings.md#software-updates) pro rozdílový obsah ověřte [nastavení klienta Optimalizace doručení](../../core/clients/deploy/about-client-settings.md#delivery-optimization) .
-> - Optimalizace doručení se nedá použít pro aktualizace klientů Office 365, pokud je povolený Office COM. Sada Office COM je používána nástrojem Configuration Manager ke správě aktualizací klientů Office 365. Můžete zrušit registraci Office COM, abyste povolili použití optimalizace doručování pro aktualizace Office 365. Když je Office COM zakázaný, budou aktualizace softwaru pro Office 365 spravované pomocí výchozí naplánované úlohy automatické aktualizace Office 2,0. To znamená, že Configuration Manager neurčuje ani nesleduje proces instalace aktualizací Office 365. Configuration Manager bude pokračovat ve shromažďování informací z inventáře hardwaru a naplnit řídicí panel pro správu klientů Office 365 v konzole nástroje. Informace o tom, jak zrušit registraci Office COM, najdete v tématu [Povolení klientů office 365 přijímat aktualizace z Office CDN místo Configuration Manager](https://docs.microsoft.com/deployoffice/manage-office-365-proplus-updates-with-configuration-manager#enable-office-365-clients-to-receive-updates-from-the-office-cdn-instead-of-configuration-manager).
+> - Optimalizace doručení se nedá použít pro Microsoft 365 aktualizace klienta, pokud je povolený Office COM. Sada Office COM je používána nástrojem Configuration Manager ke správě aktualizací pro klienty Microsoft 365ch aplikací. Můžete zrušit registraci Office COM, aby bylo možné používat optimalizaci doručování pro aktualizace aplikací Microsoft 365. Když je Office COM zakázaný, aktualizace softwaru pro Microsoft 365 aplikace se spravují pomocí výchozí naplánované úlohy pro Office Automatic Updates 2,0. To znamená, že Configuration Manager nediktování ani nesleduje proces instalace aktualizací Microsoft 365 aplikací. Configuration Manager bude pokračovat ve shromažďování informací z inventáře hardwaru a naplnit řídicí panel pro správu klientů Office 365 v konzole nástroje. Informace o tom, jak zrušit registraci Office COM, najdete v tématu [Povolení klientů office 365 přijímat aktualizace z Office CDN místo Configuration Manager](https://docs.microsoft.com/deployoffice/manage-office-365-proplus-updates-with-configuration-manager#enable-office-365-clients-to-receive-updates-from-the-office-cdn-instead-of-configuration-manager).
 > - Při použití CMG pro úložiště obsahu se nebude obsah pro aktualizace třetích stran stahovat do klientů, pokud je povolený **rozdílový obsah ke stažení, pokud** je povolené [nastavení klienta](../../core/clients/deploy/about-client-settings.md#allow-clients-to-download-delta-content-when-available) dostupné. <!--6598587-->
 
 
@@ -98,12 +98,12 @@ Výběr správné technologie peere naukládání do mezipaměti pro soubory Exp
 |---------|---------|---------|---------|
 | Podporováno mezi podsítěmi | Ano | Ano | Ne |
 | Omezení šířky pásma | Ano (nativní) | Ano (přes BITS) | Ano (přes BITS) |
-| Podpora částečného obsahu | Ano, u všech podporovaných typů obsahu uvedených v tomto sloupci na dalším řádku. | Jenom pro aktualizace Office 365 a Express | Ano, u všech podporovaných typů obsahu uvedených v tomto sloupci na dalším řádku. |
-| Podporované typy obsahu | **Prostřednictvím nástroje ConfigMgr:** </br> – Expresní aktualizace </br> – Všechny aktualizace Windows (počínaje verzí 1910). To nezahrnuje aktualizace Office.</br> </br> **Přes Microsoft Cloud:**</br> – Windows a aktualizace zabezpečení</br> – Ovladače</br> – Aplikace pro Windows Store</br> – Aplikace pro Windows Store pro firmy | Všechny typy obsahu nástroje ConfigMgr, včetně obrázků stažených v [systému Windows PE](../../osd/get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md) | Všechny typy obsahu nástroje ConfigMgr kromě imagí |
+| Podpora částečného obsahu | Ano, u všech podporovaných typů obsahu uvedených v tomto sloupci na dalším řádku. | Jenom pro aplikace Microsoft 365 a expresní aktualizace | Ano, u všech podporovaných typů obsahu uvedených v tomto sloupci na dalším řádku. |
+| Podporované typy obsahu | **Prostřednictvím nástroje ConfigMgr:** </br> – Expresní aktualizace </br> – Všechny aktualizace Windows (počínaje verzí 1910). To nezahrnuje aktualizace Microsoft 365ch aplikací.</br> </br> **Přes Microsoft Cloud:**</br> – Windows a aktualizace zabezpečení</br> – Ovladače</br> – Aplikace pro Windows Store</br> – Aplikace pro Windows Store pro firmy | Všechny typy obsahu nástroje ConfigMgr, včetně obrázků stažených v [systému Windows PE](../../osd/get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md) | Všechny typy obsahu nástroje ConfigMgr kromě imagí |
 | Velikost mezipaměti na ovládacím prvku disku | Ano | Ano | Ano |
 | Zjišťování zdroje partnerského vztahu | Automaticky | Ruční (nastavení agenta klienta) | Automaticky |
 | Rovnocenné zjišťování | Přes cloudovou službu optimalizace doručování (vyžaduje přístup k Internetu) | Přes bod správy (na základě skupin hranic klientů) | Odesílání |
-| Vytváření sestav | Ano (použití Desktop Analytics) | Řídicí panel zdrojů dat klienta nástroje ConfigMgr | Řídicí panel zdrojů dat klienta nástroje ConfigMgr |
+| Generování sestav | Ano (použití Desktop Analytics) | Řídicí panel zdrojů dat klienta nástroje ConfigMgr | Řídicí panel zdrojů dat klienta nástroje ConfigMgr |
 | Řízení využití sítě WAN | Ano (nativní, lze ovládat pomocí nastavení zásad skupiny) | Skupiny hranic | Pouze podpora podsítí |
 | Správa prostřednictvím nástroje ConfigMgr | Částečný (nastavení klientského agenta) | Ano (nastavení agenta klienta) | Ano (nastavení agenta klienta) |
 
@@ -151,7 +151,7 @@ To závisí na okolnostech. Pro každou aktualizaci kvality jsou na serverech ul
 
 #### <a name="do-configuration-manager-clients-still-benefit-from-express-installation-files-when-falling-back-to-the-windows-update-service"></a>Mají Configuration Manager klienti stále výhodné soubory Expresní instalace, pokud se vrátí ke službě web Windows Update?
 
-Yes. Pokud použijete následující možnost nasazení aktualizace softwaru, klienti pořád používají expresní aktualizace a optimalizaci doručování, když se budou vracet do cloudové služby:  
+Ano. Pokud použijete následující možnost nasazení aktualizace softwaru, klienti pořád používají expresní aktualizace a optimalizaci doručování, když se budou vracet do cloudové služby:  
 
 **Pokud aktualizace softwaru nejsou k dispozici v distribučním bodě v aktuálních, sousedních nebo skupinových lokalitách, Stáhněte obsah z aktualizací společnosti Microsoft.**
 
@@ -168,7 +168,7 @@ Windows 10 verze 1703 (a novější) obsahuje dvě nové rutiny PowerShellu **Ge
 #### <a name="how-do-clients-communicate-with-delivery-optimization-over-the-network"></a>Jak klienti komunikují s optimalizací doručování přes síť?
 Další informace o síťových portech, požadavcích na proxy serveru a názvůch hostitelů pro brány firewall najdete v tématu [Nejčastější dotazy k optimalizaci doručení](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions).
 
-## <a name="log-files"></a>Soubory protokolů
+## <a name="log-files"></a>Soubory protokolu
 
 Ke sledování rozdílového stahování použijte následující soubory protokolu:
 

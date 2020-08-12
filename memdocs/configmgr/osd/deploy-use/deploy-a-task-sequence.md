@@ -2,20 +2,20 @@
 title: Nasazení pořadí úkolů
 titleSuffix: Configuration Manager
 description: Tyto informace slouží k nasazení pořadí úloh do počítačů v kolekci.
-ms.date: 11/29/2019
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: b2abcdb0-72e0-4c70-a4b8-7827480ba5b2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 13c16e89cc75bff1ccecd03a98cd12782c419a40
-ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
+ms.openlocfilehash: fea9088a11310aedc95d2fdbeacdb98650eef361
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84455149"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88125198"
 ---
 # <a name="deploy-a-task-sequence"></a>Nasazení pořadí úkolů
 
@@ -146,9 +146,21 @@ Pomocí následujícího postupu můžete nasadit pořadí úloh do počítačů
 
     - **Zpracování filtru zápisu pro zařízení se systémem Windows Embedded**: Toto nastavení řídí chování při instalaci na zařízeních se systémem Windows Embedded, která jsou povolena pomocí filtru zápisu. Vyberte možnost potvrdit změny při dokončení instalace nebo během časového období údržby. Když vyberete tuto možnost, vyžaduje se restartování a změny se na zařízení zachovají. V opačném případě se aplikace nainstaluje do dočasného překrytí a potvrdí se později. Když nasadíte pořadí úloh do zařízení se systémem Windows Embedded, ujistěte se, že je zařízení členem kolekce, která má nakonfigurované časové období údržby.  
 
-    - **Povolit spuštění pořadí úloh pro klienta na internetu**: Určete, jestli se může pořadí úkolů spouštět na internetovém klientovi. Operace, které vyžadují spouštěcí médium, jako je například instalace operačního systému, nejsou tímto nastavením podporovány. Tuto možnost použijte pouze pro obecné instalace softwaru nebo sekvence úloh založená na skriptech, které spouštějí operace ve standardním operačním systému.  
+    - **Povolit spuštění pořadí úloh pro klienta na internetu**: Určete, jestli se může pořadí úkolů spouštět na internetovém klientovi.
 
-        - Toto nastavení se podporuje pro nasazení místního upgradu pořadí úkolů Windows 10 do internetových klientů přes bránu pro správu cloudu. Další informace najdete v tématu [nasazení místního upgradu Windows 10 přes CMG](#deploy-windows-10-in-place-upgrade-via-cmg).  
+        Toto nastavení se podporuje pro nasazení místního upgradu pořadí úloh Windows 10 na internetové klienty prostřednictvím brány pro správu cloudu (CMG). Další informace najdete v tématu [nasazení místního upgradu Windows 10 přes CMG](#deploy-windows-10-in-place-upgrade-via-cmg).
+
+        Počínaje verzí 2006 můžete nasadit pořadí úloh pomocí spouštěcí bitové kopie do zařízení, které komunikuje přes CMG. Uživatel musí spustit pořadí úloh z centra softwaru.<!--6997525-->
+
+        > [!NOTE]
+        > Když klient připojený k Azure Active Directory (Azure AD) spustí pořadí úloh nasazení operačního systému, klient v novém operačním systému se automaticky nepřipojí k Azure AD. I když není připojený k Azure AD, klient se pořád spravuje.
+        >
+        > Při spuštění pořadí úloh nasazení operačního systému v internetovém klientovi, který je připojen k Azure AD nebo používá ověřování založené na tokenech, je nutné zadat vlastnost **CCMHOSTNAME** v kroku [nastavit systém Windows a nástroj ConfigMgr](../understand/task-sequence-steps.md#BKMK_SetupWindowsandConfigMgr) .
+
+        V rámci verze 2002 a starší se s tímto nastavením nepodporují operace, které vyžadují spouštěcí médium. Tuto možnost použijte pouze pro obecné instalace softwaru nebo sekvence úloh založená na skriptech, které spouštějí operace ve standardním operačním systému.
+
+        > [!NOTE]
+        > U všech scénářů pořadí úkolů založeného na Internetu spusťte pořadí úkolů z centra softwaru. Nepodporují médium s prostředím Windows PE, PXE ani sekvence úloh.
 
 8. Na stránce **výstrahy** určete nastavení výstrah, která chcete pro toto nasazení pořadí úkolů použít.  
 

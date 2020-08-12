@@ -5,17 +5,17 @@ description: 'Doporučení pro použití kroku pořadí úkolů: instalovat aktu
 ms.date: 05/28/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.assetid: 72d1ccd5-3763-4f88-9273-e1a73e8f4286
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6528e979222bc6ecea2a57a003ff5266b5c096c5
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 2c5fdc15ba05786c25361c394bc0aa8dc305d666
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81719992"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88124249"
 ---
 # <a name="install-software-updates"></a>Instalovat aktualizace softwaru
 
@@ -104,7 +104,7 @@ Další informace najdete v tématu [použití aktualizací softwaru pro obráze
 
 - Ruční výběr aktualizací
 - Čas pro distribuci image do distribučních bodů se zvýšil.
-- Podporuje pouze aktualizace založené na modelu CBS. Nejde použít aktualizace Office.
+- Podporuje pouze aktualizace založené na modelu CBS. Nejde použít aktualizace Microsoft 365 Apps.
 
 > [!Tip]  
 > Výběr aktualizací softwaru můžete automatizovat pomocí prostředí PowerShell. Seznam aktualizací získáte pomocí rutiny [Get-CMSoftwareUpdate](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmsoftwareupdate?view=sccm-ps) . Pak pomocí rutiny [New-CMOperatingSystemImageUpdateSchedule](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmoperatingsystemimageupdateschedule?view=sccm-ps) vytvořte plán údržby offline. Následující příklad ukazuje jednu metodu pro automatizaci této akce:
@@ -197,7 +197,7 @@ Diagram obsahuje dvě proměnné časového limitu, které se vztahují k tomuto
 
 
 
-## <a name="troubleshooting"></a>Řešení potíží
+## <a name="troubleshooting"></a>Poradce při potížích
 
 Následující zdroje informací a další informace vám pomůžou při řešení problémů s tímto krokem:
 
@@ -207,7 +207,7 @@ Následující zdroje informací a další informace vám pomůžou při řešen
 
 - Pomoc při odstraňování potíží s procesem správy aktualizací softwaru najdete v tématu [řešení potíží se softwarem Update Management](https://support.microsoft.com/help/10680/software-update-management-troubleshooting-in-configuration-manager).  
 
-- Chcete-li zvýšit celkový výkon, zmenšete velikost katalogu aktualizací softwaru. Příklad:  
+- Chcete-li zvýšit celkový výkon, zmenšete velikost katalogu aktualizací softwaru. Například:  
 
     - Odeberte zbytečné klasifikace, produkty a jazyky. Další informace najdete v tématu [Konfigurace klasifikací a produktů k synchronizaci](../../sum/get-started/configure-classifications-and-products.md).  
 

@@ -5,17 +5,17 @@ description: V Configuration Manager vyberte z metod nasazení, jako je spoušt�
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: d28f4363-9e8a-4c54-9cb7-0594fabfff26
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8b494fd5d9623af9de16d68e3d30e0e78a4ef338
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 860ee3aeb255921ccd8bf3b1695a9647b514752f
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81723772"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88124864"
 ---
 # <a name="replace-an-existing-computer-and-transfer-settings-with-configuration-manager"></a>Nahrazení existujícího počítače a nastavení přenosu pomocí Configuration Manager
 

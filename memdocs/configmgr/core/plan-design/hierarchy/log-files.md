@@ -2,7 +2,7 @@
 title: Referenční informace k protokolům
 titleSuffix: Configuration Manager
 description: Odkaz na všechny soubory protokolu pro Configuration Manager klienta, server a závislé součásti.
-ms.date: 07/09/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 296ac8448292b46318921cb952b5b8545a34f1fa
-ms.sourcegitcommit: 3806a1850813b7a179d703e002bcc5c7eb1cb621
+ms.openlocfilehash: 7fa4fbc7cb4e66a1ad47cb0c14a5f7e52abb5bf5
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86210331"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126422"
 ---
 # <a name="log-file-reference"></a>Referenční informace k protokolům
 
@@ -99,11 +99,11 @@ Následující části obsahují podrobné informace o různých souborech proto
 
   - [Správa na základě rolí](#BKMK_RBALog)  
 
-  - [Monitorování míry využívání softwaru](#BKMK_MeteringLog)  
+  - [Monitorování míry využití softwaru](#BKMK_MeteringLog)  
 
   - [Aktualizace softwaru](#BKMK_SU_NAPLog)  
 
-  - [Wake On LAN](#BKMK_WOLLog)  
+  - [Funkce vzdáleného probuzení Wake On LAN](#BKMK_WOLLog)  
 
   - [Údržba Windows 10](#BKMK_WindowsServicingLog)
 
@@ -331,6 +331,7 @@ Následující tabulka uvádí soubory protokolů, které jsou na serveru Config
 |sitestat.log|Zaznamenává proces monitorování dostupnosti a volného místa na disku pro všechny systémy lokality.|Server lokality|
 |SMS_AZUREAD_DISCOVERY_AGENT. log| Soubor protokolu pro službu Azure Active Directory (Azure AD) pro zjišťování uživatelů a skupin uživatelů. Ve verzi 1910 a starší zahrnuje také synchronizaci výsledků členství kolekce do služby Azure AD.| Server lokality|
 |SMS_BUSINESS_APP_PROCESS_MANAGER. log|Soubor protokolu pro součást, která synchronizuje aplikace z Microsoft Store pro firmy.|Server lokality|
+|SMS_DataEngine. log|Soubor protokolu pro přehledy správy.|Server lokality|
 |SMS_ISVUPDATES_SYNCAGENT. log| Soubor protokolu pro synchronizaci aktualizací softwaru třetích stran.| Bod aktualizace softwaru nejvyšší úrovně v hierarchii Configuration Manager.|
 |SMS_OrchestrationGroup. log| Soubor protokolu pro skupiny orchestrace|Server lokality|
 |SMS_PhasedDeployment. log| Soubor protokolu pro dvoufázové nasazení|Lokalita nejvyšší úrovně v hierarchii Configuration Manager|
@@ -350,7 +351,7 @@ Následující tabulka uvádí soubory protokolů, které jsou na serveru Config
 |statesys.log|Zaznamenává zpracování stavových zpráv systému.|Server lokality|  
 |statmgr.log|Zaznamenává zápis všech stavových zpráv do databáze.|Server lokality|  
 |swmproc.log|Zaznamenává zpracování souborů a nastavení měření.|Server lokality|
-|UXAnalyticsUploadWorker. log|Zaznamenává nahrávání dat do služby pro službu Endpoint Analytics.|Server lokality|   
+|UXAnalyticsUploadWorker. log|Zaznamenává nahrávání dat do služby pro službu Endpoint Analytics.|Server lokality|
 
 ### <a name="site-server-installation"></a><a name="BKMK_SiteInstallLog"></a>Instalace serveru lokality
 

@@ -5,17 +5,17 @@ description: K rozdělení a zformátování stávajícího počítače a instal
 ms.date: 08/27/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: b189a346-8c0d-4870-a876-0719fbb0ab04
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9582d6840e1f750d53504da4e8e7f6bf54f44965
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: b635301d9d5bd8a0fb81771255acddb21097f23b
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81723779"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88124898"
 ---
 # <a name="refresh-an-existing-computer-with-a-new-version-of-windows"></a>Aktualizace existujícího počítače na novou verzi Windows
 
@@ -41,7 +41,7 @@ Pokud chcete zaznamenat nastavení z existujícího počítače a potom obnovit 
 
 Spouštěcí image spustí počítač v prostředí Windows PE. Windows PE je minimální operační systém s omezenými součástmi a službami. V systému Windows PE může Configuration Manager v počítači nainstalovat plný operační systém Windows.
 
-Další informace najdete v těchto článcích:
+Další informace najdete v následujících článcích:
 
 - [Správa spouštěcích imagí](../get-started/manage-boot-images.md)
 
@@ -53,7 +53,7 @@ Další informace najdete v těchto článcích:
 
 Bitová kopie operačního systému obsahuje soubory potřebné k instalaci operačního systému do cílového počítače.
 
-Další informace najdete v těchto článcích:
+Další informace najdete v následujících článcích:
 
 - [Správa imagí operačního systému](../get-started/manage-operating-system-images.md)
 
@@ -63,7 +63,7 @@ Další informace najdete v těchto článcích:
 
 K automatizaci instalace operačního systému použijte pořadí úkolů. V závislosti na vybrané metodě nasazení může být potřeba zvážit další aspekty pořadí úkolů.
 
-Další informace najdete v těchto článcích:
+Další informace najdete v následujících článcích:
 
 - [Vytvoření pořadí úkolů pro instalaci operačního systému](create-a-task-sequence-to-install-an-operating-system.md)
 

@@ -5,17 +5,17 @@ description: Pomocí katalogu ovladačů Configuration Manager importujte ovlada
 ms.date: 07/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 84802d55-112e-4f7f-9a48-74a80d91a0f4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8fffa72e45f2f9e063fb0072882c2a5278694cee
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 09cf1b7ee1859043e0839d5a1b5db3518c602b74
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81724122"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88124427"
 ---
 # <a name="manage-drivers-in-configuration-manager"></a>Správa ovladačů v Configuration Manager
 
@@ -269,7 +269,7 @@ Zakáže instalaci ovladače. Tato akce dočasně zakáže ovladač. Pořadí ú
 > [!Note]  
 > Tato akce zabrání pouze instalaci ovladačů pomocí kroku pořadí úkolů **automaticky použít ovladač** .
 
-#### <a name="enable"></a>Povolení
+#### <a name="enable"></a>Povolit
 Umožňuje Configuration Manager klientským počítačům a sekvencím úloh instalovat ovladač zařízení při nasazení operačního systému.
 
 #### <a name="move"></a>Přesunout

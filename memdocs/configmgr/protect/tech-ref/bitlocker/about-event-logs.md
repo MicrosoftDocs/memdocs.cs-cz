@@ -5,17 +5,17 @@ description: Informace o tom, jak pracovat s nástrojem BitLocker v protokolu ud
 ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.assetid: a9ece9e8-37ec-441d-937c-be4941afce7f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4875e7875321294d815bfcd8a25a805d3e085aab
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ef1d5f9a7e8f3c009d1993b82ddef22ce22e235d
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81722099"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127997"
 ---
 # <a name="bitlocker-event-logs"></a>Protokoly událostí nástroje BitLocker
 
@@ -40,7 +40,7 @@ V každém uzlu se ve výchozím nastavení zobrazí dva kanály protokolu: **sp
 
 Ve Windows Prohlížeč událostí vyberte konkrétní protokol. Například **admin**. Přejděte do nabídky **Akce** a vyberte **vlastnosti**. Nakonfigurujte tahle nastavení:
 
-- **Maximální velikost protokolu (KB)**: ve výchozím nastavení je `1028` toto nastavení (1 MB) pro všechny protokoly.
+- **Maximální velikost protokolu (KB)**: ve výchozím nastavení je toto nastavení `1028` (1 MB) pro všechny protokoly.
 - **Pokud je dosaženo maximální velikosti protokolu událostí**: ve výchozím nastavení se protokoly pro **správu** a **provoz** nastaví na hodnotu **Přepsat události podle potřeby (nejstarší události jako první)**.
 
 ## <a name="analytic-and-debug-logs"></a><a name="bkmk_debug"></a>Protokoly o analýze a ladění

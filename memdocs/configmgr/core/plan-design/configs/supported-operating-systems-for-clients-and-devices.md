@@ -2,7 +2,7 @@
 title: Podporovaní klienti a zařízení
 titleSuffix: Configuration Manager
 description: Zjistěte, které verze operačního systému Configuration Manager podporuje pro klienty a zařízení.
-ms.date: 02/19/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 87f4e041-67df-4c61-aa98-7444faffe565
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: e9e0ec6df5f80b318cb78ed8cddc986b613230e1
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 497a43fe6647f1dc2787f16a76f45ddd26d24796
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82904536"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128844"
 ---
 # <a name="supported-os-versions-for-clients-and-devices-for-configuration-manager"></a>Podporované verze operačních systémů pro klienty a zařízení pro Configuration Manager
 
@@ -58,6 +58,16 @@ Pokud v tomto scénáři požadujete zásady uživatele a souhlasíte s případ
 
 > [!Note]  
 > Spolusprávu nemůžete použít u klienta s Windows 10 Enterprise více relacemi. <!-- SCCMDocs-pr#3950 -->
+
+Počínaje verzí 2006 je platforma pro **více relací Windows 10 Enterprise** dostupná v seznamu podporovaných verzí operačního systému u objektů s pravidly požadavků nebo seznamy použitelnosti.<!--6527576-->
+
+> [!NOTE]
+> Pokud jste dříve vybrali platformu **Windows 10** na nejvyšší úrovni, tato akce automaticky vybere všechny podřízené platformy. Tato nová platforma není automaticky vybraná. Pokud chcete přidat **víc relací Windows 10 Enterprise**, vyberte ji v seznamu ručně.
+
+Další informace najdete v následujících článcích:
+
+- [Podpora virtualizovaných prostředí](support-for-virtualization-environments.md)
+- [Správa klientů Configuration Manager v infrastruktuře virtuálních klientských počítačů (VDI)](../../clients/deploy/plan/considerations-for-managing-clients-in-a-vdi.md)
 
 ### <a name="supported-server-os-versions"></a>Podporované verze operačního systému serveru
 
@@ -151,8 +161,8 @@ Správa zařízení systém Windows CE pomocí Configuration Manager starší ve
 
 - Systém Windows CE 7,0 (procesory ARM a x86)  
 
-    > [!Note]
-    > Podpora je pro systém Windows CE 7,0 v Configuration Manager zastaralá. Další informace najdete v tématu [odebrané a zastaralé položky pro klienty Configuration Manager](../changes/deprecated/removed-and-deprecated-client.md).
+    > [!IMPORTANT]
+    > Configuration Manager verze 2006 vyřazuje podporu systém Windows CE 7,0 jako klienta. Vyřazení bylo oznámeno [verzí 1906](../changes/whats-new-in-version-1906.md#bkmk_deprecated).
 
 #### <a name="supported-languages-include"></a>Mezi podporované jazyky patří
 
@@ -335,9 +345,8 @@ Configuration Manager obsahuje integrované funkce pro správu mobilních zaří
 
 - **Windows 10 Mobile Enterprise**  
 
-    > [!Note]
-    > Podpora se pro Windows 10 Mobile a Windows 10 Mobile Enterprise v Configuration Manager už nepoužívá. Další informace najdete v tématu [odebrané a zastaralé položky pro klienty Configuration Manager](../changes/deprecated/removed-and-deprecated-client.md).
-
+    > [!IMPORTANT]
+    > Configuration Manager verze 2006 vyřazuje podporu pro Windows 10 Mobile a Windows 10 Mobile Enterprise jako klienta. Vyřazení bylo oznámeno [verzí 1906](../changes/whats-new-in-version-1906.md#bkmk_deprecated).
 
 ## <a name="exchange-server-connector"></a><a name="bkmk_ExSrvConOS"></a>Konektor systému Exchange Server  
 

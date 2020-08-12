@@ -10,12 +10,12 @@ ms.assetid: 97e23075-549c-4e45-ab1e-0671027edacf
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 2db1a719aaf1cb79973f1af8e2de3c1bbb91d605
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 378a5de5633d7a526004d84ec5e6885e165eaadb
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83879096"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128980"
 ---
 # <a name="whats-new-in-version-1906-of-configuration-manager-current-branch"></a>Co je nového ve verzi 1906 Configuration Manager Current Branch
 
@@ -136,7 +136,7 @@ Další informace najdete v tématu [posouzení kompatibility v Desktop Analytic
 ### <a name="dalogscollector-tool"></a>Nástroj DALogsCollector
 
 <!--4622989-->
-Pomocí nástroje DesktopAnalyticsLogsCollector. ps1 z instalačního adresáře Configuration Manager můžete pomoct s řešením potíží s desktopovou analýzou. Spustí se základní kroky pro řešení potíží a shromáždí příslušné protokoly do jednoho pracovního adresáře.
+K řešení potíží s nástrojem Desktop Analytics použijte nástroj DesktopAnalyticsLogsCollector.ps1 z Configuration Manager instalačního adresáře. Spustí se základní kroky pro řešení potíží a shromáždí příslušné protokoly do jednoho pracovního adresáře.
 
 Další informace najdete v tématu [kolektor protokolů](../../../desktop-analytics/log-collector.md).
 
@@ -149,7 +149,7 @@ Další informace najdete v tématu [kolektor protokolů](../../../desktop-analy
 
 Pro CMPivot nyní máte další aritmetické operátory, agregátory a možnost přidávat dotazová spojení, jako je například použití registru a souboru dohromady.
 
-Další informace najdete v tématu [CMPivot](../../servers/manage/cmpivot.md#bkmk_cmpivot1906).
+Další informace najdete v tématu [CMPivot](../../servers/manage/cmpivot-changes.md#bkmk_cmpivot1906).
 
 ### <a name="cmpivot-standalone"></a>CMPivot samostatná
 
@@ -171,7 +171,7 @@ Do předdefinované role [**Správce zabezpečení**](../../understand/fundament
 - Spustit CMPivot pro kolekci
 - Číst sestavu inventáře
 
-Další informace najdete v tématu [CMPivot](../../servers/manage/cmpivot.md#bkmk_cmpivot_secadmin1906).
+Další informace najdete v tématu [CMPivot](../../servers/manage/cmpivot-changes.md#bkmk_cmpivot_secadmin1906).
 
 
 ## <a name="content-management"></a><a name="bkmk_content"></a>Správa obsahu
@@ -505,7 +505,7 @@ Hypertextový odkaz **požadovaný zobrazení** je k dispozici v následujícíc
    - **Softwarová knihovna**  >  **Údržba**  >  Windows 10 **Všechny aktualizace Windows 10**
    - **Softwarová knihovna**  >  Správa klientů Office **365**  >  **Aktualizace Office 365**
 
-Další informace najdete v tématech [monitorování aktualizací softwaru](../../../sum/deploy-use/monitor-software-updates.md#drill-through-required-updates), [Správa Windows jako služby](../../../osd/deploy-use/manage-windows-as-a-service.md#drill-through-required-updates)a [Správa aktualizací Office 365 ProPlus](../../../sum/deploy-use/manage-office-365-proplus-updates.md#drill-through-required-office-365-updates).
+Další informace najdete v tématech [monitorování aktualizací softwaru](../../../sum/deploy-use/monitor-software-updates.md#drill-through-required-updates), [Správa Windows jako služby](../../../osd/deploy-use/manage-windows-as-a-service.md#drill-through-required-updates)a [Správa aktualizací Office 365 ProPlus](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
 
 
 ## <a name="office-management"></a><a name="bkmk_o365"></a>Správa Office
@@ -538,7 +538,7 @@ Další informace najdete v tématu [Vytvoření a nasazení zásad ochrany Appl
 
 Pro složky teď můžete nastavit obory zabezpečení. Pokud máte přístup k objektu ve složce, ale nemáte přístup ke složce, nebudete moct objekt zobrazit. Podobně platí, že pokud máte přístup do složky, ale ne do objektu, neuvidíte tento objekt. Klikněte pravým tlačítkem myši na složku, zvolte možnost **nastavit rozsahy zabezpečení**a pak zvolte rozsahy zabezpečení, které chcete použít.
 
-Další informace najdete v tématu [použití konzoly Configuration Manager](../../servers/manage/admin-console.md#tips) a [Konfigurace správy na základě rolí](../../servers/deploy/configure/configure-role-based-administration.md#bkmk_config-folder).
+Další informace najdete v tématech [Configuration Manager tipů pro konzolu](../../servers/manage/admin-console-tips.md) a [Konfigurace správy na základě rolí](../../servers/deploy/configure/configure-role-based-administration.md#bkmk_config-folder).
 
 ### <a name="add-smbios-guid-column-to-device-and-device-collection-nodes"></a>Přidat sloupec SMBIOS GUID do uzlů kolekce zařízení a zařízení
 
@@ -562,7 +562,7 @@ V pracovním prostoru **prostředky a kompatibilita** , přejít na uzel **zař�
 
 > [!Note]  
 > - Tato karta není momentálně k dispozici v poduzlu zařízení v uzlu **kolekce zařízení** . Například když vyberete možnost **zobrazení členů** v kolekci.
-> - Tato karta se pro některé uživatele nemusí naplnit očekávaným způsobem. Úplný seznam kolekcí, do kterých zařízení patří, zobrazíte tak, že musíte mít roli zabezpečení **správce s úplnými oprávněními** . Jde o známý problém. <!--5107309-->
+> - Tato karta se pro některé uživatele nemusí naplnit očekávaným způsobem. Úplný seznam kolekcí, do kterých zařízení patří, zobrazíte tak, že musíte mít roli zabezpečení **správce s úplnými oprávněními** . Jedná se o známý problém. <!--5107309-->
 
 ### <a name="task-sequences-tab-in-applications-node"></a>Karta pořadí úloh v uzlu aplikace
 
@@ -650,7 +650,7 @@ Až budete připraveni k instalaci této verze, přečtěte si téma [instalace 
 > [!TIP]  
 > Chcete-li nainstalovat novou lokalitu, použijte základní verzi Configuration Manager.  
 >
-> Další informace:
+> Přečtěte si další informace:
 >
 > - [Instalace nových lokalit](../../servers/deploy/install/installing-sites.md)  
 > - [Základní a aktualizační verze](../../servers/manage/updates.md#bkmk_Baselines)  

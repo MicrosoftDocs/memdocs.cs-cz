@@ -2,7 +2,7 @@
 title: Velikost a škálování
 titleSuffix: Configuration Manager
 description: Určete počet rolí systému lokality a lokalit, které budete potřebovat pro podporu zařízení ve vašem prostředí.
-ms.date: 11/29/2019
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c5a42100-2f60-4952-b495-918025ea6559
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 5109ababd00011784618f9c989e1d2b756a322d9
-ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
+ms.openlocfilehash: 0d8057d61ebaaa8a545d21b31331faec1c04884e
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84715624"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126694"
 ---
 # <a name="size-and-scale-numbers-for-configuration-manager"></a>Dimenzování a škálování nástroje Configuration Manager
 
@@ -177,13 +177,15 @@ K plánování objektů aktualizací softwaru použijte následující informace
 - **Omezení 580 oborů zabezpečení pro pravidla automatického nasazení** -<!--ado 4962928-->
 Omezte počet oborů zabezpečení pro pravidla automatického nasazení (pravidla automatického nasazení) na hodnotu menší než 580. Při vytváření pravidla automatického nasazení se přidají automaticky obory zabezpečení, které k nim mají přístup. Pokud je nastavené více než 580 oborů zabezpečení, pravidla automatického nasazení se nezdaří a v protokolu RuleEngine. log se zaznamená chyba.
 
-### <a name="sms-provider"></a>SMS Provider
+### <a name="sms-provider"></a>poskytovatele serveru SMS
 
 <!-- SCCMDocs#1958 -->
 
 Každá instance poskytovatele služby SMS podporuje současná připojení z více požadavků. Jediným omezením u těchto připojení jsou počet připojení serverů, která jsou dostupná pro Windows, a dostupné prostředky na serveru pro obsluhu požadavků na připojení.
 
 Další informace najdete v tématu [plánování poskytovatele serveru SMS](../hierarchy/plan-for-the-sms-provider.md).
+
+Služba správy je REST API na všech instancích poskytovatele služby SMS. Podporuje až 5 000 požadavků za sekundu a 200 požadavků na IP adresu klienta.
 
 ## <a name="client-numbers-for-sites-and-hierarchies"></a><a name="bkmk_clientnumbers"></a>Čísla klientů pro lokality a hierarchie
 

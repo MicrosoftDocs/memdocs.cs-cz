@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: c7bb6d01a35ce42002207d57d27fc41c37646d15
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 7015ab4c180ed56b00149ffbff99c9e5a8112e95
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268857"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88125997"
 ---
 # <a name="how-to-connect-configuration-manager-with-desktop-analytics"></a>Postup připojení Configuration Manager s desktopovou analýzou
 
@@ -84,8 +84,11 @@ Pomocí tohoto postupu můžete připojit Configuration Manager ke službě Desk
 
     - **Komerční ID**: Tato hodnota by se měla automaticky naplnit ID vaší organizace. Pokud ne, ujistěte se, že je proxy server nakonfigurovaná tak, aby umožňovala všem požadovaným [koncovým bodům](enable-data-sharing.md#endpoints) znovu pokračovat. Případně můžete komerční ID načíst ručně z [portálu Desktop Analytics](monitor-connection-health.md#bkmk_ViewCommercialID).
 
-    - **Úroveň diagnostických dat Windows 10**: vyberte aspoň **základní**. Zobrazit [úrovně diagnostických dat](enable-data-sharing.md#diagnostic-data-levels)
-  
+    - **Úroveň diagnostických dat Windows 10**: vyberte aspoň **požadované**. Další informace najdete v tématu [úrovně diagnostických dat](enable-data-sharing.md#diagnostic-data-levels).
+
+        > [!TIP]
+        > V Configuration Manager verze 2002 a starší se tato hodnota nazývala **Basic**.<!-- 7363467 -->
+
     - **Povolit název zařízení v diagnostických datech**: vyberte **Povolit** .
 
         > [!NOTE]

@@ -10,12 +10,12 @@ ms.assetid: 58849e40-30d5-4153-84b3-ca4af3a4f09d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5f92e76047a70f6d86406b1a364603163d902e62
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7ad20f80f4727fe18947bed05ded6e7b107fab12
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81719929"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88124080"
 ---
 # <a name="user-experiences-for-os-deployment"></a>Uživatelská prostředí pro nasazení operačního systému
 
@@ -37,7 +37,7 @@ U vysoce ovlivněného nasazení můžete upravit zprávu, kterou Centrum softwa
 
 Další informace o přizpůsobení zprávy v tomto okně najdete v tématu [Vytvoření vlastního oznámení pro nasazení s vysokým rizikem](../deploy-use/manage-task-sequences-to-automate-tasks.md#create-a-custom-notification-for-high-risk-deployments).
 
-Můžete také přizpůsobit název organizace v horní části okna. (Výše uvedený příklad ukazuje výchozí hodnotu `IT Organization`). Změňte nastavení klienta **název organizace** ve skupině **Počítačový agent** . Další informace najdete v tématu [informace o nastavení klienta](../../core/clients/deploy/about-client-settings.md#computer-agent).
+Můžete také přizpůsobit název organizace v horní části okna. (Výše uvedený příklad ukazuje výchozí hodnotu `IT Organization` ). Změňte nastavení klienta **název organizace** ve skupině **Počítačový agent** . Další informace najdete v tématu [informace o nastavení klienta](../../core/clients/deploy/about-client-settings.md#computer-agent).
 
 <!--
 optional vs required
@@ -97,7 +97,7 @@ Můžete přizpůsobit médium pořadí úloh nebo spouštěcí bitové kopie pr
 
 Předstartovní příkaz je příkazový řádek, který zadáte pomocí skriptu nebo programu. Uživatelské prostředí je pro tento skript nebo program jedinečné.
 
-Další informace najdete v těchto článcích:
+Další informace najdete v následujících článcích:
 
 - [Příkazy před zahájením pro médium pořadí úkolů](prestart-commands-for-task-sequence-media.md)
 - [Správa spouštěcích imagí](../get-started/manage-boot-images.md#customization)
@@ -111,12 +111,12 @@ Po spuštění pořadí úkolů se zobrazí okno **průběh instalace** :
 
 - Toto okno je vždycky nahoře; můžete ho přesunout, ale nemůžete ho zavřít ani minimalizovat.
 
-- Název organizace můžete přizpůsobit v horní části okna. (Výše uvedený příklad ukazuje výchozí hodnotu `IT Organization`). Změňte nastavení klienta **název organizace** ve skupině **Počítačový agent** . Další informace najdete v tématu [informace o nastavení klienta](../../core/clients/deploy/about-client-settings.md#computer-agent).
+- Název organizace můžete přizpůsobit v horní části okna. (Výše uvedený příklad ukazuje výchozí hodnotu `IT Organization` ). Změňte nastavení klienta **název organizace** ve skupině **Počítačový agent** . Další informace najdete v tématu [informace o nastavení klienta](../../core/clients/deploy/about-client-settings.md#computer-agent).
 
     > [!TIP]
     > Pořadí úkolů ukládá tuto hodnotu do proměnné jen pro čtení [_SMSTSOrgName](task-sequence-variables.md#SMSTSOrgName).
 
-- Podnadpis lze přizpůsobit. (Výše uvedený příklad ukazuje výchozí hodnotu, `Running: <task sequence name>`.) Ve vlastnostech pořadí úkolů vyberte možnost pro text oznámení o průběhu **použít vlastní text** . Povoluje se maximálně 255 znaků.
+- Podnadpis lze přizpůsobit. (Výše uvedený příklad ukazuje výchozí hodnotu, `Running: <task sequence name>` .) Ve vlastnostech pořadí úkolů vyberte možnost pro text oznámení o průběhu **použít vlastní text** . Povoluje se maximálně 255 znaků.
 
 - **Spouští se akce**: první řádek zobrazuje název aktuálního kroku pořadí úkolů. Indikátor průběhu pod ním ukazuje celkové dokončení pořadí úkolů.
 
@@ -146,8 +146,7 @@ Celkový počet kroků v pořadí úkolů neobsahuje následující položky:
 
 - Kroky, které výslovně zakážete. Zakázaný krok neběží během pořadí úkolů.
 
-    > [!NOTE]
-    > Povolené kroky v zakázané skupině jsou pořád zahrnuté v celkovém počtu.
+- Počínaje verzí 2006 nepočítá povolené kroky v zakázané skupině.<!--6448412--> Ve verzi 2002 jsou povolené kroky v zakázané skupině pořád zahrnuté v celkovém počtu.
 
 ## <a name="task-sequence-error"></a>Chyba pořadí úloh
 

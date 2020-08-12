@@ -10,12 +10,12 @@ ms.assetid: de718cdc-d0a9-47e2-9c99-8fa2cb25b5f8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 4a9eac25de66eb4fb94ea1c5b4b8d0d46caa05d7
-ms.sourcegitcommit: 532a06163f462527254d23e7dc505b18c0c4f938
+ms.openlocfilehash: 66fcd9b7d4d25decb3aeef7cf38b469363eeb1fa
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88110711"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128895"
 ---
 # <a name="whats-new-in-version-2002-of-configuration-manager-current-branch"></a>Co je nového ve verzi 2002 Configuration Manager Current Branch
 
@@ -147,7 +147,7 @@ Další informace najdete v tématu [monitorování stavu připojení](../../../
 
 Usnadnili jsme navigaci CMPivot entit. Nyní můžete hledat entity CMPivot. Přidaly se také nové ikony, které usnadňují odlišení entit a typů objektů entit.
 
-Další informace najdete v tématu [CMPivot](../../servers/manage/cmpivot.md#bkmk_2002).
+Další informace najdete v tématu [CMPivot](../../servers/manage/cmpivot-changes.md#bkmk_2002).
 
 ## <a name="content-management"></a><a name="bkmk_content"></a>Správa obsahu
 
@@ -391,9 +391,9 @@ Podobně jako u vylepšení v předchozích verzích teď můžete použít mož
 
 <!--3555935, 3555936-->
 
-_Poprvé představeno v červnu 2020_
+*(Poprvé představeno v červnu 2020)*
 
-Komunita správce IT vyvinula spoustu znalostí během let. Místo rezásobování položek, jako jsou skripty a sestavy od začátku, jsme sestavili Configuration Manager **Centrum komunity** , kde můžete navzájem sdílet. Využitím práce ostatních můžete ušetřit hodiny práce. Centrum komunity podporuje kreativitu tím, že sestaví na práci ostatních a má na vás jiné uživatele. GitHub již obsahuje procesy a nástroje pro sdílení v celém oboru. Centrum komunity teď bude tyto nástroje využívat přímo v konzole Configuration Manager jako základní části pro řízení této nové komunity.
+Komunita správce IT vyvinula spoustu znalostí během let. Místo rezásobování položek, jako jsou skripty a sestavy od začátku, jsme sestavili Configuration Manager **Centrum komunity** , kde můžete navzájem sdílet. Využitím práce ostatních můžete ušetřit hodiny práce. Centrum komunity podporuje kreativitu tím, že sestaví na práci ostatních a má na vás jiné uživatele. GitHub již obsahuje procesy a nástroje pro sdílení v celém oboru. Centrum komunity teď bude tyto nástroje využívat přímo v konzole Configuration Manager jako základní části pro řízení této nové komunity. V případě počáteční verze se obsah, který je dostupný v centru komunity, nahraje jenom Microsoftem.
 
 Další informace najdete v tématu [komunitní centrum a GitHub](../../servers/manage/community-hub.md).
 

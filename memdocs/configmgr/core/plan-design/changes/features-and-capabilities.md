@@ -10,12 +10,12 @@ ms.assetid: 5d388399-07ca-431c-a9b2-56c69771aa87
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 5cdd0a9497f07d80813aca5dc169c4d61944e85d
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 74b150b5a2157104b6a380489202fd309224a3bb
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81722372"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129031"
 ---
 # <a name="features-and-capabilities-of-configuration-manager"></a>Funkce a možnosti Configuration Manager
 
@@ -37,7 +37,7 @@ Desktop Analytics je cloudová služba, která se integruje s Configuration Mana
 
 Internetové klienty můžete spravovat pomocí funkcí, jako je brána pro správu cloudu, cloudové distribuční body a Azure Active Directory.
 
-Další informace najdete v těchto článcích:
+Další informace najdete v následujících článcích:
 
 - [Správa klientů na internetu](../../clients/manage/manage-clients-internet.md)
 - [Plán pro Azure AD](../security/plan-for-security.md#bkmk_planazuread)
@@ -49,7 +49,7 @@ Použijte CMPivot k okamžitému dotazování online zařízení a pak filtrujte
 
 ## <a name="application-management"></a>Správa aplikací
 
-Pomáhá vytvářet, spravovat, nasazovat a monitorovat aplikace do různých různých zařízení, která spravujete. Nasaďte, aktualizujte a spravujte Office 365 z konzoly Configuration Manager. Kromě toho Configuration Manager integrovat s Microsoft Store pro firmy a vzdělávání a dodávat cloudové aplikace. Další informace najdete v tématu [Úvod do správy aplikací](../../../apps/understand/introduction-to-application-management.md).
+Pomáhá vytvářet, spravovat, nasazovat a monitorovat aplikace do různých různých zařízení, která spravujete. Nasaďte, aktualizujte a spravujte Microsoft 365 aplikace z konzoly Configuration Manager. Kromě toho Configuration Manager integrovat s Microsoft Store pro firmy a vzdělávání a dodávat cloudové aplikace. Další informace najdete v tématu [Úvod do správy aplikací](../../../apps/understand/introduction-to-application-management.md).
 
 ## <a name="os-deployment"></a>Nasazení operačního systému
 
@@ -80,7 +80,7 @@ Poskytuje zabezpečení, ochranu proti malwaru a správu brány Windows Firewall
 
 Další informace najdete v tématu [Endpoint Protection](../../../protect/deploy-use/endpoint-protection.md).  
 
-## <a name="inventory"></a>Inventarizace
+## <a name="inventory"></a>inventář
 
 Pomáhá identifikovat a monitorovat prostředky.
 

@@ -10,12 +10,12 @@ ms.assetid: 0a2d6c3f-a4e4-4c19-b087-3caada480de9
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 62faf2fd736f9751e8b33e821cb814f527a1197c
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: c39d3380212debe97c2d2f33de6a98fecfb8402e
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81722855"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126048"
 ---
 # <a name="fundamentals-of-role-based-administration-for-configuration-manager"></a>Základy správy na základě rolí pro Configuration Manager
 
@@ -27,7 +27,7 @@ V Configuration Manager používáte správu na základě rolí k zabezpečení 
 
 - *Role zabezpečení* jsou přiřazeny správcům, kteří poskytují uživatelům (nebo skupinám uživatelů) oprávnění k různým objektům Configuration Manager. Například oprávnění k vytvoření nebo změně nastavení klienta.  
 
-- *Obory zabezpečení* slouží k seskupení konkrétních instancí objektů, které správce zodpovídá za správu, jako je například aplikace, která instaluje systém Microsoft Office 2010.  
+- *Obory zabezpečení* slouží k seskupení konkrétních instancí objektů, které správce zodpovídá za správu, jako je třeba aplikace, která instaluje aplikace Microsoft 365.  
 
 - *Kolekce* se používají k určení skupin prostředků uživatelů a zařízení, které může administrativní uživatel spravovat.  
 
@@ -160,7 +160,7 @@ Objekty, které nejsou omezeny obory zabezpečení, zahrnují následující pol
 - Stavové zprávy  
 - Spřažení uživatelských zařízení  
 
-Obory zabezpečení vytvořte v případě, že je zapotřebí omezit přístup k samostatným instancím objektů. Příklad:  
+Obory zabezpečení vytvořte v případě, že je zapotřebí omezit přístup k samostatným instancím objektů. Například:  
 
 - Máte skupinu správců, kteří musejí být schopni zobrazit výrobní aplikace a nikoliv testovací aplikace. Vytvořte jeden obor zabezpečení pro výrobní aplikace a druhý pro testovací aplikace.  
 

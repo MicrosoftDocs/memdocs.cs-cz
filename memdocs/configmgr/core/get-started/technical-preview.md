@@ -2,7 +2,7 @@
 title: Verze Technical Preview
 titleSuffix: Configuration Manager
 description: Přečtěte si o větvi Technical Preview, která vám umožní testovat nové funkce a funkce v Configuration Manager.
-ms.date: 08/07/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1d67ba33e2f2f9783b903e60aa64170e1fbb61a5
-ms.sourcegitcommit: 693932432270ab3df1df9f5e6783c7f5c6f31252
+ms.openlocfilehash: 76d1edf8598e1abd71b6fd1db7faffa1750110d4
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87997930"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129116"
 ---
 # <a name="technical-preview-for-configuration-manager"></a>Technical Preview pro Configuration Manager
 
@@ -141,7 +141,7 @@ Each month, add features from the list above to a new H3 section at the top of t
 When there's a new CB, add any features not in that CB to the table in H2 "Features in previous technical previews"
 -->
 
-Následující funkce byly vydány s předchozími verzemi větve Configuration Manager Technical Preview od aktuální větve verze 2002:
+Následující funkce byly vydány s předchozími verzemi větve Configuration Manager Technical Preview od aktuální větve verze 2006:
 
 > [!TIP]
 > Když je k dispozici nová verze aktuální větve, funkce, které jsou v této verzi k dispozici, jsou uvedeny v článku *co je nového* . Další informace najdete v tématu [co je nového v přírůstkových verzích](../plan-design/changes/whats-new-incremental-versions.md#supported-versions).
@@ -153,64 +153,6 @@ Následující funkce byly vydány s předchozími verzemi větve Configuration 
 - [V některých oblastech konzoly se teď používá písmo s pevnou šířkou.](2020/technical-preview-2007.md#bkmk_font) <!--7632637-->
 - [Správa velikosti zásad pořadí úloh](2020/technical-preview-2007.md#bkmk_tspol) <!--6888853-->
 - [Vylepšení časové osy zařízení v centru pro správu](2020/technical-preview-2007.md#bkmk_timeline)<!--7141381-->
-
-### <a name="technical-preview-version-2006"></a>Technical Preview verze 2006
-
-- [Použití Portál společnosti aplikace na spoluspravovaných zařízeních](2020/technical-preview-2006.md#bkmk_portal) <!--3601237-->
-- [Vylepšení dostupných aplikací prostřednictvím CMG](2020/technical-preview-2006.md#bkmk_availapp) <!--7033501-->
-- [Intranetové klienty můžou používat CMG bod aktualizace softwaru.](2020/technical-preview-2006.md#bkmk_cmg-sup) <!--7102873-->
-- [Vylepšení pořadí úloh prostřednictvím CMG](2020/technical-preview-2006.md#bkmk_osdcmg) <!--6983320-->
-- [Přehledy správy pro optimalizaci pro vzdálené pracovníky](2020/technical-preview-2006.md#bkmk_wfhmi) <!--6982226-->
-- [Vylepšení typu hranice sítě VPN](2020/technical-preview-2006.md#bkmk_vpn) <!--7020519-->
-- [Připojení tenanta: vylepšení Configuration Manager akcí v centru pro správu Microsoft Endpoint Manageru](2020/technical-preview-2006.md#bkmk_apps) <!--7518897-->
-- [Podpora CMG pro zásady ochrany koncových bodů](2020/technical-preview-2006.md#bkmk_epcmg) <!--4773948-->
-- [Importovat dřív vytvořenou aplikaci Azure AD během připojování klienta](2020/technical-preview-2006.md#bkmk_aad-app) <!--6479246-->
-- [Vylepšení upgradu klienta na připojení účtované podle objemu dat](2020/technical-preview-2006.md#bkmk_meter) <!--6976145-->
-- [Vylepšení správy restartování zařízení](2020/technical-preview-2006.md#bkmk_restart) <!--3601213-->
-- [Vylepšená podpora pro virtuální počítače s Windows](2020/technical-preview-2006.md#bkmk_wvd) <!--6527576-->
-- [Přímé odkazy na Configuration Manager položky centra komunity](2020/technical-preview-2006.md#bkmk_deeplink) <!--4224406-->
-
-### <a name="technical-preview-version-2005"></a>Technical Preview verze 2005
-
-- [Připojení tenanta: časová osa zařízení v centru pro správu](2020/technical-preview-2005.md#bkmk_timeline) <!--7141381-->
-- [Připojení tenanta: instalace aplikace z centra pro správu](2020/technical-preview-2005.md#bkmk_apps) <!--6024389-->
-- [Připojení tenanta: CMPivot z centra pro správu](2020/technical-preview-2005.md#bkmk_cmpivot) <!--6024392-->
-- [Připojení tenanta: spuštění skriptů z centra pro správu](2020/technical-preview-2005.md#bkmk_scripts) <!--6234688-->
-- [Typ hranice sítě VPN](2020/technical-preview-2005.md#bkmk_vpn) <!--7020519-->
-- [Ověřování Azure AD v centru softwaru](2020/technical-preview-2005.md#bkmk_availapp) <!--6935376-->
-- [Instalace a upgrade klienta na připojení účtované podle objemu dat](2020/technical-preview-2005.md#bkmk_meter) <!--6976145-->
-- [Podpora médií pořadí úloh pro cloudový obsah](2020/technical-preview-2005.md#bkmk_tsmedia) <!--6209223-->
-- [Vylepšení rutin brány pro správu cloudu](2020/technical-preview-2005.md#bkmk_pwshcmg) <!--6978300-->
-- [Komunitní centrum a GitHub](2020/technical-preview-2005.md#community-hub-and-github) <!--3555935-->
-- [Aplikace Microsoft 365 pro podniky](2020/technical-preview-2005.md#bkmk_365_apps) <!--6298093-->
-- [Nahlášení selhání při instalaci a upgradu do Microsoftu](2020/technical-preview-2005.md#report-setup-and-upgrade-failures-to-microsoft) <!--5622909-->
-- [Oznámení o vypršení platnosti tajného klíče aplikace Azure AD](2020/technical-preview-2005.md#bkmk_alertkey) <!--6386392-->
-- [Vylepšení kroků pořadí úloh nástroje BitLocker](2020/technical-preview-2005.md#bkmk_tsbitlocker) <!--6995601-->
-- [Vylepšení nástroje pro vyčištění knihovny obsahu](2020/technical-preview-2005.md#bkmk_content) <!--6887878-->
-- [Odebrání příkazového řádku během místního upgradu Windows 10](2020/technical-preview-2005.md#bkmk_ipucmd) <!--2837795-->
-
-### <a name="technical-preview-version-2004"></a>Technical Preview verze 2004
-
-- [Připojení tenanta Microsoft Endpoint Manageru: podrobnosti o klientovi ConfigMgr](2020/technical-preview-2004.md#bkmk_mem) <!--6374854-->
-- [Oznámení od Microsoftu](2020/technical-preview-2004.md#notifications-from-microsoft) <!--3953121-->
-- [Kopírovat data zjišťování z konzoly](2020/technical-preview-2004.md#bkmk_copydisco) <!--6890051-->
-- [Vylepšení CMPivot](2020/technical-preview-2004.md#improvements-to-cmpivot) <!--6518631-->
-- [Podpora pro PowerShell verze 7](2020/technical-preview-2004.md#bkmk_pwsh7) <!--6023299-->
-- [Vylepšení formátování a rozdělení disku na oddíly pořadí úkolů](2020/technical-preview-2004.md#bkmk_osdpart) <!--6610288-->
-- [Pravidla přehledu správy pro nasazení operačního systému](2020/technical-preview-2004.md#bkmk_osdmi) <!--6982275-->
-- [Rutiny PowerShellu pro typy nasazení pořadí úloh](2020/technical-preview-2004.md#bkmk_osdpwsh) <!--7019342-->
-
-### <a name="technical-preview-version-2003"></a>Technical Preview verze 2003
-
-- [Připojení klientů Configuration Manager ke službě Microsoft Defender ATP prostřednictvím konzoly Microsoft Endpoint Manager](2020/technical-preview-2003.md#bkmk_atp) <!--5691658-->
-- [Sledování oprav položek konfigurace](2020/technical-preview-2003.md#bkmk_track) <!--4261411 in 2002-->
-- [Zobrazit skupiny hranic pro zařízení](2020/technical-preview-2003.md#bkmk_boundary) <!--6521835 in 2002-->
-- [Průvodce novou zpětnou vazbou](2020/technical-preview-2003.md#bkmk_feedback) <!--3180826-->
-- [Vylepšení řídicího panelu Microsoft Edge Management](2020/technical-preview-2003.md#bkmk_edge) <!--5907383-->
-- [Vylepšení CMPivot](2020/technical-preview-2003.md#bkmk_cmpivot) <!--6518631-->
-- [Dotaz na zpětnou vazbu odeslanou společnosti Microsoft](2020/technical-preview-2003.md#bkmk_smile) <!--6488450-->
-- [Nová metoda SDK pro průběh pořadí úloh](2020/technical-preview-2003.md#bkmk_tsapi) <!--6448458-->
-- [Vylepšení nasazení operačního systému](2020/technical-preview-2003.md#bkmk_osd) <!--6452769-->
 
 ## <a name="features-in-previous-technical-previews"></a>Funkce v předchozích technických náhledech
 
@@ -224,16 +166,25 @@ Následující funkce byly vydány s předchozími verzemi větve Configuration 
 
 | Příznak        | Verze Technical Preview |
 |----------------|---------------------------|
+| Použití Portál společnosti aplikace na spoluspravovaných zařízeních <!--3601237--> | [Verze Tech Preview 2006](2020/technical-preview-2006.md#bkmk_portal) |
+| Vylepšení dostupných aplikací prostřednictvím CMG <!--7033501--> | [Verze Tech Preview 2006](2020/technical-preview-2006.md#bkmk_availapp) |
+| Připojení tenanta: vylepšení Configuration Manager akcí v centru pro správu Microsoft Endpoint Manageru <!--7518897--> | [Verze Tech Preview 2006](2020/technical-preview-2006.md#bkmk_apps) |
+| Připojení tenanta: časová osa zařízení v centru pro správu <!--7141381--> | [Verze Tech Preview 2005](2020/technical-preview-2005.md#bkmk_timeline) |
+| Připojení tenanta: instalace aplikace z centra pro správu <!--6024389--> | [Verze Tech Preview 2005](2020/technical-preview-2005.md#bkmk_apps) |
+| Připojení tenanta: CMPivot z centra pro správu <!--6024392--> | [Verze Tech Preview 2005](2020/technical-preview-2005.md#bkmk_cmpivot) |
+| Připojení tenanta: spuštění skriptů z centra pro správu <!--6234688--> | [Verze Tech Preview 2005](2020/technical-preview-2005.md#bkmk_scripts) |
+| Vylepšení rutin brány pro správu cloudu <!--6978300--> | [Verze Tech Preview 2005](2020/technical-preview-2005.md#bkmk_pwshcmg) |
+| Nahlášení selhání při instalaci a upgradu do Microsoftu <!--5622909--> | [Verze Tech Preview 2005](2020/technical-preview-2005.md#report-setup-and-upgrade-failures-to-microsoft) |
+| Vylepšení nástroje pro vyčištění knihovny obsahu <!--6887878--> | [Verze Tech Preview 2005](2020/technical-preview-2005.md#bkmk_content) |
+| Kopírovat data zjišťování z konzoly <!--6890051--> | [Verze Tech Preview 2004](2020/technical-preview-2004.md#bkmk_copydisco) |
+| Podpora pro PowerShell verze 7 <!--6023299--> | [Verze Tech Preview 2004](2020/technical-preview-2004.md#bkmk_pwsh7) |
+| Průvodce novou zpětnou vazbou <!--3180826--> | [Verze Tech Preview 2003](2020/technical-preview-2003.md#bkmk_feedback) |
+| Dotaz na zpětnou vazbu odeslanou společnosti Microsoft <!--6488450--> | [Verze Tech Preview 2003](2020/technical-preview-2003.md#bkmk_smile) |
 | Připojit soubory k názoru <!--3556011--> | [Verze Tech Preview 1910](2019/technical-preview-1910.md#attach-files-to-feedback) |
 | Vylepšení distribučních bodů s povoleným vícesměrovým vysíláním <!--3785535--> | [Verze Tech Preview 1908,2](2019/technical-preview-1908-2.md#bkmk_multicast) |
 | Šablony postupného nasazení <!--4961086--> | [Verze Tech Preview 1908](2019/technical-preview-1908.md#phased-deployment-templates) |
 | Vzdálené řízení kdekoli pomocí brány pro správu cloudu <!--4575930--> | [Verze Tech Preview 1906](2019/technical-preview-1906.md#remote-control-anywhere-using-cloud-management-gateway) |
-| Vylepšení Centrum komunity <!--3555935--> | [Verze Tech Preview 1906](2019/technical-preview-1906.md#bkmk_hub) |
-| Vylepšení Centrum komunity <!--4224401--> | [Verze Tech Preview 1905](2019/technical-preview-1905.md#bkmk_hub) |
-| Centrum komunity a GitHub <!--3555935--> | [Verze Tech Preview 1904](2019/technical-preview-1904.md#community-hub-and-github) |
 | Cloud Services – náklady Estimator <!--3555774--> | [Verze Tech Preview 1903](2019/technical-preview-1903.md#bkmk_cmg) |
-| Stažení sestav z Centrum komunity <!--3555936--> | [Verze Tech Preview 1812](capabilities-in-technical-preview-1812.md#bkmk_hub) |
-| Centrum komunity <!--3556020, fka 1357766--> | [Verze Tech Preview 1807](capabilities-in-technical-preview-1807.md#bkmk_hub) |
 | Služba respondérů technologie PXE založená na klientovi <!--3556018, fka 1357148--> | [Verze Tech Preview 1712](capabilities-in-technical-preview-1712.md#client-based-pxe-responder-service) |
 | Podpora spouštění sítě PXE pro protokol IPv6 <!--3601254, fka 1269793--> |[Verze Tech Preview 1706](capabilities-in-technical-preview-1706.md#pxe-network-boot-support-for-ipv6)|
 | Použití Azure Active Directory <!--3607315, fka 1322145--> | [Verze Tech Preview 1702](capabilities-in-technical-preview-1702.md#azurediscovery) |

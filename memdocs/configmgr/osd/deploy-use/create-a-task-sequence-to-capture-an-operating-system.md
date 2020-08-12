@@ -5,17 +5,17 @@ description: Pořadí úloh sestavení a zachycení vytvoří referenční poč�
 ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 25e4ac68-0e78-4bbe-b8fc-3898b372c4e8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ceb63560c6000b1a76116d0791c98219a66066b8
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 349ae2b8d574904d25f6f23bfb1707bb11df8af0
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81723065"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88125504"
 ---
 # <a name="create-a-task-sequence-to-capture-an-os"></a>Vytvoření pořadí úkolů pro zachycení image operačního systému
 
@@ -40,7 +40,7 @@ Balíčky přidružené k tomuto pořadí úkolů, jako jsou aplikace, musí bý
 
 Než vytvoříte pořadí úkolů pro instalaci operačního systému, zajistěte, aby byly zavedeny následující komponenty:  
 
-### <a name="required"></a>Požaduje se
+### <a name="required"></a>Vyžadováno
 
 - [Spouštěcí image](../get-started/manage-boot-images.md)
 
@@ -81,7 +81,7 @@ Pomocí následujícího postupu můžete použít pořadí úloh k sestavení r
 
     - **Index bitové kopie**: zadejte index operačního systému, který se má v imagi nainstalovat. Pokud image operačního systému obsahuje víc verzí, vyberte verzi, kterou chcete nainstalovat.  
 
-    - **Kód Product Key**: v případě potřeby zadejte kód Product Key pro operační systém Windows, který chcete nainstalovat. Zadávat lze šifrované aktivační kódy VLK a standardní kódy Product Key. Pokud používáte kód Product Key, který není kódovaný, oddělte každou skupinu pěti znaky pomlčkou (`-`). Příklad: `XXXXX-XXXXX-XXXXX-XXXXX-XXXXX`  
+    - **Kód Product Key**: v případě potřeby zadejte kód Product Key pro operační systém Windows, který chcete nainstalovat. Zadávat lze šifrované aktivační kódy VLK a standardní kódy Product Key. Pokud používáte kód Product Key, který není kódovaný, oddělte každou skupinu pěti znaky pomlčkou ( `-` ). Příklad: `XXXXX-XXXXX-XXXXX-XXXXX-XXXXX`  
 
     - **Režim licencování serveru**: Pokud je to nutné, zadejte, že licence serveru je **vázaná na stanici**, **na server**nebo že není zadána žádná licence. Pokud je licence serveru **Na server**, zadejte také maximální počet připojení serverů.  
 
@@ -102,7 +102,7 @@ Pomocí následujícího postupu můžete použít pořadí úloh k sestavení r
 
         Zadat lze rovněž organizační jednotku (OU). Toto nastavení je volitelné a určuje rozlišující název LDAP X. 500 pro organizační jednotku, ve které se má účet počítače vytvořit, pokud ještě neexistuje.  
 
-    - **Účet**: Zadejte uživatelské jméno a heslo k účtu, který má oprávnění připojit se k zadané doméně. Například: `domain\user` nebo `%variable%`.  
+    - **Účet**: Zadejte uživatelské jméno a heslo k účtu, který má oprávnění připojit se k zadané doméně. Například: `domain\user` nebo `%variable%` .  
 
         > [!IMPORTANT]  
         > Pokud plánujete migrovat nastavení domény nebo pracovní skupiny během nasazení, nezapomeňte sem zadat příslušné přihlašovací údaje do domény.  
@@ -116,7 +116,7 @@ Pomocí následujícího postupu můžete použít pořadí úloh k sestavení r
 1. Na stránce **instalovat aplikace** určete aplikace, které chcete do cílového počítače nainstalovat. Pokud zvolíte více aplikací, můžete také určit, aby pořadí úloh pokračovalo i v případě, že bude instalace některé z aplikací neúspěšná.  
 
     > [!NOTE]
-    > V průvodci se zobrazí stránka **Příprava systému** , ale už se nepoužívá. Pokračujte výběrem tlačítka **Next** (Další).
+    > V průvodci se zobrazí stránka **Příprava systému** , ale už se nepoužívá. Pokračujte výběrem tlačítka **Další**.
 
 1. Na stránce **vlastnosti imagí** zadejte následující nastavení pro bitovou kopii operačního systému:
 
@@ -208,15 +208,15 @@ Tato skupina obsahuje akce potřebné k sestavení referenčního počítače.
 
 |Krok pořadí úloh|Popis|  
 |-------------------------------|---------------|  
-|**Restartování v prostředí Windows PE**|Restartujte cílový počítač do spouštěcí bitové kopie přiřazené k pořadí úkolů. Tento krok zobrazí uživateli zprávu, že se počítač bude restartovat, aby mohla pokračovat instalace.<br /><br />Tento krok používá proměnnou pořadí úkolů jen `_SMSTSInWinPE` pro čtení. Pokud se přidružená hodnota rovná `false`, bude krok pořadí úkolů pokračovat.|
-|**Rozdělit disk 0 – BIOS**|Rozdělit a naformátovat pevný disk v cílovém počítači v režimu BIOS. Výchozí číslo disku je `0`.<br /><br />Tento krok používá několik proměnných pořadí úkolů jen pro čtení. Například se spustí jenom v případě, že mezipaměť klienta Configuration Manager neexistuje a nespustí se, pokud je počítač nakonfigurovaný pro rozhraní UEFI.|
-|**Rozdělit disk 0 – UEFI**|Vytvořte oddíly a naformátujte pevný disk v cílovém počítači v režimu UEFI. Výchozí číslo disku je `0`.<br /><br />Tento krok používá několik proměnných pořadí úkolů jen pro čtení. Například se spustí jenom v případě, že mezipaměť klienta Configuration Manager neexistuje a spustí se jenom v případě, že je počítač nakonfigurovaný pro rozhraní UEFI.|
+|**Restartování v prostředí Windows PE**|Restartujte cílový počítač do spouštěcí bitové kopie přiřazené k pořadí úkolů. Tento krok zobrazí uživateli zprávu, že se počítač bude restartovat, aby mohla pokračovat instalace.<br /><br />Tento krok používá `_SMSTSInWinPE` proměnnou pořadí úkolů jen pro čtení. Pokud se přidružená hodnota rovná `false` , bude krok pořadí úkolů pokračovat.|
+|**Rozdělit disk 0 – BIOS**|Rozdělit a naformátovat pevný disk v cílovém počítači v režimu BIOS. Výchozí číslo disku je `0` .<br /><br />Tento krok používá několik proměnných pořadí úkolů jen pro čtení. Například se spustí jenom v případě, že mezipaměť klienta Configuration Manager neexistuje a nespustí se, pokud je počítač nakonfigurovaný pro rozhraní UEFI.|
+|**Rozdělit disk 0 – UEFI**|Vytvořte oddíly a naformátujte pevný disk v cílovém počítači v režimu UEFI. Výchozí číslo disku je `0` .<br /><br />Tento krok používá několik proměnných pořadí úkolů jen pro čtení. Například se spustí jenom v případě, že mezipaměť klienta Configuration Manager neexistuje a spustí se jenom v případě, že je počítač nakonfigurovaný pro rozhraní UEFI.|
 |**Použít operační systém**|Nainstalujte zadanou bitovou kopii operačního systému do cílového počítače. Tento krok nejprve odstraní všechny soubory na svazku, kromě souborů ovládacích prvků specifických pro Configuration Manager. Pak použije všechny image svazků obsažené v souboru. WIM na odpovídající sekvenční diskový svazek v cílovém počítači.|
 |**Použít nastavení systému Windows**|Nakonfigurujte nastavení systému Windows pro cílový počítač.|
 |**Použít nastavení sítě**|Zadejte informace o konfiguraci sítě nebo pracovní skupiny pro cílový počítač.|
-|**Použít ovladače zařízení**|Odpovídat a instalovat ovladače jako součást nasazení operačního systému. Další informace najdete v části [Auto Apply Drivers](../understand/task-sequence-steps.md#BKMK_AutoApplyDrivers).<br /><br />Tento krok používá proměnnou pořadí úkolů jen `_SMSTSMediaType` pro čtení. Pokud se přidružená hodnota nerovná, tento krok se `FullMedia`nespustí.|
+|**Použít ovladače zařízení**|Odpovídat a instalovat ovladače jako součást nasazení operačního systému. Další informace najdete v části [Auto Apply Drivers](../understand/task-sequence-steps.md#BKMK_AutoApplyDrivers).<br /><br />Tento krok používá `_SMSTSMediaType` proměnnou pořadí úkolů jen pro čtení. Pokud se přidružená hodnota nerovná `FullMedia` , tento krok se nespustí.|
 |**Nastavit systém Windows a Configuration Manager**|Nainstalujte klientský software Configuration Manager. Configuration Manager nainstaluje a zaregistruje identifikátor GUID Configuration Manager klienta. Zahrňte všechny nezbytné **vlastnosti instalace**.|
-|**Instalovat aktualizace**|Určete, jak jsou aktualizace softwaru nainstalovány v cílovém počítači. V cílovém počítači se nevyhodnocují příslušné aktualizace softwaru, dokud se tento krok nespustí. V tomto okamžiku je hodnocení podobné jako u jakéhokoli jiného klienta spravovaného Configuration Manager. Další informace najdete v tématu [instalace aktualizací softwaru](../understand/install-software-updates.md).<br /><br />Tento krok používá proměnnou pořadí úkolů jen `_SMSTSMediaType` pro čtení. Pokud se přidružená hodnota nerovná, tento krok se `FullMedia`nespustí.|
+|**Nainstalovat aktualizace**|Určete, jak jsou aktualizace softwaru nainstalovány v cílovém počítači. V cílovém počítači se nevyhodnocují příslušné aktualizace softwaru, dokud se tento krok nespustí. V tomto okamžiku je hodnocení podobné jako u jakéhokoli jiného klienta spravovaného Configuration Manager. Další informace najdete v tématu [instalace aktualizací softwaru](../understand/install-software-updates.md).<br /><br />Tento krok používá `_SMSTSMediaType` proměnnou pořadí úkolů jen pro čtení. Pokud se přidružená hodnota nerovná `FullMedia` , tento krok se nespustí.|
 |**Nainstalovat aplikace**|Určuje všechny aplikace, které se mají nainstalovat do referenčního počítače.|
 
 ### <a name="group-capture-the-reference-machine"></a>Skupina: Zachyťte referenční počítač.

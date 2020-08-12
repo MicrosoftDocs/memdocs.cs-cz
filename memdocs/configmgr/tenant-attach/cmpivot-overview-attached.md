@@ -2,7 +2,7 @@
 title: CMPivot – přehled připojených klientů
 titleSuffix: Configuration Manager
 description: CMPivot přehled pro zařízení připojená ke klientovi Microsoft Endpoint Manager.
-ms.date: 07/31/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
@@ -10,12 +10,12 @@ ms.assetid: 31bf1359-54e5-4416-9f39-6bb0070db542
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 07bb8cd913c945198d181e6191c540eeb8b2dffc
-ms.sourcegitcommit: 5a58af4f7d40bbde88a273fba859bf69eeff6107
+ms.openlocfilehash: 048309c40718f091d2d232d90bf8d77a0d56c7b7
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87473664"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127623"
 ---
 # <a name="tenant-attach-cmpivot-overview"></a>Připojení tenanta: Přehled CMPivot
 

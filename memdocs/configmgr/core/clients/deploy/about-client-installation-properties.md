@@ -2,20 +2,20 @@
 title: Parametry a vlastnosti instalace klienta
 titleSuffix: Configuration Manager
 description: Přečtěte si o parametrech a vlastnostech příkazového řádku služby CCMSetup pro instalaci klienta Configuration Manager.
-ms.date: 07/10/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: c890fd27-7a8c-4f51-bbe2-f9908af1f42b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1de2cd1645687740986cc62514dbc990461cbbf6
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: 2d26be4d3e3381a80fcbaa547cfcc7a3b8db42f5
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86240571"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127014"
 ---
 # <a name="about-client-installation-parameters-and-properties-in-configuration-manager"></a>Informace o parametrech instalace a vlastnostech klienta v Configuration Manager
 
@@ -36,14 +36,14 @@ Příkaz CCMSetup.exe stáhne potřebné soubory pro instalaci klienta z bodu sp
 > [!NOTE]
 > Nemůžete přímo nainstalovat client.msi.  
 
-CCMSetup.exe poskytuje *parametry* příkazového řádku pro přizpůsobení instalace. Parametry mají předponu lomítka ( `/` ) a podle konvence malými písmeny. V případě potřeby určíte hodnotu parametru pomocí dvojtečky (), `:` a to hned za následováním hodnoty. Další informace najdete v tématu [CCMSetup.exe parametry příkazového řádku](#ccmsetupexe-command-line-parameters).
+CCMSetup.exe poskytuje *parametry* příkazového řádku pro přizpůsobení instalace. Parametry mají předponu lomítka ( `/` ) a jsou všeobecně malá. V případě potřeby určíte hodnotu parametru pomocí dvojtečky (), `:` a to hned za následováním hodnoty. Další informace najdete v tématu [CCMSetup.exe parametry příkazového řádku](#ccmsetupexe-command-line-parameters).
 
 *Vlastnosti* můžete také uvést na příkazovém řádku CCMSetup.exe a upravit tak chování client.msi. Vlastnosti podle konvence jsou velkými písmeny. Zadejte hodnotu pro vlastnost pomocí znaku rovná se ( `=` ) ihned následovaný hodnotou. Další informace najdete v tématu [Client.msi Properties](#clientMsiProps).
 
 > [!IMPORTANT]  
 > Před zadáním vlastností pro client.msi zadejte parametry CCMSetup.  
 
-CCMSetup.exe a podpůrné soubory jsou na serveru lokality ve složce **klienta** Configuration Manager instalační složky. Configuration Manager sdílí tuto složku do sítě ve sdílené složce lokality. Například `\\SiteServer\SMS_ABC\Client`.
+CCMSetup.exe a podpůrné soubory jsou na serveru lokality ve složce **klienta** Configuration Manager instalační složky. Configuration Manager sdílí tuto složku do sítě ve sdílené složce lokality. Například, `\\SiteServer\SMS_ABC\Client`.
 
 Příkaz CCMSetup.exe používá v příkazovém řádku tento formát:  
 
@@ -76,16 +76,100 @@ Zobrazuje dostupné parametry příkazového řádku pro ccmsetup.exe.
 
 Příklad: `ccmsetup.exe /?`
 
-### <a name="source"></a>/Source
+### <a name="allowmetered"></a>/AllowMetered
 
-Určuje umístění souboru ke stažení. Použijte místní cestu nebo cestu UNC. Zařízení stahuje soubory pomocí protokolu SMB (Server Message Block). Aby bylo možné používat **/source**, uživatelský účet systému Windows pro instalaci klienta potřebuje oprávnění **ke čtení** pro dané umístění.
+<!--6976145-->
 
-Další informace o tom, jak služba CCMSetup stahuje obsah, najdete v tématu [skupiny hranic – instalace klienta](../../servers/deploy/configure/boundary-groups.md#bkmk_ccmsetup). Tento článek obsahuje také podrobnosti o chování programu CCMSetup, pokud použijete parametry **/MP** a **/source** .
+Počínaje verzí 2006 použijte tento parametr k řízení chování klienta v měřené síti. Tento parametr nepřijímá žádné hodnoty. Když povolíte komunikaci klienta v monitorovaných sítích pro CCMSetup, stáhne se obsah, zaregistruje se v lokalitě a stáhne počáteční zásady. Veškerá další komunikace klienta se řídí konfigurací nastavení klienta z těchto zásad. Další informace najdete v tématu [informace o nastavení klienta](../../clients/deploy/about-client-settings.md#client-communication-on-metered-internet-connections).
 
-> [!TIP]  
-> Parametr **/source** lze použít více než jednou na příkazovém řádku pro určení alternativních umístění pro stahování.  
+Pokud klienta přeinstalujete na existující zařízení, použije se k určení jeho konfigurace tato priorita:
 
-Příklad: `ccmsetup.exe /source:"\\server\share"`
+1. Existující zásady místních klientů
+1. Poslední příkazový řádek uložený v registru Windows
+1. Parametry na příkazovém řádku služby CCMSetup
+
+### <a name="alwaysexcludeupgrade"></a>/AlwaysExcludeUpgrade
+
+Tento parametr určuje, zda se má klient automaticky upgradovat, když povolíte [**Automatický upgrade klienta**](../manage/upgrade/upgrade-clients-for-windows-computers.md#bkmk_autoupdate).
+
+Podporované hodnoty:
+
+- `TRUE`: Klient nebude automaticky upgradován.
+- `FALSE`: Klient se automaticky upgraduje (výchozí).
+
+Například:  
+
+`CCMSetup.exe /AlwaysExcludeUpgrade:TRUE`
+
+Další informace najdete v tématu [Rozšířený klient interoperability](../../understand/interoperability-client.md).
+
+> [!NOTE]  
+> Při použití parametru **/AlwaysExcludeUpgrade** stále běží automatický upgrade. Pokud se ale pro provedení upgradu spustí program CCMSetup, Upozorňujeme, že se nastavil parametr **/AlwaysExcludeUpgrade** a v souboru **CCMSetup. log**se zaprotokoluje následující řádek:
+>
+> `Client is stamped with /alwaysexcludeupgrade. Stop proceeding.`
+>
+> Program CCMSetup pak okamžitě ukončí a neprovede upgrade.
+
+### <a name="bitspriority"></a>/BITSPriority
+
+Když zařízení stáhne instalační soubory klienta přes připojení HTTP, použijte tento parametr k určení priority stahování. Zadejte jednu z následujících možných hodnot:
+
+- `FOREGROUND`
+
+- `HIGH`
+
+- `NORMAL`výchozí
+
+- `LOW`
+
+Příklad: `ccmsetup.exe /BITSPriority:HIGH`
+
+### <a name="config"></a>/config
+
+Tento parametr určuje textový soubor se seznamem vlastností instalace klienta.
+
+- Pokud je program CCMSetup spuštěn jako služba, umístěte tento soubor do systémové složky CCMSetup: `%Windir%\Ccmsetup` .
+
+- Pokud zadáte parametr [**/noservice**](#noservice) , umístěte tento soubor do stejné složky jako CCMSetup.exe.
+
+Příklad: `CCMSetup.exe /config:"configuration file name.txt"`
+
+Chcete-li zadat správný formát souboru, použijte soubor **mobileclienttemplate. TCF** ve `\bin\<platform>` složce v instalačním adresáři Configuration Manager na serveru lokality. Tento soubor obsahuje komentáře k oddílům a jejich použití. Vlastnosti instalace klienta zadejte v `[Client Install]` části za následujícím textem: `Install=INSTALL=ALL` .
+
+Příklad `[Client Install]` položky oddílu:`Install=INSTALL=ALL SMSSITECODE=ABC SMSCACHESIZE=100`  
+
+### <a name="downloadtimeout"></a>/downloadtimeout
+
+Pokud služba CCMSetup nedokáže stáhnout instalační soubory klienta, tento parametr určuje maximální časový limit v minutách. Po uplynutí tohoto časového limitu se program CCMSetup zastaví pokus o stažení instalačních souborů. Výchozí hodnota je **1440** minut (jeden den).
+
+K určení intervalu mezi opakovanými pokusy použijte parametr [**/Retry**](#retry) .
+
+Příklad: `ccmsetup.exe /downloadtimeout:100`
+
+### <a name="excludefeatures"></a>/ExcludeFeatures
+
+Tento parametr určuje, že CCMSetup.exe nenainstaluje zadanou funkci.
+
+Příklad: `CCMSetup.exe /ExcludeFeatures:ClientUI` nenainstaluje na klienta Centrum softwaru.  
+
+> [!NOTE]  
+> `ClientUI`je jediná hodnota, kterou podporuje parametr **/ExcludeFeatures** .
+
+### <a name="forceinstall"></a>/forceinstall
+
+Určete, že CCMSetup.exe odinstaluje všechny existující klienty a nainstaluje nového klienta.  
+
+### <a name="forcereboot"></a>/forcereboot
+
+Tento parametr použijte k vynucení restartování počítače, pokud je to nutné pro dokončení instalace. Pokud tento parametr nezadáte, program CCMSetup ukončí, jakmile bude nutné restartovat počítač. Pak pokračuje po dalším ručním restartování.
+
+Příklad: `CCMSetup.exe /forcereboot`
+
+### <a name="logon"></a>/logon
+
+Pokud je již nainstalována nějaká verze klienta, tento parametr určuje, zda má být instalace klienta zastavena.  
+
+Příklad: `ccmsetup.exe /logon`  
 
 ### <a name="mp"></a>/MP
 
@@ -123,6 +207,18 @@ Příklad, kdy použijete adresu URL brány pro správu cloudu:`ccmsetup.exe /mp
 > [!Important]
 > Při zadání adresy URL brány pro správu cloudu pro parametr **/MP** musí začínat na `https://` .
 
+### <a name="nocrlcheck"></a>/NoCRLCheck
+
+Určuje, že klient by neměl kontrolovat seznam odvolaných certifikátů (CRL), když komunikuje přes protokol HTTPS s certifikátem PKI. Pokud tento parametr nezadáte, klient zkontroluje seznam CRL předtím, než vytvoří připojení HTTPS. Další informace o kontrole seznamu CRL klienta najdete v tématu [Plánování odvolání certifikátu PKI](../../plan-design/security/plan-for-security.md#BKMK_PlanningForCRLs).
+
+Příklad: `CCMSetup.exe /UsePKICert /NoCRLCheck`  
+
+### <a name="noservice"></a>/noservice
+
+Tento parametr brání spuštění programu CCMSetup jako služby, což je ve výchozím nastavení. Když je program CCMSetup spuštěn jako služba, běží v kontextu účtu místního systému počítače. Tento účet nemusí mít dostatečná oprávnění pro přístup k požadovaným síťovým prostředkům pro instalaci. V **/noservice**se CCMSetup.exe spouští v kontextu uživatelského účtu, který používáte ke spuštění instalace.
+
+Příklad: `ccmsetup.exe /noservice`  
+
 ### <a name="regtoken"></a>/regtoken
 
 <!--5686290-->
@@ -146,12 +242,6 @@ Pokud se CCMSetup.exe nepovede stáhnout instalační soubory, použijte tento p
 
 Příklad: `ccmsetup.exe /retry:20`  
 
-### <a name="noservice"></a>/noservice
-
-Tento parametr brání spuštění programu CCMSetup jako služby, což je ve výchozím nastavení. Když je program CCMSetup spuštěn jako služba, běží v kontextu účtu místního systému počítače. Tento účet nemusí mít dostatečná oprávnění pro přístup k požadovaným síťovým prostředkům pro instalaci. V **/noservice**se CCMSetup.exe spouští v kontextu uživatelského účtu, který používáte ke spuštění instalace.
-
-Příklad: `ccmsetup.exe /noservice`  
-
 ### <a name="service"></a>/service
 
 Určuje, že má být program CCMSetup spuštěn jako služba, která používá účet místního systému.  
@@ -160,77 +250,6 @@ Určuje, že má být program CCMSetup spuštěn jako služba, která používá
 > Pokud používáte skript ke spuštění CCMSetup.exe s parametrem **/Service** , CCMSetup.exe po spuštění služby ukončen. Nemusí správně nahlásit podrobnosti o instalaci skriptu.
 
 Příklad: `ccmsetup.exe /service`  
-
-### <a name="uninstall"></a>/uninstall
-
-Tento parametr použijte k odinstalaci klienta Configuration Manager. Další informace najdete v tématu [odinstalace klienta](../manage/manage-clients.md#BKMK_UninstalClient).
-
-Příklad: `ccmsetup.exe /uninstall`  
-
-### <a name="logon"></a>/logon
-
-Pokud je již nainstalována nějaká verze klienta, tento parametr určuje, zda má být instalace klienta zastavena.  
-
-Příklad: `ccmsetup.exe /logon`  
-
-### <a name="forcereboot"></a>/forcereboot
-
-Tento parametr použijte k vynucení restartování počítače, pokud je to nutné pro dokončení instalace. Pokud tento parametr nezadáte, program CCMSetup ukončí, jakmile bude nutné restartovat počítač. Pak pokračuje po dalším ručním restartování.
-
-Příklad: `CCMSetup.exe /forcereboot`
-
-### <a name="bitspriority"></a>/BITSPriority
-
-Když zařízení stáhne instalační soubory klienta přes připojení HTTP, použijte tento parametr k určení priority stahování. Zadejte jednu z následujících možných hodnot:
-
-- `FOREGROUND`
-
-- `HIGH`
-
-- `NORMAL`výchozí
-
-- `LOW`
-
-Příklad: `ccmsetup.exe /BITSPriority:HIGH`
-
-### <a name="downloadtimeout"></a>/downloadtimeout
-
-Pokud služba CCMSetup nedokáže stáhnout instalační soubory klienta, tento parametr určuje maximální časový limit v minutách. Po uplynutí tohoto časového limitu se program CCMSetup zastaví pokus o stažení instalačních souborů. Výchozí hodnota je **1440** minut (jeden den).
-
-K určení intervalu mezi opakovanými pokusy použijte parametr [**/Retry**](#retry) .
-
-Příklad: `ccmsetup.exe /downloadtimeout:100`
-
-### <a name="usepkicert"></a>/UsePKICert
-
-Zadejte tento parametr pro klienta, aby používal certifikát pro ověřování klientů PKI. Pokud tento parametr nezadáte, nebo pokud klient nenalezne platný certifikát, použije připojení HTTP s certifikátem podepsaným svým držitelem.
-
-Příklad: `CCMSetup.exe /UsePKICert`  
-
-> [!NOTE]
-> V některých scénářích nemusíte tento parametr zadávat, ale stále používat klientský certifikát. Například nabízená instalace klienta a instalace klienta na základě aktualizace softwaru. Tento parametr použijte, když instalujete klienta ručně a použijete parametr **/MP** s bodem správy s POVOLENým protokolem HTTPS.
->
-> Tento parametr zadejte také při instalaci klienta pro internetovou komunikaci. Použijte vlastnost **CCMALWAYSINF = 1** spolu s vlastnostmi pro internetový bod správy (**CCMHOSTNAME**) a kód lokality (**SMSSITECODE**). Další informace o internetové správě klientů najdete v tématu [požadavky na komunikaci klienta z Internetu nebo nedůvěryhodné doménové struktury](../../plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan).  
-
-### <a name="nocrlcheck"></a>/NoCRLCheck
-
-Určuje, že klient by neměl kontrolovat seznam odvolaných certifikátů (CRL), když komunikuje přes protokol HTTPS s certifikátem PKI. Pokud tento parametr nezadáte, klient zkontroluje seznam CRL předtím, než vytvoří připojení HTTPS. Další informace o kontrole seznamu CRL klienta najdete v tématu [Plánování odvolání certifikátu PKI](../../plan-design/security/plan-for-security.md#BKMK_PlanningForCRLs).
-
-Příklad: `CCMSetup.exe /UsePKICert /NoCRLCheck`  
-
-### <a name="config"></a>/config
-
-Tento parametr určuje textový soubor se seznamem vlastností instalace klienta.
-
-- Pokud je program CCMSetup spuštěn jako služba, umístěte tento soubor do systémové složky CCMSetup: `%Windir%\Ccmsetup` .
-
-- Pokud zadáte parametr [**/noservice**](#noservice) , umístěte tento soubor do stejné složky jako CCMSetup.exe.
-
-Příklad: `CCMSetup.exe /config:"configuration file name.txt"`
-
-Chcete-li zadat správný formát souboru, použijte soubor **mobileclienttemplate. TCF** ve `\bin\<platform>` složce v instalačním adresáři Configuration Manager na serveru lokality. Tento soubor obsahuje komentáře k oddílům a jejich použití. Vlastnosti instalace klienta zadejte v `[Client Install]` části za následujícím textem: `Install=INSTALL=ALL` .
-
-Příklad `[Client Install]` položky oddílu:`Install=INSTALL=ALL SMSSITECODE=ABC SMSCACHESIZE=100`  
 
 ### <a name="skipprereq"></a>/skipprereq
 
@@ -244,40 +263,33 @@ Příklady:
 
 Další informace o požadavcích klienta najdete v tématu [požadavky klienta Windows](prerequisites-for-deploying-clients-to-windows-computers.md).
 
-### <a name="forceinstall"></a>/forceinstall
+### <a name="source"></a>/Source
 
-Určete, že CCMSetup.exe odinstaluje všechny existující klienty a nainstaluje nového klienta.  
+Určuje umístění souboru ke stažení. Použijte místní cestu nebo cestu UNC. Zařízení stahuje soubory pomocí protokolu SMB (Server Message Block). Aby bylo možné používat **/source**, uživatelský účet systému Windows pro instalaci klienta potřebuje oprávnění **ke čtení** pro dané umístění.
 
-### <a name="excludefeatures"></a>/ExcludeFeatures
+Další informace o tom, jak služba CCMSetup stahuje obsah, najdete v tématu [skupiny hranic – instalace klienta](../../servers/deploy/configure/boundary-groups.md#bkmk_ccmsetup). Tento článek obsahuje také podrobnosti o chování programu CCMSetup, pokud použijete parametry **/MP** a **/source** .
 
-Tento parametr určuje, že CCMSetup.exe nenainstaluje zadanou funkci.
+> [!TIP]  
+> Parametr **/source** lze použít více než jednou na příkazovém řádku pro určení alternativních umístění pro stahování.  
 
-Příklad: `CCMSetup.exe /ExcludeFeatures:ClientUI` nenainstaluje na klienta Centrum softwaru.  
+Příklad: `ccmsetup.exe /source:"\\server\share"`
 
-> [!NOTE]  
-> `ClientUI`je jediná hodnota, kterou podporuje parametr **/ExcludeFeatures** .
+### <a name="uninstall"></a>/uninstall
 
-### <a name="alwaysexcludeupgrade"></a>/AlwaysExcludeUpgrade
+Tento parametr použijte k odinstalaci klienta Configuration Manager. Další informace najdete v tématu [odinstalace klienta](../manage/manage-clients.md#BKMK_UninstalClient).
 
-Tento parametr určuje, zda se má klient automaticky upgradovat, když povolíte [**Automatický upgrade klienta**](../manage/upgrade/upgrade-clients-for-windows-computers.md#bkmk_autoupdate).
+Příklad: `ccmsetup.exe /uninstall`  
 
-Podporované hodnoty:
+### <a name="usepkicert"></a>/UsePKICert
 
-- `TRUE`: Klient nebude automaticky upgradován.
-- `FALSE`: Klient se automaticky upgraduje (výchozí).
+Zadejte tento parametr pro klienta, aby používal certifikát pro ověřování klientů PKI. Pokud tento parametr nezadáte, nebo pokud klient nenalezne platný certifikát, použije připojení HTTP s certifikátem podepsaným svým držitelem.
 
-Například:  
+Příklad: `CCMSetup.exe /UsePKICert`  
 
-`CCMSetup.exe /AlwaysExcludeUpgrade:TRUE`
-
-Další informace najdete v tématu [Rozšířený klient interoperability](../../understand/interoperability-client.md).
-
-> [!NOTE]  
-> Při použití parametru **/AlwaysExcludeUpgrade** stále běží automatický upgrade. Pokud se ale pro provedení upgradu spustí program CCMSetup, Upozorňujeme, že se nastavil parametr **/AlwaysExcludeUpgrade** a v souboru **CCMSetup. log**se zaprotokoluje následující řádek:
+> [!NOTE]
+> V některých scénářích nemusíte tento parametr zadávat, ale stále používat klientský certifikát. Například nabízená instalace klienta a instalace klienta na základě aktualizace softwaru. Tento parametr použijte, když instalujete klienta ručně a použijete parametr **/MP** s bodem správy s POVOLENým protokolem HTTPS.
 >
-> `Client is stamped with /alwaysexcludeupgrade. Stop proceeding.`
->
-> Program CCMSetup pak okamžitě ukončí a neprovede upgrade.
+> Tento parametr zadejte také při instalaci klienta pro internetovou komunikaci. Použijte vlastnost **CCMALWAYSINF = 1** spolu s vlastnostmi pro internetový bod správy (**CCMHOSTNAME**) a kód lokality (**SMSSITECODE**). Další informace o internetové správě klientů najdete v tématu [požadavky na komunikaci klienta z Internetu nebo nedůvěryhodné doménové struktury](../../plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan).  
 
 ## <a name="ccmsetupexe-return-codes"></a><a name="ccmsetupReturnCodes"></a>Návratové kódy CCMSetup.exe
 
@@ -285,7 +297,7 @@ Příkaz CCMSetup.exe poskytuje následující návratové kódy. Chcete-li vyř
 
 |Návratový kód|Význam|  
 |-----------|-------|  
-|0|Úspěch|  
+|0|Success|  
 |6|Chyba|  
 |7|Je vyžadován restart|  
 |8|Instalace již byla spuštěna|  

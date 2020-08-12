@@ -10,12 +10,12 @@ ms.assetid: 678c9622-c61b-47d1-ba25-690616e431c7
 author: mestew
 manager: dougeby
 ms.author: mstewart
-ms.openlocfilehash: 01355230d0dc8969555740cc25a08e0b8d2967d0
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: 4c96a7636902bd313f8e8868917b45d8fa49e1f7
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86240469"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127133"
 ---
 # <a name="create-configuration-baselines-in-configuration-manager"></a>Vytvoření standardních hodnot konfigurace v Configuration Manager
 
@@ -84,7 +84,7 @@ Pokud chcete vytvořit standardní hodnoty konfigurace pomocí dialogového okna
 <!--3608345-->
 *(Představené ve verzi 1910)*
 
-Počínaje verzí 1910 můžete přidat hodnocení vlastních standardních hodnot konfigurace jako pravidla pro vyhodnocení zásad dodržování předpisů. Když vytváříte nebo upravujete standardní hodnoty konfigurace, máte možnost **vyhodnotit tyto standardní hodnoty jako součást hodnocení zásad dodržování předpisů**. Když přidáváte nebo upravujete pravidlo zásad dodržování předpisů, máte podmínku s názvem **Zahrnout nakonfigurované směrné plány v vyhodnocení zásad dodržování předpisů**. Pro spoluspravovaná zařízení a při konfiguraci Intune tak, aby byly výsledky vyhodnocení dodržování předpisů Configuration Manager v rámci celkového stavu dodržování předpisů, se tyto informace odesílají do Azure AD. Pak ji můžete použít pro podmíněný přístup k prostředkům sady Office 365. Další informace najdete v tématu [podmíněný přístup s spolusprávou](../../comanage/quickstart-conditional-access.md).
+Počínaje verzí 1910 můžete přidat hodnocení vlastních standardních hodnot konfigurace jako pravidla pro vyhodnocení zásad dodržování předpisů. Když vytváříte nebo upravujete standardní hodnoty konfigurace, máte možnost **vyhodnotit tyto standardní hodnoty jako součást hodnocení zásad dodržování předpisů**. Když přidáváte nebo upravujete pravidlo zásad dodržování předpisů, máte podmínku s názvem **Zahrnout nakonfigurované směrné plány v vyhodnocení zásad dodržování předpisů**. Pro spoluspravovaná zařízení a při konfiguraci Intune tak, aby byly výsledky vyhodnocení dodržování předpisů Configuration Manager v rámci celkového stavu dodržování předpisů, se tyto informace odesílají do Azure AD. Pak ji můžete použít pro podmíněný přístup k prostředkům Microsoft 365 Apps. Další informace najdete v tématu [podmíněný přístup s spolusprávou](../../comanage/quickstart-conditional-access.md).
 
 Pokud chcete jako součást vyhodnocení zásad dodržování předpisů zahrnout vlastní standardní hodnoty konfigurace, udělejte toto:
 

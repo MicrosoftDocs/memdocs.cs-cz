@@ -5,17 +5,17 @@ description: Vytvořte skript, který chcete použít pro předspouštěcí př�
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: ccc9f652-2953-4c38-8a90-c799484105ca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9dd921d58e6ef777017af3e2eb24dbf4bd611fab
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 06c96d668d3c37b107ae8e290ebcd124e8a2b773
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81717458"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88124376"
 ---
 # <a name="prestart-commands-for-task-sequence-media-in-configuration-manager"></a>Příkazy před zahájením pro médium pořadí úloh v Configuration Manager
 

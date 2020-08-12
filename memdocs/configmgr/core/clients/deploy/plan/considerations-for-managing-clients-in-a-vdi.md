@@ -2,7 +2,7 @@
 title: Správa klientů VDI
 titleSuffix: Configuration Manager
 description: Správa Configuration Manager klientů v infrastruktuře virtuálních klientských počítačů (VDI).
-ms.date: 04/23/2017
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,36 +10,53 @@ ms.assetid: abd45393-d84e-4583-bc80-74bbb3709577
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b01348695ac5b3b64ca87a9b42aa52ac235b533d
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 6df9238cd81f14a64a42c45136c778357acb89c4
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81713321"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126946"
 ---
 # <a name="manage-configuration-manager-clients-in-a-virtual-desktop-infrastructure-vdi"></a>Správa klientů Configuration Manager v infrastruktuře virtuálních klientských počítačů (VDI)
 
 *Platí pro: Configuration Manager (Current Branch)*
 
-Configuration Manager podporuje instalaci klienta Configuration Manager na následujících scénářích infrastruktury virtuálních klientských počítačů (VDI):  
+Configuration Manager podporuje instalaci klienta Configuration Manager na následujících scénářích infrastruktury virtuálních klientských počítačů (VDI):
 
-- **Osobní virtuální počítače** – osobní virtuální počítače se obecně používají v případě, že se chcete ujistit, že jsou data a nastavení uživatelů na virtuálním počítači mezi relacemi zachovaná.  
+- **Osobní virtuální počítače**: virtuální počítač (VM) udržuje uživatelská data a nastavení mezi relacemi.
 
-- **Relace služby Vzdálená plocha** – Služba vzdálené plochy umožňuje serveru hostovat víc souběžných klientských relací. Uživatelé se můžou připojit k relaci a pak na tomto serveru spouštět aplikace.  
+- **Relace služby Vzdálená plocha**: hostování více souběžných klientských relací na centralizovaném serveru. Uživatelé se připojují k relaci a spouštějí aplikace na daném serveru.
 
-- **Virtuální počítače ve fondu** – virtuální počítače ve fondu se mezi relacemi netrvaly. Při zavření relace jsou všechna data a nastavení zahozena. Virtuální počítače ve fondu jsou užitečné, když nelze použít vzdálenou plochu, protože požadovaná obchodní aplikace nemůže běžet na Windows serveru, který je hostitelem klientských relací.  
+- **Virtuální počítače ve fondu**: virtuální počítač se neuchovává mezi relacemi. Když uživatel zavře relaci, virtuální prostředí zruší všechna data a nastavení. Virtuální počítače ve fondu jsou užitečné, když nemůžete použít službu Vzdálená plocha. Například Pokud požadovaná aplikace nemůže běžet na serveru Windows, který hostuje klientské relace.
 
-  V následující tabulce jsou uvedeny pokyny pro správu klienta Configuration Manager v infrastruktuře virtuálních klientských počítačů.  
+- **Virtuální klient Windows**: služba virtualizace plochy a aplikací, která běží na Microsoft Azure. Počínaje verzí 1906 použijte Configuration Manager ke správě těchto virtuálních zařízení s Windows v Azure.
 
-|Typ virtuálního počítače|Požadavky|  
-|--------------------------|--------------------|  
-|Osobní virtuální počítače|Configuration Manager zpracovává osobní virtuální počítače identicky na fyzickém počítači. Klienta Configuration Manager lze předem nainstalovat do image virtuálního počítače nebo nasadit po zřízení virtuálního počítače.|  
-|Vzdálená plocha|Klient Configuration Manager není nainstalován pro jednotlivé relace vzdálené plochy. Místo toho se klient instaluje jenom jednou na serveru služby Vzdálená plocha. Všechny funkce Configuration Manager lze použít na serveru služby Vzdálená plocha.|  
-|Virtuální počítače ve fondu|Když je virtuální počítač ve fondu vyřazený z provozu, budou ztraceny všechny změny, které provedete pomocí Configuration Manager.<br /><br /> Data vrácená z Configuration Managerch funkcí, jako je inventář hardwaru, inventář softwaru a měření softwaru, nemusí být relevantní pro vaše potřeby, protože virtuální počítač může být funkční jenom na krátkou dobu. Zvažte možnost vyloučit z úloh inventáře virtuální počítače ve fondu.|  
+## <a name="personal-vms"></a>Osobní virtuální počítače
 
- Protože virtualizace podporuje spouštění více Configuration Manager klientů na jednom fyzickém počítači, mnoho operací klienta má vestavěnou náhodnou prodlevu pro plánované akce, jako jsou například inventář hardwaru a softwaru, kontroly antimalwaru, instalace softwaru a kontroly aktualizací softwaru. Tato prodleva pomáhá distribuovat výpočetní výkon procesoru a přenos dat pro počítač, který obsahuje více virtuálních počítačů, na kterých běží klient Configuration Manager.  
+Configuration Manager pracuje s osobními virtuálními počítači, které jsou stejné jako u fyzického počítače. Klienta Configuration Manager můžete předinstalovat na image virtuálního počítače nebo po jeho zřízení.
 
-> [!NOTE]  
->  S výjimkou klientů se systémem Windows Embedded, kteří jsou v režimu obsluhy, Configuration Manager klienti, kteří nejsou spuštěni ve virtualizovaných prostředích, také používají toto náhodné zpoždění. Pokud máte mnoho nasazených klientů, toto chování pomáhá zabránit špičkám v šířce pásma sítě a snižuje požadavky na výpočetní výkon procesoru v Configuration Manager systémech lokality, jako je například bod správy a server lokality. Interval zpoždění se liší podle možnosti Configuration Manager.  
->   
->  Prodleva náhodného přeskupování je ve výchozím nastavení pro požadované aktualizace softwaru zakázáno pomocí následujícího klientského nastavení: **Agent počítače**: **Zakázat náhodné přeskupování času termínu**.
+Další informace najdete v tématu [Podpora virtualizačních prostředí](../../../plan-design/configs/support-for-virtualization-environments.md).
+
+## <a name="remote-desktop-services"></a>Vzdálená plocha
+
+Nenainstalujete klienta Configuration Manager pro jednotlivé relace vzdálené plochy. Nainstalujte ji jednou na server, který je hostitelem služby Vzdálená plocha. Na serveru služby Vzdálená plocha můžete použít všechny klientské funkce Configuration Manager.
+
+Další informace najdete v tématu [Vítá vás služba Vzdálená plocha](https://docs.microsoft.com/windows-server/remote/remote-desktop-services/welcome-to-rds).
+
+## <a name="pooled-vms"></a>Virtuální počítače ve fondu
+
+Když vyřadíte z provozu virtuální počítač ve fondu, ztratí se všechny změny provedené v Configuration Manager.
+
+Vzhledem k tomu, že virtuální počítač může být funkční jenom po krátkou dobu, některé funkce Configuration Manager nemusí vracet relevantní data. Například inventář hardwaru, inventář softwaru a měření softwaru. Zvažte možnost vyloučit z úloh inventáře virtuální počítač ve fondu.
+
+## <a name="windows-virtual-desktop"></a>Windows Virtual Desktop
+
+Další informace najdete v tématu [podporované operační systémy pro klienty a zařízení](../../../plan-design/configs/supported-operating-systems-for-clients-and-devices.md#windows-virtual-desktop).
+
+## <a name="other-considerations"></a>Další důležité informace
+
+Protože virtualizace podporuje spouštění více Configuration Manager klientů na jednom fyzickém počítači, mnoho operací klienta má vestavěnou náhodnou prodlevu pro plánované akce. Například inventář hardwaru a softwaru, kontroly antimalwaru, instalace softwaru a prověřování aktualizací softwaru. Tato prodleva pomáhá distribuovat výpočetní výkon procesoru a přenos dat pro server, který obsahuje více virtuálních počítačů používajících klienta Configuration Manager.
+
+S výjimkou klientů se systémem Windows Embedded v režimu obsluhy Configuration Manager klienti, kteří nejsou ve virtualizovaných prostředích, také tuto náhodnou prodlevu používají. Toto chování pomáhá zabránit špičkám v šířce pásma sítě. Také snižuje nároky na procesor v systémech lokality, jako je třeba bod správy a server lokality. Interval zpoždění se liší podle možnosti Configuration Manager. Příklad najdete v tématu [informace o nastavení klienta – zakázat náhodné přeskupování termínu](../about-client-settings.md#disable-deadline-randomization).
+
+Pro pomoc s Configuration Manager výkonu klienta ve virtuálních prostředích podporujících více uživatelských relací zakáže zásady uživatele ve výchozím nastavení. Počínaje verzí 1910 můžete v tomto scénáři povolit zásady uživatele. Další informace najdete v tématu [o nastavení klienta – povolení zásad uživatele pro více uživatelských relací](../about-client-settings.md#enable-user-policy-for-multiple-user-sessions).

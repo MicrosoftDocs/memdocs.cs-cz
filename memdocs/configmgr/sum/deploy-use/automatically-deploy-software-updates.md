@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: b27682de-adf8-4edd-9572-54886af8f7fb
-ms.openlocfilehash: ae1f52b0744f79f79e00e5dfe2d6a76c903cf4a4
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: 1a64d49edca146c70a56b07cb304d1744b86a1bf
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86240027"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127742"
 ---
 #  <a name="automatically-deploy-software-updates"></a>Automatické nasazení aktualizací softwaru  
 
@@ -47,7 +47,7 @@ Automatické schvalování a nasazování aktualizací softwaru pomocí pravidla
 
          - Šablona rozboru aktualizací **Patch Tuesday** poskytuje obecná nastavení, když zavádíte aktualizace softwaru v měsíčním cyklu.  
 
-         - Šablona **aktualizací klientů Office 365** poskytuje běžná nastavení, která se použijí při nasazení aktualizací pro klienty Office 365 pro plus.
+         - Šablona **aktualizací klientů Office 365** poskytuje běžná nastavení, která se použijí při nasazení aktualizací pro klienty Microsoft 365ch aplikací.
              > [!Note]
              > Od 21. dubna 2020 se sada Office 365 ProPlus přejmenovává na **Microsoft 365 aplikace pro podniky**. Pokud vaše pravidla automatického nasazení spoléhá na vlastnost "title", budete ji muset upravit od 9. června 2020. `Microsoft 365 Apps Update - Semi-annual Channel Version 1908 for x64 based Edition (Build 11929.50000)`je příkladem nového názvu. Další informace o tom, jak upravit pravidla automatického nasazení pro změnu názvu, najdete v tématu [aktualizace kanálů pro aplikace Microsoft 365](manage-office-365-proplus-updates.md#bkmk_channel). Další informace o změně názvu najdete v tématu [Změna názvu pro Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change).
 
@@ -199,7 +199,7 @@ Automatické schvalování a nasazování aktualizací softwaru pomocí pravidla
 
         - **Povolit binární rozdílovou replikaci**: Toto nastavení povolte, pokud chcete pro balíček pro nasazení použít binární rozdílovou replikaci. Další informace najdete v tématu [binární rozdílová replikace](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#binary-differential-replication).  
 
-    - **Žádný balíček pro nasazení**: od verze 1806 nasaďte aktualizace softwaru do zařízení bez předchozího stažení a distribuce obsahu do distribučních bodů. Toto nastavení je užitečné při práci s extrémně velkým obsahem aktualizace. Můžete ho také použít, když chcete, aby klienti získali obsah z cloudové služby Microsoft Update. Klienti v tomto scénáři si také můžou stáhnout obsah od partnerských uzlů, které už mají potřebný obsah. Klient Configuration Manager nadále spravuje stahování obsahu, proto může využít funkci Configuration Manager sdílené mezipaměti nebo jiné technologie, jako je Optimalizace doručení. Tato funkce podporuje libovolný typ aktualizace, který podporuje Configuration Manager Správa aktualizací softwaru, včetně aktualizací Windows a Office.<!--1357933-->  
+    - **Žádný balíček pro nasazení**: od verze 1806 nasaďte aktualizace softwaru do zařízení bez předchozího stažení a distribuce obsahu do distribučních bodů. Toto nastavení je užitečné při práci s extrémně velkým obsahem aktualizace. Můžete ho také použít, když chcete, aby klienti získali obsah z cloudové služby Microsoft Update. Klienti v tomto scénáři si také můžou stáhnout obsah od partnerských uzlů, které už mají potřebný obsah. Klient Configuration Manager nadále spravuje stahování obsahu, proto může využít funkci Configuration Manager sdílené mezipaměti nebo jiné technologie, jako je Optimalizace doručení. Tato funkce podporuje libovolný typ aktualizace, který podporuje Configuration Manager Správa aktualizací softwaru, včetně aktualizací Windows a Microsoft 365 aplikací.<!--1357933-->  
 
         > [!Note]  
         > Jakmile vyberete tuto možnost a použijete nastavení, nebude již možné ji změnit. Ostatní možnosti jsou šedé.<!--SCCMDocs-pr issue 3003-->  
@@ -209,7 +209,7 @@ Automatické schvalování a nasazování aktualizací softwaru pomocí pravidla
 
 13. Na stránce **umístění pro stahování** určete, jestli se mají stáhnout soubory aktualizace softwaru z Internetu, nebo z místní sítě. Nakonfigurujte tahle nastavení:  
 
-    -   **Stáhnout softwarové aktualizace z Internetu**: Toto nastavení vyberte, pokud chcete stáhnout aktualizace softwaru ze zadaného umístění na internetu. Toto nastavení je standardně zapnuté.  
+    -   **Stáhnout softwarové aktualizace z Internetu**: Toto nastavení vyberte, pokud chcete stáhnout aktualizace softwaru ze zadaného umístění na internetu. Standardně je toto nastavení povolené.  
 
     -   **Stáhnout softwarové aktualizace z místa v mé síti:** Pomocí tohoto nastavení můžete stáhnout aktualizace softwaru z místního adresáře nebo sdílené složky. Toto nastavení je užitečné, když počítač, na kterém spouštíte Průvodce, nemá přístup k Internetu. Každý počítač s přístupem k Internetu může předběžně stáhnout aktualizace softwaru. Pak je uložte do umístění v místní síti, které je přístupné z počítače, na kterém běží průvodce. Při stahování obsahu, který je publikovaný prostřednictvím System Center Updates Publisher nebo řešení pro opravy jiného výrobce, by se mohlo jednat o jiný scénář. Sdílenou složku obsahu služby WSUS v bodě aktualizace softwaru nejvyšší úrovně lze zadat jako síťové umístění, ze kterého se má stáhnout `\\server\WsusContent` . <!--memdocs-issue-211-->
 

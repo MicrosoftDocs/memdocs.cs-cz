@@ -2,7 +2,7 @@
 title: Plánování správy nástroje BitLocker
 titleSuffix: Configuration Manager
 description: Plánování správy nástroj BitLocker Drive Encryption s využitím Configuration Manager
-ms.date: 04/01/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: a4d8cda2-bc9b-4fb4-aa0d-23c31b4fc60b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2c03d5d06dc6b49ceff6af8ce862eb19cb4a517a
-ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
+ms.openlocfilehash: 8370c3352778fa6bb7c6229beb1c7610c419a86d
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84531464"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129293"
 ---
 # <a name="plan-for-bitlocker-management"></a>Plánování správy nástroje BitLocker
 
@@ -25,7 +25,7 @@ ms.locfileid: "84531464"
 
 Počínaje verzí 1910 použijte Configuration Manager ke správě nástroj BitLocker Drive Encryption (BDE) pro místní klienty Windows, které jsou připojené ke službě Active Directory. Azure Active Directory se připojili nebo klienti v pracovní skupině nejsou podporováni. Poskytuje úplnou správu životního cyklu BitLockeru, která může nahradit použití nástroje Microsoft BitLocker Administration and Monitoring (MBAM).
 
-> [!Note]  
+> [!NOTE]
 > Configuration Manager ve výchozím nastavení nepovolí tuto volitelnou funkci. Tuto funkci musíte před použitím povolit. Další informace naleznete v části [Enable optional features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_options).  
 
 Další informace najdete v tématu [Přehled nástroje BitLocker](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-overview).
@@ -81,6 +81,8 @@ Umožněte uživatelům využít klíč s jedním klíčem k odemknutí zaříze
   - Nakonfigurujte bod správy pro protokol HTTPS. Tato možnost se vztahuje na Configuration Manager verze 1910 nebo 2002.
 
   Další informace najdete v tématu [šifrování dat pro obnovení](../deploy-use/bitlocker/encrypt-recovery-data.md).
+
+- I když se služba obnovení BitLockeru nainstaluje na bod správy, který používá repliku databáze, klienti nemůžou v úschově obnovovací klíče. Nástroj BitLocker pak jednotku nešifruje. Chcete-li použít službu Recovery Services, potřebujete alespoň jeden bod správy, který není v konfiguraci repliky. Zakažte službu obnovení nástroje BitLocker v jakémkoli bodu správy s replikou databáze.<!-- 7813149 -->
 
 - Chcete-li použít sestavy správy nástroje BitLocker, nainstalujte roli systému lokality bodu služby Reporting Services. Další informace najdete v tématu [Konfigurace vytváření sestav](../../core/servers/manage/configuring-reporting.md).
 

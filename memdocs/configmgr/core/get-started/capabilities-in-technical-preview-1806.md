@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 2168f844f1c9ef98ea21da68b73531bca7aad999
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 4708c0d8e9a7d2a3b87310b64311d67d8b84a16a
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905174"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126786"
 ---
 # <a name="capabilities-in-technical-preview-1806-for-configuration-manager"></a>Funkce ve verzi Technical Preview 1806 pro Configuration Manager
 
@@ -240,7 +240,7 @@ Nástroj pro přizpůsobení sady Office je nyní integrovaný s instalačním p
  Zkuste úkoly dokončit. Potom vám pošleme [názor](capabilities-in-technical-preview-1804.md#bkmk_feedback) , abychom věděli, jak pracovali.
 
 1. V konzole Configuration Manager otevřete pracovní prostor **softwarová knihovna** a vyberte uzel **správa klientů Office 365** .
-2. Kliknutím na dlaždici **instalační program office 365** na řídicím panelu spusťte Průvodce instalací klienta sady Office 365. Další informace najdete v tématu [nasazení aplikací Office 365](../../sum/deploy-use/manage-office-365-proplus-updates.md#deploy-office-365-apps).
+2. Kliknutím na dlaždici **instalační program office 365** na řídicím panelu spusťte Průvodce instalací klienta sady Office 365. Další informace najdete v tématu [nasazení aplikací Office 365](../../sum/deploy-use/manage-office-365-proplus-updates.md).
 3. Na stránce **Nastavení Office** klikněte na **Přejít na webovou stránku Office**. Pomocí online nástroje pro přizpůsobení Office určete nastavení pro toto nasazení. 
 4. Až se dokončí, klikněte na **Odeslat** v pravém horním rohu. Dokončete Průvodce instalací klienta Office 365.
 

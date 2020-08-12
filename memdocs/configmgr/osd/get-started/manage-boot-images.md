@@ -5,17 +5,17 @@ description: V Configuration Manager se naučíte spravovat spouštěcí bitové
 ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 97f2d81a-2c58-442c-88bc-defd5a1cd48f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 76e0fd3ad8ceaecb43d2a61c3abe15accda5e5d8
-ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
+ms.openlocfilehash: e68a3274a32d28ac0b4ad2a611c59870ee338472
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87912382"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88124537"
 ---
 # <a name="manage-boot-images-with-configuration-manager"></a>Správa spouštěcích imagí pomocí Configuration Manager
 
@@ -80,11 +80,15 @@ Je-li spouštěcí image založena na jiné verzi sady Windows ADK nainstalovan�
 
 Během instalace lokality Configuration Manager automaticky přidávají spouštěcí bitové kopie, které jsou založené na verzi prostředí WinPE z podporované verze sady Windows ADK. V závislosti na verzi Configuration Manager můžete přidat spouštěcí bitové kopie založené na jiné verzi prostředí WinPE z podporované verze sady Windows ADK. Pokud se pokusíte přidat spouštěcí bitovou kopii, která obsahuje nepodporovanou verzi prostředí WinPE, dojde k chybě. V následujícím seznamu jsou aktuálně podporované verze Windows ADK a WinPE:
 
-| Typ Windows | Podporované verze |
-|--------------|--------------------|
-| Verze sady Windows ADK | Sada Windows ADK pro Windows 10 |
-| Verze prostředí Windows PE pro spouštěcí bitové kopie přizpůsobitelné z konzoly Configuration Manager | Windows PE 10 |
-| Podporované verze prostředí Windows PE pro spouštěcí bitové kopie, *které nelze přizpůsobit* z konzoly Configuration Manager | – Windows PE 3,1<sup>[Poznámka 1](#bkmk_note1)</sup> <br> – Windows PE 5 |
+- Windows ADK verze: Windows ADK pro Windows 10
+
+- Verze prostředí Windows PE pro spouštěcí bitové kopie přizpůsobitelné z konzoly Configuration Manager: Windows PE 10
+
+- Podporované verze prostředí Windows PE pro spouštěcí bitové kopie, *které nelze přizpůsobit* z konzoly Configuration Manager
+
+  - Windows PE 3,1<sup>[Poznámka 1](#bkmk_note1)</sup>
+
+  - Windows PE 5
 
 Použijte například konzolu Configuration Manager k přizpůsobení spouštěcích imagí založených na Windows PE 10 od Windows ADK pro Windows 10. Spouštěcí bitovou kopii založenou na Windows PE 5 si můžete přizpůsobit z jiného počítače pomocí verze nástroje DISM z Windows ADK pro Windows 8. Pak přidejte vlastní spouštěcí bitovou kopii do konzoly Configuration Manager. Další informace najdete v následujících článcích:
 
@@ -158,7 +162,7 @@ Přidejte nebo odeberte ovladače zařízení v imagi nebo upravte vlastnosti sp
 
 4. Úpravou kteréhokoli z následujících nastavení můžete změnit chování spouštěcí bitové kopie.  
 
-#### <a name="images"></a>Image
+#### <a name="images"></a>Obrázky
 
 Pokud změníte vlastnosti spouštěcí bitové kopie pomocí externího nástroje, na kartě **bitové kopie** vyberte možnost **znovu načíst**.  
 

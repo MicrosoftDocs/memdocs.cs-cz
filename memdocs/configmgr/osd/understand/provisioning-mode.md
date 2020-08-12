@@ -5,17 +5,17 @@ description: Přečtěte si o režimu zřizování klientů během Configuration
 ms.date: 05/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.assetid: 3e3ff3a4-7a75-41bb-bdf9-33ede9c0e3a3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 815b32ecf7e9cd315c2365cb5ed73004b2a48718
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: b0039648c6f444efdbbaeb16f55d29b630ee7f16
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81723947"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88124266"
 ---
 # <a name="provisioning-mode"></a>Režim zřizování
 
@@ -42,9 +42,9 @@ Invoke-WmiMethod -Namespace root\CCM -Class SMS_Client -Name SetClientProvisioni
 
 Počínaje verzí 1902 pořadí úkolů nastaví časové razítko, když klient umístí do režimu zřizování. Každých 60 minut klient v režimu zřizování kontroluje dobu trvání od časového razítka. Pokud je v režimu zřizování více než 48 hodin, klient automaticky ukončí režim zřizování a restartuje jeho proces.
 
-48 hodin je výchozí hodnota časového limitu pro režim zřizování. Tento časovač můžete na zařízení upravit nastavením hodnoty **ProvisioningMaxMinutes** v následujícím klíči registru: `HKLM\Software\Microsoft\CCM\CcmExec`. Pokud tato hodnota neexistuje nebo je `0`, klient použije výchozí 48 hodin.
+48 hodin je výchozí hodnota časového limitu pro režim zřizování. Tento časovač můžete na zařízení upravit nastavením hodnoty **ProvisioningMaxMinutes** v následujícím klíči registru: `HKLM\Software\Microsoft\CCM\CcmExec` . Pokud tato hodnota neexistuje nebo je `0` , klient použije výchozí 48 hodin.
 
-Časové razítko **ProvisioningEnabledTime** se nachází v následujícím klíči registru: `HKLM\Software\Microsoft\CCM\CcmExec`. Časové razítko má hodnotu poslední čas, kdy počítač zadal režim zřizování. Formát je epocha (časové razítko v systému UNIX) a je v čase UTC.
+Časové razítko **ProvisioningEnabledTime** se nachází v následujícím klíči registru: `HKLM\Software\Microsoft\CCM\CcmExec` . Časové razítko má hodnotu poslední čas, kdy počítač zadal režim zřizování. Formát je epocha (časové razítko v systému UNIX) a je v čase UTC.
 
 Toto časové razítko se také resetuje na aktuální čas při ručním umístění počítače do režimu zřizování pomocí následujícího příkazu:
 

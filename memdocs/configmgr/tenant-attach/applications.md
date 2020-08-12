@@ -2,7 +2,7 @@
 title: Připojení klienta – aplikace (Preview) v centru pro správu
 titleSuffix: Configuration Manager
 description: Nainstalujte aplikace pro nahrané Configuration Manager zařízení z centra pro správu.
-ms.date: 08/10/2020
+ms.date: 08/11/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -10,12 +10,12 @@ ms.assetid: 963dda08-87b8-4e80-90a7-25625efe8861
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: c82feac1b9c841d90be66989c220c7b528597b7d
-ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
+ms.openlocfilehash: ca71d40b29a9dcd9c239ccd06a8a28321f50f62c
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88057571"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127681"
 ---
 # <a name="tenant-attach-install-an-application-from-the-admin-center-preview"></a><a name="bkmk_apps"></a>Připojení tenanta: instalace aplikace z centra pro správu (Preview)
 <!--cm 6024389, in 7220536 pubpreview Aug 10, 2020-->
@@ -35,6 +35,11 @@ Microsoft Endpoint Manager je integrované řešení pro správu všech vašich 
 - Povolit volitelnou funkci **schválit žádosti o aplikace pro uživatele na zařízení**. Další informace naleznete v části [Enable optional features from updates](../core/servers/manage/install-in-console-updates.md#bkmk_options).
 - Alespoň jedna aplikace nasazená na kolekci zařízení se **správcem musí schválit žádost o tuto aplikaci na** nastavení možnosti zařízení v nasazení. Další informace najdete v tématu [schvalování aplikací](../apps/deploy-use/app-approval.md#bkmk_opt).
    - Aplikace cílené na uživatele nebo aplikace bez nastavené možnosti schválení se nezobrazí v seznamu aplikací, pokud používáte Configuration Manager verze 2002.
+
+Kromě toho budete potřebovat následující pro instalaci [cílových aplikací pro uživatele](#bkmk_user):<!--7518897-->
+
+- Configuration Manager verze 2006 a je nainstalována odpovídající verze konzoly.
+
 
 ## <a name="permissions"></a>Oprávnění
 
@@ -72,7 +77,16 @@ Seznam aplikací můžete filtrovat podle stavu. Stav aplikace může být jedna
 - **Chyba**: instalace aplikace se nezdařila.
 - **Požadavky nejsou splněny**: požadavky na aplikaci nebyly splněny.
 - **Nenainstalováno**: aplikace není momentálně nainstalovaná. Tento stav se obvykle zobrazuje, pokud jiné nasazení nebo uživatel aplikaci odebrali.
+- **Čeká**se na restartování: aplikace je nainstalovaná, ale vyžaduje restart, aby bylo možné dokončit (počínaje verzí 2006).
 
+## <a name="deploy-an-application-to-a-user"></a><a name="bkmk_user"></a>Nasazení aplikace pro uživatele
+<!--7518897-->
+Od verze Configuration Manager 2006 se aplikace dostupné pro uživatele zobrazí v uzlu **aplikace** pro zařízení nástroje ConfigMgr. Seznam aplikací, které jsou k dispozici pro zařízení, zahrnuje také aplikace nasazené do aktuálně přihlášeného uživatele zařízení.
+
+Nasazení aplikací pro uživatele má následující omezení:
+- Scénáře relací s více uživateli nejsou podporovány.
+- Zařízení připojená k Azure AD nejsou momentálně podporovaná.
+   - Podporují se zařízení, která jsou připojená k doméně i připojená k Azure AD.
 
 ## <a name="next-steps"></a>Další kroky
 

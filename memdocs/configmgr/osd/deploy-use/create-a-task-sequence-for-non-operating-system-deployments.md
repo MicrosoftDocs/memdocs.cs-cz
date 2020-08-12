@@ -2,7 +2,7 @@
 title: Vytvoření pořadí úkolů pro nasazení jiného softwaru než operačního systému
 titleSuffix: Configuration Manager
 description: Vytváření pořadí úkolů, která nejsou pro nasazení operačního systému, jako je například distribuce softwaru nebo automatizace úloh
-ms.date: 04/01/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 92aaec8a-8751-442a-b64b-62ab05b5bf50
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 583a90452fe077057b93150e9cb635fe9269de5a
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1fcae4d520b1e81d0ef3470cd12ee68488b4f589
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81724241"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88125522"
 ---
 # <a name="create-a-task-sequence-for-non-os-deployments"></a>Vytvoření pořadí úkolů pro nasazení jiného softwaru než operačního systému
 
@@ -39,6 +39,8 @@ Výkon pořadí úkolů spočívá v jejich flexibilitě a způsobu jejich použ
 - Použití jednodušších kroků
 - Rozdělení akcí mezi více pořadí úloh
 - Vytvoření a otestování pořadí úloh pomocí postupného přístupu
+
+## <a name="supported-steps"></a>Podporované kroky
 
 Následující kroky se podporují pro použití ve vlastním pořadí úkolů nasazení bez OS:  
 
@@ -65,3 +67,7 @@ Následující kroky se podporují pro použití ve vlastním pořadí úkolů n
 - [Nastavit dynamické proměnné](../understand/task-sequence-steps.md#BKMK_SetDynamicVariables)  
 
 - [Nastavit proměnnou pořadí úloh](../understand/task-sequence-steps.md#BKMK_SetTaskSequenceVariable)  
+
+## <a name="next-steps"></a>Další kroky
+
+[Vytvoření vlastního pořadí úkolů](create-a-custom-task-sequence.md)

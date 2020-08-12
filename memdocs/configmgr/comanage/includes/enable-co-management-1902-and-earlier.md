@@ -4,15 +4,17 @@ ms.author: mstewart
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.topic: include
-ms.date: 08/23/2019
-ms.openlocfilehash: d8eaaa403bd1dd97214b4eff82be79d5c2a6566e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.date: 08/11/2020
+ms.openlocfilehash: 4c669bbbd9f996ae820f695925ba63cd6a92da2a
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81710885"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127293"
 ---
 <!--Don't apply H2/H3 in this include file since they are context driven by article-->
+Pokud chcete povolit spolusprávu pro Configuration Manager verze 1902 a starší, postupujte podle následujících pokynů:
+
 1. V konzole Configuration Manager otevřete pracovní prostor **Správa** , rozbalte položku **Cloud Services**a vyberte uzel **spoluspráva** . Klikněte na tlačítko **Konfigurovat spolusprávu** na pásu karet a otevřete tak **Průvodce konfigurací spolusprávy**.
 
 2. Na stránce **předplatné** v průvodci vyberte **Přihlásit**se. Přihlaste se k tenantovi Intune a pak vyberte **Další**.  
@@ -21,8 +23,7 @@ ms.locfileid: "81710885"
 
     Tato akce umožňuje automatický zápis klientů v Intune pro stávající klienty Configuration Manager. Když zvolíte **pilotní nasazení**, do Intune se automaticky zaregistrují jenom Configuration Manager klienti, kteří jsou členy pilotní kolekce. Tato možnost umožňuje povolit spolusprávu u podmnožiny klientů pro prvotní testování spolusprávy a zavedení spolusprávy pomocí dvoufázového přístupu. 
 
-    > [!Note]  
-    > Počínaje verzí 1806 není automatický zápis okamžitý pro všechny klienty. Toto chování pomáhá lépe škálovat registraci pro velká prostředí. Configuration Manager náhodně vyčíslit registraci na základě počtu klientů. Pokud má vaše prostředí například klienty 100 000, při povolení tohoto nastavení dojde k zápisu za několik dní.<!--1358003-->  
+    Automatický zápis není pro všechny klienty okamžitý. Toto chování pomáhá lépe škálovat registraci pro velká prostředí. Configuration Manager náhodně vyčíslit registraci na základě počtu klientů. Pokud má vaše prostředí například klienty 100 000, při povolení tohoto nastavení dojde k zápisu za několik dní.<!--1358003-->  
 
 4. Pro Internetová zařízení, která jsou už zaregistrovaná v Intune, zkopírujte a uložte příkazový řádek na stránce **Povolení** . Tento příkazový řádek můžete použít k instalaci klienta Configuration Manager jako aplikace v Intune. Pokud tento příkazový řádek neuložíte nyní, můžete si kdykoli projít konfiguraci spolusprávy a získat tento příkazový řádek.
 

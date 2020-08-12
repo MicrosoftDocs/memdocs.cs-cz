@@ -2,20 +2,20 @@
 title: Zobrazení sestav nástroje BitLocker
 titleSuffix: Configuration Manager
 description: Další informace o sestavách správy nástroje BitLocker v Configuration Manager
-ms.date: 11/29/2019
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 0bae9477-0500-41cf-8aa3-5e6efadd0554
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d10717f980922e1f6d1fca9224e288b4df709da2
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7c44ec9a9ed91d8543fedbdd5fba191b3989da19
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81717353"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129204"
 ---
 # <a name="view-bitlocker-reports"></a>Zobrazení sestav nástroje BitLocker
 
@@ -49,7 +49,7 @@ Ke všem těmto sestavám můžete přistupovat přímo z webu bodu služby Repo
 
 Pomocí této sestavy můžete shromažďovat informace, které jsou specifické pro určitý počítač. Poskytuje podrobné informace o šifrování pro jednotku operačního systému a všechny pevné datové jednotky. Chcete-li zobrazit podrobnosti o jednotlivých jednotkách, rozbalte položku název počítače. Označuje také zásadu, která se použije u každého typu jednotky v počítači.
 
-[![Příklad obrazovky sestavy dodržování předpisů pro počítače BitLockeru](media/bitlocker-computer-compliance.png)](media/bitlocker-computer-compliance.png#lightbox)
+:::image type="content" source="media/bitlocker-computer-compliance.png" alt-text="Příklad obrazovky sestavy dodržování předpisů pro počítače BitLockeru" lightbox="media/bitlocker-computer-compliance.png":::
 
 Pomocí této sestavy můžete také určit poslední známý stav šifrování BitLockeru u ztracených nebo odcizených počítačů. Configuration Manager určuje dodržování předpisů pro zařízení na základě zásad BitLockeru, které nasadíte. Předtím, než se pokusíte určit stav šifrování BitLockeru zařízení, ověřte zásady, které jste do něj nasadili.
 
@@ -58,7 +58,7 @@ Pomocí této sestavy můžete také určit poslední známý stav šifrování 
 
 ### <a name="computer-details"></a>Podrobnosti o počítači
 
-|Název&nbsp;sloupce|Popis|
+|&nbsp;Název sloupce|Popis|
 |----------------|----|
 |Název počítače|Název počítače DNS zadaného uživatelem.|
 |Název domény|Plně kvalifikovaný název domény počítače.|
@@ -75,13 +75,13 @@ Pomocí této sestavy můžete také určit poslední známý stav šifrování 
 |Síla šifrování zásad|Síla šifry, kterou jste vybrali v zásadách správy BitLockeru.|
 |Zásady: jednotka operačního systému|Určuje, zda je pro jednotku operačního systému a odpovídající typ ochrany vyžadováno šifrování.|
 |Zásada: pevná datová jednotka|Určuje, zda je pro pevnou datovou jednotku vyžadováno šifrování.|
-|Výrobce|Název výrobce počítače, jak se zobrazuje v počítači BIOS.|
+|Manufacturer|Název výrobce počítače, jak se zobrazuje v počítači BIOS.|
 |Model|Název modelu výrobce počítače, jak se zobrazuje v počítači BIOS.|
 |Uživatelé zařízení|Známé uživatele v počítači.|
 
 ### <a name="computer-volume"></a><a name="bkmk_volume"></a>Svazek počítače
 
-|Název&nbsp;sloupce|Popis|
+|&nbsp;Název sloupce|Popis|
 |----------------|----|
 |Písmeno jednotky|Písmeno jednotky v počítači.|
 |Typ jednotky|Typ jednotky Platné hodnoty jsou **jednotka operačního systému** a **pevná datová jednotka**. Tyto položky jsou fyzické jednotky namísto logických svazků.|
@@ -100,7 +100,7 @@ Tato sestava obsahuje následující grafy, které znázorňují stav dodržová
 
 - Distribuce stavu dodržování předpisů podle typu jednotky
 
-[![Příklad obrazovky řídicího panelu kompatibility Enterprise nástroje BitLocker](media/bitlocker-enterprise-compliance-dashboard.png)](media/bitlocker-enterprise-compliance-dashboard.png#lightbox)
+:::image type="content" source="media/bitlocker-enterprise-compliance-dashboard.png" alt-text="Příklad obrazovky řídicího panelu kompatibility Enterprise nástroje BitLocker" lightbox="media/bitlocker-enterprise-compliance-dashboard.png":::
 
 ### <a name="compliance-status-distribution"></a>Distribuce stavu dodržování předpisů
 
@@ -118,7 +118,7 @@ Výsečový graf zobrazuje následující stavy dodržování předpisů:
 
 - Zásady nejsou vynutily.
 
-- Neznámý. Tyto počítače oznámily chybu stavu nebo jsou součástí kolekce, ale jejich stav dodržování předpisů nikdy neohlásil. Pokud je počítač odpojen od organizace, může dojít k nedostatku stavu dodržování předpisů.
+- Neznámý Tyto počítače oznámily chybu stavu nebo jsou součástí kolekce, ale jejich stav dodržování předpisů nikdy neohlásil. Pokud je počítač odpojen od organizace, může dojít k nedostatku stavu dodržování předpisů.
 
 ### <a name="non-compliant---errors-distribution"></a>Nekompatibilní distribuce – distribuce chyb
 
@@ -148,7 +148,7 @@ Tento pruhový graf znázorňuje aktuální stav dodržování předpisů BitLoc
 
 Tato sestava obsahuje informace o celkovém dodržování předpisů BitLockerem v celé organizaci pro kolekci počítačů, do kterých jste nasadili zásady správy BitLockeru.
 
-[![Příklad obrazovky s podrobnostmi o kompatibilitě nástroje BitLocker Enterprise](media/bitlocker-enterprise-compliance-details.png)](media/bitlocker-enterprise-compliance-details.png#lightbox)
+:::image type="content" source="media/bitlocker-enterprise-compliance-details.png" alt-text="Příklad obrazovky s podrobnostmi o kompatibilitě nástroje BitLocker Enterprise" lightbox="media/bitlocker-enterprise-compliance-details.png":::
 
 |Název sloupce|Popis|
 |--- |--- |
@@ -180,7 +180,7 @@ Tato sestava obsahuje informace o celkovém dodržování předpisů BitLockerem
 
 Pomocí této sestavy můžete zobrazit celkové dodržování předpisů BitLockeru napříč vaší organizací. Zobrazuje také dodržování předpisů pro jednotlivé počítače, do kterých jste nasadili zásady správy BitLockeru.
 
-[![Příklad obrazovky souhrnu kompatibility Enterprise nástroje BitLocker](media/bitlocker-enterprise-compliance-summary.png)](media/bitlocker-enterprise-compliance-summary.png#lightbox)
+:::image type="content" source="media/bitlocker-enterprise-compliance-summary.png" alt-text="Příklad obrazovky souhrnu kompatibility Enterprise nástroje BitLocker" lightbox="media/bitlocker-enterprise-compliance-summary.png":::
 
 |Název sloupce|Popis|
 |--- |--- |
@@ -199,9 +199,7 @@ Pomocí této sestavy můžete zobrazit celkové dodržování předpisů BitLoc
 ## <a name="recovery-audit-report"></a><a name="bkmk-audit"></a>Sestava auditu obnovení
 
 > [!NOTE]
-> Tato sestava je k dispozici také na [webu Správa a monitorování nástroje BitLocker](helpdesk-portal.md#reports).
->
-> Chcete-li zobrazit tuto sestavu v konzole Configuration Manager, přejdete do pracovního prostoru **monitorování** . V navigačním podokně rozbalte uzel **vytváření sestav** , rozbalte položku **sestavy**a poté rozbalte složku **Správa nástroje BitLocker** . Vyberte podsložku pro lokalizovanou verzi sestavy, například **en-US**.
+> Počínaje verzí 2002 Tato sestava je k dispozici pouze na [webu Správa a monitorování nástroje BitLocker](helpdesk-portal.md#reports).<!-- 7629549 -->
 
 Pomocí této sestavy můžete auditovat uživatele, kteří požadovali přístup k klíčům pro obnovení BitLockeru. Filtrovat můžete podle následujících kritérií:
 
@@ -210,9 +208,9 @@ Pomocí této sestavy můžete auditovat uživatele, kteří požadovali příst
 - Konkrétní typ požadovaného klíče: heslo obnovovacího klíče, ID obnovovacího klíče nebo hodnota hash hesla čipu TPM
 - Rozsah dat, během kterého došlo k načtení
 
-[![Ukázkový snímek sestavy auditu pro obnovení BitLockeru](media/bitlocker-recovery-audit-report.png)](media/bitlocker-recovery-audit-report.png#lightbox)
+:::image type="content" source="media/bitlocker-recovery-audit-report.png" alt-text="Ukázkový snímek sestavy auditu pro obnovení BitLockeru" lightbox="media/bitlocker-recovery-audit-report.png":::
 
-|Název&nbsp;sloupce|Popis|
+|&nbsp;Název sloupce|Popis|
 |----------------|----|
 |Datum a čas požadavku|Datum a čas, kdy koncový uživatel nebo uživatel Helpdesk požádal o klíč.|
 |Zdroj žádosti o audit|Lokalita, ze které pochází požadavek. Platné hodnoty jsou **Samoobslužný portál** nebo **Helpdesk**.|

@@ -5,17 +5,17 @@ description: Předzřízení úlohy nástroje BitLocker v nástroji Configuratio
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: c7c94ba0-d709-4129-8077-075a8abaea1c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8d032cdd55296affc919c5e039de9444c96979d9
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: e9e9acb35354e9962fe838964d3afad0bacceace
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81723821"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88124939"
 ---
 # <a name="preprovision-bitlocker-in-windows-pe-with-configuration-manager"></a>Předzřízení nástroje BitLocker v prostředí Windows PE s Configuration Manager
 
