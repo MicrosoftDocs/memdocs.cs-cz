@@ -6,31 +6,34 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 3/19/2020
+ms.date: 08/11/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
 ms.technology: ''
+ROBOTS: NOINDEX
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 369e856b26ecbf8a7d6d7f8c0a87a9bfdf69e318
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: f5bd00f12ab0f015c6408e2bbc934e1320c7540e
+ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80086931"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88146133"
 ---
 # <a name="email-profile-settings-in-microsoft-intune-for-devices-running-windows-phone-81"></a>Nastavení e-mailového profilu v Microsoft Intune pro zařízení s Windows Phone 8.1
+
+[!INCLUDE [windows-phone-81-windows-10-mobile-support](../includes/windows-phone-81-windows-10-mobile-support.md)]
 
 Tento článek ukazuje nastavení e-mailového profilu, která můžete konfigurovat pro zařízení s Windows Phone 8.1.
 
 >[!IMPORTANT]
 >Pro zařízení s Windows 10 se taky používají e-mailové profily Windows Phone 8,1.
 
-## <a name="before-you-begin"></a>Před zahájením
+## <a name="before-you-begin"></a>Než začnete
 
 [Vytvořte e-mailový profil Windows Phone 8,1](email-settings-configure.md).
 
@@ -39,16 +42,16 @@ Tento článek ukazuje nastavení e-mailového profilu, která můžete konfigur
 - **E-mailový server**: Zadejte název hostitele vašeho Exchange serveru. Zadejte například `outlook.office365.com`.
 - **Název účtu**: Zadejte zobrazovaný název e-mailového účtu. Tento název se zobrazuje uživatelům na jejich zařízeních.
 - **Atribut uživatelského jména z AAD**: Toto jméno je atribut, který Intune získá od služby Azure Active Directory (AAD). Intune dynamicky vygeneruje uživatelské jméno, které tento profil používá. Možnosti:
-  - **Hlavní název uživatele**: Získá název, například `user1` nebo. `user1@contoso.com`
-  - **Primární adresa SMTP**: Získá název ve formátu e-mailové adresy, `user1@contoso.com`například.
+  - **Hlavní název uživatele**: Získá název, například `user1` nebo `user1@contoso.com` .
+  - **Primární adresa SMTP**: Získá název ve formátu e-mailové adresy, například `user1@contoso.com` .
   - **Název účtu SAM**: Vyžaduje doménu, například `domain\user1`. Dále zadejte:
     - **Zdroj názvu domény uživatele**: vaše možnosti:
       - **AAD** (Azure Active Directory): zadejte **atribut názvu domény uživatele z AAD**. Vyberte, chcete-li získat **úplný název domény** nebo atribut **názvu rozhraní NetBIOS** uživatele.
-      - **Vlastní**: zadejte **název vlastní domény, který se má použít**. Zadejte hodnotu, kterou Intune používá pro název domény, například `contoso.com` nebo. `contoso`
+      - **Vlastní**: zadejte **název vlastní domény, který se má použít**. Zadejte hodnotu, kterou Intune používá pro název domény, například `contoso.com` nebo `contoso` .
 
 - **Atribut e-mailové adresy z AAD**: Intune získá tento atribut z Azure Active Directory (AAD). Vyberte způsob generování e-mailové adresy uživatele. Možnosti:
-  - **Hlavní název uživatele**: jako e-mailová adresa používá úplný hlavní název, jako `user1@contoso.com` je `user1`například nebo.
-  - **Primární adresa SMTP**: používá primární adresu SMTP pro přihlášení k Exchangi, jako je například `user1@contoso.com`.
+  - **Hlavní název uživatele**: jako e-mailová adresa používá úplný hlavní název, jako je například `user1@contoso.com` nebo `user1` .
+  - **Primární adresa SMTP**: používá primární adresu SMTP pro přihlášení k Exchangi, jako je například `user1@contoso.com` .
 
 ## <a name="security-settings"></a>Nastavení zabezpečení
 

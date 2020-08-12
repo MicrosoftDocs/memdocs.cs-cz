@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/14/2020
+ms.date: 08/11/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a91a84ece833bf893395e494a0e99fa675f14c2a
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 8d050139ae017f5800670518a41d75fba469ceac
+ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83429646"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88146469"
 ---
 # <a name="windows-10-and-newer-device-settings-to-upgrade-editions-or-enable-s-mode-in-intune"></a>Nastavení zařízení s Windows 10 (a novější) pro upgrade edice nebo povolení režimu S v Intune
 
@@ -32,7 +32,7 @@ V rámci řešení pro správu mobilních zařízení (MDM) použijte Tato nasta
 
 Další informace o této funkci najdete v tématu [upgrade edice Windows 10 nebo povolení režimu S](edition-upgrade-configure-windows-10.md).
 
-## <a name="before-you-begin"></a>Před zahájením
+## <a name="before-you-begin"></a>Než začnete
 
 [Vytvořte profil](edition-upgrade-configure-windows-10.md#create-the-profile).
 
@@ -40,7 +40,7 @@ Další informace o této funkci najdete v tématu [upgrade edice Windows 10 neb
 
 - **Edice, na kterou se má upgradovat:** Vyberte edici Windows 10, na kterou upgradujete. Zařízení, pro která zásada platí, se upgradují na vámi vybranou edici.
 - **Kód Product Key:** Zadejte kód Product Key, který jste dostali od Microsoftu. Po vytvoření zásady s kódem Product Key nepůjde kód aktualizovat. Kód je také z bezpečnostních důvodů skrytý. Pokud chcete kód Product Key změnit, zadejte ho celý znovu.
-- **Soubor s licencí**: U edice **Windows 10 Holographic for Business** nebo **Windows 10 Mobile** zvolte **Procházet** a vyberte licenční soubor, který jste dostali od Microsoftu. Tento soubor s licencí obsahuje informace o licencích pro edice, na které zařízení upgradujete.
+- **Soubor s licencí**: pro **Windows 10 holografick pro firmy**zvolte **Procházet** a vyberte soubor s licencí, který jste dostali od Microsoftu. Tento soubor s licencí obsahuje informace o licencích pro edice, na které zařízení upgradujete.
 
 ## <a name="mode-switch"></a>Přepínač režimu
 

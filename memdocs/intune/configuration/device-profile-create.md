@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/11/2020
+ms.date: 08/11/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 886f572212a1af3e38fd5ea10afa21ce24c23411
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: bd1cb0445ceb4c9434b93949973125422aa1df19
+ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093295"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88146418"
 ---
 # <a name="create-a-device-profile-in-microsoft-intune"></a>Vytvořte profil zařízení v Microsoft Intune
 
@@ -52,7 +52,6 @@ Když vytváříte profil (**konfigurační profily**  >  **vytvoří profil**),
 - **macOS**
 - **Windows 10 a novější**
 - **Windows 8.1 a vyšší**
-- **Windows Phone 8.1**
 
 Pak zvolte typ profilu. Nastavení, která můžete konfigurovat, se liší podle zvolené platformy. Následující články popisují nastavení pro různé typy profilů:
 
@@ -66,7 +65,7 @@ Pak zvolte typ profilu. Nastavení, která můžete konfigurovat, se liší podl
 - [Připojení k doméně (Windows)](domain-join-configure.md)
 - [Upgrade edice a přepínač režimu (Windows)](edition-upgrade-configure-windows-10.md)
 - [Vzdělávání (iOS, iPadOS)](../fundamentals/education-settings-configure-ios.md)
-- [E-mailu](email-settings-configure.md)
+- [E-mail](email-settings-configure.md)
 - [Endpoint Protection (macOS, Windows)](../protect/endpoint-protection-configure.md)
 - [Rozšíření (macOS)](kernel-extensions-overview-macos.md)
 - [Identity Protection (Windows)](../protect/identity-protection-configure.md)

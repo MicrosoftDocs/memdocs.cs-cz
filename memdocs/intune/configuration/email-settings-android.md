@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 08/11/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 36e17dc12622b3bb95c35a4472556f1c4f31ccd0
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 195e7d42a7244976e7a631c0e8397875b8541273
+ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80087013"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88146044"
 ---
 # <a name="android-device-settings-to-configure-email-authentication-and-synchronization-in-intune"></a>Nastavení zařízení s Androidem pro konfiguraci e-mailu, ověřování a synchronizace v Intune
 
@@ -30,7 +30,7 @@ Jako správce Intune můžete vytvořit a přiřadit nastavení e-mailu pro zař
 
 Další informace o e-mailových profilech v Intune najdete v tématu [Konfigurace nastavení e-mailu](email-settings-configure.md).
 
-## <a name="before-you-begin"></a>Před zahájením
+## <a name="before-you-begin"></a>Než začnete
 
 [Vytvořte profil konfigurace zařízení](email-settings-configure.md).
 
@@ -39,8 +39,8 @@ Další informace o e-mailových profilech v Intune najdete v tématu [Konfigura
 - **E-mailový server**: Zadejte název hostitele vašeho Exchange serveru. Zadejte například `outlook.office365.com`.
 - **Název účtu**: Zadejte zobrazovaný název e-mailového účtu. Tento název se zobrazuje uživatelům na jejich zařízeních.
 - **Atribut uživatelského jména z AAD**: Toto jméno je atribut, který Intune získá z Azure Active Directory (Azure AD). Intune dynamicky vygeneruje uživatelské jméno, které tento profil používá. Možnosti:
-  - **Hlavní název uživatele**: Získá název, například `user1` nebo. `user1@contoso.com`
-  - **Uživatelské jméno**: Získá jenom název, třeba `user1`.
+  - **Hlavní název uživatele**: Získá název, například `user1` nebo `user1@contoso.com` .
+  - **Uživatelské jméno**: Získá jenom název, třeba `user1` .
   - **Název účtu SAM**: Vyžaduje doménu, například `domain\user1`. název účtu sAM se používá jenom u zařízení s Androidem. Dále zadejte:  
     - **Zdroj názvu domény uživatele**: Zvolte **AAD** (Azure Active Directory) nebo **Vlastní**.
 
@@ -48,11 +48,11 @@ Další informace o e-mailových profilech v Intune najdete v tématu [Konfigura
       - **Atribut názvu domény uživatele z AAD**: vyberte, chcete-li získat **úplný název domény** nebo atribut **názvu NetBIOS** pro uživatele.
 
       Pokud se rozhodnete použít **Vlastní** atributy, zadejte:
-      - **Vlastní název domény, který se má použít**: zadejte hodnotu, kterou Intune používá pro název domény, `contoso.com` například `contoso`nebo.
+      - **Vlastní název domény, který se má použít**: zadejte hodnotu, kterou Intune používá pro název domény, například `contoso.com` nebo `contoso` .
 
 - **Atribut e-mailové adresy z AAD**: Tento název je atribut e-mailu, který Intune získá z Azure AD. Intune dynamicky generuje e-mailovou adresu, kterou používá tento profil. Možnosti:
-  - **Hlavní název uživatele**: používá jako e-mailovou adresu úplný `user1@contoso.com` hlavní `user1`název, jako je například nebo.
-  - **Primární adresa SMTP**: pomocí primární adresy SMTP, například `user1@contoso.com`, se přihlaste k Exchangi.
+  - **Hlavní název uživatele**: používá `user1@contoso.com` `user1` jako e-mailovou adresu úplný hlavní název, jako je například nebo.
+  - **Primární adresa SMTP**: pomocí primární adresy SMTP, například, se `user1@contoso.com` přihlaste k Exchangi.
 
 - **Metoda ověřování**: Jako metodu ověřování používanou e-mailovým profilem vyberte buď **Uživatelské jméno a heslo**, nebo **Certifikáty**.
   - Pokud vyberete **Certifikát**, vyberte profil certifikátu SCEP nebo PKCS klienta, který jste dříve vytvořili za účelem ověřování připojení Exchange.
@@ -81,4 +81,4 @@ Další informace o e-mailových profilech v Intune najdete v tématu [Konfigura
 
 [Přiřaďte profil](device-profile-assign.md) a [monitorujte jeho stav](device-profile-monitor.md).
 
-Můžete také vytvořit e-mailové profily pro [Android Enterprise – Work Profile](email-settings-android-enterprise.md), [iOS/iPadOS](email-settings-ios.md), [Windows 10 a novější](email-settings-windows-10.md)a [Windows Phone 8,1](email-settings-windows-phone-8-1.md).
+Můžete také vytvořit e-mailové profily pro [Android Enterprise – Work Profile](email-settings-android-enterprise.md), [iOS/iPadOS](email-settings-ios.md)a [Windows 10 a novější](email-settings-windows-10.md).

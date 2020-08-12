@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/20/2020
+ms.date: 08/11/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5bb01770909192b17f0e72b852e4094ff7ad3a04
-ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
+ms.openlocfilehash: de260f56753e292ed95ac22c76b9cc16457c981b
+ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86565644"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88145993"
 ---
 # <a name="add-email-settings-to-devices-using-intune"></a>Přidání nastavení e-mailu do zařízení pomocí Intune
 
@@ -33,8 +33,7 @@ E-mailové profily umožňují nakonfigurovat nastavení integrovaného e-mailu 
 - Android Enterprise
 - iOS 11,0 a novější
 - iPadOS 13,0 a novější
-- Windows Phone 8,1 a novější
-- Windows 10 (pro stolní počítače) a Windows 10 Mobile
+- Windows 10 (Desktop)
 
 V tomto článku se dozvíte, jak vytvořit e-mailový profil v Microsoft Intune. Obsahuje také odkazy na různé platformy s podrobnějším nastavením.
 
@@ -50,7 +49,6 @@ V tomto článku se dozvíte, jak vytvořit e-mailový profil v Microsoft Intune
         - **Android Enterprise**
         - **iOS/iPadOS**
         - **Windows 10 a novější**
-        - **Windows Phone 8.1**
 
     - **Profil**: vyberte **e-mail**.
 
@@ -68,7 +66,6 @@ V tomto článku se dozvíte, jak vytvořit e-mailový profil v Microsoft Intune
     - [Android Enterprise](email-settings-android-enterprise.md)
     - [iOS/iPadOS](email-settings-ios.md)
     - [Windows 10](email-settings-windows-10.md)
-    - [Windows Phone 8.1](email-settings-windows-phone-8-1.md)
 
 8. Vyberte **Další**.
 9. V části **značky oboru** (volitelné) přiřaďte značku pro filtrování profilu pro konkrétní IT skupiny, například `US-NC IT Team` nebo `JohnGlenn_ITDepartment` . Další informace o značkách oboru naleznete v tématu [použití značek RBAC a Scope pro distribuci](../fundamentals/scope-tags.md).

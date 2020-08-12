@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/17/2020
+ms.date: 08/11/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: a0d1ee33e3aca6dbb6ff6e349eb9a578aad6ae88
-ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
+ms.openlocfilehash: 36dca5ce8bb0fc3523bcd72441e3ecf22931609b
+ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88048068"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88146027"
 ---
 # <a name="attack-surface-reduction-policy-settings-for-endpoint-security-in-intune"></a>Nastavení zásad pro omezení možností útoku pro zabezpečení koncového bodu v Intune
 
@@ -177,11 +177,14 @@ Podporované platformy a profily:
 ### <a name="microsoft-defender-application-control"></a>Řízení aplikací v programu Microsoft Defender
 
 - **Řízení aplikací v aplikaci Locker**  
+  CSP: [AppLocker](https://docs.microsoft.com/windows/client-management/mdm/applocker-csp)
+
   - **Nenakonfigurováno** (*výchozí*)
   - **Vynutilit komponenty a aplikace ze Storu**
   - **Komponenty auditu a aplikace pro Store**
   - **Vynutilit komponenty, aplikace pro Store a Smartlocker**
-  - **Auditovat komponenty, aplikace pro Store a Smartlocker** CSP: [CSP pro AppLocker](https://docs.microsoft.com/windows/client-management/mdm/applocker-csp)
+  - **Auditovat komponenty, aplikace pro Store a Smartlocker**
+   
 
 - **Zablokovat uživatelům ignorovat upozornění filtru SmartScreen**  
   CSP: [SmartScreen/PreventOverrideForFilesInShell](https://go.microsoft.com/fwlink/?linkid=872783)

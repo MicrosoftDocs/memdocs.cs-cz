@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/20/2020
+ms.date: 08/11/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 25b07dcbb76f6d4a8aae964d0123a880d179784e
-ms.sourcegitcommit: 2e0bc4859f7e27dea20c6cc59d537a31f086c019
+ms.openlocfilehash: a92abc89dca291cd42a66c284bee5f1f4007836b
+ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871929"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88145874"
 ---
 # <a name="add-and-use-wi-fi-settings-on-your-devices-in-microsoft-intune"></a>Přidání a použití nastavení Wi-Fi na zařízeních v Microsoft Intune
 
@@ -44,7 +44,7 @@ Profily Wi-Fi podporují zařízení s následujícími platformami:
 - iOS 11,0 a novější
 - iPadOS 13,0 a novější
 - macOS X 10,12 a novější
-- Windows 10 a novější, Windows 10 Mobile a Windows Holografick pro firmy
+- Windows 10 a novější a Windows Holografick pro firmy
 
 > [!NOTE]
 > Pro zařízení s Windows 8.1 můžete importovat konfiguraci Wi-Fi, kterou předtím vyexportujete z jiného zařízení.

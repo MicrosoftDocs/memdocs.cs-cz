@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/13/2020
+ms.date: 08/11/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b846aa1ead9bb2d1c1b15d783e646e59047c16ee
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 0e18395aae96adec3bf4bbf60bdcccdd205dc90d
+ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988412"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88146333"
 ---
 # <a name="upgrade-windows-10-editions-or-switch-out-of-s-mode-on-devices-using-microsoft-intune"></a>Upgradovat edice Windows 10 nebo zapínat na zařízeních v režimu S použitím Microsoft Intune
 
@@ -45,12 +45,12 @@ Tento článek obsahuje seznam podporovaných cest upgradu a ukazuje, jak vytvo�
 > [!NOTE]
 > Pokud přiřazení zásady odeberete později, verze Windows na zařízení se nevrátí. Zařízení bude nadále fungovat normálně.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 Před upgradem zařízení se ujistěte, že máte následující požadavky:
 
 - Platný kód Product Key k instalaci aktualizované verze Windows na všechna zařízení, na která touto zásadou cílíte (pro edice Windows 10 Desktop). Můžete využít klíče k vícenásobné aktivaci (MAK) nebo kódy serveru správy klíčů (KMS).
-- Pro edice Windows 10 Mobile a Windows 10 je možné použít soubor s licencí společnosti Microsoft. Soubor s licencí obsahuje licenční informace pro instalaci aktualizované edice na všechna zařízení, na která tato zásada cílíte.
+- Pro Windows 10 holografické edice můžete použít licenční soubor Microsoftu. Soubor s licencí obsahuje licenční informace pro instalaci aktualizované edice na všechna zařízení, na která tato zásada cílíte.
 - Zařízení s Windows 10, kterým zásady přiřazujete, jsou zaregistrovaná v Microsoft Intune. Zásadu upgradu edice nemůžete použít u počítačů s klientským softwarem Intune pro počítače.
 
 ## <a name="supported-upgrade-paths"></a>Podporované možnosti upgradu
@@ -70,7 +70,6 @@ V následující tabulce jsou podporované cesty upgradu pro profil upgradu edic
 | Windows 10 Core | Windows 10 Education <br/>Windows 10 Enterprise <br/>Windows 10 Pro Education | 
 | Edice Windows 10 Core N | Edice Windows 10 Education N <br/>Edice Windows 10 Enterprise N <br/>Edice Windows 10 Pro Education N | 
 | Windows 10 Holographic | Windows 10 Holographic for Business |
-| Windows 10 Mobile | Windows 10 Mobile Enterprise |
 
 <!--The following table provides information about the supported upgrade paths for Windows 10 editions in this policy:
 

@@ -1,11 +1,11 @@
 ---
 title: Používání vlastního nastavení zařízení v Microsoft Intune – Azure | Microsoft Docs
-description: Přidejte nebo vytvořte profil pro použití vlastního nastavení pro Windows Phone, Windows 8.1, Windows 10 a novější, Správce zařízení s Androidem, Android Enterprise, macOS a zařízení s iOS/iPadOS pomocí Microsoft Intune.
+description: Přidejte nebo vytvořte profil pro použití vlastního nastavení pro Windows 8.1, zařízení s Windows 10 a novějším, Správce zařízení s Androidem, Android Enterprise, macOS a iOS/iPadOS pomocí Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/18/2020
+ms.date: 08/11/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ddbb82d3cd5c86ff32917013edd4f16b303678fe
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: aaa0deaf2c6332965f40ae02a47b7541cf2f9e8e
+ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990095"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88146401"
 ---
 # <a name="create-a-profile-with-custom-settings-in-intune"></a>Vytvoření profilu s vlastním nastavením v Intune
 
@@ -45,7 +45,6 @@ V tomto článku se dozvíte, jak vytvořit vlastní profil pro správce zaříz
         - **iOS/iPadOS**
         - **macOS**
         - **Windows 10 a novější**
-        - **Windows Phone 8.1**
 
     - **Profil**: vyberte **vlastní**.
 
@@ -65,7 +64,6 @@ V tomto článku se dozvíte, jak vytvořit vlastní profil pro správce zaříz
     - [macOS](custom-settings-macos.md)
     - [Windows 10](custom-settings-windows-10.md)
     - [Windows Holographic for Business](custom-settings-windows-holographic.md)
-    - [Windows Phone 8.1](custom-settings-windows-phone-8-1.md)
 
 8. Vyberte **Další**.
 9. V části **značky oboru** (volitelné) přiřaďte značku pro filtrování profilu pro konkrétní IT skupiny, například `US-NC IT Team` nebo `JohnGlenn_ITDepartment` . Další informace o značkách oboru naleznete v tématu [použití značek RBAC a Scope pro distribuci](../fundamentals/scope-tags.md).

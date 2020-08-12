@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/28/2020
+ms.date: 08/11/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 72d0345c91f525fb6dc28adeabe8522801c51a9f
-ms.sourcegitcommit: 19f5838eb3eb8724d22382f36f9564ac9a978b97
+ms.openlocfilehash: 649b9417f349509e4d1630d0cfecfe8e5b6b1430
+ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87365419"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88146486"
 ---
 # <a name="create-vpn-profiles-to-connect-to-vpn-servers-in-intune"></a>Vytvoření profilů sítě VPN pro připojení k serverům VPN v Intune
 
@@ -37,9 +37,7 @@ Chcete například nakonfigurovat všechna zařízení s iOS/iPadOS s požadovan
 >
 > * Android 4 nebo novější
 > * Zaregistrovaná zařízení se systémem Windows 8.1 a novějším
-> * Windows Phone 8.1 nebo novější
 > * Zaregistrovaná zařízení s desktopovým systémem Windows 10
-> * Windows 10 Mobile
 > * Windows Holographic for Business
 
 ## <a name="vpn-connection-types"></a>Typy připojení VPN
@@ -57,7 +55,6 @@ Profily VPN můžete vytvářet pomocí následujících typů připojení:
   - macOS
   - Windows 10
   - Windows 8.1
-  - Windows Phone 8.1
 
 - Cisco AnyConnect
   - Správce zařízení s Androidem
@@ -90,7 +87,6 @@ Profily VPN můžete vytvářet pomocí následujících typů připojení:
   - macOS
   - Windows 10
   - Windows 8.1
-  - Windows Phone 8.1
 
 - IKEv2
   - iOS/iPadOS
@@ -115,7 +111,6 @@ Profily VPN můžete vytvářet pomocí následujících typů připojení:
   - iOS/iPadOS
   - Windows 10
   - Windows 8.1
-  - Windows Phone 8.1
 
 - SonicWall Mobile Connect
   - Správce zařízení s Androidem
@@ -125,7 +120,6 @@ Profily VPN můžete vytvářet pomocí následujících typů připojení:
   - macOS
   - Windows 10
   - Windows 8.1
-  - Windows Phone 8.1
 
 - Zscaler
   - Android Enterprise Working Profiles: použití [zásad konfigurace aplikací](../apps/app-configuration-vpn-ae.md)
@@ -149,7 +143,6 @@ Profily VPN můžete vytvářet pomocí následujících typů připojení:
       - **macOS**
       - **Windows 10 a novější**
       - **Windows 8.1 a vyšší**
-      - **Windows Phone 8.1**
     - **Profil**: vyberte **VPN**.
 
 4. Vyberte **Vytvořit**.
@@ -167,7 +160,6 @@ Profily VPN můžete vytvářet pomocí následujících typů připojení:
     - [macOS](vpn-settings-macos.md)
     - [Windows 10](vpn-settings-windows-10.md) (včetně Windows holografického pro firmy)
     - [Windows 8.1](vpn-settings-windows-8-1.md)
-    - [Windows Phone 8.1](vpn-settings-windows-phone-8-1.md)
 
 8. Vyberte **Další**.
 9. V části **značky oboru** (volitelné) přiřaďte značku pro filtrování profilu pro konkrétní IT skupiny, například `US-NC IT Team` nebo `JohnGlenn_ITDepartment` . Další informace o značkách oboru naleznete v tématu [použití značek RBAC a Scope pro distribuci](../fundamentals/scope-tags.md).

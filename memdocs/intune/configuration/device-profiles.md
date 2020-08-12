@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/11/2020
+ms.date: 08/11/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5bf114edf17fa1f8959b5f26b83c771b711b83f5
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 43101602defab75c15c542ec922cba6f2bf96cf0
+ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093173"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88146316"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Použití funkcí a nastavení v zařízeních pomocí profilů zařízení v Microsoft Intune
 
@@ -59,7 +59,6 @@ Tato funkce podporuje:
 - Android Enterprise
 - iOS/iPadOS
 - macOS
-- Windows Phone 8.1
 - Windows 8.1
 - Windows 10 a novější
 
@@ -73,7 +72,6 @@ Tato funkce podporuje:
 - Android Enterprise
 - iOS/iPadOS
 - macOS
-- Windows Phone 8.1
 
 ## <a name="delivery-optimization"></a>Optimalizace doručení
 
@@ -146,7 +144,7 @@ Tato funkce podporuje:
 
 [Nastavení vzdělávání – iOS/iPadOS](../fundamentals/education-settings-configure-ios-shared.md) používá aplikaci učebny pro iOS/iPadOS k seznámení s učením a řízení zařízení studenta v učebně. Můžete nakonfigurovat zařízení iPad, aby mohli několik studentů sdílet jedno zařízení.
 
-## <a name="email"></a>E-mailu
+## <a name="email"></a>E-mail
 
 [Nastavení e-mailu](email-settings-configure.md) vytvoří, přiřadí a monitoruje nastavení e-mailů Exchange ActiveSync na zařízeních. E-mailové profily vám pomůžou s konzistencí, omezit volání podpory a umožnit koncovým uživatelům přístup k firemnímu e-mailu na svých osobních zařízeních, aniž by museli nastavovat. 
 
@@ -155,7 +153,6 @@ Tato funkce podporuje:
 - Správce zařízení s Androidem
 - Android Enterprise
 - iOS/iPadOS
-- Windows Phone 8.1
 - Windows 10 a novější
 
 ## <a name="endpoint-protection"></a>Ochrana koncového bodu
@@ -187,7 +184,7 @@ Tato funkce podporuje:
 
 ## <a name="identity-protection"></a>Ochrana identit
 
-[Ochrana identit](../protect/identity-protection-configure.md) řídí prostředí Windows Hello pro firmy na zařízeních s Windows 10 a Windows 10 Mobile. Konfigurací těchto nastavení můžete zpřístupnit Windows Hello pro firmy uživatelům a zařízením a specifikovat požadavky na PIN kódy a gesta zařízení.  
+[Identity Protection](../protect/identity-protection-configure.md) řídí prostředí Windows Hello pro firmy na zařízeních s Windows 10. Konfigurací těchto nastavení můžete zpřístupnit Windows Hello pro firmy uživatelům a zařízením a specifikovat požadavky na PIN kódy a gesta zařízení.  
 
 Tato funkce podporuje:  
 
@@ -278,7 +275,6 @@ Tato funkce podporuje:
 - Android Enterprise
 - iOS/iPadOS
 - macOS
-- Windows Phone 8.1
 - Windows 8.1
 - Windows 10 a novější
 

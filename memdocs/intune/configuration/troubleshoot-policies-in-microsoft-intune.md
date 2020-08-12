@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8ee0603a96d7276e9e1ef0fb9bff60ac44a3ef84
-ms.sourcegitcommit: 64727a4b025a589e270842da39516c4c42563a34
+ms.openlocfilehash: bc307f22e3caa77357d8d3054a432c8d42c38fc4
+ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84301380"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88146503"
 ---
 # <a name="troubleshoot-policies-and-profiles-and-in-intune"></a>Řešení potíží se zásadami a profily a v Intune
 
@@ -144,7 +144,7 @@ V závislosti na platformě zařízení může být potřeba resetovat zásady z
 
 Například v Windows 8.1 na ploše potáhnutím prstem zprava otevřete panel **ovládací tlačítka** . Vyberte **Nastavení**  >  **Control Panel**  >  **uživatelské účty**na ovládacím panelu. Na levé straně vyberte odkaz **Resetovat zásady zabezpečení** a zvolte **Resetovat zásady**.
 
-Jiné platformy, jako jsou Android, iOS/iPadOS a Windows Phone 8,1, může být potřeba vyřadit a znovu zaregistrovat, aby bylo možné použít méně omezující zásadu.
+Jiné platformy, například Android a iOS/iPadOS, může být potřeba vyřadit a znovu zaregistrovat, aby bylo možné použít méně omezující zásadu.
 
 [Řešení potíží při registraci zařízení](../enrollment/troubleshoot-device-enrollment-in-intune.md) může být dobrým prostředkem.
 

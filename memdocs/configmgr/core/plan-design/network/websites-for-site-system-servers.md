@@ -10,12 +10,12 @@ ms.assetid: 681f0893-e83b-476e-9ec0-a5dc7c9deeb6
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 344ba7f6a6b0ee7683c3ac7661338f01be601a10
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: a8091ecf4abc113d41f053c1152152262131a4bb
+ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718690"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88146078"
 ---
 # <a name="websites-for-site-system-servers-in-configuration-manager"></a>Weby pro servery systému lokality v Configuration Manager
 
@@ -47,10 +47,10 @@ Několik Configuration Manager rolí systému lokality vyžaduje použití Micro
 
 -   Nastavte vlastní web tak, aby odpovídal na stejný port, který jste nastavili pro Configuration Manager komunikaci klientů (port požadavku klienta).  
 
--   Pro všechny vlastní nebo výchozí weby, které používají vlastní složku, umístěte kopii výchozího typu dokumentu, který použijete v kořenové složce, která je hostitelem webu. Například na počítači se systémem Windows Server 2008 R2, který má výchozí konfigurace, je **soubor Iisstart. htm** jedním z několika výchozích typů dokumentů, které jsou k dispozici. Tento soubor najdete v kořenovém adresáři výchozího webu a potom do kořenové složky, která hostuje vlastní web SMSWEB, umístěte kopii tohoto souboru (nebo kopii výchozího typu používaného dokumentu). Další informace o výchozích typech dokumentů najdete v tématu [výchozí &lt;dokument\> defaultDocument pro službu IIS](https://www.iis.net/configreference/system.webserver/defaultdocument).  
+-   Pro všechny vlastní nebo výchozí weby, které používají vlastní složku, umístěte kopii výchozího typu dokumentu, který použijete v kořenové složce, která je hostitelem webu. Například na počítači se systémem Windows Server 2008 R2, který má výchozí konfigurace, **iisstart.htm** je jedním z několika výchozích typů dokumentů, které jsou k dispozici. Tento soubor najdete v kořenovém adresáři výchozího webu a potom do kořenové složky, která hostuje vlastní web SMSWEB, umístěte kopii tohoto souboru (nebo kopii výchozího typu používaného dokumentu). Další informace o výchozích typech dokumentů najdete v tématu [výchozí dokument &lt; defaultDocument \> pro službu IIS](https://www.iis.net/configreference/system.webserver/defaultdocument).  
 
-**Informace o požadavcích služby IIS:**
-**následující role systému lokality vyžadují službu IIS a web pro hostování služeb systému lokality:**  
+**Informace o požadavcích služby IIS:** 
+ **Následující role systému lokality vyžadují službu IIS a web pro hostování služeb systému lokality:**  
 
 -   Bod služeb webu Katalog aplikací  
 
@@ -83,7 +83,7 @@ Další rozhodnutí:
 -   Porty TCP/IP, které jste nastavili ve službě IIS pro vlastní web, se musí shodovat s porty požadavků klientů pro danou lokalitu.  
 
 ## <a name="switch-between-default-and-custom-websites"></a>Přepínání mezi výchozími a vlastními weby  
-I když můžete zaškrtnout nebo zrušit políčko pro použití vlastních webů v primární lokalitě kdykoliv (Toto pole je na kartě Obecné ve vlastnostech lokality), před provedením této změny je pečlivě naplánujte. Při změně této konfigurace se musí všechny příslušné role systému lokality v primární lokalitě a podřízených sekundárních lokalitách odinstalovat a potom znovu nainstalovat:  
+I když můžete zaškrtnout nebo zrušit políčko pro použití vlastních webů v primární lokalitě kdykoliv (Toto pole je na kartě porty ve vlastnostech lokality), před provedením této změny je pečlivě naplánujte. Při změně této konfigurace se musí všechny příslušné role systému lokality v primární lokalitě a podřízených sekundárních lokalitách odinstalovat a potom znovu nainstalovat:  
 
 Tyto role se **přeinstalují automaticky**:  
 

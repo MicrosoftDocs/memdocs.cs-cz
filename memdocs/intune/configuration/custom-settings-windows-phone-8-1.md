@@ -6,24 +6,27 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/18/2020
+ms.date: 08/11/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
 ms.technology: ''
+ROBOTS: NOINDEX
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ce8433ee87c0f5e4b397003b78c0ceb751eb46b7
-ms.sourcegitcommit: 169e279ba686c28d9a23bc0a54f0a2a0d20bdee4
+ms.openlocfilehash: 839130f11da41d8b3bd417e8ec3ff3f6301811ed
+ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83556264"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88146367"
 ---
 # <a name="use-custom-settings-for-windows-phone-81-devices-in-intune"></a>Použití vlastních nastavení pro zařízení s Windows Phone 8.1 v Intune
+
+[!INCLUDE [windows-phone-81-windows-10-mobile-support](../includes/windows-phone-81-windows-10-mobile-support.md)]
 
 V Microsoft Intune můžete vlastní profily použít k přidání nebo vytvoření vlastního nastavení u zařízení s Windows Phone 8.1. Vlastní profily jsou funkcí Intune. Jsou navržené tak, aby bylo možné přidat nastavení a funkce zařízení, které nejsou integrované do Intune.
 
@@ -31,7 +34,7 @@ Vlastní profily zařízení s Windows Phone 8.1 používají nastavení OMA-URI
 
 V tomto článku si ukážeme, jak vytvořit vlastní profil pro zařízení s Windows Phone 8.1. 
 
-## <a name="before-you-begin"></a>Před zahájením
+## <a name="before-you-begin"></a>Než začnete
 
 [Vytvořte vlastní profil Windows Phone 8,1](custom-settings-configure.md).
 
@@ -44,7 +47,7 @@ V tomto článku si ukážeme, jak vytvořit vlastní profil pro zařízení s W
   - **OMA-URI** (rozlišuje velká a malá písmena): Zadejte nastavení OMA-URI, které chcete použít.
   - **Datový typ**: vyberte datový typ, který budete používat pro toto nastavení OMA-URI. Možnosti:
 
-    - String
+    - Řetězec
     - Řetězec (soubor XML)
     - Datum a čas
     - Integer
