@@ -19,12 +19,12 @@ ms.reviewer: shburbid
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: eded7186c670699fa654b0a1be1a7d46c027a56a
-ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
+ms.openlocfilehash: a57010a5c8089b0ac979cf43c3706467d83faea2
+ms.sourcegitcommit: 532a06163f462527254d23e7dc505b18c0c4f938
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88047973"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88110694"
 ---
 # <a name="turn-on-windows-defender-to-access-company-resources"></a>Zapnutí přístupu k prostředkům společnosti pro program Windows Defender
 
@@ -36,8 +36,7 @@ Tento článek popisuje, jak aktualizovat nastavení zařízení tak, aby splňo
 K zapnutí programu Windows Defender na svém zařízení proveďte následující kroky. 
 
 1. Vyberte nabídku **Start** .
-2. Na panelu hledání zadejte **Zásady skupiny**.
-3. Vyberte **upravit zásady skupiny**. Otevře se Editor místních zásad skupiny.
+2. Na panelu hledání zadejte **Zásady skupiny**. Pak z uvedených výsledků vyberte **upravit zásady skupiny** . Otevře se Editor místních zásad skupiny.
 4. Vyberte **Konfigurace počítače**  >  **šablony pro správu**  >  **součásti systému Windows**  >  **antivirová ochrana v programu Windows Defender**. 
 5. Posuňte se do dolní části seznamu a vyberte **vypnout antivirovou ochranu v programu Windows Defender**.  
 6. Vyberte **zakázáno** nebo **není nakonfigurováno**. Tato možnost může být intuitivní, pokud chcete tyto možnosti vybrat, protože názvy navrhují vypnutí programu Windows Defender. Nedělejte si starosti, tyto možnosti skutečně zajišťují, že jsou zapnuté. 
@@ -48,7 +47,7 @@ K zapnutí programu Windows Defender na svém zařízení proveďte následujíc
 
 Provedením následujících kroků zapněte ochranu v reálném čase a cloudovou ochranu. Tyto antivirové funkce společně chrání před spywarem a můžou doručovat opravy problémů s malwarem přes Cloud. 
 
-1. Vyberte nabídku **Start** ,
+1. Vyberte nabídku **Start** .
 2. Na panelu hledání zadejte **zabezpečení systému Windows**. Vyberte výsledek porovnání. 
 3. Vyberte **antivirová & ochrana před hrozbami**.
 4. V části **antivirová & nastavení ochrany před hrozbami**vyberte **Spravovat nastavení**.
@@ -56,16 +55,15 @@ Provedením následujících kroků zapněte ochranu v reálném čase a cloudov
 
 Pokud se tyto možnosti nezobrazí na obrazovce, můžou být skryté. Proveďte následující kroky, aby byly viditelné.  
 
-1. Vyberte **Start**, otevřete **Ovládací panely**.
-2. Na panelu hledání zadejte **Zásady skupiny**.
-3. Vyberte **upravit zásady skupiny**. Otevře se Editor místních zásad skupiny.
+1. Vyberte nabídku **Start** .  
+2. Na panelu hledání zadejte **Zásady skupiny**. Pak z uvedených výsledků vyberte **upravit zásady skupiny** . Otevře se Editor místních zásad skupiny.
 3. Vyberte možnost **Konfigurace počítače**  >  **šablony pro správu**  >  **součásti systému Windows**  >  Ochrana proti**Windows Security**  >  **virům a hrozbám**zabezpečení systému Windows.
 4. Vyberte **Skrýt oblast ochrany před viry a hrozbami**.
 5. Vyberte **zakázané**  >  **použít**  >  **OK**.  
 
 ## <a name="update-your-antivirus-definitions"></a>Aktualizace antivirových definic
 Provedením následujících kroků aktualizujte definice antivirové ochrany.  
-1. Vyberte nabídku **Start** ,
+1. Vyberte nabídku **Start** .
 2. Na panelu hledání zadejte **zabezpečení systému Windows**. Vyberte výsledek porovnání. 
 3. Vyberte **antivirová & ochrana před hrozbami**.
 4. V části **antivirová & aktualizace ochrany před internetovými útoky**vyberte **Vyhledat aktualizace**. Pokud tuto možnost nevidíte na obrazovce, proveďte při [Zapnutí ochrany v reálném čase](turn-on-defender-windows.md#turn-on-real-time-and-cloud-delivered-protection)první sadu kroků. Pak zkuste aktualizace znovu zkontrolovat. 

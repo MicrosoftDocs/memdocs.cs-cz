@@ -17,12 +17,12 @@ ms.reviewer: spshumwa
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7894e2648b58b1afd313250dc9724f117fe6c93a
-ms.sourcegitcommit: 79ffc8afed164c408db6994806d71f64d1fc0b8f
+ms.openlocfilehash: 6d50d7f8e4edeaf6d88875fafef977936909d71f
+ms.sourcegitcommit: 532a06163f462527254d23e7dc505b18c0c4f938
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85216531"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88110728"
 ---
 # <a name="bulk-enrollment-for-windows-devices"></a>Hromadná registrace pro zařízení s Windows
 
@@ -67,7 +67,7 @@ Uživatelé Azure AD jsou na těchto zařízeních standardními uživateli a ob
 
 10. Volitelně můžete **Add applications** (Přidat aplikace) a **Add certificates** (Přidat certifikáty). Tyto aplikace a certifikáty se zřídí v zařízení.
 
-11. Volitelně můžete zřizovací balíček ochránit heslem.  Klikněte na **Vytvořit**.
+11. Volitelně můžete zřizovací balíček ochránit heslem.  Klikněte na možnost **Vytvořit**.
     ![Snímek obrazovky s ochranou balíčku v aplikaci Windows Configuration Designer](./media/windows-bulk-enroll/bulk-enroll-create.png)
 
 ## <a name="provision-devices"></a>Zřízení zařízení
@@ -100,4 +100,4 @@ Můžete zjistit, jestli je nastavení v balíčku úspěšné nebo neúspěšn�
 Pokud nepoužíváte otevřenou síť, musíte k inicializaci připojení použít [certifikáty na úrovni zařízení](../protect/certificates-configure.md) . Hromadně zaregistrovaná zařízení se nedají použít pro uživatelem cílené certifikáty pro přístup k síti. 
 
 ### <a name="conditional-access"></a>Podmíněný přístup
-Podmíněný přístup není k dispozici pro zařízení s Windows zaregistrovaná pomocí hromadné registrace.
+Podmíněný přístup není k dispozici pro zařízení s Windows zaregistrovaná pomocí hromadné registrace, s výjimkou Windows 10 1803 +.

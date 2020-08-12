@@ -10,12 +10,12 @@ ms.assetid: de718cdc-d0a9-47e2-9c99-8fa2cb25b5f8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 5b2fcaeb9cb5bd4ce3e41aed8e1bafcc7f76bbb4
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: 4a9eac25de66eb4fb94ea1c5b4b8d0d46caa05d7
+ms.sourcegitcommit: 532a06163f462527254d23e7dc505b18c0c4f938
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262111"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88110711"
 ---
 # <a name="whats-new-in-version-2002-of-configuration-manager-current-branch"></a>Co je nového ve verzi 2002 Configuration Manager Current Branch
 
@@ -441,7 +441,8 @@ K vyřešení konkrétních problémů jsou k dispozici následující další o
 | ID | Nadpis | Datum | V konzole |
 |---------|---------|---------|---------|
 | [4575339](https://support.microsoft.com/help/4575339) | Zařízení se v centru pro správu Microsoft Endpoint Configuration Manager dvakrát zobrazují. | 23. července 2020 | Ne |
-| [4575774](https://support.microsoft.com/help/4575774) | Rutina New-CMTSStepPrestartCheck se nezdařila v Configuration Manager verze 2002 | 24. července 2020 | No |
+| [4575774](https://support.microsoft.com/help/4575774) | Rutina New-CMTSStepPrestartCheck se nezdařila v Configuration Manager verze 2002 | 24. července 2020 | Ne |
+| [4576782](https://support.microsoft.com/help/4576782) | Časový limit pro okno aplikace v centru pro správu Microsoft Endpoint Manageru | 11. srpna 2020 | No |
 
 <!--
 > [!NOTE]
