@@ -10,12 +10,12 @@ ms.technology: configmgr-sum
 ms.assetid: 63c5ef72-5715-4d86-85a2-71beba469fab
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 3843dd4ab4fe5a9aecaae8e6f207c3d037fc1950
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ff616c9ee61e85e4e77aeef6254ca9922427270c
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81717710"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129419"
 ---
 # <a name="icons-used-for-software-updates-in-configuration-manager"></a>Ikony používané pro aktualizace softwaru v Configuration Manager
 
@@ -59,7 +59,7 @@ Synchronizované aktualizace softwaru se zobrazují v konzole Configuration Mana
 
 - Zvyšuje účinnost balíčku aktualizace softwaru, který klientské počítače instalují, pokud je tato aktualizace schválená k instalaci. Nahrazená aktualizace softwaru může například obsahovat soubory, které již nejsou důležité pro opravu nebo operační systémy aktuálně podporované novou aktualizací softwaru, takže tyto soubory nejsou zahrnuty v nahrazujícím balíčku souborů aktualizace softwaru.  
 
-- Aktualizuje novější verze produktu, jinými slovy už není použitelná pro starší verze nebo konfigurace produktu. Aktualizace softwaru můžou také nahrazovat jiné aktualizace, pokud se provedly úpravy rozšiřující jazykovou podporu. Například pozdější revize aktualizace produktu pro Microsoft Office může například odstranit podporu staršího operačního systému, ale do úvodního vydání aktualizace může přidat další podporu nových jazyků.  
+- Aktualizuje novější verze produktu, jinými slovy už není použitelná pro starší verze nebo konfigurace produktu. Aktualizace softwaru můžou také nahrazovat jiné aktualizace, pokud se provedly úpravy rozšiřující jazykovou podporu. Například pozdější revize aktualizace produktu pro Microsoft 365 aplikace může odebrat podporu pro starší operační systém, ale přidat další podporu nových jazyků v úvodním vydání aktualizace softwaru.  
 
   Na kartě Pravidla nahrazení ve vlastnostech komponenty bodu aktualizace softwaru můžete určit způsob správy nahrazených aktualizací softwaru. Další informace najdete v části [Pravidla nahrazení](../plan-design/plan-for-software-updates.md#BKMK_SupersedenceRules).  
 

@@ -1,21 +1,21 @@
 ---
 title: Řídicí panel pro správu klientů Office 365
 titleSuffix: Configuration Manager
-description: Kontrola informací o klientech Office 365 z řídicího panelu pro správu klientů Office 365
+description: Kontrola informací o klientovi Microsoft 365 Apps z řídicího panelu pro správu klientů Office 365
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 04/21/2020
+ms.date: 08/11/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 69f234a2-b04b-445a-b81f-6b4acfc00eaf
-ms.openlocfilehash: 7e6ed38d0f4217bfc70d3ddb196527d421e5d7c1
-ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
+ms.openlocfilehash: ce3947c8ca3c562869fdfed2ddba4d9b160902be
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82110385"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129361"
 ---
 # <a name="office-365-client-management-dashboard"></a>Řídicí panel pro správu klientů Office 365
 
@@ -24,16 +24,16 @@ ms.locfileid: "82110385"
 > [!Note]
 > Od 21. dubna 2020 se sada Office 365 ProPlus přejmenovává na **Microsoft 365 aplikace pro podniky**. Další informace najdete v tématu [Změna názvu pro Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change). V konzole Configuration Manager se pořád zobrazují odkazy na starý název a podpůrná dokumentace, zatímco se konzola aktualizuje.
 
-Od verze Configuration Manager 1802 můžete zkontrolovat informace o klientech Office 365 z řídicího panelu pro správu klientů 365 Office. Řídicí panel pro správu klientů Office 365 zobrazuje seznam relevantních zařízení, když jsou vybrány oddíly grafu. <!--1357281 -->
+Od verze Configuration Manager 1802 můžete zkontrolovat informace o klientech Microsoft 365 Apps z řídicího panelu pro správu klientů Office 365. Řídicí panel pro správu klientů Office 365 zobrazuje seznam relevantních zařízení, když jsou vybrány oddíly grafu. <!--1357281 -->
 
 ## <a name="prerequisites"></a>Požadavky
 
-### <a name="enable-hardware-inventory"></a>Povolit inventář hardwaru
+### <a name="enable-hardware-inventory"></a>Povolení inventáře hardwaru
 
 Data zobrazená na řídicím panelu pro správu klientů Office 365 pocházejí z inventáře hardwaru. Povolte inventář hardwaru a pro data, která se mají zobrazit na řídicím panelu, vyberte třídu inventáře hardwaru **Office 365 ProPlus Configurations** .
  
 1. Povolte inventář hardwaru, pokud ještě není povolený. Podrobnosti najdete v tématu [Konfigurace inventáře hardwaru](../../core/clients/manage/inventory/configure-hardware-inventory.md).
-2. V konzole Configuration Manager přejděte na **Správa** > **Nastavení** > klienta**výchozí nastavení klienta**.  
+2. V konzole Configuration Manager přejděte na **Správa**  >  **nastavení klienta**  >  **výchozí nastavení klienta**.  
 3. Na kartě **Domů** ve skupině **Vlastnosti** klikněte na možnost **Vlastnosti**.  
 4. V dialogovém okně **Výchozí nastavení klienta** klikněte na **Inventář hardwaru**.  
 5. V seznamu **Nastavení zařízení** klikněte na **Nastavit třídy**.  
@@ -53,20 +53,20 @@ Webový server nejvyšší úrovně potřebuje přístup k následujícímu konc
 > [!NOTE]
 > Připojení k Internetu není pro některé z těchto scénářů vyžadováno u klientských zařízení.
 
-### <a name="enable-data-collection-for-office-365-proplus"></a>Povolit shromažďování dat pro Office 365 ProPlus
+### <a name="enable-data-collection-for-microsoft-365-apps"></a>Povolit shromažďování dat pro aplikace Microsoft 365
 
 *(Představené ve verzi 1910 jako předpoklad)*
 
-Počínaje verzí 1910 budete muset povolit shromažďování dat pro Office 365 ProPlus, abyste mohli naplnit informace v **pilotním a řídicím panelu pro sadu office 365**. Data jsou uložená v databázi lokality Configuration Manager a neodesílají se do Microsoftu.
+Počínaje verzí 1910 budete muset povolit shromažďování dat pro aplikace Microsoft 365, abyste mohli naplnit informace v **pilotním a řídicím panelu sady Office 365**. Data jsou uložená v databázi lokality Configuration Manager a neodesílají se do Microsoftu.
 
-Tato data se liší od diagnostických dat, která jsou popsána v [diagnostických datech odeslaných ze sady Office 365 ProPlus společnosti Microsoft](https://docs.microsoft.com/deployoffice/privacy/overview-privacy-controls#diagnostic-data-sent-from-office-365-proplus-to-microsoft).
+Tato data se liší od diagnostických dat, která jsou popsána v tématu [diagnostická data odesílaná z aplikace Microsoft 365 do Microsoftu](https://docs.microsoft.com/deployoffice/privacy/overview-privacy-controls#diagnostic-data-sent-from-office-365-proplus-to-microsoft).
 
 Shromažďování dat můžete povolit buď pomocí Zásady skupiny, nebo úpravou registru.
 
 #### <a name="enable-data-collection-from-group-policy"></a>Povolit shromažďování dat z Zásady skupiny
 
 1. Stáhněte si nejnovější [soubory šablon pro správu z webu Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=49030).
-2. V části `User Configuration\Policies\Administrative Templates\Microsoft Office 2016\Telemetry Dashboard`povolte nastavení zásady pro **Zapnutí shromažďování dat telemetrie** .
+2. V části povolte nastavení zásady pro **Zapnutí shromažďování dat telemetrie** `User Configuration\Policies\Administrative Templates\Microsoft Office 2016\Telemetry Dashboard` .
     - Případně použijte nastavení zásad ve [službě Office Cloud Policy](https://docs.microsoft.com/DeployOffice/overview-office-cloud-policy-service).
     - Nastavení této zásady se používá i na řídicím panelu telemetrie Office, který nemusíte pro tuto kolekci dat nasazovat.
 
@@ -80,28 +80,28 @@ reg add HKCU\Software\Policies\Microsoft\office\16.0\OSM /v EnableLogging /t REG
 
 ## <a name="viewing-the-office-365-client-management-dashboard"></a>Zobrazení řídicího panelu pro správu klientů Office 365
 
-Pokud chcete zobrazit řídicí panel pro správu klientů Office 365 v konzole Configuration Manager, přečtěte si v článku > **Přehled** >  **knihovny softwaru****Office 365 Správa klientů**. V horní části řídicího panelu pomocí rozevíracího seznamu **kolekce** můžete data řídicího panelu filtrovat podle členů určité kolekce. Configuration Manager počínaje verzí 1802 se na řídicím panelu pro správu klientů Office 365 po výběru sekcí grafů zobrazuje seznam relevantních zařízení.
+Pokud chcete zobrazit řídicí panel pro správu klientů Office 365 v konzole Configuration Manager, přečtěte si v článku Přehled **knihovny softwaru**  >  **Overview**  >  **Office 365 Správa klientů**. V horní části řídicího panelu pomocí rozevíracího seznamu **kolekce** můžete data řídicího panelu filtrovat podle členů určité kolekce. Configuration Manager počínaje verzí 1802 se na řídicím panelu po výběru sekcí grafů zobrazuje seznam relevantních zařízení.
 
 Řídicí panel pro správu klientů Office 365 poskytuje grafy pro následující informace:
 
-- Počet klientů Office 365
-- Verze klientů Office 365
-- Jazyky klienta Office 365
-- Kanály klienta Office 365 Další informace najdete v tématu [Přehled kanálů aktualizací pro Office 365 ProPlus](/DeployOffice/overview-of-update-channels-for-office-365-proplus).
+- Počet klientů Microsoft 365ch aplikací
+- Verze klienta Microsoft 365 Apps
+- Jazyky klienta Microsoft 365 Apps
+- Klientské kanály pro Microsoft 365 Apps Další informace najdete v tématu [Přehled kanálů aktualizací pro aplikace Microsoft 365](/DeployOffice/overview-of-update-channels-for-office-365-proplus).
 
 
-## <a name="integration-for-office-365-proplus-readiness"></a><a name="bkmk_o365_readiness"></a>Integrace pro Office 365 ProPlus Readiness
+## <a name="integration-for-microsoft-365-apps-readiness"></a><a name="bkmk_o365_readiness"></a>Integrace pro připravenost pro aplikace Microsoft 365
 <!--3735402-->
-Configuration Manager počínaje verzí 1902 můžete řídicí panel použít k identifikaci zařízení s vysokou jistotou, která je připravená k upgradu na Office 365 ProPlus. Tato integrace poskytuje přehled o potenciálních problémech s kompatibilitou pro doplňky a makra Office ve vašem prostředí. Pak použijte Configuration Manager k nasazení Office do připravených zařízení.
+Configuration Manager počínaje verzí 1902 můžete řídicí panel použít k identifikaci zařízení s vysokou jistotou, která je připravená k upgradu na Microsoft 365 aplikace. Tato integrace poskytuje přehled o potenciálních problémech s kompatibilitou s doplňky a makry ve vašem prostředí. Pak pomocí Configuration Manager nasaďte Microsoft 365 aplikace do připravených zařízení.
 
 Řídicí panel pro správu klientů Office 365 obsahuje novou dlaždici, **sadu Office 365 ProPlus upgrade Readiness**. Tato dlaždice je pruhový graf zařízení v následujících stavech:
-- Nehodnoceno
+- Nevyhodnoceno
 - Připraveno k upgradu
 - Vyžaduje kontrolu
 
-Vyberte stav pro přechod k seznamu zařízení. Tato sestava připravenosti zobrazuje více podrobností o zařízeních. Obsahuje sloupce pro stav kompatibility obou doplňků a maker pro Office.
+Vyberte stav pro přechod k seznamu zařízení. Tato sestava připravenosti zobrazuje více podrobností o zařízeních. Obsahuje sloupce pro stav kompatibility obou doplňků a maker.
 
-### <a name="prerequisites-for-office-365-proplus-readiness-integration"></a>Předpoklady pro integraci produktů Office 365 a Readiness
+### <a name="prerequisites-for-microsoft-365-apps-readiness-integration"></a>Předpoklady pro integraci připravenosti Microsoft 365 Apps
 
 - Povolit inventář hardwaru v nastavení klienta. Další informace najdete v části [požadavky](#prerequisites) .  
 
@@ -116,7 +116,7 @@ Ve výchozím nastavení vyhledává agent vyhledávání v jednotlivých zaří
 - Formáty souborů sady Office s povolenými makry (. xlsm) nebo dokument s povolenými makry (. docm) aplikace Excel.  
 - Starší formáty Office, které neoznačují, zda je k dispozici obsah makra. Například sešit Excel 97-2003 (. xls).
 
-Pokud potřebujete podrobnější informace o kompatibilitě maker, nasaďte sadu **nástrojů Readiness pro Office** , abyste mohli analyzovat kód v souborech maker. Kontroluje, zda existují potenciální problémy s kompatibilitou. Soubor například používá funkci, která se změnila v novější verzi Office. Po spuštění sady nástrojů Readiness pro Office a vybrání možnosti pro **naposledy použité dokumenty Office a nainstalované doplňky v tomto počítači**nebo použití `-mru` příznaku na příkazovém řádku, můžete výsledky vybrat Configuration Manager agentem inventáře hardwaru. Tato další data zlepšují výpočet připravenosti na zařízení. Další informace najdete v tématu [použití sady nástrojů Readiness Toolkit pro Office k vyhodnocení kompatibility aplikací pro office 365 ProPlus](https://aka.ms/readinesstoolkit).
+Pokud potřebujete podrobnější informace o kompatibilitě maker, nasaďte sadu **nástrojů Readiness pro Office** , abyste mohli analyzovat kód v souborech maker. Kontroluje, zda existují potenciální problémy s kompatibilitou. Soubor například používá funkci, která se změnila v novější verzi Office. Po spuštění sady nástrojů Readiness pro Office a vybrání možnosti pro **naposledy použité dokumenty Office a nainstalované doplňky v tomto počítači**nebo použití `-mru` příznaku na příkazovém řádku, můžete výsledky vybrat Configuration Manager agentem inventáře hardwaru. Tato další data zlepšují výpočet připravenosti na zařízení. Další informace najdete v tématu [použití sady nástrojů Readiness Toolkit pro Office k vyhodnocení kompatibility aplikací pro Microsoft 365 aplikace](https://aka.ms/readinesstoolkit).
 
 Všimněte si, že sada nástrojů Readiness Toolkit není nutné instalovat na každé cílové zařízení, aby bylo možné provést kontrolu. Pomocí níže uvedené možnosti příkazového řádku můžete zkontrolovat všechna požadovaná zařízení.  Příznak Output je povinný, ale soubory se nepoužijí k vygenerování výsledků na řídicím panelu, aby bylo možné vybrat jakékoli platné umístění.
 
@@ -126,12 +126,12 @@ ReadinessReportCreator.exe -mru -output c:\temp -silent
 
 Další informace najdete v tématu [získání informací o připravenosti pro více uživatelů v podniku](/deployoffice/use-the-readiness-toolkit-to-assess-application-compatibility-for-office-365-pro#getting-readiness-information-for-multiple-users-in-an-enterprise).
 
-## <a name="office-365-proplus-upgrade-readiness-dashboard"></a><a name="bkmk_readiness-dash"></a>Řídicí panel připravenosti na upgrade pro Office 365 ProPlus
+## <a name="microsoft-365-apps-readiness-dashboard"></a><a name="bkmk_readiness-dash"></a>Řídicí panel připravenosti pro Microsoft 365 aplikace
 
 *(Představené ve verzi 1906)*
 
 <!--4021125-->
-Abychom vám pomohli určit, která zařízení jsou připravená k upgradu na Office 365 ProPlus, je k dispozici řídicí panel připravenosti začínající na verzi 1906. Zahrnuje dlaždici **připravenosti na upgrade sady Office 365** , která byla vydaná ve Configuration Manager aktuální verze větve 1902. Následující nové dlaždice na tomto řídicím panelu vám pomůžou zhodnotit Doplňky Office a připravenost makra:
+Abychom vám pomohli určit, která zařízení jsou připravená k upgradu na Microsoft 365 aplikace, je k dispozici řídicí panel připravenosti od verze 1906. Zahrnuje dlaždici **připravenosti na upgrade sady Office 365** , která byla vydaná ve Configuration Manager aktuální verze větve 1902. Následující nové dlaždice na tomto řídicím panelu vám pomůžou vyhodnotit doplňky a připravenost maker:
 
 - Nasazení
 - Připravenost zařízení
@@ -148,31 +148,31 @@ Následující video je relace z Ignite 2019, která obsahuje další informace:
 
 [Osvědčené postupy pro posouzení kompatibility a systém Microsoft Office 365 ProPlus upgrady pomocí Office Readiness v Configuration Manager](https://myignite.techcommunity.microsoft.com/sessions/79338?source=sessions)
 
-### <a name="using-the-office-365-proplus-upgrade-readiness-dashboard"></a>Používání řídicího panelu připravenosti na upgrade pro Office 365 ProPlus
+### <a name="using-the-microsoft-365-apps-upgrade-readiness-dashboard"></a>Použití řídicího panelu připravenosti na upgrade Microsoft 365 Apps
 
 Po ověření splnění [požadavků](#prerequisites)použijte následující pokyny pro použití řídicího panelu:
  
 1. V konzole Configuration Manager otevřete pracovní prostor **Knihovna softwaru** , rozbalte položku **správa klientů Office 365**.
-1. Vyberte uzel **ProPlus upgrade Readiness Office 365** .
+1. Vyberte uzel **upgrade Readiness aplikace Microsoft 365** .
 1. Změňte architekturu **kolekce** a **cílové sady Office** , aby se změnily informace předané na řídicím panelu.
 
-![Řídicí panel připravenosti na upgrade pro Office 365 ProPlus](./media/4021125-office-365-upgrade-readiness-dashboard.png)
+[![Řídicí panel připravenosti na upgrade pro Microsoft 365 Apps](./media/4021125-office-365-upgrade-readiness-dashboard.png)](./media/4021125-office-365-upgrade-readiness-dashboard.png#lightbox)
 
-![Řídicí panel připravenosti na upgrade pro Office 365 ProPlus](./media/4021125-office-365-to-add-ins.png)
+[![Řídicí panel připravenosti na upgrade pro Microsoft 365 Apps přidat moduly](./media/4021125-office-365-to-add-ins.png)](./media/4021125-office-365-to-add-ins.png#lightbox)
 
-![Řídicí panel připravenosti na upgrade pro Office 365 ProPlus](./media/4021125-office-365-macro-advisories.png)
+[![Poradci pro makra na řídicím panelu pro Microsoft 365 aplikací pro upgrade](./media/4021125-office-365-macro-advisories.png)](./media/4021125-office-365-macro-advisories.png#lightbox)
 
 ### <a name="device-readiness-information"></a>Informace o připravenosti na zařízení
 
 Po vyhodnocení inventáře doplňku a makra na jednotlivých zařízeních se pak zařízení seskupí podle informací. Zařízení, jejichž stav je uveden jako **připraveno k upgradu** , pravděpodobně nebudou mít problémy s kompatibilitou.
 
-Výběrem kategorie **připraveno k upgradu** v grafu zobrazíte další podrobnosti o zařízeních v omezování kolekce. Můžete si prohlédnout seznam zařízení, vybrat si podle svých podnikových požadavků a vytvořit novou kolekci zařízení z výběru. Pomocí nové kolekce nasaďte Office 365 ProPlus s Configuration Manager.
+Výběrem kategorie **připraveno k upgradu** v grafu zobrazíte další podrobnosti o zařízeních v omezování kolekce. Můžete si prohlédnout seznam zařízení, vybrat si podle svých podnikových požadavků a vytvořit novou kolekci zařízení z výběru. Pomocí nové kolekce nasaďte aplikace Microsoft 365 s Configuration Manager.
 
-Zařízení, která mohou být ohrožena při potížích s kompatibilitou, jsou označena jako **potřebná kontrola**. Tato zařízení můžou vyžadovat, abyste před upgradem na Office 365 ProPlus udělali akci. Například je možné aktualizovat důležité Doplňky na novější verzi.
+Zařízení, která mohou být ohrožena při potížích s kompatibilitou, jsou označena jako **potřebná kontrola**. Tato zařízení můžou vyžadovat, abyste před jejich upgradem na Microsoft 365 aplikace provedli akci. Například je možné aktualizovat důležité Doplňky na novější verzi.
 
 ### <a name="add-in-information"></a>Informace o doplňku
 
- V každém zařízení se shromáždí inventář všech nainstalovaných doplňků. Inventář se pak porovná s informacemi, které Microsoft má o výkonu doplňku v Office 365 ProPlus. Pokud je nalezen doplněk, který bude po upgradu nejspíš způsobovat problémy, pak jsou všechna zařízení s doplňkem označena ke kontrole.
+ V každém zařízení se shromáždí inventář všech nainstalovaných doplňků. Inventář se pak porovná s informacemi, které Microsoft má o výkonu doplňku v aplikacích Microsoft 365. Pokud je nalezen doplněk, který bude po upgradu nejspíš způsobovat problémy, pak jsou všechna zařízení s doplňkem označena ke kontrole.
 
 ### <a name="macro-information"></a>Informace o makru
 
@@ -181,7 +181,7 @@ Configuration Manager na každém zařízení prohlíží naposledy použité so
 - Formáty souborů Office s podporou maker
 - Starší formáty Office, které neoznačují, jestli je obsah makra.
 
-Tato sestava slouží k identifikaci zařízení, která nedávno používala soubory, které mohou obsahovat makra. **Sada nástrojů Readiness Toolkit pro Office** se pak dá nasadit pomocí Configuration Manager, aby kontrolovala všechna zařízení, kde jsou potřeba podrobnější informace, a zkontrolujte, jestli neexistují potenciální problémy s kompatibilitou. Například pokud soubor používá funkci, která se změnila v novější verzi Office.
+Tato sestava slouží k identifikaci zařízení, která nedávno používala soubory, které mohou obsahovat makra. **Sada nástrojů Readiness Toolkit pro Office** se pak dá nasadit pomocí Configuration Manager, aby kontrolovala všechna zařízení, kde jsou potřeba podrobnější informace, a zkontrolujte, jestli neexistují potenciální problémy s kompatibilitou. Například pokud soubor používá funkci, která se změnila v novější verzi aplikace Microsoft 365.
 
 Další informace o tom, jak provést kontrolu, najdete v tématu [Podrobná připravenost k makrům](#bkmk_ort).
 
@@ -189,7 +189,7 @@ Další informace o tom, jak provést kontrolu, najdete v tématu [Podrobná př
 <!--4488272, 4488301-->
 *(Představené ve verzi 1910)*
 
-Počínaje verzí 1910 se **pilotní a řídicí panel pro office 365 a řídicí panel stavů** vám pomohou naplánovat, nasadit pilotní prostředí a provést nasazení sady office s 365 ProPlus. Řídicí panel poskytuje přehledy stavu pro zařízení s Office 365 ProPlus, které vám pomůžou identifikovat možné problémy, které můžou mít vliv na vaše plány nasazení. **Pilotní a řídicí panel pro sadu Office 365** poskytuje doporučení pro pilotní zařízení založená na inventáři doplňku. Na řídicím panelu jsou následující dlaždice:
+Od verze 1910 se **pilotní a řídicí panel pro Office 365 a řídicí panel stavů** pomáhají plánovat, pilotní a provádět nasazení aplikací Microsoft 365. Řídicí panel poskytuje přehledy o stavu pro zařízení s Microsoft 365 aplikacemi, které vám pomůžou identifikovat možné problémy, které můžou mít vliv na vaše plány nasazení. **Pilotní a řídicí panel pro sadu Office 365** poskytuje doporučení pro pilotní zařízení založená na inventáři doplňku. Na řídicím panelu jsou následující dlaždice:
 
 - Generování pilotního projektu
 - Doporučená zařízení pilotního nasazení
@@ -215,15 +215,15 @@ Vygenerujte pilotní doporučení z omezené kolekce při kliknutí na tlačítk
 
 ### <a name="recommended-pilot-devices"></a>Doporučená zařízení pilotního nasazení
 
-**Doporučená pilotní zařízení** představují minimální sadu zařízení, která představují všechny instalované doplňky v rámci omezení kolekce, kterou jste použili při generování pilotního projektu. Přejděte k podrobnostem a získejte seznam těchto zařízení. Pak použijte podrobnosti a v případě potřeby vylučte všechna zařízení z pilotního projektu. Pokud jsou všechny doplňky již na zařízeních se systémem Office 365 ProPlus, zařízení s těmito doplňky nebudou zahrnuta do výpočtu. To také znamená, že v pilotní kolekci nebudete mít žádné výsledky, protože všechny vaše doplňky se zobrazily na zařízeních, kde je nainstalovaná sada Office 365 ProPlus.
+**Doporučená pilotní zařízení** představují minimální sadu zařízení, která představují všechny instalované doplňky v rámci omezení kolekce, kterou jste použili při generování pilotního projektu. Přejděte k podrobnostem a získejte seznam těchto zařízení. Pak použijte podrobnosti a v případě potřeby vylučte všechna zařízení z pilotního projektu. Pokud jsou všechny doplňky již na zařízeních Microsoft 365 aplikací, zařízení s těmito doplňky nebudou zahrnuta do výpočtu. To také znamená, že v pilotní kolekci nebudete mít žádné výsledky, protože všechny vaše doplňky se zobrazily na zařízeních, kde je nainstalovaná aplikace Microsoft 365.
 
 ### <a name="deploy-pilot"></a>Nasazení pilotního projektu
 
-Po přijetí pilotních zařízení nasaďte Office 365 ProPlus do pilotní kolekce pomocí Průvodce vytvořením postupného nasazení. Správci mohou definovat pilotní a omezující kolekci v průvodci pro správu nasazení.
+Po přijetí pilotních zařízení nasaďte Microsoft 365 aplikace do pilotní kolekce pomocí Průvodce dvoufázové nasazení. Správci mohou definovat pilotní a omezující kolekci v průvodci pro správu nasazení.
 
 ### <a name="health-data"></a>Data o stavu
 
-Po instalaci Office 365 ProPlus povolte data o stavu na pilotních zařízeních. Data o stavu poskytují přehled o tom, které doplňky a makra nesplňují cíle stavu. **Zařízení připravená k nasazení** grafu identifikují nepilotní zařízení, která jsou připravená k nasazení, pomocí přehledů stavu. Získejte počet zařízení, která odesílají data o stavu ze **zařízení odesílajících data o stavu** .
+Jakmile se nainstalují aplikace Microsoft 365, povolte na pilotních zařízeních data o stavu. Data o stavu poskytují přehled o tom, které doplňky a makra nesplňují cíle stavu. **Zařízení připravená k nasazení** grafu identifikují nepilotní zařízení, která jsou připravená k nasazení, pomocí přehledů stavu. Získejte počet zařízení, která odesílají data o stavu ze **zařízení odesílajících data o stavu** .
 
 ### <a name="devices-not-meeting-health-goals"></a>Zařízení nesplňující cíle stavu
 
@@ -252,4 +252,4 @@ Došlo k známému problému s dlaždicí **nasazení pilotního nasazení** . V
 
 ## <a name="next-steps"></a>Další kroky
 
-[Správa Office 365 ProPlus v Configuration Manageru](manage-office-365-proplus-updates.md)
+[Správa aktualizací Microsoft 365 aplikací pomocí Configuration Manager](manage-office-365-proplus-updates.md)

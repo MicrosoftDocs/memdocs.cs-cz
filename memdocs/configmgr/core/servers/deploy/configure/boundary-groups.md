@@ -2,7 +2,7 @@
 title: Konfigurace skupin hranic
 titleSuffix: Configuration Manager
 description: Pomáhat klientům najít systémy lokality pomocí skupin hranic k logické organizaci Příbuzná síťová umístění s názvem hranice
-ms.date: 04/01/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 5db2926f-f03e-49c7-b44b-e89b1a5a6779
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: c9567cc441636bbda31262e0857e2fc6484c2af7
-ms.sourcegitcommit: 555cb8102715afbe06c4de5fdbc943608f00b52c
+ms.openlocfilehash: 7a925c29b5d186f3ca6f320741f5ca602b0bbb79
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84153401"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128388"
 ---
 # <a name="configure-boundary-groups-for-configuration-manager"></a>Konfigurace skupin hranic pro Configuration Manager
 
@@ -157,7 +157,7 @@ Pokud nakonfigurujete obsah pro distribuci na vyžádání a není k dispozici v
 Instalační program klienta Configuration Manager, program CCMSetup, může získat obsah instalace z místního zdroje nebo přes bod správy. Jeho počáteční chování závisí na parametrech příkazového řádku, které použijete k instalaci klienta:<!-- MEMDocs#286 -->
 
 - Pokud nepoužijete parametry **/MP** ani **/source** , program CCMSetup se pokusí získat seznam bodů správy ze služby Active Directory nebo DNS.
-- Pokud zadáte jenom **/source**, vynutí instalaci ze zadané cesty. Neobjevují body správy. Pokud nemůže najít soubor CCMSetup. cab v zadané cestě, program CCMSetup se nezdařil.
+- Pokud zadáte jenom **/source**, vynutí instalaci ze zadané cesty. Neobjevují body správy. Pokud v zadané cestě nenalezne ccmsetup.cab, program CCMSetup se nezdařil.
 - Pokud zadáte obě **/MP** i **/source**, zkontroluje zadané body správy a všechny zjistí. Pokud nemůže najít platný bod správy, přejde zpět na zadanou zdrojovou cestu.
 
 Další informace o těchto parametrech CCMSetup najdete v tématu [parametry a vlastnosti instalace klienta](../../../clients/deploy/about-client-installation-properties.md).
@@ -228,7 +228,7 @@ Pokud je zařízení ve více než jedné skupině hranic, platí následující
 
 #### <a name="allow-peer-downloads-in-this-boundary-group"></a><a name="bkmk_bgoptions1"></a>Povolí stahování ze strany partnerů v této skupině hranic.
 
-Toto nastavení je standardně zapnuté. Bod správy poskytuje klientům seznam umístění obsahu, která obsahují partnerské zdroje. Toto nastavení má vliv také na použití ID skupin pro [optimalizaci doručení](../../../plan-design/hierarchy/fundamental-concepts-for-content-management.md#delivery-optimization).  
+Standardně je toto nastavení povolené. Bod správy poskytuje klientům seznam umístění obsahu, která obsahují partnerské zdroje. Toto nastavení má vliv také na použití ID skupin pro [optimalizaci doručení](../../../plan-design/hierarchy/fundamental-concepts-for-content-management.md#delivery-optimization).  
 
 Existují dva běžné scénáře, ve kterých byste měli zvážit zakázání této možnosti:  
 
@@ -312,7 +312,7 @@ Ve verzi 1902 je toto nastavení nyní s názvem **preferovat cloudové zdroje p
 - Distribuční body cloudu
 - Microsoft Update (přidáno ve verzi 1902)
 
-## <a name="software-update-points"></a>Body aktualizace softwaru
+## <a name="software-update-points"></a><a name="bkmk_sup"></a>Body aktualizace softwaru 
 
 Klienti používají skupiny hranic k vyhledání nového bodu aktualizace softwaru. Chcete-li určit, které servery může klient najít, přidejte jednotlivé body aktualizace softwaru do různých skupin hranic.
 
@@ -366,6 +366,13 @@ Zkontrolujte konfigurace skupiny hranic. Než začnete s touto změnou, ujistět
 
 Další informace najdete v tématu [Ruční přepnutí klientů do nového bodu aktualizace softwaru](../../../../sum/plan-design/plan-for-software-updates.md#BKMK_ManuallySwitchSUPs).
 
+### <a name="intranet-clients-can-use-a-cmg-software-update-point"></a><a name="bkmk_cmg-sup"></a>Intranetové klienty můžou používat CMG bod aktualizace softwaru.
+<!--7102873-->
+Počínaje verzí 2006 můžou intranetové klienti získat přístup k CMG bodu aktualizace softwaru, když je přiřazený ke skupině hranic a v bodu aktualizace softwaru [je povolená možnost **Povolit Configuration Manager cloudové služby pro správu cloudu** ](../../../clients/manage/cmg/setup-cloud-management-gateway.md#bkmk_role) . Intranetovým zařízením můžete dovolit, aby kontrolovala CMG bod aktualizace softwaru v následujících scénářích:
+
+- Když se počítač připojí k síti VPN, bude pokračovat v kontrole proti CMGmu bodu aktualizace softwaru přes Internet.
+- Pokud je jediným bodem aktualizace softwaru pro skupinu hranic CMG bod aktualizace softwaru, pak se na něj budou kontrolovat všechna intranetová a Internetová zařízení.
+
 ## <a name="management-points"></a>Body správy
 
 <!-- 1324594 -->
@@ -378,7 +385,7 @@ Dříve došlo k běžnému problému, když jste v zabezpečené síti měli ch
 
 Pokud je klient v hraniční skupině, která nemá přiřazený bod správy, lokalita klientovi poskytne úplný seznam bodů správy. Tím se zajistí, že klient vždy obdrží seznam bodů správy.
 
-Záložní skupina hranic bodu správy nezmění chování při instalaci klienta (CCMSetup. exe). Pokud příkazový řádek neurčí počáteční bod správy pomocí parametru/MP, nový klient obdrží úplný seznam dostupných bodů správy. Pro svůj úvodní proces zavedení používá klient první bod správy, ke kterému má přístup. Po registraci klienta s lokalitou obdrží seznam bodů správy správně seřazený s tímto novým chováním.
+Záložní skupina hranic bodu správy nezmění chování při instalaci klienta (ccmsetup.exe). Pokud příkazový řádek neurčí počáteční bod správy pomocí parametru/MP, nový klient obdrží úplný seznam dostupných bodů správy. Pro svůj úvodní proces zavedení používá klient první bod správy, ke kterému má přístup. Po registraci klienta s lokalitou obdrží seznam bodů správy správně seřazený s tímto novým chováním.
 
 Další informace o chování klienta při získávání obsahu během instalace najdete v tématu [instalace klienta](#bkmk_ccmsetup).
 
@@ -389,7 +396,7 @@ Aby mohli klienti tuto funkci používat, povolte následující nastavení: **K
 > [!Note]  
 > Procesy nasazení operačního systému neznají skupiny hranic pro body správy.  
 
-### <a name="troubleshooting"></a>Řešení potíží
+### <a name="troubleshooting"></a>Poradce při potížích
 
 Nové položky se zobrazí v **LocationServices. log**. Atribut **Local** identifikuje jeden z následujících stavů:
 
