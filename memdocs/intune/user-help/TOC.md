@@ -135,7 +135,6 @@
 #### [Začínáme s registrací zařízení s Windows](windows-enrollment-company-portal.md)
 #### [Registrace zařízení s Windows 10](enroll-windows-10-device.md)
 #### [Registrace zařízení s Windows 8.1 nebo Windows RT 8.1](enroll-your-w81-or-rt81-windows.md)
-#### [Registrace zařízení s Windows Phone 8.1](enroll-your-wp81-windows.md)
 ### [Zašifrování zařízení](encrypt-your-device-windows.md)
 ### [Nastavení nebo změna hesla k zařízení](set-or-change-your-password-windows.md)
 ### [Odebrat zařízení z Intune](unenroll-your-device-from-intune-windows.md)
