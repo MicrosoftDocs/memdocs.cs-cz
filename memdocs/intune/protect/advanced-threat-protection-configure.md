@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/23/2020
+ms.date: 08/12/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5e19315f07d803e2aab53b3724fde85f1975c0c5
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: ad02078d2a8b9926de463e01d3dcbc675c721e4a
+ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87264474"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179515"
 ---
 # <a name="configure-microsoft-defender-atp-in-intune"></a>Konfigurace ochrany ATP v programu Microsoft Defender v Intune
 
@@ -92,10 +92,10 @@ Po připojení zařízení pomocí konfiguračního balíčku to nemusíte děla
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Vyberte **Devices**  >  **Konfigurace zařízení profily konfigurace**  >  **vytvořit profil**.
-3. Zadejte **Název** a **Popis**.
-4. V části **Platforma** vyberte **Windows 10 a novější**.
-5. Jako **typ profilu**vyberte **ATP Microsoft Defender (Windows 10 Desktop)**.
-6. Nakonfigurujte nastavení:
+3. V části **Platforma** vyberte **Windows 10 a novější**.
+4. Jako **typ profilu**vyberte možnost **ATP v programu Microsoft Defender (Windows 10 Desktop)** a pak vyberte **vytvořit**.
+5. Na stránce **základy** zadejte *název* a *Popis* (volitelné) pro profil a klikněte na tlačítko **Další**.
+6. Na stránce **nastavení konfigurace** proveďte následující konfiguraci:
 
    - **Typ balíčku konfigurace klienta ATP v programu Microsoft Defender**: vyberte možnost připojit a přidejte konfigurační **balíček do profilu** . Výběrem možnosti **Zrušit zprovoznění** konfigurační balíček odeberete.
   
@@ -107,8 +107,14 @@ Po připojení zařízení pomocí konfiguračního balíčku to nemusíte děla
 
      Připojení [počítačů s Windows 10 pomocí služby Microsoft Endpoint Configuration Manager](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-sccm) obsahuje další podrobnosti o těchto nastaveních ATP v programu Microsoft Defender.
 
-7. Vyberte **OK**a pak **vytvořit** a uložte změny, které vytvoří profil.
-8. [Přiřaďte konfigurační profil zařízení](../configuration/device-profile-assign.md) k zařízením, která chcete vyhodnotit pomocí ATP programu Microsoft Defender.
+7. Výběrem **Další** otevřete stránku **značky oboru** . Značky oboru jsou volitelné. Pokračujte výběrem tlačítka **Další**.
+
+8. Na stránce **přiřazení** vyberte skupiny, které získají tento profil. Další informace o přiřazování profilů najdete v tématu [přiřazení profilů uživatelů a zařízení](../configuration/device-profile-assign.md).
+
+   Vyberte **Další**.
+
+9. Po dokončení na stránce **Revize + vytvořit** klikněte na **vytvořit**. Nový profil se zobrazí v seznamu, když vyberete typ zásady pro profil, který jste vytvořili.
+ Kliknutím na **OK**a pak na **vytvořit** uložte změny, které vytvoří profil.
 
 ### <a name="onboard-android-devices"></a>Připojit zařízení s Androidem
 

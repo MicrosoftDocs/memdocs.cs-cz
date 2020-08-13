@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/18/2020
+ms.date: 08/12/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d60d4eba093ce9663abf2aa57c6461bef5a34ef1
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 062a70f66843a67884d8406b66393da7bc52712b
+ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988715"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179600"
 ---
 # <a name="intune-discovered-apps"></a>Zjištěné aplikace Intune
 
@@ -57,7 +57,6 @@ Následující seznam poskytuje typ aplikační platformy, aplikace, které jsou
 | Windows 10 (aplikace Win32) Poznámka: [vyžaduje rozšíření správy Intune](intune-management-extension.md) na zařízení. | Neuvedeno | Instalované aplikace MSI na zařízení | Každých 24 hodin od registrace zařízení |
 | Windows 10 (moderní aplikace) | Jenom spravované moderní aplikace | Všechny moderní aplikace nainstalované v zařízení | Každých 7 dnů od registrace zařízení |
 | Windows 8.1 | Pouze spravované aplikace | Pouze spravované aplikace | Každých 7 dnů od registrace zařízení |
-| Windows Phone 8 | Pouze spravované aplikace | Pouze spravované aplikace | Každých 7 dnů od registrace zařízení |
 | Windows RT | Pouze spravované aplikace | Pouze spravované aplikace | Každých 7 dnů od registrace zařízení |
 | iOS/iPadOS | Pouze spravované aplikace | Všechny aplikace instalované na zařízení | Každých 7 dnů od registrace zařízení |
 | macOS | Pouze spravované aplikace | Všechny aplikace instalované na zařízení | Každých 7 dnů od registrace zařízení |

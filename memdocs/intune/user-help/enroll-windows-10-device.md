@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/21/2019
+ms.date: 08/12/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: cffdadab0518fbc6a52d0f2bf60752c165fd1c3e
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: cb9812505bb1a4560c7b5668aee5b83d5cc0aec7
+ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881500"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179583"
 ---
 # <a name="enroll-windows-10-devices-with-intune-company-portal"></a>Registrace zařízení s Windows 10 pomocí Portál společnosti Intune
 
@@ -37,7 +37,7 @@ Windows 10 se podporuje napříč různými typy zařízení, včetně stolních
 ## <a name="enroll-windows-10-version-1607-and-later-device"></a>Registrace zařízení s Windows 10 verze 1607 a novější 
 Tento postup popisuje, jak zaregistrovat zařízení, které běží ve Windows 10 verze 1607 a novější.  
 
-1. Přejděte na **Start**. Pokud jste na zařízení s Windows 10 Mobile, pokračujte na seznam **všechny aplikace** .
+1. Přejděte na **Start**. 
 
 2. Otevřete aplikaci **Nastavení**. Pokud aplikace není v seznamu aplikací snadno dostupná, otevřete panel hledání a zadejte "nastavení".
 
@@ -72,7 +72,7 @@ Stále nemáte přístup k pracovním nebo školním e-mailům, souborům nebo j
 ## <a name="enroll-windows-10-version-1511-and-earlier-device"></a>Registrace zařízení s Windows 10 verze 1511 a starší  
 Tento postup popisuje, jak zaregistrovat zařízení, které běží ve Windows 10 verze 1511 a starší.  
 
-1. Přejděte na **Start**. Pokud jste na zařízení s Windows 10 Mobile, pokračujte na seznam **všechny aplikace** .
+1. Přejděte na **Start**. 
 
 2. Otevřete aplikaci **Nastavení**. Pokud aplikace není v seznamu aplikací snadno dostupná, otevřete panel hledání a zadejte "nastavení".
 
@@ -89,7 +89,7 @@ Tento postup popisuje, jak zaregistrovat zařízení, které běží ve Windows 
 6. Přihlaste se pomocí přihlašovacích údajů svého pracovního nebo školního účtu.  
 
 
-    ![Přihlášení](./media/W10-enroll-4-sign-in.png)  
+    ![Přihlásit se](./media/W10-enroll-4-sign-in.png)  
 
 Stále nemáte přístup k pracovním nebo školním e-mailům, souborům nebo jiným datům? Naučte se [řešit problémy související s účtem](troubleshoot-your-windows-10-device-windows.md#troubleshooting-steps-to-follow-if-you-see-your-account) během registrace.  
 

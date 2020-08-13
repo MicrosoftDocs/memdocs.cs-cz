@@ -10,12 +10,12 @@ ms.assetid: 4b071746-61e1-404b-8053-60978de028a7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 7dd8daa7d41a6ad335f7c2d8a2a53e5ccbdf7b04
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: f624a207b5e9afded9b86312d1608a35005355f6
+ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129636"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179337"
 ---
 # <a name="whats-new-in-version-2006-of-configuration-manager-current-branch"></a>Co je nového ve verzi 2006 Configuration Manager Current Branch
 
@@ -284,6 +284,18 @@ Můžete snadno přejít na položky v uzlu centra komunity konzoly Configuratio
 Nyní se můžete rozhodnout, že chcete dostávat oznámení od Microsoftu v konzole Configuration Manager. Tato oznámení vám pomůžou udržovat informace o nových nebo aktualizovaných funkcích, změnách Configuration Manager a připojených službách a problémech, které vyžadují nápravu.
 
 Další informace najdete v tématu [Konfigurace lokality pro příjem zpráv od Microsoftu](../../servers/manage/admin-console-notifications.md#bkmk_msft).
+
+### <a name="power-bi-sample-reports"></a>Ukázkové sestavy Power BI
+<!--5679791-->
+
+*(Poprvé představeno v červnu 2020)*
+
+Při integraci Server sestav Power BI s vytvářením sestav Configuration Manager jsou nyní k dispozici ukázkové Power BI sestavy. Stáhněte a nainstalujte následující ukázkové sestavy:
+
+- Stav Update Compliance softwaru
+- Stav nasazení aktualizace softwaru
+
+Další informace najdete v tématu [Instalace ukázkových sestav Power BI](../../servers/manage/powerbi-sample-reports.md).
 
 <!-- Unused sections in this release:
 ## Reporting

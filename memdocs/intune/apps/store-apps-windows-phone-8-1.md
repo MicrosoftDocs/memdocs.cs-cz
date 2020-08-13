@@ -6,28 +6,29 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/22/2020
+ms.date: 08/12/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 4a95e575-2c63-4bfc-b9c4-f0a132eef618
+ROBOTS: NOINDEX
 ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 26baded3ebf12b770d8e1a70a3ab9251381afa03
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 4da59e9480a32e44733296c348085316c29c9f37
+ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83987866"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179378"
 ---
 # <a name="add-windows-phone-81-store-apps-to-microsoft-intune"></a>Přidání aplikací pro Windows Phone 8.1 ze Storu do Microsoft Intune
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+[!INCLUDE [windows-phone-81-windows-10-mobile-support](../includes/windows-phone-81-windows-10-mobile-support.md)]
 
 Před přiřazením aplikace k zařízení nebo skupině uživatelů je nejprve potřeba danou aplikaci přidat do Microsoft Intune. 
 
@@ -44,7 +45,7 @@ Aplikaci pro Windows Phone 8.1. ze Storu můžete přidat do Intune z portálu A
     - **Název**: Zadejte název aplikace, který se zobrazí na Portálu společnosti. Ujistěte se, že používaný název aplikace je jedinečný. Pokud je název aplikace duplicitní, zobrazí se uživatelům na Portálu společnosti pouze jeden název.
     - **Popis**: Zadejte popis aplikace. Tento popis se uživatelům zobrazí na Portálu společnosti.
     - **Vydavatel**: zadejte název vydavatele aplikace.
-    - **Adresa URL v obchodu s aplikacemi**: Zadejte adresu URL v obchodu s aplikacemi pro aplikaci, kterou chcete vytvořit.
+    - **Adresa URL obchodu s aplikacemi**: zadejte adresu URL obchodu s aplikacemi pro aplikaci, kterou chcete vytvořit.
     - **Kategorie**: Volitelně můžete vybrat jednu nebo několik předdefinovaných kategorií aplikací nebo kategorii, kterou jste vytvořili. Uživatelé tak při procházení Portálu společnosti najdou aplikaci snadněji.
     - **Zobrazit tuto aplikaci jako doporučenou aplikaci v portál společnosti**: tuto možnost vyberte, pokud chcete, aby se sada aplikací zobrazovala na hlavní stránce portálu společnosti, když uživatelé vyhledávají aplikace.
     - **Adresa URL informací**: Volitelně můžete zadat adresu URL webu, který obsahuje informace o této aplikaci. Adresa URL se zobrazí uživatelům na portálu společnosti.

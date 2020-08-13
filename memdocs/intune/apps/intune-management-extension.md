@@ -17,16 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 529d7a7da1257b9ebce1e1ab3cec706e8f100403
-ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
+ms.openlocfilehash: 0f4080c5cfcc6635478bd88b7d9edf42dd3d8576
+ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84270935"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179481"
 ---
 # <a name="use-powershell-scripts-on-windows-10-devices-in-intune"></a>Použití skriptů PowerShellu na zařízeních s Windows 10 v Intune
 
-Rozšíření pro správu Microsoft Intune slouží k nahrání skriptů PowerShellu v Intune, aby se spouštěla na zařízeních s Windows 10. Rozšíření pro správu zlepšuje správu mobilních zařízení (MDM) systému Windows 10 a usnadňuje přechod na moderní správu.
+Rozšíření pro správu Microsoft Intune slouží k nahrání skriptů PowerShellu v Intune, aby se spouštěla na zařízeních s Windows 10. Rozšíření pro správu zlepšuje správu zařízení s Windows (MDM) a usnadňuje přechod na moderní správu.
 
 Tato funkce platí pro:
 
@@ -43,7 +43,7 @@ Služby MDM, například Microsoft Intune, můžou spravovat mobilní a desktopo
 
 Rozšíření pro správu Intune doplňují součásti Windows 10 MDM v krabicích. Můžete vytvořit PowerShellové skripty pro spouštění na zařízeních s Windows 10. Například vytvořte skript PowerShellu, který provede pokročilé konfigurace zařízení. Pak tento skript nahrajte do Intune, přiřaďte ho ke skupině Azure Active Directory (AD) a spusťte skript. Pak můžete monitorovat stav spuštění skriptu od začátku do konce.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 Rozšíření pro správu Intune má následující požadavky. Po splnění požadavků se rozšíření pro správu Intune nainstaluje automaticky, když se k uživateli nebo zařízení přiřadí skript prostředí PowerShell nebo aplikace Win32.
 
@@ -98,7 +98,7 @@ Rozšíření pro správu Intune má následující požadavky. Po splnění po�
       | Spustit skript v 64 hostitele PS | Architektura klienta | Nový skript PS | Existující skript zásad PS |
       | --- | --- | --- | --- | 
       | Ne | 32bitová  | 32 podporovaný hostitel PS | Spouští se jenom v 32 hostitelích PS, který funguje na 32 64 a 32bitových architekturách. |
-      | Ano | 64bitová | Spustí skript v 64-bitovém hostiteli PS pro 64 bitové architektury. Pokud běžela na 32-bit, skript se spustí na 32ém hostiteli PS. | Spustí skript v 32-bitovém hostiteli PS. Pokud se toto nastavení změní na 64-bit, otevře se skript (nespustí se) v 64ém hostiteli PS a nahlásí výsledky. Pokud běžela na 32-bit, skript se spustí v 32m hostiteli PS. |
+      | Yes | 64bitová | Spustí skript v 64-bitovém hostiteli PS pro 64 bitové architektury. Pokud běžela na 32-bit, skript se spustí na 32ém hostiteli PS. | Spustí skript v 32-bitovém hostiteli PS. Pokud se toto nastavení změní na 64-bit, otevře se skript (nespustí se) v 64ém hostiteli PS a nahlásí výsledky. Pokud běžela na 32-bit, skript se spustí v 32m hostiteli PS. |
 
 5. Vyberte **značky oboru**. Značky oboru jsou volitelné. [Použijte řízení přístupu na základě role (RBAC) a značky oboru pro distribuované oddělení IT](../fundamentals/scope-tags.md) s dalšími informacemi.
 
@@ -169,7 +169,7 @@ V části **Powershellové skripty** vyberte skript, který chcete monitorovat, 
 
 ## <a name="intune-management-extension-logs"></a>Protokoly rozšíření pro správu Intune
 
-Protokoly agenta v klientském počítači jsou obvykle v systému `\ProgramData\Microsoft\IntuneManagementExtension\Logs` . K zobrazení těchto souborů protokolu můžete použít [CMTrace. exe](https://docs.microsoft.com/configmgr/core/support/cmtrace) .
+Protokoly agenta v klientském počítači jsou obvykle v systému `\ProgramData\Microsoft\IntuneManagementExtension\Logs` . K zobrazení těchto souborů protokolu můžete použít [CMTrace.exe](https://docs.microsoft.com/configmgr/core/support/cmtrace) .
 
 ![Snímek obrazovky nebo ukázkový protokol agenta CMTrace v Microsoft Intune](./media/apps-win32-app-management/apps-win32-app-10.png)  
 
@@ -226,7 +226,7 @@ Pokud chcete zjistit, jestli je zařízení automaticky zaregistrované, můžet
     write-output "Script worked" | out-file c:\Scripts\output.txt
     ```
 
-    V případě úspěchu by měl být vytvořen výstup. txt a měl by obsahovat text "skript fungoval".
+    Pokud je tato operace úspěšná, měla by se vytvořit output.txt a měla by obsahovat text "skript fungoval".
 
   - Pokud chcete otestovat spuštění skriptu bez Intune, spusťte skripty v účtu System pomocí [nástroje PsExec](https://docs.microsoft.com/sysinternals/downloads/psexec) místně:
 

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/11/2020
+ms.date: 08/12/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f01baaf8ca48229242b6f65d10ef28a294a632bc
-ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
+ms.openlocfilehash: ed6923a53560f1dafc29079fd9a119f72cd75359
+ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84428621"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179447"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>Přidání aplikací do Microsoft Intune 
 
@@ -54,7 +54,6 @@ Následující tabulka obsahuje konkrétní typy aplikací a popis, jak je můž
 | Aplikace pro Android Store  | Aplikace pro Store  | Jako **typ aplikace** vyberte **Android** a zadejte adresu URL obchodu Google Play pro aplikaci. |
 | Podnikové aplikace pro Android  | Aplikace pro Store  | Jako **Typ aplikace**vyberte **Android** a zadejte adresu URL spravovaného Google Play Storu pro aplikaci. <sup>1</sup> |
 | aplikace pro iOS/iPadOS Store  | Aplikace pro Store  | Jako **typ aplikace** vyberte **iOS**, vyhledejte aplikaci a vyberte aplikaci v Intune. |
-| Aplikace pro Windows Phone 8.1 Store  | Aplikace pro Store  | Jako **typ aplikace** vyberte **Windows Phone 8.1** a zadejte adresu URL obchodu Microsoft Store pro aplikaci. |
 | Aplikace pro Microsoft Store  | Aplikace pro Store  | Jako **Typ aplikace**vyberte **Windows** a zadejte adresu URL obchodu Microsoft Store pro aplikaci. |
 | Spravované aplikace Google Play | Aplikace pro Store  | Jako **Typ aplikace**vyberte **spravovaná Google Play** , vyhledejte aplikaci a vyberte aplikaci v Intune. |
 | Aplikace Office 365 pro Windows 10  | Aplikace pro Store (Office 365) | V části **Microsoft 365 aplikace** jako **Typ aplikace**vyberte **Windows 10** a pak vyberte aplikaci Office 365, kterou chcete nainstalovat.  |
@@ -63,7 +62,6 @@ Následující tabulka obsahuje konkrétní typy aplikací a popis, jak je můž
 | Microsoft Edge, verze 77 a novější pro macOS | Aplikace pro Store | Jako **Typ aplikace**vyberte **MacOS** v části **Microsoft Edge, verze 77 a novější** . |
 | Obchodní aplikace (LOB) pro Android | Obchodní aplikace | Jako **Typ aplikace**vyberte **obchodní** aplikaci, vyberte **soubor balíčku aplikace**a pak zadejte instalační soubor pro Android s příponou **. apk**.  |
 | aplikace LOB pro iOS/iPadOS | Obchodní aplikace | Jako **Typ aplikace**vyberte **obchodní** aplikaci, vyberte **soubor balíčku aplikace**a pak zadejte instalační soubor pro iOS/iPadOS s příponou **. ipa**.  |
-| Obchodní aplikace pro Windows Phone | Obchodní aplikace | Jako **typ aplikace** vyberte **Obchodní** aplikaci, vyberte **Soubor balíčku aplikace** a pak zadejte instalační soubor pro Windows Phone s příponou **.xap**.  |
 | Obchodní aplikace pro Windows | Obchodní aplikace | Jako typ aplikace vyberte **Obchodní**, vyberte **Soubor balíčku aplikace** a pak zadejte instalační soubor pro Windows s příponou **.msi**, **.appx**, **.appxbundle**, **.msix** nebo **.msixbundle**. |
 | Integrovaná aplikace pro iOS/iPadOS  | Integrovaná aplikace | Jako **typ aplikace** vyberte **Integrovaná aplikace** a potom integrovanou aplikaci vyberte v seznamu poskytovaných aplikací.  |
 | Integrovaná aplikace pro Android  | Integrovaná aplikace | Jako **typ aplikace** vyberte **Integrovaná aplikace** a potom integrovanou aplikaci vyberte v seznamu poskytovaných aplikací.  |
@@ -221,8 +219,6 @@ Informace o tom, jak přidat aplikace pro jednotlivé platformy do Intune, najde
 - [Obchodní aplikace pro iOS](lob-apps-ios.md)
 - [Obchodní aplikace pro macOS](lob-apps-macos.md)
 - [Webové aplikace (pro všechny platformy)](web-app.md)
-- [Aplikace pro Windows Phone 8.1 Store](store-apps-windows-phone-8-1.md)
-- [Obchodní aplikace pro Windows Phone](lob-apps-windows-phone.md)
 - [Aplikace pro Microsoft Store](store-apps-windows.md)
 - [Obchodní aplikace pro Windows](lob-apps-windows.md)
 - [Aplikace Office 365 pro Windows 10](apps-add-office365.md)

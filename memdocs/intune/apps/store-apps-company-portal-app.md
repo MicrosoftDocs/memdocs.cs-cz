@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/21/2020
+ms.date: 08/12/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7926bd972fd24f39bd4e3f520fd250526502812a
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: c41f22e2aa60803067b9015f2ae3a84db43ff894
+ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83983936"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179532"
 ---
 # <a name="add-the-windows-10-company-portal-app-by-using-microsoft-intune"></a>Přidání aplikace Portál společnosti s Windows 10 pomocí Microsoft Intune
 
@@ -71,7 +71,7 @@ Další informace o tom, jak Intune nakládá se závislostmi pro univerzální 
 
 ## <a name="frequently-asked-questions"></a>Nejčastější dotazy 
 ### <a name="how-do-i-update-the-company-portal-app-on-my-users-devices-if-they-have-already-installed-the-older-apps-from-the-store"></a>Návody aktualizovat aplikaci Portál společnosti na zařízeních uživatelů, pokud už nainstalovala starší aplikace ze Storu?
-Pokud si uživatelé nainstalovali aplikace Portál společnosti pro Windows 8.1 nebo Windows Phone 8.1 z Microsoft Storu, měly by se tyto aplikace automaticky aktualizovat na nejnovější verzi. Není tedy třeba provádět žádnou akci. Pokud k aktualizaci nedojde, požádejte uživatele, aby zkontrolovali, jestli mají na svých zařízeních povolené automatické aktualizace pro aplikace ze Storu.   
+Pokud už vaši uživatelé nainstalovali aplikace Windows 8.1 Portál společnosti z Microsoft Store, jejich aplikace by se měly automaticky aktualizovat na nejnovější verzi bez nutnosti zásahu uživatele nebo vašich uživatelů. Pokud k aktualizaci nedojde, požádejte uživatele, aby zkontrolovali, jestli mají na svých zařízeních povolené automatické aktualizace pro aplikace ze Storu.   
 
 ### <a name="how-do-i-upgrade-my-sideloaded-windows-81-company-portal-app-to-the-windows-10-company-portal-app"></a>Jak mám upgradovat aplikaci Portál společnosti pro Windows 8.1 nainstalovanou bokem na aplikaci Portál společnosti pro Windows 10?
 Doporučujeme následující způsob migrace – odstraňte přiřazení aplikace Portál společnosti pro Windows 8.1 nastavením akce přiřazení na možnost **Odinstalovat**. Po výběru tohoto nastavení můžete přiřadit aplikaci Portál společnosti pro Windows 10 prostřednictvím některé ze zmíněných možností.  
@@ -80,8 +80,8 @@ Pokud potřebujete aplikaci nainstalovat bokem a Portál společnosti pro Window
 
 Pokud potřebujete aplikaci nainstalovat bokem a aplikaci Portál společnosti pro Windows 8.1 jste podepsali a přiřadili prostřednictvím certifikátu Symantec pro podepisování kódu, postupujte podle pokynů v následující části.
 
-### <a name="how-do-i-upgrade-my-signed-and-sideloaded-windows-phone-81-company-portal-app-or-windows-81-company-portal-app-to-the-windows-10-company-portal-app"></a>Jak mám upgradovat podepsanou a bokem nainstalovanou aplikaci Portál společnosti pro Windows Phone 8.1 nebo aplikaci Portál společnosti pro Windows 8.1 na aplikaci Portál společnosti pro Windows 10?
-Doporučujeme následující způsob migrace – odstraňte existující přiřazení aplikace Portál společnosti pro Windows Phone 8.1 nebo aplikace Portál společnosti pro Windows 8.1 nastavením akce přiřazení na možnost **Odinstalovat**. Po výběru tohoto nastavení můžete aplikaci Portál společnosti pro Windows 10 přiřadit běžným způsobem.  
+### <a name="how-do-i-upgrade-my-signed-and-sideloaded-windows-81-company-portal-app-to-the-windows-10-company-portal-app"></a>Návody Windows 8.1 Portál společnosti aplikaci upgradovat na Portál společnosti aplikaci pro Windows 10?
+Náš doporučený postup migrace je odstranit existující přiřazení pro aplikaci Windows 8.1 Portál společnosti, a to nastavením akce přiřazení pro **odinstalaci**. Po výběru tohoto nastavení můžete aplikaci Portál společnosti pro Windows 10 přiřadit běžným způsobem.  
 
 Jinak musí být aplikace Portál společnosti pro Windows 10 náležitě aktualizovaná a podepsaná, abyste dodrželi patřičný způsob upgradu.  
 
@@ -99,7 +99,7 @@ Tímto způsobem podepisujete a přiřadíte aplikaci:
 |---|---|
 | InputWin10AppxBundle  |  Cesta ke zdrojovému souboru appxbundle |
 | OutputWin10AppxBundle | Výstupní cesta pro podepsaný soubor appxbundle 
-| Win81Appx  | Cesta k souboru Portálu společnosti pro Windows 8.1 nebo Windows Phone 8.1 (.APPX) |
+| Win81Appx  | Cesta k Windows 8.1 Portál společnosti (. APPX). |
 | PfxFilePath  |  Cesta k souboru certifikátu Symantec Enterprise Mobile Code Signing Certificate (.PFX)  |
 | PfxPassword  | Heslo certifikátu Symantec Enterprise Mobile Code Signing Certificate |
 | PublisherId | ID vydavatele dané organizace. Pokud chybí, použije se pole Subject certifikátu Symantec Enterprise Mobile Code Signing Certificate. |

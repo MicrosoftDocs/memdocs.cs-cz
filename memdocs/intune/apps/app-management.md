@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/31/2020
+ms.date: 08/12/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,17 +18,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 99dc504f8fc3148463288820dc810bab892e3081
-ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
+ms.openlocfilehash: f755285ea20397b8bd7afb835f4bea212dd492b9
+ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87912391"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179356"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Co je správa aplikací v Microsoft Intune?
-
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Jako správce IT můžete Microsoft Intune použít ke správě klientských aplikací, které používají pracovníci vaší společnosti. Tato funkce doplňuje správu zařízení a ochranu dat. Jednou z priorit správce je zajistit, aby koncoví uživatelé měli přístup k aplikacím, které potřebují ke své práci. To může být náročné z těchto důvodů:
 - Existuje široký sortiment platforem zařízení a typů aplikací.
@@ -51,22 +48,22 @@ Intune MAM podporuje dvě konfigurace:
 
 Intune nabízí celou řadu funkcí, které vám pomůžou dostat požadované aplikace na zařízení, na kterých je chcete spouštět. Následující tabulka nabízí souhrn funkcí správy aplikací.
 
-| Možnosti správy aplikací | Android/Android Enterprise | iOS/iPadOS | macOS | Windows 10 | Windows Phone 8.1 |
-|-------------------------- | -------------------------- | ---------- | ----- | ---------- | ----------------- |
-| Přidání a přiřazení aplikací k zařízením a uživatelům | Ano | Ano | Ano | Ano | Ano |
-| Přiřazení aplikací k zařízením nezaregistrovaným v Intune | Ano | Ano | Ne | Ne | Ne |
-| Určení chování aplikací při spuštění pomocí zásad konfigurace aplikací | Ano | Ano | Ne | Ne | Ne |
-| Obnovení aplikací s vypršelou platností pomocí zásad zřizování mobilních aplikací | Ne | Ano | Ne | Ne | Ne |
-| Ochrana firemních dat v aplikacích pomocí zásad ochrany aplikací | Ano | Ano | Ne | Ne <sup>1</sup> | Ne |
-| Odebrání pouze firemních dat z nainstalovaných aplikací (selektivní vymazání aplikací) | Ano | Ano | Ne | Ano | Ano |
-| Monitorování přiřazení aplikací | Ano | Ano | Ano | Ano | Ano |
-| Přiřazení a sledování aplikací hromadně zakoupených v obchodu s aplikacemi | Ne | Ne | Ne | Ano | Ne |
-| Povinná instalace aplikací na zařízení (povinné) <sup>2</sup> | Ano | Ano | Ano | Ano | Ano |
-| Nepovinná instalace na zařízení z Portálu společnosti (dostupná instalace) | Ano <sup>3</sup> | Ano | Ano | Ano | Ano |
-| Zástupce pro instalaci aplikace na webu (webový odkaz) | Ano <sup>4</sup> | Ano | Ano | Ano | Ano |
-| Vlastní (obchodní) aplikace | Ano | Ano | Ano | Ano | Ne |
-| Aplikace z obchodu | Ano | Ano | Ne | Ano | Ano |
-| Aktualizace aplikací | Ano | Ano | Ne | Ano | Ano |
+| Možnosti správy aplikací | Android/Android Enterprise | iOS/iPadOS | macOS | Windows 10 |
+|-------------------------- | -------------------------- | ---------- | ----- | ---------- |
+| Přidání a přiřazení aplikací k zařízením a uživatelům | Ano | Ano | Ano | Ano |
+| Přiřazení aplikací k zařízením nezaregistrovaným v Intune | Ano | Ano | Ne | Ne |  |
+| Určení chování aplikací při spuštění pomocí zásad konfigurace aplikací | Ano | Ano | Ne | Ne |
+| Obnovení aplikací s vypršelou platností pomocí zásad zřizování mobilních aplikací | Ne | Ano | Ne | Ne |
+| Ochrana firemních dat v aplikacích pomocí zásad ochrany aplikací | Ano | Ano | Ne | Ne <sup>1</sup> |
+| Odebrání pouze firemních dat z nainstalovaných aplikací (selektivní vymazání aplikací) | Ano | Ano | Ne | Ano |
+| Monitorování přiřazení aplikací | Ano | Ano | Ano | Ano |
+| Přiřazení a sledování aplikací hromadně zakoupených v obchodu s aplikacemi | Ne | Ne | Ne | Ano |
+| Povinná instalace aplikací na zařízení (povinné) <sup>2</sup> | Ano | Ano | Ano | Ano |
+| Nepovinná instalace na zařízení z Portálu společnosti (dostupná instalace) | Ano <sup>3</sup> | Ano | Ano | Ano |
+| Zástupce pro instalaci aplikace na webu (webový odkaz) | Ano <sup>4</sup> | Ano | Ano | Ano |
+| Vlastní (obchodní) aplikace | Ano | Ano | Ano | Ano |
+| Aplikace z obchodu | Ano | Ano | Ne | Ano |
+| Aktualizace aplikací | Ano | Ano | Ne | Ano |
 
 <sup>1</sup> Při ochraně aplikací na zařízeních s Windows 10 uvažujte o použití funkce [Windows Information Protection](../protect/windows-information-protection-configure.md).<br>
 <sup>2</sup> Platí jen pro zařízení spravovaná přes Intune.<br>
@@ -119,7 +116,7 @@ Interaktivní příručka [Spravovat a chránit mobilní a desktopové aplikace 
 Následující položky v konzole poskytují funkce související s aplikacemi:
 - **Microsoft Store pro firmy**: Tady můžete nastavit integraci do Microsoft Storu pro firmy. Potom můžete zakoupené aplikace synchronizovat s Intune, přiřazovat je a sledovat využití licencí. Další informace najdete v tématu [Microsoft Store pro hromadně zakoupené aplikace](windows-store-for-business.md).
 - **Certifikát Windows Enterprise**: Tady můžete použít nebo zobrazit stav certifikátu pro podepisování kódu, který se používá k distribuci obchodních aplikací do spravovaných zařízení s Windows.
-- **Certifikát Windows Symantec**: Tady můžete použít nebo zobrazit stav certifikátu Symantec pro podepisování kódu, který je nutný k distribuci souborů appx pro XAP a WP8.x na zařízení s Windows 10 Mobile.
+- **Certifikát Windows Symantec**: použijte nebo zobrazte stav certifikátu Symantec pro podepisování kódu.
 - **Klíče pro instalaci bokem ve Windows**: Přidejte klíč pro instalaci bokem ve Windows, který lze použít k instalaci aplikace přímo do zařízení (místo publikování aplikace a jejího stahování z Windows Storu). Další informace najdete v části [strana načítající aplikaci pro Windows](app-sideload-windows.md).
 - **Tokeny programu Apple VPP**: použít a zobrazit licence VPP (Volume purchase program) pro iOS/iPadOS. Další informace najdete v tématu [hromadně zakoupené aplikace pro iOS/iPadOS](vpp-apps-ios.md).
 - **Managed Google Play**: spravovaná Google Play je podniková aplikace pro Google Store a výhradně zdroj aplikací pro Android Enterprise. Další informace najdete v tématu [Přidání spravovaných Google Play aplikací do zařízení s Androidem Enterprise pomocí Intune](apps-add-android-for-work.md).

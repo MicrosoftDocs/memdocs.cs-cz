@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/24/2019
+ms.date: 08/12/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 5e7cd5e5fa5f04e674b2fd9d37c8895b72372c4c
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 2a79b5c433a286321426f2b14f63768e575b5556
+ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881406"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179464"
 ---
 # <a name="windows-device-enrollment-in-intune-company-portal"></a>Registrace zařízení s Windows v Portál společnosti Intune  
 
@@ -75,10 +75,8 @@ Postup registrace se liší u různých verzí zařízení s Windows 10. Násled
     * __1607 nebo novější__: Zaregistrujte své zařízení pomocí [ **Nastavení**  >  **přístup do pracovní nebo školní** trasy](enroll-windows-10-device.md#enroll-windows-10-version-1607-and-later-device).   
     * __1511 nebo starší__: Zaregistrujte své zařízení pomocí [ **Nastavení**  >  trasa**účty** ](enroll-windows-10-device.md#enroll-windows-10-version-1511-and-earlier-device).  
 
-## <a name="enroll-non-windows-10-devices"></a>Registrace zařízení bez Windows 10  
-Následující články použijte k registraci dalších podporovaných zařízení s Windows prostřednictvím webu Portál společnosti:   
-* [Windows 8.1. nebo zařízení s Windows RT 8,1](enroll-your-W81-or-rt81-windows.md)  
-* [Zařízení Windows Phone 8,1](enroll-your-wp81-windows.md)    
+## <a name="enroll-other-windows-devices"></a>Registrace jiných zařízení s Windows  
+[Windows 8.1 zařízení s Windows RT 8,1](enroll-your-W81-or-rt81-windows.md) můžete zaregistrovat pomocí portál společnosti webu. 
 
 ## <a name="it-administrator-support"></a>Podpora správce IT  
 Pokud jste správcem IT a máte potíže s registrací zařízení, přečtěte si téma řešení potíží s registrací [zařízení s Windows v Microsoft Intune](https://support.microsoft.com/help/4469913). V tomto článku jsou uvedené běžné chyby, jejich příčiny a kroky, jak je vyřešit.  

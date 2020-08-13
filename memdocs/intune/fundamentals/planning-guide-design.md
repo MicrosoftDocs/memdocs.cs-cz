@@ -6,7 +6,7 @@ keywords: ''
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 3/22/2019
+ms.date: 08/12/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d29294f1d9556f195fe70f0e2cb36cc8c9ddcfba
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 37ea8cf3f8615630ccc5b1f5fcc72f69c66db3ef
+ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79331059"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179566"
 ---
 # <a name="create-a-design"></a>Vytvoření návrhu
 
@@ -161,7 +161,7 @@ Pokud plánujete, že budete v Intune používat certifikáty s profily VPN, Wi-
 
 Kromě toho, pokud budou použity profily certifikátů SCEP, je nutné určit, který server bude hostovat funkci služby zápisu síťových zařízení (NDES) a jak bude provedena komunikace.
 
-Další informace:
+Přečtěte si další informace:
 
 - [Jak konfigurovat profily certifikátů Intune](../protect/certificates-configure.md)
 
@@ -182,7 +182,7 @@ Seznamte se blíže s následujícími aspekty svých zařízení, abyste vědě
 
 - Vlastnictví zařízení
 
-- Hromadný zápis
+- Hromadná registrace
 
 Pojďme tyto oblasti podrobněji posuzovat.
 
@@ -194,7 +194,7 @@ Při vytváření návrhu potřebujete vědět, jaká zařízení budou v prost�
 
 ### <a name="devices"></a>Zařízení
 
-Intune slouží ke správě mobilních zařízení. Zabezpečuje firemní data a umožňuje koncovým uživatelům pracovat z více míst. Intune podporuje mnoho platforem zařízení, proto doporučujeme, abyste si povedli dokumentaci zařízení a platforem operačních systémů a verze, které budou v návrhu vaší organizace podporované. Příklad:
+Intune slouží ke správě mobilních zařízení. Zabezpečuje firemní data a umožňuje koncovým uživatelům pracovat z více míst. Intune podporuje mnoho platforem zařízení, proto doporučujeme, abyste si povedli dokumentaci zařízení a platforem operačních systémů a verze, které budou v návrhu vaší organizace podporované. Například:
 
 | **Platforma zařízení** | **Verze OS** |
 |:---:|:---:|
@@ -211,7 +211,7 @@ Intune podporuje jak zařízení vlastněná firmou, tak osobní zařízení. Za
 
 Další informace o případech použití zařízení vlastněných firmou a zařízení BYOD najdete v [oddílu 3: Určení požadavků scénářů pro případy použití](planning-guide-requirements.md).
 
-### <a name="bulk-enrollment"></a>Hromadný zápis
+### <a name="bulk-enrollment"></a>Hromadná registrace
 
  V závislosti na platformě můžete zařízení různými způsoby hromadně zaregistrovat. Pokud požadujete hromadnou registraci, napřed [určete, jakým způsobem bude probíhat](../enrollment/device-enrollment.md), a potom tento způsob zapracujte do svého návrhu.
 
@@ -311,7 +311,7 @@ Tady je příklad návrhu profilu Wi-Fi:
 | **Typ** | **Název profilu** | **Platforma zařízení** | **Případy použití** |
 |:---:|:---:|:---:|:---:|
 | Wi-Fi | Profil Wi-Fi pro Asii | Android | Firemní zařízení, vlastní zařízení uživatelů, oblast Asie|
-| Wi-Fi | Profil Wi-Fi pro Severní Ameriku | Android, iOS/iPadOS, Windows 10 Mobile | Firemní zařízení, vlastní zařízení uživatelů, oblast Severní Amerika |
+| Wi-Fi | Profil Wi-Fi pro Severní Ameriku | Android, iOS/iPadOS | Firemní zařízení, vlastní zařízení uživatelů, oblast Severní Amerika |
 
 Můžete si [stáhnout šablonu výše uvedené tabulky](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) a identifikovat potřeby pro vlastní profily Wi-Fi.
 
@@ -323,7 +323,7 @@ Tady je příklad, jak dokumentovat návrh profilu VPN.
 
 | **Typ** | **Název profilu** | **Platforma zařízení** | **Případy použití** |
 |:---:|:---:|:---:|:---:|
-| Síť VPN | Profil VPN Cisco pro jakékoli připojení | Android, iOS/iPadOS, Windows 10 Mobile | Firemní zařízení, vlastní zařízení uživatelů, oblast Severní Amerika a Německo|
+| Síť VPN | Profil VPN Cisco pro jakékoli připojení | Android, iOS/iPadOS | Firemní zařízení, vlastní zařízení uživatelů, oblast Severní Amerika a Německo|
 | Síť VPN | Pulse Secure | Android | Firemní zařízení, vlastní zařízení uživatelů, oblast Asie |
 
 Můžete si [stáhnout šablonu výše uvedené tabulky](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) a identifikovat potřeby pro vlastní profily VPN.
@@ -342,13 +342,13 @@ Tady je příklad, jak dokumentovat návrh e-mailových profilů:
 Můžete si [stáhnout šablonu výše uvedené tabulky](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) a identifikovat potřeby pro vlastní e-mailové profily.
 ### <a name="apps"></a>Aplikace
 
-Intune můžete použít k několika způsobům doručování aplikací uživatelům nebo zařízením. Mezi typy aplikací patří instalační aplikace softwaru, aplikace z veřejného obchodu s aplikacemi, externí odkazy nebo spravované aplikace pro iOS. Kromě nasazení individuálních aplikací můžete spravovat a nasazovat také hromadně nakoupené aplikace pořízené prostřednictvím programů hromadného nákupu pro iOS a Windows. Další informace:
+Intune můžete použít k několika způsobům doručování aplikací uživatelům nebo zařízením. Mezi typy aplikací patří instalační aplikace softwaru, aplikace z veřejného obchodu s aplikacemi, externí odkazy nebo spravované aplikace pro iOS. Kromě nasazení individuálních aplikací můžete spravovat a nasazovat také hromadně nakoupené aplikace pořízené prostřednictvím programů hromadného nákupu pro iOS a Windows. Přečtěte si další informace:
 
 - [Typy aplikací, které můžete doručovat](../apps/app-management.md)
 
 - [Program iOS VPP (Volume Purchase Program) pro firmy](../apps/vpp-apps-ios.md)
 
-- [Aplikace pro Microsoft Store pro firmy](../apps/windows-store-for-business.md)
+- [Aplikace z Microsoft Storu pro firmy](../apps/windows-store-for-business.md)
 
 #### <a name="app-type-requirements"></a>Požadavky různých typů aplikací
 
@@ -374,7 +374,7 @@ Zásady ochrany aplikace minimalizují ztrátu dat tím, že definují, jak apli
 | **Aplikace** | **Účel** | **Platformy** | **Případ použití** | **zásady ochrany aplikací** |
 |:---:|:---:|:---:|:---:|:---:|
 | Outlook Mobile  | K dispozici. | iOS | Firemní – vedení | Nelze provést jailbreak, šifrování souborů |                                                         
-| Word | K dispozici. | iOS/iPadOS, Android – Samsung KNOX, non-KNOX, Windows 10 Mobile | Firemní zařízení, vlastní zařízení uživatelů | Nelze provést jailbreak, šifrování souborů |                                                         
+| Word | K dispozici. | iOS/iPadOS, Android – Samsung KNOX, non-Knox | Firemní zařízení, vlastní zařízení uživatelů | Nelze provést jailbreak, šifrování souborů |                                                         
 
 
 Můžete si [stáhnout šablonu výše uvedené tabulky](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) a identifikovat potřeby pro vlastní zásady ochrany aplikací.
@@ -388,7 +388,7 @@ Tady je příklad návrhu zásad dodržování předpisů:
 
 | **Název zásady** | **Platforma zařízení** | **Nastavení** | **Cílová skupina** |
 |:---:|:---:|:---:|:---:|
-| zásady dodržování předpisů | iOS/iPadOS, Android – Samsung KNOX, non-KNOX, Windows 10 Mobile | PIN – povinný, nelze provést jailbreak | Firemní zařízení, vlastní zařízení uživatelů |
+| zásady dodržování předpisů | iOS/iPadOS, Android – Samsung KNOX, non-Knox | PIN – povinný, nelze provést jailbreak | Firemní zařízení, vlastní zařízení uživatelů |
 
 
 Můžete si [stáhnout šablonu výše uvedené tabulky](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) a identifikovat potřeby pro vlastní zásady dodržování předpisů.
