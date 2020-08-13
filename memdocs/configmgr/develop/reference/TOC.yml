@@ -484,6 +484,8 @@
                   href: core/clients/client-classes/iprogressui--showerrordialog-method.md
                 - name: Metoda IProgressUI ShowMessage
                   href: core/clients/client-classes/iprogressui--showmessage-method.md
+                - name: Metoda IProgressUI ShowMessageEx
+                  href: core/clients/client-classes/iprogressui--showmessageex-method.md
                 - name: Metoda IProgressUI ShowRebootDialog
                   href: core/clients/client-classes/iprogressui--showrebootdialog-method.md
                 - name: Metoda IProgressUI ShowSwapMediaDialog
@@ -1609,6 +1611,8 @@
           href: osd/sms_tasksequence_prepareosaction-server-wmi-class.md
         - name: Serverová třída služby WMI SMS_TaskSequence_PrepareSMSClientAction
           href: osd/sms_tasksequence_preparesmsclientaction-server-wmi-class.md
+        - name: Serverová třída služby WMI SMS_TaskSequence_PrestartCheckAction
+          href: osd/sms_tasksequence_prestartcheckaction-server-wmi-class.md
         - name: Serverová třída služby WMI SMS_TaskSequence_RebootAction
           href: osd/sms_tasksequence_rebootaction-server-wmi-class.md
         - name: Serverová třída služby WMI SMS_TaskSequence_Reference
@@ -1623,6 +1627,8 @@
           href: osd/sms_tasksequence_restoreuserstateaction-server-wmi-class.md
         - name: Serverová třída služby WMI SMS_TaskSequence_RunCommandLineAction
           href: osd/sms_tasksequence_runcommandlineaction-server-wmi-class.md
+        - name: Serverová třída služby WMI SMS_TaskSequence_RunPowerShellScriptAction
+          href: osd/sms_tasksequence_runpowershellscriptaction-server-wmi-class.md
         - name: Serverová třída služby WMI SMS_TaskSequence_SetupWindowsAndSMSAction
           href: osd/sms_tasksequence_setupwindowsandsmsaction-server-wmi-class.md
         - name: Serverová třída služby WMI SMS_TaskSequence_SetVariableAction

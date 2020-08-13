@@ -14,12 +14,18 @@
           href: understand/find-help.md
         - name: Jak používat dokumentaci
           href: understand/use-docs.md
-        - name: Jak používat tuto konzolu
-          href: servers/manage/admin-console.md
         - name: Funkce pro usnadnění přístupu
           href: understand/accessibility-features.md
         - name: Uživatelská příručka Centra softwaru
           href: understand/software-center.md
+    - name: Jak používat tuto konzolu
+      items:
+        - name: Jak používat tuto konzolu
+          href: servers/manage/admin-console.md
+        - name: Oznámení ke konzole
+          href: servers/manage/admin-console-notifications.md
+        - name: Změny konzoly a tipy
+          href: servers/manage/admin-console-tips.md
     - name: Základy
       items:
         - name: Configuration Manager – základy
@@ -76,6 +82,8 @@
           href: plan-design/changes/features-and-capabilities.md
         - name: Novinky v přírůstkových verzích
           href: plan-design/changes/whats-new-incremental-versions.md
+        - name: Novinky ve verzi 2006
+          href: plan-design/changes/whats-new-in-version-2006.md
         - name: Novinky ve verzi 2002
           href: plan-design/changes/whats-new-in-version-2002.md
         - name: Novinky ve verzi 1910
@@ -84,8 +92,6 @@
           href: plan-design/changes/whats-new-in-version-1906.md
         - name: Novinky ve verzi 1902
           href: plan-design/changes/whats-new-in-version-1902.md
-        - name: Novinky ve verzi 1810
-          href: plan-design/changes/whats-new-in-version-1810.md
         - name: Co se změnilo od Configuration Manageru 2012
           href: plan-design/changes/what-has-changed-from-configuration-manager-2012.md
         - name: Odebrané a zastaralé
@@ -212,6 +218,8 @@
           items:
             - name: Přehled úrovní
               href: plan-design/diagnostics/levels-overview.md
+            - name: Data pro verzi 2006
+              href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-2006.md
             - name: Data pro verzi 2002
               href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-2002.md
             - name: Data pro verzi 1910
@@ -220,8 +228,6 @@
               href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1906.md
             - name: Data pro verzi 1902
               href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1902.md
-            - name: Data pro verzi 1810
-              href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1810.md
         - name: Nejčastější dotazy
           href: plan-design/diagnostics/frequently-asked-questions.md
     - name: Zabezpečení a ochrana osobních údajů v nástroji Configuration Manager
@@ -470,6 +476,8 @@
           href: servers/manage/cmpivot-overview.md
         - name: CMPivot – použití
           href: servers/manage/cmpivot.md
+        - name: CMPivot – změny
+          href: servers/manage/cmpivot-changes.md
         - name: Odstraňování potíží s CMPivotem
           href: servers/manage/cmpivot-tsg.md
     - name: Úlohy údržby
@@ -512,6 +520,8 @@
           href: servers/manage/use-the-update-registration-tool-to-import-hotfixes.md
         - name: Použití instalačního programu oprav hotfix
           href: servers/manage/use-the-hotfix-installer-to-install-updates.md
+        - name: Kontrolní seznam pro instalaci aktualizace 2006
+          href: servers/manage/checklist-for-installing-update-2006.md
         - name: Kontrolní seznam pro instalaci aktualizace 2002
           href: servers/manage/checklist-for-installing-update-2002.md
         - name: Kontrolní seznam pro instalaci aktualizace 1910
@@ -520,8 +530,6 @@
           href: servers/manage/checklist-for-installing-update-1906.md
         - name: Kontrolní seznam pro instalaci aktualizace 1902
           href: servers/manage/checklist-for-installing-update-1902.md
-        - name: Kontrolní seznam pro instalaci aktualizace 1810
-          href: servers/manage/checklist-for-installing-update-1810.md
         - name: Podpora aktuálních verzí větve
           href: servers/manage/current-branch-versions-supported.md
     - name: Zálohování a obnova

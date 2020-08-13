@@ -32,7 +32,7 @@
       items:
         - name: "Synchronizace aktualizací softwaru z\_odpojeného bodu aktualizace softwaru"
           href: get-started/synchronize-software-updates-disconnected.md
-        - name: "Synchronizace aktualizací Office 365 z\_odpojeného bodu aktualizace softwaru"
+        - name: Synchronizace aktualizací aplikací Microsoft 365 z odpojeného bodu aktualizace softwaru
           href: get-started/synchronize-office-updates-disconnected.md
 - name: Nasazení a používání
   items:
@@ -62,7 +62,7 @@
       href: deploy-use/service-a-server-group.md
     - name: Řídicí panel pro správu klienta Office 365
       href: deploy-use/office-365-dashboard.md
-    - name: Správa aktualizací Office 365 ProPlus
+    - name: Správa aktualizací aplikací Microsoft 365
       href: deploy-use/manage-office-365-proplus-updates.md
     - name: Optimalizace doručování aktualizací Windows 10
       href: deploy-use/optimize-windows-10-update-delivery.md

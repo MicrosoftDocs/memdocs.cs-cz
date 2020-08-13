@@ -11,12 +11,12 @@ metadata:
   author: mestew
   ms.author: mstewart
   ms.date: 01/10/2020
-  ms.openlocfilehash: aa421de09ee69713097a5efe78b0a9b2a1a71856
-  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.openlocfilehash: 4bfd693fdda1c0fa455521ed450978df5a2977f7
+  ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
   ms.translationtype: HT
   ms.contentlocale: cs-CZ
-  ms.lasthandoff: 04/21/2020
-  ms.locfileid: "81741166"
+  ms.lasthandoff: 08/12/2020
+  ms.locfileid: "88129334"
 landingContent:
 - title: O správě aktualizací softwaru
   linkLists:
@@ -52,7 +52,7 @@ landingContent:
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: Správa aktualizací Office 365 ProPlus
+    - text: Správa aktualizací aplikací Microsoft 365
       url: deploy-use/manage-office-365-proplus-updates.md
     - text: Povolení aktualizací třetích stran
       url: deploy-use/third-party-software-updates.md
