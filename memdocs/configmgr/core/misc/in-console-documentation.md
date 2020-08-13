@@ -2,7 +2,7 @@
 title: Dokumentace konzoly
 titleSuffix: Configuration Manager
 description: Tento článek se zobrazí pouze v konzole Configuration Manager.
-ms.date: 07/14/2020
+ms.date: 08/12/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: f38e2fec40629b9ed6fc0b02f522092ce7fc2dc6
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 87672b3f0e6e1ad2191391a1d0f594ef779a1994
+ms.sourcegitcommit: bbcafecc891c6db30faf8d8b4f60a94fbdb0aad2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129099"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88200224"
 ---
 <!-- 
 - Feature 1357546
@@ -27,7 +27,7 @@ ms.locfileid: "88129099"
 
 # <a name="microsoft-endpoint-configuration-manager-documentation"></a>Dokumentace k produktu Microsoft Endpoint Configuration Manager
 
-*Poslední aktualizace: 14. července 2020*
+*Poslední aktualizace: 12. srpna 2020*
 
 Tento obsah vám může pomoct při učení a podpoře Configuration Manager.
 
@@ -49,29 +49,29 @@ Seznam důležitých článků.
 - [CMPivot](https://docs.microsoft.com/mem/configmgr/core/servers/manage/cmpivot)  
 - [Plánování správy nástroje BitLocker](https://docs.microsoft.com/mem/configmgr/protect/plan-design/bitlocker-management)  
 - [Správa Microsoft Edge](https://docs.microsoft.com/mem/configmgr/apps/deploy-use/deploy-edge)  
-- [Správa aktualizací Microsoft 365ch aplikací](https://docs.microsoft.com/mem/configmgr/sum/deploy-use/manage-office-365-proplus-updates)  
+- [Správa aktualizací aplikací Microsoft 365](https://docs.microsoft.com/mem/configmgr/sum/deploy-use/manage-office-365-proplus-updates)  
 - [Základy Configuration Manager aktuální větvení a Windows jako služby](https://docs.microsoft.com/mem/configmgr/core/understand/configuration-manager-and-windows-as-service)
 - [Optimalizace doručování aktualizací Windows 10 pomocí Configuration Manager](https://docs.microsoft.com/mem/configmgr/sum/deploy-use/optimize-windows-10-update-delivery)
 - [Verze Technical Preview](https://docs.microsoft.com/mem/configmgr/core/get-started/technical-preview)
 
 ## <a name="trending"></a>Populární
 
-Nejoblíbenější články v rozmezí od 1. června 2020.
+Nejoblíbenější články mezi 1. července a 31. července 2020.
 
 | Zobrazení stránek | Nadpis |
 |------------|-------|
-| 21317 | [Plánování brány pro správu cloudu](https://docs.microsoft.com/mem/configmgr/core/clients/manage/cmg/plan-cloud-management-gateway) |
-| 19402 | [Referenční informace k protokolům](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/log-files) |
-| 18826 | [Postup povolení protokolu TLS (Transport Layer Security) 1,2 na klientech](https://docs.microsoft.com/mem/configmgr/core/plan-design/security/enable-tls-1-2-client) |
-| 16525 | [Povolení přehledu TLS (Transport Layer Security) 1,2](https://docs.microsoft.com/mem/configmgr/core/plan-design/security/enable-tls-1-2) |
-| 16142 | [Porty používané pro připojení](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/ports) |
-| 15834 | [Novinky ve verzi 2002](https://docs.microsoft.com/mem/configmgr/core/plan-design/changes/whats-new-in-version-2002) |
-| 13963 | [Co je Configuration Manager?](https://docs.microsoft.com/mem/configmgr/core/understand/introduction) |
-| 13727 | [Desktop Analytics](https://docs.microsoft.com/mem/configmgr/desktop-analytics/overview) |
-| 13603 | [Spoluspráva pro zařízení s Windows 10](https://docs.microsoft.com/mem/configmgr/comanage/overview) |
-| 13049 | [Uživatelská příručka Centra softwaru](https://docs.microsoft.com/mem/configmgr/core/understand/software-center) |
+| 25526 | [Postup povolení protokolu TLS (Transport Layer Security) 1,2 na klientech](https://docs.microsoft.com/mem/configmgr/core/plan-design/security/enable-tls-1-2-client) |
+| 22168 | [Povolení přehledu TLS (Transport Layer Security) 1,2](https://docs.microsoft.com/mem/configmgr/core/plan-design/security/enable-tls-1-2) |
+| 18114 | [Referenční informace k protokolům](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/log-files) |
+| 17355 | [Plánování brány pro správu cloudu](https://docs.microsoft.com/mem/configmgr/core/clients/manage/cmg/plan-cloud-management-gateway) |
+| 15548 | [Co je Configuration Manager?](https://docs.microsoft.com/mem/configmgr/core/understand/introduction) |
+| 14783 | [Porty používané pro připojení](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/ports) |
+| 13029 | [Uživatelská příručka Centra softwaru](https://docs.microsoft.com/mem/configmgr/core/understand/software-center) |
+| 12939 | [Spoluspráva pro zařízení s Windows 10](https://docs.microsoft.com/mem/configmgr/comanage/overview) |
+| 12256 | [Desktop Analytics](https://docs.microsoft.com/mem/configmgr/desktop-analytics/overview) |
+| 11343 | [Novinky ve verzi 2002](https://docs.microsoft.com/mem/configmgr/core/plan-design/changes/whats-new-in-version-2002) |
 
-[Stránka centra Configuration Manager](https://docs.microsoft.com/mem/configmgr/) přijala během tohoto časového období zobrazení stránky 36 220.
+[Stránka centra Configuration Manager](https://docs.microsoft.com/mem/configmgr/) přijala během tohoto časového období zobrazení stránky 35 558.
 
 ## <a name="recently-updated"></a>Nedávno aktualizované
 
@@ -79,16 +79,16 @@ Nejoblíbenější články v rozmezí od 1. června 2020.
 
 | Poslední revize | Nadpis |
 |---------------|-------|
-| 6/29/2020 | [Technical Preview 2006](https://docs.microsoft.com/mem/configmgr/core/get-started/2020/technical-preview-2006) |
-| 25. června 2020 | [Instalace ukázkových sestav Power BI](https://docs.microsoft.com/mem/configmgr/core/servers/manage/powerbi-sample-reports) |
-| 24. června 2020 | [Podporované verze SQL Server](https://docs.microsoft.com/mem/configmgr/core/plan-design/configs/support-for-sql-server-versions) |
-| 6/18/2020 | [Správa aktualizací ovladačů Surface](https://docs.microsoft.com/mem/configmgr/sum/deploy-use/surface-drivers) |
-| 6/17/2020 | [Rozšířená ochrana před internetovými útoky v programu Microsoft Defender](https://docs.microsoft.com/mem/configmgr/protect/deploy-use/defender-advanced-threat-protection) |
-| 10. června 2020 | [Plánování brány pro správu cloudu](https://docs.microsoft.com/mem/configmgr/core/clients/manage/cmg/plan-cloud-management-gateway) |
-| 10. června 2020 | [Uživatelská příručka Centra softwaru](https://docs.microsoft.com/mem/configmgr/core/understand/software-center) |
-| 10. června 2020 | [NEJČASTĚJŠÍ DOTAZY K CMG](https://docs.microsoft.com/mem/configmgr/core/clients/manage/cmg/cloud-management-gateway-faq) |
-| 6/5/2020 | [Osvědčené postupy pro kolekce](https://docs.microsoft.com/mem/configmgr/core/clients/manage/collections/best-practices-for-collections) |
-| 6/5/2020 | [Hodnocení kolekce](https://docs.microsoft.com/mem/configmgr/core/clients/manage/collections/collection-evaluation) |
+| 7/31/2020 | [CMPivot – přehled připojených klientů](https://docs.microsoft.com/mem/configmgr/tenant-attach/cmpivot-overview-attached) |
+| 7/27/2020 | [Komunitní centrum a GitHub](https://docs.microsoft.com/mem/configmgr/core/servers/manage/community-hub) |
+| 7/14/2020 | [Technical Preview 2007](https://docs.microsoft.com/mem/configmgr/core/get-started/2020/technical-preview-2007) |
+| 7/10/2020 | [Připojení tenanta Microsoft Endpoint Manageru](https://docs.microsoft.com/mem/configmgr/tenant-attach/device-sync-actions) |
+| 7/8/2020 | [Připojení tenanta – podrobnosti o klientovi ConfigMgr (Preview) v centru pro správu](https://docs.microsoft.com/mem/configmgr/tenant-attach/client-details) |
+| 7/8/2020 | [Řešení potíží s podrobnostmi klienta](https://docs.microsoft.com/mem/configmgr/tenant-attach/troubleshoot-client-details) |
+| 7/7/2020 | [Odstraňování potíží s připojením tenanta a akcemi zařízení](https://docs.microsoft.com/mem/configmgr/tenant-attach/troubleshoot) |
+| 7/7/2020 | [Nejčastější dotazy k produktu a licencování](https://docs.microsoft.com/mem/configmgr/core/understand/product-and-licensing-faq) |
+| 7/7/2020 | [Požadavky na přístup k internetu](https://docs.microsoft.com/mem/configmgr/core/plan-design/network/internet-endpoints) |
+| 7/1/2020 | [Co je nového v Desktop Analytics](https://docs.microsoft.com/mem/configmgr/desktop-analytics/whats-new) |
 
 ## <a name="troubleshooting-articles"></a>Články věnované řešení potíží
 
