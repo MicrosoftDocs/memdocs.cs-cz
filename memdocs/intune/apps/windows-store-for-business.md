@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/26/2020
+ms.date: 08/13/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8ed7852a5aaf09a99823035d12bf2aa9139c1c02
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 9f92fe778f640cccfc0026a6bad2c7f92cdce4d5
+ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990223"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88217374"
 ---
 # <a name="how-to-manage-volume-purchased-apps-from-the-microsoft-store-for-business-with-microsoft-intune"></a>Jak spravovat hromadně zakoupené aplikace z Microsoft Store pro firmy pomocí Microsoft Intune
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-[Microsoft Store pro firmy](https://www.microsoft.com/business-store) je místo, kde můžete najít a zakoupit aplikace pro svou organizaci, a to jednotlivě i hromadně. Pokud Store propojíte s Microsoft Intune, můžete hromadně zakoupené aplikace spravovat z Azure Portalu. Příklad:
+[Microsoft Store pro firmy](https://www.microsoft.com/business-store) je místo, kde můžete najít a zakoupit aplikace pro svou organizaci, a to jednotlivě i hromadně. Pokud Store propojíte s Microsoft Intune, můžete hromadně zakoupené aplikace spravovat z Azure Portalu. Například:
 
 * Seznam aplikací, které jste zakoupili (nebo které jsou zdarma) můžete synchronizovat z obchodu s Intune.
 * Aplikace, které jsou synchronizované, se zobrazí v konzole pro správu Intune. Tyto aplikace můžete přiřadit stejně jako všechny ostatní aplikace.
@@ -53,7 +53,7 @@ Než začnete synchronizovat a přiřazovat aplikace z Microsoft Storu pro firmy
 - Zaregistrovaná zařízení musí používat Windows 10 verze 1511 nebo novější.
 
 > [!NOTE]
-> Pokud zakážete úložiště na spravovaných zařízeních (ručně prostřednictvím zásad nebo Zásady skupiny), instalace licencovaných aplikací online se nezdaří.
+> Pokud zakážete přístup k úložišti na spravovaných zařízeních (buď ručně, prostřednictvím zásad nebo Zásady skupiny), instalace licencovaných aplikací online se nezdaří.
 
 ## <a name="associate-your-microsoft-store-for-business-account-with-intune"></a>Přidružení účtu v Microsoft Storu pro firmy k Intune
 

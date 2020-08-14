@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/17/2020
+ms.date: 08/13/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2c6152b4380abacde6dd6e8e014ebe91aa258edb
-ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
+ms.openlocfilehash: 3dd7730e8ac25c41140f3e375383bf185eae91e6
+ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87912589"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88217219"
 ---
 # <a name="how-to-manage-ios-and-macos-apps-purchased-through-apple-volume-purchase-program-with-microsoft-intune"></a>Jak spravovat aplikace pro iOS a macOS zakoupené prostřednictvím Apple Volume Purchase Program s využitím Microsoft Intune
 
@@ -64,7 +64,7 @@ Můžete zakoupit a distribuovat veřejné i soukromé aplikace pomocí nástroj
 - **Aplikace pro Store:** Pomocí Apple Business Manageru můžou správci obsahu koupit bezplatné i placené aplikace, které jsou k dispozici v obchodě s aplikacemi.
 - **Vlastní aplikace:** Pomocí Apple Business Manageru můžou správci obsahu taky koupit vlastní aplikace, které jsou pro vaši organizaci k dispozici soukromě. Tyto aplikace jsou přizpůsobené konkrétním potřebám vaší organizace vývojářům, se kterými přímo pracujete. Přečtěte si další informace o [tom, jak distribuovat vlastní aplikace](https://developer.apple.com/business/custom-apps/).
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 - Účet [Apple Business Manager](https://business.apple.com/) nebo [Apple School Manager](https://school.apple.com/) pro vaši organizaci. 
 - Zakoupené licence aplikace přiřazené k jedné nebo více tokenům umístění. 
 - Byly staženy tokeny umístění. 
@@ -94,24 +94,30 @@ Migrujte existující koupený obsah a tokeny VPP do aplikací a knih v Apple Bu
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Vyberte možnost konektory **správy tenanta**  >  **a tokeny**programu  >  **Apple VPP**.
-3. V podokně s tokeny VPP vyberte **Vytvořit**.
-4. V podokně **Vytvořit token VPP** zadejte následující informace:
-    - **Soubor tokenu VPP** – Pokud jste to ještě neudělali, zaregistrujte se do Apple Business Manageru nebo Apple School Manager. Po zaregistrování si stáhněte token Apple VPP pro svůj účet a vyberte ho tady.
-    - **Apple ID** – zadejte spravované Apple ID účtu přidruženého k odeslanému tokenu.
-    - **Převzít kontrolu nad tokenem z jiné MDM** – nastavením této možnosti na **Ano** umožníte, aby se token přiřadil do Intune z jiného řešení MDM.
-    - **Název tokenu** – pole pro správu pro nastavení názvu tokenu.
-    - **Země/oblast** – vyberte úložiště VPP země/oblast.  Intune synchronizuje aplikace VPP pro všechna národní prostředí ze zadaného úložiště v zemi nebo oblasti VPP.
+3. V podokně s tokeny VPP vyberte **Vytvořit**. Zobrazí se proces **vytvoření tokenu VPP** . Při vytváření tokenu VPP se používají čtyři stránky. První je **základy**.
+4. Na stránce **základy** zadejte následující informace:
+   - **Název tokenu** – pole pro správu pro nastavení názvu tokenu.
+   - **Apple ID** – zadejte spravované Apple ID účtu přidruženého k odeslanému tokenu.
+   - **Soubor tokenu VPP** – Pokud jste to ještě neudělali, zaregistrujte se do Apple Business Manageru nebo Apple School Manager. Po zaregistrování si stáhněte token Apple VPP pro svůj účet a vyberte ho tady.
+5. Kliknutím na **Další** zobrazte stránku **Nastavení** .
+6. Na stránce **Nastavení** zadejte následující informace:
+   - **Převzít kontrolu nad tokenem z jiné MDM** – nastavením této možnosti na **Ano** umožníte, aby se token přiřadil do Intune z jiného řešení MDM.
+   - **Země/oblast** – vyberte úložiště VPP země/oblast.  Intune synchronizuje aplikace VPP pro všechna národní prostředí ze zadaného úložiště v zemi nebo oblasti VPP.
+
         > [!WARNING]  
         > Když se změní země nebo oblast, aktualizují se metadata aplikace a adresa URL obchodu s aplikacemi při příští synchronizaci se službou Apple pro aplikace vytvořené pomocí tohoto tokenu. Aplikace nebude aktualizována, pokud neexistuje v úložišti nové země/oblast.
 
-    - **Typ účtu VPP** – zvolte jednu z možností: **Obchodní** nebo **Vzdělávání**.
-    - **Automatické aktualizace aplikací** – zvolte **Zapnuto** nebo **Vypnuto** podle toho, jestli chcete automatické aktualizace povolit nebo zakázat. Když je tato možnost povolená, Intune zjistí aktualizace aplikací VPP v App Storu a automaticky je odešle do zařízení, jakmile se ohlásí.
+   - **Typ účtu VPP** – zvolte jednu z možností: **Obchodní** nebo **Vzdělávání**.
+   - **Automatické aktualizace aplikací** – zvolte **Zapnuto** nebo **Vypnuto** podle toho, jestli chcete automatické aktualizace povolit nebo zakázat. Když je tato možnost povolená, Intune zjistí aktualizace aplikací VPP v App Storu a automaticky je odešle do zařízení, jakmile se ohlásí.
 
         > [!NOTE]
         > Automatické aktualizace aplikací pro aplikace Apple VPP se automaticky aktualizují pro **požadované** i **dostupné** instalační záměry. U aplikací nasazených s **dostupným** záměrem instalace vygeneruje Automatická aktualizace stavovou zprávu pro správce IT, která informuje o tom, že je k dispozici nová verze aplikace. Tato stavová zpráva se zobrazí tak, že se vybere aplikace, vyberete stav instalace zařízení a zkontrolujete podrobnosti o stavu.  
 
     - **Udělujem Microsoftu oprávnění odesílat informace o uživatelích i zařízeních do společnosti Apple.** – **Chcete-li pokračovat** , je nutné vybrat souhlasím. Informace o tom, jaká data Microsoft posílá společnosti Apple, najdete v tématu [data Intune odesílají společnosti Apple](../protect/data-intune-sends-to-apple.md).
-5. Po dokončení vyberte **Vytvořit**. Token se zobrazí v podokně se seznamem tokenů.
+7. Kliknutím na tlačítko **Další** zobrazíte stránku **značky oboru** .
+8. Klikněte na **Vybrat značky oboru** a volitelně přidejte značky oboru pro aplikaci. Další informace najdete v tématu [použití řízení přístupu na základě role (RBAC) a značek oboru pro distribuci](../fundamentals/scope-tags.md).
+9. Kliknutím na **Další** zobrazte stránku **Revize + vytvořit** . Zkontrolujte hodnoty a nastavení, které jste zadali pro token VPP.
+10. Až budete hotoví, klikněte na **Vytvořit**. Token se zobrazí v podokně se seznamem tokenů.
 
 ## <a name="synchronize-a-vpp-token"></a>Synchronizace tokenu VPP
 

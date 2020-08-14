@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/09/2020
+ms.date: 08/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8318e6dc364d0dfbf38ac278938018b80f703b58
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 40d8e62e73e67d7db1978500d77118dfb1257748
+ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79326231"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88217576"
 ---
 # <a name="understand-app-protection-policy-delivery-timing"></a>Principy časování doručování zásad ochrany aplikací
 
@@ -36,7 +36,7 @@ Doručování zásad ochrany aplikací závisí na stavu licence a registraci sl
 |    Stav uživatele    |    Chování ochrany aplikace     |    Interval opakování (viz poznámku)    |    Proč k tomu dochází?    |
 |-----------------------------------------------------|-------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
 |    Tenant není zaregistrované.    |    Počkejte na další interval opakování.  Ochrana aplikací není pro tohoto uživatele aktivní.    |    24 hodin    |    Vyvolá se v případě, že jste nestavili vašeho tenanta pro Intune.    |
-|    Uživatel nemá licenci.     |    Počkejte na další interval opakování.  Ochrana aplikací není pro tohoto uživatele aktivní.     |    12 hodin – na zařízeních s Androidem ale tento interval vyžaduje Intune APP SDK verze 5.6.0 nebo novější. V opačném případě pro zařízení Andriod je interval 24 hodin.   |    Vyvolá se v případě, že jste nelicencovaný uživatel pro Intune.    |
+|    Uživatel nemá licenci.     |    Počkejte na další interval opakování.  Ochrana aplikací není pro tohoto uživatele aktivní.     |    12 hodin – na zařízeních s Androidem ale tento interval vyžaduje Intune APP SDK verze 5.6.0 nebo novější. V opačném případě pro zařízení s Androidem je tento interval 24 hodin.   |    Vyvolá se v případě, že jste nelicencovaný uživatel pro Intune.    |
 |    Uživatel nepřiřadil zásady ochrany aplikací.    |    Počkejte na další interval opakování.  Ochrana aplikací není pro tohoto uživatele aktivní.    |    12 hodin        |    Nastane, pokud jste uživateli nepřiřadili nastavení aplikace.    |
 |    Uživatelem přiřazené zásady ochrany aplikací, ale aplikace není definovaná v zásadách ochrany aplikací   |    Počkejte na další interval opakování.  Ochrana aplikací není pro tohoto uživatele aktivní.    |    12 hodin        |    Vyvolá se v případě, že jste aplikaci nepřidali do aplikace.    |
 |    Uživatel se úspěšně zaregistroval pro Intune MAM.    |    Ochrana aplikací se aplikuje na nastavení zásad.    K aktualizacím dochází na základě intervalu opakování.    |    Služba Intune definovaná na základě uživatelského zatížení.    Obvykle 30 minut.     |    Vyvolá se v případě, že se uživatel úspěšně zaregistroval ve službě Intune pro konfiguraci MAM.    |

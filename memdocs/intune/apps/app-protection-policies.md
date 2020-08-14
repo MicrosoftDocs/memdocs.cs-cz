@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/22/2020
+ms.date: 08/13/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d4beb6c5a91f9f379006df482ff10066831389b6
-ms.sourcegitcommit: 79ffc8afed164c408db6994806d71f64d1fc0b8f
+ms.openlocfilehash: 1cb05cb518d4edfb443bf4f70ff1c51154e17f4c
+ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85216395"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88217636"
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>Vytvoření a přiřazení zásad ochrany aplikací
 
@@ -60,10 +60,10 @@ Když vytvoříte zásady ochrany aplikací pro iOS/iPadOS a aplikace pro Androi
 3. Vyberte **vytvořit zásadu** a vyberte možnost **iOS/iPadOS** nebo **Android**. Zobrazí se podokno **vytvořit zásadu** .
 4. Na stránce **základy** přidejte následující hodnoty:
 
-    | Hodnota | Description |
+    | Hodnota | Popis |
     |--------------|------------------------------------------------|
-    | Name | Název této zásady ochrany aplikací |
-    | Description | Volitelné Popis této zásady ochrany aplikací |
+    | Název | Název této zásady ochrany aplikací |
+    | Popis | Volitelné Popis této zásady ochrany aplikací |
 
 
     Hodnota **platformy** je nastavená na základě výše zvolené možnosti.
@@ -73,9 +73,9 @@ Když vytvoříte zásady ochrany aplikací pro iOS/iPadOS a aplikace pro Androi
 5. Kliknutím na **Další** zobrazte stránku **aplikace** .<br>
     Stránka **aplikace** umožňuje zvolit, jak chcete tyto zásady použít pro aplikace na různých zařízeních. Musíte přidat alespoň jednu aplikaci.<p>
 
-    | Hodnota/možnost | Description |
+    | Hodnota/možnost | Popis |
     |-------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-    | Cíl pro aplikace na všech typech zařízení | Tuto možnost použijte, pokud chcete zásady zaměřit na aplikace na zařízeních libovolného stavu správy. Pokud chcete cílit aplikace na konkrétní typy zařízení, vyberte **ne** . Informace najdete v tématu [cílení zásad ochrany aplikací na základě stavu správy zařízení](#target-app-protection-policies-based-on-device-management-state) . |
+    | Cíl pro aplikace na všech typech zařízení | Tuto možnost použijte, pokud chcete zásady zaměřit na aplikace na zařízeních libovolného stavu správy. Pokud chcete cílit aplikace na konkrétní typy zařízení, vyberte **ne**  . Informace najdete v tématu [cílení zásad ochrany aplikací na základě stavu správy zařízení](#target-app-protection-policies-based-on-device-management-state) . |
     |     Typy zařízení | Tuto možnost použijte, pokud chcete určit, jestli se tato zásada vztahuje na zařízení spravovaná MDM nebo na nespravovaná zařízení. V případě zásad aplikací pro iOS/iPadOS vyberte možnost z **nespravovaných** a **spravovaných** zařízení. V případě zásad aplikací pro Android vyberte z **nespravovaného**, **Správce zařízení s Androidem**a **Android Enterprise**.  |
     | Veřejné aplikace | Klikněte na **Vybrat veřejné aplikace** a vyberte aplikace, které se mají cílit. |
     | Vlastní aplikace | Klikněte na **Vybrat vlastní aplikace** a vyberte vlastní aplikace, které chcete cílit na základě ID sady prostředků. |
@@ -103,7 +103,7 @@ Když vytvoříte zásady ochrany aplikací pro iOS/iPadOS a aplikace pro Androi
     - **Podmíněné spuštění Androidu** – informace najdete v tématu [nastavení zásad ochrany aplikací pro Android – podmíněné spuštění](app-protection-policy-settings-android.md#conditional-launch).
 
 9. Kliknutím na tlačítko **Další** zobrazíte stránku **přiřazení** .<br>
-   Stránka **přiřazení** vám umožní přiřadit zásady ochrany aplikací skupinám uživatelů.
+   Stránka **přiřazení** vám umožní přiřadit zásady ochrany aplikací skupinám uživatelů. Zásadu musíte použít pro skupinu uživatelů, aby se tyto zásady projevily.
 
 10. Klikněte na **Další: zkontrolovat + vytvořit** a zkontrolujte hodnoty a nastavení, které jste zadali pro tyto zásady ochrany aplikací.
 
@@ -112,7 +112,10 @@ Když vytvoříte zásady ochrany aplikací pro iOS/iPadOS a aplikace pro Androi
     > [!TIP]
     > Tato nastavení zásad se vynutí jenom při použití aplikace v pracovním kontextu. Když koncový uživatel použije aplikaci k provedení osobní úlohy, nebudou mít tyto zásady na ni vliv. Upozorňujeme, že když vytvoříte nový soubor, považuje se za osobní soubor.
 
-Koncoví uživatelé můžou stahovat aplikace z App Storu nebo Google Play. Další informace naleznete v tématu:
+    > [!IMPORTANT]
+    > Použití zásad ochrany aplikací v existujících zařízeních může trvat dlouho. Koncovým uživatelům se na zařízení zobrazí oznámení, když se použijí zásady ochrany aplikací. Před použitím pravidel přístupu condidtional použijte zásady ochrany aplikací na zařízení.
+
+Koncoví uživatelé můžou stahovat aplikace z App Storu nebo Google Play. Další informace:
 * [Co očekávat, když ke správě svojí aplikace pro Android používáte zásady ochrany aplikací](../fundamentals/end-user-mam-apps-android.md)
 * [Co očekávat, když je vaše aplikace pro iOS/iPadOS spravovaná zásadami ochrany aplikací](../fundamentals/end-user-mam-apps-ios.md)
 
@@ -131,9 +134,9 @@ Aby se změny projevily hned, musí se koncový uživatel odhlásit od aplikace 
 
 4. Stránka **aplikace** umožňuje zvolit, jak chcete tyto zásady použít pro aplikace na různých zařízeních. Musíte přidat alespoň jednu aplikaci.<p>
     
-    | Hodnota/možnost | Description |
+    | Hodnota/možnost | Popis |
     |-------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-    | Cíl pro aplikace na všech typech zařízení | Tuto možnost použijte, pokud chcete zásady zaměřit na aplikace na zařízeních libovolného stavu správy. Pokud chcete cílit aplikace na konkrétní typy zařízení, vyberte **ne** . Pro toto nastavení může být vyžadována další konfigurace aplikace. Podrobnosti najdete v tématu [Cílení zásad ochrany aplikací na základě stavu správy zařízení](#target-app-protection-policies-based-on-device-management-state). |
+    | Cíl pro aplikace na všech typech zařízení | Tuto možnost použijte, pokud chcete zásady zaměřit na aplikace na zařízeních libovolného stavu správy. Pokud chcete cílit aplikace na konkrétní typy zařízení, vyberte **ne**  . Pro toto nastavení může být vyžadována další konfigurace aplikace. Podrobnosti najdete v tématu [Cílení zásad ochrany aplikací na základě stavu správy zařízení](#target-app-protection-policies-based-on-device-management-state). |
     |     Typy zařízení | Tuto možnost použijte, pokud chcete určit, jestli se tato zásada vztahuje na zařízení spravovaná MDM nebo na nespravovaná zařízení. V případě zásad aplikací pro iOS/iPadOS vyberte možnost z **nespravovaných** a **spravovaných** zařízení. V případě zásad aplikací pro Android vyberte z **nespravovaného**, **Správce zařízení s Androidem**a **Android Enterprise**.  |
     | Veřejné aplikace | Klikněte na **Vybrat veřejné aplikace** a vyberte aplikace, které se mají cílit. |
     | Vlastní aplikace | Klikněte na **Vybrat vlastní aplikace** a vyberte vlastní aplikace, které chcete cílit na základě ID sady prostředků. |
@@ -179,7 +182,7 @@ V mnoha organizacích je běžné, že koncovým uživatelům umožníte použí
 
 Vzhledem k tomu, že zásady ochrany aplikací Intune cílí na identitu uživatele, nastavení ochrany pro uživatele se může vztahovat na zaregistrovaná zařízení (spravovaná přes MDM) i na nezaregistrovaná zařízení (bez MDM). Proto můžete cílit na zásady ochrany aplikací Intune buď na zaregistrovaná, nebo na neregistrovaná zařízení s iOS/iPadOS a Androidem. Můžete mít jednu zásadu ochrany pro nespravovaná zařízení, ve kterých jsou zavedené ovládací prvky ochrany před únikem informací (DLP), a samostatné zásady ochrany pro zařízení spravovaná pomocí MDM, kde můžou být ovládací prvky ochrany před únikem informací trochu uvolněné. Další informace o tom, jak funguje na osobních zařízeních s Androidem Enterprise, najdete v tématu [Zásady ochrany aplikací a pracovní profily](android-deployment-scenarios-app-protection-work-profiles.md).
 
-Pokud chcete vytvořit tyto zásady, vyhledejte **Apps**  >  v konzole Intune aplikace**Zásady ochrany aplikací** a potom vyberte **vytvořit zásadu**. Můžete také upravit existující zásadu ochranu aplikací. Pokud chcete, aby se zásady ochrany aplikací nastavily u spravovaných i nespravovaných zařízení, přejděte na stránku **aplikace** a ověřte, že **cíl pro aplikace na všech typech zařízení** je nastavená na **Ano**, což je výchozí hodnota. Pokud chcete členit přiřazení na základě stavu správy, nastavte **cíl pro aplikace na všech typech zařízení** na **ne**. 
+Pokud chcete vytvořit tyto zásady, vyhledejte **Apps**  >  v konzole Intune aplikace**Zásady ochrany aplikací** a potom vyberte **vytvořit zásadu**. Můžete také upravit existující zásadu ochranu aplikací. Pokud chcete, aby se zásady ochrany aplikací nastavily u spravovaných i nespravovaných zařízení, přejděte na stránku **aplikace** a ověřte, že **cíl pro aplikace na všech typech zařízení** je nastavená na **Ano**, což je výchozí hodnota. Pokud chcete členit přiřazení na základě stavu správy, nastavte **cíl pro aplikace na všech typech zařízení**  na **ne**. 
 
 ### <a name="device-types"></a>Typy zařízení
 

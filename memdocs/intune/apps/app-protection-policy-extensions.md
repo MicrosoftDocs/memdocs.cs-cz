@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/06/2020
+ms.date: 08/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1dce45d0ad8d44d09345ebfe3fcd358b34a104d6
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 6a2e05e86bf765071d9d22edebfec2ec03115123
+ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078375"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88217597"
 ---
 # <a name="protecting-application-extensions"></a>Ochrana rozšíření aplikace
 
@@ -51,7 +51,7 @@ Připojení účtů LinkedIn umožňuje uživatelům zobrazit informace veřejn�
 > [!NOTE]
 > Integrace LinkedIn je momentálně nedostupná pro zákazníky ze státní správy USA a pro organizace s poštovními schránkami Exchange Online v Austrálii, Číně, Francii, Indii, Japonsku, Jižní Koreji, Jihoafrické republice, Kanadě, Německu a Spojeném království.
 
-Sada Intune SDK ani zásady služby Intune App Protection nepodporují správu připojených účtů LinkedIn, ale existují jiné způsoby, jak tyto účty spravovat. Připojení účtů LinkedIn můžete zakázat pro celou organizaci, nebo je můžete povolit pro vybrané skupiny uživatelů ve vaší organizaci. Tato nastavení ovlivňují připojení LinkedIn ve všech aplikacích Office 365 na všech platformách (webové, mobilní a desktopové). Můžete:
+Sada Intune SDK ani zásady služby Intune App Protection nepodporují správu připojených účtů LinkedIn, ale existují jiné způsoby, jak tyto účty spravovat. Připojení účtů LinkedIn můžete zakázat pro celou organizaci, nebo je můžete povolit pro vybrané skupiny uživatelů ve vaší organizaci. Tato nastavení ovlivňují připojení LinkedIn ve všech aplikacích Office 365 na všech platformách (webové, mobilní a desktopové). Další možnosti:
 
 - Povolte nebo zakažte připojení účtů LinkedIn pro tenanta na portálu Azure Portal. 
 - Povolte nebo zakažte připojení účtů LinkedIn pro aplikace Office 2016 ve vaší organizaci pomocí zásad skupiny.

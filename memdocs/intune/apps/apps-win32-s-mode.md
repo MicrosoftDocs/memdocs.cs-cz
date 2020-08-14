@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/08/2020
+ms.date: 08/13/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 92aa9705fc1a59a288db08a5583bc5b83de111e2
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: ac0e1089b91fa6404ab9582b7f64ae6f60bf217b
+ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83985910"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88216985"
 ---
 # <a name="enable-win32-apps-on-s-mode-devices"></a>Povolit aplikace Win32 na zařízeních S režimem S
 
-[Režim Windows 10 S](https://docs.microsoft.com/windows/deployment/s-mode) je zamčený operační systém, který spouští jenom aplikace pro Store. Ve výchozím nastavení zařízení S Windows S nedovolují instalaci a spouštění aplikací Win32. Mezi tato zařízení patří jediná *základní zásada desítkách*, která uzamkne zařízení režimu S režimem pro spouštění aplikací Win32. Vytvořením a použitím **doplňkové zásady v režimu S** v Intune ale můžete nainstalovat a spustit aplikace Win32 na zařízeních spravovaných v režimu Windows 10 S. Pomocí nástrojů prostředí PowerShell pro [řízení aplikací v programu Microsoft Defender (WDAC)](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) můžete vytvořit jednu nebo více doplňkových zásad pro režim systému Windows S. Doplňkové zásady musíte podepsat pomocí [služby Device Guard Signing Service (DGSS)](https://go.microsoft.com/fwlink/?linkid=2095629) nebo pomocí nástroje [SignTool. exe](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/use-signed-policies-to-protect-windows-defender-application-control-against-tampering) a pak tyto zásady nahrát a distribuovat prostřednictvím Intune. Alternativně můžete podepsat doplňkové zásady s certifikátem pro podepisování z vaší organizace, ale upřednostňovanou metodou je použití DGSS. V případě, že používáte certifikát pro podepisování kódu z vaší organizace, musí být v zařízení přítomen kořenový certifikát, ke kterému je zřetězený certifikát.
+[Režim Windows 10 S](https://docs.microsoft.com/windows/deployment/s-mode) je zamčený operační systém, který spouští jenom aplikace pro Store. Ve výchozím nastavení zařízení S Windows S nedovolují instalaci a spouštění aplikací Win32. Mezi tato zařízení patří jediná *základní zásada desítkách*, která uzamkne zařízení režimu S režimem pro spouštění aplikací Win32. Vytvořením a použitím **doplňkové zásady v režimu S** v Intune ale můžete nainstalovat a spustit aplikace Win32 na zařízeních spravovaných v režimu Windows 10 S. Pomocí nástrojů prostředí PowerShell pro [řízení aplikací v programu Microsoft Defender (WDAC)](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) můžete vytvořit jednu nebo více doplňkových zásad pro režim systému Windows S. Doplňkové zásady musíte podepsat pomocí [služby Device Guard Signing Service (DGSS)](https://go.microsoft.com/fwlink/?linkid=2095629) nebo pomocí [SignTool.exe](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/use-signed-policies-to-protect-windows-defender-application-control-against-tampering) a pak tyto zásady nahrát a distribuovat prostřednictvím Intune. Alternativně můžete podepsat doplňkové zásady s certifikátem pro podepisování z vaší organizace, ale upřednostňovanou metodou je použití DGSS. V případě, že používáte certifikát pro podepisování kódu z vaší organizace, musí být v zařízení přítomen kořenový certifikát, ke kterému je zřetězený certifikát.
 
 Když v Intune přiřadíte doplňkovou zásadu režimu S, povolíte zařízení, aby vyvolalo výjimku z existujících zásad režimu pro zařízení, což umožňuje nahraný odpovídající podepsaný katalog aplikací. Zásady nastaví seznam povolených aplikací (katalog aplikací), který se dá použít na zařízení v režimu S.
 
@@ -59,7 +59,7 @@ Chcete-li vytvořit doplňkové zásady režimu Windows 10 S, použijte následu
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Vyberte **aplikace**v  >  **režimu doplňkové zásady**  >  **vytvořit zásadu**.
-3. Před přidáním **souboru zásad**je nutné ho vytvořit a podepsat. Další informace naleznete v tématu:
+3. Před přidáním **souboru zásad**je nutné ho vytvořit a podepsat. Další informace:
     - [Vytvoření zásady WDAC pomocí nástrojů PowerShellu a její převedení do binárního formátu](https://go.microsoft.com/fwlink/?linkid=2095387)
     - [Podepsat pomocí služby podepisování zařízení Guard](https://go.microsoft.com/fwlink/?linkid=2095629) **(doporučeno)**
 
@@ -68,7 +68,7 @@ Chcete-li vytvořit doplňkové zásady režimu Windows 10 S, použijte následu
     | Hodnota | Popis |
     |--------------|------------------------------------------------|
     | Soubor zásad | Soubor, který obsahuje zásady WDAC. |
-    | Name | Název této zásady. |
+    | Název | Název této zásady. |
     | Popis | Volitelné Popis této zásady |
 
 5. Klikněte na tlačítko **Další: značky oboru**.<br>

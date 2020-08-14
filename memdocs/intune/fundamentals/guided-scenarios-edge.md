@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/09/2020
+ms.date: 08/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b77fd0edf689714c3a3fbaaca44df6e042687acb
-ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
+ms.openlocfilehash: 6fc1e75f38767de77f89dce2a85c747a7390e76d
+ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84531821"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88217403"
 ---
 # <a name="guided-scenario---deploy-microsoft-edge-for-mobile"></a>Scénář s asistencí – nasazení Microsoft Edge pro mobilní zařízení
 
@@ -39,7 +39,7 @@ Následující funkce Microsoft Edge Enterprise, které jsou povolené zásadami
 - **Integrace služby Azure Application proxy** – správci můžou řídit přístup k aplikacím SaaS a webovým aplikacím, což pomáhá zajistit, aby se aplikace založené na prohlížeči spouštěly jenom v zabezpečeném prohlížeči Microsoft Edge, ať už se koncoví uživatelé připojují z podnikové sítě nebo se připojí z Internetu.
 - **Zástupci spravovaných oblíbených položek a domovské stránky** – pro usnadnění přístupu můžou správci nastavit adresy URL tak, aby se zobrazovaly v části Oblíbené, pokud jsou koncoví uživatelé ve firemním kontextu. Správci můžou nastavit zástupce domovské stránky, který se zobrazí jako primární zástupce, když firemní uživatel otevře novou stránku nebo novou kartu v Microsoft Edge.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 - [Nastavení autority MDM na Intune](mdm-authority-set.md#set-mdm-authority-to-intune) – nastavení autority správy mobilních zařízení (MDM) určuje způsob správy zařízení. Jako správce IT musíte nastavit autoritu MDM, aby uživatelé mohli registrovat zařízení pro správu.
 - Potřebná oprávnění správce Intune:

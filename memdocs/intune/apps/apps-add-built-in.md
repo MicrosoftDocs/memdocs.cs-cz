@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/22/2020
+ms.date: 08/13/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9ee40dc9feb9b66b6267fc91448cc7265296597f
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 37bf4cf8d6381ab076f7c0cd0eb879ddf43d571c
+ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989543"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88217112"
 ---
 # <a name="add-built-in-apps-to-microsoft-intune"></a>Přidání integrovaných aplikací do Microsoft Intune
 
@@ -58,7 +58,7 @@ Postup přidání integrované aplikace k aplikacím dostupným v Microsoft Intu
 Informace o integrované aplikaci můžete upravit. Tyto informace vám pomůžou identifikovat aplikaci v Intune a také pomůžou uživatelům, aby ji našli na portálu společnosti.
 1. Vyberte **aplikace**  >  **všechny aplikace** a vyberte vestavěnou aplikaci, kterou chcete upravit.  
    Zobrazí se podokno pro integrovanou aplikaci.
-2. Vyberte **vlastnosti**.
+2. Vyberte  **vlastnosti**.
 3. V poli **informace o aplikaci**vyberte **Upravit** .
 4. V podokně **Informace o aplikaci** je možné upravit následující údaje:
     - **Název**: Zadejte název integrované aplikace, který se zobrazí na portálu společnosti. Všechny používané názvy musí být jedinečné. Pokud stejný název aplikace existuje dvakrát, zobrazí se na portálu společnosti uživatelům jenom jedna z aplikací.

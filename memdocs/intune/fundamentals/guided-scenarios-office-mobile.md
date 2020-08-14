@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/06/2020
+ms.date: 08/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: faf63bd4d738278e41e90fe54e696f83e727a58d
-ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
+ms.openlocfilehash: e5ed7b8c0e8a4953dd2b125fbaf3e63ce74873a7
+ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84531838"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88217496"
 ---
 # <a name="guided-scenario---secure-microsoft-office-mobile-apps"></a>Scénář s asistencí – zabezpečené systém Microsoft Office mobilní aplikace
 
@@ -60,7 +60,7 @@ V tomto příkladu použil správce zásady ochrany aplikací u aplikace Outlook
 
 ![Tok procesu podmíněného přístupu aplikace Outlook](./media/guided-scenarios-office-mobile/guided-scenarios-office-mobile-02.png)
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 Budete potřebovat následující oprávnění správce Intune:
 
@@ -110,9 +110,9 @@ Po výběru aplikací klikněte na tlačítko **Další**.
 
 V tomto kroku musíte nakonfigurovat požadavky pro přístup k firemním souborům a e-mailům v těchto aplikacích a jejich sdílení. Ve výchozím nastavení mohou uživatelé ukládat data do účtů OneDrive a SharePoint vaší organizace.
 
-| Nastavení | Description | Výchozí hodnota |
+| Nastavení | Popis | Výchozí hodnota |
 |---------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|
-| Typ kódu PIN | Číselné kódy PIN se skládají ze všech čísel. Hesla se skládají z alfanumerických znaků a speciálních znaků.  Pro konfiguraci typu "heslo" v systému iOS/iPadOS je nutné, aby měla aplikace sadu Intune SDK verze 7.1.12 nebo vyšší. Číselný typ nemá žádné omezení, pokud se jedná o verzi sady Intune SDK. | Numeric |
+| Typ kódu PIN | Číselné kódy PIN se skládají ze všech čísel. Hesla se skládají z alfanumerických znaků a speciálních znaků.  Pro konfiguraci typu "heslo" v systému iOS/iPadOS je nutné, aby měla aplikace sadu Intune SDK verze 7.1.12 nebo vyšší. Číselný typ nemá žádné omezení, pokud se jedná o verzi sady Intune SDK. | Číselný |
 | Vyberte minimální délku PIN kódu. | Určuje minimální počet číslic v posloupnosti kódu PIN. | 6 |
 | Znovu ověřit požadavky na přístup po (minuty neaktivity) | Pokud je aplikace spravovaná zásadou neaktivní po dobu delší, než je zadaný počet minut nečinnosti, aplikace se vyzve k zadání požadavků na přístup (tj. Připnutí, nastavení podmíněného spuštění), které se má po spuštění aplikace znovu ověřit. | 30 |
 | Tisk organizačních dat | Pokud je zablokovaná, aplikace nemůže tisknout chráněná data. | Blok |

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/10/2020
+ms.date: 08/13/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ee6ccebc9610f74f9f34c08bc8204e652e0a01db
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: d47f1e121a5010a17d213d21d3208977e8f75514
+ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85092896"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88217622"
 ---
 # <a name="add-wi-fi-settings-for-windows-10-and-later-devices-in-intune"></a>Přidání nastavení Wi-Fi pro zařízení s Windows 10 a novější verzí v Intune
 
@@ -101,12 +101,14 @@ Podnikové profily používají k ověřování připojení Wi-Fi protokol EAP (
   - **Maximální časový limit na ověření:** Zadejte maximální dobu, v rozmezí od 1 do 120 sekund, po kterou se bude čekat, než se provede ověření k síti.
   - **Povolit systému Windows zobrazit uživateli výzvu, aby zadal další přihlašovací údaje pro ověření:** Když zvolíte **Ano**, umožníte systému Windows vyzvat uživatele k zadání dalších přihlašovacích údajů, pokud to metoda ověřování vyžaduje. Pokud chcete tyto výzvy skrýt, zvolte **Ne**.
 
-- **Povolit ukládání klíče PMK (Pairwise Master Key) do mezipaměti:** Pokud chcete klíč PMK používaný při ověřování ukládat do mezipaměti, zvolte **Ano**. Toto ukládání do mezipaměti obvykle ověřování k síti urychluje. Pokud chcete ověřovací signalizaci vynutit pokaždé, když se připojujete k síti Wi-Fi, zvolte **Ne**.
+- **Povolit ukládání klíče PMK (Pairwise Master Key) do mezipaměti:** Pokud chcete klíč PMK používaný při ověřování ukládat do mezipaměti, zvolte **Ano**. Toto ukládání do mezipaměti obvykle ověřování k síti urychluje. Pokud chcete ověřovací signalizaci vynutit pokaždé, když se připojujete k síti Wi-Fi, zvolte **Ne**. Chcete-li použít nastavení **Povolit předběžné ověřování** , vyberte možnost **Ano**.
 
   - **Maximální doba, po kterou je klíč PMK uložený v mezipaměti:** Zadejte dobu, v rozmezí od 5 do 1440 minut, po kterou bude klíč PMK uložený v mezipaměti.
   - **Maximální počet klíčů PMK uložených v mezipaměti:** Zadejte počet klíčů, v rozmezí od 1 do 255, který se může uložit do mezipaměti.
 
 - **Povolit předběžné ověření:** Předběžné ověření umožňuje profilu, který chcete ověřit, získat před připojením přístup ke všem přístupovým bodům sítě v profilu. Při přesouvání mezi přístupovými body, proběhne opětovné připojení uživatele nebo zařízení díky předběžnému ověření rychleji. Pokud chcete, aby profil provedl ověření u všech přístupových bodů, které jsou v dané síti v dosahu, zvolte **Ano**. Pokud vyžadujete, aby se uživatel nebo zařízení ověřovalo u každého přístupového bodu zvlášť, zvolte **Ne**.
+
+  Chcete-li použít toto nastavení, nastavte **možnost Povolit ukládání klíče PMK (Pairwise Master Key) do mezipaměti** **Ano**.
 
   - **Maximální počet pokusů o předběžné ověření:** Zadejte počet pokusů, v rozmezí od 1 do 16, k předběžnému ověření.
 

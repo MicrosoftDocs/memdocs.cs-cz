@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eccb45ee4a0aade230ba8c18f68c4f0bc992e011
-ms.sourcegitcommit: cb9b452f8e566fe026717b59c142b65f426e5033
+ms.openlocfilehash: 15ba22e209da1fd6ab828c20928a34a7e6aab52f
+ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86491316"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88217683"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>Odebrání zařízení vymazáním, vyřazením nebo ručním zrušením registrace
 
@@ -36,7 +36,7 @@ Zařízení, která už nepotřebujete, která využíváte k jinému účelu ne
 
 Akce **Vymazání** obnoví výchozí tovární nastavení zařízení. Data uživatele se zachovají, pokud zaškrtnete políčko **Zachovat stav registrace a uživatelský účet**. Jinak se odeberou všechna data, aplikace a nastavení.
 
-|Akce vymazání|**Zachovat stav registrace a uživatelský účet**|Odebráno ze správy v Intune|Description|
+|Akce vymazání|**Zachovat stav registrace a uživatelský účet**|Odebráno ze správy v Intune|Popis|
 |:-------------:|:------------:|:------------:|------------|
 |**Vymazání**| Není zaškrtnuto | Ano | Vymaže všechny uživatelské účty, data, zásady MDM a nastavení. Obnoví operační systém do výchozího stavu a nastavení.|
 |**Vymazání**| Zaškrtnuto | Ne | Vymaže všechny zásady MDM. Zachová uživatelské účty a data. Obnoví nastavení uživatele zpět na výchozí nastavení. Obnoví operační systém do výchozího stavu a nastavení.|
@@ -96,7 +96,7 @@ Následující tabulky popisují, jaká data se odeberou a jaký vliv má akce *
 
 ### <a name="android-device-administrator"></a>Správce zařízení s Androidem
 
-|Datový typ|Telefon|Android Samsung Knox Standard|
+|Datový typ|Android|Android Samsung Knox Standard|
 |-------------|-----------|------------------------|
 |Webové odkazy|Odebrány.|Odebrány.|
 |Nespravované aplikace Google Play|Aplikace a data zůstanou nainstalována. <br /> <br />Odeberou se data firemních aplikací chráněná šifrováním pomocí správy mobilních aplikací (MAM) v rámci aplikace v místním úložišti. Data chráněná šifrováním MAM mimo aplikaci zůstávají šifrovaná a nepoužitelná, ale neodstraňují se. |Aplikace a data zůstanou nainstalována. <br /> <br />Odeberou se data firemních aplikací chráněná šifrováním pomocí správy mobilních aplikací (MAM) v rámci aplikace v místním úložišti. Data chráněná šifrováním MAM mimo aplikaci zůstávají šifrovaná a nepoužitelná, ale neodstraňují se.|
@@ -167,7 +167,8 @@ Můžete nakonfigurovat Intune tak, aby automaticky odstraňoval zařízení, kt
 3. V poli **Odstranit zařízení, která se pro tento počet dnů nevrátila** , zadejte číslo mezi 30 a 270.
 4. Klikněte na tlačítko **Uložit**.
 
-
+> [!NOTE]
+> Pravidla čištění zařízení nejsou k dispozici pro scénáře Android Enterprise, jako je [plně spravovaná](https://docs.microsoft.com/mem/intune/enrollment/android-fully-managed-enroll), [vyhrazená](https://docs.microsoft.com/mem/intune/enrollment/android-kiosk-enroll)a [Podniková s pracovním profilem](https://docs.microsoft.com/mem/intune/enrollment/android-corporate-owned-work-profile-enroll). 
 
 ## <a name="delete-devices-from-the-azure-active-directory-portal"></a>Odstranění zařízení z portálu služby Azure Active Directory
 
