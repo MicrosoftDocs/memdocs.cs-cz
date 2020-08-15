@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6c42ec6b7b67a1c000702e6e53747270d0eda28c
-ms.sourcegitcommit: 16bc2ed5b64eab7f5ae74391bd9d7b66c39d8ca6
+ms.openlocfilehash: 7b0870c82d0a53df1df8ddb9e21b363f72b80e3a
+ms.sourcegitcommit: 69a6829ace9fc1999e58e5f31348521b638ef0ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86437340"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88239506"
 ---
 # <a name="windows-10-and-later-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Nastavení Windows 10 a novějších označení zařízení jako kompatibilních nebo nekompatibilních s Intune
 
@@ -54,7 +54,7 @@ Jako správce Intune můžete pomocí těchto nastavení dodržování předpis�
   - **Vyžadovat** – systém je nucen spouštět do důvěryhodného stavu výroby. Základní komponenty, které se používají ke spouštění počítače, musí mít správné kryptografické podpisy, které jsou důvěryhodné pro organizaci, která zařízení vyrobila. Firmware UEFI nejdříve ověří podpis a až potom povolí spuštění počítače. Pokud jsou nějaké soubory úmyslně poškozeny, což přeruší svůj podpis, systém se nespustí.
 
   > [!NOTE]
-  > U některých zařízení s čipem TPM 1,2 a 2,0 je nastavení **vyžadovat, aby bylo povolené zabezpečené spuštění na zařízení** . Pokud zařízení nepodporují TPM 2.0 nebo novější, zobrazí se v Intune stav zásady jako **nevyhovující**. Další informace o podporovaných verzích najdete v tématu [ověření stavu zařízení](https://docs.microsoft.com/windows/security/information-protection/tpm/trusted-platform-module-overview#device-health-attestation).
+  > U některých zařízení s čipem TPM 1,2 a 2,0 je nastavení **vyžadovat, aby bylo povolené zabezpečené spuštění na zařízení** . Pokud zařízení nepodporují TPM 2.0 nebo novější, zobrazí se v Intune stav zásady jako **nevyhovující**. Další informace o podporovaných verzích najdete v tématu  [ověření stavu zařízení](https://docs.microsoft.com/windows/security/information-protection/tpm/trusted-platform-module-overview#device-health-attestation).
 
 - **Vyžadovat integritu kódu**:  
   Integrita kódu je funkce, která ověřuje integritu ovladače nebo systémového souboru pokaždé, když je načten do paměti.
@@ -106,6 +106,9 @@ Platí jenom pro spoluspravovaná zařízení s Windows 10 a novějším. Zaří
   - **Vyžadovat** – vyžaduje, aby všechna nastavení (konfigurační položky) v Configuration Manager splňovala předpisy.
 
     Můžete například vyžadovat, aby v zařízeních byly nainstalované všechny aktualizace softwaru. V Configuration Manager má tento požadavek stav nainstalováno. Pokud jsou některé programy v zařízení v neznámém stavu, zařízení nedodržuje předpisy v Intune.
+    
+  > [!NOTE]
+  > V případě, že je úloha dodržování předpisů pro spolusprávu nastavená na *Configuration Manager*, je třeba použít pouze **dodržování předpisů zařízením od Configuration Manager** . Když použijete toto nastavení s úlohou kompatibility nastavenou na *Intune*, může to mít vliv na všechna vyhodnocení dodržování předpisů. 
 
 ## <a name="system-security"></a>Zabezpečení systému
 
