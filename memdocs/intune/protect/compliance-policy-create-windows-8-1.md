@@ -1,11 +1,11 @@
 ---
 title: Windows 8.1 nastavení dodržování předpisů v Microsoft Intune – Azure | Microsoft Docs
-description: Podívejte se na seznam všech nastavení, která můžete použít při nastavení dodržování předpisů pro Windows 8.1 a zařízení Windows Phone 8,1 v Microsoft Intune. Ověřte kompatibilitu s minimálním a maximálním operačním systémem, nastavte omezení a délku hesla, povolte šifrování pro úložiště dat a další.
+description: Podívejte se na seznam všech nastavení, která můžete použít při nastavení dodržování předpisů pro Windows 8.1 v Microsoft Intune. Ověřte kompatibilitu s minimálním a maximálním operačním systémem, nastavte omezení a délku hesla, povolte šifrování pro úložiště dat a další.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/22/2019
+ms.date: 08/14/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,38 +15,31 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0189fea7f73b70286a6daf844a10806d4c1e8a5d
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 9b423d289e81c48479adcaa7a594974b23a9476c
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79329667"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252703"
 ---
 # <a name="windows-81-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Nastavení Windows 8.1 pro označení zařízení jako kompatibilních nebo nekompatibilních s použitím Intune
 
+[!INCLUDE [windows-phone-81-windows-10-mobile-support](../includes/windows-phone-81-windows-10-mobile-support.md)]
 Tento článek obsahuje seznam a popis různých nastavení dodržování předpisů, která můžete nakonfigurovat na zařízeních Windows 8.1 v Intune. Jako součást řešení správy mobilních zařízení (MDM) použijte Tato nastavení k blokování jednoduchých hesel, nastavení minimální a maximální verze operačního systému a dalších.
 
 Tato funkce platí pro:
 
-- Windows Phone 8.1
 - Windows 8.1 a vyšší
 
 Jako správce Intune můžete pomocí těchto nastavení dodržování předpisů ochránit prostředky vaší organizace. Další informace o zásadách dodržování předpisů a o tom, co dělají, najdete v tématu [Začínáme s dodržováním předpisů pro zařízení](device-compliance-get-started.md).
 
-## <a name="before-you-begin"></a>Před zahájením
+## <a name="before-you-begin"></a>Než začnete
 
-[Vytvořte zásady dodržování předpisů](create-compliance-policy.md#create-the-policy). V části **platforma**vyberte **Windows Phone 8,1** nebo **Windows 8.1 a novější**.
+[Vytvořte zásady dodržování předpisů](create-compliance-policy.md#create-the-policy). V části **platforma**vyberte **Windows 8.1 a novější**.
 
 ## <a name="device-properties"></a>Vlastnosti zařízení
 
 ### <a name="operating-system-version"></a>Verze operačního systému
-
-**Windows Phone 8,1 a novější**
-- **Minimální verze operačního systému pro mobilní zařízení**:  
-  Zadejte minimální povolenou verzi. Pokud zařízení nesplňuje požadavek na minimální verzi operačního systému, nahlásí se jako nevyhovující. Zobrazí se odkaz s informacemi, jak upgradovat. Uživatel zařízení si může upgradovat svoje zařízení a pak získat přístup k firemním prostředkům.
-
-- **Maximální verze operačního systému pro mobilní zařízení**:  
-  Zadejte maximální povolenou verzi. Pokud zařízení používá verzi operačního systému, která je novější než verze zadaná v pravidle, bude přístup k prostředkům organizace blokovaný. Uživateli zařízení se zobrazí výzva, aby kontaktoval správce IT. Zařízení nemá přístup k prostředkům organizace, dokud se nezmění pravidlo, které povoluje verzi operačního systému.
 
 **Windows 8.1 a vyšší**
 - **Minimální verze operačního systému**:  

@@ -10,12 +10,12 @@ ms.assetid: 44c2eb8a-3ccc-471f-838b-55d7971bb79e
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: d983e0c3d84f5bcbf411af1243ddc045d66d9199
-ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
+ms.openlocfilehash: 9ca99afa60ed5f8b9a1491381767ec4f6359826f
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88051580"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252499"
 ---
 # <a name="troubleshoot-configmgr-client-details-in-the-admin-center-preview"></a>Řešení potíží s podrobnostmi klienta nástroje ConfigMgr v centru pro správu (Preview)
 <!--6374854, 6521921-->
@@ -30,13 +30,13 @@ K řešení potíží s podrobnostmi klienta nástroje ConfigMgr v centru pro sp
 
 Při prohlížení podrobností klienta nástroje ConfigMgr můžete spustit jednu z těchto chyb.  
 
-### <a name="the-necessary-configuration-is-missing-in-azure-active-directory"></a><a name="bkmk_aad"></a>V Azure Active Directory chybí potřebná konfigurace.
+### <a name="the-necessary-configuration-is-missing-in-azure-active-directory"></a><a name="bkmk_aad"></a> V Azure Active Directory chybí potřebná konfigurace.
 
 **Chybová zpráva:** V Azure Active Directory chybí potřebná konfigurace. Nezapomeňte připojit Configuration Manager lokality k vašemu tenantovi Azure a přiřadit správnou roli uživatele v Azure AD.
 
 **Možná příčina:** V uživatelském účtu nejspíš chybí role **uživatele správce** pro Configuration Manager aplikace mikroslužeb ve službě Azure AD. Přidejte roli ve službě Azure AD z části **podnikové aplikace**  >  **Configuration Manager**  >  **Uživatelé a skupiny**mikroslužeb  >  **Přidat uživatele**. Pokud máte Azure AD Premium, podporují se skupiny. Změny tohoto oprávnění mohou trvat až hodinu.
 
-### <a name="unable-to-get-device-or-collection-information"></a><a name="bkmk_noinfo"></a>Nepovedlo se získat informace o zařízení nebo kolekci.
+### <a name="unable-to-get-device-or-collection-information"></a><a name="bkmk_noinfo"></a> Nepovedlo se získat informace o zařízení nebo kolekci.
 
 **Chybová zpráva 1:** Nepovedlo se získat informace o podrobnostech klienta (nebo shromažďování). Ujistěte se, že je nakonfigurované zjišťování uživatelů Azure AD a AD a že je uživatel zjištěn v obou. Ověřte, zda má uživatel správná oprávnění v Configuration Manager.
 
@@ -57,7 +57,7 @@ Při prohlížení podrobností klienta nástroje ConfigMgr můžete spustit jed
     Pokud jsou vlastnosti služby Azure AD prázdné, ověřte konfiguraci [zjišťování uživatelů služby Azure AD](../core/servers/deploy/configure/about-discovery-methods.md#azureaddisc).
 
 
-### <a name="unexpected-error-occurred"></a><a name="bkmk_1603"></a>Stala se neočekávaná chyba.
+### <a name="unexpected-error-occurred"></a><a name="bkmk_1603"></a> Stala se neočekávaná chyba.
 
 **Chybová zpráva:** Stala se neočekávaná chyba.
 
@@ -85,6 +85,8 @@ Při prohlížení podrobností klienta nástroje ConfigMgr můžete spustit jed
 Prázdný seznam je známý problém pro Configuration Manager verze 2002, když máte hierarchii Configuration Managerch lokalit.
 
 :::image type="content" source="media/6024387-known-issue-device-details.png" alt-text="Seznam skupin hranic je prázdný." lightbox="media/6024387-known-issue-device-details.png":::
+
+[!INCLUDE [Known issues shared across tenant attach features](includes/known-issues-shared.md)]
 
 ## <a name="next-steps"></a>Další kroky
 

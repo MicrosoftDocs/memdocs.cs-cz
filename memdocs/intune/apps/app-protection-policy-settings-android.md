@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/16/2020
+ms.date: 08/14/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 96f5b4c8400e993de4ecde0aa3d7c30f82a20e6b
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: d8fd15b7bdc52d3cd8dc00f77dced42e9bb6bd66
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262706"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252148"
 ---
 # <a name="android-app-protection-policy-settings-in-microsoft-intune"></a>Nastavení zásad ochrany aplikací pro Android v Microsoft Intune
 Tento článek popisuje nastavení zásad ochrany aplikací pro zařízení s Androidem. Popsaná nastavení zásad lze [nakonfigurovat](app-protection-policies.md) pro zásady ochrany aplikací v podokně **Nastavení** v Azure Portal.
@@ -127,16 +127,16 @@ Další informace najdete v tématu [Výjimky zásad přenosu dat pro aplikace](
 
 
 ## <a name="conditional-launch"></a>Podmíněné spouštění
-Pokud chcete ve svých zásadách ochrany přístupu nastavit bezpečnostní požadavky, které se týkají přihlašování, nakonfigurujte podmíněné spouštění. 
+Nakonfigurujte nastavení podmíněného spuštění, aby se nastavily požadavky na zabezpečení přihlašování pro vaše zásady ochrany aplikací. 
 
-Výchozí nastavení obsahuje předem nakonfigurované hodnoty a akce. Některé nastavení můžete odstranit, třeba *Minimální verze operačního systému*. Z rozevíracího seznamu **Vyberte jednu možnost** můžete také vybrat další nastavení. 
+Výchozí nastavení obsahuje předem nakonfigurované hodnoty a akce. Můžete odstranit některá nastavení, třeba *minimální verzi operačního systému*. Z rozevíracího seznamu **Vyberte jednu možnost** můžete také vybrat další nastavení. 
 
 | Nastavení | Způsob použití |  
 |---------|------------| 
 | **Maximální počet pokusů o zadání PIN kódu** | Zadejte počet pokusů, které uživatel bude mít k úspěšnému zadání PIN kódu před provedením nakonfigurované akce. Tento formát nastavení zásady podporuje kladné celé číslo. *Akce* zahrnují: <br><ul><li>**Resetovat PIN kód** – uživatel musí resetovat svůj PIN.</li></ul> <ul><li>**Vymazat data** – uživatelský účet, který je přidružený k aplikaci, se ze zařízení vymaže.  </li></ul> </li></ul> Výchozí hodnota = **5** |
 | **Offline období odkladu** | Kolik minut můžou aplikace MAM běžet offline. Zadejte dobu (v minutách) před opakovaným zkontrolováním požadavků na přístup k aplikaci. *Akce* zahrnují: <br><ul><li>**Zablokovat přístup (minuty)** – kolik minut můžou aplikace MAM běžet offline. Zadejte dobu (v minutách) před opakovaným zkontrolováním požadavků na přístup k aplikaci. Aby mohla aplikace po uplynutí této doby dál běžet, vyžaduje ověření uživatele v Azure Active Directory (Azure AD). <br><br>Tento formát nastavení zásady podporuje kladné celé číslo. <br><br>Výchozí hodnota = **720** minut (12 hodin) </li></ul> <ul><li>**Vymazat data (dny)** – po kolika dnech (definovaných správcem) provozu offline bude aplikace vyžadovat, aby se uživatel připojil k síti a znovu se přihlásil. Pokud je ověření uživatele úspěšné, může ke svým datům dál přistupovat a doba v offline režimu se resetuje.  Pokud se ověření uživatele nezdaří, aplikace provede selektivní vymazání uživatelova účtu a dat. Další informace najdete v tématu [Jak z aplikací spravovaných pomocí Intune vymazat jenom firemní data](apps-selective-wipe.md).</li></ul> Tento formát nastavení zásady podporuje kladné celé číslo. <br><br>  Výchozí hodnota = **90 dní** </li></ul> <br><br>  Tato položka se může zobrazit vícekrát. V takovém případě každá instance podporuje jinou akci. |   
 | **Zařízení s jailbreakem nebo rootem** |U tohoto nastavení se nezadává žádná hodnota. *Akce* zahrnují: <br><ul><li>**Blokovat přístup** – brání spuštění aplikace na zařízeních s jailbreakem nebo rootem (která mají odblokovaný systém). Uživatel může aplikaci dále používat pro své osobní účely, ale pokud v ní chce pracovat s pracovními nebo školními daty, musí použít jiné zařízení.</li></ul> <ul><li>**Vymazat data** – uživatelský účet, který je přidružený k aplikaci, se ze zařízení vymaže.  </li></ul> |
-| **Zakázaný účet** | U tohoto nastavení se nezadává žádná hodnota. *Akce* zahrnují: <br><ul><li>**Blokovat přístup** – Pokud jsme potvrzuje, že uživatel byl v Azure Active Directory zakázán, aplikace blokuje přístup k pracovním nebo školním datům.</li></ul> <ul><li>**Vymazání dat** – Pokud jsme ověřili, že uživatel byl v Azure Active Directory zakázán, aplikace provede selektivní vymazání účtu a dat uživatelů. </li></ul> |
+| **Zakázaný účet** | U tohoto nastavení se nezadává žádná hodnota. *Akce* zahrnují: <br><ul><li>**Blokovat přístup** – Pokud jsme potvrzuje, že uživatel byl v Azure Active Directory zakázán, aplikace blokuje přístup k pracovním nebo školním datům.</li></ul> <ul><li>**Vymazání dat**  – Pokud jsme ověřili, že uživatel byl v Azure Active Directory zakázán, aplikace provede selektivní vymazání účtu a dat uživatelů. </li></ul> |
 | **Minimální verze operačního systému** | Zadejte minimální operační systém pro Android, který je nutný k použití této aplikace. *Akce* zahrnují: <br><ul><li>**Upozornit** – pokud verze Androidu v zařízení nevyhovuje tomuto požadavku, zobrazí se uživateli oznámení. Toto oznámení je možné zavřít.  </li></ul> <ul><li>**Blokovat přístup** – pokud verze iOSu v zařízení nevyhovuje tomuto požadavku, bude uživatel zablokován.</li></ul> <ul><li>**Vymazat data** – uživatelský účet, který je přidružený k aplikaci, se ze zařízení vymaže.  </li></ul> </li></ul>Tento formát nastavení zásady podporuje vlastnosti major.minor, major.minor.build a major.minor.build.revision. |
 | **Minimální verze aplikace** | Zadejte minimální verzi operačního systému. *Akce* zahrnují: <br><ul><li>**Upozornit** – pokud verze aplikace v zařízení nevyhovuje tomuto požadavku, zobrazí se uživateli oznámení. Toto oznámení je možné zavřít.</li></ul> <ul><li>**Blokovat přístup** – pokud verze aplikace v zařízení nevyhovuje tomuto požadavku, zablokuje se uživateli přístup. </li></ul> <ul><li>**Vymazat data** – uživatelský účet, který je přidružený k aplikaci, se ze zařízení vymaže. </li></ul> </li></ul> Vzhledem k to, že aplikace mají často odlišná schémata verzí, vytvořte zásadu s jednou minimální verzí aplikace, která cílí na jednu aplikaci (například *zásady verze Outlooku*).<br><br> Tato položka se může zobrazit vícekrát. V takovém případě každá instance podporuje jinou akci.<br><br> Tento formát nastavení zásady podporuje vlastnosti major.minor, major.minor.build a major.minor.build.revision.<br><br> Kromě toho můžete nakonfigurovat **, kde** můžou koncoví uživatelé získat aktualizovanou verzi obchodní aplikace (LOB). Koncovým uživatelům se zobrazí v dialogovém okně minimální spuštění podmíněné **verze aplikace** , ve kterém se koncovým uživatelům zobrazí výzva k aktualizaci na minimální verzi aplikace LOB. V Androidu Tato funkce používá Portál společnosti. Pokud chcete nakonfigurovat, kde má koncový uživatel aktualizovat obchodní aplikaci, potřebuje k tomu, aby se v této aplikaci poslala [Zásada Konfigurace spravované aplikace](app-configuration-policies-managed-app.md) , a to pomocí klíče `com.microsoft.intune.myappstore` . Hodnota odeslané bude určovat, ze kterého Storu bude koncový uživatel aplikaci stahovat. Pokud je aplikace nasazena prostřednictvím Portál společnosti, musí být hodnota `CompanyPortal` . Pro jakékoli jiné úložiště musíte zadat úplnou adresu URL. |
 | **Minimální verze opravy** | Vyžaduje, aby na zařízení byla nainstalovaná minimální oprava zabezpečení Androidu vydaná Googlem.  <br><ul><li>**Upozornit** – pokud verze Androidu v zařízení nevyhovuje tomuto požadavku, zobrazí se uživateli oznámení. Toto oznámení je možné zavřít.  </li></ul> <ul><li>**Blokovat přístup** – pokud verze iOSu v zařízení nevyhovuje tomuto požadavku, bude uživatel zablokován.</li></ul> <ul><li>**Vymazat data** – uživatelský účet, který je přidružený k aplikaci, se ze zařízení vymaže.  </li></ul></li></ul> Nastavení zásady podporuje formát kalendářního data *RRRR-MM-DD*. |

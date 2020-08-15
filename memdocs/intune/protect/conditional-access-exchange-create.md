@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/17/2020
+ms.date: 08/14/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6b0a22d24a67364df3d3aa064489db67e2c97e98
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: cb70d5842ce13b5baa9dc60ec2ed9cd698bad75c
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86462231"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252754"
 ---
 # <a name="configure-exchange-on-premises-access-for-intune"></a>Konfigurace přístupu k místnímu Exchangi pro Intune
 
@@ -69,14 +69,13 @@ Než budete moct nakonfigurovat podmíněný přístup, ověřte, že existují 
 
 ### <a name="support-for-mobile-devices"></a>Podpora mobilních zařízení
 
-- **Windows Phone 8,1 a novější** – vytvoření zásady podmíněného přístupu najdete v tématu [Vytvoření zásad podmíněného přístupu](../protect/create-conditional-access-intune.md) .
+- **Windows Phone** – vytvoření zásady podmíněného přístupu najdete v tématu [Vytvoření zásad podmíněného přístupu](../protect/create-conditional-access-intune.md) .
 - **Nativní e-mailová aplikace v systému iOS/iPadOS** – vytvoření zásady podmíněného přístupu najdete v tématu [Vytvoření zásad podmíněného přístupu](../protect/create-conditional-access-intune.md) .
 - **Poštovní klienti EAS, například Gmail v Androidu 4 nebo novějším** – vytvoření zásady podmíněného přístupu, najdete v tématu [Vytvoření zásad podmíněného přístupu](../protect/create-conditional-access-intune.md) .
 
 - **Poštovní klienti EAS na Správci zařízení s Androidem** : Pokud chcete vytvořit zásadu podmíněného přístupu, přečtěte si téma [Vytvoření zásad podmíněného přístupu](../protect/create-conditional-access-intune.md) .
 
 - **Poštovní klienti EAS na zařízeních s pracovním profilem Android** – na zařízeních s Androidem Work profilování jsou podporovaná jenom *Gmail* a *devět práce pro Android Enterprise* . Aby mohl podmíněný přístup pracovat s pracovními profily Androidu, musíte nasadit e-mailový profil pro aplikaci *Gmail* nebo *devět Work pro Android Enterprise* a tyto aplikace nasadit jako požadovanou instalaci. Po nasazení aplikace můžete nastavit podmíněný přístup na základě zařízení.
-
 
 #### <a name="to-set-up-conditional-access-for-android-work-profile-devices"></a>Nastavení podmíněného přístupu pro zařízení s pracovním profilem Androidu
 

@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/23/2020
+ms.date: 08/14/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fedca34aaf390dfec655e3166f3a153af93a7ce0
-ms.sourcegitcommit: 7b3eed763b394075766ea080968889a8538bfe56
+ms.openlocfilehash: 69b4df0b5ceb947ab875f82a0d6f5ac59ce89eef
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82506586"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252618"
 ---
 # <a name="windows-10-and-later-settings-to-protect-devices-using-intune"></a>Nastavení Windows 10 (a novější) pro ochranu zařízení pomocí Intune
 
@@ -30,7 +30,7 @@ Microsoft Intune obsahuje řadu nastavení, která vám pomůžou chránit vaše
 
 Pokud chcete nakonfigurovat antivirovou ochranu v programu Microsoft Defender, přečtěte si téma [omezení zařízení s Windows](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus)  
 
-## <a name="before-you-begin"></a>Před zahájením  
+## <a name="before-you-begin"></a>Než začnete  
 
 [Vytvoření profilu konfigurace zařízení Endpoint Protection](endpoint-protection-configure.md).  
 
@@ -68,7 +68,7 @@ Ochrana Application Guard je dostupná jenom pro zařízení s Windows 10 (64bit
   Vyberte povolený obsah schránky.  
   - **Není nakonfigurováno**  
   - **Text**  
-  - **Obrázky**  
+  - **Image**  
   - **Text a obrázky**  
 
 - **Externí obsah na podnikových webech**  
@@ -160,7 +160,7 @@ Tato nastavení platí pro všechny typy sítě.
   **Výchozí**: Nenakonfigurováno  
   CSP brány firewall: [MdmStore/Global/CRLcheck](https://go.microsoft.com/fwlink/?linkid=872548)  
 
-  Vyberte, jak zařízení ověřuje seznam odvolaných certifikátů. Mezi možnosti patří:  
+  Vyberte, jak zařízení ověřuje seznam odvolaných certifikátů. Vaše možnosti jsou:  
   - **Zakázat ověření seznamu CRL**  
   - **Neúspěšné ověření seznamu CRL jenom u odvolaného certifikátu**  
   - Při **ověřování seznamu CRL došlo k chybě**.  
@@ -178,7 +178,7 @@ Tato nastavení platí pro všechny typy sítě.
   **Výchozí**: Nenakonfigurováno  
   CSP brány firewall: [MdmStore/Global/EnablePacketQueue](https://go.microsoft.com/fwlink/?linkid=872551)  
 
-  Určete, jak je povolené škálování softwaru na straně příjmu pro šifrované přijímání a prostý text před scénářem brány IPsec pro tunelové připojení. Toto nastavení potvrdí, že se zachová pořadí paketů. Mezi možnosti patří:  
+  Určete, jak je povolené škálování softwaru na straně příjmu pro šifrované přijímání a prostý text před scénářem brány IPsec pro tunelové připojení. Toto nastavení potvrdí, že se zachová pořadí paketů. Vaše možnosti jsou:  
   - **Není nakonfigurováno**  
   - **Zakázat všechny služby Řízení front paketů**  
   - **Zařadit pouze příchozí šifrované pakety do fronty**  
@@ -268,8 +268,8 @@ Následující nastavení jsou uvedena v tomto článku v jednom okamžiku, ale 
 
   - **Není nakonfigurováno**  
   - **Blokovat** – pravidla brány firewall autorizovaných aplikací v místním úložišti se ignorují a neuplatňují.  
-  - Možnost **Povolit** -
-   volbu **Povolit** aplikuje pravidla brány firewall v místním úložišti, aby byla rozpoznaná a vynutila.  
+  - **Povolení** -
+    Zvolením možnosti **Povolit** aplikujete pravidla brány firewall v místním úložišti, aby byla rozpoznaná a vynutila.  
 
 - **Globální port pravidla firewallu v programu Microsoft Defender z místního úložiště**  
   **Výchozí**: Nenakonfigurováno  
@@ -340,7 +340,7 @@ Vlastní pravidla brány firewall podporují tyto možnosti:
   - **Název rodiny balíčků** – zadejte název rodiny balíčků. Pokud chcete najít název řady balíčků, použijte příkaz PowerShellu **Get-AppxPackage**.   
     CSP brány firewall: [FirewallRules/*FirewallRuleName*/App/PackageFamilyName](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#packagefamilyname)  
  
-  - **Cesta k souboru** – je nutné zadat cestu k souboru aplikace v klientském zařízení, což může být absolutní cesta nebo relativní cesta. Příklad: C:\Windows\System\Notepad.exe nebo%WINDIR%\Notepad.exe.  
+  - **Cesta k souboru** – je nutné zadat cestu k souboru aplikace v klientském zařízení, což může být absolutní cesta nebo relativní cesta. Například: C:\Windows\System\Notepad.exe nebo% WINDIR% \Notepad.exe.  
     CSP brány firewall: [FirewallRules/*FirewallRuleName*/App/FilePath](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#filepath)  
 
   - **Služba systému Windows** – zadejte krátký název služby systému Windows, pokud se jedná o službu, nikoli o aplikaci, která odesílá nebo přijímá provoz. Chcete-li najít krátký název služby, použijte příkaz prostředí PowerShell **Get-Service**.  
@@ -442,7 +442,7 @@ V zařízení musí být nainstalovaný Microsoft Edge.
  
 ### <a name="windows-settings"></a>Nastavení Windows  
 
-- **Šifrovat zařízení**  
+- **Šifrování zařízení**  
   **Výchozí**: Nenakonfigurováno  
   CSP nástroje BitLocker: [RequireDeviceEncryption](https://go.microsoft.com/fwlink/?linkid=872523)  
 
@@ -453,13 +453,16 @@ V zařízení musí být nainstalovaný Microsoft Edge.
   
   Pokud je zapnuto šifrování Windows a současně je aktivní jiná metoda šifrování, mohlo by to narušit stabilitu zařízení.  
 
-- **Šifrování paměťové karty (jenom mobilní zařízení)**  
-  *Toto nastavení platí jenom pro Windows 10 Mobile.*  
-  **Výchozí**: Nenakonfigurováno  
-  CSP nástroje BitLocker: [RequireStorageCardEncryption](https://go.microsoft.com/fwlink/?linkid=872524)  
+<!-- Support Deprecated for Windows 10 Mobile as of August 2020
 
-  - **Vyžaduje** zašifrování jakýchkoli vyměnitelných paměťových karet používaných zařízením.  
-  - **Nenakonfigurováno** – Nevyžadovat šifrování paměťové karty a nedotazovat uživatele na jeho zapnutí.  
+- **Encrypt storage card (mobile only)**  
+  *This setting only applies to Windows 10 mobile.*  
+  **Default**: Not configured  
+  BitLocker CSP: [RequireStorageCardEncryption](https://go.microsoft.com/fwlink/?linkid=872524)  
+
+  - **Require** to encrypt any removable storage cards used by the device.  
+  - **Not configured** - Don't require storage card encryption, and don't prompt the user to turn it on.  
+-->
 
 ### <a name="bitlocker-base-settings"></a>Základní nastavení BitLockeru  
 
@@ -478,7 +481,7 @@ Základní nastavení jsou univerzální nastavení BitLockeru pro všechny typy
   Když se nastaví *blokování*, můžete nakonfigurovat následující nastavení:  
 
   - **Povolit Standard uživatelům povolit šifrování během připojení ke službě Azure AD**  
-    *Toto nastavení platí jenom pro zařízení s Azure Active Directory připojená (Azure ADJ) a závisí na předchozím nastavení `Warning for other disk encryption`.*  
+    *Toto nastavení platí jenom pro zařízení s Azure Active Directory připojená (Azure ADJ) a závisí na předchozím nastavení `Warning for other disk encryption` .*  
     **Výchozí**: Nenakonfigurováno  
     CSP nástroje BitLocker: [AllowStandardUserEncryption](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp#allowstandarduserencryption)
 
@@ -495,7 +498,7 @@ Základní nastavení jsou univerzální nastavení BitLockeru pro všechny typy
   - **Povolit** – nakonfigurujte algoritmy šifrování pro operační systém, data a vyměnitelné jednotky.  
   - **Nenakonfigurováno** – BitLocker používá jako výchozí metodu šifrování XTS-AES 128 nebo používá metodu šifrování určenou jakýmkoli skriptem instalace.  
 
-  Když nastavíte možnost *Povolit*, můžete nakonfigurovat následující nastavení:  
+  Když nastavíte možnost  *Povolit*, můžete nakonfigurovat následující nastavení:  
 
   - **Šifrování pro jednotky operačního systému**  
     **Výchozí**: XTS-AES 128-bit  
@@ -599,7 +602,7 @@ Tato nastavení platí konkrétně pro datové jednotky s operačním systémem.
   - **Minimální znaky**  
     **Výchozí**: *nenakonfigurovaný* CSP nástroje BitLocker: [SystemDrivesMinimumPINLength](https://go.microsoft.com/fwlink/?linkid=872528)  
 
-    Zadejte počet znaků vyžadovaných pro spouštěcí PIN kód od **4**-**20**.  
+    Zadejte počet znaků vyžadovaných pro spouštěcí PIN kód od **4** - **20**.  
 
 - **Obnovení jednotky operačního systému**  
   **Výchozí**: Nenakonfigurováno   
@@ -642,7 +645,7 @@ Tato nastavení platí konkrétně pro datové jednotky s operačním systémem.
     **Výchozí**: Nenakonfigurováno  
 
     - **Povolit** – ukládat informace pro obnovení BitLockeru do Azure Active Directory (Azure AD).  
-    - **Nenakonfigurováno** – informace pro obnovení nástroje BitLocker nejsou uloženy v AAD.  
+    - **Nenakonfigurováno** – informace pro obnovení nástroje BitLocker nejsou uloženy v Azure AD.  
 
   - **Informace o obnovení BitLockeru uložené do Azure Active Directory**  
     **Výchozí**: hesla pro obnovení zálohování a balíčky klíčů  
@@ -739,7 +742,7 @@ Tato nastavení platí konkrétně pro pevné datové jednotky.
     **Výchozí**: Nenakonfigurováno  
 
     - **Povolit** – ukládat informace pro obnovení BitLockeru do Azure Active Directory (Azure AD).  
-    - **Nenakonfigurováno** – informace pro obnovení nástroje BitLocker nejsou uloženy v AAD.
+    - **Nenakonfigurováno** – informace pro obnovení nástroje BitLocker nejsou uloženy v Azure AD.
 
   - **Informace o obnovení BitLockeru uložené do Azure Active Directory**  
     **Výchozí**: hesla pro obnovení zálohování a balíčky klíčů  
@@ -787,12 +790,12 @@ Pravidla pro omezení možností útoku zabraňují malwaru chování často pou
 
 - **Flag credential stealing from the Windows local security authority subsystem (Označit příznakem použití jiných přihlašovacích údajů ze subsystému Windows Local Security Authority)**  
   **Výchozí**: Nenakonfigurováno  
-  Pravidlo: [blokovat odcizení přihlašovacích údajů ze subsystému místního úřadu zabezpečení systému Windows (Lsass. exe)](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-credential-stealing-from-the-windows-local-security-authority-subsystem)
+  Pravidlo: [blokovat odcizení přihlašovacích údajů ze subsystému místního úřadu zabezpečení systému Windows (lsass.exe)](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-credential-stealing-from-the-windows-local-security-authority-subsystem)
 
   Používejte ochranu před akcemi a aplikacemi, které obvykle využívá malware s cílem zneužití a nakažení počítačů.  
 
   - **Není nakonfigurováno**  
-  - **Povolit** – příznak pro krádeže přihlašovacích údajů ze subsystému místního úřadu zabezpečení systému Windows (Lsass. exe).  
+  - **Povolit** – příznak pro krádeže přihlašovacích údajů ze subsystému místního úřadu zabezpečení systému Windows (lsass.exe).  
   - **Jenom audit**  
 
 - **Vytváření procesů z aplikace Adobe Reader (beta verze)**  
@@ -1218,7 +1221,7 @@ Pomocí těchto možností můžete konfigurovat nastavení místního zabezpeč
    - **Blok** – povolí pouze místní účty s prázdnými hesly pro přihlášení pomocí klávesnice zařízení.  
    - **Nenakonfigurováno** – umožňuje místním účtům s prázdnými hesly přihlašovat se z jiných umístění, než je fyzické zařízení.  
 
-#### <a name="admin"></a>Správce  
+#### <a name="admin"></a>správce  
 
 - **Účet místního správce**  
   **Výchozí**: Nenakonfigurováno  
@@ -1293,7 +1296,7 @@ Pomocí těchto možností můžete konfigurovat nastavení místního zabezpeč
   LocalPoliciesSecurityOptions CSP: [InteractiveLogon_MachineInactivityLimit](https://go.microsoft.com/fwlink/?linkid=867891)  
 
 
-  Zadejte maximální počet minut nečinnosti na přihlašovací obrazovce interaktivní plochy, dokud se nespustí spořič obrazovky. (**0** - **99999**)  
+  Zadejte maximální počet minut nečinnosti na přihlašovací obrazovce interaktivní plochy, dokud se nespustí spořič obrazovky. (**0**  -  **99999**)  
 
 - **Pro přihlášení vyžadovat kombinaci kláves CTRL + ALT + DEL**  
   **Výchozí**: Nenakonfigurováno  
@@ -1314,7 +1317,7 @@ Pomocí těchto možností můžete konfigurovat nastavení místního zabezpeč
   - **Vynutit odhlášení** – při odebrání čipové karty se uživatel automaticky odhlásí.  
   - **Odpojit, pokud relace vzdálené plochy** – odebrání čipové karty odpojí relaci bez odhlášení uživatele. Tato možnost umožňuje uživateli později vložením čipové karty obnovit danou relaci na tomto počítači nebo na jiném počítači se čtečkou čipových karet, aniž by se musel znovu přihlašovat. Pokud je relace místní, funguje tato zásada stejně jako možnost Zamknout pracovní stanici.  
 
-#### <a name="display"></a>Displej  
+#### <a name="display"></a>Zobrazení  
 
 - **Informace o uživateli na zamykací obrazovce**  
   **Výchozí**: Nenakonfigurováno  
@@ -1335,8 +1338,8 @@ Pomocí těchto možností můžete konfigurovat nastavení místního zabezpeč
   - **Povolit** – skryje uživatelské jméno.  
   - **Nenakonfigurováno** – zobrazí poslední uživatelské jméno.  
 
-- **Skrýt uživatelské jméno při přihlášení**
-  **výchozí**: Nenakonfigurováno  
+- **Skrýt uživatelské jméno při přihlášení** 
+   **Výchozí**: Nenakonfigurováno  
   LocalPoliciesSecurityOptions CSP: [InteractiveLogon_DoNotDisplayUsernameAtSignIn](https://go.microsoft.com/fwlink/?linkid=867959)  
 
   
@@ -1409,7 +1412,7 @@ Pomocí těchto možností můžete konfigurovat nastavení místního zabezpeč
   
   Toto nastavení zabezpečení umožňuje serveru vyžadovat vyjednávání 128ho šifrování nebo zabezpečení relace NTLMv2.  
 
-  - **Žádné**  
+  - **Žádný**  
   - **Vyžadovat zabezpečení relace NTLMv2**  
   - **Vyžadovat 64bitové šifrování 128**  
   - **Šifrování NTLMv2 a 128 bitů**  
@@ -1420,7 +1423,7 @@ Pomocí těchto možností můžete konfigurovat nastavení místního zabezpeč
 
   Toto nastavení zabezpečení určuje, který ověřovací protokol pro ověření výzvou a odpovědí se používá pro přihlášení k síti.  
 
-  - **Žádné**  
+  - **Žádný**  
   - **Vyžadovat zabezpečení relace NTLMv2**  
   - **Vyžadovat 64bitové šifrování 128**  
   - **Šifrování NTLMv2 a 128 bitů**  
@@ -1602,7 +1605,7 @@ Pomocí těchto možností můžete konfigurovat nastavení místního zabezpeč
   CSP: [TaskScheduler/EnableXboxGameSaveTask](https://go.microsoft.com/fwlink/?linkid=875480)  
    
   Toto nastavení určuje, zda je úloha uložení hry Xbox povolená nebo zakázaná.  
-  - **Enabled** (Povoleno)
+  - **Povoleno**
   - **Není nakonfigurováno**
 
 - **Služba správy příslušenství pro Xbox**  
@@ -1612,7 +1615,7 @@ Pomocí těchto možností můžete konfigurovat nastavení místního zabezpeč
   Toto nastavení určuje typ spuštění služby pro správu doplňku.  
   - **Ruční**
   - **Automaticky**
-  - **Disabled** (Zakázáno)
+  - **Zakázáno**
 
 - **Služba Xbox Live auth Manager**  
   **Výchozí**: ruční  
@@ -1621,7 +1624,7 @@ Pomocí těchto možností můžete konfigurovat nastavení místního zabezpeč
   Toto nastavení určuje typ spuštění služby Live auth Manager.  
   - **Ruční**
   - **Automaticky**
-  - **Disabled** (Zakázáno)
+  - **Zakázáno**
  
 - **Služba Xbox Live pro uložení her**  
   **Výchozí**: ruční  
@@ -1630,7 +1633,7 @@ Pomocí těchto možností můžete konfigurovat nastavení místního zabezpeč
   Toto nastavení určuje typ spuštění služby Live Game Save.  
   - **Ruční**
   - **Automaticky**
-  - **Disabled** (Zakázáno)
+  - **Zakázáno**
 
 - **Síťová služba Xbox Live**  
   **Výchozí**: ruční  
@@ -1639,7 +1642,7 @@ Pomocí těchto možností můžete konfigurovat nastavení místního zabezpeč
   Toto nastavení určuje typ spuštění síťové služby.  
   - **Ruční**
   - **Automaticky**
-  - **Disabled** (Zakázáno)
+  - **Zakázáno**
 
 ## <a name="next-steps"></a>Další kroky
 

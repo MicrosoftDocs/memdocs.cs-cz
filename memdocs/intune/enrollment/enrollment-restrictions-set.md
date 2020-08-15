@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e5ed799d01ea4fdae1f9ecb013b4cf73deb0e6f0
-ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
+ms.openlocfilehash: b056eb0bab2416a87f443c025a76c22b580ed3c9
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88051651"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252437"
 ---
 # <a name="set-enrollment-restrictions"></a>Nastavení omezení registrace
 
@@ -47,11 +47,10 @@ Mezi konkrétní omezení registrace, která můžete vytvořit, patří:
   - iOS/iPadOS
   - macOS
   - Windows
-  - Windows Mobile
-- Verze operačního systému platformy pro iOS/iPadOS, Správce zařízení s Androidem, pracovní profil Android Enterprise, Windows a Windows Mobile. (Je možné použít jenom verze Windows 10. Pokud jsou povolená Windows 8.1., nechejte prázdné.)
+- Verze operačního systému platformy pro iOS/iPadOS, Správce zařízení s Androidem, pracovní profil Android Enterprise a Windows.
   - Minimální verze
   - Maximální verze
-- Omezte [zařízení v osobním vlastnictví](device-enrollment.md#bring-your-own-device) (jenom iOS, Správce zařízení s Androidem, pracovní profil Android Enterprise, MacOS, Windows a Windows Mobile).
+- Omezte [zařízení v osobním vlastnictví](device-enrollment.md#bring-your-own-device) (iOS, Správce zařízení s Androidem, pracovní profil Android Enterprise, MacOS a Windows).
 
 ## <a name="default-restrictions"></a>Výchozí omezení
 

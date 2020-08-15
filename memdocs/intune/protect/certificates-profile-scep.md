@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/10/2020
+ms.date: 08/14/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 77a69af395aee293f927682f9d1a095c11a1d8a5
-ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
+ms.openlocfilehash: bc016ef1a3fd76c425a24d8230a0c078a0159922
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88048085"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252651"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>Vytvoření a přiřazení profilů certifikátů SCEP v Intune
 
@@ -67,7 +67,7 @@ Až [nakonfigurujete infrastrukturu](certificates-scep-configure.md) pro podporu
      V závislosti na způsobu použití profilu certifikátu vyberte typ:
 
      - **Uživatel**: certifikáty *uživatelů* můžou v předmětu a síti SAN certifikátu obsahovat atributy uživatele i zařízení.  
-     - **Zařízení**: certifikáty *zařízení* můžou v předmětu a síti SAN certifikátu obsahovat jenom atributy zařízení.
+     - **Zařízení**: certifikáty  *zařízení* můžou v předmětu a síti SAN certifikátu obsahovat jenom atributy zařízení.
 
        Použijte **zařízení** pro scénáře, jako jsou například zařízení bez uživatele, jako jsou veřejné terminály nebo pro zařízení s Windows. Na zařízeních s Windows se certifikát nachází v úložišti certifikátů místního počítače.
 
@@ -115,7 +115,7 @@ Až [nakonfigurujete infrastrukturu](certificates-scep-configure.md) pro podporu
 
          Tento příklad zahrnuje formát názvu subjektu, který používá proměnné CN a E a řetězce pro hodnoty organizační jednotky, organizace, umístění, stav a země. Článek [Funkce CertStrToName](https://msdn.microsoft.com/library/windows/desktop/aa377160.aspx) popisuje tuto funkci a její podporované řetězce.
          
-         \*Pro profily pracovních profilů, které jsou plně spravované, vyhrazené a podnikové vlastnictví v Androidu, nebude nastavení **CN = {{userPrincipalName}}** fungovat. Pro zařízení bez uživatele se dají používat profily pracovních profilů s plnou správou Androidu, vyhrazené a podnikové vlastnictví, takže tento profil nebude moct získat hlavní název uživatele (UPN). Pokud opravdu potřebujete tuto možnost pro zařízení s uživateli, můžete použít alternativní řešení: **CN = {{UserName}} \@ contoso.com** bude poskytovat uživatelské jméno a doménu, kterou jste přidali ručně, napříkladjanedoe@contoso.com
+         \* Pro profily pracovních profilů, které jsou plně spravované, vyhrazené a podnikové vlastnictví v Androidu, nebude nastavení **CN = {{userPrincipalName}}** fungovat. Pro zařízení bez uživatele se dají používat profily pracovních profilů s plnou správou Androidu, vyhrazené a podnikové vlastnictví, takže tento profil nebude moct získat hlavní název uživatele (UPN). Pokud opravdu potřebujete tuto možnost pro zařízení s uživateli, můžete použít alternativní řešení: **CN = {{UserName}} \@ contoso.com** bude poskytovat uživatelské jméno a doménu, kterou jste přidali ručně, například janedoe@contoso.com
 
       - **Typ certifikátu zařízení**
 
@@ -211,7 +211,7 @@ Až [nakonfigurujete infrastrukturu](certificates-scep-configure.md) pro podporu
 
    - **Algoritmus hash**:
 
-     *(Platí pro Android, Android Enterprise, Windows Phone 8,1, Windows 8.1 a novější a Windows 10 a novější)*
+     *(Platí pro Android, Android Enterprise, Windows 8.1 a novější a Windows 10 a novější)*
 
      Vyberte jeden z dostupných typů hashovacího algoritmu, který chcete s tímto certifikátem použít. Vyberte nejsilnější úroveň zabezpečení, kterou připojované zařízení podporuje.
 

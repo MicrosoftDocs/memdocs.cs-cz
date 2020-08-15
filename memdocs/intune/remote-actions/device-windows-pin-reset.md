@@ -12,18 +12,21 @@ ms.subservice: remote-actions
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 5027d012-d6c2-4971-a9ac-217f91d67d87
+ROBOTS: NOINDEX
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5794894bb7a38e9823305647e584026c6d05b59f
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: d74a89cf9a2a049d067205ef556d1a178bfc69fd
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83982982"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252737"
 ---
 # <a name="reset-the-passcode-on-windows-devices-using-intune"></a>Resetování hesla na zařízeních s Windows pomocí Intune
+
+[!INCLUDE [windows-phone-81-windows-10-mobile-support](../includes/windows-phone-81-windows-10-mobile-support.md)]
 
 Heslo pro zařízení s Windows můžete resetovat. Funkce resetování hesla využívá Microsoft Pin Reset Service k vygenerování nového hesla pro zařízení s Windows 10 Mobile. 
 
@@ -67,7 +70,7 @@ Nastavte hodnotu pro tohoto poskytovatele konfiguračních služeb na **True**.
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431). 
 2. Vyberte **Zařízení** a potom **Všechna zařízení**.
 3. Vyberte zařízení, jehož heslo chcete resetovat. Ve vlastnostech zařízení vyberte **resetovat heslo**.
-4. Výběrem **Ano** potvrďte. Vygeneruje se heslo, které zůstane na portálu zobrazeno dalších sedm dní.
+4. Akci potvrďte výběrem **Ano**. Vygeneruje se heslo, které zůstane na portálu zobrazeno dalších sedm dní.
 
 ## <a name="next-step"></a>Další krok
 

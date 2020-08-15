@@ -10,12 +10,12 @@ ms.assetid: 75f47456-cd8d-4c83-8dc5-98b336a7c6c8
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 93b793dfbc6d7d0b5f4b24db65588ee1390604e9
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 0d081c79a6267495a9738efcb19ceb8b7aa74958
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129283"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252506"
 ---
 # <a name="troubleshoot-application-installation-for-devices-uploaded-to-the-admin-center-preview"></a>Řešení potíží s instalací aplikace pro zařízení odeslaná do centra pro správu (Preview)
 <!--6374854, 6521921-->
@@ -30,13 +30,13 @@ K řešení potíží s Configuration Manager aplikacemi v centru pro správu Mi
 
 Při zobrazení nebo instalaci aplikací z centra pro správu Microsoft Endpoint Manageru můžete spustit jednu z těchto chyb.  
 
-### <a name="the-necessary-configuration-is-missing-in-azure-active-directory"></a><a name="bkmk_aad"></a>V Azure Active Directory chybí potřebná konfigurace.
+### <a name="the-necessary-configuration-is-missing-in-azure-active-directory"></a><a name="bkmk_aad"></a> V Azure Active Directory chybí potřebná konfigurace.
 
 **Chybová zpráva:** V Azure Active Directory chybí potřebná konfigurace. Nezapomeňte připojit Configuration Manager lokality k vašemu tenantovi Azure a přiřadit správnou roli uživatele v Azure AD.
 
 **Možná příčina:** V uživatelském účtu nejspíš chybí role **uživatele správce** pro Configuration Manager aplikace mikroslužeb ve službě Azure AD. Přidejte roli ve službě Azure AD z části **podnikové aplikace**  >  **Configuration Manager**  >  **Uživatelé a skupiny**mikroslužeb  >  **Přidat uživatele**. Pokud máte Azure AD Premium, podporují se skupiny. Změny tohoto oprávnění mohou trvat až hodinu.
 
-### <a name="unable-to-get-application-information"></a><a name="bkmk_noinfo"></a>Nepovedlo se získat informace o aplikaci.
+### <a name="unable-to-get-application-information"></a><a name="bkmk_noinfo"></a> Nepovedlo se získat informace o aplikaci.
 
 **Chybová zpráva 1:** Nelze získat informace o aplikaci. Ujistěte se, že je nakonfigurované zjišťování uživatelů Azure AD a AD a že je uživatel zjištěn v obou. Ověřte, zda má uživatel správná oprávnění v Configuration Manager.
 
@@ -56,7 +56,7 @@ Při zobrazení nebo instalaci aplikací z centra pro správu Microsoft Endpoint
 
     Pokud jsou vlastnosti služby Azure AD prázdné, ověřte konfiguraci [zjišťování uživatelů služby Azure AD](../core/servers/deploy/configure/about-discovery-methods.md#azureaddisc).
 
-### <a name="unexpected-error-occurred"></a><a name="bkmk_1603"></a>Stala se neočekávaná chyba.
+### <a name="unexpected-error-occurred"></a><a name="bkmk_1603"></a> Stala se neočekávaná chyba.
 
 **Chybová zpráva:** Stala se neočekávaná chyba.
 
@@ -83,7 +83,7 @@ Neočekávané chyby jsou obvykle způsobeny buď [spojovacím bodem služby](..
 1. Služba IIS musí být nainstalována na počítači poskytovatele. Další informace najdete v tématu [předpoklady pro službu správy](../develop/adminservice/overview.md#prerequisites).
 
 
-### <a name="the-site-information-hasnt-yet-synchronized"></a><a name="bkmk_sync"></a>Informace o lokalitě zatím nebyly synchronizovány.
+### <a name="the-site-information-hasnt-yet-synchronized"></a><a name="bkmk_sync"></a> Informace o lokalitě zatím nebyly synchronizovány.
 
 **Chybová zpráva:** Informace o lokalitě ještě nejsou synchronizované z Configuration Manager do centra pro správu Microsoft Endpoint Manageru. Po připojení lokality k vašemu tenantovi Azure počkejte až 15 minut.
 
@@ -91,13 +91,13 @@ Neočekávané chyby jsou obvykle způsobeny buď [spojovacím bodem služby](..
 - K této chybě obvykle dochází při připojování nového připojení ke klientovi. Počkejte 15 minut, než se informace synchronizují.
 - Tato chyba se může zobrazit také v případě, že lokalita centrální správy byla upgradována na novou verzi Configuration Manager, ale některé podřízené primární lokality ještě nebyly upgradovány.
 
-### <a name="application-shows-as-installed-after-creating-a-new-deployment"></a><a name="bkmk_installed"></a>Aplikace se zobrazí jako nainstalovaná po vytvoření nového nasazení.
+### <a name="application-shows-as-installed-after-creating-a-new-deployment"></a><a name="bkmk_installed"></a> Aplikace se zobrazí jako nainstalovaná po vytvoření nového nasazení.
 
 **Příznak:** Aplikace se v centru pro správu Microsoft Endpoint Manageru zobrazí jako nainstalovaná, protože po vytvoření nového dostupného zařízení se vyžaduje nasazení schválení nebo nasazení, které je k dispozici uživatelem.
 
 **Možná příčina:** Stav aplikace zobrazený pro toto zařízení je z jiného aktivního nebo dřívějšího nasazení.
 
-### <a name="errors-when-searching-or-retrying-an-installation"></a><a name="bkmk_hfru"></a>Chyby při hledání nebo opakování instalace
+### <a name="errors-when-searching-or-retrying-an-installation"></a><a name="bkmk_hfru"></a> Chyby při hledání nebo opakování instalace
 
 **Příznak:** Při provádění následujících akcí dojde k chybám:
 - Použití vyhledávání
@@ -114,6 +114,9 @@ Neočekávané chyby jsou obvykle způsobeny buď [spojovacím bodem služby](..
 **Příznaky:** Uživateli se zobrazí `restart pending` oznámení a v centru softwaru. V centru pro správu Microsoft Endpoint Manageru zůstává aplikace ve `Installing` stavu.  
 
 **Alternativní řešení:** Jakmile uživatel zařízení restartuje, zobrazí se v centru pro správu správný stav.
+
+[!INCLUDE [Known issues shared across tenant attach features](includes/known-issues-shared.md)]
+
 
 ## <a name="next-steps"></a>Další kroky
 

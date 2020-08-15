@@ -6,7 +6,7 @@ keywords: Intune Data Warehouse
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/28/2020
+ms.date: 08/13/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: db6feb746aa7177f56ff6e87565d67e207d4d9ef
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: 1fb6ec17ce058247529ab1e51d50d876e4c97408
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84165443"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252669"
 ---
 # <a name="microsoft-intune-data-warehouse-data-model"></a>Microsoft Intune datový model datového skladu
 
@@ -41,7 +41,7 @@ Sklad zveřejňuje data v následujících oblastech vyšší úrovně:
 Tyto oblasti obsahují entity, které mají smysl v daném prostředí Intune. V následujících tématech se můžete podívat na podrobnosti o sadách entit:
 
 - [Aplikace](reports-ref-application.md)
-- [Date](reports-ref-date.md)
+- [Date](reports-ref-date.md) (Datum)
 - [Zařízení](reports-ref-devices.md)
 - [Intune Management Extension](reports-ref-intunemanagementextension.md)
 - [Zásady](reports-ref-policy.md)
@@ -60,6 +60,9 @@ Model hvězdicového schématu je optimalizovaný pro flexibilitu a analýzu dat
 ## <a name="time-daily-snapshots"></a>Čas: Denní snímky
 
 Sklad je podřízený datům Intune. Intune pořizuje denní snímek o půlnoci v čase standardu UTC a ukládá ho do skladu. Doba uchování snímků může být u každé tabulky faktů jiná. Některé se udržují sedm dní, jiné 30 dní a některé i déle.
+
+> [!NOTE]
+> Datový sklad nesynchronizuje zařízení Jamf. Další informace o Jamf najdete v článku [řešení potíží s integrací Jamf pro s Microsoft Intune](..\protect\troubleshoot-jamf.md) a [data Jamf pro odesílá do Intune](..\protect\data-jamf-sends-to-intune.md).
 
 ## <a name="next-steps"></a>Další kroky
 

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7b0870c82d0a53df1df8ddb9e21b363f72b80e3a
-ms.sourcegitcommit: 69a6829ace9fc1999e58e5f31348521b638ef0ba
+ms.openlocfilehash: 15b590c87bb56427e44f955fb2f68382f60c7bc1
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88239506"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252635"
 ---
 # <a name="windows-10-and-later-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Nastavení Windows 10 a novějších označení zařízení jako kompatibilních nebo nekompatibilních s Intune
 
@@ -106,9 +106,9 @@ Platí jenom pro spoluspravovaná zařízení s Windows 10 a novějším. Zaří
   - **Vyžadovat** – vyžaduje, aby všechna nastavení (konfigurační položky) v Configuration Manager splňovala předpisy.
 
     Můžete například vyžadovat, aby v zařízeních byly nainstalované všechny aktualizace softwaru. V Configuration Manager má tento požadavek stav nainstalováno. Pokud jsou některé programy v zařízení v neznámém stavu, zařízení nedodržuje předpisy v Intune.
-    
+
   > [!NOTE]
-  > V případě, že je úloha dodržování předpisů pro spolusprávu nastavená na *Configuration Manager*, je třeba použít pouze **dodržování předpisů zařízením od Configuration Manager** . Když použijete toto nastavení s úlohou kompatibility nastavenou na *Intune*, může to mít vliv na všechna vyhodnocení dodržování předpisů. 
+  > V případě, že je úloha dodržování předpisů pro spolusprávu nastavená na *Configuration Manager*, je třeba použít pouze **dodržování předpisů zařízením od Configuration Manager** . Když použijete toto nastavení s úlohou kompatibility nastavenou na *Intune*, může to ovlivnit celkové hodnocení dodržování předpisů.
 
 ## <a name="system-security"></a>Zabezpečení systému
 

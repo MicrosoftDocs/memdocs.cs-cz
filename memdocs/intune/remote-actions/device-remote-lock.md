@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 220a2ac92d46c1279d4498c8673e2ceef28c470f
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 4e558c885098b8b396ca0e6304bd18ef36e3c28b
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86462044"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252233"
 ---
 # <a name="remotely-lock-devices-with-intune"></a>Vzdálené uzamčení zařízení přes Intune
 
@@ -40,8 +40,6 @@ Akce zařízení **Vzdálené uzamčení** uzamkne zařízení. Vlastník zaří
 - Android Enterprise – vlastněná pomocí zařízení s pracovním profilem
 - iOS
 - macOS
-- Windows 10 Mobile
-- Windows Phone 8.1 nebo novější
 
 **Vzdálené uzamčení** není podporované pro:
 - Stolní počítač s Windows 10

@@ -10,12 +10,12 @@ ms.assetid: 44c2eb8a-3ccc-471f-838b-55d7971bb79e
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 6dfe7bb44a70d26a68c6d3743ecdb05e5d55e3f1
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: f89bf241410838fd98c8895ced6d49dbf3e99597
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129324"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252469"
 ---
 # <a name="troubleshooting-tenant-attach-and-device-actions"></a>Řešení potíží s připojením klienta a akcemi zařízení
 
@@ -48,7 +48,7 @@ Použijte následující protokoly umístěné na klientovi:
 
 - **CcmNotificationAgent.log**
 
-## <a name="review-your-upload"></a><a name="bkmk_review"></a>Kontrola nahrávání
+## <a name="review-your-upload"></a><a name="bkmk_review"></a> Kontrola nahrávání
 
 1. Otevřete **CMGatewaySyncUploadWorker. log** z &lt; instalačního adresáře nástroje ConfigMgr> \Logs.
 1. Čas další synchronizace je zaznamenán podle záznamů protokolu podobných `Next run time will be at approximately: 02/28/2020 16:35:31` .
@@ -114,7 +114,7 @@ Send Task response message <BgbResponseMessage TimeStamp="2020-01-21T15:43:43Z">
 
 ## <a name="common-issues"></a>Běžné problémy
 
-### <a name="unauthorized-to-perform-client-action"></a><a name="bkmk_noauth"></a>Neautorizováno k provedení akce klienta
+### <a name="unauthorized-to-perform-client-action"></a><a name="bkmk_noauth"></a> Neautorizováno k provedení akce klienta
 
 Pokud správce nemá v Configuration Manager požadovaná oprávnění, zobrazí se `Unauthorized` odpověď v **protokolu CMGatewayNotificationWorker. log**.
 
@@ -125,6 +125,8 @@ Unauthorized to perform client action. TemplateID: RequestMachinePolicy TenantId
 ```  
 
 Ujistěte se, že uživatel, který spustil akci z centra pro správu Microsoft Endpoint Manageru, má požadovaná oprávnění na Configuration Manager lokalitě. Další informace najdete v tématu [připojení požadavků klienta služby Microsoft Endpoint Manager](device-sync-actions.md#prerequisites).
+
+
 
 ## <a name="known-issues"></a>Známé problémy
 
@@ -137,6 +139,7 @@ Je možné, že konkrétní zařízení, která jsou Configuration Manager klien
 
 **Chování:** Při provádění připojení tenanta během fáze zprovoznění se provede Úplná synchronizace poprvé. Následné synchronizační cykly jsou rozdílové synchronizace. Jakákoli aktualizace ovlivněných zařízení způsobí odebrání zařízení z synchronizace.
 
+[!INCLUDE [Known issues shared across tenant attach features](includes/known-issues-shared.md)]
 
 ## <a name="next-steps"></a>Další kroky
 

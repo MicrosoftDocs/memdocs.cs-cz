@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 650a91d17223c31e02d660e47874a42731de572a
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: de0c6694f046d9df61f136e830d220ab0b688d28
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83983019"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252686"
 ---
 # <a name="sync-devices-to-get-the-latest-policies-and-actions-with-intune"></a>Synchronizace zařízení s cílem načíst nejnovější zásady a akce pomocí Intune
 
@@ -31,7 +31,6 @@ Akce zařízení **Synchronizovat** vybrané zařízení donutí se okamžitě o
 ## <a name="supported-platforms"></a>Podporované platformy
 
 - Windows
-- telefon se systémem Windows
 - iOS
 - macOS
 - Android
@@ -54,15 +53,15 @@ Když správce spustí akci zařízení **synchronizovat** , aplikace pro iOS/IP
 
 | Kód chyby  | Navrhovaný popis | Možnost opakovaného pokusu |
 |---|---|---|
-| 2016330898 | Došlo k neznámé chybě. | Ne |
+| 2016330898 | Došlo k neznámé chybě. | No |
 | 2016330897 | Vypršel časový limit vašeho připojení k Intune. Obnovte připojení. | Ano |
 | 2016330896 | Ztratili jste připojení k internetu. Resetujte připojení. | Ano |
 | 2016330895 | Ztratili jste připojení k internetu. Resetujte připojení. | Ano |
 | 2016330894 | Ztratili jste připojení k internetu. Resetujte připojení. | Ano |
 | 2016330893 | Ztratili jste připojení k internetu. Resetujte připojení. | Ano|
-| 2016330892 | Mezinárodní roaming je zakázaný. | Ne|
+| 2016330892 | Mezinárodní roaming je zakázaný. | No|
 | 2016330891 | K mobilnímu datovému připojení pro toto zařízení nelze připomenout během telefonního hovoru. Počkejte na dokončení telefonního hovoru. | Ano|
-| 2016330890 | Pro tato zařízení nešlo v tuto chvíli  V tuto chvíli se tato zařízení nedala použít. | Ne|
+| 2016330890 | Pro tato zařízení nešlo v tuto chvíli  V tuto chvíli se tato zařízení nedala použít. | No|
 | 2016330889 | Nepovedlo se navázat zabezpečené připojení. Resetujte připojení. | Ano|
 | 2016330888 | Nepovedlo se vyhodnotit důvěryhodnost serveru. | No|
 

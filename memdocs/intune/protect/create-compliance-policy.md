@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/20/2020
+ms.date: 08/14/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e541eb04f8de689ee76a68556bb1b2eb90914b96
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 9c1431105bdba9731bda4599e310889bfbf86a2c
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461432"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252250"
 ---
 # <a name="create-a-compliance-policy-in-microsoft-intune"></a>Vytvoření zásady dodržování předpisů v Microsoft Intune
 
@@ -53,7 +53,6 @@ Pokud chcete používat zásady dodržování předpisů zařízením, ujistěte
   - macOS
   - Windows 10
   - Windows 8.1
-  - Windows Phone 8.1
 
 - Registrace zařízení v Intune (vyžaduje se pro zobrazení stavu dodržování předpisů)
 
@@ -70,7 +69,6 @@ Pokud chcete používat zásady dodržování předpisů zařízením, ujistěte
    - *Android Enterprise*
    - *iOS/iPadOS*
    - *macOS*
-   - *Windows Phone 8.1*
    - *Windows 8.1 a vyšší*
    - *Windows 10 a novější*
 
@@ -89,7 +87,7 @@ Pokud chcete používat zásady dodržování předpisů zařízením, ujistěte
    - [Android Enterprise](compliance-policy-create-android-for-work.md)
    - [iOS/iPadOS](compliance-policy-create-ios.md)
    - [macOS](compliance-policy-create-mac-os.md)
-   - [Windows Phone 8,1, Windows 8.1 a novější](compliance-policy-create-windows-8-1.md)
+   - [Windows 8.1 a vyšší](compliance-policy-create-windows-8-1.md)
    - [Windows 10 a novější](compliance-policy-create-windows.md)  
 
 6. Na kartě **umístění** můžete vynutit dodržování předpisů na základě umístění zařízení. Vyberte si z existujících umístění. Pokud ještě nemáte dostupné umístění, přečtěte si pokyny v tématu [použití umístění (síťová ochranná)](use-network-locations.md) .
@@ -159,7 +157,7 @@ Další informace o monitorování zásad dodržování předpisů zařízením 
 
 Pokud má nějaké zařízení několik zásad dodržování předpisů a pro dvě nebo více z nich má různé stavy dodržování předpisů, přiřadí se mu jediný výsledný stav dodržování předpisů. Toto přiřazení vychází z koncepční úrovně závažnosti přiřazené jednotlivých stavům dodržování předpisů. Jednotlivé stavy dodržování předpisů mají následující úroveň závažnosti:
 
-|Status  |Severity  |
+|Status  |Závažnost  |
 |---------|---------|
 |Neznámý     |1|
 |NotApplicable     |2|

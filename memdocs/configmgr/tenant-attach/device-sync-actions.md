@@ -10,14 +10,14 @@ ms.assetid: 7a597d9e-a878-48d0-a7ce-56a1dbfd0e5c
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 784a287176066ce34c3499ecdc91a450e2d6160c
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 676ae288003b257802eea495c4101a95129eaf34
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127541"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88251860"
 ---
-# <a name="microsoft-endpoint-manager-tenant-attach-device-sync-and-device-actions"></a><a name="bkmk_attach"></a>Připojení tenanta Microsoft Endpoint Manageru: synchronizace zařízení a akce zařízení
+# <a name="microsoft-endpoint-manager-tenant-attach-device-sync-and-device-actions"></a><a name="bkmk_attach"></a> Připojení tenanta Microsoft Endpoint Manageru: synchronizace zařízení a akce zařízení
 <!--3555758 live 3/4/2020-->
 *Platí pro: Configuration Manager (Current Branch)*
 
@@ -34,13 +34,13 @@ Configuration Manager počínaje verzí 2002 můžete do cloudové služby nahr�
    - Zjistila se [Azure Active Directory zjišťování uživatele](../core/servers/deploy/configure/about-discovery-methods.md#azureaddisc) i [zjišťování uživatelů služby Active Directory](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser).
       - To znamená, že uživatelský účet musí být synchronizovaný objekt uživatele ve službě Azure AD.
    - Oprávnění **zahájit akci Configuration Manager** v části **vzdálené úlohy** v centru pro správu Microsoft Endpoint Manager.
-
+- Pokud má lokalita centrální správy [vzdáleného zprostředkovatele](../core/plan-design/hierarchy/plan-for-the-sms-provider.md), postupujte podle pokynů pro [certifikační autority ve scénáři vzdáleného poskytovatele](../core/servers/manage/cmpivot-changes.md#cas-has-a-remote-provider) v článku CMPivot. <!--7796824-->
 
 ## <a name="internet-endpoints"></a>Internetové koncové body
 
 [!INCLUDE [Internet endpoints for tenant attach](../core/plan-design/network/includes/internet-endpoints-tenant-attach.md)]
 
-## <a name="enable-device-upload-when-co-management-is-already-enabled"></a><a name="bkmk_edit"></a>Povolit nahrávání zařízení, když už je spoluspráva povolená
+## <a name="enable-device-upload-when-co-management-is-already-enabled"></a><a name="bkmk_edit"></a> Povolit nahrávání zařízení, když už je spoluspráva povolená
 
 Pokud máte v tuto chvíli povolenou spolusprávu, použijte k povolení nahrávání zařízení vlastnosti spolusprávy. Pokud už spoluspráva není povolená, [použijte k tomu průvodce **konfigurací spolusprávy** ](#bkmk_config) , aby bylo možné místo toho nahrávat zařízení.
 
@@ -58,7 +58,7 @@ Pokud už spoluspráva je povolená, upravte vlastnosti spolusprávy tak, aby by
 1. Kliknutím na **tlačítko OK** zavřete vlastnosti spolusprávy poté, co provedete změny.
 
 
-## <a name="enable-device-upload-when-co-management-isnt-enabled"></a><a name="bkmk_config"></a>Povolit nahrávání zařízení, když není povolená spoluspráva
+## <a name="enable-device-upload-when-co-management-isnt-enabled"></a><a name="bkmk_config"></a> Povolit nahrávání zařízení, když není povolená spoluspráva
 
 Pokud nemáte povolenou spolusprávu, budete k povolení nahrávání zařízení používat Průvodce **konfigurací spolusprávy** . Zařízení můžete nahrát bez povolení automatické registrace pro spolusprávu nebo přepínání úloh do Intune. Nahraje se všechna zařízení spravovaná Configuration Manager, která mají **Ano** ve sloupci **Client** . V případě potřeby můžete nahrávání omezit na jednu kolekci zařízení. Pokud je spoluspráva už ve vašem prostředí povolená, [upravte vlastnosti spolusprávy](#bkmk_edit) tak, aby místo nich bylo možné nahrávat zařízení.
 
@@ -82,7 +82,7 @@ Pokud spoluspráva není povolená, povolte nahrávání zařízení pomocí ná
 
 ## <a name="perform-device-actions"></a>Provést akce zařízení
 
-1. V prohlížeči přejděte na`endpoint.microsoft.com`
+1. V prohlížeči přejděte na `endpoint.microsoft.com`
 1. Vyberte **zařízení** a potom **všechna zařízení** zobrazí odeslaná zařízení. Pro nahraná zařízení se ve sloupci **Managed by** zobrazí **ConfigMgr** .
    [![Všechna zařízení v centru pro správu služby Microsoft Endpoint Manager](./media/3555758-all-devices.png)](./media/3555758-all-devices.png#lightbox)
 1. Vyberte zařízení, na které se má načíst stránka s **přehledem** .
@@ -93,7 +93,7 @@ Pokud spoluspráva není povolená, povolte nahrávání zařízení pomocí ná
 
    [![Přehled zařízení v centru pro správu služby Microsoft Endpoint Manager](./media/3555758-device-overview-actions.png)](./media/3555758-device-overview-actions.png#lightbox)
 
-## <a name="import-a-previously-created-azure-ad-application-optional"></a><a name="bkmk_aad_app"></a>Importovat dřív vytvořenou aplikaci Azure AD (volitelné)
+## <a name="import-a-previously-created-azure-ad-application-optional"></a><a name="bkmk_aad_app"></a> Importovat dřív vytvořenou aplikaci Azure AD (volitelné)
 <!--6479246-->
 *(Představené ve verzi 2006)*
 

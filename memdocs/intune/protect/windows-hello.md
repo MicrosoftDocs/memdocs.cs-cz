@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/27/2020
+ms.date: 08/14/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: shpate
-ms.openlocfilehash: d120ee0f55651ab1661e426e5889aaf8a4c7e670
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: 7088bfd5b27d986e12a175de1bdea0bf060c3ad3
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262859"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252516"
 ---
 # <a name="integrate-windows-hello-for-business-with-microsoft-intune"></a>Integrace Windows Hello pro firmy s Microsoft Intune  
 
@@ -45,17 +45,15 @@ Intune navíc podporuje následující typy zásad ke správě některých nasta
 Zbývající část tohoto článku se zaměřuje na vytvoření výchozích zásad Windows Hello pro firmy, které cílí na celou organizaci.
 
 > [!IMPORTANT]
-> V desktopových a mobilních verzích Windows 10 před Anniversary Update šlo nastavit dva různé kódy PIN, které se daly použít k ověření prostředků:
+> Před vydáním výroční aktualizace můžete nastavit dva různé kódy PIN, které by mohly být použity k ověřování prostředků:
 >
 > - **PIN zařízení** se používal k odemknutí zařízení a připojení k prostředkům cloudu.
 > - **Pracovní PIN kód** se použil pro přístup k prostředkům Azure AD na osobních zařízeních uživatelů (BYOD).
-> 
+>
 > Anniversary Update sloučil tyhle dva kódy do jediného PIN zařízení.
 > Veškeré zásady konfigurace Intune, které mají nastaveno, že ovládají PIN zařízení, a také jakékoli nakonfigurované zásady Windows Hello pro firmy teď nastavují hodnotu tohoto nového kódu PIN.
-> Pokud jste u obou typů zásad nastavili, že ovládají kód PIN, použijí se v zařízeních s desktopovými i mobilními verzemi Windows 10 zásady Windows Hello pro firmy.
+> Pokud jste nastavili oba typy zásad pro řízení kódu PIN, použije se zásada Windows Hello pro firmy.
 > Abyste předešli konfliktům mezi zásadami a zajistili, že zásady kódu PIN se budou aplikovat správně, aktualizujte zásady Windows Hello pro firmy, tak aby odpovídaly nastavení zásad konfigurace. Potom požádejte uživatele, aby si svá zařízení synchronizovali v aplikaci Portál společnosti.
-
-
 
 ## <a name="create-a-windows-hello-for-business-policy"></a>Vytvoření zásad pro službu Windows Hello pro firmy
 
@@ -65,13 +63,13 @@ Zbývající část tohoto článku se zaměřuje na vytvoření výchozích zá
 
 3. Pro **konfiguraci Windows Hello pro firmy**vyberte z těchto možností:
 
-     - **Povoleno**. Toto nastavení vyberte, pokud chcete konfigurovat nastavení Windows Hello pro firmy.  Když vyberete *povoleno*, další nastavení pro Windows Hello jsou viditelná a můžou být nakonfigurovaná pro zařízení.
+   - **Povoleno**. Toto nastavení vyberte, pokud chcete konfigurovat nastavení Windows Hello pro firmy.  Když vyberete *povoleno*, další nastavení pro Windows Hello jsou viditelná a můžou být nakonfigurovaná pro zařízení.
 
-    - **Zakázáno**. Pokud nechcete povolit Windows Hello pro firmy během registrace zařízení, vyberte tuto možnost. Když je tato možnost zakázaná, uživatelé nemůžou zřídit Windows Hello pro firmy s výjimkou Azure Active Directory připojených mobilních telefonů, kde se může zřizování vyžadovat. Když se nastaví jako *zakázané*, můžete nakonfigurovat další nastavení pro Windows Hello pro firmy, i když tato zásada nepovolí Windows Hello pro firmy.
+   - **Zakázáno**. Pokud nechcete povolit Windows Hello pro firmy během registrace zařízení, vyberte tuto možnost. Když je tato možnost zakázaná, uživatelé nemůžou zřídit Windows Hello pro firmy. Když se nastaví jako *zakázané*, můžete nakonfigurovat další nastavení pro Windows Hello pro firmy, i když tato zásada nepovolí Windows Hello pro firmy.
 
-    - **Není nakonfigurováno**. Toto nastavení vyberte, pokud k řízení nastavení Windows Hello pro firmy nechcete používat Intune. Všechna existující nastavení Windows Hello pro firmy v zařízeních s Windows 10 se nezmění. Žádná ostatní nastavení v podokně nejsou dostupná.
+   - **Není nakonfigurováno**. Toto nastavení vyberte, pokud k řízení nastavení Windows Hello pro firmy nechcete používat Intune. Všechna existující nastavení Windows Hello pro firmy v zařízeních s Windows 10 se nezmění. Žádná ostatní nastavení v podokně nejsou dostupná.
 
-4. Pokud jste v předchozím kroku vybrali **Povoleno**, nakonfigurujte požadovaná nastavení, která se použijí pro všechna zaregistrovaná zařízení s Windows 10 a Windows 10 Mobile. Po konfiguraci těchto nastavení vyberte **Uložit**.
+4. Pokud jste v předchozím kroku vybrali **povoleno** , nakonfigurujte požadovaná nastavení, která se aplikují na všechna zaregistrovaná zařízení s Windows 10. Po konfiguraci těchto nastavení vyberte **Uložit**.
 
    - **Použít čip TPM (Trusted Platform Module)**:
 

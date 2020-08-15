@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 15ba22e209da1fd6ab828c20928a34a7e6aab52f
-ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
+ms.openlocfilehash: 50c1842357a79ce3228b7b0a5283dc9a4e98b2d6
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88217683"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252335"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>Odebrání zařízení vymazáním, vyřazením nebo ručním zrušením registrace
 
@@ -39,7 +39,7 @@ Akce **Vymazání** obnoví výchozí tovární nastavení zařízení. Data už
 |Akce vymazání|**Zachovat stav registrace a uživatelský účet**|Odebráno ze správy v Intune|Popis|
 |:-------------:|:------------:|:------------:|------------|
 |**Vymazání**| Není zaškrtnuto | Ano | Vymaže všechny uživatelské účty, data, zásady MDM a nastavení. Obnoví operační systém do výchozího stavu a nastavení.|
-|**Vymazání**| Zaškrtnuto | Ne | Vymaže všechny zásady MDM. Zachová uživatelské účty a data. Obnoví nastavení uživatele zpět na výchozí nastavení. Obnoví operační systém do výchozího stavu a nastavení.|
+|**Vymazání**| Zaškrtnuto | No | Vymaže všechny zásady MDM. Zachová uživatelské účty a data. Obnoví nastavení uživatele zpět na výchozí nastavení. Obnoví operační systém do výchozího stavu a nastavení.|
 
 
 > [!NOTE]
@@ -132,14 +132,14 @@ Zařízení s Androidem v beznabídkovém režimu můžete jen vymazat. Vyřazen
 
 ### <a name="windows"></a>Windows
 
-|Datový typ|Windows 8.1 (MDM) a Windows RT 8.1|Windows RT|Windows Phone 8.1 a Windows Phone 8|Windows 10|
+|Datový typ|Windows 8.1 (MDM) a Windows RT 8.1|Windows RT|Windows 10|
 |-------------|----------------------------------------------------------------|--------------|-----------------------------------------|--------|
-|Firemní aplikace a související data instalovaná službou Intune|Odvolají se klíče pro soubory, které jsou chráněné systémem souborů EFS. Uživatel nemůže soubory otevřít.|Firemní aplikace se neodeberou.|Odinstalují se aplikace původně nainstalované prostřednictvím Portálu společnosti. Odeberou se data firemních aplikací.|Odinstalují se aplikace. Odeberou se klíče pro zkušební načtení.<br>V případě Windows 10 verze 1709 (Creators Update) a novějších Microsoft 365 aplikace se neodeberou. Rozšíření pro správu Intune nainstalované aplikace Win32 se odinstalují na nezaregistrovaných zařízeních. Správci můžou využít vyloučení přiřazení, aby nenabízeli aplikacím Win32 možnost BYOD zařízení.|
-|Nastavení|Konfigurace nastavené zásadami Intune se už nevynucují. Uživatelé můžou nastavení změnit.|Konfigurace nastavené zásadami Intune se už nevynucují. Uživatelé můžou nastavení změnit.|Konfigurace nastavené zásadami Intune se už nevynucují. Uživatelé můžou nastavení změnit.|Konfigurace nastavené zásadami Intune se už nevynucují. Uživatelé můžou nastavení změnit.|
-|Nastavení profilu sítě Wi-Fi a VPN|Odebrány.|Odebrány.|Nepodporováno|Odebrány.|
-|Nastavení profilu certifikátu|Certifikáty jsou odebrané a odvolané.|Certifikáty jsou odebrané a odvolané.|Nepodporováno|Certifikáty jsou odebrané a odvolané.|
-|E-mail|Odeberou se e-maily s povoleným systémem souborů EFS. To zahrnuje e-maily a přílohy v aplikaci Pošta pro Windows.|Nepodporováno|Odeberou se e-mailové profily, které jsou zřízené prostřednictvím Intune. Odstraní se e-maily v mezipaměti zařízení.|Odeberou se e-maily s povoleným systémem souborů EFS. To zahrnuje e-maily a přílohy v aplikaci Pošta pro Windows. Odebere e-mailové účty, které byly zřízené Intune.|
-|Zrušení připojení k Azure AD|Ne.|Ne.|Odebere se záznam Azure AD.|Odebere se záznam Azure AD.|
+|Firemní aplikace a související data instalovaná službou Intune|Odvolají se klíče pro soubory, které jsou chráněné systémem souborů EFS. Uživatel nemůže soubory otevřít.|Firemní aplikace se neodeberou.|Odinstalují se aplikace. Odeberou se klíče pro zkušební načtení.<br>V případě Windows 10 verze 1709 (Creators Update) a novějších Microsoft 365 aplikace se neodeberou. Rozšíření pro správu Intune nainstalované aplikace Win32 se odinstalují na nezaregistrovaných zařízeních. Správci můžou využít vyloučení přiřazení, aby nenabízeli aplikacím Win32 možnost BYOD zařízení.|
+|Nastavení|Konfigurace nastavené zásadami Intune se už nevynucují. Uživatelé můžou nastavení změnit.|Konfigurace nastavené zásadami Intune se už nevynucují. Uživatelé můžou nastavení změnit.|Konfigurace nastavené zásadami Intune se už nevynucují. Uživatelé můžou nastavení změnit.|
+|Nastavení profilu sítě Wi-Fi a VPN|Odebrány.|Odebrány.|Odebrány.|
+|Nastavení profilu certifikátu|Certifikáty jsou odebrané a odvolané.|Certifikáty jsou odebrané a odvolané.|Certifikáty jsou odebrané a odvolané.|
+|E-mail|Odeberou se e-maily s povoleným systémem souborů EFS. To zahrnuje e-maily a přílohy v aplikaci Pošta pro Windows.|Nepodporováno|Odeberou se e-maily s povoleným systémem souborů EFS. To zahrnuje e-maily a přílohy v aplikaci Pošta pro Windows. Odebere e-mailové účty, které byly zřízené Intune.|
+|Zrušení připojení k Azure AD|No.|No.|Odebere se záznam Azure AD.|
 
 > [!NOTE]
 > Pro zařízení s Windows 10, která se připojují k Azure AD při počátečním nastavení (OOBE), příkaz vyřadit ze zařízení odeberou všechny účty Azure AD. Postupujte podle kroků v části [spuštění počítače v bezpečném režimu](https://support.microsoft.com/en-us/help/12376/windows-10-start-your-pc-in-safe-mode) , abyste se mohli přihlásit jako místní správce a znovu získat přístup k místním datům uživatele. 

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/13/2020
+ms.date: 08/14/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5fded6fdf9de5f0ea18848ff45f6647363d2bfa3
-ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
+ms.openlocfilehash: 3b4a3334649b411390088a665f9a8fe9db8b47e1
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88217663"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252301"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Co je správa aplikací v Microsoft Intune?
 
@@ -52,19 +52,19 @@ Intune nabízí celou řadu funkcí, které vám pomůžou dostat požadované a
 | Možnosti správy aplikací | Android/Android Enterprise | iOS/iPadOS | macOS | Windows 10 |
 |-------------------------- | -------------------------- | ---------- | ----- | ---------- |
 | Přidání a přiřazení aplikací k zařízením a uživatelům | Ano | Ano | Ano | Ano |
-| Přiřazení aplikací k zařízením nezaregistrovaným v Intune | Ano | Ano | Ne | Ne |  |
-| Určení chování aplikací při spuštění pomocí zásad konfigurace aplikací | Ano | Ano | Ne | Ne |
-| Obnovení aplikací s vypršelou platností pomocí zásad zřizování mobilních aplikací | Ne | Ano | Ne | Ne |
-| Ochrana firemních dat v aplikacích pomocí zásad ochrany aplikací | Ano | Ano | Ne | Ne <sup>1</sup> |
-| Odebrání pouze firemních dat z nainstalovaných aplikací (selektivní vymazání aplikací) | Ano | Ano | Ne | Ano |
+| Přiřazení aplikací k zařízením nezaregistrovaným v Intune | Ano | Ano | No | No |  |
+| Určení chování aplikací při spuštění pomocí zásad konfigurace aplikací | Ano | Ano | No | No |
+| Obnovení aplikací s vypršelou platností pomocí zásad zřizování mobilních aplikací | No | Ano | No | No |
+| Ochrana firemních dat v aplikacích pomocí zásad ochrany aplikací | Ano | Ano | No | Ne <sup>1</sup> |
+| Odebrání pouze firemních dat z nainstalovaných aplikací (selektivní vymazání aplikací) | Ano | Ano | No | Ano |
 | Monitorování přiřazení aplikací | Ano | Ano | Ano | Ano |
-| Přiřazení a sledování aplikací hromadně zakoupených v obchodu s aplikacemi | Ne | Ne | Ne | Ano |
+| Přiřazení a sledování aplikací hromadně zakoupených v obchodu s aplikacemi | No | No | No | Ano |
 | Povinná instalace aplikací na zařízení (povinné) <sup>2</sup> | Ano | Ano | Ano | Ano |
 | Nepovinná instalace na zařízení z Portálu společnosti (dostupná instalace) | Ano <sup>3</sup> | Ano | Ano | Ano |
 | Zástupce pro instalaci aplikace na webu (webový odkaz) | Ano <sup>4</sup> | Ano | Ano | Ano |
 | Vlastní (obchodní) aplikace | Ano | Ano | Ano | Ano |
-| Aplikace z obchodu | Ano | Ano | Ne | Ano |
-| Aktualizace aplikací | Ano | Ano | Ne | Ano |
+| Aplikace z obchodu | Ano | Ano | No | Ano |
+| Aktualizace aplikací | Ano | Ano | No | Ano |
 
 <sup>1</sup> Při ochraně aplikací na zařízeních s Windows 10 uvažujte o použití funkce [Windows Information Protection](../protect/windows-information-protection-configure.md).<br>
 <sup>2</sup> Platí jen pro zařízení spravovaná přes Intune.<br>
@@ -111,7 +111,9 @@ Horní část navigační nabídky úlohy aplikace poskytuje běžně používan
 ### <a name="try-the-interactive-guide"></a>Vyzkoušejte interaktivní příručku
 Interaktivní příručka [Spravovat a chránit mobilní a desktopové aplikace Microsoft Endpoint Manager](https://mslearn.cloudguides.com/en-us/guides/Manage%20and%20protect%20mobile%20and%20desktop%20applications%20with%20Microsoft%20Endpoint%20Manager) vás provede centrem pro správu Microsoft Endpoint Manageru, která vám ukáže, jak spravovat zařízení zaregistrovaná v Intune, vymáhat dodržování zásad a chránit data vaší organizace.</br></br>
 
-> [!VIDEO https://mslearn.cloudguides.com/en-us/guides/Manage%20and%20protect%20mobile%20and%20desktop%20applications%20with%20Microsoft%20Endpoint%20Manager]
+<div align=”center”>
+<iframe allowfullscreen width="95%" height="450" src="https://mslearn.cloudguides.com/guides/Manage%20and%20protect%20mobile%20and%20desktop%20applications%20with%20Microsoft%20Endpoint%20Manager" frameborder="0" scrolling="no"/></iframe>
+</div>
 
 ## <a name="additional-information"></a>Další informace
 Následující položky v konzole poskytují funkce související s aplikacemi:

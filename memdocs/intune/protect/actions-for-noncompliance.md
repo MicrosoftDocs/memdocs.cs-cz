@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/27/2020
+ms.date: 08/14/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.reviewer: samyada
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2e881dc386fa0fe0b98b5e3d4480e1957c251808
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: d262041c982d3d9a629ccb550a1376e5e479a759
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262672"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252771"
 ---
 # <a name="configure-actions-for-noncompliant-devices-in-intune"></a>Konfigurace akcí pro zařízení nedodržující předpisy v Intune
 
@@ -31,7 +31,7 @@ U zařízení, která nevyhovují zásadám nebo pravidlům dodržování předp
 
 Ve výchozím nastavení Každá zásada dodržování předpisů zahrnuje akci při nedodržení předpisů **Označit zařízení jako nekompatibilní** s plánem nula dnů (**0**). Výsledkem tohoto výchozího nastavení je, že Intune zjistí, že zařízení nedodržuje předpisy, Intune hned zařízení označí jako nedodržující předpisy. Jakmile se zařízení označí jako nedodržující předpisy, Azure Active Directory (AD) [podmíněný přístup](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) může zařízení blokovat.
 
-Konfigurací **akcí při nedodržení předpisů** získáte flexibilitu při rozhodování o tom, co dělat pro zařízení nedodržující předpisy, a kdy to udělat. Například můžete zvolit, aby zařízení neblokovalo okamžitě, a dát uživateli možnost, aby se zajistilo, že bude dodržovat předpisy.
+Konfigurací  **akcí při nedodržení předpisů** získáte flexibilitu při rozhodování o tom, co dělat pro zařízení nedodržující předpisy, a kdy to udělat. Například můžete zvolit, aby zařízení neblokovalo okamžitě, a dát uživateli možnost, aby se zajistilo, že bude dodržovat předpisy.
 
 Pro každou akci, kterou nastavíte, můžete nakonfigurovat plán, který určuje, kdy se tato akce projeví. Plán je počet dnů, po jejichž uplynutí je zařízení označeno jako nedodržující předpisy. Můžete také nakonfigurovat více instancí akce. Když v zásadě nastavíte více instancí akce, akce se spustí znovu v pozdějším naplánovaném čase, pokud zařízení zůstává nekompatibilní.
 
@@ -63,8 +63,6 @@ Po odeslání e-mailu Intune zahrne do e-mailového oznámení podrobnosti o za�
     - Firemní veřejná zařízení s Androidem
   - iOS/iPadOS
   - macOS
-  - Windows 10 Mobile
-  - Windows Phone 8.1 nebo novější
 
 - **Vyřazení zařízení nesplňujících požadavky**: Tato akce odebere ze zařízení všechna firemní data a odebere zařízení ze správy Intune. Aby nedocházelo k náhodnému vymazání zařízení, tato akce podporuje minimální plán na **30** dní.
 
@@ -75,8 +73,6 @@ Po odeslání e-mailu Intune zahrne do e-mailového oznámení podrobnosti o za�
     - Pracovní profil Android Enterprise
   - iOS/iPadOS
   - macOS
-  - Windows 10 Mobile
-  - Windows Phone 8.1 nebo novější
 
   Přečtěte si další informace o [vyřazování zařízení z provozu](../remote-actions/devices-wipe.md#retire).
 

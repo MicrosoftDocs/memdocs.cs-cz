@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/12/2020
+ms.date: 08/14/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 062a70f66843a67884d8406b66393da7bc52712b
-ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
+ms.openlocfilehash: 50b90f312eff076e1c55f0baf56f15d491d4e0e1
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179600"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252267"
 ---
 # <a name="intune-discovered-apps"></a>Zjištěné aplikace Intune
 
@@ -64,7 +64,7 @@ Následující seznam poskytuje typ aplikační platformy, aplikace, které jsou
 | Android Enterprise | Pouze spravované aplikace | Jenom aplikace nainstalované v pracovním profilu | Každých 7 dnů od registrace zařízení |
 
 > [!NOTE]
-> - Hybridní zařízení s Windows 10 připojená k Azure AD, jak je znázorněno v úloze správy aplikací v Configuration Manager, teď neshromažďují inventář aplikací prostřednictvím rozšíření pro správu Intune (IME) podle výše uvedeného plánu. Aby se tento problém vyřešil, měla by být úloha správy aplikací v Configuration Manager přepnuta do Intune, aby se editor IME nainstaloval na zařízení (vyžaduje se editor IME pro inventarizaci a nasazení PowerShellu). Všimněte si, že jakékoli změny nebo aktualizace tohoto chování jsou oznámeny ve [vývoji](../fundamentals/in-development.md) a/nebo [co je nového](../fundamentals/whats-new.md).
+> - Spoluspravovaná zařízení s Windows 10, jak je vidět v úloze klientské aplikace v Configuration Manager, v současnosti neshromažďuje inventář aplikací prostřednictvím rozšíření pro správu Intune (IME) podle výše uvedeného plánu. Aby se tento problém vyřešil, měla by být úloha klientské aplikace v Configuration Manager přepnuta do Intune, aby byl Editor IME nainstalovaný na zařízení (vyžaduje se editor IME pro inventarizaci a nasazení PowerShellu). Všimněte si, že jakékoli změny nebo aktualizace tohoto chování jsou oznámeny ve [vývoji](../fundamentals/in-development.md) a/nebo [co je nového](../fundamentals/whats-new.md).
 > - Zařízení macOS ve vlastnictví, která se zaregistrují do listopadu 2019, můžou dál zobrazovat všechny aplikace nainstalované v zařízení, dokud se zařízení znovu nezaregistrují.
 > - V případě plně spravované a vyhrazené verze Android Enterprise se nezobrazují zjištěné aplikace.
 
