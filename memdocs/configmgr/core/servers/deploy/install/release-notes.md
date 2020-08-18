@@ -2,7 +2,7 @@
 title: Poznámky k verzi
 titleSuffix: Configuration Manager
 description: Seznamte se s naléhavými problémy, které zatím nejsou v produktu opravené nebo jsou uvedené v článku znalostní báze podpora Microsoftu Knowledge Base.
-ms.date: 08/11/2020
+ms.date: 08/17/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: troubleshooting
@@ -10,12 +10,12 @@ ms.assetid: 030947fd-f5e0-4185-8513-2397fb2ec96f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 9c1152b14da7c0a473e266b1ac1e6da2778aa105
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: a29c165e13e82144d7fea767ca719a0c84c88023
+ms.sourcegitcommit: da5bfbe16856fdbfadc40b3797840e0b5110d97d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88126287"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88512644"
 ---
 # <a name="release-notes-for-configuration-manager"></a>Poznámky k verzi pro Configuration Manager
 
@@ -29,7 +29,7 @@ Tento článek obsahuje poznámky k verzi pro aktuální větev Configuration Ma
 
 Informace o nových funkcích zavedených s různými verzemi najdete v následujících článcích:
 
-- [Co je nového ve verzi 2006](../../../plan-design/changes/whats-new-in-version-2006.md)
+- [Novinky ve verzi 2006](../../../plan-design/changes/whats-new-in-version-2006.md)
 - [Novinky ve verzi 2002](../../../plan-design/changes/whats-new-in-version-2002.md)
 - [Novinky ve verzi 1910](../../../plan-design/changes/whats-new-in-version-1910.md)
 - [Novinky ve verzi 1906](../../../plan-design/changes/whats-new-in-version-1906.md)  
@@ -37,7 +37,7 @@ Informace o nových funkcích zavedených s různými verzemi najdete v následu
 Informace o nových funkcích v Desktop Analytics najdete v tématu [co je nového v rámci služby Desktop Analytics](../../../../desktop-analytics/whats-new.md).
 
 > [!Tip]  
-> Pokud chcete dostávat upozornění na aktualizaci této stránky, zkopírujte a vložte následující adresu URL do čtečky informačních kanálů RSS:`https://docs.microsoft.com/api/search/rss?search=%22release+notes+-+Configuration+Manager%22&locale=en-us`
+> Pokud chcete dostávat upozornění na aktualizaci této stránky, zkopírujte a vložte následující adresu URL do čtečky informačních kanálů RSS: `https://docs.microsoft.com/api/search/rss?search=%22release+notes+-+Configuration+Manager%22&locale=en-us`
 
 ## <a name="set-up-and-upgrade"></a>Nastavení a upgrade  
 
@@ -113,6 +113,20 @@ Pokud chcete tento problém obejít, vytvořte složku `scripts` s názvem v `Ad
 
 ## <a name="os-deployment"></a>Nasazení operačního systému
 
+### <a name="client-policy-error-when-you-deploy-a-task-sequence"></a>Chyba zásad klienta při nasazení pořadí úloh
+
+<!-- 7970134 -->
+
+*Platí pro: Configuration Manager verze 2006 časné aktualizace Ring*
+
+Když nasadíte pořadí úkolů do klienta, požadovaná sekvence úloh se v konečném termínu nenainstaluje a v centru softwaru se nezobrazí dostupné pořadí úloh. Zobrazí se stavová zpráva 10803 s popisem podobným této chybové zprávě:
+
+*Klientovi se nepovedlo stáhnout zásady. Služba přenosu dat vrátila chybu BITS: odpověď serveru nebyla platná. Server nenásleduje za definovaným protokolem. (-2145386469).*
+
+K tomuto problému dochází, když nakonfigurujete bod správy pro protokol HTTPS a zařízení používá Configuration Manager klienta verze 1906 nebo starší.
+
+Pokud chcete tento problém obejít, aktualizujte klienta Configuration Manager na zařízení na verzi 1910 nebo novější.
+
 ### <a name="task-sequences-cant-run-over-cmg"></a>Pořadí úloh nejde spustit přes CMG.
 
 *Platí pro: Configuration Manager verze 2002*
@@ -164,7 +178,7 @@ Další informace najdete v tématu [Vytvoření vlastních rolí zabezpečení]
 <!-- 7283186 -->
 _Platí pro: Configuration Manager verze 2002 a starší_
 
-Aktualizace rozšířeného zabezpečení z dubna 2020 (EVJ) pro systém Windows 7 změnila minimální požadovanou verzi diagtrack.dll z 10586 na 10240. Tato změna způsobí, že se zařízení se systémem Windows 7 zobrazují jako **neschopná se zaregistrovat** na řídicím panelu **stavu připojení** Desktop Analytics. Když přejdete do zobrazení zařízení pro tento stav, vlastnost **Konfigurace služby DiagTrack** zobrazí následující stav:`Connected User Experience and Telemetry (diagtrack.dll) component is outdated. Check requirements.`
+Aktualizace rozšířeného zabezpečení z dubna 2020 (EVJ) pro systém Windows 7 změnila minimální požadovanou verzi diagtrack.dll z 10586 na 10240. Tato změna způsobí, že se zařízení se systémem Windows 7 zobrazují jako **neschopná se zaregistrovat** na řídicím panelu **stavu připojení** Desktop Analytics. Když přejdete do zobrazení zařízení pro tento stav, vlastnost **Konfigurace služby DiagTrack** zobrazí následující stav: `Connected User Experience and Telemetry (diagtrack.dll) component is outdated. Check requirements.`
 
 Pro tento problém není nutné žádné alternativní řešení. Odinstalujte EVJ. dubna. Pokud je v opačném případě správně nakonfigurovaná, zařízení s Windows 7 pořád hlásí diagnostická data do služby Desktop Analytics a pořád se na portálu zobrazují.
 

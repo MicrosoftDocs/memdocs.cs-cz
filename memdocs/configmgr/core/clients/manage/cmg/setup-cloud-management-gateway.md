@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: e0ec7d66-1502-4b31-85bb-94996b1bc66f
-ms.openlocfilehash: 9ba4466a40d49c4b78b75e6f85137dfd0a4ff5ce
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 6b56f9848f497b7167b478b427f37a00bb2656b9
+ms.sourcegitcommit: da5bfbe16856fdbfadc40b3797840e0b5110d97d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129133"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88512712"
 ---
 # <a name="set-up-cloud-management-gateway-for-configuration-manager"></a>Nastavení brány pro správu cloudu pro Configuration Manager
 
@@ -141,7 +141,7 @@ Bod připojení CMG je role systému lokality pro komunikaci s CMG. Chcete-li p�
 
 Pokud chcete řešit potíže se stavem služby CMG, použijte **CMGService. log** a **SMS_Cloud_ProxyConnector. log**. Další informace najdete v tématu [soubory protokolu](../../../plan-design/hierarchy/log-files.md#cloud-management-gateway).
 
-## <a name="configure-client-facing-roles-for-cmg-traffic"></a><a name="bkmk_role"></a>Konfigurace klientských rolí pro provoz CMG
+## <a name="configure-client-facing-roles-for-cmg-traffic"></a><a name="bkmk_role"></a> Konfigurace klientských rolí pro provoz CMG
 
 Konfigurujte body správy a systémy lokality bodu aktualizace softwaru pro příjem provozu CMG. Tento postup proveďte v primární lokalitě pro všechny body správy a body aktualizace softwaru, které používají internetové klienty.  
 
@@ -207,7 +207,7 @@ Pro instalaci klienta Configuration Manager do systémů, které nejsou aktuáln
 
 Pokud pro možnosti 1 a 2 spustíte **ccmsetup.exe**, zadejte adresu URL CMG pomocí parametru **/MP** . Další informace najdete v tématu [informace o parametrech instalace a vlastnostech klienta](../../deploy/about-client-installation-properties.md#mp).
 
-V případě možnosti 3 Configuration Manager počínaje verzí 2002 můžete nainstalovat klienta nástroje na systémy nepřipojené k intranetu pomocí hromadné registračního tokenu. Další informace o této metodě najdete v tématu [vytvoření registračního tokenu pro hromadnou registraci](../../deploy/deploy-clients-cmg-token.md#create-a-bulk-registration-token).
+V případě možnosti 3 Configuration Manager počínaje verzí 2002 můžete nainstalovat klienta nástroje na systémy nepřipojené k intranetu pomocí hromadné registračního tokenu. Další informace o této metodě najdete v tématu [vytvoření registračního tokenu pro hromadnou registraci](../../deploy/deploy-clients-cmg-token.md#bulk-registration-token).
 
 ### <a name="configure-off-premises-clients-for-cmg"></a>Konfigurace místních klientů pro CMG
 

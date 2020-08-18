@@ -2,7 +2,7 @@
 title: Ověřování na základě tokenů pro CMG
 titleSuffix: Configuration Manager
 description: Zaregistrujte klienta v interní síti pro jedinečný token nebo vytvořte token pro hromadnou registraci pro Internetová zařízení.
-ms.date: 06/10/2020
+ms.date: 08/17/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: f0703475-85a4-450d-a4e8-7a18a01e2c47
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8146c9c2605f8693ad7375b974a5dd13c089d946
-ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
+ms.openlocfilehash: 55997c9185a221d105aa8ad40bbb14021463d07b
+ms.sourcegitcommit: da5bfbe16856fdbfadc40b3797840e0b5110d97d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84715658"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88512695"
 ---
 # <a name="token-based-authentication-for-cloud-management-gateway"></a>Ověřování založené na tokenech pro bránu pro správu cloudu
 
@@ -25,13 +25,13 @@ ms.locfileid: "84715658"
 
 Brána pro správu cloudu (CMG) podporuje mnoho typů klientů, ale i s [rozšířenými http](../../plan-design/hierarchy/enhanced-http.md), tito klienti vyžadují [certifikát pro ověřování klientů](../manage/cmg/certificates-for-cloud-management-gateway.md#for-internet-based-clients-communicating-with-the-cloud-management-gateway). Tento požadavek na certifikát může být náročný na zřízení internetových klientů, kteří se často nepřipojují k interní síti, nelze se připojit Azure Active Directory (Azure AD) a nemusíte mít k dispozici metodu pro instalaci certifikátu vystaveného infrastrukturou veřejných klíčů.
 
-Aby se tyto výzvy vyřešily od verze 2002, Configuration Manager rozšiřuje podporu zařízení následujícími způsoby:
+Aby se tyto výzvy vyřešily od verze 2002, Configuration Manager rozšiřuje podporu zařízení tím, že vydává svoje vlastní ověřovací tokeny do zařízení. Pokud chcete plně využít tuto funkci, po aktualizaci lokality aktualizujte také klienty na nejnovější verzi. Kompletní scénář není funkční, dokud nebude verze klienta zároveň nejnovější. V případě potřeby se ujistěte, že [povýšíte novou verzi klienta na produkční](../manage/upgrade/test-client-upgrades.md#to-promote-the-new-client-to-production)prostředí.
 
-- Registrace k interní síti pro jedinečný token
+ Klienti poprvé registrují pro tyto tokeny pomocí jedné z následujících dvou metod:
 
-- Vytvoření hromadné registračního tokenu pro Internetová zařízení
+- Interní síť
 
-Pokud chcete plně využít tuto funkci, po aktualizaci lokality aktualizujte také klienty na nejnovější verzi. Kompletní scénář není funkční, dokud nebude verze klienta zároveň nejnovější. V případě potřeby se ujistěte, že [povýšíte novou verzi klienta na produkční](../manage/upgrade/test-client-upgrades.md#to-promote-the-new-client-to-production)prostředí.
+- Hromadná registrace
 
 Klient Configuration Manager společně s bodem správy spravuje tento token, takže neexistuje žádná závislost verze operačního systému. Tato funkce je k dispozici pro libovolnou [podporovanou verzi operačního systému klienta](../../plan-design/configs/supported-operating-systems-for-clients-and-devices.md).
 
@@ -40,15 +40,20 @@ Klient Configuration Manager společně s bodem správy spravuje tento token, ta
 >
 > Microsoft doporučuje připojit zařízení k Azure AD. Internetová zařízení můžou pomocí Azure AD ověřit pomocí Configuration Manager. Také umožňuje scénářům zařízení i uživatele, zda je zařízení na internetu nebo připojeno k interní síti. Další informace najdete v tématu [instalace a registrace klienta pomocí Azure AD identity](deploy-clients-cmg-azure.md#install-and-register-the-client-using-azure-ad-identity).
 
-## <a name="register-on-the-internal-network"></a>Zaregistrujte se do interní sítě.
+## <a name="internal-network-registration"></a>Registrace interní sítě
 
-Tato metoda vyžaduje, aby se klient nejdřív zaregistroval s bodem správy v interní síti. K registraci klienta obvykle dochází po instalaci hned po instalaci. Bod správy dává klientovi jedinečný token, který ukazuje, že používá certifikát podepsaný svým držitelem. Když se klient přenáší do Internetu, aby komunikoval s CMG, spáruje svůj certifikát podepsaný svým držitelem pomocí tokenu vydaného bodem správy. Klient obnoví token jednou za měsíc a je platný po 90 dnech.
+Tato metoda vyžaduje, aby se klient nejdřív zaregistroval s bodem správy v interní síti. K registraci klienta obvykle dochází po instalaci hned po instalaci. Bod správy dává klientovi jedinečný token, který ukazuje, že používá certifikát podepsaný svým držitelem. Když se klient přenáší do Internetu, aby komunikoval s CMG, spáruje svůj certifikát podepsaný svým držitelem pomocí tokenu vydaného bodem správy.
 
 Lokalita toto chování umožňuje ve výchozím nastavení.
 
-## <a name="create-a-bulk-registration-token"></a>Vytvoření tokenu hromadné registrace
+## <a name="bulk-registration-token"></a>Token hromadné registrace
 
 Pokud nemůžete instalovat a registrovat klienty v interní síti, vytvořte token pro hromadnou registraci. Tento token použijte, když se klient nainstaluje na internetové zařízení a zaregistruje se přes CMG. Registrační token pro hromadnou registraci má krátkou dobu platnosti a není uložený v klientovi nebo lokalitě. Umožňuje klientovi generovat jedinečný token, který se spáruje s certifikátem podepsaným svým držitelem, a umožňuje ověřování pomocí CMG.
+
+> [!NOTE]
+> Nepleťte si hromadné registrační tokeny s uživateli, kteří Configuration Manager problémy jednotlivým klientům. Token hromadné registrace umožňuje klientovi počáteční instalaci a komunikaci s lokalitou. Tato počáteční komunikace je dostatečně dlouhá, aby lokalita mohla vydat vlastní jedinečný token ověřování klientů. Klient pak použije ověřovací token pro veškerou komunikaci s lokalitou, zatímco je na internetu. Po počáteční registraci klient nepoužívá ani neukládá hromadnou registrační token.
+
+Pokud chcete vytvořit hromadnou registrační token pro použití při instalaci klienta na internetových zařízeních, proveďte následující akce:
 
 1. Přihlaste se k serveru lokality nejvyšší úrovně v hierarchii s oprávněními místního správce.
 
@@ -141,7 +146,13 @@ Můžete filtrovat nebo řadit podle sloupce **typ** . Identifikujte konkrétní
 
 3. Na kartě **Domů** na pásu karet nebo v místní nabídce klikněte pravým tlačítkem myši na možnost **blokovat**. Chcete-li odblokovat dříve blokované tokeny hromadné registrace, vyberte akci **odblokovat** .
 
-## <a name="see-also"></a>Viz také
+## <a name="token-renewal"></a>Obnovení tokenu
+
+Klient obnoví jedinečný, Configuration Manager vydaný token jednou za měsíc a je platný po dobu 90 dnů. Klient se nemusí připojovat k interní síti, aby mohl obnovit svůj token. Pokud je token stále platný, je připojení k lokalitě pomocí CMG dostatečné. Pokud se token během 90 dnů prodlouží, klient se musí přímo připojit k bodu správy v interní síti, aby získal nový token.
+
+Nemůžete obnovit token hromadné registrace. Jakmile vyprší platnost tokenu hromadné registrace, vygenerujte novou službu pro registraci internetových zařízení pomocí CMG.
+
+## <a name="see-also"></a>Viz také:
 
 - [Plánování brány pro správu cloudu](../manage/cmg/plan-cloud-management-gateway.md)
 

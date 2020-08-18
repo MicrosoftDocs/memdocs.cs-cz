@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic, has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 99fa22d351d8d0672d2745f18bb70dfd096ac1d7
-ms.sourcegitcommit: 16bc2ed5b64eab7f5ae74391bd9d7b66c39d8ca6
+ms.openlocfilehash: d1ede68097ef3afe0358154ff7b8802a0b3a7285
+ms.sourcegitcommit: f6b14e6fe694a2a05c6ed92e67089e80a00a0908
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86437415"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88501163"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Microsoft Intune App SDK pro Android – Příručka pro vývojáře
 
@@ -165,7 +165,7 @@ Toto by mělo následující důsledky:
 * `zap.jar` se **nepřepíše**, protože se nejedná o projekt a není zahrnut v `includeExternalLibraries`.
 * `com.contoso.foo:zap-artifact:1.0.0` se přepíše, protože je tato závislost zahrnuta v `includeExternalLibraries`.
 * `com.microsoft.bar:baz:1.0.0` se přepíše, protože je tato závislost zahrnuta v `includeExternalLibraries` prostřednictvím zástupného znaku (`com.microsoft.*`).
-* `com.microsoft.qux:foo:2.0`není přepsán, i když odpovídá stejnému zástupnému znaku jako předchozí položka, protože je explicitně vyloučena prostřednictvím vzoru negace.
+* `com.microsoft.qux:foo:2.0` není přepsán, i když odpovídá stejnému zástupnému znaku jako předchozí položka, protože je explicitně vyloučena prostřednictvím vzoru negace.
 
 #### <a name="usage-of-includeexternallibraries"></a>Použití vlastnosti includeExternalLibraries
 
@@ -181,13 +181,13 @@ Pokud je odpověď na obě otázky Ano, musíte danou knihovnu do `includeExtern
 
 | Scénář | Zahrnout ano či ne? |
 |--|--|
-| Do aplikace zahrnete prohlížeč PDF a když se uživatelé pokusí zobrazit PDF, použijete v aplikaci prohlížeč `Activity`. | Yes |
-| Do aplikace zahrnete knihovnu HTTP za účelem rozšířeného webového výkonu. | No |
-| Zahrnete knihovnu, jako je React Native, která obsahuje třídy odvozené z `Activity`, `Application` a `Fragment`, a v aplikaci tyto třídy použijete nebo dále odvodíte. | Yes |
-| Zahrnete knihovnu, jako je React Native, která obsahuje třídy odvozené z `Activity`, `Application` a `Fragment`, ale použijete pouze statické pomocné rutiny nebo nástrojové třídy. | No |
-| Zahrnete knihovnu, která obsahuje třídy odvozené z `TextView`, a v aplikaci tyto třídy použijete nebo dále odvodíte. | Yes |
+| Do aplikace zahrnete prohlížeč PDF a když se uživatelé pokusí zobrazit PDF, použijete v aplikaci prohlížeč `Activity`. | Ano |
+| Do aplikace zahrnete knihovnu HTTP za účelem rozšířeného webového výkonu. | Ne |
+| Zahrnete knihovnu, jako je React Native, která obsahuje třídy odvozené z `Activity`, `Application` a `Fragment`, a v aplikaci tyto třídy použijete nebo dále odvodíte. | Ano |
+| Zahrnete knihovnu, jako je React Native, která obsahuje třídy odvozené z `Activity`, `Application` a `Fragment`, ale použijete pouze statické pomocné rutiny nebo nástrojové třídy. | Ne |
+| Zahrnete knihovnu, která obsahuje třídy odvozené z `TextView`, a v aplikaci tyto třídy použijete nebo dále odvodíte. | Ano |
 
-#### <a name="reporting"></a>Generování sestav
+#### <a name="reporting"></a>Vytváření sestav
 Modul plug-in sestavení může vygenerovat sestavu HTML změn, které dělá. Chcete-li vyžádat generování této sestavy, zadejte `report = true` v `intunemam` konfiguračním bloku. Pokud je tato sestava vygenerována, bude `outputs/logs` v adresáři buildu zapsána.
 
 ```groovy
@@ -758,7 +758,7 @@ Pro určení, `ACCOUNT_DOCUMENT` jestli `OTHER` se má předávat, aby se `getIs
 #### <a name="unknown-or-unlisted-locations"></a>Neznámé nebo neuvedené umístění
 
 Pokud požadované umístění není uvedeno v `SaveLocation` `OpenLocation` výčtech nebo nebo není známo, existují dvě možnosti pro `service` / `location` parametr `ACCOUNT_DOCUMENT` a `OTHER` .
-`ACCOUNT_DOCUMENT`by se měla použít, když data patří do účtu AAD přihlášeného k aplikaci, ale nejsou `ONEDRIVE_FOR_BUSINESS` nebo `SHAREPOINT` `OTHER` by se měla použít, pokud to není případ.
+`ACCOUNT_DOCUMENT` by se měla použít, když data patří do účtu AAD přihlášeného k aplikaci, ale nejsou `ONEDRIVE_FOR_BUSINESS` nebo `SHAREPOINT` `OTHER` by se měla použít, pokud to není případ.
 
 Je důležité odlišit jasné rozlišení mezi spravovaným účtem a účtem, který sdílí hlavní název uživatele spravovaného účtu.
 Například spravovaný účet s UPN " user@contoso.com " přihlášený k OneDrivu není stejný jako účet, který má hlavní název uživatele (UPN) " user@contoso.com " přihlášený k Dropboxu.
@@ -768,10 +768,10 @@ Pokud se neznámá nebo neuvedená služba přihlásí prostřednictvím jiného
 #### <a name="username-for-data-transfer"></a>Uživatelské jméno pro přenos dat
 
 Při kontrole zásad ukládání `username` by měl být hlavní název uživatele (UPN)/uživatelské jméno/e-mail přidružený ke cloudové službě, na kterou se ukládá (*nemusí* nutně platit jako uživatel, který je vlastníkem dokumentu).
-`SaveLocation.LOCAL`není cloudová služba, takže by měla být vždy použita s `null` parametrem username.
+`SaveLocation.LOCAL` není cloudová služba, takže by měla být vždy použita s `null` parametrem username.
 
 Při kontrole otevřených zásad `username` by měl být hlavní název uživatele (UPN)/uživatelské jméno/e-mail přidružený ke cloudové službě, ze které se otevírá.
-`OpenLocation.LOCAL`a `OpenLocation.CAMERA` nepatří do umístění cloudových služeb, takže by měly být vždy použity s `null` parametrem username.
+`OpenLocation.LOCAL` a `OpenLocation.CAMERA` nepatří do umístění cloudových služeb, takže by měly být vždy použity s `null` parametrem username.
 
 V následujících umístěních bude vždycky očekávat uživatelské jméno, které obsahuje mapování mezi hlavním jménem služby AAD a uživatelským jménem cloudové služby: `ONEDRIVE_FOR_BUSINESS` , `SHAREPOINT` a `ACCOUNT_DOCUMENT` .
 
@@ -963,7 +963,7 @@ Podívejte se také na požadavky pro [podmíněný přístup](#conditional-acce
 |Požadovaný parametr ADAL| Hodnota |
 |--|--|
 | ClientID | ClientID aplikace (u zaregistrovaných aplikací je generuje AzureAD) |
-| SkipBroker | **Ano** |
+| SkipBroker | **True** |
 
 V případě potřeby můžete zadat pole Authority a NonBrokerRedirectURI.
 
@@ -1154,7 +1154,7 @@ mAuthContext.acquireToken(this, RESOURCE_ID, CLIENT_ID, REDIRECT_URI, PromptBeha
 
 ### <a name="important-implementation-notes"></a>Důležité poznámky k implementaci
 
-#### <a name="authentication"></a>Ověřování
+#### <a name="authentication"></a>Authentication
 
 * Když aplikace volá `registerAccountForMAM()`, může brzy poté obdržet zpětné volání na rozhraní `MAMServiceAuthenticationCallback`, ale na odlišném vláknu. V ideálním případě aplikace získala svůj vlastní token z knihovny ADAL před registrací účtu za účelem urychlení získání požadovaného tokenu. Pokud aplikace vrátí platný token ze zpětného volání, registrace bude pokračovat a aplikace získá konečný výsledek prostřednictvím oznámení.
 
@@ -1184,7 +1184,7 @@ Po registraci se účet nachází ve stavu `PENDING`, který značí, že prvotn
 | `AUTHORIZATION_NEEDED` | Tento výsledek indikuje, že se token neposkytl registrovanou `MAMServiceAuthenticationCallback` instancí aplikace, nebo poskytnutý token je neplatný.  Aplikace by měla získat platný token a pokud možno provést volání `updateToken()`. |
 | `NOT_LICENSED` | Uživatel nemá licenci na službu Intune, nebo byl pokus o spojení se službou Intune MAM neúspěšný.  Aplikace by měla dál běžet v nespravovaném (normálním) stavu a uživatel by neměl být zablokovaný.  Pro případ, že by uživatel v budoucnu licenci získal, budou pravidelně probíhat pokusy o registraci. |
 | `ENROLLMENT_SUCCEEDED` | Pokus o registraci proběhl úspěšně nebo už je uživatel zaregistrovaný.  V případě úspěšné registrace se ještě před tímto oznámením zašle oznámení o aktualizaci zásad.  Uživatel by měl mít povolený přístup k podnikovým datům. |
-| `ENROLLMENT_FAILED` | Pokus o registraci selhal.  Další podrobnosti najdete v protokolech zařízení.  Aplikace by neměla umožňovat přístup k podnikovým datům v tomto stavu, protože dříve bylo zjištěno, že uživatel má licenci pro Intune.|
+| `ENROLLMENT_FAILED` | Pokus o registraci selhal.  Další podrobnosti najdete v protokolech zařízení.  Aplikace by neměla umožňovat přístup k podnikovým datům v tomto stavu, protože dříve bylo zjištěno, že uživatel má licenci pro Intune. Všechny aplikace by měly zajistit, aby přístup k podnikovým datům byl neautorizovaný, dokud vaše aplikace nezíská enrollment_succeeded.|
 | `WRONG_USER` | Ke službě MAM může aplikaci zaregistrovat jen jeden uživatel na dané zařízení. Tento výsledek indikuje, že uživatel, pro kterého se tento výsledek doručí (druhý uživatel), cílí na zásady MAM, ale už je zaregistrovaný jiný uživatel. Vzhledem k tomu, že zásady MAM nejde pro druhého uživatele vyhovět, musí vaše aplikace neumožňovat přístup k datům tohoto uživatele (případně odebráním uživatele z vaší aplikace), pokud není registrace pro tohoto uživatele v pozdějším čase úspěšná. Při současném doručování tohoto `WRONG_USER` výsledku se mam vyzve s možností odebrat existující účet. Pokud uživatel obdrží odpověď lidského uživatele na zjištěnou hodnotu, bude to opravdu možné později zaregistrovat druhého uživatele. Dokud se druhý uživatel zaregistruje, MAM se bude pravidelně pokoušet o registraci. |
 | `UNENROLLMENT_SUCCEEDED` | Zrušení registrace bylo úspěšné.|
 | `UNENROLLMENT_FAILED` | Žádost o zrušení registrace selhala.  Další podrobnosti najdete v protokolech zařízení. Obecně platí, že k této chybě nedojde, dokud aplikace předá hlavní název uživatele (UPN) (bez hodnoty null nebo prázdné). Neexistuje žádná přímá a spolehlivá náprava, kterou může aplikace trvat. Pokud se tato hodnota obdrží při zrušení registrace platného hlavního názvu uživatele (UPN), ohlaste ji prosím týmu Intune MAM jako chybu.|
@@ -1251,7 +1251,7 @@ public interface MAMComplianceManager {
 
 `remediateCompliance()`Metoda je volána k pokusu o vložení aplikace pod správu, aby splňovala podmínky pro AAD, které udělují požadovaný token.  První čtyři parametry lze extrahovat z výjimky přijaté `AuthenticationCallback.onError()` metodou ADAL (viz Ukázka kódu níže).  Konečný parametr je logická hodnota, která určuje, jestli se při pokusu o dodržování předpisů zobrazuje uživatelské rozhraní.  Toto je jednoduché rozhraní pro zablokování, které se poskytuje jako výchozí pro aplikace, které v průběhu této operace nemusejí zobrazovat přizpůsobené uživatelské prostředí.  Bude blokovat jenom tehdy, když probíhá náprava dodržování předpisů a výsledný výsledek se nezobrazí.  Aplikace by měla zaregistrovat přijímač oznámení, aby zpracovával úspěch nebo neúspěch pokusu o nápravu dodržování předpisů (viz níže).
 
-`remediateCompliance()`Metoda může provést registraci mam jako součást zřizování dodržování předpisů.  Aplikace může obdržet oznámení o registraci, pokud zaregistroval příjemce oznámení pro oznámení o registraci.  Zaregistrovaná aplikace `MAMServiceAuthenticationCallback` bude mít `acquireToken()` zavolanou metodu pro získání tokenu pro registraci mam. `acquireToken()`bude volána před tím, než aplikace získá svůj vlastní token, takže všechny úlohy vytváření účtů nebo účtů, které aplikace provede po úspěšném pořízení tokenu, ještě nemusí být provedeny.  Zpětné volání musí být schopné získat token v tomto případě.  Pokud nemůžete vrátit token z `acquireToken()` , pokus o nápravu kompatibility se nezdaří.  Pokud později zavoláte `updateToken()` s platným tokenem pro požadovaný prostředek, náprava kompatibility se zopakuje okamžitě se zadaným tokenem.
+`remediateCompliance()`Metoda může provést registraci mam jako součást zřizování dodržování předpisů.  Aplikace může obdržet oznámení o registraci, pokud zaregistroval příjemce oznámení pro oznámení o registraci.  Zaregistrovaná aplikace `MAMServiceAuthenticationCallback` bude mít `acquireToken()` zavolanou metodu pro získání tokenu pro registraci mam. `acquireToken()` bude volána před tím, než aplikace získá svůj vlastní token, takže všechny úlohy vytváření účtů nebo účtů, které aplikace provede po úspěšném pořízení tokenu, ještě nemusí být provedeny.  Zpětné volání musí být schopné získat token v tomto případě.  Pokud nemůžete vrátit token z `acquireToken()` , pokus o nápravu kompatibility se nezdaří.  Pokud později zavoláte `updateToken()` s platným tokenem pro požadovaný prostředek, náprava kompatibility se zopakuje okamžitě se zadaným tokenem.
 
 > [!NOTE]
 > Získání tichého tokenu bude stále možné v nástroji, `acquireToken()` protože uživatel již byl vytvořen s možností instalace zprostředkovatele a registraci zařízení před `ADALError.AUTH_FAILED_INTUNE_POLICY_REQUIRED` přijetím chyby.  Výsledkem je, že zprostředkovatel má v mezipaměti platný obnovovací token, který umožňuje úspěšné tiché získání požadovaného tokenu.
@@ -1345,7 +1345,7 @@ AuthenticationResult result = acquireTokenSilentSync(resourceId, clientId, userI
 > Pokud chcete při pokusu o nápravu zobrazit vlastní blokující uživatelské rozhraní, měli byste předat *hodnotu false* pro parametr showUX `remediateCompliance()` . Před voláním je nutné zkontrolovat, že jste si vyvolali své uživatelské rozhraní a zaregistrujete naslouchací proces oznámení `remediateCompliance()` .  Tím zabráníte konfliktu časování, ve kterém může být oznámení `remediateCompliance()` neúspěšné, pokud je chyba velmi rychlá.  Například `onCreate()` `onMAMCreate()` Metoda nebo podtřídou Activity je ideální místo pro registraci naslouchacího procesu oznámení a pak volání `remediateCompliance()` .  Parametry pro `remediateCompliance()` může být předány do vašeho uživatelského prostředí jako exTray.  Po přijetí oznámení o stavu dodržování předpisů můžete zobrazit výsledek nebo jednoduše dokončit aktivitu.
 
 > [!NOTE]
-> `remediateCompliance()`provede registraci účtu a pokus o registraci.  Po získání hlavního tokenu není volání `registerAccountForMAM()` nezbytné, ale neexistuje žádný škodný postup. Na druhé straně, pokud se aplikaci nepovede získat svůj token a chce odebrat uživatelský účet, musí zavolat `unregisterAccountForMAM()` na odebrání účtu a zabránit opakování registrace na pozadí.
+> `remediateCompliance()` provede registraci účtu a pokus o registraci.  Po získání hlavního tokenu není volání `registerAccountForMAM()` nezbytné, ale neexistuje žádný škodný postup. Na druhé straně, pokud se aplikaci nepovede získat svůj token a chce odebrat uživatelský účet, musí zavolat `unregisterAccountForMAM()` na odebrání účtu a zabránit opakování registrace na pozadí.
 
 ## <a name="protecting-backup-data"></a>Ochrana dat zálohy
 
@@ -1477,7 +1477,7 @@ Ve výchozím nastavení se všechny aplikace považují za aplikace s jedinou i
 Vývojáři můžou nastavit identitu uživatele aplikace na těchto úrovních se sestupnou prioritou:
 
   1. Úroveň vlákna
-  2. `Context`(obecně `Activity` ) obsah
+  2. `Context` (obecně `Activity` ) obsah
   3. Úroveň procesu
 
 Identita nastavená na úrovni vlákna nahrazuje identitu nastavenou na úrovni objektu `Context`, která nahrazuje identitu nastavenou na úrovni procesu. Identita nastavená pro `Context` se používá jenom v příslušných přidružených scénářích. Operace v/v souborů nemají například přidruženy `Context` . Nejčastěji budou aplikace nastavovat `Context` identitu na `Activity` . Aplikace *nesmí* zobrazit data pro spravovanou identitu `Activity` , pokud není identita nastavená na stejnou identitu. Obecně je identita na úrovni procesu užitečná pouze tehdy, když pracuje aplikace ve všech vláknech vždy jen s jediným uživatelem. Řada aplikací tuto možnost nemusí potřebovat využít.
@@ -1626,7 +1626,7 @@ Kromě schopnosti aplikace nastavit identitu se může vlákno nebo identita obj
 
 Metoda `onMAMIdentitySwitchRequired` se volá u všech implicitních změn identity s výjimkou změn provedených třídou Binder, která se vrátila z `MAMService.onMAMBind`. Výchozí implementace `onMAMIdentitySwitchRequired` okamžitě volají:
 
-* `reportIdentitySwitchResult(FAILURE)`je-li důvod `RESUME_CANCELLED` .
+* `reportIdentitySwitchResult(FAILURE)` je-li důvod `RESUME_CANCELLED` .
 
 * `reportIdentitySwitchResult(SUCCESS)` ve všech ostatních případech.
 
