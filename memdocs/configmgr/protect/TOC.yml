@@ -121,7 +121,7 @@
     - name: 'Nasazení profilů sítí Wi-Fi a VPN, e-mailů a certifikátů'
       href: deploy-use/deploy-wifi-vpn-email-cert-profiles.md
     - name: "Nastavení podmínek a\_ujednání"
-      href: ../mdm/understand/what-happened-to-hybrid.md?toc=/sccm/protect/toc.json&bc=/sccm/protect/breadcrumb/toc.json
+      href: ../mdm/understand/what-happened-to-hybrid.md?toc=/mem/configmgr/protect/toc.json&bc=/mem/configmgr/protect/breadcrumb/toc.json
     - name: Monitorování ochrany
       items:
         - name: Monitorování profilů sítí Wi-Fi a VPN a e-mailových profilů

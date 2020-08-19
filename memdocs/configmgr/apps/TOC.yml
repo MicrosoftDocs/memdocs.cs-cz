@@ -42,7 +42,7 @@
         - name: Nasazení aplikací
           href: deploy-use/deploy-applications.md
         - name: Vytvoření postupného nasazení
-          href: ../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json
+          href: ../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json
         - name: Schválení aplikací
           href: deploy-use/app-approval.md
         - name: Instalace aplikací pro zařízení
@@ -62,7 +62,7 @@
         - name: Monitorování aplikací z konzoly
           href: deploy-use/monitor-applications-from-the-console.md
         - name: Správa a sledování postupných nasazení
-          href: ../osd/deploy-use/manage-monitor-phased-deployments.md?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json
+          href: ../osd/deploy-use/manage-monitor-phased-deployments.md?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json
         - name: Sledování využití aplikací pomocí monitorování míry využívání softwaru
           href: deploy-use/monitor-app-usage-with-software-metering.md
     - name: Správa aplikací

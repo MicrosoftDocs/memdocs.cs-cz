@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 04536d51-3bf7-45e5-b4af-36ceed10583d
-ms.openlocfilehash: 2adf22fd9c17863d7c29e2a29d2125d22f2d944f
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 5cee950e2b42d73f20921c2baf08b98d2d206586
+ms.sourcegitcommit: 8fc7f2864c5e3f177e6657b684c5f208d6c2a1b4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127667"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88591184"
 ---
 # <a name="deploy-software-updates"></a>Nasazení aktualizací softwaru  
 
@@ -48,7 +48,7 @@ Obvykle zahájíte ručním nasazením aktualizací softwaru k vytvoření směr
 
 
 
-## <a name="manually-deploy-software-updates"></a><a name="BKMK_ManualDeployment"></a>Ruční nasazení aktualizací softwaru
+## <a name="manually-deploy-software-updates"></a><a name="BKMK_ManualDeployment"></a> Ruční nasazení aktualizací softwaru
 V konzole Configuration Manager vyberte aktualizace softwaru a ručně spusťte proces nasazení. Tato metoda nasazení se obvykle používá pro:  
 
 - Před vytvořením pravidel automatického nasazení, která spravují měsíční nasazení, Získejte klienty v aktuálním stavu pomocí požadovaných aktualizací softwaru.  
@@ -72,7 +72,7 @@ Další informace a podrobné pokyny najdete v tématu [Ruční nasazení aktual
 > - Od 21. dubna 2020 se sada Office 365 ProPlus přejmenovává na **Microsoft 365 aplikace pro podniky**. Další informace najdete v tématu [Změna názvu pro Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change). V konzole Configuration Manager se pořád zobrazují odkazy na starý název a podpůrná dokumentace, zatímco se konzola aktualizuje.
 > - Když ručně nasazujete aktualizace klienta Microsoft 365 Apps, najdete je v uzlu **aktualizace sady office 365** v části **Správa klientů v sadě Office 365** v pracovním prostoru **softwarová knihovna** . 
 
-## <a name="automatically-deploy-software-updates"></a><a name="bkmk_auto"></a>Automaticky nasadit aktualizace softwaru
+## <a name="automatically-deploy-software-updates"></a><a name="bkmk_auto"></a> Automaticky nasadit aktualizace softwaru
 
 Nakonfigurujte automatické nasazení aktualizací softwaru pomocí pravidla automatického nasazení (ADR). Tato metoda nasazení je společná pro měsíční aktualizace softwaru (obvykle se označuje jako "patch úterý") a ke správě aktualizací definic. Určete kritéria pro pravidlo automatického nasazení pro automatizaci procesu nasazení. Následující seznam poskytuje obecný pracovní postup pro automatické nasazení aktualizací softwaru:  
 
@@ -110,10 +110,10 @@ Další informace a podrobné pokyny najdete v tématu [automatické nasazení a
 
 
 
-## <a name="deploy-software-updates-in-phases"></a><a name="bkmk_phased"></a>Nasazení aktualizací softwaru ve fázích
+## <a name="deploy-software-updates-in-phases"></a><a name="bkmk_phased"></a> Nasazení aktualizací softwaru ve fázích
 
 <!--1358146-->
 Počínaje verzí 1810 vytvořte dvoufázové nasazení pro aktualizace softwaru. Postupné nasazení vám umožní orchestrovat koordinované, sekvenční zavedení softwaru na základě přizpůsobitelných kritérií a skupin.
 
-Další informace najdete v tématu [Vytvoření dvoufázové nasazení](../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json).
+Další informace najdete v tématu [Vytvoření dvoufázové nasazení](../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/mem/configmgr/sum/toc.json&bc=/mem/configmgr/sum/breadcrumb/toc.json).
 

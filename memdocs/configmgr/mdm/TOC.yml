@@ -35,9 +35,9 @@
         - name: Import profilů certifikátů PFX
           href: deploy-use/import-pfx-certificate-profiles.md
         - name: Profily sítě Wi-Fi
-          href: ../protect/deploy-use/create-wifi-profiles.md?toc=/configmgr/mdm/toc.json&bc=/configmgr/mdm/breadcrumb/toc.json
+          href: ../protect/deploy-use/create-wifi-profiles.md?toc=/mem/configmgr/mdm/toc.json&bc=/mem/configmgr/mdm/breadcrumb/toc.json
         - name: Profily sítě VPN
-          href: ../protect/deploy-use/vpn-profiles.md?toc=/configmgr/mdm/toc.json&bc=/configmgr/mdm/breadcrumb/toc.json
+          href: ../protect/deploy-use/vpn-profiles.md?toc=/mem/configmgr/mdm/toc.json&bc=/mem/configmgr/mdm/breadcrumb/toc.json
 - name: konektor systému Exchange Server
   items:
     - name: Správa zařízení pomocí Exchange

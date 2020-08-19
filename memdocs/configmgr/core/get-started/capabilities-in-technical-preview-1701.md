@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: f100d28b3fd4ce0d310ddb2f0b4e777c72f72881
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 20c560925b2c1abec282b8c5f8dae3f6f42f4d64
+ms.sourcegitcommit: 8fc7f2864c5e3f177e6657b684c5f208d6c2a1b4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82076199"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88591201"
 ---
 # <a name="capabilities-in-technical-preview-1701-for-configuration-manager"></a>Funkce ve verzi Technical Preview 1701 pro Configuration Manager
 
@@ -61,7 +61,7 @@ Následující článek popisuje chování bodů aktualizace softwaru s touto ve
   Když klient použije zálohu, použije konfigurace hraničních skupin pro záložní sadu k vytvoření fondu dostupných bodů aktualizace softwaru. Tento fond zahrnuje všechny body aktualizace softwaru z *aktuální skupiny hranic*klientů, *hraničních skupin hranic*a *výchozí skupiny hranic lokality*klientů.
 
 - **Nakonfigurujte výchozí skupinu hranic lokality:**  
-  Zvažte přidání bodu aktualizace softwaru do *lokality default-site-hranice-Group&lt;>*. Tím je zajištěno, že klienti, kteří nejsou členy jiné skupiny hranic, mohou být pro vyhledání bodu aktualizace softwaru zárukou.
+  Zvažte přidání bodu aktualizace softwaru do *lokality default-site-hranice-Group &lt;>*. Tím je zajištěno, že klienti, kteří nejsou členy jiné skupiny hranic, mohou být pro vyhledání bodu aktualizace softwaru zárukou.
 
 
 Chcete-li spravovat body aktualizace softwaru pro skupiny hranic, použijte [postupy z dokumentace Current Branch](../servers/deploy/configure/boundary-group-procedures.md), ale mějte na paměti, že pro body aktualizace softwaru se zatím nepoužívají záložní časy, které byste mohli nakonfigurovat.
@@ -94,10 +94,10 @@ Informace o použití cloudových distribučních bodů najdete v tématu [Použ
 
 Od této verze Preview můžete nakonfigurovat body správy pro ověření dat vytváření sestav ověření stavu pro cloudové nebo místní služby ověření stavu. Nová karta **Pokročilá nastavení** v dialogovém okně **Vlastnosti komponenty bodu správy** umožňuje **Přidat**, **Upravit**nebo **Odebrat** **adresu URL místní služby ověření stavu zařízení**. Můžete také zadat **vlastní nastavení zařízení** pro klientského agenta, aby bylo možné **použít místní službu ověření stavu**.  Nastavením **Ano** pro toto nastavení povolíte vytváření sestav pro místní bod správy místo cloudové služby.
 
-### <a name="try-it-out"></a>Vyzkoušejte si to.
+### <a name="try-it-out"></a>Vyzkoušet
 
 - **Povolit ověřování stavu místních zařízení v bodu správy**<br>  V konzole Configuration Manager přejděte do části bod správy a otevřete **Vlastnosti komponenty bodu správy** a potom klikněte na kartu **Upřesnit možnosti** . klikněte na **Přidat** a zadejte místní adresu URL (například https://10.10.10.10) pro **místní adresy URL služby ověření stavu zařízení**.
-- **Povolit vytváření sestav ověření stavu místních bodů správy pro agenta klienta**<br>V konzole Configuration Manager vyberte možnost **Správa** > **nastavení klienta** a dvakrát klikněte nebo vytvořte nové **vlastní nastavení zařízení**. Vyberte **Počítačový agent** a nastavte **použít místní službu ověření stavu** na **Ano**. Pokud je **možnost povolit komunikaci se službou ověření stavu zařízení** nastavená na **hodnotu Ano** a **použít místní ověření stavu** je nastavené na **ne**, bod správy bude používat cloudovou službu ověření stavu zařízení.
+- **Povolit vytváření sestav ověření stavu místních bodů správy pro agenta klienta**<br>V konzole Configuration Manager vyberte možnost **Správa**  >  **nastavení klienta** a dvakrát klikněte nebo vytvořte nové **vlastní nastavení zařízení**. Vyberte **Počítačový agent** a nastavte **použít místní službu ověření stavu** na **Ano**. Pokud je **možnost povolit komunikaci se službou ověření stavu zařízení** nastavená na **hodnotu Ano** a **použít místní ověření stavu** je nastavené na **ne**, bod správy bude používat cloudovou službu ověření stavu zařízení.
 
 ## <a name="use-the-oms-connector-for-microsoft-azure-government-cloud"></a>Použití konektoru OMS pro Microsoft Azure Government Cloud
 V této verzi Technical Preview se teď můžete pomocí konektoru Microsoft Operations Management Suite (OMS) připojit k pracovnímu prostoru OMS, který se nachází v Microsoft Azure Government cloudu.  
@@ -105,27 +105,27 @@ V této verzi Technical Preview se teď můžete pomocí konektoru Microsoft Ope
 Provedete to tak, že upravíte konfigurační soubor tak, aby odkazoval na Cloud státní správy, a pak nainstalujete konektor OMS.
 
 ### <a name="set-up-an-oms-connector-to-microsoft-azure-government-cloud"></a>Nastavení konektoru OMS pro Microsoft Azure Government Cloud
-1. V jakémkoli počítači s nainstalovanou konzolou Configuration Manager upravte následující konfigurační soubor tak, aby odkazoval na Cloud pro státní správu: *** &lt;cesta pro instalaci cm> \adminconsole\bin\microsoft.configurationmanagmenet.exe.config***
+1. V jakémkoli počítači s nainstalovanou konzolou Configuration Manager upravte následující konfigurační soubor tak, aby odkazoval na Cloud pro státní správu: *** &lt; Instalační cesta CM # C0\AdminConsole\bin\Microsoft.configurationManagmenet.exe.config***
 
    **Úpravě**
 
    Změňte hodnotu parametru name *FairFaxArmResourceID* tak, aby se rovnala "<https://management.usgovcloudapi.net/">
 
-   - **Původní:** &lt;název nastavení = "FairFaxArmResourceId" SerializeAs = "řetězec" >   
-     &lt;hodnota>&lt;/Value>   
+   - **Původní:** &lt; nastavení Name = "FairFaxArmResourceId" serializeAs = "String" >   
+     &lt;hodnota>&lt; /value>   
      &lt;/Setting>
 
    - **Změněna**     
-     &lt;nastavení Name = "FairFaxArmResourceId" serializeAs = "String" > &lt;Value><https://management.usgovcloudapi.net/&lt;/value>>  
+     &lt;nastavení Name = "FairFaxArmResourceId" serializeAs = "String" > &lt; Value &gt; https://management.usgovcloudapi.net/&lt ;/Value&gt;  
      &lt;/Setting>
 
-   Změňte hodnotu vlastnosti Name *FairFaxAuthorityResource* tak, aby byla rovna hodnotě "<https://login.microsoftonline.com/>".
+   Změňte hodnotu vlastnosti Name *FairFaxAuthorityResource* tak, aby byla rovna hodnotě " <https://login.microsoftonline.com/> ".
 
-   - **Původní:** &lt;název nastavení = "FairFaxAuthorityResource" SerializeAs = "řetězec" >   
-     &lt;hodnota>&lt;/Value>
+   - **Původní:** &lt; nastavení Name = "FairFaxAuthorityResource" serializeAs = "String" >   
+     &lt;hodnota>&lt; /value>
 
-   - **Upraveno:** &lt;název nastavení = "FairFaxAuthorityResource" SerializeAs = "řetězec" >   
-     &lt;hodnota><https://login.microsoftonline.com/&lt;/value>>
+   - **Upraveno:** &lt; nastavení Name = "FairFaxAuthorityResource" serializeAs = "String" >   
+     &lt;hodnota &gt; [https://login.microsoftonline.com](https://login.microsoftonline.com) &lt; /Value&gt;
 
 2. Po uložení souboru se dvěma změnami restartujte konzolu Configuration Manager na stejném počítači a pomocí této konzoly nainstalujte konektor OMS. Chcete-li nainstalovat konektor, použijte informace v části [synchronizovat data z Configuration Manager do Microsoft Operations Management Suite](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm)a vyberte **pracovní prostor Operations Management Suite** , který je v cloudu Microsoft Azure Government.
 

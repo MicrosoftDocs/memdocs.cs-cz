@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: a0d7f561a324d20f503b8fee3e8a869774c70d89
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 05a6950708da04effe230d0d5637c4e3bcedd7e6
+ms.sourcegitcommit: 8fc7f2864c5e3f177e6657b684c5f208d6c2a1b4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128963"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88591577"
 ---
 # <a name="whats-new-in-version-1810-of-configuration-manager-current-branch"></a>Co je nového ve verzi 1810 Configuration Manager Current Branch
 
@@ -34,11 +34,11 @@ Pokud chcete využívat nové funkce Configuration Manager, nejdřív aktualizuj
 -->  
 
 > [!Tip]  
-> Pokud chcete dostávat upozornění na aktualizaci této stránky, zkopírujte a vložte následující adresu URL do čtečky informačních kanálů RSS:`https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+1810+-+Configuration+Manager%22&locale=en-us`
+> Pokud chcete dostávat upozornění na aktualizaci této stránky, zkopírujte a vložte následující adresu URL do čtečky informačních kanálů RSS: `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+1810+-+Configuration+Manager%22&locale=en-us`
 
 
 
-## <a name="deprecated-features-and-operating-systems"></a><a name="bkmk_deprecated"></a>Zastaralé funkce a operační systémy
+## <a name="deprecated-features-and-operating-systems"></a><a name="bkmk_deprecated"></a> Zastaralé funkce a operační systémy
 
 Přečtěte si o změnách podpory před jejich implementací v [odebraných a zastaralých položkách](deprecated/removed-and-deprecated.md).
 
@@ -50,7 +50,7 @@ Nasazení klasických služeb v Azure je teď v Configuration Manager zastaralá
 
 
 
-## <a name="site-infrastructure"></a><a name="bkmk_infra"></a>Infrastruktura webu
+## <a name="site-infrastructure"></a><a name="bkmk_infra"></a> Infrastruktura webu
 
 ### <a name="support-for-windows-server-2019"></a>Podpora pro Windows Server 2019
 
@@ -95,7 +95,7 @@ Další informace najdete v tématu [oznámení klienta](../../clients/manage/cl
 
 
 
-## <a name="content-management"></a><a name="bkmk_content"></a>Správa obsahu
+## <a name="content-management"></a><a name="bkmk_content"></a> Správa obsahu
 
 ### <a name="new-boundary-group-options"></a>Nové možnosti skupiny hranic
 
@@ -118,7 +118,7 @@ Další informace najdete v tématu [přehledy správy](../../servers/manage/man
 
 
 
-## <a name="client-management"></a><a name="bkmk_client"></a>Správa klientů
+## <a name="client-management"></a><a name="bkmk_client"></a> Správa klientů
 
 ### <a name="new-client-notification-action-to-wake-up-device"></a>Nová akce oznámení klienta pro probuzení zařízení
 
@@ -156,7 +156,7 @@ Další informace najdete v tématu [Konfigurace skupin hranic](../../servers/de
 
 
 
-## <a name="co-management"></a><a name="bkmk_comgmt"></a>Spoluspráva
+## <a name="co-management"></a><a name="bkmk_comgmt"></a> Spoluspráva
 
 ### <a name="required-app-compliance-policy-for-co-managed-devices"></a>Požadované zásady dodržování předpisů aplikací pro společně spravovaná zařízení
 
@@ -191,7 +191,7 @@ Další informace najdete v tématu [Příprava internetových zařízení pro s
 
 
 
-## <a name="application-management"></a><a name="bkmk_app"></a>Správa aplikací
+## <a name="application-management"></a><a name="bkmk_app"></a> Správa aplikací
 
 ### <a name="convert-applications-to-msix"></a>Převést aplikace na MSIX
 
@@ -231,7 +231,7 @@ Další informace najdete v tématech o [vytváření aplikací](../../../apps/d
 
 
 
-## <a name="os-deployment"></a><a name="bkmk_osd"></a>Nasazení operačního systému
+## <a name="os-deployment"></a><a name="bkmk_osd"></a> Nasazení operačního systému
 
 ### <a name="task-sequence-support-of-windows-autopilot-for-existing-devices"></a>Podpora pořadí úkolů pro existující zařízení ve Windows autopilotu
 
@@ -280,14 +280,14 @@ Další informace najdete v tématu [proměnné pořadí úkolů](../../../osd/u
 
 
 
-## <a name="software-updates"></a><a name="bkmk_sum"></a>Aktualizace softwaru
+## <a name="software-updates"></a><a name="bkmk_sum"></a> Aktualizace softwaru
 
 ### <a name="phased-deployment-of-software-updates"></a>Dvoufázové nasazení aktualizací softwaru
 
 <!--1358146-->
 Vytvoření postupného nasazení pro aktualizace softwaru. Postupné nasazení vám umožní orchestrovat koordinované, sekvenční zavedení softwaru na základě přizpůsobitelných kritérií a skupin.
 
-Další informace najdete v tématu [Vytvoření dvoufázové nasazení](../../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json).
+Další informace najdete v tématu [Vytvoření dvoufázové nasazení](../../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/mem/configmgr/sum/toc.json&bc=/mem/configmgr/sum/breadcrumb/toc.json).
 
 
 ### <a name="improvement-to-maintenance-windows-for-software-updates"></a>Zlepšení oken údržby pro aktualizace softwaru
@@ -314,7 +314,7 @@ Pro aktualizace funkcí teď můžete zadat pravidla nahrazení odděleně od ak
 
 Další informace najdete v části [Pravidla nahrazení](../../../sum/get-started/install-a-software-update-point.md#supersedence-rules).
 
-## <a name="reporting"></a><a name="bkmk_report"></a>Zpravodajský
+## <a name="reporting"></a><a name="bkmk_report"></a> Zpravodajský
 
 ### <a name="improvement-to-lifecycle-dashboard"></a>Vylepšení řídicího panelu životní cyklus
 
@@ -335,7 +335,7 @@ Další informace najdete v tématu [datový sklad](../../servers/manage/data-wa
 
 
 
-## <a name="configuration-manager-console"></a><a name="bkmk_admin"></a>Konzola Configuration Manager
+## <a name="configuration-manager-console"></a><a name="bkmk_admin"></a> Konzola Configuration Manager
 
 ### <a name="configuration-manager-administrator-authentication"></a>Ověřování správce Configuration Manager
 
@@ -385,7 +385,7 @@ Další informace o dalších vylepšeních výkonu a řešení problémů s CMP
 Další informace o CMPivot najdete v tématu [CMPivot](../../servers/manage/cmpivot.md).
 
 
-### <a name="improvements-to-scripts"></a><a name="bkmk_scripts"></a>Vylepšení skriptů
+### <a name="improvements-to-scripts"></a><a name="bkmk_scripts"></a> Vylepšení skriptů
 
 <!--1358239-->
 Teď si můžete zobrazit podrobný výstup skriptu v nezpracovaném nebo strukturovaném formátu JSON. Toto formátování usnadňuje čtení a analýzu výstupu.
@@ -414,7 +414,7 @@ Další informace najdete v tématu [plánování poskytovatele serveru SMS](../
 
 
 
-## <a name="on-premises-mdm"></a><a name="bkmk_opmdm"></a>Místní MDM
+## <a name="on-premises-mdm"></a><a name="bkmk_opmdm"></a> Místní MDM
 
 ### <a name="an-intune-connection-is-no-longer-required-for-new-on-premises-mdm-deployments"></a>Připojení Intune už není potřeba pro nová místní nasazení MDM.
 
@@ -436,10 +436,10 @@ V konzole nástroje je k dispozici následující kumulativní aktualizace (4488
 
 K vyřešení konkrétních problémů jsou k dispozici následující další opravy hotfix:
 
-| ID | Nadpis | Datum | V konzole |
+| ID | Title | Datum | V konzole |
 |---------|---------|---------|---------|
-| [4487960](https://support.microsoft.com/help/4487960) | Certifikát konektoru Microsoft Intune se neobnovuje v Configuration Manager | 18. ledna 2019 | Ano |
-| [4490434](https://support.microsoft.com/help/4490434) | Duplicitní sloupce zjišťování uživatelů jsou vytvořeny v Configuration Manager | 22. února 2019 | Ano |
+| [4487960](https://support.microsoft.com/help/4487960) | Certifikát konektoru Microsoft Intune se neobnovuje v Configuration Manager | 18. ledna 2019 | Yes |
+| [4490434](https://support.microsoft.com/help/4490434) | Duplicitní sloupce zjišťování uživatelů jsou vytvořeny v Configuration Manager | 22. února 2019 | Yes |
 | [4490575](https://support.microsoft.com/help/4490575) | Instalace aktualizací přestanou reagovat nebo nikdy nezobrazuje doplňování v Configuration Manager verze 1810 | 22. února 2019 | Ano |
 
 

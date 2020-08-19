@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 3259bd1b20740046e70b1ef53281b0ff235a3896
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: d4594a50f42d6b8e6ea0b88b83920eda11615815
+ms.sourcegitcommit: 8fc7f2864c5e3f177e6657b684c5f208d6c2a1b4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905469"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88590998"
 ---
 # <a name="capabilities-in-technical-preview-1705-for-configuration-manager"></a>Funkce ve verzi Technical Preview 1705 pro Configuration Manager
 
@@ -49,7 +49,7 @@ V tomto článku se seznámíte s funkcemi, které jsou k dispozici v Technical 
 -->
 
 ## <a name="update-reset-tool"></a>Nástroj pro resetování aktualizací  
-Pomocí nástroje pro obnovení Configuration Manager aktualizace **CMUpdateReset. exe**můžete opravit problémy v případě, že dojde k potížím při stahování nebo replikaci v konzolových aktualizacích. Tento nástroj je součástí verze Technical Preview 1705. Po instalaci verze Preview do složky ***\CD.latest\SMSSETUP\TOOLS*** najdete ji na serveru lokality v lokalitě Technical Preview.
+Můžete použít nástroj pro obnovení Configuration Manager aktualizace **CMUpdateReset.exe**a opravit problémy v případě, že aktualizace v konzole mají problémy při stahování nebo replikaci. Tento nástroj je součástí verze Technical Preview 1705. Po instalaci verze Preview do složky ***\CD.latest\SMSSETUP\TOOLS*** najdete ji na serveru lokality v lokalitě Technical Preview.
 
 Tento nástroj můžete použít s verzí Technical Preview 1606 nebo novější. Tato zpětná podpora je k dispozici, takže nástroj lze použít s řadou scénářů aktualizace Technical Preview a bez nutnosti čekat, až bude k dispozici další verze Technical Preview.
 
@@ -83,18 +83,18 @@ Po spuštění nástroje:
 **Parametry příkazového řádku:**  
 
 
-|                        Parametr                         |                                                            Description                                                            |
+|                        Parametr                         |                                                            Popis                                                            |
 |----------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
 | **-S &lt; plně kvalifikovaný název domény SQL Server vaší lokality nejvyšší úrovně>** | *Požadováno* <br> Je nutné zadat plně kvalifikovaný název domény SQL Server, která je hostitelem databáze lokality pro lokalitu nejvyšší úrovně ve vaší hierarchii. |
 |                **-D &lt; název databáze>**                 |                             *Požadováno* <br> Je nutné zadat název databáze lokalit na nejvyšší úrovni.                             |
-|                 **-P &lt;>identifikátor GUID balíčku**                 |                        *Požadováno* <br> Je nutné zadat identifikátor GUID balíčku aktualizací, který chcete obnovit.                        |
+|                 **-P &lt;>identifikátor GUID balíčku **                 |                        *Požadováno* <br> Je nutné zadat identifikátor GUID balíčku aktualizací, který chcete obnovit.                        |
 |           **-I &lt; SQL Server název instance>**           |                   *Volitelné* <br> Použijte k identifikaci instance SQL Server, která je hostitelem databáze lokality.                   |
 |                       **-FDELETE**                       |                      *Volitelné* <br> Toto použijte k vynucení odstranění úspěšně staženého balíčku aktualizace.                      |
 
- **4.6**  
- V typickém scénáři chcete obnovit aktualizaci, která má problémy se stahováním. Plně kvalifikovaný název domény SQL serveru je *Server1.fabrikam.com*, databáze lokality je *CM_XYZ*a identifikátor GUID balíčku je *61F16B3C-F1F6-4F9F-8647-2A524B0C802C*.  Spustíte: ***CMUpdateReset. exe-S Server1.fabrikam.com-D CM_XYZ-P 61F16B3C-F1F6-4F9F-8647-2A524B0C802C***
+ **Příklady:**  
+ V typickém scénáři chcete obnovit aktualizaci, která má problémy se stahováním. Plně kvalifikovaný název domény SQL serveru je *Server1.fabrikam.com*, databáze lokality je *CM_XYZ*a identifikátor GUID balíčku je *61F16B3C-F1F6-4F9F-8647-2A524B0C802C*.  Spustíte: ***CMUpdateReset.exe-S Server1.fabrikam.com-D CM_XYZ-P 61F16B3C-F1F6-4F9F-8647-2A524B0C802C***
 
- V extrémním scénáři chcete vynutit odstranění problematického balíčku aktualizace. Plně kvalifikovaný název domény SQL serveru je *Server1.fabrikam.com*, databáze lokality je *CM_XYZ*a identifikátor GUID balíčku je *61F16B3C-F1F6-4F9F-8647-2A524B0C802C*.  Spustíte: ***CMUpdateReset. exe-FDELETE-S Server1.fabrikam.com-D CM_XYZ-P 61F16B3C-F1F6-4F9F-8647-2A524B0C802C***
+ V extrémním scénáři chcete vynutit odstranění problematického balíčku aktualizace. Plně kvalifikovaný název domény SQL serveru je *Server1.fabrikam.com*, databáze lokality je *CM_XYZ*a identifikátor GUID balíčku je *61F16B3C-F1F6-4F9F-8647-2A524B0C802C*.  Spustíte: ***CMUpdateReset.exe-FDELETE-S Server1.fabrikam.com-D CM_XYZ-P 61F16B3C-F1F6-4F9F-8647-2A524B0C802C***
 
 ### <a name="test-the-tool-with-the-technical-preview"></a>Otestujte nástroj ve verzi Technical Preview.  
 Tento nástroj můžete použít s verzí Technical Preview 1606 nebo novější. Tato zpětná podpora je k dispozici, takže nástroj lze použít s větším počtem scénářů aktualizace Technical Preview, aniž byste museli čekat, až bude k dispozici další verze Technical Preview.
@@ -131,7 +131,7 @@ Pokud chcete přidat asynchronní repliku do [skupiny dostupnosti, kterou použ�
 ### <a name="use-the-asynchronous-replica-to-recover-your-site"></a>Obnovení lokality pomocí asynchronní repliky
 Před použitím asynchronní repliky k obnovení databáze lokality je nutné zastavit aktivní primární lokalitu, aby se zabránilo dalším zápisům do databáze lokality. Po zastavení lokality můžete použít asynchronní repliku místo použití [ručně obnovené databáze](../servers/manage/recover-sites.md#use-a-site-database-that-has-been-manually-recovered).
 
-Chcete-li lokalitu zastavit, můžete použít [Nástroj Hierarchy Maintenance](../servers/manage/hierarchy-maintenance-tool-preinst.exe.md) k zastavení klíčů služby na serveru lokality. Použijte příkazový řádek: **Preinst. exe/stopsite**   
+Chcete-li lokalitu zastavit, můžete použít [Nástroj Hierarchy Maintenance](../servers/manage/hierarchy-maintenance-tool-preinst.exe.md) k zastavení klíčů služby na serveru lokality. Použijte příkazový řádek: **Preinst.exe/stopsite**   
 
 Zastavení webu je ekvivalentem zastavení služby Správce součástí lokality (Sitecomp) a služby SMS_Executive, na serveru lokality.
 
@@ -175,7 +175,7 @@ Chcete-li vytvořit zásadu a vyhledat dostupná nastavení:
 4.  Pomocí příspěvku na blogu jako reference můžete vyhledat a nakonfigurovat dostupná nastavení, abyste mohli tuto funkci vyzkoušet.
 5.  Až skončíte, dokončete průvodce a Nasaďte zásadu na jedno nebo více zařízení s Windows 10.
 
-### <a name="further-reading"></a>Další čtení
+### <a name="further-reading"></a>Další materiály
 
 Další informace o ochraně Application Guard v programu Windows Defender najdete v [tomto blogovém příspěvku]( https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#BmJGKPfSjHHzsMmI.97).
 Další informace o samostatném režimu ochrany Application Guard v programu Windows Defender najdete v [tomto blogovém příspěvku](https://techcommunity.microsoft.com/t5/Windows-Insider-Program/Windows-Defender-Application-Guard-Standalone-mode/td-p/66903).
@@ -246,14 +246,14 @@ V tuto chvíli jste připojili Configuration Manager web k Azure AD.
 Než začnete, ujistěte se, že zdrojové soubory instalace klienta jsou uložené lokálně na zařízení, do kterého chcete klienta nainstalovat.
 Pak postupujte podle pokynů v tématu [nasazení klientů do počítačů se systémem Windows](../clients/deploy/deploy-clients-to-windows-computers.md#BKMK_Manual) pomocí následujícího instalačního příkazového řádku (nahraďte hodnoty v příkladu vlastními hodnotami):
 
-**CCMSetup. exe/NoCrlCheck/Source: C:\CLIENT CCMHOSTNAME = SCCMPROXYCONTOSO. CLOUDAPP. NET/CCM_Proxy_ServerAuth/72457598037527932 SMSSiteCode = HEC AADTENANTID = 780433B5-E05E-4B7D-BFD1-E8013911E543 AADTENANTNAME = contoso AADCLIENTAPPID = \< GUID > AADRESOURCEURI =<https://contososerver>**
+**ccmsetup.exe/NoCrlCheck/Source: C:\CLIENT CCMHOSTNAME = SCCMPROXYCONTOSO. CLOUDAPP. NET/CCM_Proxy_ServerAuth/72457598037527932 SMSSiteCode = HEC AADTENANTID = 780433B5-E05E-4B7D-BFD1-E8013911E543 AADTENANTNAME = contoso AADCLIENTAPPID = \<GUID> AADRESOURCEURI =<code>https://contososerver</code>**
 
 - **/NoCrlCheck**: Pokud váš bod správy nebo brána pro správu cloudu používá certifikát bez veřejného serveru, klient nemusí být schopný získat přístup k umístění seznamu CRL.
 - **/Source**: místní složka: umístění instalačních souborů klienta.
 - **CCMHOSTNAME**: název vašeho internetového bodu správy. To můžete najít spuštěním **gwmi-Namespace root\ccm\locationservices-class SMS_ActiveMPCandidate** z příkazového řádku ve spravovaném klientovi.
 - **SMSMP**: název vašeho bodu správy vyhledávání – může to být na intranetu.
 - **SMSSiteCode**: kód lokality Configuration Manager.
-- **AADTENANTID**, **AADTENANTNAME**: ID a název tenanta Azure AD, který jste propojili s Configuration Manager. To můžete zjistit spuštěním dsregcmd. exe/status z příkazového řádku na zařízení připojeném k Azure AD.
+- **AADTENANTID**, **AADTENANTNAME**: ID a název tenanta Azure AD, který jste propojili s Configuration Manager. To můžete zjistit spuštěním dsregcmd.exe/status z příkazového řádku na zařízení připojeném k Azure AD.
 - **AADCLIENTAPPID**: ID klientské aplikace Azure AD. Nápovědu najdete v tématu [použití portálu k vytvoření Azure Active Directory aplikace a instančního objektu, který má přístup k prostředkům](https://docs.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in).
 - **AADResourceUri**: identifikátor URI ID aplikace serveru Azure AD.
 

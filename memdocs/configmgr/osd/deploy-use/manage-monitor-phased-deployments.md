@@ -10,25 +10,25 @@ ms.assetid: dc245916-bc11-4983-9c4d-015f655007c1
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 66f31983e34ff37cd2df8532cd9d45d372ef1f3b
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: fe8bbbf311baa335640ca7dea90ccd46da4fa5ea
+ms.sourcegitcommit: 8fc7f2864c5e3f177e6657b684c5f208d6c2a1b4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125096"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88591706"
 ---
 # <a name="manage-and-monitor-phased-deployments"></a>Správa a sledování postupných nasazení
 
 Tento článek popisuje, jak spravovat a monitorovat dvoufázové nasazení. Úlohy správy zahrnují ruční zahájení další fáze a pozastavení nebo obnovení fáze. 
 
 Nejdřív je potřeba vytvořit postupné nasazení: 
-- [Aplikace](create-phased-deployment-for-task-sequence.md?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json)  
-- [Aktualizace softwaru](create-phased-deployment-for-task-sequence.md?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json)  
+- [Aplikace](create-phased-deployment-for-task-sequence.md?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json)  
+- [Aktualizace softwaru](create-phased-deployment-for-task-sequence.md?toc=/mem/configmgr/sum/toc.json&bc=/mem/configmgr/sum/breadcrumb/toc.json)  
 - [Pořadí úkolů](create-phased-deployment-for-task-sequence.md)  
 
 
 
-## <a name="move-to-the-next-phase"></a><a name="bkmk_move"></a>Přejít na další fázi
+## <a name="move-to-the-next-phase"></a><a name="bkmk_move"></a> Přejít na další fázi
 
 Když vyberete toto nastavení, **ručně zahájíte druhou fázi nasazení**, lokalita automaticky nespustí další fázi na základě kritérií úspěchů. Je nutné přesunout dvoufázové nasazení do další fáze.  
 
@@ -55,7 +55,7 @@ Když vyberete toto nastavení, **ručně zahájíte druhou fázi nasazení**, l
 
 
 
-## <a name="suspend-and-resume-phases"></a><a name="bkmk_suspend"></a>Fáze pozastavení a obnovení 
+## <a name="suspend-and-resume-phases"></a><a name="bkmk_suspend"></a> Fáze pozastavení a obnovení 
 
 Postupné nasazení můžete ručně pozastavit nebo obnovit. Můžete například vytvořit postupné nasazení pořadí úkolů. Při monitorování fáze do pilotní skupiny si všimnete velkého počtu selhání. Pozastavíte postupné nasazení, aby se zastavilo další zařízení pro spuštění pořadí úkolů. Po vyřešení problému obnovíte postupné nasazení, abyste mohli pokračovat v zavádění. 
 
@@ -86,7 +86,7 @@ When you suspend a phased deployment, it sets the available and deadline times o
 -->
 
 
-## <a name="monitor"></a><a name="bkmk_monitor"></a>Sledován
+## <a name="monitor"></a><a name="bkmk_monitor"></a> Sledován
 <!--1358577-->
 Počínaje verzí 1902 mají dvoufázové nasazení svůj vlastní vyhrazený monitorovací uzel, což usnadňuje identifikaci dvoufázové nasazení, které jste vytvořili, a přejdete do zobrazení monitorování postupného nasazení. V pracovním prostoru **monitorování** vyberte **dvoufázové nasazení**a pak dvakrát klikněte na jedno ze postupných nasazení, abyste zobrazili stav. <!--3555949-->
 

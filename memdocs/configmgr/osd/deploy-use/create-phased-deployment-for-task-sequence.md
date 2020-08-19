@@ -10,12 +10,12 @@ ms.assetid: b634ff68-b909-48d2-9e2c-0933486673c5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 1845b381d8b37fed3a785475e961cd39c54cf42d
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 36da7d35b75d2675fc775ed46e49e8adf2e6af3f
+ms.sourcegitcommit: 8fc7f2864c5e3f177e6657b684c5f208d6c2a1b4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125266"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88591731"
 ---
 # <a name="create-phased-deployments-with-configuration-manager"></a>Vytvoření postupného nasazení pomocí Configuration Manager
 
@@ -51,7 +51,7 @@ Před vytvořením postupného nasazení distribuujte přidružený obsah do dis
 
 
 
-## <a name="phase-settings"></a><a name="bkmk_settings"></a>Nastavení fáze
+## <a name="phase-settings"></a><a name="bkmk_settings"></a> Nastavení fáze
 
 Tato nastavení jsou jedinečná pro dvoufázové nasazení. Tato nastavení konfigurujte při vytváření nebo úpravách fází pro řízení plánování a chování procesu dvoufázového nasazení. 
 
@@ -91,7 +91,7 @@ Include a timeline diagram
 
 
 
-## <a name="automatically-create-a-default-two-phase-deployment"></a><a name="bkmk_auto"></a>Automatické vytvoření výchozího dvoufázové nasazení
+## <a name="automatically-create-a-default-two-phase-deployment"></a><a name="bkmk_auto"></a> Automatické vytvoření výchozího dvoufázové nasazení
 
 1. Spusťte Průvodce vytvořením postupného nasazení v konzole Configuration Manager. Tato akce se liší v závislosti na typu softwaru, který nasazujete:  
 
@@ -124,7 +124,7 @@ Include a timeline diagram
 > [!NOTE]
 > Od 21. dubna 2020 se sada Office 365 ProPlus přejmenovává na **Microsoft 365 aplikace pro podniky**. Další informace najdete v tématu [Změna názvu pro Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change). I když se konzola aktualizuje, můžete si i nadále zobrazovat starý název v Configuration Manager produktu a dokumentaci.  
 
-## <a name="create-a-phased-deployment-with-manually-configured-phases"></a><a name="bkmk_manual"></a>Vytvoření postupného nasazení s ručně nakonfigurovanými fázemi
+## <a name="create-a-phased-deployment-with-manually-configured-phases"></a><a name="bkmk_manual"></a> Vytvoření postupného nasazení s ručně nakonfigurovanými fázemi
 <!--1358148--> 
 
 Počínaje verzí 1806 vytvořte dvoufázové nasazení s ručně nakonfigurovanými fázemi pro pořadí úkolů. Na kartě **fáze** v Průvodci vytvořením fáze nasazení přidejte až 10 dalších fází. 
@@ -187,7 +187,7 @@ Po vytvoření postupného nasazení otevřete jeho vlastnosti, abyste provedli 
 ## <a name="next-steps"></a>Další kroky
 
 Správa a monitorování postupného nasazení:
-- [Aplikace](manage-monitor-phased-deployments.md?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json)
-- [Aktualizace softwaru](manage-monitor-phased-deployments.md?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json)  
+- [Aplikace](manage-monitor-phased-deployments.md?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json)
+- [Aktualizace softwaru](manage-monitor-phased-deployments.md?toc=/mem/configmgr/sum/toc.json&bc=/mem/configmgr/sum/breadcrumb/toc.json)  
 - [Pořadí úkolů](manage-monitor-phased-deployments.md)  
 

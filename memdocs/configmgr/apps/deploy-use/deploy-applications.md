@@ -10,12 +10,12 @@ ms.assetid: 2629c376-ec43-4f0e-a78b-4223cc9302bf
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6c2fcd583e860273e2fbfc9fcda1e08053336345
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: a4afb066a5f07ff2347bc64b7811c2f09f3bd548
+ms.sourcegitcommit: 8fc7f2864c5e3f177e6657b684c5f208d6c2a1b4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127509"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88590930"
 ---
 # <a name="deploy-applications-with-configuration-manager"></a>Nasazení aplikací pomocí Configuration Manager
 
@@ -34,7 +34,7 @@ Můžete také simulovat nasazení aplikace. Tato simulace testuje použitelnost
 >
 > Zařízení zaregistrovaná v MDM nepodporují simulovaná nasazení, uživatelské prostředí ani nastavení plánování.
 
-## <a name="deploy-an-application"></a><a name="bkmk_deploy"></a>Nasazení aplikace
+## <a name="deploy-an-application"></a><a name="bkmk_deploy"></a> Nasazení aplikace
 
 1. V konzole Configuration Manager otevřete pracovní prostor **Knihovna softwaru** , rozbalte položku **Správa aplikací**a vyberte uzel **aplikace** nebo **skupiny aplikací** .
 
@@ -67,7 +67,7 @@ Na stránce **Obecné** v nástroji Průvodce nasazením softwaru zadejte násle
 
 - **Komentáře (volitelné)**: Volitelně můžete zadat popis tohoto nasazení.
 
-### <a name="deployment-content-options"></a><a name="bkmk_deploy-content"></a>Možnosti **obsahu** nasazení
+### <a name="deployment-content-options"></a><a name="bkmk_deploy-content"></a> Možnosti **obsahu** nasazení
 
 Na stránce **obsah** vyberte **Přidat** a distribuujte obsah této aplikace do distribučního bodu nebo skupiny distribučních bodů.
 
@@ -110,7 +110,7 @@ Na stránce **nastavení nasazení** zadejte následující informace:
     >
     > V případě **dostupného** účelu instalace můžete tuto možnost povolit nebo zakázat. <!--1351266-->
 
-#### <a name="approval-settings"></a><a name="bkmk_approval"></a>Nastavení schválení
+#### <a name="approval-settings"></a><a name="bkmk_approval"></a> Nastavení schválení
 
 Chování při schvalování aplikací závisí na tom, jestli povolíte doporučenou volitelnou funkci a **schválíte požadavky aplikací pro uživatele na zařízení**.
 
@@ -126,7 +126,7 @@ Pokud zobrazíte vlastnosti nasazení, je-li podporováno technologií typu nasa
 
 **Automaticky zavřete všechny spuštěné spustitelné soubory, které jste zadali na kartě chování při instalaci v dialogovém okně vlastnosti typu nasazení**. Další informace najdete v tématu [kontroly spouštění spustitelných souborů před instalací aplikace](#bkmk_exe-check).
 
-### <a name="deployment-scheduling-settings"></a><a name="bkmk_deploy-sched"></a>Nastavení **plánování** nasazení
+### <a name="deployment-scheduling-settings"></a><a name="bkmk_deploy-sched"></a> Nastavení **plánování** nasazení
 
 Na stránce **plánování** nastavte čas, kdy se tato aplikace nasadí nebo zpřístupní klientským zařízením.
 
@@ -155,7 +155,7 @@ Po uplynutí konečného termínu klient nainstaluje aplikaci v prvním nefiremn
 > [!NOTE]
 > Ve většině případů tato funkce řeší situaci, kdy je zařízení vypnuté, když je uživatel mimo kancelář. Technicky, období odkladu začíná, když klient získá zásady po konečném termínu nasazení. Ke stejnému chování dojde, pokud zastavíte službu Configuration Manager klienta (CcmExec) a pak ji znovu spustíte později po konečném termínu nasazení.
 
-### <a name="deployment-user-experience-settings"></a><a name="bkmk_deploy-ux"></a>Nastavení **uživatelského prostředí** nasazení
+### <a name="deployment-user-experience-settings"></a><a name="bkmk_deploy-ux"></a> Nastavení **uživatelského prostředí** nasazení
 
 Na stránce **činnost koncového uživatele** zadejte informace o tom, jak můžou uživatelé s instalací aplikace pracovat.
 
@@ -173,18 +173,18 @@ Na stránce **činnost koncového uživatele** zadejte informace o tom, jak mů�
 
 Na stránce **výstrahy** nakonfigurujte, jak Configuration Manager generuje výstrahy pro toto nasazení. Pokud používáte i System Center Operations Manager, nakonfigurujte také jeho výstrahy. Pro požadovaná nasazení můžete nakonfigurovat pouze některé výstrahy.
 
-## <a name="create-a-phased-deployment"></a><a name="bkmk_phased"></a>Vytvoření postupného nasazení
+## <a name="create-a-phased-deployment"></a><a name="bkmk_phased"></a> Vytvoření postupného nasazení
 
 <!--1358147-->
 Postupné nasazení vám umožní orchestrovat koordinované, sekvenční zavedení softwaru na základě přizpůsobitelných kritérií a skupin. Například Nasaďte aplikaci do pilotní kolekce a potom automaticky pokračuje v zavedení na základě kritérií úspěchů.
 
 Další informace najdete v následujících článcích:  
 
-- [Vytvoření postupného nasazení](../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json)  
+- [Vytvoření postupného nasazení](../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json)  
 
-- [Správa a sledování postupných nasazení](../../osd/deploy-use/manage-monitor-phased-deployments.md?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json)  
+- [Správa a sledování postupných nasazení](../../osd/deploy-use/manage-monitor-phased-deployments.md?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json)  
 
-## <a name="delete-a-deployment"></a><a name="bkmk_delete"></a>Odstranění nasazení
+## <a name="delete-a-deployment"></a><a name="bkmk_delete"></a> Odstranění nasazení
 
 1. V konzole Configuration Manager otevřete pracovní prostor **Knihovna softwaru** , rozbalte položku **Správa aplikací**a vyberte uzel **aplikace** nebo **skupiny aplikací** .  
 
@@ -196,7 +196,7 @@ Další informace najdete v následujících článcích:
 
 Při odstranění nasazení aplikace nebudou odebrány všechny instance aplikace, které již klienti nainstalovali. Chcete-li odebrat tyto aplikace, nasaďte aplikaci na počítače, které chcete **odinstalovat**. Pokud odstraníte nasazení aplikace, aplikace se už nebude zobrazovat v centru softwaru. K stejnému chování dochází, když odeberete prostředek z cílové kolekce pro nasazení.
 
-## <a name="user-notifications-for-required-deployments"></a><a name="bkmk_notify"></a>Oznámení uživatelů pro požadovaná nasazení
+## <a name="user-notifications-for-required-deployments"></a><a name="bkmk_notify"></a> Oznámení uživatelů pro požadovaná nasazení
 
 Když uživatelé dostanou požadovaný software, vyberte nastavení připomenout **a připomenout** , které si můžou vybrat z následujících možností:  
 
@@ -206,7 +206,7 @@ Když uživatelé dostanou požadovaný software, vyberte nastavení připomenou
 
 :::image type="content" source="media/ComputerAgentSettings.png" alt-text="Skupina Počítačový agent ve výchozím nastavení klienta":::
 
-Maximální doba odložení je vždy založena na hodnotách oznámení nakonfigurovaných v nastavení klienta při každé časové ose nasazení. Například:  
+Maximální doba odložení je vždy založena na hodnotách oznámení nakonfigurovaných v nastavení klienta při každé časové ose nasazení. Příklad:  
 
 - **Konečný termín nasazení je delší než 24 hodin a nastavení připomenout uživatele po dobu (hodiny)** na stránce **Počítačový agent** po dobu 10 hodin.  
 
@@ -220,7 +220,7 @@ V případě nasazení s vysokým rizikem, jako je například pořadí úkolů,
 
 :::image type="content" source="media/client-toast-notification.png" alt-text="Požadovaný softwarový Dialog upozorňuje na údržbu kritického softwaru.":::
 
-## <a name="check-for-running-executable-files"></a><a name="bkmk_exe-check"></a>Kontrolovat spouštění spustitelných souborů
+## <a name="check-for-running-executable-files"></a><a name="bkmk_exe-check"></a> Kontrolovat spouštění spustitelných souborů
 
 Nakonfigurujte nasazení, aby kontrolovalo, jestli jsou na klientovi spuštěné některé spustitelné soubory. Tato možnost slouží ke kontrole procesů, které mohou narušit instalaci aplikace. Pokud je některý z těchto spustitelných souborů spuštěný, klient zablokuje instalaci typu nasazení. Aby mohl uživatel nainstalovat typ nasazení, musí zavřít spuštěný spustitelný soubor. Pro nasazení s účelem požadováno může klient automaticky zavřít běžící spustitelný soubor.
 

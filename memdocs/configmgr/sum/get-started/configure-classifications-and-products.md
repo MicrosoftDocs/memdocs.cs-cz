@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 5ddde4e6-d553-4182-b752-6bc8b4a26745
-ms.openlocfilehash: 4f13ff305ba5fc2b5c5080bafb6fed2412ff8366
-ms.sourcegitcommit: 52dd59bdbad07b414db9e4209da0f4c957cf5d6e
+ms.openlocfilehash: a5254ba5a25b10df2943eaa7f80b32b17ea3680f
+ms.sourcegitcommit: 8fc7f2864c5e3f177e6657b684c5f208d6c2a1b4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84614086"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88591489"
 ---
 # <a name="configure-classifications-and-products-to-synchronize"></a>Konfigurace klasifikací a produktů k synchronizaci  
 
@@ -106,7 +106,7 @@ Když schválíte aktualizace funkcí pro Windows 10 verze 1909, zobrazí se ně
 
 ### <a name="windows-10-version-1903-and-later"></a>Windows 10 verze 1903 a novější
 
-**Windows 10 verze 1903 a novější** se přidala do Microsoft Update jako vlastní produkt, a ne jako součást produktu **Windows 10** , jako je třeba předchozí verze. Tato změna způsobila, že provedete několik ručních kroků, abyste zajistili, že se tyto aktualizace zobrazí u klientů. Pomohli jsme snížit počet ručních kroků, které je třeba provést pro nový produkt ve verzi Configuration Manager 1906. <!--4682946-->
+**Windows 10 verze 1903 a novější** se přidala do Microsoft Update jako vlastní produkt, a ne jako součást produktu **Windows 10**  , jako je třeba předchozí verze. Tato změna způsobila, že provedete několik ručních kroků, abyste zajistili, že se tyto aktualizace zobrazí u klientů. Pomohli jsme snížit počet ručních kroků, které je třeba provést pro nový produkt ve verzi Configuration Manager 1906. <!--4682946-->
 
 #### <a name="windows-10-version-1903-and-later-with-configuration-manager-version-1906"></a>Windows 10 verze 1903 a novější s Configuration Manager verze 1906
 Když aktualizujete na Configuration Manager verze 1906 a produkt **Windows 10** je vybraný pro synchronizaci, automaticky se provedou následující akce:
@@ -120,7 +120,7 @@ Pokud používáte Configuration Manager 1902 s Windows 10, klienty verze 1903, 
 - Aktualizujte všechna [pravidla automatického nasazení](../deploy-use/automatically-deploy-software-updates.md#bkmk_adr-process) pro klienty se systémem Windows 10 verze 1903.
 - Aktualizujte [plány údržby](../../osd/deploy-use/manage-windows-as-a-service.md#servicing-plan-workflow) pro klienty se systémem Windows 10 verze 1903.
 
-## <a name="windows-insider-program"></a><a name="bkmk_WIfB"></a>Program Windows Insider
+## <a name="windows-insider-program"></a><a name="bkmk_WIfB"></a> Program Windows Insider
 <!--3556023-->
 Od září 2019 můžete obsluhovat a aktualizovat zařízení s Windows Insider Preview Builds pomocí Configuration Manager. Tato změna znamená, že můžete spravovat tato zařízení beze změny normálních procesů nebo povolení web Windows Update pro firmy. Aktualizace funkcí a kumulativní aktualizace pro buildy Windows Insider Preview si můžete stáhnout do Configuration Manager stejně jako všechny ostatní aktualizace nebo upgrady Windows 10. Další informace najdete v příspěvku na blogu [služby WSUS v tématu publikování předběžných verzí Windows 10](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/Publishing-pre-release-Windows-10-feature-updates-to-WSUS/ba-p/845054) .
 
@@ -146,7 +146,7 @@ Je potřeba povolit produkty a klasifikace pro upgrady a aktualizace Windows Ins
     - Programů
     - Aktualizace zabezpečení
     - Aktualizace (volitelné)
-6. Kliknutím na tlačítko **OK** zavřete **Vlastnosti komponenty bodu aktualizace softwaru**.
+6. Kliknutím na tlačítko **OK** zavřete  **Vlastnosti komponenty bodu aktualizace softwaru**.
 
 ### <a name="upgrading-windows-insider-devices"></a>Upgrade zařízení se systémem Windows Insider
 
@@ -160,7 +160,7 @@ Nasaďte aktualizace funkcí pro Windows Insider do cílové kolekce stejně jak
 - Existují licenční podmínky, vaše nasazení musí přijmout podmínky, aby je bylo možné nainstalovat.
 - Zvažte použití [priority vlákna v nastavení klienta](../../core/clients/deploy/about-client-settings.md#bkmk_thread-priority).
 - Dynamická aktualizace automaticky nainstaluje důležité aktualizace, včetně nejnovější kumulativní aktualizace, přímo z Microsoft Update. Toto chování začalo s aktualizacemi funkcí pro Windows 10 verze 1903. 
-  - [Dynamickou aktualizaci můžete explicitně zakázat v nastavení klienta](../../core/clients/deploy/about-client-settings.md#bkmk_du) nebo pomocí [souboru setupconfig. ini](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options). 
+  - [Dynamickou aktualizaci můžete explicitně zakázat v nastavení klienta](../../core/clients/deploy/about-client-settings.md#bkmk_du) nebo pomocí [souborusetupconfig.ini](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options). 
   - Další informace najdete v blogovém příspěvku s [dynamickými aktualizacemi Windows 10](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/The-benefits-of-Windows-10-Dynamic-Update/ba-p/467847) .
 
 Další informace o tom, jak nasadit upgrady, najdete v tématu [Správa systému Windows jako služby](../../osd/deploy-use/manage-windows-as-a-service.md).
@@ -168,9 +168,9 @@ Další informace o tom, jak nasadit upgrady, najdete v tématu [Správa systém
 
 ### <a name="keeping-insider-devices-up-to-date"></a>Udržování aktuálního stavu zařízení Insider
 
-Kumulativní aktualizace pro Windows Insider budou dostupné pro službu WSUS a rozšíření pro Configuration Manager. Tyto kumulativní aktualizace budou vydány s frekvencí podobnou kumulativními aktualizacemi Windows 10 verze 1903. Kumulativní aktualizace programu Windows Insider jsou v kategorii produktů **Windows Insider pre-Release** a klasifikované jako **aktualizace zabezpečení** nebo **aktualizace**. Kumulativní aktualizace pro Windows Insider můžete nasadit pomocí běžného procesu aktualizace softwaru, jako je například použití [pravidel automatického nasazení](../deploy-use/automatically-deploy-software-updates.md) nebo [dvoufázové nasazení](../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json).
+Kumulativní aktualizace pro Windows Insider budou dostupné pro službu WSUS a rozšíření pro Configuration Manager. Tyto kumulativní aktualizace budou vydány s frekvencí podobnou kumulativními aktualizacemi Windows 10 verze 1903. Kumulativní aktualizace programu Windows Insider jsou v kategorii produktů **Windows Insider pre-Release** a klasifikované jako **aktualizace zabezpečení** nebo **aktualizace**. Kumulativní aktualizace pro Windows Insider můžete nasadit pomocí běžného procesu aktualizace softwaru, jako je například použití [pravidel automatického nasazení](../deploy-use/automatically-deploy-software-updates.md) nebo [dvoufázové nasazení](../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/mem/configmgr/sum/toc.json&bc=/mem/configmgr/sum/breadcrumb/toc.json).
 
-## <a name="extended-security-updates-and-configuration-manager"></a><a name="bkmk_ESU"></a>Rozšířené aktualizace zabezpečení a Configuration Manager
+## <a name="extended-security-updates-and-configuration-manager"></a><a name="bkmk_ESU"></a> Rozšířené aktualizace zabezpečení a Configuration Manager
 
 Program [Extended Security Updates (EVJ)](https://support.microsoft.com/help/4497181/lifecycle-faq-extended-security-updates) je poslední možností pro zákazníky, kteří potřebují spouštět některé starší verze produktů Microsoftu po skončení podpory. Zahrnuje kritické a/nebo důležité aktualizace zabezpečení (definované [centrem MSRC (Microsoft Security Response Center)](https://www.microsoft.com/msrc)po dobu delší než tři roky po ukončení rozšířené podpory produktu.
 

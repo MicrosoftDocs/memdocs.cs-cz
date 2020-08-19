@@ -750,7 +750,7 @@
         - name: Postup při správě klientů Linux a UNIX
           href: clients/manage/manage-clients-for-linux-and-unix-servers.md
         - name: Synchronizace dat s Azure Monitorem
-          href: 'https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm?context=sccm/core/context/core-context'
+          href: 'https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm?context=/mem/configmgr/core/context/core-context'
         - name: Údržba klientů Mac
           href: clients/manage/maintain-mac-clients.md
         - name: Řídicí panel zařízení Surface

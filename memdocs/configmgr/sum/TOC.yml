@@ -48,12 +48,12 @@
         - name: Automatické nasazení aktualizací softwaru
           href: deploy-use/automatically-deploy-software-updates.md
         - name: Vytvoření postupného nasazení
-          href: ../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json
+          href: ../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/mem/configmgr/sum/toc.json&bc=/mem/configmgr/sum/breadcrumb/toc.json
     - name: Monitorování aktualizací softwaru
       href: deploy-use/monitor-software-updates.md
       items:
         - name: Správa a sledování postupných nasazení
-          href: ../osd/deploy-use/manage-monitor-phased-deployments.md?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json
+          href: ../osd/deploy-use/manage-monitor-phased-deployments.md?toc=/mem/configmgr/sum/toc.json&bc=/mem/configmgr/sum/breadcrumb/toc.json
     - name: Údržba aktualizací softwaru
       href: deploy-use/software-updates-maintenance.md
     - name: Skupiny orchestrace

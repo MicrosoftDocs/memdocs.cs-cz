@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/31/2020
+ms.date: 08/18/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 673adad15e92fb06cf5cf7c3589b06ab8b1b337a
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 407189163107da24e19b84c2011fa47f6a796475
+ms.sourcegitcommit: 8fc7f2864c5e3f177e6657b684c5f208d6c2a1b4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990651"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88591689"
 ---
 # <a name="how-to-add-macos-line-of-business-lob-apps-to-microsoft-intune"></a>Přidání obchodních aplikací pro macOS do Microsoft Intune
 
@@ -42,8 +42,7 @@ Informace v tomto článku vám pomůžou přidat do Microsoft Intune obchodní 
 Musíte si stáhnout externí nástroj, označit stažený nástroj jako spustitelný soubor a předem zpracovat soubory *. pkg* pomocí nástroje, abyste mohli nahrát svůj obchodní soubor do Microsoft Intune. Předběžné zpracování souborů *.pkg* se musí provést v zařízení s macOS. Pomocí nástroje Intune App Wrapping Tool pro Mac umožněte správu aplikací pro Mac pomocí Microsoft Intune.
 
 > [!IMPORTANT]
-> Soubor *. pkg* musí být podepsán pomocí certifikátu instalační program ID pro vývojáře získaný z účtu Apple Developer. K nahrání obchodních aplikací pro macOS do Microsoft Intune je možné použít jenom soubory *.pkg*. Převod jiných formátů, například z *.dmg* na *.pkg*, není podporovaný.
->
+> Soubor *. pkg* musí být podepsán pomocí certifikátu instalační program ID pro vývojáře získaný z účtu Apple Developer. K nahrání obchodních aplikací pro macOS do Microsoft Intune je možné použít jenom soubory *.pkg*. Nicméně se podporuje převod jiných formátů, jako je například *. dmg* na *. pkg* . Další informace o převodu typů aplikací, které nejsou pkg, najdete v tématu [Jak nasadit DMG nebo aplikace ve formátu aplikace na Mac spravované v Intune](https://techcommunity.microsoft.com/t5/intune-customer-success/how-to-deploy-dmg-or-app-format-apps-to-intune-managed-macs/ba-p/1503416).
 
 1. Stáhněte si [Nástroj pro zabalení aplikace Intune pro Mac](https://github.com/msintuneappsdk/intune-app-wrapping-tool-mac).
 

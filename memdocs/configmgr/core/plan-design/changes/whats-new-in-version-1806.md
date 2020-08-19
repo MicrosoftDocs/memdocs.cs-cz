@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: ae2846c2a5f7fea86287a05c8cc8f6013d660df6
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: d6703f0889590b3d37d05b7c9b283a16c0150649
+ms.sourcegitcommit: 8fc7f2864c5e3f177e6657b684c5f208d6c2a1b4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128946"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88591628"
 ---
 # <a name="whats-new-in-version-1806-of-configuration-manager-current-branch"></a>Co je nového ve verzi 1806 Configuration Manager Current Branch
 
@@ -165,7 +165,7 @@ Při použití metody push klienta pro instalaci klienta Configuration Manager m
 Další informace najdete v tématu [instalace klientů pomocí klientské nabízené instalace](../../clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientPush).
 
 
-### <a name="enhanced-http-site-system"></a><a name="bkmk_ehttp"></a>Vylepšený systém lokality HTTP
+### <a name="enhanced-http-site-system"></a><a name="bkmk_ehttp"></a> Vylepšený systém lokality HTTP
 <!--1356889,1358228-->
 Pro všechny Configuration Manager komunikačních cest se doporučuje používat komunikaci pomocí protokolu HTTPS, ale můžou být pro některé zákazníky náročné kvůli režii při správě certifikátů PKI.
 
@@ -280,9 +280,9 @@ Vytvoření postupného nasazení pro aplikaci. Postupné nasazení vám umožn�
 
 Další informace najdete v následujících článcích:  
 
-- [Vytvoření postupného nasazení](../../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json)  
+- [Vytvoření postupného nasazení](../../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json)  
 
-- [Správa a sledování postupných nasazení](../../../osd/deploy-use/manage-monitor-phased-deployments.md?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json)  
+- [Správa a sledování postupných nasazení](../../../osd/deploy-use/manage-monitor-phased-deployments.md?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json)  
 
 
 ### <a name="provision-windows-app-packages-for-all-users-on-a-device"></a>Zřídit balíčky aplikací pro Windows pro všechny uživatele na zařízení
@@ -493,7 +493,7 @@ Další informace najdete v tématu [Údržba aktualizací softwaru](../../../su
 
 
 
-## <a name="reporting"></a>Generování sestav
+## <a name="reporting"></a>Vytváření sestav
 
 ### <a name="new-software-updates-compliance-report"></a>Nová sestava dodržování předpisů pro aktualizace softwaru
 <!--1357775-->
@@ -505,7 +505,7 @@ Další informace najdete v tématu [sestavy aktualizací softwaru](../../../sum
 
 ## <a name="inventory"></a>inventář
 
-### <a name="improvement-to-hardware-inventory-for-large-integer-values"></a><a name="bkmk_bigint"></a>Zlepšení inventáře hardwaru pro velké celočíselné hodnoty
+### <a name="improvement-to-hardware-inventory-for-large-integer-values"></a><a name="bkmk_bigint"></a> Zlepšení inventáře hardwaru pro velké celočíselné hodnoty
 <!--1357880-->
 Inventář hardwaru dřív měl omezení pro celá čísla větší než 4 294 967 296 (2 ^ 32). Tento limit se dá dosáhnout u atributů, jako jsou velikosti pevného disku v bajtech. Bod správy nezpracovává celočíselné hodnoty nad tímto limitem, takže v databázi nebyla uložena žádná hodnota. V této verzi se tento limit zvýšil na 18446744073709551616 (2 ^ 64). 
 
@@ -593,11 +593,11 @@ V konzole nástroje je k dispozici následující kumulativní aktualizace (4462
 
 K vyřešení konkrétních problémů jsou k dispozici následující další opravy hotfix:
 
-| ID | Nadpis | Datum | V konzole |
+| ID | Title | Datum | V konzole |
 |---------|---------|---------|---------|
-| [4346645](https://support.microsoft.com/help/4346645) | Aktualizace pro Configuration Manager verze 1806, první vlna | 31. srpna 2018 | Ano |
-| [4465865](https://support.microsoft.com/help/4465865) | Pokud je služba WSUS odpojená, aktualizace softwaru se nestahují v prostředí Configuration Manager.<br><br>Tato aktualizace je také v kumulativní aktualizaci (4462978). | 01. října 2018 | Ano |
-| [4471892](https://support.microsoft.com/help/4471892) | Respondér technologie PXE nefunguje napříč podsítěmi v Configuration Manager 1806 | 23. listopadu 2018 | Ne |
+| [4346645](https://support.microsoft.com/help/4346645) | Aktualizace pro Configuration Manager verze 1806, první vlna | 31. srpna 2018 | Yes |
+| [4465865](https://support.microsoft.com/help/4465865) | Pokud je služba WSUS odpojená, aktualizace softwaru se nestahují v prostředí Configuration Manager.<br><br>Tato aktualizace je také v kumulativní aktualizaci (4462978). | 01. října 2018 | Yes |
+| [4471892](https://support.microsoft.com/help/4471892) | Respondér technologie PXE nefunguje napříč podsítěmi v Configuration Manager 1806 | 23. listopadu 2018 | No |
 | [4487960](https://support.microsoft.com/help/4487960) | Certifikát konektoru Microsoft Intune se neobnovuje v Configuration Manager | 18. ledna 2019 | Ano |
 
 

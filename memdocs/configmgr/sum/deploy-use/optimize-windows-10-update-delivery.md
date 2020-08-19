@@ -10,12 +10,12 @@ ms.assetid: b670cfaf-96a4-4fcb-9caa-0f2e8c2c6198
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 6c42015880cae09be48feff9c42b6b2a0d2c8544
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 2e832feb6f5a56225cd63a0b0d6290fc0c70e53a
+ms.sourcegitcommit: 8fc7f2864c5e3f177e6657b684c5f208d6c2a1b4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129310"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88591550"
 ---
 # <a name="optimize-windows-10-update-delivery-with-configuration-manager"></a>Optimalizace doručování aktualizací Windows 10 pomocí Configuration Manager
 
@@ -58,7 +58,7 @@ Pro dosažení nejlepších výsledků možná budete muset nastavit [režim sta
 
 Ruční konfigurace těchto ID skupin je náročná na to, že klienti přecházejí mezi různými sítěmi. Configuration Manager verze 1802 přidala novou funkci pro zjednodušení správy tohoto procesu [integrací skupin hranic s optimalizací doručení](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#delivery-optimization). Když se klient probudí, mluví se svým bodem správy, aby získal zásady, a poskytuje informace o jeho síti a skupině hranic. Configuration Manager vytvoří jedinečné ID pro každou skupinu hranic. Lokalita používá informace o umístění klienta k automatické konfiguraci ID skupiny Optimalizace doručení klienta s ID hranice Configuration Manager. Když se klient přenese do jiné skupiny hranic, mluví ho s bodem správy a automaticky se překonfiguruje s novým ID hraniční skupiny. Díky této integraci může Optimalizace doručení využít Configuration Manager informace o skupině hranic k vyhledání partnerského zařízení, ze kterého se mají aktualizace stahovat.
 
-### <a name="delivery-optimization-starting-in-version-1910"></a><a name="bkmk_DO-1910"></a>Optimalizace doručení od verze 1910
+### <a name="delivery-optimization-starting-in-version-1910"></a><a name="bkmk_DO-1910"></a> Optimalizace doručení od verze 1910
 <!--4699118-->
 Počínaje verzí 1910 Configuration Manager můžete použít optimalizaci doručování pro distribuci veškerého obsahu služby Windows Update pro klienty se systémem Windows 10 verze 1709 nebo novější, nikoli pouze soubory Expresní instalace.
 
@@ -66,13 +66,22 @@ Chcete-li použít optimalizaci doručování pro všechny instalační soubory 
 
 - **Povolí klientům stahovat rozdílový obsah, pokud je k dispozici** možnost nastaveno na **Ano**.
 - **Port, který klienti používají pro příjem požadavků na rozdílový obsah** nastavený na 8005 (výchozí) nebo vlastní číslo portu.
-
+ 
 > [!IMPORTANT]
 > - Optimalizace doručení musí být povolená (výchozí) a nepoužívá se. Další informace najdete v tématu [referenční informace k optimalizaci Windows Delivery](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference).
 > - Při změně [nastavení klienta aktualizace softwaru](../../core/clients/deploy/about-client-settings.md#software-updates) pro rozdílový obsah ověřte [nastavení klienta Optimalizace doručení](../../core/clients/deploy/about-client-settings.md#delivery-optimization) .
 > - Optimalizace doručení se nedá použít pro Microsoft 365 aktualizace klienta, pokud je povolený Office COM. Sada Office COM je používána nástrojem Configuration Manager ke správě aktualizací pro klienty Microsoft 365ch aplikací. Můžete zrušit registraci Office COM, aby bylo možné používat optimalizaci doručování pro aktualizace aplikací Microsoft 365. Když je Office COM zakázaný, aktualizace softwaru pro Microsoft 365 aplikace se spravují pomocí výchozí naplánované úlohy pro Office Automatic Updates 2,0. To znamená, že Configuration Manager nediktování ani nesleduje proces instalace aktualizací Microsoft 365 aplikací. Configuration Manager bude pokračovat ve shromažďování informací z inventáře hardwaru a naplnit řídicí panel pro správu klientů Office 365 v konzole nástroje. Informace o tom, jak zrušit registraci Office COM, najdete v tématu [Povolení klientů office 365 přijímat aktualizace z Office CDN místo Configuration Manager](https://docs.microsoft.com/deployoffice/manage-office-365-proplus-updates-with-configuration-manager#enable-office-365-clients-to-receive-updates-from-the-office-cdn-instead-of-configuration-manager).
 > - Při použití CMG pro úložiště obsahu se nebude obsah pro aktualizace třetích stran stahovat do klientů, pokud je povolený **rozdílový obsah ke stažení, pokud** je povolené [nastavení klienta](../../core/clients/deploy/about-client-settings.md#allow-clients-to-download-delta-content-when-available) dostupné. <!--6598587-->
 
+#### <a name="configuration-recommendations-for-clients-downloading-delta-content"></a>Doporučení konfigurace pro klienty, kteří stahují rozdílový obsah
+<!--7913814-->
+Pokud je v klientech pro obsah aktualizace softwaru povolena [možnost](../../core/clients/deploy/about-client-settings.md#allow-clients-to-download-delta-content-when-available) **Povolit klientům stahování rozdílových obsahu** , jsou v rámci [nouzového chování distribučního bodu](../../core/servers/deploy/configure/boundary-group-procedures.md#bkmk_site-fallback) k dispozici určitá omezení. Chcete-li zajistit, aby tito klienti mohli správně stáhnout obsah aktualizace softwaru, doporučujeme následující konfigurace:
+
+- Zajistěte, aby se klienti nacházejí ve skupině hranic a aby existoval spolehlivý distribuční bod s potřebným obsahem přidruženým k této skupině hranic.
+- Nasaďte aktualizace softwaru s využitím Fallback do Microsoft Update povolené pro klienty, kteří můžou stahovat přímo z Internetu.
+   - Nastavení nasazení pro toto nouzové chování je v **případě, že aktualizace softwaru nejsou k dispozici v distribučním bodě v aktuálních, sousedních nebo hraničních skupinách lokality, stahují obsah z aktualizací společnosti Microsoft** a nacházejí se na stránce **Nastavení stahování** . Další informace najdete v tématu [nasazení aktualizací softwaru](manually-deploy-software-updates.md#process-to-manually-deploy-the-software-updates-in-a-software-update-group).
+
+Pokud není jedna z výše uvedených možností životaschopná, **umožněte klientům stahovat rozdílový obsah, pokud** je možné ho v nastavení klienta zakázat, aby se povolily funkce Fallback. Partnerský vztah pro optimalizaci doručování se v tomto případě nebude využívat, protože klient nepoužije rozdílový kanál.
 
 ### <a name="configuration-manager-peer-cache"></a>Configuration Manager sdílené mezipaměti
 
@@ -96,14 +105,14 @@ Výběr správné technologie peere naukládání do mezipaměti pro soubory Exp
 
 | Funkce  | Optimalizace doručení  | Sdílená mezipaměť  | Služba BranchCache  |
 |---------|---------|---------|---------|
-| Podporováno mezi podsítěmi | Ano | Ano | Ne |
+| Podporováno mezi podsítěmi | Yes | Ano | No |
 | Omezení šířky pásma | Ano (nativní) | Ano (přes BITS) | Ano (přes BITS) |
 | Podpora částečného obsahu | Ano, u všech podporovaných typů obsahu uvedených v tomto sloupci na dalším řádku. | Jenom pro aplikace Microsoft 365 a expresní aktualizace | Ano, u všech podporovaných typů obsahu uvedených v tomto sloupci na dalším řádku. |
 | Podporované typy obsahu | **Prostřednictvím nástroje ConfigMgr:** </br> – Expresní aktualizace </br> – Všechny aktualizace Windows (počínaje verzí 1910). To nezahrnuje aktualizace Microsoft 365ch aplikací.</br> </br> **Přes Microsoft Cloud:**</br> – Windows a aktualizace zabezpečení</br> – Ovladače</br> – Aplikace pro Windows Store</br> – Aplikace pro Windows Store pro firmy | Všechny typy obsahu nástroje ConfigMgr, včetně obrázků stažených v [systému Windows PE](../../osd/get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md) | Všechny typy obsahu nástroje ConfigMgr kromě imagí |
-| Velikost mezipaměti na ovládacím prvku disku | Ano | Ano | Ano |
+| Velikost mezipaměti na ovládacím prvku disku | Yes | Yes | Yes |
 | Zjišťování zdroje partnerského vztahu | Automaticky | Ruční (nastavení agenta klienta) | Automaticky |
 | Rovnocenné zjišťování | Přes cloudovou službu optimalizace doručování (vyžaduje přístup k Internetu) | Přes bod správy (na základě skupin hranic klientů) | Odesílání |
-| Generování sestav | Ano (použití Desktop Analytics) | Řídicí panel zdrojů dat klienta nástroje ConfigMgr | Řídicí panel zdrojů dat klienta nástroje ConfigMgr |
+| Vytváření sestav | Ano (použití Desktop Analytics) | Řídicí panel zdrojů dat klienta nástroje ConfigMgr | Řídicí panel zdrojů dat klienta nástroje ConfigMgr |
 | Řízení využití sítě WAN | Ano (nativní, lze ovládat pomocí nastavení zásad skupiny) | Skupiny hranic | Pouze podpora podsítí |
 | Správa prostřednictvím nástroje ConfigMgr | Částečný (nastavení klientského agenta) | Ano (nastavení agenta klienta) | Ano (nastavení agenta klienta) |
 
@@ -119,7 +128,7 @@ Pokud jsou na straně serveru kompromisy aktualizací s větší velikostí blok
 
 
 
-## <a name="frequently-asked-questions"></a><a name="bkmk_faq"></a>Nejčastější dotazy
+## <a name="frequently-asked-questions"></a><a name="bkmk_faq"></a> Nejčastější dotazy
 
 #### <a name="how-do-windows-express-downloads-work-with-configuration-manager"></a>Jak Windows Express stahuje práci s Configuration Manager?
 
