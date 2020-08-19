@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bc016ef1a3fd76c425a24d8230a0c078a0159922
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: f0119ace5e1ec511ec0e8235a1dcea4b7199c058
+ms.sourcegitcommit: 91519f811b58a3e9fd116a4c28e39341ad8af11a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252651"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88559534"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>Vytvoření a přiřazení profilů certifikátů SCEP v Intune
 
@@ -218,6 +218,8 @@ Až [nakonfigurujete infrastrukturu](certificates-scep-configure.md) pro podporu
    - **Kořenový certifikát**:
 
      Vyberte *profil důvěryhodného certifikátu* , který jste předtím nakonfigurovali a přiřadili k příslušným uživatelům a zařízením pro tento profil certifikátu SCEP. Profil důvěryhodného certifikátu se používá ke zřízení uživatelů a zařízení s certifikátem důvěryhodné kořenové certifikační autority. Informace o profilu důvěryhodného certifikátu najdete v tématech [Export certifikátu důvěryhodné kořenové certifikační autority](certificates-configure.md#export-the-trusted-root-ca-certificate) a [Vytvoření profilů důvěryhodných certifikátů](certificates-configure.md#create-trusted-certificate-profiles) v tématu *použití certifikátů pro ověřování v Intune*. Pokud máte kořenovou certifikační autoritu a vydávající certifikační autoritu, vyberte profil důvěryhodného kořenového certifikátu, který ověřuje vydávající certifikační autoritu.
+     > [!NOTE]
+     > Pokud máte v zařízeních se systémem iOS/iPadOS kořenovou certifikační autoritu a vydávající certifikační autoritu, vyberte profil důvěryhodného kořenového certifikátu, který ověřuje kořenovou certifikační autoritu. 
 
    - **Rozšířené použití klíče**:
 

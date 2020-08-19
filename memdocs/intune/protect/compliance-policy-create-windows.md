@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 15b590c87bb56427e44f955fb2f68382f60c7bc1
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 0357f8fe751738bc3f8a5198db96b2113ee16bfc
+ms.sourcegitcommit: 91519f811b58a3e9fd116a4c28e39341ad8af11a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252635"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88559490"
 ---
 # <a name="windows-10-and-later-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Nastavení Windows 10 a novějších označení zařízení jako kompatibilních nebo nekompatibilních s Intune
 
@@ -47,7 +47,9 @@ Jako správce Intune můžete pomocí těchto nastavení dodržování předpis�
    Windows BitLocker Drive Encryption šifruje všechna data uložená na svazku operačního systému Windows. BitLocker používá čip TPM (Trusted Platform Module) k ochraně operačního systému Windows a uživatelských dat. Pomáhá také ověřit, že počítač není úmyslně poškozen, a to ani v případě, že je jeho levý bezobslužný, ztracený nebo odcizený. Pokud je počítač vybavený kompatibilním čipem TPM, nástroj BitLocker pomocí čipu TPM uzamkne šifrovací klíče, které chrání data. K těmto klíčům proto nelze přistupovat, dokud čip TPM neověří stav počítače.  
 
   - **Nenakonfigurováno** (*výchozí*) – Toto nastavení není vyhodnoceno pro dodržování předpisů nebo nedodržování předpisů.
-  - **Vyžadovat** – zařízení může chránit data uložená na disku před neoprávněným přístupem, když je systém vypnutý nebo v režimu hibernace.  
+  - **Vyžadovat** – zařízení může chránit data uložená na disku před neoprávněným přístupem, když je systém vypnutý nebo v režimu hibernace.
+  
+  [Zařízení HealthAttestation CSP – BitLockerStatus](https://docs.microsoft.com/windows/client-management/mdm/healthattestation-csp)
 
 - **Vyžadovat, aby na zařízení bylo povolené zabezpečené spouštění**:  
   - **Nenakonfigurováno** (*výchozí*) – Toto nastavení není vyhodnoceno pro dodržování předpisů nebo nedodržování předpisů.
@@ -166,6 +168,8 @@ Platí jenom pro spoluspravovaná zařízení s Windows 10 a novějším. Zaří
   Toto nastavení se vztahuje na všechny jednotky na zařízení.
   - **Nenakonfigurováno** (*výchozí*)
   - **Vyžadovat** *– použít k* šifrování úložiště dat na vašich zařízeních.
+  
+   [DeviceStatus CSP – DeviceStatus/dodržování předpisů/EncryptionCompliance](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
 
   > [!NOTE]
   > Nastavení **Šifrování datového úložiště na zařízení** kontroluje obecnou přítomnost šifrování v zařízení. Pokud chcete nastavení šifrování zkontrolovat důkladněji, použijte možnost **Vyžadovat BitLocker**, která k ověření stavu BitLockeru na úrovni čipu TPM používá službu Ověření stavu zařízení s Windows.
@@ -185,7 +189,7 @@ Platí jenom pro spoluspravovaná zařízení s Windows 10 a novějším. Zaří
   - **Nenakonfigurováno** (*výchozí*) – Intune nekontroluje u zařízení verzi čipu TPM.
   - **Vyžadovat** – Intune kontroluje dodržování předpisů ve verzi čipu TPM. Zařízení splňuje předpisy, pokud je verze čipu TPM větší než **0** (nula). Zařízení nedodržuje předpisy, pokud na zařízení není verze TPM.
 
-  [DeviceStatus CSP – DeviceStatus/TPM/SpecificationVersion uzel](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
+  [DeviceStatus CSP – DeviceStatus/TPM/SpecificationVersion](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
   
 - **Antivirová ochrana**:  
   - **Nenakonfigurováno** (*výchozí*) – Intune nekontroluje žádná antivirová řešení nainstalovaná na zařízení.
@@ -217,7 +221,7 @@ Platí jenom pro spoluspravovaná zařízení s Windows 10 a novějším. Zaří
   - **Nenakonfigurováno** (*výchozí*) – Intune neuplatňuje žádné požadavky.
   - **Vyžadovat** – vynuťte aktuálnost Microsoft Defender Security Intelligence.
 
-  [Defender/Health/SignatureOutOfDate CSP](https://docs.microsoft.com/windows/client-management/mdm/defender-csp)
+  [Defender CSP – Defender/Health/SignatureOutOfDate CSP](https://docs.microsoft.com/windows/client-management/mdm/defender-csp)
   
   Další informace najdete v článku [aktualizace Security Intelligence pro antivirovou ochranu v programu Microsoft Defender a další antimalware Microsoftu](https://www.microsoft.com/en-us/wdsi/defenderupdates).
 
@@ -225,7 +229,7 @@ Platí jenom pro spoluspravovaná zařízení s Windows 10 a novějším. Zaří
   - **Nenakonfigurováno** (*výchozí*) – Intune neřídí tuto funkci ani nemění stávající nastavení.
   - **Vyžaduje** – zapněte ochranu v reálném čase, která kontroluje malware, spyware a další nežádoucí software.  
 
-  [Defender/AllowRealtimeMonitoring CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
+  [Zásady CSP – Defender/AllowRealtimeMonitoring CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
 
 ## <a name="microsoft-defender-atp"></a>Ochrana ATP v programu Microsoft Defender
 

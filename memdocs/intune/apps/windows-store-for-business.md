@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9f92fe778f640cccfc0026a6bad2c7f92cdce4d5
-ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
+ms.openlocfilehash: 5be1c4fd42d27386b4fdc51cac6167625432491f
+ms.sourcegitcommit: 91519f811b58a3e9fd116a4c28e39341ad8af11a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88217374"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88559561"
 ---
 # <a name="how-to-manage-volume-purchased-apps-from-the-microsoft-store-for-business-with-microsoft-intune"></a>Jak spravovat hromadně zakoupené aplikace z Microsoft Store pro firmy pomocí Microsoft Intune
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-[Microsoft Store pro firmy](https://www.microsoft.com/business-store) je místo, kde můžete najít a zakoupit aplikace pro svou organizaci, a to jednotlivě i hromadně. Pokud Store propojíte s Microsoft Intune, můžete hromadně zakoupené aplikace spravovat z Azure Portalu. Například:
+[Microsoft Store pro firmy](https://www.microsoft.com/business-store) je místo, kde můžete najít a zakoupit aplikace pro svou organizaci, a to jednotlivě i hromadně. Pokud Store propojíte s Microsoft Intune, můžete hromadně zakoupené aplikace spravovat z Azure Portalu. Příklad:
 
 * Seznam aplikací, které jste zakoupili (nebo které jsou zdarma) můžete synchronizovat z obchodu s Intune.
 * Aplikace, které jsou synchronizované, se zobrazí v konzole pro správu Intune. Tyto aplikace můžete přiřadit stejně jako všechny ostatní aplikace.
@@ -78,6 +78,7 @@ Teď můžete pokračovat a nastavit synchronizaci v konzole Intune.
 6. Kliknutím na **Synchronizovat** přeneste aplikace zakoupené v Microsoft Storu do Intune.
 
 ## <a name="synchronize-apps"></a>Synchronizace aplikací
+Pokud jste už Microsoft Store pro obchodní účet s přihlašovacími údaji správce Intune, můžete své Microsoft Store pro obchodní aplikace ručně synchronizovat s Intune pomocí následujících kroků.
 
 1. Vyberte možnost konektory **správy tenanta**  >  **a tokeny**  >  **Microsoft Store pro firmy**.
 2. Kliknutím na **Synchronizovat** přeneste aplikace zakoupené v Microsoft Storu do Intune.
