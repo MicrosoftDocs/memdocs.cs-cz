@@ -2,7 +2,7 @@
 title: Co je nového v Desktop Analytics
 titleSuffix: Configuration Manager
 description: Shrnutí nových funkcí v nejnovější měsíční verzi cloudové služby Desktop Analytics.
-ms.date: 07/01/2020
+ms.date: 08/19/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: ec554d755b92d1c710def580a34fdbbddc7b4d45
-ms.sourcegitcommit: 2c5fd7c8603b88b753765f3cc298d0a0bacaf521
+ms.openlocfilehash: c41c6333cfee1b6a24bb84c0f020c14c303fd904
+ms.sourcegitcommit: 62b451396eae660f2d5289ae3666b19ed1cc666d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85819966"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88614745"
 ---
 # <a name="whats-new-in-desktop-analytics"></a>Co je nového v Desktop Analytics
 
@@ -25,8 +25,20 @@ Zjistěte, co je nového v jednotlivých měsících v Desktop Analytics.
 > [!TIP]
 > Zavedení každé měsíční aktualizace může trvat až tři dny. Některé funkce můžou vycházet v průběhu několika týdnů a nemusí být k dispozici všem zákazníkům hned první týden.
 
-Pokud chcete dostávat upozornění na aktualizaci této stránky, zkopírujte a vložte následující adresu URL do čtečky informačních kanálů RSS:`https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+desktop+analytics+-+Configuration+Manager%22&locale=en-us`
+Pokud chcete dostávat upozornění na aktualizaci této stránky, zkopírujte a vložte následující adresu URL do čtečky informačních kanálů RSS: `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+desktop+analytics+-+Configuration+Manager%22&locale=en-us`
 <!-- a locale is required for the RSS search string -->
+
+## <a name="august-2020"></a>Srpen 2020
+
+### <a name="apps-deployed-from-configuration-manager-are-important-by-default"></a>Aplikace nasazené z Configuration Manager jsou ve výchozím nastavení důležité.
+
+<!-- 4859763 -->
+
+Konfigurace **důležitosti** aplikace je důležitá pro desktopovou analýzu k určení zařízení, která se mají zahrnout do pilotních nasazení. Správce, který je potřebný k ruční konfiguraci důležitosti pro všechny aplikace v rámci analýzy stolních počítačů. Jenom jednou, když zkušební projekt ověříte, můžete pokračovat v produkčním nasazení.
+
+Pro každou aplikaci, kterou nasazujete pomocí Configuration Manager, ji služba Analytics Desktop ve výchozím nastavení automaticky nakonfiguruje jako důležitou. Toto chování vám umožní rychleji nakonfigurovat aplikace ve vašem prostředí, aby se dosáhlo rychlejšího vývoje produkčního nasazení.
+
+Další informace najdete v tématu [assets-Apps](about-assets.md#apps).
 
 ## <a name="july-2020"></a>Červenec 2020
 

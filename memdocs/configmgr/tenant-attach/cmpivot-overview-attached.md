@@ -10,12 +10,12 @@ ms.assetid: 31bf1359-54e5-4416-9f39-6bb0070db542
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 93460b08b7ba47951656e1107aae56e687acf4e8
-ms.sourcegitcommit: f6b14e6fe694a2a05c6ed92e67089e80a00a0908
+ms.openlocfilehash: 529cf0c27793262abb2902477ceab11201212b1e
+ms.sourcegitcommit: 62b451396eae660f2d5289ae3666b19ed1cc666d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88501194"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88614715"
 ---
 # <a name="tenant-attach-cmpivot-overview"></a>Připojení tenanta: Přehled CMPivot
 
@@ -41,18 +41,6 @@ Pokud používáte CMPivot z konzoly pro správu Microsoft Endpoint Manageru, uj
 
 [!INCLUDE [Overview article sections for both Microsoft Endpoint Manager and Configuration Manager use](../core/servers/manage/includes/cmpivot-overview-shared.md)]
 
-## <a name="known-issues"></a>Známé problémy
-
-### <a name="inconsistent-results-for-some-operators-with-configuration-manager-version-2002"></a>Nekonzistentní výsledky pro některé operátory s Configuration Manager verze 2002
-<!--7784718, 7884272-->
-Pokud používáte CMPivot z centra pro správu Microsoft Endpoint Manageru s Configuration Manager verze 2002, můžete získat nekonzistentní výsledky pro následující operátory:
-
-- Vytvořit souhrn podle
-- Take
-- Řadit podle
-- Nahoře
-- Count
-- Distinct
 
 ## <a name="next-steps"></a>Další kroky
 

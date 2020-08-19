@@ -2,7 +2,7 @@
 title: Instalace ukázkových sestav Power BI
 titleSuffix: Configuration Manager
 description: Naučte se instalovat ukázkové sestavy Power BI v Configuration Manager
-ms.date: 08/12/2020
+ms.date: 08/18/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 7e9bc22c-67ac-4a86-b613-944a4928e583
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 450c76617cf12a3201aa990c90843cb2e0f0edee
-ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
+ms.openlocfilehash: cb55fc79c44af83c7bb7a5e0802800f55e28e6b3
+ms.sourcegitcommit: 62b451396eae660f2d5289ae3666b19ed1cc666d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179429"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88614763"
 ---
 # <a name="install-power-bi-sample-reports"></a>Instalace ukázkových sestav Power BI
 <!--5679791-->
@@ -54,7 +54,7 @@ Instalace ukázkových sestav:
 
 1. Na serveru sestav Power BI vytvořte novou složku s názvem `Sample Reports` v kořenové složce Configuration Manager vytváření sestav.
 
-    :::image type="content" source="media/create-sample-reports-folder.png" alt-text="Vytvoření ukázkové složky sestavy v kořenové Configuration Manager složce pro vytváření sestav z" lightbox="media/create-sample-reports-folder.png":::
+    :::image type="content" source="media/create-sample-reports-folder.png" alt-text="Vytvoření ukázkové složky sestavy v kořenové Configuration Manager složce pro vytváření sestav z " lightbox="media/create-sample-reports-folder.png":::
 
 1. Spusťte Microsoft Power BI Desktop (optimalizováno pro Server sestav Power BI).
 
@@ -64,9 +64,14 @@ Instalace ukázkových sestav:
 
 1. Po zobrazení výzvy zadejte název databáze Configuration Manager a název databázového serveru a pak vyberte **načíst**.
 
-    Při načítání nebo aplikování datového modelu Ignorujte všechny chyby, pokud jste nacházeli mezi sebou.
-
     :::image type="content" source="media/sample-report-database.png" alt-text="Zadat název databáze a databázového serveru" lightbox="media/sample-report-database.png":::
+
+    > [!NOTE]
+    > Při načítání nebo aplikování datového modelu Ignorujte všechny chyby, pokud jste nacházeli mezi sebou. Pokud se například zobrazí následující chyba: "připojení k tabulkám z více než jedné databáze není v režimu DirectQuery podporováno", vyberte **Zavřít**. Pak aktualizujte nastavení zdroje dat:
+    >
+    > 1. V Power BI Desktop na pásu karet vyberte **Upravit dotazy**a pak vyberte **Nastavení zdroje dat**.
+    > 1. Vyberte **změnit zdroj**, potvrďte název serveru a databáze a vyberte **OK**.
+    > 1. Zavřete okno nastavení zdroje dat a pak vyberte **použít změny**.
 
 1. Po načtení dat sestavy vyberte **soubor**  >  **Uložit jako**a pak vyberte **server sestav Power BI**.
 

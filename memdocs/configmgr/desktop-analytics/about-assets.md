@@ -2,7 +2,7 @@
 title: Prostředky v Desktop Analytics
 titleSuffix: Configuration Manager
 description: Přečtěte si o zařízeních, ovladačích a aplikacích v Desktop Analytics.
-ms.date: 05/11/2020
+ms.date: 08/19/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: f87c4cc1bcbe8039acb5876dc8e26ac597f12e59
-ms.sourcegitcommit: 3217778ebe7fd0318810696e8931e427a85da897
+ms.openlocfilehash: d4328aee2bc08054fbeaa7147ceed30fe61b61a7
+ms.sourcegitcommit: 62b451396eae660f2d5289ae3666b19ed1cc666d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85107302"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88614819"
 ---
 # <a name="assets-in-desktop-analytics"></a>Prostředky v Desktop Analytics
 
@@ -42,6 +42,9 @@ Karta **aplikace** zobrazuje všechny nainstalované aplikace, které služba de
 
 Aplikace **zajímavosti** se instalují na více než 2% zaregistrovaných zařízení.
 
+> [!TIP]
+> Pro konkrétní plán nasazení můžete tuto hodnotu nakonfigurovat. Ve vlastnostech plánu nasazení zadejte v části **pravidla připravenosti**hodnotu pro **Definování prahové hodnoty nízkého počtu instalací pro vaše aplikace**.
+
 Nastavení **Podrobnosti verzí aplikace** je ve výchozím nastavení vypnuté, takže tato karta kombinuje všechny verze aplikací se stejným názvem a vydavatelem.<!-- 5542186 --> Výchozí chování pomáhá snížit celkový počet aplikací, které vidíte, což pomáhá snižovat vaše úsilí při přidávání poznámek k aplikacím. Toto nastavení se projeví i v počtu aplikací na dlaždici **aplikace zajímavosti** . Například místo výpisu stovek instancí Microsoft Edge existuje jedna instance pro všechny verze. Pro všechny verze můžete udělat rozhodnutí jednou. Pokud potřebujete rozhodnout o konkrétních verzích aplikace, zapněte toto nastavení. Toto nastavení můžete nakonfigurovat i při práci s plánem nasazení. Další informace najdete v tématu [plánování prostředků](about-deployment-plans.md#plan-assets).
 
 Vyberte aplikaci ze seznamu a vyberte **Upravit**. Tato akce zobrazí podrobnosti o aplikaci. Vyberte rozevírací nabídku **důležitost** a nastavte hodnotu. Můžete také přiřadit **vlastníka**. Pokud provedete nějaké změny, vyberte **Uložit**.
@@ -53,6 +56,9 @@ Nakonfigurujte **důležitost** aplikací nastavením jedné z následujících 
 - Ignorovat
 - Nerevidováno
 - Není důležité<!-- 3587232 -->
+
+> [!NOTE]
+> Pokud jste aplikaci nasadili pomocí Configuration Manager, služba Desktop Analytics ji ve výchozím nastavení automaticky nakonfiguruje jako **důležitou** . Toto chování vám umožní rychleji nakonfigurovat aplikace ve vašem prostředí, aby se dosáhlo rychlejšího vývoje produkčního nasazení.<!-- 4859763 -->
 
 Pokud je nastavení **Podrobnosti verze aplikace** vypnuté, zobrazí se v podokně podrobností aplikace počet verzí aplikací a jazyků, které kombinuje. Pokud všechny změny v podrobnostech aplikace uložíte, platí pro všechny verze. Nastavte například **důležitost** nebo **vlastník**. Některé hodnoty zobrazí "vícenásobné", což znamená, že ve všech verzích není jedna konzistentní hodnota.
 

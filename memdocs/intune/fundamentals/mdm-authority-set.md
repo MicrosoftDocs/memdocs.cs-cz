@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4e1ac5180a30959618f37d909511785b4de1c407
-ms.sourcegitcommit: 8fc7f2864c5e3f177e6657b684c5f208d6c2a1b4
+ms.openlocfilehash: 380e39406dcc0b5bd286605804e3aa3c52750dd1
+ms.sourcegitcommit: 62b451396eae660f2d5289ae3666b19ed1cc666d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 08/19/2020
-ms.locfileid: "88591230"
+ms.locfileid: "88614732"
 ---
 # <a name="set-the-mobile-device-management-authority"></a>Nastavení autority pro správu mobilních zařízení
 
@@ -38,7 +38,7 @@ Možné konfigurace:
 
 - **Základní mobilita a zabezpečení pro Office 365** – Pokud máte tuto konfiguraci aktivovanou, uvidíte autoritu MDM nastavenou na "Office 365". Pokud chcete začít používat Intune, budete si muset koupit licence Intune.
 
-- **Základní mobilita a zabezpečení pro office 365 koexistence** – službu Intune můžete přidat do svého tenanta, pokud už používáte základní mobilitu a zabezpečení pro Office 365 a pro každého uživatele nastavíte autoritu pro správu na Intune nebo základní mobilitu a zabezpečení pro Office 365 pro každého uživatele, aby se nastavila služba, která se bude používat ke správě zařízení zaregistrovaných v MDM. Autorita pro správu každého uživatele je definovaná na základě licence přiřazené uživateli: Pokud má uživatel jenom licenci na Microsoft 365 Basic nebo Standard, budou jejich zařízení spravovaná základní mobilitou a zabezpečením pro Office 365. Pokud má uživatel licenci entitling Intune, jejich zařízení se budou spravovat přes Intune. Pokud přidáte licenci entitling Intune k uživateli, který dřív spravovala základní mobilita a zabezpečení pro Office 365, budou se jejich zařízení přepínat na správu Intune. Nezapomeňte mít konfigurace Intune přiřazené uživatelům, aby před přepnutím uživatelů do Intune nahradili základní mobilitu a zabezpečení pro Office 365. jinak jejich zařízení ztratí základní mobilitu a zabezpečení pro konfiguraci sady Office 365 a nezíská žádné náhrady z Intune.
+- **Základní mobilita a zabezpečení pro office 365 [koexistence](#coexistence) ** – službu Intune můžete přidat do svého tenanta, pokud už používáte základní mobilitu a zabezpečení pro Office 365 a pro každého uživatele nastavíte autoritu pro správu na Intune nebo základní mobilitu a zabezpečení pro Office 365 pro každého uživatele, aby se nastavila služba, která se bude používat ke správě zařízení zaregistrovaných v MDM. Autorita pro správu každého uživatele je definovaná na základě licence přiřazené uživateli: Pokud má uživatel jenom licenci na Microsoft 365 Basic nebo Standard, budou jejich zařízení spravovaná základní mobilitou a zabezpečením pro Office 365. Pokud má uživatel licenci entitling Intune, jejich zařízení se budou spravovat přes Intune. Pokud přidáte licenci entitling Intune k uživateli, který dřív spravovala základní mobilita a zabezpečení pro Office 365, budou se jejich zařízení přepínat na správu Intune. Nezapomeňte mít konfigurace Intune přiřazené uživatelům, aby před přepnutím uživatelů do Intune nahradili základní mobilitu a zabezpečení pro Office 365. jinak jejich zařízení ztratí základní mobilitu a zabezpečení pro konfiguraci sady Office 365 a nezíská žádné náhrady z Intune.
 
 ## <a name="set-mdm-authority-to-intune"></a>Nastavení autority MDM na Intune
 
@@ -85,9 +85,9 @@ Existují tři hlavní kroky pro povolení koexistence:
 ### <a name="preparation"></a>Příprava
 
 Před povolením koexistence se základní mobilitou a zabezpečením Vezměte v úvahu následující body:
-- Ujistěte se, že máte pro uživatele, které máte v úmyslu spravovat přes Intune, dostatečné licence pro Intune.
-- Zkontrolujte, kteří uživatelé mají přiřazenou licenci Intune. Po povolení koexistence budou mít všichni uživatelé, kteří už mají přiřazenou licenci Intune, možnost přepnout do Intune. Aby nedošlo k neočekávaným přepínačům zařízení, doporučujeme, abyste nepřiřadili žádné licence s Intune, dokud nepovolíte koexistence.
-- Vytvořte a nasaďte zásady Intune, které nahradí zásady zabezpečení zařízení, které byly původně nasazené prostřednictvím portálu pro zabezpečení Office 365 Security &. Tato náhrada by se měla provádět u všech uživatelů, u kterých očekáváte přechod ze základní mobility a zabezpečení do Intune. Pokud těmto uživatelům nejsou přiřazené žádné zásady Intune, povolení koexistence může způsobit ztrátu základní mobility a nastavení zabezpečení. Tato nastavení budou ztracena bez nahrazení, jako jsou spravované e-mailové profily.
+- Ujistěte se, že máte pro uživatele, které máte v úmyslu spravovat přes Intune, dostatečné [licence Intune](licenses.md) .
+- Zkontrolujte, kteří uživatelé mají přiřazené licence Intune. Po povolení koexistence budou mít všichni uživatelé, kteří už mají přiřazenou licenci Intune, svoje zařízení v Intune. Aby nedošlo k neočekávaným přepínačům zařízení, doporučujeme nepřiřazovat žádné licence Intune, dokud nepovolíte koexistence.
+- Vytvořte a nasaďte zásady Intune, které nahradí zásady zabezpečení zařízení, které byly původně nasazené prostřednictvím portálu pro zabezpečení Office 365 Security &. Tato náhrada by se měla provádět u všech uživatelů, u kterých očekáváte přechod ze základní mobility a zabezpečení do Intune. Pokud těmto uživatelům nejsou přiřazené žádné zásady Intune, povolení koexistence může způsobit ztrátu základní mobility a nastavení zabezpečení. Tato nastavení budou ztracena bez nahrazení, jako jsou spravované e-mailové profily. I když se zásady zabezpečení zařízení nahrazují zásadami Intune, můžou se uživatelé po přesunu zařízení do správy Intune zobrazit výzva, aby znovu ověřili své e-mailové profily.
 
 ### <a name="add-intune-mdm-authority"></a>Přidat autoritu MDM pro Intune
 
@@ -101,7 +101,7 @@ Pokud chcete povolit koexistenci, musíte jako autoritu MDM pro vaše prostřed�
 
 ### <a name="migrate-users-and-devices-optional"></a>Migrace uživatelů a zařízení (volitelné)
 
-Po povolení autority MDM pro Intune se aktivuje koexistence a můžete začít spravovat uživatele přes Intune. Pokud chcete v Intune spravovat zařízení, která byla dřív spravovaná základní mobilitou a zabezpečením, přiřaďte jim licence Intune. Zařízení uživatelů se budou v Intune přepínat na příští kontrolu MDM. Nastavení aplikovaná na tato zařízení prostřednictvím základní mobility a zabezpečení se už nebudou používat a ze zařízení se odeberou.
+Po povolení autority MDM pro Intune se aktivuje koexistence a můžete začít spravovat uživatele přes Intune. Případně pokud chcete přesunout zařízení, která byla dříve spravovaná pomocí služby Intune základní mobilitou a zabezpečením, přiřaďte tyto uživatele licenci Intune. Zařízení uživatelů se budou v Intune přepínat na příští kontrolu MDM. Nastavení aplikovaná na tato zařízení prostřednictvím základní mobility a zabezpečení se už nebudou používat a ze zařízení se odeberou.
 
 ## <a name="mobile-device-cleanup-after-mdm-certificate-expiration"></a>Vyčištění mobilních zařízení po vypršení platnosti certifikátu MDM
 

@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 07/30/2020
+ms.date: 08/17/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 894ef12107b8e8b520ca69a463be47ef339bd9b4
-ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
+ms.openlocfilehash: a925106a09f0035f516018ec0b44a17267e64eec
+ms.sourcegitcommit: 62b451396eae660f2d5289ae3666b19ed1cc666d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88051621"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88614839"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
@@ -41,7 +41,7 @@ Podívejte se, co je nového v jednom týdnu v Microsoft Intune v [centru pro sp
 >
 > Seznam nadcházejících funkcí ve verzi najdete na [stránce pro vývoj na webu](in-development.md) .
 
-**Informační kanál RSS**: po aktualizaci této stránky se zobrazí upozornění zkopírováním a vložením následující adresy URL do čtečky informačních kanálů:`https://docs.microsoft.com/api/search/rss?search=%22What%27s+new+in+microsoft+intune%3F+-+Azure%22&locale=en-us`
+**Informační kanál RSS**: po aktualizaci této stránky se zobrazí upozornění zkopírováním a vložením následující adresy URL do čtečky informačních kanálů: `https://docs.microsoft.com/api/search/rss?search=%22What%27s+new+in+microsoft+intune%3F+-+Azure%22&locale=en-us`
 
 <!-- Common categories:  
 ### App management
@@ -53,6 +53,21 @@ Podívejte se, co je nového v jednom týdnu v Microsoft Intune v [centru pro sp
 ### Monitor and troubleshoot
 ### Role-based access control
 ### Scripts
+
+<!-- ########################## -->
+## <a name="week-of-august-17-2020"></a>Týden od 17. srpna 2020
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-security"></a>Zabezpečení zařízení
+
+#### <a name="set-device-compliance-state-from-third-party-mdm-providers---6361689---"></a>Nastavit stav dodržování předpisů zařízením od poskytovatelů MDM třetích stran<!-- 6361689 -->
+
+Intune teď podporuje [řešení MDM třetích stran jako zdroj podrobností o dodržování předpisů zařízením](../protect/device-compliance-partners.md). Tato data dodržování předpisů třetí strany se dají použít k prosazování zásad podmíněného přístupu pro Microsoft 365 aplikací v iOS a Androidu prostřednictvím integrace s Microsoft Intune.  Intune vyhodnocuje podrobnosti o dodržování předpisů od poskytovatele třetí strany a určí, jestli je zařízení důvěryhodné, a pak nastaví atributy podmíněného přístupu v Azure AD.  Budete pokračovat v vytváření zásad podmíněného přístupu Azure AD z centra pro správu Microsoft Endpoint Manageru nebo z portálu Azure AD.
+
+V této verzi jsou podporovány následující poskytovatelé MDM od jiných výrobců jako verze Public Preview:
+
+- VMWare WorkspaceONE UEM (dříve označované jako vzné sledování)
+
 
 <!-- ########################## -->
 ## <a name="week-of-august-10-2020"></a>Týden od 10. srpna 2020
@@ -70,7 +85,7 @@ Nyní můžete spustit instalaci aplikace v reálném čase pro zařízení při
 ### <a name="monitor-and-troubleshoot"></a>Monitorování a odstraňování potíží
 
 #### <a name="power-bi-compliance-report-template-v20---636958---"></a>Šablona sestavy dodržování předpisů Power BI V 2.0<!-- 636958 -->
-Power BI šablonových aplikací umožňují Power BI partnerům vytvářet Power BI aplikace s malým nebo žádným kódováním a nasazovat je na jakéhokoli Power BIho zákazníka. Správci mohou aktualizovat verzi šablony sestavy dodržování předpisů Power BI z verze 1.0 až V 2.0. Verze 2.0 zahrnuje vylepšený návrh a také změny výpočtů a dat, která jsou v rámci šablony Surface. Další informace najdete v tématu [připojení k datovému skladu pomocí Power BI](../developer/reports-proc-get-a-link-powerbi.md) a [aktualizace šablony aplikace](https://docs.microsoft.com/power-bi/service-template-apps-install-distribute#update-a-template-app). Další informace najdete v blogovém příspěvku [s oznámením o nové verzi sestavy dodržování předpisů PowerBI s datovým skladem Intune](https://aka.ms/new_compliance_report).
+Power BI šablonových aplikací umožňují Power BI partnerům vytvářet Power BI aplikace s malým nebo žádným kódováním a nasazovat je na jakéhokoli Power BIho zákazníka. Správci mohou aktualizovat verzi šablony sestavy dodržování předpisů Power BI z verze 1.0 až V 2.0. Verze 2.0 zahrnuje vylepšený návrh a také změny výpočtů a dat, která jsou v rámci šablony Surface. Další informace najdete v tématu [připojení k datovému skladu pomocí Power BI](../developer/reports-proc-get-a-link-powerbi.md) a [aktualizace šablony aplikace](https://docs.microsoft.com/power-bi/service-template-apps-install-distribute#update-a-template-app). Další informace najdete v blogovém příspěvku [s oznámením o nové verzi sestavy dodržování předpisů Power BI s datovým skladem Intune](https://aka.ms/new_compliance_report).
 
 <!-- ########################## -->
 ## <a name="week-of-july-13-2020--2007-service-release"></a>Týden od 13. července 2020 (2007 vydání služby)
@@ -182,7 +197,7 @@ Pokud chcete používat zásady EDR se zařízeními z podporované verze Config
 Přidali jsme nastavení pro správu Bluetooth na zařízeních s Windows 10 do [profilu řízení zařízení](../protect/endpoint-security-asr-profile-settings.md#device-control-profile) pro *zásady omezení pro útoky na zabezpečení koncového bodu*.  Jedná se o stejná nastavení jako ta, která byla k dispozici v profilech omezení zařízení pro *konfiguraci zařízení*.
 
 #### <a name="manage-source-locations-for-definition-updates-with-endpoint-security-antivirus-policy-for-windows-10-devices---6347801-----"></a>Správa zdrojových umístění pro aktualizace definic pomocí zásad služby Endpoint Security AntiVir pro zařízení s Windows 10<!-- 6347801   -->  
-Přidali jsme dvě nová nastavení do kategorie *Updates (aktualizace* ) [zásad ochrany koncových bodů Endpoint Security pro zařízení s Windows 10](../protect/antivirus-microsoft-defender-settings-windows.md#updates) , která vám pomůžou spravovat, jak zařízení získávají definice aktualizací:
+Přidali jsme dvě nová nastavení do kategorie *Updates (aktualizace* ) [zásad ochrany koncových bodů Endpoint Security pro zařízení s Windows 10](../protect/antivirus-microsoft-defender-settings-windows.md#updates)  , která vám pomůžou spravovat, jak zařízení získávají definice aktualizací:
 
 - *Definovat sdílené složky pro stahování aktualizací definic*
 - *Definování pořadí zdrojů pro stahování aktualizací definic*
@@ -245,12 +260,12 @@ Tyto role zobrazíte tak, že přejdete do centra pro správu [služby Microsoft
 
 #### <a name="additional-data-warehouse-v10-properties---6125732-wnready---"></a>Další vlastnosti datového skladu v 1.0<!-- 6125732 wnready -->
 Další vlastnosti jsou k dispozici pomocí datového skladu Intune v 1.0. Následující vlastnosti jsou nyní zpřístupněny prostřednictvím entity [zařízení](../developer/reports-ref-devices.md#devices) :
-- `ethernetMacAddress`– Jedinečný identifikátor sítě tohoto zařízení.
-- `office365Version`– Verze Office 365, která je na zařízení nainstalovaná.
+- `ethernetMacAddress` – Jedinečný identifikátor sítě tohoto zařízení.
+- `office365Version` – Verze Office 365, která je na zařízení nainstalovaná.
 
 Následující vlastnosti jsou nyní zpřístupněny prostřednictvím entity [devicePropertyHistories](../developer/reports-ref-devices.md#devicepropertyhistories) :
-- `physicalMemoryInBytes`– Fyzická paměť v bajtech.
-- `totalStorageSpaceInBytes`-Celková kapacita úložiště v bajtech.
+- `physicalMemoryInBytes` – Fyzická paměť v bajtech.
+- `totalStorageSpaceInBytes` -Celková kapacita úložiště v bajtech.
 
 Další informace najdete v tématu [Microsoft Intune rozhraní API datového skladu](../developer/reports-nav-intune-data-warehouse.md).
 
@@ -503,7 +518,7 @@ Teď můžete nastavit přepínač na úrovni tenanta, který odebere licenční
 
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
-### <a name="scripts"></a>Scripts 
+### <a name="scripts"></a>Skripty 
 
 #### <a name="availability-of-shell-scripts-on-macos-devices---7134839----"></a>Dostupnost skriptů prostředí na zařízeních macOS<!-- 7134839  -->
 Skripty prostředí pro zařízení macOS jsou teď dostupné pro státní Cloud a čínské zákazníky. Další informace o skriptech prostředí najdete v tématu [použití skriptů prostředí v zařízeních MacOS v Intune](../apps/macos-shell-scripts.md).
@@ -752,7 +767,7 @@ Systém Microsoft Office 365 ProPlus se přejmenovává na **Microsoft 365 aplik
 Zásady konfigurace aplikací můžete použít ke správě nastavení S/MIME pro Outlook na zařízeních, na kterých běží Android Enterprise. Můžete také zvolit, jestli chcete povolit uživatelům zařízení povolit nebo zakázat nastavení S/MIME v Outlooku. Pokud chcete používat zásady konfigurace aplikací pro Android, v [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431) přejít na **aplikace**  >  **zásady konfigurace aplikace**  >  **Přidat**  >  **spravovaná zařízení**. Další informace o konfiguraci nastavení pro Outlook najdete v tématu [nastavení konfigurace Microsoft Outlooku](../apps/app-configuration-policies-outlook.md).
 
 #### <a name="pre-release-testing-for-managed-google-play-apps---2681933----"></a>Předběžné vydání testování pro spravované aplikace Google Play<!-- 2681933  -->
-Organizace, které používají [ukončené zkušební běhy Google Play pro testování předběžných verzí aplikací](https://support.google.com/googleplay/android-developer/answer/3131213) , můžou tyto stopy spravovat pomocí Intune. Můžete selektivně přiřadit aplikace, které jsou publikovány do předprodukčních běhů Google Play do pilotních skupin, aby bylo možné provádět testování. V Intune se můžete podívat, jestli aplikace obsahuje předprodukční zkušební záznam buildu, který se do něj publikuje, a může jim přiřadit tuto stopu ke skupinám uživatelů a zařízení AAD. Tato funkce je k dispozici pro všechny aktuálně podporované podnikové scénáře Androidu (pracovní profil, plně spravované a vyhrazené). V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)můžete přidat spravovanou aplikaci Google Play tak, že vyberete **aplikace**  >  **Android**  >  **Add**. Další informace najdete v tématu [práce se spravovanými Google Play uzavřených testovacích běhů](../apps/apps-add-android-for-work.md#working-with-managed-google-play-closed-testing-tracks).
+Organizace, které používají [ukončené zkušební běhy Google Play pro testování předběžných verzí aplikací](https://support.google.com/googleplay/android-developer/answer/3131213) , můžou tyto stopy spravovat pomocí Intune. Můžete selektivně přiřadit aplikace, které jsou publikovány do předprodukčních běhů Google Play do pilotních skupin, aby bylo možné provádět testování. V Intune se můžete podívat, jestli aplikace obsahuje předprodukční zkušební záznam buildu, který se do něj publikuje, a může jim přiřadit tuto stopu ke skupinám uživatelů nebo zařízení Azure AD. Tato funkce je k dispozici pro všechny aktuálně podporované podnikové scénáře Androidu (pracovní profil, plně spravované a vyhrazené). V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)můžete přidat spravovanou aplikaci Google Play tak, že vyberete **aplikace**  >  **Android**  >  **Add**. Další informace najdete v tématu [práce se spravovanými Google Play uzavřených testovacích běhů](../apps/apps-add-android-for-work.md#working-with-managed-google-play-closed-testing-tracks).
 
 #### <a name="microsoft-teams-is-now-included-in-the-office-365-suite-for-macos---5903936----"></a>Microsoft Teams je teď součástí sady Office 365 pro macOS<!-- 5903936  -->
 Uživatelé, kteří jsou přiřazeni systém Microsoft Office pro macOS ve službě Microsoft Endpoint Manager, teď budou kromě stávajících aplikací systém Microsoft Office (Word, Excel, PowerPoint, Outlook a OneNote) dostávat i týmy Microsoftu. Intune rozpozná existující zařízení Mac, na kterých je nainstalovaný jiný Office pro aplikace macOS, a pokusí se nainstalovat Microsoft Teams při příštím ověření zařízení v Intune. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)můžete najít **sadu Office 365 Suite** pro MacOS tak, že vyberete **aplikace**  >  **MacOS**  >  **Přidat**. Další informace najdete v tématu [přiřazení Office 365 k MacOS zařízením pomocí Microsoft Intune](../apps/apps-add-office365-macos.md).
@@ -1017,7 +1032,7 @@ Ikona oznámení pro nedokončené zásady MAM v okně Poradce při potížích 
 Aktualizovali jsme uživatelské rozhraní pro [vytváření zásad dodržování předpisů](../protect/create-compliance-policy.md#create-the-policy) v Microsoft Endpoint Manageru (zásady**Devices**  >  **zásad dodržování předpisů**zařízeními  >  **Policies**  >  **vytvořit zásadu**). Nové uživatelské prostředí obsahuje stejné nastavení a podrobnosti, které jste použili dříve. Nové prostředí se řídí procesem podobným průvodci při vytváření zásad dodržování předpisů a zahrnuje stránku, kde můžete přidat *přiřazení* pro zásadu a stránku *recenze + vytvořit* , kde můžete před vytvořením zásady zkontrolovat konfiguraci.
 
 #### <a name="retire-noncompliant-devices---1827291---------"></a>Vyřazení zařízení nesplňujících požadavky<!-- 1827291       -->
-Přidali jsme novou akci pro zařízení nedodržující předpisy, která můžete přidat do libovolné zásady a [vyřadit zařízení nesplňující požadavky](../protect/actions-for-noncompliance.md#add-actions-for-noncompliance).  Nová akce, **vyřazení zařízení nedodržujících předpisy**, má za následek odebrání všech firemních dat ze zařízení a také odebere zařízení ze správy Intune.  Tato akce se spustí, když se dosáhne nakonfigurované hodnoty v dnech a v tomto okamžiku se zařízení bude mít nárok na vyřazení. Minimální hodnota je 30 dní.  K vyřazení zařízení pomocí části *vyřazení zařízení nedodržujících předpisy* se bude vyžadovat explicitní schválení správce IT, kde správci můžou vyřadit všechna oprávněná zařízení.
+Přidali jsme novou akci pro zařízení nedodržující předpisy, která můžete přidat do libovolné zásady a  [vyřadit zařízení nesplňující požadavky](../protect/actions-for-noncompliance.md#add-actions-for-noncompliance).  Nová akce, **vyřazení zařízení nedodržujících předpisy**, má za následek odebrání všech firemních dat ze zařízení a také odebere zařízení ze správy Intune.  Tato akce se spustí, když se dosáhne nakonfigurované hodnoty v dnech a v tomto okamžiku se zařízení bude mít nárok na vyřazení. Minimální hodnota je 30 dní.  K vyřazení zařízení pomocí části *vyřazení zařízení nedodržujících předpisy* se bude vyžadovat explicitní schválení správce IT, kde správci můžou vyřadit všechna oprávněná zařízení.
 
 #### <a name="support-for-wpa-and-wpa2-in-ios-enterprise-wi-fi-profiles--6215273-----"></a>Podpora WPA a WPA2 v profilech pro iOS Enterprise Wi-Fi<!--6215273   -->
 [Profily sítě Wi-Fi pro iOS](../configuration/wi-fi-settings-ios.md#enterprise-profiles) teď podporují pole *typ zabezpečení* . V poli *typ zabezpečení*můžete vybrat možnost **WPA Enterprise** nebo **WPA/WPA2 Enterprise**a pak zadat výběr pro *typ protokolu EAP*.  (**Zařízení**  >  **Konfigurační profily**  >  **Vytvořte profil** a vyberte pro *platformu* **iOS/iPadOS** a pak na *profil*sítě **Wi-Fi** . 
@@ -1075,14 +1090,14 @@ Datový sklad Intune poskytuje v entitě adresu MAC jako novou vlastnost ( `Ethe
 
 #### <a name="additional-data-warehouse-device-inventory-properties---6125732----"></a>Další vlastnosti inventáře zařízení datového skladu<!-- 6125732  -->
 Další vlastnosti inventáře zařízení jsou k dispozici v datovém skladu Intune. Následující vlastnosti jsou nyní zpřístupněny prostřednictvím kolekce beta [zařízení](../developer/reports-ref-devices.md#devices) :
-- `ethernetMacAddress`– Jedinečný identifikátor sítě tohoto zařízení.
-- `model`– Model zařízení.
-- `office365Version`– Verze Office 365, která je na zařízení nainstalovaná.
-- `windowsOsEdition`– Verze operačního systému.
+- `ethernetMacAddress` – Jedinečný identifikátor sítě tohoto zařízení.
+- `model` – Model zařízení.
+- `office365Version` – Verze Office 365, která je na zařízení nainstalovaná.
+- `windowsOsEdition` – Verze operačního systému.
 
 Následující vlastnosti jsou nyní zpřístupněny prostřednictvím kolekce [devicePropertyHistory](../developer/reports-ref-devices.md#devicepropertyhistories) beta:
-- `physicalMemoryInBytes`– Fyzická paměť v bajtech.
-- `totalStorageSpaceInBytes`-Celková kapacita úložiště v bajtech.
+- `physicalMemoryInBytes` – Fyzická paměť v bajtech.
+- `totalStorageSpaceInBytes` -Celková kapacita úložiště v bajtech.
 
 Další informace najdete v tématu [Microsoft Intune rozhraní API datového skladu](../developer/reports-nav-intune-data-warehouse.md).
 

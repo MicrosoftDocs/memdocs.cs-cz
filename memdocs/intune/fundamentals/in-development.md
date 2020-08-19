@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0b7f1a4280b409ec4a12c6371fd2e6cba8a571ca
-ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
+ms.openlocfilehash: 1c1a51f327f87e26a07cc7c344d0a0afc0bfde9b
+ms.sourcegitcommit: 62b451396eae660f2d5289ae3666b19ed1cc666d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88048017"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88614788"
 ---
 # <a name="in-development-for-microsoft-intune"></a>Ve vývoji pro Microsoft Intune
 
@@ -35,7 +35,7 @@ Tato stránka vám umožní v rámci připravenosti a plánování vypsat aktual
 > [!NOTE]
 > Tato stránka odráží naše aktuální očekávání funkcí Intune v nadcházející verzi. Data a jednotlivé funkce se můžou změnit. Tato stránka nepopisuje všechny funkce vývoje.
 
-**Informační kanál RSS**: Zjistěte, kdy se tato stránka aktualizuje zkopírováním a vložením následující adresy URL do čtečky informačních kanálů:`https://docs.microsoft.com/api/search/rss?search=%22in+development+-+microsoft+intune%22&locale=en-us`
+**Informační kanál RSS**: Zjistěte, kdy se tato stránka aktualizuje zkopírováním a vložením následující adresy URL do čtečky informačních kanálů: `https://docs.microsoft.com/api/search/rss?search=%22in+development+-+microsoft+intune%22&locale=en-us`
 
 **Tento článek byl naposledy aktualizován na datum uvedené pod nadpisem výše.**
 
@@ -71,9 +71,6 @@ Windows Portál společnosti teď podporuje Configuration Manager aplikace. Tato
 
 <!-- ***********************************************-->
 ## <a name="device-configuration"></a>Konfigurace zařízení
-
-### <a name="set-device-compliance-state-from-third-party-mdm-partners---6361689-----"></a>Nastavit stav dodržování předpisů zařízením od partnerů MDM třetích stran<!-- 6361689   -->
-Microsoft 365 zákazníci, kteří vlastní řešení MDM třetí strany, budou moci vyhovět zásadám podmíněného přístupu pro aplikace Microsoft 365 v iOS a Androidu prostřednictvím integrace se službou Microsoft Intune dodržování předpisů zařízením. Dodavatel MDM třetí strany bude využívat službu Intune pro dodržování předpisů zařízením k odesílání dat o dodržování předpisů zařízením do Intune. Intune se pak vyhodnotí a určí, jestli je zařízení důvěryhodné, a nastavte atributy podmíněného přístupu ve službě Azure AD.  Zákazníci budou muset nastavit zásady podmíněného přístupu Azure AD z centra pro správu Microsoft Endpoint Manageru nebo z portálu Azure AD.
 
 ### <a name="create-pkcs-certificate-profiles-for-android-enterprise-fully-managed-devices-cobo---4839686---"></a>Vytvoření profilů certifikátů PKCS pro plně spravovaná zařízení s Androidem Enterprise (COBO)<!-- 4839686 -->
 Profily certifikátů PKCS můžete vytvořit k nasazení certifikátů na zařízení s vlastníkem zařízení s Androidem Enterprise a pracovním profilem (konfigurace**zařízení**  >  **profily**  >  **vytvořit profil pro**  >  **Android Enterprise > pouze vlastník zařízení**), nebo **Android Enterprise > Work Profile pouze** pro platformu > **PKCS** pro profil).
@@ -206,6 +203,6 @@ Zavádíme dvě změny pro správu seznamů vyloučení antivirové ochrany v pr
 
 [!INCLUDE [Intune notices](../includes/intune-notices.md)]
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 Podrobnosti o posledním vývoji najdete v tématu [co je nového v Microsoft Intune](whats-new.md).
