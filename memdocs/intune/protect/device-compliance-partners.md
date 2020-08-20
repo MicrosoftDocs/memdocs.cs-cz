@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 270560e289a7b2078bdb21b75cfe227992e84f29
-ms.sourcegitcommit: 62b451396eae660f2d5289ae3666b19ed1cc666d
+ms.openlocfilehash: fe6a46c10f55378292e57548494852c4014c062a
+ms.sourcegitcommit: 21b6c0c054e5371f32d611a2411ccd166b0e03bc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88616261"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88643699"
 ---
 # <a name="support-third-party-device-compliance-partners-in-intune"></a>Podpora partnerů dodržování předpisů zařízením třetích stran v Intune
 
@@ -31,13 +31,11 @@ Ve výchozím nastavení je Intune nastavený jako autorita pro správu mobilní
 
 Pokud chcete povolit použití dat z partnerů dodržování předpisů zařízením, proveďte následující úlohy:
 
-1. **Přidejte partnera pro dodržování předpisů zařízením do Azure AD** a navažte tohoto partnera jako autoritu pro správu mobilních zařízení (MDM) pro příslušná zařízení.
+1. **Nakonfigurujte Intune tak, aby fungovala s partnerem dodržování předpisů zařízením**, a pak nakonfigurujte skupiny uživatelů, jejichž zařízení spravuje tento partner pro dodržování předpisů.
 
-2. **Nakonfigurujte Intune tak, aby fungovala s partnerem dodržování předpisů zařízením**, a pak nakonfigurujte skupiny uživatelů, jejichž zařízení spravuje tento partner pro dodržování předpisů.
+2. **Nakonfigurujte partnera dodržování předpisů, aby odesílal data do Intune**.
 
-3. **Nakonfigurujte partnera dodržování předpisů, aby odesílal data do Intune**.
-
-4. **Zaregistrujte zařízení s iOS nebo Androidem pro tohoto partnera pro dodržování předpisů zařízením**.
+3. **Zaregistrujte zařízení s iOS nebo Androidem pro tohoto partnera pro dodržování předpisů zařízením**.
 
 Po dokončení těchto úloh partner dodržování předpisů zařízením odešle podrobnosti o stavu zařízení do Intune. Intune pak přidá tyto informace do Azure AD. Například zařízení se stavem nedodržující předpisy mají tento stav přidané do záznamu zařízení ve službě Azure AD.
 
@@ -47,7 +45,7 @@ Stav dodržování předpisů se pak vyhodnotí podle zásad podmíněného př�
 
 Ve verzi Public Preview:
 
-- Pracovní prostor VMWare ONE UEM (dříve provide)
+- Pracovní prostor VMware ONE UEM (dříve provide)
 
 ## <a name="prerequisites"></a>Předpoklady
 
@@ -57,27 +55,9 @@ Ve verzi Public Preview:
 
 - Přečtěte si dokumentaci k partnerovi dodržování předpisů pro podporované platformy zařízení a další požadavky.
 
-## <a name="add-support-in-azure-ad-for-a-device-compliance-partner"></a>Přidání podpory ve službě Azure AD pro partnera dodržování předpisů pro zařízení
-
-Pokud chcete povolit podporu pro zařízení, která spravuje partneři dodržování předpisů zařízením třetích stran, musíte tohoto partnera přidat do *mobility (MDM a mam)* ve službě Azure AD. Ve výchozím nastavení je Intune už zaregistrovaný pro *mobilitu (MDM a mam)*.
-
-### <a name="add-a-device-compliance-partner-to-azure-ad"></a>Přidání partnera pro dodržování předpisů pro zařízení do Azure AD
-
-1. Přihlaste se k [Azure Portal](https://aad.portal.azure.com/) a do **Azure Active Directory**  >  **mobility (MDM a mam)**  >  **přidejte aplikaci**. ([Otevřete okno *mobilita (MDM a mam)* přímo](https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Mobility).)
-
-2. V okně **Přidat aplikaci** vyberte dlaždici pro partnera dodržování předpisů zařízením a pak vyberte **Přidat**.
-
-   - Pro *pracovní prostor jeden UEM*vyberte možnost **sledování videa podle VMware** .
-
-3. V okně *mobilita (MDM a mam)* vyberte svého partnera dodržování předpisů a otevřete okno **Konfigurovat** a nakonfigurujte dostupné možnosti.  Mezi možnosti patří **obor uživatele MDM**, **Adresa URL podmínek použití MDM**a **Adresa URL zjišťování MDM**. Když je obor uživatele nastavený na **nějaké**, vybíráte skupiny uživatelů Azure AD, které můžou registrovat zařízení s tímto partnerem dodržování předpisů.
-
-   Zařízení, která cílí na vybrané skupiny, budou používat partnera jako svoji autoritu MDM.
-
-4. Výběrem **Uložit** dokončete konfiguraci partnera ve službě Azure AD. V dalším kroku přidáte partnera dodržování předpisů do Intune.
-
 ## <a name="configure-intune-to-work-with-a-device-compliance-partner"></a>Konfigurace Intune pro práci se partnerem dodržování předpisů pro zařízení
 
-Když je služba Azure AD nakonfigurovaná tak, aby podporovala partnera dodržování předpisů zařízením pro *mobilitu (MDM a mam)*, můžete nakonfigurovat Intune tak, aby spolupracovali s tímto partnerem. Tato konfigurace je nutná, pokud chcete použít data o stavu dodržování předpisů z tohoto partnera se zásadami podmíněného přístupu.
+Povolit podporu pro partnera dodržování předpisů zařízením pro použití dat o stavu dodržování předpisů z tohoto partnera se zásadami podmíněného přístupu.
 
 ### <a name="add-a-compliance-partner-to-intune"></a>Přidání partnera dodržování předpisů do Intune
 
@@ -88,7 +68,11 @@ Když je služba Azure AD nakonfigurovaná tak, aby podporovala partnera dodržo
    > [!div class="mx-imgBorder"]
    > ![Přidat partnera pro dodržování předpisů zařízením](./media/device-compliance-partners/add-compliance-partner.png)
 
-3. Na stránce **základy** rozbalte rozevírací seznam **partner dodržování předpisů** a vyberte partnera, který přidáváte. Pak vyberte rozevírací nabídku pro **platformu**a vyberte platformu.
+3. Na stránce **základy** rozbalte rozevírací seznam **partner dodržování předpisů** a vyberte partnera, který přidáváte.
+
+   - Pokud chcete použít pracovní prostor VMware ONE jako partner dodržování předpisů pro platformy iOS nebo Android, vyberte možnost **pracovní prostor VMware jedno mobilní dodržování předpisů**.
+
+   Pak vyberte rozevírací nabídku pro **platformu**a vyberte platformu. macOS se v této verzi Preview nepodporuje.
 
    Jenom jeden partner na platformu, a to i v případě, že jste do Azure AD přidali víc partnerů pro dodržování předpisů.
 
@@ -115,7 +99,7 @@ Vaše konfigurace se teď zobrazí na stránce správy dodržování předpisů 
    V pracovním prostoru jedna UEM konzola musíte ručně synchronizovat změny, které jste uložili v centru pro správu Microsoft Endpoint Manageru. Dokud neprovedete ruční synchronizaci změn, pracovní prostor ONE UEM neznáte změny konfigurace a uživatelé v nově přiřazených skupinách neúspěšně nahlásili dodržování předpisů.
 
    Postup ruční synchronizace ze služeb Azure:
-   1. Přihlaste se k pracovnímu prostoru VMWare jedna konzola UEM.
+   1. Přihlaste se k pracovnímu prostoru VMware jedna konzola UEM.
    2. Přejít na **Nastavení**  >  **systém**  >  **Podniková integrace**  >  **adresářové služby**.
    3. Pro *synchronizaci služeb Azure*klikněte na **synchronizovat**.
 
@@ -133,15 +117,12 @@ Postup registrace zařízení s tímto partnerem najdete v dokumentaci k partner
 
 ## <a name="monitor-devices-managed-by-third-party-device-compliance-partners"></a>Monitorování zařízení, která spravuje partneři dodržování předpisů zařízením třetích stran
 
-Po nakonfigurování partnerů pro dodržování předpisů zařízeními třetích stran a registraci zařízení v nich partner přepošle podrobnosti o dodržování předpisů do Intune. Až Intune obdrží tato data, můžete si Zobrazit podrobnosti o zařízeních v centru pro správu Microsoft Endpoint Manageru.  
+Po nakonfigurování partnerů pro dodržování předpisů zařízeními třetích stran a registraci zařízení v nich partner přepošle podrobnosti o dodržování předpisů do Intune. Až Intune obdrží tato data, můžete zobrazit podrobnosti o zařízeních v Azure Portal.
 
-Přihlaste se do [centra pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)a pak na **Endpoint Security**  >  **všechna zařízení**.  Zařízení, která spravuje Partnerská Autorita MDM jiného výrobce, zobrazí jména tohoto partnera ve sloupci **spravováno** .
-
-> [!NOTE]
-> V centru pro správu nejsou identifikováni všichni partneři dodržování předpisů třetí strany. Pokud vaše zařízení nejsou uvedena, můžete se přihlásit k [Azure Portal](https://portal.azure.com) , abyste měli přístup k předplatnému Intune a mohli je zobrazit.
-
-Další informace o tomto zobrazení najdete v tématu [Správa zařízení](../protect/endpoint-security-manage-devices.md).
+Přihlaste se k Azure Portal a v části zařízení **Azure AD**klikněte na  >  **Devices**  >  [**všechna zařízení**](https://portal.azure.com/#blade/Microsoft_AAD_Devices/DevicesMenuBlade/Devices/menuId/).
 
 ## <a name="next-steps"></a>Další kroky
 
-- [Začínáme se zásadami dodržování předpisů pro zařízení](../protect/device-compliance-get-started.md)
+K vytváření zásad dodržování předpisů pro zařízení použijte dokumentaci od svého partnera třetí strany.
+
+- [Pracovní prostor VMware ONE UEM](https://docs.vmware.com/en/VMware-Workspace-ONE-UEM/services/Directory_Service_Integration/GUID-800FB831-AA66-4094-8F5A-FA5899A3C70C.html)

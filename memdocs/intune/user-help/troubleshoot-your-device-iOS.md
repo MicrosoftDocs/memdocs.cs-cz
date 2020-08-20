@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: f2ba732cfd8f377937a6471b5fc7f0558e19d6f0
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: c3f2da199e49596959c8b1b445a492f0ef505a36
+ms.sourcegitcommit: 21b6c0c054e5371f32d611a2411ccd166b0e03bc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881769"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88643784"
 ---
 # <a name="fix-common-problems-with-your-ios-device"></a>Řešení běžných problémů se zařízením s iOS
 
@@ -39,4 +39,4 @@ Pomocí odkazů v tomto článku najdete odpovědi na běžné otázky k registr
 - [Potřebuji aktualizovat zařízení s iOSem](you-need-to-update-your-ios-device.md)
 - [Moje verze iOSu ještě není podporovaná](your-ios-version-isnt-yet-supported.md)
 - [Potřebuji na svém zařízení s iOSem nainstalovat aplikaci Mobile Threat Defense](set-up-mobile-threat-defense.md)
-- [Potřebuji na svém zařízení s iOSem vyřešit hrozbu, kterou aplikace Mobile Threat Defense objevila](you-need-to-resolve-a-threat-found-by-mtd-ios.md)
+- [Potřebuji na svém zařízení s iOSem vyřešit hrozbu, kterou aplikace Mobile Threat Defense objevila](set-up-mobile-threat-defense.md#detecting-and-resolving-a-threat)
