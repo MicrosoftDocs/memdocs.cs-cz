@@ -60,6 +60,8 @@
           href: actions-for-noncompliance.md
         - name: Monitorování dodržování předpisů zařízením
           href: compliance-policy-monitor.md
+        - name: Partneři dodržování předpisů pro zařízení
+          href: device-compliance-partners.md
     - name: Zabezpečení koncového bodu
       href: endpoint-security.md
       items:
