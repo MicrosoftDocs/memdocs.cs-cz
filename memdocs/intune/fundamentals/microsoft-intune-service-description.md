@@ -1,6 +1,6 @@
 ---
 title: Popis služby Microsoft Intune
-description: Microsoft Intune je cloudová služba, která pomáhá spravovat zařízení s Windows, iOS/iPadOS, Mac OS X, Androidem a Windows Mobile.
+description: Microsoft Intune je cloudová služba, která pomáhá spravovat zařízení s Windows, iOS/iPadOS, Mac OS X a Androidem.
 keywords: ''
 author: dougeby
 ms.author: dougeby
@@ -12,16 +12,15 @@ ms.subservice: fundamentals
 ms.localizationpriority: high
 ms.assetid: 40fa5a2e-6c0f-4150-9740-d5ddc0cdbda0
 ms.reviewer: cacamp
-ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4ca133b1995769f1c4cdfdcaf6b3a8256d7e6d5c
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: f89fc7ffb3059204507a541e19afa2e97424dea5
+ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078837"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88663221"
 ---
 # <a name="microsoft-intune-service-description"></a>Popis služby Microsoft Intune
 

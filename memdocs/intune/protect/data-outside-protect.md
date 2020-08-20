@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aa8a18d24fb27b1d1ca7ea7dbe4fad532f85d662
-ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
+ms.openlocfilehash: e4772743bc85df54251dc8926c69b9a5afbab559
+ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82022717"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88663272"
 ---
 # <a name="prevent-unauthorized-access-to-company-data-using-microsoft-intune"></a>Zabránění neoprávněnému přístupu k podnikovým datům v Microsoft Intune
 
 Dokumenty Office 365 a e-maily můžete klasifikovat, označovat a chránit, aby k nim měli přístup jen oprávnění uživatelé. Když správci IT nebo uživatelé nastaví pravidla a podmínky, začne se toto nastavení spravovat automaticky. Nebo může IT tým poskytnout doporučené nastavení, kterého by se uživatelé měli držet. Správci a uživatelé můžou také odvolat přístup k datům, která se už sdílejí, aniž by museli požádat o pomoc jinou autoritu. Díky těmto funkcím máte možnost řídit, kdo smí otevřít nebo aktualizovat chráněná data, i když opustí firemní síť. 
 
-## <a name="before-you-begin"></a>Před zahájením
+## <a name="before-you-begin"></a>Než začnete
 
 Následující akční plán je možné provést při splnění následujících požadavků:
 * Vaše společnost je připravena na zabezpečený přechod do cloudu.
@@ -51,4 +51,4 @@ Můžete sdílet podrobnosti o tom, [jak a kdy chránit dokumenty a e-maily, kte
 V dalších krocích se dozvíte o jiných způsobech, jakými můžete zlepšit ochranu firemních dat, mezi které patří: 
 
 * Naučte se používat [Azure Information Protection na zařízeních s iOS/iPadOS a Androidem](https://docs.microsoft.com/information-protection/rms-client/mobile-app-faq).
-* V případě telefonů Windows Phone a počítačů Mac najdete další informace v tématu o [aplikaci pro sdílení obsahu Microsoft Rights Management](https://technet.microsoft.com/dn451248).
+* Informace o počítačích Mac najdete v [aplikaci Microsoft Rights Management Sharing](https://technet.microsoft.com/dn451248).

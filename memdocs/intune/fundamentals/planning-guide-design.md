@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 37ea8cf3f8615630ccc5b1f5fcc72f69c66db3ef
-ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
+ms.openlocfilehash: 6412b0d23edb9f93becb3973cc1ae02c0a068dea
+ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179566"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88663238"
 ---
 # <a name="create-a-design"></a>Vytvoření návrhu
 
@@ -194,7 +194,7 @@ Při vytváření návrhu potřebujete vědět, jaká zařízení budou v prost�
 
 ### <a name="devices"></a>Zařízení
 
-Intune slouží ke správě mobilních zařízení. Zabezpečuje firemní data a umožňuje koncovým uživatelům pracovat z více míst. Intune podporuje mnoho platforem zařízení, proto doporučujeme, abyste si povedli dokumentaci zařízení a platforem operačních systémů a verze, které budou v návrhu vaší organizace podporované. Například:
+Intune slouží ke správě mobilních zařízení. Zabezpečuje firemní data a umožňuje koncovým uživatelům pracovat z více míst. Intune podporuje mnoho platforem zařízení, proto doporučujeme, abyste si povedli dokumentaci zařízení a platforem operačních systémů a verze, které budou v návrhu vaší organizace podporované. Příklad:
 
 | **Platforma zařízení** | **Verze OS** |
 |:---:|:---:|
@@ -296,8 +296,8 @@ Tady je příklad, jak můžete certifikáty zdokumentovat během návrhu:
 
 | **Typ** | **Název profilu** | **Platforma zařízení** | **Případy použití** |   
 |:---:|:---:|:---:|:---:|
-| Kořenová CA | Firemní kořenová CA | Android, iOS/iPadOS, Windows Mobile | Firemní zařízení, vlastní zařízení uživatelů  |                                                           
-| SCEP | Uživatelský certifikát | Android, iOS/iPadOS, Windows Mobile | Firemní zařízení, vlastní zařízení uživatelů |                                                           
+| Kořenová CA | Firemní kořenová CA | Android, iOS/iPadOS | Firemní zařízení, vlastní zařízení uživatelů  |                                                           
+| SCEP | Uživatelský certifikát | Android, iOS/iPadOS | Firemní zařízení, vlastní zařízení uživatelů |                                                           
 
 
 Můžete si [stáhnout šablonu výše uvedené tabulky](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) a identifikovat potřeby pro vlastní profily certifikátů.

@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fedb6c6f7cd9e396d990b4129f81fab4d812ec9c
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 3d935e79dfe2fd0d786dae596cafe173b66018c9
+ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988640"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88663290"
 ---
 # <a name="smime-overview-to-sign-and-encrypt-email-in-intune"></a>Přehled s/MIME k podepsání a šifrování e-mailu v Intune
 
@@ -30,7 +30,6 @@ E-mailové certifikáty (označované také jako certifikát S/MIME) poskytují 
 - iOS/iPadOS
 - macOS
 - Windows 10 a novější
-- telefon se systémem Windows
 
 Na zařízeních S iOS/iPadOS můžete vytvořit e-mailový profil spravovaný přes Intune, který používá S/MIME a certifikáty k podepisování a šifrování příchozích a odchozích e-mailů. Ostatní platformy mohou, ale nemusí, S/MIME podporovat. Pokud je tato podpora podporovaná, nainstalujte certifikáty, které používají podepisování a šifrování S/MIME. Koncový uživatel pak ve své e-mailové aplikaci povolí S/MIME.
 

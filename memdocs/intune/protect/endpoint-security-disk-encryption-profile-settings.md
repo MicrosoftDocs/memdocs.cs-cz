@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 3760aa9820495db6c2460bf2e6d2e9a08d705a10
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 37e9f68951c3576393e6ed3eb3346847029736c4
+ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86462027"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88663204"
 ---
 # <a name="disk-encryption-policy-settings-for-endpoint-security-in-intune"></a>Nastavení zásad šifrování disku pro zabezpečení koncového bodu v Intune
 
@@ -92,6 +92,9 @@ Podporované platformy a profily:
   Toto nastavení platí pouze pro zařízení se systémem Windows Mobile a Mobile Enterprise SKU.
   - **Nenakonfigurováno** (*výchozí*) – nastavení se vrátí k výchozímu operačnímu systému, což nepožaduje šifrování paměťové karty.
   - **Ano** – šifrování na paměťových kartách se vyžaduje pro mobilní zařízení.
+
+  > [!NOTE]
+  > Podpora pro [Windows 10 Mobile](https://support.microsoft.com/help/4485197/windows-10-mobile-end-of-support-faq) a [Windows Phone 8,1](https://support.microsoft.com/help/4036480/windows-phone-8-1-end-of-support-faq) skončila v srpnu 2020.
 
 - **Skrýt výzvu k šifrování třetích stran**  
   CSP: [AllowWarningForOtherDiskEncryption](https://go.microsoft.com/fwlink/?linkid=872525)

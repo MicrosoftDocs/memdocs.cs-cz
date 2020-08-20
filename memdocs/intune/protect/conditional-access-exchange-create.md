@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cb70d5842ce13b5baa9dc60ec2ed9cd698bad75c
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 19a2d82f23abef49f193859c46a17cbb44a61f49
+ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252754"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88663340"
 ---
 # <a name="configure-exchange-on-premises-access-for-intune"></a>Konfigurace přístupu k místnímu Exchangi pro Intune
 
@@ -59,7 +59,7 @@ Než budete moct nakonfigurovat podmíněný přístup, ověřte, že existují 
   - Musí být **zaregistrovaný** ve službě Intune nebo se musí jednat o počítač připojený k doméně.
   - **Musí být zaregistrované v Azure Active Directory**. Kromě toho musí být ve službě Azure Active Directory zaregistrované ID protokolu Exchange ActiveSync klienta.
 
-- Pro zákazníky s Intune a Office 365 se služba Azure AD Device Registration Service (DRS) aktivuje automaticky. Zákazníci, kteří už mají nasazenou službu AD FS Device Registration Service, nevidí registrovaná zařízení v místní službě Active Directory. **To neplatí pro počítače s Windows ani zařízení Windows Phone**.
+- Pro zákazníky s Intune a Office 365 se služba Azure AD Device Registration Service (DRS) aktivuje automaticky. Zákazníci, kteří už mají nasazenou službu AD FS Device Registration Service, nevidí registrovaná zařízení v místní službě Active Directory. **To se nevztahuje na počítače a zařízení s Windows**.
 
 - **Musí splňovat** zásady dodržování předpisů, které jsou nasazené na toto zařízení.
 
@@ -69,7 +69,6 @@ Než budete moct nakonfigurovat podmíněný přístup, ověřte, že existují 
 
 ### <a name="support-for-mobile-devices"></a>Podpora mobilních zařízení
 
-- **Windows Phone** – vytvoření zásady podmíněného přístupu najdete v tématu [Vytvoření zásad podmíněného přístupu](../protect/create-conditional-access-intune.md) .
 - **Nativní e-mailová aplikace v systému iOS/iPadOS** – vytvoření zásady podmíněného přístupu najdete v tématu [Vytvoření zásad podmíněného přístupu](../protect/create-conditional-access-intune.md) .
 - **Poštovní klienti EAS, například Gmail v Androidu 4 nebo novějším** – vytvoření zásady podmíněného přístupu, najdete v tématu [Vytvoření zásad podmíněného přístupu](../protect/create-conditional-access-intune.md) .
 

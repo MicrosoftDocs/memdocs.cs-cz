@@ -18,11 +18,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 zone_pivot_groups: atp-baseline-versions
-ms.openlocfilehash: 8046318c55e2a9791f01fca4a5a54de3f1487782
-ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
+ms.openlocfilehash: d29240dcbcbbcd5a4399dbfb3648c2a6df47764c
+ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86022177"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88663425"
 ---
 <!-- Pivots in use: 
 ::: zone pivot="atp-april-2020"
@@ -80,7 +81,7 @@ Při používání Microsoft Edge Aplikace Microsoft Defender Application Guard 
   - **Chování schránky**  
     CSP: [Nastavení/ClipboardSettings](https://go.microsoft.com/fwlink/?linkid=872351)
 
-    Vyberte, které akce kopírování a vkládání jsou povolené mezi místním počítačem a virtuálním prohlížečem Application Guard. Mezi možnosti patří:
+    Vyberte, které akce kopírování a vkládání jsou povolené mezi místním počítačem a virtuálním prohlížečem Application Guard. Vaše možnosti jsou:
     - **Není nakonfigurováno**  
     - **Zablokovat kopírování a vkládání mezi počítačem a prohlížečem** (*výchozí*) – zablokuje obojí. Data se nemůžou přenášet mezi počítačem a virtuálním prohlížečem.
     - **Povolení kopírování a vkládání z prohlížeče pouze do počítačů** – data nelze přenést z počítače do virtuálního prohlížeče.
@@ -109,6 +110,9 @@ Další informace najdete v dokumentaci k Windows v části [nastavení zásady 
   Toto nastavení platí pouze pro zařízení se systémem Windows Mobile a Mobile Enterprise SKU.
   - **Ano** (*výchozí*) – pro mobilní zařízení se vyžadují šifrování u paměťových karet.
   - **Nenakonfigurováno** – nastavení se vrátí k VÝCHOZÍmu operačnímu systému, což nepožaduje šifrování paměťové karty.
+
+  > [!NOTE]
+  > Podpora pro [Windows 10 Mobile](https://support.microsoft.com/help/4485197/windows-10-mobile-end-of-support-faq) a [Windows Phone 8,1](https://support.microsoft.com/help/4036480/windows-phone-8-1-end-of-support-faq) skončila v srpnu 2020.
 
 - **Povolení úplného šifrování disku pro operační systém a pevné datové jednotky**  
   CSP: [RequireDeviceEncryption](https://go.microsoft.com/fwlink/?linkid=872523)
@@ -316,7 +320,7 @@ Další informace o následujících nastaveních najdete v tématu [WindowsAdva
   - **Ano** (*výchozí*)
   - **Není nakonfigurováno**
 
-## <a name="firewall"></a>Brána firewall
+## <a name="firewall"></a>Firewall
 
 Další informace najdete v dokumentaci k Windows v tématu [zprostředkovatel CSP brány firewall](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp) .
 
@@ -339,7 +343,7 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
    Pokud nepotřebujete UTF-8, předsdílené klíče se zpočátku zakódují pomocí kódování UTF-8. Pak uživatelé zařízení můžou zvolit jinou metodu kódování.
 
   - **Není nakonfigurováno**
-  - **Žádné**
+  - **Žádný**
   - **UTF8** (*výchozí*)
 
 - **Ověření seznamu odvolaných certifikátů (CRL)**  
@@ -348,7 +352,7 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
   Určete, jak se vynutilo ověřování seznamu odvolaných certifikátů (CRL).  
 
   - **Nenakonfigurováno** (*výchozí*)-ověření seznamu CRL je zakázané.
-  - **Žádné**
+  - **Žádný**
   - **Byl**
   - **Vyžadovat**
 
@@ -358,7 +362,7 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
   Určete, jak se má pro daný software na straně příjmu Povolit šifrované přijímání a prostý text před scénářem brány IPsec pro tunelové připojení. Toto nastavení zajistí, aby bylo zachováno pořadí paketů.
 
   - **Nenakonfigurováno** (*výchozí*) – služba Packet Queuing vrátí do výchozího nastavení klienta, což je zakázané.
-  - **Disabled** (Zakázáno)
+  - **Zakázáno**
   - **Příchozí fronta**
   - **Odchozí fronta**
   - **Zařadit do fronty**
@@ -695,7 +699,7 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
   CSP: [Defender/ScanParameter](https://go.microsoft.com/fwlink/?linkid=2114045&clcid=0x409)
 
   - **Definováno uživatelem**
-  - **Disabled** (Zakázáno)
+  - **Zakázáno**
   - **Rychlá kontrola** (*výchozí*)
   - **Úplná kontrola**
 
@@ -763,7 +767,7 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
   Ve výchozím nastavení Defender v zařízeních s Windows 10 Desktop odesílá společnosti Microsoft informace o případných problémech, které najde. Microsoft analyzuje tyto informace, aby se dozvěděly Další informace o problémech, které se týkají vás a dalších zákazníků, a nabízí Vylepšená řešení.
 
   - **Ano** (*výchozí*) – je zapnutá ochrana s doručováním cloudu.  Uživatelé zařízení nemůžou toto nastavení změnit.
-  - **Nenakonfigurováno** – nastavení se obnoví do výchozího nastavení systému.
+  - **Nenakonfigurováno**  – nastavení se obnoví do výchozího nastavení systému.
 
 - **Blokovat aplikacím Office vkládání kódu do jiných procesů**  
   [Chránit zařízení před zneužitím](https://go.microsoft.com/fwlink/?linkid=872974)

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f4abfd387c803535329fa51c7cafca295ae1078c
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: 9f54bf7f281fca65e01d839e926200bc68c49765
+ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262519"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88663443"
 ---
 # <a name="enforce-compliance-for-microsoft-defender-atp-with-conditional-access-in-intune"></a>Vymáhání dodržování předpisů pro Microsoft Defender ATP pomocí podmíněného přístupu v Intune
 
@@ -59,13 +59,13 @@ Vzhledem k tomu, že máte zásady dodržování předpisů pro zařízení v In
 
 U zařízení se systémem Android můžete pomocí zásad Intune upravit konfiguraci ochrany ATP v programu Microsoft Defender v Androidu. Další informace najdete v tématu [ochrana ATP na webu Microsoft Defender ATP](../protect/advanced-threat-protection-manage-android.md).
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 Pokud chcete používat Microsoft Defender ATP s Intune, ujistěte se, že máte nakonfigurované a připravené k použití:
 
 - Tenant s licencí pro Enterprise Mobility + Security E3 a Windows E5 (nebo Microsoft 365 Enterprise E5)
 - Prostředí Microsoft Intune s využitím zařízení s Windows 10 [spravovaných pomocí Intune](../enrollment/windows-enroll.md) nebo zařízení s Androidem, která jsou taky připojená k Azure AD
-- Ochrana [ATP v programu Microsoft Defender](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) a přístup k Security Center programu Microsoft Defender (portál ATP)
+- Prostředí [ATP v programu Microsoft Defender](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) , které vám umožní přístup k Security Center programu Microsoft Defender (portál ATP)
 
 > [!NOTE]
 > Ochrana ATP v programu Microsoft Defender není podporována zásadami ochrany aplikací pro iOS/iPadOS a Android Intune.

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a925106a09f0035f516018ec0b44a17267e64eec
-ms.sourcegitcommit: 62b451396eae660f2d5289ae3666b19ed1cc666d
+ms.openlocfilehash: f403f7b4753abc7e98995ebd345c91d1f5812f46
+ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88614839"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88663462"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
@@ -66,7 +66,7 @@ Intune teď podporuje [řešení MDM třetích stran jako zdroj podrobností o d
 
 V této verzi jsou podporovány následující poskytovatelé MDM od jiných výrobců jako verze Public Preview:
 
-- VMWare WorkspaceONE UEM (dříve označované jako vzné sledování)
+- Pracovní prostor VMWare ONE UEM (dříve označovaný jako pro sledování)
 
 
 <!-- ########################## -->

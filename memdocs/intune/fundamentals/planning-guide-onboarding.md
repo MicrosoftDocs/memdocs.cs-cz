@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8396a9713e5ce4b6001aefb55485a908f0e605dd
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 19de56bfab6e4f4cf2f1243c6cbaf98053e6ba5e
+ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79331039"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88663255"
 ---
 # <a name="implement-your-microsoft-intune-plan"></a>Implementace plánu Microsoft Intune
 
@@ -130,7 +130,7 @@ Intune podporuje podmíněný přístup pro Exchange Online, místní Exchange, 
 
 ### <a name="task-13-enroll-devices"></a>13. úkol: Registrace zařízení
 
-Intune podporuje platformy zařízení s iOS/iPadOS, Mac OS, Androidem, Windows Desktop a Windows Mobile. Podle potřeby zaregistrujte požadované platformy mobilních zařízení na základě způsobu použití nasazené služby Intune a požadavků.
+Intune podporuje platformy zařízení s iOS/iPadOS, Mac OS, Androidem a Windows Desktop. Podle potřeby zaregistrujte požadované platformy mobilních zařízení na základě způsobu použití nasazené služby Intune a požadavků.
 
 - Další informace o [registraci zařízení](../enrollment/device-enrollment.md).
 

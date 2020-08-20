@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/20/2020
+ms.date: 08/20/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5939d12003df78b459ebc12c294434826194b931
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: 31acd37e84e4d421c8bcbd96fee4536dbef22cee
+ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84166123"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88663357"
 ---
 # <a name="configure-infrastructure-to-support-scep-with-intune"></a>Konfigurace infrastruktury pro podporu SCEP s Intune
 
@@ -88,7 +88,7 @@ Pokud chcete, aby zařízení v Internetu získala certifikáty, musíte publiko
 
 - **Přístup k certifikační autoritě** : budete potřebovat účet uživatele domény, který má práva ke správě vaší certifikační autority.
 
-### <a name="network-requirements"></a>Požadavky sítě
+### <a name="network-requirements"></a>Síťové požadavky
 
 Službu NDES doporučujeme publikovat prostřednictvím reverzního proxy serveru, jako je například [proxy aplikace služby Azure AD, Web Access proxy server](https://azure.microsoft.com/documentation/articles/active-directory-application-proxy-publish/)nebo proxy třetí strany. Pokud nepoužíváte reverzní proxy server, povolte provoz TCP na portu 443 od všech hostitelů a IP adres na internetu ke službě NDES.
 
@@ -103,7 +103,7 @@ Při použití SCEP se používají následující certifikáty a šablony.
 |**Šablona certifikátu SCEP**         |Šablona, kterou nakonfigurujete ve vaší vydávající certifikační autoritě, která se používá k sestavování požadavků SCEP zařízení. |
 |**Certifikát pro ověřování klientů** |Požadováno od vaší vydávající certifikační autority nebo veřejné certifikační autority.<br /> Tento certifikát nainstalujete do počítače, který je hostitelem služby NDES a používá ho Intune Certificate Connector.<br /> Pokud má certifikát nastavené použití klíče *klienta* a *serveru* (**rozšířené použití klíčů**) na šabloně certifikační autority, kterou používáte k vystavení tohoto certifikátu. Pak můžete použít stejný certifikát pro ověřování serverů a klientů. |
 |**Certifikát ověřování serveru** |Certifikát webového serveru vyžádaný z vaší vydávající certifikační autority nebo veřejné certifikační autority.<br /> Tento certifikát SSL nainstalujete a navážete ve službě IIS na počítači, který je hostitelem NDES.<br />Pokud má certifikát nastavené použití klíče *klienta* a *serveru* (**rozšířené použití klíčů**) na šabloně certifikační autority, kterou používáte k vystavení tohoto certifikátu. Pak můžete použít stejný certifikát pro ověřování serverů a klientů. |
-|**Certifikát důvěryhodné kořenové certifikační autority**       |Chcete-li použít profil certifikátu SCEP, musí zařízení důvěřovat vaší důvěryhodné kořenové certifikační autoritě (CA). Použijte *profil důvěryhodného certifikátu* v Intune a zřiďte certifikát důvěryhodné kořenové certifikační autority pro uživatele a zařízení. <br/><br/> **-** Použijte jeden certifikát důvěryhodné kořenové certifikační autority na každou platformu operačního systému a přidružte tento certifikát ke každému profilu důvěryhodného certifikátu, který vytvoříte. <br /><br /> **-** V případě potřeby můžete použít další certifikáty důvěryhodných kořenových certifikačních autorit. Můžete například použít další certifikáty k poskytnutí vztahu důvěryhodnosti certifikační autoritě, která podepisuje ověřovací certifikáty serverů pro vaše přístupové body Wi-Fi. Vytvořte další certifikáty důvěryhodných kořenových certifikačních autorit pro vydávání certifikačních autorit.  V profilu certifikátu SCEP, který jste vytvořili v Intune, nezapomeňte zadat profil důvěryhodné kořenové certifikační autority pro vydávající certifikační autoritu.<br/><br/> Informace o profilu důvěryhodného certifikátu najdete v tématech [Export certifikátu důvěryhodné kořenové certifikační autority](certificates-configure.md#export-the-trusted-root-ca-certificate) a [Vytvoření profilů důvěryhodných certifikátů](certificates-configure.md#create-trusted-certificate-profiles) v tématu *použití certifikátů pro ověřování v Intune*. |
+|**Certifikát důvěryhodné kořenové certifikační autority**       |Chcete-li použít profil certifikátu SCEP, musí zařízení důvěřovat vaší důvěryhodné kořenové certifikační autoritě (CA). Použijte *profil důvěryhodného certifikátu* v Intune a zřiďte certifikát důvěryhodné kořenové certifikační autority pro uživatele a zařízení. <br/><br/> **-**  Použijte jeden certifikát důvěryhodné kořenové certifikační autority na každou platformu operačního systému a přidružte tento certifikát ke každému profilu důvěryhodného certifikátu, který vytvoříte. <br /><br /> **-**  V případě potřeby můžete použít další certifikáty důvěryhodných kořenových certifikačních autorit. Můžete například použít další certifikáty k poskytnutí vztahu důvěryhodnosti certifikační autoritě, která podepisuje ověřovací certifikáty serverů pro vaše přístupové body Wi-Fi. Vytvořte další certifikáty důvěryhodných kořenových certifikačních autorit pro vydávání certifikačních autorit.  V profilu certifikátu SCEP, který jste vytvořili v Intune, nezapomeňte zadat profil důvěryhodné kořenové certifikační autority pro vydávající certifikační autoritu.<br/><br/> Informace o profilu důvěryhodného certifikátu najdete v tématech [Export certifikátu důvěryhodné kořenové certifikační autority](certificates-configure.md#export-the-trusted-root-ca-certificate) a [Vytvoření profilů důvěryhodných certifikátů](certificates-configure.md#create-trusted-certificate-profiles) v tématu *použití certifikátů pro ověřování v Intune*. |
 
 ## <a name="configure-the-certification-authority"></a>Konfigurace certifikační autority
 
@@ -127,7 +127,7 @@ Následující části vyžadují znalost systému Windows Server 2012 R2 nebo n
 1. Vytvořte šablonu certifikátu v2 (s kompatibilitou systému Windows 2003), která se použije jako šablona certifikátu SCEP. Další možnosti:
 
    - Pomocí modulu snap-in *šablony certifikátů* vytvořte novou vlastní šablonu.
-   - Zkopírujte existující šablonu (třeba šablonu Uživatel) a pak aktualizujte kopii, která se má použít jako šablona NDES.
+   - Zkopírujte existující šablonu (třeba šablonu webového serveru) a pak aktualizujte kopii, která se má použít jako šablona NDES.
 
 2. Na zadaných kartách šablony nakonfigurujte následující nastavení:
 
@@ -368,11 +368,11 @@ Microsoft Intune Certificate Connector se nainstaluje na server, na kterém bě�
 
    ![ConnectorDownload](./media/certificates-scep-configure/download-certificates-connector.png)
 
-4. Jakmile se soubor stáhne, přejděte na server hostující roli NDES (Network Device Enrollment Service). Potom:
+4. Jakmile se soubor stáhne, přejděte na server hostující roli NDES (Network Device Enrollment Service). Pak:
 
    1. Ověřte, že je nainstalovaná platforma .NET 4,5, jak je vyžaduje Intune Certificate Connector. Rozhraní .NET 4,5 je automaticky součástí systému Windows Server 2012 R2 a novějších verzí.
 
-   2. Spusťte instalační program (**NDESConnectorSetup.exe**). Instalační program nainstaluje také modul zásad pro NDES a webovou službu bodu registrace certifikátu IIS (CRP). Webová služba CRP, *CertificateRegistrationSvc*, běží jako aplikace ve službě IIS.
+   2. Pro spuštění instalačního programu použijte účet s oprávněními správce na serveru aplikace (**NDESConnectorSetup.exe**). Instalační program nainstaluje také modul zásad pro NDES a webovou službu bodu registrace certifikátu IIS (CRP). Webová služba CRP, *CertificateRegistrationSvc*, běží jako aplikace ve službě IIS.
 
       Při instalaci NDES pro samostatnou službu Intune se s konektorem Certificate Connector automaticky nainstaluje služba CRP.
 
@@ -383,9 +383,9 @@ Microsoft Intune Certificate Connector se nainstaluje na server, na kterém bě�
 > [!NOTE]
 > Před spuštěním Intune Certificate Connectoru je potřeba provést následující změny pro klienty RSZ s vysokou úrovní.
 > 
-> Proveďte úpravy dvou konfiguračních souborů uvedených níže, které aktualizují koncové body služby pro vysoké prostředí RSZ. Všimněte si, že tyto aktualizace mění identifikátory URI z **. com** na příponu **. us** . K dispozici je celkem tři aktualizace identifikátorů URI, dvě aktualizace v rámci konfiguračního souboru NDESConnectorUI. exe. config a jedna aktualizace v souboru NDESConnector. exe. config.
+> Proveďte úpravy dvou konfiguračních souborů uvedených níže, které aktualizují koncové body služby pro vysoké prostředí RSZ. Všimněte si, že tyto aktualizace mění identifikátory URI z **. com** na příponu **. us** . K dispozici je celkem tři aktualizace identifikátorů URI, dvě aktualizace v rámci konfiguračního souboru NDESConnectorUI.exe.config a jedna aktualizace v souboru NDESConnector.exe.config.
 > 
-> - Název souboru: < install_Path > \Microsoft Intune\NDESConnectorUI\NDESConnectorUI.exe.config
+> - Název souboru: <install_Path> \Microsoft Intune\NDESConnectorUI\NDESConnectorUI.exe.config
 > 
 >   Příklad: (%programfiles%\Microsoft Intune\NDESConnectorUI\NDESConnectorUI.exe.config)
 >   ```
@@ -396,7 +396,7 @@ Microsoft Intune Certificate Connector se nainstaluje na server, na kterém bě�
 >    </appSettings>
 >   ```
 > 
-> - Název souboru: < install_Path > \Microsoft Intune\NDESConnectorSvc\NDESConnector.exe.config
+> - Název souboru: <install_Path> \Microsoft Intune\NDESConnectorSvc\NDESConnector.exe.config
 >
 >   Příklad: (%programfiles%\Microsoft Intune\NDESConnectorSvc\NDESConnector.exe.config)
 >    ```
@@ -410,7 +410,7 @@ Microsoft Intune Certificate Connector se nainstaluje na server, na kterém bě�
 
    Pokud průvodce zavřete před spuštěním uživatelského rozhraní konektoru Certificate Connector, můžete ho znovu otevřít spuštěním následujícího příkazu:
 
-   *< install_Path > \NDESConnectorUI\NDESConnectorUI.exe*
+   *<install_Path # C1\NDESConnectorUI\NDESConnectorUI.exe*
 
 7. V uživatelském rozhraní **Certificate Connectoru** :
 
@@ -418,7 +418,7 @@ Microsoft Intune Certificate Connector se nainstaluje na server, na kterém bě�
 
    2. K účtu, který použijete, se musí přiřadit platná licence Intune.
 
-   3. Po přihlášení stáhne Intune Certificate Connector certifikát z Intune. Tento certifikát se používá k ověřování mezi konektorem a Intune. Pokud účet, který jste použili, nemá licenci Intune, konektor (NDESConnectorUI. exe) se nepodaří získat certifikát z Intune.  
+   3. Po přihlášení stáhne Intune Certificate Connector certifikát z Intune. Tento certifikát se používá k ověřování mezi konektorem a Intune. Pokud účet, který jste použili, nemá licenci Intune, konektor (NDESConnectorUI.exe) se nepodaří získat certifikát z Intune.  
 
       Pokud vaše organizace používá proxy server a ten je vyžadovaný pro přístup serveru NDES k internetu, vyberte **Použít proxy server**. Pak zadejte název proxy serveru, port a přihlašovací údaje účtu pro připojení.
 
@@ -428,7 +428,7 @@ Microsoft Intune Certificate Connector se nainstaluje na server, na kterém bě�
 
 8. Otevřete příkazový řádek, zadejte **services.msc** a stiskněte **Enter**. Klikněte pravým tlačítkem na restartovat **službu Intune Connector**  >  **Restart**.
 
-Pokud chcete ověřit, že je služba spuštěná, spusťte prohlížeč a zadejte následující adresu URL. Měla by vrátit chybu **403** :`https://<FQDN_of_your_NDES_server>/certsrv/mscep/mscep.dll`
+Pokud chcete ověřit, že je služba spuštěná, spusťte prohlížeč a zadejte následující adresu URL. Měla by vrátit chybu **403** : `https://<FQDN_of_your_NDES_server>/certsrv/mscep/mscep.dll`
 
 > [!NOTE]
 > Intune Certificate Connector podporuje TLS 1,2. Pokud server, který je hostitelem konektoru, podporuje protokol TLS 1,2, použije se protokol TLS 1,2. Pokud server nepodporuje TLS 1.2, použije se TLS 1.1. V současnosti se k ověřování zařízení a serveru používá protokol TLS 1.1.
