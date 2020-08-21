@@ -58,7 +58,7 @@ V této verzi teď můžete po povolení spolusprávy převést úlohu Endpoint 
 <!-- 1324696 -->
 Skupiny hranic Configuration Manager slouží k definování a regulaci distribuce obsahu napříč podnikovou sítí a vzdálenými pobočkami. [Optimalizace doručení Windows](/windows/deployment/update/waas-delivery-optimization) je cloudová technologie peer-to-peer pro sdílení obsahu mezi zařízeními s Windows 10. Od této verze můžete nakonfigurovat optimalizaci doručování, aby při sdílení obsahu mezi partnerskými uzly používala vaše skupiny hranic. Nové nastavení klienta použije identifikátor skupiny hranic jako identifikátor skupiny Optimalizace doručení na klientovi. Když klient komunikuje s cloudovou službou Optimalizace doručení, používá tento identifikátor k vyhledání partnerských uzlů s požadovaným obsahem. 
 
-### <a name="prerequisites"></a>Předpoklady
+### <a name="prerequisites"></a>Požadavky
 - Optimalizace doručení je dostupná jenom na klientech s Windows 10.
 
 ### <a name="try-it-out"></a>Určitě to udělejte!
@@ -193,7 +193,7 @@ Při upgradu lokality na tuto verzi Configuration Manager přidá všechny body 
 
 Náhradní skupina hranic bodu správy nemění chování při instalaci klienta (CCMSetup). Pokud příkazový řádek neurčí počáteční bod správy pomocí parametru/MP, nový klient obdrží úplný seznam dostupných bodů správy. Pro svůj úvodní proces zavedení používá klient první bod správy, ke kterému má přístup. Po registraci klienta s lokalitou obdrží seznam bodů správy správně seřazený s tímto novým chováním. 
 
-### <a name="prerequisites"></a>Předpoklady
+### <a name="prerequisites"></a>Požadavky
 - Povolte [preferované body správy](../servers/deploy/configure/boundary-groups.md#bkmk_preferred). V konzole Configuration Manager otevřete pracovní prostor **Správa** . Rozbalte položku **Konfigurace lokality** a vyberte možnost **lokality**. Na pásu karet klikněte na **Nastavení hierarchie** . Na kartě **Obecné** povolte klientům, **aby používaly body správy zadané ve skupinách hranic**. 
 
 ### <a name="known-issues"></a>Známé problémy
@@ -236,7 +236,7 @@ Configuration Manager nemigrují existující klasické instance CMG do modelu n
 > [!IMPORTANT]
 > Tato funkce nepovoluje podporu pro poskytovatele cloudových služeb Azure (CSP). Nasazení CMG s Azure Resource Manager nadále používá klasickou cloudovou službu, kterou CSP nepodporuje. Další informace najdete v tématu [dostupné služby Azure v CSP Azure](/azure/cloud-solution-provider/overview/azure-csp-available-services).  
 
-### <a name="prerequisites"></a>Předpoklady
+### <a name="prerequisites"></a>Požadavky
 - Integrace se službou [Azure AD](../clients/deploy/deploy-clients-cmg-azure.md). Zjišťování uživatelů služby Azure AD není vyžadováno.
 - Stejné [požadavky pro bránu pro správu cloudu](../clients/manage/cmg/plan-cloud-management-gateway.md#requirements), s výjimkou certifikátu pro správu Azure.
 
@@ -262,7 +262,7 @@ Od této verze se když uživatel požádá o aplikaci, která vyžaduje schvál
 > [!NOTE]
 > Tato funkce je volitelná. Při aktualizaci na tuto verzi Povolte tuto funkci v Průvodci aktualizací. Případně můžete funkci v konzole zapnout později. Další informace naleznete v části [Enable optional features from updates](../servers/manage/install-in-console-updates.md#bkmk_options).
 
-### <a name="prerequisites"></a>Předpoklady
+### <a name="prerequisites"></a>Požadavky
 - Upgrade klienta Configuration Manager na nejnovější verzi
 - Povolit nastavení klienta **použít nové centrum softwaru** ve skupině [Počítačový agent](../clients/deploy/about-client-settings.md#computer-agent)
 
@@ -280,7 +280,7 @@ Od této verze se když uživatel požádá o aplikaci, která vyžaduje schvál
 <!-- 1322613 -->
 Pokud nasadíte aplikace jako dostupné pro uživatele, mohou je nyní procházet a instalovat prostřednictvím centra softwaru v Azure Active Directory (Azure AD).  
 
-### <a name="prerequisites"></a>Předpoklady
+### <a name="prerequisites"></a>Požadavky
 - Povolit HTTPS v bodu správy
 - Integrace webu s [Azure AD](../clients/deploy/deploy-clients-cmg-azure.md)
 - Nasazení aplikace jako k dispozici pro kolekci uživatelů
@@ -302,7 +302,7 @@ Pokud nasadíte aplikace jako dostupné pro uživatele, mohou je nyní procháze
 <!-- 1351442 -->
 Windows autopilot pro Windows je řešení pro připojování a konfiguraci nových zařízení s Windows 10 moderním způsobem. Další informace najdete v tématu [Přehled Windows Autopilotu](/windows/deployment/windows-autopilot/windows-10-autopilot). Jednou z metod registrace existujících zařízení pomocí Windows autopilotu je odeslání informací o zařízení do Microsoft Store pro firmy a vzdělávání. Tyto informace zahrnují sériové číslo zařízení, identifikátor produktu Windows a identifikátor hardwaru. K shromáždění a hlášení informací o zařízení použijte Configuration Manager. 
 
-### <a name="prerequisites"></a>Předpoklady
+### <a name="prerequisites"></a>Požadavky
 - Informace o tomto zařízení se týkají jenom klientů ve Windows 10, verze 1703 a novějších.
 
 ### <a name="try-it-out"></a>Určitě to udělejte!
@@ -347,7 +347,7 @@ Pro zákazníky, kteří používají webový prohlížeč [Microsoft Edge](http
 - **Povolení vývojářské nástroje**: Další informace najdete v tématu [zásady prohlížeče AllowDeveloperTools](/windows/client-management/mdm/policy-csp-browser#browser-allowdevelopertools).
 - **Povolení rozšíření**: Další informace najdete v tématu [zásady prohlížeče AllowExtensions](/windows/client-management/mdm/policy-csp-browser#browser-allowextensions).
 
-### <a name="prerequisites"></a>Předpoklady
+### <a name="prerequisites"></a>Požadavky
 - Klient Windows 10, který je připojen Azure Active Directory. 
 
 ### <a name="known-issues"></a>Známé problémy

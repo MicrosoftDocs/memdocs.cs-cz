@@ -99,7 +99,7 @@ Data dodržování předpisů pro nasazení zásad ochrany proti zneužití jsou
 
 Další informace o ochraně před zneužitím a konkrétních komponent a pravidel najdete v tématu [zneužití ochrany v programu Windows Defender](/windows/threat-protection/windows-defender-exploit-guard/windows-defender-exploit-guard) v knihovně dokumentace systému Windows.
 
-### <a name="prerequisites"></a>Předpoklady
+### <a name="prerequisites"></a>Požadavky
 Spravovaná zařízení musí používat Windows 10 1709: creators Update nebo novější a splňují následující požadavky v závislosti na nakonfigurovaných součástech a pravidlech:
 
 |Součást ochrany před zneužitím |Další požadavky|

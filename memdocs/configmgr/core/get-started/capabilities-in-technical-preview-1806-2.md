@@ -151,7 +151,7 @@ Přehled MSIX najdete v tématu o tom, jak se [podíváte na MSIX](/archive/blog
 
 Informace o tom, jak vytvořit novou aplikaci MSIX, najdete [v článku podpora MSIX představená v programu Insider build 17682](https://techcommunity.microsoft.com/t5/MSIX-Blog/MSIX-support-introduced-in-Insider-Build-17682/ba-p/202376).
 
-### <a name="prerequisites"></a>Předpoklady
+### <a name="prerequisites"></a>Požadavky
 - Klient s Windows 10, na kterém běží aspoň Windows Insider Preview build 17682
 - Balíček aplikace systému Windows ve formátu MSIX
 
@@ -253,7 +253,7 @@ Pokud má klient s partnerským vztahem více než jednu IP adresu (IPv4, IPv6 n
 Tato verze dále prochází podporu aktualizací softwaru třetích stran v důsledku vaší [zpětné vazby](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/8803711-3rd-party-patching-scup-integration-with-sccm-co)na webu UserVoice. [Technical Preview verze 1806](capabilities-in-technical-preview-1806.md#bkmk-3pupdate) poskytuje podporu pro *partnerské katalogy*, které jsou registrované katalogy od dodavatelů softwaru. Katalogy, které zadáte, které nejsou registrované u Microsoftu, se nazývají *vlastní katalogy*. Přidejte vlastní katalogy v konzole Configuration Manager.  
 
 
-### <a name="prerequisites"></a>Předpoklady 
+### <a name="prerequisites"></a>Požadavky 
 
 - Nastavte [aktualizace softwaru třetích stran](capabilities-in-technical-preview-1806.md#bkmk-3pupdate). Dokončete fázi 1: Povolte a nastavte funkci.   
 
