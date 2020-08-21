@@ -10,12 +10,12 @@ ms.assetid: 946b0f74-0794-4e8f-a6af-9737d877179b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 2f5aa622ca5d98f2cb5eb0b0c3154625df11a42e
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: 3192cd8177075542ffc86ab236b817db5befca1d
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86240758"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696884"
 ---
 # <a name="enable-third-party-updates"></a>Povolení aktualizací třetích stran 
 
@@ -27,10 +27,10 @@ Od verze 1806 se uzel **katalogů aktualizací softwaru třetích stran** v konz
 > Configuration Manager ve výchozím nastavení tuto funkci nepovolí. Než ho použijete, povolte volitelnou funkci **Povolení podpory aktualizací třetích stran na klientech**. Další informace naleznete v části [Enable optional features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_options).
 
 
-## <a name="prerequisites"></a>Požadavky 
+## <a name="prerequisites"></a>Předpoklady 
 - Dostatek místa na disku ve složce WSUSContent bodu aktualizace softwaru na nejvyšší úrovni pro ukládání zdrojového binárního obsahu pro aktualizace softwaru třetích stran.
     - Velikost požadovaného úložiště se liší v závislosti na dodavateli, typech aktualizací a konkrétních aktualizacích, které publikujete pro nasazení.
-    - Pokud potřebujete přesunout složku WSUSContent na jinou jednotku s větším množstvím volného místa, přečtěte si téma [Postup změny umístění, kde služba WSUS ukládá aktualizace místně](https://docs.microsoft.com/archive/blogs/sus/wsus-how-to-change-the-location-where-wsus-stores-updates-locally) .
+    - Pokud potřebujete přesunout složku WSUSContent na jinou jednotku s větším množstvím volného místa, přečtěte si téma [Postup změny umístění, kde služba WSUS ukládá aktualizace místně](/archive/blogs/sus/wsus-how-to-change-the-location-where-wsus-stores-updates-locally) .
 - Synchronizační služba aktualizace softwaru třetí strany vyžaduje přístup k Internetu.
     - Pro seznam katalogů partnerů je potřeba download.microsoft.com přes port HTTPS 443. 
     -  Přístup k Internetu pro všechny katalogy třetích stran a aktualizace souborů obsahu. Můžou být potřeba další porty, které jsou jiné než 443.
@@ -41,7 +41,7 @@ Od verze 1806 se uzel **katalogů aktualizací softwaru třetích stran** v konz
 ## <a name="additional-requirements-when-the-sup-is-remote-from-the-top-level-site-server"></a>Další požadavky, pokud je server SUP vzdálený od serveru lokality nejvyšší úrovně 
 
 1. Při vzdáleném SUP musí být protokol SSL povolený. To vyžaduje certifikát ověřování serveru vygenerovaný z interní certifikační autority nebo prostřednictvím veřejného poskytovatele.
-    - [Konfigurace protokolu SSL na serveru WSUS](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#25-secure-wsus-with-the-secure-sockets-layer-protocol)
+    - [Konfigurace protokolu SSL na serveru WSUS](/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#25-secure-wsus-with-the-secure-sockets-layer-protocol)
         - Při konfiguraci protokolu SSL na serveru WSUS Pamatujte na to, že některé webové služby a virtuální adresáře jsou vždy HTTP a nikoli HTTPS. 
         - Configuration Manager stáhne obsah třetích stran pro balíčky aktualizací softwaru z adresáře obsahu WSUS přes HTTP.   
     - [Konfigurace SSL v SUP](../get-started/install-a-software-update-point.md#configure-ssl-communications-to-wsus)
@@ -93,7 +93,7 @@ Pokud potřebujete ručně nakonfigurovat certifikát, například potřebujete 
 
 
 ## <a name="enable-third-party-updates-on-the-clients"></a>Povolit aktualizace třetích stran na klientech
-Povolte aktualizace třetích stran na klientech v nastavení klienta. Toto nastavení nastaví zásady agenta web Windows Update pro možnost [Povolení podepsaných aktualizací pro intranetové umístění služby Microsoft Update](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/deploy/4-configure-group-policy-settings-for-automatic-updates#allow-signed-updates-from-an-intranet-microsoft-update-service-location). Toto nastavení klienta také nainstaluje podpisový certifikát služby WSUS do úložiště důvěryhodných vydavatelů v klientovi. Protokolování správy certifikátů se zobrazuje v `updatesdeployment.log` klientech nástroje.  Spusťte tyto kroky pro každé vlastní nastavení klienta, které chcete použít pro aktualizace třetích stran. Další informace najdete v článku [o nastavení klienta](../../core/clients/deploy/about-client-settings.md#enable-third-party-software-updates) .
+Povolte aktualizace třetích stran na klientech v nastavení klienta. Toto nastavení nastaví zásady agenta web Windows Update pro možnost [Povolení podepsaných aktualizací pro intranetové umístění služby Microsoft Update](/windows-server/administration/windows-server-update-services/deploy/4-configure-group-policy-settings-for-automatic-updates#allow-signed-updates-from-an-intranet-microsoft-update-service-location). Toto nastavení klienta také nainstaluje podpisový certifikát služby WSUS do úložiště důvěryhodných vydavatelů v klientovi. Protokolování správy certifikátů se zobrazuje v `updatesdeployment.log` klientech nástroje.  Spusťte tyto kroky pro každé vlastní nastavení klienta, které chcete použít pro aktualizace třetích stran. Další informace najdete v článku [o nastavení klienta](../../core/clients/deploy/about-client-settings.md#enable-third-party-software-updates) .
 
 1. V konzole Configuration Manager otevřete pracovní prostor **Správa** a vyberte uzel **nastavení klienta** .
 2. Vyberte existující vlastní nastavení klienta nebo vytvořte nové. 
@@ -157,7 +157,7 @@ Až budou aktualizace třetích stran v uzlu **všechny aktualizace** , můžete
 8. Než bude možné zobrazit výsledky dodržování předpisů, budou muset klienti spustit kontrolu a vyhodnotit aktualizace.  Tento cyklus lze aktivovat ručně z ovládacích panelů Configuration Manager v klientovi spuštěním akce **cyklus prověřování aktualizací softwaru** .
 
 
-## <a name="improvements-for-third-party-updates-starting-in-1910"></a><a name="bkmk_1910"></a>Vylepšení aktualizací třetích stran od 1910.
+## <a name="improvements-for-third-party-updates-starting-in-1910"></a><a name="bkmk_1910"></a> Vylepšení aktualizací třetích stran od 1910.
 <!--4469002-->
 Nyní máte podrobnější ovládací prvky pro synchronizaci katalogů aktualizací třetích stran. Od verze Configuration Manager 1910 můžete naplánovat synchronizaci pro každý katalog nezávisle na sobě. Pokud používáte katalogy, které zahrnují aktualizace kategorií, můžete synchronizaci nakonfigurovat tak, aby zahrnovala jenom určité kategorie aktualizací, aby se předešlo synchronizaci celého katalogu. V případě, že máte jistotu, že nasazujete kategorii, můžete ji nakonfigurovat tak, aby se automaticky stáhla a publikovala na server WSUS.
 
@@ -235,7 +235,7 @@ Synchronizace aktualizací softwaru třetích stran je zpracována komponentou S
 -  Configuration Manager má novou verzi formátu souboru CAB katalogu. Nová verze zahrnuje certifikáty pro binární soubory dodavatele. Po schválení a důvěřování katalogu budou tyto certifikáty přidány do uzlu **certifikáty** v části **zabezpečení** v pracovním prostoru **Správa** .  
      - Starší verzi souboru CAB katalogu můžete dál používat, pokud je adresa URL pro stahování https a aktualizace se podepisují. Publikování obsahu se nezdaří, protože certifikáty pro binární soubory nejsou v souboru CAB a jsou již schváleny. Tento problém můžete obejít tak, že vyhledáte certifikát v uzlu **certifikáty** , odblokujete ho a pak znovu publikujete aktualizaci. Pokud publikujete více aktualizací podepsaných pomocí různých certifikátů, budete muset odblokovat každý použitý certifikát.
      - Další informace najdete v části stavové zprávy 11523 a 11524 v níže uvedené tabulce stavových zpráv.
--  Pokud služba synchronizace aktualizací softwaru třetí strany v bodu aktualizace softwaru nejvyšší úrovně vyžaduje proxy server k přístupu k Internetu, může dojít k selhání kontrol digitálních podpisů. Chcete-li tento problém zmírnit, nakonfigurujte nastavení proxy serveru WinHTTP v systému lokality. Další informace najdete v tématu [Příkazy Netsh pro WinHTTP](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731131(v=ws.10)).
+-  Pokud služba synchronizace aktualizací softwaru třetí strany v bodu aktualizace softwaru nejvyšší úrovně vyžaduje proxy server k přístupu k Internetu, může dojít k selhání kontrol digitálních podpisů. Chcete-li tento problém zmírnit, nakonfigurujte nastavení proxy serveru WinHTTP v systému lokality. Další informace najdete v tématu [Příkazy Netsh pro WinHTTP](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731131(v=ws.10)).
 - Při použití CMG pro úložiště obsahu se nebude obsah pro aktualizace třetích stran stahovat do klientů, pokud je povolený **rozdílový obsah ke stažení, pokud** je povolené [nastavení klienta](../../core/clients/deploy/about-client-settings.md#allow-clients-to-download-delta-content-when-available) dostupné. <!--6598587-->
 
 ## <a name="status-messages"></a>Stavové zprávy

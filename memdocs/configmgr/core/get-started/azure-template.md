@@ -10,12 +10,12 @@ ms.assetid: 9875c443-19bf-43a0-9203-3a741f305096
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 23cc7d0c642637a310f53280bafed6a2a28d2834
-ms.sourcegitcommit: 4174f7e485067812c29aea01a4767989ffdbb578
+ms.openlocfilehash: ea1965d6cae90808156957be1c9634e4c1631aa8
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83406686"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694521"
 ---
 # <a name="create-a-configuration-manager-lab-in-azure"></a>Vytvoření testovacího prostředí Configuration Manager v Azure
 
@@ -32,7 +32,7 @@ Další informace najdete v tématu [Configuration Manager v Azure](../understan
 
 
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 Tento proces vyžaduje předplatné Azure, ve kterém můžete vytvořit následující objekty: 
 - Dva Standard_B2s virtuální počítače pro řadič domény, bod správy a distribuční bod.
@@ -66,7 +66,7 @@ Tento proces vyžaduje předplatné Azure, ve kterém můžete vytvořit násled
 
         - **Uživatelské jméno správce**: jméno uživatele na virtuálních počítačích s právy správce. Pomocí tohoto uživatele se přihlásíte k virtuálním počítačům.  
 
-        - **Heslo správce**: heslo musí splňovat požadavky na složitost Azure. Další informace najdete v tématu [adminPassword](https://docs.microsoft.com/rest/api/compute/virtualmachines/createorupdate#osprofile).  
+        - **Heslo správce**: heslo musí splňovat požadavky na složitost Azure. Další informace najdete v tématu [adminPassword](/rest/api/compute/virtualmachines/createorupdate#osprofile).  
 
     > [!Important]  
     > Azure vyžaduje následující nastavení. Použijte výchozí hodnoty. Tyto hodnoty neměňte.  
@@ -86,7 +86,7 @@ Azure ověří nastavení a pak zahájí nasazení. Ověřte stav nasazení ve A
 
 Chcete-li zobrazit stav konfiguračních skriptů, připojte se k `<prefix>PS1` serveru a Prohlédněte si následující soubor: `%windir%\TEMP\ProvisionScript\PS1.json` . Pokud se zobrazí všechny kroky jako dokončené, proces se provede.
 
-Pokud se chcete připojit k virtuálním počítačům, nejdřív si načtěte z Azure Portal veřejné IP adresy pro každý virtuální počítač. Když se připojíte k virtuálnímu počítači, název domény je `contoso.com` . Použijte přihlašovací údaje, které jste zadali v šabloně nasazení. Další informace najdete v tématu [jak se připojit a přihlásit se k virtuálnímu počítači Azure s Windows](https://docs.microsoft.com/azure/virtual-machines/windows/connect-logon).
+Pokud se chcete připojit k virtuálním počítačům, nejdřív si načtěte z Azure Portal veřejné IP adresy pro každý virtuální počítač. Když se připojíte k virtuálnímu počítači, název domény je `contoso.com` . Použijte přihlašovací údaje, které jste zadali v šabloně nasazení. Další informace najdete v tématu [jak se připojit a přihlásit se k virtuálnímu počítači Azure s Windows](/azure/virtual-machines/windows/connect-logon).
 
 
 

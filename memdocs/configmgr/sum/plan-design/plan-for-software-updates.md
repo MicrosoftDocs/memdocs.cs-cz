@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: d071b0ec-e070-40a9-b7d4-564b92a5465f
-ms.openlocfilehash: b7b3ef78924389232ea292d16c6840fbef9bb321
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 991f367dbd842037aecf4f808f27c4fb2961cc38
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88123587"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696714"
 ---
 # <a name="plan-for-software-updates-in-configuration-manager"></a>Plánování aktualizací softwaru v Configuration Manager
 
@@ -24,7 +24,7 @@ ms.locfileid: "88123587"
 Než začnete používat aktualizace softwaru v produkčním prostředí Configuration Manager, je důležité projít si proces plánování. Dobrým plánem infrastruktury bodu aktualizace softwaru je klíč k úspěšné implementaci aktualizací softwaru. Informace o plánování kapacity pro aktualizace softwaru najdete v tématu věnovaném [velikostem a škálováním čísel](../../core/plan-design/configs/size-and-scale-numbers.md#software-update-point).
 
 
-##  <a name="determine-the-software-update-point-infrastructure"></a><a name="BKMK_SUPInfrastructure"></a>Určení infrastruktury bodu aktualizace softwaru  
+##  <a name="determine-the-software-update-point-infrastructure"></a><a name="BKMK_SUPInfrastructure"></a> Určení infrastruktury bodu aktualizace softwaru  
 
 Tato část obsahuje následující podtémata:    
 - [Seznam bodů aktualizace softwaru](#BKMK_SUPList)
@@ -68,7 +68,7 @@ Klient náhodně vybere bod aktualizace softwaru ze seznamu. Určuje prioritu bo
 -   **Internetoví klienti**: dostanou seznam bodů aktualizace softwaru, které nakonfigurujete tak, aby povolovaly připojení pouze z Internetu, nebo seznam bodů aktualizace softwaru, které umožňují připojení internetových a intranetových klientů.  
 
 
-###  <a name="software-update-point-switching"></a><a name="BKMK_SUPSwitching"></a>Přepínání bodů aktualizace softwaru  
+###  <a name="software-update-point-switching"></a><a name="BKMK_SUPSwitching"></a> Přepínání bodů aktualizace softwaru  
 
 > [!NOTE]  
 > Klienti používají skupiny hranic k vyhledání nového bodu aktualizace softwaru. Pokud jejich aktuální bod aktualizace softwaru již není přístupný, používají skupiny hranic k záložnímu a hledání nového. Přidejte jednotlivé body aktualizace softwaru do různých skupin hranic, abyste mohli řídit, které servery může klient najít. Další informace najdete v tématu [body aktualizace softwaru](../../core/servers/deploy/configure/boundary-groups.md#bkmk_sup).  
@@ -104,7 +104,7 @@ Když Configuration Manager obdrží některý z následujících kódů chyb we
 Chcete-li vyhledat význam kódu chyby, převeďte desítkový kód chyby na šestnáctkové a potom vyhledejte hexadecimální hodnotu v lokalitě, jako je například [Agent web Windows Update –](https://social.technet.microsoft.com/wiki/contents/articles/15260.windows-update-agent-error-codes.aspx)kód chyby. 2149842970 je hexadecimální 8024001A, což znamená, že WU_E_POLICY_NOT_SET nebyla nastavena hodnota zásad.  
 
 
-###  <a name="manually-switch-clients-to-a-new-software-update-point"></a><a name="BKMK_ManuallySwitchSUPs"></a>Ruční přepnutí klientů na nový bod aktualizace softwaru
+###  <a name="manually-switch-clients-to-a-new-software-update-point"></a><a name="BKMK_ManuallySwitchSUPs"></a> Ruční přepnutí klientů na nový bod aktualizace softwaru
 
 Pokud dojde k problémům s aktivním bodem aktualizace softwaru, přepínejte Configuration Manager klientů na nový bod aktualizace softwaru. Tato změna proběhne pouze v případě, že klient obdrží více bodů aktualizace softwaru z bodu správy.
 
@@ -134,7 +134,7 @@ Vytvoření jednoho nebo více bodů aktualizace softwaru v lokalitě pro podpor
 Máte například primární lokalitu ve struktuře A s dvěma softwarovými body (SUP01 a SUP02). Pro stejnou primární lokalitu máte také dva body aktualizace softwaru (SUP03 a SUP04) v doménové struktuře B. Při přechodu na další bod aktualizace softwaru budou klienti upřednostňovat servery ze stejné doménové struktury.  
 
 
-###  <a name="use-an-existing-wsus-server-as-the-synchronization-source-at-the-top-level-site"></a><a name="BKMK_WSUSSyncSource"></a>Použití existujícího serveru WSUS jako zdroje synchronizace v lokalitě nejvyšší úrovně  
+###  <a name="use-an-existing-wsus-server-as-the-synchronization-source-at-the-top-level-site"></a><a name="BKMK_WSUSSyncSource"></a> Použití existujícího serveru WSUS jako zdroje synchronizace v lokalitě nejvyšší úrovně  
 
 Lokalita vysoké úrovně ve vaší hierarchii je typicky nakonfigurována k synchronizaci metadat aktualizace softwaru pomocí služby Microsoft Update. Pokud zásady zabezpečení vaší organizace nedovolují lokalitě nejvyšší úrovně přístup k Internetu, nakonfigurujte zdroj synchronizace pro lokalitu nejvyšší úrovně tak, aby používal existující server WSUS. Tento server WSUS není ve vaší Configuration Manager hierarchii. Například máte server WSUS v síti připojené k Internetu (DMZ), ale lokalita nejvyšší úrovně je v interní síti bez přístupu k Internetu. Nakonfigurujte server WSUS v DMZ jako zdroj synchronizace pro metadata aktualizací softwaru. Nakonfigurujte server WSUS v DMZ tak, aby synchronizoval aktualizace softwaru se stejnými kritérii, jaká potřebujete v Configuration Manager. V opačném případě nemusí lokalita vysoké úrovně synchronizovat aktualizace softwaru, které byste očekávali. Při instalaci bodu aktualizace softwaru nakonfigurujte účet pro připojení k serveru WSUS. Tento účet potřebuje přístup k serveru WSUS v DMZ. Ověřte také, že brána firewall povoluje provoz pro příslušné porty. Další informace najdete v tématu [porty používané bodem aktualizace softwaru ke zdroji synchronizace](../../core/plan-design/hierarchy/ports.md#BKMK_PortsSUP-WSUS).  
 
@@ -144,7 +144,7 @@ Lokalita vysoké úrovně ve vaší hierarchii je typicky nakonfigurována k syn
 Bod aktualizace softwaru je v sekundární lokalitě volitelný. Nainstalujte pouze jeden bod aktualizace softwaru v sekundární lokalitě. Pokud bod aktualizace softwaru není nainstalován v sekundární lokalitě, zařízení v rámci hranic sekundární lokality používají bod aktualizace softwaru v přiřazené primární lokalitě. Bod aktualizace softwaru se obvykle nainstaluje v sekundární lokalitě, pokud je omezena šířka pásma sítě mezi zařízeními v sekundární lokalitě a body aktualizace softwaru v nadřazené primární lokalitě. Tuto konfiguraci můžete použít také v případě, že se bod aktualizace softwaru v primární lokalitě blíží limitu kapacity. Po úspěšné instalaci a konfiguraci bodu aktualizace softwaru v sekundární lokalitě se zásady pro všechny lokality aktualizují pro klienty a začnou používat nový bod aktualizace softwaru.  
 
 
-### <a name="plan-for-internet-based-clients"></a><a name="bkmk_internet-clients"></a>Plánování internetových klientů
+### <a name="plan-for-internet-based-clients"></a><a name="bkmk_internet-clients"></a> Plánování internetových klientů
 
 Pokud potřebujete spravovat zařízení, která se v síti přecházejí z vaší sítě na Internet, vytvořte plán, jak spravovat aktualizace softwaru na těchto zařízeních. Configuration Manager podporuje několik technologií pro tento scénář. Použijte jednu nebo kombinaci podle potřeby pro splnění požadavků vaší organizace.
 
@@ -164,7 +164,7 @@ Web Windows Update pro firmy vám umožní udržovat zařízení s Windows 10 v�
 Další informace najdete v tématu [integrace s web Windows Update pro firmy](../deploy-use/integrate-windows-update-for-business-windows-10.md).
 
 
-### <a name="plan-software-update-content"></a><a name="bkmk_content"></a>Plánování obsahu aktualizace softwaru
+### <a name="plan-software-update-content"></a><a name="bkmk_content"></a> Plánování obsahu aktualizace softwaru
 
 Klienti potřebují stáhnout soubory obsahu pro aktualizace softwaru, aby je bylo možné nainstalovat. Configuration Manager poskytuje několik technologií pro podporu správy a doručování tohoto obsahu. Nebo můžete nakonfigurovat nasazení aktualizací softwaru tak, aby klienti mohli nebo potřebují získávat obsah přímo z cloudové služby Microsoft Update.
 
@@ -186,7 +186,7 @@ Počínaje verzí 1806 není nutné při nasazování aktualizací softwaru vytv
 Internetoví klienti vždycky stahují obsah z cloudové služby Microsoft Update. Nedistribuujte balíčky pro nasazení aktualizace softwaru do distribučního bodu cloudu. Účtuje se vám úložiště s distribučním bodem cloudu, ale klienti tyto balíčky nestahují. 
 
 
-### <a name="plan-for-third-party-updates"></a><a name="bkmk_thirdparty"></a>Plánování aktualizací třetích stran
+### <a name="plan-for-third-party-updates"></a><a name="bkmk_thirdparty"></a> Plánování aktualizací třetích stran
 Configuration Manager se integruje se službou WSUS, která nativně podporuje aktualizace softwaru publikované Microsoftem. Většina zákazníků používá jiné aplikace třetích stran, které potřebují taky aktualizace. Existuje několik možností, které je potřeba vzít v úvahu, pokud chcete, aby byly aplikace třetích stran v aktuálním stavu.
 
 #### <a name="supersede-applications-to-update"></a>Nahradit aplikace, které se mají aktualizovat
@@ -206,7 +206,7 @@ Další informace najdete v tématu [System Center Updates Publisher](../tools/u
 
 
 
-##  <a name="plan-for-software-update-point-installation"></a><a name="BKMK_SUPInstallation"></a>Plánování instalace bodu aktualizace softwaru  
+##  <a name="plan-for-software-update-point-installation"></a><a name="BKMK_SUPInstallation"></a> Plánování instalace bodu aktualizace softwaru  
 
 Tato část obsahuje následující podtémata:  
 - [Požadavky na bod aktualizace softwaru](#BKMK_SUPSystemRequirements)
@@ -216,16 +216,16 @@ Tato část obsahuje následující podtémata:
 
 V této části najdete informace o krocích, které je potřeba provést k úspěšnému dokončení plánování a přípravy instalace bodu aktualizace softwaru. Než vytvoříte roli systému lokality pro bod aktualizace softwaru v Configuration Manager, je třeba zvážit několik požadavků. Konkrétní požadavky závisí na vaší infrastruktuře Configuration Manager. Když nakonfigurujete bod aktualizace softwaru tak, aby komunikoval pomocí protokolu HTTPS, je tato část obzvláště důležitá pro kontrolu. Servery s povoleným protokolem HTTPS vyžadují další kroky, aby správně fungovaly.  
 
-###  <a name="requirements-for-the-software-update-point"></a><a name="BKMK_SUPSystemRequirements"></a>Požadavky na bod aktualizace softwaru  
+###  <a name="requirements-for-the-software-update-point"></a><a name="BKMK_SUPSystemRequirements"></a> Požadavky na bod aktualizace softwaru  
 
 Nainstalujte roli bodu aktualizace softwaru v systému lokality, který splňuje minimální požadavky pro službu WSUS a podporované konfigurace pro Configuration Manager systémy lokality.  
 
--   Další informace o minimálních požadavcích na roli serveru WSUS v systému Windows Server najdete v tématu [Kontrola důležitých hodnot a požadavky na systém](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/plan/plan-your-wsus-deployment#11-review-considerations-and-system-requirements).  
+-   Další informace o minimálních požadavcích na roli serveru WSUS v systému Windows Server najdete v tématu [Kontrola důležitých hodnot a požadavky na systém](/windows-server/administration/windows-server-update-services/plan/plan-your-wsus-deployment#11-review-considerations-and-system-requirements).  
 
 -   Další informace o podporovaných konfiguracích systémů lokality Configuration Manager najdete v tématu [požadavky na lokalitu a systém lokality](../../core/plan-design/configs/site-and-site-system-prerequisites.md).  
 
 
-###  <a name="plan-for-wsus-installation"></a><a name="BKMK_PlanningForWSUS"></a>Plánování instalace služby WSUS  
+###  <a name="plan-for-wsus-installation"></a><a name="BKMK_PlanningForWSUS"></a> Plánování instalace služby WSUS  
 
 Nainstalujte podporovanou verzi služby WSUS na všechny servery systému lokality, které nakonfigurujete pro roli bodu aktualizace softwaru. Pokud nenainstalujete bod aktualizace softwaru na server lokality, nainstalujte konzolu pro správu služby WSUS na server lokality. Tato součást umožňuje serveru lokality komunikovat se službou WSUS, která běží v bodě aktualizace softwaru.  
 
@@ -235,7 +235,7 @@ Pokud používáte službu WSUS v systému Windows Server 2012 nebo novější, 
 
 -   Přidejte účet **NT AUTHORITY\SYSTEM** jako uživatele pro databázi WSUS (SUSDB). Nakonfigurujte minimálně členství v roli databáze webService.  
   
-Další informace o tom, jak nainstalovat službu WSUS na Windows Server, najdete v tématu [instalace role serveru WSUS](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/deploy/1-install-the-wsus-server-role).  
+Další informace o tom, jak nainstalovat službu WSUS na Windows Server, najdete v tématu [instalace role serveru WSUS](/windows-server/administration/windows-server-update-services/deploy/1-install-the-wsus-server-role).  
 
 Při instalaci více než jednoho bodu aktualizace softwaru v primární lokalitě použijte stejnou databázi WSUS pro všechny body aktualizace softwaru ve stejné doménové struktuře Active Directory. Sdílení stejné databáze zvyšuje výkon při přepnutí klientů na nový bod aktualizace softwaru. Další informace najdete v tématu [použití sdílené databáze služby WSUS pro body aktualizace softwaru](software-updates-best-practices.md#bkmk_shared-susdb).  
 
@@ -243,11 +243,11 @@ Při instalaci více než jednoho bodu aktualizace softwaru v primární lokalit
 
 Při instalaci služby WSUS budete muset zadat cestu k adresáři obsahu. Adresář obsahu služby WSUS se primárně používá k ukládání souborů licenčních podmínek pro software společnosti Microsoft, které jsou potřeba pro klienty během kontroly. Configuration Manager adresář obsahu služby WSUS by se neměl překrývat se zdrojovým adresářem obsahu pro balíčky nasazení Configuration Manager softwaru. Překrývající se adresář obsahu služby WSUS a zdroj Configuration Manager balíčku budou mít za následek odebrání nesprávného souboru z adresáře obsahu služby WSUS.
 
-####  <a name="configure-wsus-to-use-a-custom-website"></a><a name="BKMK_CustomWebSite"></a>Konfigurace služby WSUS pro použití vlastního webu  
+####  <a name="configure-wsus-to-use-a-custom-website"></a><a name="BKMK_CustomWebSite"></a> Konfigurace služby WSUS pro použití vlastního webu  
 Při instalaci serveru WSUS je možné použít existující výchozí web IIS nebo vytvořit vlastní web WSUS. Vytvořte vlastní web pro server WSUS, aby služba IIS byla hostitelem služeb WSUS ve vyhrazeném virtuálním webu. V opačném případě sdílí stejný web, který používají ostatní systémy nebo aplikace Configuration Manager lokality. Tato konfigurace je zvlášť nutná při instalaci role bodu aktualizace softwaru na server lokality. Pokud spustíte službu WSUS v systému Windows Server 2012 nebo novější, bude služba WSUS ve výchozím nastavení nakonfigurována tak, aby používala port 8530 pro protokol HTTP a port 8531 pro protokol HTTPS. Při vytváření bodu aktualizace softwaru v lokalitě zadejte tyto porty.  
 
 
-####  <a name="use-an-existing-wsus-infrastructure"></a><a name="BKMK_WSUSInfrastructure"></a>Použití existující infrastruktury služby WSUS  
+####  <a name="use-an-existing-wsus-infrastructure"></a><a name="BKMK_WSUSInfrastructure"></a> Použití existující infrastruktury služby WSUS  
 Než nainstalujete Configuration Manager jako bod aktualizace softwaru, vyberte server WSUS, který byl aktivní ve vašem prostředí. Pokud je bod aktualizace softwaru nakonfigurován, zadejte nastavení synchronizace. Configuration Manager se připojí k serveru WSUS, na kterém běží na serveru bodu aktualizace softwaru, a nakonfiguruje službu WSUS se stejným nastavením. 
 
 Před konfigurací serveru jako bodu aktualizace softwaru Porovnejte konfiguraci produktů a klasifikací s nastavením Configuration Manager. Pokud jste existující server WSUS synchronizovali před jeho konfigurací jako bod aktualizace softwaru a seznam produktů a klasifikací se liší, synchronizuje všechna metadata aktualizací softwaru bez ohledu na nakonfigurované nastavení. Výsledkem tohoto chování je neočekávaná metadata aktualizace softwaru v databázi lokality. 
@@ -265,7 +265,7 @@ Použijte protokol SSL k zajištění zabezpečení bodu aktualizace softwaru. S
 Když nainstalujete a nakonfigurujete bod aktualizace softwaru, vyberte možnost **povolení komunikace SSL pro server WSUS**. V opačném případě Configuration Manager nakonfiguruje službu WSUS, aby nepoužívala protokol SSL. Pokud povolíte protokol SSL v bodě aktualizace softwaru, nakonfigurujte také všechny body aktualizace softwaru v podřízených lokalitách, aby používaly protokol SSL.  
 
 
-###  <a name="configure-firewalls"></a><a name="BKMK_ConfigureFirewalls"></a>Konfigurace bran firewall  
+###  <a name="configure-firewalls"></a><a name="BKMK_ConfigureFirewalls"></a> Konfigurace bran firewall  
 
 Bod aktualizace softwaru v Configuration Manager lokalitě centrální správy komunikuje se službou WSUS v bodu aktualizace softwaru. Služba WSUS komunikuje se zdrojem synchronizace a synchronizuje metadata aktualizací softwaru. Body aktualizace softwaru v podřízené lokalitě komunikují s bodem aktualizace softwaru v nadřazené lokalitě. Pokud je v primární lokalitě více než jeden bod aktualizace softwaru, budou další body aktualizace softwaru komunikovat s výchozím bodem aktualizace softwaru. Výchozí rolí je první bod aktualizace softwaru nainstalovaný v lokalitě.  
 
@@ -352,7 +352,7 @@ Nakonfigurujte nastavení klasifikace aktualizace pouze v lokalitě nejvyšší 
 >  Jako osvědčený postup vymažte všechny klasifikace před prvním synchronizací. Po počáteční synchronizaci vyberte požadované klasifikace a pak znovu spusťte synchronizaci.  
 
 
-###  <a name="products"></a><a name="BKMK_UpdateProducts"></a>Produktech  
+###  <a name="products"></a><a name="BKMK_UpdateProducts"></a> Produktech  
 
 Metadata pro jednotlivé aktualizace softwaru definují jeden nebo více produktů, pro které je aktualizace k dispozici. Produkt je konkrétní edice operačního systému nebo aplikace. Příkladem produktu je Microsoft Windows 10. Produktová řada je základní operační systém nebo aplikace, ze které jsou jednotlivé produkty odvozené. Příkladem produktové řady je Microsoft Windows, z něhož jsou členové Windows 10 a Windows Server 2016 členy. Vyberte produktovou řadu nebo jednotlivé produkty v rámci řady produktů.  
 
@@ -364,7 +364,7 @@ Nastavení produktu konfigurujte pouze v lokalitě nejvyšší úrovně. Nastave
 >  Configuration Manager ukládá seznam produktů a řad produktů, které si vyberete při první instalaci bodu aktualizace softwaru. Produkty a řady produktů vydané po vydání Configuration Manager nemusí být k dispozici pro výběr, dokud nedokončíte synchronizaci. Proces synchronizace aktualizuje seznam dostupných produktů a rodin produktů, ze kterých si můžete vybrat. Před první synchronizací aktualizací softwaru vymažte všechny produkty. Po počáteční synchronizaci vyberte požadované produkty a pak znovu spusťte synchronizaci.  
 
 
-###  <a name="supersedence-rules"></a><a name="BKMK_SupersedenceRules"></a>Pravidla nahrazení  
+###  <a name="supersedence-rules"></a><a name="BKMK_SupersedenceRules"></a> Pravidla nahrazení  
 
 Aktualizace softwaru, která nahrazuje jinou aktualizaci softwaru, má typicky některé z těchto vlastností:  
 
@@ -388,7 +388,7 @@ Zvažte následující scénáře, ve kterých může být zapotřebí nasadit n
     > - Před verzí 1806 Configuration Manager, když Configuration Manager nastaví platnost nahrazené aktualizace softwaru na **vypršela**, nenastaví aktualizaci na **Odmítnuto** ve službě WSUS. Klienti budou pokračovat ve vyhledávání aktualizace s vypršenou platností, dokud se aktualizace neodmítla ručně nebo prostřednictvím vlastního skriptu.  Po Configuration Manager verze 1806 Configuration Manager také odmítnou nahrazené aktualizace ve službě WSUS. Další informace o úloze vyčištění služby WSUS najdete v tématu [Údržba aktualizací softwaru](../deploy-use/software-updates-maintenance.md).
     > - Od verze Configuration Manager 1810 můžete určit chování pravidel nahrazení pro **aktualizace funkcí** odděleně od **aktualizací bez funkcí**.
 
-###  <a name="languages"></a><a name="BKMK_UpdateLanguages"></a>Jazyky  
+###  <a name="languages"></a><a name="BKMK_UpdateLanguages"></a> Jazyky  
 
 Nastavení jazyka bodu aktualizace softwaru vám umožní nakonfigurovat tyto možnosti: 
 - Jazyky, pro které se mají synchronizovat souhrnné detaily (metadata aktualizací softwaru) pro aktualizace softwaru  
@@ -417,7 +417,7 @@ Nastavení souhrnných podrobností konfigurujte pouze v lokalitě nejvyšší �
 >  Vyberte všechny jazyky souhrnných detailů, které potřebujete. Když se bod aktualizace softwaru v lokalitě nejvyšší úrovně synchronizuje se zdrojem synchronizace, vybrané jazyky souhrnných detailů určí metadata aktualizací softwaru, která načte. Pokud upravíte jazyky souhrnných detailů poté, co synchronizace proběhla alespoň jednou, načte metadata aktualizací softwaru pro upravené jazyky souhrnných detailů pouze pro nové nebo aktualizované aktualizace softwaru. Aktualizace softwaru, které již byly synchronizovány, nebudou aktualizovány novými metadaty pro upravené jazyky, pokud nedošlo ke změně aktualizace softwaru ve zdroji synchronizace.
 
 
-###  <a name="maximum-run-time"></a><a name="bkmk_maxruntime"></a>Maximální doba běhu
+###  <a name="maximum-run-time"></a><a name="bkmk_maxruntime"></a> Maximální doba běhu
 <!--3734426-->
 *(Představené ve verzi 1906)*
 
@@ -444,7 +444,7 @@ Počínaje verzí 1906 můžete zadat maximální dobu, po kterou musí být ins
 > [!NOTE]
 > Ve verzi 1906 není maximální doba běhu k dispozici při instalaci bodu aktualizace softwaru nejvyšší úrovně. Po instalaci upravte maximální dobu běhu v bodu aktualizace softwaru nejvyšší úrovně.
 
-##  <a name="plan-for-a-software-updates-maintenance-window"></a><a name="BKMK_MaintenanceWindow"></a>Plán pro okno údržby aktualizací softwaru  
+##  <a name="plan-for-a-software-updates-maintenance-window"></a><a name="BKMK_MaintenanceWindow"></a> Plán pro okno údržby aktualizací softwaru  
 
 Přidejte časové období údržby určené pro instalaci aktualizací softwaru. Tato akce vám umožní nakonfigurovat obecné okno údržby a jiné časové období údržby pro aktualizace softwaru. Při konfiguraci okna obecné údržby a okna údržby aktualizací softwaru budou klienti instalovat aktualizace softwaru pouze během okna údržby aktualizací softwaru. 
 
@@ -459,7 +459,7 @@ Když je aktualizace softwaru, která vyžaduje restart, nasazená a nainstalova
 
 Když je u Configuration Manager aktualizace softwaru čeká na restartování, možnost **aktualizace a restartování** a **aktualizace a vypnutí** je k dispozici na počítačích s Windows 10 v možnostech napájení systému Windows. Po použití jedné z těchto možností se dialogové okno pro restartování nezobrazí po restartování počítače. V některých případech může operační systém odebrat nedokončené možnosti restartování. K tomu může dojít, pokud je povolená funkce rychlého spuštění ve Windows 10. Další informace najdete v tématu [aktualizace, které se nedají nainstalovat s rychlým spuštěním ve Windows 10](https://support.microsoft.com/help/4011287/windows-updates-not-install-with-fast-startup).
 
-## <a name="evaluate-software-updates-after-a-servicing-stack-update"></a><a name="bkmk_ssu"></a>Vyhodnotit aktualizace softwaru po aktualizaci servisního zásobníku
+## <a name="evaluate-software-updates-after-a-servicing-stack-update"></a><a name="bkmk_ssu"></a> Vyhodnotit aktualizace softwaru po aktualizaci servisního zásobníku
 <!--4639943-->
 Počínaje verzí 2002 Configuration Manager zjistí, zda je aktualizace cestou nadřazené (Servicing Stack) součástí instalace více aktualizací. Po zjištění cestou nadřazené se nainstalují jako první. Po instalaci cestou nadřazené se spustí cyklus vyhodnocení aktualizace softwaru, který nainstaluje zbývající aktualizace. Tato změna umožňuje instalaci závislé kumulativní aktualizace po aktualizaci zásobníku pro údržbu. Zařízení není nutné restartovat mezi instalacemi a nemusíte vytvářet další časové období údržby. SSUs se instalují jenom pro instalace, které neinicioval uživatel. Například pokud uživatel zahájí instalaci pro více aktualizací z centra softwaru, cestou nadřazené nemusí být nainstalován jako první. Instalace SSUs není k dispozici pro operační systémy Windows Server při použití Configuration Manager verze 2002. <!--7813007-->Tato funkce se přidala ve verzi Configuration Manager 2006 pro operační systémy Windows Server.
 

@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: d52725e0127f7129a3962cd3ef178d2540bb785a
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 1836a4c7d08547405dad08d7e60eb108d0dfd00f
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905736"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695711"
 ---
 # <a name="capabilities-in-technical-preview-1605-for-configuration-manager"></a>Funkce ve verzi Technical Preview 1605 pro Configuration Manager
 
@@ -32,7 +32,7 @@ V tomto článku se seznámíte s funkcemi, které jsou k dispozici v Technical 
 
   **V následující části najdete nové funkce, které můžete s touto verzí vyzkoušet.**  
 
-##  <a name="per-app-vpn-for-windows-10-devices"></a><a name="BKMK_PerAppVPN"></a>SÍŤ VPN pro jednotlivé aplikace pro zařízení s Windows 10  
+##  <a name="per-app-vpn-for-windows-10-devices"></a><a name="BKMK_PerAppVPN"></a> SÍŤ VPN pro jednotlivé aplikace pro zařízení s Windows 10  
  Pro zařízení s Windows 10 spravovaná pomocí služby Configuration Manager s Intune můžete přidat seznam aplikací, které automaticky otevřou připojení VPN, které jste nakonfigurovali prostřednictvím konzoly pro správu Configuration Manager. Máte možnost omezit provoz sítě VPN na tyto aplikace nebo můžete nadále povolit veškerý provoz prostřednictvím připojení VPN.  
 
  **Požadavky**:  
@@ -41,17 +41,17 @@ V tomto článku se seznámíte s funkcemi, které jsou k dispozici v Technical 
 
 -   Profil sítě VPN s Windows 10, který se nasadil aspoň na jedno zařízení  
 
-##  <a name="improvements-to-the-install-software-updates-task-sequence"></a><a name="BKMK_InstallSU"></a>Vylepšení pořadí úkolů instalovat aktualizace softwaru  
+##  <a name="improvements-to-the-install-software-updates-task-sequence"></a><a name="BKMK_InstallSU"></a> Vylepšení pořadí úkolů instalovat aktualizace softwaru  
  V pořadí úkolů instalovat aktualizace softwaru byla provedena následující vylepšení:  
 
 -   K dispozici je nová proměnná pořadí úloh SMSTSSoftwareUpdateScanTimeout, která vám dává možnost řídit časový limit kontroly aktualizací softwaru během kroku pořadí úkolů instalovat aktualizace softwaru. Výchozí hodnota je 30 minut.  
 
 -   Bylo vylepšeno protokolování. Soubor protokolu souboru Smsts. log bude obsahovat nové položky protokolu, které odkazují na další soubory protokolů, které vám pomůžou při řešení potíží během procesu instalace aktualizací softwaru.  
 
-##  <a name="improvements-to-the-prepare-configmgr-client-for-capture-task-sequence-step"></a><a name="BKMK_PrepareConfigMgrClient"></a>Vylepšení kroku pořadí úkolů připravit klienta nástroje ConfigMgr pro zaznamenání  
+##  <a name="improvements-to-the-prepare-configmgr-client-for-capture-task-sequence-step"></a><a name="BKMK_PrepareConfigMgrClient"></a> Vylepšení kroku pořadí úkolů připravit klienta nástroje ConfigMgr pro zaznamenání  
  Krok připravit klienta nástroje ConfigMgr teď zcela odebere klienta Configuration Manager, místo aby se odebraly jenom informace o klíči. Když pořadí úkolů nasadí zaznamenanou bitovou kopii operačního systému, nainstaluje se pokaždé Configuration Manager klienta.  
 
-##  <a name="grace-period-for-required-application-deployments"></a><a name="BKMK_Grace"></a>Období odkladu pro požadovaná nasazení aplikace  
+##  <a name="grace-period-for-required-application-deployments"></a><a name="BKMK_Grace"></a> Období odkladu pro požadovaná nasazení aplikace  
  V některých případech můžete chtít dát uživatelům více času na instalaci požadovaných nasazení aplikací nad rámec všech nakonfigurovaných termínů. Například pokud se koncový uživatel vrátil jenom z dovolené, může se stát, že budou muset počkat delší dobu, než se nainstalují opožděná nasazení aplikací. Nicméně můžou aplikaci hned nainstalovat kdykoli, kdykoli chtějí.  
 
  Chcete-li tento problém vyřešit, můžete nyní definovat **dobu odkladu** nasazením Configuration Manager nastavení klienta do kolekce.  
@@ -68,7 +68,7 @@ V tomto článku se seznámíte s funkcemi, které jsou k dispozici v Technical 
 
    Podobné možnosti byly přidány do Průvodce nasazením aktualizací softwaru, Průvodce pravidly automatického nasazení a stránky vlastností. V této verzi Technical Preview se ale v tuto chvíli neimplementují.  
 
-##  <a name="new-experience-for-remote-device-actions"></a><a name="BKMK_Remote"></a>Nové prostředí pro akce se vzdáleným zařízením  
+##  <a name="new-experience-for-remote-device-actions"></a><a name="BKMK_Remote"></a> Nové prostředí pro akce se vzdáleným zařízením  
  Bylo vylepšeno prostředí pro provádění akcí se vzdáleným zařízením z konzoly Configuration Manager.  
 Běžné akce, jako je **vyřazení/vymazání**, **resetování hesla**, **vzdálené uzamčení**a **obejití zámek aktivace** , se teď dají najít v nabídce **Akce vzdáleného zařízení** , ke které přistupovali z pracovního prostoru **prostředky a kompatibilita** .  
 
@@ -82,7 +82,7 @@ Běžné akce, jako je **vyřazení/vymazání**, **resetování hesla**, **vzd�
 
 - Na hlavní stránce uzlu **zařízení** (ve výchozím nastavení se nemusí zobrazit všechny sloupce).  
 
-##  <a name="windows-store-for-business-apps"></a><a name="BKMK_WSFB"></a>Aplikace pro Windows Store pro firmy  
+##  <a name="windows-store-for-business-apps"></a><a name="BKMK_WSFB"></a> Aplikace pro Windows Store pro firmy  
  [Windows Store pro firmy](https://www.microsoft.com/business-store) je místo, kde můžete najít a zakoupit aplikace pro svou organizaci, a to jednotlivě i na svazku. Když obchod připojíte k Configuration Manager, můžete spravovat hromadně zakoupené aplikace z konzoly Configuration Manager, například:  
 
 - Seznam zakoupených aplikací můžete synchronizovat s Configuration Manager  
@@ -153,7 +153,7 @@ Běžné akce, jako je **vyřazení/vymazání**, **resetování hesla**, **vzd�
 >   
 >  V tuto chvíli nemůžete nasazovat online licencované aplikace pomocí Configuration Manager.  
 
-##  <a name="general-improvements-for-volume-purchased-apps"></a><a name="BKMK_VPP2"></a>Obecná vylepšení pro hromadně zakoupené aplikace  
+##  <a name="general-improvements-for-volume-purchased-apps"></a><a name="BKMK_VPP2"></a> Obecná vylepšení pro hromadně zakoupené aplikace  
 
 -   V této verzi se hromadně zakoupené aplikace z Windows Storu pro firmy a obchodu s aplikacemi pro iOS nakupovaly do stejného zobrazení – **informace o licencích pro aplikace pro Store**.  
 
@@ -165,14 +165,14 @@ Běžné akce, jako je **vyřazení/vymazání**, **resetování hesla**, **vzd�
 
 -   Umístění, které použijete k získání a nahrání tokenu Apple VPP pro hromadně zakoupené aplikace v konzole Configuration Manager, se změnilo. Nyní to můžete provést v pracovním prostoru **správce** pod uzlem **Cloud Services**  >  **Apple Volume purchase program tokeny** .  
 
-##  <a name="enterprise-data-protection-edp"></a><a name="BKMK_VPP"></a>Ochrana podnikových dat (EDP)  
+##  <a name="enterprise-data-protection-edp"></a><a name="BKMK_VPP"></a> Ochrana podnikových dat (EDP)  
  Můžete vytvořit položky konfigurace, které umožňují nasadit zásady ochrany podnikových dat (EDP), včetně toho, abyste si vybrali chráněné aplikace, úroveň ochrany EDP a našli podniková data v síti. Další informace o EDP najdete v následujících tématech:  
 
-- [Ochrana podnikových dat pomocí Information Protection Windows (NV)](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip)
-- [Vytvoření a nasazení zásady Information Protection Windows (nedokončené výroby) pomocí Configuration Manager](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/create-wip-policy-using-configmgr)
+- [Ochrana podnikových dat pomocí Information Protection Windows (NV)](/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip)
+- [Vytvoření a nasazení zásady Information Protection Windows (nedokončené výroby) pomocí Configuration Manager](/windows/security/information-protection/windows-information-protection/create-wip-policy-using-configmgr)
 
 
-##  <a name="end-users-can-install-apps-from-the-company-portal"></a><a name="BKMK_End"></a>Koncoví uživatelé mohou instalovat aplikace z Portál společnosti  
+##  <a name="end-users-can-install-apps-from-the-company-portal"></a><a name="BKMK_End"></a> Koncoví uživatelé mohou instalovat aplikace z Portál společnosti  
  Místní MDM se zavedla ve verzi Configuration Manager 1511. V předchozích verzích jste mohli nasadit aplikace na zařízení s Windows 10 spravovaná pomocí MDM s účelem nasazení **požadovaná** instalace pro místní zařízení spravovaná pomocí MDM.  
 
  V této verzi teď můžete nasazovat aplikace s účelem nasazení **dostupným** pro uživatele místních počítačů s Windows 10, které jsou spravované v MDM, a uživatelé teď můžou tyto aplikace nainstalovat sami z portál společnosti.
@@ -236,7 +236,7 @@ V této verzi Technical Preview se uživateli zobrazí chybová zpráva, pokud j
 
    2. Spustit rutinu **Set-ExecutionPolicy RemoteSigned**  
 
-   3. V ** &lt; instalačním adresáři složky SCCM \> \CD.latest\SMSSETUP\TOOLS\MDM** spustit **.\ConfigurationScript.ps1**  
+   3. V ** &lt; instalačním adresáři složky SCCM \> \CD.latest\SMSSETUP\TOOLS\MDM** spusťte **.\ConfigurationScript.ps1**  
 
       Konfigurační skript provede následující akce:  
 
@@ -263,12 +263,12 @@ V této verzi Technical Preview se uživateli zobrazí chybová zpráva, pokud j
 
      Po otevření Portál společnosti se zobrazí dialogové okno ověřování s názvem **Configuration Manager** zadání přihlašovacích údajů uživatele Active Directory (ve formě user@domain nebo doména \ Uživatel) pro přihlášení.  
 
-##  <a name="new-tabs-for-updates-and-operating-systems-in-software-center"></a><a name="BKMK_SW1"></a>Nové karty pro aktualizace a operační systémy v centru softwaru  
+##  <a name="new-tabs-for-updates-and-operating-systems-in-software-center"></a><a name="BKMK_SW1"></a> Nové karty pro aktualizace a operační systémy v centru softwaru  
  V této verzi byly provedeny následující změny pro zlepšení rozložení aplikace Software Center:  
 
 -   Karta **aplikace** byla rozdělena na tři samostatné karty pro **aktualizace**, **operační systémy** (které byly v seznamu **filtrů** dříve nalezeny) a **aplikace**.  
 
-##  <a name="service-a--server-group"></a><a name="BKMK_ServerGroups"></a>Obsluha skupiny serverů  
+##  <a name="service-a--server-group"></a><a name="BKMK_ServerGroups"></a> Obsluha skupiny serverů  
  Technical Preview pro Configuration Manager, verze 1511, zahrnoval možnost vytvořit kolekci, kde všechna zařízení v kolekci tvoří skupinu serverů. Pak můžete nakonfigurovat nastavení skupiny serveru tak, aby se používalo při nasazení aktualizací softwaru do skupiny serverů, řídit procento počítačů, které se v daném čase aktualizují, a nakonfigurovat skripty PowerShellu pro předběžné nasazení a následné nasazení, které budou spouštět vlastní akce.  
 
  Technical Preview pro Configuration Manager, verze 1605, přidává možnost aktualizovat počítače ve skupině serverů v zadaném pořadí, které definujete, přidá rozšířené monitorování pro zobrazení stavu počítačů ve skupině serverů a poskytuje možnost Vymazat zámky nasazení, které jsou užitečné, když se klienti neúspěšně nainstalovali aktualizace softwaru a brání ostatním klientům v instalaci aktualizací softwaru.  
@@ -280,7 +280,7 @@ V této verzi Technical Preview se uživateli zobrazí chybová zpráva, pokud j
 
 -   Můžu určit, že počítače v serverové skupině budou instalovat aktualizace softwaru v určitém pořadí na základě nastavení skupiny serverů pro tuto kolekci. Pomocí ukázkových skriptů v postupu určete skripty před nasazením a po nasazení.  
 
--   Můžu do této kolekce nasadit aktualizaci softwaru. Zkontrolujte soubory Start. txt a end. txt (vytvořené z ukázkových skriptů) v C:\Temp a ověřte počáteční a koncový časy nasazení v počítačích ve skupině serverů. Další informace najdete v souboru UpdatesDeployment. log.  
+-   Můžu do této kolekce nasadit aktualizaci softwaru. Zkontrolujte soubory start.txt a end.txt (vytvořené z ukázkových skriptů) v C:\Temp a ověřte počáteční a koncový časy nasazení na počítačích ve skupině serverů. Další informace najdete v souboru UpdatesDeployment. log.  
 
 #### <a name="to-create-a-collection-for-a-server-group"></a>Vytvoření kolekce pro skupinu serverů  
 
@@ -335,7 +335,7 @@ V této verzi Technical Preview se uživateli zobrazí chybová zpráva, pokud j
 
 2.  Na kartě **Domů** ve skupině **nasazení** klikněte na **Vymazat zámky nasazení skupiny serverů**. Pokud se klientům nepodařilo nainstalovat aktualizace softwaru a zabráníte ostatním klientům v instalaci aktualizací softwaru, je možné zámky nasazení ručně vymazat.  
 
-##  <a name="support-for-microsoft-defender-advanced-threat-protection-service"></a><a name="BKMK_ATP"></a>Podpora služby Microsoft Defender Advanced Threat Protection  
+##  <a name="support-for-microsoft-defender-advanced-threat-protection-service"></a><a name="BKMK_ATP"></a> Podpora služby Microsoft Defender Advanced Threat Protection  
  Microsoft Defender Advanced Threat Protection (ATP) je služba, která podnikům pomůže odhalit, prozkoumat a reagovat na pokročilé útoky v jejich sítích. Microsoft Defender ATP se dřív jmenovala jako ochrana ATP v programu Windows Defender. Přečtěte si další informace o [ATP Microsoft Defenderu](https://blogs.windows.com/windowsexperience/2016/03/01/announcing-windows-defender-advanced-threat-protection). Configuration Manager vám může pomáhat s připojováním a monitorováním spravovaných klientských zařízení s Windows 10 a Home Edition.  
 
 ### <a name="try-it-now"></a>Vyzkoušejte si ji hned teď!  
@@ -402,7 +402,7 @@ V této verzi Technical Preview se uživateli zobrazí chybová zpráva, pokud j
 
         -   Nepoužily se **žádné** připojené zásady, ale agent neohlásil připojení zásad.  
 
-##  <a name="on-premises-device-health-attestation"></a><a name="BKMK_DHA"></a>Místní Ověření stavu zařízení  
+##  <a name="on-premises-device-health-attestation"></a><a name="BKMK_DHA"></a> Místní Ověření stavu zařízení  
  Ověření stavu pro zařízení s Windows 10 se teď dá nakonfigurovat tak, aby komunikovala s místní infrastrukturou. Správci můžou určit, jestli se vytváření sestav provádí prostřednictvím cloudu nebo místních prostředků. Pokud je pro vytváření sestav Health Attestation vybraná možnost místní, dá se pro službu zadat adresa URL. To umožňuje klientským počítačům bez přístupu k Internetu povolit a spravovat zařízení pomocí ověření stavu.  
 
 ### <a name="enable-health-attestation-for-on-premises-devices"></a>Povolit ověření stavu pro místní zařízení  
@@ -412,10 +412,10 @@ V této verzi Technical Preview se uživateli zobrazí chybová zpráva, pokud j
 
 2.  Zadejte **Adresu URL místní služby Ověření stavu** a poté klikněte na **OK**.  
 
-##  <a name="new-restart-options-for-windows-10-clients-after-software-update-installation"></a><a name="BKMK_RestartOptions"></a>Nové možnosti restartování klientů s Windows 10 po instalaci aktualizací softwaru  
+##  <a name="new-restart-options-for-windows-10-clients-after-software-update-installation"></a><a name="BKMK_RestartOptions"></a> Nové možnosti restartování klientů s Windows 10 po instalaci aktualizací softwaru  
  Když je aktualizace softwaru, která vyžaduje restart, nasazená pomocí Configuration Manager a nainstalovaná na počítači, zobrazí se dialogové okno čeká na restartování a zobrazí se dialogové okno restartování. Pokud jste v současnosti v systému Windows 8 nebo novějším počítač vypnuli nebo restartujete pomocí možností napájení systému Windows (místo z dialogového okna restartování), dialogové okno restartovat zůstane po restartování počítače a počítač bude muset restartovat v nakonfigurovaném termínu. V této verzi Technical Preview bude možnost **aktualizovat a restartovat** a **aktualizovat a vypnout** bude k dispozici v počítačích s Windows 10 v možnostech napájení systému Windows vždy, když dojde k restartování Configuration Manager aktualizace softwaru. Po použití jedné z těchto možností se po restartování počítače nezobrazí dialogové okno restartování.  
 
-##  <a name="pre-declare-corporate-owned-devices-with-imei-or-ios-serial-number"></a><a name="BKMK_IMEI"></a>Předem deklarovat zařízení vlastněná společností pomocí sériového čísla IMEI nebo iOS  
+##  <a name="pre-declare-corporate-owned-devices-with-imei-or-ios-serial-number"></a><a name="BKMK_IMEI"></a> Předem deklarovat zařízení vlastněná společností pomocí sériového čísla IMEI nebo iOS  
  Teď můžete identifikovat zařízení vlastněná firmou tím, že importujete jejich mezinárodní čísla identity mobilních zařízení (IMEI). Můžete nahrát textový soubor s oddělovači (. csv), který obsahuje čísla zařízení IMEI, nebo můžete ručně zadat informace o zařízení.  Můžete také naimportovat sériová čísla pro zařízení s iOS.  Importované informace nastaví vlastnictví zařízení, která se registrují jako "podnik".  Pro každého uživatele, který přistupuje ke službě, se stále vyžaduje licence Intune.  
 
 ### <a name="try-it-out"></a>Určitě to udělejte!  
@@ -463,4 +463,4 @@ V této verzi Technical Preview se uživateli zobrazí chybová zpráva, pokud j
 
      Klikněte na **Další**.  
 
-4. Zkontrolujte výsledky importu souboru. Dříve importovaná čísla IMEI nebo sériová čísla se budou aktualizovat o nové podrobnosti.  Pokračujte kliknutím na tlačítko **Další** nebo **zpět** , abyste zachovali aktualizované podrobnosti, a pak dokončete průvodce.  
+4. Zkontrolujte výsledky importu souboru. Dříve importovaná čísla IMEI nebo sériová čísla se budou aktualizovat o nové podrobnosti.  Pokračujte kliknutím na tlačítko **Další** nebo **zpět** , abyste zachovali aktualizované podrobnosti, a pak dokončete průvodce.

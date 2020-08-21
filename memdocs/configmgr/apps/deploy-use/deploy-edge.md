@@ -10,20 +10,20 @@ ms.assetid: 73b420be-5d6a-483a-be66-c4d274437508
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 423864c2c954cc67da4ef54d55d7263ae346e786
-ms.sourcegitcommit: 24ce7df7dadf2385afe364b817ec58feeb04c700
+ms.openlocfilehash: cc10f262e4639ffdd8513bece662116f5ed39516
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86212296"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695363"
 ---
 # <a name="microsoft-edge-management"></a>Správa Microsoft Edge
 
 *Platí pro: Configuration Manager (Current Branch)*
 
-Microsoft Edge pro všechny nové je připravený pro firmy. Od verze Configuration Manager 1910 teď můžete k vašim uživatelům nasadit [Microsoft Edge, verze 77 a novější](https://docs.microsoft.com/deployedge/) . Skript PowerShellu se používá k instalaci hraničního sestavení vybraného. Skript také vypne automatické aktualizace pro Edge, aby bylo možné je spravovat pomocí Configuration Manager.
+Microsoft Edge pro všechny nové je připravený pro firmy. Od verze Configuration Manager 1910 teď můžete k vašim uživatelům nasadit [Microsoft Edge, verze 77 a novější](/deployedge/) . Skript PowerShellu se používá k instalaci hraničního sestavení vybraného. Skript také vypne automatické aktualizace pro Edge, aby bylo možné je spravovat pomocí Configuration Manager.
 
-## <a name="deploy-microsoft-edge"></a><a name="bkmk_Microsoft_Edge"></a>Nasazení Microsoft Edge
+## <a name="deploy-microsoft-edge"></a><a name="bkmk_Microsoft_Edge"></a> Nasazení Microsoft Edge
 <!--4561024-->
 Správci si můžou vybrat beta verzi, vývoj nebo stabilní kanál spolu s verzí klienta Microsoft Edge, která se má nasadit. Každé vydání zahrnuje učení a vylepšení od našich zákazníků a komunity.
 
@@ -31,7 +31,7 @@ Správci si můžou vybrat beta verzi, vývoj nebo stabilní kanál spolu s verz
 
 Pro klienty cílené na nasazení Microsoft Edge:
 
-- [Zásady spouštění](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_execution_policies) prostředí PowerShell nemůžou být nastavené na omezené.
+- [Zásady spouštění](/powershell/module/microsoft.powershell.core/about/about_execution_policies) prostředí PowerShell nemůžou být nastavené na omezené.
   - K provedení instalace se provede PowerShell.
 
 - Instalační program Microsoft Edge a [CMPivot](../../core/servers/manage/cmpivot.md) se podepisují pomocí certifikátu **Microsoft Code Signing** Certificate. Pokud tento certifikát není uvedený v úložišti **důvěryhodných vydavatelů** , budete ho muset přidat. V opačném případě se instalační program Microsoft Edge a CMPivot nespustí, pokud jsou zásady spouštění prostředí PowerShell nastavené na **AllSigned**. <!--7585106-->
@@ -43,11 +43,11 @@ Zařízení, na kterém běží Konzola Configuration Manager, potřebuje přís
 |`https://edgeupdates.microsoft.com/api/products?view=enterprise`|Informace o vydaných verzích Microsoft Edge|
 |`http://dl.delivery.mp.microsoft.com`|Obsah pro Microsoft Edge releases|
 
-### <a name="verify-microsoft-edge-update-policies"></a><a name="bkmk_autoupdate"></a>Ověření zásad aktualizace Microsoft Edge
+### <a name="verify-microsoft-edge-update-policies"></a><a name="bkmk_autoupdate"></a> Ověření zásad aktualizace Microsoft Edge
 
 #### <a name="configuration-manager-version-1910"></a>Configuration Manager verze 1910
 
-Při nasazení Microsoft Edge ve verzi 1910 instalační skript vypne automatické aktualizace pro Microsoft Edge, aby bylo možné je spravovat pomocí Configuration Manager. Toto chování můžete změnit pomocí Zásady skupiny. Další informace najdete v tématu [Plánování nasazení Microsoft Edge](https://docs.microsoft.com/deployedge/deploy-edge-plan-deployment#define-and-configure-policies) a [zásad aktualizace Microsoft Edge](https://docs.microsoft.com/DeployEdge/microsoft-edge-update-policies).
+Při nasazení Microsoft Edge ve verzi 1910 instalační skript vypne automatické aktualizace pro Microsoft Edge, aby bylo možné je spravovat pomocí Configuration Manager. Toto chování můžete změnit pomocí Zásady skupiny. Další informace najdete v tématu [Plánování nasazení Microsoft Edge](/deployedge/deploy-edge-plan-deployment#define-and-configure-policies) a [zásad aktualizace Microsoft Edge](/DeployEdge/microsoft-edge-update-policies).
 
 #### <a name="configuration-manager-version-2002-and-later"></a>Configuration Manager verze 2002 a novější
 <!--4561024-->
@@ -103,7 +103,7 @@ Configuration Manager počínaje verzí 1910 se na **webu Microsoft Edge Managem
    - [Ruční nasazení aktualizací softwaru](../../sum/deploy-use/manually-deploy-software-updates.md)
    - [Stažení aktualizací softwaru](../../sum/deploy-use/download-software-updates.md)
 
-## <a name="microsoft-edge-management-dashboard"></a><a name="bkmk_edge-dash"></a>Řídicí panel pro správu Microsoft Edge
+## <a name="microsoft-edge-management-dashboard"></a><a name="bkmk_edge-dash"></a> Řídicí panel pro správu Microsoft Edge
 <!--3871913-->
 *(Představené ve verzi 2002)*
 

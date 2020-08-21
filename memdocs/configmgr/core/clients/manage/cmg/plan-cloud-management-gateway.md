@@ -10,12 +10,12 @@ ms.assetid: 2dc8c9f1-4176-4e35-9794-f44b15f4e55f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7c57e6568ce60680d9febc533c60533055595bc3
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: d5b9a65b768d02d02084d778fd36255341a808b2
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88126929"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692838"
 ---
 # <a name="plan-for-the-cloud-management-gateway-in-configuration-manager"></a>Plánování brány pro správu cloudu v Configuration Manager
 
@@ -105,10 +105,10 @@ Nasazení a provoz CMG zahrnuje následující komponenty:
 ### <a name="azure-resource-manager"></a>Azure Resource Manager
 
 <!-- 1324735 -->
-Vytvořte CMG pomocí **nasazení Azure Resource Manager**. [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview) je moderní platforma pro správu všech prostředků řešení jako jedné entity, která se označuje jako [Skupina prostředků](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview#resource-groups). Když nasazujete CMG s Azure Resource Manager, lokalita používá Azure Active Directory (Azure AD) k ověření a vytvoření potřebných cloudových prostředků. Toto moderní nasazení nevyžaduje klasický certifikát pro správu Azure.  
+Vytvořte CMG pomocí **nasazení Azure Resource Manager**. [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) je moderní platforma pro správu všech prostředků řešení jako jedné entity, která se označuje jako [Skupina prostředků](/azure/azure-resource-manager/resource-group-overview#resource-groups). Když nasazujete CMG s Azure Resource Manager, lokalita používá Azure Active Directory (Azure AD) k ověření a vytvoření potřebných cloudových prostředků. Toto moderní nasazení nevyžaduje klasický certifikát pro správu Azure.  
 
 > [!NOTE]
-> Tato funkce nepovoluje podporu pro poskytovatele cloudových služeb Azure (CSP). Nasazení CMG s Azure Resource Manager nadále používá klasickou cloudovou službu, kterou CSP nepodporuje. Další informace najdete v tématu [dostupné služby Azure v CSP Azure](https://docs.microsoft.com/azure/cloud-solution-provider/overview/azure-csp-available-services).
+> Tato funkce nepovoluje podporu pro poskytovatele cloudových služeb Azure (CSP). Nasazení CMG s Azure Resource Manager nadále používá klasickou cloudovou službu, kterou CSP nepodporuje. Další informace najdete v tématu [dostupné služby Azure v CSP Azure](/azure/cloud-solution-provider/overview/azure-csp-available-services).
 
 Počínaje verzí 1902 Configuration Manager Azure Resource Manager je jediným mechanismem nasazení pro nové instance brány pro správu cloudu. Existující nasazení budou fungovat i nadále.<!-- 3605704 -->
 
@@ -216,13 +216,13 @@ Další informace najdete v následujících nejčastějších dotazech: [účty
 
 - Body aktualizace softwaru používající nástroj pro vyrovnávání zatížení sítě nefungují s CMG. <!--505311-->  
 
-- CMG nasazení pomocí modelu prostředků Azure nepovolí podporu pro poskytovatele cloudových služeb Azure (CSP). Nasazení CMG s Azure Resource Manager nadále používá klasickou cloudovou službu, kterou CSP nepodporuje. Další informace najdete v tématu [služby Azure dostupné v programu Azure CSP](https://docs.microsoft.com/partner-center/azure-plan-available).
+- CMG nasazení pomocí modelu prostředků Azure nepovolí podporu pro poskytovatele cloudových služeb Azure (CSP). Nasazení CMG s Azure Resource Manager nadále používá klasickou cloudovou službu, kterou CSP nepodporuje. Další informace najdete v tématu [služby Azure dostupné v programu Azure CSP](/partner-center/azure-plan-available).
 
 ### <a name="support-for-configuration-manager-features"></a>Podpora funkcí Configuration Manager
 
 V následující tabulce jsou uvedeny CMG podpora pro funkce Configuration Manager:
 
-|Příznak  |Podpora  |
+|Funkce  |Podpora  |
 |---------|---------|
 | Aktualizace softwaru     | ![Podporováno](media/green_check.png) |
 | Ochrana koncového bodu     | ![Podporovaná ](media/green_check.png) <sup> [Poznámka &nbsp; 1](#bkmk_note1)</sup> |
@@ -259,7 +259,7 @@ V následující tabulce jsou uvedeny CMG podpora pro funkce Configuration Manag
 |![Podporováno ](media/green_check.png) (*YYMM*) = Tato funkce je podporována u CMG počínaje verzí *YYMM* Configuration Manager  |
 |![Nepodporováno](media/Red_X.png) = Tato funkce není u CMG podporována. |
 
-#### <a name="note-1-support-for-endpoint-protection"></a><a name="bkmk_note1"></a>Poznámka 1: podpora pro Endpoint Protection
+#### <a name="note-1-support-for-endpoint-protection"></a><a name="bkmk_note1"></a> Poznámka 1: podpora pro Endpoint Protection
 
 Od verze 2006 mohou klienti, kteří komunikují prostřednictvím CMG, okamžitě použít zásady ochrany koncových bodů bez aktivního připojení ke službě Active Directory.<!--4773948-->
 
@@ -268,12 +268,12 @@ U zařízení připojených k doméně ve verzi 2002 a starší vyžadují pří
 
 - Aktualizujte lokalitu a klienty na verzi 2006.
 
-- Využijte spolusprávu a přepněte [Endpoint Protection úlohy](../../../../comanage/workloads.md#endpoint-protection) do Intune a spravujte [antivirovou ochranu v programu Microsoft Defender](https://docs.microsoft.com/mem/intune/configuration/device-restrictions-windows-10#microsoft-defender-antivirus) z cloudu.
+- Využijte spolusprávu a přepněte [Endpoint Protection úlohy](../../../../comanage/workloads.md#endpoint-protection) do Intune a spravujte [antivirovou ochranu v programu Microsoft Defender](../../../../../intune/configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus) z cloudu.
 
 - Použijte [položky konfigurace](../../../../compliance/deploy-use/create-configuration-items.md) namísto nativní funkce [antimalwarových](../../../../protect/deploy-use/endpoint-antimalware-policies.md) zásad, aby se použily zásady ochrany koncových bodů.
 
 
-## <a name="cost"></a>Náklady
+## <a name="cost"></a>Cost
 
 > [!IMPORTANT]  
 > Následující informace o nákladech slouží pouze k odhadování účelu. Vaše prostředí může mít jiné proměnné, které mají vliv na celkové náklady na používání CMG.
@@ -325,7 +325,7 @@ CMG používá následující komponenty Azure, které se účtují za účet p�
 
 - CMG může být také distribučním bodem cloudu pro poskytování obsahu klientům. Tato funkce snižuje nároky na požadované certifikáty a náklady na virtuální počítače Azure. Další informace najdete v tématu [Úprava CMG](setup-cloud-management-gateway.md#modify-a-cmg).<!--1358651-->  
 
-- CMG používá místně redundantní úložiště Azure (LRS). Další informace najdete v tématu [místně redundantní úložiště](https://docs.microsoft.com/azure/storage/common/storage-redundancy-lrs).  
+- CMG používá místně redundantní úložiště Azure (LRS). Další informace najdete v tématu [místně redundantní úložiště](/azure/storage/common/storage-redundancy-lrs).  
 
 ### <a name="other-costs"></a>Další náklady
 
@@ -388,15 +388,15 @@ V této tabulce jsou uvedené požadované síťové porty a protokoly. *Klient*
 | Bod připojení CMG | HTTPS nebo HTTP | 443 nebo 80 | Bod správy | Místní provoz, port závisí na konfiguraci bodu správy. |
 | Bod připojení CMG | HTTPS nebo HTTP | 443 nebo 80 | Bod aktualizace softwaru | Místní provoz, port závisí na konfiguraci bodu aktualizace softwaru. |
 
-#### <a name="note-1-cmg-connection-point-tcp-tls-ports"></a><a name="bkmk_port-note1"></a>Poznámka 1: porty připojení CMG spojovacího bodu TCP-TLS
+#### <a name="note-1-cmg-connection-point-tcp-tls-ports"></a><a name="bkmk_port-note1"></a> Poznámka 1: porty připojení CMG spojovacího bodu TCP-TLS
 
 Bod připojení CMG se nejprve pokusí vytvořit dlouhodobé připojení TCP-TLS s každou instancí virtuálního počítače CMG. Připojuje se k první instanci virtuálního počítače na portu 10140. Druhá instance virtuálního počítače používá port 10141 až šestnáct na portu 10155. Připojení TCP-TLS to vykoná nejlépe, ale nepodporuje internetový proxy server. Pokud spojovací bod CMG se nemůže připojit prostřednictvím protokolu TCP-TLS, pak se vrátí k protokolu HTTPS<sup>[Note 2](#bkmk_port-note2)</sup>.
 
-#### <a name="note-2-cmg-connection-point-https-ports-for-one-vm"></a><a name="bkmk_port-note2"></a>Poznámka 2: porty CMG spojovacího bodu připojení pro jeden virtuální počítač
+#### <a name="note-2-cmg-connection-point-https-ports-for-one-vm"></a><a name="bkmk_port-note2"></a> Poznámka 2: porty CMG spojovacího bodu připojení pro jeden virtuální počítač
 
 Pokud spojovací bod CMG se nemůže připojit k CMG prostřednictvím TCP-TLS<sup>[Note 1](#bkmk_port-note1)</sup>, připojí se k nástroji Azure Network Load Balancer přes HTTPS 443 pouze pro jednu instanci virtuálního počítače.  
 
-#### <a name="note-3-cmg-connection-point-https-ports-for-two-or-more-vms"></a><a name="bkmk_port-note3"></a>Poznámka 3: porty HTTPS bodu připojení CMG pro dva nebo více virtuálních počítačů
+#### <a name="note-3-cmg-connection-point-https-ports-for-two-or-more-vms"></a><a name="bkmk_port-note3"></a> Poznámka 3: porty HTTPS bodu připojení CMG pro dva nebo více virtuálních počítačů
 
 Pokud jsou k dispozici dvě nebo více instancí virtuálních počítačů, spojovací bod CMG používá k první instanci virtuálního počítače protokol HTTPS 10124, nikoli HTTPS 443. Připojí se k druhé instanci virtuálního počítače na HTTPS 10125, až šestnáctě na portu HTTPS 10139.
 

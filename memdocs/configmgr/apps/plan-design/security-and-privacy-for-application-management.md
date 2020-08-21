@@ -10,12 +10,12 @@ ms.assetid: 4d26deed-3b16-4116-b640-f618f2c20f5a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7f7085b7ee6f0f723c9bcf9d10cb85b03f990a44
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: e3ceb036180d002956eb0f62348ad317dfce6e7e
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81709954"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695133"
 ---
 # <a name="security-and-privacy-for-application-management-in-configuration-manager"></a>Zabezpečení a ochrana osobních údajů pro správu aplikací v Configuration Manager
 
@@ -75,7 +75,7 @@ Pokud nakonfigurujete nasazení tak, aby běželo přímo z distribučního bodu
 
 Pokud je nutné spustit nasazení přímo z distribučních bodů, použijte pro balíčky v distribučních bodech alespoň oprávnění NTFS. K zabezpečení kanálu mezi klientem a distribučními body a mezi distribučními body a serverem lokality taky použijte protokol IPsec (Internet Protocol Security).
 
-### <a name="dont-let-users-interact-with-elevated-processes"></a><a name="bkmk_interact"></a>Neumožnit uživatelům interakci s procesy se zvýšenými oprávněními
+### <a name="dont-let-users-interact-with-elevated-processes"></a><a name="bkmk_interact"></a> Neumožnit uživatelům interakci s procesy se zvýšenými oprávněními
   
 Pokud povolíte, aby se možnosti **spouštěly s právy správce** nebo se **nainstalovaly do systému**, nepovolujte uživatelům interakci s těmito aplikacemi. Když nakonfigurujete aplikaci, můžete nastavit možnost, která **uživatelům umožní zobrazit instalaci programu a pracovat s nimi**. Toto nastavení umožňuje uživatelům reagovat na jakékoli požadované výzvy v uživatelském rozhraní. Pokud také nakonfigurujete aplikaci tak, aby **běžela s právy správce**, nebo počínaje verzí 1802 **instalace pro systém**, útočník v počítači, který spouští program, by mohl použít uživatelské rozhraní pro zvýšení oprávnění na klientském počítači.
 
@@ -168,7 +168,7 @@ Pokud nakonfigurujete typ nasazení webové aplikace, zabezpečte připojení po
      Když je aplikace sady App-V publikovaná na počítači, všichni uživatelé, kteří se přihlásí k tomuto počítači, mohou aplikaci nainstalovat. Nemůžete omezit uživatele, kteří můžou aplikaci instalovat po publikování.  
 
 
-## <a name="certificates-for-microsoft-silverlight-5-and-elevated-trust-mode-required-for-the-application-catalog"></a><a name="BKMK_CertificatesSilverlight5"></a>Certifikáty pro Microsoft Silverlight 5 a režim zvýšené důvěryhodnosti vyžadované pro katalog aplikací  
+## <a name="certificates-for-microsoft-silverlight-5-and-elevated-trust-mode-required-for-the-application-catalog"></a><a name="BKMK_CertificatesSilverlight5"></a> Certifikáty pro Microsoft Silverlight 5 a režim zvýšené důvěryhodnosti vyžadované pro katalog aplikací  
 
 > [!Important]  
 > Podpora končí pro role katalogu aplikací s verzí 1910. Další informace najdete v tématu [Odebrání katalogu aplikací](plan-for-and-configure-application-management.md#bkmk_remove-appcat).  
@@ -182,7 +182,7 @@ Když nainstalujete roli systému lokality bodu webu katalogu aplikací, klient 
 
 Pokud nastavíte možnost **Povolit aplikacím Silverlight spouštění v režimu zvýšené důvěryhodnosti** na **ne**, klienti neodstraní podpisový certifikát společnosti Microsoft.  
 
-Další informace o důvěryhodných aplikacích v programu Silverlight naleznete v části [důvěryhodné aplikace](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/ee721083\(v=vs.95\)).  
+Další informace o důvěryhodných aplikacích v programu Silverlight naleznete v části [důvěryhodné aplikace](/previous-versions/windows/silverlight/dotnet-windows-silverlight/ee721083\(v=vs.95\)).  
 
 
 ## <a name="privacy-information-for-application-management"></a> Ochrana osobních údajů při správě aplikací  
@@ -208,7 +208,7 @@ Následující funkce vám pomůžou zefektivnit nasazení softwaru:
     > [!Important]  
     > Podpora končí pro role katalogu aplikací s verzí 1910. Další informace najdete v tématu [Odebrání katalogu aplikací](plan-for-and-configure-application-management.md#bkmk_remove-appcat).  
 
-### <a name="user-device-affinity-privacy-information"></a><a name="bkmk_privacy-uda"></a>Informace o ochraně osobních údajů spřažení uživatelských zařízení
+### <a name="user-device-affinity-privacy-information"></a><a name="bkmk_privacy-uda"></a> Informace o ochraně osobních údajů spřažení uživatelských zařízení
 
 - Configuration Manager může přenášet informace mezi klienty a systémy lokality bodu správy. Tyto informace mohou identifikovat počítač a účet přihlášení a souhrnné využití účtů pro přihlášení.  
 
@@ -220,7 +220,7 @@ Následující funkce vám pomůžou zefektivnit nasazení softwaru:
 
 - Informace o využití počítače a přihlášení, které se používají k vytvoření spřažení uživatele a zařízení, jsou vždycky povolené. Uživatelé a správci můžou poskytovat informace o spřažení uživatelských zařízení.  
 
-### <a name="software-center-privacy-information"></a><a name="bkmk_privacy-userex"></a>Informace o ochraně osobních údajů centra softwaru
+### <a name="software-center-privacy-information"></a><a name="bkmk_privacy-userex"></a> Informace o ochraně osobních údajů centra softwaru
 
 - Centrum softwaru umožňuje správcům Configuration Manager publikovat jakoukoli aplikaci nebo program nebo skript, aby je uživatelé mohli spustit. Configuration Manager nemá žádnou kontrolu nad typy programů nebo skriptů, které jsou publikovány v katalogu nebo typu informací, které odesílá.  
 
@@ -239,4 +239,4 @@ Následující funkce vám pomůžou zefektivnit nasazení softwaru:
 
 - Katalog aplikací umožňuje správci Configuration Manager publikovat jakoukoli aplikaci nebo program nebo skript, aby je uživatelé mohli spustit. Configuration Manager nemá žádnou kontrolu nad typy programů nebo skriptů, které jsou publikovány v katalogu nebo typu informací, které odesílá.  
 
-- Configuration Manager může přenášet informace mezi klienty a rolemi systému lokality katalogu aplikací. Tyto informace mohou identifikovat počítač a účty pro přihlášení. Informace přenesené mezi klientem a servery nejsou zašifrované, pokud tyto role systému lokality nejsou nakonfigurovány tak, aby vyžadovaly připojení klientů pomocí protokolu HTTPS.  
+- Configuration Manager může přenášet informace mezi klienty a rolemi systému lokality katalogu aplikací. Tyto informace mohou identifikovat počítač a účty pro přihlášení. Informace přenesené mezi klientem a servery nejsou zašifrované, pokud tyto role systému lokality nejsou nakonfigurovány tak, aby vyžadovaly připojení klientů pomocí protokolu HTTPS.

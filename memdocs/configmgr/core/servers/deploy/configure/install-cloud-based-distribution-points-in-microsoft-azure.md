@@ -10,12 +10,12 @@ ms.assetid: bb83ac87-9914-4a35-b633-ad070031aa6e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 35379aed71544a25a98ec4dfa421be70c1bae851
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 4a1e19025af82c9beeed8c227871df94b4674791
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83427747"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692702"
 ---
 # <a name="install-a-cloud-distribution-point-for-configuration-manager"></a>Instalace distribučního bodu cloudu pro Configuration Manager
 
@@ -34,11 +34,11 @@ Tento článek podrobně popisuje kroky pro instalaci cloudového distribučníh
 - [Nastavení proxy serveru lokality](#bkmk_proxy)
 - [Distribuce obsahu a konfigurace klientů](#bkmk_client)
 - [Správa a monitorování](#bkmk_monitor)
-- [Úprava](#bkmk_modify)
+- [Upravit](#bkmk_modify)
 - [Řešení potíží na pokročilé úrovni](#bkmk_tshoot)
 
 
-## <a name="before-you-begin"></a><a name="bkmk_before"></a>Než začnete
+## <a name="before-you-begin"></a><a name="bkmk_before"></a> Než začnete
 
 Začněte tím, že si přečtete článek [použití distribučního bodu cloudu](../../../plan-design/hierarchy/use-a-cloud-based-distribution-point.md). Tento článek vám pomůže s plánováním a návrhem distribučních bodů cloudu.
 
@@ -65,7 +65,7 @@ Pomocí následujícího kontrolního seznamu se ujistěte, že máte potřebné
     > [!TIP]  
     > Před vyžádáním ověřovacího certifikátu serveru, který používá tento název služby, potvrďte, že požadovaný název domény Azure je jedinečný. Například *WallaceFalls.CloudApp.NET*.
     >
-    > 1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+    > 1. Přihlaste se na web [Azure Portal](https://portal.azure.com).
     > 1. Vyberte **všechny prostředky**a pak vyberte **Přidat**.
     > 1. Vyhledejte **cloudovou službu**. Vyberte **Vytvořit**.
     > 1. Do pole **název DNS** zadejte požadovanou předponu, například *WallaceFalls*. Rozhraní odráží, zda je název domény k dispozici nebo již používá jiná služba.
@@ -91,14 +91,14 @@ Pokud chcete distribučnímu bodu cloudu povolit používání služby Windows B
 
 - Pokud má server lokality místní roli systému lokality distribučního bodu, nakonfigurujte možnost ve vlastnostech této role tak, aby **povolovala a nakonfigurovala službu BranchCache**. Další informace najdete v tématu [Konfigurace distribučního bodu](install-and-configure-distribution-points.md#bkmk_config-general).
 
-- Pokud server lokality nemá roli distribučního bodu, nainstalujte funkci BranchCache do systému Windows. Další informace najdete v tématu [Instalace funkce BranchCache](https://docs.microsoft.com/windows-server/networking/branchcache/deploy/install-the-branchcache-feature).
+- Pokud server lokality nemá roli distribučního bodu, nainstalujte funkci BranchCache do systému Windows. Další informace najdete v tématu [Instalace funkce BranchCache](/windows-server/networking/branchcache/deploy/install-the-branchcache-feature).
 
 Pokud jste už distribuci obsahu do distribučního bodu cloudu a potom se rozhodnete povolit službu BranchCache, nainstalujte tuto funkci. Pak obsah znovu distribuujte do distribučního bodu cloudu.
 
 > [!NOTE]  
 > Pokud máte v Configuration Manager verze 1810 a starší, pokud máte více než jeden distribuční bod cloudu, musíte ručně nastavit přístupové heslo klíče BranchCache. Další informace najdete v článku [Podpora Microsoftu KB 4458143](https://support.microsoft.com/help/4458143).
 
-## <a name="set-up"></a><a name="bkmk_setup"></a>Nastavit  
+## <a name="set-up"></a><a name="bkmk_setup"></a> Nastavit  
 
 Tento postup proveďte na webu, který bude hostitelem tohoto distribučního bodu cloudu, který je stanovený vaším [návrhem](../../../plan-design/hierarchy/use-a-cloud-based-distribution-point.md#bkmk_topology).  
 
@@ -147,7 +147,7 @@ Lokalita začne vytvářet novou hostovanou službu pro cloudový distribuční 
 > `Waiting for check if container exists. Will check again in 10 seconds`  
 > Jakmile zřídí účet úložiště, služba se vytvoří a nakonfiguruje.  
 
-### <a name="verify-installation"></a>Ověřit instalaci
+### <a name="verify-installation"></a>Ověření instalace
 
 Pomocí následujících metod ověřte, zda je instalace distribučního bodu cloudu dokončena:  
 
@@ -158,7 +158,7 @@ Pomocí následujících metod ověřte, zda je instalace distribučního bodu c
 - V případě potřeby přejdete na Azure Portal. **Nasazení** pro distribuční bod cloudu zobrazuje stav **připraveno**.  
 
 
-## <a name="configure-dns"></a><a name="bkmk_dns"></a>Konfigurace DNS  
+## <a name="configure-dns"></a><a name="bkmk_dns"></a> Konfigurace DNS  
 
 Aby mohli klienti používat cloudový distribuční bod, musí být schopni přeložit název distribučního bodu cloudu na IP adresu, kterou spravuje Azure. Bod správy poskytuje těmto **názvům plně kvalifikovaný název domény** cloudového distribučního bodu. Distribuční bod cloudu existuje v Azure jako **název služby**. Tyto hodnoty najdete na kartě **Nastavení** ve vlastnostech distribučního bodu cloudu.
 
@@ -190,14 +190,14 @@ Následující postup ukazuje, jak klient řeší název distribučního bodu cl
 5. Distribuční bod cloudu prezentuje certifikát ověřování serveru klientovi. Klient používá k ověření řetězec důvěryhodného certifikátu.  
 
 
-## <a name="set-up-site-server-proxy"></a><a name="bkmk_proxy"></a>Nastavení proxy serveru lokality  
+## <a name="set-up-site-server-proxy"></a><a name="bkmk_proxy"></a> Nastavení proxy serveru lokality  
 
 Server primární lokality, který spravuje distribuční bod cloudu, musí komunikovat s Azure. Pokud vaše organizace používá proxy server k řízení přístupu k Internetu, nakonfigurujte server primární lokality tak, aby používal tento proxy server.  
 
 Další informace najdete v tématu [Podpora proxy serveru](../../../plan-design/network/proxy-server-support.md).  
 
 
-## <a name="distribute-content-and-configure-clients"></a><a name="bkmk_client"></a>Distribuce obsahu a konfigurace klientů
+## <a name="distribute-content-and-configure-clients"></a><a name="bkmk_client"></a> Distribuce obsahu a konfigurace klientů
 
 Distribuujte obsah do distribučního bodu cloudu, který je stejný jako jakýkoli jiný místní distribuční bod. Bod správy neobsahuje distribuční bod cloudu v seznamu umístění obsahu, pokud nemá obsah, který klienti požadují. Další informace najdete v tématu [distribuce a Správa obsahu](deploy-and-manage-content.md).
 
@@ -212,13 +212,13 @@ Výchozí nastavení klienta automaticky umožní klientům používat distribu�
     - Toto nastavení upravte a nasaďte pro uživatele i zařízení.  
 
 
-## <a name="manage-and-monitor"></a><a name="bkmk_monitor"></a>Správa a monitorování  
+## <a name="manage-and-monitor"></a><a name="bkmk_monitor"></a> Správa a monitorování  
 
 Monitorujte obsah, který distribuujete do distribučního bodu cloudu, stejně jako u ostatních místních distribučních bodů. Další informace najdete v tématu [monitorování obsahu](monitor-content-you-have-distributed.md).
 
 Když zobrazíte seznam distribučních bodů cloudu v konzole nástroje, můžete do seznamu přidat další sloupce. Například sloupec **výstup dat** zobrazuje množství datových klientů stažených ze služby za posledních 30 dní.<!-- SCCMDocs#755 -->
 
-### <a name="alerts"></a><a name="bkmk_alerts"></a>Generoval  
+### <a name="alerts"></a><a name="bkmk_alerts"></a> Generoval  
 
 Configuration Manager pravidelně kontroluje službu Azure. Pokud služba není aktivní nebo pokud dojde k problémům s odběrem nebo certifikátem, Configuration Manager vyvolá výstrahu.
 
@@ -234,7 +234,7 @@ Nakonfigurujte prahové hodnoty pro množství dat, která chcete uložit v dist
 Zadejte prahové hodnoty pro každý cloudový distribuční bod během instalace nebo použijte kartu **výstrahy** vlastností distribučního bodu cloudu.  
 
 > [!NOTE]  
-> Výstrahy cloudového distribučního bodu závisí na statistikách využití z Azure, což může trvat až 24 hodin, než budou k dispozici. Další informace o Analýza úložiště pro Azure najdete v tématu [Analýza úložiště](https://docs.microsoft.com/rest/api/storageservices/storage-analytics).  
+> Výstrahy cloudového distribučního bodu závisí na statistikách využití z Azure, což může trvat až 24 hodin, než budou k dispozici. Další informace o Analýza úložiště pro Azure najdete v tématu [Analýza úložiště](/rest/api/storageservices/storage-analytics).  
 
 V hodinovém cyklu primární lokalita, která monitoruje distribuční bod cloudu, stáhne data transakcí z Azure. Tato data transakcí ukládá do `CloudDP-<ServiceName>.log` souboru na serveru lokality. Configuration Manager pak tyto informace vyhodnotí proti kvótám úložiště a přenosu pro každý cloudový distribuční bod. Když přenos dat dosáhne nebo překročí zadaný svazek pro upozornění nebo kritické výstrahy, Configuration Manager vygeneruje příslušnou výstrahu.  
 
@@ -242,7 +242,7 @@ V hodinovém cyklu primární lokalita, která monitoruje distribuční bod clou
 > Vzhledem k tomu, že lokalita stahuje informace o přenosech dat z Azure každou hodinu, může použití přesáhnout upozornění nebo kritickou prahovou hodnotu, než Configuration Manager bude mít přístup k datům a vyvolá výstrahu.  
 
 
-## <a name="modify"></a><a name="bkmk_modify"></a>Upravíte
+## <a name="modify"></a><a name="bkmk_modify"></a> Upravíte
 
 Zobrazit informace vysoké úrovně distribučního bodu v uzlu **distribuční body cloudu** v části **Cloud Services** v pracovním prostoru **Správa** konzoly Configuration Manager. Vyberte distribuční bod a vyberte **vlastnosti** . zobrazí se další podrobnosti.  
 
@@ -319,7 +319,7 @@ Když odstraníte distribuční bod cloudu z hierarchie nástroje, Configuration
 Ruční odebráním všech komponent v Azure dojde k nekonzistenci systému. Tento stav opouští osamocené informace a může dojít k neočekávanému chování.
 
 
-## <a name="advanced-troubleshooting"></a><a name="bkmk_tshoot"></a>Pokročilé řešení potíží
+## <a name="advanced-troubleshooting"></a><a name="bkmk_tshoot"></a> Pokročilé řešení potíží
 
 Pokud potřebujete shromáždit diagnostické protokolování z virtuálních počítačů Azure, abyste mohli řešit problémy s distribučním bodem cloudu, použijte následující ukázku PowerShellu k povolení rozšíření služby pro toto předplatné:<!--514275-->  
 
@@ -345,7 +345,7 @@ Select-AzureSubscription $azureSubscriptionName
 Set-AzureServiceDiagnosticsExtension -StorageAccountName $storage_name -StorageAccountKey $key -DiagnosticsConfigurationPath $public_config –ServiceName $service_name -Slot 'Production' -Verbose
 ```
 
-Následující ukázka je příkladem souboru **Diagnostics. wadcfgx** , na který se odkazuje v proměnné **public_config** ve výše uvedeném skriptu PowerShellu. Další informace najdete v tématu [schéma konfigurace rozšíření Azure Diagnostics](https://docs.microsoft.com/azure/monitoring-and-diagnostics/azure-diagnostics-schema).  
+Následující ukázka je příkladem souboru **Diagnostics. wadcfgx** , na který se odkazuje v proměnné **public_config** ve výše uvedeném skriptu PowerShellu. Další informace najdete v tématu [schéma konfigurace rozšíření Azure Diagnostics](/azure/monitoring-and-diagnostics/azure-diagnostics-schema).  
 
 ``` XML
 <?xml version="1.0" encoding="utf-8"?>

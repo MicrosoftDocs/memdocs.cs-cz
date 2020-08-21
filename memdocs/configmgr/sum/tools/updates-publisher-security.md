@@ -10,12 +10,12 @@ ms.assetid: a7f91e63-4750-402e-9970-dd14be7f76a3
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 5f441bc277f9c91cb1a83ce97879bd29b6349481
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: dc8e31245212136cd67f6f8cac062723c2cabefb
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718802"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696000"
 ---
 # <a name="manage-certificates-and-security-for-updates-publisher"></a>Správa certifikátů a zabezpečení pro aplikace Updates Publisher
 
@@ -76,7 +76,7 @@ Níže je uveden příklad konfigurace podpisového certifikátu v klientských 
    -   Certifikáty vydaných certifikační autoritou (CA): přidejte certifikát do úložiště certifikátů **důvěryhodných vydavatelů** .
 
    > [!NOTE]
-   > Agent WUA také kontroluje, zda je povoleno nastavení **Povolit podepsaný obsah z umístění služby Microsoft Update v intranetu** zásady skupiny v místním počítači. Toto nastavení zásady musí být povoleno, aby mohl nástroj WUA skenovat aktualizace, které byly vytvořeny a publikovány pomocí nástroje Updates Publisher. Další informace o povolení tohoto nastavení Zásady skupiny najdete v tématu [jak nakonfigurovat zásady skupiny na klientských počítačích](https://docs.microsoft.com/previous-versions/bb530967(v=technet.10)).
+   > Agent WUA také kontroluje, zda je povoleno nastavení **Povolit podepsaný obsah z umístění služby Microsoft Update v intranetu** zásady skupiny v místním počítači. Toto nastavení zásady musí být povoleno, aby mohl nástroj WUA skenovat aktualizace, které byly vytvořeny a publikovány pomocí nástroje Updates Publisher. Další informace o povolení tohoto nastavení Zásady skupiny najdete v tématu [jak nakonfigurovat zásady skupiny na klientských počítačích](/previous-versions/bb530967(v=technet.10)).
 
 
 

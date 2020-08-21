@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: b7643c73d2e9dad00e926bdc3db905016c45860a
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 062ae289ff53952d670592be6ff0027a91a627d4
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905223"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694402"
 ---
 # <a name="capabilities-in-technical-preview-18062-for-configuration-manager"></a>Funkce ve verzi Technical Preview 1806,2 pro Configuration Manager
 
@@ -40,7 +40,7 @@ Steps to workaround, if any.
 
 ## <a name="known-issues-in-this-technical-preview"></a>Známé problémy v této verzi Technical Preview
 
-### <a name="clients-dont-automatically-update"></a><a name="ki_sqlncli"></a>Klienti se neaktualizují automaticky
+### <a name="clients-dont-automatically-update"></a><a name="ki_sqlncli"></a> Klienti se neaktualizují automaticky
 <!--518760-->
 Při aktualizaci na verzi 1806,2 lokalita také aktualizuje SQL Native Client, což může způsobit nedokončené restartování serveru lokality. Tato prodleva způsobí, že se některé soubory neaktualizují, což má dopad na automatický upgrade klienta.
 
@@ -55,7 +55,7 @@ Pokud jste web již aktualizovali, automatický upgrade klienta a nabízená ins
 
     Toto umístění může být sdílená síťová složka, která je přístupná z klientů.  
 
-3. Z příkazového řádku se zvýšenými oprávněními spusťte následující příkazový řádek:`C:\Temp\CMUClient\ccmsetup.exe /source:C:\Temp\CMUClient`  
+3. Z příkazového řádku se zvýšenými oprávněními spusťte následující příkazový řádek: `C:\Temp\CMUClient\ccmsetup.exe /source:C:\Temp\CMUClient`  
 
 Pokud instalujete nového klienta v lokalitě verze Technical Preview 1806,2, použijte stejný postup. 
 
@@ -65,7 +65,7 @@ Pokud instalujete nového klienta v lokalitě verze Technical Preview 1806,2, po
 > Vlastnosti příkazového řádku, jako je například SMSSITECODE nebo CCMLOGLEVEL, jsou v pořádku, ale neměly by být nutné při upgradu stávajícího klienta. 
 
 
-### <a name="version-18062-shows-version-1806-in-about-configuration-manager"></a><a name="ki_version"></a>Verze 1806,2 ukazuje verze 1806 v o Configuration Manager
+### <a name="version-18062-shows-version-1806-in-about-configuration-manager"></a><a name="ki_version"></a> Verze 1806,2 ukazuje verze 1806 v o Configuration Manager
 <!--518148-->
 Pokud po upgradu na verzi Technical Preview 1806,2 Otevřete okno **o Configuration Manager** v levém horním rohu konzoly, pořád se zobrazuje **verze 1806**. 
 
@@ -84,7 +84,7 @@ Pomocí vlastnosti **verze lokality** určete rozdíl mezi 1806 a 1806,2:
 **V následující části najdete nové funkce, které můžete s touto verzí vyzkoušet.**  
 
 
-## <a name="improvements-to-phased-deployments"></a><a name="bkmk_pod"></a>Vylepšení postupného nasazení
+## <a name="improvements-to-phased-deployments"></a><a name="bkmk_pod"></a> Vylepšení postupného nasazení
 
 Tato verze zahrnuje následující vylepšení [postupného nasazení](../../osd/deploy-use/create-phased-deployment-for-task-sequence.md):
 - [Stav postupného nasazení](#bkmk_pod-monitor)
@@ -92,7 +92,7 @@ Tato verze zahrnuje následující vylepšení [postupného nasazení](../../osd
 - [Postupné zavedení při dvoufázovém nasazení](#bkmk_pod-throttle)
 
 
-### <a name="phased-deployment-status"></a><a name="bkmk_pod-monitor"></a>Stav postupného nasazení
+### <a name="phased-deployment-status"></a><a name="bkmk_pod-monitor"></a> Stav postupného nasazení
 <!--1358577-->
 Postupná nasazení nyní mají nativní prostředí monitorování. V uzlu **nasazení** v pracovním prostoru **monitorování** vyberte postupné nasazení a pak na pásu karet klikněte na **Stav postupného nasazení** .
 
@@ -117,7 +117,7 @@ Tento řídicí panel zobrazuje pro každou fázi nasazení následující infor
 Řídicí panel stavu postupného nasazení může zobrazit několik řádků pro stejnou fázi.<!--518510-->
 
 
-### <a name="phased-deployment-of-applications"></a><a name="bkmk_pod-app"></a>Dvoufázové nasazení aplikací
+### <a name="phased-deployment-of-applications"></a><a name="bkmk_pod-app"></a> Dvoufázové nasazení aplikací
 <!--1358147-->
 Vytvoření postupného nasazení pro aplikace Postupné nasazení vám umožní orchestrovat koordinované, sekvenční zavedení softwaru na základě přizpůsobitelných kritérií a skupin.
 
@@ -132,7 +132,7 @@ Před vytvořením postupného nasazení distribuujte obsah aplikace do distribu
 Nemůžete ručně vytvořit fáze pro aplikaci. Průvodce automaticky vytvoří dvě fáze pro nasazení aplikací.
 
 
-### <a name="gradual-rollout-during-phased-deployments"></a><a name="bkmk_pod-throttle"></a>Postupné zavedení při dvoufázovém nasazení
+### <a name="gradual-rollout-during-phased-deployments"></a><a name="bkmk_pod-throttle"></a> Postupné zavedení při dvoufázovém nasazení
 <!--1358578-->
 Během dvoufázového nasazení teď může probíhat v každé fázi postupně. Toto chování pomáhá zmírnit riziko problémů s nasazením a snižuje zatížení sítě způsobené distribucí obsahu na klienty. V lokalitě může být software postupně dostupný v závislosti na konfiguraci pro každou fázi. Každý klient ve fázi má konečný termín relativně k době, kdy byl software zpřístupněn. Časový interval mezi dostupným časem a konečným termínem je stejný pro všechny klienty ve fázi. 
 
@@ -143,15 +143,15 @@ Když vytvoříte postupné nasazení a ručně nakonfigurujete fázi, na strán
 
 
 
-## <a name="support-for-new-windows-app-package-formats"></a><a name="bkmk_msix"></a>Podpora pro nové formáty balíčků aplikací pro Windows
+## <a name="support-for-new-windows-app-package-formats"></a><a name="bkmk_msix"></a> Podpora pro nové formáty balíčků aplikací pro Windows
 <!--1357427-->
 Configuration Manager teď podporuje nasazení nového balíčku aplikace pro Windows 10 (. msix) a formátů sady prostředků aplikace (. msixbundle). Nejnovější buildy [Windows Insider ve verzi Preview](https://insider.windows.com/) aktuálně podporují tyto nové formáty.
 
-Přehled MSIX najdete v tématu o tom, jak se [podíváte na MSIX](https://docs.microsoft.com/archive/blogs/sgern/a-closer-look-at-msix).
+Přehled MSIX najdete v tématu o tom, jak se [podíváte na MSIX](/archive/blogs/sgern/a-closer-look-at-msix).
 
 Informace o tom, jak vytvořit novou aplikaci MSIX, najdete [v článku podpora MSIX představená v programu Insider build 17682](https://techcommunity.microsoft.com/t5/MSIX-Blog/MSIX-support-introduced-in-Insider-Build-17682/ba-p/202376).
 
-### <a name="prerequisites"></a>Požadavky
+### <a name="prerequisites"></a>Předpoklady
 - Klient s Windows 10, na kterém běží aspoň Windows Insider Preview build 17682
 - Balíček aplikace systému Windows ve formátu MSIX
 
@@ -164,11 +164,11 @@ Zkuste úkoly dokončit. Potom vám pošleme [názor](capabilities-in-technical-
 
 
 
-## <a name="improvement-to-client-push-security"></a><a name="bkmk_client-push"></a>Zlepšení zabezpečení nabízených oznámení klientů
+## <a name="improvement-to-client-push-security"></a><a name="bkmk_client-push"></a> Zlepšení zabezpečení nabízených oznámení klientů
 <!--1358204-->
 Při použití metody [push klienta](../clients/deploy/plan/client-installation-methods.md#client-push-installation) pro instalaci klienta Configuration Manager Server lokality vytvoří vzdálené připojení ke klientovi, aby mohl spustit instalaci. Od této verze může lokalita vyžadovat vzájemné ověřování protokolem Kerberos tím, že před vytvořením připojení nepovolí použití protokolu NTLM pro ověřování. Toto vylepšení pomáhá zabezpečit komunikaci mezi serverem a klientem. 
 
-V závislosti na zásadách zabezpečení může vaše prostředí již upřednostňovat nebo vyžadovat protokol Kerberos přes starší ověřování NTLM. Další informace o bezpečnostních faktorech těchto ověřovacích protokolů najdete v [nastavení zásad zabezpečení systému Windows k omezení protokolu NTLM](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-security-restrict-ntlm-outgoing-ntlm-traffic-to-remote-servers#security-considerations).
+V závislosti na zásadách zabezpečení může vaše prostředí již upřednostňovat nebo vyžadovat protokol Kerberos přes starší ověřování NTLM. Další informace o bezpečnostních faktorech těchto ověřovacích protokolů najdete v [nastavení zásad zabezpečení systému Windows k omezení protokolu NTLM](/windows/security/threat-protection/security-policy-settings/network-security-restrict-ntlm-outgoing-ntlm-traffic-to-remote-servers#security-considerations).
 
 
 ### <a name="prerequisite"></a>Požadavek
@@ -190,7 +190,7 @@ Při upgradu lokality přetrvává stávající chování. Jakmile *otevřete* v
 
 
 
-## <a name="management-insights-for-proactive-maintenance"></a><a name="bkmk_insights"></a>Přehledy správy pro proaktivní údržbu
+## <a name="management-insights-for-proactive-maintenance"></a><a name="bkmk_insights"></a> Přehledy správy pro proaktivní údržbu
 <!--1352184,et al-->
 V této verzi jsou k dispozici další přehledy správy pro zdůraznění potenciálních problémů s konfigurací. Projděte si následující pravidla v nové **proaktivní** skupině pro údržbu:  
 
@@ -208,7 +208,7 @@ V této verzi jsou k dispozici další přehledy správy pro zdůraznění poten
 
 
 
-## <a name="transition-mobile-apps-workload-for-co-managed-devices"></a><a name="bkmk_comgmt"></a>Přechod úlohy mobilní aplikace pro spoluspravovaná zařízení
+## <a name="transition-mobile-apps-workload-for-co-managed-devices"></a><a name="bkmk_comgmt"></a> Přechod úlohy mobilní aplikace pro spoluspravovaná zařízení
 <!--1357892-->
 Umožňuje spravovat mobilní aplikace pomocí Microsoft Intune a přitom dál používat Configuration Manager k nasazení desktopových aplikací pro Windows. Pokud chcete převést úlohu moderních aplikací, přejděte na stránku vlastností spolusprávy. Přesuňte posuvník z Configuration Manager na pilot nebo vše. 
 
@@ -218,11 +218,11 @@ Další informace najdete v následujících článcích:
 
 - [Spoluspráva pro zařízení s Windows 10](../../comanage/overview.md)  
 
-- [Co je správa aplikací v Microsoft Intune?](https://docs.microsoft.com/intune/app-management)  
+- [Co je správa aplikací v Microsoft Intune?](/intune/app-management)  
 
 
 
-## <a name="boundary-group-options-for-peer-downloads"></a><a name="bkmk_bgoptions"></a>Možnosti skupiny hranic pro rovnocenné soubory ke stažení
+## <a name="boundary-group-options-for-peer-downloads"></a><a name="bkmk_bgoptions"></a> Možnosti skupiny hranic pro rovnocenné soubory ke stažení
 <!--1356193-->
 Skupiny hranic teď obsahují další nastavení, která vám poskytnou větší kontrolu nad distribucí obsahu ve vašem prostředí. Tato verze přidává následující možnosti:  
 
@@ -248,12 +248,12 @@ Pokud má klient s partnerským vztahem více než jednu IP adresu (IPv4, IPv6 n
 
 
 
-## <a name="third-party-software-updates-support-for-custom-catalogs"></a><a name="bkmk_3pupdate"></a>Podpora aktualizací softwaru třetích stran pro vlastní katalogy
+## <a name="third-party-software-updates-support-for-custom-catalogs"></a><a name="bkmk_3pupdate"></a> Podpora aktualizací softwaru třetích stran pro vlastní katalogy
 <!--1358714-->
 Tato verze dále prochází podporu aktualizací softwaru třetích stran v důsledku vaší [zpětné vazby](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/8803711-3rd-party-patching-scup-integration-with-sccm-co)na webu UserVoice. [Technical Preview verze 1806](capabilities-in-technical-preview-1806.md#bkmk-3pupdate) poskytuje podporu pro *partnerské katalogy*, které jsou registrované katalogy od dodavatelů softwaru. Katalogy, které zadáte, které nejsou registrované u Microsoftu, se nazývají *vlastní katalogy*. Přidejte vlastní katalogy v konzole Configuration Manager.  
 
 
-### <a name="prerequisites"></a>Požadavky 
+### <a name="prerequisites"></a>Předpoklady 
 
 - Nastavte [aktualizace softwaru třetích stran](capabilities-in-technical-preview-1806.md#bkmk-3pupdate). Dokončete fázi 1: Povolte a nastavte funkci.   
 
@@ -307,7 +307,7 @@ Akce odstranit u vlastního katalogu je šedá, takže nemůžete odstranit vlas
 
 
 
-## <a name="improvements-to-cloud-management-features"></a><a name="bkmk_cloud"></a>Vylepšení funkcí pro správu cloudu
+## <a name="improvements-to-cloud-management-features"></a><a name="bkmk_cloud"></a> Vylepšení funkcí pro správu cloudu
 
 Tato verze zahrnuje následující vylepšení:  
 
@@ -319,11 +319,11 @@ Tato verze zahrnuje následující vylepšení:
 
     - Nasazení [distribučního bodu cloudu pomocí Azure Resource Manager](capabilities-in-technical-preview-1805.md#cloud-distribution-point-support-for-azure-resource-manager)  
 
-- Zákazníci používají Windows autopilot k zřizování Windows 10 na zařízeních připojených k Azure Active Directory, která jsou připojená k místní síti. Pokud chcete nainstalovat nebo upgradovat klienta Configuration Manager na těchto zařízeních, nepotřebujete teď cloudový distribuční bod nebo místní distribuční bod, aby se **klienti mohli anonymně připojit**. Místo toho povolte možnost lokalita pro **použití Configuration Manager generovaných certifikátů pro systémy lokality http**, což klientovi připojenému k doméně umožňuje komunikovat s místním distribučním bodem s POVOLENým protokolem HTTP. Další informace najdete v tématu [Vylepšená zabezpečená komunikace klientů](https://docs.microsoft.com/sccm/core/get-started/capabilities-in-technical-preview-1805#improved-secure-client-communications).<!--515854-->  
+- Zákazníci používají Windows autopilot k zřizování Windows 10 na zařízeních připojených k Azure Active Directory, která jsou připojená k místní síti. Pokud chcete nainstalovat nebo upgradovat klienta Configuration Manager na těchto zařízeních, nepotřebujete teď cloudový distribuční bod nebo místní distribuční bod, aby se **klienti mohli anonymně připojit**. Místo toho povolte možnost lokalita pro **použití Configuration Manager generovaných certifikátů pro systémy lokality http**, což klientovi připojenému k doméně umožňuje komunikovat s místním distribučním bodem s POVOLENým protokolem HTTP. Další informace najdete v tématu [Vylepšená zabezpečená komunikace klientů](/sccm/core/get-started/capabilities-in-technical-preview-1805#improved-secure-client-communications).<!--515854-->  
 
 
 
-## <a name="new-software-updates-compliance-report"></a><a name="bkmk_report"></a>Nová sestava dodržování předpisů pro aktualizace softwaru
+## <a name="new-software-updates-compliance-report"></a><a name="bkmk_report"></a> Nová sestava dodržování předpisů pro aktualizace softwaru
 <!--1357775-->
 Zobrazení sestav pro dodržování předpisů aktualizací softwaru obvykle zahrnuje data z klientů, kteří se nedávno nepřipojili k lokalitě. Nová sestava umožňuje filtrovat výsledky dodržování předpisů pro konkrétní skupinu aktualizací softwaru podle "zdravých" klientů. Tato sestava obsahuje realističtější stav dodržování předpisů aktivních klientů ve vašem prostředí. 
  
@@ -338,4 +338,4 @@ Sestava obsahuje následující části:
 
 
 ## <a name="next-steps"></a>Další kroky
-Informace o instalaci nebo aktualizaci větve Technical Preview najdete v tématu [Technical Preview pro Configuration Manager](technical-preview.md).    
+Informace o instalaci nebo aktualizaci větve Technical Preview najdete v tématu [Technical Preview pro Configuration Manager](technical-preview.md).

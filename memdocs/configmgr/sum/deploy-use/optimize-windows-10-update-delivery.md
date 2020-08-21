@@ -10,12 +10,12 @@ ms.assetid: b670cfaf-96a4-4fcb-9caa-0f2e8c2c6198
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 2e832feb6f5a56225cd63a0b0d6290fc0c70e53a
-ms.sourcegitcommit: 8fc7f2864c5e3f177e6657b684c5f208d6c2a1b4
+ms.openlocfilehash: f16a5736d0bebbcb4f3b03989c6983cd55ac8f54
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88591550"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696986"
 ---
 # <a name="optimize-windows-10-update-delivery-with-configuration-manager"></a>Optimalizace doručování aktualizací Windows 10 pomocí Configuration Manager
 
@@ -49,12 +49,12 @@ Další části poskytují další informace o těchto technologiích.
 
 ### <a name="windows-delivery-optimization"></a>Optimalizace doručení Windows
 
-[Optimalizace doručení](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) je hlavní technologie ke stažení a metoda distribuce peer-to-peer, která je integrovaná do Windows 10. Klienti s Windows 10 můžou získat obsah z jiných zařízení v místní síti, které stáhnou stejné aktualizace. Pomocí [možností Windows dostupných pro optimalizaci doručení](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#delivery-optimization-options)můžete nakonfigurovat klienty do skupin. Toto seskupení umožňuje vaší organizaci identifikovat zařízení, která jsou možná nejlepšími kandidáty na splnění požadavků peer-to-peer. Optimalizace doručení významně snižuje celkovou šířku pásma, která se používá k udržení aktuálního stavu zařízení a současně urychluje dobu stahování.
+[Optimalizace doručení](/windows/deployment/update/waas-delivery-optimization) je hlavní technologie ke stažení a metoda distribuce peer-to-peer, která je integrovaná do Windows 10. Klienti s Windows 10 můžou získat obsah z jiných zařízení v místní síti, které stáhnou stejné aktualizace. Pomocí [možností Windows dostupných pro optimalizaci doručení](/windows/deployment/update/waas-delivery-optimization-reference#delivery-optimization-options)můžete nakonfigurovat klienty do skupin. Toto seskupení umožňuje vaší organizaci identifikovat zařízení, která jsou možná nejlepšími kandidáty na splnění požadavků peer-to-peer. Optimalizace doručení významně snižuje celkovou šířku pásma, která se používá k udržení aktuálního stavu zařízení a současně urychluje dobu stahování.
 
 > [!NOTE]  
-> Optimalizace doručení je řešení spravované v cloudu. Přístup k Internetu do cloudové služby optimalizace doručování je nutný k využití svých funkcí peer-to-peer. Informace o potřebných koncových bodech internetu najdete v tématu [Nejčastější dotazy k optimalizaci doručení](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions). 
+> Optimalizace doručení je řešení spravované v cloudu. Přístup k Internetu do cloudové služby optimalizace doručování je nutný k využití svých funkcí peer-to-peer. Informace o potřebných koncových bodech internetu najdete v tématu [Nejčastější dotazy k optimalizaci doručení](/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions). 
 
-Pro dosažení nejlepších výsledků možná budete muset nastavit [režim stažení](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#download-mode) Optimalizace doručení na **skupiny (2)** a definovat *ID skupin*. V režimu skupiny může partnerský vztah mezi zařízeními, která patří do stejné skupiny, zahrnovat zařízení ve vzdálených kancelářích mezi interními podsítěmi. Pomocí [Možnosti ID skupiny](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#select-the-source-of-group-ids) můžete vytvořit vlastní skupinu nezávisle na doménách a služba AD DS lokalitách. Režim stahování skupiny je doporučenou možností pro většinu organizací, které hledají nejlepší optimalizaci šířky pásma s optimalizací doručení.
+Pro dosažení nejlepších výsledků možná budete muset nastavit [režim stažení](/windows/deployment/update/waas-delivery-optimization-reference#download-mode) Optimalizace doručení na **skupiny (2)** a definovat *ID skupin*. V režimu skupiny může partnerský vztah mezi zařízeními, která patří do stejné skupiny, zahrnovat zařízení ve vzdálených kancelářích mezi interními podsítěmi. Pomocí [Možnosti ID skupiny](/windows/deployment/update/waas-delivery-optimization-reference#select-the-source-of-group-ids) můžete vytvořit vlastní skupinu nezávisle na doménách a služba AD DS lokalitách. Režim stahování skupiny je doporučenou možností pro většinu organizací, které hledají nejlepší optimalizaci šířky pásma s optimalizací doručení.
 
 Ruční konfigurace těchto ID skupin je náročná na to, že klienti přecházejí mezi různými sítěmi. Configuration Manager verze 1802 přidala novou funkci pro zjednodušení správy tohoto procesu [integrací skupin hranic s optimalizací doručení](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#delivery-optimization). Když se klient probudí, mluví se svým bodem správy, aby získal zásady, a poskytuje informace o jeho síti a skupině hranic. Configuration Manager vytvoří jedinečné ID pro každou skupinu hranic. Lokalita používá informace o umístění klienta k automatické konfiguraci ID skupiny Optimalizace doručení klienta s ID hranice Configuration Manager. Když se klient přenese do jiné skupiny hranic, mluví ho s bodem správy a automaticky se překonfiguruje s novým ID hraniční skupiny. Díky této integraci může Optimalizace doručení využít Configuration Manager informace o skupině hranic k vyhledání partnerského zařízení, ze kterého se mají aktualizace stahovat.
 
@@ -68,9 +68,9 @@ Chcete-li použít optimalizaci doručování pro všechny instalační soubory 
 - **Port, který klienti používají pro příjem požadavků na rozdílový obsah** nastavený na 8005 (výchozí) nebo vlastní číslo portu.
  
 > [!IMPORTANT]
-> - Optimalizace doručení musí být povolená (výchozí) a nepoužívá se. Další informace najdete v tématu [referenční informace k optimalizaci Windows Delivery](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference).
+> - Optimalizace doručení musí být povolená (výchozí) a nepoužívá se. Další informace najdete v tématu [referenční informace k optimalizaci Windows Delivery](/windows/deployment/update/waas-delivery-optimization-reference).
 > - Při změně [nastavení klienta aktualizace softwaru](../../core/clients/deploy/about-client-settings.md#software-updates) pro rozdílový obsah ověřte [nastavení klienta Optimalizace doručení](../../core/clients/deploy/about-client-settings.md#delivery-optimization) .
-> - Optimalizace doručení se nedá použít pro Microsoft 365 aktualizace klienta, pokud je povolený Office COM. Sada Office COM je používána nástrojem Configuration Manager ke správě aktualizací pro klienty Microsoft 365ch aplikací. Můžete zrušit registraci Office COM, aby bylo možné používat optimalizaci doručování pro aktualizace aplikací Microsoft 365. Když je Office COM zakázaný, aktualizace softwaru pro Microsoft 365 aplikace se spravují pomocí výchozí naplánované úlohy pro Office Automatic Updates 2,0. To znamená, že Configuration Manager nediktování ani nesleduje proces instalace aktualizací Microsoft 365 aplikací. Configuration Manager bude pokračovat ve shromažďování informací z inventáře hardwaru a naplnit řídicí panel pro správu klientů Office 365 v konzole nástroje. Informace o tom, jak zrušit registraci Office COM, najdete v tématu [Povolení klientů office 365 přijímat aktualizace z Office CDN místo Configuration Manager](https://docs.microsoft.com/deployoffice/manage-office-365-proplus-updates-with-configuration-manager#enable-office-365-clients-to-receive-updates-from-the-office-cdn-instead-of-configuration-manager).
+> - Optimalizace doručení se nedá použít pro Microsoft 365 aktualizace klienta, pokud je povolený Office COM. Sada Office COM je používána nástrojem Configuration Manager ke správě aktualizací pro klienty Microsoft 365ch aplikací. Můžete zrušit registraci Office COM, aby bylo možné používat optimalizaci doručování pro aktualizace aplikací Microsoft 365. Když je Office COM zakázaný, aktualizace softwaru pro Microsoft 365 aplikace se spravují pomocí výchozí naplánované úlohy pro Office Automatic Updates 2,0. To znamená, že Configuration Manager nediktování ani nesleduje proces instalace aktualizací Microsoft 365 aplikací. Configuration Manager bude pokračovat ve shromažďování informací z inventáře hardwaru a naplnit řídicí panel pro správu klientů Office 365 v konzole nástroje. Informace o tom, jak zrušit registraci Office COM, najdete v tématu [Povolení klientů office 365 přijímat aktualizace z Office CDN místo Configuration Manager](/deployoffice/manage-office-365-proplus-updates-with-configuration-manager#enable-office-365-clients-to-receive-updates-from-the-office-cdn-instead-of-configuration-manager).
 > - Při použití CMG pro úložiště obsahu se nebude obsah pro aktualizace třetích stran stahovat do klientů, pokud je povolený **rozdílový obsah ke stažení, pokud** je povolené [nastavení klienta](../../core/clients/deploy/about-client-settings.md#allow-clients-to-download-delta-content-when-available) dostupné. <!--6598587-->
 
 #### <a name="configuration-recommendations-for-clients-downloading-delta-content"></a>Doporučení konfigurace pro klienty, kteří stahují rozdílový obsah
@@ -92,7 +92,7 @@ Sdílená [mezipaměť](../../core/plan-design/hierarchy/client-peer-cache.md) j
 
 
 ### <a name="windows-branchcache"></a>Služba BranchCache systému Windows
-[BranchCache](https://docs.microsoft.com/windows-server/networking/branchcache/branchcache) je technologie optimalizace šířky pásma ve Windows. Každý klient má mezipaměť a funguje jako alternativní zdroj obsahu. Zařízení ve stejné síti si můžou tento obsah vyžádat. [Configuration Manager může používat službu BranchCache](../../core/plan-design/configs/support-for-windows-features-and-networks.md#bkmk_branchcache) , aby umožnila partnerským uzlům zdrojový obsah navzájem, a vždy se musí spojit s distribučním bodem. Pomocí služby BranchCache se soubory ukládají do mezipaměti každého jednotlivého klienta a ostatní klienti je můžou podle potřeby načítat. Tento přístup distribuuje mezipaměť místo toho, aby bylo možné načíst jenom jeden bod. Toto chování šetří značnou šířku pásma a zároveň zkracuje dobu, po kterou klienti dostanou požadovaný obsah.
+[BranchCache](/windows-server/networking/branchcache/branchcache) je technologie optimalizace šířky pásma ve Windows. Každý klient má mezipaměť a funguje jako alternativní zdroj obsahu. Zařízení ve stejné síti si můžou tento obsah vyžádat. [Configuration Manager může používat službu BranchCache](../../core/plan-design/configs/support-for-windows-features-and-networks.md#bkmk_branchcache) , aby umožnila partnerským uzlům zdrojový obsah navzájem, a vždy se musí spojit s distribučním bodem. Pomocí služby BranchCache se soubory ukládají do mezipaměti každého jednotlivého klienta a ostatní klienti je můžou podle potřeby načítat. Tento přístup distribuuje mezipaměť místo toho, aby bylo možné načíst jenom jeden bod. Toto chování šetří značnou šířku pásma a zároveň zkracuje dobu, po kterou klienti dostanou požadovaný obsah.
 
 
 
@@ -105,11 +105,11 @@ Výběr správné technologie peere naukládání do mezipaměti pro soubory Exp
 
 | Funkce  | Optimalizace doručení  | Sdílená mezipaměť  | Služba BranchCache  |
 |---------|---------|---------|---------|
-| Podporováno mezi podsítěmi | Yes | Ano | No |
+| Podporováno mezi podsítěmi | Ano | Ano | Ne |
 | Omezení šířky pásma | Ano (nativní) | Ano (přes BITS) | Ano (přes BITS) |
 | Podpora částečného obsahu | Ano, u všech podporovaných typů obsahu uvedených v tomto sloupci na dalším řádku. | Jenom pro aplikace Microsoft 365 a expresní aktualizace | Ano, u všech podporovaných typů obsahu uvedených v tomto sloupci na dalším řádku. |
 | Podporované typy obsahu | **Prostřednictvím nástroje ConfigMgr:** </br> – Expresní aktualizace </br> – Všechny aktualizace Windows (počínaje verzí 1910). To nezahrnuje aktualizace Microsoft 365ch aplikací.</br> </br> **Přes Microsoft Cloud:**</br> – Windows a aktualizace zabezpečení</br> – Ovladače</br> – Aplikace pro Windows Store</br> – Aplikace pro Windows Store pro firmy | Všechny typy obsahu nástroje ConfigMgr, včetně obrázků stažených v [systému Windows PE](../../osd/get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md) | Všechny typy obsahu nástroje ConfigMgr kromě imagí |
-| Velikost mezipaměti na ovládacím prvku disku | Yes | Yes | Yes |
+| Velikost mezipaměti na ovládacím prvku disku | Ano | Ano | Ano |
 | Zjišťování zdroje partnerského vztahu | Automaticky | Ruční (nastavení agenta klienta) | Automaticky |
 | Rovnocenné zjišťování | Přes cloudovou službu optimalizace doručování (vyžaduje přístup k Internetu) | Přes bod správy (na základě skupin hranic klientů) | Odesílání |
 | Vytváření sestav | Ano (použití Desktop Analytics) | Řídicí panel zdrojů dat klienta nástroje ConfigMgr | Řídicí panel zdrojů dat klienta nástroje ConfigMgr |
@@ -122,7 +122,7 @@ Výběr správné technologie peere naukládání do mezipaměti pro soubory Exp
 
 Microsoft doporučuje, abyste v případě potřeby vyoptimalizovalte doručování aktualizací kvality Windows 10 pomocí Configuration Manager se soubory Expresní instalace a technologií pro ukládání do mezipaměti. Tento přístup by měl zmírnit výzvy spojené se zařízeními s Windows 10, které stahují velký obsah pro instalaci aktualizací kvality. Nasazením aktualizací kvality každý měsíc se také doporučuje udržovat zařízení s Windows 10 aktuální. Tento postup snižuje rozdíl mezi obsahem aktualizace kvality, který zařízení každý měsíc potřebuje. Snížení rozdílů v obsahu způsobí, že menší velikost se stáhne z distribučních bodů nebo z partnerských zdrojů. 
 
-Vzhledem k povaze souborů Expresní instalace je jejich velikost obsahu podstatně větší než tradiční samostatné soubory. Tato velikost má za následek delší dobu stahování aktualizace od služby web Windows Update do Configuration Manager serveru lokality. Velikost místa na disku potřebného pro server lokality i pro distribuční body se také zvyšuje. Celková doba potřebná ke stažení a distribuci aktualizací kvality může být delší. Výhody na straně zařízení by se ale měly během stahování a instalace aktualizací kvality zařízení s Windows 10 všimnout. Další informace najdete v tématu [použití souborů Expresní instalace](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc708456(v=ws.10)?#using-express-installation-files).
+Vzhledem k povaze souborů Expresní instalace je jejich velikost obsahu podstatně větší než tradiční samostatné soubory. Tato velikost má za následek delší dobu stahování aktualizace od služby web Windows Update do Configuration Manager serveru lokality. Velikost místa na disku potřebného pro server lokality i pro distribuční body se také zvyšuje. Celková doba potřebná ke stažení a distribuci aktualizací kvality může být delší. Výhody na straně zařízení by se ale měly během stahování a instalace aktualizací kvality zařízení s Windows 10 všimnout. Další informace najdete v tématu [použití souborů Expresní instalace](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc708456(v=ws.10)#using-express-installation-files).
 
 Pokud jsou na straně serveru kompromisy aktualizací s větší velikostí blokování pro přijetí expresní podpory, ale výhody na straně zařízení jsou pro firmu a prostředí velmi důležité, společnost Microsoft doporučuje použít [web Windows Update pro firmy](integrate-windows-update-for-business-windows-10.md) s Configuration Manager. Web Windows Update pro firmy nabízí všechny výhody, které jsou v programu Express bez nutnosti stahovat, ukládat a distribuovat soubory Expresní instalace v celém prostředí. Klienti stahují obsah přímo ze služby web Windows Update, takže můžete i nadále používat optimalizaci doručování.
 
@@ -171,11 +171,11 @@ Změny se projeví až po povolení podpory u všech nových aktualizací synchr
 
 
 #### <a name="is-there-any-way-to-see-how-much-content-is-downloaded-from-peers-using-delivery-optimization"></a>Existuje nějaký způsob, jak zjistit množství obsahu staženého z partnerských uzlů pomocí optimalizace doručování?
-Windows 10 verze 1703 (a novější) obsahuje dvě nové rutiny PowerShellu **Get-DeliveryOptimizationPerfSnap** a **Get-DeliveryOptimizationStatus**. Tyto rutiny poskytují lepší přehled o službě Optimalizace doručení a využití mezipaměti. Další informace najdete v tématu věnovaném [optimalizaci doručování pro aktualizace Windows 10](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#the-cloud-service-doesnt-see-other-peers-on-the-network) .
+Windows 10 verze 1703 (a novější) obsahuje dvě nové rutiny PowerShellu **Get-DeliveryOptimizationPerfSnap** a **Get-DeliveryOptimizationStatus**. Tyto rutiny poskytují lepší přehled o službě Optimalizace doručení a využití mezipaměti. Další informace najdete v tématu věnovaném [optimalizaci doručování pro aktualizace Windows 10](/windows/deployment/update/waas-delivery-optimization#the-cloud-service-doesnt-see-other-peers-on-the-network) .
 
 
 #### <a name="how-do-clients-communicate-with-delivery-optimization-over-the-network"></a>Jak klienti komunikují s optimalizací doručování přes síť?
-Další informace o síťových portech, požadavcích na proxy serveru a názvůch hostitelů pro brány firewall najdete v tématu [Nejčastější dotazy k optimalizaci doručení](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions).
+Další informace o síťových portech, požadavcích na proxy serveru a názvůch hostitelů pro brány firewall najdete v tématu [Nejčastější dotazy k optimalizaci doručení](/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions).
 
 ## <a name="log-files"></a>Soubory protokolu
 

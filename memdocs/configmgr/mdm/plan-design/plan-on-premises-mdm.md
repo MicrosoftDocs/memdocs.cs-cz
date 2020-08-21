@@ -10,12 +10,12 @@ ms.assetid: 02979fb8-ea7e-4ec6-b7e0-ecbfda73e52d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5690e4fe003939d00dee1185e6f6551813c346e5
-ms.sourcegitcommit: 578ad1e8088f7065b565e8a4f4619f5a26b94001
+ms.openlocfilehash: 60139e3e26195f2feb8b5533c1d26e3e8fb8c3d0
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81721847"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693739"
 ---
 # <a name="plan-for-on-premises-mdm-in-configuration-manager"></a>Plánování místní správy mobilních zařízení (MDM) v Configuration Manager
 
@@ -29,15 +29,15 @@ Při plánování implementace místní správy mobilních zařízení (MDM) v C
 - Registrace zařízení
 
 > [!IMPORTANT]
-> I když se web nebo jakékoli mobilní zařízení nepřipojí k Microsoft Intune, vaše organizace pořád vyžaduje licence Intune, aby mohli tuto funkci používat. Další informace najdete v tématu [Microsoft Intune licencování](https://docs.microsoft.com/intune/fundamentals/licenses).
+> I když se web nebo jakékoli mobilní zařízení nepřipojí k Microsoft Intune, vaše organizace pořád vyžaduje licence Intune, aby mohli tuto funkci používat. Další informace najdete v tématu [Microsoft Intune licencování](/intune/fundamentals/licenses).
 
 Než začnete připravovat infrastrukturu Configuration Manager pro zpracování místní správy mobilních zařízení (MDM), vezměte v úvahu následující požadavky.
 
-## <a name="supported-devices"></a><a name="bkmk_devices"></a>Podporovaná zařízení  
+## <a name="supported-devices"></a><a name="bkmk_devices"></a> Podporovaná zařízení  
 
 Aktuální větev Configuration Manager podporuje registraci v místní správě mobilních zařízení pro zařízení s Windows 10. Tyto typy zařízení primárně zahrnují přenosné počítače, IoT a Surface Hub. Další informace a seznam konkrétních edic najdete v tématu [podporované verze operačních systémů pro klienty a zařízení](../../core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md#bkmk_OnpremOS).
 
-## <a name="site-system-roles"></a><a name="bkmk_roles"></a>Role systému lokality
+## <a name="site-system-roles"></a><a name="bkmk_roles"></a> Role systému lokality
 
 Místní MDM vyžaduje aspoň jednu z následujících rolí systému lokality:
 
@@ -56,7 +56,7 @@ V závislosti na potřebách vaší organizace můžete tyto role nainstalovat n
 
 Obecnější informace najdete v tématu [Plánování serverů a rolí systému lokality](../../core/plan-design/hierarchy/plan-for-site-system-servers-and-site-system-roles.md).
 
-## <a name="trusted-communications"></a><a name="bkmk_trustedComs"></a>Důvěryhodná komunikace
+## <a name="trusted-communications"></a><a name="bkmk_trustedComs"></a> Důvěryhodná komunikace
 
 Místní MDM vyžaduje, abyste povolili role systému lokality pro komunikaci pomocí protokolu HTTPS. V závislosti na vašich potřebách můžete k navázání důvěryhodných připojení mezi servery a zařízeními použít certifikační autoritu (CA) vaší organizace. Jako důvěryhodnou autoritu můžete také použít veřejně dostupnou certifikační autoritu. V obou případech je nutné nakonfigurovat následující certifikáty:
 
@@ -66,7 +66,7 @@ Místní MDM vyžaduje, abyste povolili role systému lokality pro komunikaci po
 
 Další informace najdete v tématu [nastavení certifikátů pro důvěryhodnou komunikaci v místní](../get-started/set-up-certificates-on-premises-mdm.md)správě mobilních zařízení (MDM).
 
-## <a name="device-enrollment"></a><a name="bkmk_enrollment"></a>Registrace zařízení
+## <a name="device-enrollment"></a><a name="bkmk_enrollment"></a> Registrace zařízení
 
 Povolení registrace zařízení pro místní správu mobilních zařízení (MDM):
 

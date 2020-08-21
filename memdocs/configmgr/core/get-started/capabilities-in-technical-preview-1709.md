@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: bedb515c8446e13189fb84644bc0ce7563cc1574
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: b3cb491ff3bfb10935566c33e321542435d2e0af
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078766"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692906"
 ---
 # <a name="capabilities-in-technical-preview-1709-for-configuration-manager"></a>Funkce ve verzi Technical Preview 1709 pro Configuration Manager
 
@@ -34,7 +34,7 @@ V tomto článku se seznámíte s funkcemi, které jsou k dispozici v Technical 
 - **Aktualizace na verzi preview 1709 se nezdařila, pokud máte server lokality v pasivním režimu**. Pokud spouštíte verzi Preview 1706, 1707 nebo 1708 a máte [server primární lokality v pasivním režimu](capabilities-in-technical-preview-1706.md#site-server-role-high-availability), je nutné nejprve odinstalovat server lokality pasivního režimu, aby bylo možné úspěšně aktualizovat lokalitu verze Preview na verzi 1709. Server lokality v pasivním režimu můžete po spuštění lokality verze 1709 znovu nainstalovat.
 
   Postup odinstalace serveru lokality pasivního režimu:
-  1. V konzole nástroje klikněte na **Správa** > **Přehled** > **Konfigurace** > **servery lokality a role systému lokality**a potom vyberte server lokality pasivního režimu.
+  1. V konzole nástroje klikněte na **Správa**  >  **Přehled**  >  **Konfigurace**  >  **servery lokality a role systému lokality**a potom vyberte server lokality pasivního režimu.
   2. V podokně **role systému lokality** klikněte pravým tlačítkem na roli **serveru lokality** a pak zvolte **Odebrat roli**.
   3. Klikněte pravým tlačítkem na server lokality pasivního režimu a zvolte **Odstranit**.
   4. Po odinstalaci serveru lokality na aktivním serveru primární lokality restartujte službu **CONFIGURATION_MANAGER_UPDATE**.
@@ -44,7 +44,7 @@ V tomto článku se seznámíte s funkcemi, které jsou k dispozici v Technical 
 
 ## <a name="improved-vpn-profile-experience-in-configuration-manager-console"></a>Vylepšené možnosti profilů VPN v konzole Configuration Manager
 <!-- 1313282 -->
-V této verzi jsme aktualizovali Průvodce profilem sítě VPN a stránky vlastností, aby se zobrazila nastavení vhodná pro vybranou platformu. Konkrétně:
+V této verzi jsme aktualizovali Průvodce profilem sítě VPN a stránky vlastností, aby se zobrazila nastavení vhodná pro vybranou platformu. Konkrétně se jedná o tyto:
 
 - Každá platforma má svůj vlastní pracovní postup, což znamená, že nové profily sítě VPN obsahují pouze nastavení podporovaná platformou.
 - Stránky **podporované platformy** se nyní zobrazí po stránce **Obecné** .  Nyní si zvolíte platformu před nastavením hodnot vlastností.
@@ -62,7 +62,7 @@ Kvůli minimalizaci rizika kompatibility se stávající profily sítě VPN nezm
 
 Pomocí běžného procesu vytvořte nový profil VPN. Všimněte si, že se změnila první stránka v možnostech Průvodce profilem sítě VPN.
 
-1. Přejděte na **prostředky a kompatibilita** > **Přehled** > **Nastavení** > dodržování předpisů > **přístup k prostředkům společnosti****Profily sítě VPN** a pak zvolte **vytvořit profil sítě VPN**.
+1. Přejděte na **prostředky a kompatibilita**  >  **Přehled**  >  **Nastavení dodržování předpisů**  >  **přístup k prostředkům společnosti**  >  **Profily sítě VPN** a pak zvolte **vytvořit profil sítě VPN**.
 2. Zadejte název na stránce **Obecné** a v části **Zadejte typ profilu sítě VPN, který chcete vytvořit**, vyberte jednu z následujících možností:
 
     - Windows 10  
@@ -81,7 +81,7 @@ Při výběru různých platforem si všimněte, že se zobrazí pouze nastaven�
 <!-- 1350871 -->
 Mnoho zákazníků chce spravovat zařízení s Windows 10 stejným způsobem jako s tím, jak spravují mobilní zařízení, a to s využitím zjednodušeného cloudového řešení s nižšími náklady. Přechod z tradiční správy na moderní správu ale může být náročný. Od verze 1607 Windows 10 (označované také jako aktualizace pro výročí) můžete připojit zařízení s Windows 10 k místní službě Active Directory (AD) a cloudovou službu Azure AD ve stejnou dobu (hybridní služba Azure AD). Spoluspráva využívá toto vylepšení a umožňuje souběžně spravovat zařízení s Windows 10 pomocí Configuration Manager i Intune. Jedná se o řešení, které poskytuje přechod z tradičního na moderní správu a poskytuje cestu k převedení pomocí dvoufázového přístupu. 
 
-### <a name="prerequisites"></a>Požadavky
+### <a name="prerequisites"></a>Předpoklady
 Aby bylo možné povolit spolusprávu, je nutné, aby byly splněny následující předpoklady. Existují obecné požadavky a různé požadavky na stávající klienty Configuration Manager a zařízení, která nejsou klienty nástroje.
 
 ### <a name="known-issues"></a>Známé problémy
@@ -113,22 +113,22 @@ Po povolení spolusprávy Configuration Manager nadále spravovat všechny úloh
 Zásady dodržování předpisů definují pravidla a nastavení, která musí zařízení dodržovat, aby se dalo považovat za zařízení, které dodržuje zásady podmíněného přístupu. Zásady dodržování předpisů můžeme používat i k monitorování a opravám problémů s dodržováním předpisů u zařízení, a to nezávisle na podmíněném přístupu.
 
 #### <a name="windows-update-for-business-policies"></a>Zásady web Windows Update pro firmy
-Zásady web Windows Update pro firmy umožňují nakonfigurovat zásady odložení pro aktualizace funkcí Windows 10 nebo aktualizace kvality pro zařízení s Windows 10 spravovaná přímo pomocí web Windows Update pro firmy. Podrobnosti najdete v tématu [Konfigurace zásad odložení web Windows Update pro firmy](https://docs.microsoft.com/sccm/sum/deploy-use/integrate-windows-update-for-business-windows-10#configure-windows-update-for-business-deferral-policies).  
+Zásady web Windows Update pro firmy umožňují nakonfigurovat zásady odložení pro aktualizace funkcí Windows 10 nebo aktualizace kvality pro zařízení s Windows 10 spravovaná přímo pomocí web Windows Update pro firmy. Podrobnosti najdete v tématu [Konfigurace zásad odložení web Windows Update pro firmy](/sccm/sum/deploy-use/integrate-windows-update-for-business-windows-10#configure-windows-update-for-business-deferral-policies).  
 
 ### <a name="remote-actions-available-in-intune-on-azure-for-co-managed-devices"></a>Vzdálené akce dostupné v Intune v Azure pro spoluspravovaná zařízení
 Pokud je pro spolusprávu povolený zařízení s Windows 10, máte k dispozici následující vzdálené akce z Intune v Azure:  
-- [Obnovení továrního nastavení](https://docs.microsoft.com/intune/devices-wipe#wipe)
-- [Selektivní vymazání](https://docs.microsoft.com/intune/apps-selective-wipe)
-- [Odstranit zařízení](https://docs.microsoft.com/intune/devices-wipe#delete-devices-from-the-azure-active-directory-portal)
-- [Restartování zařízení](https://docs.microsoft.com/intune/device-restart)
-- [Nový Start](https://docs.microsoft.com/intune/device-fresh-start)
+- [Obnovení továrního nastavení](/intune/devices-wipe#wipe)
+- [Selektivní vymazání](/intune/apps-selective-wipe)
+- [Odstranit zařízení](/intune/devices-wipe#delete-devices-from-the-azure-active-directory-portal)
+- [Restartování zařízení](/intune/device-restart)
+- [Nový Start](/intune/device-fresh-start)
 
 ### <a name="prepare-intune-for-co-management"></a>Příprava Intune pro spolusprávu
 Než přepnete úlohy z Configuration Manager do Intune, vytvořte profily a zásady, které v Intune potřebujete, abyste zajistili, že budou vaše zařízení dál chráněná.
 V Intune můžete vytvářet objekty, které jsou založené na objektech, které máte v Configuration Manager. Nebo pokud je vaše aktuální strategie založená na starší nebo tradiční správě, můžete si projít krok zpátky a znovu se rozhodnout, jaké zásady a profily budete potřebovat pro moderní správu. Pomocí následujících zdrojů Vytvořte zásady a profily.    
-<!-- - [Device compliance policies](https://docs.microsoft.com/intune/compliance-policy-create-windows)  -->
-- [Zásady web Windows Update pro firmy](https://docs.microsoft.com/intune/windows-update-for-business-configure)  
-- [Konfigurační profily zařízení](https://docs.microsoft.com/intune/device-profile-create)  
+<!-- - [Device compliance policies](/intune/compliance-policy-create-windows)  -->
+- [Zásady web Windows Update pro firmy](/intune/windows-update-for-business-configure)  
+- [Konfigurační profily zařízení](/intune/device-profile-create)  
 
 ### <a name="architectural-overview-for-co-management"></a>Přehled architektury pro spolusprávu
 Následující diagram znázorňuje architekturu pro spolusprávu a způsob, jakým se zapadá do stávajících infrastruktur konfigurace a Intune.
@@ -152,7 +152,7 @@ Můžete povolit spolusprávu na zařízeních s Windows 10, která jsou připoj
 #### <a name="command-line-to-install-configuration-manager-client"></a>Příkazový řádek pro instalaci klienta Configuration Manager
 Vytvořte aplikaci v Intune pro zařízení s Windows 10, která ještě nejsou Configuration Manager klienty. Při vytváření aplikace v dalších částech použijte následující příkazový řádek:
 
-CCMSetup. msi CCMSETUPCMD = "/MP: &#60;*Adresa URL koncového bodu vzájemného ověření brány pro správu cloudu*&#62;/CCMHOSTNAME =&#60;*URL koncového bodu vzájemného ověření brány pro správu cloudu*&#62; SMSSiteCode =&#60;*SiteCode*&#62; SMSMP = https: &#47;/&#60;*plně kvalifikovaný název domény MP*&#62; AADTENANTID =&#60;*ID TENANTA AAD*&#62; AADTENANTNAME =&#60;*název klienta*&#62; AADCLIENTAPPID =&#60;*Server AppID pro integraci AAD*&#62; AADRESOURCEURI = https: &#47; */&#60;*
+ccmsetup.msi CCMSETUPCMD = "/MP: &#60;*URL koncového bodu vzájemného ověření brány pro správu cloudu*&#62;/CCMHOSTNAME =&#60;*URL koncového bodu vzájemného ověření brány pro správu cloudu*&#62; SMSSiteCode =&#60;*SiteCode*&#62; SMSMP = https: &#47;/&#60;*plně kvalifikovaný název domény sady MP*&#62; AADTENANTID =&#60;*ID tenanta AAD* *&#62; AADTENANTNAME* = https:&#60;/&#62; *ID prostředku* *&#60;*
 
 Například pokud máte následující hodnoty:
 
@@ -173,11 +173,11 @@ Například pokud máte následující hodnoty:
 
 Použijte následující příkazový řádek:
 
-CCMSetup. msi CCMSETUPCMD = "/MP: https:/&#47;contoso.cloudapp.net/CCM_Proxy_MutualAuth/72057594037928100 CCMHOSTNAME = contoso. cloudapp. NET/CCM_Proxy_MutualAuth/72057594037928100 SMSSiteCode = PS1 SMSMP = https:/&#47;sccmmp.corp.contoso.com AADTENANTID = 72F988BF-86F1-41AF-91AB-2D7CD011XXXX AADTENANTNAME = contoso AADCLIENTAPPID = bef323b3-042F-41a6-907a-f9faf0d1XXXX AADRESOURCEURI = https:/&#47;ConfigMgrServer"
+ccmsetup.msi CCMSETUPCMD = "/MP: https:/&#47;contoso.cloudapp.net/CCM_Proxy_MutualAuth/72057594037928100 CCMHOSTNAME = contoso. cloudapp. NET/CCM_Proxy_MutualAuth/72057594037928100 SMSSiteCode = PS1 SMSMP = https:/&#47;sccmmp.corp.contoso.com AADTENANTID = 72F988BF-86F1-41AF-91AB-2D7CD011XXXX AADTENANTNAME = contoso AADCLIENTAPPID = bef323b3-042F-41a6-907a-f9faf0d1XXXX AADRESOURCEURI = https:/&#47;ConfigMgrServer"
 
 > [!Tip]
 >Parametry příkazového řádku pro váš web můžete najít pomocí následujících kroků:     
-> 1. V konzole Configuration Manager klikněte na **Správa** > **Přehled** > **Cloud Services** > **spoluspráva**.  
+> 1. V konzole Configuration Manager klikněte na **Správa**  >  **Přehled**  >  **Cloud Services**  >  **spoluspráva**.  
 > 2. Na kartě Domů ve skupině spravovat vyberte možnost **Konfigurovat spolusprávu** a otevřete tak Průvodce připojování spoluspráva.    
 > 3. Na stránce Předplatné klikněte na **Přihlásit** se a přihlaste se k tenantovi Intune a potom klikněte na **Další**.    
 > 4. Na stránce zapnout klikněte na **Kopírovat** v části **zařízení zaregistrovaná v Intune** , abyste zkopírovali příkazový řádek do schránky a pak jste příkazový řádek uložili, abyste ho mohli použít v postupu vytvoření aplikace.  
@@ -185,22 +185,22 @@ CCMSetup. msi CCMSETUPCMD = "/MP: https:/&#47;contoso.cloudapp.net/CCM_Proxy_Mut
 
 #### <a name="new-windows-10-devices"></a>Nová zařízení s Windows 10
 Pro nová zařízení s Windows 10 můžete použít službu autopilotu ke konfiguraci nedostatku možnosti, která zahrnuje připojení zařízení ke službě AD a Azure AD, a registraci zařízení v Intune. Pak vytvořte v Intune aplikaci, která nasadí klienta Configuration Manager.  
-1. Povolit autopilot pro nová zařízení s Windows 10. Podrobnosti najdete v tématu [Přehled Windows Autopilotu](https://docs.microsoft.com/windows/deployment/windows-10-auto-pilot).  
-2. Nakonfigurujte automatickou registraci v Azure AD, aby se vaše zařízení automaticky zaregistrovala do Intune. Podrobnosti najdete v tématu [registrace zařízení s Windows pro Microsoft Intune](https://docs.microsoft.com/intune/windows-enroll).
-3. Vytvořte aplikaci v Intune s Configuration Manager klientským balíčkem a nasaďte aplikaci do zařízení s Windows 10, která chcete spoluspravovat. Pomocí [příkazového řádku můžete nainstalovat klienta Configuration Manager](#command-line-to-install-configuration-manager-client) , když projdete kroky pro [instalaci klientů z Internetu pomocí Azure AD](https://docs.microsoft.com/sccm/core/clients/deploy/deploy-clients-cmg-azure).   
+1. Povolit autopilot pro nová zařízení s Windows 10. Podrobnosti najdete v tématu [Přehled Windows Autopilotu](/windows/deployment/windows-10-auto-pilot).  
+2. Nakonfigurujte automatickou registraci v Azure AD, aby se vaše zařízení automaticky zaregistrovala do Intune. Podrobnosti najdete v tématu [registrace zařízení s Windows pro Microsoft Intune](/intune/windows-enroll).
+3. Vytvořte aplikaci v Intune s Configuration Manager klientským balíčkem a nasaďte aplikaci do zařízení s Windows 10, která chcete spoluspravovat. Pomocí [příkazového řádku můžete nainstalovat klienta Configuration Manager](#command-line-to-install-configuration-manager-client) , když projdete kroky pro [instalaci klientů z Internetu pomocí Azure AD](/sccm/core/clients/deploy/deploy-clients-cmg-azure).   
 
 #### <a name="windows-10-devices-not-enrolled-in-intune-or-a-configuration-manager-client"></a>Zařízení s Windows 10, která nejsou zaregistrovaná v Intune nebo klientovi Configuration Manager
 Pro zařízení s Windows 10, která nejsou zaregistrovaná v Intune nebo mají klienta Configuration Manager, můžete k registraci zařízení v Intune použít automatickou registraci. Pak vytvořte v Intune aplikaci, která nasadí klienta Configuration Manager.
-1. Nakonfigurujte automatickou registraci v Azure AD, aby se vaše zařízení automaticky zaregistrovala do Intune. Podrobnosti najdete v tématu [registrace zařízení s Windows pro Microsoft Intune](https://docs.microsoft.com/intune/windows-enroll).  
-2. Vytvořte aplikaci v Intune s Configuration Manager klientským balíčkem a nasaďte aplikaci do zařízení s Windows 10, která chcete spoluspravovat. Pomocí [příkazového řádku můžete nainstalovat klienta Configuration Manager](#command-line-to-install-configuration-manager-client) , když projdete kroky pro [instalaci klientů z Internetu pomocí Azure AD](https://docs.microsoft.com/sccm/core/clients/deploy/deploy-clients-cmg-azure).
+1. Nakonfigurujte automatickou registraci v Azure AD, aby se vaše zařízení automaticky zaregistrovala do Intune. Podrobnosti najdete v tématu [registrace zařízení s Windows pro Microsoft Intune](/intune/windows-enroll).  
+2. Vytvořte aplikaci v Intune s Configuration Manager klientským balíčkem a nasaďte aplikaci do zařízení s Windows 10, která chcete spoluspravovat. Pomocí [příkazového řádku můžete nainstalovat klienta Configuration Manager](#command-line-to-install-configuration-manager-client) , když projdete kroky pro [instalaci klientů z Internetu pomocí Azure AD](/sccm/core/clients/deploy/deploy-clients-cmg-azure).
 
 #### <a name="windows-10-devices-enrolled-in-intune"></a>Zařízení s Windows 10 zaregistrovaná v Intune
-U zařízení s Windows 10, která jsou už zaregistrovaná v Intune, vytvořte v Intune aplikaci, která nasadí klienta Configuration Manager. Pomocí [příkazového řádku můžete nainstalovat klienta Configuration Manager](#command-line-to-install-configuration-manager-client) , když projdete kroky pro [instalaci klientů z Internetu pomocí Azure AD](https://docs.microsoft.com/sccm/core/clients/deploy/deploy-clients-cmg-azure).  
+U zařízení s Windows 10, která jsou už zaregistrovaná v Intune, vytvořte v Intune aplikaci, která nasadí klienta Configuration Manager. Pomocí [příkazového řádku můžete nainstalovat klienta Configuration Manager](#command-line-to-install-configuration-manager-client) , když projdete kroky pro [instalaci klientů z Internetu pomocí Azure AD](/sccm/core/clients/deploy/deploy-clients-cmg-azure).  
 
 ### <a name="switch-configuration-manager-workloads-to-intune"></a>Přepnutí úloh Configuration Manageru do Intune
 V předchozí části jste připravili zařízení s Windows 10 pro spolusprávu. Tato zařízení jsou teď připojená ke službě AD a Azure AD a jsou zaregistrovaná v Intune a musí mít klienta Configuration Manager. Máte pravděpodobně stále zařízení s Windows 10, která jsou připojená ke službě AD a mají klienta Configuration Manager, ale nejsou připojeni k Azure AD nebo zaregistrovali v Intune. Následující postup slouží k povolení spolusprávy, přípravě zbývajících zařízení s Windows 10 (Configuration Manager klientů bez registrace Intune) pro spolusprávu a umožňuje začít přepínat konkrétní Configuration Manager úlohy do Intune.
 
-1. V konzole Configuration Manager klikněte na **Správa** > **Přehled** > **Cloud Services** > **spoluspráva**.    
+1. V konzole Configuration Manager klikněte na **Správa**  >  **Přehled**  >  **Cloud Services**  >  **spoluspráva**.    
 2. Na kartě Domů ve skupině spravovat vyberte možnost **Konfigurovat spolusprávu** a otevřete tak Průvodce připojování spoluspráva.    
 3. Na stránce Předplatné klikněte na **Přihlásit** se a přihlaste se k tenantovi Intune a potom klikněte na **Další**.   
 4. Na stránce Příprava nakonfigurujte následující nastavení a potom klikněte na tlačítko **Další**:
@@ -218,5 +218,5 @@ Select the co-management object, and then on the Home tab, click **Properties**.
 <!--### Monitor co-management
 After you have enabled co-management, you can monitor which devices are managed by Configuration Manager and which are managed by Intune. You can also see which Configuration Manager workloads are managed by which product.-->
 
-## <a name="see-also"></a>Viz také
-Informace o instalaci nebo aktualizaci větve Technical Preview najdete v tématu [Technical Preview pro Configuration Manager](technical-preview.md). 
+## <a name="see-also"></a>Viz také:
+Informace o instalaci nebo aktualizaci větve Technical Preview najdete v tématu [Technical Preview pro Configuration Manager](technical-preview.md).

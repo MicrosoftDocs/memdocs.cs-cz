@@ -10,12 +10,12 @@ ms.assetid: 4cf640b3-610c-4c3c-b966-c62e9f5654ff
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f2ada7bfcef5714d8df3c476a6bbba695dc398e0
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: f5b9addd35dd3e9252c1b988de4bb006e9a5bc0d
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127269"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694963"
 ---
 # <a name="conditional-access-with-co-management"></a>Podmíněný přístup s spolusprávou
 
@@ -108,12 +108,11 @@ Podmíněný přístup se dá snadno použít, když [povolíte spolusprávu](ho
 
 Další informace o použití podmíněného přístupu najdete v následujících článcích: 
 
-- [Podmíněný přístup ve službě Azure AD](https://docs.microsoft.com/azure/active-directory/conditional-access/overview)  
+- [Podmíněný přístup ve službě Azure AD](/azure/active-directory/conditional-access/overview)  
 
-- [Zásady dodržování předpisů zařízeními v Intune](https://docs.microsoft.com/intune/device-compliance)  
+- [Zásady dodržování předpisů zařízeními v Intune](/intune/device-compliance)  
 
-- [Podmíněný přístup na základě aplikace s Intune](https://docs.microsoft.com/intune/app-based-conditional-access-intune)  
+- [Podmíněný přístup na základě aplikace s Intune](/intune/app-based-conditional-access-intune)  
 
 > [!Note]  
-> Funkce podmíněného přístupu budou k dispozici okamžitě pro zařízení připojená k hybridní službě Azure AD. Mezi tyto funkce patří Multi-Factor Authentication a hybridní řízení přístupu ke službě Azure AD. Důvodem je to, že jsou založené na vlastnostech Azure AD. Pokud chcete využít hodnocení na základě konfigurace z Intune a Configuration Manager, povolte spolusprávu. Tato konfigurace poskytuje přístup k řízení přístupu přímo z Intune pro vyhovující zařízení. Poskytuje taky funkci vyhodnocení zásad dodržování předpisů pro Intune.  
-
+> Funkce podmíněného přístupu budou k dispozici okamžitě pro zařízení připojená k hybridní službě Azure AD. Mezi tyto funkce patří Multi-Factor Authentication a hybridní řízení přístupu ke službě Azure AD. Důvodem je to, že jsou založené na vlastnostech Azure AD. Pokud chcete využít hodnocení na základě konfigurace z Intune a Configuration Manager, povolte spolusprávu. Tato konfigurace poskytuje přístup k řízení přístupu přímo z Intune pro vyhovující zařízení. Poskytuje taky funkci vyhodnocení zásad dodržování předpisů pro Intune.

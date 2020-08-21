@@ -10,12 +10,12 @@ ms.assetid: 9181c84e-d74f-44ea-9bb9-f7805eb465fc
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: ddd01055ac6edf2872854c93cc5172b396052ad2
-ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
+ms.openlocfilehash: 2712613eb6d03253c05a011037ac8492992e1f03
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84270850"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695184"
 ---
 # <a name="create-windows-applications-in-configuration-manager"></a>Vytváření aplikací pro Windows v Configuration Manager
 
@@ -23,7 +23,7 @@ ms.locfileid: "84270850"
 
 Kromě dalších Configuration Manager požadavků a postupů pro [vytváření aplikací](../deploy-use/create-applications.md)Vezměte v úvahu při vytváření a nasazování aplikací pro zařízení s Windows taky následující skutečnosti.  
 
-## <a name="general-considerations"></a><a name="bkmk_general"></a>Obecné požadavky  
+## <a name="general-considerations"></a><a name="bkmk_general"></a> Obecné požadavky  
 
 Configuration Manager podporuje nasazování formátů balíčku aplikace systému Windows (. appx) a sady prostředků aplikace (. appxbundle) pro Windows 8.1 a zařízení s Windows 10.
 
@@ -32,7 +32,7 @@ Když vytváříte aplikaci v konzole Configuration Manager, vyberte **typ** ins
 > [!Note]  
 > Pokud chcete využívat nové funkce Configuration Manager, nejdřív aktualizujte klienty na nejnovější verzi. I když se nové funkce zobrazí v konzole Configuration Manager, když aktualizujete lokalitu a konzolu, kompletní scénář nebude funkční, dokud nebude verze klienta zároveň nejnovější.<!--SCCMDocs issue 646-->  
 
-## <a name="provision-windows-app-packages-for-all-users-on-a-device"></a><a name="bkmk_provision"></a>Zřídit balíčky aplikací pro Windows pro všechny uživatele na zařízení
+## <a name="provision-windows-app-packages-for-all-users-on-a-device"></a><a name="bkmk_provision"></a> Zřídit balíčky aplikací pro Windows pro všechny uživatele na zařízení
 <!--1358310-->
 Zřídit aplikaci s balíčkem aplikace pro Windows pro všechny uživatele v zařízení. Jedním z běžných příkladů tohoto scénáře je zřízení aplikace od Microsoft Store pro firmy a vzdělávání, jako je Minecraftu: školství Edition, pro všechna zařízení používaná studenty ve škole. Dřív Configuration Manager podporuje jenom instalaci těchto aplikací na uživatele. Po přihlášení k novému zařízení musí student čekat na přístup k aplikaci. Když teď aplikaci zřídíte pro všechny uživatele, můžou se rychleji zvýšit.
 
@@ -53,12 +53,12 @@ Chcete-li pro tuto funkci nakonfigurovat typ nasazení aplikace pro systém Wind
 > [!Note]  
 > Pokud potřebujete odinstalovat zřízenou aplikaci ze zařízení, ke kterým se uživatelé už přihlásili, musíte vytvořit dvě odinstalační nasazení. Zaměřte se na první nasazení odinstalace do kolekce zařízení, která obsahuje zařízení. Zajistěte druhé odinstalaci nasazení na kolekci uživatelů, která obsahuje uživatele, kteří se už přihlásili k zařízením s zřízenou aplikací. Při odinstalaci zřízené aplikace na zařízení Windows v tuto chvíli neprovádí odinstalaci této aplikace pro uživatele.
 
-## <a name="support-for-msix-format"></a><a name="bkmk_msix"></a>Podpora formátu MSIX
+## <a name="support-for-msix-format"></a><a name="bkmk_msix"></a> Podpora formátu MSIX
 <!--1357427-->
 
 Configuration Manager podporuje balíčky aplikací pro Windows 10 (. msix) a sady prostředků aplikace (. msixbundle). Windows 10 verze 1809 nebo novější tyto formáty podporují.
 
-- Přehled MSIX najdete v tématu o tom, jak se [podíváte na MSIX](https://docs.microsoft.com/archive/blogs/sgern/a-closer-look-at-msix).  
+- Přehled MSIX najdete v tématu o tom, jak se [podíváte na MSIX](/archive/blogs/sgern/a-closer-look-at-msix).  
 
 - Informace o tom, jak vytvořit novou aplikaci MSIX, najdete [v článku podpora MSIX představená v programu Insider build 17682](https://techcommunity.microsoft.com/t5/MSIX-Blog/MSIX-support-introduced-in-Insider-Build-17682/ba-p/202376).  
 
@@ -79,7 +79,7 @@ Převeďte stávající aplikace Instalační služba systému Windows (. msi) n
 
   - Instalace nástroje pro vytváření [balíčků MSIX](https://www.microsoft.com/store/productId/9N5LW3JBCXKF) z Microsoft Store  
 
-  - Instalace [ovladače nástroje pro vytváření balíčků MSIX](https://docs.microsoft.com/windows/msix/packaging-tool/tool-known-issues#frameworks-and-drivers)<!--SCCMDocs-pr issue #3091-->  
+  - Instalace [ovladače nástroje pro vytváření balíčků MSIX](/windows/msix/packaging-tool/tool-known-issues#frameworks-and-drivers)<!--SCCMDocs-pr issue #3091-->  
 
 Na toto zařízení neinstalujte žádné další aplikace ani služby. Je to váš referenční systém.
 
@@ -104,12 +104,12 @@ Pokud se proces nezdařil, stránka souhrnu odkazuje na soubor protokolu s více
 
 Pokud chcete tuto aplikaci MSIX použít, musíte ji nejdřív digitálně podepsat, aby ji klienti důvěřovali. Další informace o tomto procesu najdete v následujících článcích:
 
-- [MSIX – Nástroj pro balení MSIX – podepsání balíčku MSIX](https://docs.microsoft.com/archive/blogs/sgern/msix-the-msix-packaging-tool-signing-the-msix-package)
-- [Jak podepsat balíček aplikace pomocí SignTool](https://docs.microsoft.com/windows/desktop/appxpkg/how-to-sign-a-package-using-signtool)
+- [MSIX – Nástroj pro balení MSIX – podepsání balíčku MSIX](/archive/blogs/sgern/msix-the-msix-packaging-tool-signing-the-msix-package)
+- [Jak podepsat balíček aplikace pomocí SignTool](/windows/desktop/appxpkg/how-to-sign-a-package-using-signtool)
 
 Po podepsání aplikace vytvořte v aplikaci Configuration Manager nový typ nasazení. Další informace najdete v tématu [Vytvoření typů nasazení pro aplikaci](../deploy-use/create-applications.md#bkmk_create-dt).
 
-## <a name="task-sequence-deployment-type"></a><a name="bkmk_tsdt"></a>Typ nasazení pořadí úloh
+## <a name="task-sequence-deployment-type"></a><a name="bkmk_tsdt"></a> Typ nasazení pořadí úloh
 
 <!--3555953-->
 
@@ -150,7 +150,7 @@ Když vytváříte aplikaci, chcete-li přidat typ nasazení pořadí úloh, vá
 
 - Nepoužívejte krok **instalovat aplikaci** v tomto pořadí úkolů. K instalaci aplikací použijte krok [instalovat balíček](../../osd/understand/task-sequence-steps.md#BKMK_InstallPackage) .
 
-## <a name="support-for-universal-windows-platform-uwp-apps"></a><a name="bkmk_uwp"></a>Podpora aplikací Univerzální platforma Windows (UWP)  
+## <a name="support-for-universal-windows-platform-uwp-apps"></a><a name="bkmk_uwp"></a> Podpora aplikací Univerzální platforma Windows (UWP)  
 
 Zařízení s Windows 10 nevyžadují k instalaci obchodních aplikací klíč pro zkušební načtení. Pokud ale chcete povolit zkušební načtení ve Windows, `HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\Appx\AllowAllTrustedApps` musí mít klíč registru hodnotu **1**.  
 
@@ -166,7 +166,7 @@ Chcete-li podepisovat balíčky mobilních aplikací, použijte následující t
 | balíčky **. xap** | Ano | Ne |
 | balíčky **. appx** sestavené pro Windows Phone 8,1 pro instalaci na zařízeních s Windows 10 Mobile | Ano | Ne |
 
-## <a name="deploy-windows-installer-apps-to-mdm-enrolled-windows-10-devices"></a><a name="bkmk_mdm-msi"></a>Nasazení aplikací Instalační služba systému Windows do zařízení s Windows 10 zaregistrovaných v MDM  
+## <a name="deploy-windows-installer-apps-to-mdm-enrolled-windows-10-devices"></a><a name="bkmk_mdm-msi"></a> Nasazení aplikací Instalační služba systému Windows do zařízení s Windows 10 zaregistrovaných v MDM  
 
 Typ nasazení **Instalační služba systému Windows až MDM ( \* . msi)** umožňuje vytvářet a nasazovat aplikace založené na instalační služba systému Windows na zařízeních zaregistrovaných v MDM s Windows 10.  
 
@@ -182,4 +182,4 @@ Při použití tohoto typu nasazení Vezměte v úvahu následující body:
 
 - Balíčky MSI vázané na počítač se nainstalují pro všechny uživatele zařízení.  
 
-- Configuration Manager podporuje aktualizace aplikací. Kód produktu MSI každé verze se musí shodovat.  
+- Configuration Manager podporuje aktualizace aplikací. Kód produktu MSI každé verze se musí shodovat.

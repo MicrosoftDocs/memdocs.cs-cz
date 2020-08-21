@@ -10,12 +10,12 @@ ms.assetid: 23e1e4dc-623a-4521-ad04-ae9482927097
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1987ba504630ab1d4b23cdb54710f0cbaa3db28a
-ms.sourcegitcommit: 7f542c97ac55bbd329f5befda97d671213c24e9a
+ms.openlocfilehash: 26846066aa713d40fdacfe75810d43cafd1c3f04
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84506244"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693671"
 ---
 # <a name="create-configuration-items-for-windows-devices-with-on-premises-mdm-in-configuration-manager"></a>Vytvoření položek konfigurace pro zařízení s Windows s místní správou MDM v Configuration Manager
 
@@ -75,7 +75,7 @@ Obecnější informace o nastavení dodržování předpisů v Configuration Man
 
 Novou položku konfigurace můžete zobrazit v uzlu **Položky konfigurace** pracovního prostoru **Prostředky a kompatibilita** .
 
-## <a name="settings-reference"></a><a name="bkmk_setref"></a>Odkaz nastavení  
+## <a name="settings-reference"></a><a name="bkmk_setref"></a> Odkaz nastavení  
 
 Následující části obsahují podrobnosti o konkrétních nastaveních dostupných v jednotlivých skupinách. Tato nastavení nakonfigurujte na stránce **nastavení zařízení** **Průvodce vytvořením položky konfigurace** pro **Windows 8.1 a zařízení s Windows 10** spravovaná *bez* klienta Configuration Manager.
 
@@ -127,7 +127,7 @@ Tato nastavení jsou pro zařízení s Windows 8.1 a Windows 10.
 - **Vlastní e-mailový účet**: povolí nebo zakáže použití e-mailového účtu, který není v organizaci na zařízení.
 - **Nastavit účet Microsoft jako volitelný v aplikaci Windows pošta**: tuto možnost povolte, pokud nepožadujete účet Microsoft ve Windows mailu.
 
-### <a name="store"></a>Store
+### <a name="store"></a>Uložení
 
 Tato nastavení platí jenom pro zařízení s Windows 10 a novějším.
 
@@ -242,7 +242,7 @@ Tato nastavení platí jenom pro zařízení s Windows 10 a novějším.
         - **WPA2**
         - **WPA2-PSK**
     - **Šifrování dat**: Vyberte metodu šifrování, kterou toto připojení používá. Dostupné hodnoty se mění v závislosti na vybrané metodě **ověřování** :
-        - **Disabled** (Zakázáno)
+        - **Zakázáno**
         - **WEP**
         - **TKIP**
         - **AES**
@@ -325,7 +325,7 @@ Tato nastavení platí jenom pro zařízení s Windows 10 Team.
 
 ### <a name="windows-information-protection"></a>Windows Information Protection  
 
-Další informace o tom, jak nakonfigurovat ochranu podnikových dat pomocí Configuration Manager, najdete v tématu [Ochrana podnikových dat pomocí Windows Information Protection (NV)](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip).
+Další informace o tom, jak nakonfigurovat ochranu podnikových dat pomocí Configuration Manager, najdete v tématu [Ochrana podnikových dat pomocí Windows Information Protection (NV)](/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip).
 
 ### <a name="microsoft-edge-legacy"></a>Microsoft Edge starší verze
 

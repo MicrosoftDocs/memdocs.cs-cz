@@ -2,7 +2,7 @@
 title: Nastavení klienta
 titleSuffix: Configuration Manager
 description: Přečtěte si o výchozím a vlastním nastavení pro řízení chování klienta.
-ms.date: 08/11/2020
+ms.date: 08/20/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: reference
@@ -10,12 +10,12 @@ ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e70a44fee7b4805884faeda0a5fb1eab72d3371e
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 8045df681560972a353e08ee43c10b6ae86dc50f
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88126997"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693416"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>Informace o nastavení klienta v Configuration Manager
 
@@ -167,7 +167,7 @@ Tuto možnost nastavte na **Ano** , pokud chcete, aby klienti získali obsah z d
 
 ### <a name="automatically-register-new-windows-10-domain-joined-devices-with-azure-active-directory"></a>Automaticky registrovat nová zařízení s Windows 10 připojená k doméně pomocí Azure Active Directory
 
-Když nakonfigurujete Azure Active Directory pro podporu hybridního připojení, Configuration Manager pro tuto funkci nakonfiguruje zařízení s Windows 10. Další informace najdete v tématu [jak nakonfigurovat zařízení připojená k hybridním Azure Active Directory](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup).
+Když nakonfigurujete Azure Active Directory pro podporu hybridního připojení, Configuration Manager pro tuto funkci nakonfiguruje zařízení s Windows 10. Další informace najdete v tématu [jak nakonfigurovat zařízení připojená k hybridním Azure Active Directory](/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup).
 
 ### <a name="enable-clients-to-use-a-cloud-management-gateway"></a>Povolit klientům používat bránu pro správu cloudu
 
@@ -341,11 +341,11 @@ Další informace o těchto nastaveních najdete v tématu [oznámení o restart
 ## <a name="delivery-optimization"></a>Optimalizace doručení
 
 <!-- 1324696 -->
-Skupiny hranic Configuration Manager slouží k definování a regulaci distribuce obsahu napříč podnikovou sítí a vzdálenými pobočkami. [Optimalizace doručení Windows](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) je cloudová technologie peer-to-peer pro sdílení obsahu mezi zařízeními s Windows 10. Nakonfigurujte optimalizaci doručení pro použití skupin hranic při sdílení obsahu mezi partnerskými uzly.
+Skupiny hranic Configuration Manager slouží k definování a regulaci distribuce obsahu napříč podnikovou sítí a vzdálenými pobočkami. [Optimalizace doručení Windows](/windows/deployment/update/waas-delivery-optimization) je cloudová technologie peer-to-peer pro sdílení obsahu mezi zařízeními s Windows 10. Nakonfigurujte optimalizaci doručení pro použití skupin hranic při sdílení obsahu mezi partnerskými uzly.
 
 > [!Note]
 > - Optimalizace doručení je dostupná jenom na klientech s Windows 10.
-> - Přístup k Internetu do cloudové služby optimalizace doručování je nutný k využití svých funkcí peer-to-peer. Informace o potřebných koncových bodech internetu najdete v tématu [Nejčastější dotazy k optimalizaci doručení](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions).
+> - Přístup k Internetu do cloudové služby optimalizace doručování je nutný k využití svých funkcí peer-to-peer. Informace o potřebných koncových bodech internetu najdete v tématu [Nejčastější dotazy k optimalizaci doručení](/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions).
 > - Při použití CMG pro úložiště obsahu se nebude obsah pro aktualizace třetích stran stahovat do klientů, pokud je povolený **rozdílový obsah ke stažení, pokud** je povolené [nastavení klienta](#allow-clients-to-download-delta-content-when-available) dostupné. <!--6598587--> 
 
 ### <a name="use-configuration-manager-boundary-groups-for-delivery-optimization-group-id"></a>Pro ID skupiny pro optimalizaci doručení použijte Configuration Manager skupiny hranic.
@@ -641,6 +641,17 @@ Tuto možnost nastavte na **Ano** , pokud chcete k navázání připojení vzdá
 
 ## <a name="software-center"></a>Centrum softwaru
 
+### <a name="select-the-user-portal"></a>Výběr uživatelského portálu
+
+<!--CMADO-3601237,INADO-4297660-->
+Pokud nasadíte Portál společnosti do spoluspravovaných zařízení verze 2006, nakonfigurujte toto nastavení na **portál společnosti**. Toto nastavení zajistí, že uživatelé budou dostávat jenom oznámení od Portál společnosti.
+
+Pokud Portál společnosti nainstalujete na spoluspravované zařízení, ale nakonfigurujete toto nastavení na **Centrum softwaru**, budou se uživatelům zobrazovat oznámení z obou portálů. Toto prostředí může být matoucí pro uživatele.
+
+Pokud změníte nastavení klienta pro Portál společnosti, když uživatel vybere Configuration Manager oznámení, spustí Portál společnosti. Pokud je oznámení pro scénář, který Portál společnosti nepodporuje, pak se při výběru oznámení spustí Centrum softwaru.
+
+Chování Portál společnosti závisí na konfiguraci úloh spolusprávy. Další informace najdete v tématu [použití portál společnosti aplikace na spoluspravovaných zařízeních](../../../comanage/company-portal.md).
+
 ### <a name="select-these-new-settings-to-specify-company-information"></a>Tato nová nastavení vyberte, pokud chcete zadat informace o společnosti.
 
 Nastavte tuto možnost na **Ano**a potom zadejte následující nastavení pro branding Software Center ve vaší organizaci:
@@ -651,15 +662,15 @@ Nastavte tuto možnost na **Ano**a potom zadejte následující nastavení pro b
 
 - **Vyberte logo pro Centrum softwaru**: klikněte na **Procházet** a vyberte obrázek, který se zobrazí v centru softwaru. Logo musí mít formát JPEG, PNG nebo BMP 400 × 100 pixelů a maximální velikost 750 KB. Název souboru loga by neměl obsahovat mezery.  
 
-### <a name="hide-unapproved-applications-in-software-center"></a><a name="bkmk_HideUnapproved"></a>Skrýt neschválené aplikace v centru softwaru
+### <a name="hide-unapproved-applications-in-software-center"></a><a name="bkmk_HideUnapproved"></a> Skrýt neschválené aplikace v centru softwaru
 
 Pokud povolíte tuto možnost, aplikace dostupné pro uživatele, které vyžadují schválení, budou v centru softwaru skryté.<!--1355146-->
 
-### <a name="hide-installed-applications-in-software-center"></a><a name="bkmk_HideInstalled"></a>Skrýt nainstalované aplikace v centru softwaru
+### <a name="hide-installed-applications-in-software-center"></a><a name="bkmk_HideInstalled"></a> Skrýt nainstalované aplikace v centru softwaru
 
 Pokud povolíte tuto možnost, aplikace, které jsou již nainstalovány, již nebudou zobrazeny na kartě aplikace. Tato možnost je nastavená jako výchozí při instalaci nebo upgradu na Configuration Manager. Nainstalované aplikace jsou stále k dispozici pro kontrolu na kartě stav instalace. <!--1357592-->
 
-### <a name="hide-application-catalog-link-in-software-center"></a><a name="bkmk_HideAppCat"></a>Skrýt odkaz na katalog aplikací v centru softwaru
+### <a name="hide-application-catalog-link-in-software-center"></a><a name="bkmk_HideAppCat"></a> Skrýt odkaz na katalog aplikací v centru softwaru
 
 Zadejte viditelnost odkazu webu Katalog aplikací v centru softwaru. Pokud je tato možnost nastavena, uživatelé neuvidí odkaz Web Application Catalog v uzlu stav instalace v centru softwaru. <!--1358214-->
 
@@ -671,7 +682,7 @@ Zadejte viditelnost odkazu webu Katalog aplikací v centru softwaru. Pokud je ta
 #### <a name="starting-in-version-1906"></a>Počínaje verzí 1906
 <!--4063773-->
 
-Vyberte, které karty by se měly zobrazovat v centru softwaru. K přesunutí karty na **viditelné karty**použijte tlačítko **Přidat** . Použijte tlačítko **Odebrat** a přesuňte ho do seznamu **skrytých karet** . Seřazení karet pomocí tlačítek **Přesunout nahoru** nebo **Přesunout dolů** 
+Vyberte, které karty by se měly zobrazovat v centru softwaru. K přesunutí karty na **viditelné karty**použijte tlačítko **Přidat** . Použijte tlačítko **Odebrat**  a přesuňte ho do seznamu **skrytých karet** . Seřazení karet pomocí tlačítek **Přesunout nahoru** nebo **Přesunout dolů** 
 
 Karty k dispozici:
 - **Aplikace**
@@ -709,7 +720,7 @@ Nakonfigurujte další nastavení v této skupině na **Ano** , pokud chcete, ab
 
 Pokud například vaše organizace nepoužívá zásady dodržování předpisů a chcete skrýt kartu dodržování předpisů zařízením v centru softwaru, nastavte **možnost povolit kartu dodržování předpisů zařízením** na **ne**.
 
-### <a name="configure-default-views-in-software-center"></a><a name="bkmk_swctr_defaults"></a>Konfigurace výchozích zobrazení v centru softwaru
+### <a name="configure-default-views-in-software-center"></a><a name="bkmk_swctr_defaults"></a> Konfigurace výchozích zobrazení v centru softwaru
 <!--3612112-->
 *(Představené ve verzi 1902)*
 
@@ -895,7 +906,7 @@ Toto nastavení nakonfiguruje místní port pro naslouchací proces HTTP, aby st
 
 Pokud tuto možnost nastavíte na **Ano**, povolí se nastavení instalace Microsoft 365 aplikací. Umožňuje taky stahovat soubory ze sítí pro doručování obsahu (sítě CDN) pro Office a nasazovat soubory jako aplikaci v Configuration Manager. Další informace najdete v tématu [Správa aplikací Microsoft 365](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
 
-### <a name="enable-installation-of-software-updates-in-all-deployments-maintenance-window-when-software-update-maintenance-window-is-available"></a><a name="bkmk_SUMMaint"></a>Povolit instalaci aktualizací softwaru v časovém intervalu pro správu všech nasazení, když je k dispozici okno Údržba aktualizace softwaru
+### <a name="enable-installation-of-software-updates-in-all-deployments-maintenance-window-when-software-update-maintenance-window-is-available"></a><a name="bkmk_SUMMaint"></a> Povolit instalaci aktualizací softwaru v časovém intervalu pro správu všech nasazení, když je k dispozici okno Údržba aktualizace softwaru
 
 Pokud nastavíte tuto možnost na **Ano**a u klienta je nadefinovaná aspoň jedna aktualizace softwaru pro správu údržby, aktualizace softwaru se budou instalovat během časového období údržby všechna nasazení.
 
@@ -916,7 +927,7 @@ Například nakonfigurujete následující časové intervaly pro správu a údr
 Ve výchozím nastavení klient nainstaluje jenom aktualizace softwaru v průběhu druhého okna údržby. Ignoruje časový interval pro správu a údržbu pro všechna nasazení v tomto scénáři. Když změníte toto nastavení na **Ano**, klient nainstaluje aktualizace softwaru mezi 02:00-06:00.
 
 
-### <a name="specify-thread-priority-for-feature-updates"></a><a name="bkmk_thread-priority"></a>Zadat prioritu vlákna pro aktualizace funkcí
+### <a name="specify-thread-priority-for-feature-updates"></a><a name="bkmk_thread-priority"></a> Zadat prioritu vlákna pro aktualizace funkcí
 
 <!--3734525-->
 Od verze Configuration Manager 1902 můžete upravit prioritu, s jakou klienti Windows 10 verze 1709 nebo novější nainstalují aktualizaci funkcí prostřednictvím [údržby Windows 10](../../../osd/deploy-use/manage-windows-as-a-service.md). Toto nastavení nemá žádný vliv na místní upgrady pořadí úkolů Windows 10.
@@ -927,11 +938,11 @@ Toto nastavení klienta nabízí následující možnosti:
 
 - **Normální**: Instalační program systému Windows využívá více systémových prostředků a aktualizace rychleji. Využívá více času procesoru, takže celkový čas instalace je kratší, ale výpadek uživatele trvá.  
 
-    - Nakonfiguruje setupconfig.ini soubor na zařízení pomocí `/Priority Normal` [Možnosti příkazového řádku instalačního programu systému Windows](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options).
+    - Nakonfiguruje setupconfig.ini soubor na zařízení pomocí `/Priority Normal` [Možnosti příkazového řádku instalačního programu systému Windows](/windows-hardware/manufacture/desktop/windows-setup-command-line-options).
 
 - **Nízká**: během stahování a aktualizace na pozadí můžete pokračovat v práci na zařízení. Celková doba instalace je delší, ale výpadek uživatele je kratší. Možná bude nutné zvýšit maximální dobu běhu aktualizace, aby nedocházelo k vypršení časového limitu při použití této možnosti.  
 
-    - Odebere `/Priority` z setupconfig.ini souboru [možnost příkazového řádku instalačního programu systému Windows](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options) .
+    - Odebere `/Priority` z setupconfig.ini souboru [možnost příkazového řádku instalačního programu systému Windows](/windows-hardware/manufacture/desktop/windows-setup-command-line-options) .
 
 
 ### <a name="enable-third-party-software-updates"></a>Povolit aktualizace softwaru třetích stran
@@ -940,7 +951,7 @@ Pokud nastavíte tuto možnost na **Ano**, nastaví zásady pro **Povolení pode
 
 ### <a name="enable-dynamic-update-for-feature-updates"></a><a name="bkmk_du"></a>Povolit dynamickou aktualizaci pro aktualizace funkcí
 <!--4062619-->
-Od verze Configuration Manager 1906 můžete nakonfigurovat [dynamickou aktualizaci pro Windows 10](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/The-benefits-of-Windows-10-Dynamic-Update/ba-p/467847). Dynamická aktualizace instaluje jazykové sady, funkce na vyžádání, ovladače a kumulativní aktualizace během instalace systému Windows nasměrováním klienta na stažení těchto aktualizací z Internetu. Pokud je toto nastavení nastaveno na **hodnotu Ano** nebo **ne**, Configuration Manager upraví soubor [setupconfig](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options) , který se používá při instalaci aktualizace funkcí.
+Od verze Configuration Manager 1906 můžete nakonfigurovat [dynamickou aktualizaci pro Windows 10](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/The-benefits-of-Windows-10-Dynamic-Update/ba-p/467847). Dynamická aktualizace instaluje jazykové sady, funkce na vyžádání, ovladače a kumulativní aktualizace během instalace systému Windows nasměrováním klienta na stažení těchto aktualizací z Internetu. Pokud je toto nastavení nastaveno na **hodnotu Ano** nebo **ne**, Configuration Manager upraví soubor [setupconfig](/windows-hardware/manufacture/desktop/windows-setup-command-line-options) , který se používá při instalaci aktualizace funkcí.
 
 - **Nenakonfigurováno** – výchozí hodnota. V souboru setupconfig se neprovádí žádné změny.
   - Dynamická aktualizace je ve výchozím nastavení povolená ve všech podporovaných verzích Windows 10.

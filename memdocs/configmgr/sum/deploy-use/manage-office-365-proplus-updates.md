@@ -1,5 +1,5 @@
 ---
-title: Správa aktualizací Microsoft 365ch aplikací
+title: Správa aktualizací aplikací Microsoft 365
 titleSuffix: Configuration Manager
 description: Configuration Manager synchronizuje aktualizace klienta Microsoft 365 Apps z katalogu služby WSUS do serveru lokality, aby byly aktualizace k dispozici pro nasazení na klienty.
 author: mestew
@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: eac542eb-9aa1-4c63-b493-f80128e4e99b
-ms.openlocfilehash: d2a7f5ec31359cdd1a69bad3204d5119f8998e92
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 907c8d63d68ee4f34b9d22be24f32ffb1878b715
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129167"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696170"
 ---
 # <a name="manage-microsoft-365-apps-with-configuration-manager"></a>Správa aplikací Microsoft 365 s využitím Configuration Manager
 
 *Platí pro: Configuration Manager (Current Branch)*
 
 > [!Note]
-> Od 21. dubna 2020 se sada Office 365 ProPlus přejmenovává na **Microsoft 365 aplikace pro podniky**. Další informace najdete v tématu [Změna názvu pro Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change). V konzole Configuration Manager se pořád zobrazují odkazy na starý název a podpůrná dokumentace, zatímco se konzola aktualizuje.
+> Od 21. dubna 2020 se sada Office 365 ProPlus přejmenovává na **Microsoft 365 aplikace pro podniky**. Další informace najdete v tématu [Změna názvu pro Office 365 ProPlus](/deployoffice/name-change). V konzole Configuration Manager se pořád zobrazují odkazy na starý název a podpůrná dokumentace, zatímco se konzola aktualizuje.
 
 Configuration Manager vám umožní spravovat aplikace Microsoft 365 těmito způsoby:
 
@@ -39,8 +39,8 @@ Configuration Manager vám umožní spravovat aplikace Microsoft 365 těmito zp�
 
 Chcete-li zkontrolovat informace o klientovi Microsoft 365 Apps a spustit některé z těchto akcí správy aplikace Microsoft 365, použijte [řídicí panel pro správu klientů Office 365](office-365-dashboard.md).
 
-## <a name="deploy-microsoft-365-apps"></a><a name="bkmk_deploy"></a>Nasazení Microsoft 365ch aplikací
-Spusťte instalační program Microsoft 365 Apps z řídicího panelu pro správu klientů Office 365 pro úvodní instalaci Microsoft 365ch aplikací. Průvodce vám umožní nakonfigurovat nastavení instalace Microsoft 365 Apps, stahovat soubory ze sítě pro doručování obsahu (sítě CDN) pro Office a vytvářet a nasazovat skriptovací aplikace pro soubory. Dokud se na klientech nenainstalovaly aplikace Microsoft 365 a spouští se [úloha automatické aktualizace Microsoft 365 aplikací](https://docs.microsoft.com/deployoffice/overview-update-process-microsoft-365-apps) , Microsoft 365 aktualizace aplikací se nedají použít. Pro účely testování můžete spustit úlohu aktualizace ručně.
+## <a name="deploy-microsoft-365-apps"></a><a name="bkmk_deploy"></a> Nasazení Microsoft 365ch aplikací
+Spusťte instalační program Microsoft 365 Apps z řídicího panelu pro správu klientů Office 365 pro úvodní instalaci Microsoft 365ch aplikací. Průvodce vám umožní nakonfigurovat nastavení instalace Microsoft 365 Apps, stahovat soubory ze sítě pro doručování obsahu (sítě CDN) pro Office a vytvářet a nasazovat skriptovací aplikace pro soubory. Dokud se na klientech nenainstalovaly aplikace Microsoft 365 a spouští se [úloha automatické aktualizace Microsoft 365 aplikací](/deployoffice/overview-update-process-microsoft-365-apps) , Microsoft 365 aktualizace aplikací se nedají použít. Pro účely testování můžete spustit úlohu aktualizace ručně.
 
 Pro předchozí verze Configuration Manager musíte provést následující kroky a nainstalovat Microsoft 365 aplikace poprvé na klientech:
 - Stáhnout nástroj pro nasazení Office (ODT)
@@ -76,7 +76,7 @@ Počínaje Configuration Manager 1806 Nástroj pro přizpůsobení sady Office j
 
     Pokud máte existující konfigurační soubor, zadejte umístění souboru a přejděte ke kroku 7. Je nutné zadat umístění ve formuláři &#92;&#92;*server*&#92;*sdílet*&#92;*filename*. XML.
     > [!IMPORTANT]    
-    > Konfigurační soubor XML musí obsahovat jenom [jazyky, které podporuje Office 2016](https://docs.microsoft.com/deployoffice/office2016/language-identifiers-and-optionstate-id-values-in-office-2016).
+    > Konfigurační soubor XML musí obsahovat jenom [jazyky, které podporuje Office 2016](/deployoffice/office2016/language-identifiers-and-optionstate-id-values-in-office-2016).
 
 5. Na stránce **klientské produkty** vyberte sadu Microsoft 365 Apps, kterou používáte. Vyberte aplikace, které chcete zahrnout. Vyberte všechny další produkty, které by měly být zahrnuty, a poté klikněte na tlačítko **Další**.
 6. Na stránce **nastavení klienta** vyberte nastavení, které chcete zahrnout, a potom klikněte na tlačítko **Další**.
@@ -98,12 +98,12 @@ Můžete procházet statistiky dodržování předpisů a zjistit, která zaří
 
 1. Přejít na **Software Library**  >  **Office 365**  >  **Update Management Office 365 Updates**.
 1. Vyberte jakoukoli aktualizaci, kterou vyžaduje aspoň jedno zařízení.
-1. Podívejte se na kartu **Souhrn** a v části **Statistika**Najděte výsečový graf.
+1. Podívejte se na kartu **Souhrn** a v části  **Statistika**Najděte výsečový graf.
 1. Pokud chcete přejít k podrobnostem seznamu zařízení, zaškrtněte políčko **Zobrazit požadovaný** hypertextový odkaz vedle výsečového grafu.
 1. Tato akce přejde na dočasný uzel v části **zařízení** , kde vidíte zařízení vyžadující aktualizaci. Můžete také provést akce pro uzel, jako je například vytvoření nové kolekce ze seznamu.
 
 
-## <a name="deploy-microsoft-365-apps-updates"></a><a name="bkmk_update"></a>Nasazení aktualizací Microsoft 365 Apps
+## <a name="deploy-microsoft-365-apps-updates"></a><a name="bkmk_update"></a> Nasazení aktualizací Microsoft 365 Apps
 
 Pomocí následujících kroků nasaďte Microsoft 365 aktualizace aplikací pomocí Configuration Manager:
 
@@ -120,13 +120,13 @@ Pomocí následujících kroků nasaďte Microsoft 365 aktualizace aplikací pom
 
       3. Klikněte na možnost **aktualizace softwaru** a u nastavení **Povolit správu klientského agenta systému Office 365** vyberte **Ano** .  
 
-    **Metoda 2**: [Povolení klientům Microsoft 365ch aplikací přijímat aktualizace](/DeployOffice/manage-updates-to-office-365-proplus-with-system-center-configuration-manager#BKMK_EnableClient) z Configuration Manager pomocí nástroje pro nasazení Office nebo zásady skupiny.  
+    **Metoda 2**:  [Povolení klientům Microsoft 365ch aplikací přijímat aktualizace](/DeployOffice/manage-updates-to-office-365-proplus-with-system-center-configuration-manager#BKMK_EnableClient) z Configuration Manager pomocí nástroje pro nasazení Office nebo zásady skupiny.  
 
 4. [Nasaďte aktualizace aplikací Microsoft 365](deploy-software-updates.md) do klientů.
 
 > [!NOTE]  
 >
-> Pokud byly aplikace Microsoft 365 nainstalovány v poslední době a v závislosti na tom, jak byla nainstalována, je možné, že kanál aktualizace ještě nebyl nastaven. V takovém případě budou nasazené aktualizace zjištěny jako nepoužitelné. Při instalaci Microsoft 365 aplikací se vytvořila [úloha naplánované automatické aktualizace](https://docs.microsoft.com/deployoffice/overview-of-the-update-process-for-office-365-proplus) . V takovém případě je potřeba tuto úlohu aspoň jednou spustit, aby se nastavil kanál aktualizací a aktualizace se zjistily jako použitelné.
+> Pokud byly aplikace Microsoft 365 nainstalovány v poslední době a v závislosti na tom, jak byla nainstalována, je možné, že kanál aktualizace ještě nebyl nastaven. V takovém případě budou nasazené aktualizace zjištěny jako nepoužitelné. Při instalaci Microsoft 365 aplikací se vytvořila [úloha naplánované automatické aktualizace](/deployoffice/overview-of-the-update-process-for-office-365-proplus) . V takovém případě je potřeba tuto úlohu aspoň jednou spustit, aby se nastavil kanál aktualizací a aktualizace se zjistily jako použitelné.
 >
 > Pokud se v poslední době nainstalovaly aplikace Microsoft 365 a nezjistily se nasazené aktualizace, můžete pro účely testování spustit úlohu automatické aktualizace Office ručně a pak na klientovi spustit [cyklus hodnocení nasazení aktualizací softwaru](../understand/software-updates-introduction.md#scan-for-software-updates-compliance-process) . Pokyny k tomu, jak to provést v pořadí úkolů, najdete v tématu [aktualizace Microsoft 365Ch aplikací v pořadí úkolů](manage-office-365-proplus-updates.md#bkmk_ts).
 
@@ -151,10 +151,10 @@ Když nasadíte aktualizaci klienta Microsoft 365 Apps, chování při restartov
 >- Pokud uživatel nainstaluje aktualizaci Microsoft 365 Apps před konečný termín, Configuration Manager ověří, zda je aktualizace nainstalována po dosažení konečného termínu. Pokud aktualizace není v zařízení zjištěna, je nainstalována aktualizace. 
 >- Na aplikaci, která je spuštěná před stažením aktualizace, se nezobrazí panel oznámení v aplikaci. Po stažení aktualizace se v oznámení v aplikaci zobrazí jenom nově otevřené aplikace.
 >- V případě aktualizací Microsoft 365 aplikací aktivovaných oknem služby nebo v době nepracovních hodin je možné, že běžící aplikace Office mohou být nuceně ukončeny, aby se aktualizace nainstalovaly bez oznámení. 
->- Další informace najdete v tématu [oznámení o aktualizacích koncových uživatelů pro aplikace Microsoft 365](https://docs.microsoft.com/deployoffice/end-user-update-notifications-microsoft-365-apps) .
+>- Další informace najdete v tématu [oznámení o aktualizacích koncových uživatelů pro aplikace Microsoft 365](/deployoffice/end-user-update-notifications-microsoft-365-apps) .
 
 
-## <a name="add-languages-for-microsoft-365-apps-update-downloads"></a><a name="bkmk_o365_lang"></a>Přidat jazyky pro stažení aktualizací Microsoft 365 Apps
+## <a name="add-languages-for-microsoft-365-apps-update-downloads"></a><a name="bkmk_o365_lang"></a> Přidat jazyky pro stažení aktualizací Microsoft 365 Apps
 Můžete přidat podporu pro Configuration Manager ke stažení aktualizací pro všechny jazyky, které aplikace Microsoft 365 podporuje.
 
 ### <a name="download-updates-for-additional-languages-in-version-1902"></a>Stažení aktualizací pro další jazyky ve verzi 1902
@@ -197,7 +197,7 @@ Následující postup použijte v bodě aktualizace softwaru v lokalitě centrá
 11. Když teď stáhnete aktualizace aplikací Microsoft 365, aktualizace se stáhnou v jazycích, které jste vybrali v průvodci a nakonfigurovali v tomto postupu. Chcete-li ověřit, zda jsou aktualizace staženy ve správných jazycích, pro aktualizaci použijte zdroj balíčku a vyhledejte soubory s kódem jazyka v názvu souboru.  
     ![Názvy souborů s dalšími jazyky](../media/5-verification.png)
 
-## <a name="updating-microsoft-365-apps-in-a-task-sequence"></a><a name="bkmk_ts"></a>Aktualizace aplikací Microsoft 365 v pořadí úkolů
+## <a name="updating-microsoft-365-apps-in-a-task-sequence"></a><a name="bkmk_ts"></a> Aktualizace aplikací Microsoft 365 v pořadí úkolů
 Při instalaci aktualizací Microsoft 365 aplikací pomocí kroku pořadí úkolů [instalovat aktualizace softwaru](../../osd/understand/task-sequence-steps.md#BKMK_InstallSoftwareUpdates) je možné, že nasazené aktualizace budou zjištěny jako nedostupné.  K tomu může dojít v případě, že se naplánovaná úloha automatických aktualizací Office nespouštěla aspoň jednou (podívejte se na poznámku v tématu [nasazení aktualizací Microsoft 365 Apps](manage-office-365-proplus-updates.md#bkmk_update)). K tomu může dojít například v případě, že Microsoft 365 aplikace byly nainstalovány těsně před spuštěním tohoto kroku.
 
 Chcete-li zajistit, aby byl kanál aktualizací nastaven tak, aby byly nasazené aktualizace správně zjištěny, použijte jednu z následujících metod:
@@ -220,7 +220,7 @@ Chcete-li zajistit, aby byl kanál aktualizací nastaven tak, aby byly nasazené
     Příklad: `schtasks /run /tn "\Microsoft\Office\Office Automatic Updates 2.0"`
 5. Klikněte na **OK**. 
 
-## <a name="update-channels-for-microsoft-365-apps"></a><a name="bkmk_channel"></a>Aktualizace kanálů pro aplikace Microsoft 365
+## <a name="update-channels-for-microsoft-365-apps"></a><a name="bkmk_channel"></a> Aktualizace kanálů pro aplikace Microsoft 365
 <!--6298093-->
 Až se sada Office 365 ProPlus přejmenovala na **Microsoft 365 aplikace pro podniky**, přejmenují se i kanály aktualizací. Pokud k nasazení aktualizací použijete pravidlo automatického nasazení (ADR), budete muset provést změny v pravidla automatického nasazení, pokud se spoléhají na vlastnost **title** . Důvodem je, že se mění název balíčků aktualizací v katalogu Microsoft Update.
 
@@ -243,12 +243,12 @@ V případě balíčků aktualizací vydaných v systémech a po 9. června zač
 |Aktuální kanál (Preview)|Měsíční kanál (cílený)|
 |Beta kanál|Obchodování|
 
-Další informace o tom, jak upravit pravidla automatického nasazení, najdete v tématu věnovaném [automatickému nasazování aktualizací softwaru](automatically-deploy-software-updates.md). Další informace o změně názvu najdete v tématu [Změna názvu pro Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change).
+Další informace o tom, jak upravit pravidla automatického nasazení, najdete v tématu věnovaném [automatickému nasazování aktualizací softwaru](automatically-deploy-software-updates.md). Další informace o změně názvu najdete v tématu [Změna názvu pro Office 365 ProPlus](/deployoffice/name-change).
 
 
 ## <a name="change-the-update-channel-after-you-enable-microsoft-365-apps-clients-to-receive-updates-from-configuration-manager"></a>Pokud povolíte klientům Microsoft 365 aplikací příjem aktualizací z Configuration Manager, změňte kanál pro aktualizaci.
 
-Po nasazení Microsoft 365 aplikací můžete změnit kanál aktualizace pomocí Zásady skupiny nebo nástroje pro nasazení Office (ODT). Můžete například přesunout zařízení z pololetního kanálu na půlroční kanál (cílený). Při změně kanálu se Office aktualizuje automaticky bez nutnosti přeinstalovat nebo stáhnout plnou verzi. Další informace najdete v tématu [Změna kanálu aktualizace Microsoft 365 Apps pro zařízení ve vaší organizaci](https://docs.microsoft.com//deployoffice/change-update-channels).
+Po nasazení Microsoft 365 aplikací můžete změnit kanál aktualizace pomocí Zásady skupiny nebo nástroje pro nasazení Office (ODT). Můžete například přesunout zařízení z pololetního kanálu na půlroční kanál (cílený). Při změně kanálu se Office aktualizuje automaticky bez nutnosti přeinstalovat nebo stáhnout plnou verzi. Další informace najdete v tématu [Změna kanálu aktualizace Microsoft 365 Apps pro zařízení ve vaší organizaci](//deployoffice/change-update-channels).
 
 
 ## <a name="next-steps"></a>Další kroky

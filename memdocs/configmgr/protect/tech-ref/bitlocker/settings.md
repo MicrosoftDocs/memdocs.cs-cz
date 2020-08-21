@@ -10,12 +10,12 @@ ms.assetid: f7ade768-2b2b-4aab-8ee1-73624d03a9c5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cb95a05fd3d347b70dd5d53ce972bce0c23c18cc
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: be9db7d0ee68f22073a3537e53fc93bf8faff9e0
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127878"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693518"
 ---
 # <a name="bitlocker-settings-reference"></a>Reference k nastavení BitLockeru
 
@@ -119,7 +119,7 @@ Pokud povolíte toto nastavení, uživatel musí chránit jednotku operačního 
 > [!NOTE]
 > Pokud je už jednotka zašifrovaná a toto nastavení zakážete, BitLocker dešifruje jednotku.  
 
-Pokud máte zařízení bez [čipu TPM (Trusted Platform Module)](https://docs.microsoft.com/windows/security/information-protection/tpm/trusted-platform-module-top-node), použijte možnost pro **povolení nástroje BitLocker bez kompatibilního čipu TPM (vyžaduje heslo)**. Toto nastavení umožňuje nástroji BitLocker šifrovat jednotku s operačním systémem i v případě, že zařízení nemá čip TPM. Pokud tuto možnost povolíte, systém Windows vyzve uživatele, aby určil heslo nástroje BitLocker.
+Pokud máte zařízení bez [čipu TPM (Trusted Platform Module)](/windows/security/information-protection/tpm/trusted-platform-module-top-node), použijte možnost pro **povolení nástroje BitLocker bez kompatibilního čipu TPM (vyžaduje heslo)**. Toto nastavení umožňuje nástroji BitLocker šifrovat jednotku s operačním systémem i v případě, že zařízení nemá čip TPM. Pokud tuto možnost povolíte, systém Windows vyzve uživatele, aby určil heslo nástroje BitLocker.
 
 V zařízeních s kompatibilním čipem TPM lze při spuštění použít dva typy metod ověřování, aby byla zajištěna ochrana šifrovaných dat. Když se počítač spustí, může použít jenom čip TPM k ověřování, nebo může taky vyžadovat zadání osobního identifikačního čísla (PIN). Nakonfigurujte tahle nastavení:
 

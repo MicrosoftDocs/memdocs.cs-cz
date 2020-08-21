@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 4ddae3e4c4cf31cb05376bfa437d722f16652fad
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 6ff280a01b7388f3e4d296625a94c0184a0e6b09
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81721315"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692974"
 ---
 # <a name="capabilities-in-technical-preview-1707-for-configuration-manager"></a>Funkce ve verzi Technical Preview 1707 pro Configuration Manager
 
@@ -85,11 +85,11 @@ Aby bylo možné vytvářet a nasazovat zásady ochrany Application Guard v prog
 3. Na kartě **Domů** ve skupině **vytvořit** klikněte na možnost **vytvořit zásadu Application Guard v programu Windows Defender**.
 4. Pomocí příspěvku na blogu jako reference můžete vyhledat a nakonfigurovat dostupná nastavení, abyste mohli tuto funkci vyzkoušet.
 5. V této verzi jsme přidali novou stránku **definice sítě** do průvodce. Na této stránce zadejte podnikovou identitu a definujte hranici vaší podnikové sítě.<br>Počítače s Windows 10 ukládají na klientovi jenom jeden seznam izolace sítě. V této verzi můžete vytvořit dva různé druhy seznamů izolace sítě (jeden ze systému Windows Information Protection a jeden z ochrany Application Guard v programu Windows Defender) a nasadit je do klienta. Pokud nasadíte obě zásady, musí tyto seznamy izolace sítě odpovídat. Pokud nasadíte seznamy, které se neshodují se stejným klientem, nasazení se nezdaří.
-Další informace o tom, jak zadat definice sítě, najdete v [dokumentaci k Windows Information Protection](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/create-wip-policy-using-configmgr).
+Další informace o tom, jak zadat definice sítě, najdete v [dokumentaci k Windows Information Protection](/windows/security/information-protection/windows-information-protection/create-wip-policy-using-configmgr).
 
 6. Až skončíte, dokončete průvodce a Nasaďte zásadu na jedno nebo více zařízení s Windows 10.
 
-### <a name="further-reading"></a>Další čtení
+### <a name="further-reading"></a>Další materiály
 Další informace o ochraně Application Guard v programu Windows Defender najdete v [tomto blogovém příspěvku](https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#BmJGKPfSjHHzsMmI.97). Další informace o samostatném režimu ochrany Application Guard v programu Windows Defender najdete v [tomto blogovém příspěvku](https://techcommunity.microsoft.com/t5/Windows-Insider-Program/Windows-Defender-Application-Guard-Standalone-mode/td-p/66903).
 
 ## <a name="add-parameters-when-you-deploy-powershell-scripts-from-configuration-manager"></a>Přidání parametrů při nasazení skriptů PowerShellu z Configuration Manager

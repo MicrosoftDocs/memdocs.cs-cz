@@ -10,12 +10,12 @@ ms.assetid: e83a7b0d-b381-4b4a-8eca-850385abbebb
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: eab91146ec21bbee888d496012419f47bca4b599
-ms.sourcegitcommit: 7b2f7918d517005850031f30e705e5a512959c3d
+ms.openlocfilehash: ac3bbb7c755be82b171f35442d2dbaf446dfea84
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84776969"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695116"
 ---
 # <a name="how-to-monitor-co-management-in-configuration-manager"></a>Jak monitorovat spolusprávu v Configuration Manager
 
@@ -77,7 +77,7 @@ Zobrazuje rozpis stavu zařízení v následujících kategoriích:
     > [!NOTE]
     > Pokud chcete snížit počet zařízení v tomto stavu čekání, počínaje verzí 1906, nové spoluspravované zařízení teď automaticky zaregistruje službu Microsoft Intune na základě jejího tokenu *zařízení* Azure AD. Není nutné čekat, než se uživatel přihlásí k zařízení, aby se mohl spustit automatický zápis. Pro podporu tohoto chování musí zařízení používat Windows 10 verze 1803 nebo novější.
     >
-    > Pokud token zařízení selhává, vrátí se k předchozímu chování s uživatelským tokenem. Vyhledejte v **protokolu ComanagementHandler. log** následující položku:`Enrolling device with RegisterDeviceWithManagementUsingAADDeviceCredentials`
+    > Pokud token zařízení selhává, vrátí se k předchozímu chování s uživatelským tokenem. Vyhledejte v **protokolu ComanagementHandler. log** následující položku: `Enrolling device with RegisterDeviceWithManagementUsingAADDeviceCredentials`
 
 Výběrem stavu v dlaždici přejdete na seznam zařízení v tomto stavu.  
 
@@ -100,10 +100,10 @@ Tato tabulka představuje seznam chyb registrace ze zařízení. Tyto chyby mů�
 Existují stovky možných chyb. V následující tabulce jsou uvedeny nejběžnější chyby.
 <!-- SCCMDocs issue 1064, BUG 3158555 -->
 
-| Chyba | Description |
+| Chyba | Popis |
 |---------|---------|
-| 2147549183 (0x8000FFFF) | Registrace MDM se ještě nenakonfigurovala v Azure AD nebo se neočekává adresa URL pro registraci.<br><br>[Povolení automatické registrace pro Windows 10](https://docs.microsoft.com/intune/windows-enroll#enable-windows-10-automatic-enrollment) |
-| 2149056536 (0x80180018)<br>MENROLL_E_USERLICENSE | Licence uživatele je ve špatném stavu blokující registraci<br><br>[Přiřazení licencí k uživatelům](https://docs.microsoft.com/intune/licenses-assign) |
+| 2147549183 (0x8000FFFF) | Registrace MDM se ještě nenakonfigurovala v Azure AD nebo se neočekává adresa URL pro registraci.<br><br>[Povolení automatické registrace pro Windows 10](/intune/windows-enroll#enable-windows-10-automatic-enrollment) |
+| 2149056536 (0x80180018)<br>MENROLL_E_USERLICENSE | Licence uživatele je ve špatném stavu blokující registraci<br><br>[Přiřazení licencí k uživatelům](/intune/licenses-assign) |
 | 2149056555 (0x8018002B)<br>MENROLL_E_MDM_NOT_CONFIGURED | Při pokusu o automatické registraci do Intune, ale konfigurace Azure AD se plně nepoužívá. Tento problém by měl být přechodný, jakmile se zařízení po krátkou dobu opakuje. |
 | 2149056554 (0x 8018002A)<br>&nbsp; | Uživatel zrušil operaci.<br><br>Pokud registrace MDM vyžaduje vícefaktorové ověřování a uživatel se přihlásil s podporovaným Druhým faktorem, Windows zobrazí informační zprávu uživateli k registraci. Pokud uživatel nereaguje na informační oznámení, dojde k této chybě. Tento problém by měl být přechodný, protože Configuration Manager opakovat akci a vyzvat uživatele. Uživatelé by měli používat službu Multi-Factor Authentication při přihlašování k Windows. Informujte je také o tom, že toto chování očekáváte, a pokud se zobrazí výzva, proveďte akci. |
 | 2149056532 (0x80180014)<br>MENROLL_E_DEVICENOTSUPPORTED | Správa mobilních zařízení není podporována. Ověřte omezení zařízení. |
@@ -114,7 +114,7 @@ Existují stovky možných chyb. V následující tabulce jsou uvedeny nejběžn
 | 3399548929 | Vyžadovat přihlášení uživatele<br><br>Tento problém by měl být přechodný. K tomu dochází, když se uživatel rychle odhlásí předtím, než se stane úloha registrace. |
 | 3400073236 | Požadavek na token zabezpečení ADAL se nezdařil.<br><br>Zkontrolujte konfiguraci služby Azure AD a ujistěte se, že se uživatelé můžou úspěšně ověřit. |
 | 2149122477 | Obecný problém HTTP |
-| 3400073247 | ADAL – integrované ověřování systému Windows je podporované jenom v federovaném toku.<br><br>[Plánování implementace služby Hybrid Azure Active Directory JOIN](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan) |
+| 3400073247 | ADAL – integrované ověřování systému Windows je podporované jenom v federovaném toku.<br><br>[Plánování implementace služby Hybrid Azure Active Directory JOIN](/azure/active-directory/devices/hybrid-azuread-join-plan) |
 | 3399942148 | Server nebo proxy server nebyl nalezen.<br><br>Tento problém by měl být přechodný, pokud klient nemůže komunikovat s cloudem. Pokud s tím budou dál problémy, ujistěte se, že klient má konzistentní připojení k Azure. | 
 | 2149056532 | Konkrétní platforma nebo verze není podporovaná.<br><br>Ujistěte se, že zařízení splňuje [minimální požadavky](overview.md#windows-10) pro spolusprávu. |
 | 2147943568 | Element nebyl nalezen.<br><br>Tento problém by měl být přechodný. Pokud s tím budou dál problémy, kontaktujte podpora Microsoftu. |
@@ -124,7 +124,7 @@ Existují stovky možných chyb. V následující tabulce jsou uvedeny nejběžn
 | 2149134055 | Název WinHTTP se nevyřešil.<br><br>Klient nemůže přeložit název služby. Ověřte konfiguraci DNS. |
 | 2149134050 | časový limit pro Internet<br><br>Tento problém by měl být přechodný, pokud klient nemůže komunikovat s cloudem. Pokud s tím budou dál problémy, ujistěte se, že klient má konzistentní připojení k Azure. |
 
-Další informace najdete v tématu [hodnoty chyb registrace MDM](https://docs.microsoft.com/windows/desktop/mdmreg/mdm-registration-constants).
+Další informace najdete v tématu [hodnoty chyb registrace MDM](/windows/desktop/mdmreg/mdm-registration-constants).
 
 ## <a name="deployment-policies"></a>Zásady nasazení
 

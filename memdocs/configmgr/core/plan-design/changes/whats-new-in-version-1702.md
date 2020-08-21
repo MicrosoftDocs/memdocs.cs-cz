@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: f2486e838e01415786e24c077af1997b3dfb7638
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: a947b332addbc3404617abdbbe199ede4e74dc63
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129065"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692787"
 ---
 # <a name="what39s-new-in-version-1702-of-configuration-manager"></a>Co&#39;s novinkou ve verzi 1702 Configuration Manager
 
@@ -83,7 +83,7 @@ Níže jsou uvedené změny pro aktualizace a údržbu:
 - **Nové stavy aktualizace**  
   Když zobrazíte dostupné aktualizace v konzole nástroje, existují dva nové stavy:  
   - **K dispozici pro instalaci** – jedná se o aktualizaci, která byla stažena a připravena k instalaci.
-  - **Připraveno ke stažení** – Tato aktualizace je k dispozici, ale nebyla stažena. Tuto aktualizaci si můžete stáhnout, ale ta byla nahrazena novější aktualizací.
+  - **Připraveno ke stažení**  – Tato aktualizace je k dispozici, ale nebyla stažena. Tuto aktualizaci si můžete stáhnout, ale ta byla nahrazena novější aktualizací.
 
 
 - **Jednodušší možnosti aktualizace**  
@@ -118,7 +118,7 @@ Nástroj pro [Vyčištění knihovny obsahu](../hierarchy/content-library-cleanu
 
 
 ### <a name="use-the-oms-connector-with-the-azure-government-cloud"></a>Použití konektoru OMS s Azure Governmentm cloudem
-Konektor OMS můžete použít pro připojení k OMS Log Analytics v Microsoft Azure Government cloudu. To vyžaduje, abyste před instalací konektoru OMS upravili konfigurační soubor, aby konektor mohl pracovat s cloudem pro státní správu. Další informace najdete v tématu [použití konektoru OMS s Azure Governmentm cloudem](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm).
+Konektor OMS můžete použít pro připojení k OMS Log Analytics v Microsoft Azure Government cloudu. To vyžaduje, abyste před instalací konektoru OMS upravili konfigurační soubor, aby konektor mohl pracovat s cloudem pro státní správu. Další informace najdete v tématu [použití konektoru OMS s Azure Governmentm cloudem](/azure/azure-monitor/platform/collect-sccm).
 
 ### <a name="software-update-points-are-added-to-boundary-groups"></a>Body aktualizace softwaru se přidají do skupin hranic.
 Počínaje verzí 1702 používají klienti skupiny hranic k nalezení nového bodu aktualizace softwaru, k zálohování a hledání nového bodu aktualizace softwaru, pokud už jejich stávající bod aktualizace není dostupný. Jednotlivé body aktualizace softwaru můžete přidat do různých skupin hranic, abyste mohli řídit, které servery může klient najít. Další informace najdete v tématu [body aktualizace softwaru](../../servers/deploy/configure/boundary-groups.md#bkmk_sup) v tématu [Konfigurace skupin hranic](../../servers/deploy/configure/boundary-groups.md) .

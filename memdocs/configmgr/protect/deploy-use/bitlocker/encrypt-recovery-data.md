@@ -10,12 +10,12 @@ ms.assetid: 1ee6541a-e243-43ea-be16-d0349f7f0c6e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e887d594e80c0f92340081d9b922bfc334d1b3a5
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 2c74f1ac74b120fac2dabcd5f84f288b41368324
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129184"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697292"
 ---
 # <a name="encrypt-recovery-data"></a>Šifrování dat pro obnovení
 
@@ -90,7 +90,7 @@ Tento certifikát SQL použijte k Configuration Manager k šifrování dat obnov
 
 - Nasaďte stejný certifikát do každé databáze lokality ve vaší hierarchii.
 
-- Vytvořte certifikát s nejnovější verzí SQL Server ve vašem prostředí. Například:
+- Vytvořte certifikát s nejnovější verzí SQL Server ve vašem prostředí. Příklad:
   - Certifikáty vytvořené pomocí SQL Server 2016 nebo novější jsou kompatibilní s SQL Server 2014 nebo starším.
   - Certifikáty vytvořené pomocí SQL Server 2014 nebo starší nejsou kompatibilní s SQL Server 2016 nebo novějším.
 
@@ -199,13 +199,13 @@ else select 0
 
 Pokud je certifikát platný, skript vrátí hodnotu `1` .
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 Další informace o těchto příkazech SQL najdete v následujících článcích:
 
-- [SQL Server a šifrovací klíče databáze](https://docs.microsoft.com/sql/relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine)
-- [Vytvořit certifikát](https://docs.microsoft.com/sql/t-sql/statements/create-certificate-transact-sql)
-- [Záložní certifikát](https://docs.microsoft.com/sql/t-sql/statements/backup-certificate-transact-sql)
-- [Vytvořit hlavní klíč](https://docs.microsoft.com/sql/t-sql/statements/create-master-key-transact-sql)
-- [Záložní hlavní klíč](https://docs.microsoft.com/sql/t-sql/statements/backup-master-key-transact-sql)
-- [Udělení oprávnění k certifikátu](https://docs.microsoft.com/sql/t-sql/statements/grant-certificate-permissions-transact-sql)
+- [SQL Server a šifrovací klíče databáze](/sql/relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine)
+- [Vytvořit certifikát](/sql/t-sql/statements/create-certificate-transact-sql)
+- [Záložní certifikát](/sql/t-sql/statements/backup-certificate-transact-sql)
+- [Vytvořit hlavní klíč](/sql/t-sql/statements/create-master-key-transact-sql)
+- [Záložní hlavní klíč](/sql/t-sql/statements/backup-master-key-transact-sql)
+- [Udělení oprávnění k certifikátu](/sql/t-sql/statements/grant-certificate-permissions-transact-sql)

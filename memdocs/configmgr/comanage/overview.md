@@ -10,12 +10,12 @@ ms.topic: overview
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: d6bbc787-83a5-44b4-ad64-016e5da7413f
-ms.openlocfilehash: a7f38f48946244deb6026d040c44159d0384f7b1
-ms.sourcegitcommit: efe89408a3948b79b38893174cb19268ee37c8f3
+ms.openlocfilehash: f9e1809447f8d8ea8f6e0382575b71bfdec71fac
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85854435"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695048"
 ---
 # <a name="what-is-co-management"></a>Co je spoluspráva?
 
@@ -65,7 +65,7 @@ Další informace o této okamžité hodnotě ze spolusprávy najdete v tématu 
 
 Spoluspráva také umožňuje orchestraci pomocí Intune pro několik úloh. Další informace najdete v části [úlohy](#workloads) .
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 Společná správa má tyto požadavky v následujících oblastech:
 
@@ -76,7 +76,7 @@ Společná správa má tyto požadavky v následujících oblastech:
 - [Windows 10](#windows-10)  
 - [Oprávnění a role](#permissions-and-roles)  
 
-### <a name="licensing"></a>Licensing
+### <a name="licensing"></a>Licencování
 
 - Azure AD Premium
 
@@ -102,15 +102,15 @@ Povolení spolusprávy nevyžaduje, abyste svůj web připojili ke službě Azur
 
 - Zařízení s Windows 10 musí být připojená k Azure AD. Může to být jeden z následujících typů:  
 
-  - [Hybridní služba Azure AD – připojeno](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join-hybrid), kde je zařízení připojené k místní službě Active Directory a zaregistrované ve vašem Azure Active Directory.
+  - [Hybridní služba Azure AD – připojeno](/azure/active-directory/devices/concept-azure-ad-join-hybrid), kde je zařízení připojené k místní službě Active Directory a zaregistrované ve vašem Azure Active Directory.
 
-  - Pouze [Služba Azure AD – připojeno](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan) . (Tento typ se někdy označuje jako "cloudová doména připojená".<!--SCCMDocs issue 605-->  
+  - Pouze [Služba Azure AD – připojeno](/azure/active-directory/devices/azureadjoin-plan) . (Tento typ se někdy označuje jako "cloudová doména připojená".<!--SCCMDocs issue 605-->  
 
 ### <a name="intune"></a>Intune
 
-- [Nastavení Intune](https://docs.microsoft.com/intune/setup-steps)  
+- [Nastavení Intune](/intune/setup-steps)  
 
-- [Povolení automatické registrace pro Windows 10](https://docs.microsoft.com/intune/windows-enroll#enable-windows-10-automatic-enrollment)  
+- [Povolení automatické registrace pro Windows 10](/intune/windows-enroll#enable-windows-10-automatic-enrollment)  
 
 ### <a name="windows-10"></a>Windows 10
 
@@ -129,7 +129,7 @@ Upgradujte svoje zařízení na Windows 10 verze 1709 nebo novější. Další i
 | Import aplikací Azure v Configuration Manager | **Správce s úplnými oprávněními** Configuration Manager<br>Nepotřebujete žádné další role Azure. |
 | Povolit spolusprávu v Configuration Manager | Uživatel Azure AD<br>Configuration Manager **úplného správce** se **všemi** právy oboru.<!--SCCMDoc issue 626--> |
 
-Další informace o rolích Azure najdete v tématu [pochopení různých rolí](https://docs.microsoft.com/azure/role-based-access-control/rbac-and-directory-admin-roles).
+Další informace o rolích Azure najdete v tématu [pochopení různých rolí](/azure/role-based-access-control/rbac-and-directory-admin-roles).
 
 Další informace o rolích Configuration Manager najdete v tématu [základy správy na základě rolí](../core/understand/fundamentals-of-role-based-administration.md).
 
@@ -167,4 +167,4 @@ Další informace najdete v tématu [monitorování spolusprávy](how-to-monitor
 
 - [Další informace o okamžité hodnotě a Začínáme s spolusprávou](quickstarts.md)  
 
-- [Kurz: povolení spolusprávy pro stávající klienty Configuration Manager](tutorial-co-manage-clients.md)  
+- [Kurz: povolení spolusprávy pro stávající klienty Configuration Manager](tutorial-co-manage-clients.md)

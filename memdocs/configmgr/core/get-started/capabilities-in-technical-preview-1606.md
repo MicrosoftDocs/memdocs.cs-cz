@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: 0513c1908b1360a50653931dda57e5d148055240
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 18ea44f662591a21750fb630425ddfb975678aa2
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905681"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695592"
 ---
 # <a name="capabilities-in-technical-preview-1606-for-configuration-manager"></a>Funkce ve verzi Technical Preview 1606 pro Configuration Manager
 
@@ -36,7 +36,7 @@ V tomto článku se seznámíte s funkcemi, které jsou k dispozici v Technical 
 
 **V následující části najdete nové funkce, které můžete s touto verzí vyzkoušet.**  
 
-## <a name="automatically-categorize-devices-into-collections"></a><a name="dmp_category"></a>Automatické kategorizace zařízení do kolekcí
+## <a name="automatically-categorize-devices-into-collections"></a><a name="dmp_category"></a> Automatické kategorizace zařízení do kolekcí
 Můžete vytvořit kategorie zařízení, které se dají použít k automatickému umístění zařízení do kolekcí zařízení, když používáte Configuration Manager s Microsoft Intune. Uživatelé pak při registraci zařízení v Intune potřebují zvolit kategorii zařízení. Kategorii zařízení můžete také změnit z konzoly Configuration Manager.
 
 **Důležité informace:** Tato funkce funguje s vydáním Microsoft Intune od **června 2016** . Než si vyzkoušíte tyto postupy, ujistěte se, že jste tuto verzi aktualizovali.
@@ -59,7 +59,7 @@ Když přidružíte kolekci ke kategorii zařízení, všechna zařízení v kat
 2.  V seznamu **zařízení** vyberte zařízení a pak na kartě **Domů** ve skupině **zařízení** klikněte na **změnit kategorii**.
 3.  V dialogovém okně **Upravit kategorii zařízení** zvolte kategorii, kterou chcete použít pro toto zařízení, a pak klikněte na **OK**.
 
-## <a name="enforcement-grace-period-for-required-application-and-software-update-deployments"></a><a name="dmp_grace"></a>Poskytnutá lhůta vynucení pro požadovaná nasazení aplikací a aktualizací softwaru
+## <a name="enforcement-grace-period-for-required-application-and-software-update-deployments"></a><a name="dmp_grace"></a> Poskytnutá lhůta vynucení pro požadovaná nasazení aplikací a aktualizací softwaru
 
 V některých případech můžete chtít dát uživatelům více času na instalaci požadovaných nasazení aplikace nebo aktualizací softwaru nad rámec všech nakonfigurovaných termínů. To se obvykle vyžaduje v případě, že počítač byl po delší dobu vypnutý a potřebuje nainstalovat velký počet nasazení aplikace nebo aktualizace.
 Například pokud se koncový uživatel vrátil jenom z dovolené, může se stát, že budou muset počkat delší dobu, než se nainstalují opožděná nasazení aplikací.
@@ -80,9 +80,9 @@ Podobné možnosti byly přidány do Průvodce nasazením aktualizací softwaru,
 
 Device Guard je funkce Windows 10, která využívá hardwarovou a softwarovou funkci k striktnímu řízení toho, co je možné na zařízení spouštět.
 
-Další informace najdete v tématu [Úvod do ochrany zařízení](https://docs.microsoft.com/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control).
+Další informace najdete v tématu [Úvod do ochrany zařízení](/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control).
 
-V této verzi může Configuration Manager spolupracovat s ochranou zařízení a nástrojem [Windows AppLocker](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd723678(v=ws.10)) , aby spustitelné soubory a soubory DLL nasazené s Configuration Manager byly automaticky důvěryhodné, protože pocházejí ze spravovaného instalačního programu, což znamená, že budou moci běžet na cílovém zařízení a jiný software nebude možné spustit, pokud není explicitně povoleno spouštět pomocí jiných pravidel nástroje AppLocker.  
+V této verzi může Configuration Manager spolupracovat s ochranou zařízení a nástrojem [Windows AppLocker](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd723678(v=ws.10)) , aby spustitelné soubory a soubory DLL nasazené s Configuration Manager byly automaticky důvěryhodné, protože pocházejí ze spravovaného instalačního programu, což znamená, že budou moci běžet na cílovém zařízení a jiný software nebude možné spustit, pokud není explicitně povoleno spouštět pomocí jiných pravidel nástroje AppLocker.  
 
 V současné době se tato možnost nedá konfigurovat z konzoly Configuration Manager. Chcete-li nakonfigurovat zásady, je nutné nakonfigurovat klíč registru v každém klientovi a nakonfigurovat služby systému Windows v klientovi.
 Až to uděláte, nakonfigurujte soubor zásad AppLockeru. Když nakonfigurujete soubor zásad, můžete ho nasadit do libovolného kompatibilního klientského zařízení.
@@ -95,11 +95,11 @@ Stejně jako všechny zásady nástroje AppLocker můžou zásady s pravidly spr
 
 Další informace najdete v následujících článcích:
 
-- [Úvod do zařízení Guard](https://docs.microsoft.com/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control)
+- [Úvod do zařízení Guard](/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control)
 
-- [Plánování a Začínáme s procesem nasazení řízení aplikací v programu Windows Defender](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide)
+- [Plánování a Začínáme s procesem nasazení řízení aplikací v programu Windows Defender](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide)
 
-  ##  <a name="multiple-device-management-points-for-on-premises-mobile-device-management"></a><a name="dmp_onprem"></a>Více bodů správy zařízení pro místní správu mobilních zařízení  
+  ##  <a name="multiple-device-management-points-for-on-premises-mobile-device-management"></a><a name="dmp_onprem"></a> Více bodů správy zařízení pro místní správu mobilních zařízení  
   V rámci Technical Preview 1606 \- podporuje místní správa mobilních zařízení ve Windows 10 pro registraci nových verzí novou funkci, která automaticky konfiguruje zaregistrované zařízení, aby bylo možné používat více než jeden bod správy zařízení. Tato možnost umožňuje zařízení přejít na jiný bod správy zařízení, když normální použití není dostupné. Tato možnost funguje jenom pro počítače s nainstalovanou aktualizací Windows 10 pro výročí.  
 
 ### <a name="try-it-out"></a>Určitě to udělejte!  
@@ -170,8 +170,8 @@ Nejjednodušší způsob, jak získat export kořenového adresáře klientskýc
 #### <a name="upload-the-management-certificate-to-azure"></a>Nahrajte certifikát pro správu do Azure.
 
 Pro Configuration Manager přístupu k rozhraní API Azure a konfiguraci cloudové proxy služby se vyžaduje certifikát pro správu Azure. Další informace a pokyny, jak nahrát certifikát pro správu, najdete v následujících článcích v dokumentaci k Azure:
-- [Přehled certifikátů pro Azure Cloud Services](https://azure.microsoft.com/documentation/articles/cloud-services-certs-create/)
-- [Nahrajte certifikát API Management správy Azure](https://azure.microsoft.com/documentation/articles/azure-api-management-certs/).
+- [Přehled certifikátů pro Azure Cloud Services](/azure/cloud-services/cloud-services-certs-create)
+- [Nahrajte certifikát API Management správy Azure](/previous-versions/azure/azure-api-management-certs).
 
 Nezapomeňte zkopírovat ID předplatného přidruženého k certifikátu pro správu. Budete ho potřebovat pro konfiguraci cloudové proxy služby v konzole Configuration Manager.
 
@@ -194,7 +194,7 @@ Nezapomeňte zkopírovat ID předplatného přidruženého k certifikátu pro sp
 2. Vyberte primární lokalitu pro klienty, které chcete spravovat prostřednictvím cloudové proxy služby, a klikněte na **vlastnosti**.
 3. Na kartě komunikace klientského počítače v seznamu vlastností primární lokality zaškrtněte políčko **při použití klientského certifikátu PKI (ověřování klientů), pokud je k dispozici**.
 4. Nezapomeňte zrušit zaškrtnutí políčka u **klientů zkontrolovat seznam odvolaných certifikátů (CRL) pro systémy lokality**. Tato možnost se vyžaduje jenom v případě, že jste si seznam CRL veřejně publikujete.
-5. Klikněte na tlačítko **OK**.
+5. Klikněte na **OK**.
 
 #### <a name="add-the-cloud-proxy-connector-point"></a>Přidat bod cloudového proxy konektoru
 
@@ -211,7 +211,7 @@ Posledním krokem při nastavení cloudové proxy služby je konfigurace rolí s
 
 #### <a name="check-status-on-a-client-on-the-internet"></a>Kontrolovat stav klienta na internetu
 
-Po dokončení konfigurace služby a rolí obdrží interní klienti umístění cloudové proxy služby v žádosti o další umístění. Klienti s aktualizovanými informacemi o umístění potom můžou komunikovat s Configuration Manager na internetu. Cyklus cyklického dotazování na požadavky na umístění je každých 24 hodin. Pokud nechcete čekat na běžně naplánovaný požadavek na umístění, můžete žádost vynutit restartováním služby Hostitel agenta serveru SMS (Ccmexec. exe) v počítači.
+Po dokončení konfigurace služby a rolí obdrží interní klienti umístění cloudové proxy služby v žádosti o další umístění. Klienti s aktualizovanými informacemi o umístění potom můžou komunikovat s Configuration Manager na internetu. Cyklus cyklického dotazování na požadavky na umístění je každých 24 hodin. Pokud nechcete čekat na běžně naplánovaný požadavek na umístění, můžete žádost vynutit restartováním služby Hostitel agenta serveru SMS (ccmexec.exe) v počítači.
 
 Jakmile klienti mají nové informace o umístění pro cloudovou službu proxy, zkuste zkontrolovat stav klientů, kteří už nejsou v interní privátní síti, ale mají přístup k Internetu. Provoz na cloudové proxy službě můžete také monitorovat tak, že v podokně se seznamem **> Cloud Services > cloudovou službu proxy serveru**, vyberete službu a zobrazíte informace o přenosech v podokně podrobností.   
 
@@ -241,7 +241,7 @@ V Technical Preview 1606 byly v konzole Configuration Manager k dispozici někte
 - **Další stav instalace:**
 
     Po zobrazení stavu instalace aktualizace lokality teď konzola zobrazuje samostatné podrobnosti pro následující akce:
-    - **Stáhnout** (platí jenom pro lokalitu nejvyšší úrovně, kde je nainstalovaná role systému lokality spojovacího bodu služby)
+    - **Stáhnout**  (platí jenom pro lokalitu nejvyšší úrovně, kde je nainstalovaná role systému lokality spojovacího bodu služby)
     - **Replikace**
     - **Kontrola předpokladů**
     - **Instalace**

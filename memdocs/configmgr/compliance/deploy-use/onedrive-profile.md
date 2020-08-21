@@ -10,24 +10,24 @@ ms.assetid: e217699a-28b2-471a-b421-8fbd1d1fd638
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 4d13d9dfd75abb656a765ce8c91ce6f177636cd3
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: ca7d81ba112c9eb79fb8bcfff96fb213b87b44c3
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127167"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694810"
 ---
 # <a name="onedrive-for-business-profiles"></a>Profily OneDrivu pro firmy
 
-Od verze Configuration Manager 1902 můžete vytvořit profily OneDrivu pro firmy pro přesun známých složek Windows na OneDrive pro firmy. Mezi tyto složky patří plocha, dokumenty a obrázky. V každém profilu můžete zadat nastavení pro přesunutí známých složek Windows. Další informace o OneDrivu pro firmy najdete v tématu [přesměrování a přesunutí známých složek Windows na OneDrive](https://docs.microsoft.com/onedrive/redirect-known-folders). <!--3556021-->
+Od verze Configuration Manager 1902 můžete vytvořit profily OneDrivu pro firmy pro přesun známých složek Windows na OneDrive pro firmy. Mezi tyto složky patří plocha, dokumenty a obrázky. V každém profilu můžete zadat nastavení pro přesunutí známých složek Windows. Další informace o OneDrivu pro firmy najdete v tématu [přesměrování a přesunutí známých složek Windows na OneDrive](/onedrive/redirect-known-folders). <!--3556021-->
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
-- [Najít ID tenanta Microsoft 365](https://docs.microsoft.com/onedrive/find-your-office-365-tenant-id)  
+- [Najít ID tenanta Microsoft 365](/onedrive/find-your-office-365-tenant-id)  
 
-- Nasazení synchronizačního klienta OneDrive verze 18.111.0603.0004 nebo novější. Další informace najdete v tématu [nasazení aplikací OneDrive pomocí Configuration Manager](https://docs.microsoft.com/onedrive/deploy-on-windows).  
+- Nasazení synchronizačního klienta OneDrive verze 18.111.0603.0004 nebo novější. Další informace najdete v tématu [nasazení aplikací OneDrive pomocí Configuration Manager](/onedrive/deploy-on-windows).  
 
-## <a name="move-windows-known-folders-to-onedrive"></a><a name="bkmk_odfb"></a>Přesunout známé složky Windows na OneDrive
+## <a name="move-windows-known-folders-to-onedrive"></a><a name="bkmk_odfb"></a> Přesunout známé složky Windows na OneDrive
 <!--3556021-->
 Pomocí Configuration Manager můžete přesunout známé složky Windows na OneDrive pro firmy. Mezi tyto složky patří plocha, dokumenty a obrázky. Chcete-li zjednodušit upgrady Windows 10, nasaďte tato nastavení do klientů se systémem Windows 7 před nasazením pořadí úkolů. 
 

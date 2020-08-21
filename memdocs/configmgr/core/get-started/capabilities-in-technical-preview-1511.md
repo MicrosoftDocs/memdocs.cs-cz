@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 337b494bdce24463c19dd22ae975af5e99d6d895
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 59d343d09f827edec5db0dd5302c75c00a0c8455
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905848"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694504"
 ---
 # <a name="capabilities-in-technical-preview-1511-for-configuration-manager"></a>Funkce ve verzi Technical Preview 1511 pro Configuration Manager
 
@@ -26,7 +26,7 @@ V tomto článku se seznámíte s funkcemi, které jsou k dispozici v Technical 
 
 V následující části najdete nové funkce, které můžete s touto verzí vyzkoušet.  
 
-##  <a name="integration-with-windows-update-for-business-in-windows-10"></a><a name="BKMK_WUfB"></a>Integrace s web Windows Update pro firmy ve Windows 10  
+##  <a name="integration-with-windows-update-for-business-in-windows-10"></a><a name="BKMK_WUfB"></a> Integrace s web Windows Update pro firmy ve Windows 10  
  Configuration Manager teď má možnost odlišit počítač s Windows 10, který je přímo připojený přes web Windows Update pro firmy (WUfB), oproti těm, které jsou připojené ke službě WSUS pro získání aktualizací a upgradů Windows 10.  Pro počítače připojené přes WUfB je možné aktualizace a upgrady spravovat na tempo sady správcem prostřednictvím zásad skupiny nebo zásad správy mobilních zařízení. tyto aktualizace a upgrady je možné nainstalovat přímo z WUfB.    
 Pro počítače připojené přes WUfB nebude Configuration Manager moci ohlásit stav dodržování předpisů (včetně aktualizací Windows nebo aktualizací definic). Configuration Manager také nebudou moci na tyto počítače nasadit aktualizace společnosti Microsoft nebo aktualizace třetích stran.  
 
@@ -34,7 +34,7 @@ Pro počítače připojené přes WUfB nebude Configuration Manager moci ohlási
 
 -   Windows 10 Desktop pro nebo Windows 10 Enterprise Edition verze 1511 nebo novější  
 
--   Počítače určené ke správě prostřednictvím [Windows Update for Business](https://docs.microsoft.com/windows/deployment/update/waas-manage-updates-wufb)  
+-   Počítače určené ke správě prostřednictvím [Windows Update for Business](/windows/deployment/update/waas-manage-updates-wufb)  
 
 ### <a name="try-it-out"></a>Určitě to udělejte!  
  Zkuste dokončit následující úlohu a pak použijte informace o zpětné vazbě v horní části tohoto tématu a sdělte nám, jak se pracovalo:  
@@ -50,7 +50,7 @@ Pro počítače připojené přes WUfB nebude Configuration Manager moci ohlási
 
 5.  Počítače, které jsou spravovány přes WUfB, budou ve stavu dodržování předpisů zobrazovat **Neznámý** a nebudou se počítat jako součást celkového procenta dodržování předpisů.  
 
-##  <a name="managing-office-365-proplus-client-update-through-configuration-manager"></a><a name="BKMK_Office365ProPlus"></a>Správa aktualizace klienta Office 365 ProPlus pomocí Configuration Manager  
+##  <a name="managing-office-365-proplus-client-update-through-configuration-manager"></a><a name="BKMK_Office365ProPlus"></a> Správa aktualizace klienta Office 365 ProPlus pomocí Configuration Manager  
  Configuration Manager teď má možnost spravovat aktualizace desktopových klientů Office 365 pomocí pracovního postupu Configuration Manager Software Update Management.    
 Když společnost Microsoft publikuje novou aktualizaci klienta Office 365 pro stolní počítače do služby Windows Server Update Services (WSUS), Configuration Manager bude moci synchronizovat aktualizaci do katalogu, pokud je aktualizace Office 365 nakonfigurovaná tak, aby byla součástí synchronizace katalogu.  Server lokality Configuration Manager stáhne aktualizace klienta Office 365 a distribuuje balíček do Configuration Manager distribučních bodů.  Klient Configuration Manager pak bude informovat klienty pro stolní počítače Office 365, kde mají získat aktualizace a kdy se má spustit proces instalace aktualizace.  
 
@@ -67,9 +67,9 @@ Když společnost Microsoft publikuje novou aktualizaci klienta Office 365 pro s
 
 4. Dodržování předpisů pro aktualizace Office 365 můžete ověřit pomocí v konzole monitorování nebo sestavy.  
 
-   Podrobný postup najdete v tématu [Správa aktualizací klientů Office 365 pomocí Configuration Manager Technical Preview](https://docs.microsoft.com/deployoffice/manage-microsoft-365-apps-updates-configuration-manager).  
+   Podrobný postup najdete v tématu [Správa aktualizací klientů Office 365 pomocí Configuration Manager Technical Preview](/deployoffice/manage-microsoft-365-apps-updates-configuration-manager).  
 
-##  <a name="support-for-sql-server-alwayson-for-highly-available-databases"></a><a name="BKMK_AlwasyOn"></a>Podpora SQL Server AlwaysOn pro vysoce dostupné databáze  
+##  <a name="support-for-sql-server-alwayson-for-highly-available-databases"></a><a name="BKMK_AlwasyOn"></a> Podpora SQL Server AlwaysOn pro vysoce dostupné databáze  
  Configuration Manager teď podporuje používání skupin dostupnosti SQL Server AlwaysOn k hostování databáze lokality.  Když nainstalujete novou lokalitu, můžete nastavit, aby se místo normální instance SQL Server používala Skupina dostupnosti.  
 
 > [!NOTE]  
@@ -110,7 +110,7 @@ Zkuste provést následující úkoly a pak použijte informace o zpětné vazb�
  Pomocí následujících postupů nejprve vytvořte a nakonfigurujte skupinu dostupnosti a pak nainstalujte novou Configuration Manager lokalitu, která používá skupinu dostupnosti.  
 
 #### <a name="to-create-a-sql-server-alwayson-availability-group"></a>Vytvoření skupiny dostupnosti SQL Server AlwaysOn  
-Proces [Vytvoření skupiny dostupnosti SQL Server](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server?view=sql-server-ver15) je popsán v knihovně dokumentace SQL Server.  Při vytváření skupiny dostupnosti zajistěte splnění následujících požadavků pro použití s Configuration Manager:  
+Proces [Vytvoření skupiny dostupnosti SQL Server](/sql/database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server?view=sql-server-ver15) je popsán v knihovně dokumentace SQL Server.  Při vytváření skupiny dostupnosti zajistěte splnění následujících požadavků pro použití s Configuration Manager:  
 
 -   Maximálně tři členy:  
 
@@ -145,7 +145,7 @@ Chcete-li nainstalovat lokalitu, která používá skupinu dostupnosti SQL Serve
 
 3.  Po zadání těchto informací dokončete instalaci pomocí normálního procesu a konfigurací.  
 
-##  <a name="service-a--server-cluster"></a><a name="BKMK_ClusterServerUpdates"></a>Obsluha serverového clusteru  
+##  <a name="service-a--server-cluster"></a><a name="BKMK_ClusterServerUpdates"></a> Obsluha serverového clusteru  
 Teď můžete vytvořit kolekci, která obsahuje servery v clusteru, a potom nakonfigurovat nastavení clusteru tak, aby se používala při nasazení aktualizací do clusteru. Můžete řídit procento serverů, které jsou v daný okamžik online, a konfigurovat skripty PowerShellu před nasazením a po nasazení pro spouštění vlastních akcí.  
 
 **Známé problémy této verze:**  
@@ -161,7 +161,7 @@ Zkuste dokončit následující úlohu a pak použijte informace o zpětné vazb
 
 -   Můžu určit, že v každém okamžiku v rámci údržby clusteru může být offline jenom 50% serverů v clusteru. Pomocí ukázkových skriptů v postupu určete skripty před nasazením a po nasazení.  
 
--   Nasaďte aktualizaci do této kolekce. Zkontrolujte soubory Start. txt a end. txt v C:\Temp a ověřte počáteční a koncové časy nasazení na serverech v clusteru. Další informace najdete v souboru UpdatesDeployment. log.  
+-   Nasaďte aktualizaci do této kolekce. Zkontrolujte soubory start.txt a end.txt v C:\Temp a ověřte počáteční a koncové časy nasazení na serverech v clusteru. Další informace najdete v souboru UpdatesDeployment. log.  
 
 #### <a name="to-create-a-collection-for-a-server-cluster"></a>Vytvoření kolekce pro serverový cluster  
 
@@ -202,4 +202,4 @@ Zkuste dokončit následující úlohu a pak použijte informace o zpětné vazb
 
 1.  [Nasaďte aktualizace softwaru](../../sum/deploy-use/deploy-software-updates.md) do kolekce serverového clusteru.  
 
-2.  [Monitorujte nasazení aktualizace softwaru](../../sum/deploy-use/monitor-software-updates.md).  
+2.  [Monitorujte nasazení aktualizace softwaru](../../sum/deploy-use/monitor-software-updates.md).

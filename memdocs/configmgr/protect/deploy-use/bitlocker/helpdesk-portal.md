@@ -10,12 +10,12 @@ ms.assetid: 81f03922-90f6-4e8f-be65-da64ccb21cf2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7b64e09561def3d19c306b9cfcd4f7eb808763fd
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: bf9301e4fcb279b7d79a6f6c3d0a90ab3d15e277
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129252"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697309"
 ---
 # <a name="bitlocker-administration-and-monitoring-website"></a>Web pro správu a monitorování BitLockeru
 
@@ -29,7 +29,7 @@ Web pro správu a monitorování BitLockeru je rozhraní pro správu nástroj Bi
 
 Než ho budete moct používat, nainstalujte tuto komponentu na webový server. Další informace najdete v tématu [nastavení a vytváření sestav a portálů nástroje BitLocker](setup-websites.md).
 
-Přístup k webu pro správu a monitorování prostřednictvím následující adresy URL:`https://webserver.contoso.com/HelpDesk`
+Přístup k webu pro správu a monitorování prostřednictvím následující adresy URL: `https://webserver.contoso.com/HelpDesk`
 
 > [!NOTE]
 > **Sestavu auditu obnovení** můžete zobrazit na webu Správa a monitorování. Do bodu služby Reporting Services přidáte další sestavy správy nástroje BitLocker. Další informace najdete v tématu [zobrazení sestav nástroje BitLocker](view-reports.md).
@@ -48,7 +48,7 @@ Pro přístup ke konkrétním oblastem webu pro správu a monitorování musí b
 
 Pokud uživatel zadá nesprávný kód PIN příliš mnohokrát, může zamknout čip TPM. Počet, kolikrát může uživatel zadat nesprávný kód PIN před tím, než se zámky čipu TPM budou lišit od výrobce až po výrobce. Z oblasti **Spravovat čip TPM** na webu pro správu a monitorování získáte přístup k centralizovanému systému dat pro obnovení klíčů.
 
-Další informace o vlastnictví čipu TPM najdete v tématu [Konfigurace MBAM pro v úschověí čipu TPM a ukládání hesel OwnerAuth](https://docs.microsoft.com/microsoft-desktop-optimization-pack/mbam-v25/mbam-25-security-considerations#bkmk-tpm).
+Další informace o vlastnictví čipu TPM najdete v tématu [Konfigurace MBAM pro v úschověí čipu TPM a ukládání hesel OwnerAuth](/microsoft-desktop-optimization-pack/mbam-v25/mbam-25-security-considerations#bkmk-tpm).
 
 > [!NOTE]
 > Od verze 1607 Windows 10 neuchovává Windows při zřizování čipu TPM heslo vlastníka čipu TPM.
@@ -70,7 +70,7 @@ Další informace o vlastnictví čipu TPM najdete v tématu [Konfigurace MBAM p
     - Vypnout čip TPM
     - Změnit heslo TPM
     - Vymazat čip TPM
-    - Další
+    - Ostatní
 
     Po **odeslání** formuláře webová stránka vrátí jednu z následujících odpovědí:
 
@@ -91,7 +91,7 @@ Další informace o vlastnictví čipu TPM najdete v tématu [Konfigurace MBAM p
 
 ## <a name="drive-recovery"></a>Obnovení jednotky
 
-### <a name="recover-a-drive-in-recovery-mode"></a><a name="bkmk_recovery"></a>Obnovení jednotky v režimu obnovení
+### <a name="recover-a-drive-in-recovery-mode"></a><a name="bkmk_recovery"></a> Obnovení jednotky v režimu obnovení
 
 Jednotky přejde do režimu obnovení v následujících scénářích:
 
@@ -123,7 +123,7 @@ Chcete-li získat heslo pro obnovení, použijte oblast **obnovení jednotky** n
     - Resetování čipu TPM
     - Ztracené heslo
     - Ztracená karta SmartCard
-    - Další
+    - Ostatní
 
     Po **odeslání** formuláře webová stránka vrátí jednu z následujících odpovědí:
 
@@ -142,7 +142,7 @@ Chcete-li získat heslo pro obnovení, použijte oblast **obnovení jednotky** n
 
 Pokud chcete jednotku odemknout, zadejte heslo pro obnovení nebo použijte balíček pro obnovení.
 
-### <a name="recover-a-moved-drive"></a><a name="bkmk_moved"></a>Obnovení přesunuté jednotky
+### <a name="recover-a-moved-drive"></a><a name="bkmk_moved"></a> Obnovení přesunuté jednotky
 
 Když přesunete jednotku do nového počítače, protože se liší od čipu TPM, BitLocker nepřijímá předchozí PIN kód. Pro obnovení přesunuté jednotky Získejte ID obnovovacího klíče, které načte heslo pro obnovení.
 
@@ -159,11 +159,11 @@ K obnovení přesunuté jednotky použijte oblast **obnovení jednotky** na webu
 
 Pokud jste přesunutou jednotku nakonfigurovali tak, aby používala čip TPM v původním počítači, proveďte následující kroky. V opačném případě je proces obnovení dokončen.
 
-1. Po odemčení jednotky spusťte počítač v režimu WinRE. Otevřete příkazový řádek v WinRE a pomocí `manage-bde` příkazu dešifrujte jednotku. Tento nástroj je jediným způsobem, jak odebrat ochranu pomocí **čipu TPM a PIN kódu** bez původního čipu TPM. Další informace o tomto příkazu najdete v tématu [Manage-bde](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-use-bitlocker-drive-encryption-tools-to-manage-bitlocker#bkmk-managebde).
+1. Po odemčení jednotky spusťte počítač v režimu WinRE. Otevřete příkazový řádek v WinRE a pomocí `manage-bde` příkazu dešifrujte jednotku. Tento nástroj je jediným způsobem, jak odebrat ochranu pomocí **čipu TPM a PIN kódu** bez původního čipu TPM. Další informace o tomto příkazu najdete v tématu [Manage-bde](/windows/security/information-protection/bitlocker/bitlocker-use-bitlocker-drive-encryption-tools-to-manage-bitlocker#bkmk-managebde).
 
 1. Až to bude hotové, spusťte počítač normálně. Configuration Manager vynutila zásadu nástroje BitLocker k šifrování jednotky pomocí čipu TPM a kódu PIN nového počítače.
 
-### <a name="recover-a-corrupted-drive"></a><a name="bkmk_corrupted"></a>Obnovení poškozené jednotky
+### <a name="recover-a-corrupted-drive"></a><a name="bkmk_corrupted"></a> Obnovení poškozené jednotky
 
 K získání balíčku obnovovacího klíče z webu pro správu a monitorování použijte ID obnovovacího klíče. Další informace najdete v tématu [obnovení jednotky v režimu obnovení](#bkmk_recovery).
 
@@ -175,16 +175,16 @@ K získání balíčku obnovovacího klíče z webu pro správu a monitorování
 
     Nahraďte následující hodnoty:
 
-    - `<corrupted drive>`: Písmeno jednotky poškozené jednotky, například`D:`
+    - `<corrupted drive>`: Písmeno jednotky poškozené jednotky, například `D:`
     - `<fixed drive>`: Písmeno jednotky dostupné jednotky pevného disku podobné nebo větší velikosti než poškozená jednotka. BitLocker obnoví a přesune data na poškozené jednotce na určenou jednotku. Všechna data na této jednotce jsou přepsána.
     - `<key package>`: Umístění balíčku obnovovacího klíče
     - `<recovery password>`: Přidružené heslo pro obnovení
 
-    Například:
+    Příklad:
 
     `repair-bde C: D: -kp F:\RecoveryKeyPackage -rp 111111-222222-333333-444444-555555-666666-777777-888888`
 
-Další informace o tomto příkazu najdete v tématu [Repair-BDE](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-use-bitlocker-drive-encryption-tools-to-manage-bitlocker#bkmk-repairbde).
+Další informace o tomto příkazu najdete v tématu [Repair-BDE](/windows/security/information-protection/bitlocker/bitlocker-use-bitlocker-drive-encryption-tools-to-manage-bitlocker#bkmk-repairbde).
 
 ## <a name="reports"></a>Sestavy
 

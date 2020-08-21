@@ -10,12 +10,12 @@ ms.assetid: 20493c86-6454-4b35-8f22-0d049b68b8bb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f725c1b7dc380a84cd94e666b98dbd309df3744c
-ms.sourcegitcommit: 14d7dd0a99ebd526c9274d5781c298c828323ebf
+ms.openlocfilehash: 15aba2a32e680ab9499f5295307c82daafbbed71
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82802051"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695337"
 ---
 # <a name="approve-applications-in-configuration-manager"></a>Schvalování aplikací v Configuration Manager
 
@@ -23,11 +23,11 @@ ms.locfileid: "82802051"
 
 Při [nasazování aplikace](deploy-applications.md) v Configuration Manager můžete pro instalaci vyžadovat schválení. Uživatelé požadují aplikaci v centru softwaru a pak si prohlédněte žádost v konzole Configuration Manager. Žádost můžete schválit nebo zamítnout.
 
-## <a name="approval-settings"></a><a name="bkmk_approval"></a>Nastavení schválení
+## <a name="approval-settings"></a><a name="bkmk_approval"></a> Nastavení schválení
 
 Chování při schvalování aplikací závisí na tom, jestli povolíte doporučené [volitelné prostředí pro schvalování aplikací](#bkmk_opt). Jedno z následujících nastavení schválení se zobrazí na stránce **nastavení nasazení** v nasazení aplikace:  
 
-### <a name="an-administrator-must-approve-a-request-for-this-application-on-the-device"></a><a name="bkmk_opt"></a>Správce musí na zařízení schválit žádost o tuto aplikaci.
+### <a name="an-administrator-must-approve-a-request-for-this-application-on-the-device"></a><a name="bkmk_opt"></a> Správce musí na zařízení schválit žádost o tuto aplikaci.
 
 > [!Note]  
 > Configuration Manager ve výchozím nastavení tuto funkci nepovolí. Než ho použijete, povolte volitelnou funkci **schvalovat žádosti o aplikace pro uživatele na zařízení**. Další informace naleznete v části [Enable optional features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_options).
@@ -49,11 +49,11 @@ Po schválení aplikace k instalaci můžete žádost **odmítnout** v konzole C
 
 Pokud ve verzi 1906 schválíte žádost o aplikaci v konzole a pak ji odepřete, můžete ji teď schválit znovu. Aplikace se po schválení znovu nainstaluje na klienta.  <!-- 4224910 -->
 
-Automatizujte proces schvalování pomocí rutiny CMApprovalRequest prostředí PowerShell pro [schválení](https://docs.microsoft.com/powershell/module/configurationmanager/approve-cmapprovalrequest?view=sccm-ps) . Počínaje verzí 1902 Tato rutina zahrnuje parametr **InstallActionBehavior** . Pomocí tohoto parametru můžete určit, jestli se má aplikace nainstalovat hned, nebo během nepracovních hodin.<!-- SCCMDocs-pr issue #3418 -->
+Automatizujte proces schvalování pomocí rutiny CMApprovalRequest prostředí PowerShell pro [schválení](/powershell/module/configurationmanager/approve-cmapprovalrequest?view=sccm-ps) . Počínaje verzí 1902 Tato rutina zahrnuje parametr **InstallActionBehavior** . Pomocí tohoto parametru můžete určit, jestli se má aplikace nainstalovat hned, nebo během nepracovních hodin.<!-- SCCMDocs-pr issue #3418 -->
 
 Od 1906 se můžete podívat, která nasazení vyžadují schválení. Vyberte aplikaci v uzlu **aplikace** . V podokně podrobností přepněte na kartu **nasazení** . Ve výchozím nastavení se zobrazuje nový sloupec, **vyžaduje schválení**.
 
-#### <a name="retry-the-install-of-pre-approved-applications"></a><a name="bkmk_retry"></a>Opakovat instalaci předběžně schválených aplikací
+#### <a name="retry-the-install-of-pre-approved-applications"></a><a name="bkmk_retry"></a> Opakovat instalaci předběžně schválených aplikací
 
 <!--4336307-->
 Počínaje verzí 1906 můžete opakovat instalaci aplikace, kterou jste předtím schválili pro uživatele nebo zařízení. Možnost schválení je dostupná jenom pro dostupná nasazení. Pokud uživatel aplikaci odinstaluje nebo dojde k chybě počáteční instalace, Configuration Manager nevyhodnocují svůj stav a znovu ho přeinstalujte. Tato funkce umožňuje technikovi podpory rychle opakovat instalaci aplikace pro uživatele, který volá nápovědu.
@@ -76,7 +76,7 @@ Pokud se aplikace nenainstalovala úspěšně, nebo uživatel odinstaluje aplika
 - [Vylepšení schvalování aplikací v nástroji ConfigMgr 1810](https://techcommunity.microsoft.com/t5/Configuration-Manager-Blog/Application-approval-improvements-in-ConfigMgr-1810/ba-p/303534)
 - [Aktualizace procesu schválení aplikace v Configuration Manager](https://techcommunity.microsoft.com/t5/Configuration-Manager-Blog/Updates-to-the-application-approval-process-in-Configuration/ba-p/275048)
 
-### <a name="require-administrator-approval-if-users-request-this-application"></a><a name="bkmk_prior"></a>Vyžadovat schválení správce, pokud uživatelé požadují tuto aplikaci
+### <a name="require-administrator-approval-if-users-request-this-application"></a><a name="bkmk_prior"></a> Vyžadovat schválení správce, pokud uživatelé požadují tuto aplikaci
 
 > [!Note]  
 > Tento postup se používá, pokud nepovolíte doporučené [volitelné prostředí pro schvalování aplikací](#bkmk_opt).
@@ -87,7 +87,7 @@ Správce schválí všechny požadavky uživatelů na aplikaci, aby ji mohl uži
 
 Po schválení aplikace k instalaci můžete žádost **odmítnout** v konzole Configuration Manager. Tato akce nezpůsobí, že klient odinstalovat aplikaci z libovolného zařízení. Zabrání uživatelům instalovat nové kopie aplikace z centra softwaru.  
 
-## <a name="email-notifications"></a><a name="bkmk_email-approve"></a>E-mailová oznámení
+## <a name="email-notifications"></a><a name="bkmk_email-approve"></a> E-mailová oznámení
 
 <!--1321550-->
 
@@ -99,7 +99,7 @@ Pokud je k dispozici více než jedna výstraha, můžete určit, která výstra
 
 Uživatelé můžou do žádosti přidat komentář z centra softwaru. Tento komentář se zobrazuje na žádost aplikace v konzole Configuration Manager. Počínaje verzí 1902 se tento komentář zobrazuje i v e-mailu. Zahrnutím tohoto komentáře do e-mailu můžou schvalovatelé učinit lepší rozhodnutí o schválení nebo zamítnutí žádosti.<!--3594063-->
 
-### <a name="prerequisites"></a>Požadavky
+### <a name="prerequisites"></a>Předpoklady
 
 #### <a name="to-send-email-notifications-and-take-action-on-internal-network"></a>Odeslání e-mailových oznámení a provedení akce v interní síti
 
@@ -146,17 +146,17 @@ U těchto dalších volitelných požadavků můžou příjemci žádost schvál
 
     1. V nabídce **Správa** vyberte **ověřování**.  
 
-        1. V části **identifikátory URI pro přesměrování** vložte následující cestu:`https://<CMG FQDN>/CCM_Proxy_ServerAuth/ImplicitAuth`  
+        1. V části **identifikátory URI pro přesměrování** vložte následující cestu: `https://<CMG FQDN>/CCM_Proxy_ServerAuth/ImplicitAuth`  
 
         1. Nahraďte `<CMG FQDN>` plně kvalifikovaným názvem domény (FQDN) vaší služby brány pro správu cloudu (CMG). Například GraniteFalls.Contoso.com.  
 
-        1. Potom vyberte **Uložit**.  
+        1. Pak vyberte **Uložit**.  
 
     1. V nabídce **Správa** vyberte možnost **manifest**.  
 
         1. V podokně upravit manifest Najděte vlastnost **oauth2AllowImplicitFlow** .  
 
-        1. Změňte její hodnotu na **true**. Například celá čára by měla vypadat jako na následujícím řádku:`"oauth2AllowImplicitFlow": true,`  
+        1. Změňte její hodnotu na **true**. Například celá čára by měla vypadat jako na následujícím řádku: `"oauth2AllowImplicitFlow": true,`  
 
         1. Vyberte **Uložit**.  
 

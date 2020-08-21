@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: d4594a50f42d6b8e6ea0b88b83920eda11615815
-ms.sourcegitcommit: 8fc7f2864c5e3f177e6657b684c5f208d6c2a1b4
+ms.openlocfilehash: 0ddad23dfde87fa402c01d4eaa21a1b76db27d93
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88590998"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692923"
 ---
 # <a name="capabilities-in-technical-preview-1705-for-configuration-manager"></a>Funkce ve verzi Technical Preview 1705 pro Configuration Manager
 
@@ -57,7 +57,7 @@ Tento nástroj můžete použít i v případě, že konzolová aktualizace ješ
 
 Když nástroj spustíte, spustí se s aktualizací, kterou určíte. Ve výchozím nastavení Nástroj neodstraní úspěšně nainstalované nebo stažené aktualizace.  
 
-### <a name="prerequisites"></a>Požadavky
+### <a name="prerequisites"></a>Předpoklady
 Účet, který použijete ke spuštění nástroje, vyžaduje následující oprávnění:
 -   Oprávnění **ke čtení** a **zápisu** do databáze lokality centrální správy a každé primární lokality ve vaší hierarchii. Chcete-li nastavit tato oprávnění, můžete přidat uživatelský účet jako člena **db_datawriter** a **db_datareader** [pevné databázové role](/sql/relational-databases/security/authentication-access/database-level-roles#fixed-database-roles) v databázi Configuration Manager jednotlivých lokalit. Nástroj nekomunikuje se sekundárními lokalitami.
 -   **Místní správce** v lokalitě nejvyšší úrovně ve vaší hierarchii.
@@ -121,12 +121,12 @@ V této verzi teď můžete používat repliky asynchronního potvrzení ve skup
 
 - Tato verze nepodporuje převzetí služeb při selhání pro použití repliky asynchronního potvrzení jako databáze lokality.
   > [!CAUTION]  
-  > Vzhledem k tomu, že Configuration Manager neověřuje stav asynchronního svěření repliky, aby bylo možné potvrdit, že je aktuální a [že by taková replika mohla být nesynchronizovaná](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server?view=sql-server-2014#AvailabilityModes), použití repliky asynchronního potvrzení jako databáze lokality může mít za následek ohrožení integrity vašeho webu a dat.  
+  > Vzhledem k tomu, že Configuration Manager neověřuje stav asynchronního svěření repliky, aby bylo možné potvrdit, že je aktuální a [že by taková replika mohla být nesynchronizovaná](/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server?view=sql-server-2014#AvailabilityModes), použití repliky asynchronního potvrzení jako databáze lokality může mít za následek ohrožení integrity vašeho webu a dat.  
 
 - V rámci skupiny dostupnosti můžete použít stejný počet a typ replik, které jsou podporované podle používané verze SQL Server.   (Předchozí podpora byla omezená na dvě repliky synchronního potvrzení.)
 
 ### <a name="configure-an-asynchronous-commit-replica"></a>Konfigurace repliky asynchronního potvrzování
-Pokud chcete přidat asynchronní repliku do [skupiny dostupnosti, kterou používáte s Configuration Manager](../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md), nemusíte spouštět konfigurační skripty potřebné ke konfiguraci synchronní repliky. (Je to proto, že neexistuje žádná podpora k použití této asynchronní repliky jako databáze lokality.) Další informace najdete v tématu [Přidání sekundární repliky do skupiny dostupnosti](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server?view=sql-server-2014).
+Pokud chcete přidat asynchronní repliku do [skupiny dostupnosti, kterou používáte s Configuration Manager](../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md), nemusíte spouštět konfigurační skripty potřebné ke konfiguraci synchronní repliky. (Je to proto, že neexistuje žádná podpora k použití této asynchronní repliky jako databáze lokality.) Další informace najdete v tématu [Přidání sekundární repliky do skupiny dostupnosti](/sql/database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server?view=sql-server-2014).
 
 ### <a name="use-the-asynchronous-replica-to-recover-your-site"></a>Obnovení lokality pomocí asynchronní repliky
 Před použitím asynchronní repliky k obnovení databáze lokality je nutné zastavit aktivní primární lokalitu, aby se zabránilo dalším zápisům do databáze lokality. Po zastavení lokality můžete použít asynchronní repliku místo použití [ručně obnovené databáze](../servers/manage/recover-sites.md#use-a-site-database-that-has-been-manually-recovered).
@@ -139,7 +139,7 @@ Zastavení webu je ekvivalentem zastavení služby Správce součástí lokality
 ## <a name="improved-user-notifications-for-office-365-updates"></a>Vylepšená uživatelská oznámení pro aktualizace Office 365
 V případě, že klient nainstaluje aktualizaci Office 365, provedli jsme vylepšení využití uživatelského prostředí Klikni a spusť pro Office. To zahrnuje automaticky otevíraná okna a oznámení v aplikaci a možnosti odpočítávání. Před touto verzí se po odeslání aktualizace sady Office 365 klientovi automaticky zavřely aplikace Office, které byly otevřeny bez upozornění. Po této aktualizaci už nebudou neočekávaně ukončeny aplikace Office.
 
-### <a name="prerequisites"></a>Požadavky
+### <a name="prerequisites"></a>Předpoklady
 Tato aktualizace se týká klientů Office 365 ProPlus.
 
 ### <a name="known-issues"></a>Známé problémy
@@ -254,7 +254,7 @@ Pak postupujte podle pokynů v tématu [nasazení klientů do počítačů se sy
 - **SMSMP**: název vašeho bodu správy vyhledávání – může to být na intranetu.
 - **SMSSiteCode**: kód lokality Configuration Manager.
 - **AADTENANTID**, **AADTENANTNAME**: ID a název tenanta Azure AD, který jste propojili s Configuration Manager. To můžete zjistit spuštěním dsregcmd.exe/status z příkazového řádku na zařízení připojeném k Azure AD.
-- **AADCLIENTAPPID**: ID klientské aplikace Azure AD. Nápovědu najdete v tématu [použití portálu k vytvoření Azure Active Directory aplikace a instančního objektu, který má přístup k prostředkům](https://docs.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in).
+- **AADCLIENTAPPID**: ID klientské aplikace Azure AD. Nápovědu najdete v tématu [použití portálu k vytvoření Azure Active Directory aplikace a instančního objektu, který má přístup k prostředkům](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in).
 - **AADResourceUri**: identifikátor URI ID aplikace serveru Azure AD.
 
 ## <a name="use-azure-services-wizard-to-configure-a-connection-to-oms"></a>Použití Průvodce službami Azure ke konfiguraci připojení k OMS
@@ -265,7 +265,7 @@ Od verze 1705 Technical Preview můžete pomocí **Průvodce službami Azure** n
 -   Configuration Manager se připojuje k OMS pro funkce, jako je Log Analytics nebo Upgrade Readiness.
 
 ### <a name="prerequisites-for-the-oms-connector"></a>Předpoklady pro konektor OMS
-Požadavky na konfiguraci připojení k OMS se nezměnily z těch, které jsou [zdokumentované pro Current Branch verze 1702](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm). Tyto informace se opakují tady:  
+Požadavky na konfiguraci připojení k OMS se nezměnily z těch, které jsou [zdokumentované pro Current Branch verze 1702](/azure/azure-monitor/platform/collect-sccm). Tyto informace se opakují tady:  
 
 -   Poskytování Configuration Manager oprávnění pro OMS.
 

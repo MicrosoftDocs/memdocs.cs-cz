@@ -10,12 +10,12 @@ ms.technology: configmgr-sum
 ms.assetid: 4b0e2e90-aac7-4d06-a707-512eee6e576c
 manager: dougeby
 ms.author: mstewart
-ms.openlocfilehash: 560b432bb90f99207fd15bc07e7aff98ffd59ebf
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: a327d50a2743f81407530355b6fd5101ce6a8b02
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81719782"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696901"
 ---
 # <a name="software-updates-maintenance"></a>Údržba aktualizací softwaru
 
@@ -27,7 +27,7 @@ ms.locfileid: "81719782"
 
 Naplánujte úlohu čištění služby WSUS spuštěním následujících kroků:
 
-1. V konzole Configuration Manager přejděte do části **Správa** > **Přehled** > **Konfigurace** > **lokality lokality.**
+1. V konzole Configuration Manager přejděte do části **Správa**  >  **Přehled**  >  **Konfigurace**  >  **lokality lokality**.
 2. Vyberte lokalitu v horní části vaší Configuration Manager hierarchie.
 
 3. Ve skupině **Nastavení** klikněte na **Konfigurovat součásti pracoviště** a potom kliknutím na **Bod aktualizace softwaru** otevřete vlastnosti součásti bodu softwarové aktualizace.  
@@ -109,7 +109,7 @@ Následující možnosti **Průvodce vyčištěním serveru WSUS** nejsou spušt
 
 Klesající aktualizace ve službě WSUS zvyšují výkon odebráním těchto aktualizací z katalogů odesílaných klientům. Odmítnutí aktualizací, které Configuration Manager označuje jako nahrazené, dále minimalizuje katalogy a zlepší výkon.
 
-1. V konzole Configuration Manager přejděte do části **Správa** > **Přehled** > **Konfigurace** > **lokality lokality.**
+1. V konzole Configuration Manager přejděte do části **Správa**  >  **Přehled**  >  **Konfigurace**  >  **lokality lokality**.
 2. Vyberte lokalitu v horní části vaší Configuration Manager hierarchie.
 3. Ve skupině **Nastavení** klikněte na Konfigurovat součásti pracoviště a potom kliknutím na **Bod aktualizace softwaru** otevřete vlastnosti součásti bodu softwarové aktualizace.
 4. Na kartě **Údržba služby WSUS** vyberte v **závislosti na pravidlech nahrazení možnost odmítnout aktualizace s vypršenou platností ve službě WSUS**.
@@ -118,7 +118,7 @@ Klesající aktualizace ve službě WSUS zvyšují výkon odebráním těchto ak
 
 Přidání neclusterovaných indexů zvyšuje výkon vyčištění služby WSUS, který Configuration Manager.
 
-1. V konzole Configuration Manager přejděte do části **Správa** > **Přehled** > **Konfigurace** > **lokality lokality.**
+1. V konzole Configuration Manager přejděte do části **Správa**  >  **Přehled**  >  **Konfigurace**  >  **lokality lokality**.
 2. Vyberte lokalitu v horní části vaší Configuration Manager hierarchie.
 3. Ve skupině **Nastavení** klikněte na Konfigurovat součásti pracoviště a potom kliknutím na **Bod aktualizace softwaru** otevřete vlastnosti součásti bodu softwarové aktualizace.
 4. Na kartě **Údržba služby WSUS** vyberte **Přidat neseskupené indexy do databáze WSUS**.
@@ -130,17 +130,17 @@ Přidání neclusterovaných indexů zvyšuje výkon vyčištění služby WSUS,
 
 Pokud je databáze WSUS na vzdáleném SQL serveru, možná budete muset přidat oprávnění v SQL a vytvořit indexy. Účet použitý pro připojení k databázi WSUS a vytváření indexů se může lišit. Pokud [ve vlastnostech bodu aktualizace softwaru zadáte účet pro připojení k serveru WSUS](../get-started/install-a-software-update-point.md#wsus-server-connection-account), ujistěte se, že účet pro připojení má oprávnění SQL. Pokud nezadáte účet pro připojení k serveru WSUS, účet počítače serveru lokality potřebuje oprávnění SQL.
 
-- Vytvoření indexu vyžaduje `ALTER` oprávnění pro tabulku nebo zobrazení. Účet musí být členem `sysadmin` pevné role serveru nebo s `db_ddladmin` `db_owner` pevnými databázovými rolemi. Další informace o vytváření a indexování a oprávněních najdete v tématu [Create index (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/create-index-transact-sql?view=sql-server-2017#permissions).
-- Účtu `CONNECT SQL` musí být uděleno oprávnění serveru. Další informace najdete v tématu [udělení oprávnění serveru (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/grant-server-permissions-transact-sql?view=sql-server-2017).
+- Vytvoření indexu vyžaduje `ALTER` oprávnění pro tabulku nebo zobrazení. Účet musí být členem `sysadmin` pevné role serveru nebo s `db_ddladmin` `db_owner` pevnými databázovými rolemi. Další informace o vytváření a indexování a oprávněních najdete v tématu [Create index (Transact-SQL)](/sql/t-sql/statements/create-index-transact-sql?view=sql-server-2017#permissions).
+- `CONNECT SQL`Účtu musí být uděleno oprávnění serveru. Další informace najdete v tématu [udělení oprávnění serveru (Transact-SQL)](/sql/t-sql/statements/grant-server-permissions-transact-sql?view=sql-server-2017).
 
 > [!NOTE]  
->  Pokud je databáze služby WSUS na vzdáleném serveru SQL Server pomocí jiného než výchozího portu, indexy pravděpodobně nebudou přidány. Pro tento scénář můžete vytvořit [alias serveru pomocí SQL Server Configuration Manager](https://docs.microsoft.com/sql/database-engine/configure-windows/create-or-delete-a-server-alias-for-use-by-a-client?view=sql-server-2017) . Po přidání aliasu a Configuration Manager může vytvořit připojení k databázi WSUS, budou přidány indexy.
+>  Pokud je databáze služby WSUS na vzdáleném serveru SQL Server pomocí jiného než výchozího portu, indexy pravděpodobně nebudou přidány. Pro tento scénář můžete vytvořit [alias serveru pomocí SQL Server Configuration Manager](/sql/database-engine/configure-windows/create-or-delete-a-server-alias-for-use-by-a-client?view=sql-server-2017) . Po přidání aliasu a Configuration Manager může vytvořit připojení k databázi WSUS, budou přidány indexy.
 
 ### <a name="remove-obsolete-updates-from-the-wsus-database"></a>Odebrat zastaralé aktualizace z databáze WSUS
 
 Zastaralé aktualizace jsou nepoužívané aktualizace a revize aktualizací v databázi WSUS. Obecně řečeno, aktualizace se považuje za zastaralou, jakmile už není v [katalogu Microsoft Update](https://www.catalog.update.microsoft.com/) a nevyžaduje jiné aktualizace jako součást nebo závislost.
 
-1. V konzole Configuration Manager přejděte do části **Správa** > **Přehled** > **Konfigurace** > **lokality lokality.**
+1. V konzole Configuration Manager přejděte do části **Správa**  >  **Přehled**  >  **Konfigurace**  >  **lokality lokality**.
 2. Vyberte lokalitu v horní části vaší Configuration Manager hierarchie.
 3. Ve skupině **Nastavení** klikněte na Konfigurovat součásti pracoviště a potom kliknutím na **Bod aktualizace softwaru** otevřete vlastnosti součásti bodu softwarové aktualizace.
 4. Na kartě **Údržba služby WSUS** vyberte možnost **Odebrat zastaralé aktualizace z databáze WSUS**.
@@ -150,8 +150,8 @@ Zastaralé aktualizace jsou nepoužívané aktualizace a revize aktualizací v d
 
 Pokud je databáze WSUS na vzdáleném SQL serveru, účet počítače serveru lokality potřebuje následující oprávnění SQL:
 
-- Pevné `db_datareader` databázové `db_datawriter` role a. Další informace najdete v tématu [role na úrovni databáze](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles?view=sql-server-2017#fixed-database-roles).
-- Oprávnění `CONNECT SQL` serveru musí být uděleno účtu počítače webového serveru. Další informace najdete v tématu [udělení oprávnění serveru (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/grant-server-permissions-transact-sql?view=sql-server-2017).
+- `db_datareader` `db_datawriter` Pevné databázové role a. Další informace najdete v tématu [role na úrovni databáze](/sql/relational-databases/security/authentication-access/database-level-roles?view=sql-server-2017#fixed-database-roles).
+- `CONNECT SQL`Oprávnění serveru musí být uděleno účtu počítače webového serveru. Další informace najdete v tématu [udělení oprávnění serveru (Transact-SQL)](/sql/t-sql/statements/grant-server-permissions-transact-sql?view=sql-server-2017).
 
 #### <a name="wsus-cleanup-wizard"></a>Průvodce vyčištěním služby WSUS
 
@@ -173,7 +173,7 @@ Představte si následující scénář:
    - Přidání neclusterovaných indexů do databáze WSUS
    - Odebrat zastaralé aktualizace z databáze WSUS
 
-V tomto scénáři Configuration Manager není možné provést výše uvedené úlohy údržby služby WSUS pro body aktualizací vzdáleného softwaru pomocí interní databáze Windows. K tomuto problému dochází, protože interní databáze Windows neumožňuje vzdálená připojení. Na serveru lokality se `WSyncMgr.log` zobrazí následující chyby:
+V tomto scénáři Configuration Manager není možné provést výše uvedené úlohy údržby služby WSUS pro body aktualizací vzdáleného softwaru pomocí interní databáze Windows. K tomuto problému dochází, protože interní databáze Windows neumožňuje vzdálená připojení. Na serveru lokality se zobrazí následující chyby `WSyncMgr.log` :
 
 ```text
 Indexing Failed. Could not connect to SUSDB.
@@ -188,8 +188,8 @@ Pokud chcete tento problém obejít, můžete automatizaci údržby služby WSUS
 
 Toto vyčištění můžete ověřit kontrolou protokolu souboru wsyncmgr. log pro následující položky:
 
-- Po zobrazení této položky protokolu dojde k odmítnutí nahrazených aktualizací ve službě WSUS:`Cleanup processed <number> total updates and declined <number>`
-- Po zobrazení této položky se spustí vyčištění služby WSUS:`Calling WSUS Cleanup.`
-- Po zobrazení této položky se dokončí vyčištění služby WSUS pro aktualizace s vypršenou platností:`Successfully completed WSUS Cleanup.`
-- Po zobrazení této položky se spustí vyčištění Configuration Manager položky konfigurace s vypršenou platností:`Deleting old expired updates...`
-- Po zobrazení této položky se dokončí vyčištění položek konfigurace Configuration Manager vypršela platnost.`Deleted <number> expired updates total`
+- Po zobrazení této položky protokolu dojde k odmítnutí nahrazených aktualizací ve službě WSUS: `Cleanup processed <number> total updates and declined <number>`
+- Po zobrazení této položky se spustí vyčištění služby WSUS: `Calling WSUS Cleanup.`
+- Po zobrazení této položky se dokončí vyčištění služby WSUS pro aktualizace s vypršenou platností: `Successfully completed WSUS Cleanup.`
+- Po zobrazení této položky se spustí vyčištění Configuration Manager položky konfigurace s vypršenou platností: `Deleting old expired updates...`
+- Po zobrazení této položky se dokončí vyčištění položek konfigurace Configuration Manager vypršela platnost. `Deleted <number> expired updates total`

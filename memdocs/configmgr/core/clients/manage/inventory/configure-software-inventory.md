@@ -10,12 +10,12 @@ ms.assetid: f86559de-092a-4ce8-9b43-5d7530e0b763
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f6fcf4736c30d8743d0d26b52aac60ef12b5c9cd
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 9663f71118836513d95ec914d0f70b09cda9954f
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906301"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693059"
 ---
 # <a name="how-to-configure-software-inventory-in-configuration-manager"></a>Postup konfigurace inventáře softwaru v Configuration Manager
 
@@ -44,7 +44,7 @@ Tento postup nakonfiguruje výchozí nastavení klienta pro inventář softwaru 
    > [!TIP]
    >   Kód chyby 80041006 v inventoryprovider. log znamená, že zprostředkovatel rozhraní WMI nemá dostatek paměti. To znamená, že bylo dosaženo limitu kvóty paměti pro poskytovatele a poskytovatel inventáře nemůže pokračovat.
    > V takovém případě Agent pro inventarizace vytvoří sestavu s 0 položkami, takže nebudou hlášeny žádné skladové položky. <br/>
-   > Možnou příčinou této chyby je omezit rozsah shromažďování inventáře softwaru. V případě, že dojde k chybě po omezení oboru inventáře, může řešení zvýšit vlastnost [MemoryPerHost](https://techcommunity.microsoft.com/t5/ask-the-performance-team/memory-and-handle-quotas-in-the-wmi-provider-service/ba-p/373319) definovanou ve třídě [_ProviderHostQuotaConfiguration](https://docs.microsoft.com/windows/win32/wmisdk/--providerhostquotaconfiguration) .
+   > Možnou příčinou této chyby je omezit rozsah shromažďování inventáře softwaru. V případě, že dojde k chybě po omezení oboru inventáře, může řešení zvýšit vlastnost [MemoryPerHost](https://techcommunity.microsoft.com/t5/ask-the-performance-team/memory-and-handle-quotas-in-the-wmi-provider-service/ba-p/373319) definovanou ve třídě [_ProviderHostQuotaConfiguration](/windows/win32/wmisdk/--providerhostquotaconfiguration) .
 
 <!--SMS.480648 include WMI Out of memory tip -->
 

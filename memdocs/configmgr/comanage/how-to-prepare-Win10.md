@@ -10,12 +10,12 @@ ms.topic: how-to
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 101de2ba-9b4d-4890-b087-5d518a4aa624
-ms.openlocfilehash: 076a4b6d1bf5773287d4a0b32109023039a3b399
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: c20f5e883c1b33c90218532dd6ae31f510fd8294
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87546412"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695031"
 ---
 # <a name="how-to-prepare-internet-based-devices-for-co-management"></a>Příprava internetových zařízení na spolusprávu
 
@@ -27,7 +27,7 @@ Pro nová zařízení s Windows 10 můžete použít službu autopilotu ke konfi
 
 Další informace najdete v tématu [Přehled modulu Windows autopilot](../../autopilot/windows-autopilot.md).
 
-Pokud chcete nakonfigurovat, aby se zařízení automaticky zaregistrovala do Intune, když se připojí k Azure AD, přečtěte si téma [registrace zařízení s Windows pro Microsoft Intune](https://docs.microsoft.com/intune/windows-enroll).  
+Pokud chcete nakonfigurovat, aby se zařízení automaticky zaregistrovala do Intune, když se připojí k Azure AD, přečtěte si téma [registrace zařízení s Windows pro Microsoft Intune](/intune/windows-enroll).  
 
 ### <a name="gather-information-from-configuration-manager"></a>Shromažďování informací z Configuration Manager
 
@@ -41,7 +41,7 @@ Použijte Configuration Manager ke shromáždění a hlášení informací o za�
 
 4. Po uložení souboru nahrajte data do Intune.  
 
-Další informace najdete v tématu [Přidání zařízení v Intune](https://docs.microsoft.com/intune/enrollment-autopilot#add-devices).
+Další informace najdete v tématu [Přidání zařízení v Intune](/intune/enrollment-autopilot#add-devices).
 
 ### <a name="autopilot-for-existing-devices"></a>Autopilot pro existující zařízení
 <!--1358333-->
@@ -65,7 +65,7 @@ Pro Internetová zařízení ve druhé cestě je potřeba vytvořit aplikaci v I
 
 3. Na kartě **Povolení** zkopírujte příkazový řádek. Vložte ho do poznámkového bloku a uložte ho pro další proces.  
 
-Příklad následujícího příkazového řádku:`CCMSETUPCMD="CCMHOSTNAME=contoso.cloudapp.net/CCM_Proxy_MutualAuth/72186325152220500 SMSSITECODE=ABC"`
+Příklad následujícího příkazového řádku: `CCMSETUPCMD="CCMHOSTNAME=contoso.cloudapp.net/CCM_Proxy_MutualAuth/72186325152220500 SMSSITECODE=ABC"`
 
 <!--1358215-->
 Rozhodněte, které vlastnosti příkazového řádku budete potřebovat pro vaše prostředí:  

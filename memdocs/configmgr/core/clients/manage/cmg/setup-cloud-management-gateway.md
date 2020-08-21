@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: e0ec7d66-1502-4b31-85bb-94996b1bc66f
-ms.openlocfilehash: 6b56f9848f497b7167b478b427f37a00bb2656b9
-ms.sourcegitcommit: da5bfbe16856fdbfadc40b3797840e0b5110d97d
+ms.openlocfilehash: a5800b40b581f2a65c4adcea0d229977ae61f774
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88512712"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693331"
 ---
 # <a name="set-up-cloud-management-gateway-for-configuration-manager"></a>Nastavení brány pro správu cloudu pro Configuration Manager
 
@@ -40,7 +40,7 @@ Pomocí následujícího kontrolního seznamu se ujistěte, že máte potřebné
 
   - Integrace se službou [Azure AD](../../../servers/deploy/configure/azure-services-wizard.md) pro **správu cloudu**. Zjišťování uživatelů služby Azure AD není vyžadováno. Pokud chcete web integrovat se službou Azure AD pro nasazení CMG pomocí Azure Resource Manager, budete potřebovat **globální správce**.
 
-  - Poskytovatelé prostředků Microsoft. **ClassicCompute**  &  **Microsoft. Storage** musí být zaregistrovaní v rámci předplatného Azure. Další informace najdete v tématu [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/resource-manager-supported-services).
+  - Poskytovatelé prostředků Microsoft. **ClassicCompute**  &  **Microsoft. Storage** musí být zaregistrovaní v rámci předplatného Azure. Další informace najdete v tématu [Azure Resource Manager](/azure/azure-resource-manager/resource-manager-supported-services).
 
   - K nasazení CMG se musí přihlásit **vlastník předplatného** .
 
@@ -270,7 +270,7 @@ Důležitější změny, například následující konfigurace, vyžadují opě
 - Předplatné
 - Název služby
 - Privátní infrastruktura veřejných klíčů
-- Oblast
+- Region
 
 Vždy udržujte aspoň jeden aktivní CMG pro internetové klienty pro příjem aktualizovaných zásad. internetoví klienti nemůžou komunikovat s odebraným CMG. Klienti neznají o novém, dokud nebudou moct přejít zpátky do intranetu. Při vytváření druhé instance CMG, která první odstraní, vytvoří také další spojovací bod CMG.
 

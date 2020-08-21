@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 0c2464bfba05d640868af7d5c8be7c32c0999946
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 9cd0df25c64c4ca1e0d2ce98de5d2915f7564241
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81721504"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693025"
 ---
 # <a name="capabilities-in-technical-preview-1612-for-configuration-manager"></a>Funkce ve verzi Technical Preview 1612 pro Configuration Manager
 
@@ -53,7 +53,7 @@ Kromě instalace a konfigurace databáze datového skladu je nainstalována řad
 | **3** | Bod služeb datového skladu přenáší a ukládá kopii synchronizovaných dat v databázi datového skladu. |  
 | **A** | Pomocí předdefinovaných sestav se vytvoří žádost o data, která se předají do bodu služby Reporting Services pomocí SQL Server Reporting Services. |  
 | **B** | Většina sestav je pro aktuální informace a tyto požadavky se spouštějí v databázi lokality. |  
-| **C** | Když sestava vyžádá historická data pomocí jedné ze sestav s *kategorií* **datového skladu**, požadavek se spustí pro databázi datového skladu.   |  
+| **R** | Když sestava vyžádá historická data pomocí jedné ze sestav s *kategorií* **datového skladu**, požadavek se spustí pro databázi datového skladu.   |  
 
 ### <a name="prerequisites-for-the-data-warehouse-service-point-and-database"></a>Předpoklady pro bod služby a databázi datového skladu
 - Vaše hierarchie musí mít nainstalovanou roli systému lokality bodu služby Reporting Services.
@@ -81,12 +81,12 @@ Předtím, než Průvodce zobrazí možnost vybrat a nainstalovat bod služby da
 
 **Obecná** stránka: vyžadují se tyto obecné informace:
 - **Nastavení databáze Configuration Manager:**   
-  - **Název serveru** – zadejte plně kvalifikovaný název domény serveru, který je hostitelem databáze lokality. Pokud nepoužíváte výchozí instanci SQL Server, je nutné zadat instanci za plně kvalifikovaným názvem domény v následujícím formátu: *** &lt;Sqlserver_FQDN>\&lt; Instance_name>***
+  - **Název serveru** – zadejte plně kvalifikovaný název domény serveru, který je hostitelem databáze lokality. Pokud nepoužíváte výchozí instanci SQL Server, je nutné zadat instanci za plně kvalifikovaným názvem domény v následujícím formátu: *** &lt; Sqlserver_FQDN>\& lt; Instance_name>***
   - **Název databáze** – zadejte název databáze lokality.
   - **Ověřit** – klikněte na **ověřit** a ujistěte se, že připojení k databázi lokality je úspěšné.
 </br></br>
 - **Nastavení databáze datového skladu:**
-  - **Název serveru** – zadejte plně kvalifikovaný název domény serveru, který je hostitelem bodu služby a databáze datového skladu. Pokud nepoužíváte výchozí instanci SQL Server, je nutné zadat instanci za plně kvalifikovaným názvem domény v následujícím formátu: *** &lt;Sqlserver_FQDN>\&lt; Instance_name>***
+  - **Název serveru** – zadejte plně kvalifikovaný název domény serveru, který je hostitelem bodu služby a databáze datového skladu. Pokud nepoužíváte výchozí instanci SQL Server, je nutné zadat instanci za plně kvalifikovaným názvem domény v následujícím formátu: *** &lt; Sqlserver_FQDN>\& lt; Instance_name>***
   - **Název databáze** – zadejte plně kvalifikovaný název domény pro databázi datového skladu.  Configuration Manager vytvoří databázi s tímto názvem. Pokud zadáte název databáze, který již existuje v instanci systému SQL Server, Configuration Manager použije tuto databázi.
   - **Ověřit** – klikněte na **ověřit** a ujistěte se, že připojení k databázi lokality je úspěšné.
 
@@ -104,10 +104,10 @@ Po instalaci role datový sklad ověřte, že účet, který se používá jako 
 
 #### <a name="troubleshoot-installation-and-data-synchronization"></a>Řešení potíží při instalaci a synchronizaci dat
 Pomocí následujících protokolů můžete prozkoumat problémy s instalací bodu služby datového skladu nebo synchronizace dat:
-- **DWSSMSI. log** a **DWSSSetup. log** – pomocí těchto protokolů můžete prozkoumat chyby při instalaci bodu služby datového skladu.
-- **Microsoft. ConfigMgrDataWarehouse. log** – pomocí tohoto protokolu můžete prozkoumat synchronizaci dat mezi databází lokality a databází datového skladu.
+- **DWSSMSI. log** a **DWSSSetup. log**  – pomocí těchto protokolů můžete prozkoumat chyby při instalaci bodu služby datového skladu.
+- **Microsoft.ConfigMgrDataWarehouse. log** – pomocí tohoto protokolu můžete prozkoumat synchronizaci dat mezi databází lokality a databází datového skladu.
 
-### <a name="reporting"></a>Generování sestav
+### <a name="reporting"></a>Vytváření sestav
 Po instalaci role systému lokality datového skladu jsou v bodu služby Reporting Services k dispozici následující sestavy s *kategorií* **datového skladu:**
 
 |Sestava                   | Podrobnosti                                  |
@@ -140,16 +140,16 @@ K přesunutí databáze datového skladu do nové SQL Server použijte následuj
 5. Po instalaci role systému lokality se přesun dokončí.
 
 Můžete zkontrolovat následující protokoly Configuration Manager a potvrdit tak, že byla role systému lokality úspěšně přeinstalována:  
-- **DWSSMSI. log** a **DWSSSetup. log** – pomocí těchto protokolů můžete prozkoumat chyby při instalaci bodu služby datového skladu.
-- **Microsoft. ConfigMgrDataWarehouse. log** – pomocí tohoto protokolu můžete prozkoumat synchronizaci dat mezi databází lokality a databází datového skladu.
+- **DWSSMSI. log** a **DWSSSetup. log**  – pomocí těchto protokolů můžete prozkoumat chyby při instalaci bodu služby datového skladu.
+- **Microsoft.ConfigMgrDataWarehouse. log** – pomocí tohoto protokolu můžete prozkoumat synchronizaci dat mezi databází lokality a databází datového skladu.
 
 
 ## <a name="content-library-cleanup-tool"></a>Nástroj pro vyčištění knihovny obsahu
-Počínaje verzí Technical Preview 1612 můžete použít nový nástroj příkazového řádku (**ContentLibraryCleanup. exe**) a odebrat obsah, který už není přidružený k žádnému balíčku nebo aplikaci, z distribučního bodu (osamocený obsah). Tento nástroj se nazývá nástroj pro vyčištění knihovny obsahu.
+Počínaje verzí Technical Preview 1612 můžete pomocí nového nástroje příkazového řádku (**ContentLibraryCleanup.exe**) odebrat obsah, který už není přidružený k žádnému balíčku nebo aplikaci, z distribučního bodu (osamocený obsah). Tento nástroj se nazývá nástroj pro vyčištění knihovny obsahu.
 
 Tento nástroj ovlivňuje pouze obsah v distribučním bodu, který zadáte při spuštění nástroje, a nemůže odebrat obsah z knihovny obsahu na serveru lokality.
 
-Po instalaci Technical Preview 1612 můžete najít **ContentLibraryCleanup. exe** ve složce *% CM_Installation_Path% \ CD. latest\SMSSETUP\TOOLS\ContentLibraryCleanup\* na serveru lokality Technical Preview.
+Po instalaci Technical Preview 1612 můžete najít **ContentLibraryCleanup.exe** ve složce *% CM_Installation_Path% \ CD. latest\SMSSETUP\TOOLS\ContentLibraryCleanup \* na serveru lokality Technical Preview.
 
 Nástroj vydaný v této verzi Technical Preview má nahradit starší verze podobných nástrojů vydaných pro dřívější Configuration Manager produkty. I když tato verze nástroje přestane fungovat po 1. březnu 2017, budou nové verze vydávány s budoucími technickými náhledy až do doby, kdy se tento nástroj uvolní jako součást Current Branch, nebo mimo provoz, který je připravený pro vzdálenou verzi.
 
@@ -181,11 +181,11 @@ Když nástroj pro vyčištění knihovny obsahu běží v obou režimech, autom
 
 ### <a name="run-the-tool"></a>Spusťte nástroj.
 Spuštění nástroje:
-1. Otevřete příkazový řádek pro správu do složky, která obsahuje **ContentLibraryCleanup. exe**.  
+1. Otevřete příkazový řádek pro správu do složky, která obsahuje **ContentLibraryCleanup.exe**.  
 2. Dále zadejte příkazový řádek, který obsahuje požadované přepínače příkazového řádku a volitelné přepínače, které chcete použít.
 
 **Známý problém** Při spuštění nástroje může dojít k chybě, která by mohla být vrácena, když dojde k selhání balíčku nebo nasazení, nebo když probíhá:
--  *System. InvalidOperationException: tuto knihovnu obsahu nejde vyčistit hned teď, protože balíček \<PackageID> není úplně nainstalovaný.*
+-  *System. InvalidOperationException: tuto knihovnu obsahu nejde vyčistit hned teď, protože balíček \<packageID> není úplně nainstalovaný.*
 
 **Alternativní řešení:** Žádné. Nástroj nemůže spolehlivě identifikovat osamocené soubory, když probíhá zpracování obsahu nebo se nepovedlo ho nasadit. Nástroj proto nebude umožňovat vyčištění obsahu, dokud tento problém nebude vyřešen.
 
@@ -196,12 +196,12 @@ Následující přepínače příkazového řádku je možné použít v libovol
 
 |Přepínač|Podrobnosti|
 |---------|-------|
-|**/Delete**  |**Nepovinné** </br> Tento přepínač použijte, pokud chcete odstranit obsah z distribučního bodu. Zobrazí se výzva před odstraněním obsahu. </br></br> Pokud tento přepínač nepoužijete, nástroj protokoluje výsledky o tom, jaký obsah by se odstranil, ale neodstraní žádný obsah z distribučního bodu. </br></br> Příklad: ***ContentLibraryCleanup. exe/dp Server1.contoso.com/Delete*** |
-| **parametr**       |**Nepovinné** </br> Spusťte nástroj v tichém režimu, který potlačí všechny výzvy (například výzvy při odstraňování obsahu), a neotevře soubor protokolu automaticky. </br></br> Příklad: ***ContentLibraryCleanup. exe/q/dp Server1.contoso.com*** |
-| **název &lt;plně kvalifikovaného názvu domény distribučního bodu/DP>**  | **Požadováno** </br> Zadejte plně kvalifikovaný název domény (FQDN) distribučního bodu, který chcete vyčistit. </br></br> Příklad: ***ContentLibraryCleanup. exe/dp Server1.contoso.com***|
-| **>&lt;plně kvalifikovaný název domény primární lokality/PS**       | **Volitelné** při čištění obsahu z distribučního bodu v primární lokalitě.</br>**Požadováno** při čištění obsahu z distribučního bodu v sekundární lokalitě. </br></br> Zadejte plně kvalifikovaný název domény primární lokality, do které distribuční bod patří, nebo nadřazeného primárního nadřazeného objektu, pokud je distribuční bod v sekundární lokalitě. </br></br> Příklad: ***ContentLibraryCleanup. exe/dp Server1.contoso.com/ps siteserver1.contoso.com*** |
-| **>&lt;kódu pro/SC primární lokalitu**  | **Volitelné** při čištění obsahu z distribučního bodu v primární lokalitě.</br>**Požadováno** při čištění obsahu z distribučního bodu v sekundární lokalitě. </br></br> Zadejte kód lokality primární lokality, ke které distribuční bod patří, nebo nadřazenou primární lokalitu, pokud je distribuční bod v sekundární lokalitě.</br></br> Příklad: ***ContentLibraryCleanup. exe/dp Server1.contoso.com/SC ABC*** |
-| **/log \<>adresář souboru protokolu**       |**Nepovinné** </br> Zadejte adresář, do kterého se mají umístit soubory protokolu. Může to být místní disk nebo sdílená síťová složka.</br></br> Pokud tento přepínač nepoužijete, soubory protokolu se automaticky umístí do dočasné složky Uživatelé.</br></br> Příklad místní jednotky: ***ContentLibraryCleanup. exe/dp Server1.contoso.com/log C:\Users\Administrator\Desktop*** </br></br>Příklad sdílené síťové složky: ***ContentLibraryCleanup. exe/DP Server1.contoso.com/log \\ &lt;Share>\&lt; složka>***|
+|**/Delete**  |**Volitelné** </br> Tento přepínač použijte, pokud chcete odstranit obsah z distribučního bodu. Zobrazí se výzva před odstraněním obsahu. </br></br> Pokud tento přepínač nepoužijete, nástroj protokoluje výsledky o tom, jaký obsah by se odstranil, ale neodstraní žádný obsah z distribučního bodu. </br></br> Příklad: ***ContentLibraryCleanup.exe/dp Server1.contoso.com/Delete*** |
+| **parametr**       |**Volitelné** </br> Spusťte nástroj v tichém režimu, který potlačí všechny výzvy (například výzvy při odstraňování obsahu), a neotevře soubor protokolu automaticky. </br></br> Příklad: ***ContentLibraryCleanup.exe/q/dp Server1.contoso.com*** |
+| **&lt;název plně kvalifikovaného názvu domény distribučního bodu/dp>**  | **Požadováno** </br> Zadejte plně kvalifikovaný název domény (FQDN) distribučního bodu, který chcete vyčistit. </br></br> Příklad:  ***ContentLibraryCleanup.exe/dp Server1.contoso.com***|
+| **&lt;>plně kvalifikovaný název domény primární lokality/PS**       | **Volitelné** při čištění obsahu z distribučního bodu v primární lokalitě.</br>**Požadováno** při čištění obsahu z distribučního bodu v sekundární lokalitě. </br></br> Zadejte plně kvalifikovaný název domény primární lokality, do které distribuční bod patří, nebo nadřazeného primárního nadřazeného objektu, pokud je distribuční bod v sekundární lokalitě. </br></br> Příklad: ***ContentLibraryCleanup.exe/dp Server1.contoso.com/ps siteserver1.contoso.com*** |
+| **&lt;>kódu pro/SC primární lokalitu**  | **Volitelné** při čištění obsahu z distribučního bodu v primární lokalitě.</br>**Požadováno** při čištění obsahu z distribučního bodu v sekundární lokalitě. </br></br> Zadejte kód lokality primární lokality, ke které distribuční bod patří, nebo nadřazenou primární lokalitu, pokud je distribuční bod v sekundární lokalitě.</br></br> Příklad: ***ContentLibraryCleanup.exe/dp Server1.contoso.com/SC ABC*** |
+| **/log \<log file directory>**       |**Volitelné** </br> Zadejte adresář, do kterého se mají umístit soubory protokolu. Může to být místní disk nebo sdílená síťová složka.</br></br> Pokud tento přepínač nepoužijete, soubory protokolu se automaticky umístí do dočasné složky Uživatelé.</br></br> Příklad místní jednotky: ***ContentLibraryCleanup.exe/dp Server1.contoso.com/log C:\Users\Administrator\Desktop*** </br></br>Příklad sdílené síťové složky: ***ContentLibraryCleanup.exe/dp Server1.contoso.com/log \\ &lt; share>\& lt; složka>***|
 
 
 ## <a name="improvements-for-in-console-search"></a>Vylepšení vyhledávání v konzole
@@ -218,10 +218,10 @@ Na základě názorů na hlas uživatele jsme do prohledávání v konzole přid
 ## <a name="prevent-installation-of-an-application-if-a-specified-program-is-running"></a>Zabrání instalaci aplikace, pokud je spuštěný určitý program.
 Nyní můžete nakonfigurovat seznam spustitelných souborů (s příponou. exe) ve vlastnostech typu nasazení, které při spuštění zablokují instalaci aplikace. Po pokusu o instalaci se uživatelům zobrazí dialogové okno s výzvou, aby zavřeli procesy blokující instalaci.
 
-### <a name="try-it-out"></a>Vyzkoušejte si to.
+### <a name="try-it-out"></a>Vyzkoušet
 Konfigurace seznamu spustitelných souborů
 1. Na stránce vlastnosti libovolného typu nasazení vyberte kartu **zpracování instalačního programu** .
-2. Kliknutím na **Přidat**přidejte do seznamu jeden z dalších spustitelných souborů (například **Edge. exe**).
+2. Kliknutím na **Přidat**přidejte do seznamu jeden z dalších spustitelných souborů (například **Edge.exe**).
 3. Kliknutím na tlačítko **OK** zavřete dialogové okno Vlastnosti typu nasazení.
 
 Když teď nasadíte tuto aplikaci na uživatele nebo zařízení a spustí se jedna z vámi přidaných spustitelných souborů, zobrazí se mu dialogové okno Centrum softwaru, které jim oznámí, že se instalace nezdařila, protože aplikace je spuštěná.
@@ -252,14 +252,14 @@ Přidali jsme podporu souborů Expresní instalace v Configuration Manager pro a
 
 ### <a name="to-enable-the-download-of-express-installation-files-for-windows-10-updates-on-the-server"></a>Povolení stažení souborů Expresní instalace pro aktualizace Windows 10 na serveru
 Chcete-li zahájit synchronizaci metadat pro instalační soubory systému Windows 10 Express, je nutné ji povolit ve vlastnostech bodu aktualizace softwaru.
-1. V konzole Configuration Manager přejděte na **Správa** > **Konfigurace** > lokality**lokality**.
+1. V konzole Configuration Manager přejděte na **Správa**  >  **Konfigurace lokality**  >  **lokality**.
 2. Vyberte lokalitu centrální správy nebo samostatnou primární lokalitu.
 3. Na kartě **Domů** v části **Nastavení** klikněte na **Konfigurovat součásti pracoviště**a potom na možnost **Bod aktualizace softwaru**. Na kartě **soubory aktualizace** vyberte **Stáhnout úplné soubory pro všechny schválené aktualizace a soubory Expresní instalace pro Windows 10**.
 
 ### <a name="to-enable-support-for-clients-to-download-and-install-express-installation-files"></a>Povolení podpory pro klienty ke stažení a instalaci souborů Expresní instalace
 Pokud chcete povolit podporu souborů Expresní instalace na klientech, musíte povolit soubory Expresní instalace na klientských počítačích v části aktualizace softwaru v nastavení klienta. Tím se vytvoří nový naslouchací proces HTTP, který naslouchá požadavkům na stažení souborů Expresní instalace na portu, který zadáte. Když nasadíte nastavení klienta, abyste tuto funkci mohli na klientovi povolit, zkusíme stáhnout rozdíl mezi kumulativní aktualizací Windows 10 v aktuálním měsíci a aktualizací z předchozího měsíce (na klientech musí běžet verze Windows 10, která podporuje soubory Expresní instalace).
 1. Povolte podporu souborů Expresní instalace ve vlastnostech komponenty bodu aktualizace softwaru (předchozí postup).
-2. V konzole Configuration Manager přejděte na **Správa** > **nastavení klienta**.
+2. V konzole Configuration Manager přejděte na **Správa**  >  **nastavení klienta**.
 3. Vyberte odpovídající nastavení klienta a pak na kartě **Domů** klikněte na **vlastnosti**.
 4. Vyberte stránku **aktualizace softwaru** , nakonfigurujte **Ano** pro nastavení **Povolit instalaci expresních aktualizací na** klientech a NAKONFIGURUJTE port používaný naslouchacím programem http na klientovi pro port, který se **používá ke stahování obsahu pro nastavení expresní aktualizace** .
 
@@ -270,11 +270,11 @@ Pokud chcete povolit podporu souborů Expresní instalace na klientech, musíte 
 
 Data, která jsou aktuálně k dispozici v [zprostředkovateli rozhraní WMI Configuration Manager](../../develop/reference/configuration-manager-reference.md) , jsou teď přístupná i k novému koncovému bodu OData RESTful. Sady entit vystavené koncovým bodem OData umožňují vytvořit výčet pro stejná data, která můžete dotazovat pomocí zprostředkovatele rozhraní WMI.
 
-### <a name="try-it-out"></a>Vyzkoušejte si to.
+### <a name="try-it-out"></a>Vyzkoušet
 
 Než budete moct použít koncový bod OData, musíte ho pro lokalitu povolit.
 
-1.  Přejít na **stránku Správa** > **Konfigurace** > lokality**lokality**.
+1.  Přejít na **Administration**  >  **stránku Správa konfigurace lokality**  >  **lokality**.
 2.  Vyberte primární lokalitu a klikněte na **vlastnosti**.
 3.  Na kartě Obecné v seznamu vlastností primárního webového serveru klikněte na **Povolit koncový bod REST pro všechny poskytovatele v této lokalitě**a pak klikněte na **OK**.
 
@@ -300,7 +300,7 @@ Tuto úlohu můžete provést u správce Azure, protože budete potřebovat při
 
 #### <a name="to-create-the-connection"></a>Vytvoření připojení:
 
-2. V pracovním prostoru **Správa** vyberte možnost **Cloud Services** > **Azure Active Directory** > **Přidat Azure Active Directory**.
+2. V pracovním prostoru **Správa** vyberte možnost **Cloud Services**  >  **Azure Active Directory**  >  **Přidat Azure Active Directory**.
 2. Vyberte **Přihlásit** se a vytvořte připojení ke službě Azure AD.
 
 #### <a name="configuration-manager-client-requirements"></a>Configuration Manager požadavky klienta
@@ -317,4 +317,4 @@ Po provedení těchto změn konfigurace můžete vytvořit zásadu uživatele a 
 
 ## <a name="change-to-configuring-multi-factor-authentication-for-device-enrollment"></a>Změna konfigurace služby Multi-Factor Authentication pro registraci zařízení
 
-Teď, když můžete nastavit vícefaktorové ověřování (MFA) pro registraci zařízení v Azure Portal, možnost MFA byla v konzole Configuration Manager odebrána. Další informace o nastavení vícefaktorového ověřování pro registraci najdete [v tomto tématu Microsoft Intune](/mem/intune/enrollment/multi-factor-authentication).
+Teď, když můžete nastavit vícefaktorové ověřování (MFA) pro registraci zařízení v Azure Portal, možnost MFA byla v konzole Configuration Manager odebrána. Další informace o nastavení vícefaktorového ověřování pro registraci najdete [v tomto tématu Microsoft Intune](../../../intune/enrollment/multi-factor-authentication.md).

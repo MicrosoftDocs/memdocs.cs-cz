@@ -10,23 +10,23 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 69f234a2-b04b-445a-b81f-6b4acfc00eaf
-ms.openlocfilehash: ce3947c8ca3c562869fdfed2ddba4d9b160902be
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: bae995b0704e2b2774d5f002cbf907777a3edcf0
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129361"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697037"
 ---
 # <a name="office-365-client-management-dashboard"></a>Řídicí panel pro správu klientů Office 365
 
 *Platí pro: Configuration Manager (Current Branch)*
 
 > [!Note]
-> Od 21. dubna 2020 se sada Office 365 ProPlus přejmenovává na **Microsoft 365 aplikace pro podniky**. Další informace najdete v tématu [Změna názvu pro Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change). V konzole Configuration Manager se pořád zobrazují odkazy na starý název a podpůrná dokumentace, zatímco se konzola aktualizuje.
+> Od 21. dubna 2020 se sada Office 365 ProPlus přejmenovává na **Microsoft 365 aplikace pro podniky**. Další informace najdete v tématu [Změna názvu pro Office 365 ProPlus](/deployoffice/name-change). V konzole Configuration Manager se pořád zobrazují odkazy na starý název a podpůrná dokumentace, zatímco se konzola aktualizuje.
 
 Od verze Configuration Manager 1802 můžete zkontrolovat informace o klientech Microsoft 365 Apps z řídicího panelu pro správu klientů Office 365. Řídicí panel pro správu klientů Office 365 zobrazuje seznam relevantních zařízení, když jsou vybrány oddíly grafu. <!--1357281 -->
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 ### <a name="enable-hardware-inventory"></a>Povolení inventáře hardwaru
 
@@ -57,9 +57,9 @@ Webový server nejvyšší úrovně potřebuje přístup k následujícímu konc
 
 *(Představené ve verzi 1910 jako předpoklad)*
 
-Počínaje verzí 1910 budete muset povolit shromažďování dat pro aplikace Microsoft 365, abyste mohli naplnit informace v **pilotním a řídicím panelu sady Office 365**. Data jsou uložená v databázi lokality Configuration Manager a neodesílají se do Microsoftu.
+Počínaje verzí 1910 budete muset povolit shromažďování dat pro aplikace Microsoft 365, abyste mohli naplnit informace v  **pilotním a řídicím panelu sady Office 365**. Data jsou uložená v databázi lokality Configuration Manager a neodesílají se do Microsoftu.
 
-Tato data se liší od diagnostických dat, která jsou popsána v tématu [diagnostická data odesílaná z aplikace Microsoft 365 do Microsoftu](https://docs.microsoft.com/deployoffice/privacy/overview-privacy-controls#diagnostic-data-sent-from-office-365-proplus-to-microsoft).
+Tato data se liší od diagnostických dat, která jsou popsána v tématu [diagnostická data odesílaná z aplikace Microsoft 365 do Microsoftu](/deployoffice/privacy/overview-privacy-controls#diagnostic-data-sent-from-office-365-proplus-to-microsoft).
 
 Shromažďování dat můžete povolit buď pomocí Zásady skupiny, nebo úpravou registru.
 
@@ -67,7 +67,7 @@ Shromažďování dat můžete povolit buď pomocí Zásady skupiny, nebo úprav
 
 1. Stáhněte si nejnovější [soubory šablon pro správu z webu Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=49030).
 2. V části povolte nastavení zásady pro **Zapnutí shromažďování dat telemetrie** `User Configuration\Policies\Administrative Templates\Microsoft Office 2016\Telemetry Dashboard` .
-    - Případně použijte nastavení zásad ve [službě Office Cloud Policy](https://docs.microsoft.com/DeployOffice/overview-office-cloud-policy-service).
+    - Případně použijte nastavení zásad ve [službě Office Cloud Policy](/DeployOffice/overview-office-cloud-policy-service).
     - Nastavení této zásady se používá i na řídicím panelu telemetrie Office, který nemusíte pro tuto kolekci dat nasazovat.
 
 #### <a name="enable-data-collection-from-the-registry"></a>Povolit shromažďování dat z registru
@@ -90,7 +90,7 @@ Pokud chcete zobrazit řídicí panel pro správu klientů Office 365 v konzole 
 - Klientské kanály pro Microsoft 365 Apps Další informace najdete v tématu [Přehled kanálů aktualizací pro aplikace Microsoft 365](/DeployOffice/overview-of-update-channels-for-office-365-proplus).
 
 
-## <a name="integration-for-microsoft-365-apps-readiness"></a><a name="bkmk_o365_readiness"></a>Integrace pro připravenost pro aplikace Microsoft 365
+## <a name="integration-for-microsoft-365-apps-readiness"></a><a name="bkmk_o365_readiness"></a> Integrace pro připravenost pro aplikace Microsoft 365
 <!--3735402-->
 Configuration Manager počínaje verzí 1902 můžete řídicí panel použít k identifikaci zařízení s vysokou jistotou, která je připravená k upgradu na Microsoft 365 aplikace. Tato integrace poskytuje přehled o potenciálních problémech s kompatibilitou s doplňky a makry ve vašem prostředí. Pak pomocí Configuration Manager nasaďte Microsoft 365 aplikace do připravených zařízení.
 
@@ -105,12 +105,12 @@ Vyberte stav pro přechod k seznamu zařízení. Tato sestava připravenosti zob
 
 - Povolit inventář hardwaru v nastavení klienta. Další informace najdete v části [požadavky](#prerequisites) .  
 
-- Aby bylo možné stáhnout soubor připravenosti doplňku, musí se zařízení připojit k síti pro doručování obsahu (CDN) pro Office. Další informace najdete v tématu [Content Delivery Networks](https://docs.microsoft.com/office365/enterprise/content-delivery-networks). Pokud zařízení nemůže tento soubor stáhnout, je *nutné zkontrolovat*stav doplňky.  
+- Aby bylo možné stáhnout soubor připravenosti doplňku, musí se zařízení připojit k síti pro doručování obsahu (CDN) pro Office. Další informace najdete v tématu [Content Delivery Networks](/office365/enterprise/content-delivery-networks). Pokud zařízení nemůže tento soubor stáhnout, je *nutné zkontrolovat*stav doplňky.  
 
     > [!Note]  
     > Pro tuto funkci se Microsoftu neodesílají žádná data.  
 
-### <a name="detailed-macro-readiness"></a><a name="bkmk_ort"></a>Podrobná připravenost na makro
+### <a name="detailed-macro-readiness"></a><a name="bkmk_ort"></a> Podrobná připravenost na makro
 
 Ve výchozím nastavení vyhledává agent vyhledávání v jednotlivých zařízeních seznam naposledy použitých souborů (MRU). Počítá soubory v tomto seznamu, které podporují makra. Mezi tyto soubory patří následující typy:
 - Formáty souborů sady Office s povolenými makry (. xlsm) nebo dokument s povolenými makry (. docm) aplikace Excel.  
@@ -126,7 +126,7 @@ ReadinessReportCreator.exe -mru -output c:\temp -silent
 
 Další informace najdete v tématu [získání informací o připravenosti pro více uživatelů v podniku](/deployoffice/use-the-readiness-toolkit-to-assess-application-compatibility-for-office-365-pro#getting-readiness-information-for-multiple-users-in-an-enterprise).
 
-## <a name="microsoft-365-apps-readiness-dashboard"></a><a name="bkmk_readiness-dash"></a>Řídicí panel připravenosti pro Microsoft 365 aplikace
+## <a name="microsoft-365-apps-readiness-dashboard"></a><a name="bkmk_readiness-dash"></a> Řídicí panel připravenosti pro Microsoft 365 aplikace
 
 *(Představené ve verzi 1906)*
 
@@ -185,7 +185,7 @@ Tato sestava slouží k identifikaci zařízení, která nedávno používala so
 
 Další informace o tom, jak provést kontrolu, najdete v tématu [Podrobná připravenost k makrům](#bkmk_ort).
 
-## <a name="office-365-proplus-pilot-and-health-dashboard"></a><a name="bkmk_pilot"></a>Pilotní a řídicí panel pro Office 365-plus
+## <a name="office-365-proplus-pilot-and-health-dashboard"></a><a name="bkmk_pilot"></a> Pilotní a řídicí panel pro Office 365-plus
 <!--4488272, 4488301-->
 *(Představené ve verzi 1910)*
 
@@ -248,7 +248,7 @@ Tato dlaždice shrnuje zařízení, která mají problémy s doplňky, makry neb
 
 ### <a name="known-issues"></a>Známé problémy
 
-Došlo k známému problému s dlaždicí **nasazení pilotního nasazení** . V tuto chvíli se nedá použít k nasazení do pilotního projektu. Alternativním řešením je stávající pracovní postup nasazení aplikace pomocí Průvodce dvoufázové nasazení. <!--5525871-->
+Došlo k známému problému s dlaždicí **nasazení pilotního nasazení**  . V tuto chvíli se nedá použít k nasazení do pilotního projektu. Alternativním řešením je stávající pracovní postup nasazení aplikace pomocí Průvodce dvoufázové nasazení. <!--5525871-->
 
 ## <a name="next-steps"></a>Další kroky
 

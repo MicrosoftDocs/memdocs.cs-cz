@@ -2,7 +2,7 @@
 title: Plánování Centra softwaru
 titleSuffix: Configuration Manager
 description: Rozhodněte, jak chcete nakonfigurovat a označit Centrum softwaru, aby mohli uživatelé pracovat s Configuration Manager.
-ms.date: 08/11/2020
+ms.date: 08/20/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c6826794-aa19-469d-ae47-1a0db68a1ff1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5b32fc2de3c945ff2292f119a10d84d982d08677
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 802dbaa4188199e555a5cc0143ed599ad454e27e
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127354"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695167"
 ---
 # <a name="plan-for-software-center"></a>Plánování Centra softwaru
 
@@ -25,7 +25,7 @@ Uživatelé mění nastavení, vyhledávají aplikace a instalují aplikace z ce
 
 Další informace o dalších funkcích centra softwaru najdete v [uživatelské příručce centra softwaru](../../core/understand/software-center.md).  
 
-## <a name="configure-software-center"></a><a name="bkmk_userex"></a>Konfigurace centra softwaru  
+## <a name="configure-software-center"></a><a name="bkmk_userex"></a> Konfigurace centra softwaru  
 
 Pokud chcete využívat nejnovější funkce centra softwaru, aktualizujte své Configuration Manager weby a klienty na verzi 1906 nebo novější.
 
@@ -44,6 +44,8 @@ Pokud chcete využívat nejnovější funkce centra softwaru, aktualizujte své 
 
 - Uživatelé můžou nakonfigurovat spřažení zařízení a uživatele v centru softwaru. Další informace najdete v tématu [propojení uživatelů a zařízení pomocí spřažení uživatelských zařízení](../deploy-use/link-users-and-devices-with-user-device-affinity.md).
 
+- Počínaje verzí 2006 můžete nakonfigurovat spoluspravovaná zařízení tak, aby používala Portál společnosti pro aplikace Intune a Configuration Manager. Další informace najdete v tématu [použití portál společnosti aplikace na spoluspravovaných zařízeních](../../comanage/company-portal.md).<!--CMADO-3601237,INADO-4297660-->
+
 > [!IMPORTANT]
 > Pokud chcete využívat nové funkce Configuration Manager, nejdřív aktualizujte klienty na nejnovější verzi. I když se nové funkce zobrazí v konzole Configuration Manager, když aktualizujete lokalitu a konzolu, kompletní scénář nebude funkční, dokud nebude verze klienta zároveň nejnovější.
 
@@ -57,7 +59,7 @@ Pokud chcete využívat nejnovější funkce centra softwaru, aktualizujte své 
 
 - Dříve Centrum softwaru vybralo první bod správy ze seznamu dostupných serverů. Počínaje verzí 1906 používá stejný bod správy, který klient používá. Tato změna umožňuje centru softwaru použít stejný bod správy z přiřazené primární lokality jako klienta.
 
-## <a name="replace-toast-notifications-with-dialog-window"></a><a name="bkmk_impact"></a>Nahradit informační zprávy pomocí dialogového okna
+## <a name="replace-toast-notifications-with-dialog-window"></a><a name="bkmk_impact"></a> Nahradit informační zprávy pomocí dialogového okna
 
 <!--3555947-->
 Někdy se uživatelům nezobrazuje zpráva informující o systému Windows o restartování nebo požadovaném nasazení. Pak nevidí prostředí, které připomíná připomenutí k odložení. Toto chování může vést k nedostatečnému uživatelskému prostředí, když klient dosáhne konečného termínu.
@@ -138,7 +140,10 @@ Pokud používáte katalog aplikací, branding se řídí těmito prioritami:
 
 3. Nastavení klienta **názvu organizace** ve skupině **Počítačový agent** . Další informace najdete v tématu [informace o nastavení klienta](../../core/clients/deploy/about-client-settings.md#computer-agent).  
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Uživatelská příručka Centra softwaru](../../core/understand/software-center.md)
+
 - [Plánování a konfigurace správy aplikací](plan-for-and-configure-application-management.md)
+
+- [Použití Portál společnosti aplikace na spoluspravovaných zařízeních](../../comanage/company-portal.md)

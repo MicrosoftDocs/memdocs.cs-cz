@@ -10,16 +10,16 @@ ms.assetid: 561eb5b6-f90c-485a-91c2-e45bb0ce7877
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e11a6130fb9f7d86b7d3377cc4120d4e61c43d2d
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d41a0806a33ac627eceaafab54c73c31ea013365
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81711459"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694827"
 ---
 # <a name="upgrade-windows-10-for-co-management"></a>Upgrade Windows 10 pro spolusprávu
 
-Když pracujete na registraci vaší organizace pro spolusprávu, je získání aktuální důležitou prahovou hodnotu pro některé zákazníky. Spoluspráva vyžaduje [Windows 10 verze 1709](https://docs.microsoft.com/windows/whats-new/whats-new-windows-10-version-1709) nebo novější. Po aktualizaci Windows a konfiguraci automatického zápisu se klienti automaticky zaregistrují do spolusprávy.
+Když pracujete na registraci vaší organizace pro spolusprávu, je získání aktuální důležitou prahovou hodnotu pro některé zákazníky. Spoluspráva vyžaduje [Windows 10 verze 1709](/windows/whats-new/whats-new-windows-10-version-1709) nebo novější. Po aktualizaci Windows a konfiguraci automatického zápisu se klienti automaticky zaregistrují do spolusprávy.
 
 V následujícím videu, vedoucí program v programu Rob York a marketingový manažer pro produkty, Ainley diskutovat a ukázka upgradu na Windows 10 pro spolusprávu:
 
@@ -31,7 +31,7 @@ V následujícím videu, vedoucí program v programu Rob York a marketingový ma
 
 Kromě dalších možností využití platformy Windows 10 verze 1709 a novější podporuje automatickou registraci. Díky tomuto chování se zařízení automaticky zaregistruje do Intune, když se připojí Azure Active Directory (Azure AD). 
 
-Další informace najdete v tématu [Povolení automatické registrace Windows 10](https://docs.microsoft.com/intune/windows-enroll#enable-windows-10-automatic-enrollment).
+Další informace najdete v tématu [Povolení automatické registrace Windows 10](/intune/windows-enroll#enable-windows-10-automatic-enrollment).
 
 
 ## <a name="how-to-do-it"></a>Jak to provést
@@ -61,5 +61,4 @@ Velký evropský výrobce softwaru úspěšně používá skupinu prvotních sch
 
 Pokud potřebujete pomoc s upgradem Windows 10 kdykoli v průběhu procesu, přejděte na [Microsoft FastTrack](https://Microsoft.com/FastTrack/), přihlaste se a požádejte o pomoc. 
 
-Další informace najdete v tématu [získání Nápověda z FastTrack](quickstart-fasttrack.md). 
-
+Další informace najdete v tématu [získání Nápověda z FastTrack](quickstart-fasttrack.md).

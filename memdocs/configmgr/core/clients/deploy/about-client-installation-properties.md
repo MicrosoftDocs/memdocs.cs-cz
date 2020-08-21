@@ -10,12 +10,12 @@ ms.assetid: c890fd27-7a8c-4f51-bbe2-f9908af1f42b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2d26be4d3e3381a80fcbaa547cfcc7a3b8db42f5
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: efc2cc22dc4edeacc00e521233eda383314b0b92
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127014"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693433"
 ---
 # <a name="about-client-installation-parameters-and-properties-in-configuration-manager"></a>Informace o parametrech instalace a vlastnostech klienta v Configuration Manager
 
@@ -23,7 +23,7 @@ ms.locfileid: "88127014"
 
 Pomocí příkazu CCMSetup.exe nainstalujte klienta Configuration Manager. Pokud zadáte *parametry* instalace klienta na příkazovém řádku, upraví se chování při instalaci. Pokud do příkazového řádku zadáte *vlastnosti* instalace klienta, upraví počáteční konfiguraci nainstalovaného agenta klienta.
 
-## <a name="about-ccmsetupexe"></a><a name="aboutCCMSetup"></a>O CCMSetup.exe
+## <a name="about-ccmsetupexe"></a><a name="aboutCCMSetup"></a> O CCMSetup.exe
 
 Příkaz CCMSetup.exe stáhne potřebné soubory pro instalaci klienta z bodu správy nebo ze zdrojového umístění. Tyto soubory mohou zahrnovat:  
 
@@ -49,7 +49,7 @@ Příkaz CCMSetup.exe používá v příkazovém řádku tento formát:
 
 `CCMSetup.exe [<Ccmsetup parameters>] [<client.msi setup properties>]`  
 
-Například:  
+Příklad:  
 
 `CCMSetup.exe /mp:SMSMP01 /logon SMSSITECODE=S01 FSP=SMSFSP01`  
 
@@ -97,7 +97,7 @@ Podporované hodnoty:
 - `TRUE`: Klient nebude automaticky upgradován.
 - `FALSE`: Klient se automaticky upgraduje (výchozí).
 
-Například:  
+Příklad:  
 
 `CCMSetup.exe /AlwaysExcludeUpgrade:TRUE`
 
@@ -118,7 +118,7 @@ Když zařízení stáhne instalační soubory klienta přes připojení HTTP, p
 
 - `HIGH`
 
-- `NORMAL`výchozí
+- `NORMAL` výchozí
 
 - `LOW`
 
@@ -136,7 +136,7 @@ Příklad: `CCMSetup.exe /config:"configuration file name.txt"`
 
 Chcete-li zadat správný formát souboru, použijte soubor **mobileclienttemplate. TCF** ve `\bin\<platform>` složce v instalačním adresáři Configuration Manager na serveru lokality. Tento soubor obsahuje komentáře k oddílům a jejich použití. Vlastnosti instalace klienta zadejte v `[Client Install]` části za následujícím textem: `Install=INSTALL=ALL` .
 
-Příklad `[Client Install]` položky oddílu:`Install=INSTALL=ALL SMSSITECODE=ABC SMSCACHESIZE=100`  
+Příklad `[Client Install]` položky oddílu: `Install=INSTALL=ALL SMSSITECODE=ABC SMSCACHESIZE=100`  
 
 ### <a name="downloadtimeout"></a>/downloadtimeout
 
@@ -153,7 +153,7 @@ Tento parametr určuje, že CCMSetup.exe nenainstaluje zadanou funkci.
 Příklad: `CCMSetup.exe /ExcludeFeatures:ClientUI` nenainstaluje na klienta Centrum softwaru.  
 
 > [!NOTE]  
-> `ClientUI`je jediná hodnota, kterou podporuje parametr **/ExcludeFeatures** .
+> `ClientUI` je jediná hodnota, kterou podporuje parametr **/ExcludeFeatures** .
 
 ### <a name="forceinstall"></a>/forceinstall
 
@@ -186,9 +186,9 @@ K určení více než jednoho bodu správy můžete použít parametr příkazov
 
 Pokud se klient připojuje k bodu správy pomocí protokolu HTTPS, zadejte plně kvalifikovaný název domény (FQDN) název počítače. Hodnota se musí shodovat s názvem **předmětu** nebo **alternativního názvu subjektu**certifikátu PKI bodu správy. I když Configuration Manager podporuje použití názvu počítače v certifikátu pro připojení na intranetu, doporučuje se použít plně kvalifikovaný název domény.
 
-Příklad s názvem počítače:`ccmsetup.exe /mp:SMSMP01`  
+Příklad s názvem počítače: `ccmsetup.exe /mp:SMSMP01`  
 
-Příklad s plně kvalifikovaným názvem domény:`ccmsetup.exe /mp:smsmp01.contoso.com`  
+Příklad s plně kvalifikovaným názvem domény: `ccmsetup.exe /mp:smsmp01.contoso.com`  
 
 Tento parametr také umožňuje zadat adresu URL brány pro správu cloudu (CMG). Pomocí této adresy URL můžete nainstalovat klienta nástroje na internetové zařízení. Chcete-li získat hodnotu pro tento parametr, použijte následující postup:
 
@@ -202,7 +202,7 @@ Tento parametr také umožňuje zadat adresu URL brány pro správu cloudu (CMG)
 
 - Připojí `https://` předponu, která se použije s parametrem **/MP** .
 
-Příklad, kdy použijete adresu URL brány pro správu cloudu:`ccmsetup.exe /mp:https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72057598037248100`
+Příklad, kdy použijete adresu URL brány pro správu cloudu: `ccmsetup.exe /mp:https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72057598037248100`
 
 > [!Important]
 > Při zadání adresy URL brány pro správu cloudu pro parametr **/MP** musí začínat na `https://` .
@@ -265,7 +265,7 @@ Další informace o požadavcích klienta najdete v tématu [požadavky klienta 
 
 ### <a name="source"></a>/Source
 
-Určuje umístění souboru ke stažení. Použijte místní cestu nebo cestu UNC. Zařízení stahuje soubory pomocí protokolu SMB (Server Message Block). Aby bylo možné používat **/source**, uživatelský účet systému Windows pro instalaci klienta potřebuje oprávnění **ke čtení** pro dané umístění.
+Určuje umístění souboru ke stažení. Použijte místní cestu nebo cestu UNC. Zařízení stahuje soubory pomocí protokolu SMB (Server Message Block). Aby bylo možné používat  **/source**, uživatelský účet systému Windows pro instalaci klienta potřebuje oprávnění **ke čtení** pro dané umístění.
 
 Další informace o tom, jak služba CCMSetup stahuje obsah, najdete v tématu [skupiny hranic – instalace klienta](../../servers/deploy/configure/boundary-groups.md#bkmk_ccmsetup). Tento článek obsahuje také podrobnosti o chování programu CCMSetup, pokud použijete parametry **/MP** a **/source** .
 
@@ -291,7 +291,7 @@ Příklad: `CCMSetup.exe /UsePKICert`
 >
 > Tento parametr zadejte také při instalaci klienta pro internetovou komunikaci. Použijte vlastnost **CCMALWAYSINF = 1** spolu s vlastnostmi pro internetový bod správy (**CCMHOSTNAME**) a kód lokality (**SMSSITECODE**). Další informace o internetové správě klientů najdete v tématu [požadavky na komunikaci klienta z Internetu nebo nedůvěryhodné doménové struktury](../../plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan).  
 
-## <a name="ccmsetupexe-return-codes"></a><a name="ccmsetupReturnCodes"></a>Návratové kódy CCMSetup.exe
+## <a name="ccmsetupexe-return-codes"></a><a name="ccmsetupReturnCodes"></a> Návratové kódy CCMSetup.exe
 
 Příkaz CCMSetup.exe poskytuje následující návratové kódy. Chcete-li vyřešit potíže, přečtěte si `%WinDir%\ccmsetup\ccmsetup.log` v klientovi kontext a další podrobnosti o návratových kódech.
 
@@ -304,7 +304,7 @@ Příkaz CCMSetup.exe poskytuje následující návratové kódy. Chcete-li vyř
 |9|Selhání vyhodnocení požadavků|  
 |10|Selhání ověření hodnoty hash manifestu instalačního programu|  
 
-## <a name="ccmsetupmsi-properties"></a><a name="ccmsetupMsiProps"></a>Vlastnosti Ccmsetup.msi
+## <a name="ccmsetupmsi-properties"></a><a name="ccmsetupMsiProps"></a> Vlastnosti Ccmsetup.msi
 
 Následující vlastnosti mohou změnit chování při instalaci ccmsetup.msi.
 
@@ -317,13 +317,13 @@ Příklad: `ccmsetup.msi CCMSETUPCMD="/mp:https://mp.contoso.com CCMHOSTNAME=mp.
 > [!Tip]
 > Microsoft Intune omezuje příkazový řádek na 1024 znaků.
 
-## <a name="clientmsi-properties"></a><a name="clientMsiProps"></a>Vlastnosti Client.msi
+## <a name="clientmsi-properties"></a><a name="clientMsiProps"></a> Vlastnosti Client.msi
 
 Následující vlastnosti mohou změnit chování při instalaci client.msi, které ccmsetup.exe nainstalovat. Pokud používáte [metodu nabízené instalace klienta](plan/client-installation-methods.md#client-push-installation), určete tyto vlastnosti na kartě **klient** **vlastností klientské nabízené instalace** v konzole Configuration Manager.
 
 ### <a name="aadclientappid"></a>AADCLIENTAPPID
 
-Určuje identifikátor aplikace klienta Azure Active Directory (Azure AD). Klientskou aplikaci můžete vytvořit nebo importovat při [konfiguraci služeb Azure](../../servers/deploy/configure/azure-services-wizard.md) pro správu cloudu. Správce Azure může získat hodnotu této vlastnosti z Azure Portal. Další informace najdete v tématu [získání ID aplikace](https://docs.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in). Pro vlastnost **AADCLIENTAPPID** je toto ID aplikace pro typ **nativní** aplikace.
+Určuje identifikátor aplikace klienta Azure Active Directory (Azure AD). Klientskou aplikaci můžete vytvořit nebo importovat při [konfiguraci služeb Azure](../../servers/deploy/configure/azure-services-wizard.md) pro správu cloudu. Správce Azure může získat hodnotu této vlastnosti z Azure Portal. Další informace najdete v tématu [získání ID aplikace](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in). Pro vlastnost **AADCLIENTAPPID** je toto ID aplikace pro typ **nativní** aplikace.
 
 Příklad: `ccmsetup.exe AADCLIENTAPPID=aa28e7f1-b88a-43cd-a2e3-f88b257c863b`
 
@@ -340,11 +340,11 @@ Příklad: `ccmsetup.exe AADRESOURCEURI=https://contososerver`
 Určuje identifikátor tenanta Azure AD. Při [konfiguraci služeb Azure](../../servers/deploy/configure/azure-services-wizard.md) pro správu cloudu Configuration Manager odkazy na tohoto tenanta. Pro získání hodnoty pro tuto vlastnost použijte následující postup:
 
 - Na zařízení s Windows 10, které je připojené ke stejnému tenantovi služby Azure AD, otevřete příkazový řádek.
-- Spusťte následující příkaz:`dsregcmd.exe /status`
+- Spusťte následující příkaz: `dsregcmd.exe /status`
 - V části stav zařízení vyhledejte hodnotu **TenantId** . Například `TenantId : 607b7853-6f6f-4d5d-b3d4-811c33fdd49a`.
 
   > [!Note]
-  > Správce Azure může tuto hodnotu také získat v Azure Portal. Další informace najdete v tématu [získání ID tenanta](https://docs.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in).
+  > Správce Azure může tuto hodnotu také získat v Azure Portal. Další informace najdete v tématu [získání ID tenanta](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in).
 
 Příklad: `ccmsetup.exe AADTENANTID=607b7853-6f6f-4d5d-b3d4-811c33fdd49a`
 
@@ -654,7 +654,7 @@ Určuje umístění složky mezipaměti klienta v klientském počítači. Ve v�
 
 Příklad: `CCMSetup.exe SMSCACHEDIR="C:\Temp"`  
 
-Tuto vlastnost s vlastností [**SMSCACHEFLAGS**](#smscacheflags) použijte k řízení umístění složky mezipaměti klienta. Například pro instalaci složky mezipaměti klienta na největší dostupnou diskovou jednotku klienta:`CCMSetup.exe SMSCACHEDIR=Cache SMSCACHEFLAGS=MAXDRIVE`
+Tuto vlastnost s vlastností [**SMSCACHEFLAGS**](#smscacheflags) použijte k řízení umístění složky mezipaměti klienta. Například pro instalaci složky mezipaměti klienta na největší dostupnou diskovou jednotku klienta: `CCMSetup.exe SMSCACHEDIR=Cache SMSCACHEFLAGS=MAXDRIVE`
 
 ### <a name="smscacheflags"></a>SMSCACHEFLAGS
 
@@ -773,7 +773,7 @@ Tato vlastnost určuje lokalitu Configuration Manager, ke které přiřadíte kl
 
 Příklad: `CCMSetup.exe SMSSITECODE=XZY`
 
-## <a name="attribute-values-for-certificate-selection-criteria"></a><a name="BKMK_attributevalues"></a>Hodnoty atributů pro kritéria výběru certifikátu
+## <a name="attribute-values-for-certificate-selection-criteria"></a><a name="BKMK_attributevalues"></a> Hodnoty atributů pro kritéria výběru certifikátu
 
 Configuration Manager podporuje následující hodnoty atributu pro kritéria výběru certifikátu PKI:
 
@@ -793,4 +793,4 @@ Configuration Manager podporuje následující hodnoty atributu pro kritéria v�
 |2.5.4.12|T nebo Title|Nadpis|  
 |2.5.4.42|G nebo GN nebo GivenName|Křestní jméno|  
 |2.5.4.43|I nebo Initials|Iniciály|  
-|2.5.29.17|(žádná hodnota)|Alternativní název subjektu|  
+|2.5.29.17|(žádná hodnota)|Alternativní název subjektu|

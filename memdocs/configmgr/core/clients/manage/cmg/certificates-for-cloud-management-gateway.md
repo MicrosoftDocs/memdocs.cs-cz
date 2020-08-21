@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 71eaa409-b955-45d6-8309-26bf3b3b0911
-ms.openlocfilehash: b5a9a4a7f23942ac06dc16a0b54b657c7fd617a9
-ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
+ms.openlocfilehash: a2e032e2aecfd53dc3a92cfb9c40798b4dcd1db9
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84715607"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692770"
 ---
 # <a name="certificates-for-the-cloud-management-gateway"></a>Certifikáty pro bránu pro správu cloudu
 
@@ -51,7 +51,7 @@ Certifikáty pro bránu pro správu cloudu podporují následující konfigurace
 
 - **TLS 1,2**. Další informace najdete v tématu [Jak povolit TLS 1,2](../../../plan-design/security/enable-tls-1-2.md).  
 
-## <a name="cmg-server-authentication-certificate"></a><a name="bkmk_serverauth"></a>Ověřovací certifikát serveru CMG
+## <a name="cmg-server-authentication-certificate"></a><a name="bkmk_serverauth"></a> Ověřovací certifikát serveru CMG
 
 *Tento certifikát je vyžadován ve všech scénářích.*
 
@@ -66,7 +66,7 @@ CMG vytvoří službu HTTPS, ke které se připojují internetoví klienti. Serv
 
 Tento certifikát vyžaduje globálně jedinečný název, který identifikuje službu v Azure. Než si vyžádáte certifikát, potvrďte, že název domény Azure, který chcete, je jedinečný. Například *GraniteFalls.CloudApp.NET*.
 
-1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
+1. Přihlaste se na web [Azure Portal](https://portal.azure.com).
 1. Vyberte **všechny prostředky**a pak vyberte **Přidat**.
 1. Vyhledejte **cloudovou službu**. Vyberte **Vytvořit**.
 1. Do pole **název DNS** zadejte požadovanou předponu, například *GraniteFalls*. Rozhraní odráží, zda je název domény k dispozici nebo již používá jiná služba.
@@ -81,7 +81,7 @@ Pokud povolíte také CMG pro obsah, zkontrolujte, že název služby CMG je tak
 
 Předpona názvu DNS, například *GraniteFalls*, by měla být 3 až 24 znaků dlouhá a používejte jenom alfanumerické znaky. Nepoužívejte speciální znaky, například pomlčku ( `-` ).<!-- SCCMDocs#1080 -->
 
-### <a name="cmg-trusted-root-certificate-to-clients"></a><a name="bkmk_cmgroot"></a>CMG důvěryhodný kořenový certifikát pro klienty
+### <a name="cmg-trusted-root-certificate-to-clients"></a><a name="bkmk_cmgroot"></a> CMG důvěryhodný kořenový certifikát pro klienty
 
 Klienti musí důvěřovat ověřovacímu certifikátu serveru CMG. Existují dvě metody, jak tento vztah důvěryhodnosti provést:
 
@@ -93,7 +93,7 @@ Klienti musí důvěřovat ověřovacímu certifikátu serveru CMG. Existují dv
 
   - Pokud plánujete [instalaci klienta Configuration Manager z Intune](../../../../comanage/how-to-prepare-Win10.md#install-the-configuration-manager-client), můžete k zřizování certifikátů na klientech použít taky profily certifikátů Intune. Další informace najdete v tématu [Konfigurace profilu certifikátu](../../../../../intune/protect/certificates-configure.md).
 
-### <a name="server-authentication-certificate-issued-by-public-provider"></a><a name="bkmk_serverauthpublic"></a>Certifikát ověřování serveru vydaný veřejným poskytovatelem
+### <a name="server-authentication-certificate-issued-by-public-provider"></a><a name="bkmk_serverauthpublic"></a> Certifikát ověřování serveru vydaný veřejným poskytovatelem
 
 Poskytovatel certifikátů třetích stran nemůže vytvořit certifikát pro CloudApp.net, protože tuto doménu vlastní Microsoft. Můžete získat pouze certifikát vydaný pro doménu, kterou vlastníte. Hlavním důvodem pro získání certifikátu od poskytovatele třetí strany je to, že vaši klienti již důvěřují kořenovému certifikátu tohoto poskytovatele.
 
@@ -116,7 +116,7 @@ Například contoso používá **GraniteFalls.contoso.com** pro CN certifikátu.
 
 Při vytváření instance CMG v Configuration Manager, zatímco certifikát má GraniteFalls.Contoso.com, Configuration Manager extrahuje pouze název hostitele, například: GraniteFalls. Připojí tento název hostitele k CloudApp.net, které Azure vyžaduje při vytváření cloudové služby. Alias CNAME v oboru názvů DNS pro vaši doménu (Contoso.com) mapuje tyto dva plně kvalifikované názvy domény společně. Configuration Manager poskytuje klientům zásadu pro přístup k tomuto CMG, mapování DNS se tak spojí, aby mohl bezpečně přistupovat ke službě v Azure.<!--SCCMDocs issue #565-->  
 
-### <a name="server-authentication-certificate-issued-from-enterprise-pki"></a><a name="bkmk_serverauthpki"></a>Certifikát ověřování serveru vydaný z podnikové infrastruktury veřejných klíčů
+### <a name="server-authentication-certificate-issued-from-enterprise-pki"></a><a name="bkmk_serverauthpki"></a> Certifikát ověřování serveru vydaný z podnikové infrastruktury veřejných klíčů
 
 Vytvořte si vlastní certifikát SSL pro CMG stejně jako u cloudového distribučního bodu. Postupujte podle pokynů pro [Nasazení certifikátu služby pro cloudové distribuční body](../../../plan-design/network/example-deployment-of-pki-certificates.md#BKMK_clouddp2008_cm2012) , ale proveďte následující akce:
 
@@ -128,7 +128,7 @@ Vytvořte si vlastní certifikát SSL pro CMG stejně jako u cloudového distrib
 
   - Použijte název, který končí v **usgovcloudapp.NET** pro státní správu Azure USA.  
 
-## <a name="client-authentication-certificate"></a><a name="bkmk_clientauth"></a>Certifikát pro ověřování klientů
+## <a name="client-authentication-certificate"></a><a name="bkmk_clientauth"></a> Certifikát pro ověřování klientů
 
 Požadavky na certifikát ověřování klientů:
 
@@ -146,7 +146,7 @@ Tento certifikát zřiďte mimo kontext Configuration Manager. K vystavování c
 >
 > Počínaje verzí 2002,<!--5686290--> Configuration Manager rozšiřuje podporu internetových zařízení, která se často nepřipojují k interní síti, nejde se připojit ke službě Azure AD a nemáte metodu instalovat certifikát vydaný PKI. Další informace najdete v tématu [ověřování založené na tokenech pro CMG](../../deploy/deploy-clients-cmg-token.md).
 
-### <a name="cmg-connection-point"></a><a name="bkmk_cmgcp"></a>Bod připojení CMG
+### <a name="cmg-connection-point"></a><a name="bkmk_cmgcp"></a> Bod připojení CMG
 
 Aby bylo možné bezpečně přesměrovat požadavky klientů, bod připojení CMG vyžaduje zabezpečené připojení k bodu správy. V závislosti na tom, jak nakonfigurujete zařízení a body správy, určuje konfiguraci spojovacího bodu CMG.
 
@@ -160,7 +160,7 @@ Aby bylo možné bezpečně přesměrovat požadavky klientů, bod připojení C
 
 Další informace najdete v tématu [Povolení bodu správy pro protokol HTTPS](#bkmk_mphttps).
 
-### <a name="client-trusted-root-certificate-to-cmg"></a><a name="bkmk_clientroot"></a>Důvěryhodný kořenový certifikát klienta pro CMG
+### <a name="client-trusted-root-certificate-to-cmg"></a><a name="bkmk_clientroot"></a> Důvěryhodný kořenový certifikát klienta pro CMG
 
 *Tento certifikát je vyžadován při použití certifikátů ověřování klienta. Když všichni klienti používají Azure AD k ověřování, tento certifikát se nevyžaduje.*
 
@@ -205,7 +205,7 @@ Po vydání ověřovacího certifikátu klienta k počítači pomocí tohoto pos
 
 8. Exportujte všechny certifikáty v cestě k certifikátu původního certifikátu ověřování klienta. Poznamenejte si, které exportované certifikáty jsou zprostředkující certifikační autority a které jsou důvěryhodné kořenové certifikační autority.  
 
-## <a name="enable-management-point-for-https"></a><a name="bkmk_mphttps"></a>Povolit bod správy pro protokol HTTPS
+## <a name="enable-management-point-for-https"></a><a name="bkmk_mphttps"></a> Povolit bod správy pro protokol HTTPS
 
 Tento certifikát zřiďte mimo kontext Configuration Manager. K vydání certifikátu webového serveru můžete například použít službu AD CS (Active Directory Certificate Services) a zásady skupiny. Další informace najdete v tématu [požadavky na certifikát PKI](../../../plan-design/network/pki-certificate-requirements.md) a [Nasazení certifikátu webového serveru pro systémy lokality, které spouští službu IIS](../../../plan-design/network/example-deployment-of-pki-certificates.md#BKMK_webserver2008_cm2012).
 
@@ -258,8 +258,8 @@ Nakonfigurujte místní bod správy pomocí následujícího režimu připojení
 
 - *Pracovní skupina*: zařízení není připojené k doméně nebo službě Azure AD, ale má [certifikát pro ověřování klientů](#bkmk_clientauth).
 - *Připojeno k doméně služby*Active Directory: připojíte zařízení k místní doméně služby Active Directory.
-- *Služba Azure AD – připojeno*: taky se označuje jako cloudová doména, připojíte zařízení k TENANTOVI Azure AD. Další informace najdete v tématu [zařízení připojená k Azure AD](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join).
-- *Hybridní – připojeno*: připojíte zařízení k místní službě Active Directory a zaregistrujete ho do služby Azure AD. Další informace najdete v tématu [zařízení připojená k hybridní službě Azure AD](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join-hybrid).
+- *Služba Azure AD – připojeno*: taky se označuje jako cloudová doména, připojíte zařízení k TENANTOVI Azure AD. Další informace najdete v tématu [zařízení připojená k Azure AD](/azure/active-directory/devices/concept-azure-ad-join).
+- *Hybridní – připojeno*: připojíte zařízení k místní službě Active Directory a zaregistrujete ho do služby Azure AD. Další informace najdete v tématu [zařízení připojená k hybridní službě Azure AD](/azure/active-directory/devices/concept-azure-ad-join-hybrid).
 - *Http*: ve vlastnostech bodu správy nastavíte připojení klienta na **http**.
 - *Https*: ve vlastnostech bodu správy nastavíte připojení klienta k **https**.
 - *E-http*: na kartě Vlastnosti lokality, **zabezpečení komunikace** můžete nastavit nastavení systému lokality na **https nebo HTTP**a povolit možnost **používat Configuration Manager certifikáty generované pro systémy lokality http**. Nakonfigurujete bod správy pro protokol HTTP, bod správy protokolu HTTP je připravený pro komunikaci HTTP i HTTPS (scénáře ověřování tokenů).
@@ -267,7 +267,7 @@ Nakonfigurujte místní bod správy pomocí následujícího režimu připojení
     > [!Note]
     > Ve verzi 1902 a starší se tato karta nazývá **komunikace s klientským počítačem**.<!-- SCCMDocs#1645 -->
 
-## <a name="azure-management-certificate"></a><a name="bkmk_azuremgmt"></a>Certifikát pro správu Azure
+## <a name="azure-management-certificate"></a><a name="bkmk_azuremgmt"></a> Certifikát pro správu Azure
 
 *Tento certifikát je nutný pro nasazení v klasickém provozu. Pro Azure Resource Manager nasazení se nevyžaduje.*
 
@@ -282,9 +282,9 @@ Pokud chcete vytvořit CMG v Azure, musí se bod připojení služby Configurati
 
 Další informace a pokyny, jak nahrát certifikát pro správu, najdete v následujících článcích v dokumentaci k Azure:
 
-- [Cloud Services a certifikáty pro správu](https://docs.microsoft.com/azure/cloud-services/cloud-services-certs-create#what-are-management-certificates)  
+- [Cloud Services a certifikáty pro správu](/azure/cloud-services/cloud-services-certs-create#what-are-management-certificates)  
 
-- [Nahrajte certifikát pro správu služeb Azure.](https://docs.microsoft.com/azure/azure-api-management-certs)  
+- [Nahrajte certifikát pro správu služeb Azure.](/azure/azure-api-management-certs)  
 
 > [!IMPORTANT]
 > Nezapomeňte zkopírovat ID předplatného přidruženého k certifikátu pro správu. Použijete ho k vytvoření CMG v konzole Configuration Manager.
@@ -295,4 +295,4 @@ Další informace a pokyny, jak nahrát certifikát pro správu, najdete v násl
 
 - [Nejčastější dotazy týkající se brány pro správu cloudu](cloud-management-gateway-faq.md)  
 
-- [Zabezpečení a ochrana brány pro správu cloudu](security-and-privacy-for-cloud-management-gateway.md)  
+- [Zabezpečení a ochrana brány pro správu cloudu](security-and-privacy-for-cloud-management-gateway.md)

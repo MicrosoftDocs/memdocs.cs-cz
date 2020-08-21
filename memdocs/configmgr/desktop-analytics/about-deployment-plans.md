@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: acaa7c8a906edd78f0c54c5735c97c55434d848b
-ms.sourcegitcommit: 7ee69b207261ffc282e535f793a536540d160557
+ms.openlocfilehash: 0e9f1551f75c1cb8499c5eab846588ee6ddc1d80
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87400711"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693382"
 ---
 # <a name="about-deployment-plans-in-desktop-analytics"></a>O plánech nasazení v Desktop Analytics
 
@@ -70,7 +70,7 @@ Projděte si **rozhodnutí o upgradu Windows** pro každé zařízení v plánu 
 
 Rozhodnutí o inovaci systému Windows, které **nahrazuje zařízení** , může být z jednoho z následujících důvodů:
 
-- Nepovedlo se ověřit kontrolu požadovaného procesoru Windows 10. Další informace najdete v tématu [minimální požadavky na hardware](https://docs.microsoft.com/windows-hardware/design/minimum/minimum-hardware-requirements-overview#31-processor).
+- Nepovedlo se ověřit kontrolu požadovaného procesoru Windows 10. Další informace najdete v tématu [minimální požadavky na hardware](/windows-hardware/design/minimum/minimum-hardware-requirements-overview#31-processor).
 - Má blok systému BIOS
 - Nemá dostatek paměti.
 - Součást důležitá pro spouštění v systému má blokovaný ovladač.
@@ -91,7 +91,7 @@ Rozhodnutí o **opětovné instalaci** Windows Upgrade znamená, že upgrade bud
 
 - Data inventáře pro toto zařízení jsou neúplná a Desktop Analytics nemůže provádět úplné posouzení kompatibility.
 
-### <a name="apps"></a>Apps
+### <a name="apps"></a>Aplikace
 
 Nastavte **rozhodnutí o upgradu** a **důležitost** této aplikace v tomto plánu nasazení. Další informace najdete v tématu [vytvoření plánů nasazení](create-deployment-plans.md).
 
@@ -132,4 +132,4 @@ Po vytvoření plánu nasazení použijte Configuration Manager k nasazení prod
 
 - [Další informace o aktualizacích zabezpečení a funkcí](about-updates.md)  
 
-- [Vytvoření plánu nasazení](create-deployment-plans.md)  
+- [Vytvoření plánu nasazení](create-deployment-plans.md)

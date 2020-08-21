@@ -10,28 +10,28 @@ ms.assetid: a5fc033e-828e-4e45-9097-bbbd0697ebdf
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: cbf7dd3e35db8d2020e96e2511017e43863f724e
-ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
+ms.openlocfilehash: 5feaf05a6829d902b1d8dcbe57722dfce410de6f
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85613487"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693535"
 ---
 # <a name="microsoft-defender-advanced-threat-protection"></a>Rozšířená ochrana před internetovými útoky v programu Microsoft Defender
 
 *Platí pro: Configuration Manager (Current Branch)*
 
-Endpoint Protection může pomáhat spravovat a monitorovat [rozšířenou ochranu před internetovými útoky v programu Microsoft Defender](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) (dříve označované jako ATP v programu Windows Defender). ATP v programu Microsoft Defender pomáhá podnikům zjišťovat, zkoumat a reagovat na pokročilé útoky v jejich sítích. Zásady Configuration Manager vám můžou pomáhat s připojováním a monitorováním klientů s Windows 10.
+Endpoint Protection může pomáhat spravovat a monitorovat [rozšířenou ochranu před internetovými útoky v programu Microsoft Defender](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) (dříve označované jako ATP v programu Windows Defender). ATP v programu Microsoft Defender pomáhá podnikům zjišťovat, zkoumat a reagovat na pokročilé útoky v jejich sítích. Zásady Configuration Manager vám můžou pomáhat s připojováním a monitorováním klientů s Windows 10.
 
-Microsoft Defender ATP je služba v [Security Center programu Microsoft Defender](https://securitycenter.windows.com). Když přidáte a nasadíte konfigurační soubor klienta, Configuration Manager může monitorovat stav nasazení a stav agenta ATP v programu Microsoft Defender. Ochrana ATP v programu Microsoft Defender je podporovaná na počítačích, na kterých běží klient Configuration Manager nebo [které spravuje Microsoft Intune](https://docs.microsoft.com/intune/protect/advanced-threat-protection).
+Microsoft Defender ATP je služba v [Security Center programu Microsoft Defender](https://securitycenter.windows.com). Když přidáte a nasadíte konfigurační soubor klienta, Configuration Manager může monitorovat stav nasazení a stav agenta ATP v programu Microsoft Defender. Ochrana ATP v programu Microsoft Defender je podporovaná na počítačích, na kterých běží klient Configuration Manager nebo [které spravuje Microsoft Intune](/intune/protect/advanced-threat-protection).
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 - Předplatné služby Microsoft Defender Advanced Threat Protection online  
 - Klienti počítačů s Configuration Manager klientem
 - Klienti používající operační systém uvedený níže v části [Podporované klientské operační systémy](#bkmk_os) .
 
-### <a name="supported-client-operating-systems"></a><a name="bkmk_os"></a>Podporované klientské operační systémy
+### <a name="supported-client-operating-systems"></a><a name="bkmk_os"></a> Podporované klientské operační systémy
 
 Na základě verze Configuration Manager, kterou používáte, se dají připojit následující klientské operační systémy:
 
@@ -74,7 +74,7 @@ Když připojíte zařízení k ATP pomocí Configuration Manager, nasadíte zá
 > - Pokud vaše cílová kolekce obsahuje zařízení na úrovni a použijete pokyny pro zařízení nižší úrovně, zařízení na nejvyšší úrovni nebudou připojená.
 > - Pokud vaše cílová kolekce obsahuje zařízení nižší úrovně a použijete pokyny pro zařízení se škálováním na úrovni služby, zařízení nižší úrovně nebudou připojená.
 
-## <a name="onboard-devices-with-any-supported-operating-system-to-atp-recommended"></a><a name="bkmk_any_os"></a>Připojit zařízení s jakýmkoli podporovaným operačním systémem do ATP (doporučeno)
+## <a name="onboard-devices-with-any-supported-operating-system-to-atp-recommended"></a><a name="bkmk_any_os"></a> Připojit zařízení s jakýmkoli podporovaným operačním systémem do ATP (doporučeno)
  Můžete připojit zařízení s některým z [podporovaných operačních systémů](#bkmk_os) k ATP tím, že poskytnete konfigurační soubor, **klíč pracovního prostoru**a **ID pracovního prostoru** , které chcete Configuration Manager.
 
 ### <a name="get-the-configuration-file-workspace-id-and-workspace-key"></a>Získá konfigurační soubor, ID pracovního prostoru a klíč pracovního prostoru.
@@ -107,12 +107,12 @@ Když připojíte zařízení k ATP pomocí Configuration Manager, nasadíte zá
    :::image type="content" source="media/5229962-create-atp-policy-wizard.png" alt-text="Průvodce vytvořením zásad ATP v programu Microsoft Defender" lightbox="media/5229962-create-atp-policy-wizard.png":::
 
 1. Zadejte ukázky souborů, které se shromažďují a sdílejí ze spravovaných zařízení pro účely analýzy.  
-   - **Žádné**
+   - **Žádný**
    - **Všechny typy souborů**  
 1. Projděte si souhrn a dokončete průvodce.  
 1. Klikněte pravým tlačítkem na zásadu, kterou jste vytvořili, a pak vyberte **nasadit** a Zaměřte se na zásady ATP v programu Microsoft Defender na klienty.
 
-## <a name="onboard-devices-running-up-level-operating-systems-to-atp"></a><a name="bkmk_uplevel"></a>Připojení zařízení s operačními systémy na úrovni ATP
+## <a name="onboard-devices-running-up-level-operating-systems-to-atp"></a><a name="bkmk_uplevel"></a> Připojení zařízení s operačními systémy na úrovni ATP
 
 Klienti nejvyšší úrovně vyžadují konfigurační soubor připojování pro připojování k ATP. Mezi operační systémy nejvyšší úrovně patří:
 - Windows 10 verze 1607 a novější 
@@ -142,12 +142,12 @@ Pokud vaše cílová kolekce obsahuje zařízení na nejvyšší úrovni i niž�
    > [!Note]
    > Pro Configuration Manager verze 2002 budete potřebovat **klíč** a **ID pracovního** prostoru a to i v případě, že zaměříte jenom zařízení na nejvyšší úrovni. Tyto hodnoty získáte tak, že vyberete **Nastavení**  >  **připojování**  >  **Windows 7 a 8,1** od [online služby Microsoft Defender ATP](https://securitycenter.windows.com/). <!--7054188-->
 1. Zadejte ukázky souborů, které se shromažďují a sdílejí ze spravovaných zařízení pro účely analýzy.  
-   - **Žádné**
+   - **Žádný**
    - **Všechny typy souborů**  
 1. Projděte si souhrn a dokončete průvodce.  
 1. Klikněte pravým tlačítkem na zásadu, kterou jste vytvořili, a pak vyberte **nasadit** a Zaměřte se na zásady ATP v programu Microsoft Defender na klienty.
 
-## <a name="onboard-devices-running-down-level-operating-systems-to-atp"></a><a name="bkmk_downlevel"></a>Připojení zařízení s operačními systémy nižší úrovně k ATP
+## <a name="onboard-devices-running-down-level-operating-systems-to-atp"></a><a name="bkmk_downlevel"></a> Připojení zařízení s operačními systémy nižší úrovně k ATP
 
 Klienti nižší úrovně vyžadují **klíč pracovního prostoru** a **ID pracovního prostoru** pro připojování atp. Mezi operační systémy nižší úrovně patří:
 - Windows 8.1
@@ -173,7 +173,7 @@ Pokud vaše cílová kolekce obsahuje zařízení na nejvyšší úrovni i niž�
    > - Pro Configuration Manager verze 2002 budete potřebovat konfigurační soubor, i když připojujete jenom zařízení nižší úrovně. Tyto hodnoty získáte tak, že vyberete **Nastavení**  >  **připojování**  >  **Windows 10** od [online služby Microsoft Defender ATP](https://securitycenter.windows.com/). <!--7054188--> 
    > - Konfigurační soubor ATP v programu Microsoft Defender obsahuje citlivé informace, které by měly být zachovány v bezpečí.
 1. Zadejte ukázky souborů, které se shromažďují a sdílejí ze spravovaných zařízení pro účely analýzy.  
-   - **Žádné**
+   - **Žádný**
    - **Všechny typy souborů**  
 1. Projděte si souhrn a dokončete průvodce.  
 1. Klikněte pravým tlačítkem na zásadu, kterou jste vytvořili, a pak vyberte **nasadit** a Zaměřte se na zásady ATP v programu Microsoft Defender na klienty.
@@ -220,6 +220,6 @@ Vyberte **nasadit** a Zaměřte se na zásady ATP v programu Microsoft Defender 
 
 ## <a name="next-steps"></a>Další kroky
 
-- [Rozšířená ochrana před internetovými útoky v programu Microsoft Defender](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection)
+- [Rozšířená ochrana před internetovými útoky v programu Microsoft Defender](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection)
 
-- [Řešení potíží s připojováním k Rozšířené ochraně před internetovými útoky v programu Microsoft Defender](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/troubleshoot-onboarding)
+- [Řešení potíží s připojováním k Rozšířené ochraně před internetovými útoky v programu Microsoft Defender](/windows/security/threat-protection/microsoft-defender-atp/troubleshoot-onboarding)

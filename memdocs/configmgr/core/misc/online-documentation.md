@@ -9,12 +9,12 @@ ms.assetid: 6d665cef-fc67-4686-bcb3-0572c0a3760c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 01b6587d1d223675fdc240c20913e21854d55821
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 9f24768521cd179c3a6403aff057de48ae46e7e7
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718459"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695507"
 ---
 # <a name="online-documentation-for-configuration-manager"></a>Online dokumentace pro Configuration Manager
 
@@ -26,7 +26,7 @@ Vítá vás knihovna dokumentace Configuration Manager. Vyhledejte knihovnu doku
 
 ### <a name="online-documentation"></a>Online dokumentace
 
-V online dokumentaci pro aktuální větev Configuration Manager najdete na adrese [docs.Microsoft.com/ConfigMgr](https://docs.microsoft.com/configmgr):  
+V online dokumentaci pro aktuální větev Configuration Manager najdete na adrese [docs.Microsoft.com/ConfigMgr](/configmgr):  
 
 - [Úvod do nástroje Configuration Manager](../understand/introduction.md)  
 
@@ -48,7 +48,7 @@ V online dokumentaci pro aktuální větev Configuration Manager najdete na adre
 
 - [Zabezpečení a ochrana osobních údajů v nástroji Configuration Manager](../plan-design/security/security-and-privacy.md)  
 
-### <a name="release-notes"></a>Poznámky k verzi
+### <a name="release-notes"></a>Zpráva k vydání verze
 
 Poznámky k verzi obsahují informace, které nejsou k dispozici v dokumentaci k produktu a mohou být vyžadovány k úspěšné instalaci a použití Configuration Manager. Další informace najdete v [poznámkách k verzi pro Configuration Manager](../servers/deploy/install/release-notes.md)  
 
@@ -76,33 +76,33 @@ Pro následující verze:
 
 Prohlédněte si online dokumentaci v následujících umístěních:  
 
-- [Základy použití nástroje System Center 2012 Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg682144\(v=technet.10\))  
+- [Základy použití nástroje System Center 2012 Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682144\(v=technet.10\))  
 
-- [Správa lokality pro nástroj System Center 2012 Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg681983\(v=technet.10\))  
+- [Správa lokality pro nástroj System Center 2012 Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg681983\(v=technet.10\))  
 
-- [Migrace hierarchií v nástroji System Center 2012 Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg682006\(v=technet.10\))  
+- [Migrace hierarchií v nástroji System Center 2012 Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682006\(v=technet.10\))  
 
-- [Nasazení klientů pro nástroj System Center 2012 Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg699391\(v=technet.10\))  
+- [Nasazení klientů pro nástroj System Center 2012 Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg699391\(v=technet.10\))  
 
-- [Nasazení softwaru a operačních systémů v nástroji System Center 2012 Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg699393\(v=technet.10\))  
+- [Nasazení softwaru a operačních systémů v nástroji System Center 2012 Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg699393\(v=technet.10\))  
 
-- [Prostředky a kompatibilita v nástroji System Center 2012 Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg682029\(v=technet.10\))  
+- [Prostředky a kompatibilita v nástroji System Center 2012 Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682029\(v=technet.10\))  
 
-- [Zabezpečení a ochrana osobních údajů v System Center 2012 Configuration Manageru](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg682033\(v=technet.10\))  
+- [Zabezpečení a ochrana osobních údajů v System Center 2012 Configuration Manageru](/previous-versions/system-center/system-center-2012-R2/gg682033\(v=technet.10\))  
 
-- [Scenarios and Solutions Using System Center 2012 Configuration Manager (Scénáře a řešení v nástroji System Center 2012 Configuration Manager) (Scénáře a řešení v nástroji System Center 2012 Configuration Manager)](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/jj884163\(v=technet.10\))  
+- [Scenarios and Solutions Using System Center 2012 Configuration Manager (Scénáře a řešení v nástroji System Center 2012 Configuration Manager) (Scénáře a řešení v nástroji System Center 2012 Configuration Manager)](/previous-versions/system-center/system-center-2012-R2/jj884163\(v=technet.10\))  
 
 ### <a name="release-notes-and-technical-publications"></a>Poznámky k verzi a technické publikace
 
 Poznámky k verzi a technické publikace doplňují příručky Configuration Manager. Poznámky k verzi obsahují informace, které nejsou dostupné v dokumentaci k produktu a které jsou potřeba k úspěšné instalaci Configuration Manager. Technické publikace poskytují další informace, které se týkají Configuration Manageru.  
 
-- [Poznámky k verzi pro System Center 2012 Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/jj870706\(v=technet.10\))  
+- [Poznámky k verzi pro System Center 2012 Configuration Manager](/previous-versions/system-center/system-center-2012-R2/jj870706\(v=technet.10\))  
 
-- [Technické publikace pro System Center 2012 Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/hh531521\(v=technet.10\))  
+- [Technické publikace pro System Center 2012 Configuration Manager](/previous-versions/system-center/system-center-2012-R2/hh531521\(v=technet.10\))  
 
 ### <a name="accessibility"></a>Usnadnění
 
-Další informace o funkcích, produktech a službách, které usnadňují Configuration Manager přístup pro osoby s postižením, najdete v tématu [funkce usnadnění přístupu Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/jj553406\(v=technet.10\))
+Další informace o funkcích, produktech a službách, které usnadňují Configuration Manager přístup pro osoby s postižením, najdete v tématu [funkce usnadnění přístupu Configuration Manager](/previous-versions/system-center/system-center-2012-R2/jj553406\(v=technet.10\))
 
 ### <a name="downloadable-documentation"></a>Dokumentace ke stažení
 

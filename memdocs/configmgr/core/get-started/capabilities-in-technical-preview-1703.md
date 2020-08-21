@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 98a82d118442a7ca37ff7b2df62bf4702c15ba2c
-ms.sourcegitcommit: 7e34b561d43aa086fc07ab4edf2230d09c04f05b
+ms.openlocfilehash: 9209a1a948c43a21f097ba836a6761b53ddc9530
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87526011"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692957"
 ---
 # <a name="capabilities-in-technical-preview-1703-for-configuration-manager"></a>Funkce ve verzi Technical Preview 1703 pro Configuration Manager
 
@@ -33,14 +33,14 @@ Můžete teď nasadit licencované aplikace do zařízení i pro uživatele. V z
 
 | Verze Configuration Manager | Aplikace podporuje licencování zařízení? | Typ kolekce nasazení | Deklarovaná licence |
 | ----------------------------- | ------------------------------ | -------------------------- | --------------- |
-|Starší než 1702|Yes|Uživatel|Uživatelská licence|
-|Starší než 1702|No|Uživatel|Uživatelská licence|
-|Starší než 1702|Yes|Zařízení|Uživatelská licence|
-|Starší než 1702|No|Zařízení|Uživatelská licence|
-|1702 a novější|Yes|Uživatel|Uživatelská licence|
-|1702 a novější|No|Uživatel|Uživatelská licence|
-|1702 a novější|Yes|Zařízení|Licence zařízení|
-|1702 a novější|No|Zařízení|Uživatelská licence|
+|Starší než 1702|Ano|Uživatel|Uživatelská licence|
+|Starší než 1702|Ne|Uživatel|Uživatelská licence|
+|Starší než 1702|Ano|Zařízení|Uživatelská licence|
+|Starší než 1702|Ne|Zařízení|Uživatelská licence|
+|1702 a novější|Ano|Uživatel|Uživatelská licence|
+|1702 a novější|Ne|Uživatel|Uživatelská licence|
+|1702 a novější|Ano|Zařízení|Licence zařízení|
+|1702 a novější|Ne|Zařízení|Uživatelská licence|
 
 
 ## <a name="direct-links-to-applications-in-software-center"></a>Přímé odkazy na aplikace v centru softwaru
@@ -82,7 +82,7 @@ V Technical Preview 1703 se pomocí tohoto průvodce nakonfiguruje jenom Windows
 
 - Pomocí informací v tomto tématu v této verzi Preview nahraďte konfigurační kroky, které najdete v části [Nastavení synchronizace s Windows Storem pro firmy](../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md#bkmk_setup) v Current Branch tématu [Správa aplikací z Windows Storu pro firmy pomocí Configuration Manager](../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md).
 
-- Další informace o webových aplikacích najdete v tématech [ověřování a autorizace v Azure App Service](https://docs.microsoft.com/azure/app-service/app-service-authentication-overview)a [Web Apps přehled](https://docs.microsoft.com/azure/app-service-web/app-service-web-overview).
+- Další informace o webových aplikacích najdete v tématech [ověřování a autorizace v Azure App Service](/azure/app-service/app-service-authentication-overview)a [Web Apps přehled](/azure/app-service-web/app-service-web-overview).
 
 ### <a name="prerequisites-and-planning"></a>Předpoklady a plánování
 Když nakonfigurujete připojení mezi Configuration Manager a Windows Storem pro firmy, musíte zadat složku, do které se bude uchovávat obsah aplikace synchronizovaný ze Storu. Chcete-li zajistit, aby byla tato složka zabezpečená a aby její obsah bylo možné nasadit do zařízení, zajistěte, aby byla zajištěna následující oprávnění:
@@ -138,7 +138,7 @@ Tato verze přináší možnost Rozbalit a sbalit skupiny pořadí úloh. Může
 ## <a name="client-settings-to-configure-windows-analytics-for-upgrade-readiness"></a>Nastavení klienta pro konfiguraci služby Windows Analytics pro Upgrade Readiness
 Od této verze můžete pomocí nastavení klienta zařízení zjednodušit konfiguraci diagnostických dat Windows, která jsou nutná k použití řešení Windows Analytics, jako je Upgrade Readiness s Configuration Manager. Configuration Manager můžou načítat data ze služby Windows Analytics, která může poskytnout cenné přehledy o aktuálním stavu prostředí na základě diagnostických dat Windows hlášených klientskými počítači. Diagnostické údaje systému Windows jsou hlášeny klientskými počítači do diagnostické služby systému Windows. příslušná data jsou následně přenesena do řešení Windows Analytics, která jsou hostována v jednom z pracovních prostorů vaší organizace v OMS. Upgrade Readiness je řešení Windows Analytics, které vám může přispět k určení priorit rozhodování o upgradech Windows pro spravovaná zařízení.
 
-### <a name="prerequisites"></a>Požadavky
+### <a name="prerequisites"></a>Předpoklady
 - Lokalita musí být nakonfigurovaná tak, aby používala cloudovou službu Upgrade Readiness.
 
 ### <a name="configure-windows-analytics-client-settings"></a>Konfigurace nastavení klienta Windows Analytics

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: ace27e9035af6696e455382a32365be0e3824d65
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 8ead53c71e336001ac820a437fa67758c6375cbd
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905201"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694368"
 ---
 # <a name="capabilities-in-configuration-manager-technical-preview-version-1807"></a>Funkce v Configuration Manager Technical Preview verze 1807 
 
@@ -42,7 +42,7 @@ Steps to workaround, if any.
 
 ## <a name="known-issues"></a>Známé problémy 
 
-### <a name="issues-with-office-365-software-updates"></a><a name="ki_o365"></a>Problémy s aktualizacemi softwaru Office 365
+### <a name="issues-with-office-365-software-updates"></a><a name="ki_o365"></a> Problémy s aktualizacemi softwaru Office 365
 <!--521365-->
 Pokud ke správě aktualizací Office 365 používáte verzi Technical Preview, verze 1806 a 1806,2, instalace na klienty se nemusí zdařit. 
 
@@ -58,11 +58,11 @@ Pokud ke správě aktualizací Office 365 používáte verzi Technical Preview, 
 **Následující části popisují nové funkce, které je možné v této verzi vyzkoušet:**  
 
 
-## <a name="community-hub"></a><a name="bkmk_hub"></a>Centrum komunity
+## <a name="community-hub"></a><a name="bkmk_hub"></a> Centrum komunity
 <!--1357766-->
 
 Centrum komunity je centralizované místo pro sdílení užitečných Configuration Manager objektů s ostatními. Podívejte se na nový pracovní prostor **komunity** v konzole Configuration Manager a vyberte uzel **hub** . Použijte Centrum komunity ke stažení následujících typů objektů Configuration Manager: 
-- Scripts
+- Skripty
 - Položky konfigurace
 
 ![Konzola Configuration Manager, pracovní prostor komunity, uzel centra](media/1357766-hub.png)
@@ -73,16 +73,16 @@ Pokud chcete zobrazit další podrobnosti o dostupné položce, klikněte na ni 
 
 Pracovní prostor **komunity** obsahuje také následující uzly:
 
-- **Dokumentace**: zobrazuje [knihovnu dokumentace](https://docs.microsoft.com/sccm/) Configuration Manager  
+- **Dokumentace**: zobrazuje [knihovnu dokumentace](/sccm/) Configuration Manager  
 
 - **Feedback**: zobrazuje web Configuration Manager [UserVoice](https://configurationmanager.uservoice.com/)  
 
 
-### <a name="prerequisites"></a>Požadavky
+### <a name="prerequisites"></a>Předpoklady
 
 - Použijte konzolu Configuration Manager v operačním systému klienta.  
 
-    - Další, ale nedoporučuje se: na operačním systému serveru zakažte [Internet Explorer: Konfigurace rozšířeného zabezpečení](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd883248(v=ws.10)).
+    - Další, ale nedoporučuje se: na operačním systému serveru zakažte [Internet Explorer: Konfigurace rozšířeného zabezpečení](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd883248(v=ws.10)).
 
 - Počítač s konzolou vyžaduje přístup k Internetu a připojení k následujícím webům:  
     - `https://aka.ms`  
@@ -96,7 +96,7 @@ Přispívající položky do centra nejsou v tuto verzi aktuálně k dispozici.
 
 
 
-## <a name="specify-the-drive-for-offline-os-image-servicing"></a><a name="bkmk_osd"></a>Zadejte jednotku pro obsluhu bitové kopie operačního systému offline  
+## <a name="specify-the-drive-for-offline-os-image-servicing"></a><a name="bkmk_osd"></a> Zadejte jednotku pro obsluhu bitové kopie operačního systému offline  
 <!--1358924-->
 
 Na základě vašich [názorů na UserVoice](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/33506009-gui-option-for-offline-os-image-servicing-drive)teď zadejte jednotku, kterou Configuration Manager používá během offline údržby imagí operačního systému. Tento proces může využívat velké množství místa na disku s dočasnými soubory, takže tato možnost nabízí flexibilitu pro výběr jednotky, která se má použít. 
@@ -118,10 +118,10 @@ Zkontrolujte soubor protokolu **OfflineServicingMgr. log** .
 
 
 
-## <a name="co-managed-device-sync-activity-from-intune"></a><a name="bkmk_comgmt"></a>Souběžně spravovaná aktivita synchronizace zařízení z Intune
+## <a name="co-managed-device-sync-activity-from-intune"></a><a name="bkmk_comgmt"></a> Souběžně spravovaná aktivita synchronizace zařízení z Intune
 <!--1358565-->
 
-Zobrazuje se v konzole Configuration Manager, jestli je spoluspravované zařízení aktivní pomocí Microsoft Intune. Tento stav je založený na datech z [datového skladu Intune](https://docs.microsoft.com/intune/reports-nav-create-intune-reports). Řídicí panel **stav klienta** v konzole Configuration Manager zobrazuje **neaktivní klienty pomocí Intune**. Tato nová kategorie je určena pro spoluspravovaná zařízení, která jsou neaktivní pomocí Configuration Manager, ale během minulého týdne byla synchronizovaná se službou Intune.
+Zobrazuje se v konzole Configuration Manager, jestli je spoluspravované zařízení aktivní pomocí Microsoft Intune. Tento stav je založený na datech z [datového skladu Intune](/intune/reports-nav-create-intune-reports). Řídicí panel **stav klienta** v konzole Configuration Manager zobrazuje **neaktivní klienty pomocí Intune**. Tato nová kategorie je určena pro spoluspravovaná zařízení, která jsou neaktivní pomocí Configuration Manager, ale během minulého týdne byla synchronizovaná se službou Intune.
 
 
 ### <a name="try-it-out"></a>Určitě to udělejte!
@@ -140,7 +140,7 @@ Další informace o povolení spolusprávy najdete v tématu [společná správa
 
 
 
-## <a name="repair-applications"></a><a name="bkmk_app-repair"></a>Opravit aplikace
+## <a name="repair-applications"></a><a name="bkmk_app-repair"></a> Opravit aplikace
 <!--1357866-->
 
 Na základě vaší [zpětné vazby](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/8365071-force-reinstall-of-application)na webu UserVoice teď zadejte příkazový řádek opravy pro instalační služba systému Windows a typy nasazení instalačního programu skriptů. 
@@ -163,13 +163,13 @@ Tlačítko Nový v centru softwaru pro uživatele, kteří mají **opravit** apl
 
 
 
-## <a name="approve-application-requests-via-email"></a><a name="bkmk_email-approve"></a>Schvalování žádostí o aplikace přes e-mail
+## <a name="approve-application-requests-via-email"></a><a name="bkmk_email-approve"></a> Schvalování žádostí o aplikace přes e-mail
 <!--1321550-->
 
 Nakonfigurujte e-mailová oznámení pro žádosti o schválení aplikace. Když uživatel požádá o aplikaci, obdržíte e-mail. Kliknutím na odkazy v e-mailu schválíte nebo odepřete žádost, aniž byste museli konzolu Configuration Manager.
 
 
-### <a name="prerequisites"></a>Požadavky
+### <a name="prerequisites"></a>Předpoklady
 
 #### <a name="to-send-email-notifications"></a>Odeslání e-mailových oznámení
 - Povolit [volitelnou funkci](../servers/manage/install-in-console-updates.md#bkmk_options) **schválit žádosti o aplikace pro uživatele na zařízení**.  
@@ -193,7 +193,7 @@ Pokud tyto požadavky nenakonfigurujete, lokalita pošle e-mailové oznámení p
 
         - **Identifikátor URI pro přesměrování**: `https://<CMG FQDN>/CCM_Proxy_ServerAuth/ImplicitAuth` . Použijte plně kvalifikovaný název domény (FQDN) služby brány pro správu cloudu (CMG), například GraniteFalls.Contoso.com.   
 
-        - **Manifest**: nastavte **oauth2AllowImplicitFlow** na hodnotu true:`"oauth2AllowImplicitFlow": true,`  
+        - **Manifest**: nastavte **oauth2AllowImplicitFlow** na hodnotu true: `"oauth2AllowImplicitFlow": true,`  
 
 
 ### <a name="try-it-out"></a>Určitě to udělejte!
@@ -216,13 +216,13 @@ Zkuste úkoly dokončit. Potom vám pošle [zpětnou vazbu](capabilities-in-tech
 
 
 
-## <a name="improvement-to-script-output"></a><a name="bkmk_script"></a>Vylepšení výstupu skriptu
+## <a name="improvement-to-script-output"></a><a name="bkmk_script"></a> Vylepšení výstupu skriptu
 <!--1236459-->
 
 Teď si můžete zobrazit podrobný výstup skriptu v nezpracovaném nebo strukturovaném formátu JSON. Toto formátování usnadňuje čtení a analýzu výstupu. Pokud skript vrátí platný text ve formátu JSON, zobrazte podrobný výstup buď jako **výstup JSON** , nebo jako **nezpracovaný výstup**. V opačném případě je jediným z možností **výstup skriptu**. 
 
 #### <a name="example-script-output-is-valid-json"></a>Příklad: výstup skriptu je platný kód JSON.
-Systému`$PSVersionTable.PSVersion`  
+Systému `$PSVersionTable.PSVersion`  
 
 ``` Output
 Major  Minor  Build  Revision
@@ -231,7 +231,7 @@ Major  Minor  Build  Revision
 ```
 
 #### <a name="example-script-output-isnt-valid-json"></a>Příklad: výstup skriptu není platný formát JSON.
-Systému`Write-Output (Get-WmiObject -Class Win32_OperatingSystem).Caption`  
+Systému `Write-Output (Get-WmiObject -Class Win32_OperatingSystem).Caption`  
 
 ``` Output
 Microsoft Windows 10 Enterprise
@@ -252,7 +252,7 @@ Zkuste úkoly dokončit. Potom vám pošle [zpětnou vazbu](capabilities-in-tech
 
 
 
-## <a name="improvement-to-third-party-software-updates"></a><a name="bkmk_3pupdate"></a>Vylepšení aktualizací softwaru třetích stran
+## <a name="improvement-to-third-party-software-updates"></a><a name="bkmk_3pupdate"></a> Vylepšení aktualizací softwaru třetích stran
 <!--1358714-->
 
 Nyní můžete upravit vlastnosti vlastních katalogů.

@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: 20c560925b2c1abec282b8c5f8dae3f6f42f4d64
-ms.sourcegitcommit: 8fc7f2864c5e3f177e6657b684c5f208d6c2a1b4
+ms.openlocfilehash: a9d0beeee1e00315a913adfc5dde6bd69f75cd6f
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88591201"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692991"
 ---
 # <a name="capabilities-in-technical-preview-1701-for-configuration-manager"></a>Funkce ve verzi Technical Preview 1701 pro Configuration Manager
 
@@ -127,7 +127,7 @@ Provedete to tak, že upravíte konfigurační soubor tak, aby odkazoval na Clou
    - **Upraveno:** &lt; nastavení Name = "FairFaxAuthorityResource" serializeAs = "String" >   
      &lt;hodnota &gt; [https://login.microsoftonline.com](https://login.microsoftonline.com) &lt; /Value&gt;
 
-2. Po uložení souboru se dvěma změnami restartujte konzolu Configuration Manager na stejném počítači a pomocí této konzoly nainstalujte konektor OMS. Chcete-li nainstalovat konektor, použijte informace v části [synchronizovat data z Configuration Manager do Microsoft Operations Management Suite](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm)a vyberte **pracovní prostor Operations Management Suite** , který je v cloudu Microsoft Azure Government.
+2. Po uložení souboru se dvěma změnami restartujte konzolu Configuration Manager na stejném počítači a pomocí této konzoly nainstalujte konektor OMS. Chcete-li nainstalovat konektor, použijte informace v části [synchronizovat data z Configuration Manager do Microsoft Operations Management Suite](/azure/azure-monitor/platform/collect-sccm)a vyberte **pracovní prostor Operations Management Suite** , který je v cloudu Microsoft Azure Government.
 
 3. Po instalaci konektoru OMS je připojení ke cloudu pro státní správu dostupné, když použijete jakoukoli konzolu, která se připojuje k lokalitě nástroje.
 

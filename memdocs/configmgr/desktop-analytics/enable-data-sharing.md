@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 40ebeabaaf236377388660a2a1a328e308a708ab
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 999d8441e8c97f0a4b7ad4a92c8175300dcc4ead
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125937"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696442"
 ---
 # <a name="enable-data-sharing-for-desktop-analytics"></a>Povolení sdílení dat pro desktopovou analýzu
 
@@ -31,7 +31,7 @@ Když integrujete Configuration Manager s desktopovou analýzou, použijete ji t
 > [!IMPORTANT]
 > Ve většině případů se tato nastavení konfigurují jenom pomocí Configuration Manager. Tato nastavení nepoužívejte také v objektech zásad skupiny domén. Další informace najdete v tématu věnovaném [řešení konfliktů](enroll-devices.md#conflict-resolution).
 
-Základní funkce Desktop Analytics funguje na **požadované** [úrovni diagnostických dat](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization#diagnostic-data-levels). Pokud nenastavíte **volitelnou (omezenou)** úroveň v Configuration Manager, nebudete dostávat následující funkce Desktop Analytics:
+Základní funkce Desktop Analytics funguje na **požadované** [úrovni diagnostických dat](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#diagnostic-data-levels). Pokud nenastavíte **volitelnou (omezenou)** úroveň v Configuration Manager, nebudete dostávat následující funkce Desktop Analytics:
 
 - Použití aplikace
 - [Další App Insights](compat-assessment.md#additional-insights)
@@ -58,7 +58,7 @@ Microsoft doporučuje, abyste povolili **volitelnou (omezená)** úroveň diagno
 >
 > Pokud jste dříve nakonfigurovali všechna zařízení na **vyšší** úrovni při upgradu na verzi 2006, vrátí se k **volitelnému (omezenému)**. Pak budou do Microsoftu posílat méně dat. Tato změna by neměla mít vliv na to, co vidíte v Desktop Analytics.
 
-Další informace o diagnostických datech, která jsou sdílena s Microsoftem, s **volitelnou (omezená)**, najdete v tématu [Rozšířené události a pole diagnostických dat Windows 10](https://docs.microsoft.com/windows/privacy/enhanced-diagnostic-data-windows-analytics-events-and-fields).
+Další informace o diagnostických datech, která jsou sdílena s Microsoftem, s **volitelnou (omezená)**, najdete v tématu [Rozšířené události a pole diagnostických dat Windows 10](/windows/privacy/enhanced-diagnostic-data-windows-analytics-events-and-fields).
 
 > [!IMPORTANT]
 > Microsoft má silné závazky na poskytování nástrojů a prostředků, které vám povedou kontrolu nad vaším soukromím. V důsledku toho, zatímco Desktop Analytics podporuje Windows 8.1 zařízení, Microsoft neshromažďuje diagnostická data Windows ze Windows 8.1 zařízení umístěných v zemích Evropské země (EHP a Švýcarsko).
@@ -67,9 +67,9 @@ Další informace najdete v tématu [Ochrana osobních údajů Desktop Analytics
 
 Následující články jsou také dobrými prostředky pro lepší porozumění úrovní diagnostických dat Windows:
 
-- [Windows 10 a GDPR pro tvůrce rozhodnutí IT](https://docs.microsoft.com/windows/privacy/gdpr-it-guidance)  
+- [Windows 10 a GDPR pro tvůrce rozhodnutí IT](/windows/privacy/gdpr-it-guidance)  
 
-- [Konfigurace diagnostických dat Windows ve vaší organizaci](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization)  
+- [Konfigurace diagnostických dat Windows ve vaší organizaci](/windows/privacy/configure-windows-diagnostic-data-in-your-organization)  
 
 > [!NOTE]
 > Klienti, kteří jsou nakonfigurováni k odesílání **nepovinných (omezených)** diagnostických dat, budou do cloudu Microsoftu při počátečním úplném prohledávání posílat přibližně 2 MB dat. Denní rozdíl se liší od 250-400 KB za den.
@@ -111,7 +111,7 @@ Nakonfigurovat zařízení tak, aby používala kontext přihlášeného uživat
 - Ujistěte se, že uživatelé mají oprávnění k přístupu k koncovým bodům diagnostických dat. Tato možnost vyžaduje, aby zařízení měla uživatele konzoly s oprávněními proxy serveru, takže tuto metodu nemůžete použít u zařízení bez periferních zařízení.
 
 > [!IMPORTANT]
-> Přístup k ověřování pomocí uživatelského proxy serveru je nekompatibilní s používáním rozšířené ochrany před internetovými útoky v programu Microsoft Defender. Toto chování je způsobeno tím, že toto ověřování spoléhá na klíč registru **DisableEnterpriseAuthProxy** nastavený na `0` , zatímco ATP programu Microsoft Defender vyžaduje, aby byl nastaven na `1` . Další informace najdete v tématu [Konfigurace nastavení připojení počítače a připojení k Internetu v ochraně ATP v programu Microsoft Defender](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/configure-proxy-internet-windows-defender-advanced-threat-protection).
+> Přístup k ověřování pomocí uživatelského proxy serveru je nekompatibilní s používáním rozšířené ochrany před internetovými útoky v programu Microsoft Defender. Toto chování je způsobeno tím, že toto ověřování spoléhá na klíč registru **DisableEnterpriseAuthProxy** nastavený na `0` , zatímco ATP programu Microsoft Defender vyžaduje, aby byl nastaven na `1` . Další informace najdete v tématu [Konfigurace nastavení připojení počítače a připojení k Internetu v ochraně ATP v programu Microsoft Defender](/windows/security/threat-protection/windows-defender-atp/configure-proxy-internet-windows-defender-advanced-threat-protection).
 
 ### <a name="device-proxy-authentication"></a>Ověřování proxy zařízení
 
@@ -127,7 +127,7 @@ Tento přístup je nejsložitější, protože vyžaduje následující konfigur
 
 - Ujistěte se, že zařízení mají přístup k proxy server prostřednictvím služby WinHTTP v kontextu místního systému. Pro konfiguraci tohoto chování použijte jednu z následujících možností:
 
-  - Příkazový řádek`netsh winhttp set proxy`
+  - Příkazový řádek `netsh winhttp set proxy`
 
   - Protokol WPAD (Web Proxy Auto-Discovery)
 
@@ -137,4 +137,4 @@ Tento přístup je nejsložitější, protože vyžaduje následující konfigur
 
   - Směrované připojení nebo použití překladu síťových adres (NAT)
 
-- Nakonfigurujte proxy servery tak, aby umožňovaly účtům počítačů ve službě Active Directory přístup k koncovým bodům dat diagnostiky. Tato konfigurace vyžaduje, aby proxy servery podporovaly integrované ověřování systému Windows.  
+- Nakonfigurujte proxy servery tak, aby umožňovaly účtům počítačů ve službě Active Directory přístup k koncovým bodům dat diagnostiky. Tato konfigurace vyžaduje, aby proxy servery podporovaly integrované ověřování systému Windows.

@@ -10,12 +10,12 @@ ms.assetid: 72d1ccd5-3763-4f88-9273-e1a73e8f4286
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2c5fdc15ba05786c25361c394bc0aa8dc305d666
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 73acd43ef9d7924682de9df66487c5a04297e640
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88124249"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697496"
 ---
 # <a name="install-software-updates"></a>Instalovat aktualizace softwaru
 
@@ -47,7 +47,7 @@ Mnoho souborů imagí obsahuje několik indexů, například pro různé edice s
 
 Počínaje verzí 1902 tento proces Automatizujte při přidání image operačního systému do lokality. Další informace najdete v tématu [Přidání image operačního systému](../get-started/manage-operating-system-images.md#BKMK_AddOSImages).<!--3719699-->
 
-### <a name="reduce-image-size"></a><a name="bkmk_resetbase"></a>Zmenšit velikost obrázku
+### <a name="reduce-image-size"></a><a name="bkmk_resetbase"></a> Zmenšit velikost obrázku
 
 Při použití aktualizací softwaru na bitovou kopii optimalizuje výstup odebráním jakýchkoli nahrazených aktualizací. Použijte nástroj příkazového řádku DISM, například:
 
@@ -68,7 +68,7 @@ Při návrhu procesu vytváření bitových kopií je k dispozici několik možn
 - [Použití offline údržby](#bkmk_offline)  
 - [Použít pouze výchozí obrázek](#bkmk_installwim)
 
-### <a name="periodically-recapture-the-image"></a><a name="bkmk_goldimage"></a>Pravidelně znovu zachytit image
+### <a name="periodically-recapture-the-image"></a><a name="bkmk_goldimage"></a> Pravidelně znovu zachytit image
 
 Máte automatizovaný proces automatického zachycení vlastní image operačního systému v pravidelných intervalech. Toto pořadí úloh zachycení nainstaluje nejnovější aktualizace softwaru. Tyto aktualizace můžou zahrnovat kumulativní, nekumulativní a další důležité aktualizace, jako je například aktualizace služby Servicing (cestou nadřazené). Pořadí úkolů nasazení nainstaluje další aktualizace od zachytávání.
 
@@ -88,7 +88,7 @@ Další informace o tomto procesu najdete v tématu [Vytvoření pořadí úkol�
 - Doba testování prostřednictvím předprodukčních prostředí může být delší než cyklus oprav operačního systému, který může mít nepodstatný aktualizovaný obraz.
 
 
-### <a name="use-offline-servicing"></a><a name="bkmk_offline"></a>Použití offline údržby
+### <a name="use-offline-servicing"></a><a name="bkmk_offline"></a> Použití offline údržby
 
 Naplánujte Configuration Manager pro použití aktualizací softwaru pro image.
 
@@ -107,7 +107,7 @@ Další informace najdete v tématu [použití aktualizací softwaru pro obráze
 - Podporuje pouze aktualizace založené na modelu CBS. Nejde použít aktualizace Microsoft 365 Apps.
 
 > [!Tip]  
-> Výběr aktualizací softwaru můžete automatizovat pomocí prostředí PowerShell. Seznam aktualizací získáte pomocí rutiny [Get-CMSoftwareUpdate](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmsoftwareupdate?view=sccm-ps) . Pak pomocí rutiny [New-CMOperatingSystemImageUpdateSchedule](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmoperatingsystemimageupdateschedule?view=sccm-ps) vytvořte plán údržby offline. Následující příklad ukazuje jednu metodu pro automatizaci této akce:
+> Výběr aktualizací softwaru můžete automatizovat pomocí prostředí PowerShell. Seznam aktualizací získáte pomocí rutiny [Get-CMSoftwareUpdate](/powershell/module/configurationmanager/get-cmsoftwareupdate?view=sccm-ps) . Pak pomocí rutiny [New-CMOperatingSystemImageUpdateSchedule](/powershell/module/configurationmanager/new-cmoperatingsystemimageupdateschedule?view=sccm-ps) vytvořte plán údržby offline. Následující příklad ukazuje jednu metodu pro automatizaci této akce:
 >
 > ```PowerShell
 > # Get the OS image
@@ -123,7 +123,7 @@ Další informace najdete v tématu [použití aktualizací softwaru pro obráze
 > ```
 
 
-### <a name="use-default-image-only"></a><a name="bkmk_installwim"></a>Použít pouze výchozí obrázek
+### <a name="use-default-image-only"></a><a name="bkmk_installwim"></a> Použít pouze výchozí obrázek
 
 V pořadí úloh nasazení použijte výchozí soubor bitové kopie Windows Install. wim.
 
@@ -197,7 +197,7 @@ Diagram obsahuje dvě proměnné časového limitu, které se vztahují k tomuto
 
 
 
-## <a name="troubleshooting"></a>Poradce při potížích
+## <a name="troubleshooting"></a>Řešení potíží
 
 Následující zdroje informací a další informace vám pomůžou při řešení problémů s tímto krokem:
 
@@ -207,7 +207,7 @@ Následující zdroje informací a další informace vám pomůžou při řešen
 
 - Pomoc při odstraňování potíží s procesem správy aktualizací softwaru najdete v tématu [řešení potíží se softwarem Update Management](https://support.microsoft.com/help/10680/software-update-management-troubleshooting-in-configuration-manager).  
 
-- Chcete-li zvýšit celkový výkon, zmenšete velikost katalogu aktualizací softwaru. Například:  
+- Chcete-li zvýšit celkový výkon, zmenšete velikost katalogu aktualizací softwaru. Příklad:  
 
     - Odeberte zbytečné klasifikace, produkty a jazyky. Další informace najdete v tématu [Konfigurace klasifikací a produktů k synchronizaci](../../sum/get-started/configure-classifications-and-products.md).  
 

@@ -10,12 +10,12 @@ ms.assetid: 7a2abb79-9ae5-4a25-9e18-5dcf528de3bf
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3ee640a70eea9f2e8470e852409911d28e542bc2
-ms.sourcegitcommit: 1d8bf691780b94a945e94945115d4d1df4242808
+ms.openlocfilehash: b1bc72a3691e4a6f47c29a5a91ef11c92f0f7e7c
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84663365"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693280"
 ---
 # <a name="best-practices-for-collections-in-configuration-manager"></a>Osvědčené postupy pro kolekce v Configuration Manager
 
@@ -45,7 +45,7 @@ V případě zaneprázdněného Configuration Managerho prostředí můžete zle
 
 Mějte na paměti, jak graf hodnocení kolekce funguje, abyste mohli navrhnout vhodnou strukturu kolekce. Nespoléhá se na úplné vyhodnocení shromažďování dat, aby se vždy aktualizovaly všechny kolekce. Pokud se přírůstkově aktualizuje aktualizace kolekce podle plánu, nemusí se aktualizace na kolekce, které nejsou povolené pro přírůstkové aktualizace, aktualizovat. Vzhledem k tomu, že během přírůstkových hodnocení pravděpodobně došlo k aktualizacím, úplné vyhodnocení nemusí aktualizovat kolekci a ukončit graf vyhodnocení kolekce pro daný cyklus. V takovém případě nejsou k dispozici žádná referenční hodnocení kolekce. Další informace najdete v tématu [graf vyhodnocení kolekce](collection-evaluation.md#collection-evaluation-graph).
 
-## <a name="limit-incremental-updates"></a><a name="bkmk_incremental"></a>Omezení přírůstkových aktualizací
+## <a name="limit-incremental-updates"></a><a name="bkmk_incremental"></a> Omezení přírůstkových aktualizací
 
 Povolení přírůstkových aktualizací pro mnoho kolekcí může způsobit zpoždění při vyhodnocování. Je nejvhodnější omezit počet přírůstkově aktualizovaných kolekcí na 200. Přesné číslo závisí na:
 
@@ -96,7 +96,7 @@ Slevy
 
 ## <a name="use-ceviewer-to-monitor-collection-evaluation"></a>Monitorování hodnocení kolekce pomocí CEViewer
 
-Pomocí [nástroje CEViewer (Collection Evaluation Viewer)](https://docs.microsoft.com/mem/configmgr/core/support/ceviewer) můžete monitorovat počet vyhodnocených kolekcí a dobu, po kterou se jednotlivé kolekce aktualizují. CEViewer je na *disku CD-ROM. Poslední* složka na serveru lokality.
+Pomocí [nástroje CEViewer (Collection Evaluation Viewer)](../../../support/ceviewer.md) můžete monitorovat počet vyhodnocených kolekcí a dobu, po kterou se jednotlivé kolekce aktualizují. CEViewer je na *disku CD-ROM. Poslední* složka na serveru lokality.
 
 Chcete-li ručně provést podobnou kontrolu s SQL, můžete použít následující dotaz:
 
@@ -111,5 +111,3 @@ FROM (
 WHERE ([t2].[IncrementalEvaluationStartTime] IS NOT NULL) AND ([t2].[LastIncrementalRefreshTime] IS NOT NULL) and (refreshtype='4' or refreshtype='6')
 ORDER BY [t2].[value] DESC
 ```
-
-

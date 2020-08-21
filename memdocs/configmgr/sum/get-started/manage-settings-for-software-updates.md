@@ -10,14 +10,14 @@ ms.assetid: 0d484c1a-e903-4bff-9e9b-e452c62e38a8
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 2b851c03424af0ba0f826716b401705879338855
-ms.sourcegitcommit: 7a5196d4d9736c5cd52a23155c479523e52a097d
+ms.openlocfilehash: e0395d41c2886bca1d623fb2736bfc86012f89b4
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84436665"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696748"
 ---
-#  <a name="manage-settings-for-software-updates"></a><a name="BKMK_ManageSUSettings"></a>Správa nastavení pro aktualizace softwaru  
+#  <a name="manage-settings-for-software-updates"></a><a name="BKMK_ManageSUSettings"></a> Správa nastavení pro aktualizace softwaru  
 
 *Platí pro: Configuration Manager (Current Branch)*
 
@@ -33,14 +33,14 @@ Informace o konfiguraci nastavení klienta najdete v tématu [Konfigurace nastav
 
 Další informace o nastavení klienta najdete v tématu [informace o nastavení klienta](../../core/clients/deploy/about-client-settings.md).  
 
-##  <a name="group-policy-settings-for-software-updates"></a><a name="BKMK_GroupPolicy"></a>Nastavení zásad skupiny pro aktualizace softwaru  
+##  <a name="group-policy-settings-for-software-updates"></a><a name="BKMK_GroupPolicy"></a> Nastavení zásad skupiny pro aktualizace softwaru  
 Agent webu Windows Update používá na klientských počítačích určitá nastavení zásad skupiny k připojení ke službě WSUS, která běží v bodu aktualizace softwaru. Tato nastavení zásady skupiny se také používají k úspěšnému zjištění shody aktualizací softwaru a k automatické aktualizování aktualizací softwaru a agenta webu Windows Update.
 
 ### <a name="specify-intranet-microsoft-update-service-location-local-policy"></a>Místní zásada Určit umístění intranetového serveru služby Microsoft Update  
 Když je pro lokalitu vytvořený bod aktualizace softwaru, klienti obdrží zásadu počítače, která poskytuje název serveru bodu aktualizace softwaru a konfiguruje místní zásadu **Určit umístění intranetového serveru služby Microsoft Update** na počítači. Agent WUA načte název serveru určený v nastavení **Nastavení intranetové aktualizační služby pro zjišťování aktualizací** a potom se spojí s tímto serverem při zjišťování shody aktualizací softwaru. Pokud se pro položku **Určit umístění intranetového serveru služby Microsoft Update** vytvoří zásada domény, přepíše místní zásadu a agent WUA se může připojit k jinému serveru, než je bod aktualizace softwaru. Pokud k tomu dojde, může klient vyhledat shodu aktualizace softwaru na základě různých produktů, klasifikací a jazyků. Proto byste neměli konfigurovat zásadu služby Active Directory pro klientské počítače.  
 
 ### <a name="allow-signed-content-from-intranet-microsoft-update-service-location-group-policy"></a>Zásada skupiny Povolit podepsaný obsah z umístění intranetové služby Microsoft Update  
-Nastavení zásady skupiny **Povolit podepsané aktualizace z umístění intranetové služby Microsoft Update** musíte povolit předtím, než agent WUA na počítačích vyhledá aktualizace softwaru, které vytvořil a publikoval nástroj System Center Updates Publisher. Když je toto nastavení zásady povolené, agent WUA přijme aktualizace softwaru přijaté z intranetového umístění, pokud jsou aktualizace softwaru podepsané v úložišti certifikátů **Důvěryhodní vydavatelé** na místním počítači. Další informace o nastaveních zásad skupiny požadovaných pro nástroj Updates Publisher najdete v [knihovně dokumentace nástroje Updates Publisher 2011](https://docs.microsoft.com/previous-versions/system-center/updates-publisher-2011/hh134742(v=technet.10)).  
+Nastavení zásady skupiny **Povolit podepsané aktualizace z umístění intranetové služby Microsoft Update** musíte povolit předtím, než agent WUA na počítačích vyhledá aktualizace softwaru, které vytvořil a publikoval nástroj System Center Updates Publisher. Když je toto nastavení zásady povolené, agent WUA přijme aktualizace softwaru přijaté z intranetového umístění, pokud jsou aktualizace softwaru podepsané v úložišti certifikátů **Důvěryhodní vydavatelé** na místním počítači. Další informace o nastaveních zásad skupiny požadovaných pro nástroj Updates Publisher najdete v [knihovně dokumentace nástroje Updates Publisher 2011](/previous-versions/system-center/updates-publisher-2011/hh134742(v=technet.10)).  
 
 ### <a name="automatic-updates-configuration"></a>Konfigurace automatických aktualizací  
 Automatické aktualizace umožňují přijetí aktualizací zabezpečení a dalších důležitých stahovaných souborů na klientských počítačích. Automatické aktualizace se konfigurují prostřednictvím nastavení zásad skupiny **Konfigurovat automatické aktualizace** nebo nabídky Ovládací panely místního počítače. Když je položka Automatické aktualizace povolena, klientské počítače obdrží oznámení a v závislosti na nakonfigurovaných nastaveních si tyto počítače stáhnout a nainstalují potřebné aktualizace. Když jsou Automatické aktualizace umístěny společně s aktualizacemi softwaru, může každý klientský počítač zobrazit ikony oznámení a místní kontextová oznámení pro stejnou aktualizaci. Je-li požadováno restartování, může každý klientský počítač zobrazit dialogové okno restartování pro stejnou aktualizaci.  
@@ -62,7 +62,7 @@ Pomocí následujícího postupu můžete otevřít vlastnosti aktualizací soft
    > [!NOTE]  
    >  V uzlu **všechny aktualizace softwaru** Configuration Manager zobrazí pouze aktualizace softwaru s klasifikací **kritické** a **zabezpečení** , které byly vydány v posledních 30 dnech.  
 
-###  <a name="review-software-updates-information"></a><a name="BKMK_SoftwareUpdatesInformation"></a>Kontrola informací o aktualizacích softwaru  
+###  <a name="review-software-updates-information"></a><a name="BKMK_SoftwareUpdatesInformation"></a> Kontrola informací o aktualizacích softwaru  
 Ve vlastnostech aktualizací softwaru můžete zkontrolovat podrobné informace o aktualizaci softwaru. Podrobné informace se nezobrazí, pokud vyberete více než jednu aktualizaci softwaru. Následující části popisují informace, které jsou dostupné pro vybranou aktualizaci softwaru.  
 
 ####  <a name="software-update-details"></a><a name="BKMK_SoftwareUpdateDetails"></a> Podrobnosti o aktualizacích softwaru  
@@ -139,4 +139,4 @@ V případě použití musí být Kontrola CRL povolena v Configuration Manager 
 #### <a name="to-enable-crl-checking"></a>Povolení kontroly seznamu CRL  
 Na počítači provádějícím kontrolu seznamu CRL z disku DVD s produktem spusťte následující příkaz z příkazového řádku: **\SMSSETUP\BIN\X64 \\ ** < *Language* > **\UpdDwnldCfg.exe/checkrevocation**.  
 
-Například pro angličtinu (US) spusťte **\SMSSETUP\BIN\X64\00000409\UpdDwnldCfg.exe/checkrevocation**  
+Například pro angličtinu (US) spusťte **\SMSSETUP\BIN\X64\00000409\UpdDwnldCfg.exe/checkrevocation**

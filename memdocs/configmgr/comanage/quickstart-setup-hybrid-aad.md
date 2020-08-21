@@ -10,12 +10,12 @@ ms.assetid: 27dd26d1-e99c-4431-b2f8-60406394b6db
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8e2f7bbb51c72fa3d0f2a36e8a5419552d468b4c
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 405303b3988e8c853ba30e8fb6d620d782b0474e
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81711473"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694895"
 ---
 # <a name="set-up-hybrid-azure-ad-for-co-management"></a>Nastavení hybridní služby Azure AD pro spolusprávu
 
@@ -26,8 +26,8 @@ V následujícím videu se vedoucí program Sandeep DEO a produkt marketingový 
 > [!VIDEO https://channel9.msdn.com/Series/Endpoint-Zone/Configuring-Devices-in-Azure-Active-Directory/player]
 
 Proces připojení Hybrid Azure AD automaticky registruje vaše místní zařízení připojená k doméně pomocí Azure AD. Další informace o tomto procesu najdete v následujících článcích:
-- [Úvod do správy zařízení v Azure Active Directory](https://docs.microsoft.com/azure/active-directory/device-management-introduction) 
-- [Jak naplánovat připojení k hybridní službě Azure AD](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan)
+- [Úvod do správy zařízení v Azure Active Directory](/azure/active-directory/device-management-introduction) 
+- [Jak naplánovat připojení k hybridní službě Azure AD](/azure/active-directory/devices/hybrid-azuread-join-plan)
 
 Hybridní připojení k Azure AD je jednou z klíčových základů pro spolusprávu. Tento proces může být pro některé zákazníky náročný, například:
 - Vaše organizace používá řešení identity od jiného výrobce. 
@@ -41,14 +41,14 @@ Hybridní připojení k Azure AD je jednou z klíčových základů pro spoluspr
 Zařízení se podobají uživatelům při vytváření identity, kterou chcete chránit. Chcete-li chránit identitu zařízení kdykoli a v jakémkoli umístění, musíte uvést identitu tohoto zařízení do služby Azure AD.
 
 Na základě typu domény, kterou používáte, existují dva hlavní způsoby, jak to provést. Nakonfigurujte hybridní připojení ke službě Azure AD pro jeden z následujících typů domén:  
-- [Federované domény](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-federated-domains)  
-- [Spravované domény](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-managed-domains)  
+- [Federované domény](/azure/active-directory/devices/hybrid-azuread-join-federated-domains)  
+- [Spravované domény](/azure/active-directory/devices/hybrid-azuread-join-managed-domains)  
 
 Tyto dvě předchozí metody poskytují nejlepší prostředí. Podrobnější informace, včetně úplného ručního procesu, najdete v následujících článcích:
-- [Ruční konfigurace zařízení připojených k hybridní službě Azure AD](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup)  
-- [Předávací ověřování ADFS pro hybridní službu Azure AD](https://docs.microsoft.com/windows-server/identity/ad-fs/ad-fs-overview), která zahrnuje zjišťování Azure AD  
+- [Ruční konfigurace zařízení připojených k hybridní službě Azure AD](/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup)  
+- [Předávací ověřování ADFS pro hybridní službu Azure AD](/windows-server/identity/ad-fs/ad-fs-overview), která zahrnuje zjišťování Azure AD  
 
-Pokyny k odstraňování potíží najdete v tématu [Průvodce řešením potíží se službou Azure AD Hybrid pro připojení k Windows 10](https://docs.microsoft.com/azure/active-directory/devices/troubleshoot-hybrid-join-windows-current).
+Pokyny k odstraňování potíží najdete v tématu [Průvodce řešením potíží se službou Azure AD Hybrid pro připojení k Windows 10](/azure/active-directory/devices/troubleshoot-hybrid-join-windows-current).
 
 
 
@@ -66,5 +66,4 @@ Po úspěšném nasazení a testování v předprodukčním prostředí je tento
 
 Pokud potřebujete pomoc s nastavením Azure AD kdykoli během procesu, přejděte na [Microsoft FastTrack](https://Microsoft.com/FastTrack/), přihlaste se a požádejte o pomoc. 
 
-Další informace najdete v tématu [získání Nápověda z FastTrack](quickstart-fasttrack.md). 
-
+Další informace najdete v tématu [získání Nápověda z FastTrack](quickstart-fasttrack.md).

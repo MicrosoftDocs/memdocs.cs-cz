@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 5ddde4e6-d553-4182-b752-6bc8b4a26745
-ms.openlocfilehash: a5254ba5a25b10df2943eaa7f80b32b17ea3680f
-ms.sourcegitcommit: 8fc7f2864c5e3f177e6657b684c5f208d6c2a1b4
+ms.openlocfilehash: 7dc3ef2ceb22f1c15c96127c593965ea31bdd7eb
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88591489"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696816"
 ---
 # <a name="configure-classifications-and-products-to-synchronize"></a>Konfigurace klasifikací a produktů k synchronizaci  
 
@@ -126,10 +126,10 @@ Od září 2019 můžete obsluhovat a aktualizovat zařízení s Windows Insider
 
 Další informace o podpoře Windows Insider v Configuration Manager najdete v tématu [Podpora pro Windows 10](../../core/plan-design/configs/support-for-windows-10.md#bkmk_WIfB-support).
 
-### <a name="prerequisites"></a>Požadavky
+### <a name="prerequisites"></a>Předpoklady
 
 - Configuration Manager verze 1906 nebo vyšší, nakonfigurované pro [správu aktualizací softwaru](../plan-design/plan-for-software-updates.md).
-- Zařízení s Windows 10 s [buildem Windows Insider Preview](https://docs.microsoft.com/windows-insider/at-work-pro/wip-4-biz-get-started)
+- Zařízení s Windows 10 s [buildem Windows Insider Preview](/windows-insider/at-work-pro/wip-4-biz-get-started)
 - Kolekce obsahující zařízení Windows Insider
 
 ### <a name="enable-windows-insider-upgrades-and-updates"></a>Povolit upgrady a aktualizace Windows Insider
@@ -160,7 +160,7 @@ Nasaďte aktualizace funkcí pro Windows Insider do cílové kolekce stejně jak
 - Existují licenční podmínky, vaše nasazení musí přijmout podmínky, aby je bylo možné nainstalovat.
 - Zvažte použití [priority vlákna v nastavení klienta](../../core/clients/deploy/about-client-settings.md#bkmk_thread-priority).
 - Dynamická aktualizace automaticky nainstaluje důležité aktualizace, včetně nejnovější kumulativní aktualizace, přímo z Microsoft Update. Toto chování začalo s aktualizacemi funkcí pro Windows 10 verze 1903. 
-  - [Dynamickou aktualizaci můžete explicitně zakázat v nastavení klienta](../../core/clients/deploy/about-client-settings.md#bkmk_du) nebo pomocí [souborusetupconfig.ini](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options). 
+  - [Dynamickou aktualizaci můžete explicitně zakázat v nastavení klienta](../../core/clients/deploy/about-client-settings.md#bkmk_du) nebo pomocí [souborusetupconfig.ini](/windows-hardware/manufacture/desktop/windows-setup-command-line-options). 
   - Další informace najdete v blogovém příspěvku s [dynamickými aktualizacemi Windows 10](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/The-benefits-of-Windows-10-Dynamic-Update/ba-p/467847) .
 
 Další informace o tom, jak nasadit upgrady, najdete v tématu [Správa systému Windows jako služby](../../osd/deploy-use/manage-windows-as-a-service.md).

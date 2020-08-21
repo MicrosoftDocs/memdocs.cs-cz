@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: f6087011a0390997d704278af6ffd5e6071bf031
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: e0f2801a9bf3d587d0117a720f4151f431441291
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129014"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692821"
 ---
 # <a name="what39s-new-in-version-1706-of-configuration-manager"></a>Co&#39;s novinkou ve verzi 1706 Configuration Manager
 
@@ -193,7 +193,7 @@ Od této verze můžete použít tři nová nastavení zásad správy mobilních
 ## <a name="operating-system-deployment"></a>Nasazení operačního systému
 
 ### <a name="hardware-inventory-collects-secure-boot-information"></a>Inventář hardwaru shromažďuje informace o zabezpečeném spuštění.
-Inventář hardwaru nyní shromažďuje informace o tom, zda je na klientech povoleno zabezpečené spouštění. Tyto informace jsou uloženy ve třídě **SMS_Firmware** (představené ve verzi 1702) a jsou ve výchozím nastavení povoleny v inventáři hardwaru. Další informace o inventáři hardwaru najdete v tématu [Konfigurace inventáře hardwaru](../../clients/manage/inventory/configure-hardware-inventory.md).
+Inventář hardwaru nyní shromažďuje informace o tom, zda je na klientech povoleno zabezpečené spouštění. Tyto informace jsou uloženy ve třídě **SMS_Firmware** (představené ve verzi 1702) a jsou ve výchozím nastavení povoleny v inventáři hardwaru. Další informace o inventáři hardwaru najdete v tématu  [Konfigurace inventáře hardwaru](../../clients/manage/inventory/configure-hardware-inventory.md).
 
 ### <a name="collapsible-task-sequence-groups"></a>Sbalitelné skupiny pořadí úloh
 Tato verze přináší možnost Rozbalit a sbalit skupiny pořadí úloh. Můžete rozbalit nebo sbalit jednotlivé skupiny nebo rozbalit nebo sbalit všechny skupiny najednou.
@@ -211,9 +211,9 @@ V této verzi jsme výrazně vylepšili dobu stahování expresních aktualizac�
 Teď můžete pomocí Configuration Manager spravovat aktualizace ovladačů Microsoft Surface.    
 
 
-#### <a name="prerequisites"></a>Požadavky
+#### <a name="prerequisites"></a>Předpoklady
 - Všechny body aktualizace softwaru musí používat systém Windows Server 2016.    
-- Toto je předběžná verze funkce, kterou musíte zapnout, aby byla dostupná. Další informace najdete v tématu [Použití předběžných verzí funkcí z aktualizací](https://docs.microsoft.com/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease).
+- Toto je předběžná verze funkce, kterou musíte zapnout, aby byla dostupná. Další informace najdete v tématu [Použití předběžných verzí funkcí z aktualizací](/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease).
 
 #### <a name="to-manage-surface-driver-updates"></a>Správa aktualizací ovladačů Surface
 
@@ -230,7 +230,7 @@ Podrobnosti najdete v tématu [integrace s web Windows Update pro firmy ve Windo
 ### <a name="improved-user-notifications-for-office-365-updates"></a>Vylepšená uživatelská oznámení pro aktualizace Office 365
 V případě, že klient nainstaluje aktualizaci Office 365, provedli jsme vylepšení využití uživatelského prostředí Klikni a spusť pro Office. To zahrnuje automaticky otevíraná okna a oznámení v aplikaci a možnosti odpočítávání. Další informace najdete v tématu [chování při restartování a oznámení klientů pro aktualizace Office 365](../../../sum/deploy-use/manage-office-365-proplus-updates.md) .
 
-## <a name="reporting"></a>Generování sestav
+## <a name="reporting"></a>Vytváření sestav
 
 ### <a name="use-windows-analytics-with-configuration-manager"></a>Použití Windows Analytics s Configuration Manager
 <!-- 1318608 -->

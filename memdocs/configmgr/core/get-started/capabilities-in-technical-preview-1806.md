@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 4708c0d8e9a7d2a3b87310b64311d67d8b84a16a
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 44fcea129b6f45c292bcdd6b83004131ce2d4e96
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88126786"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694419"
 ---
 # <a name="capabilities-in-technical-preview-1806-for-configuration-manager"></a>Funkce ve verzi Technical Preview 1806 pro Configuration Manager
 
@@ -39,7 +39,7 @@ Steps to workaround, if any.
 -->
 ## <a name="known-issues-in-this-technical-preview"></a>Známé problémy v této verzi Technical Preview
 
-### <a name="site-fails-to-upgrade-with-remote-content-library"></a><a name="ki_contentlib"></a>Lokalita se nezdařila při upgradu se vzdálenou knihovnou obsahu
+### <a name="site-fails-to-upgrade-with-remote-content-library"></a><a name="ki_contentlib"></a> Lokalita se nezdařila při upgradu se vzdálenou knihovnou obsahu
 <!--514642-->
 Lokalita se nemůže upgradovat s následujícími chybami v **CMUpdate. log**:  
 
@@ -62,7 +62,7 @@ Přesuňte knihovnu obsahu na jednotku, která je místní, do serveru lokality.
 
 
 
-## <a name="third-party-software-updates"></a><a name="bkmk-3pupdate"></a>Aktualizace softwaru třetích stran
+## <a name="third-party-software-updates"></a><a name="bkmk-3pupdate"></a> Aktualizace softwaru třetích stran
 <!--1352101-->
 Tato verze dále prochází podporu aktualizací softwaru třetích stran v důsledku vaší [zpětné vazby](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/8803711-3rd-party-patching-scup-integration-with-sccm-co)na webu UserVoice. Pro některé běžné scénáře už nevyžadujete použití System Center Updates Publisher (SCUP). Nový uzel **katalogy aktualizací softwaru třetích stran** v konzole Configuration Manager umožňuje přihlásit se k odběru katalogů třetích stran, publikovat aktualizace do bodu aktualizace softwaru a pak je nasadit do klientů. 
 
@@ -75,16 +75,16 @@ V této verzi jsou k dispozici následující katalogy aktualizací softwaru tř
 SCUP nadále podporuje i další katalogy a scénáře. Seznam katalogů v uzlu katalogy aktualizací softwaru třetích stran konzoly Configuration Manager je dynamický a bude aktualizován, protože jsou k dispozici a podporovány další katalogy.
 
 
-### <a name="prerequisites"></a>Požadavky
+### <a name="prerequisites"></a>Předpoklady
 - Nastavte správu aktualizací softwaru s bodem aktualizace softwaru s povoleným protokolem HTTPS. Další informace najdete v tématu [Příprava na správu aktualizací softwaru](../../sum/get-started/prepare-for-software-updates-management.md).  
   - Bod aktualizace softwaru musí být na serveru lokality pro tuto funkci v této verzi. <!--515810--> 
 
     > [!Tip]  
     > Bod aktualizace softwaru vyžaduje protokol HTTPS, protože se jedná o požadavek na rozhraní API služby WSUS použitá ke zpracování podpisových certifikátů. Klienti nemusí být povoleni také pomocí protokolu HTTPS. Další informace o povolení HTTPS na serveru WSUS najdete v následujících článcích o pomoc:  
-    > - [Zabezpečení služby WSUS pomocí protokolu SSL](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#25-secure-wsus-with-the-secure-sockets-layer-protocol) 
-    > - [Příspěvek na blog podpory služby WSUS](https://docs.microsoft.com/archive/blogs/sus/how-to-create-an-internet-facing-wsus-server-that-uses-different-internal-and-external-names)
+    > - [Zabezpečení služby WSUS pomocí protokolu SSL](/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#25-secure-wsus-with-the-secure-sockets-layer-protocol) 
+    > - [Příspěvek na blog podpory služby WSUS](/archive/blogs/sus/how-to-create-an-internet-facing-wsus-server-that-uses-different-internal-and-external-names)
 
-- V bodu aktualizace softwaru je dostatek místa na disku pro uložení zdrojového binárního obsahu pro aktualizace softwaru třetích stran. Velikost požadovaného úložiště se liší v závislosti na dodavateli, typech aktualizací a konkrétních aktualizacích, které publikujete pro nasazení. Pokud potřebujete přesunout složku WSUSContent na jinou jednotku s větším množstvím volného místa, přečtěte si blog týmu podpory služby WSUS, [kde můžete změnit umístění, kam služba WSUS ukládá aktualizace místně](https://docs.microsoft.com/archive/blogs/sus/wsus-how-to-change-the-location-where-wsus-stores-updates-locally).  
+- V bodu aktualizace softwaru je dostatek místa na disku pro uložení zdrojového binárního obsahu pro aktualizace softwaru třetích stran. Velikost požadovaného úložiště se liší v závislosti na dodavateli, typech aktualizací a konkrétních aktualizacích, které publikujete pro nasazení. Pokud potřebujete přesunout složku WSUSContent na jinou jednotku s větším množstvím volného místa, přečtěte si blog týmu podpory služby WSUS, [kde můžete změnit umístění, kam služba WSUS ukládá aktualizace místně](/archive/blogs/sus/wsus-how-to-change-the-location-where-wsus-stores-updates-locally).  
 
 - Povolte a nasaďte nastavení klienta [Povolit aktualizace softwaru třetích stran](../clients/deploy/about-client-settings.md#enable-third-party-software-updates) ve skupině **aktualizace softwaru** .  
 
@@ -233,7 +233,7 @@ Nyní můžete aktualizace softwaru nasadit do zařízení bez předchozího sta
 <!--1358149-->
 Nástroj pro přizpůsobení sady Office je nyní integrovaný s instalačním programem sady Office 365 v konzole Configuration Manager. Při vytváření nasazení pro Office 365 teď můžete dynamicky konfigurovat nejnovější nastavení spravovatelnosti Office. Nástroj pro přizpůsobení sady Office je aktualizován ve stejnou dobu jako vydání nových sestavení sady Office 365. Teď můžete využít nové nastavení spravovatelnosti v Office 365, jakmile budou k dispozici. 
 
-### <a name="prerequisites"></a>Požadavky
+### <a name="prerequisites"></a>Předpoklady
 - Počítač se spuštěnou konzolou Configuration Manager potřebuje přístup přes Internet přes port HTTPS 443. Průvodce instalací klienta Office 365 používá rozhraní API standardního webového prohlížeče Windows pro otevření https://config.office.com . Pokud se použije internetový proxy server, musí být uživatel schopný získat přístup k této adrese URL.
 
 ### <a name="try-it-out"></a>Určitě to udělejte!
@@ -354,4 +354,4 @@ Ve [Configuration Manager verze 1710](../plan-design/changes/whats-new-in-versio
 
 
 ## <a name="next-steps"></a>Další kroky
-Informace o instalaci nebo aktualizaci větve Technical Preview najdete v tématu [Technical Preview pro Configuration Manager](technical-preview.md).    
+Informace o instalaci nebo aktualizaci větve Technical Preview najdete v tématu [Technical Preview pro Configuration Manager](technical-preview.md).

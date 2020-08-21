@@ -10,12 +10,12 @@ ms.assetid: ddcad9f2-a542-4079-83ca-007d7cb44995
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: df6f550b21523e365055f6a4cdafadca7603c4bf
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 63db181bd145ea2fa14f206e94c521b65f7e7354
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906371"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695150"
 ---
 # <a name="deploy-app-v-virtual-applications-with-configuration-manager"></a>Nasazení virtuálních aplikací App-V pomocí Configuration Manager
 
@@ -31,7 +31,7 @@ Pokud ke správě virtuálních aplikací použijete Configuration Manager, zís
 
 -   Nasazení operačního systému, inventář softwaru a hardwaru, měření softwaru a funkce Asset Intelligence pro podporu virtuálních aplikací  
 
-Další informace o tom, jak vytvářet a sekvencovat aplikace pomocí Microsoft Application Virtualization (App-V), najdete v [dokumentaci k Application Virtualization 4](https://docs.microsoft.com/microsoft-desktop-optimization-pack/appv-v4/).  
+Další informace o tom, jak vytvářet a sekvencovat aplikace pomocí Microsoft Application Virtualization (App-V), najdete v [dokumentaci k Application Virtualization 4](/microsoft-desktop-optimization-pack/appv-v4/).  
 
 Kromě dalších Configuration Manager požadavků a postupů pro vytváření aplikací musíte při vytváření a nasazování virtuálních aplikací vzít v úvahu následující skutečnosti:
 
@@ -65,9 +65,9 @@ Kromě dalších Configuration Manager požadavků a postupů pro vytváření a
 
 Další informace o App-V ve Windows 10 najdete v následujících tématech:
 
-- [Co je nového v App-V](https://docs.microsoft.com/windows/application-management/app-v/appv-about-appv)
-- [Začínáme s App-V pro Windows 10](https://docs.microsoft.com/windows/application-management/app-v/appv-getting-started)
-- [Upgrade na aplikaci App-V pro Windows 10 z existující instalace](https://docs.microsoft.com/windows/application-management/app-v/appv-upgrading-to-app-v-for-windows-10-from-an-existing-installation)
+- [Co je nového v App-V](/windows/application-management/app-v/appv-about-appv)
+- [Začínáme s App-V pro Windows 10](/windows/application-management/app-v/appv-getting-started)
+- [Upgrade na aplikaci App-V pro Windows 10 z existující instalace](/windows/application-management/app-v/appv-upgrading-to-app-v-for-windows-10-from-an-existing-installation)
 
 ##  <a name="steps-to-manage-app-v-virtual-applications"></a>Kroky týkající se správy virtuálních aplikací App-V  
  Pokud chcete spravovat virtuální aplikace App-V, použijte následující postup:  
@@ -147,7 +147,7 @@ Pro použití této funkce se Configuration Manager musí být nasazeny a regist
 Další informace o funkci App-V Dynamic Suite Composition najdete v dokumentaci k App-V.  
 
 ##  <a name="converting-app-v-46-applications-to-app-v-5-applications"></a>Převod aplikací sady App-V 4.6 na aplikace sady App-V 5  
-Formát balíčku aplikace se mezi verzemi sady App-V 4.6 a App-V 5 změnil. Aplikace, které mají stanovené pořadí pomocí sady App-V 4.6, již podporovány nejsou. Sada App-V 5 ale obsahuje nástroj pro převádění balíčků, který můžete použít k převodu aplikací. Další informace najdete v tématu [Postup převodu balíčku vytvořeného v předchozí verzi sady App-V](https://docs.microsoft.com/microsoft-desktop-optimization-pack/appv-v5/how-to-convert-a-package-created-in-a-previous-version-of-app-v).  
+Formát balíčku aplikace se mezi verzemi sady App-V 4.6 a App-V 5 změnil. Aplikace, které mají stanovené pořadí pomocí sady App-V 4.6, již podporovány nejsou. Sada App-V 5 ale obsahuje nástroj pro převádění balíčků, který můžete použít k převodu aplikací. Další informace najdete v tématu [Postup převodu balíčku vytvořeného v předchozí verzi sady App-V](/microsoft-desktop-optimization-pack/appv-v5/how-to-convert-a-package-created-in-a-previous-version-of-app-v).  
 
 Při převodu aplikací sady App-V 4.6 na aplikace sady App-V 5 postupujte podle následujících kroků:  
 
@@ -178,7 +178,7 @@ Konfigurační soubor nasazení obsahuje nastavení, která platí pro počíta�
 
 Chcete-li nasadit virtuální aplikace sady App-V 5 s Configuration Manager, všechny tři soubory musí být při vytvoření typu nasazení sady App-V 5 přítomny ve stejné složce. Pokud se ve složce nachází několik souborů, Configuration Manager použije nejnovější.  
 
-Další informace najdete v tématu [o dynamické konfiguraci sady App-V 5,0](https://docs.microsoft.com/microsoft-desktop-optimization-pack/appv-v5/about-app-v-50-dynamic-configuration).  
+Další informace najdete v tématu [o dynamické konfiguraci sady App-V 5,0](/microsoft-desktop-optimization-pack/appv-v5/about-app-v-50-dynamic-configuration).  
 
 ##  <a name="app-v-local-interaction"></a> Místní interakce sady App-V  
 V některých scénářích nasazení aplikací se aplikace instalují místně na klientských počítačích a jiné aplikace se nasazují na stejný klientský počítač jako virtuální aplikace. Ve výchozím nastavení nemohou aplikace nainstalované lokálně vidět virtualizované aplikace přímo nebo s nimi komunikovat. Toto je zamýšlené chování izolace aplikace, které poskytuje App-V. Místní interakce je funkce klienta sady App-V, kterou můžete povolit pro každou aplikaci, aby umožňovala zobrazení a komunikaci s virtualizovanými aplikacemi lokálně nainstalované aplikace, které běží na klientském počítači. Configuration Manager a App-V plně podporují místní interakci.  
@@ -186,14 +186,14 @@ V některých scénářích nasazení aplikací se aplikace instalují místně 
 Další informace o funkci Místní interakce sady App-V najdete v dokumentaci k sadě App-V.  
 
 ##  <a name="app-v-5-shared-content-store"></a>Úložiště sdíleného obsahu sady App-V 5  
-Configuration Manager podporuje funkci úložiště sdíleného obsahu sady App-V 5. Další informace najdete v tématu [Plánování pro Úložiště sdíleného obsahu (SCS) App-V 5.0](https://docs.microsoft.com/microsoft-desktop-optimization-pack/appv-v5/planning-for-the-app-v-50-sequencer-and-client-deployment#planning-for-the-app-v-50-shared-content-store-scs).  
+Configuration Manager podporuje funkci úložiště sdíleného obsahu sady App-V 5. Další informace najdete v tématu [Plánování pro Úložiště sdíleného obsahu (SCS) App-V 5.0](/microsoft-desktop-optimization-pack/appv-v5/planning-for-the-app-v-50-sequencer-and-client-deployment#planning-for-the-app-v-50-shared-content-store-scs).  
 
 ##  <a name="monitoring-virtual-applications"></a>Monitorování virtuálních aplikací  
 
 ### <a name="virtual-application-reports"></a>Sestavy virtuálních aplikací  
 K monitorování sady App-V v prostředí Configuration Manager můžete použít následující sestavy:  
 
-|Název sestavy|Description|  
+|Název sestavy|Popis|  
 |-----------------|-----------------|  
 |Výsledky virtuálního prostředí sady App-V|Zobrazuje informace o vybraném virtuálním prostředí, které je v určeném stavu pro vybranou kolekci (pouze sada App-V 5).|  
 |Výsledky virtuálního prostředí sady App-V pro prostředek|Zobrazuje informace o vybraném virtuálním prostředí pro zadaný prostředek a všechny typy nasazení pro vybrané virtuální prostředí (jenom sady App-V 5).|  
@@ -203,7 +203,7 @@ K monitorování sady App-V v prostředí Configuration Manager můžete použí
 |Počítat všechny instance balíčků virtuální aplikace|Zobrazuje počet všech zjištěných balíčků aplikace App-V (jenom sady App-V 4,6).|  
 |Počítat všechny instance virtuálních aplikací|Zobrazuje počet všech zjištěných aplikací sady App-V (pouze sady App-V 4,6).|  
 
-### <a name="log-files"></a>Soubory protokolů  
+### <a name="log-files"></a>Soubory protokolu  
 Configuration Manager zaznamenává informace o nasazení virtuální aplikace do souborů protokolu. Informace o souborech protokolů, které používají virtuální aplikace a Configuration Manager Správa aplikací, najdete v tématu [soubory protokolu](../../core/plan-design/hierarchy/log-files.md).  
 
-V případě Windows 8.1 vyhledejte v klientovi virtualizace C:\ProgramData\Microsoft\Application protokoly pro klienta sady App-V.  
+V případě Windows 8.1 vyhledejte v klientovi virtualizace C:\ProgramData\Microsoft\Application protokoly pro klienta sady App-V.

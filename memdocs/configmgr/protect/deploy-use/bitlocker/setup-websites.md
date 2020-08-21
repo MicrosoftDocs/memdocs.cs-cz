@@ -10,12 +10,12 @@ ms.assetid: 1cd8ac9f-b7ba-4cf4-8cd2-d548b0d6b1df
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5dbd782c97d11f8077c18796c87c7880eb26f3f3
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: d1b07d30c7a593ec0bd70e6c330c57364186f2c8
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129150"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697258"
 ---
 # <a name="set-up-bitlocker-portals"></a>Nastavení portálů nástroje BitLocker
 
@@ -66,21 +66,21 @@ Na cílovém webovém serveru proveďte následující akce:
 
 Po instalaci přístup k portálům přes následující adresy URL:
 
-- Samoobslužný portál:`https://webserver.contoso.com/SelfService`
-- Web pro správu a monitorování:`https://webserver.contoso.com/HelpDesk`
+- Samoobslužný portál: `https://webserver.contoso.com/SelfService`
+- Web pro správu a monitorování: `https://webserver.contoso.com/HelpDesk`
 
 > [!NOTE]
-> Společnost Microsoft doporučuje, ale nevyžaduje použití protokolu HTTPS. Další informace najdete v tématu [jak nastavit protokol SSL ve službě IIS](https://docs.microsoft.com/iis/manage/configuring-security/how-to-set-up-ssl-on-iis).
+> Společnost Microsoft doporučuje, ale nevyžaduje použití protokolu HTTPS. Další informace najdete v tématu [jak nastavit protokol SSL ve službě IIS](/iis/manage/configuring-security/how-to-set-up-ssl-on-iis).
 
 ## <a name="script-usage"></a>Použití skriptu
 
 Tento proces používá skript prostředí PowerShell, MBAMWebSiteInstaller.ps1 k instalaci těchto součástí na webový server. Přijímá následující parametry:
 
-- `-SqlServerName <ServerName>`(povinné): plně kvalifikovaný název domény serveru databáze primární lokality.
+- `-SqlServerName <ServerName>` (povinné): plně kvalifikovaný název domény serveru databáze primární lokality.
 
 - `-SqlInstanceName <InstanceName>`: SQL Server název instance databáze primární lokality. Pokud SQL používá výchozí instanci, nezahrnujte tento parametr.
 
-- `-SqlDatabaseName <DatabaseName>`(povinné): název databáze primární lokality, například `CM_ABC` .
+- `-SqlDatabaseName <DatabaseName>` (povinné): název databáze primární lokality, například `CM_ABC` .
 
 - `-ReportWebServiceUrl <ReportWebServiceUrl>`: URL webové služby bodu služby generování sestav primární lokality. Je to hodnota **URL webové služby** ve **službě Reporting Services Configuration Manager**.
 
@@ -117,9 +117,9 @@ Monitorování a řešení potíží pomocí následujících protokolů:
 
 - Protokoly trasování pro jednotlivé komponenty jsou v následujících výchozích umístěních:
 
-  - Samoobslužný portál:`C:\inetpub\Microsoft BitLocker Management Solution\Logs\Self Service Website`
+  - Samoobslužný portál: `C:\inetpub\Microsoft BitLocker Management Solution\Logs\Self Service Website`
 
-  - Web pro správu a monitorování:`C:\inetpub\Microsoft BitLocker Management Solution\Logs\Help Desk Website`
+  - Web pro správu a monitorování: `C:\inetpub\Microsoft BitLocker Management Solution\Logs\Help Desk Website`
 
 Další informace o řešení potíží najdete v tématu [řešení potíží s nástrojem BitLocker](../../tech-ref/bitlocker/troubleshoot.md).
 

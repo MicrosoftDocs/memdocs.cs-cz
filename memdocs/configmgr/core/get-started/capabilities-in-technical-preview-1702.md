@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 73b8111cbada129997cec965ca685f1ef22b1f3a
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7a4c42891276b36fd888f0f70495bdcd504f23a1
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81721434"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693008"
 ---
 # <a name="capabilities-in-technical-preview-1702-for-configuration-manager"></a>Funkce ve verzi Technical Preview 1702 pro Configuration Manager
 
@@ -38,7 +38,7 @@ Tato verze Preview přináší nové možnosti zpětné vazby v konzole Configur
 -  Když kliknete pravým tlačítkem na libovolný objekt v konzole nástroje.   
     ![Righ – možnost kliknutí](./media/feedback-option.png)   
 
-Výběr **zpětné vazby** : otevře váš prohlížeč na webu Configuration Manager web pro odeslání https://configurationmanager.uservoice.com/forums/300492-ideasnázoru na.
+Výběr **zpětné vazby** : otevře váš prohlížeč na webu Configuration Manager web pro odeslání názoru na https://configurationmanager.uservoice.com/forums/300492-ideas .
 ##  <a name="changes-for-updates-and-servicing"></a>Změny aktualizací a údržby
 V této verzi Preview jsou představeny následující.
 
@@ -62,7 +62,7 @@ Tato nastavení můžete nakonfigurovat pomocí třídy konfigurace klientského
 
 Když počítač žádost o obsah odmítne, bude žádající počítač v rámci fondu dostupných zdrojových umístění obsahu pokračovat ve vyhledávání obsahu v alternativním zdroji.   
 
-## <a name="use-azure-active-directory-domain-services-to-manage-devices-users-and-groups"></a><a name="azurediscovery"></a>Použití Azure Active Directory Domain Services ke správě zařízení, uživatelů a skupin
+## <a name="use-azure-active-directory-domain-services-to-manage-devices-users-and-groups"></a><a name="azurediscovery"></a> Použití Azure Active Directory Domain Services ke správě zařízení, uživatelů a skupin
 
 V této verzi Technical Preview můžete spravovat zařízení, která jsou připojená ke spravované doméně služby Azure Active Directory (AD) Domain Services. V této doméně můžete také zjišťovat zařízení, uživatele a skupiny pomocí různých metod zjišťování Configuration Manager.
 
@@ -76,7 +76,7 @@ Pokud chcete používat Azure AD s Configuration Manager, budete potřebovat ná
 - Configuration Manager web, který běží na VIRTUÁLNÍm počítači Azure, který je připojený k vaší službě Azure AD.
 - Configuration Manager klienti, kteří běží ve stejném prostředí Azure AD.
 
-Pokud chcete nakonfigurovat službu Azure AD Domain Service, přečtěte si téma Začínáme [s Azure AD Domain Services](https://docs.microsoft.com/azure/active-directory-domain-services/create-instance).
+Pokud chcete nakonfigurovat službu Azure AD Domain Service, přečtěte si téma Začínáme [s Azure AD Domain Services](/azure/active-directory-domain-services/create-instance).
 
 ### <a name="discover-resources"></a>Zjišťování prostředků
 Až nastavíte Configuration Manager pro běh ve službě Azure AD, můžete použít následující metody zjišťování služby Active Directory k hledání prostředků v Azure AD:  
@@ -101,7 +101,7 @@ Azure AD nemá organizační jednotku, ve které se ukládají skupiny. Místo t
 
 Další informace o službě Azure AD najdete v následujících tématech:  
 - [Azure Active Directory Domain Services](https://azure.microsoft.com/services/active-directory-ds) v Azure.Microsoft.com.
-- [Active Directory Domain Services dokumentaci](https://docs.microsoft.com/azure/active-directory-domain-services) k docs.Microsoft.com.
+- [Active Directory Domain Services dokumentaci](/azure/active-directory-domain-services) k docs.Microsoft.com.
 
 ## <a name="conditional-access-device-compliance-policy-improvements"></a>Vylepšení zásad dodržování předpisů pro zařízení podmíněného přístupu
 
@@ -109,17 +109,17 @@ K dispozici je nové pravidlo zásad dodržování předpisů pro zařízení, k
 
 Kromě toho pomáhá organizacím zmírnit únik dat prostřednictvím nezabezpečených aplikací a zabránit nadměrné spotřebě dat prostřednictvím určitých aplikací.
 
-### <a name="try-it-out"></a>Vyzkoušejte si to.
+### <a name="try-it-out"></a>Vyzkoušet
 
 **Scénář:** Identifikujte aplikace, které by mohly způsobovat úniky dat zasíláním podnikových dat mimo vaši společnost, nebo které způsobují nadměrné množství dat, a pak [Vytvořte zásady dodržování předpisů pro zařízení podmíněného přístupu](../../mdm/understand/what-happened-to-hybrid.md) , které tyto aplikace přidá do seznamu neodpovídajících aplikací. Tím se zablokuje přístup k firemním prostředkům, které podporují podmíněný přístup, dokud uživatel nebude moct blokovanou aplikaci odebrat.
 
 ## <a name="antimalware-client-version-alert"></a>Výstraha verze antimalwarového klienta
 Od této verze Preview Configuration Manager Endpoint Protection poskytuje výstrahu, pokud více než 20% (výchozí) spravovaných klientů používá verzi antimalwarového klienta (tj. Windows Defender nebo Endpoint Protection klienta).
 
-### <a name="try-it-out"></a>Vyzkoušejte si to.
-Ujistěte se, že je povolená Endpoint Protection na všech klientech desktopu a serveru pomocí zásad nastavení klienta. Teď můžete zobrazit stav nasazení **antimalwarového klienta** a **Endpoint Protection stav nasazení** , a to tak, že převedete**Přehled** > **Devices** > prostředků **a dodržování předpisů** > na**všechna stolní počítače a klienty obsluhy**. Chcete-li zjistit výstrahu, zobrazte **výstrahy** v pracovním prostoru **monitorování** . Pokud je na více než 20% spravovaných klientů spuštěná verze antimalwarového softwaru s vypršenou platností, zobrazí se výstraha verze antimalwarového klienta je zastaralá. Tato výstraha se nezobrazuje na kartě**Přehled** **monitorování** > . Chcete-li aktualizovat antimalwarové klienty s vypršenou platností, povolte aktualizace softwaru pro klienty antimalwaru.
+### <a name="try-it-out"></a>Vyzkoušet
+Ujistěte se, že je povolená Endpoint Protection na všech klientech desktopu a serveru pomocí zásad nastavení klienta. Teď můžete zobrazit stav nasazení **antimalwarového klienta** a **Endpoint Protection stav nasazení** , a to tak, že převedete Přehled prostředků **a dodržování předpisů**na  >  **Overview**  >  **Devices**  >  **všechna stolní počítače a klienty obsluhy**. Chcete-li zjistit výstrahu, zobrazte **výstrahy** v pracovním prostoru **monitorování** . Pokud je na více než 20% spravovaných klientů spuštěná verze antimalwarového softwaru s vypršenou platností, zobrazí se výstraha verze antimalwarového klienta je zastaralá. Tato výstraha se nezobrazuje **Monitoring**na  >  kartě**Přehled** monitorování. Chcete-li aktualizovat antimalwarové klienty s vypršenou platností, povolte aktualizace softwaru pro klienty antimalwaru.
 
-Chcete-li nakonfigurovat procento, ve kterém je výstraha vygenerována, rozbalte položku **sledování** > **výstrahy** > **všechny výstrahy**, dvakrát klikněte na **antimalwarové klienty zastaralé** a upravte **výstrahu vyvolat, pokud procento spravovaných klientů s neaktuální verzí antimalwarového klienta je větší než** možnost.
+Chcete-li nakonfigurovat procento, ve kterém je výstraha vygenerována, rozbalte položku **sledování**  >  **výstrahy**  >  **všechny výstrahy**, dvakrát klikněte na **antimalwarové klienty zastaralé** a upravte **výstrahu vyvolat, pokud procento spravovaných klientů s neaktuální verzí antimalwarového klienta je větší než** možnost.
 
 ## <a name="compliance-assessment-for-windows-update-for-business-updates"></a>Posouzení dodržování předpisů pro aktualizace web Windows Update pro firmy
 V rámci vyhodnocení podmíněného přístupu teď můžete nakonfigurovat pravidlo aktualizace zásad dodržování předpisů tak, aby zahrnovalo výsledek vyhodnocení web Windows Update pro firmy.
@@ -128,11 +128,11 @@ V rámci vyhodnocení podmíněného přístupu teď můžete nakonfigurovat pra
 
 ### <a name="allow-windows-update-for-business-to-manage-windows-10-updates"></a>Umožněte web Windows Update pro firmy spravovat aktualizace Windows 10.
 Pokud chcete shromáždit informace o vyhodnocení dodržování předpisů pro aktualizace web Windows Update pro firmy, pomocí následujícího postupu nakonfigurujte nastavení agenta klienta tak, aby explicitně povolovala web Windows Update pro firmy ke správě aktualizací Windows 10.
-1. V konzole Configuration Manager klikněte na **Správa** > **nastavení klienta**.
+1. V konzole Configuration Manager klikněte na **Správa**  >  **nastavení klienta**.
 2. Ve vlastnostech nastavení klienta klikněte na **aktualizace softwaru**a vyberte **Ano** pro nastavení **spravovat aktualizace Windows 10 pomocí web Windows Update pro firmy** .
 
 ### <a name="create-a-compliance-policy-for-windows-update-for-business-assessment"></a>Vytvoření zásady dodržování předpisů pro vyhodnocení web Windows Update pro firmy
-1. V konzole Configuration Manager klikněte na **prostředky a** > dodržování předpisů**zásady dodržování**předpisů**Nastavení** > dodržování předpisů.
+1. V konzole Configuration Manager klikněte na **prostředky a**dodržování předpisů  >  **Compliance Settings**  >  **zásady dodržování**předpisů nastavení dodržování předpisů.
 2. Klikněte na **vytvořit zásadu dodržování předpisů** nebo vyberte existující zásady dodržování předpisů, které chcete upravit.
 3. Na stránce Obecné zadejte název a popis, vyberte **pravidla dodržování předpisů pro zařízení spravovaná pomocí klienta Configuration Manager**, nastavte závažnost neshody pro vytváření sestav a klikněte na tlačítko **Další**.
 4. Na stránce podporované platformy vyberte **Windows 10**a potom klikněte na **Další**.
@@ -141,7 +141,7 @@ Pokud chcete shromáždit informace o vyhodnocení dodržování předpisů pro 
 Nová zásada se zobrazí v uzlu **Zásady dodržování předpisů** pracovního prostoru **Prostředky a kompatibilita**.
 
 ### <a name="deploy-a-compliance-policy"></a>Nasazení zásady dodržování předpisů
-1. V konzole Configuration Manager přejděte na **prostředky a** > dodržování předpisů**Nastavení dodržování**předpisů a pak klikněte na **zásady dodržování předpisů**.
+1. V konzole Configuration Manager přejděte na **prostředky a**dodržování předpisů  >  **Nastavení dodržování**předpisů a pak klikněte na **zásady dodržování předpisů**.
 2. Na kartě **Domů** ve skupině **Nasazení** klikněte na možnost **Nasadit**.
 3. V dialogovém okně **Nasadit zásady dodržování předpisů** klikněte na **Procházet** a vyberte kolekci uživatelů, do které chcete zásady nasadit.
    Kromě toho můžete vybrat možnosti generování výstrah v případě, že zásady nebudou kompatibilní, a taky nakonfigurovat plán, podle kterého se u této zásady vyhodnotí dodržení předpisů.
@@ -164,12 +164,12 @@ Následující postup slouží k nastavení pořadí úkolů jako vysokého dopa
 > [!NOTE]
 > Pořadí úkolů, které splňuje určité podmínky, je automaticky definováno jako vysoce ovlivněno. Podrobnosti najdete v tématu [Správa nasazení s vysokým rizikem](../servers/manage/settings-to-manage-high-risk-deployments.md).
 
-1. V konzole Configuration Manager v části **softwarová knihovna** > **operační systémy** > **pořadí úkolů**.
+1. V konzole Configuration Manager v části **softwarová knihovna**  >  **operační systémy**  >  **pořadí úkolů**.
 2. Vyberte pořadí úkolů, které chcete upravit, a klikněte na **vlastnosti**.
 3. Na kartě **oznámení uživateli** vyberte **Toto pořadí úkolů s vysokým dopadem**.
 
 ### <a name="create-a-custom-notification-for-high-risk-deployments"></a>Vytvoření vlastního oznámení pro nasazení s vysokým rizikem
-1. V konzole Configuration Manager v části **softwarová knihovna** > **operační systémy** > **pořadí úkolů**.
+1. V konzole Configuration Manager v části **softwarová knihovna**  >  **operační systémy**  >  **pořadí úkolů**.
 2. Vyberte pořadí úkolů, které chcete upravit, a klikněte na **vlastnosti**.
 3. Na kartě **oznámení uživateli** vyberte **použít vlastní text**.
    > [!NOTE]
@@ -194,7 +194,7 @@ Následující postup slouží k nastavení pořadí úkolů jako vysokého dopa
 
 ### <a name="configure-software-center-properties"></a>Konfigurace vlastností centra softwaru
 Pomocí následujícího postupu můžete nakonfigurovat podrobnosti o pořadí úloh zobrazeném v centru softwaru. Tyto podrobnosti jsou pouze pro informace.  
-1. V konzole Configuration Manager v části **softwarová knihovna** > **operační systémy** > **pořadí úkolů**.
+1. V konzole Configuration Manager v části **softwarová knihovna**  >  **operační systémy**  >  **pořadí úkolů**.
 2. Vyberte pořadí úkolů, které chcete upravit, a klikněte na **vlastnosti**.
 3. Na kartě **Obecné** jsou k dispozici následující nastavení pro Centrum softwaru:
    - **Vyžadováno restartování**: umožňuje uživateli zjistit, zda je během instalace vyžadováno restartování.
@@ -204,7 +204,7 @@ Pomocí následujícího postupu můžete nakonfigurovat podrobnosti o pořadí 
 
 ## <a name="check-for-running-executable-files-before-installing-an-application"></a>Kontrolovat spouštění spustitelných souborů před instalací aplikace
 
-V dialogovém okně * \<název typu nasazení>* **vlastnosti** typu nasazení, na kartě chování při instalaci můžete nyní zadat jeden z více spustitelných souborů, které v případě spuštění zablokují instalaci typu nasazení. Předtím, než bude možné nainstalovat typ nasazení, musí uživatel zavřít běžící spustitelný soubor (nebo ho lze zavřít automaticky pro nasazení s účelem požadované).
+V *\<deployment type name>* dialogovém okně **vlastnosti** typu nasazení můžete na kartě chování při instalaci zadat jeden z více spustitelných souborů, které při spuštění zablokují instalaci typu nasazení. Předtím, než bude možné nainstalovat typ nasazení, musí uživatel zavřít běžící spustitelný soubor (nebo ho lze zavřít automaticky pro nasazení s účelem požadované).
 
 ### <a name="try-it-out"></a>Vyzkoušejte si to.
 
@@ -214,7 +214,7 @@ V dialogovém okně * \<název typu nasazení>* **vlastnosti** typu nasazení, n
 
 Pokud byla aplikace nasazená jako **dostupná**a koncový uživatel se pokusí nainstalovat aplikaci, zobrazí se výzva k zavření všech spuštěných spustitelných souborů, které jste zadali předtím, než budou moci pokračovat v instalaci.
 
-Pokud byla aplikace nasazena jako **povinná**a možnost **automaticky zavře všechny spuštěné spustitelné soubory, které jste zadali na kartě chování při instalaci v dialogovém okně vlastnosti typu nasazení** , zobrazí se dialogové okno, které je informuje o tom, že spustitelné soubory, které jste zadali, budou automaticky uzavřeny po dosažení konečného termínu instalace aplikace. Tato dialogová okna můžete naplánovat v **Nastavení** > klienta**Počítačový agent**. Pokud nechcete, aby koncový uživatel tyto zprávy viděli, vyberte **Skrýt v nástroji Software Center a všech oznámeních** na kartě **činnost koncového uživatele** ve vlastnostech nasazení.
+Pokud byla aplikace nasazena jako **povinná**a možnost **automaticky zavře všechny spuštěné spustitelné soubory, které jste zadali na kartě chování při instalaci v dialogovém okně vlastnosti typu nasazení** , zobrazí se dialogové okno, které je informuje o tom, že spustitelné soubory, které jste zadali, budou automaticky uzavřeny po dosažení konečného termínu instalace aplikace. Tato dialogová okna můžete naplánovat v **nastavení klienta**  >  **Počítačový agent**. Pokud nechcete, aby koncový uživatel tyto zprávy viděli, vyberte **Skrýt v nástroji Software Center a všech oznámeních** na kartě **činnost koncového uživatele** ve vlastnostech nasazení.
 
 Pokud byla aplikace nasazena jako **povinná** a možnost **automaticky zavře všechny spuštěné spustitelné soubory, které jste zadali na kartě chování při instalaci v dialogovém okně vlastnosti typu nasazení** , pak nebude instalace aplikace úspěšná, pokud je jedna nebo víc z určených aplikací spuštěná.
 
@@ -226,12 +226,12 @@ Kromě toho teď můžete zadat několik certifikačních autorit (CAs) na více
 
 Pro zařízení S iOS můžete přidružit profil certifikátu PFX k e-mailovému profilu a povolit šifrování S/MIME.  Tím se pak v nativním e-mailovém klientovi v iOS povolí S/MIME a přidruží se k němu správný šifrovací certifikát S/MIME.
 
-Další informace o certifikátech v Configuration Manager najdete v tématu [Úvod do profilů certifikátů]( https://docs.microsoft.com/sccm/protect/deploy-use/introduction-to-certificate-profiles).
+Další informace o certifikátech v Configuration Manager najdete v tématu [Úvod do profilů certifikátů]( /sccm/protect/deploy-use/introduction-to-certificate-profiles).
 
 
 ## <a name="new-compliance-settings-for-ios-devices"></a>Nové nastavení dodržování předpisů pro zařízení s iOS
 
-Přidali jsme nová nastavení, která můžete použít v položkách konfigurace pro zařízení se systémem iOS. Jedná se o nastavení, která dříve existovala v Microsoft Intune samostatné konfigurace, a jsou teď dostupná, když používáte Intune s Configuration Manager. Pokud potřebujete s některým z těchto nastavení pomáhat, přečtěte si téma [nastavení zásad pro iOS v Microsoft Intune](/mem/intune/configuration/device-restrictions-ios).
+Přidali jsme nová nastavení, která můžete použít v položkách konfigurace pro zařízení se systémem iOS. Jedná se o nastavení, která dříve existovala v Microsoft Intune samostatné konfigurace, a jsou teď dostupná, když používáte Intune s Configuration Manager. Pokud potřebujete s některým z těchto nastavení pomáhat, přečtěte si téma [nastavení zásad pro iOS v Microsoft Intune](../../../intune/configuration/device-restrictions-ios.md).
 
 - **Synchronizovat data ze spravovaných aplikací do iCloud**
 - **Předání za účelem pokračování aktivit na jiném zařízení**
@@ -296,9 +296,9 @@ Následující části popisují správu Androidu for Work.
 #### <a name="enable-android-for-work-management"></a>Povolit správu Androidu for Work
 1. Vytvořte účet Google na https://accounts.google.com/SignUp webu, který se použije jako účet správce Android for Work, který bude přidružený ke všem úlohám správy Androidu for Work pro tohoto tenanta Intune. Může to být účet Google sdílený mezi správci, kteří spravují zařízení s Androidem. Jedná se o účet Google, který vaše organizace používá ke správě a publikování aplikací v konzole Play for Work. Pomocí tohoto účtu budete schvalovat aplikace v obchodě Play for Work, takže Sledujte název účtu a heslo.
 2. Povolení registrace zařízení s Androidem pomocí vazby účtu Google k tenantovi Intune spravovanému v Configuration Manager:
-   1. V článku **Administration** > **Přehled** > **správy Cloud Services** > **Microsoft Intune předplatné** a vyberte své předplatné Intune.
-   2. Na pásu karet klikněte na **Konfigurovat platformy** > **Android** a ujistěte se, že je zaškrtnuté políčko **Povolit registraci zařízení se systémem Android** .
-   3. Na pásu karet klikněte na **Konfigurovat platformy** > **Android for Work**.
+   1. V článku **Administration**  >  **Přehled**správy  >  **Cloud Services**  >  **Microsoft Intune předplatné** a vyberte své předplatné Intune.
+   2. Na pásu karet klikněte na **Konfigurovat platformy**  >  **Android** a ujistěte se, že je zaškrtnuté políčko **Povolit registraci zařízení se systémem Android** .
+   3. Na pásu karet klikněte na **Konfigurovat platformy**  >  **Android for Work**.
    4. V dialogovém okně klikněte v **konzole Intune na konfigurovat Android for Work**. Konzola Intune se otevře ve webovém prohlížeči.
    5. Pomocí přihlašovacích údajů správce Intune se přihlaste k portálu Intune.
    6. Kliknutím na **Konfigurovat** otevřete web Android for Work Google Play.
@@ -319,14 +319,14 @@ Až se vazba dokončí, uvidíte název účtu a název organizace na portálu I
 #### <a name="approve-and-deploy-android-for-work-apps"></a>Schvalování a nasazování aplikací pro Android for Work
 Pomocí těchto kroků schválíte aplikace v obchodě Play for Work, synchronizujete je s konzolou Configuration Manager a nasadíte je na spravovaná zařízení s Androidem for Work. Pokud chcete nasadit aplikace do pracovních profilů uživatelů, budete muset aplikace schválit v programu Play for Work a pak aplikace synchronizovat s konzolou Configuration Manager.
 
-1. Otevřete prohlížeč a pokračujte na: https://play.google.com/work.
+1. Otevřete prohlížeč a pokračujte na: https://play.google.com/work .
 2. Přihlaste se pomocí účtu správce Google, který se váže k vašemu tenantovi Intune.
 3. Vyhledejte aplikace, které chcete ve svém prostředí nasadit, a pro každou z nich klikněte na **schválit** .
-4. V konzole Configuration Manager přejděte na**Přehled** >  **správce** > **Cloud Services** > **Android for Work** a klikněte na **synchronizovat**.
-5. Počkejte po dobu až 10 minut, než se aplikace synchronizuje, a pak navštivte App **Library** > **Přehled** >  > **informace o licencích pro****správu aplikací**pro aplikace Store.
+4. V konzole Configuration Manager přejděte na přehled **správce**  >  **Overview**  >  **Cloud Services**  >  **Android for Work** a klikněte na **synchronizovat**.
+5. Počkejte po dobu až 10 minut, než se aplikace synchronizuje, a pak navštivte App **Library**  >  **Přehled**  >  **Application Management**  >  **informace o licencích pro**správu aplikací pro aplikace Store.
 6. Klikněte na aplikaci synchronizovaná z Play for Work a pak klikněte na **vytvořit aplikaci**.
 7. Dokončete průvodce a klikněte na **Zavřít**.
-8. Přejít na **softwarová knihovna** > **Přehled** > aplikace**Správa** > aplikací **, vyberte**aplikace pro Android for Work a nasaďte je obvyklým způsobem.
+8. Přejít na **softwarová knihovna**  >  **Přehled**aplikace  >  **Správa aplikací**  >  **Applications**, vyberte aplikace pro Android for Work a nasaďte je obvyklým způsobem.
 
 Chcete-li synchronizovat aplikace Play for Work s Configuration Manager, je nutné schválit alespoň jednu aplikaci na webu Play for Work.
 
@@ -347,7 +347,7 @@ To můžete provést tak, že vytvoříte položku Konfigurace přes standardní
 #### <a name="perform-selective-wipe"></a>Provést selektivní vymazání
 Zařízení zaregistrovaná jako Android for Work se dají selektivně vymazat, protože jenom spravujete pracovní profil. Tím se chrání osobní profil před vymazáním. Při selektivním vymazání na zařízení s Androidem for Work dojde k odebrání pracovního profilu, včetně všech aplikací a dat, a zrušení registrace zařízení.
 
-Pokud chcete selektivně vymazat zařízení s Androidem for Work, použijte normální [proces selektivního vymazání](https://docs.microsoft.com/sccm/mdm/deploy-use/wipe-lock-reset-devices#selective-wipe) v konzole Configuration Manager.
+Pokud chcete selektivně vymazat zařízení s Androidem for Work, použijte normální [proces selektivního vymazání](/sccm/mdm/deploy-use/wipe-lock-reset-devices#selective-wipe) v konzole Configuration Manager.
 
 #### <a name="known-issues-for-android-for-work"></a>Známé problémy pro Android for Work
 **Konfigurace plánu synchronizace v e-mailových profilech Androidu for Work způsobuje selhání nasazení** Jedna z možností v uživatelském rozhraní nástroje ConfigMgr pro e-mailové profily pro Android for Work je "plán". Na jiných platformách může správce nakonfigurovat plán pro synchronizaci e-mailů a dalších e-mailových účtů na mobilní zařízení, na která se nasazují. Nefunguje ale pro e-mailové profily Androidu for Work a výběr jiné možnosti než "není nakonfigurováno" způsobí, že se profil nebude nasazovat na žádná zařízení.

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 94208da3eda33cba69f04bbbf42edd08b585c1c4
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 1f8af5975d623161e05e168192ee102bd0d072dc
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83428192"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694385"
 ---
 # <a name="capabilities-in-technical-preview-1802-for-configuration-manager"></a>Funkce ve verzi Technical Preview 1802 pro Configuration Manager
 
@@ -56,9 +56,9 @@ V této verzi teď můžete po povolení spolusprávy převést úlohu Endpoint 
  
 ## <a name="configure-windows-delivery-optimization-to-use-configuration-manager-boundary-groups"></a>Konfigurace optimalizace doručování Windows pro použití Configuration Manager skupin hranic
 <!-- 1324696 -->
-Skupiny hranic Configuration Manager slouží k definování a regulaci distribuce obsahu napříč podnikovou sítí a vzdálenými pobočkami. [Optimalizace doručení Windows](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) je cloudová technologie peer-to-peer pro sdílení obsahu mezi zařízeními s Windows 10. Od této verze můžete nakonfigurovat optimalizaci doručování, aby při sdílení obsahu mezi partnerskými uzly používala vaše skupiny hranic. Nové nastavení klienta použije identifikátor skupiny hranic jako identifikátor skupiny Optimalizace doručení na klientovi. Když klient komunikuje s cloudovou službou Optimalizace doručení, používá tento identifikátor k vyhledání partnerských uzlů s požadovaným obsahem. 
+Skupiny hranic Configuration Manager slouží k definování a regulaci distribuce obsahu napříč podnikovou sítí a vzdálenými pobočkami. [Optimalizace doručení Windows](/windows/deployment/update/waas-delivery-optimization) je cloudová technologie peer-to-peer pro sdílení obsahu mezi zařízeními s Windows 10. Od této verze můžete nakonfigurovat optimalizaci doručování, aby při sdílení obsahu mezi partnerskými uzly používala vaše skupiny hranic. Nové nastavení klienta použije identifikátor skupiny hranic jako identifikátor skupiny Optimalizace doručení na klientovi. Když klient komunikuje s cloudovou službou Optimalizace doručení, používá tento identifikátor k vyhledání partnerských uzlů s požadovaným obsahem. 
 
-### <a name="prerequisites"></a>Požadavky
+### <a name="prerequisites"></a>Předpoklady
 - Optimalizace doručení je dostupná jenom na klientech s Windows 10.
 
 ### <a name="try-it-out"></a>Určitě to udělejte!
@@ -68,7 +68,7 @@ Skupiny hranic Configuration Manager slouží k definování a regulaci distribu
 2. Vyberte novou skupinu **Optimalizace doručení** .
 3. Povolte nastavení **použít Configuration Manager skupiny hranic pro ID skupiny Optimalizace doručení**.
 
-Další informace najdete v možnosti režim doručení **skupiny** v tématu [Možnosti optimalizace doručení](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#how-microsoft-uses-delivery-optimization).
+Další informace najdete v možnosti režim doručení **skupiny** v tématu [Možnosti optimalizace doručení](/windows/deployment/update/waas-delivery-optimization#how-microsoft-uses-delivery-optimization).
 
 
 
@@ -96,16 +96,16 @@ Výchozí šablona pořadí úkolů pro místní upgrade systému Windows 10 nyn
 - **Odebrat nekompatibilní aplikace**: do této skupiny přidejte kroky, pokud chcete odebrat všechny aplikace, které nejsou kompatibilní s touto verzí Windows 10. Způsob odinstalace aplikace se liší. Pokud aplikace používá Instalační služba systému Windows, zkopírujte příkazový řádek **odinstalačního programu** na kartě **programy** v části vlastnosti typu nasazení Instalační služba systému Windows aplikace. Pak v této skupině přidejte krok **Spustit příkazový** řádek pomocí příkazového řádku Uninstall program. Příklad: </br>`msiexec /x {150031D8-1234-4BA8-9F52-D6E5190D1CBA} /q`</br> 
 - **Odebrat nekompatibilní ovladače**: do této skupiny přidejte kroky, pokud chcete odebrat všechny ovladače, které nejsou kompatibilní s touto verzí Windows 10.
 - **Odebrat nebo pozastavit zabezpečení třetí strany**: do této skupiny přidejte kroky, pokud chcete odebrat nebo pozastavit zabezpečovací programy třetích stran, jako je třeba antivirová ochrana.
-   - Pokud používáte program pro šifrování disků od jiného výrobce, poskytněte jeho ovladač šifrování pro instalační program systému Windows s [možností příkazového řádku](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options) **/ReflectDrivers** . Přidejte krok [nastavit proměnnou pořadí úloh](../../osd/understand/task-sequence-steps.md#BKMK_SetTaskSequenceVariable) do pořadí úkolů v této skupině. Nastavte proměnnou pořadí úloh na **OSDSetupAdditionalUpgradeOptions**. Nastavte hodnotu na **/ReflectDriver** s cestou k ovladači. Tato [Proměnná akce pořadí úkolů](../../osd/understand/task-sequence-steps.md#BKMK_UpgradeOS) připojuje instalační program systému Windows příkazového řádku, který používá pořadí úkolů. Další pokyny k tomuto procesu získáte od dodavatele softwaru.
+   - Pokud používáte program pro šifrování disků od jiného výrobce, poskytněte jeho ovladač šifrování pro instalační program systému Windows s [možností příkazového řádku](/windows-hardware/manufacture/desktop/windows-setup-command-line-options) **/ReflectDrivers** . Přidejte krok [nastavit proměnnou pořadí úloh](../../osd/understand/task-sequence-steps.md#BKMK_SetTaskSequenceVariable) do pořadí úkolů v této skupině. Nastavte proměnnou pořadí úloh na **OSDSetupAdditionalUpgradeOptions**. Nastavte hodnotu na **/ReflectDriver** s cestou k ovladači. Tato [Proměnná akce pořadí úkolů](../../osd/understand/task-sequence-steps.md#BKMK_UpgradeOS) připojuje instalační program systému Windows příkazového řádku, který používá pořadí úkolů. Další pokyny k tomuto procesu získáte od dodavatele softwaru.
 
 ### <a name="new-groups-under-post-processing"></a>Nové skupiny v rámci **následného zpracování**
 - **Použít ovladače založené na instalaci**: do této skupiny přidejte kroky, pokud chcete nainstalovat ovladače založené na instalaci (. exe) z balíčků.
 - **Instalace nebo povolení zabezpečení třetích stran**: do této skupiny přidejte kroky, pokud chcete nainstalovat nebo povolit zabezpečovací programy třetích stran, jako je třeba antivirová ochrana. 
-- **Nastavení výchozích aplikací a přidružení pro Windows**: přidejte do této skupiny kroky, abyste nastavili výchozí aplikace Windows a přidružení souborů. Nejprve Připravte referenční počítač s požadovanými přidruženími aplikace. Pak spusťte následující příkazový řádek pro export: </br>`dism /online /Export-DefaultAppAssociations:"%UserProfile%\Desktop\DefaultAppAssociations.xml"`</br>Přidejte soubor XML do balíčku. Pak v této skupině přidejte krok [Spustit příkazový řádek](../../osd/understand/task-sequence-steps.md#BKMK_RunCommandLine) . Zadejte balíček, který obsahuje soubor XML, a pak zadejte následující příkazový řádek: </br>`dism /online /Import-DefaultAppAssociations:DefaultAppAssocations.xml`</br> Další informace najdete v tématu [Export nebo import výchozích přidružení aplikace](https://docs.microsoft.com/windows-hardware/manufacture/desktop/export-or-import-default-application-associations).
-- **Použít přizpůsobení a přizpůsobení**: do této skupiny přidejte kroky, pokud chcete použít přizpůsobení nabídky Start, jako je například organizace skupin programů. Další informace najdete v tématu [přizpůsobení úvodní obrazovky](https://docs.microsoft.com/windows-hardware/manufacture/desktop/customize-the-start-screen).
+- **Nastavení výchozích aplikací a přidružení pro Windows**: přidejte do této skupiny kroky, abyste nastavili výchozí aplikace Windows a přidružení souborů. Nejprve Připravte referenční počítač s požadovanými přidruženími aplikace. Pak spusťte následující příkazový řádek pro export: </br>`dism /online /Export-DefaultAppAssociations:"%UserProfile%\Desktop\DefaultAppAssociations.xml"`</br>Přidejte soubor XML do balíčku. Pak v této skupině přidejte krok [Spustit příkazový řádek](../../osd/understand/task-sequence-steps.md#BKMK_RunCommandLine) . Zadejte balíček, který obsahuje soubor XML, a pak zadejte následující příkazový řádek: </br>`dism /online /Import-DefaultAppAssociations:DefaultAppAssocations.xml`</br> Další informace najdete v tématu [Export nebo import výchozích přidružení aplikace](/windows-hardware/manufacture/desktop/export-or-import-default-application-associations).
+- **Použít přizpůsobení a přizpůsobení**: do této skupiny přidejte kroky, pokud chcete použít přizpůsobení nabídky Start, jako je například organizace skupin programů. Další informace najdete v tématu [přizpůsobení úvodní obrazovky](/windows-hardware/manufacture/desktop/customize-the-start-screen).
 
 ### <a name="additional-recommendations"></a>Další doporučení
-- Přečtěte si dokumentaci k Windows a [vyřešte chyby upgradu Windows 10](https://docs.microsoft.com/windows/deployment/upgrade/resolve-windows-10-upgrade-errors). Tento článek obsahuje taky podrobné informace o procesu upgradu.
+- Přečtěte si dokumentaci k Windows a [vyřešte chyby upgradu Windows 10](/windows/deployment/upgrade/resolve-windows-10-upgrade-errors). Tento článek obsahuje taky podrobné informace o procesu upgradu.
 - V kroku výchozí **Kontrola připravenosti zkontrolujte** , že **zajistěte minimální volné místo na disku (MB)**. Nastavte hodnotu na minimálně **16384** (16 GB) pro 32 balíček s UPGRADEM operačního systému nebo **20480** (20 GB) pro 64 bitů. 
 - K opakovanému stažení zásad použijte [vestavěnou proměnnou pořadí úloh](../../osd/understand/task-sequence-variables.md) **SMSTSDownloadRetryCount** . Ve výchozím nastavení se klient opakuje dvakrát; Tato proměnná je nastavená na dvě (2). Pokud klienti nejsou připojení k pevné podnikové síti, pomohou vám další pokusy o získání zásad klienta. Pokud se tato proměnná nedá stáhnout, nejedná se o negativní vedlejší účinek, jiné než opožděné selhání.<!-- 501016 --> Také navýšit proměnnou **SMSTSDownloadRetryDelay** z výchozí hodnoty 15 sekund.
 - Proveďte vložené posouzení kompatibility. 
@@ -193,7 +193,7 @@ Při upgradu lokality na tuto verzi Configuration Manager přidá všechny body 
 
 Náhradní skupina hranic bodu správy nemění chování při instalaci klienta (CCMSetup). Pokud příkazový řádek neurčí počáteční bod správy pomocí parametru/MP, nový klient obdrží úplný seznam dostupných bodů správy. Pro svůj úvodní proces zavedení používá klient první bod správy, ke kterému má přístup. Po registraci klienta s lokalitou obdrží seznam bodů správy správně seřazený s tímto novým chováním. 
 
-### <a name="prerequisites"></a>Požadavky
+### <a name="prerequisites"></a>Předpoklady
 - Povolte [preferované body správy](../servers/deploy/configure/boundary-groups.md#bkmk_preferred). V konzole Configuration Manager otevřete pracovní prostor **Správa** . Rozbalte položku **Konfigurace lokality** a vyberte možnost **lokality**. Na pásu karet klikněte na **Nastavení hierarchie** . Na kartě **Obecné** povolte klientům, **aby používaly body správy zadané ve skupinách hranic**. 
 
 ### <a name="known-issues"></a>Známé problémy
@@ -227,16 +227,16 @@ Seznam [nepodporovaných scénářů](../plan-design/network/cng-certificates-ov
 
 ## <a name="cloud-management-gateway-support-for-azure-resource-manager"></a>Podpora brány pro správu cloudu pro Azure Resource Manager
 <!-- 1324735 -->
-Při vytváření instance [brány pro správu cloudu](../clients/manage/cmg/plan-cloud-management-gateway.md) (CMG) Průvodce teď nabízí možnost vytvořit **nasazení Azure Resource Manager**. [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview) je moderní platforma pro správu všech prostředků řešení jako jedné entity, která se označuje jako [Skupina prostředků](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview#resource-groups). Když nasazujete CMG s Azure Resource Manager, lokalita používá Azure Active Directory (Azure AD) k ověření a vytvoření potřebných cloudových prostředků. Toto moderní nasazení nevyžaduje klasický certifikát pro správu Azure.  
+Při vytváření instance [brány pro správu cloudu](../clients/manage/cmg/plan-cloud-management-gateway.md) (CMG) Průvodce teď nabízí možnost vytvořit **nasazení Azure Resource Manager**. [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) je moderní platforma pro správu všech prostředků řešení jako jedné entity, která se označuje jako [Skupina prostředků](/azure/azure-resource-manager/resource-group-overview#resource-groups). Když nasazujete CMG s Azure Resource Manager, lokalita používá Azure Active Directory (Azure AD) k ověření a vytvoření potřebných cloudových prostředků. Toto moderní nasazení nevyžaduje klasický certifikát pro správu Azure.  
 
 Průvodce CMG stále nabízí možnost **nasazení klasické služby** pomocí certifikátu pro správu Azure. Pro zjednodušení nasazení a správy prostředků doporučujeme pro všechny nové instance CMG použít model nasazení Azure Resource Manager. Pokud je to možné, znovu nasaďte existující instance CMG prostřednictvím Správce prostředků.
 
 Configuration Manager nemigrují existující klasické instance CMG do modelu nasazení Azure Resource Manager. Pomocí Azure Resource Manager nasazení vytvořte nové instance CMG a pak odeberte klasické instance CMG. 
 
 > [!IMPORTANT]
-> Tato funkce nepovoluje podporu pro poskytovatele cloudových služeb Azure (CSP). Nasazení CMG s Azure Resource Manager nadále používá klasickou cloudovou službu, kterou CSP nepodporuje. Další informace najdete v tématu [dostupné služby Azure v CSP Azure](https://docs.microsoft.com/azure/cloud-solution-provider/overview/azure-csp-available-services).  
+> Tato funkce nepovoluje podporu pro poskytovatele cloudových služeb Azure (CSP). Nasazení CMG s Azure Resource Manager nadále používá klasickou cloudovou službu, kterou CSP nepodporuje. Další informace najdete v tématu [dostupné služby Azure v CSP Azure](/azure/cloud-solution-provider/overview/azure-csp-available-services).  
 
-### <a name="prerequisites"></a>Požadavky
+### <a name="prerequisites"></a>Předpoklady
 - Integrace se službou [Azure AD](../clients/deploy/deploy-clients-cmg-azure.md). Zjišťování uživatelů služby Azure AD není vyžadováno.
 - Stejné [požadavky pro bránu pro správu cloudu](../clients/manage/cmg/plan-cloud-management-gateway.md#requirements), s výjimkou certifikátu pro správu Azure.
 
@@ -262,7 +262,7 @@ Od této verze se když uživatel požádá o aplikaci, která vyžaduje schvál
 > [!NOTE]
 > Tato funkce je volitelná. Při aktualizaci na tuto verzi Povolte tuto funkci v Průvodci aktualizací. Případně můžete funkci v konzole zapnout později. Další informace naleznete v části [Enable optional features from updates](../servers/manage/install-in-console-updates.md#bkmk_options).
 
-### <a name="prerequisites"></a>Požadavky
+### <a name="prerequisites"></a>Předpoklady
 - Upgrade klienta Configuration Manager na nejnovější verzi
 - Povolit nastavení klienta **použít nové centrum softwaru** ve skupině [Počítačový agent](../clients/deploy/about-client-settings.md#computer-agent)
 
@@ -280,7 +280,7 @@ Od této verze se když uživatel požádá o aplikaci, která vyžaduje schvál
 <!-- 1322613 -->
 Pokud nasadíte aplikace jako dostupné pro uživatele, mohou je nyní procházet a instalovat prostřednictvím centra softwaru v Azure Active Directory (Azure AD).  
 
-### <a name="prerequisites"></a>Požadavky
+### <a name="prerequisites"></a>Předpoklady
 - Povolit HTTPS v bodu správy
 - Integrace webu s [Azure AD](../clients/deploy/deploy-clients-cmg-azure.md)
 - Nasazení aplikace jako k dispozici pro kolekci uživatelů
@@ -300,9 +300,9 @@ Pokud nasadíte aplikace jako dostupné pro uživatele, mohou je nyní procháze
 
 ## <a name="report-on-windows-autopilot-device-information"></a>Sestava informací o zařízení s Windows autopilotem
 <!-- 1351442 -->
-Windows autopilot pro Windows je řešení pro připojování a konfiguraci nových zařízení s Windows 10 moderním způsobem. Další informace najdete v tématu [Přehled Windows Autopilotu](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot). Jednou z metod registrace existujících zařízení pomocí Windows autopilotu je odeslání informací o zařízení do Microsoft Store pro firmy a vzdělávání. Tyto informace zahrnují sériové číslo zařízení, identifikátor produktu Windows a identifikátor hardwaru. K shromáždění a hlášení informací o zařízení použijte Configuration Manager. 
+Windows autopilot pro Windows je řešení pro připojování a konfiguraci nových zařízení s Windows 10 moderním způsobem. Další informace najdete v tématu [Přehled Windows Autopilotu](/windows/deployment/windows-autopilot/windows-10-autopilot). Jednou z metod registrace existujících zařízení pomocí Windows autopilotu je odeslání informací o zařízení do Microsoft Store pro firmy a vzdělávání. Tyto informace zahrnují sériové číslo zařízení, identifikátor produktu Windows a identifikátor hardwaru. K shromáždění a hlášení informací o zařízení použijte Configuration Manager. 
 
-### <a name="prerequisites"></a>Požadavky
+### <a name="prerequisites"></a>Předpoklady
 - Informace o tomto zařízení se týkají jenom klientů ve Windows 10, verze 1703 a novějších.
 
 ### <a name="try-it-out"></a>Určitě to udělejte!
@@ -311,13 +311,13 @@ Windows autopilot pro Windows je řešení pro připojování a konfiguraci nov�
 1. V konzole Configuration Manager v pracovním prostoru **monitorování** rozbalte uzel **vytváření sestav** , rozbalte položku **sestavy**a vyberte uzel **Hardware – obecné** .
 2. Spusťte novou sestavu, **informace o zařízení Windows autopilot** a podívejte se na výsledky. 
 3. V prohlížeči sestav klikněte na ikonu **exportovat** a vyberte možnost **CSV (oddělený čárkami)** .
-4. Po uložení souboru nahrajte data do Microsoft Store pro firmy a vzdělávání. Další informace najdete v tématu [Přidání zařízení v Microsoft Store pro firmy a vzdělávání](https://docs.microsoft.com/microsoft-store/add-profile-to-devices#add-devices-and-apply-autopilot-deployment-profile). 
+4. Po uložení souboru nahrajte data do Microsoft Store pro firmy a vzdělávání. Další informace najdete v tématu [Přidání zařízení v Microsoft Store pro firmy a vzdělávání](/microsoft-store/add-profile-to-devices#add-devices-and-apply-autopilot-deployment-profile). 
 
 
 
 ## <a name="improvements-to-configuration-manager-policies-for-windows-defender-exploit-guard"></a>Vylepšení zásad Configuration Manager pro ochranu před zneužitím v programu Windows Defender
 <!-- 1356220 -->
-Do Configuration Manager pro [ochranu před zneužitím v programu Windows Defender](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection)se přidala další nastavení zásad pro omezení ploch útoku a řízené součásti přístupu ke složkám.
+Do Configuration Manager pro [ochranu před zneužitím v programu Windows Defender](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection)se přidala další nastavení zásad pro omezení ploch útoku a řízené součásti přístupu ke složkám.
 
 **Nové nastavení pro řízený přístup ke složkám**<br/>
 Při konfiguraci řízeného přístupu ke složkám jsou k dispozici dvě další možnosti: **Blokovat pouze sektory disků** a **Auditovat pouze sektory disku**. Tato dvě nastavení umožňují řízenému přístupu ke složkám povolit jenom pro spouštěcí sektory a neumožňují ochranu určitých složek ani výchozích chráněných složek. 
@@ -334,20 +334,20 @@ Při konfiguraci řízeného přístupu ke složkám jsou k dispozici dvě dalš
 <!-- 1357310 -->
 Pro zákazníky, kteří používají webový prohlížeč [Microsoft Edge](https://www.microsoft.com/itpro/microsoft-edge) na klientech s Windows 10, teď můžete vytvořit zásady nastavení dodržování předpisů Configuration Manager ke konfiguraci několika nastavení Microsoft Edge. Tato zásada aktuálně obsahuje následující nastavení:
 - **Nastavit prohlížeč Microsoft Edge jako výchozí**: konfiguruje nastavení výchozí aplikace Windows 10 pro webový prohlížeč na Microsoft Edge.
-- **Zakázat rozevírací seznam panelu Adresa**: vyžaduje Windows 10 verze 1703 nebo novější. Další informace najdete v tématu [zásady prohlížeče AllowAddressBarDropdown](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowaddressbardropdown).
-- **Povolí synchronizaci oblíbených položek mezi prohlížeči Microsoftu**: vyžaduje Windows 10 verze 1703 nebo novější. Další informace najdete v tématu [zásady prohlížeče SyncFavoritesBetweenIEAndMicrosoftEdge](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-syncfavoritesbetweenieandmicrosoftedge).
-- **Povolení vymazání dat procházení při ukončení**: vyžaduje Windows 10 verze 1703 nebo novější. Další informace najdete v tématu [zásady prohlížeče ClearBrowsingDataOnExit](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-clearbrowsingdataonexit).
-- **Povolit hlavičky do Not Track**: Další informace najdete v tématu [zásady prohlížeče AllowDoNotTrack](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowdonottrack).
-- **Povolení automatického vyplňování**: Další informace najdete v tématu [zásady prohlížeče AllowAutofill](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowautofill).
-- **Povolení souborů cookie**: Další informace najdete v tématu [zásady prohlížeče AllowCookies](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowcookies).
-- **Povolení blokování automaticky otevíraných oken**: Další informace najdete v tématu [zásady prohlížeče AllowPopups](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowpopups).
-- **Povolení návrhů hledání na adresním řádku**: Další informace najdete v tématu [zásady prohlížeče AllowSearchSuggestionsinAddressBar](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsearchsuggestionsinaddressbar).
-- **Povolení odesílání intranetového provozu do Internet Exploreru**: Další informace najdete v tématu [zásady prohlížeče SendIntranetTraffictoInternetExplorer](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-sendintranettraffictointernetexplorer).
-- **Povolení správce hesel**: Další informace najdete v tématu [zásady prohlížeče AllowPasswordManager](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowpasswordmanager).
-- **Povolení vývojářské nástroje**: Další informace najdete v tématu [zásady prohlížeče AllowDeveloperTools](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowdevelopertools).
-- **Povolení rozšíření**: Další informace najdete v tématu [zásady prohlížeče AllowExtensions](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowextensions).
+- **Zakázat rozevírací seznam panelu Adresa**: vyžaduje Windows 10 verze 1703 nebo novější. Další informace najdete v tématu [zásady prohlížeče AllowAddressBarDropdown](/windows/client-management/mdm/policy-csp-browser#browser-allowaddressbardropdown).
+- **Povolí synchronizaci oblíbených položek mezi prohlížeči Microsoftu**: vyžaduje Windows 10 verze 1703 nebo novější. Další informace najdete v tématu [zásady prohlížeče SyncFavoritesBetweenIEAndMicrosoftEdge](/windows/client-management/mdm/policy-csp-browser#browser-syncfavoritesbetweenieandmicrosoftedge).
+- **Povolení vymazání dat procházení při ukončení**: vyžaduje Windows 10 verze 1703 nebo novější. Další informace najdete v tématu [zásady prohlížeče ClearBrowsingDataOnExit](/windows/client-management/mdm/policy-csp-browser#browser-clearbrowsingdataonexit).
+- **Povolit hlavičky do Not Track**: Další informace najdete v tématu [zásady prohlížeče AllowDoNotTrack](/windows/client-management/mdm/policy-csp-browser#browser-allowdonottrack).
+- **Povolení automatického vyplňování**: Další informace najdete v tématu [zásady prohlížeče AllowAutofill](/windows/client-management/mdm/policy-csp-browser#browser-allowautofill).
+- **Povolení souborů cookie**: Další informace najdete v tématu [zásady prohlížeče AllowCookies](/windows/client-management/mdm/policy-csp-browser#browser-allowcookies).
+- **Povolení blokování automaticky otevíraných oken**: Další informace najdete v tématu [zásady prohlížeče AllowPopups](/windows/client-management/mdm/policy-csp-browser#browser-allowpopups).
+- **Povolení návrhů hledání na adresním řádku**: Další informace najdete v tématu [zásady prohlížeče AllowSearchSuggestionsinAddressBar](/windows/client-management/mdm/policy-csp-browser#browser-allowsearchsuggestionsinaddressbar).
+- **Povolení odesílání intranetového provozu do Internet Exploreru**: Další informace najdete v tématu [zásady prohlížeče SendIntranetTraffictoInternetExplorer](/windows/client-management/mdm/policy-csp-browser#browser-sendintranettraffictointernetexplorer).
+- **Povolení správce hesel**: Další informace najdete v tématu [zásady prohlížeče AllowPasswordManager](/windows/client-management/mdm/policy-csp-browser#browser-allowpasswordmanager).
+- **Povolení vývojářské nástroje**: Další informace najdete v tématu [zásady prohlížeče AllowDeveloperTools](/windows/client-management/mdm/policy-csp-browser#browser-allowdevelopertools).
+- **Povolení rozšíření**: Další informace najdete v tématu [zásady prohlížeče AllowExtensions](/windows/client-management/mdm/policy-csp-browser#browser-allowextensions).
 
-### <a name="prerequisites"></a>Požadavky
+### <a name="prerequisites"></a>Předpoklady
 - Klient Windows 10, který je připojen Azure Active Directory. 
 
 ### <a name="known-issues"></a>Známé problémy
@@ -424,4 +424,4 @@ Postupná nasazení automatizují koordinované, sekvenční zavedení softwaru 
 
 
 ## <a name="next-steps"></a>Další kroky
-Informace o instalaci nebo aktualizaci větve Technical Preview najdete v tématu [Technical Preview pro Configuration Manager](technical-preview.md).    
+Informace o instalaci nebo aktualizaci větve Technical Preview najdete v tématu [Technical Preview pro Configuration Manager](technical-preview.md).

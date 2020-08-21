@@ -10,12 +10,12 @@ ms.assetid: abd45393-d84e-4583-bc80-74bbb3709577
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6df9238cd81f14a64a42c45136c778357acb89c4
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 1d79edb5ad1a60c5876163281ec5c1d1c17eff0a
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88126946"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692804"
 ---
 # <a name="manage-configuration-manager-clients-in-a-virtual-desktop-infrastructure-vdi"></a>Správa klientů Configuration Manager v infrastruktuře virtuálních klientských počítačů (VDI)
 
@@ -41,7 +41,7 @@ Další informace najdete v tématu [Podpora virtualizačních prostředí](../.
 
 Nenainstalujete klienta Configuration Manager pro jednotlivé relace vzdálené plochy. Nainstalujte ji jednou na server, který je hostitelem služby Vzdálená plocha. Na serveru služby Vzdálená plocha můžete použít všechny klientské funkce Configuration Manager.
 
-Další informace najdete v tématu [Vítá vás služba Vzdálená plocha](https://docs.microsoft.com/windows-server/remote/remote-desktop-services/welcome-to-rds).
+Další informace najdete v tématu [Vítá vás služba Vzdálená plocha](/windows-server/remote/remote-desktop-services/welcome-to-rds).
 
 ## <a name="pooled-vms"></a>Virtuální počítače ve fondu
 

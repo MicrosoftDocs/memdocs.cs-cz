@@ -10,12 +10,12 @@ ms.assetid: 634d612c-92d7-4c03-873a-b2e730c9a72d
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 159afbf2c5aae9516fc5244ee06a2aa484290c20
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 84f1ea48887f89cf06ed4b41d0de0dfc24e9d508
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81721756"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697122"
 ---
 # <a name="create-certificate-profiles"></a>Vytváření profilů certifikátů
 
@@ -114,7 +114,7 @@ Dokončete stránku **pro zápis SCEP** v Průvodci vytvořením profilu certifi
 
   - **Instalovat do čipu TPM (Trusted Platform Module), jinak selhání**: Nainstaluje klíč do čipu TPM. Pokud modul TPM neexistuje, instalace se nezdařila.  
 
-  - **Nainstalovat do Windows Hello pro firmy, jinak chyba**: Tato možnost je k dispozici pro zařízení s Windows 10. Umožňuje uložit certifikát do úložiště Windows Hello pro firmy, které je chráněné službou Multi-Factor Authentication. Další informace najdete v tématu [Windows Hello pro firmy](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-identity-verification).
+  - **Nainstalovat do Windows Hello pro firmy, jinak chyba**: Tato možnost je k dispozici pro zařízení s Windows 10. Umožňuje uložit certifikát do úložiště Windows Hello pro firmy, které je chráněné službou Multi-Factor Authentication. Další informace najdete v tématu [Windows Hello pro firmy](/windows/security/identity-protection/hello-for-business/hello-identity-verification).
 
     > [!NOTE]  
     > Tato možnost nepodporuje přihlášení pomocí čipové karty pro použití rozšířeného klíče na stránce vlastností certifikátu.
@@ -138,10 +138,10 @@ Na stránce **Vlastnosti certifikátu** v Průvodci vytvořením profilu certifi
 
   - Pokud *zadáte* název šablony certifikátu, ujistěte se, že název přesně odpovídá jedné z šablon certifikátů. Musí odpovídat názvům uvedeným v registru serveru NDES. Ujistěte se, že zadáte název šablony certifikátu, a ne zobrazovaný název šablony certifikátu.  
 
-    Názvy šablon certifikátů zjistíte tak, že přejdete do následujícího klíče registru: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\MSCEP`. Vypíše šablony certifikátů jako hodnoty pro **EncryptionTemplate**, **GeneralPurposeTemplate**a **SignatureTemplate**. Výchozí hodnota všech tří šablon certifikátů je **IPSECIntermediateOffline**a je namapovaná na zobrazované jméno šablony **IPSec (žádost offline)**.  
+    Názvy šablon certifikátů zjistíte tak, že přejdete do následujícího klíče registru: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\MSCEP` . Vypíše šablony certifikátů jako hodnoty pro **EncryptionTemplate**, **GeneralPurposeTemplate**a **SignatureTemplate**. Výchozí hodnota všech tří šablon certifikátů je **IPSECIntermediateOffline**a je namapovaná na zobrazované jméno šablony **IPSec (žádost offline)**.  
 
     > [!WARNING]  
-    > Když zadáte název šablony certifikátu, Configuration Manager nemůže ověřit obsah šablony certifikátu. Možná budete moct vybrat možnosti, které šablona certifikátu nepodporuje. výsledkem může být neúspěšná žádost o certifikát. Když k tomuto chování dojde, zobrazí se v souboru CPR. log chybová zpráva pro W3wp. exe, že název šablony v žádosti o podepsání certifikátu (CSR) a výzva se neshoduje.  
+    > Když zadáte název šablony certifikátu, Configuration Manager nemůže ověřit obsah šablony certifikátu. Možná budete moct vybrat možnosti, které šablona certifikátu nepodporuje. výsledkem může být neúspěšná žádost o certifikát. Když k tomuto chování dojde, zobrazí se chybová zpráva pro w3wp.exe v souboru CPR. log, že název šablony v žádosti o podepsání certifikátu (CSR) a výzva se neshodují.  
     >
     > Když zadáte název šablony certifikátu, která je určená pro hodnotu **GeneralPurposeTemplate** , vyberte možnost **šifrování klíče** a možnosti **digitálního podpisu** pro tento profil certifikátu. Pokud chcete v tomto profilu certifikátu povolit jenom možnost **šifrování klíče** , zadejte název šablony certifikátu pro klíč **EncryptionTemplate** . Naopak v případě, že chcete pro tento profil certifikátu povolit pouze možnost **Digitální podpis** , zadejte název šablony certifikátu pro klíč **SignatureTemplate** .  
 
@@ -157,7 +157,7 @@ Na stránce **Vlastnosti certifikátu** v Průvodci vytvořením profilu certifi
 - **Období platnosti certifikátu**: Pokud nastavíte vlastní období platnosti ve vydávající certifikační autoritě, zadejte dobu zbývající do vypršení platnosti certifikátu.
 
     > [!TIP]
-    > Pomocí následujícího příkazového řádku nastavte vlastní období platnosti:`certutil -setreg Policy\EditFlags +EDITF_ATTRIBUTEENDDATE`
+    > Pomocí následujícího příkazového řádku nastavte vlastní období platnosti: `certutil -setreg Policy\EditFlags +EDITF_ATTRIBUTEENDDATE`
     > Další informace o tomto příkazu najdete v tématu [infrastruktura certifikátů](certificate-infrastructure.md).  
 
     Můžete zadat hodnotu nižší, než je období platnosti zadané v šabloně certifikátu, ne však vyšší. Pokud je například období platnosti certifikátu v šabloně certifikátu dva roky, můžete zadat hodnotu jeden rok, ale ne pět let. Hodnota musí být zároveň nižší než zbývající doba platnosti certifikátu vydávající CA.  

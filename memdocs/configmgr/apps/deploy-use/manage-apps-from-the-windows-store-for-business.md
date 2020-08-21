@@ -10,18 +10,18 @@ ms.assetid: 8cdb22a6-72d7-41f5-9bed-c098b1bcf675
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7d6a61324f8c777ba5ed09dd26816152d6f17af9
-ms.sourcegitcommit: 2aa97d1b6409575d731c706faa2bc093c2b298c4
+ms.openlocfilehash: a8125f55215fd597d9611723e1d36629850bff44
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82643208"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695218"
 ---
 # <a name="manage-apps-from-the-microsoft-store-for-business-and-education-with-configuration-manager"></a>Správa aplikací z Microsoft Store pro firmy a vzdělávání pomocí Configuration Manager
 
-[Microsoft Store pro firmy a vzdělávání](https://docs.microsoft.com/microsoft-store/) je místo, kde můžete najít a získat aplikace pro Windows pro vaši organizaci. Když úložiště připojíte k Configuration Manager, synchronizuje se seznam aplikací, které jste získali. Tyto aplikace můžete zobrazit v konzole Configuration Manager a nasazovat je, jako byste nasadili jakoukoli jinou aplikaci.
+[Microsoft Store pro firmy a vzdělávání](/microsoft-store/) je místo, kde můžete najít a získat aplikace pro Windows pro vaši organizaci. Když úložiště připojíte k Configuration Manager, synchronizuje se seznam aplikací, které jste získali. Tyto aplikace můžete zobrazit v konzole Configuration Manager a nasazovat je, jako byste nasadili jakoukoli jinou aplikaci.
 
-## <a name="online-and-offline-apps"></a><a name="bkmk_apps"></a>Online a offline aplikace
+## <a name="online-and-offline-apps"></a><a name="bkmk_apps"></a> Online a offline aplikace
 
 Microsoft Store pro firmy a vzdělávání podporuje dva typy aplikací:
 
@@ -29,7 +29,7 @@ Microsoft Store pro firmy a vzdělávání podporuje dva typy aplikací:
 
 - **Offline**: Tento typ umožňuje ukládat aplikace a licence do mezipaměti, aby se nasadily přímo v místní síti. Zařízení se nepotřebují připojit k úložišti nebo mít připojení k Internetu.
 
-Další informace najdete v tématu [přehled Microsoft Store pro firmy a vzdělávání](https://docs.microsoft.com/microsoft-store/microsoft-store-for-business-overview).
+Další informace najdete v tématu [přehled Microsoft Store pro firmy a vzdělávání](/microsoft-store/microsoft-store-for-business-overview).
 
 ### <a name="summary-of-capabilities"></a>Souhrn funkcí
 
@@ -46,11 +46,11 @@ Configuration Manager podporuje správu Microsoft Store pro obchodní a vzdělá
 |Podpora obchodních aplikací ze Storu|Ano|Ano|
 |Zřízení aplikace pro Store pro všechny uživatele na zařízení –<sup>[Poznámka 2](#bkmk_note2)</sup><!--1358310-->|Ano|Ano|
 
-#### <a name="note-1-online-licensed-apps-version-requirement"></a><a name="bkmk_note1"></a>Poznámka 1: požadavek na verzi licencovaných aplikací online
+#### <a name="note-1-online-licensed-apps-version-requirement"></a><a name="bkmk_note1"></a> Poznámka 1: požadavek na verzi licencovaných aplikací online
 
 Pokud chcete nasadit online licencované aplikace do zařízení s Windows 10 pomocí klienta Configuration Manager, musí používat Windows 10 verze 1703 nebo novější.  
 
-#### <a name="note-2-configuration-manager-minimum-version"></a><a name="bkmk_note2"></a>Poznámka 2: Configuration Manager minimální verze
+#### <a name="note-2-configuration-manager-minimum-version"></a><a name="bkmk_note2"></a> Poznámka 2: Configuration Manager minimální verze
 
 Počínaje verzí 1806. Další informace najdete v tématu [vytváření aplikací pro Windows](../get-started/creating-windows-applications.md#bkmk_provision).  
 
@@ -64,7 +64,7 @@ Než nasadíte Microsoft Store pro obchodní a vzdělávací aplikace do zaříz
 
 - Když se účet místního správce přihlásí na zařízení, nemůže získat přístup k Microsoft Store pro obchodní a vzdělávací aplikace.  
 
-- Zařízení musí mít živé připojení k Internetu Microsoft Store pro firmy a vzdělávání. Další informace, včetně konfigurace proxy serveru, najdete v části [požadavky](https://docs.microsoft.com/microsoft-store/prerequisites-microsoft-store-for-business).  
+- Zařízení musí mít živé připojení k Internetu Microsoft Store pro firmy a vzdělávání. Další informace, včetně konfigurace proxy serveru, najdete v části [požadavky](/microsoft-store/prerequisites-microsoft-store-for-business).  
 
 ### <a name="notes-for-devices-running-earlier-versions-of-windows-10"></a>Poznámky pro zařízení s dřívějšími verzemi Windows 10
 
@@ -104,23 +104,23 @@ Při dalším cyklu hodnocení aplikace:
 
 - Pokud nasadíte zásady skupiny, abyste zakázali přístup k verzi Microsoft Store spotřebitelů, nasazení z Microsoft Store pro firmy a vzdělávání nebudou fungovat. K tomuto chování dochází, i když povolíte Microsoft Store pro firmy a vzdělávání.  
 
-## <a name="set-up-synchronization"></a><a name="bkmk_setup"></a>Nastavení synchronizace
+## <a name="set-up-synchronization"></a><a name="bkmk_setup"></a> Nastavení synchronizace
 
 Když synchronizujete seznam Microsoft Store pro obchodní a vzdělávací aplikace, které vaše organizace získala, zobrazí se tyto aplikace v konzole Configuration Manager.
 
 Připojte svůj Configuration Manager web k Azure AD a Microsoft Store pro firmy a vzdělávání. Další informace a podrobnosti o tomto procesu najdete v tématu [Konfigurace služeb Azure](../../core/servers/deploy/configure/azure-services-wizard.md). Umožňuje vytvořit připojení ke službě **Microsoft Store pro firmy** .
 
-Ujistěte se, že spojovací bod služby a cílová zařízení mají přístup ke cloudové službě. Další informace najdete v tématu [předpoklady pro Microsoft Store pro firmy a vzdělávání – konfigurace proxy serveru](https://docs.microsoft.com/microsoft-store/prerequisites-microsoft-store-for-business#proxy-configuration).
+Ujistěte se, že spojovací bod služby a cílová zařízení mají přístup ke cloudové službě. Další informace najdete v tématu [předpoklady pro Microsoft Store pro firmy a vzdělávání – konfigurace proxy serveru](/microsoft-store/prerequisites-microsoft-store-for-business#proxy-configuration).
 
-### <a name="supplemental-information-and-configuration"></a><a name="bkmk_config"></a>Doplňující informace a konfigurace
+### <a name="supplemental-information-and-configuration"></a><a name="bkmk_config"></a> Doplňující informace a konfigurace
 
 Na stránce **aplikace** v Průvodci službami Azure nejdřív nakonfigurujte **prostředí Azure** a **webovou aplikaci**. Pak si přečtěte část **Další informace** v dolní části stránky. Tyto informace zahrnují následující další akce na portálu Microsoft Store for Business a vzdělávání:  
 
-- Nakonfigurujte Configuration Manager jako nástroj pro správu úložiště. Další informace najdete v tématu [Konfigurace poskytovatele správy](https://docs.microsoft.com/microsoft-store/configure-mdm-provider-microsoft-store-for-business).  
+- Nakonfigurujte Configuration Manager jako nástroj pro správu úložiště. Další informace najdete v tématu [Konfigurace poskytovatele správy](/microsoft-store/configure-mdm-provider-microsoft-store-for-business).  
 
-- Povolí podporu pro offline licencované aplikace. Další informace najdete v tématu [distribuce offline aplikací](https://docs.microsoft.com/microsoft-store/distribute-offline-apps).  
+- Povolí podporu pro offline licencované aplikace. Další informace najdete v tématu [distribuce offline aplikací](/microsoft-store/distribute-offline-apps).  
 
-- Získejte alespoň jednu aplikaci. Další informace najdete v tématu [vyhledání a získání aplikací](https://docs.microsoft.com/microsoft-store/find-and-acquire-apps-overview).  
+- Získejte alespoň jednu aplikaci. Další informace najdete v tématu [vyhledání a získání aplikací](/microsoft-store/find-and-acquire-apps-overview).  
 
 Na stránce **Konfigurace** v Průvodci službami Azure zadejte následující informace:  
 
@@ -133,7 +133,7 @@ Na stránce **Konfigurace** v Průvodci službami Azure zadejte následující i
 > [!NOTE]
 > Configuration Manager nesynchronizuje ikonu aplikace ze Storu. Pokud potřebujete ikonu pro zobrazení této aplikace v centru softwaru, přidejte ji ručně do vlastností aplikace. Další informace najdete v tématu [Ruční zadání informací o aplikaci](create-applications.md#bkmk_manual-app).<!-- 2837053 -->
 
-## <a name="create-and-deploy-the-app"></a><a name="bkmk_deploy"></a>Vytvoření a nasazení aplikace
+## <a name="create-and-deploy-the-app"></a><a name="bkmk_deploy"></a> Vytvoření a nasazení aplikace
 
 Po synchronizaci vytvořte a nasaďte Microsoft Store pro obchodní a vzdělávací aplikace podobně jako jakékoli jiné aplikace Configuration Manager.
 
@@ -143,7 +143,7 @@ Po synchronizaci vytvořte a nasaďte Microsoft Store pro obchodní a vzděláva
 
 Lokalita vytvoří Configuration Manager aplikaci obsahující Microsoft Store pro firmy a vzdělávání.
 
-Pak tuto aplikaci nasaďte a sledujte stejně jako jakoukoli jinou aplikaci Configuration Manager. Další informace najdete v těchto článcích:  
+Pak tuto aplikaci nasaďte a sledujte stejně jako jakoukoli jinou aplikaci Configuration Manager. Další informace najdete v následujících článcích:  
 
 - [Nasazení aplikací](deploy-applications.md)
 - [Monitorování aplikací z konzoly](monitor-applications-from-the-console.md)
@@ -154,17 +154,17 @@ V pracovním prostoru **softwarová knihovna** rozbalte položku **Správa aplik
 
 Pro každou aplikaci ze Storu, kterou spravujete, si prohlédněte následující informace o aplikaci:
 
-- App name (Název aplikace)
+- Název aplikace
 - Aplikační platforma
 - Počet licencí pro aplikaci, kterou vlastníte
 - Počet dostupných licencí
 
 Po nasazení online aplikací přijde všechny aktualizace této aplikace přímo z Microsoft Store. Configuration Manager nekontrolují dodržování předpisů pro online aplikace, a to pouze v případě, že systém Windows hlásí aplikaci jako nainstalovanou.  
 
-Když do zařízení s Windows 10 nasazujete offline aplikace pomocí klienta Configuration Manager, neumožníte uživatelům aktualizovat aplikace z externích nasazení Configuration Manager. Řízení aktualizací pro offline aplikace je zvlášť důležité v prostředích s více uživateli, jako jsou například učebny. Jedním z možností, jak Microsoft Store zakázat, je použití [zásad skupiny](https://docs.microsoft.com/windows/configuration/stop-employees-from-using-microsoft-store#block-microsoft-store-using-group-policy).
+Když do zařízení s Windows 10 nasazujete offline aplikace pomocí klienta Configuration Manager, neumožníte uživatelům aktualizovat aplikace z externích nasazení Configuration Manager. Řízení aktualizací pro offline aplikace je zvlášť důležité v prostředích s více uživateli, jako jsou například učebny. Jedním z možností, jak Microsoft Store zakázat, je použití [zásad skupiny](/windows/configuration/stop-employees-from-using-microsoft-store#block-microsoft-store-using-group-policy).
 
 Jakmile Microsoft Store pro firmy a vzdělávací správce získá offline aplikaci, nepublikujte aplikaci uživatelům přes Store. Tato konfigurace zajistí, že uživatelé nebudou moct instalovat nebo aktualizovat online. Uživatelé dostanou pouze offline aktualizace aplikací prostřednictvím Configuration Manager.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Řešení potíží s Microsoft Store pro podnikání a vzdělávání pomocí Configuration Manager](troubleshoot-microsoft-store-for-business-integration.md)

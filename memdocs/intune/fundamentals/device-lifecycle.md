@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b9580a5cb99192f81fc83f8d61119f5368f0a5ee
-ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
+ms.openlocfilehash: 0c8d60a4a943ba2af9ea99f9eb887a9b77a49fcf
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86088390"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693501"
 ---
 # <a name="overview-of-the-microsoft-intune-mobile-device-management-mdm-lifecycle"></a>Přehled životního cyklu správy mobilních zařízení (MDM) v Microsoft Intune
 
@@ -36,7 +36,7 @@ Dnešní strategie správy mobilních zařízení (MDM) se týkají nejrůzněj�
 
 Registrace zařízení je jenom první krok. Pokud chcete využívat všechno, co Intune nabízí, a zajistit u zařízení zabezpečení a dodržování standardů společnosti, můžete si vybrat z široké nabídky zásad. Ty vám umožní nastavit skoro každý aspekt fungování spravovaných zařízení. Mají třeba uživatelé na zařízeních, která obsahují firemní data, používat heslo? Můžete to vyžadovat. Máte podnikovou síť Wi-Fi? Můžete ji automaticky nakonfigurovat. Tady je přehled typů dostupných možností konfigurace:
 
-- [**Konfigurace zařízení**](../configuration/device-profiles.md). Tyto zásady umožňují nastavit způsob fungování funkcí a možností zařízení, která spravujete. Můžete třeba vyžadovat použití hesla na zařízeních Windows Phone nebo zakázat použití fotoaparátu na zařízeních iPhone.
+- [**Konfigurace zařízení**](../configuration/device-profiles.md). Tyto zásady umožňují nastavit způsob fungování funkcí a možností zařízení, která spravujete. Můžete například vyžadovat použití hesla na telefonech s Androidem nebo zakázat používání kamery na iPhonu.
 - [**Přístup k prostředkům společnosti**](../configuration/device-profiles.md). Pokud umožníte uživatelům přistupovat k pracovním dokumentům z osobních zařízení, může to znamenat určité výzvy. Jak třeba zajistíte, aby byla všechna zařízení, která potřebují přístup k firemním e-mailům, správně nakonfigurovaná? Jak zajistíte, aby mohli uživatelé získat přístup do podnikové sítě pomocí připojení VPN, aniž by museli znát složitá nastavení? Intune vám může pomoct tyto překážky překonat díky automatické konfiguraci, která spravovaným zařízením umožní přístup k běžným prostředkům společnosti.
 - [**Zásady správy počítačů s Windows (s klientským softwarem Intune)**](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md) I když vám nejvíc možností správy zařízení přinese registrace počítačů s Windows do Intune, Intune dál podporuje správu počítačů s Windows pomocí klientského softwaru Intune. Pokud potřebujete informace o některých úlohách, které můžete s počítači provádět, začněte tady.
 

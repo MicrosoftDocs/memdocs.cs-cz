@@ -9,12 +9,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: e671118578d059e2b8416e6854a701ce7c405c0f
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: c6e4c0f7c6a1be519a33343508da3bd72cd2cd48
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718522"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695575"
 ---
 # <a name="mms-2019-docathon"></a>MMS 2019 Docathon
 
@@ -51,9 +51,9 @@ Vytvoření [účtu GitHub](https://github.com/join)
 
 - Zaměstnanci Microsoftu mají několik povinných kroků v jednom čase a mírně odlišný proces přispívání.  
 
-Další informace najdete v tématu [Nastavení účtu GitHub](https://docs.microsoft.com/contribute/get-started-setup-github) v příručce pro Docs.Microsoft.com pro přispěvatele.
+Další informace najdete v tématu [Nastavení účtu GitHub](/contribute/get-started-setup-github) v příručce pro Docs.Microsoft.com pro přispěvatele.
 
-## <a name="scope"></a>Rozsah
+## <a name="scope"></a>Obor
 
 Tato událost se týká pouze následujících úložišť GitHub:
 
@@ -68,7 +68,7 @@ Také jste připraveni, abyste provedli změny v jiném docs.microsoft.com obsah
 Přečtěte si informace o [tom, jak](../understand/use-docs.md#bkmk_docfeedback) zamezit problémy a [jak přispívat](../understand/use-docs.md#bkmk_contribute). Většinu základních změn je možné provádět prostřednictvím prostředí prohlížeče GitHub.  
 
 > [!Note]  
-> Pokud vás zajímá složitější pracovní postup s Git a VSCode, přečtěte si téma [Instalace nástrojů pro vytváření obsahu](https://docs.microsoft.com/contribute/get-started-setup-tools). A/nebo požádejte o pomoc Aaron/Erik. Následující akce jsou některé z důvodů, proč použít složitější pracovní postup:
+> Pokud vás zajímá složitější pracovní postup s Git a VSCode, přečtěte si téma [Instalace nástrojů pro vytváření obsahu](/contribute/get-started-setup-tools). A/nebo požádejte o pomoc Aaron/Erik. Následující akce jsou některé z důvodů, proč použít složitější pracovní postup:
 >
 > - Vytvořit nový článek
 > - Přidání obrázků
@@ -79,8 +79,8 @@ Přečtěte si informace o [tom, jak](../understand/use-docs.md#bkmk_docfeedback
 
 Začněte přemýšlet o a naplánujte svůj cíl pro tuto událost. Co chcete provést?
 
-- Prohlédněte si stávající problémy v úložištích oborů. U popisků, jako jsou **dobrý první problém** nebo **help-požadováno** , může být možné identifikovat dobré počáteční body. Pokud chcete některý z těchto problémů řešit, přidejte k němu komentář pomocí **#MMS2019Docathon** a označte ho a požádejte ho @author, aby vám tento problém přiřadil. Jinými slovy, [zavolejte DIB](https://www.merriam-webster.com/words-at-play/word-origin-dibs) na IT. Tento postup opakujte tolikrát, kolikrát chcete.  
-    Například v SCCMDocs, kde Aaron je Autor článku:`@aczechowski I'm claiming this issue for #MMS2019Docathon`
+- Prohlédněte si stávající problémy v úložištích oborů. U popisků, jako jsou **dobrý první problém** nebo **help-požadováno** , může být možné identifikovat dobré počáteční body. Pokud chcete některý z těchto problémů řešit, přidejte k němu komentář pomocí **#MMS2019Docathon** a označte ho a @author požádejte ho, aby vám tento problém přiřadil. Jinými slovy, [zavolejte DIB](https://www.merriam-webster.com/words-at-play/word-origin-dibs) na IT. Tento postup opakujte tolikrát, kolikrát chcete.  
+    Například v SCCMDocs, kde Aaron je Autor článku: `@aczechowski I'm claiming this issue for #MMS2019Docathon`
 
 - Víte, že se jedná o problém s článkem, ale ještě tam neexistovala žádná zpětná vazba. Jinými slovy, v dolní části článku neexistuje žádná **Zpětná vazba** . Zaznamenání nového problému a pak použijte stejné pokyny jako výše, abyste ho mohli uplatnit.  
 
@@ -130,17 +130,17 @@ Následující ocenění se počítá podle počtu oprávněných příspěvků 
 > [!Note]  
 > Za nejvíc zaznamenaných problémů nebereme žádnou cenu. Zpětná vazba je užitečná, ale bodem této události je přispět.
 
-## <a name="resources"></a>Zdroje a prostředky
+## <a name="resources"></a>Prostředky
 
 - [Styl Microsoft](https://aka.ms/MicrosoftStyle)
 
-    - [Rychlý start](https://docs.microsoft.com/contribute/style-quick-start)
+    - [Rychlý start](/contribute/style-quick-start)
 
-    - [10 nejoblíbenějších tipů pro Microsoft Style a Voice](https://docs.microsoft.com/style-guide/top-10-tips-style-voice)
+    - [10 nejoblíbenějších tipů pro Microsoft Style a Voice](/style-guide/top-10-tips-style-voice)
 
-- [Průvodce pro přispěvatele](https://docs.microsoft.com/contribute)
+- [Průvodce pro přispěvatele](/contribute)
 
-- [Používání Markdownu pro vytváření článků na webu Docs](https://docs.microsoft.com/contribute/markdown-reference)
+- [Používání Markdownu pro vytváření článků na webu Docs](/contribute/markdown-reference)
 
 ## <a name="official-rules"></a>Oficiální pravidla
 
@@ -166,7 +166,7 @@ Microsoft Cloud + AI – obsah vztahů pro vývojáře & učení s výukou MMS 2
 
 5. JAK ZADAT
 
-    Chcete-li vytvořit položku, odešlete úpravy článků v následujících úložištích GitHub: IntuneDocs, SCCMDocs, SCCM-docs-PowerShell-ref. Další informace o procesu odeslání najdete v tématu [jak přispívat](https://docs.microsoft.com/sccm/core/understand/use-docs#bkmk_contribute).
+    Chcete-li vytvořit položku, odešlete úpravy článků v následujících úložištích GitHub: IntuneDocs, SCCMDocs, SCCM-docs-PowerShell-ref. Další informace o procesu odeslání najdete v tématu [jak přispívat](/sccm/core/understand/use-docs#bkmk_contribute).
 
     Pokud chcete odeslat položku, odešlete žádost o přijetí změn na GitHubu.
 
@@ -254,4 +254,4 @@ Microsoft Cloud + AI – obsah vztahů pro vývojáře & učení s výukou MMS 2
 
     V Microsoftu jsme se zavázali chránit vaše osobní údaje. Společnost Microsoft používá informace, které zadáte v tomto formuláři, k upozorňování na důležité informace o našich produktech, upgradech a vylepšeních a k odesílání informací o dalších produktech a službách společnosti Microsoft. Společnost Microsoft nesdílí informace, které poskytnete u třetích stran bez vašeho svolení, s výjimkou případů, kdy je potřeba dokončit služby nebo transakce, které jste požadovali, nebo podle požadavků zákonů. Společnosti Microsoft se zavazuje chránit bezpečnost vašich osobních údajů. Používáme řadu technologií a postupů pro zabezpečení, které pomáhají chránit vaše osobní informace před neoprávněným přístupem, použitím nebo sdělením. Vaše osobní údaje nejsou nikdy sdíleny mimo společnost bez vašeho svolení, s výjimkou podmínek popsaných výše.
 
-    Pokud se domníváte, že společnost Microsoft nedodržuje toto prohlášení, obraťte se na privrc@microsoft.com společnost Microsoft odesláním e-mailu nebo poštovní pošty do služby Microsoft Privacy Response Center, Microsoft Corporation, One Microsoft Way, Redmond, WA 98052.
+    Pokud se domníváte, že společnost Microsoft nedodržuje toto prohlášení, obraťte se na společnost Microsoft odesláním e-mailu privrc@microsoft.com nebo poštovní pošty do služby Microsoft Privacy Response Center, Microsoft Corporation, One Microsoft Way, Redmond, WA 98052.

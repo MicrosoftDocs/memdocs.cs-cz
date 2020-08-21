@@ -10,12 +10,12 @@ ms.assetid: 01b30260-f03a-4851-a549-d1b76e8cfc69
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: dd238319ba064f57911eee58e1299e17a2ce5b60
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: db59ad55c52f8d937b23704af310dc8879fe8a6d
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81713839"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692872"
 ---
 # <a name="evaluate-configuration-manager-by-building-your-own-lab-environment"></a>Vyhodnotit Configuration Manager vytvořením vlastního testovacího prostředí
 
@@ -47,8 +47,8 @@ Klientské počítače jsou nainstalované v rámci technologie Hyper-V. Samotn�
 
  Když sestavíte tuto testovací prostředí, získáte funkční prostředí, ve kterém můžete pracovat. Toto prostředí ale nebude optimalizované pro faktory, jako je výkon systému, Správa místa na pevném disku a SQL Server úložiště.  
 
-##  <a name="recommended-reading-before-you-build-the-lab"></a><a name="BKMK_EvalRec"></a>Doporučené čtení před sestavením testovacího prostředí  
- K dispozici je spousta obsahu v [dokumentaci pro Configuration Manager](https://docs.microsoft.com/sccm/). Než začnete sestavovat testovací prostředí, doporučujeme, abyste si přečetli následující témata z této knihovny:  
+##  <a name="recommended-reading-before-you-build-the-lab"></a><a name="BKMK_EvalRec"></a> Doporučené čtení před sestavením testovacího prostředí  
+ K dispozici je spousta obsahu v [dokumentaci pro Configuration Manager](/sccm/). Než začnete sestavovat testovací prostředí, doporučujeme, abyste si přečetli následující témata z této knihovny:  
 
 -   Naučte se základní koncepty týkající se konzoly Configuration Manager, portálů pro koncové uživatele a ukázkových scénářů v části [Úvod do Configuration Manager](../../core/understand/introduction.md).  
 
@@ -60,4 +60,4 @@ Klientské počítače jsou nainstalované v rámci technologie Hyper-V. Samotn�
 
 -   Seznamte se se správou obsahu v [konceptech správy obsahu](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md).  
 
--   Naučte se, jak úspěšně podporovat každodenní úkoly v rámci nasazení, v tématu [Vysvětlení způsobu, jakým klienti hledají služby a prostředky lokality pro Configuration Manager](../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md).  
+-   Naučte se, jak úspěšně podporovat každodenní úkoly v rámci nasazení, v tématu [Vysvětlení způsobu, jakým klienti hledají služby a prostředky lokality pro Configuration Manager](../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md).

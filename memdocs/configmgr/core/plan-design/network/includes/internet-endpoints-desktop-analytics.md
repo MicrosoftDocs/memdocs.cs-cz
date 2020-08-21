@@ -5,12 +5,12 @@ ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: include
 ms.date: 08/11/2020
-ms.openlocfilehash: ca735cde1da5d563b9a7772fdaa55834e307312e
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 2ae953f6fb01f42c8140407c551ddeb3a9f39c70
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125936"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692671"
 ---
 ### <a name="server-connectivity-endpoints"></a>Koncové body připojení serveru
 
@@ -42,15 +42,15 @@ Klientská zařízení musí komunikovat s následujícími koncovými body:
 |-------|-----------|-----------|
 | 1 | `https://settings-win.data.microsoft.com` | Umožňuje aktualizaci kompatibility odeslat data společnosti Microsoft. |
 | 2 | `http://adl.windows.com` | Umožňuje aktualizaci kompatibility získat nejnovější data kompatibility od Microsoftu. |
-| 3 | `https://watson.telemetry.microsoft.com` | [Zasílání zpráv o chybách systému Windows (WER)](https://docs.microsoft.com/windows/win32/wer/windows-error-reporting). Vyžaduje se ke sledování stavu nasazení ve Windows 10 verze 1803 nebo starší. |
-| 4 | `https://umwatsonc.events.data.microsoft.com` | [Zasílání zpráv o chybách systému Windows (WER)](https://docs.microsoft.com/windows/win32/wer/windows-error-reporting). Vyžaduje se pro sestavy stavu zařízení ve Windows 10 verze 1809 nebo novější. |
-| 5 | `https://ceuswatcab01.blob.core.windows.net` | [Zasílání zpráv o chybách systému Windows (WER)](https://docs.microsoft.com/windows/win32/wer/windows-error-reporting). Vyžaduje se ke sledování stavu nasazení ve Windows 10 verze 1809 nebo novější. |
-| 6 | `https://ceuswatcab02.blob.core.windows.net` | [Zasílání zpráv o chybách systému Windows (WER)](https://docs.microsoft.com/windows/win32/wer/windows-error-reporting). Vyžaduje se ke sledování stavu nasazení ve Windows 10 verze 1809 nebo novější. |
-| 7 | `https://eaus2watcab01.blob.core.windows.net` | [Zasílání zpráv o chybách systému Windows (WER)](https://docs.microsoft.com/windows/win32/wer/windows-error-reporting). Vyžaduje se ke sledování stavu nasazení ve Windows 10 verze 1809 nebo novější. |
-| 8 | `https://eaus2watcab02.blob.core.windows.net` | [Zasílání zpráv o chybách systému Windows (WER)](https://docs.microsoft.com/windows/win32/wer/windows-error-reporting). Vyžaduje se ke sledování stavu nasazení ve Windows 10 verze 1809 nebo novější. |
-| 9 | `https://weus2watcab01.blob.core.windows.net` | [Zasílání zpráv o chybách systému Windows (WER)](https://docs.microsoft.com/windows/win32/wer/windows-error-reporting). Vyžaduje se ke sledování stavu nasazení ve Windows 10 verze 1809 nebo novější. |
-| 10 | `https://weus2watcab02.blob.core.windows.net` | [Zasílání zpráv o chybách systému Windows (WER)](https://docs.microsoft.com/windows/win32/wer/windows-error-reporting). Vyžaduje se ke sledování stavu nasazení ve Windows 10 verze 1809 nebo novější. |
-| 11 | `https://kmwatsonc.events.data.microsoft.com` | [Online Crash Analysis (OCA)](https://docs.microsoft.com/windows/win32/dxtecharts/crash-dump-analysis). Vyžaduje se pro sestavy stavu zařízení ve Windows 10 verze 1809 nebo novější. |
-| 12 | `https://oca.telemetry.microsoft.com`  | [Online Crash Analysis (OCA)](https://docs.microsoft.com/windows/win32/dxtecharts/crash-dump-analysis). Vyžaduje se ke sledování stavu nasazení ve Windows 10 verze 1803 nebo starší. |
-| 13 | `https://login.live.com` | Je potřeba, abyste poskytovali spolehlivější identitu zařízení pro desktopovou analýzu. <br> <br>Pokud chcete zakázat přístup účet Microsoft koncovým uživatelům, místo blokování tohoto koncového bodu použijte nastavení zásad. Další informace najdete v tématu [účet Microsoft v podniku](https://docs.microsoft.com/windows/security/identity-protection/access-control/microsoft-accounts#block-all-consumer-microsoft-account-user-authentication). |
+| 3 | `https://watson.telemetry.microsoft.com` | [Zasílání zpráv o chybách systému Windows (WER)](/windows/win32/wer/windows-error-reporting). Vyžaduje se ke sledování stavu nasazení ve Windows 10 verze 1803 nebo starší. |
+| 4 | `https://umwatsonc.events.data.microsoft.com` | [Zasílání zpráv o chybách systému Windows (WER)](/windows/win32/wer/windows-error-reporting). Vyžaduje se pro sestavy stavu zařízení ve Windows 10 verze 1809 nebo novější. |
+| 5 | `https://ceuswatcab01.blob.core.windows.net` | [Zasílání zpráv o chybách systému Windows (WER)](/windows/win32/wer/windows-error-reporting). Vyžaduje se ke sledování stavu nasazení ve Windows 10 verze 1809 nebo novější. |
+| 6 | `https://ceuswatcab02.blob.core.windows.net` | [Zasílání zpráv o chybách systému Windows (WER)](/windows/win32/wer/windows-error-reporting). Vyžaduje se ke sledování stavu nasazení ve Windows 10 verze 1809 nebo novější. |
+| 7 | `https://eaus2watcab01.blob.core.windows.net` | [Zasílání zpráv o chybách systému Windows (WER)](/windows/win32/wer/windows-error-reporting). Vyžaduje se ke sledování stavu nasazení ve Windows 10 verze 1809 nebo novější. |
+| 8 | `https://eaus2watcab02.blob.core.windows.net` | [Zasílání zpráv o chybách systému Windows (WER)](/windows/win32/wer/windows-error-reporting). Vyžaduje se ke sledování stavu nasazení ve Windows 10 verze 1809 nebo novější. |
+| 9 | `https://weus2watcab01.blob.core.windows.net` | [Zasílání zpráv o chybách systému Windows (WER)](/windows/win32/wer/windows-error-reporting). Vyžaduje se ke sledování stavu nasazení ve Windows 10 verze 1809 nebo novější. |
+| 10 | `https://weus2watcab02.blob.core.windows.net` | [Zasílání zpráv o chybách systému Windows (WER)](/windows/win32/wer/windows-error-reporting). Vyžaduje se ke sledování stavu nasazení ve Windows 10 verze 1809 nebo novější. |
+| 11 | `https://kmwatsonc.events.data.microsoft.com` | [Online Crash Analysis (OCA)](/windows/win32/dxtecharts/crash-dump-analysis). Vyžaduje se pro sestavy stavu zařízení ve Windows 10 verze 1809 nebo novější. |
+| 12 | `https://oca.telemetry.microsoft.com`  | [Online Crash Analysis (OCA)](/windows/win32/dxtecharts/crash-dump-analysis). Vyžaduje se ke sledování stavu nasazení ve Windows 10 verze 1803 nebo starší. |
+| 13 | `https://login.live.com` | Je potřeba, abyste poskytovali spolehlivější identitu zařízení pro desktopovou analýzu. <br> <br>Pokud chcete zakázat přístup účet Microsoft koncovým uživatelům, místo blokování tohoto koncového bodu použijte nastavení zásad. Další informace najdete v tématu [účet Microsoft v podniku](/windows/security/identity-protection/access-control/microsoft-accounts#block-all-consumer-microsoft-account-user-authentication). |
 | 14 | `https://v20.events.data.microsoft.com` | Prostředí připojeného uživatele a koncový bod komponenty diagnostiky. |

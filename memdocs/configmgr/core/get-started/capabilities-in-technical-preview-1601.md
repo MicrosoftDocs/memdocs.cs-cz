@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: be1401f28ccbd15de2561a19169ed67a81a91550
-ms.sourcegitcommit: 7e34b561d43aa086fc07ab4edf2230d09c04f05b
+ms.openlocfilehash: 1e86f331531d166e30ec7284d3852930fb3e62af
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87526028"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695813"
 ---
 # <a name="capabilities-in-technical-preview-1601-for-configuration-manager"></a>Funkce ve verzi Technical Preview 1601 pro Configuration Manager
 
@@ -57,7 +57,7 @@ V tomto článku se seznámíte s funkcemi, které jsou k dispozici v Technical 
 
 **V následující části najdete nové funkce, které můžete s touto verzí vyzkoušet.**  
 
-##  <a name="improvements-to-microsoft-intune-integration"></a><a name="bkmk_hybrid1"></a>Vylepšení integrace Microsoft Intune  
+##  <a name="improvements-to-microsoft-intune-integration"></a><a name="bkmk_hybrid1"></a> Vylepšení integrace Microsoft Intune  
 V 1601 Technical Preview jsme doplnili podporu pro následující funkce:  
 
 ### <a name="improvements-to-conditional-access"></a>Vylepšení podmíněného přístupu  
@@ -75,11 +75,11 @@ V 1601 Technical Preview jsme doplnili podporu pro následující funkce:
 
     -   Odběr služby Microsoft Intune. Microsoft Intune předplatné je potřeba nakonfigurovat v konzole Configuration Manager.  
 
-    -   [Předpoklady pro automatickou registraci služby Azure AD](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-automatic-device-registration/?rnd=1).  
+    -   [Předpoklady pro automatickou registraci služby Azure AD](/azure/active-directory/devices/hybrid-azuread-join-plan?rnd=1).  
 
     Pokud chcete použít tuto možnost, musíte v Configuration Manager vytvořit zásadu dodržování předpisů s konkrétními pravidly, která jsou popsaná níže, a nastavit zásadu podmíněného přístupu v konzole Intune.  Aby bylo zajištěno, že přístup je povolen pouze pro vyhovující počítače, je nutné nastavit možnost požadavky na počítač s Windows na **zařízení musí splňovat předpisy** . Níže jsou uvedené pravidla zásad dodržování předpisů, která platí pro počítače spravované pomocí Configuration Manager.  
 
-    -   **Vyžadovat registraci ve službě Azure Active Directory:** Toto pravidlo zkontroluje, jestli je zařízení uživatele na pracovišti připojené ke službě Azure AD, a pokud ne, zařízení se automaticky zaregistruje ve službě Azure AD. Automatická registrace se podporuje jenom v systému Windows 8.1. Na počítače se systémem Windows 7 nasaďte pro provedení automatické registrace instalační službu MSI. Další informace najdete [tady](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-automatic-device-registration/?rnd=1).  
+    -   **Vyžadovat registraci ve službě Azure Active Directory:** Toto pravidlo zkontroluje, jestli je zařízení uživatele na pracovišti připojené ke službě Azure AD, a pokud ne, zařízení se automaticky zaregistruje ve službě Azure AD. Automatická registrace se podporuje jenom v systému Windows 8.1. Na počítače se systémem Windows 7 nasaďte pro provedení automatické registrace instalační službu MSI. Další informace najdete [tady](/azure/active-directory/devices/hybrid-azuread-join-plan?rnd=1).  
 
     -   **Všechny požadované aktualizace jsou nainstalované s konečným termínem starším než určitý počet dnů:** Toto pravidlo zkontroluje, jestli má zařízení uživatele všechny požadované aktualizace (zadané v pravidle **požadované automatické aktualizace** ) v rámci konečného termínu a poskytnuté lhůty, a automaticky nainstaluje všechny požadované aktualizace, které čekají na vyřízení.  
 
@@ -98,7 +98,7 @@ V 1601 Technical Preview jsme doplnili podporu pro následující funkce:
 
     -   **Vyžadovat automatické aktualizace:** Můžete vyžadovat, aby zařízení s Windows 8.1 nebo novějším umožňovala automatickou instalaci aktualizací, a také určit třídu aktualizací, které jsou nainstalovány.  Můžete vybrat možnost: instalovat pouze aktualizace označené jako důležité nebo nainstalovat všechny doporučené aktualizace.  
 
-         Pokud chcete vytvořit pravidlo pro automatické aktualizace, otevřete **Průvodce vytvořením zásad dodržování předpisů**a přidejte nové pravidlo.  Jako podmínku vyberte **minimální klasifikace požadovaných aktualizací** a nastavte hodnotu na jednu z dostupných hodnot: **žádné**, **Doporučené**a **důležité**.  
+         Pokud chcete vytvořit pravidlo pro automatické aktualizace, otevřete **Průvodce vytvořením zásad dodržování předpisů**a přidejte nové pravidlo.  Jako podmínku vyberte  **minimální klasifikace požadovaných aktualizací** a nastavte hodnotu na jednu z dostupných hodnot: **žádné**, **Doporučené**a **důležité**.  
 
         -   **Žádné:** Aktualizace se neinstalují automaticky.  
 
@@ -123,20 +123,20 @@ V 1601 Technical Preview jsme doplnili podporu pro následující funkce:
 
      Pokud chcete tuto možnost použít, přejděte na stránku **Obecné** v **Průvodci konfigurací zásad podmíněného přístupu** pro místní Exchange.  
 
-##  <a name="client-online-status"></a><a name="bkmk_clientStatus"></a>Online stav klienta  
+##  <a name="client-online-status"></a><a name="bkmk_clientStatus"></a> Online stav klienta  
 Od verze Technical Preview 1601 můžete na první pohled zjistit, jestli je klient online nebo offline v konzole Configuration Manager. Díky aktualizovaným ikonám a sloupcům v seznamech zařízení konzoly můžete posoudit stav klientů ve vašem prostředí a identifikovat problematické oblasti a další problémy, které by mohly vyžadovat vaši pozornost.  
 
 Klient je online, pokud je aktuálně připojen k roli systému lokality bodu správy Configuration Manager. Pokud bod správy přijímá zprávy typu příkazového testu z klienta, je jeho stav online. Pokud Správa neobdrží zprávu po dobu 5 minut, stav klienta se změní na offline.  
 
 ### <a name="icons-for-client-status"></a>Ikony stavu klienta  
 
-| Ikona | Description |
+| Ikona | Popis |
 | ---- | ----------- |
 |![ikona online stavu pro klienty](media/online-status-icon.png)|Klient je online.|  
 |![ikona offline stavu pro klienty](media/offline-status-icon.png)|Klient je offline.|  
 |![ikona neznámého stavu pro klienty](media/unknown-status-icon.png)|Stav klienta není známý.|  
 
-### <a name="prerequisites"></a>Požadavky  
+### <a name="prerequisites"></a>Předpoklady  
  Online stav klienta nemá žádné požadavky. Můžete ji začít používat hned po instalaci Configuration Manager Technical Preview 1601.  
 
 ### <a name="limitations"></a>Omezení  
@@ -156,7 +156,7 @@ Klient je online, pokud je aktuálně připojen k roli systému lokality bodu sp
 
    Chcete-li zobrazit nedávné změny stavu klienta, aktualizujte konzolu.  
 
-##  <a name="improvements-to-application-management"></a><a name="bkmk_appmgmt1601"></a>Vylepšení správy aplikací  
+##  <a name="improvements-to-application-management"></a><a name="bkmk_appmgmt1601"></a> Vylepšení správy aplikací  
  V 1601 Technical Preview jsme přidali podporu pro následující funkce:  
 
 ### <a name="manage-volume-purchased-apps-for-ios-devices"></a>Správa hromadně koupených aplikací pro zařízení s iOS  
@@ -191,7 +191,7 @@ Klient je online, pokud je aktuálně připojen k roli systému lokality bodu sp
 
 -   V průvodci **nasazením softwaru** na stránce **zásady konfigurace aplikací** přidružte zásadu konfigurace aplikace, kterou jste vytvořili s kompatibilním typem nasazení, z aplikace.  
 
-##  <a name="improvements-to-compliance-settings"></a><a name="bkmk_compliance1601"></a>Vylepšení nastavení dodržování předpisů  
+##  <a name="improvements-to-compliance-settings"></a><a name="bkmk_compliance1601"></a> Vylepšení nastavení dodržování předpisů  
  V 1601 Technical Preview jsme přidali podporu pro následující funkce:  
 
 ### <a name="microsoft-edge-browser-settings"></a>Nastavení prohlížeče Microsoft Edge  
@@ -213,4 +213,4 @@ Klient je online, pokud je aktuálně připojen k roli systému lokality bodu sp
 
  Pokud chcete nová nastavení zobrazit, vyberte možnost **celoobrazovkový režim – Samsung KNOX** na stránce **nastavení zařízení** položky konfigurace v průvodci **vytvořením položky konfigurace** .  
 
- Další informace najdete v tématu [Vytvoření položek konfigurace pro Windows 8.1 a zařízení s Windows 10 spravovaná bez klienta Configuration Manager](../../mdm/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md).  
+ Další informace najdete v tématu [Vytvoření položek konfigurace pro Windows 8.1 a zařízení s Windows 10 spravovaná bez klienta Configuration Manager](../../mdm/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md).

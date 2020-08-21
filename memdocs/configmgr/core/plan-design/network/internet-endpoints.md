@@ -10,12 +10,12 @@ ms.assetid: b34fe701-5d05-42be-b965-e3dccc9363ca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: bc3e1312c214f871635a65d8d0031e06ea4ad8d9
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: fbb5d524551f5ff2c0a04b62b0f494046eee7a45
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88126444"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692672"
 ---
 # <a name="internet-access-requirements"></a>Požadavky na přístup k internetu
 
@@ -30,7 +30,7 @@ Configuration Manager používá v rámci produktu následující předávací s
 
 I když nejsou výslovně uvedeny v následujících oddílech, měli byste tyto koncové body vždy povolovat.
 
-## <a name="service-connection-point"></a><a name="bkmk_scp"></a>Bod připojení služby
+## <a name="service-connection-point"></a><a name="bkmk_scp"></a> Bod připojení služby
 
 Tyto konfigurace platí pro počítač, který je hostitelem spojovacího bodu služby a všech bran firewall mezi tímto počítačem a internetem. Oba musí umožňovat komunikaci prostřednictvím odchozího portu **tcp 443** pro https a odchozího portu **TCP 80** pro http do následujících internetových umístění.
 
@@ -45,7 +45,7 @@ Další funkce Configuration Manager mohou vyžadovat další koncové body ze s
 
 Od verze 2002, pokud se lokalita Configuration Manager nepovede připojit k požadovaným koncovým bodům pro cloudovou službu, vyvolá kritickou stavovou zprávu ID 11488. Když se nemůže připojit ke službě, stav součásti SMS_SERVICE_CONNECTOR se změní na kritický. Zobrazit podrobný stav v uzlu [Stav součásti](../../servers/manage/use-alerts-and-the-status-system.md#BKMK_MonitorSystemStatus) konzoly Configuration Manager.<!-- 5566763 -->
 
-### <a name="updates-and-servicing"></a><a name="bkmk_scp-updates"></a>Aktualizace a údržba
+### <a name="updates-and-servicing"></a><a name="bkmk_scp-updates"></a> Aktualizace a údržba
 
 Další informace o této funkci najdete v tématu [aktualizace a údržba pro Configuration Manager](../../servers/manage/updates.md).
 
@@ -84,30 +84,30 @@ Další informace o této funkci najdete v tématu [Správa systému Windows jak
 
 Další informace o této funkci najdete v tématu [Konfigurace služeb Azure pro použití s Configuration Manager](../../servers/deploy/configure/azure-services-wizard.md).
 
-- `management.azure.com`(Veřejný cloud Azure)
-- `management.usgovcloudapi.net`(Cloudová Správa Azure USA)
+- `management.azure.com` (Veřejný cloud Azure)
+- `management.usgovcloudapi.net` (Cloudová Správa Azure USA)
 
 ## <a name="co-management"></a>Spoluspráva
 
-Pokud zařízení s Windows 10 zaregistrujete Microsoft Intune pro spolusprávu, ujistěte se, že tato zařízení mají přístup k koncovým bodům požadovaným službou Intune. Další informace najdete v tématu [koncové body sítě pro Microsoft Intune](https://docs.microsoft.com/intune/intune-endpoints).
+Pokud zařízení s Windows 10 zaregistrujete Microsoft Intune pro spolusprávu, ujistěte se, že tato zařízení mají přístup k koncovým bodům požadovaným službou Intune. Další informace najdete v tématu [koncové body sítě pro Microsoft Intune](/intune/intune-endpoints).
 
 ## <a name="microsoft-store-for-business"></a>Microsoft Store pro firmy
 
-Pokud integrujete Configuration Manager s [Microsoft Store pro firmy](../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md), ujistěte se, že spojovací bod služby a cílová zařízení mají přístup ke cloudové službě. Další informace najdete v tématu [konfigurace proxy serveru Microsoft Store pro firmy](https://docs.microsoft.com/microsoft-store/prerequisites-microsoft-store-for-business#proxy-configuration).
+Pokud integrujete Configuration Manager s [Microsoft Store pro firmy](../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md), ujistěte se, že spojovací bod služby a cílová zařízení mají přístup ke cloudové službě. Další informace najdete v tématu [konfigurace proxy serveru Microsoft Store pro firmy](/microsoft-store/prerequisites-microsoft-store-for-business#proxy-configuration).
 
 ## <a name="delivery-optimization"></a>Optimalizace doručení
 
-Pokud používáte optimalizaci doručování, klienti musí komunikovat se svou cloudovou službou:`*.do.dsp.mp.microsoft.com`
+Pokud používáte optimalizaci doručování, klienti musí komunikovat se svou cloudovou službou: `*.do.dsp.mp.microsoft.com`
 
 Distribuční body, které podporují mezipaměť připojené Microsoftem, vyžadují také tyto koncové body.
 
 Další informace najdete v následujících článcích:
 
-- [Nejčastější dotazy k optimalizaci doručení](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions)
+- [Nejčastější dotazy k optimalizaci doručení](/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions)
 - [Základní koncepty správy obsahu v nástroji Configuration Manager](../hierarchy/fundamental-concepts-for-content-management.md#delivery-optimization)
 - [Mezipaměť propojená Microsoftem v Configuration Manager](../hierarchy/microsoft-connected-cache.md)
 
-## <a name="cloud-services"></a><a name="bkmk_cloud"></a>Cloudové služby
+## <a name="cloud-services"></a><a name="bkmk_cloud"></a> Cloudové služby
 
 <!-- SCCMDocs-pr #3402 -->
 
@@ -132,23 +132,23 @@ Pro nasazení služby CMG/CDP potřebuje spojovací bod služby přístup k těm
 
 - Pro zjišťování uživatelů Azure AD:
 
-  - Verze 1902 a novější: Microsoft Graph koncový bod`https://graph.microsoft.com/`
+  - Verze 1902 a novější: Microsoft Graph koncový bod `https://graph.microsoft.com/`
 
-  - Verze 1810 a starší: koncový bod Azure AD graphu`https://graph.windows.net/`  
+  - Verze 1810 a starší: koncový bod Azure AD graphu `https://graph.windows.net/`  
 
 ### <a name="cmg-connection-point"></a>Bod připojení CMG
 
 Bod připojení CMG potřebuje přístup k následujícím koncovým bodům služby:
 
 - Název cloudové služby (pro CMG nebo CDP):
-  - `<name>.cloudapp.net`(Veřejný cloud Azure)
-  - `<name>.usgovcloudapp.net`(Cloudová Správa Azure USA)
+  - `<name>.cloudapp.net` (Veřejný cloud Azure)
+  - `<name>.usgovcloudapp.net` (Cloudová Správa Azure USA)
 
-- Koncový bod služby Service Management:`https://management.core.windows.net/`  
+- Koncový bod služby Service Management: `https://management.core.windows.net/`  
 
 - Koncový bod úložiště (pro CMG nebo CDP s povoleným obsahem):
-  - `<name>.blob.core.windows.net`(Veřejný cloud Azure)
-  - `<name>.blob.core.usgovcloudapi.net`(Cloudová Správa Azure USA)
+  - `<name>.blob.core.windows.net` (Veřejný cloud Azure)
+  - `<name>.blob.core.usgovcloudapi.net` (Cloudová Správa Azure USA)
 <!--  and `<name>.table.core.windows.net` per DC, only used internally -->
 
 Systém lokality bodu připojení CMG podporuje používání webového proxy serveru. Další informace o konfiguraci této role proxy serveru najdete v tématu [Podpora proxy serveru](proxy-server-support.md#configure-the-proxy-for-a-site-system-server). Bod připojení CMG se musí připojit pouze k koncovým bodům služby CMG. Nepotřebuje přístup k jiným koncovým bodům Azure.
@@ -156,16 +156,16 @@ Systém lokality bodu připojení CMG podporuje používání webového proxy se
 ### <a name="configuration-manager-client"></a>Klient Configuration Manager
 
 - Název cloudové služby (pro CMG nebo CDP):
-  - `<name>.cloudapp.net`(Veřejný cloud Azure)
-  - `<name>.usgovcloudapp.net`(Cloudová Správa Azure USA)
+  - `<name>.cloudapp.net` (Veřejný cloud Azure)
+  - `<name>.usgovcloudapp.net` (Cloudová Správa Azure USA)
 
 - Koncový bod úložiště (pro CMG nebo CDP s povoleným obsahem):
-  - `<name>.blob.core.windows.net`(Veřejný cloud Azure)
-  - `<name>.blob.core.usgovcloudapi.net`(Cloudová Správa Azure USA)
+  - `<name>.blob.core.windows.net` (Veřejný cloud Azure)
+  - `<name>.blob.core.usgovcloudapi.net` (Cloudová Správa Azure USA)
 
 - Pro získání tokenu Azure AD se jedná o koncový bod Azure AD:
-  - `login.microsoftonline.com`(Veřejný cloud Azure)
-  - `login.microsoftonline.us`(Cloudová Správa Azure USA)
+  - `login.microsoftonline.com` (Veřejný cloud Azure)
+  - `login.microsoftonline.us` (Cloudová Správa Azure USA)
 
 ### <a name="configuration-manager-console"></a>Konzola nástroje Configuration Manager
 
@@ -179,7 +179,7 @@ Systém lokality bodu připojení CMG podporuje používání webového proxy se
   - Cloud Azure pro státní správu USA
     - `login.microsoftonline.us`
 
-## <a name="software-updates"></a><a name="bkmk_sum"></a>Aktualizace softwaru
+## <a name="software-updates"></a><a name="bkmk_sum"></a> Aktualizace softwaru
 
 Povolí aktivnímu bodu aktualizace softwaru přístup k následujícím koncovým bodům, aby služba WSUS a automatické aktualizace mohly komunikovat s Microsoft Update cloudovou službou:  
 
@@ -225,17 +225,17 @@ Je možné, že budete muset přidat koncové body do brány firewall, která je
 ## <a name="manage-microsoft-365-apps"></a>Správa aplikací Microsoft 365
 
 > [!NOTE]
-> Od 21. dubna 2020 se sada Office 365 ProPlus přejmenovává na **Microsoft 365 aplikace pro podniky**. Další informace najdete v tématu [Změna názvu pro Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change). V konzole Configuration Manager se pořád zobrazují odkazy na starý název a podpůrná dokumentace, zatímco se konzola aktualizuje.
+> Od 21. dubna 2020 se sada Office 365 ProPlus přejmenovává na **Microsoft 365 aplikace pro podniky**. Další informace najdete v tématu [Změna názvu pro Office 365 ProPlus](/deployoffice/name-change). V konzole Configuration Manager se pořád zobrazují odkazy na starý název a podpůrná dokumentace, zatímco se konzola aktualizuje.
 
 Pokud používáte Configuration Manager k nasazení a aktualizaci Microsoft 365 aplikací pro podniky, povolte následující koncové body:
 
 <!-- SCCMDocs#929 -->
 
-- `officecdn.microsoft.com`synchronizace bodu aktualizace softwaru pro aplikace Microsoft 365 pro aktualizace podnikových klientů
+- `officecdn.microsoft.com` synchronizace bodu aktualizace softwaru pro aplikace Microsoft 365 pro aktualizace podnikových klientů
 
-- `config.office.com`Vytvoření vlastních konfigurací pro aplikace Microsoft 365 pro podniková nasazení
+- `config.office.com` Vytvoření vlastních konfigurací pro aplikace Microsoft 365 pro podniková nasazení
 
-- `contentstorage.osi.office.net`Podpora hodnocení připravenosti doplňku pro Office<!-- MEMDocs#410 -->
+- `contentstorage.osi.office.net` Podpora hodnocení připravenosti doplňku pro Office<!-- MEMDocs#410 -->
 
 ## <a name="configuration-manager-console"></a>Konzola nástroje Configuration Manager
 
@@ -301,7 +301,7 @@ Pokud používáte funkci [Asset Intelligence](../../clients/manage/asset-intell
 
 Další informace o rozsahu IP adres společnosti Microsoft najdete v tématu věnovaném [veřejné IP adrese Microsoftu](https://www.microsoft.com/download/details.aspx?id=53602). Tyto adresy se pravidelně aktualizují. Služba nenabízí žádnou členitost, proto by mohla být použita jakákoli IP adresa v těchto rozsahech.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Porty používané v Configuration Manager](../hierarchy/ports.md)
 

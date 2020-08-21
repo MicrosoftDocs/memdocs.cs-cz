@@ -10,12 +10,12 @@ ms.assetid: ed4dc65e-e5d5-4f75-88ac-f4849ec8fc10
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f22ba6f29e0c85e19ab66d1b052085db5303cc2c
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 055d79c56417135e2b08a31bc05a3ca30b5fd581
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81710822"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695099"
 ---
 # <a name="third-party-mdm-coexistence-with-configuration-manager"></a>Koexistence MDM třetí strany s Configuration Manager
 
@@ -23,12 +23,12 @@ Při současné správě zařízení s Windows 10 pomocí Configuration Manager 
 
 Klient Configuration Manager může existovat společně se službou MDM třetí strany na zařízení s Windows 10 verze 1709 nebo novějším, které je připojené k Azure Active Directory. Zařízení může být jedním z následujících typů:
 
-- Pouze [Služba Azure AD – připojeno](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan) . (Tento typ se někdy označuje jako "cloudová doména připojená".  
+- Pouze [Služba Azure AD – připojeno](/azure/active-directory/devices/azureadjoin-plan) . (Tento typ se někdy označuje jako "cloudová doména připojená".  
 
-- [Hybridní doména připojená](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan), kde je zařízení připojené k místní službě Active Directory a zaregistrované ve vašem Azure Active Directory.  
+- [Hybridní doména připojená](/azure/active-directory/devices/hybrid-azuread-join-plan), kde je zařízení připojené k místní službě Active Directory a zaregistrované ve vašem Azure Active Directory.  
 
 > [!Note]  
-> Nepodporuje [zařízení vlastněná osobně](https://docs.microsoft.com/windows/client-management/mdm/mdm-enrollment-of-windows-devices#connecting-personally-owned-devices-bring-your-own-device).  
+> Nepodporuje [zařízení vlastněná osobně](/windows/client-management/mdm/mdm-enrollment-of-windows-devices#connecting-personally-owned-devices-bring-your-own-device).  
 
 Když klient Configuration Manager zjistí, že služba MDM jiného výrobce spravuje i zařízení, automaticky deaktivuje některé úlohy v Configuration Manager. Toto chování umožňuje službě MDM převzít tyto funkce. Zabraňuje také konfliktním nastavením na straně klienta, které by mohlo negativně ovlivnit činnost zařízení a uživatele. V tomto případě jsou deaktivované následující úlohy v Configuration Manager:
 

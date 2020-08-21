@@ -10,12 +10,12 @@ ms.assetid: cc230ff4-7056-4339-a0a6-6a44cdbb2857
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 2113baf43c377379a2a996c59fd13e55072cf898
-ms.sourcegitcommit: d05b1472385c775ebc0b226e8b465dbeb5bf1f40
+ms.openlocfilehash: db3a673d99efc40bd6fa0da7930c66c648136e03
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82605180"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695353"
 ---
 # <a name="create-and-run-powershell-scripts-from-the-configuration-manager-console"></a>Vytvoření a spuštění PowerShellových skriptů z konzoly Configuration Manager
 
@@ -40,7 +40,7 @@ Díky této integraci v Configuration Manager můžete pomocí funkce *spustit s
 > - S ohledem na výkon skriptů vám připomeneme, že budete mít k disměrnému a opatrní na jejich použití. Sestavili jsme další bezpečnostní opatření, která vám pomůžou. oddělené role a obory. Ujistěte se, že před spuštěním ověříte přesnost skriptů a potvrďte, že pocházejí z důvěryhodného zdroje, aby nedocházelo k neúmyslnému spuštění skriptu. Je třeba mít na starosti rozšířené znaky nebo jiné zmatení a informovat o zabezpečení skriptů. [Další informace o zabezpečení PowerShellových skriptů](learn-script-security.md)
 > - Určitý antimalwarový software může nechtěně aktivovat události proti Configuration Manager spuštění skriptů nebo funkcí CMPivot. Doporučuje se vyloučit%windir%\CCM\ScriptStore, aby antimalwarový software mohl spouštět tyto funkce bez rušivých zásahů.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 - Aby bylo možné spouštět skripty prostředí PowerShell, musí být v klientovi spuštěný PowerShell verze 3,0 nebo novější. Pokud ale skript, který spustíte, obsahuje funkčnost z novější verze prostředí PowerShell, musí klient, na kterém spouštíte skript, používat tuto verzi PowerShellu.
 - Aby bylo možné spouštět skripty, Configuration Manager klienti musí spustit klienta z verze 1706 nebo novější.
@@ -101,10 +101,10 @@ Toto schválení se primárně používá pro testovací fázi vývoje skriptů.
   
 Spouštění skriptů používá rozsahy zabezpečení, existující funkce Configuration Manager, pro řízení vytváření a spouštění skriptů pomocí přiřazování značek, které reprezentují skupiny uživatelů. Další informace o používání oborů zabezpečení najdete v tématu [Konfigurace správy na základě rolí pro Configuration Manager](../../core/servers/deploy/configure/configure-role-based-administration.md).
 
-## <a name="create-security-roles-for-scripts"></a><a name="bkmk_ScriptRoles"></a>Vytváření rolí zabezpečení pro skripty
+## <a name="create-security-roles-for-scripts"></a><a name="bkmk_ScriptRoles"></a> Vytváření rolí zabezpečení pro skripty
 Tři role zabezpečení používané ke spouštění skriptů nejsou ve výchozím nastavení ve Configuration Manager vytvořeny. Pokud chcete vytvořit spouštěče skriptů, autory skriptů a role schvalovatelů skriptů, postupujte podle kroků uvedených výše.
 
-1. V konzole Configuration Manager, přejít na **Správa** >**Security** >**role zabezpečení** zabezpečení
+1. V konzole Configuration Manager, přejít na **Správa**  > **Security**  > **role zabezpečení** zabezpečení
 2. Klikněte pravým tlačítkem na roli a pak klikněte na **Kopírovat**. Role, kterou kopírujete, má již přiřazená oprávnění. Ujistěte se, že jste provedli pouze oprávnění, která potřebujete. 
 3. Zadejte **název** vlastní role a její **Popis**. 
 4. Přiřaďte roli zabezpečení níže uvedeným oprávněním.  
@@ -118,8 +118,8 @@ Tři role zabezpečení používané ke spouštění skriptů nejsou ve výchoz�
 |Kategorie|Oprávnění|Stav|
 |---|---|---|
 |Kolekce|Spustit skript|Ano|
-|Web|Čtení|Ano|
-|Skripty SMS|Čtení|Ano|
+|Web|Číst|Ano|
+|Skripty SMS|Číst|Ano|
 
 
 **Název role**: autoři skriptů  
@@ -129,9 +129,9 @@ Tři role zabezpečení používané ke spouštění skriptů nejsou ve výchoz�
 |Kategorie|Oprávnění|Stav|
 |---|---|---|
 |Kolekce|Spustit skript|Ne|
-|Web|Čtení|Ano|
+|Web|Číst|Ano|
 |Skripty SMS|Vytvořit|Ano|
-|Skripty SMS|Čtení|Ano|
+|Skripty SMS|Číst|Ano|
 |Skripty SMS|Odstranit|Ano|
 |Skripty SMS|Modify|Ano|
 
@@ -143,8 +143,8 @@ Tři role zabezpečení používané ke spouštění skriptů nejsou ve výchoz�
 |Kategorie|Oprávnění|Stav|
 |---|---|---|
 |Kolekce|Spustit skript|Ne|
-|Web|Čtení|Ano|
-|Skripty SMS|Čtení|Ano|
+|Web|Číst|Ano|
+|Skripty SMS|Číst|Ano|
 |Skripty SMS|Schválení|Ano|
 |Skripty SMS|Modify|Ano|
 
@@ -205,7 +205,7 @@ V tomto příkladu je možné nastavit vlastnosti řetězcového parametru, *Fir
 
 Regulární výraz je kompaktní forma programování pro kontrolu řetězce znaků proti zakódovanému ověření. Například můžete vyhledat absenci znakového písmena v poli *FirstName* tak, že umístíte `[^A-Z]` do pole *Regex* .
 
-.NET Framework je podporováno zpracování regulárního výrazu pro tento dialog. Pokyny k používání regulárních výrazů naleznete v tématu [regulární výraz .NET](https://docs.microsoft.com/dotnet/standard/base-types/regular-expressions) a [Jazyk regulárních výrazů](https://docs.microsoft.com/dotnet/standard/base-types/regular-expression-language-quick-reference).
+.NET Framework je podporováno zpracování regulárního výrazu pro tento dialog. Pokyny k používání regulárních výrazů naleznete v tématu [regulární výraz .NET](/dotnet/standard/base-types/regular-expressions) a [Jazyk regulárních výrazů](/dotnet/standard/base-types/regular-expression-language-quick-reference).
 
 
 ## <a name="script-examples"></a>Příklady skriptu
@@ -236,7 +236,7 @@ Tento skript používá rozhraní WMI k dotazování počítače na jeho verzi o
 Write-Output (Get-WmiObject -Class Win32_operatingSystem).Caption
 ```
 
-## <a name="edit-or-copy-powershell-scripts"></a><a name="bkmk_psedit"></a>Úpravy nebo kopírování skriptů PowerShellu
+## <a name="edit-or-copy-powershell-scripts"></a><a name="bkmk_psedit"></a> Úpravy nebo kopírování skriptů PowerShellu
 <!--3705507-->
 *(Zavedeno s verzí 1902)*  
 Můžete **Upravit** nebo **zkopírovat** existující skript prostředí PowerShell, který se používá s funkcí **spustit skripty** . Místo opětovného vytváření skriptu, který potřebujete změnit, ho teď můžete přímo upravit. Obě akce používají stejné možnosti průvodce jako při vytváření nového skriptu. Při úpravách nebo kopírování skriptu Configuration Manager neuchovává stav schválení.
@@ -294,7 +294,7 @@ Po zahájení spuštění skriptu na kolekci zařízení použijte následujíc�
 
 ## <a name="script-output"></a>Výstup skriptu
 
-Výstup vráceného skriptu klienta pomocí formátování JSON, protože výsledky skriptu převede do rutiny [ConvertTo-JSON](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/convertto-json) . Formát JSON konzistentně vrátí čitelný výstup skriptu. Pro skripty, které nevracejí objekty jako výstup, rutina ConvertTo-JSON převede výstup na jednoduchý řetězec, který vrátí klient místo JSON.  
+Výstup vráceného skriptu klienta pomocí formátování JSON, protože výsledky skriptu převede do rutiny [ConvertTo-JSON](/powershell/module/microsoft.powershell.utility/convertto-json) . Formát JSON konzistentně vrátí čitelný výstup skriptu. Pro skripty, které nevracejí objekty jako výstup, rutina ConvertTo-JSON převede výstup na jednoduchý řetězec, který vrátí klient místo JSON.  
 
 - Skripty, které získají Neznámý výsledek nebo kde byl klient offline, se nezobrazí v grafech nebo sadě dat. <!--507179-->
 - Vyhněte se vrácení výstupu velkých skriptů, protože se zkrátí na 4 KB. <!--508488-->
@@ -302,11 +302,11 @@ Výstup vráceného skriptu klienta pomocí formátování JSON, protože výsle
 
    ![Převést objekt enum na hodnotu Sting](./media/run-scripts/enum-tostring-JSON.png)
 
-Podrobný výstup skriptu můžete zobrazit v nezpracovaném nebo strukturovaném formátu JSON. Toto formátování usnadňuje čtení a analýzu výstupu. Pokud skript vrátí platný text ve formátu JSON nebo ho můžete převést na JSON pomocí rutiny prostředí PowerShell [ConvertTo-JSON](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/convertto-json) a pak zobrazit podrobný výstup buď jako **výstup JSON** , nebo jako **nezpracovaný výstup**. V opačném případě je jediným z možností **výstup skriptu**.
+Podrobný výstup skriptu můžete zobrazit v nezpracovaném nebo strukturovaném formátu JSON. Toto formátování usnadňuje čtení a analýzu výstupu. Pokud skript vrátí platný text ve formátu JSON nebo ho můžete převést na JSON pomocí rutiny prostředí PowerShell [ConvertTo-JSON](/powershell/module/microsoft.powershell.utility/convertto-json) a pak zobrazit podrobný výstup buď jako **výstup JSON** , nebo jako **nezpracovaný výstup**. V opačném případě je jediným z možností **výstup skriptu**.
 
 ### <a name="example-script-output-is-convertible-to-valid-json"></a>Příklad: výstup skriptu je převoditelný na platný formát JSON.
 
-Systému`$PSVersionTable.PSVersion`  
+Systému `$PSVersionTable.PSVersion`  
 
 ``` Output
 Major  Minor  Build  Revision
@@ -316,13 +316,13 @@ Major  Minor  Build  Revision
 
 ### <a name="example-script-output-isnt-valid-json"></a>Příklad: výstup skriptu není platný formát JSON.
 
-Systému`Write-Output (Get-WmiObject -Class Win32_OperatingSystem).Caption`  
+Systému `Write-Output (Get-WmiObject -Class Win32_OperatingSystem).Caption`  
 
 ``` Output
 Microsoft Windows 10 Enterprise
 ```
 
-## <a name="log-files"></a>Soubory protokolů
+## <a name="log-files"></a>Soubory protokolu
 
 - Na straně klienta ve výchozím nastavení v C:\Windows\CCM\logs:  
   - **Skripty. log**  

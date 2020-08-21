@@ -10,12 +10,12 @@ ms.assetid: a4e8bb56-ee85-49fd-8b1c-c8f513cec671
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 405617277953eae61fbfce4fdb9b3a7d280aedcf
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 6a4aaaab8eb9195f4f5dce4deb890540b0837852
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88124444"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697447"
 ---
 # <a name="use-the-task-sequence-editor"></a>Použití editoru pořadí úloh
 
@@ -78,7 +78,7 @@ Editor pořadí úkolů zahrnuje následující součásti:
 
 Editor pořadí úloh lze změnit pomocí standardních ovládacích prvků systému Windows. Chcete-li změnit velikost šířek dvou hlavních podoken, pomocí myši vyberte pruh mezi pořadím úkolů a vlastností kroku a pak jej přetáhněte doleva nebo doprava.
 
-## <a name="view-a-task-sequence"></a><a name="bkmk_view"></a>Zobrazení pořadí úkolů
+## <a name="view-a-task-sequence"></a><a name="bkmk_view"></a> Zobrazení pořadí úkolů
 
 1. V konzole Configuration Manager otevřete pracovní prostor **Knihovna softwaru** , rozbalte možnost **operační systémy**a potom vyberte uzel **pořadí úloh** .  
 
@@ -103,7 +103,7 @@ Chcete-li provést změny v pořadí úkolů, zavřete Editor pořadí úloh, kt
 > [!NOTE]  
 > Když zobrazíte nebo upravíte pořadí úkolů vytvořené Průvodcem vytvořením pořadí úloh, název kroku může být akce nebo typ kroku. Může se například zobrazit krok s názvem partition disk 0, který je akcí pro krok typu [Format a partition disk](task-sequence-steps.md#BKMK_FormatandPartitionDisk). Všechny kroky pořadí úloh jsou dokumentovány podle jejich *typu*, nikoli nutně podle názvu kroku, který Editor zobrazuje.  
 
-## <a name="edit-a-task-sequence"></a><a name="bkmk_edit"></a>Úprava pořadí úloh
+## <a name="edit-a-task-sequence"></a><a name="bkmk_edit"></a> Úprava pořadí úloh
 
 Chcete-li upravit existující pořadí úloh, použijte následující postup:  
 
@@ -140,7 +140,7 @@ Seznam dostupných kroků pořadí úkolů najdete v tématu [kroky pořadí úk
 
 Současně můžete otevřít více než jednu instanci editoru pořadí úloh. Toto chování umožňuje porovnávat více pořadí úloh nebo mezi nimi kopírovat a vkládat jednotlivé kroky. Můžete **Upravit** jedno pořadí úloh a **Zobrazit** další, ale nemůžete provádět obě akce ve stejném pořadí úkolů.
 
-## <a name="conditions"></a><a name="bkmk_conditions"></a>Stavu
+## <a name="conditions"></a><a name="bkmk_conditions"></a> Stavu
 
 Podmínky použijte k řízení toho, jak se pořadí úkolů chová. Přidejte podmínky do jednoho kroku nebo do skupiny kroků. Pořadí úkolů vyhodnotí podmínky před spuštěním kroku na zařízení. Tento krok spustí pouze v případě, že se podmínky vyhodnotí jako pravdivé. Pokud podmínka vyhodnotí hodnotu false, pořadí úkolů přeskočí skupinu nebo krok.
 
@@ -175,14 +175,14 @@ K dispozici jsou tyto typy podmínek:
 
 Spravujte podmínky pomocí následujících rutin PowerShellu:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepConditionFile](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepConditionFile?view=sccm-ps)
-- [Get-CMTSStepConditionFolder](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepConditionFolder?view=sccm-ps)
-- [Get-CMTSStepConditionIfStatement](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepConditionIfStatement?view=sccm-ps)
-- [Get-CMTSStepConditionOperatingSystem](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepConditionOperatingSystem?view=sccm-ps)
-- [Get-CMTSStepConditionQueryWmi](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepConditionQueryWmi?view=sccm-ps)
-- [Get-CMTSStepConditionRegistry](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepConditionRegistry?view=sccm-ps)
-- [Get-CMTSStepConditionSoftware](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepConditionSoftware?view=sccm-ps)
-- [Get-CMTSStepConditionVariable](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepConditionVariable?view=sccm-ps)
+- [Get-CMTSStepConditionFile](/powershell/module/configurationmanager/Get-CMTSStepConditionFile?view=sccm-ps)
+- [Get-CMTSStepConditionFolder](/powershell/module/configurationmanager/Get-CMTSStepConditionFolder?view=sccm-ps)
+- [Get-CMTSStepConditionIfStatement](/powershell/module/configurationmanager/Get-CMTSStepConditionIfStatement?view=sccm-ps)
+- [Get-CMTSStepConditionOperatingSystem](/powershell/module/configurationmanager/Get-CMTSStepConditionOperatingSystem?view=sccm-ps)
+- [Get-CMTSStepConditionQueryWmi](/powershell/module/configurationmanager/Get-CMTSStepConditionQueryWmi?view=sccm-ps)
+- [Get-CMTSStepConditionRegistry](/powershell/module/configurationmanager/Get-CMTSStepConditionRegistry?view=sccm-ps)
+- [Get-CMTSStepConditionSoftware](/powershell/module/configurationmanager/Get-CMTSStepConditionSoftware?view=sccm-ps)
+- [Get-CMTSStepConditionVariable](/powershell/module/configurationmanager/Get-CMTSStepConditionVariable?view=sccm-ps)
 
 ### <a name="copy-and-paste-conditions"></a>Podmínky kopírování a vložení
 
@@ -201,7 +201,7 @@ K dispozici jsou také nové možnosti přesunutí podmínek v seznamu nahoru ne
 > [!Note]  
 > Podmínky můžete kopírovat a vkládat mezi kroky v pořadí úkolů. Tuto akci nepodporuje mezi různými pořadími úloh.
 
-## <a name="reclaim-lock-for-editing"></a><a name="bkmk_sedo"></a>Uvolnit zámek pro úpravy
+## <a name="reclaim-lock-for-editing"></a><a name="bkmk_sedo"></a> Uvolnit zámek pro úpravy
 
 <!--3699337-->
 Pokud konzola Configuration Manager přestane reagovat, můžete se před 30 Minuti zablokovat a provést další změny, dokud zámek nevyprší. Tento zámek je součástí Configuration Manager SEDO (serializovaná úprava distribuovaných objektů). Další informace najdete v tématu [Configuration Manager SEDO](../../develop/core/understand/sedo.md).
@@ -211,7 +211,7 @@ Počínaje verzí 1906 můžete zrušit zámek pro pořadí úkolů. Tato akce s
 > [!TIP]
 > Počínaje verzí 1910 můžete zrušit zámek pro libovolný objekt v konzole Configuration Manager. Další informace najdete v tématu [použití konzoly Configuration Manager](../../core/servers/manage/admin-console.md#bkmk_sedo).<!--4786915-->
 
-## <a name="search"></a><a name="bkmk_search"></a>Nápovědě
+## <a name="search"></a><a name="bkmk_search"></a> Nápovědě
 
 <!-- 4621085 -->
 
@@ -248,7 +248,7 @@ Pomocí následujících klávesových zkratek získáte rychlý přístup k tě
 - **F3** nebo **ENTER**: krok dopřed výsledky
 - **Posun**  +  **F3**: krok zpět výsledky
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Správa a vytváření pořadí úkolů](../deploy-use/manage-task-sequences-to-automate-tasks.md)
 

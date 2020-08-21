@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 04536d51-3bf7-45e5-b4af-36ceed10583d
-ms.openlocfilehash: 5cee950e2b42d73f20921c2baf08b98d2d206586
-ms.sourcegitcommit: 8fc7f2864c5e3f177e6657b684c5f208d6c2a1b4
+ms.openlocfilehash: a6e27e2d03983fdf627016d0e3b41aaa378afe29
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88591184"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693467"
 ---
 # <a name="deploy-software-updates"></a>Nasazení aktualizací softwaru  
 
@@ -69,7 +69,7 @@ Následující seznam shrnuje obecný postup ručního nasazení aktualizací so
 Další informace a podrobné pokyny najdete v tématu [Ruční nasazení aktualizací softwaru](manually-deploy-software-updates.md).
 
 > [!Note]
-> - Od 21. dubna 2020 se sada Office 365 ProPlus přejmenovává na **Microsoft 365 aplikace pro podniky**. Další informace najdete v tématu [Změna názvu pro Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change). V konzole Configuration Manager se pořád zobrazují odkazy na starý název a podpůrná dokumentace, zatímco se konzola aktualizuje.
+> - Od 21. dubna 2020 se sada Office 365 ProPlus přejmenovává na **Microsoft 365 aplikace pro podniky**. Další informace najdete v tématu [Změna názvu pro Office 365 ProPlus](/deployoffice/name-change). V konzole Configuration Manager se pořád zobrazují odkazy na starý název a podpůrná dokumentace, zatímco se konzola aktualizuje.
 > - Když ručně nasazujete aktualizace klienta Microsoft 365 Apps, najdete je v uzlu **aktualizace sady office 365** v části **Správa klientů v sadě Office 365** v pracovním prostoru **softwarová knihovna** . 
 
 ## <a name="automatically-deploy-software-updates"></a><a name="bkmk_auto"></a> Automaticky nasadit aktualizace softwaru

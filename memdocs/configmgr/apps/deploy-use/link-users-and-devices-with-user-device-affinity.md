@@ -10,12 +10,12 @@ ms.assetid: 5b30b0d5-722d-4d4b-9ed7-5a43de315461
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2e74f969016d79254ceb8e8323b6e3914969ecc7
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 8e1a55efa6b23aa489ea65b3296e33847163a5c4
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81710094"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695235"
 ---
 # <a name="link-users-and-devices-with-user-device-affinity-in-configuration-manager"></a>Propojení uživatelů a zařízení pomocí spřažení uživatelských zařízení v Configuration Manager
 
@@ -96,7 +96,7 @@ Pokud chcete vytvořit mnoho relací najednou, importujte soubor, který obsahuj
 
 1. V Průvodci importem spřažení uživatelského zařízení na stránce **Vybrat mapování** nastavte tyto informace:  
 
-    - **Název souboru**. Zadejte soubor hodnot oddělených čárkami (CSV), který obsahuje seznam uživatelů a zařízení, mezi kterými chcete vytvořit spřažení. V tomto souboru musí být každý pár uživatel-zařízení na samostatném řádku s hodnotami oddělenými čárkou. Použijte tento formát:`<domain>\<username>,<device NetBIOS name>`  
+    - **Název souboru**. Zadejte soubor hodnot oddělených čárkami (CSV), který obsahuje seznam uživatelů a zařízení, mezi kterými chcete vytvořit spřažení. V tomto souboru musí být každý pár uživatel-zařízení na samostatném řádku s hodnotami oddělenými čárkou. Použijte tento formát: `<domain>\<username>,<device NetBIOS name>`  
 
     - **Tento soubor má záhlaví sloupců pro referenční účely**. Pokud má soubor. csv záhlaví horního řádku, vyberte tuto možnost. Lokalita během importu ignoruje řádek záhlaví.  
 
@@ -135,7 +135,7 @@ Od verze 1902 použijte centrum softwaru k nastavování spřažení.
 > [!Important]
 > Uživatelské prostředí programu Silverlight v katalogu aplikací není v aktuální větvi verze 1806 podporováno. Počínaje verzí 1906 aktualizované klienty automaticky používají bod správy pro nasazení aplikací, které jsou k dispozici pro uživatele. Nemůžete také instalovat nové role katalogu aplikací. Podpora končí pro role katalogu aplikací s verzí 1910.  
 >
-> Další informace najdete v těchto článcích:
+> Další informace najdete v následujících článcích:
 >
 > - [Konfigurace centra softwaru](../plan-design/plan-for-software-center.md#bkmk_userex)
 > - [Odebrané a zastaralé funkce](../../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md)  
@@ -162,4 +162,4 @@ Když zakážete nastavení klienta, aby se **automaticky nakonfigurovalo spřa�
 
 ## <a name="next-steps"></a>Další kroky
 
-K vyhledání primárního použití zaregistrovaného zařízení můžete použít taky Microsoft Intune. Další informace najdete v tématu [vyhledání primárního uživatele zařízení v Intune](https://docs.microsoft.com/intune/find-primary-user) v dokumentaci k Intune.
+K vyhledání primárního použití zaregistrovaného zařízení můžete použít taky Microsoft Intune. Další informace najdete v tématu [vyhledání primárního uživatele zařízení v Intune](/intune/find-primary-user) v dokumentaci k Intune.

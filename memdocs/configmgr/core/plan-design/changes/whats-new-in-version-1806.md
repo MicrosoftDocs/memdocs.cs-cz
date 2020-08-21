@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: d6703f0889590b3d37d05b7c9b283a16c0150649
-ms.sourcegitcommit: 8fc7f2864c5e3f177e6657b684c5f208d6c2a1b4
+ms.openlocfilehash: 3b153dad513107b118d11fa95e3feaa035a1bc90
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88591628"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692634"
 ---
 # <a name="whats-new-in-version-1806-of-configuration-manager-current-branch"></a>Co je nového ve verzi 1806 Configuration Manager Current Branch
 
@@ -308,7 +308,7 @@ Další informace najdete v tématu [vytváření aplikací pro Windows](../../.
 
 ### <a name="uninstall-application-on-approval-revocation"></a>Odinstalace aplikace při odvolání schválení
 <!--1357891-->
-Chování se změnilo při odvolání schválení pro aplikaci. Když teď žádost o aplikaci odepřete, klient aplikace odinstaluje aplikaci ze zařízení uživatele. Toto chování vyžaduje, abyste povolili [volitelnou funkci](https://docs.microsoft.com/sccm/core/servers/manage/install-in-console-updates#bkmk_options) **schvalovat žádosti o aplikace pro uživatele na zařízení**. 
+Chování se změnilo při odvolání schválení pro aplikaci. Když teď žádost o aplikaci odepřete, klient aplikace odinstaluje aplikaci ze zařízení uživatele. Toto chování vyžaduje, abyste povolili [volitelnou funkci](/sccm/core/servers/manage/install-in-console-updates#bkmk_options) **schvalovat žádosti o aplikace pro uživatele na zařízení**. 
 
 Další informace najdete v tématu [nasazení aplikací](../../../apps/deploy-use/deploy-applications.md#bkmk_approval).
 
@@ -348,7 +348,7 @@ Další informace najdete v tématu [nastavení fáze](../../../osd/deploy-use/c
 
 ### <a name="improvements-to-windows-10-in-place-upgrade-task-sequence"></a>Vylepšení pořadí úkolů místního upgradu Windows 10
 <!--1358500-->
-Výchozí šablona pořadí úkolů pro místní upgrade systému Windows 10 nyní zahrnuje další novou skupinu s doporučenými akcemi, které je třeba přidat pro případ, že proces upgradu nebude úspěšný. Tyto akce usnadňují řešení potíží. Jedním z těchto nástrojů je Windows [SetupDiag](https://docs.microsoft.com/windows/deployment/upgrade/setupdiag). K získání podrobných informací o tom, proč upgrade Windows 10 neproběhl úspěšně, se jedná o samostatný diagnostický nástroj. 
+Výchozí šablona pořadí úkolů pro místní upgrade systému Windows 10 nyní zahrnuje další novou skupinu s doporučenými akcemi, které je třeba přidat pro případ, že proces upgradu nebude úspěšný. Tyto akce usnadňují řešení potíží. Jedním z těchto nástrojů je Windows [SetupDiag](/windows/deployment/upgrade/setupdiag). K získání podrobných informací o tom, proč upgrade Windows 10 neproběhl úspěšně, se jedná o samostatný diagnostický nástroj. 
 
 Další informace najdete v tématu [Vytvoření pořadí úkolů pro upgrade operačního systému](../../../osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md#recommended-task-sequence-steps-on-failure).
 
@@ -584,7 +584,7 @@ Další informace najdete v tématu [vylepšení konzoly ve verzi 1806](../../se
 
 Kromě nových funkcí obsahuje tato verze také další změny, jako jsou opravy chyb. Další informace najdete v tématu [Souhrn změn v Configuration Manager aktuální větvi, verze 1806](https://support.microsoft.com/help/4459701).
 
-Další informace o změnách rutin prostředí Windows PowerShell pro Configuration Manager najdete v [poznámkách k verzi PowerShell 1806](https://docs.microsoft.com/powershell/sccm/1806_release_notes?view=sccm-ps).
+Další informace o změnách rutin prostředí Windows PowerShell pro Configuration Manager najdete v [poznámkách k verzi PowerShell 1806](/powershell/sccm/1806_release_notes?view=sccm-ps).
 
 V konzole nástroje je k dispozici následující kumulativní aktualizace (4462978) od 24. října 2018: [kumulativní aktualizace pro Configuration Manager aktuální větev, verze 1806](https://support.microsoft.com/help/4462978).
 
@@ -593,11 +593,11 @@ V konzole nástroje je k dispozici následující kumulativní aktualizace (4462
 
 K vyřešení konkrétních problémů jsou k dispozici následující další opravy hotfix:
 
-| ID | Title | Datum | V konzole |
+| ID | Nadpis | Datum | V konzole |
 |---------|---------|---------|---------|
-| [4346645](https://support.microsoft.com/help/4346645) | Aktualizace pro Configuration Manager verze 1806, první vlna | 31. srpna 2018 | Yes |
-| [4465865](https://support.microsoft.com/help/4465865) | Pokud je služba WSUS odpojená, aktualizace softwaru se nestahují v prostředí Configuration Manager.<br><br>Tato aktualizace je také v kumulativní aktualizaci (4462978). | 01. října 2018 | Yes |
-| [4471892](https://support.microsoft.com/help/4471892) | Respondér technologie PXE nefunguje napříč podsítěmi v Configuration Manager 1806 | 23. listopadu 2018 | No |
+| [4346645](https://support.microsoft.com/help/4346645) | Aktualizace pro Configuration Manager verze 1806, první vlna | 31. srpna 2018 | Ano |
+| [4465865](https://support.microsoft.com/help/4465865) | Pokud je služba WSUS odpojená, aktualizace softwaru se nestahují v prostředí Configuration Manager.<br><br>Tato aktualizace je také v kumulativní aktualizaci (4462978). | 01. října 2018 | Ano |
+| [4471892](https://support.microsoft.com/help/4471892) | Respondér technologie PXE nefunguje napříč podsítěmi v Configuration Manager 1806 | 23. listopadu 2018 | Ne |
 | [4487960](https://support.microsoft.com/help/4487960) | Certifikát konektoru Microsoft Intune se neobnovuje v Configuration Manager | 18. ledna 2019 | Ano |
 
 

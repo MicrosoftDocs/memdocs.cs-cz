@@ -10,12 +10,12 @@ ms.assetid: 066caf00-e419-4efb-93d3-ba4ba878297c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 93c3887307c32ea636a6dbb064cda13f4b9130c6
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 996cff4b8b333a59b774afb979bbdd89aae536a1
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905137"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692889"
 ---
 # <a name="plan-for-the-migration-of-configuration-manager-objects-to-configuration-manager-current-branch"></a>Plánování migrace Configuration Managerch objektů do Configuration Manager aktuální větev
 
@@ -23,7 +23,7 @@ ms.locfileid: "82905137"
 
 Pomocí Configuration Manager aktuální větve můžete migrovat mnoho různých objektů, které jsou přidruženy k různým funkcím, které se nacházejí ve zdrojové lokalitě.
 
-##  <a name="plan-to-migrate-software-updates"></a><a name="Plan_migrate_Software_updates"></a>Plánování migrace aktualizací softwaru  
+##  <a name="plan-to-migrate-software-updates"></a><a name="Plan_migrate_Software_updates"></a> Plánování migrace aktualizací softwaru  
  Můžete migrovat objekty aktualizace softwaru, jako jsou balíčky aktualizací softwaru a nasazení aktualizací softwaru.  
 
  Chcete-li úspěšně migrovat objekty aktualizace softwaru, je třeba nejprve nastavit cílovou hierarchii s konfiguracemi, které odpovídají vašemu prostředí zdrojové hierarchie. To vyžaduje následující akce:  
@@ -54,7 +54,7 @@ Když migrujete ze zdrojové hierarchie Configuration Manager 2007, proces migra
 
 Při migraci objektů z nástroje System Center 2012 Configuration Manager nebo Configuration Manager aktuální zdrojové hierarchie větve nejsou objekty aktualizací softwaru změněny.  
 
-##  <a name="plan-to-migrate-content"></a><a name="Plan_Migrate_content"></a>Plánování migrace obsahu  
+##  <a name="plan-to-migrate-content"></a><a name="Plan_Migrate_content"></a> Plánování migrace obsahu  
  Obsah můžete migrovat z podporované zdrojové hierarchie do svojí cílové hierarchie. V případě zdrojové hierarchie Configuration Manager 2007 zahrnuje tento obsah balíčky distribuce softwaru a programy a virtuální aplikace, jako je Microsoft Application Virtualization (App-V). Pro System Center 2012 Configuration Manager a Configuration Manager aktuální zdrojové hierarchie větví zahrnuje tento obsah aplikace a virtuální aplikace App-V. Když migrujete obsah mezi hierarchiemi, zkomprimované zdrojové soubory se migrují do cílové hierarchie.  
 
 ### <a name="packages-and-programs"></a>Balíčky a programy  
@@ -96,12 +96,12 @@ Reklamu z podporované zdrojové lokality Configuration Manager 2007 můžete mi
 ### <a name="applications"></a>Aplikace  
  Můžete migrovat aplikace z podporovaného Configuration Manager System Center 2012 nebo Configuration Manager aktuální zdrojové hierarchie větve do cílové hierarchie. Pokud znova přidělíte klienta ze zdrojové hierarchie do cílové hierarchie, klient zachová historii dřív nainstalovaných aplikací pro ochranu klienta před opětným spuštěním migrované aplikace.  
 
-##  <a name="plan-to-migrate-collections"></a><a name="BKMK_MigrateCollections"></a>Plánování migrace kolekcí  
+##  <a name="plan-to-migrate-collections"></a><a name="BKMK_MigrateCollections"></a> Plánování migrace kolekcí  
  Můžete migrovat kritéria pro kolekce z podporovaného nástroje System Center 2012 Configuration Manager nebo Configuration Manager aktuální zdrojové hierarchie větve. V takovém případě použijete úlohu migrace založenou na objektech. Když migrujete kolekci, migrujete pravidla kolekce a ne informace o členech kolekce nebo informace o objektech vztahujících se k členům kolekce.  
 
  Migrace objektu kolekce není podporovaná, když migrujete ze zdrojové hierarchie Configuration Manager 2007.  
 
-##  <a name="plan-to-migrate-operating-system-deployments"></a><a name="Plan_migrate_OSD"></a>Plánování migrace nasazení operačních systémů  
+##  <a name="plan-to-migrate-operating-system-deployments"></a><a name="Plan_migrate_OSD"></a> Plánování migrace nasazení operačních systémů  
 Z podporované zdrojové hierarchie můžete migrovat následující objekty nasazení operačních systémů:  
 
 -   Image a balíčky operačních systémů. Zdrojová cesta spouštěcích imagí je aktualizována na výchozí umístění bitové kopie pro sadu Windows Administrative Installation Kit (Windows AIK) v cílové lokalitě. Dole jsou uvedené požadavky a omezení migrace imagí a balíčků operačních systémů:  
@@ -119,22 +119,22 @@ Z podporované zdrojové hierarchie můžete migrovat následující objekty nas
 
 -   Ovladače a balíčky ovladačů. Když migrujete balíčky ovladačů, účet počítače poskytovatele služby SMS v cílové hierarchii musí mít oprávnění Úplné řízení ke zdroji balíčku.
 
-##  <a name="plan-to-migrate-desired-configuration-management"></a><a name="Plan_Migrate_Compliance_settings"></a>Plánování migrace správy požadovaných konfigurací  
+##  <a name="plan-to-migrate-desired-configuration-management"></a><a name="Plan_Migrate_Compliance_settings"></a> Plánování migrace správy požadovaných konfigurací  
 Migrovat můžete položky konfigurace a základní údaje konfigurace.  
 
 > [!NOTE]  
->  Neinterpretované položky konfigurace z Configuration Manager 2007 zdrojové hierarchie se pro migraci nepodporují. Tyto položky konfigurace nejde migrovat nebo importovat do cílové hierarchie. Další informace o neinterpretované položkách konfigurace najdete v tématu neinterpretované položky konfigurace v tématu [o položkách konfigurace v tématu o konfiguraci požadovaných konfigurací](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb694136(v=technet.10)#uninterpreted-configuration-item) v knihovně dokumentace k nástroji Configuration Manager 2007.  
+>  Neinterpretované položky konfigurace z Configuration Manager 2007 zdrojové hierarchie se pro migraci nepodporují. Tyto položky konfigurace nejde migrovat nebo importovat do cílové hierarchie. Další informace o neinterpretované položkách konfigurace najdete v tématu neinterpretované položky konfigurace v tématu [o položkách konfigurace v tématu o konfiguraci požadovaných konfigurací](/previous-versions/system-center/configuration-manager-2007/bb694136(v=technet.10)#uninterpreted-configuration-item) v knihovně dokumentace k nástroji Configuration Manager 2007.  
 
 Můžete importovat konfigurační balíčky Configuration Manager 2007. Proces importu automaticky převede konfigurační balíčky tak, aby byly kompatibilní s Configuration Manager aktuální větev.  
 
-##  <a name="plan-to-migrate-boundaries"></a><a name="Plan_migrate_Boundaries"></a>Plánování migrace hranic  
+##  <a name="plan-to-migrate-boundaries"></a><a name="Plan_migrate_Boundaries"></a> Plánování migrace hranic  
  Hranice mezi hierarchiemi můžete migrovat. Když migrujete hranice z Configuration Manager 2007, každá hranice ze zdrojové lokality se migruje současně a přidá se do nové skupiny hranic, která je vytvořená v cílové hierarchii. Při migraci hranic z verze System Center 2012 Configuration Manager nebo Configuration Manager aktuální hierarchie větví se každá vybraná hranice přidá do nové skupiny hranic v cílové hierarchii.  
 
  U každé automaticky vytvořené skupiny hranic je povolené umístění obsahu, ale ne přiřazení lokality. To brání překrývání hranic při přiřazování lokalit mezi zdrojovou a cílovou hierarchií. Když migrujete ze zdrojové lokality Configuration Manager 2007, pomůže vám to zabránit novým klientům Configuration Manager 2007, kteří se instalují z nesprávně přidružování k cílové hierarchii. Ve výchozím nastavení Configuration Manager klienti aktuální větve automaticky nepřiřazují k lokalitám Configuration Manager 2007.  
 
  Když při migraci sdílíte distribuční bod s cílovou hierarchií, veškeré hranice přiřazené k příslušné distribuci se automaticky migrují do cílové hierarchie. V cílové hierarchii migrace vytvoří pro každý sdílený distribuční bod novou skupinu hranic určenou jen pro čtení. Pokud změníte hranice u distribučního bodu ve zdrojové hierarchii, skupina hranic v cílové hierarchii implementuje tyto změny v průběhu příštího cyklu shromažďování.  
 
-##  <a name="plan-to-migrate-reports"></a><a name="Plan_Migrate_reports"></a>Plánování migrace sestav  
+##  <a name="plan-to-migrate-reports"></a><a name="Plan_Migrate_reports"></a> Plánování migrace sestav  
 Configuration Manager nepodporuje migraci sestav. Místo toho můžete pomocí nástroje Tvůrce sestav služby SQL Server Reporting Services exportovat sestavy ze zdrojové hierarchie, a následně je importovat do cílové hierarchie.  
 
 > [!NOTE]  
@@ -142,7 +142,7 @@ Configuration Manager nepodporuje migraci sestav. Místo toho můžete pomocí n
 
 Další informace o vytváření sestav najdete v tématu [Úvod do vytváření sestav](../servers/manage/introduction-to-reporting.md).  
 
-##  <a name="plan-to-migrate-organizational-and-search-folders"></a><a name="Plan_Migrate_Org_Folders"></a>Plánování migrace organizačních složek a složek výsledků hledání  
+##  <a name="plan-to-migrate-organizational-and-search-folders"></a><a name="Plan_Migrate_Org_Folders"></a> Plánování migrace organizačních složek a složek výsledků hledání  
  Organizační složky a složky hledání můžete migrovat z podporované zdrojové hierarchie do cílové. Z nástroje System Center 2012 Configuration Manager nebo Configuration Manager aktuální zdrojové hierarchie větví můžete navíc migrovat kritéria uložených hledání do cílové hierarchie.  
 
  Proces migrace ve výchozím nastavení zachovává strukturu složek hledání a správních složek objektů a kolekcí. V Průvodci vytvořením úlohy migrace ale na stránce **Nastavení** můžete nastavit úlohu migrace, která nemigruje organizační strukturu pro objekty, tak, že zrušíte registraci pole pro tuto možnost. Organizační struktury kolekcí se vždycky zachovají.  
@@ -151,13 +151,13 @@ Další informace o vytváření sestav najdete v tématu [Úvod do vytváření
 
  Při migraci uloženého hledání ze služby System Center 2012 Configuration Manager nebo Configuration Manager aktuální zdrojové hierarchie větve migrujete kritéria hledání a nikoli informace o výsledcích hledání. Migraci uloženého hledání nelze použít ze zdrojové lokality Configuration Manager 2007.  
 
-##  <a name="plan-to-migrate-asset-intelligence-customizations"></a><a name="Plan_Migrate_AI"></a>Plánování migrace funkce Asset Intelligence přizpůsobení  
+##  <a name="plan-to-migrate-asset-intelligence-customizations"></a><a name="Plan_Migrate_AI"></a> Plánování migrace funkce Asset Intelligence přizpůsobení  
  Přizpůsobení funkce Asset Intelligence můžete migrovat z podporované zdrojové hierarchie do cílové. Ve struktuře funkce Asset Intelligence přizpůsobení mezi Configuration Manager 2007 a Configuration Manager aktuální větví nejsou žádné významné změny.  
 
 > [!NOTE]  
 > Configuration Manager aktuální větev nepodporuje migraci objektů funkce Asset Intelligence z webu Configuration Manager 2007, který používá funkce Asset Intelligence Service 2,0 (AIS 2,0).  
 
-##  <a name="plan-to-migrate-software-metering-rules-customizations"></a><a name="Plan_Migrate_SWM_Rules"></a>Plánování migrace přizpůsobení pravidel monitorování míry využívání softwaru  
+##  <a name="plan-to-migrate-software-metering-rules-customizations"></a><a name="Plan_Migrate_SWM_Rules"></a> Plánování migrace přizpůsobení pravidel monitorování míry využívání softwaru  
  Měření softwaru mezi Configuration Manager 2007 a Configuration Manager aktuální větví nejsou významné změny. Pravidla monitorování míry využití softwaru můžete migrovat z podporované zdrojové hierarchie do cílové.  
 
- Pravidla monitorování míry využití softwaru migrovaná do cílové hierarchie se ve výchozím nastavení nepřiřadí k určité lokalitě cílové hierarchie, ale vztahují se na všechny klienty v hierarchii. Pokud chcete pravidlo monitorování míry využití softwaru vztáhnout na klienty v určité lokalitě, musíte ho po migraci upravit.  
+ Pravidla monitorování míry využití softwaru migrovaná do cílové hierarchie se ve výchozím nastavení nepřiřadí k určité lokalitě cílové hierarchie, ale vztahují se na všechny klienty v hierarchii. Pokud chcete pravidlo monitorování míry využití softwaru vztáhnout na klienty v určité lokalitě, musíte ho po migraci upravit.

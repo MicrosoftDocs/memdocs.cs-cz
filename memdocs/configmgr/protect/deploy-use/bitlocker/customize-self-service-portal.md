@@ -10,12 +10,12 @@ ms.assetid: 6bc26e36-9914-4606-ae8d-f7b23218942f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 220ebb558a0e01f701cab621381ad951a8fd0738
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: aa7f95e18775862427254839a2aab2c229e31057
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88123897"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697326"
 ---
 # <a name="customize-the-self-service-portal"></a>Přizpůsobení samoobslužného portálu
 
@@ -80,7 +80,7 @@ Pokud chcete, aby platnost relace uživatele po zadaném období nečinnosti vyp
 
 1. V podokně **Akce** vyberte **použít**.
 
-## <a name="localize-helpdesk-text-and-url"></a><a name="bkmk_localize"></a>Text a adresa URL pro lokalizaci
+## <a name="localize-helpdesk-text-and-url"></a><a name="bkmk_localize"></a> Text a adresa URL pro lokalizaci
 
 Můžete nakonfigurovat lokalizované verze příkazu samoobslužného portálu `HelpdeskText` a `HelpdeskUrl` propojit. Tento řetězec informuje uživatele o tom, jak získat další nápovědu při používání portálu. Pokud konfigurujete lokalizovaný text, portál zobrazí lokalizovanou verzi webových prohlížečů v daném jazyce. Pokud se nenalezne lokalizovaná verze, zobrazí se výchozí hodnota v `HelpdeskText` `HelpdeskUrl` nastaveních a.
 
@@ -128,7 +128,7 @@ Samoobslužný portál zobrazuje text oznámení na základě následujících p
 
 1. Vytvořte `<language>` složku pro každý podporovaný jazyk v cestě k `Self Service Website` aplikaci. Například `es-es` pro španělštinu (Španělsko). Ve výchozím nastavení je úplná cesta `C:\inetpub\Microsoft BitLocker Management Solution\Self Service Website\es-es` .
 
-    Seznam platných kódů jazyků, které můžete použít, najdete v [referenčních informacích k rozhraní API pro národní jazykovou podporu (NLS)](https://docs.microsoft.com/windows/win32/intl/locale-identifiers#predefined-locale-identifiers).
+    Seznam platných kódů jazyků, které můžete použít, najdete v [referenčních informacích k rozhraní API pro národní jazykovou podporu (NLS)](/windows/win32/intl/locale-identifiers#predefined-locale-identifiers).
 
     > [!TIP]
     > Název složky jazyka může být také jazykově neutrální název. Například **ES** pro španělštinu, nikoli **ES-ES** pro španělštinu (Španělsko) a **ES-ar** pro španělštinu (Argentina). Pokud uživatel nastaví svůj prohlížeč na **ES-ES**a tato složka jazyků neexistuje, webový server rekurzivně kontroluje nadřazené složky národního prostředí (**y**). (Nadřazená národní prostředí jsou definovaná v .NET.) Například `Self Service Website\es\Notice.txt` . Tento rekurzivní záložní prostředek napodobuje pravidla načítání prostředků .NET.

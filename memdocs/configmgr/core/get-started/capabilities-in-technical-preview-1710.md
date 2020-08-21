@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 3dd4c3f22a0f2c24153e6d26be2e3098511c5dc4
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: e408bbe7ea88d70c5a9d02368c2d820584cae2b8
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905311"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694436"
 ---
 # <a name="capabilities-in-technical-preview-1710-for-configuration-manager"></a>Funkce ve verzi Technical Preview 1710 pro Configuration Manager
 
@@ -97,17 +97,17 @@ Tato verze přidává podporu pro ochranu před zneužitím v programu Windows D
 
 Data dodržování předpisů pro nasazení zásad ochrany proti zneužití jsou k dispozici v rámci konzoly Configuration Manager.
 
-Další informace o ochraně před zneužitím a konkrétních komponent a pravidel najdete v tématu [zneužití ochrany v programu Windows Defender](https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/windows-defender-exploit-guard) v knihovně dokumentace systému Windows.
+Další informace o ochraně před zneužitím a konkrétních komponent a pravidel najdete v tématu [zneužití ochrany v programu Windows Defender](/windows/threat-protection/windows-defender-exploit-guard/windows-defender-exploit-guard) v knihovně dokumentace systému Windows.
 
-### <a name="prerequisites"></a>Požadavky
+### <a name="prerequisites"></a>Předpoklady
 Spravovaná zařízení musí používat Windows 10 1709: creators Update nebo novější a splňují následující požadavky v závislosti na nakonfigurovaných součástech a pravidlech:
 
 |Součást ochrany před zneužitím |Další požadavky|
 |------------------------|------------------------|
-| Omezení možností útoku  | Zařízení musí mít povolenou [ochranu v reálném čase v programu Windows Defender AV]( https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard) .  |
-| Řízený přístup ke složkám  | Zařízení musí mít povolenou [ochranu v reálném čase v programu Windows Defender AV]( https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard) .   |
+| Omezení možností útoku  | Zařízení musí mít povolenou [ochranu v reálném čase v programu Windows Defender AV]( /windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard) .  |
+| Řízený přístup ke složkám  | Zařízení musí mít povolenou [ochranu v reálném čase v programu Windows Defender AV]( /windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard) .   |
 | Ochrana Exploit Protection  | Žádné  |
-| Ochrana sítě  |  Zařízení musí mít povolenou [ochranu v reálném čase v programu Windows Defender AV]( https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard) .  |
+| Ochrana sítě  |  Zařízení musí mít povolenou [ochranu v reálném čase v programu Windows Defender AV]( /windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard) .  |
 
 ### <a name="create-an-exploit-guard-policy----1355468---"></a>Vytvoření zásady ochrany před zneužitím  <!--1355468 -->
 1. V konzole Configuration Manager přejděte na **prostředky a kompatibilita**  >  **Endpoint Protection**a pak klikněte na **zneužití ochrany před zneužitím v programu Windows Defender**.
@@ -125,7 +125,7 @@ Až vytvoříte zásady ochrany před zneužitím, nasadíte je pomocí Průvodc
 
 ## <a name="limited-support-for-cng-certificates"></a>Omezená podpora pro certifikáty CNG
 <!-- 1356191 -->
-Od této verze teď můžete používat šablony certifikátů [kryptografické rozhraní API: nové generace (CNG)](https://docs.microsoft.com/windows/win32/seccng/cng-features) pro následující scénáře:
+Od této verze teď můžete používat šablony certifikátů [kryptografické rozhraní API: nové generace (CNG)](/windows/win32/seccng/cng-features) pro následující scénáře:
 
 - Registrace klienta a komunikace s bodem správy HTTPS.   
 - Distribuce softwaru a nasazení aplikací s distribučním bodem HTTPS.   
@@ -210,13 +210,13 @@ Chcete-li vytvořit zásadu a vyhledat dostupná nastavení:
     > [!NOTE]
     > Počítače s Windows 10 ukládají na klientovi jenom jeden seznam izolace sítě. V této verzi můžete vytvořit dva různé druhy seznamů izolace sítě (jeden ze systému Windows Information Protection a jeden z ochrany Application Guard v programu Windows Defender) a nasadit je do klienta. Pokud nasadíte obě zásady, musí tyto seznamy izolace sítě odpovídat. Pokud nasadíte seznamy, které se neshodují se stejným klientem, nasazení se nezdaří.
 
-    Další informace o tom, jak zadat definice sítě v dokumentaci [Windows Information Protection], najdete v tématu [Ochrana podnikových dat pomocí Windows Information Protection (NV)](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/create-wip-policy-using-configmgr).
+    Další informace o tom, jak zadat definice sítě v dokumentaci [Windows Information Protection], najdete v tématu [Ochrana podnikových dat pomocí Windows Information Protection (NV)](/windows/security/information-protection/windows-information-protection/create-wip-policy-using-configmgr).
 
 6. Až skončíte, dokončete průvodce a Nasaďte zásadu na jedno nebo více zařízení s Windows 10.
 
-### <a name="further-reading"></a>Další čtení
+### <a name="further-reading"></a>Další materiály
 
 Další informace o ochraně Application Guard v programu Windows Defender najdete v [tomto blogovém příspěvku](https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#BmJGKPfSjHHzsMmI.97). Další informace o samostatném režimu ochrany Application Guard v programu Windows Defender najdete v [tomto blogovém příspěvku](https://techcommunity.microsoft.com/t5/Windows-Insider-Program/Windows-Defender-Application-Guard-Standalone-mode/td-p/66903).
 
 ## <a name="next-steps"></a>Další kroky
-Informace o instalaci nebo aktualizaci větve Technical Preview najdete v tématu [Technical Preview pro Configuration Manager](technical-preview.md).    
+Informace o instalaci nebo aktualizaci větve Technical Preview najdete v tématu [Technical Preview pro Configuration Manager](technical-preview.md).

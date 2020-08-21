@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: 51a974247d7281d6134b699a5865f801d1ed6094
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 9d58ffee30986efeda1716358ab7aa6c1d36cbf5
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905709"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695677"
 ---
 # <a name="capabilities-in-technical-preview-1609-for-configuration-manager"></a>Funkce ve verzi Technical Preview 1609 pro Configuration Manager
 
@@ -91,7 +91,7 @@ Postup vytvoření a nasazení Configuration Manager aplikace z aplikace placen�
 
 Přidali jsme spoustu nových nastavení, která můžete použít v položkách konfigurace pro různé platformy zařízení.
 Jedná se o nastavení, která dříve existovala v Microsoft Intune samostatné konfigurace, a jsou teď dostupná, když používáte Intune s Configuration Manager.
-Pokud potřebujete s některým z těchto nastavení nápovědu, otevřete [Spravovat nastavení a funkce v zařízeních pomocí zásad Microsoft Intune](/mem/intune/configuration/device-profiles) a pak vyberte dílčí téma nastavení pro požadovanou platformu.
+Pokud potřebujete s některým z těchto nastavení nápovědu, otevřete [Spravovat nastavení a funkce v zařízeních pomocí zásad Microsoft Intune](../../../intune/configuration/device-profiles.md) a pak vyberte dílčí téma nastavení pro požadovanou platformu.
 
 
 ### <a name="new-settings-for-android-devices"></a>Nová nastavení pro zařízení s Androidem
@@ -238,7 +238,7 @@ Následující části obsahují podrobnosti o změnách zavedených v této ver
 ### <a name="changes-in-ui-and-behavior-for-boundary-groups-and-content-locations"></a>Změny v uživatelském rozhraní a chování pro skupiny hranic a umístění obsahu
 Níže jsou uvedené klíčové změny skupin hranic a způsob, jakým klienti hledají obsah. Mnohé z těchto změn a konceptů společně fungují.
 - **Odeberou se konfigurace pro rychlá nebo pomalá:** Už nemusíte konfigurovat jednotlivé distribuční body, aby byly rychlé nebo pomalé.  Místo toho je pro každý systém lokality, který je přidružený ke skupině hranic, zacházeno stejným způsobem. Z důvodu této změny nepodporuje karta **odkazy** v rámci vlastností hraniční skupiny, aby konfigurace byla rychlá nebo pomalá.
-- **Nová výchozí skupina hranic v každé lokalitě:**  Každá primární lokalita má novou výchozí skupinu hranic s názvem ***Default-site-hranice-Group \< SiteCode>***.  Pokud klient není v síťovém umístění, které je přiřazeno ke skupině hranic, bude tento klient používat systémy lokality přidružené k výchozí skupině ze své přiřazené lokality. Naplánujte použití této skupiny hranic jako náhrady za koncept záložního umístění obsahu.    
+- **Nová výchozí skupina hranic v každé lokalitě:**  Každá primární lokalita má novou výchozí skupinu hranic s názvem ***Default-site-hraniční- \<sitecode> Group***.  Pokud klient není v síťovém umístění, které je přiřazeno ke skupině hranic, bude tento klient používat systémy lokality přidružené k výchozí skupině ze své přiřazené lokality. Naplánujte použití této skupiny hranic jako náhrady za koncept záložního umístění obsahu.    
   -  **' Odebrání záložních umístění zdroje pro obsah '** se odeberou: nemusíte explicitně konfigurovat distribuční bod, který se má použít pro použití jako záložní, a možnosti pro nastavení této volby se odeberou z uživatelského rozhraní.
 
   Kromě toho je výsledkem nastavení **umožnění klientům použít náhradní umístění zdroje obsahu** v typu nasazení pro aplikace. Toto nastavení pro typ nasazení teď umožňuje klientovi použít výchozí skupinu hranic lokality jako umístění zdroje obsahu.
@@ -317,8 +317,8 @@ Konfigurací různých sousedních skupin, které budou k dispozici v různých 
 
 ### <a name="update-existing-boundary-groups-to-the-new-model"></a><a name="bkmk_update"></a>Aktualizace existujících skupin hranic na nový model
 Když nainstalujete verzi 1609 a aktualizujete lokalitu, automaticky se provedou následující konfigurace. Cílem je zajistit, aby vaše aktuální nouzové chování zůstalo k dispozici, dokud nebudete konfigurovat nové skupiny hranic a vztahy.  
-- Nechráněné distribuční body v lokalitě se přidají do hraniční skupiny *Default-site-hraniční-skupina \<>* lokality.
-- Vytvoří se kopie každé existující skupiny hranic, která obsahuje server lokality nakonfigurovaný s pomalým připojením. Název nové skupiny je *** \< původní název skupiny hranic>-pomalé – TMP***:  
+- Nechráněné distribuční body v lokalitě se přidají do skupiny hranic *Výchozí-lokalita – hranice skupiny \<sitecode> * této lokality.
+- Vytvoří se kopie každé existující skupiny hranic, která obsahuje server lokality nakonfigurovaný s pomalým připojením. Název nové skupiny je *** \<original boundary group name> pomalý – TMP***:  
   -   Systémy lokality, které mají rychlé připojení, jsou ponechány v původní hraniční skupině.
   -   Kopii systémů lokality, které mají pomalé připojení, se přidají do kopie skupiny hranic. Původní systémy lokality nakonfigurované jako pomalé zůstanou v původní skupině hranic kvůli zpětné kompatibilitě, ale nepoužívají se z této skupiny hranic.
   -   K této kopii skupiny hranic nejsou přidruženy hranice. Záložní propojení se ale vytvoří mezi původní skupinou a novou kopií skupiny hranic, která má v záložním čase nastavenou hodnotu nula.
@@ -347,7 +347,7 @@ Configuration Manager 1609 Technical Preview zavádí nový řídicí panel. Ř�
 - Verze klientů Office 365
 - Jazyky klienta Office 365
 - Klientské kanály pro Office 365     
-Další informace najdete v článku [Základní informace o aktualizačních kanálech Office 365 ProPlus](https://docs.microsoft.com/deployoffice/overview-update-channels).
+Další informace najdete v článku [Základní informace o aktualizačních kanálech Office 365 ProPlus](/deployoffice/overview-update-channels).
 - Pravidla automatického nasazení, která mají klienta Office 365 vybranou v sadě dostupných produktů.
 
 Na řídicím panelu můžete provádět následující akce:
@@ -424,7 +424,7 @@ V této verzi můžete získat rychlý přehled o celkovém dodržování předp
 - Procházení hierarchie **celkového grafu dodržování předpisů zařízením** aktuálně generuje chybu.
 - V grafu **nejdůležitějších příčin nedodržení předpisů** je seznam názvů zásad, nikoli individuální důvody pro nedodržování předpisů. Můžete kliknout na zásadu a přejít k podrobnostem a zobrazit zařízení, která nedodržují předpisy pro tyto zásady.
 
-### <a name="try-it-out"></a>Vyzkoušejte si to.
+### <a name="try-it-out"></a>Vyzkoušet
 Dokončete následující části v uvedeném pořadí:
 
 #### <a name="check-overall-compliance-chart"></a>Zkontroluje celkový graf dodržování předpisů.

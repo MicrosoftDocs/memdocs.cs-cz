@@ -10,12 +10,12 @@ ms.assetid: 341f0d0b-f907-44cf-9e10-e1b41fc15f82
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 07c5488b0ea28f37f7f8a07b532c67fb64aad810
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 2eea75f39430f1cc38ff994280425ca918eaa432
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81713426"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694555"
 ---
 # <a name="how-to-deploy-clients-to-windows-computers-in-configuration-manager"></a>Postup nasazení klientů na počítače se systémem Windows v nástroji Configuration Manager
 
@@ -29,7 +29,7 @@ Tento článek poskytuje podrobné informace o tom, jak nasadit klienta Configur
 - [Osvědčené postupy nasazení klientů](plan/best-practices-for-client-deployment.md)  
 
 
-## <a name="client-push-installation"></a><a name="BKMK_ClientPush"></a>Klientská nabízená instalace
+## <a name="client-push-installation"></a><a name="BKMK_ClientPush"></a> Klientská nabízená instalace
 
 Existují tři hlavní způsoby použití nabízených oznámení klienta:  
 
@@ -63,7 +63,7 @@ Soubory protokolů klienta poskytují podrobnější informace pro řešení pot
     > [!NOTE]  
     > Pokud nástroj používá nabízenou instalaci klienta k instalaci klienta Configuration Manager, server lokality vytvoří vzdálené připojení ke klientovi. Počínaje verzí 1806 může lokalita vyžadovat vzájemné ověřování protokolem Kerberos tím, že před vytvořením připojení nepovolí použití protokolu NTLM pro ověřování. Toto vylepšení pomáhá zabezpečit komunikaci mezi serverem a klientem.  
     >
-    > V závislosti na zásadách zabezpečení může vaše prostředí už vyžadovat nebo vyžadovat protokol Kerberos přes starší ověřování NTLM. Další informace o bezpečnostních faktorech těchto ověřovacích protokolů najdete v tématu o [nastavení zásad zabezpečení systému Windows k omezení protokolu NTLM](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-security-restrict-ntlm-outgoing-ntlm-traffic-to-remote-servers#security-considerations).  
+    > V závislosti na zásadách zabezpečení může vaše prostředí už vyžadovat nebo vyžadovat protokol Kerberos přes starší ověřování NTLM. Další informace o bezpečnostních faktorech těchto ověřovacích protokolů najdete v tématu o [nastavení zásad zabezpečení systému Windows k omezení protokolu NTLM](/windows/security/threat-protection/security-policy-settings/network-security-restrict-ntlm-outgoing-ntlm-traffic-to-remote-servers#security-considerations).  
     >
     > Aby bylo možné tuto funkci používat, musí být klienti v důvěryhodné doménové struktuře služby Active Directory. Protokol Kerberos v systému Windows spoléhá na vzájemné ověřování ve službě Active Directory.  
 
@@ -114,7 +114,7 @@ Soubory protokolů klienta poskytují podrobnější informace pro řešení pot
 > [!NOTE]  
 > Tento průvodce použijte k instalaci klientů i v případě, že lokalita není nakonfigurovaná na nabízenou instalaci klienta.  
 
-## <a name="software-update-based-installation"></a><a name="BKMK_ClientSUP"></a>Instalace na základě aktualizace softwaru  
+## <a name="software-update-based-installation"></a><a name="BKMK_ClientSUP"></a> Instalace na základě aktualizace softwaru  
 
 Instalace klienta na základě aktualizace softwaru publikuje klienta nástroje v bodu aktualizace softwaru jako aktualizaci softwaru. Tuto metodu použijte při první instalaci nebo upgradu.  
 
@@ -151,7 +151,7 @@ Následující postupy použijte ke konfiguraci počítačů bez klienta Configu
     > [!TIP]  
     > Číslo portu zjistíte v tématu [Určení nastavení portu používaného službou WSUS](../../../sum/plan-design/plan-for-software-updates.md).
 
-    Příklad ve formátu plně kvalifikovaného názvu domény:`http://server1.contoso.com:8530`  
+    Příklad ve formátu plně kvalifikovaného názvu domény: `http://server1.contoso.com:8530`  
 
 5. **Nastavte intranetový server pro statistiku**: Toto nastavení se obvykle nakonfiguruje se stejným názvem serveru.
 
@@ -174,11 +174,11 @@ Následující postupy použijte ke konfiguraci počítačů bez klienta Configu
 
 Aktualizace softwaru pro klienta Configuration Manager není aktualizována automaticky, pokud je k dispozici nová verze. Když aktualizujete lokalitu, opakujte tento postup pro aktualizaci klienta.  
 
-## <a name="group-policy-installation"></a><a name="BKMK_ClientGP"></a>Instalace Zásady skupiny
+## <a name="group-policy-installation"></a><a name="BKMK_ClientGP"></a> Instalace Zásady skupiny
 
 K publikování nebo přiřazení Configuration Manager klienta použijte Zásady skupiny v Active Directory Domain Services. Klient se nainstaluje při spuštění počítače. Když použijete Zásady skupiny, klient se zobrazí v okně **Přidat nebo odebrat programy** v Ovládacích panelech. Uživatel ho může nainstalovat odsud.  
 
-Pro instalace na základě Zásady skupiny použijte balíček Instalační služba systému Windows CCMSetup. msi. Tento soubor se nachází ve `<ConfigMgr installation directory>\bin\i386` složce na serveru lokality. Do tohoto souboru nemůžete přidat vlastnosti, abyste mohli změnit chování při instalaci.  
+Pro instalace založené na Zásady skupiny použijte balíček Instalační služba systému Windows CCMSetup.msi. Tento soubor se nachází ve `<ConfigMgr installation directory>\bin\i386` složce na serveru lokality. Do tohoto souboru nemůžete přidat vlastnosti, abyste mohli změnit chování při instalaci.  
 
 > [!IMPORTANT]  
 > Pro přístup k instalačním souborům klienta musíte mít oprávnění správce.  
@@ -189,20 +189,20 @@ Pro instalace na základě Zásady skupiny použijte balíček Instalační slu�
 
 Další informace najdete v tématu [použití zásady skupiny k vzdálené instalaci softwaru](https://support.microsoft.com/help/816102/how-to-use-group-policy-to-remotely-install-software-in-windows-server).  
 
-## <a name="manual-installation"></a><a name="BKMK_Manual"></a>Ruční instalace
+## <a name="manual-installation"></a><a name="BKMK_Manual"></a> Ruční instalace
 
-Ručně nainstalujte klientský software do počítačů pomocí programu CCMSetup. exe. Tento program a jeho podpůrné soubory můžete najít ve složce Client v instalační složce nástroje Configuration Manager na serveru lokality. Lokalita sdílí tuto složku do sítě jako:  
+Ručně nainstalujte klientský software do počítačů pomocí CCMSetup.exe. Tento program a jeho podpůrné soubory můžete najít ve složce Client v instalační složce nástroje Configuration Manager na serveru lokality. Lokalita sdílí tuto složku do sítě jako:  
 
 `\\<site server name>\SMS_<site code>\Client\`  
 
-`<site server name>`je název serveru primární lokality. `<site code>`je kód primární lokality, ke které je klient přiřazen. Chcete-li spustit program CCMSetup. exe z příkazového řádku na klientovi, připojte se k tomuto umístění v síti a pak příkaz spusťte.  
+`<site server name>` je název serveru primární lokality. `<site code>` je kód primární lokality, ke které je klient přiřazen. Pokud chcete spustit CCMSetup.exe z příkazového řádku na klientovi, připojte se k tomuto umístění v síti a pak příkaz spusťte.  
 
 > [!IMPORTANT]  
 > Pro přístup k instalačním souborům klienta musíte mít oprávnění správce.  
 
-Program CCMSetup. exe zkopíruje všechny nezbytné požadavky do klientského počítače a zavolá balíček Instalační služba systému Windows (Client. msi), který nainstaluje klienta. Soubor Client. msi nelze spustit přímo.  
+CCMSetup.exe zkopíruje všechny nezbytné požadavky na klientský počítač a zavolá balíček Instalační služba systému Windows (Client.msi) pro instalaci klienta. Nemůžete spustit Client.msi přímo.  
 
-Chcete-li upravit chování instalace klienta, zadejte parametry příkazového řádku pro soubor CCMSetup. exe i Client. msi. Ujistěte se, že zadáte parametry CCMSetup, které `/` začínají předtím, než zadáte vlastnosti Client. msi. Příklad:  
+Chcete-li upravit chování instalace klienta, zadejte parametry příkazového řádku pro CCMSetup.exe i Client.msi. Ujistěte se, že zadáte parametry CCMSetup, které začínají `/` před zadáním Client.msi vlastností. Příklad:  
 
 `CCMSetup.exe /mp:SMSMP01 /logon SMSSITECODE=AUTO FSP=SMSFP01`
 
@@ -212,8 +212,8 @@ V tomto příkladu se klient nainstaluje s následujícími možnostmi:
 |--------------|-----------------|  
 |`/mp:SMSMP01`|Tento parametr CCMSetup určuje bod správy SMSMP01 ke stažení požadovaných instalačních souborů klienta.|  
 |`/logon`|Tento parametr CCMSetup určuje, že pokud se v počítači najde existující klient Configuration Manager, instalace by se měla zastavit.|  
-|`SMSSITECODE=AUTO`|Tato vlastnost Client. msi určuje, že se klient pokusí najít Configuration Manager kód lokality, který se má použít, například pomocí Active Directory Domain Services.|  
-|`FSP=SMSFP01`|Vlastnost Client. msi určuje, že záložní stavový bod s názvem SMSFP01 slouží k přijímání stavových zpráv odeslaných z klientského počítače.|  
+|`SMSSITECODE=AUTO`|Tato vlastnost Client.msi určuje, že se klient pokusí najít kód Configuration Manager webu, který se má použít, například pomocí Active Directory Domain Services.|  
+|`FSP=SMSFP01`|Tato vlastnost Client.msi určuje, že se záložní stavový bod s názvem SMSFP01 slouží k přijímání stavových zpráv odeslaných z klientského počítače.|  
 
 Další informace najdete v tématu [informace o parametrech instalace a vlastnostech klienta](about-client-installation-properties.md).  
 
@@ -234,7 +234,7 @@ Předpokládejme, že jste nakonfigurovali všechny systémové servery lokality
 Spusťte následující postup na klientském počítači:  
 
 1. Přihlaste se jako místní správce.  
-2. Namapujte jednotku Z `\\MPSERVER\SMS_ABC\Client`na.  
+2. Namapujte jednotku Z na `\\MPSERVER\SMS_ABC\Client` .  
 3. Přepněte příkazový řádek na jednotku Z.  
 
 Pak spusťte jeden z následujících příkazů:  
@@ -264,15 +264,15 @@ Tento příkaz přepíše automatickou konfiguraci, kterou Active Directory Doma
 - Bod záložního stavu, který přijímá připojení z Internetu
 - Použijte certifikát infrastruktury veřejných klíčů (Pokud je k dispozici) klienta, který má nejdelší dobu platnosti.
 
-## <a name="logon-script-installation"></a><a name="BKMK_ClientLogonScript"></a>Instalace přihlašovacího skriptu
+## <a name="logon-script-installation"></a><a name="BKMK_ClientLogonScript"></a> Instalace přihlašovacího skriptu
 
-Configuration Manager podporuje použití přihlašovacích skriptů k instalaci Configuration Manager klientského softwaru. Pomocí programového souboru CCMSetup. exe v přihlašovacím skriptu spusťte instalaci klienta.  
+Configuration Manager podporuje použití přihlašovacích skriptů k instalaci Configuration Manager klientského softwaru. Pomocí programového souboru CCMSetup.exe v přihlašovacím skriptu spusťte instalaci klienta.  
 
-Instalace pomocí přihlašovacího skriptu používá stejné způsoby jako ruční instalace klienta. Zadejte parametr `/logon` instalace pro soubor CCMSsetup. exe. Pokud v počítači již existuje nějaká verze klienta, tento parametr brání instalaci klienta nástroje. Toto chování brání přeinstalaci klienta při každém spuštění přihlašovacího skriptu.  
+Instalace pomocí přihlašovacího skriptu používá stejné způsoby jako ruční instalace klienta. Zadejte `/logon` parametr instalace pro CCMSsetup.exe. Pokud v počítači již existuje nějaká verze klienta, tento parametr brání instalaci klienta nástroje. Toto chování brání přeinstalaci klienta při každém spuštění přihlašovacího skriptu.  
 
-Pokud neurčíte zdroj instalace pomocí `/Source` parametru a není-li zadán `/MP` žádný bod správy, ze kterého by bylo možné získat instalaci, soubor CCMSetup. exe vyhledá bod správy hledáním Active Directory Domain Services. K tomuto chování dochází pouze v případě, že jste rozšířili schéma pro Configuration Manager a publikovali jste web na Active Directory Domain Services. Případně může klient k vyhledání bodu správy použít službu DNS nebo WINS.  
+Pokud nezadáte zdroj instalace pomocí `/Source` parametru a v parametru není zadán žádný bod správy, ze kterého lze získat instalaci `/MP` , CCMSetup.exe vyhledá bod správy hledáním Active Directory Domain Services. K tomuto chování dochází pouze v případě, že jste rozšířili schéma pro Configuration Manager a publikovali jste web na Active Directory Domain Services. Případně může klient k vyhledání bodu správy použít službu DNS nebo WINS.  
 
-## <a name="package-and-program-installation"></a><a name="BKMK_ClientApp"></a>Instalace balíčků a programů
+## <a name="package-and-program-installation"></a><a name="BKMK_ClientApp"></a> Instalace balíčků a programů
 
 Pomocí Configuration Manager můžete vytvořit a nasadit balíček a program, který upgraduje klientský software pro vybraná zařízení. Configuration Manager poskytuje definiční soubor balíčku, který naplní vlastnosti balíčku obvykle používanými hodnotami. Přizpůsobení chování instalace klienta zadáním dalších parametrů a vlastností příkazového řádku.  
 
@@ -298,11 +298,11 @@ Pomocí následujícího postupu můžete vytvořit balíček Configuration Mana
     > [!NOTE]  
     > Počítač, ve kterém je spuštěno nasazení Configuration Manager, musí mít přístup k zadané síťové složce. V opačném případě se instalace klienta nezdařila.  
 
-    Chcete-li změnit některou z vlastností instalace klienta, upravte příkazový řádek CCMSetup. exe na kartě **Obecné** v dialogovém okně program **vlastnosti bezobslužného upgradu agenta Configuration Manager** . Výchozí vlastnosti instalace jsou `/noservice SMSSITECODE=AUTO`.  
+    Chcete-li změnit všechny vlastnosti instalace klienta, upravte příkazový řádek CCMSetup.exe na kartě **Obecné** v dialogovém okně program **Vlastnosti tichého upgradu agenta Configuration Manager** . Výchozí vlastnosti instalace jsou `/noservice SMSSITECODE=AUTO` .  
 
 6. Proveďte distribuci balíčku do všech distribučních bodů, které mají být hostitelem balíčku upgradu klienta. Pak balíček nasaďte do kolekcí zařízení, které obsahují klienty, které chcete upgradovat.  
 
-## <a name="intune-mdm-managed-windows-devices"></a><a name="bkmk_mdm"></a>Zařízení s Windows spravovaná přes MDM Intune
+## <a name="intune-mdm-managed-windows-devices"></a><a name="bkmk_mdm"></a> Zařízení s Windows spravovaná přes MDM Intune
 
 Nasaďte klienta Configuration Manager do zařízení, která jsou zaregistrovaná v Microsoft Intune.
 
@@ -317,7 +317,7 @@ Po instalaci klienta Configuration Manager nemusíte zrušit registraci zaříze
 
 ### <a name="install-the-configuration-manager-client-by-using-intune"></a>Instalace klienta Configuration Manager pomocí Intune
 
-1. V Intune [přidejte obchodní aplikaci pro Windows](https://docs.microsoft.com/mem/intune/apps/lob-apps-windows) , která obsahuje instalační soubor Configuration Manager klienta **CCMSetup. msi**. Tento soubor najdete ve `\bin\i386` složce instalačního adresáře Configuration Manager na serveru lokality.  
+1. V Intune [přidejte obchodní aplikaci pro Windows](https://docs.microsoft.com/mem/intune/apps/lob-apps-windows) , která obsahuje instalační soubor klienta Configuration Manager **CCMSetup.msi**. Tento soubor najdete ve `\bin\i386` složce instalačního adresáře Configuration Manager na serveru lokality.  
 
 2. Do Intune Software Publisher zadejte parametry příkazového řádku. Tento příkaz můžete například použít u tradičního klienta na intranetu:  
 
@@ -326,9 +326,9 @@ Po instalaci klienta Configuration Manager nemusíte zrušit registraci zaříze
     > [!NOTE]  
     > Příklad příkazu, který se má použít u moderního klienta s Windows 10 pomocí ověřování Azure AD, najdete v tématu [Příprava internetových zařízení na spolusprávu](../../../comanage/how-to-prepare-Win10.md#install-the-configuration-manager-client).  
 
-3. [Přiřaďte aplikaci](https://docs.microsoft.com/mem/intune/apps/apps-deploy) ke skupině zaregistrovaných počítačů se systémem Windows.  
+3. [Přiřaďte aplikaci](../../../../intune/apps/apps-deploy.md) ke skupině zaregistrovaných počítačů se systémem Windows.  
 
-## <a name="os-image-installation"></a><a name="BKMK_ClientImage"></a>Instalace bitové kopie operačního systému
+## <a name="os-image-installation"></a><a name="BKMK_ClientImage"></a> Instalace bitové kopie operačního systému
 
 Předinstalujte klienta Configuration Manager do referenčního počítače, který použijete k vytvoření image operačního systému.
 
@@ -340,11 +340,11 @@ Předinstalujte klienta Configuration Manager do referenčního počítače, kte
 1. Ručně nainstalujte Configuration Manager klientský software do referenčního počítače. Další informace najdete v tématu [Ruční instalace klientů Configuration Manager](#BKMK_Manual).  
 
     > [!IMPORTANT]  
-    > Nezadávejte Configuration Manager kód lokality pro klienta ve vlastnostech příkazového řádku CCMSetup. exe.  
+    > Nezadávejte Configuration Manager kód lokality pro klienta ve vlastnostech příkazového řádku CCMSetup.exe.  
 
-2. Na příkazovém řádku zadejte `net stop ccmexec` příkaz pro zastavení služby Hostitel agenta serveru SMS (Ccmexec. exe) v referenčním počítači.  
+2. Na příkazovém řádku zadejte příkaz `net stop ccmexec` pro zastavení služby Hostitel agenta serveru SMS (CcmExec.exe) v referenčním počítači.  
 
-3. Odstraňte souboru SMSCFG. Soubor INI ze složky Windows v referenčním počítači.  
+3. Odstraňte soubor SMSCFG.INI ze složky Windows v referenčním počítači.  
 
 4. Odeberte všechny certifikáty, které jsou uložené v úložišti místního počítače v referenčním počítači. Pokud například používáte certifikáty PKI, před vytvořením bitové kopie počítače odeberte certifikáty z **osobního** úložiště pro **počítač** a **uživatele**.  
 
@@ -359,11 +359,11 @@ Předinstalujte klienta Configuration Manager do referenčního počítače, kte
 
 7. Nasaďte bitovou kopii na cílové počítače.  
 
-## <a name="workgroup-computers"></a><a name="BKMK_ClientWorkgroup"></a>Počítače v pracovní skupině
+## <a name="workgroup-computers"></a><a name="BKMK_ClientWorkgroup"></a> Počítače v pracovní skupině
 
 Configuration Manager podporuje instalaci klienta pro počítače v pracovních skupinách. Nainstalujte klienta na počítače pracovní skupiny pomocí metody určené v tématu [Ruční instalace klientů Configuration Manager](#BKMK_Manual).  
 
-### <a name="prerequisites"></a>Požadavky  
+### <a name="prerequisites"></a>Předpoklady  
 
 - Ručně nainstalujte klienta na každý počítač pracovní skupiny. Během instalace musí mít interaktivní uživatel práva místního správce.  
 
@@ -405,14 +405,14 @@ Tento příklad vyžaduje, aby klient byl v síťovém umístění, které je na
 
 `CCMSetup.exe FSP=fspserver.constoso.com`  
 
-## <a name="internet-based-client-management"></a><a name="BKMK_ClientInternet"></a>Internetová správa klientů  
+## <a name="internet-based-client-management"></a><a name="BKMK_ClientInternet"></a> Internetová správa klientů  
 
 > [!NOTE]  
 > Tato část se nevztahuje na klienty, kteří používají [bránu pro správu cloudu](../manage/cmg/plan-cloud-management-gateway.md). Pokud chcete nainstalovat internetové klienty pomocí brány pro správu cloudu, přečtěte si téma [instalace a přiřazení Configuration Manager klientů Windows 10 pomocí Azure AD pro ověřování](deploy-clients-cmg-azure.md).  
 
 Pokud lokalita Configuration Manager podporuje [internetovou správu klientů](../manage/plan-internet-based-client-management.md) pro klienty, kteří jsou někdy na intranetu a někdy na internetu, máte dvě možnosti, když instalujete klienty na intranet:  
 
-- Při instalaci klienta nástroje použijte například `CCMHOSTNAME=<internet FQDN of the internet-based management point>` vlastnost Client. msi, a to pomocí ruční instalace nebo nabízených oznámení klienta. Když použijete tuto metodu, přímo přiřaďte klienta k lokalitě. Nemůžete použít automatické přiřazení lokality. Přečtěte si část [Ruční instalace Configuration Manager klientů](#BKMK_Manual) , která poskytuje příklad této metody konfigurace.  
+- `CCMHOSTNAME=<internet FQDN of the internet-based management point>`Při instalaci klienta nástroje použijte například vlastnost Client.msi při ruční instalaci nebo nabízení klienta. Když použijete tuto metodu, přímo přiřaďte klienta k lokalitě. Nemůžete použít automatické přiřazení lokality. Přečtěte si část [Ruční instalace Configuration Manager klientů](#BKMK_Manual) , která poskytuje příklad této metody konfigurace.  
 
 - Nainstalujte klienta pro správu intranetového klienta a potom přiřaďte klientovi internetový bod správy klienta. Bod správy změňte pomocí vlastností klienta na stránce **Configuration Manager** v Ovládacích panelech nebo pomocí skriptu. Když používáte tuto metodu, můžete použít automatické přiřazení klienta. Další informace najdete v části [Postup konfigurace klientů pro správu internetových klientů po instalaci klienta](#BKMK_ConfigureIBCM_MP) .  
 
@@ -420,7 +420,7 @@ Pokud chcete instalovat klienty, kteří jsou na internetu, vyberte jednu z nás
 
 - Poskytněte mechanismus pro tyto klienty k dočasnému připojení k intranetu pomocí sítě VPN. Pak klienta nainstalujte pomocí vhodné metody instalace klienta.  
 
-- Použijte metodu instalace, která je nezávislá na Configuration Manager. Například zabalit zdrojové soubory instalace klienta na vyměnitelné médium a poslat médium uživatelům. Zdrojové soubory instalace klienta jsou umístěny ve `<installation path>\Client` složce na serveru Configuration Manager lokality. Na médiu zahrňte skript, který se ručně zkopíruje do složky klienta. Z této složky nainstalujte klienta pomocí souboru CCMSetup. exe a všech příslušných vlastností příkazového řádku CCMSetup.  
+- Použijte metodu instalace, která je nezávislá na Configuration Manager. Například zabalit zdrojové soubory instalace klienta na vyměnitelné médium a poslat médium uživatelům. Zdrojové soubory instalace klienta jsou umístěny ve `<installation path>\Client` složce na serveru Configuration Manager lokality. Na médiu zahrňte skript, který se ručně zkopíruje do složky klienta. Z této složky nainstalujte klienta pomocí CCMSetup.exe a všech příslušných vlastností příkazového řádku CCMSetup.  
 
 > [!NOTE]  
 > Configuration Manager nepodporuje instalaci klienta přímo z internetového bodu správy nebo z internetového bodu aktualizace softwaru.
@@ -431,24 +431,24 @@ Klienti, kteří jsou spravováni přes Internet, musí komunikovat s internetov
 
 1. Postupujte podle pokynů v části [Postup ruční instalace klientů Configuration Manager](#BKMK_Manual). Vždy zahrňte následující možnosti:  
 
-    - Parametr příkazového řádku CCMSetup`/source:<local path of the copied Client folder>`  
+    - Parametr příkazového řádku CCMSetup `/source:<local path of the copied Client folder>`  
 
-    - Parametr příkazového řádku CCMSetup`/UsePKICert`  
+    - Parametr příkazového řádku CCMSetup `/UsePKICert`  
 
-    - Vlastnost Client. msi`CCMHOSTNAME=<FQDN of internet-based management point>`  
+    - Client.msi – vlastnost `CCMHOSTNAME=<FQDN of internet-based management point>`  
 
-    - Vlastnost Client. msi`SMSSIGNCERT=<local path of exported site server signing certificate>`  
+    - Client.msi – vlastnost `SMSSIGNCERT=<local path of exported site server signing certificate>`  
 
-    - Vlastnost Client. msi`SMSSITECODE=<site code of internet-based management point>`  
+    - Client.msi – vlastnost `SMSSITECODE=<site code of internet-based management point>`  
 
     > [!NOTE]  
     > Pokud má lokalita více než jeden internetový bod správy, nezáleží na tom, který parametr zadáte `CCMHOSTNAME` . Když se klient Configuration Manager připojí k určenému internetovému bodu správy, pošle klientovi seznam dostupných internetových bodů správy v lokalitě. Klient náhodně vybere jednu ze seznamu.
 
-2. Pokud nechcete, aby klient kontroloval seznam odvolaných certifikátů (CRL), zadejte parametr `/NoCRLCheck`příkazového řádku CCMSetup.  
+2. Pokud nechcete, aby klient kontroloval seznam odvolaných certifikátů (CRL), zadejte parametr příkazového řádku CCMSetup `/NoCRLCheck` .  
 
-3. Pokud používáte internetový bod stavu pro použití náhradní lokality, určete vlastnost `FSP=<internet FQDN of the internet-based fallback status point>`Client. msi.  
+3. Pokud používáte internetový bod stavu pro použití náhradní lokality, určete vlastnost Client.msi `FSP=<internet FQDN of the internet-based fallback status point>` .  
 
-4. Pokud instalujete klienta pro správu pouze internetových klientů, určete vlastnost `CCMALWAYSINF=1`Client. msi.  
+4. Pokud instalujete klienta pro správu pouze internetových klientů, zadejte vlastnost Client.msi `CCMALWAYSINF=1` .  
 
 5. Určete, zda je nutné zadat další parametry příkazového řádku služby CCMSetup. Pokud má například klient více než jeden platný certifikát PKI, bude pravděpodobně nutné zadat kritérium výběru certifikátu. Seznam dostupných vlastností najdete v tématu [informace o parametrech instalace a vlastnostech klienta](about-client-installation-properties.md).  
 
@@ -466,7 +466,7 @@ Tento příklad nainstaluje klienta s následujícím chováním:
 - Přiřaďte internetový bod záložního stavu v doméně contoso.com.
 - Přiřaďte klienta k webu ABC.  
 
-### <a name="to-configure-clients-for-internet-based-client-management-after-client-installation"></a><a name="BKMK_ConfigureIBCM_MP"></a>Konfigurace klientů pro správu internetových klientů po instalaci klientů  
+### <a name="to-configure-clients-for-internet-based-client-management-after-client-installation"></a><a name="BKMK_ConfigureIBCM_MP"></a> Konfigurace klientů pro správu internetových klientů po instalaci klientů  
 
 K přiřazení internetového bodu správy po instalaci klienta použijte jeden z následujících postupů. První vyžaduje ruční konfiguraci a je vhodná pro několik klientů. Druhý je vhodný pro konfiguraci mnoha klientů.  
 
@@ -500,7 +500,7 @@ K přiřazení internetového bodu správy po instalaci klienta použijte jeden 
     > [!NOTE]  
     > Poslední řádek je pouze pro ověření nové hodnoty bodu správy sítě Internet.
     >
-    > Pokud chcete odstranit zadaný internetový bod správy, odeberte hodnotu plně kvalifikovaného názvu domény serveru v uvozovkách. Řádek se bude `$newInternetBasedManagementPointFQDN = ''`nacházet.
+    > Pokud chcete odstranit zadaný internetový bod správy, odeberte hodnotu plně kvalifikovaného názvu domény serveru v uvozovkách. Řádek se bude nacházet `$newInternetBasedManagementPointFQDN = ''` .
 
 3. Uložte soubor s příponou. ps1.  
 
@@ -512,7 +512,7 @@ K přiřazení internetového bodu správy po instalaci klienta použijte jeden 
 
 Je možné, že bude nutné restartovat klienta, aby se změny projevily.  
 
-## <a name="provision-client-installation-properties"></a><a name="BKMK_Provision"></a>Zřídit vlastnosti instalace klienta
+## <a name="provision-client-installation-properties"></a><a name="BKMK_Provision"></a> Zřídit vlastnosti instalace klienta
 
 Zřídit vlastnosti instalace klienta pro klientské instalace na základě aktualizace softwaru a aktualizace softwaru. K zřizování počítačů s Configuration Manager vlastnostmi instalace klienta použijte Windows Zásady skupiny. Tyto vlastnosti jsou uloženy v registru počítače. Klient je při instalaci přečte. Tato procedura není normálně nutná, ale může být nutná pro některé scénáře instalace klienta, například:  
 
@@ -521,17 +521,17 @@ Zřídit vlastnosti instalace klienta pro klientské instalace na základě aktu
 - Chcete vyřadit vlastnosti instalace klienta na určitých počítačích.  
 
 > [!NOTE]  
-> Pokud jsou v příkazovém řádku programu CCMSetup. exe zadány jakékoli vlastnosti instalace, nebudou použity vlastnosti instalace zřízené na počítačích.
+> Pokud jsou na příkazovém řádku CCMSetup.exe zadané vlastnosti instalace, nepoužijí se vlastnosti instalace zřízené na počítačích.
 
-Šablona pro správu zásad skupiny s `ConfigMgrInstallation.adm` názvem se dodává na instalačním médiu Configuration Manager. Pomocí této šablony můžete klientským počítačům zřídit vlastnosti instalace.
+Šablona pro správu zásad skupiny s názvem `ConfigMgrInstallation.adm` se dodává na instalačním médiu Configuration Manager. Pomocí této šablony můžete klientským počítačům zřídit vlastnosti instalace.
 
 > [!TIP]
-> Ve výchozím nastavení `ConfigMgrInstallation.adm` nepodporuje řetězce větší než 255 znaků. Tato konfigurace může mít vliv na přidání více parametrů nebo parametrů s dlouhými hodnotami, například CCMCERTISSUERS.<!-- SCCMDocs#1648 -->
+> Ve výchozím nastavení nepodporuje `ConfigMgrInstallation.adm` řetězce větší než 255 znaků. Tato konfigurace může mít vliv na přidání více parametrů nebo parametrů s dlouhými hodnotami, například CCMCERTISSUERS.<!-- SCCMDocs#1648 -->
 >
 > Řešení tohoto problému:
 >
 > 1. Upravit `ConfigMgrInstallation.adm` v programu Poznámkový blok.
-> 2. V případě vlastnosti `VALUENAME SetupParameters`změňte `MAXLEN` hodnotu na větší celé číslo. Například, `MAXLEN 511`.
+> 2. V případě vlastnosti `VALUENAME SetupParameters` změňte `MAXLEN` hodnotu na větší celé číslo. Například, `MAXLEN 511`.
 
 ### <a name="configure-and-assign-client-installation-properties-by-using-a-group-policy-object"></a>Konfigurace a přiřazení vlastností instalace klienta pomocí objektu zásad skupiny  
 
@@ -543,4 +543,4 @@ Zřídit vlastnosti instalace klienta pro klientské instalace na základě aktu
 
 4. V poli **CCMSetup** zadejte požadované vlastnosti příkazového řádku CCMSetup. Seznam všech vlastností příkazového řádku CCMSetup a příklady jejich použití najdete v tématu [informace o parametrech instalace a vlastnostech klienta](about-client-installation-properties.md).  
 
-5. Přiřaďte objekt zásad skupiny počítačům, které chcete zřídit, pomocí Configuration Manager vlastností instalace klienta.  
+5. Přiřaďte objekt zásad skupiny počítačům, které chcete zřídit, pomocí Configuration Manager vlastností instalace klienta.

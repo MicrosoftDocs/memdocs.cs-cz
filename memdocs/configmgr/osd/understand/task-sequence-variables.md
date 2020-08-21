@@ -10,12 +10,12 @@ ms.assetid: 62f15230-d3a6-4afc-abd4-1e07e7ba6c97
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 667d7451f467592bd0645b54d7068a20628ec98e
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 86a19970b58747d83ae8823eb8e2a85c40c03c4d
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88124137"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697343"
 ---
 # <a name="task-sequence-variables"></a>Proměnné pořadí úkolů
 
@@ -25,17 +25,17 @@ Tento článek je odkazem na všechny dostupné proměnné v abecedním pořadí
 
 Další informace najdete v tématu [Použití proměnných pořadí úkolů](using-task-sequence-variables.md).
 
-## <a name="task-sequence-variable-reference"></a><a name="bkmk_tsvar"></a>Odkaz na proměnnou pořadí úloh
+## <a name="task-sequence-variable-reference"></a><a name="bkmk_tsvar"></a> Odkaz na proměnnou pořadí úloh
 
-### <a name="_osddetectedwindir"></a><a name="OSDDetectedWinDir"></a>_OSDDetectedWinDir
+### <a name="_osddetectedwindir"></a><a name="OSDDetectedWinDir"></a> _OSDDetectedWinDir
 
 Pořadí úkolů vyhledá předchozí instalaci operačního systému při spuštění prostředí Windows PE na pevných discích počítače. Umístění složky Windows je uložené v této proměnné. Můžete nakonfigurovat pořadí úkolů, aby načetlo tuto hodnotu z prostředí a použilo ji k určení stejného umístění složky Windows pro novou instalaci operačního systému.
 
-### <a name="_osddetectedwindrive"></a><a name="OSDDetectedWinDrive"></a>_OSDDetectedWinDrive
+### <a name="_osddetectedwindrive"></a><a name="OSDDetectedWinDrive"></a> _OSDDetectedWinDrive
 
 Pořadí úkolů vyhledá předchozí instalaci operačního systému při spuštění prostředí Windows PE na pevných discích počítače. V této proměnné je uloženo umístění pevného disku, kde je nainstalován operační systém. Můžete nakonfigurovat pořadí úkolů, aby načetlo tuto hodnotu z prostředí a použilo ji k určení stejného umístění pevného disku pro nový operační systém.
 
-### <a name="_osdmigrateusmtpackageid"></a><a name="OSDMigrateUsmtPackageID"></a>_OSDMigrateUsmtPackageID
+### <a name="_osdmigrateusmtpackageid"></a><a name="OSDMigrateUsmtPackageID"></a> _OSDMigrateUsmtPackageID
 
 *Platí pro krok [zaznamenat stav uživatele](task-sequence-steps.md#BKMK_CaptureUserState) .*
 
@@ -43,7 +43,7 @@ Pořadí úkolů vyhledá předchozí instalaci operačního systému při spuš
 
 Určuje ID balíčku Configuration Manager balíčku, který obsahuje soubory nástroje USMT. Tato proměnná je povinná.
 
-### <a name="_osdmigrateusmtrestorepackageid"></a><a name="OSDMigrateUsmtRestorePackageID"></a>_OSDMigrateUsmtRestorePackageID
+### <a name="_osdmigrateusmtrestorepackageid"></a><a name="OSDMigrateUsmtRestorePackageID"></a> _OSDMigrateUsmtRestorePackageID
 
 *Platí pro krok [Obnovit stav uživatele](task-sequence-steps.md#BKMK_RestoreUserState) .*
 
@@ -51,7 +51,7 @@ Určuje ID balíčku Configuration Manager balíčku, který obsahuje soubory n�
 
 Určuje ID balíčku Configuration Manager balíčku, který obsahuje soubory nástroje USMT. Tato proměnná je povinná.
 
-### <a name="_smstsadvertid"></a><a name="SMSTSAdvertID"></a>_SMSTSAdvertID
+### <a name="_smstsadvertid"></a><a name="SMSTSAdvertID"></a> _SMSTSAdvertID
 
 Ukládá jedinečné ID nasazení aktuálně spuštěného pořadí úkolů. Používá stejný formát jako Configuration Manager ID nasazení distribuce softwaru. Pokud je pořadí úkolů spuštěné ze samostatného média, není tato proměnná definovaná.
 
@@ -59,13 +59,13 @@ Ukládá jedinečné ID nasazení aktuálně spuštěného pořadí úkolů. Pou
 
 `ABC20001`
 
-### <a name="_smstsassettag"></a><a name="SMSTSAssetTag"></a>_SMSTSAssetTag
+### <a name="_smstsassettag"></a><a name="SMSTSAssetTag"></a> _SMSTSAssetTag
 
 *Platí pro krok [nastavit dynamické proměnné](task-sequence-steps.md#BKMK_SetDynamicVariables) .*
 
 Určuje inventární štítek počítače.
 
-### <a name="_smstsbootimageid"></a><a name="SMSTSBootImageID"></a>_SMSTSBootImageID
+### <a name="_smstsbootimageid"></a><a name="SMSTSBootImageID"></a> _SMSTSBootImageID
 
 Pokud aktuálně spuštěné pořadí úkolů odkazuje na balíček spouštěcí bitové kopie, tato proměnná ukládá ID balíčku spouštěcí bitové kopie. Pokud pořadí úkolů neodkazuje na balíček spouštěcí bitové kopie, tato proměnná není nastavená.
 
@@ -73,16 +73,16 @@ Pokud aktuálně spuštěné pořadí úkolů odkazuje na balíček spouštěcí
 
 `ABC00001`  
 
-### <a name="_smstsbootuefi"></a><a name="SMSTSBootUEFI"></a>_SMSTSBootUEFI
+### <a name="_smstsbootuefi"></a><a name="SMSTSBootUEFI"></a> _SMSTSBootUEFI
 
 Pořadí úkolů tuto proměnnou nastaví, když detekuje počítač, který je v režimu UEFI.
 
-### <a name="_smstsclientcache"></a><a name="SMSTSClientCache"></a>_SMSTSClientCache
+### <a name="_smstsclientcache"></a><a name="SMSTSClientCache"></a> _SMSTSClientCache
 
 <!-- SCCMDocs issue 1400 -->
 Pořadí úkolů tuto proměnnou nastaví, když ukládá obsah do mezipaměti na místním disku. Proměnná obsahuje cestu k mezipaměti. Pokud tato proměnná neexistuje, neexistuje mezipaměť.
 
-### <a name="_smstsclientguid"></a><a name="SMSTSClientGUID"></a>_SMSTSClientGUID
+### <a name="_smstsclientguid"></a><a name="SMSTSClientGUID"></a> _SMSTSClientGUID
 
 Ukládá hodnotu Configuration Manager identifikátor GUID klienta. Pokud je pořadí úkolů spuštěné ze samostatného média, tato proměnná není nastavená.
 
@@ -90,7 +90,7 @@ Ukládá hodnotu Configuration Manager identifikátor GUID klienta. Pokud je po�
 
 `0a1a9a4b-fc56-44f6-b7cd-c3f8ee37c04c`
 
-### <a name="_smstscurrentactionname"></a><a name="SMSTSCurrentActionName"></a>_SMSTSCurrentActionName
+### <a name="_smstscurrentactionname"></a><a name="SMSTSCurrentActionName"></a> _SMSTSCurrentActionName
 
 Určuje název kroku aktuálně spuštěného pořadí úkolů. Tato proměnná se nastavuje před tím, než správce pořadí úkolů spustí jednotlivé kroky.
 
@@ -98,31 +98,31 @@ Určuje název kroku aktuálně spuštěného pořadí úkolů. Tato proměnná 
 
 `run command line`
 
-### <a name="_smstsdefaultgateways"></a><a name="SMSTSDefaultGateways"></a>_SMSTSDefaultGateways
+### <a name="_smstsdefaultgateways"></a><a name="SMSTSDefaultGateways"></a> _SMSTSDefaultGateways
 
 *Platí pro krok [nastavit dynamické proměnné](task-sequence-steps.md#BKMK_SetDynamicVariables) .*
 
 Určuje výchozí bránu používanou počítačem.
 
-### <a name="_smstsdownloadondemand"></a><a name="SMSTSDownloadOnDemand"></a>_SMSTSDownloadOnDemand
+### <a name="_smstsdownloadondemand"></a><a name="SMSTSDownloadOnDemand"></a> _SMSTSDownloadOnDemand
 
 Pokud aktuální pořadí úkolů běží v režimu stažení na vyžádání, tato proměnná je `true` . Režim stažení na vyžádání znamená, že správce pořadí úkolů stáhne obsah místně pouze v případě, že má přístup k obsahu.
 
-### <a name="_smstsinwinpe"></a><a name="SMSTSInWinPE"></a>_SMSTSInWinPE
+### <a name="_smstsinwinpe"></a><a name="SMSTSInWinPE"></a> _SMSTSInWinPE
 
 Pokud aktuální krok pořadí úkolů běží v prostředí Windows PE, tato proměnná je `true` . Otestujte tuto proměnnou pořadí úkolů a určete aktuální prostředí operačního systému.
 
-### <a name="_smstsipaddresses"></a><a name="SMSTSIPAddresses"></a>_SMSTSIPAddresses
+### <a name="_smstsipaddresses"></a><a name="SMSTSIPAddresses"></a> _SMSTSIPAddresses
 
 *Platí pro krok [nastavit dynamické proměnné](task-sequence-steps.md#BKMK_SetDynamicVariables) .*
 
 Určuje IP adresu, kterou počítač používá.
 
-### <a name="_smstslastactionname"></a><a name="SMSTSLastActionName"></a>_SMSTSLastActionName
+### <a name="_smstslastactionname"></a><a name="SMSTSLastActionName"></a> _SMSTSLastActionName
 
 Ukládá název poslední spouštěné akce. Tato proměnná se týká **_SMSTSLastActionRetCode**. Pořadí úkolů protokoluje tyto hodnoty do souboru souboru Smsts. log. Tato proměnná je při řešení potíží s pořadím úkolů prospěšná. V případě neúspěchu kroku může vlastní skript zahrnovat název kroku spolu s návratovým kódem.
 
-### <a name="_smstslastactionretcode"></a><a name="SMSTSLastActionRetCode"></a>_SMSTSLastActionRetCode
+### <a name="_smstslastactionretcode"></a><a name="SMSTSLastActionRetCode"></a> _SMSTSLastActionRetCode
 
 Uloží návratový kód z poslední spouštěné akce. Tuto proměnnou jde použít jako podmínku k určení toho, jestli se spustí další krok.
 
@@ -130,7 +130,7 @@ Uloží návratový kód z poslední spouštěné akce. Tuto proměnnou jde pou�
 
 `0`
 
-### <a name="_smstslastactionsucceeded"></a><a name="SMSTSLastActionSucceeded"></a>_SMSTSLastActionSucceeded
+### <a name="_smstslastactionsucceeded"></a><a name="SMSTSLastActionSucceeded"></a> _SMSTSLastActionSucceeded
 
 - Pokud byl poslední krok úspěšný, tato proměnná je `true` .  
 
@@ -138,12 +138,12 @@ Uloží návratový kód z poslední spouštěné akce. Tuto proměnnou jde pou�
 
 - Pokud pořadí úloh přeskočilo poslední akci, protože krok je zakázán nebo je přidružená podmínka vyhodnocena jako **NEPRAVDA**, tato proměnná není resetována. Stále obsahuje hodnotu pro předchozí akci.  
 
-### <a name="_smstslastcontentdownloadlocation"></a><a name="SMSTSLastContentDownloadLocation"></a>_SMSTSLastContentDownloadLocation
+### <a name="_smstslastcontentdownloadlocation"></a><a name="SMSTSLastContentDownloadLocation"></a> _SMSTSLastContentDownloadLocation
 
 <!-- 2840337 -->
 Počínaje verzí 1906 Tato proměnná obsahuje poslední umístění, ve kterém se pořadí úkolů stáhlo nebo se pokusilo stáhnout obsah. Zkontrolujte tuto proměnnou místo analýzy protokolů klienta pro toto umístění obsahu.
 
-### <a name="_smstslaunchmode"></a><a name="SMSTSLaunchMode"></a>_SMSTSLaunchMode
+### <a name="_smstslaunchmode"></a><a name="SMSTSLaunchMode"></a> _SMSTSLaunchMode
 
 Určuje, že pořadí úkolů bylo zahájeno pomocí jedné z následujících metod:  
 
@@ -155,53 +155,53 @@ Určuje, že pořadí úkolů bylo zahájeno pomocí jedné z následujících m
 - **PXE**: spouštění ze sítě pomocí technologie PXE
 - **HD**: Předzpracované médium na pevném disku
 
-### <a name="_smstslogpath"></a><a name="SMSTSLogPath"></a>_SMSTSLogPath
+### <a name="_smstslogpath"></a><a name="SMSTSLogPath"></a> _SMSTSLogPath
 
 Ukládá úplnou cestu k adresáři protokolů. Pomocí této hodnoty určíte, kde kroky pořadí úloh protokolují své akce. Tato hodnota není nastavená, pokud není k dispozici pevný disk.
 
-### <a name="_smstsmacaddresses"></a><a name="SMSTSMacAddresses"></a>_SMSTSMacAddresses
+### <a name="_smstsmacaddresses"></a><a name="SMSTSMacAddresses"></a> _SMSTSMacAddresses
 
 *Platí pro krok [nastavit dynamické proměnné](task-sequence-steps.md#BKMK_SetDynamicVariables) .*
 
 Určuje adresu MAC, kterou počítač používá.
 
-### <a name="_smstsmachinename"></a><a name="SMSTSMachineName"></a>_SMSTSMachineName
+### <a name="_smstsmachinename"></a><a name="SMSTSMachineName"></a> _SMSTSMachineName
 
 Ukládá a určuje název počítače. Ukládá název počítače, který pořadí úkolů používá k protokolování všech stavových zpráv. Chcete-li změnit název počítače v novém operačním systému, použijte proměnnou [OSDComputerName](#OSDComputerName-input) .
 
-### <a name="_smstsmake"></a><a name="SMSTSMake"></a>_SMSTSMake
+### <a name="_smstsmake"></a><a name="SMSTSMake"></a> _SMSTSMake
 
 *Platí pro krok [nastavit dynamické proměnné](task-sequence-steps.md#BKMK_SetDynamicVariables) .*
 
 Určuje značku počítače.
 
-### <a name="_smstsmdatapath"></a><a name="SMSTSMDataPath"></a>_SMSTSMDataPath
+### <a name="_smstsmdatapath"></a><a name="SMSTSMDataPath"></a> _SMSTSMDataPath
 
 Určuje cestu definovanou proměnnou [SMSTSLocalDataDrive](#SMSTSLocalDataDrive) . Tato cesta Určuje, kde pořadí úkolů ukládá dočasné soubory mezipaměti v cílovém počítači, když je spuštěný. Při definování SMSTSLocalDataDrive před spuštěním pořadí úkolů, například nastavením proměnné kolekce, Configuration Manager pak po spuštění pořadí úkolů definuje _SMSTSMDataPath proměnnou.
 
-### <a name="_smstsmediatype"></a><a name="SMSTSMediaType"></a>_SMSTSMediaType
+### <a name="_smstsmediatype"></a><a name="SMSTSMediaType"></a> _SMSTSMediaType
 
 Určuje typ média, který se používá k zahájení instalace. Příklady typů médií: spouštěcí médium, úplné médium, prostředí PXE a předzpracované médium.
 
-### <a name="_smstsmodel"></a><a name="SMSTSModel"></a>_SMSTSModel
+### <a name="_smstsmodel"></a><a name="SMSTSModel"></a> _SMSTSModel
 
 *Platí pro krok [nastavit dynamické proměnné](task-sequence-steps.md#BKMK_SetDynamicVariables) .*
 
 Určuje model počítače.
 
-### <a name="_smstsmp"></a><a name="SMSTSMP"></a>_SMSTSMP
+### <a name="_smstsmp"></a><a name="SMSTSMP"></a> _SMSTSMP
 
 Ukládá adresu URL nebo IP adresu Configuration Managerho bodu správy.
 
-### <a name="_smstsmpport"></a><a name="SMSTSMPPort"></a>_SMSTSMPPort
+### <a name="_smstsmpport"></a><a name="SMSTSMPPort"></a> _SMSTSMPPort
 
 Ukládá číslo portu Configuration Managerho bodu správy.
 
-### <a name="_smstsorgname"></a><a name="SMSTSOrgName"></a>_SMSTSOrgName
+### <a name="_smstsorgname"></a><a name="SMSTSOrgName"></a> _SMSTSOrgName
 
 Ukládá název značky, který pořadí úkolů zobrazuje v dialogovém okně průběh.
 
-### <a name="_smstsosupgradeactionreturncode"></a><a name="SMSTSOSUpgradeActionReturnCode"></a>_SMSTSOSUpgradeActionReturnCode
+### <a name="_smstsosupgradeactionreturncode"></a><a name="SMSTSOSUpgradeActionReturnCode"></a> _SMSTSOSUpgradeActionReturnCode
 
 *Platí pro krok [upgradovat operační systém](task-sequence-steps.md#BKMK_UpgradeOS) .*
 
@@ -211,7 +211,7 @@ Ukládá hodnotu ukončovacího kódu, kterou instalační program systému Wind
 
 Po dokončení kontroly jen pro sledování stavu proveďte v pozdějších krocích akci v závislosti na kódu chyby nebo ukončení. Po úspěšném zahájení proveďte upgrade. Případně můžete nastavit značku v prostředí, která se bude shromažďovat v inventáři hardwaru. Můžete například přidat soubor nebo nastavit klíč registru. Pomocí této značky můžete vytvořit kolekci počítačů, které jsou připravené k upgradu, nebo které před upgradem vyžadují akci.
 
-### <a name="_smstspackageid"></a><a name="SMSTSPackageID"></a>_SMSTSPackageID
+### <a name="_smstspackageid"></a><a name="SMSTSPackageID"></a> _SMSTSPackageID
 
 Ukládá ID aktuálně spuštěného pořadí úkolů. Toto ID používá stejný formát jako ID Configuration Manager balíčku.
 
@@ -219,7 +219,7 @@ Ukládá ID aktuálně spuštěného pořadí úkolů. Toto ID používá stejn�
 
 `HJT00001`
 
-### <a name="_smstspackagename"></a><a name="SMSTSPackageName"></a>_SMSTSPackageName
+### <a name="_smstspackagename"></a><a name="SMSTSPackageName"></a> _SMSTSPackageName
 
 Ukládá název aktuálně spuštěného pořadí úkolů. Správce Configuration Manager tento název určuje při vytváření pořadí úkolů.
 
@@ -227,21 +227,21 @@ Ukládá název aktuálně spuštěného pořadí úkolů. Správce Configuratio
 
 `Deploy Windows 10 task sequence`
 
-### <a name="_smstsrunfromdp"></a><a name="SMSTSRunFromDP"></a>_SMSTSRunFromDP
+### <a name="_smstsrunfromdp"></a><a name="SMSTSRunFromDP"></a> _SMSTSRunFromDP
 
 Nastavte na, `true` Pokud aktuální pořadí úkolů běží v režimu spuštění z distribučního bodu. Tento režim znamená, že správce pořadí úkolů získá požadované sdílené složky balíčku z distribučního bodu.
 
-### <a name="_smstsserialnumber"></a><a name="SMSTSSerialNumber"></a>_SMSTSSerialNumber
+### <a name="_smstsserialnumber"></a><a name="SMSTSSerialNumber"></a> _SMSTSSerialNumber
 
 *Platí pro krok [nastavit dynamické proměnné](task-sequence-steps.md#BKMK_SetDynamicVariables) .*
 
 Určuje sériové číslo počítače.
 
-### <a name="_smstssetuprollback"></a><a name="SMSTSSetupRollback"></a>_SMSTSSetupRollback
+### <a name="_smstssetuprollback"></a><a name="SMSTSSetupRollback"></a> _SMSTSSetupRollback
 
 Určuje, zda instalační program systému Windows provedení operace vrácení zpět během místního upgradu. Hodnoty proměnné mohou být `true` nebo `false` .
 
-### <a name="_smstssitecode"></a><a name="SMSTSSiteCode"></a>_SMSTSSiteCode
+### <a name="_smstssitecode"></a><a name="SMSTSSiteCode"></a> _SMSTSSiteCode
 
 Ukládá kód lokality Configuration Manager.
 
@@ -249,7 +249,7 @@ Ukládá kód lokality Configuration Manager.
 
 `ABC`
 
-### <a name="_smststimezone"></a><a name="SMSTSTimezone"></a>_SMSTSTimezone
+### <a name="_smststimezone"></a><a name="SMSTSTimezone"></a> _SMSTSTimezone
 
 Tato proměnná ukládá informace o časovém pásmu v následujícím formátu:
 
@@ -261,18 +261,18 @@ Pro časové pásmo **východ (USA a Kanada)**:
 
 `300,0,-60,0,11,0,1,2,0,0,0,0,3,0,2,2,0,0,0,Eastern Standard Time,Eastern Daylight Time`
 
-### <a name="_smststype"></a><a name="SMSTSType"></a>_SMSTSType
+### <a name="_smststype"></a><a name="SMSTSType"></a> _SMSTSType
 
 Určuje typ aktuálně spuštěného pořadí úkolů. Může mít jednu z následujících hodnot:  
 
 - **1**: Obecné pořadí úloh
 - **2**: pořadí úloh nasazení operačního systému
 
-### <a name="_smstsusecrl"></a><a name="SMSTSUseCRL"></a>_SMSTSUseCRL
+### <a name="_smstsusecrl"></a><a name="SMSTSUseCRL"></a> _SMSTSUseCRL
 
 Když pořadí úkolů používá ke komunikaci s bodem správy protokol HTTPS, tato proměnná Určuje, jestli používá seznam odvolaných certifikátů (CRL).
 
-### <a name="_smstsuserstarted"></a><a name="SMSTSUserStarted"></a>_SMSTSUserStarted
+### <a name="_smstsuserstarted"></a><a name="SMSTSUserStarted"></a> _SMSTSUserStarted
 
 Určuje, jestli uživatel spustil pořadí úkolů. Tato proměnná se nastavuje jenom v případě, že je pořadí úkolů spuštěné z centra softwaru. Například pokud je [_SMSTSLaunchMode](#SMSTSLaunchMode) nastaveno na `SMS` .
 
@@ -282,112 +282,112 @@ Tato proměnná může mít následující hodnoty:
 
 - `false`: Určuje, zda je pořadí úkolů iniciováno automaticky plánovačem Configuration Manager.
 
-### <a name="_smstsusessl"></a><a name="SMSTSUseSSL"></a>_SMSTSUseSSL
+### <a name="_smstsusessl"></a><a name="SMSTSUseSSL"></a> _SMSTSUseSSL
 
 Určuje, jestli pořadí úkolů používá protokol SSL ke komunikaci s bodem správy Configuration Manager. Pokud nakonfigurujete systémy lokality pro protokol HTTPS, hodnota je nastavena na `true` .
 
-### <a name="_smstsuuid"></a><a name="SMSTSUUID"></a>_SMSTSUUID
+### <a name="_smstsuuid"></a><a name="SMSTSUUID"></a> _SMSTSUUID
 
 *Platí pro krok [nastavit dynamické proměnné](task-sequence-steps.md#BKMK_SetDynamicVariables) .*
 
 Určuje UUID počítače.
 
-### <a name="_smstswtg"></a><a name="SMSTSWTG"></a>_SMSTSWTG
+### <a name="_smstswtg"></a><a name="SMSTSWTG"></a> _SMSTSWTG
 
 Určuje, zda je počítač spuštěn jako zařízení s operačním systémem Windows To Go.
 
-### <a name="_ts_crmemory"></a><a name="TSCRMEMORY"></a>_TS_CRMEMORY
+### <a name="_ts_crmemory"></a><a name="TSCRMEMORY"></a> _TS_CRMEMORY
 
 *Počínaje verzí 2002* <!--6005561-->  
 *Platí pro krok [kontrolovat připravenost](task-sequence-steps.md#BKMK_CheckReadiness) .*
 
 Proměnná jen pro čtení, která určuje, jestli se **minimální velikost paměti (MB)** vrátila jako true ( `1` ) nebo false ( `0` ). Pokud tuto kontrolu nepovolíte, hodnota této proměnné jen pro čtení bude prázdná.
 
-### <a name="_ts_crspeed"></a><a name="TSCRSPEED"></a>_TS_CRSPEED
+### <a name="_ts_crspeed"></a><a name="TSCRSPEED"></a> _TS_CRSPEED
 
 *Počínaje verzí 2002* <!--6005561-->  
 *Platí pro krok [kontrolovat připravenost](task-sequence-steps.md#BKMK_CheckReadiness) .*
 
 Proměnná jen pro čtení, která určuje, jestli **minimální rychlost procesoru (MHz)** vrátila hodnotu true ( `1` ) nebo false ( `0` ). Pokud tuto kontrolu nepovolíte, hodnota této proměnné jen pro čtení bude prázdná.
 
-### <a name="_ts_crdisk"></a><a name="TSCRDISK"></a>_TS_CRDISK
+### <a name="_ts_crdisk"></a><a name="TSCRDISK"></a> _TS_CRDISK
 
 *Počínaje verzí 2002* <!--6005561-->  
 *Platí pro krok [kontrolovat připravenost](task-sequence-steps.md#BKMK_CheckReadiness) .*
 
 Proměnná jen pro čtení, která určuje, jestli se **minimální volné místo na disku (MB)** vrátilo jako true ( `1` ) nebo false ( `0` ). Pokud tuto kontrolu nepovolíte, hodnota této proměnné jen pro čtení bude prázdná.
 
-### <a name="_ts_crostype"></a><a name="TSCROSTYPE"></a>_TS_CROSTYPE
+### <a name="_ts_crostype"></a><a name="TSCROSTYPE"></a> _TS_CROSTYPE
 
 *Počínaje verzí 2002* <!--6005561-->  
 *Platí pro krok [kontrolovat připravenost](task-sequence-steps.md#BKMK_CheckReadiness) .*
 
 Proměnná jen pro čtení, která určuje, zda **je aktuální operační systém, který má být aktualizován** , vrátila hodnotu true ( `1` ) nebo false ( `0` ). Pokud tuto kontrolu nepovolíte, hodnota této proměnné jen pro čtení bude prázdná.
 
-### <a name="_ts_crarch"></a><a name="TSCRARCH"></a>_TS_CRARCH
+### <a name="_ts_crarch"></a><a name="TSCRARCH"></a> _TS_CRARCH
 
 *Počínaje verzí 2002* <!--6005561-->  
 *Platí pro krok [kontrolovat připravenost](task-sequence-steps.md#BKMK_CheckReadiness) .*
 
 Proměnná jen pro čtení, která určuje, zda **Architektura aktuální kontroly operačního systému** vrátila hodnotu true ( `1` ) nebo false ( `0` ). Pokud tuto kontrolu nepovolíte, hodnota této proměnné jen pro čtení bude prázdná.
 
-### <a name="_ts_crminosver"></a><a name="TSCRMINOSVER"></a>_TS_CRMINOSVER
+### <a name="_ts_crminosver"></a><a name="TSCRMINOSVER"></a> _TS_CRMINOSVER
 
 *Počínaje verzí 2002* <!--6005561-->  
 *Platí pro krok [kontrolovat připravenost](task-sequence-steps.md#BKMK_CheckReadiness) .*
 
 Proměnná jen pro čtení, která určuje, zda **Minimální verze operačního systému** vrátila hodnotu true ( `1` ) nebo false ( `0` ). Pokud tuto kontrolu nepovolíte, hodnota této proměnné jen pro čtení bude prázdná.
 
-### <a name="_ts_crmaxosver"></a><a name="TSCRMAXOSVER"></a>_TS_CRMAXOSVER
+### <a name="_ts_crmaxosver"></a><a name="TSCRMAXOSVER"></a> _TS_CRMAXOSVER
 
 *Počínaje verzí 2002* <!--6005561-->  
 *Platí pro krok [kontrolovat připravenost](task-sequence-steps.md#BKMK_CheckReadiness) .*
 
 Proměnná jen pro čtení, která určuje, zda je **maximální verze operačního systému** vrácená hodnotou true ( `1` ) nebo false ( `0` ). Pokud tuto kontrolu nepovolíte, hodnota této proměnné jen pro čtení bude prázdná.
 
-### <a name="_ts_crclientminver"></a><a name="TSCRCLIENTMINVER"></a>_TS_CRCLIENTMINVER
+### <a name="_ts_crclientminver"></a><a name="TSCRCLIENTMINVER"></a> _TS_CRCLIENTMINVER
 
 *Počínaje verzí 2002* <!--6005561-->  
 *Platí pro krok [kontrolovat připravenost](task-sequence-steps.md#BKMK_CheckReadiness) .*
 
 Proměnná jen pro čtení, která má **minimální kontrolu verze klienta** vrácenou true ( `1` ) nebo false ( `0` ). Pokud tuto kontrolu nepovolíte, hodnota této proměnné jen pro čtení bude prázdná.
 
-### <a name="_ts_croslanguage"></a><a name="TSCROSLANGUAGE"></a>_TS_CROSLANGUAGE
+### <a name="_ts_croslanguage"></a><a name="TSCROSLANGUAGE"></a> _TS_CROSLANGUAGE
 
 *Počínaje verzí 2002* <!--6005561-->  
 *Platí pro krok [kontrolovat připravenost](task-sequence-steps.md#BKMK_CheckReadiness) .*
 
 Proměnná jen pro čtení, která určuje, zda **jazyk aktuální kontroly operačního systému** vrátil hodnotu true ( `1` ) nebo false ( `0` ). Pokud tuto kontrolu nepovolíte, hodnota této proměnné jen pro čtení bude prázdná.
 
-### <a name="_ts_cracpower"></a><a name="TSCRACPOWER"></a>_TS_CRACPOWER
+### <a name="_ts_cracpower"></a><a name="TSCRACPOWER"></a> _TS_CRACPOWER
 
 *Počínaje verzí 2002* <!--6005561-->  
 *Platí pro krok [kontrolovat připravenost](task-sequence-steps.md#BKMK_CheckReadiness) .*
 
 Proměnná, která je určená jen pro čtení, má za **následek** to, že napájení napájené ze zásuvky vrátilo hodnotu true ( `1` ) nebo false ( `0` ). Pokud tuto kontrolu nepovolíte, hodnota této proměnné jen pro čtení bude prázdná.
 
-### <a name="_ts_crnetwork"></a><a name="TSCRNETWORK"></a>_TS_CRNETWORK
+### <a name="_ts_crnetwork"></a><a name="TSCRNETWORK"></a> _TS_CRNETWORK
 
 *Počínaje verzí 2002* <!--6005561-->  
 *Platí pro krok [kontrolovat připravenost](task-sequence-steps.md#BKMK_CheckReadiness) .*
 
 Proměnná určená jen pro čtení, která kontroluje, zda je v **připojeném síťovém adaptéru** vrácena hodnota true ( `1` ) nebo false ( `0` ). Pokud tuto kontrolu nepovolíte, hodnota této proměnné jen pro čtení bude prázdná.
 
-### <a name="_ts_cruefi"></a><a name="TSCRUEFI"></a>_TS_CRUEFI
+### <a name="_ts_cruefi"></a><a name="TSCRUEFI"></a> _TS_CRUEFI
 
 *Počínaje verzí 2006* <!--6452769-->
 *Platí pro krok [kontrolovat připravenost](task-sequence-steps.md#BKMK_CheckReadiness) .*
 
 Proměnná určená jen pro čtení, která má **počítač v režimu UEFI** , vrátila hodnotu BIOS ( `0` ) nebo UEFI ( `1` ). Pokud tuto kontrolu nepovolíte, hodnota této proměnné jen pro čtení bude prázdná.
 
-### <a name="_ts_crwired"></a><a name="TSCRWIRED"></a>_TS_CRWIRED
+### <a name="_ts_crwired"></a><a name="TSCRWIRED"></a> _TS_CRWIRED
 
 *Počínaje verzí 2002* <!--6005561-->  
 *Platí pro krok [kontrolovat připravenost](task-sequence-steps.md#BKMK_CheckReadiness) .*
 
 Proměnná jen pro čtení, která znamená, že **síťový adaptér nemá kontrolu bezdrátového připojení** , vrátil hodnotu true ( `1` ) nebo false ( `0` ). Pokud tuto kontrolu nepovolíte, hodnota této proměnné jen pro čtení bude prázdná.
 
-### <a name="_tsappinstallstatus"></a><a name="TSAppInstallStatus"></a>_TSAppInstallStatus
+### <a name="_tsappinstallstatus"></a><a name="TSAppInstallStatus"></a> _TSAppInstallStatus
 
 Pořadí úkolů nastaví tuto proměnnou na stav instalace aplikace během kroku [instalovat aplikaci](task-sequence-steps.md#BKMK_InstallApplication) . Nastaví jednu z následujících hodnot:  
 
@@ -399,7 +399,7 @@ Pořadí úkolů nastaví tuto proměnnou na stav instalace aplikace během krok
 
 - **Úspěch**: během kroku instalovat aplikaci nebyly zjištěny žádné chyby ani upozornění.  
 
-### <a name="_tssecureboot"></a><a name="TSSecureBoot"></a>_TSSecureBoot
+### <a name="_tssecureboot"></a><a name="TSSecureBoot"></a> _TSSecureBoot
 
 *Počínaje verzí 2002* <!--5842295-->  
 
@@ -409,7 +409,7 @@ Pomocí této proměnné můžete určit stav zabezpečeného spouštění na za
 - `Enabled`: Zařízení má povolené zabezpečené spouštění.
 - `Disabled`: Zařízení má zakázané zabezpečené spouštění.
 
-### <a name="osdadapter"></a><a name="OSDAdapter"></a>OSDAdapter
+### <a name="osdadapter"></a><a name="OSDAdapter"></a> OSDAdapter
 
 *Platí pro krok [použít nastavení sítě](task-sequence-steps.md#BKMK_ApplyNetworkSettings) .*
 
@@ -423,7 +423,7 @@ Následující názvy proměnných použijte k definování vlastností *prvníh
 
 #### <a name="osdadapter0enabledhcp"></a>OSDAdapter0EnableDHCP
 
-Toto nastavení je povinné. Možné hodnoty jsou `True` nebo `False`. Například:
+Toto nastavení je povinné. Možné hodnoty jsou `True` nebo `False`. Příklad:
 
 `true`: Povolte pro adaptér protokol DHCP (Dynamic Host Configuration Protocol).
 
@@ -508,7 +508,7 @@ Index nastavení síťového adaptéru v poli nastavení.
 - **OSDAdapter0Gateways** = `192.168.0.1`  
 - **OSDAdapter0DNSSuffix** = `contoso.com`  
 
-### <a name="osdadaptercount"></a><a name="OSDAdapterCount"></a>Proměnné OSDAdapterCount
+### <a name="osdadaptercount"></a><a name="OSDAdapterCount"></a> Proměnné OSDAdapterCount
 
 *Platí pro krok [použít nastavení sítě](task-sequence-steps.md#BKMK_ApplyNetworkSettings) .*
 
@@ -520,7 +520,7 @@ Pokud například nastavíte hodnotu **OSDAdapter0TCPIPNetbiosOptions** pro prvn
 
 Pokud tuto hodnotu nezadáte, pořadí úkolů ignoruje všechny **OSDAdapter** hodnoty.
 
-### <a name="osdapplydriverbootcriticalcontentuniqueid"></a><a name="OSDApplyDriverBootCriticalContentUniqueID"></a>Nastaví proměnná osdapplydriverbootcriticalcontentuniqueid
+### <a name="osdapplydriverbootcriticalcontentuniqueid"></a><a name="OSDApplyDriverBootCriticalContentUniqueID"></a> Nastaví proměnná osdapplydriverbootcriticalcontentuniqueid
 
 *Platí pro krok [použít balíček ovladače](task-sequence-steps.md#BKMK_ApplyDriverPackage) .*
 
@@ -528,7 +528,7 @@ Pokud tuto hodnotu nezadáte, pořadí úkolů ignoruje všechny **OSDAdapter** 
 
 Určuje ID obsahu ovladače velkokapacitního paměťového zařízení, který se má nainstalovat z balíčku ovladačů. Pokud se tato proměnná nezadá, nenainstaluje se žádný ovladač velkokapacitního paměťového zařízení.
 
-### <a name="osdapplydriverbootcriticalhardwarecomponent"></a><a name="OSDApplyDriverBootCriticalHardwareComponent"></a>OSDApplyDriverBootCriticalHardwareComponent
+### <a name="osdapplydriverbootcriticalhardwarecomponent"></a><a name="OSDApplyDriverBootCriticalHardwareComponent"></a> OSDApplyDriverBootCriticalHardwareComponent
 
 *Platí pro krok [použít balíček ovladače](task-sequence-steps.md#BKMK_ApplyDriverPackage) .*
 
@@ -538,7 +538,7 @@ Určuje, jestli je nainstalovaný ovladač velkokapacitního paměťového zař�
 
 Pokud je nastavená [Nastaví proměnná osdapplydriverbootcriticalcontentuniqueid](#OSDApplyDriverBootCriticalContentUniqueID) , tato proměnná je povinná.
 
-### <a name="osdapplydriverbootcriticalid"></a><a name="OSDApplyDriverBootCriticalID"></a>OSDApplyDriverBootCriticalID
+### <a name="osdapplydriverbootcriticalid"></a><a name="OSDApplyDriverBootCriticalID"></a> OSDApplyDriverBootCriticalID
 
 *Platí pro krok [použít balíček ovladače](task-sequence-steps.md#BKMK_ApplyDriverPackage) .*
 
@@ -548,7 +548,7 @@ Určuje ID (kritické pro spouštění) ovladače velkokapacitního paměťovéh
 
 Pokud je nastavená [Nastaví proměnná osdapplydriverbootcriticalcontentuniqueid](#OSDApplyDriverBootCriticalContentUniqueID) , tato proměnná je povinná.
 
-### <a name="osdapplydriverbootcriticalinffile"></a><a name="OSDApplyDriverBootCriticalINFFile"></a>OSDApplyDriverBootCriticalINFFile
+### <a name="osdapplydriverbootcriticalinffile"></a><a name="OSDApplyDriverBootCriticalINFFile"></a> OSDApplyDriverBootCriticalINFFile
 
 *Platí pro krok [použít balíček ovladače](task-sequence-steps.md#BKMK_ApplyDriverPackage) .*
 
@@ -558,7 +558,7 @@ Určuje soubor INF ovladače velkokapacitního paměťového zařízení, který
 
 Pokud je nastavená [Nastaví proměnná osdapplydriverbootcriticalcontentuniqueid](#OSDApplyDriverBootCriticalContentUniqueID) , tato proměnná je povinná.
 
-### <a name="osdautoapplydriverbestmatch"></a><a name="OSDAutoApplyDriverBestMatch"></a>OSDAutoApplyDriverBestMatch
+### <a name="osdautoapplydriverbestmatch"></a><a name="OSDAutoApplyDriverBestMatch"></a> OSDAutoApplyDriverBestMatch
 
 *Platí pro krok [automaticky použít ovladače](task-sequence-steps.md#BKMK_AutoApplyDrivers) .*
 
@@ -568,11 +568,11 @@ Pokud je v katalogu ovladačů více ovladačů zařízení, které jsou kompati
 
 #### <a name="valid-values"></a>Platné hodnoty
 
-- `true`(výchozí): Nainstalujte jenom nejlepší ovladač zařízení.  
+- `true` (výchozí): Nainstalujte jenom nejlepší ovladač zařízení.  
 
 - `false`: Nainstaluje všechny kompatibilní ovladače zařízení a Windows vybere nejlepší ovladač, který se má použít.  
 
-### <a name="osdautoapplydrivercategorylist"></a><a name="OSDAutoApplyDriverCategoryList"></a>OSDAutoApplyDriverCategoryList
+### <a name="osdautoapplydrivercategorylist"></a><a name="OSDAutoApplyDriverCategoryList"></a> OSDAutoApplyDriverCategoryList
 
 *Platí pro krok [automaticky použít ovladače](task-sequence-steps.md#BKMK_AutoApplyDrivers) .*
 
@@ -580,7 +580,7 @@ Pokud je v katalogu ovladačů více ovladačů zařízení, které jsou kompati
 
 Seznam jedinečných ID kategorií v katalogu ovladačů oddělených čárkami. Krok **automaticky použít ovladač** se považuje jenom na ovladače alespoň v jedné ze zadaných kategorií. Tato hodnota je volitelná a ve výchozím nastavení není nastavená. Získání dostupných ID kategorií pomocí výčtu seznamu **SMS_CategoryInstance** objektů na webu.
 
-### <a name="osdbitlockerrebootcount"></a><a name="OSDBitLockerRebootCount"></a>OSDBitLockerRebootCount
+### <a name="osdbitlockerrebootcount"></a><a name="OSDBitLockerRebootCount"></a> OSDBitLockerRebootCount
 
 *Platí pro krok [Vypnout nástroj BitLocker](task-sequence-steps.md#BKMK_DisableBitLocker) .*
 
@@ -591,7 +591,7 @@ Počínaje verzí 1906 použijte tuto proměnnou k nastavení počtu restartová
 
 Celé číslo od `1` do `15` .
 
-### <a name="osdbitlockerrebootcountoverride"></a><a name="OSDBitLockerRebootCountOverride"></a>OSDBitLockerRebootCountOverride
+### <a name="osdbitlockerrebootcountoverride"></a><a name="OSDBitLockerRebootCountOverride"></a> OSDBitLockerRebootCountOverride
 
 *Platí pro krok [Vypnout nástroj BitLocker](task-sequence-steps.md#BKMK_DisableBitLocker) .*
 
@@ -602,7 +602,7 @@ Počínaje verzí 1906 nastavte tuto hodnotu pro přepsání počtu nastaveného
 
 Celé číslo od `0` do `15` .
 
-### <a name="osdbitlockerrecoverypassword"></a><a name="OSDBitLockerRecoveryPassword"></a>OSDBitLockerRecoveryPassword
+### <a name="osdbitlockerrecoverypassword"></a><a name="OSDBitLockerRecoveryPassword"></a> OSDBitLockerRecoveryPassword
 
 *Platí pro krok [zapnout nástroj BitLocker](task-sequence-steps.md#BKMK_EnableBitLocker) .*
 
@@ -610,7 +610,7 @@ Celé číslo od `0` do `15` .
 
 Místo generování náhodného hesla pro obnovení použije krok **zapnout nástroj BitLocker** zadanou hodnotu jako heslo pro obnovení. Hodnota musí být platné číselné heslo pro obnovení nástroje BitLocker.
 
-### <a name="osdbitlockerstartupkey"></a><a name="OSDBitLockerStartupKey"></a>OSDBitLockerStartupKey
+### <a name="osdbitlockerstartupkey"></a><a name="OSDBitLockerStartupKey"></a> OSDBitLockerStartupKey
 
 *Platí pro krok [zapnout nástroj BitLocker](task-sequence-steps.md#BKMK_EnableBitLocker) .*
 
@@ -618,7 +618,7 @@ Místo generování náhodného hesla pro obnovení použije krok **zapnout nás
 
 Místo vygenerování náhodného spouštěcího klíče pro spouštěcí klíč možnosti správy klíčů **pouze na sběrnici USB** používá krok **zapnout nástroj BitLocker** jako spouštěcí klíč čip Trusted Platform Module (TPM). Hodnota musí být platný 256bitový spouštěcí klíč nástroje BitLocker s kódováním Base64.
 
-### <a name="osdcaptureaccount"></a><a name="OSDCaptureAccount"></a>OSDCaptureAccount
+### <a name="osdcaptureaccount"></a><a name="OSDCaptureAccount"></a> OSDCaptureAccount
 
 *Platí pro krok [zaznamenání bitové kopie operačního systému](task-sequence-steps.md#BKMK_CaptureOperatingSystemImage) .*
 
@@ -628,7 +628,7 @@ Určuje název účtu systému Windows, který má oprávnění k uložení zazn
 
 Další informace o účtu image operačního systému Capture najdete v tématu [účty](../../core/plan-design/hierarchy/accounts.md#capture-os-image-account).
 
-### <a name="osdcaptureaccountpassword"></a><a name="OSDCaptureAccountPassword"></a>Proměnná OSDCaptureAccountPassword
+### <a name="osdcaptureaccountpassword"></a><a name="OSDCaptureAccountPassword"></a> Proměnná OSDCaptureAccountPassword
 
 *Platí pro krok [zaznamenání bitové kopie operačního systému](task-sequence-steps.md#BKMK_CaptureOperatingSystemImage) .*
 
@@ -636,7 +636,7 @@ Další informace o účtu image operačního systému Capture najdete v tématu
 
 Určuje heslo pro účet systému Windows ([OSDCaptureAccount](#OSDCaptureAccount)) používané k uložení zaznamenané bitové kopie ve sdílené síťové složce ([OSDCaptureDestination](#OSDCaptureDestination)).
 
-### <a name="osdcapturedestination"></a><a name="OSDCaptureDestination"></a>OSDCaptureDestination
+### <a name="osdcapturedestination"></a><a name="OSDCaptureDestination"></a> OSDCaptureDestination
 
 *Platí pro krok [zaznamenání bitové kopie operačního systému](task-sequence-steps.md#BKMK_CaptureOperatingSystemImage) .*
 
@@ -644,7 +644,7 @@ Určuje heslo pro účet systému Windows ([OSDCaptureAccount](#OSDCaptureAccoun
 
 Určuje umístění, ve kterém pořadí úkolů uloží zaznamenanou bitovou kopii operačního systému. Maximální délka názvu adresáře je 255 znaků. Pokud sdílená síťová složka vyžaduje ověření, zadejte proměnné [OSDCaptureAccount](#OSDCaptureAccount) a [Proměnná OSDCaptureAccountPassword](#OSDCaptureAccountPassword) .
 
-### <a name="osdcomputername-input"></a><a name="OSDComputerName-input"></a>OSDComputerName (vstup)
+### <a name="osdcomputername-input"></a><a name="OSDComputerName-input"></a> OSDComputerName (vstup)
 
 *Platí pro krok [použít nastavení systému Windows](task-sequence-steps.md#BKMK_ApplyWindowsSettings) .*
 
@@ -652,15 +652,15 @@ Určuje název cílového počítače.
 
 #### <a name="example"></a>Příklad
 
-`%_SMSTSMachineName%`výchozí
+`%_SMSTSMachineName%` výchozí
 
-### <a name="osdcomputername-output"></a><a name="OSDComputerName-output"></a>OSDComputerName (výstup)
+### <a name="osdcomputername-output"></a><a name="OSDComputerName-output"></a> OSDComputerName (výstup)
 
 *Platí pro krok [zaznamenat nastavení systému Windows](task-sequence-steps.md#BKMK_CaptureWindowsSettings) .*
 
 Nastavte na název pro NetBIOS počítače. Hodnota je nastavena pouze v případě, že je proměnná [OSDMigrateComputerName](#OSDMigrateComputerName) nastavena na hodnotu `true` .
 
-### <a name="osdconfigfilename"></a><a name="OSDConfigFileName"></a>OSDConfigFileName
+### <a name="osdconfigfilename"></a><a name="OSDConfigFileName"></a> OSDConfigFileName
 
 *Platí pro krok [použít bitovou kopii operačního systému](task-sequence-steps.md#BKMK_ApplyOperatingSystemImage) .*
 
@@ -668,7 +668,7 @@ Nastavte na název pro NetBIOS počítače. Hodnota je nastavena pouze v přípa
 
 Určuje název souboru odpovědí nasazení operačního systému přidruženého k balíčku bitové kopie nasazení operačního systému.  
 
-### <a name="osddataimageindex"></a><a name="OSDDataImageIndex"></a>OSDDataImageIndex
+### <a name="osddataimageindex"></a><a name="OSDDataImageIndex"></a> OSDDataImageIndex
 
 *Platí pro krok [použít data bitové kopie](task-sequence-steps.md#BKMK_ApplyDataImage) .*
 
@@ -676,7 +676,7 @@ Určuje název souboru odpovědí nasazení operačního systému přidruženéh
 
 Určuje hodnotu indexu obrázku, který se použije pro cílový počítač.
 
-### <a name="osddiskindex"></a><a name="OSDDiskIndex"></a>OSDDiskIndex
+### <a name="osddiskindex"></a><a name="OSDDiskIndex"></a> OSDDiskIndex
 
 *Platí pro krok [Formátovat a rozdělit disk na oddíly](task-sequence-steps.md#BKMK_FormatandPartitionDisk) .*
 
@@ -684,7 +684,7 @@ Určuje hodnotu indexu obrázku, který se použije pro cílový počítač.
 
 Určuje číslo fyzického disku, který se má rozdělit na oddíly.
 
-### <a name="osddnsdomain"></a><a name="OSDDNSDomain"></a>OSDDNSDomain
+### <a name="osddnsdomain"></a><a name="OSDDNSDomain"></a> OSDDNSDomain
 
 *Platí pro krok [použít nastavení sítě](task-sequence-steps.md#BKMK_ApplyNetworkSettings) .*
 
@@ -692,7 +692,7 @@ Určuje číslo fyzického disku, který se má rozdělit na oddíly.
 
 Určuje primární server DNS, který používá cílový počítač.
 
-### <a name="osddnssuffixsearchorder"></a><a name="OSDDNSSuffixSearchOrder"></a>OSDDNSSuffixSearchOrder
+### <a name="osddnssuffixsearchorder"></a><a name="OSDDNSSuffixSearchOrder"></a> OSDDNSSuffixSearchOrder
 
 *Platí pro krok [použít nastavení sítě](task-sequence-steps.md#BKMK_ApplyNetworkSettings) .*
 
@@ -700,7 +700,7 @@ Určuje primární server DNS, který používá cílový počítač.
 
 Určuje pořadí hledání DNS pro cílový počítač.
 
-### <a name="osddomainname"></a><a name="OSDDomainName"></a>OSDDomainName
+### <a name="osddomainname"></a><a name="OSDDomainName"></a> OSDDomainName
 
 *Platí pro krok [použít nastavení sítě](task-sequence-steps.md#BKMK_ApplyNetworkSettings) .*
 
@@ -708,7 +708,7 @@ Určuje pořadí hledání DNS pro cílový počítač.
 
 Určuje název domény služby Active Directory, ke které se připojí cílový počítač. Zadaná hodnota musí být platný název domény služby Active Directory Domain Services.
 
-### <a name="osddomainouname"></a><a name="OSDDomainOUName"></a>OSDDomainOUName
+### <a name="osddomainouname"></a><a name="OSDDomainOUName"></a> OSDDomainOUName
 
 *Platí pro krok [použít nastavení sítě](task-sequence-steps.md#BKMK_ApplyNetworkSettings) .*
 
@@ -720,7 +720,7 @@ Určuje název formátu RFC 1779 organizační jednotky (OU), ke které se přip
 
 `LDAP://OU=MyOu,DC=MyDom,DC=MyCompany,DC=com`
 
-### <a name="osddonotlogcommand"></a><a name="OSDDoNotLogCommand"></a>OSDDoNotLogCommand
+### <a name="osddonotlogcommand"></a><a name="OSDDoNotLogCommand"></a> OSDDoNotLogCommand
 
 <!--1358493-->
 *Platí pro krok [instalovat balíček](task-sequence-steps.md#BKMK_InstallPackage) .*
@@ -734,7 +734,7 @@ Chcete-li zabránit zobrazení nebo protokolování potenciálně citlivých dat
 
 Počínaje verzí 1902 se při nastavování této proměnné `TRUE` z kroku **Spustit příkazový řádek** v souboru protokolu také skryje příkazový řádek.<!--3654172-->
 
-### <a name="osdenabletcpipfiltering"></a><a name="OSDEnableTCPIPFiltering"></a>OSDEnableTCPIPFiltering
+### <a name="osdenabletcpipfiltering"></a><a name="OSDEnableTCPIPFiltering"></a> OSDEnableTCPIPFiltering
 
 *Platí pro krok [použít nastavení sítě](task-sequence-steps.md#BKMK_ApplyNetworkSettings) .*
 
@@ -745,9 +745,9 @@ Určuje, jestli je povolené filtrování protokolu TCP/IP.
 #### <a name="valid-values"></a>Platné hodnoty
 
 - `true`  
-- `false`výchozí  
+- `false` výchozí  
 
-### <a name="osdgptbootdisk"></a><a name="OSDGPTBootDisk"></a>OSDGPTBootDisk
+### <a name="osdgptbootdisk"></a><a name="OSDGPTBootDisk"></a> OSDGPTBootDisk
 
 *Platí pro krok [Formátovat a rozdělit disk na oddíly](task-sequence-steps.md#BKMK_FormatandPartitionDisk) .*
 
@@ -758,9 +758,9 @@ Určuje, jestli se má na pevném disku GPT vytvořit oddíl EFI. Počítače za
 #### <a name="valid-values"></a>Platné hodnoty
 
 - `true`  
-- `false`výchozí
+- `false` výchozí
 
-### <a name="osdimagecreator"></a><a name="OSDImageCreator"></a>OSDImageCreator
+### <a name="osdimagecreator"></a><a name="OSDImageCreator"></a> OSDImageCreator
 
 *Platí pro krok [zaznamenání bitové kopie operačního systému](task-sequence-steps.md#BKMK_CaptureOperatingSystemImage) .*
 
@@ -768,7 +768,7 @@ Určuje, jestli se má na pevném disku GPT vytvořit oddíl EFI. Počítače za
 
 Volitelné jméno uživatele, který image vytvořil. Toto jméno je uložené v souboru WIM. Maximální délka uživatelského jména je 255 znaků.
 
-### <a name="osdimagedescription"></a><a name="OSDImageDescription"></a>OSDImageDescription
+### <a name="osdimagedescription"></a><a name="OSDImageDescription"></a> OSDImageDescription
 
 *Platí pro krok [zaznamenání bitové kopie operačního systému](task-sequence-steps.md#BKMK_CaptureOperatingSystemImage) .*
 
@@ -776,7 +776,7 @@ Volitelné jméno uživatele, který image vytvořil. Toto jméno je uložené v
 
 Volitelný popis zaznamenané image operačního systému definovaný uživatelem. Tento popis je uložený v souboru WIM. Maximální délka popisu je 255 znaků.
 
-### <a name="osdimageindex"></a><a name="OSDImageIndex"></a>OSDImageIndex
+### <a name="osdimageindex"></a><a name="OSDImageIndex"></a> OSDImageIndex
 
 *Platí pro krok [použít bitovou kopii operačního systému](task-sequence-steps.md#BKMK_ApplyOperatingSystemImage) .*
 
@@ -784,7 +784,7 @@ Volitelný popis zaznamenané image operačního systému definovaný uživatele
 
 Určuje hodnotu indexu bitové kopie souboru WIM, která se použije pro cílový počítač.
 
-### <a name="osdimageversion"></a><a name="OSDImageVersion"></a>OSDImageVersion
+### <a name="osdimageversion"></a><a name="OSDImageVersion"></a> OSDImageVersion
 
 *Platí pro krok [zaznamenání bitové kopie operačního systému](task-sequence-steps.md#BKMK_CaptureOperatingSystemImage) .*
 
@@ -792,7 +792,7 @@ Určuje hodnotu indexu bitové kopie souboru WIM, která se použije pro cílov�
 
 Volitelné uživatelsky definované číslo verze, které se má přiřadit k zaznamenané bitové kopii operačního systému. Toto číslo verze je uložené v souboru WIM. Tato hodnota může být libovolná kombinace alfanumerických znaků s maximální délkou 32.
 
-### <a name="osdinstalldriversadditionaloptions"></a><a name="OSDInstallDriversAdditionalOptions"></a>OSDInstallDriversAdditionalOptions
+### <a name="osdinstalldriversadditionaloptions"></a><a name="OSDInstallDriversAdditionalOptions"></a> OSDInstallDriversAdditionalOptions
 
 <!--516679/2840016-->
 *Platí pro krok [použít balíček ovladače](task-sequence-steps.md#BKMK_ApplyDriverPackage) .*
@@ -803,9 +803,9 @@ Určuje další možnosti, které se mají přidat do příkazového řádku DIS
 
 Chcete-li použít tuto proměnnou, povolte nastavení, **instalovat balíček ovladačů prostřednictvím spuštění DISM s možností rekurze**v kroku **použít balíček ovladače** .
 
-Další informace najdete v tématu [Možnosti příkazového řádku Windows 10 DISM](https://docs.microsoft.com/windows-hardware/manufacture/desktop/deployment-image-servicing-and-management--dism--command-line-options).
+Další informace najdete v tématu [Možnosti příkazového řádku Windows 10 DISM](/windows-hardware/manufacture/desktop/deployment-image-servicing-and-management--dism--command-line-options).
 
-### <a name="osdjoinaccount"></a><a name="OSDJoinAccount"></a>OSDJoinAccount
+### <a name="osdjoinaccount"></a><a name="OSDJoinAccount"></a> OSDJoinAccount
 
 *Platí pro následující kroky:*  
 
@@ -818,7 +818,7 @@ Určuje uživatelský účet domény, který se používá k přidání cílové
 
 Další informace o účtu připojení k doméně pořadí úkolů najdete v tématu [účty](../../core/plan-design/hierarchy/accounts.md#task-sequence-domain-join-account).
 
-### <a name="osdjoindomainname"></a><a name="OSDJoinDomainName"></a>OSDJoinDomainName
+### <a name="osdjoindomainname"></a><a name="OSDJoinDomainName"></a> OSDJoinDomainName
 
 *Platí pro krok [připojit k doméně nebo pracovní skupině](task-sequence-steps.md#BKMK_JoinDomainorWorkgroup) .*
 
@@ -826,7 +826,7 @@ Další informace o účtu připojení k doméně pořadí úkolů najdete v té
 
 Určuje název domény služby Active Directory, ke které se připojí cílový počítač. Název domény musí mít délku 1 až 255 znaků.
 
-### <a name="osdjoindomainouname"></a><a name="OSDJoinDomainOUName"></a>OSDJoinDomainOUName
+### <a name="osdjoindomainouname"></a><a name="OSDJoinDomainOUName"></a> OSDJoinDomainOUName
 
 *Platí pro krok [připojit k doméně nebo pracovní skupině](task-sequence-steps.md#BKMK_JoinDomainorWorkgroup) .*
 
@@ -838,7 +838,7 @@ Určuje název formátu RFC 1779 organizační jednotky (OU), ke které se přip
 
 `LDAP://OU=MyOu,DC=MyDom,DC=MyCompany,DC=com`  
 
-### <a name="osdjoinpassword"></a><a name="OSDJoinPassword"></a>OSDJoinPassword
+### <a name="osdjoinpassword"></a><a name="OSDJoinPassword"></a> OSDJoinPassword
 
 *Platí pro následující kroky:*  
 
@@ -849,7 +849,7 @@ Určuje název formátu RFC 1779 organizační jednotky (OU), ke které se přip
 
 Určuje heslo pro [OSDJoinAccount](#OSDJoinAccount) , které cílový počítač používá pro připojení k doméně služby Active Directory. Pokud prostředí pořadí úkolů tuto proměnnou neobsahuje, instalační program systému Windows se pokusí zadat prázdné heslo. Pokud je proměnná [OSDJoinType](#OSDJoinType) proměnná nastavená na `0` (připojit k doméně), je tato hodnota povinná.
 
-### <a name="osdjoinskipreboot"></a><a name="OSDJoinSkipReboot"></a>OSDJoinSkipReboot
+### <a name="osdjoinskipreboot"></a><a name="OSDJoinSkipReboot"></a> OSDJoinSkipReboot
 
 *Platí pro krok [připojit k doméně nebo pracovní skupině](task-sequence-steps.md#BKMK_JoinDomainorWorkgroup) .*
 
@@ -862,7 +862,7 @@ Určuje, jestli se má po připojení cílového počítače k doméně nebo pra
 - `true`  
 - `false`  
 
-### <a name="osdjointype"></a><a name="OSDJoinType"></a>OSDJoinType
+### <a name="osdjointype"></a><a name="OSDJoinType"></a> OSDJoinType
 
 *Platí pro krok [připojit k doméně nebo pracovní skupině](task-sequence-steps.md#BKMK_JoinDomainorWorkgroup) .*
 
@@ -875,7 +875,7 @@ Určuje, jestli se má cílový počítač připojit k doméně systému Windows
 - `0`: Připojte cílový počítač k doméně systému Windows.  
 - `1`: Připojte cílový počítač k pracovní skupině.  
 
-### <a name="osdjoinworkgroupname"></a><a name="OSDJoinWorkgroupName"></a>OSDJoinWorkgroupName
+### <a name="osdjoinworkgroupname"></a><a name="OSDJoinWorkgroupName"></a> OSDJoinWorkgroupName
 
 *Platí pro krok [připojit k doméně nebo pracovní skupině](task-sequence-steps.md#BKMK_JoinDomainorWorkgroup) .*
 
@@ -883,7 +883,7 @@ Určuje, jestli se má cílový počítač připojit k doméně systému Windows
 
 Určuje název pracovní skupiny, ke které se připojí cílový počítač. Délka názvu pracovní skupiny musí být v rozmezí od 1 do 32 znaků.
 
-### <a name="osdkeepactivation"></a><a name="OSDKeepActivation"></a>OSDKeepActivation
+### <a name="osdkeepactivation"></a><a name="OSDKeepActivation"></a> OSDKeepActivation
 
 *Platí pro krok [připravit systém Windows pro zaznamenání](task-sequence-steps.md#BKMK_PrepareWindowsforCapture) .*
 
@@ -894,9 +894,9 @@ Určuje, jestli má nástroj Sysprep zachovat nebo resetovat příznak aktivace 
 #### <a name="valid-values"></a>Platné hodnoty
 
 - `true`: zachovat aktivační příznak
-- `false`(výchozí): resetovat aktivační příznak
+- `false` (výchozí): resetovat aktivační příznak
 
-### <a name="osdlocaladminpassword"></a><a name="OSDLocalAdminPassword"></a>OSDLocalAdminPassword
+### <a name="osdlocaladminpassword"></a><a name="OSDLocalAdminPassword"></a> OSDLocalAdminPassword
 
 *Platí pro krok [použít nastavení systému Windows](task-sequence-steps.md#BKMK_ApplyWindowsSettings) .*
 
@@ -904,7 +904,7 @@ Určuje, jestli má nástroj Sysprep zachovat nebo resetovat příznak aktivace 
 
 Určuje heslo účtu místního správce. Pokud povolíte možnost **náhodně generovat heslo místního správce a vypnout účet na všech podporovaných platformách**, pak tento krok tuto proměnnou ignoruje. Zadaná hodnota musí mít délku v rozmezí 1 až 255 znaků.
 
-### <a name="osdlogpowershellparameters"></a><a name="OSDLogPowerShellParameters"></a>OSDLogPowerShellParameters
+### <a name="osdlogpowershellparameters"></a><a name="OSDLogPowerShellParameters"></a> OSDLogPowerShellParameters
 
 <!--3556028-->
 *Počínaje verzí 1902*  
@@ -914,7 +914,7 @@ Určuje heslo účtu místního správce. Pokud povolíte možnost **náhodně g
 
 Aby se zabránilo protokolování potenciálně citlivých dat, krok **Spustit skript PowerShellu** neprotokoluje parametry skriptu v souboru **souboru Smsts. log** . Chcete-li zahrnout parametry skriptu do protokolu pořadí úloh, nastavte tuto proměnnou na **hodnotu true**.
 
-### <a name="osdmigrateadaptersettings"></a><a name="OSDMigrateAdapterSettings"></a>OSDMigrateAdapterSettings
+### <a name="osdmigrateadaptersettings"></a><a name="OSDMigrateAdapterSettings"></a> OSDMigrateAdapterSettings
 
 *Platí pro krok [zaznamenání nastavení sítě](task-sequence-steps.md#BKMK_CaptureNetworkSettings) .*
 
@@ -924,10 +924,10 @@ Určuje, zda pořadí úloh zachycuje informace o síťovém adaptéru. Tyto inf
 
 #### <a name="valid-values"></a>Platné hodnoty
 
-- `true`výchozí
+- `true` výchozí
 - `false`
 
-### <a name="osdmigrateadditionalcaptureoptions"></a><a name="OSDMigrateAdditionalCaptureOptions"></a>Proměnné OSDMigrateAdditionalCaptureOptions
+### <a name="osdmigrateadditionalcaptureoptions"></a><a name="OSDMigrateAdditionalCaptureOptions"></a> Proměnné OSDMigrateAdditionalCaptureOptions
 
 *Platí pro krok [zaznamenat stav uživatele](task-sequence-steps.md#BKMK_CaptureUserState) .*
 
@@ -939,7 +939,7 @@ Před spuštěním pořadí úloh se u možností nástroje USMT určených tout
 
 Další informace o dostupných možnostech najdete v tématu [syntaxe příkazu ScanState](https://docs.microsoft.com/windows/deployment/usmt/usmt-scanstate-syntax).
 
-### <a name="osdmigrateadditionalrestoreoptions"></a><a name="OSDMigrateAdditionalRestoreOptions"></a>Proměnné OSDMigrateAdditionalRestoreOptions
+### <a name="osdmigrateadditionalrestoreoptions"></a><a name="OSDMigrateAdditionalRestoreOptions"></a> Proměnné OSDMigrateAdditionalRestoreOptions
 
 *Platí pro krok [Obnovit stav uživatele](task-sequence-steps.md#BKMK_RestoreUserState) .*
 
@@ -951,7 +951,7 @@ Před spuštěním pořadí úloh se u možností nástroje USMT určených tout
 
 Další informace o dostupných možnostech najdete v tématu [syntaxe příkazu LoadState](https://docs.microsoft.com/windows/deployment/usmt/usmt-loadstate-syntax).
 
-### <a name="osdmigratecomputername"></a><a name="OSDMigrateComputerName"></a>OSDMigrateComputerName
+### <a name="osdmigratecomputername"></a><a name="OSDMigrateComputerName"></a> OSDMigrateComputerName
 
 *Platí pro krok [zaznamenat nastavení systému Windows](task-sequence-steps.md#BKMK_CaptureWindowsSettings) .*
 
@@ -961,10 +961,10 @@ Určuje, jestli má proběhnout migrace názvu počítače.
 
 #### <a name="valid-values"></a>Platné hodnoty
 
-- `true`(výchozí). Proměnná [OSDComputerName (Output)](#OSDComputerName-output) se nastaví na název NetBIOS počítače.  
+- `true` (výchozí). Proměnná [OSDComputerName (Output)](#OSDComputerName-output) se nastaví na název NetBIOS počítače.  
 - `false`  
 
-### <a name="osdmigrateconfigfiles"></a><a name="OSDMigrateConfigFiles"></a>OSDMigrateConfigFiles
+### <a name="osdmigrateconfigfiles"></a><a name="OSDMigrateConfigFiles"></a> OSDMigrateConfigFiles
 
 *Platí pro krok [zaznamenat stav uživatele](task-sequence-steps.md#BKMK_CaptureUserState) .*
 
@@ -976,7 +976,7 @@ Určuje konfigurační soubory, které řídí zaznamenávání uživatelských 
 
 `miguser.xml,migsys.xml,migapps.xml`  
 
-### <a name="osdmigratecontinueonlockedfiles"></a><a name="OSDMigrateContinueOnLockedFiles"></a>OSDMigrateContinueOnLockedFiles
+### <a name="osdmigratecontinueonlockedfiles"></a><a name="OSDMigrateContinueOnLockedFiles"></a> OSDMigrateContinueOnLockedFiles
 
 *Platí pro krok [zaznamenat stav uživatele](task-sequence-steps.md#BKMK_CaptureUserState) .*
 
@@ -986,10 +986,10 @@ Pokud nástroj USMT nemůže zachytit některé soubory, tato proměnná umožn�
 
 #### <a name="valid-values"></a>Platné hodnoty
 
-- `true`výchozí  
+- `true` výchozí  
 - `false`  
 
-### <a name="osdmigratecontinueonrestore"></a><a name="OSDMigrateContinueOnRestore"></a>OSDMigrateContinueOnRestore
+### <a name="osdmigratecontinueonrestore"></a><a name="OSDMigrateContinueOnRestore"></a> OSDMigrateContinueOnRestore
 
 *Platí pro krok [Obnovit stav uživatele](task-sequence-steps.md#BKMK_RestoreUserState) .*
 
@@ -999,10 +999,10 @@ Pokračujte v procesu i v případě, že nástroj USMT nemůže obnovit někter
 
 #### <a name="valid-values"></a>Platné hodnoty
 
-- `true`výchozí  
+- `true` výchozí  
 - `false`  
 
-### <a name="osdmigrateenableverboselogging"></a><a name="OSDMigrateEnableVerboseLogging"></a>OSDMigrateEnableVerboseLogging
+### <a name="osdmigrateenableverboselogging"></a><a name="OSDMigrateEnableVerboseLogging"></a> OSDMigrateEnableVerboseLogging
 
 *Platí pro následující kroky:*  
 
@@ -1016,9 +1016,9 @@ Zapne podrobné protokolování pro nástroj USMT. Tento krok vyžaduje tuto hod
 #### <a name="valid-values"></a>Platné hodnoty
 
 - `true`  
-- `false`výchozí  
+- `false` výchozí  
 
-### <a name="osdmigratelocalaccounts"></a><a name="OSDMigrateLocalAccounts"></a>OSDMigrateLocalAccounts
+### <a name="osdmigratelocalaccounts"></a><a name="OSDMigrateLocalAccounts"></a> OSDMigrateLocalAccounts
 
 *Platí pro krok [Obnovit stav uživatele](task-sequence-steps.md#BKMK_RestoreUserState) .*
 
@@ -1029,9 +1029,9 @@ Určuje, jestli se má obnovit účet místního počítače.
 #### <a name="valid-values"></a>Platné hodnoty
 
 - `true`  
-- `false`výchozí  
+- `false` výchozí  
 
-### <a name="osdmigratelocalaccountpassword"></a><a name="OSDMigrateLocalAccountPassword"></a>OSDMigrateLocalAccountPassword
+### <a name="osdmigratelocalaccountpassword"></a><a name="OSDMigrateLocalAccountPassword"></a> OSDMigrateLocalAccountPassword
 
 *Platí pro krok [Obnovit stav uživatele](task-sequence-steps.md#BKMK_RestoreUserState) .*
 
@@ -1039,7 +1039,7 @@ Určuje, jestli se má obnovit účet místního počítače.
 
 Pokud je proměnná [OSDMigrateLocalAccounts](#OSDMigrateLocalAccounts) `true` , tato proměnná musí obsahovat heslo přiřazené *všem* migrovanýchm místním účtům. Nástroj USMT přiřadí stejné heslo ke všem migrovanýchm místním účtům. Zvažte toto heslo jako dočasné a později ho změňte pomocí nějaké jiné metody.
 
-### <a name="osdmigratemode"></a><a name="OSDMigrateMode"></a>OSDMigrateMode nastavenou hodnotu
+### <a name="osdmigratemode"></a><a name="OSDMigrateMode"></a> OSDMigrateMode nastavenou hodnotu
 
 *Platí pro krok [zaznamenat stav uživatele](task-sequence-steps.md#BKMK_CaptureUserState) .*
 
@@ -1053,7 +1053,7 @@ Umožňuje přizpůsobit soubory, které nástroj USMT zachytí.
 
 - `Advanced`: Proměnná pořadí úloh [OSDMigrateConfigFiles](#OSDMigrateConfigFiles) určuje konfigurační soubory, které nástroj USMT používá.  
 
-### <a name="osdmigratenetworkmembership"></a><a name="OSDMigrateNetworkMembership"></a>OSDMigrateNetworkMembership
+### <a name="osdmigratenetworkmembership"></a><a name="OSDMigrateNetworkMembership"></a> OSDMigrateNetworkMembership
 
 *Platí pro krok [zaznamenání nastavení sítě](task-sequence-steps.md#BKMK_CaptureNetworkSettings) .*
 
@@ -1063,10 +1063,10 @@ Určuje, jestli pořadí úkolů migruje informace o členství v pracovní skup
 
 #### <a name="valid-values"></a>Platné hodnoty
 
-- `true`výchozí
+- `true` výchozí
 - `false`
 
-### <a name="osdmigrateregistrationinfo"></a><a name="OSDMigrateRegistrationInfo"></a>OSDMigrateRegistrationInfo
+### <a name="osdmigrateregistrationinfo"></a><a name="OSDMigrateRegistrationInfo"></a> OSDMigrateRegistrationInfo
 
 *Platí pro krok [zaznamenat nastavení systému Windows](task-sequence-steps.md#BKMK_CaptureWindowsSettings) .*
 
@@ -1076,10 +1076,10 @@ Určuje, jestli krok migruje informace o uživateli a organizaci.
 
 #### <a name="valid-values"></a>Platné hodnoty
 
-- `true`(výchozí). Proměnná [OSDRegisteredOrgName (Output)](#OSDRegisteredOrgName-output) se nastaví na název registrované organizace počítače.  
+- `true` (výchozí). Proměnná [OSDRegisteredOrgName (Output)](#OSDRegisteredOrgName-output) se nastaví na název registrované organizace počítače.  
 - `false`  
 
-### <a name="osdmigrateskipencryptedfiles"></a><a name="OSDMigrateSkipEncryptedFiles"></a>OSDMigrateSkipEncryptedFiles
+### <a name="osdmigrateskipencryptedfiles"></a><a name="OSDMigrateSkipEncryptedFiles"></a> OSDMigrateSkipEncryptedFiles
 
 *Platí pro krok [zaznamenat stav uživatele](task-sequence-steps.md#BKMK_CaptureUserState) .*
 
@@ -1090,9 +1090,9 @@ Určuje, jestli se mají zaznamenávat šifrované soubory.
 #### <a name="valid-values"></a>Platné hodnoty
 
 - `true`  
-- `false`výchozí  
+- `false` výchozí  
 
-### <a name="osdmigratetimezone"></a><a name="OSDMigrateTimeZone"></a>OSDMigrateTimeZone
+### <a name="osdmigratetimezone"></a><a name="OSDMigrateTimeZone"></a> OSDMigrateTimeZone
 
 *Platí pro krok [zaznamenat nastavení systému Windows](task-sequence-steps.md#BKMK_CaptureWindowsSettings) .*
 
@@ -1102,10 +1102,10 @@ Určuje, jestli má proběhnout migrace časového pásma počítače.
 
 #### <a name="valid-values"></a>Platné hodnoty
 
-- `true`(výchozí). Proměnná [OSDTimeZone (výstup)](#OSDTimeZone-output) je nastavena na časové pásmo počítače.  
+- `true` (výchozí). Proměnná [OSDTimeZone (výstup)](#OSDTimeZone-output) je nastavena na časové pásmo počítače.  
 - `false`  
 
-### <a name="osdnetworkjointype"></a><a name="OSDNetworkJoinType"></a>OSDNetworkJoinType
+### <a name="osdnetworkjointype"></a><a name="OSDNetworkJoinType"></a> OSDNetworkJoinType
 
 *Platí pro krok [použít nastavení sítě](task-sequence-steps.md#BKMK_ApplyNetworkSettings) .*
 
@@ -1118,7 +1118,7 @@ Určuje, zda se cílový počítač připojí k doméně služby Active Director
 - `0`: Připojte se k doméně služby Active Directory.  
 - `1`: Připojte se k pracovní skupině
 
-### <a name="osdpartitions"></a><a name="OSDPartitions"></a>OSDPartitions
+### <a name="osdpartitions"></a><a name="OSDPartitions"></a> OSDPartitions
 
 *Platí pro krok [Formátovat a rozdělit disk na oddíly](task-sequence-steps.md#BKMK_FormatandPartitionDisk) .*
 
@@ -1162,7 +1162,7 @@ Když tento krok vytvoří oddíly, vždy použije další dostupné písmeno je
 
 Pokud definujete více oddílů pomocí tohoto kroku pořadí úkolů, vlastnosti pro *druhý* oddíl se definují pomocí **1** indexu v názvu proměnné. Například: **: OSDPartitions1Type**, **OSDPartitions1FileSystem**, **OSDPartitions1Bootable**, **OSDPartitions1QuickFormat**a **OSDPartitions1VolumeName**.
 
-### <a name="osdpartitionstyle"></a><a name="OSDPartitionStyle"></a>OSDPartitionStyle
+### <a name="osdpartitionstyle"></a><a name="OSDPartitionStyle"></a> OSDPartitionStyle
 
 *Platí pro krok [Formátovat a rozdělit disk na oddíly](task-sequence-steps.md#BKMK_FormatandPartitionDisk) .*
 
@@ -1175,7 +1175,7 @@ Určuje styl oddílu, který se má použít při dělení disku na oddíly.
 - `GPT`: Použijte styl tabulky oddílů GUID.
 - `MBR`: Použít styl oddílu hlavního spouštěcího záznamu
 
-### <a name="osdproductkey"></a><a name="OSDProductKey"></a>OSDProductKey
+### <a name="osdproductkey"></a><a name="OSDProductKey"></a> OSDProductKey
 
 *Platí pro krok [použít nastavení systému Windows](task-sequence-steps.md#BKMK_ApplyWindowsSettings) .*
 
@@ -1183,7 +1183,7 @@ Určuje styl oddílu, který se má použít při dělení disku na oddíly.
 
 Určuje kód Product Key systému Windows. Zadaná hodnota musí mít délku v rozmezí 1 až 255 znaků.
 
-### <a name="osdrandomadminpassword"></a><a name="OSDRandomAdminPassword"></a>OSDRandomAdminPassword
+### <a name="osdrandomadminpassword"></a><a name="OSDRandomAdminPassword"></a> OSDRandomAdminPassword
 
 *Platí pro krok [použít nastavení systému Windows](task-sequence-steps.md#BKMK_ApplyWindowsSettings) .*
 
@@ -1193,23 +1193,23 @@ Určuje náhodně generované heslo pro účet místního správce v novém oper
 
 #### <a name="valid-values"></a>Platné hodnoty
 
-- `true`(výchozí): instalační program systému Windows zakáže účet místního správce v cílovém počítači.  
+- `true` (výchozí): instalační program systému Windows zakáže účet místního správce v cílovém počítači.  
 
 - `false`: Instalační program systému Windows povolí účet místního správce v cílovém počítači a nastaví heslo účtu na hodnotu [OSDLocalAdminPassword](#OSDLocalAdminPassword) .  
 
-### <a name="osdregisteredorgname-input"></a><a name="OSDRegisteredOrgName-input"></a>OSDRegisteredOrgName (vstup)
+### <a name="osdregisteredorgname-input"></a><a name="OSDRegisteredOrgName-input"></a> OSDRegisteredOrgName (vstup)
 
 *Platí pro krok [použít nastavení systému Windows](task-sequence-steps.md#BKMK_ApplyWindowsSettings) .*
 
 Určuje název výchozí registrované organizace v novém operačním systému. Zadaná hodnota musí mít délku v rozmezí 1 až 255 znaků.
 
-### <a name="osdregisteredorgname-output"></a><a name="OSDRegisteredOrgName-output"></a>OSDRegisteredOrgName (výstup)
+### <a name="osdregisteredorgname-output"></a><a name="OSDRegisteredOrgName-output"></a> OSDRegisteredOrgName (výstup)
 
 *Platí pro krok [zaznamenat nastavení systému Windows](task-sequence-steps.md#BKMK_CaptureWindowsSettings) .*
 
 Nastaví se na název registrované organizace počítače. Hodnota je nastavena pouze v případě, že je proměnná [OSDMigrateRegistrationInfo](#OSDMigrateRegistrationInfo) nastavena na hodnotu `true` .
 
-### <a name="osdregisteredusername"></a><a name="OSDRegisteredUserName"></a>OSDRegisteredUserName
+### <a name="osdregisteredusername"></a><a name="OSDRegisteredUserName"></a> OSDRegisteredUserName
 
 *Platí pro krok [použít nastavení systému Windows](task-sequence-steps.md#BKMK_ApplyWindowsSettings) .*
 
@@ -1217,7 +1217,7 @@ Nastaví se na název registrované organizace počítače. Hodnota je nastavena
 
 Určuje výchozí registrované uživatelské jméno v novém operačním systému. Zadaná hodnota musí mít délku v rozmezí 1 až 255 znaků.
 
-### <a name="osdserverlicenseconnectionlimit"></a><a name="OSDServerLicenseConnectionLimit"></a>OSDServerLicenseConnectionLimit
+### <a name="osdserverlicenseconnectionlimit"></a><a name="OSDServerLicenseConnectionLimit"></a> OSDServerLicenseConnectionLimit
 
 *Platí pro krok [použít nastavení systému Windows](task-sequence-steps.md#BKMK_ApplyWindowsSettings) .*
 
@@ -1225,7 +1225,7 @@ Určuje výchozí registrované uživatelské jméno v novém operačním systé
 
 Určuje maximální povolený počet připojení. Zadané číslo musí být v rozsahu od 5 do 9999 připojení.
 
-### <a name="osdserverlicensemode"></a><a name="OSDServerLicenseMode"></a>OSDServerLicenseMode
+### <a name="osdserverlicensemode"></a><a name="OSDServerLicenseMode"></a> OSDServerLicenseMode
 
 *Platí pro krok [použít nastavení systému Windows](task-sequence-steps.md#BKMK_ApplyWindowsSettings) .*
 
@@ -1238,7 +1238,7 @@ Určuje režim licence systému Windows Server, který se používá.
 - `PerSeat`
 - `PerServer`
 
-### <a name="osdsetupadditionalupgradeoptions"></a><a name="OSDSetupAdditionalUpgradeOptions"></a>OSDSetupAdditionalUpgradeOptions
+### <a name="osdsetupadditionalupgradeoptions"></a><a name="OSDSetupAdditionalUpgradeOptions"></a> OSDSetupAdditionalUpgradeOptions
 
 *Platí pro krok [upgradovat operační systém](task-sequence-steps.md#BKMK_UpgradeOS) .*
 
@@ -1248,7 +1248,7 @@ Určuje další možnosti příkazového řádku, které se přidají do instala
 
 Další informace najdete v článku [Možnosti příkazového řádku instalačního programu systému Windows](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options).
 
-### <a name="osdstatefallbacktonaa"></a><a name="OSDStateFallbackToNAA"></a>OSDStateFallbackToNAA
+### <a name="osdstatefallbacktonaa"></a><a name="OSDStateFallbackToNAA"></a> OSDStateFallbackToNAA
 
 *Platí pro krok [úložiště stavu požadavku](task-sequence-steps.md#BKMK_RequestStateStore) .*
 
@@ -1261,9 +1261,9 @@ Další informace o účtu přístupu k síti najdete v tématu [účty](../../c
 #### <a name="valid-values"></a>Platné hodnoty
 
 - `true`  
-- `false`výchozí  
+- `false` výchozí  
 
-### <a name="osdstatesmpretrycount"></a><a name="OSDStateSMPRetryCount"></a>OSDStateSMPRetryCount
+### <a name="osdstatesmpretrycount"></a><a name="OSDStateSMPRetryCount"></a> OSDStateSMPRetryCount
 
 *Platí pro krok [úložiště stavu požadavku](task-sequence-steps.md#BKMK_RequestStateStore) .*
 
@@ -1271,7 +1271,7 @@ Další informace o účtu přístupu k síti najdete v tématu [účty](../../c
 
 Určuje, kolikrát se tento krok pořadí úkolů pokusí najít bod migrace stavu, než selže. Zadaný počet musí být v rozmezí od 0 do 600.
 
-### <a name="osdstatesmpretrytime"></a><a name="OSDStateSMPRetryTime"></a>OSDStateSMPRetryTime
+### <a name="osdstatesmpretrytime"></a><a name="OSDStateSMPRetryTime"></a> OSDStateSMPRetryTime
 
 *Platí pro krok [úložiště stavu požadavku](task-sequence-steps.md#BKMK_RequestStateStore) .*
 
@@ -1279,7 +1279,7 @@ Určuje, kolikrát se tento krok pořadí úkolů pokusí najít bod migrace sta
 
 Určuje dobu v sekundách, kterou krok pořadí úkolů čeká mezi pokusy o opakování. Počet sekund může obsahovat maximálně 30 znaků.
 
-### <a name="osdstatestorepath"></a><a name="OSDStateStorePath"></a>Proměnnou OSDStateStorePath
+### <a name="osdstatestorepath"></a><a name="OSDStateStorePath"></a> Proměnnou OSDStateStorePath
 
 *Platí pro následující kroky:*  
 
@@ -1292,7 +1292,7 @@ Určuje dobu v sekundách, kterou krok pořadí úkolů čeká mezi pokusy o opa
 
 Sdílená síťová složka nebo název místní cesty složky, ve které pořadí úkolů ukládá nebo obnovuje stav uživatele. Není k dispozici žádná výchozí hodnota.
 
-### <a name="osdtargetsystemdrive"></a><a name="OSDTargetSystemDrive"></a>OSDTargetSystemDrive
+### <a name="osdtargetsystemdrive"></a><a name="OSDTargetSystemDrive"></a> OSDTargetSystemDrive
 
 *Platí pro krok [použít bitovou kopii operačního systému](task-sequence-steps.md#BKMK_ApplyOperatingSystemImage) .*
 
@@ -1300,19 +1300,19 @@ Sdílená síťová složka nebo název místní cesty složky, ve které pořad
 
 Určuje písmeno jednotky oddílu, který obsahuje soubory operačního systému po použití bitové kopie.
 
-### <a name="osdtargetsystemroot-input"></a><a name="OSDTargetSystemRoot-input"></a>OSDTargetSystemRoot (vstup)
+### <a name="osdtargetsystemroot-input"></a><a name="OSDTargetSystemRoot-input"></a> OSDTargetSystemRoot (vstup)
 
 *Platí pro krok [zaznamenání bitové kopie operačního systému](task-sequence-steps.md#BKMK_CaptureOperatingSystemImage) .*
 
 Určuje cestu k adresáři systému Windows instalovaného operačního systému v referenčním počítači. Pořadí úkolů ho ověří jako podporovaný operační systém pro zachycení pomocí Configuration Manager.
 
-### <a name="osdtargetsystemroot-output"></a><a name="OSDTargetSystemRoot-output"></a>OSDTargetSystemRoot (výstup)
+### <a name="osdtargetsystemroot-output"></a><a name="OSDTargetSystemRoot-output"></a> OSDTargetSystemRoot (výstup)
 
 *Platí pro krok [připravit systém Windows pro zaznamenání](task-sequence-steps.md#BKMK_PrepareWindowsforCapture) .*
 
 Určuje cestu k adresáři systému Windows instalovaného operačního systému v referenčním počítači. Pořadí úkolů ho ověří jako podporovaný operační systém pro zachycení pomocí Configuration Manager.
 
-### <a name="osdtimezone-input"></a><a name="OSDTimeZone-input"></a>OSDTimeZone (vstup)
+### <a name="osdtimezone-input"></a><a name="OSDTimeZone-input"></a> OSDTimeZone (vstup)
 
 *Platí pro krok [použít nastavení systému Windows](task-sequence-steps.md#BKMK_ApplyWindowsSettings) .*
 
@@ -1320,13 +1320,13 @@ Určuje výchozí nastavení časového pásma, které se používá v novém op
 
 Nastavte hodnotu této proměnné na jazykový neutrální název časového pásma. Například použijte řetězec v `Std` hodnotě pro časové pásmo v následujícím klíči registru: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones` .
 
-### <a name="osdtimezone-output"></a><a name="OSDTimeZone-output"></a>OSDTimeZone (výstup)
+### <a name="osdtimezone-output"></a><a name="OSDTimeZone-output"></a> OSDTimeZone (výstup)
 
 *Platí pro krok [zaznamenat nastavení systému Windows](task-sequence-steps.md#BKMK_CaptureWindowsSettings) .*
 
 Nastaví se na časové pásmo počítače. Hodnota je nastavena pouze v případě, že je proměnná [OSDMigrateTimeZone](#OSDMigrateTimeZone) nastavena na hodnotu `true` .
 
-### <a name="osdwindowssettingsinputlocale"></a><a name="OSDWindowsSettingsInputLocale"></a>OSDWindowsSettingsInputLocale
+### <a name="osdwindowssettingsinputlocale"></a><a name="OSDWindowsSettingsInputLocale"></a> OSDWindowsSettingsInputLocale
 
 *Platí pro krok [použít nastavení systému Windows](task-sequence-steps.md#BKMK_ApplyWindowsSettings) .*
 
@@ -1334,7 +1334,7 @@ Určuje výchozí vstupní nastavení národního prostředí, které se použí
 
 Další informace o hodnotě souboru odpovědí instalačního programu systému Windows najdete v tématu [Microsoft-Windows-International-Core-InputLocale](https://docs.microsoft.com/windows-hardware/customize/desktop/unattend/microsoft-windows-international-core-inputlocale).
 
-### <a name="osdwindowssettingssystemlocale"></a><a name="OSDWindowsSettingsSystemLocale"></a>OSDWindowsSettingsSystemLocale
+### <a name="osdwindowssettingssystemlocale"></a><a name="OSDWindowsSettingsSystemLocale"></a> OSDWindowsSettingsSystemLocale
 
 *Platí pro krok [použít nastavení systému Windows](task-sequence-steps.md#BKMK_ApplyWindowsSettings) .*
 
@@ -1342,7 +1342,7 @@ Určuje výchozí nastavení národního prostředí systému, které se použí
 
 Další informace o hodnotě souboru odpovědí instalačního programu systému Windows najdete v tématu [Microsoft-Windows-International-Core-SystemLocale](https://docs.microsoft.com/windows-hardware/customize/desktop/unattend/microsoft-windows-international-core-systemlocale).
 
-### <a name="osdwindowssettingsuilanguage"></a><a name="OSDWindowsSettingsUILanguage"></a>OSDWindowsSettingsUILanguage
+### <a name="osdwindowssettingsuilanguage"></a><a name="OSDWindowsSettingsUILanguage"></a> OSDWindowsSettingsUILanguage
 
 *Platí pro krok [použít nastavení systému Windows](task-sequence-steps.md#BKMK_ApplyWindowsSettings) .*
 
@@ -1350,7 +1350,7 @@ Určuje výchozí nastavení jazyka uživatelského rozhraní, které se použí
 
 Další informace o hodnotě souboru odpovědí instalačního programu systému Windows najdete v tématu [Microsoft-Windows-International-Core-UILanguage](https://docs.microsoft.com/windows-hardware/customize/desktop/unattend/microsoft-windows-international-core-uilanguage).
 
-### <a name="osdwindowssettingsuilanguagefallback"></a><a name="OSDWindowsSettingsUILanguageFallback"></a>OSDWindowsSettingsUILanguageFallback
+### <a name="osdwindowssettingsuilanguagefallback"></a><a name="OSDWindowsSettingsUILanguageFallback"></a> OSDWindowsSettingsUILanguageFallback
 
 *Platí pro krok [použít nastavení systému Windows](task-sequence-steps.md#BKMK_ApplyWindowsSettings) .*
 
@@ -1358,7 +1358,7 @@ Určuje nastavení jazyka náhradního uživatelského rozhraní, které se pou�
 
 Další informace o hodnotě souboru odpovědí instalačního programu systému Windows najdete v tématu [Microsoft-Windows-International-Core-UILanguageFallback](https://docs.microsoft.com/windows-hardware/customize/desktop/unattend/microsoft-windows-international-core-uilanguagefallback).
 
-### <a name="osdwindowssettingsuserlocale"></a><a name="OSDWindowsSettingsUserLocale"></a>OSDWindowsSettingsUserLocale
+### <a name="osdwindowssettingsuserlocale"></a><a name="OSDWindowsSettingsUserLocale"></a> OSDWindowsSettingsUserLocale
 
 *Platí pro krok [použít nastavení systému Windows](task-sequence-steps.md#BKMK_ApplyWindowsSettings) .*
 
@@ -1366,7 +1366,7 @@ Určuje výchozí nastavení národního prostředí uživatele používané v n
 
 Další informace o hodnotě souboru odpovědí instalačního programu systému Windows najdete v tématu [Microsoft-Windows-International-Core-UserLocale](https://docs.microsoft.com/windows-hardware/customize/desktop/unattend/microsoft-windows-international-core-userlocale).
 
-### <a name="osdwipedestinationpartition"></a><a name="OSDWipeDestinationPartition"></a>OSDWipeDestinationPartition
+### <a name="osdwipedestinationpartition"></a><a name="OSDWipeDestinationPartition"></a> OSDWipeDestinationPartition
 
 *Platí pro krok [použít data bitové kopie](task-sequence-steps.md#BKMK_ApplyDataImage) .*
 
@@ -1376,10 +1376,10 @@ Určuje, jestli se mají odstranit soubory v cílovém oddílu.
 
 #### <a name="valid-values"></a>Platné hodnoty
 
-- `true`výchozí
+- `true` výchozí
 - `false`
 
-### <a name="osdworkgroupname"></a><a name="OSDWorkgroupName"></a>OSDWorkgroupName
+### <a name="osdworkgroupname"></a><a name="OSDWorkgroupName"></a> OSDWorkgroupName
 
 *Platí pro krok [použít nastavení sítě](task-sequence-steps.md#BKMK_ApplyNetworkSettings) .*
 
@@ -1389,7 +1389,7 @@ Určuje název pracovní skupiny, ke které se připojí cílový počítač.
 
 Zadejte buď tuto proměnnou, nebo proměnnou [OSDDomainName](#OSDDomainName) . Název pracovní skupiny nesmí být delší než 32 znaků.
 
-### <a name="setupcompletepause"></a><a name="SetupCompletePause"></a>SetupCompletePause
+### <a name="setupcompletepause"></a><a name="SetupCompletePause"></a> SetupCompletePause
 
 *Platí pro krok [upgradovat operační systém](task-sequence-steps.md#BKMK_UpgradeOS) .*
 
@@ -1416,7 +1416,7 @@ Následující položky protokolu jsou běžné příklady tohoto problému, kte
     Exiting setupcomplete.cmd
     ```
 
-### <a name="smsclientinstallproperties"></a><a name="SMSClientInstallProperties"></a>SMSClientInstallProperties
+### <a name="smsclientinstallproperties"></a><a name="SMSClientInstallProperties"></a> SMSClientInstallProperties
 
 *Platí pro krok [nastavit systém Windows a nástroj ConfigMgr](task-sequence-steps.md#BKMK_SetupWindowsandConfigMgr) .*
 
@@ -1426,7 +1426,7 @@ Určuje vlastnosti instalace klienta, které pořadí úkolů používá při in
 
 Další informace najdete v tématu [informace o parametrech instalace a vlastnostech klienta](../../core/clients/deploy/about-client-installation-properties.md).
 
-### <a name="smsconnectnetworkfolderaccount"></a><a name="SMSConnectNetworkFolderAccount"></a>SMSConnectNetworkFolderAccount
+### <a name="smsconnectnetworkfolderaccount"></a><a name="SMSConnectNetworkFolderAccount"></a> SMSConnectNetworkFolderAccount
 
 *Platí pro krok [připojit k síťové složce](task-sequence-steps.md#BKMK_ConnectToNetworkFolder) .*
 
@@ -1436,7 +1436,7 @@ Určuje uživatelský účet, který se používá pro připojení ke sdílené 
 
 Další informace o účtu připojení síťové složky pořadí úkolů najdete v tématu [účty](../../core/plan-design/hierarchy/accounts.md#task-sequence-network-folder-connection-account).
 
-### <a name="smsconnectnetworkfolderdriveletter"></a><a name="SMSConnectNetworkFolderDriveLetter"></a>SMSConnectNetworkFolderDriveLetter
+### <a name="smsconnectnetworkfolderdriveletter"></a><a name="SMSConnectNetworkFolderDriveLetter"></a> SMSConnectNetworkFolderDriveLetter
 
 *Platí pro krok [připojit k síťové složce](task-sequence-steps.md#BKMK_ConnectToNetworkFolder) .*
 
@@ -1449,7 +1449,7 @@ Určuje písmeno jednotky, ke které se má provést připojení. Tato hodnota j
 - `D:`  
 - `E:`  
 
-### <a name="smsconnectnetworkfolderpassword"></a><a name="SMSConnectNetworkFolderPassword"></a>SMSConnectNetworkFolderPassword
+### <a name="smsconnectnetworkfolderpassword"></a><a name="SMSConnectNetworkFolderPassword"></a> SMSConnectNetworkFolderPassword
 
 *Platí pro krok [připojit k síťové složce](task-sequence-steps.md#BKMK_ConnectToNetworkFolder) .*
 
@@ -1457,7 +1457,7 @@ Určuje písmeno jednotky, ke které se má provést připojení. Tato hodnota j
 
 Určuje heslo pro [SMSConnectNetworkFolderAccount](#SMSConnectNetworkFolderAccount) , které se používá pro připojení ke sdílené síťové složce v [SMSConnectNetworkFolderPath](#SMSConnectNetworkFolderPath).
 
-### <a name="smsconnectnetworkfolderpath"></a><a name="SMSConnectNetworkFolderPath"></a>SMSConnectNetworkFolderPath
+### <a name="smsconnectnetworkfolderpath"></a><a name="SMSConnectNetworkFolderPath"></a> SMSConnectNetworkFolderPath
 
 *Platí pro krok [připojit k síťové složce](task-sequence-steps.md#BKMK_ConnectToNetworkFolder) .*
 
@@ -1469,7 +1469,7 @@ Určuje síťovou cestu pro připojení. Pokud potřebujete namapovat tuto cestu
 
 `\\server\share`
 
-### <a name="smsinstallupdatetarget"></a><a name="SMSInstallUpdateTarget"></a>SMSInstallUpdateTarget
+### <a name="smsinstallupdatetarget"></a><a name="SMSInstallUpdateTarget"></a> SMSInstallUpdateTarget
 
 *Platí pro krok [instalovat aktualizace softwaru](task-sequence-steps.md#BKMK_InstallSoftwareUpdates) .*
 
@@ -1482,7 +1482,7 @@ Určuje, jestli se mají nainstalovat všechny aktualizace, nebo jenom ty povinn
 - `All`  
 - `Mandatory`  
 
-### <a name="smsrebootmessage"></a><a name="SMSRebootMessage"></a>SMSRebootMessage
+### <a name="smsrebootmessage"></a><a name="SMSRebootMessage"></a> SMSRebootMessage
 
 *Platí pro krok [restartovat počítač](task-sequence-steps.md#BKMK_RestartComputer) .*
 
@@ -1494,7 +1494,7 @@ Určuje, jaká zpráva se má zobrazit uživatelům před restartováním cílov
 
 `Save your work before the computer restarts.`  
 
-### <a name="smsreboottimeout"></a><a name="SMSRebootTimeout"></a>SMSRebootTimeout
+### <a name="smsreboottimeout"></a><a name="SMSRebootTimeout"></a> SMSRebootTimeout
 
 *Platí pro krok [restartovat počítač](task-sequence-steps.md#BKMK_RestartComputer) .*
 
@@ -1504,22 +1504,22 @@ Určuje počet sekund, po který se má uživateli zobrazit upozornění před r
 
 #### <a name="examples"></a>Příklady
 
-- `0`(výchozí): Nezobrazovat zprávu o restartování  
+- `0` (výchozí): Nezobrazovat zprávu o restartování  
 - `60`: Zobrazí upozornění na jednu minutu.  
 
-### <a name="smstsassignmentsdownloadinterval"></a><a name="SMSTSAssignmentsDownloadInterval"></a>SMSTSAssignmentsDownloadInterval
+### <a name="smstsassignmentsdownloadinterval"></a><a name="SMSTSAssignmentsDownloadInterval"></a> SMSTSAssignmentsDownloadInterval
 
 Počet sekund, po který se má počkat, než se klient pokusí stáhnout zásady od posledního pokusu, který nevrátil žádné zásady. Ve výchozím nastavení klient počká **0** sekund, než se zopakuje.
 
 Tuto proměnnou lze nastavit pomocí příkazu před spuštěním z médií nebo PXE.
 
-### <a name="smstsassignmentsdownloadretry"></a><a name="SMSTSAssignmentsDownloadRetry"></a>SMSTSAssignmentsDownloadRetry
+### <a name="smstsassignmentsdownloadretry"></a><a name="SMSTSAssignmentsDownloadRetry"></a> SMSTSAssignmentsDownloadRetry
 
 Počet, kolikrát se klient pokusí stáhnout zásadu, když se při prvním pokusu nenaleznou žádné zásady. Ve výchozím nastavení se klient opakuje o **hodnotu 0** krát.
 
 Tuto proměnnou lze nastavit pomocí příkazu před spuštěním z médií nebo PXE.
 
-### <a name="smstsassignusersmode"></a><a name="SMSTSAssignUsersMode"></a>SMSTSAssignUsersMode
+### <a name="smstsassignusersmode"></a><a name="SMSTSAssignUsersMode"></a> SMSTSAssignUsersMode
 
 Určuje, jak pořadí úkolů přidružuje uživatele k cílovému počítači. Nastavte proměnnou na jednu z následujících hodnot:  
 
@@ -1529,7 +1529,7 @@ Určuje, jak pořadí úkolů přidružuje uživatele k cílovému počítači. 
 
 - **Zakázáno**: pořadí úkolů nespojuje uživatele s cílovým počítačem při nasazení operačního systému.
 
-### <a name="smstsdisablestatusretry"></a><a name="SMSTSDisableStatusRetry"></a>SMSTSDisableStatusRetry
+### <a name="smstsdisablestatusretry"></a><a name="SMSTSDisableStatusRetry"></a> SMSTSDisableStatusRetry
 
 <!--512358-->
 V případě odpojených scénářů se modul pořadí úloh opakovaně pokouší odeslat stavové zprávy do bodu správy. Toto chování v tomto scénáři způsobuje zpoždění při zpracování pořadí úkolů.
@@ -1541,7 +1541,7 @@ Když se pořadí úkolů restartuje, hodnota této proměnné přetrvává. Po�
 > [!NOTE]  
 > [Generování sestav o stavu pořadí úkolů](../../core/servers/manage/list-of-reports.md#task-sequence---deployment-status) spoléhá na tyto stavové zprávy a zobrazí průběh, historii a podrobnosti jednotlivých kroků. Pokud se stavové zprávy nepodařilo odeslat, nejsou zařazeny do fronty. Po obnovení připojení do bodu správy nejsou odesílány později. Výsledkem tohoto chování je, že generování sestav stavu pořadí úloh bude neúplné a chybějící položky.
 
-### <a name="smstsdisablewow64redirection"></a><a name="SMSTSDisableWow64Redirection"></a>SMSTSDisableWow64Redirection
+### <a name="smstsdisablewow64redirection"></a><a name="SMSTSDisableWow64Redirection"></a> SMSTSDisableWow64Redirection
 
 *Platí pro krok [Spustit příkazový řádek](task-sequence-steps.md#BKMK_RunCommandLine) .*
 
@@ -1549,65 +1549,65 @@ Když se pořadí úkolů restartuje, hodnota této proměnné přetrvává. Po�
 
 Ve výchozím nastavení v 64 operačním systému pořadí úloh vyhledá a spustí program v příkazovém řádku pomocí přesměrovače systému souborů WOW64. Toto chování umožňuje příkazu najít 32 bitové verze programů a knihoven DLL operačního systému. Nastavení této proměnné `true` zakáže používání přesměrovače systému souborů WOW64. Příkaz najde nativní 64 verze programů a knihoven DLL operačního systému. Tato proměnná nemá žádný vliv, pokud je spuštěná v 32 operačním systému.
 
-### <a name="smstsdownloadabortcode"></a><a name="SMSTSDownloadAbortCode"></a>SMSTSDownloadAbortCode
+### <a name="smstsdownloadabortcode"></a><a name="SMSTSDownloadAbortCode"></a> SMSTSDownloadAbortCode
 
 Tato proměnná obsahuje hodnotu přerušit kód pro nástroj pro stažení externího programu. Tento program je určen v proměnné [SMSTSDownloadProgram](#SMSTSDownloadProgram) . Pokud program vrátí kód chyby, který se rovná hodnotě proměnné SMSTSDownloadAbortCode, stažení obsahu se nezdaří a nebude proveden pokus o jinou metodu stažení.
 
-### <a name="smstsdownloadprogram"></a><a name="SMSTSDownloadProgram"></a>SMSTSDownloadProgram
+### <a name="smstsdownloadprogram"></a><a name="SMSTSDownloadProgram"></a> SMSTSDownloadProgram
 
 Pomocí této proměnné můžete určit alternativního poskytovatele obsahu (ACP). AKT je stahovací program, který se používá ke stahování obsahu. Pořadí úkolů místo výchozího Configuration Managerho stahovacího programu používá AKT. V rámci procesu stahování obsahu pořadí úloh kontroluje tuto proměnnou. Je-li tento parametr zadán, spustí pořadí úloh program, který stáhne obsah.
 
-### <a name="smstsdownloadretrycount"></a><a name="SMSTSDownloadRetryCount"></a>SMSTSDownloadRetryCount
+### <a name="smstsdownloadretrycount"></a><a name="SMSTSDownloadRetryCount"></a> SMSTSDownloadRetryCount
 
 Počet, kolikrát se Configuration Manager pokusí stáhnout obsah z distribučního bodu. Ve výchozím nastavení se klient opakuje **2** časy.
 
-### <a name="smstsdownloadretrydelay"></a><a name="SMSTSDownloadRetryDelay"></a>SMSTSDownloadRetryDelay
+### <a name="smstsdownloadretrydelay"></a><a name="SMSTSDownloadRetryDelay"></a> SMSTSDownloadRetryDelay
 
 Počet sekund, po které Configuration Manager čekat, než se znovu pokusí stáhnout obsah z distribučního bodu. Ve výchozím nastavení počká klient **15** sekund, než se znovu pokusí.
 
-### <a name="smstsdriverrequestconnecttimeout"></a><a name="SMSTSDriverRequestConnectTimeOut"></a>SMSTSDriverRequestConnectTimeOut
+### <a name="smstsdriverrequestconnecttimeout"></a><a name="SMSTSDriverRequestConnectTimeOut"></a> SMSTSDriverRequestConnectTimeOut
 
 *Platí pro krok [automaticky použít ovladače](task-sequence-steps.md#BKMK_AutoApplyDrivers) .*
 
 Při vyžádání katalogu ovladačů Tato proměnná představuje počet sekund, po které pořadí úkolů počká na připojení k serveru HTTP. Pokud připojení trvá déle než nastavení časového limitu, pořadí úkolů zruší požadavek. Ve výchozím nastavení je časový limit nastavený na **60** sekund.
 
-### <a name="smstsdriverrequestreceivetimeout"></a><a name="SMSTSDriverRequestReceiveTimeOut"></a>SMSTSDriverRequestReceiveTimeOut
+### <a name="smstsdriverrequestreceivetimeout"></a><a name="SMSTSDriverRequestReceiveTimeOut"></a> SMSTSDriverRequestReceiveTimeOut
 
 *Platí pro krok [automaticky použít ovladače](task-sequence-steps.md#BKMK_AutoApplyDrivers) .*
 
 Při vyžádání katalogu ovladačů Tato proměnná představuje počet sekund, po které pořadí úkolů počká na odpověď. Pokud připojení trvá déle než nastavení časového limitu, pořadí úkolů zruší požadavek. Ve výchozím nastavení je časový limit nastavený na **480** sekund.
 
-### <a name="smstsdriverrequestresolvetimeout"></a><a name="SMSTSDriverRequestResolveTimeOut"></a>SMSTSDriverRequestResolveTimeOut
+### <a name="smstsdriverrequestresolvetimeout"></a><a name="SMSTSDriverRequestResolveTimeOut"></a> SMSTSDriverRequestResolveTimeOut
 
 *Platí pro krok [automaticky použít ovladače](task-sequence-steps.md#BKMK_AutoApplyDrivers) .*
 
 Při vyžádání katalogu ovladačů Tato proměnná představuje počet sekund, po které pořadí úkolů počká na překlad názvů HTTP. Pokud připojení trvá déle než nastavení časového limitu, pořadí úkolů zruší požadavek. Ve výchozím nastavení je časový limit nastavený na **60** sekund.
 
-### <a name="smstsdriverrequestsendtimeout"></a><a name="SMSTSDriverRequestSendTimeOut"></a>SMSTSDriverRequestSendTimeOut
+### <a name="smstsdriverrequestsendtimeout"></a><a name="SMSTSDriverRequestSendTimeOut"></a> SMSTSDriverRequestSendTimeOut
 
 *Platí pro krok [automaticky použít ovladače](task-sequence-steps.md#BKMK_AutoApplyDrivers) .*
 
 Při odesílání požadavku na katalog ovladačů Tato proměnná představuje počet sekund, po které pořadí úkolů počká na odeslání žádosti. Pokud požadavek trvá déle než nastavení časového limitu, pořadí úkolů zruší požadavek. Ve výchozím nastavení je časový limit nastavený na **60** sekund.
 
-### <a name="smstserrordialogtimeout"></a><a name="SMSTSErrorDialogTimeout"></a>SMSTSErrorDialogTimeout
+### <a name="smstserrordialogtimeout"></a><a name="SMSTSErrorDialogTimeout"></a> SMSTSErrorDialogTimeout
 
 Pokud v pořadí úkolů dojde k chybě, zobrazí se dialogové okno s chybou. Pořadí úkolů je automaticky zavře po uplynutí počtu sekund zadaného touto proměnnou. Ve výchozím nastavení je tato hodnota **900** sekund (15 minut).
 
-### <a name="smstslanguagefolder"></a><a name="SMSTSLanguageFolder"></a>SMSTSLanguageFolder
+### <a name="smstslanguagefolder"></a><a name="SMSTSLanguageFolder"></a> SMSTSLanguageFolder
 
 Pomocí této proměnné lze změnit jazyk zobrazení v jazykově neutrální spouštěcí bitové kopii.
 
-### <a name="smstslocaldatadrive"></a><a name="SMSTSLocalDataDrive"></a>SMSTSLocalDataDrive
+### <a name="smstslocaldatadrive"></a><a name="SMSTSLocalDataDrive"></a> SMSTSLocalDataDrive
 
 Určuje, kde pořadí úkolů ukládá dočasné soubory mezipaměti v cílovém počítači, když je spuštěný.
 
 Nastavte tuto proměnnou před spuštěním pořadí úkolů, například nastavením proměnné kolekce. Po spuštění pořadí úloh Configuration Manager definuje proměnnou [_SMSTSMDataPath](#SMSTSMDataPath) na základě toho, na jakou proměnnou SMSTSLocalDataDrive byla definovaná.
 
-### <a name="smstsmp"></a><a name="SMSTSMP"></a>SMSTSMP
+### <a name="smstsmp"></a><a name="SMSTSMP"></a> SMSTSMP
 
 Pomocí této proměnné můžete zadat adresu URL nebo IP adresu bodu správy Configuration Manager.
 
-### <a name="smstsmplistrequesttimeoutenabled"></a><a name="SMSTSMPListRequestTimeoutEnabled"></a>SMSTSMPListRequestTimeoutEnabled
+### <a name="smstsmplistrequesttimeoutenabled"></a><a name="SMSTSMPListRequestTimeoutEnabled"></a> SMSTSMPListRequestTimeoutEnabled
 
 *Platí pro následující kroky:*  
 
@@ -1620,7 +1620,7 @@ Pokud klient není v intranetu, pomocí této proměnné povolte opakované žá
 
 Pokud jsou klienti připojeni k Internetu, nastavte tuto proměnnou na, aby `False` nedocházelo k zbytečným zpožděním.
 
-### <a name="smstsmplistrequesttimeout"></a><a name="SMSTSMPListRequestTimeout"></a>SMSTSMPListRequestTimeout
+### <a name="smstsmplistrequesttimeout"></a><a name="SMSTSMPListRequestTimeout"></a> SMSTSMPListRequestTimeout
 
 *Platí pro následující kroky:*  
 
@@ -1631,31 +1631,31 @@ Pokud jsou klienti připojeni k Internetu, nastavte tuto proměnnou na, aby `Fal
 
 Pokud pořadí úloh nepovede načíst seznam bodů správy (opakované mplist) ze služeb zjišťování polohy, tato proměnná Určuje, kolik milisekund se počká, než se znovu pokusí krok zopakovat. Ve výchozím nastavení pořadí úkolů počká na `60000` milisekundy (60 sekund), než se zopakuje. Opakuje se až třikrát.
 
-### <a name="smstspeerdownload"></a><a name="SMSTSPeerDownload"></a>SMSTSPeerDownload
+### <a name="smstspeerdownload"></a><a name="SMSTSPeerDownload"></a> SMSTSPeerDownload
 
 Pomocí této proměnné můžete klientovi povolit použití sdílené mezipaměti prostředí Windows PE. Nastavením této proměnné `true` povolíte tuto funkci.
 
-### <a name="smstspeerrequestport"></a><a name="SMSTSPeerRequestPort"></a>SMSTSPeerRequestPort
+### <a name="smstspeerrequestport"></a><a name="SMSTSPeerRequestPort"></a> SMSTSPeerRequestPort
 
 Vlastní port sítě, který sdílená mezipaměť prostředí Windows PE používá pro počáteční všesměrové vysílání. Výchozí port konfigurovaný v nastavení klienta je **8004**.
 
-### <a name="smstspersistcontent"></a><a name="SMSTSPersistContent"></a>Proměnné SMSTSPersistContent
+### <a name="smstspersistcontent"></a><a name="SMSTSPersistContent"></a> Proměnné SMSTSPersistContent
 
 Pomocí této proměnné lze dočasně zachovat obsah v mezipaměti pořadí úloh. Tato proměnná se liší od [SMSTSPreserveContent](#SMSTSPreserveContent), která uchovává obsah v mezipaměti klienta Configuration Manager po dokončení pořadí úloh. Proměnné SMSTSPersistContent používá mezipaměť pořadí úloh, SMSTSPreserveContent používá mezipaměť klienta Configuration Manager.
 
-### <a name="smstspostaction"></a><a name="SMSTSPostAction"></a>SMSTSPostAction
+### <a name="smstspostaction"></a><a name="SMSTSPostAction"></a> SMSTSPostAction
 
 Určuje příkaz, který se spustí po dokončení pořadí úloh. Například určete `shutdown.exe /r /t 30 /f` restart počítače 30 sekund po dokončení pořadí úloh.
 
-### <a name="smstspreferredadvertid"></a><a name="SMSTSPreferredAdvertID"></a>SMSTSPreferredAdvertID
+### <a name="smstspreferredadvertid"></a><a name="SMSTSPreferredAdvertID"></a> SMSTSPreferredAdvertID
 
 Vynutí, aby pořadí úkolů spouštělo konkrétní cílené nasazení na cílovém počítači. Tuto proměnnou nastavte pomocí příkazu před zahájením z médií nebo PXE. Pokud je tato proměnná nastavená, pořadí úkolů přepíše všechna požadovaná nasazení.
 
-### <a name="smstspreservecontent"></a><a name="SMSTSPreserveContent"></a>SMSTSPreserveContent
+### <a name="smstspreservecontent"></a><a name="SMSTSPreserveContent"></a> SMSTSPreserveContent
 
 Tato proměnná označí obsah v pořadí úkolů tak, aby byl po nasazení uchováván v mezipaměti klienta Configuration Manager. Tato proměnná se liší od [proměnné SMSTSPersistContent](#SMSTSPersistContent), která uchovává pouze obsah po dobu trvání pořadí úkolů. Proměnné SMSTSPersistContent používá mezipaměť pořadí úloh, SMSTSPreserveContent používá mezipaměť klienta Configuration Manager. Pokud `true` Chcete tuto funkci povolit, nastavte SMSTSPreserveContent.
 
-### <a name="smstsrebootdelay"></a><a name="SMSTSRebootDelay"></a>SMSTSRebootDelay
+### <a name="smstsrebootdelay"></a><a name="SMSTSRebootDelay"></a> SMSTSRebootDelay
 
 Určuje, kolik sekund se má čekat před restartováním počítače. Pokud je tato proměnná nula (0), správce pořadí úkolů před restartováním nezobrazí dialogové okno s oznámením.
 
@@ -1665,7 +1665,7 @@ Určuje, kolik sekund se má čekat před restartováním počítače. Pokud je 
 
 - `60`: Zobrazit oznámení po dobu jedné minuty  
 
-### <a name="smstsrebootdelaynext"></a><a name="SMSTSRebootDelayNext"></a>SMSTSRebootDelayNext
+### <a name="smstsrebootdelaynext"></a><a name="SMSTSRebootDelayNext"></a> SMSTSRebootDelayNext
 
 <!--4447680-->
 Počínaje verzí 1906 použijte tuto proměnnou s existující proměnnou [SMSTSRebootDelay](task-sequence-variables.md#SMSTSRebootDelay) . Pokud chcete, aby pozdější restartování probíhalo s jiným časovým limitem, než je první, nastavte SMSTSRebootDelayNext na jinou hodnotu v sekundách.
@@ -1675,7 +1675,7 @@ Počínaje verzí 1906 použijte tuto proměnnou s existující proměnnou [SMST
 Chcete uživatelům poskytnout oznámení o restartování po 60 minutách na začátku pořadí úkolů místního upgradu systému Windows 10. Po prvním dlouhém časovém limitu budete chtít, aby další časové limity byly jenom 60 sekund. Nastavte SMSTSRebootDelay na `3600` a SMSTSRebootDelayNext na `60` .  
 
 
-### <a name="smstsrebootmessage"></a><a name="SMSTSRebootMessage"></a>SMSTSRebootMessage
+### <a name="smstsrebootmessage"></a><a name="SMSTSRebootMessage"></a> SMSTSRebootMessage
 
 Určuje zprávu, která se zobrazí v dialogovém okně oznámení o restartování. Pokud tato proměnná není nastavená, zobrazí se výchozí zpráva.
 
@@ -1683,18 +1683,18 @@ Určuje zprávu, která se zobrazí v dialogovém okně oznámení o restartová
 
 `The task sequence is restarting this computer`
 
-### <a name="smstsrebootrequested"></a><a name="SMSTSRebootRequested"></a>Proměnná SMSTSRebootRequested
+### <a name="smstsrebootrequested"></a><a name="SMSTSRebootRequested"></a> Proměnná SMSTSRebootRequested
 
 Označuje, že se po dokončení aktuálního kroku pořadí úkolů vyžaduje restartování. Pokud krok pořadí úkolů vyžaduje restart, aby se akce mohla dokončit, nastavte tuto proměnnou. Po restartování počítače bude pořadí úkolů dál běžet od dalšího kroku pořadí úkolů.
 
 - `HD`: Restart do nainstalovaného operačního systému
 - `WinPE`: Restart do přidružené spouštěcí bitové kopie
 
-### <a name="smstsretryrequested"></a><a name="SMSTSRetryRequested"></a>SMSTSRetryRequested
+### <a name="smstsretryrequested"></a><a name="SMSTSRetryRequested"></a> SMSTSRetryRequested
 
 Po dokončení aktuálního kroku pořadí úkolů vyžádá provedení opakovaného pokusu. Pokud je tato proměnná pořadí úloh nastavená, nastavte také proměnnou [Proměnná SMSTSRebootRequested](#SMSTSRebootRequested) na `true` . Po restartování počítače správce pořadí úkolů znovu spustí stejný krok pořadí úkolů.
 
-### <a name="smstsruncommandlineasuser"></a><a name="SMSTSRunCommandLineAsUser"></a>SMSTSRunCommandLineAsUser
+### <a name="smstsruncommandlineasuser"></a><a name="SMSTSRunCommandLineAsUser"></a> SMSTSRunCommandLineAsUser
 
 *Počínaje verzí 2002* <!-- 5573175 -->  
 *Platí pro krok [Spustit příkazový řádek](task-sequence-steps.md#BKMK_RunCommandLine) .*
@@ -1707,7 +1707,7 @@ Nakonfigurujte `SMSTSRunCommandLineAsUser` jednu z následujících hodnot:
 
 - `false`: Všechny další kroky **příkazového řádku spouštějte** v kontextu, který jste nakonfigurovali v kroku.
 
-### <a name="smstsruncommandlineusername"></a><a name="SMSTSRunCommandLineUserName"></a>SMSTSRunCommandLineUserName
+### <a name="smstsruncommandlineusername"></a><a name="SMSTSRunCommandLineUserName"></a> SMSTSRunCommandLineUserName
 
 *Platí pro krok [Spustit příkazový řádek](task-sequence-steps.md#BKMK_RunCommandLine) .*
 
@@ -1722,7 +1722,7 @@ Určuje účet, pomocí kterého se má příkazový řádek spustit. Hodnota je
 
 Další informace o účtu Spustit jako pro pořadí úloh najdete v tématu [účty](../../core/plan-design/hierarchy/accounts.md#task-sequence-run-as-account).
 
-### <a name="smstsruncommandlineuserpassword"></a><a name="SMSTSRunCommandLineUserPassword"></a>SMSTSRunCommandLineUserPassword
+### <a name="smstsruncommandlineuserpassword"></a><a name="SMSTSRunCommandLineUserPassword"></a> SMSTSRunCommandLineUserPassword
 
 *Platí pro krok [Spustit příkazový řádek](task-sequence-steps.md#BKMK_RunCommandLine) .*
 
@@ -1730,7 +1730,7 @@ Další informace o účtu Spustit jako pro pořadí úloh najdete v tématu [ú
 
 Určuje heslo k účtu určenému proměnnou [SMSTSRunCommandLineUserName](#SMSTSRunCommandLineUserName) .
 
-### <a name="smstsrunpowershellasuser"></a><a name="SMSTSRunPowerShellAsUser"></a>SMSTSRunPowerShellAsUser
+### <a name="smstsrunpowershellasuser"></a><a name="SMSTSRunPowerShellAsUser"></a> SMSTSRunPowerShellAsUser
 
 *Počínaje verzí 2002* <!-- 5573175 -->  
 *Platí pro krok [Spustit skript PowerShellu](task-sequence-steps.md#BKMK_RunPowerShellScript) .*
@@ -1743,7 +1743,7 @@ Nakonfigurujte `SMSTSRunPowerShellAsUser` jednu z následujících hodnot:
 
 - `false`: Všechny další **spuštěné kroky skriptu PowerShellu** se spouštějí v kontextu, který jste nakonfigurovali v kroku.
 
-### <a name="smstsrunpowershellusername"></a><a name="SMSTSRunPowerShellUserName"></a>SMSTSRunPowerShellUserName
+### <a name="smstsrunpowershellusername"></a><a name="SMSTSRunPowerShellUserName"></a> SMSTSRunPowerShellUserName
 
 *Platí pro krok [Spustit skript PowerShellu](task-sequence-steps.md#BKMK_RunPowerShellScript) .*
 
@@ -1756,7 +1756,7 @@ Určuje účet, pomocí kterého se skript prostředí PowerShell spustí. Hodno
 
 Další informace o účtu Spustit jako pro pořadí úloh najdete v tématu [účty](../../core/plan-design/hierarchy/accounts.md#task-sequence-run-as-account).
 
-### <a name="smstsrunpowershelluserpassword"></a><a name="SMSTSRunPowerShellUserPassword"></a>SMSTSRunPowerShellUserPassword
+### <a name="smstsrunpowershelluserpassword"></a><a name="SMSTSRunPowerShellUserPassword"></a> SMSTSRunPowerShellUserPassword
 
 *Platí pro krok [Spustit skript PowerShellu](task-sequence-steps.md#BKMK_RunPowerShellScript) .*
 
@@ -1764,7 +1764,7 @@ Další informace o účtu Spustit jako pro pořadí úloh najdete v tématu [ú
 
 Určuje heslo k účtu určenému proměnnou [SMSTSRunPowerShellUserName](#SMSTSRunPowerShellUserName) .
 
-### <a name="smstssoftwareupdatescantimeout"></a><a name="SMSTSSoftwareUpdateScanTimeout"></a>SMSTSSoftwareUpdateScanTimeout
+### <a name="smstssoftwareupdatescantimeout"></a><a name="SMSTSSoftwareUpdateScanTimeout"></a> SMSTSSoftwareUpdateScanTimeout
 
 *Platí pro krok [instalovat aktualizace softwaru](task-sequence-steps.md#BKMK_InstallSoftwareUpdates) .*
 
@@ -1772,7 +1772,7 @@ Určuje heslo k účtu určenému proměnnou [SMSTSRunPowerShellUserName](#SMSTS
 
 Určuje časový limit kontroly aktualizací softwaru v průběhu tohoto kroku. Například pokud očekáváte, že se během kontroly bude počítat větší množství aktualizací, zvyšte hodnotu. Výchozí hodnota je `3600` sekund (60 minut). Hodnota proměnné se nastaví v sekundách.
 
-### <a name="smstsudausers"></a><a name="SMSTSUDAUsers"></a>SMSTSUDAUsers
+### <a name="smstsudausers"></a><a name="SMSTSUDAUsers"></a> SMSTSUDAUsers
 
 Určuje primární uživatele cílového počítače pomocí následujícího formátu: `<DomainName>\<UserName>` . Oddělte více uživatelů pomocí čárky ( `,` ). Další informace najdete v tématu [přidružení uživatelů k cílovému počítači](../get-started/associate-users-with-a-destination-computer.md).
 
@@ -1780,7 +1780,7 @@ Určuje primární uživatele cílového počítače pomocí následujícího fo
 
 `contoso\jqpublic, contoso\megb, contoso\janedoh`
 
-### <a name="smstswaitforsecondreboot"></a><a name="SMSTSWaitForSecondReboot"></a>SMSTSWaitForSecondReboot
+### <a name="smstswaitforsecondreboot"></a><a name="SMSTSWaitForSecondReboot"></a> SMSTSWaitForSecondReboot
 
 *Platí pro krok [instalovat aktualizace softwaru](task-sequence-steps.md#BKMK_InstallSoftwareUpdates) .*
 
@@ -1795,14 +1795,14 @@ Například pokud nastavíte SMSTSWaitForSecondReboot na `600` , pořadí úkol�
 > [!Note]
 > Tato proměnná platí pouze pro pořadí úkolů, které nasazuje operační systém. Nefunguje ve vlastním pořadí úkolů. <!-- 2839998 -->
 
-### <a name="tsdebugmode"></a><a name="TSDebugMode"></a>TSDebugMode
+### <a name="tsdebugmode"></a><a name="TSDebugMode"></a> TSDebugMode
 
 <!--3612274-->
 Počínaje verzí 1906 nastavte tuto proměnnou na `TRUE` objekt na kolekci nebo počítači, na který je pořadí úkolů nasazeno. Jakékoli zařízení, které má tuto sadu proměnných, vloží do režimu ladění jakékoli nasazené pořadí úkolů.
 
 Další informace najdete v tématu [ladění pořadí úkolů](../deploy-use/debug-task-sequence.md).
 
-### <a name="tsdebugonerror"></a><a name="TSDebugOnError"></a>TSDebugOnError
+### <a name="tsdebugonerror"></a><a name="TSDebugOnError"></a> TSDebugOnError
 
 <!-- 5012536 -->
 Počínaje verzí 1910 nastavte tuto proměnnou na `TRUE` automaticky spustit [ladicí program pořadí úkolů](../deploy-use/debug-task-sequence.md) , když pořadí úkolů vrátí chybu.
@@ -1813,7 +1813,7 @@ Nastavit tuto proměnnou pomocí:
 
 - Proměnná kolekce. Další informace naleznete v tématu [jak nastavit proměnné](using-task-sequence-variables.md#bkmk_set).
 
-### <a name="tsdisableprogressui"></a><a name="TSDisableProgressUI"></a>TSDisableProgressUI
+### <a name="tsdisableprogressui"></a><a name="TSDisableProgressUI"></a> TSDisableProgressUI
 
 <!-- 1354291 -->
 Tuto proměnnou použijte k určení, kdy bude pořadí úkolů zobrazovat pokrok koncovým uživatelům. Chcete-li skrýt nebo zobrazit průběh v různých časech, nastavte tuto proměnnou několikrát v pořadí úkolů.  
@@ -1822,7 +1822,7 @@ Tuto proměnnou použijte k určení, kdy bude pořadí úkolů zobrazovat pokro
 
 - `false`: Zobrazí průběh pořadí úloh.  
 
-### <a name="tserroronwarning"></a><a name="TSErrorOnWarning"></a>TSErrorOnWarning
+### <a name="tserroronwarning"></a><a name="TSErrorOnWarning"></a> TSErrorOnWarning
 
 *Platí pro krok [instalovat aplikaci](task-sequence-steps.md#BKMK_InstallApplication) .*
 
@@ -1830,7 +1830,7 @@ Tuto proměnnou použijte k určení, kdy bude pořadí úkolů zobrazovat pokro
 
 Určete, zda modul pořadí úkolů považuje zjištěné upozornění za chybu v průběhu tohoto kroku. Pořadí úkolů nastaví proměnnou [_TSAppInstallStatus](#TSAppInstallStatus) na hodnotu v `Warning` případě, že jedna nebo více aplikací nebo požadovaná závislost se nenainstalovala, protože nesplňovala požadavek. Když nastavíte tuto proměnnou na `True` a pořadím úkolů nastavíte **_TSAppInstallStatus** na `Warning` , výsledek je chyba. Hodnota `False` je výchozí chování.
 
-### <a name="tsprogressinfolevel"></a><a name="TSProgressInfoLevel"></a>TSProgressInfoLevel
+### <a name="tsprogressinfolevel"></a><a name="TSProgressInfoLevel"></a> TSProgressInfoLevel
 
 *Počínaje verzí 2002*<!--5932692-->  
 
@@ -1840,11 +1840,11 @@ Tuto proměnnou zadejte, chcete-li řídit typ informací zobrazených v okně p
 - `2`: Zahrňte aktuální krok, celkový počet kroků a procento dokončení. Příklad: **2 z 10 (dokončeno 20%)**.
 - `3`: Uveďte procento dokončení. Například **(20% dokončeno)**.
 
-### <a name="tsuefidrive"></a><a name="TSUEFIDrive"></a>TSUEFIDrive
+### <a name="tsuefidrive"></a><a name="TSUEFIDrive"></a> TSUEFIDrive
 
 Použijte ve vlastnostech oddílu FAT32 v poli **Proměnná** . Když pořadí úkolů detekuje tuto proměnnou, připraví disk pro přechod na rozhraní UEFI před restartováním počítače. Další informace najdete v tématu [postup pro správu převodu systému BIOS na rozhraní UEFI v části pořadí úkolů](../deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md).
 
-### <a name="workingdirectory"></a><a name="WorkingDirectory"></a>WorkingDirectory
+### <a name="workingdirectory"></a><a name="WorkingDirectory"></a> WorkingDirectory
 
 *Platí pro krok [Spustit příkazový řádek](task-sequence-steps.md#BKMK_RunCommandLine) .*
 
@@ -1878,7 +1878,7 @@ Následující proměnné jsou zastaralé:
 *Předchozí chování*: při použití image proměnná OSDPreverveDriveLetter určuje, jestli pořadí úkolů používá písmeno jednotky zaznamenané v souboru bitové kopie (WIM). Nastavte hodnotu této proměnné na, pokud chcete `false` použít umístění, které určíte v nastavení **cíl** v kroku pořadí úkolů **použít operační systém** . Další informace najdete v tématu [použití bitové kopie operačního systému](task-sequence-steps.md#BKMK_ApplyOperatingSystemImage).
 
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Kroky pořadí úkolů](task-sequence-steps.md)
 - [Použití proměnných pořadí úloh](using-task-sequence-variables.md)

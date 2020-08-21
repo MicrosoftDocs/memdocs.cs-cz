@@ -10,23 +10,23 @@ ms.assetid: a8fa7e7a-bf55-42de-b0c2-c56777dc1508
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 4739703436d7feec7c4c899e60b33d38ce28babf
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 49e0f5e1dff466e62cdba0def917dd34510e48ee
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125725"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696765"
 ---
-# <a name="synchronize-microsoft-365-apps-updates-from-a-disconnected-software-update-point"></a><a name="bkmk_O365"></a>Synchronizace aktualizací Microsoft 365ch aplikací z odpojeného bodu aktualizace softwaru
+# <a name="synchronize-microsoft-365-apps-updates-from-a-disconnected-software-update-point"></a><a name="bkmk_O365"></a> Synchronizace aktualizací Microsoft 365ch aplikací z odpojeného bodu aktualizace softwaru
 
 *Platí pro: Configuration Manager (Current Branch)*
 <!--4065163-->
 Configuration Manager počínaje verzí 2002 můžete pomocí nástroje importovat aktualizace Microsoft 365 aplikací ze serveru WSUS připojeného k Internetu do odpojeného Configuration Manager prostředí. Předtím, když jste exportovali a importovali metadata pro software aktualizovaný v odpojených prostředích, nemůžete nasadit aktualizace aplikací Microsoft 365. Aktualizace Microsoft 365 aplikací vyžadují další metadata stažená z rozhraní Office API a CDN, které není pro odpojená prostředí možné.
 
 > [!Note]
-> Od 21. dubna 2020 se sada Office 365 ProPlus přejmenovává na **Microsoft 365 aplikace pro podniky**. Další informace najdete v tématu [Změna názvu pro Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change). V konzole Configuration Manager se pořád zobrazují odkazy na starý název a podpůrná dokumentace, zatímco se konzola aktualizuje.
+> Od 21. dubna 2020 se sada Office 365 ProPlus přejmenovává na **Microsoft 365 aplikace pro podniky**. Další informace najdete v tématu [Změna názvu pro Office 365 ProPlus](/deployoffice/name-change). V konzole Configuration Manager se pořád zobrazují odkazy na starý název a podpůrná dokumentace, zatímco se konzola aktualizuje.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 - Server WSUS připojený k Internetu s minimálně Windows Serverem 2012.
 - Server WSUS se musí připojit k těmto dvěma koncovým bodům Internetu:
@@ -51,7 +51,7 @@ Configuration Manager počínaje verzí 2002 můžete pomocí nástroje importov
 1. Po dokončení synchronizace odmítněte všechny aktualizace Microsoft 365 aplikací, které nechcete nasadit pomocí Configuration Manager. Nemusíte schvalovat aktualizace aplikací Microsoft 365, aby je bylo možné stáhnout.  
    - Odmítání aktualizací nežádoucích Microsoft 365 aplikací ve službě WSUS nebrání jejich exportu během WsusUtil.exe exportu, ale nástroj OfflineUpdateExporter zastaví stahování obsahu pro tyto aplikace.
    - Nástroj OfflineUpdateExporter stahuje aktualizace aplikací Microsoft 365 za vás. Pokud exportujete aktualizace pro tyto produkty, budete je muset i nadále schvalovat ke stažení.
-    - Vytvořte [nové zobrazení aktualizace ve službě WSUS](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/manage/viewing-and-managing-updates#to-create-a-new-update-view-on-wsus) , abyste mohli snadno zobrazit a odmítnout nepotřebné aktualizace Microsoft 365 aplikací ve službě WSUS.
+    - Vytvořte [nové zobrazení aktualizace ve službě WSUS](/windows-server/administration/windows-server-update-services/manage/viewing-and-managing-updates#to-create-a-new-update-view-on-wsus) , abyste mohli snadno zobrazit a odmítnout nepotřebné aktualizace Microsoft 365 aplikací ve službě WSUS.
 1. Pokud schvalujete jiné aktualizace produktů ke stažení a exportu, počkejte na dokončení stažení obsahu, než spustíte WsusUtil.exe export a zkopírování obsahu složky WSUSContent. Další informace najdete v tématu [synchronizace aktualizací softwaru z odpojeného bodu aktualizace softwaru](synchronize-software-updates-disconnected.md) .
 
 ## <a name="exporting-the-microsoft-365-apps-updates"></a>Export aktualizací Microsoft 365 Apps
@@ -78,7 +78,7 @@ Configuration Manager počínaje verzí 2002 můžete pomocí nástroje importov
 
     **WsusUtil.exe exportovat***soubor* s*balíčkem*      
 
-    Například:  
+    Příklad:  
 
     **WsusUtil.exe export export.xml. gz export. log**
 
@@ -90,7 +90,7 @@ Configuration Manager počínaje verzí 2002 můžete pomocí nástroje importov
 
 1. Na odpojeném serveru WSUS nejvyšší úrovně importujte metadata aktualizace z **export.xml. gz** , kterou jste vygenerovali na serveru WSUS připojeném k Internetu.
    
-    Například:  
+    Příklad:  
 
     **WsusUtil.exe import export.xml. gz importu. log**
     
@@ -101,7 +101,7 @@ Configuration Manager počínaje verzí 2002 můžete pomocí nástroje importov
    1. Přejděte `"D:\Office365updates\content"` na úplnou cestu ke zkopírovanému adresáři, který obsahuje obsah aplikace Microsoft 365 Apps a metadata generovaná nástrojem OfflineUpdateExporter.
       > [!IMPORTANT]
       > Pouze místní cesty fungují pro vlastnost O365OflBaseUrlConfigured.
-   1. Uložte skript jako`O365OflBaseUrlConfigured.ps1`
+   1. Uložte skript jako `O365OflBaseUrlConfigured.ps1`
    1. Z okna PowerShellu se zvýšenými oprávněními na odpojené Configuration Manager serveru lokality na nejvyšší úrovni spusťte `.\O365OflBaseUrlConfigured.ps1` .
    1. Restartujte službu **SMS_Executive** na serveru lokality.
 1. V konzole **Configuration Manager** přejděte na **Správa**  >  **Konfigurace lokality**  >  **lokality**.
@@ -110,14 +110,14 @@ Configuration Manager počínaje verzí 2002 můžete pomocí nástroje importov
 1. [Synchronizovat aktualizace softwaru](synchronize-software-updates.md#manually-start-software-updates-synchronization) pro Configuration Manager
 1. Po dokončení synchronizace použijte běžný proces nasazení aktualizací aplikace Microsoft 365.
 
-## <a name="proxy-configuration"></a><a name="bkmk_O365_ki"></a>Konfigurace proxy serveru
+## <a name="proxy-configuration"></a><a name="bkmk_O365_ki"></a> Konfigurace proxy serveru
 
 - Konfigurace proxy serveru není do nástroje nativně integrovaná. Pokud je proxy server nastaven v možnostech internetu na serveru, na kterém je nástroj spuštěný, v teorie se použije a musí fungovat správně.
    - Na příkazovém řádku spusťte příkaz, který `netsh winhttp show proxy` zobrazí nakonfigurovaný proxy server.
 
 
 
-## <a name="modify-o365oflbaseurlconfigured-property"></a><a name="bkmk_o365_script"></a>Úprava vlastnosti O365OflBaseUrlConfigured
+## <a name="modify-o365oflbaseurlconfigured-property"></a><a name="bkmk_o365_script"></a> Úprava vlastnosti O365OflBaseUrlConfigured
 
 ```powershell
 # Name: O365OflBaseUrlConfigured.ps1

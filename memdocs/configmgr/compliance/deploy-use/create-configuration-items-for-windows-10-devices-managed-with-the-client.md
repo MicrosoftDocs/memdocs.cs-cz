@@ -10,12 +10,12 @@ ms.assetid: 14226fbe-dd07-4432-910b-130790624a4e
 author: mestew
 manager: dougeby
 ms.author: mstewart
-ms.openlocfilehash: ade07cf23807d340ee5e0c7955a042a44f9031c5
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: 9589b9e542c9d323ab7a23af169725c1a54bfb70
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86240435"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694759"
 ---
 # <a name="create-configuration-items-for-windows-10-devices"></a>Vytváření položek konfigurace pro zařízení s Windows 10
 
@@ -140,9 +140,9 @@ Položky konfigurace Configuration Manager Information Protection Windows spravu
   
 Informace o konfiguraci nedokončené výroby pomocí Configuration Manager najdete v tématech:
 
-- [Ochrana podnikových dat pomocí Information Protection Windows (NV)](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip)
-- [Vytvoření a nasazení zásady Information Protection Windows (nedokončené výroby) pomocí Configuration Manager](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/create-wip-policy-using-configmgr)
-- [Omezení při použití Information Protection Windows (NV)](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/limitations-with-wip)
+- [Ochrana podnikových dat pomocí Information Protection Windows (NV)](/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip)
+- [Vytvoření a nasazení zásady Information Protection Windows (nedokončené výroby) pomocí Configuration Manager](/windows/security/information-protection/windows-information-protection/create-wip-policy-using-configmgr)
+- [Omezení při použití Information Protection Windows (NV)](/windows/security/information-protection/windows-information-protection/limitations-with-wip)
 
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
 [Položky konfigurace pro zařízení spravovaná pomocí klienta Configuration Manager](../../compliance/deploy-use/create-configuration-items.md)

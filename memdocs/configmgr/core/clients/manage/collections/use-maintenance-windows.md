@@ -10,12 +10,12 @@ ms.assetid: 4564ebcb-41a8-4eb0-afdb-2e1f0795cfa2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0b81599c6c5e4dda418b69c6e3c6d3b8cd144253
-ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
+ms.openlocfilehash: 06bb88368c6c958adc8fdefd336307d9b2924d31
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84428541"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693093"
 ---
 # <a name="how-to-use-maintenance-windows-in-configuration-manager"></a>Použití časových období údržby v systému Configuration Manager
 
@@ -92,11 +92,11 @@ Ve výchozím nastavení s více časovými intervaly pro správu a údržbu kli
 
 Na kartě časové intervaly pro **správu a údržbu** vlastností kolekce se zobrazí všechna nakonfigurovaná okna.
 
-## <a name="use-powershell"></a><a name="bkmk_powershell"></a>Použití PowerShellu
+## <a name="use-powershell"></a><a name="bkmk_powershell"></a> Použití PowerShellu
 
 PowerShell se dá použít ke konfiguraci časových období údržby. Další informace najdete v následujících článcích:
 
-- [Get-CMMaintenanceWindow](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmmaintenancewindow?view=sccm-ps)
-- [New-CMMaintenanceWindow](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmmaintenancewindow?view=sccm-ps)
-- [Remove-CMMaintenanceWindow](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmmaintenancewindow?view=sccm-ps)
-- [Set-CMMaintenanceWindow](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmmaintenancewindow?view=sccm-ps)
+- [Get-CMMaintenanceWindow](/powershell/module/configurationmanager/get-cmmaintenancewindow?view=sccm-ps)
+- [New-CMMaintenanceWindow](/powershell/module/configurationmanager/new-cmmaintenancewindow?view=sccm-ps)
+- [Remove-CMMaintenanceWindow](/powershell/module/configurationmanager/remove-cmmaintenancewindow?view=sccm-ps)
+- [Set-CMMaintenanceWindow](/powershell/module/configurationmanager/set-cmmaintenancewindow?view=sccm-ps)

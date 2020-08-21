@@ -10,12 +10,12 @@ ms.assetid: 140c522f-d09a-40b6-a4b0-e0d14742834a
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 9cb8097fbdd57184e5cd0e229cf96dcb317cf1e5
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: cc05ae5a9be6c437fab60f8c4c5a45d61e8c3e65
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127337"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694878"
 ---
 # <a name="tutorial-enable-co-management-for-existing-configuration-manager-clients"></a>Kurz: povolení spolusprávy pro stávající klienty Configuration Manager
 
@@ -38,7 +38,7 @@ Tento kurz použijte v těchto případech:
 > * Konfigurace Intune pro automatické registrace zařízení  
 > * Povolit spolusprávu v Configuration Manager  
 
-## <a name="prerequisites"></a>Požadavky  
+## <a name="prerequisites"></a>Předpoklady  
 
 ### <a name="azure-services-and-environment"></a>Služby a prostředí Azure
 
@@ -50,7 +50,7 @@ Tento kurz použijte v těchto případech:
 
 Pokud ve vašem prostředí ještě neexistují, budete během tohoto kurzu:
 
-- Nakonfigurujte [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-install-select-installation) mezi vaší místní službou Active Directory a vaším klientem Azure Active Directory (AD).
+- Nakonfigurujte [Azure AD Connect](/azure/active-directory/hybrid/how-to-connect-install-select-installation) mezi vaší místní službou Active Directory a vaším klientem Azure Active Directory (AD).
 
 > [!TIP]
 > Už nemusíte kupovat a přiřazovat k vašim uživatelům jednotlivé licence Intune ani EMS. Další informace najdete v tématu [Nejčastější dotazy k produktu a licencování](../core/understand/product-and-licensing-faq.md#bkmk_mem).
@@ -78,10 +78,10 @@ Když nastavíte hybridní službu Azure AD, opravdu nastavujete integraci míst
 >
 > Další informace o hybridní službě Azure AD najdete v následujících článcích v dokumentaci k Azure Active Directory:
 >
-> - [Plánování implementace připojení ke službě Azure AD](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan)
-> - [Plánování implementace připojení k hybridní službě Azure AD](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan)
-> - [Řízení připojení vašich zařízení k hybridní službě Azure AD](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-control)
-> - [Konfigurace připojení k hybridní službě Azure AD pro federované domény](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-federated-domains)  
+> - [Plánování implementace připojení ke službě Azure AD](/azure/active-directory/devices/azureadjoin-plan)
+> - [Plánování implementace připojení k hybridní službě Azure AD](/azure/active-directory/devices/hybrid-azuread-join-plan)
+> - [Řízení připojení vašich zařízení k hybridní službě Azure AD](/azure/active-directory/devices/hybrid-azuread-join-control)
+> - [Konfigurace připojení k hybridní službě Azure AD pro federované domény](/azure/active-directory/devices/hybrid-azuread-join-federated-domains)  
 
 ### <a name="set-up-azure-ad-connect"></a>Nastavit Azure AD Connect
 
@@ -92,7 +92,7 @@ Azure AD Connect od verze 1.1.819.0 nabízí průvodce konfigurací hybridního 
 Pokud chcete nakonfigurovat Azure AD Connect, budete potřebovat přihlašovací údaje globálního správce služby Azure AD.  
 
 > [!TIP]  
-> Následující postup by se neměl považovat za autoritativní pro nastavení Azure AD Connect, ale tady se poskytuje, aby se zjednodušila konfigurace spolusprávy mezi Intune a Configuration Manager. Autoritativní obsah v tomto a souvisejícím postupu pro nastavení služby Azure AD najdete v tématu [Konfigurace hybridního připojení k Azure AD pro spravované domény](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-managed-domains) v dokumentaci k Azure AD.  
+> Následující postup by se neměl považovat za autoritativní pro nastavení Azure AD Connect, ale tady se poskytuje, aby se zjednodušila konfigurace spolusprávy mezi Intune a Configuration Manager. Autoritativní obsah v tomto a souvisejícím postupu pro nastavení služby Azure AD najdete v tématu [Konfigurace hybridního připojení k Azure AD pro spravované domény](/azure/active-directory/devices/hybrid-azuread-join-managed-domains) v dokumentaci k Azure AD.  
 
 #### <a name="configure-a-hybrid-azure-ad-join-using-azure-ad-connect"></a>Konfigurace připojení k hybridní službě Azure AD pomocí Azure AD Connect
 
@@ -107,7 +107,7 @@ Pokud chcete nakonfigurovat Azure AD Connect, budete potřebovat přihlašovací
    Můžete vybrat možnost pro podporu zařízení připojených k doméně starší verze systému Windows, ale mějte na paměti, že společná správa zařízení je podporována pouze pro systém Windows 10.
 8. Na stránce **spojovací bod** služby pro každou místní doménovou strukturu, kterou chcete Azure AD Connect ke konfiguraci spojovacího bodu služby (SCP), proveďte následující kroky a potom vyberte **Další**:  
    1. Vyberte doménovou strukturu.  
-   2. Vyberte ověřovací službu.  Pokud máte federované domény, vyberte AD FS Server, pokud vaše organizace nemá výhradně klienty s Windows 10 a že jste nakonfigurovali synchronizaci počítačů a zařízení nebo pokud vaše organizace používá [SeamlessSSO](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-sso).  
+   2. Vyberte ověřovací službu.  Pokud máte federované domény, vyberte AD FS Server, pokud vaše organizace nemá výhradně klienty s Windows 10 a že jste nakonfigurovali synchronizaci počítačů a zařízení nebo pokud vaše organizace používá [SeamlessSSO](/azure/active-directory/hybrid/how-to-connect-sso).  
    3. Klikněte na **Přidat** a zadejte přihlašovací údaje podnikového správce.  
 9. Pokud máte spravovanou doménu, přeskočte tento krok.  
 
@@ -115,7 +115,7 @@ Pokud chcete nakonfigurovat Azure AD Connect, budete potřebovat přihlašovací
 10. Na stránce **připraveno ke konfiguraci** vyberte **Konfigurovat**.
 11. Na stránce **Konfigurace byla dokončena** vyberte možnost **ukončit**.
 
-Pokud dochází k problémům s dokončením hybridního připojení služby Azure AD pro zařízení s Windows připojená k doméně, přečtěte si téma [řešení potíží s hybridním připojením k Azure AD pro Windows](https://docs.microsoft.com/azure/active-directory/devices/troubleshoot-hybrid-join-windows-current)
+Pokud dochází k problémům s dokončením hybridního připojení služby Azure AD pro zařízení s Windows připojená k doméně, přečtěte si téma [řešení potíží s hybridním připojením k Azure AD pro Windows](/azure/active-directory/devices/troubleshoot-hybrid-join-windows-current)
 
 ## <a name="configure-client-settings-to-direct-clients-to-register-with-azure-ad"></a>Konfigurace nastavení klienta pro směrování klientů k registraci ve službě Azure AD
 
@@ -155,7 +155,7 @@ Automatický zápis taky umožňuje uživatelům zaregistrovat svoje zařízení
     > [!NOTE]
     > Někteří klienti nemusí mít tyto možnosti nakonfigurovány.<!-- SCCMDocs#1230 -->
     >
-    > **Microsoft Intune** je způsob konfigurace aplikace MDM pro službu Azure AD. **Registrace Microsoft Intune** je konkrétní aplikace služby Azure AD, která se vytvoří při použití zásad služby Multi-Factor Authentication pro registraci zařízení s iOS a Androidem. Další informace najdete v tématu [vyžadování služby Multi-Factor Authentication pro registraci zařízení v Intune](https://docs.microsoft.com/intune/enrollment/multi-factor-authentication).
+    > **Microsoft Intune** je způsob konfigurace aplikace MDM pro službu Azure AD. **Registrace Microsoft Intune** je konkrétní aplikace služby Azure AD, která se vytvoří při použití zásad služby Multi-Factor Authentication pro registraci zařízení s iOS a Androidem. Další informace najdete v tématu [vyžadování služby Multi-Factor Authentication pro registraci zařízení v Intune](/intune/enrollment/multi-factor-authentication).
 
 5. Pro možnost obor uživatele MDM vyberte **vše**a pak ho **uložte**.  
 

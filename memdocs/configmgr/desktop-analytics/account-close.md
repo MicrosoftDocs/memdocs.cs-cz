@@ -11,18 +11,18 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: e24c2ee19093dd12af6e87280a31851a1f593782
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: b8d22d7f011fb87dc1105fd8447d2e93adc80c6e
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268466"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693365"
 ---
 # <a name="how-to-close-your-account"></a>Jak zavřít účet
 
 Pokud ve svém prostředí nastavíte analýzu stolního počítače a pak se rozhodnete ji odebrat, pomocí tohoto postupu uzavřete svůj účet.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 Účet v Azure Portal může zavřít nebo znovu aktivovat pouze **globální správce** .
 
@@ -114,9 +114,9 @@ Pokud nechcete, aby zařízení pokračovala v posílání diagnostických dat:
 Tyto hodnoty nastavte pomocí jedné z následujících metod:
 
 - Zásady skupiny v části **Konfigurace počítače**  >  **šablony pro správu**  >  kolekce dat**součásti systému Windows**  >  **a buildy Preview**
-- Správa mobilních zařízení (MDM), například [Microsoft Intune](https://docs.microsoft.com/intune/device-restrictions-windows-10#reporting-and-telemetry)
+- Správa mobilních zařízení (MDM), například [Microsoft Intune](/intune/device-restrictions-windows-10#reporting-and-telemetry)
 
-Další informace najdete v tématu [Konfigurace diagnostických dat Windows ve vaší organizaci](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization).
+Další informace najdete v tématu [Konfigurace diagnostických dat Windows ve vaší organizaci](/windows/privacy/configure-windows-diagnostic-data-in-your-organization).
 
 > [!NOTE]  
 > Když tyto změny použijete, zařízení okamžitě zastaví odesílání diagnostických dat. Společnost Microsoft může trvat 24-48 hodin, než přestane zpracovávat přehledy pro váš pracovní prostor. Společnost Microsoft odstraní tato data ze svých cloudových služeb do 30 dnů nebo i rychleji.

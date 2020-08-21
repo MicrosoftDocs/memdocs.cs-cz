@@ -10,12 +10,12 @@ ms.assetid: a2742d52-851e-4abc-b623-d12d91684c0b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 5d8ae26c5e9cbf9f3a45d3584341e79de8ab3402
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: d5e042980a1fa6fb8a92abcff6d3938874cf6b38
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86240707"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694589"
 ---
 # <a name="get-started-with-compliance-settings-in-configuration-manager"></a>Začínáme s nastavením dodržování předpisů v Configuration Manager
 
@@ -68,11 +68,11 @@ Po definování standardních hodnot konfigurace je můžete nasadit do kolekcí
 Klientská zařízení vyhodnocují dodržování předpisů na základě všech nasazených standardních hodnot konfigurace a výsledky okamžitě hlásí lokalitě pomocí stavových zpráv. Pokud je zařízení aktuálně odpojeno od sítě, ale stáhlo standardní hodnoty konfigurace, vyhodnotí se tím dodržování předpisů u položek konfigurace. Po opětovném připojení pošle informace o kompatibilitě.  
 
 ### <a name="monitoring-configuration-baselines"></a>Monitorování standardních hodnot konfigurace
-- Výsledky vyhodnocení dodržování předpisů Sledujte v konzole Configuration Manager v pracovním prostoru **monitorování** v uzlu **nasazení** . Například:
+- Výsledky vyhodnocení dodržování předpisů Sledujte v konzole Configuration Manager v pracovním prostoru **monitorování** v uzlu **nasazení** . Příklad:
   - Běžné příčiny nedodržení předpisů
-  - chyby
+  - Chyby
   - Počet ovlivněných uživatelů a zařízení
-- Spustit sestavy nastavení dodržování předpisů s dalšími podrobnostmi. Například:
+- Spustit sestavy nastavení dodržování předpisů s dalšími podrobnostmi. Příklad:
   - Která zařízení splňují nebo nesplňují předpisy
   - Který prvek standardních hodnot konfigurace způsobuje, že počítač není kompatibilní.
 - Zobrazí výsledky vyhodnocení dodržování předpisů z počítačů s Windows, na kterých běží klient Configuration Manager. Otevřete ovládací panel **Configuration Manager** a přepněte na kartu **Konfigurace** .  
@@ -105,6 +105,6 @@ Další informace najdete v tématu [upgrade zařízení s Windows pomocí zása
 
 ## <a name="microsoft-edge-legacy-browser-profiles"></a>Profily prohlížeče starší verze Microsoft Edge
 <!-- 1357310 -->
-Pro zákazníky, kteří používají [starší verzi webového prohlížeče Microsoft Edge](https://docs.microsoft.com/microsoft-edge/deploy/) v klientech Windows 10, vytvořte Configuration Manager zásady dodržování předpisů pro konfiguraci nastavení prohlížeče.
+Pro zákazníky, kteří používají [starší verzi webového prohlížeče Microsoft Edge](/microsoft-edge/deploy/) v klientech Windows 10, vytvořte Configuration Manager zásady dodržování předpisů pro konfiguraci nastavení prohlížeče.
 
 Další informace najdete v tématu [profily prohlížeče starší verze Microsoft Edge](../deploy-use/browser-profiles.md).

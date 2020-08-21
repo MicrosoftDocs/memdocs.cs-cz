@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: fc4309d3d09cd35c17b23bc46dcb1a28d210aa8e
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 5c5337433b0d64ec1f6bf1efae97bd2391031f2e
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125742"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694261"
 ---
 # <a name="tutorial-deploy-windows-10-to-pilot"></a>Kurz: nasazení Windows 10 do pilotního nasazení
 
@@ -32,11 +32,11 @@ V tomto kurzu se naučíte:
 
 Pokud ještě nemáte předplatné Azure, vytvořte si napřed [bezplatný účet](https://azure.microsoft.com/free). Když se správně nakonfiguruje, používání Desktop Analytics nenese žádné náklady na Azure.
 
-Desktop Analytics používá *Log Analytics pracovní prostor* ve vašem předplatném Azure. Pracovní prostor je v podstatě kontejner, který obsahuje informace o účtu a jednoduché konfigurační informace. Další informace najdete v tématu [Správa pracovních prostorů](https://docs.microsoft.com/azure/log-analytics/log-analytics-manage-access?toc=/azure/azure-monitor/toc.json).
+Desktop Analytics používá *Log Analytics pracovní prostor* ve vašem předplatném Azure. Pracovní prostor je v podstatě kontejner, který obsahuje informace o účtu a jednoduché konfigurační informace. Další informace najdete v tématu [Správa pracovních prostorů](/azure/log-analytics/log-analytics-manage-access?toc=%2fazure%2fazure-monitor%2ftoc.json).
 
 
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 Než začnete s tímto kurzem, ujistěte se, že máte následující požadavky:  
 
@@ -76,8 +76,8 @@ Než začnete s tímto kurzem, ujistěte se, že máte následující požadavky
     - `https://kmwatsonc.events.data.microsoft.com`  
     - `https://oca.telemetry.microsoft.com`  
     - `https://login.live.com`  
-    - `https://graph.windows.net`(jenom u Configuration Manager role serveru)
-    - `https://*.manage.microsoft.com`(jenom u Configuration Manager role serveru)
+    - `https://graph.windows.net` (jenom u Configuration Manager role serveru)
+    - `https://*.manage.microsoft.com` (jenom u Configuration Manager role serveru)
 
     Další informace najdete v tématu [Povolení sdílení dat pro desktopovou analýzu](enable-data-sharing.md#endpoints).  
 
@@ -102,7 +102,7 @@ Pomocí tohoto postupu se můžete přihlásit k portálu Analytics a nakonfigur
 
         Pokud tuto možnost nevyberete, bude aplikace Desktop Analytics stále přidávat uživatele jako členy skupiny zabezpečení. **Globální správce** musí ručně přiřadit roli **správce Desktop Analytics** pro uživatele.  
 
-        Další informace o přiřazení oprávnění role správce v Azure Active Directory a oprávnění přiřazená **správcům Desktop Analytics**najdete v tématu [oprávnění role správce v Azure Active Directory](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles).  
+        Další informace o přiřazení oprávnění role správce v Azure Active Directory a oprávnění přiřazená **správcům Desktop Analytics**najdete v tématu [oprávnění role správce v Azure Active Directory](/azure/active-directory/users-groups-roles/directory-assign-admin-roles).  
 
     - Pro vytváření a správu pracovních prostorů a plánů nasazení v nástroji Desktop Analytics předkonfiguruje skupinu zabezpečení **vlastníci pracovního prostoru** v Azure Active Directory. 
 
@@ -234,7 +234,7 @@ Pomocí tohoto postupu můžete vytvořit plán nasazení v Desktop Analytics.
 
 4. V podokně **vytvořit plán nasazení** nakonfigurujte následující nastavení:  
 
-    - **Název**: jedinečný název plánu nasazení, například`Windows 10 pilot`  
+    - **Název**: jedinečný název plánu nasazení, například `Windows 10 pilot`  
 
     - **Produkty a verze**: vyberte verzi Windows 10, kterou chcete nasadit. Microsoft doporučuje vytvářet plány nasazení, které používají nejnovější verzi.
 
@@ -292,7 +292,7 @@ Pomocí tohoto postupu můžete nasadit Windows 10 v Configuration Manager do pi
 - [Monitor](#bkmk_monitor-ts) status in Configuration Manager  
  -->
 
-### <a name="create-an-os-upgrade-package-for-windows-10"></a><a name="bkmk_create-package"></a>Vytvoření balíčku pro upgrade operačního systému pro Windows 10
+### <a name="create-an-os-upgrade-package-for-windows-10"></a><a name="bkmk_create-package"></a> Vytvoření balíčku pro upgrade operačního systému pro Windows 10
 
 1. V konzole Configuration Manager otevřete pracovní prostor **Knihovna softwaru** , rozbalte možnost **operační systémy**a potom vyberte uzel **balíčky s upgradem operačního systému** .  
 
@@ -320,7 +320,7 @@ Dále distribuujte balíček s upgradem operačního systému do distribučních
 4. Dokončete Průvodce distribucí obsahu.  
 
 
-### <a name="create-an-os-upgrade-task-sequence-for-windows-10"></a><a name="bkmk_create-ts"></a>Vytvoření pořadí úkolů upgradu operačního systému pro Windows 10
+### <a name="create-an-os-upgrade-task-sequence-for-windows-10"></a><a name="bkmk_create-ts"></a> Vytvoření pořadí úkolů upgradu operačního systému pro Windows 10
 
 1. V konzole Configuration Manager klikněte na pracovní prostor **softwarová knihovna** , rozbalte možnost **operační systémy**a pak vyberte **pořadí úloh**.  
 
@@ -339,7 +339,7 @@ Dále distribuujte balíček s upgradem operačního systému do distribučních
     - **Kód Product Key**: zadejte kód Product Key systému Windows pro operační systém, který chcete nainstalovat. Zadejte kódované klíče multilicencí nebo standardní kódy Product Key. Pokud používáte standardní kód Product Key, oddělte každou skupinu o pět znaků pomlčkou (-). Příklad: *xxxxx-xxxxx-xxxxx-xxxxx-xxxxx*. Pokud je upgrade pro multilicenční edici, nemusí se kód Product Key vyžadovat.  
 
         > [!Note]  
-        > Tento kód Product Key může být klíč k vícenásobné aktivaci (MAK) nebo obecný multilicenční klíč (GVLK). GVLK se také označuje jako klíč pro nastavení klienta služby správy klíčů (KMS). Další informace najdete v tématu [plánování aktivace multilicence](https://docs.microsoft.com/windows/deployment/volume-activation/plan-for-volume-activation-client). Seznam klíčů pro instalaci klienta služby správy klíčů najdete v [příloze a](https://docs.microsoft.com/windows-server/get-started/kmsclientkeys) v příručce k aktivaci Windows serveru.
+        > Tento kód Product Key může být klíč k vícenásobné aktivaci (MAK) nebo obecný multilicenční klíč (GVLK). GVLK se také označuje jako klíč pro nastavení klienta služby správy klíčů (KMS). Další informace najdete v tématu [plánování aktivace multilicence](/windows/deployment/volume-activation/plan-for-volume-activation-client). Seznam klíčů pro instalaci klienta služby správy klíčů najdete v [příloze a](/windows-server/get-started/kmsclientkeys) v příručce k aktivaci Windows serveru.
 
 6. Na stránce **Zahrnout aktualizace** vyberte možnost **Další** a neinstalujte žádné aktualizace softwaru.  
 
@@ -348,7 +348,7 @@ Dále distribuujte balíček s upgradem operačního systému do distribučních
 8. Dokončete Průvodce vytvořením pořadí úloh.  
 
 
-### <a name="deploy-the-task-sequence-using-the-desktop-analytics-deployment-plan"></a><a name="bkmk_deploy-ts"></a>Nasazení pořadí úkolů pomocí plánu nasazení Desktop Analytics
+### <a name="deploy-the-task-sequence-using-the-desktop-analytics-deployment-plan"></a><a name="bkmk_deploy-ts"></a> Nasazení pořadí úkolů pomocí plánu nasazení Desktop Analytics
 
 1. V konzole Configuration Manager klikněte na **Knihovna softwaru**, rozbalte položku **Údržba Desktop Analytics**a vyberte uzel **plány nasazení** .  
 
@@ -376,7 +376,7 @@ Dále distribuujte balíček s upgradem operačního systému do distribučních
 10. Dokončete průvodce.  
 
 
-### <a name="install-the-task-sequence-from-software-center"></a><a name="bkmk_install-ts"></a>Instalace pořadí úkolů z centra softwaru
+### <a name="install-the-task-sequence-from-software-center"></a><a name="bkmk_install-ts"></a> Instalace pořadí úkolů z centra softwaru
 
 1. Přihlaste se k zařízení, které je členem plánu pilotního nasazení.  
 

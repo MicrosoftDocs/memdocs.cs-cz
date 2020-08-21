@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 79258786b56cc3e7fe4971391903772700768a89
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 8c3624f9fc903395b36846170ff3552f32db59dd
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88126752"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692940"
 ---
 # <a name="capabilities-in-technical-preview-1706-for-configuration-manager"></a>Funkce ve verzi Technical Preview 1706 pro Configuration Manager
 
@@ -104,7 +104,7 @@ Chcete-li nainstalovat server lokality pasivního režimu, použijte **Průvodce
 
 - Počítač, ve kterém bude spuštěný server lokality pasivního režimu:
 
-    - Musí splňovat [požadavky pro instalaci primární lokality](https://docs.microsoft.com/sccm/core/servers/deploy/install/prerequisites-for-installing-sites#primary-sites-and-the-central-administration-site).
+    - Musí splňovat [požadavky pro instalaci primární lokality](/sccm/core/servers/deploy/install/prerequisites-for-installing-sites#primary-sites-and-the-central-administration-site).
 
     - Instaluje se pomocí zdrojových souborů, které odpovídají verzi serveru lokality aktivního režimu.
 
@@ -231,7 +231,7 @@ Chcete-li tento problém vyřešit, můžete nyní zadat umístění obsahu inst
 
 ## <a name="accessibility-improvements"></a>Vylepšení přístupnosti  
 <!--1253000 -->
-Tato verze Preview přináší několik vylepšení [funkcí usnadnění](../understand/accessibility-features.md) v konzole Configuration Manager. Tady jsou některé z nich:     
+Tato verze Preview přináší několik vylepšení [funkcí usnadnění](../understand/accessibility-features.md) v konzole Configuration Manager. Zde jsou některé z nich:     
 
 **Nové klávesové zkratky pro pohyb v konzole:**
 - CTRL + M – nastaví fokus do hlavního (centrálního) podokna.
@@ -261,7 +261,7 @@ Požadavky na připojení k Upgrade Readiness se nezměnily od těch, které jso
 
 **Požadavky**
 - Aby bylo možné přidat připojení, musí vaše prostředí Configuration Manager nejprve nakonfigurovat [spojovací bod služby](../servers/deploy/configure/about-the-service-connection-point.md) v [online režimu](../servers/deploy/configure/about-the-service-connection-point.md#bkmk_modes). Když přidáte připojení do prostředí, nainstaluje se taky Microsoft Monitoring Agent na počítač, na kterém je spuštěná tato role systému lokality.
-- Zaregistrujte se Configuration Manager jako nástroj pro správu webové aplikace nebo webového rozhraní API a [z této registrace Získejte ID klienta](https://azure.microsoft.com/documentation/articles/active-directory-integrating-applications/).
+- Zaregistrujte se Configuration Manager jako nástroj pro správu webové aplikace nebo webového rozhraní API a [z této registrace Získejte ID klienta](/azure/active-directory/develop/quickstart-register-app).
 - Vytvořte klíč klienta pro registrovaný Nástroj pro správu v Azure Active Directory.
 - V Azure Portal zadejte registrovanou webovou aplikaci s oprávněním pro přístup k OMS.
 
@@ -323,7 +323,7 @@ V Configuration Manager můžete do klientských zařízení nasadit skripty pom
 - Projděte si výsledky vracené skriptem v konzole Configuration Manager.
 
 
-### <a name="prerequisites"></a>Požadavky
+### <a name="prerequisites"></a>Předpoklady
 
 Chcete-li použít skripty, musíte být členem příslušné role zabezpečení Configuration Manager.
 
@@ -403,7 +403,7 @@ Pomocí následujícího postupu povolte možnost podpory protokolu IPv6 pro tec
 <!-- 1098490 -->
 Teď můžete pomocí Configuration Manager spravovat aktualizace ovladačů Microsoft Surface.
 
-### <a name="prerequisites"></a>Požadavky
+### <a name="prerequisites"></a>Předpoklady
 Všechny body aktualizace softwaru musí používat systém Windows Server 2016.
 
 ### <a name="try-it-out"></a>Určitě to udělejte!
@@ -416,7 +416,7 @@ Zkuste provést následující úkoly a pak nám poslat **zpětnou vazbu** z kar
 <!-- 1290890 -->
 Teď můžete nakonfigurovat zásady odložení pro aktualizace funkcí Windows 10 nebo aktualizace kvality pro zařízení s Windows 10 spravovaná přímo pomocí web Windows Update pro firmy. Zásady odložení můžete spravovat v uzlu nové **zásady web Windows Update pro firmy** v části **softwarová knihovna**  >  **Windows 10 – Údržba**.
 
-### <a name="prerequisites"></a>Požadavky
+### <a name="prerequisites"></a>Předpoklady
 Zařízení s Windows 10 spravovaná pomocí web Windows Update pro firmy musí mít připojení k Internetu.
 
 #### <a name="to-create-a-windows-update-for-business-deferral-policy"></a>Vytvoření zásady pro odložení web Windows Update pro firmy

@@ -10,12 +10,12 @@ ms.assetid: d6a73e68-57d8-4786-842b-36669541d8ff
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: df0b632ccf7939bdc897d4a456f0e6cacc7a1760
-ms.sourcegitcommit: 7e34b561d43aa086fc07ab4edf2230d09c04f05b
+ms.openlocfilehash: ff364dc248519d0027ce96fe43f4f3f6cf373e68
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87525944"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692736"
 ---
 # <a name="pki-certificate-requirements-for-configuration-manager"></a>Požadavky na certifikát PKI pro nástroj Configuration Manager
 
@@ -23,7 +23,7 @@ ms.locfileid: "87525944"
 
 Certifikáty infrastruktury veřejných klíčů (PKI), které byste mohli vyžadovat pro Configuration Manager, jsou uvedené v následujících tabulkách. Tyto informace předpokládají základní znalost certifikátů PKI. Další informace najdete v tématu [podrobný příklad nasazení certifikátů PKI pro Configuration Manager: certifikační autorita systému Windows Server 2008](example-deployment-of-pki-certificates.md).
 
-Další informace o službě AD CS (Active Directory Certificate Services) najdete v tématu [Přehled služby Active Directory Certificate Services](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831740(v=ws.11)).
+Další informace o službě AD CS (Active Directory Certificate Services) najdete v tématu [Přehled služby Active Directory Certificate Services](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831740(v=ws.11)).
 
 Informace o používání kryptografických certifikátů API: Next Generation (CNG) s Configuration Manager najdete v tématu [Přehled certifikátů CNG](cng-certificates-overview.md).
 
@@ -59,7 +59,7 @@ Když použijete službu AD CS (Active Directory Certificate Services) a šablon
 |Systémy lokality s nainstalovaným distribučním bodem|Ověření klienta|**Ověřování pracovní stanice**|**Použití rozšířeného klíče** – hodnota musí obsahovat **Ověření klienta (1.3.6.1.5.5.7.3.2)**.<br /><br /> Pro předmět certifikátu nebo alternativní název předmětu (SAN) se nevztahují žádné zvláštní požadavky. Můžete použít stejný certifikát pro více distribučních bodů. Je ale vhodné použít pro každý distribuční bod jiný certifikát.<br /><br /> Privátní klíč musí být exportovatelný.<br /><br /> Algoritmus hash SHA-2 je podporován.<br /><br /> Maximální podporovaná délka klíče je 2 048 bitů.|Tento certifikát má dva účely:<br /><br /><ul><li>Ověřuje distribuční bod pro bod správy s povoleným protokolem HTTPS předtím, než distribuční bod odešle stavové zprávy.</li><li>Pokud je vybraná možnost **Povolit podporu PXE pro klienty** distribučního bodu, certifikát se odešle do počítačů. Pokud pořadí úkolů v procesu nasazení operačního systému zahrnují klientské akce, například načtení zásad klienta nebo odeslání informací o inventáři, mohou se klientské počítače připojit k bodu správy s povoleným protokolem HTTPS během nasazování operačního systému.</li></ul> Tento certifikát je využíván pouze během procesu nasazení operačního systému a do klienta se neinstaluje. Z důvodu tohoto dočasného použití lze stejný certifikát použít pro každé nasazení operačního systému, pokud nechcete používat více klientských certifikátů.<br /><br /> Tento certifikát musí být exportován ve formátu PKCS #12 (Public Key Certificate Standard). Heslo musí být známé, aby bylo možné ho importovat do vlastností distribučního bodu.<br /><br /> **Poznámka:** Požadavky na tento certifikát jsou stejné jako u klientských certifikátů pro spouštěcí bitové kopie, které nasazují operační systémy. Protože požadavky jsou stejné, můžete použít stejný soubor certifikátu.|  
 |Server systému lokality, na kterém běží konektor Microsoft Intune|Ověření klienta|Nedá se použít: Intune automaticky vytvoří tento certifikát.|Hodnota **použití rozšířeného klíče** obsahuje **ověření klienta (1.3.6.1.5.5.7.3.2)**.<br /><br /> Tři vlastní rozšíření jednoznačně identifikují předplatné Intune zákazníka.<br /><br /> Velikost klíče je 2 048 bitů a používá algoritmus hash SHA-1.<br /><br /> **Poznámka:** Tato nastavení nemůžete změnit. Tyto informace jsou k dispozici pouze pro informativní účely.|Tento certifikát se automaticky vyžádá a nainstaluje do databáze Configuration Manager, když se přihlásíte k odběru Microsoft Intune. Při instalaci konektoru Microsoft Intune se tento certifikát nainstaluje na server systému lokality, na kterém běží konektor Microsoft Intune. Je nainstalován v úložišti certifikátů počítače.<br /><br /> Tento certifikát se používá k ověření Configuration Manager hierarchie pro Microsoft Intune pomocí konektoru Microsoft Intune. Všechna data mezi nimi přenesená využívají zabezpečení Secure Sockets Layer (SSL).|  
 
-###  <a name="proxy-web-servers-for-internet-based-client-management"></a><a name="BKMK_PKIcertificates_for_proxyservers"></a>Proxy webové servery pro internetovou správu klientů  
+###  <a name="proxy-web-servers-for-internet-based-client-management"></a><a name="BKMK_PKIcertificates_for_proxyservers"></a> Proxy webové servery pro internetovou správu klientů  
  Pokud lokalita podporuje správu internetových klientů a používáte proxy webový server pomocí ukončení protokolu SSL (přemosťování) pro příchozí připojení k Internetu, má proxy webový server požadavky na certifikáty uvedené v následující tabulce.  
 
 > [!NOTE]  
@@ -69,7 +69,7 @@ Když použijete službu AD CS (Active Directory Certificate Services) a šablon
 |--------------------------------------|-------------------------|-------------------------------------------|---------------------------------------------|----------------------------------------------------------|  
 |Proxy webový server, který přijímá připojení klientů přes Internet|Ověřování serveru a ověřování klienta|1. <br />                        **Webový server**<br /><br /> 2. <br />                        **Ověřování pracovní stanice**|internetový plně kvalifikovaný název domény v poli název subjektu nebo alternativní název subjektu. Používáte-li šablony certifikátů Microsoft, je alternativní název předmětu k dispozici pouze v šabloně pracovní stanice.<br /><br /> Algoritmus hash SHA-2 je podporován.|Tento certifikát se používá k ověření následujících serverů pro internetové klienty a k šifrování všech dat přenesených mezi klientem a serverem pomocí protokolu SSL:<br /><br /><ul><li>Internetový bod správy</li><li>Internetový distribuční bod</li><li>Internetový bod aktualizace softwaru</li></ul> Ověřování klienta se používá pro přemostění připojení klientů mezi Configuration Manager klienty a internetovými systémy lokality.|  
 
-##  <a name="pki-certificates-for-clients"></a><a name="BKMK_PKIcertificates_for_clients"></a>Certifikáty PKI pro klienty  
+##  <a name="pki-certificates-for-clients"></a><a name="BKMK_PKIcertificates_for_clients"></a> Certifikáty PKI pro klienty  
 
 |Komponenta Configuration Manager|Podle účelu certifikátů|Použitá šablona certifikátu Microsoft|Konkrétní informace v certifikátu|Jak se certifikát používá v Configuration Manager|  
 |-------------------------------------|-------------------------|-------------------------------------------|---------------------------------------------|----------------------------------------------------------|  

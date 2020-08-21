@@ -10,12 +10,12 @@ ms.assetid: CF35CE87-3BA8-4A84-9BC8-ABCEA4666212
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 85b1130d0d5fb15d9288b072bceed9f61128bd56
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 2cb35b7cf14b14f4a200fd2caa0547f0e2a9bb16
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81715302"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692753"
 ---
 # <a name="use-windows-analytics-with-configuration-manager"></a>Použití Windows Analytics s Configuration Manager
 
@@ -29,7 +29,7 @@ ms.locfileid: "81715302"
 Pokud má váš Configuration Manager web připojení k Upgrade Readiness, je nutné jej odebrat a znovu nakonfigurovat klienty. Další informace najdete v tématu [odebrání upgrade Readinessho připojení](upgrade-readiness.md#bkmk_remove).
 
 <!--
-[Windows Analytics](https://docs.microsoft.com/windows/deployment/update/windows-analytics-overview) is a set of solutions that allow you to gain insight into the current state of your environment. Windows devices in your environment report data to Microsoft, which you can access and analyze through these solutions. For example, connect [Upgrade Readiness](upgrade-readiness.md) to Configuration Manager to directly access the data in the **Monitoring** workspace of the Configuration Manager console.
+[Windows Analytics](/windows/deployment/update/windows-analytics-overview) is a set of solutions that allow you to gain insight into the current state of your environment. Windows devices in your environment report data to Microsoft, which you can access and analyze through these solutions. For example, connect [Upgrade Readiness](upgrade-readiness.md) to Configuration Manager to directly access the data in the **Monitoring** workspace of the Configuration Manager console.
 
 The data used by Windows Analytics isn't transferred directly to the Configuration Manager site server. Client computers send data to the Windows cloud service. This service then transfers the relevant data to Windows Analytics solutions hosted in one of your organization's workspaces. Configuration Manager then directs you to relevant data in the web portal with in-context links. It can also directly display data that's part of solutions that you connect to Configuration Manager.
 
@@ -56,10 +56,10 @@ Select the **Windows Analytics** settings tab, and configure the following setti
 Configure this setting to **Yes** to configure Windows diagnostic data settings on Windows clients.   
 
 #### Commercial ID key
-The commercial ID key maps information from devices you manage to the Log Analytics workspace that hosts your organization's Windows Analytics data. If you've already configured a commercial ID key for use with Upgrade Readiness, use that ID. If you don't yet have a commercial ID key, see [Copy your commercial ID key](https://docs.microsoft.com/windows/deployment/update/windows-analytics-get-started#copy-your-commercial-id-key).
+The commercial ID key maps information from devices you manage to the Log Analytics workspace that hosts your organization's Windows Analytics data. If you've already configured a commercial ID key for use with Upgrade Readiness, use that ID. If you don't yet have a commercial ID key, see [Copy your commercial ID key](/windows/deployment/update/windows-analytics-get-started#copy-your-commercial-id-key).
 
 #### Windows 10 telemetry
-For more information, see [Configure Windows diagnostic data in your organization](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization#diagnostic-data-levels).
+For more information, see [Configure Windows diagnostic data in your organization](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#diagnostic-data-levels).
 
 > [!Note]  
 > You can also set the Windows 10 data collection level to **Enhanced (Limited)**. This setting enables you to gain actionable insight about devices in your environment without devices reporting all of the data in the **Enhanced** level with Windows 10 version 1709 or later. The Enhanced (Limited) level includes metrics from the Basic level, as well as a subset of data collected from the Enhanced level relevant to Windows Analytics.
@@ -68,7 +68,7 @@ For more information, see [Configure Windows diagnostic data in your organizatio
 For more information, see [Windows 7, Windows 8, and Windows 8.1 appraiser telemetry events and fields](https://go.microsoft.com/fwlink/?LinkID=822965).
 
 #### Enable Windows 8.1 and earlier Internet Explorer data collection
-On devices running Windows 8.1 or earlier, Internet Explorer can collect data about web apps. This data can allow Upgrade Readiness to detect web application incompatibilities that could prevent a smooth upgrade to Windows 10. Enable Internet Explorer data collection based on the internet zone. For more information about internet zones, see [About URL Security Zones](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537183\(v=vs.85\)).
+On devices running Windows 8.1 or earlier, Internet Explorer can collect data about web apps. This data can allow Upgrade Readiness to detect web application incompatibilities that could prevent a smooth upgrade to Windows 10. Enable Internet Explorer data collection based on the internet zone. For more information about internet zones, see [About URL Security Zones](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537183\(v=vs.85\)).
 
 
 
@@ -82,6 +82,6 @@ For more information and details on how to configure and connect to Upgrade Read
 
 ## Use Windows Analytics to identify gaps in Windows Information Protection Policies
 
-You can configure Windows 10 version 1703 and later devices with a [Windows Information Protection](https://docs.microsoft.com/windows/threat-protection/windows-information-protection/protect-enterprise-data-using-wip) (WIP) policy. They report diagnostic data on applications that access corporate data in your environment but aren't included in the policy application rules. Users may need these applications to stay productive, but WIP blocks the users' access. This information is useful to maintain your Windows Information Protection policies in Configuration Manager. 
+You can configure Windows 10 version 1703 and later devices with a [Windows Information Protection](/windows/threat-protection/windows-information-protection/protect-enterprise-data-using-wip) (WIP) policy. They report diagnostic data on applications that access corporate data in your environment but aren't included in the policy application rules. Users may need these applications to stay productive, but WIP blocks the users' access. This information is useful to maintain your Windows Information Protection policies in Configuration Manager. 
 
 -->

@@ -10,12 +10,12 @@ ms.assetid: 55ae86a7-f0ab-4c09-b4da-89cd0e7fa0e0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1b7ada6f54a7642817a321937a4d7128994d5538
-ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
+ms.openlocfilehash: e53c61052b8ee1b217a5268e8877dc4f4415f477
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83823975"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692617"
 ---
 # <a name="configure-reporting-in-configuration-manager"></a>Konfigurace vytváření sestav v Configuration Manager
 
@@ -39,7 +39,7 @@ SQL Server Reporting Services je platforma pro generování sestav založená na
 
 Při spuštění sestavy se komponenta služby Reporting Services připojí k databázi lokality Configuration Manager a načte data.  
 
-Předtím, než budete moci nainstalovat bod služby Reporting Services do Configuration Manager lokality, nainstalujte a nakonfigurujte SQL Server Reporting Services v cílovém systému lokality. Další informace najdete v tématu [instalace SQL Server Reporting Services](https://docs.microsoft.com/sql/reporting-services/install-windows/install-reporting-services).  
+Předtím, než budete moci nainstalovat bod služby Reporting Services do Configuration Manager lokality, nainstalujte a nakonfigurujte SQL Server Reporting Services v cílovém systému lokality. Další informace najdete v tématu [instalace SQL Server Reporting Services](/sql/reporting-services/install-windows/install-reporting-services).  
 
 ### <a name="verify-sql-server-reporting-services-installation"></a>Ověření instalace SQL Server Reporting Services
 
@@ -66,7 +66,7 @@ Pro ověření, zda je služba SQL Server Reporting Services nainstalovaná a je
 
 1. V počítači se spuštěnou konzolou Configuration Manager otevřete Editor registru systému Windows.  
 
-2. Přejděte na `HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\ConfigMgr10\AdminUI\Reporting`.
+2. Přejděte na adresu `HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\ConfigMgr10\AdminUI\Reporting`.
 
 3. Otevřete klíč **klávesu ReportBuilderApplicationManifestName** a upravte data hodnoty.  
 
@@ -96,11 +96,11 @@ Než budete moci zobrazit nebo spravovat sestavy v konzole Configuration Manager
 
 - Při instalaci bodu služby Reporting Services zadejte [účet bodu služby Reporting Services](../../plan-design/hierarchy/accounts.md#reporting-services-point-account). Pro uživatele z jiné domény pro spuštění sestavy vytvořte obousměrný vztah důvěryhodnosti mezi doménami. V opačném případě se spuštění sestavy nezdařilo.
 
-### <a name="install-the-reporting-services-point-on-a-site-system"></a><a name="bkmk_install" />Instalace bodu služby Reporting Services do systému lokality  
+### <a name="install-the-reporting-services-point-on-a-site-system"></a><a name="bkmk_install" /> Instalace bodu služby Reporting Services do systému lokality  
 
 Další informace o konfiguraci systémů lokality najdete v tématu [Instalace rolí systému lokality](../deploy/configure/install-site-system-roles.md).  
 
-1. V konzole Configuration Manager klikněte na pracovní prostor **Správa** , rozbalte položku **Konfigurace lokality**a pak vyberte uzel **servery a role systému lokality** .  
+1. V konzole Configuration Manager klikněte na pracovní prostor **Správa** , rozbalte položku **Konfigurace lokality**a pak vyberte uzel  **servery a role systému lokality** .  
 
 1. Přidejte bod služby Reporting Services na nový nebo existující server systému lokality:  
 
@@ -144,7 +144,7 @@ Po dokončení Průvodce vytvoří Configuration Manager složky sestav ve služ
 > [!TIP]  
 > Chcete-li zobrazit seznam pouze systémů lokalit, které jsou hostiteli role lokality bodu služby Reporting Services, klikněte pravým tlačítkem myši na **servery a role systému lokality**a vyberte **bod služby Reporting Services**.  
 
-### <a name="languages-for-reports"></a><a name="bkmk_languages" />Jazyky pro sestavy
+### <a name="languages-for-reports"></a><a name="bkmk_languages" /> Jazyky pro sestavy
 
 <!-- SCCMDocs#1067 -->
 
@@ -211,7 +211,7 @@ Když Configuration Manager nainstaluje bod služby Reporting Services, přidá 
 
 - **Správci sestav nástroje ConfigMgr**: Uživatelé přiřazení k této roli zabezpečení mohou provádět všechny úlohy související s vytvářením sestav v Configuration Manager.  
 
-## <a name="verify-installation"></a><a name="bkmk_verify"></a>Ověřit instalaci
+## <a name="verify-installation"></a><a name="bkmk_verify"></a> Ověřit instalaci
 
 Ověřte instalaci bodu služby Reporting Services tak, že prohlížíte konkrétní stavové zprávy a položky souboru protokolu. Úspěšnost instalace bodu služby Reporting Services ověříte pomocí následujícího postupu.  
 
@@ -241,7 +241,7 @@ Projděte si tento soubor protokolu od okamžiku, kdy byl úspěšně nainstalov
 K dispozici je mnoho možností, jak můžete vytvářet sestavy v SQL Server Reporting Services. Když vytváříte nebo upravujete sestavy v konzole Configuration Manager, Configuration Manager otevře Tvůrce sestav k použití jako prostředí pro vytváření obsahu. Bez ohledu na to, jakým způsobem vytváříte sestavy Configuration Manager, potřebujete certifikát podepsaný svým držitelem pro ověřování serveru databáze serveru lokality.
 
 > [!NOTE]  
-> Další informace o vytváření sestav pomocí SQL Server Reporting Services najdete v tématu [prostředí pro vytváření Tvůrce sestav](https://docs.microsoft.com/sql/reporting-services/tools/report-builder-authoring-environment-ssrs).  
+> Další informace o vytváření sestav pomocí SQL Server Reporting Services najdete v tématu [prostředí pro vytváření Tvůrce sestav](/sql/reporting-services/tools/report-builder-authoring-environment-ssrs).  
 
 Configuration Manager automaticky nainstaluje certifikát na server lokality a všechny role poskytovatele služby SMS. Můžete vytvářet nebo upravovat sestavy z konzoly Configuration Manager, když je spustíte z některého z těchto serverů.
 

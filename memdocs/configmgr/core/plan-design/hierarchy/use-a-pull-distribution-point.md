@@ -10,12 +10,12 @@ ms.assetid: 7d8f530b-1a39-4a9d-a2f0-675b516da7e4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c243897a4c52eff04263325b998c4b23d6b3dde4
-ms.sourcegitcommit: ad4b3e4874a797b755e774ff84429b5623f17c5c
+ms.openlocfilehash: 5f0993f6120735f8a614801f9ac14c29870ffefe
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82166583"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692583"
 ---
 # <a name="use-a-pull-distribution-point-with-configuration-manager"></a>Použití distribučního bodu pro vyžádání obsahu s Configuration Manager
 
@@ -134,7 +134,7 @@ Při konfiguraci distribučního bodu pro vyžádání obsahu zadejte jeden nebo
 
 - Pro správu přenosu obsahu používají distribuční body pro vyžádání obsahu komponentu **CCMFramework** . Klient Configuration Manager zahrnuje tuto součást.  
 
-- Pokud povolíte distribuční bod pro vyžádání obsahu, lokalita nainstaluje **služby PullDP. msi**. Tento instalační program také přidá komponentu CCMFramework. Rozhraní nevyžaduje klienta Configuration Manager.  
+- Pokud povolíte distribuční bod pro vyžádání obsahu, lokalita nástroje nainstaluje **pulldp.msi**. Tento instalační program také přidá komponentu CCMFramework. Rozhraní nevyžaduje klienta Configuration Manager.  
 
 - Po instalaci distribučního bodu pro vyžádání obsahu primárně používá službu **ccmexec** ke fungování.  
 
@@ -148,11 +148,11 @@ Při konfiguraci distribučního bodu pro vyžádání obsahu zadejte jeden nebo
 > [!TIP]
 > Pokud se v souborech protokolu po přidání distribučního bodu pro vyžádání obsahu zobrazí chyby protokolu HTTP 403, proveďte následující změnu:
 >
-> 1. Ve zdrojovém distribučním bodě nastavte následující hodnotu registru:`HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL, ClientAuthTrustMode = 2 (REG_DWORD)`
+> 1. Ve zdrojovém distribučním bodě nastavte následující hodnotu registru: `HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL, ClientAuthTrustMode = 2 (REG_DWORD)`
 > 1. Restartujte zdrojový server distribučního bodu.
 >
-> Distribuční bod pro vyžádání obsahu by měl začít stahovat obsah ze zdroje. Další informace o tomto klíči registru najdete v tématu [Přehled TLS-SSL (Schannel SSP)](https://docs.microsoft.com/windows-server/security/tls/what-s-new-in-tls-ssl-schannel-ssp-overview).<!-- SCCMDocs#1973 -->
+> Distribuční bod pro vyžádání obsahu by měl začít stahovat obsah ze zdroje. Další informace o tomto klíči registru najdete v tématu [Přehled TLS-SSL (Schannel SSP)](/windows-server/security/tls/what-s-new-in-tls-ssl-schannel-ssp-overview).<!-- SCCMDocs#1973 -->
 
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
 
 [Základní koncepty správy obsahu](fundamental-concepts-for-content-management.md)

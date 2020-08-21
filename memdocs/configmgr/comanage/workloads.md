@@ -5,17 +5,17 @@ description: Přečtěte si o úlohách, které můžete přepnout z Configurati
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 04/15/2020
+ms.date: 08/20/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 4c90befe-9c4e-4c27-a947-625887e15052
-ms.openlocfilehash: b03b57ff9797eb4fbe5a269723e98d39ae438803
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: e44576401d601c8c510aaf50b28e5924f5c4d6db
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127218"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694861"
 ---
 # <a name="co-management-workloads"></a>Úlohy spolusprávy
 
@@ -43,19 +43,19 @@ Spoluspráva podporuje následující úlohy:
 
 Zásady dodržování předpisů definují pravidla a nastavení, která musí zařízení dodržovat, aby se dalo považovat za zařízení, které dodržuje zásady podmíněného přístupu. Pomocí zásad dodržování předpisů můžete také monitorovat a opravovat problémy s kompatibilitou zařízení nezávisle na podmíněném přístupu. Od verze Configuration Manager 1910 můžete přidat hodnocení vlastních standardních hodnot konfigurace jako pravidla pro vyhodnocení zásad dodržování předpisů. Další informace najdete v tématu [Zahrnutí vlastních standardních hodnot konfigurace jako součásti posouzení zásad dodržování předpisů](../compliance/deploy-use/create-configuration-baselines.md#bkmk_CAbaselines).
 
-Další informace o funkci Intune najdete v tématu [zásady dodržování předpisů pro zařízení](https://docs.microsoft.com/intune/device-compliance-get-started).  
+Další informace o funkci Intune najdete v tématu [zásady dodržování předpisů pro zařízení](/intune/device-compliance-get-started).  
 
 ## <a name="windows-update-policies"></a>Zásady web Windows Update
 
 Zásady web Windows Update pro firmy umožňují nakonfigurovat zásady odložení pro aktualizace funkcí Windows 10 nebo aktualizace kvality pro zařízení s Windows 10 spravovaná přímo pomocí web Windows Update pro firmy.
 
-Další informace o funkci Intune najdete v tématu [Konfigurace zásad odložení web Windows Update pro firmy](https://docs.microsoft.com/intune/windows-update-for-business-configure).  
+Další informace o funkci Intune najdete v tématu [Konfigurace zásad odložení web Windows Update pro firmy](/intune/windows-update-for-business-configure).  
 
 ## <a name="resource-access-policies"></a>Zásady přístupu k prostředkům
 
 Zásady přístupu k prostředkům konfigurují nastavení VPN, Wi-Fi, e-mailu a certifikátů na zařízeních.
 
-Další informace o funkci Intune najdete v tématu [nasazení profilů přístupu k prostředkům](https://docs.microsoft.com/intune/device-profiles).
+Další informace o funkci Intune najdete v tématu [nasazení profilů přístupu k prostředkům](/intune/device-profiles).
 
 > [!Note]  
 > Úlohy přístupu k prostředkům jsou také součástí konfigurace zařízení. Tyto zásady spravuje Intune při přepínání úlohy [Konfigurace zařízení](#device-configuration) .
@@ -76,7 +76,7 @@ Další informace o funkci Intune najdete v tématu [nasazení profilů přístu
 - Centrum zabezpečení v programu Windows Defender  
 - Rozšířená ochrana před internetovými útoky v programu Windows Defender (nyní označovaná jako Microsoft Defender Threat Protection)
 
-Další informace o funkci Intune najdete v tématu [Endpoint Protection Microsoft Intune](https://docs.microsoft.com/intune/endpoint-protection-windows-10).
+Další informace o funkci Intune najdete v tématu [Endpoint Protection Microsoft Intune](/intune/endpoint-protection-windows-10).
 
 > [!Note]  
 > Když přepnete tuto úlohu, zásady Configuration Manager zůstanou na zařízení, dokud je zásady Intune nepřepíší. Tím se zajistí, že zařízení má při přechodu stále zásady ochrany.
@@ -95,7 +95,7 @@ Další informace o funkci Intune najdete v tématu [Endpoint Protection Microso
 
 Nastavení můžete i nadále nasazovat z Configuration Manager do spoluspravovaných zařízení, i když je Intune autorita pro konfiguraci zařízení. Tato výjimka se dá použít ke konfiguraci nastavení, které vaše organizace vyžaduje, ale ještě není v Intune dostupná. Zadejte tuto výjimku pro [standardní hodnoty konfigurace Configuration Manager](../compliance/deploy-use/create-configuration-baselines.md). Tuto možnost povolte, pokud chcete při vytváření standardních hodnot **vždycky použít tyto standardní hodnoty i pro spoluspravované klienty** . Později ji můžete změnit na kartě **Obecné** ve vlastnostech existujícího směrného plánu.  
 
-Další informace o funkci Intune najdete v tématu [Vytvoření profilu zařízení v Microsoft Intune](https://docs.microsoft.com/intune/device-profile-create).  
+Další informace o funkci Intune najdete v tématu [Vytvoření profilu zařízení v Microsoft Intune](/intune/device-profile-create).  
 
 > [!NOTE]
 > Když přepnete úlohu konfigurace zařízení, zahrnuje taky zásady pro funkci Windows Information Protection, která není zahrnutá do úlohy Endpoint Protection.<!-- 4184095 -->
@@ -112,7 +112,7 @@ Toto zatížení spravuje Microsoft 365 aplikace na spoluspravovaných zařízen
 
 - Je k dispozici nová globální podmínka, **jedná se o aplikace Office 365 spravované přes Intune na zařízení**. Tato podmínka se ve výchozím nastavení přidá jako požadavek pro nové aplikace Office 365. Při přechodu na tuto úlohu nesplňuje spoluspravovaná klienti požadavek na aplikaci. Pak neinstalují Office 365 nasazené prostřednictvím Configuration Manager.  
 
-Další informace o funkci Intune najdete v článku [přiřazení aplikací Office 365 k zařízením s Windows 10 pomocí Microsoft Intune](https://docs.microsoft.com/intune/apps-add-office365).
+Další informace o funkci Intune najdete v článku [přiřazení aplikací Office 365 k zařízením s Windows 10 pomocí Microsoft Intune](/intune/apps-add-office365).
 
 ## <a name="client-apps"></a>Klientské aplikace
 
@@ -120,7 +120,7 @@ Další informace o funkci Intune najdete v článku [přiřazení aplikací Off
 
 Pomocí Intune můžete spravovat klientské aplikace a skripty PowerShellu na spoluspravovaných zařízeních s Windows 10. Po přechodu na tuto úlohu jsou všechny dostupné aplikace nasazené z Intune dostupné v Portál společnosti. Aplikace, které nasazujete z Configuration Manager, jsou k dispozici v centru softwaru.
 
-Další informace o funkci Intune najdete v tématu [co je Správa aplikací Microsoft Intune?](https://docs.microsoft.com/intune/app-management).
+Další informace o funkci Intune najdete v tématu [co je Správa aplikací Microsoft Intune?](/intune/app-management).
 
 > [!Tip]  
 > Tato funkce byla poprvé představena ve verzi 1806 jako [funkce předběžné verze](../core/servers/manage/pre-release-features.md). Od verze 2002 už není k dispozici funkce předběžného vydání.  
@@ -131,9 +131,10 @@ Pokud ve verzi 1910 povolíte v Configuration Manager distribučních bodech Mic
 
 ## <a name="diagram-for-app-workloads"></a>Diagram pro úlohy aplikací
 
-![Diagram úloh aplikací spolusprávy](media/co-management-apps.svg)
+:::image type="content" source="media/co-management-apps.svg" alt-text="Diagram úloh aplikací spolusprávy" lightbox="media/co-management-apps.svg":::
 
-[Zobrazit diagram v plné velikosti](media/co-management-apps.svg)
+> [!TIP]
+> Počínaje verzí 2006 můžete nakonfigurovat Portál společnosti, aby zobrazovaly také Configuration Manager aplikace. Pokud změníte toto prostředí portálu aplikací, změní se chování popsané ve výše uvedeném diagramu. Další informace najdete v tématu [použití portál společnosti aplikace na spoluspravovaných zařízeních](company-portal.md).<!--CMADO-3601237,INADO-4297660-->
 
 ## <a name="known-issues"></a>Známé problémy
 
@@ -147,11 +148,13 @@ Pokud chcete tento problém obejít, použijte CleanUpPolicy.xml pomocí ConfigS
    <?xml version="1.0" encoding="UTF-8"?>
    <SecurityPolicy xmlns="http://forefront.microsoft.com/FEP/2010/01/PolicyData" Name="FEP clean-up policy"><PolicySection Name="FEP.AmPolicy"><LocalGroupPolicySettings><IgnoreKey Name="SOFTWARE\Policies\Microsoft\Microsoft Antimalware"/><IgnoreKey Name="SOFTWARE\Policies\Microsoft\Windows Defender"/></LocalGroupPolicySettings></PolicySection></SecurityPolicy>
    ```
+
 1. Otevřete příkazový řádek se zvýšenými oprávněními na `ConfigSecurityPolicy.exe` . Obvykle je tento spustitelný soubor v jednom z následujících adresářů:
    - C:\Program Files\Windows Defender
    - C:\Program Files\Microsoft – klient zabezpečení
+
 1. Z příkazového řádku předejte soubor XML, aby se zásady vyčistily. Například, `ConfigSecurityPolicy.exe C:\temp\CleanUpPolicy.xml`.  
 
 ## <a name="next-steps"></a>Další kroky
 
-[Jak přepínat úlohy](how-to-switch-workloads.md)  
+[Jak přepínat úlohy](how-to-switch-workloads.md)

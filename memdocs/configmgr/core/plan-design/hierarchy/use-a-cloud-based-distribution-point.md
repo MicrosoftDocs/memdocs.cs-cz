@@ -10,12 +10,12 @@ ms.assetid: 3cd9c725-6b42-427d-9191-86e67f84e48c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 52c2b70d2b094d5a89d80aafa61f1db67a53816f
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: b488e0953648b42baa59dc347b0bc942bac291fe
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83987710"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692566"
 ---
 # <a name="use-a-cloud-distribution-point-in-configuration-manager"></a>Použití distribučního bodu cloudu v Configuration Manager
 
@@ -47,7 +47,7 @@ Tento článek vám pomůže získat informace o distribučním bodu cloudu, nap
 - [Nejčastější dotazy](#bkmk_faq)
 
 
-## <a name="features-and-benefits"></a><a name="bkmk_features"></a>Funkce a výhody
+## <a name="features-and-benefits"></a><a name="bkmk_features"></a> Funkce a výhody
 
 ### <a name="features"></a>Funkce
 
@@ -72,7 +72,7 @@ Distribuční bod cloudu přináší následující další výhody:
 - Počínaje verzí 1806 použijte distribuční body cloudu jako umístění zdroje pro distribuční body pro vyžádání obsahu.  
 
 
-## <a name="topology-design"></a><a name="bkmk_topology"></a>Návrh topologie
+## <a name="topology-design"></a><a name="bkmk_topology"></a> Návrh topologie
 
 Nasazení a provoz distribučního bodu cloudu zahrnuje následující součásti:  
 
@@ -89,7 +89,7 @@ Nasazení a provoz distribučního bodu cloudu zahrnuje následující součást
 ### <a name="azure-resource-manager"></a>Azure Resource Manager
 
 <!--1322209-->
-Počínaje verzí 1806 vytvořte distribuční bod cloudu pomocí **nasazení Azure Resource Manager**. [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview) je moderní platforma pro správu všech prostředků řešení jako jedné entity, která se označuje jako [Skupina prostředků](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview#resource-groups). Při nasazování cloudového distribučního bodu s Azure Resource Manager lokalita používá Azure Active Directory (Azure AD) k ověření a vytvoření potřebných cloudových prostředků. Toto moderní nasazení nevyžaduje klasický certifikát pro správu Azure.  
+Počínaje verzí 1806 vytvořte distribuční bod cloudu pomocí **nasazení Azure Resource Manager**. [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) je moderní platforma pro správu všech prostředků řešení jako jedné entity, která se označuje jako [Skupina prostředků](/azure/azure-resource-manager/resource-group-overview#resource-groups). Při nasazování cloudového distribučního bodu s Azure Resource Manager lokalita používá Azure Active Directory (Azure AD) k ověření a vytvoření potřebných cloudových prostředků. Toto moderní nasazení nevyžaduje klasický certifikát pro správu Azure.  
 
 > [!Note]  
 > Tato funkce nepovoluje podporu pro poskytovatele cloudových služeb Azure (CSP). Nasazení distribučního bodu cloudu pomocí Azure Resource Manager nadále používá klasickou cloudovou službu, kterou CSP nepodporuje. Další informace najdete v tématu [dostupné služby Azure v CSP Azure](/azure/cloud-solution-provider/overview/azure-csp-available-services).  
@@ -130,7 +130,7 @@ Při použití distribučního bodu cloudu ve vaší hierarchii vám při pláno
 - Zálohujte a uložte kopii ověřovacího certifikátu serveru. Pokud používáte nasazení klasické služby v Azure, zálohujte a uložte kopii certifikátu pro správu Azure. Když obnovíte Configuration Manager primární lokalitu na jiný server, musíte znovu naimportovat certifikáty.  
 
 
-## <a name="requirements"></a><a name="bkmk_requirements"></a>Požadavků
+## <a name="requirements"></a><a name="bkmk_requirements"></a> Požadavků
 
 - K hostování služby potřebujete **předplatné Azure** .  
 
@@ -156,7 +156,7 @@ Při použití distribučního bodu cloudu ve vaší hierarchii vám při pláno
 - Klientská zařízení vyžadují **připojení k Internetu**a musí používat **protokol IPv4**.  
 
 
-## <a name="specifications"></a><a name="bkmk_spec"></a>Tématech
+## <a name="specifications"></a><a name="bkmk_spec"></a> Tématech
 
 - Distribuční bod cloudu podporuje všechny verze systému Windows, které jsou uvedeny v části [podporované operační systémy pro klienty a zařízení](../configs/supported-operating-systems-for-clients-and-devices.md).  
 
@@ -191,7 +191,7 @@ Při použití distribučního bodu cloudu ve vaší hierarchii vám při pláno
 - Distribuční bod cloudu nelze konfigurovat jako distribuční bod pro vyžádání obsahu.  
 
 
-## <a name="cost"></a><a name="bkmk_cost"></a>Ze
+## <a name="cost"></a><a name="bkmk_cost"></a> Ze
 
 <!--501018-->
 > [!IMPORTANT]  
@@ -244,16 +244,16 @@ Distribuční bod cloudu používá následující součásti Azure, které se �
 
 - Distribuční body cloudu využívají v závislosti na modelu nasazení následující standardní úložiště objektů BLOB:  
 
-    - Nasazení Azure Resource Manager používá místně redundantní úložiště Azure (LRS). Tato změna snižuje náklady na účet úložiště. Klasické nasazení nepoužívá další funkce GRS. Další informace najdete v tématu [místně redundantní úložiště](https://docs.microsoft.com/azure/storage/common/storage-redundancy-lrs).  
+    - Nasazení Azure Resource Manager používá místně redundantní úložiště Azure (LRS). Tato změna snižuje náklady na účet úložiště. Klasické nasazení nepoužívá další funkce GRS. Další informace najdete v tématu [místně redundantní úložiště](/azure/storage/common/storage-redundancy-lrs).  
 
-    - Klasické nasazení s Configuration Manager verze 1810 nebo starší používá geograficky redundantní úložiště Azure (GRS). Další informace najdete v tématu [geograficky redundantní úložiště](https://docs.microsoft.com/azure/storage/common/storage-redundancy-grs).  
+    - Klasické nasazení s Configuration Manager verze 1810 nebo starší používá geograficky redundantní úložiště Azure (GRS). Další informace najdete v tématu [geograficky redundantní úložiště](/azure/storage/common/storage-redundancy-grs).  
 
 #### <a name="other-costs"></a>Další náklady
 
 - Každá cloudová služba má dynamickou IP adresu. Každý z různých distribučních bodů cloudu používá novou dynamickou IP adresu. Přidání dalších virtuálních počítačů na cloudovou službu tyto adresy nezvyšuje.  
 
 
-## <a name="ports-and-data-flow"></a><a name="bkmk_dataflow"></a>Porty a tok dat
+## <a name="ports-and-data-flow"></a><a name="bkmk_dataflow"></a> Porty a tok dat
 
 Pro cloudový distribuční bod existují dva primární datové toky:  
 
@@ -288,7 +288,7 @@ Když klient použije distribuční bod cloudu jako umístění obsahu:
 6. Pokud klient důvěřuje ověřovacímu certifikátu serveru distribučního bodu cloudu, připojí se ke službě Azure Storage a stáhne obsah.
 
 
-## <a name="performance-and-scale"></a><a name="bkmk_perf"></a>Výkon a škálování
+## <a name="performance-and-scale"></a><a name="bkmk_perf"></a> Výkon a škálování
 
 <!--494872-->
 
@@ -308,7 +308,7 @@ Distribuční bod cloudu používá dva virtuální počítače Azure jako front
 Služba Azure Storage podporuje pro jeden soubor 500 požadavků za sekundu. Testování výkonu jednoho cloudového distribučního bodu, který podporuje distribuci jednoho souboru 100 MB na 50 000 klientů za 24 hodin.<!--512106-->  
 
 
-## <a name="certificates"></a><a name="bkmk_certs"></a>Certifikáty  
+## <a name="certificates"></a><a name="bkmk_certs"></a> Certifikáty  
 
 V závislosti na návrhu distribučního bodu cloudu budete potřebovat jeden nebo více digitálních certifikátů.  
 
@@ -357,7 +357,7 @@ Pokud používáte metodu nasazení Azure Classic s Configuration Manager verze 
 Pro snížení složitosti použijte stejný certifikát pro správu Azure pro všechna nasazení Classic cloudových distribučních bodů a bran pro správu cloudu napříč všemi předplatnými Azure a všemi Configuration Manager lokalitami.
 
 
-## <a name="frequently-asked-questions-faq"></a><a name="bkmk_faq"></a>Nejčastější dotazy – Nejčastější dotazy
+## <a name="frequently-asked-questions-faq"></a><a name="bkmk_faq"></a> Nejčastější dotazy – Nejčastější dotazy
 
 ### <a name="does-a-client-need-a-certificate-to-download-content-from-a-cloud-distribution-point"></a>Potřebuje klient certifikát ke stažení obsahu z distribučního bodu cloudu?
 
@@ -365,7 +365,7 @@ Certifikát ověřování klienta není povinný. Klient musí důvěřovat ově
 
 ### <a name="can-my-on-premises-clients-use-a-cloud-distribution-point"></a>Můžou místní klienti používat distribuční bod cloudu?
 
-Yes. Pokud chcete, aby klienti ve vaší interní síti používali distribuční bod cloudu, musí být ve stejné skupině hranic jako klienti. Klienti nastavují prioritu distribučních bodů cloudu jako poslední v seznamu zdrojů obsahu, protože jsou spojené s stažením obsahu mimo Azure. Cloudový distribuční bod se proto obvykle používá jako záložní zdroj pro intranetové klienty. Pokud chcete vytvořit návrh cloudu, proveďte odpovídajícím způsobem návrh skupin hranic. Další informace najdete v tématu [Konfigurace skupin hranic](../../servers/deploy/configure/boundary-groups.md).  
+Ano. Pokud chcete, aby klienti ve vaší interní síti používali distribuční bod cloudu, musí být ve stejné skupině hranic jako klienti. Klienti nastavují prioritu distribučních bodů cloudu jako poslední v seznamu zdrojů obsahu, protože jsou spojené s stažením obsahu mimo Azure. Cloudový distribuční bod se proto obvykle používá jako záložní zdroj pro intranetové klienty. Pokud chcete vytvořit návrh cloudu, proveďte odpovídajícím způsobem návrh skupin hranic. Další informace najdete v tématu [Konfigurace skupin hranic](../../servers/deploy/configure/boundary-groups.md).  
 
 ### <a name="do-i-need-azure-expressroute"></a>Potřebuji Azure ExpressRoute?
 
@@ -375,11 +375,11 @@ Pokud vaše organizace používá ExpressRoute, izolujte předplatné Azure pro 
 
 ### <a name="do-i-need-to-maintain-the-azure-virtual-machines"></a>Potřebuji zachovat virtuální počítače Azure?
 
-Není nutná žádná údržba. Návrh distribučního bodu cloudu používá platformu Azure jako službu (PaaS). Pomocí předplatného, které zadáte, Configuration Manager vytvoří nezbytné virtuální počítače, úložiště a sítě. Azure zabezpečuje a aktualizuje virtuální počítače. Tyto virtuální počítače nejsou součástí vašeho místního prostředí, protože se jedná o případ s infrastrukturou jako službou (IaaS). Cloudový distribuční bod je PaaS, který rozšiřuje vaše Configuration Manager prostředí do cloudu. Další informace najdete v tématu [výhody zabezpečení pro model cloudové služby PaaS](https://docs.microsoft.com/azure/security/security-paas-deployments#security-advantages-of-a-paas-cloud-service-model).  
+Není nutná žádná údržba. Návrh distribučního bodu cloudu používá platformu Azure jako službu (PaaS). Pomocí předplatného, které zadáte, Configuration Manager vytvoří nezbytné virtuální počítače, úložiště a sítě. Azure zabezpečuje a aktualizuje virtuální počítače. Tyto virtuální počítače nejsou součástí vašeho místního prostředí, protože se jedná o případ s infrastrukturou jako službou (IaaS). Cloudový distribuční bod je PaaS, který rozšiřuje vaše Configuration Manager prostředí do cloudu. Další informace najdete v tématu [výhody zabezpečení pro model cloudové služby PaaS](/azure/security/security-paas-deployments#security-advantages-of-a-paas-cloud-service-model).  
 
 ### <a name="does-the-cloud-distribution-point-use-azure-cdn"></a>Používá distribuční bod cloudu Azure CDN?
 
-Azure Content Delivery Network (CDN) je globální řešení pro rychlé doručování obsahu s vysokou šířkou pásma díky ukládání obsahu do mezipaměti v strategicky umístěných fyzických uzlech po celém světě. Další informace najdete v tématu [co je Azure CDN?](https://docs.microsoft.com/azure/cdn/cdn-overview).
+Azure Content Delivery Network (CDN) je globální řešení pro rychlé doručování obsahu s vysokou šířkou pásma díky ukládání obsahu do mezipaměti v strategicky umístěných fyzických uzlech po celém světě. Další informace najdete v tématu [co je Azure CDN?](/azure/cdn/cdn-overview).
 
 Distribuční bod cloudu Configuration Manager v tuto chvíli nepodporuje Azure CDN.
 

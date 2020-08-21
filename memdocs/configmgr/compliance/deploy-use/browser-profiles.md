@@ -10,12 +10,12 @@ ms.topic: how-to
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.assetid: 76477b4d-df41-4b25-8318-7d18d46ca2c6
-ms.openlocfilehash: 57eb9bbaed39ec463afc00d12202a9829729a086
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: deededfe18275837ae93859c4075837eac870c35
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86240542"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694776"
 ---
 # <a name="configure-microsoft-edge-legacy-settings-in-configuration-manager"></a>Konfigurace nastavení Microsoft Edge starší verze v Configuration Manager
 
@@ -27,11 +27,11 @@ ms.locfileid: "86240542"
 *Platí pro: Configuration Manager (Current Branch)*
 
 <!-- 1357310 -->
-Pro zákazníky, kteří používají [starší verzi webového prohlížeče Microsoft Edge](https://docs.microsoft.com/microsoft-edge/deploy/) v klientech Windows 10, vytvořte Configuration Manager zásady dodržování předpisů pro konfiguraci nastavení prohlížeče.
+Pro zákazníky, kteří používají [starší verzi webového prohlížeče Microsoft Edge](/microsoft-edge/deploy/) v klientech Windows 10, vytvořte Configuration Manager zásady dodržování předpisů pro konfiguraci nastavení prohlížeče.
 
 Tato zásada platí jenom pro klienty ve Windows 10, verze 1703 nebo novější a Microsoft Edge starší verze 45 a starší. <!--511552-->
 
-Další informace o správě Microsoft Edge verze 77 nebo novější s Configuration Manager najdete v tématu [nasazení Microsoft Edge, verze 77 a novější](../../apps/deploy-use/deploy-edge.md). Další informace o konfiguraci zásad pro Microsoft Edge verze 77 nebo novější najdete v tématu [Microsoft Edge-policies](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies).
+Další informace o správě Microsoft Edge verze 77 nebo novější s Configuration Manager najdete v tématu [nasazení Microsoft Edge, verze 77 a novější](../../apps/deploy-use/deploy-edge.md). Další informace o konfiguraci zásad pro Microsoft Edge verze 77 nebo novější najdete v tématu [Microsoft Edge-policies](/DeployEdge/microsoft-edge-policies).
 
 ## <a name="policy-settings"></a>Nastavení zásad
 
@@ -39,42 +39,42 @@ Tato zásada aktuálně obsahuje následující nastavení:
 
 - **Nastavit prohlížeč Microsoft Edge jako výchozí**: konfiguruje nastavení výchozí aplikace Windows 10 pro webový prohlížeč na Microsoft Edge.
 
-- Možnost **Povolení rozevíracího seznamu na panelu Adresa**: vyžaduje Windows 10 verze 1703 nebo novější. Další informace najdete v tématu [zásady prohlížeče AllowAddressBarDropdown](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowaddressbardropdown).
+- Možnost **Povolení rozevíracího seznamu na panelu Adresa**: vyžaduje Windows 10 verze 1703 nebo novější. Další informace najdete v tématu [zásady prohlížeče AllowAddressBarDropdown](/windows/client-management/mdm/policy-csp-browser#browser-allowaddressbardropdown).
 
-- **Povolí synchronizaci oblíbených položek mezi prohlížeči Microsoftu**: vyžaduje Windows 10 verze 1703 nebo novější. Další informace najdete v tématu [zásady prohlížeče SyncFavoritesBetweenIEAndMicrosoftEdge](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-syncfavoritesbetweenieandmicrosoftedge).
+- **Povolí synchronizaci oblíbených položek mezi prohlížeči Microsoftu**: vyžaduje Windows 10 verze 1703 nebo novější. Další informace najdete v tématu [zásady prohlížeče SyncFavoritesBetweenIEAndMicrosoftEdge](/windows/client-management/mdm/policy-csp-browser#browser-syncfavoritesbetweenieandmicrosoftedge).
 
-- **Povolení vymazání dat procházení při ukončení**: vyžaduje Windows 10 verze 1703 nebo novější. Další informace najdete v tématu [zásady prohlížeče ClearBrowsingDataOnExit](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-clearbrowsingdataonexit).
+- **Povolení vymazání dat procházení při ukončení**: vyžaduje Windows 10 verze 1703 nebo novější. Další informace najdete v tématu [zásady prohlížeče ClearBrowsingDataOnExit](/windows/client-management/mdm/policy-csp-browser#browser-clearbrowsingdataonexit).
 
-- **Povolit hlavičky do Not Track**: Další informace najdete v tématu [zásady prohlížeče AllowDoNotTrack](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowdonottrack).
+- **Povolit hlavičky do Not Track**: Další informace najdete v tématu [zásady prohlížeče AllowDoNotTrack](/windows/client-management/mdm/policy-csp-browser#browser-allowdonottrack).
 
-- **Povolení automatického vyplňování**: Další informace najdete v tématu [zásady prohlížeče AllowAutofill](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowautofill).
+- **Povolení automatického vyplňování**: Další informace najdete v tématu [zásady prohlížeče AllowAutofill](/windows/client-management/mdm/policy-csp-browser#browser-allowautofill).
 
-- **Povolení souborů cookie**: Další informace najdete v tématu [zásady prohlížeče AllowCookies](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowcookies).
+- **Povolení souborů cookie**: Další informace najdete v tématu [zásady prohlížeče AllowCookies](/windows/client-management/mdm/policy-csp-browser#browser-allowcookies).
 
-- **Povolení blokování automaticky otevíraných oken**: Další informace najdete v tématu [zásady prohlížeče AllowPopups](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowpopups).
+- **Povolení blokování automaticky otevíraných oken**: Další informace najdete v tématu [zásady prohlížeče AllowPopups](/windows/client-management/mdm/policy-csp-browser#browser-allowpopups).
 
-- **Povolení návrhů hledání na adresním řádku**: Další informace najdete v tématu [zásady prohlížeče AllowSearchSuggestionsinAddressBar](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsearchsuggestionsinaddressbar).
+- **Povolení návrhů hledání na adresním řádku**: Další informace najdete v tématu [zásady prohlížeče AllowSearchSuggestionsinAddressBar](/windows/client-management/mdm/policy-csp-browser#browser-allowsearchsuggestionsinaddressbar).
 
-- **Povolení odesílání intranetového provozu do Internet Exploreru**: Další informace najdete v tématu [zásady prohlížeče SendIntranetTraffictoInternetExplorer](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-sendintranettraffictointernetexplorer).
+- **Povolení odesílání intranetového provozu do Internet Exploreru**: Další informace najdete v tématu [zásady prohlížeče SendIntranetTraffictoInternetExplorer](/windows/client-management/mdm/policy-csp-browser#browser-sendintranettraffictointernetexplorer).
 
-- **Povolení správce hesel**: Další informace najdete v tématu [zásady prohlížeče AllowPasswordManager](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowpasswordmanager).
+- **Povolení správce hesel**: Další informace najdete v tématu [zásady prohlížeče AllowPasswordManager](/windows/client-management/mdm/policy-csp-browser#browser-allowpasswordmanager).
 
-- **Povolení vývojářské nástroje**: Další informace najdete v tématu [zásady prohlížeče AllowDeveloperTools](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowdevelopertools).
+- **Povolení vývojářské nástroje**: Další informace najdete v tématu [zásady prohlížeče AllowDeveloperTools](/windows/client-management/mdm/policy-csp-browser#browser-allowdevelopertools).
 
-- **Povolení rozšíření**: Další informace najdete v tématu [zásady prohlížeče AllowExtensions](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowextensions).
+- **Povolení rozšíření**: Další informace najdete v tématu [zásady prohlížeče AllowExtensions](/windows/client-management/mdm/policy-csp-browser#browser-allowextensions).
 
 > [!TIP]
-> Další informace o tom, jak nakonfigurovat tato a další nastavení pomocí zásad skupiny, najdete v článku [Zásady skupiny starší verze Microsoft Edge](https://docs.microsoft.com/microsoft-edge/deploy/group-policies/).
+> Další informace o tom, jak nakonfigurovat tato a další nastavení pomocí zásad skupiny, najdete v článku [Zásady skupiny starší verze Microsoft Edge](/microsoft-edge/deploy/group-policies/).
 
 ### <a name="configure-windows-defender-smartscreen-settings-for-microsoft-edge-legacy"></a>Konfigurace nastavení filtru SmartScreen v programu Windows Defender pro Microsoft Edge starší verze
 <!--1353701-->
-Tato zásada přidává tři nastavení [filtru SmartScreen v programu Windows Defender](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview). Zásady teď na stránce **nastavení filtru SmartScreen** obsahují následující dodatečná nastavení:
+Tato zásada přidává tři nastavení [filtru SmartScreen v programu Windows Defender](/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview). Zásady teď na stránce **nastavení filtru SmartScreen** obsahují následující dodatečná nastavení:
 
-- **Povolit SmartScreen**: Určuje, zda je povolen filtr SmartScreen v programu Windows Defender. Další informace najdete v tématu [zásady prohlížeče AllowSmartScreen](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen).
+- **Povolit SmartScreen**: Určuje, zda je povolen filtr SmartScreen v programu Windows Defender. Další informace najdete v tématu [zásady prohlížeče AllowSmartScreen](/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen).
 
-- **Uživatelé můžou přepsat výzvu filtru SmartScreen pro weby**: Určuje, jestli můžou uživatelé potlačit upozornění filtru SmartScreen v programu Windows Defender týkající se potenciálně škodlivých webů. Další informace najdete v tématu [zásady prohlížeče PreventSmartScreenPromptOverride](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride).
+- **Uživatelé můžou přepsat výzvu filtru SmartScreen pro weby**: Určuje, jestli můžou uživatelé potlačit upozornění filtru SmartScreen v programu Windows Defender týkající se potenciálně škodlivých webů. Další informace najdete v tématu [zásady prohlížeče PreventSmartScreenPromptOverride](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride).
 
-- **Uživatelé můžou přepsat výzvu filtru SmartScreen pro soubory**: Určuje, jestli můžou uživatelé potlačit upozornění filtru SmartScreen v programu Windows Defender týkající se stahování neověřených souborů. Další informace najdete v tématu [zásady prohlížeče PreventSmartScreenPromptOverrideForFiles](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles).
+- **Uživatelé můžou přepsat výzvu filtru SmartScreen pro soubory**: Určuje, jestli můžou uživatelé potlačit upozornění filtru SmartScreen v programu Windows Defender týkající se stahování neověřených souborů. Další informace najdete v tématu [zásady prohlížeče PreventSmartScreenPromptOverrideForFiles](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles).
 
 ## <a name="create-the-browser-profile"></a>Vytvořit profil prohlížeče
 

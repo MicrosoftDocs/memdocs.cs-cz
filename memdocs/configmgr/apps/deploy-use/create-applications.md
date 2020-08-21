@@ -10,12 +10,12 @@ ms.assetid: cc230ff4-7056-4339-a0a6-6a44cdbb2857
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 60ca31b73e31ea59b7a854f87262be7fdc4ab5c5
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: 42dc0f65e9e3765de35e6db7f5272aeeaab63fa2
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86240333"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695286"
 ---
 # <a name="create-applications-in-configuration-manager"></a>Vytváření aplikací v Configuration Manager
 
@@ -45,7 +45,7 @@ Tento článek obsahuje také následující informace o konfiguraci typu nasaze
 - [Návratové kódy](#bkmk_dt-return)
 - [Závislosti](#bkmk_dt-depend)
 
-## <a name="create-an-application"></a><a name="bkmk_create"></a>Vytvoření aplikace  
+## <a name="create-an-application"></a><a name="bkmk_create"></a> Vytvoření aplikace  
 
 1. V konzole Configuration Manager otevřete pracovní prostor **Knihovna softwaru** , rozbalte položku **Správa aplikací**a vyberte uzel **aplikace** .  
 
@@ -57,7 +57,7 @@ Potom automaticky zjistí nebo ručně určí informace o aplikaci:
 
 - [Ruční zadání](#bkmk_manual-app) informací o aplikaci pro vytváření složitějších aplikací. Definujte více než jeden typ nasazení, závislosti, metody detekce nebo požadavky.  
 
-### <a name="automatically-detect-application-information"></a><a name="bkmk_auto-app"></a>Automaticky zjišťovat informace o aplikaci  
+### <a name="automatically-detect-application-information"></a><a name="bkmk_auto-app"></a> Automaticky zjišťovat informace o aplikaci  
 
 1. Na stránce **Obecné** v nástroji Průvodce vytvořením aplikace vyberte možnost **automaticky zjišťovat informace o této aplikaci z instalačních souborů**.  
 
@@ -97,7 +97,7 @@ Nová aplikace se nyní zobrazí v uzlu **aplikace** konzoly Configuration Manag
 
 Chcete-li přidat další typy nasazení nebo nakonfigurovat další nastavení, přečtěte si téma [Vytvoření typů nasazení pro aplikaci](#bkmk_create-dt).  
 
-### <a name="manually-specify-application-information"></a><a name="bkmk_manual-app"></a>Ruční zadání informací o aplikaci  
+### <a name="manually-specify-application-information"></a><a name="bkmk_manual-app"></a> Ruční zadání informací o aplikaci  
 
 1. Na stránce **Obecné** v nástroji Průvodce vytvořením aplikace vyberte možnost **ručně zadat informace o aplikaci**a pak zvolte možnost **Další**.  
 
@@ -156,7 +156,7 @@ Chcete-li přidat další typy nasazení nebo nakonfigurovat další nastavení,
 
 Nová aplikace se nyní zobrazí v uzlu **aplikace** konzoly Configuration Manager.  
 
-## <a name="create-deployment-types-for-the-application"></a><a name="bkmk_create-dt"></a>Vytvoření typů nasazení pro aplikaci  
+## <a name="create-deployment-types-for-the-application"></a><a name="bkmk_create-dt"></a> Vytvoření typů nasazení pro aplikaci  
 
 Pokud [automaticky zjistíte informace o aplikaci](#bkmk_auto-app), možná nebudete muset dokončit některé kroky v této části.  
 
@@ -185,7 +185,7 @@ Existují tři způsoby, jak spustit Průvodce vytvořením typu nasazení:
 
 Pak použijte jeden z následujících postupů k [Automatické identifikaci](#bkmk_auto-dt) nebo [ručnímu určení](#bkmk_manual-dt) informací o typu nasazení.  
 
-### <a name="automatically-identify-deployment-type-information"></a><a name="bkmk_auto-dt"></a>Automaticky identifikovat informace o typu nasazení  
+### <a name="automatically-identify-deployment-type-information"></a><a name="bkmk_auto-dt"></a> Automaticky identifikovat informace o typu nasazení  
 
 1. Na stránce **Obecné** v Průvodci vytvořením typu nasazení:  
 
@@ -217,7 +217,7 @@ Pak použijte jeden z následujících postupů k [Automatické identifikaci](#b
 
 4. Klikněte na tlačítko **Další**a potom pokračujte na [Možnosti obsahu typu nasazení](#bkmk_dt-content).  
 
-### <a name="manually-specify-the-deployment-type-information"></a><a name="bkmk_manual-dt"></a>Zadat informace o typu nasazení ručně  
+### <a name="manually-specify-the-deployment-type-information"></a><a name="bkmk_manual-dt"></a> Zadat informace o typu nasazení ručně  
 
 1. Na stránce **Obecné** v nástroji Průvodce vytvořením typu nasazení vyberte v rozevíracím seznamu **typ** možnost Typ instalačního souboru aplikace pro tento typ nasazení.
 
@@ -227,7 +227,7 @@ Pak použijte jeden z následujících postupů k [Automatické identifikaci](#b
 
 4. Pokračovat na [Možnosti obsahu typu nasazení](#bkmk_dt-content).  
 
-### <a name="deployment-type-content-options"></a><a name="bkmk_dt-content"></a>Možnosti **obsahu** typu nasazení  
+### <a name="deployment-type-content-options"></a><a name="bkmk_dt-content"></a> Možnosti **obsahu** typu nasazení  
 
 Na stránce **obsah** zadejte následující informace:  
 
@@ -275,7 +275,7 @@ Když zobrazíte vlastnosti typu nasazení, na kartě **obsah** se zobrazí nás
 
 - **Povolit klientům sdílet obsah s ostatními klienty ve stejné podsíti:** Určete, jestli se má povolit použití funkce BranchCache pro stahování obsahu. Další informace najdete v tématu [BranchCache](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#branchcache). Služba BranchCache je na klientech vždy povolena. Toto nastavení bylo odebráno ve verzi 1802, protože klienti používají službu BranchCache, pokud je distribuční bod podporuje.  
 
-### <a name="deployment-type-task-sequence-options"></a><a name="bkmk_dt-ts"></a>Možnosti **pořadí úloh** typ nasazení
+### <a name="deployment-type-task-sequence-options"></a><a name="bkmk_dt-ts"></a> Možnosti **pořadí úloh** typ nasazení
 
 <!--3555953-->
 
@@ -290,14 +290,14 @@ Na stránce **pořadí úloh** zadejte následující informace:
 > [!TIP]  
 > Pokud se pořadí úkolů v seznamu nezobrazí, dvakrát ověřte, že neobsahují žádné kroky pro nasazení operačního systému ani upgrade operačního systému. Ověřte také, že není označena jako vysoce ovlivněné pořadí úkolů. Další informace najdete v části požadavky pro [typ nasazení pořadí úloh](../get-started/creating-windows-applications.md#bkmk_tsdt).
 
-### <a name="deployment-type-detection-method-options"></a><a name="bkmk_dt-detect"></a>Možnosti **metody detekce** typu nasazení
+### <a name="deployment-type-detection-method-options"></a><a name="bkmk_dt-detect"></a> Možnosti **metody detekce** typu nasazení
 
 Tento postup nastaví metodu detekce, která označuje přítomnost typu nasazení. Jinými slovy, bez ohledu na to, jestli je v zařízení s Windows už aplikace nainstalovaná. K vytvoření metody detekce použijte jednu ze dvou následujících metod:
 
 - [Konfigurovat pravidla pro detekci přítomnosti tohoto typu nasazení](#bkmk_detect-rule)
 - [Pro zjištění přítomnosti tohoto typu nasazení použít vlastní skript](#bkmk_detect-script)
 
-#### <a name="configure-rules-to-detect-the-presence-of-this-deployment-type"></a><a name="bkmk_detect-rule"></a>Konfigurovat pravidla pro detekci přítomnosti tohoto typu nasazení
+#### <a name="configure-rules-to-detect-the-presence-of-this-deployment-type"></a><a name="bkmk_detect-rule"></a> Konfigurovat pravidla pro detekci přítomnosti tohoto typu nasazení
 
 1. Na stránce **Metoda detekce** je ve výchozím nastavení vybrána možnost **Konfigurovat pravidla pro zjištění přítomnosti tohoto typu nasazení** . Vyberte možnost **Přidat klauzuli**.  
 
@@ -307,7 +307,7 @@ Tento postup nastaví metodu detekce, která označuje přítomnost typu nasazen
 
         - **Typ**: vyberte, jestli se jedná o soubor nebo složku.  
 
-        - **Cesta** (povinné): zadejte nebo vyhledejte místní cestu k zařízení, které obsahuje soubor nebo složku. Například `C:\Program Files`. Nelze zadat sdílenou cestu k síti. Pokud vyberete **Procházet**, přejděte do místního systému souborů nebo se připojte k zástupci, který chcete procházet.  
+        - **Cesta** (povinné): zadejte nebo vyhledejte místní cestu k zařízení, které obsahuje soubor nebo složku. Například, `C:\Program Files`. Nelze zadat sdílenou cestu k síti. Pokud vyberete **Procházet**, přejděte do místního systému souborů nebo se připojte k zástupci, který chcete procházet.  
 
         - **Název souboru nebo složky** (povinné): zadejte konkrétní název souboru nebo složky, který se má zjistit ve výše uvedené cestě. Pokud klient zjistí tento soubor nebo složku v zařízení, považuje aplikace za nainstalovanou na zařízení.  
 
@@ -315,9 +315,9 @@ Tento postup nastaví metodu detekce, která označuje přítomnost typu nasazen
 
     - **Registr**: zjišťuje, zda zadaný klíč registru nebo hodnota registru existují v klientském zařízení. Tato detekce indikuje, že je aplikace nainstalovaná. Zadejte následující další podrobnosti:  
 
-        - **Podregistr** (povinné): z rozevíracího seznamu vyberte podregistr registru. Například `HKEY_LOCAL_MACHINE`.  
+        - **Podregistr** (povinné): z rozevíracího seznamu vyberte podregistr registru. Například, `HKEY_LOCAL_MACHINE`.  
 
-        - **Key** (povinné): Zadejte klíč registru, ve kterém se má hledat ve výše uvedeném podregistru. Například `SOFTWARE\Microsoft\Office`.  
+        - **Key** (povinné): Zadejte klíč registru, ve kterém se má hledat ve výše uvedeném podregistru. Například, `SOFTWARE\Microsoft\Office`.  
 
         - **Hodnota** (volitelné): zadejte konkrétní hodnotu, která se má zjistit ve výše uvedeném klíči. Pokud chcete, aby klient rozpoznal (výchozí) hodnotu, povolte možnost **použít (výchozí) hodnotu klíče registru pro detekci**. Když zadáte hodnotu nebo povolíte tuto možnost, budete muset vybrat **datový typ**.  
 
@@ -349,7 +349,7 @@ Když vytvoříte více než jednu metodu detekce pro typ nasazení, můžete se
 
 *Pokračujte* k další části týkající se použití vlastního skriptu jako metody detekce. Nebo *přejděte* k možnosti [uživatelského prostředí](#bkmk_dt-ux) pro typ nasazení.
 
-#### <a name="use-a-custom-script-to-check-for-the-presence-of-a-deployment-type"></a><a name="bkmk_detect-script"></a>Zjištění přítomnosti typu nasazení pomocí vlastního skriptu  
+#### <a name="use-a-custom-script-to-check-for-the-presence-of-a-deployment-type"></a><a name="bkmk_detect-script"></a> Zjištění přítomnosti typu nasazení pomocí vlastního skriptu  
 
 1. Na stránce **Metoda detekce** zaškrtněte políčko **pro zjištění přítomnosti tohoto typu nasazení použít vlastní skript** . Pak vyberte **Edit** (Upravit).  
 
@@ -378,10 +378,10 @@ Pomocí následujících tabulek ověřte, zda je aplikace nainstalována z výs
 
 |STDOUT|STDERR|Výsledek skriptu|Stav detekce aplikace|
 |---------|---------|---------|---------|
-|Obsahovat|Obsahovat|Úspěch|Nenainstalováno|
+|Obsahovat|Obsahovat|Success|Nenainstalováno|
 |Obsahovat|Není prázdné|Selhání|Neznámý|
-|Není prázdné|Obsahovat|Úspěch|Nainstalovaný|
-|Není prázdné|Není prázdné|Úspěch|Nainstalovaný|
+|Není prázdné|Obsahovat|Success|Nainstalovaný|
+|Není prázdné|Není prázdné|Success|Nainstalovaný|
 
 ##### <a name="non-zero-exit-code"></a>Nenulový ukončovací kód
 
@@ -454,7 +454,7 @@ WScript.StdErr.Write "Completed"
 WScript.Quit(0)
 ```
 
-### <a name="deployment-type-user-experience-options"></a><a name="bkmk_dt-ux"></a>Možnosti **uživatelského prostředí** typu nasazení
+### <a name="deployment-type-user-experience-options"></a><a name="bkmk_dt-ux"></a> Možnosti **uživatelského prostředí** typu nasazení
 
 Tato nastavení určují, jak klient aplikace nainstaluje do zařízení a co se uživateli zobrazí.  
 
@@ -639,11 +639,11 @@ Když vytvoříte některé typy nasazení, Configuration Manager automaticky p�
 |15605    |Rychlé opakování|
 |15618    |Rychlé opakování|
 
-## <a name="additional-options-for-app-v-deployment-types"></a><a name="bkmk_appv"></a>Další možnosti pro typy nasazení App-V  
+## <a name="additional-options-for-app-v-deployment-types"></a><a name="bkmk_appv"></a> Další možnosti pro typy nasazení App-V  
 
 Nakonfigurujte další možnosti, které jsou jedinečné pro typy nasazení pro virtuální aplikace (App-V).  
 
-### <a name="app-v-deployment-type-content-options"></a><a name="bkmk_appv-content"></a>Možnosti **obsahu** typu nasazení sady App-V  
+### <a name="app-v-deployment-type-content-options"></a><a name="bkmk_appv-content"></a> Možnosti **obsahu** typu nasazení sady App-V  
 
 1. V konzole Configuration Manager otevřete pracovní prostor **Knihovna softwaru** , rozbalte položku **Správa aplikací**a vyberte uzel **aplikace** .  
 
@@ -659,7 +659,7 @@ Nakonfigurujte další možnosti, které jsou jedinečné pro typy nasazení pro
 
 5. Kliknutím na **tlačítko OK** zavřete vlastnosti typu nasazení. Pak kliknutím na **OK** zavřete vlastnosti aplikace.  
 
-### <a name="app-v-deployment-type-publishing-options"></a><a name="bkmk_appv-pub"></a>Možnosti **publikování** typu nasazení sady App-V
+### <a name="app-v-deployment-type-publishing-options"></a><a name="bkmk_appv-pub"></a> Možnosti **publikování** typu nasazení sady App-V
 
 1. V konzole Configuration Manager otevřete pracovní prostor **Knihovna softwaru** , rozbalte položku **Správa aplikací**a vyberte uzel **aplikace** .  
 
@@ -671,7 +671,7 @@ Nakonfigurujte další možnosti, které jsou jedinečné pro typy nasazení pro
 
 5. Kliknutím na **tlačítko OK** zavřete vlastnosti typu nasazení. Pak kliknutím na **OK** zavřete vlastnosti aplikace.  
 
-## <a name="import-an-application"></a><a name="bkmk_import"></a>Import aplikace  
+## <a name="import-an-application"></a><a name="bkmk_import"></a> Import aplikace  
 
 K importu aplikace do Configuration Manager použijte následující postup:
 
@@ -679,7 +679,7 @@ K importu aplikace do Configuration Manager použijte následující postup:
 
 2. Na pásu karet na kartě **Domů** a **vytvořit** skupinu vyberte **importovat aplikaci**.  
 
-3. Na stránce **Obecné** v Průvodci importem aplikace zadejte síťovou cestu k **souboru** , který se má importovat. Například `\\server\share\file.zip`. Tento soubor je platný komprimovaný archivní program (formát ZIP) exportované aplikace Configuration Manager.  
+3. Na stránce **Obecné** v Průvodci importem aplikace zadejte síťovou cestu k **souboru** , který se má importovat. Například, `\\server\share\file.zip`. Tento soubor je platný komprimovaný archivní program (formát ZIP) exportované aplikace Configuration Manager.  
 
 4. Na stránce **obsah souboru** vyberte akci, která se má provést, pokud je tato aplikace duplikátem existující aplikace. Vytvořte novou aplikaci nebo ignorujte duplicitní a přidejte novou revizi do existující aplikace.  
 
@@ -688,15 +688,15 @@ K importu aplikace do Configuration Manager použijte následující postup:
 Nová aplikace se zobrazí v uzlu **Aplikace**.  
 
 > [!TIP]  
-> Rutina Windows PowerShellu **Import-CMApplication** má stejnou funkci jako tento postup. Další informace najdete v tématu [Import-CMApplication](https://docs.microsoft.com/powershell/module/configurationmanager/import-cmapplication?view=sccm-ps).  
+> Rutina Windows PowerShellu **Import-CMApplication** má stejnou funkci jako tento postup. Další informace najdete v tématu [Import-CMApplication](/powershell/module/configurationmanager/import-cmapplication?view=sccm-ps).  
 
 Další informace o exportu aplikace najdete v tématu [úlohy správy pro aplikace](management-tasks-applications.md).
 
-## <a name="supported-deployment-types"></a><a name="bkmk_deploy-types"></a>Podporované typy nasazení  
+## <a name="supported-deployment-types"></a><a name="bkmk_deploy-types"></a> Podporované typy nasazení  
 
 Configuration Manager podporuje pro aplikace následující typy nasazení:
 
-| Název typu závislosti | Description |
+| Název typu závislosti | Popis |
 |--------------------------|----------------------|  
 | **Instalační služba systému Windows ( \* soubor. msi)** | Soubor Instalační služba systému Windows. |  
 | **Balíček aplikace pro systém Windows ( \* . appx, \* . appxbundle, \* . msix, \* . msixbundle)** | Soubor balíčku aplikace systému Windows (. appx), balíček sady prostředků aplikace systému Windows (. appxbundle), balíček aplikace pro Windows 10 (. msix) nebo sada prostředků aplikace Windows 10 (. msixbundle).<!--1357427--> |  
@@ -714,7 +714,7 @@ Configuration Manager podporuje pro aplikace následující typy nasazení:
 > [!NOTE]
 > Konzola Configuration Manager může zobrazit další typy nasazení, ale jsou pro platformy, které již nejsou podporovány. Další informace najdete v tématu [co se stalo se hybridem?](../../mdm/understand/what-happened-to-hybrid.md).
 
-### <a name="note-1-windows-app-package-in-the-windows-store"></a><a name="bkmk_note1"></a>Poznámka 1: balíček aplikace systému Windows (ve Windows Storu)
+### <a name="note-1-windows-app-package-in-the-windows-store"></a><a name="bkmk_note1"></a> Poznámka 1: balíček aplikace systému Windows (ve Windows Storu)
 
 Pokud chcete aplikaci nasadit jako odkaz na Windows Store, nakonfigurujte zásady skupiny, aby se **aplikace pro Store vypnula**. Nastavte tuto zásadu na **zakázanou** nebo **nenakonfigurovanou**. Pokud toto nastavení povolíte, klienti se nebudou moci připojit k Windows Storu a stahovat a instalovat aplikace.
 

@@ -10,12 +10,12 @@ ms.assetid: 7c888a6f-8e37-4be5-8edb-832b218f266d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: bab2050448e1c870aac8f3237c21b19498cdb674
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 51a636ffc4adad20e6bc1c69b3194db7a0fa72fd
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88124232"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697360"
 ---
 # <a name="task-sequence-steps"></a>Kroky pořadí úkolů
 
@@ -47,7 +47,7 @@ Níže uvedené části pro konkrétní kroky pořadí úkolů popisují další
 
 
 
-## <a name="apply-data-image"></a><a name="BKMK_ApplyDataImage"></a>Použít data bitové kopie
+## <a name="apply-data-image"></a><a name="BKMK_ApplyDataImage"></a> Použít data bitové kopie
 
 Pomocí tohoto kroku můžete zkopírovat bitovou kopii dat do zadaného cílového oddílu.  
 
@@ -66,10 +66,10 @@ V tomto kroku použijte následující proměnné pořadí úkolů:
 
 Tento krok spravujte pomocí následujících rutin PowerShellu:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepApplyDataImage](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepApplyDataImage?view=sccm-ps)
-- [New-CMTSStepApplyDataImage](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepApplyDataImage?view=sccm-ps)
-- [Remove-CMTSStepApplyDataImage](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepApplyDataImage?view=sccm-ps)
-- [Set-CMTSStepApplyDataImage](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepApplyDataImage?view=sccm-ps)
+- [Get-CMTSStepApplyDataImage](/powershell/module/configurationmanager/Get-CMTSStepApplyDataImage?view=sccm-ps)
+- [New-CMTSStepApplyDataImage](/powershell/module/configurationmanager/New-CMTSStepApplyDataImage?view=sccm-ps)
+- [Remove-CMTSStepApplyDataImage](/powershell/module/configurationmanager/Remove-CMTSStepApplyDataImage?view=sccm-ps)
+- [Set-CMTSStepApplyDataImage](/powershell/module/configurationmanager/Set-CMTSStepApplyDataImage?view=sccm-ps)
 
 ### <a name="properties-for-apply-data-image"></a>Vlastnosti pro obrázek použití dat
 
@@ -100,7 +100,7 @@ Určuje, že před instalací bitové kopie pořadí úkolů odstraní všechny 
 
 
 
-## <a name="apply-driver-package"></a><a name="BKMK_ApplyDriverPackage"></a>Použít balíček ovladače  
+## <a name="apply-driver-package"></a><a name="BKMK_ApplyDriverPackage"></a> Použít balíček ovladače  
 
 Pomocí tohoto kroku stáhnete všechny ovladače v balíčku ovladačů a nainstalujete je do operačního systému Windows.
 
@@ -133,10 +133,10 @@ V tomto kroku použijte následující proměnné pořadí úkolů:
 
 Tento krok spravujte pomocí následujících rutin PowerShellu:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepApplyDriverPackage](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepApplyDriverPackage?view=sccm-ps)
-- [New-CMTSStepApplyDriverPackage](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepApplyDriverPackage?view=sccm-ps)
-- [Remove-CMTSStepApplyDriverPackage](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepApplyDriverPackage?view=sccm-ps)
-- [Set-CMTSStepApplyDriverPackage](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepApplyDriverPackage?view=sccm-ps)
+- [Get-CMTSStepApplyDriverPackage](/powershell/module/configurationmanager/Get-CMTSStepApplyDriverPackage?view=sccm-ps)
+- [New-CMTSStepApplyDriverPackage](/powershell/module/configurationmanager/New-CMTSStepApplyDriverPackage?view=sccm-ps)
+- [Remove-CMTSStepApplyDriverPackage](/powershell/module/configurationmanager/Remove-CMTSStepApplyDriverPackage?view=sccm-ps)
+- [Set-CMTSStepApplyDriverPackage](/powershell/module/configurationmanager/Set-CMTSStepApplyDriverPackage?view=sccm-ps)
 
 ### <a name="properties-for-apply-driver-package"></a>Vlastnosti pro použití balíčku ovladačů
 
@@ -150,7 +150,7 @@ Zadejte balíček ovladačů, který obsahuje potřebné ovladače zařízení. 
 
 Tuto možnost vyberte, pokud chcete přidat `/recurse` parametr do příkazového řádku DISM, když systém Windows použije balíček ovladačů.
 
-Pokud povolíte tuto možnost, můžete také zadat další parametry příkazového řádku DISM. K zahrnutí dalších možností použijte proměnnou pořadí úloh [OSDInstallDriversAdditionalOptions](task-sequence-variables.md#OSDInstallDriversAdditionalOptions) . Další informace najdete v tématu [Možnosti příkazového řádku Windows 10 DISM](https://docs.microsoft.com/windows-hardware/manufacture/desktop/deployment-image-servicing-and-management--dism--command-line-options).<!-- SCCMDocs#2125 -->
+Pokud povolíte tuto možnost, můžete také zadat další parametry příkazového řádku DISM. K zahrnutí dalších možností použijte proměnnou pořadí úloh [OSDInstallDriversAdditionalOptions](task-sequence-variables.md#OSDInstallDriversAdditionalOptions) . Další informace najdete v tématu [Možnosti příkazového řádku Windows 10 DISM](/windows-hardware/manufacture/desktop/deployment-image-servicing-and-management--dism--command-line-options).<!-- SCCMDocs#2125 -->
 
 #### <a name="select-the-mass-storage-driver-within-the-package-that-needs-to-be-installed-before-setup-on-pre-windows-vista-operating-systems"></a>Vyberte ovladač velkokapacitního úložiště, který musí být nainstalovaný před tím, než Configuration Manager nainstaluje operační systém starší než Windows Vista
 
@@ -170,7 +170,7 @@ Tato možnost umožňuje systému Windows instalovat ovladače bez digitálního
 
 
 
-## <a name="apply-network-settings"></a><a name="BKMK_ApplyNetworkSettings"></a>Použít nastavení sítě  
+## <a name="apply-network-settings"></a><a name="BKMK_ApplyNetworkSettings"></a> Použít nastavení sítě  
 
 Pomocí tohoto kroku zadejte informace o konfiguraci sítě nebo pracovní skupiny pro cílový počítač. Pořadí úkolů ukládá tyto hodnoty do příslušného souboru odpovědí. Instalační program systému Windows používá tento soubor odpovědí během akce **nastavit systém Windows a nástroj ConfigMgr** .  
 
@@ -200,10 +200,10 @@ V tomto kroku použijte následující proměnné pořadí úkolů:
 
 Tento krok spravujte pomocí následujících rutin PowerShellu:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepApplyNetworkSetting](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepApplyNetworkSetting?view=sccm-ps)
-- [New-CMTSStepApplyNetworkSetting](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepApplyNetworkSetting?view=sccm-ps)
-- [Remove-CMTSStepApplyNetworkSetting](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepApplyNetworkSetting?view=sccm-ps)
-- [Set-CMTSStepApplyNetworkSetting](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepApplyNetworkSetting?view=sccm-ps)
+- [Get-CMTSStepApplyNetworkSetting](/powershell/module/configurationmanager/Get-CMTSStepApplyNetworkSetting?view=sccm-ps)
+- [New-CMTSStepApplyNetworkSetting](/powershell/module/configurationmanager/New-CMTSStepApplyNetworkSetting?view=sccm-ps)
+- [Remove-CMTSStepApplyNetworkSetting](/powershell/module/configurationmanager/Remove-CMTSStepApplyNetworkSetting?view=sccm-ps)
+- [Set-CMTSStepApplyNetworkSetting](/powershell/module/configurationmanager/Set-CMTSStepApplyNetworkSetting?view=sccm-ps)
 
 ### <a name="properties-for-apply-network-settings"></a>Vlastnosti použití nastavení sítě
 
@@ -235,7 +235,7 @@ Zadejte konfigurace sítě pro každý síťový adaptér v počítači. Výběr
 
 
 
-## <a name="apply-operating-system-image"></a><a name="BKMK_ApplyOperatingSystemImage"></a>Použít bitovou kopii operačního systému  
+## <a name="apply-operating-system-image"></a><a name="BKMK_ApplyOperatingSystemImage"></a> Použít bitovou kopii operačního systému  
 
 Pomocí tohoto kroku nainstalujete operační systém na cílový počítač.
 
@@ -264,10 +264,10 @@ V tomto kroku použijte následující proměnné pořadí úkolů:
 
 Tento krok spravujte pomocí následujících rutin PowerShellu:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepApplyOperatingSystem](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepApplyOperatingSystem?view=sccm-ps)
-- [New-CMTSStepApplyOperatingSystem](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepApplyOperatingSystem?view=sccm-ps)
-- [Remove-CMTSStepApplyOperatingSystem](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepApplyOperatingSystem?view=sccm-ps)
-- [Set-CMTSStepApplyOperatingSystem](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepApplyOperatingSystem?view=sccm-ps)
+- [Get-CMTSStepApplyOperatingSystem](/powershell/module/configurationmanager/Get-CMTSStepApplyOperatingSystem?view=sccm-ps)
+- [New-CMTSStepApplyOperatingSystem](/powershell/module/configurationmanager/New-CMTSStepApplyOperatingSystem?view=sccm-ps)
+- [Remove-CMTSStepApplyOperatingSystem](/powershell/module/configurationmanager/Remove-CMTSStepApplyOperatingSystem?view=sccm-ps)
+- [Set-CMTSStepApplyOperatingSystem](/powershell/module/configurationmanager/Set-CMTSStepApplyOperatingSystem?view=sccm-ps)
 
 ### <a name="behaviors-for-apply-os-image"></a>Chování pro bitovou kopii použití operačního systému
 
@@ -359,7 +359,7 @@ Nakonfigurujte pořadí úkolů pro přístup k bitové kopii operačního syst�
 
 
 
-## <a name="apply-windows-settings"></a><a name="BKMK_ApplyWindowsSettings"></a>Použít nastavení systému Windows
+## <a name="apply-windows-settings"></a><a name="BKMK_ApplyWindowsSettings"></a> Použít nastavení systému Windows
 
 Pomocí tohoto kroku můžete nakonfigurovat nastavení systému Windows pro cílový počítač. Pořadí úkolů ukládá tyto hodnoty do příslušného souboru odpovědí. Instalační program systému Windows používá tento soubor odpovědí během kroku **nastavit systém Windows a nástroj ConfigMgr** .  
 
@@ -390,10 +390,10 @@ V tomto kroku použijte následující proměnné pořadí úkolů:
 
 Tento krok spravujte pomocí následujících rutin PowerShellu:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepApplyWindowsSetting](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepApplyWindowsSetting?view=sccm-ps)
-- [New-CMTSStepApplyWindowsSetting](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepApplyWindowsSetting?view=sccm-ps)
-- [Remove-CMTSStepApplyWindowsSetting](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepApplyWindowsSetting?view=sccm-ps)
-- [Set-CMTSStepApplyWindowsSetting](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepApplyWindowsSetting?view=sccm-ps)
+- [Get-CMTSStepApplyWindowsSetting](/powershell/module/configurationmanager/Get-CMTSStepApplyWindowsSetting?view=sccm-ps)
+- [New-CMTSStepApplyWindowsSetting](/powershell/module/configurationmanager/Get-CMTSStepApplyWindowsSetting?view=sccm-ps)
+- [Remove-CMTSStepApplyWindowsSetting](/powershell/module/configurationmanager/Remove-CMTSStepApplyWindowsSetting?view=sccm-ps)
+- [Set-CMTSStepApplyWindowsSetting](/powershell/module/configurationmanager/Set-CMTSStepApplyWindowsSetting?view=sccm-ps)
 
 ### <a name="properties-for-apply-windows-settings"></a>Vlastnosti pro použití nastavení systému Windows
 
@@ -450,12 +450,12 @@ Nakonfigurujte tahle nastavení:
 - Záložní jazyk uživatelského rozhraní
 - Národní prostředí uživatele
 
-Další informace o těchto hodnotách souboru odpovědí instalačního programu systému Windows najdete v tématu [Microsoft-Windows-International-Core](https://docs.microsoft.com/windows-hardware/customize/desktop/unattend/microsoft-windows-international-core).
+Další informace o těchto hodnotách souboru odpovědí instalačního programu systému Windows najdete v tématu [Microsoft-Windows-International-Core](/windows-hardware/customize/desktop/unattend/microsoft-windows-international-core).
 
 > [!NOTE]
 > Pokud vytvoříte vlastní soubor odpovědí instalačního programu systému Windows (unattend.xml), přepíše tento krok všechny existující hodnoty. K automatizaci dynamického procesu pro tato nastavení použijte související proměnné pořadí úkolů. Například [OSDWindowsSettingsInputLocale](task-sequence-variables.md#OSDWindowsSettingsInputLocale). 
 
-## <a name="auto-apply-drivers"></a><a name="BKMK_AutoApplyDrivers"></a>Automaticky použít ovladače
+## <a name="auto-apply-drivers"></a><a name="BKMK_AutoApplyDrivers"></a> Automaticky použít ovladače
 
 Tento krok použijte, pokud chcete vyhledat a nainstalovat ovladače jako součást nasazení operačního systému.  
 
@@ -502,10 +502,10 @@ V tomto kroku použijte následující proměnné pořadí úkolů:
 
 Tento krok spravujte pomocí následujících rutin PowerShellu:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepAutoApplyDriver](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepAutoApplyDriver?view=sccm-ps)
-- [New-CMTSStepAutoApplyDriver](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepAutoApplyDriver?view=sccm-ps)
-- [Remove-CMTSStepAutoApplyDriver](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepAutoApplyDriver?view=sccm-ps)
-- [Set-CMTSStepAutoApplyDriver](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepAutoApplyDriver?view=sccm-ps)
+- [Get-CMTSStepAutoApplyDriver](/powershell/module/configurationmanager/Get-CMTSStepAutoApplyDriver?view=sccm-ps)
+- [New-CMTSStepAutoApplyDriver](/powershell/module/configurationmanager/New-CMTSStepAutoApplyDriver?view=sccm-ps)
+- [Remove-CMTSStepAutoApplyDriver](/powershell/module/configurationmanager/Remove-CMTSStepAutoApplyDriver?view=sccm-ps)
+- [Set-CMTSStepAutoApplyDriver](/powershell/module/configurationmanager/Set-CMTSStepAutoApplyDriver?view=sccm-ps)
 
 ### <a name="properties-for-auto-apply-drivers"></a>Vlastnosti pro automatické použití ovladačů
 
@@ -538,7 +538,7 @@ Tato možnost umožňuje systému Windows instalovat ovladače bez digitálního
 
 
 
-## <a name="capture-network-settings"></a><a name="BKMK_CaptureNetworkSettings"></a>Zaznamenat nastavení sítě
+## <a name="capture-network-settings"></a><a name="BKMK_CaptureNetworkSettings"></a> Zaznamenat nastavení sítě
 
 Tento krok použijte k zaznamenání nastavení sítě Microsoft z počítače, na kterém pořadí úkolů běží. Pořadí úkolů uloží tato nastavení do proměnných pořadí úkolů. Tato nastavení přepíší výchozí nastavení, které nakonfigurujete v kroku **použít nastavení sítě** .  
 
@@ -557,10 +557,10 @@ V tomto kroku použijte následující proměnné pořadí úkolů:
 
 Tento krok spravujte pomocí následujících rutin PowerShellu:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepCaptureNetworkSettings](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepCaptureNetworkSettings?view=sccm-ps)
-- [New-CMTSStepCaptureNetworkSettings](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepCaptureNetworkSettings?view=sccm-ps)
-- [Remove-CMTSStepCaptureNetworkSettings](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepCaptureNetworkSettings?view=sccm-ps)
-- [Set-CMTSStepCaptureNetworkSettings](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepCaptureNetworkSettings?view=sccm-ps)
+- [Get-CMTSStepCaptureNetworkSettings](/powershell/module/configurationmanager/Get-CMTSStepCaptureNetworkSettings?view=sccm-ps)
+- [New-CMTSStepCaptureNetworkSettings](/powershell/module/configurationmanager/New-CMTSStepCaptureNetworkSettings?view=sccm-ps)
+- [Remove-CMTSStepCaptureNetworkSettings](/powershell/module/configurationmanager/Remove-CMTSStepCaptureNetworkSettings?view=sccm-ps)
+- [Set-CMTSStepCaptureNetworkSettings](/powershell/module/configurationmanager/Set-CMTSStepCaptureNetworkSettings?view=sccm-ps)
 
 ### <a name="properties-for-capture-network-settings"></a>Vlastnosti pro zaznamenání nastavení sítě
 
@@ -580,7 +580,7 @@ Zaznamená konfiguraci síťového adaptéru cílového počítače. Zachycuje n
 
 
 
-## <a name="capture-operating-system-image"></a><a name="BKMK_CaptureOperatingSystemImage"></a>Zachytit bitovou kopii operačního systému
+## <a name="capture-operating-system-image"></a><a name="BKMK_CaptureOperatingSystemImage"></a> Zachytit bitovou kopii operačního systému
 
 Tento krok zachycuje jednu nebo více imagí z referenčního počítače. Pořadí úkolů vytvoří soubor bitové kopie systému Windows (. wim) v zadané síťové sdílené složce. Pak pomocí průvodce **přidáním balíčku bitových kopií operačního systému** naimportujte tento obrázek do Configuration Manager pro nasazení operačního systému na základě bitové kopie.  
 
@@ -610,10 +610,10 @@ V tomto kroku použijte následující proměnné pořadí úkolů:
 
 Tento krok spravujte pomocí následujících rutin PowerShellu:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepCaptureSystemImage](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepCaptureSystemImage?view=sccm-ps)
-- [New-CMTSStepCaptureSystemImage](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepCaptureSystemImage?view=sccm-ps)
-- [Remove-CMTSStepCaptureSystemImage](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepCaptureSystemImage?view=sccm-ps)
-- [Set-CMTSStepCaptureSystemImage](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepCaptureSystemImage?view=sccm-ps)
+- [Get-CMTSStepCaptureSystemImage](/powershell/module/configurationmanager/Get-CMTSStepCaptureSystemImage?view=sccm-ps)
+- [New-CMTSStepCaptureSystemImage](/powershell/module/configurationmanager/New-CMTSStepCaptureSystemImage?view=sccm-ps)
+- [Remove-CMTSStepCaptureSystemImage](/powershell/module/configurationmanager/Remove-CMTSStepCaptureSystemImage?view=sccm-ps)
+- [Set-CMTSStepCaptureSystemImage](/powershell/module/configurationmanager/Set-CMTSStepCaptureSystemImage?view=sccm-ps)
 
 ### <a name="properties-for-capture-os-image"></a>Vlastnosti pro image operačního systému pro zachycení
 
@@ -641,7 +641,7 @@ Zadejte účet systému Windows, který má oprávnění k zadané sdílené sí
 
 
 
-## <a name="capture-user-state"></a><a name="BKMK_CaptureUserState"></a>Zaznamenat stav uživatele
+## <a name="capture-user-state"></a><a name="BKMK_CaptureUserState"></a> Zaznamenat stav uživatele
 
 Tento krok používá Nástroj pro migraci uživatelských souborů a nastavení (USMT) k zaznamenání stavu uživatele a nastavení z počítače, na kterém pořadí úkolů běží. Tento krok pořadí úkolů se používá ve spojení s krokem pořadí úkolů **Obnovit stav uživatele**. Tento krok vždycky zašifruje úložiště stavů USMT pomocí šifrovacího klíče, který Configuration Manager generuje a spravuje.  
 
@@ -672,10 +672,10 @@ V tomto kroku použijte následující proměnné pořadí úkolů:
 
 Tento krok spravujte pomocí následujících rutin PowerShellu:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepCaptureUserState](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepCaptureUserState?view=sccm-ps)
-- [New-CMTSStepCaptureUserState](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepCaptureUserState?view=sccm-ps)
-- [Remove-CMTSStepCaptureUserState](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepCaptureUserState?view=sccm-ps)
-- [Set-CMTSStepCaptureUserState](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepCaptureUserState?view=sccm-ps)
+- [Get-CMTSStepCaptureUserState](/powershell/module/configurationmanager/Get-CMTSStepCaptureUserState?view=sccm-ps)
+- [New-CMTSStepCaptureUserState](/powershell/module/configurationmanager/New-CMTSStepCaptureUserState?view=sccm-ps)
+- [Remove-CMTSStepCaptureUserState](/powershell/module/configurationmanager/Remove-CMTSStepCaptureUserState?view=sccm-ps)
+- [Set-CMTSStepCaptureUserState](/powershell/module/configurationmanager/Set-CMTSStepCaptureUserState?view=sccm-ps)
 
 ### <a name="properties-for-capture-user-state"></a>Vlastnosti pro zaznamenání stavu uživatele
 
@@ -721,7 +721,7 @@ Tuto možnost povolte, pokud chcete zadat některé z následujících nastaven�
 
 - **Zaznamenat lokálně pomocí odkazů místo pomocí kopírování souborů**: Pokud povolíte toto nastavení, můžete k zaznamenávání souborů používat pevné odkazy systému souborů NTFS.  
 
-    Další informace o migraci dat pomocí pevných odkazů najdete v tématu [úložiště migrace s pevným odkazem](https://docs.microsoft.com/windows/deployment/usmt/usmt-hard-link-migration-store).  
+    Další informace o migraci dat pomocí pevných odkazů najdete v tématu [úložiště migrace s pevným odkazem](/windows/deployment/usmt/usmt-hard-link-migration-store).  
 
 - **Zaznamenat v režimu offline (pouze systém Windows PE)**: Toto nastavení povolte, pokud chcete zachytit stav uživatele v prostředí Windows PE, nikoli v plném operačním systému.  
 
@@ -731,7 +731,7 @@ Tato možnost umožňuje zachytávání souborů i v případě, že jsou zamče
 
 
 
-## <a name="capture-windows-settings"></a><a name="BKMK_CaptureWindowsSettings"></a>Zaznamenat nastavení systému Windows
+## <a name="capture-windows-settings"></a><a name="BKMK_CaptureWindowsSettings"></a> Zaznamenat nastavení systému Windows
 
 Tento krok použijte k zaznamenání nastavení Windows z počítače, na kterém pořadí úkolů běží. Pořadí úkolů uloží tato nastavení do proměnných pořadí úkolů. Tato zachycená nastavení přepíší výchozí nastavení, které nakonfigurujete v kroku **použít nastavení systému Windows** .  
 
@@ -754,10 +754,10 @@ V tomto kroku použijte následující proměnné pořadí úkolů:
 
 Tento krok spravujte pomocí následujících rutin PowerShellu:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepCaptureWindowsSettings](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepCaptureWindowsSettings?view=sccm-ps)
-- [New-CMTSStepCaptureWindowsSettings](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepCaptureWindowsSettings?view=sccm-ps)
-- [Remove-CMTSStepCaptureWindowsSettings](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepCaptureWindowsSettings?view=sccm-ps)
-- [Set-CMTSStepCaptureWindowsSettings](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepCaptureWindowsSettings?view=sccm-ps)
+- [Get-CMTSStepCaptureWindowsSettings](/powershell/module/configurationmanager/Get-CMTSStepCaptureWindowsSettings?view=sccm-ps)
+- [New-CMTSStepCaptureWindowsSettings](/powershell/module/configurationmanager/New-CMTSStepCaptureWindowsSettings?view=sccm-ps)
+- [Remove-CMTSStepCaptureWindowsSettings](/powershell/module/configurationmanager/Remove-CMTSStepCaptureWindowsSettings?view=sccm-ps)
+- [Set-CMTSStepCaptureWindowsSettings](/powershell/module/configurationmanager/Set-CMTSStepCaptureWindowsSettings?view=sccm-ps)
 
 ### <a name="properties-for-capture-windows-settings"></a>Vlastnosti pro zachycení nastavení systému Windows
 
@@ -776,7 +776,7 @@ Zachyťte názvy registrovaných uživatelů a organizací z počítače.
 Zachyťte nastavení časového pásma v počítači.  
 
 
-## <a name="check-readiness"></a><a name="BKMK_CheckReadiness"></a>Kontrolovat připravenost
+## <a name="check-readiness"></a><a name="BKMK_CheckReadiness"></a> Kontrolovat připravenost
 
 Pomocí tohoto kroku ověříte, že cílový počítač splňuje zadané předpoklady pro nasazení.  
 
@@ -822,10 +822,10 @@ V tomto kroku použijte následující proměnné pořadí úkolů:
 
 Tento krok spravujte pomocí následujících rutin PowerShellu:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepPrestartCheck](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepPrestartCheck?view=sccm-ps)
-- [New-CMTSStepPrestartCheck](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepPrestartCheck?view=sccm-ps)
-- [Remove-CMTSStepPrestartCheck](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepPrestartCheck?view=sccm-ps)
-- [Set-CMTSStepPrestartCheck](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepPrestartCheck?view=sccm-ps)
+- [Get-CMTSStepPrestartCheck](/powershell/module/configurationmanager/Get-CMTSStepPrestartCheck?view=sccm-ps)
+- [New-CMTSStepPrestartCheck](/powershell/module/configurationmanager/New-CMTSStepPrestartCheck?view=sccm-ps)
+- [Remove-CMTSStepPrestartCheck](/powershell/module/configurationmanager/Remove-CMTSStepPrestartCheck?view=sccm-ps)
+- [Set-CMTSStepPrestartCheck](/powershell/module/configurationmanager/Set-CMTSStepPrestartCheck?view=sccm-ps)
 
 ### <a name="properties-for-check-readiness"></a>Vlastnosti pro kontrolu připravenosti
 
@@ -886,7 +886,7 @@ Od verze 2006 Zjistěte, jestli je zařízení nakonfigurované pro rozhraní UE
 
 
 
-## <a name="connect-to-network-folder"></a><a name="BKMK_ConnectToNetworkFolder"></a>Připojit k síťové složce
+## <a name="connect-to-network-folder"></a><a name="BKMK_ConnectToNetworkFolder"></a> Připojit k síťové složce
 
 Pomocí tohoto kroku můžete vytvořit připojení ke sdílené síťové složce.  
 
@@ -907,10 +907,10 @@ V tomto kroku použijte následující proměnné pořadí úkolů:
 
 Tento krok spravujte pomocí následujících rutin PowerShellu:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepConnectNetworkFolder](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepConnectNetworkFolder?view=sccm-ps)
-- [New-CMTSStepConnectNetworkFolder](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepConnectNetworkFolder?view=sccm-ps)
-- [Remove-CMTSStepConnectNetworkFolder](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepConnectNetworkFolder?view=sccm-ps)
-- [Set-CMTSStepConnectNetworkFolder](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepConnectNetworkFolder?view=sccm-ps)
+- [Get-CMTSStepConnectNetworkFolder](/powershell/module/configurationmanager/Get-CMTSStepConnectNetworkFolder?view=sccm-ps)
+- [New-CMTSStepConnectNetworkFolder](/powershell/module/configurationmanager/New-CMTSStepConnectNetworkFolder?view=sccm-ps)
+- [Remove-CMTSStepConnectNetworkFolder](/powershell/module/configurationmanager/Remove-CMTSStepConnectNetworkFolder?view=sccm-ps)
+- [Set-CMTSStepConnectNetworkFolder](/powershell/module/configurationmanager/Set-CMTSStepConnectNetworkFolder?view=sccm-ps)
 
 ### <a name="properties-for-connect-to-network-folder"></a>Vlastnosti pro připojení k síťové složce
 
@@ -930,7 +930,7 @@ Pokud chcete zadat uživatelský účet s oprávněními pro připojení k této
 
 
 
-## <a name="disable-bitlocker"></a><a name="BKMK_DisableBitLocker"></a>Zakázat nástroj BitLocker
+## <a name="disable-bitlocker"></a><a name="BKMK_DisableBitLocker"></a> Zakázat nástroj BitLocker
 
 Pomocí tohoto kroku zakážete šifrování nástrojem BitLocker na aktuální jednotce operačního systému nebo na konkrétní jednotce. Tato akce ponechá ochraně klíčů v nešifrovaných textech na pevném disku. Nešifruje obsah jednotky. Tato akce se dokončí téměř okamžitě.  
 
@@ -954,10 +954,10 @@ Počínaje verzí 1906 použijte následující proměnné pořadí úkolů s t�
 
 Tento krok spravujte pomocí následujících rutin PowerShellu:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepDisableBitLocker](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepDisableBitLocker?view=sccm-ps)
-- [New-CMTSStepDisableBitLocker](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepDisableBitLocker?view=sccm-ps)
-- [Remove-CMTSStepDisableBitLocker](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepDisableBitLocker?view=sccm-ps)
-- [Set-CMTSStepDisableBitLocker](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepDisableBitLocker?view=sccm-ps)
+- [Get-CMTSStepDisableBitLocker](/powershell/module/configurationmanager/Get-CMTSStepDisableBitLocker?view=sccm-ps)
+- [New-CMTSStepDisableBitLocker](/powershell/module/configurationmanager/New-CMTSStepDisableBitLocker?view=sccm-ps)
+- [Remove-CMTSStepDisableBitLocker](/powershell/module/configurationmanager/Remove-CMTSStepDisableBitLocker?view=sccm-ps)
+- [Set-CMTSStepDisableBitLocker](/powershell/module/configurationmanager/Set-CMTSStepDisableBitLocker?view=sccm-ps)
 
 ### <a name="properties-for-disable-bitlocker"></a>Vlastnosti pro zakázání nástroje BitLocker
 
@@ -979,7 +979,7 @@ Počínaje verzí 1906 použijte tuto možnost k určení počtu restartování,
 Toto chování můžete nastavit a změnit pomocí proměnných pořadí úkolů [OSDBitLockerRebootCount](task-sequence-variables.md#OSDBitLockerRebootCount) a [OSDBitLockerRebootCountOverride](task-sequence-variables.md#OSDBitLockerRebootCountOverride).
 
 
-## <a name="download-package-content"></a><a name="BKMK_DownloadPackageContent"></a>Stáhnout obsah balíčku
+## <a name="download-package-content"></a><a name="BKMK_DownloadPackageContent"></a> Stáhnout obsah balíčku
 
 Pomocí tohoto kroku si stáhněte kterýkoli z následujících typů balíčků:  
 
@@ -1009,10 +1009,10 @@ Chcete-li přidat tento krok v editoru pořadí úloh, vyberte možnost **Přida
 
 Tento krok spravujte pomocí následujících rutin PowerShellu:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepDownloadPackageContent](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepDownloadPackageContent?view=sccm-ps)
-- [New-CMTSStepDownloadPackageContent](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepDownloadPackageContent?view=sccm-ps)
-- [Remove-CMTSStepDownloadPackageContent](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepDownloadPackageContent?view=sccm-ps)
-- [Set-CMTSStepDownloadPackageContent](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepDownloadPackageContent?view=sccm-ps)
+- [Get-CMTSStepDownloadPackageContent](/powershell/module/configurationmanager/Get-CMTSStepDownloadPackageContent?view=sccm-ps)
+- [New-CMTSStepDownloadPackageContent](/powershell/module/configurationmanager/New-CMTSStepDownloadPackageContent?view=sccm-ps)
+- [Remove-CMTSStepDownloadPackageContent](/powershell/module/configurationmanager/Remove-CMTSStepDownloadPackageContent?view=sccm-ps)
+- [Set-CMTSStepDownloadPackageContent](/powershell/module/configurationmanager/Set-CMTSStepDownloadPackageContent?view=sccm-ps)
 
 ### <a name="properties-for-download-package-content"></a>Vlastnosti pro stažení obsahu balíčku
 
@@ -1042,7 +1042,7 @@ Configuration Manager přidá k názvu proměnné číselnou příponu. Napřík
 
 Pokud pořadí úloh nedokáže Stáhnout balíček, začne stahovat další balíček v seznamu.  
 
-### <a name="note-1-use-of-boot-images-in-the-download-package-content-step"></a><a name="bkmk_note1"></a>Poznámka 1: použití spouštěcích imagí v kroku stáhnout obsah balíčku
+### <a name="note-1-use-of-boot-images-in-the-download-package-content-step"></a><a name="bkmk_note1"></a> Poznámka 1: použití spouštěcích imagí v kroku stáhnout obsah balíčku
 
 *Platí pro verzi 1910 a novější.*<!-- SCCMDocs-pr #4202 -->
 
@@ -1061,7 +1061,7 @@ Pokud nakonfigurujete [vlastnosti pořadí úkolů](../deploy-use/manage-task-se
   - Obsahuje spouštěcí bitovou kopii, na kterou se odkazuje ve vlastnostech.
   - Existuje několik instancí tohoto pořadí úloh s různými spouštěcími bitovými kopiemi podle potřeby architektury a jazyka.
 
-## <a name="enable-bitlocker"></a><a name="BKMK_EnableBitLocker"></a>Zapnout nástroj BitLocker
+## <a name="enable-bitlocker"></a><a name="BKMK_EnableBitLocker"></a> Zapnout nástroj BitLocker
 
 Nástroj BitLocker Drive Encryption poskytuje nižší úroveň šifrování obsahu svazku disku. Tento krok použijte, pokud chcete povolit šifrování BitLockeru aspoň na dvou oddílech na pevném disku. První aktivní oddíl obsahuje kód pro spuštění systému Windows. Jiný oddíl obsahuje operační systém. Spouštěcí oddíl musí zůstat nezašifrovaný.  
 
@@ -1103,10 +1103,10 @@ V tomto kroku použijte následující proměnné pořadí úkolů:
 
 Tento krok spravujte pomocí následujících rutin PowerShellu:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepEnableBitLocker](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepEnableBitLocker?view=sccm-ps)
-- [New-CMTSStepEnableBitLocker](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepEnableBitLocker?view=sccm-ps)
-- [Remove-CMTSStepEnableBitLocker](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepEnableBitLocker?view=sccm-ps)
-- [Set-CMTSStepEnableBitLocker](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepEnableBitLocker?view=sccm-ps)
+- [Get-CMTSStepEnableBitLocker](/powershell/module/configurationmanager/Get-CMTSStepEnableBitLocker?view=sccm-ps)
+- [New-CMTSStepEnableBitLocker](/powershell/module/configurationmanager/New-CMTSStepEnableBitLocker?view=sccm-ps)
+- [Remove-CMTSStepEnableBitLocker](/powershell/module/configurationmanager/Remove-CMTSStepEnableBitLocker?view=sccm-ps)
+- [Set-CMTSStepEnableBitLocker](/powershell/module/configurationmanager/Set-CMTSStepEnableBitLocker?view=sccm-ps)
 
 ### <a name="properties-for-enable-bitlocker"></a>Vlastnosti pro zapnutí nástroje BitLocker
 
@@ -1162,7 +1162,7 @@ Proces šifrování může trvat hodiny na dokončení při šifrování velkéh
 Počínaje verzí 2006 vyberte tuto možnost, pokud chcete přeskočit šifrování jednotky v počítači, který neobsahuje podporovaný nebo povolený čip TPM. Tuto možnost můžete například použít při nasazování operačního systému do virtuálního počítače. Ve výchozím nastavení je toto nastavení zakázáno pro krok **zapnout nástroj BitLocker** . Pokud toto nastavení povolíte a zařízení nemá funkční čip TPM, modul pořadí úkolů zaznamená chybu do protokolu souboru Smsts. log a odešle stavovou zprávu 11912. Pořadí úkolů pokračuje v předchozím kroku.
 
 
-## <a name="format-and-partition-disk"></a><a name="BKMK_FormatandPartitionDisk"></a>Formátovat a rozdělit disk na oddíly
+## <a name="format-and-partition-disk"></a><a name="BKMK_FormatandPartitionDisk"></a> Formátovat a rozdělit disk na oddíly
 
 Pomocí tohoto kroku můžete naformátovat a rozdělit na oddíly zadaný disk v cílovém počítači.  
 
@@ -1186,10 +1186,10 @@ V tomto kroku použijte následující proměnné pořadí úkolů:
 
 Tento krok spravujte pomocí následujících rutin PowerShellu:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepPartitionDisk](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmtssteppartitiondisk?view=sccm-ps)
-- [New-CMTSStepPartitionDisk](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtssteppartitiondisk?view=sccm-ps)
-- [Remove-CMTSStepPartitionDisk](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtssteppartitiondisk?view=sccm-ps)
-- [Set-CMTSStepPartitionDisk](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtssteppartitiondisk?view=sccm-ps)
+- [Get-CMTSStepPartitionDisk](/powershell/module/configurationmanager/get-cmtssteppartitiondisk?view=sccm-ps)
+- [New-CMTSStepPartitionDisk](/powershell/module/configurationmanager/new-cmtssteppartitiondisk?view=sccm-ps)
+- [Remove-CMTSStepPartitionDisk](/powershell/module/configurationmanager/remove-cmtssteppartitiondisk?view=sccm-ps)
+- [Set-CMTSStepPartitionDisk](/powershell/module/configurationmanager/set-cmtssteppartitiondisk?view=sccm-ps)
 
 ### <a name="properties-for-format-and-partition-disk"></a>Vlastnosti pro formátování a rozdělení disku na oddíly
 
@@ -1210,8 +1210,8 @@ Pokud vyberete tuto vlastnost, zadejte název vlastní proměnné. Přidejte v p
 Následující vzorové kroky ukazují jeden příklad:
 
 - **Spustit skript prostředí PowerShell**: vlastní skript pro shromažďování cílových disků
-  - Nastaví `myOSDisk` na`1`
-  - Nastaví `myDataDisk` na`2`
+  - Nastaví `myOSDisk` na `1`
+  - Nastaví `myDataDisk` na `2`
 
 - **Formátovat a rozdělit disk na oddíly** pro disk s operačním systémem: Určuje `myOSDisk` proměnnou.
   - Nakonfiguruje disk 1 jako systémový disk.
@@ -1243,14 +1243,14 @@ Konkrétní informace o oddílu nebo svazku, které pořadí úkolů vytvoří, 
 
 Pokud chcete vytvořit nový oddíl, vyberte **Nový** a otevřete tak dialogové okno **Vlastnosti oddílu** . Zadejte typ a velikost oddílu a v případě, že se jedná o spouštěcí oddíl. Pokud chcete upravit existující oddíl, vyberte oddíl, který se má upravit, a pak klikněte na tlačítko **vlastnosti** . Další informace o tom, jak nakonfigurovat oddíly pevných disků, najdete v jednom z následujících článků:  
 
-- [Oddíly pevného disku se systémem UEFI/GPT](https://docs.microsoft.com/windows-hardware/manufacture/desktop/configure-uefigpt-based-hard-drive-partitions)  
-- [Oddíly pevného disku se systémem BIOS/MBR](https://docs.microsoft.com/windows-hardware/manufacture/desktop/configure-biosmbr-based-hard-drive-partitions)  
+- [Oddíly pevného disku se systémem UEFI/GPT](/windows-hardware/manufacture/desktop/configure-uefigpt-based-hard-drive-partitions)  
+- [Oddíly pevného disku se systémem BIOS/MBR](/windows-hardware/manufacture/desktop/configure-biosmbr-based-hard-drive-partitions)  
 
 Pokud chcete odstranit oddíl, zvolte oddíl a pak vyberte **Odstranit**.  
 
 
 
-## <a name="install-application"></a><a name="BKMK_InstallApplication"></a>Instalovat aplikaci
+## <a name="install-application"></a><a name="BKMK_InstallApplication"></a> Instalovat aplikaci
 
 Tento krok nainstaluje zadané aplikace nebo sadu aplikací, které jsou definovány dynamickým seznamem proměnných pořadí úkolů. Když pořadí úkolů spustí tento krok, začne instalace aplikace okamžitě bez čekání na interval dotazování zásady.  
 
@@ -1295,10 +1295,10 @@ V tomto kroku použijte následující proměnné pořadí úkolů:
 
 Tento krok spravujte pomocí následujících rutin PowerShellu:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepInstallApplication](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmtsstepinstallapplication?view=sccm-ps)
-- [New-CMTSStepInstallApplication](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtsstepinstallapplication?view=sccm-ps)
-- [Remove-CMTSStepInstallApplication](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtsstepinstallapplication?view=sccm-ps)
-- [Set-CMTSStepInstallApplication](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtsstepinstallapplication?view=sccm-ps)
+- [Get-CMTSStepInstallApplication](/powershell/module/configurationmanager/get-cmtsstepinstallapplication?view=sccm-ps)
+- [New-CMTSStepInstallApplication](/powershell/module/configurationmanager/new-cmtsstepinstallapplication?view=sccm-ps)
+- [Remove-CMTSStepInstallApplication](/powershell/module/configurationmanager/remove-cmtsstepinstallapplication?view=sccm-ps)
+- [Set-CMTSStepInstallApplication](/powershell/module/configurationmanager/set-cmtsstepinstallapplication?view=sccm-ps)
 
 ### <a name="properties-for-install-application"></a>Vlastnosti pro instalaci aplikace
 
@@ -1369,7 +1369,7 @@ Pokud jedna z instalací aplikace neočekávaně restartuje počítač, opakujte
 
 
 
-## <a name="install-package"></a><a name="BKMK_InstallPackage"></a>Instalovat balíček
+## <a name="install-package"></a><a name="BKMK_InstallPackage"></a> Instalovat balíček
 
 Pomocí tohoto kroku nainstalujete softwarový balíček jako součást pořadí úkolů. Po spuštění tohoto kroku se instalace začne okamžitě bez čekání na interval dotazování zásady.  
 
@@ -1408,10 +1408,10 @@ V tomto kroku použijte následující proměnné pořadí úkolů:
 
 Tento krok spravujte pomocí následujících rutin PowerShellu:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepInstallSoftware](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmtsstepinstallsoftware?view=sccm-ps)
-- [New-CMTSStepInstallSoftware](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtsstepinstallsoftware?view=sccm-ps)
-- [Remove-CMTSStepInstallSoftware](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtsstepinstallsoftware?view=sccm-ps)
-- [Set-CMTSStepInstallSoftware](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtsstepinstallsoftware?view=sccm-ps)
+- [Get-CMTSStepInstallSoftware](/powershell/module/configurationmanager/get-cmtsstepinstallsoftware?view=sccm-ps)
+- [New-CMTSStepInstallSoftware](/powershell/module/configurationmanager/new-cmtsstepinstallsoftware?view=sccm-ps)
+- [Remove-CMTSStepInstallSoftware](/powershell/module/configurationmanager/remove-cmtsstepinstallsoftware?view=sccm-ps)
+- [Set-CMTSStepInstallSoftware](/powershell/module/configurationmanager/set-cmtsstepinstallsoftware?view=sccm-ps)
 
 > [!TIP]
 > Pokud chcete stáhnout příslušný balíček s upgradem pro operační systém před tím, než uživatel nainstaluje pořadí úkolů, použijte předběžné ukládání obsahu do mezipaměti. Další informace najdete v tématu [Konfigurace obsahu před ukládáním do mezipaměti](../deploy-use/configure-precache-content.md).
@@ -1464,7 +1464,7 @@ Toto nastavení určuje, že krok bude v případě selhání instalace jednotli
 
 
 
-## <a name="install-software-updates"></a><a name="BKMK_InstallSoftwareUpdates"></a>Instalovat aktualizace softwaru
+## <a name="install-software-updates"></a><a name="BKMK_InstallSoftwareUpdates"></a> Instalovat aktualizace softwaru
 
 Pomocí tohoto kroku nainstalujete do cílového počítače aktualizace softwaru. V cílovém počítači se nevyhodnocují příslušné aktualizace softwaru, dokud se tento krok pořadí úkolů nespustí. V tuto chvíli se v cílovém počítači vyhodnotí aktualizace softwaru jako u jakéhokoli jiného klienta Configuration Manager. Chcete-li tento krok nainstalovat aktualizace softwaru, nasaďte aktualizace nejprve do kolekce, do které je cílový počítač členem.  
 
@@ -1492,10 +1492,10 @@ V tomto kroku použijte následující proměnné pořadí úkolů:
 
 Tento krok spravujte pomocí následujících rutin PowerShellu:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepInstallUpdate](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmtsstepinstallupdate?view=sccm-ps)
-- [New-CMTSStepInstallUpdate](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtsstepinstallupdate?view=sccm-ps)
-- [Remove-CMTSStepInstallUpdate](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtsstepinstallupdate?view=sccm-ps)
-- [Set-CMTSStepInstallUpdate](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtsstepinstallupdate?view=sccm-ps)
+- [Get-CMTSStepInstallUpdate](/powershell/module/configurationmanager/get-cmtsstepinstallupdate?view=sccm-ps)
+- [New-CMTSStepInstallUpdate](/powershell/module/configurationmanager/new-cmtsstepinstallupdate?view=sccm-ps)
+- [Remove-CMTSStepInstallUpdate](/powershell/module/configurationmanager/remove-cmtsstepinstallupdate?view=sccm-ps)
+- [Set-CMTSStepInstallUpdate](/powershell/module/configurationmanager/set-cmtsstepinstallupdate?view=sccm-ps)
 
 Další doporučení a diagram technického toku pro tento krok najdete v tématu [instalace aktualizací softwaru](install-software-updates.md).
 
@@ -1534,7 +1534,7 @@ Pokud jedna z aktualizací neočekávaně restartuje počítač, opakujte tento 
 
 
 
-## <a name="join-domain-or-workgroup"></a><a name="BKMK_JoinDomainorWorkgroup"></a>Připojit k doméně nebo pracovní skupině
+## <a name="join-domain-or-workgroup"></a><a name="BKMK_JoinDomainorWorkgroup"></a> Připojit k doméně nebo pracovní skupině
 
 Pomocí tohoto kroku přidáte cílový počítač do pracovní skupiny nebo domény.  
 
@@ -1561,10 +1561,10 @@ V tomto kroku použijte následující proměnné pořadí úkolů:
 
 Tento krok spravujte pomocí následujících rutin PowerShellu:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepJoinDomainWorkgroup](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepJoinDomainWorkgroup?view=sccm-ps)
-- [New-CMTSStepJoinDomainWorkgroup](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepJoinDomainWorkgroup?view=sccm-ps)
-- [Remove-CMTSStepJoinDomainWorkgroup](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepJoinDomainWorkgroup?view=sccm-ps)
-- [Set-CMTSStepJoinDomainWorkgroup](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepJoinDomainWorkgroup?view=sccm-ps)
+- [Get-CMTSStepJoinDomainWorkgroup](/powershell/module/configurationmanager/Get-CMTSStepJoinDomainWorkgroup?view=sccm-ps)
+- [New-CMTSStepJoinDomainWorkgroup](/powershell/module/configurationmanager/New-CMTSStepJoinDomainWorkgroup?view=sccm-ps)
+- [Remove-CMTSStepJoinDomainWorkgroup](/powershell/module/configurationmanager/Remove-CMTSStepJoinDomainWorkgroup?view=sccm-ps)
+- [Set-CMTSStepJoinDomainWorkgroup](/powershell/module/configurationmanager/Set-CMTSStepJoinDomainWorkgroup?view=sccm-ps)
 
 ### <a name="properties-for-join-domain-or-workgroup"></a>Vlastnosti pro připojení k doméně nebo pracovní skupině
 
@@ -1582,11 +1582,11 @@ V případě potřeby zadejte nebo vyhledejte organizační jednotku (OU) v zada
 
 #### <a name="enter-the-account-which-has-permission-to-join-the-domain"></a>Zadejte účet, který má oprávnění pro připojení do domény
 
-Vyberte **nastavit** a zadejte uživatelské jméno a heslo pro účet s oprávněním pro připojení k doméně. Zadejte účet ve formátu: `Domain\account` . Další informace o účtu připojení k doméně pořadí úkolů najdete v tématu [účty](../../core/plan-design/hierarchy/accounts.md#task-sequence-domain-join-account).  
+Vyberte **nastavit** a zadejte uživatelské jméno a heslo pro účet s oprávněním pro připojení k doméně. Zadejte účet ve formátu:  `Domain\account` . Další informace o účtu připojení k doméně pořadí úkolů najdete v tématu [účty](../../core/plan-design/hierarchy/accounts.md#task-sequence-domain-join-account).  
 
 
 
-## <a name="prepare-configmgr-client-for-capture"></a><a name="BKMK_PrepareConfigMgrClientforCapture"></a>Připravit klienta nástroje ConfigMgr pro zaznamenání
+## <a name="prepare-configmgr-client-for-capture"></a><a name="BKMK_PrepareConfigMgrClientforCapture"></a> Připravit klienta nástroje ConfigMgr pro zaznamenání
 
 Tento krok použijte k odebrání nebo konfiguraci klienta Configuration Manager v referenčním počítači. Tato akce připraví počítač k zaznamenání jako součást procesu vytváření imagí.
 
@@ -1603,14 +1603,14 @@ Chcete-li přidat tento krok v editoru pořadí úloh, vyberte možnost **Přida
 
 Tento krok spravujte pomocí následujících rutin PowerShellu:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepPrepareConfigMgrClient](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepPrepareConfigMgrClient?view=sccm-ps)
-- [New-CMTSStepPrepareConfigMgrClient](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepPrepareConfigMgrClient?view=sccm-ps)
-- [Remove-CMTSStepPrepareConfigMgrClient](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepPrepareConfigMgrClient?view=sccm-ps)
-- [Set-CMTSStepPrepareConfigMgrClient](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepPrepareConfigMgrClient?view=sccm-ps)
+- [Get-CMTSStepPrepareConfigMgrClient](/powershell/module/configurationmanager/Get-CMTSStepPrepareConfigMgrClient?view=sccm-ps)
+- [New-CMTSStepPrepareConfigMgrClient](/powershell/module/configurationmanager/New-CMTSStepPrepareConfigMgrClient?view=sccm-ps)
+- [Remove-CMTSStepPrepareConfigMgrClient](/powershell/module/configurationmanager/Remove-CMTSStepPrepareConfigMgrClient?view=sccm-ps)
+- [Set-CMTSStepPrepareConfigMgrClient](/powershell/module/configurationmanager/Set-CMTSStepPrepareConfigMgrClient?view=sccm-ps)
 
 
 
-## <a name="prepare-windows-for-capture"></a><a name="BKMK_PrepareWindowsforCapture"></a>Příprava Windows pro zachytávání
+## <a name="prepare-windows-for-capture"></a><a name="BKMK_PrepareWindowsforCapture"></a> Příprava Windows pro zachytávání
 
 Pomocí tohoto kroku můžete zadat možnosti nástroje Sysprep při zaznamenávání image operačního systému v referenčním počítači. Tento krok spustí nástroj Sysprep a potom restartuje počítač do spouštěcí image prostředí Windows PE zadané pro pořadí úkolů. Tato akce se nezdařila, pokud je referenční počítač připojen k doméně.  
 
@@ -1629,10 +1629,10 @@ V tomto kroku použijte následující proměnné pořadí úkolů:
 
 Tento krok spravujte pomocí následujících rutin PowerShellu:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepPrepareWindows](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepPrepareWindows?view=sccm-ps)
-- [New-CMTSStepPrepareWindows](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepPrepareWindows?view=sccm-ps)
-- [Remove-CMTSStepPrepareWindows](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepPrepareWindows?view=sccm-ps)
-- [Set-CMTSStepPrepareWindows](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepPrepareWindows?view=sccm-ps)
+- [Get-CMTSStepPrepareWindows](/powershell/module/configurationmanager/Get-CMTSStepPrepareWindows?view=sccm-ps)
+- [New-CMTSStepPrepareWindows](/powershell/module/configurationmanager/New-CMTSStepPrepareWindows?view=sccm-ps)
+- [Remove-CMTSStepPrepareWindows](/powershell/module/configurationmanager/Remove-CMTSStepPrepareWindows?view=sccm-ps)
+- [Set-CMTSStepPrepareWindows](/powershell/module/configurationmanager/Set-CMTSStepPrepareWindows?view=sccm-ps)
 
 ### <a name="properties-for-prepare-windows-for-capture"></a>Vlastnosti pro přípravný systém Windows pro zaznamenání
 
@@ -1659,7 +1659,7 @@ Pořadí úloh [Windows autopilot pro stávající zařízení](../../../autopil
 
 
 
-## <a name="pre-provision-bitlocker"></a><a name="BKMK_PreProvisionBitLocker"></a>Předem zřídit nástroj BitLocker
+## <a name="pre-provision-bitlocker"></a><a name="BKMK_PreProvisionBitLocker"></a> Předem zřídit nástroj BitLocker
 
 Tento krok použijte, pokud chcete zapnout BitLocker na jednotce v prostředí Windows PE. Ve výchozím nastavení je zašifrováno pouze použité místo na disku, takže doba šifrování je mnohem rychlejší. Možnosti správy klíčů aplikujete pomocí kroku [zapnout nástroj BitLocker](#BKMK_EnableBitLocker) po instalaci operačního systému.
 
@@ -1674,10 +1674,10 @@ Chcete-li přidat tento krok v editoru pořadí úloh, vyberte možnost **Přida
 
 Tento krok spravujte pomocí následujících rutin PowerShellu:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepOfflineEnableBitLocker](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepOfflineEnableBitLocker?view=sccm-ps)
-- [New-CMTSStepOfflineEnableBitLocker](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepOfflineEnableBitLocker?view=sccm-ps)
-- [Remove-CMTSStepOfflineEnableBitLocker](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepOfflineEnableBitLocker?view=sccm-ps)
-- [Set-CMTSStepOfflineEnableBitLocker](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepOfflineEnableBitLocker?view=sccm-ps)
+- [Get-CMTSStepOfflineEnableBitLocker](/powershell/module/configurationmanager/Get-CMTSStepOfflineEnableBitLocker?view=sccm-ps)
+- [New-CMTSStepOfflineEnableBitLocker](/powershell/module/configurationmanager/New-CMTSStepOfflineEnableBitLocker?view=sccm-ps)
+- [Remove-CMTSStepOfflineEnableBitLocker](/powershell/module/configurationmanager/Remove-CMTSStepOfflineEnableBitLocker?view=sccm-ps)
+- [Set-CMTSStepOfflineEnableBitLocker](/powershell/module/configurationmanager/Set-CMTSStepOfflineEnableBitLocker?view=sccm-ps)
 
 ### <a name="properties-for-pre-provision-bitlocker"></a>Vlastnosti pro předběžné poskytnutí nástroje BitLocker
 
@@ -1710,7 +1710,7 @@ Tuto možnost vyberte, pokud chcete přeskočit šifrování jednotky v počíta
 
 
 
-## <a name="release-state-store"></a><a name="BKMK_ReleaseStateStore"></a>Úložiště stavu uvolnění
+## <a name="release-state-store"></a><a name="BKMK_ReleaseStateStore"></a> Úložiště stavu uvolnění
 
 Pomocí tohoto kroku můžete bodu migrace stavu sdělit, že se dokončila akce zachycení nebo obnovení. Tento krok použijte ve spojení s kroky **úložiště stavu požadavku**, **zaznamenat stav uživatele**a **Obnovit stav uživatele** . Tento postup slouží k migraci dat stavu uživatele pomocí bodu migrace stavu a Nástroj pro migraci uživatelských souborů a nastavení (USMT).  
 
@@ -1737,10 +1737,10 @@ V tomto kroku použijte následující proměnné pořadí úkolů:
 
 Tento krok spravujte pomocí následujících rutin PowerShellu:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepReleaseStateStore](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepReleaseStateStore?view=sccm-ps)
-- [New-CMTSStepReleaseStateStore](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepReleaseStateStore?view=sccm-ps)
-- [Remove-CMTSStepReleaseStateStore](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepReleaseStateStore?view=sccm-ps)
-- [Set-CMTSStepReleaseStateStore](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepReleaseStateStore?view=sccm-ps)
+- [Get-CMTSStepReleaseStateStore](/powershell/module/configurationmanager/Get-CMTSStepReleaseStateStore?view=sccm-ps)
+- [New-CMTSStepReleaseStateStore](/powershell/module/configurationmanager/New-CMTSStepReleaseStateStore?view=sccm-ps)
+- [Remove-CMTSStepReleaseStateStore](/powershell/module/configurationmanager/Remove-CMTSStepReleaseStateStore?view=sccm-ps)
+- [Set-CMTSStepReleaseStateStore](/powershell/module/configurationmanager/Set-CMTSStepReleaseStateStore?view=sccm-ps)
 
 ### <a name="properties-for-release-state-store"></a>Vlastnosti pro úložiště stavu uvolnění
 
@@ -1748,7 +1748,7 @@ Tento krok nevyžaduje žádné nastavení na kartě **vlastnosti** .
 
 
 
-## <a name="request-state-store"></a><a name="BKMK_RequestStateStore"></a>Úložiště stavu požadavku
+## <a name="request-state-store"></a><a name="BKMK_RequestStateStore"></a> Úložiště stavu požadavku
 
 Tento krok použijte k vyžádání přístupu k bodu migrace stavu při zachytávání nebo obnovování stavu.  
 
@@ -1776,10 +1776,10 @@ V tomto kroku použijte následující proměnné pořadí úkolů:
 
 Tento krok spravujte pomocí následujících rutin PowerShellu:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepRequestStateStore](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepRequestStateStore?view=sccm-ps)
-- [New-CMTSStepRequestStateStore](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepRequestStateStore?view=sccm-ps)
-- [Remove-CMTSStepRequestStateStore](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepRequestStateStore?view=sccm-ps)
-- [Set-CMTSStepRequestStateStore](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepRequestStateStore?view=sccm-ps)
+- [Get-CMTSStepRequestStateStore](/powershell/module/configurationmanager/Get-CMTSStepRequestStateStore?view=sccm-ps)
+- [New-CMTSStepRequestStateStore](/powershell/module/configurationmanager/New-CMTSStepRequestStateStore?view=sccm-ps)
+- [Remove-CMTSStepRequestStateStore](/powershell/module/configurationmanager/Remove-CMTSStepRequestStateStore?view=sccm-ps)
+- [Set-CMTSStepRequestStateStore](/powershell/module/configurationmanager/Set-CMTSStepRequestStateStore?view=sccm-ps)
 
 ### <a name="properties-for-request-state-store"></a>Vlastnosti úložiště stavu požadavku
 
@@ -1811,7 +1811,7 @@ Pokud pořadí úloh nemá přístup k bodu migrace stavu pomocí účtu počít
 
 
 
-## <a name="restart-computer"></a><a name="BKMK_RestartComputer"></a>Restartovat počítač
+## <a name="restart-computer"></a><a name="BKMK_RestartComputer"></a> Restartovat počítač
 
 Tento krok použijte k restartování počítače, na kterém pořadí úkolů běží. Po restartování bude počítač automaticky pokračovat dalším krokem v pořadí úkolů.  
 
@@ -1830,10 +1830,10 @@ V tomto kroku použijte následující proměnné pořadí úkolů:
 
 Tento krok spravujte pomocí následujících rutin PowerShellu:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepReboot](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmtsstepreboot?view=sccm-ps)
-- [New-CMTSStepReboot](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtsstepreboot?view=sccm-ps)
-- [Remove-CMTSStepReboot](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtsstepreboot?view=sccm-ps)
-- [Set-CMTSStepReboot](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtsstepreboot?view=sccm-ps)
+- [Get-CMTSStepReboot](/powershell/module/configurationmanager/get-cmtsstepreboot?view=sccm-ps)
+- [New-CMTSStepReboot](/powershell/module/configurationmanager/new-cmtsstepreboot?view=sccm-ps)
+- [Remove-CMTSStepReboot](/powershell/module/configurationmanager/remove-cmtsstepreboot?view=sccm-ps)
+- [Set-CMTSStepReboot](/powershell/module/configurationmanager/set-cmtsstepreboot?view=sccm-ps)
 
 ### <a name="properties-for-restart-computer"></a>Vlastnosti pro restartování počítače
 
@@ -1861,7 +1861,7 @@ Zadejte dobu v sekundách, po jejímž uplynutí bude restartován cílový poč
 
 
 
-## <a name="restore-user-state"></a><a name="BKMK_RestoreUserState"></a>Obnovit stav uživatele
+## <a name="restore-user-state"></a><a name="BKMK_RestoreUserState"></a> Obnovit stav uživatele
 
 Pomocí tohoto kroku spustíte Nástroj pro migraci uživatelských souborů a nastavení (USMT) pro obnovení stavu a nastavení uživatele do cílového počítače. Tento krok se používá ve spojení s krokem **zaznamenat stav uživatele** .  
 
@@ -1894,10 +1894,10 @@ V tomto kroku použijte následující proměnné pořadí úkolů:
 
 Tento krok spravujte pomocí následujících rutin PowerShellu:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepRestoreUserState](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepRestoreUserState?view=sccm-ps)
-- [New-CMTSStepRestoreUserState](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepRestoreUserState?view=sccm-ps)
-- [Remove-CMTSStepRestoreUserState](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepRestoreUserState?view=sccm-ps)
-- [Set-CMTSStepRestoreUserState](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepRestoreUserState?view=sccm-ps)
+- [Get-CMTSStepRestoreUserState](/powershell/module/configurationmanager/Get-CMTSStepRestoreUserState?view=sccm-ps)
+- [New-CMTSStepRestoreUserState](/powershell/module/configurationmanager/New-CMTSStepRestoreUserState?view=sccm-ps)
+- [Remove-CMTSStepRestoreUserState](/powershell/module/configurationmanager/Remove-CMTSStepRestoreUserState?view=sccm-ps)
+- [Set-CMTSStepRestoreUserState](/powershell/module/configurationmanager/Set-CMTSStepRestoreUserState?view=sccm-ps)
 
 ### <a name="properties-for-restore-user-state"></a>Vlastnosti pro obnovení stavu uživatele
 
@@ -1929,7 +1929,7 @@ Tuto možnost povolte, pokud chcete v souboru protokolu vygenerovat podrobnějš
 
 
 
-## <a name="run-command-line"></a><a name="BKMK_RunCommandLine"></a>Spustit příkazový řádek
+## <a name="run-command-line"></a><a name="BKMK_RunCommandLine"></a> Spustit příkazový řádek
 
 Pomocí tohoto kroku spustíte zadaný příkazový řádek.  
 
@@ -1958,10 +1958,10 @@ V tomto kroku použijte následující proměnné pořadí úkolů:
 
 Tento krok spravujte pomocí následujících rutin PowerShellu:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepRunCommandLine](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmtsstepruncommandline?view=sccm-ps)
-- [New-CMTSStepRunCommandLine](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtsstepruncommandline?view=sccm-ps)
-- [Remove-CMTSStepRunCommandLine](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtsstepruncommandline?view=sccm-ps)
-- [Set-CMTSStepRunCommandLine](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtsstepruncommandline?view=sccm-ps)
+- [Get-CMTSStepRunCommandLine](/powershell/module/configurationmanager/get-cmtsstepruncommandline?view=sccm-ps)
+- [New-CMTSStepRunCommandLine](/powershell/module/configurationmanager/new-cmtsstepruncommandline?view=sccm-ps)
+- [Remove-CMTSStepRunCommandLine](/powershell/module/configurationmanager/remove-cmtsstepruncommandline?view=sccm-ps)
+- [Set-CMTSStepRunCommandLine](/powershell/module/configurationmanager/set-cmtsstepruncommandline?view=sccm-ps)
 
 ### <a name="properties-for-run-command-line"></a>Vlastnosti příkazového řádku pro spuštění
 
@@ -2043,7 +2043,7 @@ Do skriptu zahrňte další ukončovací kódy, které by měl krok vyhodnotit j
 
 
 
-## <a name="run-powershell-script"></a><a name="BKMK_RunPowerShellScript"></a>Spustit skript prostředí PowerShell
+## <a name="run-powershell-script"></a><a name="BKMK_RunPowerShellScript"></a> Spustit skript prostředí PowerShell
 
 Pomocí tohoto kroku spustíte zadaný skript prostředí Windows PowerShell.  
 
@@ -2076,10 +2076,10 @@ V tomto kroku použijte následující proměnné pořadí úkolů:
 
 Tento krok spravujte pomocí následujících rutin PowerShellu:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepRunPowerShellScript](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmtssteprunpowershellscript?view=sccm-ps)
-- [New-CMTSStepRunPowerShellScript](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtssteprunpowershellscript?view=sccm-ps)
-- [Remove-CMTSStepRunPowerShellScript](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtssteprunpowershellscript?view=sccm-ps)
-- [Set-CMTSStepRunPowerShellScript](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtssteprunpowershellscript?view=sccm-ps)
+- [Get-CMTSStepRunPowerShellScript](/powershell/module/configurationmanager/get-cmtssteprunpowershellscript?view=sccm-ps)
+- [New-CMTSStepRunPowerShellScript](/powershell/module/configurationmanager/new-cmtssteprunpowershellscript?view=sccm-ps)
+- [Remove-CMTSStepRunPowerShellScript](/powershell/module/configurationmanager/remove-cmtssteprunpowershellscript?view=sccm-ps)
+- [Set-CMTSStepRunPowerShellScript](/powershell/module/configurationmanager/set-cmtssteprunpowershellscript?view=sccm-ps)
 
 > [!Note]  
 > Používejte podepsané skripty PowerShellu ve formátu Unicode. Formát ANSI, který je výchozí, nefunguje s tímto krokem.
@@ -2198,7 +2198,7 @@ Počínaje verzí 1902 zahrňte do skriptu další ukončovací kódy, které by
 
 
 
-## <a name="run-task-sequence"></a><a name="child-task-sequence"></a>Spustit pořadí úloh
+## <a name="run-task-sequence"></a><a name="child-task-sequence"></a> Spustit pořadí úloh
 
 > [!Note]  
 > Ve výchozím nastavení ve verzi 1910 Configuration Manager tuto funkci povolí. Verze 1906 nebo starší Configuration Manager ve výchozím nastavení tuto volitelnou funkci nepovoluje. Před použitím této funkce tuto funkci povolte. Další informace naleznete v části [Enable optional features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_options).
@@ -2250,7 +2250,7 @@ Vyberte **Procházet** a vyberte podřízené pořadí úkolů. V dialogovém ok
 
 
 
-## <a name="set-dynamic-variables"></a><a name="BKMK_SetDynamicVariables"></a>Nastavit dynamické proměnné
+## <a name="set-dynamic-variables"></a><a name="BKMK_SetDynamicVariables"></a> Nastavit dynamické proměnné
 
 Tento krok použijte k provedení následujících akcí:  
 
@@ -2320,7 +2320,7 @@ Když použijete možnost **tuto hodnotu nezobrazovat**, hodnota proměnné se n
 > Pokud zahrnete proměnné do příkazového řádku kroku **Spustit příkazový řádek** , zobrazí se v souboru protokolu pořadí úloh úplný příkazový řádek, včetně hodnot proměnných. Chcete-li zabránit tomu, aby se potenciálně citlivá data zobrazovala v souboru protokolu, nastavte proměnnou pořadí úloh **OSDDoNotLogCommand** na `TRUE` .
 
 
-## <a name="set-task-sequence-variable"></a><a name="BKMK_SetTaskSequenceVariable"></a>Nastavit proměnnou pořadí úloh
+## <a name="set-task-sequence-variable"></a><a name="BKMK_SetTaskSequenceVariable"></a> Nastavit proměnnou pořadí úloh
 
 Pomocí tohoto kroku nastavíte hodnotu proměnné, která se používá s pořadím úkolů.  
 
@@ -2339,10 +2339,10 @@ Proměnné pořadí úkolů se čtou akcemi pořadí úkolů a určují chován�
 
 Tento krok spravujte pomocí následujících rutin PowerShellu:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepSetVariable](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmtsstepsetvariable?view=sccm-ps)
-- [New-CMTSStepSetVariable](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtsstepsetvariable?view=sccm-ps)
-- [Remove-CMTSStepSetVariable](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtsstepsetvariable?view=sccm-ps)
-- [Set-CMTSStepSetVariable](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtsstepsetvariable?view=sccm-ps)
+- [Get-CMTSStepSetVariable](/powershell/module/configurationmanager/get-cmtsstepsetvariable?view=sccm-ps)
+- [New-CMTSStepSetVariable](/powershell/module/configurationmanager/new-cmtsstepsetvariable?view=sccm-ps)
+- [Remove-CMTSStepSetVariable](/powershell/module/configurationmanager/remove-cmtsstepsetvariable?view=sccm-ps)
+- [Set-CMTSStepSetVariable](/powershell/module/configurationmanager/set-cmtsstepsetvariable?view=sccm-ps)
 
 ### <a name="properties-for-set-task-sequence-variable"></a>Vlastnosti pro nastavení proměnné pořadí úkolů
 
@@ -2371,7 +2371,7 @@ Pořadí úkolů nastaví proměnnou na tuto hodnotu. Nastavte tuto proměnnou p
 
 
 
-## <a name="setup-windows-and-configmgr"></a><a name="BKMK_SetupWindowsandConfigMgr"></a>Nastavit systém Windows a nástroj ConfigMgr
+## <a name="setup-windows-and-configmgr"></a><a name="BKMK_SetupWindowsandConfigMgr"></a> Nastavit systém Windows a nástroj ConfigMgr
 
 Pomocí tohoto kroku můžete provést přechod z prostředí Windows PE do nového operačního systému. Tento krok pořadí úkolů je požadovaná součást nasazení operačního systému. Nainstaluje klienta Configuration Manager do nového operačního systému a připraví pořadí úkolů pro pokračování v provádění v novém operačním systému.  
 
@@ -2409,11 +2409,11 @@ Tento krok provádí následující akce:
 
     2. Restartujte nově nasazený operační systém.  
 
-    3. Zkrácená instalace Windows se spustí s dříve zadaným souborem Sysprep. inf nebo unattend.xml odpovědí, který má potlačené veškeré nastavení uživatelského rozhraní. Pokud použijete krok **použít nastavení sítě** pro připojení k doméně, pak jsou tyto informace v souboru odpovědí. Zkrácená instalace Windows připojí počítač k doméně.  
+    3. Zkrácená instalace Windows se spustí s dříve zadaným souborem Sysprep. inf nebo unattend.xml odpovědí, který má potlačené veškeré nastavení uživatelského rozhraní. Pokud použijete krok  **použít nastavení sítě** pro připojení k doméně, pak jsou tyto informace v souboru odpovědí. Zkrácená instalace Windows připojí počítač k doméně.  
 
 #### <a name="set-up-the-configuration-manager-client"></a>Nastavení klienta Configuration Manager  
 
-1. Po dokončení zkrácené instalace systému Windows pořadí úkolů pokračuje s použitím souboru setupcomplete.cmd. Další informace najdete v tématu [spuštění skriptu po dokončení instalace (SetupComplete. cmd)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/add-a-custom-script-to-windows-setup#run-a-script-after-setup-is-complete-setupcompletecmd).  
+1. Po dokončení zkrácené instalace systému Windows pořadí úkolů pokračuje s použitím souboru setupcomplete.cmd. Další informace najdete v tématu [spuštění skriptu po dokončení instalace (SetupComplete. cmd)](/windows-hardware/manufacture/desktop/add-a-custom-script-to-windows-setup#run-a-script-after-setup-is-complete-setupcompletecmd).  
 
 2. Povolte nebo zakažte účet místního správce na základě možnosti vybrané v kroku **použít nastavení systému Windows** .  
 
@@ -2426,7 +2426,7 @@ Tento krok provádí následující akce:
 Pořadí úkolů pokračuje v provádění dalšího kroku.  
 
 > [!Note]  
-> Zásady skupiny systému Windows obvykle nezpracovávají až po dokončení pořadí úloh. Toto chování je konzistentní v různých verzích Windows. Další vlastní akce v průběhu pořadí úkolů mohou aktivovat vyhodnocení zásad skupiny. Další informace o pořadí operací najdete v tématu [spuštění skriptu po dokončení instalace (SetupComplete. cmd)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/add-a-custom-script-to-windows-setup#run-a-script-after-setup-is-complete-setupcompletecmd). <!-- 2841304 -->
+> Zásady skupiny systému Windows obvykle nezpracovávají až po dokončení pořadí úloh. Toto chování je konzistentní v různých verzích Windows. Další vlastní akce v průběhu pořadí úkolů mohou aktivovat vyhodnocení zásad skupiny. Další informace o pořadí operací najdete v tématu [spuštění skriptu po dokončení instalace (SetupComplete. cmd)](/windows-hardware/manufacture/desktop/add-a-custom-script-to-windows-setup#run-a-script-after-setup-is-complete-setupcompletecmd). <!-- 2841304 -->
 
 
 ### <a name="variables-for-setup-windows-and-configmgr"></a>Proměnné pro instalační systém Windows a nástroj ConfigMgr
@@ -2439,10 +2439,10 @@ V tomto kroku použijte následující proměnné pořadí úkolů:
 
 Tento krok spravujte pomocí následujících rutin PowerShellu:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepSetupWindowsAndConfigMgr](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmtsstepsetupwindowsandconfigmgr?view=sccm-ps)
-- [New-CMTSStepSetupWindowsAndConfigMgr](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtsstepsetupwindowsandconfigmgr?view=sccm-ps)
-- [Remove-CMTSStepSetupWindowsAndConfigMgr](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtsstepsetupwindowsandconfigmgr?view=sccm-ps)
-- [Set-CMTSStepSetupWindowsAndConfigMgr](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtsstepsetupwindowsandconfigmgr?view=sccm-ps)
+- [Get-CMTSStepSetupWindowsAndConfigMgr](/powershell/module/configurationmanager/get-cmtsstepsetupwindowsandconfigmgr?view=sccm-ps)
+- [New-CMTSStepSetupWindowsAndConfigMgr](/powershell/module/configurationmanager/new-cmtsstepsetupwindowsandconfigmgr?view=sccm-ps)
+- [Remove-CMTSStepSetupWindowsAndConfigMgr](/powershell/module/configurationmanager/remove-cmtsstepsetupwindowsandconfigmgr?view=sccm-ps)
+- [Set-CMTSStepSetupWindowsAndConfigMgr](/powershell/module/configurationmanager/set-cmtsstepsetupwindowsandconfigmgr?view=sccm-ps)
 
 ### <a name="properties-for-setup-windows-and-configmgr"></a>Vlastnosti pro nastavení systému Windows a nástroje ConfigMgr
 
@@ -2471,7 +2471,7 @@ Při spuštění pořadí úloh nasazení operačního systému v internetovém 
 
 
 
-## <a name="upgrade-operating-system"></a><a name="BKMK_UpgradeOS"></a>Upgradovat operační systém
+## <a name="upgrade-operating-system"></a><a name="BKMK_UpgradeOS"></a> Upgradovat operační systém
 
 Tento krok použijte k upgradu starší verze Windows na novější verzi Windows 10.  
 
@@ -2496,10 +2496,10 @@ V tomto kroku použijte následující proměnné pořadí úkolů:
 
 Tento krok spravujte pomocí následujících rutin PowerShellu:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepUpgradeOperatingSystem](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepUpgradeOperatingSystem?view=sccm-ps)
-- [New-CMTSStepUpgradeOperatingSystem](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepUpgradeOperatingSystem?view=sccm-ps)
-- [Remove-CMTSStepUpgradeOperatingSystem](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepUpgradeOperatingSystem?view=sccm-ps)
-- [Set-CMTSStepUpgradeOperatingSystem](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepUpgradeOperatingSystem?view=sccm-ps)
+- [Get-CMTSStepUpgradeOperatingSystem](/powershell/module/configurationmanager/Get-CMTSStepUpgradeOperatingSystem?view=sccm-ps)
+- [New-CMTSStepUpgradeOperatingSystem](/powershell/module/configurationmanager/New-CMTSStepUpgradeOperatingSystem?view=sccm-ps)
+- [Remove-CMTSStepUpgradeOperatingSystem](/powershell/module/configurationmanager/Remove-CMTSStepUpgradeOperatingSystem?view=sccm-ps)
+- [Set-CMTSStepUpgradeOperatingSystem](/powershell/module/configurationmanager/Set-CMTSStepUpgradeOperatingSystem?view=sccm-ps)
 
 ### <a name="properties-for-upgrade-os"></a>Vlastnosti pro upgrade operačního systému
 
@@ -2525,7 +2525,7 @@ Zadejte kód Product Key, který se má použít pro proces upgradu.
 
 #### <a name="provide-the-following-driver-content-to-windows-setup-during-upgrade"></a>Při upgradu zadejte do instalačního programu systému Windows následující obsah ovladače
 
-Během procesu upgradu přidejte do cílového počítače ovladače. Ovladače musí být kompatibilní s Windows 10. Toto nastavení odpovídá možnosti příkazového řádku instalační program systému Windows `/InstallDriver` . Další informace najdete v tématu [instalační program systému Windows možnosti příkazového řádku](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options#installdrivers).
+Během procesu upgradu přidejte do cílového počítače ovladače. Ovladače musí být kompatibilní s Windows 10. Toto nastavení odpovídá možnosti příkazového řádku instalační program systému Windows `/InstallDriver` . Další informace najdete v tématu [instalační program systému Windows možnosti příkazového řádku](/windows-hardware/manufacture/desktop/windows-setup-command-line-options#installdrivers).
 
 Zadejte jednu z následujících možností:  
 
@@ -2561,7 +2561,7 @@ Instalační program vrátí jako výsledek kontroly ukončovací kód. Následu
 |MOSETUP_E_COMPAT_SYSREQ_BLOCK (0xC1900200)|Pro systém Windows 10 se nedá použít.|  
 |MOSETUP_E_COMPAT_INSTALLDISKSPACE_BLOCK (0xC190020E)|Není dostatek volného místa na disku.|  
 
-Další informace o tomto parametru najdete v tématu [instalační program systému Windows možnosti příkazového řádku](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options#compat).  
+Další informace o tomto parametru najdete v tématu [instalační program systému Windows možnosti příkazového řádku](/windows-hardware/manufacture/desktop/windows-setup-command-line-options#compat).  
 
 #### <a name="ignore-any-dismissible-compatibility-messages"></a>Ignorovat všechny zprávy o kompatibilitě, které jde přeskočit
 

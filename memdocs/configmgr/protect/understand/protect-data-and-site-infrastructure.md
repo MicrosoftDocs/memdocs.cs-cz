@@ -10,12 +10,12 @@ ms.assetid: 2117f786-d521-4790-9e8d-ec096c63c9d7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 381f9d190b1d73bbbab6142fd9587e881d0870ce
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 2a73fff7fd2eb5d630d6047a7da6f131188f06c5
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81723912"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693484"
 ---
 # <a name="protect-data-and-site-infrastructure"></a>Ochrana dat a infrastruktury lokality
 
@@ -33,7 +33,7 @@ Chcete, aby vaši uživatelé měli zabezpečený přístup k prostředkům vaš
   - Řízení aplikací v programu Microsoft Defender
 
   > [!TIP]
-  > Pokud chcete spravovat službu Endpoint Protection na spoluspravovaných zařízeních s Windows 10 pomocí cloudové služby Microsoft Endpoint Manager, přepněte [ **Endpoint Protection** úlohy](../../comanage/workloads.md#endpoint-protection) do Intune. Další informace najdete v tématu [Endpoint Protection pro Microsoft Intune](https://docs.microsoft.com/intune/endpoint-protection-windows-10).
+  > Pokud chcete spravovat službu Endpoint Protection na spoluspravovaných zařízeních s Windows 10 pomocí cloudové služby Microsoft Endpoint Manager, přepněte [ **Endpoint Protection** úlohy](../../comanage/workloads.md#endpoint-protection) do Intune. Další informace najdete v tématu [Endpoint Protection pro Microsoft Intune](/intune/endpoint-protection-windows-10).
 
 - Chraňte data uložená na místních klientech Windows pomocí nástroj BitLocker Drive Encryption (BDE). Configuration Manager poskytuje úplnou správu životního cyklu BitLockeru, která může nahradit použití nástroje Microsoft BitLocker Administration and Monitoring (MBAM). Další informace najdete v tématu [Plánování správy BitLockeru](../plan-design/bitlocker-management.md).
 
@@ -43,4 +43,4 @@ Chcete, aby vaši uživatelé měli zabezpečený přístup k prostředkům vaš
 
 - Profily Wi-Fi poskytují sadu nástrojů a prostředků, které vám pomůžou spravovat nastavení bezdrátové sítě na zařízeních ve vaší organizaci. Nasazením těchto nastavení minimalizujete úsilí, které koncoví uživatelé potřebují pro připojení k bezdrátovým sítím. Další informace najdete v tématu [Profily sítě Wi-Fi](../deploy-use/create-wifi-profiles.md).  
 
-- Zřídí zařízení s certifikáty, které uživatelé potřebují k připojení k prostředkům. Další informace najdete v tématu [profily certifikátů](../deploy-use/introduction-to-certificate-profiles.md).  
+- Zřídí zařízení s certifikáty, které uživatelé potřebují k připojení k prostředkům. Další informace najdete v tématu [profily certifikátů](../deploy-use/introduction-to-certificate-profiles.md).

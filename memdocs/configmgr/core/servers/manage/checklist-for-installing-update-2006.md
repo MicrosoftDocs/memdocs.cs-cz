@@ -10,12 +10,12 @@ ms.assetid: 6d359306-69ae-4873-ba90-964b6ae51d79
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 97ad8c947c634f43a53e1fac68f0a3255aa89809
-ms.sourcegitcommit: da5bfbe16856fdbfadc40b3797840e0b5110d97d
+ms.openlocfilehash: 05264780ef3971a7aa8b2d1778f0fe27c90b0b71
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88512746"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696459"
 ---
 # <a name="checklist-for-installing-update-2006-for-configuration-manager"></a>Kontrolní seznam pro instalaci aktualizace 2006 pro Configuration Manager
 
@@ -84,7 +84,7 @@ Pokud se chcete přihlásit k okruhu prvotní aktualizace, postupujte takto:
 1. Otevřete relaci Windows PowerShellu verze 5 **jako správce** .
 
     > [!IMPORTANT]
-    > Configuration Manager aktuální větev v současné době nepodporuje PowerShell verze 7. Pokud jste už nainstalovali PowerShell verze 7, můžete i nadále používat prostředí PowerShell verze 5. Další informace najdete v tématu [použití PowerShellu 7 vedle sebe s Windows powershell 5,1](https://docs.microsoft.com/powershell/scripting/install/migrating-from-windows-powershell-51-to-powershell-7?view=powershell-7#using-powershell-7-side-by-side-with-windows-powershell-51).
+    > Configuration Manager aktuální větev v současné době nepodporuje PowerShell verze 7. Pokud jste už nainstalovali PowerShell verze 7, můžete i nadále používat prostředí PowerShell verze 5. Další informace najdete v tématu [použití PowerShellu 7 vedle sebe s Windows powershell 5,1](/powershell/scripting/install/migrating-from-windows-powershell-51-to-powershell-7?view=powershell-7#using-powershell-7-side-by-side-with-windows-powershell-51).
 
 1. Spusťte skript **EnableEarlyUpdateRing2006.ps1** pomocí následující syntaxe:
 

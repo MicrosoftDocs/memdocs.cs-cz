@@ -10,12 +10,12 @@ ms.assetid: 29ae59b7-2695-4a0f-a9ff-4f29222f28b3
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 590c6fd336ec19949b5f5b99b25b3104524a52d6
-ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
+ms.openlocfilehash: 656cc80c929eb7e829dd06b642a83cb174d3b0c8
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82210107"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697241"
 ---
 # <a name="configure-certificate-infrastructure"></a>Konfigurace infrastruktury certifikátu
 
@@ -34,7 +34,7 @@ Pomocí těchto kroků můžete nakonfigurovat infrastrukturu pro certifikáty S
 
 ### <a name="to-install-and-configure-the-network-device-enrollment-service-and-dependencies"></a>Instalace a nastavení Služby zápisu síťových zařízení a závislostí  
 
-1. Na serveru se systémem Windows Server 2012 R2 nainstalujte a nakonfigurujte službu role Služby zápisu síťových zařízení pro roli serveru služby AD CS (Active Directory Certificate Services). Další informace najdete v tématu [pokyny pro službu zápisu síťových zařízení](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498\(v=ws.11\)).
+1. Na serveru se systémem Windows Server 2012 R2 nainstalujte a nakonfigurujte službu role Služby zápisu síťových zařízení pro roli serveru služby AD CS (Active Directory Certificate Services). Další informace najdete v tématu [pokyny pro službu zápisu síťových zařízení](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498\(v=ws.11\)).
 
 2. Zkontrolujte a v případě potřeby upravte oprávnění zabezpečení pro šablony certifikátu, které Služba zápisu síťových zařízení využívá:  
 
@@ -44,7 +44,7 @@ Pomocí těchto kroků můžete nakonfigurovat infrastrukturu pro certifikáty S
 
    -   Pro účet služby SCEP, který využívá fond aplikací Služby zápisu síťových zařízení: Oprávnění **Číst** a **Zapsat**.  
 
-        Tento požadavek není specifický pro Configuration Manager, ale je součástí konfigurace služby zápisu síťových zařízení. Další informace najdete v tématu [pokyny pro službu zápisu síťových zařízení](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498\(v=ws.11\)).  
+        Tento požadavek není specifický pro Configuration Manager, ale je součástí konfigurace služby zápisu síťových zařízení. Další informace najdete v tématu [pokyny pro službu zápisu síťových zařízení](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498\(v=ws.11\)).  
 
    > [!TIP]  
    >  Pokud chcete zjistit, které šablony certifikátu Služba zápisu síťových zařízení používá, podívejte se do následujícího klíče registru na serveru, na kterém je spuštěná Služba zápisu síťových zařízení: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\MSCEP.  
@@ -69,7 +69,7 @@ Pomocí těchto kroků můžete nakonfigurovat infrastrukturu pro certifikáty S
 
    - Klíč **MaxRequestBytes** nastavte na hodnotu **16777216**.  
 
-     Další informace najdete v článku podpora Microsoftu [820129: nastavení registru http. sys pro Windows](https://support.microsoft.com/help/820129).
+     Další informace najdete v článku podpora Microsoftu [820129: Http.sys nastavení registru pro Windows](https://support.microsoft.com/help/820129).
 
 6. Na stejném serveru změňte ve Správci Internetové informační služby (IIS) nastavení filtrování požadavků pro aplikaci /certsrv/mscep a poté server restartujte. V dialogovém okně **Upravit nastavení filtrování požadavků** by nastavení **Omezení počtu požadavků** mělo být:  
 
@@ -79,7 +79,7 @@ Pomocí těchto kroků můžete nakonfigurovat infrastrukturu pro certifikáty S
 
    - **Maximální délka řetězce dotazu (v bajtech)**: **65534**  
 
-     Další informace o těchto nastaveních a jejich konfiguraci najdete v tématu [omezení požadavků služby IIS](https://docs.microsoft.com/iis/configuration/system.webServer/security/requestFiltering/requestLimits/).
+     Další informace o těchto nastaveních a jejich konfiguraci najdete v tématu [omezení požadavků služby IIS](/iis/configuration/system.webServer/security/requestFiltering/requestLimits/).
 
 7. Pokud chcete mít možnost požádat o certifikát s kratším obdobím platnosti, než má šablona certifikátu, kterou používáte: Toto nastavení je pro podnikovou CA standardně zakázáno. Chcete-li tuto možnost pro podnikovou CA povolit, použijte nástroj příkazového řádku Certutil a poté pomocí následujících příkazů zastavte a restartujte certifikační službu:  
 
@@ -89,9 +89,9 @@ Pomocí těchto kroků můžete nakonfigurovat infrastrukturu pro certifikáty S
 
    3. **net start certsvc**  
 
-      Další informace najdete v tématu [nástroje a nastavení certifikačních služeb](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc780742\(v=ws.10\)).
+      Další informace najdete v tématu [nástroje a nastavení certifikačních služeb](/previous-versions/windows/it-pro/windows-server-2003/cc780742\(v=ws.10\)).
 
-8. Ověřte, zda služba zápisu síťových zařízení funguje, pomocí následujícího odkazu jako příklad: `https://server.contoso.com/certsrv/mscep/mscep.dll`. Měla by se zobrazit vestavěná webová stránka Služby zápisu síťových zařízení. Tato webová stránka vysvětluje princip služby a obsahuje informaci, že síťová zařízení používají adresu URL k odesílání žádostí o certifikát.  
+8. Ověřte, zda služba zápisu síťových zařízení funguje, pomocí následujícího odkazu jako příklad: `https://server.contoso.com/certsrv/mscep/mscep.dll` . Měla by se zobrazit vestavěná webová stránka Služby zápisu síťových zařízení. Tato webová stránka vysvětluje princip služby a obsahuje informaci, že síťová zařízení používají adresu URL k odesílání žádostí o certifikát.  
 
    Nyní je nakonfigurována Služba zápisu síťových zařízení a závislosti a lze nainstalovat a nakonfigurovat bod registrace certifikátu.
 
@@ -125,7 +125,7 @@ V hierarchii Configuration Manager musíte nainstalovat a nakonfigurovat alespo�
    - Pokud jste vybrali možnost **zpracovat žádosti o certifikát SCEP**, nakonfigurujte následující nastavení:
      -   **Název webu**, **číslo portu HTTPS**a **název virtuální aplikace** pro bod registrace certifikátu. Tato pole jsou automaticky vyplněna výchozími hodnotami. 
      -   **Adresa URL služby zápisu síťových zařízení a kořenového certifikátu certifikační autority** – klikněte na **Přidat**a pak v dialogovém okně **Přidat adresu URL a kořenový certifikát certifikační autority** zadejte toto:
-         - **Adresa URL Služby zápisu síťových zařízení**: Zadejte adresu URL v tomto formátu: https://*<plně_kvalifikovaný_název_domény_serveru>*/certsrv/mscep/mscep.dll. Pokud je třeba plně kvalifikovaný název domény serveru, na kterém je spuštěná služba zápisu síťových zařízení, server1.contoso.com, `https://server1.contoso.com/certsrv/mscep/mscep.dll`zadejte.
+         - **Adresa URL Služby zápisu síťových zařízení**: Zadejte adresu URL v tomto formátu: https://*<plně_kvalifikovaný_název_domény_serveru>*/certsrv/mscep/mscep.dll. Pokud je třeba plně kvalifikovaný název domény serveru, na kterém je spuštěná služba zápisu síťových zařízení, server1.contoso.com, zadejte `https://server1.contoso.com/certsrv/mscep/mscep.dll` .
          - **Kořenový certifikát certifikační autority**: Vyhledejte a vyberte soubor certifikátu (.cer), který jste vytvořili a uložili v **Kroku 1: Instalace a konfigurace Služby zápisu síťových zařízení a závislostí**. Tento kořenový certifikát CA umožňuje, aby bod registrace certifikátu ověřil certifikát pro ověřování klientů, který bude používat modul zásad Configuration Manager.  
 
    - Pokud jste vybrali možnost **zpracovat žádosti o certifikát PFX**, nakonfigurujete podrobnosti připojení a přihlašovací údaje pro vybranou certifikační autoritu.
@@ -171,7 +171,7 @@ Modul zásad Configuration Manager musíte nainstalovat a nakonfigurovat na kaž
 
 ##### <a name="to-install-the-policy-module"></a>Instalace Modulu zásad  
 
-1. Na serveru, na kterém je spuštěna služba zápisu síťových zařízení, se přihlaste jako správce domény a zkopírujte následující soubory ze složky <\>ConfigMgrInstallationMedia \SMSSETUP\POLICYMODULE\X64 na instalačním médiu Configuration Manager do dočasné složky:  
+1. Na serveru, na kterém je spuštěna služba zápisu síťových zařízení, se přihlaste jako správce domény a zkopírujte následující soubory ze složky <ConfigMgrInstallationMedia \> \SMSSETUP\POLICYMODULE\X64 na instalačním médiu Configuration Manager do dočasné složky:  
 
    -   PolicyModule.msi  
 
@@ -179,13 +179,13 @@ Modul zásad Configuration Manager musíte nainstalovat a nakonfigurovat na kaž
 
    Pokud je na instalačním médiu složka LanguagePack, zkopírujte také tuto složku a její obsah.  
 
-2. Z dočasné složky spusťte soubor PolicyModuleSetup. exe a spusťte Průvodce instalací modulu zásad Configuration Manager.  
+2. Z dočasné složky spusťte PolicyModuleSetup.exe a spusťte Průvodce instalací modulu zásad Configuration Manager.  
 
 3. Na úvodní stránce průvodce klikněte na **Další**, přijměte licenční podmínky, a klikněte na **Další**.  
 
 4. Na stránce **Instalační složka** potvrďte výchozí instalační složku pro modul zásad, nebo zadejte jinou složku, a klikněte na **Další**.  
 
-5. Na stránce **Bod registrace certifikátu** zadejte adresu URL bodu registrace certifikátu pomocí plně kvalifikovaného názvu domény serveru systému lokality a názvu virtuální aplikace zadaného ve vlastnostech bodu registrace certifikátu. Výchozí název virtuální aplikace je CMCertificateRegistration. Například pokud má systémový server lokality plně kvalifikovaný název domény server1.contoso.com a použili jste výchozí název virtuální aplikace, zadejte `https://server1.contoso.com/CMCertificateRegistration`.
+5. Na stránce **Bod registrace certifikátu** zadejte adresu URL bodu registrace certifikátu pomocí plně kvalifikovaného názvu domény serveru systému lokality a názvu virtuální aplikace zadaného ve vlastnostech bodu registrace certifikátu. Výchozí název virtuální aplikace je CMCertificateRegistration. Například pokud má systémový server lokality plně kvalifikovaný název domény server1.contoso.com a použili jste výchozí název virtuální aplikace, zadejte `https://server1.contoso.com/CMCertificateRegistration` .
 
 6. Potvrďte výchozí port **443**, nebo zadejte jiné číslo portu, který bod registrace certifikátu používá, a poté klikněte na **Další**.  
 
@@ -201,4 +201,4 @@ Modul zásad Configuration Manager musíte nainstalovat a nakonfigurovat na kaž
    Pokud chcete odinstalovat modul zásad Configuration Manager, použijte **programy a funkce** v Ovládacích panelech. 
 
  
-Teď, když jste dokončili kroky konfigurace, jste připraveni k nasazení certifikátů pro uživatele a zařízení, a to vytvořením a nasazením profilů certifikátů. Další informace o tom, jak vytvořit profily certifikátů, najdete v tématu [Postup vytvoření profilů certifikátů](../../protect/deploy-use/create-certificate-profiles.md).  
+Teď, když jste dokončili kroky konfigurace, jste připraveni k nasazení certifikátů pro uživatele a zařízení, a to vytvořením a nasazením profilů certifikátů. Další informace o tom, jak vytvořit profily certifikátů, najdete v tématu [Postup vytvoření profilů certifikátů](../../protect/deploy-use/create-certificate-profiles.md).

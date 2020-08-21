@@ -10,12 +10,12 @@ ms.assetid: 1401a35e-4312-4d3b-8ceb-0abbb10d4f05
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5e81bc9b2135d17c445f8a86ff2214db394f63db
-ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
+ms.openlocfilehash: 5606d7bb5656fe4616ba416836dab2c04c490cfa
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865485"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693297"
 ---
 # <a name="how-to-create-collections-in-configuration-manager"></a>Vytváření kolekcí v Configuration Manager
 
@@ -72,7 +72,7 @@ Vytvoříte kolekci, která má jedno pravidlo zahrnutí kolekce a jedno pravidl
 
 
 
-## <a name="create-a-collection"></a><a name="bkmk_create"></a>Vytvoření kolekce  
+## <a name="create-a-collection"></a><a name="bkmk_create"></a> Vytvoření kolekce  
 
 1. V konzole Configuration Manager přejdete do pracovního prostoru **prostředky a kompatibilita** .  
 
@@ -132,7 +132,7 @@ Vytvoříte kolekci, která má jedno pravidlo zahrnutí kolekce a jedno pravidl
 > Chcete-li zobrazit členy kolekce, je nutné aktualizovat nebo znovu načíst konzolu Configuration Manager. Nezobrazují se v kolekci až do první plánované aktualizace. Můžete také ručně vybrat možnost **aktualizovat členství** pro kolekci. Dokončení aktualizace kolekce může trvat několik minut.  
 
         
-### <a name="configure-a-direct-rule"></a><a name="bkmk-direct"></a>Konfigurace přímého pravidla  
+### <a name="configure-a-direct-rule"></a><a name="bkmk-direct"></a> Konfigurace přímého pravidla  
 
 1. Na stránce **Hledat prostředky** v **Průvodci vytvořením pravidla přímého členství**zadejte následující informace.  
 
@@ -159,7 +159,7 @@ Vytvoříte kolekci, která má jedno pravidlo zahrnutí kolekce a jedno pravidl
 2. Na stránce **vybrat prostředky** vyberte prostředky, které chcete přidat do kolekce v seznamu **prostředky** , a pak vyberte **Další**.  
 
 
-### <a name="configure-a-query-rule"></a><a name="bkmk-query"></a>Konfigurace pravidla dotazu  
+### <a name="configure-a-query-rule"></a><a name="bkmk-query"></a> Konfigurace pravidla dotazu  
 
 V dialogovém okně **Vlastnosti dotazového pravidla** zadejte následující informace.  
 
@@ -174,7 +174,7 @@ V dialogovém okně **Vlastnosti dotazového pravidla** zadejte následující i
     > [!TIP]  
     > Na kartě Obecné můžete zaškrtnutím políčka **vynechat duplicitní řádky (SELECT DISTINCT)** způsobit vrácení méně řádků a potenciálně rychlejší výsledky.
 
-### <a name="device-category-rule"></a><a name="bkmk-category"></a>Pravidlo kategorie zařízení
+### <a name="device-category-rule"></a><a name="bkmk-category"></a> Pravidlo kategorie zařízení
 
 V okně **vybrat kategorie zařízení** jsou k dispozici následující akce.
 
@@ -185,18 +185,18 @@ V okně **vybrat kategorie zařízení** jsou k dispozici následující akce.
 Další informace najdete v tématu [Automatická kategorizace zařízení do kolekcí](automatically-categorize-devices-into-collections.md).<!-- SCCMDocs issue 552 -->
 
 
-### <a name="configure-an-include-collection-rule"></a><a name="bkmk-include"></a>Konfigurace pravidla zahrnutí kolekce  
+### <a name="configure-an-include-collection-rule"></a><a name="bkmk-include"></a> Konfigurace pravidla zahrnutí kolekce  
 
 V dialogovém okně **Vybrat kolekce** vyberte kolekce, které chcete zahrnout do nové kolekce, a pak vyberte **OK**.  
 
 
-### <a name="configure-an-exclude-collection-rule"></a><a name="bkmk-exclude"></a>Konfigurace pravidla vyloučení kolekce  
+### <a name="configure-an-exclude-collection-rule"></a><a name="bkmk-exclude"></a> Konfigurace pravidla vyloučení kolekce  
 
 V dialogovém okně **Vybrat kolekce** vyberte kolekce, které chcete vyloučit z nové kolekce, a pak vyberte **OK**.  
 
 
 
-## <a name="import-a-collection"></a><a name="bkmk_import"></a>Import kolekce  
+## <a name="import-a-collection"></a><a name="bkmk_import"></a> Import kolekce  
 
 Když exportujete kolekci z lokality, Configuration Manager ji uloží jako soubor formát MOF (Managed Object Format) (MOF). Tento postup použijte k importu tohoto souboru do databáze lokality. Chcete-li provést tento postup, potřebujete oprávnění **vytvořit** pro třídu Collections.
 
@@ -218,7 +218,7 @@ Další informace o exportu kolekcí najdete v tématu [Správa kolekcí](manage
 
 5. Dokončete průvodce pro import kolekce. Nové kolekce se zobrazí v uzlu **Kolekce uživatelů** nebo **Kolekce zařízení** v pracovním prostoru **Prostředky a kompatibilita** . Aktualizujte nebo znovu načtěte konzolu Configuration Manager pro zobrazení členů kolekce pro nově importovanou kolekci.  
 
-## <a name="synchronize-collection-membership-results-to-azure-active-directory-groups"></a><a name="bkmk_aadcollsync"></a>Synchronizace výsledků členství kolekce do skupin Azure Active Directory
+## <a name="synchronize-collection-membership-results-to-azure-active-directory-groups"></a><a name="bkmk_aadcollsync"></a> Synchronizace výsledků členství kolekce do skupin Azure Active Directory
 
 <!--3607475-->
 > [!Tip]  
@@ -228,7 +228,7 @@ Synchronizaci členství v kolekci můžete povolit do skupiny Azure Active Dire
 
 Synchronizace služby Azure AD proběhne každých pět minut. Jedná se o jednosměrný proces, od Configuration Manager do Azure AD. Změny provedené v Azure AD se neprojeví v kolekcích Configuration Manager, ale Configuration Manager se nepřepíší. Pokud má například kolekce Configuration Manager dvě zařízení a skupina Azure AD má tři různá zařízení, po synchronizaci má skupina Azure AD pět zařízení.
 
-### <a name="prerequisites"></a>Požadavky
+### <a name="prerequisites"></a>Předpoklady
 
 - Integrace se službou Azure AD pro [správu cloudu](../../../servers/deploy/configure/azure-services-wizard.md)
 - [Azure Active Directory zjišťování uživatelů](../../../servers/deploy/configure/about-discovery-methods.md#azureaddisc)
@@ -275,13 +275,13 @@ Synchronizace služby Azure AD proběhne každých pět minut. Jedná se o jedno
 
 ![Synchronizovat kolekce do Azure AD](media/3607475-sync-collection-to-azuread.png)
 
-## <a name="using-powershell"></a><a name="bkmk_powershell"></a>Použití PowerShellu
+## <a name="using-powershell"></a><a name="bkmk_powershell"></a> Použití PowerShellu
 
-K vytváření a importu kolekcí můžete použít PowerShell. Další informace:
+K vytváření a importu kolekcí můžete použít PowerShell. Další informace naleznete v tématu:
 
-* [New-CMCollection](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmcollection)
-* [Set-CMCollection](https://docs.microsoft.com/powershell/module/ConfigurationManager/Set-CMCollection)
-* [Import – CMCollection](https://docs.microsoft.com/powershell/module/ConfigurationManager/Import-CMCollection)
+* [New-CMCollection](/powershell/module/configurationmanager/new-cmcollection)
+* [Set-CMCollection](/powershell/module/ConfigurationManager/Set-CMCollection)
+* [Import – CMCollection](/powershell/module/ConfigurationManager/Import-CMCollection)
 
 ## <a name="next-steps"></a>Další kroky
 

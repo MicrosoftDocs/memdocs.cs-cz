@@ -10,12 +10,12 @@ ms.assetid: 287a6324-ae65-4d38-b2ef-198d47c91231
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 5ee84a41a5c47ce554e4618b897c8e4933bdbe73
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 29b5dd8fdceb803de77aff9adbd0614d1e201b18
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129048"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694250"
 ---
 # <a name="removed-and-deprecated-features-for-configuration-manager"></a>Odebrané a zastaralé funkce pro Configuration Manager
 
@@ -29,12 +29,12 @@ Tyto informace se mohou v budoucích verzích změnit. Nemusí obsahovat všechn
 
 Následující funkce jsou zastaralé. Můžete je dál používat teď, ale Microsoft plánuje ukončit podporu v budoucnu.
 
-|Příznak|Zastarání poprvé oznámeno|Podpora &nbsp; odebrána|
+|Funkce|Zastarání poprvé oznámeno|Podpora &nbsp; odebrána|
 |-----------|---|--------------|
 |Implementace pro sdílení obsahu z Azure se změnila. Použijte bránu pro správu cloudu s podporou obsahu. V budoucnu nebudete moci vytvořit tradiční distribuční bod cloudu.|Únor 2019|TBD –<sup>[Poznámka 1](#bkmk_note1)</sup>|
 |Nasazení klasické služby do Azure pro bránu pro správu cloudu a distribuční bod cloudu. Další informace najdete v tématu [plánování pro CMG](../../../clients/manage/cmg/plan-cloud-management-gateway.md#azure-resource-manager).|Listopad 2018|TBD –<sup>[Poznámka 1](#bkmk_note1)</sup>|
 
-### <a name="note-1-support-removed-tbd"></a><a name="bkmk_note1"></a>Poznámka 1: byla odebrána podpora – TBD
+### <a name="note-1-support-removed-tbd"></a><a name="bkmk_note1"></a> Poznámka 1: byla odebrána podpora – TBD
 
 Konkrétní časový rámec má být stanoven (TBD). Microsoft doporučuje, abyste změnili na nový proces nebo funkci, ale můžete dál používat zastaralý proces nebo funkci v blízké budoucnosti.
 
@@ -42,7 +42,7 @@ Konkrétní časový rámec má být stanoven (TBD). Microsoft doporučuje, abys
 
 Následující funkce již nejsou podporovány. V některých případech už nejsou v produktu.
 
-|Příznak|Zastarání poprvé oznámeno|Podpora &nbsp; odebrána|  
+|Funkce|Zastarání poprvé oznámeno|Podpora &nbsp; odebrána|  
 |-----------|---|--------------|  
 | Možnost Analytics pro stolní počítače, která **zobrazí poslední data** pro registraci zařízení a aktualizace zabezpečení.<!-- 7080949 --> Další informace najdete v tématu [latence dat](../../../../desktop-analytics/troubleshooting.md#data-latency).|Květen 2020|Červenec 2020|
 | Integrace Windows Analytics a Upgrade Readiness. Další informace najdete v [článku KB 4521815: vyřazení služby Windows Analytics na 31. ledna 2020](https://support.microsoft.com/help/4521815/windows-analytics-retirement). | 14. října 2019 | 31. ledna 2020 |
@@ -68,7 +68,7 @@ Následující funkce již nejsou podporovány. V některých případech už ne
 
 Následující části obsahují další podrobnosti o funkcích odebraných pomocí verze 1511:
 
-#### <a name="out-of-band-management"></a><a name="bkmk_amt"></a>Vzdálená správa  
+#### <a name="out-of-band-management"></a><a name="bkmk_amt"></a> Vzdálená správa  
 
 Při Configuration Manager byla odebrána nativní podpora pro počítače na bázi AMT z konzoly Configuration Manager.  
 
@@ -76,13 +76,13 @@ Při Configuration Manager byla odebrána nativní podpora pro počítače na b�
 
 - Vzdálená správa v System Center 2012 Configuration Manager není touto změnou ovlivněná.  
 
-#### <a name="network-access-protection"></a><a name="bkmk_nap"></a>Ochrana přístupu k síti
+#### <a name="network-access-protection"></a><a name="bkmk_nap"></a> Ochrana přístupu k síti
 
 Configuration Manager odebrala podporu pro NAP (Network Access Protection). Tato funkce se v systému Windows Server 2012 R2 nepoužívá a je odebrána z Windows 10.  
 
-Alternativy ochrany síťového přístupu najdete v části *Deprecated functionality* (Zastaralé funkce) v článku [Network Policy and Access Services Overview](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831683(v=ws.11)) (Přehled služeb síťových zásad a přístupu).
+Alternativy ochrany síťového přístupu najdete v části *Deprecated functionality* (Zastaralé funkce) v článku [Network Policy and Access Services Overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831683(v=ws.11)) (Přehled služeb síťových zásad a přístupu).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Odebrané a zastaralé](removed-and-deprecated.md)
 - [Životní cyklus podpora Microsoftu](https://support.microsoft.com/lifecycle)

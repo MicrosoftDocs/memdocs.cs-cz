@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f403f7b4753abc7e98995ebd345c91d1f5812f46
-ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
+ms.openlocfilehash: 4fe51b37f1631d8dcb140f49dffcc819db2d112b
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 08/20/2020
-ms.locfileid: "88663462"
+ms.locfileid: "88695779"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
@@ -58,6 +58,11 @@ Podívejte se, co je nového v jednom týdnu v Microsoft Intune v [centru pro sp
 ## <a name="week-of-august-17-2020"></a>Týden od 17. srpna 2020
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="app-management"></a>Správa aplikací
+
+#### <a name="the-company-portal-adds-configuration-manager-application-support---4297660---"></a>Portál společnosti přidává podporu aplikací Configuration Manager<!-- 4297660 -->
+Portál společnosti teď podporuje Configuration Manager aplikace. Tato funkce umožňuje koncovým uživatelům zobrazit Configuration Manager i aplikace nasazené v Intune v Portál společnosti pro spoluspravované zákazníky. Tato podpora pomůže správcům konsolidovat různé prostředí portálu pro koncové uživatele. Další informace najdete v tématu [použití portál společnosti aplikace na spoluspravovaných zařízeních](/mem/configmgr/comanage/company-portal). 
+
 ### <a name="device-security"></a>Zabezpečení zařízení
 
 #### <a name="set-device-compliance-state-from-third-party-mdm-providers---6361689---"></a>Nastavit stav dodržování předpisů zařízením od poskytovatelů MDM třetích stran<!-- 6361689 -->

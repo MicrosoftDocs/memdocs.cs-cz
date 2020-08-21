@@ -10,12 +10,12 @@ ms.assetid: 2aca914f-641e-4bc8-98d4-bbf0a2a5276f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 7e4e84b55c929dd878cb0720b3f61dfceedcf449
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 8585f04e6cedf9cb5158dbebc41b00565eabd989
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82904099"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692719"
 ---
 # <a name="prepare-windows-servers-to-support-configuration-manager"></a>Příprava serverů Windows na podporu nástroje Configuration Manager
 
@@ -29,7 +29,7 @@ Než budete moct použít počítač s Windows jako server systému lokality pro
 
 Informace v tomto článku obsahují přehled typů konfigurací systému Windows, které jsou požadovány pro podporu Configuration Manager systémů lokality. Podrobnosti o konfiguraci konkrétních rolí systému lokality najdete v tématu [požadavky na lokalitu a systém lokality](../configs/site-and-site-system-prerequisites.md).
 
-##  <a name="windows-features-and-roles"></a><a name="BKMK_WinFeatures"></a>Funkce a role Windows  
+##  <a name="windows-features-and-roles"></a><a name="BKMK_WinFeatures"></a> Funkce a role Windows  
 Když nastavíte funkce a role Windows v počítači, může být nutné restartovat počítač, aby se tato konfigurace dokončila. Proto je vhodné identifikovat počítače, které budou hostovat konkrétní role systému lokality, než nainstalujete lokalitu Configuration Manager nebo server systému lokality.
 
 ### <a name="features"></a>Funkce  
@@ -95,10 +95,10 @@ Následující role systému Windows jsou vyžadovány pro podporu konkrétních
 - **Windows Server Update Services**: Tato role je vyžadována pro aktualizace softwaru.  
 
 
-##  <a name="iis-request-filtering-for-distribution-points"></a><a name="BKMK_IISFiltering"></a>Filtrování požadavků služby IIS pro distribuční body  
+##  <a name="iis-request-filtering-for-distribution-points"></a><a name="BKMK_IISFiltering"></a> Filtrování požadavků služby IIS pro distribuční body  
 Služba IIS ve výchozím nastavení používá filtrování žádostí, čímž blokuje přístup protokolu HTTP nebo HTTPS k některým příponám názvu souborů a umístěním složek. V distribučním bodě zabráníte klientům stahovat balíčky, které mají blokované přípony nebo umístění složek.  
 
-Pokud mají zdrojové soubory balíčku rozšíření, která jsou ve službě IIS blokována vaší konfigurací filtrování požadavků, je nutné nastavit filtrování požadavků tak, aby je povolilo. To se provádí [úpravou funkce filtrování žádostí](https://docs.microsoft.com/previous-versions/orphan-topics/ws.11/hh831621(v=ws.11)) ve Správci služby IIS na počítačích distribučních bodů.  
+Pokud mají zdrojové soubory balíčku rozšíření, která jsou ve službě IIS blokována vaší konfigurací filtrování požadavků, je nutné nastavit filtrování požadavků tak, aby je povolilo. To se provádí [úpravou funkce filtrování žádostí](/previous-versions/orphan-topics/ws.11/hh831621(v=ws.11)) ve Správci služby IIS na počítačích distribučních bodů.  
 
 Configuration Manager pro balíčky a aplikace se navíc používají následující přípony názvů souborů. Ujistěte se, že vaše konfigurace filtrování požadavků neblokují tyto přípony souborů:  
 
@@ -136,4 +136,4 @@ Například zdrojové soubory pro nasazení softwaru mohou zahrnovat složku poj
 - HEAD
 - PROPFIND
 
-Další informace najdete v tématu [Konfigurace filtrování požadavků ve službě IIS](https://docs.microsoft.com/previous-versions/orphan-topics/ws.11/hh831621(v=ws.11)#http-verbs). 
+Další informace najdete v tématu [Konfigurace filtrování požadavků ve službě IIS](/previous-versions/orphan-topics/ws.11/hh831621(v=ws.11)#http-verbs).

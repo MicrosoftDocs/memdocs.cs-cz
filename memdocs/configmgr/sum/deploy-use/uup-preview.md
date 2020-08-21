@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 3871b51c85d0474c4bea2da24fc5a2f31d02f59f
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: c37fab775cdb90667ff1bc9f77dbbcaa1864b6f0
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81719733"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696782"
 ---
 # <a name="uup-private-preview-instructions"></a>Pokyny pro UUP Private Preview
 
@@ -62,7 +62,7 @@ $config.ServerId
 $config.MUUrl
 ```
 
-Vlastnost **MUUrl** by měla být `https://sws.update.microsoft.com`. Pokud ho chcete změnit, přečtěte si článek řešení v následujícím článku podpory: [synchronizace WSUS se nezdařila s SoapException](https://support.microsoft.com/help/4482416/wsus-synchronization-fails-with-soapexception).
+Vlastnost **MUUrl** by měla být `https://sws.update.microsoft.com` . Pokud ho chcete změnit, přečtěte si článek řešení v následujícím článku podpory: [synchronizace WSUS se nezdařila s SoapException](https://support.microsoft.com/help/4482416/wsus-synchronization-fails-with-soapexception).
 
 ### <a name="2-update-configuration-manager"></a>2. aktualizace Configuration Manager
 
@@ -155,11 +155,11 @@ Po synchronizaci aktualizací UUP do svého prostředí je vyhledejte v konzole 
 
 - Vzhledem k tomu, že jsou tyto aktualizace ve verzi Preview v samostatném produktu, pomocí filtru produktu tyto aktualizace Najděte. Pomocí filtru produktů v plánu údržby můžete nasadit aktualizace funkcí UUP nebo non-UUP.  
 
-- Ve **všech aktualizacích softwaru** a **všech uzlech aktualizace Windows 10** **knihovny softwaru**je k dispozici nová volitelná **značka**sloupce. Tato vlastnost je také k dispozici jako filtr v pravidla automatického nasazení. V případě aktualizací UUP vyhledejte v tomto poli `UUP`pro. Pro aktualizace bez UUP je tato prázdná.  
+- Ve **všech aktualizacích softwaru** a **všech uzlech aktualizace Windows 10** **knihovny softwaru**je k dispozici nová volitelná **značka**sloupce. Tato vlastnost je také k dispozici jako filtr v pravidla automatického nasazení. V případě aktualizací UUP vyhledejte v tomto poli pro `UUP` . Pro aktualizace bez UUP je tato prázdná.  
 
 ### <a name="updates-available-during-preview"></a>Aktualizace dostupné během verze Preview
 
-Další informace o všech aktualizacích Windows 10 vydaných Microsoftem najdete v tématu [informace o verzi Windows 10](https://docs.microsoft.com/windows/release-information/).
+Další informace o všech aktualizacích Windows 10 vydaných Microsoftem najdete v tématu [informace o verzi Windows 10](/windows/release-information/).
 
 #### <a name="cumulative-updates-to-test"></a>Kumulativní aktualizace k testování
 
