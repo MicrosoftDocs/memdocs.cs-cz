@@ -9,41 +9,41 @@ ms.assetid: 1f703376-5f2c-4fd2-8209-7028c931ddc7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: e32956d2ca9385c22e9073cfa2665e1f61b3ebd3
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 8325102e9a818191eae5061b7adf60dbbb7269b5
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078630"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700697"
 ---
 # <a name="use-the-setup-wizard-to-install-configuration-manager-sites"></a>Instalace Configuration Manager lokalit pomocí Průvodce instalací
 
 *Platí pro: Configuration Manager (Current Branch)*
 
-Chcete-li nainstalovat novou Configuration Manager lokalitu pomocí uživatelského rozhraní s asistencí, použijte Průvodce instalací nástroje Configuration Manager (Setup. exe). Průvodce podporuje instalaci primární lokality nebo lokality centrální správy. Pomocí Průvodce můžete také [upgradovat zkušební instalaci](upgrade-an-evaluation-install-to-a-full-install.md) Configuration Manager na plně licencovanou instalaci. Pokud nechcete používat Průvodce, můžete místo toho použít [instalační skript](use-a-command-line-to-install-sites.md) a spustit bezobslužnou instalaci příkazového řádku.
+Chcete-li nainstalovat novou Configuration Manager lokalitu pomocí uživatelského rozhraní s asistencí, použijte Průvodce instalací Configuration Manager (setup.exe). Průvodce podporuje instalaci primární lokality nebo lokality centrální správy. Pomocí Průvodce můžete také [upgradovat zkušební instalaci](upgrade-an-evaluation-install-to-a-full-install.md) Configuration Manager na plně licencovanou instalaci. Pokud nechcete používat Průvodce, můžete místo toho použít [instalační skript](use-a-command-line-to-install-sites.md) a spustit bezobslužnou instalaci příkazového řádku.
 
 Do konzoly Configuration Manager nainstalujte sekundární lokalitu. Sekundární lokality nepodporují instalaci skriptu spouštěného z příkazového řádku.
 
 > [!Note]  
 > Počínaje verzí 1906 již soubor **úvodní. HTA** neexistuje v kořenovém adresáři instalačního média. Poskytuje odkazy na následující informace:<!--SCCMDocs-pr#3545-->
 >
-> - **Nainstalovat web**: `smssetup\bin\x64\setup.exe`. Další informace najdete v tématu [instalace centrální správy nebo primární lokality](#bkmk_primary).
+> - **Nainstalovat web**: `smssetup\bin\x64\setup.exe` . Další informace najdete v tématu [instalace centrální správy nebo primární lokality](#bkmk_primary).
 > - **Než začnete**: [navrhnout hierarchii lokalit](../../../plan-design/hierarchy/design-a-hierarchy-of-sites.md) <!-- https://go.microsoft.com/fwlink/p/?LinkId=626543 -->
 > - **Vyhodnocení připravenosti serveru**: [Kontrola požadovaných součástí](prerequisite-checker.md) <!-- https://go.microsoft.com/fwlink/p/?LinkId=626546 -->
-> - **Stažení požadovaných požadovaných souborů**: `smssetup\bin\x64\setupdl.exe`. Další informace najdete v tématu Nástroj pro [stažení instalačního programu](setup-downloader.md).
-> - **Nainstalovat Configuration Manager konzolu**: `smssetup\bin\i386\consolesetup.exe`. Další informace najdete v tématu [instalace konzol](install-consoles.md).
+> - **Stažení požadovaných požadovaných souborů**: `smssetup\bin\x64\setupdl.exe` . Další informace najdete v tématu Nástroj pro [stažení instalačního programu](setup-downloader.md).
+> - **Nainstalovat Configuration Manager konzolu**: `smssetup\bin\i386\consolesetup.exe` . Další informace najdete v tématu [instalace konzol](install-consoles.md).
 > - [**Stáhnout System Center Updates Publisher**](../../../../sum/tools/updates-publisher.md) <!-- https://go.microsoft.com/fwlink/p/?LinkId=626548 -->
 > - **Stáhnout klienty pro další operační systémy**: <!-- https://go.microsoft.com/fwlink/p/?LinkId=626550 -->
 >   - [Klient Microsoft Endpoint Configuration Manager – macOS (64-bit)](https://www.microsoft.com/download/details.aspx?id=100850)
 >   - [Klienti pro systémy UNIX a Linux](https://www.microsoft.com/download/details.aspx?id=47719)
-> - [**Poznámky k verzi**](release-notes.md) <!-- https://go.microsoft.com/fwlink/?LinkID=626571 -->
-> - [**Přečíst dokumentaci**](https://docs.microsoft.com/sccm)<!-- https://go.microsoft.com/fwlink/p/?LinkId=626547 -->
+> - [**Zpráva k vydání verze**](release-notes.md) <!-- https://go.microsoft.com/fwlink/?LinkID=626571 -->
+> - [**Přečíst dokumentaci**](/sccm)<!-- https://go.microsoft.com/fwlink/p/?LinkId=626547 -->
 > - **Získat pomoc s instalací**: [fóra TechNet: Configuration Manager (Current Branch) – nasazení lokality a klienta](https://social.technet.microsoft.com/Forums/en-us/home?forum=ConfigMgrDeployment) <!--NOTE: this link requires en-us locale to work-->   <!-- https://go.microsoft.com/fwlink/p/?LinkId=626549 -->
 > - **Configuration Manager komunita**: [komunita System Center: jak se zúčastnit](https://social.technet.microsoft.com/wiki/contents/articles/11504.system-center-community-how-to-participate.aspx) <!-- https://go.microsoft.com/fwlink/p/?LinkId=626544 -->
 > - [**Configuration Manager domů**](https://www.microsoft.com/cloud-platform/system-center-configuration-manager) <!-- https://go.microsoft.com/fwlink/p/?LinkId=626545 -->
 
 
-## <a name="install-a-central-administration-or-primary-site"></a><a name="bkmk_primary"></a>Instalace centrální správy nebo primární lokality
+## <a name="install-a-central-administration-or-primary-site"></a><a name="bkmk_primary"></a> Instalace centrální správy nebo primární lokality
 
 Pomocí následujícího postupu nainstalujete lokalitu centrální správy nebo primární lokalitu. Můžete ji také použít k upgradu zkušební lokality na plně licencovanou Configuration Manager lokalitu.
 
@@ -54,9 +54,9 @@ Před zahájením instalace lokality je třeba znát podrobnosti v následujíc�
 
 Pokud instalujete lokalitu centrální správy jako součást scénáře rozšíření lokality, před použitím následujícího postupu si přečtěte téma [rozšíření samostatné primární lokality](use-the-setup-wizard-to-install-sites.md#bkmk_expand) .
 
-### <a name="process-to-install-a-primary-or-central-administration-site"></a><a name="bkmk_installpri"></a>Postup instalace primární lokality nebo lokality centrální správy
+### <a name="process-to-install-a-primary-or-central-administration-site"></a><a name="bkmk_installpri"></a> Postup instalace primární lokality nebo lokality centrální správy
 
-1. V počítači, kam chcete nainstalovat lokalitu, spusťte příkaz `<InstallationMedia>\SMSSETUP\BIN\X64\Setup.exe` a spusťte **průvodce instalací nástroje Configuration Manager**.  
+1. V počítači, kam chcete nainstalovat lokalitu, spusťte příkaz `<InstallationMedia>\SMSSETUP\BIN\X64\Setup.exe` a spusťte **Průvodce instalací nástroje Configuration Manager**.  
 
     > [!NOTE]  
     > Když nainstalujete lokalitu centrální správy pro rozšíření na samostatnou primární lokalitu nebo nainstalujete novou podřízenou primární lokalitu v existující hierarchii, použijte instalační média (zdrojové soubory), která odpovídají verzi existující lokality nebo lokality. Pokud jste nainstalovali konzolové aktualizace, které změnily verzi dříve nainstalovaných webů, nepoužívejte původní instalační médium. Místo toho použijte zdrojové soubory z [disku CD-ROM. Poslední složka](../../manage/the-cd.latest-folder.md) aktualizované lokality. Configuration Manager vyžaduje, abyste použili zdrojové soubory, které odpovídají verzi existující lokality, ke které se vaše lokalita bude připojovat.  
@@ -166,11 +166,11 @@ Pokud instalujete lokalitu centrální správy jako součást scénáře rozší
 
     - **SQL Server název (FQDN)**: ve výchozím nastavení je tato hodnota nastavena na počítač serveru lokality.  
 
-        Pokud používáte vlastní port, přidejte tento port do plně kvalifikovaného názvu domény SQL Server. Použijte plně kvalifikovaný název domény SQL Server čárkou a číslem portu. Například pro server *SQLServer1.fabrikam.com*použijte následující příkaz k zadání portu *1551*:`SQLServer1.fabrikam.com,1551`  
+        Pokud používáte vlastní port, přidejte tento port do plně kvalifikovaného názvu domény SQL Server. Použijte plně kvalifikovaný název domény SQL Server čárkou a číslem portu. Například pro server *SQLServer1.fabrikam.com*použijte následující příkaz k zadání portu *1551*: `SQLServer1.fabrikam.com,1551`  
 
     - **Název instance**: ve výchozím nastavení je tato hodnota prázdná. Používá výchozí instanci SQL na počítači serveru lokality.  
 
-    - **Název databáze**: ve výchozím nastavení je tato hodnota nastavena na `CM_<Sitecode>`. Tuto hodnotu můžete přizpůsobit.  
+    - **Název databáze**: ve výchozím nastavení je tato hodnota nastavena na `CM_<Sitecode>` . Tuto hodnotu můžete přizpůsobit.  
 
     - **Port Service Broker**: ve výchozím nastavení je tato hodnota nastavená na použití výchozího portu SQL Server Service Broker (SSB) 4022. SQL ho používá pro komunikaci přímo s databází lokality v jiných lokalitách.  
 
@@ -244,7 +244,7 @@ Pokud instalujete lokalitu centrální správy jako součást scénáře rozší
     - Po dokončení instalace můžete připojit konzolu, která může upravovat objekty a nastavení.  
 
 
-## <a name="expand-a-stand-alone-primary-site"></a><a name="bkmk_expand"></a>Rozšíření samostatné primární lokality
+## <a name="expand-a-stand-alone-primary-site"></a><a name="bkmk_expand"></a> Rozšíření samostatné primární lokality
 
 Pokud jste jako první lokalitu nainstalovali samostatnou primární lokalitu, máte možnost později rozšířit tuto lokalitu do větší hierarchie tím, že nainstalujete lokalitu centrální správy.
 
@@ -271,7 +271,7 @@ Chcete-li lokalitu rozšířit, použijte Průvodce instalací nástroje Configu
 Chcete-li rozšířit samostatnou primární lokalitu, nejprve se podívejte na [požadavky pro rozšíření lokality](prerequisites-for-installing-sites.md#bkmk_expand). Pak použijte postup [k instalaci lokality primární nebo centrální správy](use-the-setup-wizard-to-install-sites.md#bkmk_installpri) dříve v tomto článku.
 
 
-## <a name="install-a-secondary-site"></a><a name="bkmk_secondary"></a>Instalace sekundární lokality
+## <a name="install-a-secondary-site"></a><a name="bkmk_secondary"></a> Instalace sekundární lokality
 
 K instalaci sekundární lokality použijte konzolu Configuration Manager.  
 
@@ -281,7 +281,7 @@ K instalaci sekundární lokality použijte konzolu Configuration Manager.
 
 - Když nainstalujete sekundární lokalitu, Configuration Manager nakonfiguruje novou lokalitu tak, aby používala porty komunikace klienta, které jsou nakonfigurované v nadřazené primární lokalitě.  
 
-### <a name="process-to-install-a-secondary-site"></a><a name="bkmk_installsecondary"></a>Proces instalace sekundární lokality  
+### <a name="process-to-install-a-secondary-site"></a><a name="bkmk_installsecondary"></a> Proces instalace sekundární lokality  
 
 1. V konzole Configuration Manager otevřete pracovní prostor **Správa** , rozbalte položku **Konfigurace lokality**a vyberte uzel **lokality** . Vyberte lokalitu, která bude nadřazenou primární lokalitou nové sekundární lokality.  
 
@@ -411,11 +411,11 @@ K instalaci sekundární lokality použijte konzolu Configuration Manager.
 
 11. Na stránce **Souhrn** zkontrolujte nastavení a pak kliknutím na tlačítko **Další** nainstalujte sekundární lokalitu. Když průvodce zobrazí stránku **dokončení** , můžete Průvodce zavřít. Instalace sekundární lokality pokračuje na pozadí.  
 
-### <a name="how-to-verify-the-secondary-site-installation-status"></a><a name="bkmk_verify"></a>Ověření stavu instalace sekundární lokality  
+### <a name="how-to-verify-the-secondary-site-installation-status"></a><a name="bkmk_verify"></a> Ověření stavu instalace sekundární lokality  
 
 1. V konzole Configuration Manager otevřete pracovní prostor **Správa** , rozbalte položku **Konfigurace lokality**a vyberte uzel **lokality** .  
 
 2. Vyberte sekundární lokalitu, kterou instalujete, a poté na pásu karet zvolte možnost **Zobrazit stav instalace** .  
 
     > [!TIP]  
-    > Při instalaci více než jedné sekundární lokality v jednom okamžiku se spustí Kontrola požadovaných součástí na jedné lokalitě. Aby bylo možné spustit další lokalitu, je třeba dokončit lokalitu.  
+    > Při instalaci více než jedné sekundární lokality v jednom okamžiku se spustí Kontrola požadovaných součástí na jedné lokalitě. Aby bylo možné spustit další lokalitu, je třeba dokončit lokalitu.

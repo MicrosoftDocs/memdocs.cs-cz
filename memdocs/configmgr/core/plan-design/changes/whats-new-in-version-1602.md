@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 2e398795a14f5073141f103d93ccd82e61d4d7a8
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 9a54ee5fb427f276ec755e748513b178d0c026ab
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82904893"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698567"
 ---
 # <a name="what39s-new-in-version-1602-of-configuration-manager"></a>Co&#39;s novinkou ve verzi 1602 Configuration Manager
 
@@ -27,7 +27,7 @@ Aktualizace 1602 pro Configuration Manager je k dispozici pouze v rámci konzoly
 
 
 > [!TIP]  
-> Další informace:  
+> Přečtěte si další informace:  
 >   
 > - [Instalace nových lokalit](../../servers/deploy/install/prepare-to-install-sites.md) (pomocí základní verze, jako je 1511)  
 > - [Instalace aktualizací v lokalitách](../../servers/manage/updates.md) (například aktualizace 1602)  
@@ -36,17 +36,17 @@ Aktualizace 1602 pro Configuration Manager je k dispozici pouze v rámci konzoly
 
 ## <a name="site-infrastructure"></a>Infrastruktura webu  
 
-###  <a name="in-place-upgrade-the-operating-system-of-site-servers-that-run-windows-server-2008-r2"></a><a name="bkmk_UpgradeOS"></a>Místní upgrade operačního systému serverů lokality, na kterých běží Windows Server 2008 R2  
+###  <a name="in-place-upgrade-the-operating-system-of-site-servers-that-run-windows-server-2008-r2"></a><a name="bkmk_UpgradeOS"></a> Místní upgrade operačního systému serverů lokality, na kterých běží Windows Server 2008 R2  
  Configuration Manager weby, na kterých běží verze 1602 nebo novější, podporují místní upgrade operačního systému serverů lokality ze systému Windows Server 2008 R2 na Windows Server 2012 R2.  
 
 > [!WARNING]  
 >  Před provedením upgradu na Windows Server 2012 R2 je nutné ze serveru odinstalovat službu WSUS 3.2.  
 >   
->  Další informace o tomto důležitém kroku najdete v části "nové a změněné funkce" v tématu [přehled Windows Server Update Services](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh852345(v=ws.11)#new-and-changed-functionality).  
+>  Další informace o tomto důležitém kroku najdete v části "nové a změněné funkce" v tématu [přehled Windows Server Update Services](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh852345(v=ws.11)#new-and-changed-functionality).  
 
- Chcete-li upgradovat server, použijte postupy upgradu systému Windows Server 2012 R2. Po upgradu nemusíte spouštět obnovení serveru lokality Configuration Manager. Postupy upgradu najdete v tématu [Možnosti upgradu pro Windows Server 2012 R2](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn303416(v=ws.11)) v dokumentaci k systému Windows Server.  
+ Chcete-li upgradovat server, použijte postupy upgradu systému Windows Server 2012 R2. Po upgradu nemusíte spouštět obnovení serveru lokality Configuration Manager. Postupy upgradu najdete v tématu [Možnosti upgradu pro Windows Server 2012 R2](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn303416(v=ws.11)) v dokumentaci k systému Windows Server.  
 
-###  <a name="sql-server-alwayson-availability-groups"></a><a name="bkmk_AOAG"></a>SQL Server skupiny dostupnosti AlwaysOn  
+###  <a name="sql-server-alwayson-availability-groups"></a><a name="bkmk_AOAG"></a> SQL Server skupiny dostupnosti AlwaysOn  
  Použijte SQL Server skupiny dostupnosti AlwaysOn k hostování databáze lokality v primárních lokalitách a lokalitu centrální správy jako řešení zotavení po havárii s vysokou dostupností.  
 
  Podrobnosti najdete v tématu [SQL Server AlwaysOn pro databázi lokality s vysokou dostupností pro Configuration Manager](../../../core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md).  
@@ -128,7 +128,7 @@ Tyto aplikace se nacházejí v uzlu **aplikace** konzoly Configuration Manager.
 
 
 ### <a name="make-sure-enrolled-and-compliant-devices-always-have-access-to-exchange-on-premises"></a>Zajistěte, aby zaregistrovaná zařízení splňující předpisy měla vždycky přístup k místnímu Exchangi.  
- Když zaškrtnete tuto možnost, zařízení, která jsou zaregistrovaná v Intune a vyhovují zásadám dodržování předpisů, mají povolený přístup k místnímu Exchangi: **přepsání výchozího pravidla – vždy povolit zaregistrovaným a kompatibilním zařízením Intune přístup k místnímu Exchangi:**. Toto pravidlo je k dispozici na **stránce Obecné** v **Průvodci konfigurací zásad podmíněného přístupu** pro místní Exchange.
+ Když zaškrtnete tuto možnost, zařízení, která jsou zaregistrovaná v Intune a vyhovují zásadám dodržování předpisů, mají povolený přístup k místnímu Exchangi: **přepsání výchozího pravidla – vždy povolit zaregistrovaným a kompatibilním zařízením Intune přístup k místnímu Exchangi:**. Toto pravidlo je k dispozici na  **stránce Obecné** v **Průvodci konfigurací zásad podmíněného přístupu** pro místní Exchange.
 
  Toto pravidlo přepíše výchozí pravidlo. to znamená, že i když nastavíte výchozí pravidlo pro karanténu nebo blokování přístupu, zaregistrovaná zařízení splňující předpisy budou mít pořád přístup k místnímu Exchangi. Toto nastavení použijte, pokud chcete, aby zaregistrovaná zařízení splňující předpisy měla vždycky přístup k e-mailu prostřednictvím místního Exchange.   
 
@@ -209,4 +209,4 @@ Configuration Manager může požádat o stav Zámek aktivace jak na zařízení
 
 -   **Nedodržující předpisy**: uživatelé přijali verzi podmínek a ujednání, ale ne nejnovější verzi.  
 
--   **Neznámé**: uživatelé nikdy nepřijali podmínky a ujednání, včetně těch, kteří nemají zaregistrované zařízení.  
+-   **Neznámé**: uživatelé nikdy nepřijali podmínky a ujednání, včetně těch, kteří nemají zaregistrované zařízení.

@@ -10,12 +10,12 @@ ms.assetid: 58d52fdc-bd18-494d-9f3b-ccfc13ea3d35
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 05553af3e973805eed62c68f13afc3cf7d3d2ee3
-ms.sourcegitcommit: 8a4a86ee8044f273dcece26155132a801f3d8f9a
+ms.openlocfilehash: c9cf8e74793213e47dd503de1fdf1284bdc7d6a9
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87438594"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699224"
 ---
 # <a name="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager"></a>Příprava na používání skupin dostupnosti Always On SQL Server s Configuration Manager
 
@@ -76,13 +76,13 @@ Použijte SQL Server edice *Enterprise* .
 
 Každá instance SQL Server může běžet pod účtem uživatele domény (**účet služby**) nebo účtem mimo doménu. Každá replika ve skupině může mít jinou konfiguraci.
 
-- Použijte účet s nejnižšími možnými oprávněními. Další informace najdete v tématu [požadavky na zabezpečení pro instalaci SQL Server](https://docs.microsoft.com/sql/sql-server/install/security-considerations-for-a-sql-server-installation).  
+- Použijte účet s nejnižšími možnými oprávněními. Další informace najdete v tématu [požadavky na zabezpečení pro instalaci SQL Server](/sql/sql-server/install/security-considerations-for-a-sql-server-installation).  
 
-- Další informace o konfiguraci účtů služeb a oprávnění pro SQL Server najdete v tématu [Konfigurace účtů a oprávnění služby systému Windows](https://docs.microsoft.com/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions).  
+- Další informace o konfiguraci účtů služeb a oprávnění pro SQL Server najdete v tématu [Konfigurace účtů a oprávnění služby systému Windows](/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions).  
 
-- Chcete-li použít účet, který není doménovým účtem, je nutné použít certifikáty. Další informace najdete v tématu [použití certifikátů pro koncový bod zrcadlení databáze (Transact-SQL)](https://docs.microsoft.com/sql/database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql).  
+- Chcete-li použít účet, který není doménovým účtem, je nutné použít certifikáty. Další informace najdete v tématu [použití certifikátů pro koncový bod zrcadlení databáze (Transact-SQL)](/sql/database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql).  
 
-- Další informace najdete v tématu [Vytvoření koncového bodu zrcadlení databáze pro skupiny dostupnosti Always On](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell).  
+- Další informace najdete v tématu [Vytvoření koncového bodu zrcadlení databáze pro skupiny dostupnosti Always On](/sql/database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell).  
 
 
 ### <a name="database"></a>Databáze
@@ -104,7 +104,7 @@ Nakonfigurujte databázi každé repliky s následujícím nastavením:
     GO
     ```
 
-    Další informace naleznete v tématu [Integrace modulu CLR](https://docs.microsoft.com/sql/relational-databases/clr-integration/clr-integration-enabling).  
+    Další informace naleznete v tématu [Integrace modulu CLR](/sql/relational-databases/clr-integration/clr-integration-enabling).  
 
 - Nastavte **repl velikost textu** na `2147483647` :  
 
@@ -120,7 +120,7 @@ Nakonfigurujte databázi každé repliky s následujícím nastavením:
     ALTER DATABASE [CM_xxx] SET TRUSTWORTHY ON;
     ```
 
-    Další informace najdete v tématu [důvěryhodná vlastnost databáze](https://docs.microsoft.com/sql/relational-databases/security/trustworthy-database-property).
+    Další informace najdete v tématu [důvěryhodná vlastnost databáze](/sql/relational-databases/security/trustworthy-database-property).
 
 - Povolit **Service Broker**:  
 
@@ -217,9 +217,9 @@ Spuštěním následujícího skriptu SQL Ověřte konfiguraci databáze pro pri
 - Můžete použít repliku asynchronního potvrzení k obnovení synchronní repliky. Další informace najdete v tématu [Možnosti obnovení databáze lokality](../../manage/recover-sites.md#site-database-recovery-options).  
 
     > [!Warning]  
-    > Configuration Manager nepodporuje *převzetí služeb při selhání* pro použití repliky asynchronního potvrzení jako databáze lokality. Další informace najdete v tématu [režimy převzetí služeb při selhání a převzetí služeb při selhání (skupiny dostupnosti Always On)](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups).  
+    > Configuration Manager nepodporuje *převzetí služeb při selhání* pro použití repliky asynchronního potvrzení jako databáze lokality. Další informace najdete v tématu [režimy převzetí služeb při selhání a převzetí služeb při selhání (skupiny dostupnosti Always On)](/sql/database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups).  
 
-Configuration Manager neověřuje stav repliky asynchronního potvrzování, aby bylo možné potvrdit, že je aktuální. Použití repliky asynchronního potvrzení jako databáze lokality může ohrozit integritu vašeho webu a ohrožení dat. Tato replika nemůže být synchronizovaná podle návrhu. Další informace najdete v tématu [Přehled skupin dostupnosti Always On SQL Server](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server).
+Configuration Manager neověřuje stav repliky asynchronního potvrzování, aby bylo možné potvrdit, že je aktuální. Použití repliky asynchronního potvrzení jako databáze lokality může ohrozit integritu vašeho webu a ohrožení dat. Tato replika nemůže být synchronizovaná podle návrhu. Další informace najdete v tématu [Přehled skupin dostupnosti Always On SQL Server](/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server).
 
 Každý člen repliky musí mít následující konfiguraci:
 
@@ -239,17 +239,17 @@ Každý člen repliky musí mít následující konfiguraci:
     > - Spuštěním instalačního programu Configuration Manager určíte použití databáze lokality ve skupině dostupnosti.  
     > - Nainstalujete jakoukoli aktualizaci Configuration Manager. (Ne jen aktualizace, které se vztahují k databázi lokality).  
 
-- Všichni členové potřebují stejný [režim osazení](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/automatic-seeding-secondary-replicas).<!-- SCCMDocs-pr#3899 --> Instalační program Configuration Manager obsahuje kontrolu předpokladů pro ověření této konfigurace při vytváření databáze prostřednictvím instalace nebo obnovení.
+- Všichni členové potřebují stejný [režim osazení](/sql/database-engine/availability-groups/windows/automatic-seeding-secondary-replicas).<!-- SCCMDocs-pr#3899 --> Instalační program Configuration Manager obsahuje kontrolu předpokladů pro ověření této konfigurace při vytváření databáze prostřednictvím instalace nebo obnovení.
 
     > [!Note]  
-    > Když instalační program vytvoří databázi a nakonfigurujete **Automatické** osazení, Skupina dostupnosti musí mít oprávnění k vytvoření databáze. Tento požadavek platí pro novou databázi i obnovení. Další informace najdete v tématu [Automatické osazení pro sekundární repliku](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/automatic-seeding-secondary-replicas#security).<!-- SCCMDocs-pr#3900 -->
+    > Když instalační program vytvoří databázi a nakonfigurujete **Automatické** osazení, Skupina dostupnosti musí mít oprávnění k vytvoření databáze. Tento požadavek platí pro novou databázi i obnovení. Další informace najdete v tématu [Automatické osazení pro sekundární repliku](/sql/database-engine/availability-groups/windows/automatic-seeding-secondary-replicas#security).<!-- SCCMDocs-pr#3900 -->
 
 #### <a name="replica-member-location"></a>Umístění člena repliky
 
 Buď můžete hostovat všechny repliky ve skupině dostupnosti místně, nebo je hostovat na Microsoft Azure. Skupina, která obsahuje místního člena a člena v Azure, se nepodporuje.
 
 > [!NOTE]
-> Pokud pro SQL Server používáte virtuální počítač Azure, povolte **plovoucí IP adresu**. Další informace najdete v tématu [Konfigurace nástroje pro vyrovnávání zatížení pro skupinu dostupnosti Always On SQL Server ve virtuálních počítačích Azure](https://docs.microsoft.com/azure/azure-sql/virtual-machines/windows/availability-group-load-balancer-portal-configure).<!-- SCCMDocs#1928 -->
+> Pokud pro SQL Server používáte virtuální počítač Azure, povolte **plovoucí IP adresu**. Další informace najdete v tématu [Konfigurace nástroje pro vyrovnávání zatížení pro skupinu dostupnosti Always On SQL Server ve virtuálních počítačích Azure](/azure/azure-sql/virtual-machines/windows/availability-group-load-balancer-portal-configure).<!-- SCCMDocs#1928 -->
 
 Configuration Manager instalační program se musí připojit ke každé replice. Když nastavíte skupinu dostupnosti v Azure a skupina je za interním nebo externím nástrojem pro vyrovnávání zatížení, otevřete následující výchozí porty:
 
@@ -263,11 +263,11 @@ Po dokončení instalace musí tyto porty zůstat otevřené pro Configuration M
 
 Pro tyto konfigurace můžete použít vlastní porty. Použijte stejné vlastní porty pro koncový bod a na všechny repliky ve skupině dostupnosti.
 
-Aby SQL mohl replikovat data mezi lokalitami, vytvořte pravidlo vyrovnávání zatížení pro každý port v nástroji pro vyrovnávání zatížení Azure. Další informace najdete v tématu [Konfigurace portů s vysokou dostupností pro interní nástroj pro vyrovnávání zatížení](https://docs.microsoft.com/azure/load-balancer/load-balancer-configure-ha-ports).<!-- MEMDocs#252 -->
+Aby SQL mohl replikovat data mezi lokalitami, vytvořte pravidlo vyrovnávání zatížení pro každý port v nástroji pro vyrovnávání zatížení Azure. Další informace najdete v tématu [Konfigurace portů s vysokou dostupností pro interní nástroj pro vyrovnávání zatížení](/azure/load-balancer/load-balancer-configure-ha-ports).<!-- MEMDocs#252 -->
 
 #### <a name="listener"></a>Naslouchací proces
 
-Skupina dostupnosti musí mít aspoň jeden *naslouchací proces skupiny dostupnosti*. Když nakonfigurujete Configuration Manager k použití databáze lokality ve skupině dostupnosti, použije se virtuální název tohoto naslouchacího procesu. Skupina dostupnosti sice může obsahovat několik posluchačů, Configuration Manager je ale může používat jenom jednou. Další informace najdete v tématu [Vytvoření nebo konfigurace naslouchacího procesu skupiny dostupnosti SQL Server](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server).
+Skupina dostupnosti musí mít aspoň jeden *naslouchací proces skupiny dostupnosti*. Když nakonfigurujete Configuration Manager k použití databáze lokality ve skupině dostupnosti, použije se virtuální název tohoto naslouchacího procesu. Skupina dostupnosti sice může obsahovat několik posluchačů, Configuration Manager je ale může používat jenom jednou. Další informace najdete v tématu [Vytvoření nebo konfigurace naslouchacího procesu skupiny dostupnosti SQL Server](/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server).
 
 #### <a name="file-paths"></a>Cesty k souborům
 
@@ -294,7 +294,7 @@ Představte si třeba následující scénář:
 #### <a name="multi-subnet-failover"></a>Převzetí služeb při selhání s více podsítěmi
 
 <!-- SCCMDocs-pr#3734 -->
-Počínaje verzí 1906 můžete povolit [klíčové slovo připojovacího řetězce MultiSubnetFailover](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server#MultiSubnetFailover) v SQL Server. Také je nutné ručně přidat následující hodnoty do registru systému Windows na serveru lokality:
+Počínaje verzí 1906 můžete povolit [klíčové slovo připojovacího řetězce MultiSubnetFailover](/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server#MultiSubnetFailover) v SQL Server. Také je nutné ručně přidat následující hodnoty do registru systému Windows na serveru lokality:
 
 ``` Registry
 HKLM:\SOFTWARE\Microsoft\SMS\Identification
@@ -315,11 +315,11 @@ Následující omezení platí pro všechny scénáře.
 
 ### <a name="unsupported-sql-server-options-and-configurations"></a>Nepodporované možnosti a konfigurace SQL Server
 
-- **Základní skupiny dostupnosti**: představené se systémem SQL Server 2016 Standard Edition. základní skupiny dostupnosti nepodporují přístup pro čtení sekundárních replik. Konfigurace vyžaduje tento přístup. Další informace najdete v tématu [základní skupiny dostupnosti SQL Server](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups?view=sql-server-2017).  
+- **Základní skupiny dostupnosti**: představené se systémem SQL Server 2016 Standard Edition. základní skupiny dostupnosti nepodporují přístup pro čtení sekundárních replik. Konfigurace vyžaduje tento přístup. Další informace najdete v tématu [základní skupiny dostupnosti SQL Server](/sql/database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups?view=sql-server-2017).  
 
-- **Instance clusteru s podporou převzetí služeb při**selhání: instance clusteru s podporou převzetí služeb při selhání Configuration Manager se nepodporují pro repliku Další informace najdete v tématu [SQL Server vždy na instancích clusteru s podporou převzetí služeb při selhání](https://docs.microsoft.com/sql/sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server).  
+- **Instance clusteru s podporou převzetí služeb při**selhání: instance clusteru s podporou převzetí služeb při selhání Configuration Manager se nepodporují pro repliku Další informace najdete v tématu [SQL Server vždy na instancích clusteru s podporou převzetí služeb při selhání](/sql/sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server).  
 
-- **MultiSubnetFailover**: ve verzi 1902 a starší není podporována použití skupiny dostupnosti s Configuration Manager v konfiguraci s více podsítěmi. Nemůžete také použít připojovací řetězec pro klíčové slovo [MutliSubnetFailover](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server#MultiSubnetFailover) .
+- **MultiSubnetFailover**: ve verzi 1902 a starší není podporována použití skupiny dostupnosti s Configuration Manager v konfiguraci s více podsítěmi. Nemůžete také použít připojovací řetězec pro klíčové slovo [MutliSubnetFailover](/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server#MultiSubnetFailover) .
 
     Pro podporu této konfigurace Configuration Manager aktualizujte na verzi 1906 nebo novější. Další informace najdete v tématu věnovaném [převzetí služeb při selhání s více podsítěmi](sql-server-alwayson-for-a-highly-available-site-database.md#multi-subnet-failover) .
 
@@ -382,7 +382,7 @@ Pokud databáze lokality používá skupinu dostupnosti, spusťte úlohu údržb
 
 ### <a name="transaction-log"></a>Transakční protokol  
 
-Nastavte model obnovení databáze lokality na hodnotu **Full**. Tato konfigurace je požadavkem pro Configuration Manager použití ve skupině dostupnosti. Naplánujte monitorování a udržování velikosti protokolu transakcí databáze lokality. V úplném modelu obnovení nejsou transakce zpřísněny, dokud nevytvoří úplnou zálohu databáze nebo protokolu transakcí. Další informace najdete v tématu [zálohování a obnovení databází SQL Server](https://docs.microsoft.com/sql/relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases).
+Nastavte model obnovení databáze lokality na hodnotu **Full**. Tato konfigurace je požadavkem pro Configuration Manager použití ve skupině dostupnosti. Naplánujte monitorování a udržování velikosti protokolu transakcí databáze lokality. V úplném modelu obnovení nejsou transakce zpřísněny, dokud nevytvoří úplnou zálohu databáze nebo protokolu transakcí. Další informace najdete v tématu [zálohování a obnovení databází SQL Server](/sql/relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases).
 
 
 ## <a name="changes-for-site-recovery"></a>Změny pro Site Recovery

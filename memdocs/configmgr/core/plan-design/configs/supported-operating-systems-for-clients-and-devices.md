@@ -10,12 +10,12 @@ ms.assetid: 87f4e041-67df-4c61-aa98-7444faffe565
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 497a43fe6647f1dc2787f16a76f45ddd26d24796
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: e573a2887bd527daac9a05fec2e83ef39fbfc4e1
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128844"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700312"
 ---
 # <a name="supported-os-versions-for-clients-and-devices-for-configuration-manager"></a>Podporované verze operačních systémů pro klienty a zařízení pro Configuration Manager
 
@@ -44,7 +44,7 @@ Ke správě následujících verzí operačních systémů Windows použijte kli
 #### <a name="windows-virtual-desktop"></a>Windows Virtual Desktop
 
 <!--3556025-->
-[Virtuální plocha Windows](https://docs.microsoft.com/azure/virtual-desktop/) je služba virtualizace plochy a aplikací, která běží na Microsoft Azure. Počínaje verzí 1906 použijte Configuration Manager ke správě těchto virtuálních zařízení s Windows v Azure.
+[Virtuální plocha Windows](/azure/virtual-desktop/) je služba virtualizace plochy a aplikací, která běží na Microsoft Azure. Počínaje verzí 1906 použijte Configuration Manager ke správě těchto virtuálních zařízení s Windows v Azure.
 
 Podobně jako terminálový server, některá z těchto virtuálních zařízení umožňují více souběžných aktivních uživatelských relací. Kvůli lepšímu výkonu klienta Configuration Manager nyní zakáže zásady uživatele na jakémkoli zařízení, které umožňuje tyto více uživatelských relací. I když zásady uživatele povolíte, klient je ve výchozím nastavení standardně zakáže na těchto zařízeních, která zahrnují víc relací a terminálových serverů s Windows 10 Enterprise.
 
@@ -100,15 +100,15 @@ Pololetní verze kanálů Windows serveru jsou instalace jádra serveru, jako je
 
 - **Windows Server 2012** (x64) <sup> [Poznámka 2](#bkmk_note2)</sup>
 
-#### <a name="note-1"></a><a name="bkmk_note1"></a>Poznámka 1
+#### <a name="note-1"></a><a name="bkmk_note1"></a> Poznámka 1
 
 Configuration Manager testuje a podporuje edice Windows serveru Datacenter, ale není oficiálně certifikováno pro Windows Server. Podpora Configuration Manager hotfix není nabízena pro problémy, které jsou specifické pro Windows Server Datacenter Edition. Další informace o certifikaci Windows serveru najdete v tématu [katalog Windows serveru](https://www.windowsservercatalog.com/).
 
-#### <a name="note-2"></a><a name="bkmk_note2"></a>Poznámka 2
+#### <a name="note-2"></a><a name="bkmk_note2"></a> Poznámka 2
 
-Chcete-li podporovat [nabízenou instalaci klienta](../../clients/deploy/plan/client-installation-methods.md#client-push-installation), přidejte službu souborového serveru role serveru souborové služby a služby úložiště. Další informace o instalaci funkcí Windows na jádro serveru najdete v tématu [Instalace rolí, služeb rolí a funkcí pomocí rutin prostředí Windows PowerShell](https://docs.microsoft.com/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features#install-roles-role-services-and-features-by-using-windows-powershell-cmdlets).  
+Chcete-li podporovat [nabízenou instalaci klienta](../../clients/deploy/plan/client-installation-methods.md#client-push-installation), přidejte službu souborového serveru role serveru souborové služby a služby úložiště. Další informace o instalaci funkcí Windows na jádro serveru najdete v tématu [Instalace rolí, služeb rolí a funkcí pomocí rutin prostředí Windows PowerShell](/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features#install-roles-role-services-and-features-by-using-windows-powershell-cmdlets).  
 
-#### <a name="note-3"></a><a name="bkmk_note3"></a>Poznámka 3
+#### <a name="note-3"></a><a name="bkmk_note3"></a> Poznámka 3
 
 Nová aplikace centra softwaru se nepodporuje v žádné verzi jádra Windows serveru.<!--SCCMDocs issue 683-->
 
@@ -135,7 +135,7 @@ Spravovat zařízení se systémem Windows Embedded instalací klienta Configura
 - **Windows 10 Enterprise** (x86, x64)  
 
 - **Windows 10 IoT Enterprise** (x86, x64)  
-    Tato verze zahrnuje kanál pro dlouhodobé obsluhy (LTSC). Další informace najdete v tématu [Přehled Windows 10 IoT Enterprise](https://docs.microsoft.com/windows/iot-core/windows-iot-enterprise).<!--SCCMDocs issue 560-->  
+    Tato verze zahrnuje kanál pro dlouhodobé obsluhy (LTSC). Další informace najdete v tématu [Přehled Windows 10 IoT Enterprise](/windows/iot-core/windows-iot-enterprise).<!--SCCMDocs issue 560-->  
 
 - **Windows Embedded 8,1 – obor** (x86, x64)
 
@@ -186,7 +186,7 @@ Správa zařízení systém Windows CE pomocí Configuration Manager starší ve
 
 - Španělština (Španělsko)  
 
-## <a name="extended-security-updates-and-configuration-manager"></a><a name="bkmk_ESU"></a>Rozšířené aktualizace zabezpečení a Configuration Manager
+## <a name="extended-security-updates-and-configuration-manager"></a><a name="bkmk_ESU"></a> Rozšířené aktualizace zabezpečení a Configuration Manager
 
 Program [Extended Security Updates (EVJ)](https://support.microsoft.com/help/4497181/lifecycle-faq-extended-security-updates) je poslední možností pro zákazníky, kteří potřebují spouštět některé starší verze produktů Microsoftu po skončení podpory. Například Windows 7. Zahrnuje kritické a/nebo důležité aktualizace zabezpečení (definované [centrem MSRC (Microsoft Security Response Center)](https://www.microsoft.com/msrc)po dobu delší než tři roky po ukončení rozšířené podpory produktu.
 
@@ -324,7 +324,7 @@ Následující verze jsou podporovány pomocí uvedeného souboru. tar.
 |Verze 16,04 LTS x64|ccm-Universalx64. &lt; Build \> . tar|  
 
 
-## <a name="on-premises-mdm"></a><a name="bkmk_OnpremOS"></a>Místní MDM
+## <a name="on-premises-mdm"></a><a name="bkmk_OnpremOS"></a> Místní MDM
 
 Configuration Manager obsahuje integrované funkce pro správu mobilních zařízení, která jsou místně bez instalace klientského softwaru. Další informace najdete v tématu [Správa mobilních zařízení s místní infrastrukturou](../../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md).  
 
@@ -335,7 +335,7 @@ Configuration Manager obsahuje integrované funkce pro správu mobilních zaří
 - **Windows 10 pro Enterprise** (x86, x64)  
 
 - **Windows 10 IoT Enterprise** (x86, x64)  
-    Tato verze zahrnuje kanál pro dlouhodobé obsluhy (LTSC). Další informace najdete v tématu [Přehled Windows 10 IoT Enterprise](https://docs.microsoft.com/windows/iot-core/windows-iot-enterprise).<!--SCCMDocs issue 560-->  
+    Tato verze zahrnuje kanál pro dlouhodobé obsluhy (LTSC). Další informace najdete v tématu [Přehled Windows 10 IoT Enterprise](/windows/iot-core/windows-iot-enterprise).<!--SCCMDocs issue 560-->  
 
 - **Windows 10 IoT Mobile Enterprise**  
 
@@ -348,7 +348,7 @@ Configuration Manager obsahuje integrované funkce pro správu mobilních zaří
     > [!IMPORTANT]
     > Configuration Manager verze 2006 vyřazuje podporu pro Windows 10 Mobile a Windows 10 Mobile Enterprise jako klienta. Vyřazení bylo oznámeno [verzí 1906](../changes/whats-new-in-version-1906.md#bkmk_deprecated).
 
-## <a name="exchange-server-connector"></a><a name="bkmk_ExSrvConOS"></a>Konektor systému Exchange Server  
+## <a name="exchange-server-connector"></a><a name="bkmk_ExSrvConOS"></a> Konektor systému Exchange Server  
 
 Configuration Manager podporuje omezené řízení zařízení, která se připojují k serveru Exchange bez instalace klienta Configuration Manager. Další informace najdete v tématu [Správa mobilních zařízení pomocí Configuration Manager a Exchange](../../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md).  
 

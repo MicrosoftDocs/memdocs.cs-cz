@@ -10,12 +10,12 @@ ms.assetid: 315e2613-dc71-46b1-80cb-26161d08103a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f4089f52d912491b3b1396906fe391c5c334e061
-ms.sourcegitcommit: 02635469d684d233fef795d2a15615658e62db10
+ms.openlocfilehash: eaceea5f83bd93fee8261a94147383cde001f90b
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84814894"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699581"
 ---
 # <a name="integrate-with-power-bi-report-server"></a>Integrace se Serverem sestav Power BI
 
@@ -23,13 +23,13 @@ ms.locfileid: "84814894"
 
 <!--3721603-->
 
-Počínaje verzí 2002 můžete integrovat [server sestav Power BI](https://docs.microsoft.com/power-bi/report-server/get-started) s vytvářením sestav Configuration Manager. Tato integrace poskytuje moderní vizualizaci a lepší výkon. Přidává konzolovou podporu pro Power BI sestavy podobné tomu, co už existují s SQL Server Reporting Services.
+Počínaje verzí 2002 můžete integrovat [server sestav Power BI](/power-bi/report-server/get-started) s vytvářením sestav Configuration Manager. Tato integrace poskytuje moderní vizualizaci a lepší výkon. Přidává konzolovou podporu pro Power BI sestavy podobné tomu, co už existují s SQL Server Reporting Services.
 
 Uložit Power BI Desktop soubory sestav (. PBIX) a nasaďte je do Server sestav Power BI. Tento postup je podobný jako u SQL Server Reporting Servicesch souborů sestav (. RDL). Sestavy můžete také spustit v prohlížeči přímo z konzoly Configuration Manager.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
-- Server sestav Power BI licence Další informace najdete v tématu věnovaném [licencování server sestav Power BI](https://docs.microsoft.com/power-bi/report-server/get-started#licensing-power-bi-report-server).
+- Server sestav Power BI licence Další informace najdete v tématu věnovaném [licencování server sestav Power BI](/power-bi/report-server/get-started#licensing-power-bi-report-server).
 
 - Stažení [server sestav Microsoft Power BI – září 2019](https://www.microsoft.com/download/details.aspx?id=57270)nebo novější.
 
@@ -40,7 +40,7 @@ Uložit Power BI Desktop soubory sestav (. PBIX) a nasaďte je do Server sestav 
 
     > [!IMPORTANT]
     > - Ve službě [Stažení softwaru](https://www.microsoft.com/download/)použijte pouze verze Power BI Desktop, nepoužívejte z Microsoft Store verzi.
-    > - Použijte pouze verzi [Power BI Desktop, která uvádí, že je **optimalizovaná pro server sestav Power BI**](https://docs.microsoft.com/power-bi/report-server/install-powerbi-desktop).
+    > - Použijte pouze verzi [Power BI Desktop, která uvádí, že je **optimalizovaná pro server sestav Power BI**](/power-bi/report-server/install-powerbi-desktop).
 
 - Power BI Integration používá ke generování sestav stejnou správu na základě rolí.
     > [!NOTE]
@@ -54,7 +54,7 @@ Tento proces se liší v závislosti na tom, zda již máte tuto roli v lokalit�
 
 Tento proces použijte pouze v případě, že v lokalitě již máte bod služby Reporting Services. Proveďte všechny kroky tohoto procesu na stejném serveru:
 
-1. V **Configuration Manager serveru pro sestavy**zálohujte **šifrovací klíče**. Další informace najdete v tématu [šifrovací klíče SSRS – zálohování a obnovení šifrovacích klíčů](https://docs.microsoft.com/sql/reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys).
+1. V **Configuration Manager serveru pro sestavy**zálohujte **šifrovací klíče**. Další informace najdete v tématu [šifrovací klíče SSRS – zálohování a obnovení šifrovacích klíčů](/sql/reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys).
 
     > [!WARNING]
     > Pokud tento krok přeskočíte, ztratíte přístup k žádným vlastním sestavám v SQL Server Reporting Services.
@@ -95,7 +95,7 @@ Tento proces použijte pouze v případě, že v lokalitě ještě nemáte bod s
 
 1. Na pásu karet vyberte **vytvořit sestavu**. Tato akce otevře Power BI Desktop.
 
-1. Vytvoří sestavu v Power BI Desktop.
+1. Vytvoření sestavy v Power BI Desktopu
 
     - Pokud se v Power BI Desktop připojíte ke zdroji dat, vyberte v nastavení připojení možnost **DirectQuery** .
 
@@ -111,7 +111,7 @@ V konzole Configuration Manager se v seznamu Power BI sestav zobrazí nová sest
 
 Po vytvoření sestavy použijte následující akce v konzole Configuration Manager:
 
-- **Spustit v prohlížeči**: otevře sestavu Power BI ve webovém prohlížeči. Tuto adresu URL můžete sdílet s ostatními, například:`https://rsp.contoso.com/Reports/POWERBI/ConfigMgr_ABC/Windows%2010/Windows10%20Dashboard?rs:embed=true`
+- **Spustit v prohlížeči**: otevře sestavu Power BI ve webovém prohlížeči. Tuto adresu URL můžete sdílet s ostatními, například: `https://rsp.contoso.com/Reports/POWERBI/ConfigMgr_ABC/Windows%2010/Windows10%20Dashboard?rs:embed=true`
 
     > [!TIP]
     > Tyto sestavy můžete zobrazit pouze ve webovém prohlížeči.

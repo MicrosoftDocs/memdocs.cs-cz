@@ -11,18 +11,18 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: eb393b05e1ee93239b43725a67b9a1b3e54e71ed
-ms.sourcegitcommit: 693932432270ab3df1df9f5e6783c7f5c6f31252
+ms.openlocfilehash: 5250d3296df19c454f55ed166e998f8c940c98db
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87997953"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700785"
 ---
 # <a name="desktop-analytics-data-privacy"></a>Ochrana osobních údajů v datech Desktop Analytics
 
 Plocha Analytics je plně potvrzená pro ochranu osobních údajů zákaznických dat, centrování na těchto principy:
 
-- **Transparentnost:** Události diagnostiky systému Windows jsme kompletně zdokumentují. Projděte si je s týmy zabezpečení a dodržování předpisů vaší společnosti. Prohlížeč diagnostických dat systému Windows umožňuje zobrazit diagnostická data odesílaná z daného zařízení. Další informace najdete v tématu [Přehled prohlížeče diagnostických dat](https://docs.microsoft.com/windows/configuration/diagnostic-data-viewer-overview).  
+- **Transparentnost:** Události diagnostiky systému Windows jsme kompletně zdokumentují. Projděte si je s týmy zabezpečení a dodržování předpisů vaší společnosti. Prohlížeč diagnostických dat systému Windows umožňuje zobrazit diagnostická data odesílaná z daného zařízení. Další informace najdete v tématu [Přehled prohlížeče diagnostických dat](/windows/configuration/diagnostic-data-viewer-overview).  
 
 - **Ovládací prvek:** Můžete řídit úroveň diagnostických dat, která se mají sdílet se společností Microsoft. Windows 10 verze 1709 přidává novou zásadu pro omezení rozšířených diagnostických dat na minimum vyžadovaného Desktop Analytics.  
 
@@ -30,7 +30,7 @@ Plocha Analytics je plně potvrzená pro ochranu osobních údajů zákaznickýc
 
 - **Vztah důvěryhodnosti:** Desktop Analytics podporuje [prohlášení o zásadách ochrany osobních údajů](https://privacy.microsoft.com/privacystatement) společnosti Microsoft a [online smlouvy o poskytování služeb](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=46).  
 
-Další informace najdete v tématu [služby systému Windows, kde Microsoft je procesor v rámci GDPR](https://docs.microsoft.com/windows/privacy/gdpr-it-guidance#windows-services-where-microsoft-is-the-processor-under-the-gdpr).<!-- 5353168 -->
+Další informace najdete v tématu [služby systému Windows, kde Microsoft je procesor v rámci GDPR](/windows/privacy/gdpr-it-guidance#windows-services-where-microsoft-is-the-processor-under-the-gdpr).<!-- 5353168 -->
 
 ## <a name="data-flow"></a>Tok dat
 
@@ -57,7 +57,7 @@ Následující obrázek ukazuje, jak diagnostická data přecházejí z jednotli
 
 3. Zařízení odesílají diagnostická data službě Microsoft Diagnostic Správa dat Service pro Windows. Všechna diagnostická data jsou šifrována přes protokol HTTPS a při přenosu ze zařízení do této služby používají připnutí certifikátů. Služba Microsoft Správa dat je hostována v USA.
 
-      - Chyby aplikací, chyby jádra, nereagující aplikace a další problémy specifické pro aplikace používají rozhraní Zasílání zpráv o chybách systému Windows API k posílání sestav problémů specifických pro aplikace do Microsoftu. Konkrétní podrobnosti o tomto toku dat najdete v tématu [použití služby wer](https://docs.microsoft.com/windows/win32/wer/using-wer) .
+      - Chyby aplikací, chyby jádra, nereagující aplikace a další problémy specifické pro aplikace používají rozhraní Zasílání zpráv o chybách systému Windows API k posílání sestav problémů specifických pro aplikace do Microsoftu. Konkrétní podrobnosti o tomto toku dat najdete v tématu [použití služby wer](/windows/win32/wer/using-wer) .
       
 4. Každý den Microsoft vytvoří snímek přehledů zaměřených na IT. Tento snímek kombinuje diagnostická data z Windows se vstupem pro zaregistrovaná zařízení. K tomuto procesu dochází v přechodném úložišti, které se používá jenom pro Desktop Analytics. Přechodné úložiště je hostované v datových centrech Microsoftu v USA. Všechna data se odesílají přes zašifrovaný kanál SSL (HTTPS). Snímky jsou oddělené pomocí komerčního ID.  
 
@@ -71,23 +71,23 @@ Nejčastější dotazy týkající se ochrany osobních údajů pro Desktop Anal
 
 Další informace o souvisejících aspektech ochrany osobních údajů najdete v následujících článcích:
 
-- [Windows 10 a GDPR pro tvůrce rozhodnutí IT](https://docs.microsoft.com/windows/privacy/gdpr-it-guidance)  
+- [Windows 10 a GDPR pro tvůrce rozhodnutí IT](/windows/privacy/gdpr-it-guidance)  
 
-- [Konfigurace diagnostických dat Windows ve vaší organizaci](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization)  
+- [Konfigurace diagnostických dat Windows ve vaší organizaci](/windows/privacy/configure-windows-diagnostic-data-in-your-organization)  
 
-- [Windows 7, Windows 8 a Windows 8.1 události a pole diagnostiky dat posouzení](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/appraiser-diagnostic-data-events-and-fields)  
+- [Windows 7, Windows 8 a Windows 8.1 události a pole diagnostiky dat posouzení](/previous-versions/windows/it-pro/windows-8.1-and-8/appraiser-diagnostic-data-events-and-fields)  
 
-- [Windows 10, verze 1809 úrovně Basic diagnostické události a pole Windows](https://docs.microsoft.com/windows/privacy/basic-level-windows-diagnostic-events-and-fields-1809)  
+- [Windows 10, verze 1809 úrovně Basic diagnostické události a pole Windows](/windows/privacy/basic-level-windows-diagnostic-events-and-fields-1809)  
 
-- [Windows 10, verze 1709 rozšířené události diagnostických dat a pole používaná analýzou pro stolní počítače](https://docs.microsoft.com/windows/privacy/enhanced-diagnostic-data-windows-analytics-events-and-fields)  
+- [Windows 10, verze 1709 rozšířené události diagnostických dat a pole používaná analýzou pro stolní počítače](/windows/privacy/enhanced-diagnostic-data-windows-analytics-events-and-fields)  
 
-- [instalační program systému Windows zasílání zpráv o chybách](https://docs.microsoft.com/windows/deployment/upgrade/windows-error-reporting)
+- [instalační program systému Windows zasílání zpráv o chybách](/windows/deployment/upgrade/windows-error-reporting)
 
-- [Přehled prohlížeče diagnostických dat](https://docs.microsoft.com/windows/privacy/diagnostic-data-viewer-overview)  
+- [Přehled prohlížeče diagnostických dat](/windows/privacy/diagnostic-data-viewer-overview)  
 
 - [Licenční podmínky a dokumentace](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=31)  
 
-- [Zabezpečení dat Log Analytics](https://docs.microsoft.com/azure/azure-monitor/platform/data-security)
+- [Zabezpečení dat Log Analytics](/azure/azure-monitor/platform/data-security)
 
 - [Zabezpečení a ochrana osobních údajů v Microsoft Azure datových Centre](https://azure.microsoft.com/global-infrastructure/)  
 

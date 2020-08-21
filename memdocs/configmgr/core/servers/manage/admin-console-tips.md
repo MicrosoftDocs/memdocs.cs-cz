@@ -10,12 +10,12 @@ ms.assetid: 2162d67d-31a9-45b2-bb9e-835f3ac6e6fe
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 7f46c283bd533d67387ab0abac35e7625438addc
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: a0a434f013da48d660efa78f5e2cdca6ced0826d
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129630"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700714"
 ---
 # <a name="configuration-manager-console-changes-and-tips"></a>Změny a tipy konzoly Configuration Manager
 
@@ -25,7 +25,7 @@ Pomocí níže uvedených informací získáte informace o změnách konzoly Con
 
 ## <a name="general-tips"></a>Obecné tipy
 
-### <a name="improvements-to-console-search"></a><a name="bkmk_search"></a>Vylepšení hledání konzoly
+### <a name="improvements-to-console-search"></a><a name="bkmk_search"></a> Vylepšení hledání konzoly
 <!--4640570-->
 *(Představené ve verzi 1910)*
 
@@ -72,7 +72,7 @@ Když v konzole vyberete uzel, který vrátí více než 1 000 výsledků, Confi
 
 Mezi tímto upozorněním a polem hledání je teď další prázdné místo. Tento přesun pomáhá zabránit nechtěnému výběru upozornění pro zobrazení dalších výsledků.
 
-### <a name="send-feedback"></a>Odeslat názor
+### <a name="send-feedback"></a>Váš názor
 
 *(Představené ve verzi 1806)*
 <!--1357542-->
@@ -181,12 +181,12 @@ V pracovním prostoru **softwarová knihovna** rozbalte položku **Správa aplik
    - **Softwarová knihovna**  >  Správa klientů Office **365**  >  **Aktualizace Office 365**
 
 1. Vyberte jakoukoli aktualizaci, kterou vyžaduje aspoň jedno zařízení.
-1. Podívejte se na kartu **Souhrn** a v části **Statistika**Najděte výsečový graf.
+1. Podívejte se na kartu **Souhrn** a v části  **Statistika**Najděte výsečový graf.
 1. Pokud chcete přejít k podrobnostem seznamu zařízení, zaškrtněte políčko **Zobrazit požadovaný** hypertextový odkaz vedle výsečového grafu.
 1. Tato akce přejde na dočasný uzel v části **zařízení** , kde vidíte zařízení vyžadující aktualizaci. Můžete také provést akce pro uzel, jako je například vytvoření nové kolekce ze seznamu.
 
 > [!NOTE]
-> Od 21. dubna 2020 se sada Office 365 ProPlus přejmenovává na **Microsoft 365 aplikace pro podniky**. Další informace najdete v tématu [Změna názvu pro Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change). V konzole Configuration Manager se pořád zobrazují odkazy na starý název a podpůrná dokumentace, zatímco se konzola aktualizuje.
+> Od 21. dubna 2020 se sada Office 365 ProPlus přejmenovává na **Microsoft 365 aplikace pro podniky**. Další informace najdete v tématu [Změna názvu pro Office 365 ProPlus](/deployoffice/name-change). V konzole Configuration Manager se pořád zobrazují odkazy na starý název a podpůrná dokumentace, zatímco se konzola aktualizuje.
 
 ### <a name="maximize-the-browse-registry-window"></a>Maximalizace okna Procházet Registry
 
@@ -257,5 +257,5 @@ Počínaje verzí 1906 můžete povolit některé uzly pod uzlem **zabezpečení
 ## <a name="next-steps"></a>Další kroky
 
 - [Použití konzoly](admin-console.md)
-- [Oznámení konzoly](admin-console-notifications.md)
+- [Oznámení ke konzole](admin-console-notifications.md)
 - [Funkce pro usnadnění přístupu](../../understand/accessibility-features.md)

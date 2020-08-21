@@ -10,12 +10,12 @@ ms.assetid: 1098e8c5-9676-4c2b-841b-ec88bd04e495
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f7d774d620916f3d735a3545db5fe1e41988731d
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 4d2977fc34e9c398e9e266cbc9b223ea74a1dd18
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88126677"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700227"
 ---
 # <a name="support-for-virtualization-environments-with-configuration-manager"></a>Podpora virtualizačních prostředí pomocí Configuration Manager
 
@@ -37,7 +37,7 @@ Například pro hostování virtuálního počítače se systémem Windows Serve
 <a name="bkmk_note1"></a>
 
 > [!NOTE]
-> Configuration Manager nepodporuje [vnořenou virtualizaci](https://docs.microsoft.com/windows-server/virtualization/hyper-v/What-s-new-in-Hyper-V-on-Windows#nested-virtualization-new), která je v systému Windows Server 2016 novinkou.
+> Configuration Manager nepodporuje [vnořenou virtualizaci](/windows-server/virtualization/hyper-v/What-s-new-in-Hyper-V-on-Windows#nested-virtualization-new), která je v systému Windows Server 2016 novinkou.
 
 ### <a name="virtualization-environment-support"></a>Podpora prostředí virtualizace
 
@@ -51,7 +51,7 @@ Obecně platí, že Configuration Manager neposkytuje žádné zvláštní aspek
 
 Pro pomoc s Configuration Manager výkonu klienta ve virtuálních prostředích podporujících více uživatelských relací zakáže zásady uživatele ve výchozím nastavení. Počínaje verzí 1910 můžete v tomto scénáři povolit zásady uživatele. Další informace najdete v tématu [o nastavení klienta – povolení zásad uživatele pro více uživatelských relací](../../clients/deploy/about-client-settings.md#enable-user-policy-for-multiple-user-sessions).
 
-## <a name="microsoft-azure-vms"></a><a name="bkmk_Azure"></a>Microsoft Azure virtuálních počítačů
+## <a name="microsoft-azure-vms"></a><a name="bkmk_Azure"></a> Microsoft Azure virtuálních počítačů
 
 Configuration Manager můžete spustit na virtuálních počítačích v Azure, stejně jako v místním prostředí v rámci vašeho datového centra. Configuration Manager s virtuálními počítači Azure můžete použít v následujících scénářích:
 
@@ -70,7 +70,7 @@ Další informace najdete v tématu [Configuration Manager v Azure](../../unders
 
 ## <a name="windows-virtual-desktop"></a>Windows Virtual Desktop
 
-[Virtuální plocha Windows](https://docs.microsoft.com/azure/virtual-desktop/) je služba virtualizace plochy a aplikací, která běží na Microsoft Azure. Počínaje verzí 1906 použijte Configuration Manager ke správě těchto virtuálních zařízení s Windows v Azure. Další informace najdete v tématu [podporované operační systémy pro klienty a zařízení](supported-operating-systems-for-clients-and-devices.md#windows-virtual-desktop).
+[Virtuální plocha Windows](/azure/virtual-desktop/) je služba virtualizace plochy a aplikací, která běží na Microsoft Azure. Počínaje verzí 1906 použijte Configuration Manager ke správě těchto virtuálních zařízení s Windows v Azure. Další informace najdete v tématu [podporované operační systémy pro klienty a zařízení](supported-operating-systems-for-clients-and-devices.md#windows-virtual-desktop).
 
 ## <a name="next-steps"></a>Další kroky
 

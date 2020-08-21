@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 87056482f098a440e5950b76520ab410844a1888
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: aaba31a8a017f75338cf4d6dee3c2f2d80d7e377
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128997"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698516"
 ---
 # <a name="whats-new-in-version-1802-of-configuration-manager"></a>Co je nového ve verzi 1802 Configuration Manager
 
@@ -259,7 +259,7 @@ Pravidla automatického nasazení je možné naplánovat tak, aby vyhodnotila po
 
 
 
-## <a name="reporting"></a>Generování sestav
+## <a name="reporting"></a>Vytváření sestav
 
 ### <a name="report-for-default-browser-counts"></a>Sestava pro výchozí počty prohlížečů
 <!-- 1357830 -->
@@ -267,7 +267,7 @@ Nyní je k dispozici nová sestava pro zobrazení počtu klientů s určitým we
 
 ### <a name="report-on-windows-autopilot-device-information"></a>Sestava informací o zařízení s Windows autopilotem
 <!-- 1351442 -->
-Windows autopilot pro Windows je řešení pro připojování a konfiguraci nových zařízení s Windows 10 moderním způsobem. Další informace najdete v tématu [Přehled Windows autopilotu](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot). Jednou z metod registrace existujících zařízení pomocí Windows autopilotu je odeslání informací o zařízení do Microsoft Store pro firmy a vzdělávání. Tyto informace zahrnují sériové číslo zařízení, identifikátor produktu Windows a identifikátor hardwaru. Použijte Configuration Manager ke shromáždění a hlášení informací o zařízení s novou sestavou **informace o zařízení Windows autopilot**v uzlu sestavy **Hardware-obecné** . Další informace najdete v tématu Příprava pro [spolusprávu](../../../comanage/how-to-prepare-Win10.md#windows-autopilot) v rámci přípravy na spolupráci v Internetu.
+Windows autopilot pro Windows je řešení pro připojování a konfiguraci nových zařízení s Windows 10 moderním způsobem. Další informace najdete v tématu [Přehled Windows autopilotu](/windows/deployment/windows-autopilot/windows-10-autopilot). Jednou z metod registrace existujících zařízení pomocí Windows autopilotu je odeslání informací o zařízení do Microsoft Store pro firmy a vzdělávání. Tyto informace zahrnují sériové číslo zařízení, identifikátor produktu Windows a identifikátor hardwaru. Použijte Configuration Manager ke shromáždění a hlášení informací o zařízení s novou sestavou **informace o zařízení Windows autopilot**v uzlu sestavy **Hardware-obecné** . Další informace najdete v tématu Příprava pro [spolusprávu](../../../comanage/how-to-prepare-Win10.md#windows-autopilot) v rámci přípravy na spolupráci v Internetu.
 
 ### <a name="report-on-windows-10-servicing-details-for-a-specific-collection"></a>Sestava podrobností údržby Windows 10 pro konkrétní kolekci
 <!--1357653-->
@@ -287,7 +287,7 @@ Sestava **Podrobnosti údržby Windows 10 pro konkrétní** kolekci obsahuje obe
 
 ### <a name="improvements-to-configuration-manager-policies-for-windows-defender-exploit-guard"></a>Vylepšení zásad Configuration Manager pro ochranu před zneužitím v programu Windows Defender
 <!-- 1356220 -->
-Do Configuration Manager pro [ochranu před zneužitím v programu Windows Defender](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-attack-surface-reduction)se přidala další nastavení zásad pro [omezení ploch útoku](../../../protect/deploy-use/create-deploy-exploit-guard-policy.md#bkmk_ASR) a [řízené součásti přístupu ke složkám](../../../protect/deploy-use/create-deploy-exploit-guard-policy.md#bkmk_CFA) .
+Do Configuration Manager pro [ochranu před zneužitím v programu Windows Defender](/windows/security/threat-protection/microsoft-defender-atp/configure-attack-surface-reduction)se přidala další nastavení zásad pro [omezení ploch útoku](../../../protect/deploy-use/create-deploy-exploit-guard-policy.md#bkmk_ASR) a [řízené součásti přístupu ke složkám](../../../protect/deploy-use/create-deploy-exploit-guard-policy.md#bkmk_CFA) .
 
 ### <a name="new-host-interaction-settings-for-windows-defender-application-guard"></a>Nastavení interakce nového hostitele pro ochranu Application Guard v programu Windows Defender
 <!-- 1356256 -->

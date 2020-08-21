@@ -10,12 +10,12 @@ ms.assetid: 75f47456-cd8d-4c83-8dc5-98b336a7c6c8
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 0d081c79a6267495a9738efcb19ceb8b7aa74958
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 6fb487b590773afd1b59133f647696d9f858b439
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252506"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700377"
 ---
 # <a name="troubleshoot-application-installation-for-devices-uploaded-to-the-admin-center-preview"></a>Řešení potíží s instalací aplikace pro zařízení odeslaná do centra pro správu (Preview)
 <!--6374854, 6521921-->
@@ -62,7 +62,7 @@ Při zobrazení nebo instalaci aplikací z centra pro správu Microsoft Endpoint
 
 #### <a name="error-code-500-with-an-unexpected-error-occurred-message"></a>Kód chyby 500 s neočekávanou chybou při výskytu zprávy
 
-1. Pokud se zobrazí `System.Security.SecurityException` v **protokolu AdminService. log**, ověřte, že vaše hlavní uživatelské jméno (UPN) zjištěné [zjišťováním uživatelů služby Active Directory](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser) není nastavené na hlavní název uživatele (UPN), nikoli na místní hlavní název uživatele (UPN). Je také přijatelná prázdná hodnota hlavního názvu uživatele (UPN), která znamená, že se používá název domény zjištěné službou Active Directory. Pokud se zobrazí název UPN jenom pro Cloud (například onmicrosoft.com), který není platným hlavním názvem uživatele (contoso.com), máte problém a možná budete muset [nastavit příponu hlavního názvu uživatele (UPN) ve službě Active Directory](https://docs.microsoft.com/office365/enterprise/prepare-a-non-routable-domain-for-directory-synchronization#add-upn-suffixes-and-update-your-users-to-them).
+1. Pokud se zobrazí `System.Security.SecurityException` v **protokolu AdminService. log**, ověřte, že vaše hlavní uživatelské jméno (UPN) zjištěné [zjišťováním uživatelů služby Active Directory](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser) není nastavené na hlavní název uživatele (UPN), nikoli na místní hlavní název uživatele (UPN). Je také přijatelná prázdná hodnota hlavního názvu uživatele (UPN), která znamená, že se používá název domény zjištěné službou Active Directory. Pokud se zobrazí název UPN jenom pro Cloud (například onmicrosoft.com), který není platným hlavním názvem uživatele (contoso.com), máte problém a možná budete muset [nastavit příponu hlavního názvu uživatele (UPN) ve službě Active Directory](/office365/enterprise/prepare-a-non-routable-domain-for-directory-synchronization#add-upn-suffixes-and-update-your-users-to-them).
 1. Pokud se v **protokolu AdminService. log**zobrazí tato chyba, v [centru pro správu Microsoft Endpoint Manageru se vyprší doba instalace KB4576782 – okno aplikace](https://support.microsoft.com/help/4576782) .
    ```log 
    System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details.

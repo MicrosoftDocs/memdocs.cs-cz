@@ -10,12 +10,12 @@ ms.assetid: 3343eccf-bf09-41cd-9e68-03e893c7f904
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 13c3be302ecefad36d7be8617a4cc9354db1b685
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 99e02c190e02a5e017fe2c3f41682ad1624b6051
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906058"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699343"
 ---
 # <a name="what-is-configuration-manager"></a>Co je Configuration Manager?
 
@@ -29,10 +29,10 @@ Microsoft Endpoint Manager je integrované řešení pro správu všech vašich 
 
 Následující řešení pro správu Microsoft jsou teď součástí značky **Microsoft Endpoint Manageru** :
 
-- [Configuration Manager](https://docs.microsoft.com/configmgr)
-- [Intune](https://docs.microsoft.com/intune)
+- [Configuration Manager](/configmgr)
+- [Intune](/intune)
 - [Desktop Analytics](../../desktop-analytics/overview.md)
-- [Autopilot](https://docs.microsoft.com/intune/enrollment/enrollment-autopilot)
+- [Autopilot](/intune/enrollment/enrollment-autopilot)
 - Další funkce v [konzole správce správy zařízení](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/microsoft-intune-rolls-out-an-improved-streamlined-endpoint/ba-p/937760)
 
 Další informace najdete v tématu [Microsoft Endpoint Configuration Manager – Nejčastější dotazy](microsoft-endpoint-manager-faq.md).
@@ -77,7 +77,7 @@ Aby bylo možné Configuration Manager v produkčním prostředí, důkladně Na
 
 ## <a name="user-interfaces"></a>Uživatelská rozhraní
 
-### <a name="the-configuration-manager-console"></a><a name="BKMK_Console"></a>Konzola Configuration Manager
+### <a name="the-configuration-manager-console"></a><a name="BKMK_Console"></a> Konzola Configuration Manager
 
 Po instalaci Configuration Manager použijte konzolu Configuration Manager ke konfiguraci lokalit a klientů a ke spouštění a monitorování úkolů správy. Tato konzola je hlavním bodem správy a umožňuje správu více lokalit.  
 
@@ -85,7 +85,7 @@ Konzolu Configuration Manager můžete nainstalovat do dalších počítačů a 
 
 Další informace najdete v tématu [použití konzoly Configuration Manager](../servers/manage/admin-console.md).
 
-### <a name="software-center"></a><a name="BKMK_ApplicationCatalog"></a>Centrum softwaru
+### <a name="software-center"></a><a name="BKMK_ApplicationCatalog"></a> Centrum softwaru
 
 **Centrum softwaru** je aplikace, která je nainstalována při instalaci klienta Configuration Manager do zařízení se systémem Windows. Uživatelé používají Centrum softwaru k vyžádání a instalaci softwaru, který nasazujete. Centrum softwaru umožňuje uživatelům provádět tyto akce:  
 
@@ -110,4 +110,4 @@ Pokud jste obeznámeni se základními koncepty, použijte tuto knihovnu dokumen
 - [Funkce a možnosti Configuration Manager](../plan-design/changes/features-and-capabilities.md)  
 - [Výběr řešení správy zařízení](../plan-design/choose-a-device-management-solution.md)  
 - [Vyhodnotit Configuration Manager vytvořením vlastního testovacího prostředí](../get-started/set-up-your-lab.md)
-- [Najít nápovědu k použití Configuration Manager](find-help.md)  
+- [Najít nápovědu k použití Configuration Manager](find-help.md)

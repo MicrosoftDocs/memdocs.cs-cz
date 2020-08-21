@@ -10,12 +10,12 @@ ms.assetid: 4812324b-e6aa-4431-bf1d-9fcd763a8caa
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: c192db8ccab336d05ef965e837fe17fc16a19200
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: f758456ad75c4acde1b050be75d653cc0e1dcfa1
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128929"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700363"
 ---
 # <a name="whats-new-in-version-1902-of-configuration-manager-current-branch"></a>Co je nového ve verzi 1902 Configuration Manager Current Branch
 
@@ -32,10 +32,10 @@ Pokud chcete plně využít nové funkce Configuration Manager, po aktualizaci l
  -->
 
 > [!Tip]  
-> Pokud chcete dostávat upozornění na aktualizaci této stránky, zkopírujte a vložte následující adresu URL do čtečky informačních kanálů RSS:`https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+1902+-+Configuration+Manager%22&locale=en-us`
+> Pokud chcete dostávat upozornění na aktualizaci této stránky, zkopírujte a vložte následující adresu URL do čtečky informačních kanálů RSS: `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+1902+-+Configuration+Manager%22&locale=en-us`
 
 
-## <a name="deprecated-features-and-operating-systems"></a><a name="bkmk_deprecated"></a>Zastaralé funkce a operační systémy
+## <a name="deprecated-features-and-operating-systems"></a><a name="bkmk_deprecated"></a> Zastaralé funkce a operační systémy
 
 Přečtěte si o změnách podpory před jejich implementací v [odebraných a zastaralých položkách](deprecated/removed-and-deprecated.md).
 
@@ -46,7 +46,7 @@ Verze 1902 vyřazuje podporu pro následující produkty:
 - Systémy Linux a UNIX jako klient. Vyřazení bylo oznámeno [verzí 1802](whats-new-in-version-1802.md#deprecation-announcement-for-linux-and-unix-client-support). Zvažte Microsoft Azure správu pro správu serverů se systémem Linux. Řešení Azure mají rozsáhlou podporu pro Linux, která ve většině případů překračuje Configuration Manager funkce, včetně ucelené správy oprav pro Linux.
 
 
-## <a name="site-infrastructure"></a><a name="bkmk_infra"></a>Infrastruktura webu
+## <a name="site-infrastructure"></a><a name="bkmk_infra"></a> Infrastruktura webu
 
 ### <a name="client-health-dashboard"></a>Řídicí panel stavu klienta
 
@@ -88,7 +88,7 @@ Když nainstalujete nebo aktualizujete verzi 1902, Configuration Manager instala
 - **Čeká se na restart systému na vzdáleném SQL Server**: Tato kontrola požadovaných součástí je podobná pravidlu **restartování systému** , ale kontroluje vzdálené SQL Server. Další informace najdete v tématu [seznam kontrol požadovaných součástí](../../servers/deploy/install/list-of-prerequisite-checks.md#pending-system-restart-on-the-remote-sql-server). <!--SCCMDocs-pr issue 3377-->  
 
 
-## <a name="cloud-attached-management"></a><a name="bkmk_cloud"></a>Správa připojená ke cloudu
+## <a name="cloud-attached-management"></a><a name="bkmk_cloud"></a> Správa připojená ke cloudu
 
 ### <a name="stop-cloud-service-when-it-exceeds-threshold"></a>Zastavit cloudovou službu, pokud překročí prahovou hodnotu
 
@@ -114,7 +114,7 @@ Nyní můžete přidružit bránu pro správu cloudu (CMG) k hraniční skupině
 Další informace najdete v tématu [Návrh hierarchie CMG](../../clients/manage/cmg/plan-cloud-management-gateway.md#hierarchy-design) a [Nastavení CMG](../../clients/manage/cmg/setup-cloud-management-gateway.md#configure-boundary-groups).
 
 
-## <a name="real-time-management"></a><a name="bkmk_real"></a>Správa v reálném čase
+## <a name="real-time-management"></a><a name="bkmk_real"></a> Správa v reálném čase
 
 ### <a name="run-cmpivot-from-the-central-administration-site"></a>Spuštění CMPivot z lokality centrální správy
 
@@ -131,7 +131,7 @@ Nyní můžete **Upravit** nebo **zkopírovat** existující skript prostředí 
 Další informace najdete v tématu [spuštění skriptů](../../../apps/deploy-use/create-deploy-scripts.md#bkmk_psedit).
 
 
-## <a name="content-management"></a><a name="bkmk_content"></a>Správa obsahu
+## <a name="content-management"></a><a name="bkmk_content"></a> Správa obsahu
 
 ### <a name="distribution-point-maintenance-mode"></a>Režim údržby distribučního bodu
 
@@ -156,7 +156,7 @@ Další informace o této funkci najdete v tématu [režim údržby](../../serve
 Další informace o automatizaci tohoto procesu pomocí Configuration Manager SDK naleznete v tématu [Metoda SetDPMaintenanceMode ve třídě SMS_DistributionPointInfo](../../../develop/reference/core/servers/configure/setdpmaintenancemode-method-in-class-sms-distributionpointinfo.md).
 
 
-## <a name="client-management"></a><a name="bkmk_client"></a>Správa klientů
+## <a name="client-management"></a><a name="bkmk_client"></a> Správa klientů
 
 ### <a name="client-provisioning-mode-timeout"></a>Časový limit režimu zřizování klientů
 
@@ -180,7 +180,7 @@ Nyní můžete zadat vlastní číslo portu pro proxy probuzení. V nastavení k
 Další informace najdete v tématu [Postup konfigurace funkce Wake on LAN](../../clients/deploy/configure-wake-on-lan.md).
 
 
-## <a name="application-management"></a><a name="bkmk_app"></a>Správa aplikací
+## <a name="application-management"></a><a name="bkmk_app"></a> Správa aplikací
 
 ### <a name="improvements-to-application-approvals-via-email"></a>Vylepšení pro schvalování aplikací prostřednictvím e-mailu
 
@@ -199,7 +199,7 @@ Tato verze zahrnuje následující vylepšení pro [Package Conversion Manager](
 - Obecné opravy chyb a vylepšení
 
 
-## <a name="os-deployment"></a><a name="bkmk_osd"></a>Nasazení operačního systému
+## <a name="os-deployment"></a><a name="bkmk_osd"></a> Nasazení operačního systému
 
 ### <a name="progress-status-during-in-place-upgrade-task-sequence"></a>Stav průběhu během místního upgradu pořadí úkolů
 
@@ -292,7 +292,7 @@ Tato verze zahrnuje následující vylepšení nasazení operačního systému:
 - Pokud povolíte respondér PXE v distribučním bodě bez služby pro nasazení systému Windows, může být nyní na stejném serveru jako služba DHCP. <!--3734270--> Další informace najdete v tématu [Konfigurace aspoň jednoho distribučního bodu pro příjem požadavků PXE](../../../osd/deploy-use/use-pxe-to-deploy-windows-over-the-network.md#BKMK_Configure).
 
 
-## <a name="software-center"></a><a name="bkmk_userxp"></a>Centrum softwaru
+## <a name="software-center"></a><a name="bkmk_userxp"></a> Centrum softwaru
 
 ### <a name="replace-toast-notifications-with-dialog-window"></a>Nahradit informační zprávy pomocí dialogového okna
 
@@ -330,7 +330,7 @@ Tato nastavení zadejte ve skupině **Centrum softwaru** nastavení klienta.
 Další informace najdete v tématu [informace o nastavení klienta](../../clients/deploy/about-client-settings.md#bkmk_swctr_defaults).
 
 
-## <a name="software-updates"></a><a name="bkmk_sum"></a>Aktualizace softwaru
+## <a name="software-updates"></a><a name="bkmk_sum"></a> Aktualizace softwaru
 
 ### <a name="specify-priority-for-feature-updates-in-windows-10-servicing"></a>Zadejte prioritu pro aktualizace funkcí v rámci údržby Windows 10.
 
@@ -342,16 +342,16 @@ Tuto možnost můžete nakonfigurovat pomocí nastavení klienta. Ve skupině **
 Další informace najdete v tématu [informace o nastavení klienta](../../clients/deploy/about-client-settings.md#software-updates).
 
 
-## <a name="office-management"></a><a name="bkmk_o365"></a>Správa Office
+## <a name="office-management"></a><a name="bkmk_o365"></a> Správa Office
 
 ### <a name="redirect-windows-known-folders-to-onedrive"></a>Přesměrovat známé složky Windows na OneDrive
 
 <!--3556021-->
 Pomocí Configuration Manager můžete přesunout známé složky Windows na OneDrive pro firmy. Mezi tyto složky patří plocha, dokumenty a obrázky. Chcete-li zjednodušit upgrady Windows 10, nasaďte tato nastavení do klientů se systémem Windows 7 před nasazením pořadí úkolů.
 
-Další informace o této funkci OneDrivu pro firmy najdete v tématu [přesměrování a přesunutí známých složek Windows na OneDrive](https://docs.microsoft.com/onedrive/redirect-known-folders).
+Další informace o této funkci OneDrivu pro firmy najdete v tématu [přesměrování a přesunutí známých složek Windows na OneDrive](/onedrive/redirect-known-folders).
 
-Nejdřív [Najděte ID tenanta Office 365](https://docs.microsoft.com/onedrive/find-your-office-365-tenant-id). Pak nasaďte synchronizačního klienta OneDrivu verze 18.111.0603.0004 nebo novější. Další informace najdete v tématu [nasazení aplikací OneDrive pomocí Configuration Manager](https://docs.microsoft.com/onedrive/deploy-on-windows).  
+Nejdřív [Najděte ID tenanta Office 365](/onedrive/find-your-office-365-tenant-id). Pak nasaďte synchronizačního klienta OneDrivu verze 18.111.0603.0004 nebo novější. Další informace najdete v tématu [nasazení aplikací OneDrive pomocí Configuration Manager](/onedrive/deploy-on-windows).  
 
 Profil OneDrivu pro firmy vytvoříte a nasadíte tak, že v konzole Configuration Manager přejdete do pracovního prostoru **prostředky a kompatibilita** . Rozbalte **Nastavení dodržování předpisů**a vyberte uzel **profily OneDrivu pro firmy** .  
 
@@ -381,7 +381,7 @@ Další informace najdete v tématu [Správa aktualizací Office 365](../../../s
 Další informace najdete v tématu [Použití řídicího panelu životní cyklus produktu](../../clients/manage/asset-intelligence/product-lifecycle-dashboard.md).
 
 
-## <a name="phased-deployments"></a><a name="bkmk_pod"></a>Postupná nasazení
+## <a name="phased-deployments"></a><a name="bkmk_pod"></a> Postupná nasazení
 
 ### <a name="dedicated-monitoring-for-phased-deployments"></a>Vyhrazené monitorování pro dvoufázové nasazení
 
@@ -400,9 +400,9 @@ Vytvoření postupného nasazení pro pořadí úkolů, aktualizaci softwaru neb
 Další informace najdete v tématu [Vytvoření dvoufázové nasazení](../../../osd/deploy-use/create-phased-deployment-for-task-sequence.md).
 
 
-## <a name="configuration-manager-console"></a><a name="bkmk_admin"></a>Konzola Configuration Manager
+## <a name="configuration-manager-console"></a><a name="bkmk_admin"></a> Konzola Configuration Manager
 
-### <a name="improvements-to-configuration-manager-console"></a><a name="bkmk_console"></a>Vylepšení konzoly Configuration Manager
+### <a name="improvements-to-configuration-manager-console"></a><a name="bkmk_console"></a> Vylepšení konzoly Configuration Manager
 
 <!--3594151-->
 Na základě zpětné vazby od zákazníků na konferenci Středozápadě Management summit (MMS) Desert edice 2018 obsahuje tato verze následující vylepšení Configuration Manager konzole:
@@ -479,7 +479,7 @@ Při instalaci nebo aktualizaci serveru lokality zkopírují tyto instalační s
 
 Kromě nových funkcí obsahuje tato verze také další změny, jako jsou opravy chyb. Další informace najdete v tématu [Souhrn změn v Configuration Manager aktuální větvi, verze 1902](https://support.microsoft.com/help/4498910).
 
-Další informace o změnách rutin prostředí Windows PowerShell pro Configuration Manager najdete v [poznámkách k verzi PowerShell verze 1902](https://docs.microsoft.com/powershell/sccm/1902-release-notes?view=sccm-ps).
+Další informace o změnách rutin prostředí Windows PowerShell pro Configuration Manager najdete v [poznámkách k verzi PowerShell verze 1902](/powershell/sccm/1902-release-notes?view=sccm-ps).
 
 Následující kumulativní aktualizace (4500571) je k dispozici v konzole od 17. června 2019: [kumulativní aktualizace pro Configuration Manager aktuální větev, verze 1902](https://support.microsoft.com/help/4500571).
 

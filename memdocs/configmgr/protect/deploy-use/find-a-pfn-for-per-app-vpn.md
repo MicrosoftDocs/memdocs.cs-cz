@@ -10,12 +10,12 @@ ms.assetid: 47118499-3d26-4c25-bfde-b129de7eaa59
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 49f9f7972d5e48b0ec646568d85376027bf278c3
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 744abfcd36b2f162fffdc5e7f3e8c9258a617496
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906819"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699972"
 ---
 # <a name="find-a-package-family-name-pfn-for-per-app-vpn"></a>Vyhledání identity aplikace pro sítě VPN jednotlivých aplikací
 
@@ -26,7 +26,7 @@ Existují dva způsoby jak najít PFN, abyste mohli konfigurovat síť VPN pro a
 
 ## <a name="find-a-pfn-for-an-app-thats-installed-on-a-windows-10-computer"></a>Hledání PFN pro aplikaci, která je nainstalovaná na počítači s Windows 10
 
-Pokud pracujete s aplikací, která je již nainstalována v počítači s Windows 10, můžete k získání PFN použít rutinu PowerShellu [Get-AppxPackage](https://docs.microsoft.com/powershell/module/appx/get-appxpackage?view=win10-ps).
+Pokud pracujete s aplikací, která je již nainstalována v počítači s Windows 10, můžete k získání PFN použít rutinu PowerShellu [Get-AppxPackage](/powershell/module/appx/get-appxpackage?view=win10-ps).
 
 Syntaxe pro Get-AppxPackage:
 
@@ -72,7 +72,7 @@ Zde jsou informace načtené pro OneNote:
 
 1. Přejděte na https://www.microsoft.com/store/apps.
 2. Zadejte název aplikace v panelu vyhledávání. V našem příkladu hledejte OneNote.
-3. Klikněte na odkaz na aplikaci. Všimněte si, že adresa URL, ke které přistupujete, má na konci řadu písmen. V našem příkladu vypadá adresa URL takto:`https://www.microsoft.com/store/apps/onenote/9wzdncrfhvjl`
+3. Klikněte na odkaz na aplikaci. Všimněte si, že adresa URL, ke které přistupujete, má na konci řadu písmen. V našem příkladu vypadá adresa URL takto: `https://www.microsoft.com/store/apps/onenote/9wzdncrfhvjl`
 4. Na jiné kartě vložte následující adresu URL, `https://bspmts.mp.microsoft.com/v1/public/catalog/Retail/Products/<app id>/applockerdata` nahraďte `<app id>` ID aplikace, kterou jste získali https://www.microsoft.com/store/apps – na konci adresy URL v kroku 3 se zobrazí řada písmen. V našem příkladu (pro OneNote) byste vložili adresu `https://bspmts.mp.microsoft.com/v1/public/catalog/Retail/Products/9wzdncrfhvjl/applockerdata`.
 
 V Edgi se požadované informace zobrazí, v Internet Exploreru je zobrazíte kliknutím na **Otevřít**. Hodnota PFN je uvedena na prvním řádku. Zde jsou uvedené výsledky pro náš příklad:

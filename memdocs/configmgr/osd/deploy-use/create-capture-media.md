@@ -10,12 +10,12 @@ ms.assetid: 10eb8958-3848-49d7-95c0-16119b624580
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d85ab7e9d66c1206c6741117d7b379c998078708
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: f8f8d6512e0ddd9881005c5916eeb804aac59e2d
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125368"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698006"
 ---
 # <a name="create-capture-media"></a>Vytvoření záznamového média
 
@@ -24,7 +24,7 @@ ms.locfileid: "88125368"
 Záznamová média v Configuration Manager umožňují zaznamenat image operačního systému z referenčního počítače. Záznamové médium obsahuje spouštěcí bitovou kopii, která spouští referenční počítač, a pořadí úkolů, které zachytí image operačního systému. Pomocí záznamového média pro scénář [Vytvořte pořadí úkolů pro zachycení operačního systému](create-a-task-sequence-to-capture-an-operating-system.md).  
 
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 Než vytvoříte záznamové médium pomocí Průvodce vytvořením média pořadí úloh, ujistěte se, že jsou splněné všechny tyto podmínky.
 
@@ -84,7 +84,7 @@ Před spuštěním Průvodce vytvořením média pořadí úloh pro vytvoření 
 
         - Configuration Manager zapíše textový soubor s názvem `MediaLabel.txt` do kořenového adresáře média. Ve výchozím nastavení soubor obsahuje jeden řádek textu: `label=Configuration Manager` . Pokud přizpůsobíte popisek pro médium, tento řádek používá vlastní popisek místo výchozí hodnoty.  
 
-    - **Zahrnout soubor Autorun. inf na médium**<!-- 4090666 -->: Počínaje verzí 1906 Configuration Manager ve výchozím nastavení nepřidá soubor Autorun. inf. Tento soubor je pro antimalwarové produkty často blokovaný. Další informace o funkci AutoRun systému Windows najdete v tématu [Vytvoření aplikace CD-ROM s podporou automatického spuštění](https://docs.microsoft.com/windows/desktop/shell/autoplay). Pokud to pro váš scénář pořád potřebujete, vyberte tuto možnost, chcete-li soubor zahrnout.  
+    - **Zahrnout soubor Autorun. inf na médium**<!-- 4090666 -->: Počínaje verzí 1906 Configuration Manager ve výchozím nastavení nepřidá soubor Autorun. inf. Tento soubor je pro antimalwarové produkty často blokovaný. Další informace o funkci AutoRun systému Windows najdete v tématu [Vytvoření aplikace CD-ROM s podporou automatického spuštění](/windows/desktop/shell/autoplay). Pokud to pro váš scénář pořád potřebujete, vyberte tuto možnost, chcete-li soubor zahrnout.  
 
 5. Na stránce **spouštěcí bitová kopie** určete následující možnosti:  
 

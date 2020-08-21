@@ -10,12 +10,12 @@ ms.assetid: 31de47c9-891b-4de7-8d5e-fbbc1bff7c60
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 5d9d7cea7e5653b338a3eb4adb01d9fded99035e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 8e1334603bcf60ea3eb8c3d18b73d511570cdc5d
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81720517"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699734"
 ---
 # <a name="how-to-enable-tls-12"></a>Jak povolit TLS 1,2
 
@@ -23,7 +23,7 @@ ms.locfileid: "81720517"
 
 Protokol TLS (Transport Layer Security), jako je například SSL (Secure Sockets Layer) (SSL), je šifrovací protokol určený k zajištění zabezpečení dat při přenosu přes síť. Tyto články popisují kroky potřebné k tomu, aby Configuration Manager zabezpečená komunikace používala protokol TLS 1,2. Tyto články také popisují požadavky na aktualizace pro běžně používané komponenty a odstraňování běžných problémů.
 
-## <a name="enabling-tls-12"></a>Povolení TLS 1,2
+## <a name="enabling-tls-12"></a>Povolení protokolu TLS 1.2
 
 Configuration Manager spoléhá na řadu různých komponent pro zabezpečenou komunikaci. Protokol použitý pro dané připojení závisí na schopnostech relevantních součástí na straně klienta i serveru. Pokud je nějaká součást neaktuální nebo není správně nakonfigurovaná, může komunikace používat starší, méně zabezpečený protokol. Aby bylo možné správně povolit Configuration Manager pro podporu TLS 1,2 pro veškerou zabezpečenou komunikaci, je nutné povolit TLS 1,2 pro všechny požadované součásti. Požadované komponenty závisí na vašem prostředí a Configuration Managerch funkcích, které používáte.
 
@@ -62,7 +62,7 @@ Tato část popisuje závislosti pro konkrétní Configuration Manager funkce a 
 |Role systému lokality| - [Aktualizovat .NET Framework](enable-tls-1-2-server.md#bkmk_net) a ověřit nastavení silné kryptografie <br/> - [Aktualizujte SQL Server a její součásti klienta](enable-tls-1-2-server.md#bkmk_sql) v rolích, které to vyžadují, včetně [SQL Server Native Client](enable-tls-1-2-server.md#bkmk_sql-client)|
 |Bod služby Reporting services|- [Aktualizace .NET Framework](enable-tls-1-2-server.md#bkmk_net) na serveru lokality, na serverech SQL Reporting Services a na jakémkoli počítači s konzolou<br/> – Restartujte službu SMS_Executive podle potřeby.|
 |Bod aktualizace softwaru|[Aktualizace služby WSUS](enable-tls-1-2-server.md#bkmk_wsus)|
-|Brána pro správu cloudu|[Vynutilit TLS 1,2](../../clients/manage/cmg/security-and-privacy-for-cloud-management-gateway.md#bkmk_tls)|
+|Brána pro správu cloudu|[Vynucení protokolu TLS 1.2](../../clients/manage/cmg/security-and-privacy-for-cloud-management-gateway.md#bkmk_tls)|
 |Konzola nástroje Configuration Manager| - [Aktualizovat .NET Framework](enable-tls-1-2-client.md#bkmk_net)<br/> -Ověřit nastavení silné kryptografie|
 |Configuration Manager klienta s rolemi systému lokality HTTPS|[Aktualizace Windows pro podporu TLS 1,2 pro komunikaci mezi klientem a serverem pomocí WinHTTP](enable-tls-1-2-client.md#bkmk_winhttp)|
 |Centrum softwaru| - [Aktualizovat .NET Framework](enable-tls-1-2-client.md#bkmk_net)<br/> -Ověřit nastavení silné kryptografie|
@@ -86,7 +86,7 @@ K dispozici jsou v podstatě pět oblastí, které Configuration Manager použí
 
 ### <a name="what-determines-which-encryption-protocol-is-used"></a>Co určuje, který šifrovací protokol se používá?
 
-Protokol HTTPS bude vždy vyjednávat nejvyšší verzi protokolu, která je podporována klientem i serverem v zašifrované konverzaci. Po navázání připojení pošle klient zprávu serveru s nejvyšším dostupným protokolem. Pokud server podporuje stejnou verzi, pošle zprávu pomocí této verze. Tato dohodnutá verze je ta, která se používá pro připojení. Pokud server nepodporuje verzi, kterou prezentuje klient, bude serverová zpráva určovat nejvyšší verzi, kterou může použít. Další informace o protokolu TLS handshake najdete v tématu [Vytvoření zabezpečené relace pomocí protokolu TLS](https://docs.microsoft.com/windows/win32/secauthn/tls-handshake-protocol#establishing-a-secure-session-by-using-tls).
+Protokol HTTPS bude vždy vyjednávat nejvyšší verzi protokolu, která je podporována klientem i serverem v zašifrované konverzaci. Po navázání připojení pošle klient zprávu serveru s nejvyšším dostupným protokolem. Pokud server podporuje stejnou verzi, pošle zprávu pomocí této verze. Tato dohodnutá verze je ta, která se používá pro připojení. Pokud server nepodporuje verzi, kterou prezentuje klient, bude serverová zpráva určovat nejvyšší verzi, kterou může použít. Další informace o protokolu TLS handshake najdete v tématu [Vytvoření zabezpečené relace pomocí protokolu TLS](/windows/win32/secauthn/tls-handshake-protocol#establishing-a-secure-session-by-using-tls).
 
 ### <a name="what-determines-which-protocol-version-the-client-and-server-can-use"></a>Co určuje, kterou verzi protokolu může klient a server použít?
 
@@ -103,7 +103,7 @@ Obecně platí, že následující položky mohou určit, která verze protokolu
 ## <a name="additional-resources"></a>Další zdroje
 
 - [Technické informace o kryptografických ovládacích prvcích](cryptographic-controls-technical-reference.md)
-- [Osvědčené postupy TLS (Transport Layer Security) s .NET Framework](https://docs.microsoft.com/dotnet/framework/network-programming/tls#configuring-security-via-the-windows-registry)
+- [Osvědčené postupy TLS (Transport Layer Security) s .NET Framework](/dotnet/framework/network-programming/tls#configuring-security-via-the-windows-registry)
 - [KB 3135244: podpora TLS 1,2 pro Microsoft SQL Server](https://support.microsoft.com/help/3135244/tls-1-2-support-for-microsoft-sql-server)
 
 ## <a name="next-steps"></a>Další kroky

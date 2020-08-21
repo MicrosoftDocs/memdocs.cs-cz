@@ -10,12 +10,12 @@ ms.assetid: 694bc29f-a7fd-4e06-815a-1a9c5e9ac563
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d4f5ff0e1c8c92fbadc286e9909388eb66aa8f7b
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 1370c1bf80283ff30ad54378ad58ecd9a5d24d47
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906104"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699360"
 ---
 # <a name="introduction-to-the-long-term-servicing-branch-of-configuration-manager"></a>Úvod do větve dlouhodobé údržby Configuration Manager
 
@@ -26,7 +26,7 @@ LTSB (Long-Term Servicing Branch) pro Configuration Manager je samostatná věte
 V závislosti na Configuration Manager verze 1606 má LTSB omezenou funkčnost v porovnání s aktuální větví Configuration Manager.
 
 > [!TIP]   
-> Configuration Manager LTSB se nevztahují na kanál pro dlouhodobé obsluhy sady System Center (LTSC). Další informace najdete v tématu [Přehled možností vydání produktu System Center](https://docs.microsoft.com/system-center/ltsc-and-sac-overview).
+> Configuration Manager LTSB se nevztahují na kanál pro dlouhodobé obsluhy sady System Center (LTSC). Další informace najdete v tématu [Přehled možností vydání produktu System Center](/system-center/ltsc-and-sac-overview).
 
 ## <a name="features-that-arent-available"></a>Funkce, které nejsou k dispozici
 
@@ -53,7 +53,7 @@ Integrace cloudu a všechny funkce, které jsou součástí Configuration Manage
 
 ## <a name="find-ltsb-documentation"></a>Najít dokumentaci k LTSB
 
-LTSB vychází z aktuální větve verze 1606. Použijte [dokumentaci k aktuální větvi](https://docs.microsoft.com/mem/configmgr/)s upozorněními a omezeními, která jsou specifická pro LTSB. Tato upozornění a omezení se identifikují v následujících článcích:
+LTSB vychází z aktuální větve verze 1606. Použijte [dokumentaci k aktuální větvi](../../index.yml)s upozorněními a omezeními, která jsou specifická pro LTSB. Tato upozornění a omezení se identifikují v následujících článcích:
 
 - [Instalace LTSB](install-the-ltsb.md)
 - [Upgrade LTSB na aktuální větev](convert-to-current-branch.md)

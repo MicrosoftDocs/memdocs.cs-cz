@@ -10,12 +10,12 @@ ms.assetid: 8eed50f5-80a4-422e-8aa6-a7ccb2171475
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a3cf735dfa2dd73ed39a24c2d674a966acddf05a
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: c2861214bcdc9162b0121304b342d1d9d48be170
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125113"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697938"
 ---
 # <a name="deploy-windows-to-go-with-configuration-manager"></a>Nasazení Windows to-přejít pomocí Configuration Manager
 
@@ -23,7 +23,7 @@ ms.locfileid: "88125113"
 
 V tomto tématu najdete postup, jak zajistit, aby Windows to přešel do Configuration Manager. Windows To Go je funkce Enterprise systému Windows 8, která umožňuje vytvořit pracovní prostor Windows To Go, který lze spustit z externího disku připojeného přes USB v počítačích splňujících požadavky systémů Windows 7 nebo Windows 8 na certifikaci, a to bez ohledu na to, jaký operační systém je v počítači používán. Pracovní prostory Windows To Go mohou využívat stejnou bitovou kopii, kterou podniky využívají pro své stolní počítače a notebooky, a lze je spravovat stejným způsobem.  
 
- Další informace o funkci Windows to přejít najdete v tématu [Přehled funkcí Windows to přejít](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/hh831833(v=ws.11)).  
+ Další informace o funkci Windows to přejít najdete v tématu [Přehled funkcí Windows to přejít](/previous-versions/windows/it-pro/windows-8.1-and-8/hh831833(v=ws.11)).  
 
 ## <a name="provision-windows-to-go"></a>Zřízení funkce Windows To Go  
  Windows To Go je operační systém uložený na externím disku připojovaným přes USB. Zřízení disku Windows To Go je podobné jako zřízení ostatních nasazení operačního systému. Protože je však funkce Windows To Go navržena jako vysoce mobilní řešení pro konkrétního uživatele, postup při zřízení těchto disků se v některých ohledech liší.  
@@ -67,7 +67,7 @@ V tomto tématu najdete postup, jak zajistit, aby Windows to přešel do Configu
 
      Při vytváření předzpracovaného média je třeba vytvořit pořadí úloh pro nasazení systému Windows 8, na něž budete odkazovat. Další informace najdete v tématu [Správa pořadí úkolů pro automatizaci úloh](manage-task-sequences-to-automate-tasks.md).  
 
-###  <a name="create-prestaged-media"></a><a name="BKMK_CreatePrestagedMedia"></a>Vytvoření předzpracovaného média  
+###  <a name="create-prestaged-media"></a><a name="BKMK_CreatePrestagedMedia"></a> Vytvoření předzpracovaného média  
  Předzpracované médium obsahuje spouštěcí bitovou kopii sloužící ke spuštění cílového počítače a bitové kopie operačního systému, který bude v cílovém počítači nasazen. Počítač lze spustit pomocí spouštěcí bitové kopie na předzpracovaném médiu. Počítač pak může spustit existující pořadí úloh k nasazení operačního systému a nainstalovat kompletní nasazení operačního systému. Pořadí úloh, které operační systém nasadí, není obsaženo na médiu.  
 
  Ve fázi přípravy obsahu můžete přidat k imagi a spouštěcí imagi operačního systému další obsah, jako např. aplikace nebo ovladače zařízení. Tím se snižuje čas potřebný k nasazení operačního systému, ale také objem síťového přenosu, protože obsah je již uložen na disku.  
@@ -208,7 +208,7 @@ V tomto tématu najdete postup, jak zajistit, aby Windows to přešel do Configu
     > [!NOTE]  
     >  Vytvoření souboru předzpracovaného média průvodcem může chvíli trvat.  
 
-###  <a name="create-a-windows-to-go-creator-package"></a><a name="BKMK_CreatePackage"></a>Vytvoření balíčku Windows to do programu Creator  
+###  <a name="create-a-windows-to-go-creator-package"></a><a name="BKMK_CreatePackage"></a> Vytvoření balíčku Windows to do programu Creator  
  Jako součást nasazení funkcí Windows To Go je třeba vytvořit balíček k nasazení souboru předzpracovaného média. Balíček musí obsahovat nástroj, jímž se konfiguruje disk Windows To Go a který rozbalí předzpracované médium na disk. K vytvoření balíčku Windows To Go Creator postupujte podle následujícího popisu.  
 
 #### <a name="to-create-the-windows-to-go-creator-package"></a>Vytvoření balíčku Windows To Go Creator  
@@ -273,7 +273,7 @@ V tomto tématu najdete postup, jak zajistit, aby Windows to přešel do Configu
 
       Klikněte na **Další** a dokončete průvodce.  
 
-###  <a name="update-the-task-sequence-to-enable-bitlocker-for-windows-to-go"></a><a name="BKMK_UpdateTaskSequence"></a>Aktualizace pořadí úkolů za účelem zapnutí nástroje BitLocker pro systém Windows to přejít  
+###  <a name="update-the-task-sequence-to-enable-bitlocker-for-windows-to-go"></a><a name="BKMK_UpdateTaskSequence"></a> Aktualizace pořadí úkolů za účelem zapnutí nástroje BitLocker pro systém Windows to přejít  
  Systém Windows To Go slouží k zapnutí nástroje BitLocker na externí spustitelné jednotce bez použití TPM. Proto je třeba ke konfiguraci nástroje BitLocker na jednotce se systémem Windows To Go použít samostatný nástroj. Chcete-li nástroj BitLocker zapnout, je třeba do pořadí úloh přidat akci za krok **Nastavit systém Windows a nástroj ConfigMgr** .  
 
 > [!NOTE]  
@@ -460,5 +460,5 @@ V tomto tématu najdete postup, jak zajistit, aby Windows to přešel do Configu
 ###  <a name="configuration-manager-configures-and-stages-the-windows-to-go-drive"></a><a name="BKMK_ConfigureStageDrive"></a> Konfigurace a zpracování jednotky Windows To Go nástrojem Configuration Manager  
  Po restartu počítače z jednotky Windows To Go se jednotka spustí v systému Windows PE a připojí se k bodu správy, aby bylo možné získat zásadu pro dokončení nasazení operačního systému. Configuration Manager konfiguraci a fázi jednotky. Po Configuration Manager fázi jednotky může uživatel počítač restartovat, aby se proces zajišťování dokončí (například pro připojení k doméně nebo instalace aplikací). Tento proces je pro všechna předzpracovaná média stejný.  
 
-###  <a name="user-logs-in-to-windows-8"></a><a name="BKMK_UserLogsIn"></a>Přihlášení uživatele k systému Windows 8  
- Po dokončení procesu zřízení Configuration Manager se uživatel může přihlásit k operačnímu systému a zobrazí se zamykací obrazovka systému Windows 8.  
+###  <a name="user-logs-in-to-windows-8"></a><a name="BKMK_UserLogsIn"></a> Přihlášení uživatele k systému Windows 8  
+ Po dokončení procesu zřízení Configuration Manager se uživatel může přihlásit k operačnímu systému a zobrazí se zamykací obrazovka systému Windows 8.

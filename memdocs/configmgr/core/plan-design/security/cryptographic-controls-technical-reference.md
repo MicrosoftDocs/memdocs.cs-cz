@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: fe50aad3cb35ab5908f604560f4dcd22800919a5
-ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
+ms.openlocfilehash: 4ff86d203fc35167b5e35f81f171e7c00e468f3a
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85353441"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699292"
 ---
 # <a name="cryptographic-controls-technical-reference"></a>Technické informace o kryptografických ovládacích prvcích
 
@@ -260,5 +260,4 @@ Chcete-li zvýšit zabezpečení Configuration Manager klientů a serverů, post
 - Zakázání SSL 3,0, TLS 1,0 a TLS 1,1 
 - Změna pořadí šifrovacích sad souvisejících s protokolem TLS 
 
-Další informace najdete v tématu [jak omezit použití určitých kryptografických algoritmů a protokolů v Schannel.dll](https://support.microsoft.com/help/245030/) a [stanovení priorit šifrovacích sad Schannel](https://docs.microsoft.com/windows/win32/secauthn/prioritizing-schannel-cipher-suites). Tyto postupy neovlivňují Configuration Manager funkce.
-
+Další informace najdete v tématu [jak omezit použití určitých kryptografických algoritmů a protokolů v Schannel.dll](https://support.microsoft.com/help/245030/) a [stanovení priorit šifrovacích sad Schannel](/windows/win32/secauthn/prioritizing-schannel-cipher-suites). Tyto postupy neovlivňují Configuration Manager funkce.

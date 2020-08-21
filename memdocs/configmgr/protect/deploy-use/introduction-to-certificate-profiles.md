@@ -10,12 +10,12 @@ ms.assetid: 41dcc259-f147-4420-bff2-b65bdf8cff77
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 35269e7c727031a9cd66072985f3d9ec362978cf
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 3598c95d1431915431d96b16c10c7c913741fe3d
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81722302"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699989"
 ---
 # <a name="introduction-to-certificate-profiles-in-configuration-manager"></a>Úvod k profilům certifikátů v Configuration Manager
 
@@ -59,11 +59,11 @@ Existují tři typy profilů certifikátů:
 
 ## <a name="requirements"></a>Požadavky
 
-Chcete-li nasadit profily certifikátů používající protokol SCEP, nainstalujte bod registrace certifikátu na server systému lokality. Nainstalujte také modul zásad pro NDES a modul zásad Configuration Manager na serveru, na kterém běží Windows Server 2012 R2 nebo novější. Tento server vyžaduje roli služby Active Directory Certificate Services. Vyžaduje také pracovní NDES, který je přístupný pro zařízení, která vyžadují certifikáty. Pokud se vaše zařízení musí zaregistrovat pro certifikáty z Internetu, musí být váš server NDES dostupný z Internetu. Pokud například chcete bezpečně povolit provoz na server NDES z Internetu, můžete použít službu [Azure Application proxy](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy).
+Chcete-li nasadit profily certifikátů používající protokol SCEP, nainstalujte bod registrace certifikátu na server systému lokality. Nainstalujte také modul zásad pro NDES a modul zásad Configuration Manager na serveru, na kterém běží Windows Server 2012 R2 nebo novější. Tento server vyžaduje roli služby Active Directory Certificate Services. Vyžaduje také pracovní NDES, který je přístupný pro zařízení, která vyžadují certifikáty. Pokud se vaše zařízení musí zaregistrovat pro certifikáty z Internetu, musí být váš server NDES dostupný z Internetu. Pokud například chcete bezpečně povolit provoz na server NDES z Internetu, můžete použít službu [Azure Application proxy](/azure/active-directory/manage-apps/application-proxy).
 
 Certifikáty PFX také vyžadují bod registrace certifikátu. Zadejte také certifikační autoritu (CA) certifikátu a příslušné přihlašovací údaje pro přístup. Můžete zadat Microsoft nebo pověřit jako certifikační autority.  
 
-Další informace o tom, jak NDES podporuje modul zásad, aby Configuration Manager mohl nasazovat certifikáty, najdete v tématu [použití modulu zásad se službou zápisu síťových zařízení](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn473016\(v=ws.11\)).
+Další informace o tom, jak NDES podporuje modul zásad, aby Configuration Manager mohl nasazovat certifikáty, najdete v tématu [použití modulu zásad se službou zápisu síťových zařízení](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn473016\(v=ws.11\)).
 
 V závislosti na požadavcích Configuration Manager podporuje nasazení certifikátů do různých úložišť certifikátů v různých typech zařízení a operačních systémech. Jsou podporovány následující zařízení a operační systémy:  
 

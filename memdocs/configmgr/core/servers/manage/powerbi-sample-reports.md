@@ -10,18 +10,18 @@ ms.assetid: 7e9bc22c-67ac-4a86-b613-944a4928e583
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: cb55fc79c44af83c7bb7a5e0802800f55e28e6b3
-ms.sourcegitcommit: 62b451396eae660f2d5289ae3666b19ed1cc666d
+ms.openlocfilehash: 025788a4ed4a26123f24ec667348eae97821295e
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88614763"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699683"
 ---
 # <a name="install-power-bi-sample-reports"></a>Instalace ukázkových sestav Power BI
 <!--5679791-->
 *Platí pro: Configuration Manager (Current Branch)*
 
-Počínaje verzí 2002 můžete integrovat [server sestav Power BI](https://docs.microsoft.com/power-bi/report-server/get-started) s vytvářením sestav Configuration Manager. Pro stažení jsou k dispozici ukázkové sestavy, které můžete nainstalovat v Configuration Manager. Tento článek vysvětluje, jak nainstalovat ukázkové sestavy Power BI v Configuration Manager.
+Počínaje verzí 2002 můžete integrovat [server sestav Power BI](/power-bi/report-server/get-started) s vytvářením sestav Configuration Manager. Pro stažení jsou k dispozici ukázkové sestavy, které můžete nainstalovat v Configuration Manager. Tento článek vysvětluje, jak nainstalovat ukázkové sestavy Power BI v Configuration Manager.
 
 ## <a name="prerequisites"></a>Předpoklady
 
@@ -34,7 +34,7 @@ Počínaje verzí 2002 můžete integrovat [server sestav Power BI](https://docs
     > [!IMPORTANT]
     > Používejte pouze verze Power BI Desktop z [webu Microsoft Download Center](https://www.microsoft.com/download/). Nepoužívejte verzi z Microsoft Store.
     >
-    > Použijte pouze verzi Power BI Desktop, která je [optimalizována pro server sestav Power BI](https://docs.microsoft.com/power-bi/report-server/install-powerbi-desktop).
+    > Použijte pouze verzi Power BI Desktop, která je [optimalizována pro server sestav Power BI](/power-bi/report-server/install-powerbi-desktop).
 
 ## <a name="download-the-sample-reports"></a>Stažení ukázkových sestav
 

@@ -10,12 +10,12 @@ ms.assetid: 1d589306-9537-4306-a9bf-02c9771df514
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: b2e3202a58737e2559d295e5177675300ee8f0ee
-ms.sourcegitcommit: 3806a1850813b7a179d703e002bcc5c7eb1cb621
+ms.openlocfilehash: f32418b9351644f4c01ffadc7f9115ddf9325558
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86210340"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700384"
 ---
 # <a name="tenant-attach-cmpivot-sample-scripts"></a>Připojení tenanta: ukázkové skripty CMPivot
 <!---->
@@ -24,7 +24,7 @@ ms.locfileid: "86210340"
 > [!Important]
 > Tento článek se týká větve Technical Preview pro Configuration Manager. Další informace najdete v tématu [Configuration Manager Technical Preview verze 2005](../core/get-started/2020/technical-preview-2005.md#bkmk_cmpivot).
 
-Níže jsou uvedeny některé běžné požadavky na dotazy a způsob, jakým lze CMPivot použít k jejich splnění. CMPivot používá podmnožinu [KQL (Kusto Query Language)](https://docs.microsoft.com/azure/kusto/query/).
+Níže jsou uvedeny některé běžné požadavky na dotazy a způsob, jakým lze CMPivot použít k jejich splnění. CMPivot používá podmnožinu [KQL (Kusto Query Language)](/azure/kusto/query/).
 
 [!INCLUDE [Sample scripts for both Microsoft Endpoint Manager and Configuration Manager use](../core/servers/manage/includes/cmpivot-samples-shared.md)]
 

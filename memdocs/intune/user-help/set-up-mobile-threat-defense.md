@@ -15,16 +15,16 @@ ms.assetid: ''
 searchScope:
 - User help
 ROBOTS: ''
-ms.custom: intune-enduser
+ms.custom: intune-enduser, contperfq1
 ms.collection: ''
-ms.openlocfilehash: 5f32af94b179da42a268d4942122a3cab2faf6ff
-ms.sourcegitcommit: 21b6c0c054e5371f32d611a2411ccd166b0e03bc
+ms.openlocfilehash: 46eb7c5bd691c17747baba926e81b8bd503108b4
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 08/20/2020
-ms.locfileid: "88643750"
+ms.locfileid: "88700731"
 ---
-# <a name="install-mobile-threat-defense-app"></a>Nainstalovat aplikaci ochrany před mobilními hrozbami  
+# <a name="install-mobile-threat-defense-app"></a>Instalace aplikace Mobile Threat Defense  
 
 > [!TIP]
 > Na trhu je k dispozici celá řada aplikací MTD. Vaše organizace by vám měla sdělit, která z nich se má použít. Pokud se zobrazí výzva k instalaci aplikace MTD a nebudete okamžitě přesměrováni na nastavení nebo instalaci aplikace, požádejte o pomoc pracovníka podpory IT.  
@@ -43,7 +43,7 @@ Na zařízeních s iOS se běžně používají tyto aplikace MTD. Výběrem apl
 
 
 ## <a name="mtd-apps-for-android"></a>Aplikace MTD pro Android 
-Na zařízeních s Androidem se běžně používají tyto aplikace MTD. SSelect aplikaci a otevřete její výpis v Google Play.  
+Na zařízeních s Androidem se běžně používají tyto aplikace MTD. Výběrem aplikace otevřete její výpis v Google Play.  
 
 * [Lookout for Work](https://go.microsoft.com/fwlink/?linkid=2139453)
 * [Symantec Endpoint Protection (SEP) – mobilní zařízení](https://go.microsoft.com/fwlink/?linkid=2139454)

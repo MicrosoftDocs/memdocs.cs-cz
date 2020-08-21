@@ -10,12 +10,12 @@ ms.assetid: ead79e64-1b63-4d0d-8bd5-addff8919820
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6e18c5e9e029900e10cebfb8e7bcdee29fd928ba
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: a3ec1476a9b5374eb91d147e2b22fd0f669d6251
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125402"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698040"
 ---
 # <a name="create-bootable-media"></a>Vytvoření spouštěcího média
 
@@ -49,7 +49,7 @@ Balíčky na spouštěcím médiu nejsou šifrovány. Chcete-li zajistit, aby by
 
 Počínaje verzí 2006 může spouštěcí médium stahovat cloudový obsah. Zařízení ještě potřebuje intranetové připojení k bodu správy. Může získat obsah z brány pro správu cloudu s povoleným obsahem (CMG) nebo cloudového distribučního bodu.<!--6209223--> Další informace najdete v tématu [Podpora cloudového obsahu](use-bootable-media-to-deploy-windows-over-the-network.md#support-for-cloud-based-content).
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 Než vytvoříte spouštěcí médium pomocí Průvodce vytvořením média pořadí úloh, ujistěte se, že jsou splněné všechny tyto podmínky.
 
@@ -128,7 +128,7 @@ Před spuštěním Průvodce vytvořením média pořadí úloh pro vytvoření 
 
         - Configuration Manager zapíše textový soubor s názvem `MediaLabel.txt` do kořenového adresáře média. Ve výchozím nastavení soubor obsahuje jeden řádek textu: `label=Configuration Manager` . Pokud přizpůsobíte popisek pro médium, tento řádek používá vlastní popisek místo výchozí hodnoty.
 
-    - **Zahrnout soubor Autorun. inf na médium**<!-- 4090666 -->: Počínaje verzí 1906 Configuration Manager ve výchozím nastavení nepřidá soubor Autorun. inf. Tento soubor je pro antimalwarové produkty často blokovaný. Další informace o funkci AutoRun systému Windows najdete v tématu [Vytvoření aplikace CD-ROM s podporou automatického spuštění](https://docs.microsoft.com/windows/desktop/shell/autoplay). Pokud to pro váš scénář pořád potřebujete, vyberte tuto možnost, chcete-li soubor zahrnout.
+    - **Zahrnout soubor Autorun. inf na médium**<!-- 4090666 -->: Počínaje verzí 1906 Configuration Manager ve výchozím nastavení nepřidá soubor Autorun. inf. Tento soubor je pro antimalwarové produkty často blokovaný. Další informace o funkci AutoRun systému Windows najdete v tématu [Vytvoření aplikace CD-ROM s podporou automatického spuštění](/windows/desktop/shell/autoplay). Pokud to pro váš scénář pořád potřebujete, vyberte tuto možnost, chcete-li soubor zahrnout.
 
 1. Na stránce **zabezpečení** zadejte následující možnosti:
 
@@ -200,4 +200,4 @@ Spouštěcí médium můžete vytvořit na vyměnitelné jednotce USB, pokud jed
 
 ## <a name="next-steps"></a>Další kroky
 
-[Použití spouštěcího média k nasazení Windows přes síť](use-bootable-media-to-deploy-windows-over-the-network.md)  
+[Použití spouštěcího média k nasazení Windows přes síť](use-bootable-media-to-deploy-windows-over-the-network.md)

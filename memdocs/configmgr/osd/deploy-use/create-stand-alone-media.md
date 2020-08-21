@@ -10,12 +10,12 @@ ms.assetid: c6b9ccd2-78d9-4f0e-b25a-70d0866300ba
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 62c667706a9d77b3bb7d2b6bbdfde3cde8bb8365
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 57b353dd9dd9fcf7f97d10480f4067bd65a1f483
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125181"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697972"
 ---
 # <a name="create-stand-alone-media"></a>Vytvoření samostatného média
 
@@ -39,7 +39,7 @@ Samostatné médium obsahuje pořadí úkolů, které automatizuje kroky pro ins
 Když vytvoříte samostatné médium v lokalitě centrální správy, klient načte svůj přiřazený kód lokality ze služby Active Directory. Samostatné médium vytvořené v podřízených lokalitách automaticky přiřadí klientovi kód lokality pro danou lokalitu.  
 
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 Před vytvořením samostatného média pomocí Průvodce vytvořením média pořadí úloh se ujistěte, že jsou splněné všechny tyto podmínky.
 
@@ -140,7 +140,7 @@ Před spuštěním Průvodce vytvořením média pořadí úloh pro vytvoření 
 
         - Configuration Manager zapíše textový soubor s názvem `MediaLabel.txt` do kořenového adresáře média. Ve výchozím nastavení soubor obsahuje jeden řádek textu: `label=Configuration Manager` . Pokud přizpůsobíte popisek pro médium, tento řádek používá vlastní popisek místo výchozí hodnoty.  
 
-    - **Zahrnout soubor Autorun. inf na médium**<!-- 4090666 -->: Počínaje verzí 1906 Configuration Manager ve výchozím nastavení nepřidá soubor Autorun. inf. Tento soubor je pro antimalwarové produkty často blokovaný. Další informace o funkci AutoRun systému Windows najdete v tématu [Vytvoření aplikace CD-ROM s podporou automatického spuštění](https://docs.microsoft.com/windows/desktop/shell/autoplay). Pokud to pro váš scénář pořád potřebujete, vyberte tuto možnost, chcete-li soubor zahrnout.  
+    - **Zahrnout soubor Autorun. inf na médium**<!-- 4090666 -->: Počínaje verzí 1906 Configuration Manager ve výchozím nastavení nepřidá soubor Autorun. inf. Tento soubor je pro antimalwarové produkty často blokovaný. Další informace o funkci AutoRun systému Windows najdete v tématu [Vytvoření aplikace CD-ROM s podporou automatického spuštění](/windows/desktop/shell/autoplay). Pokud to pro váš scénář pořád potřebujete, vyberte tuto možnost, chcete-li soubor zahrnout.  
 
 5. Na stránce **zabezpečení** zadejte následující možnosti:
 
@@ -151,7 +151,7 @@ Před spuštěním Průvodce vytvořením média pořadí úloh pro vytvoření 
         >
         > Na samostatném médiu zašifruje pouze kroky pořadí úloh a jejich proměnné. Nešifruje zbývající obsah média. Do skriptů pořadí úloh nezahrnujte žádné citlivé informace. Ukládání a implementace všech citlivých informací pomocí proměnných pořadí úkolů.  
 
-    - **Vyberte platný rozsah kalendářních dat pro toto samostatné médium**: nastavte volitelná data začátku a konce platnosti média. Standardně je toto nastavení zakázané. Data jsou porovnána se systémovým časem v počítači před spuštěním samostatného média. Pokud je systémový čas dřívější než čas spuštění nebo pozdější než čas vypršení platnosti, nespustí se samostatné médium. Tyto možnosti jsou dostupné taky pomocí rutiny [New-CMStandaloneMedia](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmstandalonemedia?view=sccm-ps) prostředí PowerShell.  
+    - **Vyberte platný rozsah kalendářních dat pro toto samostatné médium**: nastavte volitelná data začátku a konce platnosti média. Standardně je toto nastavení zakázané. Data jsou porovnána se systémovým časem v počítači před spuštěním samostatného média. Pokud je systémový čas dřívější než čas spuštění nebo pozdější než čas vypršení platnosti, nespustí se samostatné médium. Tyto možnosti jsou dostupné taky pomocí rutiny [New-CMStandaloneMedia](/powershell/module/configurationmanager/new-cmstandalonemedia?view=sccm-ps) prostředí PowerShell.  
 
 6. Na stránce **samostatný disk CD/DVD** vyberte pořadí úloh, které NASADÍ operační systém. Můžete vybrat jenom ta pořadí úloh, která jsou přidružená ke spouštěcí imagi. Ověřte seznam obsahu, na který odkazuje pořadí úkolů.  
 

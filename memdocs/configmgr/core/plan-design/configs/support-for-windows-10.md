@@ -10,12 +10,12 @@ ms.assetid: a1626a65-da22-49e0-9564-d2f752ea3f4b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 6a30fc55fb4129b8ea3493b76fd6871a2a62f881
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 1e35a66c05a09455b3f2aded3d81daa2ccd5eff0
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88126735"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700244"
 ---
 # <a name="support-for-windows-10-in-configuration-manager"></a>Podpora pro Windows 10 v Configuration Manager  
 
@@ -70,7 +70,7 @@ Další informace o životním cyklu Windows najdete na [listu faktu pro životn
 | ![](media/green_check.png)Podporovaná podpora  =  **Supported**  |
 | ![](media/Red_X.png)Nepodporovaná není podporovaná  =  **Not supported** |
 
-### <a name="windows-10-client-support-notes"></a><a name="bkmk_win10-notes"></a>Poznámky k podpoře klientů s Windows 10
+### <a name="windows-10-client-support-notes"></a><a name="bkmk_win10-notes"></a> Poznámky k podpoře klientů s Windows 10
 
 - Podpora pro pololetní verze kanálů Windows 10 zahrnuje tyto edice: Enterprise, pro, vzdělávání a vzdělávání pro.  
 
@@ -78,7 +78,7 @@ Další informace o životním cyklu Windows najdete na [listu faktu pro životn
 
 - Pro Windows 10 verze 1909 se u média pro nasazení operačního systému zobrazuje verze jako 10.0.18362.418.
 
-### <a name="windows-10-on-arm64"></a><a name="bkmk_arm64"></a>Windows 10 v ARM64
+### <a name="windows-10-on-arm64"></a><a name="bkmk_arm64"></a> Windows 10 v ARM64
 
 Configuration Manager podporuje klienta na zařízeních s Windows 10 ARM64. Nasazení operačního systému se nepodporuje.<!-- 1353704 -->
 
@@ -87,11 +87,11 @@ Počínaje verzí 2002,<!--5954175--> Platforma **All Windows 10 (ARM64)** je do
 > [!NOTE]
 > Pokud jste dříve vybrali platformu **Windows 10** na nejvyšší úrovni, tato akce automaticky vybrala **všechny systémy windows 10 (64 bitů)** i **všechny systémy Windows 10 (32-bit)**. Tato nová platforma není automaticky vybraná. Pokud chcete přidat **všechny systémy Windows 10 (ARM64)**, ručně je vyberte v seznamu.
 
-### <a name="support-for-windows-insider"></a><a name="bkmk_WIfB-support"></a>Podpora pro Windows Insider
+### <a name="support-for-windows-insider"></a><a name="bkmk_WIfB-support"></a> Podpora pro Windows Insider
 
 Počínaje verzí 1906 Configuration Manager můžete [aktualizovat a obsluhovat buildy Windows Insider](../../../sum/get-started/configure-classifications-and-products.md#bkmk_WIfB) . Tato možnost je k dispozici pro naše zákazníky jako pohodlí. I když tato funkce by měla fungovat, je jejich podpora nejlepší. Pokud přestane fungovat, Configuration Manager nemusí vydat opravu hotfix pro tuto funkci.  
 
-Pokud chcete poskytnout zpětnou vazbu ke službě Windows Insider, použijte [Centrum zpětné vazby](https://docs.microsoft.com/windows-insider/at-work-pro/wip-4-biz-feedback).
+Pokud chcete poskytnout zpětnou vazbu ke službě Windows Insider, použijte [Centrum zpětné vazby](/windows-insider/at-work-pro/wip-4-biz-feedback).
 
 ## <a name="windows-10-adk"></a>Windows 10 ADK
 
@@ -99,7 +99,7 @@ Pokud nasazujete operační systémy pomocí Configuration Manager, ADK Windows 
 
 - [Požadavky na infrastrukturu pro nasazení operačního systému](../../../osd/plan-design/infrastructure-requirements-for-operating-system-deployment.md#windows-adk-for-windows-10)
 
-- [Stažení sady Windows ADK pro Windows 10](https://docs.microsoft.com/windows-hardware/get-started/adk-install)
+- [Stažení sady Windows ADK pro Windows 10](/windows-hardware/get-started/adk-install)
 
     > [!IMPORTANT]
     > Počínaje systémem Windows 10 verze 1809 je systém Windows PE samostatným instalačním programem. Jinak neexistuje žádný funkční rozdíl.
@@ -118,11 +118,11 @@ V následující tabulce jsou uvedeny verze ADK Windows 10, které můžete pou�
 
 |Klíč|
 |--|
-| ![](media/green_check.png)Podporovaná podpora  =  **Supported** <br/> V této tabulce je uvedena pouze podpora systému Windows ADK ve vztahu k verzi Configuration Manager. Microsoft doporučuje používat sadu Windows ADK, která odpovídá verzi Windows, kterou nasazujete. Při nasazení nejnovější verze Windows 10 použijte nejnovější verzi Windows ADK. Nejnovější verze systému Windows ADK může podporovat nasazení starších verzí operačního systému, například Windows 8.1.<!-- SCCMDocs issue 1229 --> Další informace o podpoře součástí Windows ADK najdete v článku [podporované platformy DISM](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-supported-platforms) a [požadavky na USMT](https://docs.microsoft.com/windows/deployment/usmt/usmt-requirements#bkmk-1). |
+| ![](media/green_check.png)Podporovaná podpora  =  **Supported** <br/> V této tabulce je uvedena pouze podpora systému Windows ADK ve vztahu k verzi Configuration Manager. Microsoft doporučuje používat sadu Windows ADK, která odpovídá verzi Windows, kterou nasazujete. Při nasazení nejnovější verze Windows 10 použijte nejnovější verzi Windows ADK. Nejnovější verze systému Windows ADK může podporovat nasazení starších verzí operačního systému, například Windows 8.1.<!-- SCCMDocs issue 1229 --> Další informace o podpoře součástí Windows ADK najdete v článku [podporované platformy DISM](/windows-hardware/manufacture/desktop/dism-supported-platforms) a [požadavky na USMT](/windows/deployment/usmt/usmt-requirements#bkmk-1). |
 | ![Zpětně kompatibilní ](media/blue_compat.png)   =  **zpětně** kompatibilní <br/> Tato kombinace není testována, ale měla by fungovat. Podíváme se na známé problémy nebo upozornění. |
 | ![](media/Red_X.png)Nepodporovaná není podporovaná  =  **Not supported** |
 
-### <a name="windows-10-adk-support-notes"></a><a name="bkmk_adk-notes"></a>Poznámky k podpoře pro Windows 10 ADK
+### <a name="windows-10-adk-support-notes"></a><a name="bkmk_adk-notes"></a> Poznámky k podpoře pro Windows 10 ADK
 
 - Configuration Manager podporuje pouze součásti x86 a amd64 systému Windows 10 ADK. V současné době nepodporuje komponenty ARM nebo ARM64.
 

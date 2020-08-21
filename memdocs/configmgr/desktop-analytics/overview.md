@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 09f829bd1695426211ff94381a63b8f23d1b4fe8
-ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
+ms.openlocfilehash: 59f3d1a8a7b217a794440e2f75e0bb09e28634a9
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86411010"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700786"
 ---
 # <a name="what-is-desktop-analytics"></a>Co je Desktop Analytics?
 
@@ -69,22 +69,22 @@ Pokud chcete použít desktopovou analýzu, ujistěte se, že vaše prostředí 
 
 ### <a name="technical"></a>Technické
 
-- Aktivní globální předplatné Azure s oprávněními [globálního správce](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#company-administrator-permissions) . [Účty Microsoft](https://docs.microsoft.com/windows/security/identity-protection/access-control/microsoft-accounts) se nepodporují.  
+- Aktivní globální předplatné Azure s oprávněními [globálního správce](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#company-administrator-permissions) . [Účty Microsoft](/windows/security/identity-protection/access-control/microsoft-accounts) se nepodporují.  
 
     > [!IMPORTANT]
-    > Desktop Analytics je služba systému Windows hostovaná v Azure Global, která využívá diagnostická data Windows. Zatímco Desktop Analytics je globální služba Azure, která je k dispozici pro zákazníky ze státní správy USA, nesplňuje žádné atributy [(RSZ) pro státní správu USA (Community)](https://docs.microsoft.com/office365/servicedescriptions/office-365-platform-service-description/office-365-us-government/gcc#us-government-community-compliance) . Seznam nabídek dodržování předpisů pro produkty a služby společnosti Microsoft najdete na [webu Microsoft Trust Center](https://docs.microsoft.com/microsoft-365/compliance/offering-home?view=o365-worldwide). Desktop Analytics není k dispozici pro zákazníky v oblasti RSZ vysoké nebo USA. Používání předplatných Azure Government pro pracovní prostory pro hostování Desktop Analytics se nepodporuje.
+    > Desktop Analytics je služba systému Windows hostovaná v Azure Global, která využívá diagnostická data Windows. Zatímco Desktop Analytics je globální služba Azure, která je k dispozici pro zákazníky ze státní správy USA, nesplňuje žádné atributy [(RSZ) pro státní správu USA (Community)](/office365/servicedescriptions/office-365-platform-service-description/office-365-us-government/gcc#us-government-community-compliance) . Seznam nabídek dodržování předpisů pro produkty a služby společnosti Microsoft najdete na [webu Microsoft Trust Center](/microsoft-365/compliance/offering-home?view=o365-worldwide). Desktop Analytics není k dispozici pro zákazníky v oblasti RSZ vysoké nebo USA. Používání předplatných Azure Government pro pracovní prostory pro hostování Desktop Analytics se nepodporuje.
 
     - Oprávnění **vlastníka pracovního prostoru** k **Nastavení pracovního prostoru**a následujících rolí:  
 
-      - Role [**správce pro Desktop Analytics**](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#desktop-analytics-administrator-permissions) .
+      - Role [**správce pro Desktop Analytics**](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#desktop-analytics-administrator-permissions) .
 
-      - [**Log Analytics Přispěvatel**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#log-analytics-contributor) a [**Správce přístupu uživatelů**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#user-access-administrator) ve skupině prostředků, aby používaly existující pracovní prostor nebo vytvořil nový pracovní prostor v existující skupině prostředků.
+      - [**Log Analytics Přispěvatel**](/azure/role-based-access-control/built-in-roles#log-analytics-contributor) a [**Správce přístupu uživatelů**](/azure/role-based-access-control/built-in-roles#user-access-administrator) ve skupině prostředků, aby používaly existující pracovní prostor nebo vytvořil nový pracovní prostor v existující skupině prostředků.
 
-      - Oprávnění [**vlastníka**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#owner)nebo [**Přispěvatel**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#contributor) a [**Správce přístupu uživatele**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#user-access-administrator) k předplatnému k vytvoření pracovního prostoru v nové skupině prostředků.  
+      - Oprávnění [**vlastníka**](/azure/role-based-access-control/built-in-roles#owner)nebo [**Přispěvatel**](/azure/role-based-access-control/built-in-roles#contributor) a [**Správce přístupu uživatele**](/azure/role-based-access-control/built-in-roles#user-access-administrator) k předplatnému k vytvoření pracovního prostoru v nové skupině prostředků.  
 
     - Pokud chcete mít přístup k portálu po registraci, budete potřebovat:
 
-      - Role a [**vlastník**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#owner)pro [**správce Desktop Analytics**](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#desktop-analytics-administrator-permissions) nebo oprávnění [**přispěvatele**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#contributor) vytvořeného pracovního prostoru Log Analytics.
+      - Role a [**vlastník**](/azure/role-based-access-control/built-in-roles#owner)pro [**správce Desktop Analytics**](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#desktop-analytics-administrator-permissions) nebo oprávnění [**přispěvatele**](/azure/role-based-access-control/built-in-roles#contributor) vytvořeného pracovního prostoru Log Analytics.
 
 - Configuration Manager verze 1902 s kumulativní aktualizací (4500571) nebo novější. Další informace najdete v tématu [aktualizace Configuration Manager](connect-configmgr.md#bkmk_hotfix).  
 
@@ -103,7 +103,7 @@ Pokud chcete použít desktopovou analýzu, ujistěte se, že vaše prostředí 
     - Zařízení musí mít také klienta Configuration Manager, verze 1902 s kumulativní aktualizací (4500571) nebo novější. Další informace najdete v tématu [aktualizace Configuration Manager](connect-configmgr.md#bkmk_hotfix).  
 
     > [!Note]  
-    > Desktop Analytics nepodporuje upgrady na nebo z kanálu pro dlouhodobé obsluhy Windows 10 (LTSC). Další informace najdete v tématu [Přehled služby Windows as](https://docs.microsoft.com/windows/deployment/update/waas-overview#long-term-servicing-channel).
+    > Desktop Analytics nepodporuje upgrady na nebo z kanálu pro dlouhodobé obsluhy Windows 10 (LTSC). Další informace najdete v tématu [Přehled služby Windows as](/windows/deployment/update/waas-overview#long-term-servicing-channel).
     >
     > Desktop Analytics je navržený tak, aby nejlépe podporoval scénář místního upgradu. Pokud potřebujete provést významné změny, jako je například z 32-bitové architektury na 64, použijte scénář pro vytváření imagí. Přehledy Desktop Analytics jsou v těchto scénářích nasazení klasického operačního systému stále důležité, ale můžete ignorovat konkrétní pokyny pro upgrade na místě. Další informace najdete v tématu [scénáře nasazení podnikových operačních systémů pomocí Configuration Manager](../osd/deploy-use/scenarios-to-deploy-enterprise-operating-systems.md).
 
@@ -139,7 +139,7 @@ Pokud chcete použít desktopovou analýzu, ujistěte se, že vaše prostředí 
   - Přístup k virtuální ploše Windows s přístupem E3 nebo E5  
 
 > [!NOTE]
-> Kromě nákladů na tyto licenční předplatné se za použití Desktop Analytics v Azure Log Analytics neúčtují žádné další poplatky. Datové typy ingestované na Desktop Analytics jsou bezplatné a účtují se veškeré Log Analytics a poplatky za uchování dat. Jako nefakturovatelné datové typy nepodléhají tato data ani Log Analytics dennímu limitu pro přijímání dat. Další informace najdete v tématu [Log Analytics využití a náklady](https://docs.microsoft.com/azure/azure-monitor/platform/manage-cost-storage).
+> Kromě nákladů na tyto licenční předplatné se za použití Desktop Analytics v Azure Log Analytics neúčtují žádné další poplatky. Datové typy ingestované na Desktop Analytics jsou bezplatné a účtují se veškeré Log Analytics a poplatky za uchování dat. Jako nefakturovatelné datové typy nepodléhají tato data ani Log Analytics dennímu limitu pro přijímání dat. Další informace najdete v tématu [Log Analytics využití a náklady](/azure/azure-monitor/platform/manage-cost-storage).
 
 ## <a name="next-steps"></a>Další kroky
 

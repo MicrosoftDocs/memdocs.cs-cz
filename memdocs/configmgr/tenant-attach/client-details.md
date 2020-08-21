@@ -10,12 +10,12 @@ ms.assetid: 7a597d9e-a878-48d0-a7ce-56a1dbfd0e5c
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: dd997508f34b02ef7d2824ffd3a4dfec9cb9066a
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 066a7517700d85315a04bec55b6f8254d3e49255
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88251881"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700391"
 ---
 # <a name="tenant-attach-configmgr-client-details-in-the-admin-center-preview"></a><a name="bkmk_mem"></a> Připojení tenanta: podrobnosti o klientovi nástroje ConfigMgr v centru pro správu (Preview)
 <!--6024387, 6374854, 6521921, intune 7552762 pubpreview July 7, 2020-->
@@ -27,13 +27,13 @@ Microsoft Endpoint Manager je integrované řešení pro správu všech vašich 
 > - Tyto informace se vztahují k funkci ve verzi Preview, která se podstatně změnila předtím, než se komerční verze uvolní. Microsoft neposkytuje žádné záruky, výslovné ani předpokládané, týkající se zde uváděných informací.
 > - Karta skupiny hranic funguje pouze pro samostatné lokality. Karta bude v centru pro správu prázdná, a to i v případě, že se jedná o jinou než samostatnou primární lokalitu.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 - Prostředí, které je [klientovi připojené k nahraným zařízením](device-sync-actions.md).
 - Jeden z následujících prohlížečů:
   - Microsoft Edge, verze 77 a novější
   - Google Chrome
-- Byl zjištěn uživatelský účet s vyhledáváním [uživatelů služby Azure Active Directory (Azure AD)](https://docs.microsoft.com/mem/configmgr/core/servers/deploy/configure/about-discovery-methods#azureaddisc) a [zjišťováním uživatelů služby Active Directory](https://docs.microsoft.com/mem/configmgr/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutUser).
+- Byl zjištěn uživatelský účet s vyhledáváním [uživatelů služby Azure Active Directory (Azure AD)](../core/servers/deploy/configure/about-discovery-methods.md#azureaddisc) a [zjišťováním uživatelů služby Active Directory](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser).
   - To znamená, že uživatelský účet musí být synchronizovaný objekt uživatele v Azure.
 
 ## <a name="permissions"></a>Oprávnění
@@ -44,7 +44,7 @@ Uživatelský účet potřebuje následující oprávnění:
 - Role **uživatele správce** pro Configuration Manager aplikace mikroslužeb ve službě Azure AD.
   - Přidejte roli ve službě Azure AD z části **podnikové aplikace**  >  **Configuration Manager**  >  **Uživatelé a skupiny**mikroslužeb  >  **Přidat uživatele**. Pokud máte Azure AD Premium, podporují se skupiny.
    > [!TIP]
-   > [Role Správce aplikací v Azure AD](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles) má dostatečná oprávnění pro přidání uživatele do role **uživatele správce** aplikace.
+   > [Role Správce aplikací v Azure AD](/azure/active-directory/users-groups-roles/directory-assign-admin-roles) má dostatečná oprávnění pro přidání uživatele do role **uživatele správce** aplikace.
 
 ## <a name="view-configmgr-client-details"></a>Zobrazit podrobnosti o klientovi nástroje ConfigMgr
 

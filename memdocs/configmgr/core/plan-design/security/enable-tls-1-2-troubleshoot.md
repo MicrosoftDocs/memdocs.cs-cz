@@ -10,12 +10,12 @@ ms.assetid: 15083f28-8ff2-4e23-9f5e-b5dbd0859839
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 7c07b0af1b3063619ac5f71965d96f611aefafd9
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 316387bc42ed51dd9b581a25208091ed93cad1d1
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81720524"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699751"
 ---
 # <a name="common-issues-when-enabling-tls-12"></a>Běžné problémy při povolování protokolu TLS 1.2
 
@@ -37,7 +37,7 @@ Pokud se sestavy nezobrazují v konzole Configuration Manager, nezapomeňte aktu
 
 Pokud u klienta nebo serveru povolíte nastavení zásad zabezpečení FIPS, může vyjednávání zabezpečeného kanálu (Schannel) způsobit, že budou používat protokol TLS 1,0. K tomuto chování dochází i v případě, že protokol zakážete v registru.
 
-K prozkoumání, povolení protokolování událostí zabezpečeného kanálu a následné kontrole událostí Schannel v systémovém protokolu. Další informace najdete v tématu [jak omezit použití určitých kryptografických algoritmů a protokolů v souboru Schannel. dll](https://support.microsoft.com/help/245030/how-to-restrict-the-use-of-certain-cryptographic-algorithms-and-protoc).
+K prozkoumání, povolení protokolování událostí zabezpečeného kanálu a následné kontrole událostí Schannel v systémovém protokolu. Další informace najdete v tématu [jak omezit použití určitých kryptografických algoritmů a protokolů v Schannel.dll](https://support.microsoft.com/help/245030/how-to-restrict-the-use-of-certain-cryptographic-algorithms-and-protoc).
 
 ## <a name="sql-server-communication-failure"></a>SQL Server Chyba komunikace
 
@@ -77,7 +77,7 @@ Pokud chcete tento problém vyřešit, postupujte následovně:
 
 1. [Aktualizujte .NET Framework](enable-tls-1-2-client.md#bkmk_net)a povolte silnou kryptografii na všech relevantních počítačích.
 
-1. Ve `%WinDir%\System32\InetSrv` složce serveru Application Catalog vytvořte soubor **W2SP. exe. config** s následujícím obsahem:
+1. Ve `%WinDir%\System32\InetSrv` složce serveru Application Catalog vytvořte **W2SP.exe.config** soubor s následujícím obsahem:
 
     ``` XML
     <?xml version="1.0" encoding="utf-8" ?>
@@ -145,12 +145,12 @@ The underlying connection was closed: An unexpected error occurred on a receive.
 at System.Net.HttpWebRequest.GetResponse
 ```
 
-V systémových protokolech událostí může být SChannel ID události 36874 zaznamenán s následujícím popisem:`An TLS 1.2 connection request was received from a remote client application, but none of the cipher suites supported by the client application are supported by the server. The TLS connection request has failed.`
+V systémových protokolech událostí může být SChannel ID události 36874 zaznamenán s následujícím popisem: `An TLS 1.2 connection request was received from a remote client application, but none of the cipher suites supported by the client application are supported by the server. The TLS connection request has failed.`
 <!--SCCMDocs issue #1608-->
 
 ## <a name="additional-resources"></a>Další zdroje
 
-- [Osvědčené postupy TLS (Transport Layer Security) s .NET Framework](https://docs.microsoft.com/dotnet/framework/network-programming/tls#configuring-security-via-the-windows-registry)
+- [Osvědčené postupy TLS (Transport Layer Security) s .NET Framework](/dotnet/framework/network-programming/tls#configuring-security-via-the-windows-registry)
 - [KB 3135244: podpora TLS 1,2 pro Microsoft SQL Server](https://support.microsoft.com/help/3135244/tls-1-2-support-for-microsoft-sql-server)
 - [Technické informace o kryptografických ovládacích prvcích](cryptographic-controls-technical-reference.md)
 
@@ -158,4 +158,3 @@ V systémových protokolech událostí může být SChannel ID události 36874 z
 
 - [Povolení protokolu TLS 1.2 na klientech](enable-tls-1-2-client.md)
 - [Povolit TLS 1,2 na serverech lokality a vzdálených systémech lokality](enable-tls-1-2-server.md)
-

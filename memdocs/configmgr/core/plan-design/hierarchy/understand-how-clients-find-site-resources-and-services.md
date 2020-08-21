@@ -10,12 +10,12 @@ ms.assetid: ae72df4b-5f5d-4e19-9052-bda28edfbace
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b012dd1e7da0d6a3efb4d1cc33b8a79ef319bc0a
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 262234edbd6fac6973653ca6cac62853fde23b2d
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268993"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700108"
 ---
 # <a name="learn-how-clients-find-site-resources-and-services-for-configuration-manager"></a>Informace o tom, jak klienti hledají služby a prostředky lokality pro Configuration Manager
 
@@ -31,7 +31,7 @@ Mezi role systému lokality, které poskytují služby, patří:
 
 
 
-##  <a name="fundamentals-of-service-location"></a><a name="bkmk_fund"></a>Základy umístění služby  
+##  <a name="fundamentals-of-service-location"></a><a name="bkmk_fund"></a> Základy umístění služby  
  Klient vyhodnotí svoje aktuální umístění v síti, předvolby komunikačního protokolu a přiřazenou lokalitu, když používá umístění služby k vyhledání bodu správy, se kterým může komunikovat.  
 
 **Klient komunikuje s bodem správy na:**  
@@ -43,16 +43,16 @@ Mezi role systému lokality, které poskytují služby, patří:
 **Klient Configuration Manager vytvoří požadavek na umístění služby:**  
 - Každých 25 hodin nepřetržité operace.  
 - Když klient zjistí změnu v jeho konfiguraci nebo umístění v síti.  
-- Po spuštění služby **Ccmexec. exe** v počítači (jádro klientské služby).  
+- Při spuštění služby **ccmexec.exe** v počítači (jádro klientské služby).  
 - Když klient musí najít roli systému lokality, která poskytuje požadovanou službu.  
 
 **Když se klient pokouší najít servery, které jsou hostiteli rolí systému lokality**, používá umístění služby k nalezení role systému lokality, která podporuje protokol klienta (http nebo https). Ve výchozím nastavení používají klienti nejbezpečnější metodu, která je k dispozici. Zvažte použití těchto zdrojů:  
 
 - Aby mohl používat protokol HTTPS, musíte mít infrastrukturou veřejných klíčů (PKI) a musíte mít na klientech a na serverech nainstalované certifikáty PKI. Informace o používání certifikátů najdete v tématu požadavky na [certifikát PKI pro Configuration Manager](../../../core/plan-design/network/pki-certificate-requirements.md).  
 
-- Když nasadíte roli systému lokality, která používá službu Internet Information Services (IIS) a podporuje komunikaci od klientů, je třeba zadat, jestli se klienti připojují k systému lokality pomocí protokolu HTTP nebo HTTPS. Jestliže používáte protokol HTTP, musíte taky zvážit možnosti podepisování a šifrování. Další informace najdete v tématu [Plánování podepisování a šifrování](../../../core/plan-design/security/plan-for-security.md#BKMK_PlanningForSigningEncryption) v [plánu pro zabezpečení](../../../core/plan-design/security/plan-for-security.md).  
+- Když nasadíte roli systému lokality, která používá službu Internet Information Services (IIS) a podporuje komunikaci od klientů, je třeba zadat, jestli se klienti připojují k systému lokality pomocí protokolu HTTP nebo HTTPS. Jestliže používáte protokol HTTP, musíte taky zvážit možnosti podepisování a šifrování. Další informace najdete v tématu  [Plánování podepisování a šifrování](../../../core/plan-design/security/plan-for-security.md#BKMK_PlanningForSigningEncryption) v [plánu pro zabezpečení](../../../core/plan-design/security/plan-for-security.md).  
 
-##  <a name="service-location-and-how-clients-determine-their-assigned-management-point"></a><a name="BKMK_Plan_Service_Location"></a>Umístění služby a jak klienti zjišťují přiřazený bod správy  
+##  <a name="service-location-and-how-clients-determine-their-assigned-management-point"></a><a name="BKMK_Plan_Service_Location"></a> Umístění služby a jak klienti zjišťují přiřazený bod správy  
 Když se klient poprvé přiřadí k primární lokalitě, vybere výchozí bod správy pro tuto lokalitu. Primární lokality podporují více bodů správy a každý klient nezávisle identifikuje bod správy jako výchozí bod správy. Tento výchozí bod správy pak bude použit jako bod správy přiřazený klientovi. (Můžete také použít příkazy instalace klienta pro nastavení přiřazeného bodu správy pro klienta při jeho instalaci.)  
 
 Klient vybere bod správy, se kterým bude komunikovat, a to na základě aktuálního umístění v síti a konfigurací skupiny hranic. I když má přiřazený bod správy, nemusí to být bod správy, který klient používá.  
@@ -62,7 +62,7 @@ Klient vybere bod správy, se kterým bude komunikovat, a to na základě aktuá
 
 Můžete použít upřednostňované body správy. Preferované body správy jsou body správy z lokality přiřazené klientovi, které jsou přidruženy ke skupině hranic, kterou klient používá při hledání serverů systému lokality. Upřednostňovanou asociací bodu správy se skupinou hranic jako serverem systému lokality je podobný způsob, jakým jsou distribuční body nebo body migrace stavu přidruženy ke skupině hranic. Pokud povolíte upřednostňované body správy pro hierarchii, když klient používá bod správy z jeho přiřazené lokality, pokusí se použít upřednostňovaný bod správy před použitím jiného bodu správy z jeho přiřazené lokality.  
 
-Můžete také použít informace na blogu [spřažení bodu správy](https://docs.microsoft.com/archive/blogs/jchalfant/management-point-affinity-added-in-configmgr-2012-r2-cu3) ke konfiguraci spřažení bodů správy. Spřažení bodů správy přepisuje výchozí chování pro přiřazené body správy a umožňuje klientovi používat jeden nebo více konkrétních bodů správy.  
+Můžete také použít informace na blogu [spřažení bodu správy](/archive/blogs/jchalfant/management-point-affinity-added-in-configmgr-2012-r2-cu3) ke konfiguraci spřažení bodů správy. Spřažení bodů správy přepisuje výchozí chování pro přiřazené body správy a umožňuje klientovi používat jeden nebo více konkrétních bodů správy.  
 
 Pokaždé, když klient potřebuje kontaktovat bod správy, zkontroluje seznam MP, který je uložený místně v rozhraní WMI (Windows Management Instrumentation) (WMI). Klient vytvoří počáteční seznam MP při jeho instalaci. Klient pak pravidelně aktualizuje seznam o podrobnosti o jednotlivých bodech správy v hierarchii.  
 
@@ -79,7 +79,7 @@ Například pokud se klient Configuration Manager, který je na internetu, přip
 
 Klient, který není nakonfigurovaný pro Internet, není určený jenom pro internetové body správy. Klienti pracovní skupiny nakonfigurované pro Internet komunikují jenom s internetovými body správy.  
 
-##  <a name="the-mp-list"></a><a name="BKMK_MPList"></a>Seznam MP  
+##  <a name="the-mp-list"></a><a name="BKMK_MPList"></a> Seznam MP  
 Seznam MP je upřednostňovaným zdrojem umístění služby pro klienta, protože se jedná o prioritní seznam bodů správy, které klient předtím identifikoval. Tento seznam je seřazený podle jednotlivých klientů na základě jejich umístění v síti v době, kdy klient seznam aktualizoval a pak je uložil místně na klientovi v rozhraní WMI.  
 
 ### <a name="building-the-initial-mp-list"></a>Sestavování počátečního seznamu MP  
@@ -107,8 +107,8 @@ Můžete použít upřednostňované body správy. Body správy v lokalitě, kte
 Pro typickou komunikaci se klient pokusí použít bod správy z klasifikací v uvedeném pořadí podle umístění v síti klienta:  
 
 1.  Proxy server  
-2.  Local  
-3.  Přiřazeno  
+2.  Místní  
+3.  Přiřazené  
 
 Klient ale vždycky používá přiřazený bod správy pro registrační zprávy a některé zprávy zásad, i když jsou ostatní komunikace odeslané na server proxy nebo místní bod správy.  
 
@@ -130,7 +130,7 @@ Poté, co klient naváže komunikaci s bodem správy, pokračuje v používání
 
 Klient pak náhodně vybere nový bod správy, který se má použít.  
 
-##  <a name="active-directory"></a><a name="bkmk_ad"></a>Služba Active Directory  
+##  <a name="active-directory"></a><a name="bkmk_ad"></a> Služba Active Directory  
 Klienti přidaní do domény můžou pro umístění služby použít AD DS. To vyžaduje, aby lokality [publikovaly data do Active Directory](../../servers/deploy/configure/publish-site-data.md).  
 
 Klient nástroje může použít služba AD DS pro umístění služby, když jsou splněné všechny následující podmínky:  
@@ -141,7 +141,7 @@ Klient nástroje může použít služba AD DS pro umístění služby, když js
 
 Pokud klient nemůže najít bod správy, který se má použít pro umístění služby z služba AD DS, pokusí se použít DNS.  
 
-##  <a name="dns"></a><a name="bkmk_dns"></a>NÁZV  
+##  <a name="dns"></a><a name="bkmk_dns"></a> NÁZV  
 Klienti v intranetu můžou pro umístění služby použít DNS. Aby bylo možné publikovat informace o bodech správy do DNS, musí být v hierarchii aspoň jedna lokalita.  
 
 Zvažte pro umístění služby použití DNS, pokud je splněná některá z následujících podmínek:
@@ -170,7 +170,7 @@ Pokud chcete publikovat body správy ve službě DNS, musí být splněné tyto 
 > [!IMPORTANT]  
 > Configuration Manager publikování DNS nepodporuje oddělený obor názvů. Pokud máte oddělený obor názvů, můžete publikovat body správy do služby DNS ručně nebo použít některou z dalších metod umístění služby, které jsou popsány v této části.  
 
-**Pokud vaše servery DNS podporují automatické aktualizace**, můžete nakonfigurovat Configuration Manager pro automatické publikování bodů správy na intranetu ve službě DNS, nebo můžete tyto záznamy publikovat ručně na DNS. Pokud jsou body správy publikované ve DNS, budou jejich intranetový plně kvalifikovaný název domény a číslo portu publikované v záznamu o umístění služby (SRV). Publikování DNS se konfiguruje v lokalitě ve vlastnostech komponenty bodu správy lokality. Další informace najdete v tématu [součásti lokality pro Configuration Manager](../../../core/servers/deploy/configure/site-components.md).  
+**Pokud vaše servery DNS podporují automatické aktualizace**, můžete nakonfigurovat Configuration Manager pro automatické publikování bodů správy na intranetu ve službě DNS, nebo můžete tyto záznamy publikovat ručně na DNS. Pokud jsou body správy publikované ve DNS, budou jejich intranetový plně kvalifikovaný název domény a číslo portu publikované v záznamu o umístění služby (SRV). Publikování DNS se konfiguruje v lokalitě ve vlastnostech komponenty bodu správy lokality. Další informace najdete v tématu  [součásti lokality pro Configuration Manager](../../../core/servers/deploy/configure/site-components.md).  
 
 **Pokud je vaše zóna DNS nastavená na hodnotu pouze zabezpečení pro dynamické aktualizace**, může to provést jenom první bod správy, který se má publikovat do DNS, a to úspěšně s výchozími oprávněními.
 
@@ -179,7 +179,7 @@ Pokud pouze jeden bod správy může úspěšně publikovat a změnit svůj záz
 
 **Pokud vaše servery DNS nepodporují automatické aktualizace, ale podporují záznamy o umístění služby**, můžete body správy publikovat v DNS ručně. V takovém případě je třeba v DNS ručně zadat zdrojový záznam o umístění služby (SRV RR).  
 
-Configuration Manager podporuje specifikaci RFC 2782 pro záznamy umístění služby. Tyto záznamy mají následující formát: *_Service. _Proto. Name TTL Class SRV Priorita váha port cíl*  
+Configuration Manager podporuje specifikaci RFC 2782 pro záznamy umístění služby. Tyto záznamy mají následující formát:   *_Service. _Proto. Name TTL Class SRV Priorita váha port cíl*  
 
 Pokud chcete publikovat bod správy pro Configuration Manager, zadejte následující hodnoty:  
 
@@ -239,9 +239,9 @@ Pokud používáte službu DNS Windows Serveru, můžete k zadání tohoto zázn
 
 Tento postup opakujte pro všechny body správy na intranetu, které chcete publikovat ve službě DNS.  
 
-##  <a name="wins"></a><a name="bkmk_wins"></a>UDÁVANÁ  
+##  <a name="wins"></a><a name="bkmk_wins"></a> UDÁVANÁ  
 Pokud ostatní mechanismy umístění služby selžou, klienti mohou najít prvotní bod správy ve službě WINS.  
 
 Ve výchozím nastavení primární lokalita publikuje do služby WINS první bod správy v lokalitě, který je konfigurován pro protokol HTTP a první bod správy, který je nakonfigurován pro protokol HTTPS.  
 
-Pokud nechcete, aby klienti ve službě WINS vyhledávali body správy s protokolem HTTP, nastavte klienty pomocí vlastnosti CCMSetup.exe Client.msi **SMSDIRECTORYLOOKUP=NOWINS**.  
+Pokud nechcete, aby klienti ve službě WINS vyhledávali body správy s protokolem HTTP, nastavte klienty pomocí vlastnosti CCMSetup.exe Client.msi **SMSDIRECTORYLOOKUP=NOWINS**.

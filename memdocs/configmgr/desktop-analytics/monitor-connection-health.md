@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: db70eab54f319197f267173fe857d0fb147a7eba
-ms.sourcegitcommit: 7a099ff53668f50b37adab97ecd7ba98c5324676
+ms.openlocfilehash: ecd8b83224cbcbfe367a3b1db160d680952a4407
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84746557"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700833"
 ---
 # <a name="monitor-connection-health"></a>Monitorování stavu připojení
 
@@ -154,7 +154,7 @@ Tyto sloupce odpovídají klíčovým [předpokladům](overview.md#prerequisites
 
 Výběrem zařízení zobrazíte úplný seznam dostupných vlastností v podokně podrobností. Některé z těchto vlastností můžete přidat také jako sloupce do seznamu zařízení.
 
-## <a name="device-properties"></a><a name="bkmk_config-issues"></a>Vlastnosti zařízení
+## <a name="device-properties"></a><a name="bkmk_config-issues"></a> Vlastnosti zařízení
 
 Jako sloupce v seznamu Configuration Manager zařízení jsou k dispozici následující vlastnosti zařízení Analytics Desktop:
 
@@ -334,7 +334,7 @@ Další informace najdete v části M365AHandler. log v klientovi.
 <!--1004-->
 Pokud tato kontrolu neproběhne úspěšně, uživatel na zařízení vybral nižší diagnostická data Windows. Může to být také způsobeno konfliktním objektem zásad skupiny. Další informace najdete v tématu [nastavení systému Windows](enroll-devices.md#windows-settings).
 
-V závislosti na vašich obchodních požadavcích můžete zakázat volbu uživatele prostřednictvím zásad skupiny. Použijte nastavení pro **konfiguraci nastavení výslovných přihlášení k telemetrie v uživatelském rozhraní**. Další informace najdete v tématu [Konfigurace diagnostických dat Windows ve vaší organizaci](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization#enterprise-management).
+V závislosti na vašich obchodních požadavcích můžete zakázat volbu uživatele prostřednictvím zásad skupiny. Použijte nastavení pro **konfiguraci nastavení výslovných přihlášení k telemetrie v uživatelském rozhraní**. Další informace najdete v tématu [Konfigurace diagnostických dat Windows ve vaší organizaci](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#enterprise-management).
 
 ### <a name="check-user-proxy"></a>Ověřit proxy uživatele
 
@@ -343,7 +343,7 @@ Nastavení DisableEnterpriseAuthProxy je ve výchozím nastavení povoleno pro s
 
 Tato vlastnost může zobrazit následující chyby:
 
-- Je povolený proxy server pro ověřování. Nastavit DisableEnterpriseAuthProxy na 0 v`HKLM:\Software\Policies\Microsoft\Windows\DataCollection`
+- Je povolený proxy server pro ověřování. Nastavit DisableEnterpriseAuthProxy na 0 v `HKLM:\Software\Policies\Microsoft\Windows\DataCollection`
 
 - Nejde zjistit stav proxy serveru pro ověřování. Podrobnosti o výjimce najdete v protokolech.
 
@@ -364,7 +364,7 @@ V opačném případě se může zobrazit jedna z následujících chyb:
 
 - Nelze aktualizovat CommercialId v klíči registru `HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection` . Podrobnosti o výjimce najdete v protokolech.  
 
-- Zadejte správnou hodnotu CommercialId na`HKLM:\SOFTWARE\Policies\Microsoft\Windows\DataCollection`  
+- Zadejte správnou hodnotu CommercialId na `HKLM:\SOFTWARE\Policies\Microsoft\Windows\DataCollection`  
 
 Další informace najdete v části M365AHandler. log v klientovi.  
 
@@ -372,7 +372,7 @@ Ověřte oprávnění pro tento klíč registru. Ujistěte se, že účet Local 
 
 Pro zařízení existuje jiné ID. Tento klíč registru se používá v zásadách skupiny. Má přednost před ID poskytnutým Configuration Manager.  
 
-<a name="bkmk_ViewCommercialID"></a>Pokud si chcete zobrazit komerční ID na portálu Desktop Analytics, použijte následující postup:
+<a name="bkmk_ViewCommercialID"></a> Pokud si chcete zobrazit komerční ID na portálu Desktop Analytics, použijte následující postup:
 
 1. Přejít na portál Desktop Analytics a vyberte **připojené služby** ve skupině globální nastavení.  
 
@@ -455,7 +455,7 @@ Desktop Analytics používá službu účtu Microsoft pro spolehlivější ident
 
 Ujistěte se, že služba **Pomocník pro přihlášení k účtu Microsoft** není zakázaná. Typ spuštění by měl být **Ruční (aktivační událost spustit)**.
 
-Pokud chcete zakázat přístup účet Microsoft koncovým uživatelům, místo blokování tohoto koncového bodu použijte nastavení zásad. Další informace najdete v tématu [účet Microsoft v podniku](https://docs.microsoft.com/windows/security/identity-protection/access-control/microsoft-accounts#block-all-consumer-microsoft-account-user-authentication).
+Pokud chcete zakázat přístup účet Microsoft koncovým uživatelům, místo blokování tohoto koncového bodu použijte nastavení zásad. Další informace najdete v tématu [účet Microsoft v podniku](/windows/security/identity-protection/access-control/microsoft-accounts#block-all-consumer-microsoft-account-user-authentication).
 
 ### <a name="windows-diagnostic-data-opt-in"></a>Výslovný souhlas s diagnostickými daty Windows
 
@@ -469,6 +469,6 @@ Ověřte oprávnění u těchto klíčů registru. Ujistěte se, že účet Loca
 
 Další informace najdete v části M365AHandler. log v klientovi.  
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Řešení potíží s Desktop Analytics](troubleshooting.md)

@@ -10,12 +10,12 @@ ms.assetid: 3417ff88-7177-4a0d-8967-ab21fe7eba17
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 45ef103645630b8e203710ec0ff36a71b3cef4cf
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 7781c20ca542d19c562574c554a08c38493911f6
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82904251"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700074"
 ---
 # <a name="step-by-step-example-deployment-of-the-pki-certificates-for-configuration-manager-windows-server-2008-certification-authority"></a>Podrobný ukázkový postup nasazení certifikátů PKI pro Configuration Manager: certifikační autorita systému Windows Server 2008
 
@@ -31,7 +31,7 @@ Vzhledem k tomu, že pro požadované certifikáty není k dispozici žádná je
 > - **Certifikační autorita**: **Windows Server 2003**  
 >   - **Příjemce certifikátu**: **Windows XP / Server 2003**  
 
-## <a name="test-network-requirements"></a><a name="BKMK_testnetworkenvironment"></a>Požadavky na testovací síť
+## <a name="test-network-requirements"></a><a name="BKMK_testnetworkenvironment"></a> Požadavky na testovací síť
 
 Z podrobných pokynů vyplývají následující požadavky:  
 
@@ -45,20 +45,20 @@ Z podrobných pokynů vyplývají následující požadavky:
 
 - Můžete se přihlásit pomocí účtu správce kořenové domény nebo účtu správce podnikové domény a používat tento účet pro všechny postupy v tomto ukázkovém nasazení.  
 
-## <a name="overview-of-the-certificates"></a><a name="BKMK_overview2008"></a>Přehled certifikátů
+## <a name="overview-of-the-certificates"></a><a name="BKMK_overview2008"></a> Přehled certifikátů
 
 V následující tabulce jsou uvedeny typy certifikátů PKI, které mohou být požadovány pro Configuration Manager a popisuje, jak se používají.  
 
 |Požadavek na certifikát|Popis certifikátu|  
 |-----------------------------|-----------------------------|  
 |Certifikát webového serveru pro systémy lokality, které spouštějí IIS|Tento certifikát se používá pro šifrování dat a pro ověření serveru vůči klientům. Musí být nainstalovaná externě z Configuration Manager na serverech systémů lokality, na kterých běží Internetová informační služba (IIS) a které jsou nastavené v Configuration Manager na používání protokolu HTTPS.<br /><br /> Postup nastavení a instalace tohoto certifikátu najdete v části [Nasazení certifikátu webového serveru pro systémy lokality, které spouští službu IIS](#BKMK_webserver2008_cm2012) v tomto tématu.|  
-|Certifikát služby pro klienty pro připojení ke cloudovým distribučním bodům|Postup pro konfiguraci a instalaci tohoto certifikátu naleznete v části [Nasazení certifikátu služby pro cloudové distribuční body](#BKMK_clouddp2008_cm2012) v tomto tématu.<br /><br /> **Důležité:** Tento certifikát se používá současně s certifikátem správy služby Windows Azure. Další informace o certifikátu správy najdete v tématu [Postup vytvoření certifikátu správy](https://docs.microsoft.com/azure/cloud-services/cloud-services-certs-create#create-a-new-self-signed-certificate) a [Přidání certifikátu pro správu do předplatného služby Windows Azure](https://docs.microsoft.com/azure/cloud-services/cloud-services-configure-ssl-certificate-portal#step-3-upload-a-certificate).|  
+|Certifikát služby pro klienty pro připojení ke cloudovým distribučním bodům|Postup pro konfiguraci a instalaci tohoto certifikátu naleznete v části [Nasazení certifikátu služby pro cloudové distribuční body](#BKMK_clouddp2008_cm2012) v tomto tématu.<br /><br /> **Důležité:** Tento certifikát se používá současně s certifikátem správy služby Windows Azure. Další informace o certifikátu správy najdete v tématu [Postup vytvoření certifikátu správy](/azure/cloud-services/cloud-services-certs-create#create-a-new-self-signed-certificate) a [Přidání certifikátu pro správu do předplatného služby Windows Azure](/azure/cloud-services/cloud-services-configure-ssl-certificate-portal#step-3-upload-a-certificate).|  
 |Certifikát klienta pro počítače se systémem Windows|Tento certifikát se používá k ověření Configuration Manager klientských počítačů na systémy lokality, které jsou nastavené na používání protokolu HTTPS. Dá se taky použít pro body správy a body migrace stavu, abyste mohli monitorovat provozní stav, když jsou nastavené na používání protokolu HTTPS. Musí být nainstalováno externě z Configuration Manager na počítačích.<br /><br /> Postup nastavení a instalace tohoto certifikátu najdete v části [Nasazení certifikátu klienta pro počítače se systémem Windows](#BKMK_client2008_cm2012) v tomto tématu.|  
 |Certifikát klienta pro distribuční body|Tento certifikát má dva účely:<br /><br /> Tento certifikát se používá k ověření distribučního bodu vůči bodu správy s povoleným protokolem HTTPS předtím, než distribuční bod odešle stavové zprávy.<br /><br /> Jestliže se pro distribuční bod vybere možnost **Povolení podpory PXE pro klienty** , certifikát se odešle do počítačů, které se spouštějí pomocí technologie PXE, tak aby se v průběhu nasazování operačního systému mohly připojit k bodu správy s povoleným protokolem HTTPS.<br /><br /> Postup nastavení a instalace tohoto certifikátu najdete v části [Nasazení certifikátu klienta pro distribuční body](#BKMK_clientdistributionpoint2008_cm2012) v tomto tématu.|  
 |Certifikát zápisu pro mobilní zařízení|Tento certifikát se používá k ověření Configuration Manager klientů mobilních zařízení na systémy lokality, které jsou nastavené na používání protokolu HTTPS. Musí být nainstalovaný jako součást registrace mobilního zařízení v Configuration Manager a jako nastavení klienta mobilního zařízení zvolíte konfigurovanou šablonu certifikátu.<br /><br /> Postup nastavení tohoto certifikátu najdete v části [Nasazení certifikátu zápisu pro mobilní zařízení](#BKMK_mobiledevices2008_cm2012) v tomto tématu.|  
 |Certifikát klienta pro počítače Mac|Tento certifikát si můžete vyžádat a nainstalovat z počítače Mac, když použijete Configuration Manager registrace a zvolíte nakonfigurovanou šablonu certifikátu jako nastavení klienta mobilního zařízení.<br /><br /> Postup nastavení tohoto certifikátu najdete v části [Nasazení certifikátu klienta pro počítače Mac](#BKMK_MacClient_SP1) v tomto tématu.|  
 
-## <a name="deploy-the-web-server-certificate-for-site-systems-that-run-iis"></a><a name="BKMK_webserver2008_cm2012"></a>Nasazení certifikátu webového serveru pro systémy lokality, na nichž je spuštěna služba IIS
+## <a name="deploy-the-web-server-certificate-for-site-systems-that-run-iis"></a><a name="BKMK_webserver2008_cm2012"></a> Nasazení certifikátu webového serveru pro systémy lokality, na nichž je spuštěna služba IIS
 
 Nasazení tohoto certifikátu zahrnuje následující postupy:  
 
@@ -68,7 +68,7 @@ Nasazení tohoto certifikátu zahrnuje následující postupy:
 
 - Konfigurace služby IIS pro používání certifikátu webového serveru  
 
-### <a name="create-and-issue-the-web-server-certificate-template-on-the-certification-authority"></a><a name="BKMK_webserver22008"></a>Vytvoření a vydání šablony certifikátu webového serveru v certifikační autoritě
+### <a name="create-and-issue-the-web-server-certificate-template-on-the-certification-authority"></a><a name="BKMK_webserver22008"></a> Vytvoření a vydání šablony certifikátu webového serveru v certifikační autoritě
 
 Tento postup vytvoří šablonu certifikátu pro Configuration Manager systémy lokality a přidá je do certifikační autority.  
 
@@ -103,14 +103,14 @@ Tento postup vytvoří šablonu certifikátu pro Configuration Manager systémy 
 
 13. Pokud nepotřebujete vytvářet a vydávat další certifikáty, zavřete **certifikační autoritu**.  
 
-###  <a name="request-the-web-server-certificate"></a><a name="BKMK_webserver32008"></a>Vyžádání certifikátu webového serveru  
+###  <a name="request-the-web-server-certificate"></a><a name="BKMK_webserver32008"></a> Vyžádání certifikátu webového serveru  
  Tento postup umožňuje zadat intranetové a internetové plně kvalifikované názvy domén, které budou nastaveny ve vlastnostech serveru systému lokality, a poté nainstaluje certifikát webového serveru na členský server, na kterém je spuštěna služba IIS.  
 
 ##### <a name="to-request-the-web-server-certificate"></a>Pro vyžádání certifikátu webového serveru  
 
 1.  Restartujte členský server, který spouští službu IIS, aby se zajistilo, že počítač bude mít přístup k šabloně certifikátu, kterou jste vytvořili pomocí oprávnění **číst** a **zapsat** , která jste nakonfigurovali.  
 
-2.  Zvolte **Start**, zvolte **Spustit**a pak zadejte **MMC. exe.** V prázdné konzole klikněte na položku **soubor**a vyberte možnost **Přidat nebo odebrat modul snap-in**.  
+2.  Klikněte na tlačítko **Start**, zvolte příkaz **Spustit**a zadejte příkaz **mmc.exe.** V prázdné konzole klikněte na položku **soubor**a vyberte možnost **Přidat nebo odebrat modul snap-in**.  
 
 3.  V dialogovém okně **Přidat nebo odebrat moduly snap-in** vyberte ze seznamu moduly **snap-in k dispozici**položku **certifikáty** a pak zvolte možnost **Přidat**.  
 
@@ -153,7 +153,7 @@ Tento postup vytvoří šablonu certifikátu pro Configuration Manager systémy 
 
 16. Zavřete stránku **Certifikáty (místní)**.  
 
-###  <a name="configure-iis-to-use-the-web-server-certificate"></a><a name="BKMK_webserver42008"></a>Konfigurace služby IIS pro používání certifikátu webového serveru  
+###  <a name="configure-iis-to-use-the-web-server-certificate"></a><a name="BKMK_webserver42008"></a> Konfigurace služby IIS pro používání certifikátu webového serveru  
  Tato procedura váže instalovaný certifikát na IIS **Výchozí web**.  
 
 ##### <a name="to-set-up-iis-to-use-the-web-server-certificate"></a>Nastavení služby IIS pro používání certifikátu webového serveru  
@@ -178,7 +178,7 @@ Tento postup vytvoří šablonu certifikátu pro Configuration Manager systémy 
 > [!IMPORTANT]  
 >  Když na tento počítač nainstalujete Configuration Manager systémový server lokality, ujistěte se, že jste zadali stejné plně kvalifikované názvy domény ve vlastnostech systému lokality, jak jste určili, když jste si vyžádali certifikát.  
 
-##  <a name="deploy-the-service-certificate-for-cloud-based-distribution-points"></a><a name="BKMK_clouddp2008_cm2012"></a>Nasazení certifikátu služby pro cloudové distribuční body  
+##  <a name="deploy-the-service-certificate-for-cloud-based-distribution-points"></a><a name="BKMK_clouddp2008_cm2012"></a> Nasazení certifikátu služby pro cloudové distribuční body  
 
 Nasazení tohoto certifikátu zahrnuje následující postupy:  
 
@@ -188,7 +188,7 @@ Nasazení tohoto certifikátu zahrnuje následující postupy:
 
 - [Export vlastního certifikátu webového serveru pro cloudové distribuční body](#BKMK_clouddpexporting2008)  
 
-###  <a name="create-and-issue-a-custom-web-server-certificate-template-on-the-certification-authority"></a><a name="BKMK_clouddpcreating2008"></a>Vytvoření a vydání vlastní šablony certifikátu webového serveru v certifikační autoritě  
+###  <a name="create-and-issue-a-custom-web-server-certificate-template-on-the-certification-authority"></a><a name="BKMK_clouddpcreating2008"></a> Vytvoření a vydání vlastní šablony certifikátu webového serveru v certifikační autoritě  
  Tento postup vytvoří vlastní šablonu certifikátu založenou na šabloně certifikátu webového serveru. Certifikát je pro Configuration Manager cloudových distribučních bodů a je nutné exportovat privátní klíč. Po vytvoření je šablona certifikátu přidána do konzoly Certifikační úřad.  
 
 > [!NOTE]
@@ -233,14 +233,14 @@ Nasazení tohoto certifikátu zahrnuje následující postupy:
 
 14. Pokud nepotřebujete vytvářet a vydávat další certifikáty, zavřete **certifikační autoritu**.  
 
-###  <a name="request-the-custom-web-server-certificate"></a><a name="BKMK_clouddprequesting2008"></a>Vyžádání vlastního certifikátu webového serveru  
+###  <a name="request-the-custom-web-server-certificate"></a><a name="BKMK_clouddprequesting2008"></a> Vyžádání vlastního certifikátu webového serveru  
  Tato procedura vyžádá a pak nainstaluje vlastní certifikát webového serveru na členský server, na kterém bude server lokality běžet.  
 
 ##### <a name="to-request-the-custom-web-server-certificate"></a>Vyžádání vlastního certifikátu webového serveru  
 
 1.  Restartujte členský server, když vytvoříte a nakonfigurujete skupinu zabezpečení **webové servery nástroje ConfigMgr** , abyste zajistili, že počítač bude mít přístup k šabloně certifikátu, kterou jste vytvořili pomocí oprávnění **číst** a **zapsat** , která jste nakonfigurovali.  
 
-2.  Zvolte **Start**, zvolte **Spustit**a pak zadejte **MMC. exe.** V prázdné konzole klikněte na položku **soubor**a vyberte možnost **Přidat nebo odebrat modul snap-in**.  
+2.  Zvolte **Start**, zvolte **Spustit**a pak zadejte **mmc.exe.** V prázdné konzole klikněte na položku **soubor**a vyberte možnost **Přidat nebo odebrat modul snap-in**.  
 
 3.  V dialogovém okně **Přidat nebo odebrat moduly snap-in** vyberte ze seznamu moduly **snap-in k dispozici**položku **certifikáty** a pak zvolte možnost **Přidat**.  
 
@@ -275,7 +275,7 @@ Nasazení tohoto certifikátu zahrnuje následující postupy:
 
 17. Zavřete stránku **Certifikáty (místní)**.  
 
-###  <a name="export-the-custom-web-server-certificate-for-cloud-based-distribution-points"></a><a name="BKMK_clouddpexporting2008"></a>Export vlastního certifikátu webového serveru pro cloudové distribuční body  
+###  <a name="export-the-custom-web-server-certificate-for-cloud-based-distribution-points"></a><a name="BKMK_clouddpexporting2008"></a> Export vlastního certifikátu webového serveru pro cloudové distribuční body  
  Tento postup exportuje vlastní certifikát webového serveru do souboru, takže může být importován, když vytvoříte cloudový distribuční bod.  
 
 ##### <a name="to-export-the-custom-web-server-certificate-for-cloud-based-distribution-points"></a>Export vlastního certifikátu webového serveru pro cloudové distribuční body  
@@ -289,7 +289,7 @@ Nasazení tohoto certifikátu zahrnuje následující postupy:
    > [!NOTE]  
    >  Pokud tato možnost není k dispozici, certifikát byl vytvořen bez možnosti exportu soukromého klíče. V tomto případě nemůžete exportovat certifikát v požadovaném formátu. Je nutné nastavit šablonu certifikátu tak, aby bylo možné exportovat soukromý klíč, a pak znovu požádat o certifikát.  
 
-4. Na stránce **Formát souboru pro export** zajistěte, aby soubor **Personal Information Exchange-PKCS #12 (. **Je vybraná možnost PFX.  
+4. Na stránce **Formát souboru pro export** zajistěte, aby soubor **Personal Information Exchange-PKCS #12 (. ** Je vybraná možnost PFX.  
 
 5. Na stránce **heslo** zadejte silné heslo pro ochranu exportovaného certifikátu s jeho privátním klíčem a pak zvolte **Další**.  
 
@@ -303,7 +303,7 @@ Nasazení tohoto certifikátu zahrnuje následující postupy:
 
    Certifikát je nyní připraven k importu, když vytvoříte cloudový distribuční bod.  
 
-##  <a name="deploy-the-client-certificate-for-windows-computers"></a><a name="BKMK_client2008_cm2012"></a>Nasazení certifikátu klienta pro počítače se systémem Windows  
+##  <a name="deploy-the-client-certificate-for-windows-computers"></a><a name="BKMK_client2008_cm2012"></a> Nasazení certifikátu klienta pro počítače se systémem Windows  
  Nasazení tohoto certifikátu zahrnuje následující postupy:  
 
 - Vytvoření a vystavení šablony ověřovacího certifikátu pracovní stanice v certifikační autoritě  
@@ -312,7 +312,7 @@ Nasazení tohoto certifikátu zahrnuje následující postupy:
 
 - Automatický zápis ověřovacího certifikátu pracovní stanice a ověření jeho instalace na počítačích  
 
-###  <a name="create-and-issue-the-workstation-authentication-certificate-template-on-the-certification-authority"></a><a name="BKMK_client02008"></a>Vytvoření a vystavení šablony ověřovacího certifikátu pracovní stanice v certifikační autoritě  
+###  <a name="create-and-issue-the-workstation-authentication-certificate-template-on-the-certification-authority"></a><a name="BKMK_client02008"></a> Vytvoření a vystavení šablony ověřovacího certifikátu pracovní stanice v certifikační autoritě  
  Tento postup vytvoří šablonu certifikátu pro Configuration Manager klientských počítačů a přidá ji do certifikační autority.  
 
 ##### <a name="to-create-and-issue-the-workstation-authentication-certificate-template-on-the-certification-authority"></a>Vytvoření a vystavení šablony ověřovacího certifikátu pracovní stanice v konzole Certifikační úřad  
@@ -338,7 +338,7 @@ Nasazení tohoto certifikátu zahrnuje následující postupy:
 
 9. Pokud nepotřebujete vytvářet a vydávat další certifikáty, zavřete **certifikační autoritu**.  
 
-###  <a name="configure-autoenrollment-of-the-workstation-authentication-template-by-using-group-policy"></a><a name="BKMK_client12008"></a>Konfigurace automatického zápisu šablony ověření pracovní stanice pomocí Zásady skupiny  
+###  <a name="configure-autoenrollment-of-the-workstation-authentication-template-by-using-group-policy"></a><a name="BKMK_client12008"></a> Konfigurace automatického zápisu šablony ověření pracovní stanice pomocí Zásady skupiny  
  Tento postup nastaví Zásady skupiny pro automatický zápis klientského certifikátu na počítače.  
 
 ##### <a name="to-set-up-autoenrollment-of-the-workstation-authentication-template-by-using-group-policy"></a>Nastavení automatického zápisu šablony ověření pracovní stanice pomocí Zásady skupiny  
@@ -362,7 +362,7 @@ Nasazení tohoto certifikátu zahrnuje následující postupy:
 
 8.  Ukončete **správu Zásady skupiny**.  
 
-###  <a name="automatically-enroll-the-workstation-authentication-certificate-and-verify-its-installation-on-computers"></a><a name="BKMK_client22008"></a>Automatický zápis ověřovacího certifikátu pracovní stanice a ověření jeho instalace na počítačích  
+###  <a name="automatically-enroll-the-workstation-authentication-certificate-and-verify-its-installation-on-computers"></a><a name="BKMK_client22008"></a> Automatický zápis ověřovacího certifikátu pracovní stanice a ověření jeho instalace na počítačích  
  Tento postup nainstaluje klientský certifikát na počítače a ověří instalaci  
 
 ##### <a name="to-automatically-enroll-the-workstation-authentication-certificate-and-verify-its-installation-on-the-client-computer"></a>Automatický zápis ověřovacího certifikátu pracovní stanice a ověření jeho instalace na klientském počítači  
@@ -374,7 +374,7 @@ Nasazení tohoto certifikátu zahrnuje následující postupy:
 
 2. Přihlaste se pomocí účtu, který má oprávnění správce.  
 
-3. Do vyhledávacího pole zadejte **MMC. exe.** a pak stiskněte klávesu **ENTER**.  
+3. Do vyhledávacího pole zadejte **mmc.exe.** a pak stiskněte klávesu **ENTER**.  
 
 4. V prázdné konzole pro správu klikněte na položku **soubor**a vyberte možnost **Přidat nebo odebrat modul snap-in**.  
 
@@ -396,7 +396,7 @@ Nasazení tohoto certifikátu zahrnuje následující postupy:
 
     Počítač je nyní nastaven s Configuration Manager klientským certifikátem.  
 
-##  <a name="deploy-the-client-certificate-for-distribution-points"></a><a name="BKMK_clientdistributionpoint2008_cm2012"></a>Nasazení klientského certifikátu pro distribuční body  
+##  <a name="deploy-the-client-certificate-for-distribution-points"></a><a name="BKMK_clientdistributionpoint2008_cm2012"></a> Nasazení klientského certifikátu pro distribuční body  
 
 > [!NOTE]  
 >  Tento certifikát může být použit také pro obrazy médií, které nepoužívají PXE bootování, protože požadavky na certifikát jsou stejné.  
@@ -409,7 +409,7 @@ Nasazení tohoto certifikátu zahrnuje následující postupy:
 
 - Exportovat klientský certifikát pro distribuční body  
 
-###  <a name="create-and-issue-a-custom-workstation-authentication-certificate-template-on-the-certification-authority"></a><a name="BKMK_clientdistributionpoint02008"></a>Vytvoření a vydání vlastní šablony ověřovacího certifikátu pracovní stanice v certifikační autoritě  
+###  <a name="create-and-issue-a-custom-workstation-authentication-certificate-template-on-the-certification-authority"></a><a name="BKMK_clientdistributionpoint02008"></a> Vytvoření a vydání vlastní šablony ověřovacího certifikátu pracovní stanice v certifikační autoritě  
  Tento postup vytvoří vlastní šablonu certifikátu pro Configuration Manager distribuční body, aby bylo možné exportovat soukromý klíč a přidat šablonu certifikátu do certifikační autority.  
 
 > [!NOTE]
@@ -450,12 +450,12 @@ Nasazení tohoto certifikátu zahrnuje následující postupy:
 
 12. Pokud nepotřebujete vytvářet a vydávat další certifikáty, zavřete **certifikační autoritu**.  
 
-###  <a name="request-the-custom-workstation-authentication-certificate"></a><a name="BKMK_clientdistributionpoint12008"></a>Vyžádání vlastního ověřovacího certifikátu pracovní stanice  
+###  <a name="request-the-custom-workstation-authentication-certificate"></a><a name="BKMK_clientdistributionpoint12008"></a> Vyžádání vlastního ověřovacího certifikátu pracovní stanice  
  Tato procedura vyžádá a pak nainstaluje vlastní certifikát klienta na členský server, na kterém je spuštěna služba IIS, a který bude nastaven jako distribuční bod.  
 
 ##### <a name="to-request-the-custom-workstation-authentication-certificate"></a>Pro vyžádání vlastního certifikátu pro ověřování pracovních stanic  
 
-1.  Zvolte **Start**, zvolte **Spustit**a pak zadejte **MMC. exe.** V prázdné konzole klikněte na položku **soubor**a vyberte možnost **Přidat nebo odebrat modul snap-in**.  
+1.  Zvolte **Start**, zvolte **Spustit**a pak zadejte **mmc.exe.** V prázdné konzole klikněte na položku **soubor**a vyberte možnost **Přidat nebo odebrat modul snap-in**.  
 
 2.  V dialogovém okně **Přidat nebo odebrat moduly snap-in** vyberte ze seznamu moduly **snap-in k dispozici**položku **certifikáty** a pak zvolte možnost **Přidat**.  
 
@@ -481,7 +481,7 @@ Nasazení tohoto certifikátu zahrnuje následující postupy:
 
 13. Nezavírejte stránku **Certifikáty (místní)**.  
 
-###  <a name="export-the-client-certificate-for-distribution-points"></a><a name="BKMK_exportclientdistributionpoint22008"></a>Exportovat klientský certifikát pro distribuční body  
+###  <a name="export-the-client-certificate-for-distribution-points"></a><a name="BKMK_exportclientdistributionpoint22008"></a> Exportovat klientský certifikát pro distribuční body  
  Tento postup exportuje vlastní certifikát ověřování pracovní stanice do souboru, aby jej bylo možné importovat do vlastností distribučního bodu.  
 
 ##### <a name="to-export-the-client-certificate-for-distribution-points"></a>Pro exportování certifikátu klienta pro distribuční body  
@@ -495,7 +495,7 @@ Nasazení tohoto certifikátu zahrnuje následující postupy:
    > [!NOTE]  
    >  Pokud tato možnost není k dispozici, certifikát byl vytvořen bez možnosti exportu soukromého klíče. V tomto případě nemůžete exportovat certifikát v požadovaném formátu. Je nutné nastavit šablonu certifikátu tak, aby bylo možné exportovat soukromý klíč, a pak znovu požádat o certifikát.  
 
-4. Na stránce **Formát souboru pro export** zajistěte, aby soubor **Personal Information Exchange-PKCS #12 (. **Je vybraná možnost PFX.  
+4. Na stránce **Formát souboru pro export** zajistěte, aby soubor **Personal Information Exchange-PKCS #12 (. ** Je vybraná možnost PFX.  
 
 5. Na stránce **heslo** zadejte silné heslo pro ochranu exportovaného certifikátu s jeho privátním klíčem a pak zvolte **Další**.  
 
@@ -512,7 +512,7 @@ Nasazení tohoto certifikátu zahrnuje následující postupy:
 > [!TIP]  
 >  Při nastavování imagí médií pro nasazení operačního systému, který nepoužívá spouštění pomocí technologie PXE, můžete použít stejný soubor certifikátu a pořadí úkolů pro instalaci bitové kopie se musí spojit s bodem správy, který vyžaduje připojení klientů pomocí protokolu HTTPS.  
 
-##  <a name="deploy-the-enrollment-certificate-for-mobile-devices"></a><a name="BKMK_mobiledevices2008_cm2012"></a>Nasazení certifikátu zápisu pro mobilní zařízení  
+##  <a name="deploy-the-enrollment-certificate-for-mobile-devices"></a><a name="BKMK_mobiledevices2008_cm2012"></a> Nasazení certifikátu zápisu pro mobilní zařízení  
  Nasazení tohoto certifikátu vyžaduje jedinou proceduru pro vytvoření a vydání šablony certifikátu zápisu pro certifikační autoritu.  
 
 ### <a name="create-and-issue-the-enrollment-certificate-template-on-the-certification-authority"></a>Vytvoření a vydání šablony certifikátu zápisu pro certifikační autoritu  
@@ -547,11 +547,11 @@ Nasazení tohoto certifikátu zahrnuje následující postupy:
 
     Šablona certifikátu zápisu mobilních zařízení je nyní připravena k výběru při nastavení profilu zápisu mobilního zařízení v nastavení klienta.  
 
-##  <a name="deploy-the-client-certificate-for-mac-computers"></a><a name="BKMK_MacClient_SP1"></a>Nasazení certifikátu klienta pro počítače Mac  
+##  <a name="deploy-the-client-certificate-for-mac-computers"></a><a name="BKMK_MacClient_SP1"></a> Nasazení certifikátu klienta pro počítače Mac  
 
 Nasazení tohoto certifikátu vyžaduje jedinou proceduru pro vytvoření a vydání šablony certifikátu zápisu pro certifikační autoritu.  
 
-###  <a name="create-and-issue-a-mac-client-certificate-template-on-the-certification-authority"></a><a name="BKMK_MacClient_CreatingIssuing"></a>Vytvoření a vydání šablony certifikátu klienta pro systém Mac v certifikační autoritě  
+###  <a name="create-and-issue-a-mac-client-certificate-template-on-the-certification-authority"></a><a name="BKMK_MacClient_CreatingIssuing"></a> Vytvoření a vydání šablony certifikátu klienta pro systém Mac v certifikační autoritě  
  Tento postup vytvoří vlastní šablonu certifikátu pro počítače se systémem Configuration Manager Mac a přidá šablonu certifikátu do certifikační autority.  
 
 > [!NOTE]  

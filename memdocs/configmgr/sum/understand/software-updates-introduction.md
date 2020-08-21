@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: e9778b13-c8a3-40eb-8655-34ac8ce9cdaa
-ms.openlocfilehash: bd384edafd6464073b33a593a56bc88ba2fb0b87
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 3cb8d07c9bcc31353e16f01de9e60857d47d49e4
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906768"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700418"
 ---
 # <a name="introduction-to-software-updates-in-configuration-manager"></a>Seznámení s aktualizacemi softwaru v Configuration Manager
 
@@ -25,7 +25,7 @@ Aktualizace softwaru v Configuration Manager poskytují sadu nástrojů a prost�
 
 Ukázkový scénář, který ukazuje, jak můžete nasadit aktualizace softwaru ve vašem prostředí, najdete v tématu [vzorový scénář nasazení aktualizací zabezpečení softwaru](../deploy-use/example-scenario-deploy-monitor-monthly-security-updates.md).  
 
-##  <a name="software-updates-synchronization"></a><a name="BKMK_Synchronization"></a>Synchronizace aktualizací softwaru  
+##  <a name="software-updates-synchronization"></a><a name="BKMK_Synchronization"></a> Synchronizace aktualizací softwaru  
  Synchronizace aktualizací softwaru v nástroji Configuration Manager se připojuje k Microsoft Update a načítá metadata aktualizací softwaru. Lokalita nejvyšší úrovně (lokalita centrální správy nebo samostatná primární lokalita) se synchronizuje s Microsoft Update podle plánu nebo když ručně spustíte synchronizaci z konzoly Configuration Manager. Když Configuration Manager dokončí synchronizaci aktualizací softwaru v lokalitě nejvyšší úrovně, spustí se synchronizace aktualizací softwaru v podřízených lokalitách, pokud existují. Když se synchronizace dokončí ve všech primárních nebo sekundárních lokalitách, vytvoří se zásady v rámci lokalit, které poskytují body aktualizací softwaru pro klientské počítače.  
 
 > [!NOTE]  
@@ -79,7 +79,7 @@ Ukázkový scénář, který ukazuje, jak můžete nasadit aktualizace softwaru 
 
 7.  Správce synchronizace služby WSUS posílá požadavky po jednom do služby WSUS spuštěné v dalších bodech aktualizací softwaru v lokalitě. Servery služby WSUS v ostatních bodech aktualizací softwaru jsou nakonfigurované jako repliky služby WSUS spuštěné ve výchozím bodě aktualizací softwaru v lokalitě.  
 
-##  <a name="software-updates-compliance-assessment"></a><a name="BKMK_SUMCompliance"></a>Vyhodnocení kompatibility aktualizací softwaru  
+##  <a name="software-updates-compliance-assessment"></a><a name="BKMK_SUMCompliance"></a> Vyhodnocení kompatibility aktualizací softwaru  
  Před nasazením aktualizací softwaru do klientských počítačů v nástroji Configuration Manager spusťte hledání shody aktualizací softwaru v klientských počítačích. Pro každou aktualizaci softwaru se vytvoří stavová zpráva, která obsahuje stav kompatibility pro danou aktualizaci. Stavové zprávy se hromadně posílají do bodu správy a pak do serveru lokality, kde se stav kompatibility přidá do databáze lokality. Stav dodržování předpisů pro aktualizace softwaru se zobrazí v konzole Configuration Manager. Aktualizace softwaru můžete nasazovat a instalovat na počítačích, které vyžadují aktualizace. Následující části poskytují informace o stavech kompatibility a popisují proces kontroly kompatibility aktualizací softwaru.  
 
 ### <a name="software-updates-compliance-states"></a>Stavy kompatibility aktualizací softwaru  
@@ -105,7 +105,7 @@ Ukázkový scénář, který ukazuje, jak můžete nasadit aktualizace softwaru 
 
      Určuje, že aktualizace softwaru na klientském počítači je aplikovatelná a že klientský počítač už má aktualizaci softwaru nainstalovanou.  
 
--   **Není známo**  
+-   **Neznámý**  
 
      Určuje, že server lokality neobdržel stavovou zprávu z klientského počítače, obvykle v důsledku následujících situací:  
 
@@ -251,7 +251,7 @@ Ukázkový scénář, který ukazuje, jak můžete nasadit aktualizace softwaru 
 
   -   Samostatné výstrahy pro toto nasazení  
 
-##  <a name="software-update-deployment-process"></a><a name="BKMK_DeploymentProcess"></a>Proces nasazení aktualizace softwaru  
+##  <a name="software-update-deployment-process"></a><a name="BKMK_DeploymentProcess"></a> Proces nasazení aktualizace softwaru  
  Po nasazení aktualizace softwaru nebo po spuštění pravidla automatického nasazení, které nasadí aktualizace softwaru, se do zásady počítače pro lokalitu přidá zásada přiřazení nasazení. Aktualizace softwaru se stáhnou z umístění stahování, z internetu nebo ze sdílené síťové složky do zdroje balíčku. Aktualizace softwaru se zkopírují ze zdroje balíčku do knihovny obsahu na serveru lokality a pak do knihovny obsahu v distribučním bodě.  
 
  Když klientský počítač v cílové kolekci pro nasazení obdrží zásadu počítače, dojde ke spuštění skenování hodnocení agenta klienta aktualizace softwaru. Agent klienta stáhne obsah pro požadované aktualizace softwaru z distribučního bodu do místní mezipaměti klienta v nastavení **Čas dostupnosti softwaru** pro nasazení a potom jsou k dispozici aktualizace softwaru pro instalaci. Softwarové aktualizace ve volitelných nasazeních (nasazení, která neobsahují termín instalace), se nestáhnou, dokud uživatel ručně instalaci nespustí.  
@@ -264,7 +264,7 @@ Ukázkový scénář, který ukazuje, jak můžete nasadit aktualizace softwaru 
 ### <a name="deployment-reevaluation-cycle"></a>Cyklus nového vyhodnocení nasazení  
  Ve výchozím nastavení spustí klientské počítače cyklus opětovného hodnocení nasazení každých 7 dní. Během tohoto cyklu hodnocení klientský počítač hledá softwarové aktualizace, které byly dříve nasazeny a nainstalovány. Pokud jakékoliv softwarové aktualizace chybí, jsou softwarové aktualizace přeinstalovány z místní mezipaměti. Pokud již není softwarová aktualizace dostupná v místní mezipaměti, bude stažena z distribučního bodu a pak nainstalována. Plán opětovného hodnocení můžete konfigurovat na stránce **Softwarové aktualizace** v nastavení klienta lokality.  
 
-##  <a name="support-for-windows-embedded-devices-that-use-write-filters"></a><a name="BKMK_EmbeddedDevices"></a>Podpora zařízení se systémem Windows Embedded, která používají filtry zápisu  
+##  <a name="support-for-windows-embedded-devices-that-use-write-filters"></a><a name="BKMK_EmbeddedDevices"></a> Podpora zařízení se systémem Windows Embedded, která používají filtry zápisu  
  Pokud nasadíte softwarové aktualizace do zařízení se systémem Windows, která mají povolený filtr zápisu, můžete určit, zda chcete v zařízení deaktivovat filtr zápisu během nasazení a po nasazení pak zařízení restartovat. Pokud není filtr zápisu zakázán, bude software nasazen do dočasného překrytí a po restartu zařízení již nebude software nainstalován, pokud další nasazení nevynutí změny natrvalo.  
 
 > [!NOTE]  
@@ -272,10 +272,10 @@ Ukázkový scénář, který ukazuje, jak můžete nasadit aktualizace softwaru 
 
  Nastavení zkušeností uživatele, které ovládá chování filtru zápisu, představuje zaškrtávací políčko s názvem **Použít změny v konečném termínu nebo během okna údržby (vyžaduje restart)**.  
 
- Další informace o tom, jak Configuration Manager spravuje vložená zařízení, která používají filtry zápisu, najdete v tématu [Plánování nasazení klientů na zařízení se systémem Windows Embedded](../../core/clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices.md).  
+ Další informace o tom, jak Configuration Manager spravuje vložená zařízení, která používají filtry zápisu, najdete v tématu  [Plánování nasazení klientů na zařízení se systémem Windows Embedded](../../core/clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices.md).  
 
-##  <a name="extend-software-updates-in-configuration-manager"></a><a name="BKMK_ExtendSoftwareUpdates"></a>Rozšiřování aktualizací softwaru v Configuration Manager  
- Pomocí System Center Updates Publisher můžete spravovat aktualizace softwaru, které nejsou k dispozici Microsoft Update. Po publikování aktualizací softwaru na server aktualizací a synchronizaci aktualizací softwaru v Configuration Manager můžete nasadit aktualizace softwaru pro klienty Configuration Manager. Další informace o nástroji Updates Publisher najdete v tématu [Updates publisher 2011](https://docs.microsoft.com/previous-versions/system-center/updates-publisher-2011/hh134742(v=technet.10)).  
+##  <a name="extend-software-updates-in-configuration-manager"></a><a name="BKMK_ExtendSoftwareUpdates"></a> Rozšiřování aktualizací softwaru v Configuration Manager  
+ Pomocí System Center Updates Publisher můžete spravovat aktualizace softwaru, které nejsou k dispozici Microsoft Update. Po publikování aktualizací softwaru na server aktualizací a synchronizaci aktualizací softwaru v Configuration Manager můžete nasadit aktualizace softwaru pro klienty Configuration Manager. Další informace o nástroji Updates Publisher najdete v tématu [Updates publisher 2011](/previous-versions/system-center/updates-publisher-2011/hh134742(v=technet.10)).  
 
 ## <a name="next-steps"></a>Další kroky
 [Plánování aktualizací softwaru](../plan-design/plan-for-software-updates.md)

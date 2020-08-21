@@ -11,18 +11,18 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: b70a375eb35599a487eeeee95235d638de35e5e1
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: b24369f2c2f21208f188cf5c0c2ef3a28db83c04
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125861"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700816"
 ---
 # <a name="desktop-analytics-faq"></a>Časté otázky k Desktop Analytics
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
-### <a name="can-i-use-cloud-enabled-analytics-with-intune-managed-devices"></a><a name="bkmk_intune"></a>Můžu na zařízeních spravovaných přes Intune použít cloudové analýzy?
+### <a name="can-i-use-cloud-enabled-analytics-with-intune-managed-devices"></a><a name="bkmk_intune"></a> Můžu na zařízeních spravovaných přes Intune použít cloudové analýzy?
 
 Ne dnes, ale podívejte se na oznámení od Microsoft Ignite 2019 na stránce [Správa zařízení řízené přehledy](https://myignite.techcommunity.microsoft.com/sessions/81690?source=sessions). Toto plánované řešení je následníkem Stav zařízení a Upgrade Readiness.
 
@@ -73,7 +73,7 @@ Ano. Další informace najdete v tématu [převedení ze systému BIOS na rozhra
 
 ### <a name="can-i-use-desktop-analytics-with-windows-10-ltsc"></a>Můžu použít desktopovou analýzu s Windows 10 LTSC?
 
-Desktop Analytics nepodporuje zařízení LTSC (Long-Term Servicing Channel) Windows 10. Další informace najdete v tématu [Přehled služby Windows as](https://docs.microsoft.com/windows/deployment/update/waas-overview#long-term-servicing-channel).
+Desktop Analytics nepodporuje zařízení LTSC (Long-Term Servicing Channel) Windows 10. Další informace najdete v tématu [Přehled služby Windows as](/windows/deployment/update/waas-overview#long-term-servicing-channel).
 
 ### <a name="can-i-reduce-the-amount-of-time-it-takes-for-data-to-refresh-in-my-desktop-analytics-portal"></a>Můžu zkrátit dobu potřebnou k aktualizaci dat na portálu Desktop Analytics?
 
@@ -106,7 +106,7 @@ Diagnostická data Windows z vašich počítačů se šifrují, odesílají a zp
 
 ### <a name="can-i-use-update-compliance-together-with-desktop-analytics"></a>Můžu použít Update Compliance společně s desktopovou analýzou?
 
-Ano. Pokud v Azure Portal dnes používáte [Update Compliance](https://docs.microsoft.com/windows/deployment/update/update-compliance-get-started) , můžete to provést i po uplynutí ledna 2020.
+Ano. Pokud v Azure Portal dnes používáte [Update Compliance](/windows/deployment/update/update-compliance-get-started) , můžete to provést i po uplynutí ledna 2020.
 
 Další informace najdete v [článku KB 4521815: vyřazení služby Windows Analytics na 31. ledna 2020](https://support.microsoft.com/help/4521815/windows-analytics-retirement).
 
@@ -149,9 +149,9 @@ Ano, následující funkce Windows Analytics byly buď vyřazené, nebo ještě 
 - Windows Information Protection
 - Podpora pro Windows Server
 
-## <a name="other"></a>Další
+## <a name="other"></a>Ostatní
 
-### <a name="can-i-use-desktop-analytics-for-my-microsoft-365-apps-upgrades"></a><a name="bkmk_office"></a>Můžu pro upgrady Microsoft 365 aplikací použít desktopovou analýzu?
+### <a name="can-i-use-desktop-analytics-for-my-microsoft-365-apps-upgrades"></a><a name="bkmk_office"></a> Můžu pro upgrady Microsoft 365 aplikací použít desktopovou analýzu?
 
 Ne, analýza stolních počítačů se zaměřuje na Windows. Vývoj desktopových analýz od Microsoftu v těsné spolupráci s mnoha zákazníky. Názory na zákazníky jsou informace o tom, jak Analytics Desktop vylepšuje schopnost spolehlivě spravovat nasazení Windows. Také nám sdělí, že chtějí [Microsoft 365 aplikace](../sum/deploy-use/office-365-dashboard.md#bkmk_o365_readiness) lépe integrovat s nástroji pro správu Microsoft 365ch aplikací v Configuration Manager a Intune. Společnost Microsoft bude v těchto oblastech nadále investovat a přitom se zaměřuje na scénáře ve Windows v oblasti Desktop Analytics.
 

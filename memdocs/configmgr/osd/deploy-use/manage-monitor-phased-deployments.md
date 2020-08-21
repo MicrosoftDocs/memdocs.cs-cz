@@ -10,12 +10,12 @@ ms.assetid: dc245916-bc11-4983-9c4d-015f655007c1
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: fe8bbbf311baa335640ca7dea90ccd46da4fa5ea
-ms.sourcegitcommit: 8fc7f2864c5e3f177e6657b684c5f208d6c2a1b4
+ms.openlocfilehash: efc43258e65752e7371c9baadf61598aac820062
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88591706"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697989"
 ---
 # <a name="manage-and-monitor-phased-deployments"></a>Správa a sledování postupných nasazení
 
@@ -79,7 +79,7 @@ Postupné nasazení můžete ručně pozastavit nebo obnovit. Můžete napříkl
 4. Vyberte dvoufázové nasazení a klikněte na tlačítko **pozastavit** nebo **obnovit** na pásu karet. 
 
 > [!NOTE]
-> Od 21. dubna 2020 se sada Office 365 ProPlus přejmenovává na **Microsoft 365 aplikace pro podniky**. Další informace najdete v tématu [Změna názvu pro Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change). I když se konzola aktualizuje, můžete si i nadále zobrazovat starý název v Configuration Manager produktu a dokumentaci. 
+> Od 21. dubna 2020 se sada Office 365 ProPlus přejmenovává na **Microsoft 365 aplikace pro podniky**. Další informace najdete v tématu [Změna názvu pro Office 365 ProPlus](/deployoffice/name-change). I když se konzola aktualizuje, můžete si i nadále zobrazovat starý název v Configuration Manager produktu a dokumentaci. 
 
 <!-- Removed for 1806, need to clarify behavior with engineering
 When you suspend a phased deployment, it sets the available and deadline times on the active deployments to a future time. When you resume, it generates a new schedule based on when you resume the phased deployment. The new schedule helps to avoid problems if you resume after the original deadline. For example, the initial schedule has the required deadline seven days after the deployment is available. You suspend it on the second day. If you aren't ready to resume it until day eight, you don't want the deployment to be immediately past the deadline. So it generates a new deadline starting from when you resume the phased deployment on day eight. 
@@ -128,4 +128,3 @@ Cíl fáze je stejný jako **Procento úspěšnosti nasazení** v nastavení fá
 
 Například následující vlastnosti jsou pro stejnou fázi jako dlaždice kritéria úspěšnosti zobrazené výše, kde kritéria jsou 65%:  
 ![Karta nastavení fáze ve vlastnostech fáze](media/phase-properties-phase-settings.png)
-

@@ -10,12 +10,12 @@ ms.assetid: 41cdebfe-b595-40aa-a385-32e0746255ed
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 43bb35243b4f7e7b1e45b66319efd4ec21e92542
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 79d483f95c12c1da1e34ca556836a1f42bbffbef
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718613"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699445"
 ---
 # <a name="support-center-user-interface-reference"></a>Reference k uživatelskému rozhraní Support Center
 
@@ -41,7 +41,7 @@ Tato část popisuje uživatelské rozhraní nástroje **Support Center** .
 - [Karta protokoly](#bkmk_support-logs)  
 
 
-### <a name="window-menu"></a><a name="bkmk_support-window"></a>Nabídka okno
+### <a name="window-menu"></a><a name="bkmk_support-window"></a> Nabídka okno
 
 V levém horním rohu okna nástroje Support Center otevřete tuto nabídku tak, že vyberete šipku v modrém poli.
 
@@ -60,18 +60,18 @@ V dialogovém okně **Možnosti** můžete:
 - Změna výchozího umístění pro uložení souborů datových sad  
 - Změna umístění dočasných souborů    
 - Resetovat upozornění. Všechny varovné zprávy, které jste předtím potlačili, se po aktivaci zobrazí znovu.  
-- Obnovte dočasnou cestu k souboru na výchozí hodnotu.`%UserProfile%\AppData\Local\Microsoft\ConfigMgrSupportCenter`
+- Obnovte dočasnou cestu k souboru na výchozí hodnotu. `%UserProfile%\AppData\Local\Microsoft\ConfigMgrSupportCenter`
 
 #### <a name="exit"></a>Ukončit
 Zavřete Support Center.
 
 
 
-### <a name="home-tab"></a><a name="bkmk_support-home"></a>Karta Domů
+### <a name="home-tab"></a><a name="bkmk_support-home"></a> Karta Domů
 
 #### <a name="collect-selected-data"></a>Shromáždit vybraná data
 Support Center shromažďuje informace z klienta Configuration Manager. Ve výchozím nastavení shromažďuje následující typy:
-- Soubory protokolů
+- Soubory protokolu
 - Kolektor konfigurace klienta
 - Operační systém
 
@@ -114,7 +114,7 @@ Když zaškrtnete políčko u možnosti, Support Center shromáždí tento typ d
 
 
 
-### <a name="client-tab"></a><a name="bkmk_support-client"></a>Karta klient
+### <a name="client-tab"></a><a name="bkmk_support-client"></a> Karta klient
 
 #### <a name="load-or-refresh"></a>Načíst nebo aktualizovat
 Support Center načte nebo aktualizuje podrobnosti pro klienta Configuration Manager.
@@ -163,7 +163,7 @@ Když načtete podrobnosti o klientovi, Support Center zobrazí následující v
 
 
 
-### <a name="policy-tab"></a><a name="bkmk_support-policy"></a>Karta Zásady
+### <a name="policy-tab"></a><a name="bkmk_support-policy"></a> Karta Zásady
 
 Místo staršího nástroje [PolicySpy](policy-spy.md) použijte akce na této kartě.
 
@@ -208,7 +208,7 @@ Support Center vymaže všechny události zásad.
 
 
 
-### <a name="content-tab"></a><a name="bkmk_support-content"></a>Karta obsah
+### <a name="content-tab"></a><a name="bkmk_support-content"></a> Karta obsah
 
 Zobrazení obsahu v klientovi, včetně obsahu v mezipaměti. Sledujte průběh nasazení aktualizací softwaru a aplikací. 
 
@@ -278,7 +278,7 @@ V případě každé události zobrazuje zobrazení následující vlastnosti:
 
 
 
-### <a name="inventory-tab"></a><a name="bkmk_support-inventory"></a>Karta inventář
+### <a name="inventory-tab"></a><a name="bkmk_support-inventory"></a> Karta inventář
 
 #### <a name="load-or-refresh"></a>Načíst nebo aktualizovat
 Support Center načte nebo aktualizuje seznam inventáře klientů pro aktuálně vybrané zobrazení.
@@ -330,14 +330,14 @@ Pokud funkce není povolená, zobrazení nezobrazí žádná data.
 
 
 
-### <a name="troubleshooting-tab"></a><a name="bkmk_support-troubleshoot"></a>Karta Poradce při potížích
+### <a name="troubleshooting-tab"></a><a name="bkmk_support-troubleshoot"></a> Karta Poradce při potížích
 
 Řešení některých nejběžnějších problémů s klienty Configuration Manager:  
 - Problémy se službou Active Directory  
 - Sítě Windows  
 - Configuration Manager   
     - Body správy  
-    - Přiřazení zásad  
+    - Přiřazení zásady  
     - Registrace  
 
 
@@ -364,7 +364,7 @@ Pokud vyřešíte potíže s klientem a pak chcete zkusit řešení potíží zn
 
 
 
-### <a name="logs-tab"></a><a name="bkmk_support-logs"></a>Karta protokoly
+### <a name="logs-tab"></a><a name="bkmk_support-logs"></a> Karta protokoly
 
 Tato část obsahuje seznam položek na kartě **Logs (protokoly** ) nástroje Support Center. 
 
@@ -384,7 +384,7 @@ Nastavte následující možnosti:
 
 Místo ručního výběru souborů protokolu pomocí tlačítka **otevřít protokoly** použijte tento rozevírací seznam k otevření všech souborů protokolu přidružených k následujícím oblastem funkcí: 
 - **Správa požadované konfigurace**
-- **Inventarizace**
+- **Inventář**
 - **Distribuce softwaru**
 - **Aktualizace softwaru**
 - **Správa aplikací**
@@ -393,7 +393,7 @@ Místo ručního výběru souborů protokolu pomocí tlačítka **otevřít prot
 - **Nasazení operačního systému**
 
 
-## <a name="support-center-log-viewer-reference"></a><a name="bkmk_log-viewer"></a>Odkaz na prohlížeč protokolů Support Center
+## <a name="support-center-log-viewer-reference"></a><a name="bkmk_log-viewer"></a> Odkaz na prohlížeč protokolů Support Center
 
 Tato část popisuje uživatelské rozhraní nástroje **Support Center Log Viewer** . 
 
@@ -403,7 +403,7 @@ Tato část popisuje uživatelské rozhraní nástroje **Support Center Log View
 Nástroj **Log Viewer** je skoro stejný jako karta **protokoly** nástroje **Support Center**. Nástroj **Log Viewer** neobsahuje možnosti **Konfigurace protokolování** a **skupin protokolů**klienta.
 
 
-### <a name="window-menu"></a><a name="bkmk_log-window"></a>Nabídka okno
+### <a name="window-menu"></a><a name="bkmk_log-window"></a> Nabídka okno
 
 V levém horním rohu okna prohlížeče protokolů nástroje Support Center otevřete tuto nabídku tak, že vyberete šipku v modrém poli.
 
@@ -423,7 +423,7 @@ Zobrazí informace o nástroji Support Center Log Viewer.
 Zavře prohlížeč protokolu Support Center.
 
 
-### <a name="home-tab"></a><a name="bkmk_log-home"></a>Karta Domů
+### <a name="home-tab"></a><a name="bkmk_log-home"></a> Karta Domů
 
 #### <a name="open-logs"></a>Otevřít protokoly 
 Support Center vás vyzve k výběru jednoho nebo více souborů protokolu, které se mají otevřít.
@@ -468,22 +468,22 @@ Po nalezení dvou nebo více shod pro řetězec, který hledáte, přejde Tato m
 
 #### <a name="error-lookup"></a>Chyba při vyhledávání
 Zadejte kód chyby pro vyhledání tohoto kódu chyby v aktuálně otevřených souborech protokolů. Použijte následující formáty kódu chyby:
-- **32-bitové celé číslo (podepsané)**: například`-2147024891`  
-- **32-bitové celé číslo (bez znaménka)**: například`2147942405`  
-- **32 – šestnáctkový**příklad:`0x80070005`  
+- **32-bitové celé číslo (podepsané)**: například `-2147024891`  
+- **32-bitové celé číslo (bez znaménka)**: například `2147942405`  
+- **32 – šestnáctkový**příklad: `0x80070005`  
 
 #### <a name="decode-certificate"></a>Dekódovat certifikát
 V dialogovém okně **dekódovat certifikát** vložte hodnotu serializovaného certifikátu pro jakýkoli certifikát na klienta. Vyhledá tuto hodnotu v registru, v souborech protokolů nebo ve službě WMI. Vyberte **proces** pro zobrazení obecných informací a podrobností o certifikátu. Tyto informace zahrnují cestu k certifikaci. Vyberte **exportovat** a exportujte certifikát jako soubor **. cer** .
 
 
 
-## <a name="advanced-log-file-filters"></a><a name="bkmk_adv-filters"></a>Rozšířené filtry souborů protokolů
+## <a name="advanced-log-file-filters"></a><a name="bkmk_adv-filters"></a> Rozšířené filtry souborů protokolů
 
 Rozšířené filtry souborů protokolu umožňují zahrnout, vyloučit nebo zvýraznit konkrétní řetězce. Tyto řetězce se můžou vyskytnout v souboru protokolu nebo skupině souborů protokolu při prohlížení záznamů v souborech protokolu. Při vytváření filtru používejte hledání pomocí zástupných znaků. Pokud máte užitečnou kombinaci filtrů, uložte je jako *sadu filtrů*. 
 
 Rozšířené filtry souborů protokolu nahrazují rychlé filtry. Použijte obojí, ale rychlé filtry se použijí pouze na zobrazená data protokolu. Rozšířené filtry určují, jaká data se zpočátku zobrazují předtím, než použijí jakékoli rychlé filtry.
 
-V dialogovém okně Rozšířené filtry můžete vytvořit komplexní sady filtrů. Tyto sady filtrů hledají řetězce v mnoha součástech souboru protokolu. Mezi tyto komponenty patří zprávy, vlákna, úrovně protokolování a součásti. Sada filtrů obsahuje několik příkazů filtru, pomocí kterých můžete zahrnout, vyloučit nebo zvýraznit zprávy souboru protokolu. Filtr definuje sloupec souboru protokolu, ve kterém se má hledat, operátor a hodnota. Hodnota může obsahovat regulární výrazy, například *zástupný* znak `*`.
+V dialogovém okně Rozšířené filtry můžete vytvořit komplexní sady filtrů. Tyto sady filtrů hledají řetězce v mnoha součástech souboru protokolu. Mezi tyto komponenty patří zprávy, vlákna, úrovně protokolování a součásti. Sada filtrů obsahuje několik příkazů filtru, pomocí kterých můžete zahrnout, vyloučit nebo zvýraznit zprávy souboru protokolu. Filtr definuje sloupec souboru protokolu, ve kterém se má hledat, operátor a hodnota. Hodnota může obsahovat regulární výrazy, například *zástupný* znak `*` .
 
 
 ### <a name="add-a-filter"></a>Přidání filtru
@@ -491,8 +491,8 @@ V dialogovém okně Rozšířené filtry můžete vytvořit komplexní sady filt
 1. V okně **Log Viewer** nebo na kartě **protokoly** nástroje Support Center vyberte **Rozšířené filtry**.  
 
 2. V dialogu Rozšířené filtry vyberte **Přidat**. Pak vyberte jednu z následujících možností, které se mají použít pro položky protokolu, které odpovídají vašemu filtru:  
-    - **Zařadit členy**  
-    - **Exclude**  
+    - **Připojit**  
+    - **Slevy**  
     - **Zvýraznit**  
 
 3. V dialogovém okně **Upřesnit konfiguraci filtru** vyberte sloupec a operátor:  
@@ -528,7 +528,7 @@ V dialogovém okně Rozšířené filtry můžete vytvořit komplexní sady filt
 
 
 
-## <a name="support-center-viewer-reference"></a><a name="bkmk_viewer"></a>Reference k nástroji Support Center Viewer
+## <a name="support-center-viewer-reference"></a><a name="bkmk_viewer"></a> Reference k nástroji Support Center Viewer
 
 Tato část popisuje uživatelské rozhraní (UI) pro nástroj Configuration Manager **Support Center Viewer** . Dostupné karty se liší v závislosti na obsahu sady pro řešení potíží. [Nabídka okna](#bkmk_viewer-window) a [karta Domů](#bkmk_viewer-home) se zobrazí ve výchozím nastavení.
 - [Nabídka okno](#bkmk_viewer-window)
@@ -543,7 +543,7 @@ Tato část popisuje uživatelské rozhraní (UI) pro nástroj Configuration Man
 - [Karta Poradce při potížích](#bkmk_viewer-troubleshoot)
 
 
-### <a name="window-menu"></a><a name="bkmk_viewer-window"></a>Nabídka okno
+### <a name="window-menu"></a><a name="bkmk_viewer-window"></a> Nabídka okno
 
 V levém horním rohu okna nástroje Support Center Viewer otevřete tuto nabídku tak, že vyberete šipku v modrém poli.
 
@@ -558,14 +558,14 @@ V dialogovém okně **Možnosti** můžete:
 - Snížit pohyb animovaných prvků uživatelského rozhraní  
 - Změna umístění dočasných souborů    
 - Resetovat upozornění. Všechny varovné zprávy, které jste předtím potlačili, se po aktivaci zobrazí znovu.  
-- Obnovte dočasnou cestu k souboru na výchozí hodnotu.`%UserProfile%\AppData\Local\Microsoft\ConfigMgrSupportCenterViewer`  
+- Obnovte dočasnou cestu k souboru na výchozí hodnotu. `%UserProfile%\AppData\Local\Microsoft\ConfigMgrSupportCenterViewer`  
 
 
 #### <a name="exit"></a>Ukončit
 Ukončí Support Center Viewer.
 
 
-### <a name="home-tab"></a><a name="bkmk_viewer-home"></a>Karta Domů
+### <a name="home-tab"></a><a name="bkmk_viewer-home"></a> Karta Domů
 
 #### <a name="open-bundle"></a>Otevřít sadu prostředků
 Přejděte do umístění datové sady, kterou vytvořila aplikace Support Center.
@@ -577,7 +577,7 @@ Vyberte jeden nebo více souborů protokolu, které chcete otevřít.
 V dialogovém okně **dekódovat certifikát** vložte hodnotu serializovaného certifikátu pro jakýkoli certifikát na klienta. Vyhledá tuto hodnotu v registru, v souborech protokolů nebo ve službě WMI. Vyberte **proces** pro zobrazení obecných informací a podrobností o certifikátu. Tyto informace zahrnují cestu k certifikaci. Vyberte **exportovat** a exportujte certifikát jako soubor **. cer** .
 
 
-### <a name="configuration-tab"></a><a name="bkmk_viewer-config"></a>Karta konfigurace
+### <a name="configuration-tab"></a><a name="bkmk_viewer-config"></a> Karta konfigurace
 
 Karta **Konfigurace** nástroje Support Center Viewer nabízí následující zobrazení s daty načtenými z zprostředkovatelů rozhraní WMI:
 
@@ -585,30 +585,30 @@ Karta **Konfigurace** nástroje Support Center Viewer nabízí následující zo
 Toto zobrazení obsahuje stejné informace, které jsou uvedeny na kartě **klient** nástroje Support Center.
 
 #### <a name="operating-system"></a>Operační systém
-Podrobnosti o operačním systému klienta. Používá třídu [Win32_OperatingSystem](https://docs.microsoft.com/windows/desktop/CIMWin32Prov/win32-operatingsystem) .
+Podrobnosti o operačním systému klienta. Používá třídu [Win32_OperatingSystem](/windows/desktop/CIMWin32Prov/win32-operatingsystem) .
 
 #### <a name="computer"></a>Počítač
-Podrobnosti o klientském počítači. Používá třídu [Win32_OperatingSystem](https://docs.microsoft.com/windows/desktop/CIMWin32Prov/win32-operatingsystem) .
+Podrobnosti o klientském počítači. Používá třídu [Win32_OperatingSystem](/windows/desktop/CIMWin32Prov/win32-operatingsystem) .
 
 #### <a name="services"></a>Služby
-Podrobnosti o službách spuštěných v klientském počítači. Používá třídu [Win32_Service](https://docs.microsoft.com/windows/desktop/CIMWin32Prov/win32-service) .
+Podrobnosti o službách spuštěných v klientském počítači. Používá třídu [Win32_Service](/windows/desktop/CIMWin32Prov/win32-service) .
 
 #### <a name="network-adapters"></a>Síťové adaptéry
-Podrobnosti o síťových adaptérech nainstalovaných v klientském počítači. Používá třídu [Win32_NetworkAdapterConfiguration](https://docs.microsoft.com/windows/desktop/CIMWin32Prov/win32-networkadapterconfiguration) .
+Podrobnosti o síťových adaptérech nainstalovaných v klientském počítači. Používá třídu [Win32_NetworkAdapterConfiguration](/windows/desktop/CIMWin32Prov/win32-networkadapterconfiguration) .
 
 
-### <a name="logs-tab"></a><a name="bkmk_viewer-logs"></a>Karta protokoly
+### <a name="logs-tab"></a><a name="bkmk_viewer-logs"></a> Karta protokoly
 
 Karta **protokoly** zobrazuje seznam souborů protokolu, které jsou součástí sady. Každý řádek na této kartě poskytuje cestu, název a velikost souboru protokolu. 
 
-#### <a name="open"></a>Otevřít
+#### <a name="open"></a>Otevřená
 Po výběru souboru protokolu kliknutím na toto tlačítko otevřete **Prohlížeč protokolů**. Poskytuje podmnožinu funkcí, které se zobrazují na kartě protokoly nástroje Support Center.
 
 #### <a name="decode-certificate"></a>Dekódovat certifikát
 V dialogovém okně **dekódovat certifikát** vložte hodnotu serializovaného certifikátu pro jakýkoli certifikát na klienta. Vyhledá tuto hodnotu v registru, v souborech protokolů nebo ve službě WMI. Vyberte **proces** pro zobrazení obecných informací a podrobností o certifikátu. Tyto informace zahrnují cestu k certifikaci. Vyberte **exportovat** a exportujte certifikát jako soubor **. cer** .
 
 
-### <a name="debug-dumps-tab"></a><a name="bkmk_viewer-debug"></a>Karta výpisy ladění
+### <a name="debug-dumps-tab"></a><a name="bkmk_viewer-debug"></a> Karta výpisy ladění
 
 Každý řádek na této kartě poskytuje podrobné informace o souborech výpisu ladění, které jsou k dispozici pro export. Pomocí této karty můžete exportovat soubory výpisu ladění (. dmp) pro další analýzu. Tato analýza používá ladicí nástroj, jako je například WinDbg. 
 
@@ -619,7 +619,7 @@ Každý řádek na této kartě poskytuje podrobné informace o souborech výpis
 Uloží kopii vybraného souboru výpisu ladění.
 
 
-### <a name="wmi-tab"></a><a name="bkmk_viewer-wmi"></a>Karta WMI
+### <a name="wmi-tab"></a><a name="bkmk_viewer-wmi"></a> Karta WMI
 
 Tato karta zobrazuje sadu dat WMI z klienta Configuration Manager, který obsahuje datový svazek. 
 
@@ -639,7 +639,7 @@ Toto tlačítko otevře další instanci řetězce, který jste zadali v dialogo
 V dialogovém okně **dekódovat certifikát** vložte hodnotu serializovaného certifikátu pro jakýkoli certifikát na klienta. Vyhledá tuto hodnotu v registru, v souborech protokolů nebo ve službě WMI. Vyberte **proces** pro zobrazení obecných informací a podrobností o certifikátu. Tyto informace zahrnují cestu k certifikaci. Vyberte **exportovat** a exportujte certifikát jako soubor **. cer** .
 
 
-### <a name="registry-tab"></a><a name="bkmk_viewer-registry"></a>Karta registr
+### <a name="registry-tab"></a><a name="bkmk_viewer-registry"></a> Karta registr
 
 Kartu **registr** použijte k zobrazení dat registru zahrnutých do sady dat a k exportu těchto dat pro další analýzu.
 
@@ -662,7 +662,7 @@ Toto tlačítko otevře další instanci řetězce, který jste zadali v dialogo
 V dialogovém okně **dekódovat certifikát** vložte hodnotu serializovaného certifikátu pro jakýkoli certifikát na klienta. Vyhledá tuto hodnotu v registru, v souborech protokolů nebo ve službě WMI. Vyberte **proces** pro zobrazení obecných informací a podrobností o certifikátu. Tyto informace zahrnují cestu k certifikaci. Vyberte **exportovat** a exportujte certifikát jako soubor **. cer** .
 
 
-### <a name="policy-tab"></a><a name="bkmk_viewer-policy"></a>Karta Zásady
+### <a name="policy-tab"></a><a name="bkmk_viewer-policy"></a> Karta Zásady
 
 Karta **zásady** se používá k zobrazení dat zásad zahrnutých do sady dat. 
 
@@ -682,7 +682,7 @@ Toto tlačítko otevře další instanci řetězce, který jste zadali v dialogo
 V dialogovém okně **dekódovat certifikát** vložte hodnotu serializovaného certifikátu pro jakýkoli certifikát na klienta. Vyhledá tuto hodnotu v registru, v souborech protokolů nebo ve službě WMI. Vyberte **proces** pro zobrazení obecných informací a podrobností o certifikátu. Tyto informace zahrnují cestu k certifikaci. Vyberte **exportovat** a exportujte certifikát jako soubor **. cer** .
 
 
-### <a name="certificates-tab"></a><a name="bkmk_viewer-certs"></a>Karta certifikáty
+### <a name="certificates-tab"></a><a name="bkmk_viewer-certs"></a> Karta certifikáty
 
 Karta **certifikáty** slouží k zobrazení certifikátů zahrnutých do sady dat a k jejich exportu.
 
@@ -693,7 +693,7 @@ Zobrazí informace o vybraném certifikátu.
 Otevře dialogové okno **Uložit jako** , ve kterém můžete uložit kopii certifikátu, který jste vybrali.
 
 
-### <a name="troubleshooting-tab"></a><a name="bkmk_viewer-troubleshoot"></a>Karta Poradce při potížích
+### <a name="troubleshooting-tab"></a><a name="bkmk_viewer-troubleshoot"></a> Karta Poradce při potížích
 
 Kartu **Poradce při potížích** můžete použít k zobrazení souborů protokolu vytvořených pomocí karty Poradce při potížích nástroje Support Center.
 

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 2ee472b89f45e744e43915e51e98f11841208b73
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: d00edbfc30a87660adc65758dc9fbcb9113197f0
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125795"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700646"
 ---
 # <a name="group-policy-settings-for-desktop-analytics"></a>Nastavení zásad skupiny pro desktopovou analýzu
 
@@ -30,17 +30,17 @@ Když Configuration Manager zaregistruje zařízení do Desktop Analytics, nasta
 
 Configuration Manager nastavuje zásady systému Windows v jednom nebo obou následujících klíčích registru:
 
-- Objekt zásad skupiny (**GPO**):`HKLM:\SOFTWARE\Policies\Microsoft\Windows\DataCollection`
+- Objekt zásad skupiny (**GPO**): `HKLM:\SOFTWARE\Policies\Microsoft\Windows\DataCollection`
 
 - Preference **místních** zásad:`HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection`
 
 | Zásady | Cesta | Platí pro | Hodnota |
 |--------|------|------------|-------|
 | **CommercialId** | Místní | Všechny verze systému Windows | Aby se zařízení zobrazilo v Desktop Analytics, nakonfigurujte ho pomocí komerčního ID vaší organizace. |
-| **AllowTelemetry**  | GPO | Windows 10 | Nastaveno `1` pro **základní** (povinné) pro `2` **Rozšířené**nebo `3` **úplné** (volitelné) diagnostická data. Desktop Analytics vyžaduje aspoň základní diagnostická data. Microsoft doporučuje, abyste pro Desktop Analytics používali **volitelnou (omezená)** (vylepšenou) úroveň (s omezením). Další informace najdete v tématu [Konfigurace diagnostických dat Windows ve vaší organizaci](https://docs.microsoft.com/windows/configuration/configure-windows-diagnostic-data-in-your-organization). |
-| **LimitEnhancedDiagnosticDataWindowsAnalytics** | GPO | Windows 10 verze 1803 a novější | Toto nastavení platí pouze v případě, že je nastavení AllowTelemetry `2` . Omezuje rozšířené události diagnostických dat odeslané společnosti Microsoft jenom na takové události, které potřebuje Desktop Analytics. Další informace najdete v tématu [události diagnostických dat Windows 10 a pole shromážděná prostřednictvím omezení rozšířených diagnostických dat](https://docs.microsoft.com/windows/configuration/enhanced-diagnostic-data-windows-analytics-events-and-fields). |
+| **AllowTelemetry**  | GPO | Windows 10 | Nastaveno `1` pro **základní** (povinné) pro `2` **Rozšířené**nebo `3` **úplné** (volitelné) diagnostická data. Desktop Analytics vyžaduje aspoň základní diagnostická data. Microsoft doporučuje, abyste pro Desktop Analytics používali **volitelnou (omezená)** (vylepšenou) úroveň (s omezením). Další informace najdete v tématu [Konfigurace diagnostických dat Windows ve vaší organizaci](/windows/configuration/configure-windows-diagnostic-data-in-your-organization). |
+| **LimitEnhancedDiagnosticDataWindowsAnalytics** | GPO | Windows 10 verze 1803 a novější | Toto nastavení platí pouze v případě, že je nastavení AllowTelemetry `2` . Omezuje rozšířené události diagnostických dat odeslané společnosti Microsoft jenom na takové události, které potřebuje Desktop Analytics. Další informace najdete v tématu [události diagnostických dat Windows 10 a pole shromážděná prostřednictvím omezení rozšířených diagnostických dat](/windows/configuration/enhanced-diagnostic-data-windows-analytics-events-and-fields). |
 | **AllowDeviceNameInTelemetry** | GPO | Windows 10 verze 1803 a novější | Povolit zařízením odesílat název zařízení. Ve výchozím nastavení se název zařízení neposílá společnosti Microsoft. Pokud název zařízení neodešlete, zobrazí se v nástroji Desktop Analytics jako "Neznámý". Další informace najdete v tématu [název zařízení](enroll-devices.md#device-name). |
-| **CommercialDataOptIn** | Místní | Windows 8.1 a starší | Desktop Analytics vyžaduje hodnotu `1` . Další informace najdete v tématu věnovaném [obchodním údajům v systému Windows 7](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/ee126127\(v=ws.10\)). |
+| **CommercialDataOptIn** | Místní | Windows 8.1 a starší | Desktop Analytics vyžaduje hodnotu `1` . Další informace najdete v tématu věnovaném [obchodním údajům v systému Windows 7](/previous-versions/windows/it-pro/windows-7/ee126127\(v=ws.10\)). |
 | **RequestAllAppraiserVersions** | Obojí | Windows 8.1 a starší | `1`Pro správné fungování shromažďování dat potřebuje aplikace Desktop Analytics hodnotu. |
 | **DisableEnterpriseAuthProxy** | GPO | Všechny verze systému Windows | Pokud vaše prostředí vyžaduje uživatelem ověřený proxy server s integrovaným ověřováním Windows pro přístup k Internetu, potřebuje Desktop Analytics hodnotu `0` pro správné fungování shromažďování dat. Další informace najdete v tématu [ověřování proxy serveru](enable-data-sharing.md#proxy-server-authentication). |
 
@@ -66,7 +66,7 @@ Configuration Manager konfiguruje nastavení komerčního ID a diagnostických d
 
 Příslušné nastavení zásad skupiny najdete v následujících umístěních: **Konfigurace počítače**  >  **šablony pro správu**  >  kolekce dat**součásti systému Windows**  >  **a buildy Preview**.
 
-Nastavení zásad skupiny upravují pouze nastavení registru v následujícím klíči:`HKLM:\SOFTWARE\Policies\Microsoft\Windows\DataCollection`
+Nastavení zásad skupiny upravují pouze nastavení registru v následujícím klíči: `HKLM:\SOFTWARE\Policies\Microsoft\Windows\DataCollection`
 
 > [!IMPORTANT]
 > Když použijete nastavení zásad skupiny k povolení složitých scénářů, věnujte zvláštní pozornost nastavení zásad, která můžou způsobit konflikty konfigurace. Configuration Manager nakonfiguruje [nastavení systému Windows](#windows-settings) pouze *v případě, že hodnota ještě neexistuje*. Nastavení zásad skupiny mají přednost před nastaveními Configuration Manager, takže některé konfigurace zásad skupiny můžou způsobovat problémy s desktopovou analýzou.
@@ -103,6 +103,6 @@ Tato nastavení zásad skupiny nevyžadují Configuration Manager nebo Desktop A
 | Zobrazované jméno | Hodnota registru | Vliv na zařízení zaregistrovaná v Desktop Analytics |
 |--------------|----------------|-------------------------------------------------|
 | **Konfigurovat oznámení o změnách pro telemetrii** | DisableTelemetryOptInChangeNotification | Počínaje verzí 1803 Windows 10 upozorní uživatele, když se změní úroveň diagnostických dat. Pomocí této zásady můžete zakázat oznámení. |
-| **Konfigurovat nastavení výslovných přihlášení k telemetrie v uživatelském rozhraní** | DisableTelemetryOptInSettingsUx | Při konfiguraci úrovně diagnostiky dat nastavíte horní hranici zařízení. Od verze 1803 Windows 10 můžou uživatelé nastavit nižší úroveň. Pomocí této zásady můžete uživatelům zabránit ve změně úrovně diagnostiky. Další informace najdete v tématu [Konfigurace diagnostických dat Windows ve vaší organizaci](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization#enterprise-management). |
+| **Konfigurovat nastavení výslovných přihlášení k telemetrie v uživatelském rozhraní** | DisableTelemetryOptInSettingsUx | Při konfiguraci úrovně diagnostiky dat nastavíte horní hranici zařízení. Od verze 1803 Windows 10 můžou uživatelé nastavit nižší úroveň. Pomocí této zásady můžete uživatelům zabránit ve změně úrovně diagnostiky. Další informace najdete v tématu [Konfigurace diagnostických dat Windows ve vaší organizaci](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#enterprise-management). |
 | **Zakázat odstraňování diagnostických dat** | DisableDeviceDelete | Počínaje systémem Windows 10 verze 1809 mohou uživatelé odstranit diagnostická data ze stránky nastavení **zpětné vazby & diagnostiky** . Pomocí této zásady můžete zabránit odstranění diagnostických dat, která Microsoft shromažďuje ze zařízení. |
 | **Zakázat prohlížeč diagnostických dat** | DisableDiagnosticDataViewer | Počínaje systémem Windows 10 verze 1809 mohou uživatelé povolit a otevřít prohlížeč diagnostických dat ze stránky nastavení **zpětné vazby pro diagnostiku &** . Pomocí této zásady můžete zakázat prohlížeč diagnostických dat v nastavení Windows a zabránit tomu, aby se zobrazila diagnostická data, která Microsoft shromažďuje ze zařízení.|

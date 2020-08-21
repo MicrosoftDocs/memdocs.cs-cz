@@ -10,12 +10,12 @@ ms.assetid: 1dc74219-7ff5-4e3b-b4f6-5aad663bb75b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f34c803cb2b43a2c69cee4c16f5029474e318eb2
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: c9bb07bd2b82a9411bc527d04a9a64a0bb6e12f8
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81724430"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697666"
 ---
 # <a name="infrastructure-requirements-for-os-deployment-in-configuration-manager"></a>Požadavky na infrastrukturu pro nasazení operačního systému v Configuration Manager
 
@@ -23,7 +23,7 @@ ms.locfileid: "81724430"
 
 Nasazení operačního systému v Configuration Manager má vnější závislosti a závislosti v rámci produktu. Tento článek vám může přispět k přípravě infrastruktury pro nasazení operačního systému.  
 
-##  <a name="dependencies-external-to-configuration-manager"></a><a name="BKMK_ExternalDependencies"></a>Vnější závislosti Configuration Manager  
+##  <a name="dependencies-external-to-configuration-manager"></a><a name="BKMK_ExternalDependencies"></a> Vnější závislosti Configuration Manager  
 
 V této části najdete informace o externích nástrojích, instalačních sadách a verzích operačních systémů, které jsou nutné k nasazení operačních systémů v Configuration Manager.  
 
@@ -31,11 +31,11 @@ V této části najdete informace o externích nástrojích, instalačních sad�
 
 Sada Windows Assessment and Deployment Kit (ADK) je sada nástrojů a dokumentace, která podporuje konfiguraci a nasazení systému Windows. Configuration Manager používá ADK Windows k automatizaci akcí, jako je instalace Windows, zachytávání imagí a migrace profilů a dat uživatelů.  
 
-Další informace najdete v těchto článcích:  
+Další informace najdete v následujících článcích:  
 
-- [Scénáře sady Windows ADK pro Windows 10 pro IT specialisty](https://docs.microsoft.com/windows/deployment/windows-adk-scenarios-for-it-pros)  
+- [Scénáře sady Windows ADK pro Windows 10 pro IT specialisty](/windows/deployment/windows-adk-scenarios-for-it-pros)  
 
-- [Stažení sady Windows ADK pro Windows 10](https://docs.microsoft.com/windows-hardware/get-started/adk-install)  
+- [Stažení sady Windows ADK pro Windows 10](/windows-hardware/get-started/adk-install)  
 
     > [!IMPORTANT]
     > Nezapomeňte si stáhnout balíček **Windows ADK pro Windows 10** a **doplněk Windows PE pro ADK**.
@@ -77,9 +77,9 @@ Seznam verzí Windows 10 ADK, které můžete použít s různými verzemi Confi
 
 Configuration Manager používá balíček nástroje USMT, který obsahuje zdrojové soubory nástroje USMT 10 pro zachycení a obnovení stavu uživatele v rámci nasazení operačního systému. Instalace Configuration Manager v lokalitě nejvyšší úrovně automaticky vytvoří balíček nástroje USMT. Nástroj USMT 10 zachytí stav uživatele ze systémů Windows 7, Windows 8, Windows 8.1 a Windows 10.  
 
-Další informace najdete v těchto článcích:  
+Další informace najdete v následujících článcích:  
 
-- [Běžné scénáře migrace pro nástroj USMT 10](https://docs.microsoft.com/windows/deployment/usmt/usmt-common-migration-scenarios)  
+- [Běžné scénáře migrace pro nástroj USMT 10](/windows/deployment/usmt/usmt-common-migration-scenarios)  
 
 - [Správa stavu uživatele](../get-started/manage-user-state.md)  
 
@@ -133,7 +133,7 @@ Ovladače zařízení systému Windows lze použít při instalaci operačního 
 
 
 
-##  <a name="configuration-manager-dependencies"></a><a name="BKMK_InternalDependencies"></a>Configuration Manager závislosti  
+##  <a name="configuration-manager-dependencies"></a><a name="BKMK_InternalDependencies"></a> Configuration Manager závislosti  
 
 V této části najdete informace o požadavcích na nasazení Configuration Manager OS.  
 
@@ -207,7 +207,7 @@ Pomocí oborů zabezpečení poskytněte správcům přístup k zabezpečitelné
 
 
 
-##  <a name="windows-deployment-services"></a><a name="BKMK_WDS"></a>Služba pro nasazení systému Windows  
+##  <a name="windows-deployment-services"></a><a name="BKMK_WDS"></a> Služba pro nasazení systému Windows  
 
 Ve verzi 1802 a dřívější musí být služba WDS (Windows Deployment Services) nainstalovaná na stejném serveru jako distribuční body, které nakonfigurujete pro podporu technologie PXE nebo vícesměrového vysílání. Služba WDS je součástí operačního systému serveru. V případě nasazení PXE je WDS službou, která provede spuštění PXE. Když je distribuční bod nainstalován a povolen pro technologii PXE, Configuration Manager nainstaluje poskytovatele do služby WDS, který používá spouštěcí funkce služby WDS PXE.  
 
@@ -227,7 +227,7 @@ Počínaje verzí 1806 můžete povolit technologii PXE v distribučním bodě b
 -   Pokud je poskytovatel nainstalovaný na vzdáleném serveru, nainstalujte službu WDS na server lokality a na vzdáleného poskytovatele.  
 
 
-###  <a name="considerations-when-you-have-wds-and-dhcp-on-the-same-server"></a><a name="BKMK_WDSandDHCP"></a>Předpoklady, pokud máte na stejném serveru služby WDS a DHCP  
+###  <a name="considerations-when-you-have-wds-and-dhcp-on-the-same-server"></a><a name="BKMK_WDSandDHCP"></a> Předpoklady, pokud máte na stejném serveru služby WDS a DHCP  
 
 Pokud máte v úmyslu hostovat distribuční bod na serveru, na kterém je spuštěný protokol DHCP, vezměte v úvahu následující problémy s konfigurací:  
 
@@ -266,13 +266,13 @@ Pokud máte v úmyslu hostovat distribuční bod na serveru, na kterém je spuš
 > Pokud v rámci verze 1902 povolíte respondér PXE v distribučním bodě bez služby pro nasazení systému Windows, může být nyní na stejném serveru jako služba DHCP. Další informace najdete v tématu [Konfigurace aspoň jednoho distribučního bodu pro příjem požadavků PXE](../deploy-use/use-pxe-to-deploy-windows-over-the-network.md#BKMK_Configure).
 
 
-##  <a name="supported-operating-systems"></a><a name="BKMK_SupportedOS"></a>Podporované operační systémy  
+##  <a name="supported-operating-systems"></a><a name="BKMK_SupportedOS"></a> Podporované operační systémy  
 
 Všechny operační systémy Windows uvedené jako Podporovaní klienti v [podporovaných operačních systémech pro klienty a zařízení](../../core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md) se podporují pro nasazení operačního systému.  
 
 
 
-##  <a name="supported-disk-configurations"></a><a name="BKMK_SupportedDiskConfig"></a>Podporované konfigurace disků  
+##  <a name="supported-disk-configurations"></a><a name="BKMK_SupportedDiskConfig"></a> Podporované konfigurace disků  
 
 V následující tabulce jsou uvedeny kombinace konfigurací pevného disku na referenčním a cílovém počítači, které jsou podporované pro Configuration Manager nasazení operačního systému:  
 

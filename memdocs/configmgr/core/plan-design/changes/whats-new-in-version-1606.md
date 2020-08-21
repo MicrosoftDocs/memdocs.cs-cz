@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 070c616ed8411bcd90b2d3edb12b04edd57241e1
-ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
+ms.openlocfilehash: 2fa46770adfbf3e688bbdc561d8193967f3913cd
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85590469"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698584"
 ---
 # <a name="what39s-new-in-version-1606-of-configuration-manager"></a>Co&#39;s novinkou ve verzi 1606 Configuration Manager
 
@@ -79,14 +79,14 @@ Když je nainstalovaná aktualizace 1606, při další instalaci aktualizace v t
 
 
 
-## <a name="accessibility"></a><a name="accessibility"></a>Přístup
+## <a name="accessibility"></a><a name="accessibility"></a> Přístup
 Pro procházení různých uzlů pracovního prostoru teď můžete zadat první písmeno názvu uzlu. Každé stisknutí klávesy přesune kurzor na další uzel, který začíná písmenem. Pro uživatele, kteří mají čtečku obrazovky, čtecí modul přečte název tohoto uzlu. Další informace o možnostech usnadnění najdete v tématu [funkce usnadnění](../../../core/understand/accessibility-features.md).
 
 ## <a name="administration"></a><a name="administration"></a>Správa
 Níže jsou uvedené změny správy v konzole Configuration Manager:
 ### <a name="oms-connector"></a>Konektor OMS
 
-Nyní se můžete připojit Configuration Manager jako kolekce z Configuration Manager k [Microsoft Operations Management Suite (OMS)](https://azure.microsoft.com/documentation/articles/operations-management-suite-overview/). Tím se data, jako jsou kolekce z nasazení Configuration Manager, zobrazují v OMS. Další informace najdete v tématu [synchronizace dat z Configuration Manager do Microsoft Operations Management Suite](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm).
+Nyní se můžete připojit Configuration Manager jako kolekce z Configuration Manager k [Microsoft Operations Management Suite (OMS)](/azure/azure-monitor/overview). Tím se data, jako jsou kolekce z nasazení Configuration Manager, zobrazují v OMS. Další informace najdete v tématu [synchronizace dat z Configuration Manager do Microsoft Operations Management Suite](/azure/azure-monitor/platform/collect-sccm).
 
 Konektor OMS je předběžnou verzí funkce. Pokud ho chcete povolit, přečtěte si téma [použití předběžných verzí funkcí z aktualizací](../../../core/servers/manage/install-in-console-updates.md#bkmk_prerelease).
 

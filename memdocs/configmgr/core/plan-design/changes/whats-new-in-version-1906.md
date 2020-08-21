@@ -10,12 +10,12 @@ ms.assetid: 97e23075-549c-4e45-ab1e-0671027edacf
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 378a5de5633d7a526004d84ec5e6885e165eaadb
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 0401207ec98331c33e87a0ac03b5cd7f750c17e7
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128980"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698710"
 ---
 # <a name="whats-new-in-version-1906-of-configuration-manager-current-branch"></a>Co je nového ve verzi 1906 Configuration Manager Current Branch
 
@@ -28,7 +28,7 @@ Vždy si přečtěte nejnovější kontrolní seznam pro instalaci této aktuali
 Pokud chcete plně využít nové funkce Configuration Manager, po aktualizaci lokality aktualizujte také klienty na nejnovější verzi. I když se nové funkce zobrazí v konzole Configuration Manager, když aktualizujete lokalitu a konzolu, kompletní scénář nebude funkční, dokud nebude verze klienta zároveň nejnovější.
 
 > [!Tip]  
-> Pokud chcete dostávat upozornění na aktualizaci této stránky, zkopírujte a vložte následující adresu URL do čtečky informačních kanálů RSS:`https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+1906+-+Configuration+Manager%22&locale=en-us`
+> Pokud chcete dostávat upozornění na aktualizaci této stránky, zkopírujte a vložte následující adresu URL do čtečky informačních kanálů RSS: `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+1906+-+Configuration+Manager%22&locale=en-us`
 
 
 ## <a name="requirement-changes"></a>Změny požadavku
@@ -45,7 +45,7 @@ Z důvodu slabých míst v algoritmu SHA-1 a pro zajištění souladu s oborovou
 Další informace najdete v tématu [předpoklady pro klienty se systémem Windows](../../clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.md#bkmk_sha2).
 
 
-## <a name="site-infrastructure"></a><a name="bkmk_infra"></a>Infrastruktura webu
+## <a name="site-infrastructure"></a><a name="bkmk_infra"></a> Infrastruktura webu
 
 ### <a name="site-server-maintenance-task-improvements"></a>Vylepšení úloh údržby serveru lokality
 
@@ -87,7 +87,7 @@ Další informace najdete v tématu [přehledy správy](../../servers/manage/man
 
 - Přidat novou synchronní repliku z instalačního programu<!--3127336-->: Teď můžete přidat nový uzel sekundární repliky do existující skupiny dostupnosti Always On SQL serveru. Místo ručního procesu použijte Configuration Manager Setup k provedení této změny. Další informace najdete v tématu [Konfigurace skupin dostupnosti Always On SQL Server](../../servers/deploy/configure/configure-aoag.md#bkmk_sync).
 
-- Převzetí služeb při selhání s více podsítěmi<!-- SCCMDocs-pr#3734 -->: Teď můžete povolit [klíčové slovo připojovacího řetězce MultiSubnetFailover](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server#MultiSubnetFailover) v SQL Server. Také je nutné ručně nakonfigurovat server lokality. Další informace najdete v tématu věnovaném [převzetí služeb při selhání s více podsítěmi](../../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md#multi-subnet-failover) .
+- Převzetí služeb při selhání s více podsítěmi<!-- SCCMDocs-pr#3734 -->: Teď můžete povolit [klíčové slovo připojovacího řetězce MultiSubnetFailover](/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server#MultiSubnetFailover) v SQL Server. Také je nutné ručně nakonfigurovat server lokality. Další informace najdete v tématu věnovaném [převzetí služeb při selhání s více podsítěmi](../../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md#multi-subnet-failover) .
 
 - Podpora distribuovaných zobrazení<!-- SCCMDocs-pr#3792 -->: Databáze lokality může být hostována ve skupině dostupnosti Always On SQL Server a můžete povolit odkazy replikace databáze na používání [distribuovaných zobrazení](../hierarchy/data-transfers-between-sites.md#bkmk_dbrep).
 
@@ -101,7 +101,7 @@ Další informace najdete v tématu [přehledy správy](../../servers/manage/man
     - Všechny repliky skupin dostupnosti SQL musejí mít stejný režim osazení.
     - Repliky skupin dostupnosti SQL musí být v pořádku.
 
-## <a name="cloud-attached-management"></a><a name="bkmk_cloud"></a>Správa připojená ke cloudu
+## <a name="cloud-attached-management"></a><a name="bkmk_cloud"></a> Správa připojená ke cloudu
 
 ### <a name="azure-active-directory-user-group-discovery"></a>Azure Active Directory zjišťování skupiny uživatelů
 
@@ -122,7 +122,7 @@ Synchronizace vám umožní využít vaše stávající místní pravidla seskup
 Další informace najdete v tématu [Vytvoření kolekcí](../../clients/manage/collections/create-collections.md#bkmk_aadcollsync).
 
 
-## <a name="desktop-analytics"></a><a name="bkmk_da"></a>Desktop Analytics
+## <a name="desktop-analytics"></a><a name="bkmk_da"></a> Desktop Analytics
 
 ### <a name="readiness-insights-for-desktop-apps"></a>Přehledy připravenosti pro desktopové aplikace
 
@@ -141,7 +141,7 @@ K řešení potíží s nástrojem Desktop Analytics použijte nástroj DesktopA
 Další informace najdete v tématu [kolektor protokolů](../../../desktop-analytics/log-collector.md).
 
 
-## <a name="real-time-management"></a><a name="bkmk_real"></a>Správa v reálném čase
+## <a name="real-time-management"></a><a name="bkmk_real"></a> Správa v reálném čase
 
 ### <a name="add-joins-additional-operators-and-aggregators-in-cmpivot"></a>Přidání spojení, dalších operátorů a agregátorů v CMPivot
 
@@ -174,7 +174,7 @@ Do předdefinované role [**Správce zabezpečení**](../../understand/fundament
 Další informace najdete v tématu [CMPivot](../../servers/manage/cmpivot-changes.md#bkmk_cmpivot_secadmin1906).
 
 
-## <a name="content-management"></a><a name="bkmk_content"></a>Správa obsahu
+## <a name="content-management"></a><a name="bkmk_content"></a> Správa obsahu
 
 ### <a name="delivery-optimization-download-data-in-client-data-sources-dashboard"></a>Stažení Optimalizace doručení data na řídicím panelu zdrojů dat klienta
 
@@ -193,12 +193,12 @@ Tento server mezipaměti funguje jako transparentní mezipaměť na vyžádání
 Další informace najdete v tématu [optimalizace doručování v síťové mezipaměti v Configuration Manager](../hierarchy/microsoft-connected-cache.md).
 
 
-## <a name="client-management"></a><a name="bkmk_client"></a>Správa klientů
+## <a name="client-management"></a><a name="bkmk_client"></a> Správa klientů
 
 ### <a name="support-for-windows-virtual-desktop"></a>Podpora pro virtuální počítače s Windows
 
 <!--3556025-->
-[Virtuální plocha Windows](https://docs.microsoft.com/azure/virtual-desktop/) je funkce verze Preview Microsoft Azure a Microsoft 365. Teď můžete pomocí Configuration Manager spravovat tato virtuální zařízení s Windows v Azure.
+[Virtuální plocha Windows](/azure/virtual-desktop/) je funkce verze Preview Microsoft Azure a Microsoft 365. Teď můžete pomocí Configuration Manager spravovat tato virtuální zařízení s Windows v Azure.
 
 Podobně jako u terminálového serveru tato virtuální zařízení umožňují více souběžných aktivních uživatelských relací. Kvůli lepšímu výkonu klienta Configuration Manager nyní zakáže zásady uživatele na jakémkoli zařízení, které umožňuje tyto více uživatelských relací. I když zásady uživatele povolíte, klient je ve výchozím nastavení standardně zakáže na těchto zařízeních, která zahrnují virtuální počítače s Windows a Terminálové servery.
 
@@ -231,7 +231,7 @@ Nyní můžete zadat minimální dobu, po kterou může klient Configuration Man
 Další informace najdete v tématu [nastavení mezipaměti klienta](../../clients/deploy/about-client-settings.md#client-cache-settings).
 
 
-## <a name="co-management"></a><a name="bkmk_comgmt"></a>Spoluspráva
+## <a name="co-management"></a><a name="bkmk_comgmt"></a> Spoluspráva
 
 ### <a name="improvements-to-co-management-auto-enrollment"></a>Vylepšení automatického zápisu pro spolusprávu
 
@@ -263,7 +263,7 @@ Další informace najdete v tématu [Povolení spolusprávy](../../../comanage/h
 Zákazníci státní správy USA teď můžou používat spolusprávu s cloudem pro státní správu Azure USA (portal.azure.us). Další informace najdete v tématu [Povolení spolusprávy](../../../comanage/how-to-enable.md).
 
 
-## <a name="application-management"></a><a name="bkmk_app"></a>Správa aplikací
+## <a name="application-management"></a><a name="bkmk_app"></a> Správa aplikací
 
 ### <a name="filter-applications-deployed-to-devices"></a>Filtrovat aplikace nasazené do zařízení
 
@@ -311,7 +311,7 @@ Tato verze zahrnuje následující vylepšení pro schválení aplikací:
 Další informace najdete v tématu [schvalování aplikací](../../../apps/deploy-use/app-approval.md).
 
 
-## <a name="os-deployment"></a><a name="bkmk_osd"></a>Nasazení operačního systému
+## <a name="os-deployment"></a><a name="bkmk_osd"></a> Nasazení operačního systému
 
 ### <a name="task-sequence-debugger"></a>Ladicí program pořadí úloh
 
@@ -377,7 +377,7 @@ Tato verze zahrnuje následující vylepšení nasazení operačního systému:
 Možnost 82 během ověřování PXE DHCP se teď podporuje s respondérem PXE bez služby WDS. Možnost 82 není u služby WDS podporována.
 
 
-## <a name="software-center"></a><a name="bkmk_userxp"></a>Centrum softwaru
+## <a name="software-center"></a><a name="bkmk_userxp"></a> Centrum softwaru
 
 ### <a name="improvements-to-software-center-tab-customizations"></a>Vylepšení přizpůsobení karty centra softwaru
 
@@ -449,7 +449,7 @@ Tuto syntaxi můžete použít také k otevření výchozích karet v centru sof
 
 Další informace najdete v tématu [viditelnost karty centra softwaru](../../clients/deploy/about-client-settings.md#software-center-tab-visibility).
 
-## <a name="software-updates"></a><a name="bkmk_sum"></a>Aktualizace softwaru
+## <a name="software-updates"></a><a name="bkmk_sum"></a> Aktualizace softwaru
 
 ### <a name="additional-options-for-wsus-maintenance"></a>Další možnosti údržby služby WSUS
 
@@ -484,7 +484,7 @@ Další informace najdete v tématu [nastavení klienta aktualizace softwaru](..
 
 <!--4682946-->
 
-**Windows 10 verze 1903 a novější** se přidala do Microsoft Update jako vlastní produkt, a ne jako součást produktu **Windows 10** , jako je třeba předchozí verze. Tato změna způsobila, že provedete několik ručních kroků, abyste zajistili, že se tyto aktualizace zobrazí u klientů. Pomohl vám snížit počet ručních kroků, které je třeba provést pro nový produkt.
+**Windows 10 verze 1903 a novější** se přidala do Microsoft Update jako vlastní produkt, a ne jako součást produktu **Windows 10**  , jako je třeba předchozí verze. Tato změna způsobila, že provedete několik ručních kroků, abyste zajistili, že se tyto aktualizace zobrazí u klientů. Pomohl vám snížit počet ručních kroků, které je třeba provést pro nový produkt.
 
 Když aktualizujete na Configuration Manager verze 1906 a produkt **Windows 10** je vybraný pro synchronizaci, automaticky se provedou následující akce:
 
@@ -508,7 +508,7 @@ Hypertextový odkaz **požadovaný zobrazení** je k dispozici v následujícíc
 Další informace najdete v tématech [monitorování aktualizací softwaru](../../../sum/deploy-use/monitor-software-updates.md#drill-through-required-updates), [Správa Windows jako služby](../../../osd/deploy-use/manage-windows-as-a-service.md#drill-through-required-updates)a [Správa aktualizací Office 365 ProPlus](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
 
 
-## <a name="office-management"></a><a name="bkmk_o365"></a>Správa Office
+## <a name="office-management"></a><a name="bkmk_o365"></a> Správa Office
 
 ### <a name="office-365-proplus-upgrade-readiness-dashboard"></a>Řídicí panel připravenosti na upgrade pro Office 365 ProPlus
 
@@ -519,7 +519,7 @@ Abychom vám pomohli určit, která zařízení jsou připravená k upgradu na O
 Další informace o řídicím panelu, požadavcích a používání těchto dat najdete v tématu [integrace pro Office 365 ProPlus Readiness](../../../sum/deploy-use/office-365-dashboard.md#bkmk_readiness-dash).
 
 
-## <a name="protection"></a><a name="bkmk_protect"></a>Antivirový
+## <a name="protection"></a><a name="bkmk_protect"></a> Antivirový
 
 ### <a name="windows-defender-application-guard-file-trust-criteria"></a>Kritéria vztahu důvěryhodnosti souborů ochrany Application Guard v programu Windows Defender
 
@@ -530,7 +530,7 @@ K dispozici je nové nastavení zásad, které uživatelům umožňuje důvěřo
 Další informace najdete v tématu [Vytvoření a nasazení zásad ochrany Application Guard v programu Windows Defender](../../../protect/deploy-use/create-deploy-application-guard-policy.md#bkmk_FM).
 
 
-## <a name="configuration-manager-console"></a><a name="bkmk_admin"></a>Konzola Configuration Manager
+## <a name="configuration-manager-console"></a><a name="bkmk_admin"></a> Konzola Configuration Manager
 
 ### <a name="role-based-access-for-folders"></a>Přístup na základě rolí pro složky
 
@@ -598,7 +598,7 @@ V pracovním prostoru **softwarová knihovna** rozbalte možnost **operační sy
 V pracovním prostoru **monitorování** vyberte **operace klientů**. Operace **Přepnutí na další bod aktualizace softwaru** je nyní správně pojmenována.
 
 
-## <a name="deprecated-features-and-operating-systems"></a><a name="bkmk_deprecated"></a>Zastaralé funkce a operační systémy
+## <a name="deprecated-features-and-operating-systems"></a><a name="bkmk_deprecated"></a> Zastaralé funkce a operační systémy
 
 Přečtěte si o změnách podpory před jejich implementací v [odebraných a zastaralých položkách](deprecated/removed-and-deprecated.md).
 
@@ -622,7 +622,7 @@ Od této verze již nejsou k dispozici následující funkce předběžného vyd
 
 Kromě nových funkcí obsahuje tato verze také další změny, jako jsou opravy chyb. Další informace najdete v tématu [Souhrn změn v Configuration Manager aktuální větvi, verze 1906](https://support.microsoft.com/help/4514258).
 
-Další informace o změnách rutin prostředí Windows PowerShell pro Configuration Manager najdete v [poznámkách k verzi PowerShell verze 1906](https://docs.microsoft.com/powershell/sccm/1906-release-notes?view=sccm-ps).
+Další informace o změnách rutin prostředí Windows PowerShell pro Configuration Manager najdete v [poznámkách k verzi PowerShell verze 1906](/powershell/sccm/1906-release-notes?view=sccm-ps).
 
 V konzole nástroje je k dispozici následující kumulativní aktualizace (4517869) od 1. října 2019: [kumulativní aktualizace pro Configuration Manager aktuální větev, verze 1906](https://support.microsoft.com/help/4517869).
 

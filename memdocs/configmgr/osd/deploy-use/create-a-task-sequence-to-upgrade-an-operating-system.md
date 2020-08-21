@@ -10,12 +10,12 @@ ms.assetid: 7591e386-a9ab-4640-8643-332dce5aa006
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 907c36b6f06bbf4fbbabb9ee1b2df6cadb0acb75
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: ca002664bd55dbac79ace5cfe4bf88cd41d65b89
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125453"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698091"
 ---
 # <a name="create-a-task-sequence-to-upgrade-an-os-in-configuration-manager"></a>Vytvoření pořadí úkolů pro upgrade operačního systému v Configuration Manager
 
@@ -24,7 +24,7 @@ ms.locfileid: "88125453"
 Pomocí pořadí úkolů v Configuration Manager automaticky upgradovat operační systém v cílovém počítači. Tento upgrade může být z Windows 7 nebo novějšího na Windows 10 nebo z Windows Serveru 2012 nebo novějšího na Windows Server 2016. Vytvořte pořadí úkolů, které odkazuje na balíček s upgradem operačního systému a jakýkoli další obsah, který se má nainstalovat, například aplikace nebo aktualizace softwaru. Pořadí úkolů pro upgrade operačního systému je součástí scénáře [upgradu na nejnovější verzi](upgrade-windows-to-the-latest-version.md) .  
 
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 Před vytvořením pořadí úkolů je nutné, aby byly provedeny následující požadavky:
 
@@ -41,7 +41,7 @@ Před vytvořením pořadí úkolů je nutné, aby byly provedeny následující
 - [Aplikace](../../apps/deploy-use/create-applications.md) musí být přidány do konzoly Configuration Manager.  
 
 
-## <a name="create-a-task-sequence-to-upgrade-an-os"></a><a name="BKMK_UpgradeOS"></a>Vytvoření pořadí úkolů pro upgrade operačního systému  
+## <a name="create-a-task-sequence-to-upgrade-an-os"></a><a name="BKMK_UpgradeOS"></a> Vytvoření pořadí úkolů pro upgrade operačního systému  
 
 Chcete-li upgradovat operační systém na klientských počítačích, vytvořte pořadí úkolů a v Průvodci vytvořením pořadí úloh vyberte možnost **upgradovat operační systém z balíčku pro upgrade** . Průvodce přidá kroky pořadí úkolů pro upgrade operačního systému, použití aktualizací softwaru a instalaci aplikací.
 
@@ -66,7 +66,7 @@ Chcete-li upgradovat operační systém na klientských počítačích, vytvořt
     - **Kód Product Key**: zadejte kód Product Key systému Windows pro operační systém, který chcete nainstalovat. Zadejte kódované klíče multilicencí nebo standardní kódy Product Key. Použijete-li standardní kód Product Key, oddělte každou skupinu pěti znaky pomlčkou ( `-` ). Například: `XXXXX-XXXXX-XXXXX-XXXXX-XXXXX`. Pokud je upgrade pro multilicenční edici, nemusí se kód Product Key vyžadovat.  
 
         > [!Note]  
-        > Tento kód Product Key může být klíč k vícenásobné aktivaci (MAK) nebo obecný multilicenční klíč (GVLK). GVLK se také označuje jako klíč pro nastavení klienta služby správy klíčů (KMS). Další informace najdete v tématu [plánování aktivace multilicence](https://docs.microsoft.com/windows/deployment/volume-activation/plan-for-volume-activation-client). Seznam klíčů pro instalaci klienta služby správy klíčů najdete v [příloze a](https://docs.microsoft.com/windows-server/get-started/kmsclientkeys) v příručce k aktivaci Windows serveru.
+        > Tento kód Product Key může být klíč k vícenásobné aktivaci (MAK) nebo obecný multilicenční klíč (GVLK). GVLK se také označuje jako klíč pro nastavení klienta služby správy klíčů (KMS). Další informace najdete v tématu [plánování aktivace multilicence](/windows/deployment/volume-activation/plan-for-volume-activation-client). Seznam klíčů pro instalaci klienta služby správy klíčů najdete v [příloze a](/windows-server/get-started/kmsclientkeys) v příručce k aktivaci Windows serveru.
 
     - **Ignorovat všechny zprávy o kompatibilitě**: Toto nastavení vyberte, pokud provádíte upgrade na systém Windows Server 2016. Pokud toto nastavení nevyberete, pořadí úkolů se neúspěšně dokončí, protože instalační program systému Windows čeká, až uživatel v dialogovém okně kompatibility aplikací pro Windows vybere možnost **Potvrdit** .  
 
@@ -124,7 +124,7 @@ Pokud vrátí všechny výsledky, zařízení běží na Wi-Fi. V opačném př�
 
 Do této skupiny přidejte kroky, pokud chcete odebrat všechny aplikace, které nejsou kompatibilní s touto verzí Windows 10. Způsob odinstalace aplikace se liší.  
 
-Pokud aplikace používá Instalační služba systému Windows, zkopírujte příkazový řádek **odinstalačního programu** na kartě **programy** v části vlastnosti typu nasazení Instalační služba systému Windows aplikace. Pak v této skupině přidejte krok **Spustit příkazový** řádek pomocí příkazového řádku Uninstall program. Například:
+Pokud aplikace používá Instalační služba systému Windows, zkopírujte příkazový řádek **odinstalačního programu** na kartě **programy** v části vlastnosti typu nasazení Instalační služba systému Windows aplikace. Pak v této skupině přidejte krok **Spustit příkazový** řádek pomocí příkazového řádku Uninstall program. Příklad:
 
 `msiexec /x {150031D8-1234-4BA8-9F52-D6E5190D1CBA} /q`  
 
@@ -217,7 +217,7 @@ Chcete-li shromáždit protokoly z klienta, přidejte do této skupiny kroky.
 
 Chcete-li spustit další diagnostické nástroje, přidejte do této skupiny kroky. Automatizujte tyto nástroje pro shromažďování dalších informací ze systému hned po selhání.  
 
-Jedním z těchto nástrojů je Windows [SetupDiag](https://docs.microsoft.com/windows/deployment/upgrade/setupdiag). K získání podrobných informací o tom, proč upgrade Windows 10 neproběhl úspěšně, se jedná o samostatný diagnostický nástroj.  
+Jedním z těchto nástrojů je Windows [SetupDiag](/windows/deployment/upgrade/setupdiag). K získání podrobných informací o tom, proč upgrade Windows 10 neproběhl úspěšně, se jedná o samostatný diagnostický nástroj.  
 
 - V Configuration Manager [vytvořte balíček](../../apps/deploy-use/packages-and-programs.md#create-a-package-and-program) pro nástroj.  
 
@@ -225,13 +225,13 @@ Jedním z těchto nástrojů je Windows [SetupDiag](https://docs.microsoft.com/w
     `SetupDiag.exe /Output:"%_SMSTSLogPath%\SetupDiagResults.log"`  
 
 > [!TIP]
-> Pro nejnovější funkce a opravy známých problémů vždy používejte nejnovější verzi SetupDiag. Další informace najdete v tématu [SetupDiag](https://docs.microsoft.com/windows/deployment/upgrade/setupdiag).
+> Pro nejnovější funkce a opravy známých problémů vždy používejte nejnovější verzi SetupDiag. Další informace najdete v tématu [SetupDiag](/windows/deployment/upgrade/setupdiag).
 
 ## <a name="additional-recommendations"></a>Další doporučení
 
 ### <a name="windows-documentation"></a>Dokumentace k Windows
 
-Přečtěte si dokumentaci k Windows a [vyřešte chyby upgradu Windows 10](https://docs.microsoft.com/windows/deployment/upgrade/resolve-windows-10-upgrade-errors). Tento článek obsahuje taky podrobné informace o procesu upgradu.  
+Přečtěte si dokumentaci k Windows a [vyřešte chyby upgradu Windows 10](/windows/deployment/upgrade/resolve-windows-10-upgrade-errors). Tento článek obsahuje taky podrobné informace o procesu upgradu.  
 
 ### <a name="check-minimum-disk-space"></a>Kontrolovat minimální místo na disku
 
@@ -272,12 +272,12 @@ Pokud chcete změnit zařízení ze systému BIOS na rozhraní UEFI během tohot
 ### <a name="manage-bitlocker"></a>Správa nástroje BitLocker
 
 <!--SCCMDocs issue #494-->
-Pokud používáte šifrování disku BitLockerem, instalační program systému Windows ho ve výchozím nastavení automaticky pozastavit během upgradu. Počínaje verzí 1803 Windows 10 instalační program systému Windows zahrnuje `/BitLocker` parametr příkazového řádku pro řízení tohoto chování. Pokud požadavky na zabezpečení vyžadují, aby bylo šifrování aktivních disků vždy aktivní, použijte k zahrnutí **OSDSetupAdditionalUpgradeOptions** [proměnnou pořadí úloh](../understand/task-sequence-variables.md#OSDSetupAdditionalUpgradeOptions) OSDSetupAdditionalUpgradeOptions ve skupině **Příprava pro upgrade** `/BitLocker TryKeepActive` . Další informace najdete v tématu [instalační program systému Windows možnosti příkazového řádku](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options#bitlocker).
+Pokud používáte šifrování disku BitLockerem, instalační program systému Windows ho ve výchozím nastavení automaticky pozastavit během upgradu. Počínaje verzí 1803 Windows 10 instalační program systému Windows zahrnuje `/BitLocker` parametr příkazového řádku pro řízení tohoto chování. Pokud požadavky na zabezpečení vyžadují, aby bylo šifrování aktivních disků vždy aktivní, použijte k zahrnutí **OSDSetupAdditionalUpgradeOptions** [proměnnou pořadí úloh](../understand/task-sequence-variables.md#OSDSetupAdditionalUpgradeOptions) OSDSetupAdditionalUpgradeOptions ve skupině **Příprava pro upgrade** `/BitLocker TryKeepActive` . Další informace najdete v tématu [instalační program systému Windows možnosti příkazového řádku](/windows-hardware/manufacture/desktop/windows-setup-command-line-options#bitlocker).
 
 ### <a name="remove-default-apps"></a>Odebrat výchozí aplikace
 
 <!--SCCMDocs issue #526-->
-Někteří zákazníci odstraňují ve Windows 10 výchozí zřízené aplikace. Například aplikace pro počasí v programu Bing nebo kolekce Microsoft Solitaire. V některých situacích tyto aplikace po aktualizaci Windows 10 vrátí. Další informace najdete v tématu [Jak zachovat aplikace odebrané ze systému Windows 10](https://docs.microsoft.com/windows/application-management/remove-provisioned-apps-during-update).
+Někteří zákazníci odstraňují ve Windows 10 výchozí zřízené aplikace. Například aplikace pro počasí v programu Bing nebo kolekce Microsoft Solitaire. V některých situacích tyto aplikace po aktualizaci Windows 10 vrátí. Další informace najdete v tématu [Jak zachovat aplikace odebrané ze systému Windows 10](/windows/application-management/remove-provisioned-apps-during-update).
 
 Přidejte krok **Spustit příkazový řádek** do pořadí úkolů ve skupině **Příprava pro upgrade** . Zadejte příkazový řádek podobný následujícímu příkladu:
 

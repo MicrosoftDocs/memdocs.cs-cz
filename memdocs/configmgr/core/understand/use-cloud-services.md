@@ -10,12 +10,12 @@ ms.assetid: 24fca61e-9cdb-447a-ad7a-f4d2e4fd6704
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 84cb878de3eea56dc68180a83fd4b6a32b2d1073
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: e5ea198f944cf44909e54e123889a3f0f29b1db5
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906426"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699105"
 ---
 # <a name="use-cloud-services-with-configuration-manager"></a>Použití cloudových služeb s nástrojem Configuration Manager
 
@@ -75,7 +75,7 @@ K hostování distribučních bodů je nutné předplatné Azure. Poplatky se ú
 
 Tyto další funkce nevyžadují, abyste měli předplatné Azure. Nemusíte nastavovat konkrétní připojení, certifikáty nebo služby v cloudu. Místo toho je automaticky spravuje Configuration Manager za vás. Stačí, abyste zajistili, že příslušné systémy lokalit a zařízení mají přístup k internetovým adresám URL.  
 
-##  <a name="security-for-cloud-based-services"></a><a name="BKMK_CloudSec"></a>Zabezpečení cloudových služeb  
+##  <a name="security-for-cloud-based-services"></a><a name="BKMK_CloudSec"></a> Zabezpečení cloudových služeb  
  Configuration Manager používá k zřizování a přístupu k vašemu obsahu v Azure a ke správě služeb, které používáte, certifikáty. Configuration Manager šifruje data, která ukládáte v Azure, ale nezavádí další zabezpečení nebo ovládací prvky dat nad rámec těch, které poskytuje Azure.  
 
- Další informace najdete v podrobnostech o různých scénářích cloudových prostředků. Seznamte se také s [úvodem do zabezpečení Azure](https://docs.microsoft.com/azure/security/fundamentals/overview).
+ Další informace najdete v podrobnostech o různých scénářích cloudových prostředků. Seznamte se také s [úvodem do zabezpečení Azure](/azure/security/fundamentals/overview).

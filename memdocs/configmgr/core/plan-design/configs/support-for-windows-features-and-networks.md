@@ -10,12 +10,12 @@ ms.assetid: 0cf4bacb-6b6d-4d4f-8640-b13fe15873de
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 7e8e65571a3902661176ca3840690c159faef416
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 4f9266668a488b6331857bf860d874a48161fcd0
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81709618"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700210"
 ---
 # <a name="support-for-windows-features-and-networks-in-configuration-manager"></a>Podpora funkcí a sítí Windows v Configuration Manager
 
@@ -23,7 +23,7 @@ ms.locfileid: "81709618"
 
 Tento článek popisuje podporu Configuration Manager běžných funkcí pro Windows a sítě.  
 
-## <a name="branchcache"></a><a name="bkmk_branchcache"></a>Služba  
+## <a name="branchcache"></a><a name="bkmk_branchcache"></a> Služba  
 
 Použijte Windows BranchCache s Configuration Manager, když ho povolíte v distribučních bodech, a nakonfigurujte klienty tak, aby ho používali v režimu distribuované mezipaměti.
 
@@ -49,13 +49,13 @@ Přidejte funkci **Windows BranchCache** na server systému lokality, který je 
 - Klienti, kteří můžou podporovat BranchCache, musí být nakonfigurované pro režim distribuované mezipaměti BranchCache.  
 - Aby bylo možné podporovat službu BranchCache, musí být u nastavení klienta služby BITS povolena nastavení operačního systému.  
 
-Informace najdete v tématu [Konfigurace klientů pro službu BranchCache](https://docs.microsoft.com/windows/deployment/update/waas-branchcache#configure-clients-for-branchcache) v dokumentaci k systému Windows.
+Informace najdete v tématu [Konfigurace klientů pro službu BranchCache](/windows/deployment/update/waas-branchcache#configure-clients-for-branchcache) v dokumentaci k systému Windows.
 
 Configuration Manager všechny podporované verze Windows podporují službu BranchCache ve výchozím nastavení.
 
-Další informace najdete v tématu Služba [BranchCache pro systém Windows](https://docs.microsoft.com/windows-server/networking/branchcache/branchcache) v dokumentaci k Windows serveru.  
+Další informace najdete v tématu Služba [BranchCache pro systém Windows](/windows-server/networking/branchcache/branchcache) v dokumentaci k Windows serveru.  
 
-## <a name="computers-in-workgroups"></a><a name="bkmk_Workgroups"></a>Počítače v pracovních skupinách  
+## <a name="computers-in-workgroups"></a><a name="bkmk_Workgroups"></a> Počítače v pracovních skupinách  
 
 Configuration Manager poskytuje podporu pro klienty v pracovních skupinách.  
 
@@ -64,7 +64,7 @@ Configuration Manager poskytuje podporu pro klienty v pracovních skupinách.
 > [!NOTE]
 > I když jsou klienti v pracovních skupinách podporováni, všechny systémy lokalit musí být členy podporované domény služby Active Directory.  
 
-## <a name="data-deduplication"></a><a name="bkmmk_datadedup"></a>Odstranění duplicitních dat
+## <a name="data-deduplication"></a><a name="bkmmk_datadedup"></a> Odstranění duplicitních dat
 
 Configuration Manager podporuje použití odstranění duplicitních dat s distribučními body v systému Windows Server 2012 nebo novějším.
 
@@ -75,9 +75,9 @@ Další informace najdete v následujících příspěvcích:
 
 - [Configuration Manager distribuční body a odstranění duplicitních dat Windows serveru 2012](https://techcommunity.microsoft.com/t5/configuration-manager-archive/configuration-manager-distribution-points-and-windows-server/ba-p/273385) na blogu týmu Configuration Manager
 
-- [Přehled odstranění duplicitních dat](https://docs.microsoft.com/windows-server/storage/data-deduplication/overview) v dokumentaci k Windows serveru
+- [Přehled odstranění duplicitních dat](/windows-server/storage/data-deduplication/overview) v dokumentaci k Windows serveru
 
-## <a name="directaccess"></a><a name="bkmk_DA"></a>DirectAccess  
+## <a name="directaccess"></a><a name="bkmk_DA"></a> DirectAccess  
 
 Configuration Manager podporuje funkci DirectAccess pro komunikaci mezi klienty a systémy serveru lokality.  
 
@@ -93,11 +93,11 @@ Configuration Manager nepodporuje u technologie DirectAccess následující funk
 
 - Komunikace mezi Configuration Managermi servery systému lokality v rámci lokality  
 
-## <a name="dual-boot-computers"></a><a name="bkmk_dualboot"></a>Počítače s více operačními systémy  
+## <a name="dual-boot-computers"></a><a name="bkmk_dualboot"></a> Počítače s více operačními systémy  
 
 Configuration Manager nemůže spravovat více než jeden operační systém v jednom počítači. Pokud je v počítači k dispozici více než jeden operační systém, upravte metody zjišťování lokality a instalace klienta, aby se zajistilo, že je klient Configuration Manager nainstalován pouze v operačním systému, který má být spravován.  
 
-## <a name="ipv6"></a><a name="bkmk_IPv6"></a>Protokolů  
+## <a name="ipv6"></a><a name="bkmk_IPv6"></a> Protokolů  
 
 Kromě Internet Protocol verze 4 (IPv4) Configuration Manager podporuje Internet Protocol verze 6 (IPv6), s následujícími výjimkami:  
 
@@ -111,11 +111,11 @@ Kromě Internet Protocol verze 4 (IPv4) Configuration Manager podporuje Internet
 |Komunikace s proxy probuzením|K podpoře klientských balíčků proxy probuzení je nutný protokol IPv4.|  
 |Windows CE|K podpoře Configuration Manager klienta na systém Windows CE zařízeních je vyžadován protokol IPv4.|  
 
-## <a name="network-address-translation"></a><a name="bkmk_NAT"></a>Překlad síťových adres  
+## <a name="network-address-translation"></a><a name="bkmk_NAT"></a> Překlad síťových adres  
 
 Překlad síťových adres (NAT) není v Configuration Manager podporován, pokud lokalita nepodporuje klienty, kteří jsou na internetu, a klient zjistí, že je připojen k Internetu. Další informace o internetové správě klientů najdete v tématu [Plánování správy internetových klientů](../../clients/manage/plan-internet-based-client-management.md).  
 
-## <a name="specialized-storage-technology"></a><a name="bkmk_storage"></a>Specializovaná technologie úložiště  
+## <a name="specialized-storage-technology"></a><a name="bkmk_storage"></a> Specializovaná technologie úložiště  
 
 Configuration Manager funguje s veškerým hardwarem, který je v seznamu kompatibilního hardwaru systému Windows certifikovaný pro verzi operačního systému, na kterém je nainstalovaná součást Configuration Manager.
 
@@ -129,4 +129,4 @@ Role serveru lokality vyžadují systém souborů NTFS, aby Configuration Manage
 
      Kromě toho není podpora mezipaměti klienta Configuration Manager podporována na svazku s povolenou funkcí SIS.  
 
-- **Vyměnitelná disková jednotka**: Configuration Manager nepodporuje instalaci Configuration Manager systémů lokality nebo klientů na vyměnitelnou diskovou jednotku.  
+- **Vyměnitelná disková jednotka**: Configuration Manager nepodporuje instalaci Configuration Manager systémů lokality nebo klientů na vyměnitelnou diskovou jednotku.

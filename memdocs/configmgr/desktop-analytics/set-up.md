@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: a90f3260782f08fdf8f7424a95e09b34e38e97d3
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: facfb2be1972933524c7ad632537fc8306939c1c
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268143"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700748"
 ---
 # <a name="how-to-set-up-desktop-analytics"></a>Jak nastavit analýzu plochy
 
@@ -39,7 +39,7 @@ Pomocí tohoto postupu se můžete přihlásit k portálu Analytics a nakonfigur
 
         Pokud tuto možnost nevyberete, bude aplikace Desktop Analytics stále přidávat uživatele jako členy skupiny zabezpečení. **Globální správce** musí ručně přiřadit roli **správce Desktop Analytics** pro uživatele.
 
-        Další informace o přiřazení oprávnění role správce v Azure Active Directory a oprávnění přiřazená **správcům Desktop Analytics**najdete v tématu [oprávnění role správce v Azure Active Directory](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles).  
+        Další informace o přiřazení oprávnění role správce v Azure Active Directory a oprávnění přiřazená **správcům Desktop Analytics**najdete v tématu [oprávnění role správce v Azure Active Directory](/azure/active-directory/users-groups-roles/directory-assign-admin-roles).  
 
     - Pro vytváření a správu pracovních prostorů a plánů nasazení v nástroji Desktop Analytics předkonfiguruje skupinu zabezpečení **vlastníci pracovního prostoru** v Azure Active Directory.
 
@@ -82,4 +82,4 @@ Azure Portal zobrazuje **domovskou** stránku nástroje Desktop Analytics.
 
 Přejděte k dalšímu článku a připojte se Configuration Manager k Desktop Analytics.
 > [!div class="nextstepaction"]  
-> [Připojení správce konfigurací](connect-configmgr.md)  
+> [Připojení správce konfigurací](connect-configmgr.md)

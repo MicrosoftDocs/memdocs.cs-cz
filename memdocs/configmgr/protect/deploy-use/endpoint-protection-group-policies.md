@@ -1,5 +1,5 @@
 ---
-title: Správa Endpoint Protection pomocí zásad skupiny
+title: Správa řešení Endpoint Protection pomocí zásad skupiny
 titleSuffix: Configuration Manager
 description: Naučte se spravovat Endpoint Protection pomocí zásad skupiny.
 ms.date: 08/05/2020
@@ -10,12 +10,12 @@ ms.assetid: e63f2394-6eb1-4a33-bec5-8377fc62a34e
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 6c43ca9e1007c62835015a8c26a478af7da34ebb
-ms.sourcegitcommit: c1afc8abd0d7da48815bd2b0e45147774c72c2df
+ms.openlocfilehash: d028dc6149ae1fee2d61634b96ccf450fc8f4b24
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87820005"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700595"
 ---
 # <a name="use-group-policy-settings-to-manage-endpoint-protection-in-previous-versions-of-windows"></a>Použití nastavení Zásady skupiny pro správu Endpoint Protection v předchozích verzích Windows
 
@@ -42,7 +42,7 @@ V těchto zařízeních můžete spravovat Endpoint Protection pomocí nastaven�
     - [Místní zařízení](#load-endpoint-protection-group-policy-settings-into-your-local-device)
 
 > [!NOTE]
-> Informace o tom, jak pomocí nastavení Zásady skupiny spravovat antivirovou ochranu v programu Microsoft Defender ve Windows 10, Windows Server 2019 a Windows Server 2016, najdete v tématu [použití zásady skupiny nastavení ke konfiguraci a správě antivirové ochrany v programu Microsoft Defender](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-antivirus/use-group-policy-microsoft-defender-antivirus).
+> Informace o tom, jak pomocí nastavení Zásady skupiny spravovat antivirovou ochranu v programu Microsoft Defender ve Windows 10, Windows Server 2019 a Windows Server 2016, najdete v tématu [použití zásady skupiny nastavení ke konfiguraci a správě antivirové ochrany v programu Microsoft Defender](/windows/security/threat-protection/microsoft-defender-antivirus/use-group-policy-microsoft-defender-antivirus).
 
 ## <a name="copy-endpoint-protection-policy-definitions"></a>Kopírování definic zásad Endpoint Protection
 
@@ -75,7 +75,7 @@ Pokud používáte [centrální úložiště pro Zásady skupiny šablony pro sp
     
     kde **DC** je název vašeho řadiče domény a **contoso.com** je vaše doména.
 
-3. Otevřete [Konzola pro správu zásad skupiny](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/group-policy-and-group-policy-mgmt-console-ie11) a v doméně vytvořte nový objekt Zásady skupiny (GPO), například **Endpoint Protection**.
+3. Otevřete [Konzola pro správu zásad skupiny](/internet-explorer/ie11-deploy-guide/group-policy-and-group-policy-mgmt-console-ie11) a v doméně vytvořte nový objekt Zásady skupiny (GPO), například **Endpoint Protection**.
 4. Klikněte pravým tlačítkem na objekt zásad skupiny pro Endpoint Protection a klikněte na **Upravit**.
 5. V Editor pro správu zásad skupiny jděte do části zásady **Konfigurace počítače**  >  **Policies**  >  **šablony pro správu: definice zásad**  >  **Windows**  >  **Endpoint Protection**.
 

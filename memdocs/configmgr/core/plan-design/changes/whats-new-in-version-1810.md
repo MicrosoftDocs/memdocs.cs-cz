@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 05a6950708da04effe230d0d5637c4e3bcedd7e6
-ms.sourcegitcommit: 8fc7f2864c5e3f177e6657b684c5f208d6c2a1b4
+ms.openlocfilehash: 04630815b3d10a232d7fc0eea50296062c823194
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88591577"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699836"
 ---
 # <a name="whats-new-in-version-1810-of-configuration-manager-current-branch"></a>Co je nového ve verzi 1810 Configuration Manager Current Branch
 
@@ -236,7 +236,7 @@ Další informace najdete v tématech o [vytváření aplikací](../../../apps/d
 ### <a name="task-sequence-support-of-windows-autopilot-for-existing-devices"></a>Podpora pořadí úkolů pro existující zařízení ve Windows autopilotu
 
 <!--3607717, fka 1358333-->
-[Windows autopilot pro stávající zařízení](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) je teď k dispozici ve Windows 10 verze 1809 nebo novější. Tato nová funkce umožňuje obnovení image a zřízení zařízení se systémem Windows 7 pro [uživatele se systémem Windows autopilot na základě](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven) jednoho nativního Configuration Managerho pořadí úloh.
+[Windows autopilot pro stávající zařízení](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) je teď k dispozici ve Windows 10 verze 1809 nebo novější. Tato nová funkce umožňuje obnovení image a zřízení zařízení se systémem Windows 7 pro [uživatele se systémem Windows autopilot na základě](/windows/deployment/windows-autopilot/user-driven) jednoho nativního Configuration Managerho pořadí úloh.
 
 Další informace najdete v tématu [Windows Autopilot pro existující zařízení](../../../../autopilot/existing-devices.md).
 
@@ -427,7 +427,7 @@ Pro nové nasazení už není potřeba místní požadavek na správu mobilních
 
 Kromě nových funkcí obsahuje tato verze také další změny, jako jsou opravy chyb. Další informace najdete v tématu [Souhrn změn v Configuration Manager aktuální větvi, verze 1810](https://support.microsoft.com/help/4482169).
 
-Další informace o změnách rutin prostředí Windows PowerShell pro Configuration Manager najdete v [poznámkách k verzi PowerShell verze 1810](https://docs.microsoft.com/powershell/sccm/1810-release-notes?view=sccm-ps).
+Další informace o změnách rutin prostředí Windows PowerShell pro Configuration Manager najdete v [poznámkách k verzi PowerShell verze 1810](/powershell/sccm/1810-release-notes?view=sccm-ps).
 
 V konzole nástroje je k dispozici následující kumulativní aktualizace (4488598) od 25. března 2019: [kumulativní aktualizace 2 pro Configuration Manager aktuální větev, verze 1810](https://support.microsoft.com/help/4488598). Tato náhrada nahrazuje předchozí kumulativní aktualizaci KB 4486457.
 
@@ -436,10 +436,10 @@ V konzole nástroje je k dispozici následující kumulativní aktualizace (4488
 
 K vyřešení konkrétních problémů jsou k dispozici následující další opravy hotfix:
 
-| ID | Title | Datum | V konzole |
+| ID | Nadpis | Datum | V konzole |
 |---------|---------|---------|---------|
-| [4487960](https://support.microsoft.com/help/4487960) | Certifikát konektoru Microsoft Intune se neobnovuje v Configuration Manager | 18. ledna 2019 | Yes |
-| [4490434](https://support.microsoft.com/help/4490434) | Duplicitní sloupce zjišťování uživatelů jsou vytvořeny v Configuration Manager | 22. února 2019 | Yes |
+| [4487960](https://support.microsoft.com/help/4487960) | Certifikát konektoru Microsoft Intune se neobnovuje v Configuration Manager | 18. ledna 2019 | Ano |
+| [4490434](https://support.microsoft.com/help/4490434) | Duplicitní sloupce zjišťování uživatelů jsou vytvořeny v Configuration Manager | 22. února 2019 | Ano |
 | [4490575](https://support.microsoft.com/help/4490575) | Instalace aktualizací přestanou reagovat nebo nikdy nezobrazuje doplňování v Configuration Manager verze 1810 | 22. února 2019 | Ano |
 
 

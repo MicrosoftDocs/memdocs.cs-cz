@@ -10,12 +10,12 @@ ms.assetid: c201be2a-692c-4d67-ac95-0a3afa5320fe
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d8f29ed1e3201da139daeaa1fadca739ff44dc8e
-ms.sourcegitcommit: 488db8a6ab272f5d639525d70718145c63d0de8f
+ms.openlocfilehash: 11649452012de33ef1e62007d71466d5a45c56ca
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86384940"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698601"
 ---
 # <a name="fundamental-concepts-for-content-management-in-configuration-manager"></a>Základní koncepty správy obsahu v nástroji Configuration Manager
 
@@ -110,13 +110,13 @@ K porovnání hlavních funkcí těchto technologií použijte následující ta
 
 | Funkce  | Sdílená &nbsp; mezipaměť  | &nbsp;Optimalizace doručení  | Služba BranchCache  |
 |---------|---------|---------|---------|
-| V různých podsítích | Ano | Ano | No |
+| V různých podsítích | Ano | Ano | Ne |
 | Omezení šířky pásma | Ano (bity) | Ano (nativní) | Ano (bity) |
 | Částečný obsah | Ano | Ano | Ano |
 | Velikost mezipaměti ovládacího prvku na disku | Ano | Ano | Ano |
 | Zjišťování zdrojů partnerského vztahu | Ruční (nastavení klienta) | Automaticky | Automaticky |
 | Rovnocenné zjišťování | Přes bod správy používající skupiny hranic | DO cloudové služby | To |
-| Přehledy | Řídicí panel zdrojů dat klienta | Řídicí panel zdrojů dat klienta | Řídicí panel zdrojů dat klienta |
+| Vytváření sestav | Řídicí panel zdrojů dat klienta | Řídicí panel zdrojů dat klienta | Řídicí panel zdrojů dat klienta |
 | Řízení využití sítě WAN | Skupiny hranic | DO GroupID | Pouze podsíť |
 | Podporovaný obsah | Veškerý obsah nástroje ConfigMgr | Aktualizace Windows, ovladače, aplikace pro Store | Veškerý obsah nástroje ConfigMgr |
 | Řízení pomocí zásad | Nastavení agenta klienta | Nastavení agenta klienta (částečně) | Nastavení agenta klienta |
@@ -132,7 +132,7 @@ K porovnání hlavních funkcí těchto technologií použijte následující ta
 
 ## <a name="branchcache"></a>Služba BranchCache
 
-[BranchCache](https://docs.microsoft.com/windows-server/networking/branchcache/branchcache) je technologie Windows. Klienti, kteří podporují službu BranchCache, stáhli nasazení, které nakonfigurujete pro BranchCache, a pak slouží jako zdroj obsahu pro jiné klienty s povolenou službou BranchCache.  
+[BranchCache](/windows-server/networking/branchcache/branchcache) je technologie Windows. Klienti, kteří podporují službu BranchCache, stáhli nasazení, které nakonfigurujete pro BranchCache, a pak slouží jako zdroj obsahu pro jiné klienty s povolenou službou BranchCache.  
 
 Máte například distribuční bod se systémem Windows Server 2012 nebo novějším a je nakonfigurován jako server BranchCache. Když první klient s povolenou službou BranchCache požaduje obsah z tohoto serveru, klient stáhne tento obsah a uloží ho do mezipaměti.  
 
@@ -145,9 +145,9 @@ Další informace najdete v tématu [Podpora služby Windows BranchCache](../con
 ## <a name="delivery-optimization"></a>Optimalizace doručení
 
 <!-- 1324696 -->
-Skupiny hranic Configuration Manager slouží k definování a regulaci distribuce obsahu napříč podnikovou sítí a vzdálenými pobočkami. [Optimalizace doručení Windows](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) je cloudová technologie peer-to-peer pro sdílení obsahu mezi zařízeními s Windows 10. Nakonfigurujte optimalizaci doručení pro použití skupin hranic při sdílení obsahu mezi partnerskými uzly. Nastavení klienta použije identifikátor skupiny hranic jako identifikátor skupiny Optimalizace doručení na klientovi. Když klient komunikuje s cloudovou službou Optimalizace doručení, používá tento identifikátor k vyhledání partnerských uzlů s obsahem. Další informace najdete v tématu Nastavení klienta [Optimalizace doručení](../../clients/deploy/about-client-settings.md#delivery-optimization) .
+Skupiny hranic Configuration Manager slouží k definování a regulaci distribuce obsahu napříč podnikovou sítí a vzdálenými pobočkami. [Optimalizace doručení Windows](/windows/deployment/update/waas-delivery-optimization) je cloudová technologie peer-to-peer pro sdílení obsahu mezi zařízeními s Windows 10. Nakonfigurujte optimalizaci doručení pro použití skupin hranic při sdílení obsahu mezi partnerskými uzly. Nastavení klienta použije identifikátor skupiny hranic jako identifikátor skupiny Optimalizace doručení na klientovi. Když klient komunikuje s cloudovou službou Optimalizace doručení, používá tento identifikátor k vyhledání partnerských uzlů s obsahem. Další informace najdete v tématu Nastavení klienta [Optimalizace doručení](../../clients/deploy/about-client-settings.md#delivery-optimization) .
 
-Optimalizace doručování je doporučená technologie pro optimalizaci doručování aktualizací Windows 10 souborů Expresní instalace pro aktualizace kvality Windows 10. Počínaje verzí 1910 je internetový přístup k cloudové službě Optimalizace doručení k disConfiguration Manager požadavek na využití funkce peer-to-peer. Informace o potřebných koncových bodech internetu najdete v tématu [Nejčastější dotazy k optimalizaci doručení](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions). Optimalizaci lze použít pro všechny aktualizace systému Windows. Další informace najdete v tématu [optimalizace doručování aktualizací Windows 10](../../../sum/deploy-use/optimize-windows-10-update-delivery.md).
+Optimalizace doručování je doporučená technologie pro optimalizaci doručování aktualizací Windows 10 souborů Expresní instalace pro aktualizace kvality Windows 10. Počínaje verzí 1910 je internetový přístup k cloudové službě Optimalizace doručení k disConfiguration Manager požadavek na využití funkce peer-to-peer. Informace o potřebných koncových bodech internetu najdete v tématu [Nejčastější dotazy k optimalizaci doručení](/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions). Optimalizaci lze použít pro všechny aktualizace systému Windows. Další informace najdete v tématu [optimalizace doručování aktualizací Windows 10](../../../sum/deploy-use/optimize-windows-10-update-delivery.md).
 
 
 ## <a name="microsoft-connected-cache"></a>Microsoft Connected Cache

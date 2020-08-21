@@ -10,12 +10,12 @@ ms.assetid: d09a82c6-bbd1-49ca-8ffe-e3ce87b85d33
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d035e6fbd776a03ce38a4cd0fc12755100b60c91
-ms.sourcegitcommit: 2aa97d1b6409575d731c706faa2bc093c2b298c4
+ms.openlocfilehash: 988a9c31fca8d06104ce317f4709ee990089d723
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82643246"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699139"
 ---
 # <a name="use-a-sql-server-cluster-for-the-site-database"></a>Použít cluster SQL Server pro databázi lokality
 
@@ -49,7 +49,7 @@ Pro SQL Server clustery s podporou převzetí služeb při selhání používan�
 
 
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 Pamatujte na následující požadavky:  
 
@@ -63,7 +63,7 @@ Pamatujte na následující požadavky:
 - Pro podporu ověřování protokolem Kerberos povolte komunikační protokol sítě **TCP/IP** pro síťové připojení každého uzlu SQL Server clusteru. Protokol **pojmenovaných kanálů** není povinný, ale dá se použít k řešení problémů s ověřováním protokolu Kerberos. Nastavení síťového protokolu se konfigurují v **SQL Server Configuration Manager**v části **SQL Server konfigurace sítě**.  
 
 - Při použití SQL Serverho clusteru pro databázi lokality jsou k dispozici konkrétní požadavky na certifikáty. Další informace najdete v následujících článcích:
-  - [Instalace certifikátu v konfiguraci clusteru s podporou převzetí služeb při selhání pro SQL Server](https://docs.microsoft.com/sql/database-engine/configure-windows/manage-certificates?view=sql-server-ver15#provision-failover-cluster-cert)
+  - [Instalace certifikátu v konfiguraci clusteru s podporou převzetí služeb při selhání pro SQL Server](/sql/database-engine/configure-windows/manage-certificates?view=sql-server-ver15#provision-failover-cluster-cert)
   - [Požadavky na certifikát PKI pro nástroj Configuration Manager](../../../plan-design/network/pki-certificate-requirements.md#BKMK_PKIcertificates_for_servers)
 
   > [!NOTE]
@@ -81,7 +81,7 @@ Vezměte v úvahu následující omezení:
 - Když zadáte cluster SQL Server, možnost určit jiné než výchozí umístění souborů pro databázi lokality není k dispozici.  
 
 
-### <a name="sms-provider"></a>SMS Provider
+### <a name="sms-provider"></a>poskytovatele serveru SMS
 
 Nemůžete nainstalovat instanci poskytovatele služby SMS na cluster SQL Server. Také se nepodporuje na počítači, který běží jako clusterovaný SQL Server uzel.  
 
@@ -97,11 +97,11 @@ Configuration Manager nepodporuje zálohování Data Protection Manager (DPM) pr
 
 
 
-## <a name="prepare-a-clustered-sql-server-instance"></a><a name="bkmk_prepare"></a>Příprava clusterované instance SQL Server  
+## <a name="prepare-a-clustered-sql-server-instance"></a><a name="bkmk_prepare"></a> Příprava clusterované instance SQL Server  
 
 Tady jsou hlavní úlohy, které je potřeba dokončit pro přípravu databáze lokality:
 
-- Vytvořte virtuální cluster SQL Serveru pro hostování databáze lokality ve stávajícím prostředí clusteru Windows Serveru. Konkrétní kroky pro instalaci a nastavení clusteru SQL Server naleznete v dokumentaci týkající se vaší verze SQL Server. Další informace najdete v tématu [Vytvoření nového clusteru s podporou převzetí služeb při selhání SQL Server](https://docs.microsoft.com/sql/sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup?view=sql-server-2017).  
+- Vytvořte virtuální cluster SQL Serveru pro hostování databáze lokality ve stávajícím prostředí clusteru Windows Serveru. Konkrétní kroky pro instalaci a nastavení clusteru SQL Server naleznete v dokumentaci týkající se vaší verze SQL Server. Další informace najdete v tématu [Vytvoření nového clusteru s podporou převzetí služeb při selhání SQL Server](/sql/sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup?view=sql-server-2017).  
 
 - Na každém počítači v clusteru SQL Server umístěte soubor do kořenové složky každé jednotky, kde nechcete, aby Configuration Manager instalovat součásti lokality. Pojmenujte soubor `NO_SMS_ON_DRIVE.SMS`. Ve výchozím nastavení Configuration Manager nainstaluje některé součásti na každý fyzický uzel, aby bylo možné podporovat operace, jako je zálohování.  
 
@@ -117,4 +117,4 @@ Chcete-li nainstalovat lokalitu, která používá clusterovanou databázi lokal
 - Na stránce **Informace o databázi** zadejte název virtuální instance clusteru SQL Serveru, která bude hostovat databázi lokality. Virtuální instance nahradí název počítače, na kterém běží SQL Server.  
 
     > [!IMPORTANT]  
-    > Když zadáte název instance virtuálního SQL Server clusteru, nezadávejte název virtuálního Windows serveru vytvořeného clusterem Windows serveru. Pokud použijete název virtuálního Windows serveru, databáze lokality se nainstaluje na místní pevný disk aktivního uzlu clusteru Windows serveru. To znemožňuje úspěšné převzetí služeb při selhání v případě, že tento uzel selže.  
+    > Když zadáte název instance virtuálního SQL Server clusteru, nezadávejte název virtuálního Windows serveru vytvořeného clusterem Windows serveru. Pokud použijete název virtuálního Windows serveru, databáze lokality se nainstaluje na místní pevný disk aktivního uzlu clusteru Windows serveru. To znemožňuje úspěšné převzetí služeb při selhání v případě, že tento uzel selže.

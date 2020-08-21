@@ -10,12 +10,12 @@ ms.assetid: 1fcc921f-085f-4b0b-9c53-1e0707211076
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f877de32c9915f91d1e2d7f2d90b9b40ab69df11
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: f6d3f6dbbbb407ee63eb8253cbf3ca740a10479c
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906578"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699785"
 ---
 # <a name="additional-information-about-privacy-for-configuration-manager"></a>Další informace o ochraně osobních údajů pro Configuration Manager
 
@@ -47,7 +47,7 @@ Další informace o úrovních a nastavení dat o využití najdete v tématu [D
 
 Konektor Log Analytics synchronizuje data, jako jsou kolekce, od Configuration Manager až po cloudovou službu Azure. ID a tajný klíč předplatného Azure jsou uložené v databázi Configuration Manager, když správce tuto funkci nakonfiguruje. Azure Active Directory tajný klíč klienta i sdílený klíč v pracovním prostoru Azure jsou uložené v místní databázi Configuration Manager. Veškerá komunikace mezi Configuration Manager a Azure používá protokol HTTPS. Společnosti Microsoft neposkytují žádné další informace o kolekcích mimo náhodné diagnostiky a data o využití. 
 
-Další informace o informacích, které Log Analytics shromažďuje, najdete v tématu [zabezpečení dat Log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-data-security).
+Další informace o informacích, které Log Analytics shromažďuje, najdete v tématu [zabezpečení dat Log Analytics](/azure/log-analytics/log-analytics-data-security).
 
 
 

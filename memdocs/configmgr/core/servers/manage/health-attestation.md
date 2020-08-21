@@ -10,23 +10,23 @@ ms.assetid: 91f9de33-b277-4500-acd6-e7d90a2947c9
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: ed155fb61491a273732ed3b974b6ddb5ac29bc89
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 4d57be201274c347e5dcd492734b2141c64d579b
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82904001"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700006"
 ---
 # <a name="health-attestation-for-configuration-manager"></a>Ověření stavu pro Configuration Manager
 
 *Platí pro: Configuration Manager (Current Branch)*
 
-Správci mohou zobrazit stav [Ověření stavu zařízení s Windows 10](https://docs.microsoft.com/windows/security/threat-protection/protect-high-value-assets-by-controlling-the-health-of-windows-10-based-devices) v konzole nástroje Configuration Manager.  Ověření stavu zařízení umožňuje správcům zajistit, že klientské počítače mají následující důvěryhodné konfigurace systému BIOS, čipu TPM a spouštěcího softwaru:  
+Správci mohou zobrazit stav [Ověření stavu zařízení s Windows 10](/windows/security/threat-protection/protect-high-value-assets-by-controlling-the-health-of-windows-10-based-devices) v konzole nástroje Configuration Manager.  Ověření stavu zařízení umožňuje správcům zajistit, že klientské počítače mají následující důvěryhodné konfigurace systému BIOS, čipu TPM a spouštěcího softwaru:  
 
 -   Antimalware s raným spuštěním – Antimalware s raným spuštěním (ELAM) chrání počítač při spuštění a před inicializací ovladačů jiných výrobců. [Zapnutí ELAM](https://gallery.technet.microsoft.com/How-to-turn-on-Early-84552ec5)  
 -   BitLocker – Windows BitLocker Drive Encryption je software, který umožňuje šifrování všech dat uložených na svazku operačního systému Windows.  [Zapnutí nástroje BitLocker](https://gallery.technet.microsoft.com/How-to-turn-on-BitLocker-34294d3d)  
--   Zabezpečené spouštění – Zabezpečené spuštění je bezpečnostní standard vyvinutý členy počítačového průmyslu, který pomáhá zabezpečit, že váš počítač při spouštění použije pouze software, který je důvěryhodný pro výrobce počítačů. [Další informace o Zabezpečeném spouštění](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/hh824987(v=win.10))  
--   Integrita kódu – Integrita kódu je funkce, která zvyšuje zabezpečení operačního systému tím, že ověří integritu souboru ovladače nebo systémového souboru pokaždé, když je načten do paměti. [Další informace o Integritě kódu](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd348642(v=ws.10))  
+-   Zabezpečené spouštění – Zabezpečené spuštění je bezpečnostní standard vyvinutý členy počítačového průmyslu, který pomáhá zabezpečit, že váš počítač při spouštění použije pouze software, který je důvěryhodný pro výrobce počítačů. [Další informace o Zabezpečeném spouštění](/previous-versions/windows/it-pro/windows-8.1-and-8/hh824987(v=win.10))  
+-   Integrita kódu – Integrita kódu je funkce, která zvyšuje zabezpečení operačního systému tím, že ověří integritu souboru ovladače nebo systémového souboru pokaždé, když je načten do paměti. [Další informace o Integritě kódu](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd348642(v=ws.10))  
 
 Tato funkce je dostupná pro osobní počítače a místní prostředky spravované nástrojem Configuration Manager, a pro mobilní zařízení spravované pomocí Microsoft Intune. Správci mohou určit, zda má vytváření sestav probíhat přes cloudovou nebo místní infrastrukturu. Místní monitorování ověření stavu zařízení umožňuje správcům monitorovat klientské počítače bez přístupu k Internetu.
 
@@ -34,7 +34,7 @@ Tato funkce je dostupná pro osobní počítače a místní prostředky spravova
 
  **Požadavků**  
 
--   Klientská zařízení se systémem Windows 10 verze 1607 nebo Windows Server 2016 verze 1607 s [povoleným ověření stavu zařízení](https://docs.microsoft.com/windows-server/security/device-health-attestation).
+-   Klientská zařízení se systémem Windows 10 verze 1607 nebo Windows Server 2016 verze 1607 s [povoleným ověření stavu zařízení](/windows-server/security/device-health-attestation).
 -   Zařízení s povoleným čipem TPM 1,2 nebo TPM 2
 -   Pokud používáte správu cloudu, komunikace mezi Configuration Manager klientským agentem a bodem správy s *has.spserv.Microsoft.com* (port 443) služba ověření stavu (cloudová správa). Pokud je místní, klient musí být schopný komunikovat s bodem správy s povoleným ověřením stavu zařízení.
 

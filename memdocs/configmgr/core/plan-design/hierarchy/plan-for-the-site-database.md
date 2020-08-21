@@ -10,12 +10,12 @@ ms.assetid: 104fb4cc-6e83-40a3-8e6b-ac909fb9ec7d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a32f0a59a0b3ce3ad864fecf61fe7281b8ebbdd2
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 068511c5b3b0c15eb355c484b241a76d9dd512e2
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81720811"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700176"
 ---
 # <a name="plan-for-the-site-database-for-configuration-manager"></a>Plánování databáze lokality pro Configuration Manager
 
@@ -31,7 +31,7 @@ Server databáze lokality je počítač, na kterém běží podporovaná verze M
 
 -  Pro použití skupiny dostupnosti bez SQL musí být model obnovení databáze nastaven na hodnotu jednoduché.  
 
-Další informace o režimech obnovení SQL najdete v [modelech obnovení (SQL Server)](https://docs.microsoft.com/sql/relational-databases/backup-restore/recovery-models-sql-server).
+Další informace o režimech obnovení SQL najdete v [modelech obnovení (SQL Server)](/sql/relational-databases/backup-restore/recovery-models-sql-server).
 
 K hostování databáze lokality můžou být použité následující konfigurace SQL Serveru:  
 
@@ -61,4 +61,4 @@ Pokud používáte počítač se vzdáleným databázovým serverem, ujistěte s
 -   Klastrovaný SQL Server nemůžete používat pro databázový server lokality, pokud se databáze lokality nachází na stejném místě jako server lokality.  
 
 
-Server systému lokality obvykle podporuje role systému lokality pouze z jedné Configuration Manager lokality. K hostování databáze z různých Configuration Manager lokalit ale můžete použít různé instance SQL Server, na clusterovaných nebo neclusterovaných serverech, které používají SQL Server. K podpoře databází z různých lokalit musíte nakonfigurovat jednotlivé instance SQL Serveru tak, aby ke komunikaci používaly odlišné porty.  
+Server systému lokality obvykle podporuje role systému lokality pouze z jedné Configuration Manager lokality. K hostování databáze z různých Configuration Manager lokalit ale můžete použít různé instance SQL Server, na clusterovaných nebo neclusterovaných serverech, které používají SQL Server. K podpoře databází z různých lokalit musíte nakonfigurovat jednotlivé instance SQL Serveru tak, aby ke komunikaci používaly odlišné porty.

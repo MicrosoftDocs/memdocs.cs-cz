@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
 ROBOTS: NOINDEX
-ms.openlocfilehash: 18e703691696a2cfc02a5b9715fb6062360229e2
-ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
+ms.openlocfilehash: 63aba639eea221c3a13f7ebeabaa1b96a8439a72
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85353458"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700765"
 ---
 # <a name="ready-for-modern-desktop-retirement-faq"></a>Nejčastější dotazy k vyřazení moderních desktopových prostředí
 
@@ -49,10 +49,10 @@ Mnohé zákazníky mají problémy s načtením a aktuálností v systému Windo
 
 *Připravený pro moderní adresář desktopových* řešení, která jsou podporovaná a používána na komerčních zařízeních s Windows 10 a Office 365 ProPlus. Tento adresář pomáhá vedoucím IT, kteří berou v úvahy o nejnovějších verzích Windows 10 a Office 365 pro jejich nasazení.
 
-Zpětná vazba od správců IT je, že chtějí tyto přehledy integrovat s nástroji, které už používají k naplánování plánů nasazení. Pomocí funkcí [Desktop Analytics](https://aka.ms/dadocs) a [připravenosti sady Office 365 proplus](https://docs.microsoft.com/deployoffice/readiness-tools#office-365-proplus-readiness-features-in-configuration-manager-current-branch) v Configuration Manager můžete plánovat a spravovat projekty Windows 10 a Office 365 ProPlus upgrade. 
+Zpětná vazba od správců IT je, že chtějí tyto přehledy integrovat s nástroji, které už používají k naplánování plánů nasazení. Pomocí funkcí [Desktop Analytics](https://aka.ms/dadocs) a [připravenosti sady Office 365 proplus](/deployoffice/readiness-tools#office-365-proplus-readiness-features-in-configuration-manager-current-branch) v Configuration Manager můžete plánovat a spravovat projekty Windows 10 a Office 365 ProPlus upgrade. 
 
 > [!Note]
-> Od 21. dubna 2020 se sada Office 365 ProPlus přejmenovává na **Microsoft 365 aplikace pro podniky**. Další informace najdete v tématu [Změna názvu pro Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change). V konzole Configuration Manager se pořád zobrazují odkazy na starý název a podpůrná dokumentace, zatímco se konzola aktualizuje.
+> Od 21. dubna 2020 se sada Office 365 ProPlus přejmenovává na **Microsoft 365 aplikace pro podniky**. Další informace najdete v tématu [Změna názvu pro Office 365 ProPlus](/deployoffice/name-change). V konzole Configuration Manager se pořád zobrazují odkazy na starý název a podpůrná dokumentace, zatímco se konzola aktualizuje.
 
 ### <a name="what-is-desktop-analytics"></a>Co je Desktop Analytics?
 
@@ -114,12 +114,12 @@ Pokud vaše příkazy podpory nejsou správně přidruženy k assetům, obraťte
 
 Vyhodnoťte výkon svých řešení pomocí sestav stavů a metrik prostřednictvím centra pro vývojáře: 
 
-- [Windows Store](https://docs.microsoft.com/windows/uwp/publish/health-report)
-- [Plocha](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program)
-- [Doplňky pro Office](https://docs.microsoft.com/office/dev/store/update-unpublish-and-view-metrics) 
+- [Windows Store](/windows/uwp/publish/health-report)
+- [Plocha](/windows/desktop/appxpkg/windows-desktop-application-program)
+- [Doplňky pro Office](/office/dev/store/update-unpublish-and-view-metrics) 
 
 ### <a name="how-can-i-develop-compatible-assets-for-windows-10-and-office-365-proplus"></a>Jak můžu vyvíjet kompatibilní prostředky pro Windows 10 a Office 365 ProPlus?
 
 Ujistěte se, že vaše desktopové aplikace jsou teď kompatibilní a jsou v budoucnu kompatibilní s Windows 10. Další informace najdete v tématu [Kompatibilita aplikací pro vývojáře](https://developer.microsoft.com/windows/desktop/app-compatibility).
 
-Pokud vyvíjíte řešení pro Office 365 ProPlus, přečtěte si téma [osvědčené postupy vývoje pro Doplňky COM, VSTO a VBA v Office](https://docs.microsoft.com/visualstudio/vsto/development-best-practices-for-com-vsto-and-vba-add-ins-in-office).
+Pokud vyvíjíte řešení pro Office 365 ProPlus, přečtěte si téma [osvědčené postupy vývoje pro Doplňky COM, VSTO a VBA v Office](/visualstudio/vsto/development-best-practices-for-com-vsto-and-vba-add-ins-in-office).

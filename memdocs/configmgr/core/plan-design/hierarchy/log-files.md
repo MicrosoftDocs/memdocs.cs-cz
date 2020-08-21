@@ -10,12 +10,12 @@ ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7fa4fbc7cb4e66a1ad47cb0c14a5f7e52abb5bf5
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 1e24a7fe6a81408de48a73889db923cc8c5094ea
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88126422"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700544"
 ---
 # <a name="log-file-reference"></a>Referenční informace k protokolům
 
@@ -111,11 +111,11 @@ Následující části obsahují podrobné informace o různých souborech proto
 
   - [Server WSUS](#BKMK_WSUSLog)  
 
-## <a name="client-log-files"></a><a name="BKMK_ClientLogs"></a>Soubory protokolů klienta
+## <a name="client-log-files"></a><a name="BKMK_ClientLogs"></a> Soubory protokolů klienta
 
 V následujících oddílech jsou uvedeny soubory protokolu týkající se operací klienta a instalace klienta.  
 
-### <a name="client-operations"></a><a name="BKMK_ClientOpLogs"></a>Klientské operace
+### <a name="client-operations"></a><a name="BKMK_ClientOpLogs"></a> Klientské operace
 
 Následující tabulka uvádí soubory protokolů, které se nacházejí v klientovi Configuration Manager.  
 
@@ -189,7 +189,7 @@ Následující tabulka uvádí soubory protokolů, které se nacházejí v klien
 |wakeprxy-install.log|Zaznamenává informace o instalaci, když klienti obdrží možnost nastavení klienta zapnout proxy probuzení.|  
 |wakeprxy-uninstall.log|Zaznamenává informace o odinstalování proxy probuzení, když klienti obdrží možnost nastavení klienta pro vypnutí proxy probuzení, pokud byl proxy probuzení dříve zapnutý.|  
 
-### <a name="client-installation"></a><a name="BKMK_ClientInstallLog"></a>Instalace klienta
+### <a name="client-installation"></a><a name="BKMK_ClientInstallLog"></a> Instalace klienta
 
 Následující tabulka uvádí soubory protokolů, které obsahují informace týkající se instalace klienta Configuration Manager.  
 
@@ -200,7 +200,7 @@ Následující tabulka uvádí soubory protokolů, které obsahují informace t�
 |CcmRepair.log|Zaznamenává činnosti oprav agenta klienta.|  
 |client.msi.log|Zaznamenává úlohy instalace, které provádí client.msi. Lze použít k odstraňování problémů instalace nebo odebrání klienta.|  
 
-### <a name="client-for-linux-and-unix"></a><a name="BKMK_LogFilesforLnU"></a>Klient pro systémy Linux a UNIX
+### <a name="client-for-linux-and-unix"></a><a name="BKMK_LogFilesforLnU"></a> Klient pro systémy Linux a UNIX
 
 > [!Important]  
 > Počínaje verzí 1902 Configuration Manager nepodporuje klienty se systémy Linux a UNIX.
@@ -219,7 +219,7 @@ Klient Configuration Manager pro systémy Linux a UNIX zaznamenává informace v
 
 Oba soubory protokolu podporují několik úrovní protokolování:  
 
-- **scxcm. log**. Pokud chcete změnit úroveň protokolu, upravte **/opt/Microsoft/ConfigMgr/etc/scxcm.conf** a změňte každou instanci značky **Module** na požadovanou úroveň protokolu:  
+- **scxcm. log**. Pokud chcete změnit úroveň protokolu, upravte **/opt/Microsoft/ConfigMgr/etc/scxcm.conf** a změňte každou instanci značky  **Module** na požadovanou úroveň protokolu:  
 
   - Chyba: označuje problémy, které vyžadují pozornost.  
 
@@ -239,7 +239,7 @@ Oba soubory protokolu podporují několik úrovní protokolování:
 
 Za normálních provozních podmínek použijte úroveň protokolu chyb. Tato úroveň protokolu vytvoří nejmenší soubor protokolu. Protože se úroveň protokolu zvyšuje z chyby na upozornění, informace a následně trasování, je vytvořen větší soubor protokolu, protože do souboru se zapisují další data.  
 
-#### <a name="manage-log-files-for-the-linux-and-unix-client"></a><a name="BKMK_ManageLinuxLogs"></a>Správa souborů protokolu pro klienta se systémy Linux a UNIX
+#### <a name="manage-log-files-for-the-linux-and-unix-client"></a><a name="BKMK_ManageLinuxLogs"></a> Správa souborů protokolu pro klienta se systémy Linux a UNIX
 
 Klient pro systémy Linux a UNIX neomezuje maximální velikost souborů protokolu klienta. Také automaticky nekopíruje obsah svých souborů. log do jiného souboru, například do souboru. lo_. Pokud chcete řídit maximální velikost souborů protokolu, implementujte proces pro správu souborů protokolu nezávisle na klientovi Configuration Manager pro systémy Linux a UNIX.  
 
@@ -247,7 +247,7 @@ Například můžete použít standardní příkaz systému Linux a UNIX **logro
 
 Informace o příkazu **logrotate** najdete v dokumentaci pro distribuce operačních systémů Linux a UNIX, které používáte.  
 
-### <a name="client-for-mac-computers"></a><a name="BKMK_LogfilesforMac"></a>Klient pro počítače Mac
+### <a name="client-for-mac-computers"></a><a name="BKMK_LogfilesforMac"></a> Klient pro počítače Mac
 
 Klient Configuration Manager pro počítače Mac zaznamenává informace v následujících protokolových souborech v počítači Mac:  
 
@@ -260,11 +260,11 @@ Klient Configuration Manager pro počítače Mac zaznamenává informace v násl
 
 Soubor protokolu **SMS_DM. log** na serveru systému lokality zaznamenává komunikaci mezi počítači Mac a bodem správy, který je nastaven pro mobilní zařízení a počítače se systémem Mac.  
 
-## <a name="server-log-files"></a><a name="BKMK_ServerLogs"></a>Soubory protokolu serveru
+## <a name="server-log-files"></a><a name="BKMK_ServerLogs"></a> Soubory protokolu serveru
 
 V následujících oddílech jsou uvedeny soubory protokolů, které jsou na serveru lokality nebo které souvisejí s konkrétními rolemi systému lokality.  
 
-### <a name="site-server-and-site-systems"></a><a name="BKMK_SiteSiteServerLog"></a>Server lokality a systémy lokality
+### <a name="site-server-and-site-systems"></a><a name="BKMK_SiteSiteServerLog"></a> Server lokality a systémy lokality
 
 Následující tabulka uvádí soubory protokolů, které jsou na serveru Configuration Manager lokality a na serverech systému lokality.  
 
@@ -353,7 +353,7 @@ Následující tabulka uvádí soubory protokolů, které jsou na serveru Config
 |swmproc.log|Zaznamenává zpracování souborů a nastavení měření.|Server lokality|
 |UXAnalyticsUploadWorker. log|Zaznamenává nahrávání dat do služby pro službu Endpoint Analytics.|Server lokality|
 
-### <a name="site-server-installation"></a><a name="BKMK_SiteInstallLog"></a>Instalace serveru lokality
+### <a name="site-server-installation"></a><a name="BKMK_SiteInstallLog"></a> Instalace serveru lokality
 
 Následující tabulka uvádí protokolové soubory, které obsahují informace týkající se instalace lokality.  
 
@@ -365,7 +365,7 @@ Následující tabulka uvádí protokolové soubory, které obsahují informace 
 |SMS_BOOTSTRAP.log|Zaznamenává informace o průběhu spuštění procesu instalace sekundární lokality. Informace o aktuálním procesu instalace jsou obsažené v souboru ConfigMgrSetup.log.|Server lokality|  
 |smstsvc.log|Zaznamenává informace o instalaci, použití a odebrání služby systému Windows. Systém Windows používá tuto službu k testování připojení a oprávnění mezi servery. Používá počítačový účet serveru, který vytváří připojení.|Server lokality a server systému lokality|  
 
-### <a name="data-warehouse-service-point"></a><a name="BKMK_DataWarehouse"></a>Bod služby datového skladu
+### <a name="data-warehouse-service-point"></a><a name="BKMK_DataWarehouse"></a> Bod služby datového skladu
 
 Následující tabulka uvádí soubory protokolů, které obsahují informace týkající se bodu služby datového skladu.  
 
@@ -375,7 +375,7 @@ Následující tabulka uvádí soubory protokolů, které obsahují informace t�
 |DWSSSetup. log|Zaznamenává zprávy vygenerované instalací bodu služby datového skladu.|Server systému lokality|  
 |Microsoft.ConfigMgrDataWarehouse. log|Zaznamenává informace o synchronizaci dat mezi databází lokality a databází datového skladu.|Server systému lokality|  
 
-### <a name="fallback-status-point"></a><a name="BKMK_FSPLog"></a>Bod záložního stavu
+### <a name="fallback-status-point"></a><a name="BKMK_FSPLog"></a> Bod záložního stavu
 
 Následující tabulka uvádí protokolové soubory, které obsahují informace týkající se záložního stavového bodu.  
 
@@ -385,7 +385,7 @@ Následující tabulka uvádí protokolové soubory, které obsahují informace 
 |fspMSI.log|Zaznamenává zprávy vytvářené instalací záložního stavového bodu.|Server systému lokality|  
 |fspmgr.log|Zaznamenává činnosti role systému lokality záložního stavového bodu.|Server systému lokality|  
 
-### <a name="management-point"></a><a name="BKMK_MPLog"></a>Bod správy
+### <a name="management-point"></a><a name="BKMK_MPLog"></a> Bod správy
 
 Následující tabulka uvádí protokolové soubory, které obsahují informace týkající se bodu správy.  
 
@@ -415,7 +415,7 @@ Následující tabulka uvádí protokolové soubory, které obsahují informace 
 |MPSetup.log|Zaznamenává proces obálky instalace bodu správy.|Server lokality|  
 |Userservice předefinovala smazání. log|Zaznamenává požadavky uživatelů z centra softwaru, načítá nebo instaluje aplikace dostupné pro uživatele ze serveru.|Server systému lokality|
 
-### <a name="service-connection-point"></a><a name="BKMK_WITLog"></a>Bod připojení služby
+### <a name="service-connection-point"></a><a name="BKMK_WITLog"></a> Bod připojení služby
 
 Následující tabulka uvádí soubory protokolů, které obsahují informace týkající se spojovacího bodu služby.  
 
@@ -442,7 +442,7 @@ Následující tabulka uvádí soubory protokolů, které obsahují informace t�
 |SrvBoot.log|Zaznamenává údaje o službě instalačního programu spojovacího bodu služby.|Počítač se spojovacím bodem služby|  
 |Statesys.log|Zaznamenává zpracování zpráv správy mobilních zařízení.|Primární lokalita a lokalita centrální správy|  
 
-### <a name="software-update-point"></a><a name="BKMK_SUPLog"></a>Bod aktualizace softwaru
+### <a name="software-update-point"></a><a name="BKMK_SUPLog"></a> Bod aktualizace softwaru
 
 Následující tabulka uvádí soubory protokolů, které obsahují informace týkající se bodu aktualizace softwaru.  
 
@@ -459,11 +459,11 @@ Následující tabulka uvádí soubory protokolů, které obsahují informace t�
 |WUSSyncXML.log|Zaznamenává údaje týkající se nástroje inventáře pro proces synchronizace aktualizací od společnosti Microsoft.|Klientský počítač nakonfigurovaný jako hostitel synchronizace pro nástroj inventáře pro aktualizace od Microsoftu|  
 
 
-## <a name="log-files-by-functionality"></a><a name="BKMK_FunctionLogs"></a>Soubory protokolu podle funkcí
+## <a name="log-files-by-functionality"></a><a name="BKMK_FunctionLogs"></a> Soubory protokolu podle funkcí
 
 V následujících oddílech jsou uvedeny soubory protokolu týkající se funkcí Configuration Manager.  
 
-### <a name="application-management"></a><a name="BKMK_AppManageLog"></a>Správa aplikací
+### <a name="application-management"></a><a name="BKMK_AppManageLog"></a> Správa aplikací
 
 Následující tabulka uvádí soubory protokolů, které obsahují informace související se správou aplikací.  
 
@@ -503,7 +503,7 @@ Následující tabulka uvádí soubory protokolů, které obsahují informace so
 |colleval.log|Podrobnosti záznamu týkající se vytvoření, změny a odstranění kolekcí nástrojem Collection Evaluator.|Server lokality|  
 |execmgr.log|Zaznamenává údaje týkající se běžících balíčků a sekvencí úloh.|Klient|  
 
-### <a name="asset-intelligence"></a><a name="BKMK_AILog"></a>funkce Asset Intelligence
+### <a name="asset-intelligence"></a><a name="BKMK_AILog"></a> funkce Asset Intelligence
 
 Následující tabulka uvádí soubory protokolů, které obsahují informace související s funkcí Asset Intelligence.  
 
@@ -517,7 +517,7 @@ Následující tabulka uvádí soubory protokolů, které obsahují informace so
 |ManagedProvider.log|Zaznamenává údaje týkající se zjišťovacího softwaru s přidruženou identifikační softwarovou značkou. Zaznamenává také činnosti související s inventářem hardwaru.|Server systému lokality|  
 |MVLSImport.log|Zaznamenává údaje týkající se zpracování importovaných licenčních souborů.|Server systému lokality|  
 
-### <a name="backup-and-recovery"></a><a name="BKMK_BnRLog"></a>Zálohování a obnovení
+### <a name="backup-and-recovery"></a><a name="BKMK_BnRLog"></a> Zálohování a obnovení
 
 Následující tabulka uvádí soubory protokolů, které obsahují informace související s akcemi zálohování a obnovení, včetně resetování lokalit a změn u poskytovatele serveru SMS.  
 
@@ -528,7 +528,7 @@ Následující tabulka uvádí soubory protokolů, které obsahují informace so
 |smssqlbkup.log|Zaznamenává výstup z procesu zálohování databáze lokality, když je SQL Server nainstalována na serveru, který není serverem lokality.|Server databáze lokality|  
 |Smswriter.log|Zaznamenává informace o stavu Configuration Manager zapisovači VSS, který je používán procesem zálohování.|Server lokality|  
 
-### <a name="certificate-enrollment"></a><a name="BKMK_CertificateEnrollment"></a>Zápis certifikátu
+### <a name="certificate-enrollment"></a><a name="BKMK_CertificateEnrollment"></a> Zápis certifikátu
 
 V následující tabulce jsou uvedeny soubory protokolu Configuration Manager, které obsahují informace související s zápisem certifikátu. Zápis certifikátu používá bod registrace certifikátu a modul zásad Configuration Manager na serveru, na kterém je spuštěná služba zápisu síťových zařízení (NDES).  
 
@@ -553,7 +553,7 @@ Můžete taky použít následující soubory protokolů:
     > [!NOTE]  
     > Tento soubor se nachází ve složce pro profil účtu NDES, například v složce c:\users\scepsvc.. Další informace o tom, jak povolit protokolování NDES, najdete v části [Povolení protokolování](https://social.technet.microsoft.com/wiki/contents/articles/9063.active-directory-certificate-services-ad-cs-network-device-enrollment-service-ndes.aspx#Enable_Logging) na wikiwebu NDES.  
 
-### <a name="client-notification"></a><a name="BKMK_BGB"></a>Klientské oznámení
+### <a name="client-notification"></a><a name="BKMK_BGB"></a> Klientské oznámení
 
 Následující tabulka uvádí soubory protokolů, které obsahují informace související s klientským oznámením.  
 
@@ -572,7 +572,7 @@ Následující tabulka uvádí soubory protokolů, které obsahují informace so
 
 |Název protokolu|Popis|Počítač obsahující soubor protokolu|
 |--------------|-----------------|----------------------------|  
-|CloudMgr.log|Zaznamenává údaje o nasazení služby brány pro správu cloudu, stavu průběžné služby a k používání dat přidružených k této službě. Pokud chcete nakonfigurovat úroveň protokolování, upravte hodnotu **úrovně protokolování** v následujícím klíči registru:`HKLM\SOFTWARE\ Microsoft\SMS\COMPONENTS\ SMS_CLOUD_ SERVICES_MANAGER`|Složka *INSTALLDIR* na serveru primární lokality nebo CAS.|
+|CloudMgr.log|Zaznamenává údaje o nasazení služby brány pro správu cloudu, stavu průběžné služby a k používání dat přidružených k této službě. Pokud chcete nakonfigurovat úroveň protokolování, upravte hodnotu **úrovně protokolování** v následujícím klíči registru: `HKLM\SOFTWARE\ Microsoft\SMS\COMPONENTS\ SMS_CLOUD_ SERVICES_MANAGER`|Složka *INSTALLDIR* na serveru primární lokality nebo CAS.|
 |CMGSetup. log – <sup> [Poznámka 1](#bkmk_note1)</sup>|Zaznamenává údaje o druhé fázi nasazení brány pro správu cloudu (místní nasazení v Azure). Pokud chcete nakonfigurovat úroveň protokolování, použijte nastavení **úroveň trasování** (**informace** (výchozí), **verbose**, **Chyba**) na kartě **Konfigurace služby Azure portal\Cloud** .|**%AppRoot%\Logs** na serveru Azure nebo ve složce SMS/protokolů na serveru systému lokality|
 |CMGService. log – <sup> [Poznámka 1](#bkmk_note1)</sup>|Zaznamenává údaje o komponentě jádra služby brány pro správu cloudu v Azure. Pokud chcete nakonfigurovat úroveň protokolování, použijte nastavení **úroveň trasování** (**informace** (výchozí), **verbose**, **Chyba**) na kartě **Konfigurace služby Azure portal\Cloud** .|**%AppRoot%\Logs** na serveru Azure nebo ve složce SMS/protokolů na serveru systému lokality|
 |SMS_Cloud_ProxyConnector. log|Zaznamenává údaje týkající se nastavení připojení mezi službou brány pro správu cloudu a bodem připojení brány pro správu cloudu.|Server systému lokality|
@@ -582,11 +582,11 @@ Následující tabulka uvádí soubory protokolů, které obsahují informace so
 - Pro řešení potíží se stavem služby použijte **protokol CMGService. log** a **SMS_Cloud_ProxyConnector. log**.
 - Pro řešení potíží s klientskými přenosy použijte **protokol CMGHttpHandler. log**, **CMGService. log**a **SMS_Cloud_ProxyConnector. log**.
 
-#### <a name="note-1-logs-synchronized-from-azure"></a><a name="bkmk_note1"></a>Poznámka 1: protokoly synchronizované z Azure
+#### <a name="note-1-logs-synchronized-from-azure"></a><a name="bkmk_note1"></a> Poznámka 1: protokoly synchronizované z Azure
 
 Jedná se o místní soubory Configuration Manager protokolů, které Cloud Service Manager synchronizuje z Azure Storage každých pět minut. Brána pro správu cloudu každých pět minut připisuje protokoly do Azure Storage. Proto je maximální zpoždění 10 minut. Podrobné přepínače ovlivňují místní i vzdálené protokoly. Mezi skutečné názvy souborů patří název služby a identifikátor instance role. Například CMG-*ServiceName* - *RoleInstanceID*-CMGSetup. log
 
-### <a name="compliance-settings-and-company-resource-access"></a><a name="BKMK_CompSettingsLog"></a>Nastavení dodržování předpisů a přístup k prostředkům společnosti
+### <a name="compliance-settings-and-company-resource-access"></a><a name="BKMK_CompSettingsLog"></a> Nastavení dodržování předpisů a přístup k prostředkům společnosti
 
 Následující tabulka uvádí soubory protokolů, které obsahují informace související s nastavením dodržování předpisů a přístupem k prostředkům společnosti.  
 
@@ -598,7 +598,7 @@ Následující tabulka uvádí soubory protokolů, které obsahují informace so
 |DCMReporting.log|Zaznamenává informace o výsledcích platformy generování sestav služby Policy Platform do stavových zpráv pro položky konfigurace.|Klient|  
 |DcmWmiProvider.log|Zaznamenává informace o čtení syncletů ze položky konfigurace z rozhraní WMI.|Klient|  
 
-### <a name="configuration-manager-console"></a><a name="BKMK_ConsoleLog"></a>Konzola Configuration Manager
+### <a name="configuration-manager-console"></a><a name="BKMK_ConsoleLog"></a> Konzola Configuration Manager
 
 Následující tabulka uvádí soubory protokolů, které obsahují informace související s konzolou Configuration Manager.  
 
@@ -608,7 +608,7 @@ Následující tabulka uvádí soubory protokolů, které obsahují informace so
 |SmsAdminUI.log|Zaznamenává informace o operaci konzoly Configuration Manager.|Počítač se spuštěnou konzolou Configuration Manager|  
 |Smsprov.log|Zaznamenává aktivity poskytovatele serveru SMS. Configuration Manager aktivity konzoly používají poskytovatele serveru SMS.|Server lokality nebo server systému lokality|  
 
-### <a name="content-management"></a><a name="BKMK_ContentLog"></a>Správa obsahu
+### <a name="content-management"></a><a name="BKMK_ContentLog"></a> Správa obsahu
 
 Následující tabulka uvádí soubory protokolů, které obsahují informace související se správou obsahu.  
 
@@ -638,7 +638,7 @@ Soubory protokolu v klientovi Configuration Manager jsou v následujícím adres
 | M365AUploadWorker. log | Informace o shromažďování a nahrávání zařízení z Configuration Manager do cloudu Microsoftu |Spojovací bod služby|
 | SmsAdminUI.log | Informace o aktivitě konzoly Configuration Manager, jako je konfigurace Azure Cloud Services  |Spojovací bod služby|
 
-### <a name="discovery"></a><a name="BKMK_DiscoveryLog"></a>Rozpoznávání
+### <a name="discovery"></a><a name="BKMK_DiscoveryLog"></a> Rozpoznávání
 
 Následující tabulka uvádí soubory protokolů, které obsahují informace související se zjišťováním.  
 
@@ -652,7 +652,7 @@ Následující tabulka uvádí soubory protokolů, které obsahují informace so
 |InventoryAgent.log|Zaznamenává činnosti inventáře hardwaru, inventáře softwaru a akce zjišťování prezenčního signálu na klientovi.|Klient|  
 |netdisc.log|Zaznamenává akce funkce zjišťování sítě.|Server lokality|  
 
-### <a name="endpoint-analytics"></a><a name="bkmk_analytics"></a>Analýza koncových bodů
+### <a name="endpoint-analytics"></a><a name="bkmk_analytics"></a> Analýza koncových bodů
 
 |Název protokolu|Popis|Počítač obsahující soubor protokolu|  
 |--------------|-----------------|----------------------------|  
@@ -661,7 +661,7 @@ Následující tabulka uvádí soubory protokolů, které obsahují informace so
 |SensorEndpoint. log|Zaznamenává spuštění zásad služby Endpoint Analytics a odeslání klientských dat na server lokality.|Klient|
 |SensorManagedProvider. log|Zaznamenává shromažďování a zpracování událostí a informací pro službu Endpoint Analytics.|Klient|
 
-### <a name="endpoint-protection"></a><a name="BKMK_EPLog"></a>Endpoint Protection
+### <a name="endpoint-protection"></a><a name="BKMK_EPLog"></a> Endpoint Protection
 
 Následující tabulka uvádí soubory protokolů, které obsahují informace související s ochranou koncového bodu Endpoint Protection.  
 
@@ -672,7 +672,7 @@ Následující tabulka uvádí soubory protokolů, které obsahují informace so
 |EPMgr.log|Sleduje stav role systému lokality ochrany koncového bodu Endpoint Protection.|Server systému lokality|  
 |EPSetup.log|Poskytuje informace o instalaci role systému lokality ochrany koncového bodu Endpoint Protection.|Server systému lokality|  
 
-### <a name="extensions"></a><a name="BKMK_Extensions"></a>SND
+### <a name="extensions"></a><a name="BKMK_Extensions"></a> SND
 
 Následující tabulka uvádí soubory protokolů, které obsahují informace související s rozšířeními.  
 
@@ -682,7 +682,7 @@ Následující tabulka uvádí soubory protokolů, které obsahují informace so
 |FeatureExtensionInstaller.log|Zaznamenává informace o instalaci a odebrání jednotlivých rozšíření, pokud jsou povolené nebo zakázané v konzole Configuration Manager.|Počítač se spuštěnou konzolou Configuration Manager|  
 |SmsAdminUI.log|Zaznamenává činnost konzoly Configuration Manager.|Počítač se spuštěnou konzolou Configuration Manager|  
 
-### <a name="inventory"></a><a name="BKMK_InventoryLog"></a>Inventáře
+### <a name="inventory"></a><a name="BKMK_InventoryLog"></a> Inventáře
 
 Následující tabulka uvádí soubory protokolů, které obsahují informace související se zpracováním dat inventáře.  
 
@@ -692,7 +692,7 @@ Následující tabulka uvádí soubory protokolů, které obsahují informace so
 |invproc.log|Zaznamenává odesílání souborů MIF ze sekundární lokality do její nadřazené lokality.|Server sekundární lokality|  
 |sinvproc.log|Zaznamenává informace o zpracování dat inventáře softwaru do databáze lokality.|Server lokality|  
 
-### <a name="metering"></a><a name="BKMK_MeteringLog"></a>Měření
+### <a name="metering"></a><a name="BKMK_MeteringLog"></a> Měření
 
 Následující tabulka uvádí soubory protokolů, které obsahují informace související s měřením.  
 
@@ -702,7 +702,7 @@ Následující tabulka uvádí soubory protokolů, které obsahují informace so
 |SWMTRReportGen.log|Vygeneruje sestavu použití dat, která je shromažďována agentem měření. Tato data se protokolují v souboru Mtrmgr.log.|Klient|
 |swmproc.log|Zaznamenává zpracování souborů a nastavení měření.|Server lokality|
 
-### <a name="migration"></a><a name="BKMK_MigrationLog"></a>Migrace
+### <a name="migration"></a><a name="BKMK_MigrationLog"></a> Migrace
 
 Následující tabulka uvádí soubory protokolů, které obsahují informace související s migrací.  
 
@@ -710,11 +710,11 @@ Následující tabulka uvádí soubory protokolů, které obsahují informace so
 |--------------|-----------------|----------------------------|  
 |migmctrl.log|Zaznamenává informace o akcích migrace zahrnujících úlohy migrace, sdílené distribuční body a upgradování distribučních bodů.|Lokalita nejvyšší úrovně v hierarchii Configuration Manager a každá podřízená primární lokalita. V hierarchii vícenásobných primárních lokalit použijte protokolový soubor vytvořený v lokalitě centrální správy.|  
 
-### <a name="mobile-devices"></a><a name="BKMK_MDMLog"></a>Mobilní zařízení
+### <a name="mobile-devices"></a><a name="BKMK_MDMLog"></a> Mobilní zařízení
 
 V následujících oddílech jsou uvedeny soubory protokolů, které obsahují informace související se správou mobilních zařízení.  
 
-#### <a name="enrollment"></a><a name="BKMK_EnrollmentLog"></a>Registraci
+#### <a name="enrollment"></a><a name="BKMK_EnrollmentLog"></a> Registraci
 
 Následující tabulka uvádí protokoly, které obsahují informace související s registrací mobilních zařízení.  
 
@@ -729,7 +729,7 @@ Následující tabulka uvádí protokoly, které obsahují informace souvisejíc
 |enrollmentservice.log|Zaznamenává komunikaci mezi zprostředkujícím bodem registrace a bodem registrace.|Server systému lokality|  
 |SMS_DM.log|Zaznamenává komunikaci mezi mobilními zařízeními, počítači Mac a bodem správy, který je povolený pro mobilní zařízení a počítače Mac.|Server systému lokality|  
 
-#### <a name="exchange-server-connector"></a><a name="BKMK_ExchSrvLog"></a>Konektor systému Exchange Server
+#### <a name="exchange-server-connector"></a><a name="BKMK_ExchSrvLog"></a> Konektor systému Exchange Server
 
 Následující protokoly obsahují informace týkající se konektoru serveru Exchange Server.  
 
@@ -737,7 +737,7 @@ Následující protokoly obsahují informace týkající se konektoru serveru Ex
 |--------------|-----------------|----------------------------|  
 |easdisc.log|Zaznamenává aktivity a stav konektoru Exchange Serveru.|Server lokality|  
 
-#### <a name="mobile-device-legacy"></a><a name="BKMK_MDLegLog"></a>Starší mobilní zařízení
+#### <a name="mobile-device-legacy"></a><a name="BKMK_MDLegLog"></a> Starší mobilní zařízení
 
 Následující tabulka uvádí protokoly, které obsahují informace související se staršími mobilními zařízeními.  
 
@@ -762,7 +762,7 @@ Následující tabulka uvádí protokoly, které obsahují informace souvisejíc
 |DmSvc.log|Zaznamenává komunikaci klienta ze starších verzí klientů mobilních zařízení s bodem správy, který je povolený pro mobilní zařízení.|Klient|  
 |FspIsapi.log|Zaznamenává údaje o komunikacích se záložním stavovým bodem ze starších klientů a počítačů klientů mobilních zařízení.|Server systému lokality|  
 
-### <a name="os-deployment"></a><a name="BKMK_OSDLog"></a>Nasazení operačního systému
+### <a name="os-deployment"></a><a name="BKMK_OSDLog"></a> Nasazení operačního systému
 
 Následující tabulka uvádí soubory protokolů, které obsahují informace související s nasazením operačního systému.  
 
@@ -784,7 +784,7 @@ Následující tabulka uvádí soubory protokolů, které obsahují informace so
 |MP_ClientIDManager.log|Zaznamenává odezvy bodu správy na ID klienta, které sekvence úloh začínají z prostředí PXE nebo ze spouštěcích médií.|Server systému lokality|  
 |MP_DriverManager.log|Zaznamenává odezvy bodu správy na požadavky akce pořadí úloh pro automatické použití ovladačů.|Server systému lokality|  
 |OfflineServicingMgr.log|Zaznamenává údaje o plánech offline údržby a akcích použití aktualizací pro soubory ve formátu WIM (Windows Imaging Format) operačního systému.|Server systému lokality|  
-|Setupact.log|Podrobnosti záznamu týkající se nástroje Sysprep systému Windows a protokolů nastavení. Další informace najdete v tématu [soubory protokolu](https://docs.microsoft.com/windows/deployment/upgrade/log-files).|Klient|  
+|Setupact.log|Podrobnosti záznamu týkající se nástroje Sysprep systému Windows a protokolů nastavení. Další informace najdete v tématu [soubory protokolu](/windows/deployment/upgrade/log-files).|Klient|  
 |Setupapi.log|Podrobnosti záznamu týkající se nástroje Sysprep systému Windows a protokolů nastavení.|Klient|  
 |Setuperr.log|Podrobnosti záznamu týkající se nástroje Sysprep systému Windows a protokolů nastavení.|Klient|  
 |smpisapi.log|Zaznamenává údaje o akcích zachytávání a obnovy stavu klienta a o prahových informacích.|Klient|  
@@ -800,7 +800,7 @@ Následující tabulka uvádí soubory protokolů, které obsahují informace so
 |loadstate.log|Zaznamenává údaje o nástroji přenesení stavu uživatele (USMT) a obnově dat o stavu uživatele.|Klient|  
 |scanstate.log|Zaznamenává údaje o nástroji přenesení stavu uživatele (USMT) a zaznamenávání dat o stavu uživatele.|Klient|  
 
-### <a name="power-management"></a><a name="BKMK_PowerMgmtLog"></a>Řízení spotřeby
+### <a name="power-management"></a><a name="BKMK_PowerMgmtLog"></a> Řízení spotřeby
 
 Následující tabulka uvádí soubory protokolů, které obsahují informace související s řízením spotřeby.  
 
@@ -808,7 +808,7 @@ Následující tabulka uvádí soubory protokolů, které obsahují informace so
 |--------------|-----------------|----------------------------|  
 |pwrmgmt.log|Zaznamenává údaje o aktivitách řízení spotřeby na klientském počítači, včetně monitorování a vynucení nastavení klientským agentem pro řízení spotřeby.|Klient|  
 
-### <a name="remote-control"></a><a name="BKMK_RCLog"></a>Vzdálené řízení
+### <a name="remote-control"></a><a name="BKMK_RCLog"></a> Vzdálené řízení
 
 Následující tabulka uvádí soubory protokolů, které obsahují informace týkající se vzdáleného řízení.  
 
@@ -816,7 +816,7 @@ Následující tabulka uvádí soubory protokolů, které obsahují informace t�
 |--------------|-----------------|----------------------------|  
 |CMRcViewer.log|Zaznamenává údaje o aktivitě prohlížeče vzdáleného řízení.|V počítači, na kterém je spuštěný prohlížeč vzdáleného řízení, ve složce% Temp%.|  
 
-### <a name="reporting"></a><a name="BKMK_ReportLog"></a>Zpravodajský
+### <a name="reporting"></a><a name="BKMK_ReportLog"></a> Zpravodajský
 
 V následující tabulce jsou uvedeny soubory protokolu Configuration Manager, které obsahují informace související s vytvářením sestav.  
 
@@ -826,7 +826,7 @@ V následující tabulce jsou uvedeny soubory protokolu Configuration Manager, k
 |srsrpMSI.log|Zaznamenává podrobné výsledky procesu instalace bodu služeb generování sestav z výstupu MSI.|Server systému lokality|  
 |srsrpsetup.log|Zaznamenává výsledky procesu instalace bodu služeb generování sestav.|Server systému lokality|  
 
-### <a name="role-based-administration"></a><a name="BKMK_RBALog"></a>Správa na základě rolí
+### <a name="role-based-administration"></a><a name="BKMK_RBALog"></a> Správa na základě rolí
 
 Následující tabulka uvádí soubory protokolů, které obsahují informace související s řízením správy na základě rolí.  
 
@@ -835,7 +835,7 @@ Následující tabulka uvádí soubory protokolů, které obsahují informace so
 |hman.log|Zaznamenává informace o změnách konfigurace lokality a o publikování informací o lokalitě pro Active Directory Domain Services.|Server lokality|  
 |SMSProv.log|Zaznamenává přístup poskytovatele služby WMI k databázi lokality.|Počítač obsahující poskytovatele serveru SMS|  
 
-### <a name="software-metering"></a><a name="BKMK_MeteringLog"></a>Monitorování míry využívání softwaru
+### <a name="software-metering"></a><a name="BKMK_MeteringLog"></a> Monitorování míry využívání softwaru
 
 Následující tabulka uvádí soubory protokolů, které obsahují informace související s měřením softwaru.  
 
@@ -843,7 +843,7 @@ Následující tabulka uvádí soubory protokolů, které obsahují informace so
 |--------------|-----------------|----------------------------|  
 |mtrmgr.log|Monitoruje všechny procesy kontroly softwaru.|Server lokality|  
 
-### <a name="software-updates"></a><a name="BKMK_SU_NAPLog"></a>Aktualizace softwaru
+### <a name="software-updates"></a><a name="BKMK_SU_NAPLog"></a> Aktualizace softwaru
 
 Následující tabulka uvádí soubory protokolu, které obsahují informace týkající se aktualizací softwaru.  
 
@@ -871,7 +871,7 @@ Následující tabulka uvádí soubory protokolu, které obsahují informace tý
 |wsyncmgr.log|Zaznamenává údaje o procesu synchronizace aktualizací softwaru.|Server lokality|  
 |WUAHandler.log|Zaznamenává údaje o agentovi služby Windows Update u klienta při vyhledávání aktualizací softwaru.|Klient|  
 
-### <a name="wake-on-lan"></a><a name="BKMK_WOLLog"></a>Wake On LAN
+### <a name="wake-on-lan"></a><a name="BKMK_WOLLog"></a> Wake On LAN
 
 Následující tabulka uvádí soubory protokolů, které obsahují informace související s používáním Wake On LAN.  
 
@@ -883,7 +883,7 @@ Následující tabulka uvádí soubory protokolů, které obsahují informace so
 |wolcmgr.log|Zaznamenává údaje o tom, kterým klientům se mají odeslat pakety pro buzení ze spánku, počet odeslaných paketů pro buzení a počet paketů pro buzení s opakovaným pokusem o odeslání.|Server lokality|  
 |wolmgr.log|Zaznamenává údaje o postupech buzení, jako např. kdy budit nasazení, která jsou nakonfigurovaná pro funkci Wake On LAN.|Server lokality|  
 
-### <a name="windows-10-servicing"></a><a name="BKMK_WindowsServicingLog"></a>Údržba Windows 10
+### <a name="windows-10-servicing"></a><a name="BKMK_WindowsServicingLog"></a> Údržba Windows 10
 
 Následující tabulka uvádí soubory protokolů, které obsahují informace týkající se údržby Windows 10.  
 Údržba používá stejnou infrastrukturu a proces jako aktualizace softwaru. Další protokoly použitelné pro scénář údržby najdete v tématu [aktualizace softwaru](#BKMK_SU_NAPLog).
@@ -894,9 +894,9 @@ Následující tabulka uvádí soubory protokolů, které obsahují informace t�
 |DISM. log|Zaznamenává všechny akce pomocí nástroje DISM. V případě potřeby bude nástroj DISM. log odkazovat na protokol CBS. log, kde najdete další podrobnosti.|Klient|
 |Setupact. log|Primární soubor protokolu pro většinu chyb, ke kterým došlo během procesu instalace systému Windows. Soubor protokolu je umístěný ve složce% Windir% \$ Windows. ~ BT\sources\panther.|Klient|
 
-Další informace najdete v tématu [soubory protokolu týkající se údržby online](https://docs.microsoft.com/windows-hardware/manufacture/desktop/deployment-troubleshooting-and-log-files#online-servicing-related-log-files).
+Další informace najdete v tématu [soubory protokolu týkající se údržby online](/windows-hardware/manufacture/desktop/deployment-troubleshooting-and-log-files#online-servicing-related-log-files).
 
-### <a name="windows-update-agent"></a><a name="BKMK_WULog"></a>Agent web Windows Update
+### <a name="windows-update-agent"></a><a name="BKMK_WULog"></a> Agent web Windows Update
 
 Následující tabulka uvádí soubory protokolu, které obsahují informace týkající se agenta služby Windows Update.  
 
@@ -904,9 +904,9 @@ Následující tabulka uvádí soubory protokolu, které obsahují informace tý
 |--------------|-----------------|----------------------------|  
 |WindowsUpdate.log|Zaznamenává údaje o tom, kdy se agent web Windows Update připojí k serveru WSUS a načítá aktualizace softwaru pro posouzení dodržování předpisů a zda jsou k dispozici aktualizace komponent agenta.|Klient|  
 
-Další informace najdete v tématu [web Windows Update souborů protokolu](https://docs.microsoft.com/windows/deployment/update/windows-update-logs).
+Další informace najdete v tématu [web Windows Update souborů protokolu](/windows/deployment/update/windows-update-logs).
 
-### <a name="wsus-server"></a><a name="BKMK_WSUSLog"></a>Server WSUS
+### <a name="wsus-server"></a><a name="BKMK_WSUSLog"></a> Server WSUS
 
 Následující tabulka uvádí soubory protokolů, které obsahují informace týkající se serveru WSUS.  
 
@@ -917,7 +917,7 @@ Následující tabulka uvádí soubory protokolů, které obsahují informace t�
 
 Tyto soubory protokolu jsou umístěné ve `%ProgramFiles%\Update Services\LogFiles` složce.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Informace o souborech protokolu](about-log-files.md)
 

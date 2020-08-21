@@ -10,12 +10,12 @@ ms.assetid: b3d755bd-0870-4f1f-a56d-bfd3c7b492b9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 31f9b1cb083400abd36858a177e87804a916362c
-ms.sourcegitcommit: 7a099ff53668f50b37adab97ecd7ba98c5324676
+ms.openlocfilehash: aca3322c245fa22a7c87f30e328833d8a8a128bc
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84746507"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699037"
 ---
 # <a name="how-to-use-the-configuration-manager-docs"></a>Jak používat Configuration Manager docs
 
@@ -30,7 +30,7 @@ Tento článek poskytuje zdroje informací a tipy pro používání knihovny dok
 
 Obecnou nápovědu k produktu najdete v tématu věnovaném [hledání nápovědě](find-help.md).
 
-## <a name="search"></a><a name="bkmk_searchtips"></a>Nápovědě
+## <a name="search"></a><a name="bkmk_searchtips"></a> Nápovědě
 
 Následující tipy vám můžou pomoct při hledání požadovaných informací:
 
@@ -59,9 +59,9 @@ Následující tipy vám můžou pomoct při hledání požadovaných informací
 > [!TIP]
 > Configuration Manager počínaje verzí 1902 se v novém pracovním prostoru **komunity** konzoly Configuration Manager nachází uzel **dokumentace** . Tento uzel obsahuje aktuální informace o Configuration Manager dokumentaci a články o podpoře. Další informace najdete v tématu [použití konzoly Configuration Manager](../servers/manage/admin-console.md#bkmk_doc-dashboard).
 
-## <a name="feedback"></a><a name="bkmk_docfeedback"></a>Od
+## <a name="feedback"></a><a name="bkmk_docfeedback"></a> Od
 
-V pravém horním rohu libovolného článku **vyberte odkaz pro zpětnou vazbu a** v dolní části jděte do části zpětné vazby. Tato část se integruje s problémy GitHubu. Další informace o integraci s problémy GitHubu najdete v [příspěvku na blogu platformy docs](https://docs.microsoft.com/teamblog/a-new-feedback-system-is-coming-to-docs).
+V pravém horním rohu libovolného článku **vyberte odkaz pro zpětnou vazbu a** v dolní části jděte do části zpětné vazby. Tato část se integruje s problémy GitHubu. Další informace o integraci s problémy GitHubu najdete v [příspěvku na blogu platformy docs](/teamblog/a-new-feedback-system-is-coming-to-docs).
 
 Pokud chcete sdílet svůj názor na Configuration Manager samotný produkt, vyberte **svůj názor na produkt**. Další informace najdete v tématu o [zpětné vazbě produktu](find-help.md#product-feedback).
 
@@ -83,21 +83,21 @@ K odeslání následujících typů zpětné vazby použijte problémy GitHubu:
 
 Pokud vytvoříte problém s tématy, která nesouvisí s dokumentem, společnost Microsoft tyto problémy ukončí. Příklad:
 
-- [Váš názor na produkt](find-help.md#product-feedback)
+- [Zpětná vazba k produktu](find-help.md#product-feedback)
 - [Otázky k produktu](https://social.technet.microsoft.com/Forums/en-US/home?category=ConfigMgrCB)
 - [Žádosti o podporu](https://aka.ms/cmcbsupport)
 
 Pokud chcete sdílet názory na základní platformu docs.microsoft.com, přečtěte si [názory na dokumentaci](https://aka.ms/sitefeedback). Platforma zahrnuje všechny komponenty obálky, například záhlaví, obsah a pravou nabídku. Také způsob vykreslování článků v prohlížeči, například písmo, pole výstrah a kotvy stránky.
 
-## <a name="notifications"></a><a name="bkmk_notifications"></a>Připomenutí
+## <a name="notifications"></a><a name="bkmk_notifications"></a> Připomenutí
 
 Chcete-li dostávat oznámení, když se změní obsah v knihovně dokumentace, použijte následující postup:
 
-1. K vyhledání článku nebo sady článků použijte hledání na webu [docs](https://docs.microsoft.com/search/index?scope=ConfigMgr) . Příklad:
+1. K vyhledání článku nebo sady článků použijte hledání na webu [docs](/search/index?scope=ConfigMgr) . Příklad:
 
-    - Hledání jednoho článku podle názvu, ["soubory protokolu pro řešení potíží – Configuration Manager"](https://docs.microsoft.com/search/index?search=%22Log+files+for+troubleshooting+-+Configuration+Manager%22&scope=ConfigMgr)
+    - Hledání jednoho článku podle názvu, ["soubory protokolu pro řešení potíží – Configuration Manager"](/search/index?scope=ConfigMgr&search=%22Log+files+for+troubleshooting+-+Configuration+Manager%22)
 
-    - Vyhledat libovolný článek o [SQL](https://docs.microsoft.com/search/index?search=SQL&scope=ConfigMgr)
+    - Vyhledat libovolný článek o [SQL](/search/index?scope=ConfigMgr&search=SQL)
 
 2. V pravém horním rohu vyberte odkaz **RSS** .
 
@@ -106,9 +106,9 @@ Chcete-li dostávat oznámení, když se změní obsah v knihovně dokumentace, 
 > [!TIP]
 > Můžete také **sledovat** [úložiště SCCMdocs](https://github.com/MicrosoftDocs/SCCMdocs) na GitHubu. Tato metoda generuje mnoho oznámení. Nezahrnuje taky změny z privátního úložiště, které Microsoft používá.
 
-## <a name="contribute"></a><a name="bkmk_contribute"></a>Programu
+## <a name="contribute"></a><a name="bkmk_contribute"></a> Programu
 
-Knihovna dokumentace Configuration Manager, podobně jako většina obsahu v docs.microsoft.com, je otevřená na GitHubu. Tato knihovna přijímá a podporuje komunitní příspěvky. Další informace o tom, jak začít, najdete v [příručce pro přispěvatele](https://docs.microsoft.com/contribute). Jediným předpokladem je vytvoření [účtu GitHub](https://github.com/join).
+Knihovna dokumentace Configuration Manager, podobně jako většina obsahu v docs.microsoft.com, je otevřená na GitHubu. Tato knihovna přijímá a podporuje komunitní příspěvky. Další informace o tom, jak začít, najdete v [příručce pro přispěvatele](/contribute). Jediným předpokladem je vytvoření [účtu GitHub](https://github.com/join).
 
 ### <a name="basic-steps-to-contribute-to-sccmdocs"></a>Základní kroky pro přispívání do SCCMdocs
 
@@ -116,7 +116,7 @@ Knihovna dokumentace Configuration Manager, podobně jako většina obsahu v doc
 
 2. Chcete-li upravit zdrojový soubor, vyberte ikonu tužky.
 
-3. Proveďte změny ve zdroji Markdownu. Další informace najdete v tématu [použití Markdownu pro psaní dokumentů](https://docs.microsoft.com/contribute/markdown-reference).
+3. Proveďte změny ve zdroji Markdownu. Další informace najdete v tématu [použití Markdownu pro psaní dokumentů](/contribute/markdown-reference).
 
 4. V části navrhnout změnu souboru zadejte komentář veřejné potvrzení popisující, *co* jste změnili. Pak vyberte **navrhnout změnu souboru**.
 
@@ -148,7 +148,7 @@ Při přispívání do Configuration Manager dokumentů postupujte podle těchto
 
 - Nedělejte si u velkých žádostí o přijetí změn. Místo toho zapište [problém](#bkmk_docfeedback) a spusťte diskuzi. Pak můžeme souhlasit s směrem a teprve potom investovat velké množství času.
 
-- Přečtěte si [příručku ke stylům Microsoftu](https://aka.ms/MicrosoftStyle). Poznejte [10 nejoblíbenějších tipů pro Microsoft Style a Voice](https://docs.microsoft.com/style-guide/top-10-tips-style-voice).
+- Přečtěte si [příručku ke stylům Microsoftu](https://aka.ms/MicrosoftStyle). Poznejte [10 nejoblíbenějších tipů pro Microsoft Style a Voice](/style-guide/top-10-tips-style-voice).
 
 - [Šablonu žádosti o získání dat](https://github.com/MicrosoftDocs/SCCMdocs/blob/master/PULL_REQUEST_TEMPLATE.md) použijte jako výchozí bod práce.
 
@@ -160,7 +160,7 @@ Při přispívání do Configuration Manager dokumentů postupujte podle těchto
 
 ## <a name="consolidation-of-documentation-for-microsoft-endpoint-manager"></a>Konsolidace dokumentace pro Microsoft Endpoint Manager
 
-Pro lepší podporu kombinovaných scénářů Intune a Configuration Manager jsou jejich knihovny dokumentace konsolidovány na [webu Microsoft Endpoint Manager](https://docs.microsoft.com/mem). Dokumentace k Intune je teď na [docs.Microsoft.com/mem/Intune](https://docs.microsoft.com/mem/intune)a dokumentace k Configuration Manager je teď na [docs.Microsoft.com/mem/ConfigMgr](https://docs.microsoft.com/mem/configmgr). Pokud pořád používáte starou adresu URL, přesměruje se automaticky, takže nemusíte dělat žádné změny pro čtení tohoto obsahu.
+Pro lepší podporu kombinovaných scénářů Intune a Configuration Manager jsou jejich knihovny dokumentace konsolidovány na [webu Microsoft Endpoint Manager](/mem). Dokumentace k Intune je teď na [docs.Microsoft.com/mem/Intune](../../../intune/index.yml)a dokumentace k Configuration Manager je teď na [docs.Microsoft.com/mem/ConfigMgr](../../index.yml). Pokud pořád používáte starou adresu URL, přesměruje se automaticky, takže nemusíte dělat žádné změny pro čtení tohoto obsahu.
 
 Pokud zadáte zpětnou vazbu nebo přispějete k článkům, bude nutné provést některé změny:
 

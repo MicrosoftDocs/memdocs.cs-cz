@@ -10,12 +10,12 @@ ms.assetid: a7975dc8-46ab-4dae-86b6-dc3e3cf3b2f0
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 92bf86225cf869622fd4b496fd3e8e852b651a70
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: aae6db43a03f524773cad4c26ff11817da02a323
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81713671"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699666"
 ---
 # <a name="modify-your-configuration-manager-infrastructure"></a>Úprava infrastruktury Configuration Manager
 
@@ -23,7 +23,7 @@ ms.locfileid: "81713671"
 
 Po instalaci jedné nebo více lokalit může být nutné upravit konfigurace nebo provést akce, které mají vliv na vaši infrastrukturu.
 
-## <a name="manage-the-sms-provider"></a><a name="BKMK_ManageSMSprovider"></a>Správa poskytovatele serveru SMS
+## <a name="manage-the-sms-provider"></a><a name="BKMK_ManageSMSprovider"></a> Správa poskytovatele serveru SMS
 
 Poskytovatel serveru SMS poskytuje bod administrativního kontaktu pro jednu nebo více Configuration Manager konzol. Když nainstalujete více poskytovatelů serveru SMS, můžete poskytnout redundanci pro kontaktní body pro správu lokality a hierarchie.
 
@@ -39,7 +39,7 @@ Před úpravou poskytovatele služby SMS v lokalitě nástroje si přečtěte t�
 
 ### <a name="manage-the-sms-provider-configuration-for-a-site"></a>Správa konfigurace poskytovatele služby SMS pro lokalitu  
 
-1. Spusťte **instalační program Configuration Manager** z `\BIN\X64\setup.exe` nástroje v instalační složce Configuration Manager webu.
+1. Spusťte **instalační program Configuration Manager** z nástroje `\BIN\X64\setup.exe` v instalační složce Configuration Manager webu.
 
 1. Na stránce **Začínáme** vyberte možnost **provést údržbu lokality nebo resetovat tuto lokalitu**.
 
@@ -56,7 +56,7 @@ Před úpravou poskytovatele služby SMS v lokalitě nástroje si přečtěte t�
 
 Po dokončení Průvodce instalací se konfigurace poskytovatele služby SMS dokončí. Ve **vlastnostech**lokality na kartě **Obecné** ověřte počítače, které mají nainstalovaného poskytovatele služby SMS pro danou lokalitu.
 
-## <a name="manage-the-configuration-manager-console"></a><a name="bkmk_Console"></a>Správa konzoly Configuration Manager
+## <a name="manage-the-configuration-manager-console"></a><a name="bkmk_Console"></a> Správa konzoly Configuration Manager
 
 Následující úlohy vám pomůžou se správou konzoly Configuration Manager:
 
@@ -68,9 +68,9 @@ Následující úlohy vám pomůžou se správou konzoly Configuration Manager:
 
 - Chcete-li upravit oprávnění pro správu a omezit tak, co mohou uživatelé zobrazit a dělat v konzole nástroje, přečtěte si téma [Úprava rozsahu správy administrativního uživatele](../deploy/configure/configure-role-based-administration.md#BKMK_ModAdminUser).
 
-### <a name="manage-configuration-manager-console-language"></a><a name="BKMK_ManageConsoleLanguages"></a>Správa jazyka konzoly Configuration Manager
+### <a name="manage-configuration-manager-console-language"></a><a name="BKMK_ManageConsoleLanguages"></a> Správa jazyka konzoly Configuration Manager
 
-Během instalace serveru lokality se instalační soubory konzoly Configuration Manager a podporované jazykové sady pro lokalitu zkopírují do `\Tools\ConsoleSetup` podsložky v instalační cestě Configuration Manager na serveru lokality.
+Během instalace serveru lokality se instalační soubory konzoly Configuration Manager a podporované jazykové sady pro lokalitu zkopírují do podsložky v `\Tools\ConsoleSetup` instalační cestě Configuration Manager na serveru lokality.
 
 - Když spustíte instalaci konzoly Configuration Manager z této složky na serveru lokality, zkopíruje se do počítače konzola Configuration Manager a podporované soubory jazykových sad.
 
@@ -94,7 +94,7 @@ Následující postupy použijte ke spuštění konzoly Configuration Manager v 
 
 1. V Průzkumníku Windows přejděte na `\Tools\ConsoleSetup\LanguagePack` adresu instalace Configuration Manager.
 
-1. Přejmenujte soubory **.msp** a **.mst**. Můžete například změnit ** &lt;\>název souboru. MSP** na ** &lt;název\>souboru. MSP. disabled**.
+1. Přejmenujte soubory **.msp** a **.mst**. Můžete například změnit ** &lt; název souboru \> . MSP** na ** &lt; název souboru \> . MSP. disabled**.
 
 1. Nainstalujte do počítače konzolu Configuration Manager.
 
@@ -111,7 +111,7 @@ Následující postupy použijte ke spuštění konzoly Configuration Manager v 
 
 1. Chcete-li otevřít konzolu Configuration Manager v jazyce, který je nakonfigurován pro počítač, přejmenujte složku na původní název. Například přejmenujte složku **de.zakázáno** na **de**.  
 
-## <a name="configure-dcom-permissions-for-remote-consoles"></a><a name="BKMK_ConfigDCOMforRemoteConsole"></a>Konfigurace oprávnění modelu DCOM pro vzdálené konzoly
+## <a name="configure-dcom-permissions-for-remote-consoles"></a><a name="BKMK_ConfigDCOMforRemoteConsole"></a> Konfigurace oprávnění modelu DCOM pro vzdálené konzoly
 
 Uživatelský účet, který spouští konzolu Configuration Manager, vyžaduje oprávnění pro přístup k databázi lokality pomocí poskytovatele služby SMS. Administrativní uživatel, který používá vzdálenou konzolu Configuration Manager, ale také vyžaduje oprávnění modelu DCOM pro **vzdálenou aktivaci** na těchto počítačích:
 
@@ -130,7 +130,7 @@ Následující postup slouží ke konfiguraci jednotlivých lokalit centrální 
 
 ### <a name="configure-dcom-permissions-for-remote-configuration-manager-console-connections"></a>Konfigurace oprávnění modelu DCOM pro vzdálená připojení konzoly Configuration Manager
 
-1. Jako správce cílového počítače spusťte `Dcomcnfg.exe` příkaz a otevřete **službu komponent**.
+1. Jako správce cílového počítače spusťte příkaz `Dcomcnfg.exe` a otevřete **službu komponent**.
 
 1. Rozbalte položku **Služba komponent**, rozbalte položku **počítače**a potom vyberte možnost **Tento počítač**. V nabídce **Akce** vyberte možnost **vlastnosti**.
 
@@ -138,7 +138,7 @@ Následující postup slouží ke konfiguraci jednotlivých lokalit centrální 
 
 1. V okně **spouštěcí a aktivační oprávnění** vyberte **Přidat**.
 
-1. V okně **Vyberte uživatele, počítače, účty služby nebo skupiny** v poli **Zadejte názvy objektů k výběru** zadejte `SMS Admins`a pak vyberte **OK**.
+1. V okně **Vyberte uživatele, počítače, účty služby nebo skupiny** v poli **Zadejte názvy objektů k výběru** zadejte `SMS Admins` a pak vyberte **OK**.
 
    > [!TIP]
    > Pokud chcete najít skupinu Admins služby SMS, možná budete muset změnit nastavení: **z tohoto umístění**. Tato skupina je místní k počítači, pokud poskytovatel serveru SMS běží na členském serveru a jedná se o místní doménovou skupinu, pokud poskytovatel serveru SMS běží na řadiči domény.
@@ -151,7 +151,7 @@ Počítač je nyní nakonfigurován tak, aby povoloval vzdáleným Configuration
 
 Tento postup opakujte u každého počítače poskytovatele SMS, který podporuje vzdálené konzoly Configuration Manager.
 
-## <a name="modify-the-site-database-configuration"></a><a name="bkmk_dbconfig"></a>Úprava konfigurace databáze lokality
+## <a name="modify-the-site-database-configuration"></a><a name="bkmk_dbconfig"></a> Úprava konfigurace databáze lokality
 
 Po instalaci lokality můžete změnit konfiguraci databáze lokality a serveru databáze lokality. Změny provedete spuštěním Configuration Manager instalace na serveru CAS nebo na serveru primární lokality. Databázi lokality můžete přesunout do nové instance systému SQL Server ve stejném počítači nebo do jiného počítače, ve kterém je spuštěna podporovaná verze systému SQL Server. Tyto změny nejsou podporovány pro konfiguraci databáze v sekundárních lokalitách.
 
@@ -180,14 +180,14 @@ Pokud přesouváte databázi lokality, přečtěte si také následující konfi
 
 - Když přesunete databázi lokality do nového počítače, přidejte účet počítače serveru lokality do skupiny místní **Správci** v počítači, na kterém je spuštěný SQL Server. Pokud pro databázi lokality používáte cluster SQL Server, přidejte účet počítače do skupiny místní **Správci** každého počítače uzlu clusteru se systémem Windows Server.
 
-- Když přesunete databázi do nové instance v SQL Server nebo do nového SQL Server počítače, povolte integraci modulu CLR (Common Language Runtime). Pomocí **SQL Server Management Studio** se připojte k instanci SQL Server, která je hostitelem databáze lokality. Pak spusťte následující uloženou proceduru jako dotaz:`sp_configure 'clr enabled',1; reconfigure`
+- Když přesunete databázi do nové instance v SQL Server nebo do nového SQL Server počítače, povolte integraci modulu CLR (Common Language Runtime). Pomocí **SQL Server Management Studio** se připojte k instanci SQL Server, která je hostitelem databáze lokality. Pak spusťte následující uloženou proceduru jako dotaz: `sp_configure 'clr enabled',1; reconfigure`
 
 - Ujistěte se, že nový SQL Server má přístup k umístění zálohy. Když použijete cestu UNC k uložení zálohy databáze lokality, po přesunutí databáze na nový server se ujistěte, že účet počítače nového SQL Server má oprávnění k **zápisu** do umístění UNC. Tato konfigurace zahrnuje přesun do skupiny dostupnosti SQL Server AlwaysOn nebo SQL Server clusteru.
 
 > [!IMPORTANT]
 > Před přesunutím databáze, která obsahuje jednu nebo více replik databáze pro body správy, nejprve odeberte repliky databáze. Po dokončení přesunu databáze můžete provést opětovnou konfiguraci replik databáze. Další informace najdete v tématu [repliky databáze pro body správy](../deploy/configure/database-replicas-for-management-points.md).
 
-## <a name="manage-the-spn-for-the-site-database-server"></a><a name="bkmk_SPN"></a>Správa hlavního názvu služby (SPN) pro server databáze lokality
+## <a name="manage-the-spn-for-the-site-database-server"></a><a name="bkmk_SPN"></a> Správa hlavního názvu služby (SPN) pro server databáze lokality
 
 Můžete zvolit účet, který spouští služby SQL Services pro databázi lokality:
 
@@ -195,11 +195,11 @@ Můžete zvolit účet, který spouští služby SQL Services pro databázi loka
 
 - Pokud se služba spouští s místním uživatelským účtem domény, hlavní název služby ručně zaregistrujte. Hlavní název služby (SPN) umožňuje klientům SQL a jiným systémům lokality ověřování pomocí protokolu Kerberos. Bez ověřování Kerberos může selhat komunikace s databází.
 
-Další informace o SPN a připojení Kerberos najdete v tématu [registrace hlavního názvu služby pro připojení Kerberos](https://docs.microsoft.com/sql/database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections).
+Další informace o SPN a připojení Kerberos najdete v tématu [registrace hlavního názvu služby pro připojení Kerberos](/sql/database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections).
 
 Zaregistrujte hlavní název služby (SPN) pro účet služby SQL Server serveru databáze lokality pomocí nástroje **Setspn** . Spusťte příkaz Setspn jako správce domény v počítači ve stejné doméně jako SQL Server.
 
-Následující postupy jsou příklady správy hlavního názvu služby (SPN) pro účet služby SQL Server. Další informace o Setspn naleznete v tématu [Setspn Overview](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc731241\(v=ws.11\)).
+Následující postupy jsou příklady správy hlavního názvu služby (SPN) pro účet služby SQL Server. Další informace o Setspn naleznete v tématu [Setspn Overview](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc731241\(v=ws.11\)).
 
 ### <a name="manually-create-a-domain-user-spn-for-the-sql-server-service-account"></a>Ručně vytvořit hlavní název služby (SPN) uživatele domény pro účet služby SQL Server
 
@@ -210,11 +210,11 @@ Následující postupy jsou příklady správy hlavního názvu služby (SPN) pr
     > [!IMPORTANT]
     > Když vytváříte hlavní název služby (SPN) pro clusterované SQL Server, zadejte jako název SQL Server počítače virtuální název clusteru SQL Server.
 
-    - Název pro rozhraní NetBIOS:`setspn -A MSSQLSvc/<SQL Server computer name>:<port> <Domain\Account>`
+    - Název pro rozhraní NetBIOS: `setspn -A MSSQLSvc/<SQL Server computer name>:<port> <Domain\Account>`
 
         Příklad: `setspn -A MSSQLSvc/sqlserver:1433 contoso\sqlservice`
 
-    - ZADÁNÍ`setspn -A MSSQLSvc/<SQL Server FQDN>:<port> <Domain\Account>`
+    - ZADÁNÍ `setspn -A MSSQLSvc/<SQL Server FQDN>:<port> <Domain\Account>`
 
         Příklad: `setspn -A MSSQLSvc/sqlserver.contoso.com:1433 contoso\sqlservice`
 
@@ -225,7 +225,7 @@ Následující postupy jsou příklady správy hlavního názvu služby (SPN) pr
 
 1. Otevřete příkazový řádek jako správce.
 
-1. Zadejte následující příkaz:`setspn -L <domain\SQL service account>`
+1. Zadejte následující příkaz: `setspn -L <domain\SQL service account>`
 
     Příklad: `setspn -L contoso\sqlservice`
 
@@ -237,13 +237,13 @@ Následující postupy jsou příklady správy hlavního názvu služby (SPN) pr
 
 1. Otevřete nástroj **SQL Server Configuration Manager**.
 
-1. Vyberte **SQL Server Services**a pak otevřete **SQL Server&lt;\>název instance**.
+1. Vyberte **SQL Server Services**a pak otevřete **SQL Server &lt; název \> instance**.
 
 1. Přepněte na kartu **přihlášení** . Vyberte **Tento účet**a pak zadejte uživatelské jméno a heslo pro účet uživatele domény z kroku 1.
 
 1. Potvrďte změnu účtu služby a restartujte službu SQL Server.
 
-## <a name="run-a-site-reset"></a><a name="bkmk_reset"></a>Spuštění vynulování lokality
+## <a name="run-a-site-reset"></a><a name="bkmk_reset"></a> Spuštění vynulování lokality
 
 Pokud se resetování lokality spustí v certifikační autoritě nebo primární lokalitě, lokalita:
 
@@ -306,9 +306,9 @@ Pokud je hierarchie nakonfigurovaná tak, aby podporovala [testování upgradů 
 
     - V nabídce **Start** vyberte **Configuration Manager nastavení**.
 
-    - V adresáři pro *instalační médium*Configuration Manager otevřete `\SMSSETUP\BIN\X64\setup.exe`. Ujistěte se, že je tato verze stejná jako verze lokality.
+    - V adresáři pro *instalační médium*Configuration Manager otevřete `\SMSSETUP\BIN\X64\setup.exe` . Ujistěte se, že je tato verze stejná jako verze lokality.
 
-    - V adresáři, ve kterém je *nainstalováno*Configuration Manager `\BIN\X64\setup.exe`, otevřete.
+    - V adresáři, ve kterém je *nainstalováno*Configuration Manager, otevřete `\BIN\X64\setup.exe` .
 
 1. Na stránce **Začínáme** vyberte možnost **provést údržbu lokality nebo resetovat tuto lokalitu**.
 
@@ -316,7 +316,7 @@ Pokud je hierarchie nakonfigurovaná tak, aby podporovala [testování upgradů 
 
 1. Výběrem **Ano** zahájíte resetování lokality.
 
-## <a name="manage-language-packs-at-a-site"></a><a name="bkmk_sitelang"></a>Správa jazykových sad v lokalitě
+## <a name="manage-language-packs-at-a-site"></a><a name="bkmk_sitelang"></a> Správa jazykových sad v lokalitě
 
 Po instalaci lokality můžete změnit jazykové sady serveru a klienta, které se používají.
 
@@ -342,9 +342,9 @@ Další informace o jazycích klienta a serveru, které Configuration Manager po
 
     - V nabídce **Start** vyberte **Configuration Manager nastavení**.
 
-    - V adresáři pro *instalační médium*Configuration Manager otevřete `\SMSSETUP\BIN\X64\setup.exe`. Ujistěte se, že je tato verze stejná jako verze lokality.
+    - V adresáři pro *instalační médium*Configuration Manager otevřete `\SMSSETUP\BIN\X64\setup.exe` . Ujistěte se, že je tato verze stejná jako verze lokality.
 
-    - V adresáři, ve kterém je *nainstalováno*Configuration Manager `\BIN\X64\setup.exe`, otevřete.
+    - V adresáři, ve kterém je *nainstalováno*Configuration Manager, otevřete `\BIN\X64\setup.exe` .
 
 1. Na stránce **Začínáme** vyberte možnost **provést údržbu lokality nebo resetovat tuto lokalitu**.
 
@@ -365,7 +365,7 @@ Další informace o jazycích klienta a serveru, které Configuration Manager po
     > [!NOTE]
     > Configuration Manager inicializuje resetování lokality, které také přeinstaluje všechny role systému lokality v lokalitě.
 
-## <a name="modify-the-database-server-alert-threshold"></a><a name="BKMK_ModDBAlert"></a>Změnit prahovou hodnotu pro výstrahu databázového serveru
+## <a name="modify-the-database-server-alert-threshold"></a><a name="BKMK_ModDBAlert"></a> Změnit prahovou hodnotu pro výstrahu databázového serveru
 
 Ve výchozím nastavení Configuration Manager generuje výstrahy, pokud je volné místo na disku na serveru databáze lokality nízké:
 

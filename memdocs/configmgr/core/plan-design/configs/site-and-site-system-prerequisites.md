@@ -10,12 +10,12 @@ ms.assetid: 1392797b-76cb-46b4-a3e4-8f349ccaa078
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: d4fb94d0ab64cb7c3dc3128c982b0c2b162b22b7
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ce3420a6e229b5987616c5c0c1c41d50cdc499c8
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81719187"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700346"
 ---
 # <a name="site-and-site-system-prerequisites-for-configuration-manager"></a>Požadavky lokality a systému lokality pro Configuration Manager
 
@@ -28,7 +28,7 @@ U některých produktů, jako je například Windows Server Update Services (WSU
 Další informace o .NET Framework najdete v tématu [věnovaném životnímu cyklu nejčastějších dotazů – .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework).
 
 
-## <a name="general-requirements-and-limitations"></a><a name="bkmk_generalprerewq"></a>Obecné požadavky a omezení
+## <a name="general-requirements-and-limitations"></a><a name="bkmk_generalprerewq"></a> Obecné požadavky a omezení
 
 Pro všechny systémové servery lokality platí následující požadavky:
 
@@ -52,7 +52,7 @@ Pro všechny systémové servery lokality platí následující požadavky:
 
 - Pro žádnou Configuration Manager službu není možné změnit typ spouštění ani nastavení přihlásit se jako. Pokud to uděláte, můžete zabránit správnému fungování služby Key Services.  
 
-### <a name="prerequisites-for-windows-server-2012-and-later-operating-systems"></a><a name="bkmk_2012Prereq"></a>Předpoklady pro operační systémy Windows Server 2012 a novější  
+### <a name="prerequisites-for-windows-server-2012-and-later-operating-systems"></a><a name="bkmk_2012Prereq"></a> Předpoklady pro operační systémy Windows Server 2012 a novější  
 
 V hlavních částech tohoto článku najdete konkrétní požadavky na servery a role systému lokality ve Windows Serveru 2012 a novějších verzích:
 
@@ -75,7 +75,7 @@ V hlavních částech tohoto článku najdete konkrétní požadavky na servery 
 - [Bod aktualizace softwaru](#bkmk_2012SUPpreq)
 - [Bod migrace stavu](#bkmk_2012SMPpreq)
 
-## <a name="central-administration-site-and-primary-site-servers"></a><a name="bkmk_2012sspreq"></a>Lokalita centrální správy a servery primární lokality
+## <a name="central-administration-site-and-primary-site-servers"></a><a name="bkmk_2012sspreq"></a> Lokalita centrální správy a servery primární lokality
 
 ### <a name="windows-server-roles-and-features"></a>Role a funkce systému Windows Server
 
@@ -93,7 +93,7 @@ Nainstalujte také podporovanou verzi .NET Framework verze 4,5 nebo novější. 
 
 Další informace o .NET Framework verzích najdete v následujících článcích:
 
-- [.NET Framework verze a závislosti](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [.NET Framework verze a závislosti](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [Nejčastější dotazy k životnímu cyklu – .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### <a name="windows-adk"></a>Windows ADK  
@@ -113,7 +113,7 @@ Další informace o .NET Framework verzích najdete v následujících článcí
 Když nainstalujete novou lokalitu, Configuration Manager automaticky nainstaluje SQL Server Native Client jako Distribuovatelný komponentu. Po instalaci lokality Configuration Manager neupgraduje SQL Server Native Client. Ujistěte se, že je tato součást aktuální. Další informace najdete v tématu [kontroly požadovaných součástí – SQL Server Native Client](../../servers/deploy/install/list-of-prerequisite-checks.md#sql-server-native-client).
 
 
-## <a name="secondary-site-server"></a><a name="bkmk_2012secpreq"></a>Server sekundární lokality
+## <a name="secondary-site-server"></a><a name="bkmk_2012secpreq"></a> Server sekundární lokality
 
 ### <a name="windows-server-roles-and-features"></a>Role a funkce systému Windows Server
 
@@ -129,7 +129,7 @@ Nainstalujte také podporovanou verzi .NET Framework verze 4,5 nebo novější. 
 
 Další informace o .NET Framework verzích najdete v následujících článcích:
 
-- [.NET Framework verze a závislosti](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [.NET Framework verze a závislosti](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [Nejčastější dotazy k životnímu cyklu – .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### <a name="visual-c-redistributable"></a>Visual C++ distribuovatelné
@@ -149,7 +149,7 @@ Další informace o .NET Framework verzích najdete v následujících článcí
 Když nainstalujete novou lokalitu, Configuration Manager automaticky nainstaluje SQL Server Native Client jako Distribuovatelný komponentu. Po instalaci lokality Configuration Manager neupgraduje SQL Server Native Client. Ujistěte se, že je tato součást aktuální. Další informace najdete v tématu [kontroly požadovaných součástí – SQL Server Native Client](../../servers/deploy/install/list-of-prerequisite-checks.md#sql-server-native-client).
 
 
-## <a name="database-server"></a><a name="bkmk_2012dbpreq"></a>Databázový server  
+## <a name="database-server"></a><a name="bkmk_2012dbpreq"></a> Databázový server  
 
 ### <a name="remote-registry-service"></a>Remote Registry Service  
 
@@ -168,7 +168,7 @@ Když nainstalujete novou lokalitu, Configuration Manager automaticky nainstaluj
 Když nainstalujete novou lokalitu, Configuration Manager automaticky nainstaluje SQL Server Native Client jako Distribuovatelný komponentu. Po instalaci lokality Configuration Manager neupgraduje SQL Server Native Client. Ujistěte se, že je tato součást aktuální. Další informace najdete v tématu [kontroly požadovaných součástí – SQL Server Native Client](../../servers/deploy/install/list-of-prerequisite-checks.md#sql-server-native-client).
 
 
-## <a name="sms-provider-server"></a><a name="bkmk_2012smsprovpreq"></a>Server poskytovatele služby SMS  
+## <a name="sms-provider-server"></a><a name="bkmk_2012smsprovpreq"></a> Server poskytovatele služby SMS  
 
 ### <a name="windows-adk"></a>Windows ADK
 
@@ -190,12 +190,12 @@ Když nainstalujete novou lokalitu, Configuration Manager automaticky nainstaluj
 Když nainstalujete novou lokalitu, Configuration Manager automaticky nainstaluje SQL Server Native Client jako Distribuovatelný komponentu. Po instalaci lokality Configuration Manager neupgraduje SQL Server Native Client. Ujistěte se, že je tato součást aktuální. Další informace najdete v tématu [kontroly požadovaných součástí – SQL Server Native Client](../../servers/deploy/install/list-of-prerequisite-checks.md#sql-server-native-client).
 
 
-## <a name="application-catalog-website-point"></a><a name="bkmk_2012acwspreq"></a>Bod webu Katalog aplikací  
+## <a name="application-catalog-website-point"></a><a name="bkmk_2012acwspreq"></a> Bod webu Katalog aplikací  
 
 > [!Important]  
 > Uživatelské prostředí programu Silverlight v katalogu aplikací není v aktuální větvi verze 1806 podporováno. Počínaje verzí 1906 aktualizované klienty automaticky používají bod správy pro nasazení aplikací, které jsou k dispozici pro uživatele. Nemůžete také instalovat nové role katalogu aplikací. Podpora končí pro role katalogu aplikací s verzí 1910.  
 >
-> Další informace najdete v těchto článcích:
+> Další informace najdete v následujících článcích:
 >
 > - [Konfigurace centra softwaru](../../../apps/plan-design/plan-for-software-center.md#bkmk_userex)
 > - [Odebrané a zastaralé funkce](../changes/deprecated/removed-and-deprecated-cmfeatures.md)  
@@ -214,7 +214,7 @@ Nainstalujte také podporovanou verzi .NET Framework verze 4,5 nebo novější.
 
 Další informace o .NET Framework verzích najdete v následujících článcích:
 
-- [.NET Framework verze a závislosti](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [.NET Framework verze a závislosti](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [Nejčastější dotazy k životnímu cyklu – .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### <a name="iis-configuration"></a>Konfigurace služby IIS  
@@ -244,12 +244,12 @@ Další informace o .NET Framework verzích najdete v následujících článcí
     - Kompatibilita metabáze služby IIS 6  
 
 
-## <a name="application-catalog-web-service-point"></a><a name="bkmk_2012ACwsitepreq"></a>Bod webové služby Katalog aplikací  
+## <a name="application-catalog-web-service-point"></a><a name="bkmk_2012ACwsitepreq"></a> Bod webové služby Katalog aplikací  
 
 > [!Important]  
 > Uživatelské prostředí programu Silverlight v katalogu aplikací není v aktuální větvi verze 1806 podporováno. Počínaje verzí 1906 aktualizované klienty automaticky používají bod správy pro nasazení aplikací, které jsou k dispozici pro uživatele. Nemůžete také instalovat nové role katalogu aplikací. Podpora končí pro role katalogu aplikací s verzí 1910.  
 >
-> Další informace najdete v těchto článcích:
+> Další informace najdete v následujících článcích:
 >
 > - [Konfigurace centra softwaru](../../../apps/plan-design/plan-for-software-center.md#bkmk_userex)
 > - [Odebrané a zastaralé funkce](../changes/deprecated/removed-and-deprecated-cmfeatures.md)  
@@ -270,7 +270,7 @@ Nainstalujte také podporovanou verzi .NET Framework verze 4,5 nebo novější.
 
 Další informace o .NET Framework verzích najdete v následujících článcích:
 
-- [.NET Framework verze a závislosti](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [.NET Framework verze a závislosti](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [Nejčastější dotazy k životnímu cyklu – .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### <a name="iis-configuration"></a>Konfigurace služby IIS
@@ -304,7 +304,7 @@ Další informace o .NET Framework verzích najdete v následujících článcí
 Když nainstalujete novou lokalitu, Configuration Manager automaticky nainstaluje SQL Server Native Client jako Distribuovatelný komponentu. Po instalaci lokality Configuration Manager neupgraduje SQL Server Native Client. Ujistěte se, že je tato součást aktuální. Další informace najdete v tématu [kontroly požadovaných součástí – SQL Server Native Client](../../servers/deploy/install/list-of-prerequisite-checks.md#sql-server-native-client).
 
 
-## <a name="asset-intelligence-synchronization-point"></a><a name="bkmk_2012AIpreq"></a>funkce Asset Intelligence bod synchronizace  
+## <a name="asset-intelligence-synchronization-point"></a><a name="bkmk_2012AIpreq"></a> funkce Asset Intelligence bod synchronizace  
 
 ### <a name="net-framework"></a>.NET Framework
 
@@ -312,7 +312,7 @@ Nainstalujte podporovanou verzi .NET Framework verze 4,5 nebo novější. Počí
 
 Další informace o .NET Framework verzích najdete v následujících článcích:
 
-- [.NET Framework verze a závislosti](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [.NET Framework verze a závislosti](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [Nejčastější dotazy k životnímu cyklu – .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### <a name="sql-server-native-client"></a>Nativní klient systému SQL Server
@@ -320,7 +320,7 @@ Další informace o .NET Framework verzích najdete v následujících článcí
 Když nainstalujete novou lokalitu, Configuration Manager automaticky nainstaluje SQL Server Native Client jako Distribuovatelný komponentu. Po instalaci lokality Configuration Manager neupgraduje SQL Server Native Client. Ujistěte se, že je tato součást aktuální. Další informace najdete v tématu [kontroly požadovaných součástí – SQL Server Native Client](../../servers/deploy/install/list-of-prerequisite-checks.md#sql-server-native-client).
 
 
-## <a name="certificate-registration-point"></a><a name="bkmk_2012crppreq"></a>Bod registrace certifikátu  
+## <a name="certificate-registration-point"></a><a name="bkmk_2012crppreq"></a> Bod registrace certifikátu  
 
 ### <a name="windows-server-roles-and-features"></a>Role a funkce systému Windows Server
 
@@ -334,7 +334,7 @@ Nainstalujte podporovanou verzi .NET Framework verze 4,5 nebo novější. Počí
 
 Další informace o .NET Framework verzích najdete v následujících článcích:
 
-- [.NET Framework verze a závislosti](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [.NET Framework verze a závislosti](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [Nejčastější dotazy k životnímu cyklu – .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### <a name="iis-configuration"></a>Konfigurace služby IIS
@@ -356,7 +356,7 @@ Další informace o .NET Framework verzích najdete v následujících článcí
 Když nainstalujete novou lokalitu, Configuration Manager automaticky nainstaluje SQL Server Native Client jako Distribuovatelný komponentu. Po instalaci lokality Configuration Manager neupgraduje SQL Server Native Client. Ujistěte se, že je tato součást aktuální. Další informace najdete v tématu [kontroly požadovaných součástí – SQL Server Native Client](../../servers/deploy/install/list-of-prerequisite-checks.md#sql-server-native-client).
 
 
-## <a name="distribution-point"></a><a name="bkmk_2012dppreq"></a>Distribuční bod  
+## <a name="distribution-point"></a><a name="bkmk_2012dppreq"></a> Distribuční bod  
 
 ### <a name="windows-server-roles-and-features"></a>Role a funkce systému Windows Server
 
@@ -410,7 +410,7 @@ Další informace najdete v tématu [instalace a konfigurace distribučních bod
 > Když distribuční bod přenáší obsah, přenáší ho pomocí **Background Intelligent Transfer Service** (BITS) integrovaných do Windows. Role distribučního bodu nevyžaduje instalaci volitelné funkce rozšíření serveru služby BITS, protože klient do něj neodesílá informace.  
 
 
-## <a name="endpoint-protection-point"></a><a name="bkmk_2012EPPpreq"></a>Endpoint Protection bod  
+## <a name="endpoint-protection-point"></a><a name="bkmk_2012EPPpreq"></a> Endpoint Protection bod  
 
 ### <a name="windows-server-roles-and-features"></a>Role a funkce systému Windows Server  
 
@@ -423,7 +423,7 @@ Další informace najdete v tématu [instalace a konfigurace distribučních bod
 Když nainstalujete novou lokalitu, Configuration Manager automaticky nainstaluje SQL Server Native Client jako Distribuovatelný komponentu. Po instalaci lokality Configuration Manager neupgraduje SQL Server Native Client. Ujistěte se, že je tato součást aktuální. Další informace najdete v tématu [kontroly požadovaných součástí – SQL Server Native Client](../../servers/deploy/install/list-of-prerequisite-checks.md#sql-server-native-client).
 
 
-## <a name="enrollment-point"></a><a name="bkmk_2012Enrollpreq"></a>Bod registrace  
+## <a name="enrollment-point"></a><a name="bkmk_2012Enrollpreq"></a> Bod registrace  
 
 ### <a name="windows-server-roles-and-features"></a>Role a funkce systému Windows Server
 
@@ -446,7 +446,7 @@ Nainstalujte také podporovanou verzi .NET Framework verze 4,5 nebo novější. 
 
 Další informace o .NET Framework verzích najdete v následujících článcích:
 
-- [.NET Framework verze a závislosti](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [.NET Framework verze a závislosti](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [Nejčastější dotazy k životnímu cyklu – .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### <a name="iis-configuration"></a>Konfigurace služby IIS
@@ -480,7 +480,7 @@ Další informace o .NET Framework verzích najdete v následujících článcí
 Když nainstalujete novou lokalitu, Configuration Manager automaticky nainstaluje SQL Server Native Client jako Distribuovatelný komponentu. Po instalaci lokality Configuration Manager neupgraduje SQL Server Native Client. Ujistěte se, že je tato součást aktuální. Další informace najdete v tématu [kontroly požadovaných součástí – SQL Server Native Client](../../servers/deploy/install/list-of-prerequisite-checks.md#sql-server-native-client).
 
 
-## <a name="enrollment-proxy-point"></a><a name="bkmk_2012EnrollProxpreq"></a>Zprostředkující bod registrace  
+## <a name="enrollment-proxy-point"></a><a name="bkmk_2012EnrollProxpreq"></a> Zprostředkující bod registrace  
 
 ### <a name="windows-server-roles-and-features"></a>Role a funkce systému Windows Server
 
@@ -497,7 +497,7 @@ Nainstalujte také podporovanou verzi .NET Framework verze 4,5 nebo novější. 
 
 Další informace o .NET Framework verzích najdete v následujících článcích:
 
-- [.NET Framework verze a závislosti](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [.NET Framework verze a závislosti](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [Nejčastější dotazy k životnímu cyklu – .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### <a name="iis-configuration"></a>Konfigurace služby IIS
@@ -533,7 +533,7 @@ Další informace o .NET Framework verzích najdete v následujících článcí
 - Pokud je tato role systému lokality společně umístěná s jinou rolí systému lokality, která má stejný požadavek, tento požadavek na paměť pro počítač se nezvýší, ale zůstane minimálně 5%.  
 
 
-## <a name="fallback-status-point"></a><a name="bkmk_2012FSPpreq"></a>Bod záložního stavu
+## <a name="fallback-status-point"></a><a name="bkmk_2012FSPpreq"></a> Bod záložního stavu
 
 ### <a name="windows-server-roles-and-features"></a>Role a funkce systému Windows Server
 
@@ -548,7 +548,7 @@ Výchozí konfigurace služby IIS je povinná s následujícími přídavky:
     - Kompatibilita metabáze služby IIS 6  
 
 
-## <a name="management-point"></a><a name="bkmk_2012MPpreq"></a>Bod správy  
+## <a name="management-point"></a><a name="bkmk_2012MPpreq"></a> Bod správy  
 
 ### <a name="windows-server-roles-and-features"></a>Role a funkce systému Windows Server
 
@@ -560,7 +560,7 @@ Nainstalujte podporovanou verzi .NET Framework verze 4,5 nebo novější. Počí
 
 Další informace o .NET Framework verzích najdete v následujících článcích:
 
-- [.NET Framework verze a závislosti](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [.NET Framework verze a závislosti](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [Nejčastější dotazy k životnímu cyklu – .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### <a name="iis-configuration"></a>Konfigurace služby IIS
@@ -584,7 +584,7 @@ Další informace o .NET Framework verzích najdete v následujících článcí
 Když nainstalujete novou lokalitu, Configuration Manager automaticky nainstaluje SQL Server Native Client jako Distribuovatelný komponentu. Po instalaci lokality Configuration Manager neupgraduje SQL Server Native Client. Ujistěte se, že je tato součást aktuální. Další informace najdete v tématu [kontroly požadovaných součástí – SQL Server Native Client](../../servers/deploy/install/list-of-prerequisite-checks.md#sql-server-native-client).
 
 
-## <a name="reporting-services-point"></a><a name="bkmk_2012RSpoint"></a>Bod služby Reporting Services  
+## <a name="reporting-services-point"></a><a name="bkmk_2012RSpoint"></a> Bod služby Reporting Services  
 
 ### <a name="net-framework"></a>.NET Framework
 
@@ -592,7 +592,7 @@ Nainstalujte podporovanou verzi .NET Framework verze 4,5 nebo novější. Počí
 
 Další informace o .NET Framework verzích najdete v následujících článcích:
 
-- [.NET Framework verze a závislosti](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [.NET Framework verze a závislosti](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [Nejčastější dotazy k životnímu cyklu – .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### <a name="sql-server-reporting-services"></a>SQL Server Reporting Services  
@@ -608,7 +608,7 @@ Další informace o .NET Framework verzích najdete v následujících článcí
 Když nainstalujete novou lokalitu, Configuration Manager automaticky nainstaluje SQL Server Native Client jako Distribuovatelný komponentu. Po instalaci lokality Configuration Manager neupgraduje SQL Server Native Client. Ujistěte se, že je tato součást aktuální. Další informace najdete v tématu [kontroly požadovaných součástí – SQL Server Native Client](../../servers/deploy/install/list-of-prerequisite-checks.md#sql-server-native-client).
 
 
-## <a name="service-connection-point"></a><a name="bkmk_SCPpreq"></a>Bod připojení služby  
+## <a name="service-connection-point"></a><a name="bkmk_SCPpreq"></a> Bod připojení služby  
 
 ### <a name="net-framework"></a>.NET Framework
 
@@ -621,7 +621,7 @@ Nainstalujte také podporovanou verzi .NET Framework verze 4,5 nebo novější. 
 
 Další informace o .NET Framework verzích najdete v následujících článcích:
 
-- [.NET Framework verze a závislosti](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [.NET Framework verze a závislosti](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [Nejčastější dotazy k životnímu cyklu – .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### <a name="visual-c-redistributable"></a>Visual C++ distribuovatelné
@@ -635,7 +635,7 @@ Další informace o .NET Framework verzích najdete v následujících článcí
 Když nainstalujete novou lokalitu, Configuration Manager automaticky nainstaluje SQL Server Native Client jako Distribuovatelný komponentu. Po instalaci lokality Configuration Manager neupgraduje SQL Server Native Client. Ujistěte se, že je tato součást aktuální. Další informace najdete v tématu [kontroly požadovaných součástí – SQL Server Native Client](../../servers/deploy/install/list-of-prerequisite-checks.md#sql-server-native-client).
 
 
-## <a name="software-update-point"></a><a name="bkmk_2012SUPpreq"></a>Bod aktualizace softwaru  
+## <a name="software-update-point"></a><a name="bkmk_2012SUPpreq"></a> Bod aktualizace softwaru  
 
 ### <a name="windows-server-roles-and-features"></a>Role a funkce systému Windows Server
 
@@ -651,7 +651,7 @@ Nainstalujte také podporovanou verzi .NET Framework verze 4,5 nebo novější. 
 
 Další informace o .NET Framework verzích najdete v následujících článcích:
 
-- [.NET Framework verze a závislosti](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [.NET Framework verze a závislosti](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [Nejčastější dotazy k životnímu cyklu – .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### <a name="windows-server-update-services"></a>Windows Server Update Services  
@@ -690,7 +690,7 @@ Nainstalujte také podporovanou verzi .NET Framework verze 4,5 nebo novější. 
 
 Další informace o .NET Framework verzích najdete v následujících článcích:
 
-- [.NET Framework verze a závislosti](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [.NET Framework verze a závislosti](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [Nejčastější dotazy k životnímu cyklu – .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### <a name="iis-configuration"></a>Konfigurace služby IIS
@@ -716,4 +716,3 @@ Další informace o .NET Framework verzích najdete v následujících článcí
 ### <a name="sql-server-native-client"></a>Nativní klient systému SQL Server
 
 Když nainstalujete novou lokalitu, Configuration Manager automaticky nainstaluje SQL Server Native Client jako Distribuovatelný komponentu. Po instalaci lokality Configuration Manager neupgraduje SQL Server Native Client. Ujistěte se, že je tato součást aktuální. Další informace najdete v tématu [kontroly požadovaných součástí – SQL Server Native Client](../../servers/deploy/install/list-of-prerequisite-checks.md#sql-server-native-client).
-

@@ -10,12 +10,12 @@ ms.assetid: a79f83be-884c-48e6-94d6-ed0a68c22e2f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 3d65c83d0a9fd009fa21a3b9e623145f87cc9498
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: de3c75982e19e6183260a2a5f99f65b9c785d27f
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128105"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700510"
 ---
 # <a name="management-insights-in-configuration-manager"></a>Přehledy správy v Configuration Manager
 
@@ -67,7 +67,7 @@ Některé přehledy umožňují provádět akce. Vyberte přehled, vyberte **Dal
 
 - Přejděte do filtrovaného zobrazení na základě dotazu. Například při provádění akce v přehledu prázdných kolekcí se v seznamu kolekcí zobrazí pouze tyto kolekce. Pak proveďte další akce, jako je odstranění kolekce nebo změna pravidel členství.
 
-## <a name="management-insights-dashboard"></a><a name="bkmk_insights"></a>Řídicí panel Management Insights
+## <a name="management-insights-dashboard"></a><a name="bkmk_insights"></a> Řídicí panel Management Insights
 
 <!--1357979-->
 
@@ -131,7 +131,7 @@ Umožňuje integraci s mnoha Cloud Services, což umožňuje moderní správu va
 
 - **Povolit bránu pro správu cloudu**: Brána pro správu cloudu (CMG) poskytuje jednoduchý způsob, jak spravovat Configuration Manager klientů přes Internet. Nasazením CMG jako cloudové služby v Microsoft Azure můžete dál spravovat a obsluhovat obsah klientům, kteří se přecházejí na Internet. V CMG není potřeba žádná další místní infrastruktura dostupná pro Internet. Další informace najdete v tématu [plánování pro CMG](../../clients/manage/cmg/plan-cloud-management-gateway.md).<!-- 451B9B3A-D86A-4EF1-ACC3-FE6A207886BA -->
 
-- **Povolit, aby zařízení byla připojená k hybridnímu Azure Active Directory**: zařízení připojená k Azure AD umožňují uživatelům přihlašovat se pomocí svých přihlašovacích údajů do domény a zajistit, aby zařízení splňovala standardy zabezpečení a dodržování předpisů v organizaci. Další informace najdete v tématu věnovaném [faktorům pro návrh hybridní identity Azure AD](https://docs.microsoft.com/azure/active-directory/hybrid/plan-hybrid-identity-design-considerations-overview).<!-- 6DC6B149-8B48-45E9-B189-F1E12A62D994 -->
+- **Povolit, aby zařízení byla připojená k hybridnímu Azure Active Directory**: zařízení připojená k Azure AD umožňují uživatelům přihlašovat se pomocí svých přihlašovacích údajů do domény a zajistit, aby zařízení splňovala standardy zabezpečení a dodržování předpisů v organizaci. Další informace najdete v tématu věnovaném [faktorům pro návrh hybridní identity Azure AD](/azure/active-directory/hybrid/plan-hybrid-identity-design-considerations-overview).<!-- 6DC6B149-8B48-45E9-B189-F1E12A62D994 -->
 
 - **Lokality, které nemají správnou konfiguraci protokolu HTTPS**: počínaje verzí 2002 se v tomto přehledu zobrazí seznam lokalit v hierarchii, které nejsou správně nakonfigurované pro protokol HTTPS. Tato konfigurace brání lokalitě v [synchronizaci výsledků členství kolekce do skupin Azure AD](../../clients/manage/collections/create-collections.md#bkmk_aadcollsync). Může to způsobit, že synchronizace služby Azure AD nebude nahrávat všechna zařízení. Správa těchto klientů nemusí fungovat správně.<!--6268489--> Nakonfigurujte [Rozšířený protokol HTTP](../../plan-design/hierarchy/enhanced-http.md)nebo povolte alespoň jeden bod správy pro protokol HTTPS. Pokud jste již lokalitu nakonfigurovali pro komunikaci pomocí protokolu HTTPS, tento přehled se nezobrazí.<!-- 73884047-3395-430E-B971-F853806D4349 -->
 
@@ -162,7 +162,7 @@ Přehledy, které zjednodušují správu tím, že čistí a mění konfiguraci 
 
 <!--3607758-->
 
-Od verze 2002 se tato skupina nepoužívá v oblasti technické podpory Microsoft Premier. Tyto přehledy jsou ukázkou mnoha dalších kontrol, které Microsoft Premier nabízí v [centru služeb](https://docs.microsoft.com/services-hub/health/getting_started_with_on_demand_assessments).
+Od verze 2002 se tato skupina nepoužívá v oblasti technické podpory Microsoft Premier. Tyto přehledy jsou ukázkou mnoha dalších kontrol, které Microsoft Premier nabízí v [centru služeb](/services-hub/health/getting_started_with_on_demand_assessments).
 
 - **Zjišťování skupiny zabezpečení služby Active Directory je nakonfigurované tak, aby se spouštělo příliš často**: obvykle není potřeba konfigurovat zjišťování skupin zabezpečení služby Active Directory tak, aby probíhalo častěji než v každé tři hodiny. Častější konfigurace může mít negativní dopad na výkon služby Active Directory, sítě a Configuration Manager. Místo použití úplného plánu synchronizace povolte přírůstkovou synchronizaci. Další informace najdete v tématu [zjišťování skupin služby Active Directory](../deploy/configure/about-discovery-methods.md#bkmk_aboutGroup).<!-- 4E739B65-AEC9-4B1D-8B36-AC6AC4A72022 -->
 
@@ -182,7 +182,7 @@ Od verze 2002 se tato skupina nepoužívá v oblasti technické podpory Microsof
 
 - **Aktualizovat všechny lokality na stejnou verzi**: použijte stejnou verzi Configuration Manager v hierarchii. Tato konfigurace zajišťuje, že všechny lokality poskytují stejné funkce. Lokality různých verzí ve stejné hierarchii představují scénáře interoperability. Novější verze Configuration Manager zahrnují nové funkce a řeší známé problémy. Další informace najdete v tématu [vzájemná funkční spolupráce mezi různými verzemi](../../plan-design/hierarchy/interoperability-between-different-versions.md).<!-- 88C630A5-6D6B-4DDB-95D7-78E12107970D -->
 
-Další informace o těchto přehledech najdete v tématu [opravné kroky pro Configuration Manager přehledy správy](https://docs.microsoft.com/services-hub/health/remediation-steps-configmgr).
+Další informace o těchto přehledech najdete v tématu [opravné kroky pro Configuration Manager přehledy správy](/services-hub/health/remediation-steps-configmgr).
 
 > [!TIP]
 > Pokud už jste zákazníkem Microsoft Unified nebo Microsoft Premier, přihlaste se k [centru služeb](https://serviceshub.microsoft.com/assessments/) , kde najdete další posouzení na vyžádání.

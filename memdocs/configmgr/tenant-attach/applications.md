@@ -10,14 +10,14 @@ ms.assetid: 963dda08-87b8-4e80-90a7-25625efe8861
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: ca71d40b29a9dcd9c239ccd06a8a28321f50f62c
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 4c535cc41e1351b334e8eb7bb942de04ebbd00a2
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127681"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700432"
 ---
-# <a name="tenant-attach-install-an-application-from-the-admin-center-preview"></a><a name="bkmk_apps"></a>Připojení tenanta: instalace aplikace z centra pro správu (Preview)
+# <a name="tenant-attach-install-an-application-from-the-admin-center-preview"></a><a name="bkmk_apps"></a> Připojení tenanta: instalace aplikace z centra pro správu (Preview)
 <!--cm 6024389, in 7220536 pubpreview Aug 10, 2020-->
 *Platí pro: Configuration Manager (Current Branch)*
 
@@ -28,7 +28,7 @@ Microsoft Endpoint Manager je integrované řešení pro správu všech vašich 
 
    :::image type="content" source="media/6024389-tenant-attach-application-list.png" alt-text="Aplikace v centru pro správu Microsoft Endpoint Manager" lightbox="media/6024389-tenant-attach-application-list.png":::
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 - Všechny předpoklady pro [připojení tenanta: podrobnosti o klientovi nástroje ConfigMgr](client-details.md#prerequisites).
 - [Kumulativní aktualizace pro Microsoft Endpoint Configuration Manager verze 2002](https://support.microsoft.com/help/4560496/) a odpovídající verze nainstalované konzoly
@@ -51,9 +51,9 @@ Uživatelský účet potřebuje následující oprávnění:
 - Role **uživatele správce** pro Configuration Manager aplikace mikroslužeb ve službě Azure AD. 
   - Přidejte roli ve službě Azure AD z části **podnikové aplikace**  >  **Configuration Manager**  >  **Uživatelé a skupiny**mikroslužeb  >  **Přidat uživatele**. Pokud máte Azure AD Premium, podporují se skupiny.
    > [!TIP]
-   > [Role Správce aplikací v Azure AD](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles) má dostatečná oprávnění pro přidání uživatele do role **uživatele správce** aplikace.
+   > [Role Správce aplikací v Azure AD](/azure/active-directory/users-groups-roles/directory-assign-admin-roles) má dostatečná oprávnění pro přidání uživatele do role **uživatele správce** aplikace.
 
-## <a name="deploy-an-application-to-a-device"></a><a name="bkmk_deploy"></a>Nasazení aplikace do zařízení
+## <a name="deploy-an-application-to-a-device"></a><a name="bkmk_deploy"></a> Nasazení aplikace do zařízení
 
 1. V prohlížeči přejděte na [https://endpoint.microsoft.com](https://endpoint.microsoft.com) .
 1. Vyberte **zařízení** a potom **všechna zařízení**.
@@ -79,7 +79,7 @@ Seznam aplikací můžete filtrovat podle stavu. Stav aplikace může být jedna
 - **Nenainstalováno**: aplikace není momentálně nainstalovaná. Tento stav se obvykle zobrazuje, pokud jiné nasazení nebo uživatel aplikaci odebrali.
 - **Čeká**se na restartování: aplikace je nainstalovaná, ale vyžaduje restart, aby bylo možné dokončit (počínaje verzí 2006).
 
-## <a name="deploy-an-application-to-a-user"></a><a name="bkmk_user"></a>Nasazení aplikace pro uživatele
+## <a name="deploy-an-application-to-a-user"></a><a name="bkmk_user"></a> Nasazení aplikace pro uživatele
 <!--7518897-->
 Od verze Configuration Manager 2006 se aplikace dostupné pro uživatele zobrazí v uzlu **aplikace** pro zařízení nástroje ConfigMgr. Seznam aplikací, které jsou k dispozici pro zařízení, zahrnuje také aplikace nasazené do aktuálně přihlášeného uživatele zařízení.
 

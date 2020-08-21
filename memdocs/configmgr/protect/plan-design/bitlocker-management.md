@@ -10,12 +10,12 @@ ms.assetid: a4d8cda2-bc9b-4fb4-aa0d-23c31b4fc60b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8370c3352778fa6bb7c6229beb1c7610c419a86d
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 22e78fdba1c004554d671ba2db96c61395f95ca2
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129293"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699955"
 ---
 # <a name="plan-for-bitlocker-management"></a>Plánování správy nástroje BitLocker
 
@@ -28,7 +28,7 @@ Počínaje verzí 1910 použijte Configuration Manager ke správě nástroj BitL
 > [!NOTE]
 > Configuration Manager ve výchozím nastavení nepovolí tuto volitelnou funkci. Tuto funkci musíte před použitím povolit. Další informace naleznete v části [Enable optional features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_options).  
 
-Další informace najdete v tématu [Přehled nástroje BitLocker](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-overview).
+Další informace najdete v tématu [Přehled nástroje BitLocker](/windows/security/information-protection/bitlocker/bitlocker-overview).
 
 > [!TIP]
 > Pokud chcete spravovat šifrování na zařízeních s Windows 10 spravovaných pomocí cloudové služby Microsoft Endpoint Manager, přepněte [ **Endpoint Protection** úlohy](../../comanage/workloads.md#endpoint-protection) do Intune. Další informace o používání Intune najdete v tématu [šifrování Windows](/intune/protect/endpoint-protection-windows-10#windows-encryption).
@@ -70,7 +70,7 @@ Umožněte jiným osoby ve vaší organizaci mimo konzolu Configuration Manager,
 
 Umožněte uživatelům využít klíč s jedním klíčem k odemknutí zařízení zašifrovaného nástrojem BitLocker. Po použití tohoto klíče se pro zařízení vygeneruje nový klíč.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 - K vytvoření zásady správy BitLockeru potřebujete roli **úplného správce** v Configuration Manager.
 
@@ -94,7 +94,7 @@ Umožněte uživatelům využít klíč s jedním klíčem k odemknutí zaříze
     > [!NOTE]
     > Nainstalujte jenom Samoobslužný portál a web pro správu a monitorování s primární databází lokality. V hierarchii nainstalujte tyto weby pro každou primární lokalitu.
 
-- Na webovém serveru, který bude hostitelem samoobslužného portálu, nainstalujte [Microsoft ASP.NET MVC 4,0](https://docs.microsoft.com/aspnet/mvc/mvc4) a .NET Framework 3,5 před vytvořením hvězdičky v procesu instalace. Další požadované role a funkce Windows serveru se nainstalují automaticky během procesu instalace na portálu.
+- Na webovém serveru, který bude hostitelem samoobslužného portálu, nainstalujte [Microsoft ASP.NET MVC 4,0](/aspnet/mvc/mvc4) a .NET Framework 3,5 před vytvořením hvězdičky v procesu instalace. Další požadované role a funkce Windows serveru se nainstalují automaticky během procesu instalace na portálu.
 
 - Uživatelský účet, který spouští instalační skript portálu, potřebuje práva **správce** systému SQL na serveru databáze lokality. Během procesu instalace skript nastaví práva role přihlášení, uživatel a databáze SQL pro účet počítače webového serveru. Tento uživatelský účet můžete odebrat z role sysadmin po dokončení instalace samoobslužného portálu a webu pro správu a monitorování.
 

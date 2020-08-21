@@ -10,28 +10,28 @@ ms.assetid: d8d5c345-1e91-410b-b8a9-0170dcfa846e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0a720c68fc705187dedb6ff04fc3898a8b0b21c8
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: b4975f67c84c2354d13457981ac90ba4481d292f
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88124359"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697581"
 ---
 # <a name="manage-user-state-in-configuration-manager"></a>Správa stavu uživatele v Configuration Manager
 
 *Platí pro: Configuration Manager (Current Branch)*
 
-Pořadí úloh Configuration Manager můžete použít k zaznamenání a obnovení dat o stavu uživatele ve scénářích nasazení operačního systému, kde chcete zachovat stav uživatele v aktuálním operačním systému. Například:  
+Pořadí úloh Configuration Manager můžete použít k zaznamenání a obnovení dat o stavu uživatele ve scénářích nasazení operačního systému, kde chcete zachovat stav uživatele v aktuálním operačním systému. Příklad:  
 
 - Nasazení, při kterých chcete zaznamenat stav uživatele v jednom počítači a obnovit tento stav v jiném.  
 
 - Aktualizujte nasazení, ve kterém chcete zachytit a obnovit stav uživatele na stejném počítači.  
 
-Configuration Manager používá Nástroj pro migraci uživatelských souborů a nastavení (USMT) 10,0 ke správě migrace dat o stavu uživatele ze zdrojového počítače do cílového počítače po dokončení instalace operačního systému. Další informace o běžných scénářích migrace pomocí Nástroje pro migraci stavu uživatele (USMT) 10.0 najdete v tématu  [Běžné scénáře migrace](https://docs.microsoft.com/windows/deployment/usmt/usmt-common-migration-scenarios).
+Configuration Manager používá Nástroj pro migraci uživatelských souborů a nastavení (USMT) 10,0 ke správě migrace dat o stavu uživatele ze zdrojového počítače do cílového počítače po dokončení instalace operačního systému. Další informace o běžných scénářích migrace pomocí Nástroje pro migraci stavu uživatele (USMT) 10.0 najdete v tématu  [Běžné scénáře migrace](/windows/deployment/usmt/usmt-common-migration-scenarios).
 
 Následující části vám pomůžou zachytit a obnovit data uživatelů.
 
-## <a name="store-user-state-data"></a><a name="BKMK_StoringUserData"></a>Uložení dat o stavu uživatele
+## <a name="store-user-state-data"></a><a name="BKMK_StoringUserData"></a> Uložení dat o stavu uživatele
 
  Při zaznamenání stavu stavu uživatele můžete uložit data stavu uživatele na cílový počítač nebo do bodu migrace stavu. Chcete-li uložit stav uživatele v bodě migrace stavu uživatele, je nutné použít Configuration Manager Server systému lokality, který je hostitelem role systému lokality bodu migrace stavu. Chcete-li uložit stav uživatele v cílovém počítači, je třeba nakonfigurovat pořadí úloh tak, aby pomocí odkazů uložilo data v místním počítači.
 
@@ -49,7 +49,7 @@ Jakmile je informace o stavu uživatele zaznamenána, může být uložena jedn�
 
 - Můžete zadat pevné odkazy, které budou sloužit k obnovení uživatelských dat do původního umístění. Při tomto scénáři zůstávají data o stavu uživatele při odebrání starého operačního systému na disku. Potom po nasazení nového operačního systému pořadí úkolů **Obnovit** na základě pevných odkazů obnoví data stavu uživatele v původním umístění.  
 
-### <a name="store-user-data-on-a-state-migration-point"></a><a name="BKMK_UserDataSMP"></a>Uložení dat uživatele do bodu migrace stavu
+### <a name="store-user-data-on-a-state-migration-point"></a><a name="BKMK_UserDataSMP"></a> Uložení dat uživatele do bodu migrace stavu
 
  Pokud chcete uložit data stavu uživatele do bodu migrace stavu, postupujte takto:  
 
@@ -67,7 +67,7 @@ Jakmile je informace o stavu uživatele zaznamenána, může být uložena jedn�
 
     - [Release State Store](../understand/task-sequence-steps.md#BKMK_ReleaseStateStore) – upozorní bod migrace stavu, že se akce zaznamenání nebo obnovení dokončila.  
 
-### <a name="store-user-data-locally"></a><a name="BKMK_UserDataDestination"></a>Místní uložení dat uživatele
+### <a name="store-user-data-locally"></a><a name="BKMK_UserDataDestination"></a> Místní uložení dat uživatele
 
  Pokud chcete uložit data stavu uživatele místně, postupujte takto:  
 
@@ -80,7 +80,7 @@ Jakmile je informace o stavu uživatele zaznamenána, může být uložena jedn�
     > [!NOTE]
     > Data o stavu uživatele, na něž pevné odkazy odkazují, zůstávají v počítači i poté, co pořadí úloh odstraní starý operační systém. Jedná se o data sloužící k obnově stavu uživatele po nasazení nového operačního systému.  
 
-## <a name="configure-a-state-migration-point"></a><a name="BKMK_StateMigrationPoint"></a>Konfigurace bodu migrace stavu
+## <a name="configure-a-state-migration-point"></a><a name="BKMK_StateMigrationPoint"></a> Konfigurace bodu migrace stavu
 
 Bod migrace stavu uchovává data o stavu uživatele zaznamenaná v jednom počítači a následně obnovovaná v jiném počítači. Pokud ale zaznamenáváte uživatelské nastavení pro nasazení operačního systému na stejném počítači, třeba pro nasazení, při kterém obnovíte operační systém cílového počítače, můžete data uložit na stejný počítač (pomocí pevných odkazů) nebo do bodu migrace stavu. U některých nasazení počítačů se při vytváření úložiště stavů Configuration Manager automaticky vytvoří přidružení mezi úložištěm stavu a cílovým počítačem. Ke konfiguraci bodu migrace stavu k uložení dat o stavu uživatele můžete použít následující metody:  
 
@@ -102,7 +102,7 @@ Bod migrace stavu uchovává data o stavu uživatele zaznamenaná v jednom poč�
 
   Další informace o bodu migrace stavu a pokyny k jeho konfiguraci najdete v tématu [State migration point](prepare-site-system-roles-for-operating-system-deployments.md#BKMK_StateMigrationPoints).  
 
-## <a name="create-a-computer-association"></a><a name="BKMK_ComputerAssociation"></a>Vytvořit přidružení počítače
+## <a name="create-a-computer-association"></a><a name="BKMK_ComputerAssociation"></a> Vytvořit přidružení počítače
 
 Vytvořte přidružení počítačů, které určuje vztah mezi zdrojovým počítačem a cílovým počítačem při instalaci operačního systému na nový hardware, když chcete zaznamenat a obnovit nastavení dat uživatele. Zdrojový počítač je existující počítač, který Configuration Manager spravuje. Pokud nasazujete nový operační systém do cílového počítače, obsahuje zdrojový počítač stav uživatele, který je přenášen do cílového počítače.  
 
@@ -127,6 +127,6 @@ Vytvořte přidružení počítačů, které určuje vztah mezi zdrojovým poč�
 
     - **Uchovejte a obnovte zadané uživatelské účty**: Toto nastavení zaznamená a obnoví jenom zadané uživatelské účty. Při tomto nastavení nelze vytvořit více přiřazení k jednomu zdrojovému počítači.  
 
-## <a name="restore-user-state-data-when-an-operating-system-deployment-fails"></a><a name="BKMK_MigrationFails"></a>Obnovení dat o stavu uživatele v případě, že dojde k chybě nasazení operačního systému
+## <a name="restore-user-state-data-when-an-operating-system-deployment-fails"></a><a name="BKMK_MigrationFails"></a> Obnovení dat o stavu uživatele v případě, že dojde k chybě nasazení operačního systému
 
-Pokud se nasazení operačního systému nezdaří, pomocí funkce LoadState Nástroje pro migraci stavu uživatele (USMT) 10.0 načtěte data stavu uživatele, která se zaznamenala v průběhu nasazení. Patří sem data uložená v bodu migrace stavu nebo data uložená lokálně na cílovém počítači. Další informace o této funkci USMT naleznete v části [LoadState Syntax](https://docs.microsoft.com/windows/deployment/usmt/usmt-loadstate-syntax).
+Pokud se nasazení operačního systému nezdaří, pomocí funkce LoadState Nástroje pro migraci stavu uživatele (USMT) 10.0 načtěte data stavu uživatele, která se zaznamenala v průběhu nasazení. Patří sem data uložená v bodu migrace stavu nebo data uložená lokálně na cílovém počítači. Další informace o této funkci USMT naleznete v části [LoadState Syntax](/windows/deployment/usmt/usmt-loadstate-syntax).

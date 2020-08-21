@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: dd18355b9e472866a4d684162913795443ab07ef
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 112a1fe4a47cce330593d34da7ce8d9180457497
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268517"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698901"
 ---
 # <a name="get-support-for-desktop-analytics"></a>Získat podporu pro desktopovou analýzu
 
@@ -31,11 +31,11 @@ Microsoft poskytuje globální technickou, předprodejní, fakturační a odběr
 
 ## <a name="help-and-support"></a>Nápověda a podpora
 
-Pokud chcete požádat o pomoc na Desktop Analytics, použijte možnost **pomoc a podpora** na portálu v části **řešení potíží + podpora**. Tato akce vyhledá online lístek podpory pro desktopovou analýzu. Pokud chcete vytvořit a spravovat incident podpory, musí mít váš účet roli Azure Active Directory (Azure AD), která zahrnuje akci **Microsoft. Office 365. supportTickets/Tickets/Manage**. Další informace najdete v tématu [role správců ve službě Azure AD](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles).
+Pokud chcete požádat o pomoc na Desktop Analytics, použijte možnost **pomoc a podpora** na portálu v části **řešení potíží + podpora**. Tato akce vyhledá online lístek podpory pro desktopovou analýzu. Pokud chcete vytvořit a spravovat incident podpory, musí mít váš účet roli Azure Active Directory (Azure AD), která zahrnuje akci **Microsoft. Office 365. supportTickets/Tickets/Manage**. Další informace najdete v tématu [role správců ve službě Azure AD](/azure/active-directory/users-groups-roles/directory-assign-admin-roles).
 
 Pokud je problém pro Configuration Manager než jenom analýzou co nejobecnější, požádejte [podporu Microsoftu](https://aka.ms/cmcbsupport) o otevření nové žádosti o podporu. Použijte kategorii **Desktop Analytics** .
 
-## <a name="share-product-feedback"></a><a name="bkmk_feedback"></a>Sdílení názoru na produkt
+## <a name="share-product-feedback"></a><a name="bkmk_feedback"></a> Sdílení názoru na produkt
 
 <!-- 5451636 -->
 
@@ -54,6 +54,6 @@ První tři možnosti v současnosti vás probírají na [webu UserVoice](https:
 
 Čtvrtá možnost otevře na portálu možnost **pomoc a podpora** .
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Hledání pomoci při používání nástroje Configuration Manager](../core/understand/find-help.md)

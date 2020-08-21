@@ -10,12 +10,12 @@ ms.assetid: b634ff68-b909-48d2-9e2c-0933486673c5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 36da7d35b75d2675fc775ed46e49e8adf2e6af3f
-ms.sourcegitcommit: 8fc7f2864c5e3f177e6657b684c5f208d6c2a1b4
+ms.openlocfilehash: d9dcefe942309ad57c823ec669b7aa6630974fa8
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88591731"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698023"
 ---
 # <a name="create-phased-deployments-with-configuration-manager"></a>Vytvoření postupného nasazení pomocí Configuration Manager
 
@@ -35,7 +35,7 @@ Vytvořit dvoufázové nasazení pro následující objekty:
 
 
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 #### <a name="security-scope"></a>Obor zabezpečení
 Nasazení vytvořená pomocí dvoufázové nasazení nejsou viditelná pro žádného administrativního uživatele, který nemá rozsah zabezpečení **vše** . Další informace najdete v tématu [Obory zabezpečení](../../core/understand/fundamentals-of-role-based-administration.md#bkmk_PlanScope).
@@ -122,7 +122,7 @@ Include a timeline diagram
 6. Potvrďte svoje výběry na kartě **Souhrn** a potom kliknutím na tlačítko **Další** dokončete průvodce.  
 
 > [!NOTE]
-> Od 21. dubna 2020 se sada Office 365 ProPlus přejmenovává na **Microsoft 365 aplikace pro podniky**. Další informace najdete v tématu [Změna názvu pro Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change). I když se konzola aktualizuje, můžete si i nadále zobrazovat starý název v Configuration Manager produktu a dokumentaci.  
+> Od 21. dubna 2020 se sada Office 365 ProPlus přejmenovává na **Microsoft 365 aplikace pro podniky**. Další informace najdete v tématu [Změna názvu pro Office 365 ProPlus](/deployoffice/name-change). I když se konzola aktualizuje, můžete si i nadále zobrazovat starý název v Configuration Manager produktu a dokumentaci.  
 
 ## <a name="create-a-phased-deployment-with-manually-configured-phases"></a><a name="bkmk_manual"></a> Vytvoření postupného nasazení s ručně nakonfigurovanými fázemi
 <!--1358148--> 

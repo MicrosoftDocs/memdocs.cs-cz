@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: b27682de-adf8-4edd-9572-54886af8f7fb
-ms.openlocfilehash: 1a64d49edca146c70a56b07cb304d1744b86a1bf
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 3f49d7d001de07a7d3d6a7bdbb5f9ff90de018c9
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127742"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699870"
 ---
 #  <a name="automatically-deploy-software-updates"></a>Automatické nasazení aktualizací softwaru  
 
@@ -31,7 +31,7 @@ Automatické schvalování a nasazování aktualizací softwaru pomocí pravidla
 >  Před prvním vytvořením pravidla automatického nasazení ověřte, že lokalita dokončila synchronizaci aktualizací softwaru. Tento krok je důležitý, když spouštíte Configuration Manager s jiným než anglickým jazykem. Klasifikace aktualizace softwaru se zobrazují v angličtině před první synchronizací a po dokončení synchronizace aktualizací softwaru se pak zobrazí v lokalizovaných jazycích. Pravidla, která vytvoříte před synchronizací aktualizací softwaru, nemusí po synchronizaci správně fungovat, protože textový řetězec se nemusí shodovat.  
 
 
-### <a name="process-to-create-an-adr"></a><a name="bkmk_adr-process"></a>Postup vytvoření pravidla automatického nasazení  
+### <a name="process-to-create-an-adr"></a><a name="bkmk_adr-process"></a> Postup vytvoření pravidla automatického nasazení  
 
 1.  V konzole Configuration Manager otevřete pracovní prostor **softwarová knihovna** , rozbalte možnost **aktualizace softwaru**a vyberte uzel **pravidla automatického nasazení** .  
 
@@ -49,7 +49,7 @@ Automatické schvalování a nasazování aktualizací softwaru pomocí pravidla
 
          - Šablona **aktualizací klientů Office 365** poskytuje běžná nastavení, která se použijí při nasazení aktualizací pro klienty Microsoft 365ch aplikací.
              > [!Note]
-             > Od 21. dubna 2020 se sada Office 365 ProPlus přejmenovává na **Microsoft 365 aplikace pro podniky**. Pokud vaše pravidla automatického nasazení spoléhá na vlastnost "title", budete ji muset upravit od 9. června 2020. `Microsoft 365 Apps Update - Semi-annual Channel Version 1908 for x64 based Edition (Build 11929.50000)`je příkladem nového názvu. Další informace o tom, jak upravit pravidla automatického nasazení pro změnu názvu, najdete v tématu [aktualizace kanálů pro aplikace Microsoft 365](manage-office-365-proplus-updates.md#bkmk_channel). Další informace o změně názvu najdete v tématu [Změna názvu pro Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change).
+             > Od 21. dubna 2020 se sada Office 365 ProPlus přejmenovává na **Microsoft 365 aplikace pro podniky**. Pokud vaše pravidla automatického nasazení spoléhá na vlastnost "title", budete ji muset upravit od 9. června 2020. `Microsoft 365 Apps Update - Semi-annual Channel Version 1908 for x64 based Edition (Build 11929.50000)` je příkladem nového názvu. Další informace o tom, jak upravit pravidla automatického nasazení pro změnu názvu, najdete v tématu [aktualizace kanálů pro aplikace Microsoft 365](manage-office-365-proplus-updates.md#bkmk_channel). Další informace o změně názvu najdete v tématu [Změna názvu pro Office 365 ProPlus](/deployoffice/name-change).
 
          - Šablona **SCEP a aktualizace antivirové ochrany v programu Windows Defender** poskytuje běžná nastavení, která se použijí při nasazení Endpoint Protection aktualizace definic.  
 
@@ -92,7 +92,7 @@ Automatické schvalování a nasazování aktualizací softwaru pomocí pravidla
      - Počínaje verzí 1806 je teď k dispozici filtr vlastností pro **architekturu** . Tento filtr použijte k vyloučení architektury, jako je Itanium a ARM64, které jsou méně běžné. Mějte na paměti, že v systémech s procesorem 64 (x64) jsou spuštěny 32bitové aplikace a komponenty v 32. Pokud si nejste jistí, že nepotřebujete x86, povolte ji i v případě, že zvolíte x64.<!--1322266-->  
 
     > [!NOTE]  
-    > **Windows 10 verze 1903 a novější** se přidala do Microsoft Update jako vlastní produkt, a ne jako součást produktu **Windows 10** , jako je třeba předchozí verze. Tato změna způsobila, že provedete několik ručních kroků, abyste zajistili, že se tyto aktualizace zobrazí u klientů. Pomohli jsme snížit počet ručních kroků, které je třeba provést pro nový produkt ve verzi Configuration Manager 1906. Další informace najdete v tématu [Konfigurace produktů pro verze Windows 10](../get-started/configure-classifications-and-products.md#windows-10-version-1903-and-later) . <!--4682946-->
+    > **Windows 10 verze 1903 a novější** se přidala do Microsoft Update jako vlastní produkt, a ne jako součást produktu **Windows 10**  , jako je třeba předchozí verze. Tato změna způsobila, že provedete několik ručních kroků, abyste zajistili, že se tyto aktualizace zobrazí u klientů. Pomohli jsme snížit počet ručních kroků, které je třeba provést pro nový produkt ve verzi Configuration Manager 1906. Další informace najdete v tématu [Konfigurace produktů pro verze Windows 10](../get-started/configure-classifications-and-products.md#windows-10-version-1903-and-later) . <!--4682946-->
 
 
 6. Na stránce **Plán vyhodnocení** určete, jestli se má povolit, aby se pravidla automatického nasazení spouštěla podle plánu. Když je položka povolena, kliknutím na **Přizpůsobit** nastavte opakovaný plán.  
@@ -244,7 +244,7 @@ Po vytvoření pravidla automatického nasazení přidejte do pravidla další n
      - Výstrahy
      - Download Settings  
 
-Nasazení je také možné přidat programově pomocí rutin prostředí Windows PowerShell. Úplný popis použití této metody najdete v části [New-CMSoftwareUpdateDeployment](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmsoftwareupdatedeployment) .
+Nasazení je také možné přidat programově pomocí rutin prostředí Windows PowerShell. Úplný popis použití této metody najdete v části [New-CMSoftwareUpdateDeployment](/powershell/module/configurationmanager/new-cmsoftwareupdatedeployment) .
 
 Další informace o procesu nasazení najdete v tématu [Proces nasazení aktualizací softwaru](../understand/software-updates-introduction.md#BKMK_DeploymentProcess).
 

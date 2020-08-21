@@ -10,12 +10,12 @@ ms.assetid: 5d5d6273-0d8a-43c7-865a-cdb1736dcae3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b01ea9b089da3cfcfc3e8d23e7ad25d27ab2fec7
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: c83d0da07474c8b078ee226d249b73f00562e0f5
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81712551"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700159"
 ---
 # <a name="plan-for-the-sms-provider"></a>Plánování poskytovatele serveru SMS
 
@@ -67,7 +67,7 @@ Aby mohl cílový server podporovat poskytovatele služby SMS, musí splňovat n
     > [!Note]  
     > Každý poskytovatel serveru SMS se pokusí nainstalovat službu správy, která vyžaduje certifikát. Tato služba má závislost na službě IIS pro vázání tohoto certifikátu na port HTTPS 443. Pokud povolíte [Rozšířené protokolu HTTP](enhanced-http.md), lokalita tento certifikát vytvoří pomocí rozhraní API služby IIS. Pokud vaše lokalita používá infrastrukturu veřejných klíčů (PKI), je nutné ručně vytvořit z poskytovatele služby IIS certifikát PKI. Počínaje verzí 2002 lokalita automaticky používá certifikát podepsaný držitelem webu.
 
-## <a name="locations"></a><a name="bkmk_location"></a>Polohy  
+## <a name="locations"></a><a name="bkmk_location"></a> Polohy  
 
 Při instalaci lokality automaticky nainstalujete prvního poskytovatele služby SMS pro danou lokalitu. Pro poskytovatele serveru SMS můžete určit kterékoli z následujících podporovaných umístění:  
 
@@ -135,7 +135,7 @@ V následujících částech jsou popsány výhody a nevýhody instalace poskyto
 
   - Toto umístění může využívat systémové prostředky, které by jinak byly vyhrazené jiným službám.  
 
-## <a name="authentication"></a><a name="bkmk_auth"></a>Přihlašovací
+## <a name="authentication"></a><a name="bkmk_auth"></a> Přihlašovací
 
 <!--1357013-->
 Počínaje verzí 1810 můžete určit minimální úroveň ověřování pro správce pro přístup k Configuration Manager lokalit. Tato funkce vynutila správcům přihlášení k systému Windows s požadovanou úrovní. Platí pro všechny komponenty, které přistupují k poskytovateli serveru SMS. Například konzola Configuration Manager, metody sady SDK a rutiny prostředí Windows PowerShell.
@@ -165,13 +165,13 @@ K dispozici jsou následující úrovně:
 
 - **Ověřování certifikátu**: vyžaduje ověření pomocí platného certifikátu, který vystavila důvěryhodná certifikační autorita PKI. Tento certifikát nekonfigurujte v Configuration Manager. Configuration Manager vyžaduje, aby byl správce přihlášený k Windows pomocí PKI.  
 
-- **Ověřování ve Windows Hello pro firmy**: vyžaduje ověřování pomocí silného dvojúrovňového ověřování, které je vázané na zařízení a používá BIOMETRIKA nebo PIN. Další informace najdete v tématu [Windows Hello pro firmy](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-identity-verification).  
+- **Ověřování ve Windows Hello pro firmy**: vyžaduje ověřování pomocí silného dvojúrovňového ověřování, které je vázané na zařízení a používá BIOMETRIKA nebo PIN. Další informace najdete v tématu [Windows Hello pro firmy](/windows/security/identity-protection/hello-for-business/hello-identity-verification).  
 
 ### <a name="exclusions"></a>Vyloučení
 
 Na kartě **ověřování** v nastavení hierarchie můžete také vyloučit určité uživatele nebo skupiny. Tuto možnost použijte zřídka. Například když konkrétní uživatelé potřebují přístup ke konzole Configuration Manager, ale nelze ověřit pro systém Windows na požadované úrovni. Může být taky potřeba pro automatizaci nebo služby, které běží v kontextu systémového účtu.
 
-## <a name="about-sms-provider-languages"></a><a name="BKMK_SMSProvLanguages"></a>O jazycích poskytovatele SMS  
+## <a name="about-sms-provider-languages"></a><a name="BKMK_SMSProvLanguages"></a> O jazycích poskytovatele SMS  
 
 Poskytovatel serveru SMS funguje nezávisle na jazyce zobrazení serveru, na který ho nainstalujete.  
 
@@ -185,7 +185,7 @@ Když Configuration Manager ukládá data pro objekt v databázi, dostupné jazy
 
 - Configuration Manager ukládá objekty, které uživatel s právy pro správu vytvoří, pomocí jazyka, který se použil k vytvoření objektu. Tyto objekty se zobrazí v konzole Configuration Manager ve stejném jazyce. Poskytovatel serveru SMS je nemůže přeložit a nemá k dispozici více jazykových možností.  
 
-## <a name="use-multiple-sms-providers"></a><a name="BKMK_MultiSMSProv"></a>Použití více poskytovatelů serveru SMS  
+## <a name="use-multiple-sms-providers"></a><a name="BKMK_MultiSMSProv"></a> Použití více poskytovatelů serveru SMS  
 
 Po dokončení instalace lokality můžete pro tuto lokalitu nainstalovat další poskytovatele serveru SMS. Chcete-li nainstalovat další poskytovatele serveru SMS, spusťte instalační program Configuration Manager na serveru lokality.
 
@@ -204,7 +204,7 @@ Když v lokalitě nainstalujete více poskytovatelů serveru SMS a vyžádáte s
 
 Když poprvé připojíte konzolu Configuration Manager k lokalitě, připojení se dotazuje rozhraní WMI na serveru lokality. Tento dotaz identifikuje instanci poskytovatele serveru SMS, kterou používá konzola nástroje. Tato konkrétní instance poskytovatele služby SMS zůstane používána konzolou nástroje až do ukončení relace. Pokud je relace ukončena, protože server poskytovatele služby SMS není v síti k dispozici, dojde při opětovném připojení konzoly k lokalitě k zopakování počátečního dotazu. Je možné, že lokalita přiřadí stejnou instanci poskytovatele služby SMS, která není k dispozici. Pokud dojde k tomuto chování, pokuste se znovu připojit konzolu, dokud lokalita nevrátí dostupného poskytovatele služby SMS.  
 
-## <a name="about-the-sms-provider-namespace"></a><a name="BKMK_SMSProvNamespace"></a>O oboru názvů poskytovatele služby SMS  
+## <a name="about-the-sms-provider-namespace"></a><a name="BKMK_SMSProvNamespace"></a> O oboru názvů poskytovatele služby SMS  
 
 Configuration Manager schéma WMI definuje strukturu poskytovatele služby SMS. Obory názvů schématu popisují umístění dat Configuration Manager v rámci schématu poskytovatele služby SMS. Následující tabulka obsahuje některé běžné obory názvů, které poskytovatel serveru SMS používá:  
 
@@ -216,7 +216,7 @@ Configuration Manager schéma WMI definuje strukturu poskytovatele služby SMS. 
 |`Root\CCM`|Configuration Manager zásady konfigurace klienta a data klienta.|  
 |`Root\CIMv2\SMS`|Umístění tříd generování sestav inventáře, které shromažďuje agent klienta inventáře. Klienti toto nastavení zkompiluje během hodnocení zásad počítače. Tato nastavení jsou založená na konfiguraci nastavení klienta pro daný počítač.|  
 
-## <a name="os-deployment-requirements"></a><a name="BKMK_WAIKforSMSProv"></a>Požadavky na nasazení operačního systému
+## <a name="os-deployment-requirements"></a><a name="BKMK_WAIKforSMSProv"></a> Požadavky na nasazení operačního systému
 
 Počítač, na který nainstalujete instanci poskytovatele serveru SMS, vyžaduje podporovanou verzi sady Windows ADK.  
 
@@ -232,7 +232,7 @@ Když spravujete nasazení operačního systému, umožňuje Windows ADK poskyto
 
 Instalace sady Windows ADK může vyžadovat až 650 MB volného místa na disku každého počítače, který instaluje poskytovatele serveru SMS. Tento minimální požadavek na místo na disku je nezbytný pro Configuration Manager k instalaci spouštěcích imagí prostředí Windows PE.  
 
-## <a name="administration-service"></a><a name="bkmk_admin-service"></a>Služba správy
+## <a name="administration-service"></a><a name="bkmk_admin-service"></a> Služba správy
 
 <!--3607711, fka 1321523-->
 

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 7b2bff4f8365693c86540c9b0578307340f13a49
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: c9268514b43f4f728d3fff4715d4d71308a712f3
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268891"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699071"
 ---
 # <a name="compatibility-assessment-in-desktop-analytics"></a>Posouzení kompatibility v Desktop Analytics
 
@@ -180,13 +180,13 @@ Když aktualizujete Configuration Manager lokalitu a klienty na verzi 1906, klie
 
 #### <a name="16-bit-apps"></a>16bitové aplikace
 
-Odeberte všechny 16bitové komponenty z aplikací a nahraďte je pomocí 32 a 64 bitů ekvivalentů. Další informace najdete v tématu [Windows Vista a Windows Server 2008 Developer Story: Kompatibilita aplikací kuchařka](https://docs.microsoft.com/previous-versions/aa480152\(v=msdn.10\)).
+Odeberte všechny 16bitové komponenty z aplikací a nahraďte je pomocí 32 a 64 bitů ekvivalentů. Další informace najdete v tématu [Windows Vista a Windows Server 2008 Developer Story: Kompatibilita aplikací kuchařka](/previous-versions/aa480152\(v=msdn.10\)).
 
 Druhou možností je povolit počítač se systémem NT Virtual DOS (NTVDM) pro podporu Windows 10.
 
 #### <a name="requires-admin-privileges"></a>Vyžaduje oprávnění správce.
 
-Aplikace vyžaduje, aby uživatel měl přístup správce k zařízení. Pro tyto aplikace použijte manifest aplikace, který vyžaduje oprávnění správce. Další informace najdete v tématu [Vytvoření a vložení manifestu aplikace](https://docs.microsoft.com/previous-versions/bb756929\(v=msdn.10\)).
+Aplikace vyžaduje, aby uživatel měl přístup správce k zařízení. Pro tyto aplikace použijte manifest aplikace, který vyžaduje oprávnění správce. Další informace najdete v tématu [Vytvoření a vložení manifestu aplikace](/previous-versions/bb756929\(v=msdn.10\)).
 
 Desktop Analytics doporučuje aplikaci pro pilotní testování, aby zjistila jakékoli regrese.
 
@@ -196,7 +196,7 @@ Mnoho aplikací Java spoléhá na samostatně instalované Java Runtime Environm
 
 #### <a name="not-dpi-aware"></a>Nepodporující rozlišení DPI
 
-Aplikace může zobrazit problémy s pokročilými rozlišeními obrazovky ve Windows 10. Použijte manifest aplikace, abyste se vyhnuli jakýmkoli problémům s rozlišením vysoké úrovně DPI. Další informace najdete v tématu [manifesty aplikací](https://docs.microsoft.com/windows/desktop/SbsCs/application-manifests).
+Aplikace může zobrazit problémy s pokročilými rozlišeními obrazovky ve Windows 10. Použijte manifest aplikace, abyste se vyhnuli jakýmkoli problémům s rozlišením vysoké úrovně DPI. Další informace najdete v tématu [manifesty aplikací](/windows/desktop/SbsCs/application-manifests).
 
 Desktop Analytics doporučuje aplikaci pro pilotní testování, aby zjistila jakékoli regrese.
 
@@ -220,13 +220,13 @@ Verze .NET Framework 1,0 není ve Windows 10 podporovaná. Verze 1,1 není kompa
 
 #### <a name="net-framework-2030"></a>.NET Framework 2.0/3.0
 
-Rozhraní .NET 2,0 a 3,5 jsou podporovaná ve Windows 10. Možná budete muset povolit funkci Windows. Další informace najdete v tématu [instalace .NET Framework 3,5 ve Windows 10](https://docs.microsoft.com/dotnet/framework/install/dotnet-35-windows-10).
+Rozhraní .NET 2,0 a 3,5 jsou podporovaná ve Windows 10. Možná budete muset povolit funkci Windows. Další informace najdete v tématu [instalace .NET Framework 3,5 ve Windows 10](/dotnet/framework/install/dotnet-35-windows-10).
 
 #### <a name="ui-access"></a>Přístup k uživatelskému rozhraní
 
 Aplikace s přístupem k UŽIVATELSKÉmu rozhraní můžou obejít úroveň řízení uživatelského rozhraní a řídit tak vstup do oken s vyšším oprávněním na ploše. Toto nastavení použijte jenom pro aplikace technologie usnadnění uživatelského rozhraní.
 
-Pokud v aplikaci nepoužíváte funkce přístupnosti, nastavte příznak přístup k uživatelskému rozhraní v manifestu aplikace na hodnotu NEPRAVDA. Další informace najdete v tématu [Vytvoření a vložení manifestu aplikace](https://docs.microsoft.com/previous-versions/bb756929\(v=msdn.10\)).
+Pokud v aplikaci nepoužíváte funkce přístupnosti, nastavte příznak přístup k uživatelskému rozhraní v manifestu aplikace na hodnotu NEPRAVDA. Další informace najdete v tématu [Vytvoření a vložení manifestu aplikace](/previous-versions/bb756929\(v=msdn.10\)).
 
 Desktop Analytics doporučuje aplikaci pro pilotní testování, aby zjistila jakékoli regrese.
 
@@ -243,6 +243,6 @@ Posouzení můžete najít na ovladači v části Desktop Analytics. V seznamu p
 | K dispozici v krabicích a z web Windows Update | Ano | Aktuálně nainstalovaná verze ovladače nebude migrována na novou verzi operačního systému. I když je během upgradu nainstalován nový ovladač, je k dispozici novější verze z web Windows Update. | Pokud počítač automaticky obdrží aktualizace z web Windows Update, není vyžadována žádná akce. V opačném případě importujte nový ovladač z web Windows Update po upgradu Windows. |
 | Obraťte se na dodavatele. | Ano | Ovladač nebude migrován na novou verzi operačního systému a Desktop Analytics nemůže najít kompatibilní verzi. | V případě řešení se poraďte se nezávislým dodavatelem hardwaru (IHV), který vyrábí ovladač, nebo výrobcem OEM (Original Equipment Manufacturer), který toto zařízení poskytl. |
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-Zvýhodnění centra FastTrack pro Windows 10 poskytuje přístup k **zajištění přístupu k desktopové aplikaci**. Tato výhoda je nová služba určená k řešení problémů s Windows 10 a Microsoft 365 aplikacemi pro zajištění kompatibility s podnikovou sítí. Další informace najdete v tématu [zajištění pro desktopovou aplikaci](https://docs.microsoft.com/fasttrack/win-10-desktop-app-assure).
+Zvýhodnění centra FastTrack pro Windows 10 poskytuje přístup k **zajištění přístupu k desktopové aplikaci**. Tato výhoda je nová služba určená k řešení problémů s Windows 10 a Microsoft 365 aplikacemi pro zajištění kompatibility s podnikovou sítí. Další informace najdete v tématu [zajištění pro desktopovou aplikaci](/fasttrack/win-10-desktop-app-assure).

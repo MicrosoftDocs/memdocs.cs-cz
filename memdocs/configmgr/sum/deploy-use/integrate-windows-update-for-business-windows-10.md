@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 183315fe-27bd-456f-b2c5-e8d25e05229b
-ms.openlocfilehash: 8ea95a04977038514c00f0199df42c8070e813c3
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 51e64f8f815c4ba90522acf6529cff4d971dd553
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127650"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699802"
 ---
 # <a name="integrate-with-windows-update-for-business"></a>Integrace s web Windows Update pro firmy
 
@@ -24,7 +24,7 @@ ms.locfileid: "88127650"
 Web Windows Update for Business (WUfB) umožňuje udržovat zařízení s Windows 10 ve vaší organizaci vždy aktuální s nejnovější ochranou zabezpečení a funkcemi Windows, když se tato zařízení připojují přímo ke službě web Windows Update (WU). Configuration Manager může rozlišovat mezi počítači s Windows 10, které k získávání aktualizací softwaru používají WUfB a WSUS.  
 
 > [!WARNING]
-> Pokud pro svá zařízení používáte spolusprávu a přesunuli jste [zásady web Windows Update](../../comanage/workloads.md#windows-update-policies) do Intune, budou vaše zařízení získávat své [zásady web Windows Update pro firmy z Intune](https://docs.microsoft.com/intune/windows-update-for-business-configure).
+> Pokud pro svá zařízení používáte spolusprávu a přesunuli jste [zásady web Windows Update](../../comanage/workloads.md#windows-update-policies) do Intune, budou vaše zařízení získávat své [zásady web Windows Update pro firmy z Intune](/intune/windows-update-for-business-configure).
 > - Pokud je klient Configuration Manager pořád nainstalovaný na spoluspravovaném zařízení, pak se v Intune spravují nastavení pro kumulativní aktualizace a aktualizace funkcí. Opravy, které jsou v [**nastavení klienta**](../../core/clients/deploy/about-client-settings.md#enable-third-party-software-updates)povolené, se ale pořád spravují pomocí Configuration Manager.  
 
  Některé funkce Configuration Manager již nejsou k dispozici, pokud Configuration Manager klienti jsou nakonfigurováni pro příjem aktualizací ze služby WU, což zahrnuje WUfB nebo Windows Insider:  
@@ -52,7 +52,7 @@ Pomocí následujícího postupu Identifikujte klienty, kteří používají WUf
 
 - Klienti, kteří používají Windows 10 Desktop Pro nebo Windows 10 Enterprise Edition verze 1511 nebo novější
 
-- Je nasazená služba[Windows Update for Business](https://docs.microsoft.com/windows/deployment/update/waas-manage-updates-wufb) a klienti ji používají k získávání aktualizací a upgradů Windows 10.  
+- Je nasazená služba[Windows Update for Business](/windows/deployment/update/waas-manage-updates-wufb) a klienti ji používají k získávání aktualizací a upgradů Windows 10.  
 
 ### <a name="to-identify-clients-that-use-wufb"></a>Identifikace klientů, kteří používají WUfB  
 
@@ -74,7 +74,7 @@ Od verze Configuration Manager 1706 můžete nakonfigurovat zásady odložení p
 
 > [!NOTE]
 > Od verze Configuration Manager 1802 můžete nastavit zásady odložení pro Windows Insider. <!--507201-->  
-Další informace o programu Windows Insider najdete v tématu [Začínáme s programem Windows Insider pro firmy](https://docs.microsoft.com/windows/deployment/update/waas-windows-insider-for-business).
+Další informace o programu Windows Insider najdete v tématu [Začínáme s programem Windows Insider pro firmy](/windows/deployment/update/waas-windows-insider-for-business).
 
 ### <a name="prerequisites-for-deferral-policies"></a>Předpoklady pro zásady odložení
 

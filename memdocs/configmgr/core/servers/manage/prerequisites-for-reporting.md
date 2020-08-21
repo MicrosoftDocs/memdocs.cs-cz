@@ -10,12 +10,12 @@ ms.assetid: 9cc508a5-5023-4833-b776-ae9a6971138f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e08833a5ef560a0f958fe68b4ade0d4717dffc73
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 0b082ae578052a92c0afacd3d1f62fdb2e21bd6d
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81720139"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699530"
 ---
 # <a name="prerequisites-for-reporting-in-configuration-manager"></a>Předpoklady pro vytváření sestav v Configuration Manager
 
@@ -31,7 +31,7 @@ Vytváření sestav v Configuration Manager má následující závislosti:
 
 Než budete moct použít vytváření sestav v Configuration Manager, nainstalujte a nakonfigurujte SQL Server Reporting Services.
 
-Další informace o plánování a nasazení služeb generování sestav najdete v tématu [Install SQL Server Reporting Services](https://docs.microsoft.com/sql/reporting-services/install-windows/install-reporting-services).
+Další informace o plánování a nasazení služeb generování sestav najdete v tématu [Install SQL Server Reporting Services](/sql/reporting-services/install-windows/install-reporting-services).
 
 Nainstalujte databázi služby Reporting Services buď na výchozí instanci, nebo na pojmenovanou instanci instalace 64 SQL Server. Společně vyhledejte instanci SQL Server se serverem systému lokality nebo ji nakonfigurujte na vzdáleném počítači.
 
@@ -43,7 +43,7 @@ Než budete moci použít vytváření sestav v nástroji Configuration Manager,
 
 Další informace najdete v tématu [Požadované součásti lokality a systému lokality](../../plan-design/configs/site-and-site-system-prerequisites.md#bkmk_2012RSpoint).
 
-## <a name="power-bi-report-server"></a>serveru sestav Power BI
+## <a name="power-bi-report-server"></a>Server sestav Power BI
 
 Počínaje verzí 2002 můžete integrovat vytváření sestav pomocí Server sestav Power BI. Další informace, včetně požadavků, najdete v tématu věnovaném [integraci s server sestav Power BI](powerbi-report-server.md).
 

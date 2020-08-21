@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a82fbfa9e494828450729e29467580c29a590282
-ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
+ms.openlocfilehash: c789f47767e42b57cd94d63bf9299af57351468d
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179549"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700612"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>Přizpůsobení aplikací Portál společnosti Intune, Portál společnosti webu a Intune
 
@@ -108,7 +108,7 @@ Následující tabulka uvádí podrobnosti konfigurace specifické pro registrac
 > 
 > Následující nastavení platí pro zařízení s Androidem nakonfigurovaná pomocí [zápisu na mobilních zařízeních Samsung KNOX](../enrollment/android-samsung-knox-mobile-enroll.md) (KME). Pokud je zařízení nakonfigurované pro KME a registrace zařízení je nastavená na nedostupné, zařízení se nebude moct zaregistrovat během toku mimo box.
 
-|    Možnosti registrace zařízení    |    Description    |    Výzvy kontrolního seznamu    |    Notification (Oznámení)    |    Stav podrobnosti o zařízení    |    Podrobnosti o stavu aplikace (aplikace, která vyžaduje registraci)    |
+|    Možnosti registrace zařízení    |    Popis    |    Výzvy kontrolního seznamu    |    Notification (Oznámení)    |    Stav podrobnosti o zařízení    |    Podrobnosti o stavu aplikace (aplikace, která vyžaduje registraci)    |
 |-----------------------------------|-------------------------------------------------------------------------------------------------------------------------|-------------------------|--------------------|-----------------------------|--------------------------------------------------------------------|
 |    K dispozici, s výzvami    |    Výchozí prostředí s výzvou k registraci ve všech možných umístěních.    |    Ano    |    Ano    |    Ano    |    Ano    |
 |    K dispozici, žádné výzvy    |    Uživatel se může zaregistrovat přes stav v podrobnostech o zařízení pro svoje aktuální zařízení nebo aplikace, které vyžadují registraci.    |    Ne    |    Ne    |    Ano    |    Ano    |
@@ -133,7 +133,12 @@ Následující tabulka uvádí podrobnosti konfigurace konkrétního oznámení:
 
 ### <a name="app-sources"></a>Zdroje aplikací
 
-Můžete zvolit, které další zdroje aplikací se budou zobrazovat v Portál společnosti. Následující tabulka uvádí podrobnosti konfigurace specifické pro zdroj aplikace:
+Můžete zvolit, které další zdroje aplikací se budou zobrazovat v Portál společnosti.
+
+> [!NOTE]
+> Portál společnosti podporuje Configuration Manager aplikace. Tato funkce umožňuje koncovým uživatelům zobrazit Configuration Manager i aplikace nasazené v Intune v Portál společnosti pro spoluspravované zákazníky. Další informace najdete v tématu [použití portál společnosti aplikace na spoluspravovaných zařízeních](/mem/configmgr/comanage/company-portal).
+
+Následující tabulka uvádí podrobnosti konfigurace specifické pro zdroj aplikace:
 
 | Název pole | Maximální délka | Další informace |
 |------------------------------------------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -165,8 +170,8 @@ Pro webové Portál společnosti aplikace, pokud má koncový uživatel nainstal
 
 Po výběru Portál společnosti bude uživatel přesměrován na odpovídající stránku aplikace v případě, že cesta k identifikátoru URI je jedna z následujících:
 
-- `/apps`– Web Portál společnosti otevře stránku aplikace se seznamem všech aplikací.
-- `/apps/[appID]`– Web Portál společnosti otevře stránku podrobností příslušné aplikace.
+- `/apps` – Web Portál společnosti otevře stránku aplikace se seznamem všech aplikací.
+- `/apps/[appID]` – Web Portál společnosti otevře stránku podrobností příslušné aplikace.
 - *Cesta k identifikátoru URI je jiná nebo neočekávaná* – zobrazí se Domovská stránka web portál společnosti.
 
 Pokud uživatel nemá nainstalovanou aplikaci Portál společnosti, uživatel přejde k webovému Portál společnosti.
@@ -190,13 +195,13 @@ Koncoví uživatelé mohou aktivovat akce navigace, aplikace a zařízení ve Wi
 
 V aplikaci Portál společnosti pro Windows jsou k dispozici následující klávesové zkratky.
 
-| Oblast | Description | Klávesová zkratka |
+| Oblast | Popis | Klávesová zkratka |
 |--------------------|----------------|-------------------|
 | Navigační nabídka | Navigace | Alt+M |
 |  | Domů | Alt+H |
 |  | Všechny aplikace | Alt+A |
 |  | Nainstalované aplikace | Alt+I |
-|  | Odeslat názor | Alt+F |
+|  | Váš názor | Alt+F |
 |  | Můj profil | Alt+U |
 |  | Nastavení | Alt+T |
 | Úvodní stránka – dlaždice Zařízení | přejmenování | F2 |

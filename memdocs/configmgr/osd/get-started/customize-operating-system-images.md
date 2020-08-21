@@ -10,12 +10,12 @@ ms.assetid: 95033a9b-ff13-4b70-b1de-bcb25bcb6024
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 652a0c5e36ce7c4bacf40531a82fdf4e16197d95
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 4f1d89707fa3e1765067c264d2abec12116bde88
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906918"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697717"
 ---
 # <a name="customize-operating-system-images-with-configuration-manager"></a>Přizpůsobení imagí operačního systému pomocí Configuration Manager
 
@@ -23,10 +23,10 @@ ms.locfileid: "82906918"
 
 Bitové kopie operačního systému v Configuration Manager jsou soubory WIM a představují zkomprimovanou kolekci referenčních souborů a složek, které jsou nezbytné k úspěšné instalaci a konfiguraci operačního systému v počítači. Přizpůsobená image operačního systému se vytváří a zaznamenává z referenčního počítače, nakonfigurovaného se všemi požadovanými soubory operačního systému, pomocnými soubory, aktualizacemi softwaru, nástroji a dalšími softwarovými aplikacemi. Rozsah ruční konfigurace referenčního počítače závisí na vás. Pomocí pořadí úkolů sestavení a zaznamenání můžete zcela automatizovat konfiguraci referenčního počítače, pomocí pořadí úkolů můžete ručně nakonfigurovat některé aspekty referenčního počítače a potom automatizovat zbývající akce nebo můžete referenční počítač nakonfigurovat ručně bez pomoci pořadí úkolů. K přizpůsobení operačního systému použijte následující části.
 
-##  <a name="prepare-for-the--reference-computer"></a><a name="BKMK_PrepareReferenceComputer"></a>Příprava referenčního počítače  
+##  <a name="prepare-for-the--reference-computer"></a><a name="BKMK_PrepareReferenceComputer"></a> Příprava referenčního počítače  
  Než zaznamenáte image operačního systému z referenčního počítače, je potřeba zvážit několik věcí.  
 
-###  <a name="decide-between-an-automated-or-manual-configuration"></a><a name="BKMK_RefComputerDecide"></a>Rozhodnutí mezi automatizovanou nebo ruční konfigurací  
+###  <a name="decide-between-an-automated-or-manual-configuration"></a><a name="BKMK_RefComputerDecide"></a> Rozhodnutí mezi automatizovanou nebo ruční konfigurací  
  Následující informace popisují výhody a nevýhody automatizované a ruční konfigurace referenčního počítače.  
 
 #### <a name="automated-configuration"></a>Automatizovaná konfigurace  
@@ -61,7 +61,7 @@ Bitové kopie operačního systému v Configuration Manager jsou soubory WIM a p
 
 - Je třeba osoba, která bude aktivně zapojena do procesu.  
 
-###  <a name="considerations-for-the-reference-computer"></a><a name="BKMK_RefComputerConsiderations"></a>Požadavky na referenční počítač  
+###  <a name="considerations-for-the-reference-computer"></a><a name="BKMK_RefComputerConsiderations"></a> Požadavky na referenční počítač  
  Následující informace uvádí základní položky, které je třeba zvážit v případě konfigurace referenčního počítače.  
 
 -   **Nasazovaný operační systém**  
@@ -95,7 +95,7 @@ Bitové kopie operačního systému v Configuration Manager jsou soubory WIM a p
     > [!IMPORTANT]  
     >  Krok pořadí úkolů [Připravit systém Windows pro zaznamenání](../understand/task-sequence-steps.md#BKMK_PrepareWindowsforCapture) se před spuštěním nástroje Sysprep pokusí resetovat heslo místního správce v referenčním počítači na prázdnou hodnotu. Pokud je povolena místní zásada zabezpečení **Heslo musí splňovat požadavky na složitost**, resetování hesla správce tímto krokem pořadí úkolů se nezdaří. V případě tohoto scénáře zakažte tuto zásadu před spuštěním pořadí úloh.  
 
-     Další informace o nástroji Sysprep najdete v tématu [Přehled nástroje Sysprep (Příprava systému)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/sysprep--system-preparation--overview).  
+     Další informace o nástroji Sysprep najdete v tématu [Přehled nástroje Sysprep (Příprava systému)](/windows-hardware/manufacture/desktop/sysprep--system-preparation--overview).  
 
 -   **Vhodné nástroje a skripty potřebné k usnadnění scénářů instalací**  
 
@@ -105,7 +105,7 @@ Bitové kopie operačního systému v Configuration Manager jsou soubory WIM a p
 
      Referenční počítač lze nakonfigurovat vlastnostmi vlastního nastavení pracovní plochy, které chcete zahrnout při zaznamenání bitové kopie operačního systému z referenčního počítače. Vlastnosti pracovní plochy zahrnují tapetu, značku organizace a standardní výchozí uživatelský profil.  
 
-##  <a name="manually-build-a-reference-computer"></a><a name="BKMK_ManuallyBuildReference"></a>Ruční sestavení referenčního počítače  
+##  <a name="manually-build-a-reference-computer"></a><a name="BKMK_ManuallyBuildReference"></a> Ruční sestavení referenčního počítače  
  Referenční počítač jde ručně vytvořit pomocí následujícího postupu.  
 
 > [!NOTE]  
@@ -128,7 +128,7 @@ Bitové kopie operačního systému v Configuration Manager jsou soubory WIM a p
 
    Až bude referenční počítač připravený, pomocí pořadí úkolů z něj zaznamenejte image operačního systému.  Podrobný návod najdete v tématu [Zachycení image operačního systému z už existujícího referenčního počítače](../deploy-use/create-a-task-sequence-to-capture-an-operating-system.md#BKMK_CaptureExistingRefComputer).  
 
-##  <a name="use-a-task-sequence-to-build-a-reference-computer"></a><a name="BKMK_UseTSToBuildReference"></a>Použití pořadí úkolů k sestavení referenčního počítače  
+##  <a name="use-a-task-sequence-to-build-a-reference-computer"></a><a name="BKMK_UseTSToBuildReference"></a> Použití pořadí úkolů k sestavení referenčního počítače  
  Proces vytvoření referenčního počítače můžete automatizovat pomocí pořadí úkolů pro nasazení operačního systému, ovladačů, aplikací a podobně.  Pomocí následujících kroků sestavte referenční počítač a potom z něj pomocí pořadí úkolů zaznamenejte image operačního systému.  
 
--   Pomocí pořadí úkolů sestavte referenční počítač a zaznamenejte z něj image operačního systému.  Podrobné pokyny najdete v části [Použití pořadí úkolů k sestavení a zachycení referenčního počítače](../deploy-use/create-a-task-sequence-to-capture-an-operating-system.md#BKMK_BuildCaptureTS).  
+-   Pomocí pořadí úkolů sestavte referenční počítač a zaznamenejte z něj image operačního systému.  Podrobné pokyny najdete v části [Použití pořadí úkolů k sestavení a zachycení referenčního počítače](../deploy-use/create-a-task-sequence-to-capture-an-operating-system.md#BKMK_BuildCaptureTS).

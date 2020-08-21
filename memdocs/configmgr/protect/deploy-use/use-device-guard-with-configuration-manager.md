@@ -10,12 +10,12 @@ ms.assetid: 5e5d854c-9cc1-4dd8-b33f-0fcac675b395
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f9aff29d2773c4994272317d5fcd486b83cba8d7
-ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
+ms.openlocfilehash: 0dcd519a7703b5de94f779dc5dbe48aa0d34a3bc
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82210175"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700459"
 ---
 # <a name="windows-defender-application-control-management-with-configuration-manager"></a>Správa řízení aplikací v programu Windows Defender pomocí Configuration Manager
 
@@ -26,7 +26,7 @@ ms.locfileid: "82210175"
 
 Řízení aplikací v programu Windows Defender je softwarová vrstva zabezpečení, která vynutila explicitní seznam softwaru, který může běžet v počítači. Vlastní ovládací prvek aplikace nemá žádné požadavky na hardware nebo firmware. Zásady řízení aplikací nasazené pomocí Configuration Manager umožňují zásadu na počítačích v cílových kolekcích, které splňují požadavky na minimální verzi Windows a SKU uvedené v tomto článku. V případě potřeby lze ochranu na základě hypervisoru zásad řízení aplikací nasazenou prostřednictvím Configuration Manager povolit prostřednictvím Zásady skupiny na hardwaru podporujícím technologii.
 
-Další informace o řízení aplikací v programu Windows Defender najdete v [Průvodci nasazením řízení aplikací v programu Windows Defender](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide).
+Další informace o řízení aplikací v programu Windows Defender najdete v [Průvodci nasazením řízení aplikací v programu Windows Defender](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide).
 
    > [!NOTE]
    > - Počínaje systémem Windows 10 verze 1709 jsou konfigurovatelné zásady integrity kódu známé jako řízení aplikací v programu Windows Defender.
@@ -125,13 +125,13 @@ Chcete-li monitorovat zpracování zásad řízení aplikací v programu Windows
 
 Pokud chcete ověřit, jestli je konkrétní software blokovaný nebo auditováný, podívejte se na následující protokoly událostí místního klienta:
 
-1. Pro blokování a auditování spustitelných souborů > použijte **protokoly aplikací a služeb**operační systém**Microsoft** > **Windows** > –**Integrita** > kódu v**provozu**.
-2.  > Pro blokování a auditování souborů Instalační služba systému Windows a skriptu použijte **protokoly aplikací a služeb****Microsoft** > **Windows** > **AppLocker** > **MSI a Script**.
+1. Pro blokování a auditování spustitelných souborů použijte **protokoly aplikací a služeb**  >  **Microsoft**  >  operační**systém Microsoft Windows**–  >  **Integrita kódu**v  >  **provozu**.
+2. Pro blokování a auditování souborů Instalační služba systému Windows a skriptu použijte **protokoly aplikací a služeb**  >  **Microsoft**  >  **Windows**  >  **AppLocker**  >  **MSI a Script**.
 
 <!--Reworked article to put this inline while working on VSO 1355092
 ## Automatically let software run if it is trusted by Intelligent Security Graph
 
-You can let locked-down devices run software with a good reputation as determined by the Microsoft Intelligent Security Graph (ISG). The ISG includes [Windows Defender SmartScreen](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview) and other Microsoft services. The devices must be running Windows Defender SmartScreen for this software to be trusted.
+You can let locked-down devices run software with a good reputation as determined by the Microsoft Intelligent Security Graph (ISG). The ISG includes [Windows Defender SmartScreen](/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview) and other Microsoft services. The devices must be running Windows Defender SmartScreen for this software to be trusted.
 
 1. Open the **Create Windows Defender Application Policy** wizard.
 2. On the **Inclusions** page, check the box for **Authorize software that is trusted by the Intelligent Security Graph**.
@@ -153,6 +153,3 @@ V takovém případě může být software nadále povolen i v případě, že s
 ## <a name="next-steps"></a>Další kroky
 
  [Správa antimalwarových zásad a nastavení brány firewall](endpoint-antimalware-firewall.md)
-
-
-

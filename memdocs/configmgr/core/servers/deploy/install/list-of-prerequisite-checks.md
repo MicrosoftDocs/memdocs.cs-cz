@@ -10,12 +10,12 @@ ms.assetid: 6a279624-ffc9-41aa-8132-df1809708dd5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 9f0ed1d5913154d90242d1aa2a47efbcf7d22282
-ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
+ms.openlocfilehash: 2dd722ddcf0e5ea6e944a76366204ac83ede05ec
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82943786"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698952"
 ---
 # <a name="list-of-prerequisite-checks-for-configuration-manager"></a>Seznam kontrol požadovaných součástí pro Configuration Manager
 
@@ -25,7 +25,7 @@ Tento článek podrobně popisuje kontroly požadovaných součástí, které se
 
 
 
-## <a name="errors"></a>chyby
+## <a name="errors"></a>Chyby
 
 ### <a name="active-migration-mappings-on-the-target-primary-site"></a>Mapování aktivních migrací na cílové primární lokalitě
 
@@ -161,7 +161,7 @@ Primární lokalita, kterou plánujete rozšířit, je samostatnou primární lo
 
 Brána Windows Firewall je zakázaná nebo pro SQL Server existuje příslušná výjimka brány Windows Firewall.
 
-Povolte vzdálený přístup k soubor Sqlservr. exe nebo k požadovaným portům TCP. Ve výchozím nastavení SQL Server naslouchá na portu TCP 1433 a SQL Server Service Broker (SSB) používá port TCP 4022.
+Povolte vzdálený přístup k Sqlservr.exe nebo k požadovaným portům TCP. Ve výchozím nastavení SQL Server naslouchá na portu TCP 1433 a SQL Server Service Broker (SSB) používá port TCP 4022.
 
 ### <a name="free-disk-space-on-site-server"></a>Volné místo na disku na serveru lokality
 
@@ -279,7 +279,7 @@ Další informace najdete v podpora Microsoftu článku o [problémech při inst
 
 Instance pro SQL Server je nakonfigurovaná tak, aby používala **SQL_Latin1_General_CP1_CI_AS** kolaci.
 
-Je-li již databáze lokality Configuration Manager nainstalována, tato tato tato zaškrtávací políčka platí také pro databázi. Informace o změně instance SQL Server a kolace databáze najdete v tématu [věnovaném řazení SQL a podpoře kódování Unicode](https://docs.microsoft.com/sql/relational-databases/collations/collation-and-unicode-support).
+Je-li již databáze lokality Configuration Manager nainstalována, tato tato tato zaškrtávací políčka platí také pro databázi. Informace o změně instance SQL Server a kolace databáze najdete v tématu [věnovaném řazení SQL a podpoře kódování Unicode](/sql/relational-databases/collations/collation-and-unicode-support).
 
 Pokud používáte čínský operační systém a požadujete podporu GB18030, tato kontroler se nepoužije. Další informace o povolení podpory GB18030 najdete v tématu [mezinárodní podpora](../../../plan-design/hierarchy/international-support.md).
 
@@ -379,7 +379,7 @@ Při použití SQL Server Always On jsou repliky skupin dostupnosti na výchozí
 <!-- SCCMDocs-pr#3899 -->
 *Platí pro: Server databáze lokality*
 
-Počínaje verzí 1906 je při používání SQL Server Always On potřeba nakonfigurovat repliky skupin dostupnosti se stejným [režimem osazení](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/automatic-seeding-secondary-replicas).
+Počínaje verzí 1906 je při používání SQL Server Always On potřeba nakonfigurovat repliky skupin dostupnosti se stejným [režimem osazení](/sql/database-engine/availability-groups/windows/automatic-seeding-secondary-replicas).
 
 ### <a name="sql-availability-group-replicas-must-be-healthy"></a>Repliky skupin dostupnosti SQL musí být v pořádku.
 
@@ -633,7 +633,7 @@ Configuration Manager počítač je členem domény systému Windows.
 
 Brána Windows Firewall je zakázaná nebo pro SQL Server existuje příslušná výjimka brány Windows Firewall.
 
-Povolte vzdálený přístup k soubor Sqlservr. exe nebo k požadovaným portům TCP. Ve výchozím nastavení SQL Server naslouchá na portu TCP 1433 a Server Service Broker (SSB) používá port TCP 4022.
+Povolte vzdálený přístup k Sqlservr.exe nebo k požadovaným portům TCP. Ve výchozím nastavení SQL Server naslouchá na portu TCP 1433 a Server Service Broker (SSB) používá port TCP 4022.
 
 ### <a name="firewall-exception-for-sql-server-for-management-point"></a>Výjimka brány firewall pro SQL Server pro bod správy
 
@@ -673,7 +673,7 @@ Nejsou k dispozici žádné aktualizace softwaru pro architekturu NAP.
 
 Disková jednotka je naformátovaná pomocí systému souborů NTFS. Pro lepší zabezpečení nainstalujte součásti serveru lokality na diskové jednotky naformátované pomocí systému souborů NTFS.
 
-### <a name="pending-configuration-item-policy-updates"></a><a name="bkmk_pending-policy"></a>Čeká se na aktualizace zásad položky konfigurace
+### <a name="pending-configuration-item-policy-updates"></a><a name="bkmk_pending-policy"></a> Čeká se na aktualizace zásad položky konfigurace
 
 <!--SCCMDocs-pr issue 2814-->
 
@@ -735,13 +735,13 @@ Balíčky nemají v názvu sdílené složky neplatné znaky, třeba `#` .
 
 Účet, který jste nakonfigurovali ke spuštění služby SQL Server pro instanci databáze lokality, má v Active Directory Domain Services platný hlavní název služby (SPN). Zaregistrujte platný hlavní název služby (SPN) ve službě Active Directory pro podporu ověřování Kerberos.
 
-### <a name="sql-server-change-tracking-cleanup"></a><a name="bkmk_changetracking"></a>Vyčištění sledování změn SQL Server
+### <a name="sql-server-change-tracking-cleanup"></a><a name="bkmk_changetracking"></a> Vyčištění sledování změn SQL Server
 
 *Platí pro: Server databáze lokality*
 
 Počínaje verzí 1810 ověřte, zda má databáze lokality nevyřízené položky dat sledování změn SQL.<!--SCCMDocs-pr issue 3023-->  
 
-Tuto kontrolu ověřte ručně spuštěním diagnostické uložené procedury v databázi lokality. Nejdřív vytvořte [diagnostické připojení](https://docs.microsoft.com/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators?view=sql-server-2017) k vaší databázi lokality. Nejjednodušším způsobem je použít Editor dotazů databázového stroje SQL Server Management Studio a připojit se k `admin:<instance name>` .
+Tuto kontrolu ověřte ručně spuštěním diagnostické uložené procedury v databázi lokality. Nejdřív vytvořte [diagnostické připojení](/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators?view=sql-server-2017) k vaší databázi lokality. Nejjednodušším způsobem je použít Editor dotazů databázového stroje SQL Server Management Studio a připojit se k `admin:<instance name>` .
 
 V okně dotazu na vyhrazené připojení správce spusťte následující příkazy:
 
@@ -786,7 +786,7 @@ Configuration Manager používá SQL Server Native Client na následujících ro
 - Bod správy
 - Bod správy zařízení
 - Bod migrace stavu
-- SMS Provider
+- poskytovatele serveru SMS
 - Bod aktualizace softwaru
 - Distribuční bod s povoleným vícesměrovým vysíláním
 - Servisní bod aktualizace služby funkce Asset Intelligence
@@ -804,7 +804,7 @@ Configuration Manager používá SQL Server Native Client na následujících ro
 
 SQL Server rezervuje minimálně 8 GB paměti pro lokalitu centrální správy a primární lokalitu a minimálně 4 GB paměti pro sekundární lokalitu.
 
-Další informace najdete v tématu [Konfigurace možností paměti pomocí SQL Server Management Studio](https://docs.microsoft.com/sql/database-engine/configure-windows/server-memory-server-configuration-options#how-to-configure-memory-options-using-).
+Další informace najdete v tématu [Konfigurace možností paměti pomocí SQL Server Management Studio](/sql/database-engine/configure-windows/server-memory-server-configuration-options#how-to-configure-memory-options-using-).
 
 > [!NOTE]  
 > Tato kontroly není platná pro SQL Server Express v sekundární lokalitě. Tato edice je omezená na 1 GB rezervované paměti.  
@@ -849,7 +849,7 @@ Další informace najdete v tématu [Příprava služby Active Directory pro pub
 
 WinRM 1,1 je nainstalovaná na serveru primární lokality nebo na počítači konzoly Configuration Manager ke spuštění konzoly pro vzdálenou správu.
 
-Služba WinRM je automaticky nainstalována se všemi aktuálně podporovanými verzemi systému Windows. Další informace najdete v tématu [instalace a konfigurace pro vzdálená správa systému Windows](https://docs.microsoft.com/windows/win32/winrm/installation-and-configuration-for-windows-remote-management).
+Služba WinRM je automaticky nainstalována se všemi aktuálně podporovanými verzemi systému Windows. Další informace najdete v tématu [instalace a konfigurace pro vzdálená správa systému Windows](/windows/win32/winrm/installation-and-configuration-for-windows-remote-management).
 
 ### <a name="wsus-on-site-server"></a>Služba WSUS na serveru lokality
 
@@ -857,4 +857,4 @@ Služba WinRM je automaticky nainstalována se všemi aktuálně podporovanými 
 
 Na serveru lokality je nainstalovaná podporovaná verze služby Windows Server Update Services (WSUS).
 
-Použijete-li bod aktualizace softwaru na jiném serveru, než je server lokality, je nutné nainstalovat konzolu pro správu služby WSUS na server lokality. Další informace o službě WSUS najdete v tématu [Windows Server Update Services](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/get-started/windows-server-update-services-wsus).
+Použijete-li bod aktualizace softwaru na jiném serveru, než je server lokality, je nutné nainstalovat konzolu pro správu služby WSUS na server lokality. Další informace o službě WSUS najdete v tématu [Windows Server Update Services](/windows-server/administration/windows-server-update-services/get-started/windows-server-update-services-wsus).

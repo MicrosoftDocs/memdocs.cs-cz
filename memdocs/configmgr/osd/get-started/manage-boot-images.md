@@ -10,20 +10,20 @@ ms.assetid: 97f2d81a-2c58-442c-88bc-defd5a1cd48f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e68a3274a32d28ac0b4ad2a611c59870ee338472
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 74b8b0f29172140a19c402c79b7ea9b7339cf3e5
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88124537"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697632"
 ---
 # <a name="manage-boot-images-with-configuration-manager"></a>Správa spouštěcích imagí pomocí Configuration Manager
 
 *Platí pro: Configuration Manager (Current Branch)*
 
-Spouštěcí bitová kopie v Configuration Manager je image prostředí [Windows PE](https://docs.microsoft.com/windows-hardware/manufacture/desktop/winpe-intro) (WinPE), která se používá při nasazení operačního systému. Spouštěcí image slouží ke spuštění počítače v prostředí WinPE. Tento minimální operační systém obsahuje omezené součásti a služby. Configuration Manager pomocí prostředí WinPE připravit cílový počítač pro instalaci Windows.
+Spouštěcí bitová kopie v Configuration Manager je image prostředí [Windows PE](/windows-hardware/manufacture/desktop/winpe-intro) (WinPE), která se používá při nasazení operačního systému. Spouštěcí image slouží ke spuštění počítače v prostředí WinPE. Tento minimální operační systém obsahuje omezené součásti a služby. Configuration Manager pomocí prostředí WinPE připravit cílový počítač pro instalaci Windows.
 
-## <a name="default-boot-images"></a><a name="BKMK_BootImageDefault"></a>Výchozí spouštěcí image
+## <a name="default-boot-images"></a><a name="BKMK_BootImageDefault"></a> Výchozí spouštěcí image
 
 Configuration Manager poskytuje dvě výchozí spouštěcí image: jednu pro podporu platforem x86 a druhou pro podporu platforem x64. Tyto image jsou uložené ve složkách *x64* nebo *i386* v následující sdílené složce na serveru lokality: `\\<SiteServerName>\SMS_<sitecode>\osd\boot\` . Výchozí spouštěcí image se aktualizují nebo znovu vygenerují v závislosti na tom, jakou akci chcete provést.
 
@@ -70,13 +70,13 @@ Pokud jsou verze v spouštěcí imagi zastaralé, použijte možnost pro **opět
 
 Uzel **spouštěcí bitové kopie** obsahuje také nový sloupec pro (**verze klienta**). Tento sloupec slouží k rychlému zobrazení Configuration Manager verze klienta v každé spouštěcí imagi.
 
-## <a name="customize-a-boot-image"></a><a name="BKMK_BootImageCustom"></a>Přizpůsobení spouštěcí image  
+## <a name="customize-a-boot-image"></a><a name="BKMK_BootImageCustom"></a> Přizpůsobení spouštěcí image  
 
 Pokud je spouštěcí bitová kopie založená na verzi prostředí WinPE z podporované verze sady Windows ADK, můžete upravit nebo [Upravit spouštěcí bitovou kopii](#BKMK_ModifyBootImages) z konzoly nástroje. Když upgradujete lokalitu a nainstalujete novou verzi sady Windows ADK, vlastní spouštěcí image se neaktualizují s novou verzí Windows ADK. Pokud k tomu dojde, nemůžete přizpůsobit spouštěcí bitové kopie v konzole Configuration Manager. Budou však i nadále fungovat stejně jako před upgradem.  
 
 Je-li spouštěcí image založena na jiné verzi sady Windows ADK nainstalované v lokalitě, je nutné přizpůsobit spouštěcí bitové kopie. K přizpůsobení těchto spouštěcích imagí použijte jinou metodu, například pomocí nástroje příkazového řádku Obsluha a správa bitových kopií (DISM) nasazení. DISM je součástí sady Windows ADK. Další informace najdete v tématu [Přizpůsobení spouštěcích bitových kopií](customize-boot-images.md).  
 
-## <a name="add-a-boot-image"></a><a name="BKMK_AddBootImages"></a>Přidat spouštěcí bitovou kopii  
+## <a name="add-a-boot-image"></a><a name="BKMK_AddBootImages"></a> Přidat spouštěcí bitovou kopii  
 
 Během instalace lokality Configuration Manager automaticky přidávají spouštěcí bitové kopie, které jsou založené na verzi prostředí WinPE z podporované verze sady Windows ADK. V závislosti na verzi Configuration Manager můžete přidat spouštěcí bitové kopie založené na jiné verzi prostředí WinPE z podporované verze sady Windows ADK. Pokud se pokusíte přidat spouštěcí bitovou kopii, která obsahuje nepodporovanou verzi prostředí WinPE, dojde k chybě. V následujícím seznamu jsou aktuálně podporované verze Windows ADK a WinPE:
 
@@ -94,7 +94,7 @@ Použijte například konzolu Configuration Manager k přizpůsobení spouštěc
 
 - [Přizpůsobení spouštěcích imagí](customize-boot-images.md)
 - [Podpora pro Windows 10 ADK](../../core/plan-design/configs/support-for-windows-10.md#windows-10-adk)
-- [Podporované platformy DISM](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-supported-platforms)
+- [Podporované platformy DISM](/windows-hardware/manufacture/desktop/dism-supported-platforms)
 
 <a name="bkmk_note1"></a>
 
@@ -128,7 +128,7 @@ Spouštěcí bitová kopie je nyní uvedena v uzlu **spouštěcí bitová kopie*
 > [!Tip]  
 > V uzlu **spouštěcí bitové kopie** v konzole se ve sloupci **Velikost (KB)** zobrazuje dekomprimovaná velikost každé spouštěcí bitové kopie. Když lokalita odešle spouštěcí image přes síť, pošle komprimovanou kopii. Tato kopie je obvykle menší než velikost uvedená ve sloupci **Velikost (KB)** .  
 
-## <a name="distribute-boot-images"></a><a name="BKMK_DistributeBootImages"></a>Distribuce spouštěcích bitových kopií  
+## <a name="distribute-boot-images"></a><a name="BKMK_DistributeBootImages"></a> Distribuce spouštěcích bitových kopií  
 
 Spouštěcí bitové kopie jsou distribuovány do distribučních bodů stejným způsobem, jak distribuujete jiný obsah. Před nasazením operačního systému nebo vytvoření média Distribuujte spouštěcí bitovou kopii do alespoň jednoho distribučního bodu.
 
@@ -142,7 +142,7 @@ Chcete-li použít technologii PXE k nasazení operačního systému, před dist
   
 Další informace o použití technologie PXE k nasazení operačních systémů najdete v tématu [použití technologie PXE k nasazení systému Windows přes síť](../deploy-use/use-pxe-to-deploy-windows-over-the-network.md).  
 
-## <a name="modify-a-boot-image"></a><a name="BKMK_ModifyBootImages"></a>Úprava spouštěcí bitové kopie  
+## <a name="modify-a-boot-image"></a><a name="BKMK_ModifyBootImages"></a> Úprava spouštěcí bitové kopie  
 
 Přidejte nebo odeberte ovladače zařízení v imagi nebo upravte vlastnosti spouštěcí bitové kopie. Ovladače, které přidáváte nebo odebíráte, můžou zahrnovat ovladače sítě nebo úložiště. Při úpravě spouštěcích imagí zohledněte tyto faktory:  
 
@@ -162,7 +162,7 @@ Přidejte nebo odeberte ovladače zařízení v imagi nebo upravte vlastnosti sp
 
 4. Úpravou kteréhokoli z následujících nastavení můžete změnit chování spouštěcí bitové kopie.  
 
-#### <a name="images"></a>Obrázky
+#### <a name="images"></a>Image
 
 Pokud změníte vlastnosti spouštěcí bitové kopie pomocí externího nástroje, na kartě **bitové kopie** vyberte možnost **znovu načíst**.  
 
@@ -206,11 +206,11 @@ Na kartě **Vlastní nastavení** vyberte některé z následujících nastaven�
 - **Nastavení výchozího rozložení klávesnice v prostředí WinPE**: <!--4910348-->Počínaje verzí 1910 nakonfigurujte výchozí rozložení klávesnice pro spouštěcí bitovou kopii. Pokud vyberete jiný jazyk než en-US, Configuration Manager dál obsahuje en-US v dostupných vstupních národních prostředích. V zařízení je počáteční rozložení klávesnice vybraným národním prostředím, ale pokud to bude potřeba, může uživatel zařízení v případě potřeby přepnout na en-US.
 
 > [!Tip]
-> Pomocí rutiny PowerShellu [set-CMBootImage](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmbootimage?view=sccm-ps) můžete nakonfigurovat tato nastavení ze skriptu.
+> Pomocí rutiny PowerShellu [set-CMBootImage](/powershell/module/configurationmanager/set-cmbootimage?view=sccm-ps) můžete nakonfigurovat tato nastavení ze skriptu.
 
 #### <a name="optional-components"></a>Volitelné součásti
 
-Na kartě **volitelné součásti** určete součásti, které jsou přidány do systému Windows PE pro použití s Configuration Manager. Další informace o dostupných volitelných komponentách najdete v tématu [WinPE: Přidání balíčků (informace o volitelných komponentách)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference).  
+Na kartě **volitelné součásti** určete součásti, které jsou přidány do systému Windows PE pro použití s Configuration Manager. Další informace o dostupných volitelných komponentách najdete v tématu [WinPE: Přidání balíčků (informace o volitelných komponentách)](/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference).  
 
 Následující komponenty jsou vyžadovány Configuration Manager a vždy přidané do spouštěcích bitových kopií:
 
@@ -271,7 +271,7 @@ Na kartě **umístění obsahu** vyberte distribuční bod nebo skupinu distribu
 
 Na kartě **zabezpečení** si prohlédněte administrativní uživatele, kteří mají oprávnění k tomuto objektu.
 
-## <a name="configure-a-boot-image-for-pxe"></a><a name="BKMK_BootImagePXE"></a>Konfigurace spouštěcí bitové kopie pro PXE  
+## <a name="configure-a-boot-image-for-pxe"></a><a name="BKMK_BootImagePXE"></a> Konfigurace spouštěcí bitové kopie pro PXE  
 
 Než budete moci použít spouštěcí bitovou kopii pro nasazení založené na technologii PXE, nakonfigurujte spouštěcí bitovou kopii pro nasazení z distribučního bodu s povoleným PXE.  
 
@@ -283,7 +283,7 @@ Než budete moci použít spouštěcí bitovou kopii pro nasazení založené na
 
 4. Na kartě **Zdroj dat** vyberte **Nasadit tuto spouštěcí image z distribučního bodu s povoleným PXE**. Další informace najdete v tématu [použití technologie PXE k nasazení Windows přes síť](../deploy-use/use-pxe-to-deploy-windows-over-the-network.md).  
 
-## <a name="configure-multiple-languages"></a><a name="BKMK_BootImageLanguage"></a>Konfigurace více jazyků
+## <a name="configure-multiple-languages"></a><a name="BKMK_BootImageLanguage"></a> Konfigurace více jazyků
 
 > [!TIP]
 > Počínaje verzí 1910 nakonfigurujte výchozí rozložení klávesnice ve vlastnostech spouštěcí bitové kopie. Další informace najdete v tématu věnovaném [přizpůsobení](#customization).<!--4910348-->
@@ -301,6 +301,6 @@ Pomocí následujícího postupu můžete nastavit jazyk WinPE pro nasazení ope
 
 ### <a name="set-the-windows-pe-language-for-a-pxe-or-media-initiated-os-deployment"></a>Nastavení jazyka Windows PE pro nasazení operačního systému inicializovaného technologií PXE nebo médií  
 
-1. Před aktualizací spouštěcí image ověřte, zda je příslušný soubor prostředků pořadí úkolů (tsres.dll) v odpovídající složce jazyka na serveru lokality. Například soubor prostředků English je v následujícím umístění:`<ConfigMgrInstallationFolder>\OSD\bin\x64\00000409\tsres.dll`  
+1. Před aktualizací spouštěcí image ověřte, zda je příslušný soubor prostředků pořadí úkolů (tsres.dll) v odpovídající složce jazyka na serveru lokality. Například soubor prostředků English je v následujícím umístění: `<ConfigMgrInstallationFolder>\OSD\bin\x64\00000409\tsres.dll`  
 
-2. Jako součást předstartovního příkazu nastavte proměnnou prostředí **SMSTSLanguageFolder** na příslušné ID jazyka. ID jazyka musí být zadáno pomocí desítkového a nešestnáctkového formátu. Chcete-li například nastavit ID jazyka na angličtinu, zadejte desítkovou hodnotu **1033**, nikoli hexadecimální hodnotu 00000409 názvu složky.  
+2. Jako součást předstartovního příkazu nastavte proměnnou prostředí **SMSTSLanguageFolder** na příslušné ID jazyka. ID jazyka musí být zadáno pomocí desítkového a nešestnáctkového formátu. Chcete-li například nastavit ID jazyka na angličtinu, zadejte desítkovou hodnotu **1033**, nikoli hexadecimální hodnotu 00000409 názvu složky.

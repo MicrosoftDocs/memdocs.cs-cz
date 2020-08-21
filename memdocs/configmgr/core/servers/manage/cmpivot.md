@@ -10,12 +10,12 @@ ms.assetid: 32e2d6b9-148f-45e2-8083-98c656473f82
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 06e2a90e8c481fba834cbd1b6b1f5233572e4b17
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 11b5a58a6d9501b0368fcb0b47bf31df1bd8a6af
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128323"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700578"
 ---
 # <a name="cmpivot-for-real-time-data-in-configuration-manager"></a>CMPivot pro data v reálném čase v Configuration Manager
 
@@ -32,7 +32,7 @@ Například při [zmírnění ohrožení zabezpečení kanálu na straně spušt
  > - Určitý antimalwarový software může nechtěně aktivovat události proti Configuration Manager spuštění skriptů nebo funkcí CMPivot. Doporučuje se vyloučit%windir%\CCM\ScriptStore, aby antimalwarový software mohl spouštět tyto funkce bez rušivých zásahů.
 
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 Pro použití CMPivot jsou vyžadovány následující komponenty:
 
@@ -90,7 +90,7 @@ Pro CMPivot jsou potřeba následující oprávnění:
 
      - Klikněte na jednu **entitu** a přidejte ji do řetězce dotazu.  
 
-     - Odkazy pro **operátory tabulky**, **agregační funkce**a **skalární funkce** otevřou referenční dokumentaci jazyka ve webovém prohlížeči. CMPivot používá [KQL (Kusto Query Language)](https://docs.microsoft.com/azure/kusto/query/).  
+     - Odkazy pro **operátory tabulky**, **agregační funkce**a **skalární funkce** otevřou referenční dokumentaci jazyka ve webovém prohlížeči. CMPivot používá [KQL (Kusto Query Language)](/azure/kusto/query/).  
 
 3. Nechte okno CMPivot otevřené, aby se zobrazily výsledky klientů. Po zavření okna CMPivot se relace dokončí.
    - Pokud byl odeslán dotaz, klienti stále odesílají odpověď na stavovou zprávu serveru.  
@@ -123,7 +123,7 @@ Okno CMPivot obsahuje následující prvky:
 
 5. V podokně dotazu můžete sestavit nebo zadat dotaz, který se má spustit na klientech v kolekci.  
 
-    - CMPivot používá podmnožinu [KQL (Kusto Query Language)](https://docs.microsoft.com/azure/kusto/query/).  
+    - CMPivot používá podmnožinu [KQL (Kusto Query Language)](/azure/kusto/query/).  
 
     - Vyjmutí, zkopírování nebo vložení obsahu do podokna dotazu.  
     <!-- markdownlint-disable MD038 -->
@@ -162,9 +162,9 @@ Okno CMPivot obsahuje následující prvky:
 
      - **Kopírovat**: zkopírovat text buňky do schránky.  
 
-     - **Zobrazit zařízení pomocí**: dotaz na zařízení s touto hodnotou pro tuto vlastnost. Například z výsledků `OS` dotazu vyberte tuto možnost v buňce v řádku verze:`OS | summarize countif( (Version == '10.0.17134') ) by Device | where (countif_ > 0)`  
+     - **Zobrazit zařízení pomocí**: dotaz na zařízení s touto hodnotou pro tuto vlastnost. Například z výsledků `OS` dotazu vyberte tuto možnost v buňce v řádku verze: `OS | summarize countif( (Version == '10.0.17134') ) by Device | where (countif_ > 0)`  
 
-     - **Zobrazit zařízení bez**: dotaz na zařízení bez této hodnoty pro tuto vlastnost. Například z výsledků `OS` dotazu vyberte tuto možnost v buňce v řádku verze:`OS | summarize countif( (Version == '10.0.17134') ) by Device | where (countif_ == 0) | project Device`  
+     - **Zobrazit zařízení bez**: dotaz na zařízení bez této hodnoty pro tuto vlastnost. Například z výsledků `OS` dotazu vyberte tuto možnost v buňce v řádku verze: `OS | summarize countif( (Version == '10.0.17134') ) by Device | where (countif_ == 0) | project Device`  
 
      - **Bing IT**: spustí výchozí webový prohlížeč https://www.bing.com s touto hodnotou jako řetězec dotazu.  
 
@@ -190,7 +190,7 @@ Okno CMPivot obsahuje následující prvky:
 
 
 
-## <a name="example-scenarios"></a>Ukázkové scénáře
+## <a name="example-scenarios"></a>Příklady scénářů
 
 V následujících částech najdete příklady použití CMPivot ve vašem prostředí:
 
@@ -233,7 +233,7 @@ Je potřeba dočasně uložit velký soubor na síťový souborový server, ale 
 `Disk | where (Description == 'Local Fixed Disk') | where isnotnull( FreeSpace ) | order by FreeSpace asc`
 
 
-## <a name="cmpivot-standalone"></a><a name="bkmk_standalone"></a>CMPivot samostatná
+## <a name="cmpivot-standalone"></a><a name="bkmk_standalone"></a> CMPivot samostatná
 
 [!INCLUDE [CMPivot standalone](includes/cmpivot-standalone.md)]
 
@@ -272,5 +272,3 @@ Další informace najdete v tématu [soubory protokolu](../../plan-design/hierar
 - [Změny CMPivot](cmpivot-changes.md)
 - [Odstraňování potíží s CMPivotem](cmpivot-tsg.md)
 - [Vytváření a spouštění powershellových skriptů](../../../apps/deploy-use/create-deploy-scripts.md)
-
-

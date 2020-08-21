@@ -10,12 +10,12 @@ ms.assetid: be276b34-e283-4386-8b45-5629e431c50d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 63f6c7321301e5705c4188012ba53b50f4c37b57
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: e0b59ffa73bb2c7524f2eed29326f238d856adef
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906037"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699309"
 ---
 # <a name="microsoft-endpoint-configuration-manager-faq"></a>Časté otázky k Microsoft Endpoint Configuration Manageru
 
@@ -23,7 +23,7 @@ ms.locfileid: "82906037"
 
 Počínaje verzí 1910 je teď Configuration Manager součástí Microsoft Endpoint Manageru. Tento článek obsahuje odpovědi na nejčastější dotazy.
 
-## <a name="summary"></a>Souhrn
+## <a name="summary"></a>Shrnutí
 
 Začněte sledováním následujících dvou minut od Brada Anderson, což je Microsoft Corporate viceprezident pro Microsoft 365:
 
@@ -37,10 +37,10 @@ Microsoft Endpoint Manager je integrované řešení pro správu všech vašich 
 
 Následující řešení pro správu Microsoft jsou teď součástí značky **Microsoft Endpoint Manageru** :
 
-- [Configuration Manager](https://docs.microsoft.com/configmgr)
-- [Intune](https://docs.microsoft.com/intune)
+- [Configuration Manager](/configmgr)
+- [Intune](/intune)
 - [Desktop Analytics](../../desktop-analytics/overview.md)
-- [Autopilot](https://docs.microsoft.com/intune/enrollment/enrollment-autopilot)
+- [Autopilot](/intune/enrollment/enrollment-autopilot)
 - Další funkce v [konzole správce správy zařízení](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/microsoft-intune-rolls-out-an-improved-streamlined-endpoint/ba-p/937760)
 
 Další informace najdete v následujících příspěvcích od Brada Anderson, což je Microsoft Corporate viceprezident pro Microsoft 365:

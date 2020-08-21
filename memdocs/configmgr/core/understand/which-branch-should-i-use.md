@@ -10,12 +10,12 @@ ms.assetid: a3be4f8f-3d44-4e3c-9fa1-e85f30a36e72
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 542069b82ea4c68a48ccc47b79007fd2fa25322a
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 1c54648f1f98ad5fef8efd16d2abe53f204a38f5
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906009"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700663"
 ---
 # <a name="which-branch-of-configuration-manager-should-i-use"></a>Kterou větev nástroje Configuration Manager mám použít?
 
@@ -85,7 +85,7 @@ LTSB je založen na verzi 1606. Tato větev neobdrží aktualizace v konzole, kt
 Pokud chcete nainstalovat LTSB jako novou lokalitu nebo jako upgrade z podporované lokality System Center 2012 Configuration Manager, použijte [Základní médium](../servers/manage/updates.md#bkmk_Baselines) verze 1606, které získáte v rámci nástroje system Center 2016. Pomocí média směrného plánu můžete nainstalovat novou lokalitu, která používá verzi 1606 aktuální větve, nebo novou lokalitu, která spouští určitou větev dlouhodobé údržby.
 
 > [!TIP]  
-> Informace o produktu System Center 2016 najdete v [dokumentaci k nástroji System center 2016](https://docs.microsoft.com/system-center/index). Tato dokumentace také označuje, jak získat produkt System Center 2016, který vyžaduje licenční smlouvu společnosti Microsoft nebo podobná práva.  
+> Informace o produktu System Center 2016 najdete v [dokumentaci k nástroji System center 2016](/system-center/index). Tato dokumentace také označuje, jak získat produkt System Center 2016, který vyžaduje licenční smlouvu společnosti Microsoft nebo podobná práva.  
 >  
 > Chcete-li najít Configuration Manager verze 1606 na webu Volume Licensing Service Center (VLSC), klikněte na kartu **Stažení a klíče** [VLSC](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx), vyhledejte `System Center 2016` a potom vyberte buď **System center 2016 Datacenter** nebo **System Center 2016 Standard**.  
 >  

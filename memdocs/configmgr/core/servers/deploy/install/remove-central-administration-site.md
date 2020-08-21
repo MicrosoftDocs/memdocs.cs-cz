@@ -10,12 +10,12 @@ ms.assetid: 16975644-8dfa-4f22-b45a-c54a9250dbd2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5b8b7ee17077c859a1f0a9eb41c5f9d0857db550
-ms.sourcegitcommit: 8fc7f2864c5e3f177e6657b684c5f208d6c2a1b4
+ms.openlocfilehash: 5a1d9d4ce8cdd19efb440d4d73fafdc96a514bcd
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88591506"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699156"
 ---
 # <a name="remove-the-central-administration-site"></a>Odebrat lokalitu centrální správy
 
@@ -67,7 +67,7 @@ Pokud se v rámci verze 2002 skládá hierarchie z lokality centrální správy 
 
 - Projděte si software jiného výrobce, který může mít závislost na certifikačních autoritách.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 - Administrativní uživatel, který spouští Configuration Manager instalační program, potřebuje následující bezpečnostní oprávnění:
 
@@ -141,7 +141,7 @@ Po odebrání certifikačních autorit si Projděte následující kroky, které
 
   - Znovu vytvořte [médium pro nasazení operačního systému](../../../../osd/deploy-use/create-task-sequence-media.md).
 
-- Pokud připojíte Configuration Manager s [Azure monitor](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm?context=/mem/configmgr/core/context/core-context), musíte resetovat připojení. Prvním krokem při řešení potíží je [obnovení tajného klíče](../configure/azure-services-wizard.md#bkmk_renew). Pokud se tím problém nevyřeší, vytvořte připojení znovu.<!-- 5584635 -->
+- Pokud připojíte Configuration Manager s [Azure monitor](/azure/azure-monitor/platform/collect-sccm?context=/mem/configmgr/core/context/core-context), musíte resetovat připojení. Prvním krokem při řešení potíží je [obnovení tajného klíče](../configure/azure-services-wizard.md#bkmk_renew). Pokud se tím problém nevyřeší, vytvořte připojení znovu.<!-- 5584635 -->
 
 - Pokud v části verze 2002 povolíte synchronizaci ovladačů Surface, překonfigurujte tuto funkci po odebrání certifikačních autorit. Další informace najdete v tématu [ovladače Microsoft Surface a aktualizace firmwaru](../../../../sum/deploy-use/surface-drivers.md).<!-- 5728727 -->
 

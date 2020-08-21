@@ -10,12 +10,12 @@ ms.assetid: de718cdc-d0a9-47e2-9c99-8fa2cb25b5f8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 66fcd9b7d4d25decb3aeef7cf38b469363eeb1fa
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: d54354c82a6487690aa571eb72554f4eee45747b
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128895"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700561"
 ---
 # <a name="whats-new-in-version-2002-of-configuration-manager-current-branch"></a>Co je nového ve verzi 2002 Configuration Manager Current Branch
 
@@ -28,17 +28,17 @@ Vždy si přečtěte nejnovější kontrolní seznam pro instalaci této aktuali
 Pokud chcete plně využít nové funkce Configuration Manager, po aktualizaci lokality aktualizujte také klienty na nejnovější verzi. I když se nové funkce zobrazí v konzole Configuration Manager, když aktualizujete lokalitu a konzolu, kompletní scénář nebude funkční, dokud nebude verze klienta zároveň nejnovější.
 
 > [!TIP]
-> Pokud chcete dostávat upozornění na aktualizaci této stránky, zkopírujte a vložte následující adresu URL do čtečky informačních kanálů RSS:`https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+2002+-+Configuration+Manager%22&locale=en-us`
+> Pokud chcete dostávat upozornění na aktualizaci této stránky, zkopírujte a vložte následující adresu URL do čtečky informačních kanálů RSS: `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+2002+-+Configuration+Manager%22&locale=en-us`
 
-## <a name="microsoft-endpoint-manager-tenant-attach"></a><a name="bkmk_tenant"></a>Připojení tenanta Microsoft Endpoint Manageru
+## <a name="microsoft-endpoint-manager-tenant-attach"></a><a name="bkmk_tenant"></a> Připojení tenanta Microsoft Endpoint Manageru
 
-### <a name="device-sync-and-device-actions"></a><a name="bkmk_attach"></a>Akce zařízení a synchronizace zařízení
+### <a name="device-sync-and-device-actions"></a><a name="bkmk_attach"></a> Akce zařízení a synchronizace zařízení
 <!--3555758-->
 Microsoft Endpoint Manager je integrované řešení pro správu všech vašich zařízení. Společnost Microsoft spojuje Configuration Manager a Intune s jednou konzolou s názvem **Centrum pro správu Microsoft Endpoint Manager**. Od této verze můžete zařízení Configuration Manager nahrát do cloudové služby a provádět akce z okna **zařízení** v centru pro správu.
 
 Další informace najdete v tématu věnovaném [připojení tenanta Microsoft Endpoint Manageru](../../../tenant-attach/device-sync-actions.md).
 
-## <a name="site-infrastructure"></a><a name="bkmk_infra"></a>Infrastruktura webu
+## <a name="site-infrastructure"></a><a name="bkmk_infra"></a> Infrastruktura webu
 
 ### <a name="remove-a-central-administration-site"></a>Odebrat lokalitu centrální správy
 <!-- 3607277 -->
@@ -98,7 +98,7 @@ Nastavení proxy serveru systému lokality, včetně ověřování, teď použí
 
 Další informace najdete v tématu [Podpora proxy serveru](../network/proxy-server-support.md#bkmk_other).
 
-## <a name="cloud-attached-management"></a><a name="bkmk_cloud"></a>Správa připojená ke cloudu
+## <a name="cloud-attached-management"></a><a name="bkmk_cloud"></a> Správa připojená ke cloudu
 
 ### <a name="critical-status-message-shows-server-connection-errors-to-required-endpoints"></a>Kritická Stavová zpráva zobrazuje chyby připojení serveru k požadovaným koncovým bodům.
 
@@ -125,7 +125,7 @@ Další informace najdete v tématu [ověřování založené na tokenech pro CM
 
 Když jsou v centru pro správu Microsoft Endpoint Manageru k dispozici nové cloudové funkce nebo jiné připojené cloudové služby pro místní instalaci Configuration Manager, můžete se teď v konzole Configuration Manager přihlásit k těmto novým funkcím. Další informace o povolení funkcí v konzole Configuration Manager najdete v tématu [Povolení volitelných funkcí z aktualizací](../../servers/manage/install-in-console-updates.md#bkmk_options).
 
-## <a name="desktop-analytics"></a><a name="bkmk_da"></a>Desktop Analytics
+## <a name="desktop-analytics"></a><a name="bkmk_da"></a> Desktop Analytics
 
 Další informace o měsíčních změnách v cloudové službě Desktop Analytics najdete v tématu [co je nového v Desktop Analytics](../../../desktop-analytics/whats-new.md).
 
@@ -139,7 +139,7 @@ Pomocí řídicího panelu stavu připojení Desktop Analytics v Configuration M
 
 Další informace najdete v tématu [monitorování stavu připojení](../../../desktop-analytics/monitor-connection-health.md).
 
-## <a name="real-time-management"></a><a name="bkmk_real"></a>Správa v reálném čase
+## <a name="real-time-management"></a><a name="bkmk_real"></a> Správa v reálném čase
 
 ### <a name="improvements-to-cmpivot"></a>Vylepšení CMPivot
 
@@ -149,7 +149,7 @@ Usnadnili jsme navigaci CMPivot entit. Nyní můžete hledat entity CMPivot. Př
 
 Další informace najdete v tématu [CMPivot](../../servers/manage/cmpivot-changes.md#bkmk_2002).
 
-## <a name="content-management"></a><a name="bkmk_content"></a>Správa obsahu
+## <a name="content-management"></a><a name="bkmk_content"></a> Správa obsahu
 
 ### <a name="exclude-certain-subnets-for-peer-content-download"></a>Vyloučení určitých podsítí pro stažení obsahu peer
 
@@ -165,7 +165,7 @@ Další informace najdete v tématu [Možnosti skupiny hranic](../../servers/dep
 
 Pokud vaše prostředí používá neověřené proxy server pro přístup k Internetu, teď může při povolení Configuration Manager distribučního bodu pro připojenou mezipaměť Microsoft komunikovat prostřednictvím proxy serveru. Další informace najdete v tématu [mezipaměť Microsoft připojené k síti](../hierarchy/microsoft-connected-cache.md).
 
-## <a name="client-management"></a><a name="bkmk_client"></a>Správa klientů
+## <a name="client-management"></a><a name="bkmk_client"></a> Správa klientů
 
 ### <a name="client-log-collection"></a>Shromažďování protokolů klienta
 
@@ -202,7 +202,7 @@ Další informace o tomto nastavení najdete v tématu [vytváření vlastních 
 
 <!-- ## <a name="bkmk_comgmt"></a> Co-management -->
 
-## <a name="application-management"></a><a name="bkmk_app"></a>Správa aplikací
+## <a name="application-management"></a><a name="bkmk_app"></a> Správa aplikací
 
 ### <a name="microsoft-edge-management-dashboard"></a>Řídicí panel pro správu Microsoft Edge
 
@@ -239,7 +239,7 @@ Pomocí pořadí úkolů teď můžete pomocí aplikačního modelu nainstalovat
 
 Další informace najdete v tématu [vytváření aplikací pro Windows](../../../apps/get-started/creating-windows-applications.md#bkmk_tsdt).
 
-## <a name="os-deployment"></a><a name="bkmk_osd"></a>Nasazení operačního systému
+## <a name="os-deployment"></a><a name="bkmk_osd"></a> Nasazení operačního systému
 
 ### <a name="bootstrap-a-task-sequence-immediately-after-client-registration"></a>Spustit pořadí úloh hned po registraci klienta
 
@@ -290,7 +290,7 @@ Tato verze zahrnuje následující vylepšení nasazení operačního systému:
 
 <!-- ## <a name="bkmk_userxp"></a> Software Center -->
 
-## <a name="software-updates"></a><a name="bkmk_sum"></a>Aktualizace softwaru
+## <a name="software-updates"></a><a name="bkmk_sum"></a> Aktualizace softwaru
 
 ### <a name="orchestration-groups"></a>Skupiny orchestrace
 
@@ -322,14 +322,14 @@ Další informace najdete v tématu [synchronizace aktualizací Office 365 z odp
 
 <!-- ## <a name="bkmk_o365"></a> Office management -->
 
-## <a name="protection"></a><a name="bkmk_protect"></a>Antivirový
+## <a name="protection"></a><a name="bkmk_protect"></a> Antivirový
 
 ### <a name="expand-microsoft-defender-advanced-threat-protection-atp-onboarding"></a>Rozbalit registraci v programu Microsoft Defender Advanced Threat Protection (ATP)
  
 <!-- 5229962 -->
 Configuration Manager rozšířila podporu pro zařízení s připojováním do ochrany ATP v programu Microsoft Defender. Další informace najdete v tématu [Rozšířená ochrana před internetovými útoky v programu Microsoft Defender](../../../protect/deploy-use/defender-advanced-threat-protection.md).
 
-### <a name="onboard-configuration-manager-clients-to-microsoft-defender-atp-via-the-microsoft-endpoint-manager-admin-center"></a><a name="bkmk_atp"></a>Připojení klientů Configuration Manager k ochraně ATP v programu Microsoft Defender prostřednictvím centra pro správu Microsoft Endpoint Manageru
+### <a name="onboard-configuration-manager-clients-to-microsoft-defender-atp-via-the-microsoft-endpoint-manager-admin-center"></a><a name="bkmk_atp"></a> Připojení klientů Configuration Manager k ochraně ATP v programu Microsoft Defender prostřednictvím centra pro správu Microsoft Endpoint Manageru
 <!--5691658-->
 Teď můžete nasadit zásady registrace a odezvy EDR (Microsoft Defender ATP) pro Configuration Manager spravované klienty. Tito klienti nevyžadují registraci v Azure AD ani MDM a zásady jsou zaměřené na kolekce nástroje ConfigMgr místo skupin Azure AD.
 
@@ -346,7 +346,7 @@ Tato možnost umožňuje zákazníkům spravovat jak Intune MDM, tak Configurati
 
     Od této verze je požadavek HTTPS určen pro web IIS, který je hostitelem služby obnovení, nikoli celou roli bodu správy. Tato změna zmírnit požadavky na certifikát a stále zašifruje obnovovací klíče při přenosu.<!-- 5925660 --> Další informace najdete v tématu [šifrování dat pro obnovení](../../../protect/deploy-use/bitlocker/encrypt-recovery-data.md).
 
-## <a name="reporting"></a><a name="bkmk_report"></a>Zpravodajský
+## <a name="reporting"></a><a name="bkmk_report"></a> Zpravodajský
 
 ### <a name="integrate-with-power-bi-report-server"></a>Integrace se Serverem sestav Power BI
 
@@ -356,7 +356,7 @@ Nyní můžete integrovat Server sestav Power BI s vytvářením sestav Configur
 
 Další informace najdete v tématu věnovaném [integraci s server sestav Power BI](../../servers/manage/powerbi-report-server.md).
 
-## <a name="configuration-manager-console"></a><a name="bkmk_admin"></a>Konzola Configuration Manager
+## <a name="configuration-manager-console"></a><a name="bkmk_admin"></a> Konzola Configuration Manager
 
 ### <a name="show-boundary-groups-for-devices"></a>Zobrazit skupiny hranic pro zařízení
 
@@ -397,7 +397,7 @@ Komunita správce IT vyvinula spoustu znalostí během let. Místo rezásobován
 
 Další informace najdete v tématu [komunitní centrum a GitHub](../../servers/manage/community-hub.md).
 
-## <a name="tools"></a><a name="bkmk_tools"></a>Nástroje
+## <a name="tools"></a><a name="bkmk_tools"></a> Nástroje
 
 ### <a name="onetrace-log-groups"></a>Skupiny protokolů OneTrace
 
@@ -411,7 +411,7 @@ OneTrace nyní podporuje přizpůsobitelné skupiny protokolů, podobně jako fu
 
 Další informace najdete v tématu [Support Center OneTrace](../../support/support-center-onetrace.md).
 
-### <a name="improvements-to-extend-and-migrate-on-premises-site-to-microsoft-azure"></a><a name="bkmk_extend"></a>Vylepšení rozšiřování a migrace místních lokalit na Microsoft Azure
+### <a name="improvements-to-extend-and-migrate-on-premises-site-to-microsoft-azure"></a><a name="bkmk_extend"></a> Vylepšení rozšiřování a migrace místních lokalit na Microsoft Azure
 <!--5665775, 6307931-->
 Nástroj pro rozšiřování a migraci místního webu na Microsoft Azure nyní podporuje zřizování více rolí systému lokality na jednom virtuálním počítači Azure. Po dokončení počátečního nasazení virtuálního počítače Azure můžete přidat role systému lokality.
 
@@ -426,7 +426,7 @@ Od této verze již nejsou k dispozici následující [funkce:](../../servers/ma
 - [CMPivot samostatná](../../servers/manage/cmpivot.md#bkmk_standalone)<!--3555890/4692885-->
 - [Klientské aplikace pro spoluspravovaná zařízení](../../../comanage/workloads.md#client-apps) (dříve označovaná jako *mobilní aplikace pro spoluspravovaná zařízení*)<!-- 1357892/3600959 -->
 
-Další informace o změnách rutin prostředí Windows PowerShell pro Configuration Manager najdete v [poznámkách k verzi PowerShell verze 2002](https://docs.microsoft.com/powershell/sccm/2002-release-notes?view=sccm-ps).
+Další informace o změnách rutin prostředí Windows PowerShell pro Configuration Manager najdete v [poznámkách k verzi PowerShell verze 2002](/powershell/sccm/2002-release-notes?view=sccm-ps).
 
 Další informace o změnách REST API služby správy najdete v tématu poznámky k [verzi služby správy](../../../develop/adminservice/release-notes.md#bkmk_2002).
 

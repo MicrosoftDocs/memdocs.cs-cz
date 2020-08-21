@@ -10,12 +10,12 @@ ms.assetid: 2a7d7170-1933-40e9-96d6-74a6eb7278e2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: bc63a21970bb522407c86d027690b83894b3cb99
-ms.sourcegitcommit: 578ad1e8088f7065b565e8a4f4619f5a26b94001
+ms.openlocfilehash: 4ac8d416e05b97b824ae236c2b1a2ff958b946b5
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81721826"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700023"
 ---
 # <a name="set-up-certificates-for-trusted-communications-with-on-premises-mdm"></a>Nastavení certifikátů pro důvěryhodnou komunikaci s místní MDM
 
@@ -34,9 +34,9 @@ Pro hromadně registrovaná zařízení můžete zahrnout certifikát do registr
 Pokud k vydání certifikátů serveru použijete známou veřejnou certifikační autoritu, jako je například VeriSign nebo GoDaddy, můžete nemusíte na každé zařízení ručně nainstalovat důvěryhodný kořenový certifikát. Většina zařízení nativně tyto veřejné autority důvěřuje. Tato metoda je užitečnou alternativou pro uživatelem zaregistrovaná zařízení, místo abyste museli instalovat certifikát jiným způsobem.
 
 > [!IMPORTANT]  
-> Existuje mnoho způsobů, jak nastavit certifikáty pro důvěryhodnou komunikaci mezi zařízeními a servery systému lokality pro místní správu mobilních zařízení (MDM). Informace v tomto článku jsou příkladem jednoho ze způsobů, jak to provést. Tato metoda vyžaduje službu AD CS (Active Directory Certificate Services) s certifikační autoritou a rolí webového zápisu certifikační autority. Další informace najdete v tématu Služba [AD CS (Active Directory Certificate Services](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831740\(v=ws.11\))).
+> Existuje mnoho způsobů, jak nastavit certifikáty pro důvěryhodnou komunikaci mezi zařízeními a servery systému lokality pro místní správu mobilních zařízení (MDM). Informace v tomto článku jsou příkladem jednoho ze způsobů, jak to provést. Tato metoda vyžaduje službu AD CS (Active Directory Certificate Services) s certifikační autoritou a rolí webového zápisu certifikační autority. Další informace najdete v tématu Služba [AD CS (Active Directory Certificate Services](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831740\(v=ws.11\))).
 
-## <a name="publish-the-crl"></a><a name="bkmk_configCa"></a>Publikování seznamu odvolaných certifikátů
+## <a name="publish-the-crl"></a><a name="bkmk_configCa"></a> Publikování seznamu odvolaných certifikátů
 
 Ve výchozím nastavení používá certifikační autorita (CA) služby Active Directory seznamy odvolaných certifikátů (CRL) založené na protokolu LDAP. Umožňuje připojení k seznamu CRL pro zařízení připojená k doméně. Pokud chcete zařízením, která nejsou připojená k doméně, důvěřovat certifikátům vydaným certifikační autoritou, přidejte seznam CRL založený na protokolu HTTP.
 
@@ -60,7 +60,7 @@ Ve výchozím nastavení používá certifikační autorita (CA) služby Active 
 
 1. V okně publikovat seznam odvolaných certifikátů vyberte **jenom rozdílový seznam CRL**a pak kliknutím na **OK** zavřete okno.
 
-## <a name="create-the-certificate-template"></a><a name="bkmk_certTempl"></a>Vytvoření šablony certifikátu
+## <a name="create-the-certificate-template"></a><a name="bkmk_certTempl"></a> Vytvoření šablony certifikátu
 
 Certifikační autorita používá šablonu certifikátu webového serveru k vystavování certifikátů pro servery hostující role systému lokality. Tyto servery budou koncovými body SSL pro důvěryhodnou komunikaci mezi rolemi systému lokality a registrovanými zařízeními.
 
@@ -85,7 +85,7 @@ Certifikační autorita používá šablonu certifikátu webového serveru k vys
 
     1. Odeberte oprávnění **zapsat** ze skupin zabezpečení **Domain Admins** a **Enterprise Admins** .
 
-    1. Vyberte **Přidat**a zadejte název skupiny zabezpečení. Například **servery CONFIGMGR MDM**. Kliknutím na **tlačítko OK** zavřete okno.
+    1. Vyberte **Přidat**a zadejte název skupiny zabezpečení. Například **servery CONFIGMGR MDM**. Vyberte **OK**, aby se okno zavřelo.
 
     1. Vyberte oprávnění **zapsat** pro tuto skupinu. Neodstraňujte oprávnění **číst** .
 
@@ -95,7 +95,7 @@ Certifikační autorita používá šablonu certifikátu webového serveru k vys
 
 1. V okně **Povolit šablony certifikátů** vyberte novou šablonu. Například **webový server CONFIGMGR MDM**. Pak kliknutím na **OK** okno uložte a zavřete.
 
-## <a name="request-the-certificate"></a><a name="bkmk_requestCert"></a>Požádat o certifikát
+## <a name="request-the-certificate"></a><a name="bkmk_requestCert"></a> Požádat o certifikát
 
 Tento postup popisuje, jak požádat o certifikát webového serveru pro službu IIS. Tento postup proveďte pro každý server systému lokality, který je hostitelem jedné z rolí pro místní správu mobilních zařízení (MDM).
 
@@ -121,7 +121,7 @@ Tento postup popisuje, jak požádat o certifikát webového serveru pro službu
 
 Každý server potřebuje jedinečný certifikát webového serveru. Tento postup opakujte pro každý server, který je hostitelem jedné z požadovaných rolí systému lokality. Pokud jeden server hostuje všechny role systému lokality, stačí si vyžádat jen jeden certifikát webového serveru.
 
-## <a name="bind-the-certificate"></a><a name="bkmk_bindCert"></a>Vytvoření vazby certifikátu
+## <a name="bind-the-certificate"></a><a name="bkmk_bindCert"></a> Vytvoření vazby certifikátu
 
 Dalším krokem je vytvoření vazby nového certifikátu na webový server. Tento postup použijte pro každý server, který je hostitelem rolí systému lokality *bodu registrace* a *zprostředkujícího bodu registrace* . Pokud jeden Server hostuje všechny role systému lokality, stačí tento proces provést pouze jednou.
 
@@ -138,7 +138,7 @@ Dalším krokem je vytvoření vazby nového certifikátu na webový server. Ten
 
 1. V konzole Správce služby IIS vyberte v seznamu připojení webový server. Na panelu akcí na pravé straně vyberte **restartovat**. Tato akce restartuje službu webového serveru.
 
-## <a name="export-the-trusted-root-certificate"></a><a name="bkmk_exportCert"></a>Export důvěryhodného kořenového certifikátu
+## <a name="export-the-trusted-root-certificate"></a><a name="bkmk_exportCert"></a> Export důvěryhodného kořenového certifikátu
 
 Služba AD CS (Active Directory Certificate Services) automaticky nainstaluje požadovaný certifikát z certifikační autority na všechna zařízení připojená k doméně. Chcete-li získat certifikát, který je vyžadován pro zařízení, která nejsou připojena k doméně, ke komunikaci s rolemi systému lokality, exportujte jej z certifikátu vázaného na webový server.
 

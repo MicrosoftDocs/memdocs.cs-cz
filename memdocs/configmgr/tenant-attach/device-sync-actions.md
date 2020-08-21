@@ -10,12 +10,12 @@ ms.assetid: 7a597d9e-a878-48d0-a7ce-56a1dbfd0e5c
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 676ae288003b257802eea495c4101a95129eaf34
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 4bdfbabf27906eb8a79ec8ba24f51c3e176dc028
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88251860"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700401"
 ---
 # <a name="microsoft-endpoint-manager-tenant-attach-device-sync-and-device-actions"></a><a name="bkmk_attach"></a> Připojení tenanta Microsoft Endpoint Manageru: synchronizace zařízení a akce zařízení
 <!--3555758 live 3/4/2020-->
@@ -25,9 +25,9 @@ Microsoft Endpoint Manager je integrované řešení pro správu všech vašich 
 
 Configuration Manager počínaje verzí 2002 můžete do cloudové služby nahrát vaše Configuration Manager zařízení a provádět akce z okna **zařízení** v centru pro správu.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
-- Účet, který je *globálním správcem* pro přihlašování při použití této změny. Další informace najdete v tématu [role správce služby Azure Active Directory (Azure AD)](https://docs.microsoft.com/azure/role-based-access-control/rbac-and-directory-admin-roles#azure-ad-administrator-roles).
+- Účet, který je *globálním správcem* pro přihlašování při použití této změny. Další informace najdete v tématu [role správce služby Azure Active Directory (Azure AD)](/azure/role-based-access-control/rbac-and-directory-admin-roles#azure-ad-administrator-roles).
    - Připojování vytvoří v tenantovi služby Azure AD aplikaci třetí strany a instanční objekt první strany.
 - Prostředí veřejného cloudu Azure.
 - Uživatelské účty, které aktivují akce zařízení, mají následující požadavky:
@@ -118,13 +118,13 @@ Použití dříve vytvořené aplikace během připojování k tenantovi připoj
    - CmCollectionData. Write
 
 - Microsoft Graph oprávnění:
-   - Adresář. Read. všechna [oprávnění aplikací](https://docs.microsoft.com/graph/permissions-reference#application-permissions)
-   - Adresář. Read. všechna [oprávnění delegovaného adresáře](https://docs.microsoft.com/graph/permissions-reference#directory-permissions)
+   - Adresář. Read. všechna [oprávnění aplikací](/graph/permissions-reference#application-permissions)
+   - Adresář. Read. všechna [oprávnění delegovaného adresáře](/graph/permissions-reference#directory-permissions)
 
-- Zajistěte, aby byl pro aplikaci Azure AD vybraný **oprávnění udělení souhlasu správce pro tenanta** . Další informace najdete v tématu [udělení souhlasu správce v registrace aplikací](https://docs.microsoft.com/azure/active-directory/manage-apps/grant-admin-consent).
+- Zajistěte, aby byl pro aplikaci Azure AD vybraný **oprávnění udělení souhlasu správce pro tenanta** . Další informace najdete v tématu [udělení souhlasu správce v registrace aplikací](/azure/active-directory/manage-apps/grant-admin-consent).
 
 - Importovaná aplikace musí být nakonfigurovaná takto:
-   - Registrováno pro **účty pouze v tomto organizačním adresáři**. Další informace najdete v tématu [Změna toho, kdo má přístup k vaší aplikaci](https://docs.microsoft.com/azure/active-directory/develop/quickstart-modify-supported-accounts#to-change-who-can-access-your-application).
+   - Registrováno pro **účty pouze v tomto organizačním adresáři**. Další informace najdete v tématu [Změna toho, kdo má přístup k vaší aplikaci](/azure/active-directory/develop/quickstart-modify-supported-accounts#to-change-who-can-access-your-application).
    -  Má platný identifikátor URI a tajný kód aplikace.
 
 

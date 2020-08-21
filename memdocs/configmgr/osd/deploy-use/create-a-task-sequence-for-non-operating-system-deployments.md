@@ -10,12 +10,12 @@ ms.assetid: 92aaec8a-8751-442a-b64b-62ab05b5bf50
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1fcae4d520b1e81d0ef3470cd12ee68488b4f589
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 1c5ef6d4a17623428f299ff9df676dcba49e7f0c
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125522"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698148"
 ---
 # <a name="create-a-task-sequence-for-non-os-deployments"></a>Vytvoření pořadí úkolů pro nasazení jiného softwaru než operačního systému
 
@@ -32,7 +32,7 @@ Pořadí úloh v Configuration Manager slouží k automatizaci různých druhů 
 
 - [Nastavení konfigurace](../../compliance/understand/ensure-device-compliance.md)
 
-Zvažte také další technologie Microsoft System Center Automation, jako je například [Orchestrator](https://docs.microsoft.com/system-center/orchestrator/) a [Service Management Automation](https://docs.microsoft.com/system-center/sma/).  
+Zvažte také další technologie Microsoft System Center Automation, jako je například [Orchestrator](/system-center/orchestrator/) a [Service Management Automation](/system-center/sma/).  
 
 Výkon pořadí úkolů spočívá v jejich flexibilitě a způsobu jejich použití. Můžou konfigurovat nastavení klienta, distribuovat software, aktualizovat ovladače, upravovat stavy uživatelů a provádět další úkoly nezávisle na nasazení operačního systému. Můžete vytvořit vlastní pořadí úkolů a přidat do něj libovolný počet úloh. V Configuration Manager se podporuje použití vlastních pořadí úkolů pro nasazení bez OS. Pokud ale v pořadí úkolů dojde k nežádoucím nebo nekonzistentním výsledkům, podívejte se na způsoby zjednodušení operace:
 

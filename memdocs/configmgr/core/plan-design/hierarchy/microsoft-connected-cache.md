@@ -10,12 +10,12 @@ ms.assetid: c5cb5753-5728-4f81-b830-a6fd1a3e105c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0103ba8923698a31b86e7d34119caaeb54d54c90
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: cd44270d8662d9e7b1b26db92e2f66035edc24f1
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128524"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699326"
 ---
 # <a name="microsoft-connected-cache-in-configuration-manager"></a>Mezipaměť propojená Microsoftem v Configuration Manager
 
@@ -61,7 +61,7 @@ Když nakonfigurujete klienty tak, aby používali Server připojené mezipamět
 
   - Výchozí web povolený na portu 80
 
-  - Neinstalujte funkci [směrování požadavků aplikace](https://docs.microsoft.com/iis/extensions/planning-for-arr/application-request-routing-version-2-overview) IIS (ARR). Připojená mezipaměť nainstaluje ARR a nakonfiguruje její nastavení. Společnost Microsoft nemůže zaručit, že konfigurace ARR v mezipaměti není v konfliktu s jinými aplikacemi na serveru, které tuto funkci využívají i.
+  - Neinstalujte funkci [směrování požadavků aplikace](/iis/extensions/planning-for-arr/application-request-routing-version-2-overview) IIS (ARR). Připojená mezipaměť nainstaluje ARR a nakonfiguruje její nastavení. Společnost Microsoft nemůže zaručit, že konfigurace ARR v mezipaměti není v konfliktu s jinými aplikacemi na serveru, které tuto funkci využívají i.
 
   - Distribuční bod vyžaduje internetový přístup ke cloudu Microsoftu. Konkrétní adresy URL se můžou lišit v závislosti na konkrétním obsahu s povoleným cloudem. Ujistěte se také, že jste povolili koncové body pro optimalizaci doručení. Další informace najdete v tématu [požadavky na přístup k Internetu](../network/internet-endpoints.md).
 
@@ -97,7 +97,7 @@ Když nakonfigurujete klienty tak, aby používali Server připojené mezipamět
 
 1. V nastavení klienta ve skupině **optimalizace doručování** nakonfigurujte nastavení tak, aby **povolovalo zařízením spravovaným nástrojem Configuration Manager používat servery mezipaměti připojené od Microsoftu k stažení obsahu**.  
 
-### <a name="note-1-about-drive-selection"></a><a name="bkmk_note1"></a>Poznámka 1: o výběru jednotky
+### <a name="note-1-about-drive-selection"></a><a name="bkmk_note1"></a> Poznámka 1: o výběru jednotky
 
 Pokud vyberete možnost **automaticky**, když Configuration Manager nainstaluje součást připojené mezipaměti, bude dodržet soubor **NO_SMS_ON_DRIVE. SMS** . Například distribuční bod má soubor `C:\no_sms_on_drive.sms` . I když má jednotka C: nejvíce volného místa, Configuration Manager konfiguruje připojenou mezipaměť pro použití jiné jednotky pro svou mezipaměť.
 
@@ -109,7 +109,7 @@ Změna jednotky po instalaci připojené mezipaměti:
 
 - Pokud je nastavena na hodnotu automaticky, vytvořte nejprve soubor **NO_SMS_ON_DRIVE. SMS** . Pak proveďte nějaké změny vlastností distribučního bodu, aby se aktivovala Změna konfigurace.
 
-### <a name="automation"></a>Automation
+### <a name="automation"></a>Automatizace
 
 <!-- SCCMDocs#1911 -->
 
@@ -118,10 +118,10 @@ Sadu Configuration Manager SDK můžete použít k automatizaci konfigurace nast
 Když aktualizujete instanci **SMS_SCI_SysResUse** pro distribuční bod, nastavte následující vlastnosti:
 
 - **AgreeDOINCLicense**: Pokud chcete `1` přijmout licenční podmínky, nastavte na.
-- **Příznaky**: Povolit `|= 4` , zakázat`&= ~4`
-- **DiskSpaceDOINC**: nastavte na `Percentage` nebo`GB`
-- **RetainDOINCCache**: nastavte na `0` nebo`1`
-- **LocalDriveDOINC**: nastavte na `Automatic` nebo konkrétní písmeno jednotky, například `C:` nebo.`D:`
+- **Příznaky**: Povolit `|= 4` , zakázat `&= ~4`
+- **DiskSpaceDOINC**: nastavte na `Percentage` nebo `GB`
+- **RetainDOINCCache**: nastavte na `0` nebo `1`
+- **LocalDriveDOINC**: nastavte na `Automatic` nebo konkrétní písmeno jednotky, například `C:` nebo. `D:`
 
 ## <a name="verify"></a>Ověření
 
@@ -136,19 +136,19 @@ Když klienti stáhnou obsah spravovaný přes Cloud, využívají optimalizaci 
   - Klientské aplikace: Microsoft Store aplikace a aktualizace
   - Endpoint Protection: aktualizace definic v programu Windows Defender
 
-Ve Windows 10 verze 1809 nebo novější ověřte toto chování pomocí rutiny **Get-DeliveryOptimizationStatus** prostředí Windows PowerShell. Ve výstupu rutiny si prohlédněte hodnotu **BytesFromCacheServer** . Další informace najdete v tématu věnovaném [monitorování Optimalizace doručení](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-setup#monitor-delivery-optimization).
+Ve Windows 10 verze 1809 nebo novější ověřte toto chování pomocí rutiny **Get-DeliveryOptimizationStatus** prostředí Windows PowerShell. Ve výstupu rutiny si prohlédněte hodnotu **BytesFromCacheServer** . Další informace najdete v tématu věnovaném [monitorování Optimalizace doručení](/windows/deployment/update/waas-delivery-optimization-setup#monitor-delivery-optimization).
 
 Pokud server mezipaměti vrátí jakoukoli chybu protokolu HTTP, klient Optimalizace doručení se vrátí k původnímu cloudovém zdroji.
 
 Podrobnější informace najdete v tématu [řešení potíží s propojenou mezipamětí Microsoft v Configuration Manager](../../servers/deploy/configure/troubleshoot-microsoft-connected-cache.md).
 
-## <a name="support-for-intune-win32-apps"></a><a name="bkmk_intune"></a>Podpora pro aplikace Win32 Intune
+## <a name="support-for-intune-win32-apps"></a><a name="bkmk_intune"></a> Podpora pro aplikace Win32 Intune
 
 <!--5032900-->
 
 Pokud v Configuration Manager distribučních bodech povolíte připojenou mezipaměť, počínaje verzí 1910, mohou aplikace Microsoft Intune Win32 sloužit spoluspravovaným klientům.
 
-### <a name="prerequisites"></a>Požadavky
+### <a name="prerequisites"></a>Předpoklady
 
 #### <a name="client"></a>Klient
 
@@ -184,14 +184,14 @@ Pokud v Configuration Manager distribučních bodech povolíte připojenou mezip
 
 - Tato funkce podporuje jenom typ aplikace Win32 v Intune.
 
-  - Vytvořte a přiřaďte (nasaďte) novou aplikaci v Intune pro tento účel. (Aplikace vytvořené před Intune verze 1811 nefungují.) Další informace najdete v tématu [Správa aplikací Win32 v Intune](https://docs.microsoft.com/intune/apps/apps-win32-app-management).
+  - Vytvořte a přiřaďte (nasaďte) novou aplikaci v Intune pro tento účel. (Aplikace vytvořené před Intune verze 1811 nefungují.) Další informace najdete v tématu [Správa aplikací Win32 v Intune](/intune/apps/apps-win32-app-management).
 
   - Aplikace musí mít velikost alespoň 100 MB.
   
     > [!TIP]
     > Použijte následující nastavení zásad skupiny: Konfigurace počítače > Šablony pro správu > součásti systému Windows > Optimalizace doručení > **minimální velikost souboru obsahu sdílené mezipaměti (v MB)**.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Optimalizace aktualizací Windows 10 s optimalizací doručení](../../../sum/deploy-use/optimize-windows-10-update-delivery.md)
 

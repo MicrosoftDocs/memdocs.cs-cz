@@ -10,12 +10,12 @@ ms.assetid: e3bb3e13-3037-4122-93bc-504bfd080a4d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3304d480f0650191a784a9152ae464e81c2207a1
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: df5dfdeab010012a258fe59612a348c269081c45
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906400"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700493"
 ---
 # <a name="import-pfx-certificate-profiles"></a>Import profilů certifikátů PFX
 
@@ -28,7 +28,7 @@ Configuration Manager podporuje různé druhy úložišť certifikátů pro růz
 Pomocí Configuration Manager importujte přihlašovací údaje certifikátu a pak na zařízení zřiďte soubory PFX. Tyto soubory můžete použít k vygenerování certifikátů specifických pro uživatele pro podporu výměny šifrovaných dat.
 
 > [!TIP]  
-> Podrobný návod k tomuto procesu najdete v blogovém příspěvku [jak vytvořit a nasadit profily certifikátů PFX v Configuration Manager](https://docs.microsoft.com/archive/blogs/karanrustagi/how-to-create-and-deploy-pfx-certificate-profiles-in-configuration-manager).  
+> Podrobný návod k tomuto procesu najdete v blogovém příspěvku [jak vytvořit a nasadit profily certifikátů PFX v Configuration Manager](/archive/blogs/karanrustagi/how-to-create-and-deploy-pfx-certificate-profiles-in-configuration-manager).  
 
 ## <a name="create-a-profile"></a>Vytvoření profilu
 
@@ -70,9 +70,9 @@ Přiřaďte cílové uživatele jako primární uživatele na zařízeních s Wi
 
 Pokud chcete importovat certifikát PFX, použijte následující rutiny Configuration Manager PowerShellu ke zřízení skriptu PFX:
 
-- [Get-CMClientCertificatePfx](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmclientcertificatepfx?view=sccm-ps)
-- [Import – CMClientCertificatePfx](https://docs.microsoft.com/powershell/module/configurationmanager/import-cmclientcertificatepfx?view=sccm-ps)
-- [Remove-CMClientCertificatePfx](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmclientcertificatepfx?view=sccm-ps)
+- [Get-CMClientCertificatePfx](/powershell/module/configurationmanager/get-cmclientcertificatepfx?view=sccm-ps)
+- [Import – CMClientCertificatePfx](/powershell/module/configurationmanager/import-cmclientcertificatepfx?view=sccm-ps)
+- [Remove-CMClientCertificatePfx](/powershell/module/configurationmanager/remove-cmclientcertificatepfx?view=sccm-ps)
 
 ### <a name="example-script"></a>Ukázkový skript
 
@@ -96,7 +96,7 @@ $pfxfile = "c:\p1.pfx"
 Import-CMClientCertificatePfx -UserName "$env:USERDOMAIN\$user" -Password (ConvertTo-SecureString -String $password -AsPlainText -Force) -CertificateProfilePfx (Get-CMCertificateProfilePfx -Fast -Name $PfxProfileDisplayName) -Path $pfxfile
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Vytvoření nového profilu certifikátu](../../protect/deploy-use/create-certificate-profiles.md)
 

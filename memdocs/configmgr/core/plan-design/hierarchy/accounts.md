@@ -10,12 +10,12 @@ ms.assetid: 72d7b174-f015-498f-a0a7-2161b9929198
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 176280452039fd42dfef1d63cfdbb48169cda545
-ms.sourcegitcommit: 7b2f7918d517005850031f30e705e5a512959c3d
+ms.openlocfilehash: 17c22027ffc28f2e04e95b8223de27b8f26489fd
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84777020"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698482"
 ---
 # <a name="accounts-used-in-configuration-manager"></a>Účty používané v Configuration Manager
 
@@ -88,7 +88,7 @@ Pomocí následujících informací Identifikujte skupiny systému Windows, úč
   - [smsdbrole_WebPortal](#smsdbrole_webportal)
   - [smsschm_users](#smsschm_users)
 
-## <a name="windows-groups-that-configuration-manager-creates-and-uses"></a><a name="bkmk_groups"></a>Skupiny systému Windows, které Configuration Manager vytvářejí a používají  
+## <a name="windows-groups-that-configuration-manager-creates-and-uses"></a><a name="bkmk_groups"></a> Skupiny systému Windows, které Configuration Manager vytvářejí a používají  
 
 Configuration Manager automaticky vytvoří a v mnoha případech automaticky udržuje následující skupiny systému Windows:  
 
@@ -96,7 +96,7 @@ Configuration Manager automaticky vytvoří a v mnoha případech automaticky ud
 > Když Configuration Manager vytvoří skupinu v počítači, který je členem domény, bude skupina místní skupinou zabezpečení. Pokud je počítač řadičem domény, skupina je místní doménovou skupinou. Tento typ skupiny je sdílen mezi všemi řadiči domény v doméně.  
 
 
-### <a name="configuration-manager_collectedfilesaccess"></a><a name="configmgr_collectedfilesaccess"></a>Manager_CollectedFilesAccess konfigurace
+### <a name="configuration-manager_collectedfilesaccess"></a><a name="configmgr_collectedfilesaccess"></a> Manager_CollectedFilesAccess konfigurace
 
 Configuration Manager tuto skupinu používá k udělení přístupu k zobrazení souborů shromážděných inventářem softwaru.  
 
@@ -111,7 +111,7 @@ Když odinstalujete lokalitu, tato skupina se automaticky neodebere. Po odinstal
 Configuration Manager automaticky spravuje členství ve skupině. Členství zahrnuje uživatele s právy pro správu, kterým je uděleno oprávnění **Zobrazit shromážděné soubory** pro zabezpečitelný objekt **Kolekce** z přiřazené role zabezpečení.
 
 #### <a name="permissions"></a>Oprávnění
-Ve výchozím nastavení má tato skupina oprávnění **číst** k následující složce na serveru lokality:`C:\Program Files\Microsoft Configuration Manager\sinv.box\FileCol`  
+Ve výchozím nastavení má tato skupina oprávnění **číst** k následující složce na serveru lokality: `C:\Program Files\Microsoft Configuration Manager\sinv.box\FileCol`  
 
 
 ### <a name="configuration-manager_dviewaccess"></a><a name="configmgr_dviewaccess"></a>Manager_DViewAccess konfigurace  
@@ -121,7 +121,7 @@ Tato skupina je místní skupina zabezpečení, která Configuration Manager vyt
 Další informace najdete v tématu [přenos dat mezi lokalitami](data-transfers-between-sites.md).
 
 
-### <a name="configuration-manager-remote-control-users"></a><a name="configmgr_rcusers"></a>Configuration Manager uživatele vzdáleného řízení  
+### <a name="configuration-manager-remote-control-users"></a><a name="configmgr_rcusers"></a> Configuration Manager uživatele vzdáleného řízení  
 
 Configuration Manager nástroje Remote Tools tuto skupinu používají k ukládání účtů a skupin, které jste nastavili v seznamu **povolených prohlížečů** . Lokalita přiřadí tento seznam každému klientovi.  
 
@@ -166,7 +166,7 @@ Práva a oprávnění pro skupinu SMS Admins můžete zobrazit v modulu snap-in 
 Používáte-li vzdálenou konzolu Configuration Manager, nakonfigurujte oprávnění modelu DCOM pro **vzdálenou aktivaci** na počítači serveru lokality i u poskytovatele serveru SMS. Udělte tato práva skupině **Admins služby SMS** . Tato akce zjednodušuje správu namísto udělení těchto oprávnění přímo uživatelům nebo skupinám. Další informace najdete v tématu [Konfigurace oprávnění modelu DCOM pro vzdálené Configuration Manager konzoly](../../servers/manage/modify-your-infrastructure.md#BKMK_ConfigDCOMforRemoteConsole). 
 
 
-### <a name="sms_sitesystemtositeserverconnection_mp_ltsitecode"></a><a name="bkmk_remotemp"></a>SMS_SiteSystemToSiteServerConnection_MP_ &lt; SiteCode\>  
+### <a name="sms_sitesystemtositeserverconnection_mp_ltsitecode"></a><a name="bkmk_remotemp"></a> SMS_SiteSystemToSiteServerConnection_MP_ &lt; SiteCode\>  
  
 Body správy, které jsou vzdálené od serveru lokality, používají tuto skupinu pro připojení k databázi lokality. Tato skupina nabízí bodu správy přístup ke složkám příchozí pošty na serveru lokality a v databázi lokality.  
 
@@ -182,7 +182,7 @@ Configuration Manager automaticky spravuje členství ve skupině. Ve výchozím
 Ve výchozím nastavení má tato skupina oprávnění **číst**, **číst & spouštět**a **Zobrazovat obsah složky** pro následující složku na serveru lokality: `C:\Program Files\Microsoft Configuration Manager\inboxes` . Tato skupina má další oprávnění **zapisovat** do podsložek pod složkou **Doručená pošta**, do kterých bod správy zapisuje data klientů.
 
 
-### <a name="sms_sitesystemtositeserverconnection_smsprov_ltsitecode"></a><a name="bkmk_remoteprov"></a>SMS_SiteSystemToSiteServerConnection_SMSProv_ &lt; SiteCode\>  
+### <a name="sms_sitesystemtositeserverconnection_smsprov_ltsitecode"></a><a name="bkmk_remoteprov"></a> SMS_SiteSystemToSiteServerConnection_SMSProv_ &lt; SiteCode\>  
  
 Vzdálené počítače poskytovatele služby SMS tuto skupinu používají pro připojení k serveru lokality.  
 
@@ -200,14 +200,14 @@ Ve výchozím nastavení má tato skupina oprávnění **číst**, **číst & sp
 Tato skupina má také oprávnění **ke čtení** pro podsložky na serveru lokality níže `C:\Program Files\Microsoft Configuration Manager\OSD\Bin` . 
 
 Má také následující oprávnění pro podsložky níže `C:\Program Files\Microsoft Configuration Manager\OSD\boot` :
-- **Oprávnění**  
+- **Číst**  
 - **Čtení & provedení**  
 - **Výpis obsahu složky**  
-- **Psal**  
-- **Úprava**   
+- **Zápis**  
+- **Upravit**   
 
 
-### <a name="sms_sitesystemtositeserverconnection_stat_ltsitecode"></a><a name="bkmk_remotestat"></a>SMS_SiteSystemToSiteServerConnection_Stat_ &lt; SiteCode\>  
+### <a name="sms_sitesystemtositeserverconnection_stat_ltsitecode"></a><a name="bkmk_remotestat"></a> SMS_SiteSystemToSiteServerConnection_Stat_ &lt; SiteCode\>  
 
 Součást Správce odesílání souborů na Configuration Manager počítače se vzdáleným systémem lokality používá tuto skupinu pro připojení k serveru lokality.  
 
@@ -225,7 +225,7 @@ Ve výchozím nastavení má tato skupina oprávnění **číst**, **číst & sp
 Tato skupina má další oprávnění **zápisu** a **úprav** do následující složky na serveru lokality: `C:\Program Files\Microsoft Configuration Manager\inboxes\statmgr.box` .
 
 
-### <a name="sms_sitetositeconnection_ltsitecode"></a><a name="bkmk_filerepl"></a>SMS_SiteToSiteConnection_ &lt; SiteCode\>  
+### <a name="sms_sitetositeconnection_ltsitecode"></a><a name="bkmk_filerepl"></a> SMS_SiteToSiteConnection_ &lt; SiteCode\>  
 Configuration Manager tuto skupinu používá k povolení replikace na základě souborů mezi lokalitami v hierarchii. Pro každou vzdálenou lokalitu, která přímo přenáší soubory do této lokality, má tato skupina účty nastavené jako **účet replikace souborů**.  
 
 #### <a name="type-and-location"></a>Typ a umístění
@@ -241,7 +241,7 @@ Ve výchozím nastavení má tato skupina **Úplné řízení** pro následujíc
 
 
 
-## <a name="accounts-that-configuration-manager-uses"></a><a name="bkmk_accounts"></a>Účty, které Configuration Manager používá  
+## <a name="accounts-that-configuration-manager-uses"></a><a name="bkmk_accounts"></a> Účty, které Configuration Manager používá  
 
 Pro Configuration Manager můžete nastavit následující účty.  
 
@@ -553,7 +553,7 @@ Pokud máte Configuration Manager 2007 distribučních bodů nebo sekundárních
 > [!NOTE]  
 > Účet zdrojové lokality i [účet databáze zdrojové lokality](#source-site-database-account) jsou označeny jako **Správce migrace** v uzlu **účty** pracovního prostoru **Správa** v konzole nástroje Configuration Manager.  
 
-Další informace najdete v tématu [migrace dat mezi hierarchiemi](https://docs.microsoft.com/sccm/core/migration/migrate-data-between-hierarchies).
+Další informace najdete v tématu [migrace dat mezi hierarchiemi](/sccm/core/migration/migrate-data-between-hierarchies).
 
 
 ### <a name="source-site-database-account"></a>Účet databáze zdrojové lokality  
@@ -569,7 +569,7 @@ Pokud používáte účet počítače Configuration Manager (aktuální větev),
 > [!NOTE]  
 > Účet zdrojové lokality i [účet databáze zdrojové lokality](#source-site-database-account) jsou označeny jako **Správce migrace** v uzlu **účty** pracovního prostoru **Správa** v konzole nástroje Configuration Manager.  
 
-Další informace najdete v tématu [migrace dat mezi hierarchiemi](https://docs.microsoft.com/sccm/core/migration/migrate-data-between-hierarchies).
+Další informace najdete v tématu [migrace dat mezi hierarchiemi](/sccm/core/migration/migrate-data-between-hierarchies).
 
 
 ### <a name="task-sequence-domain-join-account"></a>Účet připojení k doméně pořadí úloh 
@@ -620,7 +620,7 @@ Nastavte účet tak, aby měl minimální oprávnění potřebná pro spuštěn�
 > Pokud příkazový řádek vyžaduje v počítači přístup správce, zvažte vytvoření místního účtu správce výhradně pro tento účet na všech počítačích, které spouští pořadí úkolů. Odstraňte účet, jakmile ho už nebudete potřebovat.  
 
 
-## <a name="user-objects-that-configuration-manager-uses-in-sql"></a><a name="bkmk_sqlusers"></a>Uživatelské objekty, které Configuration Manager používá v SQL 
+## <a name="user-objects-that-configuration-manager-uses-in-sql"></a><a name="bkmk_sqlusers"></a> Uživatelské objekty, které Configuration Manager používá v SQL 
 <!--SCCMDocs issue #1160-->
 Configuration Manager automaticky vytvoří a zachová následující objekty uživatele v SQL.  Tyto objekty jsou umístěné v rámci databáze Configuration Manager v části zabezpečení/uživatelé.  
 

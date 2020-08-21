@@ -10,12 +10,12 @@ ms.assetid: c631197d-7daa-4faa-9e22-980cd6d604c2
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: da2fe2ad66617ffb5ad3058011f111b0aaf9e9ae
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 788c48599ac8a94b8690f3a88f9761b9ae8ac742
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82903915"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699428"
 ---
 # <a name="support-center-for-configuration-manager"></a>Support Center pro Configuration Manager
 
@@ -50,12 +50,12 @@ Support Center zahrnuje moderní prohlížeč protokolů. Tento nástroj nahrazu
 <!--3555962-->
 Počínaje verzí 1906 je **OneTrace** nový prohlížeč protokolů s nástrojem Support Center. Funguje podobně jako CMTrace, s vylepšeními. Další informace najdete v tématu [Support Center OneTrace](support-center-onetrace.md).
 
-### <a name="powershell-cmdlets"></a>Rutiny prostředí PowerShell
+### <a name="powershell-cmdlets"></a>Rutiny PowerShellu
 
-Support Center zahrnuje také [rutiny PowerShellu](https://docs.microsoft.com/powershell/sccm/overview?view=sccm-ps). Pomocí těchto rutin můžete vytvořit vzdálené připojení k jinému Configuration Manager klientovi, nakonfigurovat možnosti shromažďování dat a spustit shromažďování dat.
+Support Center zahrnuje také [rutiny PowerShellu](/powershell/sccm/overview?view=sccm-ps). Pomocí těchto rutin můžete vytvořit vzdálené připojení k jinému Configuration Manager klientovi, nakonfigurovat možnosti shromažďování dat a spustit shromažďování dat.
 
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 Do serveru nebo klientského počítače, na který nainstalujete Support Center, nainstalujte následující komponenty:
 
@@ -70,9 +70,9 @@ Na serveru lokality vyhledejte instalační program nástroje Support Center v n
 
 Po instalaci nástroje vyhledejte v nabídce Start ve skupině nástroje **Microsoft System Center** následující položky:  
 
-- Support Center (ConfigMgrSupportCenter. exe)  
-- Prohlížeč souborů protokolu Support Center (CMLogViewer. exe)  
-- Support Center Viewer (ConfigMgrSupportCenterViewer. exe)  
+- Support Center (ConfigMgrSupportCenter.exe)  
+- Prohlížeč souborů protokolu nástroje Support Center (CMLogViewer.exe)  
+- Support Center Viewer (ConfigMgrSupportCenterViewer.exe)  
 
 
 ## <a name="known-issues"></a>Známé problémy
@@ -95,7 +95,7 @@ Chcete-li se tomuto problému vyhnout, použijte následující formáty uživat
 
 ### <a name="scripted-server-message-block-connections-to-remote-clients-might-require-removal"></a>Připojení blokových zpráv serveru ke vzdáleným klientům může vyžadovat odebrání.
 
-Při připojování ke vzdáleným klientům pomocí rutiny [New-CMMachineConnection](https://go.microsoft.com/fwlink/p/?linkid=390542) prostředí PowerShell vytvoří Support Center připojení SMB (Server Message Block) ke každému vzdálenému klientovi. Po dokončení shromažďování dat tato připojení zachová. Aby nedošlo k překročení maximálního počtu vzdálených připojení pro Windows, pomocí `net use` příkazu Zobrazte aktuálně aktivní sadu vzdálených připojení. Pak zakažte všechna nepotřebná připojení pomocí následujícího příkazu:`net use <connection_name> /d`
+Při připojování ke vzdáleným klientům pomocí rutiny [New-CMMachineConnection](https://go.microsoft.com/fwlink/p/?linkid=390542) prostředí PowerShell vytvoří Support Center připojení SMB (Server Message Block) ke každému vzdálenému klientovi. Po dokončení shromažďování dat tato připojení zachová. Aby nedošlo k překročení maximálního počtu vzdálených připojení pro Windows, pomocí `net use` příkazu Zobrazte aktuálně aktivní sadu vzdálených připojení. Pak zakažte všechna nepotřebná připojení pomocí následujícího příkazu: `net use <connection_name> /d`
 kde `<connection_name>` je název vzdáleného připojení.
 
 ### <a name="application-deployment-evaluation-cycle-request-isnt-sent-correctly-to-remote-machines"></a>Požadavek na cyklus hodnocení nasazení aplikace není na vzdálených počítačích správně odeslán.

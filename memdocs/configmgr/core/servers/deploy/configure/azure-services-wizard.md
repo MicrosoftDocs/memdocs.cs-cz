@@ -10,12 +10,12 @@ ms.assetid: a26a653e-17aa-43eb-ab36-0e36c7d29f49
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: ebdd07874f09ff6d97747826d6056df177e2c735
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 7cb0a2c71a3ea326348b87d6b34e3109a8ef9f20
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128473"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700125"
 ---
 # <a name="configure-azure-services-for-use-with-configuration-manager"></a>Konfigurace služeb Azure pro použití s Configuration Manager
 
@@ -39,10 +39,10 @@ Pomocí tohoto průvodce nakonfigurujte následující služby Azure:
 
   - [E-mailová oznámení o schválení aplikace](../../../../apps/deploy-use/app-approval.md#bkmk_email-approve)
 
-- **Konektor Log Analytics**: [Připojte se k Azure Log Analytics](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm). Synchronizovat data kolekce do Log Analytics.  
+- **Konektor Log Analytics**: [Připojte se k Azure Log Analytics](/azure/azure-monitor/platform/collect-sccm). Synchronizovat data kolekce do Log Analytics.  
 
     > [!Note]  
-    > Tento článek odkazuje na *konektor Log Analytics*, který se dřív nazýval *konektor OMS*. Neexistuje žádný funkční rozdíl. Další informace najdete v tématu [Správa Azure – monitorování](https://docs.microsoft.com/azure/azure-monitor/terminology#log-analytics).  
+    > Tento článek odkazuje na *konektor Log Analytics*, který se dřív nazýval *konektor OMS*. Neexistuje žádný funkční rozdíl. Další informace najdete v tématu [Správa Azure – monitorování](/azure/azure-monitor/terminology#log-analytics).  
 
 - **Microsoft Store pro firmy**: Připojte se k [Microsoft Store pro firmy](../../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md). Získejte aplikace pro Store ve vaší organizaci, které můžete nasadit pomocí Configuration Manager.  
 
@@ -78,10 +78,10 @@ Další informace o požadovaných oprávněních a konfiguracích aplikace pro 
 
 Pokud chcete získat další informace o aplikacích Azure, začněte s následujícími články:
 
-- [Ověřování a autorizace v prostředí Azure App Service](https://docs.microsoft.com/azure/app-service/app-service-authentication-overview)
-- [Přehled Web Apps](https://docs.microsoft.com/azure/app-service-web/app-service-web-overview)
+- [Ověřování a autorizace v prostředí Azure App Service](/azure/app-service/app-service-authentication-overview)
+- [Přehled Web Apps](/azure/app-service-web/app-service-web-overview)
 - [Základy registrace aplikace v Azure AD](/azure/active-directory/develop/authentication-scenarios)  
-- [Registrace aplikace ve vašem tenantovi Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-app-registration)
+- [Registrace aplikace ve vašem tenantovi Azure Active Directory](/azure/active-directory/active-directory-app-registration)
 
 ## <a name="before-you-begin"></a>Než začnete
 
@@ -93,7 +93,7 @@ Po určení služby, ke které se chcete připojit, se podívejte na tabulku v [
 
 Některé služby vyžadují, aby aplikace Azure AD měly určitá oprávnění. Zkontrolujte informace o každé službě a určete všechna požadovaná oprávnění. Například předtím, než budete moct importovat webovou aplikaci, musí ji správce Azure nejdřív vytvořit v [Azure Portal](https://portal.azure.com).
 
-Při konfiguraci konektoru Log Analytics udělte nově zaregistrovaným oprávněním *přispěvatele* webové aplikace ve skupině prostředků, která obsahuje relevantní pracovní prostor. Toto oprávnění umožňuje Configuration Manager získat přístup k tomuto pracovnímu prostoru. Když přiřadíte oprávnění, vyhledejte název registrace aplikace v oblasti **Přidat uživatele** Azure Portal. Tento proces je stejný jako při [poskytování Configuration Manager s oprávněním Log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-sccm#grant-configuration-manager-with-permissions-to-log-analytics). Správce Azure musí tato oprávnění přiřadit předtím, než aplikaci naimportujete do Configuration Manager.
+Při konfiguraci konektoru Log Analytics udělte nově zaregistrovaným oprávněním *přispěvatele* webové aplikace ve skupině prostředků, která obsahuje relevantní pracovní prostor. Toto oprávnění umožňuje Configuration Manager získat přístup k tomuto pracovnímu prostoru. Když přiřadíte oprávnění, vyhledejte název registrace aplikace v oblasti **Přidat uživatele** Azure Portal. Tento proces je stejný jako při [poskytování Configuration Manager s oprávněním Log Analytics](/azure/log-analytics/log-analytics-sccm#grant-configuration-manager-with-permissions-to-log-analytics). Správce Azure musí tato oprávnění přiřadit předtím, než aplikaci naimportujete do Configuration Manager.
 
 ## <a name="start-the-azure-services-wizard"></a>Spuštění Průvodce službami Azure
 
@@ -174,7 +174,7 @@ Vyberte **Přihlásit** se a ověřte se v Azure jako uživatel s právy pro spr
 Vyberte **OK** a vytvořte webovou aplikaci ve službě Azure AD a zavřete dialogové okno vytvořit serverovou aplikaci. Tato akce se vrátí do [dialogového okna aplikace serveru](#server-app-dialog).
 
 > [!NOTE]
-> Pokud máte definované zásady podmíněného přístupu Azure AD a platí pro **všechny cloudové aplikace** , musíte z této zásady vyloučit vytvořenou serverovou aplikaci. Další informace o tom, jak vyloučit konkrétní aplikace, najdete v [dokumentaci k podmíněnému přístupu ke službě Azure AD](https://docs.microsoft.com/azure/active-directory/conditional-access/).
+> Pokud máte definované zásady podmíněného přístupu Azure AD a platí pro **všechny cloudové aplikace** , musíte z této zásady vyloučit vytvořenou serverovou aplikaci. Další informace o tom, jak vyloučit konkrétní aplikace, najdete v [dokumentaci k podmíněnému přístupu ke službě Azure AD](/azure/active-directory/conditional-access/).
 
 ### <a name="native-client-app"></a>Nativní klientská aplikace
 
@@ -222,13 +222,13 @@ Po zadání webových a nativních aplikací na stránce aplikace Průvodce slu�
 
 - **Cloudová služba pro správu** , stránka **zjišťování** : [Konfigurace zjišťování uživatelů Azure AD](configure-discovery-methods.md#azureaadisc)  
 
-- Služba **konektoru Log Analytics** , **konfigurační** stránka: [Konfigurace připojení k Log Analytics](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm)  
+- Služba **konektoru Log Analytics** , **konfigurační** stránka: [Konfigurace připojení k Log Analytics](/azure/azure-monitor/platform/collect-sccm)  
 
 - Služba **Microsoft Store for Business** – stránka **konfigurace** : [Konfigurace Microsoft Store synchronizace pro firmy](../../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md#bkmk_config)  
 
 Nakonec dokončete Průvodce službami Azure pomocí stránek souhrn, průběh a dokončení. Dokončili jste konfiguraci služby Azure v Configuration Manager. Zopakováním tohoto postupu nakonfigurujete další služby Azure.
 
-## <a name="renew-secret-key"></a><a name="bkmk_renew"></a>Obnovit tajný klíč
+## <a name="renew-secret-key"></a><a name="bkmk_renew"></a> Obnovit tajný klíč
 
 Tajný klíč aplikace Azure AD musíte obnovit před koncem období platnosti. Pokud zadáte vypršení platnosti klíče, Configuration Manager se nemůže ověřit ve službě Azure AD, což způsobí, že vaše připojené služby Azure přestanou fungovat.
 

@@ -1,8 +1,8 @@
 ---
-title: Co je nového ve verzi 2006
+title: Novinky ve verzi 2006
 titleSuffix: Configuration Manager
 description: Získejte podrobnosti o změnách a nových funkcích zavedených ve verzi 2006 Configuration Manager aktuální větve.
-ms.date: 08/11/2020
+ms.date: 08/20/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 4b071746-61e1-404b-8053-60978de028a7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f624a207b5e9afded9b86312d1608a35005355f6
-ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
+ms.openlocfilehash: bdfb122173c913274373f41c3932f1ac094ec953
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179337"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700278"
 ---
 # <a name="whats-new-in-version-2006-of-configuration-manager-current-branch"></a>Co je nového ve verzi 2006 Configuration Manager Current Branch
 
@@ -27,13 +27,10 @@ Vždy si přečtěte nejnovější kontrolní seznam pro instalaci této aktuali
 
 Pokud chcete plně využít nové funkce Configuration Manager, po aktualizaci lokality aktualizujte také klienty na nejnovější verzi. I když se nové funkce zobrazí v konzole Configuration Manager, když aktualizujete lokalitu a konzolu, kompletní scénář nebude funkční, dokud nebude verze klienta zároveň nejnovější.
 
-<!-- commenting this for now as it doesn't work 7422960
 > [!TIP]
-> To get notified when this page is updated, copy and paste the following URL into your RSS feed reader:
-> `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+2006+-+Configuration+Manager%22&locale=en-us`
- -->
+> Pokud chcete dostávat upozornění na aktualizaci této stránky, zkopírujte a vložte následující adresu URL do čtečky informačních kanálů RSS: `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+2006+-+Configuration+Manager%22&locale=en-us`
 
-## <a name="microsoft-endpoint-manager-tenant-attach"></a><a name="bkmk_tenant"></a>Připojení tenanta Microsoft Endpoint Manageru
+## <a name="microsoft-endpoint-manager-tenant-attach"></a><a name="bkmk_tenant"></a> Připojení tenanta Microsoft Endpoint Manageru
 
 ### <a name="install-applications-from-the-admin-center"></a>Instalace aplikací z centra pro správu
 <!--7518897, 6024389-->
@@ -43,7 +40,7 @@ Instalaci aplikace můžete iniciovat v reálném čase pro zařízení připoje
 <!--6479246-->
 Během nového zprovoznění může správce během připojování k tenantovi zadat dříve vytvořenou aplikaci. Další informace najdete v tématu [připojení tenanta Microsoft Endpoint Manager: synchronizace zařízení a akce zařízení](../../../tenant-attach/device-sync-actions.md#bkmk_aad_app).
 
-## <a name="endpoint-analytics"></a><a name="bkmk_ea"></a>Analýza koncových bodů
+## <a name="endpoint-analytics"></a><a name="bkmk_ea"></a> Analýza koncových bodů
 
 ### <a name="endpoint-analytics-data-collection-enabled-by-default"></a>Ve výchozím nastavení je povolené shromažďování dat služby Endpoint Analytics.
 <!--7065447, 7741111-->
@@ -54,7 +51,7 @@ Ve výchozím nastavení je teď povolené nastavení klienta **Povolit shromaž
 
 Další informace najdete v tématu [Konfigurace shromažďování dat služby Endpoint Analytics v Configuration Manager](../../../../analytics/enroll-configmgr.md#bkmk_cm_upload).
 
-## <a name="site-infrastructure"></a><a name="bkmk_infra"></a>Infrastruktura webu
+## <a name="site-infrastructure"></a><a name="bkmk_infra"></a> Infrastruktura webu
 
 ### <a name="vpn-boundary-type"></a>Typ hranice sítě VPN
 
@@ -90,7 +87,15 @@ Další informace o podpoře Configuration Manager pro virtuální počítače s
 <!--7102873-->
 Intranetové klienty mají nyní přístup k bodu aktualizace softwaru CMG při jeho přiřazení ke skupině hranic. Další informace najdete v tématu [Konfigurace skupin hranic](../../servers/deploy/configure/boundary-groups.md#bkmk_cmg-sup).
 
-## <a name="cloud-attached-management"></a><a name="bkmk_cloud"></a>Správa připojená ke cloudu
+## <a name="cloud-attached-management"></a><a name="bkmk_cloud"></a> Správa připojená ke cloudu
+
+### <a name="use-the-company-portal-app-on-co-managed-devices"></a>Použití Portál společnosti aplikace na spoluspravovaných zařízeních
+
+<!--CMADO-3601237,INADO-4297660-->
+
+Portál společnosti je teď prostředí portálu pro aplikace pro různé platformy pro Microsoft Endpoint Manager. Když nakonfigurujete spoluspravovaná zařízení, aby se taky používala Portál společnosti, můžete na všech zařízeních zajistit konzistentní uživatelské prostředí.
+
+Další informace najdete v tématu [použití portál společnosti aplikace na spoluspravovaných zařízeních](../../../comanage/company-portal.md).
 
 ### <a name="use-microsoft-azure-china-21vianet-for-co-management"></a>Použití Microsoft Azure Čína 21Vianet pro spolusprávu
 <!--7133238-->
@@ -128,7 +133,7 @@ Pokud jste dříve nakonfigurovali všechna zařízení na **vyšší** úrovni 
 
 Další informace najdete v tématu [Povolení sdílení dat pro desktopovou analýzu](../../../desktop-analytics/enable-data-sharing.md).
 
-## <a name="real-time-management"></a><a name="bkmk_real"></a>Správa v reálném čase
+## <a name="real-time-management"></a><a name="bkmk_real"></a> Správa v reálném čase
 
 ### <a name="improvements-to-cmpivot"></a>Vylepšení CMPivot
 <!--6518631-->
@@ -140,7 +145,7 @@ V CMPivot se provedla následující vylepšení:
 
 Další informace najdete v tématu [CMPivot počínaje verzí 2006](../../servers/manage/cmpivot-changes.md#bkmk_2006).
 
-## <a name="client-management"></a><a name="bkmk_client"></a>Správa klientů
+## <a name="client-management"></a><a name="bkmk_client"></a> Správa klientů
 
 ### <a name="install-and-upgrade-the-client-on-a-metered-connection"></a>Instalace a upgrade klienta na připojení účtované podle objemu dat
 
@@ -163,7 +168,7 @@ Configuration Manager poskytuje mnoho možností správy restartování zaříze
 
 Další informace najdete v tématu [oznámení o restartování zařízení](../../clients/deploy/device-restart-notifications.md).
 
-## <a name="application-management"></a><a name="bkmk_app"></a>Správa aplikací
+## <a name="application-management"></a><a name="bkmk_app"></a> Správa aplikací
 
 ### <a name="improvements-to-available-apps-via-cmg"></a>Vylepšení dostupných aplikací prostřednictvím CMG
 
@@ -182,7 +187,7 @@ Sada Office 365 ProPlus byla přejmenována na Microsoft 365 aplikace pro spole�
 
 Další informace najdete v tématu [Microsoft 365 aplikace názvy kanálů](../../../sum/deploy-use/manage-office-365-proplus-updates.md#bkmk_channel) a [řídicí panel připravenosti pro Microsoft 365 aplikace](../../../sum/deploy-use/office-365-dashboard.md#bkmk_readiness-dash).
 
-## <a name="os-deployment"></a><a name="bkmk_osd"></a>Nasazení operačního systému
+## <a name="os-deployment"></a><a name="bkmk_osd"></a> Nasazení operačního systému
 
 ### <a name="task-sequence-media-support-for-cloud-based-content"></a>Podpora médií pořadí úloh pro cloudový obsah
 
@@ -264,7 +269,7 @@ Nyní můžete nainstalovat Samoobslužný portál BitLocker a web pro správu a
 
 Další informace najdete v tématu [Nastavení portálů BitLockeru](../../../protect/deploy-use/bitlocker/setup-websites.md).
 
-## <a name="configuration-manager-console"></a><a name="bkmk_admin"></a>Konzola Configuration Manager
+## <a name="configuration-manager-console"></a><a name="bkmk_admin"></a> Konzola Configuration Manager
 
 ### <a name="community-hub-and-github"></a>Komunitní centrum a GitHub
 <!--3555935, 3555936, deep link included 4224406-->
@@ -275,7 +280,7 @@ Komunita správce IT vyvinula spoustu znalostí během let. Místo rezásobován
 
 Další informace najdete v tématu [komunitní centrum a GitHub](../../servers/manage/community-hub.md).
 
-### <a name="direct-links-to-community-hub-items"></a><a name="bkmk_deeplink"></a>Přímé odkazy na položky centra komunity
+### <a name="direct-links-to-community-hub-items"></a><a name="bkmk_deeplink"></a> Přímé odkazy na položky centra komunity
 <!--4224406-->
 Můžete snadno přejít na položky v uzlu centra komunity konzoly Configuration Manager a odkazovat na ně s přímým odkazem. Další informace najdete v tématu [přímé odkazy na položky centra komunity](../../servers/manage/community-hub.md#bkmk_deeplink).
 
@@ -306,7 +311,7 @@ Další informace najdete v tématu [Instalace ukázkových sestav Power BI](../
 ## <a name="bkmk_comgmt"></a> Co-management
 -->
 
-## <a name="deprecated-operating-systems"></a><a name="bkmk_deprecated"></a>Zastaralé operační systémy
+## <a name="deprecated-operating-systems"></a><a name="bkmk_deprecated"></a> Zastaralé operační systémy
 
 Přečtěte si o změnách podpory před jejich implementací v [odebraných a zastaralých položkách](deprecated/removed-and-deprecated.md).
 
@@ -324,7 +329,7 @@ Starting with this version, the following features are no longer [pre-release](.
 ### Azure Active Directory user group discovery](../../servers/deploy/configure/configure-discovery-methods.md#bkmk_azuregroupdisco)<!--3611956
 -->
 
-Další informace o změnách rutin prostředí Windows PowerShell pro Configuration Manager najdete v [poznámkách k verzi PowerShell verze 2006](https://docs.microsoft.com/powershell/sccm/2006-release-notes?view=sccm-ps).
+Další informace o změnách rutin prostředí Windows PowerShell pro Configuration Manager najdete v [poznámkách k verzi PowerShell verze 2006](/powershell/sccm/2006-release-notes?view=sccm-ps).
 
 Další informace o změnách REST API služby správy najdete v tématu poznámky k [verzi služby správy](../../../develop/adminservice/release-notes.md#bkmk_2006).
 

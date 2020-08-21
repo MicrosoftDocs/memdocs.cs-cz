@@ -10,12 +10,12 @@ ms.assetid: 121e0341-4f51-4d54-a357-732c26caf7c5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a08b74552d5d17a737ec9e1802e10c87621f5b97
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: b24ed0aa963373fc0933a2c34b7b036d77cc9a2b
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88126354"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699207"
 ---
 # <a name="troubleshoot-microsoft-connected-cache-in-configuration-manager"></a>Řešení potíží s propojenou mezipamětí Microsoft v Configuration Manager
 
@@ -30,13 +30,13 @@ Když nainstalujete správně server mezipaměti pro optimalizaci doručení a s
 
 Ověřte toto chování [na klientovi](#bkmk_verify-client) nebo [na serveru](#bkmk_verify-server).
 
-### <a name="verify-on-a-client"></a><a name="bkmk_verify-client"></a>Ověřit u klienta
+### <a name="verify-on-a-client"></a><a name="bkmk_verify-client"></a> Ověřit u klienta
 
 1. V klientovi se systémem Windows 10 verze 1809 nebo novější si stáhněte obsah spravovaný přes Cloud. Další informace o typech obsahu, který podporuje připojená mezipaměť, najdete v tématu [ověření připojené mezipaměti](../../../plan-design/hierarchy/microsoft-connected-cache.md#verify).
 
-2. Otevřete PowerShell a spusťte následující příkaz:`Get-DeliveryOptimizationStatus`
+2. Otevřete PowerShell a spusťte následující příkaz: `Get-DeliveryOptimizationStatus`
 
-Například:
+Příklad:
 
 ```PowerShell
 PS C:\> Get-DeliveryOptimizationStatus
@@ -74,7 +74,7 @@ Všimněte si, že `BytesFromCacheServer` atribut není nula.
 
 Pokud klient není správně nakonfigurovaný nebo server mezipaměti není nainstalovaný správně, vrátí se klientovi Optimalizace doručení do původního cloudového zdroje. Pak bude mít atribut BytesFromCacheServer hodnotu nula.
 
-### <a name="verify-on-the-server"></a><a name="bkmk_verify-server"></a>Ověřit na serveru
+### <a name="verify-on-the-server"></a><a name="bkmk_verify-server"></a> Ověřit na serveru
 
 Nejprve ověřte, zda jsou správně nakonfigurovány vlastnosti registru: `HKLM\SOFTWARE\Microsoft\Delivery Optimization In-Network Cache` . Například umístění mezipaměti jednotky je `PrimaryDrivesInput\DOINC-E77D08D0-5FEA-4315-8C95-10D359D59294` , kde `PrimaryDrivesInput` může být více jednotek, například `C,D,E` .
 
@@ -114,13 +114,13 @@ Následující atributy označují úspěch:
 
 ## <a name="log-files"></a>Soubory protokolu
 
-- Protokol nastavení ARR:`%temp%\arr_setup.log`
+- Protokol nastavení ARR: `%temp%\arr_setup.log`
 
 - Do protokolu instalace serveru mezipaměti: `SMS_DP$\Ms.Dsp.Do.Inc.Setup\DoincSetup.log` v distribučním bodě a `DistMgr.log` na serveru lokality
 
-- Provozní protokoly služby IIS: ve výchozím nastavení`%SystemDrive%\inetpub\logs\LogFiles`
+- Provozní protokoly služby IIS: ve výchozím nastavení `%SystemDrive%\inetpub\logs\LogFiles`
 
-- Provozovat provozní protokol serveru cache:`C:\Doinc\Product\Install\Logs`
+- Provozovat provozní protokol serveru cache: `C:\Doinc\Product\Install\Logs`
 
     > [!TIP]
     > Kromě jiných použití vám tento protokol může pomáhat identifikovat problémy s připojením ke cloudu Microsoftu.
@@ -228,8 +228,8 @@ Požadované místo na disku pro každý server mezipaměti se může lišit v z
 
 Server do mezipaměti by neměl spotřebovat mnoho systémové paměti nebo času procesoru. Pokud si po instalaci serveru do mezipaměti všimnete významné spotřeby prostředků procesu nebo paměti, analyzujte soubory protokolu IIS a ARR.
 
-Pokud soubory protokolu IIS a ARR zabírají příliš mnoho místa na serveru, můžete ke správě souborů protokolu použít několik metod. Další informace najdete v tématu [správa File Storage protokolu IIS](https://docs.microsoft.com/iis/manage/provisioning-and-managing-iis/managing-iis-log-file-storage#overview).
+Pokud soubory protokolu IIS a ARR zabírají příliš mnoho místa na serveru, můžete ke správě souborů protokolu použít několik metod. Další informace najdete v tématu [správa File Storage protokolu IIS](/iis/manage/provisioning-and-managing-iis/managing-iis-log-file-storage#overview).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Mezipaměť propojená Microsoftem v Configuration Manager](../../../plan-design/hierarchy/microsoft-connected-cache.md)

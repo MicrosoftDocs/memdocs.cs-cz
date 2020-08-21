@@ -10,12 +10,12 @@ ms.assetid: 1c975c5e-efd1-4d47-a315-39ccb32633dc
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 00f07e20c24ea9bb7d06b18f300e0206696c5e20
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 4d5f0c9127cc5c5819368eb0454d7bc63546ccc1
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81723450"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699496"
 ---
 # <a name="extend-and-migrate-on-premises-site-to-microsoft-azure"></a>Rozšiřování a migrace místního serveru na Microsoft Azure
 
@@ -24,7 +24,7 @@ ms.locfileid: "81723450"
 
 Tento nástroj, který je představený ve verzi 1910, vám pomůže programově vytvářet virtuální počítače Azure pro Configuration Manager. <!--3556022--> Může se nainstalovat s výchozími nastaveními role lokality, jako je pasivní server lokality, body správy a distribuční body. Jakmile ověříte nové role, použijte je jako další systémy lokality pro zajištění vysoké dostupnosti. Můžete také odebrat roli místního systému lokality a zachovat jenom roli virtuálních počítačů Azure.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 - Předplatné Azure
 
@@ -68,15 +68,15 @@ Trezor Microsoft. a trezory/nasazení/akce <br>
 Trezor Microsoft. a trezory/čtení <br>
 
 
-Další informace o oprávněních a přiřazování rolích najdete v tématu [Správa přístupu k prostředkům Azure pomocí RBAC](https://docs.microsoft.com/azure/role-based-access-control/role-assignments-portal).
+Další informace o oprávněních a přiřazování rolích najdete v tématu [Správa přístupu k prostředkům Azure pomocí RBAC](/azure/role-based-access-control/role-assignments-portal).
 
 ## <a name="run-the-tool"></a>Spusťte nástroj.
 
-1. Přihlaste se k serveru primární lokality a spusťte následující nástroj v instalačním adresáři Configuration Manager:`Cd.Latest\SMSSETUP\TOOLS\ExtendMigrateToAzure\ExtendMigrateToAzure.exe`
+1. Přihlaste se k serveru primární lokality a spusťte následující nástroj v instalačním adresáři Configuration Manager: `Cd.Latest\SMSSETUP\TOOLS\ExtendMigrateToAzure\ExtendMigrateToAzure.exe`
 
 1. Zkontrolujte informace na kartě **Obecné** a pak přejděte na kartu **informace o Azure** .
 
-1. Na kartě **informace o Azure** zvolte **prostředí Azure**a pak se **přihlaste**.
+1. Na kartě  **informace o Azure** zvolte **prostředí Azure**a pak se **přihlaste**.
 
     > [!TIP]
     > Možná budete muset přidat `https://*.microsoft.com` do seznamu důvěryhodných webů pro správné přihlášení.
@@ -105,15 +105,15 @@ Další informace o oprávněních a přiřazování rolích najdete v tématu [
     |**Podsíť**|Vyberte podsíť, která se má použít. Pokud potřebujete vytvořit novou podsíť, použijte [Azure Portal](https://portal.azure.com).|
     |**Název počítače**|Zadejte název virtuálního počítače pasivního serveru webu v Azure. Je to stejný název, který se zobrazuje v [Azure Portal](https://portal.azure.com).|
     |**Uživatelské jméno místního správce**|Zadejte jméno místního administrativního uživatele, který virtuální počítač Azure vytvoří, než se připojí k doméně.|
-    |**Heslo místního správce**|Heslo místního administrativního uživatele. Pokud chcete chránit heslo během nasazování Azure, uložte heslo jako tajný kód v [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-overview). Pak použijte odkaz zde. V případě potřeby vytvořte nový z [Azure Portal](https://portal.azure.com).|
+    |**Heslo místního správce**|Heslo místního administrativního uživatele. Pokud chcete chránit heslo během nasazování Azure, uložte heslo jako tajný kód v [Azure Key Vault](/azure/key-vault/key-vault-overview). Pak použijte odkaz zde. V případě potřeby vytvořte nový z [Azure Portal](https://portal.azure.com).|
     |**Plně kvalifikovaný název domény**|Plně kvalifikovaný název domény, ke které se má připojit doména služby Active Directory Ve výchozím nastavení nástroj získá tuto hodnotu z vašeho aktuálního počítače.|
     |**Uživatelské jméno domény**|Jméno uživatele domény s povoleným připojením k doméně Nástroj ve výchozím nastavení používá název aktuálně přihlášeného uživatele.|
-    |**Heslo domény**|Heslo uživatele domény, který se má připojit k doméně Nástroj ji ověří po výběru možností **Start**. Pokud chcete chránit heslo během nasazování Azure, uložte heslo jako tajný kód v [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-overview). Pak použijte odkaz zde. V případě potřeby vytvořte nový z [Azure Portal](https://portal.azure.com).|
+    |**Heslo domény**|Heslo uživatele domény, který se má připojit k doméně Nástroj ji ověří po výběru možností **Start**. Pokud chcete chránit heslo během nasazování Azure, uložte heslo jako tajný kód v [Azure Key Vault](/azure/key-vault/key-vault-overview). Pak použijte odkaz zde. V případě potřeby vytvořte nový z [Azure Portal](https://portal.azure.com).|
     |**IP adresa DNS domény**|Slouží k připojení k doméně. Nástroj ve výchozím nastavení používá aktuální službu DNS z vašeho aktuálního počítače.|
     |**Typ**|Jen pro čtení. Jako typ se zobrazí *pasivní server lokality* .|
 
     > [!IMPORTANT]
-    > Ve výchozím nastavení jsou virtuální počítače nastavené na hodnotu **ne** pro **použití existující licence na Windows Server**. Pokud chcete využívat své místní licence k Windows serveru se Software Assurance, nakonfigurujte toto nastavení v [Azure Portal](https://portal.azure.com) po zřízení virtuálních počítačů. Další informace najdete v tématu [zvýhodněné hybridní využití Azure pro Windows Server](https://docs.microsoft.com/windows-server/get-started/azure-hybrid-benefit).
+    > Ve výchozím nastavení jsou virtuální počítače nastavené na hodnotu **ne** pro **použití existující licence na Windows Server**. Pokud chcete využívat své místní licence k Windows serveru se Software Assurance, nakonfigurujte toto nastavení v [Azure Portal](https://portal.azure.com) po zřízení virtuálních počítačů. Další informace najdete v tématu [zvýhodněné hybridní využití Azure pro Windows Server](/windows-server/get-started/azure-hybrid-benefit).
 
 1. Pokud chcete začít zřídit virtuální počítač Azure, vyberte **Spustit**. Pokud chcete monitorovat stav nasazení, přejděte v nástroji na kartu **nasazení na portálu Azure** . Chcete-li získat nejnovější stav, vyberte možnost **aktualizovat stav nasazení**.
 
@@ -157,7 +157,7 @@ Tento nástroj aktuálně nemá žádné úlohy pro migraci databáze z místní
 
 1. Po dokončení nasazení přejdete do konzoly Configuration Manager, abyste provedli další změny role lokality.
 
-## <a name="deployments-in-azure"></a><a name="bkmk_deploy-azure"></a>Nasazení v Azure
+## <a name="deployments-in-azure"></a><a name="bkmk_deploy-azure"></a> Nasazení v Azure
 
 1. Jakmile Azure vytvoří virtuální počítač, přejděte v nástroji na kartu **nasazení na portálu Azure** . Vyberte **nasadit** a nakonfigurujte roli s výchozím nastavením.
 
@@ -167,7 +167,7 @@ Tento nástroj aktuálně nemá žádné úlohy pro migraci databáze z místní
 
 1. Opakujte tento postup pro konfiguraci dalších rolí.
 
-## <a name="add-site-roles-to-an-existing-virtual-machine-deployment"></a><a name="bkmk_add_role"></a>Přidání rolí webu do existujícího nasazení virtuálního počítače
+## <a name="add-site-roles-to-an-existing-virtual-machine-deployment"></a><a name="bkmk_add_role"></a> Přidání rolí webu do existujícího nasazení virtuálního počítače
 <!--5665775, 6307931-->
 Počínaje verzí 2002 Configuration Manager nástroj Extended and migruje on-premises web do Microsoft Azure Tool podporuje zřizování více rolí systému lokality na jednom virtuálním počítači Azure. Po dokončení počátečního nasazení virtuálního počítače Azure můžete přidat role systému lokality. Chcete-li přidat novou roli k existujícímu virtuálnímu počítači, proveďte následující kroky:
 1. Na kartě **nasazení na platformě Azure** klikněte na nasazení virtuálního počítače, které má stav **dokončeno** .

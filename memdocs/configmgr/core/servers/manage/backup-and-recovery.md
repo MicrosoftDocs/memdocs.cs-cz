@@ -10,12 +10,12 @@ ms.assetid: f7832d83-9ae2-4530-8a77-790e0845e12f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 46d2af2d89e41e931add0f77931b442b68835235
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 8d766a172f934e27398ec2633ef0ec23ba4ade5e
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906478"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700680"
 ---
 # <a name="back-up-a-configuration-manager-site"></a>Zálohování lokality Configuration Manageru
 
@@ -47,7 +47,7 @@ Oddíly v tomto článku vám můžou pomáhat při zálohování vašich webů.
 ####  <a name="using-data-protection-manager-to-back-up-your-site-database"></a>Využití aplikace Data Protection Manager k zálohování lokality
 K zálohování databáze Configuration Manager lokality můžete použít System Center Data Protection Manager (DPM).
 
-Vytvořte novou skupinu ochrany v aplikaci DPM pro počítač databáze lokality. Na stránce **Vybrat členy skupiny** v Průvodce vytvořením nové skupiny ochrany vytvoření vyberte službu SMS Writer ze seznamu zdroj dat. Pak vyberte databázi lokality jako příslušného člena. Další informace o použití aplikace DPM najdete v knihovně dokumentace [Data Protection Manager](https://docs.microsoft.com/system-center/dpm) .  
+Vytvořte novou skupinu ochrany v aplikaci DPM pro počítač databáze lokality. Na stránce **Vybrat členy skupiny** v Průvodce vytvořením nové skupiny ochrany vytvoření vyberte službu SMS Writer ze seznamu zdroj dat. Pak vyberte databázi lokality jako příslušného člena. Další informace o použití aplikace DPM najdete v knihovně dokumentace [Data Protection Manager](/system-center/dpm) .  
 
 > [!IMPORTANT]  
 >  Configuration Manager nepodporuje zálohování aplikace DPM pro cluster SQL Server, který používá pojmenovanou instanci. Podporuje zálohování DPM na SQL Serverm clusteru, který používá výchozí instanci SQL Server.  
@@ -67,7 +67,7 @@ Zálohování Configuration Managerch lokalit můžete automatizovat naplánová
 
 Naplánujte spuštění výchozí úlohy zálohování lokality minimálně každých pět dní. Důvodem je to, že Configuration Manager používá *dobu uchovávání dat SQL Serverho sledování změn* pět dnů. Další informace najdete v tématu [SQL Server dobu uchovávání dat sledování změn](recover-sites.md#sql-server-change-tracking-retention-period).
 
-Chcete-li zjednodušit proces zálohování, můžete vytvořit soubor **soubor AfterBackup. bat** . Tento skript po úspěšném dokončení úlohy zálohování automaticky spustí akce po zálohování. K archivaci snímku zálohy do zabezpečeného umístění použijte soubor soubor AfterBackup. bat. Můžete také použít soubor soubor AfterBackup. bat ke zkopírování souborů do složky zálohy nebo ke spuštění jiných úloh zálohování.  
+Chcete-li zjednodušit proces zálohování, můžete vytvořit soubor **AfterBackup.bat** . Tento skript po úspěšném dokončení úlohy zálohování automaticky spustí akce po zálohování. Použijte soubor AfterBackup.bat k archivaci snímku zálohy do zabezpečeného umístění. Soubor AfterBackup.bat můžete použít také ke zkopírování souborů do složky zálohy nebo ke spuštění jiných úloh zálohování.  
 
 Můžete zálohovat lokalitu centrální správy a primární lokalitu. Sekundární lokality nebo servery systému lokality nemají úlohy zálohování.
 
@@ -137,16 +137,16 @@ Ponechte více archivů záložního snímku z následujících důvodů:
 
 
 ## <a name="using-the-afterbackupbat-file"></a>Použití souboru AfterBackup.bat  
-Po úspěšném zálohování lokality se úloha zálohování automaticky pokusí spustit skript s názvem **soubor AfterBackup. bat**. Ručně vytvořte soubor soubor AfterBackup. bat na serveru lokality v nástroji `<ConfigMgrInstallationFolder>\Inboxes\Smsbkup.box` . Pokud soubor soubor AfterBackup. bat existuje ve správné složce, spustí se automaticky po dokončení úlohy zálohování.
+Po úspěšném zálohování lokality se úloha zálohování automaticky pokusí spustit skript s názvem **AfterBackup.bat**. Ručně vytvořte soubor AfterBackup.bat na serveru lokality v nástroji `<ConfigMgrInstallationFolder>\Inboxes\Smsbkup.box` . Pokud soubor AfterBackup.bat existuje ve správné složce, spustí se automaticky po dokončení úlohy zálohování.
 
-Soubor soubor AfterBackup. bat umožňuje archivaci záložního snímku na konci každé operace zálohování. Může automaticky provádět další úlohy po zálohování, které nejsou součástí úlohy údržby Zálohovat server webu. Soubor AfterBackup.bat integruje archiv a činnosti zálohování a zajistí tak, že každý nový snímek zálohy bude archivován.
+Soubor AfterBackup.bat umožňuje archivaci záložního snímku na konci každé operace zálohování. Může automaticky provádět další úlohy po zálohování, které nejsou součástí úlohy údržby Zálohovat server webu. Soubor AfterBackup.bat integruje archiv a činnosti zálohování a zajistí tak, že každý nový snímek zálohy bude archivován.
 
-Pokud soubor soubor AfterBackup. bat není k dispozici, úloha zálohování ho přeskočí, aniž by to mělo vliv na operaci zálohování. Chcete-li ověřit, zda úloha zálohování úspěšně spustila tento skript, v pracovním prostoru **monitorování** vyberte uzel **Stav součásti** a zkontrolujte stavové zprávy pro **SMS_SITE_BACKUP**. Když úloha úspěšně spustí soubor příkazu soubor AfterBackup. bat, zobrazí se zpráva s ID **5040**.  
+Pokud soubor AfterBackup.bat není k dispozici, úloha zálohování ho přeskočí, aniž by to mělo vliv na operaci zálohování. Chcete-li ověřit, zda úloha zálohování úspěšně spustila tento skript, v pracovním prostoru **monitorování** vyberte uzel **Stav součásti** a zkontrolujte stavové zprávy pro **SMS_SITE_BACKUP**. Když úloha úspěšně spustí soubor příkazů AfterBackup.bat, zobrazí se zpráva s ID **5040**.  
 
 > [!TIP]  
->  K archivaci záložních souborů serveru lokality pomocí nástroje soubor AfterBackup. bat musíte použít příkaz pro kopírování v dávkovém souboru. Jeden z těchto nástrojů je [Robocopy](https://docs.microsoft.com/windows-server/administration/windows-commands/robocopy) ve Windows serveru. Například vytvořte soubor soubor AfterBackup. bat pomocí následujícího příkazu:`Robocopy E:\ConfigMgr_Backup \\ServerName\ShareName\ConfigMgr_Backup /MIR`  
+>  K archivaci záložních souborů webového serveru pomocí AfterBackup.bat musíte v dávkovém souboru použít příkaz pro kopírování. Jeden z těchto nástrojů je [Robocopy](/windows-server/administration/windows-commands/robocopy) ve Windows serveru. Soubor AfterBackup.bat například vytvořte pomocí následujícího příkazu: `Robocopy E:\ConfigMgr_Backup \\ServerName\ShareName\ConfigMgr_Backup /MIR`  
 
-I když zamýšlené použití souboru soubor AfterBackup. bat slouží k archivaci záložních snímků, můžete vytvořit soubor soubor AfterBackup. bat pro spuštění dalších úloh na konci každé operace zálohování.  
+I když je zamýšlené použití AfterBackup.bat k archivaci snímků zálohy, můžete vytvořit soubor AfterBackup.bat a spustit další úkoly na konci každé operace zálohování.  
 
 
 
@@ -165,7 +165,7 @@ Pokud v SQL Server Reporting Services upravíte předdefinované nebo vytvořen�
 > [!IMPORTANT]  
 >  Když Configuration Manager aktualizuje na novější verzi, předdefinované sestavy se můžou přepsat novými sestavami. Pokud upravíte předdefinovanou sestavu, ujistěte se, že jste sestavu zazálohovali a pak ji obnovíte ve službě Reporting Services.  
 
-Další informace o zálohování vlastních sestav ve službě Reporting Services najdete v tématu [operace zálohování a obnovení pro služby Reporting Services](https://docs.microsoft.com/sql/reporting-services/install-windows/backup-and-restore-operations-for-reporting-services).  
+Další informace o zálohování vlastních sestav ve službě Reporting Services najdete v tématu [operace zálohování a obnovení pro služby Reporting Services](/sql/reporting-services/install-windows/backup-and-restore-operations-for-reporting-services).  
 
 ### <a name="back-up-content-files"></a>Zálohování souborů obsahu  
 Knihovna obsahu v Configuration Manager je umístění, kam se ukládají všechny soubory obsahu pro všechna nasazení softwaru. Knihovna obsahu se nachází na serveru lokality a v každém distribučním bodě. Úloha údržby Zálohovat server webu nezálohuje knihovnu obsahu nebo zdrojové soubory balíčku. Pokud dojde k chybě serveru lokality, informace o knihovně obsahu budou obnoveny do databáze lokality, ale je nutné obnovit knihovnu obsahu a zdrojové soubory balíčku.  
@@ -231,9 +231,9 @@ ID zapisovače zapisovače SMS je **03ba67dd-dc6d-4729-a038-251f7018463b**.
 Služba SMS Writer musí být spuštěna pod účtem místního systému.  
 
 ### <a name="volume-shadow-copy-service"></a>Služba Stínová kopie svazku  
-VSS (Volume Shadow Copy Service) je sada rozhraní API modelu COM, umožňující zálohování svazku, zatímco aplikace v systému mohou do svazků stále zapisovat. Služba VSS nabízí jednotné rozhraní, pomocí kterého je možné koordinovat uživatelské aplikace, aktualizující data na disku (služba SMS Writer), a aplikace provádějící zálohování (služba Správce zálohování). Další informace najdete v [Služba Stínová kopie svazku](https://docs.microsoft.com/windows-server/storage/file-server/volume-shadow-copy-service).  
+VSS (Volume Shadow Copy Service) je sada rozhraní API modelu COM, umožňující zálohování svazku, zatímco aplikace v systému mohou do svazků stále zapisovat. Služba VSS nabízí jednotné rozhraní, pomocí kterého je možné koordinovat uživatelské aplikace, aktualizující data na disku (služba SMS Writer), a aplikace provádějící zálohování (služba Správce zálohování). Další informace najdete v [Služba Stínová kopie svazku](/windows-server/storage/file-server/volume-shadow-copy-service).  
 
 
 
 ## <a name="next-steps"></a>Další kroky
-Po vytvoření zálohy se v této záloze doporučuje [Site Recovery](recover-sites.md) . Tento postup vám může přispět k tomu, abyste se seznámili s procesem obnovení, než ho budete muset spoléhat. Může také pomáhat s potvrzením, že zálohování proběhlo podle svého zamýšleného účelu.  
+Po vytvoření zálohy se v této záloze doporučuje [Site Recovery](recover-sites.md) . Tento postup vám může přispět k tomu, abyste se seznámili s procesem obnovení, než ho budete muset spoléhat. Může také pomáhat s potvrzením, že zálohování proběhlo podle svého zamýšleného účelu.

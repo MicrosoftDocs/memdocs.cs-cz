@@ -10,12 +10,12 @@ ms.assetid: 92b339ef-2723-4322-bec6-077b3e8846b0
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: a7f7853b006d4ac8b11a30217d1b05b1eedd69dc
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: bf9ad15266c4e6615ba100d5ea5270e23b93ece7
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268976"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699122"
 ---
 # <a name="prerequisites-for-installing-configuration-manager-sites"></a>Předpoklady pro instalaci Configuration Managerch lokalit
 
@@ -34,7 +34,7 @@ Následující požadavky platí pro instalaci jednoho z následujících typů:
 
 Pokud instalujete lokalitu centrální správy jako součást rozšíření hierarchie, přečtěte si téma [rozšíření samostatné primární lokality](#bkmk_expand).
 
-### <a name="prerequisites-for-installing-a-primary-site-or-a-central-administration-site"></a><a name="bkmk_PrereqPri"></a>Předpoklady pro instalaci primární lokality nebo lokality centrální správy  
+### <a name="prerequisites-for-installing-a-primary-site-or-a-central-administration-site"></a><a name="bkmk_PrereqPri"></a> Předpoklady pro instalaci primární lokality nebo lokality centrální správy  
 
 - Musí být nainstalovány potřebné role, funkce a součásti systému Windows Server. Další informace najdete v tématu [požadavky na systém lokality](../../../plan-design/configs/site-and-site-system-prerequisites.md#bkmk_2012sspreq) .  
 
@@ -73,7 +73,7 @@ Pokud instalujete lokalitu centrální správy jako součást rozšíření hier
 
 - Server lokality a Server databáze lokality musí splňovat všechny požadované konfigurace. Před zahájením instalace Configuration Manager [Spusťte ručně kontrolu požadovaných součástí](prerequisite-checker.md) a identifikujte a opravte problémy.  
 
-### <a name="prerequisites-to-expand-a-stand-alone-primary-site"></a><a name="bkmk_expand"></a>Předpoklady rozšíření samostatné primární lokality
+### <a name="prerequisites-to-expand-a-stand-alone-primary-site"></a><a name="bkmk_expand"></a> Předpoklady rozšíření samostatné primární lokality
 
 Samostatná primární lokalita musí splňovat následující požadavky, aby ji bylo možné rozšířit do hierarchie s lokalitou centrální správy:
 
@@ -133,7 +133,7 @@ Aby bylo možné úspěšně replikovat data mezi lokalitou centrální správy 
 
 Po rozšíření lokality je třeba překonfigurovat následující služby Azure s Configuration Manager:
 
-- [Log Analytics](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm)  
+- [Log Analytics](/azure/azure-monitor/platform/collect-sccm)  
 - [Microsoft Store pro firmy](../../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md)  
 - [Brána pro správu cloudu](../../../clients/manage/cmg/plan-cloud-management-gateway.md)
 
@@ -148,7 +148,7 @@ Případně můžete odebrat a znovu vytvořit připojení k této službě:
 3. Překonfigurujte připojení ke službě Azure pro použití s Configuration Manager.  
 
 
-## <a name="secondary-sites"></a><a name="bkmk_secondary"></a>Sekundární lokality
+## <a name="secondary-sites"></a><a name="bkmk_secondary"></a> Sekundární lokality
 
 Níže jsou uvedené předpoklady pro instalaci sekundárních lokalit:  
 

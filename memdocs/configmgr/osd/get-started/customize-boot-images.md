@@ -10,12 +10,12 @@ ms.assetid: 9cbfc406-d009-446d-8fee-4938de48c919
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b16ba822cb538b62fac06ee550dd17cfa8f077be
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 0e4fc5b019de25234ae964137f6b374ecbbca7d8
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88124557"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697785"
 ---
 # <a name="customize-boot-images-with-configuration-manager"></a>Přizpůsobení spouštěcích bitových kopií pomocí Configuration Manager
 
@@ -49,7 +49,7 @@ Každá verze Configuration Manager podporuje určitou verzi sady Windows Assess
 
 - **WinPE-WDS-Tools**: Instaluje nástroje služby pro nasazení systému Windows.  
 
-  Dostupné jsou i další balíčky prostředí Windows PE, které lze přidat. Další informace o volitelných součástech, které lze přidat do spouštěcí bitové kopie, naleznete v tématu [WinPE: Přidání balíčků (odkazy na volitelné součásti)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference).
+  Dostupné jsou i další balíčky prostředí Windows PE, které lze přidat. Další informace o volitelných součástech, které lze přidat do spouštěcí bitové kopie, naleznete v tématu [WinPE: Přidání balíčků (odkazy na volitelné součásti)](/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference).
 
 > [!NOTE]
 >Při spuštění prostředí WinPE z vlastní spouštěcí image, která obsahuje nástroje, které jste přidali, můžete otevřít příkazový řádek z prostředí WinPE a zadáním názvu souboru nástroje ho spustit. Umístění těchto nástrojů se automaticky přidá do proměnné PATH. Příkazový řádek lze přidat pouze v případě, že je vybráno nastavení **Povolit podporu příkazů (pouze testování)** na kartě **vlastní nastavení** ve vlastnostech spouštěcí bitové kopie.
@@ -72,7 +72,7 @@ Každá verze Configuration Manager podporuje určitou verzi sady Windows Assess
     Kde C:\WinPEWAIK představuje složku obsahující spouštěcí bitovou kopii a C:\WinPEMount představuje připojenou složku.  
 
    > [!NOTE]
-   >  Další informace najdete v referenčních informacích o [nástroji DISM (Údržba a správa bitových kopií nasazení)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-reference--deployment-image-servicing-and-management).
+   >  Další informace najdete v referenčních informacích o [nástroji DISM (Údržba a správa bitových kopií nasazení)](/windows-hardware/manufacture/desktop/dism-reference--deployment-image-servicing-and-management).
 
 5. Po připojení spouštěcí bitové kopie do ní pomocí nástroje Obsluha a správa bitových kopií přidejte volitelné součásti. V prostředí Windows PE 5 jsou 64bitové volitelné komponenty umístěny ve složce <*Instalační_cesta*>\Windows Kits\8.1\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs.  
 
@@ -108,7 +108,7 @@ Každá verze Configuration Manager podporuje určitou verzi sady Windows Assess
     **dism.exe /image:C:\WinPEMount /add-package /packagepath:"C:\Program Files (x86)\Windows Kits\8.1\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\en-us\WinPE-WDS-Tools_en-us.cab"**  
 
    > [!TIP]
-   >  Další informace o volitelných součástech, které můžete přidat do spouštěcí image, najdete v referenčních informacích k [volitelným součástem prostředí Windows PE](https://docs.microsoft.com/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference).
+   >  Další informace o volitelných součástech, které můžete přidat do spouštěcí image, najdete v referenčních informacích k [volitelným součástem prostředí Windows PE](/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference).
 
 6. Pomocí nástroje Obsluha a správa bitových kopií (DISM) přidejte do spouštěcí bitové kopie konkrétní ovladače, pokud je to třeba. Ovladače přidáte do spouštěcí bitové kopie zadáním následujícího řádku:  
 
@@ -194,7 +194,7 @@ Každá verze Configuration Manager podporuje určitou verzi sady Windows Assess
     Kde C:\WinPEWAIK představuje složku obsahující spouštěcí bitovou kopii a C:\WinPEMount představuje připojenou složku.  
 
    > [!NOTE]
-   > Další informace najdete v referenčních informacích o [nástroji DISM (Údržba a správa bitových kopií nasazení)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-reference--deployment-image-servicing-and-management).
+   > Další informace najdete v referenčních informacích o [nástroji DISM (Údržba a správa bitových kopií nasazení)](/windows-hardware/manufacture/desktop/dism-reference--deployment-image-servicing-and-management).
 
 5. Po připojení spouštěcí bitové kopie do ní pomocí nástroje Obsluha a správa bitových kopií přidejte volitelné součásti. V systému Windows PE 3,1 jsou například volitelné součásti umístěny ve složce <*InstallationPath*> \windows AIK\Tools\PETools\amd64\ WinPE_FPs \\ .  
 
@@ -224,7 +224,7 @@ Každá verze Configuration Manager podporuje určitou verzi sady Windows Assess
     **dism.exe /image:C:\WinPEMount /add-package /packagepath:"C:\Program Files\Windows AIK\Tools\PETools\amd64\WinPE_FPs\en-us\winpe-wds-tools_en-us.cab"**  
 
    > [!TIP]
-   >  Další informace o různých balíčcích, které můžete přidat do spouštěcí image, najdete v tématu [Přidání balíčku do image prostředí Windows PE](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/dd799312(v=ws.10)).
+   >  Další informace o různých balíčcích, které můžete přidat do spouštěcí image, najdete v tématu [Přidání balíčku do image prostředí Windows PE](/previous-versions/windows/it-pro/windows-7/dd799312(v=ws.10)).
 
 6. Pomocí nástroje Obsluha a správa bitových kopií (DISM) přidejte do spouštěcí bitové kopie konkrétní ovladače, pokud je to třeba. Ovladače přidáte do spouštěcí bitové kopie zadáním následujícího řádku, pokud je to třeba:  
 
@@ -290,4 +290,4 @@ Každá verze Configuration Manager podporuje určitou verzi sady Windows Assess
 
     3.  Klikněte na spouštěcí image určenou v kroku 3.  
 
-    4.  Na kartě **Domů** ve skupině **Nasazení** klikněte na možnost **Aktualizovat distribuční body**.  
+    4.  Na kartě **Domů** ve skupině **Nasazení** klikněte na možnost **Aktualizovat distribuční body**.

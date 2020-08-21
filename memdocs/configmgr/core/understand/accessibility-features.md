@@ -1,5 +1,5 @@
 ---
-title: Přístupnost
+title: Usnadnění
 titleSuffix: Configuration Manager
 description: Seznamte se s funkcemi, které usnadňují Configuration Manager přístup pro všechny.
 ms.date: 05/15/2020
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1b25b0137e24212cbad2ba688735e45d9fe9aac0
-ms.sourcegitcommit: 169e279ba686c28d9a23bc0a54f0a2a0d20bdee4
+ms.openlocfilehash: a6e406d55524caca71bf75b087c9fd78a470c939
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83556026"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699377"
 ---
 # <a name="accessibility-features-in-configuration-manager"></a>Funkce usnadnění v Configuration Manager
 
@@ -28,7 +28,7 @@ Configuration Manager zahrnují funkce, které jim usnadní přístup pro všech
 > [!Note]  
 > Počínaje verzí 1902 můžete zlepšit funkce přístupnosti konzoly Configuration Manager tak, že aktualizujete rozhraní .NET na verzi 4,7 nebo novější v počítači, na kterém je spuštěná konzola nástroje. <!-- SCCMDocs-pr issue #3228 -->  
 > 
-> Další informace o změnách přístupnosti provedených v .NET 4.7.1 a 4.7.2 najdete v tématu [co je nového v přístupnosti v .NET Framework](https://docs.microsoft.com/dotnet/framework/whats-new/whats-new-in-accessibility).  
+> Další informace o změnách přístupnosti provedených v .NET 4.7.1 a 4.7.2 najdete v tématu [co je nového v přístupnosti v .NET Framework](/dotnet/framework/whats-new/whats-new-in-accessibility).  
 
 
 
@@ -57,14 +57,14 @@ Přístup k pracovnímu prostoru získáte pomocí následujících klávesovýc
 |CTRL + D|Nastavte fokus na podokno podrobností, pokud je k dispozici.|
 |Alt     |Změňte fokus na pásu karet a ven z něj.|
 
-### <a name="cmpivot-shortcuts"></a><a name="bkmk_cmpshortcuts"></a>CMPivot zkratky
+### <a name="cmpivot-shortcuts"></a><a name="bkmk_cmpshortcuts"></a> CMPivot zkratky
 
 V CMPivot bude fungovat většina [klávesových zkratek webového prohlížeče](https://support.microsoft.com/help/17456/windows-internet-explorer-ease-of-access-options) .
 
 |Klávesová zkratka|Účel|
 |--------|--------|  
 |CTRL + 1|Nastavte fokus na první kartě.|
-|ALT +&lt;|Zpět na adresu|
+|ALT + &lt;|Zpět na adresu|
 
 
 ## <a name="other-accessibility-features"></a>Další funkce pro usnadnění přístupu
@@ -91,12 +91,11 @@ V CMPivot bude fungovat většina [klávesových zkratek webového prohlížeče
 
 
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 Další informace o základech navigace Configuration Manager uživatelských rozhraních naleznete v následujících článcích:
 - [Použití konzoly Configuration Manager](../servers/manage/admin-console.md)
 - [Uživatelská příručka Centra softwaru](software-center.md)
 
 > [!NOTE]  
-> Informace v tomto článku se můžou vztahovat jenom na uživatele, kteří licencují produkty Microsoftu v USA. Pokud jste tento produkt získali mimo USA, můžete použít kartu s informacemi o pobočce, která byla součástí vašeho softwarového balíčku, nebo navštívit [Web Microsoft Accessibility (usnadnění](https://www.microsoft.com/accessibility/) ), kde najdete kontaktní informace pro služby podpory společnosti Microsoft. Chcete-li zjistit, zda je typ produktů a služeb popsaných v této části k dispozici ve vaší oblasti, obraťte se na svou pobočku. Informace o usnadnění jsou k dispozici i v dalších jazycích včetně japonštiny a francouzštiny.  
-
+> Informace v tomto článku se můžou vztahovat jenom na uživatele, kteří licencují produkty Microsoftu v USA. Pokud jste tento produkt získali mimo USA, můžete použít kartu s informacemi o pobočce, která byla součástí vašeho softwarového balíčku, nebo navštívit [Web Microsoft Accessibility (usnadnění](https://www.microsoft.com/accessibility/) ), kde najdete kontaktní informace pro služby podpory společnosti Microsoft. Chcete-li zjistit, zda je typ produktů a služeb popsaných v této části k dispozici ve vaší oblasti, obraťte se na svou pobočku. Informace o usnadnění jsou k dispozici i v dalších jazycích včetně japonštiny a francouzštiny.

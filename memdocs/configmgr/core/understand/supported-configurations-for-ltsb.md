@@ -10,12 +10,12 @@ ms.assetid: f0f818d4-7f45-402f-8758-dc88bc024953
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7de7d562131f97ac21d1c394b176d3b7f4ce7747
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: b72e0a14abd2b468056d4303497625633b8f64a8
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906439"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698918"
 ---
 # <a name="supported-configurations-for-the-long-term-servicing-branch-of-system-center-configuration-manager"></a>Podporované konfigurace pro větev dlouhodobé údržby System Center Configuration Manager
 
@@ -72,7 +72,7 @@ Pomocí nástroje LTSB můžete spravovat následující počítačové operačn
 - Instalace jádra serveru systému Windows Server 2012 (x64) (Poznámka 2)
 
 **(Poznámka 1)** Vydání Datacenter jsou podporovaná, ale nejsou certifikované pro Configuration Manager.  
-**(Poznámka 2)** Aby bylo možné podporovat nabízenou instalaci klienta, musí počítač, který spouští tuto verzi operačního systému, spustit službu role souborový server pro roli serveru Souborová služba a služba úložiště. Informace o instalaci funkcí Windows na počítači s jádrem serveru najdete v tématu [Instalace rolí serveru a funkcí na server s jádrem serveru](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj574158(v=ws.11)).
+**(Poznámka 2)** Aby bylo možné podporovat nabízenou instalaci klienta, musí počítač, který spouští tuto verzi operačního systému, spustit službu role souborový server pro roli serveru Souborová služba a služba úložiště. Informace o instalaci funkcí Windows na počítači s jádrem serveru najdete v tématu [Instalace rolí serveru a funkcí na server s jádrem serveru](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj574158(v=ws.11)).
 
 ### <a name="windows-embedded"></a>Windows Embedded
 Pomocí nástroje LTSB můžete spravovat následující zařízení se systémem Windows Embedded, a to tak, že na zařízení nainstalujete klientský software.  Další informace najdete v tématu [Plánování nasazení klientů na zařízení se systémem Windows Embedded](../clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices.md).
@@ -91,7 +91,7 @@ Pomocí nástroje LTSB můžete spravovat následující zařízení se systéme
 
 -   Pro žádné zařízení se systémem Windows Embedded není katalog aplikací podporován.  
 
--   Než budete moct monitorovat zjištěné malware na zařízeních se systémem Windows Embedded založených na systému Windows XP, je nutné na integrovaném zařízení nainstalovat balíček Microsoft Windows WMI pro skriptování. K instalaci tohoto balíčku použijte Windows Embedded Target Designer. *WBEMDISP. Knihovny DLL* a *WBEMDISP. *Aby bylo možné zjistit, zda byl zjištěn malware, musí existovat soubory TLB a musí být registrovány ve složce%windir%\system32\wbem v integrovaném zařízení.  
+-   Než budete moct monitorovat zjištěné malware na zařízeních se systémem Windows Embedded založených na systému Windows XP, je nutné na integrovaném zařízení nainstalovat balíček Microsoft Windows WMI pro skriptování. K instalaci tohoto balíčku použijte Windows Embedded Target Designer. *WBEMDISP.DLL* a *WBEMDISP. *Aby bylo možné zjistit, zda byl zjištěn malware, musí existovat soubory TLB a musí být registrovány ve složce%windir%\system32\wbem v integrovaném zařízení.  
 
 **Podporované operační systémy:**  
 -   Windows 10 Enterprise 2016 LTSB (x86, x64)  
@@ -161,7 +161,7 @@ Podpora pro operační systémy Linux a UNIX je omezená na ty, které jsou uved
 Následující verze jsou podporovány pomocí uvedeného souboru. tar.  
 ### <a name="aix"></a>AIX  
 
-|Verze|File|  
+|Verze|Soubor|  
 |-|-|  
 |Verze 5,3 (výkon)|ccm-Aix53ppc. &lt; Build \> . tar|  
 |Verze 6,1 (výkon)|ccm-Aix61ppc. &lt; Build \> . tar|  
@@ -169,7 +169,7 @@ Následující verze jsou podporovány pomocí uvedeného souboru. tar.
 
 ### <a name="centos"></a>CentOS  
 
-|Verze|File|  
+|Verze|Soubor|  
 |-|-|  
 |Verze 5 x86|ccm-Universalx86. &lt; Build \> . tar|  
 |Verze 5 x64|ccm-Universalx64. &lt; Build \> . tar|  
@@ -179,7 +179,7 @@ Následující verze jsou podporovány pomocí uvedeného souboru. tar.
 
 ### <a name="debian"></a>Debian  
 
-|Verze|File|    
+|Verze|Soubor|    
 |-|-|  
 |Verze 5 x86|ccm-Universalx86. &lt; Build \> . tar|  
 |Verze 5 x64|ccm-Universalx64. &lt; Build \> . tar|  
@@ -192,7 +192,7 @@ Následující verze jsou podporovány pomocí uvedeného souboru. tar.
 
 ### <a name="hp-ux"></a>HP-UX  
 
-|Verze|File|  
+|Verze|Soubor|  
 |-|-|  
 |11iv2 verze IA64|ccm-HpuxB. 11.23 I64. &lt; Build \> . tar|  
 |Verze 11iv2 PA – RISC|ccm-HpuxB. 11.23 PA. &lt; Build \> . tar|  
@@ -201,7 +201,7 @@ Následující verze jsou podporovány pomocí uvedeného souboru. tar.
 
 ### <a name="oracle-linux"></a>Oracle Linux  
 
-|Verze|File|    
+|Verze|Soubor|    
 |-|-|  
 |Verze 5 x86|ccm-Universalx86. &lt; Build \> . tar|  
 |Verze 5 x64|ccm-Universalx64. &lt; Build \> . tar|  
@@ -211,7 +211,7 @@ Následující verze jsou podporovány pomocí uvedeného souboru. tar.
 
 ### <a name="red-hat-enterprise-linux-rhel"></a>Red Hat Enterprise Linux (RHEL)  
 
-|Verze|File|  
+|Verze|Soubor|  
 |-|-|  
 |Verze 4 x86|ccm-RHEL4x86. &lt; Build \> . tar|  
 |Verze 4 x64|ccm-RHEL4x64. &lt; Build \> . tar|  
@@ -223,7 +223,7 @@ Následující verze jsou podporovány pomocí uvedeného souboru. tar.
 
 ### <a name="solaris"></a>Solaris  
 
-|Verze|File|   
+|Verze|Soubor|   
 |-|-|  
 |SPARC verze 9|ccm-Sol9sparc. &lt; Build \> . tar|  
 |Verze 10 x86|ccm-Sol10x86. &lt; Build \> . tar|  
@@ -233,7 +233,7 @@ Následující verze jsou podporovány pomocí uvedeného souboru. tar.
 
 ### <a name="suse-linux-enterprise-server-sles"></a>SUSE Linux Enterprise Server (SLES)  
 
-|Verze|File|  
+|Verze|Soubor|  
 |-|-|  
 |Verze 9 x86|ccm-SLES9x86. &lt; Build \> . tar|  
 |Verze 10 SP1 x86|ccm-Universalx86. &lt; Build \> . tar|  
@@ -244,7 +244,7 @@ Následující verze jsou podporovány pomocí uvedeného souboru. tar.
 
 ### <a name="ubuntu"></a>Ubuntu  
 
-|Verze|File|    
+|Verze|Soubor|    
 |-|-|  
 |Verze 10,04 LTS x86|ccm-Universalx86. &lt; Build \> . tar|  
 |Verze 10,04 LTS x64|ccm-Universalx64. &lt; Build \> . tar|  

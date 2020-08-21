@@ -10,12 +10,12 @@ ms.assetid: 95c13c00-909f-4fbb-bbaa-1eba9d54d8c5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 1ace560130e43fd5675b51b6d507e84043c01407
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 81371828078264e185dc0a1883dd383257949ef4
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82904073"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700091"
 ---
 # <a name="schema-extensions-for-configuration-manager"></a>Rozšíření schématu pro Configuration Manager
 
@@ -25,7 +25,7 @@ Schéma služby Active Directory můžete roztáhnout tak, aby podporovalo Confi
 
 -   Je vhodné, abyste schéma služby Active Directory rozšířili, ale není to nutné.  
 
-Před [rozšířením schématu služby Active Directory](https://docs.microsoft.com/sccm/core/plan-design/network/extend-the-active-directory-schema) byste se měli seznámit se službou Active Directory Domain Services a měli byste také umět [upravit schéma služby Active Directory](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc759402(v=ws.10)).  
+Před [rozšířením schématu služby Active Directory](/sccm/core/plan-design/network/extend-the-active-directory-schema) byste se měli seznámit se službou Active Directory Domain Services a měli byste také umět [upravit schéma služby Active Directory](/previous-versions/windows/it-pro/windows-server-2003/cc759402(v=ws.10)).  
 
 ## <a name="considerations-for-extending-the-active-directory-schema-for-configuration-manager"></a>Pokyny k rozšíření schématu služby Active Directory pro Configuration Manager  
 
@@ -88,7 +88,7 @@ Před [rozšířením schématu služby Active Directory](https://docs.microsoft
 
 -   **Alternativní řešení:** Pokud schéma nerozšíříte, k výměně informací o bezpečnostních klíčích mezi lokalitami použijte nástroj pro údržbu hierarchie **preinst.exe**.  
 
-     Pokud například plánujete vytvořit obsah v primární lokalitě a nasadit jej do sekundární lokality pod jinou primární lokalitou, musíte buď zvětšit schéma služby Active Directory, aby sekundární lokalita mohla získat veřejný klíč zdrojové primární lokality, nebo použít Preinst. exe ke sdílení klíčů mezi dvěma lokalitami přímo.  
+     Pokud například plánujete vytvořit obsah v primární lokalitě a nasadit jej do sekundární lokality pod jinou primární lokalitou, musíte buď zvětšit schéma služby Active Directory, aby sekundární lokalita mohla získat veřejný klíč zdrojové primární lokality, nebo použít preinst.exe ke sdílení klíčů mezi dvěma lokalitami přímo.  
 
 ## <a name="active-directory-attributes-and-classes"></a>Třídy a atributy služby Active Directory  
 Když rozšíříte schéma pro Configuration Manager, do schématu se přidají následující třídy a atributy, které jsou dostupné pro všechny Configuration Manager lokality v této doménové struktuře služby Active Directory.  
@@ -142,4 +142,4 @@ Když rozšíříte schéma pro Configuration Manager, do schématu se přidají
 > - Atribut: CN = MS-SMS-site-hranice  
 >   -   Třída: CN = MS-SMS-Server-Locator-Point  
 
-Předchozí seznamy můžete ověřit zobrazením **ConfigMgr_ad_schema. Soubor LDF** ze složky **\SMSSETUP\BIN\X64** instalačního média Configuration Manager.  
+Předchozí seznamy můžete ověřit zobrazením **ConfigMgr_ad_schema. Soubor LDF** ze složky **\SMSSETUP\BIN\X64** instalačního média Configuration Manager.

@@ -11,12 +11,12 @@ ms.assetid: e179e30a-a1fc-461e-8087-ff3a55803450
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3d854e4b70a59a364b8611947feea89d4678e7e6
-ms.sourcegitcommit: 578ad1e8088f7065b565e8a4f4619f5a26b94001
+ms.openlocfilehash: e0db550369ca2d81f42a25e68960b5f8f27be168
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81721952"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700476"
 ---
 # <a name="install-and-configure-the-exchange-connector"></a>Instalace a konfigurace softwaru Exchange Connector
 
@@ -76,10 +76,10 @@ Následující role správy systému Exchange Server zahrnují tyto rutiny:
 - Správa organizace jen pro zobrazení
 - Správa serveru
 
-Další informace najdete v tématu [Principy skupin rolí správy](https://docs.microsoft.com/exchange/understanding-management-role-groups-exchange-2013-help) v dokumentaci k systému Exchange Server 2013.
+Další informace najdete v tématu [Principy skupin rolí správy](/exchange/understanding-management-role-groups-exchange-2013-help) v dokumentaci k systému Exchange Server 2013.
 
 > [!TIP]  
-> Pokud se pokusíte nainstalovat nebo použít konektor systému Exchange Server bez požadovaných rutin, zobrazí se v souboru EasDisc. log na počítači serveru lokality následující chyba: `Invoking cmdlet <cmdlet> failed`.
+> Pokud se pokusíte nainstalovat nebo použít konektor systému Exchange Server bez požadovaných rutin, zobrazí se v souboru EasDisc. log na počítači serveru lokality následující chyba: `Invoking cmdlet <cmdlet> failed` .
 
 ## <a name="install-the-connector"></a>Instalace konektoru
 
@@ -91,7 +91,7 @@ Další informace najdete v tématu [Principy skupin rolí správy](https://docs
 
     - **Místní Exchange Server**: zadejte jeden server nebo pole serveru Client Access pro každou lokalitu služby Active Directory.
 
-        Pokud je server nebo pole v režimu offline, Configuration Manager se pokusí zjistit Server Client Access, který se má použít. Pokud se to nepovede, Configuration Manager se vrátí k používání serveru poštovních schránek, aby se navázáno připojení k serveru Client Access. Při opakovaném pokusu o připojení zaznamená následující upozornění do souboru EasDisc. log na počítači serveru lokality: `Failed to open runspace for site <site_name>`.
+        Pokud je server nebo pole v režimu offline, Configuration Manager se pokusí zjistit Server Client Access, který se má použít. Pokud se to nepovede, Configuration Manager se vrátí k používání serveru poštovních schránek, aby se navázáno připojení k serveru Client Access. Při opakovaném pokusu o připojení zaznamená následující upozornění do souboru EasDisc. log na počítači serveru lokality: `Failed to open runspace for site <site_name>` .
 
     - **Hostovaný Exchange Server**: zadejte adresu serveru vašeho prostředí Exchange Online.
 
@@ -123,14 +123,14 @@ Ověřte instalaci konektoru systému Exchange Server se stavovým zprávou a so
 
     Instalace může selhat, pokud je zadaný server pro klientský přístup v režimu offline. Pokud Configuration Manager nemůže konektor úspěšně nainstalovat, Configuration Manager se znovu pokusí o instalaci každých 60 minut. Stále se bude opakovat, dokud se instalace nepodaří nebo neodeberete konektor serveru Exchange Server.
 
-- Na počítači serveru lokality zkontrolujte **protokol Sitecomp. log** pro následující položku: `Component SMS_EXCHANGE_CONNECTOR flagged for installation`. Pak protokoluje úspěšnou instalaci s následujícím textem: `STATMSG: ID=1015`.
+- Na počítači serveru lokality zkontrolujte **protokol Sitecomp. log** pro následující položku: `Component SMS_EXCHANGE_CONNECTOR flagged for installation` . Pak protokoluje úspěšnou instalaci s následujícím textem: `STATMSG: ID=1015` .
 
 Po dokončení instalace monitorujte mobilní zařízení, která jsou nalezena a spravována konektorem. Zobrazení kolekcí mobilních zařízení a používání sestav pro mobilní zařízení.
 
 > [!NOTE]  
 > Configuration Manager generuje názvy pro mobilní zařízení, která najde. Používá*typ zařízení*formát *uživatelského jména*_. Například **jdoe_WindowsPhone**. Pokud má uživatel více než jedno mobilní zařízení, které má stejný typ zařízení, Configuration Manager zobrazí pro tato mobilní zařízení stejný název v konzole a v sestavách.  
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Porty používané klienty konfigurace a systémy lokality](../../core/plan-design/hierarchy/ports.md#BKMK_PortsExchangeConnectorHosted)
 - [Podpora proxy serveru](../../core/plan-design/network/proxy-server-support.md#site-system-roles-that-use-a-proxy)

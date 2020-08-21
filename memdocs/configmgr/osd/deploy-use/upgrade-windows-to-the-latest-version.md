@@ -10,12 +10,12 @@ ms.assetid: c21eec87-ad1c-4465-8e45-5feb60b92707
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a9ed8e1ece27117993761a3ce52c462e94e9f79a
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: eb7e2e5c564263c7172d70ec33bb33c0dd73409c
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88124769"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697819"
 ---
 # <a name="upgrade-windows-to-the-latest-version-with-configuration-manager"></a>Upgrade Windows na nejnovější verzi pomocí Configuration Manager
 
@@ -51,11 +51,11 @@ Aby bylo možné cílit na pořadí úkolů upgradu operačního systému, zař�
 
 #### <a name="windows-client"></a>Klient Windows
 
-- Windows 7
+- Windows 7
 - Windows 8.1
 - Starší verze Windows 10. Například můžete upgradovat Windows 10 verze 1809 na Windows 10, verze 1903.  
 
-Další informace najdete v tématu věnovaném [cestám upgradu Windows 10](https://docs.microsoft.com/windows/deployment/upgrade/windows-10-upgrade-paths).
+Další informace najdete v tématu věnovaném [cestám upgradu Windows 10](/windows/deployment/upgrade/windows-10-upgrade-paths).
 
 #### <a name="windows-server"></a>Windows Server
 
@@ -64,10 +64,10 @@ Další informace najdete v tématu věnovaném [cestám upgradu Windows 10](htt
 - Starší verze systému Windows Server 2016
 - Starší verze systému Windows Server 2019
 
-Další informace o podporovaných cestách upgradu Windows serveru najdete v článku věnovaném [podporovaným cestám upgradu Windows serveru 2016](https://docs.microsoft.com/windows-server/get-started/supported-upgrade-paths#upgrading-previous-retail-versions-of-windows-server-to-windows-server-2016) a [centru upgradu Windows serveru](https://aka.ms/upgradecenter).
+Další informace o podporovaných cestách upgradu Windows serveru najdete v článku věnovaném [podporovaným cestám upgradu Windows serveru 2016](/windows-server/get-started/supported-upgrade-paths#upgrading-previous-retail-versions-of-windows-server-to-windows-server-2016) a [centru upgradu Windows serveru](https://aka.ms/upgradecenter).
 
 
-## <a name="plan"></a><a name="BKMK_Plan"></a>Rozhraní  
+## <a name="plan"></a><a name="BKMK_Plan"></a> Rozhraní  
 
 ### <a name="task-sequence-requirements-and-limitations"></a>Požadavky a omezení pořadí úkolů
 
@@ -95,7 +95,7 @@ Následující úkoly nejsou kompatibilní s místním upgradem. Vyžadují, aby
 Jediným předpokladem pro scénář upgradu je dostupnost distribučního bodu. Distribuujte balíček s upgradem operačního systému a všechny další balíčky, které zahrnete do pořadí úkolů. Další informace naleznete v části [Install or modify a distribution point](../../core/servers/deploy/configure/install-and-configure-distribution-points.md).
 
 
-## <a name="configure"></a><a name="BKMK_Configure"></a>Konfigurace  
+## <a name="configure"></a><a name="BKMK_Configure"></a> Konfigurace  
 
 ### <a name="prepare-the-os-upgrade-package"></a>Příprava balíčku s upgradem operačního systému  
 
@@ -111,7 +111,7 @@ Pomocí kroků v části [Vytvoření pořadí úkolů upgradujte operační sys
 > Můžete vytvořit vlastní pořadí úkolů a přidat krok [upgradu operačního systému](../understand/task-sequence-steps.md#BKMK_UpgradeOS) . Tento krok je jediným nutným pro upgrade operačního systému na Windows 10. Pokud zvolíte tuto metodu, chcete-li dokončit upgrade, přidejte také krok [restartovat počítač](../understand/task-sequence-steps.md#BKMK_RestartComputer) po kroku **upgradu operačního systému** . Nezapomeňte použít nastavení **Aktuálně nainstalované výchozí operační systém** k restartování počítače do NAINSTALOVANÉho operačního systému a ne do prostředí Windows PE.  
 
 
-## <a name="deploy"></a><a name="BKMK_Deploy"></a>Nasazení  
+## <a name="deploy"></a><a name="BKMK_Deploy"></a> Nasazení  
 
 K nasazení operačního systému použijte jednu z následujících metod nasazení:  
 
@@ -125,4 +125,4 @@ K nasazení operačního systému použijte jednu z následujících metod nasaz
 
 ## <a name="monitor"></a>Monitorování  
 
-Informace o monitorování nasazení pořadí úkolů pro upgrade operačního systému najdete v tématu [monitorování nasazení operačního systému](monitor-operating-system-deployments.md).  
+Informace o monitorování nasazení pořadí úkolů pro upgrade operačního systému najdete v tématu [monitorování nasazení operačního systému](monitor-operating-system-deployments.md).

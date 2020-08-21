@@ -10,12 +10,12 @@ ms.assetid: a95bc292-af10-4beb-ab56-2a815fc69304
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: c60f30e306c6ff52849cfcdd4696d67a7d26f395
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 4c8029cdda80d327cbed2a4c60c71ff1811e4723
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81722232"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698693"
 ---
 # <a name="windows-hello-for-business-settings-in-configuration-manager"></a>Nastavení Windows Hello pro firmy v Configuration Manager
 
@@ -31,7 +31,7 @@ Configuration Manager se integruje s Windows Hello pro firmy. (Tato funkce se d�
 >
 > Pro spoluspravovaná zařízení zvažte přesunutí [úlohy **zásad přístupu k prostředkům** ](../../comanage/workloads.md#resource-access-policies) do Intune. Pak tyto certifikáty spravujte pomocí zásad Intune. Další informace najdete v tématu [Jak přepínat úlohy](../../comanage/how-to-switch-workloads.md).
 
-Další informace najdete v tématu [Windows Hello pro firmy](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-identity-verification).
+Další informace najdete v tématu [Windows Hello pro firmy](/windows/security/identity-protection/hello-for-business/hello-identity-verification).
 
 > [!Note]  
 > Configuration Manager ve výchozím nastavení nepovolí tuto volitelnou funkci. Tuto funkci musíte před použitím povolit. Další informace naleznete v části [Enable optional features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_options).<!--505213-->  
@@ -69,9 +69,9 @@ Configuration Manager se integruje s Windows Hello pro firmy následujícími zp
         > [!NOTE]
         > Počínaje verzí 1910 se ověřování na základě certifikátů s nastavením Windows Hello pro firmy v Configuration Manager nepodporuje.
 
-    - **Nakonfigurujte minimální délku PIN kódu**: Pokud chcete pro PIN kód vyžadovat minimální délku, povolte tuto možnost a zadejte hodnotu. Je-li tato možnost povolena, `4`je použita výchozí hodnota.
+    - **Nakonfigurujte minimální délku PIN kódu**: Pokud chcete pro PIN kód vyžadovat minimální délku, povolte tuto možnost a zadejte hodnotu. Je-li tato možnost povolena, je použita výchozí hodnota `4` .
 
-    - **Nakonfigurujte maximální délku PIN kódu**: Pokud chcete pro PIN kód pro uživatele vyžadovat maximální délku, povolte tuto možnost a zadejte hodnotu. Pokud je povolená výchozí hodnota `127`, je.
+    - **Nakonfigurujte maximální délku PIN kódu**: Pokud chcete pro PIN kód pro uživatele vyžadovat maximální délku, povolte tuto možnost a zadejte hodnotu. Pokud je povolená výchozí hodnota, je `127` .
 
     - **Vyžadovat vypršení platnosti kódu PIN (dny)**: Určuje počet dní, než uživatel musí změnit kód PIN zařízení.
 
@@ -145,7 +145,7 @@ Následující snímek obrazovky je příkladem nastavení profilu Windows Hello
 
 1. Vyberte **Přidat**.
 
-1. Zvolte **Vyberte objekt zabezpečení** a zadejte `Key Admins`.
+1. Zvolte **Vyberte objekt zabezpečení** a zadejte `Key Admins` .
 
 1. V seznamu **platí pro** vyberte **podřízené objekty uživatele**.
 

@@ -10,12 +10,12 @@ ms.assetid: fab13949-371c-4a4c-978e-471db1e54966
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: aa574cd3db2e7a3d3277912ed4a383f71d33e59c
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 2f8b8a45ff83ce903f5737c94144e6ca5ab50826
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88124283"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697649"
 ---
 # <a name="manage-os-images-with-configuration-manager"></a>Správa imagí operačního systému pomocí Configuration Manager
 
@@ -43,7 +43,7 @@ Instalační soubory systému Windows obsahují výchozí bitovou kopii operačn
 - Instalace operačního systému může trvat delší dobu. Instalace aplikace a další konfigurace se projeví po dokončení instalace operačního systému.  
 
 
-### <a name="captured-image-from-a-reference-computer"></a><a name="bkmk_capture"></a>Zachycená bitová kopie z referenčního počítače
+### <a name="captured-image-from-a-reference-computer"></a><a name="bkmk_capture"></a> Zachycená bitová kopie z referenčního počítače
 
 Pokud chcete vytvořit vlastní image operačního systému, Sestavte referenční počítač s požadovaným operačním systémem. Pak nainstalujte aplikace a nakonfigurujte nastavení. Zaznamenejte image operačního systému z referenčního počítače a vytvořte soubor WIM. Manuálně Sestavte referenční počítač nebo použijte pořadí úkolů pro automatizaci některých nebo všech kroků sestavení. Další informace najdete v tématu [přizpůsobení imagí operačního systému](customize-operating-system-images.md).  
 
@@ -58,7 +58,7 @@ Pokud chcete vytvořit vlastní image operačního systému, Sestavte referenčn
 - Když budete potřebovat aktualizace pro aplikace a nástroje, je potřeba vytvořit novou bitovou kopii.  
 
 
-## <a name="add-an-os-image"></a><a name="BKMK_AddOSImages"></a>Přidání image operačního systému  
+## <a name="add-an-os-image"></a><a name="BKMK_AddOSImages"></a> Přidání image operačního systému  
 
 Než budete moci použít bitovou kopii operačního systému, přidejte ji do Configuration Manager lokality.
 
@@ -89,12 +89,12 @@ Než budete moci použít bitovou kopii operačního systému, přidejte ji do C
 
 5. Dokončete průvodce.  
 
-Ekvivalent rutiny prostředí PowerShell pro tento Průvodce konzolou najdete v části [New-CMOperatingSystemImage](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmoperatingsystemimage?view=sccm-ps).
+Ekvivalent rutiny prostředí PowerShell pro tento Průvodce konzolou najdete v části [New-CMOperatingSystemImage](/powershell/module/configurationmanager/new-cmoperatingsystemimage?view=sccm-ps).
 
 Dále distribuujte bitovou kopii operačního systému do distribučních bodů.  
 
 
-## <a name="distribute-content-to-distribution-points"></a><a name="BKMK_DistributeBootImages"></a>Distribuce obsahu do distribučních bodů  
+## <a name="distribute-content-to-distribution-points"></a><a name="BKMK_DistributeBootImages"></a> Distribuce obsahu do distribučních bodů  
 
 Distribuci imagí operačního systému do distribučních bodů, které jsou stejné jako u jiného obsahu. Před nasazením pořadí úkolů distribuujte image operačního systému do aspoň jednoho distribučního bodu. Další informace najdete v části [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_distribute).  
 
@@ -102,7 +102,7 @@ Distribuci imagí operačního systému do distribučních bodů, které jsou st
 [!INCLUDE [Apply software updates to an image](includes/wim-apply-updates.md)]
 
 
-## <a name="prepare-the-os-image-for-multicast-deployments"></a><a name="BKMK_OSImageMulticast"></a>Příprava image operačního systému pro nasazení vícesměrového vysílání  
+## <a name="prepare-the-os-image-for-multicast-deployments"></a><a name="BKMK_OSImageMulticast"></a> Příprava image operačního systému pro nasazení vícesměrového vysílání  
 
 Nasazení pomocí vícesměrového vysílání umožňuje, aby více než jeden počítač mohl současně stahovat bitovou kopii operačního systému. Bitová kopie je vícesměrového vysílání klientům prostřednictvím distribučního bodu, nikoli každému klientovi, který stahuje kopii image z distribučního bodu přes samostatné připojení. Když zvolíte metodu nasazení operačního systému pro [použití vícesměrového vysílání k nasazení Windows přes síť](../deploy-use/use-multicast-to-deploy-windows-over-the-network.md), nakonfigurujte image operačního systému tak, aby podporovala vícesměrové vysílání. Pak distribuujte bitovou kopii do distribučního bodu s povoleným vícesměrovým vysíláním.
 
@@ -122,4 +122,4 @@ Nasazení pomocí vícesměrového vysílání umožňuje, aby více než jeden 
 
          Pokud vyberete možnost **přenést tento balíček pouze pomocí vícesměrového vysílání**, je třeba zadat také možnost nasazení pořadí úloh pro **Stažení obsahu místně, pokud to vyžaduje běžící pořadí úloh**. Další informace naleznete v části [Deploy a task sequence](../deploy-use/deploy-a-task-sequence.md).  
 
-5. Výběrem **OK** uložte nastavení a zavřete vlastnosti obrázku.  
+5. Výběrem **OK** uložte nastavení a zavřete vlastnosti obrázku.

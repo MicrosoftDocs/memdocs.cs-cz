@@ -10,12 +10,12 @@ ms.assetid: b89bcfbf-f5b6-4fb1-bb5e-a5cc18ec0c78
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 414d1138a7682d6b9acbc7731035fff1842a1fe7
-ms.sourcegitcommit: c1afc8abd0d7da48815bd2b0e45147774c72c2df
+ms.openlocfilehash: 21bb81e9851ab80d7807df337a67005e5b6b292a
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87815408"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699649"
 ---
 # <a name="operations-and-maintenance-for-reporting-in-configuration-manager"></a>Operace a údržba pro vytváření sestav v Configuration Manager
 
@@ -33,7 +33,7 @@ Configuration Manager ukládá své sestavy do SQL Server Reporting Services. Se
 Při spuštění sestavy se v jazyce místního operačního systému zobrazí název, popis a kategorie sestavy. Další informace najdete v tématu [jazyky pro sestavy](configuring-reporting.md#-languages-for-reports).
 
 > [!NOTE]  
-> Správce sestav je webový přístup k sestavě a nástroj pro správu. Můžete ji použít ke správě jedné instance serveru sestav přes připojení HTTPS. Použití Správce sestav pro provozní úlohy: zobrazit sestavy, upravit vlastnosti sestavy a spravovat související odběry sestav. Tento článek popisuje kroky pro zobrazení sestavy a úpravě vlastností sestav ve Správci sestav. Další informace o dalších možnostech ve Správci sestav najdete v tématu [co je správce sestav?](https://docs.microsoft.com/sql/reporting-services/report-server/manage-a-reporting-services-native-mode-report-server)
+> Správce sestav je webový přístup k sestavě a nástroj pro správu. Můžete ji použít ke správě jedné instance serveru sestav přes připojení HTTPS. Použití Správce sestav pro provozní úlohy: zobrazit sestavy, upravit vlastnosti sestavy a spravovat související odběry sestav. Tento článek popisuje kroky pro zobrazení sestavy a úpravě vlastností sestav ve Správci sestav. Další informace o dalších možnostech ve Správci sestav najdete v tématu [co je správce sestav?](/sql/reporting-services/report-server/manage-a-reporting-services-native-mode-report-server)
 
 Pro spuštění sestavy Configuration Manager použijte následující postupy.
 
@@ -77,7 +77,7 @@ Chcete-li změnit vlastnosti, použijte Správce sestav:
 
 Správce sestav uloží vlastnosti sestavy na serveru sestav. Konzola Configuration Manager zobrazuje aktualizované vlastnosti sestavy pro sestavu.
 
-## <a name="edit-a-report"></a><a name="bkmk_edit"></a>Úprava sestavy
+## <a name="edit-a-report"></a><a name="bkmk_edit"></a> Úprava sestavy
 
 Když sestava existující Configuration Manager nenačte požadované informace, upravte ji v Tvůrce sestav. Pomocí Tvůrce sestav můžete také změnit rozložení nebo návrh sestavy. I když můžete přímo upravit výchozí sestavu, je vhodné ji naklonovat. Otevřete sestavu, kterou chcete upravit, a pak vyberte **Uložit jako**.
 
@@ -173,7 +173,7 @@ K vytvoření sestavy Configuration Manager založené na jazyce SQL použijte n
 
 1. Vyberte **Uložit** a uložte sestavu na server sestav.
 
-## <a name="manage-report-subscriptions"></a><a name="bkmk_subscription"></a>Správa odběrů sestav
+## <a name="manage-report-subscriptions"></a><a name="bkmk_subscription"></a> Správa odběrů sestav
 
 Odběry sestav v SQL Server Reporting Services umožňují konfigurovat automatické doručování určených sestav e-mailem nebo sdílenou složkou v naplánovaných intervalech. Pokud chcete nakonfigurovat odběry sestav, použijte **Průvodce vytvořením předplatného** v Configuration Manager.
 
@@ -256,12 +256,12 @@ K vytvoření odběru sestavy pro doručování sestavy do sdílené složky pou
 
 1. Ověřte, že Configuration Manager úspěšně vytvořil odběr sestavy. Vyberte uzel **předplatná** pro zobrazení a úpravy odběrů sestav.
 
-### <a name="create-a-report-subscription-to-deliver-a-report-by-email"></a><a name="bkmk_subscription-email"></a>Vytvoření odběru sestavy pro doručení sestavy e-mailem
+### <a name="create-a-report-subscription-to-deliver-a-report-by-email"></a><a name="bkmk_subscription-email"></a> Vytvoření odběru sestavy pro doručení sestavy e-mailem
 
 Když vytvoříte odběr sestavy pro doručení sestavy e-mailem, služba Reporting Services pošle e-mailem příjemcům, které nakonfigurujete. E-mail obsahuje sestavu jako přílohu. Server sestav neověřuje e-mailové adresy ani je nezíská z e-mailového serveru. Můžete odeslat e-mailem sestavy do libovolného platného e-mailového účtu v rámci vaší organizace nebo mimo ni.
 
 > [!NOTE]
-> Pokud chcete povolit možnost předplatného **e-mailu** , musíte nakonfigurovat nastavení e-mailu ve službě Reporting Services. Další informace najdete v tématu [doručování e-mailů ve službě Reporting Services](https://docs.microsoft.com/sql/reporting-services/subscriptions/e-mail-delivery-in-reporting-services).
+> Pokud chcete povolit možnost předplatného **e-mailu** , musíte nakonfigurovat nastavení e-mailu ve službě Reporting Services. Další informace najdete v tématu [doručování e-mailů ve službě Reporting Services](/sql/reporting-services/subscriptions/e-mail-delivery-in-reporting-services).
 
 Můžete vybrat jednu nebo obě následující možnosti doručení e-mailu:
 

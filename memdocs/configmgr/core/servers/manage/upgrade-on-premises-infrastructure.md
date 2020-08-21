@@ -10,12 +10,12 @@ ms.assetid: 8ca970dd-e71c-404f-9435-d36e773a0db2
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 033c5de1a85ce2fa8b11fe7a187fcc4d5c023931
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7efc775199a34a66a8cd4a83b85baccd4a3ab5cb
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81720727"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699479"
 ---
 # <a name="upgrade-on-premises-infrastructure-that-supports-configuration-manager"></a>Upgrade místní infrastruktury, která podporuje Configuration Manager
 
@@ -28,7 +28,7 @@ Informace v tomto článku vám pomůžou při upgradu infrastruktury serveru, k
 - Pokud chcete *aktualizovat* Configuration Manager, aktuální větev, infrastrukturu na novou verzi, přečtěte si téma [aktualizace pro Configuration Manager](updates.md).  
 
 
-## <a name="upgrade-the-os-of-site-systems"></a><a name="BKMK_SupConfigUpgradeSiteSrv"></a>Upgrade operačního systému systémů lokality  
+## <a name="upgrade-the-os-of-site-systems"></a><a name="BKMK_SupConfigUpgradeSiteSrv"></a> Upgrade operačního systému systémů lokality  
 
 Configuration Manager podporuje místní upgrade serverového operačního systému, který je hostitelem serveru lokality a jakékoli role systému lokality, v následujících situacích:  
 
@@ -52,11 +52,11 @@ K upgradu serveru použijte postupy upgradu poskytované operačním systémem, 
 
 - [Centrum upgradu Windows serveru](https://aka.ms/upgradecenter)  
 
-- [Upgrade a možnosti převodu pro Windows Server 2016](https://docs.microsoft.com/windows-server/get-started/supported-upgrade-paths)  
+- [Upgrade a možnosti převodu pro Windows Server 2016](/windows-server/get-started/supported-upgrade-paths)  
 
-- [Možnosti upgradu pro Windows Server 2012 R2](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn303416(v=ws.11))  
+- [Možnosti upgradu pro Windows Server 2012 R2](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn303416(v=ws.11))  
 
-### <a name="upgrade-to-windows-server-2016-or-2019"></a><a name="bkmk_2016-2019"></a>Upgrade na Windows Server 2016 nebo 2019
+### <a name="upgrade-to-windows-server-2016-or-2019"></a><a name="bkmk_2016-2019"></a> Upgrade na Windows Server 2016 nebo 2019
 
 Kroky v této části použijte pro některý z následujících scénářů upgradu:  
 
@@ -104,7 +104,7 @@ Kroky v této části použijte pro některý z následujících scénářů upg
 
 Po upgradu serveru lokality nebo instance poskytovatele serveru SMS se nemůžete připojit pomocí konzoly Configuration Manager. Pokud chcete tento problém obejít, ručně obnovte oprávnění skupiny **Admins služby SMS** ve službě WMI. Na serveru lokality musí být nastavena oprávnění a na každém vzdáleném serveru, který je hostitelem instance poskytovatele serveru SMS:
 
-1. Na příslušných serverech otevřete konzolu Microsoft Management Console (MMC) a přidejte modul snap-in pro **řízení služby WMI**a pak vyberte možnost **místní počítač**.  
+1. Na příslušných serverech otevřete konzolu Microsoft Management Console (MMC) a přidejte modul snap-in pro  **řízení služby WMI**a pak vyberte možnost **místní počítač**.  
 
 2. V konzole MMC otevřete **vlastnosti** **řízení služby WMI (místní)** a vyberte kartu **zabezpečení** .  
 
@@ -114,7 +114,7 @@ Po upgradu serveru lokality nebo instance poskytovatele serveru SMS se nemůžet
 
     - Vzdálené povolení  
 
-4. Na **kartě zabezpečení** pod uzlem **SMS** vyberte uzel **&lt;site_ SiteCode**> a pak zvolte **zabezpečení**. Ujistěte se, že má skupina **Admins služby SMS** následující oprávnění:  
+4. Na **kartě zabezpečení** pod uzlem **SMS** vyberte uzel **site_ &lt; SiteCode**> a pak zvolte **zabezpečení**. Ujistěte se, že má skupina **Admins služby SMS** následující oprávnění:  
 
     - Spustit metody  
 
@@ -128,11 +128,11 @@ Po upgradu serveru lokality nebo instance poskytovatele serveru SMS se nemůžet
 
 #### <a name="known-issue-for-remote-site-systems"></a>Známý problém pro systémy vzdálené lokality
 
-Po upgradu serveru, který je hostitelem role systému lokality, může tato hodnota `Software\Microsoft\SMS` chybět v následujícím klíči registru:`HKLM\SYSTEM\CurrentControlSet\Control\SecurePipeServers\Winreg\AllowedPaths`
+Po upgradu serveru, který je hostitelem role systému lokality, může tato hodnota `Software\Microsoft\SMS` chybět v následujícím klíči registru: `HKLM\SYSTEM\CurrentControlSet\Control\SecurePipeServers\Winreg\AllowedPaths`
 
 Pokud tato hodnota chybí po upgradu Windows na serveru, přidejte ji ručně. V opačném případě role systému lokality mohou mít problémy při nahrávání souborů do složky Doručená pošta na serveru lokality.
 
-### <a name="upgrade-to-windows-server-2012-r2"></a><a name="bkmk_2012r2"></a>Upgrade na Windows Server 2012 R2
+### <a name="upgrade-to-windows-server-2012-r2"></a><a name="bkmk_2012r2"></a> Upgrade na Windows Server 2012 R2
 
 Při upgradu z Windows serveru 2008 R2 nebo Windows Serveru 2012 na Windows Server 2012 R2 platí následující podmínky:
 
@@ -140,7 +140,7 @@ Při upgradu z Windows serveru 2008 R2 nebo Windows Serveru 2012 na Windows Serv
 
 - V systému Windows Server 2012: Odeberte roli WSUS ze serveru, pokud je nainstalována. Po přeinstalování služby WSUS můžete SUSDB zachovat a znovu připojit.  
 
-- V systému Windows Server 2008 R2: před provedením upgradu na systém Windows Server 2012 R2 je třeba odinstalovat službu WSUS 3,2 ze serveru aplikace. Po přeinstalování služby WSUS můžete SUSDB zachovat a znovu připojit. Další informace najdete v tématu [přehled Windows Server Update Services](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh852345(v=ws.11)#new-and-changed-functionality).  
+- V systému Windows Server 2008 R2: před provedením upgradu na systém Windows Server 2012 R2 je třeba odinstalovat službu WSUS 3,2 ze serveru aplikace. Po přeinstalování služby WSUS můžete SUSDB zachovat a znovu připojit. Další informace najdete v tématu [přehled Windows Server Update Services](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh852345(v=ws.11)#new-and-changed-functionality).  
 
 - Provádíte-li upgrade operačního systému serveru lokality, zajistěte, aby byla [replikace na základě souborů](../../plan-design/hierarchy/file-based-replication.md) v dobrém stavu pro danou lokalitu. Zaškrtněte všechna Doručená místa u nevyřízených položek při odesílání i přijímání lokalit. Pokud je k dispozici hodně zablokovaných nebo čekajících úloh replikace, počkejte, než vymažete.<!-- SCCMDocs#1792 -->
     - V odesílajícím webu zkontrolujte **odesílatel. log**.
@@ -181,7 +181,7 @@ Následující scénáře upgradu systému Windows Server se často týkají, al
 - Windows Server 2008 R2 na Windows Server 2012  
 
 
-## <a name="upgrade-the-os-of-clients"></a><a name="BKMK_SupConfigUpgradeClient"></a>Upgrade operačního systému klientů  
+## <a name="upgrade-the-os-of-clients"></a><a name="BKMK_SupConfigUpgradeClient"></a> Upgrade operačního systému klientů  
 
 Configuration Manager podporuje místní upgrade operačního systému pro klienty Configuration Manager v následujících situacích:  
 
@@ -192,7 +192,7 @@ Configuration Manager podporuje místní upgrade operačního systému pro klien
 - Upgrady údržby Windows 10 z buildu na sestavení. Další informace najdete v tématu [Správa systému Windows jako služby](../../../osd/deploy-use/manage-windows-as-a-service.md).  
 
 
-## <a name="upgrade-sql-server"></a><a name="BKMK_SupConfigUpgradeDBSrv"></a>SQL Server upgradu  
+## <a name="upgrade-sql-server"></a><a name="BKMK_SupConfigUpgradeDBSrv"></a> SQL Server upgradu  
 
 Configuration Manager podporuje místní upgrade SQL Server na serveru databáze lokality.
 
@@ -242,15 +242,15 @@ Pro identifikaci úrovně kompatibility odhadu SQL Server mohutnosti, která se 
 SELECT name, compatibility_level FROM sys.databases
 ```
 
-Další informace o úrovních kompatibility SQL CE a o tom, jak je nastavit, najdete v tématu [ALTER DATABASE Compatibility Level (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-2017).
+Další informace o úrovních kompatibility SQL CE a o tom, jak je nastavit, najdete v tématu [ALTER DATABASE Compatibility Level (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-2017).
 
 Další informace o upgradu SQL Server najdete v následujících článcích SQL Server:  
 
-- [Upgradovat na SQL Server 2017](https://docs.microsoft.com/sql/database-engine/install-windows/supported-version-and-edition-upgrades-2017)  
+- [Upgradovat na SQL Server 2017](/sql/database-engine/install-windows/supported-version-and-edition-upgrades-2017)  
 
-- [Upgradovat na SQL Server 2016](https://docs.microsoft.com/sql/database-engine/install-windows/supported-version-and-edition-upgrades?view=sql-server-2016)  
+- [Upgradovat na SQL Server 2016](/sql/database-engine/install-windows/supported-version-and-edition-upgrades?view=sql-server-2016)  
 
-- [Upgrade na SQL Server 2014](https://docs.microsoft.com/sql/database-engine/install-windows/supported-version-and-edition-upgrades?view=sql-server-2014)  
+- [Upgrade na SQL Server 2014](/sql/database-engine/install-windows/supported-version-and-edition-upgrades?view=sql-server-2014)  
 
 ### <a name="to-upgrade-sql-server-on-the-site-database-server"></a>Upgrade SQL Serveru na serveru databáze lokality  
 
@@ -261,4 +261,4 @@ Další informace o upgradu SQL Server najdete v následujících článcích SQ
 3. Restartování služby Configuration Manager Services  
 
 > [!NOTE]  
-> Když změníte edici SQL Server používané v lokalitě centrální správy z úrovně Standard na Datacenter nebo Enterprise, oddíl databáze se nemění. Tento oddíl databáze omezuje počet klientů, které hierarchie podporuje.  
+> Když změníte edici SQL Server používané v lokalitě centrální správy z úrovně Standard na Datacenter nebo Enterprise, oddíl databáze se nemění. Tento oddíl databáze omezuje počet klientů, které hierarchie podporuje.

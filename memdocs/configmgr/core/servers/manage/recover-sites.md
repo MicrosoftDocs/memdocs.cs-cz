@@ -10,12 +10,12 @@ ms.assetid: 19539f4d-1667-4b4c-99a1-9995f12cf5f7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 37e4db2ad801c5923ba3db54554af0bb13968048
-ms.sourcegitcommit: 64727a4b025a589e270842da39516c4c42563a34
+ms.openlocfilehash: 9e71baef06349a00d49bc7fdc799d078c29939d8
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84301431"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699513"
 ---
 # <a name="recover-a-configuration-manager-site"></a>Obnovení lokality nástroje Configuration Manager
 
@@ -49,7 +49,7 @@ K vyčištění stávajícího serveru použijte jeden z následujících postup
 
 #### <a name="clean-an-existing-server-for-site-server-recovery-only"></a>Vyčistit stávající server pouze pro obnovení webového serveru
 
-1. Odstranit klíče registru serveru SMS:`HKLM\Software\Microsoft\SMS`
+1. Odstranit klíče registru serveru SMS: `HKLM\Software\Microsoft\SMS`
 2. Odstraňte všechny položky registru počínaje `SMS` od `HKLM\System\CurrentControlSet\Services` . Příklad:
     - SMS_DISCOVERY_DATA_MANAGER
     - SMS_EXECUTIVE
@@ -181,7 +181,7 @@ Tuto možnost použijte, pokud jste již obnovili Configuration Manager databáz
     Po obnovení databáze lokality pomocí metody mimo Configuration Manager spusťte instalační program a výběrem této možnosti dokončete obnovení databáze lokality.  
 
     > [!NOTE]  
-    > Použijete-li aplikaci DPM k zálohování databáze lokality, použijte postupy DPM k obnovení databáze lokality do zadaného umístění předtím, než budete pokračovat v procesu obnovení v Configuration Manager. Další informace o aplikaci DPM najdete v knihovně dokumentace [Data Protection Manager](https://docs.microsoft.com/system-center/dpm) .  
+    > Použijete-li aplikaci DPM k zálohování databáze lokality, použijte postupy DPM k obnovení databáze lokality do zadaného umístění předtím, než budete pokračovat v procesu obnovení v Configuration Manager. Další informace o aplikaci DPM najdete v knihovně dokumentace [Data Protection Manager](/system-center/dpm) .  
 
 - Když v hierarchii obnovíte databázi primární lokality, proces obnovení načte z CAS všechny změny provedené v databázi lokality po poslední záloze. Při obnovení CAS proces obnovení načte tyto změny z referenční primární lokality. Při obnovení databáze lokality pro samostatnou primární lokalitu ztratíte změny lokality po poslední záloze.  
 
@@ -193,7 +193,7 @@ Tuto možnost použijte, pokud nedošlo ke ztrátě dat na serveru databáze Con
 
 Configuration Manager povoluje sledování změn pro databázi lokality v SQL Server. Sledování změn umožňuje Configuration Manager dotaz na informace o změnách provedených v tabulkách databáze po předchozím bodě v čase. Doba uchování určuje, jak dlouho budou informace sledování změn uchovány. Ve výchozím nastavení je databáze lokality nakonfigurovaná tak, aby měla dobu uchování pět dnů. Po obnovení databáze lokality pokračuje proces obnovení odlišně, pokud se záloha nachází v rámci doby uložení nebo mimo dobu uchování. Například pokud váš SQL Server nebude úspěšný a vaše poslední záloha je sedm dní, bude mimo dobu uchování.
 
-Další informace o SQL Server sledování změn v interních verzích najdete v následujících blogových příspěvcích z týmu SQL Server: [Change Tracking Cleanup – část 1](https://docs.microsoft.com/archive/blogs/sql_server_team/change-tracking-cleanup-part-1) a [Change Tracking Cleanup – část 2](https://docs.microsoft.com/archive/blogs/sql_server_team/change-tracking-cleanup-part-2).
+Další informace o SQL Server sledování změn v interních verzích najdete v následujících blogových příspěvcích z týmu SQL Server: [Change Tracking Cleanup – část 1](/archive/blogs/sql_server_team/change-tracking-cleanup-part-1) a [Change Tracking Cleanup – část 2](/archive/blogs/sql_server_team/change-tracking-cleanup-part-2).
 
 ### <a name="reinitialization-of-site-or-global-data"></a>Opětovná inicializace lokality nebo globálních dat
 
@@ -263,7 +263,7 @@ Pro obnovení serveru lokality a databáze lokality použijte jeden z následuj�
 
 1. Připravte skript bezobslužné instalace na možnost, že bude nutné obnovit lokalitu. Další informace najdete v tématu [bezobslužné obnovení lokality](unattended-recovery.md).  
 
-2. Spusťte instalační program Configuration Manager pomocí `/script` Možnosti příkazového řádku. Například vytvoříte inicializační soubor instalace **ConfigMgrUnattend. ini**. Uložte ho do `C:\Temp` adresáře počítače, na kterém spouštíte instalační program. Použijte následující příkaz:  
+2. Spusťte instalační program Configuration Manager pomocí `/script` Možnosti příkazového řádku. Například vytvoříte inicializační soubor instalace **ConfigMgrUnattend.ini**. Uložte ho do `C:\Temp` adresáře počítače, na kterém spouštíte instalační program. Použijte následující příkaz:  
 
     `setup.exe /script C:\temp\ConfigMgrUnattend.ini`  
 
@@ -378,7 +378,7 @@ Po obnovení lokality je nutné znovu nainstalovat všechny [opravy hotfix vzdá
 
 ### <a name="recover-custom-reports"></a>Obnovení vlastních sestav
 
-Někteří zákazníci vytvářejí v SQL Server Reporting Services vlastní sestavy. V případě, že se tato součást nezdařila, obnovte sestavy ze zálohy serveru sestav. Další informace o obnovení vlastních sestav ve službě Reporting Services najdete v tématu [operace zálohování a obnovení pro služby Reporting Services](https://docs.microsoft.com/sql/reporting-services/install-windows/backup-and-restore-operations-for-reporting-services).
+Někteří zákazníci vytvářejí v SQL Server Reporting Services vlastní sestavy. V případě, že se tato součást nezdařila, obnovte sestavy ze zálohy serveru sestav. Další informace o obnovení vlastních sestav ve službě Reporting Services najdete v tématu [operace zálohování a obnovení pro služby Reporting Services](/sql/reporting-services/install-windows/backup-and-restore-operations-for-reporting-services).
 
 ### <a name="recover-content-files"></a>Obnovení souborů obsahu
 
@@ -410,7 +410,7 @@ Jako součást vlastností bodu migrace stavu určíte složky, do kterých se u
 
 ### <a name="regenerate-the-certificates-for-distribution-points"></a>Opakované vygenerování certifikátů pro distribuční body
 
-Po obnovení lokality může **Distmgr. log** vypsat následující položku pro jeden nebo více distribučních bodů: `Failed to decrypt cert PFX data` . Tato položka označuje, že lokalita nemůže dešifrovat data certifikátu distribučního bodu. Tento problém vyřešíte tak, že znovu vygenerujete nebo znovu naimportujete certifikát pro ovlivněné distribuční body. Použijte rutinu [set-CMDistributionPoint](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmdistributionpoint) prostředí PowerShell.
+Po obnovení lokality může **Distmgr. log** vypsat následující položku pro jeden nebo více distribučních bodů: `Failed to decrypt cert PFX data` . Tato položka označuje, že lokalita nemůže dešifrovat data certifikátu distribučního bodu. Tento problém vyřešíte tak, že znovu vygenerujete nebo znovu naimportujete certifikát pro ovlivněné distribuční body. Použijte rutinu [set-CMDistributionPoint](/powershell/module/configurationmanager/set-cmdistributionpoint) prostředí PowerShell.
 
 ### <a name="update-certificates-used-for-cloud-based-distribution-points"></a>Aktualizace certifikátů používaných pro cloudové distribuční body
 

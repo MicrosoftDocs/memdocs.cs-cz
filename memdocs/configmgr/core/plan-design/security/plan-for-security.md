@@ -10,12 +10,12 @@ ms.assetid: 2a216814-ca8c-4d2e-bcef-dc00966a3c9f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6fa5ebf25de0f695661b18c4379c080dad42cf08
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 0cdb14d282cbfa93655d6678b12b5f0837a225aa
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128490"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699275"
 ---
 # <a name="plan-for-security-in-configuration-manager"></a>Plánování zabezpečení v Configuration Manager
 
@@ -45,7 +45,7 @@ Tento článek popisuje koncepty, které byste měli vzít v úvahu při plánov
 
 
 
-##  <a name="plan-for-certificates-self-signed-and-pki"></a><a name="BKMK_PlanningForCertificates"></a>Plánování certifikátů (podepsaných svým držitelem a PKI)  
+##  <a name="plan-for-certificates-self-signed-and-pki"></a><a name="BKMK_PlanningForCertificates"></a> Plánování certifikátů (podepsaných svým držitelem a PKI)  
 
 Configuration Manager používá kombinaci certifikátů podepsaných svým držitelem a certifikátů infrastruktury veřejných klíčů (PKI).  
 
@@ -58,24 +58,24 @@ Pokud používáte infrastrukturu veřejných klíčů (PKI), můžete také pom
 Pokud nejsou certifikáty PKI k dispozici, Configuration Manager automaticky vygeneruje certifikáty podepsané svým držitelem. Některé certifikáty v Configuration Manager jsou vždy podepsané svým držitelem. Ve většině případů Configuration Manager automaticky spravuje certifikáty podepsané svým držitelem a vy nemusíte provádět žádné další akce. Jedním z příkladů je podpisový certifikát serveru lokality. Tento certifikát je vždy podepsaný svým držitelem. Ujistěte se, že zásady, které klienti stahují z bodu správy, byly odeslány ze serveru lokality a nebylo v něm manipulováno.  
 
 
-### <a name="cryptography-next-generation-cng-certificates"></a><a name="bkmk_plan-cng"></a>Kryptografie: certifikáty nové generace (CNG)  
+### <a name="cryptography-next-generation-cng-certificates"></a><a name="bkmk_plan-cng"></a> Kryptografie: certifikáty nové generace (CNG)  
 
 Configuration Manager podporuje certifikáty kryptografie: Next Generation (CNG). Klienti služby Configuration Manager můžou používat certifikát ověřování klientů PKI s privátním klíčem v CNG (klíč úložiště klíčů). S podporou KSP Configuration Manager klienti podporují privátní klíč založený na hardwaru, jako je například KSP čipu TPM pro certifikáty ověřování klientů PKI. Další informace najdete v tématu [Přehled certifikátů CNG](../network/cng-certificates-overview.md).
 
 
-### <a name="enhanced-http"></a><a name="bkmk_plan-ehttp"></a>Vylepšený protokol HTTP  
+### <a name="enhanced-http"></a><a name="bkmk_plan-ehttp"></a> Vylepšený protokol HTTP  
 
 Pro všechny Configuration Manager komunikačních cest se doporučuje používat komunikaci přes protokol HTTPS, ale u některých zákazníků je to náročné, protože se jedná o režii při správě certifikátů PKI. Zavedení integrace služby Azure Active Directory (Azure AD) omezuje některé, ale ne všechny požadavky na certifikáty. Počínaje verzí 1806 můžete povolit, aby lokalita používala **Rozšířený protokol HTTP**. Tato konfigurace podporuje protokol HTTPS v systémech lokality pomocí kombinace certifikátů podepsaných svým držitelem a Azure AD. Nevyžaduje infrastrukturu veřejných klíčů. Další informace najdete v tématu [Rozšířená http](../hierarchy/enhanced-http.md).  
 
 
-### <a name="certificates-for-cmg-and-cdp"></a><a name="bkmk_plan-cmgcdp"></a>Certifikáty pro CMG a CDP
+### <a name="certificates-for-cmg-and-cdp"></a><a name="bkmk_plan-cmgcdp"></a> Certifikáty pro CMG a CDP
 
 Správa klientů na internetu prostřednictvím brány pro správu cloudu (CMG) a distribučního bodu cloudu (CDP) vyžaduje použití certifikátů. Počet a typ certifikátů se liší v závislosti na konkrétních scénářích. Další informace najdete v následujících článcích:
 - [Certifikáty pro bránu pro správu cloudu](../../clients/manage/cmg/certificates-for-cloud-management-gateway.md)  
 - [Certifikáty pro distribuční bod cloudu](../hierarchy/use-a-cloud-based-distribution-point.md#bkmk_certs)  
 
 
-### <a name="plan-for-the-site-server-signing-certificate-self-signed"></a><a name="bkmk_plansitesign"></a>Plánování podpisového certifikátu serveru lokality (podepsaného svým držitelem)  
+### <a name="plan-for-the-site-server-signing-certificate-self-signed"></a><a name="bkmk_plansitesign"></a> Plánování podpisového certifikátu serveru lokality (podepsaného svým držitelem)  
 
 Klienti mohou bezpečně získat kopii podpisového certifikátu serveru lokality z Active Directory Domain Services a z nabízené instalace klienta. Pokud klienti nemůžou kopii tohoto certifikátu získat pomocí některého z těchto mechanismů, nainstalujte ho při instalaci klienta. Tento postup je zvlášť důležitý, pokud je první komunikace klienta s lokalitou v internetovém bodě správy. Vzhledem k tomu, že tento server je připojený k nedůvěryhodné síti, je zranitelnější vůči útokům. Pokud tento další krok neprovedete, klienti automaticky stáhnou kopii podpisového certifikátu serveru lokality z bodu správy.  
 
@@ -97,10 +97,10 @@ Klienti nemohou bezpečně získat kopii certifikátu serveru lokality v násled
 
 2.  Exportujte certifikát bez privátního klíče, bezpečně soubor uložte a přistoupit k němu jenom z zabezpečeného kanálu.  
 
-3.  Nainstalujte klienta pomocí následující client.msi vlastnosti:`SMSSIGNCERT=<full path and file name>`  
+3.  Nainstalujte klienta pomocí následující client.msi vlastnosti: `SMSSIGNCERT=<full path and file name>`  
 
 
-###  <a name="plan-for-pki-certificate-revocation"></a><a name="BKMK_PlanningForCRLs"></a>Plánování odvolání certifikátu PKI  
+###  <a name="plan-for-pki-certificate-revocation"></a><a name="BKMK_PlanningForCRLs"></a> Plánování odvolání certifikátu PKI  
 
 Pokud používáte certifikáty PKI s Configuration Manager, naplánujte použití seznamu odvolaných certifikátů (CRL). Zařízení používají seznam CRL k ověření certifikátu na připojujícím se počítači. Seznam odvolaných certifikátů je soubor, který certifikační autorita (CA) vytváří a podepisuje. Obsahuje seznam certifikátů, které certifikační autorita vystavila, ale odvolala. Když správce certifikátů odvolá certifikáty, jeho kryptografický otisk se přidá do seznamu CRL. Například pokud je vydaný certifikát známý nebo je podezřelý z ohrožení.
 
@@ -123,7 +123,7 @@ Než se rozhodnete, jestli Configuration Manager klienti musí kontrolovat sezna
   - Riziko, že se klienti nedaří připojit k serverům, pokud se seznam CRL nedá najít  
 
 
-###  <a name="plan-for-the-pki-trusted-root-certificates-and-the-certificate-issuers-list"></a><a name="BKMK_PlanningForRootCAs"></a>Plánování důvěryhodných kořenových certifikátů PKI a seznamu vystavitelů certifikátů  
+###  <a name="plan-for-the-pki-trusted-root-certificates-and-the-certificate-issuers-list"></a><a name="BKMK_PlanningForRootCAs"></a> Plánování důvěryhodných kořenových certifikátů PKI a seznamu vystavitelů certifikátů  
 
 Pokud vaše systémy lokality IIS používají klientské certifikáty PKI pro ověřování klientů prostřednictvím protokolu HTTP nebo pro ověřování klientů a šifrování prostřednictvím protokolu HTTPS, bude pravděpodobně nutné importovat certifikáty kořenové certifikační autority jako vlastnost lokality. Tady jsou dva scénáře:  
 
@@ -145,7 +145,7 @@ Tyto importované certifikáty kořenové certifikační autority a certifikát 
 - Když klienti vyberou certifikát PKI a mají seznam vystavitelů certifikátů, vyberou certifikát, který je zřetězený s důvěryhodným kořenovým certifikátem v seznamu vystavitelů certifikátů. Pokud se neshodují, klient nevybere certifikát PKI. Další informace najdete v tématu [plánování výběru klientského certifikátu PKI](#BKMK_PlanningForClientCertificateSelection).  
 
 
-###  <a name="plan-for-pki-client-certificate-selection"></a><a name="BKMK_PlanningForClientCertificateSelection"></a>Plánování výběru klientského certifikátu PKI  
+###  <a name="plan-for-pki-client-certificate-selection"></a><a name="BKMK_PlanningForClientCertificateSelection"></a> Plánování výběru klientského certifikátu PKI  
 
 Pokud vaše systémy lokality IIS používají klientské certifikáty PKI pro ověřování klientů prostřednictvím protokolu HTTP nebo pro ověřování klientů a šifrování prostřednictvím protokolu HTTPS, Naplánujte způsob, jakým klienti Windows vyberou certifikát, který se má použít pro Configuration Manager.  
 
@@ -226,7 +226,7 @@ Chcete-li identifikovat jedinečný klientský certifikát PKI, můžete také z
 Další informace najdete v tématu [Konfigurace nastavení pro klientské certifikáty PKI](configure-security.md#BKMK_ConfigureClientPKI).  
 
 
-###  <a name="plan-a-transition-strategy-for-pki-certificates-and-internet-based-client-management"></a><a name="BKMK_PlanningForPKITransition"></a>Plánování strategie přechodu pro certifikáty PKI a internetovou správu klientů  
+###  <a name="plan-a-transition-strategy-for-pki-certificates-and-internet-based-client-management"></a><a name="BKMK_PlanningForPKITransition"></a> Plánování strategie přechodu pro certifikáty PKI a internetovou správu klientů  
 
 Flexibilní možnosti konfigurace v Configuration Manager umožňují postupně převádět klienty a lokalitu, aby používaly certifikáty PKI k zabezpečení koncových bodů klienta. Certifikáty PKI poskytují lepší zabezpečení a umožňují správu internetových klientů.  
 
@@ -278,7 +278,7 @@ Z důvodu počtu možností konfigurace a voleb v Configuration Manager neexistu
 
     Tento plán nejdřív zavádí certifikáty PKI pro ověřování pouze přes protokol HTTP a pak pro ověřování a šifrování prostřednictvím protokolu HTTPS. Když použijete tento plán k následnému zavedení těchto certifikátů, snížíte riziko, že se klienti stanou nespravovanými. Výhodou je také nejvyšší zabezpečení, které Configuration Manager podporuje.  
 
-##  <a name="plan-for-the-trusted-root-key"></a><a name="BKMK_PlanningForRTK"></a>Plánování důvěryhodného kořenového klíče  
+##  <a name="plan-for-the-trusted-root-key"></a><a name="BKMK_PlanningForRTK"></a> Plánování důvěryhodného kořenového klíče  
 
 Configuration Manager důvěryhodný kořenový klíč poskytuje mechanismus pro klienty Configuration Manager, aby ověřil systémy lokality patřící do jejich hierarchie. Každý server lokality generuje klíč pro výměnu lokalit, který slouží ke komunikaci s dalšími lokalitami. Klíč pro výměnu lokality z lokality nejvyšší úrovně v hierarchii je označován jako důvěryhodný kořenový klíč.  
 
@@ -310,9 +310,9 @@ Pomocí následujících postupů můžete předem zřídit a ověřit důvěryh
   > Pokud klienti používají komunikaci pomocí protokolu HTTPS s body správy, nemusíte mít předem zajištěný důvěryhodný kořenový klíč. Vytvářejí důvěryhodnost certifikáty PKI.  
 
 
-### <a name="pre-provision-a-client-with-the-trusted-root-key-by-using-a-file"></a><a name="bkmk_trk-provision-file"></a>Předem zřídit klienta s důvěryhodným kořenovým klíčem pomocí souboru  
+### <a name="pre-provision-a-client-with-the-trusted-root-key-by-using-a-file"></a><a name="bkmk_trk-provision-file"></a> Předem zřídit klienta s důvěryhodným kořenovým klíčem pomocí souboru  
 
-1.  Na serveru lokality otevřete v textovém editoru následující soubor:`<Configuration Manager install directory>\bin\mobileclient.tcf`  
+1.  Na serveru lokality otevřete v textovém editoru následující soubor: `<Configuration Manager install directory>\bin\mobileclient.tcf`  
 
 2.  Vyhledejte položku **SMSPublicRootKey =**. Zkopírujte klíč z daného řádku a zavřete soubor bez jakýchkoli změn.  
 
@@ -320,25 +320,25 @@ Pomocí následujících postupů můžete předem zřídit a ověřit důvěryh
 
 4.  Uložte soubor do umístění, kam k němu mají přístup všechny počítače, ale v případě, že je soubor bezpečný proti falšování.  
 
-5.  Nainstalujte klienta pomocí libovolné metody instalace, která akceptuje client.msi vlastnosti. Zadejte následující vlastnost:`SMSROOTKEYPATH=<full path and file name>`  
+5.  Nainstalujte klienta pomocí libovolné metody instalace, která akceptuje client.msi vlastnosti. Zadejte následující vlastnost: `SMSROOTKEYPATH=<full path and file name>`  
 
     > [!IMPORTANT]  
-    > Pokud během instalace klienta určíte důvěryhodný kořenový klíč, zadejte také kód lokality. Použijte následující vlastnost client.msi:`SMSSITECODE=<site code>`   
+    > Pokud během instalace klienta určíte důvěryhodný kořenový klíč, zadejte také kód lokality. Použijte následující vlastnost client.msi: `SMSSITECODE=<site code>`   
 
 
-### <a name="pre-provision-a-client-with-the-trusted-root-key-without-using-a-file"></a><a name="bkmk_trk-provision-nofile"></a>Předem zřídit klienta s důvěryhodným kořenovým klíčem bez použití souboru  
+### <a name="pre-provision-a-client-with-the-trusted-root-key-without-using-a-file"></a><a name="bkmk_trk-provision-nofile"></a> Předem zřídit klienta s důvěryhodným kořenovým klíčem bez použití souboru  
 
-1.  Na serveru lokality otevřete v textovém editoru následující soubor:`<Configuration Manager install directory>\bin\mobileclient.tcf`  
+1.  Na serveru lokality otevřete v textovém editoru následující soubor: `<Configuration Manager install directory>\bin\mobileclient.tcf`  
 
 2.  Vyhledejte položku **SMSPublicRootKey =**. Zkopírujte klíč z daného řádku a zavřete soubor bez jakýchkoli změn.  
 
 3.  Nainstalujte klienta pomocí libovolné metody instalace, která akceptuje client.msi vlastnosti. Zadejte následující vlastnost client.msi: `SMSPublicRootKey=<key>` kde `<key>` je řetězec, který jste zkopírovali z MobileClient. tcf.  
 
     > [!IMPORTANT]  
-    >  Pokud během instalace klienta určíte důvěryhodný kořenový klíč, zadejte také kód lokality. Použijte následující vlastnost client.msi:`SMSSITECODE=<site code>`   
+    >  Pokud během instalace klienta určíte důvěryhodný kořenový klíč, zadejte také kód lokality. Použijte následující vlastnost client.msi: `SMSSITECODE=<site code>`   
 
 
-### <a name="verify-the-trusted-root-key-on-a-client"></a><a name="bkmk_trk-verify"></a>Ověření důvěryhodného kořenového klíče na klientovi  
+### <a name="verify-the-trusted-root-key-on-a-client"></a><a name="bkmk_trk-verify"></a> Ověření důvěryhodného kořenového klíče na klientovi  
 
 1. Otevřete konzolu Windows PowerShellu jako správce.  
 
@@ -351,7 +351,7 @@ Pomocí následujících postupů můžete předem zřídit a ověřit důvěryh
 Vrácený řetězec je důvěryhodný kořenový klíč. Ověřte, že se shoduje s hodnotou **SMSPublicRootKey** v souboru mobileclient. TCF na serveru lokality.  
 
 
-### <a name="remove-or-replace-the-trusted-root-key"></a><a name="bkmk_trk-reset"></a>Odeberte nebo nahraďte důvěryhodný kořenový klíč.  
+### <a name="remove-or-replace-the-trusted-root-key"></a><a name="bkmk_trk-reset"></a> Odeberte nebo nahraďte důvěryhodný kořenový klíč.  
 
 Odeberte důvěryhodný kořenový klíč z klienta pomocí vlastnosti client.msi **RESETKEYINFORMATION = true**. 
 
@@ -361,7 +361,7 @@ Další informace o těchto vlastnostech instalace najdete v tématu [informace 
 
 
 
-##  <a name="plan-for-signing-and-encryption"></a><a name="BKMK_PlanningForSigningEncryption"></a>Plánování podepisování a šifrování  
+##  <a name="plan-for-signing-and-encryption"></a><a name="BKMK_PlanningForSigningEncryption"></a> Plánování podepisování a šifrování  
  
 Při použití certifikátů PKI pro veškerou komunikaci s klienty není nutné plánovat podepisování a šifrování, aby bylo možné zabezpečit komunikaci s daty klienta. Pokud nastavíte systémy lokality, které spouštějí službu IIS, aby umožňovaly připojení klienta prostřednictvím protokolu HTTP, rozhodněte se, jak zajistit zabezpečení komunikace klienta pro danou lokalitu.  
 
@@ -373,13 +373,13 @@ Další informace o tom, jak nakonfigurovat nastavení pro podepisování a šif
 
 
 
-##  <a name="plan-for-role-based-administration"></a><a name="BKMK_PlanningForRBA"></a>Plánování správy na základě rolí  
+##  <a name="plan-for-role-based-administration"></a><a name="BKMK_PlanningForRBA"></a> Plánování správy na základě rolí  
 
 Další informace najdete v tématu [základy správy na základě rolí](../../understand/fundamentals-of-role-based-administration.md).  
 
 
 
-## <a name="plan-for-azure-active-directory"></a><a name="bkmk_planazuread"></a>Plánování Azure Active Directory
+## <a name="plan-for-azure-active-directory"></a><a name="bkmk_planazuread"></a> Plánování Azure Active Directory
 
 Configuration Manager se integruje s Azure Active Directory (Azure AD), aby mohl web a klienti používat moderní ověřování. Připojování webu pomocí Azure AD podporuje následující scénáře Configuration Manager:
 
@@ -404,7 +404,7 @@ Configuration Manager se integruje s Azure Active Directory (Azure AD), aby mohl
 
 - [Desktop Analytics](../../../desktop-analytics/overview.md)  
 
-- [Azure Log Analytics](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm)  
+- [Azure Log Analytics](/azure/azure-monitor/platform/collect-sccm)  
 
 - [Centrum komunity](../../get-started/capabilities-in-technical-preview-1807.md#bkmk_hub)  
 
@@ -416,11 +416,11 @@ Configuration Manager se integruje s Azure Active Directory (Azure AD), aby mohl
 Další informace o připojení lokality ke službě Azure AD najdete v tématu [Konfigurace služeb Azure](../../servers/deploy/configure/azure-services-wizard.md).
 
 
-Další informace o Azure AD najdete v [dokumentaci Azure Active Directory](https://docs.microsoft.com/azure/active-directory/).
+Další informace o Azure AD najdete v [dokumentaci Azure Active Directory](/azure/active-directory/).
 
 
 
-## <a name="plan-for-sms-provider-authentication"></a><a name="bkmk_auth"></a>Plánování ověřování poskytovatele služby SMS
+## <a name="plan-for-sms-provider-authentication"></a><a name="bkmk_auth"></a> Plánování ověřování poskytovatele služby SMS
 <!--1357013--> 
 
 Počínaje verzí 1810 můžete určit minimální úroveň ověřování pro správce pro přístup k Configuration Manager lokalit. Tato funkce vynutila správcům přihlášení k systému Windows s požadovanou úrovní. Platí pro všechny komponenty, které přistupují k poskytovateli serveru SMS. Například konzola Configuration Manager, metody sady SDK a rutiny prostředí Windows PowerShell. 
@@ -439,7 +439,7 @@ Další informace najdete v tématu [plánování poskytovatele serveru SMS](../
 
 
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Zabezpečení a ochrana osobních údajů pro klienty Configuration Manager](../../clients/deploy/plan/security-and-privacy-for-clients.md)  
 
 - [Konfigurace zabezpečení](configure-security.md)  
@@ -448,5 +448,4 @@ Další informace najdete v tématu [plánování poskytovatele serveru SMS](../
 
 - [Technické informace o kryptografických ovládacích prvcích](cryptographic-controls-technical-reference.md)  
 
-- [Požadavky na certifikát PKI](../network/pki-certificate-requirements.md)  
-
+- [Požadavky na certifikát PKI](../network/pki-certificate-requirements.md)

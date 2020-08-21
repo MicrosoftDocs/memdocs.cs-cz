@@ -10,12 +10,12 @@ ms.assetid: 3e1ddb65-1193-46ce-a7c0-a48dfd9fd833
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 1567531ed83586f47ba2f79372e0b7962c1341dc
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 6406a208de448e40e1d686440f41610266cde042
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128912"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700295"
 ---
 # <a name="whats-new-in-version-1910-of-configuration-manager-current-branch"></a>Co je nového ve verzi 1910 Configuration Manager Current Branch
 
@@ -28,9 +28,9 @@ Vždy si přečtěte nejnovější kontrolní seznam pro instalaci této aktuali
 Pokud chcete plně využít nové funkce Configuration Manager, po aktualizaci lokality aktualizujte také klienty na nejnovější verzi. I když se nové funkce zobrazí v konzole Configuration Manager, když aktualizujete lokalitu a konzolu, kompletní scénář nebude funkční, dokud nebude verze klienta zároveň nejnovější.
 
 > [!TIP]
-> Pokud chcete dostávat upozornění na aktualizaci této stránky, zkopírujte a vložte následující adresu URL do čtečky informačních kanálů RSS:`https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+1910+-+Configuration+Manager%22&locale=en-us`
+> Pokud chcete dostávat upozornění na aktualizaci této stránky, zkopírujte a vložte následující adresu URL do čtečky informačních kanálů RSS: `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+1910+-+Configuration+Manager%22&locale=en-us`
 
-## <a name="microsoft-endpoint-configuration-manager"></a><a name="bkmk_mem"></a>Configuration Manager koncového bodu Microsoftu
+## <a name="microsoft-endpoint-configuration-manager"></a><a name="bkmk_mem"></a> Configuration Manager koncového bodu Microsoftu
 
 <!--4960084-->
 
@@ -42,10 +42,10 @@ Microsoft Endpoint Manager je integrované řešení pro správu všech vašich 
 
 Následující řešení pro správu Microsoft jsou teď součástí značky Microsoft Endpoint Manageru:
 
-- [Configuration Manager](https://docs.microsoft.com/configmgr)
-- [Intune](https://docs.microsoft.com/intune)
+- [Configuration Manager](/configmgr)
+- [Intune](/intune)
 - [Desktop Analytics](../../../desktop-analytics/overview.md)
-- [Autopilot](https://docs.microsoft.com/intune/enrollment/enrollment-autopilot)
+- [Autopilot](/intune/enrollment/enrollment-autopilot)
 - Další funkce v [konzole správce správy zařízení](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/microsoft-intune-rolls-out-an-improved-streamlined-endpoint/ba-p/937760)
 
 Další informace najdete v následujících příspěvcích od Brada Anderson, což je Microsoft Corporate viceprezident pro Microsoft 365:
@@ -69,7 +69,7 @@ Nezapomeňte aktualizovat jakoukoli interní dokumentaci, kterou udržujete, aby
 > [!TIP]
 > V systému Windows 10 když otevřete nabídku Start, zadejte název pro vyhledání ikony. Zadejte například `Configuration Manager` nebo `Software Center`.
 
-## <a name="site-infrastructure"></a><a name="bkmk_infra"></a>Infrastruktura webu
+## <a name="site-infrastructure"></a><a name="bkmk_infra"></a> Infrastruktura webu
 
 ### <a name="reclaim-sedo-lock"></a>Uvolnit SEDO zámek
 
@@ -88,11 +88,11 @@ Další informace najdete v tématu věnovaném [rozšiřování a migraci míst
 
 <!-- ## <a name="bkmk_cloud"></a> Cloud-attached management -->
 
-## <a name="desktop-analytics"></a><a name="bkmk_da"></a>Desktop Analytics
+## <a name="desktop-analytics"></a><a name="bkmk_da"></a> Desktop Analytics
 
 Další informace o měsíčních změnách v cloudové službě Desktop Analytics najdete v tématu [co je nového v Desktop Analytics](../../../desktop-analytics/whats-new.md).
 
-## <a name="real-time-management"></a><a name="bkmk_real"></a>Správa v reálném čase
+## <a name="real-time-management"></a><a name="bkmk_real"></a> Správa v reálném čase
 
 ### <a name="optimizations-to-the-cmpivot-engine"></a>Optimalizace modulu CMPivot
 <!--3197353-->
@@ -112,7 +112,7 @@ Přidali jsme řadu nových entit CMPivot a vylepšení entit, která pomáhají
 
 Tato verze také obsahuje několik [dalších vylepšení](../../servers/manage/cmpivot-changes.md#bkmk_Other) CMPivot. Další informace najdete v tématu [CMPivot počínaje verzí 1910](../../servers/manage/cmpivot-changes.md#bkmk_cmpivot1910).
 
-## <a name="content-management"></a><a name="bkmk_content"></a>Správa obsahu
+## <a name="content-management"></a><a name="bkmk_content"></a> Správa obsahu
 
 ### <a name="microsoft-connected-cache-support-for-intune-win32-apps"></a>Podpora mezipaměti s připojením Microsoftu pro aplikace Intune Win32
 
@@ -127,7 +127,7 @@ Další informace najdete v tématu věnovaném [mezipaměti připojené k Micro
 >
 > Když nainstalujete připojenou mezipaměť do distribučního bodu Configuration Manager, přesměruje provoz služby optimalizace doručení do místních zdrojů. Propojená mezipaměť dělá toto chování efektivně při ukládání obsahu do mezipaměti na úrovni bajtového rozsahu.
 
-## <a name="client-management"></a><a name="bkmk_client"></a>Správa klientů
+## <a name="client-management"></a><a name="bkmk_client"></a> Správa klientů
 
 ### <a name="include-custom-configuration-baselines-as-part-of-compliance-policy-assessment"></a>Zahrnout vlastní standardní hodnoty konfigurace jako součást posouzení zásad dodržování předpisů
 <!--3608345-->
@@ -152,7 +152,7 @@ Další informace najdete v tématu [Konfigurace nastavení klienta](../../clien
 <!-- ## <a name="bkmk_comgmt"></a> Co-management -->
 
 
-## <a name="application-management"></a><a name="bkmk_app"></a>Správa aplikací
+## <a name="application-management"></a><a name="bkmk_app"></a> Správa aplikací
 
 ### <a name="deploy-microsoft-edge-version-77-and-later"></a>Nasazení Microsoft Edge verze 77 a novější
 <!--4561024-->
@@ -172,7 +172,7 @@ Od aktuální větve verze 1906 můžete vytvořit skupinu aplikací, které bud
 Obecnější informace najdete v tématu [Vytvoření skupin aplikací](../../../apps/deploy-use/create-app-groups.md).
 
 
-## <a name="os-deployment"></a><a name="bkmk_osd"></a>Nasazení operačního systému
+## <a name="os-deployment"></a><a name="bkmk_osd"></a> Nasazení operačního systému
 
 ### <a name="improvements-to-the-task-sequence-editor"></a>Vylepšení editoru pořadí úloh
 
@@ -264,7 +264,7 @@ Další informace najdete v tématu [proměnné pořadí úkolů – SetupComple
 
 <!-- ## <a name="bkmk_userxp"></a> Software Center -->
 
-## <a name="software-updates"></a><a name="bkmk_sum"></a>Aktualizace softwaru
+## <a name="software-updates"></a><a name="bkmk_sum"></a> Aktualizace softwaru
 
 ### <a name="additional-options-for-third-party-update-catalogs"></a>Další možnosti pro katalogy aktualizací třetích stran
 <!--4469002-->
@@ -276,7 +276,7 @@ Další informace najdete v tématu [Povolení aktualizací třetích stran](../
 <!--4699118-->
 Dříve jste mohli použít optimalizaci doručování pouze pro expresní aktualizace. S Configuration Manager verze 1910 je teď možné použít optimalizaci doručování pro distribuci veškerého web Windows Update obsahu pro klienty se systémem Windows 10 verze 1709 nebo novější.
 
-Další informace:
+Další informace naleznete v tématu:
 - [Optimalizace doručování aktualizací Windows 10](../../../sum/deploy-use/optimize-windows-10-update-delivery.md#bkmk_DO-1910)
 - [Nastavení klienta pro aktualizace softwaru](../../clients/deploy/about-client-settings.md#software-updates)
 - [Nastavení klienta pro optimalizaci doručení](../../clients/deploy/about-client-settings.md#delivery-optimization)
@@ -287,7 +287,7 @@ Nyní můžete použít **nasazení** jako filtr aktualizace pro pravidla automa
 
 Další informace najdete v tématu [automatické nasazení aktualizací softwaru](../../../sum/deploy-use/automatically-deploy-software-updates.md#bkmk_adr-process).
 
-## <a name="office-management"></a><a name="bkmk_o365"></a>Správa Office
+## <a name="office-management"></a><a name="bkmk_o365"></a> Správa Office
 
 
 ### <a name="office-365-proplus-pilot-and-health-dashboard"></a>Pilotní a řídicí panel pro Office 365-plus
@@ -297,7 +297,7 @@ Pilotní a řídicí panel stavů Office 365 vám pomůže plánovat, pilotovat 
 
 Další informace najdete v tématu [pilotní a řídicí panel pro Office 365-plus](../../../sum/deploy-use/office-365-dashboard.md#bkmk_pilot).
 
-## <a name="protection"></a><a name="bkmk_protect"></a>Antivirový
+## <a name="protection"></a><a name="bkmk_protect"></a> Antivirový
 
 ### <a name="bitlocker-management"></a>Správa nástroje BitLocker
 
@@ -313,7 +313,7 @@ Configuration Manager nyní poskytuje následující možnosti správy pro nást
 
 Další informace najdete v tématu [Plánování správy BitLockeru](../../../protect/plan-design/bitlocker-management.md).
 
-## <a name="configuration-manager-console"></a><a name="bkmk_admin"></a>Konzola Configuration Manager
+## <a name="configuration-manager-console"></a><a name="bkmk_admin"></a> Konzola Configuration Manager
 
 ### <a name="view-active-consoles-and-message-administrators-through-console-connections"></a>Zobrazení aktivních konzol a správců zpráv prostřednictvím připojení konzoly
 <!--4923997-->
@@ -346,7 +346,7 @@ Tato verze zahrnuje následující vylepšení vyhledávání v konzole Configur
 
 ## <a name="other-updates"></a>Další aktualizace
 
-Další informace o změnách rutin prostředí Windows PowerShell pro Configuration Manager najdete v [poznámkách k verzi PowerShell verze 1910](https://docs.microsoft.com/powershell/sccm/1910-release-notes?view=sccm-ps).
+Další informace o změnách rutin prostředí Windows PowerShell pro Configuration Manager najdete v [poznámkách k verzi PowerShell verze 1910](/powershell/sccm/1910-release-notes?view=sccm-ps).
 
 Další informace o změnách REST API služby správy najdete v tématu poznámky k [verzi služby správy](../../../develop/adminservice/release-notes.md#bkmk_1910).
 

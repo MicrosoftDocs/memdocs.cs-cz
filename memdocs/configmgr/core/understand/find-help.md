@@ -10,12 +10,12 @@ ms.assetid: 86810629-cf2a-43e8-86a2-847444119fc1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7bae98a8df1d8b8ff843bd333083c4c6ad68848c
-ms.sourcegitcommit: 4c129bb04ea4916c78446e89fbff956397cbe828
+ms.openlocfilehash: 4ae2d837179e3b661bfbfa68d1db429674e20de5
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83343180"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699394"
 ---
 # <a name="find-help-for-using-configuration-manager"></a>Najít nápovědu k použití Configuration Manager
 
@@ -23,7 +23,7 @@ ms.locfileid: "83343180"
 
 V tomto článku najdete následující oddíly s více prostředky, které vám pomůžou najít nápovědu k používání Configuration Manager:  
 
-- [Dokumentace k produktu](#bkmk_Info)  
+- [Produktová dokumentace](#bkmk_Info)  
 
 - [Sdílení názoru na produkt](#product-feedback)  
 
@@ -35,9 +35,9 @@ Nápovědu k přístupnosti produktů najdete v tématu [funkce usnadnění](acc
 
 
 
-##  <a name="product-documentation"></a><a name="bkmk_Info"></a>Dokumentace k produktu  
+##  <a name="product-documentation"></a><a name="bkmk_Info"></a> Dokumentace k produktu  
 
-Chcete-li získat přístup k nejaktuálnější dokumentaci k produktu, začněte v [indexu knihovny](https://docs.microsoft.com/sccm/).  
+Chcete-li získat přístup k nejaktuálnější dokumentaci k produktu, začněte v [indexu knihovny](/sccm/).  
 
 <a name="BKMK_SearchTips"></a>  
 
@@ -47,7 +47,7 @@ Tipy k hledání, poskytování zpětné vazby a další informace o používán
 
 <a name="product-feedback"></a>
 
-## <a name="product-feedback-starting-with-version-1806"></a><a name="BKMK_1806Feedback"></a>Váš názor na produkt od verze 1806
+## <a name="product-feedback-starting-with-version-1806"></a><a name="BKMK_1806Feedback"></a> Váš názor na produkt od verze 1806
 
 Od verze Configuration Manager 1806 můžete odeslat zpětnou vazbu produktu přímo z konzoly. Pokud potřebujete připojit protokoly, použijte [Centrum zpětné vazby](#BKMK_FeedbackHub). Můžete provést následující akce: <!--1357542-->
 
@@ -112,33 +112,33 @@ Když **odešlete smajlíka** nebo **odešlete zamračení**, odešlou se násle
 
 
 
-### <a name="send-feedback-that-you-saved-for-later-submission"></a><a name="BKMK_NoInternet"></a>Odeslat zpětnou vazbu, kterou jste uložili pro pozdější odeslání
+### <a name="send-feedback-that-you-saved-for-later-submission"></a><a name="BKMK_NoInternet"></a> Odeslat zpětnou vazbu, kterou jste uložili pro pozdější odeslání
 
 1. V dolní části okna **poskytnout zpětnou vazbu** klikněte na **Uložit** . 
 2. Uložte soubor. zip. Pokud místní počítač nemá přístup k Internetu, zkopírujte soubor na počítač připojený k Internetu. 
-3. V případě potřeby zkopírujte složku UploadOfflineFeedback nacházející se v`cd.latest\SMSSETUP\Tools\UploadOfflineFeedback\`
+3. V případě potřeby zkopírujte složku UploadOfflineFeedback nacházející se v `cd.latest\SMSSETUP\Tools\UploadOfflineFeedback\`
     - Další informace o složce CD. poslední najdete [na disku CD. Poslední složka](../servers/manage/the-cd.latest-folder.md)
 
 4. Na počítači připojeném k Internetu otevřete příkazový řádek. 
-5. Spusťte následující příkaz:`UploadOfflineFeedback.exe -f c:\folder\location_of.zip`
+5. Spusťte následující příkaz: `UploadOfflineFeedback.exe -f c:\folder\location_of.zip`
     
     - Volitelně můžete zadat následující parametry:
-        -  `-t, --timeout`Časový limit pro odeslání dat v sekundách 0 je neomezený. Výchozí hodnota je 30.
-        - `-s --silent`Žádné protokolování do konzoly (nelze kombinovat s--verbose)
-        - `-v, --verbose`Výstup podrobného protokolování do konzoly (nemůže kombinovat s--Silent)
-        - `--help`Zobrazí obrazovku help.
+        -  `-t, --timeout` Časový limit pro odeslání dat v sekundách 0 je neomezený. Výchozí hodnota je 30.
+        - `-s --silent`  Žádné protokolování do konzoly (nelze kombinovat s--verbose)
+        - `-v, --verbose` Výstup podrobného protokolování do konzoly (nemůže kombinovat s--Silent)
+        - `--help` Zobrazí obrazovku help.
     
     - Počínaje verzí 1910 podporuje nástroj UploadOfflineFeedback použití proxy server. Můžete zadat následující parametry:
-        - `-x, --proxy`Určuje proxy server připojení k Internetu.
-        - `-o, --port`Určuje port pro proxy server připojení k Internetu.
-        - `-u, --user`Určuje uživatelské jméno pro proxy server připojení k Internetu.
-        - `-w, --password`Určuje heslo pro proxy server připojení k Internetu. Pokud chcete vytvořit výzvu k zadání hesla, zadejte hvězdičku (&#42;). Heslo se při zadání na příkazovém řádku hesla nezobrazí. Důrazně doporučujeme použít hvězdičku (&#42;) k vytvoření výzvy k zadání hesla, protože prostý text na příkazovém řádku je méně bezpečný.
-        - `-i`Přeskočit kontrolu připojení: Přeskočí kontrolu síťového připojení, stačí nahrát zpětnou vazbu se zadaným nastavením.
+        - `-x, --proxy` Určuje proxy server připojení k Internetu.
+        - `-o, --port` Určuje port pro proxy server připojení k Internetu.
+        - `-u, --user` Určuje uživatelské jméno pro proxy server připojení k Internetu.
+        - `-w, --password` Určuje heslo pro proxy server připojení k Internetu. Pokud chcete vytvořit výzvu k zadání hesla, zadejte hvězdičku (&#42;). Heslo se při zadání na příkazovém řádku hesla nezobrazí. Důrazně doporučujeme použít hvězdičku (&#42;) k vytvoření výzvy k zadání hesla, protože prostý text na příkazovém řádku je méně bezpečný.
+        - `-i` Přeskočit kontrolu připojení: Přeskočí kontrolu síťového připojení, stačí nahrát zpětnou vazbu se zadaným nastavením.
 
-## <a name="confirmation-of-console-feedback"></a><a name="bkmk_feedbackid"></a>Potvrzení zpětné vazby z konzoly
+## <a name="confirmation-of-console-feedback"></a><a name="bkmk_feedbackid"></a> Potvrzení zpětné vazby z konzoly
 
 <!--3556010-->
-Od verze 1902 se při odesílání zpětné vazby prostřednictvím konzoly Configuration Manager nebo souboru UploadOfflineFeedback. exe zobrazí potvrzovací zpráva. Tato zpráva obsahuje **ID zpětné vazby**, které můžete společnosti Microsoft poskytnout jako identifikátor sledování.
+Od verze 1902 se při odesílání zpětné vazby prostřednictvím konzoly Configuration Manager nebo UploadOfflineFeedback.exe zobrazí potvrzovací zpráva. Tato zpráva obsahuje **ID zpětné vazby**, které můžete společnosti Microsoft poskytnout jako identifikátor sledování.
 
 - Chcete-li zkopírovat **ID zpětné vazby**, vyberte ikonu kopírování vedle ID nebo použijte klávesovou zkratku **CTRL**  +  **C** .
   - Tento identifikátor není uložený na vašem počítači, proto ho nezapomeňte před zavřením okna zkopírovat.
@@ -147,9 +147,9 @@ Od verze 1902 se při odesílání zpětné vazby prostřednictvím konzoly Conf
    ![Potvrzení zpětné vazby z konzoly nástroje v Configuration Manager 1902](media/1902-feedback-id-example.png)
 - Nástroj příkazového řádku **UploadOfflineFeedback** zapisuje **FeedbackID** do konzoly, pokud se nepoužívá-s nebo--Silent.
 
-  ![Potvrzení zpětné vazby z UploadOfflineFeedback. exe v Configuration Manager 1902](media/1902-offline-feedback-id-example.png)
+  ![Potvrzení zpětné vazby z UploadOfflineFeedback.exe v Configuration Manager 1902](media/1902-offline-feedback-id-example.png)
 
-##  <a name="product-feedback-for-versions-1802-and-earlier"></a><a name="BKMK_FeedbackHub"></a>Názory na produkt pro verze 1802 a starší
+##  <a name="product-feedback-for-versions-1802-and-earlier"></a><a name="BKMK_FeedbackHub"></a> Názory na produkt pro verze 1802 a starší
 
 Nahlaste potenciální vady produktu prostřednictvím integrované [aplikace centra pro názory](https://support.microsoft.com/help/4021566/windows-10-send-feedback-to-microsoft-with-feedback-hub-app) na Windows 10. Když **přidáte novou zpětnou vazbu**, nezapomeňte vybrat kategorii **Správa podniku** a pak vybrat jednu z následujících podkategorií:
 - Klient nástroje Configuration Manager
@@ -167,12 +167,12 @@ Pokračujte na [stránku UserVoice](https://configurationmanager.uservoice.com/)
   - Chceme vaše hlasy ve službě UserVoice předat, abyste je mohli používat na dalších položkách.
   - Nové žádosti o změnu návrhu pro tuto funkci můžete zazálohovat, abychom nám pomohli zjistit další nejdůležitější vylepšení této funkce.
 
-##  <a name="configuration-manager-team-blog"></a><a name="BKMK_ProductGroupBlog"></a>Blog týmu Configuration Manager  
+##  <a name="configuration-manager-team-blog"></a><a name="BKMK_ProductGroupBlog"></a> Blog týmu Configuration Manager  
 
 Configuration Manager technické a partnerské týmy používají [blog Enterprise mobility + Security](https://cloudblogs.microsoft.com/enterprisemobility/?product=system-center-configuration-manager) k poskytování technických informací a dalších zpráv o Configuration Manager a souvisejících technologiích. Naše příspěvky blogu doplňují dokumentaci k produktu a informace o podpoře.  
 
 
-##  <a name="support-options-and-community-resources"></a><a name="BKMK_SupportOptions"></a>Možnosti podpory a komunitní zdroje  
+##  <a name="support-options-and-community-resources"></a><a name="BKMK_SupportOptions"></a> Možnosti podpory a komunitní zdroje  
 
 Následující odkazy obsahují informace o možnostech podpory a komunitních zdrojích:  
 

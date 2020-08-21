@@ -10,12 +10,12 @@ ms.assetid: 61f5c774-7667-44ae-b8e4-a4951318b183
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 102d07f29b9addd1f2c37dd741db09e972cd5802
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 30b57de75e637aa083070832783647b8ad35b4a7
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81718837"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700527"
 ---
 # <a name="install-site-system-roles-for-configuration-manager"></a>Nainstalovat role systému lokality pro Configuration Manager
 
@@ -38,7 +38,7 @@ Ve výchozím nastavení platí, že když Configuration Manager nainstaluje rol
 
 Pro instalaci rolí používá Configuration Manager **účet instalace systému lokality** . Tento účet zadáte při instalaci role. Ve výchozím nastavení je tento účet účet místního systému počítače serveru lokality. Účet uživatele domény můžete zadat jako účet instalace systému lokality. Další informace najdete v tématu [účty – účet instalace systému lokality](../../../plan-design/hierarchy/accounts.md#site-system-installation-account).
 
-## <a name="install-roles-on-an-existing-site-system-server"></a><a name="bkmk_addrole"></a>Instalace rolí na existující server systému lokality
+## <a name="install-roles-on-an-existing-site-system-server"></a><a name="bkmk_addrole"></a> Instalace rolí na existující server systému lokality
 
 1. V konzole Configuration Manager otevřete pracovní prostor **Správa** . Rozbalte položku **Konfigurace lokality**a vyberte uzel **servery a role systému lokality** . Vyberte existující server systému lokality, na kterém chcete nainstalovat nové role systému lokality.
 
@@ -56,9 +56,9 @@ Pro instalaci rolí používá Configuration Manager **účet instalace systému
 1. Dokončete průvodce. Pro konkrétní role se můžou zobrazit další stránky. Další informace najdete v tématu [Možnosti konfigurace pro role systému lokality](configuration-options-for-site-system-roles.md).
 
 > [!TIP]
-> Rutina **New-CMSiteSystemServer**prostředí Windows PowerShell provádí stejnou funkci jako tento postup. Další informace najdete v tématu [New-CMSiteSystemServer](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmsitesystemserver?view=sccm-ps).
+> Rutina **New-CMSiteSystemServer**prostředí Windows PowerShell provádí stejnou funkci jako tento postup. Další informace najdete v tématu [New-CMSiteSystemServer](/powershell/module/configurationmanager/new-cmsitesystemserver?view=sccm-ps).
 
-## <a name="install-roles-on-a-new-site-system-server"></a><a name="bkmk_createnew"></a>Instalovat role na nový server systému lokality
+## <a name="install-roles-on-a-new-site-system-server"></a><a name="bkmk_createnew"></a> Instalovat role na nový server systému lokality
 
 1. V konzole Configuration Manager otevřete pracovní prostor **Správa** . Rozbalte položku **Konfigurace lokality**a vyberte uzel **servery a role systému lokality** .
 
@@ -76,7 +76,7 @@ Pro instalaci rolí používá Configuration Manager **účet instalace systému
 1. Dokončete průvodce. Pro konkrétní role se můžou zobrazit další stránky. Další informace najdete v tématu [Možnosti konfigurace pro role systému lokality](configuration-options-for-site-system-roles.md).
 
 > [!TIP]
-> Rutina **New-CMSiteSystemServer**prostředí Windows PowerShell provádí stejnou funkci jako tento postup. Další informace najdete v tématu [New-CMSiteSystemServer](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmsitesystemserver?view=sccm-ps).
+> Rutina **New-CMSiteSystemServer**prostředí Windows PowerShell provádí stejnou funkci jako tento postup. Další informace najdete v tématu [New-CMSiteSystemServer](/powershell/module/configurationmanager/new-cmsitesystemserver?view=sccm-ps).
 
 ## <a name="next-steps"></a>Další kroky
 

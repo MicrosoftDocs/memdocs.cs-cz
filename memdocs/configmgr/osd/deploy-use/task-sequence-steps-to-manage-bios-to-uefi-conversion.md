@@ -10,12 +10,12 @@ ms.assetid: bd3df04a-902f-4e91-89eb-5584b47d9efa
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 761270fe9419330e2d60d0483554ee6c932c1b26
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: bf108cec074129f9b70e7cd2658cf2b1c8c10bc2
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88124881"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697904"
 ---
 # <a name="task-sequence-steps-to-manage-bios-to-uefi-conversion"></a>Kroky pořadí úloh pro správu převodu systému BIOS na UEFI
 
@@ -70,7 +70,7 @@ V existujícím pořadí úkolů pro instalaci operačního systému přidejte n
     > [!TIP]
     > Ve výchozím nastavení je velikost oddílu EFI 500 MB. V některých prostředích je spouštěcí bitová kopie pro uložení na tomto oddílu příliš velká. Pokud chcete tento problém obejít, zvětšete velikost oddílu EFI. Nastavte ho například na 1 GB.<!-- SCCMDocs#1024 -->
 
-## <a name="convert-from-bios-to-uefi-during-in-place-upgrade"></a><a name="bkmk_ipu"></a>Převod ze systému BIOS na rozhraní UEFI během místního upgradu
+## <a name="convert-from-bios-to-uefi-during-in-place-upgrade"></a><a name="bkmk_ipu"></a> Převod ze systému BIOS na rozhraní UEFI během místního upgradu
 
 Windows 10 obsahuje jednoduchý nástroj pro převod, **MBR2GPT**. Automatizuje proces opětovného rozdělení pevného disku na hardware s podporou rozhraní UEFI. Nástroj pro převod můžete integrovat do místního procesu upgradu na Windows 10. Zkombinujte tento nástroj s pořadím úkolů upgradu a nástrojem výrobce OEM, který převede firmware ze systému BIOS na rozhraní UEFI.
 
@@ -86,12 +86,12 @@ Windows 10 obsahuje jednoduchý nástroj pro převod, **MBR2GPT**. Automatizuje 
 
 1. Upravte pořadí úkolů. Ve skupině **po zpracování** proveďte následující změny:
 
-    1. Přidejte krok **Spustit příkazový řádek** . Zadejte příkazový řádek pro nástroj MBR2GPT. Při spuštění v úplném operačním systému ho nakonfigurujte tak, aby se disk přetajnal z MBR na GPT, aniž by bylo potřeba upravovat nebo odstraňovat data. Do **příkazového řádku**zadejte následující příkaz:`MBR2GPT.exe /convert /disk:0 /AllowFullOS`
+    1. Přidejte krok **Spustit příkazový řádek** . Zadejte příkazový řádek pro nástroj MBR2GPT. Při spuštění v úplném operačním systému ho nakonfigurujte tak, aby se disk přetajnal z MBR na GPT, aniž by bylo potřeba upravovat nebo odstraňovat data. Do **příkazového řádku**zadejte následující příkaz: `MBR2GPT.exe /convert /disk:0 /AllowFullOS`
 
     > [!TIP]
     > Můžete se také rozhodnout spustit nástroj MBR2GPT.EXE v prostředí Windows PE, nikoli v plném operačním systému. Přidejte krok pro restartování počítače v prostředí Windows PE před krokem pro spuštění nástroje MBR2GPT.EXE. Pak z příkazového řádku odeberte možnost **/AllowFullOS** .
 
-    Další informace o nástroji a dostupných možnostech najdete v tématu [MBR2GPT.EXE](https://docs.microsoft.com/windows/deployment/mbr-to-gpt).
+    Další informace o nástroji a dostupných možnostech najdete v tématu [MBR2GPT.EXE](/windows/deployment/mbr-to-gpt).
 
     1. Přidejte krok ke spuštění nástroje výrobce OEM, který převede firmware ze systému BIOS na rozhraní UEFI. Tento krok je obvykle **spouštěn z příkazového řádku**s příkazovým řádkem pro spuštění nástroje OEM.
 

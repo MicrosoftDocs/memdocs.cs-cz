@@ -10,12 +10,12 @@ ms.assetid: c14a3607-253b-41fb-8381-ae2d534a9022
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 65071493834c33dac7581075b835e023c74f5706
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: f22a28c173c980bdf598a5afc8a969a86ec96cc2
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128082"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699768"
 ---
 # <a name="install-in-console-updates-for-configuration-manager"></a>Instalace konzolových aktualizací pro Configuration Manager
 
@@ -88,11 +88,11 @@ Ve výchozím nastavení je třída **balíčky aktualizací** (SMS_CM_Updatepac
 
 - Přiřaďte účet k oboru **vše** .  
 
-## <a name="before-you-install-an-in-console-update"></a><a name="bkmk_beforeinstall"></a>Před instalací konzolové aktualizace  
+## <a name="before-you-install-an-in-console-update"></a><a name="bkmk_beforeinstall"></a> Před instalací konzolové aktualizace  
 
 Než nainstalujete aktualizaci z konzoly Configuration Manager, přečtěte si následující kroky.  
 
-### <a name="step-1-review-the-update-checklist"></a><a name="bkmk_step1"></a>Krok 1: Kontrola kontrolního seznamu aktualizací  
+### <a name="step-1-review-the-update-checklist"></a><a name="bkmk_step1"></a> Krok 1: Kontrola kontrolního seznamu aktualizací  
 
 Před zahájením aktualizace si přečtěte příslušný kontrolní seznam aktualizací, který bude trvat:
 
@@ -104,7 +104,7 @@ Před zahájením aktualizace si přečtěte příslušný kontrolní seznam akt
 
 - [Kontrolní seznam pro instalaci aktualizace 1906](checklist-for-installing-update-1906.md)  
 
-### <a name="step-2-run-the-prerequisite-checker-before-installing-an-update"></a><a name="bkmk_step2"></a>Krok 2: spuštění kontroly požadovaných součástí před instalací aktualizace  
+### <a name="step-2-run-the-prerequisite-checker-before-installing-an-update"></a><a name="bkmk_step2"></a> Krok 2: spuštění kontroly požadovaných součástí před instalací aktualizace  
 
 Než nainstalujete aktualizaci, zvažte, jestli by nebylo dobré spustit pro ni kontrolu požadovaných součástí. Pokud před instalací aktualizace spustíte kontrolu požadovaných součástí:  
 
@@ -135,7 +135,7 @@ Později při instalaci aktualizace můžete nakonfigurovat aktualizaci tak, aby
 
     3. Další informace najdete v tématu **souboru ConfigMgrPrereq. log** na serveru lokality.  
 
-## <a name="install-in-console-updates"></a><a name="bkmk_install"></a>Instalace konzolových aktualizací  
+## <a name="install-in-console-updates"></a><a name="bkmk_install"></a> Instalace konzolových aktualizací  
 
 Až budete připraveni k instalaci aktualizací z konzoly Configuration Manager, začněte s lokalitou nejvyšší úrovně ve vaší hierarchii. Tato lokalita je buď lokalita centrální správy, nebo samostatná primární lokalita.  
 
@@ -149,7 +149,7 @@ Nainstalujte aktualizaci mimo běžnou pracovní dobu pro každou lokalitu, abys
 
 - Po úspěšném dokončení instalace aktualizace serverem lokality se automaticky aktualizují všechny příslušné role systému lokality. Všechny distribuční body se ale neinstalují znovu a nejdou přejít do režimu offline, aby se aktualizovaly současně. Místo toho server lokality používá nastavení distribuce obsahu lokality k distribuci aktualizace do podmnožiny distribučních bodů najednou. Výsledkem je, že pouze některé distribuční body jsou offline, aby se aktualizace nainstalovala. Distribuční body, které nezačaly aktualizovat nebo které dokončily aktualizaci, zůstávají online a můžou klientům poskytovat obsah.
 
-### <a name="overview-of-in-console-update-installation"></a><a name="bkmk_overview"></a>Přehled instalace konzolových aktualizací  
+### <a name="overview-of-in-console-update-installation"></a><a name="bkmk_overview"></a> Přehled instalace konzolových aktualizací  
 
 #### <a name="1-when-the-update-installation-starts"></a>1. Při spuštění instalace aktualizace
 
@@ -235,11 +235,11 @@ Po dokončení aktualizace konzoly ověřte, že je verze konzoly a lokality spr
 > [!Note]  
 > Verze konzoly se mírně liší od verze lokality. Podverze konzoly odpovídá verzi Configuration Manager vydané verze. Například v Configuration Manager verze 1802 je počáteční verze lokality 5.0.8634.1000 a počáteční verze konzoly je 5. **1802**. 1082,1700. Čísla Build (1082) a revize (1700) se můžou v budoucích opravách hotfix změnit.
 
-### <a name="to-start-the-update-installation-at-the-top-level-site"></a><a name="bkmk_toptier"></a>Postup spuštění instalace aktualizace v lokalitě nejvyšší úrovně  
+### <a name="to-start-the-update-installation-at-the-top-level-site"></a><a name="bkmk_toptier"></a> Postup spuštění instalace aktualizace v lokalitě nejvyšší úrovně  
 
 V lokalitě nejvyšší úrovně ve vaší hierarchii v konzole Configuration Manager klikněte na pracovní prostor **Správa** a vyberte uzel **aktualizace a údržba** . Vyberte aktualizaci se stavem **k dispozici**a pak na pásu karet zvolte **instalovat balíček aktualizací** .  
 
-### <a name="to-start-the-update-installation-at-a-secondary-site"></a><a name="bkmk_secondary"></a>Postup spuštění instalace aktualizace v sekundární lokalitě  
+### <a name="to-start-the-update-installation-at-a-secondary-site"></a><a name="bkmk_secondary"></a> Postup spuštění instalace aktualizace v sekundární lokalitě  
 
 Po aktualizaci nadřazené primární lokality sekundární lokality aktualizujte sekundární lokalitu v konzole Configuration Manager. K tomu slouží **Průvodce upgradem sekundární lokality**.  
 
@@ -315,7 +315,7 @@ Ne všechny úlohy se dokončí okamžitě. Některé úlohy se nespustí, dokud
   - Nespustí se, dokud všechny lokality v hierarchii nedokončí instalaci aktualizace.
   - Jednotlivé funkce se nezobrazují.
 
-## <a name="retry-installation-of-a-failed-update"></a><a name="bkmk_retry"></a>Opakování instalace aktualizace, která se nezdařila  
+## <a name="retry-installation-of-a-failed-update"></a><a name="bkmk_retry"></a> Opakování instalace aktualizace, která se nezdařila  
 
 Když se nějakou aktualizaci nepodaří nainstalovat, přečtěte si zpětnou vazbu v konzole, abyste zjistili, jak vyřešit upozornění a chyby. Další podrobnosti najdete v **protokolu souboru ConfigMgrPrereq. log** na serveru lokality. Než zopakujete instalaci aktualizace, je nutné opravit chyby a opravit upozornění.  
 
@@ -358,7 +358,7 @@ V pracovním prostoru **monitorování** vyberte uzel **stav údržby lokality**
 
 - **Ignorovat upozornění na předpoklady**: Pokud se instalace aktualizace zastaví z důvodu upozornění, můžete vybrat **Ignorovat upozornění na předpoklady**. Tato akce umožní, aby instalace aktualizace pokračovala po několika minutách a použila možnost Ignorovat upozornění na předpoklady.  
 
-## <a name="after-a-site-installs-an-update"></a><a name="bkmk_after"></a>Po instalaci aktualizace lokality  
+## <a name="after-a-site-installs-an-update"></a><a name="bkmk_after"></a> Po instalaci aktualizace lokality  
 
 Po aktualizaci lokality si projděte kontrolní seznam po aktualizaci pro příslušnou verzi:  
 
@@ -370,7 +370,7 @@ Po aktualizaci lokality si projděte kontrolní seznam po aktualizaci pro přís
 
 - [Kontrolní seznam po aktualizaci pro verzi 1906](checklist-for-installing-update-1906.md#post-update-checklist)  
 
-## <a name="enable-optional-features-from-updates"></a><a name="bkmk_options"></a>Povolit volitelné funkce z aktualizací  
+## <a name="enable-optional-features-from-updates"></a><a name="bkmk_options"></a> Povolit volitelné funkce z aktualizací  
 
 Pokud aktualizace obsahuje jednu nebo více volitelných funkcí, máte možnost povolit tyto funkce ve vaší hierarchii. Povolte funkce při instalaci aktualizace nebo se vraťte do konzoly později, aby se povolily volitelné funkce.
 
@@ -411,7 +411,7 @@ Následující funkce jsou volitelné v nejnovější verzi Configuration Manage
 - [Aktualizace ovladačů Surface](../../../sum/get-started/configure-classifications-and-products.md) <!--1098490,82AD973A-7CDF-4B67-A665-72875D6E099A-->
 - [Brána pro správu cloudu](../../clients/manage/cmg/plan-cloud-management-gateway.md) <!--1101764,DD043119-789C-4158-AC79-725E999F385A-->
 - [Vytvoření PFX](../../../protect/deploy-use/introduction-to-certificate-profiles.md) <!--1321368,CED76B79-929C-4C45-981F-B9BCA6D38A17-->
-- [Konektor Azure Log Analytics](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm) <!--1258052,73A7EC4D-EF22-4EA4-82A9-419C2A8CFC4D-->
+- [Konektor Azure Log Analytics](/azure/azure-monitor/platform/collect-sccm) <!--1258052,73A7EC4D-EF22-4EA4-82A9-419C2A8CFC4D-->
 - [Zásady ochrany před zneužitím v programu Windows Defender](../../../protect/deploy-use/create-deploy-exploit-guard-policy.md) <!--1355468,8491D4C8-8484-46B8-BCD6-17DC2CADBAEB-->
 - [SÍŤ VPN pro Windows 10](../../../protect/deploy-use/vpn-profiles.md) <!--1283610,EDBEBA3D-3A4D-4465-84D9-D71EB811E7F6-->
 - [Údržba kolekce podporující clustery (skupiny serverů)](../../../sum/deploy-use/service-a-server-group.md) <!--1081776,290B66D8-C735-4895-B59A-DD732D84A697-->
@@ -422,11 +422,11 @@ Následující funkce jsou volitelné v nejnovější verzi Configuration Manage
 >
 > Další informace o funkcích, které jsou k dispozici pouze ve větvi Technical Preview, najdete v tématu [Technical Preview](../../get-started/technical-preview.md).
 
-## <a name="use-pre-release-features-from-updates"></a><a name="bkmk_prerelease"></a>Použití předběžných verzí funkcí z aktualizací
+## <a name="use-pre-release-features-from-updates"></a><a name="bkmk_prerelease"></a> Použití předběžných verzí funkcí z aktualizací
 
 Aktuální větev obsahuje předběžné verze funkcí pro prvotní testování v produkčním prostředí. Další informace najdete v tématu [předběžné verze funkcí](pre-release-features.md).
 
-## <a name="frequently-asked-questions"></a><a name="bkmk_faq"></a>Nejčastější dotazy
+## <a name="frequently-asked-questions"></a><a name="bkmk_faq"></a> Nejčastější dotazy
 
 ### <a name="why-dont-i-see-certain-updates-in-my-console"></a>Proč v konzole nevidím některé aktualizace?
 
@@ -436,4 +436,4 @@ Pokud v konzole nemůžete po úspěšné synchronizaci s cloudovou službou Mic
 
     Pokud si myslíte, že máte požadované konfigurace a předpoklady pro chybějící aktualizaci, zkontrolujte, jestli je spojovací bod služby v online režimu. Pak pomocí možnosti **Vyhledat aktualizace** v uzlu **aktualizace a údržba** vynuťte kontrolu. Pokud je spojovací bod služby v režimu offline, použijte nástroj pro připojení služby k ruční synchronizaci s cloudovou službou.  
 
-- Váš účet nemá správná oprávnění pro správu na základě rolí pro zobrazení aktualizací v konzole Configuration Manager. Další informace najdete v tématu [oprávnění ke správě aktualizací](#assign-permissions-to-view-and-manage-updates-and-features).  
+- Váš účet nemá správná oprávnění pro správu na základě rolí pro zobrazení aktualizací v konzole Configuration Manager. Další informace najdete v tématu [oprávnění ke správě aktualizací](#assign-permissions-to-view-and-manage-updates-and-features).

@@ -10,12 +10,12 @@ ms.assetid: 35e237b6-9f7b-4189-90e7-8eca92ae7d3d
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: b30380f4e272050b7224b52d092f39aa8ab5bad4
-ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
+ms.openlocfilehash: bda64f11d5d2ee9498ce69224ec9a52efc0df902
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85383168"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700329"
 ---
 # <a name="supported-sql-server-versions-for-configuration-manager"></a>Podporované verze SQL Server pro Configuration Manager
 
@@ -23,7 +23,7 @@ ms.locfileid: "85383168"
 
 Každá Configuration Manager lokalita vyžaduje podporovanou SQL Server verzi a konfiguraci pro hostování databáze lokality.  
 
-## <a name="sql-server-instances-and-locations"></a><a name="bkmk_Instances"></a>SQL Server instance a umístění
+## <a name="sql-server-instances-and-locations"></a><a name="bkmk_Instances"></a> SQL Server instance a umístění
 
 ### <a name="central-administration-site-and-primary-sites"></a>Lokalita centrální správy a primární lokality
 
@@ -57,15 +57,15 @@ Následující konfigurace nejsou podporovány:
 
 SQL Server transakční replikace je podporovaná jenom pro replikaci objektů na body správy, které jsou nakonfigurované pro použití [replik databáze](../../servers/deploy/configure/database-replicas-for-management-points.md).  
 
-## <a name="supported-versions-of-sql-server"></a><a name="bkmk_SQLVersions"></a>Podporované verze SQL Server
+## <a name="supported-versions-of-sql-server"></a><a name="bkmk_SQLVersions"></a> Podporované verze SQL Server
 
 V hierarchii s více lokalitami můžou různé lokality používat k hostování databáze lokality různé verze SQL Server. Pokud jsou splněné následující položky:
 
 - Configuration Manager podporuje verze SQL Server, které používáte.
 - Používané verze SQL Server zůstávají v podpoře Microsoftu.
-- SQL Server podporuje replikaci mezi dvěma verzemi SQL Server. Další informace najdete v tématu [zpětné kompatibility replikace SQL Server](https://docs.microsoft.com/sql/relational-databases/replication/replication-backward-compatibility).
+- SQL Server podporuje replikaci mezi dvěma verzemi SQL Server. Další informace najdete v tématu [zpětné kompatibility replikace SQL Server](/sql/relational-databases/replication/replication-backward-compatibility).
 
-Pro SQL Server 2016 a předchozí se podpora každé verze SQL a aktualizace Service Pack řídí [zásadami životního cyklu Microsoftu](https://aka.ms/sqllifecycle). Podpora pro konkrétní aktualizaci Service Pack SQL Server zahrnuje kumulativní aktualizace, pokud nepřeruší zpětnou kompatibilitu se základní verzí aktualizace Service Pack. Počínaje SQL Server 2017 se aktualizace Service Pack neuvolní, protože se řídí [moderním modelem údržby](https://docs.microsoft.com/archive/blogs/sqlreleaseservices/announcing-the-modern-servicing-model-for-sql-server). Tým SQL Server doporučuje průběžnou a [aktivní instalaci kumulativních aktualizací](https://docs.microsoft.com/archive/blogs/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism) , jakmile budou k dispozici.
+Pro SQL Server 2016 a předchozí se podpora každé verze SQL a aktualizace Service Pack řídí [zásadami životního cyklu Microsoftu](https://aka.ms/sqllifecycle). Podpora pro konkrétní aktualizaci Service Pack SQL Server zahrnuje kumulativní aktualizace, pokud nepřeruší zpětnou kompatibilitu se základní verzí aktualizace Service Pack. Počínaje SQL Server 2017 se aktualizace Service Pack neuvolní, protože se řídí [moderním modelem údržby](/archive/blogs/sqlreleaseservices/announcing-the-modern-servicing-model-for-sql-server). Tým SQL Server doporučuje průběžnou a [aktivní instalaci kumulativních aktualizací](/archive/blogs/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism) , jakmile budou k dispozici.
 
 Pokud není uvedeno jinak, jsou podporovány následující verze SQL Server se všemi aktivními verzemi Configuration Manager. Pokud se přidá podpora pro novou verzi SQL Server, poznamenala se Configuration Manager verze, která tuto podporu přidává. Podobně, pokud je podpora zastaralá, vyhledejte podrobnosti o ovlivněných verzích Configuration Manager.
 
@@ -74,7 +74,7 @@ Pokud není uvedeno jinak, jsou podporovány následující verze SQL Server se 
 
 ### <a name="sql-server-2019-standard-enterprise"></a>SQL Server 2019: Standard, Enterprise
 
-Počínaje verzí 1910 Configuration Manager můžete použít tuto verzi s kumulativní aktualizací 5 (CU5) nebo novější, pokud je vaše kumulativní aktualizace podporována životním cyklem SQL. CU5 je minimální požadavek na SQL Server 2019, protože řeší problém s [obložením skalárního systému souborů UDF](https://docs.microsoft.com/sql/relational-databases/user-defined-functions/scalar-udf-inlining).
+Počínaje verzí 1910 Configuration Manager můžete použít tuto verzi s kumulativní aktualizací 5 (CU5) nebo novější, pokud je vaše kumulativní aktualizace podporována životním cyklem SQL. CU5 je minimální požadavek na SQL Server 2019, protože řeší problém s [obložením skalárního systému souborů UDF](/sql/relational-databases/user-defined-functions/scalar-udf-inlining).
 
 Tuto verzi SQL lze použít pro následující lokality:
 
@@ -85,13 +85,13 @@ Tuto verzi SQL lze použít pro následující lokality:
 <!--
 #### Known issue with SQL Server 2019
 
-There's a known issue<!--6436234 with the new [scalar UDF inlining](https://docs.microsoft.com/sql/relational-databases/user-defined-functions/scalar-udf-inlining) feature in SQL 2019. To work around this issue and disable UDF lining, run the following script on the SQL 2019 server:
+There's a known issue<!--6436234 with the new [scalar UDF inlining](/sql/relational-databases/user-defined-functions/scalar-udf-inlining) feature in SQL 2019. To work around this issue and disable UDF lining, run the following script on the SQL 2019 server:
 
 ```sql
 ALTER DATABASE SCOPED CONFIGURATION SET TSQL_SCALAR_UDF_INLINING = OFF  
 ```
 
-While not always necessary, you may need to restart the SQL server after you run this script. For more information, see [Disabling Scalar UDF Inlining without changing the compatibility level](https://docs.microsoft.com/sql/relational-databases/user-defined-functions/scalar-udf-inlining?view=sql-server-ver15#disabling-scalar-udf-inlining-without-changing-the-compatibility-level).
+While not always necessary, you may need to restart the SQL server after you run this script. For more information, see [Disabling Scalar UDF Inlining without changing the compatibility level](/sql/relational-databases/user-defined-functions/scalar-udf-inlining?view=sql-server-ver15#disabling-scalar-udf-inlining-without-changing-the-compatibility-level).
 
 You can safely disable this SQL feature for the site database server because Configuration Manager doesn't use it.
 
@@ -171,7 +171,7 @@ Tuto verzi můžete použít s minimální aktualizací Service Pack a kumulativ
 
 - Sekundární lokalita  
 
-## <a name="required-configurations-for-sql-server"></a><a name="bkmk_SQLConfig"></a>Požadované konfigurace pro SQL Server
+## <a name="required-configurations-for-sql-server"></a><a name="bkmk_SQLConfig"></a> Požadované konfigurace pro SQL Server
 
 Následující konfigurace jsou vyžadovány všemi instalacemi SQL Server, které používáte pro databázi lokality, včetně SQL Server Express. Když Configuration Manager nainstaluje SQL Server Express jako součást instalace sekundární lokality, vytvoří tyto konfigurace automaticky.  
 
@@ -187,7 +187,7 @@ Configuration Manager podporuje dvě výjimky této kolace pro standard Čína G
 
 ### <a name="database-compatibility-level"></a>Úroveň kompatibility databáze
 
-Configuration Manager vyžaduje, aby úroveň kompatibility databáze lokality nebyla nižší než nejnižší podporovaná verze SQL Server pro Configuration Manager verzi. Například počínaje verzí 1702 potřebujete [úroveň kompatibility databáze](https://docs.microsoft.com/sql/relational-databases/databases/view-or-change-the-compatibility-level-of-a-database) větší nebo rovnou 110. <!-- SMS.506266-->
+Configuration Manager vyžaduje, aby úroveň kompatibility databáze lokality nebyla nižší než nejnižší podporovaná verze SQL Server pro Configuration Manager verzi. Například počínaje verzí 1702 potřebujete [úroveň kompatibility databáze](/sql/relational-databases/databases/view-or-change-the-compatibility-level-of-a-database) větší nebo rovnou 110. <!-- SMS.506266-->
 
 ### <a name="sql-server-features"></a>SQL Server funkce
 
@@ -205,7 +205,7 @@ Pro každou lokalitu použijte vyhrazenou instanci SQL Server. Instancí může 
 
 ### <a name="sql-server-memory"></a>SQL Server paměti
 
-Vyhradit paměť pro SQL Server pomocí SQL Server Management Studio. V části **možnosti paměti serveru**nastavte nastavení **Minimální paměti serveru** . Další informace o konfiguraci tohoto nastavení najdete v tématu [SQL Server možnosti konfigurace paměťového serveru](https://docs.microsoft.com/sql/database-engine/configure-windows/server-memory-server-configuration-options).  
+Vyhradit paměť pro SQL Server pomocí SQL Server Management Studio. V části **možnosti paměti serveru**nastavte nastavení **Minimální paměti serveru** . Další informace o konfiguraci tohoto nastavení najdete v tématu [SQL Server možnosti konfigurace paměťového serveru](/sql/database-engine/configure-windows/server-memory-server-configuration-options).  
 
 - **Pro databázový server, který nainstalujete na stejný počítač jako server lokality**, omezte paměť pro SQL Server na 50 až 80 procent dostupné adresovatelné systémové paměti.  
 
@@ -219,11 +219,11 @@ Vyhradit paměť pro SQL Server pomocí SQL Server Management Studio. V části 
 
 ### <a name="sql-nested-triggers"></a>Vnořené aktivační události SQL
 
-Vnořené aktivační události SQL. musí být povolené. Další informace najdete v tématu [Konfigurace možnosti konfigurace serveru s vnořenými triggery](https://docs.microsoft.com/sql/database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option) .
+Vnořené aktivační události SQL. musí být povolené. Další informace najdete v tématu [Konfigurace možnosti konfigurace serveru s vnořenými triggery](/sql/database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option) .
 
 ### <a name="sql-server-clr-integration"></a>Integrace modulu CLR SQL Serveru
 
-Databáze lokality vyžaduje, aby byl povolen modul CLR (Common Language Runtime) SQL Serveru. Tato možnost je povolena automaticky při instalaci Configuration Manager. Další informace o modulu CLR naleznete v tématu [Úvod do SQL Server Integration CLR](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/introduction-to-sql-server-clr-integration).  
+Databáze lokality vyžaduje, aby byl povolen modul CLR (Common Language Runtime) SQL Serveru. Tato možnost je povolena automaticky při instalaci Configuration Manager. Další informace o modulu CLR naleznete v tématu [Úvod do SQL Server Integration CLR](/dotnet/framework/data/adonet/sql/introduction-to-sql-server-clr-integration).  
 
 ### <a name="sql-server-service-broker-ssb"></a>SQL Server Service Broker (SSB)
 
@@ -231,9 +231,9 @@ SQL Server Service Broker se vyžaduje pro replikaci mezi lokalitami i pro jednu
 
 ### <a name="trustworthy-setting"></a>DŮVĚRYHODNÉ nastavení
 
-Configuration Manager automaticky povolí [vlastnost důvěryhodné databáze](https://docs.microsoft.com/sql/relational-databases/security/trustworthy-database-property)SQL. Tato vlastnost je požadována Configuration Manager, aby byla **zapnuta**.
+Configuration Manager automaticky povolí [vlastnost důvěryhodné databáze](/sql/relational-databases/security/trustworthy-database-property)SQL. Tato vlastnost je požadována Configuration Manager, aby byla **zapnuta**.
 
-## <a name="optional-configurations-for-sql-server"></a><a name="bkmk_optional"></a>Volitelné konfigurace pro SQL Server
+## <a name="optional-configurations-for-sql-server"></a><a name="bkmk_optional"></a> Volitelné konfigurace pro SQL Server
 
 Následující konfigurace jsou volitelné pro každou databázi, která používá úplnou instalaci SQL Serveru.  
 
@@ -255,7 +255,7 @@ Pokud počítač se systémem SQL Server nepoužívá ke spuštění služby SQL
 
 Informace o SPN pro databázi lokality najdete v tématu [Správa hlavního názvu služby (SPN) pro server databáze lokality](../../servers/manage/modify-your-infrastructure.md#bkmk_SPN).  
 
-Informace o tom, jak změnit účet, který používá služba SQL Server, najdete v tématu [SCM Services – změna spouštěcího účtu služby](https://docs.microsoft.com/sql/database-engine/configure-windows/scm-services-change-the-service-startup-account).  
+Informace o tom, jak změnit účet, který používá služba SQL Server, najdete v tématu [SCM Services – změna spouštěcího účtu služby](/sql/database-engine/configure-windows/scm-services-change-the-service-startup-account).  
 
 ### <a name="sql-server-reporting-services"></a>SQL Server Reporting Services
 
@@ -290,7 +290,7 @@ Když počítač se systémem SQL Server hostuje databázi z více než jedné l
 
 Pokud máte v počítači se systémem SQL Server povolenou bránu firewall, ujistěte se, že je nakonfigurována tak, aby povolovala porty používané vaším nasazením a v jakémkoli umístění v síti mezi počítači, které komunikují s SQL Server.  
 
-Příklad konfigurace SQL Server pro použití konkrétního portu najdete v tématu [Konfigurace serveru pro naslouchání na specifickém portu TCP](https://docs.microsoft.com/sql/database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port).  
+Příklad konfigurace SQL Server pro použití konkrétního portu najdete v tématu [Konfigurace serveru pro naslouchání na specifickém portu TCP](/sql/database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port).  
 
 ## <a name="upgrade-options-for-sql-server"></a>Možnosti upgradu pro SQL Server
 

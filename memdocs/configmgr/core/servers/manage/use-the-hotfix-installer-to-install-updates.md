@@ -10,26 +10,26 @@ ms.assetid: f3058277-c597-4dac-86d1-41b6f7e62b36
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: a8eed671b723091f2a43350f42ca82d90e0d9da3
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 8c5cc09b7c2723a5dbdd1030cb0053ae75b1ff22
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906138"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699462"
 ---
 # <a name="use-the-hotfix-installer-to-install-updates-for-configuration-manager"></a>Instalace aktualizací pro Configuration Manager pomocí instalačního programu oprav hotfix
 
 *Platí pro: Configuration Manager (Current Branch)*
 
 Některé aktualizace Configuration Manager nejsou z cloudové služby Microsoftu k dispozici a jsou získány pouze mimo IP síť. Příkladem je omezené vydání opravy hotfix, která řeší konkrétní problém.   
-Pokud musíte nainstalovat aktualizaci (nebo opravu hotfix), kterou jste obdrželi od společnosti Microsoft, a tato aktualizace má název souboru, který končí příponou **. exe** (ne **Update. exe**), použijte instalační program oprav hotfix, který je součástí tohoto stažení opravy hotfix, a nainstalujte aktualizaci přímo na server lokality Configuration Manager.  
+Pokud musíte nainstalovat aktualizaci (nebo opravu hotfix), kterou jste obdrželi od společnosti Microsoft, a tato aktualizace má název souboru, který končí příponou **. exe** (ne **update.exe**), použijte instalační program oprav hotfix, který je součástí tohoto stažení opravy hotfix, a nainstalujte aktualizaci přímo na Configuration Manager Server lokality.  
 
-Pokud má soubor opravy hotfix příponu souboru **. Update. exe** , přečtěte si téma [použití nástroje pro registraci aktualizací k importu oprav hotfix do Configuration Manager](../../../core/servers/manage/use-the-update-registration-tool-to-import-hotfixes.md).  
+Pokud má soubor opravy hotfix příponu souboru **.update.exe** , přečtěte si téma [použití nástroje pro registraci aktualizací k importu oprav hotfix do Configuration Manager](../../../core/servers/manage/use-the-update-registration-tool-to-import-hotfixes.md).  
 
 > [!NOTE]  
 > V tomto tématu najdete obecné pokyny k instalaci oprav hotfix, které aktualizují Configuration Manager. Podrobnosti o konkrétní aktualizaci naleznete v příslušném článku ve znalostní bázi Knowledge Base (KB) na webu podpory společnosti Microsoft.  
 
-##  <a name="overview-of-hotfixes-for-configuration-manager"></a><a name="bkmk_Overview"></a>Přehled oprav hotfix pro Configuration Manager  
+##  <a name="overview-of-hotfixes-for-configuration-manager"></a><a name="bkmk_Overview"></a> Přehled oprav hotfix pro Configuration Manager  
 Opravy hotfix pro Configuration Manager jsou podobné těm pro ostatní produkty Microsoftu, jako je například SQL Server, obsahují buď jednu jednotlivou opravu, nebo sadu prostředků (souhrn oprav) a jsou popsané v článku znalostní báze Microsoft Knowledge Base.  
 
 Jednotlivé aktualizace obsahují jednu aktualizaci zaměřenou na konkrétní verzi Configuration Manager.  
@@ -73,16 +73,16 @@ Následující tři skupiny v Configuration Manager lze aktualizovat:
 
 Každá sada aktualizací pro Configuration Manager je samorozbalovací soubor. exe (SFX), který obsahuje soubory potřebné k instalaci aktualizace pro příslušné součásti Configuration Manager. Soubor SFX obvykle obsahuje následující soubory:  
 
-|File|Podrobnosti|  
+|Soubor|Podrobnosti|  
 |----------|-------------|  
-|&lt;Verze produktu \> -QFE-KB – &lt; ID článku KB \> - &lt; platforma \> - &lt; Language \> . exe|Toto je aktualizační soubor. Příkazový řádek tohoto souboru je řízen souborem Updatesetup.exe.<br /><br /> Příklad:<br />CM1511RTM-QFE-KB123456-X64-ENU. exe|  
+|&lt;Verze produktu \> -QFE-KB – &lt; ID článku KB \> - &lt; platforma \> - &lt; Language \> . exe|Toto je aktualizační soubor. Příkazový řádek tohoto souboru je řízen souborem Updatesetup.exe.<br /><br /> Příklad:<br />CM1511RTM-QFE-KB123456-X64-ENU.exe|  
 |Updatesetup.exe|Tato schránka .msi řídí instalaci sady aktualizací.<br /><br /> Po spuštění aktualizace zjistí soubor Updatesetup.exe jazyk zobrazení v počítači, v němž je spuštěn. Výchozím jazykem rozhraní aktualizace je angličtina. Pokud je však podporován jazyk zobrazení nastavený v počítači, zobrazí se uživatelské rozhraní v místním jazyce počítače.|  
 |License_&lt;jazyk\>.rtf|V případě potřeby obsahuje aktualizace jeden nebo více souborů s licencemi v podporovaných jazycích.|  
 |&lt;Produkt&typ aktualizace> – &lt; verze produktu \> - &lt; ID článku znalostní báze Knowledge Base \> - &lt; \> . msp|Pokud se aktualizace vztahuje na Configuration Manager konzolu nebo klienty, obsahuje sada aktualizací samostatné soubory Instalační služba systému Windows opravy (. msp).<br /><br /> Příklad:<br /><br /> **Aktualizace konzoly nástroje Configuration Manager:** ConfigMgr1511-AdminUI-KB1234567-i386.msp<br /><br /> **Aktualizace klienta:** ConfigMgr1511-client-KB1234567-i386. msp<br />ConfigMgr1511-client-KB1234567-x64. msp|  
 
 Sada aktualizací standardně zaznamenává svou činnost do souboru .log na serveru lokality. Soubor protokolu má stejný název jako sada aktualizací a je zapsaný ve složce **%SystemRoot%/Temp** .  
 
-Jakmile spustíte sadu aktualizací, extrahuje soubor se stejným názvem, jako je název sady aktualizací, do dočasné složky v počítači a poté spustí program Updatesetup.exe. Program Updatesetup. exe spustí Průvodce pro číslo verze KB aktualizace softwaru pro Configuration Manager &lt; verzi produktu \> &lt; \> .  
+Jakmile spustíte sadu aktualizací, extrahuje soubor se stejným názvem, jako je název sady aktualizací, do dočasné složky v počítači a poté spustí program Updatesetup.exe. Updatesetup.exe spustí aktualizaci softwaru pro Configuration Manager v &lt; \> &lt; Průvodci číslo verze KB produktu \> .  
 
 V případě rozsahu aktualizace vytvoří průvodce řadu složek v rámci instalační složky Configuration Manager na serveru lokality. Struktura složek má následující podobu:   
 ** \\ \\ &lt; Název serveru \> \ SMS_ &lt; kód lokality \> \HotFix \\ &lt; KB \> \\ &lt; typ aktualizace \> \\ &lt; platforma \> **.  
@@ -123,15 +123,15 @@ Pokud přeinstalujete klienta, Configuration Manager konzolu nebo poskytovatele 
 
 Informace v následujících částech použijte k instalaci aktualizací do každé součásti pro Configuration Manager.  
 
-###  <a name="update-servers"></a><a name="bkmk_servers"></a>Aktualizovat servery  
+###  <a name="update-servers"></a><a name="bkmk_servers"></a> Aktualizovat servery  
 Aktualizace serverů mohou obsahovat aktualizace **lokalit**, **site database**a počítačů, v nichž se spouští instance **poskytovatele serveru SMS**:  
 
-####  <a name="update-a-site"></a><a name="bkmk_site"></a>Aktualizace webu  
+####  <a name="update-a-site"></a><a name="bkmk_site"></a> Aktualizace webu  
 Chcete-li aktualizovat lokalitu Configuration Manager, můžete nainstalovat sadu aktualizací přímo na server lokality, nebo můžete aktualizace nasadit na server lokality po instalaci sady aktualizací do jiné lokality.  
 
 Pokud instalujete aktualizaci na server lokality, proces instalace aktualizací řídí ostatní akce, které jsou vyžadovány k použití aktualizace, jako je např. aktualizace rolí systému lokality. Výjimkou je databáze lokality. Následující část obsahuje informace o aktualizaci databáze lokality.  
 
-####  <a name="update-a-site-database"></a><a name="bkmk_database"></a>Aktualizace databáze lokality  
+####  <a name="update-a-site-database"></a><a name="bkmk_database"></a> Aktualizace databáze lokality  
 Chcete-li aktualizovat databázi lokality, proces instalace spustí soubor s názvem **Update. SQL** v databázi lokality. Proces aktualizace lze nakonfigurovat tak, aby byla databáze lokality aktualizována automaticky, nebo můžete databázi lokality aktualizovat později ručně.  
 
 **Automatická aktualizace databáze lokality**  
@@ -163,12 +163,12 @@ Pokud se rozhodnete, že nechcete automaticky aktualizovat databázi lokality p�
 
 5.  Po instalaci sady aktualizací extrahuje **Update. SQL** do následujícího umístění na serveru lokality: ** \\ \\ &lt; název serveru \> \ SMS_ &lt; kód lokality \> \HotFix \\ &lt; KB číslo \> \Update.SQL**  
 
-####  <a name="update-a-computer-that-runs-the-sms-provider"></a><a name="bkmk_provider"></a>Aktualizace počítače, na kterém je spuštěný poskytovatel serveru SMS  
+####  <a name="update-a-computer-that-runs-the-sms-provider"></a><a name="bkmk_provider"></a> Aktualizace počítače, na kterém je spuštěný poskytovatel serveru SMS  
 Po instalaci sady aktualizací obsahující aktualizace poskytovatele serveru SMS musíte aktualizaci nasadit do každého počítače, na kterém je spuštěný poskytovatel serveru SMS. Jedinou výjimku představuje instance poskytovatele serveru SMS dříve instalovaná na serveru lokality, kde sadu aktualizací instalujete. Místní instance poskytovatele serveru SMS na serveru lokality je aktualizována při instalaci sady aktualizací.  
 
 Pokud poskytovatele služby SMS z počítače odeberete a znovu nainstalujete, musíte znovu nainstalovat aktualizaci poskytovatele služby SMS v tomto počítači.  
 
-###  <a name="update-clients"></a><a name="BKMK_clients"></a>Aktualizace klientů  
+###  <a name="update-clients"></a><a name="BKMK_clients"></a> Aktualizace klientů  
 Při instalaci aktualizace, která obsahuje aktualizace pro klienta Configuration Manager, se zobrazí možnost automaticky upgradovat klienty pomocí instalace aktualizací nebo ručně upgradovat klienty později. Další informace o automatickém upgradu klientů najdete v tématu [Postup upgradu klientů pro počítače s Windows](../../clients/manage/upgrade/upgrade-clients-for-windows-computers.md).  
 
 Aktualizace můžete nasadit pomocí nástroje Updates Publisher nebo pomocí balíčku nasazení softwaru. Aktualizace jednotlivých klientů můžete taky nainstalovat ručně. Další informace o použití nasazení k instalaci aktualizací naleznete v části [Nasazení aktualizací pro Configuration Manager](#BKMK_Deploy) v tomto tématu.  
@@ -176,11 +176,11 @@ Aktualizace můžete nasadit pomocí nástroje Updates Publisher nebo pomocí ba
 > [!IMPORTANT]  
 > Když instalujete aktualizace pro klienty a sada aktualizací obsahuje aktualizace pro servery, nezapomeňte nainstalovat také aktualizace serveru v primární lokalitě, ke které jsou klienti přiřazení.  
 
-Chcete-li ručně nainstalovat aktualizaci klienta, na každém klientském Configuration Manager musíte spustit soubor **Msiexec. exe** a odkazovat na soubor. msp aktualizace klienta pro konkrétní platformu.  
+Chcete-li ručně nainstalovat aktualizaci klienta, u každého klienta Configuration Manager musíte spustit **Msiexec.exe** a odkazovat na soubor. msp s aktualizací klienta pro konkrétní platformu.  
 
-Pro aktualizaci klienta můžete například použít následující příkazový řádek. Tento příkaz spustí v klientském počítači program Msiexec s odkazem na soubor. msp, který byla extrahována ze sady aktualizací na serveru lokality: **Msiexec. exe/p \\ \\ &lt; servername \> \ SMS_ &lt; SiteCode \> \HotFix \\ &lt; KB number \> \Client \\ &lt; Platform \> \\ &lt; MSP \> /l \* v &lt; logfile \> REINSTALLMODE = Mous REINSTALL = ALL**  
+Pro aktualizaci klienta můžete například použít následující příkazový řádek. Tento příkaz spustí v klientském počítači program Msiexec s odkazem na soubor. msp, který byla extrahována ze sady aktualizací na serveru lokality: **msiexec.exe/p \\ \\ &lt; název_serveru \> \ SMS_ &lt; SiteCode \> \HotFix \\ &lt; KB number \> \Client \\ &lt; Platform \> \\ &lt; MSP \> /l \* v &lt; logfile \> REINSTALLMODE = Mous REINSTALL = ALL**  
 
-###  <a name="update-configuration-manager-consoles"></a><a name="BKMK_console"></a>Aktualizace Configuration Managerch konzol  
+###  <a name="update-configuration-manager-consoles"></a><a name="BKMK_console"></a> Aktualizace Configuration Managerch konzol  
 Chcete-li aktualizovat konzolu Configuration Manager, je nutné nainstalovat aktualizaci na počítač, který spouští konzolu po dokončení instalace konzoly.  
 
 > [!IMPORTANT]  
@@ -192,30 +192,30 @@ Pokud počítač, který aktualizujete, spustí klienta Configuration Manager:
 
 - Pokud jste přihlášeni přímo ke klientskému počítači, můžete instalaci spustit interaktivně.  
 
-- Aktualizaci můžete nainstalovat ručně do jednotlivých počítačů. Chcete-li ručně nainstalovat aktualizaci konzoly Configuration Manager, můžete na každém počítači, na kterém je spuštěna konzola Configuration Manager, spustit soubor Msiexec. exe a odkazovat na Configuration Manager konzolu aktualizace. msp.  
+- Aktualizaci můžete nainstalovat ručně do jednotlivých počítačů. Chcete-li ručně nainstalovat aktualizaci konzoly Configuration Manager, můžete na každém počítači, který spouští konzolu Configuration Manager, spustit Msiexec.exe a odkazovat na soubor. msp s aktualizací konzoly Configuration Manager.  
 
-Pomocí následujícího příkazového řádku můžete například aktualizovat Configuration Manager konzolu. Tento příkaz spustí v počítači program Msiexec s odkazem na soubor. msp, který byla extrahována ze sady aktualizací na serveru lokality: **Msiexec. exe/p \\ \\ &lt; servername \> \ SMS_ &lt; SiteCode \> \HotFix \\ &lt; KB number \> \AdminConsole \\ &lt; Platform \> \\ &lt; MSP \> /l \* v &lt; logfile \> REINSTALLMODE = Mous REINSTALL = ALL**  
+Pomocí následujícího příkazového řádku můžete například aktualizovat Configuration Manager konzolu. Tento příkaz spustí v počítači program Msiexec s odkazem na soubor. msp, který byla extrahována ze sady aktualizací na serveru lokality: **msiexec.exe/p \\ \\ &lt; název_serveru \> \ SMS_ &lt; SiteCode \> \HotFix \\ &lt; KB číslo \> \AdminConsole \\ &lt; Platform \> \\ &lt; MSP \> /l \* v &lt; logfile \> REINSTALLMODE = Mous REINSTALL = ALL**  
 
 ##  <a name="deploy-updates-for-configuration-manager"></a><a name="BKMK_Deploy"></a> Nasazení aktualizací pro Configuration Manager  
 Po instalaci sady aktualizací na server lokality můžete použít jednu z následujících tří metod k nasazení aktualizací do dalších počítačů.  
 
-###  <a name="use-updates-publisher-2011-to-install-updates"></a><a name="BKMK_DeploySCUP"></a>Pomocí Updates Publisher 2011 nainstalujte aktualizace.  
+###  <a name="use-updates-publisher-2011-to-install-updates"></a><a name="BKMK_DeploySCUP"></a> Pomocí Updates Publisher 2011 nainstalujte aktualizace.  
 Když nainstalujete sadu aktualizací na server lokality, Průvodce instalací vytvoří soubor katalogu pro nástroj Updates Publisher, který můžete použít k nasazení aktualizací do příslušných počítačů. Průvodce tento katalog vytvoří vždy, i když vyberete možnost **Použít balíček a program k nasazení této aktualizace**.  
 
-Katalog pro aktualizace Publisher má název **SCUPCatalog. cab** a nachází se v následujícím umístění na počítači, kde je spuštěná sada aktualizací: ** \\ \\ &lt; servername \> \ SMS_ &lt; SiteCode \> \HotFix \\ &lt; KB number \> \SCUP\SCUPCatalog.cab**  
+Katalog pro aktualizace Publisher je pojmenován **SCUPCatalog.cab** a najdete ho v následujícím umístění na počítači, kde je spuštěná sada aktualizací: ** \\ \\ &lt; servername \> \ SMS_ &lt; SiteCode \> \HotFix \\ &lt; KB number \>\SCUP\SCUPCatalog.cab**  
 
 > [!IMPORTANT]  
-> Vzhledem k tomu, že soubor SCUPCatalog. cab je vytvořen pomocí cest, které jsou specifické pro server lokality, kde je sada aktualizací nainstalována, nelze ji použít na jiných serverech lokality.  
+> Vzhledem k tomu, že je soubor SCUPCatalog.cab vytvořen pomocí cest, které jsou specifické pro server lokality, kde je sada aktualizací nainstalována, nelze ji použít na jiných serverech lokality.  
 
-Po dokončení průvodce můžete katalog importovat do nástroje Updates Publisher a potom k nasazení aktualizací použít Configuration Manager aktualizace softwaru. Informace o nástroji Updates Publisher najdete v tématu [Updates publisher 2011](https://docs.microsoft.com/previous-versions/system-center/updates-publisher-2011/hh134742(v=technet.10)).  
+Po dokončení průvodce můžete katalog importovat do nástroje Updates Publisher a potom k nasazení aktualizací použít Configuration Manager aktualizace softwaru. Informace o nástroji Updates Publisher najdete v tématu [Updates publisher 2011](/previous-versions/system-center/updates-publisher-2011/hh134742(v=technet.10)).  
 
-Následující postup použijte k importu souboru SCUPCatalog. cab do nástroje Updates Publisher a publikování aktualizací.  
+Následující postup použijte k importu souboru SCUPCatalog.cab do nástroje Updates Publisher a publikování aktualizací.  
 
 ##### <a name="to-import-the-updates-to-updates-publisher-2011"></a>Import aktualizací do nástroje Updates Publisher 2011  
 
 1.  Spusťte konzolu nástroje Updates Publisher a klikněte na **importovat**.  
 
-2.  Na stránce **typ importu** v Průvodci importem katalogu aktualizací softwaru vyberte možnost **zadat cestu ke katalogu, který chcete importovat**, a pak zadejte soubor SCUPCatalog. cab.  
+2.  Na stránce **typ importu** v Průvodci importem katalogu aktualizací softwaru vyberte možnost **zadat cestu ke katalogu, který chcete importovat**, a pak zadejte soubor SCUPCatalog.cab.  
 
 3.  Klikněte na tlačítko **Další**a potom znovu klikněte na tlačítko **Další** .  
 
@@ -227,7 +227,7 @@ Následující postup použijte k importu souboru SCUPCatalog. cab do nástroje 
 
 7.  Dokončete průvodce, aby se aktualizace publikovaly.  
 
-###  <a name="use-software-deployment-to-install-updates"></a><a name="BKMK_DeploySWDist"></a>Použití nasazení softwaru k instalaci aktualizací  
+###  <a name="use-software-deployment-to-install-updates"></a><a name="BKMK_DeploySWDist"></a> Použití nasazení softwaru k instalaci aktualizací  
 Když nainstalujete sadu aktualizací na server primární lokality nebo lokality centrální správy, můžete nakonfigurovat Průvodce instalací, aby vytvořil balíčky aktualizací pro nasazení softwaru. Jednotlivé balíčky pak můžete nasadit do kolekce počítačů, které chcete aktualizovat.  
 
 Chcete-li vytvořit balíček nasazení softwaru, na stránce průvodce **Konfigurovat nasazení aktualizace softwaru** zaškrtněte políčko pro každý typ balíčku aktualizací, který chcete aktualizovat. Dostupné typy mohou zahrnovat servery, Configuration Manager konzolu a klienty. Pro každý vybraný typ aktualizace bude vytvořen samostatný balíček.  
@@ -236,7 +236,7 @@ Chcete-li vytvořit balíček nasazení softwaru, na stránce průvodce **Konfig
 > Balíček pro servery obsahuje aktualizace pro následující komponenty:  
 >   
 > - Server lokality  
-> - SMS Provider  
+> - poskytovatele serveru SMS  
 > - Databáze lokality  
 
 Následně v průvodci na stránce **Metoda konfigurace nasazení aktualizace softwaru** vyberte možnost **Použiji distribuci softwaru**. Tento výběr nastaví Průvodce tak, aby vytvořil balíčky pro nasazení softwaru.  
@@ -245,7 +245,7 @@ Po dokončení průvodce můžete zobrazit balíčky, které vytvoří v konzole
 
 Informace o tom, jak nasadit balíčky do klientů Configuration Manager, najdete v tématu [balíčky a programy](../../../apps/deploy-use/packages-and-programs.md).  
 
-###  <a name="create-collections-for-deploying-updates-to-configuration-manager"></a><a name="BKMK_DeployCollections"></a>Vytváření kolekcí pro nasazování aktualizací do Configuration Manager  
+###  <a name="create-collections-for-deploying-updates-to-configuration-manager"></a><a name="BKMK_DeployCollections"></a> Vytváření kolekcí pro nasazování aktualizací do Configuration Manager  
 Můžete nasadit konkrétní aktualizace pro příslušné klienty. Následující informace vám pomohou při vytváření kolekcí zařízení pro různé součásti pro Configuration Manager.  
 
 |Součást Configuration Manager|Pokyny|  
@@ -253,12 +253,12 @@ Můžete nasadit konkrétní aktualizace pro příslušné klienty. Následujíc
 |Server lokality centrální správy|Vytvořte přímý dotaz členství a přidejte počítač serveru lokality centrální správy.|  
 |Všechny servery primární lokality|Vytvořte přímý dotaz členství a přidejte všechny počítače serverů primární lokality.|  
 |Všechny servery sekundární lokality|Vytvořte přímý dotaz členství a přidejte všechny počítače serverů sekundární lokality.|  
-|Všichni klienti x86|Vytvořte kolekci s následujícími kritérii dotazu:<br /><br /> **Vyberte \* z SMS_R_System SMS_G_System_SYSTEM vnitřního spojení na SMS_G_System_SYSTEM. ResourceID = SMS_R_System. ResourceId, kde SMS_G_System_SYSTEM. SystemType = "počítač založený na platformě x86"**|  
-|Všichni klienti x64|Vytvořte kolekci s následujícími kritérii dotazu:<br /><br /> **Vyberte \* z SMS_R_System SMS_G_System_SYSTEM vnitřního spojení na SMS_G_System_SYSTEM. ResourceID = SMS_R_System. ResourceId, kde SMS_G_System_SYSTEM. SystemType = "počítač na platformě x64"**|  
+|Všichni klienti x86|Vytvořte kolekci s následujícími kritérii dotazu:<br /><br /> **Vyberte \* z SMS_R_System SMS_G_System_SYSTEM vnitřního spojení na SMS_G_System_SYSTEM. ResourceID = SMS_R_System. ResourceId, kde SMS_G_System_SYSTEM.SystemType = "počítač založený na platformě x86"**|  
+|Všichni klienti x64|Vytvořte kolekci s následujícími kritérii dotazu:<br /><br /> **Vyberte \* z SMS_R_System SMS_G_System_SYSTEM vnitřního spojení na SMS_G_System_SYSTEM. ResourceID = SMS_R_System. ResourceId, kde SMS_G_System_SYSTEM.SystemType = "počítač s procesorem x64"**|  
 |Všechny počítače, na kterých běží Konzola Configuration Manager|Vytvořte přímý dotaz členství a přidejte všechny počítače.|  
 |Vzdálené počítače používající instanci poskytovatele služby SMS|Vytvořte přímý dotaz členství a přidejte všechny počítače.|  
 
 > [!NOTE]  
 > Chcete-li aktualizovat databázi lokality, nasaďte aktualizaci na server příslušné lokality.  
 
-Informace o vytváření kolekcí najdete v tématu [vytváření kolekcí](../../../core/clients/manage/collections/create-collections.md).  
+Informace o vytváření kolekcí najdete v tématu [vytváření kolekcí](../../../core/clients/manage/collections/create-collections.md).

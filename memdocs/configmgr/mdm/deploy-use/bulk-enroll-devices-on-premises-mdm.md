@@ -10,12 +10,12 @@ ms.assetid: b36f5e4a-2b57-4d18-83f6-197081ac2a0a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: bfe2d395187f8af86e2d09156a45f7398a5bc670
-ms.sourcegitcommit: 578ad1e8088f7065b565e8a4f4619f5a26b94001
+ms.openlocfilehash: 474d59ec22d1edaf8e662298e90555e6772d302b
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81720678"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698792"
 ---
 # <a name="how-to-bulk-enroll-devices-with-on-premises-mdm-in-configuration-manager"></a>Jak hromadně registrovat zařízení pomocí místní správy mobilních zařízení (MDM) v Configuration Manager
 
@@ -31,7 +31,7 @@ Když připravíte lokalitu pro místní správu mobilních zařízení (MDM), e
 
 Pomocí exportovaného certifikátu vytvořte profil certifikátu. Další informace najdete v tématu [Vytvoření profilů certifikátů](../../protect/deploy-use/create-certificate-profiles.md).
 
-## <a name="create-a-wi-fi-profile"></a><a name="CreateWifi"></a>Vytvoření profilu sítě Wi-Fi
+## <a name="create-a-wi-fi-profile"></a><a name="CreateWifi"></a> Vytvoření profilu sítě Wi-Fi
 
 Další komponentou balíčku hromadného zápisu je profil sítě Wi-Fi. Tento profil může zajistit, že zařízení má síťové připojení, aby podporovalo registraci.
 
@@ -88,11 +88,11 @@ Registrační profil umožňuje zadat nastavení požadovaná pro registraci za�
 
 1. Dokončete průvodce.
 
-## <a name="create-an-enrollment-package"></a><a name="bkmk_createPpkg"></a>Vytvoření registračního balíčku
+## <a name="create-an-enrollment-package"></a><a name="bkmk_createPpkg"></a> Vytvoření registračního balíčku
 
 Registrační balíček (ppkg) je soubor, který slouží k hromadné registraci zařízení pro místní správu mobilních zařízení (MDM). Vytvořte tento soubor s Configuration Manager. I když můžete vytvořit podobné typy balíčků s Windows ICD, k registraci zařízení pro místní správu mobilních zařízení (MDM) se dají použít jenom balíčky vytvořené v Configuration Manager. Balíček, který vytvoříte pomocí programu Windows ICD, může zadat jenom hlavní název uživatele (UPN), který je potřebný pro registraci, nemůže spustit samotný proces registrace.
 
-Proces vytvoření registračního balíčku vyžaduje sadu Windows ADK (Windows Assessment and Deployment Toolkit) pro Windows 10. Na počítači, na kterém je spuštěná konzola Configuration Manager, nainstalujte nejnovější verzi sady Windows ADK. Vyberte funkci **Imaging and Configuration Designer (ICD)** a všechny závislosti. (Tato verze nemusí odpovídat verzi používané pro nasazení operačního systému pomocí Configuration Manager lokality.) Další informace najdete v tématu [Stažení sady Windows ADK pro Windows 10](https://docs.microsoft.com/windows-hardware/get-started/adk-install).
+Proces vytvoření registračního balíčku vyžaduje sadu Windows ADK (Windows Assessment and Deployment Toolkit) pro Windows 10. Na počítači, na kterém je spuštěná konzola Configuration Manager, nainstalujte nejnovější verzi sady Windows ADK. Vyberte funkci **Imaging and Configuration Designer (ICD)** a všechny závislosti. (Tato verze nemusí odpovídat verzi používané pro nasazení operačního systému pomocí Configuration Manager lokality.) Další informace najdete v tématu [Stažení sady Windows ADK pro Windows 10](/windows-hardware/get-started/adk-install).
 
 1. V konzole Configuration Manager otevřete pracovní prostor **prostředky a kompatibilita** , rozbalte **všechna zařízení vlastněná společností**, rozbalte **Windows**a vyberte uzel **registrační profily** .
 
@@ -116,7 +116,7 @@ Configuration Manager sleduje platné registrační balíčky. V konzole rozbalt
 > [!TIP]
 > Pokud odeberete registrační balíček z konzoly Configuration Manager, nemůžete ho použít k registraci zařízení. Tuto metodu použijte ke správě registračních balíčků, které nechcete, aby jiní uživatelé používali pro hromadnou registraci.
 
-## <a name="bulk-enroll-a-device"></a><a name="bkmk_getPpkg"></a>Hromadné registrace zařízení
+## <a name="bulk-enroll-a-device"></a><a name="bkmk_getPpkg"></a> Hromadné registrace zařízení
 
 Balíček můžete použít k registraci zařízení před nebo po procesu počátečního prostředí (OOBE) zařízení. Registrační balíček může být také součástí zřizovacího balíčku OEM (Original Equipment Manufacturer).
 
@@ -144,7 +144,7 @@ Pokud chcete balíček použít k hromadné registraci, je potřeba ho fyzicky d
 
 Spustí se proces registrace.
 
-## <a name="verify-enrollment"></a><a name="bkmk_verifyEnroll"></a>Ověřit registraci
+## <a name="verify-enrollment"></a><a name="bkmk_verifyEnroll"></a> Ověřit registraci
 
 ### <a name="verify-bulk-enrollment-on-the-device"></a>Ověření hromadné registrace zařízení
 
