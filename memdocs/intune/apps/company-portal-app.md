@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/12/2020
+ms.date: 08/21/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c789f47767e42b57cd94d63bf9299af57351468d
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 3a23db0f04895bda6f187e466965a959c891f1ad
+ms.sourcegitcommit: 19ef60175cbfd5c5d1e213a6d64eded34ee42041
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700612"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88725430"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>Přizpůsobení aplikací Portál společnosti Intune, Portál společnosti webu a Intune
 
@@ -45,7 +45,7 @@ Následující tabulka uvádí podrobnosti přizpůsobení značky pro činnost 
 | **Zobrazit v záhlaví** | Vyberte, jestli má záhlaví v prostředí koncových uživatelů zobrazovat **logo a název organizace**, **jenom logo organizace**nebo **název organizace**. Níže uvedená pole pro náhled budou zobrazovat pouze loga, nikoli název.  |
 | **Nahrát logo pro barvu motivu na pozadí** | Nahrajte logo, které chcete zobrazit, nad vybranou barvou motivu. Pro nejlepší vzhled nahrajte logo s průhledným pozadím. Uvidíte, jak se bude zobrazovat v poli Náhled pod nastavením.<p>Maximální velikost obrázku: 400 × 400 px<br>Maximální velikost souboru: 750 KB<br>Typ souboru: PNG, JPG nebo JPEG |
 | **Nahrát logo pro bílé nebo světlé pozadí** | Nahrajte logo, které chcete zobrazit na bílých nebo lehkých pozadích. Pro nejlepší vzhled nahrajte logo s průhledným pozadím. Můžete vidět, jak se bude zobrazovat na bílém pozadí v poli Náhled pod nastavením.<p>Maximální velikost obrázku: 400 × 400 px<br>Maximální velikost souboru: 750 kB<br>Typ souboru: PNG, JPG nebo JPEG |
-| **Nahrát obrázek značky** | Nahrajte obrázek, který odráží značku vaší organizace.<p><ul><li>Doporučená šířka obrázku: větší než 1125 px (musí být aspoň 650 px)</li><li>Maximální velikost obrázku: 1,3 MB</li><li>Typ souboru: PNG, JPG nebo JPEG</li><li>Zobrazuje se v těchto umístěních:</li><ul><li>iOS/iPadOS Portál společnosti: obrázek na pozadí na stránce profilu uživatele.</li><li>Portál společnosti web: obrázek na pozadí na stránce profilu uživatele.</li><li>Aplikace Intune pro Android: v zásuvce a jako obrázek na pozadí na stránce profilu uživatele.</li></ul></ul> |
+| **Nahrát obrázek značky** | Nahrajte obrázek, který odráží značku vaší organizace.<p><ul><li>Doporučená šířka obrázku: větší než 1125 px (musí být aspoň 650 px)</li><li>Maximální velikost obrázku: 1,3 MB</li><li>Typ souboru: PNG, JPG nebo JPEG</li><li>Zobrazuje se v těchto umístěních:</li><ul><li>iOS/iPadOS Portál společnosti: obrázek na pozadí na stránce profilu uživatele.</li><li>Windows Portál společnosti: obrázek na pozadí na stránce profilu uživatele.</li><li>Portál společnosti web: obrázek na pozadí na stránce profilu uživatele.</li><li>Aplikace Intune pro Android: v zásuvce a jako obrázek na pozadí na stránce profilu uživatele.</li></ul></ul> |
 
 > [!NOTE]
 > Když uživatel instaluje aplikaci pro iOS/iPadOS z Portál společnosti, zobrazí se výzva. K tomu dochází, když je aplikace pro iOS/iPadOS propojená s obchodem s aplikacemi, která je propojená s programem Volume purchase program (VPP), nebo propojená s obchodní aplikací (LOB). Tato výzva umožní uživatelům přijmout akci nebo povolit správu aplikace. Výzva zobrazí název vaší společnosti, nebo pokud název vaší společnosti není k dispozici, zobrazí se **portál společnosti** .
@@ -90,7 +90,7 @@ Můžete nakonfigurovat prostředí Portál společnosti specificky pro registra
 
 ### <a name="enrollment"></a>Registrace
 
-Následující tabulka uvádí podrobnosti konfigurace specifické pro registraci:
+Následující tabulka uvádí podrobnosti konfigurace specifické pro zápis:
 
 | Název pole | Maximální délka | Další informace |
 |------------------------------------------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -116,7 +116,7 @@ Následující tabulka uvádí podrobnosti konfigurace specifické pro registrac
 
 ### <a name="privacy"></a>Ochrana osobních údajů
 
-V následující tabulce jsou uvedeny podrobnosti o konfiguraci specifické pro ochranu osobních údajů:
+V následující tabulce jsou uvedeny podrobnosti konfigurace specifické pro ochranu osobních údajů:
 
 | Název pole | Maximální délka | Další informace |
 |------------------------------------------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -125,7 +125,7 @@ V následující tabulce jsou uvedeny podrobnosti o konfiguraci specifické pro 
 
 ### <a name="device-ownership-notification"></a>Oznámení o vlastnictví zařízení
 
-Následující tabulka uvádí podrobnosti konfigurace konkrétního oznámení:
+Následující tabulka uvádí podrobnosti konfigurace specifické pro oznámení:
 
 | Název pole | Maximální délka | Další informace |
 |------------------------------------------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -154,7 +154,7 @@ Pro každého koncového uživatele můžete skrýt nebo zobrazit **aplikace Azu
 
 ### <a name="customizing-user-self-service-actions-for-the-company-portal"></a>Přizpůsobení samoobslužných akcí uživatele pro Portál společnosti
 
-Můžete přizpůsobit dostupné akce samoobslužného zařízení, které se zobrazí koncovým uživatelům v aplikaci Portál společnosti a na webu. Aby se zabránilo nezamýšleným akcím zařízení, můžete nakonfigurovat nastavení pro aplikaci Portál společnosti tak, že vyberete možnost přizpůsobení **správy tenanta**  >  **Customization**. 
+Můžete přizpůsobit dostupné akce samoobslužného zařízení, které se zobrazí koncovým uživatelům v aplikaci Portál společnosti a na webu. Aby se zabránilo nezamýšleným akcím zařízení, můžete nakonfigurovat nastavení pro aplikaci Portál společnosti tak, že vyberete možnost přizpůsobení **správy tenanta**  >  **Customization**.
 
 K dispozici jsou následující akce:
 - Skrýt tlačítko **Odebrat** na podnikových zařízeních s Windows
@@ -163,7 +163,7 @@ K dispozici jsou následující akce:
 - Skrýt tlačítko pro **obnovení** na podnikových zařízeních s iOS/iPadOS
 
 > [!NOTE]
-> Tyto akce se dají použít k omezení akcí zařízení v Portál společnosti aplikaci a na webu a neimplementují žádné zásady omezení zařízení. Pokud chcete omezit, aby uživatelé prováděli obnovení továrního nastavení nebo odebrání MDM z nastavení, musíte nakonfigurovat zásady omezení zařízení. 
+> Tyto akce se dají použít k omezení akcí zařízení v Portál společnosti aplikaci a na webu a neimplementují žádné zásady omezení zařízení. Pokud chcete omezit, aby uživatelé prováděli obnovení továrního nastavení nebo odebrání MDM z nastavení, musíte nakonfigurovat zásady omezení zařízení.
 
 ## <a name="opening-web-company-portal-applications"></a>Otevírání webových Portál společnostich aplikací
 Pro webové Portál společnosti aplikace, pokud má koncový uživatel nainstalovanou aplikaci Portál společnosti, koncovým uživatelům se zobrazí dialogové okno s dotazem, jak chce aplikaci otevřít, když se otevírá mimo prohlížeč. Pokud aplikace není v cestě Portál společnosti, otevře Portál společnosti domovskou stránku. Pokud se aplikace nachází v cestě, Portál společnosti otevře konkrétní aplikaci. 

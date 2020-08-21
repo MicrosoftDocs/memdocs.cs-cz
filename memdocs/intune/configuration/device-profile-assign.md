@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/20/2020
+ms.date: 08/20/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,18 +15,18 @@ ms.assetid: f6f5414d-0e41-42fc-b6cf-e7ad76e1e06d
 ms.reviewer: altsou
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-azure
+ms.custom: intune-azure, contperfq1
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5259fe84b11ce5d1ec4a3110dcbc188afb2e6d3e
-ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
+ms.openlocfilehash: 74bdb4276fc5a03fe159b82769a8b358d01b8677
+ms.sourcegitcommit: 19ef60175cbfd5c5d1e213a6d64eded34ee42041
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86565678"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88725368"
 ---
 # <a name="assign-user-and-device-profiles-in-microsoft-intune"></a>Přiřazení profilů uživatelů a zařízení v Microsoft Intune
 
-Vytvoříte profil a zahrnete do něj všechna nastavení, která jste zadali. V dalším kroku nasadíte nebo "přiřadíte" profil k vašim skupinám uživatelů a zařízení Azure Active Directory (Azure AD). Po přiřazení uživatelé a zařízení obdrží váš profil a nastavení, které jste zadali, se použije.
+Vytvoříte profil a zahrnete do něj všechna nastavení, která jste zadali. V dalším kroku nasadíte nebo přiřadíte profil pro skupiny uživatelů nebo zařízení. Po přiřazení uživatelé a zařízení obdrží váš profil a nastavení, které jste zadali, se použije.
 
 V tomto článku se dozvíte, jak přiřadit profil, a obsahuje některé informace o použití značek oboru v profilech.
 
@@ -39,27 +39,35 @@ V tomto článku se dozvíte, jak přiřadit profil, a obsahuje některé inform
 
 ## <a name="before-you-begin"></a>Než začnete
 
-Ujistěte se, že máte odpovídající roli pro přiřazení profilů. Další informace najdete v tématu [řízení přístupu na základě role (RBAC) pomocí Microsoft Intune](../fundamentals/role-based-access-control.md).
+Ujistěte se, že máte správnou roli pro přiřazování profilů. Další informace najdete v tématu [řízení přístupu na základě role (RBAC) pomocí Microsoft Intune](../fundamentals/role-based-access-control.md).
 
 ## <a name="assign-a-device-profile"></a>Přiřazení profilu zařízení
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Vyberte **Devices**možnost  >  **profily konfigurace**zařízení. Zobrazí se všechny profily.
-3. Vyberte profil, který chcete přiřadit > **přiřazení**.
-4. Zvolte **Zahrnout** skupiny nebo **vyloučit** skupiny a pak vyberte své skupiny. Když skupiny vybíráte, zvolíte skupinu Azure AD. Pokud chcete vybrat více skupin, podržte stisknutou klávesu **CTRL** a vyberte vaše skupiny.
+3. Vyberte profil, který chcete přiřadit > **vlastností**  >  **přiřazení**  >  **Edit**:
 
-    :::image type="content" source="./media/device-profile-assign/group-include-exclude.png" alt-text="Snímek obrazovky s možnostmi zahrnutí nebo vyloučení skupin z přiřazení profilu v Microsoft Intune":::
+    :::image type="content" source="./media/device-profile-assign/properties-select-assignments.png" alt-text="Vyberte přiřazení a nasaďte profil pro uživatele a skupiny v Microsoft Intune a ve Správci koncových bodů.":::
 
-5. **Uložte** změny.
+4. Vyberte **zahrnuté skupiny** nebo **Vyloučené skupiny**a pak zvolte **Vybrat skupiny, které chcete zahrnout**. Když skupiny vybíráte, zvolíte skupinu Azure AD. Pokud chcete vybrat více skupin, podržte stisknutou klávesu **CTRL** a vyberte vaše skupiny.
 
-### <a name="evaluate-how-many-users-are-targeted"></a>Vyhodnocení počtu cílových uživatelů
+    :::image type="content" source="./media/device-profile-assign/select-included-excluded-groups-profile-assignment.png" alt-text="Zahrnutí nebo vyloučení uživatelů a skupin při přiřazování nebo nasazování profilu v Microsoft Intune a v nástroji Endpoint Manager.":::
 
-Když přiřadíte profil, můžete také **vyhodnotit** , kolik uživatelů je ovlivněno. Tato funkce vypočítává uživatele. nepočítá zařízení.
+5. Vyberte **zkontrolovat a uložit**. Tento krok nepřiřazuje váš profil.
+6. Vyberte **Uložit**. Když uložíte, váš profil se přiřadí. Vaše skupiny obdrží nastavení vašeho profilu, když se zařízení zaregistrují ve službě Intune.
 
-1. V centru pro správu vyberte možnost **Devices**  >  **profily konfigurace**zařízení.
-2. Vyberte profil > **Assignments**  >  **vyhodnotit**přiřazení. Zobrazí se zpráva o tom, kolik uživatelů cílí na tento profil.
+<!-- MandiA 8.20.20: Commenting out this section, as it may not be in the fullscreen changes. Working with engineering/PM to confirm.
 
-Pokud je tlačítko **vyhodnotit** zobrazené šedě, ujistěte se, že je profil přiřazený k jedné nebo více skupinám.
+### Evaluate how many users are targeted
+
+When you assign the profile, you can also **Evaluate** how many users are affected. This feature calculates users; it doesn't calculate devices.
+
+1. In the admin center, select **Devices** > **Configuration profiles**.
+2. Select a profile > **Assignments** > **Evaluate**. A message shows you how many users are targeted by this profile.
+
+If the **Evaluate** button is grayed out, make sure the profile is assigned to one or more groups.
+
+-->
 
 ## <a name="use-scope-tags-or-applicability-rules"></a>Použití značek oboru nebo pravidel použitelnosti
 

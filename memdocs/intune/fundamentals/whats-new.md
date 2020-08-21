@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4fe51b37f1631d8dcb140f49dffcc819db2d112b
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: a9de296ec27c20ab25a60b0d825a360c272ca48d
+ms.sourcegitcommit: 19ef60175cbfd5c5d1e213a6d64eded34ee42041
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88695779"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88725413"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
@@ -57,6 +57,11 @@ Podívejte se, co je nového v jednom týdnu v Microsoft Intune v [centru pro sp
 <!-- ########################## -->
 ## <a name="week-of-august-17-2020"></a>Týden od 17. srpna 2020
 
+### <a name="intune-apps"></a>Aplikace Intune
+
+#### <a name="custom-brand-image-now-displayed-in-the-windows-company-portal-profile-page---4280187---"></a>Obrázek vlastní značky se teď zobrazuje na stránce profilu Windows Portál společnosti.<!-- 4280187 -->
+Jako správce Microsoft Intune můžete nahrát vlastní image značky do Intune, která se zobrazí jako obrázek pozadí na stránce profilu uživatele v aplikaci Windows Portál společnosti. Další informace najdete v tématu [přizpůsobení aplikací portál společnosti Intune, portál společnosti webu a Intune](../apps/company-portal-app.md#branding).
+
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="app-management"></a>Správa aplikací
 
@@ -73,6 +78,7 @@ V této verzi jsou podporovány následující poskytovatelé MDM od jiných vý
 
 - Pracovní prostor VMWare ONE UEM (dříve označovaný jako pro sledování)
 
+*Tato aktualizace je pro zákazníky nahromadá globálně. Tato možnost by se měla zobrazit během příštího týdne.*
 
 <!-- ########################## -->
 ## <a name="week-of-august-10-2020"></a>Týden od 10. srpna 2020
@@ -388,7 +394,7 @@ Platí pro:
 - Windows 10 a novější
 
 #### <a name="wired-network-device-configuration-profiles-for-macos-devices---3508686----"></a>Profily konfigurace síťových zařízení s drátovou sítí pro zařízení macOS<!-- 3508686  -->
-K dispozici je nový profil konfigurace zařízení MacOS, který konfiguruje drátové sítě (**zařízení** > * * konfigurační profily > **vytvořit profil**  >  **MacOS** pro > **drátovou síť** platformy pro profil). Pomocí této funkce můžete vytvořit profily 802.1 x ke správě drátových sítí a tyto drátové sítě nasadit do zařízení macOS.
+K dispozici je nový profil konfigurace zařízení MacOS, který konfiguruje drátové sítě (**Devices**  >  **konfigurační profily**zařízení  >  **vytvoří profil**  >  **MacOS** pro platformu > **kabelové sítě** pro profil). Pomocí této funkce můžete vytvořit profily 802.1 x ke správě drátových sítí a tyto drátové sítě nasadit do zařízení macOS.
 
 Další informace o této funkci najdete v tématu [kabelové sítě na zařízeních MacOS](../configuration/wired-networks-configure.md).
 
@@ -466,7 +472,7 @@ Pro zařízení s iOS/iPadOS a macOS se budou hlásit nové chyby, včetně
 #### <a name="shared-ipads-for-business--6367326-----"></a>Shared iPady for Business<!--6367326   -->
 Službu Intune a Apple Business Manager můžete použít ke snadnému a bezpečnému nastavení sdíleného iPadu tak, aby zařízení mohla sdílet více zaměstnanců. [Sdílený iPad](https://developer.apple.com/education/shared-ipad/) společnosti Apple nabízí individuální prostředí pro více uživatelů při zachování uživatelských dat. Pomocí spravovaného Apple ID můžou uživatelé získat přístup k aplikacím, datům a nastavením po přihlášení ke všem sdíleným iPadům v jejich organizaci. Sdílený iPad spolupracuje se federované identity.
 
-Tuto funkci zobrazíte tak, že přejdete do [centra pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431)  >  **zařízení**.  >  **iOS**  >  **iOS enrollment**  >  **tokeny programu registrace** iOS > vyberte token * * > **profily**  >  **vytvořit profil**  >  **iOS**. Na stránce **Nastavení správy** vyberte **zaregistrovat bez přidružení uživatele** a zobrazí se možnost **sdílené iPady** .
+Tuto funkci zobrazíte tak, že přejdete na [Centrum pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431)  >  **zařízení**.  >  **iOS**  >  **iOS enrollment**  >  **tokeny programu**registrace iOS  >  **zvolit profily tokenů**  >  **Profiles**  >  **vytvořit profil**  >  **iOS**. Na stránce **Nastavení správy** vyberte **zaregistrovat bez přidružení uživatele** a zobrazí se možnost **sdílené iPady** .
 
 Vyžaduje: iPadOS 13,4 a novější. Tato verze přidala podporu pro dočasné relace se sdíleným iPadem, takže uživatelé budou mít přístup k zařízení bez spravovaného Apple ID. Po odhlášení zařízení vymaže všechna uživatelská data, aby bylo zařízení hned připravené k použití, což eliminuje nutnost vymazání zařízení. 
 

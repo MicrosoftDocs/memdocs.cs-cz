@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: c3f2da199e49596959c8b1b445a492f0ef505a36
-ms.sourcegitcommit: 21b6c0c054e5371f32d611a2411ccd166b0e03bc
+ms.openlocfilehash: 52bcff0e8b84b8e5b8a3fbd0a68d322836e91bea
+ms.sourcegitcommit: 19ef60175cbfd5c5d1e213a6d64eded34ee42041
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88643784"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88725328"
 ---
 # <a name="fix-common-problems-with-your-ios-device"></a>Řešení běžných problémů se zařízením s iOS
 
@@ -38,5 +38,5 @@ Pomocí odkazů v tomto článku najdete odpovědi na běžné otázky k registr
 - [Návody v zařízení najít sériové číslo?](how-do-i-find-the-serial-number-on-my-device-ios.md)
 - [Potřebuji aktualizovat zařízení s iOSem](you-need-to-update-your-ios-device.md)
 - [Moje verze iOSu ještě není podporovaná](your-ios-version-isnt-yet-supported.md)
-- [Potřebuji na svém zařízení s iOSem nainstalovat aplikaci Mobile Threat Defense](set-up-mobile-threat-defense.md)
-- [Potřebuji na svém zařízení s iOSem vyřešit hrozbu, kterou aplikace Mobile Threat Defense objevila](set-up-mobile-threat-defense.md#detecting-and-resolving-a-threat)
+- [Potřebuji na svém zařízení s iOS nainstalovat aplikaci ochrany před mobilními hrozbami.](set-up-mobile-threat-defense.md)
+- [Potřebuji vyřešit hrozbu, kterou aplikace ochrany před mobilními hrozbami našla na mém zařízení s iOS](set-up-mobile-threat-defense.md#resolving-a-threat)

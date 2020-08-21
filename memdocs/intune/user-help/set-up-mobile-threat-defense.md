@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/18/2020
+ms.date: 08/20/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser, contperfq1
 ms.collection: ''
-ms.openlocfilehash: 46eb7c5bd691c17747baba926e81b8bd503108b4
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 23d449b6b5edf43ea709f8fce194ac5a8afe8eb4
+ms.sourcegitcommit: 19ef60175cbfd5c5d1e213a6d64eded34ee42041
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700731"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88725345"
 ---
 # <a name="install-mobile-threat-defense-app"></a>Instalace aplikace Mobile Threat Defense  
 
@@ -100,8 +100,8 @@ Tyto kroky začínají na obrazovce **získat přístup** , která se zobrazí p
     * Vraťte se do aplikace MTD a vyhledejte existující hrozby. Dokončete doporučený postup a vyřešte hrozbu a získejte přístup.  
 
 
-## <a name="detecting-and-resolving-a-threat"></a>Zjištění a vyřešení hrozby
-Pokud hrozba překročí definovanou úroveň hrozby vaší organizace, bude vaše organizace:  
+## <a name="resolving-a-threat"></a>Řešení hrozby
+Pokud se zjistí hrozba, která překročí definovanou úroveň hrozby vaší organizace, bude vaše organizace:  
    
 * Blokovat přístup: blokuje používání chráněných aplikací vaší organizace při přihlášení ke svému pracovnímu nebo školnímu účtu.  
 * Vymazání dat: odstraní vaše pracovní nebo školní data z jedné nebo více chráněných aplikací vaší organizace.  
@@ -109,8 +109,8 @@ Pokud hrozba překročí definovanou úroveň hrozby vaší organizace, bude va�
 Řešení hrozby a opětovné získání přístupu k chráněným aplikacím:  
 
 1. Otevřete na svém zařízení aplikaci MTD.     
-2. Přečtěte si informace na obrazovce, kde se dozvíte, jak může hrozba ovlivnit vaše zařízení a jak ho vyřešit. 
-3. Po provedení postupu pro vyřešení hrozby se vraťte do aplikace MTD a spusťte novou kontrolu. Opětovné získání přístupu k vaší organizaci může trvat několik minut.  
+2. Přečtěte si podrobnosti o hrozbách v aplikaci, které vysvětlují, jak může hrozba ovlivnit vaše zařízení, pokud je ponecháno nevyřešené a jak ho vyřešit. 
+3. Až v zařízení provedete požadované změny, vraťte se do aplikace MTD a spusťte novou kontrolu. Opakujte tyto kroky, dokud nebudou vyřešeny všechny hrozby. Synchronizace změn ve vaší organizaci může trvat několik minut. Jakmile se tyto změny synchronizují, znovu získáte přístup k chráněné aplikaci. 
 
 ## <a name="get-support"></a>Získání podpory
 Pokud chcete najít kontaktní údaje vaší organizace, navštivte [web portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980) . Požádejte je, aby vám pomohli:
@@ -122,7 +122,7 @@ Pokud chcete najít kontaktní údaje vaší organizace, navštivte [web portál
 * Odinstalace aplikace MTD   
  
 
-### <a name="share-app-logs-with-it-support"></a>Sdílení protokolů aplikace s podporou IT
+### <a name="share-app-logs-with-it-support"></a>Sdílení protokolů aplikace s podporou IT  
 Můžete také odeslat protokoly aplikací vaší osobě podpory IT a poskytnout jim další kontext o nezdařené instalaci.  
 * Uživatelé Androidu: [nahrání a odeslání e-mailů protokolů](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android) z portál společnosti.   
 
