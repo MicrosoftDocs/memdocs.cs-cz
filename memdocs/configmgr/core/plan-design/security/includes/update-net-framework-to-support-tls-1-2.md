@@ -4,12 +4,12 @@ ms.author: mstewart
 ms.prod: configuration-manager
 ms.topic: include
 ms.date: 12/13/2019
-ms.openlocfilehash: b21365d0c355adab6819e13537c1b25316583ec2
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 0f91860ad591e20c6f199e098a8c957f50294386
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81720538"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88703949"
 ---
 <!-- ## Update and configure the .NET Framework to support TLS 1.2 Note: the heading in in the 2 articles (enable-tls-1-2-client & enable-tls-1-2-server) to better facilitate linking. -->
 
@@ -23,14 +23,14 @@ Nainstalujte aktualizace .NET, abyste mohli povolit silné šifrování. Někter
 
 - NET Framework 4.6.2 a novější podporuje TLS 1,1 a TLS 1,2. Potvrďte nastavení registru, ale nevyžadují se žádné další změny.
 
-- Aktualizujte rozhraní .NET Framework 4,6 a starší verze na podporu TLS 1,1 a TLS 1,2. Další informace najdete v tématu [.NET Framework verze a závislosti](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies).
+- Aktualizujte rozhraní .NET Framework 4,6 a starší verze na podporu TLS 1,1 a TLS 1,2. Další informace najdete v tématu [.NET Framework verze a závislosti](/dotnet/framework/migration-guide/versions-and-dependencies).
 
 - Pokud používáte .NET Framework 4.5.1 nebo 4.5.2 v Windows 8.1 nebo Windows Serveru 2012, jsou relevantní aktualizace a podrobnosti dostupné taky z [webu Stažení softwaru](https://www.microsoft.com/download/details.aspx?id=42883).
 
 
 ### <a name="configure-for-strong-cryptography"></a>Konfigurace pro silné šifrování
 
-Nakonfigurujte .NET Framework pro podporu silné kryptografie. Nastavte nastavení `SchUseStrongCrypto` registru na `DWORD:00000001`. Tato hodnota zakáže šifru datového proudu RC4 a vyžaduje restart. Další informace o tomto nastavení najdete v článku [Microsoft Security advisor 296038](https://docs.microsoft.com/security-updates/SecurityAdvisories/2015/2960358).
+Nakonfigurujte .NET Framework pro podporu silné kryptografie. Nastavte `SchUseStrongCrypto` nastavení registru na `DWORD:00000001` . Tato hodnota zakáže šifru datového proudu RC4 a vyžaduje restart. Další informace o tomto nastavení najdete v článku [Microsoft Security advisor 296038](/security-updates/SecurityAdvisories/2015/2960358).
 
 Nezapomeňte nastavit následující klíče registru v jakémkoli počítači, který komunikuje v síti pomocí systému s povoleným protokolem TLS 1,2. Například Configuration Manager klienti, role vzdálených systémů lokality nejsou nainstalovány na serveru lokality a samotného serveru lokality.
 
@@ -57,4 +57,4 @@ Pro 32 aplikací, které běží na 64 OSs, aktualizujte následující hodnoty 
 ```
 
 > [!Note]  
-> `SchUseStrongCrypto` Nastavení umožňuje rozhraní .NET používat TLS 1,1 a TLS 1,2. `SystemDefaultTlsVersions` Nastavení umožňuje technologii .NET používat konfiguraci operačního systému. Další informace najdete v tématu [osvědčené postupy TLS s .NET Framework](https://docs.microsoft.com/dotnet/framework/network-programming/tls).
+> `SchUseStrongCrypto`Nastavení umožňuje rozhraní .NET používat tls 1,1 a tls 1,2. `SystemDefaultTlsVersions`Nastavení umožňuje technologii .NET používat konfiguraci operačního systému. Další informace najdete v tématu [osvědčené postupy TLS s .NET Framework](/dotnet/framework/network-programming/tls).

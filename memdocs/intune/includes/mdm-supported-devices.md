@@ -9,7 +9,7 @@
 - Android 5,0 a novější (včetně Samsung KNOX Standard 2,4 a vyšších: [požadavky](https://www.samsungknox.com/en/knox-platform/supported-devices/2.4+))
 - Android Enterprise: [požadavky](https://support.google.com/work/android/topic/9428066)
 
-### <a name="microsoft"></a>Microsoft
+### <a name="microsoft"></a>Partnerský vztah Microsoftu
 
 - Surface Hub
 - Windows 10 (verze Home, S, Pro, Education a Enterprise)
@@ -27,7 +27,7 @@
 - Windows 10 Teams (Surface Hub)
 
    Další informace o správě zařízení s Windows 10 Teams najdete v tématu [správa Surface Hub s MDM](https://docs.microsoft.com/surface-hub/manage-settings-with-mdm-for-surface-hub) .
-- Windows 10 1709 (RS3) a novější Windows Phone 8,1 Windows 8.1 RT, počítače se systémem Windows 8.1 (trvalý režim)
+- Windows 10 1709 (RS3) a novější Windows 8.1 RT, počítače se systémem Windows 8.1 (režim udržování)
 
 > [!NOTE]
 > Ne všechny edice Windows podporují konfiguraci všech dostupných funkcí operačního systému prostřednictvím MDM. Viz [Referenční dokumentace poskytovatele služby Windows Configuration Service](https://docs.microsoft.com/windows/configuration/provisioning-packages/how-it-pros-can-use-configuration-service-providers). Každý CSP zvýrazňuje, které edice Windows jsou podporované.

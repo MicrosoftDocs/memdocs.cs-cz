@@ -4,18 +4,18 @@ ms.author: mstewart
 ms.prod: configuration-manager
 ms.topic: include
 ms.date: 07/13/2020
-ms.openlocfilehash: 80302a1c369c36a08cc1a55e20cf339dbc8d2883
-ms.sourcegitcommit: 6d987bb69d0eb9955a3003202864f58d6aaa426a
+ms.openlocfilehash: 8e95fce122a3e153f2aa391dcd5e40439f8e5820
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86381040"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88703801"
 ---
 <!--This file is shared by the CMPivot overview articles for both Microsoft Endpoint Manager tenant attach and Configuration Manager-->
 
 ## <a name="queries"></a>Dotazy
 
-Dotazy se dají použít k vyhledávání podmínek, identifikaci trendů, analýze vzorů a poskytování mnoha dalších přehledů na základě vašich dat. CMPivot používá podmnožinu modelu toku dat služby [Azure Log Analytics](https://docs.microsoft.com/azure/kusto/query) pro příkaz tabelárního výrazu. Typickou strukturou příkazu tabulkového výrazu je složení klientských entit a tabulkových datových operátorů (například filtry a projekce). Složení je reprezentované znakem svislé čáry (|), který poskytuje příkaz jako pravidelný tvar, který vizuálně představuje tok tabulkových dat zleva doprava. Každý operátor přijme tabulkovou datovou sadu "z kanálu" a další vstupy (včetně jiných tabulkových datových sad) od těla operátoru a poté vygeneruje tabulkovou datovou sadu pro další operátor, který následuje:`entity | operator1 | operator2 | ...`
+Dotazy se dají použít k vyhledávání podmínek, identifikaci trendů, analýze vzorů a poskytování mnoha dalších přehledů na základě vašich dat. CMPivot používá podmnožinu modelu toku dat služby [Azure Log Analytics](/azure/kusto/query) pro příkaz tabelárního výrazu. Typickou strukturou příkazu tabulkového výrazu je složení klientských entit a tabulkových datových operátorů (například filtry a projekce). Složení je reprezentované znakem svislé čáry (|), který poskytuje příkaz jako pravidelný tvar, který vizuálně představuje tok tabulkových dat zleva doprava. Každý operátor přijme tabulkovou datovou sadu "z kanálu" a další vstupy (včetně jiných tabulkových datových sad) od těla operátoru a poté vygeneruje tabulkovou datovou sadu pro další operátor, který následuje: `entity | operator1 | operator2 | ...`
 
 V následujícím příkladu je entita `CCMRecentlyUsedApplications` (odkaz na naposledy použité aplikace) a operátor, kde (který odfiltruje záznamy z jeho vstupu na základě některého predikátu pro záznam):
 
@@ -28,10 +28,10 @@ CCMRecentlyUsedApplications | where CompanyName like '%Microsoft%' | project Com
 Entity jsou objekty, na které se dá dotázat z klienta. V současné době podporujeme následující entity:
 
 
-|Entita|Description|
+|Entita|Popis|
 |---|---|
 |AadStatus|Stav Azure Active Directory|
-|Administrators|Členové místní skupiny Administrators|
+|Správci|Členové místní skupiny Administrators|
 |AppCrash|Poslední zprávy o chybách aplikací|
 |AppVClientApplication|Klientská aplikace AppV|
 |AppVClientPackage|Klientský balíček AppV|
@@ -56,7 +56,7 @@ Entity jsou objekty, na které se dá dotázat z klienta. V současné době pod
 |ComputerSystemProduct|Produkt počítačového systému|
 |ConnectedDevice|Připojené zařízení|
 |Připojení|Aktivní připojení TCP v zařízení nebo mimo něj|
-|Aplikace klasické pracovní plochy|Aplikace klasické pracovní plochy|
+|Desktop|Desktop|
 |DesktopMonitor|Stolní monitor|
 |Zařízení|Základní informace o zařízení|
 |Disk|Informace o místním úložném zařízení v systému počítače se systémem Windows|
@@ -79,7 +79,7 @@ Entity jsou objekty, na které se dá dotázat z klienta. V současné době pod
 |LoadOrderGroup|Skupina pořadí načtení|
 |Logický disk|Logický disk|
 |MDMDevDetail|Informace o zařízení|
-|Memory (Paměť)|Memory (Paměť)|
+|Paměť|Paměť|
 |Údajů|Údajů|
 |Základní desky|Základní desky|
 |Síťový adaptér|Síťový adaptér|
@@ -181,7 +181,7 @@ Entity jsou objekty, na které se dá dotázat z klienta. V současné době pod
 
 Operátory tabulky lze použít k filtrování, sumarizaci a transformaci datových proudů. V současné době jsou podporovány následující operátory:
 
-|Operátory tabulky|Description|
+|Operátory tabulky|Popis|
 |---|---|
 |count|Vrátí tabulku s jedním záznamem, který obsahuje počet záznamů.|
 |distinct|Vytvoří tabulku s jedinečnou kombinací zadaných sloupců vstupní tabulky.|
@@ -258,12 +258,12 @@ Skalární funkce lze použít ve výrazech. V současné době jsou podporován
 |substring()|Extrahuje podřetězec ze zdrojového řetězce počínaje z nějakého indexu na konec řetězce.|
 |tostring()|Převede vstup na řetězcovou reprezentaci.|
 
-## <a name="additional-entities-operators-and-functions-for-cmpivot-from-configuration-manager"></a><a name="bkmk_onprem_only"></a>Další entity, operátory a funkce pro CMPivot z Configuration Manager
+## <a name="additional-entities-operators-and-functions-for-cmpivot-from-configuration-manager"></a><a name="bkmk_onprem_only"></a> Další entity, operátory a funkce pro CMPivot z Configuration Manager
 
 > [!Important]
 > Když spouštíte CMPivot z centra pro správu Microsoft Endpoint Manageru, tyto položky se nepodporují.
 
-|Typ|Položka|Description|
+|Typ|Položka|Popis|
 |--|--|---|
 |Entita|AccountSID|Account SID (identifikátor zabezpečení účtu)|
 |Entita|Obsah ()|Obsah konkrétního souboru|
