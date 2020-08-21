@@ -3,12 +3,12 @@ title: Dokumentace k produktu Microsoft Endpoint Configuration Manager
 summary: 'Oficiální dokumentace k následujícím komponentám produktu Microsoft Endpoint Configuration Manager: Configuration Manager, spoluspráva a Desktop Analytics'
 metadata:
   ms.topic: hub-page
-  ms.openlocfilehash: 3c668312b27017fa499914cee74597aae0f19bba
-  ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
+  ms.openlocfilehash: 81aa3de67b0647764cb94cedd07a19e9c9308ebc
+  ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
   ms.translationtype: HT
   ms.contentlocale: cs-CZ
-  ms.lasthandoff: 07/01/2020
-  ms.locfileid: "85590928"
+  ms.lasthandoff: 08/20/2020
+  ms.locfileid: "88698227"
 highlightedContent:
   items:
   - title: Novinky
@@ -206,12 +206,12 @@ additionalContent:
       url: https://aka.ms/cmcbsupport
     - title: System Center 2012 R2 Configuration Manager
       summary: Dokumentace k předchozí verzi produktu Configuration Manager
-      url: https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg682144(v=technet.10)
+      url: /previous-versions/system-center/system-center-2012-R2/gg682144(v=technet.10)
   - title: Další obsah
     items:
     - title: Vývoj
       links:
-      - url: https://docs.microsoft.com/powershell/sccm/overview?view=sccm-ps
+      - url: /powershell/sccm/overview?view=sccm-ps
         text: PowerShell
       - url: ./develop/index.yml
         text: Sada SDK (Software Development Kit)
