@@ -302,8 +302,6 @@
           href: compliance-policy-create-windows.md
         - name: Nastavení zásad dodržování předpisů – Windows 8.1
           href: compliance-policy-create-windows-8-1.md
-        - name: Nastavení zásad dodržování předpisů – Windows Phone 8.1
-          href: compliance-policy-create-windows-8-1.md
     - name: Nastavení zásad zabezpečení koncových bodů
       items:
         - name: Nastavení zásad antivirové ochrany
