@@ -50,5 +50,7 @@
       href: how-to-prepare-Win10.md
     - name: Přepnutí úloh do Intune
       href: how-to-switch-workloads.md
+    - name: Aplikace v Portálu společnosti
+      href: company-portal.md
     - name: Sledování spolusprávy
       href: how-to-monitor.md

@@ -11,12 +11,12 @@ metadata:
   author: mestew
   ms.author: mstewart
   ms.date: 01/10/2020
-  ms.openlocfilehash: bc1bf65ecaf77ded325fcdae19a0d318052b1cc9
-  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.openlocfilehash: ab29b80ce44876365c067ef9670462008433b79a
+  ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
   ms.translationtype: HT
   ms.contentlocale: cs-CZ
-  ms.lasthandoff: 04/21/2020
-  ms.locfileid: "81740996"
+  ms.lasthandoff: 08/20/2020
+  ms.locfileid: "88694998"
 landingContent:
 - title: O spolusprávě
   linkLists:
@@ -50,6 +50,8 @@ landingContent:
       url: how-to-switch-workloads.md
     - text: Monitorování spolusprávy v Configuration Manageru
       url: how-to-monitor.md
+    - text: Použití aplikace Portál společnosti na spoluspravovaných zařízeních
+      url: company-portal.md
   - linkListType: video
     links:
     - text: Windows Autopilot se spolusprávou
